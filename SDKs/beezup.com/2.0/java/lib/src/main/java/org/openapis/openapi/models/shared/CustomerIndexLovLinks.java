@@ -15,6 +15,7 @@ public class CustomerIndexLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeOfferLov")
     public BeezUPCommonLOVLink3 activeOfferLov;
+
     public CustomerIndexLovLinks withActiveOfferLov(BeezUPCommonLOVLink3 activeOfferLov) {
         this.activeOfferLov = activeOfferLov;
         return this;
@@ -26,6 +27,7 @@ public class CustomerIndexLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beezUPTimeZoneLov")
     public BeezUPCommonLOVLink3 beezUPTimeZoneLov;
+
     public CustomerIndexLovLinks withBeezUPTimeZoneLov(BeezUPCommonLOVLink3 beezUPTimeZoneLov) {
         this.beezUPTimeZoneLov = beezUPTimeZoneLov;
         return this;
@@ -37,6 +39,7 @@ public class CustomerIndexLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contractTerminationReasonLov")
     public BeezUPCommonLOVLink3 contractTerminationReasonLov;
+
     public CustomerIndexLovLinks withContractTerminationReasonLov(BeezUPCommonLOVLink3 contractTerminationReasonLov) {
         this.contractTerminationReasonLov = contractTerminationReasonLov;
         return this;
@@ -48,6 +51,7 @@ public class CustomerIndexLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryLov")
     public BeezUPCommonLOVLink3 countryLov;
+
     public CustomerIndexLovLinks withCountryLov(BeezUPCommonLOVLink3 countryLov) {
         this.countryLov = countryLov;
         return this;
@@ -59,6 +63,7 @@ public class CustomerIndexLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerStatusLov")
     public BeezUPCommonLOVLink3 customerStatusLov;
+
     public CustomerIndexLovLinks withCustomerStatusLov(BeezUPCommonLOVLink3 customerStatusLov) {
         this.customerStatusLov = customerStatusLov;
         return this;
@@ -70,6 +75,7 @@ public class CustomerIndexLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoicePaymentStatusLov")
     public BeezUPCommonLOVLink3 invoicePaymentStatusLov;
+
     public CustomerIndexLovLinks withInvoicePaymentStatusLov(BeezUPCommonLOVLink3 invoicePaymentStatusLov) {
         this.invoicePaymentStatusLov = invoicePaymentStatusLov;
         return this;
@@ -81,6 +87,7 @@ public class CustomerIndexLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerLov")
     public BeezUPCommonLOVLink3 offerLov;
+
     public CustomerIndexLovLinks withOfferLov(BeezUPCommonLOVLink3 offerLov) {
         this.offerLov = offerLov;
         return this;
@@ -92,6 +99,7 @@ public class CustomerIndexLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeCountryLov")
     public BeezUPCommonLOVLink3 storeCountryLov;
+
     public CustomerIndexLovLinks withStoreCountryLov(BeezUPCommonLOVLink3 storeCountryLov) {
         this.storeCountryLov = storeCountryLov;
         return this;
@@ -103,9 +111,11 @@ public class CustomerIndexLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeSectorLov")
     public BeezUPCommonLOVLink3 storeSectorLov;
+
     public CustomerIndexLovLinks withStoreSectorLov(BeezUPCommonLOVLink3 storeSectorLov) {
         this.storeSectorLov = storeSectorLov;
         return this;
     }
     
+    public CustomerIndexLovLinks(){}
 }

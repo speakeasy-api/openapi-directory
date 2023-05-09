@@ -15,6 +15,7 @@ public class ListBatchSegmentJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchSegmentJobs")
     public BatchSegmentJobSummary[] batchSegmentJobs;
+
     public ListBatchSegmentJobsResponse withBatchSegmentJobs(BatchSegmentJobSummary[] batchSegmentJobs) {
         this.batchSegmentJobs = batchSegmentJobs;
         return this;
@@ -23,9 +24,11 @@ public class ListBatchSegmentJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBatchSegmentJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBatchSegmentJobsResponse(){}
 }

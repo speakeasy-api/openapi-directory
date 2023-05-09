@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourceSetResourcesResponse {
     
     public String contentType;
+
     public ListResourceSetResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResourceSetResourcesResponse {
      */
     
     public Object internalErrorException;
+
     public ListResourceSetResourcesResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListResourceSetResourcesResponse {
      */
     
     public Object invalidInputException;
+
     public ListResourceSetResourcesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class ListResourceSetResourcesResponse {
      */
     
     public Object invalidOperationException;
+
     public ListResourceSetResourcesResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class ListResourceSetResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourceSetResourcesResponse listResourceSetResourcesResponse;
+
     public ListResourceSetResourcesResponse withListResourceSetResourcesResponse(org.openapis.openapi.models.shared.ListResourceSetResourcesResponse listResourceSetResourcesResponse) {
         this.listResourceSetResourcesResponse = listResourceSetResourcesResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListResourceSetResourcesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListResourceSetResourcesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListResourceSetResourcesResponse {
     
     
     public Integer statusCode;
+
     public ListResourceSetResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListResourceSetResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourceSetResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListResourceSetResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

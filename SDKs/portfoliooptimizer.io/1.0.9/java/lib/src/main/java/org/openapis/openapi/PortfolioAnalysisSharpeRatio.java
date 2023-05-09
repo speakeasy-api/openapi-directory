@@ -64,11 +64,9 @@ public class PortfolioAnalysisSharpeRatio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioResponse res = new org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioResponse res = new org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioResponse(contentType, httpRes.statusCode()) {{
             postPortfolioAnalysisSharpeRatio200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,11 +111,9 @@ public class PortfolioAnalysisSharpeRatio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioBiasAdjustedResponse res = new org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioBiasAdjustedResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioBiasAdjustedResponse res = new org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioBiasAdjustedResponse(contentType, httpRes.statusCode()) {{
             postPortfolioAnalysisSharpeRatioBiasAdjusted200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,11 +158,9 @@ public class PortfolioAnalysisSharpeRatio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioConfidenceIntervalResponse res = new org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioConfidenceIntervalResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioConfidenceIntervalResponse res = new org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioConfidenceIntervalResponse(contentType, httpRes.statusCode()) {{
             postPortfolioAnalysisSharpeRatioConfidenceInterval200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -212,11 +206,9 @@ public class PortfolioAnalysisSharpeRatio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioProbabilisticResponse res = new org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioProbabilisticResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioProbabilisticResponse res = new org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioProbabilisticResponse(contentType, httpRes.statusCode()) {{
             postPortfolioAnalysisSharpeRatioProbabilistic200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,11 +253,9 @@ public class PortfolioAnalysisSharpeRatio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthResponse res = new org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthResponse res = new org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthResponse(contentType, httpRes.statusCode()) {{
             postPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLength200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

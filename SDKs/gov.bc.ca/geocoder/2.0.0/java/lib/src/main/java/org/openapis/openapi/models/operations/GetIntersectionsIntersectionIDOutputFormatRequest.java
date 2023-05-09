@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIntersectionsIntersectionIDOutputFormatRequest {
@@ -12,6 +13,7 @@ public class GetIntersectionsIntersectionIDOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=intersectionID")
     public String intersectionID;
+
     public GetIntersectionsIntersectionIDOutputFormatRequest withIntersectionID(String intersectionID) {
         this.intersectionID = intersectionID;
         return this;
@@ -24,6 +26,7 @@ public class GetIntersectionsIntersectionIDOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
     public GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum outputFormat;
+
     public GetIntersectionsIntersectionIDOutputFormatRequest withOutputFormat(GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -34,9 +37,14 @@ public class GetIntersectionsIntersectionIDOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum outputSRS;
+
     public GetIntersectionsIntersectionIDOutputFormatRequest withOutputSRS(GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
     }
     
+    public GetIntersectionsIntersectionIDOutputFormatRequest(@JsonProperty("intersectionID") String intersectionID, @JsonProperty("outputFormat") GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum outputFormat) {
+        this.intersectionID = intersectionID;
+        this.outputFormat = outputFormat;
+  }
 }

@@ -15,9 +15,11 @@ public class GetTeamsForWorkspace200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TeamCompact[] data;
+
     public GetTeamsForWorkspace200ApplicationJSON withData(org.openapis.openapi.models.shared.TeamCompact[] data) {
         this.data = data;
         return this;
     }
     
+    public GetTeamsForWorkspace200ApplicationJSON(){}
 }

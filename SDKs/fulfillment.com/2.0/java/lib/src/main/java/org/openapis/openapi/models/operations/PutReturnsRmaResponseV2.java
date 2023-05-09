@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutReturnsRmaResponseV2 {
     @JsonProperty("items")
     public PutReturnsRmaResponseV2Items[] items;
+
     public PutReturnsRmaResponseV2 withItems(PutReturnsRmaResponseV2Items[] items) {
         this.items = items;
         return this;
@@ -22,6 +23,7 @@ public class PutReturnsRmaResponseV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantOrderId")
     public String merchantOrderId;
+
     public PutReturnsRmaResponseV2 withMerchantOrderId(String merchantOrderId) {
         this.merchantOrderId = merchantOrderId;
         return this;
@@ -29,6 +31,7 @@ public class PutReturnsRmaResponseV2 {
     
     @JsonProperty("recipient")
     public PutReturnsRmaResponseV2ConsigneeV2 recipient;
+
     public PutReturnsRmaResponseV2 withRecipient(PutReturnsRmaResponseV2ConsigneeV2 recipient) {
         this.recipient = recipient;
         return this;
@@ -36,9 +39,15 @@ public class PutReturnsRmaResponseV2 {
     
     @JsonProperty("rmaNumber")
     public String rmaNumber;
+
     public PutReturnsRmaResponseV2 withRmaNumber(String rmaNumber) {
         this.rmaNumber = rmaNumber;
         return this;
     }
     
+    public PutReturnsRmaResponseV2(@JsonProperty("items") PutReturnsRmaResponseV2Items[] items, @JsonProperty("recipient") PutReturnsRmaResponseV2ConsigneeV2 recipient, @JsonProperty("rmaNumber") String rmaNumber) {
+        this.items = items;
+        this.recipient = recipient;
+        this.rmaNumber = rmaNumber;
+  }
 }

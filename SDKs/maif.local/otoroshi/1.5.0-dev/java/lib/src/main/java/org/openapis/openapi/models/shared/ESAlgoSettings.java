@@ -18,6 +18,7 @@ public class ESAlgoSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateKey")
     public String privateKey;
+
     public ESAlgoSettings withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -28,6 +29,7 @@ public class ESAlgoSettings {
      */
     @JsonProperty("publicKey")
     public String publicKey;
+
     public ESAlgoSettings withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -38,6 +40,7 @@ public class ESAlgoSettings {
      */
     @JsonProperty("size")
     public Integer size;
+
     public ESAlgoSettings withSize(Integer size) {
         this.size = size;
         return this;
@@ -48,9 +51,15 @@ public class ESAlgoSettings {
      */
     @JsonProperty("type")
     public String type;
+
     public ESAlgoSettings withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ESAlgoSettings(@JsonProperty("publicKey") String publicKey, @JsonProperty("size") Integer size, @JsonProperty("type") String type) {
+        this.publicKey = publicKey;
+        this.size = size;
+        this.type = type;
+  }
 }

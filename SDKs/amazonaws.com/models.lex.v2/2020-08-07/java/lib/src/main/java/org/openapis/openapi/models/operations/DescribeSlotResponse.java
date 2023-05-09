@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSlotResponse {
     
     public String contentType;
+
     public DescribeSlotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSlotResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSlotResponse describeSlotResponse;
+
     public DescribeSlotResponse withDescribeSlotResponse(org.openapis.openapi.models.shared.DescribeSlotResponse describeSlotResponse) {
         this.describeSlotResponse = describeSlotResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSlotResponse {
      */
     
     public Object internalServerException;
+
     public DescribeSlotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeSlotResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeSlotResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeSlotResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DescribeSlotResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeSlotResponse {
     
     
     public Integer statusCode;
+
     public DescribeSlotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeSlotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSlotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeSlotResponse {
      */
     
     public Object throttlingException;
+
     public DescribeSlotResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeSlotResponse {
      */
     
     public Object validationException;
+
     public DescribeSlotResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeSlotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

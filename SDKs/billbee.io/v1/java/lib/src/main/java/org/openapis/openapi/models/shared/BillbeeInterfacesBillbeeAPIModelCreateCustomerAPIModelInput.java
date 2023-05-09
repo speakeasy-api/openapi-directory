@@ -22,6 +22,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("Address")
     @SpeakeasyMetadata("form:name=Address,json")
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel address;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withAddress(BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel address) {
         this.address = address;
         return this;
@@ -36,6 +37,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("ArchivedAt")
     @SpeakeasyMetadata("form:name=ArchivedAt")
     public OffsetDateTime archivedAt;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withArchivedAt(OffsetDateTime archivedAt) {
         this.archivedAt = archivedAt;
         return this;
@@ -45,6 +47,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("DefaultCommercialMailAddress")
     @SpeakeasyMetadata("form:name=DefaultCommercialMailAddress,json")
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput defaultCommercialMailAddress;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withDefaultCommercialMailAddress(BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput defaultCommercialMailAddress) {
         this.defaultCommercialMailAddress = defaultCommercialMailAddress;
         return this;
@@ -54,6 +57,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("DefaultFax")
     @SpeakeasyMetadata("form:name=DefaultFax,json")
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput defaultFax;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withDefaultFax(BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput defaultFax) {
         this.defaultFax = defaultFax;
         return this;
@@ -63,6 +67,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("DefaultMailAddress")
     @SpeakeasyMetadata("form:name=DefaultMailAddress,json")
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput defaultMailAddress;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withDefaultMailAddress(BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput defaultMailAddress) {
         this.defaultMailAddress = defaultMailAddress;
         return this;
@@ -72,6 +77,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("DefaultPhone1")
     @SpeakeasyMetadata("form:name=DefaultPhone1,json")
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput defaultPhone1;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withDefaultPhone1(BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput defaultPhone1) {
         this.defaultPhone1 = defaultPhone1;
         return this;
@@ -81,6 +87,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("DefaultPhone2")
     @SpeakeasyMetadata("form:name=DefaultPhone2,json")
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput defaultPhone2;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withDefaultPhone2(BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput defaultPhone2) {
         this.defaultPhone2 = defaultPhone2;
         return this;
@@ -90,6 +97,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("DefaultStatusUpdatesMailAddress")
     @SpeakeasyMetadata("form:name=DefaultStatusUpdatesMailAddress,json")
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput defaultStatusUpdatesMailAddress;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withDefaultStatusUpdatesMailAddress(BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput defaultStatusUpdatesMailAddress) {
         this.defaultStatusUpdatesMailAddress = defaultStatusUpdatesMailAddress;
         return this;
@@ -99,6 +107,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("Email")
     @SpeakeasyMetadata("form:name=Email")
     public String email;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withEmail(String email) {
         this.email = email;
         return this;
@@ -111,6 +120,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Long id;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withId(Long id) {
         this.id = id;
         return this;
@@ -120,6 +130,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("LanguageId")
     @SpeakeasyMetadata("form:name=LanguageId")
     public Integer languageId;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withLanguageId(Integer languageId) {
         this.languageId = languageId;
         return this;
@@ -129,6 +140,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("MetaData")
     @SpeakeasyMetadata("form:name=MetaData,json")
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput[] metaData;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withMetaData(BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput[] metaData) {
         this.metaData = metaData;
         return this;
@@ -138,6 +150,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("Name")
     @SpeakeasyMetadata("form:name=Name")
     public String name;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withName(String name) {
         this.name = name;
         return this;
@@ -147,6 +160,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("Number")
     @SpeakeasyMetadata("form:name=Number")
     public Integer number;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withNumber(Integer number) {
         this.number = number;
         return this;
@@ -156,6 +170,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("PriceGroupId")
     @SpeakeasyMetadata("form:name=PriceGroupId")
     public Long priceGroupId;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withPriceGroupId(Long priceGroupId) {
         this.priceGroupId = priceGroupId;
         return this;
@@ -170,6 +185,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("RestoredAt")
     @SpeakeasyMetadata("form:name=RestoredAt")
     public OffsetDateTime restoredAt;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withRestoredAt(OffsetDateTime restoredAt) {
         this.restoredAt = restoredAt;
         return this;
@@ -179,6 +195,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("Tel1")
     @SpeakeasyMetadata("form:name=Tel1")
     public String tel1;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withTel1(String tel1) {
         this.tel1 = tel1;
         return this;
@@ -188,6 +205,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("Tel2")
     @SpeakeasyMetadata("form:name=Tel2")
     public String tel2;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withTel2(String tel2) {
         this.tel2 = tel2;
         return this;
@@ -200,6 +218,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("Type")
     @SpeakeasyMetadata("form:name=Type")
     public Integer type;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withType(Integer type) {
         this.type = type;
         return this;
@@ -212,9 +231,11 @@ public class BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput {
     @JsonProperty("VatId")
     @SpeakeasyMetadata("form:name=VatId")
     public String vatId;
+
     public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput withVatId(String vatId) {
         this.vatId = vatId;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelCreateCustomerAPIModelInput(){}
 }

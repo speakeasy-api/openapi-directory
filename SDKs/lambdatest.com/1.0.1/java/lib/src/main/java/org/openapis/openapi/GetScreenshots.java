@@ -52,14 +52,12 @@ public class GetScreenshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ScreenshotsResponse res = new org.openapis.openapi.models.operations.ScreenshotsResponse() {{
+        org.openapis.openapi.models.operations.ScreenshotsResponse res = new org.openapis.openapi.models.operations.ScreenshotsResponse(contentType, httpRes.statusCode()) {{
             screenshotDetails = null;
             accessDenied = null;
             forbidden = null;
             screenshotNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

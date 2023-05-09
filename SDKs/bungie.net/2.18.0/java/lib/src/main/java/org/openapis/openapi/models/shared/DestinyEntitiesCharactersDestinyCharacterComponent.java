@@ -15,6 +15,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public Integer baseCharacterLevel;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withBaseCharacterLevel(Integer baseCharacterLevel) {
         this.baseCharacterLevel = baseCharacterLevel;
         return this;
@@ -25,6 +26,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public Long characterId;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withCharacterId(Long characterId) {
         this.characterId = characterId;
         return this;
@@ -35,6 +37,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public Long classHash;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withClassHash(Long classHash) {
         this.classHash = classHash;
         return this;
@@ -46,6 +49,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public Integer classType;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withClassType(Integer classType) {
         this.classType = classType;
         return this;
@@ -56,6 +60,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public OffsetDateTime dateLastPlayed;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withDateLastPlayed(OffsetDateTime dateLastPlayed) {
         this.dateLastPlayed = dateLastPlayed;
         return this;
@@ -66,6 +71,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public String emblemBackgroundPath;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withEmblemBackgroundPath(String emblemBackgroundPath) {
         this.emblemBackgroundPath = emblemBackgroundPath;
         return this;
@@ -76,6 +82,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public DestinyEntitiesCharactersDestinyCharacterComponentEmblemColor emblemColor;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withEmblemColor(DestinyEntitiesCharactersDestinyCharacterComponentEmblemColor emblemColor) {
         this.emblemColor = emblemColor;
         return this;
@@ -86,6 +93,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public Long emblemHash;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withEmblemHash(Long emblemHash) {
         this.emblemHash = emblemHash;
         return this;
@@ -96,6 +104,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public String emblemPath;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withEmblemPath(String emblemPath) {
         this.emblemPath = emblemPath;
         return this;
@@ -106,6 +115,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public Long genderHash;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withGenderHash(Long genderHash) {
         this.genderHash = genderHash;
         return this;
@@ -117,6 +127,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public Integer genderType;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withGenderType(Integer genderType) {
         this.genderType = genderType;
         return this;
@@ -127,6 +138,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression levelProgression;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withLevelProgression(DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression levelProgression) {
         this.levelProgression = levelProgression;
         return this;
@@ -137,6 +149,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public Integer light;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withLight(Integer light) {
         this.light = light;
         return this;
@@ -147,6 +160,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public Long membershipId;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -157,6 +171,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public Integer membershipType;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -167,6 +182,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public Long minutesPlayedThisSession;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withMinutesPlayedThisSession(Long minutesPlayedThisSession) {
         this.minutesPlayedThisSession = minutesPlayedThisSession;
         return this;
@@ -177,6 +193,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public Long minutesPlayedTotal;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withMinutesPlayedTotal(Long minutesPlayedTotal) {
         this.minutesPlayedTotal = minutesPlayedTotal;
         return this;
@@ -187,6 +204,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public Float percentToNextLevel;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withPercentToNextLevel(Float percentToNextLevel) {
         this.percentToNextLevel = percentToNextLevel;
         return this;
@@ -197,6 +215,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public Long raceHash;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withRaceHash(Long raceHash) {
         this.raceHash = raceHash;
         return this;
@@ -208,6 +227,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public Integer raceType;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withRaceType(Integer raceType) {
         this.raceType = raceType;
         return this;
@@ -219,6 +239,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public java.util.Map<String, Integer> stats;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withStats(java.util.Map<String, Integer> stats) {
         this.stats = stats;
         return this;
@@ -229,9 +250,11 @@ public class DestinyEntitiesCharactersDestinyCharacterComponent {
      */
     
     public Long titleRecordHash;
+
     public DestinyEntitiesCharactersDestinyCharacterComponent withTitleRecordHash(Long titleRecordHash) {
         this.titleRecordHash = titleRecordHash;
         return this;
     }
     
+    public DestinyEntitiesCharactersDestinyCharacterComponent(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Exclusion {
     @JsonProperty("arn")
     public String arn;
+
     public Exclusion withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class Exclusion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Attribute[] attributes;
+
     public Exclusion withAttributes(Attribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +31,7 @@ public class Exclusion {
     
     @JsonProperty("description")
     public String description;
+
     public Exclusion withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class Exclusion {
     
     @JsonProperty("recommendation")
     public String recommendation;
+
     public Exclusion withRecommendation(String recommendation) {
         this.recommendation = recommendation;
         return this;
@@ -43,6 +47,7 @@ public class Exclusion {
     
     @JsonProperty("scopes")
     public Scope[] scopes;
+
     public Exclusion withScopes(Scope[] scopes) {
         this.scopes = scopes;
         return this;
@@ -50,9 +55,17 @@ public class Exclusion {
     
     @JsonProperty("title")
     public String title;
+
     public Exclusion withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Exclusion(@JsonProperty("arn") String arn, @JsonProperty("description") String description, @JsonProperty("recommendation") String recommendation, @JsonProperty("scopes") Scope[] scopes, @JsonProperty("title") String title) {
+        this.arn = arn;
+        this.description = description;
+        this.recommendation = recommendation;
+        this.scopes = scopes;
+        this.title = title;
+  }
 }

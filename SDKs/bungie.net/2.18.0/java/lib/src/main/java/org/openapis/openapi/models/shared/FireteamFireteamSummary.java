@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class FireteamFireteamSummary {
     
     public Integer activityType;
+
     public FireteamFireteamSummary withActivityType(Integer activityType) {
         this.activityType = activityType;
         return this;
@@ -16,6 +17,7 @@ public class FireteamFireteamSummary {
     
     
     public Integer alternateSlotCount;
+
     public FireteamFireteamSummary withAlternateSlotCount(Integer alternateSlotCount) {
         this.alternateSlotCount = alternateSlotCount;
         return this;
@@ -23,6 +25,7 @@ public class FireteamFireteamSummary {
     
     
     public Integer availableAlternateSlotCount;
+
     public FireteamFireteamSummary withAvailableAlternateSlotCount(Integer availableAlternateSlotCount) {
         this.availableAlternateSlotCount = availableAlternateSlotCount;
         return this;
@@ -30,6 +33,7 @@ public class FireteamFireteamSummary {
     
     
     public Integer availablePlayerSlotCount;
+
     public FireteamFireteamSummary withAvailablePlayerSlotCount(Integer availablePlayerSlotCount) {
         this.availablePlayerSlotCount = availablePlayerSlotCount;
         return this;
@@ -37,6 +41,7 @@ public class FireteamFireteamSummary {
     
     
     public OffsetDateTime dateCreated;
+
     public FireteamFireteamSummary withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -44,6 +49,7 @@ public class FireteamFireteamSummary {
     
     
     public OffsetDateTime dateModified;
+
     public FireteamFireteamSummary withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -51,6 +57,7 @@ public class FireteamFireteamSummary {
     
     
     public OffsetDateTime datePlayerModified;
+
     public FireteamFireteamSummary withDatePlayerModified(OffsetDateTime datePlayerModified) {
         this.datePlayerModified = datePlayerModified;
         return this;
@@ -58,6 +65,7 @@ public class FireteamFireteamSummary {
     
     
     public Long fireteamId;
+
     public FireteamFireteamSummary withFireteamId(Long fireteamId) {
         this.fireteamId = fireteamId;
         return this;
@@ -65,6 +73,7 @@ public class FireteamFireteamSummary {
     
     
     public Long groupId;
+
     public FireteamFireteamSummary withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -72,6 +81,7 @@ public class FireteamFireteamSummary {
     
     
     public Boolean isImmediate;
+
     public FireteamFireteamSummary withIsImmediate(Boolean isImmediate) {
         this.isImmediate = isImmediate;
         return this;
@@ -79,6 +89,7 @@ public class FireteamFireteamSummary {
     
     
     public Boolean isPublic;
+
     public FireteamFireteamSummary withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -86,6 +97,7 @@ public class FireteamFireteamSummary {
     
     
     public Boolean isValid;
+
     public FireteamFireteamSummary withIsValid(Boolean isValid) {
         this.isValid = isValid;
         return this;
@@ -93,6 +105,7 @@ public class FireteamFireteamSummary {
     
     
     public String locale;
+
     public FireteamFireteamSummary withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -100,6 +113,7 @@ public class FireteamFireteamSummary {
     
     
     public Integer ownerCurrentGuardianRankSnapshot;
+
     public FireteamFireteamSummary withOwnerCurrentGuardianRankSnapshot(Integer ownerCurrentGuardianRankSnapshot) {
         this.ownerCurrentGuardianRankSnapshot = ownerCurrentGuardianRankSnapshot;
         return this;
@@ -107,6 +121,7 @@ public class FireteamFireteamSummary {
     
     
     public Integer ownerHighestLifetimeGuardianRankSnapshot;
+
     public FireteamFireteamSummary withOwnerHighestLifetimeGuardianRankSnapshot(Integer ownerHighestLifetimeGuardianRankSnapshot) {
         this.ownerHighestLifetimeGuardianRankSnapshot = ownerHighestLifetimeGuardianRankSnapshot;
         return this;
@@ -114,6 +129,7 @@ public class FireteamFireteamSummary {
     
     
     public Long ownerMembershipId;
+
     public FireteamFireteamSummary withOwnerMembershipId(Long ownerMembershipId) {
         this.ownerMembershipId = ownerMembershipId;
         return this;
@@ -121,6 +137,7 @@ public class FireteamFireteamSummary {
     
     
     public Integer ownerTotalCommendationScoreSnapshot;
+
     public FireteamFireteamSummary withOwnerTotalCommendationScoreSnapshot(Integer ownerTotalCommendationScoreSnapshot) {
         this.ownerTotalCommendationScoreSnapshot = ownerTotalCommendationScoreSnapshot;
         return this;
@@ -128,6 +145,7 @@ public class FireteamFireteamSummary {
     
     
     public Long platform;
+
     public FireteamFireteamSummary withPlatform(Long platform) {
         this.platform = platform;
         return this;
@@ -135,6 +153,7 @@ public class FireteamFireteamSummary {
     
     
     public Integer playerSlotCount;
+
     public FireteamFireteamSummary withPlayerSlotCount(Integer playerSlotCount) {
         this.playerSlotCount = playerSlotCount;
         return this;
@@ -142,6 +161,7 @@ public class FireteamFireteamSummary {
     
     
     public OffsetDateTime scheduledTime;
+
     public FireteamFireteamSummary withScheduledTime(OffsetDateTime scheduledTime) {
         this.scheduledTime = scheduledTime;
         return this;
@@ -149,6 +169,7 @@ public class FireteamFireteamSummary {
     
     
     public String title;
+
     public FireteamFireteamSummary withTitle(String title) {
         this.title = title;
         return this;
@@ -156,9 +177,11 @@ public class FireteamFireteamSummary {
     
     
     public String titleBeforeModeration;
+
     public FireteamFireteamSummary withTitleBeforeModeration(String titleBeforeModeration) {
         this.titleBeforeModeration = titleBeforeModeration;
         return this;
     }
     
+    public FireteamFireteamSummary(){}
 }

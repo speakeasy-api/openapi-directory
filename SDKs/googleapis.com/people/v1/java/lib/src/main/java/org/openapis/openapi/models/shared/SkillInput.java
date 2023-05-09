@@ -18,6 +18,7 @@ public class SkillInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FieldMetadataInput metadata;
+
     public SkillInput withMetadata(FieldMetadataInput metadata) {
         this.metadata = metadata;
         return this;
@@ -29,9 +30,11 @@ public class SkillInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public SkillInput withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public SkillInput(){}
 }

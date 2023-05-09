@@ -15,6 +15,7 @@ public class GatewayRouteSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpcRoute")
     public GrpcGatewayRoute grpcRoute;
+
     public GatewayRouteSpec withGrpcRoute(GrpcGatewayRoute grpcRoute) {
         this.grpcRoute = grpcRoute;
         return this;
@@ -23,6 +24,7 @@ public class GatewayRouteSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http2Route")
     public HttpGatewayRoute http2Route;
+
     public GatewayRouteSpec withHttp2Route(HttpGatewayRoute http2Route) {
         this.http2Route = http2Route;
         return this;
@@ -31,6 +33,7 @@ public class GatewayRouteSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpRoute")
     public HttpGatewayRoute httpRoute;
+
     public GatewayRouteSpec withHttpRoute(HttpGatewayRoute httpRoute) {
         this.httpRoute = httpRoute;
         return this;
@@ -39,9 +42,11 @@ public class GatewayRouteSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public GatewayRouteSpec withPriority(Long priority) {
         this.priority = priority;
         return this;
     }
     
+    public GatewayRouteSpec(){}
 }

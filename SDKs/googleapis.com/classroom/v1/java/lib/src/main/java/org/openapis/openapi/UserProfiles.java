@@ -60,11 +60,9 @@ public class UserProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomUserProfilesGetResponse res = new org.openapis.openapi.models.operations.ClassroomUserProfilesGetResponse() {{
+        org.openapis.openapi.models.operations.ClassroomUserProfilesGetResponse res = new org.openapis.openapi.models.operations.ClassroomUserProfilesGetResponse(contentType, httpRes.statusCode()) {{
             userProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class UserProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomUserProfilesGuardianInvitationsCreateResponse res = new org.openapis.openapi.models.operations.ClassroomUserProfilesGuardianInvitationsCreateResponse() {{
+        org.openapis.openapi.models.operations.ClassroomUserProfilesGuardianInvitationsCreateResponse res = new org.openapis.openapi.models.operations.ClassroomUserProfilesGuardianInvitationsCreateResponse(contentType, httpRes.statusCode()) {{
             guardianInvitation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class UserProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomUserProfilesGuardianInvitationsGetResponse res = new org.openapis.openapi.models.operations.ClassroomUserProfilesGuardianInvitationsGetResponse() {{
+        org.openapis.openapi.models.operations.ClassroomUserProfilesGuardianInvitationsGetResponse res = new org.openapis.openapi.models.operations.ClassroomUserProfilesGuardianInvitationsGetResponse(contentType, httpRes.statusCode()) {{
             guardianInvitation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class UserProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomUserProfilesGuardianInvitationsListResponse res = new org.openapis.openapi.models.operations.ClassroomUserProfilesGuardianInvitationsListResponse() {{
+        org.openapis.openapi.models.operations.ClassroomUserProfilesGuardianInvitationsListResponse res = new org.openapis.openapi.models.operations.ClassroomUserProfilesGuardianInvitationsListResponse(contentType, httpRes.statusCode()) {{
             listGuardianInvitationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class UserProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomUserProfilesGuardianInvitationsPatchResponse res = new org.openapis.openapi.models.operations.ClassroomUserProfilesGuardianInvitationsPatchResponse() {{
+        org.openapis.openapi.models.operations.ClassroomUserProfilesGuardianInvitationsPatchResponse res = new org.openapis.openapi.models.operations.ClassroomUserProfilesGuardianInvitationsPatchResponse(contentType, httpRes.statusCode()) {{
             guardianInvitation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class UserProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomUserProfilesGuardiansDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomUserProfilesGuardiansDeleteResponse() {{
+        org.openapis.openapi.models.operations.ClassroomUserProfilesGuardiansDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomUserProfilesGuardiansDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -340,11 +328,9 @@ public class UserProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomUserProfilesGuardiansGetResponse res = new org.openapis.openapi.models.operations.ClassroomUserProfilesGuardiansGetResponse() {{
+        org.openapis.openapi.models.operations.ClassroomUserProfilesGuardiansGetResponse res = new org.openapis.openapi.models.operations.ClassroomUserProfilesGuardiansGetResponse(contentType, httpRes.statusCode()) {{
             guardian = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -386,11 +372,9 @@ public class UserProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomUserProfilesGuardiansListResponse res = new org.openapis.openapi.models.operations.ClassroomUserProfilesGuardiansListResponse() {{
+        org.openapis.openapi.models.operations.ClassroomUserProfilesGuardiansListResponse res = new org.openapis.openapi.models.operations.ClassroomUserProfilesGuardiansListResponse(contentType, httpRes.statusCode()) {{
             listGuardiansResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

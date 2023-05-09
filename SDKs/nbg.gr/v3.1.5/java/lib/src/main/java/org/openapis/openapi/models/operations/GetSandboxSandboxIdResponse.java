@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSandboxSandboxIdResponse {
     
     public String contentType;
+
     public GetSandboxSandboxIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSandboxSandboxIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetSandboxSandboxIdResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetSandboxSandboxIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Sandbox sandbox;
+
     public GetSandboxSandboxIdResponse withSandbox(org.openapis.openapi.models.shared.Sandbox sandbox) {
         this.sandbox = sandbox;
         return this;
@@ -36,6 +40,7 @@ public class GetSandboxSandboxIdResponse {
     
     
     public Integer statusCode;
+
     public GetSandboxSandboxIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetSandboxSandboxIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSandboxSandboxIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSandboxSandboxIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

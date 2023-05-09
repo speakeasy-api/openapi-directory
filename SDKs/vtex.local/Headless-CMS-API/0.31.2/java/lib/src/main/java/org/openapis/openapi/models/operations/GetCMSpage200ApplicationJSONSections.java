@@ -15,6 +15,7 @@ public class GetCMSpage200ApplicationJSONSections {
      */
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public GetCMSpage200ApplicationJSONSections withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -25,6 +26,7 @@ public class GetCMSpage200ApplicationJSONSections {
      */
     @JsonProperty("id")
     public String id;
+
     public GetCMSpage200ApplicationJSONSections withId(String id) {
         this.id = id;
         return this;
@@ -35,9 +37,15 @@ public class GetCMSpage200ApplicationJSONSections {
      */
     @JsonProperty("name")
     public String name;
+
     public GetCMSpage200ApplicationJSONSections withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetCMSpage200ApplicationJSONSections(@JsonProperty("data") java.util.Map<String, Object> data, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.data = data;
+        this.id = id;
+        this.name = name;
+  }
 }

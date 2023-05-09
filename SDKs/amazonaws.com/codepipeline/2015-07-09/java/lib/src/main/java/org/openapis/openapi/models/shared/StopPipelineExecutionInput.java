@@ -12,6 +12,7 @@ public class StopPipelineExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abandon")
     public Boolean abandon;
+
     public StopPipelineExecutionInput withAbandon(Boolean abandon) {
         this.abandon = abandon;
         return this;
@@ -19,6 +20,7 @@ public class StopPipelineExecutionInput {
     
     @JsonProperty("pipelineExecutionId")
     public String pipelineExecutionId;
+
     public StopPipelineExecutionInput withPipelineExecutionId(String pipelineExecutionId) {
         this.pipelineExecutionId = pipelineExecutionId;
         return this;
@@ -26,6 +28,7 @@ public class StopPipelineExecutionInput {
     
     @JsonProperty("pipelineName")
     public String pipelineName;
+
     public StopPipelineExecutionInput withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
@@ -34,9 +37,14 @@ public class StopPipelineExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public StopPipelineExecutionInput withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public StopPipelineExecutionInput(@JsonProperty("pipelineExecutionId") String pipelineExecutionId, @JsonProperty("pipelineName") String pipelineName) {
+        this.pipelineExecutionId = pipelineExecutionId;
+        this.pipelineName = pipelineName;
+  }
 }

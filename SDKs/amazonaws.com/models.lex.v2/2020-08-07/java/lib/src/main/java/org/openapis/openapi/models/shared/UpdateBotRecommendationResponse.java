@@ -20,6 +20,7 @@ public class UpdateBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public UpdateBotRecommendationResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -28,6 +29,7 @@ public class UpdateBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botRecommendationId")
     public String botRecommendationId;
+
     public UpdateBotRecommendationResponse withBotRecommendationId(String botRecommendationId) {
         this.botRecommendationId = botRecommendationId;
         return this;
@@ -36,6 +38,7 @@ public class UpdateBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botRecommendationStatus")
     public BotRecommendationStatusEnum botRecommendationStatus;
+
     public UpdateBotRecommendationResponse withBotRecommendationStatus(BotRecommendationStatusEnum botRecommendationStatus) {
         this.botRecommendationStatus = botRecommendationStatus;
         return this;
@@ -44,6 +47,7 @@ public class UpdateBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public UpdateBotRecommendationResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -54,6 +58,7 @@ public class UpdateBotRecommendationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public UpdateBotRecommendationResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -62,6 +67,7 @@ public class UpdateBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionSetting")
     public EncryptionSetting encryptionSetting;
+
     public UpdateBotRecommendationResponse withEncryptionSetting(EncryptionSetting encryptionSetting) {
         this.encryptionSetting = encryptionSetting;
         return this;
@@ -72,6 +78,7 @@ public class UpdateBotRecommendationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public UpdateBotRecommendationResponse withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -80,6 +87,7 @@ public class UpdateBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public UpdateBotRecommendationResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -88,9 +96,11 @@ public class UpdateBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcriptSourceSetting")
     public TranscriptSourceSetting transcriptSourceSetting;
+
     public UpdateBotRecommendationResponse withTranscriptSourceSetting(TranscriptSourceSetting transcriptSourceSetting) {
         this.transcriptSourceSetting = transcriptSourceSetting;
         return this;
     }
     
+    public UpdateBotRecommendationResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class RecipientDsnFields {
     
     public DsnActionEnum action;
+
     public RecipientDsnFields withAction(DsnActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class RecipientDsnFields {
     
     
     public String diagnosticCode;
+
     public RecipientDsnFields withDiagnosticCode(String diagnosticCode) {
         this.diagnosticCode = diagnosticCode;
         return this;
@@ -26,6 +29,7 @@ public class RecipientDsnFields {
     
     
     public ExtensionField[] extensionFields;
+
     public RecipientDsnFields withExtensionFields(ExtensionField[] extensionFields) {
         this.extensionFields = extensionFields;
         return this;
@@ -33,6 +37,7 @@ public class RecipientDsnFields {
     
     
     public String finalRecipient;
+
     public RecipientDsnFields withFinalRecipient(String finalRecipient) {
         this.finalRecipient = finalRecipient;
         return this;
@@ -40,6 +45,7 @@ public class RecipientDsnFields {
     
     
     public OffsetDateTime lastAttemptDate;
+
     public RecipientDsnFields withLastAttemptDate(OffsetDateTime lastAttemptDate) {
         this.lastAttemptDate = lastAttemptDate;
         return this;
@@ -47,6 +53,7 @@ public class RecipientDsnFields {
     
     
     public String remoteMta;
+
     public RecipientDsnFields withRemoteMta(String remoteMta) {
         this.remoteMta = remoteMta;
         return this;
@@ -54,9 +61,14 @@ public class RecipientDsnFields {
     
     
     public String status;
+
     public RecipientDsnFields withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public RecipientDsnFields(@JsonProperty("Action") DsnActionEnum action, @JsonProperty("Status") String status) {
+        this.action = action;
+        this.status = status;
+  }
 }

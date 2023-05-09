@@ -18,6 +18,7 @@ public class CancelSurveyResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public CancelSurveyResultReasonEnum reason;
+
     public CancelSurveyResult withReason(CancelSurveyResultReasonEnum reason) {
         this.reason = reason;
         return this;
@@ -29,9 +30,11 @@ public class CancelSurveyResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonUserInput")
     public String reasonUserInput;
+
     public CancelSurveyResult withReasonUserInput(String reasonUserInput) {
         this.reasonUserInput = reasonUserInput;
         return this;
     }
     
+    public CancelSurveyResult(){}
 }

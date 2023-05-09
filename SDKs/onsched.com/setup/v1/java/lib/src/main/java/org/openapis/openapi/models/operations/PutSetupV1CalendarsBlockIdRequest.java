@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1CalendarsBlockIdRequest {
@@ -12,6 +13,7 @@ public class PutSetupV1CalendarsBlockIdRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CalendarBlockUpdateModel calendarBlockUpdateModel;
+
     public PutSetupV1CalendarsBlockIdRequest withCalendarBlockUpdateModel(org.openapis.openapi.models.shared.CalendarBlockUpdateModel calendarBlockUpdateModel) {
         this.calendarBlockUpdateModel = calendarBlockUpdateModel;
         return this;
@@ -22,9 +24,13 @@ public class PutSetupV1CalendarsBlockIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutSetupV1CalendarsBlockIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PutSetupV1CalendarsBlockIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

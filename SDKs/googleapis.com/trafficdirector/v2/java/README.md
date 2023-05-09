@@ -16,22 +16,21 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.TrafficdirectorDiscoveryClientStatusSecurity;
 import org.openapis.openapi.models.operations.TrafficdirectorDiscoveryClientStatusRequest;
 import org.openapis.openapi.models.operations.TrafficdirectorDiscoveryClientStatusResponse;
+import org.openapis.openapi.models.operations.TrafficdirectorDiscoveryClientStatusSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ClientStatusRequest;
-import org.openapis.openapi.models.shared.NodeMatcher;
-import org.openapis.openapi.models.shared.StructMatcher;
-import org.openapis.openapi.models.shared.ValueMatcher;
-import org.openapis.openapi.models.shared.StringMatcher;
-import org.openapis.openapi.models.shared.RegexMatcher;
-import org.openapis.openapi.models.shared.GoogleRe2;
-import org.openapis.openapi.models.shared.ListMatcher;
 import org.openapis.openapi.models.shared.DoubleMatcher;
 import org.openapis.openapi.models.shared.DoubleRange;
+import org.openapis.openapi.models.shared.GoogleRe2;
+import org.openapis.openapi.models.shared.ListMatcher;
+import org.openapis.openapi.models.shared.NodeMatcher;
 import org.openapis.openapi.models.shared.PathSegment;
+import org.openapis.openapi.models.shared.RegexMatcher;
+import org.openapis.openapi.models.shared.StringMatcher;
+import org.openapis.openapi.models.shared.StructMatcher;
+import org.openapis.openapi.models.shared.ValueMatcher;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -41,7 +40,7 @@ public class Application {
                 .build();
 
             TrafficdirectorDiscoveryClientStatusRequest req = new TrafficdirectorDiscoveryClientStatusRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 clientStatusRequest = new ClientStatusRequest() {{
                     nodeMatchers = new org.openapis.openapi.models.shared.NodeMatcher[]{{
                         add(new NodeMatcher() {{
@@ -52,7 +51,7 @@ public class Application {
                                 regex = "unde";
                                 safeRegex = new RegexMatcher() {{
                                     googleRe2 = new GoogleRe2() {{
-                                        maxProgramSize = 857946;
+                                        maxProgramSize = 857946L;
                                     }};
                                     regex = "corrupti";
                                 }};
@@ -97,7 +96,7 @@ public class Application {
                                             regex = "temporibus";
                                             safeRegex = new RegexMatcher() {{
                                                 googleRe2 = new GoogleRe2() {{
-                                                    maxProgramSize = 71036;
+                                                    maxProgramSize = 71036L;
                                                 }};
                                                 regex = "quis";
                                             }};
@@ -143,7 +142,7 @@ public class Application {
                                             regex = "nam";
                                             safeRegex = new RegexMatcher() {{
                                                 googleRe2 = new GoogleRe2() {{
-                                                    maxProgramSize = 639921;
+                                                    maxProgramSize = 639921L;
                                                 }};
                                                 regex = "occaecati";
                                             }};
@@ -161,7 +160,7 @@ public class Application {
                                 regex = "optio";
                                 safeRegex = new RegexMatcher() {{
                                     googleRe2 = new GoogleRe2() {{
-                                        maxProgramSize = 521848;
+                                        maxProgramSize = 521848L;
                                     }};
                                     regex = "beatae";
                                 }};
@@ -202,7 +201,7 @@ public class Application {
                                             regex = "laboriosam";
                                             safeRegex = new RegexMatcher() {{
                                                 googleRe2 = new GoogleRe2() {{
-                                                    maxProgramSize = 943749;
+                                                    maxProgramSize = 943749L;
                                                 }};
                                                 regex = "saepe";
                                             }};
@@ -242,7 +241,7 @@ public class Application {
                                             regex = "laborum";
                                             safeRegex = new RegexMatcher() {{
                                                 googleRe2 = new GoogleRe2() {{
-                                                    maxProgramSize = 170909;
+                                                    maxProgramSize = 170909L;
                                                 }};
                                                 regex = "dolorem";
                                             }};
@@ -260,7 +259,7 @@ public class Application {
                                 regex = "enim";
                                 safeRegex = new RegexMatcher() {{
                                     googleRe2 = new GoogleRe2() {{
-                                        maxProgramSize = 607831;
+                                        maxProgramSize = 607831L;
                                     }};
                                     regex = "nemo";
                                 }};
@@ -296,7 +295,7 @@ public class Application {
                                             regex = "repellat";
                                             safeRegex = new RegexMatcher() {{
                                                 googleRe2 = new GoogleRe2() {{
-                                                    maxProgramSize = 653108;
+                                                    maxProgramSize = 653108L;
                                                 }};
                                                 regex = "occaecati";
                                             }};
@@ -337,7 +336,7 @@ public class Application {
                                             regex = "sequi";
                                             safeRegex = new RegexMatcher() {{
                                                 googleRe2 = new GoogleRe2() {{
-                                                    maxProgramSize = 949572;
+                                                    maxProgramSize = 949572L;
                                                 }};
                                                 regex = "ipsam";
                                             }};
@@ -386,7 +385,7 @@ public class Application {
                                             regex = "reprehenderit";
                                             safeRegex = new RegexMatcher() {{
                                                 googleRe2 = new GoogleRe2() {{
-                                                    maxProgramSize = 282807;
+                                                    maxProgramSize = 282807L;
                                                 }};
                                                 regex = "maiores";
                                             }};
@@ -397,9 +396,9 @@ public class Application {
                             }};
                         }}),
                     }};
-                }};
+                }};;
                 accessToken = "corporis";
-                alt = "json";
+                alt = AltEnum.JSON;
                 callback = "iusto";
                 fields = "dicta";
                 key = "harum";
@@ -408,19 +407,21 @@ public class Application {
                 quotaUser = "accusamus";
                 uploadType = "commodi";
                 uploadProtocol = "repudiandae";
-            }}            
+            }};            
 
-            TrafficdirectorDiscoveryClientStatusResponse res = sdk.discovery.trafficdirectorDiscoveryClientStatus(req, new TrafficdirectorDiscoveryClientStatusSecurity() {{
+            TrafficdirectorDiscoveryClientStatusResponse res = sdk.discovery.trafficdirectorDiscoveryClientStatus(req, new TrafficdirectorDiscoveryClientStatusSecurity("quae", "ipsum") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.clientStatusResponse.isPresent()) {
+            if (res.clientStatusResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -428,9 +429,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### discovery
+### [discovery](docs/discovery/README.md)
 
-* `trafficdirectorDiscoveryClientStatus`
+* [trafficdirectorDiscoveryClientStatus](docs/discovery/README.md#trafficdirectordiscoveryclientstatus)
 <!-- End SDK Available Operations -->
 
 ### Maturity

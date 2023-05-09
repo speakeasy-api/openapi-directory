@@ -18,6 +18,7 @@ public class CreateLocationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CreateLocationResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -26,9 +27,11 @@ public class CreateLocationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public CreateLocationResponse withLocation(Location location) {
         this.location = location;
         return this;
     }
     
+    public CreateLocationResponse(){}
 }

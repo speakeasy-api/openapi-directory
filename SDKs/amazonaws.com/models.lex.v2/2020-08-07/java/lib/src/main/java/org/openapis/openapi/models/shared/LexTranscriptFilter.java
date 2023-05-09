@@ -15,9 +15,11 @@ public class LexTranscriptFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRangeFilter")
     public DateRangeFilter dateRangeFilter;
+
     public LexTranscriptFilter withDateRangeFilter(DateRangeFilter dateRangeFilter) {
         this.dateRangeFilter = dateRangeFilter;
         return this;
     }
     
+    public LexTranscriptFilter(){}
 }

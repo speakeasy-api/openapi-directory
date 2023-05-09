@@ -13,6 +13,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchBolderRentalHousingRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchBolderRentalHousingRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchBolderRentalHousingRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchBolderRentalHousingRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchBolderRentalHousingRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchBolderRentalHousingRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchBolderRentalHousingRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchBolderRentalHousingRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchBolderRentalHousingRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchBolderRentalHousingRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchBolderRentalHousingRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchBolderRentalHousingRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchBolderRentalHousingRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchBolderRentalHousingRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.bldgtype")
     public String searchDbBolderRentalHousingBldgtype;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingBldgtype(String searchDbBolderRentalHousingBldgtype) {
         this.searchDbBolderRentalHousingBldgtype = searchDbBolderRentalHousingBldgtype;
         return this;
@@ -163,6 +178,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.company")
     public String searchDbBolderRentalHousingCompany;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingCompany(String searchDbBolderRentalHousingCompany) {
         this.searchDbBolderRentalHousingCompany = searchDbBolderRentalHousingCompany;
         return this;
@@ -173,6 +189,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.complexnm")
     public String searchDbBolderRentalHousingComplexnm;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingComplexnm(String searchDbBolderRentalHousingComplexnm) {
         this.searchDbBolderRentalHousingComplexnm = searchDbBolderRentalHousingComplexnm;
         return this;
@@ -183,6 +200,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.dwellunits")
     public Long searchDbBolderRentalHousingDwellunits;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingDwellunits(Long searchDbBolderRentalHousingDwellunits) {
         this.searchDbBolderRentalHousingDwellunits = searchDbBolderRentalHousingDwellunits;
         return this;
@@ -193,6 +211,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.engcompl")
     public String searchDbBolderRentalHousingEngcompl;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingEngcompl(String searchDbBolderRentalHousingEngcompl) {
         this.searchDbBolderRentalHousingEngcompl = searchDbBolderRentalHousingEngcompl;
         return this;
@@ -203,6 +222,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.licenseexp")
     public String searchDbBolderRentalHousingLicenseexp;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingLicenseexp(String searchDbBolderRentalHousingLicenseexp) {
         this.searchDbBolderRentalHousingLicenseexp = searchDbBolderRentalHousingLicenseexp;
         return this;
@@ -213,6 +233,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.licensenum")
     public String searchDbBolderRentalHousingLicensenum;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingLicensenum(String searchDbBolderRentalHousingLicensenum) {
         this.searchDbBolderRentalHousingLicensenum = searchDbBolderRentalHousingLicensenum;
         return this;
@@ -223,6 +244,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.location")
     public String searchDbBolderRentalHousingLocation;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingLocation(String searchDbBolderRentalHousingLocation) {
         this.searchDbBolderRentalHousingLocation = searchDbBolderRentalHousingLocation;
         return this;
@@ -233,6 +255,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.name")
     public String searchDbBolderRentalHousingName;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingName(String searchDbBolderRentalHousingName) {
         this.searchDbBolderRentalHousingName = searchDbBolderRentalHousingName;
         return this;
@@ -243,6 +266,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.neighbrhd")
     public String searchDbBolderRentalHousingNeighbrhd;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingNeighbrhd(String searchDbBolderRentalHousingNeighbrhd) {
         this.searchDbBolderRentalHousingNeighbrhd = searchDbBolderRentalHousingNeighbrhd;
         return this;
@@ -253,6 +277,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.person_1")
     public String searchDbBolderRentalHousingPerson1;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingPerson1(String searchDbBolderRentalHousingPerson1) {
         this.searchDbBolderRentalHousingPerson1 = searchDbBolderRentalHousingPerson1;
         return this;
@@ -263,6 +288,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.person_2")
     public String searchDbBolderRentalHousingPerson2;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingPerson2(String searchDbBolderRentalHousingPerson2) {
         this.searchDbBolderRentalHousingPerson2 = searchDbBolderRentalHousingPerson2;
         return this;
@@ -273,6 +299,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.persontype")
     public String searchDbBolderRentalHousingPersontype;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingPersontype(String searchDbBolderRentalHousingPersontype) {
         this.searchDbBolderRentalHousingPersontype = searchDbBolderRentalHousingPersontype;
         return this;
@@ -283,6 +310,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.ppl1_coname")
     public String searchDbBolderRentalHousingPpl1Coname;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingPpl1Coname(String searchDbBolderRentalHousingPpl1Coname) {
         this.searchDbBolderRentalHousingPpl1Coname = searchDbBolderRentalHousingPpl1Coname;
         return this;
@@ -293,6 +321,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.ppl1_role")
     public String searchDbBolderRentalHousingPpl1Role;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingPpl1Role(String searchDbBolderRentalHousingPpl1Role) {
         this.searchDbBolderRentalHousingPpl1Role = searchDbBolderRentalHousingPpl1Role;
         return this;
@@ -303,6 +332,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.ppl2_coname")
     public String searchDbBolderRentalHousingPpl2Coname;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingPpl2Coname(String searchDbBolderRentalHousingPpl2Coname) {
         this.searchDbBolderRentalHousingPpl2Coname = searchDbBolderRentalHousingPpl2Coname;
         return this;
@@ -313,6 +343,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.ppl2_role")
     public String searchDbBolderRentalHousingPpl2Role;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingPpl2Role(String searchDbBolderRentalHousingPpl2Role) {
         this.searchDbBolderRentalHousingPpl2Role = searchDbBolderRentalHousingPpl2Role;
         return this;
@@ -323,6 +354,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.propaddr1")
     public String searchDbBolderRentalHousingPropaddr1;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingPropaddr1(String searchDbBolderRentalHousingPropaddr1) {
         this.searchDbBolderRentalHousingPropaddr1 = searchDbBolderRentalHousingPropaddr1;
         return this;
@@ -333,6 +365,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.rentaltype")
     public String searchDbBolderRentalHousingRentaltype;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingRentaltype(String searchDbBolderRentalHousingRentaltype) {
         this.searchDbBolderRentalHousingRentaltype = searchDbBolderRentalHousingRentaltype;
         return this;
@@ -343,6 +376,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_bolder_rental_housing.roomunits")
     public Long searchDbBolderRentalHousingRoomunits;
+
     public SearchBolderRentalHousingRequest withSearchDbBolderRentalHousingRoomunits(Long searchDbBolderRentalHousingRoomunits) {
         this.searchDbBolderRentalHousingRoomunits = searchDbBolderRentalHousingRoomunits;
         return this;
@@ -353,6 +387,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchBolderRentalHousingRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -363,6 +398,7 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchBolderRentalHousingRequest withText(String text) {
         this.text = text;
         return this;
@@ -373,9 +409,11 @@ public class SearchBolderRentalHousingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchBolderRentalHousingRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchBolderRentalHousingRequest(){}
 }

@@ -15,6 +15,7 @@ public class DeleteAppInputSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appArn")
     public String appArn;
+
     public DeleteAppInputSourceResponse withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -23,9 +24,11 @@ public class DeleteAppInputSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appInputSource")
     public AppInputSource appInputSource;
+
     public DeleteAppInputSourceResponse withAppInputSource(AppInputSource appInputSource) {
         this.appInputSource = appInputSource;
         return this;
     }
     
+    public DeleteAppInputSourceResponse(){}
 }

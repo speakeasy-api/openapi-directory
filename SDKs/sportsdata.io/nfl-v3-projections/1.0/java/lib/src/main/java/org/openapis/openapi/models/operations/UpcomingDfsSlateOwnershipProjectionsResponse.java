@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpcomingDfsSlateOwnershipProjectionsResponse {
     
     public String contentType;
+
     public UpcomingDfsSlateOwnershipProjectionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpcomingDfsSlateOwnershipProjectionsResponse {
     
     
     public org.openapis.openapi.models.shared.DfsSlateWithOwnershipProjection[] dfsSlateWithOwnershipProjections;
+
     public UpcomingDfsSlateOwnershipProjectionsResponse withDfsSlateWithOwnershipProjections(org.openapis.openapi.models.shared.DfsSlateWithOwnershipProjection[] dfsSlateWithOwnershipProjections) {
         this.dfsSlateWithOwnershipProjections = dfsSlateWithOwnershipProjections;
         return this;
@@ -23,6 +26,7 @@ public class UpcomingDfsSlateOwnershipProjectionsResponse {
     
     
     public Integer statusCode;
+
     public UpcomingDfsSlateOwnershipProjectionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class UpcomingDfsSlateOwnershipProjectionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpcomingDfsSlateOwnershipProjectionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpcomingDfsSlateOwnershipProjectionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

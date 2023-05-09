@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdvancedSecurityActiveCommittersRepository {
     @JsonProperty("advanced_security_committers")
     public Long advancedSecurityCommitters;
+
     public AdvancedSecurityActiveCommittersRepository withAdvancedSecurityCommitters(Long advancedSecurityCommitters) {
         this.advancedSecurityCommitters = advancedSecurityCommitters;
         return this;
@@ -16,6 +17,7 @@ public class AdvancedSecurityActiveCommittersRepository {
     
     @JsonProperty("advanced_security_committers_breakdown")
     public AdvancedSecurityActiveCommittersUser[] advancedSecurityCommittersBreakdown;
+
     public AdvancedSecurityActiveCommittersRepository withAdvancedSecurityCommittersBreakdown(AdvancedSecurityActiveCommittersUser[] advancedSecurityCommittersBreakdown) {
         this.advancedSecurityCommittersBreakdown = advancedSecurityCommittersBreakdown;
         return this;
@@ -23,9 +25,15 @@ public class AdvancedSecurityActiveCommittersRepository {
     
     @JsonProperty("name")
     public String name;
+
     public AdvancedSecurityActiveCommittersRepository withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AdvancedSecurityActiveCommittersRepository(@JsonProperty("advanced_security_committers") Long advancedSecurityCommitters, @JsonProperty("advanced_security_committers_breakdown") AdvancedSecurityActiveCommittersUser[] advancedSecurityCommittersBreakdown, @JsonProperty("name") String name) {
+        this.advancedSecurityCommitters = advancedSecurityCommitters;
+        this.advancedSecurityCommittersBreakdown = advancedSecurityCommittersBreakdown;
+        this.name = name;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveCustomFieldSettingForProjectResponse {
     
     public String contentType;
+
     public RemoveCustomFieldSettingForProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemoveCustomFieldSettingForProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public RemoveCustomFieldSettingForProjectResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class RemoveCustomFieldSettingForProjectResponse {
     
     
     public Integer statusCode;
+
     public RemoveCustomFieldSettingForProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RemoveCustomFieldSettingForProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveCustomFieldSettingForProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class RemoveCustomFieldSettingForProjectResponse {
      */
     
     public RemoveCustomFieldSettingForProject200ApplicationJSON removeCustomFieldSettingForProject200ApplicationJSONObject;
+
     public RemoveCustomFieldSettingForProjectResponse withRemoveCustomFieldSettingForProject200ApplicationJSONObject(RemoveCustomFieldSettingForProject200ApplicationJSON removeCustomFieldSettingForProject200ApplicationJSONObject) {
         this.removeCustomFieldSettingForProject200ApplicationJSONObject = removeCustomFieldSettingForProject200ApplicationJSONObject;
         return this;
     }
     
+    public RemoveCustomFieldSettingForProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

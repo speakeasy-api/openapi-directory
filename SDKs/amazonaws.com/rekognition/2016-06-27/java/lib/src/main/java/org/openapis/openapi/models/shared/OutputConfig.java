@@ -15,6 +15,7 @@ public class OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Bucket")
     public String s3Bucket;
+
     public OutputConfig withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -23,9 +24,11 @@ public class OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3KeyPrefix")
     public String s3KeyPrefix;
+
     public OutputConfig withS3KeyPrefix(String s3KeyPrefix) {
         this.s3KeyPrefix = s3KeyPrefix;
         return this;
     }
     
+    public OutputConfig(){}
 }

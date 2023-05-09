@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgRequest {
@@ -12,6 +13,7 @@ public class ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgRequest withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +24,7 @@ public class ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -32,9 +35,15 @@ public class ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
     public Long runnerId;
+
     public ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgRequest withRunnerId(Long runnerId) {
         this.runnerId = runnerId;
         return this;
     }
     
+    public ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgRequest(@JsonProperty("name") String name, @JsonProperty("org") String org, @JsonProperty("runner_id") Long runnerId) {
+        this.name = name;
+        this.org = org;
+        this.runnerId = runnerId;
+  }
 }

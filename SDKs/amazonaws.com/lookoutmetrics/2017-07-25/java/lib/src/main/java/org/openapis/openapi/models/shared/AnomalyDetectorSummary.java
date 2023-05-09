@@ -20,6 +20,7 @@ public class AnomalyDetectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public AnomalyDetectorSummary withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -28,6 +29,7 @@ public class AnomalyDetectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorDescription")
     public String anomalyDetectorDescription;
+
     public AnomalyDetectorSummary withAnomalyDetectorDescription(String anomalyDetectorDescription) {
         this.anomalyDetectorDescription = anomalyDetectorDescription;
         return this;
@@ -36,6 +38,7 @@ public class AnomalyDetectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorName")
     public String anomalyDetectorName;
+
     public AnomalyDetectorSummary withAnomalyDetectorName(String anomalyDetectorName) {
         this.anomalyDetectorName = anomalyDetectorName;
         return this;
@@ -46,6 +49,7 @@ public class AnomalyDetectorSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public AnomalyDetectorSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -56,6 +60,7 @@ public class AnomalyDetectorSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public AnomalyDetectorSummary withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -64,6 +69,7 @@ public class AnomalyDetectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AnomalyDetectorStatusEnum status;
+
     public AnomalyDetectorSummary withStatus(AnomalyDetectorStatusEnum status) {
         this.status = status;
         return this;
@@ -72,9 +78,11 @@ public class AnomalyDetectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public AnomalyDetectorSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public AnomalyDetectorSummary(){}
 }

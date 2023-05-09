@@ -15,9 +15,11 @@ public class FailoverShardResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cluster")
     public Cluster cluster;
+
     public FailoverShardResponse withCluster(Cluster cluster) {
         this.cluster = cluster;
         return this;
     }
     
+    public FailoverShardResponse(){}
 }

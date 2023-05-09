@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchAppsAppIdVersionsVersionRequest {
@@ -12,6 +13,7 @@ public class PatchAppsAppIdVersionsVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access")
     public String access;
+
     public PatchAppsAppIdVersionsVersionRequest withAccess(String access) {
         this.access = access;
         return this;
@@ -22,6 +24,7 @@ public class PatchAppsAppIdVersionsVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allow")
     public String allow;
+
     public PatchAppsAppIdVersionsVersionRequest withAllow(String allow) {
         this.allow = allow;
         return this;
@@ -32,6 +35,7 @@ public class PatchAppsAppIdVersionsVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public String appId;
+
     public PatchAppsAppIdVersionsVersionRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -42,6 +46,7 @@ public class PatchAppsAppIdVersionsVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=approvalRequired")
     public String approvalRequired;
+
     public PatchAppsAppIdVersionsVersionRequest withApprovalRequired(String approvalRequired) {
         this.approvalRequired = approvalRequired;
         return this;
@@ -52,6 +57,7 @@ public class PatchAppsAppIdVersionsVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=attributes")
     public String attributes;
+
     public PatchAppsAppIdVersionsVersionRequest withAttributes(String attributes) {
         this.attributes = attributes;
         return this;
@@ -62,6 +68,7 @@ public class PatchAppsAppIdVersionsVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
     public String customData;
+
     public PatchAppsAppIdVersionsVersionRequest withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -72,6 +79,7 @@ public class PatchAppsAppIdVersionsVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
     public String developerId;
+
     public PatchAppsAppIdVersionsVersionRequest withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -82,6 +90,7 @@ public class PatchAppsAppIdVersionsVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
     public String model;
+
     public PatchAppsAppIdVersionsVersionRequest withModel(String model) {
         this.model = model;
         return this;
@@ -92,6 +101,7 @@ public class PatchAppsAppIdVersionsVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public PatchAppsAppIdVersionsVersionRequest withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +112,7 @@ public class PatchAppsAppIdVersionsVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=restrict")
     public String restrict;
+
     public PatchAppsAppIdVersionsVersionRequest withRestrict(String restrict) {
         this.restrict = restrict;
         return this;
@@ -112,6 +123,7 @@ public class PatchAppsAppIdVersionsVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public PatchAppsAppIdVersionsVersionRequest withType(String type) {
         this.type = type;
         return this;
@@ -122,9 +134,15 @@ public class PatchAppsAppIdVersionsVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public PatchAppsAppIdVersionsVersionRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public PatchAppsAppIdVersionsVersionRequest(@JsonProperty("appId") String appId, @JsonProperty("developerId") String developerId, @JsonProperty("version") String version) {
+        this.appId = appId;
+        this.developerId = developerId;
+        this.version = version;
+  }
 }

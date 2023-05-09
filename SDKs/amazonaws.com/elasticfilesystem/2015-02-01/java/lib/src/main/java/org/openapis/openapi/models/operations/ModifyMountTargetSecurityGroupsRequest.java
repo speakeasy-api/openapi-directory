@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ModifyMountTargetSecurityGroupsRequest {
@@ -12,6 +13,7 @@ public class ModifyMountTargetSecurityGroupsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MountTargetId")
     public String mountTargetId;
+
     public ModifyMountTargetSecurityGroupsRequest withMountTargetId(String mountTargetId) {
         this.mountTargetId = mountTargetId;
         return this;
@@ -19,6 +21,7 @@ public class ModifyMountTargetSecurityGroupsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ModifyMountTargetSecurityGroupsRequestBody requestBody;
+
     public ModifyMountTargetSecurityGroupsRequest withRequestBody(ModifyMountTargetSecurityGroupsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class ModifyMountTargetSecurityGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ModifyMountTargetSecurityGroupsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class ModifyMountTargetSecurityGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ModifyMountTargetSecurityGroupsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class ModifyMountTargetSecurityGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ModifyMountTargetSecurityGroupsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class ModifyMountTargetSecurityGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ModifyMountTargetSecurityGroupsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class ModifyMountTargetSecurityGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ModifyMountTargetSecurityGroupsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class ModifyMountTargetSecurityGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ModifyMountTargetSecurityGroupsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,9 +77,14 @@ public class ModifyMountTargetSecurityGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ModifyMountTargetSecurityGroupsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public ModifyMountTargetSecurityGroupsRequest(@JsonProperty("MountTargetId") String mountTargetId, @JsonProperty("RequestBody") ModifyMountTargetSecurityGroupsRequestBody requestBody) {
+        this.mountTargetId = mountTargetId;
+        this.requestBody = requestBody;
+  }
 }

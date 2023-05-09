@@ -19,6 +19,7 @@ public class GistSimpleForks {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public GistSimpleForks withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -27,6 +28,7 @@ public class GistSimpleForks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GistSimpleForks withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class GistSimpleForks {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public GistSimpleForks withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -45,6 +48,7 @@ public class GistSimpleForks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GistSimpleForks withUrl(String url) {
         this.url = url;
         return this;
@@ -56,9 +60,11 @@ public class GistSimpleForks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public PublicUser user;
+
     public GistSimpleForks withUser(PublicUser user) {
         this.user = user;
         return this;
     }
     
+    public GistSimpleForks(){}
 }

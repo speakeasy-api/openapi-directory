@@ -18,6 +18,7 @@ public class VoiceSelectionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customVoice")
     public CustomVoiceParams customVoice;
+
     public VoiceSelectionParams withCustomVoice(CustomVoiceParams customVoice) {
         this.customVoice = customVoice;
         return this;
@@ -29,6 +30,7 @@ public class VoiceSelectionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public VoiceSelectionParams withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -40,6 +42,7 @@ public class VoiceSelectionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VoiceSelectionParams withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class VoiceSelectionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssmlGender")
     public VoiceSelectionParamsSsmlGenderEnum ssmlGender;
+
     public VoiceSelectionParams withSsmlGender(VoiceSelectionParamsSsmlGenderEnum ssmlGender) {
         this.ssmlGender = ssmlGender;
         return this;
     }
     
+    public VoiceSelectionParams(){}
 }

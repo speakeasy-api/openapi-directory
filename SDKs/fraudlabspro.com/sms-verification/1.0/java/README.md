@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetV1VerificationResultFormatEnum;
 import org.openapis.openapi.models.operations.GetV1VerificationResultRequest;
 import org.openapis.openapi.models.operations.GetV1VerificationResultResponse;
@@ -27,31 +26,30 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetV1VerificationResultRequest req = new GetV1VerificationResultRequest() {{
-                format = "xml";
-                key = "provident";
-                otp = "distinctio";
-                tranId = "quibusdam";
-            }}            
+            GetV1VerificationResultRequest req = new GetV1VerificationResultRequest("corrupti", "provident", "distinctio") {{
+                format = GetV1VerificationResultFormatEnum.XML;
+            }};            
 
             GetV1VerificationResultResponse res = sdk.getV1VerificationResult(req);
 
-            if (res.getV1VerificationResult200ApplicationJSONString.isPresent()) {
+            if (res.getV1VerificationResult200ApplicationJSONString != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getV1VerificationResult` - Verify that an OTP sent by the Send SMS Verification API is valid.
-* `postV1VerificationSend` - Send an SMS with verification code and a custom message for authentication purpose.
+* [getV1VerificationResult](docs/sdk/README.md#getv1verificationresult) - Verify that an OTP sent by the Send SMS Verification API is valid.
+* [postV1VerificationSend](docs/sdk/README.md#postv1verificationsend) - Send an SMS with verification code and a custom message for authentication purpose.
 <!-- End SDK Available Operations -->
 
 ### Maturity

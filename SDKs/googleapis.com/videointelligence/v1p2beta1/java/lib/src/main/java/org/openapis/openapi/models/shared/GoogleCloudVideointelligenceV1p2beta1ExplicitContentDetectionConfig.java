@@ -18,9 +18,11 @@ public class GoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public GoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig withModel(String model) {
         this.model = model;
         return this;
     }
     
+    public GoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig(){}
 }

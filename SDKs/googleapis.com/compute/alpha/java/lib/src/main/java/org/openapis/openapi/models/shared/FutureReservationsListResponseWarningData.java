@@ -15,6 +15,7 @@ public class FutureReservationsListResponseWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public FutureReservationsListResponseWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class FutureReservationsListResponseWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public FutureReservationsListResponseWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public FutureReservationsListResponseWarningData(){}
 }

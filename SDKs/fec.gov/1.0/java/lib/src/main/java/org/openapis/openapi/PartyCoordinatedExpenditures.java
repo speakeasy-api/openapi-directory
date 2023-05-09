@@ -60,11 +60,9 @@ public class PartyCoordinatedExpenditures {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleFResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleFResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleFResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleFResponse(contentType, httpRes.statusCode()) {{
             getSchedulesScheduleFDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -105,11 +103,9 @@ public class PartyCoordinatedExpenditures {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleFSubIdResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleFSubIdResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleFSubIdResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleFSubIdResponse(contentType, httpRes.statusCode()) {{
             getSchedulesScheduleFSubIdDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

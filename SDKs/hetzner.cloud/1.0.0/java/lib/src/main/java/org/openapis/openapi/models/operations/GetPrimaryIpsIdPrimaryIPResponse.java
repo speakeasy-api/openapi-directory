@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPrimaryIpsIdPrimaryIPResponse {
     @JsonProperty("primary_ip")
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIP primaryIp;
+
     public GetPrimaryIpsIdPrimaryIPResponse withPrimaryIp(GetPrimaryIpsIdPrimaryIPResponsePrimaryIP primaryIp) {
         this.primaryIp = primaryIp;
         return this;
     }
     
+    public GetPrimaryIpsIdPrimaryIPResponse(@JsonProperty("primary_ip") GetPrimaryIpsIdPrimaryIPResponsePrimaryIP primaryIp) {
+        this.primaryIp = primaryIp;
+  }
 }

@@ -18,6 +18,7 @@ public class RateLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxBurstSize")
     public Integer maxBurstSize;
+
     public RateLimits withMaxBurstSize(Integer maxBurstSize) {
         this.maxBurstSize = maxBurstSize;
         return this;
@@ -29,6 +30,7 @@ public class RateLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxConcurrentTasks")
     public Integer maxConcurrentTasks;
+
     public RateLimits withMaxConcurrentTasks(Integer maxConcurrentTasks) {
         this.maxConcurrentTasks = maxConcurrentTasks;
         return this;
@@ -40,9 +42,11 @@ public class RateLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTasksDispatchedPerSecond")
     public Double maxTasksDispatchedPerSecond;
+
     public RateLimits withMaxTasksDispatchedPerSecond(Double maxTasksDispatchedPerSecond) {
         this.maxTasksDispatchedPerSecond = maxTasksDispatchedPerSecond;
         return this;
     }
     
+    public RateLimits(){}
 }

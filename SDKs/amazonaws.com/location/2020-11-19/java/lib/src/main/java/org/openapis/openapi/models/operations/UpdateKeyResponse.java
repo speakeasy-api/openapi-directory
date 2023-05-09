@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateKeyResponse {
@@ -12,6 +13,7 @@ public class UpdateKeyResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateKeyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateKeyResponse {
     
     
     public String contentType;
+
     public UpdateKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateKeyResponse {
      */
     
     public Object internalServerException;
+
     public UpdateKeyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateKeyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateKeyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateKeyResponse {
     
     
     public Integer statusCode;
+
     public UpdateKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateKeyResponse {
      */
     
     public Object throttlingException;
+
     public UpdateKeyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateKeyResponse updateKeyResponse;
+
     public UpdateKeyResponse withUpdateKeyResponse(org.openapis.openapi.models.shared.UpdateKeyResponse updateKeyResponse) {
         this.updateKeyResponse = updateKeyResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateKeyResponse {
      */
     
     public Object validationException;
+
     public UpdateKeyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

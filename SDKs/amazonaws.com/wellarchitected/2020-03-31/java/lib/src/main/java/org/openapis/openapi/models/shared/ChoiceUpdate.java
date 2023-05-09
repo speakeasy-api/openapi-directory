@@ -15,6 +15,7 @@ public class ChoiceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public ChoiceUpdate withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -23,6 +24,7 @@ public class ChoiceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public ChoiceReasonEnum reason;
+
     public ChoiceUpdate withReason(ChoiceReasonEnum reason) {
         this.reason = reason;
         return this;
@@ -30,9 +32,13 @@ public class ChoiceUpdate {
     
     @JsonProperty("Status")
     public ChoiceStatusEnum status;
+
     public ChoiceUpdate withStatus(ChoiceStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ChoiceUpdate(@JsonProperty("Status") ChoiceStatusEnum status) {
+        this.status = status;
+  }
 }

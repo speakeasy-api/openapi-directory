@@ -18,6 +18,7 @@ public class SupportedRuntimeFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionApis")
     public Boolean actionApis;
+
     public SupportedRuntimeFeatures withActionApis(Boolean actionApis) {
         this.actionApis = actionApis;
         return this;
@@ -29,6 +30,7 @@ public class SupportedRuntimeFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityApis")
     public Boolean entityApis;
+
     public SupportedRuntimeFeatures withEntityApis(Boolean entityApis) {
         this.entityApis = entityApis;
         return this;
@@ -40,9 +42,11 @@ public class SupportedRuntimeFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlQuery")
     public Boolean sqlQuery;
+
     public SupportedRuntimeFeatures withSqlQuery(Boolean sqlQuery) {
         this.sqlQuery = sqlQuery;
         return this;
     }
     
+    public SupportedRuntimeFeatures(){}
 }

@@ -18,6 +18,7 @@ public class InputConfigurationContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public InputConfigurationContainer withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class InputConfigurationContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Integer number;
+
     public InputConfigurationContainer withNumber(Integer number) {
         this.number = number;
         return this;
@@ -40,6 +42,7 @@ public class InputConfigurationContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OffText")
     public String offText;
+
     public InputConfigurationContainer withOffText(String offText) {
         this.offText = offText;
         return this;
@@ -51,6 +54,7 @@ public class InputConfigurationContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnText")
     public String onText;
+
     public InputConfigurationContainer withOnText(String onText) {
         this.onText = onText;
         return this;
@@ -62,9 +66,11 @@ public class InputConfigurationContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public InputConfigurationContainerTypeEnum type;
+
     public InputConfigurationContainer withType(InputConfigurationContainerTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public InputConfigurationContainer(){}
 }

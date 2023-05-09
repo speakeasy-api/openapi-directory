@@ -12,6 +12,7 @@ public class CreateBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateBackupRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateBackupRequest {
     
     @JsonProperty("ServerName")
     public String serverName;
+
     public CreateBackupRequest withServerName(String serverName) {
         this.serverName = serverName;
         return this;
@@ -27,9 +29,13 @@ public class CreateBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateBackupRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateBackupRequest(@JsonProperty("ServerName") String serverName) {
+        this.serverName = serverName;
+  }
 }

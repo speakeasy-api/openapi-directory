@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFindingsPublicationConfigurationResponse {
@@ -12,6 +13,7 @@ public class GetFindingsPublicationConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetFindingsPublicationConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetFindingsPublicationConfigurationResponse {
      */
     
     public Object conflictException;
+
     public GetFindingsPublicationConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetFindingsPublicationConfigurationResponse {
     
     
     public String contentType;
+
     public GetFindingsPublicationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetFindingsPublicationConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFindingsPublicationConfigurationResponse getFindingsPublicationConfigurationResponse;
+
     public GetFindingsPublicationConfigurationResponse withGetFindingsPublicationConfigurationResponse(org.openapis.openapi.models.shared.GetFindingsPublicationConfigurationResponse getFindingsPublicationConfigurationResponse) {
         this.getFindingsPublicationConfigurationResponse = getFindingsPublicationConfigurationResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetFindingsPublicationConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public GetFindingsPublicationConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class GetFindingsPublicationConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFindingsPublicationConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetFindingsPublicationConfigurationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetFindingsPublicationConfigurationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class GetFindingsPublicationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetFindingsPublicationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetFindingsPublicationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFindingsPublicationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetFindingsPublicationConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public GetFindingsPublicationConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetFindingsPublicationConfigurationResponse {
      */
     
     public Object validationException;
+
     public GetFindingsPublicationConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetFindingsPublicationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

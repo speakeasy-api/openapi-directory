@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccessTokenInfoResponse {
     @JsonProperty("app_id")
     public Integer appId;
+
     public AccessTokenInfoResponse withAppId(Integer appId) {
         this.appId = appId;
         return this;
@@ -21,6 +22,7 @@ public class AccessTokenInfoResponse {
     
     @JsonProperty("expires_in")
     public Integer expiresIn;
+
     public AccessTokenInfoResponse withExpiresIn(Integer expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -29,6 +31,7 @@ public class AccessTokenInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hub_domain")
     public String hubDomain;
+
     public AccessTokenInfoResponse withHubDomain(String hubDomain) {
         this.hubDomain = hubDomain;
         return this;
@@ -36,6 +39,7 @@ public class AccessTokenInfoResponse {
     
     @JsonProperty("hub_id")
     public Integer hubId;
+
     public AccessTokenInfoResponse withHubId(Integer hubId) {
         this.hubId = hubId;
         return this;
@@ -43,6 +47,7 @@ public class AccessTokenInfoResponse {
     
     @JsonProperty("scope_to_scope_group_pks")
     public Integer[] scopeToScopeGroupPks;
+
     public AccessTokenInfoResponse withScopeToScopeGroupPks(Integer[] scopeToScopeGroupPks) {
         this.scopeToScopeGroupPks = scopeToScopeGroupPks;
         return this;
@@ -50,6 +55,7 @@ public class AccessTokenInfoResponse {
     
     @JsonProperty("scopes")
     public String[] scopes;
+
     public AccessTokenInfoResponse withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
@@ -57,6 +63,7 @@ public class AccessTokenInfoResponse {
     
     @JsonProperty("token")
     public String token;
+
     public AccessTokenInfoResponse withToken(String token) {
         this.token = token;
         return this;
@@ -64,6 +71,7 @@ public class AccessTokenInfoResponse {
     
     @JsonProperty("token_type")
     public String tokenType;
+
     public AccessTokenInfoResponse withTokenType(String tokenType) {
         this.tokenType = tokenType;
         return this;
@@ -71,6 +79,7 @@ public class AccessTokenInfoResponse {
     
     @JsonProperty("trial_scope_to_scope_group_pks")
     public Integer[] trialScopeToScopeGroupPks;
+
     public AccessTokenInfoResponse withTrialScopeToScopeGroupPks(Integer[] trialScopeToScopeGroupPks) {
         this.trialScopeToScopeGroupPks = trialScopeToScopeGroupPks;
         return this;
@@ -78,6 +87,7 @@ public class AccessTokenInfoResponse {
     
     @JsonProperty("trial_scopes")
     public String[] trialScopes;
+
     public AccessTokenInfoResponse withTrialScopes(String[] trialScopes) {
         this.trialScopes = trialScopes;
         return this;
@@ -86,6 +96,7 @@ public class AccessTokenInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public AccessTokenInfoResponse withUser(String user) {
         this.user = user;
         return this;
@@ -93,9 +104,22 @@ public class AccessTokenInfoResponse {
     
     @JsonProperty("user_id")
     public Integer userId;
+
     public AccessTokenInfoResponse withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public AccessTokenInfoResponse(@JsonProperty("app_id") Integer appId, @JsonProperty("expires_in") Integer expiresIn, @JsonProperty("hub_id") Integer hubId, @JsonProperty("scope_to_scope_group_pks") Integer[] scopeToScopeGroupPks, @JsonProperty("scopes") String[] scopes, @JsonProperty("token") String token, @JsonProperty("token_type") String tokenType, @JsonProperty("trial_scope_to_scope_group_pks") Integer[] trialScopeToScopeGroupPks, @JsonProperty("trial_scopes") String[] trialScopes, @JsonProperty("user_id") Integer userId) {
+        this.appId = appId;
+        this.expiresIn = expiresIn;
+        this.hubId = hubId;
+        this.scopeToScopeGroupPks = scopeToScopeGroupPks;
+        this.scopes = scopes;
+        this.token = token;
+        this.tokenType = tokenType;
+        this.trialScopeToScopeGroupPks = trialScopeToScopeGroupPks;
+        this.trialScopes = trialScopes;
+        this.userId = userId;
+  }
 }

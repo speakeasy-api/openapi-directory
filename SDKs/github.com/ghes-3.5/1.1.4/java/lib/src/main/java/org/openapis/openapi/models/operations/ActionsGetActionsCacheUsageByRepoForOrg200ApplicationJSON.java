@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActionsGetActionsCacheUsageByRepoForOrg200ApplicationJSON {
     @JsonProperty("repository_cache_usages")
     public org.openapis.openapi.models.shared.ActionsCacheUsageByRepository[] repositoryCacheUsages;
+
     public ActionsGetActionsCacheUsageByRepoForOrg200ApplicationJSON withRepositoryCacheUsages(org.openapis.openapi.models.shared.ActionsCacheUsageByRepository[] repositoryCacheUsages) {
         this.repositoryCacheUsages = repositoryCacheUsages;
         return this;
@@ -19,9 +20,14 @@ public class ActionsGetActionsCacheUsageByRepoForOrg200ApplicationJSON {
     
     @JsonProperty("total_count")
     public Long totalCount;
+
     public ActionsGetActionsCacheUsageByRepoForOrg200ApplicationJSON withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public ActionsGetActionsCacheUsageByRepoForOrg200ApplicationJSON(@JsonProperty("repository_cache_usages") org.openapis.openapi.models.shared.ActionsCacheUsageByRepository[] repositoryCacheUsages, @JsonProperty("total_count") Long totalCount) {
+        this.repositoryCacheUsages = repositoryCacheUsages;
+        this.totalCount = totalCount;
+  }
 }

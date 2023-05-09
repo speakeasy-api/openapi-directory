@@ -21,6 +21,7 @@ public class LabelingJobForWorkteamSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public LabelingJobForWorkteamSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class LabelingJobForWorkteamSummary {
     
     @JsonProperty("JobReferenceCode")
     public String jobReferenceCode;
+
     public LabelingJobForWorkteamSummary withJobReferenceCode(String jobReferenceCode) {
         this.jobReferenceCode = jobReferenceCode;
         return this;
@@ -36,6 +38,7 @@ public class LabelingJobForWorkteamSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelCounters")
     public LabelCountersForWorkteam labelCounters;
+
     public LabelingJobForWorkteamSummary withLabelCounters(LabelCountersForWorkteam labelCounters) {
         this.labelCounters = labelCounters;
         return this;
@@ -44,6 +47,7 @@ public class LabelingJobForWorkteamSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelingJobName")
     public String labelingJobName;
+
     public LabelingJobForWorkteamSummary withLabelingJobName(String labelingJobName) {
         this.labelingJobName = labelingJobName;
         return this;
@@ -52,6 +56,7 @@ public class LabelingJobForWorkteamSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfHumanWorkersPerDataObject")
     public Long numberOfHumanWorkersPerDataObject;
+
     public LabelingJobForWorkteamSummary withNumberOfHumanWorkersPerDataObject(Long numberOfHumanWorkersPerDataObject) {
         this.numberOfHumanWorkersPerDataObject = numberOfHumanWorkersPerDataObject;
         return this;
@@ -59,9 +64,15 @@ public class LabelingJobForWorkteamSummary {
     
     @JsonProperty("WorkRequesterAccountId")
     public String workRequesterAccountId;
+
     public LabelingJobForWorkteamSummary withWorkRequesterAccountId(String workRequesterAccountId) {
         this.workRequesterAccountId = workRequesterAccountId;
         return this;
     }
     
+    public LabelingJobForWorkteamSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("JobReferenceCode") String jobReferenceCode, @JsonProperty("WorkRequesterAccountId") String workRequesterAccountId) {
+        this.creationTime = creationTime;
+        this.jobReferenceCode = jobReferenceCode;
+        this.workRequesterAccountId = workRequesterAccountId;
+  }
 }

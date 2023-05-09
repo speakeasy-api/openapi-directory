@@ -15,9 +15,11 @@ public class GetWorkflowRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Run")
     public WorkflowRun run;
+
     public GetWorkflowRunResponse withRun(WorkflowRun run) {
         this.run = run;
         return this;
     }
     
+    public GetWorkflowRunResponse(){}
 }

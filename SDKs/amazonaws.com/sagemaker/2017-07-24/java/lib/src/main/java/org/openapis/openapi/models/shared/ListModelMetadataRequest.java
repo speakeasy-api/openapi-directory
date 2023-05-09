@@ -12,6 +12,7 @@ public class ListModelMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListModelMetadataRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListModelMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListModelMetadataRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListModelMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SearchExpression")
     public ModelMetadataSearchExpression searchExpression;
+
     public ListModelMetadataRequest withSearchExpression(ModelMetadataSearchExpression searchExpression) {
         this.searchExpression = searchExpression;
         return this;
     }
     
+    public ListModelMetadataRequest(){}
 }

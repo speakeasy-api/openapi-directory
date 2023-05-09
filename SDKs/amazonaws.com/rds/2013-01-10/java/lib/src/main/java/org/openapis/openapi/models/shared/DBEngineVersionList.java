@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DBEngineVersionList {
     
     public String dbEngineDescription;
+
     public DBEngineVersionList withDBEngineDescription(String dbEngineDescription) {
         this.dbEngineDescription = dbEngineDescription;
         return this;
@@ -16,6 +17,7 @@ public class DBEngineVersionList {
     
     
     public String dbEngineVersionDescription;
+
     public DBEngineVersionList withDBEngineVersionDescription(String dbEngineVersionDescription) {
         this.dbEngineVersionDescription = dbEngineVersionDescription;
         return this;
@@ -23,6 +25,7 @@ public class DBEngineVersionList {
     
     
     public String dbParameterGroupFamily;
+
     public DBEngineVersionList withDBParameterGroupFamily(String dbParameterGroupFamily) {
         this.dbParameterGroupFamily = dbParameterGroupFamily;
         return this;
@@ -30,6 +33,7 @@ public class DBEngineVersionList {
     
     
     public CharacterSet defaultCharacterSet;
+
     public DBEngineVersionList withDefaultCharacterSet(CharacterSet defaultCharacterSet) {
         this.defaultCharacterSet = defaultCharacterSet;
         return this;
@@ -37,6 +41,7 @@ public class DBEngineVersionList {
     
     
     public String engine;
+
     public DBEngineVersionList withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -44,6 +49,7 @@ public class DBEngineVersionList {
     
     
     public String engineVersion;
+
     public DBEngineVersionList withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -51,9 +57,11 @@ public class DBEngineVersionList {
     
     
     public SupportedCharacterSetsList[] supportedCharacterSets;
+
     public DBEngineVersionList withSupportedCharacterSets(SupportedCharacterSetsList[] supportedCharacterSets) {
         this.supportedCharacterSets = supportedCharacterSets;
         return this;
     }
     
+    public DBEngineVersionList(){}
 }

@@ -15,6 +15,7 @@ public class ListRelatedResourcesForAuditFindingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRelatedResourcesForAuditFindingResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRelatedResourcesForAuditFindingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedResources")
     public RelatedResource[] relatedResources;
+
     public ListRelatedResourcesForAuditFindingResponse withRelatedResources(RelatedResource[] relatedResources) {
         this.relatedResources = relatedResources;
         return this;
     }
     
+    public ListRelatedResourcesForAuditFindingResponse(){}
 }

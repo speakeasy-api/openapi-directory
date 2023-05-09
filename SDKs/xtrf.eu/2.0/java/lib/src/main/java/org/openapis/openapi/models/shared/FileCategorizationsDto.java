@@ -15,9 +15,11 @@ public class FileCategorizationsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public FileCategorizationDto[] files;
+
     public FileCategorizationsDto withFiles(FileCategorizationDto[] files) {
         this.files = files;
         return this;
     }
     
+    public FileCategorizationsDto(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeDataSharesForConsumerRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeDataSharesForConsumerActionEnum action;
+
     public GETDescribeDataSharesForConsumerRequest withAction(GETDescribeDataSharesForConsumerActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeDataSharesForConsumerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConsumerArn")
     public String consumerArn;
+
     public GETDescribeDataSharesForConsumerRequest withConsumerArn(String consumerArn) {
         this.consumerArn = consumerArn;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeDataSharesForConsumerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeDataSharesForConsumerRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeDataSharesForConsumerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeDataSharesForConsumerRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeDataSharesForConsumerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
     public GETDescribeDataSharesForConsumerStatusEnum status;
+
     public GETDescribeDataSharesForConsumerRequest withStatus(GETDescribeDataSharesForConsumerStatusEnum status) {
         this.status = status;
         return this;
@@ -56,6 +62,7 @@ public class GETDescribeDataSharesForConsumerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeDataSharesForConsumerVersionEnum version;
+
     public GETDescribeDataSharesForConsumerRequest withVersion(GETDescribeDataSharesForConsumerVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETDescribeDataSharesForConsumerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeDataSharesForConsumerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDescribeDataSharesForConsumerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeDataSharesForConsumerRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDescribeDataSharesForConsumerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeDataSharesForConsumerRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDescribeDataSharesForConsumerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeDataSharesForConsumerRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDescribeDataSharesForConsumerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeDataSharesForConsumerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDescribeDataSharesForConsumerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeDataSharesForConsumerRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,14 @@ public class GETDescribeDataSharesForConsumerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeDataSharesForConsumerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeDataSharesForConsumerRequest(@JsonProperty("Action") GETDescribeDataSharesForConsumerActionEnum action, @JsonProperty("Version") GETDescribeDataSharesForConsumerVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

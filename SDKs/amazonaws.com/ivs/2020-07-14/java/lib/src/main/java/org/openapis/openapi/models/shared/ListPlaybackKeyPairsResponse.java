@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListPlaybackKeyPairsResponse {
     @JsonProperty("keyPairs")
     public PlaybackKeyPairSummary[] keyPairs;
+
     public ListPlaybackKeyPairsResponse withKeyPairs(PlaybackKeyPairSummary[] keyPairs) {
         this.keyPairs = keyPairs;
         return this;
@@ -22,9 +23,13 @@ public class ListPlaybackKeyPairsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListPlaybackKeyPairsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListPlaybackKeyPairsResponse(@JsonProperty("keyPairs") PlaybackKeyPairSummary[] keyPairs) {
+        this.keyPairs = keyPairs;
+  }
 }

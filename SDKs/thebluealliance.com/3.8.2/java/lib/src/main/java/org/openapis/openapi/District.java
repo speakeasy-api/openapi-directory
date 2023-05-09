@@ -64,11 +64,9 @@ public class District {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistrictEventsResponse res = new org.openapis.openapi.models.operations.GetDistrictEventsResponse() {{
+        org.openapis.openapi.models.operations.GetDistrictEventsResponse res = new org.openapis.openapi.models.operations.GetDistrictEventsResponse(contentType, httpRes.statusCode()) {{
             events = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,11 +114,9 @@ public class District {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistrictEventsKeysResponse res = new org.openapis.openapi.models.operations.GetDistrictEventsKeysResponse() {{
+        org.openapis.openapi.models.operations.GetDistrictEventsKeysResponse res = new org.openapis.openapi.models.operations.GetDistrictEventsKeysResponse(contentType, httpRes.statusCode()) {{
             getDistrictEventsKeys200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -168,11 +164,9 @@ public class District {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistrictEventsSimpleResponse res = new org.openapis.openapi.models.operations.GetDistrictEventsSimpleResponse() {{
+        org.openapis.openapi.models.operations.GetDistrictEventsSimpleResponse res = new org.openapis.openapi.models.operations.GetDistrictEventsSimpleResponse(contentType, httpRes.statusCode()) {{
             eventSimples = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -220,11 +214,9 @@ public class District {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistrictRankingsResponse res = new org.openapis.openapi.models.operations.GetDistrictRankingsResponse() {{
+        org.openapis.openapi.models.operations.GetDistrictRankingsResponse res = new org.openapis.openapi.models.operations.GetDistrictRankingsResponse(contentType, httpRes.statusCode()) {{
             districtRankings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -272,11 +264,9 @@ public class District {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistrictTeamsResponse res = new org.openapis.openapi.models.operations.GetDistrictTeamsResponse() {{
+        org.openapis.openapi.models.operations.GetDistrictTeamsResponse res = new org.openapis.openapi.models.operations.GetDistrictTeamsResponse(contentType, httpRes.statusCode()) {{
             teams = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -324,11 +314,9 @@ public class District {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistrictTeamsKeysResponse res = new org.openapis.openapi.models.operations.GetDistrictTeamsKeysResponse() {{
+        org.openapis.openapi.models.operations.GetDistrictTeamsKeysResponse res = new org.openapis.openapi.models.operations.GetDistrictTeamsKeysResponse(contentType, httpRes.statusCode()) {{
             getDistrictTeamsKeys200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -376,11 +364,9 @@ public class District {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistrictTeamsSimpleResponse res = new org.openapis.openapi.models.operations.GetDistrictTeamsSimpleResponse() {{
+        org.openapis.openapi.models.operations.GetDistrictTeamsSimpleResponse res = new org.openapis.openapi.models.operations.GetDistrictTeamsSimpleResponse(contentType, httpRes.statusCode()) {{
             teamSimples = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -428,11 +414,9 @@ public class District {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistrictsByYearResponse res = new org.openapis.openapi.models.operations.GetDistrictsByYearResponse() {{
+        org.openapis.openapi.models.operations.GetDistrictsByYearResponse res = new org.openapis.openapi.models.operations.GetDistrictsByYearResponse(contentType, httpRes.statusCode()) {{
             districtLists = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -480,11 +464,9 @@ public class District {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventDistrictPointsResponse res = new org.openapis.openapi.models.operations.GetEventDistrictPointsResponse() {{
+        org.openapis.openapi.models.operations.GetEventDistrictPointsResponse res = new org.openapis.openapi.models.operations.GetEventDistrictPointsResponse(contentType, httpRes.statusCode()) {{
             eventDistrictPoints = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +514,9 @@ public class District {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamDistrictsResponse res = new org.openapis.openapi.models.operations.GetTeamDistrictsResponse() {{
+        org.openapis.openapi.models.operations.GetTeamDistrictsResponse res = new org.openapis.openapi.models.operations.GetTeamDistrictsResponse(contentType, httpRes.statusCode()) {{
             districtLists = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

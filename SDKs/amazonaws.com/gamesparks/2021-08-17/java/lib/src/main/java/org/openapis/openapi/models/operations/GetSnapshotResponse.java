@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSnapshotResponse {
@@ -12,6 +13,7 @@ public class GetSnapshotResponse {
      */
     
     public Object accessDeniedException;
+
     public GetSnapshotResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetSnapshotResponse {
     
     
     public String contentType;
+
     public GetSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSnapshotResult getSnapshotResult;
+
     public GetSnapshotResponse withGetSnapshotResult(org.openapis.openapi.models.shared.GetSnapshotResult getSnapshotResult) {
         this.getSnapshotResult = getSnapshotResult;
         return this;
@@ -39,6 +43,7 @@ public class GetSnapshotResponse {
      */
     
     public Object internalServerException;
+
     public GetSnapshotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetSnapshotResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSnapshotResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetSnapshotResponse {
     
     
     public Integer statusCode;
+
     public GetSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetSnapshotResponse {
      */
     
     public Object throttlingException;
+
     public GetSnapshotResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetSnapshotResponse {
      */
     
     public Object validationException;
+
     public GetSnapshotResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

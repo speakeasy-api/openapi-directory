@@ -15,6 +15,7 @@ public class EvaluateCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public EvaluateCodeErrorDetail error;
+
     public EvaluateCodeResponse withError(EvaluateCodeErrorDetail error) {
         this.error = error;
         return this;
@@ -23,6 +24,7 @@ public class EvaluateCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationResult")
     public String evaluationResult;
+
     public EvaluateCodeResponse withEvaluationResult(String evaluationResult) {
         this.evaluationResult = evaluationResult;
         return this;
@@ -31,9 +33,11 @@ public class EvaluateCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logs")
     public String[] logs;
+
     public EvaluateCodeResponse withLogs(String[] logs) {
         this.logs = logs;
         return this;
     }
     
+    public EvaluateCodeResponse(){}
 }

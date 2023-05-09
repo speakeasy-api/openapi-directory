@@ -15,9 +15,11 @@ public class RemoveMembersForProject200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ProjectResponse data;
+
     public RemoveMembersForProject200ApplicationJSON withData(org.openapis.openapi.models.shared.ProjectResponse data) {
         this.data = data;
         return this;
     }
     
+    public RemoveMembersForProject200ApplicationJSON(){}
 }

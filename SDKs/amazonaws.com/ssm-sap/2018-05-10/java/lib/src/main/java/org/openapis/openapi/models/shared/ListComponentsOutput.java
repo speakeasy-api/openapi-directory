@@ -15,6 +15,7 @@ public class ListComponentsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Components")
     public ComponentSummary[] components;
+
     public ListComponentsOutput withComponents(ComponentSummary[] components) {
         this.components = components;
         return this;
@@ -23,9 +24,11 @@ public class ListComponentsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListComponentsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListComponentsOutput(){}
 }

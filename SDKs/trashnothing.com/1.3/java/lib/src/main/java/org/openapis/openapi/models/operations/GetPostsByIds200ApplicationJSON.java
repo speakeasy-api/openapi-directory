@@ -18,6 +18,7 @@ public class GetPostsByIds200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forbidden")
     public String[] forbidden;
+
     public GetPostsByIds200ApplicationJSON withForbidden(String[] forbidden) {
         this.forbidden = forbidden;
         return this;
@@ -29,6 +30,7 @@ public class GetPostsByIds200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("not_found")
     public String[] notFound;
+
     public GetPostsByIds200ApplicationJSON withNotFound(String[] notFound) {
         this.notFound = notFound;
         return this;
@@ -37,9 +39,11 @@ public class GetPostsByIds200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posts")
     public org.openapis.openapi.models.shared.Post[] posts;
+
     public GetPostsByIds200ApplicationJSON withPosts(org.openapis.openapi.models.shared.Post[] posts) {
         this.posts = posts;
         return this;
     }
     
+    public GetPostsByIds200ApplicationJSON(){}
 }

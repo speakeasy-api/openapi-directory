@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DocsDocumentsBatchUpdateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DocsDocumentsBatchUpdateSecurityOption1 option1;
+
     public DocsDocumentsBatchUpdateSecurity withOption1(DocsDocumentsBatchUpdateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DocsDocumentsBatchUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DocsDocumentsBatchUpdateSecurityOption2 option2;
+
     public DocsDocumentsBatchUpdateSecurity withOption2(DocsDocumentsBatchUpdateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class DocsDocumentsBatchUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DocsDocumentsBatchUpdateSecurityOption3 option3;
+
     public DocsDocumentsBatchUpdateSecurity withOption3(DocsDocumentsBatchUpdateSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public DocsDocumentsBatchUpdateSecurity(){}
 }

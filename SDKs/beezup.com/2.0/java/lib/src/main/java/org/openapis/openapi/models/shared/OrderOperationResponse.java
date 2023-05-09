@@ -18,6 +18,7 @@ public class OrderOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public BeezUPCommonUserErrorMessage[] errors;
+
     public OrderOperationResponse withErrors(BeezUPCommonUserErrorMessage[] errors) {
         this.errors = errors;
         return this;
@@ -25,6 +26,7 @@ public class OrderOperationResponse {
     
     @JsonProperty("order")
     public OrderIdentifier order;
+
     public OrderOperationResponse withOrder(OrderIdentifier order) {
         this.order = order;
         return this;
@@ -35,6 +37,7 @@ public class OrderOperationResponse {
      */
     @JsonProperty("status")
     public Long status;
+
     public OrderOperationResponse withStatus(Long status) {
         this.status = status;
         return this;
@@ -45,9 +48,15 @@ public class OrderOperationResponse {
      */
     @JsonProperty("success")
     public Boolean success;
+
     public OrderOperationResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public OrderOperationResponse(@JsonProperty("order") OrderIdentifier order, @JsonProperty("status") Long status, @JsonProperty("success") Boolean success) {
+        this.order = order;
+        this.status = status;
+        this.success = success;
+  }
 }

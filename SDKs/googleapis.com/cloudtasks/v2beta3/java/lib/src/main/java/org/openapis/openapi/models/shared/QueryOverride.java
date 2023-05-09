@@ -18,9 +18,11 @@ public class QueryOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParams")
     public String queryParams;
+
     public QueryOverride withQueryParams(String queryParams) {
         this.queryParams = queryParams;
         return this;
     }
     
+    public QueryOverride(){}
 }

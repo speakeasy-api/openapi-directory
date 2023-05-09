@@ -20,6 +20,7 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentConnected")
     public Boolean agentConnected;
+
     public ContainerInstance withAgentConnected(Boolean agentConnected) {
         this.agentConnected = agentConnected;
         return this;
@@ -28,6 +29,7 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentUpdateStatus")
     public AgentUpdateStatusEnum agentUpdateStatus;
+
     public ContainerInstance withAgentUpdateStatus(AgentUpdateStatusEnum agentUpdateStatus) {
         this.agentUpdateStatus = agentUpdateStatus;
         return this;
@@ -36,6 +38,7 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     public Attachment[] attachments;
+
     public ContainerInstance withAttachments(Attachment[] attachments) {
         this.attachments = attachments;
         return this;
@@ -44,6 +47,7 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Attribute[] attributes;
+
     public ContainerInstance withAttributes(Attribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -52,6 +56,7 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityProviderName")
     public String capacityProviderName;
+
     public ContainerInstance withCapacityProviderName(String capacityProviderName) {
         this.capacityProviderName = capacityProviderName;
         return this;
@@ -60,6 +65,7 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerInstanceArn")
     public String containerInstanceArn;
+
     public ContainerInstance withContainerInstanceArn(String containerInstanceArn) {
         this.containerInstanceArn = containerInstanceArn;
         return this;
@@ -68,6 +74,7 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2InstanceId")
     public String ec2InstanceId;
+
     public ContainerInstance withEc2InstanceId(String ec2InstanceId) {
         this.ec2InstanceId = ec2InstanceId;
         return this;
@@ -76,6 +83,7 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthStatus")
     public ContainerInstanceHealthStatus healthStatus;
+
     public ContainerInstance withHealthStatus(ContainerInstanceHealthStatus healthStatus) {
         this.healthStatus = healthStatus;
         return this;
@@ -84,6 +92,7 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingTasksCount")
     public Long pendingTasksCount;
+
     public ContainerInstance withPendingTasksCount(Long pendingTasksCount) {
         this.pendingTasksCount = pendingTasksCount;
         return this;
@@ -94,6 +103,7 @@ public class ContainerInstance {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("registeredAt")
     public OffsetDateTime registeredAt;
+
     public ContainerInstance withRegisteredAt(OffsetDateTime registeredAt) {
         this.registeredAt = registeredAt;
         return this;
@@ -102,6 +112,7 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registeredResources")
     public Resource[] registeredResources;
+
     public ContainerInstance withRegisteredResources(Resource[] registeredResources) {
         this.registeredResources = registeredResources;
         return this;
@@ -110,6 +121,7 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remainingResources")
     public Resource[] remainingResources;
+
     public ContainerInstance withRemainingResources(Resource[] remainingResources) {
         this.remainingResources = remainingResources;
         return this;
@@ -118,6 +130,7 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runningTasksCount")
     public Long runningTasksCount;
+
     public ContainerInstance withRunningTasksCount(Long runningTasksCount) {
         this.runningTasksCount = runningTasksCount;
         return this;
@@ -126,6 +139,7 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ContainerInstance withStatus(String status) {
         this.status = status;
         return this;
@@ -134,6 +148,7 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public ContainerInstance withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -142,6 +157,7 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public ContainerInstance withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -150,6 +166,7 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public ContainerInstance withVersion(Long version) {
         this.version = version;
         return this;
@@ -158,9 +175,11 @@ public class ContainerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionInfo")
     public VersionInfo versionInfo;
+
     public ContainerInstance withVersionInfo(VersionInfo versionInfo) {
         this.versionInfo = versionInfo;
         return this;
     }
     
+    public ContainerInstance(){}
 }

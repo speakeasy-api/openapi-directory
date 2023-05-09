@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SNSConfiguration {
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public SNSConfiguration withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -22,6 +23,7 @@ public class SNSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsFormat")
     public SnsFormatEnum snsFormat;
+
     public SNSConfiguration withSnsFormat(SnsFormatEnum snsFormat) {
         this.snsFormat = snsFormat;
         return this;
@@ -29,9 +31,14 @@ public class SNSConfiguration {
     
     @JsonProperty("SnsTopicArn")
     public String snsTopicArn;
+
     public SNSConfiguration withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
     }
     
+    public SNSConfiguration(@JsonProperty("RoleArn") String roleArn, @JsonProperty("SnsTopicArn") String snsTopicArn) {
+        this.roleArn = roleArn;
+        this.snsTopicArn = snsTopicArn;
+  }
 }

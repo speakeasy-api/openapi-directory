@@ -15,6 +15,7 @@ public class ECSServiceProjectedUtilizationMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowerBoundValue")
     public Double lowerBoundValue;
+
     public ECSServiceProjectedUtilizationMetric withLowerBoundValue(Double lowerBoundValue) {
         this.lowerBoundValue = lowerBoundValue;
         return this;
@@ -23,6 +24,7 @@ public class ECSServiceProjectedUtilizationMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public ECSServiceMetricNameEnum name;
+
     public ECSServiceProjectedUtilizationMetric withName(ECSServiceMetricNameEnum name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class ECSServiceProjectedUtilizationMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistic")
     public ECSServiceMetricStatisticEnum statistic;
+
     public ECSServiceProjectedUtilizationMetric withStatistic(ECSServiceMetricStatisticEnum statistic) {
         this.statistic = statistic;
         return this;
@@ -39,9 +42,11 @@ public class ECSServiceProjectedUtilizationMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upperBoundValue")
     public Double upperBoundValue;
+
     public ECSServiceProjectedUtilizationMetric withUpperBoundValue(Double upperBoundValue) {
         this.upperBoundValue = upperBoundValue;
         return this;
     }
     
+    public ECSServiceProjectedUtilizationMetric(){}
 }

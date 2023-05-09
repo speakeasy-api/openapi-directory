@@ -15,6 +15,7 @@ public class DescribeAccountAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountQuotas")
     public AccountQuota[] accountQuotas;
+
     public DescribeAccountAttributesResponse withAccountQuotas(AccountQuota[] accountQuotas) {
         this.accountQuotas = accountQuotas;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAccountAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UniqueAccountIdentifier")
     public String uniqueAccountIdentifier;
+
     public DescribeAccountAttributesResponse withUniqueAccountIdentifier(String uniqueAccountIdentifier) {
         this.uniqueAccountIdentifier = uniqueAccountIdentifier;
         return this;
     }
     
+    public DescribeAccountAttributesResponse(){}
 }

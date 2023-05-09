@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SigV4Authorization {
     @JsonProperty("roleArn")
     public String roleArn;
+
     public SigV4Authorization withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -19,6 +20,7 @@ public class SigV4Authorization {
     
     @JsonProperty("serviceName")
     public String serviceName;
+
     public SigV4Authorization withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -26,9 +28,15 @@ public class SigV4Authorization {
     
     @JsonProperty("signingRegion")
     public String signingRegion;
+
     public SigV4Authorization withSigningRegion(String signingRegion) {
         this.signingRegion = signingRegion;
         return this;
     }
     
+    public SigV4Authorization(@JsonProperty("roleArn") String roleArn, @JsonProperty("serviceName") String serviceName, @JsonProperty("signingRegion") String signingRegion) {
+        this.roleArn = roleArn;
+        this.serviceName = serviceName;
+        this.signingRegion = signingRegion;
+  }
 }

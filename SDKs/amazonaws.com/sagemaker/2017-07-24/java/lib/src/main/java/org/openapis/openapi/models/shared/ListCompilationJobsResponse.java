@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListCompilationJobsResponse {
     @JsonProperty("CompilationJobSummaries")
     public CompilationJobSummary[] compilationJobSummaries;
+
     public ListCompilationJobsResponse withCompilationJobSummaries(CompilationJobSummary[] compilationJobSummaries) {
         this.compilationJobSummaries = compilationJobSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListCompilationJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCompilationJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCompilationJobsResponse(@JsonProperty("CompilationJobSummaries") CompilationJobSummary[] compilationJobSummaries) {
+        this.compilationJobSummaries = compilationJobSummaries;
+  }
 }

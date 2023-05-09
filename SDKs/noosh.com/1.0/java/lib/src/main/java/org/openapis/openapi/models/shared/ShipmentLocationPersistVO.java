@@ -18,6 +18,7 @@ public class ShipmentLocationPersistVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("due_date")
     public LocalDate dueDate;
+
     public ShipmentLocationPersistVO withDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -26,6 +27,7 @@ public class ShipmentLocationPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qty_received")
     public Long qtyReceived;
+
     public ShipmentLocationPersistVO withQtyReceived(Long qtyReceived) {
         this.qtyReceived = qtyReceived;
         return this;
@@ -34,6 +36,7 @@ public class ShipmentLocationPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qty_requested")
     public Long qtyRequested;
+
     public ShipmentLocationPersistVO withQtyRequested(Long qtyRequested) {
         this.qtyRequested = qtyRequested;
         return this;
@@ -42,6 +45,7 @@ public class ShipmentLocationPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qty_shipped")
     public Long qtyShipped;
+
     public ShipmentLocationPersistVO withQtyShipped(Long qtyShipped) {
         this.qtyShipped = qtyShipped;
         return this;
@@ -51,6 +55,7 @@ public class ShipmentLocationPersistVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("received_date")
     public LocalDate receivedDate;
+
     public ShipmentLocationPersistVO withReceivedDate(LocalDate receivedDate) {
         this.receivedDate = receivedDate;
         return this;
@@ -60,6 +65,7 @@ public class ShipmentLocationPersistVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("shipped_date")
     public LocalDate shippedDate;
+
     public ShipmentLocationPersistVO withShippedDate(LocalDate shippedDate) {
         this.shippedDate = shippedDate;
         return this;
@@ -71,6 +77,7 @@ public class ShipmentLocationPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_cost")
     public Object shippingCost;
+
     public ShipmentLocationPersistVO withShippingCost(Object shippingCost) {
         this.shippingCost = shippingCost;
         return this;
@@ -79,9 +86,11 @@ public class ShipmentLocationPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ShipmentLocationPersistVO withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ShipmentLocationPersistVO(){}
 }

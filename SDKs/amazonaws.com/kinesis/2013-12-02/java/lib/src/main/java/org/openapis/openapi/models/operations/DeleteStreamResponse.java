@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteStreamResponse {
@@ -12,6 +13,7 @@ public class DeleteStreamResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteStreamResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteStreamResponse {
     
     
     public String contentType;
+
     public DeleteStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteStreamResponse {
      */
     
     public Object invalidArgumentException;
+
     public DeleteStreamResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteStreamResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteStreamResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteStreamResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteStreamResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteStreamResponse {
     
     
     public Integer statusCode;
+
     public DeleteStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

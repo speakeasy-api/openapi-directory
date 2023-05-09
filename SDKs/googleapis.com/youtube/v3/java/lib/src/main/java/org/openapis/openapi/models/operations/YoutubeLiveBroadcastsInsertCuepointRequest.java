@@ -12,6 +12,7 @@ public class YoutubeLiveBroadcastsInsertCuepointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubeLiveBroadcastsInsertCuepointRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +20,7 @@ public class YoutubeLiveBroadcastsInsertCuepointRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Cuepoint cuepoint;
+
     public YoutubeLiveBroadcastsInsertCuepointRequest withCuepoint(org.openapis.openapi.models.shared.Cuepoint cuepoint) {
         this.cuepoint = cuepoint;
         return this;
@@ -29,6 +31,7 @@ public class YoutubeLiveBroadcastsInsertCuepointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubeLiveBroadcastsInsertCuepointRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +42,7 @@ public class YoutubeLiveBroadcastsInsertCuepointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubeLiveBroadcastsInsertCuepointRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +53,7 @@ public class YoutubeLiveBroadcastsInsertCuepointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubeLiveBroadcastsInsertCuepointRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +64,7 @@ public class YoutubeLiveBroadcastsInsertCuepointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubeLiveBroadcastsInsertCuepointRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +75,7 @@ public class YoutubeLiveBroadcastsInsertCuepointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public YoutubeLiveBroadcastsInsertCuepointRequest withId(String id) {
         this.id = id;
         return this;
@@ -79,6 +86,7 @@ public class YoutubeLiveBroadcastsInsertCuepointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubeLiveBroadcastsInsertCuepointRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +97,7 @@ public class YoutubeLiveBroadcastsInsertCuepointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubeLiveBroadcastsInsertCuepointRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +108,7 @@ public class YoutubeLiveBroadcastsInsertCuepointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwner")
     public String onBehalfOfContentOwner;
+
     public YoutubeLiveBroadcastsInsertCuepointRequest withOnBehalfOfContentOwner(String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
         return this;
@@ -109,6 +119,7 @@ public class YoutubeLiveBroadcastsInsertCuepointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwnerChannel")
     public String onBehalfOfContentOwnerChannel;
+
     public YoutubeLiveBroadcastsInsertCuepointRequest withOnBehalfOfContentOwnerChannel(String onBehalfOfContentOwnerChannel) {
         this.onBehalfOfContentOwnerChannel = onBehalfOfContentOwnerChannel;
         return this;
@@ -119,6 +130,7 @@ public class YoutubeLiveBroadcastsInsertCuepointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part")
     public String[] part;
+
     public YoutubeLiveBroadcastsInsertCuepointRequest withPart(String[] part) {
         this.part = part;
         return this;
@@ -129,6 +141,7 @@ public class YoutubeLiveBroadcastsInsertCuepointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubeLiveBroadcastsInsertCuepointRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -139,6 +152,7 @@ public class YoutubeLiveBroadcastsInsertCuepointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubeLiveBroadcastsInsertCuepointRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -149,6 +163,7 @@ public class YoutubeLiveBroadcastsInsertCuepointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubeLiveBroadcastsInsertCuepointRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,9 +174,11 @@ public class YoutubeLiveBroadcastsInsertCuepointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubeLiveBroadcastsInsertCuepointRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public YoutubeLiveBroadcastsInsertCuepointRequest(){}
 }

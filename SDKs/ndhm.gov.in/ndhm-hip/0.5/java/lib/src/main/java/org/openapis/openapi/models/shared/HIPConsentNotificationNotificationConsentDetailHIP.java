@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HIPConsentNotificationNotificationConsentDetailHIP {
     @JsonProperty("id")
     public String id;
+
     public HIPConsentNotificationNotificationConsentDetailHIP withId(String id) {
         this.id = id;
         return this;
     }
     
+    public HIPConsentNotificationNotificationConsentDetailHIP(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

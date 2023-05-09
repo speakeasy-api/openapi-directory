@@ -15,6 +15,7 @@ public class ProductStatusDestinationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvedCountries")
     public String[] approvedCountries;
+
     public ProductStatusDestinationStatus withApprovedCountries(String[] approvedCountries) {
         this.approvedCountries = approvedCountries;
         return this;
@@ -26,6 +27,7 @@ public class ProductStatusDestinationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public ProductStatusDestinationStatus withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -37,6 +39,7 @@ public class ProductStatusDestinationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disapprovedCountries")
     public String[] disapprovedCountries;
+
     public ProductStatusDestinationStatus withDisapprovedCountries(String[] disapprovedCountries) {
         this.disapprovedCountries = disapprovedCountries;
         return this;
@@ -48,20 +51,23 @@ public class ProductStatusDestinationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingCountries")
     public String[] pendingCountries;
+
     public ProductStatusDestinationStatus withPendingCountries(String[] pendingCountries) {
         this.pendingCountries = pendingCountries;
         return this;
     }
     
     /**
-     * Destination approval status in `targetCountry` of the offer.
+     * Deprecated. Destination approval status in `targetCountry` of the offer.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ProductStatusDestinationStatus withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ProductStatusDestinationStatus(){}
 }

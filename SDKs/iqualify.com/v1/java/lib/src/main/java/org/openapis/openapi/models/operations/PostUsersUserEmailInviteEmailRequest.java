@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersUserEmailInviteEmailRequest {
@@ -12,9 +13,13 @@ public class PostUsersUserEmailInviteEmailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
     public String userEmail;
+
     public PostUsersUserEmailInviteEmailRequest withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public PostUsersUserEmailInviteEmailRequest(@JsonProperty("userEmail") String userEmail) {
+        this.userEmail = userEmail;
+  }
 }

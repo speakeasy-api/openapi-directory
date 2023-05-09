@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdFavoritesRequest {
@@ -12,6 +13,7 @@ public class GetUsersUserIdFavoritesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetUsersUserIdFavoritesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,6 +24,7 @@ public class GetUsersUserIdFavoritesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
     public Boolean linkedPartitioning;
+
     public GetUsersUserIdFavoritesRequest withLinkedPartitioning(Boolean linkedPartitioning) {
         this.linkedPartitioning = linkedPartitioning;
         return this;
@@ -32,9 +35,13 @@ public class GetUsersUserIdFavoritesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
     public Long userId;
+
     public GetUsersUserIdFavoritesRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetUsersUserIdFavoritesRequest(@JsonProperty("user_id") Long userId) {
+        this.userId = userId;
+  }
 }

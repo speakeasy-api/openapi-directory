@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Access - OK
@@ -15,6 +15,7 @@ public class Access {
      */
     
     public String[] access;
+
     public Access withAccess(String[] access) {
         this.access = access;
         return this;
@@ -25,6 +26,7 @@ public class Access {
      */
     
     public String appId;
+
     public Access withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -35,6 +37,7 @@ public class Access {
      */
     
     public Long date;
+
     public Access withDate(Long date) {
         this.date = date;
         return this;
@@ -45,6 +48,7 @@ public class Access {
      */
     
     public String ip;
+
     public Access withIp(String ip) {
         this.ip = ip;
         return this;
@@ -55,6 +59,7 @@ public class Access {
      */
     
     public Boolean isValid;
+
     public Access withIsValid(Boolean isValid) {
         this.isValid = isValid;
         return this;
@@ -65,9 +70,18 @@ public class Access {
      */
     
     public String userId;
+
     public Access withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public Access(@JsonProperty("access") String[] access, @JsonProperty("appId") String appId, @JsonProperty("date") Long date, @JsonProperty("ip") String ip, @JsonProperty("isValid") Boolean isValid, @JsonProperty("userId") String userId) {
+        this.access = access;
+        this.appId = appId;
+        this.date = date;
+        this.ip = ip;
+        this.isValid = isValid;
+        this.userId = userId;
+  }
 }

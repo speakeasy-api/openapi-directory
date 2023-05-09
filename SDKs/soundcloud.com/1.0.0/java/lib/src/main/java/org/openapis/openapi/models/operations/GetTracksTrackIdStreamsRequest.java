@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTracksTrackIdStreamsRequest {
@@ -12,6 +13,7 @@ public class GetTracksTrackIdStreamsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secret_token")
     public String secretToken;
+
     public GetTracksTrackIdStreamsRequest withSecretToken(String secretToken) {
         this.secretToken = secretToken;
         return this;
@@ -22,9 +24,13 @@ public class GetTracksTrackIdStreamsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track_id")
     public Long trackId;
+
     public GetTracksTrackIdStreamsRequest withTrackId(Long trackId) {
         this.trackId = trackId;
         return this;
     }
     
+    public GetTracksTrackIdStreamsRequest(@JsonProperty("track_id") Long trackId) {
+        this.trackId = trackId;
+  }
 }

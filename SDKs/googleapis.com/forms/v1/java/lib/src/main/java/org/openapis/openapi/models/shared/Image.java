@@ -18,6 +18,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("altText")
     public String altText;
+
     public Image withAltText(String altText) {
         this.altText = altText;
         return this;
@@ -29,6 +30,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentUri")
     public String contentUri;
+
     public Image withContentUri(String contentUri) {
         this.contentUri = contentUri;
         return this;
@@ -40,6 +42,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public MediaProperties properties;
+
     public Image withProperties(MediaProperties properties) {
         this.properties = properties;
         return this;
@@ -51,9 +54,11 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceUri")
     public String sourceUri;
+
     public Image withSourceUri(String sourceUri) {
         this.sourceUri = sourceUri;
         return this;
     }
     
+    public Image(){}
 }

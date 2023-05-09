@@ -35,7 +35,7 @@ public class CustomPolicy {
 	}
 
     /**
-     * This method creates a new custom policy in which a seller specifies their terms for complying with local governmental regulations. &lt;br/&gt;&lt;br/&gt;Two Custom Policy types are supported: &lt;ul&gt;&lt;li&gt;Product Compliance (PRODUCT_COMPLIANCE)&lt;/li&gt; &lt;li&gt;Takeback (TAKE_BACK)&lt;/li&gt;&lt;/ul&gt;Each Custom Policy targets a &lt;b&gt;policyType&lt;/b&gt; and &lt;b&gt;eBay marketplace&lt;/b&gt; combination. Multiple policies may be created as follows: &lt;ul&gt;&lt;li&gt;&lt;b&gt;Product Compliance&lt;/b&gt;: a maximum of 10 policies per eBay marketplace may be created&lt;/li&gt; &lt;li&gt;&lt;b&gt;Takeback&lt;/b&gt;: a maximum of 3 policies per eBay marketplace may be created&lt;/li&gt;&lt;/ul&gt;A successful create policy call returns an HTTP status code of &lt;b&gt;201 Created&lt;/b&gt; with the system-generated policy ID included in the &lt;b&gt;Location&lt;/b&gt; response header.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Product Compliance Policy&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Product Compliance policies disclose product information as required for regulatory compliance.&lt;br/&gt;&lt;br/&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; A maximum of 10 Product Compliance policies per eBay marketplace may be created.&lt;/span&gt; &lt;br/&gt;&lt;br/&gt; &lt;b&gt;Takeback Policy&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Takeback policies describe the seller's legal obligation to take back a previously purchased item when the buyer purchases a new one.&lt;br/&gt;&lt;br/&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; A maximum of 3 Takeback policies per eBay marketplace may be created.&lt;/span&gt;
+     * This method creates a new custom policy in which a seller specifies their terms for complying with local governmental regulations. &lt;br/&gt;&lt;br/&gt;Two Custom Policy types are supported: &lt;ul&gt;&lt;li&gt;Product Compliance (PRODUCT_COMPLIANCE)&lt;/li&gt; &lt;li&gt;Takeback (TAKE_BACK)&lt;/li&gt;&lt;/ul&gt;Each Custom Policy targets a &lt;b&gt;policyType&lt;/b&gt; and &lt;b&gt;eBay marketplace&lt;/b&gt; combination. Multiple policies may be created as follows: &lt;ul&gt;&lt;li&gt;&lt;b&gt;Product Compliance&lt;/b&gt;: a maximum of 10 policies per eBay marketplace may be created&lt;/li&gt; &lt;li&gt;&lt;b&gt;Takeback&lt;/b&gt;: a maximum of 3 policies per eBay marketplace may be created&lt;/li&gt;&lt;/ul&gt;A successful create policy call returns an HTTP status code of &lt;b&gt;201 Created&lt;/b&gt; with the system-generated policy ID included in the &lt;b&gt;Location&lt;/b&gt; response header.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Product Compliance Policy&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Product Compliance policies disclose product information as required for regulatory compliance.&lt;br/&gt;&lt;br/&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; A maximum of 10 Product Compliance policies per eBay marketplace may be created.&lt;/span&gt; &lt;br/&gt;&lt;br/&gt; &lt;b&gt;Takeback Policy&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Takeback policies describe the seller's legal obligation to take back a previously purchased item when the buyer purchases a new one.&lt;br/&gt;&lt;br/&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; A maximum of 3 Takeback policies per eBay marketplace may be created.&lt;/span&gt;&lt;br/&gt;&lt;div class="msgbox_important"&gt;&lt;p class="msgbox_importantInDiv" data-mc-autonum="&amp;lt;b&amp;gt;&amp;lt;span style=&amp;quot;color: #dd1e31;&amp;quot; class=&amp;quot;mcFormatColor&amp;quot;&amp;gt;Important! &amp;lt;/span&amp;gt;&amp;lt;/b&amp;gt;"&gt;&lt;span class="autonumber"&gt;&lt;span&gt;&lt;b&gt;&lt;span style="color: #dd1e31;" class="mcFormatColor"&gt;Important!&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;As a part of Digital Services Act (DSA) requirements, all custom policies will become global (and no longer marketplace-specific) on April 3, 2023. A seller will be able to apply any custom policy to listings on any eBay marketplace where they sell.&lt;br/&gt;&lt;br/&gt;Due to this change, the X-EBAY-C-MARKETPLACE-ID request header is no longer relevant. If this header is passed in after April 3, it will just be ignored in all four methods.&lt;/p&gt;&lt;/div&gt;
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -69,11 +69,9 @@ public class CustomPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCustomPolicyResponse res = new org.openapis.openapi.models.operations.CreateCustomPolicyResponse() {{
+        org.openapis.openapi.models.operations.CreateCustomPolicyResponse res = new org.openapis.openapi.models.operations.CreateCustomPolicyResponse(contentType, httpRes.statusCode()) {{
             createCustomPolicy201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -92,7 +90,7 @@ public class CustomPolicy {
     }
 
     /**
-     * This method retrieves the list of custom policies specified by the &lt;b&gt;policy_types&lt;/b&gt; query parameter for the selected eBay marketplace.&lt;br/&gt; &lt;br/&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following eBay marketplaces support Custom Policies: &lt;ul&gt;&lt;li&gt;Germany (EBAY_DE)&lt;/li&gt; &lt;li&gt;Canada (EBAY_CA)&lt;/li&gt; &lt;li&gt;Australia (EBAY_AU)&lt;/li&gt; &lt;li&gt;United States (EBAY_US)&lt;/li&gt; &lt;li&gt;France (EBAY_FR)&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;For details on header values, see &lt;a href="/api-docs/static/rest-request-components.html#HTTP" target="_blank"&gt;HTTP request headers&lt;/a&gt;.
+     * This method retrieves the list of custom policies specified by the &lt;b&gt;policy_types&lt;/b&gt; query parameter for the selected eBay marketplace.&lt;br/&gt; &lt;br/&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following eBay marketplaces support Custom Policies: &lt;ul&gt;&lt;li&gt;Germany (EBAY_DE)&lt;/li&gt; &lt;li&gt;Canada (EBAY_CA)&lt;/li&gt; &lt;li&gt;Australia (EBAY_AU)&lt;/li&gt; &lt;li&gt;United States (EBAY_US)&lt;/li&gt; &lt;li&gt;France (EBAY_FR)&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;br/&gt;&lt;div class="msgbox_important"&gt;&lt;p class="msgbox_importantInDiv" data-mc-autonum="&amp;lt;b&amp;gt;&amp;lt;span style=&amp;quot;color: #dd1e31;&amp;quot; class=&amp;quot;mcFormatColor&amp;quot;&amp;gt;Important! &amp;lt;/span&amp;gt;&amp;lt;/b&amp;gt;"&gt;&lt;span class="autonumber"&gt;&lt;span&gt;&lt;b&gt;&lt;span style="color: #dd1e31;" class="mcFormatColor"&gt;Important!&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;As a part of Digital Services Act (DSA) requirements, all custom policies will become global (and no longer marketplace-specific) on April 3, 2023. A seller will be able to apply any custom policy to listings on any eBay marketplace where they sell.&lt;br/&gt;&lt;br/&gt;Due to this change, the X-EBAY-C-MARKETPLACE-ID request header is no longer relevant. If this header is passed in after April 3, it will just be ignored in all four methods.&lt;/p&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;For details on header values, see &lt;a href="/api-docs/static/rest-request-components.html#HTTP" target="_blank"&gt;HTTP request headers&lt;/a&gt;.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -127,11 +125,9 @@ public class CustomPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomPoliciesResponse res = new org.openapis.openapi.models.operations.GetCustomPoliciesResponse() {{
+        org.openapis.openapi.models.operations.GetCustomPoliciesResponse res = new org.openapis.openapi.models.operations.GetCustomPoliciesResponse(contentType, httpRes.statusCode()) {{
             customPolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,7 +144,7 @@ public class CustomPolicy {
     }
 
     /**
-     * This method retrieves the custom policy specified by the &lt;b&gt;custom_policy_id&lt;/b&gt; path parameter for the selected eBay marketplace.&lt;br/&gt; &lt;br/&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following eBay marketplaces support Custom Policies: &lt;ul&gt;&lt;li&gt;Germany (EBAY_DE)&lt;/li&gt; &lt;li&gt;Canada (EBAY_CA)&lt;/li&gt; &lt;li&gt;Australia (EBAY_AU)&lt;/li&gt; &lt;li&gt;United States (EBAY_US)&lt;/li&gt; &lt;li&gt;France (EBAY_FR)&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;For details on header values, see &lt;a href="/api-docs/static/rest-request-components.html#HTTP" target="_blank"&gt;HTTP request headers&lt;/a&gt;.
+     * This method retrieves the custom policy specified by the &lt;b&gt;custom_policy_id&lt;/b&gt; path parameter for the selected eBay marketplace.&lt;br/&gt; &lt;br/&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following eBay marketplaces support Custom Policies: &lt;ul&gt;&lt;li&gt;Germany (EBAY_DE)&lt;/li&gt; &lt;li&gt;Canada (EBAY_CA)&lt;/li&gt; &lt;li&gt;Australia (EBAY_AU)&lt;/li&gt; &lt;li&gt;United States (EBAY_US)&lt;/li&gt; &lt;li&gt;France (EBAY_FR)&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;br/&gt;&lt;div class="msgbox_important"&gt;&lt;p class="msgbox_importantInDiv" data-mc-autonum="&amp;lt;b&amp;gt;&amp;lt;span style=&amp;quot;color: #dd1e31;&amp;quot; class=&amp;quot;mcFormatColor&amp;quot;&amp;gt;Important! &amp;lt;/span&amp;gt;&amp;lt;/b&amp;gt;"&gt;&lt;span class="autonumber"&gt;&lt;span&gt;&lt;b&gt;&lt;span style="color: #dd1e31;" class="mcFormatColor"&gt;Important!&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;As a part of Digital Services Act (DSA) requirements, all custom policies will become global (and no longer marketplace-specific) on April 3, 2023. A seller will be able to apply any custom policy to listings on any eBay marketplace where they sell.&lt;br/&gt;&lt;br/&gt;Due to this change, the X-EBAY-C-MARKETPLACE-ID request header is no longer relevant. If this header is passed in after April 3, it will just be ignored in all four methods.&lt;/p&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;For details on header values, see &lt;a href="/api-docs/static/rest-request-components.html#HTTP" target="_blank"&gt;HTTP request headers&lt;/a&gt;.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -177,11 +173,9 @@ public class CustomPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomPolicyResponse res = new org.openapis.openapi.models.operations.GetCustomPolicyResponse() {{
+        org.openapis.openapi.models.operations.GetCustomPolicyResponse res = new org.openapis.openapi.models.operations.GetCustomPolicyResponse(contentType, httpRes.statusCode()) {{
             customPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -198,7 +192,7 @@ public class CustomPolicy {
     }
 
     /**
-     * This method updates an existing custom policy specified by the &lt;b&gt;custom_policy_id&lt;/b&gt; path parameter for the selected marketplace. This method overwrites the policy's &lt;b&gt;Name&lt;/b&gt;, &lt;b&gt;Label&lt;/b&gt;, and &lt;b&gt;Description&lt;/b&gt; fields. Therefore, the complete, current text of all three policy fields must be included in the request payload even when one or two of these fields will not actually be updated.&lt;br/&gt; &lt;br/&gt;For example, the value for the &lt;b&gt;Label&lt;/b&gt; field is to be updated, but the &lt;b&gt;Name&lt;/b&gt; and &lt;b&gt;Description&lt;/b&gt; values will remain unchanged. The existing &lt;b&gt;Name&lt;/b&gt; and &lt;b&gt;Description&lt;/b&gt; values, as they are defined in the current policy, must also be passed in. &lt;br/&gt;&lt;br/&gt;A successful policy update call returns an HTTP status code of &lt;b&gt;204 No Content&lt;/b&gt;.&lt;br/&gt;&lt;br/&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following eBay marketplaces support Custom Policies: &lt;ul&gt;&lt;li&gt;Germany (EBAY_DE)&lt;/li&gt; &lt;li&gt;Canada (EBAY_CA)&lt;/li&gt; &lt;li&gt;Australia (EBAY_AU)&lt;/li&gt; &lt;li&gt;United States (EBAY_US)&lt;/li&gt; &lt;li&gt;France (EBAY_FR)&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;For details on header values, see &lt;a href="/api-docs/static/rest-request-components.html#HTTP"&gt;HTTP request headers&lt;/a&gt;.
+     * This method updates an existing custom policy specified by the &lt;b&gt;custom_policy_id&lt;/b&gt; path parameter for the selected marketplace. This method overwrites the policy's &lt;b&gt;Name&lt;/b&gt;, &lt;b&gt;Label&lt;/b&gt;, and &lt;b&gt;Description&lt;/b&gt; fields. Therefore, the complete, current text of all three policy fields must be included in the request payload even when one or two of these fields will not actually be updated.&lt;br/&gt; &lt;br/&gt;For example, the value for the &lt;b&gt;Label&lt;/b&gt; field is to be updated, but the &lt;b&gt;Name&lt;/b&gt; and &lt;b&gt;Description&lt;/b&gt; values will remain unchanged. The existing &lt;b&gt;Name&lt;/b&gt; and &lt;b&gt;Description&lt;/b&gt; values, as they are defined in the current policy, must also be passed in. &lt;br/&gt;&lt;br/&gt;A successful policy update call returns an HTTP status code of &lt;b&gt;204 No Content&lt;/b&gt;.&lt;br/&gt;&lt;br/&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following eBay marketplaces support Custom Policies: &lt;ul&gt;&lt;li&gt;Germany (EBAY_DE)&lt;/li&gt; &lt;li&gt;Canada (EBAY_CA)&lt;/li&gt; &lt;li&gt;Australia (EBAY_AU)&lt;/li&gt; &lt;li&gt;United States (EBAY_US)&lt;/li&gt; &lt;li&gt;France (EBAY_FR)&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;br/&gt;&lt;div class="msgbox_important"&gt;&lt;p class="msgbox_importantInDiv" data-mc-autonum="&amp;lt;b&amp;gt;&amp;lt;span style=&amp;quot;color: #dd1e31;&amp;quot; class=&amp;quot;mcFormatColor&amp;quot;&amp;gt;Important! &amp;lt;/span&amp;gt;&amp;lt;/b&amp;gt;"&gt;&lt;span class="autonumber"&gt;&lt;span&gt;&lt;b&gt;&lt;span style="color: #dd1e31;" class="mcFormatColor"&gt;Important!&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;As a part of Digital Services Act (DSA) requirements, all custom policies will become global (and no longer marketplace-specific) on April 3, 2023. A seller will be able to apply any custom policy to listings on any eBay marketplace where they sell.&lt;br/&gt;&lt;br/&gt;Due to this change, the X-EBAY-C-MARKETPLACE-ID request header is no longer relevant. If this header is passed in after April 3, it will just be ignored in all four methods.&lt;/p&gt;&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;For details on header values, see &lt;a href="/api-docs/static/rest-request-components.html#HTTP"&gt;HTTP request headers&lt;/a&gt;.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -232,10 +226,8 @@ public class CustomPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCustomPolicyResponse res = new org.openapis.openapi.models.operations.UpdateCustomPolicyResponse() {{
+        org.openapis.openapi.models.operations.UpdateCustomPolicyResponse res = new org.openapis.openapi.models.operations.UpdateCustomPolicyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 409 || httpRes.statusCode() == 500) {

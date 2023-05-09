@@ -19,6 +19,7 @@ public class UserBadgeBadgeExpiry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationDate")
     public OffsetDateTime expirationDate;
+
     public UserBadgeBadgeExpiry withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -27,9 +28,11 @@ public class UserBadgeBadgeExpiry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires")
     public Boolean expires;
+
     public UserBadgeBadgeExpiry withExpires(Boolean expires) {
         this.expires = expires;
         return this;
     }
     
+    public UserBadgeBadgeExpiry(){}
 }

@@ -197,6 +197,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/CreateGrantRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/AllowedOperationEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateGrantVersionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateGrantVersionRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/Options.java
+lib/src/main/java/org/openapis/openapi/models/shared/ActivationOverrideBehaviorEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateLicenseResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/LicenseStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateLicenseRequest.java
@@ -324,4 +326,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateLicenseManagerReportG
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateLicenseSpecificationsForResourceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateServiceSettingsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidenterpriseUsersGetAvailableProductSetRequest {
@@ -12,6 +13,7 @@ public class AndroidenterpriseUsersGetAvailableProductSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AndroidenterpriseUsersGetAvailableProductSetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class AndroidenterpriseUsersGetAvailableProductSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AndroidenterpriseUsersGetAvailableProductSetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class AndroidenterpriseUsersGetAvailableProductSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidenterpriseUsersGetAvailableProductSetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AndroidenterpriseUsersGetAvailableProductSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AndroidenterpriseUsersGetAvailableProductSetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class AndroidenterpriseUsersGetAvailableProductSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterpriseId")
     public String enterpriseId;
+
     public AndroidenterpriseUsersGetAvailableProductSetRequest withEnterpriseId(String enterpriseId) {
         this.enterpriseId = enterpriseId;
         return this;
@@ -62,6 +68,7 @@ public class AndroidenterpriseUsersGetAvailableProductSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidenterpriseUsersGetAvailableProductSetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class AndroidenterpriseUsersGetAvailableProductSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidenterpriseUsersGetAvailableProductSetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class AndroidenterpriseUsersGetAvailableProductSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidenterpriseUsersGetAvailableProductSetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class AndroidenterpriseUsersGetAvailableProductSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidenterpriseUsersGetAvailableProductSetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class AndroidenterpriseUsersGetAvailableProductSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidenterpriseUsersGetAvailableProductSetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class AndroidenterpriseUsersGetAvailableProductSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AndroidenterpriseUsersGetAvailableProductSetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -122,6 +134,7 @@ public class AndroidenterpriseUsersGetAvailableProductSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AndroidenterpriseUsersGetAvailableProductSetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -132,9 +145,14 @@ public class AndroidenterpriseUsersGetAvailableProductSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public AndroidenterpriseUsersGetAvailableProductSetRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public AndroidenterpriseUsersGetAvailableProductSetRequest(@JsonProperty("enterpriseId") String enterpriseId, @JsonProperty("userId") String userId) {
+        this.enterpriseId = enterpriseId;
+        this.userId = userId;
+  }
 }

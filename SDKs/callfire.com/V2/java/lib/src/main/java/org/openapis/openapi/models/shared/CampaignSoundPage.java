@@ -15,6 +15,7 @@ public class CampaignSoundPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public CampaignSound[] items;
+
     public CampaignSoundPage withItems(CampaignSound[] items) {
         this.items = items;
         return this;
@@ -26,6 +27,7 @@ public class CampaignSoundPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public CampaignSoundPage withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -37,6 +39,7 @@ public class CampaignSoundPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public CampaignSoundPage withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -48,9 +51,11 @@ public class CampaignSoundPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public CampaignSoundPage withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public CampaignSoundPage(){}
 }

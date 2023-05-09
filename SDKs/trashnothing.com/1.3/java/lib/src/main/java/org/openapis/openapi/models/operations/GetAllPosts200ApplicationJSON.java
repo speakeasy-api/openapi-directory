@@ -15,9 +15,11 @@ public class GetAllPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posts")
     public org.openapis.openapi.models.shared.Post[] posts;
+
     public GetAllPosts200ApplicationJSON withPosts(org.openapis.openapi.models.shared.Post[] posts) {
         this.posts = posts;
         return this;
     }
     
+    public GetAllPosts200ApplicationJSON(){}
 }

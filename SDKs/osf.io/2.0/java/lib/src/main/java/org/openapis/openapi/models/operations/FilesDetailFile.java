@@ -12,6 +12,7 @@ public class FilesDetailFile {
      */
     
     public FilesDetailFileAttributes attributes;
+
     public FilesDetailFile withAttributes(FilesDetailFileAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class FilesDetailFile {
      */
     
     public String id;
+
     public FilesDetailFile withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class FilesDetailFile {
      */
     
     public FilesDetailFileLinks links;
+
     public FilesDetailFile withLinks(FilesDetailFileLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class FilesDetailFile {
      */
     
     public FilesDetailFileRelationships relationships;
+
     public FilesDetailFile withRelationships(FilesDetailFileRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,11 @@ public class FilesDetailFile {
      */
     
     public String type;
+
     public FilesDetailFile withType(String type) {
         this.type = type;
         return this;
     }
     
+    public FilesDetailFile(){}
 }

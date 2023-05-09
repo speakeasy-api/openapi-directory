@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest {
@@ -12,6 +13,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudServicebrokerV1beta1ServiceInstance googleCloudServicebrokerV1beta1ServiceInstance;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest withGoogleCloudServicebrokerV1beta1ServiceInstance(org.openapis.openapi.models.shared.GoogleCloudServicebrokerV1beta1ServiceInstance googleCloudServicebrokerV1beta1ServiceInstance) {
         this.googleCloudServicebrokerV1beta1ServiceInstance = googleCloudServicebrokerV1beta1ServiceInstance;
         return this;
@@ -29,6 +32,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=acceptsIncomplete")
     public Boolean acceptsIncomplete;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest withAcceptsIncomplete(Boolean acceptsIncomplete) {
         this.acceptsIncomplete = acceptsIncomplete;
         return this;
@@ -39,6 +43,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -49,6 +54,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -59,6 +65,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -90,6 +99,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest withName(String name) {
         this.name = name;
         return this;
@@ -100,6 +110,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -110,6 +121,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -120,6 +132,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -130,6 +143,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -140,9 +154,13 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

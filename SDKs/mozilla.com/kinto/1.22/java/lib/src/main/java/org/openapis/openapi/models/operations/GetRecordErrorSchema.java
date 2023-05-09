@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetRecordErrorSchema {
     @JsonProperty("code")
     public Long code;
+
     public GetRecordErrorSchema withCode(Long code) {
         this.code = code;
         return this;
@@ -22,6 +23,7 @@ public class GetRecordErrorSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public Object details;
+
     public GetRecordErrorSchema withDetails(Object details) {
         this.details = details;
         return this;
@@ -29,6 +31,7 @@ public class GetRecordErrorSchema {
     
     @JsonProperty("errno")
     public Long errno;
+
     public GetRecordErrorSchema withErrno(Long errno) {
         this.errno = errno;
         return this;
@@ -36,6 +39,7 @@ public class GetRecordErrorSchema {
     
     @JsonProperty("error")
     public String error;
+
     public GetRecordErrorSchema withError(String error) {
         this.error = error;
         return this;
@@ -44,6 +48,7 @@ public class GetRecordErrorSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public String info;
+
     public GetRecordErrorSchema withInfo(String info) {
         this.info = info;
         return this;
@@ -52,9 +57,15 @@ public class GetRecordErrorSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetRecordErrorSchema withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetRecordErrorSchema(@JsonProperty("code") Long code, @JsonProperty("errno") Long errno, @JsonProperty("error") String error) {
+        this.code = code;
+        this.errno = errno;
+        this.error = error;
+  }
 }

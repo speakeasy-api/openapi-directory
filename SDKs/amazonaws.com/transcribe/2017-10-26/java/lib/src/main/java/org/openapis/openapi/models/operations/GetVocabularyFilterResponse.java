@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVocabularyFilterResponse {
@@ -12,6 +13,7 @@ public class GetVocabularyFilterResponse {
      */
     
     public Object badRequestException;
+
     public GetVocabularyFilterResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetVocabularyFilterResponse {
     
     
     public String contentType;
+
     public GetVocabularyFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetVocabularyFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.GetVocabularyFilterResponse getVocabularyFilterResponse;
+
     public GetVocabularyFilterResponse withGetVocabularyFilterResponse(org.openapis.openapi.models.shared.GetVocabularyFilterResponse getVocabularyFilterResponse) {
         this.getVocabularyFilterResponse = getVocabularyFilterResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetVocabularyFilterResponse {
      */
     
     public Object internalFailureException;
+
     public GetVocabularyFilterResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetVocabularyFilterResponse {
      */
     
     public Object limitExceededException;
+
     public GetVocabularyFilterResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class GetVocabularyFilterResponse {
      */
     
     public Object notFoundException;
+
     public GetVocabularyFilterResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetVocabularyFilterResponse {
     
     
     public Integer statusCode;
+
     public GetVocabularyFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetVocabularyFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVocabularyFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetVocabularyFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

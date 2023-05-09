@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class RevisionTargetsList {
     
     public String databaseRevision;
+
     public RevisionTargetsList withDatabaseRevision(String databaseRevision) {
         this.databaseRevision = databaseRevision;
         return this;
@@ -19,6 +20,7 @@ public class RevisionTargetsList {
     
     
     public OffsetDateTime databaseRevisionReleaseDate;
+
     public RevisionTargetsList withDatabaseRevisionReleaseDate(OffsetDateTime databaseRevisionReleaseDate) {
         this.databaseRevisionReleaseDate = databaseRevisionReleaseDate;
         return this;
@@ -26,9 +28,11 @@ public class RevisionTargetsList {
     
     
     public String description;
+
     public RevisionTargetsList withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public RevisionTargetsList(){}
 }

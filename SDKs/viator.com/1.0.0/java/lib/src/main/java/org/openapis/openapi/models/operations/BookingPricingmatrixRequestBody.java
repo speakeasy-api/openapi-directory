@@ -15,6 +15,7 @@ public class BookingPricingmatrixRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingDate")
     public String bookingDate;
+
     public BookingPricingmatrixRequestBody withBookingDate(String bookingDate) {
         this.bookingDate = bookingDate;
         return this;
@@ -26,6 +27,7 @@ public class BookingPricingmatrixRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public BookingPricingmatrixRequestBody withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -37,6 +39,7 @@ public class BookingPricingmatrixRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCode")
     public String productCode;
+
     public BookingPricingmatrixRequestBody withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -48,9 +51,11 @@ public class BookingPricingmatrixRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tourGradeCode")
     public String tourGradeCode;
+
     public BookingPricingmatrixRequestBody withTourGradeCode(String tourGradeCode) {
         this.tourGradeCode = tourGradeCode;
         return this;
     }
     
+    public BookingPricingmatrixRequestBody(){}
 }

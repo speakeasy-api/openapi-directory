@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeChangeSetOutput {
     
     public CapabilityEnum[] capabilities;
+
     public DescribeChangeSetOutput withCapabilities(CapabilityEnum[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -19,6 +20,7 @@ public class DescribeChangeSetOutput {
     
     
     public String changeSetId;
+
     public DescribeChangeSetOutput withChangeSetId(String changeSetId) {
         this.changeSetId = changeSetId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeChangeSetOutput {
     
     
     public String changeSetName;
+
     public DescribeChangeSetOutput withChangeSetName(String changeSetName) {
         this.changeSetName = changeSetName;
         return this;
@@ -33,6 +36,7 @@ public class DescribeChangeSetOutput {
     
     
     public Change[] changes;
+
     public DescribeChangeSetOutput withChanges(Change[] changes) {
         this.changes = changes;
         return this;
@@ -40,6 +44,7 @@ public class DescribeChangeSetOutput {
     
     
     public OffsetDateTime creationTime;
+
     public DescribeChangeSetOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -47,6 +52,7 @@ public class DescribeChangeSetOutput {
     
     
     public String description;
+
     public DescribeChangeSetOutput withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +60,7 @@ public class DescribeChangeSetOutput {
     
     
     public ExecutionStatusEnum executionStatus;
+
     public DescribeChangeSetOutput withExecutionStatus(ExecutionStatusEnum executionStatus) {
         this.executionStatus = executionStatus;
         return this;
@@ -61,6 +68,7 @@ public class DescribeChangeSetOutput {
     
     
     public Boolean includeNestedStacks;
+
     public DescribeChangeSetOutput withIncludeNestedStacks(Boolean includeNestedStacks) {
         this.includeNestedStacks = includeNestedStacks;
         return this;
@@ -68,6 +76,7 @@ public class DescribeChangeSetOutput {
     
     
     public String nextToken;
+
     public DescribeChangeSetOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -75,6 +84,7 @@ public class DescribeChangeSetOutput {
     
     
     public String[] notificationARNs;
+
     public DescribeChangeSetOutput withNotificationARNs(String[] notificationARNs) {
         this.notificationARNs = notificationARNs;
         return this;
@@ -82,6 +92,7 @@ public class DescribeChangeSetOutput {
     
     
     public Parameter[] parameters;
+
     public DescribeChangeSetOutput withParameters(Parameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -89,6 +100,7 @@ public class DescribeChangeSetOutput {
     
     
     public String parentChangeSetId;
+
     public DescribeChangeSetOutput withParentChangeSetId(String parentChangeSetId) {
         this.parentChangeSetId = parentChangeSetId;
         return this;
@@ -96,6 +108,7 @@ public class DescribeChangeSetOutput {
     
     
     public RollbackConfiguration rollbackConfiguration;
+
     public DescribeChangeSetOutput withRollbackConfiguration(RollbackConfiguration rollbackConfiguration) {
         this.rollbackConfiguration = rollbackConfiguration;
         return this;
@@ -103,6 +116,7 @@ public class DescribeChangeSetOutput {
     
     
     public String rootChangeSetId;
+
     public DescribeChangeSetOutput withRootChangeSetId(String rootChangeSetId) {
         this.rootChangeSetId = rootChangeSetId;
         return this;
@@ -110,6 +124,7 @@ public class DescribeChangeSetOutput {
     
     
     public String stackId;
+
     public DescribeChangeSetOutput withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -117,6 +132,7 @@ public class DescribeChangeSetOutput {
     
     
     public String stackName;
+
     public DescribeChangeSetOutput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -124,6 +140,7 @@ public class DescribeChangeSetOutput {
     
     
     public ChangeSetStatusEnum status;
+
     public DescribeChangeSetOutput withStatus(ChangeSetStatusEnum status) {
         this.status = status;
         return this;
@@ -131,6 +148,7 @@ public class DescribeChangeSetOutput {
     
     
     public String statusReason;
+
     public DescribeChangeSetOutput withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -138,9 +156,11 @@ public class DescribeChangeSetOutput {
     
     
     public Tag[] tags;
+
     public DescribeChangeSetOutput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeChangeSetOutput(){}
 }

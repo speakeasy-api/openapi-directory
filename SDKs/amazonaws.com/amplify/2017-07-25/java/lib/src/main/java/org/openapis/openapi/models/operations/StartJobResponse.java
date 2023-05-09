@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartJobResponse {
@@ -12,6 +13,7 @@ public class StartJobResponse {
      */
     
     public Object badRequestException;
+
     public StartJobResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class StartJobResponse {
     
     
     public String contentType;
+
     public StartJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartJobResponse {
      */
     
     public Object internalFailureException;
+
     public StartJobResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class StartJobResponse {
      */
     
     public Object limitExceededException;
+
     public StartJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StartJobResponse {
      */
     
     public Object notFoundException;
+
     public StartJobResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartJobResult startJobResult;
+
     public StartJobResponse withStartJobResult(org.openapis.openapi.models.shared.StartJobResult startJobResult) {
         this.startJobResult = startJobResult;
         return this;
@@ -66,6 +73,7 @@ public class StartJobResponse {
     
     
     public Integer statusCode;
+
     public StartJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class StartJobResponse {
      */
     
     public Object unauthorizedException;
+
     public StartJobResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public StartJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

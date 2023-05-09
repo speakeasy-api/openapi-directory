@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.PostJsontoxmlResponse;
 
 public class Application {
@@ -35,16 +34,18 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `postJsontoxml`
-* `postXmltojson`
+* [postJsontoxml](docs/sdk/README.md#postjsontoxml)
+* [postXmltojson](docs/sdk/README.md#postxmltojson)
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -15,9 +15,11 @@ public class UpdateResolverDnssecConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverDNSSECConfig")
     public ResolverDnssecConfig resolverDNSSECConfig;
+
     public UpdateResolverDnssecConfigResponse withResolverDNSSECConfig(ResolverDnssecConfig resolverDNSSECConfig) {
         this.resolverDNSSECConfig = resolverDNSSECConfig;
         return this;
     }
     
+    public UpdateResolverDnssecConfigResponse(){}
 }

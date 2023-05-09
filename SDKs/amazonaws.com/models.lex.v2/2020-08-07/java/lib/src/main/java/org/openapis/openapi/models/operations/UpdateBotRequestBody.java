@@ -15,6 +15,7 @@ public class UpdateBotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botMembers")
     public org.openapis.openapi.models.shared.BotMember[] botMembers;
+
     public UpdateBotRequestBody withBotMembers(org.openapis.openapi.models.shared.BotMember[] botMembers) {
         this.botMembers = botMembers;
         return this;
@@ -25,6 +26,7 @@ public class UpdateBotRequestBody {
      */
     @JsonProperty("botName")
     public String botName;
+
     public UpdateBotRequestBody withBotName(String botName) {
         this.botName = botName;
         return this;
@@ -36,6 +38,7 @@ public class UpdateBotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botType")
     public UpdateBotRequestBodyBotTypeEnum botType;
+
     public UpdateBotRequestBody withBotType(UpdateBotRequestBodyBotTypeEnum botType) {
         this.botType = botType;
         return this;
@@ -46,6 +49,7 @@ public class UpdateBotRequestBody {
      */
     @JsonProperty("dataPrivacy")
     public UpdateBotRequestBodyDataPrivacy dataPrivacy;
+
     public UpdateBotRequestBody withDataPrivacy(UpdateBotRequestBodyDataPrivacy dataPrivacy) {
         this.dataPrivacy = dataPrivacy;
         return this;
@@ -57,6 +61,7 @@ public class UpdateBotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateBotRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -67,6 +72,7 @@ public class UpdateBotRequestBody {
      */
     @JsonProperty("idleSessionTTLInSeconds")
     public Long idleSessionTTLInSeconds;
+
     public UpdateBotRequestBody withIdleSessionTTLInSeconds(Long idleSessionTTLInSeconds) {
         this.idleSessionTTLInSeconds = idleSessionTTLInSeconds;
         return this;
@@ -77,9 +83,16 @@ public class UpdateBotRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public UpdateBotRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public UpdateBotRequestBody(@JsonProperty("botName") String botName, @JsonProperty("dataPrivacy") UpdateBotRequestBodyDataPrivacy dataPrivacy, @JsonProperty("idleSessionTTLInSeconds") Long idleSessionTTLInSeconds, @JsonProperty("roleArn") String roleArn) {
+        this.botName = botName;
+        this.dataPrivacy = dataPrivacy;
+        this.idleSessionTTLInSeconds = idleSessionTTLInSeconds;
+        this.roleArn = roleArn;
+  }
 }

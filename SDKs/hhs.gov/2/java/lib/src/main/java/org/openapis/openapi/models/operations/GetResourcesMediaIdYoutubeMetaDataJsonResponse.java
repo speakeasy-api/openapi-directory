@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourcesMediaIdYoutubeMetaDataJsonResponse {
     
     public String contentType;
+
     public GetResourcesMediaIdYoutubeMetaDataJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetResourcesMediaIdYoutubeMetaDataJsonResponse {
     
     
     public Integer statusCode;
+
     public GetResourcesMediaIdYoutubeMetaDataJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetResourcesMediaIdYoutubeMetaDataJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourcesMediaIdYoutubeMetaDataJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetResourcesMediaIdYoutubeMetaDataJsonResponse {
      */
     
     public GetResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSON getResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSONObject;
+
     public GetResourcesMediaIdYoutubeMetaDataJsonResponse withGetResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSONObject(GetResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSON getResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSONObject) {
         this.getResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSONObject = getResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSONObject;
         return this;
     }
     
+    public GetResourcesMediaIdYoutubeMetaDataJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

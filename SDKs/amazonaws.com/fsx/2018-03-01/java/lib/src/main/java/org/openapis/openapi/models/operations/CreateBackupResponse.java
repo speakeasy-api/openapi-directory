@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBackupResponse {
@@ -12,6 +13,7 @@ public class CreateBackupResponse {
      */
     
     public Object backupInProgress;
+
     public CreateBackupResponse withBackupInProgress(Object backupInProgress) {
         this.backupInProgress = backupInProgress;
         return this;
@@ -22,6 +24,7 @@ public class CreateBackupResponse {
      */
     
     public Object badRequest;
+
     public CreateBackupResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -29,6 +32,7 @@ public class CreateBackupResponse {
     
     
     public String contentType;
+
     public CreateBackupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateBackupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBackupResponse createBackupResponse;
+
     public CreateBackupResponse withCreateBackupResponse(org.openapis.openapi.models.shared.CreateBackupResponse createBackupResponse) {
         this.createBackupResponse = createBackupResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateBackupResponse {
      */
     
     public Object fileSystemNotFound;
+
     public CreateBackupResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -59,6 +65,7 @@ public class CreateBackupResponse {
      */
     
     public Object incompatibleParameterError;
+
     public CreateBackupResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -69,6 +76,7 @@ public class CreateBackupResponse {
      */
     
     public Object internalServerError;
+
     public CreateBackupResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -76,6 +84,7 @@ public class CreateBackupResponse {
     
     
     public Integer statusCode;
+
     public CreateBackupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateBackupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBackupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateBackupResponse {
      */
     
     public Object serviceLimitExceeded;
+
     public CreateBackupResponse withServiceLimitExceeded(Object serviceLimitExceeded) {
         this.serviceLimitExceeded = serviceLimitExceeded;
         return this;
@@ -103,6 +114,7 @@ public class CreateBackupResponse {
      */
     
     public Object unsupportedOperation;
+
     public CreateBackupResponse withUnsupportedOperation(Object unsupportedOperation) {
         this.unsupportedOperation = unsupportedOperation;
         return this;
@@ -113,9 +125,14 @@ public class CreateBackupResponse {
      */
     
     public Object volumeNotFound;
+
     public CreateBackupResponse withVolumeNotFound(Object volumeNotFound) {
         this.volumeNotFound = volumeNotFound;
         return this;
     }
     
+    public CreateBackupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

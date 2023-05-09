@@ -18,6 +18,7 @@ public class ListPreviewRotationShiftsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public ListPreviewRotationShiftsRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -26,6 +27,7 @@ public class ListPreviewRotationShiftsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListPreviewRotationShiftsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -33,6 +35,7 @@ public class ListPreviewRotationShiftsRequest {
     
     @JsonProperty("Members")
     public String[] members;
+
     public ListPreviewRotationShiftsRequest withMembers(String[] members) {
         this.members = members;
         return this;
@@ -41,6 +44,7 @@ public class ListPreviewRotationShiftsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPreviewRotationShiftsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -49,6 +53,7 @@ public class ListPreviewRotationShiftsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Overrides")
     public PreviewOverride[] overrides;
+
     public ListPreviewRotationShiftsRequest withOverrides(PreviewOverride[] overrides) {
         this.overrides = overrides;
         return this;
@@ -56,6 +61,7 @@ public class ListPreviewRotationShiftsRequest {
     
     @JsonProperty("Recurrence")
     public RecurrenceSettings recurrence;
+
     public ListPreviewRotationShiftsRequest withRecurrence(RecurrenceSettings recurrence) {
         this.recurrence = recurrence;
         return this;
@@ -66,6 +72,7 @@ public class ListPreviewRotationShiftsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RotationStartTime")
     public OffsetDateTime rotationStartTime;
+
     public ListPreviewRotationShiftsRequest withRotationStartTime(OffsetDateTime rotationStartTime) {
         this.rotationStartTime = rotationStartTime;
         return this;
@@ -76,6 +83,7 @@ public class ListPreviewRotationShiftsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public ListPreviewRotationShiftsRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -83,9 +91,16 @@ public class ListPreviewRotationShiftsRequest {
     
     @JsonProperty("TimeZoneId")
     public String timeZoneId;
+
     public ListPreviewRotationShiftsRequest withTimeZoneId(String timeZoneId) {
         this.timeZoneId = timeZoneId;
         return this;
     }
     
+    public ListPreviewRotationShiftsRequest(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("Members") String[] members, @JsonProperty("Recurrence") RecurrenceSettings recurrence, @JsonProperty("TimeZoneId") String timeZoneId) {
+        this.endTime = endTime;
+        this.members = members;
+        this.recurrence = recurrence;
+        this.timeZoneId = timeZoneId;
+  }
 }

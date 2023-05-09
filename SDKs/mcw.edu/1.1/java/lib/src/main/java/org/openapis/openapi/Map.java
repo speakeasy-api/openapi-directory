@@ -49,11 +49,9 @@ public class Map {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETChromosomeByAssemblyUsingGETResponse res = new org.openapis.openapi.models.operations.GETChromosomeByAssemblyUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETChromosomeByAssemblyUsingGETResponse res = new org.openapis.openapi.models.operations.GETChromosomeByAssemblyUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -88,11 +86,9 @@ public class Map {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETChromosomesByAssemblyUsingGETResponse res = new org.openapis.openapi.models.operations.GETChromosomesByAssemblyUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETChromosomesByAssemblyUsingGETResponse res = new org.openapis.openapi.models.operations.GETChromosomesByAssemblyUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -127,11 +123,9 @@ public class Map {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETMapsBySpeciesUsingGETResponse res = new org.openapis.openapi.models.operations.GETMapsBySpeciesUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETMapsBySpeciesUsingGETResponse res = new org.openapis.openapi.models.operations.GETMapsBySpeciesUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

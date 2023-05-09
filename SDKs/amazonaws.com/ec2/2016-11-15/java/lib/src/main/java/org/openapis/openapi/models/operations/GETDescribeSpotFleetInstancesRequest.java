@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeSpotFleetInstancesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeSpotFleetInstancesActionEnum action;
+
     public GETDescribeSpotFleetInstancesRequest withAction(GETDescribeSpotFleetInstancesActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeSpotFleetInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDescribeSpotFleetInstancesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeSpotFleetInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public Long maxResults;
+
     public GETDescribeSpotFleetInstancesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeSpotFleetInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public GETDescribeSpotFleetInstancesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeSpotFleetInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SpotFleetRequestId")
     public String spotFleetRequestId;
+
     public GETDescribeSpotFleetInstancesRequest withSpotFleetRequestId(String spotFleetRequestId) {
         this.spotFleetRequestId = spotFleetRequestId;
         return this;
@@ -56,6 +62,7 @@ public class GETDescribeSpotFleetInstancesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeSpotFleetInstancesVersionEnum version;
+
     public GETDescribeSpotFleetInstancesRequest withVersion(GETDescribeSpotFleetInstancesVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETDescribeSpotFleetInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeSpotFleetInstancesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDescribeSpotFleetInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeSpotFleetInstancesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDescribeSpotFleetInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeSpotFleetInstancesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDescribeSpotFleetInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeSpotFleetInstancesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDescribeSpotFleetInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeSpotFleetInstancesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDescribeSpotFleetInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeSpotFleetInstancesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,15 @@ public class GETDescribeSpotFleetInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeSpotFleetInstancesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeSpotFleetInstancesRequest(@JsonProperty("Action") GETDescribeSpotFleetInstancesActionEnum action, @JsonProperty("SpotFleetRequestId") String spotFleetRequestId, @JsonProperty("Version") GETDescribeSpotFleetInstancesVersionEnum version) {
+        this.action = action;
+        this.spotFleetRequestId = spotFleetRequestId;
+        this.version = version;
+  }
 }

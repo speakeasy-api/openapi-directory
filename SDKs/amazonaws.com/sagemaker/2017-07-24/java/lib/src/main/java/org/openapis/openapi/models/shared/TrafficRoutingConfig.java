@@ -15,6 +15,7 @@ public class TrafficRoutingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CanarySize")
     public CapacitySize canarySize;
+
     public TrafficRoutingConfig withCanarySize(CapacitySize canarySize) {
         this.canarySize = canarySize;
         return this;
@@ -23,6 +24,7 @@ public class TrafficRoutingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinearStepSize")
     public CapacitySize linearStepSize;
+
     public TrafficRoutingConfig withLinearStepSize(CapacitySize linearStepSize) {
         this.linearStepSize = linearStepSize;
         return this;
@@ -30,6 +32,7 @@ public class TrafficRoutingConfig {
     
     @JsonProperty("Type")
     public TrafficRoutingConfigTypeEnum type;
+
     public TrafficRoutingConfig withType(TrafficRoutingConfigTypeEnum type) {
         this.type = type;
         return this;
@@ -37,9 +40,14 @@ public class TrafficRoutingConfig {
     
     @JsonProperty("WaitIntervalInSeconds")
     public Long waitIntervalInSeconds;
+
     public TrafficRoutingConfig withWaitIntervalInSeconds(Long waitIntervalInSeconds) {
         this.waitIntervalInSeconds = waitIntervalInSeconds;
         return this;
     }
     
+    public TrafficRoutingConfig(@JsonProperty("Type") TrafficRoutingConfigTypeEnum type, @JsonProperty("WaitIntervalInSeconds") Long waitIntervalInSeconds) {
+        this.type = type;
+        this.waitIntervalInSeconds = waitIntervalInSeconds;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminDeleteUserResponse {
     
     public String contentType;
+
     public AdminDeleteUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AdminDeleteUserResponse {
      */
     
     public Object internalErrorException;
+
     public AdminDeleteUserResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class AdminDeleteUserResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminDeleteUserResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class AdminDeleteUserResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminDeleteUserResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -49,6 +54,7 @@ public class AdminDeleteUserResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminDeleteUserResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class AdminDeleteUserResponse {
     
     
     public Integer statusCode;
+
     public AdminDeleteUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AdminDeleteUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminDeleteUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AdminDeleteUserResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AdminDeleteUserResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class AdminDeleteUserResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminDeleteUserResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public AdminDeleteUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class DocumentIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Author")
     public String author;
+
     public DocumentIdentifier withAuthor(String author) {
         this.author = author;
         return this;
@@ -30,6 +31,7 @@ public class DocumentIdentifier {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public DocumentIdentifier withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -38,6 +40,7 @@ public class DocumentIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public DocumentIdentifier withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -46,6 +49,7 @@ public class DocumentIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentFormat")
     public DocumentFormatEnum documentFormat;
+
     public DocumentIdentifier withDocumentFormat(DocumentFormatEnum documentFormat) {
         this.documentFormat = documentFormat;
         return this;
@@ -54,6 +58,7 @@ public class DocumentIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentType")
     public DocumentTypeEnum documentType;
+
     public DocumentIdentifier withDocumentType(DocumentTypeEnum documentType) {
         this.documentType = documentType;
         return this;
@@ -62,6 +67,7 @@ public class DocumentIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public DocumentIdentifier withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -70,6 +76,7 @@ public class DocumentIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DocumentIdentifier withName(String name) {
         this.name = name;
         return this;
@@ -78,6 +85,7 @@ public class DocumentIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public DocumentIdentifier withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -86,6 +94,7 @@ public class DocumentIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlatformTypes")
     public PlatformTypeEnum[] platformTypes;
+
     public DocumentIdentifier withPlatformTypes(PlatformTypeEnum[] platformTypes) {
         this.platformTypes = platformTypes;
         return this;
@@ -94,6 +103,7 @@ public class DocumentIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Requires")
     public DocumentRequires[] requires;
+
     public DocumentIdentifier withRequires(DocumentRequires[] requires) {
         this.requires = requires;
         return this;
@@ -102,6 +112,7 @@ public class DocumentIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReviewStatus")
     public ReviewStatusEnum reviewStatus;
+
     public DocumentIdentifier withReviewStatus(ReviewStatusEnum reviewStatus) {
         this.reviewStatus = reviewStatus;
         return this;
@@ -110,6 +121,7 @@ public class DocumentIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaVersion")
     public String schemaVersion;
+
     public DocumentIdentifier withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -118,6 +130,7 @@ public class DocumentIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public DocumentIdentifier withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -126,6 +139,7 @@ public class DocumentIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetType")
     public String targetType;
+
     public DocumentIdentifier withTargetType(String targetType) {
         this.targetType = targetType;
         return this;
@@ -134,9 +148,11 @@ public class DocumentIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionName")
     public String versionName;
+
     public DocumentIdentifier withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public DocumentIdentifier(){}
 }

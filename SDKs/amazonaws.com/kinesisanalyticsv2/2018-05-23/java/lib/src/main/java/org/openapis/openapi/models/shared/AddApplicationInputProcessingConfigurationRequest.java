@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddApplicationInputProcessingConfigurationRequest {
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public AddApplicationInputProcessingConfigurationRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -16,6 +17,7 @@ public class AddApplicationInputProcessingConfigurationRequest {
     
     @JsonProperty("CurrentApplicationVersionId")
     public Long currentApplicationVersionId;
+
     public AddApplicationInputProcessingConfigurationRequest withCurrentApplicationVersionId(Long currentApplicationVersionId) {
         this.currentApplicationVersionId = currentApplicationVersionId;
         return this;
@@ -23,6 +25,7 @@ public class AddApplicationInputProcessingConfigurationRequest {
     
     @JsonProperty("InputId")
     public String inputId;
+
     public AddApplicationInputProcessingConfigurationRequest withInputId(String inputId) {
         this.inputId = inputId;
         return this;
@@ -30,9 +33,16 @@ public class AddApplicationInputProcessingConfigurationRequest {
     
     @JsonProperty("InputProcessingConfiguration")
     public InputProcessingConfiguration inputProcessingConfiguration;
+
     public AddApplicationInputProcessingConfigurationRequest withInputProcessingConfiguration(InputProcessingConfiguration inputProcessingConfiguration) {
         this.inputProcessingConfiguration = inputProcessingConfiguration;
         return this;
     }
     
+    public AddApplicationInputProcessingConfigurationRequest(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("CurrentApplicationVersionId") Long currentApplicationVersionId, @JsonProperty("InputId") String inputId, @JsonProperty("InputProcessingConfiguration") InputProcessingConfiguration inputProcessingConfiguration) {
+        this.applicationName = applicationName;
+        this.currentApplicationVersionId = currentApplicationVersionId;
+        this.inputId = inputId;
+        this.inputProcessingConfiguration = inputProcessingConfiguration;
+  }
 }

@@ -12,6 +12,7 @@ public class ExecuteCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public ExecuteCommandRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -19,6 +20,7 @@ public class ExecuteCommandRequest {
     
     @JsonProperty("command")
     public String command;
+
     public ExecuteCommandRequest withCommand(String command) {
         this.command = command;
         return this;
@@ -27,6 +29,7 @@ public class ExecuteCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("container")
     public String container;
+
     public ExecuteCommandRequest withContainer(String container) {
         this.container = container;
         return this;
@@ -34,6 +37,7 @@ public class ExecuteCommandRequest {
     
     @JsonProperty("interactive")
     public Boolean interactive;
+
     public ExecuteCommandRequest withInteractive(Boolean interactive) {
         this.interactive = interactive;
         return this;
@@ -41,9 +45,15 @@ public class ExecuteCommandRequest {
     
     @JsonProperty("task")
     public String task;
+
     public ExecuteCommandRequest withTask(String task) {
         this.task = task;
         return this;
     }
     
+    public ExecuteCommandRequest(@JsonProperty("command") String command, @JsonProperty("interactive") Boolean interactive, @JsonProperty("task") String task) {
+        this.command = command;
+        this.interactive = interactive;
+        this.task = task;
+  }
 }

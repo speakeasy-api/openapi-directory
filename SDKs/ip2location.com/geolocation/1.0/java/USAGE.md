@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetAddonEnum;
 import org.openapis.openapi.models.operations.GetFormatEnum;
 import org.openapis.openapi.models.operations.GetLangEnum;
@@ -17,26 +16,26 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetRequest req = new GetRequest() {{
+            GetRequest req = new GetRequest("8.8.8.8", "corrupti") {{
                 addon = new org.openapis.openapi.models.operations.GetAddonEnum[]{{
-                    add("geotargeting"),
-                    add("country_groupings"),
-                    add("country_groupings"),
+                    add(GetAddonEnum.COUNTRY_GROUPINGS),
+                    add(GetAddonEnum.COUNTRY_GROUPINGS),
+                    add(GetAddonEnum.GEOTARGETING),
                 }};
-                format = "xml";
-                ip = "8.8.8.8";
-                key = "nulla";
-                lang = "ja";
-                package_ = "WS22";
-            }}            
+                format = GetFormatEnum.XML;
+                lang = GetLangEnum.JA;
+                package_ = GetPackageEnum.WS22;
+            }};            
 
             GetResponse res = sdk.get(req);
 
-            if (res.get200ApplicationJSONString.isPresent()) {
+            if (res.get200ApplicationJSONString != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

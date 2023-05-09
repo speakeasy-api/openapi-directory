@@ -15,6 +15,7 @@ public class NavEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("children")
     public NavEntry[] children;
+
     public NavEntry withChildren(NavEntry[] children) {
         this.children = children;
         return this;
@@ -23,6 +24,7 @@ public class NavEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public NavContent content;
+
     public NavEntry withContent(NavContent content) {
         this.content = content;
         return this;
@@ -34,6 +36,7 @@ public class NavEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public java.util.Map<String, Object> customFields;
+
     public NavEntry withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -44,6 +47,7 @@ public class NavEntry {
      */
     @JsonProperty("depth")
     public Integer depth;
+
     public NavEntry withDepth(Integer depth) {
         this.depth = depth;
         return this;
@@ -58,6 +62,7 @@ public class NavEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featured")
     public Boolean featured;
+
     public NavEntry withFeatured(Boolean featured) {
         this.featured = featured;
         return this;
@@ -69,6 +74,7 @@ public class NavEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
+
     public NavEntry withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -80,6 +86,7 @@ public class NavEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public NavEntry withLabel(String label) {
         this.label = label;
         return this;
@@ -94,9 +101,13 @@ public class NavEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public NavEntry withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public NavEntry(@JsonProperty("depth") Integer depth) {
+        this.depth = depth;
+  }
 }

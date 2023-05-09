@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=hapikey")
     public String developerHapikey;
+
     public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchSecurity withDeveloperHapikey(String developerHapikey) {
         this.developerHapikey = developerHapikey;
         return this;
     }
     
+    public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchSecurity(@JsonProperty("developer_hapikey") String developerHapikey) {
+        this.developerHapikey = developerHapikey;
+  }
 }

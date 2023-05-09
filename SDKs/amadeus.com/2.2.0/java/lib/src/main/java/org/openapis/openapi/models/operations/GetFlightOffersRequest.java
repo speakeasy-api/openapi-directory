@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetFlightOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=adults")
     public Long adults;
+
     public GetFlightOffersRequest withAdults(Long adults) {
         this.adults = adults;
         return this;
@@ -23,6 +25,7 @@ public class GetFlightOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=children")
     public Long children;
+
     public GetFlightOffersRequest withChildren(Long children) {
         this.children = children;
         return this;
@@ -33,6 +36,7 @@ public class GetFlightOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currencyCode")
     public String currencyCode;
+
     public GetFlightOffersRequest withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -43,6 +47,7 @@ public class GetFlightOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=departureDate")
     public LocalDate departureDate;
+
     public GetFlightOffersRequest withDepartureDate(LocalDate departureDate) {
         this.departureDate = departureDate;
         return this;
@@ -53,6 +58,7 @@ public class GetFlightOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationLocationCode")
     public String destinationLocationCode;
+
     public GetFlightOffersRequest withDestinationLocationCode(String destinationLocationCode) {
         this.destinationLocationCode = destinationLocationCode;
         return this;
@@ -66,6 +72,7 @@ public class GetFlightOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=excludedAirlineCodes")
     public String excludedAirlineCodes;
+
     public GetFlightOffersRequest withExcludedAirlineCodes(String excludedAirlineCodes) {
         this.excludedAirlineCodes = excludedAirlineCodes;
         return this;
@@ -79,6 +86,7 @@ public class GetFlightOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=includedAirlineCodes")
     public String includedAirlineCodes;
+
     public GetFlightOffersRequest withIncludedAirlineCodes(String includedAirlineCodes) {
         this.includedAirlineCodes = includedAirlineCodes;
         return this;
@@ -89,6 +97,7 @@ public class GetFlightOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=infants")
     public Long infants;
+
     public GetFlightOffersRequest withInfants(Long infants) {
         this.infants = infants;
         return this;
@@ -99,6 +108,7 @@ public class GetFlightOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public GetFlightOffersRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -109,6 +119,7 @@ public class GetFlightOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxPrice")
     public Long maxPrice;
+
     public GetFlightOffersRequest withMaxPrice(Long maxPrice) {
         this.maxPrice = maxPrice;
         return this;
@@ -119,6 +130,7 @@ public class GetFlightOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nonStop")
     public Boolean nonStop;
+
     public GetFlightOffersRequest withNonStop(Boolean nonStop) {
         this.nonStop = nonStop;
         return this;
@@ -129,6 +141,7 @@ public class GetFlightOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=originLocationCode")
     public String originLocationCode;
+
     public GetFlightOffersRequest withOriginLocationCode(String originLocationCode) {
         this.originLocationCode = originLocationCode;
         return this;
@@ -139,6 +152,7 @@ public class GetFlightOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnDate")
     public LocalDate returnDate;
+
     public GetFlightOffersRequest withReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
         return this;
@@ -149,9 +163,16 @@ public class GetFlightOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelClass")
     public GetFlightOffersTravelClassEnum travelClass;
+
     public GetFlightOffersRequest withTravelClass(GetFlightOffersTravelClassEnum travelClass) {
         this.travelClass = travelClass;
         return this;
     }
     
+    public GetFlightOffersRequest(@JsonProperty("adults") Long adults, @JsonProperty("departureDate") LocalDate departureDate, @JsonProperty("destinationLocationCode") String destinationLocationCode, @JsonProperty("originLocationCode") String originLocationCode) {
+        this.adults = adults;
+        this.departureDate = departureDate;
+        this.destinationLocationCode = destinationLocationCode;
+        this.originLocationCode = originLocationCode;
+  }
 }

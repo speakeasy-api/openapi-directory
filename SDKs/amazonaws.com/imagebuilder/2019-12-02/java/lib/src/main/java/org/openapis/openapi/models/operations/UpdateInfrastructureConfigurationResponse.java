@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateInfrastructureConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateInfrastructureConfigurationResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public UpdateInfrastructureConfigurationResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateInfrastructureConfigurationResponse {
      */
     
     public Object clientException;
+
     public UpdateInfrastructureConfigurationResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateInfrastructureConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateInfrastructureConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateInfrastructureConfigurationResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateInfrastructureConfigurationResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateInfrastructureConfigurationResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public UpdateInfrastructureConfigurationResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateInfrastructureConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateInfrastructureConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateInfrastructureConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateInfrastructureConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateInfrastructureConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateInfrastructureConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateInfrastructureConfigurationResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateInfrastructureConfigurationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateInfrastructureConfigurationResponse {
      */
     
     public Object serviceException;
+
     public UpdateInfrastructureConfigurationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateInfrastructureConfigurationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateInfrastructureConfigurationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateInfrastructureConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateInfrastructureConfigurationResponse updateInfrastructureConfigurationResponse;
+
     public UpdateInfrastructureConfigurationResponse withUpdateInfrastructureConfigurationResponse(org.openapis.openapi.models.shared.UpdateInfrastructureConfigurationResponse updateInfrastructureConfigurationResponse) {
         this.updateInfrastructureConfigurationResponse = updateInfrastructureConfigurationResponse;
         return this;
     }
     
+    public UpdateInfrastructureConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

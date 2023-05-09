@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateScreenUsingPUTRequest {
@@ -12,6 +13,7 @@ public class UpdateScreenUsingPUTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ManageScreen manageScreen;
+
     public UpdateScreenUsingPUTRequest withManageScreen(org.openapis.openapi.models.shared.ManageScreen manageScreen) {
         this.manageScreen = manageScreen;
         return this;
@@ -22,6 +24,7 @@ public class UpdateScreenUsingPUTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public UpdateScreenUsingPUTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -32,9 +35,15 @@ public class UpdateScreenUsingPUTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortCode")
     public String shortCode;
+
     public UpdateScreenUsingPUTRequest withShortCode(String shortCode) {
         this.shortCode = shortCode;
         return this;
     }
     
+    public UpdateScreenUsingPUTRequest(@JsonProperty("ManageScreen") org.openapis.openapi.models.shared.ManageScreen manageScreen, @JsonProperty("apiKey") String apiKey, @JsonProperty("shortCode") String shortCode) {
+        this.manageScreen = manageScreen;
+        this.apiKey = apiKey;
+        this.shortCode = shortCode;
+  }
 }

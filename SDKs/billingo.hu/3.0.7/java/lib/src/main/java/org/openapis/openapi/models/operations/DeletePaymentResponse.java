@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePaymentResponse {
@@ -12,6 +13,7 @@ public class DeletePaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse;
+
     public DeletePaymentResponse withClientErrorResponse(org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse) {
         this.clientErrorResponse = clientErrorResponse;
         return this;
@@ -19,6 +21,7 @@ public class DeletePaymentResponse {
     
     
     public String contentType;
+
     public DeletePaymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DeletePaymentResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public DeletePaymentResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -36,6 +40,7 @@ public class DeletePaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.PaymentHistory[] paymentHistories;
+
     public DeletePaymentResponse withPaymentHistories(org.openapis.openapi.models.shared.PaymentHistory[] paymentHistories) {
         this.paymentHistories = paymentHistories;
         return this;
@@ -43,6 +48,7 @@ public class DeletePaymentResponse {
     
     
     public Integer statusCode;
+
     public DeletePaymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,6 +56,7 @@ public class DeletePaymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePaymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -60,9 +67,14 @@ public class DeletePaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse;
+
     public DeletePaymentResponse withServerErrorResponse(org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse) {
         this.serverErrorResponse = serverErrorResponse;
         return this;
     }
     
+    public DeletePaymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

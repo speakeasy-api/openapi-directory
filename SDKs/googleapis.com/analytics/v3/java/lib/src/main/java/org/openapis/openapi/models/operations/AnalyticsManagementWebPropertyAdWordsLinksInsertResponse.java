@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsManagementWebPropertyAdWordsLinksInsertResponse {
     
     public String contentType;
+
     public AnalyticsManagementWebPropertyAdWordsLinksInsertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsManagementWebPropertyAdWordsLinksInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.EntityAdWordsLink entityAdWordsLink;
+
     public AnalyticsManagementWebPropertyAdWordsLinksInsertResponse withEntityAdWordsLink(org.openapis.openapi.models.shared.EntityAdWordsLink entityAdWordsLink) {
         this.entityAdWordsLink = entityAdWordsLink;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsManagementWebPropertyAdWordsLinksInsertResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsManagementWebPropertyAdWordsLinksInsertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsManagementWebPropertyAdWordsLinksInsertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsManagementWebPropertyAdWordsLinksInsertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsManagementWebPropertyAdWordsLinksInsertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

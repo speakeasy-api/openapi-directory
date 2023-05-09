@@ -15,6 +15,7 @@ public class OrdersRefundItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public OrdersCustomBatchRequestEntryRefundItemItem[] items;
+
     public OrdersRefundItemRequest withItems(OrdersCustomBatchRequestEntryRefundItemItem[] items) {
         this.items = items;
         return this;
@@ -26,6 +27,7 @@ public class OrdersRefundItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public OrdersRefundItemRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -37,6 +39,7 @@ public class OrdersRefundItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public OrdersRefundItemRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -48,6 +51,7 @@ public class OrdersRefundItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonText")
     public String reasonText;
+
     public OrdersRefundItemRequest withReasonText(String reasonText) {
         this.reasonText = reasonText;
         return this;
@@ -56,9 +60,11 @@ public class OrdersRefundItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping")
     public OrdersCustomBatchRequestEntryRefundItemShipping shipping;
+
     public OrdersRefundItemRequest withShipping(OrdersCustomBatchRequestEntryRefundItemShipping shipping) {
         this.shipping = shipping;
         return this;
     }
     
+    public OrdersRefundItemRequest(){}
 }

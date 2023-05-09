@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class EnvironmentAccountConnectionSummary {
     @JsonProperty("arn")
     public String arn;
+
     public EnvironmentAccountConnectionSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -27,6 +28,7 @@ public class EnvironmentAccountConnectionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentRoleArn")
     public String componentRoleArn;
+
     public EnvironmentAccountConnectionSummary withComponentRoleArn(String componentRoleArn) {
         this.componentRoleArn = componentRoleArn;
         return this;
@@ -34,6 +36,7 @@ public class EnvironmentAccountConnectionSummary {
     
     @JsonProperty("environmentAccountId")
     public String environmentAccountId;
+
     public EnvironmentAccountConnectionSummary withEnvironmentAccountId(String environmentAccountId) {
         this.environmentAccountId = environmentAccountId;
         return this;
@@ -41,6 +44,7 @@ public class EnvironmentAccountConnectionSummary {
     
     @JsonProperty("environmentName")
     public String environmentName;
+
     public EnvironmentAccountConnectionSummary withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -48,6 +52,7 @@ public class EnvironmentAccountConnectionSummary {
     
     @JsonProperty("id")
     public String id;
+
     public EnvironmentAccountConnectionSummary withId(String id) {
         this.id = id;
         return this;
@@ -57,6 +62,7 @@ public class EnvironmentAccountConnectionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public EnvironmentAccountConnectionSummary withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -64,6 +70,7 @@ public class EnvironmentAccountConnectionSummary {
     
     @JsonProperty("managementAccountId")
     public String managementAccountId;
+
     public EnvironmentAccountConnectionSummary withManagementAccountId(String managementAccountId) {
         this.managementAccountId = managementAccountId;
         return this;
@@ -73,6 +80,7 @@ public class EnvironmentAccountConnectionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("requestedAt")
     public OffsetDateTime requestedAt;
+
     public EnvironmentAccountConnectionSummary withRequestedAt(OffsetDateTime requestedAt) {
         this.requestedAt = requestedAt;
         return this;
@@ -80,6 +88,7 @@ public class EnvironmentAccountConnectionSummary {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public EnvironmentAccountConnectionSummary withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -87,9 +96,21 @@ public class EnvironmentAccountConnectionSummary {
     
     @JsonProperty("status")
     public EnvironmentAccountConnectionStatusEnum status;
+
     public EnvironmentAccountConnectionSummary withStatus(EnvironmentAccountConnectionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public EnvironmentAccountConnectionSummary(@JsonProperty("arn") String arn, @JsonProperty("environmentAccountId") String environmentAccountId, @JsonProperty("environmentName") String environmentName, @JsonProperty("id") String id, @JsonProperty("lastModifiedAt") OffsetDateTime lastModifiedAt, @JsonProperty("managementAccountId") String managementAccountId, @JsonProperty("requestedAt") OffsetDateTime requestedAt, @JsonProperty("roleArn") String roleArn, @JsonProperty("status") EnvironmentAccountConnectionStatusEnum status) {
+        this.arn = arn;
+        this.environmentAccountId = environmentAccountId;
+        this.environmentName = environmentName;
+        this.id = id;
+        this.lastModifiedAt = lastModifiedAt;
+        this.managementAccountId = managementAccountId;
+        this.requestedAt = requestedAt;
+        this.roleArn = roleArn;
+        this.status = status;
+  }
 }

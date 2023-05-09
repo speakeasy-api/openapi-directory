@@ -15,6 +15,7 @@ public class ServiceLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isServiceLimited")
     public Boolean isServiceLimited;
+
     public ServiceLimit withIsServiceLimited(Boolean isServiceLimited) {
         this.isServiceLimited = isServiceLimited;
         return this;
@@ -23,6 +24,7 @@ public class ServiceLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public UnitEnum unit;
+
     public ServiceLimit withUnit(UnitEnum unit) {
         this.unit = unit;
         return this;
@@ -31,9 +33,11 @@ public class ServiceLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public ServiceLimit withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public ServiceLimit(){}
 }

@@ -18,6 +18,7 @@ public class ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessLevels")
     public String[] accessLevels;
+
     public ServicePerimeterConfig withAccessLevels(String[] accessLevels) {
         this.accessLevels = accessLevels;
         return this;
@@ -29,6 +30,7 @@ public class ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("egressPolicies")
     public EgressPolicy[] egressPolicies;
+
     public ServicePerimeterConfig withEgressPolicies(EgressPolicy[] egressPolicies) {
         this.egressPolicies = egressPolicies;
         return this;
@@ -40,6 +42,7 @@ public class ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingressPolicies")
     public IngressPolicy[] ingressPolicies;
+
     public ServicePerimeterConfig withIngressPolicies(IngressPolicy[] ingressPolicies) {
         this.ingressPolicies = ingressPolicies;
         return this;
@@ -51,6 +54,7 @@ public class ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public String[] resources;
+
     public ServicePerimeterConfig withResources(String[] resources) {
         this.resources = resources;
         return this;
@@ -62,6 +66,7 @@ public class ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictedServices")
     public String[] restrictedServices;
+
     public ServicePerimeterConfig withRestrictedServices(String[] restrictedServices) {
         this.restrictedServices = restrictedServices;
         return this;
@@ -73,9 +78,11 @@ public class ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcAccessibleServices")
     public VpcAccessibleServices vpcAccessibleServices;
+
     public ServicePerimeterConfig withVpcAccessibleServices(VpcAccessibleServices vpcAccessibleServices) {
         this.vpcAccessibleServices = vpcAccessibleServices;
         return this;
     }
     
+    public ServicePerimeterConfig(){}
 }

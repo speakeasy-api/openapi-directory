@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RestoreCertificateAuthorityRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RestoreCertificateAuthorityRequest restoreCertificateAuthorityRequest;
+
     public RestoreCertificateAuthorityRequest withRestoreCertificateAuthorityRequest(org.openapis.openapi.models.shared.RestoreCertificateAuthorityRequest restoreCertificateAuthorityRequest) {
         this.restoreCertificateAuthorityRequest = restoreCertificateAuthorityRequest;
         return this;
@@ -16,6 +18,7 @@ public class RestoreCertificateAuthorityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public RestoreCertificateAuthorityRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class RestoreCertificateAuthorityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public RestoreCertificateAuthorityRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class RestoreCertificateAuthorityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public RestoreCertificateAuthorityRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class RestoreCertificateAuthorityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public RestoreCertificateAuthorityRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class RestoreCertificateAuthorityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public RestoreCertificateAuthorityRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class RestoreCertificateAuthorityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public RestoreCertificateAuthorityRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class RestoreCertificateAuthorityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public RestoreCertificateAuthorityRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class RestoreCertificateAuthorityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public RestoreCertificateAuthorityXAmzTargetEnum xAmzTarget;
+
     public RestoreCertificateAuthorityRequest withXAmzTarget(RestoreCertificateAuthorityXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public RestoreCertificateAuthorityRequest(@JsonProperty("RestoreCertificateAuthorityRequest") org.openapis.openapi.models.shared.RestoreCertificateAuthorityRequest restoreCertificateAuthorityRequest, @JsonProperty("X-Amz-Target") RestoreCertificateAuthorityXAmzTargetEnum xAmzTarget) {
+        this.restoreCertificateAuthorityRequest = restoreCertificateAuthorityRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

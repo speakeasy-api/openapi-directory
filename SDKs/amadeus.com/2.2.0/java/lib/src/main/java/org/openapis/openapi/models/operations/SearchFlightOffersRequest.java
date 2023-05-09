@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchFlightOffersRequest {
@@ -12,6 +13,7 @@ public class SearchFlightOffersRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/vnd.amadeus+json")
     public org.openapis.openapi.models.shared.GetFlightOffersQuery getFlightOffersQuery;
+
     public SearchFlightOffersRequest withGetFlightOffersQuery(org.openapis.openapi.models.shared.GetFlightOffersQuery getFlightOffersQuery) {
         this.getFlightOffersQuery = getFlightOffersQuery;
         return this;
@@ -22,9 +24,14 @@ public class SearchFlightOffersRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HTTP-Method-Override")
     public String xHTTPMethodOverride;
+
     public SearchFlightOffersRequest withXHTTPMethodOverride(String xHTTPMethodOverride) {
         this.xHTTPMethodOverride = xHTTPMethodOverride;
         return this;
     }
     
+    public SearchFlightOffersRequest(@JsonProperty("GetFlightOffersQuery") org.openapis.openapi.models.shared.GetFlightOffersQuery getFlightOffersQuery, @JsonProperty("X-HTTP-Method-Override") String xHTTPMethodOverride) {
+        this.getFlightOffersQuery = getFlightOffersQuery;
+        this.xHTTPMethodOverride = xHTTPMethodOverride;
+  }
 }

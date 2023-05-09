@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MonthDetailResponse {
     @JsonProperty("data")
     public MonthDetailResponseData data;
+
     public MonthDetailResponse withData(MonthDetailResponseData data) {
         this.data = data;
         return this;
     }
     
+    public MonthDetailResponse(@JsonProperty("data") MonthDetailResponseData data) {
+        this.data = data;
+  }
 }

@@ -15,6 +15,7 @@ public class ListRxNormInferenceJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComprehendMedicalAsyncJobPropertiesList")
     public ComprehendMedicalAsyncJobProperties[] comprehendMedicalAsyncJobPropertiesList;
+
     public ListRxNormInferenceJobsResponse withComprehendMedicalAsyncJobPropertiesList(ComprehendMedicalAsyncJobProperties[] comprehendMedicalAsyncJobPropertiesList) {
         this.comprehendMedicalAsyncJobPropertiesList = comprehendMedicalAsyncJobPropertiesList;
         return this;
@@ -23,9 +24,11 @@ public class ListRxNormInferenceJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRxNormInferenceJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListRxNormInferenceJobsResponse(){}
 }

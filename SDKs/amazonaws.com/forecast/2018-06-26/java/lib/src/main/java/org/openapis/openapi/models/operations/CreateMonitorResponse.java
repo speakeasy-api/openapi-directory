@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMonitorResponse {
     
     public String contentType;
+
     public CreateMonitorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateMonitorResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMonitorResponse createMonitorResponse;
+
     public CreateMonitorResponse withCreateMonitorResponse(org.openapis.openapi.models.shared.CreateMonitorResponse createMonitorResponse) {
         this.createMonitorResponse = createMonitorResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateMonitorResponse {
      */
     
     public Object invalidInputException;
+
     public CreateMonitorResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateMonitorResponse {
      */
     
     public Object limitExceededException;
+
     public CreateMonitorResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateMonitorResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateMonitorResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class CreateMonitorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateMonitorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateMonitorResponse {
     
     
     public Integer statusCode;
+
     public CreateMonitorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateMonitorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMonitorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateMonitorResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateMonitorResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
     }
     
+    public CreateMonitorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

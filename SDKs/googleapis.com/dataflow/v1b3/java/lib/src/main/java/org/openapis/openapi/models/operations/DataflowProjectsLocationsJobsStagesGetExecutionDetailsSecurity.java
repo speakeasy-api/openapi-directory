@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurityOption1 option1;
+
     public DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurity withOption1(DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurityOption2 option2;
+
     public DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurity withOption2(DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurityOption3 option3;
+
     public DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurity withOption3(DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurityOption4 option4;
+
     public DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurity withOption4(DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurity(){}
 }

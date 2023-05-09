@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SearchTracksSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
     public org.openapis.openapi.models.shared.SchemeBasic basic;
+
     public SearchTracksSecurity withBasic(org.openapis.openapi.models.shared.SchemeBasic basic) {
         this.basic = basic;
         return this;
@@ -16,9 +17,11 @@ public class SearchTracksSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String customerAccessCode;
+
     public SearchTracksSecurity withCustomerAccessCode(String customerAccessCode) {
         this.customerAccessCode = customerAccessCode;
         return this;
     }
     
+    public SearchTracksSecurity(){}
 }

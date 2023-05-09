@@ -18,6 +18,7 @@ public class ListWorkersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListWorkersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,9 +30,11 @@ public class ListWorkersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers")
     public Worker[] workers;
+
     public ListWorkersResponse withWorkers(Worker[] workers) {
         this.workers = workers;
         return this;
     }
     
+    public ListWorkersResponse(){}
 }

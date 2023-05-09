@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountsAccountIdStatementsStatementIdTransactionsSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String authorizationCodeToken;
+
     public GetAccountsAccountIdStatementsStatementIdTransactionsSecurity withAuthorizationCodeToken(String authorizationCodeToken) {
         this.authorizationCodeToken = authorizationCodeToken;
         return this;
@@ -16,9 +18,14 @@ public class GetAccountsAccountIdStatementsStatementIdTransactionsSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Client-Id")
     public String clientId;
+
     public GetAccountsAccountIdStatementsStatementIdTransactionsSecurity withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
     
+    public GetAccountsAccountIdStatementsStatementIdTransactionsSecurity(@JsonProperty("Authorization-Code-Token") String authorizationCodeToken, @JsonProperty("Client-Id") String clientId) {
+        this.authorizationCodeToken = authorizationCodeToken;
+        this.clientId = clientId;
+  }
 }

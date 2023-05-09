@@ -14,6 +14,7 @@ public class BatchGetAssetPropertyValueRequestBody {
      */
     @JsonProperty("entries")
     public org.openapis.openapi.models.shared.BatchGetAssetPropertyValueEntry[] entries;
+
     public BatchGetAssetPropertyValueRequestBody withEntries(org.openapis.openapi.models.shared.BatchGetAssetPropertyValueEntry[] entries) {
         this.entries = entries;
         return this;
@@ -25,9 +26,13 @@ public class BatchGetAssetPropertyValueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public BatchGetAssetPropertyValueRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public BatchGetAssetPropertyValueRequestBody(@JsonProperty("entries") org.openapis.openapi.models.shared.BatchGetAssetPropertyValueEntry[] entries) {
+        this.entries = entries;
+  }
 }

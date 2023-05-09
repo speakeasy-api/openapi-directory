@@ -14,6 +14,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("backup_window")
     public String backupWindow;
+
     public PutServersId200ApplicationJSONServer withBackupWindow(String backupWindow) {
         this.backupWindow = backupWindow;
         return this;
@@ -24,6 +25,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("created")
     public String created;
+
     public PutServersId200ApplicationJSONServer withCreated(String created) {
         this.created = created;
         return this;
@@ -34,6 +36,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("datacenter")
     public PutServersId200ApplicationJSONServerDatacenter datacenter;
+
     public PutServersId200ApplicationJSONServer withDatacenter(PutServersId200ApplicationJSONServerDatacenter datacenter) {
         this.datacenter = datacenter;
         return this;
@@ -44,6 +47,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("id")
     public Long id;
+
     public PutServersId200ApplicationJSONServer withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +55,7 @@ public class PutServersId200ApplicationJSONServer {
     
     @JsonProperty("image")
     public PutServersId200ApplicationJSONServerImage image;
+
     public PutServersId200ApplicationJSONServer withImage(PutServersId200ApplicationJSONServerImage image) {
         this.image = image;
         return this;
@@ -61,6 +66,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("included_traffic")
     public Double includedTraffic;
+
     public PutServersId200ApplicationJSONServer withIncludedTraffic(Double includedTraffic) {
         this.includedTraffic = includedTraffic;
         return this;
@@ -71,6 +77,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("ingoing_traffic")
     public Double ingoingTraffic;
+
     public PutServersId200ApplicationJSONServer withIngoingTraffic(Double ingoingTraffic) {
         this.ingoingTraffic = ingoingTraffic;
         return this;
@@ -81,6 +88,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("iso")
     public PutServersId200ApplicationJSONServerIso iso;
+
     public PutServersId200ApplicationJSONServer withIso(PutServersId200ApplicationJSONServerIso iso) {
         this.iso = iso;
         return this;
@@ -91,6 +99,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public PutServersId200ApplicationJSONServer withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -99,6 +108,7 @@ public class PutServersId200ApplicationJSONServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("load_balancers")
     public Long[] loadBalancers;
+
     public PutServersId200ApplicationJSONServer withLoadBalancers(Long[] loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
@@ -109,6 +119,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("locked")
     public Boolean locked;
+
     public PutServersId200ApplicationJSONServer withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -119,6 +130,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("name")
     public String name;
+
     public PutServersId200ApplicationJSONServer withName(String name) {
         this.name = name;
         return this;
@@ -129,6 +141,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("outgoing_traffic")
     public Double outgoingTraffic;
+
     public PutServersId200ApplicationJSONServer withOutgoingTraffic(Double outgoingTraffic) {
         this.outgoingTraffic = outgoingTraffic;
         return this;
@@ -137,6 +150,7 @@ public class PutServersId200ApplicationJSONServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placement_group")
     public PutServersId200ApplicationJSONServerPlacementGroupNullable placementGroup;
+
     public PutServersId200ApplicationJSONServer withPlacementGroup(PutServersId200ApplicationJSONServerPlacementGroupNullable placementGroup) {
         this.placementGroup = placementGroup;
         return this;
@@ -147,6 +161,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("primary_disk_size")
     public Double primaryDiskSize;
+
     public PutServersId200ApplicationJSONServer withPrimaryDiskSize(Double primaryDiskSize) {
         this.primaryDiskSize = primaryDiskSize;
         return this;
@@ -157,6 +172,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("private_net")
     public PutServersId200ApplicationJSONServerPrivateNet[] privateNet;
+
     public PutServersId200ApplicationJSONServer withPrivateNet(PutServersId200ApplicationJSONServerPrivateNet[] privateNet) {
         this.privateNet = privateNet;
         return this;
@@ -167,6 +183,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("protection")
     public PutServersId200ApplicationJSONServerProtection protection;
+
     public PutServersId200ApplicationJSONServer withProtection(PutServersId200ApplicationJSONServerProtection protection) {
         this.protection = protection;
         return this;
@@ -177,6 +194,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("public_net")
     public PutServersId200ApplicationJSONServerPublicNet publicNet;
+
     public PutServersId200ApplicationJSONServer withPublicNet(PutServersId200ApplicationJSONServerPublicNet publicNet) {
         this.publicNet = publicNet;
         return this;
@@ -187,6 +205,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("rescue_enabled")
     public Boolean rescueEnabled;
+
     public PutServersId200ApplicationJSONServer withRescueEnabled(Boolean rescueEnabled) {
         this.rescueEnabled = rescueEnabled;
         return this;
@@ -197,6 +216,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("server_type")
     public PutServersId200ApplicationJSONServerServerType serverType;
+
     public PutServersId200ApplicationJSONServer withServerType(PutServersId200ApplicationJSONServerServerType serverType) {
         this.serverType = serverType;
         return this;
@@ -207,6 +227,7 @@ public class PutServersId200ApplicationJSONServer {
      */
     @JsonProperty("status")
     public PutServersId200ApplicationJSONServerStatusEnum status;
+
     public PutServersId200ApplicationJSONServer withStatus(PutServersId200ApplicationJSONServerStatusEnum status) {
         this.status = status;
         return this;
@@ -218,9 +239,31 @@ public class PutServersId200ApplicationJSONServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumes")
     public Long[] volumes;
+
     public PutServersId200ApplicationJSONServer withVolumes(Long[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public PutServersId200ApplicationJSONServer(@JsonProperty("backup_window") String backupWindow, @JsonProperty("created") String created, @JsonProperty("datacenter") PutServersId200ApplicationJSONServerDatacenter datacenter, @JsonProperty("id") Long id, @JsonProperty("image") PutServersId200ApplicationJSONServerImage image, @JsonProperty("included_traffic") Double includedTraffic, @JsonProperty("ingoing_traffic") Double ingoingTraffic, @JsonProperty("iso") PutServersId200ApplicationJSONServerIso iso, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("locked") Boolean locked, @JsonProperty("name") String name, @JsonProperty("outgoing_traffic") Double outgoingTraffic, @JsonProperty("primary_disk_size") Double primaryDiskSize, @JsonProperty("private_net") PutServersId200ApplicationJSONServerPrivateNet[] privateNet, @JsonProperty("protection") PutServersId200ApplicationJSONServerProtection protection, @JsonProperty("public_net") PutServersId200ApplicationJSONServerPublicNet publicNet, @JsonProperty("rescue_enabled") Boolean rescueEnabled, @JsonProperty("server_type") PutServersId200ApplicationJSONServerServerType serverType, @JsonProperty("status") PutServersId200ApplicationJSONServerStatusEnum status) {
+        this.backupWindow = backupWindow;
+        this.created = created;
+        this.datacenter = datacenter;
+        this.id = id;
+        this.image = image;
+        this.includedTraffic = includedTraffic;
+        this.ingoingTraffic = ingoingTraffic;
+        this.iso = iso;
+        this.labels = labels;
+        this.locked = locked;
+        this.name = name;
+        this.outgoingTraffic = outgoingTraffic;
+        this.primaryDiskSize = primaryDiskSize;
+        this.privateNet = privateNet;
+        this.protection = protection;
+        this.publicNet = publicNet;
+        this.rescueEnabled = rescueEnabled;
+        this.serverType = serverType;
+        this.status = status;
+  }
 }

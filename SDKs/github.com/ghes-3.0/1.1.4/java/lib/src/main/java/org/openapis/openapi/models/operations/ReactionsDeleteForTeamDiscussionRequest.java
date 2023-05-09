@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsDeleteForTeamDiscussionRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
     public Long discussionNumber;
+
     public ReactionsDeleteForTeamDiscussionRequest withDiscussionNumber(Long discussionNumber) {
         this.discussionNumber = discussionNumber;
         return this;
@@ -16,6 +18,7 @@ public class ReactionsDeleteForTeamDiscussionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ReactionsDeleteForTeamDiscussionRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -23,6 +26,7 @@ public class ReactionsDeleteForTeamDiscussionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reaction_id")
     public Long reactionId;
+
     public ReactionsDeleteForTeamDiscussionRequest withReactionId(Long reactionId) {
         this.reactionId = reactionId;
         return this;
@@ -33,9 +37,16 @@ public class ReactionsDeleteForTeamDiscussionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
     public String teamSlug;
+
     public ReactionsDeleteForTeamDiscussionRequest withTeamSlug(String teamSlug) {
         this.teamSlug = teamSlug;
         return this;
     }
     
+    public ReactionsDeleteForTeamDiscussionRequest(@JsonProperty("discussion_number") Long discussionNumber, @JsonProperty("org") String org, @JsonProperty("reaction_id") Long reactionId, @JsonProperty("team_slug") String teamSlug) {
+        this.discussionNumber = discussionNumber;
+        this.org = org;
+        this.reactionId = reactionId;
+        this.teamSlug = teamSlug;
+  }
 }

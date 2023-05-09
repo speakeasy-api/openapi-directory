@@ -18,6 +18,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customMetadata")
     public java.util.Map<String, String> customMetadata;
+
     public ParameterMetadata withCustomMetadata(java.util.Map<String, String> customMetadata) {
         this.customMetadata = customMetadata;
         return this;
@@ -29,6 +30,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupName")
     public String groupName;
+
     public ParameterMetadata withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -40,6 +42,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("helpText")
     public String helpText;
+
     public ParameterMetadata withHelpText(String helpText) {
         this.helpText = helpText;
         return this;
@@ -51,6 +54,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isOptional")
     public Boolean isOptional;
+
     public ParameterMetadata withIsOptional(Boolean isOptional) {
         this.isOptional = isOptional;
         return this;
@@ -62,6 +66,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ParameterMetadata withLabel(String label) {
         this.label = label;
         return this;
@@ -73,6 +78,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ParameterMetadata withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paramType")
     public ParameterMetadataParamTypeEnum paramType;
+
     public ParameterMetadata withParamType(ParameterMetadataParamTypeEnum paramType) {
         this.paramType = paramType;
         return this;
@@ -95,6 +102,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentName")
     public String parentName;
+
     public ParameterMetadata withParentName(String parentName) {
         this.parentName = parentName;
         return this;
@@ -106,6 +114,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentTriggerValues")
     public String[] parentTriggerValues;
+
     public ParameterMetadata withParentTriggerValues(String[] parentTriggerValues) {
         this.parentTriggerValues = parentTriggerValues;
         return this;
@@ -117,9 +126,11 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regexes")
     public String[] regexes;
+
     public ParameterMetadata withRegexes(String[] regexes) {
         this.regexes = regexes;
         return this;
     }
     
+    public ParameterMetadata(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class InstanceProfile {
     
     public String arn;
+
     public InstanceProfile withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +21,7 @@ public class InstanceProfile {
     
     
     public OffsetDateTime createDate;
+
     public InstanceProfile withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -26,6 +29,7 @@ public class InstanceProfile {
     
     
     public String instanceProfileId;
+
     public InstanceProfile withInstanceProfileId(String instanceProfileId) {
         this.instanceProfileId = instanceProfileId;
         return this;
@@ -33,6 +37,7 @@ public class InstanceProfile {
     
     
     public String instanceProfileName;
+
     public InstanceProfile withInstanceProfileName(String instanceProfileName) {
         this.instanceProfileName = instanceProfileName;
         return this;
@@ -40,6 +45,7 @@ public class InstanceProfile {
     
     
     public String path;
+
     public InstanceProfile withPath(String path) {
         this.path = path;
         return this;
@@ -47,6 +53,7 @@ public class InstanceProfile {
     
     
     public Role[] roles;
+
     public InstanceProfile withRoles(Role[] roles) {
         this.roles = roles;
         return this;
@@ -54,9 +61,18 @@ public class InstanceProfile {
     
     
     public Tag[] tags;
+
     public InstanceProfile withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public InstanceProfile(@JsonProperty("Arn") String arn, @JsonProperty("CreateDate") OffsetDateTime createDate, @JsonProperty("InstanceProfileId") String instanceProfileId, @JsonProperty("InstanceProfileName") String instanceProfileName, @JsonProperty("Path") String path, @JsonProperty("Roles") Role[] roles) {
+        this.arn = arn;
+        this.createDate = createDate;
+        this.instanceProfileId = instanceProfileId;
+        this.instanceProfileName = instanceProfileName;
+        this.path = path;
+        this.roles = roles;
+  }
 }

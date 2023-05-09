@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDevEnvironmentsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ListDevEnvironmentsRequestBody requestBody;
+
     public ListDevEnvironmentsRequest withRequestBody(ListDevEnvironmentsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ListDevEnvironmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public String maxResults;
+
     public ListDevEnvironmentsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class ListDevEnvironmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListDevEnvironmentsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -39,6 +43,7 @@ public class ListDevEnvironmentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectName")
     public String projectName;
+
     public ListDevEnvironmentsRequest withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -49,9 +54,15 @@ public class ListDevEnvironmentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
     public String spaceName;
+
     public ListDevEnvironmentsRequest withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
     }
     
+    public ListDevEnvironmentsRequest(@JsonProperty("RequestBody") ListDevEnvironmentsRequestBody requestBody, @JsonProperty("projectName") String projectName, @JsonProperty("spaceName") String spaceName) {
+        this.requestBody = requestBody;
+        this.projectName = projectName;
+        this.spaceName = spaceName;
+  }
 }

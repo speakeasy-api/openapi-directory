@@ -18,9 +18,11 @@ public class TimeseriesPercentiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("p75s")
     public Object[] p75s;
+
     public TimeseriesPercentiles withP75s(Object[] p75s) {
         this.p75s = p75s;
         return this;
     }
     
+    public TimeseriesPercentiles(){}
 }

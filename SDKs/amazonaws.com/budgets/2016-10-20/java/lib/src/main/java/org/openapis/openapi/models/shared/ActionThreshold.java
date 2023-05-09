@@ -15,6 +15,7 @@ public class ActionThreshold {
      */
     @JsonProperty("ActionThresholdType")
     public ThresholdTypeEnum actionThresholdType;
+
     public ActionThreshold withActionThresholdType(ThresholdTypeEnum actionThresholdType) {
         this.actionThresholdType = actionThresholdType;
         return this;
@@ -25,9 +26,14 @@ public class ActionThreshold {
      */
     @JsonProperty("ActionThresholdValue")
     public Double actionThresholdValue;
+
     public ActionThreshold withActionThresholdValue(Double actionThresholdValue) {
         this.actionThresholdValue = actionThresholdValue;
         return this;
     }
     
+    public ActionThreshold(@JsonProperty("ActionThresholdType") ThresholdTypeEnum actionThresholdType, @JsonProperty("ActionThresholdValue") Double actionThresholdValue) {
+        this.actionThresholdType = actionThresholdType;
+        this.actionThresholdValue = actionThresholdValue;
+  }
 }

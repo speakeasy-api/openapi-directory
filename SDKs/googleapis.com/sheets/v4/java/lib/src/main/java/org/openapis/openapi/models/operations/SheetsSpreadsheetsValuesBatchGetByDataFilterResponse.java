@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SheetsSpreadsheetsValuesBatchGetByDataFilterResponse {
@@ -12,6 +13,7 @@ public class SheetsSpreadsheetsValuesBatchGetByDataFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetValuesByDataFilterResponse batchGetValuesByDataFilterResponse;
+
     public SheetsSpreadsheetsValuesBatchGetByDataFilterResponse withBatchGetValuesByDataFilterResponse(org.openapis.openapi.models.shared.BatchGetValuesByDataFilterResponse batchGetValuesByDataFilterResponse) {
         this.batchGetValuesByDataFilterResponse = batchGetValuesByDataFilterResponse;
         return this;
@@ -19,6 +21,7 @@ public class SheetsSpreadsheetsValuesBatchGetByDataFilterResponse {
     
     
     public String contentType;
+
     public SheetsSpreadsheetsValuesBatchGetByDataFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SheetsSpreadsheetsValuesBatchGetByDataFilterResponse {
     
     
     public Integer statusCode;
+
     public SheetsSpreadsheetsValuesBatchGetByDataFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SheetsSpreadsheetsValuesBatchGetByDataFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SheetsSpreadsheetsValuesBatchGetByDataFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SheetsSpreadsheetsValuesBatchGetByDataFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

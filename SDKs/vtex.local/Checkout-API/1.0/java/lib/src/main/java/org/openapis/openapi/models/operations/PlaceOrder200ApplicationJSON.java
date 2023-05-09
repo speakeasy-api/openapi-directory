@@ -18,6 +18,7 @@ public class PlaceOrder200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderForm")
     public String orderForm;
+
     public PlaceOrder200ApplicationJSON withOrderForm(String orderForm) {
         this.orderForm = orderForm;
         return this;
@@ -29,6 +30,7 @@ public class PlaceOrder200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orders")
     public PlaceOrder200ApplicationJSONOrders[] orders;
+
     public PlaceOrder200ApplicationJSON withOrders(PlaceOrder200ApplicationJSONOrders[] orders) {
         this.orders = orders;
         return this;
@@ -40,9 +42,11 @@ public class PlaceOrder200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionData")
     public PlaceOrder200ApplicationJSONTransactionData transactionData;
+
     public PlaceOrder200ApplicationJSON withTransactionData(PlaceOrder200ApplicationJSONTransactionData transactionData) {
         this.transactionData = transactionData;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSON(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDatalakeAutoEnableResponse {
     @JsonProperty("autoEnableNewAccounts")
     public AutoEnableNewRegionConfiguration[] autoEnableNewAccounts;
+
     public GetDatalakeAutoEnableResponse withAutoEnableNewAccounts(AutoEnableNewRegionConfiguration[] autoEnableNewAccounts) {
         this.autoEnableNewAccounts = autoEnableNewAccounts;
         return this;
     }
     
+    public GetDatalakeAutoEnableResponse(@JsonProperty("autoEnableNewAccounts") AutoEnableNewRegionConfiguration[] autoEnableNewAccounts) {
+        this.autoEnableNewAccounts = autoEnableNewAccounts;
+  }
 }

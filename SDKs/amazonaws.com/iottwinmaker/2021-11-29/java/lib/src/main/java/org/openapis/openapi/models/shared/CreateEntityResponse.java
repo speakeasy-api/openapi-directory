@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CreateEntityResponse {
     @JsonProperty("arn")
     public String arn;
+
     public CreateEntityResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class CreateEntityResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public CreateEntityResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -33,6 +35,7 @@ public class CreateEntityResponse {
     
     @JsonProperty("entityId")
     public String entityId;
+
     public CreateEntityResponse withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -40,9 +43,16 @@ public class CreateEntityResponse {
     
     @JsonProperty("state")
     public StateEnum state;
+
     public CreateEntityResponse withState(StateEnum state) {
         this.state = state;
         return this;
     }
     
+    public CreateEntityResponse(@JsonProperty("arn") String arn, @JsonProperty("creationDateTime") OffsetDateTime creationDateTime, @JsonProperty("entityId") String entityId, @JsonProperty("state") StateEnum state) {
+        this.arn = arn;
+        this.creationDateTime = creationDateTime;
+        this.entityId = entityId;
+        this.state = state;
+  }
 }

@@ -57,10 +57,8 @@ public class TypeTypeMb {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypeMbResponse res = new org.openapis.openapi.models.operations.SearchTypeMbResponse() {{
+        org.openapis.openapi.models.operations.SearchTypeMbResponse res = new org.openapis.openapi.models.operations.SearchTypeMbResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

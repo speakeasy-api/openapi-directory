@@ -15,9 +15,11 @@ public class ActivityMarkNotificationsAsRead202ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ActivityMarkNotificationsAsRead202ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ActivityMarkNotificationsAsRead202ApplicationJSON(){}
 }

@@ -15,6 +15,7 @@ public class VerificationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public VerificationErrorCapabilitiesEnum[] capabilities;
+
     public VerificationError withCapabilities(VerificationErrorCapabilitiesEnum[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -26,6 +27,7 @@ public class VerificationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public VerificationError withCode(String code) {
         this.code = code;
         return this;
@@ -37,6 +39,7 @@ public class VerificationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public VerificationError withMessage(String message) {
         this.message = message;
         return this;
@@ -48,6 +51,7 @@ public class VerificationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remediatingActions")
     public RemediatingAction[] remediatingActions;
+
     public VerificationError withRemediatingActions(RemediatingAction[] remediatingActions) {
         this.remediatingActions = remediatingActions;
         return this;
@@ -59,6 +63,7 @@ public class VerificationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subErrors")
     public VerificationErrorRecursive[] subErrors;
+
     public VerificationError withSubErrors(VerificationErrorRecursive[] subErrors) {
         this.subErrors = subErrors;
         return this;
@@ -70,9 +75,11 @@ public class VerificationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public VerificationErrorTypeEnum type;
+
     public VerificationError withType(VerificationErrorTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public VerificationError(){}
 }

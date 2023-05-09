@@ -15,6 +15,7 @@ public class StartReferenceImportJobSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public StartReferenceImportJobSourceItem withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class StartReferenceImportJobSourceItem {
     
     @JsonProperty("name")
     public String name;
+
     public StartReferenceImportJobSourceItem withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +31,7 @@ public class StartReferenceImportJobSourceItem {
     
     @JsonProperty("sourceFile")
     public String sourceFile;
+
     public StartReferenceImportJobSourceItem withSourceFile(String sourceFile) {
         this.sourceFile = sourceFile;
         return this;
@@ -37,9 +40,14 @@ public class StartReferenceImportJobSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StartReferenceImportJobSourceItem withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartReferenceImportJobSourceItem(@JsonProperty("name") String name, @JsonProperty("sourceFile") String sourceFile) {
+        this.name = name;
+        this.sourceFile = sourceFile;
+  }
 }

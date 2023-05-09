@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class PlacementDescription {
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public PlacementDescription withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -26,6 +27,7 @@ public class PlacementDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public PlacementDescription withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -33,6 +35,7 @@ public class PlacementDescription {
     
     @JsonProperty("placementName")
     public String placementName;
+
     public PlacementDescription withPlacementName(String placementName) {
         this.placementName = placementName;
         return this;
@@ -40,6 +43,7 @@ public class PlacementDescription {
     
     @JsonProperty("projectName")
     public String projectName;
+
     public PlacementDescription withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -49,9 +53,17 @@ public class PlacementDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedDate")
     public OffsetDateTime updatedDate;
+
     public PlacementDescription withUpdatedDate(OffsetDateTime updatedDate) {
         this.updatedDate = updatedDate;
         return this;
     }
     
+    public PlacementDescription(@JsonProperty("attributes") java.util.Map<String, String> attributes, @JsonProperty("createdDate") OffsetDateTime createdDate, @JsonProperty("placementName") String placementName, @JsonProperty("projectName") String projectName, @JsonProperty("updatedDate") OffsetDateTime updatedDate) {
+        this.attributes = attributes;
+        this.createdDate = createdDate;
+        this.placementName = placementName;
+        this.projectName = projectName;
+        this.updatedDate = updatedDate;
+  }
 }

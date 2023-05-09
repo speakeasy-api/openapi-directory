@@ -15,6 +15,7 @@ public class UpdateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminUserPassword")
     public String adminUserPassword;
+
     public UpdateClusterRequestBody withAdminUserPassword(String adminUserPassword) {
         this.adminUserPassword = adminUserPassword;
         return this;
@@ -26,6 +27,7 @@ public class UpdateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authType")
     public UpdateClusterRequestBodyAuthTypeEnum authType;
+
     public UpdateClusterRequestBody withAuthType(UpdateClusterRequestBodyAuthTypeEnum authType) {
         this.authType = authType;
         return this;
@@ -37,6 +39,7 @@ public class UpdateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateClusterRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -48,6 +51,7 @@ public class UpdateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public UpdateClusterRequestBody withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -59,6 +63,7 @@ public class UpdateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shardCapacity")
     public Long shardCapacity;
+
     public UpdateClusterRequestBody withShardCapacity(Long shardCapacity) {
         this.shardCapacity = shardCapacity;
         return this;
@@ -70,6 +75,7 @@ public class UpdateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shardCount")
     public Long shardCount;
+
     public UpdateClusterRequestBody withShardCount(Long shardCount) {
         this.shardCount = shardCount;
         return this;
@@ -81,6 +87,7 @@ public class UpdateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public UpdateClusterRequestBody withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -92,9 +99,11 @@ public class UpdateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcSecurityGroupIds")
     public String[] vpcSecurityGroupIds;
+
     public UpdateClusterRequestBody withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public UpdateClusterRequestBody(){}
 }

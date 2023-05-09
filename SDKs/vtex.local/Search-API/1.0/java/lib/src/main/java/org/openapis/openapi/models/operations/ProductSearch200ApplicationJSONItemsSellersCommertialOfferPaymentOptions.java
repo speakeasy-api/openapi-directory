@@ -15,6 +15,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("availableAccounts")
     public Object[] availableAccounts;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptions withAvailableAccounts(Object[] availableAccounts) {
         this.availableAccounts = availableAccounts;
         return this;
@@ -25,6 +26,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("availableTokens")
     public Object[] availableTokens;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptions withAvailableTokens(Object[] availableTokens) {
         this.availableTokens = availableTokens;
         return this;
@@ -35,6 +37,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("giftCardMessages")
     public Object[] giftCardMessages;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptions withGiftCardMessages(Object[] giftCardMessages) {
         this.giftCardMessages = giftCardMessages;
         return this;
@@ -45,6 +48,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("giftCards")
     public Object[] giftCards;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptions withGiftCards(Object[] giftCards) {
         this.giftCards = giftCards;
         return this;
@@ -55,6 +59,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("installmentOptions")
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions[] installmentOptions;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptions withInstallmentOptions(ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions[] installmentOptions) {
         this.installmentOptions = installmentOptions;
         return this;
@@ -65,6 +70,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("paymentSystems")
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems[] paymentSystems;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptions withPaymentSystems(ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems[] paymentSystems) {
         this.paymentSystems = paymentSystems;
         return this;
@@ -75,9 +81,19 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("payments")
     public Object[] payments;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptions withPayments(Object[] payments) {
         this.payments = payments;
         return this;
     }
     
+    public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptions(@JsonProperty("availableAccounts") Object[] availableAccounts, @JsonProperty("availableTokens") Object[] availableTokens, @JsonProperty("giftCardMessages") Object[] giftCardMessages, @JsonProperty("giftCards") Object[] giftCards, @JsonProperty("installmentOptions") ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions[] installmentOptions, @JsonProperty("paymentSystems") ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems[] paymentSystems, @JsonProperty("payments") Object[] payments) {
+        this.availableAccounts = availableAccounts;
+        this.availableTokens = availableTokens;
+        this.giftCardMessages = giftCardMessages;
+        this.giftCards = giftCards;
+        this.installmentOptions = installmentOptions;
+        this.paymentSystems = paymentSystems;
+        this.payments = payments;
+  }
 }

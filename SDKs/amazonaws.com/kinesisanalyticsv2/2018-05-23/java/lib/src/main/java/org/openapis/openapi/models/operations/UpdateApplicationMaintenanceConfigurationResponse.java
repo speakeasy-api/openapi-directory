@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateApplicationMaintenanceConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateApplicationMaintenanceConfigurationResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateApplicationMaintenanceConfigurationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateApplicationMaintenanceConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateApplicationMaintenanceConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateApplicationMaintenanceConfigurationResponse {
      */
     
     public Object invalidArgumentException;
+
     public UpdateApplicationMaintenanceConfigurationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateApplicationMaintenanceConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateApplicationMaintenanceConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateApplicationMaintenanceConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateApplicationMaintenanceConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateApplicationMaintenanceConfigurationResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateApplicationMaintenanceConfigurationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateApplicationMaintenanceConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateApplicationMaintenanceConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateApplicationMaintenanceConfigurationResponse {
      */
     
     public Object unsupportedOperationException;
+
     public UpdateApplicationMaintenanceConfigurationResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateApplicationMaintenanceConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateApplicationMaintenanceConfigurationResponse updateApplicationMaintenanceConfigurationResponse;
+
     public UpdateApplicationMaintenanceConfigurationResponse withUpdateApplicationMaintenanceConfigurationResponse(org.openapis.openapi.models.shared.UpdateApplicationMaintenanceConfigurationResponse updateApplicationMaintenanceConfigurationResponse) {
         this.updateApplicationMaintenanceConfigurationResponse = updateApplicationMaintenanceConfigurationResponse;
         return this;
     }
     
+    public UpdateApplicationMaintenanceConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

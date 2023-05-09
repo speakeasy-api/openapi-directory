@@ -12,6 +12,7 @@ public class QueryForecastRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDate")
     public String endDate;
+
     public QueryForecastRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -19,6 +20,7 @@ public class QueryForecastRequest {
     
     @JsonProperty("Filters")
     public java.util.Map<String, String> filters;
+
     public QueryForecastRequest withFilters(java.util.Map<String, String> filters) {
         this.filters = filters;
         return this;
@@ -26,6 +28,7 @@ public class QueryForecastRequest {
     
     @JsonProperty("ForecastArn")
     public String forecastArn;
+
     public QueryForecastRequest withForecastArn(String forecastArn) {
         this.forecastArn = forecastArn;
         return this;
@@ -34,6 +37,7 @@ public class QueryForecastRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public QueryForecastRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -42,9 +46,14 @@ public class QueryForecastRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public QueryForecastRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public QueryForecastRequest(@JsonProperty("Filters") java.util.Map<String, String> filters, @JsonProperty("ForecastArn") String forecastArn) {
+        this.filters = filters;
+        this.forecastArn = forecastArn;
+  }
 }

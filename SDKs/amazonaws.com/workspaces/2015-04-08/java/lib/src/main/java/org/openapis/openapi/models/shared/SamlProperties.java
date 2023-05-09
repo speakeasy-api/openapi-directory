@@ -15,6 +15,7 @@ public class SamlProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelayStateParameterName")
     public String relayStateParameterName;
+
     public SamlProperties withRelayStateParameterName(String relayStateParameterName) {
         this.relayStateParameterName = relayStateParameterName;
         return this;
@@ -23,6 +24,7 @@ public class SamlProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SamlStatusEnumEnum status;
+
     public SamlProperties withStatus(SamlStatusEnumEnum status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class SamlProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserAccessUrl")
     public String userAccessUrl;
+
     public SamlProperties withUserAccessUrl(String userAccessUrl) {
         this.userAccessUrl = userAccessUrl;
         return this;
     }
     
+    public SamlProperties(){}
 }

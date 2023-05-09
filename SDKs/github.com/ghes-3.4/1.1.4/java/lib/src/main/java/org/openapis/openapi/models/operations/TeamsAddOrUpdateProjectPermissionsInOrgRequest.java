@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsAddOrUpdateProjectPermissionsInOrgRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public TeamsAddOrUpdateProjectPermissionsInOrgRequestBody requestBody;
+
     public TeamsAddOrUpdateProjectPermissionsInOrgRequest withRequestBody(TeamsAddOrUpdateProjectPermissionsInOrgRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class TeamsAddOrUpdateProjectPermissionsInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public TeamsAddOrUpdateProjectPermissionsInOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -29,6 +32,7 @@ public class TeamsAddOrUpdateProjectPermissionsInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public Long projectId;
+
     public TeamsAddOrUpdateProjectPermissionsInOrgRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -39,9 +43,15 @@ public class TeamsAddOrUpdateProjectPermissionsInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
     public String teamSlug;
+
     public TeamsAddOrUpdateProjectPermissionsInOrgRequest withTeamSlug(String teamSlug) {
         this.teamSlug = teamSlug;
         return this;
     }
     
+    public TeamsAddOrUpdateProjectPermissionsInOrgRequest(@JsonProperty("org") String org, @JsonProperty("project_id") Long projectId, @JsonProperty("team_slug") String teamSlug) {
+        this.org = org;
+        this.projectId = projectId;
+        this.teamSlug = teamSlug;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamespacesRepositoriesImagesTagsRequest {
@@ -12,6 +13,7 @@ public class GetNamespacesRepositoriesImagesTagsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=digest")
     public String digest;
+
     public GetNamespacesRepositoriesImagesTagsRequest withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -22,6 +24,7 @@ public class GetNamespacesRepositoriesImagesTagsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
     public String namespace;
+
     public GetNamespacesRepositoriesImagesTagsRequest withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -32,6 +35,7 @@ public class GetNamespacesRepositoriesImagesTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetNamespacesRepositoriesImagesTagsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class GetNamespacesRepositoriesImagesTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public GetNamespacesRepositoriesImagesTagsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -52,9 +57,15 @@ public class GetNamespacesRepositoriesImagesTagsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository")
     public String repository;
+
     public GetNamespacesRepositoriesImagesTagsRequest withRepository(String repository) {
         this.repository = repository;
         return this;
     }
     
+    public GetNamespacesRepositoriesImagesTagsRequest(@JsonProperty("digest") String digest, @JsonProperty("namespace") String namespace, @JsonProperty("repository") String repository) {
+        this.digest = digest;
+        this.namespace = namespace;
+        this.repository = repository;
+  }
 }

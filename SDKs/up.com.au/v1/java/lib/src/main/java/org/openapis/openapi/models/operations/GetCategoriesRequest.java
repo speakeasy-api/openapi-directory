@@ -15,9 +15,11 @@ public class GetCategoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[parent]")
     public String filterParent;
+
     public GetCategoriesRequest withFilterParent(String filterParent) {
         this.filterParent = filterParent;
         return this;
     }
     
+    public GetCategoriesRequest(){}
 }

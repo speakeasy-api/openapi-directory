@@ -15,6 +15,7 @@ public class OBWriteInternationalResponse5DataCharges {
      */
     @JsonProperty("Amount")
     public OBActiveOrHistoricCurrencyAndAmount amount;
+
     public OBWriteInternationalResponse5DataCharges withAmount(OBActiveOrHistoricCurrencyAndAmount amount) {
         this.amount = amount;
         return this;
@@ -25,6 +26,7 @@ public class OBWriteInternationalResponse5DataCharges {
      */
     @JsonProperty("ChargeBearer")
     public OBChargeBearerType1CodeEnum chargeBearer;
+
     public OBWriteInternationalResponse5DataCharges withChargeBearer(OBChargeBearerType1CodeEnum chargeBearer) {
         this.chargeBearer = chargeBearer;
         return this;
@@ -35,9 +37,15 @@ public class OBWriteInternationalResponse5DataCharges {
      */
     @JsonProperty("Type")
     public String type;
+
     public OBWriteInternationalResponse5DataCharges withType(String type) {
         this.type = type;
         return this;
     }
     
+    public OBWriteInternationalResponse5DataCharges(@JsonProperty("Amount") OBActiveOrHistoricCurrencyAndAmount amount, @JsonProperty("ChargeBearer") OBChargeBearerType1CodeEnum chargeBearer, @JsonProperty("Type") String type) {
+        this.amount = amount;
+        this.chargeBearer = chargeBearer;
+        this.type = type;
+  }
 }

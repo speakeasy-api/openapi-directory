@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetKeystoreRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorizableId")
     public String authorizableId;
+
     public GetKeystoreRequest withAuthorizableId(String authorizableId) {
         this.authorizableId = authorizableId;
         return this;
@@ -16,9 +18,14 @@ public class GetKeystoreRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=intermediatePath")
     public String intermediatePath;
+
     public GetKeystoreRequest withIntermediatePath(String intermediatePath) {
         this.intermediatePath = intermediatePath;
         return this;
     }
     
+    public GetKeystoreRequest(@JsonProperty("authorizableId") String authorizableId, @JsonProperty("intermediatePath") String intermediatePath) {
+        this.authorizableId = authorizableId;
+        this.intermediatePath = intermediatePath;
+  }
 }

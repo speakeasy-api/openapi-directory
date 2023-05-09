@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReplaceRouteTableAssociationResult {
     
     public ReplaceRouteTableAssociationResultAssociationState associationState;
+
     public ReplaceRouteTableAssociationResult withAssociationState(ReplaceRouteTableAssociationResultAssociationState associationState) {
         this.associationState = associationState;
         return this;
@@ -19,9 +20,11 @@ public class ReplaceRouteTableAssociationResult {
     
     
     public String newAssociationId;
+
     public ReplaceRouteTableAssociationResult withNewAssociationId(String newAssociationId) {
         this.newAssociationId = newAssociationId;
         return this;
     }
     
+    public ReplaceRouteTableAssociationResult(){}
 }

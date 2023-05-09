@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClusterDbRevisionsMessage {
     
     public ClusterDbRevisionsList[] clusterDbRevisions;
+
     public ClusterDbRevisionsMessage withClusterDbRevisions(ClusterDbRevisionsList[] clusterDbRevisions) {
         this.clusterDbRevisions = clusterDbRevisions;
         return this;
@@ -19,9 +20,11 @@ public class ClusterDbRevisionsMessage {
     
     
     public String marker;
+
     public ClusterDbRevisionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ClusterDbRevisionsMessage(){}
 }

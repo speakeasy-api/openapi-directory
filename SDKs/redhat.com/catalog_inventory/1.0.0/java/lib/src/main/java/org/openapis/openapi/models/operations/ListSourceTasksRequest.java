@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSourceTasksRequest {
@@ -12,6 +13,7 @@ public class ListSourceTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=filter")
     public java.util.Map<String, Object> filter;
+
     public ListSourceTasksRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
         return this;
@@ -22,6 +24,7 @@ public class ListSourceTasksRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ListSourceTasksRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class ListSourceTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListSourceTasksRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -42,6 +46,7 @@ public class ListSourceTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public ListSourceTasksRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -52,9 +57,13 @@ public class ListSourceTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public ListSourceTasksRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public ListSourceTasksRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

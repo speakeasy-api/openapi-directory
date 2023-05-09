@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RestoreFromSnapshotResponse {
@@ -12,6 +13,7 @@ public class RestoreFromSnapshotResponse {
      */
     
     public Object clientException;
+
     public RestoreFromSnapshotResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class RestoreFromSnapshotResponse {
     
     
     public String contentType;
+
     public RestoreFromSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RestoreFromSnapshotResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public RestoreFromSnapshotResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class RestoreFromSnapshotResponse {
      */
     
     public Object invalidParameterException;
+
     public RestoreFromSnapshotResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class RestoreFromSnapshotResponse {
      */
     
     public java.util.Map<String, Object> restoreFromSnapshotResult;
+
     public RestoreFromSnapshotResponse withRestoreFromSnapshotResult(java.util.Map<String, Object> restoreFromSnapshotResult) {
         this.restoreFromSnapshotResult = restoreFromSnapshotResult;
         return this;
@@ -59,6 +65,7 @@ public class RestoreFromSnapshotResponse {
      */
     
     public Object serviceException;
+
     public RestoreFromSnapshotResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class RestoreFromSnapshotResponse {
     
     
     public Integer statusCode;
+
     public RestoreFromSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class RestoreFromSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RestoreFromSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RestoreFromSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -19,6 +19,7 @@ public class WageSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public WageSetting withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class WageSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_overtime_exempt")
     public Boolean isOvertimeExempt;
+
     public WageSetting withIsOvertimeExempt(Boolean isOvertimeExempt) {
         this.isOvertimeExempt = isOvertimeExempt;
         return this;
@@ -44,6 +46,7 @@ public class WageSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_assignments")
     public JobAssignment[] jobAssignments;
+
     public WageSetting withJobAssignments(JobAssignment[] jobAssignments) {
         this.jobAssignments = jobAssignments;
         return this;
@@ -55,6 +58,7 @@ public class WageSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_member_id")
     public String teamMemberId;
+
     public WageSetting withTeamMemberId(String teamMemberId) {
         this.teamMemberId = teamMemberId;
         return this;
@@ -67,6 +71,7 @@ public class WageSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public WageSetting withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -81,9 +86,11 @@ public class WageSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public WageSetting withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public WageSetting(){}
 }

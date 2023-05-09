@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RevokeDomainAccessResponse {
     
     public String contentType;
+
     public RevokeDomainAccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RevokeDomainAccessResponse {
      */
     
     public Object internalServerErrorException;
+
     public RevokeDomainAccessResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -29,6 +32,7 @@ public class RevokeDomainAccessResponse {
      */
     
     public Object invalidRequestException;
+
     public RevokeDomainAccessResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class RevokeDomainAccessResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RevokeDomainAccessResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RevokeDomainAccessResponse {
      */
     
     public java.util.Map<String, Object> revokeDomainAccessResponse;
+
     public RevokeDomainAccessResponse withRevokeDomainAccessResponse(java.util.Map<String, Object> revokeDomainAccessResponse) {
         this.revokeDomainAccessResponse = revokeDomainAccessResponse;
         return this;
@@ -56,6 +62,7 @@ public class RevokeDomainAccessResponse {
     
     
     public Integer statusCode;
+
     public RevokeDomainAccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RevokeDomainAccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RevokeDomainAccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class RevokeDomainAccessResponse {
      */
     
     public Object tooManyRequestsException;
+
     public RevokeDomainAccessResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class RevokeDomainAccessResponse {
      */
     
     public Object unauthorizedException;
+
     public RevokeDomainAccessResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public RevokeDomainAccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

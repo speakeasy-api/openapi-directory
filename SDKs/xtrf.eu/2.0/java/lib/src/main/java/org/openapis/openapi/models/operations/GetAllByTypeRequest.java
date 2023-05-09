@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllByTypeRequest {
@@ -12,6 +13,7 @@ public class GetAllByTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nameEquals")
     public String nameEquals;
+
     public GetAllByTypeRequest withNameEquals(String nameEquals) {
         this.nameEquals = nameEquals;
         return this;
@@ -22,9 +24,13 @@ public class GetAllByTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public String type;
+
     public GetAllByTypeRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetAllByTypeRequest(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

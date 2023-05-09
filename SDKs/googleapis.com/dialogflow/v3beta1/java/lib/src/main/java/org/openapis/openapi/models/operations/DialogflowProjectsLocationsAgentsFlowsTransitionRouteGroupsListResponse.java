@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListResponse {
     
     public String contentType;
+
     public DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListResp
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDialogflowCxV3beta1ListTransitionRouteGroupsResponse googleCloudDialogflowCxV3beta1ListTransitionRouteGroupsResponse;
+
     public DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListResponse withGoogleCloudDialogflowCxV3beta1ListTransitionRouteGroupsResponse(org.openapis.openapi.models.shared.GoogleCloudDialogflowCxV3beta1ListTransitionRouteGroupsResponse googleCloudDialogflowCxV3beta1ListTransitionRouteGroupsResponse) {
         this.googleCloudDialogflowCxV3beta1ListTransitionRouteGroupsResponse = googleCloudDialogflowCxV3beta1ListTransitionRouteGroupsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListResp
     
     
     public Integer statusCode;
+
     public DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

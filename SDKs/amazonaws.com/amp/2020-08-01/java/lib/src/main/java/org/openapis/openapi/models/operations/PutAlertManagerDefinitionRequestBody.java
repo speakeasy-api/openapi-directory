@@ -15,6 +15,7 @@ public class PutAlertManagerDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public PutAlertManagerDefinitionRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,9 +26,13 @@ public class PutAlertManagerDefinitionRequestBody {
      */
     @JsonProperty("data")
     public String data;
+
     public PutAlertManagerDefinitionRequestBody withData(String data) {
         this.data = data;
         return this;
     }
     
+    public PutAlertManagerDefinitionRequestBody(@JsonProperty("data") String data) {
+        this.data = data;
+  }
 }

@@ -15,6 +15,7 @@ public class Getcountrystandard200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Getcountrystandard200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class Getcountrystandard200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountryStandard")
     public String countryStandard;
+
     public Getcountrystandard200ApplicationJSON withCountryStandard(String countryStandard) {
         this.countryStandard = countryStandard;
         return this;
@@ -31,9 +33,11 @@ public class Getcountrystandard200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credits")
     public String credits;
+
     public Getcountrystandard200ApplicationJSON withCredits(String credits) {
         this.credits = credits;
         return this;
     }
     
+    public Getcountrystandard200ApplicationJSON(){}
 }

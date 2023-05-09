@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOfferingsInfoTextPatternResponse {
     
     public String contentType;
+
     public GetOfferingsInfoTextPatternResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetOfferingsInfoTextPatternResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetOfferingsInfoTextPatternResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetOfferingsInfoTextPatternResponse {
      */
     
     public org.openapis.openapi.models.shared.PortfolioActivations[] portfolioActivations;
+
     public GetOfferingsInfoTextPatternResponse withPortfolioActivations(org.openapis.openapi.models.shared.PortfolioActivations[] portfolioActivations) {
         this.portfolioActivations = portfolioActivations;
         return this;
@@ -36,6 +40,7 @@ public class GetOfferingsInfoTextPatternResponse {
     
     
     public Integer statusCode;
+
     public GetOfferingsInfoTextPatternResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetOfferingsInfoTextPatternResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOfferingsInfoTextPatternResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOfferingsInfoTextPatternResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

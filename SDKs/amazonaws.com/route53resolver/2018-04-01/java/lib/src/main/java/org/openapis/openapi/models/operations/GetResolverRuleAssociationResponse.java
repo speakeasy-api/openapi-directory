@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResolverRuleAssociationResponse {
     
     public String contentType;
+
     public GetResolverRuleAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetResolverRuleAssociationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResolverRuleAssociationResponse getResolverRuleAssociationResponse;
+
     public GetResolverRuleAssociationResponse withGetResolverRuleAssociationResponse(org.openapis.openapi.models.shared.GetResolverRuleAssociationResponse getResolverRuleAssociationResponse) {
         this.getResolverRuleAssociationResponse = getResolverRuleAssociationResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetResolverRuleAssociationResponse {
      */
     
     public Object internalServiceErrorException;
+
     public GetResolverRuleAssociationResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class GetResolverRuleAssociationResponse {
      */
     
     public Object invalidParameterException;
+
     public GetResolverRuleAssociationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetResolverRuleAssociationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetResolverRuleAssociationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetResolverRuleAssociationResponse {
     
     
     public Integer statusCode;
+
     public GetResolverRuleAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetResolverRuleAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResolverRuleAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetResolverRuleAssociationResponse {
      */
     
     public Object throttlingException;
+
     public GetResolverRuleAssociationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetResolverRuleAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

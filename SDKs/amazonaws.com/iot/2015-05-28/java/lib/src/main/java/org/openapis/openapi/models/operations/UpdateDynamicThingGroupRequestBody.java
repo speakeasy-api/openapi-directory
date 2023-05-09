@@ -15,6 +15,7 @@ public class UpdateDynamicThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedVersion")
     public Long expectedVersion;
+
     public UpdateDynamicThingGroupRequestBody withExpectedVersion(Long expectedVersion) {
         this.expectedVersion = expectedVersion;
         return this;
@@ -26,6 +27,7 @@ public class UpdateDynamicThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexName")
     public String indexName;
+
     public UpdateDynamicThingGroupRequestBody withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -37,6 +39,7 @@ public class UpdateDynamicThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryString")
     public String queryString;
+
     public UpdateDynamicThingGroupRequestBody withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
@@ -48,6 +51,7 @@ public class UpdateDynamicThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryVersion")
     public String queryVersion;
+
     public UpdateDynamicThingGroupRequestBody withQueryVersion(String queryVersion) {
         this.queryVersion = queryVersion;
         return this;
@@ -58,9 +62,13 @@ public class UpdateDynamicThingGroupRequestBody {
      */
     @JsonProperty("thingGroupProperties")
     public UpdateDynamicThingGroupRequestBodyThingGroupProperties thingGroupProperties;
+
     public UpdateDynamicThingGroupRequestBody withThingGroupProperties(UpdateDynamicThingGroupRequestBodyThingGroupProperties thingGroupProperties) {
         this.thingGroupProperties = thingGroupProperties;
         return this;
     }
     
+    public UpdateDynamicThingGroupRequestBody(@JsonProperty("thingGroupProperties") UpdateDynamicThingGroupRequestBodyThingGroupProperties thingGroupProperties) {
+        this.thingGroupProperties = thingGroupProperties;
+  }
 }

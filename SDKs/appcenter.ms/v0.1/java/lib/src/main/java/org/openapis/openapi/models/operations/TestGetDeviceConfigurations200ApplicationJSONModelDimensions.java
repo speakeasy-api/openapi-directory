@@ -15,6 +15,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("depth")
     public java.util.Map<String, Object> depth;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelDimensions withDepth(java.util.Map<String, Object> depth) {
         this.depth = depth;
         return this;
@@ -23,6 +24,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public java.util.Map<String, Object> height;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelDimensions withHeight(java.util.Map<String, Object> height) {
         this.height = height;
         return this;
@@ -31,9 +33,11 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public java.util.Map<String, Object> width;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelDimensions withWidth(java.util.Map<String, Object> width) {
         this.width = width;
         return this;
     }
     
+    public TestGetDeviceConfigurations200ApplicationJSONModelDimensions(){}
 }

@@ -15,6 +15,7 @@ public class TelemetryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSyncStatus")
     public ConfigurationSyncStatusEnum configurationSyncStatus;
+
     public TelemetryConfiguration withConfigurationSyncStatus(ConfigurationSyncStatusEnum configurationSyncStatus) {
         this.configurationSyncStatus = configurationSyncStatus;
         return this;
@@ -22,9 +23,13 @@ public class TelemetryConfiguration {
     
     @JsonProperty("Telemetry")
     public TelemetryEnum telemetry;
+
     public TelemetryConfiguration withTelemetry(TelemetryEnum telemetry) {
         this.telemetry = telemetry;
         return this;
     }
     
+    public TelemetryConfiguration(@JsonProperty("Telemetry") TelemetryEnum telemetry) {
+        this.telemetry = telemetry;
+  }
 }

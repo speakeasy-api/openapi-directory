@@ -17,9 +17,11 @@ public class ImageTagCreateBatch {
     @JsonProperty("Tags")
     @SpeakeasyMetadata("form:name=Tags,json")
     public ImageTagCreateEntry[] tags;
+
     public ImageTagCreateBatch withTags(ImageTagCreateEntry[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ImageTagCreateBatch(){}
 }

@@ -18,9 +18,11 @@ public class BatchFirstLastNameGenderedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalNames")
     public FirstLastNameGenderedOut[] personalNames;
+
     public BatchFirstLastNameGenderedOut withPersonalNames(FirstLastNameGenderedOut[] personalNames) {
         this.personalNames = personalNames;
         return this;
     }
     
+    public BatchFirstLastNameGenderedOut(){}
 }

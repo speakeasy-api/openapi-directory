@@ -15,6 +15,7 @@ public class ReleaseLabelFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Application")
     public String application;
+
     public ReleaseLabelFilter withApplication(String application) {
         this.application = application;
         return this;
@@ -23,9 +24,11 @@ public class ReleaseLabelFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prefix")
     public String prefix;
+
     public ReleaseLabelFilter withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public ReleaseLabelFilter(){}
 }

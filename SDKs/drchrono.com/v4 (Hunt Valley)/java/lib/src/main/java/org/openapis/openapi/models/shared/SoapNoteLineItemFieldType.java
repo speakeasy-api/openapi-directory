@@ -18,6 +18,7 @@ public class SoapNoteLineItemFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_values")
     public String[] allowedValues;
+
     public SoapNoteLineItemFieldType withAllowedValues(String[] allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -29,6 +30,7 @@ public class SoapNoteLineItemFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public SoapNoteLineItemFieldType withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -40,6 +42,7 @@ public class SoapNoteLineItemFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clinical_note_template")
     public String clinicalNoteTemplate;
+
     public SoapNoteLineItemFieldType withClinicalNoteTemplate(String clinicalNoteTemplate) {
         this.clinicalNoteTemplate = clinicalNoteTemplate;
         return this;
@@ -51,6 +54,7 @@ public class SoapNoteLineItemFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public SoapNoteLineItemFieldType withComment(String comment) {
         this.comment = comment;
         return this;
@@ -62,6 +66,7 @@ public class SoapNoteLineItemFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data_type")
     public String dataType;
+
     public SoapNoteLineItemFieldType withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -70,6 +75,7 @@ public class SoapNoteLineItemFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public SoapNoteLineItemFieldType withId(Long id) {
         this.id = id;
         return this;
@@ -78,6 +84,7 @@ public class SoapNoteLineItemFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SoapNoteLineItemFieldType withName(String name) {
         this.name = name;
         return this;
@@ -89,9 +96,11 @@ public class SoapNoteLineItemFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public SoapNoteLineItemFieldType withRequired(Boolean required) {
         this.required = required;
         return this;
     }
     
+    public SoapNoteLineItemFieldType(){}
 }

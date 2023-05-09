@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUnmaskedAddressRequest {
@@ -12,6 +13,7 @@ public class GetUnmaskedAddressRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetUnmaskedAddressRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetUnmaskedAddressRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetUnmaskedAddressRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetUnmaskedAddressRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=addressId")
     public String addressId;
+
     public GetUnmaskedAddressRequest withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -44,6 +48,7 @@ public class GetUnmaskedAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternativeKey")
     public String alternativeKey;
+
     public GetUnmaskedAddressRequest withAlternativeKey(String alternativeKey) {
         this.alternativeKey = alternativeKey;
         return this;
@@ -54,6 +59,7 @@ public class GetUnmaskedAddressRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public GetUnmaskedAddressRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -64,9 +70,17 @@ public class GetUnmaskedAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
     public String reason;
+
     public GetUnmaskedAddressRequest withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public GetUnmaskedAddressRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("addressId") String addressId, @JsonProperty("profileId") String profileId, @JsonProperty("reason") String reason) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.addressId = addressId;
+        this.profileId = profileId;
+        this.reason = reason;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDeploymentGroupResponse {
@@ -12,6 +13,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object alarmsLimitExceededException;
+
     public UpdateDeploymentGroupResponse withAlarmsLimitExceededException(Object alarmsLimitExceededException) {
         this.alarmsLimitExceededException = alarmsLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object applicationDoesNotExistException;
+
     public UpdateDeploymentGroupResponse withApplicationDoesNotExistException(Object applicationDoesNotExistException) {
         this.applicationDoesNotExistException = applicationDoesNotExistException;
         return this;
@@ -32,6 +35,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object applicationNameRequiredException;
+
     public UpdateDeploymentGroupResponse withApplicationNameRequiredException(Object applicationNameRequiredException) {
         this.applicationNameRequiredException = applicationNameRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDeploymentGroupResponse {
     
     
     public String contentType;
+
     public UpdateDeploymentGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object deploymentConfigDoesNotExistException;
+
     public UpdateDeploymentGroupResponse withDeploymentConfigDoesNotExistException(Object deploymentConfigDoesNotExistException) {
         this.deploymentConfigDoesNotExistException = deploymentConfigDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object deploymentGroupAlreadyExistsException;
+
     public UpdateDeploymentGroupResponse withDeploymentGroupAlreadyExistsException(Object deploymentGroupAlreadyExistsException) {
         this.deploymentGroupAlreadyExistsException = deploymentGroupAlreadyExistsException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object deploymentGroupDoesNotExistException;
+
     public UpdateDeploymentGroupResponse withDeploymentGroupDoesNotExistException(Object deploymentGroupDoesNotExistException) {
         this.deploymentGroupDoesNotExistException = deploymentGroupDoesNotExistException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object deploymentGroupNameRequiredException;
+
     public UpdateDeploymentGroupResponse withDeploymentGroupNameRequiredException(Object deploymentGroupNameRequiredException) {
         this.deploymentGroupNameRequiredException = deploymentGroupNameRequiredException;
         return this;
@@ -89,6 +98,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object ecsServiceMappingLimitExceededException;
+
     public UpdateDeploymentGroupResponse withECSServiceMappingLimitExceededException(Object ecsServiceMappingLimitExceededException) {
         this.ecsServiceMappingLimitExceededException = ecsServiceMappingLimitExceededException;
         return this;
@@ -99,6 +109,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidAlarmConfigException;
+
     public UpdateDeploymentGroupResponse withInvalidAlarmConfigException(Object invalidAlarmConfigException) {
         this.invalidAlarmConfigException = invalidAlarmConfigException;
         return this;
@@ -109,6 +120,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidApplicationNameException;
+
     public UpdateDeploymentGroupResponse withInvalidApplicationNameException(Object invalidApplicationNameException) {
         this.invalidApplicationNameException = invalidApplicationNameException;
         return this;
@@ -119,6 +131,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidAutoRollbackConfigException;
+
     public UpdateDeploymentGroupResponse withInvalidAutoRollbackConfigException(Object invalidAutoRollbackConfigException) {
         this.invalidAutoRollbackConfigException = invalidAutoRollbackConfigException;
         return this;
@@ -129,6 +142,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidAutoScalingGroupException;
+
     public UpdateDeploymentGroupResponse withInvalidAutoScalingGroupException(Object invalidAutoScalingGroupException) {
         this.invalidAutoScalingGroupException = invalidAutoScalingGroupException;
         return this;
@@ -139,6 +153,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidBlueGreenDeploymentConfigurationException;
+
     public UpdateDeploymentGroupResponse withInvalidBlueGreenDeploymentConfigurationException(Object invalidBlueGreenDeploymentConfigurationException) {
         this.invalidBlueGreenDeploymentConfigurationException = invalidBlueGreenDeploymentConfigurationException;
         return this;
@@ -149,6 +164,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidDeploymentConfigNameException;
+
     public UpdateDeploymentGroupResponse withInvalidDeploymentConfigNameException(Object invalidDeploymentConfigNameException) {
         this.invalidDeploymentConfigNameException = invalidDeploymentConfigNameException;
         return this;
@@ -159,6 +175,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidDeploymentGroupNameException;
+
     public UpdateDeploymentGroupResponse withInvalidDeploymentGroupNameException(Object invalidDeploymentGroupNameException) {
         this.invalidDeploymentGroupNameException = invalidDeploymentGroupNameException;
         return this;
@@ -169,6 +186,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidDeploymentStyleException;
+
     public UpdateDeploymentGroupResponse withInvalidDeploymentStyleException(Object invalidDeploymentStyleException) {
         this.invalidDeploymentStyleException = invalidDeploymentStyleException;
         return this;
@@ -179,6 +197,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidEc2TagCombinationException;
+
     public UpdateDeploymentGroupResponse withInvalidEc2TagCombinationException(Object invalidEc2TagCombinationException) {
         this.invalidEc2TagCombinationException = invalidEc2TagCombinationException;
         return this;
@@ -189,6 +208,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidEc2TagException;
+
     public UpdateDeploymentGroupResponse withInvalidEc2TagException(Object invalidEc2TagException) {
         this.invalidEc2TagException = invalidEc2TagException;
         return this;
@@ -199,6 +219,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidECSServiceException;
+
     public UpdateDeploymentGroupResponse withInvalidECSServiceException(Object invalidECSServiceException) {
         this.invalidECSServiceException = invalidECSServiceException;
         return this;
@@ -209,6 +230,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateDeploymentGroupResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -219,6 +241,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidLoadBalancerInfoException;
+
     public UpdateDeploymentGroupResponse withInvalidLoadBalancerInfoException(Object invalidLoadBalancerInfoException) {
         this.invalidLoadBalancerInfoException = invalidLoadBalancerInfoException;
         return this;
@@ -229,6 +252,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidOnPremisesTagCombinationException;
+
     public UpdateDeploymentGroupResponse withInvalidOnPremisesTagCombinationException(Object invalidOnPremisesTagCombinationException) {
         this.invalidOnPremisesTagCombinationException = invalidOnPremisesTagCombinationException;
         return this;
@@ -239,6 +263,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidRoleException;
+
     public UpdateDeploymentGroupResponse withInvalidRoleException(Object invalidRoleException) {
         this.invalidRoleException = invalidRoleException;
         return this;
@@ -249,6 +274,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidTagException;
+
     public UpdateDeploymentGroupResponse withInvalidTagException(Object invalidTagException) {
         this.invalidTagException = invalidTagException;
         return this;
@@ -259,6 +285,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidTargetGroupPairException;
+
     public UpdateDeploymentGroupResponse withInvalidTargetGroupPairException(Object invalidTargetGroupPairException) {
         this.invalidTargetGroupPairException = invalidTargetGroupPairException;
         return this;
@@ -269,6 +296,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidTrafficRoutingConfigurationException;
+
     public UpdateDeploymentGroupResponse withInvalidTrafficRoutingConfigurationException(Object invalidTrafficRoutingConfigurationException) {
         this.invalidTrafficRoutingConfigurationException = invalidTrafficRoutingConfigurationException;
         return this;
@@ -279,6 +307,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object invalidTriggerConfigException;
+
     public UpdateDeploymentGroupResponse withInvalidTriggerConfigException(Object invalidTriggerConfigException) {
         this.invalidTriggerConfigException = invalidTriggerConfigException;
         return this;
@@ -289,6 +318,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object lifecycleHookLimitExceededException;
+
     public UpdateDeploymentGroupResponse withLifecycleHookLimitExceededException(Object lifecycleHookLimitExceededException) {
         this.lifecycleHookLimitExceededException = lifecycleHookLimitExceededException;
         return this;
@@ -296,6 +326,7 @@ public class UpdateDeploymentGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateDeploymentGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -303,6 +334,7 @@ public class UpdateDeploymentGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDeploymentGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -313,6 +345,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object tagSetListLimitExceededException;
+
     public UpdateDeploymentGroupResponse withTagSetListLimitExceededException(Object tagSetListLimitExceededException) {
         this.tagSetListLimitExceededException = tagSetListLimitExceededException;
         return this;
@@ -323,6 +356,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object throttlingException;
+
     public UpdateDeploymentGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -333,6 +367,7 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public Object triggerTargetsLimitExceededException;
+
     public UpdateDeploymentGroupResponse withTriggerTargetsLimitExceededException(Object triggerTargetsLimitExceededException) {
         this.triggerTargetsLimitExceededException = triggerTargetsLimitExceededException;
         return this;
@@ -343,9 +378,14 @@ public class UpdateDeploymentGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDeploymentGroupOutput updateDeploymentGroupOutput;
+
     public UpdateDeploymentGroupResponse withUpdateDeploymentGroupOutput(org.openapis.openapi.models.shared.UpdateDeploymentGroupOutput updateDeploymentGroupOutput) {
         this.updateDeploymentGroupOutput = updateDeploymentGroupOutput;
         return this;
     }
     
+    public UpdateDeploymentGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

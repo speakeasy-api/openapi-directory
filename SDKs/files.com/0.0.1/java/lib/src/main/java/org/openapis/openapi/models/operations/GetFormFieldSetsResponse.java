@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFormFieldSetsResponse {
     
     public String contentType;
+
     public GetFormFieldSetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFormFieldSetsResponse {
      */
     
     public org.openapis.openapi.models.shared.FormFieldSetEntity[] formFieldSetEntities;
+
     public GetFormFieldSetsResponse withFormFieldSetEntities(org.openapis.openapi.models.shared.FormFieldSetEntity[] formFieldSetEntities) {
         this.formFieldSetEntities = formFieldSetEntities;
         return this;
@@ -26,6 +29,7 @@ public class GetFormFieldSetsResponse {
     
     
     public Integer statusCode;
+
     public GetFormFieldSetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetFormFieldSetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFormFieldSetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFormFieldSetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

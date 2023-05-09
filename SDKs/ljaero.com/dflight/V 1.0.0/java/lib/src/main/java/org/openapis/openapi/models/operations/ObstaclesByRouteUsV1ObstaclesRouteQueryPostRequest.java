@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ObstaclesByRouteUsV1ObstaclesRouteQueryPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ObstaclesByRoute obstaclesByRoute;
+
     public ObstaclesByRouteUsV1ObstaclesRouteQueryPostRequest withObstaclesByRoute(org.openapis.openapi.models.shared.ObstaclesByRoute obstaclesByRoute) {
         this.obstaclesByRoute = obstaclesByRoute;
         return this;
@@ -16,9 +18,13 @@ public class ObstaclesByRouteUsV1ObstaclesRouteQueryPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public ObstaclesByRouteUsV1ObstaclesRouteQueryPostRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public ObstaclesByRouteUsV1ObstaclesRouteQueryPostRequest(@JsonProperty("ObstaclesByRoute") org.openapis.openapi.models.shared.ObstaclesByRoute obstaclesByRoute) {
+        this.obstaclesByRoute = obstaclesByRoute;
+  }
 }

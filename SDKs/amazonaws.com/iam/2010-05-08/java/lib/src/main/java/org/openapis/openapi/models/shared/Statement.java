@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Statement {
     
     public Position endPosition;
+
     public Statement withEndPosition(Position endPosition) {
         this.endPosition = endPosition;
         return this;
@@ -19,6 +20,7 @@ public class Statement {
     
     
     public String sourcePolicyId;
+
     public Statement withSourcePolicyId(String sourcePolicyId) {
         this.sourcePolicyId = sourcePolicyId;
         return this;
@@ -26,6 +28,7 @@ public class Statement {
     
     
     public PolicySourceTypeEnum sourcePolicyType;
+
     public Statement withSourcePolicyType(PolicySourceTypeEnum sourcePolicyType) {
         this.sourcePolicyType = sourcePolicyType;
         return this;
@@ -33,9 +36,11 @@ public class Statement {
     
     
     public Position startPosition;
+
     public Statement withStartPosition(Position startPosition) {
         this.startPosition = startPosition;
         return this;
     }
     
+    public Statement(){}
 }

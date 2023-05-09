@@ -15,6 +15,7 @@ public class GetOneRecurringPayment404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public GetOneRecurringPayment404ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class GetOneRecurringPayment404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetOneRecurringPayment404ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -31,6 +33,7 @@ public class GetOneRecurringPayment404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Boolean status;
+
     public GetOneRecurringPayment404ApplicationJSON withStatus(Boolean status) {
         this.status = status;
         return this;
@@ -39,9 +42,11 @@ public class GetOneRecurringPayment404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public Double statusCode;
+
     public GetOneRecurringPayment404ApplicationJSON withStatusCode(Double statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public GetOneRecurringPayment404ApplicationJSON(){}
 }

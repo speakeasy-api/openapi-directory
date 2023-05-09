@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProvisioningTemplatesResponse {
     
     public String contentType;
+
     public ListProvisioningTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListProvisioningTemplatesResponse {
      */
     
     public Object internalFailureException;
+
     public ListProvisioningTemplatesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListProvisioningTemplatesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListProvisioningTemplatesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListProvisioningTemplatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProvisioningTemplatesResponse listProvisioningTemplatesResponse;
+
     public ListProvisioningTemplatesResponse withListProvisioningTemplatesResponse(org.openapis.openapi.models.shared.ListProvisioningTemplatesResponse listProvisioningTemplatesResponse) {
         this.listProvisioningTemplatesResponse = listProvisioningTemplatesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListProvisioningTemplatesResponse {
     
     
     public Integer statusCode;
+
     public ListProvisioningTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListProvisioningTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProvisioningTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListProvisioningTemplatesResponse {
      */
     
     public Object throttlingException;
+
     public ListProvisioningTemplatesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListProvisioningTemplatesResponse {
      */
     
     public Object unauthorizedException;
+
     public ListProvisioningTemplatesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListProvisioningTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

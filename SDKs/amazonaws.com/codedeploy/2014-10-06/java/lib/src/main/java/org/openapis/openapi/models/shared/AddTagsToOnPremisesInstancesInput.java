@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddTagsToOnPremisesInstancesInput {
     @JsonProperty("instanceNames")
     public String[] instanceNames;
+
     public AddTagsToOnPremisesInstancesInput withInstanceNames(String[] instanceNames) {
         this.instanceNames = instanceNames;
         return this;
@@ -19,9 +20,14 @@ public class AddTagsToOnPremisesInstancesInput {
     
     @JsonProperty("tags")
     public Tag[] tags;
+
     public AddTagsToOnPremisesInstancesInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public AddTagsToOnPremisesInstancesInput(@JsonProperty("instanceNames") String[] instanceNames, @JsonProperty("tags") Tag[] tags) {
+        this.instanceNames = instanceNames;
+        this.tags = tags;
+  }
 }

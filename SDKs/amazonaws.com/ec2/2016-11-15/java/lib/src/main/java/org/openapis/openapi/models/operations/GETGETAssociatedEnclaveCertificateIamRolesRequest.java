@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETAssociatedEnclaveCertificateIamRolesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETAssociatedEnclaveCertificateIamRolesActionEnum action;
+
     public GETGETAssociatedEnclaveCertificateIamRolesRequest withAction(GETGETAssociatedEnclaveCertificateIamRolesActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETGETAssociatedEnclaveCertificateIamRolesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CertificateArn")
     public String certificateArn;
+
     public GETGETAssociatedEnclaveCertificateIamRolesRequest withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -29,6 +32,7 @@ public class GETGETAssociatedEnclaveCertificateIamRolesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETGETAssociatedEnclaveCertificateIamRolesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -36,6 +40,7 @@ public class GETGETAssociatedEnclaveCertificateIamRolesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETAssociatedEnclaveCertificateIamRolesVersionEnum version;
+
     public GETGETAssociatedEnclaveCertificateIamRolesRequest withVersion(GETGETAssociatedEnclaveCertificateIamRolesVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETGETAssociatedEnclaveCertificateIamRolesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETAssociatedEnclaveCertificateIamRolesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETGETAssociatedEnclaveCertificateIamRolesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETAssociatedEnclaveCertificateIamRolesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETGETAssociatedEnclaveCertificateIamRolesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETAssociatedEnclaveCertificateIamRolesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETGETAssociatedEnclaveCertificateIamRolesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETAssociatedEnclaveCertificateIamRolesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETGETAssociatedEnclaveCertificateIamRolesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETAssociatedEnclaveCertificateIamRolesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETGETAssociatedEnclaveCertificateIamRolesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETAssociatedEnclaveCertificateIamRolesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETGETAssociatedEnclaveCertificateIamRolesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETAssociatedEnclaveCertificateIamRolesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETAssociatedEnclaveCertificateIamRolesRequest(@JsonProperty("Action") GETGETAssociatedEnclaveCertificateIamRolesActionEnum action, @JsonProperty("CertificateArn") String certificateArn, @JsonProperty("Version") GETGETAssociatedEnclaveCertificateIamRolesVersionEnum version) {
+        this.action = action;
+        this.certificateArn = certificateArn;
+        this.version = version;
+  }
 }

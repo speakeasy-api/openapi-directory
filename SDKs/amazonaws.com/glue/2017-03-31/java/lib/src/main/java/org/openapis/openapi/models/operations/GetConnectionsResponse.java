@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConnectionsResponse {
     
     public String contentType;
+
     public GetConnectionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetConnectionsResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetConnectionsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetConnectionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetConnectionsResponse getConnectionsResponse;
+
     public GetConnectionsResponse withGetConnectionsResponse(org.openapis.openapi.models.shared.GetConnectionsResponse getConnectionsResponse) {
         this.getConnectionsResponse = getConnectionsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetConnectionsResponse {
      */
     
     public Object glueEncryptionException;
+
     public GetConnectionsResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +54,7 @@ public class GetConnectionsResponse {
      */
     
     public Object invalidInputException;
+
     public GetConnectionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetConnectionsResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetConnectionsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class GetConnectionsResponse {
     
     
     public Integer statusCode;
+
     public GetConnectionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetConnectionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConnectionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetConnectionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

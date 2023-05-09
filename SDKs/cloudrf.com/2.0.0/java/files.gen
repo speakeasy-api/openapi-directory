@@ -77,4 +77,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/Antenna.java
 lib/src/main/java/org/openapis/openapi/models/shared/Point.java
 lib/src/main/java/org/openapis/openapi/models/shared/Feature.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/analyse/README.md
+docs/create/README.md
+docs/manage/README.md
 USAGE.md

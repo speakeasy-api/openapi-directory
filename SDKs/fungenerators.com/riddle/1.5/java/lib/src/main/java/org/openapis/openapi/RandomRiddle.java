@@ -59,10 +59,8 @@ public class RandomRiddle {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRiddleRandomResponse res = new org.openapis.openapi.models.operations.GetRiddleRandomResponse() {{
+        org.openapis.openapi.models.operations.GetRiddleRandomResponse res = new org.openapis.openapi.models.operations.GetRiddleRandomResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -99,10 +97,8 @@ public class RandomRiddle {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRiddleSearchResponse res = new org.openapis.openapi.models.operations.GetRiddleSearchResponse() {{
+        org.openapis.openapi.models.operations.GetRiddleSearchResponse res = new org.openapis.openapi.models.operations.GetRiddleSearchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {

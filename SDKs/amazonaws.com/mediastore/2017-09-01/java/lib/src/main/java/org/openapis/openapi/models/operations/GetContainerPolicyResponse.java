@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContainerPolicyResponse {
@@ -12,6 +13,7 @@ public class GetContainerPolicyResponse {
      */
     
     public Object containerInUseException;
+
     public GetContainerPolicyResponse withContainerInUseException(Object containerInUseException) {
         this.containerInUseException = containerInUseException;
         return this;
@@ -22,6 +24,7 @@ public class GetContainerPolicyResponse {
      */
     
     public Object containerNotFoundException;
+
     public GetContainerPolicyResponse withContainerNotFoundException(Object containerNotFoundException) {
         this.containerNotFoundException = containerNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetContainerPolicyResponse {
     
     
     public String contentType;
+
     public GetContainerPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetContainerPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetContainerPolicyOutput getContainerPolicyOutput;
+
     public GetContainerPolicyResponse withGetContainerPolicyOutput(org.openapis.openapi.models.shared.GetContainerPolicyOutput getContainerPolicyOutput) {
         this.getContainerPolicyOutput = getContainerPolicyOutput;
         return this;
@@ -49,6 +54,7 @@ public class GetContainerPolicyResponse {
      */
     
     public Object internalServerError;
+
     public GetContainerPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class GetContainerPolicyResponse {
      */
     
     public Object policyNotFoundException;
+
     public GetContainerPolicyResponse withPolicyNotFoundException(Object policyNotFoundException) {
         this.policyNotFoundException = policyNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetContainerPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetContainerPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetContainerPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContainerPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetContainerPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

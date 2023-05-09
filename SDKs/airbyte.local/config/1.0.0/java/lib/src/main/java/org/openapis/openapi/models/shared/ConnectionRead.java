@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConnectionRead {
     @JsonProperty("breakingChange")
     public Boolean breakingChange;
+
     public ConnectionRead withBreakingChange(Boolean breakingChange) {
         this.breakingChange = breakingChange;
         return this;
@@ -21,6 +22,7 @@ public class ConnectionRead {
     
     @JsonProperty("connectionId")
     public String connectionId;
+
     public ConnectionRead withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -28,6 +30,7 @@ public class ConnectionRead {
     
     @JsonProperty("destinationId")
     public String destinationId;
+
     public ConnectionRead withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -36,6 +39,7 @@ public class ConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geography")
     public GeographyEnum geography;
+
     public ConnectionRead withGeography(GeographyEnum geography) {
         this.geography = geography;
         return this;
@@ -43,6 +47,7 @@ public class ConnectionRead {
     
     @JsonProperty("name")
     public String name;
+
     public ConnectionRead withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +59,7 @@ public class ConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceDefinition")
     public NamespaceDefinitionTypeEnum namespaceDefinition;
+
     public ConnectionRead withNamespaceDefinition(NamespaceDefinitionTypeEnum namespaceDefinition) {
         this.namespaceDefinition = namespaceDefinition;
         return this;
@@ -65,6 +71,7 @@ public class ConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceFormat")
     public String namespaceFormat;
+
     public ConnectionRead withNamespaceFormat(String namespaceFormat) {
         this.namespaceFormat = namespaceFormat;
         return this;
@@ -73,6 +80,7 @@ public class ConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonBreakingChangesPreference")
     public NonBreakingChangesPreferenceEnum nonBreakingChangesPreference;
+
     public ConnectionRead withNonBreakingChangesPreference(NonBreakingChangesPreferenceEnum nonBreakingChangesPreference) {
         this.nonBreakingChangesPreference = nonBreakingChangesPreference;
         return this;
@@ -81,6 +89,7 @@ public class ConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifySchemaChanges")
     public Boolean notifySchemaChanges;
+
     public ConnectionRead withNotifySchemaChanges(Boolean notifySchemaChanges) {
         this.notifySchemaChanges = notifySchemaChanges;
         return this;
@@ -89,6 +98,7 @@ public class ConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationIds")
     public String[] operationIds;
+
     public ConnectionRead withOperationIds(String[] operationIds) {
         this.operationIds = operationIds;
         return this;
@@ -100,6 +110,7 @@ public class ConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public ConnectionRead withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -111,6 +122,7 @@ public class ConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRequirements")
     public ResourceRequirements resourceRequirements;
+
     public ConnectionRead withResourceRequirements(ResourceRequirements resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
@@ -122,6 +134,7 @@ public class ConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public ConnectionSchedule schedule;
+
     public ConnectionRead withSchedule(ConnectionSchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -133,6 +146,7 @@ public class ConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleData")
     public ConnectionScheduleData scheduleData;
+
     public ConnectionRead withScheduleData(ConnectionScheduleData scheduleData) {
         this.scheduleData = scheduleData;
         return this;
@@ -144,6 +158,7 @@ public class ConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleType")
     public ConnectionScheduleTypeEnum scheduleType;
+
     public ConnectionRead withScheduleType(ConnectionScheduleTypeEnum scheduleType) {
         this.scheduleType = scheduleType;
         return this;
@@ -152,6 +167,7 @@ public class ConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceCatalogId")
     public String sourceCatalogId;
+
     public ConnectionRead withSourceCatalogId(String sourceCatalogId) {
         this.sourceCatalogId = sourceCatalogId;
         return this;
@@ -159,6 +175,7 @@ public class ConnectionRead {
     
     @JsonProperty("sourceId")
     public String sourceId;
+
     public ConnectionRead withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -169,6 +186,7 @@ public class ConnectionRead {
      */
     @JsonProperty("status")
     public ConnectionStatusEnum status;
+
     public ConnectionRead withStatus(ConnectionStatusEnum status) {
         this.status = status;
         return this;
@@ -179,9 +197,19 @@ public class ConnectionRead {
      */
     @JsonProperty("syncCatalog")
     public AirbyteCatalog syncCatalog;
+
     public ConnectionRead withSyncCatalog(AirbyteCatalog syncCatalog) {
         this.syncCatalog = syncCatalog;
         return this;
     }
     
+    public ConnectionRead(@JsonProperty("breakingChange") Boolean breakingChange, @JsonProperty("connectionId") String connectionId, @JsonProperty("destinationId") String destinationId, @JsonProperty("name") String name, @JsonProperty("sourceId") String sourceId, @JsonProperty("status") ConnectionStatusEnum status, @JsonProperty("syncCatalog") AirbyteCatalog syncCatalog) {
+        this.breakingChange = breakingChange;
+        this.connectionId = connectionId;
+        this.destinationId = destinationId;
+        this.name = name;
+        this.sourceId = sourceId;
+        this.status = status;
+        this.syncCatalog = syncCatalog;
+  }
 }

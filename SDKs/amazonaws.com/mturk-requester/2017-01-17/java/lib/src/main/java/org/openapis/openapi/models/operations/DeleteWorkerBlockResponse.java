@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWorkerBlockResponse {
     
     public String contentType;
+
     public DeleteWorkerBlockResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteWorkerBlockResponse {
      */
     
     public java.util.Map<String, Object> deleteWorkerBlockResponse;
+
     public DeleteWorkerBlockResponse withDeleteWorkerBlockResponse(java.util.Map<String, Object> deleteWorkerBlockResponse) {
         this.deleteWorkerBlockResponse = deleteWorkerBlockResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWorkerBlockResponse {
      */
     
     public Object requestError;
+
     public DeleteWorkerBlockResponse withRequestError(Object requestError) {
         this.requestError = requestError;
         return this;
@@ -39,6 +43,7 @@ public class DeleteWorkerBlockResponse {
      */
     
     public Object serviceFault;
+
     public DeleteWorkerBlockResponse withServiceFault(Object serviceFault) {
         this.serviceFault = serviceFault;
         return this;
@@ -46,6 +51,7 @@ public class DeleteWorkerBlockResponse {
     
     
     public Integer statusCode;
+
     public DeleteWorkerBlockResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteWorkerBlockResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWorkerBlockResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteWorkerBlockResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

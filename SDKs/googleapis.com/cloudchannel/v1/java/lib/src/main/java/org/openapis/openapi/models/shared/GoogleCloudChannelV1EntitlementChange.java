@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1EntitlementChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activationReason")
     public GoogleCloudChannelV1EntitlementChangeActivationReasonEnum activationReason;
+
     public GoogleCloudChannelV1EntitlementChange withActivationReason(GoogleCloudChannelV1EntitlementChangeActivationReasonEnum activationReason) {
         this.activationReason = activationReason;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1EntitlementChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellationReason")
     public GoogleCloudChannelV1EntitlementChangeCancellationReasonEnum cancellationReason;
+
     public GoogleCloudChannelV1EntitlementChange withCancellationReason(GoogleCloudChannelV1EntitlementChangeCancellationReasonEnum cancellationReason) {
         this.cancellationReason = cancellationReason;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudChannelV1EntitlementChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changeType")
     public GoogleCloudChannelV1EntitlementChangeChangeTypeEnum changeType;
+
     public GoogleCloudChannelV1EntitlementChange withChangeType(GoogleCloudChannelV1EntitlementChangeChangeTypeEnum changeType) {
         this.changeType = changeType;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudChannelV1EntitlementChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudChannelV1EntitlementChange withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudChannelV1EntitlementChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entitlement")
     public String entitlement;
+
     public GoogleCloudChannelV1EntitlementChange withEntitlement(String entitlement) {
         this.entitlement = entitlement;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudChannelV1EntitlementChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offer")
     public String offer;
+
     public GoogleCloudChannelV1EntitlementChange withOffer(String offer) {
         this.offer = offer;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudChannelV1EntitlementChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public String operator;
+
     public GoogleCloudChannelV1EntitlementChange withOperator(String operator) {
         this.operator = operator;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudChannelV1EntitlementChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorType")
     public GoogleCloudChannelV1EntitlementChangeOperatorTypeEnum operatorType;
+
     public GoogleCloudChannelV1EntitlementChange withOperatorType(GoogleCloudChannelV1EntitlementChangeOperatorTypeEnum operatorType) {
         this.operatorType = operatorType;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudChannelV1EntitlementChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otherChangeReason")
     public String otherChangeReason;
+
     public GoogleCloudChannelV1EntitlementChange withOtherChangeReason(String otherChangeReason) {
         this.otherChangeReason = otherChangeReason;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudChannelV1EntitlementChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public GoogleCloudChannelV1Parameter[] parameters;
+
     public GoogleCloudChannelV1EntitlementChange withParameters(GoogleCloudChannelV1Parameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudChannelV1EntitlementChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisionedService")
     public GoogleCloudChannelV1ProvisionedService provisionedService;
+
     public GoogleCloudChannelV1EntitlementChange withProvisionedService(GoogleCloudChannelV1ProvisionedService provisionedService) {
         this.provisionedService = provisionedService;
         return this;
@@ -139,9 +150,11 @@ public class GoogleCloudChannelV1EntitlementChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspensionReason")
     public GoogleCloudChannelV1EntitlementChangeSuspensionReasonEnum suspensionReason;
+
     public GoogleCloudChannelV1EntitlementChange withSuspensionReason(GoogleCloudChannelV1EntitlementChangeSuspensionReasonEnum suspensionReason) {
         this.suspensionReason = suspensionReason;
         return this;
     }
     
+    public GoogleCloudChannelV1EntitlementChange(){}
 }

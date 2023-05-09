@@ -59,4 +59,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ShopperStatusBillingStateEn
 lib/src/main/java/org/openapis/openapi/models/shared/ShopperStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/ShopperUpdateMarketIdEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ShopperUpdate.java
+docs/sdk/README.md
+docs/v1/README.md
 USAGE.md

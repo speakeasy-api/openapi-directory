@@ -15,9 +15,11 @@ public class DescribeRaidArraysResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RaidArrays")
     public RaidArray[] raidArrays;
+
     public DescribeRaidArraysResult withRaidArrays(RaidArray[] raidArrays) {
         this.raidArrays = raidArrays;
         return this;
     }
     
+    public DescribeRaidArraysResult(){}
 }

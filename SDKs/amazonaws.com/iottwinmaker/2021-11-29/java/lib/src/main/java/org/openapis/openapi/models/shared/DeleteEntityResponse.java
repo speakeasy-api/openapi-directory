@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteEntityResponse {
     @JsonProperty("state")
     public StateEnum state;
+
     public DeleteEntityResponse withState(StateEnum state) {
         this.state = state;
         return this;
     }
     
+    public DeleteEntityResponse(@JsonProperty("state") StateEnum state) {
+        this.state = state;
+  }
 }

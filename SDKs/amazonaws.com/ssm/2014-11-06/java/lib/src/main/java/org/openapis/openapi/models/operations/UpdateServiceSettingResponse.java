@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateServiceSettingResponse {
     
     public String contentType;
+
     public UpdateServiceSettingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateServiceSettingResponse {
      */
     
     public Object internalServerError;
+
     public UpdateServiceSettingResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateServiceSettingResponse {
      */
     
     public Object serviceSettingNotFound;
+
     public UpdateServiceSettingResponse withServiceSettingNotFound(Object serviceSettingNotFound) {
         this.serviceSettingNotFound = serviceSettingNotFound;
         return this;
@@ -36,6 +40,7 @@ public class UpdateServiceSettingResponse {
     
     
     public Integer statusCode;
+
     public UpdateServiceSettingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateServiceSettingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateServiceSettingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateServiceSettingResponse {
      */
     
     public Object tooManyUpdates;
+
     public UpdateServiceSettingResponse withTooManyUpdates(Object tooManyUpdates) {
         this.tooManyUpdates = tooManyUpdates;
         return this;
@@ -63,9 +70,14 @@ public class UpdateServiceSettingResponse {
      */
     
     public java.util.Map<String, Object> updateServiceSettingResult;
+
     public UpdateServiceSettingResponse withUpdateServiceSettingResult(java.util.Map<String, Object> updateServiceSettingResult) {
         this.updateServiceSettingResult = updateServiceSettingResult;
         return this;
     }
     
+    public UpdateServiceSettingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

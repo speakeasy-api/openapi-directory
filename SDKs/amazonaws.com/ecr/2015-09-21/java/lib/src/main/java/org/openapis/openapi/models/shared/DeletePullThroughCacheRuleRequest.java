@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeletePullThroughCacheRuleRequest {
     @JsonProperty("ecrRepositoryPrefix")
     public String ecrRepositoryPrefix;
+
     public DeletePullThroughCacheRuleRequest withEcrRepositoryPrefix(String ecrRepositoryPrefix) {
         this.ecrRepositoryPrefix = ecrRepositoryPrefix;
         return this;
@@ -19,9 +20,13 @@ public class DeletePullThroughCacheRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public DeletePullThroughCacheRuleRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
     }
     
+    public DeletePullThroughCacheRuleRequest(@JsonProperty("ecrRepositoryPrefix") String ecrRepositoryPrefix) {
+        this.ecrRepositoryPrefix = ecrRepositoryPrefix;
+  }
 }

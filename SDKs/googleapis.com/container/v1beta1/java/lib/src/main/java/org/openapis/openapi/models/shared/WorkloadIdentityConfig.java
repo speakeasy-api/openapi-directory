@@ -18,6 +18,7 @@ public class WorkloadIdentityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityNamespace")
     public String identityNamespace;
+
     public WorkloadIdentityConfig withIdentityNamespace(String identityNamespace) {
         this.identityNamespace = identityNamespace;
         return this;
@@ -29,6 +30,7 @@ public class WorkloadIdentityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProvider")
     public String identityProvider;
+
     public WorkloadIdentityConfig withIdentityProvider(String identityProvider) {
         this.identityProvider = identityProvider;
         return this;
@@ -40,9 +42,11 @@ public class WorkloadIdentityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadPool")
     public String workloadPool;
+
     public WorkloadIdentityConfig withWorkloadPool(String workloadPool) {
         this.workloadPool = workloadPool;
         return this;
     }
     
+    public WorkloadIdentityConfig(){}
 }

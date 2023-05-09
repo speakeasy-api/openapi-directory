@@ -148,6 +148,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -180,7 +185,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSessionResponse res = new org.openapis.openapi.models.operations.DeleteSessionResponse() {{
+        org.openapis.openapi.models.operations.DeleteSessionResponse res = new org.openapis.openapi.models.operations.DeleteSessionResponse(contentType, httpRes.statusCode()) {{
             deleteSessionResponse = null;
             accessDeniedException = null;
             resourceNotFoundException = null;
@@ -189,8 +194,6 @@ public class SDK {
             internalServerException = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -275,7 +278,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSessionResponse res = new org.openapis.openapi.models.operations.GetSessionResponse() {{
+        org.openapis.openapi.models.operations.GetSessionResponse res = new org.openapis.openapi.models.operations.GetSessionResponse(contentType, httpRes.statusCode()) {{
             getSessionResponse = null;
             accessDeniedException = null;
             resourceNotFoundException = null;
@@ -283,8 +286,6 @@ public class SDK {
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -367,7 +368,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSessionResponse res = new org.openapis.openapi.models.operations.PutSessionResponse() {{
+        org.openapis.openapi.models.operations.PutSessionResponse res = new org.openapis.openapi.models.operations.PutSessionResponse(contentType, httpRes.statusCode()) {{
             putSessionResponse = null;
             accessDeniedException = null;
             resourceNotFoundException = null;
@@ -378,8 +379,6 @@ public class SDK {
             dependencyFailedException = null;
             badGatewayException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -483,7 +482,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecognizeTextResponse res = new org.openapis.openapi.models.operations.RecognizeTextResponse() {{
+        org.openapis.openapi.models.operations.RecognizeTextResponse res = new org.openapis.openapi.models.operations.RecognizeTextResponse(contentType, httpRes.statusCode()) {{
             recognizeTextResponse = null;
             accessDeniedException = null;
             resourceNotFoundException = null;
@@ -494,8 +493,6 @@ public class SDK {
             dependencyFailedException = null;
             badGatewayException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -599,7 +596,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecognizeUtteranceResponse res = new org.openapis.openapi.models.operations.RecognizeUtteranceResponse() {{
+        org.openapis.openapi.models.operations.RecognizeUtteranceResponse res = new org.openapis.openapi.models.operations.RecognizeUtteranceResponse(contentType, httpRes.statusCode()) {{
             recognizeUtteranceResponse = null;
             accessDeniedException = null;
             resourceNotFoundException = null;
@@ -610,8 +607,6 @@ public class SDK {
             dependencyFailedException = null;
             badGatewayException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

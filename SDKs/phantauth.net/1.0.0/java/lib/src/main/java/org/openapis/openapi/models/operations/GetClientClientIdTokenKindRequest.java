@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClientClientIdTokenKindRequest {
@@ -12,6 +13,7 @@ public class GetClientClientIdTokenKindRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
     public String clientId;
+
     public GetClientClientIdTokenKindRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -22,9 +24,14 @@ public class GetClientClientIdTokenKindRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=kind")
     public GetClientClientIdTokenKindKindEnum kind;
+
     public GetClientClientIdTokenKindRequest withKind(GetClientClientIdTokenKindKindEnum kind) {
         this.kind = kind;
         return this;
     }
     
+    public GetClientClientIdTokenKindRequest(@JsonProperty("client_id") String clientId, @JsonProperty("kind") GetClientClientIdTokenKindKindEnum kind) {
+        this.clientId = clientId;
+        this.kind = kind;
+  }
 }

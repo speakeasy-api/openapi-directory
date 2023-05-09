@@ -15,6 +15,7 @@ public class JobDriver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkSqlJobDriver")
     public SparkSqlJobDriver sparkSqlJobDriver;
+
     public JobDriver withSparkSqlJobDriver(SparkSqlJobDriver sparkSqlJobDriver) {
         this.sparkSqlJobDriver = sparkSqlJobDriver;
         return this;
@@ -23,9 +24,11 @@ public class JobDriver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkSubmitJobDriver")
     public SparkSubmitJobDriver sparkSubmitJobDriver;
+
     public JobDriver withSparkSubmitJobDriver(SparkSubmitJobDriver sparkSubmitJobDriver) {
         this.sparkSubmitJobDriver = sparkSubmitJobDriver;
         return this;
     }
     
+    public JobDriver(){}
 }

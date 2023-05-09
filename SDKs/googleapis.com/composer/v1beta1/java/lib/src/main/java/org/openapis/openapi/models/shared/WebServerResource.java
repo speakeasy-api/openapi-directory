@@ -18,6 +18,7 @@ public class WebServerResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu")
     public Float cpu;
+
     public WebServerResource withCpu(Float cpu) {
         this.cpu = cpu;
         return this;
@@ -29,6 +30,7 @@ public class WebServerResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryGb")
     public Float memoryGb;
+
     public WebServerResource withMemoryGb(Float memoryGb) {
         this.memoryGb = memoryGb;
         return this;
@@ -40,9 +42,11 @@ public class WebServerResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageGb")
     public Float storageGb;
+
     public WebServerResource withStorageGb(Float storageGb) {
         this.storageGb = storageGb;
         return this;
     }
     
+    public WebServerResource(){}
 }

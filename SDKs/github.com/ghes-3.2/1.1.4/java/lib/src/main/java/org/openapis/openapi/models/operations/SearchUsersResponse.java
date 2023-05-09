@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchUsersResponse {
     
     public String contentType;
+
     public SearchUsersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SearchUsersResponse {
     
     
     public Integer statusCode;
+
     public SearchUsersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SearchUsersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchUsersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SearchUsersResponse {
      */
     
     public SearchUsers200ApplicationJSON searchUsers200ApplicationJSONObject;
+
     public SearchUsersResponse withSearchUsers200ApplicationJSONObject(SearchUsers200ApplicationJSON searchUsers200ApplicationJSONObject) {
         this.searchUsers200ApplicationJSONObject = searchUsers200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SearchUsersResponse {
      */
     
     public SearchUsers503ApplicationJSON searchUsers503ApplicationJSONObject;
+
     public SearchUsersResponse withSearchUsers503ApplicationJSONObject(SearchUsers503ApplicationJSON searchUsers503ApplicationJSONObject) {
         this.searchUsers503ApplicationJSONObject = searchUsers503ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class SearchUsersResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public SearchUsersResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public SearchUsersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

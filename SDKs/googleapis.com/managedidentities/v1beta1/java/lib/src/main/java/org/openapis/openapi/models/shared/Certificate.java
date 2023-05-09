@@ -18,6 +18,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public Certificate withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -29,6 +30,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuingCertificate")
     public Certificate issuingCertificate;
+
     public Certificate withIssuingCertificate(Certificate issuingCertificate) {
         this.issuingCertificate = issuingCertificate;
         return this;
@@ -40,6 +42,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public String subject;
+
     public Certificate withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -51,6 +54,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAlternativeName")
     public String[] subjectAlternativeName;
+
     public Certificate withSubjectAlternativeName(String[] subjectAlternativeName) {
         this.subjectAlternativeName = subjectAlternativeName;
         return this;
@@ -62,9 +66,11 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbprint")
     public String thumbprint;
+
     public Certificate withThumbprint(String thumbprint) {
         this.thumbprint = thumbprint;
         return this;
     }
     
+    public Certificate(){}
 }

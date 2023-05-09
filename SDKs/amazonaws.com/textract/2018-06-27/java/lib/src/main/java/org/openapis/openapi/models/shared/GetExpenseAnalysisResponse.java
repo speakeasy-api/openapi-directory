@@ -15,6 +15,7 @@ public class GetExpenseAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyzeExpenseModelVersion")
     public String analyzeExpenseModelVersion;
+
     public GetExpenseAnalysisResponse withAnalyzeExpenseModelVersion(String analyzeExpenseModelVersion) {
         this.analyzeExpenseModelVersion = analyzeExpenseModelVersion;
         return this;
@@ -23,6 +24,7 @@ public class GetExpenseAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentMetadata")
     public DocumentMetadata documentMetadata;
+
     public GetExpenseAnalysisResponse withDocumentMetadata(DocumentMetadata documentMetadata) {
         this.documentMetadata = documentMetadata;
         return this;
@@ -31,6 +33,7 @@ public class GetExpenseAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpenseDocuments")
     public ExpenseDocument[] expenseDocuments;
+
     public GetExpenseAnalysisResponse withExpenseDocuments(ExpenseDocument[] expenseDocuments) {
         this.expenseDocuments = expenseDocuments;
         return this;
@@ -39,6 +42,7 @@ public class GetExpenseAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public GetExpenseAnalysisResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -47,6 +51,7 @@ public class GetExpenseAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetExpenseAnalysisResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -55,6 +60,7 @@ public class GetExpenseAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public GetExpenseAnalysisResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -63,9 +69,11 @@ public class GetExpenseAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Warnings")
     public Warning[] warnings;
+
     public GetExpenseAnalysisResponse withWarnings(Warning[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public GetExpenseAnalysisResponse(){}
 }

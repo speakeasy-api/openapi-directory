@@ -18,6 +18,7 @@ public class ListMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continue")
     public String continue_;
+
     public ListMeta withContinue(String continue_) {
         this.continue_ = continue_;
         return this;
@@ -29,6 +30,7 @@ public class ListMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceVersion")
     public String resourceVersion;
+
     public ListMeta withResourceVersion(String resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -40,9 +42,11 @@ public class ListMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public ListMeta withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public ListMeta(){}
 }

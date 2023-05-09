@@ -15,6 +15,7 @@ public class CreateOntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyTagsToBackups")
     public Boolean copyTagsToBackups;
+
     public CreateOntapVolumeConfiguration withCopyTagsToBackups(Boolean copyTagsToBackups) {
         this.copyTagsToBackups = copyTagsToBackups;
         return this;
@@ -23,6 +24,7 @@ public class CreateOntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JunctionPath")
     public String junctionPath;
+
     public CreateOntapVolumeConfiguration withJunctionPath(String junctionPath) {
         this.junctionPath = junctionPath;
         return this;
@@ -31,6 +33,7 @@ public class CreateOntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OntapVolumeType")
     public InputOntapVolumeTypeEnum ontapVolumeType;
+
     public CreateOntapVolumeConfiguration withOntapVolumeType(InputOntapVolumeTypeEnum ontapVolumeType) {
         this.ontapVolumeType = ontapVolumeType;
         return this;
@@ -39,6 +42,7 @@ public class CreateOntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityStyle")
     public SecurityStyleEnum securityStyle;
+
     public CreateOntapVolumeConfiguration withSecurityStyle(SecurityStyleEnum securityStyle) {
         this.securityStyle = securityStyle;
         return this;
@@ -46,6 +50,7 @@ public class CreateOntapVolumeConfiguration {
     
     @JsonProperty("SizeInMegabytes")
     public Long sizeInMegabytes;
+
     public CreateOntapVolumeConfiguration withSizeInMegabytes(Long sizeInMegabytes) {
         this.sizeInMegabytes = sizeInMegabytes;
         return this;
@@ -54,6 +59,7 @@ public class CreateOntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotPolicy")
     public String snapshotPolicy;
+
     public CreateOntapVolumeConfiguration withSnapshotPolicy(String snapshotPolicy) {
         this.snapshotPolicy = snapshotPolicy;
         return this;
@@ -62,6 +68,7 @@ public class CreateOntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageEfficiencyEnabled")
     public Boolean storageEfficiencyEnabled;
+
     public CreateOntapVolumeConfiguration withStorageEfficiencyEnabled(Boolean storageEfficiencyEnabled) {
         this.storageEfficiencyEnabled = storageEfficiencyEnabled;
         return this;
@@ -69,6 +76,7 @@ public class CreateOntapVolumeConfiguration {
     
     @JsonProperty("StorageVirtualMachineId")
     public String storageVirtualMachineId;
+
     public CreateOntapVolumeConfiguration withStorageVirtualMachineId(String storageVirtualMachineId) {
         this.storageVirtualMachineId = storageVirtualMachineId;
         return this;
@@ -80,9 +88,14 @@ public class CreateOntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TieringPolicy")
     public TieringPolicy tieringPolicy;
+
     public CreateOntapVolumeConfiguration withTieringPolicy(TieringPolicy tieringPolicy) {
         this.tieringPolicy = tieringPolicy;
         return this;
     }
     
+    public CreateOntapVolumeConfiguration(@JsonProperty("SizeInMegabytes") Long sizeInMegabytes, @JsonProperty("StorageVirtualMachineId") String storageVirtualMachineId) {
+        this.sizeInMegabytes = sizeInMegabytes;
+        this.storageVirtualMachineId = storageVirtualMachineId;
+  }
 }

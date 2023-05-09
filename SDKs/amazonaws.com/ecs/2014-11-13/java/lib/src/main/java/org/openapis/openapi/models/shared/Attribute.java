@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Attribute {
     @JsonProperty("name")
     public String name;
+
     public Attribute withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +23,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetId")
     public String targetId;
+
     public Attribute withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
@@ -30,6 +32,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetType")
     public TargetTypeEnum targetType;
+
     public Attribute withTargetType(TargetTypeEnum targetType) {
         this.targetType = targetType;
         return this;
@@ -38,9 +41,13 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Attribute withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Attribute(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

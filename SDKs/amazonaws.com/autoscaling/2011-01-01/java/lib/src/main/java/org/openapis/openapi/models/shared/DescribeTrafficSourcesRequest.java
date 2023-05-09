@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeTrafficSourcesRequest {
     
     public String autoScalingGroupName;
+
     public DescribeTrafficSourcesRequest withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeTrafficSourcesRequest {
     
     
     public Long maxRecords;
+
     public DescribeTrafficSourcesRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -23,6 +25,7 @@ public class DescribeTrafficSourcesRequest {
     
     
     public String nextToken;
+
     public DescribeTrafficSourcesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +33,13 @@ public class DescribeTrafficSourcesRequest {
     
     
     public String trafficSourceType;
+
     public DescribeTrafficSourcesRequest withTrafficSourceType(String trafficSourceType) {
         this.trafficSourceType = trafficSourceType;
         return this;
     }
     
+    public DescribeTrafficSourcesRequest(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+  }
 }

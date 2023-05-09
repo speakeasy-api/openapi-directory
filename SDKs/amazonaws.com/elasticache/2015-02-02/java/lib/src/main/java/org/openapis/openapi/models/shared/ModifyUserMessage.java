@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyUserMessage {
     
     public String accessString;
+
     public ModifyUserMessage withAccessString(String accessString) {
         this.accessString = accessString;
         return this;
@@ -16,6 +17,7 @@ public class ModifyUserMessage {
     
     
     public String appendAccessString;
+
     public ModifyUserMessage withAppendAccessString(String appendAccessString) {
         this.appendAccessString = appendAccessString;
         return this;
@@ -23,6 +25,7 @@ public class ModifyUserMessage {
     
     
     public AuthenticationMode authenticationMode;
+
     public ModifyUserMessage withAuthenticationMode(AuthenticationMode authenticationMode) {
         this.authenticationMode = authenticationMode;
         return this;
@@ -30,6 +33,7 @@ public class ModifyUserMessage {
     
     
     public Boolean noPasswordRequired;
+
     public ModifyUserMessage withNoPasswordRequired(Boolean noPasswordRequired) {
         this.noPasswordRequired = noPasswordRequired;
         return this;
@@ -37,6 +41,7 @@ public class ModifyUserMessage {
     
     
     public String[] passwords;
+
     public ModifyUserMessage withPasswords(String[] passwords) {
         this.passwords = passwords;
         return this;
@@ -44,9 +49,13 @@ public class ModifyUserMessage {
     
     
     public String userId;
+
     public ModifyUserMessage withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public ModifyUserMessage(@JsonProperty("UserId") String userId) {
+        this.userId = userId;
+  }
 }

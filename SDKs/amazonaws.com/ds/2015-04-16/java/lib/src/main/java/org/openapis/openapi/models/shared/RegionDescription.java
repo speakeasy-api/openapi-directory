@@ -20,6 +20,7 @@ public class RegionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredNumberOfDomainControllers")
     public Long desiredNumberOfDomainControllers;
+
     public RegionDescription withDesiredNumberOfDomainControllers(Long desiredNumberOfDomainControllers) {
         this.desiredNumberOfDomainControllers = desiredNumberOfDomainControllers;
         return this;
@@ -28,6 +29,7 @@ public class RegionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public RegionDescription withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -38,6 +40,7 @@ public class RegionDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public RegionDescription withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -48,6 +51,7 @@ public class RegionDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LaunchTime")
     public OffsetDateTime launchTime;
+
     public RegionDescription withLaunchTime(OffsetDateTime launchTime) {
         this.launchTime = launchTime;
         return this;
@@ -56,6 +60,7 @@ public class RegionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionName")
     public String regionName;
+
     public RegionDescription withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -64,6 +69,7 @@ public class RegionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionType")
     public RegionTypeEnum regionType;
+
     public RegionDescription withRegionType(RegionTypeEnum regionType) {
         this.regionType = regionType;
         return this;
@@ -72,6 +78,7 @@ public class RegionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DirectoryStageEnum status;
+
     public RegionDescription withStatus(DirectoryStageEnum status) {
         this.status = status;
         return this;
@@ -82,6 +89,7 @@ public class RegionDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StatusLastUpdatedDateTime")
     public OffsetDateTime statusLastUpdatedDateTime;
+
     public RegionDescription withStatusLastUpdatedDateTime(OffsetDateTime statusLastUpdatedDateTime) {
         this.statusLastUpdatedDateTime = statusLastUpdatedDateTime;
         return this;
@@ -93,9 +101,11 @@ public class RegionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcSettings")
     public DirectoryVpcSettings vpcSettings;
+
     public RegionDescription withVpcSettings(DirectoryVpcSettings vpcSettings) {
         this.vpcSettings = vpcSettings;
         return this;
     }
     
+    public RegionDescription(){}
 }

@@ -15,6 +15,7 @@ public class V3StopGeosearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disruption_ids")
     public Long[] disruptionIds;
+
     public V3StopGeosearch withDisruptionIds(Long[] disruptionIds) {
         this.disruptionIds = disruptionIds;
         return this;
@@ -26,6 +27,7 @@ public class V3StopGeosearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("route_type")
     public Integer routeType;
+
     public V3StopGeosearch withRouteType(Integer routeType) {
         this.routeType = routeType;
         return this;
@@ -37,6 +39,7 @@ public class V3StopGeosearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routes")
     public java.util.Map<String, Object>[] routes;
+
     public V3StopGeosearch withRoutes(java.util.Map<String, Object>[] routes) {
         this.routes = routes;
         return this;
@@ -48,6 +51,7 @@ public class V3StopGeosearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stop_distance")
     public Float stopDistance;
+
     public V3StopGeosearch withStopDistance(Float stopDistance) {
         this.stopDistance = stopDistance;
         return this;
@@ -59,6 +63,7 @@ public class V3StopGeosearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stop_id")
     public Integer stopId;
+
     public V3StopGeosearch withStopId(Integer stopId) {
         this.stopId = stopId;
         return this;
@@ -70,6 +75,7 @@ public class V3StopGeosearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stop_landmark")
     public String stopLandmark;
+
     public V3StopGeosearch withStopLandmark(String stopLandmark) {
         this.stopLandmark = stopLandmark;
         return this;
@@ -81,6 +87,7 @@ public class V3StopGeosearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stop_latitude")
     public Float stopLatitude;
+
     public V3StopGeosearch withStopLatitude(Float stopLatitude) {
         this.stopLatitude = stopLatitude;
         return this;
@@ -92,6 +99,7 @@ public class V3StopGeosearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stop_longitude")
     public Float stopLongitude;
+
     public V3StopGeosearch withStopLongitude(Float stopLongitude) {
         this.stopLongitude = stopLongitude;
         return this;
@@ -103,6 +111,7 @@ public class V3StopGeosearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stop_name")
     public String stopName;
+
     public V3StopGeosearch withStopName(String stopName) {
         this.stopName = stopName;
         return this;
@@ -114,6 +123,7 @@ public class V3StopGeosearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stop_sequence")
     public Integer stopSequence;
+
     public V3StopGeosearch withStopSequence(Integer stopSequence) {
         this.stopSequence = stopSequence;
         return this;
@@ -125,9 +135,11 @@ public class V3StopGeosearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stop_suburb")
     public String stopSuburb;
+
     public V3StopGeosearch withStopSuburb(String stopSuburb) {
         this.stopSuburb = stopSuburb;
         return this;
     }
     
+    public V3StopGeosearch(){}
 }

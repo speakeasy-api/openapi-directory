@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListWorkflowRunArtifactsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsListWorkflowRunArtifactsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -19,6 +21,7 @@ public class ActionsListWorkflowRunArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActionsListWorkflowRunArtifactsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -29,6 +32,7 @@ public class ActionsListWorkflowRunArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActionsListWorkflowRunArtifactsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -36,6 +40,7 @@ public class ActionsListWorkflowRunArtifactsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsListWorkflowRunArtifactsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -46,9 +51,15 @@ public class ActionsListWorkflowRunArtifactsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_id")
     public Long runId;
+
     public ActionsListWorkflowRunArtifactsRequest withRunId(Long runId) {
         this.runId = runId;
         return this;
     }
     
+    public ActionsListWorkflowRunArtifactsRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("run_id") Long runId) {
+        this.owner = owner;
+        this.repo = repo;
+        this.runId = runId;
+  }
 }

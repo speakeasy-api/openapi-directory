@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDataIngestionJobsResponse {
@@ -12,6 +13,7 @@ public class ListDataIngestionJobsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDataIngestionJobsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListDataIngestionJobsResponse {
     
     
     public String contentType;
+
     public ListDataIngestionJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDataIngestionJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListDataIngestionJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListDataIngestionJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDataIngestionJobsResponse listDataIngestionJobsResponse;
+
     public ListDataIngestionJobsResponse withListDataIngestionJobsResponse(org.openapis.openapi.models.shared.ListDataIngestionJobsResponse listDataIngestionJobsResponse) {
         this.listDataIngestionJobsResponse = listDataIngestionJobsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListDataIngestionJobsResponse {
     
     
     public Integer statusCode;
+
     public ListDataIngestionJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListDataIngestionJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDataIngestionJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListDataIngestionJobsResponse {
      */
     
     public Object throttlingException;
+
     public ListDataIngestionJobsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListDataIngestionJobsResponse {
      */
     
     public Object validationException;
+
     public ListDataIngestionJobsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListDataIngestionJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

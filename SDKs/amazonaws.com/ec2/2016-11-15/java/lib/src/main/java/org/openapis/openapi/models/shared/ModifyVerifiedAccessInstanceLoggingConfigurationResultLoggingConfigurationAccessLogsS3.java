@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3 {
     
     public String bucketName;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3 withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -19,6 +20,7 @@ public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfig
     
     
     public String bucketOwner;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3 withBucketOwner(String bucketOwner) {
         this.bucketOwner = bucketOwner;
         return this;
@@ -26,6 +28,7 @@ public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfig
     
     
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3DeliveryStatus deliveryStatus;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3 withDeliveryStatus(ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3DeliveryStatus deliveryStatus) {
         this.deliveryStatus = deliveryStatus;
         return this;
@@ -33,6 +36,7 @@ public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfig
     
     
     public Boolean enabled;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3 withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -40,9 +44,11 @@ public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfig
     
     
     public String prefix;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3 withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3(){}
 }

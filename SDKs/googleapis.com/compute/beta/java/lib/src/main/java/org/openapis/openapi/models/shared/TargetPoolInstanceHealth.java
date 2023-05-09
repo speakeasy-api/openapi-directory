@@ -15,6 +15,7 @@ public class TargetPoolInstanceHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthStatus")
     public HealthStatus[] healthStatus;
+
     public TargetPoolInstanceHealth withHealthStatus(HealthStatus[] healthStatus) {
         this.healthStatus = healthStatus;
         return this;
@@ -26,9 +27,11 @@ public class TargetPoolInstanceHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TargetPoolInstanceHealth withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public TargetPoolInstanceHealth(){}
 }

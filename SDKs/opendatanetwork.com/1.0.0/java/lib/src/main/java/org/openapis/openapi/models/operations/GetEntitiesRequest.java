@@ -12,6 +12,7 @@ public class GetEntitiesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-App-Token")
     public String xAppToken;
+
     public GetEntitiesRequest withXAppToken(String xAppToken) {
         this.xAppToken = xAppToken;
         return this;
@@ -23,6 +24,7 @@ public class GetEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_token")
     public String appToken;
+
     public GetEntitiesRequest withAppToken(String appToken) {
         this.appToken = appToken;
         return this;
@@ -33,6 +35,7 @@ public class GetEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_id")
     public String entityId;
+
     public GetEntitiesRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -43,6 +46,7 @@ public class GetEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_name")
     public String entityName;
+
     public GetEntitiesRequest withEntityName(String entityName) {
         this.entityName = entityName;
         return this;
@@ -53,9 +57,11 @@ public class GetEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_type")
     public String entityType;
+
     public GetEntitiesRequest withEntityType(String entityType) {
         this.entityType = entityType;
         return this;
     }
     
+    public GetEntitiesRequest(){}
 }

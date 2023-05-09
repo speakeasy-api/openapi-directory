@@ -15,6 +15,7 @@ public class ProgressCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CancelledSteps")
     public Long cancelledSteps;
+
     public ProgressCounters withCancelledSteps(Long cancelledSteps) {
         this.cancelledSteps = cancelledSteps;
         return this;
@@ -23,6 +24,7 @@ public class ProgressCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedSteps")
     public Long failedSteps;
+
     public ProgressCounters withFailedSteps(Long failedSteps) {
         this.failedSteps = failedSteps;
         return this;
@@ -31,6 +33,7 @@ public class ProgressCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuccessSteps")
     public Long successSteps;
+
     public ProgressCounters withSuccessSteps(Long successSteps) {
         this.successSteps = successSteps;
         return this;
@@ -39,6 +42,7 @@ public class ProgressCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimedOutSteps")
     public Long timedOutSteps;
+
     public ProgressCounters withTimedOutSteps(Long timedOutSteps) {
         this.timedOutSteps = timedOutSteps;
         return this;
@@ -47,9 +51,11 @@ public class ProgressCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalSteps")
     public Long totalSteps;
+
     public ProgressCounters withTotalSteps(Long totalSteps) {
         this.totalSteps = totalSteps;
         return this;
     }
     
+    public ProgressCounters(){}
 }

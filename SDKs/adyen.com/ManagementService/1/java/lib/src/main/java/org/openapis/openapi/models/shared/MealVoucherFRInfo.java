@@ -12,6 +12,7 @@ public class MealVoucherFRInfo {
      */
     @JsonProperty("conecsId")
     public String conecsId;
+
     public MealVoucherFRInfo withConecsId(String conecsId) {
         this.conecsId = conecsId;
         return this;
@@ -22,6 +23,7 @@ public class MealVoucherFRInfo {
      */
     @JsonProperty("siret")
     public String siret;
+
     public MealVoucherFRInfo withSiret(String siret) {
         this.siret = siret;
         return this;
@@ -32,9 +34,15 @@ public class MealVoucherFRInfo {
      */
     @JsonProperty("subTypes")
     public String[] subTypes;
+
     public MealVoucherFRInfo withSubTypes(String[] subTypes) {
         this.subTypes = subTypes;
         return this;
     }
     
+    public MealVoucherFRInfo(@JsonProperty("conecsId") String conecsId, @JsonProperty("siret") String siret, @JsonProperty("subTypes") String[] subTypes) {
+        this.conecsId = conecsId;
+        this.siret = siret;
+        this.subTypes = subTypes;
+  }
 }

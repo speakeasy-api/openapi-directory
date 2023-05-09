@@ -15,24 +15,24 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 ```java
 package hello.world;
 
+import java.time.OffsetDateTime;
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DrvlcSecurity;
+import org.openapis.openapi.models.operations.DrvlcRequestBody;
 import org.openapis.openapi.models.operations.DrvlcRequestBodyCertificateParameters;
 import org.openapis.openapi.models.operations.DrvlcRequestBodyFormatEnum;
-import org.openapis.openapi.models.operations.DrvlcRequestBody;
 import org.openapis.openapi.models.operations.DrvlcResponse;
+import org.openapis.openapi.models.operations.DrvlcSecurity;
+import org.openapis.openapi.models.shared.ConsentArtifactSchema;
+import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsent;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentData;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentDataConsumer;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentDataProvider;
+import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentPermission;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentPermissionDateRange;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentPermissionFrequency;
-import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentPermission;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentPurpose;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentUser;
-import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsent;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaSignature;
-import org.openapis.openapi.models.shared.ConsentArtifactSchema;
 
 public class Application {
     public static void main(String[] args) {
@@ -40,67 +40,24 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DrvlcRequestBody req = new DrvlcRequestBody() {{
-                certificateParameters = new DrvlcRequestBodyCertificateParameters() {{
-                    dob = "31-12-1980";
-                    fullName = "Sunil Kumar";
-                    uid = "123412341234";
-                    dlno = "Ex. JH02/2009/236543";
-                }};
-                consentArtifact = new ConsentArtifactSchema() {{
-                    consent = new ConsentArtifactSchemaConsent() {{
-                        consentId = "ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba";
-                        data = new ConsentArtifactSchemaConsentData() {{
-                            id = "corrupti";
-                        }};
-                        dataConsumer = new ConsentArtifactSchemaConsentDataConsumer() {{
-                            id = "provident";
-                        }};
-                        dataProvider = new ConsentArtifactSchemaConsentDataProvider() {{
-                            id = "distinctio";
-                        }};
-                        permission = new ConsentArtifactSchemaConsentPermission() {{
-                            access = "quibusdam";
-                            dateRange = new ConsentArtifactSchemaConsentPermissionDateRange() {{
-                                from = "2021-04-14T16:47:33.722Z";
-                                to = "2021-04-22T12:08:58.275Z";
-                            }};
-                            frequency = new ConsentArtifactSchemaConsentPermissionFrequency() {{
-                                repeats = 4236.55;
-                                unit = "error";
-                                value = 6458.94;
-                            }};
-                        }};
-                        purpose = new ConsentArtifactSchemaConsentPurpose() {{
-                            description = "suscipit";
-                        }};
-                        timestamp = "2022-09-14T09:35:47.986Z";
-                        user = new ConsentArtifactSchemaConsentUser() {{
-                            email = "Anahi38@hotmail.com";
-                            idNumber = "molestiae";
-                            idType = "minus";
-                            mobile = "645-598-0306 x03897";
-                        }};
-                    }};
-                    signature = new ConsentArtifactSchemaSignature() {{
-                        signature = "odit";
-                    }};
-                }};
-                format = "pdf";
-                txnId = "f7f1469c-29b0-4325-9dfc-c567200a70f7";
-            }}            
+            DrvlcRequestBody req = new DrvlcRequestBody(DrvlcRequestBodyFormatEnum.PDF, "f7f1469c-29b0-4325-9dfc-c567200a70f7") {{
+                certificateParameters = new DrvlcRequestBodyCertificateParameters("31-12-1980", "Sunil Kumar", "123412341234", "Ex. JH02/2009/236543");;
+                consentArtifact = new ConsentArtifactSchema(                new ConsentArtifactSchemaConsent("ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba",                 new ConsentArtifactSchemaConsentData("provident");,                 new ConsentArtifactSchemaConsentDataConsumer("distinctio");,                 new ConsentArtifactSchemaConsentDataProvider("quibusdam");,                 new ConsentArtifactSchemaConsentPermission("unde",                 new ConsentArtifactSchemaConsentPermissionDateRange(OffsetDateTime.parse("2021-05-14T08:28:11.899Z"), OffsetDateTime.parse("2021-09-24T02:21:06.409Z"));,                 new ConsentArtifactSchemaConsentPermissionFrequency(6235.64, "deserunt", 3843.82););,                 new ConsentArtifactSchemaConsentPurpose("iure");, OffsetDateTime.parse("2022-02-09T12:04:06.508Z"),                 new ConsentArtifactSchemaConsentUser("ipsa", "delectus", "tempora", "suscipit"););,                 new ConsentArtifactSchemaSignature("molestiae"););;
+            }};            
 
-            DrvlcResponse res = sdk.apIs.drvlc(req, new DrvlcSecurity() {{
+            DrvlcResponse res = sdk.apIs.drvlc(req, new DrvlcSecurity("minus", "placeat") {{
                 apiKey = "YOUR_API_KEY_HERE";
                 clientId = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -108,10 +65,10 @@ public class Application {
 ## Available Resources and Operations
 
 
-### apIs
+### [apIs](docs/apis/README.md)
 
-* `drvlc` - Driving License
-* `rvcer` - Registration of Vehicles
+* [drvlc](docs/apis/README.md#drvlc) - Driving License
+* [rvcer](docs/apis/README.md#rvcer) - Registration of Vehicles
 <!-- End SDK Available Operations -->
 
 ### Maturity

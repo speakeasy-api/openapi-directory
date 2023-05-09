@@ -15,6 +15,7 @@ public class EntityAnnotationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public EntityAnnotationResult withContent(String content) {
         this.content = content;
         return this;
@@ -26,9 +27,11 @@ public class EntityAnnotationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spans")
     public Span[] spans;
+
     public EntityAnnotationResult withSpans(Span[] spans) {
         this.spans = spans;
         return this;
     }
     
+    public EntityAnnotationResult(){}
 }

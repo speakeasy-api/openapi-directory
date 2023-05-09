@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResolveCustomerResponse {
     
     public String contentType;
+
     public ResolveCustomerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ResolveCustomerResponse {
      */
     
     public Object disabledApiException;
+
     public ResolveCustomerResponse withDisabledApiException(Object disabledApiException) {
         this.disabledApiException = disabledApiException;
         return this;
@@ -29,6 +32,7 @@ public class ResolveCustomerResponse {
      */
     
     public Object expiredTokenException;
+
     public ResolveCustomerResponse withExpiredTokenException(Object expiredTokenException) {
         this.expiredTokenException = expiredTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ResolveCustomerResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ResolveCustomerResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ResolveCustomerResponse {
      */
     
     public Object invalidTokenException;
+
     public ResolveCustomerResponse withInvalidTokenException(Object invalidTokenException) {
         this.invalidTokenException = invalidTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ResolveCustomerResponse {
      */
     
     public org.openapis.openapi.models.shared.ResolveCustomerResult resolveCustomerResult;
+
     public ResolveCustomerResponse withResolveCustomerResult(org.openapis.openapi.models.shared.ResolveCustomerResult resolveCustomerResult) {
         this.resolveCustomerResult = resolveCustomerResult;
         return this;
@@ -66,6 +73,7 @@ public class ResolveCustomerResponse {
     
     
     public Integer statusCode;
+
     public ResolveCustomerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ResolveCustomerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResolveCustomerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ResolveCustomerResponse {
      */
     
     public Object throttlingException;
+
     public ResolveCustomerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ResolveCustomerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

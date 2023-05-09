@@ -15,6 +15,7 @@ public class ResourceEvaluationFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationContextIdentifier")
     public String evaluationContextIdentifier;
+
     public ResourceEvaluationFilters withEvaluationContextIdentifier(String evaluationContextIdentifier) {
         this.evaluationContextIdentifier = evaluationContextIdentifier;
         return this;
@@ -23,6 +24,7 @@ public class ResourceEvaluationFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationMode")
     public EvaluationModeEnum evaluationMode;
+
     public ResourceEvaluationFilters withEvaluationMode(EvaluationModeEnum evaluationMode) {
         this.evaluationMode = evaluationMode;
         return this;
@@ -31,9 +33,11 @@ public class ResourceEvaluationFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeWindow")
     public TimeWindow timeWindow;
+
     public ResourceEvaluationFilters withTimeWindow(TimeWindow timeWindow) {
         this.timeWindow = timeWindow;
         return this;
     }
     
+    public ResourceEvaluationFilters(){}
 }

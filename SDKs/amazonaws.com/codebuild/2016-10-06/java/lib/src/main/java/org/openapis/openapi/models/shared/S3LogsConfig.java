@@ -18,6 +18,7 @@ public class S3LogsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketOwnerAccess")
     public BucketOwnerAccessEnum bucketOwnerAccess;
+
     public S3LogsConfig withBucketOwnerAccess(BucketOwnerAccessEnum bucketOwnerAccess) {
         this.bucketOwnerAccess = bucketOwnerAccess;
         return this;
@@ -26,6 +27,7 @@ public class S3LogsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionDisabled")
     public Boolean encryptionDisabled;
+
     public S3LogsConfig withEncryptionDisabled(Boolean encryptionDisabled) {
         this.encryptionDisabled = encryptionDisabled;
         return this;
@@ -34,6 +36,7 @@ public class S3LogsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public S3LogsConfig withLocation(String location) {
         this.location = location;
         return this;
@@ -41,9 +44,13 @@ public class S3LogsConfig {
     
     @JsonProperty("status")
     public LogsConfigStatusTypeEnum status;
+
     public S3LogsConfig withStatus(LogsConfigStatusTypeEnum status) {
         this.status = status;
         return this;
     }
     
+    public S3LogsConfig(@JsonProperty("status") LogsConfigStatusTypeEnum status) {
+        this.status = status;
+  }
 }

@@ -15,6 +15,7 @@ public class ListSourceRepositoriesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListSourceRepositoriesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,9 +27,11 @@ public class ListSourceRepositoriesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSourceRepositoriesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListSourceRepositoriesRequestBody(){}
 }

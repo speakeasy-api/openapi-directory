@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ParticipationStats {
     @JsonProperty("all")
     public Long[] all;
+
     public ParticipationStats withAll(Long[] all) {
         this.all = all;
         return this;
@@ -19,9 +20,14 @@ public class ParticipationStats {
     
     @JsonProperty("owner")
     public Long[] owner;
+
     public ParticipationStats withOwner(Long[] owner) {
         this.owner = owner;
         return this;
     }
     
+    public ParticipationStats(@JsonProperty("all") Long[] all, @JsonProperty("owner") Long[] owner) {
+        this.all = all;
+        this.owner = owner;
+  }
 }

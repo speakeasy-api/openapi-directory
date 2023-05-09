@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterWorkspaceDirectoryRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public RegisterWorkspaceDirectoryRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -19,6 +20,7 @@ public class RegisterWorkspaceDirectoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableSelfService")
     public Boolean enableSelfService;
+
     public RegisterWorkspaceDirectoryRequest withEnableSelfService(Boolean enableSelfService) {
         this.enableSelfService = enableSelfService;
         return this;
@@ -26,6 +28,7 @@ public class RegisterWorkspaceDirectoryRequest {
     
     @JsonProperty("EnableWorkDocs")
     public Boolean enableWorkDocs;
+
     public RegisterWorkspaceDirectoryRequest withEnableWorkDocs(Boolean enableWorkDocs) {
         this.enableWorkDocs = enableWorkDocs;
         return this;
@@ -34,6 +37,7 @@ public class RegisterWorkspaceDirectoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public RegisterWorkspaceDirectoryRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -42,6 +46,7 @@ public class RegisterWorkspaceDirectoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public RegisterWorkspaceDirectoryRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -50,9 +55,14 @@ public class RegisterWorkspaceDirectoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tenancy")
     public TenancyEnum tenancy;
+
     public RegisterWorkspaceDirectoryRequest withTenancy(TenancyEnum tenancy) {
         this.tenancy = tenancy;
         return this;
     }
     
+    public RegisterWorkspaceDirectoryRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("EnableWorkDocs") Boolean enableWorkDocs) {
+        this.directoryId = directoryId;
+        this.enableWorkDocs = enableWorkDocs;
+  }
 }

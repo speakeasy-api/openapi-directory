@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePartnerResponse {
@@ -12,6 +13,7 @@ public class UpdatePartnerResponse {
      */
     
     public org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse;
+
     public UpdatePartnerResponse withClientErrorResponse(org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse) {
         this.clientErrorResponse = clientErrorResponse;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePartnerResponse {
     
     
     public String contentType;
+
     public UpdatePartnerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class UpdatePartnerResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public UpdatePartnerResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -36,6 +40,7 @@ public class UpdatePartnerResponse {
      */
     
     public org.openapis.openapi.models.shared.Partner partner;
+
     public UpdatePartnerResponse withPartner(org.openapis.openapi.models.shared.Partner partner) {
         this.partner = partner;
         return this;
@@ -46,6 +51,7 @@ public class UpdatePartnerResponse {
      */
     
     public org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse;
+
     public UpdatePartnerResponse withServerErrorResponse(org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse) {
         this.serverErrorResponse = serverErrorResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdatePartnerResponse {
     
     
     public Integer statusCode;
+
     public UpdatePartnerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,6 +67,7 @@ public class UpdatePartnerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePartnerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -70,9 +78,14 @@ public class UpdatePartnerResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse;
+
     public UpdatePartnerResponse withValidationErrorResponse(org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse) {
         this.validationErrorResponse = validationErrorResponse;
         return this;
     }
     
+    public UpdatePartnerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

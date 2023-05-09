@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2StoredInfoTypeStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("largeCustomDictionary")
     public GooglePrivacyDlpV2LargeCustomDictionaryStats largeCustomDictionary;
+
     public GooglePrivacyDlpV2StoredInfoTypeStats withLargeCustomDictionary(GooglePrivacyDlpV2LargeCustomDictionaryStats largeCustomDictionary) {
         this.largeCustomDictionary = largeCustomDictionary;
         return this;
     }
     
+    public GooglePrivacyDlpV2StoredInfoTypeStats(){}
 }

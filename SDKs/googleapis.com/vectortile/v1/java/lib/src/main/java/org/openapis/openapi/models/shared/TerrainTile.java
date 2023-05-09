@@ -18,6 +18,7 @@ public class TerrainTile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coordinates")
     public TileCoordinates coordinates;
+
     public TerrainTile withCoordinates(TileCoordinates coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -29,6 +30,7 @@ public class TerrainTile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstDerivative")
     public FirstDerivativeElevationGrid firstDerivative;
+
     public TerrainTile withFirstDerivative(FirstDerivativeElevationGrid firstDerivative) {
         this.firstDerivative = firstDerivative;
         return this;
@@ -40,6 +42,7 @@ public class TerrainTile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TerrainTile withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class TerrainTile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondDerivative")
     public SecondDerivativeElevationGrid secondDerivative;
+
     public TerrainTile withSecondDerivative(SecondDerivativeElevationGrid secondDerivative) {
         this.secondDerivative = secondDerivative;
         return this;
     }
     
+    public TerrainTile(){}
 }

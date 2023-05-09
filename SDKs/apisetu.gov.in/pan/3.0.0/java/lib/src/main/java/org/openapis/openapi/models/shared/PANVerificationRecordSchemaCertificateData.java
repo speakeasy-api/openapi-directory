@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class PANVerificationRecordSchemaCertificateData {
     
     public PANVerificationRecordSchemaCertificateDataPANVerificationRecord panVerificationRecord;
+
     public PANVerificationRecordSchemaCertificateData withPANVerificationRecord(PANVerificationRecordSchemaCertificateDataPANVerificationRecord panVerificationRecord) {
         this.panVerificationRecord = panVerificationRecord;
         return this;
     }
     
+    public PANVerificationRecordSchemaCertificateData(){}
 }

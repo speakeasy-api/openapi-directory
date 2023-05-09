@@ -15,9 +15,11 @@ public class SqlInstancesRescheduleMaintenanceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reschedule")
     public Reschedule reschedule;
+
     public SqlInstancesRescheduleMaintenanceRequestBody withReschedule(Reschedule reschedule) {
         this.reschedule = reschedule;
         return this;
     }
     
+    public SqlInstancesRescheduleMaintenanceRequestBody(){}
 }

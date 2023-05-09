@@ -20,6 +20,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Namespace withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class Namespace {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateDate")
     public OffsetDateTime createDate;
+
     public Namespace withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -38,6 +40,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public Namespace withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -46,6 +49,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Namespace withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Namespace withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Namespace withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +76,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public NamespaceProperties properties;
+
     public Namespace withProperties(NamespaceProperties properties) {
         this.properties = properties;
         return this;
@@ -78,6 +85,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCount")
     public Long serviceCount;
+
     public Namespace withServiceCount(Long serviceCount) {
         this.serviceCount = serviceCount;
         return this;
@@ -86,9 +94,11 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public NamespaceTypeEnum type;
+
     public Namespace withType(NamespaceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Namespace(){}
 }

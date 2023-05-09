@@ -12,9 +12,13 @@ public class DeleteIntegrationRequestBody {
      */
     @JsonProperty("Uri")
     public String uri;
+
     public DeleteIntegrationRequestBody withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public DeleteIntegrationRequestBody(@JsonProperty("Uri") String uri) {
+        this.uri = uri;
+  }
 }

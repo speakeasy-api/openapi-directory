@@ -18,9 +18,11 @@ public class MergeCapacityCommitmentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityCommitmentIds")
     public String[] capacityCommitmentIds;
+
     public MergeCapacityCommitmentsRequest withCapacityCommitmentIds(String[] capacityCommitmentIds) {
         this.capacityCommitmentIds = capacityCommitmentIds;
         return this;
     }
     
+    public MergeCapacityCommitmentsRequest(){}
 }

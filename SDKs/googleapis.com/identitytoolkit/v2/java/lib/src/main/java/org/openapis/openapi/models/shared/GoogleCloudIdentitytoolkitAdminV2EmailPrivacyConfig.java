@@ -18,9 +18,11 @@ public class GoogleCloudIdentitytoolkitAdminV2EmailPrivacyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableImprovedEmailPrivacy")
     public Boolean enableImprovedEmailPrivacy;
+
     public GoogleCloudIdentitytoolkitAdminV2EmailPrivacyConfig withEnableImprovedEmailPrivacy(Boolean enableImprovedEmailPrivacy) {
         this.enableImprovedEmailPrivacy = enableImprovedEmailPrivacy;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2EmailPrivacyConfig(){}
 }

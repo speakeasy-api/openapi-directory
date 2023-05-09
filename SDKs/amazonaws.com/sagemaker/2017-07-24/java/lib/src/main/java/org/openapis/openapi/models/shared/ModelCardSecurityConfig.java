@@ -15,9 +15,11 @@ public class ModelCardSecurityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public ModelCardSecurityConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public ModelCardSecurityConfig(){}
 }

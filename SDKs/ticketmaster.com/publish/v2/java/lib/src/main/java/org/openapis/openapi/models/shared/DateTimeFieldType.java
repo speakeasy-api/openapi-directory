@@ -12,6 +12,7 @@ public class DateTimeFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationType")
     public DurationFieldType durationType;
+
     public DateTimeFieldType withDurationType(DurationFieldType durationType) {
         this.durationType = durationType;
         return this;
@@ -20,6 +21,7 @@ public class DateTimeFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DateTimeFieldType withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class DateTimeFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rangeDurationType")
     public DurationFieldType rangeDurationType;
+
     public DateTimeFieldType withRangeDurationType(DurationFieldType rangeDurationType) {
         this.rangeDurationType = rangeDurationType;
         return this;
     }
     
+    public DateTimeFieldType(){}
 }

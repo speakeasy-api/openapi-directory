@@ -18,9 +18,11 @@ public class GoogleCloudRecaptchaenterpriseV1RelatedAccountGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRecaptchaenterpriseV1RelatedAccountGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1RelatedAccountGroup(){}
 }

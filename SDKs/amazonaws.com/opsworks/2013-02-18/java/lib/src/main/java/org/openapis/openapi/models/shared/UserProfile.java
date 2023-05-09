@@ -15,6 +15,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowSelfManagement")
     public Boolean allowSelfManagement;
+
     public UserProfile withAllowSelfManagement(Boolean allowSelfManagement) {
         this.allowSelfManagement = allowSelfManagement;
         return this;
@@ -23,6 +24,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamUserArn")
     public String iamUserArn;
+
     public UserProfile withIamUserArn(String iamUserArn) {
         this.iamUserArn = iamUserArn;
         return this;
@@ -31,6 +33,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UserProfile withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshPublicKey")
     public String sshPublicKey;
+
     public UserProfile withSshPublicKey(String sshPublicKey) {
         this.sshPublicKey = sshPublicKey;
         return this;
@@ -47,9 +51,11 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshUsername")
     public String sshUsername;
+
     public UserProfile withSshUsername(String sshUsername) {
         this.sshUsername = sshUsername;
         return this;
     }
     
+    public UserProfile(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeUserGroupsResult {
     
     public String marker;
+
     public DescribeUserGroupsResult withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class DescribeUserGroupsResult {
     
     
     public UserGroup[] userGroups;
+
     public DescribeUserGroupsResult withUserGroups(UserGroup[] userGroups) {
         this.userGroups = userGroups;
         return this;
     }
     
+    public DescribeUserGroupsResult(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeNetworksListIpOwnersResponse {
     
     public String contentType;
+
     public ComputeNetworksListIpOwnersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeNetworksListIpOwnersResponse {
      */
     
     public org.openapis.openapi.models.shared.IpOwnerList ipOwnerList;
+
     public ComputeNetworksListIpOwnersResponse withIpOwnerList(org.openapis.openapi.models.shared.IpOwnerList ipOwnerList) {
         this.ipOwnerList = ipOwnerList;
         return this;
@@ -26,6 +29,7 @@ public class ComputeNetworksListIpOwnersResponse {
     
     
     public Integer statusCode;
+
     public ComputeNetworksListIpOwnersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeNetworksListIpOwnersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeNetworksListIpOwnersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeNetworksListIpOwnersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

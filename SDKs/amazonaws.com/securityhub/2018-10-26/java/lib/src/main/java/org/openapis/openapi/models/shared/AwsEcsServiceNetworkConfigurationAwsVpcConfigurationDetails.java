@@ -15,6 +15,7 @@ public class AwsEcsServiceNetworkConfigurationAwsVpcConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssignPublicIp")
     public String assignPublicIp;
+
     public AwsEcsServiceNetworkConfigurationAwsVpcConfigurationDetails withAssignPublicIp(String assignPublicIp) {
         this.assignPublicIp = assignPublicIp;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsServiceNetworkConfigurationAwsVpcConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroups")
     public String[] securityGroups;
+
     public AwsEcsServiceNetworkConfigurationAwsVpcConfigurationDetails withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -31,9 +33,11 @@ public class AwsEcsServiceNetworkConfigurationAwsVpcConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subnets")
     public String[] subnets;
+
     public AwsEcsServiceNetworkConfigurationAwsVpcConfigurationDetails withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public AwsEcsServiceNetworkConfigurationAwsVpcConfigurationDetails(){}
 }

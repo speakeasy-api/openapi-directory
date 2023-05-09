@@ -59,11 +59,9 @@ public class NodeTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeTemplatesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeNodeTemplatesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeTemplatesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeNodeTemplatesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             nodeTemplateAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class NodeTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeTemplatesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeNodeTemplatesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeTemplatesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeNodeTemplatesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class NodeTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeTemplatesGetResponse res = new org.openapis.openapi.models.operations.ComputeNodeTemplatesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeTemplatesGetResponse res = new org.openapis.openapi.models.operations.ComputeNodeTemplatesGetResponse(contentType, httpRes.statusCode()) {{
             nodeTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class NodeTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeTemplatesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeNodeTemplatesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeTemplatesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeNodeTemplatesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class NodeTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeTemplatesInsertResponse res = new org.openapis.openapi.models.operations.ComputeNodeTemplatesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeTemplatesInsertResponse res = new org.openapis.openapi.models.operations.ComputeNodeTemplatesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class NodeTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeTemplatesListResponse res = new org.openapis.openapi.models.operations.ComputeNodeTemplatesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeTemplatesListResponse res = new org.openapis.openapi.models.operations.ComputeNodeTemplatesListResponse(contentType, httpRes.statusCode()) {{
             nodeTemplateList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class NodeTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeTemplatesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeNodeTemplatesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeTemplatesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeNodeTemplatesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +373,9 @@ public class NodeTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeTemplatesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeNodeTemplatesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeTemplatesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeNodeTemplatesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

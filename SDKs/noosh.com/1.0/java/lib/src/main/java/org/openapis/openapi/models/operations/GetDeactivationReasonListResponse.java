@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDeactivationReasonListResponse {
     
     public byte[] body;
+
     public GetDeactivationReasonListResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetDeactivationReasonListResponse {
     
     
     public String contentType;
+
     public GetDeactivationReasonListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetDeactivationReasonListResponse {
      */
     
     public org.openapis.openapi.models.shared.DeactivationReasonListVO deactivationReasonListVO;
+
     public GetDeactivationReasonListResponse withDeactivationReasonListVO(org.openapis.openapi.models.shared.DeactivationReasonListVO deactivationReasonListVO) {
         this.deactivationReasonListVO = deactivationReasonListVO;
         return this;
@@ -36,6 +40,7 @@ public class GetDeactivationReasonListResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetDeactivationReasonListResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -43,6 +48,7 @@ public class GetDeactivationReasonListResponse {
     
     
     public Integer statusCode;
+
     public GetDeactivationReasonListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetDeactivationReasonListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDeactivationReasonListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDeactivationReasonListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

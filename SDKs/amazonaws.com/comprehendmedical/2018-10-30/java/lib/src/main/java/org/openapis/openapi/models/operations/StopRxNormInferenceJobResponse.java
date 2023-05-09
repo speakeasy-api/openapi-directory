@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopRxNormInferenceJobResponse {
     
     public String contentType;
+
     public StopRxNormInferenceJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopRxNormInferenceJobResponse {
      */
     
     public Object internalServerException;
+
     public StopRxNormInferenceJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StopRxNormInferenceJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StopRxNormInferenceJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StopRxNormInferenceJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopRxNormInferenceJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopRxNormInferenceJobResponse {
     
     
     public Integer statusCode;
+
     public StopRxNormInferenceJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopRxNormInferenceJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopRxNormInferenceJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StopRxNormInferenceJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StopRxNormInferenceJobResponse stopRxNormInferenceJobResponse;
+
     public StopRxNormInferenceJobResponse withStopRxNormInferenceJobResponse(org.openapis.openapi.models.shared.StopRxNormInferenceJobResponse stopRxNormInferenceJobResponse) {
         this.stopRxNormInferenceJobResponse = stopRxNormInferenceJobResponse;
         return this;
     }
     
+    public StopRxNormInferenceJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class TableExcerpt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rows")
     public TableRow[] rows;
+
     public TableExcerpt withRows(TableRow[] rows) {
         this.rows = rows;
         return this;
@@ -23,9 +24,11 @@ public class TableExcerpt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalNumberOfRows")
     public Long totalNumberOfRows;
+
     public TableExcerpt withTotalNumberOfRows(Long totalNumberOfRows) {
         this.totalNumberOfRows = totalNumberOfRows;
         return this;
     }
     
+    public TableExcerpt(){}
 }

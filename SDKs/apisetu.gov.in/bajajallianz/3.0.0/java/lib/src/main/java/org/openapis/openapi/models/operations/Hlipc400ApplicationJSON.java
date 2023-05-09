@@ -15,6 +15,7 @@ public class Hlipc400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Hlipc400ApplicationJSONErrorEnum error;
+
     public Hlipc400ApplicationJSON withError(Hlipc400ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Hlipc400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Hlipc400ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Hlipc400ApplicationJSON withErrorDescription(Hlipc400ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Hlipc400ApplicationJSON(){}
 }

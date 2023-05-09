@@ -12,6 +12,7 @@ public class ErrorNotFoundErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public ErrorNotFoundErrors withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -20,9 +21,11 @@ public class ErrorNotFoundErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ErrorNotFoundErrors withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ErrorNotFoundErrors(){}
 }

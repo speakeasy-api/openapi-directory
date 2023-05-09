@@ -20,6 +20,7 @@ public class AssessmentReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentId")
     public String assessmentId;
+
     public AssessmentReport withAssessmentId(String assessmentId) {
         this.assessmentId = assessmentId;
         return this;
@@ -28,6 +29,7 @@ public class AssessmentReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentName")
     public String assessmentName;
+
     public AssessmentReport withAssessmentName(String assessmentName) {
         this.assessmentName = assessmentName;
         return this;
@@ -36,6 +38,7 @@ public class AssessmentReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public AssessmentReport withAuthor(String author) {
         this.author = author;
         return this;
@@ -44,6 +47,7 @@ public class AssessmentReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsAccountId")
     public String awsAccountId;
+
     public AssessmentReport withAwsAccountId(String awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -54,6 +58,7 @@ public class AssessmentReport {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public AssessmentReport withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -62,6 +67,7 @@ public class AssessmentReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AssessmentReport withDescription(String description) {
         this.description = description;
         return this;
@@ -70,6 +76,7 @@ public class AssessmentReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssessmentReport withId(String id) {
         this.id = id;
         return this;
@@ -78,6 +85,7 @@ public class AssessmentReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AssessmentReport withName(String name) {
         this.name = name;
         return this;
@@ -86,9 +94,11 @@ public class AssessmentReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AssessmentReportStatusEnum status;
+
     public AssessmentReport withStatus(AssessmentReportStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AssessmentReport(){}
 }

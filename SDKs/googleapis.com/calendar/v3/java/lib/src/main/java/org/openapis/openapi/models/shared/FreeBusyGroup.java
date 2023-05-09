@@ -15,6 +15,7 @@ public class FreeBusyGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendars")
     public String[] calendars;
+
     public FreeBusyGroup withCalendars(String[] calendars) {
         this.calendars = calendars;
         return this;
@@ -26,9 +27,11 @@ public class FreeBusyGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public FreeBusyGroup withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public FreeBusyGroup(){}
 }

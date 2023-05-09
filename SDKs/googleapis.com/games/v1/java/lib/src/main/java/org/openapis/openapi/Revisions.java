@@ -58,11 +58,9 @@ public class Revisions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesRevisionsCheckResponse res = new org.openapis.openapi.models.operations.GamesRevisionsCheckResponse() {{
+        org.openapis.openapi.models.operations.GamesRevisionsCheckResponse res = new org.openapis.openapi.models.operations.GamesRevisionsCheckResponse(contentType, httpRes.statusCode()) {{
             revisionCheckResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

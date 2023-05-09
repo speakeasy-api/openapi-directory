@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateDomainEndpointOptionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUpdateDomainEndpointOptionsActionEnum action;
+
     public GETUpdateDomainEndpointOptionsRequest withAction(GETUpdateDomainEndpointOptionsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETUpdateDomainEndpointOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainEndpointOptions")
     public GETUpdateDomainEndpointOptionsDomainEndpointOptions domainEndpointOptions;
+
     public GETUpdateDomainEndpointOptionsRequest withDomainEndpointOptions(GETUpdateDomainEndpointOptionsDomainEndpointOptions domainEndpointOptions) {
         this.domainEndpointOptions = domainEndpointOptions;
         return this;
@@ -29,6 +32,7 @@ public class GETUpdateDomainEndpointOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
     public String domainName;
+
     public GETUpdateDomainEndpointOptionsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -36,6 +40,7 @@ public class GETUpdateDomainEndpointOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUpdateDomainEndpointOptionsVersionEnum version;
+
     public GETUpdateDomainEndpointOptionsRequest withVersion(GETUpdateDomainEndpointOptionsVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETUpdateDomainEndpointOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUpdateDomainEndpointOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETUpdateDomainEndpointOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUpdateDomainEndpointOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETUpdateDomainEndpointOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUpdateDomainEndpointOptionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETUpdateDomainEndpointOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUpdateDomainEndpointOptionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETUpdateDomainEndpointOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUpdateDomainEndpointOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETUpdateDomainEndpointOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUpdateDomainEndpointOptionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETUpdateDomainEndpointOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUpdateDomainEndpointOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUpdateDomainEndpointOptionsRequest(@JsonProperty("Action") GETUpdateDomainEndpointOptionsActionEnum action, @JsonProperty("DomainEndpointOptions") GETUpdateDomainEndpointOptionsDomainEndpointOptions domainEndpointOptions, @JsonProperty("DomainName") String domainName, @JsonProperty("Version") GETUpdateDomainEndpointOptionsVersionEnum version) {
+        this.action = action;
+        this.domainEndpointOptions = domainEndpointOptions;
+        this.domainName = domainName;
+        this.version = version;
+  }
 }

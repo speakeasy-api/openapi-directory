@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ForgetpaireddeviceResponse {
     
     public String contentType;
+
     public ForgetpaireddeviceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ForgetpaireddeviceResponse {
     
     
     public String forgetpaireddevice200TextPlainObject;
+
     public ForgetpaireddeviceResponse withForgetpaireddevice200TextPlainObject(String forgetpaireddevice200TextPlainObject) {
         this.forgetpaireddevice200TextPlainObject = forgetpaireddevice200TextPlainObject;
         return this;
@@ -23,6 +26,7 @@ public class ForgetpaireddeviceResponse {
     
     
     public Integer statusCode;
+
     public ForgetpaireddeviceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ForgetpaireddeviceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ForgetpaireddeviceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ForgetpaireddeviceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

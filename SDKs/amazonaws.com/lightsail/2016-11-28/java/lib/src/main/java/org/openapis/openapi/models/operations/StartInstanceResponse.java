@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartInstanceResponse {
@@ -12,6 +13,7 @@ public class StartInstanceResponse {
      */
     
     public Object accessDeniedException;
+
     public StartInstanceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartInstanceResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public StartInstanceResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class StartInstanceResponse {
     
     
     public String contentType;
+
     public StartInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartInstanceResponse {
      */
     
     public Object invalidInputException;
+
     public StartInstanceResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class StartInstanceResponse {
      */
     
     public Object notFoundException;
+
     public StartInstanceResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartInstanceResponse {
      */
     
     public Object operationFailureException;
+
     public StartInstanceResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class StartInstanceResponse {
      */
     
     public Object serviceException;
+
     public StartInstanceResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -79,6 +87,7 @@ public class StartInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.StartInstanceResult startInstanceResult;
+
     public StartInstanceResponse withStartInstanceResult(org.openapis.openapi.models.shared.StartInstanceResult startInstanceResult) {
         this.startInstanceResult = startInstanceResult;
         return this;
@@ -86,6 +95,7 @@ public class StartInstanceResponse {
     
     
     public Integer statusCode;
+
     public StartInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class StartInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class StartInstanceResponse {
      */
     
     public Object unauthenticatedException;
+
     public StartInstanceResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public StartInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

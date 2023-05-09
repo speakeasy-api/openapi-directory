@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFunctionEventInvokeConfigResponse {
     
     public String contentType;
+
     public DeleteFunctionEventInvokeConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFunctionEventInvokeConfigResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteFunctionEventInvokeConfigResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFunctionEventInvokeConfigResponse {
      */
     
     public Object resourceConflictException;
+
     public DeleteFunctionEventInvokeConfigResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFunctionEventInvokeConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteFunctionEventInvokeConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFunctionEventInvokeConfigResponse {
      */
     
     public Object serviceException;
+
     public DeleteFunctionEventInvokeConfigResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteFunctionEventInvokeConfigResponse {
     
     
     public Integer statusCode;
+
     public DeleteFunctionEventInvokeConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteFunctionEventInvokeConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFunctionEventInvokeConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteFunctionEventInvokeConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteFunctionEventInvokeConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteFunctionEventInvokeConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

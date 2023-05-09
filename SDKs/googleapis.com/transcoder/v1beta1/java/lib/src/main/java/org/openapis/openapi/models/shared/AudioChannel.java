@@ -18,9 +18,11 @@ public class AudioChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputs")
     public AudioChannelInput[] inputs;
+
     public AudioChannel withInputs(AudioChannelInput[] inputs) {
         this.inputs = inputs;
         return this;
     }
     
+    public AudioChannel(){}
 }

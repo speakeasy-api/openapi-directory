@@ -15,6 +15,7 @@ public class Hvcer503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Hvcer503ApplicationJSONErrorEnum error;
+
     public Hvcer503ApplicationJSON withError(Hvcer503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Hvcer503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Hvcer503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Hvcer503ApplicationJSON withErrorDescription(Hvcer503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Hvcer503ApplicationJSON(){}
 }

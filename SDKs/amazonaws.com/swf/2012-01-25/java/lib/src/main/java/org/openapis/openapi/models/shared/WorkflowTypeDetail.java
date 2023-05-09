@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkflowTypeDetail {
     @JsonProperty("configuration")
     public WorkflowTypeConfiguration configuration;
+
     public WorkflowTypeDetail withConfiguration(WorkflowTypeConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -19,9 +20,14 @@ public class WorkflowTypeDetail {
     
     @JsonProperty("typeInfo")
     public WorkflowTypeInfo typeInfo;
+
     public WorkflowTypeDetail withTypeInfo(WorkflowTypeInfo typeInfo) {
         this.typeInfo = typeInfo;
         return this;
     }
     
+    public WorkflowTypeDetail(@JsonProperty("configuration") WorkflowTypeConfiguration configuration, @JsonProperty("typeInfo") WorkflowTypeInfo typeInfo) {
+        this.configuration = configuration;
+        this.typeInfo = typeInfo;
+  }
 }

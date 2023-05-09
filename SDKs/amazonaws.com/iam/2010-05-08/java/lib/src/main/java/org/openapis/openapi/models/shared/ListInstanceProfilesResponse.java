@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListInstanceProfilesResponse - Contains the response to a successful &lt;a&gt;ListInstanceProfiles&lt;/a&gt; request. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListInstanceProfilesResponse {
     
     public InstanceProfile[] instanceProfiles;
+
     public ListInstanceProfilesResponse withInstanceProfiles(InstanceProfile[] instanceProfiles) {
         this.instanceProfiles = instanceProfiles;
         return this;
@@ -19,6 +20,7 @@ public class ListInstanceProfilesResponse {
     
     
     public Boolean isTruncated;
+
     public ListInstanceProfilesResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -26,9 +28,13 @@ public class ListInstanceProfilesResponse {
     
     
     public String marker;
+
     public ListInstanceProfilesResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListInstanceProfilesResponse(@JsonProperty("InstanceProfiles") InstanceProfile[] instanceProfiles) {
+        this.instanceProfiles = instanceProfiles;
+  }
 }

@@ -15,6 +15,7 @@ public class Privilege {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childPrivileges")
     public Privilege[] childPrivileges;
+
     public Privilege withChildPrivileges(Privilege[] childPrivileges) {
         this.childPrivileges = childPrivileges;
         return this;
@@ -26,6 +27,7 @@ public class Privilege {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Privilege withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -37,6 +39,7 @@ public class Privilege {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isOuScopable")
     public Boolean isOuScopable;
+
     public Privilege withIsOuScopable(Boolean isOuScopable) {
         this.isOuScopable = isOuScopable;
         return this;
@@ -48,6 +51,7 @@ public class Privilege {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Privilege withKind(String kind) {
         this.kind = kind;
         return this;
@@ -59,6 +63,7 @@ public class Privilege {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privilegeName")
     public String privilegeName;
+
     public Privilege withPrivilegeName(String privilegeName) {
         this.privilegeName = privilegeName;
         return this;
@@ -70,6 +75,7 @@ public class Privilege {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public String serviceId;
+
     public Privilege withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -81,9 +87,11 @@ public class Privilege {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public Privilege withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public Privilege(){}
 }

@@ -18,6 +18,7 @@ public class CreateCampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CreateCampaignResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -29,6 +30,7 @@ public class CreateCampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateCampaignResponse withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class CreateCampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateCampaignResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCampaignResponse(){}
 }

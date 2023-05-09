@@ -18,9 +18,11 @@ public class Settings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifications")
     public Notification[] notifications;
+
     public Settings withNotifications(Notification[] notifications) {
         this.notifications = notifications;
         return this;
     }
     
+    public Settings(){}
 }

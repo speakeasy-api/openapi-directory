@@ -15,6 +15,7 @@ public class IntegrationLinkModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public IntegrationLinkModel withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class IntegrationLinkModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationLinkType")
     public IntegrationLinkTypeEnum integrationLinkType;
+
     public IntegrationLinkModel withIntegrationLinkType(IntegrationLinkTypeEnum integrationLinkType) {
         this.integrationLinkType = integrationLinkType;
         return this;
@@ -31,6 +33,7 @@ public class IntegrationLinkModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public IntegrationLinkModel withKey(String key) {
         this.key = key;
         return this;
@@ -39,9 +42,11 @@ public class IntegrationLinkModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public IntegrationLinkModel withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public IntegrationLinkModel(){}
 }

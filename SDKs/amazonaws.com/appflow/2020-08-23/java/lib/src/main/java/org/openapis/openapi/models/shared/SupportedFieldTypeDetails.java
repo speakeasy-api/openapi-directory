@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SupportedFieldTypeDetails {
     @JsonProperty("v1")
     public FieldTypeDetails v1;
+
     public SupportedFieldTypeDetails withV1(FieldTypeDetails v1) {
         this.v1 = v1;
         return this;
     }
     
+    public SupportedFieldTypeDetails(@JsonProperty("v1") FieldTypeDetails v1) {
+        this.v1 = v1;
+  }
 }

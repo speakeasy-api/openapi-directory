@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class QuestionsMigratedTo {
     
     public Long onDate;
+
     public QuestionsMigratedTo withOnDate(Long onDate) {
         this.onDate = onDate;
         return this;
@@ -16,6 +17,7 @@ public class QuestionsMigratedTo {
     
     
     public QuestionsMigratedToOtherSite otherSite;
+
     public QuestionsMigratedTo withOtherSite(QuestionsMigratedToOtherSite otherSite) {
         this.otherSite = otherSite;
         return this;
@@ -23,9 +25,11 @@ public class QuestionsMigratedTo {
     
     
     public Long questionId;
+
     public QuestionsMigratedTo withQuestionId(Long questionId) {
         this.questionId = questionId;
         return this;
     }
     
+    public QuestionsMigratedTo(){}
 }

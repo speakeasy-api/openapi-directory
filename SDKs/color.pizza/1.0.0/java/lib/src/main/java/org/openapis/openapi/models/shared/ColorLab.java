@@ -12,6 +12,7 @@ public class ColorLab {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("a")
     public Double a;
+
     public ColorLab withA(Double a) {
         this.a = a;
         return this;
@@ -20,6 +21,7 @@ public class ColorLab {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("b")
     public Double b;
+
     public ColorLab withB(Double b) {
         this.b = b;
         return this;
@@ -28,9 +30,11 @@ public class ColorLab {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("l")
     public Double l;
+
     public ColorLab withL(Double l) {
         this.l = l;
         return this;
     }
     
+    public ColorLab(){}
 }

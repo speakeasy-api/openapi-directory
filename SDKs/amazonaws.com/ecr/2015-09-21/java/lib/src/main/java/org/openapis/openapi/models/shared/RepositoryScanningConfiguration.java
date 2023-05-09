@@ -15,6 +15,7 @@ public class RepositoryScanningConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appliedScanFilters")
     public ScanningRepositoryFilter[] appliedScanFilters;
+
     public RepositoryScanningConfiguration withAppliedScanFilters(ScanningRepositoryFilter[] appliedScanFilters) {
         this.appliedScanFilters = appliedScanFilters;
         return this;
@@ -23,6 +24,7 @@ public class RepositoryScanningConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryArn")
     public String repositoryArn;
+
     public RepositoryScanningConfiguration withRepositoryArn(String repositoryArn) {
         this.repositoryArn = repositoryArn;
         return this;
@@ -31,6 +33,7 @@ public class RepositoryScanningConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public RepositoryScanningConfiguration withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -39,6 +42,7 @@ public class RepositoryScanningConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanFrequency")
     public ScanFrequencyEnum scanFrequency;
+
     public RepositoryScanningConfiguration withScanFrequency(ScanFrequencyEnum scanFrequency) {
         this.scanFrequency = scanFrequency;
         return this;
@@ -47,9 +51,11 @@ public class RepositoryScanningConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanOnPush")
     public Boolean scanOnPush;
+
     public RepositoryScanningConfiguration withScanOnPush(Boolean scanOnPush) {
         this.scanOnPush = scanOnPush;
         return this;
     }
     
+    public RepositoryScanningConfiguration(){}
 }

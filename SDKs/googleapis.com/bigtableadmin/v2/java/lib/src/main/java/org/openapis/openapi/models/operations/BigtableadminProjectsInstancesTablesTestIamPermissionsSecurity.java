@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigtableadminProjectsInstancesTablesTestIamPermissionsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesTestIamPermissionsSecurityOption1 option1;
+
     public BigtableadminProjectsInstancesTablesTestIamPermissionsSecurity withOption1(BigtableadminProjectsInstancesTablesTestIamPermissionsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigtableadminProjectsInstancesTablesTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesTestIamPermissionsSecurityOption2 option2;
+
     public BigtableadminProjectsInstancesTablesTestIamPermissionsSecurity withOption2(BigtableadminProjectsInstancesTablesTestIamPermissionsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class BigtableadminProjectsInstancesTablesTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesTestIamPermissionsSecurityOption3 option3;
+
     public BigtableadminProjectsInstancesTablesTestIamPermissionsSecurity withOption3(BigtableadminProjectsInstancesTablesTestIamPermissionsSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class BigtableadminProjectsInstancesTablesTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesTestIamPermissionsSecurityOption4 option4;
+
     public BigtableadminProjectsInstancesTablesTestIamPermissionsSecurity withOption4(BigtableadminProjectsInstancesTablesTestIamPermissionsSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class BigtableadminProjectsInstancesTablesTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesTestIamPermissionsSecurityOption5 option5;
+
     public BigtableadminProjectsInstancesTablesTestIamPermissionsSecurity withOption5(BigtableadminProjectsInstancesTablesTestIamPermissionsSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,9 +49,11 @@ public class BigtableadminProjectsInstancesTablesTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesTestIamPermissionsSecurityOption6 option6;
+
     public BigtableadminProjectsInstancesTablesTestIamPermissionsSecurity withOption6(BigtableadminProjectsInstancesTablesTestIamPermissionsSecurityOption6 option6) {
         this.option6 = option6;
         return this;
     }
     
+    public BigtableadminProjectsInstancesTablesTestIamPermissionsSecurity(){}
 }

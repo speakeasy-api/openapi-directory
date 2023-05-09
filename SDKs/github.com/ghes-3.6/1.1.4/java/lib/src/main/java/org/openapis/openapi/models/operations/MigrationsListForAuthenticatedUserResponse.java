@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MigrationsListForAuthenticatedUserResponse {
     
     public String contentType;
+
     public MigrationsListForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MigrationsListForAuthenticatedUserResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public MigrationsListForAuthenticatedUserResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class MigrationsListForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public MigrationsListForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class MigrationsListForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MigrationsListForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class MigrationsListForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public MigrationsListForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class MigrationsListForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.Migration[] migrations;
+
     public MigrationsListForAuthenticatedUserResponse withMigrations(org.openapis.openapi.models.shared.Migration[] migrations) {
         this.migrations = migrations;
         return this;
     }
     
+    public MigrationsListForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

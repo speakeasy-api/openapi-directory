@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteUserAttributesResponse {
     
     public String contentType;
+
     public DeleteUserAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteUserAttributesResponse {
      */
     
     public java.util.Map<String, Object> deleteUserAttributesResponse;
+
     public DeleteUserAttributesResponse withDeleteUserAttributesResponse(java.util.Map<String, Object> deleteUserAttributesResponse) {
         this.deleteUserAttributesResponse = deleteUserAttributesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteUserAttributesResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteUserAttributesResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteUserAttributesResponse {
      */
     
     public Object internalErrorException;
+
     public DeleteUserAttributesResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteUserAttributesResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteUserAttributesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteUserAttributesResponse {
      */
     
     public Object notAuthorizedException;
+
     public DeleteUserAttributesResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteUserAttributesResponse {
      */
     
     public Object passwordResetRequiredException;
+
     public DeleteUserAttributesResponse withPasswordResetRequiredException(Object passwordResetRequiredException) {
         this.passwordResetRequiredException = passwordResetRequiredException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteUserAttributesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteUserAttributesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteUserAttributesResponse {
     
     
     public Integer statusCode;
+
     public DeleteUserAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteUserAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteUserAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class DeleteUserAttributesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteUserAttributesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,6 +125,7 @@ public class DeleteUserAttributesResponse {
      */
     
     public Object userNotConfirmedException;
+
     public DeleteUserAttributesResponse withUserNotConfirmedException(Object userNotConfirmedException) {
         this.userNotConfirmedException = userNotConfirmedException;
         return this;
@@ -123,9 +136,14 @@ public class DeleteUserAttributesResponse {
      */
     
     public Object userNotFoundException;
+
     public DeleteUserAttributesResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public DeleteUserAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

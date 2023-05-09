@@ -12,6 +12,7 @@ public class BooksFamilysharingGetFamilyInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BooksFamilysharingGetFamilyInfoRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class BooksFamilysharingGetFamilyInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BooksFamilysharingGetFamilyInfoRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class BooksFamilysharingGetFamilyInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BooksFamilysharingGetFamilyInfoRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class BooksFamilysharingGetFamilyInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BooksFamilysharingGetFamilyInfoRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class BooksFamilysharingGetFamilyInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BooksFamilysharingGetFamilyInfoRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +67,7 @@ public class BooksFamilysharingGetFamilyInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BooksFamilysharingGetFamilyInfoRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +78,7 @@ public class BooksFamilysharingGetFamilyInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BooksFamilysharingGetFamilyInfoRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +89,7 @@ public class BooksFamilysharingGetFamilyInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BooksFamilysharingGetFamilyInfoRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +100,7 @@ public class BooksFamilysharingGetFamilyInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BooksFamilysharingGetFamilyInfoRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -102,6 +111,7 @@ public class BooksFamilysharingGetFamilyInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public String source;
+
     public BooksFamilysharingGetFamilyInfoRequest withSource(String source) {
         this.source = source;
         return this;
@@ -112,6 +122,7 @@ public class BooksFamilysharingGetFamilyInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BooksFamilysharingGetFamilyInfoRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -122,9 +133,11 @@ public class BooksFamilysharingGetFamilyInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BooksFamilysharingGetFamilyInfoRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public BooksFamilysharingGetFamilyInfoRequest(){}
 }

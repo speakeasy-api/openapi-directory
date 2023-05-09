@@ -17,6 +17,7 @@ public class TestValidateQuery {
      */
     @JsonProperty("id")
     public Long id;
+
     public TestValidateQuery withId(Long id) {
         this.id = id;
         return this;
@@ -28,9 +29,13 @@ public class TestValidateQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String[] tag;
+
     public TestValidateQuery withTag(String[] tag) {
         this.tag = tag;
         return this;
     }
     
+    public TestValidateQuery(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

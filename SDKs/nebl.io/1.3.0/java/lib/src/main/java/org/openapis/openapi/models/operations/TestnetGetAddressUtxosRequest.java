@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestnetGetAddressUtxosRequest {
@@ -12,9 +13,13 @@ public class TestnetGetAddressUtxosRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")
     public String address;
+
     public TestnetGetAddressUtxosRequest withAddress(String address) {
         this.address = address;
         return this;
     }
     
+    public TestnetGetAddressUtxosRequest(@JsonProperty("address") String address) {
+        this.address = address;
+  }
 }

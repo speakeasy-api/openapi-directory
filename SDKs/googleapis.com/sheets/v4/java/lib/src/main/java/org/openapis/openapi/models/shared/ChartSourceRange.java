@@ -18,9 +18,11 @@ public class ChartSourceRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public GridRange[] sources;
+
     public ChartSourceRange withSources(GridRange[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public ChartSourceRange(){}
 }

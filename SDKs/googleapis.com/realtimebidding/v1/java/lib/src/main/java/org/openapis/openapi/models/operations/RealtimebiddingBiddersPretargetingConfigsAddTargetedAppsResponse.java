@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse {
     
     public String contentType;
+
     public RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse {
      */
     
     public org.openapis.openapi.models.shared.PretargetingConfig pretargetingConfig;
+
     public RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse withPretargetingConfig(org.openapis.openapi.models.shared.PretargetingConfig pretargetingConfig) {
         this.pretargetingConfig = pretargetingConfig;
         return this;
@@ -26,6 +29,7 @@ public class RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse {
     
     
     public Integer statusCode;
+
     public RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CloudWatchLoggingOptionUpdate {
     @JsonProperty("CloudWatchLoggingOptionId")
     public String cloudWatchLoggingOptionId;
+
     public CloudWatchLoggingOptionUpdate withCloudWatchLoggingOptionId(String cloudWatchLoggingOptionId) {
         this.cloudWatchLoggingOptionId = cloudWatchLoggingOptionId;
         return this;
@@ -22,9 +23,13 @@ public class CloudWatchLoggingOptionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogStreamARNUpdate")
     public String logStreamARNUpdate;
+
     public CloudWatchLoggingOptionUpdate withLogStreamARNUpdate(String logStreamARNUpdate) {
         this.logStreamARNUpdate = logStreamARNUpdate;
         return this;
     }
     
+    public CloudWatchLoggingOptionUpdate(@JsonProperty("CloudWatchLoggingOptionId") String cloudWatchLoggingOptionId) {
+        this.cloudWatchLoggingOptionId = cloudWatchLoggingOptionId;
+  }
 }

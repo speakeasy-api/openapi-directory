@@ -15,6 +15,7 @@ public class GetCustomer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public GetCustomer200ApplicationJSON withAddress(String address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class GetCustomer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     public Long balance;
+
     public GetCustomer200ApplicationJSON withBalance(Long balance) {
         this.balance = balance;
         return this;
@@ -31,6 +33,7 @@ public class GetCustomer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public GetCustomer200ApplicationJSON withCity(String city) {
         this.city = city;
         return this;
@@ -39,6 +42,7 @@ public class GetCustomer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     public String companyName;
+
     public GetCustomer200ApplicationJSON withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -47,6 +51,7 @@ public class GetCustomer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_website")
     public String companyWebsite;
+
     public GetCustomer200ApplicationJSON withCompanyWebsite(String companyWebsite) {
         this.companyWebsite = companyWebsite;
         return this;
@@ -55,6 +60,7 @@ public class GetCustomer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public GetCustomer200ApplicationJSON withCountry(String country) {
         this.country = country;
         return this;
@@ -63,6 +69,7 @@ public class GetCustomer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditlimit")
     public String creditlimit;
+
     public GetCustomer200ApplicationJSON withCreditlimit(String creditlimit) {
         this.creditlimit = creditlimit;
         return this;
@@ -71,6 +78,7 @@ public class GetCustomer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public GetCustomer200ApplicationJSON withEmail(String email) {
         this.email = email;
         return this;
@@ -79,6 +87,7 @@ public class GetCustomer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fax")
     public String fax;
+
     public GetCustomer200ApplicationJSON withFax(String fax) {
         this.fax = fax;
         return this;
@@ -87,6 +96,7 @@ public class GetCustomer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstname")
     public String firstname;
+
     public GetCustomer200ApplicationJSON withFirstname(String firstname) {
         this.firstname = firstname;
         return this;
@@ -95,6 +105,7 @@ public class GetCustomer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastname")
     public String lastname;
+
     public GetCustomer200ApplicationJSON withLastname(String lastname) {
         this.lastname = lastname;
         return this;
@@ -103,6 +114,7 @@ public class GetCustomer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public GetCustomer200ApplicationJSON withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -111,6 +123,7 @@ public class GetCustomer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postcode")
     public String postcode;
+
     public GetCustomer200ApplicationJSON withPostcode(String postcode) {
         this.postcode = postcode;
         return this;
@@ -119,6 +132,7 @@ public class GetCustomer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public GetCustomer200ApplicationJSON withState(String state) {
         this.state = state;
         return this;
@@ -127,9 +141,11 @@ public class GetCustomer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public Long username;
+
     public GetCustomer200ApplicationJSON withUsername(Long username) {
         this.username = username;
         return this;
     }
     
+    public GetCustomer200ApplicationJSON(){}
 }

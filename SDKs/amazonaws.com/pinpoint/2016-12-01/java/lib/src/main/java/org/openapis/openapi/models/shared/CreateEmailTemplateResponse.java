@@ -15,9 +15,13 @@ public class CreateEmailTemplateResponse {
      */
     @JsonProperty("CreateTemplateMessageBody")
     public CreateTemplateMessageBody createTemplateMessageBody;
+
     public CreateEmailTemplateResponse withCreateTemplateMessageBody(CreateTemplateMessageBody createTemplateMessageBody) {
         this.createTemplateMessageBody = createTemplateMessageBody;
         return this;
     }
     
+    public CreateEmailTemplateResponse(@JsonProperty("CreateTemplateMessageBody") CreateTemplateMessageBody createTemplateMessageBody) {
+        this.createTemplateMessageBody = createTemplateMessageBody;
+  }
 }

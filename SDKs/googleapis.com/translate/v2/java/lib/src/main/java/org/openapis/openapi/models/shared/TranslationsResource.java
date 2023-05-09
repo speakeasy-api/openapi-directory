@@ -18,6 +18,7 @@ public class TranslationsResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedSourceLanguage")
     public String detectedSourceLanguage;
+
     public TranslationsResource withDetectedSourceLanguage(String detectedSourceLanguage) {
         this.detectedSourceLanguage = detectedSourceLanguage;
         return this;
@@ -31,6 +32,7 @@ public class TranslationsResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public TranslationsResource withModel(String model) {
         this.model = model;
         return this;
@@ -42,9 +44,11 @@ public class TranslationsResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translatedText")
     public String translatedText;
+
     public TranslationsResource withTranslatedText(String translatedText) {
         this.translatedText = translatedText;
         return this;
     }
     
+    public TranslationsResource(){}
 }

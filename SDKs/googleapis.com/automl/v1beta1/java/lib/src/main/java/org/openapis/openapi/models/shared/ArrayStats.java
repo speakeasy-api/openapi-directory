@@ -18,9 +18,11 @@ public class ArrayStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberStats")
     public DataStats memberStats;
+
     public ArrayStats withMemberStats(DataStats memberStats) {
         this.memberStats = memberStats;
         return this;
     }
     
+    public ArrayStats(){}
 }

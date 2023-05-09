@@ -14,6 +14,7 @@ public class CreateAssistantAssociationRequestBody {
      */
     @JsonProperty("association")
     public CreateAssistantAssociationRequestBodyAssociation association;
+
     public CreateAssistantAssociationRequestBody withAssociation(CreateAssistantAssociationRequestBodyAssociation association) {
         this.association = association;
         return this;
@@ -24,6 +25,7 @@ public class CreateAssistantAssociationRequestBody {
      */
     @JsonProperty("associationType")
     public CreateAssistantAssociationRequestBodyAssociationTypeEnum associationType;
+
     public CreateAssistantAssociationRequestBody withAssociationType(CreateAssistantAssociationRequestBodyAssociationTypeEnum associationType) {
         this.associationType = associationType;
         return this;
@@ -35,6 +37,7 @@ public class CreateAssistantAssociationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateAssistantAssociationRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -46,9 +49,14 @@ public class CreateAssistantAssociationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateAssistantAssociationRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAssistantAssociationRequestBody(@JsonProperty("association") CreateAssistantAssociationRequestBodyAssociation association, @JsonProperty("associationType") CreateAssistantAssociationRequestBodyAssociationTypeEnum associationType) {
+        this.association = association;
+        this.associationType = associationType;
+  }
 }

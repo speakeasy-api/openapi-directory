@@ -22,6 +22,7 @@ public class ChromeOsDeviceDeviceFiles {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public ChromeOsDeviceDeviceFiles withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -33,6 +34,7 @@ public class ChromeOsDeviceDeviceFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadUrl")
     public String downloadUrl;
+
     public ChromeOsDeviceDeviceFiles withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -44,6 +46,7 @@ public class ChromeOsDeviceDeviceFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ChromeOsDeviceDeviceFiles withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +58,11 @@ public class ChromeOsDeviceDeviceFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ChromeOsDeviceDeviceFiles withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ChromeOsDeviceDeviceFiles(){}
 }

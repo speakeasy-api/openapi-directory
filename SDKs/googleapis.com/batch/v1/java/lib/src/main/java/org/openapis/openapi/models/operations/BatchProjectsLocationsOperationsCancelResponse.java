@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchProjectsLocationsOperationsCancelResponse {
     
     public String contentType;
+
     public BatchProjectsLocationsOperationsCancelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BatchProjectsLocationsOperationsCancelResponse {
      */
     
     public java.util.Map<String, Object> empty;
+
     public BatchProjectsLocationsOperationsCancelResponse withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
@@ -26,6 +29,7 @@ public class BatchProjectsLocationsOperationsCancelResponse {
     
     
     public Integer statusCode;
+
     public BatchProjectsLocationsOperationsCancelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BatchProjectsLocationsOperationsCancelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchProjectsLocationsOperationsCancelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchProjectsLocationsOperationsCancelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

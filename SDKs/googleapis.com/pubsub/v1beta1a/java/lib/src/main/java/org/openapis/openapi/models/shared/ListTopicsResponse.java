@@ -18,6 +18,7 @@ public class ListTopicsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTopicsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListTopicsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public Topic[] topic;
+
     public ListTopicsResponse withTopic(Topic[] topic) {
         this.topic = topic;
         return this;
     }
     
+    public ListTopicsResponse(){}
 }

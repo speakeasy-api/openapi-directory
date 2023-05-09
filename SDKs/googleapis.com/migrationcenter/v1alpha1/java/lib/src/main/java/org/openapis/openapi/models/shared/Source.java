@@ -18,6 +18,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Source withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Source withDescription(String description) {
         this.description = description;
         return this;
@@ -40,8 +42,21 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Source withDisplayName(String displayName) {
         this.displayName = displayName;
+        return this;
+    }
+    
+    /**
+     * Output only. The number of frames that were reported by the source and contained errors.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("errorFrameCount")
+    public Integer errorFrameCount;
+
+    public Source withErrorFrameCount(Integer errorFrameCount) {
+        this.errorFrameCount = errorFrameCount;
         return this;
     }
     
@@ -51,6 +66,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isManaged")
     public Boolean isManaged;
+
     public Source withIsManaged(Boolean isManaged) {
         this.isManaged = isManaged;
         return this;
@@ -62,6 +78,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Source withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +90,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingFrameCount")
     public Integer pendingFrameCount;
+
     public Source withPendingFrameCount(Integer pendingFrameCount) {
         this.pendingFrameCount = pendingFrameCount;
         return this;
@@ -84,8 +102,21 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public Source withPriority(Integer priority) {
         this.priority = priority;
+        return this;
+    }
+    
+    /**
+     * Output only. The state of the source.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("state")
+    public SourceStateEnum state;
+
+    public Source withState(SourceStateEnum state) {
+        this.state = state;
         return this;
     }
     
@@ -95,6 +126,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SourceTypeEnum type;
+
     public Source withType(SourceTypeEnum type) {
         this.type = type;
         return this;
@@ -106,9 +138,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Source withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Source(){}
 }

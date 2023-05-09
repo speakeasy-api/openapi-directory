@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteOrganizationResponse {
@@ -12,6 +13,7 @@ public class DeleteOrganizationResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public DeleteOrganizationResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteOrganizationResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteOrganizationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class DeleteOrganizationResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteOrganizationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteOrganizationResponse {
     
     
     public String contentType;
+
     public DeleteOrganizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class DeleteOrganizationResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteOrganizationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteOrganizationResponse {
      */
     
     public Object organizationNotEmptyException;
+
     public DeleteOrganizationResponse withOrganizationNotEmptyException(Object organizationNotEmptyException) {
         this.organizationNotEmptyException = organizationNotEmptyException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteOrganizationResponse {
      */
     
     public Object serviceException;
+
     public DeleteOrganizationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteOrganizationResponse {
     
     
     public Integer statusCode;
+
     public DeleteOrganizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteOrganizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteOrganizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DeleteOrganizationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteOrganizationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteOrganizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -59,10 +59,8 @@ public class DynamicTargetingKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysDeleteResponse res = new org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysDeleteResponse() {{
+        org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysDeleteResponse res = new org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class DynamicTargetingKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysInsertResponse res = new org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysInsertResponse res = new org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysInsertResponse(contentType, httpRes.statusCode()) {{
             dynamicTargetingKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class DynamicTargetingKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysListResponse res = new org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysListResponse res = new org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysListResponse(contentType, httpRes.statusCode()) {{
             dynamicTargetingKeysListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

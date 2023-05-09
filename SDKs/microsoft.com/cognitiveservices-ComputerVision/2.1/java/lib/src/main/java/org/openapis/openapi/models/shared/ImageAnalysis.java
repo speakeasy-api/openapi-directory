@@ -18,6 +18,7 @@ public class ImageAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adult")
     public AdultInfo adult;
+
     public ImageAnalysis withAdult(AdultInfo adult) {
         this.adult = adult;
         return this;
@@ -29,6 +30,7 @@ public class ImageAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brands")
     public DetectedBrand[] brands;
+
     public ImageAnalysis withBrands(DetectedBrand[] brands) {
         this.brands = brands;
         return this;
@@ -40,6 +42,7 @@ public class ImageAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public Category[] categories;
+
     public ImageAnalysis withCategories(Category[] categories) {
         this.categories = categories;
         return this;
@@ -51,6 +54,7 @@ public class ImageAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public ColorInfo color;
+
     public ImageAnalysis withColor(ColorInfo color) {
         this.color = color;
         return this;
@@ -62,6 +66,7 @@ public class ImageAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public ImageDescriptionDetails description;
+
     public ImageAnalysis withDescription(ImageDescriptionDetails description) {
         this.description = description;
         return this;
@@ -73,6 +78,7 @@ public class ImageAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("faces")
     public FaceDescription[] faces;
+
     public ImageAnalysis withFaces(FaceDescription[] faces) {
         this.faces = faces;
         return this;
@@ -84,6 +90,7 @@ public class ImageAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageType")
     public ImageType imageType;
+
     public ImageAnalysis withImageType(ImageType imageType) {
         this.imageType = imageType;
         return this;
@@ -95,6 +102,7 @@ public class ImageAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ImageMetadata metadata;
+
     public ImageAnalysis withMetadata(ImageMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -106,6 +114,7 @@ public class ImageAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objects")
     public DetectedObject[] objects;
+
     public ImageAnalysis withObjects(DetectedObject[] objects) {
         this.objects = objects;
         return this;
@@ -117,6 +126,7 @@ public class ImageAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public ImageAnalysis withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -128,9 +138,11 @@ public class ImageAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public ImageTag[] tags;
+
     public ImageAnalysis withTags(ImageTag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ImageAnalysis(){}
 }

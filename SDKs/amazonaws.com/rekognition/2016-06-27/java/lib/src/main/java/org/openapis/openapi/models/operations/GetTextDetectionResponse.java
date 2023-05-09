@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTextDetectionResponse {
@@ -12,6 +13,7 @@ public class GetTextDetectionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetTextDetectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetTextDetectionResponse {
     
     
     public String contentType;
+
     public GetTextDetectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTextDetectionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTextDetectionResponse getTextDetectionResponse;
+
     public GetTextDetectionResponse withGetTextDetectionResponse(org.openapis.openapi.models.shared.GetTextDetectionResponse getTextDetectionResponse) {
         this.getTextDetectionResponse = getTextDetectionResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetTextDetectionResponse {
      */
     
     public Object internalServerError;
+
     public GetTextDetectionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class GetTextDetectionResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public GetTextDetectionResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class GetTextDetectionResponse {
      */
     
     public Object invalidParameterException;
+
     public GetTextDetectionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class GetTextDetectionResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public GetTextDetectionResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -79,6 +87,7 @@ public class GetTextDetectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetTextDetectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class GetTextDetectionResponse {
     
     
     public Integer statusCode;
+
     public GetTextDetectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetTextDetectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTextDetectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetTextDetectionResponse {
      */
     
     public Object throttlingException;
+
     public GetTextDetectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetTextDetectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

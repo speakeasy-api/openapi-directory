@@ -22,6 +22,7 @@ public class DetectorModelConfiguration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public DetectorModelConfiguration withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DetectorModelConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorModelArn")
     public String detectorModelArn;
+
     public DetectorModelConfiguration withDetectorModelArn(String detectorModelArn) {
         this.detectorModelArn = detectorModelArn;
         return this;
@@ -38,6 +40,7 @@ public class DetectorModelConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorModelDescription")
     public String detectorModelDescription;
+
     public DetectorModelConfiguration withDetectorModelDescription(String detectorModelDescription) {
         this.detectorModelDescription = detectorModelDescription;
         return this;
@@ -46,6 +49,7 @@ public class DetectorModelConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorModelName")
     public String detectorModelName;
+
     public DetectorModelConfiguration withDetectorModelName(String detectorModelName) {
         this.detectorModelName = detectorModelName;
         return this;
@@ -54,6 +58,7 @@ public class DetectorModelConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorModelVersion")
     public String detectorModelVersion;
+
     public DetectorModelConfiguration withDetectorModelVersion(String detectorModelVersion) {
         this.detectorModelVersion = detectorModelVersion;
         return this;
@@ -62,6 +67,7 @@ public class DetectorModelConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationMethod")
     public EvaluationMethodEnum evaluationMethod;
+
     public DetectorModelConfiguration withEvaluationMethod(EvaluationMethodEnum evaluationMethod) {
         this.evaluationMethod = evaluationMethod;
         return this;
@@ -70,6 +76,7 @@ public class DetectorModelConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public DetectorModelConfiguration withKey(String key) {
         this.key = key;
         return this;
@@ -80,6 +87,7 @@ public class DetectorModelConfiguration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public DetectorModelConfiguration withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -88,6 +96,7 @@ public class DetectorModelConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DetectorModelConfiguration withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -96,9 +105,11 @@ public class DetectorModelConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DetectorModelVersionStatusEnum status;
+
     public DetectorModelConfiguration withStatus(DetectorModelVersionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DetectorModelConfiguration(){}
 }

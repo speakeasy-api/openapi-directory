@@ -12,6 +12,7 @@ public class DeviceMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceType")
     public String deviceType;
+
     public DeviceMethod withDeviceType(String deviceType) {
         this.deviceType = deviceType;
         return this;
@@ -20,9 +21,11 @@ public class DeviceMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MethodName")
     public String methodName;
+
     public DeviceMethod withMethodName(String methodName) {
         this.methodName = methodName;
         return this;
     }
     
+    public DeviceMethod(){}
 }

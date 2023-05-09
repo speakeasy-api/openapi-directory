@@ -103,7 +103,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/SearchDocsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateDocSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateDocRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateDocResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetErrorsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetErrorsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetProjectSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetProjectResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteSwaggerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteSwaggerRequest.java
@@ -125,6 +127,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DeleteVersionResponse.j
 lib/src/main/java/org/openapis/openapi/models/operations/GetVersionSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVersionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVersionResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetVersionsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVersionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateVersionSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateVersionRequest.java
@@ -135,4 +138,14 @@ lib/src/main/java/org/openapis/openapi/models/shared/CustomPage.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Doc.java
 lib/src/main/java/org/openapis/openapi/models/shared/Version.java
+docs/sdk/README.md
+docs/apispecification/README.md
+docs/categories/README.md
+docs/changelog/README.md
+docs/custompages/README.md
+docs/docs/README.md
+docs/errors/README.md
+docs/projects/README.md
+docs/swagger/README.md
+docs/version/README.md
 USAGE.md

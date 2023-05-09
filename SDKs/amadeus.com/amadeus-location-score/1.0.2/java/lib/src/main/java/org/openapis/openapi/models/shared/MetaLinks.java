@@ -18,9 +18,11 @@ public class MetaLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public MetaLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public MetaLinks(){}
 }

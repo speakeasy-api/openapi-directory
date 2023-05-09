@@ -15,6 +15,7 @@ public class DeviceEventDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, Object> attributes;
+
     public DeviceEventDevice withAttributes(java.util.Map<String, Object> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class DeviceEventDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceId")
     public String deviceId;
+
     public DeviceEventDevice withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -31,9 +33,11 @@ public class DeviceEventDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public DeviceEventDevice withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DeviceEventDevice(){}
 }

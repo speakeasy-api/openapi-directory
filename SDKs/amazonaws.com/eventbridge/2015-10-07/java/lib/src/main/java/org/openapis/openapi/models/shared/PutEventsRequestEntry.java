@@ -20,6 +20,7 @@ public class PutEventsRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Detail")
     public String detail;
+
     public PutEventsRequestEntry withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -28,6 +29,7 @@ public class PutEventsRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetailType")
     public String detailType;
+
     public PutEventsRequestEntry withDetailType(String detailType) {
         this.detailType = detailType;
         return this;
@@ -36,6 +38,7 @@ public class PutEventsRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBusName")
     public String eventBusName;
+
     public PutEventsRequestEntry withEventBusName(String eventBusName) {
         this.eventBusName = eventBusName;
         return this;
@@ -44,6 +47,7 @@ public class PutEventsRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public String[] resources;
+
     public PutEventsRequestEntry withResources(String[] resources) {
         this.resources = resources;
         return this;
@@ -52,6 +56,7 @@ public class PutEventsRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public PutEventsRequestEntry withSource(String source) {
         this.source = source;
         return this;
@@ -62,6 +67,7 @@ public class PutEventsRequestEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Time")
     public OffsetDateTime time;
+
     public PutEventsRequestEntry withTime(OffsetDateTime time) {
         this.time = time;
         return this;
@@ -70,9 +76,11 @@ public class PutEventsRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TraceHeader")
     public String traceHeader;
+
     public PutEventsRequestEntry withTraceHeader(String traceHeader) {
         this.traceHeader = traceHeader;
         return this;
     }
     
+    public PutEventsRequestEntry(){}
 }

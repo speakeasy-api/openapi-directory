@@ -12,9 +12,11 @@ public class GetConnectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authEventId")
     public String authEventId;
+
     public GetConnectionsRequest withAuthEventId(String authEventId) {
         this.authEventId = authEventId;
         return this;
     }
     
+    public GetConnectionsRequest(){}
 }

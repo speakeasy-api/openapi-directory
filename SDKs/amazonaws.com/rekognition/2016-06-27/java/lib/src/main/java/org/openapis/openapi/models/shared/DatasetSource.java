@@ -15,6 +15,7 @@ public class DatasetSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetArn")
     public String datasetArn;
+
     public DatasetSource withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
@@ -26,9 +27,11 @@ public class DatasetSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroundTruthManifest")
     public GroundTruthManifest groundTruthManifest;
+
     public DatasetSource withGroundTruthManifest(GroundTruthManifest groundTruthManifest) {
         this.groundTruthManifest = groundTruthManifest;
         return this;
     }
     
+    public DatasetSource(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanySearchNameRequest {
@@ -12,6 +13,7 @@ public class CompanySearchNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
     public String country;
+
     public CompanySearchNameRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -22,6 +24,7 @@ public class CompanySearchNameRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public CompanySearchNameRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,9 +35,14 @@ public class CompanySearchNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public CompanySearchNameRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CompanySearchNameRequest(@JsonProperty("country") String country, @JsonProperty("name") String name) {
+        this.country = country;
+        this.name = name;
+  }
 }

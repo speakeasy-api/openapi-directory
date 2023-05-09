@@ -18,6 +18,7 @@ public class YoutubeVideoAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negative")
     public Boolean negative;
+
     public YoutubeVideoAssignedTargetingOptionDetails withNegative(Boolean negative) {
         this.negative = negative;
         return this;
@@ -29,9 +30,11 @@ public class YoutubeVideoAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoId")
     public String videoId;
+
     public YoutubeVideoAssignedTargetingOptionDetails withVideoId(String videoId) {
         this.videoId = videoId;
         return this;
     }
     
+    public YoutubeVideoAssignedTargetingOptionDetails(){}
 }

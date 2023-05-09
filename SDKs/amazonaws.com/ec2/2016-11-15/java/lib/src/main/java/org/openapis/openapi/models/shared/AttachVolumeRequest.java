@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AttachVolumeRequest {
     
     public String device;
+
     public AttachVolumeRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -16,6 +17,7 @@ public class AttachVolumeRequest {
     
     
     public Boolean dryRun;
+
     public AttachVolumeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class AttachVolumeRequest {
     
     
     public String instanceId;
+
     public AttachVolumeRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -30,9 +33,15 @@ public class AttachVolumeRequest {
     
     
     public String volumeId;
+
     public AttachVolumeRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public AttachVolumeRequest(@JsonProperty("Device") String device, @JsonProperty("InstanceId") String instanceId, @JsonProperty("VolumeId") String volumeId) {
+        this.device = device;
+        this.instanceId = instanceId;
+        this.volumeId = volumeId;
+  }
 }

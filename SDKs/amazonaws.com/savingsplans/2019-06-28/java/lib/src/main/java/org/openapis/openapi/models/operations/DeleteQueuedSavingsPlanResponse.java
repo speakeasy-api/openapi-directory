@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteQueuedSavingsPlanResponse {
     
     public String contentType;
+
     public DeleteQueuedSavingsPlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteQueuedSavingsPlanResponse {
      */
     
     public java.util.Map<String, Object> deleteQueuedSavingsPlanResponse;
+
     public DeleteQueuedSavingsPlanResponse withDeleteQueuedSavingsPlanResponse(java.util.Map<String, Object> deleteQueuedSavingsPlanResponse) {
         this.deleteQueuedSavingsPlanResponse = deleteQueuedSavingsPlanResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteQueuedSavingsPlanResponse {
      */
     
     public Object internalServerException;
+
     public DeleteQueuedSavingsPlanResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteQueuedSavingsPlanResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteQueuedSavingsPlanResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteQueuedSavingsPlanResponse {
     
     
     public Integer statusCode;
+
     public DeleteQueuedSavingsPlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteQueuedSavingsPlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteQueuedSavingsPlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteQueuedSavingsPlanResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteQueuedSavingsPlanResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteQueuedSavingsPlanResponse {
      */
     
     public Object validationException;
+
     public DeleteQueuedSavingsPlanResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteQueuedSavingsPlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

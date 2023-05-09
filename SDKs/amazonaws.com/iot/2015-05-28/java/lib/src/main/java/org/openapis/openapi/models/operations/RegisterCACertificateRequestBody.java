@@ -14,6 +14,7 @@ public class RegisterCACertificateRequestBody {
      */
     @JsonProperty("caCertificate")
     public String caCertificate;
+
     public RegisterCACertificateRequestBody withCaCertificate(String caCertificate) {
         this.caCertificate = caCertificate;
         return this;
@@ -25,6 +26,7 @@ public class RegisterCACertificateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateMode")
     public RegisterCACertificateRequestBodyCertificateModeEnum certificateMode;
+
     public RegisterCACertificateRequestBody withCertificateMode(RegisterCACertificateRequestBodyCertificateModeEnum certificateMode) {
         this.certificateMode = certificateMode;
         return this;
@@ -36,6 +38,7 @@ public class RegisterCACertificateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationConfig")
     public RegisterCACertificateRequestBodyRegistrationConfig registrationConfig;
+
     public RegisterCACertificateRequestBody withRegistrationConfig(RegisterCACertificateRequestBodyRegistrationConfig registrationConfig) {
         this.registrationConfig = registrationConfig;
         return this;
@@ -47,6 +50,7 @@ public class RegisterCACertificateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public RegisterCACertificateRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -58,9 +62,13 @@ public class RegisterCACertificateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationCertificate")
     public String verificationCertificate;
+
     public RegisterCACertificateRequestBody withVerificationCertificate(String verificationCertificate) {
         this.verificationCertificate = verificationCertificate;
         return this;
     }
     
+    public RegisterCACertificateRequestBody(@JsonProperty("caCertificate") String caCertificate) {
+        this.caCertificate = caCertificate;
+  }
 }

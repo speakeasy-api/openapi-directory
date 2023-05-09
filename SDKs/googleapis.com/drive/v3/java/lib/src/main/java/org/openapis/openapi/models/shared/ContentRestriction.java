@@ -23,6 +23,7 @@ public class ContentRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readOnly")
     public Boolean readOnly;
+
     public ContentRestriction withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -34,6 +35,7 @@ public class ContentRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ContentRestriction withReason(String reason) {
         this.reason = reason;
         return this;
@@ -45,6 +47,7 @@ public class ContentRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictingUser")
     public User restrictingUser;
+
     public ContentRestriction withRestrictingUser(User restrictingUser) {
         this.restrictingUser = restrictingUser;
         return this;
@@ -58,6 +61,7 @@ public class ContentRestriction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("restrictionTime")
     public OffsetDateTime restrictionTime;
+
     public ContentRestriction withRestrictionTime(OffsetDateTime restrictionTime) {
         this.restrictionTime = restrictionTime;
         return this;
@@ -69,9 +73,11 @@ public class ContentRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ContentRestriction withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ContentRestriction(){}
 }

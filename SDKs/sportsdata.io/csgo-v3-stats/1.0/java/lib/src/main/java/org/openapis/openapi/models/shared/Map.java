@@ -12,6 +12,7 @@ public class Map {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentRound")
     public Long currentRound;
+
     public Map withCurrentRound(Long currentRound) {
         this.currentRound = currentRound;
         return this;
@@ -20,6 +21,7 @@ public class Map {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Leaderboards")
     public Leaderboard[] leaderboards;
+
     public Map withLeaderboards(Leaderboard[] leaderboards) {
         this.leaderboards = leaderboards;
         return this;
@@ -28,6 +30,7 @@ public class Map {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Map withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class Map {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public Map withNumber(Long number) {
         this.number = number;
         return this;
@@ -44,6 +48,7 @@ public class Map {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Map withStatus(String status) {
         this.status = status;
         return this;
@@ -52,6 +57,7 @@ public class Map {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamAScore")
     public Long teamAScore;
+
     public Map withTeamAScore(Long teamAScore) {
         this.teamAScore = teamAScore;
         return this;
@@ -60,9 +66,11 @@ public class Map {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamBScore")
     public Long teamBScore;
+
     public Map withTeamBScore(Long teamBScore) {
         this.teamBScore = teamBScore;
         return this;
     }
     
+    public Map(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class KinesisParameters {
     @JsonProperty("PartitionKey")
     public String partitionKey;
+
     public KinesisParameters withPartitionKey(String partitionKey) {
         this.partitionKey = partitionKey;
         return this;
     }
     
+    public KinesisParameters(@JsonProperty("PartitionKey") String partitionKey) {
+        this.partitionKey = partitionKey;
+  }
 }

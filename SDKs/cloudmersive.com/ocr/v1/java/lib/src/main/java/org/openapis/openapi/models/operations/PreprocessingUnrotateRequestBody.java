@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PreprocessingUnrotateRequestBody {
@@ -12,9 +13,13 @@ public class PreprocessingUnrotateRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public PreprocessingUnrotateRequestBodyImageFile imageFile;
+
     public PreprocessingUnrotateRequestBody withImageFile(PreprocessingUnrotateRequestBodyImageFile imageFile) {
         this.imageFile = imageFile;
         return this;
     }
     
+    public PreprocessingUnrotateRequestBody(@JsonProperty("imageFile") PreprocessingUnrotateRequestBodyImageFile imageFile) {
+        this.imageFile = imageFile;
+  }
 }

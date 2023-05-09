@@ -18,6 +18,7 @@ public class GenerateRandomBytesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lengthBytes")
     public Integer lengthBytes;
+
     public GenerateRandomBytesRequest withLengthBytes(Integer lengthBytes) {
         this.lengthBytes = lengthBytes;
         return this;
@@ -29,9 +30,11 @@ public class GenerateRandomBytesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protectionLevel")
     public GenerateRandomBytesRequestProtectionLevelEnum protectionLevel;
+
     public GenerateRandomBytesRequest withProtectionLevel(GenerateRandomBytesRequestProtectionLevelEnum protectionLevel) {
         this.protectionLevel = protectionLevel;
         return this;
     }
     
+    public GenerateRandomBytesRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAutomaticInvitationListResponse {
@@ -12,6 +13,7 @@ public class GetAutomaticInvitationListResponse {
      */
     
     public org.openapis.openapi.models.shared.AutomaticInvitationsListVO automaticInvitationsListVO;
+
     public GetAutomaticInvitationListResponse withAutomaticInvitationsListVO(org.openapis.openapi.models.shared.AutomaticInvitationsListVO automaticInvitationsListVO) {
         this.automaticInvitationsListVO = automaticInvitationsListVO;
         return this;
@@ -19,6 +21,7 @@ public class GetAutomaticInvitationListResponse {
     
     
     public byte[] body;
+
     public GetAutomaticInvitationListResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -26,6 +29,7 @@ public class GetAutomaticInvitationListResponse {
     
     
     public String contentType;
+
     public GetAutomaticInvitationListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class GetAutomaticInvitationListResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetAutomaticInvitationListResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -43,6 +48,7 @@ public class GetAutomaticInvitationListResponse {
     
     
     public Integer statusCode;
+
     public GetAutomaticInvitationListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetAutomaticInvitationListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAutomaticInvitationListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAutomaticInvitationListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

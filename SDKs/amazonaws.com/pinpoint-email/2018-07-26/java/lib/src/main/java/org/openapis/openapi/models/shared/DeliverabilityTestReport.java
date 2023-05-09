@@ -22,6 +22,7 @@ public class DeliverabilityTestReport {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateDate")
     public OffsetDateTime createDate;
+
     public DeliverabilityTestReport withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -30,6 +31,7 @@ public class DeliverabilityTestReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliverabilityTestStatus")
     public DeliverabilityTestStatusEnum deliverabilityTestStatus;
+
     public DeliverabilityTestReport withDeliverabilityTestStatus(DeliverabilityTestStatusEnum deliverabilityTestStatus) {
         this.deliverabilityTestStatus = deliverabilityTestStatus;
         return this;
@@ -38,6 +40,7 @@ public class DeliverabilityTestReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromEmailAddress")
     public String fromEmailAddress;
+
     public DeliverabilityTestReport withFromEmailAddress(String fromEmailAddress) {
         this.fromEmailAddress = fromEmailAddress;
         return this;
@@ -46,6 +49,7 @@ public class DeliverabilityTestReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportId")
     public String reportId;
+
     public DeliverabilityTestReport withReportId(String reportId) {
         this.reportId = reportId;
         return this;
@@ -54,6 +58,7 @@ public class DeliverabilityTestReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportName")
     public String reportName;
+
     public DeliverabilityTestReport withReportName(String reportName) {
         this.reportName = reportName;
         return this;
@@ -62,9 +67,11 @@ public class DeliverabilityTestReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subject")
     public String subject;
+
     public DeliverabilityTestReport withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public DeliverabilityTestReport(){}
 }

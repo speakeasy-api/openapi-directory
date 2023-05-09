@@ -18,9 +18,11 @@ public class UpdateContactListRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateContactListRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateContactListRequest(){}
 }

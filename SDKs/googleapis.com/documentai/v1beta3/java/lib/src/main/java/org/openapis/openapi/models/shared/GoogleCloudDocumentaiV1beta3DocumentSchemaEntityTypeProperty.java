@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurrenceType")
     public GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypePropertyOccurrenceTypeEnum occurrenceType;
+
     public GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty withOccurrenceType(GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypePropertyOccurrenceTypeEnum occurrenceType) {
         this.occurrenceType = occurrenceType;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueType")
     public String valueType;
+
     public GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty withValueType(String valueType) {
         this.valueType = valueType;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty(){}
 }

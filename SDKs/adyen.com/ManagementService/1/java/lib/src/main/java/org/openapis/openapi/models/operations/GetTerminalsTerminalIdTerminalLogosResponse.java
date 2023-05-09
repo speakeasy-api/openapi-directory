@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTerminalsTerminalIdTerminalLogosResponse {
     
     public String contentType;
+
     public GetTerminalsTerminalIdTerminalLogosResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTerminalsTerminalIdTerminalLogosResponse {
      */
     
     public org.openapis.openapi.models.shared.Logo logo;
+
     public GetTerminalsTerminalIdTerminalLogosResponse withLogo(org.openapis.openapi.models.shared.Logo logo) {
         this.logo = logo;
         return this;
@@ -29,6 +32,7 @@ public class GetTerminalsTerminalIdTerminalLogosResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetTerminalsTerminalIdTerminalLogosResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class GetTerminalsTerminalIdTerminalLogosResponse {
     
     
     public Integer statusCode;
+
     public GetTerminalsTerminalIdTerminalLogosResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetTerminalsTerminalIdTerminalLogosResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTerminalsTerminalIdTerminalLogosResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTerminalsTerminalIdTerminalLogosResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

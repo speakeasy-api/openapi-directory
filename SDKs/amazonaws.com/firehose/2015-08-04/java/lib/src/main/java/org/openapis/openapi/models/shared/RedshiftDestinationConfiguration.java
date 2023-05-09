@@ -15,6 +15,7 @@ public class RedshiftDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptions")
     public CloudWatchLoggingOptions cloudWatchLoggingOptions;
+
     public RedshiftDestinationConfiguration withCloudWatchLoggingOptions(CloudWatchLoggingOptions cloudWatchLoggingOptions) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         return this;
@@ -22,6 +23,7 @@ public class RedshiftDestinationConfiguration {
     
     @JsonProperty("ClusterJDBCURL")
     public String clusterJDBCURL;
+
     public RedshiftDestinationConfiguration withClusterJDBCURL(String clusterJDBCURL) {
         this.clusterJDBCURL = clusterJDBCURL;
         return this;
@@ -29,6 +31,7 @@ public class RedshiftDestinationConfiguration {
     
     @JsonProperty("CopyCommand")
     public CopyCommand copyCommand;
+
     public RedshiftDestinationConfiguration withCopyCommand(CopyCommand copyCommand) {
         this.copyCommand = copyCommand;
         return this;
@@ -36,6 +39,7 @@ public class RedshiftDestinationConfiguration {
     
     @JsonProperty("Password")
     public String password;
+
     public RedshiftDestinationConfiguration withPassword(String password) {
         this.password = password;
         return this;
@@ -44,6 +48,7 @@ public class RedshiftDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingConfiguration")
     public ProcessingConfiguration processingConfiguration;
+
     public RedshiftDestinationConfiguration withProcessingConfiguration(ProcessingConfiguration processingConfiguration) {
         this.processingConfiguration = processingConfiguration;
         return this;
@@ -52,6 +57,7 @@ public class RedshiftDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryOptions")
     public RedshiftRetryOptions retryOptions;
+
     public RedshiftDestinationConfiguration withRetryOptions(RedshiftRetryOptions retryOptions) {
         this.retryOptions = retryOptions;
         return this;
@@ -59,6 +65,7 @@ public class RedshiftDestinationConfiguration {
     
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public RedshiftDestinationConfiguration withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -67,6 +74,7 @@ public class RedshiftDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BackupConfiguration")
     public S3DestinationConfiguration s3BackupConfiguration;
+
     public RedshiftDestinationConfiguration withS3BackupConfiguration(S3DestinationConfiguration s3BackupConfiguration) {
         this.s3BackupConfiguration = s3BackupConfiguration;
         return this;
@@ -75,6 +83,7 @@ public class RedshiftDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BackupMode")
     public RedshiftS3BackupModeEnum s3BackupMode;
+
     public RedshiftDestinationConfiguration withS3BackupMode(RedshiftS3BackupModeEnum s3BackupMode) {
         this.s3BackupMode = s3BackupMode;
         return this;
@@ -82,6 +91,7 @@ public class RedshiftDestinationConfiguration {
     
     @JsonProperty("S3Configuration")
     public S3DestinationConfiguration s3Configuration;
+
     public RedshiftDestinationConfiguration withS3Configuration(S3DestinationConfiguration s3Configuration) {
         this.s3Configuration = s3Configuration;
         return this;
@@ -89,9 +99,18 @@ public class RedshiftDestinationConfiguration {
     
     @JsonProperty("Username")
     public String username;
+
     public RedshiftDestinationConfiguration withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public RedshiftDestinationConfiguration(@JsonProperty("Username") String username, @JsonProperty("Password") String password, @JsonProperty("ClusterJDBCURL") String clusterJDBCURL, @JsonProperty("CopyCommand") CopyCommand copyCommand, @JsonProperty("RoleARN") String roleARN, @JsonProperty("S3Configuration") S3DestinationConfiguration s3Configuration) {
+        this.username = username;
+        this.password = password;
+        this.clusterJDBCURL = clusterJDBCURL;
+        this.copyCommand = copyCommand;
+        this.roleARN = roleARN;
+        this.s3Configuration = s3Configuration;
+  }
 }

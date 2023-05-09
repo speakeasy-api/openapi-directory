@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransportationIncentivesLawsAllRequest {
@@ -12,6 +13,7 @@ public class TransportationIncentivesLawsAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public TransportationIncentivesLawsAllRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class TransportationIncentivesLawsAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expired")
     public Boolean expired;
+
     public TransportationIncentivesLawsAllRequest withExpired(Boolean expired) {
         this.expired = expired;
         return this;
@@ -32,6 +35,7 @@ public class TransportationIncentivesLawsAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=incentive_type")
     public String incentiveType;
+
     public TransportationIncentivesLawsAllRequest withIncentiveType(String incentiveType) {
         this.incentiveType = incentiveType;
         return this;
@@ -42,6 +46,7 @@ public class TransportationIncentivesLawsAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jurisdiction")
     public String jurisdiction;
+
     public TransportationIncentivesLawsAllRequest withJurisdiction(String jurisdiction) {
         this.jurisdiction = jurisdiction;
         return this;
@@ -52,6 +57,7 @@ public class TransportationIncentivesLawsAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
     public String keyword;
+
     public TransportationIncentivesLawsAllRequest withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -62,6 +68,7 @@ public class TransportationIncentivesLawsAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=law_type")
     public String lawType;
+
     public TransportationIncentivesLawsAllRequest withLawType(String lawType) {
         this.lawType = lawType;
         return this;
@@ -72,6 +79,7 @@ public class TransportationIncentivesLawsAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public TransportationIncentivesLawsAllRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -82,6 +90,7 @@ public class TransportationIncentivesLawsAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=local")
     public Boolean local;
+
     public TransportationIncentivesLawsAllRequest withLocal(Boolean local) {
         this.local = local;
         return this;
@@ -92,6 +101,7 @@ public class TransportationIncentivesLawsAllRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=output_format")
     public TransportationIncentivesLawsAllOutputFormatEnum outputFormat;
+
     public TransportationIncentivesLawsAllRequest withOutputFormat(TransportationIncentivesLawsAllOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -102,6 +112,7 @@ public class TransportationIncentivesLawsAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=poc")
     public Boolean poc;
+
     public TransportationIncentivesLawsAllRequest withPoc(Boolean poc) {
         this.poc = poc;
         return this;
@@ -112,6 +123,7 @@ public class TransportationIncentivesLawsAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recent")
     public Boolean recent;
+
     public TransportationIncentivesLawsAllRequest withRecent(Boolean recent) {
         this.recent = recent;
         return this;
@@ -122,6 +134,7 @@ public class TransportationIncentivesLawsAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regulation_type")
     public String regulationType;
+
     public TransportationIncentivesLawsAllRequest withRegulationType(String regulationType) {
         this.regulationType = regulationType;
         return this;
@@ -132,6 +145,7 @@ public class TransportationIncentivesLawsAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=technology")
     public String technology;
+
     public TransportationIncentivesLawsAllRequest withTechnology(String technology) {
         this.technology = technology;
         return this;
@@ -142,9 +156,14 @@ public class TransportationIncentivesLawsAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_type")
     public String userType;
+
     public TransportationIncentivesLawsAllRequest withUserType(String userType) {
         this.userType = userType;
         return this;
     }
     
+    public TransportationIncentivesLawsAllRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("output_format") TransportationIncentivesLawsAllOutputFormatEnum outputFormat) {
+        this.apiKey = apiKey;
+        this.outputFormat = outputFormat;
+  }
 }

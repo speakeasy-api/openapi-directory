@@ -12,6 +12,7 @@ public class AssociateResolverRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AssociateResolverRuleRequest withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class AssociateResolverRuleRequest {
     
     @JsonProperty("ResolverRuleId")
     public String resolverRuleId;
+
     public AssociateResolverRuleRequest withResolverRuleId(String resolverRuleId) {
         this.resolverRuleId = resolverRuleId;
         return this;
@@ -26,9 +28,14 @@ public class AssociateResolverRuleRequest {
     
     @JsonProperty("VPCId")
     public String vpcId;
+
     public AssociateResolverRuleRequest withVPCId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AssociateResolverRuleRequest(@JsonProperty("ResolverRuleId") String resolverRuleId, @JsonProperty("VPCId") String vpcId) {
+        this.resolverRuleId = resolverRuleId;
+        this.vpcId = vpcId;
+  }
 }

@@ -15,9 +15,13 @@ public class SubscriptionDetails {
      */
     @JsonProperty("itvData_purchased")
     public java.util.Map<String, Object> itvDataPurchased;
+
     public SubscriptionDetails withItvDataPurchased(java.util.Map<String, Object> itvDataPurchased) {
         this.itvDataPurchased = itvDataPurchased;
         return this;
     }
     
+    public SubscriptionDetails(@JsonProperty("itvData_purchased") java.util.Map<String, Object> itvDataPurchased) {
+        this.itvDataPurchased = itvDataPurchased;
+  }
 }

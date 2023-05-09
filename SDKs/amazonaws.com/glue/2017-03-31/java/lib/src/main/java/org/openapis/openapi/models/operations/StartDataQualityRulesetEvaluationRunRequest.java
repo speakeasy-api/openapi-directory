@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartDataQualityRulesetEvaluationRunRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.StartDataQualityRulesetEvaluationRunRequest startDataQualityRulesetEvaluationRunRequest;
+
     public StartDataQualityRulesetEvaluationRunRequest withStartDataQualityRulesetEvaluationRunRequest(org.openapis.openapi.models.shared.StartDataQualityRulesetEvaluationRunRequest startDataQualityRulesetEvaluationRunRequest) {
         this.startDataQualityRulesetEvaluationRunRequest = startDataQualityRulesetEvaluationRunRequest;
         return this;
@@ -16,6 +18,7 @@ public class StartDataQualityRulesetEvaluationRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public StartDataQualityRulesetEvaluationRunRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class StartDataQualityRulesetEvaluationRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public StartDataQualityRulesetEvaluationRunRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class StartDataQualityRulesetEvaluationRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public StartDataQualityRulesetEvaluationRunRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class StartDataQualityRulesetEvaluationRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public StartDataQualityRulesetEvaluationRunRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class StartDataQualityRulesetEvaluationRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public StartDataQualityRulesetEvaluationRunRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class StartDataQualityRulesetEvaluationRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public StartDataQualityRulesetEvaluationRunRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class StartDataQualityRulesetEvaluationRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public StartDataQualityRulesetEvaluationRunRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class StartDataQualityRulesetEvaluationRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public StartDataQualityRulesetEvaluationRunXAmzTargetEnum xAmzTarget;
+
     public StartDataQualityRulesetEvaluationRunRequest withXAmzTarget(StartDataQualityRulesetEvaluationRunXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public StartDataQualityRulesetEvaluationRunRequest(@JsonProperty("StartDataQualityRulesetEvaluationRunRequest") org.openapis.openapi.models.shared.StartDataQualityRulesetEvaluationRunRequest startDataQualityRulesetEvaluationRunRequest, @JsonProperty("X-Amz-Target") StartDataQualityRulesetEvaluationRunXAmzTargetEnum xAmzTarget) {
+        this.startDataQualityRulesetEvaluationRunRequest = startDataQualityRulesetEvaluationRunRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

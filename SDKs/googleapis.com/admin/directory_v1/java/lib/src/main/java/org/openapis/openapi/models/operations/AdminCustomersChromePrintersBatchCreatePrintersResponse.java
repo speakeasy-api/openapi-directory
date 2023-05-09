@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminCustomersChromePrintersBatchCreatePrintersResponse {
@@ -12,6 +13,7 @@ public class AdminCustomersChromePrintersBatchCreatePrintersResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchCreatePrintersResponse batchCreatePrintersResponse;
+
     public AdminCustomersChromePrintersBatchCreatePrintersResponse withBatchCreatePrintersResponse(org.openapis.openapi.models.shared.BatchCreatePrintersResponse batchCreatePrintersResponse) {
         this.batchCreatePrintersResponse = batchCreatePrintersResponse;
         return this;
@@ -19,6 +21,7 @@ public class AdminCustomersChromePrintersBatchCreatePrintersResponse {
     
     
     public String contentType;
+
     public AdminCustomersChromePrintersBatchCreatePrintersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AdminCustomersChromePrintersBatchCreatePrintersResponse {
     
     
     public Integer statusCode;
+
     public AdminCustomersChromePrintersBatchCreatePrintersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AdminCustomersChromePrintersBatchCreatePrintersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminCustomersChromePrintersBatchCreatePrintersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AdminCustomersChromePrintersBatchCreatePrintersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

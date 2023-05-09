@@ -12,6 +12,7 @@ public class ErrorInvalidParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ErrorInvalidParameters withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class ErrorInvalidParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ErrorInvalidParameters withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public ErrorInvalidParameters(){}
 }

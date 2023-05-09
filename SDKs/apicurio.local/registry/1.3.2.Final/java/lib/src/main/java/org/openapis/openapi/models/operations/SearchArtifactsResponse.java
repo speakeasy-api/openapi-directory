@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchArtifactsResponse {
@@ -13,6 +14,7 @@ public class SearchArtifactsResponse {
      */
     
     public org.openapis.openapi.models.shared.ArtifactSearchResults artifactSearchResults;
+
     public SearchArtifactsResponse withArtifactSearchResults(org.openapis.openapi.models.shared.ArtifactSearchResults artifactSearchResults) {
         this.artifactSearchResults = artifactSearchResults;
         return this;
@@ -20,6 +22,7 @@ public class SearchArtifactsResponse {
     
     
     public String contentType;
+
     public SearchArtifactsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -30,6 +33,7 @@ public class SearchArtifactsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public SearchArtifactsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -37,6 +41,7 @@ public class SearchArtifactsResponse {
     
     
     public Integer statusCode;
+
     public SearchArtifactsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -44,9 +49,14 @@ public class SearchArtifactsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchArtifactsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SearchArtifactsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

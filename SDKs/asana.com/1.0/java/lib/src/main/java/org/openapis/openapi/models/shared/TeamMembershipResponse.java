@@ -18,6 +18,7 @@ public class TeamMembershipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public TeamMembershipResponse withGid(String gid) {
         this.gid = gid;
         return this;
@@ -29,6 +30,7 @@ public class TeamMembershipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_guest")
     public Boolean isGuest;
+
     public TeamMembershipResponse withIsGuest(Boolean isGuest) {
         this.isGuest = isGuest;
         return this;
@@ -40,6 +42,7 @@ public class TeamMembershipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public TeamMembershipResponse withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -48,6 +51,7 @@ public class TeamMembershipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public TeamCompact team;
+
     public TeamMembershipResponse withTeam(TeamCompact team) {
         this.team = team;
         return this;
@@ -56,9 +60,11 @@ public class TeamMembershipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public UserCompact user;
+
     public TeamMembershipResponse withUser(UserCompact user) {
         this.user = user;
         return this;
     }
     
+    public TeamMembershipResponse(){}
 }

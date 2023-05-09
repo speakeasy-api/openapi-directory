@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CountPercent {
     @JsonProperty("Count")
     public Long count;
+
     public CountPercent withCount(Long count) {
         this.count = count;
         return this;
@@ -19,9 +20,14 @@ public class CountPercent {
     
     @JsonProperty("Percentage")
     public Float percentage;
+
     public CountPercent withPercentage(Float percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public CountPercent(@JsonProperty("Count") Long count, @JsonProperty("Percentage") Float percentage) {
+        this.count = count;
+        this.percentage = percentage;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EntityRecognitionConfig {
     @JsonProperty("EntityTypes")
     public EntityTypesListItem[] entityTypes;
+
     public EntityRecognitionConfig withEntityTypes(EntityTypesListItem[] entityTypes) {
         this.entityTypes = entityTypes;
         return this;
     }
     
+    public EntityRecognitionConfig(@JsonProperty("EntityTypes") EntityTypesListItem[] entityTypes) {
+        this.entityTypes = entityTypes;
+  }
 }

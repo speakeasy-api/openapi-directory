@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyLoadBalancerAttributesInput - Contains the parameters for ModifyLoadBalancerAttributes.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyLoadBalancerAttributesInput {
     
     public LoadBalancerAttributes loadBalancerAttributes;
+
     public ModifyLoadBalancerAttributesInput withLoadBalancerAttributes(LoadBalancerAttributes loadBalancerAttributes) {
         this.loadBalancerAttributes = loadBalancerAttributes;
         return this;
@@ -19,9 +20,14 @@ public class ModifyLoadBalancerAttributesInput {
     
     
     public String loadBalancerName;
+
     public ModifyLoadBalancerAttributesInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
     }
     
+    public ModifyLoadBalancerAttributesInput(@JsonProperty("LoadBalancerAttributes") LoadBalancerAttributes loadBalancerAttributes, @JsonProperty("LoadBalancerName") String loadBalancerName) {
+        this.loadBalancerAttributes = loadBalancerAttributes;
+        this.loadBalancerName = loadBalancerName;
+  }
 }

@@ -22,6 +22,7 @@ public class RescoreExecutionPlanSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public RescoreExecutionPlanSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class RescoreExecutionPlanSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public RescoreExecutionPlanSummary withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class RescoreExecutionPlanSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RescoreExecutionPlanSummary withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +49,7 @@ public class RescoreExecutionPlanSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public RescoreExecutionPlanStatusEnum status;
+
     public RescoreExecutionPlanSummary withStatus(RescoreExecutionPlanStatusEnum status) {
         this.status = status;
         return this;
@@ -56,9 +60,11 @@ public class RescoreExecutionPlanSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public RescoreExecutionPlanSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public RescoreExecutionPlanSummary(){}
 }

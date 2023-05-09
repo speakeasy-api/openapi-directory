@@ -15,6 +15,7 @@ public class GetHLSStreamingSessionURLRequestBodyHLSFragmentSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FragmentSelectorType")
     public org.openapis.openapi.models.shared.HLSFragmentSelectorTypeEnum fragmentSelectorType;
+
     public GetHLSStreamingSessionURLRequestBodyHLSFragmentSelector withFragmentSelectorType(org.openapis.openapi.models.shared.HLSFragmentSelectorTypeEnum fragmentSelectorType) {
         this.fragmentSelectorType = fragmentSelectorType;
         return this;
@@ -23,9 +24,11 @@ public class GetHLSStreamingSessionURLRequestBodyHLSFragmentSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimestampRange")
     public org.openapis.openapi.models.shared.HLSTimestampRange timestampRange;
+
     public GetHLSStreamingSessionURLRequestBodyHLSFragmentSelector withTimestampRange(org.openapis.openapi.models.shared.HLSTimestampRange timestampRange) {
         this.timestampRange = timestampRange;
         return this;
     }
     
+    public GetHLSStreamingSessionURLRequestBodyHLSFragmentSelector(){}
 }

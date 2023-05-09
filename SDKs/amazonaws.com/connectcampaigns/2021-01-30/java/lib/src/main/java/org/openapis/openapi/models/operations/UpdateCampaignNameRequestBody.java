@@ -12,9 +12,13 @@ public class UpdateCampaignNameRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public UpdateCampaignNameRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateCampaignNameRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

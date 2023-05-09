@@ -15,6 +15,7 @@ public class DescribeHsmRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HsmArn")
     public String hsmArn;
+
     public DescribeHsmRequest withHsmArn(String hsmArn) {
         this.hsmArn = hsmArn;
         return this;
@@ -23,9 +24,11 @@ public class DescribeHsmRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HsmSerialNumber")
     public String hsmSerialNumber;
+
     public DescribeHsmRequest withHsmSerialNumber(String hsmSerialNumber) {
         this.hsmSerialNumber = hsmSerialNumber;
         return this;
     }
     
+    public DescribeHsmRequest(){}
 }

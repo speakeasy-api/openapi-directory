@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateStudioComponentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateStudioComponentRequestBody requestBody;
+
     public UpdateStudioComponentRequest withRequestBody(UpdateStudioComponentRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateStudioComponentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateStudioComponentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -26,6 +29,7 @@ public class UpdateStudioComponentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Client-Token")
     public String xAmzClientToken;
+
     public UpdateStudioComponentRequest withXAmzClientToken(String xAmzClientToken) {
         this.xAmzClientToken = xAmzClientToken;
         return this;
@@ -33,6 +37,7 @@ public class UpdateStudioComponentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateStudioComponentRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class UpdateStudioComponentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateStudioComponentRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class UpdateStudioComponentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateStudioComponentRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class UpdateStudioComponentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateStudioComponentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class UpdateStudioComponentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateStudioComponentRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,6 +77,7 @@ public class UpdateStudioComponentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateStudioComponentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -78,6 +88,7 @@ public class UpdateStudioComponentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioComponentId")
     public String studioComponentId;
+
     public UpdateStudioComponentRequest withStudioComponentId(String studioComponentId) {
         this.studioComponentId = studioComponentId;
         return this;
@@ -88,9 +99,15 @@ public class UpdateStudioComponentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioId")
     public String studioId;
+
     public UpdateStudioComponentRequest withStudioId(String studioId) {
         this.studioId = studioId;
         return this;
     }
     
+    public UpdateStudioComponentRequest(@JsonProperty("RequestBody") UpdateStudioComponentRequestBody requestBody, @JsonProperty("studioComponentId") String studioComponentId, @JsonProperty("studioId") String studioId) {
+        this.requestBody = requestBody;
+        this.studioComponentId = studioComponentId;
+        this.studioId = studioId;
+  }
 }

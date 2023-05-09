@@ -18,9 +18,11 @@ public class InventoryTypeTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventoryTypes")
     public InventoryTypeTargetingInventoryTypesEnum[] inventoryTypes;
+
     public InventoryTypeTargeting withInventoryTypes(InventoryTypeTargetingInventoryTypesEnum[] inventoryTypes) {
         this.inventoryTypes = inventoryTypes;
         return this;
     }
     
+    public InventoryTypeTargeting(){}
 }

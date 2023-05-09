@@ -18,9 +18,11 @@ public class ExportEvaluatedExamplesOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigqueryDestination")
     public BigQueryDestination bigqueryDestination;
+
     public ExportEvaluatedExamplesOutputConfig withBigqueryDestination(BigQueryDestination bigqueryDestination) {
         this.bigqueryDestination = bigqueryDestination;
         return this;
     }
     
+    public ExportEvaluatedExamplesOutputConfig(){}
 }

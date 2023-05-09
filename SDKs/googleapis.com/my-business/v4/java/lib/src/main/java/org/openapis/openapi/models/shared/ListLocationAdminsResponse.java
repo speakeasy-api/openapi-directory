@@ -18,9 +18,11 @@ public class ListLocationAdminsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admins")
     public Admin[] admins;
+
     public ListLocationAdminsResponse withAdmins(Admin[] admins) {
         this.admins = admins;
         return this;
     }
     
+    public ListLocationAdminsResponse(){}
 }

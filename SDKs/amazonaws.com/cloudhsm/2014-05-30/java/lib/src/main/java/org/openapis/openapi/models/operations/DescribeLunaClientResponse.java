@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLunaClientResponse {
@@ -12,6 +13,7 @@ public class DescribeLunaClientResponse {
      */
     
     public Object cloudHsmInternalException;
+
     public DescribeLunaClientResponse withCloudHsmInternalException(Object cloudHsmInternalException) {
         this.cloudHsmInternalException = cloudHsmInternalException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeLunaClientResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public DescribeLunaClientResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLunaClientResponse {
     
     
     public String contentType;
+
     public DescribeLunaClientResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeLunaClientResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeLunaClientResponse describeLunaClientResponse;
+
     public DescribeLunaClientResponse withDescribeLunaClientResponse(org.openapis.openapi.models.shared.DescribeLunaClientResponse describeLunaClientResponse) {
         this.describeLunaClientResponse = describeLunaClientResponse;
         return this;
@@ -49,6 +54,7 @@ public class DescribeLunaClientResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeLunaClientResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeLunaClientResponse {
     
     
     public Integer statusCode;
+
     public DescribeLunaClientResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeLunaClientResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLunaClientResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeLunaClientResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

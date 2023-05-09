@@ -15,6 +15,7 @@ public class ChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public ChannelResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -23,6 +24,7 @@ public class ChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public ChannelResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -31,6 +33,7 @@ public class ChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public ChannelResponse withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -39,6 +42,7 @@ public class ChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasCredential")
     public Boolean hasCredential;
+
     public ChannelResponse withHasCredential(Boolean hasCredential) {
         this.hasCredential = hasCredential;
         return this;
@@ -47,6 +51,7 @@ public class ChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ChannelResponse withId(String id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class ChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsArchived")
     public Boolean isArchived;
+
     public ChannelResponse withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -63,6 +69,7 @@ public class ChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public String lastModifiedBy;
+
     public ChannelResponse withLastModifiedBy(String lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -71,6 +78,7 @@ public class ChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public ChannelResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -79,9 +87,11 @@ public class ChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public ChannelResponse withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public ChannelResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateHealthCheckResponse {
     
     public String contentType;
+
     public DisassociateHealthCheckResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateHealthCheckResponse {
      */
     
     public java.util.Map<String, Object> disassociateHealthCheckResponse;
+
     public DisassociateHealthCheckResponse withDisassociateHealthCheckResponse(java.util.Map<String, Object> disassociateHealthCheckResponse) {
         this.disassociateHealthCheckResponse = disassociateHealthCheckResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateHealthCheckResponse {
      */
     
     public Object internalErrorException;
+
     public DisassociateHealthCheckResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateHealthCheckResponse {
      */
     
     public Object invalidParameterException;
+
     public DisassociateHealthCheckResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateHealthCheckResponse {
      */
     
     public Object invalidResourceException;
+
     public DisassociateHealthCheckResponse withInvalidResourceException(Object invalidResourceException) {
         this.invalidResourceException = invalidResourceException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateHealthCheckResponse {
      */
     
     public Object optimisticLockException;
+
     public DisassociateHealthCheckResponse withOptimisticLockException(Object optimisticLockException) {
         this.optimisticLockException = optimisticLockException;
         return this;
@@ -66,6 +73,7 @@ public class DisassociateHealthCheckResponse {
     
     
     public Integer statusCode;
+
     public DisassociateHealthCheckResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateHealthCheckResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateHealthCheckResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DisassociateHealthCheckResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateHealthCheckResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DisassociateHealthCheckResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

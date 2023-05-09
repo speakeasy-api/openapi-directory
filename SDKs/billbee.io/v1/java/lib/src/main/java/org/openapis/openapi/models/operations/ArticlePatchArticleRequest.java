@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticlePatchArticleRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public ArticlePatchArticleRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class ArticlePatchArticleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public ArticlePatchArticleRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public ArticlePatchArticleRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("id") Long id) {
+        this.requestBody = requestBody;
+        this.id = id;
+  }
 }

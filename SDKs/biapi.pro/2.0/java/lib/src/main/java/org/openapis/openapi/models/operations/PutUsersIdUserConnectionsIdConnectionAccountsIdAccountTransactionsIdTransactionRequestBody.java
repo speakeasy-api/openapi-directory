@@ -13,6 +13,7 @@ public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsI
      */
     @SpeakeasyMetadata("multipartForm:name=active")
     public Boolean active;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsI
      */
     @SpeakeasyMetadata("multipartForm:name=application_date")
     public LocalDate applicationDate;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequestBody withApplicationDate(LocalDate applicationDate) {
         this.applicationDate = applicationDate;
         return this;
@@ -33,6 +35,7 @@ public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsI
      */
     @SpeakeasyMetadata("multipartForm:name=comment")
     public String comment;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequestBody withComment(String comment) {
         this.comment = comment;
         return this;
@@ -43,6 +46,7 @@ public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsI
      */
     @SpeakeasyMetadata("multipartForm:name=id_category")
     public Long idCategory;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequestBody withIdCategory(Long idCategory) {
         this.idCategory = idCategory;
         return this;
@@ -53,9 +57,11 @@ public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsI
      */
     @SpeakeasyMetadata("multipartForm:name=wording")
     public String wording;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequestBody withWording(String wording) {
         this.wording = wording;
         return this;
     }
     
+    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequestBody(){}
 }

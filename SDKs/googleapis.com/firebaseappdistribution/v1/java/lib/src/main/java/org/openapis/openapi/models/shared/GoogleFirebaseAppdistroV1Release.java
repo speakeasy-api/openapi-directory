@@ -18,6 +18,7 @@ public class GoogleFirebaseAppdistroV1Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binaryDownloadUri")
     public String binaryDownloadUri;
+
     public GoogleFirebaseAppdistroV1Release withBinaryDownloadUri(String binaryDownloadUri) {
         this.binaryDownloadUri = binaryDownloadUri;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirebaseAppdistroV1Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildVersion")
     public String buildVersion;
+
     public GoogleFirebaseAppdistroV1Release withBuildVersion(String buildVersion) {
         this.buildVersion = buildVersion;
         return this;
@@ -40,6 +42,7 @@ public class GoogleFirebaseAppdistroV1Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleFirebaseAppdistroV1Release withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleFirebaseAppdistroV1Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayVersion")
     public String displayVersion;
+
     public GoogleFirebaseAppdistroV1Release withDisplayVersion(String displayVersion) {
         this.displayVersion = displayVersion;
         return this;
@@ -62,6 +66,7 @@ public class GoogleFirebaseAppdistroV1Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firebaseConsoleUri")
     public String firebaseConsoleUri;
+
     public GoogleFirebaseAppdistroV1Release withFirebaseConsoleUri(String firebaseConsoleUri) {
         this.firebaseConsoleUri = firebaseConsoleUri;
         return this;
@@ -73,6 +78,7 @@ public class GoogleFirebaseAppdistroV1Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleFirebaseAppdistroV1Release withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class GoogleFirebaseAppdistroV1Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseNotes")
     public GoogleFirebaseAppdistroV1ReleaseNotes releaseNotes;
+
     public GoogleFirebaseAppdistroV1Release withReleaseNotes(GoogleFirebaseAppdistroV1ReleaseNotes releaseNotes) {
         this.releaseNotes = releaseNotes;
         return this;
@@ -95,9 +102,11 @@ public class GoogleFirebaseAppdistroV1Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testingUri")
     public String testingUri;
+
     public GoogleFirebaseAppdistroV1Release withTestingUri(String testingUri) {
         this.testingUri = testingUri;
         return this;
     }
     
+    public GoogleFirebaseAppdistroV1Release(){}
 }

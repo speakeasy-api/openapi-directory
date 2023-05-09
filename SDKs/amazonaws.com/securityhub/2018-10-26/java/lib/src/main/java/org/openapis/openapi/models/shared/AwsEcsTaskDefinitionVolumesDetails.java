@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionVolumesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DockerVolumeConfiguration")
     public AwsEcsTaskDefinitionVolumesDockerVolumeConfigurationDetails dockerVolumeConfiguration;
+
     public AwsEcsTaskDefinitionVolumesDetails withDockerVolumeConfiguration(AwsEcsTaskDefinitionVolumesDockerVolumeConfigurationDetails dockerVolumeConfiguration) {
         this.dockerVolumeConfiguration = dockerVolumeConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsTaskDefinitionVolumesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EfsVolumeConfiguration")
     public AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationDetails efsVolumeConfiguration;
+
     public AwsEcsTaskDefinitionVolumesDetails withEfsVolumeConfiguration(AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationDetails efsVolumeConfiguration) {
         this.efsVolumeConfiguration = efsVolumeConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcsTaskDefinitionVolumesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Host")
     public AwsEcsTaskDefinitionVolumesHostDetails host;
+
     public AwsEcsTaskDefinitionVolumesDetails withHost(AwsEcsTaskDefinitionVolumesHostDetails host) {
         this.host = host;
         return this;
@@ -39,9 +42,11 @@ public class AwsEcsTaskDefinitionVolumesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsEcsTaskDefinitionVolumesDetails withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AwsEcsTaskDefinitionVolumesDetails(){}
 }

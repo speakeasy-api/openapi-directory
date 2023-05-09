@@ -12,6 +12,7 @@ public class GetPartitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetPartitionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class GetPartitionRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetPartitionRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +28,7 @@ public class GetPartitionRequest {
     
     @JsonProperty("PartitionValues")
     public String[] partitionValues;
+
     public GetPartitionRequest withPartitionValues(String[] partitionValues) {
         this.partitionValues = partitionValues;
         return this;
@@ -33,9 +36,15 @@ public class GetPartitionRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public GetPartitionRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public GetPartitionRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("PartitionValues") String[] partitionValues, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.partitionValues = partitionValues;
+        this.tableName = tableName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChecksListForSuiteRequest {
@@ -12,6 +13,7 @@ public class ChecksListForSuiteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=check_name")
     public String checkName;
+
     public ChecksListForSuiteRequest withCheckName(String checkName) {
         this.checkName = checkName;
         return this;
@@ -22,6 +24,7 @@ public class ChecksListForSuiteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_suite_id")
     public Long checkSuiteId;
+
     public ChecksListForSuiteRequest withCheckSuiteId(Long checkSuiteId) {
         this.checkSuiteId = checkSuiteId;
         return this;
@@ -32,6 +35,7 @@ public class ChecksListForSuiteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public ChecksListForSuiteFilterEnum filter;
+
     public ChecksListForSuiteRequest withFilter(ChecksListForSuiteFilterEnum filter) {
         this.filter = filter;
         return this;
@@ -39,6 +43,7 @@ public class ChecksListForSuiteRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ChecksListForSuiteRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -49,6 +54,7 @@ public class ChecksListForSuiteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ChecksListForSuiteRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -59,6 +65,7 @@ public class ChecksListForSuiteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ChecksListForSuiteRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -66,6 +73,7 @@ public class ChecksListForSuiteRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ChecksListForSuiteRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -76,9 +84,15 @@ public class ChecksListForSuiteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public org.openapis.openapi.models.shared.StatusEnum status;
+
     public ChecksListForSuiteRequest withStatus(org.openapis.openapi.models.shared.StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ChecksListForSuiteRequest(@JsonProperty("check_suite_id") Long checkSuiteId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.checkSuiteId = checkSuiteId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

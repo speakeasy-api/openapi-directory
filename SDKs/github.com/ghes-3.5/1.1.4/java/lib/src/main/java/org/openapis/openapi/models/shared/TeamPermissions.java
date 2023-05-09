@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TeamPermissions {
     @JsonProperty("admin")
     public Boolean admin;
+
     public TeamPermissions withAdmin(Boolean admin) {
         this.admin = admin;
         return this;
@@ -16,6 +17,7 @@ public class TeamPermissions {
     
     @JsonProperty("maintain")
     public Boolean maintain;
+
     public TeamPermissions withMaintain(Boolean maintain) {
         this.maintain = maintain;
         return this;
@@ -23,6 +25,7 @@ public class TeamPermissions {
     
     @JsonProperty("pull")
     public Boolean pull;
+
     public TeamPermissions withPull(Boolean pull) {
         this.pull = pull;
         return this;
@@ -30,6 +33,7 @@ public class TeamPermissions {
     
     @JsonProperty("push")
     public Boolean push;
+
     public TeamPermissions withPush(Boolean push) {
         this.push = push;
         return this;
@@ -37,9 +41,17 @@ public class TeamPermissions {
     
     @JsonProperty("triage")
     public Boolean triage;
+
     public TeamPermissions withTriage(Boolean triage) {
         this.triage = triage;
         return this;
     }
     
+    public TeamPermissions(@JsonProperty("admin") Boolean admin, @JsonProperty("maintain") Boolean maintain, @JsonProperty("pull") Boolean pull, @JsonProperty("push") Boolean push, @JsonProperty("triage") Boolean triage) {
+        this.admin = admin;
+        this.maintain = maintain;
+        this.pull = pull;
+        this.push = push;
+        this.triage = triage;
+  }
 }

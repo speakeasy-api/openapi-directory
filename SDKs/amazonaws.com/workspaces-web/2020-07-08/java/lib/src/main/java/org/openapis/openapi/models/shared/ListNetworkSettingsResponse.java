@@ -15,6 +15,7 @@ public class ListNetworkSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkSettings")
     public NetworkSettingsSummary[] networkSettings;
+
     public ListNetworkSettingsResponse withNetworkSettings(NetworkSettingsSummary[] networkSettings) {
         this.networkSettings = networkSettings;
         return this;
@@ -23,9 +24,11 @@ public class ListNetworkSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListNetworkSettingsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListNetworkSettingsResponse(){}
 }

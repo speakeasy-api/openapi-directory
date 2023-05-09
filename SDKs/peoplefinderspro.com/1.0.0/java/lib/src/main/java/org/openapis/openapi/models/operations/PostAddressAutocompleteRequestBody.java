@@ -12,9 +12,11 @@ public class PostAddressAutocompleteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Input")
     public String input;
+
     public PostAddressAutocompleteRequestBody withInput(String input) {
         this.input = input;
         return this;
     }
     
+    public PostAddressAutocompleteRequestBody(){}
 }

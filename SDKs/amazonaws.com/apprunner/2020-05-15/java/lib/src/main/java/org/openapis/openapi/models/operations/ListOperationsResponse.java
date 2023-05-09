@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListOperationsResponse {
     
     public String contentType;
+
     public ListOperationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListOperationsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListOperationsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListOperationsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListOperationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListOperationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListOperationsResponse listOperationsResponse;
+
     public ListOperationsResponse withListOperationsResponse(org.openapis.openapi.models.shared.ListOperationsResponse listOperationsResponse) {
         this.listOperationsResponse = listOperationsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListOperationsResponse {
     
     
     public Integer statusCode;
+
     public ListOperationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListOperationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListOperationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListOperationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListOperationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListOperationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

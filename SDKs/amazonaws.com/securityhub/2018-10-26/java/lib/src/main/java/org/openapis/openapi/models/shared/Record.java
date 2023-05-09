@@ -15,6 +15,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JsonPath")
     public String jsonPath;
+
     public Record withJsonPath(String jsonPath) {
         this.jsonPath = jsonPath;
         return this;
@@ -23,9 +24,11 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordIndex")
     public Long recordIndex;
+
     public Record withRecordIndex(Long recordIndex) {
         this.recordIndex = recordIndex;
         return this;
     }
     
+    public Record(){}
 }

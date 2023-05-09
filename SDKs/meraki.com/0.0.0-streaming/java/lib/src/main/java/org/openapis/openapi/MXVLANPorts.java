@@ -53,11 +53,9 @@ public class MXVLANPorts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkAppliancePortResponse res = new org.openapis.openapi.models.operations.GetNetworkAppliancePortResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkAppliancePortResponse res = new org.openapis.openapi.models.operations.GetNetworkAppliancePortResponse(contentType, httpRes.statusCode()) {{
             getNetworkAppliancePort200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,11 +91,9 @@ public class MXVLANPorts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkAppliancePortsResponse res = new org.openapis.openapi.models.operations.GetNetworkAppliancePortsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkAppliancePortsResponse res = new org.openapis.openapi.models.operations.GetNetworkAppliancePortsResponse(contentType, httpRes.statusCode()) {{
             getNetworkAppliancePorts200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +131,9 @@ public class MXVLANPorts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkAppliancePortResponse res = new org.openapis.openapi.models.operations.UpdateNetworkAppliancePortResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkAppliancePortResponse res = new org.openapis.openapi.models.operations.UpdateNetworkAppliancePortResponse(contentType, httpRes.statusCode()) {{
             updateNetworkAppliancePort200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

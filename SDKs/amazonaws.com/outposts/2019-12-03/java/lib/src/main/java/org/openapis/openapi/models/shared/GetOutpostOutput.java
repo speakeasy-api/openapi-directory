@@ -18,9 +18,11 @@ public class GetOutpostOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Outpost")
     public Outpost outpost;
+
     public GetOutpostOutput withOutpost(Outpost outpost) {
         this.outpost = outpost;
         return this;
     }
     
+    public GetOutpostOutput(){}
 }

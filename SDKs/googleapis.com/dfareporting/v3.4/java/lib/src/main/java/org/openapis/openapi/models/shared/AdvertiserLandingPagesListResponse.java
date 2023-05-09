@@ -18,6 +18,7 @@ public class AdvertiserLandingPagesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AdvertiserLandingPagesListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class AdvertiserLandingPagesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("landingPages")
     public LandingPage[] landingPages;
+
     public AdvertiserLandingPagesListResponse withLandingPages(LandingPage[] landingPages) {
         this.landingPages = landingPages;
         return this;
@@ -40,9 +42,11 @@ public class AdvertiserLandingPagesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public AdvertiserLandingPagesListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public AdvertiserLandingPagesListResponse(){}
 }

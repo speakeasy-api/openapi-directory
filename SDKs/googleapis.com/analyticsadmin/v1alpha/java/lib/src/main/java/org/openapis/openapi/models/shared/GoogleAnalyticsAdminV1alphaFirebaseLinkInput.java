@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaFirebaseLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public GoogleAnalyticsAdminV1alphaFirebaseLinkInput withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaFirebaseLinkInput(){}
 }

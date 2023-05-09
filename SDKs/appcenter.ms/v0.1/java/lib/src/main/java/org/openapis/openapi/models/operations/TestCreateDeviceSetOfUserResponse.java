@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestCreateDeviceSetOfUserResponse {
     
     public String contentType;
+
     public TestCreateDeviceSetOfUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TestCreateDeviceSetOfUserResponse {
      */
     
     public TestCreateDeviceSetOfUserDeviceSet deviceSet;
+
     public TestCreateDeviceSetOfUserResponse withDeviceSet(TestCreateDeviceSetOfUserDeviceSet deviceSet) {
         this.deviceSet = deviceSet;
         return this;
@@ -26,6 +29,7 @@ public class TestCreateDeviceSetOfUserResponse {
     
     
     public Integer statusCode;
+
     public TestCreateDeviceSetOfUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class TestCreateDeviceSetOfUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestCreateDeviceSetOfUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class TestCreateDeviceSetOfUserResponse {
      */
     
     public TestCreateDeviceSetOfUserTestCloudErrorDetails testCloudErrorDetails;
+
     public TestCreateDeviceSetOfUserResponse withTestCloudErrorDetails(TestCreateDeviceSetOfUserTestCloudErrorDetails testCloudErrorDetails) {
         this.testCloudErrorDetails = testCloudErrorDetails;
         return this;
     }
     
+    public TestCreateDeviceSetOfUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

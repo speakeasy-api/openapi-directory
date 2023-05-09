@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDefaultRetentionPolicyRequest {
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public GetDefaultRetentionPolicyRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public GetDefaultRetentionPolicyRequest(@JsonProperty("OrganizationId") String organizationId) {
+        this.organizationId = organizationId;
+  }
 }

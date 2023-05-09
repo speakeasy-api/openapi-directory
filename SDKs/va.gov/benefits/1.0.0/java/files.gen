@@ -55,6 +55,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUplo
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatusReport401ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatusReport200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatusReportResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PostBenefitsDocumentUploadSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostBenefitsDocumentUpload500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostBenefitsDocumentUpload429ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostBenefitsDocumentUpload422ApplicationJSON.java
@@ -91,4 +92,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/DocumentUploadAttributesSta
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentUploadAttributes.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentValidationErrorModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentUploadFailure.java
+docs/sdk/README.md
+docs/vbadocuments/README.md
 USAGE.md

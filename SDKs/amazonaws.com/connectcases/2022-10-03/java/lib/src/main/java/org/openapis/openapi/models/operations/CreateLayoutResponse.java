@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLayoutResponse {
@@ -12,6 +13,7 @@ public class CreateLayoutResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateLayoutResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateLayoutResponse {
      */
     
     public Object conflictException;
+
     public CreateLayoutResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateLayoutResponse {
     
     
     public String contentType;
+
     public CreateLayoutResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateLayoutResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLayoutResponse createLayoutResponse;
+
     public CreateLayoutResponse withCreateLayoutResponse(org.openapis.openapi.models.shared.CreateLayoutResponse createLayoutResponse) {
         this.createLayoutResponse = createLayoutResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateLayoutResponse {
      */
     
     public Object internalServerException;
+
     public CreateLayoutResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateLayoutResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateLayoutResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateLayoutResponse {
     
     
     public Integer statusCode;
+
     public CreateLayoutResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateLayoutResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLayoutResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateLayoutResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateLayoutResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class CreateLayoutResponse {
      */
     
     public Object throttlingException;
+
     public CreateLayoutResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateLayoutResponse {
      */
     
     public Object validationException;
+
     public CreateLayoutResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateLayoutResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

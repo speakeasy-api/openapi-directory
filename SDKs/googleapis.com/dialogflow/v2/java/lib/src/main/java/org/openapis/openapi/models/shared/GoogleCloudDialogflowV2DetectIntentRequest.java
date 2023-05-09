@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2DetectIntentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputAudio")
     public String inputAudio;
+
     public GoogleCloudDialogflowV2DetectIntentRequest withInputAudio(String inputAudio) {
         this.inputAudio = inputAudio;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2DetectIntentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputAudioConfig")
     public GoogleCloudDialogflowV2OutputAudioConfig outputAudioConfig;
+
     public GoogleCloudDialogflowV2DetectIntentRequest withOutputAudioConfig(GoogleCloudDialogflowV2OutputAudioConfig outputAudioConfig) {
         this.outputAudioConfig = outputAudioConfig;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2DetectIntentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputAudioConfigMask")
     public String outputAudioConfigMask;
+
     public GoogleCloudDialogflowV2DetectIntentRequest withOutputAudioConfigMask(String outputAudioConfigMask) {
         this.outputAudioConfigMask = outputAudioConfigMask;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2DetectIntentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryInput")
     public GoogleCloudDialogflowV2QueryInput queryInput;
+
     public GoogleCloudDialogflowV2DetectIntentRequest withQueryInput(GoogleCloudDialogflowV2QueryInput queryInput) {
         this.queryInput = queryInput;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowV2DetectIntentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParams")
     public GoogleCloudDialogflowV2QueryParameters queryParams;
+
     public GoogleCloudDialogflowV2DetectIntentRequest withQueryParams(GoogleCloudDialogflowV2QueryParameters queryParams) {
         this.queryParams = queryParams;
         return this;
     }
     
+    public GoogleCloudDialogflowV2DetectIntentRequest(){}
 }

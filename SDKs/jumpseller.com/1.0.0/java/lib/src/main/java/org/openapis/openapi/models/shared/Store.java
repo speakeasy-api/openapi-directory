@@ -15,6 +15,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public StoreAddress address;
+
     public Store withAddress(StoreAddress address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public Store withCode(String code) {
         this.code = code;
         return this;
@@ -37,6 +39,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public Store withCountry(String country) {
         this.country = country;
         return this;
@@ -48,6 +51,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public Store withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -59,6 +63,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Store withEmail(String email) {
         this.email = email;
         return this;
@@ -70,6 +75,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hooks_token")
     public String hooksToken;
+
     public Store withHooksToken(String hooksToken) {
         this.hooksToken = hooksToken;
         return this;
@@ -81,6 +87,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public Store withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -92,6 +99,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Store withName(String name) {
         this.name = name;
         return this;
@@ -103,6 +111,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public Store withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -114,6 +123,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Store withUrl(String url) {
         this.url = url;
         return this;
@@ -125,9 +135,11 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight_unit")
     public String weightUnit;
+
     public Store withWeightUnit(String weightUnit) {
         this.weightUnit = weightUnit;
         return this;
     }
     
+    public Store(){}
 }

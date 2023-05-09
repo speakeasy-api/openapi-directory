@@ -18,6 +18,7 @@ public class ListQueuedResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListQueuedResourcesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListQueuedResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queuedResources")
     public QueuedResource[] queuedResources;
+
     public ListQueuedResourcesResponse withQueuedResources(QueuedResource[] queuedResources) {
         this.queuedResources = queuedResources;
         return this;
@@ -40,9 +42,11 @@ public class ListQueuedResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListQueuedResourcesResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListQueuedResourcesResponse(){}
 }

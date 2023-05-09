@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsResponse {
     
     public String contentType;
+
     public BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsResponse
      */
     
     public org.openapis.openapi.models.shared.GoogleIamV1TestIamPermissionsResponse googleIamV1TestIamPermissionsResponse;
+
     public BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsResponse withGoogleIamV1TestIamPermissionsResponse(org.openapis.openapi.models.shared.GoogleIamV1TestIamPermissionsResponse googleIamV1TestIamPermissionsResponse) {
         this.googleIamV1TestIamPermissionsResponse = googleIamV1TestIamPermissionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsResponse
     
     
     public Integer statusCode;
+
     public BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BeyondcorpProjectsLocationsClientGatewaysTestIamPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

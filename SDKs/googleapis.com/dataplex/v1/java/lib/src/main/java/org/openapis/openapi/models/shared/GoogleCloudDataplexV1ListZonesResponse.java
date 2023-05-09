@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ListZonesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDataplexV1ListZonesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1ListZonesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zones")
     public GoogleCloudDataplexV1Zone[] zones;
+
     public GoogleCloudDataplexV1ListZonesResponse withZones(GoogleCloudDataplexV1Zone[] zones) {
         this.zones = zones;
         return this;
     }
     
+    public GoogleCloudDataplexV1ListZonesResponse(){}
 }

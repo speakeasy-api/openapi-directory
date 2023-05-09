@@ -12,6 +12,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_from")
     public String dateFrom;
+
     public GetEventsRequest withDateFrom(String dateFrom) {
         this.dateFrom = dateFrom;
         return this;
@@ -22,6 +23,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_to")
     public String dateTo;
+
     public GetEventsRequest withDateTo(String dateTo) {
         this.dateTo = dateTo;
         return this;
@@ -32,6 +34,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event_type")
     public org.openapis.openapi.models.shared.EventTypesEnum eventType;
+
     public GetEventsRequest withEventType(org.openapis.openapi.models.shared.EventTypesEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -42,6 +45,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetEventsRequest withPage(String page) {
         this.page = page;
         return this;
@@ -52,6 +56,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_text")
     public String searchText;
+
     public GetEventsRequest withSearchText(String searchText) {
         this.searchText = searchText;
         return this;
@@ -62,9 +67,11 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Long size;
+
     public GetEventsRequest withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public GetEventsRequest(){}
 }

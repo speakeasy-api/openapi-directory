@@ -15,6 +15,7 @@ public class OrderBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public OrderEnum order;
+
     public OrderBy withOrder(OrderEnum order) {
         this.order = order;
         return this;
@@ -22,9 +23,13 @@ public class OrderBy {
     
     @JsonProperty("propertyName")
     public String propertyName;
+
     public OrderBy withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
     }
     
+    public OrderBy(@JsonProperty("propertyName") String propertyName) {
+        this.propertyName = propertyName;
+  }
 }

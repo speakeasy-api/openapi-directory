@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTemporaryGluePartitionCredentialsResponse {
@@ -12,6 +13,7 @@ public class GetTemporaryGluePartitionCredentialsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetTemporaryGluePartitionCredentialsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetTemporaryGluePartitionCredentialsResponse {
     
     
     public String contentType;
+
     public GetTemporaryGluePartitionCredentialsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTemporaryGluePartitionCredentialsResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetTemporaryGluePartitionCredentialsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetTemporaryGluePartitionCredentialsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTemporaryGluePartitionCredentialsResponse getTemporaryGluePartitionCredentialsResponse;
+
     public GetTemporaryGluePartitionCredentialsResponse withGetTemporaryGluePartitionCredentialsResponse(org.openapis.openapi.models.shared.GetTemporaryGluePartitionCredentialsResponse getTemporaryGluePartitionCredentialsResponse) {
         this.getTemporaryGluePartitionCredentialsResponse = getTemporaryGluePartitionCredentialsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetTemporaryGluePartitionCredentialsResponse {
      */
     
     public Object internalServiceException;
+
     public GetTemporaryGluePartitionCredentialsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetTemporaryGluePartitionCredentialsResponse {
      */
     
     public Object invalidInputException;
+
     public GetTemporaryGluePartitionCredentialsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class GetTemporaryGluePartitionCredentialsResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetTemporaryGluePartitionCredentialsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -79,6 +87,7 @@ public class GetTemporaryGluePartitionCredentialsResponse {
      */
     
     public Object permissionTypeMismatchException;
+
     public GetTemporaryGluePartitionCredentialsResponse withPermissionTypeMismatchException(Object permissionTypeMismatchException) {
         this.permissionTypeMismatchException = permissionTypeMismatchException;
         return this;
@@ -86,6 +95,7 @@ public class GetTemporaryGluePartitionCredentialsResponse {
     
     
     public Integer statusCode;
+
     public GetTemporaryGluePartitionCredentialsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class GetTemporaryGluePartitionCredentialsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTemporaryGluePartitionCredentialsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTemporaryGluePartitionCredentialsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

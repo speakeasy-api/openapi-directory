@@ -7,7 +7,7 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * CreateEventSourceMappingRequestBodyStartingPositionEnum - The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon MSK Streams sources. &lt;code&gt;AT_TIMESTAMP&lt;/code&gt; is supported only for Amazon Kinesis streams.
+ * CreateEventSourceMappingRequestBodyStartingPositionEnum - The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon MSK Streams sources. &lt;code&gt;AT_TIMESTAMP&lt;/code&gt; is supported only for Amazon Kinesis streams and Amazon DocumentDB.
  */
 public enum CreateEventSourceMappingRequestBodyStartingPositionEnum {
     TRIM_HORIZON("TRIM_HORIZON"),

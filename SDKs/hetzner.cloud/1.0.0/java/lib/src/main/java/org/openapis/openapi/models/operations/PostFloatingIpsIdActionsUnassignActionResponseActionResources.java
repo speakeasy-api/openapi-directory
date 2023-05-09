@@ -12,6 +12,7 @@ public class PostFloatingIpsIdActionsUnassignActionResponseActionResources {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostFloatingIpsIdActionsUnassignActionResponseActionResources withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +23,14 @@ public class PostFloatingIpsIdActionsUnassignActionResponseActionResources {
      */
     @JsonProperty("type")
     public String type;
+
     public PostFloatingIpsIdActionsUnassignActionResponseActionResources withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PostFloatingIpsIdActionsUnassignActionResponseActionResources(@JsonProperty("id") Long id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

@@ -15,6 +15,7 @@ public class ModelBiasBaselineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaseliningJobName")
     public String baseliningJobName;
+
     public ModelBiasBaselineConfig withBaseliningJobName(String baseliningJobName) {
         this.baseliningJobName = baseliningJobName;
         return this;
@@ -26,9 +27,11 @@ public class ModelBiasBaselineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConstraintsResource")
     public MonitoringConstraintsResource constraintsResource;
+
     public ModelBiasBaselineConfig withConstraintsResource(MonitoringConstraintsResource constraintsResource) {
         this.constraintsResource = constraintsResource;
         return this;
     }
     
+    public ModelBiasBaselineConfig(){}
 }

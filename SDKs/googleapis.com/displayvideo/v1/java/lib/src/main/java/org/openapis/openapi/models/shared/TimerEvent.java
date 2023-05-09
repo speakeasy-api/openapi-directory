@@ -18,6 +18,7 @@ public class TimerEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TimerEvent withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class TimerEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportingName")
     public String reportingName;
+
     public TimerEvent withReportingName(String reportingName) {
         this.reportingName = reportingName;
         return this;
     }
     
+    public TimerEvent(){}
 }

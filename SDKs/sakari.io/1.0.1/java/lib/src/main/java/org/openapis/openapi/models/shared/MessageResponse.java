@@ -15,6 +15,7 @@ public class MessageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Message data;
+
     public MessageResponse withData(Message data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class MessageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public MessageResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public MessageResponse(){}
 }

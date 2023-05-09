@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Segment {
     @JsonProperty("SegmentNumber")
     public Long segmentNumber;
+
     public Segment withSegmentNumber(Long segmentNumber) {
         this.segmentNumber = segmentNumber;
         return this;
@@ -19,9 +20,14 @@ public class Segment {
     
     @JsonProperty("TotalSegments")
     public Long totalSegments;
+
     public Segment withTotalSegments(Long totalSegments) {
         this.totalSegments = totalSegments;
         return this;
     }
     
+    public Segment(@JsonProperty("SegmentNumber") Long segmentNumber, @JsonProperty("TotalSegments") Long totalSegments) {
+        this.segmentNumber = segmentNumber;
+        this.totalSegments = totalSegments;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopImageBuilderResponse {
@@ -12,6 +13,7 @@ public class StopImageBuilderResponse {
      */
     
     public Object concurrentModificationException;
+
     public StopImageBuilderResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class StopImageBuilderResponse {
     
     
     public String contentType;
+
     public StopImageBuilderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopImageBuilderResponse {
      */
     
     public Object operationNotPermittedException;
+
     public StopImageBuilderResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -36,6 +40,7 @@ public class StopImageBuilderResponse {
     
     
     public Integer statusCode;
+
     public StopImageBuilderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopImageBuilderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopImageBuilderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StopImageBuilderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopImageBuilderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,9 +70,14 @@ public class StopImageBuilderResponse {
      */
     
     public org.openapis.openapi.models.shared.StopImageBuilderResult stopImageBuilderResult;
+
     public StopImageBuilderResponse withStopImageBuilderResult(org.openapis.openapi.models.shared.StopImageBuilderResult stopImageBuilderResult) {
         this.stopImageBuilderResult = stopImageBuilderResult;
         return this;
     }
     
+    public StopImageBuilderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

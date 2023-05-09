@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteMatchmakingRuleSetRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DeleteMatchmakingRuleSetInput deleteMatchmakingRuleSetInput;
+
     public DeleteMatchmakingRuleSetRequest withDeleteMatchmakingRuleSetInput(org.openapis.openapi.models.shared.DeleteMatchmakingRuleSetInput deleteMatchmakingRuleSetInput) {
         this.deleteMatchmakingRuleSetInput = deleteMatchmakingRuleSetInput;
         return this;
@@ -16,6 +18,7 @@ public class DeleteMatchmakingRuleSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteMatchmakingRuleSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DeleteMatchmakingRuleSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteMatchmakingRuleSetRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DeleteMatchmakingRuleSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteMatchmakingRuleSetRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DeleteMatchmakingRuleSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteMatchmakingRuleSetRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DeleteMatchmakingRuleSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteMatchmakingRuleSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DeleteMatchmakingRuleSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteMatchmakingRuleSetRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DeleteMatchmakingRuleSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteMatchmakingRuleSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class DeleteMatchmakingRuleSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DeleteMatchmakingRuleSetXAmzTargetEnum xAmzTarget;
+
     public DeleteMatchmakingRuleSetRequest withXAmzTarget(DeleteMatchmakingRuleSetXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DeleteMatchmakingRuleSetRequest(@JsonProperty("DeleteMatchmakingRuleSetInput") org.openapis.openapi.models.shared.DeleteMatchmakingRuleSetInput deleteMatchmakingRuleSetInput, @JsonProperty("X-Amz-Target") DeleteMatchmakingRuleSetXAmzTargetEnum xAmzTarget) {
+        this.deleteMatchmakingRuleSetInput = deleteMatchmakingRuleSetInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

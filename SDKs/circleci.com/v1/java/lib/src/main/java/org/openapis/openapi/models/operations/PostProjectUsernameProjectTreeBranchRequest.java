@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProjectUsernameProjectTreeBranchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostProjectUsernameProjectTreeBranchRequestBody requestBody;
+
     public PostProjectUsernameProjectTreeBranchRequest withRequestBody(PostProjectUsernameProjectTreeBranchRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -20,6 +22,7 @@ public class PostProjectUsernameProjectTreeBranchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
     public String branch;
+
     public PostProjectUsernameProjectTreeBranchRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -31,6 +34,7 @@ public class PostProjectUsernameProjectTreeBranchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public PostProjectUsernameProjectTreeBranchRequest withProject(String project) {
         this.project = project;
         return this;
@@ -42,9 +46,15 @@ public class PostProjectUsernameProjectTreeBranchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public PostProjectUsernameProjectTreeBranchRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public PostProjectUsernameProjectTreeBranchRequest(@JsonProperty("branch") String branch, @JsonProperty("project") String project, @JsonProperty("username") String username) {
+        this.branch = branch;
+        this.project = project;
+        this.username = username;
+  }
 }

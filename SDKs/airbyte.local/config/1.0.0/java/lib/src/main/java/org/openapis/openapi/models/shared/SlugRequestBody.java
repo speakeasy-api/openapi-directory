@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SlugRequestBody {
     @JsonProperty("slug")
     public String slug;
+
     public SlugRequestBody withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public SlugRequestBody(@JsonProperty("slug") String slug) {
+        this.slug = slug;
+  }
 }

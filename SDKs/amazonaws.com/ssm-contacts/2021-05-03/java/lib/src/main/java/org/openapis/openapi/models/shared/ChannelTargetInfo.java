@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ChannelTargetInfo {
     @JsonProperty("ContactChannelId")
     public String contactChannelId;
+
     public ChannelTargetInfo withContactChannelId(String contactChannelId) {
         this.contactChannelId = contactChannelId;
         return this;
@@ -22,9 +23,13 @@ public class ChannelTargetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryIntervalInMinutes")
     public Long retryIntervalInMinutes;
+
     public ChannelTargetInfo withRetryIntervalInMinutes(Long retryIntervalInMinutes) {
         this.retryIntervalInMinutes = retryIntervalInMinutes;
         return this;
     }
     
+    public ChannelTargetInfo(@JsonProperty("ContactChannelId") String contactChannelId) {
+        this.contactChannelId = contactChannelId;
+  }
 }

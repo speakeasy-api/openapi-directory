@@ -18,6 +18,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_record_count")
     public Long totalRecordCount;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSON withTotalRecordCount(Long totalRecordCount) {
         this.totalRecordCount = totalRecordCount;
         return this;
@@ -29,9 +30,11 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_resource_sharing_request")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest[] userResourceSharingRequest;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSON withUserResourceSharingRequest(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequest[] userResourceSharingRequest) {
         this.userResourceSharingRequest = userResourceSharingRequest;
         return this;
     }
     
+    public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSON(){}
 }

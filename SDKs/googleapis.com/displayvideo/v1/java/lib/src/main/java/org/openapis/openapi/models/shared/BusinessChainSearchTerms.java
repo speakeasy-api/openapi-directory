@@ -18,6 +18,7 @@ public class BusinessChainSearchTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessChainQuery")
     public String businessChainQuery;
+
     public BusinessChainSearchTerms withBusinessChainQuery(String businessChainQuery) {
         this.businessChainQuery = businessChainQuery;
         return this;
@@ -29,9 +30,11 @@ public class BusinessChainSearchTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionQuery")
     public String regionQuery;
+
     public BusinessChainSearchTerms withRegionQuery(String regionQuery) {
         this.regionQuery = regionQuery;
         return this;
     }
     
+    public BusinessChainSearchTerms(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DestinyDestinyEquipItemResults {
     
     public DestinyDestinyEquipItemResult[] equipResults;
+
     public DestinyDestinyEquipItemResults withEquipResults(DestinyDestinyEquipItemResult[] equipResults) {
         this.equipResults = equipResults;
         return this;
     }
     
+    public DestinyDestinyEquipItemResults(){}
 }

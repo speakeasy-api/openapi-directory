@@ -15,6 +15,7 @@ public class AwsRedshiftClusterIamRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplyStatus")
     public String applyStatus;
+
     public AwsRedshiftClusterIamRole withApplyStatus(String applyStatus) {
         this.applyStatus = applyStatus;
         return this;
@@ -23,9 +24,11 @@ public class AwsRedshiftClusterIamRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamRoleArn")
     public String iamRoleArn;
+
     public AwsRedshiftClusterIamRole withIamRoleArn(String iamRoleArn) {
         this.iamRoleArn = iamRoleArn;
         return this;
     }
     
+    public AwsRedshiftClusterIamRole(){}
 }

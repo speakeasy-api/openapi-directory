@@ -17,6 +17,7 @@ public class ListShardsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveStartShardId")
     public String exclusiveStartShardId;
+
     public ListShardsInput withExclusiveStartShardId(String exclusiveStartShardId) {
         this.exclusiveStartShardId = exclusiveStartShardId;
         return this;
@@ -25,6 +26,7 @@ public class ListShardsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListShardsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -33,6 +35,7 @@ public class ListShardsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListShardsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -41,6 +44,7 @@ public class ListShardsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShardFilter")
     public ShardFilter shardFilter;
+
     public ListShardsInput withShardFilter(ShardFilter shardFilter) {
         this.shardFilter = shardFilter;
         return this;
@@ -49,6 +53,7 @@ public class ListShardsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public ListShardsInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -59,6 +64,7 @@ public class ListShardsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StreamCreationTimestamp")
     public OffsetDateTime streamCreationTimestamp;
+
     public ListShardsInput withStreamCreationTimestamp(OffsetDateTime streamCreationTimestamp) {
         this.streamCreationTimestamp = streamCreationTimestamp;
         return this;
@@ -67,9 +73,11 @@ public class ListShardsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public ListShardsInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public ListShardsInput(){}
 }

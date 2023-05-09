@@ -12,9 +12,11 @@ public class GetShopScriptTag200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script_tag")
     public GetShopScriptTag200ApplicationJSONScriptTag scriptTag;
+
     public GetShopScriptTag200ApplicationJSON withScriptTag(GetShopScriptTag200ApplicationJSONScriptTag scriptTag) {
         this.scriptTag = scriptTag;
         return this;
     }
     
+    public GetShopScriptTag200ApplicationJSON(){}
 }

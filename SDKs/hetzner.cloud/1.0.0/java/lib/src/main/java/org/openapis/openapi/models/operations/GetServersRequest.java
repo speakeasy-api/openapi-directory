@@ -12,6 +12,7 @@ public class GetServersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
     public String labelSelector;
+
     public GetServersRequest withLabelSelector(String labelSelector) {
         this.labelSelector = labelSelector;
         return this;
@@ -22,6 +23,7 @@ public class GetServersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetServersRequest withName(String name) {
         this.name = name;
         return this;
@@ -32,6 +34,7 @@ public class GetServersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetServersSortEnum sort;
+
     public GetServersRequest withSort(GetServersSortEnum sort) {
         this.sort = sort;
         return this;
@@ -42,9 +45,11 @@ public class GetServersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public GetServersStatusEnum status;
+
     public GetServersRequest withStatus(GetServersStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetServersRequest(){}
 }

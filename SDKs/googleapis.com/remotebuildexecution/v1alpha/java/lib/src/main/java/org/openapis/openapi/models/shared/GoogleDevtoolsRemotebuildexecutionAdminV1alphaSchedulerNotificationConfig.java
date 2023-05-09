@@ -18,9 +18,11 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaSchedulerNotification
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public String topic;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaSchedulerNotificationConfig withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaSchedulerNotificationConfig(){}
 }

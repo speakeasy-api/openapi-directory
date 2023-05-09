@@ -52,11 +52,9 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2MeJsonResponse res = new org.openapis.openapi.models.operations.GetV2MeJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2MeJsonResponse res = new org.openapis.openapi.models.operations.GetV2MeJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

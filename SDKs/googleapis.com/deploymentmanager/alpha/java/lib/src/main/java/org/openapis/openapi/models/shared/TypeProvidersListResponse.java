@@ -18,6 +18,7 @@ public class TypeProvidersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public TypeProvidersListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class TypeProvidersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeProviders")
     public TypeProvider[] typeProviders;
+
     public TypeProvidersListResponse withTypeProviders(TypeProvider[] typeProviders) {
         this.typeProviders = typeProviders;
         return this;
     }
     
+    public TypeProvidersListResponse(){}
 }

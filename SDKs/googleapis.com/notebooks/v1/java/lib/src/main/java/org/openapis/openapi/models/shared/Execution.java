@@ -18,6 +18,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Execution withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Execution withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Execution withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionTemplate")
     public ExecutionTemplate executionTemplate;
+
     public Execution withExecutionTemplate(ExecutionTemplate executionTemplate) {
         this.executionTemplate = executionTemplate;
         return this;
@@ -62,6 +66,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobUri")
     public String jobUri;
+
     public Execution withJobUri(String jobUri) {
         this.jobUri = jobUri;
         return this;
@@ -73,6 +78,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Execution withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputNotebookFile")
     public String outputNotebookFile;
+
     public Execution withOutputNotebookFile(String outputNotebookFile) {
         this.outputNotebookFile = outputNotebookFile;
         return this;
@@ -95,6 +102,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ExecutionStateEnum state;
+
     public Execution withState(ExecutionStateEnum state) {
         this.state = state;
         return this;
@@ -106,9 +114,11 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Execution withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Execution(){}
 }

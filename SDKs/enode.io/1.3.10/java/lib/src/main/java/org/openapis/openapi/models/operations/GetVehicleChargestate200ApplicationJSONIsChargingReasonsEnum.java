@@ -7,7 +7,7 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnum {
-    UNKNOWN(""),
+    LESS_THAN_NIL_GREATER_THAN("<nil>"),
     DEFAULT_("DEFAULT");
 
     @JsonValue

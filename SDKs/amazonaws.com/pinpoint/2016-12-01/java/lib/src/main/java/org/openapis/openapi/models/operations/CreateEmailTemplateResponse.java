@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEmailTemplateResponse {
@@ -12,6 +13,7 @@ public class CreateEmailTemplateResponse {
      */
     
     public Object badRequestException;
+
     public CreateEmailTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateEmailTemplateResponse {
     
     
     public String contentType;
+
     public CreateEmailTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateEmailTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEmailTemplateResponse createEmailTemplateResponse;
+
     public CreateEmailTemplateResponse withCreateEmailTemplateResponse(org.openapis.openapi.models.shared.CreateEmailTemplateResponse createEmailTemplateResponse) {
         this.createEmailTemplateResponse = createEmailTemplateResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateEmailTemplateResponse {
      */
     
     public Object forbiddenException;
+
     public CreateEmailTemplateResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class CreateEmailTemplateResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateEmailTemplateResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class CreateEmailTemplateResponse {
      */
     
     public Object methodNotAllowedException;
+
     public CreateEmailTemplateResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -66,6 +73,7 @@ public class CreateEmailTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateEmailTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateEmailTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEmailTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateEmailTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateEmailTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateEmailTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CartSimulationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public CartSimulationRequestBody withCountry(String country) {
         this.country = country;
         return this;
@@ -26,6 +27,7 @@ public class CartSimulationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoCoordinates")
     public Double[] geoCoordinates;
+
     public CartSimulationRequestBody withGeoCoordinates(Double[] geoCoordinates) {
         this.geoCoordinates = geoCoordinates;
         return this;
@@ -37,6 +39,7 @@ public class CartSimulationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public CartSimulationRequestBodyItems[] items;
+
     public CartSimulationRequestBody withItems(CartSimulationRequestBodyItems[] items) {
         this.items = items;
         return this;
@@ -48,9 +51,11 @@ public class CartSimulationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public CartSimulationRequestBody withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
     
+    public CartSimulationRequestBody(){}
 }

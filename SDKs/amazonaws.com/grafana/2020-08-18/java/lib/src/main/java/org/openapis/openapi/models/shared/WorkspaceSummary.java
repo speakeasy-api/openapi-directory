@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class WorkspaceSummary {
     @JsonProperty("authentication")
     public AuthenticationSummary authentication;
+
     public WorkspaceSummary withAuthentication(AuthenticationSummary authentication) {
         this.authentication = authentication;
         return this;
@@ -28,6 +29,7 @@ public class WorkspaceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public WorkspaceSummary withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -36,6 +38,7 @@ public class WorkspaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public WorkspaceSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +46,7 @@ public class WorkspaceSummary {
     
     @JsonProperty("endpoint")
     public String endpoint;
+
     public WorkspaceSummary withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -50,6 +54,7 @@ public class WorkspaceSummary {
     
     @JsonProperty("grafanaVersion")
     public String grafanaVersion;
+
     public WorkspaceSummary withGrafanaVersion(String grafanaVersion) {
         this.grafanaVersion = grafanaVersion;
         return this;
@@ -57,6 +62,7 @@ public class WorkspaceSummary {
     
     @JsonProperty("id")
     public String id;
+
     public WorkspaceSummary withId(String id) {
         this.id = id;
         return this;
@@ -66,6 +72,7 @@ public class WorkspaceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modified")
     public OffsetDateTime modified;
+
     public WorkspaceSummary withModified(OffsetDateTime modified) {
         this.modified = modified;
         return this;
@@ -74,6 +81,7 @@ public class WorkspaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WorkspaceSummary withName(String name) {
         this.name = name;
         return this;
@@ -82,6 +90,7 @@ public class WorkspaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationDestinations")
     public NotificationDestinationTypeEnum[] notificationDestinations;
+
     public WorkspaceSummary withNotificationDestinations(NotificationDestinationTypeEnum[] notificationDestinations) {
         this.notificationDestinations = notificationDestinations;
         return this;
@@ -89,6 +98,7 @@ public class WorkspaceSummary {
     
     @JsonProperty("status")
     public WorkspaceStatusEnum status;
+
     public WorkspaceSummary withStatus(WorkspaceStatusEnum status) {
         this.status = status;
         return this;
@@ -97,9 +107,19 @@ public class WorkspaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public WorkspaceSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public WorkspaceSummary(@JsonProperty("authentication") AuthenticationSummary authentication, @JsonProperty("created") OffsetDateTime created, @JsonProperty("endpoint") String endpoint, @JsonProperty("grafanaVersion") String grafanaVersion, @JsonProperty("id") String id, @JsonProperty("modified") OffsetDateTime modified, @JsonProperty("status") WorkspaceStatusEnum status) {
+        this.authentication = authentication;
+        this.created = created;
+        this.endpoint = endpoint;
+        this.grafanaVersion = grafanaVersion;
+        this.id = id;
+        this.modified = modified;
+        this.status = status;
+  }
 }

@@ -15,6 +15,7 @@ public class TwoHundredResultResultAstRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public TwoHundredResultResultAstRulesBody[] body;
+
     public TwoHundredResultResultAstRules withBody(TwoHundredResultResultAstRulesBody[] body) {
         this.body = body;
         return this;
@@ -23,9 +24,11 @@ public class TwoHundredResultResultAstRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("head")
     public TwoHundredResultResultAstRulesHead head;
+
     public TwoHundredResultResultAstRules withHead(TwoHundredResultResultAstRulesHead head) {
         this.head = head;
         return this;
     }
     
+    public TwoHundredResultResultAstRules(){}
 }

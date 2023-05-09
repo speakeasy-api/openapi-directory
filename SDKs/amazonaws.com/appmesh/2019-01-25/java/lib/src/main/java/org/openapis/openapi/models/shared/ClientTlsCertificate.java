@@ -15,6 +15,7 @@ public class ClientTlsCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public ListenerTlsFileCertificate file;
+
     public ClientTlsCertificate withFile(ListenerTlsFileCertificate file) {
         this.file = file;
         return this;
@@ -23,9 +24,11 @@ public class ClientTlsCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sds")
     public ListenerTlsSdsCertificate sds;
+
     public ClientTlsCertificate withSds(ListenerTlsSdsCertificate sds) {
         this.sds = sds;
         return this;
     }
     
+    public ClientTlsCertificate(){}
 }

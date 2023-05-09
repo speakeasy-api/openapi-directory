@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class UpdateMapResponse {
     @JsonProperty("MapArn")
     public String mapArn;
+
     public UpdateMapResponse withMapArn(String mapArn) {
         this.mapArn = mapArn;
         return this;
@@ -24,6 +25,7 @@ public class UpdateMapResponse {
     
     @JsonProperty("MapName")
     public String mapName;
+
     public UpdateMapResponse withMapName(String mapName) {
         this.mapName = mapName;
         return this;
@@ -33,9 +35,15 @@ public class UpdateMapResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public UpdateMapResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public UpdateMapResponse(@JsonProperty("MapArn") String mapArn, @JsonProperty("MapName") String mapName, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.mapArn = mapArn;
+        this.mapName = mapName;
+        this.updateTime = updateTime;
+  }
 }

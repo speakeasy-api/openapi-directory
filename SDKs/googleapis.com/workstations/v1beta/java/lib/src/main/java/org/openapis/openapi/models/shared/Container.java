@@ -18,6 +18,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public String[] args;
+
     public Container withArgs(String[] args) {
         this.args = args;
         return this;
@@ -29,28 +30,31 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public String[] command;
+
     public Container withCommand(String[] command) {
         this.command = command;
         return this;
     }
     
     /**
-     * Environment variables passed to the container.
+     * Environment variables passed to the container's entrypoint.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("env")
     public java.util.Map<String, String> env;
+
     public Container withEnv(java.util.Map<String, String> env) {
         this.env = env;
         return this;
     }
     
     /**
-     * Docker image defining the container. This image must be accessible by the config's service account.
+     * Docker image defining the container. This image must be accessible by the service account specified in the workstation configuration.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public Container withImage(String image) {
         this.image = image;
         return this;
@@ -62,6 +66,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runAsUser")
     public Integer runAsUser;
+
     public Container withRunAsUser(Integer runAsUser) {
         this.runAsUser = runAsUser;
         return this;
@@ -73,9 +78,11 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workingDir")
     public String workingDir;
+
     public Container withWorkingDir(String workingDir) {
         this.workingDir = workingDir;
         return this;
     }
     
+    public Container(){}
 }

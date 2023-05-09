@@ -18,6 +18,7 @@ public class DataSourceRefreshSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailySchedule")
     public DataSourceRefreshDailySchedule dailySchedule;
+
     public DataSourceRefreshSchedule withDailySchedule(DataSourceRefreshDailySchedule dailySchedule) {
         this.dailySchedule = dailySchedule;
         return this;
@@ -29,6 +30,7 @@ public class DataSourceRefreshSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public DataSourceRefreshSchedule withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -40,6 +42,7 @@ public class DataSourceRefreshSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monthlySchedule")
     public DataSourceRefreshMonthlySchedule monthlySchedule;
+
     public DataSourceRefreshSchedule withMonthlySchedule(DataSourceRefreshMonthlySchedule monthlySchedule) {
         this.monthlySchedule = monthlySchedule;
         return this;
@@ -51,6 +54,7 @@ public class DataSourceRefreshSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextRun")
     public Interval nextRun;
+
     public DataSourceRefreshSchedule withNextRun(Interval nextRun) {
         this.nextRun = nextRun;
         return this;
@@ -62,6 +66,7 @@ public class DataSourceRefreshSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshScope")
     public DataSourceRefreshScheduleRefreshScopeEnum refreshScope;
+
     public DataSourceRefreshSchedule withRefreshScope(DataSourceRefreshScheduleRefreshScopeEnum refreshScope) {
         this.refreshScope = refreshScope;
         return this;
@@ -73,9 +78,11 @@ public class DataSourceRefreshSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weeklySchedule")
     public DataSourceRefreshWeeklySchedule weeklySchedule;
+
     public DataSourceRefreshSchedule withWeeklySchedule(DataSourceRefreshWeeklySchedule weeklySchedule) {
         this.weeklySchedule = weeklySchedule;
         return this;
     }
     
+    public DataSourceRefreshSchedule(){}
 }

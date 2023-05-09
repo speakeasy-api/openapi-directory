@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMembersRequest {
@@ -12,6 +13,7 @@ public class GetMembersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversation_id")
     public String conversationId;
+
     public GetMembersRequest withConversationId(String conversationId) {
         this.conversationId = conversationId;
         return this;
@@ -25,6 +27,7 @@ public class GetMembersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetMembersRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -35,6 +38,7 @@ public class GetMembersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.OrderEnum order;
+
     public GetMembersRequest withOrder(org.openapis.openapi.models.shared.OrderEnum order) {
         this.order = order;
         return this;
@@ -45,9 +49,13 @@ public class GetMembersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public GetMembersRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetMembersRequest(@JsonProperty("conversation_id") String conversationId) {
+        this.conversationId = conversationId;
+  }
 }

@@ -15,9 +15,13 @@ public class GetGcmChannelResponse {
      */
     @JsonProperty("GCMChannelResponse")
     public GCMChannelResponse gcmChannelResponse;
+
     public GetGcmChannelResponse withGCMChannelResponse(GCMChannelResponse gcmChannelResponse) {
         this.gcmChannelResponse = gcmChannelResponse;
         return this;
     }
     
+    public GetGcmChannelResponse(@JsonProperty("GCMChannelResponse") GCMChannelResponse gcmChannelResponse) {
+        this.gcmChannelResponse = gcmChannelResponse;
+  }
 }

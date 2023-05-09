@@ -18,6 +18,7 @@ public class GoogleCloudConnectorsV1ConnectionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudConnectorsV1ConnectionStatus withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudConnectorsV1ConnectionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudConnectorsV1ConnectionStatusStateEnum state;
+
     public GoogleCloudConnectorsV1ConnectionStatus withState(GoogleCloudConnectorsV1ConnectionStatusStateEnum state) {
         this.state = state;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudConnectorsV1ConnectionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GoogleCloudConnectorsV1ConnectionStatus withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GoogleCloudConnectorsV1ConnectionStatus(){}
 }

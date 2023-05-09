@@ -18,6 +18,7 @@ public class ListUptimeCheckConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListUptimeCheckConfigsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListUptimeCheckConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public ListUptimeCheckConfigsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
@@ -40,9 +42,11 @@ public class ListUptimeCheckConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uptimeCheckConfigs")
     public UptimeCheckConfig[] uptimeCheckConfigs;
+
     public ListUptimeCheckConfigsResponse withUptimeCheckConfigs(UptimeCheckConfig[] uptimeCheckConfigs) {
         this.uptimeCheckConfigs = uptimeCheckConfigs;
         return this;
     }
     
+    public ListUptimeCheckConfigsResponse(){}
 }

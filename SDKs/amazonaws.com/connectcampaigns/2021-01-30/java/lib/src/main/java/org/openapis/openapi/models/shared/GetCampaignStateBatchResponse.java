@@ -18,6 +18,7 @@ public class GetCampaignStateBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedRequests")
     public FailedCampaignStateResponse[] failedRequests;
+
     public GetCampaignStateBatchResponse withFailedRequests(FailedCampaignStateResponse[] failedRequests) {
         this.failedRequests = failedRequests;
         return this;
@@ -29,9 +30,11 @@ public class GetCampaignStateBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successfulRequests")
     public SuccessfulCampaignStateResponse[] successfulRequests;
+
     public GetCampaignStateBatchResponse withSuccessfulRequests(SuccessfulCampaignStateResponse[] successfulRequests) {
         this.successfulRequests = successfulRequests;
         return this;
     }
     
+    public GetCampaignStateBatchResponse(){}
 }

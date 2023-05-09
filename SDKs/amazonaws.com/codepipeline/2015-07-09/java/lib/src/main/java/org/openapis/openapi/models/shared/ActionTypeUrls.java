@@ -15,6 +15,7 @@ public class ActionTypeUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationUrl")
     public String configurationUrl;
+
     public ActionTypeUrls withConfigurationUrl(String configurationUrl) {
         this.configurationUrl = configurationUrl;
         return this;
@@ -23,6 +24,7 @@ public class ActionTypeUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityUrlTemplate")
     public String entityUrlTemplate;
+
     public ActionTypeUrls withEntityUrlTemplate(String entityUrlTemplate) {
         this.entityUrlTemplate = entityUrlTemplate;
         return this;
@@ -31,6 +33,7 @@ public class ActionTypeUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionUrlTemplate")
     public String executionUrlTemplate;
+
     public ActionTypeUrls withExecutionUrlTemplate(String executionUrlTemplate) {
         this.executionUrlTemplate = executionUrlTemplate;
         return this;
@@ -39,9 +42,11 @@ public class ActionTypeUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionUrlTemplate")
     public String revisionUrlTemplate;
+
     public ActionTypeUrls withRevisionUrlTemplate(String revisionUrlTemplate) {
         this.revisionUrlTemplate = revisionUrlTemplate;
         return this;
     }
     
+    public ActionTypeUrls(){}
 }

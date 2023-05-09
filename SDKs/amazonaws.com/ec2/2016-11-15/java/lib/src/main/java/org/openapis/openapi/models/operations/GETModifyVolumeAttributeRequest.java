@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVolumeAttributeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyVolumeAttributeActionEnum action;
+
     public GETModifyVolumeAttributeRequest withAction(GETModifyVolumeAttributeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyVolumeAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoEnableIO")
     public GETModifyVolumeAttributeAutoEnableIo autoEnableIO;
+
     public GETModifyVolumeAttributeRequest withAutoEnableIO(GETModifyVolumeAttributeAutoEnableIo autoEnableIO) {
         this.autoEnableIO = autoEnableIO;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyVolumeAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyVolumeAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -36,6 +40,7 @@ public class GETModifyVolumeAttributeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyVolumeAttributeVersionEnum version;
+
     public GETModifyVolumeAttributeRequest withVersion(GETModifyVolumeAttributeVersionEnum version) {
         this.version = version;
         return this;
@@ -46,6 +51,7 @@ public class GETModifyVolumeAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VolumeId")
     public String volumeId;
+
     public GETModifyVolumeAttributeRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
@@ -53,6 +59,7 @@ public class GETModifyVolumeAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyVolumeAttributeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETModifyVolumeAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyVolumeAttributeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETModifyVolumeAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyVolumeAttributeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETModifyVolumeAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyVolumeAttributeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETModifyVolumeAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyVolumeAttributeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETModifyVolumeAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyVolumeAttributeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETModifyVolumeAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyVolumeAttributeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyVolumeAttributeRequest(@JsonProperty("Action") GETModifyVolumeAttributeActionEnum action, @JsonProperty("Version") GETModifyVolumeAttributeVersionEnum version, @JsonProperty("VolumeId") String volumeId) {
+        this.action = action;
+        this.version = version;
+        this.volumeId = volumeId;
+  }
 }

@@ -23,6 +23,7 @@ public class TagResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public TagResponseColorEnum color;
+
     public TagResponse withColor(TagResponseColorEnum color) {
         this.color = color;
         return this;
@@ -36,6 +37,7 @@ public class TagResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public TagResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -47,6 +49,7 @@ public class TagResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("followers")
     public UserCompact[] followers;
+
     public TagResponse withFollowers(UserCompact[] followers) {
         this.followers = followers;
         return this;
@@ -58,6 +61,7 @@ public class TagResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public TagResponse withGid(String gid) {
         this.gid = gid;
         return this;
@@ -69,6 +73,7 @@ public class TagResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TagResponse withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +85,7 @@ public class TagResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public TagResponse withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -91,6 +97,7 @@ public class TagResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permalink_url")
     public String permalinkUrl;
+
     public TagResponse withPermalinkUrl(String permalinkUrl) {
         this.permalinkUrl = permalinkUrl;
         return this;
@@ -102,6 +109,7 @@ public class TagResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public TagResponse withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -110,9 +118,11 @@ public class TagResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace")
     public WorkspaceCompact workspace;
+
     public TagResponse withWorkspace(WorkspaceCompact workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public TagResponse(){}
 }

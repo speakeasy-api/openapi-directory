@@ -18,6 +18,7 @@ public class SegmentFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("not")
     public Boolean not;
+
     public SegmentFilter withNot(Boolean not) {
         this.not = not;
         return this;
@@ -29,6 +30,7 @@ public class SegmentFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequenceSegment")
     public SequenceSegment sequenceSegment;
+
     public SegmentFilter withSequenceSegment(SequenceSegment sequenceSegment) {
         this.sequenceSegment = sequenceSegment;
         return this;
@@ -40,9 +42,11 @@ public class SegmentFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simpleSegment")
     public SimpleSegment simpleSegment;
+
     public SegmentFilter withSimpleSegment(SimpleSegment simpleSegment) {
         this.simpleSegment = simpleSegment;
         return this;
     }
     
+    public SegmentFilter(){}
 }

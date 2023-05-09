@@ -18,6 +18,7 @@ public class SDKInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public SDKInfoLanguageEnum language;
+
     public SDKInfo withLanguage(SDKInfoLanguageEnum language) {
         this.language = language;
         return this;
@@ -29,9 +30,11 @@ public class SDKInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public SDKInfo withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public SDKInfo(){}
 }

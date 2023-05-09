@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPadsUsingPOSTResponse {
     
     public String contentType;
+
     public ListPadsUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ListPadsUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public ListPadsUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ListPadsUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPadsUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ListPadsUsingPOSTResponse {
      */
     
     public ListPadsUsingPOST200ApplicationJSON listPadsUsingPOST200ApplicationJSONObject;
+
     public ListPadsUsingPOSTResponse withListPadsUsingPOST200ApplicationJSONObject(ListPadsUsingPOST200ApplicationJSON listPadsUsingPOST200ApplicationJSONObject) {
         this.listPadsUsingPOST200ApplicationJSONObject = listPadsUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ListPadsUsingPOSTResponse {
      */
     
     public ListPadsUsingPOST400ApplicationJSON listPadsUsingPOST400ApplicationJSONObject;
+
     public ListPadsUsingPOSTResponse withListPadsUsingPOST400ApplicationJSONObject(ListPadsUsingPOST400ApplicationJSON listPadsUsingPOST400ApplicationJSONObject) {
         this.listPadsUsingPOST400ApplicationJSONObject = listPadsUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ListPadsUsingPOSTResponse {
      */
     
     public ListPadsUsingPOST401ApplicationJSON listPadsUsingPOST401ApplicationJSONObject;
+
     public ListPadsUsingPOSTResponse withListPadsUsingPOST401ApplicationJSONObject(ListPadsUsingPOST401ApplicationJSON listPadsUsingPOST401ApplicationJSONObject) {
         this.listPadsUsingPOST401ApplicationJSONObject = listPadsUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class ListPadsUsingPOSTResponse {
      */
     
     public ListPadsUsingPOST500ApplicationJSON listPadsUsingPOST500ApplicationJSONObject;
+
     public ListPadsUsingPOSTResponse withListPadsUsingPOST500ApplicationJSONObject(ListPadsUsingPOST500ApplicationJSON listPadsUsingPOST500ApplicationJSONObject) {
         this.listPadsUsingPOST500ApplicationJSONObject = listPadsUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public ListPadsUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

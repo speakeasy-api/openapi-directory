@@ -15,9 +15,11 @@ public class BatchDisableStandardsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardsSubscriptions")
     public StandardsSubscription[] standardsSubscriptions;
+
     public BatchDisableStandardsResponse withStandardsSubscriptions(StandardsSubscription[] standardsSubscriptions) {
         this.standardsSubscriptions = standardsSubscriptions;
         return this;
     }
     
+    public BatchDisableStandardsResponse(){}
 }

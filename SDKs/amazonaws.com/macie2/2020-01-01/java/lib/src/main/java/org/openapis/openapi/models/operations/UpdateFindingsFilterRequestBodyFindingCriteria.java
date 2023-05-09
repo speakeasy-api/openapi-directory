@@ -15,9 +15,11 @@ public class UpdateFindingsFilterRequestBodyFindingCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criterion")
     public java.util.Map<String, org.openapis.openapi.models.shared.CriterionAdditionalProperties> criterion;
+
     public UpdateFindingsFilterRequestBodyFindingCriteria withCriterion(java.util.Map<String, org.openapis.openapi.models.shared.CriterionAdditionalProperties> criterion) {
         this.criterion = criterion;
         return this;
     }
     
+    public UpdateFindingsFilterRequestBodyFindingCriteria(){}
 }

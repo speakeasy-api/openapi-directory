@@ -18,6 +18,7 @@ public class CreateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public CreateNodePoolRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -29,6 +30,7 @@ public class CreateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodePool")
     public NodePool nodePool;
+
     public CreateNodePoolRequest withNodePool(NodePool nodePool) {
         this.nodePool = nodePool;
         return this;
@@ -40,6 +42,7 @@ public class CreateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public CreateNodePoolRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -51,6 +54,7 @@ public class CreateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public CreateNodePoolRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -62,9 +66,11 @@ public class CreateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public CreateNodePoolRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public CreateNodePoolRequest(){}
 }

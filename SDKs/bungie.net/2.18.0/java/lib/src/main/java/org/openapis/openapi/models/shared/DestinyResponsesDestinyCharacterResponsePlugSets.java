@@ -18,6 +18,7 @@ public class DestinyResponsesDestinyCharacterResponsePlugSets {
      */
     
     public DestinyComponentsPlugSetsDestinyPlugSetsComponent data;
+
     public DestinyResponsesDestinyCharacterResponsePlugSets withData(DestinyComponentsPlugSetsDestinyPlugSetsComponent data) {
         this.data = data;
         return this;
@@ -28,6 +29,7 @@ public class DestinyResponsesDestinyCharacterResponsePlugSets {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyCharacterResponsePlugSets withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -35,9 +37,11 @@ public class DestinyResponsesDestinyCharacterResponsePlugSets {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyCharacterResponsePlugSets withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyCharacterResponsePlugSets(){}
 }

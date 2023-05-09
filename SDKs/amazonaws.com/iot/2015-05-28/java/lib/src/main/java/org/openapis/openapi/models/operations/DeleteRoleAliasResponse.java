@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRoleAliasResponse {
     
     public String contentType;
+
     public DeleteRoleAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRoleAliasResponse {
      */
     
     public Object deleteConflictException;
+
     public DeleteRoleAliasResponse withDeleteConflictException(Object deleteConflictException) {
         this.deleteConflictException = deleteConflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRoleAliasResponse {
      */
     
     public java.util.Map<String, Object> deleteRoleAliasResponse;
+
     public DeleteRoleAliasResponse withDeleteRoleAliasResponse(java.util.Map<String, Object> deleteRoleAliasResponse) {
         this.deleteRoleAliasResponse = deleteRoleAliasResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRoleAliasResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteRoleAliasResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRoleAliasResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteRoleAliasResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteRoleAliasResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteRoleAliasResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteRoleAliasResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteRoleAliasResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteRoleAliasResponse {
     
     
     public Integer statusCode;
+
     public DeleteRoleAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteRoleAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRoleAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteRoleAliasResponse {
      */
     
     public Object throttlingException;
+
     public DeleteRoleAliasResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteRoleAliasResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteRoleAliasResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteRoleAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

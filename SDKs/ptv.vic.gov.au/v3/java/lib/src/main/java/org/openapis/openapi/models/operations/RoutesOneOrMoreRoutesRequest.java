@@ -12,6 +12,7 @@ public class RoutesOneOrMoreRoutesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public RoutesOneOrMoreRoutesRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -22,6 +23,7 @@ public class RoutesOneOrMoreRoutesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=route_name")
     public String routeName;
+
     public RoutesOneOrMoreRoutesRequest withRouteName(String routeName) {
         this.routeName = routeName;
         return this;
@@ -32,6 +34,7 @@ public class RoutesOneOrMoreRoutesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=route_types")
     public RoutesOneOrMoreRoutesRouteTypesEnum[] routeTypes;
+
     public RoutesOneOrMoreRoutesRequest withRouteTypes(RoutesOneOrMoreRoutesRouteTypesEnum[] routeTypes) {
         this.routeTypes = routeTypes;
         return this;
@@ -42,6 +45,7 @@ public class RoutesOneOrMoreRoutesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public RoutesOneOrMoreRoutesRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -52,9 +56,11 @@ public class RoutesOneOrMoreRoutesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public RoutesOneOrMoreRoutesRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public RoutesOneOrMoreRoutesRequest(){}
 }

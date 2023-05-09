@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListImportsResponse {
     
     public String contentType;
+
     public ListImportsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListImportsResponse {
      */
     
     public Object eventDataStoreARNInvalidException;
+
     public ListImportsResponse withEventDataStoreARNInvalidException(Object eventDataStoreARNInvalidException) {
         this.eventDataStoreARNInvalidException = eventDataStoreARNInvalidException;
         return this;
@@ -29,6 +32,7 @@ public class ListImportsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListImportsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListImportsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListImportsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ListImportsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListImportsResponse listImportsResponse;
+
     public ListImportsResponse withListImportsResponse(org.openapis.openapi.models.shared.ListImportsResponse listImportsResponse) {
         this.listImportsResponse = listImportsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListImportsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public ListImportsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class ListImportsResponse {
     
     
     public Integer statusCode;
+
     public ListImportsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListImportsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListImportsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListImportsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public ListImportsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public ListImportsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

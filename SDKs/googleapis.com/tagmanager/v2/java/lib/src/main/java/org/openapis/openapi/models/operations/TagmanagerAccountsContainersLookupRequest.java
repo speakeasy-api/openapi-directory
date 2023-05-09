@@ -12,6 +12,7 @@ public class TagmanagerAccountsContainersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public TagmanagerAccountsContainersLookupRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class TagmanagerAccountsContainersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public TagmanagerAccountsContainersLookupRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class TagmanagerAccountsContainersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public TagmanagerAccountsContainersLookupRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class TagmanagerAccountsContainersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public TagmanagerAccountsContainersLookupRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class TagmanagerAccountsContainersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationId")
     public String destinationId;
+
     public TagmanagerAccountsContainersLookupRequest withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -62,6 +67,7 @@ public class TagmanagerAccountsContainersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public TagmanagerAccountsContainersLookupRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +78,7 @@ public class TagmanagerAccountsContainersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public TagmanagerAccountsContainersLookupRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +89,7 @@ public class TagmanagerAccountsContainersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public TagmanagerAccountsContainersLookupRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +100,7 @@ public class TagmanagerAccountsContainersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public TagmanagerAccountsContainersLookupRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +111,7 @@ public class TagmanagerAccountsContainersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public TagmanagerAccountsContainersLookupRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +122,7 @@ public class TagmanagerAccountsContainersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public TagmanagerAccountsContainersLookupRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -122,9 +133,11 @@ public class TagmanagerAccountsContainersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public TagmanagerAccountsContainersLookupRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public TagmanagerAccountsContainersLookupRequest(){}
 }

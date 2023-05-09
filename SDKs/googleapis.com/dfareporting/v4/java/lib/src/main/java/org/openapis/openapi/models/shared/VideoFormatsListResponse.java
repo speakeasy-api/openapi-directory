@@ -18,6 +18,7 @@ public class VideoFormatsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public VideoFormatsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class VideoFormatsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoFormats")
     public VideoFormat[] videoFormats;
+
     public VideoFormatsListResponse withVideoFormats(VideoFormat[] videoFormats) {
         this.videoFormats = videoFormats;
         return this;
     }
     
+    public VideoFormatsListResponse(){}
 }

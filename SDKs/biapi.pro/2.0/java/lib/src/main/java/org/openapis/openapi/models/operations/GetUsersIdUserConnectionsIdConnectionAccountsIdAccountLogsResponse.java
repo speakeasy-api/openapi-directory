@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsResponse {
     
     public String contentType;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsResponse 
     
     
     public Integer statusCode;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsResponse 
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsResponse 
      */
     
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogs200ApplicationJSON getUsersIdUserConnectionsIdConnectionAccountsIdAccountLogs200ApplicationJSONObject;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsResponse withGetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogs200ApplicationJSONObject(GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogs200ApplicationJSON getUsersIdUserConnectionsIdConnectionAccountsIdAccountLogs200ApplicationJSONObject) {
         this.getUsersIdUserConnectionsIdConnectionAccountsIdAccountLogs200ApplicationJSONObject = getUsersIdUserConnectionsIdConnectionAccountsIdAccountLogs200ApplicationJSONObject;
         return this;
     }
     
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

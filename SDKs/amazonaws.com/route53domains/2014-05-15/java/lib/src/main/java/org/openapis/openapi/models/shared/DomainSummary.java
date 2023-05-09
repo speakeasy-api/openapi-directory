@@ -20,6 +20,7 @@ public class DomainSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoRenew")
     public Boolean autoRenew;
+
     public DomainSummary withAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
@@ -28,6 +29,7 @@ public class DomainSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public DomainSummary withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -38,6 +40,7 @@ public class DomainSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Expiry")
     public OffsetDateTime expiry;
+
     public DomainSummary withExpiry(OffsetDateTime expiry) {
         this.expiry = expiry;
         return this;
@@ -46,9 +49,11 @@ public class DomainSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransferLock")
     public Boolean transferLock;
+
     public DomainSummary withTransferLock(Boolean transferLock) {
         this.transferLock = transferLock;
         return this;
     }
     
+    public DomainSummary(){}
 }

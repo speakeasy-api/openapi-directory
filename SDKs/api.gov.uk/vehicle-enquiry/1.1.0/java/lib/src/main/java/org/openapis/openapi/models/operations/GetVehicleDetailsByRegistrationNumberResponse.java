@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVehicleDetailsByRegistrationNumberResponse {
     
     public String contentType;
+
     public GetVehicleDetailsByRegistrationNumberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetVehicleDetailsByRegistrationNumberResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetVehicleDetailsByRegistrationNumberResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetVehicleDetailsByRegistrationNumberResponse {
     
     
     public Integer statusCode;
+
     public GetVehicleDetailsByRegistrationNumberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetVehicleDetailsByRegistrationNumberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVehicleDetailsByRegistrationNumberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetVehicleDetailsByRegistrationNumberResponse {
      */
     
     public org.openapis.openapi.models.shared.Vehicle vehicle;
+
     public GetVehicleDetailsByRegistrationNumberResponse withVehicle(org.openapis.openapi.models.shared.Vehicle vehicle) {
         this.vehicle = vehicle;
         return this;
     }
     
+    public GetVehicleDetailsByRegistrationNumberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

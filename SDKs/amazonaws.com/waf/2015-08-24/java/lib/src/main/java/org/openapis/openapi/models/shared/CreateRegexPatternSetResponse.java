@@ -15,6 +15,7 @@ public class CreateRegexPatternSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public CreateRegexPatternSetResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -23,9 +24,11 @@ public class CreateRegexPatternSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegexPatternSet")
     public RegexPatternSet regexPatternSet;
+
     public CreateRegexPatternSetResponse withRegexPatternSet(RegexPatternSet regexPatternSet) {
         this.regexPatternSet = regexPatternSet;
         return this;
     }
     
+    public CreateRegexPatternSetResponse(){}
 }

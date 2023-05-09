@@ -12,6 +12,7 @@ public class ScheduleEByCandidatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public ScheduleEByCandidatePage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class ScheduleEByCandidatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ScheduleEByCandidate[] results;
+
     public ScheduleEByCandidatePage withResults(ScheduleEByCandidate[] results) {
         this.results = results;
         return this;
     }
     
+    public ScheduleEByCandidatePage(){}
 }

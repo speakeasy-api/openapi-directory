@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostIndividualsPartyIdLicensesRequest {
@@ -12,6 +13,7 @@ public class PostIndividualsPartyIdLicensesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public PostIndividualsPartyIdLicensesRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class PostIndividualsPartyIdLicensesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.LicenseInput licenseInput;
+
     public PostIndividualsPartyIdLicensesRequest withLicenseInput(org.openapis.openapi.models.shared.LicenseInput licenseInput) {
         this.licenseInput = licenseInput;
         return this;
@@ -32,9 +35,15 @@ public class PostIndividualsPartyIdLicensesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
     public String partyId;
+
     public PostIndividualsPartyIdLicensesRequest withPartyId(String partyId) {
         this.partyId = partyId;
         return this;
     }
     
+    public PostIndividualsPartyIdLicensesRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("licenseInput") org.openapis.openapi.models.shared.LicenseInput licenseInput, @JsonProperty("partyId") String partyId) {
+        this.apiKey = apiKey;
+        this.licenseInput = licenseInput;
+        this.partyId = partyId;
+  }
 }

@@ -12,6 +12,7 @@ public class GetPricing200ApplicationJSONPricingFloatingIpsPrices {
      */
     @JsonProperty("location")
     public String location;
+
     public GetPricing200ApplicationJSONPricingFloatingIpsPrices withLocation(String location) {
         this.location = location;
         return this;
@@ -22,9 +23,14 @@ public class GetPricing200ApplicationJSONPricingFloatingIpsPrices {
      */
     @JsonProperty("price_monthly")
     public GetPricing200ApplicationJSONPricingFloatingIpsPricesPriceMonthly priceMonthly;
+
     public GetPricing200ApplicationJSONPricingFloatingIpsPrices withPriceMonthly(GetPricing200ApplicationJSONPricingFloatingIpsPricesPriceMonthly priceMonthly) {
         this.priceMonthly = priceMonthly;
         return this;
     }
     
+    public GetPricing200ApplicationJSONPricingFloatingIpsPrices(@JsonProperty("location") String location, @JsonProperty("price_monthly") GetPricing200ApplicationJSONPricingFloatingIpsPricesPriceMonthly priceMonthly) {
+        this.location = location;
+        this.priceMonthly = priceMonthly;
+  }
 }

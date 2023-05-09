@@ -17,6 +17,7 @@ public class MessageStatusSMS {
      */
     @JsonProperty("channel")
     public MessageStatusSMSChannelEnum channel;
+
     public MessageStatusSMS withChannel(MessageStatusSMSChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -28,6 +29,7 @@ public class MessageStatusSMS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public MessageStatusSMS withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -39,6 +41,7 @@ public class MessageStatusSMS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public MessageStatusSMSError error;
+
     public MessageStatusSMS withError(MessageStatusSMSError error) {
         this.error = error;
         return this;
@@ -50,6 +53,7 @@ public class MessageStatusSMS {
      */
     @JsonProperty("from")
     public String from;
+
     public MessageStatusSMS withFrom(String from) {
         this.from = from;
         return this;
@@ -60,6 +64,7 @@ public class MessageStatusSMS {
      */
     @JsonProperty("message_uuid")
     public String messageUuid;
+
     public MessageStatusSMS withMessageUuid(String messageUuid) {
         this.messageUuid = messageUuid;
         return this;
@@ -70,6 +75,7 @@ public class MessageStatusSMS {
      */
     @JsonProperty("status")
     public MessageStatusSMSStatusEnum status;
+
     public MessageStatusSMS withStatus(MessageStatusSMSStatusEnum status) {
         this.status = status;
         return this;
@@ -80,6 +86,7 @@ public class MessageStatusSMS {
      */
     @JsonProperty("timestamp")
     public String timestamp;
+
     public MessageStatusSMS withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -91,6 +98,7 @@ public class MessageStatusSMS {
      */
     @JsonProperty("to")
     public String to;
+
     public MessageStatusSMS withTo(String to) {
         this.to = to;
         return this;
@@ -99,9 +107,18 @@ public class MessageStatusSMS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public MessageStatusSMSUsage usage;
+
     public MessageStatusSMS withUsage(MessageStatusSMSUsage usage) {
         this.usage = usage;
         return this;
     }
     
+    public MessageStatusSMS(@JsonProperty("channel") MessageStatusSMSChannelEnum channel, @JsonProperty("from") String from, @JsonProperty("message_uuid") String messageUuid, @JsonProperty("status") MessageStatusSMSStatusEnum status, @JsonProperty("timestamp") String timestamp, @JsonProperty("to") String to) {
+        this.channel = channel;
+        this.from = from;
+        this.messageUuid = messageUuid;
+        this.status = status;
+        this.timestamp = timestamp;
+        this.to = to;
+  }
 }

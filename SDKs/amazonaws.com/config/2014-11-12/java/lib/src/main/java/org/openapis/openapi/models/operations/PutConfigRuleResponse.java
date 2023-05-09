@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutConfigRuleResponse {
     
     public String contentType;
+
     public PutConfigRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutConfigRuleResponse {
      */
     
     public Object insufficientPermissionsException;
+
     public PutConfigRuleResponse withInsufficientPermissionsException(Object insufficientPermissionsException) {
         this.insufficientPermissionsException = insufficientPermissionsException;
         return this;
@@ -29,6 +32,7 @@ public class PutConfigRuleResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutConfigRuleResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class PutConfigRuleResponse {
      */
     
     public Object maxNumberOfConfigRulesExceededException;
+
     public PutConfigRuleResponse withMaxNumberOfConfigRulesExceededException(Object maxNumberOfConfigRulesExceededException) {
         this.maxNumberOfConfigRulesExceededException = maxNumberOfConfigRulesExceededException;
         return this;
@@ -49,6 +54,7 @@ public class PutConfigRuleResponse {
      */
     
     public Object noAvailableConfigurationRecorderException;
+
     public PutConfigRuleResponse withNoAvailableConfigurationRecorderException(Object noAvailableConfigurationRecorderException) {
         this.noAvailableConfigurationRecorderException = noAvailableConfigurationRecorderException;
         return this;
@@ -56,6 +62,7 @@ public class PutConfigRuleResponse {
     
     
     public Integer statusCode;
+
     public PutConfigRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutConfigRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutConfigRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class PutConfigRuleResponse {
      */
     
     public Object resourceInUseException;
+
     public PutConfigRuleResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
     }
     
+    public PutConfigRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

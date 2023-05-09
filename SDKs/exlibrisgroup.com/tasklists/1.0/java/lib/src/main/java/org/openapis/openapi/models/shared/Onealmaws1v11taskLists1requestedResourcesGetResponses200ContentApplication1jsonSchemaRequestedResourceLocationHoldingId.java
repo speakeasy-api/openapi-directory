@@ -15,6 +15,7 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocationHoldingId withLink(String link) {
         this.link = link;
         return this;
@@ -23,9 +24,11 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocationHoldingId withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocationHoldingId(){}
 }

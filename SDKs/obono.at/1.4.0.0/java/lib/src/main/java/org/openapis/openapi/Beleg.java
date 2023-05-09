@@ -62,10 +62,8 @@ public class Beleg {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddBelegResponse res = new org.openapis.openapi.models.operations.AddBelegResponse() {{
+        org.openapis.openapi.models.operations.AddBelegResponse res = new org.openapis.openapi.models.operations.AddBelegResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -104,10 +102,8 @@ public class Beleg {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAbschlussResponse res = new org.openapis.openapi.models.operations.CreateAbschlussResponse() {{
+        org.openapis.openapi.models.operations.CreateAbschlussResponse res = new org.openapis.openapi.models.operations.CreateAbschlussResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -139,11 +135,9 @@ public class Beleg {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBelegResponse res = new org.openapis.openapi.models.operations.GetBelegResponse() {{
+        org.openapis.openapi.models.operations.GetBelegResponse res = new org.openapis.openapi.models.operations.GetBelegResponse(contentType, httpRes.statusCode()) {{
             beleg = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -186,11 +180,9 @@ public class Beleg {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBelegeResponse res = new org.openapis.openapi.models.operations.GetBelegeResponse() {{
+        org.openapis.openapi.models.operations.GetBelegeResponse res = new org.openapis.openapi.models.operations.GetBelegeResponse(contentType, httpRes.statusCode()) {{
             belege = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,11 +217,9 @@ public class Beleg {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBelegeBelegUuidResponse res = new org.openapis.openapi.models.operations.GetBelegeBelegUuidResponse() {{
+        org.openapis.openapi.models.operations.GetBelegeBelegUuidResponse res = new org.openapis.openapi.models.operations.GetBelegeBelegUuidResponse(contentType, httpRes.statusCode()) {{
             beleg = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

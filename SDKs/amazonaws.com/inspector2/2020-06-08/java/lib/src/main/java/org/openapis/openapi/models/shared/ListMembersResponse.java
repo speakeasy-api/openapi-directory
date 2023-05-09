@@ -15,6 +15,7 @@ public class ListMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public Member[] members;
+
     public ListMembersResponse withMembers(Member[] members) {
         this.members = members;
         return this;
@@ -23,9 +24,11 @@ public class ListMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListMembersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMembersResponse(){}
 }

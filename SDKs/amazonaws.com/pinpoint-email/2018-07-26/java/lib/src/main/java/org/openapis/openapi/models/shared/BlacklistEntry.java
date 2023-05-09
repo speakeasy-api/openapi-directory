@@ -20,6 +20,7 @@ public class BlacklistEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public BlacklistEntry withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +31,7 @@ public class BlacklistEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ListingTime")
     public OffsetDateTime listingTime;
+
     public BlacklistEntry withListingTime(OffsetDateTime listingTime) {
         this.listingTime = listingTime;
         return this;
@@ -38,9 +40,11 @@ public class BlacklistEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RblName")
     public String rblName;
+
     public BlacklistEntry withRblName(String rblName) {
         this.rblName = rblName;
         return this;
     }
     
+    public BlacklistEntry(){}
 }

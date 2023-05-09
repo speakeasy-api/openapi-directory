@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDataSourceInput {
     @JsonProperty("DataSourceId")
     public String dataSourceId;
+
     public GetDataSourceInput withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -19,9 +20,13 @@ public class GetDataSourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Verbose")
     public Boolean verbose;
+
     public GetDataSourceInput withVerbose(Boolean verbose) {
         this.verbose = verbose;
         return this;
     }
     
+    public GetDataSourceInput(@JsonProperty("DataSourceId") String dataSourceId) {
+        this.dataSourceId = dataSourceId;
+  }
 }

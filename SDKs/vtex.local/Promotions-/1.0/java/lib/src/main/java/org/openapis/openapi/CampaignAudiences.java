@@ -60,11 +60,9 @@ public class CampaignAudiences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetcampaignaudiencesResponse res = new org.openapis.openapi.models.operations.GetcampaignaudiencesResponse() {{
+        org.openapis.openapi.models.operations.GetcampaignaudiencesResponse res = new org.openapis.openapi.models.operations.GetcampaignaudiencesResponse(contentType, httpRes.statusCode()) {{
             getcampaignaudiences200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class CampaignAudiences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetcampaignconfigurationResponse res = new org.openapis.openapi.models.operations.GetcampaignconfigurationResponse() {{
+        org.openapis.openapi.models.operations.GetcampaignconfigurationResponse res = new org.openapis.openapi.models.operations.GetcampaignconfigurationResponse(contentType, httpRes.statusCode()) {{
             getcampaignconfiguration200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -161,11 +157,9 @@ public class CampaignAudiences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetcampaignconfigurationResponse res = new org.openapis.openapi.models.operations.SetcampaignconfigurationResponse() {{
+        org.openapis.openapi.models.operations.SetcampaignconfigurationResponse res = new org.openapis.openapi.models.operations.SetcampaignconfigurationResponse(contentType, httpRes.statusCode()) {{
             setcampaignconfiguration200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

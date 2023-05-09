@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteScoreFromCollectionRequest {
@@ -17,6 +18,7 @@ public class DeleteScoreFromCollectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
     public String collection;
+
     public DeleteScoreFromCollectionRequest withCollection(String collection) {
         this.collection = collection;
         return this;
@@ -28,6 +30,7 @@ public class DeleteScoreFromCollectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
     public String score;
+
     public DeleteScoreFromCollectionRequest withScore(String score) {
         this.score = score;
         return this;
@@ -39,9 +42,14 @@ public class DeleteScoreFromCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
     public String sharingKey;
+
     public DeleteScoreFromCollectionRequest withSharingKey(String sharingKey) {
         this.sharingKey = sharingKey;
         return this;
     }
     
+    public DeleteScoreFromCollectionRequest(@JsonProperty("collection") String collection, @JsonProperty("score") String score) {
+        this.collection = collection;
+        this.score = score;
+  }
 }

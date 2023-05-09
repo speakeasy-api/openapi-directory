@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PhysicalResourceIdContextKeyValuePair - Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses context key-value pairs in cases where a resource's logical and physical IDs aren't enough to uniquely identify that resource. Each context key-value pair specifies a resource that contains the targeted resource.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PhysicalResourceIdContextKeyValuePair {
     
     public String key;
+
     public PhysicalResourceIdContextKeyValuePair withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class PhysicalResourceIdContextKeyValuePair {
     
     
     public String value;
+
     public PhysicalResourceIdContextKeyValuePair withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PhysicalResourceIdContextKeyValuePair(@JsonProperty("Key") String key, @JsonProperty("Value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

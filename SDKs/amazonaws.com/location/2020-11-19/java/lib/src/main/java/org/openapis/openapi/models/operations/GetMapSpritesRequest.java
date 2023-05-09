@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapSpritesRequest {
@@ -12,6 +13,7 @@ public class GetMapSpritesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FileName")
     public String fileName;
+
     public GetMapSpritesRequest withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -22,6 +24,7 @@ public class GetMapSpritesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MapName")
     public String mapName;
+
     public GetMapSpritesRequest withMapName(String mapName) {
         this.mapName = mapName;
         return this;
@@ -29,6 +32,7 @@ public class GetMapSpritesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetMapSpritesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -36,6 +40,7 @@ public class GetMapSpritesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetMapSpritesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -43,6 +48,7 @@ public class GetMapSpritesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetMapSpritesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -50,6 +56,7 @@ public class GetMapSpritesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetMapSpritesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -57,6 +64,7 @@ public class GetMapSpritesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetMapSpritesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -64,6 +72,7 @@ public class GetMapSpritesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetMapSpritesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -71,6 +80,7 @@ public class GetMapSpritesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetMapSpritesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -81,9 +91,14 @@ public class GetMapSpritesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GetMapSpritesRequest withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public GetMapSpritesRequest(@JsonProperty("FileName") String fileName, @JsonProperty("MapName") String mapName) {
+        this.fileName = fileName;
+        this.mapName = mapName;
+  }
 }

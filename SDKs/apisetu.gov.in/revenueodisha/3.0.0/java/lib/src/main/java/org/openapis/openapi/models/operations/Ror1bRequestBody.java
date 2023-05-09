@@ -15,6 +15,7 @@ public class Ror1bRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public Ror1bRequestBodyCertificateParameters certificateParameters;
+
     public Ror1bRequestBody withCertificateParameters(Ror1bRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class Ror1bRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public Ror1bRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class Ror1bRequestBody {
      */
     @JsonProperty("format")
     public Ror1bRequestBodyFormatEnum format;
+
     public Ror1bRequestBody withFormat(Ror1bRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class Ror1bRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public Ror1bRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public Ror1bRequestBody(@JsonProperty("format") Ror1bRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

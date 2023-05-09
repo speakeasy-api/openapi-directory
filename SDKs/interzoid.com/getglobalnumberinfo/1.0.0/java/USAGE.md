@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetglobalnumberinfoRequest;
 import org.openapis.openapi.models.operations.GetglobalnumberinfoResponse;
 
@@ -13,18 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetglobalnumberinfoRequest req = new GetglobalnumberinfoRequest() {{
-                intlnumber = "corrupti";
-                license = "provident";
-            }}            
+            GetglobalnumberinfoRequest req = new GetglobalnumberinfoRequest("corrupti", "provident");            
 
             GetglobalnumberinfoResponse res = sdk.globalPhoneNumberInformation.getglobalnumberinfo(req);
 
-            if (res.getglobalnumberinfo200ApplicationJSONObject.isPresent()) {
+            if (res.getglobalnumberinfo200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

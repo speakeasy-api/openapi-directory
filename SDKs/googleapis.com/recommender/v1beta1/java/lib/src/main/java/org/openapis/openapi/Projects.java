@@ -59,11 +59,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsListResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsListResponse() {{
+        org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsListResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommenderV1beta1ListInsightsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedResponse() {{
+        org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommenderV1beta1Insight = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsGetResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsGetResponse() {{
+        org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsGetResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsGetResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommenderV1beta1Recommendation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsListResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsListResponse() {{
+        org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsListResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommenderV1beta1ListRecommendationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedResponse() {{
+        org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommenderV1beta1Recommendation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedResponse() {{
+        org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommenderV1beta1Recommendation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +331,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedResponse() {{
+        org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommenderV1beta1Recommendation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -391,11 +377,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededResponse() {{
+        org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommenderV1beta1Recommendation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -439,11 +423,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersUpdateConfigResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersUpdateConfigResponse() {{
+        org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersUpdateConfigResponse res = new org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersUpdateConfigResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommenderV1beta1RecommenderConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

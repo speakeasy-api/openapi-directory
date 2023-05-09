@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartGameSessionPlacementResponse {
     
     public String contentType;
+
     public StartGameSessionPlacementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartGameSessionPlacementResponse {
      */
     
     public Object internalServiceException;
+
     public StartGameSessionPlacementResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class StartGameSessionPlacementResponse {
      */
     
     public Object invalidRequestException;
+
     public StartGameSessionPlacementResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartGameSessionPlacementResponse {
      */
     
     public Object notFoundException;
+
     public StartGameSessionPlacementResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartGameSessionPlacementResponse {
      */
     
     public org.openapis.openapi.models.shared.StartGameSessionPlacementOutput startGameSessionPlacementOutput;
+
     public StartGameSessionPlacementResponse withStartGameSessionPlacementOutput(org.openapis.openapi.models.shared.StartGameSessionPlacementOutput startGameSessionPlacementOutput) {
         this.startGameSessionPlacementOutput = startGameSessionPlacementOutput;
         return this;
@@ -56,6 +62,7 @@ public class StartGameSessionPlacementResponse {
     
     
     public Integer statusCode;
+
     public StartGameSessionPlacementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartGameSessionPlacementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartGameSessionPlacementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class StartGameSessionPlacementResponse {
      */
     
     public Object unauthorizedException;
+
     public StartGameSessionPlacementResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public StartGameSessionPlacementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class UnprocessedTraceSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public UnprocessedTraceSegment withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class UnprocessedTraceSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public UnprocessedTraceSegment withId(String id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class UnprocessedTraceSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public UnprocessedTraceSegment withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public UnprocessedTraceSegment(){}
 }

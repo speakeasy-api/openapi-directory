@@ -18,9 +18,11 @@ public class VideoPlayerSizeAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoPlayerSize")
     public VideoPlayerSizeAssignedTargetingOptionDetailsVideoPlayerSizeEnum videoPlayerSize;
+
     public VideoPlayerSizeAssignedTargetingOptionDetails withVideoPlayerSize(VideoPlayerSizeAssignedTargetingOptionDetailsVideoPlayerSizeEnum videoPlayerSize) {
         this.videoPlayerSize = videoPlayerSize;
         return this;
     }
     
+    public VideoPlayerSizeAssignedTargetingOptionDetails(){}
 }

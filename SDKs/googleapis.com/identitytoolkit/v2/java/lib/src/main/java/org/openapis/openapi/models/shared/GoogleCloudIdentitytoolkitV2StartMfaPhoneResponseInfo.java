@@ -18,9 +18,11 @@ public class GoogleCloudIdentitytoolkitV2StartMfaPhoneResponseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionInfo")
     public String sessionInfo;
+
     public GoogleCloudIdentitytoolkitV2StartMfaPhoneResponseInfo withSessionInfo(String sessionInfo) {
         this.sessionInfo = sessionInfo;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitV2StartMfaPhoneResponseInfo(){}
 }

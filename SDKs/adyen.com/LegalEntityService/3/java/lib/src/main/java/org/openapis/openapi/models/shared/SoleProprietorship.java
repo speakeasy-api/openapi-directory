@@ -14,6 +14,7 @@ public class SoleProprietorship {
      */
     @JsonProperty("countryOfGoverningLaw")
     public String countryOfGoverningLaw;
+
     public SoleProprietorship withCountryOfGoverningLaw(String countryOfGoverningLaw) {
         this.countryOfGoverningLaw = countryOfGoverningLaw;
         return this;
@@ -25,6 +26,7 @@ public class SoleProprietorship {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateOfIncorporation")
     public String dateOfIncorporation;
+
     public SoleProprietorship withDateOfIncorporation(String dateOfIncorporation) {
         this.dateOfIncorporation = dateOfIncorporation;
         return this;
@@ -36,6 +38,7 @@ public class SoleProprietorship {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doingBusinessAs")
     public String doingBusinessAs;
+
     public SoleProprietorship withDoingBusinessAs(String doingBusinessAs) {
         this.doingBusinessAs = doingBusinessAs;
         return this;
@@ -46,6 +49,7 @@ public class SoleProprietorship {
      */
     @JsonProperty("name")
     public String name;
+
     public SoleProprietorship withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class SoleProprietorship {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalPlaceOfBusiness")
     public Address principalPlaceOfBusiness;
+
     public SoleProprietorship withPrincipalPlaceOfBusiness(Address principalPlaceOfBusiness) {
         this.principalPlaceOfBusiness = principalPlaceOfBusiness;
         return this;
@@ -61,6 +66,7 @@ public class SoleProprietorship {
     
     @JsonProperty("registeredAddress")
     public Address registeredAddress;
+
     public SoleProprietorship withRegisteredAddress(Address registeredAddress) {
         this.registeredAddress = registeredAddress;
         return this;
@@ -72,6 +78,7 @@ public class SoleProprietorship {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationNumber")
     public String registrationNumber;
+
     public SoleProprietorship withRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
         return this;
@@ -85,6 +92,7 @@ public class SoleProprietorship {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatAbsenceReason")
     public SoleProprietorshipVatAbsenceReasonEnum vatAbsenceReason;
+
     public SoleProprietorship withVatAbsenceReason(SoleProprietorshipVatAbsenceReasonEnum vatAbsenceReason) {
         this.vatAbsenceReason = vatAbsenceReason;
         return this;
@@ -96,9 +104,15 @@ public class SoleProprietorship {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatNumber")
     public String vatNumber;
+
     public SoleProprietorship withVatNumber(String vatNumber) {
         this.vatNumber = vatNumber;
         return this;
     }
     
+    public SoleProprietorship(@JsonProperty("countryOfGoverningLaw") String countryOfGoverningLaw, @JsonProperty("name") String name, @JsonProperty("registeredAddress") Address registeredAddress) {
+        this.countryOfGoverningLaw = countryOfGoverningLaw;
+        this.name = name;
+        this.registeredAddress = registeredAddress;
+  }
 }

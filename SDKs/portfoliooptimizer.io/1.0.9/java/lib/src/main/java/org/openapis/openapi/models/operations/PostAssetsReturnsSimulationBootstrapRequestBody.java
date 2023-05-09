@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAssetsReturnsSimulationBootstrapRequestBody {
     @JsonProperty("assets")
     public PostAssetsReturnsSimulationBootstrapRequestBodyAssets[] assets;
+
     public PostAssetsReturnsSimulationBootstrapRequestBody withAssets(PostAssetsReturnsSimulationBootstrapRequestBodyAssets[] assets) {
         this.assets = assets;
         return this;
@@ -22,6 +23,7 @@ public class PostAssetsReturnsSimulationBootstrapRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootstrapAverageBlockLength")
     public Double bootstrapAverageBlockLength;
+
     public PostAssetsReturnsSimulationBootstrapRequestBody withBootstrapAverageBlockLength(Double bootstrapAverageBlockLength) {
         this.bootstrapAverageBlockLength = bootstrapAverageBlockLength;
         return this;
@@ -33,6 +35,7 @@ public class PostAssetsReturnsSimulationBootstrapRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootstrapBlockLength")
     public Long bootstrapBlockLength;
+
     public PostAssetsReturnsSimulationBootstrapRequestBody withBootstrapBlockLength(Long bootstrapBlockLength) {
         this.bootstrapBlockLength = bootstrapBlockLength;
         return this;
@@ -44,6 +47,7 @@ public class PostAssetsReturnsSimulationBootstrapRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootstrapMethod")
     public PostAssetsReturnsSimulationBootstrapRequestBodyBootstrapMethodEnum bootstrapMethod;
+
     public PostAssetsReturnsSimulationBootstrapRequestBody withBootstrapMethod(PostAssetsReturnsSimulationBootstrapRequestBodyBootstrapMethodEnum bootstrapMethod) {
         this.bootstrapMethod = bootstrapMethod;
         return this;
@@ -55,6 +59,7 @@ public class PostAssetsReturnsSimulationBootstrapRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simulations")
     public Long simulations;
+
     public PostAssetsReturnsSimulationBootstrapRequestBody withSimulations(Long simulations) {
         this.simulations = simulations;
         return this;
@@ -66,9 +71,13 @@ public class PostAssetsReturnsSimulationBootstrapRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simulationsLength")
     public Long simulationsLength;
+
     public PostAssetsReturnsSimulationBootstrapRequestBody withSimulationsLength(Long simulationsLength) {
         this.simulationsLength = simulationsLength;
         return this;
     }
     
+    public PostAssetsReturnsSimulationBootstrapRequestBody(@JsonProperty("assets") PostAssetsReturnsSimulationBootstrapRequestBodyAssets[] assets) {
+        this.assets = assets;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DialogflowProjectsLocationsConversationDatasetsCreateResponse {
     
     public String contentType;
+
     public DialogflowProjectsLocationsConversationDatasetsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DialogflowProjectsLocationsConversationDatasetsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleLongrunningOperation googleLongrunningOperation;
+
     public DialogflowProjectsLocationsConversationDatasetsCreateResponse withGoogleLongrunningOperation(org.openapis.openapi.models.shared.GoogleLongrunningOperation googleLongrunningOperation) {
         this.googleLongrunningOperation = googleLongrunningOperation;
         return this;
@@ -26,6 +29,7 @@ public class DialogflowProjectsLocationsConversationDatasetsCreateResponse {
     
     
     public Integer statusCode;
+
     public DialogflowProjectsLocationsConversationDatasetsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DialogflowProjectsLocationsConversationDatasetsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DialogflowProjectsLocationsConversationDatasetsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DialogflowProjectsLocationsConversationDatasetsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

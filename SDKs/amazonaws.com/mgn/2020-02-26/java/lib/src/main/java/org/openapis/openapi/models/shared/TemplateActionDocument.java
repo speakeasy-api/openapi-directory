@@ -15,6 +15,7 @@ public class TemplateActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionID")
     public String actionID;
+
     public TemplateActionDocument withActionID(String actionID) {
         this.actionID = actionID;
         return this;
@@ -23,6 +24,7 @@ public class TemplateActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionName")
     public String actionName;
+
     public TemplateActionDocument withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -31,6 +33,7 @@ public class TemplateActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public TemplateActionDocument withActive(Boolean active) {
         this.active = active;
         return this;
@@ -39,6 +42,7 @@ public class TemplateActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public ActionCategoryEnum category;
+
     public TemplateActionDocument withCategory(ActionCategoryEnum category) {
         this.category = category;
         return this;
@@ -47,6 +51,7 @@ public class TemplateActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TemplateActionDocument withDescription(String description) {
         this.description = description;
         return this;
@@ -55,6 +60,7 @@ public class TemplateActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentIdentifier")
     public String documentIdentifier;
+
     public TemplateActionDocument withDocumentIdentifier(String documentIdentifier) {
         this.documentIdentifier = documentIdentifier;
         return this;
@@ -63,6 +69,7 @@ public class TemplateActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentVersion")
     public String documentVersion;
+
     public TemplateActionDocument withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -71,6 +78,7 @@ public class TemplateActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalParameters")
     public java.util.Map<String, SsmExternalParameter> externalParameters;
+
     public TemplateActionDocument withExternalParameters(java.util.Map<String, SsmExternalParameter> externalParameters) {
         this.externalParameters = externalParameters;
         return this;
@@ -79,6 +87,7 @@ public class TemplateActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mustSucceedForCutover")
     public Boolean mustSucceedForCutover;
+
     public TemplateActionDocument withMustSucceedForCutover(Boolean mustSucceedForCutover) {
         this.mustSucceedForCutover = mustSucceedForCutover;
         return this;
@@ -87,6 +96,7 @@ public class TemplateActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystem")
     public String operatingSystem;
+
     public TemplateActionDocument withOperatingSystem(String operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -95,6 +105,7 @@ public class TemplateActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Long order;
+
     public TemplateActionDocument withOrder(Long order) {
         this.order = order;
         return this;
@@ -103,6 +114,7 @@ public class TemplateActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, SsmParameterStoreParameter[]> parameters;
+
     public TemplateActionDocument withParameters(java.util.Map<String, SsmParameterStoreParameter[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -111,9 +123,11 @@ public class TemplateActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutSeconds")
     public Long timeoutSeconds;
+
     public TemplateActionDocument withTimeoutSeconds(Long timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
     }
     
+    public TemplateActionDocument(){}
 }

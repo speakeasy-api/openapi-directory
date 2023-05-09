@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * MetricStat - &lt;p&gt;This structure defines the CloudWatch metric to return, along with the statistic, period, and unit.&lt;/p&gt; &lt;p&gt;For more information about the CloudWatch terminology below, see &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html"&gt;Amazon CloudWatch concepts&lt;/a&gt; in the &lt;i&gt;Amazon CloudWatch User Guide&lt;/i&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MetricStat {
     
     public Metric metric;
+
     public MetricStat withMetric(Metric metric) {
         this.metric = metric;
         return this;
@@ -19,6 +20,7 @@ public class MetricStat {
     
     
     public String stat;
+
     public MetricStat withStat(String stat) {
         this.stat = stat;
         return this;
@@ -26,9 +28,14 @@ public class MetricStat {
     
     
     public String unit;
+
     public MetricStat withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public MetricStat(@JsonProperty("Metric") Metric metric, @JsonProperty("Stat") String stat) {
+        this.metric = metric;
+        this.stat = stat;
+  }
 }

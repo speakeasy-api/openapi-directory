@@ -15,6 +15,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainPrefix")
     public String domainPrefix;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth withDomainPrefix(String domainPrefix) {
         this.domainPrefix = domainPrefix;
         return this;
@@ -22,6 +23,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth {
     
     @JsonProperty("OAuthGrantType")
     public GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum oAuthGrantType;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth withOAuthGrantType(GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum oAuthGrantType) {
         this.oAuthGrantType = oAuthGrantType;
         return this;
@@ -29,6 +31,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth {
     
     @JsonProperty("OAuthScopes")
     public OAuthScopesElementEnum[] oAuthScopes;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth withOAuthScopes(OAuthScopesElementEnum[] oAuthScopes) {
         this.oAuthScopes = oAuthScopes;
         return this;
@@ -36,6 +39,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth {
     
     @JsonProperty("RedirectSignInURIs")
     public String[] redirectSignInURIs;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth withRedirectSignInURIs(String[] redirectSignInURIs) {
         this.redirectSignInURIs = redirectSignInURIs;
         return this;
@@ -43,6 +47,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth {
     
     @JsonProperty("RedirectSignOutURIs")
     public String[] redirectSignOutURIs;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth withRedirectSignOutURIs(String[] redirectSignOutURIs) {
         this.redirectSignOutURIs = redirectSignOutURIs;
         return this;
@@ -51,9 +56,16 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SocialProviderSettings")
     public GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthSocialProviderSettings socialProviderSettings;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth withSocialProviderSettings(GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthSocialProviderSettings socialProviderSettings) {
         this.socialProviderSettings = socialProviderSettings;
         return this;
     }
     
+    public GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth(@JsonProperty("OAuthGrantType") GetBackendAuthResponseResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum oAuthGrantType, @JsonProperty("OAuthScopes") OAuthScopesElementEnum[] oAuthScopes, @JsonProperty("RedirectSignInURIs") String[] redirectSignInURIs, @JsonProperty("RedirectSignOutURIs") String[] redirectSignOutURIs) {
+        this.oAuthGrantType = oAuthGrantType;
+        this.oAuthScopes = oAuthScopes;
+        this.redirectSignInURIs = redirectSignInURIs;
+        this.redirectSignOutURIs = redirectSignOutURIs;
+  }
 }

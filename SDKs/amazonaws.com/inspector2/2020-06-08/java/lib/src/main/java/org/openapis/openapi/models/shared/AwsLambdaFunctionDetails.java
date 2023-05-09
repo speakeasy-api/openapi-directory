@@ -20,6 +20,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architectures")
     public ArchitectureEnum[] architectures;
+
     public AwsLambdaFunctionDetails withArchitectures(ArchitectureEnum[] architectures) {
         this.architectures = architectures;
         return this;
@@ -27,6 +28,7 @@ public class AwsLambdaFunctionDetails {
     
     @JsonProperty("codeSha256")
     public String codeSha256;
+
     public AwsLambdaFunctionDetails withCodeSha256(String codeSha256) {
         this.codeSha256 = codeSha256;
         return this;
@@ -34,6 +36,7 @@ public class AwsLambdaFunctionDetails {
     
     @JsonProperty("executionRoleArn")
     public String executionRoleArn;
+
     public AwsLambdaFunctionDetails withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -41,6 +44,7 @@ public class AwsLambdaFunctionDetails {
     
     @JsonProperty("functionName")
     public String functionName;
+
     public AwsLambdaFunctionDetails withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -51,6 +55,7 @@ public class AwsLambdaFunctionDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public AwsLambdaFunctionDetails withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -59,6 +64,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layers")
     public String[] layers;
+
     public AwsLambdaFunctionDetails withLayers(String[] layers) {
         this.layers = layers;
         return this;
@@ -67,6 +73,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageType")
     public PackageTypeEnum packageType;
+
     public AwsLambdaFunctionDetails withPackageType(PackageTypeEnum packageType) {
         this.packageType = packageType;
         return this;
@@ -74,6 +81,7 @@ public class AwsLambdaFunctionDetails {
     
     @JsonProperty("runtime")
     public RuntimeEnum runtime;
+
     public AwsLambdaFunctionDetails withRuntime(RuntimeEnum runtime) {
         this.runtime = runtime;
         return this;
@@ -81,6 +89,7 @@ public class AwsLambdaFunctionDetails {
     
     @JsonProperty("version")
     public String version;
+
     public AwsLambdaFunctionDetails withVersion(String version) {
         this.version = version;
         return this;
@@ -89,9 +98,17 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfig")
     public LambdaVpcConfig vpcConfig;
+
     public AwsLambdaFunctionDetails withVpcConfig(LambdaVpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public AwsLambdaFunctionDetails(@JsonProperty("codeSha256") String codeSha256, @JsonProperty("executionRoleArn") String executionRoleArn, @JsonProperty("functionName") String functionName, @JsonProperty("runtime") RuntimeEnum runtime, @JsonProperty("version") String version) {
+        this.codeSha256 = codeSha256;
+        this.executionRoleArn = executionRoleArn;
+        this.functionName = functionName;
+        this.runtime = runtime;
+        this.version = version;
+  }
 }

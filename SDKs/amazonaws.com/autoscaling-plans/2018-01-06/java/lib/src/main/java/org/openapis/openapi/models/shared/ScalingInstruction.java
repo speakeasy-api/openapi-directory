@@ -15,6 +15,7 @@ public class ScalingInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomizedLoadMetricSpecification")
     public CustomizedLoadMetricSpecification customizedLoadMetricSpecification;
+
     public ScalingInstruction withCustomizedLoadMetricSpecification(CustomizedLoadMetricSpecification customizedLoadMetricSpecification) {
         this.customizedLoadMetricSpecification = customizedLoadMetricSpecification;
         return this;
@@ -23,6 +24,7 @@ public class ScalingInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableDynamicScaling")
     public Boolean disableDynamicScaling;
+
     public ScalingInstruction withDisableDynamicScaling(Boolean disableDynamicScaling) {
         this.disableDynamicScaling = disableDynamicScaling;
         return this;
@@ -30,6 +32,7 @@ public class ScalingInstruction {
     
     @JsonProperty("MaxCapacity")
     public Long maxCapacity;
+
     public ScalingInstruction withMaxCapacity(Long maxCapacity) {
         this.maxCapacity = maxCapacity;
         return this;
@@ -37,6 +40,7 @@ public class ScalingInstruction {
     
     @JsonProperty("MinCapacity")
     public Long minCapacity;
+
     public ScalingInstruction withMinCapacity(Long minCapacity) {
         this.minCapacity = minCapacity;
         return this;
@@ -45,6 +49,7 @@ public class ScalingInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredefinedLoadMetricSpecification")
     public PredefinedLoadMetricSpecification predefinedLoadMetricSpecification;
+
     public ScalingInstruction withPredefinedLoadMetricSpecification(PredefinedLoadMetricSpecification predefinedLoadMetricSpecification) {
         this.predefinedLoadMetricSpecification = predefinedLoadMetricSpecification;
         return this;
@@ -53,6 +58,7 @@ public class ScalingInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictiveScalingMaxCapacityBehavior")
     public PredictiveScalingMaxCapacityBehaviorEnum predictiveScalingMaxCapacityBehavior;
+
     public ScalingInstruction withPredictiveScalingMaxCapacityBehavior(PredictiveScalingMaxCapacityBehaviorEnum predictiveScalingMaxCapacityBehavior) {
         this.predictiveScalingMaxCapacityBehavior = predictiveScalingMaxCapacityBehavior;
         return this;
@@ -61,6 +67,7 @@ public class ScalingInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictiveScalingMaxCapacityBuffer")
     public Long predictiveScalingMaxCapacityBuffer;
+
     public ScalingInstruction withPredictiveScalingMaxCapacityBuffer(Long predictiveScalingMaxCapacityBuffer) {
         this.predictiveScalingMaxCapacityBuffer = predictiveScalingMaxCapacityBuffer;
         return this;
@@ -69,6 +76,7 @@ public class ScalingInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictiveScalingMode")
     public PredictiveScalingModeEnum predictiveScalingMode;
+
     public ScalingInstruction withPredictiveScalingMode(PredictiveScalingModeEnum predictiveScalingMode) {
         this.predictiveScalingMode = predictiveScalingMode;
         return this;
@@ -76,6 +84,7 @@ public class ScalingInstruction {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ScalingInstruction withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -83,6 +92,7 @@ public class ScalingInstruction {
     
     @JsonProperty("ScalableDimension")
     public ScalableDimensionEnum scalableDimension;
+
     public ScalingInstruction withScalableDimension(ScalableDimensionEnum scalableDimension) {
         this.scalableDimension = scalableDimension;
         return this;
@@ -91,6 +101,7 @@ public class ScalingInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalingPolicyUpdateBehavior")
     public ScalingPolicyUpdateBehaviorEnum scalingPolicyUpdateBehavior;
+
     public ScalingInstruction withScalingPolicyUpdateBehavior(ScalingPolicyUpdateBehaviorEnum scalingPolicyUpdateBehavior) {
         this.scalingPolicyUpdateBehavior = scalingPolicyUpdateBehavior;
         return this;
@@ -99,6 +110,7 @@ public class ScalingInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduledActionBufferTime")
     public Long scheduledActionBufferTime;
+
     public ScalingInstruction withScheduledActionBufferTime(Long scheduledActionBufferTime) {
         this.scheduledActionBufferTime = scheduledActionBufferTime;
         return this;
@@ -106,6 +118,7 @@ public class ScalingInstruction {
     
     @JsonProperty("ServiceNamespace")
     public ServiceNamespaceEnum serviceNamespace;
+
     public ScalingInstruction withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
@@ -113,9 +126,18 @@ public class ScalingInstruction {
     
     @JsonProperty("TargetTrackingConfigurations")
     public TargetTrackingConfiguration[] targetTrackingConfigurations;
+
     public ScalingInstruction withTargetTrackingConfigurations(TargetTrackingConfiguration[] targetTrackingConfigurations) {
         this.targetTrackingConfigurations = targetTrackingConfigurations;
         return this;
     }
     
+    public ScalingInstruction(@JsonProperty("MaxCapacity") Long maxCapacity, @JsonProperty("MinCapacity") Long minCapacity, @JsonProperty("ResourceId") String resourceId, @JsonProperty("ScalableDimension") ScalableDimensionEnum scalableDimension, @JsonProperty("ServiceNamespace") ServiceNamespaceEnum serviceNamespace, @JsonProperty("TargetTrackingConfigurations") TargetTrackingConfiguration[] targetTrackingConfigurations) {
+        this.maxCapacity = maxCapacity;
+        this.minCapacity = minCapacity;
+        this.resourceId = resourceId;
+        this.scalableDimension = scalableDimension;
+        this.serviceNamespace = serviceNamespace;
+        this.targetTrackingConfigurations = targetTrackingConfigurations;
+  }
 }

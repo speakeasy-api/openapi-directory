@@ -18,6 +18,7 @@ public class CustomApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public CustomApp withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -29,6 +30,7 @@ public class CustomApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizations")
     public Organization[] organizations;
+
     public CustomApp withOrganizations(Organization[] organizations) {
         this.organizations = organizations;
         return this;
@@ -40,6 +42,7 @@ public class CustomApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public CustomApp withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -51,9 +54,11 @@ public class CustomApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public CustomApp withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CustomApp(){}
 }

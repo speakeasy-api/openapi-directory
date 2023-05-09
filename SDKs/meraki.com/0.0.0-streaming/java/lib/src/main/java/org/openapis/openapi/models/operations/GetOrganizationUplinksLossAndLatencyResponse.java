@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrganizationUplinksLossAndLatencyResponse {
     
     public String contentType;
+
     public GetOrganizationUplinksLossAndLatencyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetOrganizationUplinksLossAndLatencyResponse {
     
     
     public Integer statusCode;
+
     public GetOrganizationUplinksLossAndLatencyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetOrganizationUplinksLossAndLatencyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrganizationUplinksLossAndLatencyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetOrganizationUplinksLossAndLatencyResponse {
      */
     
     public java.util.Map<String, Object>[] getOrganizationUplinksLossAndLatency200ApplicationJSONObjects;
+
     public GetOrganizationUplinksLossAndLatencyResponse withGetOrganizationUplinksLossAndLatency200ApplicationJSONObjects(java.util.Map<String, Object>[] getOrganizationUplinksLossAndLatency200ApplicationJSONObjects) {
         this.getOrganizationUplinksLossAndLatency200ApplicationJSONObjects = getOrganizationUplinksLossAndLatency200ApplicationJSONObjects;
         return this;
     }
     
+    public GetOrganizationUplinksLossAndLatencyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

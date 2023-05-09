@@ -18,6 +18,7 @@ public class DerivedSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("derivationMode")
     public DerivedSourceDerivationModeEnum derivationMode;
+
     public DerivedSource withDerivationMode(DerivedSourceDerivationModeEnum derivationMode) {
         this.derivationMode = derivationMode;
         return this;
@@ -29,9 +30,11 @@ public class DerivedSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public DerivedSource withSource(Source source) {
         this.source = source;
         return this;
     }
     
+    public DerivedSource(){}
 }

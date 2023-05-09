@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSuperfundRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SuperFundInput[] requestBody;
+
     public CreateSuperfundRequest withRequestBody(org.openapis.openapi.models.shared.SuperFundInput[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class CreateSuperfundRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
     public String xeroTenantId;
+
     public CreateSuperfundRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public CreateSuperfundRequest(@JsonProperty("RequestBody") org.openapis.openapi.models.shared.SuperFundInput[] requestBody, @JsonProperty("Xero-Tenant-Id") String xeroTenantId) {
+        this.requestBody = requestBody;
+        this.xeroTenantId = xeroTenantId;
+  }
 }

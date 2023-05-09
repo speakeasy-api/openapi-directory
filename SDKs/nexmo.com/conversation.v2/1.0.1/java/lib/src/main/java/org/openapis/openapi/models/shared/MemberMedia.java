@@ -18,9 +18,11 @@ public class MemberMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audio_settings")
     public MemberMediaAudioSettings audioSettings;
+
     public MemberMedia withAudioSettings(MemberMediaAudioSettings audioSettings) {
         this.audioSettings = audioSettings;
         return this;
     }
     
+    public MemberMedia(){}
 }

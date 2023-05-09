@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1HttpsLatencyRoutineData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latency")
     public String latency;
+
     public GoogleChromeManagementV1HttpsLatencyRoutineData withLatency(String latency) {
         this.latency = latency;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromeManagementV1HttpsLatencyRoutineData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("problem")
     public GoogleChromeManagementV1HttpsLatencyRoutineDataProblemEnum problem;
+
     public GoogleChromeManagementV1HttpsLatencyRoutineData withProblem(GoogleChromeManagementV1HttpsLatencyRoutineDataProblemEnum problem) {
         this.problem = problem;
         return this;
     }
     
+    public GoogleChromeManagementV1HttpsLatencyRoutineData(){}
 }

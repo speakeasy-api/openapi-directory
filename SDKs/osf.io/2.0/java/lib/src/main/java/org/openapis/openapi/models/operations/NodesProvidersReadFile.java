@@ -15,6 +15,7 @@ public class NodesProvidersReadFile {
      */
     
     public NodesProvidersReadFileAttributes attributes;
+
     public NodesProvidersReadFile withAttributes(NodesProvidersReadFileAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class NodesProvidersReadFile {
      */
     
     public String id;
+
     public NodesProvidersReadFile withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class NodesProvidersReadFile {
      */
     
     public NodesProvidersReadFileLinks links;
+
     public NodesProvidersReadFile withLinks(NodesProvidersReadFileLinks links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class NodesProvidersReadFile {
      */
     
     public NodesProvidersReadFileRelationships relationships;
+
     public NodesProvidersReadFile withRelationships(NodesProvidersReadFileRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -55,9 +59,11 @@ public class NodesProvidersReadFile {
      */
     
     public String type;
+
     public NodesProvidersReadFile withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesProvidersReadFile(){}
 }

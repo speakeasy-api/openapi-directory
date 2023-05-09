@@ -15,6 +15,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Document")
     public String document;
+
     public Segment withDocument(String document) {
         this.document = document;
         return this;
@@ -23,9 +24,11 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Segment withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Segment(){}
 }

@@ -18,6 +18,7 @@ public class AllowedKeyType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ellipticCurve")
     public EcKeyType ellipticCurve;
+
     public AllowedKeyType withEllipticCurve(EcKeyType ellipticCurve) {
         this.ellipticCurve = ellipticCurve;
         return this;
@@ -29,9 +30,11 @@ public class AllowedKeyType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rsa")
     public RsaKeyType rsa;
+
     public AllowedKeyType withRsa(RsaKeyType rsa) {
         this.rsa = rsa;
         return this;
     }
     
+    public AllowedKeyType(){}
 }

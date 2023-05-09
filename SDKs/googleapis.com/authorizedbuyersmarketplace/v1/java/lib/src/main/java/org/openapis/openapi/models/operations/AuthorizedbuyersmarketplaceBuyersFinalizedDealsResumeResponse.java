@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeResponse {
     
     public String contentType;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeResponse {
      */
     
     public org.openapis.openapi.models.shared.FinalizedDeal finalizedDeal;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeResponse withFinalizedDeal(org.openapis.openapi.models.shared.FinalizedDeal finalizedDeal) {
         this.finalizedDeal = finalizedDeal;
         return this;
@@ -26,6 +29,7 @@ public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeResponse {
     
     
     public Integer statusCode;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

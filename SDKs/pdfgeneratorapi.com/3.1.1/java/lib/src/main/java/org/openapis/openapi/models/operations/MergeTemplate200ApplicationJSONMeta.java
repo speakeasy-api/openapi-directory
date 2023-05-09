@@ -15,6 +15,7 @@ public class MergeTemplate200ApplicationJSONMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content-type")
     public String contentType;
+
     public MergeTemplate200ApplicationJSONMeta withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +27,7 @@ public class MergeTemplate200ApplicationJSONMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public MergeTemplate200ApplicationJSONMeta withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -37,6 +39,7 @@ public class MergeTemplate200ApplicationJSONMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoding")
     public String encoding;
+
     public MergeTemplate200ApplicationJSONMeta withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
@@ -48,9 +51,11 @@ public class MergeTemplate200ApplicationJSONMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MergeTemplate200ApplicationJSONMeta withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MergeTemplate200ApplicationJSONMeta(){}
 }

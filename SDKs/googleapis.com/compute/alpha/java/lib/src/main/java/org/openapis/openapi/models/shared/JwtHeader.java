@@ -18,6 +18,7 @@ public class JwtHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public JwtHeader withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class JwtHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valuePrefix")
     public String valuePrefix;
+
     public JwtHeader withValuePrefix(String valuePrefix) {
         this.valuePrefix = valuePrefix;
         return this;
     }
     
+    public JwtHeader(){}
 }

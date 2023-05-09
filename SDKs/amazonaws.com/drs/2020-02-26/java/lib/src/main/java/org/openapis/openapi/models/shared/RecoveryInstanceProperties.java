@@ -15,6 +15,7 @@ public class RecoveryInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpus")
     public Cpu[] cpus;
+
     public RecoveryInstanceProperties withCpus(Cpu[] cpus) {
         this.cpus = cpus;
         return this;
@@ -23,6 +24,7 @@ public class RecoveryInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disks")
     public RecoveryInstanceDisk[] disks;
+
     public RecoveryInstanceProperties withDisks(RecoveryInstanceDisk[] disks) {
         this.disks = disks;
         return this;
@@ -31,6 +33,7 @@ public class RecoveryInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identificationHints")
     public IdentificationHints identificationHints;
+
     public RecoveryInstanceProperties withIdentificationHints(IdentificationHints identificationHints) {
         this.identificationHints = identificationHints;
         return this;
@@ -39,6 +42,7 @@ public class RecoveryInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdatedDateTime")
     public String lastUpdatedDateTime;
+
     public RecoveryInstanceProperties withLastUpdatedDateTime(String lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -47,6 +51,7 @@ public class RecoveryInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkInterfaces")
     public NetworkInterface[] networkInterfaces;
+
     public RecoveryInstanceProperties withNetworkInterfaces(NetworkInterface[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -55,6 +60,7 @@ public class RecoveryInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     public Os os;
+
     public RecoveryInstanceProperties withOs(Os os) {
         this.os = os;
         return this;
@@ -63,9 +69,11 @@ public class RecoveryInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ramBytes")
     public Long ramBytes;
+
     public RecoveryInstanceProperties withRamBytes(Long ramBytes) {
         this.ramBytes = ramBytes;
         return this;
     }
     
+    public RecoveryInstanceProperties(){}
 }

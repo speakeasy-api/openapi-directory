@@ -57,4 +57,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/PlayerGameProjection.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartingGoaltenders.java
 lib/src/main/java/org/openapis/openapi/models/shared/Goaltender.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

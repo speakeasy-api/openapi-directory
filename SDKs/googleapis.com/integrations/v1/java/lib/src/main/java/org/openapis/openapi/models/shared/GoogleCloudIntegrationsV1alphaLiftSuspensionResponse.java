@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaLiftSuspensionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventExecutionInfoId")
     public String eventExecutionInfoId;
+
     public GoogleCloudIntegrationsV1alphaLiftSuspensionResponse withEventExecutionInfoId(String eventExecutionInfoId) {
         this.eventExecutionInfoId = eventExecutionInfoId;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaLiftSuspensionResponse(){}
 }

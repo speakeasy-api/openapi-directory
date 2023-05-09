@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeNodeReimageResponse {
@@ -12,6 +13,7 @@ public class ComputeNodeReimageResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public ComputeNodeReimageResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class ComputeNodeReimageResponse {
     
     
     public String contentType;
+
     public ComputeNodeReimageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ComputeNodeReimageResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ComputeNodeReimageResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class ComputeNodeReimageResponse {
     
     
     public Integer statusCode;
+
     public ComputeNodeReimageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class ComputeNodeReimageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeNodeReimageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeNodeReimageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

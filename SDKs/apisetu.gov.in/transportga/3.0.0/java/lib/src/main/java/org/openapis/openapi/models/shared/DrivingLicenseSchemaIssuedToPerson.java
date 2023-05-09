@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DrivingLicenseSchemaIssuedToPerson {
     
     public DrivingLicenseSchemaIssuedToPersonAddress address;
+
     public DrivingLicenseSchemaIssuedToPerson withAddress(DrivingLicenseSchemaIssuedToPersonAddress address) {
         this.address = address;
         return this;
@@ -16,6 +17,7 @@ public class DrivingLicenseSchemaIssuedToPerson {
     
     
     public DrivingLicenseSchemaIssuedToPersonPhoto photo;
+
     public DrivingLicenseSchemaIssuedToPerson withPhoto(DrivingLicenseSchemaIssuedToPersonPhoto photo) {
         this.photo = photo;
         return this;
@@ -23,6 +25,7 @@ public class DrivingLicenseSchemaIssuedToPerson {
     
     
     public String dob;
+
     public DrivingLicenseSchemaIssuedToPerson withDob(String dob) {
         this.dob = dob;
         return this;
@@ -30,6 +33,7 @@ public class DrivingLicenseSchemaIssuedToPerson {
     
     
     public String email;
+
     public DrivingLicenseSchemaIssuedToPerson withEmail(String email) {
         this.email = email;
         return this;
@@ -37,6 +41,7 @@ public class DrivingLicenseSchemaIssuedToPerson {
     
     
     public String gender;
+
     public DrivingLicenseSchemaIssuedToPerson withGender(String gender) {
         this.gender = gender;
         return this;
@@ -44,6 +49,7 @@ public class DrivingLicenseSchemaIssuedToPerson {
     
     
     public String maritalStatus;
+
     public DrivingLicenseSchemaIssuedToPerson withMaritalStatus(String maritalStatus) {
         this.maritalStatus = maritalStatus;
         return this;
@@ -51,6 +57,7 @@ public class DrivingLicenseSchemaIssuedToPerson {
     
     
     public String name;
+
     public DrivingLicenseSchemaIssuedToPerson withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +65,7 @@ public class DrivingLicenseSchemaIssuedToPerson {
     
     
     public String phone;
+
     public DrivingLicenseSchemaIssuedToPerson withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -65,6 +73,7 @@ public class DrivingLicenseSchemaIssuedToPerson {
     
     
     public String religion;
+
     public DrivingLicenseSchemaIssuedToPerson withReligion(String religion) {
         this.religion = religion;
         return this;
@@ -72,6 +81,7 @@ public class DrivingLicenseSchemaIssuedToPerson {
     
     
     public String swd;
+
     public DrivingLicenseSchemaIssuedToPerson withSwd(String swd) {
         this.swd = swd;
         return this;
@@ -79,6 +89,7 @@ public class DrivingLicenseSchemaIssuedToPerson {
     
     
     public String swdIndicator;
+
     public DrivingLicenseSchemaIssuedToPerson withSwdIndicator(String swdIndicator) {
         this.swdIndicator = swdIndicator;
         return this;
@@ -86,6 +97,7 @@ public class DrivingLicenseSchemaIssuedToPerson {
     
     
     public String title;
+
     public DrivingLicenseSchemaIssuedToPerson withTitle(String title) {
         this.title = title;
         return this;
@@ -93,9 +105,25 @@ public class DrivingLicenseSchemaIssuedToPerson {
     
     
     public String uid;
+
     public DrivingLicenseSchemaIssuedToPerson withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public DrivingLicenseSchemaIssuedToPerson(@JsonProperty("Address") DrivingLicenseSchemaIssuedToPersonAddress address, @JsonProperty("Photo") DrivingLicenseSchemaIssuedToPersonPhoto photo, @JsonProperty("dob") String dob, @JsonProperty("email") String email, @JsonProperty("gender") String gender, @JsonProperty("maritalStatus") String maritalStatus, @JsonProperty("name") String name, @JsonProperty("phone") String phone, @JsonProperty("religion") String religion, @JsonProperty("swd") String swd, @JsonProperty("swdIndicator") String swdIndicator, @JsonProperty("title") String title, @JsonProperty("uid") String uid) {
+        this.address = address;
+        this.photo = photo;
+        this.dob = dob;
+        this.email = email;
+        this.gender = gender;
+        this.maritalStatus = maritalStatus;
+        this.name = name;
+        this.phone = phone;
+        this.religion = religion;
+        this.swd = swd;
+        this.swdIndicator = swdIndicator;
+        this.title = title;
+        this.uid = uid;
+  }
 }

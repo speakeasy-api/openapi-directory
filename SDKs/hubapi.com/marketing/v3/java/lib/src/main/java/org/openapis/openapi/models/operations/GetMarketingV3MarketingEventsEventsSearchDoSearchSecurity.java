@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetMarketingV3MarketingEventsEventsSearchDoSearchSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2Legacy;
+
     public GetMarketingV3MarketingEventsEventsSearchDoSearchSecurity withOauth2Legacy(String oauth2Legacy) {
         this.oauth2Legacy = oauth2Legacy;
         return this;
@@ -16,9 +17,11 @@ public class GetMarketingV3MarketingEventsEventsSearchDoSearchSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app-legacy")
     public String privateAppsLegacy;
+
     public GetMarketingV3MarketingEventsEventsSearchDoSearchSecurity withPrivateAppsLegacy(String privateAppsLegacy) {
         this.privateAppsLegacy = privateAppsLegacy;
         return this;
     }
     
+    public GetMarketingV3MarketingEventsEventsSearchDoSearchSecurity(){}
 }

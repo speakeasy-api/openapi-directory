@@ -18,6 +18,7 @@ public class ContactGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientData")
     public GroupClientData[] clientData;
+
     public ContactGroupInput withClientData(GroupClientData[] clientData) {
         this.clientData = clientData;
         return this;
@@ -29,6 +30,7 @@ public class ContactGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ContactGroupInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class ContactGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContactGroupInput withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class ContactGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public ContactGroupInput withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public ContactGroupInput(){}
 }

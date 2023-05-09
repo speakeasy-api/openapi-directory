@@ -12,9 +12,13 @@ public class StartReplicationRequestBody {
      */
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public StartReplicationRequestBody withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
     }
     
+    public StartReplicationRequestBody(@JsonProperty("sourceServerID") String sourceServerID) {
+        this.sourceServerID = sourceServerID;
+  }
 }

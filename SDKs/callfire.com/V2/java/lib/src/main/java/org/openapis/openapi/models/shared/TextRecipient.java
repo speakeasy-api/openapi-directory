@@ -18,6 +18,7 @@ public class TextRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public TextRecipient withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class TextRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactId")
     public Long contactId;
+
     public TextRecipient withContactId(Long contactId) {
         this.contactId = contactId;
         return this;
@@ -40,6 +42,7 @@ public class TextRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromNumber")
     public String fromNumber;
+
     public TextRecipient withFromNumber(String fromNumber) {
         this.fromNumber = fromNumber;
         return this;
@@ -51,6 +54,7 @@ public class TextRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     public Media[] media;
+
     public TextRecipient withMedia(Media[] media) {
         this.media = media;
         return this;
@@ -62,6 +66,7 @@ public class TextRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TextRecipient withMessage(String message) {
         this.message = message;
         return this;
@@ -73,9 +78,11 @@ public class TextRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public TextRecipient withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public TextRecipient(){}
 }

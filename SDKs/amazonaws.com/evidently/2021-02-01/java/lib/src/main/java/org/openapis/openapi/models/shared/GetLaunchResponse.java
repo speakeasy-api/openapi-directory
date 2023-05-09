@@ -15,9 +15,11 @@ public class GetLaunchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launch")
     public Launch launch;
+
     public GetLaunchResponse withLaunch(Launch launch) {
         this.launch = launch;
         return this;
     }
     
+    public GetLaunchResponse(){}
 }

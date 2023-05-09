@@ -13,22 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class Job {
     /**
-     * Optional. APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * Optional. APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public String apiVersion;
+
     public Job withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
     }
     
     /**
-     * Optional. Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * Optional. Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Job withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ObjectMeta metadata;
+
     public Job withMetadata(ObjectMeta metadata) {
         this.metadata = metadata;
         return this;
@@ -51,6 +54,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public JobSpec spec;
+
     public Job withSpec(JobSpec spec) {
         this.spec = spec;
         return this;
@@ -62,9 +66,11 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public JobStatus status;
+
     public Job withStatus(JobStatus status) {
         this.status = status;
         return this;
     }
     
+    public Job(){}
 }

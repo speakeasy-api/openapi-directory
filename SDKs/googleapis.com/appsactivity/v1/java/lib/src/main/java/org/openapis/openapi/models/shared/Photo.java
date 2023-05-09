@@ -18,9 +18,11 @@ public class Photo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Photo withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Photo(){}
 }

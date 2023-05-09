@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetry {
     
     public Long acceptedRouteCount;
+
     public ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetry withAcceptedRouteCount(Long acceptedRouteCount) {
         this.acceptedRouteCount = acceptedRouteCount;
         return this;
@@ -19,6 +20,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetry {
     
     
     public String certificateArn;
+
     public ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetry withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -26,6 +28,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetry {
     
     
     public OffsetDateTime lastStatusChange;
+
     public ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetry withLastStatusChange(OffsetDateTime lastStatusChange) {
         this.lastStatusChange = lastStatusChange;
         return this;
@@ -33,6 +36,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetry {
     
     
     public String outsideIpAddress;
+
     public ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetry withOutsideIpAddress(String outsideIpAddress) {
         this.outsideIpAddress = outsideIpAddress;
         return this;
@@ -40,6 +44,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetry {
     
     
     public ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetryStatusEnum status;
+
     public ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetry withStatus(ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetryStatusEnum status) {
         this.status = status;
         return this;
@@ -47,9 +52,11 @@ public class ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetry {
     
     
     public String statusMessage;
+
     public ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetry withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetry(){}
 }

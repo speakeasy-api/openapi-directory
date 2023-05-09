@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class GetIpamDiscoveredAccountsResultIpamDiscoveredAccounts {
     
     public String accountId;
+
     public GetIpamDiscoveredAccountsResultIpamDiscoveredAccounts withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +20,7 @@ public class GetIpamDiscoveredAccountsResultIpamDiscoveredAccounts {
     
     
     public String discoveryRegion;
+
     public GetIpamDiscoveredAccountsResultIpamDiscoveredAccounts withDiscoveryRegion(String discoveryRegion) {
         this.discoveryRegion = discoveryRegion;
         return this;
@@ -26,6 +28,7 @@ public class GetIpamDiscoveredAccountsResultIpamDiscoveredAccounts {
     
     
     public GetIpamDiscoveredAccountsResultIpamDiscoveredAccountsFailureReason failureReason;
+
     public GetIpamDiscoveredAccountsResultIpamDiscoveredAccounts withFailureReason(GetIpamDiscoveredAccountsResultIpamDiscoveredAccountsFailureReason failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -33,6 +36,7 @@ public class GetIpamDiscoveredAccountsResultIpamDiscoveredAccounts {
     
     
     public OffsetDateTime lastAttemptedDiscoveryTime;
+
     public GetIpamDiscoveredAccountsResultIpamDiscoveredAccounts withLastAttemptedDiscoveryTime(OffsetDateTime lastAttemptedDiscoveryTime) {
         this.lastAttemptedDiscoveryTime = lastAttemptedDiscoveryTime;
         return this;
@@ -40,9 +44,11 @@ public class GetIpamDiscoveredAccountsResultIpamDiscoveredAccounts {
     
     
     public OffsetDateTime lastSuccessfulDiscoveryTime;
+
     public GetIpamDiscoveredAccountsResultIpamDiscoveredAccounts withLastSuccessfulDiscoveryTime(OffsetDateTime lastSuccessfulDiscoveryTime) {
         this.lastSuccessfulDiscoveryTime = lastSuccessfulDiscoveryTime;
         return this;
     }
     
+    public GetIpamDiscoveredAccountsResultIpamDiscoveredAccounts(){}
 }

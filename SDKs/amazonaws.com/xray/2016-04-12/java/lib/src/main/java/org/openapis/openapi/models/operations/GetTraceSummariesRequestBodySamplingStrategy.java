@@ -15,6 +15,7 @@ public class GetTraceSummariesRequestBodySamplingStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public org.openapis.openapi.models.shared.SamplingStrategyNameEnum name;
+
     public GetTraceSummariesRequestBodySamplingStrategy withName(org.openapis.openapi.models.shared.SamplingStrategyNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class GetTraceSummariesRequestBodySamplingStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Double value;
+
     public GetTraceSummariesRequestBodySamplingStrategy withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public GetTraceSummariesRequestBodySamplingStrategy(){}
 }

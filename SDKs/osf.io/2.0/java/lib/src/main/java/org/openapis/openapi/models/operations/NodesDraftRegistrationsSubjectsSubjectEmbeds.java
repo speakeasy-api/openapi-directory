@@ -15,9 +15,11 @@ public class NodesDraftRegistrationsSubjectsSubjectEmbeds {
      */
     
     public NodesDraftRegistrationsSubjectsSubjectEmbedsParent parent;
+
     public NodesDraftRegistrationsSubjectsSubjectEmbeds withParent(NodesDraftRegistrationsSubjectsSubjectEmbedsParent parent) {
         this.parent = parent;
         return this;
     }
     
+    public NodesDraftRegistrationsSubjectsSubjectEmbeds(){}
 }

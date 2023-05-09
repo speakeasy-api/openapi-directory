@@ -15,6 +15,7 @@ public class ListEndpointGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointGroups")
     public EndpointGroup[] endpointGroups;
+
     public ListEndpointGroupsResponse withEndpointGroups(EndpointGroup[] endpointGroups) {
         this.endpointGroups = endpointGroups;
         return this;
@@ -23,9 +24,11 @@ public class ListEndpointGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEndpointGroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEndpointGroupsResponse(){}
 }

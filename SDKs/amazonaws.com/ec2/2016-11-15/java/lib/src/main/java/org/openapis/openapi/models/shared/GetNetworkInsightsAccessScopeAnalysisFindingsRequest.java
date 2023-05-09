@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetNetworkInsightsAccessScopeAnalysisFindingsRequest {
     
     public Boolean dryRun;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsRequest {
     
     
     public Long maxResults;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,6 +25,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsRequest {
     
     
     public String networkInsightsAccessScopeAnalysisId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsRequest withNetworkInsightsAccessScopeAnalysisId(String networkInsightsAccessScopeAnalysisId) {
         this.networkInsightsAccessScopeAnalysisId = networkInsightsAccessScopeAnalysisId;
         return this;
@@ -30,9 +33,13 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsRequest {
     
     
     public String nextToken;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeAnalysisFindingsRequest(@JsonProperty("NetworkInsightsAccessScopeAnalysisId") String networkInsightsAccessScopeAnalysisId) {
+        this.networkInsightsAccessScopeAnalysisId = networkInsightsAccessScopeAnalysisId;
+  }
 }

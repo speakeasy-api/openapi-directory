@@ -15,6 +15,7 @@ public class DataSourceSyncJobMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentsAdded")
     public String documentsAdded;
+
     public DataSourceSyncJobMetrics withDocumentsAdded(String documentsAdded) {
         this.documentsAdded = documentsAdded;
         return this;
@@ -23,6 +24,7 @@ public class DataSourceSyncJobMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentsDeleted")
     public String documentsDeleted;
+
     public DataSourceSyncJobMetrics withDocumentsDeleted(String documentsDeleted) {
         this.documentsDeleted = documentsDeleted;
         return this;
@@ -31,6 +33,7 @@ public class DataSourceSyncJobMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentsFailed")
     public String documentsFailed;
+
     public DataSourceSyncJobMetrics withDocumentsFailed(String documentsFailed) {
         this.documentsFailed = documentsFailed;
         return this;
@@ -39,6 +42,7 @@ public class DataSourceSyncJobMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentsModified")
     public String documentsModified;
+
     public DataSourceSyncJobMetrics withDocumentsModified(String documentsModified) {
         this.documentsModified = documentsModified;
         return this;
@@ -47,9 +51,11 @@ public class DataSourceSyncJobMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentsScanned")
     public String documentsScanned;
+
     public DataSourceSyncJobMetrics withDocumentsScanned(String documentsScanned) {
         this.documentsScanned = documentsScanned;
         return this;
     }
     
+    public DataSourceSyncJobMetrics(){}
 }

@@ -18,9 +18,11 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudPubsubTopic")
     public CloudPubsubTopic cloudPubsubTopic;
+
     public Notification withCloudPubsubTopic(CloudPubsubTopic cloudPubsubTopic) {
         this.cloudPubsubTopic = cloudPubsubTopic;
         return this;
     }
     
+    public Notification(){}
 }

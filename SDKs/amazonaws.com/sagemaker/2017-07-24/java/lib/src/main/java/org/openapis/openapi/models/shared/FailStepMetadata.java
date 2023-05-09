@@ -15,9 +15,11 @@ public class FailStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public FailStepMetadata withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public FailStepMetadata(){}
 }

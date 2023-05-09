@@ -15,6 +15,7 @@ public class EncryptionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider")
     public Provider provider;
+
     public EncryptionConfig withProvider(Provider provider) {
         this.provider = provider;
         return this;
@@ -23,9 +24,11 @@ public class EncryptionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public String[] resources;
+
     public EncryptionConfig withResources(String[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public EncryptionConfig(){}
 }

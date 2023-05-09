@@ -20,6 +20,7 @@ public class EntityRecognizerFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecognizerName")
     public String recognizerName;
+
     public EntityRecognizerFilter withRecognizerName(String recognizerName) {
         this.recognizerName = recognizerName;
         return this;
@@ -28,6 +29,7 @@ public class EntityRecognizerFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ModelStatusEnum status;
+
     public EntityRecognizerFilter withStatus(ModelStatusEnum status) {
         this.status = status;
         return this;
@@ -38,6 +40,7 @@ public class EntityRecognizerFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTimeAfter")
     public OffsetDateTime submitTimeAfter;
+
     public EntityRecognizerFilter withSubmitTimeAfter(OffsetDateTime submitTimeAfter) {
         this.submitTimeAfter = submitTimeAfter;
         return this;
@@ -48,9 +51,11 @@ public class EntityRecognizerFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTimeBefore")
     public OffsetDateTime submitTimeBefore;
+
     public EntityRecognizerFilter withSubmitTimeBefore(OffsetDateTime submitTimeBefore) {
         this.submitTimeBefore = submitTimeBefore;
         return this;
     }
     
+    public EntityRecognizerFilter(){}
 }

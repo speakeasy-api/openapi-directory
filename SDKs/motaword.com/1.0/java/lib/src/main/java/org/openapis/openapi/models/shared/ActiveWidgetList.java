@@ -15,6 +15,7 @@ public class ActiveWidgetList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public ActiveWidgetList withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
@@ -23,9 +24,11 @@ public class ActiveWidgetList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("widgets")
     public ActiveWidget[] widgets;
+
     public ActiveWidgetList withWidgets(ActiveWidget[] widgets) {
         this.widgets = widgets;
         return this;
     }
     
+    public ActiveWidgetList(){}
 }

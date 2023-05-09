@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ContactUserVO contactUserVO;
+
     public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonRequest withContactUserVO(org.openapis.openapi.models.shared.ContactUserVO contactUserVO) {
         this.contactUserVO = contactUserVO;
         return this;
@@ -16,6 +18,7 @@ public class PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonRequest 
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public String projectId;
+
     public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -23,9 +26,14 @@ public class PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonRequest 
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonRequest(@JsonProperty("project_id") String projectId, @JsonProperty("workgroup_id") String workgroupId) {
+        this.projectId = projectId;
+        this.workgroupId = workgroupId;
+  }
 }

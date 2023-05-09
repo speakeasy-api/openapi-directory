@@ -18,6 +18,7 @@ public class BoundingBoxMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceMetricsEntries")
     public BoundingBoxMetricsEntryConfidenceMetricsEntry[] confidenceMetricsEntries;
+
     public BoundingBoxMetricsEntry withConfidenceMetricsEntries(BoundingBoxMetricsEntryConfidenceMetricsEntry[] confidenceMetricsEntries) {
         this.confidenceMetricsEntries = confidenceMetricsEntries;
         return this;
@@ -29,6 +30,7 @@ public class BoundingBoxMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iouThreshold")
     public Float iouThreshold;
+
     public BoundingBoxMetricsEntry withIouThreshold(Float iouThreshold) {
         this.iouThreshold = iouThreshold;
         return this;
@@ -40,9 +42,11 @@ public class BoundingBoxMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meanAveragePrecision")
     public Float meanAveragePrecision;
+
     public BoundingBoxMetricsEntry withMeanAveragePrecision(Float meanAveragePrecision) {
         this.meanAveragePrecision = meanAveragePrecision;
         return this;
     }
     
+    public BoundingBoxMetricsEntry(){}
 }

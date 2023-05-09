@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminGetProvisioningInformationForEnterpriseGroupRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminGetProvisioningInformationForEnterpriseGroupRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludedAttributes")
     public String excludedAttributes;
+
     public EnterpriseAdminGetProvisioningInformationForEnterpriseGroupRequest withExcludedAttributes(String excludedAttributes) {
         this.excludedAttributes = excludedAttributes;
         return this;
@@ -22,9 +24,13 @@ public class EnterpriseAdminGetProvisioningInformationForEnterpriseGroupRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scim_group_id")
     public String scimGroupId;
+
     public EnterpriseAdminGetProvisioningInformationForEnterpriseGroupRequest withScimGroupId(String scimGroupId) {
         this.scimGroupId = scimGroupId;
         return this;
     }
     
+    public EnterpriseAdminGetProvisioningInformationForEnterpriseGroupRequest(@JsonProperty("scim_group_id") String scimGroupId) {
+        this.scimGroupId = scimGroupId;
+  }
 }

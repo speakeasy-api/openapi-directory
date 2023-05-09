@@ -15,6 +15,7 @@ public class MergeOperations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public ChangeTypeEnumEnum destination;
+
     public MergeOperations withDestination(ChangeTypeEnumEnum destination) {
         this.destination = destination;
         return this;
@@ -23,9 +24,11 @@ public class MergeOperations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public ChangeTypeEnumEnum source;
+
     public MergeOperations withSource(ChangeTypeEnumEnum source) {
         this.source = source;
         return this;
     }
     
+    public MergeOperations(){}
 }

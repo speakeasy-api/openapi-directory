@@ -18,9 +18,11 @@ public class BatchEnableServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceIds")
     public String[] serviceIds;
+
     public BatchEnableServicesRequest withServiceIds(String[] serviceIds) {
         this.serviceIds = serviceIds;
         return this;
     }
     
+    public BatchEnableServicesRequest(){}
 }

@@ -17,6 +17,7 @@ public class UpdateAccountResponse {
      */
     @JsonProperty("accountCode")
     public String accountCode;
+
     public UpdateAccountResponse withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -28,6 +29,7 @@ public class UpdateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountUUID")
     public String bankAccountUUID;
+
     public UpdateAccountResponse withBankAccountUUID(String bankAccountUUID) {
         this.bankAccountUUID = bankAccountUUID;
         return this;
@@ -39,6 +41,7 @@ public class UpdateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateAccountResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +53,7 @@ public class UpdateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public UpdateAccountResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -61,6 +65,7 @@ public class UpdateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public UpdateAccountResponse withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -72,6 +77,7 @@ public class UpdateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutMethodCode")
     public String payoutMethodCode;
+
     public UpdateAccountResponse withPayoutMethodCode(String payoutMethodCode) {
         this.payoutMethodCode = payoutMethodCode;
         return this;
@@ -80,6 +86,7 @@ public class UpdateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutSchedule")
     public PayoutScheduleResponse payoutSchedule;
+
     public UpdateAccountResponse withPayoutSchedule(PayoutScheduleResponse payoutSchedule) {
         this.payoutSchedule = payoutSchedule;
         return this;
@@ -91,6 +98,7 @@ public class UpdateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutSpeed")
     public UpdateAccountResponsePayoutSpeedEnum payoutSpeed;
+
     public UpdateAccountResponse withPayoutSpeed(UpdateAccountResponsePayoutSpeedEnum payoutSpeed) {
         this.payoutSpeed = payoutSpeed;
         return this;
@@ -102,6 +110,7 @@ public class UpdateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public UpdateAccountResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -113,9 +122,13 @@ public class UpdateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public UpdateAccountResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public UpdateAccountResponse(@JsonProperty("accountCode") String accountCode) {
+        this.accountCode = accountCode;
+  }
 }

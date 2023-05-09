@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActivitiesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetActivitiesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -16,6 +18,7 @@ public class GetActivitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetActivitiesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -26,9 +29,13 @@ public class GetActivitiesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public GetActivitiesRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GetActivitiesRequest(@JsonProperty("projectId") Long projectId) {
+        this.projectId = projectId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposUploadReleaseAssetResponse {
     
     public String contentType;
+
     public ReposUploadReleaseAssetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposUploadReleaseAssetResponse {
     
     
     public Integer statusCode;
+
     public ReposUploadReleaseAssetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposUploadReleaseAssetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposUploadReleaseAssetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ReposUploadReleaseAssetResponse {
      */
     
     public org.openapis.openapi.models.shared.ReleaseAsset releaseAsset;
+
     public ReposUploadReleaseAssetResponse withReleaseAsset(org.openapis.openapi.models.shared.ReleaseAsset releaseAsset) {
         this.releaseAsset = releaseAsset;
         return this;
     }
     
+    public ReposUploadReleaseAssetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

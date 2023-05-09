@@ -12,6 +12,7 @@ public class GetSimSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String[] id;
+
     public GetSimSearchRequest withId(String[] id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class GetSimSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_feature_set")
     public Boolean isFeatureSet;
+
     public GetSimSearchRequest withIsFeatureSet(Boolean isFeatureSet) {
         this.isFeatureSet = isFeatureSet;
         return this;
@@ -32,6 +34,7 @@ public class GetSimSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetSimSearchRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -42,6 +45,7 @@ public class GetSimSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metric")
     public GetSimSearchMetricEnum metric;
+
     public GetSimSearchRequest withMetric(GetSimSearchMetricEnum metric) {
         this.metric = metric;
         return this;
@@ -52,9 +56,11 @@ public class GetSimSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxon")
     public String taxon;
+
     public GetSimSearchRequest withTaxon(String taxon) {
         this.taxon = taxon;
         return this;
     }
     
+    public GetSimSearchRequest(){}
 }

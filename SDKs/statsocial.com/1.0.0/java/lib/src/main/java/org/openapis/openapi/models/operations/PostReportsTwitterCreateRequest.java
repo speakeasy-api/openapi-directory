@@ -12,6 +12,7 @@ public class PostReportsTwitterCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public PostReportsTwitterCreateRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -22,6 +23,7 @@ public class PostReportsTwitterCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=twitter_handle")
     public String twitterHandle;
+
     public PostReportsTwitterCreateRequest withTwitterHandle(String twitterHandle) {
         this.twitterHandle = twitterHandle;
         return this;
@@ -32,9 +34,11 @@ public class PostReportsTwitterCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=twitter_id")
     public Long twitterId;
+
     public PostReportsTwitterCreateRequest withTwitterId(Long twitterId) {
         this.twitterId = twitterId;
         return this;
     }
     
+    public PostReportsTwitterCreateRequest(){}
 }

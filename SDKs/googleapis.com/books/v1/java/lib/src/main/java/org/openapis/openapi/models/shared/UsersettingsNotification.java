@@ -12,6 +12,7 @@ public class UsersettingsNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchMyInterests")
     public UsersettingsNotificationMatchMyInterests matchMyInterests;
+
     public UsersettingsNotification withMatchMyInterests(UsersettingsNotificationMatchMyInterests matchMyInterests) {
         this.matchMyInterests = matchMyInterests;
         return this;
@@ -20,6 +21,7 @@ public class UsersettingsNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moreFromAuthors")
     public UsersettingsNotificationMoreFromAuthors moreFromAuthors;
+
     public UsersettingsNotification withMoreFromAuthors(UsersettingsNotificationMoreFromAuthors moreFromAuthors) {
         this.moreFromAuthors = moreFromAuthors;
         return this;
@@ -28,6 +30,7 @@ public class UsersettingsNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moreFromSeries")
     public UsersettingsNotificationMoreFromSeries moreFromSeries;
+
     public UsersettingsNotification withMoreFromSeries(UsersettingsNotificationMoreFromSeries moreFromSeries) {
         this.moreFromSeries = moreFromSeries;
         return this;
@@ -36,6 +39,7 @@ public class UsersettingsNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceDrop")
     public UsersettingsNotificationPriceDrop priceDrop;
+
     public UsersettingsNotification withPriceDrop(UsersettingsNotificationPriceDrop priceDrop) {
         this.priceDrop = priceDrop;
         return this;
@@ -44,9 +48,11 @@ public class UsersettingsNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rewardExpirations")
     public UsersettingsNotificationRewardExpirations rewardExpirations;
+
     public UsersettingsNotification withRewardExpirations(UsersettingsNotificationRewardExpirations rewardExpirations) {
         this.rewardExpirations = rewardExpirations;
         return this;
     }
     
+    public UsersettingsNotification(){}
 }

@@ -15,6 +15,7 @@ public class InvocationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Payload")
     public String payload;
+
     public InvocationResponse withPayload(String payload) {
         this.payload = payload;
         return this;
@@ -23,9 +24,11 @@ public class InvocationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusCode")
     public Long statusCode;
+
     public InvocationResponse withStatusCode(Long statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public InvocationResponse(){}
 }

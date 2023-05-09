@@ -18,6 +18,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Client withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public Client withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -40,6 +42,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public Client withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -51,6 +54,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Client withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -62,6 +66,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Client withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public Client withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -84,6 +90,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public Parameter[] parameter;
+
     public Client withParameter(Parameter[] parameter) {
         this.parameter = parameter;
         return this;
@@ -95,6 +102,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentFolderId")
     public String parentFolderId;
+
     public Client withParentFolderId(String parentFolderId) {
         this.parentFolderId = parentFolderId;
         return this;
@@ -106,6 +114,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public Client withPath(String path) {
         this.path = path;
         return this;
@@ -117,6 +126,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public Client withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -128,6 +138,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagManagerUrl")
     public String tagManagerUrl;
+
     public Client withTagManagerUrl(String tagManagerUrl) {
         this.tagManagerUrl = tagManagerUrl;
         return this;
@@ -139,6 +150,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Client withType(String type) {
         this.type = type;
         return this;
@@ -150,9 +162,11 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public Client withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public Client(){}
 }

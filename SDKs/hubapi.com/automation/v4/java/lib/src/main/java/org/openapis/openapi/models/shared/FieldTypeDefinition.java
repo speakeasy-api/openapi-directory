@@ -18,6 +18,7 @@ public class FieldTypeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldType")
     public FieldTypeDefinitionFieldTypeEnum fieldType;
+
     public FieldTypeDefinition withFieldType(FieldTypeDefinitionFieldTypeEnum fieldType) {
         this.fieldType = fieldType;
         return this;
@@ -28,6 +29,7 @@ public class FieldTypeDefinition {
      */
     @JsonProperty("name")
     public String name;
+
     public FieldTypeDefinition withName(String name) {
         this.name = name;
         return this;
@@ -38,6 +40,7 @@ public class FieldTypeDefinition {
      */
     @JsonProperty("options")
     public Option[] options;
+
     public FieldTypeDefinition withOptions(Option[] options) {
         this.options = options;
         return this;
@@ -49,6 +52,7 @@ public class FieldTypeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optionsUrl")
     public String optionsUrl;
+
     public FieldTypeDefinition withOptionsUrl(String optionsUrl) {
         this.optionsUrl = optionsUrl;
         return this;
@@ -60,6 +64,7 @@ public class FieldTypeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referencedObjectType")
     public FieldTypeDefinitionReferencedObjectTypeEnum referencedObjectType;
+
     public FieldTypeDefinition withReferencedObjectType(FieldTypeDefinitionReferencedObjectTypeEnum referencedObjectType) {
         this.referencedObjectType = referencedObjectType;
         return this;
@@ -70,9 +75,15 @@ public class FieldTypeDefinition {
      */
     @JsonProperty("type")
     public FieldTypeDefinitionTypeEnum type;
+
     public FieldTypeDefinition withType(FieldTypeDefinitionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public FieldTypeDefinition(@JsonProperty("name") String name, @JsonProperty("options") Option[] options, @JsonProperty("type") FieldTypeDefinitionTypeEnum type) {
+        this.name = name;
+        this.options = options;
+        this.type = type;
+  }
 }

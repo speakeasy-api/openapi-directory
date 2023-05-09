@@ -20,6 +20,7 @@ public class UpdateSecurityProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalMetricsToRetain")
     public String[] additionalMetricsToRetain;
+
     public UpdateSecurityProfileResponse withAdditionalMetricsToRetain(String[] additionalMetricsToRetain) {
         this.additionalMetricsToRetain = additionalMetricsToRetain;
         return this;
@@ -28,6 +29,7 @@ public class UpdateSecurityProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalMetricsToRetainV2")
     public MetricToRetain[] additionalMetricsToRetainV2;
+
     public UpdateSecurityProfileResponse withAdditionalMetricsToRetainV2(MetricToRetain[] additionalMetricsToRetainV2) {
         this.additionalMetricsToRetainV2 = additionalMetricsToRetainV2;
         return this;
@@ -36,6 +38,7 @@ public class UpdateSecurityProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alertTargets")
     public java.util.Map<String, AlertTarget> alertTargets;
+
     public UpdateSecurityProfileResponse withAlertTargets(java.util.Map<String, AlertTarget> alertTargets) {
         this.alertTargets = alertTargets;
         return this;
@@ -44,6 +47,7 @@ public class UpdateSecurityProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("behaviors")
     public Behavior[] behaviors;
+
     public UpdateSecurityProfileResponse withBehaviors(Behavior[] behaviors) {
         this.behaviors = behaviors;
         return this;
@@ -54,6 +58,7 @@ public class UpdateSecurityProfileResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public UpdateSecurityProfileResponse withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -64,6 +69,7 @@ public class UpdateSecurityProfileResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public UpdateSecurityProfileResponse withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -72,6 +78,7 @@ public class UpdateSecurityProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityProfileArn")
     public String securityProfileArn;
+
     public UpdateSecurityProfileResponse withSecurityProfileArn(String securityProfileArn) {
         this.securityProfileArn = securityProfileArn;
         return this;
@@ -80,6 +87,7 @@ public class UpdateSecurityProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityProfileDescription")
     public String securityProfileDescription;
+
     public UpdateSecurityProfileResponse withSecurityProfileDescription(String securityProfileDescription) {
         this.securityProfileDescription = securityProfileDescription;
         return this;
@@ -88,6 +96,7 @@ public class UpdateSecurityProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityProfileName")
     public String securityProfileName;
+
     public UpdateSecurityProfileResponse withSecurityProfileName(String securityProfileName) {
         this.securityProfileName = securityProfileName;
         return this;
@@ -96,9 +105,11 @@ public class UpdateSecurityProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public UpdateSecurityProfileResponse withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public UpdateSecurityProfileResponse(){}
 }

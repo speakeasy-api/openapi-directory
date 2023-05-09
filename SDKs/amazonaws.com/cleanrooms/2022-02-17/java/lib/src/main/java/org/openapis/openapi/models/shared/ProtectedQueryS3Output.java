@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectedQueryS3Output {
     @JsonProperty("location")
     public String location;
+
     public ProtectedQueryS3Output withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public ProtectedQueryS3Output(@JsonProperty("location") String location) {
+        this.location = location;
+  }
 }

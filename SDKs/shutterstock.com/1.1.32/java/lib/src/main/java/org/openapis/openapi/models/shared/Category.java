@@ -18,6 +18,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Category withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Category withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Category(){}
 }

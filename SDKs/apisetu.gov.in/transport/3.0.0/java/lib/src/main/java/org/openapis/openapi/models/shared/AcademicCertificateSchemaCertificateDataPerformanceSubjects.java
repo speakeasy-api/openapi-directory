@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AcademicCertificateSchemaCertificateDataPerformanceSubjects {
     
     public String code;
+
     public AcademicCertificateSchemaCertificateDataPerformanceSubjects withCode(String code) {
         this.code = code;
         return this;
@@ -16,6 +17,7 @@ public class AcademicCertificateSchemaCertificateDataPerformanceSubjects {
     
     
     public String gp;
+
     public AcademicCertificateSchemaCertificateDataPerformanceSubjects withGp(String gp) {
         this.gp = gp;
         return this;
@@ -23,6 +25,7 @@ public class AcademicCertificateSchemaCertificateDataPerformanceSubjects {
     
     
     public String gpMax;
+
     public AcademicCertificateSchemaCertificateDataPerformanceSubjects withGpMax(String gpMax) {
         this.gpMax = gpMax;
         return this;
@@ -30,6 +33,7 @@ public class AcademicCertificateSchemaCertificateDataPerformanceSubjects {
     
     
     public String grade;
+
     public AcademicCertificateSchemaCertificateDataPerformanceSubjects withGrade(String grade) {
         this.grade = grade;
         return this;
@@ -37,6 +41,7 @@ public class AcademicCertificateSchemaCertificateDataPerformanceSubjects {
     
     
     public Long marksMax;
+
     public AcademicCertificateSchemaCertificateDataPerformanceSubjects withMarksMax(Long marksMax) {
         this.marksMax = marksMax;
         return this;
@@ -44,6 +49,7 @@ public class AcademicCertificateSchemaCertificateDataPerformanceSubjects {
     
     
     public Long marksMaxPractical;
+
     public AcademicCertificateSchemaCertificateDataPerformanceSubjects withMarksMaxPractical(Long marksMaxPractical) {
         this.marksMaxPractical = marksMaxPractical;
         return this;
@@ -51,6 +57,7 @@ public class AcademicCertificateSchemaCertificateDataPerformanceSubjects {
     
     
     public Long marksMaxTheory;
+
     public AcademicCertificateSchemaCertificateDataPerformanceSubjects withMarksMaxTheory(Long marksMaxTheory) {
         this.marksMaxTheory = marksMaxTheory;
         return this;
@@ -58,6 +65,7 @@ public class AcademicCertificateSchemaCertificateDataPerformanceSubjects {
     
     
     public Long marksPractical;
+
     public AcademicCertificateSchemaCertificateDataPerformanceSubjects withMarksPractical(Long marksPractical) {
         this.marksPractical = marksPractical;
         return this;
@@ -65,6 +73,7 @@ public class AcademicCertificateSchemaCertificateDataPerformanceSubjects {
     
     
     public Long marksTheory;
+
     public AcademicCertificateSchemaCertificateDataPerformanceSubjects withMarksTheory(Long marksTheory) {
         this.marksTheory = marksTheory;
         return this;
@@ -72,6 +81,7 @@ public class AcademicCertificateSchemaCertificateDataPerformanceSubjects {
     
     
     public Long marksTotal;
+
     public AcademicCertificateSchemaCertificateDataPerformanceSubjects withMarksTotal(Long marksTotal) {
         this.marksTotal = marksTotal;
         return this;
@@ -79,9 +89,23 @@ public class AcademicCertificateSchemaCertificateDataPerformanceSubjects {
     
     
     public String name;
+
     public AcademicCertificateSchemaCertificateDataPerformanceSubjects withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AcademicCertificateSchemaCertificateDataPerformanceSubjects(@JsonProperty("code") String code, @JsonProperty("gp") String gp, @JsonProperty("gpMax") String gpMax, @JsonProperty("grade") String grade, @JsonProperty("marksMax") Long marksMax, @JsonProperty("marksMaxPractical") Long marksMaxPractical, @JsonProperty("marksMaxTheory") Long marksMaxTheory, @JsonProperty("marksPractical") Long marksPractical, @JsonProperty("marksTheory") Long marksTheory, @JsonProperty("marksTotal") Long marksTotal, @JsonProperty("name") String name) {
+        this.code = code;
+        this.gp = gp;
+        this.gpMax = gpMax;
+        this.grade = grade;
+        this.marksMax = marksMax;
+        this.marksMaxPractical = marksMaxPractical;
+        this.marksMaxTheory = marksMaxTheory;
+        this.marksPractical = marksPractical;
+        this.marksTheory = marksTheory;
+        this.marksTotal = marksTotal;
+        this.name = name;
+  }
 }

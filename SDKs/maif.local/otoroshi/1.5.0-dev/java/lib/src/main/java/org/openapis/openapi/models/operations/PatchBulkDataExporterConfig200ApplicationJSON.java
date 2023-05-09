@@ -18,6 +18,7 @@ public class PatchBulkDataExporterConfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Boolean id;
+
     public PatchBulkDataExporterConfig200ApplicationJSON withId(Boolean id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class PatchBulkDataExporterConfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PatchBulkDataExporterConfig200ApplicationJSONStatusEnum status;
+
     public PatchBulkDataExporterConfig200ApplicationJSON withStatus(PatchBulkDataExporterConfig200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
@@ -40,9 +42,11 @@ public class PatchBulkDataExporterConfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated")
     public Boolean updated;
+
     public PatchBulkDataExporterConfig200ApplicationJSON withUpdated(Boolean updated) {
         this.updated = updated;
         return this;
     }
     
+    public PatchBulkDataExporterConfig200ApplicationJSON(){}
 }

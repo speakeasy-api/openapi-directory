@@ -18,9 +18,11 @@ public class BatchRejectPublisherConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public String[] names;
+
     public BatchRejectPublisherConnectionsRequest withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public BatchRejectPublisherConnectionsRequest(){}
 }

@@ -18,9 +18,11 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Profile withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public Profile(){}
 }

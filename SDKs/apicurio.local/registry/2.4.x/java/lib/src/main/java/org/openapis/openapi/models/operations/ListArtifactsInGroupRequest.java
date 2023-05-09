@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListArtifactsInGroupRequest {
@@ -12,6 +13,7 @@ public class ListArtifactsInGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public ListArtifactsInGroupRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -22,6 +24,7 @@ public class ListArtifactsInGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListArtifactsInGroupRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class ListArtifactsInGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public ListArtifactsInGroupRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -42,6 +46,7 @@ public class ListArtifactsInGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.SortOrderEnum order;
+
     public ListArtifactsInGroupRequest withOrder(org.openapis.openapi.models.shared.SortOrderEnum order) {
         this.order = order;
         return this;
@@ -56,9 +61,13 @@ public class ListArtifactsInGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderby")
     public org.openapis.openapi.models.shared.SortByEnum orderby;
+
     public ListArtifactsInGroupRequest withOrderby(org.openapis.openapi.models.shared.SortByEnum orderby) {
         this.orderby = orderby;
         return this;
     }
     
+    public ListArtifactsInGroupRequest(@JsonProperty("groupId") String groupId) {
+        this.groupId = groupId;
+  }
 }

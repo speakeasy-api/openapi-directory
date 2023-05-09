@@ -15,6 +15,7 @@ public class ContainerInstanceHealthStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public InstanceHealthCheckResult[] details;
+
     public ContainerInstanceHealthStatus withDetails(InstanceHealthCheckResult[] details) {
         this.details = details;
         return this;
@@ -23,9 +24,11 @@ public class ContainerInstanceHealthStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overallStatus")
     public InstanceHealthCheckStateEnum overallStatus;
+
     public ContainerInstanceHealthStatus withOverallStatus(InstanceHealthCheckStateEnum overallStatus) {
         this.overallStatus = overallStatus;
         return this;
     }
     
+    public ContainerInstanceHealthStatus(){}
 }

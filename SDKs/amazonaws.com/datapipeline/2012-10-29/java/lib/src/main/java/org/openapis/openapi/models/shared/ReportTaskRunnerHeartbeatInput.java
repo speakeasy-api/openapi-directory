@@ -15,6 +15,7 @@ public class ReportTaskRunnerHeartbeatInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public ReportTaskRunnerHeartbeatInput withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -22,6 +23,7 @@ public class ReportTaskRunnerHeartbeatInput {
     
     @JsonProperty("taskrunnerId")
     public String taskrunnerId;
+
     public ReportTaskRunnerHeartbeatInput withTaskrunnerId(String taskrunnerId) {
         this.taskrunnerId = taskrunnerId;
         return this;
@@ -30,9 +32,13 @@ public class ReportTaskRunnerHeartbeatInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerGroup")
     public String workerGroup;
+
     public ReportTaskRunnerHeartbeatInput withWorkerGroup(String workerGroup) {
         this.workerGroup = workerGroup;
         return this;
     }
     
+    public ReportTaskRunnerHeartbeatInput(@JsonProperty("taskrunnerId") String taskrunnerId) {
+        this.taskrunnerId = taskrunnerId;
+  }
 }

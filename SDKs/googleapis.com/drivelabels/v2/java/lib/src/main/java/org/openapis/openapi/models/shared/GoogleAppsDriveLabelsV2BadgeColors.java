@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2BadgeColors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundColor")
     public GoogleTypeColor backgroundColor;
+
     public GoogleAppsDriveLabelsV2BadgeColors withBackgroundColor(GoogleTypeColor backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2BadgeColors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("foregroundColor")
     public GoogleTypeColor foregroundColor;
+
     public GoogleAppsDriveLabelsV2BadgeColors withForegroundColor(GoogleTypeColor foregroundColor) {
         this.foregroundColor = foregroundColor;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAppsDriveLabelsV2BadgeColors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("soloColor")
     public GoogleTypeColor soloColor;
+
     public GoogleAppsDriveLabelsV2BadgeColors withSoloColor(GoogleTypeColor soloColor) {
         this.soloColor = soloColor;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2BadgeColors(){}
 }

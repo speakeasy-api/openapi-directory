@@ -15,6 +15,7 @@ public class NonTalkTimeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AbsoluteTimeRange")
     public AbsoluteTimeRange absoluteTimeRange;
+
     public NonTalkTimeFilter withAbsoluteTimeRange(AbsoluteTimeRange absoluteTimeRange) {
         this.absoluteTimeRange = absoluteTimeRange;
         return this;
@@ -23,6 +24,7 @@ public class NonTalkTimeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Negate")
     public Boolean negate;
+
     public NonTalkTimeFilter withNegate(Boolean negate) {
         this.negate = negate;
         return this;
@@ -31,6 +33,7 @@ public class NonTalkTimeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelativeTimeRange")
     public RelativeTimeRange relativeTimeRange;
+
     public NonTalkTimeFilter withRelativeTimeRange(RelativeTimeRange relativeTimeRange) {
         this.relativeTimeRange = relativeTimeRange;
         return this;
@@ -39,9 +42,11 @@ public class NonTalkTimeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Threshold")
     public Long threshold;
+
     public NonTalkTimeFilter withThreshold(Long threshold) {
         this.threshold = threshold;
         return this;
     }
     
+    public NonTalkTimeFilter(){}
 }

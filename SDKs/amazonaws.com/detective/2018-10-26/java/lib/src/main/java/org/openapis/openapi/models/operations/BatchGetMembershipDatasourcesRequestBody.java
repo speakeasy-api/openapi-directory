@@ -12,9 +12,13 @@ public class BatchGetMembershipDatasourcesRequestBody {
      */
     @JsonProperty("GraphArns")
     public String[] graphArns;
+
     public BatchGetMembershipDatasourcesRequestBody withGraphArns(String[] graphArns) {
         this.graphArns = graphArns;
         return this;
     }
     
+    public BatchGetMembershipDatasourcesRequestBody(@JsonProperty("GraphArns") String[] graphArns) {
+        this.graphArns = graphArns;
+  }
 }

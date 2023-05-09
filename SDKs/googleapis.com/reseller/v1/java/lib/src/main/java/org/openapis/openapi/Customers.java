@@ -59,11 +59,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResellerCustomersGetResponse res = new org.openapis.openapi.models.operations.ResellerCustomersGetResponse() {{
+        org.openapis.openapi.models.operations.ResellerCustomersGetResponse res = new org.openapis.openapi.models.operations.ResellerCustomersGetResponse(contentType, httpRes.statusCode()) {{
             customer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResellerCustomersInsertResponse res = new org.openapis.openapi.models.operations.ResellerCustomersInsertResponse() {{
+        org.openapis.openapi.models.operations.ResellerCustomersInsertResponse res = new org.openapis.openapi.models.operations.ResellerCustomersInsertResponse(contentType, httpRes.statusCode()) {{
             customer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResellerCustomersPatchResponse res = new org.openapis.openapi.models.operations.ResellerCustomersPatchResponse() {{
+        org.openapis.openapi.models.operations.ResellerCustomersPatchResponse res = new org.openapis.openapi.models.operations.ResellerCustomersPatchResponse(contentType, httpRes.statusCode()) {{
             customer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +197,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResellerCustomersUpdateResponse res = new org.openapis.openapi.models.operations.ResellerCustomersUpdateResponse() {{
+        org.openapis.openapi.models.operations.ResellerCustomersUpdateResponse res = new org.openapis.openapi.models.operations.ResellerCustomersUpdateResponse(contentType, httpRes.statusCode()) {{
             customer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

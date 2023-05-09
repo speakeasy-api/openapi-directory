@@ -18,6 +18,7 @@ public class GoogleAppsCloudidentityDevicesV1AndroidAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabledUnknownSources")
     public Boolean enabledUnknownSources;
+
     public GoogleAppsCloudidentityDevicesV1AndroidAttributes withEnabledUnknownSources(Boolean enabledUnknownSources) {
         this.enabledUnknownSources = enabledUnknownSources;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCloudidentityDevicesV1AndroidAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerProfileAccount")
     public Boolean ownerProfileAccount;
+
     public GoogleAppsCloudidentityDevicesV1AndroidAttributes withOwnerProfileAccount(Boolean ownerProfileAccount) {
         this.ownerProfileAccount = ownerProfileAccount;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsCloudidentityDevicesV1AndroidAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownershipPrivilege")
     public GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum ownershipPrivilege;
+
     public GoogleAppsCloudidentityDevicesV1AndroidAttributes withOwnershipPrivilege(GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum ownershipPrivilege) {
         this.ownershipPrivilege = ownershipPrivilege;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAppsCloudidentityDevicesV1AndroidAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportsWorkProfile")
     public Boolean supportsWorkProfile;
+
     public GoogleAppsCloudidentityDevicesV1AndroidAttributes withSupportsWorkProfile(Boolean supportsWorkProfile) {
         this.supportsWorkProfile = supportsWorkProfile;
         return this;
     }
     
+    public GoogleAppsCloudidentityDevicesV1AndroidAttributes(){}
 }

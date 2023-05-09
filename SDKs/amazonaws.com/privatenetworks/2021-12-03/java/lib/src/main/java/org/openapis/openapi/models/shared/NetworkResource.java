@@ -20,6 +20,7 @@ public class NetworkResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public NameValuePair[] attributes;
+
     public NetworkResource withAttributes(NameValuePair[] attributes) {
         this.attributes = attributes;
         return this;
@@ -30,6 +31,7 @@ public class NetworkResource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public NetworkResource withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class NetworkResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NetworkResource withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class NetworkResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("health")
     public HealthStatusEnum health;
+
     public NetworkResource withHealth(HealthStatusEnum health) {
         this.health = health;
         return this;
@@ -54,6 +58,7 @@ public class NetworkResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public NetworkResource withModel(String model) {
         this.model = model;
         return this;
@@ -62,6 +67,7 @@ public class NetworkResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkArn")
     public String networkArn;
+
     public NetworkResource withNetworkArn(String networkArn) {
         this.networkArn = networkArn;
         return this;
@@ -70,6 +76,7 @@ public class NetworkResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkResourceArn")
     public String networkResourceArn;
+
     public NetworkResource withNetworkResourceArn(String networkResourceArn) {
         this.networkResourceArn = networkResourceArn;
         return this;
@@ -78,6 +85,7 @@ public class NetworkResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkSiteArn")
     public String networkSiteArn;
+
     public NetworkResource withNetworkSiteArn(String networkSiteArn) {
         this.networkSiteArn = networkSiteArn;
         return this;
@@ -86,6 +94,7 @@ public class NetworkResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderArn")
     public String orderArn;
+
     public NetworkResource withOrderArn(String orderArn) {
         this.orderArn = orderArn;
         return this;
@@ -94,6 +103,7 @@ public class NetworkResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Position position;
+
     public NetworkResource withPosition(Position position) {
         this.position = position;
         return this;
@@ -102,6 +112,7 @@ public class NetworkResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnInformation")
     public ReturnInformation returnInformation;
+
     public NetworkResource withReturnInformation(ReturnInformation returnInformation) {
         this.returnInformation = returnInformation;
         return this;
@@ -110,6 +121,7 @@ public class NetworkResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumber")
     public String serialNumber;
+
     public NetworkResource withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -118,6 +130,7 @@ public class NetworkResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public NetworkResourceStatusEnum status;
+
     public NetworkResource withStatus(NetworkResourceStatusEnum status) {
         this.status = status;
         return this;
@@ -126,6 +139,7 @@ public class NetworkResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public NetworkResource withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -134,6 +148,7 @@ public class NetworkResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public NetworkResourceTypeEnum type;
+
     public NetworkResource withType(NetworkResourceTypeEnum type) {
         this.type = type;
         return this;
@@ -142,9 +157,11 @@ public class NetworkResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public String vendor;
+
     public NetworkResource withVendor(String vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public NetworkResource(){}
 }

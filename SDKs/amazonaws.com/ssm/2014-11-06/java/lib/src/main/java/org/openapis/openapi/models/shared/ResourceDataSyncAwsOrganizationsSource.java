@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResourceDataSyncAwsOrganizationsSource {
     @JsonProperty("OrganizationSourceType")
     public String organizationSourceType;
+
     public ResourceDataSyncAwsOrganizationsSource withOrganizationSourceType(String organizationSourceType) {
         this.organizationSourceType = organizationSourceType;
         return this;
@@ -22,9 +23,13 @@ public class ResourceDataSyncAwsOrganizationsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationalUnits")
     public ResourceDataSyncOrganizationalUnit[] organizationalUnits;
+
     public ResourceDataSyncAwsOrganizationsSource withOrganizationalUnits(ResourceDataSyncOrganizationalUnit[] organizationalUnits) {
         this.organizationalUnits = organizationalUnits;
         return this;
     }
     
+    public ResourceDataSyncAwsOrganizationsSource(@JsonProperty("OrganizationSourceType") String organizationSourceType) {
+        this.organizationSourceType = organizationSourceType;
+  }
 }

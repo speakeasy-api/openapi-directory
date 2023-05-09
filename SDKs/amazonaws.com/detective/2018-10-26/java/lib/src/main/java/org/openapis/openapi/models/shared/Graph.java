@@ -20,6 +20,7 @@ public class Graph {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Graph withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,9 +31,11 @@ public class Graph {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public Graph withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
     }
     
+    public Graph(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribedWorkflow {
     @JsonProperty("Arn")
     public String arn;
+
     public DescribedWorkflow withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class DescribedWorkflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribedWorkflow withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +32,7 @@ public class DescribedWorkflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnExceptionSteps")
     public WorkflowStep[] onExceptionSteps;
+
     public DescribedWorkflow withOnExceptionSteps(WorkflowStep[] onExceptionSteps) {
         this.onExceptionSteps = onExceptionSteps;
         return this;
@@ -38,6 +41,7 @@ public class DescribedWorkflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Steps")
     public WorkflowStep[] steps;
+
     public DescribedWorkflow withSteps(WorkflowStep[] steps) {
         this.steps = steps;
         return this;
@@ -46,6 +50,7 @@ public class DescribedWorkflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public DescribedWorkflow withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -54,9 +59,13 @@ public class DescribedWorkflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkflowId")
     public String workflowId;
+
     public DescribedWorkflow withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public DescribedWorkflow(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

@@ -20,6 +20,7 @@ public class SuppressedDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public SuppressedDestinationAttributes attributes;
+
     public SuppressedDestination withAttributes(SuppressedDestinationAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -27,6 +28,7 @@ public class SuppressedDestination {
     
     @JsonProperty("EmailAddress")
     public String emailAddress;
+
     public SuppressedDestination withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -36,6 +38,7 @@ public class SuppressedDestination {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public SuppressedDestination withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -43,9 +46,15 @@ public class SuppressedDestination {
     
     @JsonProperty("Reason")
     public SuppressionListReasonEnum reason;
+
     public SuppressedDestination withReason(SuppressionListReasonEnum reason) {
         this.reason = reason;
         return this;
     }
     
+    public SuppressedDestination(@JsonProperty("EmailAddress") String emailAddress, @JsonProperty("LastUpdateTime") OffsetDateTime lastUpdateTime, @JsonProperty("Reason") SuppressionListReasonEnum reason) {
+        this.emailAddress = emailAddress;
+        this.lastUpdateTime = lastUpdateTime;
+        this.reason = reason;
+  }
 }

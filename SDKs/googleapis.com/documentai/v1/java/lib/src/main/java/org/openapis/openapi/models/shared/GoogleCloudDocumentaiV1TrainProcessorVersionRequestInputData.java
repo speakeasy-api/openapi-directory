@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDocumentaiV1TrainProcessorVersionRequestInputData - The input data used to train a new `ProcessorVersion`.
+ * GoogleCloudDocumentaiV1TrainProcessorVersionRequestInputData - The input data used to train a new ProcessorVersion.
  */
 public class GoogleCloudDocumentaiV1TrainProcessorVersionRequestInputData {
     /**
@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1TrainProcessorVersionRequestInputData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testDocuments")
     public GoogleCloudDocumentaiV1BatchDocumentsInputConfig testDocuments;
+
     public GoogleCloudDocumentaiV1TrainProcessorVersionRequestInputData withTestDocuments(GoogleCloudDocumentaiV1BatchDocumentsInputConfig testDocuments) {
         this.testDocuments = testDocuments;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1TrainProcessorVersionRequestInputData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingDocuments")
     public GoogleCloudDocumentaiV1BatchDocumentsInputConfig trainingDocuments;
+
     public GoogleCloudDocumentaiV1TrainProcessorVersionRequestInputData withTrainingDocuments(GoogleCloudDocumentaiV1BatchDocumentsInputConfig trainingDocuments) {
         this.trainingDocuments = trainingDocuments;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1TrainProcessorVersionRequestInputData(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SpeechProjectsLocationsPhraseSetsPatchRequest {
@@ -12,15 +13,17 @@ public class SpeechProjectsLocationsPhraseSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public SpeechProjectsLocationsPhraseSetsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PhraseSet phraseSet;
-    public SpeechProjectsLocationsPhraseSetsPatchRequest withPhraseSet(org.openapis.openapi.models.shared.PhraseSet phraseSet) {
-        this.phraseSet = phraseSet;
+    public org.openapis.openapi.models.shared.PhraseSetInput phraseSetInput;
+
+    public SpeechProjectsLocationsPhraseSetsPatchRequest withPhraseSetInput(org.openapis.openapi.models.shared.PhraseSetInput phraseSetInput) {
+        this.phraseSetInput = phraseSetInput;
         return this;
     }
     
@@ -29,6 +32,7 @@ public class SpeechProjectsLocationsPhraseSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public SpeechProjectsLocationsPhraseSetsPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class SpeechProjectsLocationsPhraseSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public SpeechProjectsLocationsPhraseSetsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class SpeechProjectsLocationsPhraseSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public SpeechProjectsLocationsPhraseSetsPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class SpeechProjectsLocationsPhraseSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public SpeechProjectsLocationsPhraseSetsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class SpeechProjectsLocationsPhraseSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public SpeechProjectsLocationsPhraseSetsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class SpeechProjectsLocationsPhraseSetsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public SpeechProjectsLocationsPhraseSetsPatchRequest withName(String name) {
         this.name = name;
         return this;
@@ -89,6 +98,7 @@ public class SpeechProjectsLocationsPhraseSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public SpeechProjectsLocationsPhraseSetsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class SpeechProjectsLocationsPhraseSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public SpeechProjectsLocationsPhraseSetsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class SpeechProjectsLocationsPhraseSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public SpeechProjectsLocationsPhraseSetsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class SpeechProjectsLocationsPhraseSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
     public String updateMask;
+
     public SpeechProjectsLocationsPhraseSetsPatchRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -129,6 +142,7 @@ public class SpeechProjectsLocationsPhraseSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public SpeechProjectsLocationsPhraseSetsPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,13 @@ public class SpeechProjectsLocationsPhraseSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public SpeechProjectsLocationsPhraseSetsPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public SpeechProjectsLocationsPhraseSetsPatchRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

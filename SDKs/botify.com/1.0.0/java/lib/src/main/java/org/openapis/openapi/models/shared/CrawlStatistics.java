@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CrawlStatistics {
     @JsonProperty("depth_current")
     public Long depthCurrent;
+
     public CrawlStatistics withDepthCurrent(Long depthCurrent) {
         this.depthCurrent = depthCurrent;
         return this;
@@ -26,6 +27,7 @@ public class CrawlStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_upd_dt")
     public OffsetDateTime lastUpdDt;
+
     public CrawlStatistics withLastUpdDt(OffsetDateTime lastUpdDt) {
         this.lastUpdDt = lastUpdDt;
         return this;
@@ -33,6 +35,7 @@ public class CrawlStatistics {
     
     @JsonProperty("pages_dones")
     public Long pagesDones;
+
     public CrawlStatistics withPagesDones(Long pagesDones) {
         this.pagesDones = pagesDones;
         return this;
@@ -40,6 +43,7 @@ public class CrawlStatistics {
     
     @JsonProperty("pages_dones_2xx")
     public Long pagesDones2xx;
+
     public CrawlStatistics withPagesDones2xx(Long pagesDones2xx) {
         this.pagesDones2xx = pagesDones2xx;
         return this;
@@ -47,6 +51,7 @@ public class CrawlStatistics {
     
     @JsonProperty("pages_dones_3xx")
     public Long pagesDones3xx;
+
     public CrawlStatistics withPagesDones3xx(Long pagesDones3xx) {
         this.pagesDones3xx = pagesDones3xx;
         return this;
@@ -54,6 +59,7 @@ public class CrawlStatistics {
     
     @JsonProperty("pages_dones_4xx")
     public Long pagesDones4xx;
+
     public CrawlStatistics withPagesDones4xx(Long pagesDones4xx) {
         this.pagesDones4xx = pagesDones4xx;
         return this;
@@ -61,6 +67,7 @@ public class CrawlStatistics {
     
     @JsonProperty("pages_dones_5xx")
     public Long pagesDones5xx;
+
     public CrawlStatistics withPagesDones5xx(Long pagesDones5xx) {
         this.pagesDones5xx = pagesDones5xx;
         return this;
@@ -68,6 +75,7 @@ public class CrawlStatistics {
     
     @JsonProperty("pages_dones_networkerror")
     public Long pagesDonesNetworkerror;
+
     public CrawlStatistics withPagesDonesNetworkerror(Long pagesDonesNetworkerror) {
         this.pagesDonesNetworkerror = pagesDonesNetworkerror;
         return this;
@@ -75,6 +83,7 @@ public class CrawlStatistics {
     
     @JsonProperty("pages_dones_xxx")
     public Long pagesDonesXxx;
+
     public CrawlStatistics withPagesDonesXxx(Long pagesDonesXxx) {
         this.pagesDonesXxx = pagesDonesXxx;
         return this;
@@ -82,9 +91,22 @@ public class CrawlStatistics {
     
     @JsonProperty("pages_known")
     public Long pagesKnown;
+
     public CrawlStatistics withPagesKnown(Long pagesKnown) {
         this.pagesKnown = pagesKnown;
         return this;
     }
     
+    public CrawlStatistics(@JsonProperty("depth_current") Long depthCurrent, @JsonProperty("last_upd_dt") OffsetDateTime lastUpdDt, @JsonProperty("pages_dones") Long pagesDones, @JsonProperty("pages_dones_2xx") Long pagesDones2xx, @JsonProperty("pages_dones_3xx") Long pagesDones3xx, @JsonProperty("pages_dones_4xx") Long pagesDones4xx, @JsonProperty("pages_dones_5xx") Long pagesDones5xx, @JsonProperty("pages_dones_networkerror") Long pagesDonesNetworkerror, @JsonProperty("pages_dones_xxx") Long pagesDonesXxx, @JsonProperty("pages_known") Long pagesKnown) {
+        this.depthCurrent = depthCurrent;
+        this.lastUpdDt = lastUpdDt;
+        this.pagesDones = pagesDones;
+        this.pagesDones2xx = pagesDones2xx;
+        this.pagesDones3xx = pagesDones3xx;
+        this.pagesDones4xx = pagesDones4xx;
+        this.pagesDones5xx = pagesDones5xx;
+        this.pagesDonesNetworkerror = pagesDonesNetworkerror;
+        this.pagesDonesXxx = pagesDonesXxx;
+        this.pagesKnown = pagesKnown;
+  }
 }

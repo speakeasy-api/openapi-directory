@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TransformOutputResponse {
     
     public String contentType;
+
     public TransformOutputResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TransformOutputResponse {
      */
     
     public org.openapis.openapi.models.shared.SeldonMessage seldonMessage;
+
     public TransformOutputResponse withSeldonMessage(org.openapis.openapi.models.shared.SeldonMessage seldonMessage) {
         this.seldonMessage = seldonMessage;
         return this;
@@ -26,6 +29,7 @@ public class TransformOutputResponse {
     
     
     public Integer statusCode;
+
     public TransformOutputResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TransformOutputResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TransformOutputResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TransformOutputResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ContentModelsContentPreview {
     
     public Boolean itemInSet;
+
     public ContentModelsContentPreview withItemInSet(Boolean itemInSet) {
         this.itemInSet = itemInSet;
         return this;
@@ -16,6 +17,7 @@ public class ContentModelsContentPreview {
     
     
     public String name;
+
     public ContentModelsContentPreview withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +25,7 @@ public class ContentModelsContentPreview {
     
     
     public String path;
+
     public ContentModelsContentPreview withPath(String path) {
         this.path = path;
         return this;
@@ -30,6 +33,7 @@ public class ContentModelsContentPreview {
     
     
     public Integer setNesting;
+
     public ContentModelsContentPreview withSetNesting(Integer setNesting) {
         this.setNesting = setNesting;
         return this;
@@ -37,6 +41,7 @@ public class ContentModelsContentPreview {
     
     
     public String setTag;
+
     public ContentModelsContentPreview withSetTag(String setTag) {
         this.setTag = setTag;
         return this;
@@ -44,9 +49,11 @@ public class ContentModelsContentPreview {
     
     
     public Integer useSetId;
+
     public ContentModelsContentPreview withUseSetId(Integer useSetId) {
         this.useSetId = useSetId;
         return this;
     }
     
+    public ContentModelsContentPreview(){}
 }

@@ -15,6 +15,7 @@ public class ListDataflowEndpointGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataflowEndpointGroupList")
     public DataflowEndpointListItem[] dataflowEndpointGroupList;
+
     public ListDataflowEndpointGroupsResponse withDataflowEndpointGroupList(DataflowEndpointListItem[] dataflowEndpointGroupList) {
         this.dataflowEndpointGroupList = dataflowEndpointGroupList;
         return this;
@@ -23,9 +24,11 @@ public class ListDataflowEndpointGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDataflowEndpointGroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDataflowEndpointGroupsResponse(){}
 }

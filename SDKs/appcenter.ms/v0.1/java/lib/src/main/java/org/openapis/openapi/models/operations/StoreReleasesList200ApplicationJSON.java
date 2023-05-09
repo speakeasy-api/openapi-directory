@@ -18,6 +18,7 @@ public class StoreReleasesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_type")
     public StoreReleasesList200ApplicationJSONDestinationTypeEnum destinationType;
+
     public StoreReleasesList200ApplicationJSON withDestinationType(StoreReleasesList200ApplicationJSONDestinationTypeEnum destinationType) {
         this.destinationType = destinationType;
         return this;
@@ -29,6 +30,7 @@ public class StoreReleasesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distribution_stores")
     public StoreReleasesList200ApplicationJSONDistributionStores[] distributionStores;
+
     public StoreReleasesList200ApplicationJSON withDistributionStores(StoreReleasesList200ApplicationJSONDistributionStores[] distributionStores) {
         this.distributionStores = distributionStores;
         return this;
@@ -40,6 +42,7 @@ public class StoreReleasesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public StoreReleasesList200ApplicationJSON withId(Double id) {
         this.id = id;
         return this;
@@ -54,6 +57,7 @@ public class StoreReleasesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("short_version")
     public String shortVersion;
+
     public StoreReleasesList200ApplicationJSON withShortVersion(String shortVersion) {
         this.shortVersion = shortVersion;
         return this;
@@ -65,6 +69,7 @@ public class StoreReleasesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploaded_at")
     public String uploadedAt;
+
     public StoreReleasesList200ApplicationJSON withUploadedAt(String uploadedAt) {
         this.uploadedAt = uploadedAt;
         return this;
@@ -79,9 +84,11 @@ public class StoreReleasesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public StoreReleasesList200ApplicationJSON withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public StoreReleasesList200ApplicationJSON(){}
 }

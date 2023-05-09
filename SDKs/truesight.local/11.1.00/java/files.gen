@@ -108,4 +108,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/GlobalSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/GroupSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/GroupConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/ServiceSummary.java
+docs/sdk/README.md
+docs/actions/README.md
+docs/applications/README.md
+docs/devices/README.md
+docs/groups/README.md
+docs/historicaldata/README.md
+docs/services/README.md
 USAGE.md

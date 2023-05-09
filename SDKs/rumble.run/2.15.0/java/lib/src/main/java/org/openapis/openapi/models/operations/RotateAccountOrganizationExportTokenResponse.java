@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RotateAccountOrganizationExportTokenResponse {
     
     public String contentType;
+
     public RotateAccountOrganizationExportTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RotateAccountOrganizationExportTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.Organization organization;
+
     public RotateAccountOrganizationExportTokenResponse withOrganization(org.openapis.openapi.models.shared.Organization organization) {
         this.organization = organization;
         return this;
@@ -26,6 +29,7 @@ public class RotateAccountOrganizationExportTokenResponse {
     
     
     public Integer statusCode;
+
     public RotateAccountOrganizationExportTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RotateAccountOrganizationExportTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RotateAccountOrganizationExportTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RotateAccountOrganizationExportTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

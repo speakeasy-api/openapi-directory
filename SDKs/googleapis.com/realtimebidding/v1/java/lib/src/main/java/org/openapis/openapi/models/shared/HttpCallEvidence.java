@@ -18,9 +18,11 @@ public class HttpCallEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urls")
     public String[] urls;
+
     public HttpCallEvidence withUrls(String[] urls) {
         this.urls = urls;
         return this;
     }
     
+    public HttpCallEvidence(){}
 }

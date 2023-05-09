@@ -12,6 +12,7 @@ public class Identifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public Identifier withLabel(String label) {
         this.label = label;
         return this;
@@ -19,6 +20,7 @@ public class Identifier {
     
     @JsonProperty("system")
     public String system;
+
     public Identifier withSystem(String system) {
         this.system = system;
         return this;
@@ -26,9 +28,14 @@ public class Identifier {
     
     @JsonProperty("value")
     public String value;
+
     public Identifier withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Identifier(@JsonProperty("system") String system, @JsonProperty("value") String value) {
+        this.system = system;
+        this.value = value;
+  }
 }

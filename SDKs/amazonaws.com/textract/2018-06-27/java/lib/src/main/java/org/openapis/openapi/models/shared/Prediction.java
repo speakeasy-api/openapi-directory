@@ -15,6 +15,7 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public Prediction withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -23,9 +24,11 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public Prediction withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Prediction(){}
 }

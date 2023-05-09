@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RunScheduledInstancesResult {
     
     public String[] instanceIdSet;
+
     public RunScheduledInstancesResult withInstanceIdSet(String[] instanceIdSet) {
         this.instanceIdSet = instanceIdSet;
         return this;
     }
     
+    public RunScheduledInstancesResult(){}
 }

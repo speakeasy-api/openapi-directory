@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RestoreRevisionUsingPOSTResponse {
     
     public String contentType;
+
     public RestoreRevisionUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RestoreRevisionUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public RestoreRevisionUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RestoreRevisionUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RestoreRevisionUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RestoreRevisionUsingPOSTResponse {
      */
     
     public RestoreRevisionUsingPOST200ApplicationJSON restoreRevisionUsingPOST200ApplicationJSONObject;
+
     public RestoreRevisionUsingPOSTResponse withRestoreRevisionUsingPOST200ApplicationJSONObject(RestoreRevisionUsingPOST200ApplicationJSON restoreRevisionUsingPOST200ApplicationJSONObject) {
         this.restoreRevisionUsingPOST200ApplicationJSONObject = restoreRevisionUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class RestoreRevisionUsingPOSTResponse {
      */
     
     public RestoreRevisionUsingPOST400ApplicationJSON restoreRevisionUsingPOST400ApplicationJSONObject;
+
     public RestoreRevisionUsingPOSTResponse withRestoreRevisionUsingPOST400ApplicationJSONObject(RestoreRevisionUsingPOST400ApplicationJSON restoreRevisionUsingPOST400ApplicationJSONObject) {
         this.restoreRevisionUsingPOST400ApplicationJSONObject = restoreRevisionUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RestoreRevisionUsingPOSTResponse {
      */
     
     public RestoreRevisionUsingPOST401ApplicationJSON restoreRevisionUsingPOST401ApplicationJSONObject;
+
     public RestoreRevisionUsingPOSTResponse withRestoreRevisionUsingPOST401ApplicationJSONObject(RestoreRevisionUsingPOST401ApplicationJSON restoreRevisionUsingPOST401ApplicationJSONObject) {
         this.restoreRevisionUsingPOST401ApplicationJSONObject = restoreRevisionUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class RestoreRevisionUsingPOSTResponse {
      */
     
     public RestoreRevisionUsingPOST500ApplicationJSON restoreRevisionUsingPOST500ApplicationJSONObject;
+
     public RestoreRevisionUsingPOSTResponse withRestoreRevisionUsingPOST500ApplicationJSONObject(RestoreRevisionUsingPOST500ApplicationJSON restoreRevisionUsingPOST500ApplicationJSONObject) {
         this.restoreRevisionUsingPOST500ApplicationJSONObject = restoreRevisionUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public RestoreRevisionUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

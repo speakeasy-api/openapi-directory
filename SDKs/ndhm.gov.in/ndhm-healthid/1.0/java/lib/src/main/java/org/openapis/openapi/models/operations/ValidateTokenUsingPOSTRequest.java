@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidateTokenUsingPOSTRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public ValidateTokenUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class ValidateTokenUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ValidateTokenRequest validateTokenRequest;
+
     public ValidateTokenUsingPOSTRequest withValidateTokenRequest(org.openapis.openapi.models.shared.ValidateTokenRequest validateTokenRequest) {
         this.validateTokenRequest = validateTokenRequest;
         return this;
     }
     
+    public ValidateTokenUsingPOSTRequest(@JsonProperty("ValidateTokenRequest") org.openapis.openapi.models.shared.ValidateTokenRequest validateTokenRequest) {
+        this.validateTokenRequest = validateTokenRequest;
+  }
 }

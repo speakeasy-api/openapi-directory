@@ -18,6 +18,7 @@ public class ConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipCidrRange")
     public String ipCidrRange;
+
     public ConnectorInput withIpCidrRange(String ipCidrRange) {
         this.ipCidrRange = ipCidrRange;
         return this;
@@ -29,6 +30,7 @@ public class ConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public ConnectorInput withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
@@ -40,6 +42,7 @@ public class ConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxInstances")
     public Integer maxInstances;
+
     public ConnectorInput withMaxInstances(Integer maxInstances) {
         this.maxInstances = maxInstances;
         return this;
@@ -51,6 +54,7 @@ public class ConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxThroughput")
     public Integer maxThroughput;
+
     public ConnectorInput withMaxThroughput(Integer maxThroughput) {
         this.maxThroughput = maxThroughput;
         return this;
@@ -62,6 +66,7 @@ public class ConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minInstances")
     public Integer minInstances;
+
     public ConnectorInput withMinInstances(Integer minInstances) {
         this.minInstances = minInstances;
         return this;
@@ -73,6 +78,7 @@ public class ConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minThroughput")
     public Integer minThroughput;
+
     public ConnectorInput withMinThroughput(Integer minThroughput) {
         this.minThroughput = minThroughput;
         return this;
@@ -84,6 +90,7 @@ public class ConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConnectorInput withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class ConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public ConnectorInput withNetwork(String network) {
         this.network = network;
         return this;
@@ -106,9 +114,11 @@ public class ConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnet")
     public Subnet subnet;
+
     public ConnectorInput withSubnet(Subnet subnet) {
         this.subnet = subnet;
         return this;
     }
     
+    public ConnectorInput(){}
 }

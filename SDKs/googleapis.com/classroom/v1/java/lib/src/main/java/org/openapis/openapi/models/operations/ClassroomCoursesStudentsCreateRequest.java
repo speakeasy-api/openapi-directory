@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClassroomCoursesStudentsCreateRequest {
@@ -12,6 +13,7 @@ public class ClassroomCoursesStudentsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ClassroomCoursesStudentsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ClassroomCoursesStudentsCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Student student;
+
     public ClassroomCoursesStudentsCreateRequest withStudent(org.openapis.openapi.models.shared.Student student) {
         this.student = student;
         return this;
@@ -29,6 +32,7 @@ public class ClassroomCoursesStudentsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ClassroomCoursesStudentsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ClassroomCoursesStudentsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ClassroomCoursesStudentsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ClassroomCoursesStudentsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ClassroomCoursesStudentsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ClassroomCoursesStudentsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=courseId")
     public String courseId;
+
     public ClassroomCoursesStudentsCreateRequest withCourseId(String courseId) {
         this.courseId = courseId;
         return this;
@@ -69,6 +76,7 @@ public class ClassroomCoursesStudentsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enrollmentCode")
     public String enrollmentCode;
+
     public ClassroomCoursesStudentsCreateRequest withEnrollmentCode(String enrollmentCode) {
         this.enrollmentCode = enrollmentCode;
         return this;
@@ -79,6 +87,7 @@ public class ClassroomCoursesStudentsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ClassroomCoursesStudentsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -89,6 +98,7 @@ public class ClassroomCoursesStudentsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ClassroomCoursesStudentsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class ClassroomCoursesStudentsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ClassroomCoursesStudentsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class ClassroomCoursesStudentsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ClassroomCoursesStudentsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class ClassroomCoursesStudentsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ClassroomCoursesStudentsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class ClassroomCoursesStudentsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ClassroomCoursesStudentsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,13 @@ public class ClassroomCoursesStudentsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ClassroomCoursesStudentsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ClassroomCoursesStudentsCreateRequest(@JsonProperty("courseId") String courseId) {
+        this.courseId = courseId;
+  }
 }

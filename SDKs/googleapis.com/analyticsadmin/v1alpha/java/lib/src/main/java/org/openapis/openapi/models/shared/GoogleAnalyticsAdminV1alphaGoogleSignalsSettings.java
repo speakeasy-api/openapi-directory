@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaGoogleSignalsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consent")
     public GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsConsentEnum consent;
+
     public GoogleAnalyticsAdminV1alphaGoogleSignalsSettings withConsent(GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsConsentEnum consent) {
         this.consent = consent;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaGoogleSignalsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1alphaGoogleSignalsSettings withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsAdminV1alphaGoogleSignalsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsStateEnum state;
+
     public GoogleAnalyticsAdminV1alphaGoogleSignalsSettings withState(GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaGoogleSignalsSettings(){}
 }

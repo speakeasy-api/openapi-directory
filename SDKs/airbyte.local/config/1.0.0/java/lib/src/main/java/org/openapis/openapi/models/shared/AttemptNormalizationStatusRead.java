@@ -12,6 +12,7 @@ public class AttemptNormalizationStatusRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attemptNumber")
     public Integer attemptNumber;
+
     public AttemptNormalizationStatusRead withAttemptNumber(Integer attemptNumber) {
         this.attemptNumber = attemptNumber;
         return this;
@@ -20,6 +21,7 @@ public class AttemptNormalizationStatusRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasNormalizationFailed")
     public Boolean hasNormalizationFailed;
+
     public AttemptNormalizationStatusRead withHasNormalizationFailed(Boolean hasNormalizationFailed) {
         this.hasNormalizationFailed = hasNormalizationFailed;
         return this;
@@ -28,6 +30,7 @@ public class AttemptNormalizationStatusRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasRecordsCommitted")
     public Boolean hasRecordsCommitted;
+
     public AttemptNormalizationStatusRead withHasRecordsCommitted(Boolean hasRecordsCommitted) {
         this.hasRecordsCommitted = hasRecordsCommitted;
         return this;
@@ -36,9 +39,11 @@ public class AttemptNormalizationStatusRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordsCommitted")
     public Long recordsCommitted;
+
     public AttemptNormalizationStatusRead withRecordsCommitted(Long recordsCommitted) {
         this.recordsCommitted = recordsCommitted;
         return this;
     }
     
+    public AttemptNormalizationStatusRead(){}
 }

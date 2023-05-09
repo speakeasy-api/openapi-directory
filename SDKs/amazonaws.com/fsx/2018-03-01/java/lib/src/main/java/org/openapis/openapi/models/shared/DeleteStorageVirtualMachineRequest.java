@@ -10,11 +10,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteStorageVirtualMachineRequest {
     /**
-     * (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public DeleteStorageVirtualMachineRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -22,9 +23,13 @@ public class DeleteStorageVirtualMachineRequest {
     
     @JsonProperty("StorageVirtualMachineId")
     public String storageVirtualMachineId;
+
     public DeleteStorageVirtualMachineRequest withStorageVirtualMachineId(String storageVirtualMachineId) {
         this.storageVirtualMachineId = storageVirtualMachineId;
         return this;
     }
     
+    public DeleteStorageVirtualMachineRequest(@JsonProperty("StorageVirtualMachineId") String storageVirtualMachineId) {
+        this.storageVirtualMachineId = storageVirtualMachineId;
+  }
 }

@@ -15,9 +15,11 @@ public class SubaccountsAllResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public SubaccountsAllResponseEmbedded embedded;
+
     public SubaccountsAllResponse withEmbedded(SubaccountsAllResponseEmbedded embedded) {
         this.embedded = embedded;
         return this;
     }
     
+    public SubaccountsAllResponse(){}
 }

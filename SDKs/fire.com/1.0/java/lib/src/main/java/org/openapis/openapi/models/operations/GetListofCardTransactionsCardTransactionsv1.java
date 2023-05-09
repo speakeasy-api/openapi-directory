@@ -15,6 +15,7 @@ public class GetListofCardTransactionsCardTransactionsv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRangeTo")
     public Long dateRangeTo;
+
     public GetListofCardTransactionsCardTransactionsv1 withDateRangeTo(Long dateRangeTo) {
         this.dateRangeTo = dateRangeTo;
         return this;
@@ -26,6 +27,7 @@ public class GetListofCardTransactionsCardTransactionsv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public GetListofCardTransactionsCardTransactionsv1 withTotal(Long total) {
         this.total = total;
         return this;
@@ -34,9 +36,11 @@ public class GetListofCardTransactionsCardTransactionsv1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactions")
     public GetListofCardTransactionsCardTransactionsv1Transaction[] transactions;
+
     public GetListofCardTransactionsCardTransactionsv1 withTransactions(GetListofCardTransactionsCardTransactionsv1Transaction[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public GetListofCardTransactionsCardTransactionsv1(){}
 }

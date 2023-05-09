@@ -18,6 +18,7 @@ public class FirewallInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public FirewallInfo withAction(String action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class FirewallInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public String direction;
+
     public FirewallInfo withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -40,6 +42,7 @@ public class FirewallInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public FirewallInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class FirewallInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewallRuleType")
     public FirewallInfoFirewallRuleTypeEnum firewallRuleType;
+
     public FirewallInfo withFirewallRuleType(FirewallInfoFirewallRuleTypeEnum firewallRuleType) {
         this.firewallRuleType = firewallRuleType;
         return this;
@@ -62,6 +66,7 @@ public class FirewallInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkUri")
     public String networkUri;
+
     public FirewallInfo withNetworkUri(String networkUri) {
         this.networkUri = networkUri;
         return this;
@@ -73,6 +78,7 @@ public class FirewallInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public String policy;
+
     public FirewallInfo withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -84,6 +90,7 @@ public class FirewallInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public FirewallInfo withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -95,6 +102,7 @@ public class FirewallInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetServiceAccounts")
     public String[] targetServiceAccounts;
+
     public FirewallInfo withTargetServiceAccounts(String[] targetServiceAccounts) {
         this.targetServiceAccounts = targetServiceAccounts;
         return this;
@@ -106,6 +114,7 @@ public class FirewallInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetTags")
     public String[] targetTags;
+
     public FirewallInfo withTargetTags(String[] targetTags) {
         this.targetTags = targetTags;
         return this;
@@ -117,9 +126,11 @@ public class FirewallInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public FirewallInfo withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public FirewallInfo(){}
 }

@@ -51,11 +51,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3AccessAddResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3AccessAddResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3AccessAddResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3AccessAddResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3AccessAdd200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,11 +90,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3AccessClearResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3AccessClearResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3AccessClearResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3AccessClearResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3AccessClear200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -133,11 +129,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3AccessDelResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3AccessDelResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3AccessDelResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3AccessDelResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3AccessDel200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,11 +168,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3AccessListResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3AccessListResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3AccessListResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3AccessListResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3AccessList200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -216,11 +208,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3GetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3GetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GetConfigResponse(contentType, httpRes.statusCode()) {{
             configSNMPv3 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -258,11 +248,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3GetContextEngineidResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GetContextEngineidResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3GetContextEngineidResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GetContextEngineidResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3GetContextEngineid200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -299,11 +287,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3GetEnginebootsResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GetEnginebootsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3GetEnginebootsResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GetEnginebootsResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3GetEngineboots200ApplicationJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +327,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3GetEngineidResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GetEngineidResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3GetEngineidResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GetEngineidResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3GetEngineid200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -382,11 +366,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3GetEnginetimeResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GetEnginetimeResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3GetEnginetimeResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GetEnginetimeResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3GetEnginetime200ApplicationJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -424,11 +406,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3GroupAddResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GroupAddResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3GroupAddResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GroupAddResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3GroupAdd200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -465,11 +445,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3GroupClearResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GroupClearResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3GroupClearResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GroupClearResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3GroupClear200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -506,11 +484,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3GroupDelResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GroupDelResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3GroupDelResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GroupDelResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3GroupDel200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -547,11 +523,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3GroupListResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GroupListResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3GroupListResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3GroupListResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3GroupList200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -589,11 +563,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3SetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3SetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3SetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3SetConfigResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3SetConfig200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -630,11 +602,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3UserAddResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3UserAddResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3UserAddResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3UserAddResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3UserAdd200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -671,11 +641,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3UserClearResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3UserClearResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3UserClearResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3UserClearResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3UserClear200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -712,11 +680,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3UserDelResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3UserDelResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3UserDelResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3UserDelResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3UserDel200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -753,11 +719,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3UserListResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3UserListResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3UserListResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3UserListResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3UserList200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -795,11 +759,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3UsmSaveResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3UsmSaveResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3UsmSaveResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3UsmSaveResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3UsmSave200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -837,11 +799,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3UsmSaveasResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3UsmSaveasResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3UsmSaveasResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3UsmSaveasResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3UsmSaveas200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -879,11 +839,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3VacmSaveResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3VacmSaveResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3VacmSaveResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3VacmSaveResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3VacmSave200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -921,11 +879,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3VacmSaveasResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3VacmSaveasResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3VacmSaveasResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3VacmSaveasResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3VacmSaveas200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -963,11 +919,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3ViewAddResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3ViewAddResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3ViewAddResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3ViewAddResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3ViewAdd200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1004,11 +958,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3ViewClearResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3ViewClearResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3ViewClearResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3ViewClearResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3ViewClear200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1045,11 +997,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3ViewDelResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3ViewDelResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3ViewDelResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3ViewDelResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3ViewDel200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1086,11 +1036,9 @@ public class SNMPv3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmpv3ViewListResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3ViewListResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmpv3ViewListResponse res = new org.openapis.openapi.models.operations.ProtocolSnmpv3ViewListResponse(contentType, httpRes.statusCode()) {{
             protocolSnmpv3ViewList200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

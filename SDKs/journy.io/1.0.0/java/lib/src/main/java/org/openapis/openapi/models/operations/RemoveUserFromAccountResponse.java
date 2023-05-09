@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveUserFromAccountResponse {
     
     public String contentType;
+
     public RemoveUserFromAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RemoveUserFromAccountResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public RemoveUserFromAccountResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class RemoveUserFromAccountResponse {
     
     
     public Integer statusCode;
+
     public RemoveUserFromAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class RemoveUserFromAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveUserFromAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class RemoveUserFromAccountResponse {
      */
     
     public RemoveUserFromAccount204ApplicationJSON removeUserFromAccount204ApplicationJSONObject;
+
     public RemoveUserFromAccountResponse withRemoveUserFromAccount204ApplicationJSONObject(RemoveUserFromAccount204ApplicationJSON removeUserFromAccount204ApplicationJSONObject) {
         this.removeUserFromAccount204ApplicationJSONObject = removeUserFromAccount204ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class RemoveUserFromAccountResponse {
      */
     
     public RemoveUserFromAccount400ApplicationJSON removeUserFromAccount400ApplicationJSONObject;
+
     public RemoveUserFromAccountResponse withRemoveUserFromAccount400ApplicationJSONObject(RemoveUserFromAccount400ApplicationJSON removeUserFromAccount400ApplicationJSONObject) {
         this.removeUserFromAccount400ApplicationJSONObject = removeUserFromAccount400ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class RemoveUserFromAccountResponse {
      */
     
     public RemoveUserFromAccount401ApplicationJSON removeUserFromAccount401ApplicationJSONObject;
+
     public RemoveUserFromAccountResponse withRemoveUserFromAccount401ApplicationJSONObject(RemoveUserFromAccount401ApplicationJSON removeUserFromAccount401ApplicationJSONObject) {
         this.removeUserFromAccount401ApplicationJSONObject = removeUserFromAccount401ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class RemoveUserFromAccountResponse {
      */
     
     public RemoveUserFromAccount429ApplicationJSON removeUserFromAccount429ApplicationJSONObject;
+
     public RemoveUserFromAccountResponse withRemoveUserFromAccount429ApplicationJSONObject(RemoveUserFromAccount429ApplicationJSON removeUserFromAccount429ApplicationJSONObject) {
         this.removeUserFromAccount429ApplicationJSONObject = removeUserFromAccount429ApplicationJSONObject;
         return this;
@@ -80,9 +89,14 @@ public class RemoveUserFromAccountResponse {
      */
     
     public RemoveUserFromAccount500ApplicationJSON removeUserFromAccount500ApplicationJSONObject;
+
     public RemoveUserFromAccountResponse withRemoveUserFromAccount500ApplicationJSONObject(RemoveUserFromAccount500ApplicationJSON removeUserFromAccount500ApplicationJSONObject) {
         this.removeUserFromAccount500ApplicationJSONObject = removeUserFromAccount500ApplicationJSONObject;
         return this;
     }
     
+    public RemoveUserFromAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

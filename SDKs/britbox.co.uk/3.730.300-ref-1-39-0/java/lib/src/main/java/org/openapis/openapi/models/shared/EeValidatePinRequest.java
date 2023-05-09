@@ -17,6 +17,7 @@ public class EeValidatePinRequest {
      */
     @JsonProperty("accessToken")
     public String accessToken;
+
     public EeValidatePinRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -27,6 +28,7 @@ public class EeValidatePinRequest {
      */
     @JsonProperty("pin")
     public String pin;
+
     public EeValidatePinRequest withPin(String pin) {
         this.pin = pin;
         return this;
@@ -37,6 +39,7 @@ public class EeValidatePinRequest {
      */
     @JsonProperty("pinReference")
     public String pinReference;
+
     public EeValidatePinRequest withPinReference(String pinReference) {
         this.pinReference = pinReference;
         return this;
@@ -48,9 +51,15 @@ public class EeValidatePinRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingHeader")
     public String trackingHeader;
+
     public EeValidatePinRequest withTrackingHeader(String trackingHeader) {
         this.trackingHeader = trackingHeader;
         return this;
     }
     
+    public EeValidatePinRequest(@JsonProperty("accessToken") String accessToken, @JsonProperty("pin") String pin, @JsonProperty("pinReference") String pinReference) {
+        this.accessToken = accessToken;
+        this.pin = pin;
+        this.pinReference = pinReference;
+  }
 }

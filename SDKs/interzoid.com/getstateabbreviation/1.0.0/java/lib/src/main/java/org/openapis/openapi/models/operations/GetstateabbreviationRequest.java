@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetstateabbreviationRequest {
@@ -12,6 +13,7 @@ public class GetstateabbreviationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public String license;
+
     public GetstateabbreviationRequest withLicense(String license) {
         this.license = license;
         return this;
@@ -22,9 +24,14 @@ public class GetstateabbreviationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String state;
+
     public GetstateabbreviationRequest withState(String state) {
         this.state = state;
         return this;
     }
     
+    public GetstateabbreviationRequest(@JsonProperty("license") String license, @JsonProperty("state") String state) {
+        this.license = license;
+        this.state = state;
+  }
 }

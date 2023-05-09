@@ -18,6 +18,7 @@ public class ReachabilityDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public ReachabilityDetails withError(Status error) {
         this.error = error;
         return this;
@@ -29,6 +30,7 @@ public class ReachabilityDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public ReachabilityDetailsResultEnum result;
+
     public ReachabilityDetails withResult(ReachabilityDetailsResultEnum result) {
         this.result = result;
         return this;
@@ -40,6 +42,7 @@ public class ReachabilityDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("traces")
     public Trace[] traces;
+
     public ReachabilityDetails withTraces(Trace[] traces) {
         this.traces = traces;
         return this;
@@ -51,9 +54,11 @@ public class ReachabilityDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verifyTime")
     public String verifyTime;
+
     public ReachabilityDetails withVerifyTime(String verifyTime) {
         this.verifyTime = verifyTime;
         return this;
     }
     
+    public ReachabilityDetails(){}
 }

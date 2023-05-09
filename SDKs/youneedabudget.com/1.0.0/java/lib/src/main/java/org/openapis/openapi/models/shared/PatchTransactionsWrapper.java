@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatchTransactionsWrapper {
     @JsonProperty("transactions")
     public SaveTransactionWithId[] transactions;
+
     public PatchTransactionsWrapper withTransactions(SaveTransactionWithId[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public PatchTransactionsWrapper(@JsonProperty("transactions") SaveTransactionWithId[] transactions) {
+        this.transactions = transactions;
+  }
 }

@@ -12,6 +12,7 @@ public class EmbeddedAttendeeResource {
      */
     
     public LocalDate deletedAt;
+
     public EmbeddedAttendeeResource withDeletedAt(LocalDate deletedAt) {
         this.deletedAt = deletedAt;
         return this;
@@ -22,6 +23,7 @@ public class EmbeddedAttendeeResource {
      */
     
     public String email;
+
     public EmbeddedAttendeeResource withEmail(String email) {
         this.email = email;
         return this;
@@ -32,6 +34,7 @@ public class EmbeddedAttendeeResource {
      */
     
     public String name;
+
     public EmbeddedAttendeeResource withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +45,7 @@ public class EmbeddedAttendeeResource {
      */
     
     public Boolean organizer;
+
     public EmbeddedAttendeeResource withOrganizer(Boolean organizer) {
         this.organizer = organizer;
         return this;
@@ -52,6 +56,7 @@ public class EmbeddedAttendeeResource {
      */
     
     public String status;
+
     public EmbeddedAttendeeResource withStatus(String status) {
         this.status = status;
         return this;
@@ -62,9 +67,11 @@ public class EmbeddedAttendeeResource {
      */
     
     public Boolean statusChanged;
+
     public EmbeddedAttendeeResource withStatusChanged(Boolean statusChanged) {
         this.statusChanged = statusChanged;
         return this;
     }
     
+    public EmbeddedAttendeeResource(){}
 }

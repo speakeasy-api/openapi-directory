@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetClusterCredentialsWithIAMMessage {
     
     public String clusterIdentifier;
+
     public GetClusterCredentialsWithIAMMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class GetClusterCredentialsWithIAMMessage {
     
     
     public String dbName;
+
     public GetClusterCredentialsWithIAMMessage withDbName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -23,9 +25,13 @@ public class GetClusterCredentialsWithIAMMessage {
     
     
     public Long durationSeconds;
+
     public GetClusterCredentialsWithIAMMessage withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
     }
     
+    public GetClusterCredentialsWithIAMMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+  }
 }

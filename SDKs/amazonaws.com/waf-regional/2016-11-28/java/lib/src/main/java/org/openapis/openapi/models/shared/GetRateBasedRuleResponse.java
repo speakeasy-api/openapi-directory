@@ -15,9 +15,11 @@ public class GetRateBasedRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rule")
     public RateBasedRule rule;
+
     public GetRateBasedRuleResponse withRule(RateBasedRule rule) {
         this.rule = rule;
         return this;
     }
     
+    public GetRateBasedRuleResponse(){}
 }

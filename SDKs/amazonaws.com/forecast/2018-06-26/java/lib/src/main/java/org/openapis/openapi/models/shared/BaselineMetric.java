@@ -15,6 +15,7 @@ public class BaselineMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public BaselineMetric withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class BaselineMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Double value;
+
     public BaselineMetric withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public BaselineMetric(){}
 }

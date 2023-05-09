@@ -21,6 +21,7 @@ public class ListMapsResponseEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public ListMapsResponseEntry withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -28,6 +29,7 @@ public class ListMapsResponseEntry {
     
     @JsonProperty("DataSource")
     public String dataSource;
+
     public ListMapsResponseEntry withDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -35,6 +37,7 @@ public class ListMapsResponseEntry {
     
     @JsonProperty("Description")
     public String description;
+
     public ListMapsResponseEntry withDescription(String description) {
         this.description = description;
         return this;
@@ -42,6 +45,7 @@ public class ListMapsResponseEntry {
     
     @JsonProperty("MapName")
     public String mapName;
+
     public ListMapsResponseEntry withMapName(String mapName) {
         this.mapName = mapName;
         return this;
@@ -50,6 +54,7 @@ public class ListMapsResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public ListMapsResponseEntryPricingPlanEnum pricingPlan;
+
     public ListMapsResponseEntry withPricingPlan(ListMapsResponseEntryPricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -59,9 +64,17 @@ public class ListMapsResponseEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public ListMapsResponseEntry withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ListMapsResponseEntry(@JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("DataSource") String dataSource, @JsonProperty("Description") String description, @JsonProperty("MapName") String mapName, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.createTime = createTime;
+        this.dataSource = dataSource;
+        this.description = description;
+        this.mapName = mapName;
+        this.updateTime = updateTime;
+  }
 }

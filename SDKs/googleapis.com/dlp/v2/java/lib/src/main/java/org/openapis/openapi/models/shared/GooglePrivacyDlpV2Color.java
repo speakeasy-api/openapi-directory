@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blue")
     public Float blue;
+
     public GooglePrivacyDlpV2Color withBlue(Float blue) {
         this.blue = blue;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("green")
     public Float green;
+
     public GooglePrivacyDlpV2Color withGreen(Float green) {
         this.green = green;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("red")
     public Float red;
+
     public GooglePrivacyDlpV2Color withRed(Float red) {
         this.red = red;
         return this;
     }
     
+    public GooglePrivacyDlpV2Color(){}
 }

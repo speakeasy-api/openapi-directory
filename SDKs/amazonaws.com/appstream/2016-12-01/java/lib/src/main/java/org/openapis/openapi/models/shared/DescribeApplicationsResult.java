@@ -15,6 +15,7 @@ public class DescribeApplicationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Applications")
     public Application[] applications;
+
     public DescribeApplicationsResult withApplications(Application[] applications) {
         this.applications = applications;
         return this;
@@ -23,9 +24,11 @@ public class DescribeApplicationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeApplicationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeApplicationsResult(){}
 }

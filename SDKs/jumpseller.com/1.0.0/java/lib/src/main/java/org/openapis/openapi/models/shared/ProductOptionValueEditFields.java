@@ -15,6 +15,7 @@ public class ProductOptionValueEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProductOptionValueEditFields withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class ProductOptionValueEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Integer position;
+
     public ProductOptionValueEditFields withPosition(Integer position) {
         this.position = position;
         return this;
     }
     
+    public ProductOptionValueEditFields(){}
 }

@@ -20,6 +20,7 @@ public class UpdateWorkweekConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public UpdateWorkweekConfigResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -32,9 +33,11 @@ public class UpdateWorkweekConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workweek_config")
     public WorkweekConfig workweekConfig;
+
     public UpdateWorkweekConfigResponse withWorkweekConfig(WorkweekConfig workweekConfig) {
         this.workweekConfig = workweekConfig;
         return this;
     }
     
+    public UpdateWorkweekConfigResponse(){}
 }

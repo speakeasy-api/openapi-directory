@@ -15,6 +15,7 @@ public class SyntaxToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeginOffset")
     public Long beginOffset;
+
     public SyntaxToken withBeginOffset(Long beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -23,6 +24,7 @@ public class SyntaxToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndOffset")
     public Long endOffset;
+
     public SyntaxToken withEndOffset(Long endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -31,6 +33,7 @@ public class SyntaxToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartOfSpeech")
     public PartOfSpeechTag partOfSpeech;
+
     public SyntaxToken withPartOfSpeech(PartOfSpeechTag partOfSpeech) {
         this.partOfSpeech = partOfSpeech;
         return this;
@@ -39,6 +42,7 @@ public class SyntaxToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public SyntaxToken withText(String text) {
         this.text = text;
         return this;
@@ -47,9 +51,11 @@ public class SyntaxToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenId")
     public Long tokenId;
+
     public SyntaxToken withTokenId(Long tokenId) {
         this.tokenId = tokenId;
         return this;
     }
     
+    public SyntaxToken(){}
 }

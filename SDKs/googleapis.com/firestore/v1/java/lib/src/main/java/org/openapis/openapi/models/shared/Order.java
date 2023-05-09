@@ -18,6 +18,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public OrderDirectionEnum direction;
+
     public Order withDirection(OrderDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -29,9 +30,11 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public FieldReference field;
+
     public Order withField(FieldReference field) {
         this.field = field;
         return this;
     }
     
+    public Order(){}
 }

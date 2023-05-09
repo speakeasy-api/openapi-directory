@@ -50,11 +50,9 @@ public class FollowedTags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFollowedTagsResponse res = new org.openapis.openapi.models.operations.GetFollowedTagsResponse() {{
+        org.openapis.openapi.models.operations.GetFollowedTagsResponse res = new org.openapis.openapi.models.operations.GetFollowedTagsResponse(contentType, httpRes.statusCode()) {{
             followedTags = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

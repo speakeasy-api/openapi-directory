@@ -10,10 +10,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StartAppAssessmentRequestBody {
     /**
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
      */
     @JsonProperty("appArn")
     public String appArn;
+
     public StartAppAssessmentRequestBody withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -24,6 +25,7 @@ public class StartAppAssessmentRequestBody {
      */
     @JsonProperty("appVersion")
     public String appVersion;
+
     public StartAppAssessmentRequestBody withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -34,6 +36,7 @@ public class StartAppAssessmentRequestBody {
      */
     @JsonProperty("assessmentName")
     public String assessmentName;
+
     public StartAppAssessmentRequestBody withAssessmentName(String assessmentName) {
         this.assessmentName = assessmentName;
         return this;
@@ -45,6 +48,7 @@ public class StartAppAssessmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public StartAppAssessmentRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -56,9 +60,15 @@ public class StartAppAssessmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StartAppAssessmentRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartAppAssessmentRequestBody(@JsonProperty("appArn") String appArn, @JsonProperty("appVersion") String appVersion, @JsonProperty("assessmentName") String assessmentName) {
+        this.appArn = appArn;
+        this.appVersion = appVersion;
+        this.assessmentName = assessmentName;
+  }
 }

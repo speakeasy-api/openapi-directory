@@ -19,9 +19,11 @@ public class DeleteBreakTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public DeleteBreakTypeResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public DeleteBreakTypeResponse(){}
 }

@@ -12,6 +12,7 @@ public class PresentationDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundColor")
     public String backgroundColor;
+
     public PresentationDTO withBackgroundColor(String backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
@@ -20,6 +21,7 @@ public class PresentationDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public PresentationDTO withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -28,9 +30,11 @@ public class PresentationDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textColor")
     public String textColor;
+
     public PresentationDTO withTextColor(String textColor) {
         this.textColor = textColor;
         return this;
     }
     
+    public PresentationDTO(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRateBasedRuleResponse {
     
     public String contentType;
+
     public UpdateRateBasedRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateRateBasedRuleResponse {
     
     
     public Integer statusCode;
+
     public UpdateRateBasedRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateRateBasedRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRateBasedRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateRateBasedRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRateBasedRuleResponse updateRateBasedRuleResponse;
+
     public UpdateRateBasedRuleResponse withUpdateRateBasedRuleResponse(org.openapis.openapi.models.shared.UpdateRateBasedRuleResponse updateRateBasedRuleResponse) {
         this.updateRateBasedRuleResponse = updateRateBasedRuleResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateRateBasedRuleResponse {
      */
     
     public Object wafInternalErrorException;
+
     public UpdateRateBasedRuleResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateRateBasedRuleResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public UpdateRateBasedRuleResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateRateBasedRuleResponse {
      */
     
     public Object wafInvalidOperationException;
+
     public UpdateRateBasedRuleResponse withWAFInvalidOperationException(Object wafInvalidOperationException) {
         this.wafInvalidOperationException = wafInvalidOperationException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateRateBasedRuleResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public UpdateRateBasedRuleResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateRateBasedRuleResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public UpdateRateBasedRuleResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateRateBasedRuleResponse {
      */
     
     public Object wafNonexistentContainerException;
+
     public UpdateRateBasedRuleResponse withWAFNonexistentContainerException(Object wafNonexistentContainerException) {
         this.wafNonexistentContainerException = wafNonexistentContainerException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateRateBasedRuleResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public UpdateRateBasedRuleResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -113,6 +125,7 @@ public class UpdateRateBasedRuleResponse {
      */
     
     public Object wafReferencedItemException;
+
     public UpdateRateBasedRuleResponse withWAFReferencedItemException(Object wafReferencedItemException) {
         this.wafReferencedItemException = wafReferencedItemException;
         return this;
@@ -123,9 +136,14 @@ public class UpdateRateBasedRuleResponse {
      */
     
     public Object wafStaleDataException;
+
     public UpdateRateBasedRuleResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public UpdateRateBasedRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class UsageRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowUnregisteredCalls")
     public Boolean allowUnregisteredCalls;
+
     public UsageRule withAllowUnregisteredCalls(Boolean allowUnregisteredCalls) {
         this.allowUnregisteredCalls = allowUnregisteredCalls;
         return this;
@@ -29,6 +30,7 @@ public class UsageRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selector")
     public String selector;
+
     public UsageRule withSelector(String selector) {
         this.selector = selector;
         return this;
@@ -40,9 +42,11 @@ public class UsageRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipServiceControl")
     public Boolean skipServiceControl;
+
     public UsageRule withSkipServiceControl(Boolean skipServiceControl) {
         this.skipServiceControl = skipServiceControl;
         return this;
     }
     
+    public UsageRule(){}
 }

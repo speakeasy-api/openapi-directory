@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DataflowProjectsLocationsFlexTemplatesLaunchSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsFlexTemplatesLaunchSecurityOption1 option1;
+
     public DataflowProjectsLocationsFlexTemplatesLaunchSecurity withOption1(DataflowProjectsLocationsFlexTemplatesLaunchSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DataflowProjectsLocationsFlexTemplatesLaunchSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsFlexTemplatesLaunchSecurityOption2 option2;
+
     public DataflowProjectsLocationsFlexTemplatesLaunchSecurity withOption2(DataflowProjectsLocationsFlexTemplatesLaunchSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DataflowProjectsLocationsFlexTemplatesLaunchSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsFlexTemplatesLaunchSecurityOption3 option3;
+
     public DataflowProjectsLocationsFlexTemplatesLaunchSecurity withOption3(DataflowProjectsLocationsFlexTemplatesLaunchSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class DataflowProjectsLocationsFlexTemplatesLaunchSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsFlexTemplatesLaunchSecurityOption4 option4;
+
     public DataflowProjectsLocationsFlexTemplatesLaunchSecurity withOption4(DataflowProjectsLocationsFlexTemplatesLaunchSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public DataflowProjectsLocationsFlexTemplatesLaunchSecurity(){}
 }

@@ -12,9 +12,13 @@ public class UpdateTemplateActiveVersionRequestBody {
      */
     @JsonProperty("TemplateActiveVersionRequest")
     public UpdateTemplateActiveVersionRequestBodyTemplateActiveVersionRequest templateActiveVersionRequest;
+
     public UpdateTemplateActiveVersionRequestBody withTemplateActiveVersionRequest(UpdateTemplateActiveVersionRequestBodyTemplateActiveVersionRequest templateActiveVersionRequest) {
         this.templateActiveVersionRequest = templateActiveVersionRequest;
         return this;
     }
     
+    public UpdateTemplateActiveVersionRequestBody(@JsonProperty("TemplateActiveVersionRequest") UpdateTemplateActiveVersionRequestBodyTemplateActiveVersionRequest templateActiveVersionRequest) {
+        this.templateActiveVersionRequest = templateActiveVersionRequest;
+  }
 }

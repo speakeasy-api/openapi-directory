@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AggregatedGetStatisticsSingleRequest {
@@ -12,6 +13,7 @@ public class AggregatedGetStatisticsSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
     public String fromDay;
+
     public AggregatedGetStatisticsSingleRequest withFromDay(String fromDay) {
         this.fromDay = fromDay;
         return this;
@@ -22,6 +24,7 @@ public class AggregatedGetStatisticsSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hourly")
     public Boolean hourly;
+
     public AggregatedGetStatisticsSingleRequest withHourly(Boolean hourly) {
         this.hourly = hourly;
         return this;
@@ -29,6 +32,7 @@ public class AggregatedGetStatisticsSingleRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyFavorites")
     public String onlyFavorites;
+
     public AggregatedGetStatisticsSingleRequest withOnlyFavorites(String onlyFavorites) {
         this.onlyFavorites = onlyFavorites;
         return this;
@@ -39,6 +43,7 @@ public class AggregatedGetStatisticsSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
     public AggregatedGetStatisticsSingleTimeFrameEnum timeFrame;
+
     public AggregatedGetStatisticsSingleRequest withTimeFrame(AggregatedGetStatisticsSingleTimeFrameEnum timeFrame) {
         this.timeFrame = timeFrame;
         return this;
@@ -49,9 +54,13 @@ public class AggregatedGetStatisticsSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
     public String toDay;
+
     public AggregatedGetStatisticsSingleRequest withToDay(String toDay) {
         this.toDay = toDay;
         return this;
     }
     
+    public AggregatedGetStatisticsSingleRequest(@JsonProperty("timeFrame") AggregatedGetStatisticsSingleTimeFrameEnum timeFrame) {
+        this.timeFrame = timeFrame;
+  }
 }

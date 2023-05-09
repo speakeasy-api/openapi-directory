@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCustomVerificationEmailTemplateResponse {
@@ -12,6 +13,7 @@ public class DeleteCustomVerificationEmailTemplateResponse {
      */
     
     public Object badRequestException;
+
     public DeleteCustomVerificationEmailTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCustomVerificationEmailTemplateResponse {
     
     
     public String contentType;
+
     public DeleteCustomVerificationEmailTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCustomVerificationEmailTemplateResponse {
      */
     
     public java.util.Map<String, Object> deleteCustomVerificationEmailTemplateResponse;
+
     public DeleteCustomVerificationEmailTemplateResponse withDeleteCustomVerificationEmailTemplateResponse(java.util.Map<String, Object> deleteCustomVerificationEmailTemplateResponse) {
         this.deleteCustomVerificationEmailTemplateResponse = deleteCustomVerificationEmailTemplateResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCustomVerificationEmailTemplateResponse {
      */
     
     public Object notFoundException;
+
     public DeleteCustomVerificationEmailTemplateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteCustomVerificationEmailTemplateResponse {
     
     
     public Integer statusCode;
+
     public DeleteCustomVerificationEmailTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteCustomVerificationEmailTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCustomVerificationEmailTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteCustomVerificationEmailTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteCustomVerificationEmailTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteCustomVerificationEmailTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,8 +18,21 @@ public class GoogleCloudChannelV1Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associationInfo")
     public GoogleCloudChannelV1AssociationInfo associationInfo;
+
     public GoogleCloudChannelV1Entitlement withAssociationInfo(GoogleCloudChannelV1AssociationInfo associationInfo) {
         this.associationInfo = associationInfo;
+        return this;
+    }
+    
+    /**
+     * Optional. The billing account resource name that is used to pay for this entitlement.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("billingAccount")
+    public String billingAccount;
+
+    public GoogleCloudChannelV1Entitlement withBillingAccount(String billingAccount) {
+        this.billingAccount = billingAccount;
         return this;
     }
     
@@ -29,6 +42,7 @@ public class GoogleCloudChannelV1Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitmentSettings")
     public GoogleCloudChannelV1CommitmentSettings commitmentSettings;
+
     public GoogleCloudChannelV1Entitlement withCommitmentSettings(GoogleCloudChannelV1CommitmentSettings commitmentSettings) {
         this.commitmentSettings = commitmentSettings;
         return this;
@@ -40,6 +54,7 @@ public class GoogleCloudChannelV1Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudChannelV1Entitlement withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +66,7 @@ public class GoogleCloudChannelV1Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudChannelV1Entitlement withName(String name) {
         this.name = name;
         return this;
@@ -62,17 +78,19 @@ public class GoogleCloudChannelV1Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offer")
     public String offer;
+
     public GoogleCloudChannelV1Entitlement withOffer(String offer) {
         this.offer = offer;
         return this;
     }
     
     /**
-     * Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. For Google Workspace, the following Parameters may be accepted as input: - max_units: The maximum assignable units for a flexible offer OR - num_units: The total commitment for commitment-based offers The response may additionally include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. For GCP billing subaccounts, the following Parameter may be accepted as input: - display_name: The display name of the billing subaccount.
+     * Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. For Google Workspace, the following Parameters may be accepted as input: - max_units: The maximum assignable units for a flexible offer OR - num_units: The total commitment for commitment-based offers The response may additionally include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. For Google Cloud billing subaccounts, the following Parameter may be accepted as input: - display_name: The display name of the billing subaccount.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public GoogleCloudChannelV1Parameter[] parameters;
+
     public GoogleCloudChannelV1Entitlement withParameters(GoogleCloudChannelV1Parameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -84,6 +102,7 @@ public class GoogleCloudChannelV1Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisionedService")
     public GoogleCloudChannelV1ProvisionedService provisionedService;
+
     public GoogleCloudChannelV1Entitlement withProvisionedService(GoogleCloudChannelV1ProvisionedService provisionedService) {
         this.provisionedService = provisionedService;
         return this;
@@ -95,6 +114,7 @@ public class GoogleCloudChannelV1Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningState")
     public GoogleCloudChannelV1EntitlementProvisioningStateEnum provisioningState;
+
     public GoogleCloudChannelV1Entitlement withProvisioningState(GoogleCloudChannelV1EntitlementProvisioningStateEnum provisioningState) {
         this.provisioningState = provisioningState;
         return this;
@@ -106,6 +126,7 @@ public class GoogleCloudChannelV1Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchaseOrderId")
     public String purchaseOrderId;
+
     public GoogleCloudChannelV1Entitlement withPurchaseOrderId(String purchaseOrderId) {
         this.purchaseOrderId = purchaseOrderId;
         return this;
@@ -117,6 +138,7 @@ public class GoogleCloudChannelV1Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspensionReasons")
     public GoogleCloudChannelV1EntitlementSuspensionReasonsEnum[] suspensionReasons;
+
     public GoogleCloudChannelV1Entitlement withSuspensionReasons(GoogleCloudChannelV1EntitlementSuspensionReasonsEnum[] suspensionReasons) {
         this.suspensionReasons = suspensionReasons;
         return this;
@@ -128,6 +150,7 @@ public class GoogleCloudChannelV1Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trialSettings")
     public GoogleCloudChannelV1TrialSettings trialSettings;
+
     public GoogleCloudChannelV1Entitlement withTrialSettings(GoogleCloudChannelV1TrialSettings trialSettings) {
         this.trialSettings = trialSettings;
         return this;
@@ -139,9 +162,11 @@ public class GoogleCloudChannelV1Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudChannelV1Entitlement withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudChannelV1Entitlement(){}
 }

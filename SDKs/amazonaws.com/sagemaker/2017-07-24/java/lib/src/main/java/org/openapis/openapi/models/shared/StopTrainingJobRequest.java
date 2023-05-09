@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopTrainingJobRequest {
     @JsonProperty("TrainingJobName")
     public String trainingJobName;
+
     public StopTrainingJobRequest withTrainingJobName(String trainingJobName) {
         this.trainingJobName = trainingJobName;
         return this;
     }
     
+    public StopTrainingJobRequest(@JsonProperty("TrainingJobName") String trainingJobName) {
+        this.trainingJobName = trainingJobName;
+  }
 }

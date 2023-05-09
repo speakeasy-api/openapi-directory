@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteGlobalRuleRequest {
@@ -12,9 +13,13 @@ public class DeleteGlobalRuleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rule")
     public DeleteGlobalRuleRuleEnum rule;
+
     public DeleteGlobalRuleRequest withRule(DeleteGlobalRuleRuleEnum rule) {
         this.rule = rule;
         return this;
     }
     
+    public DeleteGlobalRuleRequest(@JsonProperty("rule") DeleteGlobalRuleRuleEnum rule) {
+        this.rule = rule;
+  }
 }

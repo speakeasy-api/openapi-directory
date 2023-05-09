@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyGlobalReplicationGroupRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyGlobalReplicationGroupActionEnum action;
+
     public GETModifyGlobalReplicationGroupRequest withAction(GETModifyGlobalReplicationGroupActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyGlobalReplicationGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplyImmediately")
     public Boolean applyImmediately;
+
     public GETModifyGlobalReplicationGroupRequest withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyGlobalReplicationGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutomaticFailoverEnabled")
     public Boolean automaticFailoverEnabled;
+
     public GETModifyGlobalReplicationGroupRequest withAutomaticFailoverEnabled(Boolean automaticFailoverEnabled) {
         this.automaticFailoverEnabled = automaticFailoverEnabled;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyGlobalReplicationGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheNodeType")
     public String cacheNodeType;
+
     public GETModifyGlobalReplicationGroupRequest withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyGlobalReplicationGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheParameterGroupName")
     public String cacheParameterGroupName;
+
     public GETModifyGlobalReplicationGroupRequest withCacheParameterGroupName(String cacheParameterGroupName) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyGlobalReplicationGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineVersion")
     public String engineVersion;
+
     public GETModifyGlobalReplicationGroupRequest withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -69,6 +76,7 @@ public class GETModifyGlobalReplicationGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalReplicationGroupDescription")
     public String globalReplicationGroupDescription;
+
     public GETModifyGlobalReplicationGroupRequest withGlobalReplicationGroupDescription(String globalReplicationGroupDescription) {
         this.globalReplicationGroupDescription = globalReplicationGroupDescription;
         return this;
@@ -79,6 +87,7 @@ public class GETModifyGlobalReplicationGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalReplicationGroupId")
     public String globalReplicationGroupId;
+
     public GETModifyGlobalReplicationGroupRequest withGlobalReplicationGroupId(String globalReplicationGroupId) {
         this.globalReplicationGroupId = globalReplicationGroupId;
         return this;
@@ -86,6 +95,7 @@ public class GETModifyGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyGlobalReplicationGroupVersionEnum version;
+
     public GETModifyGlobalReplicationGroupRequest withVersion(GETModifyGlobalReplicationGroupVersionEnum version) {
         this.version = version;
         return this;
@@ -93,6 +103,7 @@ public class GETModifyGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyGlobalReplicationGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -100,6 +111,7 @@ public class GETModifyGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyGlobalReplicationGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -107,6 +119,7 @@ public class GETModifyGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyGlobalReplicationGroupRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -114,6 +127,7 @@ public class GETModifyGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyGlobalReplicationGroupRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -121,6 +135,7 @@ public class GETModifyGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyGlobalReplicationGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -128,6 +143,7 @@ public class GETModifyGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyGlobalReplicationGroupRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -135,9 +151,16 @@ public class GETModifyGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyGlobalReplicationGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyGlobalReplicationGroupRequest(@JsonProperty("Action") GETModifyGlobalReplicationGroupActionEnum action, @JsonProperty("ApplyImmediately") Boolean applyImmediately, @JsonProperty("GlobalReplicationGroupId") String globalReplicationGroupId, @JsonProperty("Version") GETModifyGlobalReplicationGroupVersionEnum version) {
+        this.action = action;
+        this.applyImmediately = applyImmediately;
+        this.globalReplicationGroupId = globalReplicationGroupId;
+        this.version = version;
+  }
 }

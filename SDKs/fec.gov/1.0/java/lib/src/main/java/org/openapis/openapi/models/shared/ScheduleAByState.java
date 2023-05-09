@@ -15,6 +15,7 @@ public class ScheduleAByState {
      */
     @JsonProperty("committee_id")
     public String committeeId;
+
     public ScheduleAByState withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -27,6 +28,7 @@ public class ScheduleAByState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public ScheduleAByState withCount(Integer count) {
         this.count = count;
         return this;
@@ -40,6 +42,7 @@ public class ScheduleAByState {
      */
     @JsonProperty("cycle")
     public Integer cycle;
+
     public ScheduleAByState withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -50,6 +53,7 @@ public class ScheduleAByState {
      */
     @JsonProperty("state")
     public String state;
+
     public ScheduleAByState withState(String state) {
         this.state = state;
         return this;
@@ -60,6 +64,7 @@ public class ScheduleAByState {
      */
     @JsonProperty("state_full")
     public String stateFull;
+
     public ScheduleAByState withStateFull(String stateFull) {
         this.stateFull = stateFull;
         return this;
@@ -71,9 +76,16 @@ public class ScheduleAByState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public ScheduleAByState withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public ScheduleAByState(@JsonProperty("committee_id") String committeeId, @JsonProperty("cycle") Integer cycle, @JsonProperty("state") String state, @JsonProperty("state_full") String stateFull) {
+        this.committeeId = committeeId;
+        this.cycle = cycle;
+        this.state = state;
+        this.stateFull = stateFull;
+  }
 }

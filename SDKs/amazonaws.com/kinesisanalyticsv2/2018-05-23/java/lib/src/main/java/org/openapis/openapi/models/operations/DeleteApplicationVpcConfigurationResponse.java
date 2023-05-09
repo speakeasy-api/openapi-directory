@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApplicationVpcConfigurationResponse {
@@ -12,6 +13,7 @@ public class DeleteApplicationVpcConfigurationResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteApplicationVpcConfigurationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApplicationVpcConfigurationResponse {
     
     
     public String contentType;
+
     public DeleteApplicationVpcConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteApplicationVpcConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteApplicationVpcConfigurationResponse deleteApplicationVpcConfigurationResponse;
+
     public DeleteApplicationVpcConfigurationResponse withDeleteApplicationVpcConfigurationResponse(org.openapis.openapi.models.shared.DeleteApplicationVpcConfigurationResponse deleteApplicationVpcConfigurationResponse) {
         this.deleteApplicationVpcConfigurationResponse = deleteApplicationVpcConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteApplicationVpcConfigurationResponse {
      */
     
     public Object invalidApplicationConfigurationException;
+
     public DeleteApplicationVpcConfigurationResponse withInvalidApplicationConfigurationException(Object invalidApplicationConfigurationException) {
         this.invalidApplicationConfigurationException = invalidApplicationConfigurationException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteApplicationVpcConfigurationResponse {
      */
     
     public Object invalidArgumentException;
+
     public DeleteApplicationVpcConfigurationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteApplicationVpcConfigurationResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteApplicationVpcConfigurationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteApplicationVpcConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteApplicationVpcConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteApplicationVpcConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteApplicationVpcConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteApplicationVpcConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApplicationVpcConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteApplicationVpcConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

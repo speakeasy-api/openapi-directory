@@ -15,6 +15,7 @@ public class SendHeartbeatRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentMetrics")
     public org.openapis.openapi.models.shared.EdgeMetric[] agentMetrics;
+
     public SendHeartbeatRequestBody withAgentMetrics(org.openapis.openapi.models.shared.EdgeMetric[] agentMetrics) {
         this.agentMetrics = agentMetrics;
         return this;
@@ -25,6 +26,7 @@ public class SendHeartbeatRequestBody {
      */
     @JsonProperty("AgentVersion")
     public String agentVersion;
+
     public SendHeartbeatRequestBody withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -36,6 +38,7 @@ public class SendHeartbeatRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentResult")
     public SendHeartbeatRequestBodyDeploymentResult deploymentResult;
+
     public SendHeartbeatRequestBody withDeploymentResult(SendHeartbeatRequestBodyDeploymentResult deploymentResult) {
         this.deploymentResult = deploymentResult;
         return this;
@@ -46,6 +49,7 @@ public class SendHeartbeatRequestBody {
      */
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public SendHeartbeatRequestBody withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -56,6 +60,7 @@ public class SendHeartbeatRequestBody {
      */
     @JsonProperty("DeviceName")
     public String deviceName;
+
     public SendHeartbeatRequestBody withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -67,9 +72,15 @@ public class SendHeartbeatRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Models")
     public org.openapis.openapi.models.shared.Model[] models;
+
     public SendHeartbeatRequestBody withModels(org.openapis.openapi.models.shared.Model[] models) {
         this.models = models;
         return this;
     }
     
+    public SendHeartbeatRequestBody(@JsonProperty("AgentVersion") String agentVersion, @JsonProperty("DeviceFleetName") String deviceFleetName, @JsonProperty("DeviceName") String deviceName) {
+        this.agentVersion = agentVersion;
+        this.deviceFleetName = deviceFleetName;
+        this.deviceName = deviceName;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateMacSecKeyRequest {
     @JsonProperty("connectionId")
     public String connectionId;
+
     public DisassociateMacSecKeyRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -16,9 +17,14 @@ public class DisassociateMacSecKeyRequest {
     
     @JsonProperty("secretARN")
     public String secretARN;
+
     public DisassociateMacSecKeyRequest withSecretARN(String secretARN) {
         this.secretARN = secretARN;
         return this;
     }
     
+    public DisassociateMacSecKeyRequest(@JsonProperty("connectionId") String connectionId, @JsonProperty("secretARN") String secretARN) {
+        this.connectionId = connectionId;
+        this.secretARN = secretARN;
+  }
 }

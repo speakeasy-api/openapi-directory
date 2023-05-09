@@ -18,6 +18,7 @@ public class ConfigManagementHierarchyControllerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableHierarchicalResourceQuota")
     public Boolean enableHierarchicalResourceQuota;
+
     public ConfigManagementHierarchyControllerConfig withEnableHierarchicalResourceQuota(Boolean enableHierarchicalResourceQuota) {
         this.enableHierarchicalResourceQuota = enableHierarchicalResourceQuota;
         return this;
@@ -29,6 +30,7 @@ public class ConfigManagementHierarchyControllerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablePodTreeLabels")
     public Boolean enablePodTreeLabels;
+
     public ConfigManagementHierarchyControllerConfig withEnablePodTreeLabels(Boolean enablePodTreeLabels) {
         this.enablePodTreeLabels = enablePodTreeLabels;
         return this;
@@ -40,9 +42,11 @@ public class ConfigManagementHierarchyControllerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ConfigManagementHierarchyControllerConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public ConfigManagementHierarchyControllerConfig(){}
 }

@@ -18,6 +18,7 @@ public class MetricRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public MetricRequestMetricEnum metric;
+
     public MetricRequest withMetric(MetricRequestMetricEnum metric) {
         this.metric = metric;
         return this;
@@ -29,9 +30,11 @@ public class MetricRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public MetricRequestOptionsEnum[] options;
+
     public MetricRequest withOptions(MetricRequestOptionsEnum[] options) {
         this.options = options;
         return this;
     }
     
+    public MetricRequest(){}
 }

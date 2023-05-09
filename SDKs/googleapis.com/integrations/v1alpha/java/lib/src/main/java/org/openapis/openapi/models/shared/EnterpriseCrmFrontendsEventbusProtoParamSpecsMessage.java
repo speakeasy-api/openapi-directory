@@ -12,9 +12,11 @@ public class EnterpriseCrmFrontendsEventbusProtoParamSpecsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public EnterpriseCrmFrontendsEventbusProtoParamSpecEntry[] parameters;
+
     public EnterpriseCrmFrontendsEventbusProtoParamSpecsMessage withParameters(EnterpriseCrmFrontendsEventbusProtoParamSpecEntry[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public EnterpriseCrmFrontendsEventbusProtoParamSpecsMessage(){}
 }

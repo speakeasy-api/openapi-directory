@@ -12,9 +12,11 @@ public class PostSearchVersionNumberSearchAlongRouteQueryExtRequestBodyRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("points")
     public PostSearchVersionNumberSearchAlongRouteQueryExtRequestBodyRoutePoints[] points;
+
     public PostSearchVersionNumberSearchAlongRouteQueryExtRequestBodyRoute withPoints(PostSearchVersionNumberSearchAlongRouteQueryExtRequestBodyRoutePoints[] points) {
         this.points = points;
         return this;
     }
     
+    public PostSearchVersionNumberSearchAlongRouteQueryExtRequestBodyRoute(){}
 }

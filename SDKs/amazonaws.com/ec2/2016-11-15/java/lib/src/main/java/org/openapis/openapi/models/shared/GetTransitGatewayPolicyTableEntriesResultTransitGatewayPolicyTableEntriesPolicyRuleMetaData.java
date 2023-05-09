@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntriesPolicyRuleMetaData {
     
     public String metaDataKey;
+
     public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntriesPolicyRuleMetaData withMetaDataKey(String metaDataKey) {
         this.metaDataKey = metaDataKey;
         return this;
@@ -19,9 +20,11 @@ public class GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableE
     
     
     public String metaDataValue;
+
     public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntriesPolicyRuleMetaData withMetaDataValue(String metaDataValue) {
         this.metaDataValue = metaDataValue;
         return this;
     }
     
+    public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntriesPolicyRuleMetaData(){}
 }

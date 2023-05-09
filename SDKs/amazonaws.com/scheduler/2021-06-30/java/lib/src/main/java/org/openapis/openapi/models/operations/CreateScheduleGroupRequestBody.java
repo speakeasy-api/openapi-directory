@@ -15,6 +15,7 @@ public class CreateScheduleGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateScheduleGroupRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,9 +27,11 @@ public class CreateScheduleGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateScheduleGroupRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateScheduleGroupRequestBody(){}
 }

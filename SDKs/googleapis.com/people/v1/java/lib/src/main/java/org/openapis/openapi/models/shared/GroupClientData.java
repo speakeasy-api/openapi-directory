@@ -18,6 +18,7 @@ public class GroupClientData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GroupClientData withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class GroupClientData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GroupClientData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GroupClientData(){}
 }

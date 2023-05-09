@@ -60,11 +60,9 @@ public class Labels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivelabelsLabelsCreateResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsCreateResponse() {{
+        org.openapis.openapi.models.operations.DrivelabelsLabelsCreateResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsCreateResponse(contentType, httpRes.statusCode()) {{
             googleAppsDriveLabelsV2Label = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class Labels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivelabelsLabelsDeltaResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsDeltaResponse() {{
+        org.openapis.openapi.models.operations.DrivelabelsLabelsDeltaResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsDeltaResponse(contentType, httpRes.statusCode()) {{
             googleAppsDriveLabelsV2DeltaUpdateLabelResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,11 +148,9 @@ public class Labels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivelabelsLabelsDisableResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsDisableResponse() {{
+        org.openapis.openapi.models.operations.DrivelabelsLabelsDisableResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsDisableResponse(contentType, httpRes.statusCode()) {{
             googleAppsDriveLabelsV2Label = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -198,11 +192,9 @@ public class Labels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivelabelsLabelsEnableResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsEnableResponse() {{
+        org.openapis.openapi.models.operations.DrivelabelsLabelsEnableResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsEnableResponse(contentType, httpRes.statusCode()) {{
             googleAppsDriveLabelsV2Label = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +234,9 @@ public class Labels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivelabelsLabelsListResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsListResponse() {{
+        org.openapis.openapi.models.operations.DrivelabelsLabelsListResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsListResponse(contentType, httpRes.statusCode()) {{
             googleAppsDriveLabelsV2ListLabelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,11 +278,9 @@ public class Labels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivelabelsLabelsPublishResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsPublishResponse() {{
+        org.openapis.openapi.models.operations.DrivelabelsLabelsPublishResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsPublishResponse(contentType, httpRes.statusCode()) {{
             googleAppsDriveLabelsV2Label = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -332,11 +320,9 @@ public class Labels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsLocksListResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsLocksListResponse() {{
+        org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsLocksListResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsLocksListResponse(contentType, httpRes.statusCode()) {{
             googleAppsDriveLabelsV2ListLabelLocksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -378,11 +364,9 @@ public class Labels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchDeleteResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchDeleteResponse() {{
+        org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchDeleteResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -424,11 +408,9 @@ public class Labels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchUpdateResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchUpdateResponse() {{
+        org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchUpdateResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchUpdateResponse(contentType, httpRes.statusCode()) {{
             googleAppsDriveLabelsV2BatchUpdateLabelPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -470,11 +452,9 @@ public class Labels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsCreateResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsCreateResponse() {{
+        org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsCreateResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsCreateResponse(contentType, httpRes.statusCode()) {{
             googleAppsDriveLabelsV2LabelPermission = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -514,11 +494,9 @@ public class Labels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsDeleteResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsDeleteResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -558,11 +536,9 @@ public class Labels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsListResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsListResponse() {{
+        org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsListResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsListResponse(contentType, httpRes.statusCode()) {{
             googleAppsDriveLabelsV2ListLabelPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -604,11 +580,9 @@ public class Labels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsUpdatePermissionsResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsUpdatePermissionsResponse() {{
+        org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsUpdatePermissionsResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsUpdatePermissionsResponse(contentType, httpRes.statusCode()) {{
             googleAppsDriveLabelsV2LabelPermission = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -650,11 +624,9 @@ public class Labels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivelabelsLabelsUpdateLabelCopyModeResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsUpdateLabelCopyModeResponse() {{
+        org.openapis.openapi.models.operations.DrivelabelsLabelsUpdateLabelCopyModeResponse res = new org.openapis.openapi.models.operations.DrivelabelsLabelsUpdateLabelCopyModeResponse(contentType, httpRes.statusCode()) {{
             googleAppsDriveLabelsV2Label = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

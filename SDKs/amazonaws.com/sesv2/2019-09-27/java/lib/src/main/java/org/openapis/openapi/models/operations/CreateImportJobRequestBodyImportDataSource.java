@@ -15,6 +15,7 @@ public class CreateImportJobRequestBodyImportDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataFormat")
     public org.openapis.openapi.models.shared.DataFormatEnum dataFormat;
+
     public CreateImportJobRequestBodyImportDataSource withDataFormat(org.openapis.openapi.models.shared.DataFormatEnum dataFormat) {
         this.dataFormat = dataFormat;
         return this;
@@ -23,9 +24,11 @@ public class CreateImportJobRequestBodyImportDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Url")
     public String s3Url;
+
     public CreateImportJobRequestBodyImportDataSource withS3Url(String s3Url) {
         this.s3Url = s3Url;
         return this;
     }
     
+    public CreateImportJobRequestBodyImportDataSource(){}
 }

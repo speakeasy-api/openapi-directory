@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfareportingRemarketingListsPatchResponse {
     
     public String contentType;
+
     public DfareportingRemarketingListsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DfareportingRemarketingListsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.RemarketingList remarketingList;
+
     public DfareportingRemarketingListsPatchResponse withRemarketingList(org.openapis.openapi.models.shared.RemarketingList remarketingList) {
         this.remarketingList = remarketingList;
         return this;
@@ -26,6 +29,7 @@ public class DfareportingRemarketingListsPatchResponse {
     
     
     public Integer statusCode;
+
     public DfareportingRemarketingListsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DfareportingRemarketingListsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfareportingRemarketingListsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DfareportingRemarketingListsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

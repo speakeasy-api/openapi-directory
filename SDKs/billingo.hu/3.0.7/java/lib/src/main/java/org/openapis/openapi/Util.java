@@ -53,14 +53,12 @@ public class Util {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIdResponse res = new org.openapis.openapi.models.operations.GetIdResponse() {{
+        org.openapis.openapi.models.operations.GetIdResponse res = new org.openapis.openapi.models.operations.GetIdResponse(contentType, httpRes.statusCode()) {{
             id = null;
             clientErrorResponse = null;
             validationErrorResponse = null;
             serverErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -22,6 +22,7 @@ public class MarketingEventCreateRequestParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customProperties")
     public PropertyValue[] customProperties;
+
     public MarketingEventCreateRequestParams withCustomProperties(PropertyValue[] customProperties) {
         this.customProperties = customProperties;
         return this;
@@ -35,6 +36,7 @@ public class MarketingEventCreateRequestParams {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDateTime")
     public OffsetDateTime endDateTime;
+
     public MarketingEventCreateRequestParams withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -46,6 +48,7 @@ public class MarketingEventCreateRequestParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventCancelled")
     public Boolean eventCancelled;
+
     public MarketingEventCreateRequestParams withEventCancelled(Boolean eventCancelled) {
         this.eventCancelled = eventCancelled;
         return this;
@@ -57,6 +60,7 @@ public class MarketingEventCreateRequestParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventDescription")
     public String eventDescription;
+
     public MarketingEventCreateRequestParams withEventDescription(String eventDescription) {
         this.eventDescription = eventDescription;
         return this;
@@ -67,6 +71,7 @@ public class MarketingEventCreateRequestParams {
      */
     @JsonProperty("eventName")
     public String eventName;
+
     public MarketingEventCreateRequestParams withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -77,6 +82,7 @@ public class MarketingEventCreateRequestParams {
      */
     @JsonProperty("eventOrganizer")
     public String eventOrganizer;
+
     public MarketingEventCreateRequestParams withEventOrganizer(String eventOrganizer) {
         this.eventOrganizer = eventOrganizer;
         return this;
@@ -88,6 +94,7 @@ public class MarketingEventCreateRequestParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public String eventType;
+
     public MarketingEventCreateRequestParams withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -99,6 +106,7 @@ public class MarketingEventCreateRequestParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventUrl")
     public String eventUrl;
+
     public MarketingEventCreateRequestParams withEventUrl(String eventUrl) {
         this.eventUrl = eventUrl;
         return this;
@@ -109,6 +117,7 @@ public class MarketingEventCreateRequestParams {
      */
     @JsonProperty("externalAccountId")
     public String externalAccountId;
+
     public MarketingEventCreateRequestParams withExternalAccountId(String externalAccountId) {
         this.externalAccountId = externalAccountId;
         return this;
@@ -119,6 +128,7 @@ public class MarketingEventCreateRequestParams {
      */
     @JsonProperty("externalEventId")
     public String externalEventId;
+
     public MarketingEventCreateRequestParams withExternalEventId(String externalEventId) {
         this.externalEventId = externalEventId;
         return this;
@@ -132,9 +142,16 @@ public class MarketingEventCreateRequestParams {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDateTime")
     public OffsetDateTime startDateTime;
+
     public MarketingEventCreateRequestParams withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
     }
     
+    public MarketingEventCreateRequestParams(@JsonProperty("eventName") String eventName, @JsonProperty("eventOrganizer") String eventOrganizer, @JsonProperty("externalAccountId") String externalAccountId, @JsonProperty("externalEventId") String externalEventId) {
+        this.eventName = eventName;
+        this.eventOrganizer = eventOrganizer;
+        this.externalAccountId = externalAccountId;
+        this.externalEventId = externalEventId;
+  }
 }

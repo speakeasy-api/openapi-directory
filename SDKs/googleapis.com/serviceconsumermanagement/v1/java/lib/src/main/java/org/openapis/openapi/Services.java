@@ -59,11 +59,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesSearchResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesSearchResponse() {{
+        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesSearchResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesSearchResponse(contentType, httpRes.statusCode()) {{
             searchTenancyUnitsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsAddProjectResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsAddProjectResponse() {{
+        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsAddProjectResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsAddProjectResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsApplyProjectConfigResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsApplyProjectConfigResponse() {{
+        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsApplyProjectConfigResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsApplyProjectConfigResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +197,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsAttachProjectResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsAttachProjectResponse() {{
+        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsAttachProjectResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsAttachProjectResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,11 +243,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsCreateResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsCreateResponse() {{
+        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsCreateResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsCreateResponse(contentType, httpRes.statusCode()) {{
             tenancyUnit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -297,11 +287,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsDeleteResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsDeleteResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,11 +333,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsDeleteProjectResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsDeleteProjectResponse() {{
+        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsDeleteProjectResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsDeleteProjectResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -391,11 +377,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsListResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsListResponse() {{
+        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsListResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsListResponse(contentType, httpRes.statusCode()) {{
             listTenancyUnitsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -439,11 +423,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsRemoveProjectResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsRemoveProjectResponse() {{
+        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsRemoveProjectResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsRemoveProjectResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -487,11 +469,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsUndeleteProjectResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsUndeleteProjectResponse() {{
+        org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsUndeleteProjectResponse res = new org.openapis.openapi.models.operations.ServiceconsumermanagementServicesTenancyUnitsUndeleteProjectResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

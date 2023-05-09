@@ -15,6 +15,7 @@ public class PhysicalConnectionRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public PhysicalConnectionRequirements withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -23,6 +24,7 @@ public class PhysicalConnectionRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIdList")
     public String[] securityGroupIdList;
+
     public PhysicalConnectionRequirements withSecurityGroupIdList(String[] securityGroupIdList) {
         this.securityGroupIdList = securityGroupIdList;
         return this;
@@ -31,9 +33,11 @@ public class PhysicalConnectionRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public PhysicalConnectionRequirements withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public PhysicalConnectionRequirements(){}
 }

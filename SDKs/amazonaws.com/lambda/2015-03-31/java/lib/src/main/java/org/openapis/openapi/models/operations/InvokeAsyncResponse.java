@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InvokeAsyncResponse {
     
     public String contentType;
+
     public InvokeAsyncResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InvokeAsyncResponse {
      */
     
     public Object invalidRequestContentException;
+
     public InvokeAsyncResponse withInvalidRequestContentException(Object invalidRequestContentException) {
         this.invalidRequestContentException = invalidRequestContentException;
         return this;
@@ -29,6 +32,7 @@ public class InvokeAsyncResponse {
      */
     
     public Object invalidRuntimeException;
+
     public InvokeAsyncResponse withInvalidRuntimeException(Object invalidRuntimeException) {
         this.invalidRuntimeException = invalidRuntimeException;
         return this;
@@ -39,6 +43,7 @@ public class InvokeAsyncResponse {
      */
     
     public org.openapis.openapi.models.shared.InvokeAsyncResponse invokeAsyncResponse;
+
     public InvokeAsyncResponse withInvokeAsyncResponse(org.openapis.openapi.models.shared.InvokeAsyncResponse invokeAsyncResponse) {
         this.invokeAsyncResponse = invokeAsyncResponse;
         return this;
@@ -49,6 +54,7 @@ public class InvokeAsyncResponse {
      */
     
     public Object resourceConflictException;
+
     public InvokeAsyncResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -59,6 +65,7 @@ public class InvokeAsyncResponse {
      */
     
     public Object resourceNotFoundException;
+
     public InvokeAsyncResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class InvokeAsyncResponse {
      */
     
     public Object serviceException;
+
     public InvokeAsyncResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class InvokeAsyncResponse {
     
     
     public Integer statusCode;
+
     public InvokeAsyncResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class InvokeAsyncResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InvokeAsyncResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public InvokeAsyncResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

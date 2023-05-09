@@ -15,9 +15,11 @@ public class SnapshotCreationModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SnapshotCreationModel withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public SnapshotCreationModel(){}
 }

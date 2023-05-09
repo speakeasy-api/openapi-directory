@@ -15,6 +15,7 @@ public class Nodata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public Nodata withError(String error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Nodata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public Nodata withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public Nodata(){}
 }

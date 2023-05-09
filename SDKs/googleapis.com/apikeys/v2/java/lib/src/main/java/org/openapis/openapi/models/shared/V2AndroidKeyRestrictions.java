@@ -18,9 +18,11 @@ public class V2AndroidKeyRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedApplications")
     public V2AndroidApplication[] allowedApplications;
+
     public V2AndroidKeyRestrictions withAllowedApplications(V2AndroidApplication[] allowedApplications) {
         this.allowedApplications = allowedApplications;
         return this;
     }
     
+    public V2AndroidKeyRestrictions(){}
 }

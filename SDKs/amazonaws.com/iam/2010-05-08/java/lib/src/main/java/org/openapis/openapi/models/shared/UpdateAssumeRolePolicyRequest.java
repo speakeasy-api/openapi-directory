@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateAssumeRolePolicyRequest {
     
     public String policyDocument;
+
     public UpdateAssumeRolePolicyRequest withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -16,9 +17,14 @@ public class UpdateAssumeRolePolicyRequest {
     
     
     public String roleName;
+
     public UpdateAssumeRolePolicyRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
     }
     
+    public UpdateAssumeRolePolicyRequest(@JsonProperty("PolicyDocument") String policyDocument, @JsonProperty("RoleName") String roleName) {
+        this.policyDocument = policyDocument;
+        this.roleName = roleName;
+  }
 }

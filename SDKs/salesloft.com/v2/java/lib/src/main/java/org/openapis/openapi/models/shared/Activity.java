@@ -15,9 +15,11 @@ public class Activity {
      */
     
     public OffsetDateTime updatedAt;
+
     public Activity withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Activity(){}
 }

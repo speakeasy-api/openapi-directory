@@ -12,9 +12,13 @@ public class MapBeezUPColumnRequest {
      */
     @JsonProperty("beezUPColumnName")
     public String beezUPColumnName;
+
     public MapBeezUPColumnRequest withBeezUPColumnName(String beezUPColumnName) {
         this.beezUPColumnName = beezUPColumnName;
         return this;
     }
     
+    public MapBeezUPColumnRequest(@JsonProperty("beezUPColumnName") String beezUPColumnName) {
+        this.beezUPColumnName = beezUPColumnName;
+  }
 }

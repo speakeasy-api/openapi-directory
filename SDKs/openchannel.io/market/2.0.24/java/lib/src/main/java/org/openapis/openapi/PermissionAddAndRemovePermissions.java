@@ -54,10 +54,8 @@ public class PermissionAddAndRemovePermissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePermissionAppsAppIdResponse res = new org.openapis.openapi.models.operations.DeletePermissionAppsAppIdResponse() {{
+        org.openapis.openapi.models.operations.DeletePermissionAppsAppIdResponse res = new org.openapis.openapi.models.operations.DeletePermissionAppsAppIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -93,11 +91,9 @@ public class PermissionAddAndRemovePermissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPermissionAppsAppIdResponse res = new org.openapis.openapi.models.operations.GetPermissionAppsAppIdResponse() {{
+        org.openapis.openapi.models.operations.GetPermissionAppsAppIdResponse res = new org.openapis.openapi.models.operations.GetPermissionAppsAppIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -139,11 +135,9 @@ public class PermissionAddAndRemovePermissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPermissionAppsAppIdResponse res = new org.openapis.openapi.models.operations.PostPermissionAppsAppIdResponse() {{
+        org.openapis.openapi.models.operations.PostPermissionAppsAppIdResponse res = new org.openapis.openapi.models.operations.PostPermissionAppsAppIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {

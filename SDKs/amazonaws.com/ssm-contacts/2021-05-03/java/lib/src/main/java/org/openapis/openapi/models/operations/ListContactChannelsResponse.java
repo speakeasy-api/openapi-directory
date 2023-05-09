@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListContactChannelsResponse {
@@ -12,6 +13,7 @@ public class ListContactChannelsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListContactChannelsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListContactChannelsResponse {
     
     
     public String contentType;
+
     public ListContactChannelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListContactChannelsResponse {
      */
     
     public Object dataEncryptionException;
+
     public ListContactChannelsResponse withDataEncryptionException(Object dataEncryptionException) {
         this.dataEncryptionException = dataEncryptionException;
         return this;
@@ -39,6 +43,7 @@ public class ListContactChannelsResponse {
      */
     
     public Object internalServerException;
+
     public ListContactChannelsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListContactChannelsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListContactChannelsResult listContactChannelsResult;
+
     public ListContactChannelsResponse withListContactChannelsResult(org.openapis.openapi.models.shared.ListContactChannelsResult listContactChannelsResult) {
         this.listContactChannelsResult = listContactChannelsResult;
         return this;
@@ -59,6 +65,7 @@ public class ListContactChannelsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListContactChannelsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListContactChannelsResponse {
     
     
     public Integer statusCode;
+
     public ListContactChannelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListContactChannelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListContactChannelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListContactChannelsResponse {
      */
     
     public Object throttlingException;
+
     public ListContactChannelsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListContactChannelsResponse {
      */
     
     public Object validationException;
+
     public ListContactChannelsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListContactChannelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

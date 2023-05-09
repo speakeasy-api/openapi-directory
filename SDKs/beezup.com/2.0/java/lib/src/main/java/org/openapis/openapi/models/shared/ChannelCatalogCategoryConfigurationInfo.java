@@ -17,6 +17,7 @@ public class ChannelCatalogCategoryConfigurationInfo {
      */
     @JsonProperty("catalogCategoryPath")
     public String[] catalogCategoryPath;
+
     public ChannelCatalogCategoryConfigurationInfo withCatalogCategoryPath(String[] catalogCategoryPath) {
         this.catalogCategoryPath = catalogCategoryPath;
         return this;
@@ -28,6 +29,7 @@ public class ChannelCatalogCategoryConfigurationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCategoryPath")
     public String[] channelCategoryPath;
+
     public ChannelCatalogCategoryConfigurationInfo withChannelCategoryPath(String[] channelCategoryPath) {
         this.channelCategoryPath = channelCategoryPath;
         return this;
@@ -39,6 +41,7 @@ public class ChannelCatalogCategoryConfigurationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costValue")
     public Double costValue;
+
     public ChannelCatalogCategoryConfigurationInfo withCostValue(Double costValue) {
         this.costValue = costValue;
         return this;
@@ -46,9 +49,14 @@ public class ChannelCatalogCategoryConfigurationInfo {
     
     @JsonProperty("links")
     public ChannelCatalogCategoryMappingInfoLinks links;
+
     public ChannelCatalogCategoryConfigurationInfo withLinks(ChannelCatalogCategoryMappingInfoLinks links) {
         this.links = links;
         return this;
     }
     
+    public ChannelCatalogCategoryConfigurationInfo(@JsonProperty("catalogCategoryPath") String[] catalogCategoryPath, @JsonProperty("links") ChannelCatalogCategoryMappingInfoLinks links) {
+        this.catalogCategoryPath = catalogCategoryPath;
+        this.links = links;
+  }
 }

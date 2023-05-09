@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCarrierGatewaysRequestFilters {
     
     public String name;
+
     public DescribeCarrierGatewaysRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeCarrierGatewaysRequestFilters {
     
     
     public String[] values;
+
     public DescribeCarrierGatewaysRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeCarrierGatewaysRequestFilters(){}
 }

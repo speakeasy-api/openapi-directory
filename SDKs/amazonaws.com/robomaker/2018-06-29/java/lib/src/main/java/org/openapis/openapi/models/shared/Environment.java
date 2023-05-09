@@ -15,9 +15,11 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public Environment withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public Environment(){}
 }

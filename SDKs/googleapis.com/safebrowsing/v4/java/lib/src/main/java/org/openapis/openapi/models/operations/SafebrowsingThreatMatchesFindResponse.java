@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SafebrowsingThreatMatchesFindResponse {
     
     public String contentType;
+
     public SafebrowsingThreatMatchesFindResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SafebrowsingThreatMatchesFindResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleSecuritySafebrowsingV4FindThreatMatchesResponse googleSecuritySafebrowsingV4FindThreatMatchesResponse;
+
     public SafebrowsingThreatMatchesFindResponse withGoogleSecuritySafebrowsingV4FindThreatMatchesResponse(org.openapis.openapi.models.shared.GoogleSecuritySafebrowsingV4FindThreatMatchesResponse googleSecuritySafebrowsingV4FindThreatMatchesResponse) {
         this.googleSecuritySafebrowsingV4FindThreatMatchesResponse = googleSecuritySafebrowsingV4FindThreatMatchesResponse;
         return this;
@@ -26,6 +29,7 @@ public class SafebrowsingThreatMatchesFindResponse {
     
     
     public Integer statusCode;
+
     public SafebrowsingThreatMatchesFindResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SafebrowsingThreatMatchesFindResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SafebrowsingThreatMatchesFindResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SafebrowsingThreatMatchesFindResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

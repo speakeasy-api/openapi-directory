@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEvidenceGraphTableRequest {
@@ -12,6 +13,7 @@ public class GetEvidenceGraphTableRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetEvidenceGraphTableRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,13 @@ public class GetEvidenceGraphTableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_publication")
     public Boolean isPublication;
+
     public GetEvidenceGraphTableRequest withIsPublication(Boolean isPublication) {
         this.isPublication = isPublication;
         return this;
     }
     
+    public GetEvidenceGraphTableRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

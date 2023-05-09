@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostalCode {
     @JsonProperty("value")
     public String value;
+
     public PostalCode withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PostalCode(@JsonProperty("value") String value) {
+        this.value = value;
+  }
 }

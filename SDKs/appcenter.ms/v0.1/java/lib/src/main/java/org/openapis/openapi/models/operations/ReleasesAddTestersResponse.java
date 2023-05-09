@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReleasesAddTestersResponse {
     
     public String contentType;
+
     public ReleasesAddTestersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReleasesAddTestersResponse {
     
     
     public Integer statusCode;
+
     public ReleasesAddTestersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReleasesAddTestersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReleasesAddTestersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReleasesAddTestersResponse {
      */
     
     public ReleasesAddTesters201ApplicationJSON releasesAddTesters201ApplicationJSONObject;
+
     public ReleasesAddTestersResponse withReleasesAddTesters201ApplicationJSONObject(ReleasesAddTesters201ApplicationJSON releasesAddTesters201ApplicationJSONObject) {
         this.releasesAddTesters201ApplicationJSONObject = releasesAddTesters201ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ReleasesAddTestersResponse {
      */
     
     public ReleasesAddTesters400ApplicationJSON releasesAddTesters400ApplicationJSONObject;
+
     public ReleasesAddTestersResponse withReleasesAddTesters400ApplicationJSONObject(ReleasesAddTesters400ApplicationJSON releasesAddTesters400ApplicationJSONObject) {
         this.releasesAddTesters400ApplicationJSONObject = releasesAddTesters400ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class ReleasesAddTestersResponse {
      */
     
     public ReleasesAddTesters404ApplicationJSON releasesAddTesters404ApplicationJSONObject;
+
     public ReleasesAddTestersResponse withReleasesAddTesters404ApplicationJSONObject(ReleasesAddTesters404ApplicationJSON releasesAddTesters404ApplicationJSONObject) {
         this.releasesAddTesters404ApplicationJSONObject = releasesAddTesters404ApplicationJSONObject;
         return this;
     }
     
+    public ReleasesAddTestersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

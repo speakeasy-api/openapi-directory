@@ -58,11 +58,9 @@ public class Employees {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2EmployeesResponse res = new org.openapis.openapi.models.operations.GetV2EmployeesResponse() {{
+        org.openapis.openapi.models.operations.GetV2EmployeesResponse res = new org.openapis.openapi.models.operations.GetV2EmployeesResponse(contentType, httpRes.statusCode()) {{
             listEmployeesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class Employees {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2EmployeesIdResponse res = new org.openapis.openapi.models.operations.GetV2EmployeesIdResponse() {{
+        org.openapis.openapi.models.operations.GetV2EmployeesIdResponse res = new org.openapis.openapi.models.operations.GetV2EmployeesIdResponse(contentType, httpRes.statusCode()) {{
             retrieveEmployeeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

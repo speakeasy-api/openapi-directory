@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDirectConnectGatewayAssociationProposalResponse {
     
     public String contentType;
+
     public DeleteDirectConnectGatewayAssociationProposalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDirectConnectGatewayAssociationProposalResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDirectConnectGatewayAssociationProposalResult deleteDirectConnectGatewayAssociationProposalResult;
+
     public DeleteDirectConnectGatewayAssociationProposalResponse withDeleteDirectConnectGatewayAssociationProposalResult(org.openapis.openapi.models.shared.DeleteDirectConnectGatewayAssociationProposalResult deleteDirectConnectGatewayAssociationProposalResult) {
         this.deleteDirectConnectGatewayAssociationProposalResult = deleteDirectConnectGatewayAssociationProposalResult;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDirectConnectGatewayAssociationProposalResponse {
      */
     
     public Object directConnectClientException;
+
     public DeleteDirectConnectGatewayAssociationProposalResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDirectConnectGatewayAssociationProposalResponse {
      */
     
     public Object directConnectServerException;
+
     public DeleteDirectConnectGatewayAssociationProposalResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteDirectConnectGatewayAssociationProposalResponse {
     
     
     public Integer statusCode;
+
     public DeleteDirectConnectGatewayAssociationProposalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteDirectConnectGatewayAssociationProposalResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDirectConnectGatewayAssociationProposalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteDirectConnectGatewayAssociationProposalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

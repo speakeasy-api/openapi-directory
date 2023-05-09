@@ -15,6 +15,7 @@ public class ListRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public java.util.Map<String, String> filter;
+
     public ListRecommendationsRequestBody withFilter(java.util.Map<String, String> filter) {
         this.filter = filter;
         return this;
@@ -26,6 +27,7 @@ public class ListRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRecommendationsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +39,11 @@ public class ListRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public ListRecommendationsRequestBody withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public ListRecommendationsRequestBody(){}
 }

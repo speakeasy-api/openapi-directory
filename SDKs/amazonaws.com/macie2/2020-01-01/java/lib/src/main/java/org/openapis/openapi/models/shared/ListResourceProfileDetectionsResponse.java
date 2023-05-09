@@ -15,6 +15,7 @@ public class ListResourceProfileDetectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detections")
     public Detection[] detections;
+
     public ListResourceProfileDetectionsResponse withDetections(Detection[] detections) {
         this.detections = detections;
         return this;
@@ -23,9 +24,11 @@ public class ListResourceProfileDetectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListResourceProfileDetectionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListResourceProfileDetectionsResponse(){}
 }

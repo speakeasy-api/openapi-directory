@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SqlSslCertsListResponse {
     
     public String contentType;
+
     public SqlSslCertsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SqlSslCertsListResponse {
      */
     
     public org.openapis.openapi.models.shared.SslCertsListResponse sslCertsListResponse;
+
     public SqlSslCertsListResponse withSslCertsListResponse(org.openapis.openapi.models.shared.SslCertsListResponse sslCertsListResponse) {
         this.sslCertsListResponse = sslCertsListResponse;
         return this;
@@ -26,6 +29,7 @@ public class SqlSslCertsListResponse {
     
     
     public Integer statusCode;
+
     public SqlSslCertsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SqlSslCertsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SqlSslCertsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SqlSslCertsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

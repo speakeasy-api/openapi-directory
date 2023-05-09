@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateHsmConfigurationMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateHsmConfigurationMessage {
     
     public String description;
+
     public CreateHsmConfigurationMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateHsmConfigurationMessage {
     
     
     public String hsmConfigurationIdentifier;
+
     public CreateHsmConfigurationMessage withHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
         this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class CreateHsmConfigurationMessage {
     
     
     public String hsmIpAddress;
+
     public CreateHsmConfigurationMessage withHsmIpAddress(String hsmIpAddress) {
         this.hsmIpAddress = hsmIpAddress;
         return this;
@@ -33,6 +36,7 @@ public class CreateHsmConfigurationMessage {
     
     
     public String hsmPartitionName;
+
     public CreateHsmConfigurationMessage withHsmPartitionName(String hsmPartitionName) {
         this.hsmPartitionName = hsmPartitionName;
         return this;
@@ -40,6 +44,7 @@ public class CreateHsmConfigurationMessage {
     
     
     public String hsmPartitionPassword;
+
     public CreateHsmConfigurationMessage withHsmPartitionPassword(String hsmPartitionPassword) {
         this.hsmPartitionPassword = hsmPartitionPassword;
         return this;
@@ -47,6 +52,7 @@ public class CreateHsmConfigurationMessage {
     
     
     public String hsmServerPublicCertificate;
+
     public CreateHsmConfigurationMessage withHsmServerPublicCertificate(String hsmServerPublicCertificate) {
         this.hsmServerPublicCertificate = hsmServerPublicCertificate;
         return this;
@@ -54,9 +60,18 @@ public class CreateHsmConfigurationMessage {
     
     
     public TagList[] tags;
+
     public CreateHsmConfigurationMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateHsmConfigurationMessage(@JsonProperty("Description") String description, @JsonProperty("HsmConfigurationIdentifier") String hsmConfigurationIdentifier, @JsonProperty("HsmIpAddress") String hsmIpAddress, @JsonProperty("HsmPartitionName") String hsmPartitionName, @JsonProperty("HsmPartitionPassword") String hsmPartitionPassword, @JsonProperty("HsmServerPublicCertificate") String hsmServerPublicCertificate) {
+        this.description = description;
+        this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
+        this.hsmIpAddress = hsmIpAddress;
+        this.hsmPartitionName = hsmPartitionName;
+        this.hsmPartitionPassword = hsmPartitionPassword;
+        this.hsmServerPublicCertificate = hsmServerPublicCertificate;
+  }
 }

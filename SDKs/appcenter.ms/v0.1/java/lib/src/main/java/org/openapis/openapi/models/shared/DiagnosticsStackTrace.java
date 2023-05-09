@@ -18,6 +18,7 @@ public class DiagnosticsStackTrace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exception")
     public DiagnosticsException exception;
+
     public DiagnosticsStackTrace withException(DiagnosticsException exception) {
         this.exception = exception;
         return this;
@@ -26,6 +27,7 @@ public class DiagnosticsStackTrace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public DiagnosticsStackTrace withReason(String reason) {
         this.reason = reason;
         return this;
@@ -34,6 +36,7 @@ public class DiagnosticsStackTrace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threads")
     public DiagnosticsThread[] threads;
+
     public DiagnosticsStackTrace withThreads(DiagnosticsThread[] threads) {
         this.threads = threads;
         return this;
@@ -42,9 +45,11 @@ public class DiagnosticsStackTrace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public DiagnosticsStackTrace withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public DiagnosticsStackTrace(){}
 }

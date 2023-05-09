@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTestGridSessionArtifactsResponse {
@@ -12,6 +13,7 @@ public class ListTestGridSessionArtifactsResponse {
      */
     
     public Object argumentException;
+
     public ListTestGridSessionArtifactsResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class ListTestGridSessionArtifactsResponse {
     
     
     public String contentType;
+
     public ListTestGridSessionArtifactsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTestGridSessionArtifactsResponse {
      */
     
     public Object internalServiceException;
+
     public ListTestGridSessionArtifactsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListTestGridSessionArtifactsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTestGridSessionArtifactsResult listTestGridSessionArtifactsResult;
+
     public ListTestGridSessionArtifactsResponse withListTestGridSessionArtifactsResult(org.openapis.openapi.models.shared.ListTestGridSessionArtifactsResult listTestGridSessionArtifactsResult) {
         this.listTestGridSessionArtifactsResult = listTestGridSessionArtifactsResult;
         return this;
@@ -49,6 +54,7 @@ public class ListTestGridSessionArtifactsResponse {
      */
     
     public Object notFoundException;
+
     public ListTestGridSessionArtifactsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListTestGridSessionArtifactsResponse {
     
     
     public Integer statusCode;
+
     public ListTestGridSessionArtifactsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListTestGridSessionArtifactsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTestGridSessionArtifactsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTestGridSessionArtifactsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

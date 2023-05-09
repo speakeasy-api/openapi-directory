@@ -19,6 +19,7 @@ public class ListPipelineExecutionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAfter")
     public OffsetDateTime createdAfter;
+
     public ListPipelineExecutionsRequest withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListPipelineExecutionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedBefore")
     public OffsetDateTime createdBefore;
+
     public ListPipelineExecutionsRequest withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListPipelineExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListPipelineExecutionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -45,6 +48,7 @@ public class ListPipelineExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPipelineExecutionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -52,6 +56,7 @@ public class ListPipelineExecutionsRequest {
     
     @JsonProperty("PipelineName")
     public String pipelineName;
+
     public ListPipelineExecutionsRequest withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
@@ -60,6 +65,7 @@ public class ListPipelineExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortPipelineExecutionsByEnum sortBy;
+
     public ListPipelineExecutionsRequest withSortBy(SortPipelineExecutionsByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -68,9 +74,13 @@ public class ListPipelineExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListPipelineExecutionsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListPipelineExecutionsRequest(@JsonProperty("PipelineName") String pipelineName) {
+        this.pipelineName = pipelineName;
+  }
 }

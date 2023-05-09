@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ExportImageRequest {
     
     public String clientToken;
+
     public ExportImageRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class ExportImageRequest {
     
     
     public String description;
+
     public ExportImageRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class ExportImageRequest {
     
     
     public DiskImageFormatEnum diskImageFormat;
+
     public ExportImageRequest withDiskImageFormat(DiskImageFormatEnum diskImageFormat) {
         this.diskImageFormat = diskImageFormat;
         return this;
@@ -30,6 +33,7 @@ public class ExportImageRequest {
     
     
     public Boolean dryRun;
+
     public ExportImageRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -37,6 +41,7 @@ public class ExportImageRequest {
     
     
     public String imageId;
+
     public ExportImageRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -44,6 +49,7 @@ public class ExportImageRequest {
     
     
     public String roleName;
+
     public ExportImageRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -51,6 +57,7 @@ public class ExportImageRequest {
     
     
     public ExportTaskS3LocationRequest s3ExportLocation;
+
     public ExportImageRequest withS3ExportLocation(ExportTaskS3LocationRequest s3ExportLocation) {
         this.s3ExportLocation = s3ExportLocation;
         return this;
@@ -58,9 +65,15 @@ public class ExportImageRequest {
     
     
     public ExportImageRequestTagSpecifications[] tagSpecifications;
+
     public ExportImageRequest withTagSpecifications(ExportImageRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public ExportImageRequest(@JsonProperty("DiskImageFormat") DiskImageFormatEnum diskImageFormat, @JsonProperty("ImageId") String imageId, @JsonProperty("S3ExportLocation") ExportTaskS3LocationRequest s3ExportLocation) {
+        this.diskImageFormat = diskImageFormat;
+        this.imageId = imageId;
+        this.s3ExportLocation = s3ExportLocation;
+  }
 }

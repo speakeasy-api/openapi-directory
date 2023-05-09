@@ -15,6 +15,7 @@ public class OBWriteDomesticStandingOrderConsent5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Authorisation")
     public OBWriteDomesticStandingOrderConsent5DataAuthorisation authorisation;
+
     public OBWriteDomesticStandingOrderConsent5Data withAuthorisation(OBWriteDomesticStandingOrderConsent5DataAuthorisation authorisation) {
         this.authorisation = authorisation;
         return this;
@@ -25,6 +26,7 @@ public class OBWriteDomesticStandingOrderConsent5Data {
      */
     @JsonProperty("Initiation")
     public OBWriteDomesticStandingOrderConsent5DataInitiation initiation;
+
     public OBWriteDomesticStandingOrderConsent5Data withInitiation(OBWriteDomesticStandingOrderConsent5DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -35,6 +37,7 @@ public class OBWriteDomesticStandingOrderConsent5Data {
      */
     @JsonProperty("Permission")
     public OBWriteDomesticStandingOrderConsent5DataPermissionEnum permission;
+
     public OBWriteDomesticStandingOrderConsent5Data withPermission(OBWriteDomesticStandingOrderConsent5DataPermissionEnum permission) {
         this.permission = permission;
         return this;
@@ -46,6 +49,7 @@ public class OBWriteDomesticStandingOrderConsent5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadRefundAccount")
     public OBWriteDomesticStandingOrderConsent5DataReadRefundAccountEnum readRefundAccount;
+
     public OBWriteDomesticStandingOrderConsent5Data withReadRefundAccount(OBWriteDomesticStandingOrderConsent5DataReadRefundAccountEnum readRefundAccount) {
         this.readRefundAccount = readRefundAccount;
         return this;
@@ -57,9 +61,14 @@ public class OBWriteDomesticStandingOrderConsent5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SCASupportData")
     public OBSCASupportData1 scaSupportData;
+
     public OBWriteDomesticStandingOrderConsent5Data withSCASupportData(OBSCASupportData1 scaSupportData) {
         this.scaSupportData = scaSupportData;
         return this;
     }
     
+    public OBWriteDomesticStandingOrderConsent5Data(@JsonProperty("Initiation") OBWriteDomesticStandingOrderConsent5DataInitiation initiation, @JsonProperty("Permission") OBWriteDomesticStandingOrderConsent5DataPermissionEnum permission) {
+        this.initiation = initiation;
+        this.permission = permission;
+  }
 }

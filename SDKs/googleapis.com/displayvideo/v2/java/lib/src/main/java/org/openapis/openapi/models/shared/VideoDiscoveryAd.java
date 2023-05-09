@@ -18,6 +18,7 @@ public class VideoDiscoveryAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description1")
     public String description1;
+
     public VideoDiscoveryAd withDescription1(String description1) {
         this.description1 = description1;
         return this;
@@ -29,6 +30,7 @@ public class VideoDiscoveryAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description2")
     public String description2;
+
     public VideoDiscoveryAd withDescription2(String description2) {
         this.description2 = description2;
         return this;
@@ -40,6 +42,7 @@ public class VideoDiscoveryAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headline")
     public String headline;
+
     public VideoDiscoveryAd withHeadline(String headline) {
         this.headline = headline;
         return this;
@@ -51,6 +54,7 @@ public class VideoDiscoveryAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnail")
     public VideoDiscoveryAdThumbnailEnum thumbnail;
+
     public VideoDiscoveryAd withThumbnail(VideoDiscoveryAdThumbnailEnum thumbnail) {
         this.thumbnail = thumbnail;
         return this;
@@ -62,9 +66,11 @@ public class VideoDiscoveryAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("video")
     public YoutubeVideoDetails video;
+
     public VideoDiscoveryAd withVideo(YoutubeVideoDetails video) {
         this.video = video;
         return this;
     }
     
+    public VideoDiscoveryAd(){}
 }

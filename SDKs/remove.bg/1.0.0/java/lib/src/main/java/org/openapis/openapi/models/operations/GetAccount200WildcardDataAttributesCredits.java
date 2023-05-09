@@ -9,6 +9,7 @@ package org.openapis.openapi.models.operations;
 public class GetAccount200WildcardDataAttributesCredits {
     
     public Float enterprise;
+
     public GetAccount200WildcardDataAttributesCredits withEnterprise(Float enterprise) {
         this.enterprise = enterprise;
         return this;
@@ -16,6 +17,7 @@ public class GetAccount200WildcardDataAttributesCredits {
     
     
     public Float payg;
+
     public GetAccount200WildcardDataAttributesCredits withPayg(Float payg) {
         this.payg = payg;
         return this;
@@ -23,6 +25,7 @@ public class GetAccount200WildcardDataAttributesCredits {
     
     
     public Float subscription;
+
     public GetAccount200WildcardDataAttributesCredits withSubscription(Float subscription) {
         this.subscription = subscription;
         return this;
@@ -30,9 +33,11 @@ public class GetAccount200WildcardDataAttributesCredits {
     
     
     public Float total;
+
     public GetAccount200WildcardDataAttributesCredits withTotal(Float total) {
         this.total = total;
         return this;
     }
     
+    public GetAccount200WildcardDataAttributesCredits(){}
 }

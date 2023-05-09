@@ -18,6 +18,7 @@ public class Autoscale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentSlots")
     public String currentSlots;
+
     public Autoscale withCurrentSlots(String currentSlots) {
         this.currentSlots = currentSlots;
         return this;
@@ -29,9 +30,11 @@ public class Autoscale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSlots")
     public String maxSlots;
+
     public Autoscale withMaxSlots(String maxSlots) {
         this.maxSlots = maxSlots;
         return this;
     }
     
+    public Autoscale(){}
 }

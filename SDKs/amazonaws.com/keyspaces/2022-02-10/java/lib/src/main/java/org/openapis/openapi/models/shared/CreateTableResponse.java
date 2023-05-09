@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTableResponse {
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public CreateTableResponse withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public CreateTableResponse(@JsonProperty("resourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

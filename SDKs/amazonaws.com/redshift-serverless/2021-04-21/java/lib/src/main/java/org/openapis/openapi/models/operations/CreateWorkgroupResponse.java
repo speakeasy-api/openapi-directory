@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWorkgroupResponse {
@@ -12,6 +13,7 @@ public class CreateWorkgroupResponse {
      */
     
     public Object conflictException;
+
     public CreateWorkgroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateWorkgroupResponse {
     
     
     public String contentType;
+
     public CreateWorkgroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateWorkgroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWorkgroupResponse createWorkgroupResponse;
+
     public CreateWorkgroupResponse withCreateWorkgroupResponse(org.openapis.openapi.models.shared.CreateWorkgroupResponse createWorkgroupResponse) {
         this.createWorkgroupResponse = createWorkgroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateWorkgroupResponse {
      */
     
     public Object insufficientCapacityException;
+
     public CreateWorkgroupResponse withInsufficientCapacityException(Object insufficientCapacityException) {
         this.insufficientCapacityException = insufficientCapacityException;
         return this;
@@ -49,6 +54,7 @@ public class CreateWorkgroupResponse {
      */
     
     public Object internalServerException;
+
     public CreateWorkgroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateWorkgroupResponse {
     
     
     public Integer statusCode;
+
     public CreateWorkgroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateWorkgroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWorkgroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateWorkgroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateWorkgroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class CreateWorkgroupResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateWorkgroupResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
@@ -93,9 +103,14 @@ public class CreateWorkgroupResponse {
      */
     
     public Object validationException;
+
     public CreateWorkgroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateWorkgroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeregisterTransitGatewayMulticastGroupMembersRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeregisterTransitGatewayMulticastGroupMembersActionEnum action;
+
     public GETDeregisterTransitGatewayMulticastGroupMembersRequest withAction(GETDeregisterTransitGatewayMulticastGroupMembersActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeregisterTransitGatewayMulticastGroupMembersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDeregisterTransitGatewayMulticastGroupMembersRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETDeregisterTransitGatewayMulticastGroupMembersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GroupIpAddress")
     public String groupIpAddress;
+
     public GETDeregisterTransitGatewayMulticastGroupMembersRequest withGroupIpAddress(String groupIpAddress) {
         this.groupIpAddress = groupIpAddress;
         return this;
@@ -39,6 +43,7 @@ public class GETDeregisterTransitGatewayMulticastGroupMembersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceIds")
     public String[] networkInterfaceIds;
+
     public GETDeregisterTransitGatewayMulticastGroupMembersRequest withNetworkInterfaceIds(String[] networkInterfaceIds) {
         this.networkInterfaceIds = networkInterfaceIds;
         return this;
@@ -49,6 +54,7 @@ public class GETDeregisterTransitGatewayMulticastGroupMembersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayMulticastDomainId")
     public String transitGatewayMulticastDomainId;
+
     public GETDeregisterTransitGatewayMulticastGroupMembersRequest withTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
         this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
         return this;
@@ -56,6 +62,7 @@ public class GETDeregisterTransitGatewayMulticastGroupMembersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeregisterTransitGatewayMulticastGroupMembersVersionEnum version;
+
     public GETDeregisterTransitGatewayMulticastGroupMembersRequest withVersion(GETDeregisterTransitGatewayMulticastGroupMembersVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETDeregisterTransitGatewayMulticastGroupMembersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeregisterTransitGatewayMulticastGroupMembersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDeregisterTransitGatewayMulticastGroupMembersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeregisterTransitGatewayMulticastGroupMembersRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDeregisterTransitGatewayMulticastGroupMembersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeregisterTransitGatewayMulticastGroupMembersRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDeregisterTransitGatewayMulticastGroupMembersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeregisterTransitGatewayMulticastGroupMembersRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDeregisterTransitGatewayMulticastGroupMembersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeregisterTransitGatewayMulticastGroupMembersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDeregisterTransitGatewayMulticastGroupMembersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeregisterTransitGatewayMulticastGroupMembersRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,14 @@ public class GETDeregisterTransitGatewayMulticastGroupMembersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeregisterTransitGatewayMulticastGroupMembersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeregisterTransitGatewayMulticastGroupMembersRequest(@JsonProperty("Action") GETDeregisterTransitGatewayMulticastGroupMembersActionEnum action, @JsonProperty("Version") GETDeregisterTransitGatewayMulticastGroupMembersVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

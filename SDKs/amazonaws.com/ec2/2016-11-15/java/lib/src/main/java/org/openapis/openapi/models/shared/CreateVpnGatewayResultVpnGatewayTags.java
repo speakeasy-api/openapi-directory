@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpnGatewayResultVpnGatewayTags {
     
     public String key;
+
     public CreateVpnGatewayResultVpnGatewayTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateVpnGatewayResultVpnGatewayTags {
     
     
     public String value;
+
     public CreateVpnGatewayResultVpnGatewayTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateVpnGatewayResultVpnGatewayTags(){}
 }

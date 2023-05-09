@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SerieResume {
     @JsonProperty("id")
     public String id;
+
     public SerieResume withId(String id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class SerieResume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public SerieResume withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -26,9 +28,14 @@ public class SerieResume {
     
     @JsonProperty("name")
     public String name;
+
     public SerieResume withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SerieResume(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

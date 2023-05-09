@@ -17,6 +17,7 @@ public class ExposedApi {
      */
     @JsonProperty("exposeApi")
     public Boolean exposeApi;
+
     public ExposedApi withExposeApi(Boolean exposeApi) {
         this.exposeApi = exposeApi;
         return this;
@@ -28,9 +29,13 @@ public class ExposedApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openApiDescriptorUrl")
     public String openApiDescriptorUrl;
+
     public ExposedApi withOpenApiDescriptorUrl(String openApiDescriptorUrl) {
         this.openApiDescriptorUrl = openApiDescriptorUrl;
         return this;
     }
     
+    public ExposedApi(@JsonProperty("exposeApi") Boolean exposeApi) {
+        this.exposeApi = exposeApi;
+  }
 }

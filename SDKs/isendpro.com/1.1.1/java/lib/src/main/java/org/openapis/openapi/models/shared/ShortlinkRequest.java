@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ShortlinkRequest {
     @JsonProperty("keyid")
     public String keyid;
+
     public ShortlinkRequest withKeyid(String keyid) {
         this.keyid = keyid;
         return this;
@@ -19,9 +20,14 @@ public class ShortlinkRequest {
     
     @JsonProperty("shortlink")
     public String shortlink;
+
     public ShortlinkRequest withShortlink(String shortlink) {
         this.shortlink = shortlink;
         return this;
     }
     
+    public ShortlinkRequest(@JsonProperty("keyid") String keyid, @JsonProperty("shortlink") String shortlink) {
+        this.keyid = keyid;
+        this.shortlink = shortlink;
+  }
 }

@@ -18,6 +18,7 @@ public class DisablePermitResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public DisablePermitResult withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -29,9 +30,11 @@ public class DisablePermitResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public DisablePermitResult withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DisablePermitResult(){}
 }

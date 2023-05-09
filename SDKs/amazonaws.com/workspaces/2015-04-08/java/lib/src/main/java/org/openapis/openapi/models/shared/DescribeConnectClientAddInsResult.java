@@ -15,6 +15,7 @@ public class DescribeConnectClientAddInsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddIns")
     public ConnectClientAddIn[] addIns;
+
     public DescribeConnectClientAddInsResult withAddIns(ConnectClientAddIn[] addIns) {
         this.addIns = addIns;
         return this;
@@ -23,9 +24,11 @@ public class DescribeConnectClientAddInsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeConnectClientAddInsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeConnectClientAddInsResult(){}
 }

@@ -12,6 +12,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportData {
      */
     
     public DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetails activityDetails;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportData withActivityDetails(DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetails activityDetails) {
         this.activityDetails = activityDetails;
         return this;
@@ -22,6 +23,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportData {
      */
     
     public Boolean activityWasStartedFromBeginning;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportData withActivityWasStartedFromBeginning(Boolean activityWasStartedFromBeginning) {
         this.activityWasStartedFromBeginning = activityWasStartedFromBeginning;
         return this;
@@ -32,6 +34,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportData {
      */
     
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntry[] entries;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportData withEntries(DestinyHistoricalStatsDestinyPostGameCarnageReportEntry[] entries) {
         this.entries = entries;
         return this;
@@ -42,6 +45,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportData {
      */
     
     public OffsetDateTime period;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportData withPeriod(OffsetDateTime period) {
         this.period = period;
         return this;
@@ -52,6 +56,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportData {
      */
     
     public Integer startingPhaseIndex;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportData withStartingPhaseIndex(Integer startingPhaseIndex) {
         this.startingPhaseIndex = startingPhaseIndex;
         return this;
@@ -62,9 +67,11 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportData {
      */
     
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntry[] teams;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportData withTeams(DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntry[] teams) {
         this.teams = teams;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyPostGameCarnageReportData(){}
 }

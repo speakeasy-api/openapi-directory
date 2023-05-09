@@ -12,6 +12,7 @@ public class GetDocumentWithPath200ApplicationJSONExplanationLocalsValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetDocumentWithPath200ApplicationJSONExplanationLocalsValue withType(String type) {
         this.type = type;
         return this;
@@ -20,9 +21,11 @@ public class GetDocumentWithPath200ApplicationJSONExplanationLocalsValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GetDocumentWithPath200ApplicationJSONExplanationLocalsValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetDocumentWithPath200ApplicationJSONExplanationLocalsValue(){}
 }

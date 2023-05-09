@@ -214,4 +214,16 @@ lib/src/main/java/org/openapis/openapi/models/shared/PatientAuthInitRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/PatientAuthRequesterTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/PatientAuthRequester.java
 lib/src/main/java/org/openapis/openapi/models/shared/AuthenticationModeEnum.java
+docs/sdk/README.md
+docs/consent/README.md
+docs/dataflow/README.md
+docs/discovery/README.md
+docs/hipfacing/README.md
+docs/hiufacing/README.md
+docs/identification/README.md
+docs/link/README.md
+docs/monitoring/README.md
+docs/profile/README.md
+docs/subscriptions/README.md
+docs/userauth/README.md
 USAGE.md

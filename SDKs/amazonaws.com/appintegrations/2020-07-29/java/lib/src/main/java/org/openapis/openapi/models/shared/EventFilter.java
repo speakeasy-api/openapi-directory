@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EventFilter {
     @JsonProperty("Source")
     public String source;
+
     public EventFilter withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public EventFilter(@JsonProperty("Source") String source) {
+        this.source = source;
+  }
 }

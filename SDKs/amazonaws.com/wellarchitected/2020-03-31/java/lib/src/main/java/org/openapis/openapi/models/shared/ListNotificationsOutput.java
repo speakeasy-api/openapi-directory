@@ -18,6 +18,7 @@ public class ListNotificationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListNotificationsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +27,11 @@ public class ListNotificationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationSummaries")
     public NotificationSummary[] notificationSummaries;
+
     public ListNotificationsOutput withNotificationSummaries(NotificationSummary[] notificationSummaries) {
         this.notificationSummaries = notificationSummaries;
         return this;
     }
     
+    public ListNotificationsOutput(){}
 }

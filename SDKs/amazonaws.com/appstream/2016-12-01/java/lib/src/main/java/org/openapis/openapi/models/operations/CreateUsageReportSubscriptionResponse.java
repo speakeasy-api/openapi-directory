@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUsageReportSubscriptionResponse {
     
     public String contentType;
+
     public CreateUsageReportSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateUsageReportSubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUsageReportSubscriptionResult createUsageReportSubscriptionResult;
+
     public CreateUsageReportSubscriptionResponse withCreateUsageReportSubscriptionResult(org.openapis.openapi.models.shared.CreateUsageReportSubscriptionResult createUsageReportSubscriptionResult) {
         this.createUsageReportSubscriptionResult = createUsageReportSubscriptionResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateUsageReportSubscriptionResponse {
      */
     
     public Object invalidAccountStatusException;
+
     public CreateUsageReportSubscriptionResponse withInvalidAccountStatusException(Object invalidAccountStatusException) {
         this.invalidAccountStatusException = invalidAccountStatusException;
         return this;
@@ -39,6 +43,7 @@ public class CreateUsageReportSubscriptionResponse {
      */
     
     public Object invalidRoleException;
+
     public CreateUsageReportSubscriptionResponse withInvalidRoleException(Object invalidRoleException) {
         this.invalidRoleException = invalidRoleException;
         return this;
@@ -49,6 +54,7 @@ public class CreateUsageReportSubscriptionResponse {
      */
     
     public Object limitExceededException;
+
     public CreateUsageReportSubscriptionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateUsageReportSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public CreateUsageReportSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateUsageReportSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUsageReportSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateUsageReportSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

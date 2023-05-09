@@ -15,9 +15,11 @@ public class ConfigFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public ConfigFile withContent(String content) {
         this.content = content;
         return this;
     }
     
+    public ConfigFile(){}
 }

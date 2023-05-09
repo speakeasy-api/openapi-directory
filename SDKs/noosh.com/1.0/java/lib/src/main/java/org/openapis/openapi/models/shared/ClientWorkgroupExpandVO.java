@@ -18,6 +18,7 @@ public class ClientWorkgroupExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public ClientWorkgroupDetailVO result;
+
     public ClientWorkgroupExpandVO withResult(ClientWorkgroupDetailVO result) {
         this.result = result;
         return this;
@@ -26,6 +27,7 @@ public class ClientWorkgroupExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public ClientWorkgroupExpandVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -34,9 +36,11 @@ public class ClientWorkgroupExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public ClientWorkgroupExpandVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public ClientWorkgroupExpandVO(){}
 }

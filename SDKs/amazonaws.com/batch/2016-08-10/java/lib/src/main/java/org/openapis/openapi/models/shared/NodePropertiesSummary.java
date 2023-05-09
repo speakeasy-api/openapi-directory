@@ -15,6 +15,7 @@ public class NodePropertiesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMainNode")
     public Boolean isMainNode;
+
     public NodePropertiesSummary withIsMainNode(Boolean isMainNode) {
         this.isMainNode = isMainNode;
         return this;
@@ -23,6 +24,7 @@ public class NodePropertiesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeIndex")
     public Long nodeIndex;
+
     public NodePropertiesSummary withNodeIndex(Long nodeIndex) {
         this.nodeIndex = nodeIndex;
         return this;
@@ -31,9 +33,11 @@ public class NodePropertiesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numNodes")
     public Long numNodes;
+
     public NodePropertiesSummary withNumNodes(Long numNodes) {
         this.numNodes = numNodes;
         return this;
     }
     
+    public NodePropertiesSummary(){}
 }

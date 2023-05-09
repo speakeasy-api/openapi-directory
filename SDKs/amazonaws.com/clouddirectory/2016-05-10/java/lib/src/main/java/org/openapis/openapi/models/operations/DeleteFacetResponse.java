@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFacetResponse {
@@ -12,6 +13,7 @@ public class DeleteFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public DeleteFacetResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFacetResponse {
     
     
     public String contentType;
+
     public DeleteFacetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFacetResponse {
      */
     
     public java.util.Map<String, Object> deleteFacetResponse;
+
     public DeleteFacetResponse withDeleteFacetResponse(java.util.Map<String, Object> deleteFacetResponse) {
         this.deleteFacetResponse = deleteFacetResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.FacetInUseException facetInUseException;
+
     public DeleteFacetResponse withFacetInUseException(org.openapis.openapi.models.shared.FacetInUseException facetInUseException) {
         this.facetInUseException = facetInUseException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.FacetNotFoundException facetNotFoundException;
+
     public DeleteFacetResponse withFacetNotFoundException(org.openapis.openapi.models.shared.FacetNotFoundException facetNotFoundException) {
         this.facetNotFoundException = facetNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public DeleteFacetResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public DeleteFacetResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public DeleteFacetResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteFacetResponse {
     
     
     public Integer statusCode;
+
     public DeleteFacetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteFacetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFacetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class DeleteFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public DeleteFacetResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class DeleteFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public DeleteFacetResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -123,9 +136,14 @@ public class DeleteFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public DeleteFacetResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteFacetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

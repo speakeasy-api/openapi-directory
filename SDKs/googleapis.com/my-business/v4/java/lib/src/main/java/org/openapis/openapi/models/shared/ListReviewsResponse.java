@@ -18,6 +18,7 @@ public class ListReviewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageRating")
     public Double averageRating;
+
     public ListReviewsResponse withAverageRating(Double averageRating) {
         this.averageRating = averageRating;
         return this;
@@ -29,6 +30,7 @@ public class ListReviewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListReviewsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,6 +42,7 @@ public class ListReviewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviews")
     public Review[] reviews;
+
     public ListReviewsResponse withReviews(Review[] reviews) {
         this.reviews = reviews;
         return this;
@@ -51,9 +54,11 @@ public class ListReviewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalReviewCount")
     public Integer totalReviewCount;
+
     public ListReviewsResponse withTotalReviewCount(Integer totalReviewCount) {
         this.totalReviewCount = totalReviewCount;
         return this;
     }
     
+    public ListReviewsResponse(){}
 }

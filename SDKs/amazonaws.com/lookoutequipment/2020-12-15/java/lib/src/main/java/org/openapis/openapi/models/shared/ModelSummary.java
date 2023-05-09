@@ -22,6 +22,7 @@ public class ModelSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public ModelSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class ModelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetArn")
     public String datasetArn;
+
     public ModelSummary withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
@@ -38,6 +40,7 @@ public class ModelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetName")
     public String datasetName;
+
     public ModelSummary withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -46,6 +49,7 @@ public class ModelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelArn")
     public String modelArn;
+
     public ModelSummary withModelArn(String modelArn) {
         this.modelArn = modelArn;
         return this;
@@ -54,6 +58,7 @@ public class ModelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelName")
     public String modelName;
+
     public ModelSummary withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -62,9 +67,11 @@ public class ModelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ModelStatusEnum status;
+
     public ModelSummary withStatus(ModelStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ModelSummary(){}
 }

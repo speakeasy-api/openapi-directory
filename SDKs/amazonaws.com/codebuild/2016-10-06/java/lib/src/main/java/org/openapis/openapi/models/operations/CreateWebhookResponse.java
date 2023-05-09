@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWebhookResponse {
     
     public String contentType;
+
     public CreateWebhookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWebhookOutput createWebhookOutput;
+
     public CreateWebhookResponse withCreateWebhookOutput(org.openapis.openapi.models.shared.CreateWebhookOutput createWebhookOutput) {
         this.createWebhookOutput = createWebhookOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateWebhookResponse {
      */
     
     public Object invalidInputException;
+
     public CreateWebhookResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateWebhookResponse {
      */
     
     public Object oAuthProviderException;
+
     public CreateWebhookResponse withOAuthProviderException(Object oAuthProviderException) {
         this.oAuthProviderException = oAuthProviderException;
         return this;
@@ -46,6 +51,7 @@ public class CreateWebhookResponse {
     
     
     public Integer statusCode;
+
     public CreateWebhookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateWebhookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWebhookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateWebhookResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateWebhookResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -73,9 +81,14 @@ public class CreateWebhookResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateWebhookResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateWebhookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

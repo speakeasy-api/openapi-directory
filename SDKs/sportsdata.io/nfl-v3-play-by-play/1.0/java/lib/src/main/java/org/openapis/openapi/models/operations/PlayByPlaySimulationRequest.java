@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayByPlaySimulationRequest {
@@ -12,6 +13,7 @@ public class PlayByPlaySimulationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public PlayByPlaySimulationFormatEnum format;
+
     public PlayByPlaySimulationRequest withFormat(PlayByPlaySimulationFormatEnum format) {
         this.format = format;
         return this;
@@ -22,9 +24,14 @@ public class PlayByPlaySimulationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=numberofplays")
     public String numberofplays;
+
     public PlayByPlaySimulationRequest withNumberofplays(String numberofplays) {
         this.numberofplays = numberofplays;
         return this;
     }
     
+    public PlayByPlaySimulationRequest(@JsonProperty("format") PlayByPlaySimulationFormatEnum format, @JsonProperty("numberofplays") String numberofplays) {
+        this.format = format;
+        this.numberofplays = numberofplays;
+  }
 }

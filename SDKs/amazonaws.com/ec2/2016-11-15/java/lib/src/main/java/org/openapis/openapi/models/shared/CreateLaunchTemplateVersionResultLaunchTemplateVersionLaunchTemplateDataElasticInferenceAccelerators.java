@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataElasticInferenceAccelerators {
     
     public Long count;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataElasticInferenceAccelerators withCount(Long count) {
         this.count = count;
         return this;
@@ -19,9 +20,11 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String type;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataElasticInferenceAccelerators withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataElasticInferenceAccelerators(){}
 }

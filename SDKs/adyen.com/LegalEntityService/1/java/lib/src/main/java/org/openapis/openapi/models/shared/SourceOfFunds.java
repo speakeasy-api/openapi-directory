@@ -15,6 +15,7 @@ public class SourceOfFunds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acquiringBusinessLineId")
     public String acquiringBusinessLineId;
+
     public SourceOfFunds withAcquiringBusinessLineId(String acquiringBusinessLineId) {
         this.acquiringBusinessLineId = acquiringBusinessLineId;
         return this;
@@ -26,6 +27,7 @@ public class SourceOfFunds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adyenProcessedFunds")
     public Boolean adyenProcessedFunds;
+
     public SourceOfFunds withAdyenProcessedFunds(Boolean adyenProcessedFunds) {
         this.adyenProcessedFunds = adyenProcessedFunds;
         return this;
@@ -37,6 +39,7 @@ public class SourceOfFunds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SourceOfFunds withDescription(String description) {
         this.description = description;
         return this;
@@ -48,9 +51,11 @@ public class SourceOfFunds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SourceOfFundsTypeEnum type;
+
     public SourceOfFunds withType(SourceOfFundsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SourceOfFunds(){}
 }

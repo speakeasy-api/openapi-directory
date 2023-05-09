@@ -12,6 +12,7 @@ public class LabrpRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public LabrpRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class LabrpRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public LabrpRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class LabrpRequestBodyCertificateParameters {
      */
     @JsonProperty("GENDER")
     public String gender;
+
     public LabrpRequestBodyCertificateParameters withGender(String gender) {
         this.gender = gender;
         return this;
@@ -42,9 +45,16 @@ public class LabrpRequestBodyCertificateParameters {
      */
     @JsonProperty("MobileNoRQ")
     public String mobileNoRQ;
+
     public LabrpRequestBodyCertificateParameters withMobileNoRQ(String mobileNoRQ) {
         this.mobileNoRQ = mobileNoRQ;
         return this;
     }
     
+    public LabrpRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("GENDER") String gender, @JsonProperty("MobileNoRQ") String mobileNoRQ) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.gender = gender;
+        this.mobileNoRQ = mobileNoRQ;
+  }
 }

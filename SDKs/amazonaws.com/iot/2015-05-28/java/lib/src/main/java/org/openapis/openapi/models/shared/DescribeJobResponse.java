@@ -15,6 +15,7 @@ public class DescribeJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentSource")
     public String documentSource;
+
     public DescribeJobResponse withDocumentSource(String documentSource) {
         this.documentSource = documentSource;
         return this;
@@ -23,9 +24,11 @@ public class DescribeJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public Job job;
+
     public DescribeJobResponse withJob(Job job) {
         this.job = job;
         return this;
     }
     
+    public DescribeJobResponse(){}
 }

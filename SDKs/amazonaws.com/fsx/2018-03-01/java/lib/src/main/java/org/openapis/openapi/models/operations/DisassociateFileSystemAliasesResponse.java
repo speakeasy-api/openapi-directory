@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateFileSystemAliasesResponse {
@@ -12,6 +13,7 @@ public class DisassociateFileSystemAliasesResponse {
      */
     
     public Object badRequest;
+
     public DisassociateFileSystemAliasesResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateFileSystemAliasesResponse {
     
     
     public String contentType;
+
     public DisassociateFileSystemAliasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateFileSystemAliasesResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateFileSystemAliasesResponse disassociateFileSystemAliasesResponse;
+
     public DisassociateFileSystemAliasesResponse withDisassociateFileSystemAliasesResponse(org.openapis.openapi.models.shared.DisassociateFileSystemAliasesResponse disassociateFileSystemAliasesResponse) {
         this.disassociateFileSystemAliasesResponse = disassociateFileSystemAliasesResponse;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateFileSystemAliasesResponse {
      */
     
     public Object fileSystemNotFound;
+
     public DisassociateFileSystemAliasesResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateFileSystemAliasesResponse {
      */
     
     public Object internalServerError;
+
     public DisassociateFileSystemAliasesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -56,6 +62,7 @@ public class DisassociateFileSystemAliasesResponse {
     
     
     public Integer statusCode;
+
     public DisassociateFileSystemAliasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DisassociateFileSystemAliasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateFileSystemAliasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisassociateFileSystemAliasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

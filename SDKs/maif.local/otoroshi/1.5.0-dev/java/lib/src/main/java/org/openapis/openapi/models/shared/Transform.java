@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Transform {
     @JsonProperty("algoSettings")
     public Object algoSettings;
+
     public Transform withAlgoSettings(Object algoSettings) {
         this.algoSettings = algoSettings;
         return this;
@@ -25,6 +26,7 @@ public class Transform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformSettings")
     public TransformSettings transformSettings;
+
     public Transform withTransformSettings(TransformSettings transformSettings) {
         this.transformSettings = transformSettings;
         return this;
@@ -35,6 +37,7 @@ public class Transform {
      */
     @JsonProperty("type")
     public String type;
+
     public Transform withType(String type) {
         this.type = type;
         return this;
@@ -45,9 +48,15 @@ public class Transform {
      */
     @JsonProperty("verificationSettings")
     public VerificationSettings verificationSettings;
+
     public Transform withVerificationSettings(VerificationSettings verificationSettings) {
         this.verificationSettings = verificationSettings;
         return this;
     }
     
+    public Transform(@JsonProperty("algoSettings") Object algoSettings, @JsonProperty("type") String type, @JsonProperty("verificationSettings") VerificationSettings verificationSettings) {
+        this.algoSettings = algoSettings;
+        this.type = type;
+        this.verificationSettings = verificationSettings;
+  }
 }

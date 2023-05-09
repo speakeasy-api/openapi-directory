@@ -17,6 +17,7 @@ public class GetContiuousCheckHistoryOutput {
      */
     @JsonProperty("history")
     public Change[] history;
+
     public GetContiuousCheckHistoryOutput withHistory(Change[] history) {
         this.history = history;
         return this;
@@ -28,6 +29,7 @@ public class GetContiuousCheckHistoryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public GetContiuousCheckHistoryOutput withNext(String next) {
         this.next = next;
         return this;
@@ -39,9 +41,13 @@ public class GetContiuousCheckHistoryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public GetContiuousCheckHistoryOutput withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public GetContiuousCheckHistoryOutput(@JsonProperty("history") Change[] history) {
+        this.history = history;
+  }
 }

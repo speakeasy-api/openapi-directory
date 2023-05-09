@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreatePlatformVersionRequest - Request to create a new platform version.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreatePlatformVersionRequest {
     
     public String environmentName;
+
     public CreatePlatformVersionRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -19,6 +20,7 @@ public class CreatePlatformVersionRequest {
     
     
     public ConfigurationOptionSetting[] optionSettings;
+
     public CreatePlatformVersionRequest withOptionSettings(ConfigurationOptionSetting[] optionSettings) {
         this.optionSettings = optionSettings;
         return this;
@@ -26,6 +28,7 @@ public class CreatePlatformVersionRequest {
     
     
     public S3Location platformDefinitionBundle;
+
     public CreatePlatformVersionRequest withPlatformDefinitionBundle(S3Location platformDefinitionBundle) {
         this.platformDefinitionBundle = platformDefinitionBundle;
         return this;
@@ -33,6 +36,7 @@ public class CreatePlatformVersionRequest {
     
     
     public String platformName;
+
     public CreatePlatformVersionRequest withPlatformName(String platformName) {
         this.platformName = platformName;
         return this;
@@ -40,6 +44,7 @@ public class CreatePlatformVersionRequest {
     
     
     public String platformVersion;
+
     public CreatePlatformVersionRequest withPlatformVersion(String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
@@ -47,9 +52,15 @@ public class CreatePlatformVersionRequest {
     
     
     public Tag[] tags;
+
     public CreatePlatformVersionRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePlatformVersionRequest(@JsonProperty("PlatformDefinitionBundle") S3Location platformDefinitionBundle, @JsonProperty("PlatformName") String platformName, @JsonProperty("PlatformVersion") String platformVersion) {
+        this.platformDefinitionBundle = platformDefinitionBundle;
+        this.platformName = platformName;
+        this.platformVersion = platformVersion;
+  }
 }

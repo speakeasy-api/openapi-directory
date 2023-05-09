@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SourceDefinitionIdRequestBody {
     @JsonProperty("sourceDefinitionId")
     public String sourceDefinitionId;
+
     public SourceDefinitionIdRequestBody withSourceDefinitionId(String sourceDefinitionId) {
         this.sourceDefinitionId = sourceDefinitionId;
         return this;
     }
     
+    public SourceDefinitionIdRequestBody(@JsonProperty("sourceDefinitionId") String sourceDefinitionId) {
+        this.sourceDefinitionId = sourceDefinitionId;
+  }
 }

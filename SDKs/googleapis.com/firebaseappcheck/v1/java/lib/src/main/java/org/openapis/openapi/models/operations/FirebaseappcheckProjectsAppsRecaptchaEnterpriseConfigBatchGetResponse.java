@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetResponse {
     
     public String contentType;
+
     public FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetRespon
      */
     
     public org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1BatchGetRecaptchaEnterpriseConfigsResponse googleFirebaseAppcheckV1BatchGetRecaptchaEnterpriseConfigsResponse;
+
     public FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetResponse withGoogleFirebaseAppcheckV1BatchGetRecaptchaEnterpriseConfigsResponse(org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1BatchGetRecaptchaEnterpriseConfigsResponse googleFirebaseAppcheckV1BatchGetRecaptchaEnterpriseConfigsResponse) {
         this.googleFirebaseAppcheckV1BatchGetRecaptchaEnterpriseConfigsResponse = googleFirebaseAppcheckV1BatchGetRecaptchaEnterpriseConfigsResponse;
         return this;
@@ -26,6 +29,7 @@ public class FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetRespon
     
     
     public Integer statusCode;
+
     public FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetRespon
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

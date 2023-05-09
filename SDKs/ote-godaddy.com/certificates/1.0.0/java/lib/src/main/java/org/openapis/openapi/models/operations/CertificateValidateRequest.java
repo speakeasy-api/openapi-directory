@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateValidateRequest {
@@ -12,6 +13,7 @@ public class CertificateValidateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CertificateCreate certificateCreate;
+
     public CertificateValidateRequest withCertificateCreate(org.openapis.openapi.models.shared.CertificateCreate certificateCreate) {
         this.certificateCreate = certificateCreate;
         return this;
@@ -22,9 +24,13 @@ public class CertificateValidateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Market-Id")
     public String xMarketId;
+
     public CertificateValidateRequest withXMarketId(String xMarketId) {
         this.xMarketId = xMarketId;
         return this;
     }
     
+    public CertificateValidateRequest(@JsonProperty("CertificateCreate") org.openapis.openapi.models.shared.CertificateCreate certificateCreate) {
+        this.certificateCreate = certificateCreate;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScoreRevisionDataRequest {
@@ -12,6 +13,7 @@ public class GetScoreRevisionDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public GetScoreRevisionDataFormatEnum format;
+
     public GetScoreRevisionDataRequest withFormat(GetScoreRevisionDataFormatEnum format) {
         this.format = format;
         return this;
@@ -24,6 +26,7 @@ public class GetScoreRevisionDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyCached")
     public Boolean onlyCached;
+
     public GetScoreRevisionDataRequest withOnlyCached(Boolean onlyCached) {
         this.onlyCached = onlyCached;
         return this;
@@ -36,6 +39,7 @@ public class GetScoreRevisionDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parts")
     public String parts;
+
     public GetScoreRevisionDataRequest withParts(String parts) {
         this.parts = parts;
         return this;
@@ -47,6 +51,7 @@ public class GetScoreRevisionDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=revision")
     public String revision;
+
     public GetScoreRevisionDataRequest withRevision(String revision) {
         this.revision = revision;
         return this;
@@ -58,6 +63,7 @@ public class GetScoreRevisionDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
     public String score;
+
     public GetScoreRevisionDataRequest withScore(String score) {
         this.score = score;
         return this;
@@ -69,6 +75,7 @@ public class GetScoreRevisionDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
     public String sharingKey;
+
     public GetScoreRevisionDataRequest withSharingKey(String sharingKey) {
         this.sharingKey = sharingKey;
         return this;
@@ -80,9 +87,15 @@ public class GetScoreRevisionDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public Boolean url;
+
     public GetScoreRevisionDataRequest withUrl(Boolean url) {
         this.url = url;
         return this;
     }
     
+    public GetScoreRevisionDataRequest(@JsonProperty("format") GetScoreRevisionDataFormatEnum format, @JsonProperty("revision") String revision, @JsonProperty("score") String score) {
+        this.format = format;
+        this.revision = revision;
+        this.score = score;
+  }
 }

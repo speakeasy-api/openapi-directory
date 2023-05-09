@@ -15,6 +15,7 @@ public class ThirdPartyFirewallMissingExpectedRouteTableViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public ThirdPartyFirewallMissingExpectedRouteTableViolation withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -23,6 +24,7 @@ public class ThirdPartyFirewallMissingExpectedRouteTableViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentRouteTable")
     public String currentRouteTable;
+
     public ThirdPartyFirewallMissingExpectedRouteTableViolation withCurrentRouteTable(String currentRouteTable) {
         this.currentRouteTable = currentRouteTable;
         return this;
@@ -31,6 +33,7 @@ public class ThirdPartyFirewallMissingExpectedRouteTableViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpectedRouteTable")
     public String expectedRouteTable;
+
     public ThirdPartyFirewallMissingExpectedRouteTableViolation withExpectedRouteTable(String expectedRouteTable) {
         this.expectedRouteTable = expectedRouteTable;
         return this;
@@ -39,6 +42,7 @@ public class ThirdPartyFirewallMissingExpectedRouteTableViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VPC")
     public String vpc;
+
     public ThirdPartyFirewallMissingExpectedRouteTableViolation withVpc(String vpc) {
         this.vpc = vpc;
         return this;
@@ -47,9 +51,11 @@ public class ThirdPartyFirewallMissingExpectedRouteTableViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolationTarget")
     public String violationTarget;
+
     public ThirdPartyFirewallMissingExpectedRouteTableViolation withViolationTarget(String violationTarget) {
         this.violationTarget = violationTarget;
         return this;
     }
     
+    public ThirdPartyFirewallMissingExpectedRouteTableViolation(){}
 }

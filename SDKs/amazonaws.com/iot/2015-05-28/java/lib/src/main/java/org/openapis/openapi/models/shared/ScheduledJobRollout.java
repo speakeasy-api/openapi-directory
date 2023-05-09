@@ -15,9 +15,11 @@ public class ScheduledJobRollout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public ScheduledJobRollout withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ScheduledJobRollout(){}
 }

@@ -18,9 +18,11 @@ public class AccountImageImprovementsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountImageImprovementsSettings")
     public AccountImageImprovementsSettings accountImageImprovementsSettings;
+
     public AccountImageImprovementsInput withAccountImageImprovementsSettings(AccountImageImprovementsSettings accountImageImprovementsSettings) {
         this.accountImageImprovementsSettings = accountImageImprovementsSettings;
         return this;
     }
     
+    public AccountImageImprovementsInput(){}
 }

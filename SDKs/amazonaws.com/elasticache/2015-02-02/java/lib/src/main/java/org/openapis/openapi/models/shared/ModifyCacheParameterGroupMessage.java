@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyCacheParameterGroupMessage - Represents the input of a &lt;code&gt;ModifyCacheParameterGroup&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyCacheParameterGroupMessage {
     
     public String cacheParameterGroupName;
+
     public ModifyCacheParameterGroupMessage withCacheParameterGroupName(String cacheParameterGroupName) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
@@ -19,9 +20,14 @@ public class ModifyCacheParameterGroupMessage {
     
     
     public ParameterNameValueList[] parameterNameValues;
+
     public ModifyCacheParameterGroupMessage withParameterNameValues(ParameterNameValueList[] parameterNameValues) {
         this.parameterNameValues = parameterNameValues;
         return this;
     }
     
+    public ModifyCacheParameterGroupMessage(@JsonProperty("CacheParameterGroupName") String cacheParameterGroupName, @JsonProperty("ParameterNameValues") ParameterNameValueList[] parameterNameValues) {
+        this.cacheParameterGroupName = cacheParameterGroupName;
+        this.parameterNameValues = parameterNameValues;
+  }
 }

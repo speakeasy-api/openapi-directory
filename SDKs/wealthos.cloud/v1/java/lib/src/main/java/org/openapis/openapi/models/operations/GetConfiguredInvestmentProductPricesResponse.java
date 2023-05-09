@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConfiguredInvestmentProductPricesResponse {
     
     public String contentType;
+
     public GetConfiguredInvestmentProductPricesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetConfiguredInvestmentProductPricesResponse {
     
     
     public Integer statusCode;
+
     public GetConfiguredInvestmentProductPricesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetConfiguredInvestmentProductPricesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConfiguredInvestmentProductPricesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetConfiguredInvestmentProductPricesResponse {
      */
     
     public GetConfiguredInvestmentProductPrices200ApplicationJSON getConfiguredInvestmentProductPrices200ApplicationJSONObject;
+
     public GetConfiguredInvestmentProductPricesResponse withGetConfiguredInvestmentProductPrices200ApplicationJSONObject(GetConfiguredInvestmentProductPrices200ApplicationJSON getConfiguredInvestmentProductPrices200ApplicationJSONObject) {
         this.getConfiguredInvestmentProductPrices200ApplicationJSONObject = getConfiguredInvestmentProductPrices200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetConfiguredInvestmentProductPricesResponse {
      */
     
     public GetConfiguredInvestmentProductPrices401ApplicationJSON getConfiguredInvestmentProductPrices401ApplicationJSONObject;
+
     public GetConfiguredInvestmentProductPricesResponse withGetConfiguredInvestmentProductPrices401ApplicationJSONObject(GetConfiguredInvestmentProductPrices401ApplicationJSON getConfiguredInvestmentProductPrices401ApplicationJSONObject) {
         this.getConfiguredInvestmentProductPrices401ApplicationJSONObject = getConfiguredInvestmentProductPrices401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetConfiguredInvestmentProductPricesResponse {
      */
     
     public GetConfiguredInvestmentProductPrices403ApplicationJSON getConfiguredInvestmentProductPrices403ApplicationJSONObject;
+
     public GetConfiguredInvestmentProductPricesResponse withGetConfiguredInvestmentProductPrices403ApplicationJSONObject(GetConfiguredInvestmentProductPrices403ApplicationJSON getConfiguredInvestmentProductPrices403ApplicationJSONObject) {
         this.getConfiguredInvestmentProductPrices403ApplicationJSONObject = getConfiguredInvestmentProductPrices403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetConfiguredInvestmentProductPricesResponse {
      */
     
     public GetConfiguredInvestmentProductPrices404ApplicationJSON getConfiguredInvestmentProductPrices404ApplicationJSONObject;
+
     public GetConfiguredInvestmentProductPricesResponse withGetConfiguredInvestmentProductPrices404ApplicationJSONObject(GetConfiguredInvestmentProductPrices404ApplicationJSON getConfiguredInvestmentProductPrices404ApplicationJSONObject) {
         this.getConfiguredInvestmentProductPrices404ApplicationJSONObject = getConfiguredInvestmentProductPrices404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetConfiguredInvestmentProductPricesResponse {
      */
     
     public GetConfiguredInvestmentProductPrices429ApplicationJSON getConfiguredInvestmentProductPrices429ApplicationJSONObject;
+
     public GetConfiguredInvestmentProductPricesResponse withGetConfiguredInvestmentProductPrices429ApplicationJSONObject(GetConfiguredInvestmentProductPrices429ApplicationJSON getConfiguredInvestmentProductPrices429ApplicationJSONObject) {
         this.getConfiguredInvestmentProductPrices429ApplicationJSONObject = getConfiguredInvestmentProductPrices429ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class GetConfiguredInvestmentProductPricesResponse {
      */
     
     public GetConfiguredInvestmentProductPrices500ApplicationJSON getConfiguredInvestmentProductPrices500ApplicationJSONObject;
+
     public GetConfiguredInvestmentProductPricesResponse withGetConfiguredInvestmentProductPrices500ApplicationJSONObject(GetConfiguredInvestmentProductPrices500ApplicationJSON getConfiguredInvestmentProductPrices500ApplicationJSONObject) {
         this.getConfiguredInvestmentProductPrices500ApplicationJSONObject = getConfiguredInvestmentProductPrices500ApplicationJSONObject;
         return this;
     }
     
+    public GetConfiguredInvestmentProductPricesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

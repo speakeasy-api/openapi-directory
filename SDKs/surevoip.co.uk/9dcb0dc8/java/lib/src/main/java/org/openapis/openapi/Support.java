@@ -49,10 +49,8 @@ public class Support {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIpAddressResponse res = new org.openapis.openapi.models.operations.GetIpAddressResponse() {{
+        org.openapis.openapi.models.operations.GetIpAddressResponse res = new org.openapis.openapi.models.operations.GetIpAddressResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -81,10 +79,8 @@ public class Support {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetServiceStatusResponse res = new org.openapis.openapi.models.operations.GetServiceStatusResponse() {{
+        org.openapis.openapi.models.operations.GetServiceStatusResponse res = new org.openapis.openapi.models.operations.GetServiceStatusResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,10 +109,8 @@ public class Support {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSupportIpAddressResponse res = new org.openapis.openapi.models.operations.GetSupportIpAddressResponse() {{
+        org.openapis.openapi.models.operations.GetSupportIpAddressResponse res = new org.openapis.openapi.models.operations.GetSupportIpAddressResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,10 +139,8 @@ public class Support {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSupportServiceStatusResponse res = new org.openapis.openapi.models.operations.GetSupportServiceStatusResponse() {{
+        org.openapis.openapi.models.operations.GetSupportServiceStatusResponse res = new org.openapis.openapi.models.operations.GetSupportServiceStatusResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

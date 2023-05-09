@@ -18,6 +18,7 @@ public class PostAuthor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public PostAuthor withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class PostAuthor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PostAuthor withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class PostAuthor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public PostAuthorImage image;
+
     public PostAuthor withImage(PostAuthorImage image) {
         this.image = image;
         return this;
@@ -51,9 +54,11 @@ public class PostAuthor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PostAuthor withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PostAuthor(){}
 }

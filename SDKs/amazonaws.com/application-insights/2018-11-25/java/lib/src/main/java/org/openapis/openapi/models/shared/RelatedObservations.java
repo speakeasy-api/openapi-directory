@@ -15,9 +15,11 @@ public class RelatedObservations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObservationList")
     public Observation[] observationList;
+
     public RelatedObservations withObservationList(Observation[] observationList) {
         this.observationList = observationList;
         return this;
     }
     
+    public RelatedObservations(){}
 }

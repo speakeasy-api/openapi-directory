@@ -18,6 +18,7 @@ public class GoogleCloudRunV2TrafficTargetStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percent")
     public Integer percent;
+
     public GoogleCloudRunV2TrafficTargetStatus withPercent(Integer percent) {
         this.percent = percent;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRunV2TrafficTargetStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public String revision;
+
     public GoogleCloudRunV2TrafficTargetStatus withRevision(String revision) {
         this.revision = revision;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRunV2TrafficTargetStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public GoogleCloudRunV2TrafficTargetStatus withTag(String tag) {
         this.tag = tag;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRunV2TrafficTargetStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudRunV2TrafficTargetStatusTypeEnum type;
+
     public GoogleCloudRunV2TrafficTargetStatus withType(GoogleCloudRunV2TrafficTargetStatusTypeEnum type) {
         this.type = type;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudRunV2TrafficTargetStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudRunV2TrafficTargetStatus withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudRunV2TrafficTargetStatus(){}
 }

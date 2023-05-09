@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportImageRequestTagSpecifications {
     
     public ImportImageRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public ImportImageRequestTagSpecifications withResourceType(ImportImageRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class ImportImageRequestTagSpecifications {
     
     
     public ImportImageRequestTagSpecificationsTags[] tags;
+
     public ImportImageRequestTagSpecifications withTags(ImportImageRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ImportImageRequestTagSpecifications(){}
 }

@@ -15,9 +15,11 @@ public class DescribeVpcPeeringConnectionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcPeeringConnections")
     public VpcPeeringConnection[] vpcPeeringConnections;
+
     public DescribeVpcPeeringConnectionsOutput withVpcPeeringConnections(VpcPeeringConnection[] vpcPeeringConnections) {
         this.vpcPeeringConnections = vpcPeeringConnections;
         return this;
     }
     
+    public DescribeVpcPeeringConnectionsOutput(){}
 }

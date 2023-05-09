@@ -18,6 +18,7 @@ public class BuildsListXcodeVersions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current")
     public Boolean current;
+
     public BuildsListXcodeVersions200ApplicationJSON withCurrent(Boolean current) {
         this.current = current;
         return this;
@@ -29,9 +30,11 @@ public class BuildsListXcodeVersions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BuildsListXcodeVersions200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
     }
     
+    public BuildsListXcodeVersions200ApplicationJSON(){}
 }

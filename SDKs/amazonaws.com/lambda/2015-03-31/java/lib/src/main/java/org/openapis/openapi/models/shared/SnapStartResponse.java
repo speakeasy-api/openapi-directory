@@ -15,6 +15,7 @@ public class SnapStartResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplyOn")
     public SnapStartApplyOnEnum applyOn;
+
     public SnapStartResponse withApplyOn(SnapStartApplyOnEnum applyOn) {
         this.applyOn = applyOn;
         return this;
@@ -23,9 +24,11 @@ public class SnapStartResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptimizationStatus")
     public SnapStartOptimizationStatusEnum optimizationStatus;
+
     public SnapStartResponse withOptimizationStatus(SnapStartOptimizationStatusEnum optimizationStatus) {
         this.optimizationStatus = optimizationStatus;
         return this;
     }
     
+    public SnapStartResponse(){}
 }

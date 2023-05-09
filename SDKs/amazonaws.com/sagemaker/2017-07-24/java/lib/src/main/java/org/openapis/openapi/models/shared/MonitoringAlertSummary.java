@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class MonitoringAlertSummary {
     @JsonProperty("Actions")
     public MonitoringAlertActions actions;
+
     public MonitoringAlertSummary withActions(MonitoringAlertActions actions) {
         this.actions = actions;
         return this;
@@ -24,6 +25,7 @@ public class MonitoringAlertSummary {
     
     @JsonProperty("AlertStatus")
     public MonitoringAlertStatusEnum alertStatus;
+
     public MonitoringAlertSummary withAlertStatus(MonitoringAlertStatusEnum alertStatus) {
         this.alertStatus = alertStatus;
         return this;
@@ -33,6 +35,7 @@ public class MonitoringAlertSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public MonitoringAlertSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -40,6 +43,7 @@ public class MonitoringAlertSummary {
     
     @JsonProperty("DatapointsToAlert")
     public Long datapointsToAlert;
+
     public MonitoringAlertSummary withDatapointsToAlert(Long datapointsToAlert) {
         this.datapointsToAlert = datapointsToAlert;
         return this;
@@ -47,6 +51,7 @@ public class MonitoringAlertSummary {
     
     @JsonProperty("EvaluationPeriod")
     public Long evaluationPeriod;
+
     public MonitoringAlertSummary withEvaluationPeriod(Long evaluationPeriod) {
         this.evaluationPeriod = evaluationPeriod;
         return this;
@@ -56,6 +61,7 @@ public class MonitoringAlertSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public MonitoringAlertSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -63,9 +69,19 @@ public class MonitoringAlertSummary {
     
     @JsonProperty("MonitoringAlertName")
     public String monitoringAlertName;
+
     public MonitoringAlertSummary withMonitoringAlertName(String monitoringAlertName) {
         this.monitoringAlertName = monitoringAlertName;
         return this;
     }
     
+    public MonitoringAlertSummary(@JsonProperty("Actions") MonitoringAlertActions actions, @JsonProperty("AlertStatus") MonitoringAlertStatusEnum alertStatus, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("DatapointsToAlert") Long datapointsToAlert, @JsonProperty("EvaluationPeriod") Long evaluationPeriod, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime, @JsonProperty("MonitoringAlertName") String monitoringAlertName) {
+        this.actions = actions;
+        this.alertStatus = alertStatus;
+        this.creationTime = creationTime;
+        this.datapointsToAlert = datapointsToAlert;
+        this.evaluationPeriod = evaluationPeriod;
+        this.lastModifiedTime = lastModifiedTime;
+        this.monitoringAlertName = monitoringAlertName;
+  }
 }

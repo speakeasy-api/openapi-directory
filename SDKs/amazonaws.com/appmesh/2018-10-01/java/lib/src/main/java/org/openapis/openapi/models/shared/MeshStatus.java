@@ -15,9 +15,11 @@ public class MeshStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public MeshStatusCodeEnum status;
+
     public MeshStatus withStatus(MeshStatusCodeEnum status) {
         this.status = status;
         return this;
     }
     
+    public MeshStatus(){}
 }

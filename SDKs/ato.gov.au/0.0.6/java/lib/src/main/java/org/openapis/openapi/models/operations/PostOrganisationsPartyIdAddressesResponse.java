@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostOrganisationsPartyIdAddressesResponse {
     
     public String contentType;
+
     public PostOrganisationsPartyIdAddressesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostOrganisationsPartyIdAddressesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostOrganisationsPartyIdAddressesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PostOrganisationsPartyIdAddressesResponse {
     
     
     public Integer statusCode;
+
     public PostOrganisationsPartyIdAddressesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PostOrganisationsPartyIdAddressesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostOrganisationsPartyIdAddressesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PostOrganisationsPartyIdAddressesResponse {
      */
     
     public org.openapis.openapi.models.shared.Address address;
+
     public PostOrganisationsPartyIdAddressesResponse withAddress(org.openapis.openapi.models.shared.Address address) {
         this.address = address;
         return this;
@@ -50,6 +56,7 @@ public class PostOrganisationsPartyIdAddressesResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArgument invalidArgument;
+
     public PostOrganisationsPartyIdAddressesResponse withInvalidArgument(org.openapis.openapi.models.shared.InvalidArgument invalidArgument) {
         this.invalidArgument = invalidArgument;
         return this;
@@ -60,9 +67,14 @@ public class PostOrganisationsPartyIdAddressesResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public PostOrganisationsPartyIdAddressesResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public PostOrganisationsPartyIdAddressesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

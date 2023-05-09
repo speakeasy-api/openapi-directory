@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LineMetaSeverityResponse {
     
     public byte[] body;
+
     public LineMetaSeverityResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class LineMetaSeverityResponse {
     
     
     public String contentType;
+
     public LineMetaSeverityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class LineMetaSeverityResponse {
     
     
     public Integer statusCode;
+
     public LineMetaSeverityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class LineMetaSeverityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LineMetaSeverityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class LineMetaSeverityResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesStatusSeverity[] tflApiPresentationEntitiesStatusSeverities;
+
     public LineMetaSeverityResponse withTflApiPresentationEntitiesStatusSeverities(org.openapis.openapi.models.shared.TflApiPresentationEntitiesStatusSeverity[] tflApiPresentationEntitiesStatusSeverities) {
         this.tflApiPresentationEntitiesStatusSeverities = tflApiPresentationEntitiesStatusSeverities;
         return this;
     }
     
+    public LineMetaSeverityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

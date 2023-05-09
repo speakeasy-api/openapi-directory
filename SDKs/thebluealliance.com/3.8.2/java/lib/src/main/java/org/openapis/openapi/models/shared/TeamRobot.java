@@ -12,6 +12,7 @@ public class TeamRobot {
      */
     @JsonProperty("key")
     public String key;
+
     public TeamRobot withKey(String key) {
         this.key = key;
         return this;
@@ -22,6 +23,7 @@ public class TeamRobot {
      */
     @JsonProperty("robot_name")
     public String robotName;
+
     public TeamRobot withRobotName(String robotName) {
         this.robotName = robotName;
         return this;
@@ -32,6 +34,7 @@ public class TeamRobot {
      */
     @JsonProperty("team_key")
     public String teamKey;
+
     public TeamRobot withTeamKey(String teamKey) {
         this.teamKey = teamKey;
         return this;
@@ -42,9 +45,16 @@ public class TeamRobot {
      */
     @JsonProperty("year")
     public Long year;
+
     public TeamRobot withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public TeamRobot(@JsonProperty("key") String key, @JsonProperty("robot_name") String robotName, @JsonProperty("team_key") String teamKey, @JsonProperty("year") Long year) {
+        this.key = key;
+        this.robotName = robotName;
+        this.teamKey = teamKey;
+        this.year = year;
+  }
 }

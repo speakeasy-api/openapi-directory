@@ -18,6 +18,7 @@ public class TablesModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableEarlyStopping")
     public Boolean disableEarlyStopping;
+
     public TablesModelMetadata withDisableEarlyStopping(Boolean disableEarlyStopping) {
         this.disableEarlyStopping = disableEarlyStopping;
         return this;
@@ -29,6 +30,7 @@ public class TablesModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputFeatureColumnSpecs")
     public ColumnSpec[] inputFeatureColumnSpecs;
+
     public TablesModelMetadata withInputFeatureColumnSpecs(ColumnSpec[] inputFeatureColumnSpecs) {
         this.inputFeatureColumnSpecs = inputFeatureColumnSpecs;
         return this;
@@ -40,6 +42,7 @@ public class TablesModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimizationObjective")
     public String optimizationObjective;
+
     public TablesModelMetadata withOptimizationObjective(String optimizationObjective) {
         this.optimizationObjective = optimizationObjective;
         return this;
@@ -51,6 +54,7 @@ public class TablesModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimizationObjectivePrecisionValue")
     public Float optimizationObjectivePrecisionValue;
+
     public TablesModelMetadata withOptimizationObjectivePrecisionValue(Float optimizationObjectivePrecisionValue) {
         this.optimizationObjectivePrecisionValue = optimizationObjectivePrecisionValue;
         return this;
@@ -62,6 +66,7 @@ public class TablesModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimizationObjectiveRecallValue")
     public Float optimizationObjectiveRecallValue;
+
     public TablesModelMetadata withOptimizationObjectiveRecallValue(Float optimizationObjectiveRecallValue) {
         this.optimizationObjectiveRecallValue = optimizationObjectiveRecallValue;
         return this;
@@ -73,6 +78,7 @@ public class TablesModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tablesModelColumnInfo")
     public TablesModelColumnInfo[] tablesModelColumnInfo;
+
     public TablesModelMetadata withTablesModelColumnInfo(TablesModelColumnInfo[] tablesModelColumnInfo) {
         this.tablesModelColumnInfo = tablesModelColumnInfo;
         return this;
@@ -84,6 +90,7 @@ public class TablesModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetColumnSpec")
     public ColumnSpec targetColumnSpec;
+
     public TablesModelMetadata withTargetColumnSpec(ColumnSpec targetColumnSpec) {
         this.targetColumnSpec = targetColumnSpec;
         return this;
@@ -95,6 +102,7 @@ public class TablesModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainBudgetMilliNodeHours")
     public String trainBudgetMilliNodeHours;
+
     public TablesModelMetadata withTrainBudgetMilliNodeHours(String trainBudgetMilliNodeHours) {
         this.trainBudgetMilliNodeHours = trainBudgetMilliNodeHours;
         return this;
@@ -106,9 +114,11 @@ public class TablesModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainCostMilliNodeHours")
     public String trainCostMilliNodeHours;
+
     public TablesModelMetadata withTrainCostMilliNodeHours(String trainCostMilliNodeHours) {
         this.trainCostMilliNodeHours = trainCostMilliNodeHours;
         return this;
     }
     
+    public TablesModelMetadata(){}
 }

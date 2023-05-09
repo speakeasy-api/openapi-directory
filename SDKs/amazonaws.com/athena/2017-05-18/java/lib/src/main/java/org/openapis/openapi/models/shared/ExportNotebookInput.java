@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExportNotebookInput {
     @JsonProperty("NotebookId")
     public String notebookId;
+
     public ExportNotebookInput withNotebookId(String notebookId) {
         this.notebookId = notebookId;
         return this;
     }
     
+    public ExportNotebookInput(@JsonProperty("NotebookId") String notebookId) {
+        this.notebookId = notebookId;
+  }
 }

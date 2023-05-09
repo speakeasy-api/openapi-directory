@@ -12,6 +12,7 @@ public class GetCommandsTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
     public Long deviceId;
+
     public GetCommandsTypesRequest withDeviceId(Long deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -22,6 +23,7 @@ public class GetCommandsTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=protocol")
     public String protocol;
+
     public GetCommandsTypesRequest withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -32,9 +34,11 @@ public class GetCommandsTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textChannel")
     public Boolean textChannel;
+
     public GetCommandsTypesRequest withTextChannel(Boolean textChannel) {
         this.textChannel = textChannel;
         return this;
     }
     
+    public GetCommandsTypesRequest(){}
 }

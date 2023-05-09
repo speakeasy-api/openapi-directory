@@ -24,6 +24,7 @@ public class OrderRoundingAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public OrderRoundingAdjustment withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -35,6 +36,7 @@ public class OrderRoundingAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderRoundingAdjustment withName(String name) {
         this.name = name;
         return this;
@@ -46,9 +48,11 @@ public class OrderRoundingAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OrderRoundingAdjustment withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public OrderRoundingAdjustment(){}
 }

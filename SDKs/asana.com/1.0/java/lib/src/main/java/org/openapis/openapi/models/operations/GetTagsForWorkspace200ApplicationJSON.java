@@ -15,9 +15,11 @@ public class GetTagsForWorkspace200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TagCompact[] data;
+
     public GetTagsForWorkspace200ApplicationJSON withData(org.openapis.openapi.models.shared.TagCompact[] data) {
         this.data = data;
         return this;
     }
     
+    public GetTagsForWorkspace200ApplicationJSON(){}
 }

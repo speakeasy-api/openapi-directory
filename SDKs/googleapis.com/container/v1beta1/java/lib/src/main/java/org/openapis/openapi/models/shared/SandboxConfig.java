@@ -18,6 +18,7 @@ public class SandboxConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sandboxType")
     public String sandboxType;
+
     public SandboxConfig withSandboxType(String sandboxType) {
         this.sandboxType = sandboxType;
         return this;
@@ -29,9 +30,11 @@ public class SandboxConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SandboxConfigTypeEnum type;
+
     public SandboxConfig withType(SandboxConfigTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SandboxConfig(){}
 }

@@ -15,9 +15,11 @@ public class GetTestSuiteRelations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testsuite")
     public GetTestSuiteRelations200ApplicationJSONTestsuite[] testsuite;
+
     public GetTestSuiteRelations200ApplicationJSON withTestsuite(GetTestSuiteRelations200ApplicationJSONTestsuite[] testsuite) {
         this.testsuite = testsuite;
         return this;
     }
     
+    public GetTestSuiteRelations200ApplicationJSON(){}
 }

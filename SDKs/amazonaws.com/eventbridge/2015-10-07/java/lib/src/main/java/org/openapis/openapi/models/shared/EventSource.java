@@ -20,6 +20,7 @@ public class EventSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public EventSource withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class EventSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public String createdBy;
+
     public EventSource withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -38,6 +40,7 @@ public class EventSource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public EventSource withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -48,6 +51,7 @@ public class EventSource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationTime")
     public OffsetDateTime expirationTime;
+
     public EventSource withExpirationTime(OffsetDateTime expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -56,6 +60,7 @@ public class EventSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public EventSource withName(String name) {
         this.name = name;
         return this;
@@ -64,9 +69,11 @@ public class EventSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public EventSourceStateEnum state;
+
     public EventSource withState(EventSourceStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public EventSource(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClusterSecurityGroupsMessage {
     
     public String clusterSecurityGroupName;
+
     public DescribeClusterSecurityGroupsMessage withClusterSecurityGroupName(String clusterSecurityGroupName) {
         this.clusterSecurityGroupName = clusterSecurityGroupName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeClusterSecurityGroupsMessage {
     
     
     public String marker;
+
     public DescribeClusterSecurityGroupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,6 +28,7 @@ public class DescribeClusterSecurityGroupsMessage {
     
     
     public Long maxRecords;
+
     public DescribeClusterSecurityGroupsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -33,6 +36,7 @@ public class DescribeClusterSecurityGroupsMessage {
     
     
     public String[] tagKeys;
+
     public DescribeClusterSecurityGroupsMessage withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -40,9 +44,11 @@ public class DescribeClusterSecurityGroupsMessage {
     
     
     public String[] tagValues;
+
     public DescribeClusterSecurityGroupsMessage withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     
+    public DescribeClusterSecurityGroupsMessage(){}
 }

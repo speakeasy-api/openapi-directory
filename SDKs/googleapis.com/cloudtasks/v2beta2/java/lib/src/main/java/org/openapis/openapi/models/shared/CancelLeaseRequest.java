@@ -18,6 +18,7 @@ public class CancelLeaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseView")
     public CancelLeaseRequestResponseViewEnum responseView;
+
     public CancelLeaseRequest withResponseView(CancelLeaseRequestResponseViewEnum responseView) {
         this.responseView = responseView;
         return this;
@@ -29,9 +30,11 @@ public class CancelLeaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleTime")
     public String scheduleTime;
+
     public CancelLeaseRequest withScheduleTime(String scheduleTime) {
         this.scheduleTime = scheduleTime;
         return this;
     }
     
+    public CancelLeaseRequest(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartLoggingRequest {
     @JsonProperty("Name")
     public String name;
+
     public StartLoggingRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StartLoggingRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

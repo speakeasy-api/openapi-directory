@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateFirewallRuleGroupAssociationRequest {
     @JsonProperty("FirewallRuleGroupAssociationId")
     public String firewallRuleGroupAssociationId;
+
     public UpdateFirewallRuleGroupAssociationRequest withFirewallRuleGroupAssociationId(String firewallRuleGroupAssociationId) {
         this.firewallRuleGroupAssociationId = firewallRuleGroupAssociationId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateFirewallRuleGroupAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MutationProtection")
     public MutationProtectionStatusEnum mutationProtection;
+
     public UpdateFirewallRuleGroupAssociationRequest withMutationProtection(MutationProtectionStatusEnum mutationProtection) {
         this.mutationProtection = mutationProtection;
         return this;
@@ -27,6 +29,7 @@ public class UpdateFirewallRuleGroupAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateFirewallRuleGroupAssociationRequest withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +38,13 @@ public class UpdateFirewallRuleGroupAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public UpdateFirewallRuleGroupAssociationRequest withPriority(Long priority) {
         this.priority = priority;
         return this;
     }
     
+    public UpdateFirewallRuleGroupAssociationRequest(@JsonProperty("FirewallRuleGroupAssociationId") String firewallRuleGroupAssociationId) {
+        this.firewallRuleGroupAssociationId = firewallRuleGroupAssociationId;
+  }
 }

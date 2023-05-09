@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetdocumentRequest {
@@ -12,6 +13,7 @@ public class GetdocumentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetdocumentRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetdocumentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetdocumentRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetdocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
     public String dataEntityName;
+
     public GetdocumentRequest withDataEntityName(String dataEntityName) {
         this.dataEntityName = dataEntityName;
         return this;
@@ -42,9 +46,16 @@ public class GetdocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetdocumentRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetdocumentRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("dataEntityName") String dataEntityName, @JsonProperty("id") String id) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.dataEntityName = dataEntityName;
+        this.id = id;
+  }
 }

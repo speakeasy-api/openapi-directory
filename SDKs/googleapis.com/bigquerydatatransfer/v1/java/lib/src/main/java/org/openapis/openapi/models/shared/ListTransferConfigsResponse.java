@@ -18,6 +18,7 @@ public class ListTransferConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTransferConfigsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListTransferConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferConfigs")
     public TransferConfig[] transferConfigs;
+
     public ListTransferConfigsResponse withTransferConfigs(TransferConfig[] transferConfigs) {
         this.transferConfigs = transferConfigs;
         return this;
     }
     
+    public ListTransferConfigsResponse(){}
 }

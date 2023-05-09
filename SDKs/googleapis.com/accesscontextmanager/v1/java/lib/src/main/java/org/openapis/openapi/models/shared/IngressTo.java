@@ -18,6 +18,7 @@ public class IngressTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public ApiOperation[] operations;
+
     public IngressTo withOperations(ApiOperation[] operations) {
         this.operations = operations;
         return this;
@@ -29,9 +30,11 @@ public class IngressTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public String[] resources;
+
     public IngressTo withResources(String[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public IngressTo(){}
 }

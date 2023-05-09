@@ -15,6 +15,7 @@ public class Uncrd502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Uncrd502ApplicationJSONErrorEnum error;
+
     public Uncrd502ApplicationJSON withError(Uncrd502ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Uncrd502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Uncrd502ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Uncrd502ApplicationJSON withErrorDescription(Uncrd502ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Uncrd502ApplicationJSON(){}
 }

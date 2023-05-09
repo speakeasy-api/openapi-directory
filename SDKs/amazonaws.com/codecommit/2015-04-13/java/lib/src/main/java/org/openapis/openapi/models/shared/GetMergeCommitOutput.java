@@ -15,6 +15,7 @@ public class GetMergeCommitOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseCommitId")
     public String baseCommitId;
+
     public GetMergeCommitOutput withBaseCommitId(String baseCommitId) {
         this.baseCommitId = baseCommitId;
         return this;
@@ -23,6 +24,7 @@ public class GetMergeCommitOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationCommitId")
     public String destinationCommitId;
+
     public GetMergeCommitOutput withDestinationCommitId(String destinationCommitId) {
         this.destinationCommitId = destinationCommitId;
         return this;
@@ -31,6 +33,7 @@ public class GetMergeCommitOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergedCommitId")
     public String mergedCommitId;
+
     public GetMergeCommitOutput withMergedCommitId(String mergedCommitId) {
         this.mergedCommitId = mergedCommitId;
         return this;
@@ -39,9 +42,11 @@ public class GetMergeCommitOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceCommitId")
     public String sourceCommitId;
+
     public GetMergeCommitOutput withSourceCommitId(String sourceCommitId) {
         this.sourceCommitId = sourceCommitId;
         return this;
     }
     
+    public GetMergeCommitOutput(){}
 }

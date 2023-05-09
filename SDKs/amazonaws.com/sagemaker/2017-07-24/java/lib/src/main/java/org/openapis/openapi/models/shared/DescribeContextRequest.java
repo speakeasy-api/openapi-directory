@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeContextRequest {
     @JsonProperty("ContextName")
     public String contextName;
+
     public DescribeContextRequest withContextName(String contextName) {
         this.contextName = contextName;
         return this;
     }
     
+    public DescribeContextRequest(@JsonProperty("ContextName") String contextName) {
+        this.contextName = contextName;
+  }
 }

@@ -15,6 +15,7 @@ public class CrashGroupsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotation")
     public String annotation;
+
     public CrashGroupsUpdateRequestBody withAnnotation(String annotation) {
         this.annotation = annotation;
         return this;
@@ -23,9 +24,11 @@ public class CrashGroupsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CrashGroupsUpdateRequestBodyStatusEnum status;
+
     public CrashGroupsUpdateRequestBody withStatus(CrashGroupsUpdateRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CrashGroupsUpdateRequestBody(){}
 }

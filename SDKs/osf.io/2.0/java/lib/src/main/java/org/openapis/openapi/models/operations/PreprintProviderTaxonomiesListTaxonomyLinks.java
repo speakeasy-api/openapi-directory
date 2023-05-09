@@ -15,6 +15,7 @@ public class PreprintProviderTaxonomiesListTaxonomyLinks {
      */
     
     public String[] parents;
+
     public PreprintProviderTaxonomiesListTaxonomyLinks withParents(String[] parents) {
         this.parents = parents;
         return this;
@@ -25,9 +26,11 @@ public class PreprintProviderTaxonomiesListTaxonomyLinks {
      */
     
     public String self;
+
     public PreprintProviderTaxonomiesListTaxonomyLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public PreprintProviderTaxonomiesListTaxonomyLinks(){}
 }

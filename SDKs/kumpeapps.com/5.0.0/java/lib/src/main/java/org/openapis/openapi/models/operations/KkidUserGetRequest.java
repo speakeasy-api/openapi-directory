@@ -12,9 +12,11 @@ public class KkidUserGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enableBool")
     public Boolean enableBool;
+
     public KkidUserGetRequest withEnableBool(Boolean enableBool) {
         this.enableBool = enableBool;
         return this;
     }
     
+    public KkidUserGetRequest(){}
 }

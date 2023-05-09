@@ -18,6 +18,7 @@ public class InsertPageBreakRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endOfSegmentLocation")
     public EndOfSegmentLocation endOfSegmentLocation;
+
     public InsertPageBreakRequest withEndOfSegmentLocation(EndOfSegmentLocation endOfSegmentLocation) {
         this.endOfSegmentLocation = endOfSegmentLocation;
         return this;
@@ -29,9 +30,11 @@ public class InsertPageBreakRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public InsertPageBreakRequest withLocation(Location location) {
         this.location = location;
         return this;
     }
     
+    public InsertPageBreakRequest(){}
 }

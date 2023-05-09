@@ -18,9 +18,11 @@ public class UpdateAntiSpamRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AntiSpamTypesEnum type;
+
     public UpdateAntiSpamRequest withType(AntiSpamTypesEnum type) {
         this.type = type;
         return this;
     }
     
+    public UpdateAntiSpamRequest(){}
 }

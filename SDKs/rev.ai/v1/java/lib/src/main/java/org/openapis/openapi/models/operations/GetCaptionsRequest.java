@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCaptionsRequest {
@@ -12,6 +13,7 @@ public class GetCaptionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public org.openapis.openapi.models.shared.AcceptCaptionEnum accept;
+
     public GetCaptionsRequest withAccept(org.openapis.openapi.models.shared.AcceptCaptionEnum accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetCaptionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetCaptionsRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +35,13 @@ public class GetCaptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=speaker_channel")
     public Long speakerChannel;
+
     public GetCaptionsRequest withSpeakerChannel(Long speakerChannel) {
         this.speakerChannel = speakerChannel;
         return this;
     }
     
+    public GetCaptionsRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

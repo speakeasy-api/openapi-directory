@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApplicationComponentDetailsResponse {
     
     public String contentType;
+
     public GetApplicationComponentDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetApplicationComponentDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetApplicationComponentDetailsResponse getApplicationComponentDetailsResponse;
+
     public GetApplicationComponentDetailsResponse withGetApplicationComponentDetailsResponse(org.openapis.openapi.models.shared.GetApplicationComponentDetailsResponse getApplicationComponentDetailsResponse) {
         this.getApplicationComponentDetailsResponse = getApplicationComponentDetailsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetApplicationComponentDetailsResponse {
      */
     
     public Object internalServerException;
+
     public GetApplicationComponentDetailsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetApplicationComponentDetailsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetApplicationComponentDetailsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetApplicationComponentDetailsResponse {
     
     
     public Integer statusCode;
+
     public GetApplicationComponentDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetApplicationComponentDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApplicationComponentDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetApplicationComponentDetailsResponse {
      */
     
     public Object throttlingException;
+
     public GetApplicationComponentDetailsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetApplicationComponentDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

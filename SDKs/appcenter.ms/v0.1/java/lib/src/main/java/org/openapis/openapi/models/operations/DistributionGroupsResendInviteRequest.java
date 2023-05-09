@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsResendInviteRequest {
@@ -12,6 +13,7 @@ public class DistributionGroupsResendInviteRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public DistributionGroupsResendInviteRequestBody requestBody;
+
     public DistributionGroupsResendInviteRequest withRequestBody(DistributionGroupsResendInviteRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class DistributionGroupsResendInviteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public DistributionGroupsResendInviteRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,6 +35,7 @@ public class DistributionGroupsResendInviteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
     public String distributionGroupName;
+
     public DistributionGroupsResendInviteRequest withDistributionGroupName(String distributionGroupName) {
         this.distributionGroupName = distributionGroupName;
         return this;
@@ -42,9 +46,16 @@ public class DistributionGroupsResendInviteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public DistributionGroupsResendInviteRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public DistributionGroupsResendInviteRequest(@JsonProperty("RequestBody") DistributionGroupsResendInviteRequestBody requestBody, @JsonProperty("app_name") String appName, @JsonProperty("distribution_group_name") String distributionGroupName, @JsonProperty("owner_name") String ownerName) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.distributionGroupName = distributionGroupName;
+        this.ownerName = ownerName;
+  }
 }

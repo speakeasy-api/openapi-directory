@@ -18,6 +18,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public Object properties;
+
     public User withProperties(Object properties) {
         this.properties = properties;
         return this;
@@ -25,9 +26,13 @@ public class User {
     
     @JsonProperty("userId")
     public String userId;
+
     public User withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public User(@JsonProperty("userId") String userId) {
+        this.userId = userId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeExplainabilityResponse {
     
     public String contentType;
+
     public DescribeExplainabilityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeExplainabilityResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeExplainabilityResponse describeExplainabilityResponse;
+
     public DescribeExplainabilityResponse withDescribeExplainabilityResponse(org.openapis.openapi.models.shared.DescribeExplainabilityResponse describeExplainabilityResponse) {
         this.describeExplainabilityResponse = describeExplainabilityResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeExplainabilityResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeExplainabilityResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeExplainabilityResponse {
     
     
     public Integer statusCode;
+
     public DescribeExplainabilityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeExplainabilityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeExplainabilityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeExplainabilityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeExplainabilityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeExplainabilityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

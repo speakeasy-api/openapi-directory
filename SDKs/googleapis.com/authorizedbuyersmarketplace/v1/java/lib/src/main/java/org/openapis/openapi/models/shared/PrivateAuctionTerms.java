@@ -18,6 +18,7 @@ public class PrivateAuctionTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floorPrice")
     public Price floorPrice;
+
     public PrivateAuctionTerms withFloorPrice(Price floorPrice) {
         this.floorPrice = floorPrice;
         return this;
@@ -29,9 +30,11 @@ public class PrivateAuctionTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openAuctionAllowed")
     public Boolean openAuctionAllowed;
+
     public PrivateAuctionTerms withOpenAuctionAllowed(Boolean openAuctionAllowed) {
         this.openAuctionAllowed = openAuctionAllowed;
         return this;
     }
     
+    public PrivateAuctionTerms(){}
 }

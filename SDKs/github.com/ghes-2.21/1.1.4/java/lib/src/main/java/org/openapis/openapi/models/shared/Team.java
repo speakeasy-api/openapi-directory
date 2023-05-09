@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Team {
     @JsonProperty("description")
     public String description;
+
     public Team withDescription(String description) {
         this.description = description;
         return this;
@@ -21,6 +22,7 @@ public class Team {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public Team withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -28,6 +30,7 @@ public class Team {
     
     @JsonProperty("id")
     public Long id;
+
     public Team withId(Long id) {
         this.id = id;
         return this;
@@ -35,6 +38,7 @@ public class Team {
     
     @JsonProperty("members_url")
     public String membersUrl;
+
     public Team withMembersUrl(String membersUrl) {
         this.membersUrl = membersUrl;
         return this;
@@ -42,6 +46,7 @@ public class Team {
     
     @JsonProperty("name")
     public String name;
+
     public Team withName(String name) {
         this.name = name;
         return this;
@@ -49,6 +54,7 @@ public class Team {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public Team withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -59,6 +65,7 @@ public class Team {
      */
     @JsonProperty("parent")
     public NullableTeamSimple parent;
+
     public Team withParent(NullableTeamSimple parent) {
         this.parent = parent;
         return this;
@@ -66,6 +73,7 @@ public class Team {
     
     @JsonProperty("permission")
     public String permission;
+
     public Team withPermission(String permission) {
         this.permission = permission;
         return this;
@@ -74,6 +82,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public TeamPermissions permissions;
+
     public Team withPermissions(TeamPermissions permissions) {
         this.permissions = permissions;
         return this;
@@ -82,6 +91,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy")
     public String privacy;
+
     public Team withPrivacy(String privacy) {
         this.privacy = privacy;
         return this;
@@ -89,6 +99,7 @@ public class Team {
     
     @JsonProperty("repositories_url")
     public String repositoriesUrl;
+
     public Team withRepositoriesUrl(String repositoriesUrl) {
         this.repositoriesUrl = repositoriesUrl;
         return this;
@@ -96,6 +107,7 @@ public class Team {
     
     @JsonProperty("slug")
     public String slug;
+
     public Team withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -103,9 +115,23 @@ public class Team {
     
     @JsonProperty("url")
     public String url;
+
     public Team withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Team(@JsonProperty("description") String description, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("members_url") String membersUrl, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("parent") NullableTeamSimple parent, @JsonProperty("permission") String permission, @JsonProperty("repositories_url") String repositoriesUrl, @JsonProperty("slug") String slug, @JsonProperty("url") String url) {
+        this.description = description;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.membersUrl = membersUrl;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.parent = parent;
+        this.permission = permission;
+        this.repositoriesUrl = repositoriesUrl;
+        this.slug = slug;
+        this.url = url;
+  }
 }

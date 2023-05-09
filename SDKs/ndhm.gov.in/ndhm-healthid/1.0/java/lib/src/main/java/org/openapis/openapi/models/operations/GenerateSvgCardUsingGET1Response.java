@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateSvgCardUsingGET1Response {
     
     public String contentType;
+
     public GenerateSvgCardUsingGET1Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GenerateSvgCardUsingGET1Response {
     
     
     public Integer statusCode;
+
     public GenerateSvgCardUsingGET1Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GenerateSvgCardUsingGET1Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateSvgCardUsingGET1Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GenerateSvgCardUsingGET1Response {
      */
     
     public String generateSvgCardUsingGET1200WildcardByteString;
+
     public GenerateSvgCardUsingGET1Response withGenerateSvgCardUsingGET1200WildcardByteString(String generateSvgCardUsingGET1200WildcardByteString) {
         this.generateSvgCardUsingGET1200WildcardByteString = generateSvgCardUsingGET1200WildcardByteString;
         return this;
     }
     
+    public GenerateSvgCardUsingGET1Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

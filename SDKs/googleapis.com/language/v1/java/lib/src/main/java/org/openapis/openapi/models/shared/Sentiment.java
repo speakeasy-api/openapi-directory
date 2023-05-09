@@ -18,6 +18,7 @@ public class Sentiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("magnitude")
     public Float magnitude;
+
     public Sentiment withMagnitude(Float magnitude) {
         this.magnitude = magnitude;
         return this;
@@ -29,9 +30,11 @@ public class Sentiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public Sentiment withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public Sentiment(){}
 }

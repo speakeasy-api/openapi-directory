@@ -18,6 +18,7 @@ public class V1Beta1QuotaOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminOverrideAncestor")
     public String adminOverrideAncestor;
+
     public V1Beta1QuotaOverride withAdminOverrideAncestor(String adminOverrideAncestor) {
         this.adminOverrideAncestor = adminOverrideAncestor;
         return this;
@@ -29,6 +30,7 @@ public class V1Beta1QuotaOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public java.util.Map<String, String> dimensions;
+
     public V1Beta1QuotaOverride withDimensions(java.util.Map<String, String> dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -40,6 +42,7 @@ public class V1Beta1QuotaOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public String metric;
+
     public V1Beta1QuotaOverride withMetric(String metric) {
         this.metric = metric;
         return this;
@@ -51,6 +54,7 @@ public class V1Beta1QuotaOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public V1Beta1QuotaOverride withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class V1Beta1QuotaOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideValue")
     public String overrideValue;
+
     public V1Beta1QuotaOverride withOverrideValue(String overrideValue) {
         this.overrideValue = overrideValue;
         return this;
@@ -73,9 +78,11 @@ public class V1Beta1QuotaOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public V1Beta1QuotaOverride withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public V1Beta1QuotaOverride(){}
 }

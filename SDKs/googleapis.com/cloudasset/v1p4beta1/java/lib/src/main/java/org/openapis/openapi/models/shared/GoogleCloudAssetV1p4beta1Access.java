@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1p4beta1Access {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisState")
     public GoogleCloudAssetV1p4beta1AnalysisState analysisState;
+
     public GoogleCloudAssetV1p4beta1Access withAnalysisState(GoogleCloudAssetV1p4beta1AnalysisState analysisState) {
         this.analysisState = analysisState;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAssetV1p4beta1Access {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public String permission;
+
     public GoogleCloudAssetV1p4beta1Access withPermission(String permission) {
         this.permission = permission;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudAssetV1p4beta1Access {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public GoogleCloudAssetV1p4beta1Access withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public GoogleCloudAssetV1p4beta1Access(){}
 }

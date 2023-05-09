@@ -60,11 +60,9 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesTagsFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesTagsFormatResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesTagsFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesTagsFormatResponse(contentType, httpRes.statusCode()) {{
             tagMarshallerWrappeds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesTagsTagLanguagesFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesTagsTagLanguagesFormatResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesTagsTagLanguagesFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesTagsTagLanguagesFormatResponse(contentType, httpRes.statusCode()) {{
             tagLanguageMarshallerWrappeds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -142,11 +138,9 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesTagsTagTypesFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesTagsTagTypesFormatResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesTagsTagTypesFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesTagsTagTypesFormatResponse(contentType, httpRes.statusCode()) {{
             tagTypeMarshallerWrappeds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,11 +177,9 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesTagsIdFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesTagsIdFormatResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesTagsIdFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesTagsIdFormatResponse(contentType, httpRes.statusCode()) {{
             tagMarshallerWrappeds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -230,11 +222,9 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesTagsIdMediaFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesTagsIdMediaFormatResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesTagsIdMediaFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesTagsIdMediaFormatResponse(contentType, httpRes.statusCode()) {{
             mediaItemWrappeds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -277,11 +267,9 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesTagsIdRelatedFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesTagsIdRelatedFormatResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesTagsIdRelatedFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesTagsIdRelatedFormatResponse(contentType, httpRes.statusCode()) {{
             tagMarshallerWrappeds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -324,11 +312,9 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesTagsIdSyndicateFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesTagsIdSyndicateFormatResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesTagsIdSyndicateFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesTagsIdSyndicateFormatResponse(contentType, httpRes.statusCode()) {{
             getResourcesTagsIdSyndicateFormat200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

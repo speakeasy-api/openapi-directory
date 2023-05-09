@@ -18,6 +18,7 @@ public class Disapproval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String[] details;
+
     public Disapproval withDetails(String[] details) {
         this.details = details;
         return this;
@@ -29,9 +30,11 @@ public class Disapproval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public DisapprovalReasonEnum reason;
+
     public Disapproval withReason(DisapprovalReasonEnum reason) {
         this.reason = reason;
         return this;
     }
     
+    public Disapproval(){}
 }

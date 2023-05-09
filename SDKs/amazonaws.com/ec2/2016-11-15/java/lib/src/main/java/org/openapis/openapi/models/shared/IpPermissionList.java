@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class IpPermissionList {
     
     public Long fromPort;
+
     public IpPermissionList withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -19,6 +20,7 @@ public class IpPermissionList {
     
     
     public String ipProtocol;
+
     public IpPermissionList withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -26,6 +28,7 @@ public class IpPermissionList {
     
     
     public IpPermissionListIpRanges[] ipRanges;
+
     public IpPermissionList withIpRanges(IpPermissionListIpRanges[] ipRanges) {
         this.ipRanges = ipRanges;
         return this;
@@ -33,6 +36,7 @@ public class IpPermissionList {
     
     
     public IpPermissionListIpv6Ranges[] ipv6Ranges;
+
     public IpPermissionList withIpv6Ranges(IpPermissionListIpv6Ranges[] ipv6Ranges) {
         this.ipv6Ranges = ipv6Ranges;
         return this;
@@ -40,6 +44,7 @@ public class IpPermissionList {
     
     
     public IpPermissionListPrefixListIds[] prefixListIds;
+
     public IpPermissionList withPrefixListIds(IpPermissionListPrefixListIds[] prefixListIds) {
         this.prefixListIds = prefixListIds;
         return this;
@@ -47,6 +52,7 @@ public class IpPermissionList {
     
     
     public Long toPort;
+
     public IpPermissionList withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
@@ -54,9 +60,11 @@ public class IpPermissionList {
     
     
     public IpPermissionListUserIdGroupPairs[] userIdGroupPairs;
+
     public IpPermissionList withUserIdGroupPairs(IpPermissionListUserIdGroupPairs[] userIdGroupPairs) {
         this.userIdGroupPairs = userIdGroupPairs;
         return this;
     }
     
+    public IpPermissionList(){}
 }

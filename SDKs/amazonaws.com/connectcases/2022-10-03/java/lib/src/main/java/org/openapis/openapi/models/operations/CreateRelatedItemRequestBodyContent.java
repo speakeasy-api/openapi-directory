@@ -15,6 +15,7 @@ public class CreateRelatedItemRequestBodyContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public org.openapis.openapi.models.shared.CommentContent comment;
+
     public CreateRelatedItemRequestBodyContent withComment(org.openapis.openapi.models.shared.CommentContent comment) {
         this.comment = comment;
         return this;
@@ -23,9 +24,11 @@ public class CreateRelatedItemRequestBodyContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact")
     public org.openapis.openapi.models.shared.Contact contact;
+
     public CreateRelatedItemRequestBodyContent withContact(org.openapis.openapi.models.shared.Contact contact) {
         this.contact = contact;
         return this;
     }
     
+    public CreateRelatedItemRequestBodyContent(){}
 }

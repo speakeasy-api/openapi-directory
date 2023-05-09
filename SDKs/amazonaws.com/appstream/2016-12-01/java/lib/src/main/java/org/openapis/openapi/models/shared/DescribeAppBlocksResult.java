@@ -15,6 +15,7 @@ public class DescribeAppBlocksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppBlocks")
     public AppBlock[] appBlocks;
+
     public DescribeAppBlocksResult withAppBlocks(AppBlock[] appBlocks) {
         this.appBlocks = appBlocks;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAppBlocksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeAppBlocksResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAppBlocksResult(){}
 }

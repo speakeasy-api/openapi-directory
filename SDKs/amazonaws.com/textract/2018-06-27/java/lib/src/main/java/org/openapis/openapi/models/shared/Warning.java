@@ -15,6 +15,7 @@ public class Warning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public Warning withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,9 +24,11 @@ public class Warning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pages")
     public Long[] pages;
+
     public Warning withPages(Long[] pages) {
         this.pages = pages;
         return this;
     }
     
+    public Warning(){}
 }

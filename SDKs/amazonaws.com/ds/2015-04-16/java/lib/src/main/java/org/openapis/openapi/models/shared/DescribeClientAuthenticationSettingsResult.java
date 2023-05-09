@@ -15,6 +15,7 @@ public class DescribeClientAuthenticationSettingsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientAuthenticationSettingsInfo")
     public ClientAuthenticationSettingInfo[] clientAuthenticationSettingsInfo;
+
     public DescribeClientAuthenticationSettingsResult withClientAuthenticationSettingsInfo(ClientAuthenticationSettingInfo[] clientAuthenticationSettingsInfo) {
         this.clientAuthenticationSettingsInfo = clientAuthenticationSettingsInfo;
         return this;
@@ -23,9 +24,11 @@ public class DescribeClientAuthenticationSettingsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeClientAuthenticationSettingsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeClientAuthenticationSettingsResult(){}
 }

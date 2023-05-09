@@ -18,6 +18,7 @@ public class ProjectResponseProjectBrief {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public ProjectResponseProjectBrief withGid(String gid) {
         this.gid = gid;
         return this;
@@ -29,9 +30,11 @@ public class ProjectResponseProjectBrief {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public ProjectResponseProjectBrief withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ProjectResponseProjectBrief(){}
 }

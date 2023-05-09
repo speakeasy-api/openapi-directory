@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3FormParameterFillBehavior {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialPromptFulfillment")
     public GoogleCloudDialogflowCxV3Fulfillment initialPromptFulfillment;
+
     public GoogleCloudDialogflowCxV3FormParameterFillBehavior withInitialPromptFulfillment(GoogleCloudDialogflowCxV3Fulfillment initialPromptFulfillment) {
         this.initialPromptFulfillment = initialPromptFulfillment;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3FormParameterFillBehavior {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repromptEventHandlers")
     public GoogleCloudDialogflowCxV3EventHandler[] repromptEventHandlers;
+
     public GoogleCloudDialogflowCxV3FormParameterFillBehavior withRepromptEventHandlers(GoogleCloudDialogflowCxV3EventHandler[] repromptEventHandlers) {
         this.repromptEventHandlers = repromptEventHandlers;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3FormParameterFillBehavior(){}
 }

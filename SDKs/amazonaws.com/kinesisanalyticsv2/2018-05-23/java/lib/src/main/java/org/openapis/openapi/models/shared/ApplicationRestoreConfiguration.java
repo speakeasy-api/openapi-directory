@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApplicationRestoreConfiguration {
     @JsonProperty("ApplicationRestoreType")
     public ApplicationRestoreTypeEnum applicationRestoreType;
+
     public ApplicationRestoreConfiguration withApplicationRestoreType(ApplicationRestoreTypeEnum applicationRestoreType) {
         this.applicationRestoreType = applicationRestoreType;
         return this;
@@ -22,9 +23,13 @@ public class ApplicationRestoreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotName")
     public String snapshotName;
+
     public ApplicationRestoreConfiguration withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
     }
     
+    public ApplicationRestoreConfiguration(@JsonProperty("ApplicationRestoreType") ApplicationRestoreTypeEnum applicationRestoreType) {
+        this.applicationRestoreType = applicationRestoreType;
+  }
 }

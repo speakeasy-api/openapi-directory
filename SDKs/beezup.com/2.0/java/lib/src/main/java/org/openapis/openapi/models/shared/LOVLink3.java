@@ -17,6 +17,7 @@ public class LOVLink3 {
      */
     @JsonProperty("href")
     public String href;
+
     public LOVLink3 withHref(String href) {
         this.href = href;
         return this;
@@ -28,9 +29,13 @@ public class LOVLink3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public HttpMethodEnum method;
+
     public LOVLink3 withMethod(HttpMethodEnum method) {
         this.method = method;
         return this;
     }
     
+    public LOVLink3(@JsonProperty("href") String href) {
+        this.href = href;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateStudioResponse {
     @JsonProperty("studio")
     public Studio studio;
+
     public UpdateStudioResponse withStudio(Studio studio) {
         this.studio = studio;
         return this;
     }
     
+    public UpdateStudioResponse(@JsonProperty("studio") Studio studio) {
+        this.studio = studio;
+  }
 }

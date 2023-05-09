@@ -15,6 +15,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public Notification withBody(String body) {
         this.body = body;
         return this;
@@ -26,6 +27,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collapseKey")
     public String collapseKey;
+
     public Notification withCollapseKey(String collapseKey) {
         this.collapseKey = collapseKey;
         return this;
@@ -37,6 +39,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
+
     public Notification withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -48,6 +51,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sound")
     public String sound;
+
     public Notification withSound(String sound) {
         this.sound = sound;
         return this;
@@ -59,9 +63,11 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Notification withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Notification(){}
 }

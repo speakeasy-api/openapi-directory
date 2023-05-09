@@ -15,6 +15,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public ActionCodeEnum action;
+
     public GlacierJobDescription withAction(ActionCodeEnum action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArchiveId")
     public String archiveId;
+
     public GlacierJobDescription withArchiveId(String archiveId) {
         this.archiveId = archiveId;
         return this;
@@ -31,6 +33,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArchiveSHA256TreeHash")
     public String archiveSha256TreeHash;
+
     public GlacierJobDescription withArchiveSha256TreeHash(String archiveSha256TreeHash) {
         this.archiveSha256TreeHash = archiveSha256TreeHash;
         return this;
@@ -39,6 +42,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArchiveSizeInBytes")
     public Long archiveSizeInBytes;
+
     public GlacierJobDescription withArchiveSizeInBytes(Long archiveSizeInBytes) {
         this.archiveSizeInBytes = archiveSizeInBytes;
         return this;
@@ -47,6 +51,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Completed")
     public Boolean completed;
+
     public GlacierJobDescription withCompleted(Boolean completed) {
         this.completed = completed;
         return this;
@@ -55,6 +60,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompletionDate")
     public String completionDate;
+
     public GlacierJobDescription withCompletionDate(String completionDate) {
         this.completionDate = completionDate;
         return this;
@@ -63,6 +69,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public GlacierJobDescription withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -71,6 +78,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InventoryRetrievalParameters")
     public InventoryRetrievalJobDescription inventoryRetrievalParameters;
+
     public GlacierJobDescription withInventoryRetrievalParameters(InventoryRetrievalJobDescription inventoryRetrievalParameters) {
         this.inventoryRetrievalParameters = inventoryRetrievalParameters;
         return this;
@@ -79,6 +87,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InventorySizeInBytes")
     public Long inventorySizeInBytes;
+
     public GlacierJobDescription withInventorySizeInBytes(Long inventorySizeInBytes) {
         this.inventorySizeInBytes = inventorySizeInBytes;
         return this;
@@ -87,6 +96,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobDescription")
     public String jobDescription;
+
     public GlacierJobDescription withJobDescription(String jobDescription) {
         this.jobDescription = jobDescription;
         return this;
@@ -95,6 +105,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public GlacierJobDescription withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -103,6 +114,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobOutputPath")
     public String jobOutputPath;
+
     public GlacierJobDescription withJobOutputPath(String jobOutputPath) {
         this.jobOutputPath = jobOutputPath;
         return this;
@@ -111,6 +123,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputLocation")
     public OutputLocation outputLocation;
+
     public GlacierJobDescription withOutputLocation(OutputLocation outputLocation) {
         this.outputLocation = outputLocation;
         return this;
@@ -119,6 +132,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetrievalByteRange")
     public String retrievalByteRange;
+
     public GlacierJobDescription withRetrievalByteRange(String retrievalByteRange) {
         this.retrievalByteRange = retrievalByteRange;
         return this;
@@ -127,6 +141,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SHA256TreeHash")
     public String sha256TreeHash;
+
     public GlacierJobDescription withSha256TreeHash(String sha256TreeHash) {
         this.sha256TreeHash = sha256TreeHash;
         return this;
@@ -135,6 +150,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SNSTopic")
     public String snsTopic;
+
     public GlacierJobDescription withSNSTopic(String snsTopic) {
         this.snsTopic = snsTopic;
         return this;
@@ -143,6 +159,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelectParameters")
     public SelectParameters selectParameters;
+
     public GlacierJobDescription withSelectParameters(SelectParameters selectParameters) {
         this.selectParameters = selectParameters;
         return this;
@@ -151,6 +168,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusCode")
     public StatusCodeEnum statusCode;
+
     public GlacierJobDescription withStatusCode(StatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -159,6 +177,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public GlacierJobDescription withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -167,6 +186,7 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tier")
     public String tier;
+
     public GlacierJobDescription withTier(String tier) {
         this.tier = tier;
         return this;
@@ -175,9 +195,11 @@ public class GlacierJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VaultARN")
     public String vaultARN;
+
     public GlacierJobDescription withVaultARN(String vaultARN) {
         this.vaultARN = vaultARN;
         return this;
     }
     
+    public GlacierJobDescription(){}
 }

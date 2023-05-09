@@ -12,6 +12,7 @@ public class RechnungsdruckWebAppControllersApiSearchControllerOrderResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArticleTexts")
     public String articleTexts;
+
     public RechnungsdruckWebAppControllersApiSearchControllerOrderResult withArticleTexts(String articleTexts) {
         this.articleTexts = articleTexts;
         return this;
@@ -20,6 +21,7 @@ public class RechnungsdruckWebAppControllersApiSearchControllerOrderResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BuyerName")
     public String buyerName;
+
     public RechnungsdruckWebAppControllersApiSearchControllerOrderResult withBuyerName(String buyerName) {
         this.buyerName = buyerName;
         return this;
@@ -28,6 +30,7 @@ public class RechnungsdruckWebAppControllersApiSearchControllerOrderResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerName")
     public String customerName;
+
     public RechnungsdruckWebAppControllersApiSearchControllerOrderResult withCustomerName(String customerName) {
         this.customerName = customerName;
         return this;
@@ -36,6 +39,7 @@ public class RechnungsdruckWebAppControllersApiSearchControllerOrderResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalReference")
     public String externalReference;
+
     public RechnungsdruckWebAppControllersApiSearchControllerOrderResult withExternalReference(String externalReference) {
         this.externalReference = externalReference;
         return this;
@@ -44,6 +48,7 @@ public class RechnungsdruckWebAppControllersApiSearchControllerOrderResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public RechnungsdruckWebAppControllersApiSearchControllerOrderResult withId(Long id) {
         this.id = id;
         return this;
@@ -52,9 +57,11 @@ public class RechnungsdruckWebAppControllersApiSearchControllerOrderResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceNumber")
     public String invoiceNumber;
+
     public RechnungsdruckWebAppControllersApiSearchControllerOrderResult withInvoiceNumber(String invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersApiSearchControllerOrderResult(){}
 }

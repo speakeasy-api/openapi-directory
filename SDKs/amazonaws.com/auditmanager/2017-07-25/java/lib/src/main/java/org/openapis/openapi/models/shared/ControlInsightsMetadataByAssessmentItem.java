@@ -20,6 +20,7 @@ public class ControlInsightsMetadataByAssessmentItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlSetName")
     public String controlSetName;
+
     public ControlInsightsMetadataByAssessmentItem withControlSetName(String controlSetName) {
         this.controlSetName = controlSetName;
         return this;
@@ -28,6 +29,7 @@ public class ControlInsightsMetadataByAssessmentItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidenceInsights")
     public EvidenceInsights evidenceInsights;
+
     public ControlInsightsMetadataByAssessmentItem withEvidenceInsights(EvidenceInsights evidenceInsights) {
         this.evidenceInsights = evidenceInsights;
         return this;
@@ -36,6 +38,7 @@ public class ControlInsightsMetadataByAssessmentItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ControlInsightsMetadataByAssessmentItem withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class ControlInsightsMetadataByAssessmentItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public ControlInsightsMetadataByAssessmentItem withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -54,9 +58,11 @@ public class ControlInsightsMetadataByAssessmentItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ControlInsightsMetadataByAssessmentItem withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ControlInsightsMetadataByAssessmentItem(){}
 }

@@ -18,6 +18,7 @@ public class GoogleMapsPlayablelocationsV3Impression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gameObjectType")
     public Integer gameObjectType;
+
     public GoogleMapsPlayablelocationsV3Impression withGameObjectType(Integer gameObjectType) {
         this.gameObjectType = gameObjectType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleMapsPlayablelocationsV3Impression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impressionType")
     public GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum impressionType;
+
     public GoogleMapsPlayablelocationsV3Impression withImpressionType(GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum impressionType) {
         this.impressionType = impressionType;
         return this;
@@ -40,9 +42,11 @@ public class GoogleMapsPlayablelocationsV3Impression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationName")
     public String locationName;
+
     public GoogleMapsPlayablelocationsV3Impression withLocationName(String locationName) {
         this.locationName = locationName;
         return this;
     }
     
+    public GoogleMapsPlayablelocationsV3Impression(){}
 }

@@ -15,6 +15,7 @@ public class ErrorUnsupportedProduct {
      */
     @JsonProperty("detail")
     public String detail;
+
     public ErrorUnsupportedProduct withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -25,6 +26,7 @@ public class ErrorUnsupportedProduct {
      */
     @JsonProperty("instance")
     public String instance;
+
     public ErrorUnsupportedProduct withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -35,6 +37,7 @@ public class ErrorUnsupportedProduct {
      */
     @JsonProperty("title")
     public String title;
+
     public ErrorUnsupportedProduct withTitle(String title) {
         this.title = title;
         return this;
@@ -45,9 +48,16 @@ public class ErrorUnsupportedProduct {
      */
     @JsonProperty("type")
     public String type;
+
     public ErrorUnsupportedProduct withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ErrorUnsupportedProduct(@JsonProperty("detail") String detail, @JsonProperty("instance") String instance, @JsonProperty("title") String title, @JsonProperty("type") String type) {
+        this.detail = detail;
+        this.instance = instance;
+        this.title = title;
+        this.type = type;
+  }
 }

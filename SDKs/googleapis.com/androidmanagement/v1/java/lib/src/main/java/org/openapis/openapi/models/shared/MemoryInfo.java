@@ -18,6 +18,7 @@ public class MemoryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalInternalStorage")
     public String totalInternalStorage;
+
     public MemoryInfo withTotalInternalStorage(String totalInternalStorage) {
         this.totalInternalStorage = totalInternalStorage;
         return this;
@@ -29,9 +30,11 @@ public class MemoryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalRam")
     public String totalRam;
+
     public MemoryInfo withTotalRam(String totalRam) {
         this.totalRam = totalRam;
         return this;
     }
     
+    public MemoryInfo(){}
 }

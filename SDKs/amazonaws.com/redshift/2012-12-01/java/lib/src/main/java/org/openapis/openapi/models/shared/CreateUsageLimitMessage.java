@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateUsageLimitMessage {
     
     public Long amount;
+
     public CreateUsageLimitMessage withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -16,6 +17,7 @@ public class CreateUsageLimitMessage {
     
     
     public UsageLimitBreachActionEnum breachAction;
+
     public CreateUsageLimitMessage withBreachAction(UsageLimitBreachActionEnum breachAction) {
         this.breachAction = breachAction;
         return this;
@@ -23,6 +25,7 @@ public class CreateUsageLimitMessage {
     
     
     public String clusterIdentifier;
+
     public CreateUsageLimitMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -30,6 +33,7 @@ public class CreateUsageLimitMessage {
     
     
     public UsageLimitFeatureTypeEnum featureType;
+
     public CreateUsageLimitMessage withFeatureType(UsageLimitFeatureTypeEnum featureType) {
         this.featureType = featureType;
         return this;
@@ -37,6 +41,7 @@ public class CreateUsageLimitMessage {
     
     
     public UsageLimitLimitTypeEnum limitType;
+
     public CreateUsageLimitMessage withLimitType(UsageLimitLimitTypeEnum limitType) {
         this.limitType = limitType;
         return this;
@@ -44,6 +49,7 @@ public class CreateUsageLimitMessage {
     
     
     public UsageLimitPeriodEnum period;
+
     public CreateUsageLimitMessage withPeriod(UsageLimitPeriodEnum period) {
         this.period = period;
         return this;
@@ -51,9 +57,16 @@ public class CreateUsageLimitMessage {
     
     
     public TagList[] tags;
+
     public CreateUsageLimitMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateUsageLimitMessage(@JsonProperty("Amount") Long amount, @JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("FeatureType") UsageLimitFeatureTypeEnum featureType, @JsonProperty("LimitType") UsageLimitLimitTypeEnum limitType) {
+        this.amount = amount;
+        this.clusterIdentifier = clusterIdentifier;
+        this.featureType = featureType;
+        this.limitType = limitType;
+  }
 }

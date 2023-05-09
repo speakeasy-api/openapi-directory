@@ -15,6 +15,7 @@ public class DeleteResourcePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public DeleteResourcePolicyResponse withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -23,9 +24,11 @@ public class DeleteResourcePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public DeleteResourcePolicyResponse withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public DeleteResourcePolicyResponse(){}
 }

@@ -15,9 +15,11 @@ public class InvalidAttachmentException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public InvalidAttachmentException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InvalidAttachmentException(){}
 }

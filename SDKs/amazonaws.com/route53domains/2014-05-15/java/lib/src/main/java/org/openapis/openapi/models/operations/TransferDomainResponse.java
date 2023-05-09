@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TransferDomainResponse {
     
     public String contentType;
+
     public TransferDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TransferDomainResponse {
      */
     
     public Object domainLimitExceeded;
+
     public TransferDomainResponse withDomainLimitExceeded(Object domainLimitExceeded) {
         this.domainLimitExceeded = domainLimitExceeded;
         return this;
@@ -29,6 +32,7 @@ public class TransferDomainResponse {
      */
     
     public Object duplicateRequest;
+
     public TransferDomainResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -39,6 +43,7 @@ public class TransferDomainResponse {
      */
     
     public Object invalidInput;
+
     public TransferDomainResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -49,6 +54,7 @@ public class TransferDomainResponse {
      */
     
     public Object operationLimitExceeded;
+
     public TransferDomainResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -56,6 +62,7 @@ public class TransferDomainResponse {
     
     
     public Integer statusCode;
+
     public TransferDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class TransferDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TransferDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class TransferDomainResponse {
      */
     
     public Object tldRulesViolation;
+
     public TransferDomainResponse withTLDRulesViolation(Object tldRulesViolation) {
         this.tldRulesViolation = tldRulesViolation;
         return this;
@@ -83,6 +92,7 @@ public class TransferDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.TransferDomainResponse transferDomainResponse;
+
     public TransferDomainResponse withTransferDomainResponse(org.openapis.openapi.models.shared.TransferDomainResponse transferDomainResponse) {
         this.transferDomainResponse = transferDomainResponse;
         return this;
@@ -93,9 +103,14 @@ public class TransferDomainResponse {
      */
     
     public Object unsupportedTLD;
+
     public TransferDomainResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public TransferDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

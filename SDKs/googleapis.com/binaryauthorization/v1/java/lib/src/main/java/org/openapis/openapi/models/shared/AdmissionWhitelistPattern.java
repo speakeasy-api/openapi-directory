@@ -18,9 +18,11 @@ public class AdmissionWhitelistPattern {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namePattern")
     public String namePattern;
+
     public AdmissionWhitelistPattern withNamePattern(String namePattern) {
         this.namePattern = namePattern;
         return this;
     }
     
+    public AdmissionWhitelistPattern(){}
 }

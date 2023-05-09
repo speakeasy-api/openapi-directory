@@ -15,6 +15,7 @@ public class ReposCreateWebhookRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public ReposCreateWebhookRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -26,6 +27,7 @@ public class ReposCreateWebhookRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public ReposCreateWebhookRequestBodyConfig config;
+
     public ReposCreateWebhookRequestBody withConfig(ReposCreateWebhookRequestBodyConfig config) {
         this.config = config;
         return this;
@@ -37,6 +39,7 @@ public class ReposCreateWebhookRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public String[] events;
+
     public ReposCreateWebhookRequestBody withEvents(String[] events) {
         this.events = events;
         return this;
@@ -48,9 +51,11 @@ public class ReposCreateWebhookRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReposCreateWebhookRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ReposCreateWebhookRequestBody(){}
 }

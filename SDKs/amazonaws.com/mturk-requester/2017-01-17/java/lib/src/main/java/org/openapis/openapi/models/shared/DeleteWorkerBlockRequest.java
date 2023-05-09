@@ -12,6 +12,7 @@ public class DeleteWorkerBlockRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public String reason;
+
     public DeleteWorkerBlockRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -19,9 +20,13 @@ public class DeleteWorkerBlockRequest {
     
     @JsonProperty("WorkerId")
     public String workerId;
+
     public DeleteWorkerBlockRequest withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public DeleteWorkerBlockRequest(@JsonProperty("WorkerId") String workerId) {
+        this.workerId = workerId;
+  }
 }

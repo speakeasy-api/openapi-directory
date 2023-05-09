@@ -15,9 +15,11 @@ public class UpdateEnvironment400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public UpdateEnvironment400ApplicationJSONError error;
+
     public UpdateEnvironment400ApplicationJSON withError(UpdateEnvironment400ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public UpdateEnvironment400ApplicationJSON(){}
 }

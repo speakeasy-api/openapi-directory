@@ -15,6 +15,7 @@ public class GetDataflowEndpointGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactPostPassDurationSeconds")
     public Long contactPostPassDurationSeconds;
+
     public GetDataflowEndpointGroupResponse withContactPostPassDurationSeconds(Long contactPostPassDurationSeconds) {
         this.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
         return this;
@@ -23,6 +24,7 @@ public class GetDataflowEndpointGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactPrePassDurationSeconds")
     public Long contactPrePassDurationSeconds;
+
     public GetDataflowEndpointGroupResponse withContactPrePassDurationSeconds(Long contactPrePassDurationSeconds) {
         this.contactPrePassDurationSeconds = contactPrePassDurationSeconds;
         return this;
@@ -31,6 +33,7 @@ public class GetDataflowEndpointGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataflowEndpointGroupArn")
     public String dataflowEndpointGroupArn;
+
     public GetDataflowEndpointGroupResponse withDataflowEndpointGroupArn(String dataflowEndpointGroupArn) {
         this.dataflowEndpointGroupArn = dataflowEndpointGroupArn;
         return this;
@@ -39,6 +42,7 @@ public class GetDataflowEndpointGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataflowEndpointGroupId")
     public String dataflowEndpointGroupId;
+
     public GetDataflowEndpointGroupResponse withDataflowEndpointGroupId(String dataflowEndpointGroupId) {
         this.dataflowEndpointGroupId = dataflowEndpointGroupId;
         return this;
@@ -47,6 +51,7 @@ public class GetDataflowEndpointGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointsDetails")
     public EndpointDetails[] endpointsDetails;
+
     public GetDataflowEndpointGroupResponse withEndpointsDetails(EndpointDetails[] endpointsDetails) {
         this.endpointsDetails = endpointsDetails;
         return this;
@@ -55,9 +60,11 @@ public class GetDataflowEndpointGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetDataflowEndpointGroupResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetDataflowEndpointGroupResponse(){}
 }

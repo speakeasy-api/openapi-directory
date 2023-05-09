@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetDocumentStatusResponse {
@@ -12,6 +13,7 @@ public class BatchGetDocumentStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchGetDocumentStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetDocumentStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetDocumentStatusResponse batchGetDocumentStatusResponse;
+
     public BatchGetDocumentStatusResponse withBatchGetDocumentStatusResponse(org.openapis.openapi.models.shared.BatchGetDocumentStatusResponse batchGetDocumentStatusResponse) {
         this.batchGetDocumentStatusResponse = batchGetDocumentStatusResponse;
         return this;
@@ -32,6 +35,7 @@ public class BatchGetDocumentStatusResponse {
      */
     
     public Object conflictException;
+
     public BatchGetDocumentStatusResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetDocumentStatusResponse {
     
     
     public String contentType;
+
     public BatchGetDocumentStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetDocumentStatusResponse {
      */
     
     public Object internalServerException;
+
     public BatchGetDocumentStatusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class BatchGetDocumentStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchGetDocumentStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class BatchGetDocumentStatusResponse {
     
     
     public Integer statusCode;
+
     public BatchGetDocumentStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class BatchGetDocumentStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetDocumentStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class BatchGetDocumentStatusResponse {
      */
     
     public Object throttlingException;
+
     public BatchGetDocumentStatusResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class BatchGetDocumentStatusResponse {
      */
     
     public Object validationException;
+
     public BatchGetDocumentStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchGetDocumentStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

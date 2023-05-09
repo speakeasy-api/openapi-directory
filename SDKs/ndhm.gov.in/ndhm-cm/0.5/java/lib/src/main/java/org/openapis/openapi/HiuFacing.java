@@ -65,12 +65,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionsHiuOnNotifyResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionsHiuOnNotifyResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionsHiuOnNotifyResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionsHiuOnNotifyResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -125,12 +123,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -185,12 +181,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

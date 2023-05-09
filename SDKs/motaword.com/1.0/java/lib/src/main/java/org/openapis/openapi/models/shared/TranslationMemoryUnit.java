@@ -12,6 +12,7 @@ public class TranslationMemoryUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLanguage")
     public String sourceLanguage;
+
     public TranslationMemoryUnit withSourceLanguage(String sourceLanguage) {
         this.sourceLanguage = sourceLanguage;
         return this;
@@ -20,6 +21,7 @@ public class TranslationMemoryUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceText")
     public String sourceText;
+
     public TranslationMemoryUnit withSourceText(String sourceText) {
         this.sourceText = sourceText;
         return this;
@@ -28,6 +30,7 @@ public class TranslationMemoryUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLanguage")
     public String targetLanguage;
+
     public TranslationMemoryUnit withTargetLanguage(String targetLanguage) {
         this.targetLanguage = targetLanguage;
         return this;
@@ -36,9 +39,11 @@ public class TranslationMemoryUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetText")
     public String targetText;
+
     public TranslationMemoryUnit withTargetText(String targetText) {
         this.targetText = targetText;
         return this;
     }
     
+    public TranslationMemoryUnit(){}
 }

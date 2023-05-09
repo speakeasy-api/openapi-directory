@@ -15,6 +15,7 @@ public class LogSetup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public LogSetup withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,9 +24,11 @@ public class LogSetup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("types")
     public LogTypeEnum[] types;
+
     public LogSetup withTypes(LogTypeEnum[] types) {
         this.types = types;
         return this;
     }
     
+    public LogSetup(){}
 }

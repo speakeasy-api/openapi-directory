@@ -18,6 +18,7 @@ public class HotKeyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotKeyAge")
     public String hotKeyAge;
+
     public HotKeyInfo withHotKeyAge(String hotKeyAge) {
         this.hotKeyAge = hotKeyAge;
         return this;
@@ -29,6 +30,7 @@ public class HotKeyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public HotKeyInfo withKey(String key) {
         this.key = key;
         return this;
@@ -40,9 +42,11 @@ public class HotKeyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyTruncated")
     public Boolean keyTruncated;
+
     public HotKeyInfo withKeyTruncated(Boolean keyTruncated) {
         this.keyTruncated = keyTruncated;
         return this;
     }
     
+    public HotKeyInfo(){}
 }

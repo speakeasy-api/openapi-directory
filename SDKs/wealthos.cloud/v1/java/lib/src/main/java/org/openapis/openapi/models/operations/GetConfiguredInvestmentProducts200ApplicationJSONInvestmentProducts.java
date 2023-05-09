@@ -19,6 +19,7 @@ public class GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProducts
      */
     @JsonProperty("asset_type")
     public GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProductsAssetTypeEnum assetType;
+
     public GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProducts withAssetType(GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProductsAssetTypeEnum assetType) {
         this.assetType = assetType;
         return this;
@@ -29,6 +30,7 @@ public class GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProducts
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProducts withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -39,6 +41,7 @@ public class GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProducts
      */
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProducts withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -50,6 +53,7 @@ public class GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProducts
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProducts withName(String name) {
         this.name = name;
         return this;
@@ -60,6 +64,7 @@ public class GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProducts
      */
     @JsonProperty("status")
     public GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProductsStatusEnum status;
+
     public GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProducts withStatus(GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProductsStatusEnum status) {
         this.status = status;
         return this;
@@ -70,9 +75,15 @@ public class GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProducts
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProducts withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProducts(@JsonProperty("asset_type") GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProductsAssetTypeEnum assetType, @JsonProperty("investment_product_id") String investmentProductId, @JsonProperty("status") GetConfiguredInvestmentProducts200ApplicationJSONInvestmentProductsStatusEnum status) {
+        this.assetType = assetType;
+        this.investmentProductId = investmentProductId;
+        this.status = status;
+  }
 }

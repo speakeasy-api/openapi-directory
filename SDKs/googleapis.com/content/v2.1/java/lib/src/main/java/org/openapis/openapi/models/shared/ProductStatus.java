@@ -18,6 +18,7 @@ public class ProductStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDate")
     public String creationDate;
+
     public ProductStatus withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -29,6 +30,7 @@ public class ProductStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationStatuses")
     public ProductStatusDestinationStatus[] destinationStatuses;
+
     public ProductStatus withDestinationStatuses(ProductStatusDestinationStatus[] destinationStatuses) {
         this.destinationStatuses = destinationStatuses;
         return this;
@@ -40,6 +42,7 @@ public class ProductStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleExpirationDate")
     public String googleExpirationDate;
+
     public ProductStatus withGoogleExpirationDate(String googleExpirationDate) {
         this.googleExpirationDate = googleExpirationDate;
         return this;
@@ -51,6 +54,7 @@ public class ProductStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemLevelIssues")
     public ProductStatusItemLevelIssue[] itemLevelIssues;
+
     public ProductStatus withItemLevelIssues(ProductStatusItemLevelIssue[] itemLevelIssues) {
         this.itemLevelIssues = itemLevelIssues;
         return this;
@@ -62,6 +66,7 @@ public class ProductStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ProductStatus withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class ProductStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdateDate")
     public String lastUpdateDate;
+
     public ProductStatus withLastUpdateDate(String lastUpdateDate) {
         this.lastUpdateDate = lastUpdateDate;
         return this;
@@ -84,6 +90,7 @@ public class ProductStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public ProductStatus withLink(String link) {
         this.link = link;
         return this;
@@ -95,6 +102,7 @@ public class ProductStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public ProductStatus withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -106,9 +114,11 @@ public class ProductStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ProductStatus withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ProductStatus(){}
 }

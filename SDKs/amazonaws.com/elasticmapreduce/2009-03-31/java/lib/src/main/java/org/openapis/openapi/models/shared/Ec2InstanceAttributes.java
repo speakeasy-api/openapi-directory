@@ -15,6 +15,7 @@ public class Ec2InstanceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalMasterSecurityGroups")
     public String[] additionalMasterSecurityGroups;
+
     public Ec2InstanceAttributes withAdditionalMasterSecurityGroups(String[] additionalMasterSecurityGroups) {
         this.additionalMasterSecurityGroups = additionalMasterSecurityGroups;
         return this;
@@ -23,6 +24,7 @@ public class Ec2InstanceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalSlaveSecurityGroups")
     public String[] additionalSlaveSecurityGroups;
+
     public Ec2InstanceAttributes withAdditionalSlaveSecurityGroups(String[] additionalSlaveSecurityGroups) {
         this.additionalSlaveSecurityGroups = additionalSlaveSecurityGroups;
         return this;
@@ -31,6 +33,7 @@ public class Ec2InstanceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2AvailabilityZone")
     public String ec2AvailabilityZone;
+
     public Ec2InstanceAttributes withEc2AvailabilityZone(String ec2AvailabilityZone) {
         this.ec2AvailabilityZone = ec2AvailabilityZone;
         return this;
@@ -39,6 +42,7 @@ public class Ec2InstanceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2KeyName")
     public String ec2KeyName;
+
     public Ec2InstanceAttributes withEc2KeyName(String ec2KeyName) {
         this.ec2KeyName = ec2KeyName;
         return this;
@@ -47,6 +51,7 @@ public class Ec2InstanceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2SubnetId")
     public String ec2SubnetId;
+
     public Ec2InstanceAttributes withEc2SubnetId(String ec2SubnetId) {
         this.ec2SubnetId = ec2SubnetId;
         return this;
@@ -55,6 +60,7 @@ public class Ec2InstanceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmrManagedMasterSecurityGroup")
     public String emrManagedMasterSecurityGroup;
+
     public Ec2InstanceAttributes withEmrManagedMasterSecurityGroup(String emrManagedMasterSecurityGroup) {
         this.emrManagedMasterSecurityGroup = emrManagedMasterSecurityGroup;
         return this;
@@ -63,6 +69,7 @@ public class Ec2InstanceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmrManagedSlaveSecurityGroup")
     public String emrManagedSlaveSecurityGroup;
+
     public Ec2InstanceAttributes withEmrManagedSlaveSecurityGroup(String emrManagedSlaveSecurityGroup) {
         this.emrManagedSlaveSecurityGroup = emrManagedSlaveSecurityGroup;
         return this;
@@ -71,6 +78,7 @@ public class Ec2InstanceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamInstanceProfile")
     public String iamInstanceProfile;
+
     public Ec2InstanceAttributes withIamInstanceProfile(String iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -79,6 +87,7 @@ public class Ec2InstanceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestedEc2AvailabilityZones")
     public String[] requestedEc2AvailabilityZones;
+
     public Ec2InstanceAttributes withRequestedEc2AvailabilityZones(String[] requestedEc2AvailabilityZones) {
         this.requestedEc2AvailabilityZones = requestedEc2AvailabilityZones;
         return this;
@@ -87,6 +96,7 @@ public class Ec2InstanceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestedEc2SubnetIds")
     public String[] requestedEc2SubnetIds;
+
     public Ec2InstanceAttributes withRequestedEc2SubnetIds(String[] requestedEc2SubnetIds) {
         this.requestedEc2SubnetIds = requestedEc2SubnetIds;
         return this;
@@ -95,9 +105,11 @@ public class Ec2InstanceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceAccessSecurityGroup")
     public String serviceAccessSecurityGroup;
+
     public Ec2InstanceAttributes withServiceAccessSecurityGroup(String serviceAccessSecurityGroup) {
         this.serviceAccessSecurityGroup = serviceAccessSecurityGroup;
         return this;
     }
     
+    public Ec2InstanceAttributes(){}
 }

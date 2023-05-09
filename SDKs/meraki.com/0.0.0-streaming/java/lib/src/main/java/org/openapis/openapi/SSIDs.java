@@ -53,11 +53,9 @@ public class SSIDs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkDeviceWirelessStatusResponse res = new org.openapis.openapi.models.operations.GetNetworkDeviceWirelessStatusResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkDeviceWirelessStatusResponse res = new org.openapis.openapi.models.operations.GetNetworkDeviceWirelessStatusResponse(contentType, httpRes.statusCode()) {{
             getNetworkDeviceWirelessStatus200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,11 +91,9 @@ public class SSIDs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSsidResponse res = new org.openapis.openapi.models.operations.GetNetworkSsidResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSsidResponse res = new org.openapis.openapi.models.operations.GetNetworkSsidResponse(contentType, httpRes.statusCode()) {{
             getNetworkSsid200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -133,11 +129,9 @@ public class SSIDs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSsidsResponse res = new org.openapis.openapi.models.operations.GetNetworkSsidsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSsidsResponse res = new org.openapis.openapi.models.operations.GetNetworkSsidsResponse(contentType, httpRes.statusCode()) {{
             getNetworkSsids200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,11 +169,9 @@ public class SSIDs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkSsidResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSsidResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkSsidResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSsidResponse(contentType, httpRes.statusCode()) {{
             updateNetworkSsid200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

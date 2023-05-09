@@ -22,6 +22,7 @@ public class MissingSymbolGroupsGet200ApplicationJSONGroups {
      */
     @JsonProperty("app_build")
     public String appBuild;
+
     public MissingSymbolGroupsGet200ApplicationJSONGroups withAppBuild(String appBuild) {
         this.appBuild = appBuild;
         return this;
@@ -32,6 +33,7 @@ public class MissingSymbolGroupsGet200ApplicationJSONGroups {
      */
     @JsonProperty("app_id")
     public String appId;
+
     public MissingSymbolGroupsGet200ApplicationJSONGroups withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -42,6 +44,7 @@ public class MissingSymbolGroupsGet200ApplicationJSONGroups {
      */
     @JsonProperty("app_ver")
     public String appVer;
+
     public MissingSymbolGroupsGet200ApplicationJSONGroups withAppVer(String appVer) {
         this.appVer = appVer;
         return this;
@@ -53,6 +56,7 @@ public class MissingSymbolGroupsGet200ApplicationJSONGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crash_count")
     public Long crashCount;
+
     public MissingSymbolGroupsGet200ApplicationJSONGroups withCrashCount(Long crashCount) {
         this.crashCount = crashCount;
         return this;
@@ -64,6 +68,7 @@ public class MissingSymbolGroupsGet200ApplicationJSONGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_count")
     public Long errorCount;
+
     public MissingSymbolGroupsGet200ApplicationJSONGroups withErrorCount(Long errorCount) {
         this.errorCount = errorCount;
         return this;
@@ -76,6 +81,7 @@ public class MissingSymbolGroupsGet200ApplicationJSONGroups {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_modified")
     public OffsetDateTime lastModified;
+
     public MissingSymbolGroupsGet200ApplicationJSONGroups withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -86,6 +92,7 @@ public class MissingSymbolGroupsGet200ApplicationJSONGroups {
      */
     @JsonProperty("missing_symbols")
     public MissingSymbolGroupsGet200ApplicationJSONGroupsMissingSymbols[] missingSymbols;
+
     public MissingSymbolGroupsGet200ApplicationJSONGroups withMissingSymbols(MissingSymbolGroupsGet200ApplicationJSONGroupsMissingSymbols[] missingSymbols) {
         this.missingSymbols = missingSymbols;
         return this;
@@ -96,6 +103,7 @@ public class MissingSymbolGroupsGet200ApplicationJSONGroups {
      */
     @JsonProperty("status")
     public MissingSymbolGroupsGet200ApplicationJSONGroupsStatusEnum status;
+
     public MissingSymbolGroupsGet200ApplicationJSONGroups withStatus(MissingSymbolGroupsGet200ApplicationJSONGroupsStatusEnum status) {
         this.status = status;
         return this;
@@ -106,9 +114,19 @@ public class MissingSymbolGroupsGet200ApplicationJSONGroups {
      */
     @JsonProperty("symbol_group_id")
     public String symbolGroupId;
+
     public MissingSymbolGroupsGet200ApplicationJSONGroups withSymbolGroupId(String symbolGroupId) {
         this.symbolGroupId = symbolGroupId;
         return this;
     }
     
+    public MissingSymbolGroupsGet200ApplicationJSONGroups(@JsonProperty("app_build") String appBuild, @JsonProperty("app_id") String appId, @JsonProperty("app_ver") String appVer, @JsonProperty("last_modified") OffsetDateTime lastModified, @JsonProperty("missing_symbols") MissingSymbolGroupsGet200ApplicationJSONGroupsMissingSymbols[] missingSymbols, @JsonProperty("status") MissingSymbolGroupsGet200ApplicationJSONGroupsStatusEnum status, @JsonProperty("symbol_group_id") String symbolGroupId) {
+        this.appBuild = appBuild;
+        this.appId = appId;
+        this.appVer = appVer;
+        this.lastModified = lastModified;
+        this.missingSymbols = missingSymbols;
+        this.status = status;
+        this.symbolGroupId = symbolGroupId;
+  }
 }

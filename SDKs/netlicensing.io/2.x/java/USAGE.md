@@ -2,11 +2,11 @@
 ```java
 package hello.world;
 
+import java.time.OffsetDateTime;
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CreateLicenseSecurity;
 import org.openapis.openapi.models.operations.CreateLicenseRequestBody;
 import org.openapis.openapi.models.operations.CreateLicenseResponse;
+import org.openapis.openapi.models.operations.CreateLicenseSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,33 +14,32 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateLicenseRequestBody req = new CreateLicenseRequestBody() {{
-                active = false;
-                currency = "corrupti";
+            CreateLicenseRequestBody req = new CreateLicenseRequestBody(false, "corrupti", "provident") {{
+                currency = "distinctio";
                 hidden = false;
-                licenseTemplateNumber = "provident";
-                licenseeNumber = "distinctio";
-                name = "quibusdam";
-                number = "unde";
-                parentfeature = "nulla";
-                price = 5448.83;
-                quantity = "illum";
-                startDate = "2022-05-18T09:34:54.894Z";
-                timeVolume = "deserunt";
-                timeVolumePeriod = "suscipit";
-                usedQuantity = "iure";
-            }}            
+                name = "Stuart Stiedemann";
+                number = "vel";
+                parentfeature = "error";
+                price = 6458.94;
+                quantity = "suscipit";
+                startDate = OffsetDateTime.parse("2022-09-14T09:35:47.986Z");
+                timeVolume = "debitis";
+                timeVolumePeriod = "ipsa";
+                usedQuantity = "delectus";
+            }};            
 
-            CreateLicenseResponse res = sdk.license.createLicense(req, new CreateLicenseSecurity() {{
+            CreateLicenseResponse res = sdk.license.createLicense(req, new CreateLicenseSecurity("tempora", "suscipit") {{
                 password = "YOUR_PASSWORD_HERE";
                 username = "YOUR_USERNAME_HERE";
             }});
 
-            if (res.netlicensing.isPresent()) {
+            if (res.netlicensing != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

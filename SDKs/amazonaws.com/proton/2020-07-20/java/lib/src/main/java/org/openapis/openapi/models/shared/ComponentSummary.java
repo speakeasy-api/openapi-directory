@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ComponentSummary {
     @JsonProperty("arn")
     public String arn;
+
     public ComponentSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ComponentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ComponentSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class ComponentSummary {
     
     @JsonProperty("deploymentStatus")
     public DeploymentStatusEnum deploymentStatus;
+
     public ComponentSummary withDeploymentStatus(DeploymentStatusEnum deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -43,6 +46,7 @@ public class ComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentStatusMessage")
     public String deploymentStatusMessage;
+
     public ComponentSummary withDeploymentStatusMessage(String deploymentStatusMessage) {
         this.deploymentStatusMessage = deploymentStatusMessage;
         return this;
@@ -50,6 +54,7 @@ public class ComponentSummary {
     
     @JsonProperty("environmentName")
     public String environmentName;
+
     public ComponentSummary withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -60,6 +65,7 @@ public class ComponentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeploymentAttemptedAt")
     public OffsetDateTime lastDeploymentAttemptedAt;
+
     public ComponentSummary withLastDeploymentAttemptedAt(OffsetDateTime lastDeploymentAttemptedAt) {
         this.lastDeploymentAttemptedAt = lastDeploymentAttemptedAt;
         return this;
@@ -70,6 +76,7 @@ public class ComponentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeploymentSucceededAt")
     public OffsetDateTime lastDeploymentSucceededAt;
+
     public ComponentSummary withLastDeploymentSucceededAt(OffsetDateTime lastDeploymentSucceededAt) {
         this.lastDeploymentSucceededAt = lastDeploymentSucceededAt;
         return this;
@@ -79,6 +86,7 @@ public class ComponentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public ComponentSummary withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -86,6 +94,7 @@ public class ComponentSummary {
     
     @JsonProperty("name")
     public String name;
+
     public ComponentSummary withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +103,7 @@ public class ComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceInstanceName")
     public String serviceInstanceName;
+
     public ComponentSummary withServiceInstanceName(String serviceInstanceName) {
         this.serviceInstanceName = serviceInstanceName;
         return this;
@@ -102,9 +112,18 @@ public class ComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public ComponentSummary withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public ComponentSummary(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("deploymentStatus") DeploymentStatusEnum deploymentStatus, @JsonProperty("environmentName") String environmentName, @JsonProperty("lastModifiedAt") OffsetDateTime lastModifiedAt, @JsonProperty("name") String name) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.deploymentStatus = deploymentStatus;
+        this.environmentName = environmentName;
+        this.lastModifiedAt = lastModifiedAt;
+        this.name = name;
+  }
 }

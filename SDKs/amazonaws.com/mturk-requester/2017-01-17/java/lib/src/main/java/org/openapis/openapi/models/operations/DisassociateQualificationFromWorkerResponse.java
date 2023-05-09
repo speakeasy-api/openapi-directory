@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateQualificationFromWorkerResponse {
     
     public String contentType;
+
     public DisassociateQualificationFromWorkerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateQualificationFromWorkerResponse {
      */
     
     public java.util.Map<String, Object> disassociateQualificationFromWorkerResponse;
+
     public DisassociateQualificationFromWorkerResponse withDisassociateQualificationFromWorkerResponse(java.util.Map<String, Object> disassociateQualificationFromWorkerResponse) {
         this.disassociateQualificationFromWorkerResponse = disassociateQualificationFromWorkerResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateQualificationFromWorkerResponse {
      */
     
     public Object requestError;
+
     public DisassociateQualificationFromWorkerResponse withRequestError(Object requestError) {
         this.requestError = requestError;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateQualificationFromWorkerResponse {
      */
     
     public Object serviceFault;
+
     public DisassociateQualificationFromWorkerResponse withServiceFault(Object serviceFault) {
         this.serviceFault = serviceFault;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateQualificationFromWorkerResponse {
     
     
     public Integer statusCode;
+
     public DisassociateQualificationFromWorkerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DisassociateQualificationFromWorkerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateQualificationFromWorkerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisassociateQualificationFromWorkerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

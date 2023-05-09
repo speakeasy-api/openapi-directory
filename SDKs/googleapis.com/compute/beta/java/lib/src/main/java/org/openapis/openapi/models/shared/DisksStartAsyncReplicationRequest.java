@@ -15,9 +15,11 @@ public class DisksStartAsyncReplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asyncSecondaryDisk")
     public String asyncSecondaryDisk;
+
     public DisksStartAsyncReplicationRequest withAsyncSecondaryDisk(String asyncSecondaryDisk) {
         this.asyncSecondaryDisk = asyncSecondaryDisk;
         return this;
     }
     
+    public DisksStartAsyncReplicationRequest(){}
 }

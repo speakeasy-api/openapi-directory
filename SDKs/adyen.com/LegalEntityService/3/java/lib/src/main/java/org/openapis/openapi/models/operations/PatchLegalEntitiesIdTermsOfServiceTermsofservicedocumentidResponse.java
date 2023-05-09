@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse {
@@ -12,6 +13,7 @@ public class PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse 
      */
     
     public org.openapis.openapi.models.shared.AcceptTermsOfServiceResponse acceptTermsOfServiceResponse;
+
     public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse withAcceptTermsOfServiceResponse(org.openapis.openapi.models.shared.AcceptTermsOfServiceResponse acceptTermsOfServiceResponse) {
         this.acceptTermsOfServiceResponse = acceptTermsOfServiceResponse;
         return this;
@@ -19,6 +21,7 @@ public class PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse 
     
     
     public String contentType;
+
     public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse 
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse 
     
     
     public Integer statusCode;
+
     public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse 
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

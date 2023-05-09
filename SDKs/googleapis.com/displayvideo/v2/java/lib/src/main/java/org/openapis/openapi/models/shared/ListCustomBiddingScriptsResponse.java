@@ -18,6 +18,7 @@ public class ListCustomBiddingScriptsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customBiddingScripts")
     public CustomBiddingScript[] customBiddingScripts;
+
     public ListCustomBiddingScriptsResponse withCustomBiddingScripts(CustomBiddingScript[] customBiddingScripts) {
         this.customBiddingScripts = customBiddingScripts;
         return this;
@@ -29,9 +30,11 @@ public class ListCustomBiddingScriptsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCustomBiddingScriptsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCustomBiddingScriptsResponse(){}
 }

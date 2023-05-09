@@ -18,6 +18,7 @@ public class EvaluationCycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public EvaluationCycle withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -29,6 +30,7 @@ public class EvaluationCycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationDate")
     public String evaluationDate;
+
     public EvaluationCycle withEvaluationDate(String evaluationDate) {
         this.evaluationDate = evaluationDate;
         return this;
@@ -40,6 +42,7 @@ public class EvaluationCycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationType")
     public String evaluationType;
+
     public EvaluationCycle withEvaluationType(String evaluationType) {
         this.evaluationType = evaluationType;
         return this;
@@ -51,9 +54,11 @@ public class EvaluationCycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public String startDate;
+
     public EvaluationCycle withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public EvaluationCycle(){}
 }

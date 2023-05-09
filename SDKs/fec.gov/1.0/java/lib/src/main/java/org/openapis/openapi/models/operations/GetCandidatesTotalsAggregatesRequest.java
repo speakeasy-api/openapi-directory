@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCandidatesTotalsAggregatesRequest {
@@ -18,6 +19,7 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aggregate_by")
     public GetCandidatesTotalsAggregatesAggregateByEnum aggregateBy;
+
     public GetCandidatesTotalsAggregatesRequest withAggregateBy(GetCandidatesTotalsAggregatesAggregateByEnum aggregateBy) {
         this.aggregateBy = aggregateBy;
         return this;
@@ -29,6 +31,7 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetCandidatesTotalsAggregatesRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -39,6 +42,7 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=district")
     public String[] district;
+
     public GetCandidatesTotalsAggregatesRequest withDistrict(String[] district) {
         this.district = district;
         return this;
@@ -50,6 +54,7 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
     public Boolean electionFull;
+
     public GetCandidatesTotalsAggregatesRequest withElectionFull(Boolean electionFull) {
         this.electionFull = electionFull;
         return this;
@@ -63,6 +68,7 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_year")
     public Integer[] electionYear;
+
     public GetCandidatesTotalsAggregatesRequest withElectionYear(Integer[] electionYear) {
         this.electionYear = electionYear;
         return this;
@@ -76,6 +82,7 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_active_candidate")
     public Boolean isActiveCandidate;
+
     public GetCandidatesTotalsAggregatesRequest withIsActiveCandidate(Boolean isActiveCandidate) {
         this.isActiveCandidate = isActiveCandidate;
         return this;
@@ -91,6 +98,7 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_election_cycle")
     public Integer maxElectionCycle;
+
     public GetCandidatesTotalsAggregatesRequest withMaxElectionCycle(Integer maxElectionCycle) {
         this.maxElectionCycle = maxElectionCycle;
         return this;
@@ -106,6 +114,7 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_election_cycle")
     public Integer minElectionCycle;
+
     public GetCandidatesTotalsAggregatesRequest withMinElectionCycle(Integer minElectionCycle) {
         this.minElectionCycle = minElectionCycle;
         return this;
@@ -116,6 +125,7 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
     public GetCandidatesTotalsAggregatesOfficeEnum office;
+
     public GetCandidatesTotalsAggregatesRequest withOffice(GetCandidatesTotalsAggregatesOfficeEnum office) {
         this.office = office;
         return this;
@@ -126,6 +136,7 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetCandidatesTotalsAggregatesRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -136,6 +147,7 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=party")
     public GetCandidatesTotalsAggregatesPartyEnum party;
+
     public GetCandidatesTotalsAggregatesRequest withParty(GetCandidatesTotalsAggregatesPartyEnum party) {
         this.party = party;
         return this;
@@ -146,6 +158,7 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetCandidatesTotalsAggregatesRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -157,6 +170,7 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String[] sort;
+
     public GetCandidatesTotalsAggregatesRequest withSort(String[] sort) {
         this.sort = sort;
         return this;
@@ -167,6 +181,7 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetCandidatesTotalsAggregatesRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -177,6 +192,7 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetCandidatesTotalsAggregatesRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -187,6 +203,7 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetCandidatesTotalsAggregatesRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
@@ -197,9 +214,13 @@ public class GetCandidatesTotalsAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String[] state;
+
     public GetCandidatesTotalsAggregatesRequest withState(String[] state) {
         this.state = state;
         return this;
     }
     
+    public GetCandidatesTotalsAggregatesRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

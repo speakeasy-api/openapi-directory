@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DisableInsightRulesOutput {
     
     public PartialFailure[] failures;
+
     public DisableInsightRulesOutput withFailures(PartialFailure[] failures) {
         this.failures = failures;
         return this;
     }
     
+    public DisableInsightRulesOutput(){}
 }

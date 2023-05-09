@@ -18,6 +18,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignedUser")
     public User assignedUser;
+
     public Assignment withAssignedUser(User assignedUser) {
         this.assignedUser = assignedUser;
         return this;
@@ -29,9 +30,11 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtype")
     public AssignmentSubtypeEnum subtype;
+
     public Assignment withSubtype(AssignmentSubtypeEnum subtype) {
         this.subtype = subtype;
         return this;
     }
     
+    public Assignment(){}
 }

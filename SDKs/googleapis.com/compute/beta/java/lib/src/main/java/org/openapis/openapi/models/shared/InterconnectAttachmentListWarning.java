@@ -18,6 +18,7 @@ public class InterconnectAttachmentListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public InterconnectAttachmentListWarningCodeEnum code;
+
     public InterconnectAttachmentListWarning withCode(InterconnectAttachmentListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class InterconnectAttachmentListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public InterconnectAttachmentListWarningData[] data;
+
     public InterconnectAttachmentListWarning withData(InterconnectAttachmentListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class InterconnectAttachmentListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InterconnectAttachmentListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InterconnectAttachmentListWarning(){}
 }

@@ -18,6 +18,7 @@ public class PoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationPackageReferences")
     public ApplicationPackageReference[] applicationPackageReferences;
+
     public PoolSpecification withApplicationPackageReferences(ApplicationPackageReference[] applicationPackageReferences) {
         this.applicationPackageReferences = applicationPackageReferences;
         return this;
@@ -29,6 +30,7 @@ public class PoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScaleEvaluationInterval")
     public String autoScaleEvaluationInterval;
+
     public PoolSpecification withAutoScaleEvaluationInterval(String autoScaleEvaluationInterval) {
         this.autoScaleEvaluationInterval = autoScaleEvaluationInterval;
         return this;
@@ -40,6 +42,7 @@ public class PoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScaleFormula")
     public String autoScaleFormula;
+
     public PoolSpecification withAutoScaleFormula(String autoScaleFormula) {
         this.autoScaleFormula = autoScaleFormula;
         return this;
@@ -51,6 +54,7 @@ public class PoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateReferences")
     public CertificateReference[] certificateReferences;
+
     public PoolSpecification withCertificateReferences(CertificateReference[] certificateReferences) {
         this.certificateReferences = certificateReferences;
         return this;
@@ -62,6 +66,7 @@ public class PoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudServiceConfiguration")
     public CloudServiceConfiguration cloudServiceConfiguration;
+
     public PoolSpecification withCloudServiceConfiguration(CloudServiceConfiguration cloudServiceConfiguration) {
         this.cloudServiceConfiguration = cloudServiceConfiguration;
         return this;
@@ -73,6 +78,7 @@ public class PoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public PoolSpecification withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -84,6 +90,7 @@ public class PoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableAutoScale")
     public Boolean enableAutoScale;
+
     public PoolSpecification withEnableAutoScale(Boolean enableAutoScale) {
         this.enableAutoScale = enableAutoScale;
         return this;
@@ -95,6 +102,7 @@ public class PoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableInterNodeCommunication")
     public Boolean enableInterNodeCommunication;
+
     public PoolSpecification withEnableInterNodeCommunication(Boolean enableInterNodeCommunication) {
         this.enableInterNodeCommunication = enableInterNodeCommunication;
         return this;
@@ -106,6 +114,7 @@ public class PoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTasksPerNode")
     public Integer maxTasksPerNode;
+
     public PoolSpecification withMaxTasksPerNode(Integer maxTasksPerNode) {
         this.maxTasksPerNode = maxTasksPerNode;
         return this;
@@ -117,6 +126,7 @@ public class PoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public MetadataItem[] metadata;
+
     public PoolSpecification withMetadata(MetadataItem[] metadata) {
         this.metadata = metadata;
         return this;
@@ -128,6 +138,7 @@ public class PoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resizeTimeout")
     public String resizeTimeout;
+
     public PoolSpecification withResizeTimeout(String resizeTimeout) {
         this.resizeTimeout = resizeTimeout;
         return this;
@@ -139,6 +150,7 @@ public class PoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTask")
     public StartTask startTask;
+
     public PoolSpecification withStartTask(StartTask startTask) {
         this.startTask = startTask;
         return this;
@@ -150,6 +162,7 @@ public class PoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDedicated")
     public Integer targetDedicated;
+
     public PoolSpecification withTargetDedicated(Integer targetDedicated) {
         this.targetDedicated = targetDedicated;
         return this;
@@ -161,6 +174,7 @@ public class PoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskSchedulingPolicy")
     public TaskSchedulingPolicy taskSchedulingPolicy;
+
     public PoolSpecification withTaskSchedulingPolicy(TaskSchedulingPolicy taskSchedulingPolicy) {
         this.taskSchedulingPolicy = taskSchedulingPolicy;
         return this;
@@ -172,6 +186,7 @@ public class PoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualMachineConfiguration")
     public VirtualMachineConfiguration virtualMachineConfiguration;
+
     public PoolSpecification withVirtualMachineConfiguration(VirtualMachineConfiguration virtualMachineConfiguration) {
         this.virtualMachineConfiguration = virtualMachineConfiguration;
         return this;
@@ -183,9 +198,11 @@ public class PoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmSize")
     public String vmSize;
+
     public PoolSpecification withVmSize(String vmSize) {
         this.vmSize = vmSize;
         return this;
     }
     
+    public PoolSpecification(){}
 }

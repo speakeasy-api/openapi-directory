@@ -15,6 +15,7 @@ public class OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompilerOptions")
     public String compilerOptions;
+
     public OutputConfig withCompilerOptions(String compilerOptions) {
         this.compilerOptions = compilerOptions;
         return this;
@@ -23,6 +24,7 @@ public class OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public OutputConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -30,6 +32,7 @@ public class OutputConfig {
     
     @JsonProperty("S3OutputLocation")
     public String s3OutputLocation;
+
     public OutputConfig withS3OutputLocation(String s3OutputLocation) {
         this.s3OutputLocation = s3OutputLocation;
         return this;
@@ -38,6 +41,7 @@ public class OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetDevice")
     public TargetDeviceEnum targetDevice;
+
     public OutputConfig withTargetDevice(TargetDeviceEnum targetDevice) {
         this.targetDevice = targetDevice;
         return this;
@@ -46,9 +50,13 @@ public class OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetPlatform")
     public TargetPlatform targetPlatform;
+
     public OutputConfig withTargetPlatform(TargetPlatform targetPlatform) {
         this.targetPlatform = targetPlatform;
         return this;
     }
     
+    public OutputConfig(@JsonProperty("S3OutputLocation") String s3OutputLocation) {
+        this.s3OutputLocation = s3OutputLocation;
+  }
 }

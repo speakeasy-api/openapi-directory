@@ -15,6 +15,7 @@ public class PhysicalNetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultGateway")
     public String defaultGateway;
+
     public PhysicalNetworkInterface withDefaultGateway(String defaultGateway) {
         this.defaultGateway = defaultGateway;
         return this;
@@ -23,6 +24,7 @@ public class PhysicalNetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public PhysicalNetworkInterface withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -31,6 +33,7 @@ public class PhysicalNetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddressAssignment")
     public IpAddressAssignmentEnum ipAddressAssignment;
+
     public PhysicalNetworkInterface withIpAddressAssignment(IpAddressAssignmentEnum ipAddressAssignment) {
         this.ipAddressAssignment = ipAddressAssignment;
         return this;
@@ -39,6 +42,7 @@ public class PhysicalNetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macAddress")
     public String macAddress;
+
     public PhysicalNetworkInterface withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
@@ -47,6 +51,7 @@ public class PhysicalNetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("netmask")
     public String netmask;
+
     public PhysicalNetworkInterface withNetmask(String netmask) {
         this.netmask = netmask;
         return this;
@@ -55,6 +60,7 @@ public class PhysicalNetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("physicalConnectorType")
     public PhysicalConnectorTypeEnum physicalConnectorType;
+
     public PhysicalNetworkInterface withPhysicalConnectorType(PhysicalConnectorTypeEnum physicalConnectorType) {
         this.physicalConnectorType = physicalConnectorType;
         return this;
@@ -63,9 +69,11 @@ public class PhysicalNetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("physicalNetworkInterfaceId")
     public String physicalNetworkInterfaceId;
+
     public PhysicalNetworkInterface withPhysicalNetworkInterfaceId(String physicalNetworkInterfaceId) {
         this.physicalNetworkInterfaceId = physicalNetworkInterfaceId;
         return this;
     }
     
+    public PhysicalNetworkInterface(){}
 }

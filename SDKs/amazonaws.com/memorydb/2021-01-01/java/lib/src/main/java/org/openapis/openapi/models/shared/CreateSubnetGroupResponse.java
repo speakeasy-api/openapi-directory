@@ -15,9 +15,11 @@ public class CreateSubnetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetGroup")
     public SubnetGroup subnetGroup;
+
     public CreateSubnetGroupResponse withSubnetGroup(SubnetGroup subnetGroup) {
         this.subnetGroup = subnetGroup;
         return this;
     }
     
+    public CreateSubnetGroupResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVolumeResponse {
@@ -12,6 +13,7 @@ public class DeleteVolumeResponse {
      */
     
     public Object badRequest;
+
     public DeleteVolumeResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DeleteVolumeResponse {
     
     
     public String contentType;
+
     public DeleteVolumeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteVolumeResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteVolumeResponse deleteVolumeResponse;
+
     public DeleteVolumeResponse withDeleteVolumeResponse(org.openapis.openapi.models.shared.DeleteVolumeResponse deleteVolumeResponse) {
         this.deleteVolumeResponse = deleteVolumeResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteVolumeResponse {
      */
     
     public Object incompatibleParameterError;
+
     public DeleteVolumeResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -49,6 +54,7 @@ public class DeleteVolumeResponse {
      */
     
     public Object internalServerError;
+
     public DeleteVolumeResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -56,6 +62,7 @@ public class DeleteVolumeResponse {
     
     
     public Integer statusCode;
+
     public DeleteVolumeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteVolumeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVolumeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteVolumeResponse {
      */
     
     public Object volumeNotFound;
+
     public DeleteVolumeResponse withVolumeNotFound(Object volumeNotFound) {
         this.volumeNotFound = volumeNotFound;
         return this;
     }
     
+    public DeleteVolumeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

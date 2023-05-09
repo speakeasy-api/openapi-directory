@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRescoreExecutionPlanResponse {
@@ -12,6 +13,7 @@ public class UpdateRescoreExecutionPlanResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateRescoreExecutionPlanResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateRescoreExecutionPlanResponse {
      */
     
     public Object conflictException;
+
     public UpdateRescoreExecutionPlanResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRescoreExecutionPlanResponse {
     
     
     public String contentType;
+
     public UpdateRescoreExecutionPlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRescoreExecutionPlanResponse {
      */
     
     public Object internalServerException;
+
     public UpdateRescoreExecutionPlanResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateRescoreExecutionPlanResponse {
     
     
     public Integer statusCode;
+
     public UpdateRescoreExecutionPlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateRescoreExecutionPlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRescoreExecutionPlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateRescoreExecutionPlanResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateRescoreExecutionPlanResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateRescoreExecutionPlanResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateRescoreExecutionPlanResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateRescoreExecutionPlanResponse {
      */
     
     public Object throttlingException;
+
     public UpdateRescoreExecutionPlanResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateRescoreExecutionPlanResponse {
      */
     
     public Object validationException;
+
     public UpdateRescoreExecutionPlanResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateRescoreExecutionPlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

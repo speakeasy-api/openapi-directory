@@ -19,6 +19,7 @@ public class InfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bbox")
     public String bbox;
+
     public InfoResponse withBbox(String bbox) {
         this.bbox = bbox;
         return this;
@@ -31,6 +32,7 @@ public class InfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public java.util.Map<String, Object> features;
+
     public InfoResponse withFeatures(java.util.Map<String, Object> features) {
         this.features = features;
         return this;
@@ -43,9 +45,11 @@ public class InfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public InfoResponse withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public InfoResponse(){}
 }

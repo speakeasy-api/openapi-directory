@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * EnvironmentVariable - EnvironmentVariable is a name-value pair to store environment variables for Process.
+ * EnvironmentVariable - A name-value pair representing an environment variable used in an operating system process.
  */
 public class EnvironmentVariable {
     /**
@@ -18,6 +18,7 @@ public class EnvironmentVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnvironmentVariable withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class EnvironmentVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("val")
     public String val;
+
     public EnvironmentVariable withVal(String val) {
         this.val = val;
         return this;
     }
     
+    public EnvironmentVariable(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UniqueAttribute {
     @JsonProperty("AttributePath")
     public String attributePath;
+
     public UniqueAttribute withAttributePath(String attributePath) {
         this.attributePath = attributePath;
         return this;
@@ -19,9 +20,14 @@ public class UniqueAttribute {
     
     @JsonProperty("AttributeValue")
     public java.util.Map<String, Object> attributeValue;
+
     public UniqueAttribute withAttributeValue(java.util.Map<String, Object> attributeValue) {
         this.attributeValue = attributeValue;
         return this;
     }
     
+    public UniqueAttribute(@JsonProperty("AttributePath") String attributePath, @JsonProperty("AttributeValue") java.util.Map<String, Object> attributeValue) {
+        this.attributePath = attributePath;
+        this.attributeValue = attributeValue;
+  }
 }

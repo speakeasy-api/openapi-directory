@@ -18,6 +18,7 @@ public class DeviceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binaryData")
     public String binaryData;
+
     public DeviceConfig withBinaryData(String binaryData) {
         this.binaryData = binaryData;
         return this;
@@ -29,6 +30,7 @@ public class DeviceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudUpdateTime")
     public String cloudUpdateTime;
+
     public DeviceConfig withCloudUpdateTime(String cloudUpdateTime) {
         this.cloudUpdateTime = cloudUpdateTime;
         return this;
@@ -40,6 +42,7 @@ public class DeviceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceAckTime")
     public String deviceAckTime;
+
     public DeviceConfig withDeviceAckTime(String deviceAckTime) {
         this.deviceAckTime = deviceAckTime;
         return this;
@@ -51,9 +54,11 @@ public class DeviceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public DeviceConfig withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DeviceConfig(){}
 }

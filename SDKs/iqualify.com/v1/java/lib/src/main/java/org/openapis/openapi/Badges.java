@@ -51,12 +51,10 @@ public class Badges {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdBadgesResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdBadgesResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdBadgesResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdBadgesResponse(contentType, httpRes.statusCode()) {{
             badge = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class Badges {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersUserEmailBadgesResponse res = new org.openapis.openapi.models.operations.GetUsersUserEmailBadgesResponse() {{
+        org.openapis.openapi.models.operations.GetUsersUserEmailBadgesResponse res = new org.openapis.openapi.models.operations.GetUsersUserEmailBadgesResponse(contentType, httpRes.statusCode()) {{
             userBadges = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,12 +143,10 @@ public class Badges {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersUserEmailBadgesAwardResponse res = new org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersUserEmailBadgesAwardResponse() {{
+        org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersUserEmailBadgesAwardResponse res = new org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersUserEmailBadgesAwardResponse(contentType, httpRes.statusCode()) {{
             awardedResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

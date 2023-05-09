@@ -15,6 +15,7 @@ public class IsoalRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public IsoalRequestBodyCertificateParameters certificateParameters;
+
     public IsoalRequestBody withCertificateParameters(IsoalRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class IsoalRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public IsoalRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class IsoalRequestBody {
      */
     @JsonProperty("format")
     public IsoalRequestBodyFormatEnum format;
+
     public IsoalRequestBody withFormat(IsoalRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class IsoalRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public IsoalRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public IsoalRequestBody(@JsonProperty("format") IsoalRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

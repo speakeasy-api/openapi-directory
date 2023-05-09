@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebasedynamiclinksInstallAttributionResponse {
     
     public String contentType;
+
     public FirebasedynamiclinksInstallAttributionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebasedynamiclinksInstallAttributionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetIosPostInstallAttributionResponse getIosPostInstallAttributionResponse;
+
     public FirebasedynamiclinksInstallAttributionResponse withGetIosPostInstallAttributionResponse(org.openapis.openapi.models.shared.GetIosPostInstallAttributionResponse getIosPostInstallAttributionResponse) {
         this.getIosPostInstallAttributionResponse = getIosPostInstallAttributionResponse;
         return this;
@@ -26,6 +29,7 @@ public class FirebasedynamiclinksInstallAttributionResponse {
     
     
     public Integer statusCode;
+
     public FirebasedynamiclinksInstallAttributionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebasedynamiclinksInstallAttributionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebasedynamiclinksInstallAttributionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebasedynamiclinksInstallAttributionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

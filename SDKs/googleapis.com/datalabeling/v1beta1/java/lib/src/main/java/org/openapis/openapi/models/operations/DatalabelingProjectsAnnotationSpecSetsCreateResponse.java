@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatalabelingProjectsAnnotationSpecSetsCreateResponse {
     
     public String contentType;
+
     public DatalabelingProjectsAnnotationSpecSetsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatalabelingProjectsAnnotationSpecSetsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1AnnotationSpecSet googleCloudDatalabelingV1beta1AnnotationSpecSet;
+
     public DatalabelingProjectsAnnotationSpecSetsCreateResponse withGoogleCloudDatalabelingV1beta1AnnotationSpecSet(org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1AnnotationSpecSet googleCloudDatalabelingV1beta1AnnotationSpecSet) {
         this.googleCloudDatalabelingV1beta1AnnotationSpecSet = googleCloudDatalabelingV1beta1AnnotationSpecSet;
         return this;
@@ -26,6 +29,7 @@ public class DatalabelingProjectsAnnotationSpecSetsCreateResponse {
     
     
     public Integer statusCode;
+
     public DatalabelingProjectsAnnotationSpecSetsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatalabelingProjectsAnnotationSpecSetsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatalabelingProjectsAnnotationSpecSetsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatalabelingProjectsAnnotationSpecSetsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

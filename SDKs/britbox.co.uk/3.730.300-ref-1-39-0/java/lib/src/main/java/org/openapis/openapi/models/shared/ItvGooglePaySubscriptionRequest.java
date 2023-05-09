@@ -15,6 +15,7 @@ public class ItvGooglePaySubscriptionRequest {
      */
     @JsonProperty("purchaseToken")
     public String purchaseToken;
+
     public ItvGooglePaySubscriptionRequest withPurchaseToken(String purchaseToken) {
         this.purchaseToken = purchaseToken;
         return this;
@@ -25,9 +26,14 @@ public class ItvGooglePaySubscriptionRequest {
      */
     @JsonProperty("subscriptionItem")
     public String subscriptionItem;
+
     public ItvGooglePaySubscriptionRequest withSubscriptionItem(String subscriptionItem) {
         this.subscriptionItem = subscriptionItem;
         return this;
     }
     
+    public ItvGooglePaySubscriptionRequest(@JsonProperty("purchaseToken") String purchaseToken, @JsonProperty("subscriptionItem") String subscriptionItem) {
+        this.purchaseToken = purchaseToken;
+        this.subscriptionItem = subscriptionItem;
+  }
 }

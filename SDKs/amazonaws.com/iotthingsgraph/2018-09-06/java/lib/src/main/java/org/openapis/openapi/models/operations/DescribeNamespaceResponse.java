@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeNamespaceResponse {
     
     public String contentType;
+
     public DescribeNamespaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeNamespaceResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeNamespaceResponse describeNamespaceResponse;
+
     public DescribeNamespaceResponse withDescribeNamespaceResponse(org.openapis.openapi.models.shared.DescribeNamespaceResponse describeNamespaceResponse) {
         this.describeNamespaceResponse = describeNamespaceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeNamespaceResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeNamespaceResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeNamespaceResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeNamespaceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeNamespaceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeNamespaceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeNamespaceResponse {
     
     
     public Integer statusCode;
+
     public DescribeNamespaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeNamespaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeNamespaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeNamespaceResponse {
      */
     
     public Object throttlingException;
+
     public DescribeNamespaceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeNamespaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class UpdateServiceSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableCrossAccountsDiscovery")
     public Boolean enableCrossAccountsDiscovery;
+
     public UpdateServiceSettingsRequest withEnableCrossAccountsDiscovery(Boolean enableCrossAccountsDiscovery) {
         this.enableCrossAccountsDiscovery = enableCrossAccountsDiscovery;
         return this;
@@ -20,6 +21,7 @@ public class UpdateServiceSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationConfiguration")
     public OrganizationConfiguration organizationConfiguration;
+
     public UpdateServiceSettingsRequest withOrganizationConfiguration(OrganizationConfiguration organizationConfiguration) {
         this.organizationConfiguration = organizationConfiguration;
         return this;
@@ -28,6 +30,7 @@ public class UpdateServiceSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketArn")
     public String s3BucketArn;
+
     public UpdateServiceSettingsRequest withS3BucketArn(String s3BucketArn) {
         this.s3BucketArn = s3BucketArn;
         return this;
@@ -36,9 +39,11 @@ public class UpdateServiceSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsTopicArn")
     public String snsTopicArn;
+
     public UpdateServiceSettingsRequest withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
     }
     
+    public UpdateServiceSettingsRequest(){}
 }

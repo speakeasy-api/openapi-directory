@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFileCacheResponse {
@@ -12,6 +13,7 @@ public class DeleteFileCacheResponse {
      */
     
     public Object badRequest;
+
     public DeleteFileCacheResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFileCacheResponse {
     
     
     public String contentType;
+
     public DeleteFileCacheResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFileCacheResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteFileCacheResponse deleteFileCacheResponse;
+
     public DeleteFileCacheResponse withDeleteFileCacheResponse(org.openapis.openapi.models.shared.DeleteFileCacheResponse deleteFileCacheResponse) {
         this.deleteFileCacheResponse = deleteFileCacheResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFileCacheResponse {
      */
     
     public Object fileCacheNotFound;
+
     public DeleteFileCacheResponse withFileCacheNotFound(Object fileCacheNotFound) {
         this.fileCacheNotFound = fileCacheNotFound;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFileCacheResponse {
      */
     
     public Object incompatibleParameterError;
+
     public DeleteFileCacheResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -59,6 +65,7 @@ public class DeleteFileCacheResponse {
      */
     
     public Object internalServerError;
+
     public DeleteFileCacheResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class DeleteFileCacheResponse {
      */
     
     public Object serviceLimitExceeded;
+
     public DeleteFileCacheResponse withServiceLimitExceeded(Object serviceLimitExceeded) {
         this.serviceLimitExceeded = serviceLimitExceeded;
         return this;
@@ -76,6 +84,7 @@ public class DeleteFileCacheResponse {
     
     
     public Integer statusCode;
+
     public DeleteFileCacheResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteFileCacheResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFileCacheResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteFileCacheResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

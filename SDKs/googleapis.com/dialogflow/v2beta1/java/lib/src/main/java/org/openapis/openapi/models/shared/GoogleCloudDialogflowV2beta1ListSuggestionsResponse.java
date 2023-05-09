@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1ListSuggestionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowV2beta1ListSuggestionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1ListSuggestionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestions")
     public GoogleCloudDialogflowV2beta1Suggestion[] suggestions;
+
     public GoogleCloudDialogflowV2beta1ListSuggestionsResponse withSuggestions(GoogleCloudDialogflowV2beta1Suggestion[] suggestions) {
         this.suggestions = suggestions;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1ListSuggestionsResponse(){}
 }

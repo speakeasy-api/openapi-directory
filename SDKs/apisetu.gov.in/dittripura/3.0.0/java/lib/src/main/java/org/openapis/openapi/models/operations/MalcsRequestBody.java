@@ -15,6 +15,7 @@ public class MalcsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public MalcsRequestBodyCertificateParameters certificateParameters;
+
     public MalcsRequestBody withCertificateParameters(MalcsRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class MalcsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public MalcsRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class MalcsRequestBody {
      */
     @JsonProperty("format")
     public MalcsRequestBodyFormatEnum format;
+
     public MalcsRequestBody withFormat(MalcsRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class MalcsRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public MalcsRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public MalcsRequestBody(@JsonProperty("format") MalcsRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

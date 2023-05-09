@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PIIDetection {
     @JsonProperty("EntityTypesToDetect")
     public String[] entityTypesToDetect;
+
     public PIIDetection withEntityTypesToDetect(String[] entityTypesToDetect) {
         this.entityTypesToDetect = entityTypesToDetect;
         return this;
@@ -21,6 +22,7 @@ public class PIIDetection {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public PIIDetection withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -29,6 +31,7 @@ public class PIIDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaskValue")
     public String maskValue;
+
     public PIIDetection withMaskValue(String maskValue) {
         this.maskValue = maskValue;
         return this;
@@ -36,6 +39,7 @@ public class PIIDetection {
     
     @JsonProperty("Name")
     public String name;
+
     public PIIDetection withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class PIIDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputColumnName")
     public String outputColumnName;
+
     public PIIDetection withOutputColumnName(String outputColumnName) {
         this.outputColumnName = outputColumnName;
         return this;
@@ -51,6 +56,7 @@ public class PIIDetection {
     
     @JsonProperty("PiiType")
     public PiiTypeEnum piiType;
+
     public PIIDetection withPiiType(PiiTypeEnum piiType) {
         this.piiType = piiType;
         return this;
@@ -59,6 +65,7 @@ public class PIIDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SampleFraction")
     public Double sampleFraction;
+
     public PIIDetection withSampleFraction(Double sampleFraction) {
         this.sampleFraction = sampleFraction;
         return this;
@@ -67,9 +74,16 @@ public class PIIDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThresholdFraction")
     public Double thresholdFraction;
+
     public PIIDetection withThresholdFraction(Double thresholdFraction) {
         this.thresholdFraction = thresholdFraction;
         return this;
     }
     
+    public PIIDetection(@JsonProperty("EntityTypesToDetect") String[] entityTypesToDetect, @JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("PiiType") PiiTypeEnum piiType) {
+        this.entityTypesToDetect = entityTypesToDetect;
+        this.inputs = inputs;
+        this.name = name;
+        this.piiType = piiType;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateExperimentResponse {
@@ -12,6 +13,7 @@ public class CreateExperimentResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateExperimentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateExperimentResponse {
      */
     
     public Object conflictException;
+
     public CreateExperimentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateExperimentResponse {
     
     
     public String contentType;
+
     public CreateExperimentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateExperimentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateExperimentResponse createExperimentResponse;
+
     public CreateExperimentResponse withCreateExperimentResponse(org.openapis.openapi.models.shared.CreateExperimentResponse createExperimentResponse) {
         this.createExperimentResponse = createExperimentResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateExperimentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateExperimentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateExperimentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateExperimentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateExperimentResponse {
     
     
     public Integer statusCode;
+
     public CreateExperimentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateExperimentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateExperimentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateExperimentResponse {
      */
     
     public Object validationException;
+
     public CreateExperimentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateExperimentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ImagesDeleteAllResponse {
     
     public Image[] deleted;
+
     public ImagesDeleteAllResponse withDeleted(Image[] deleted) {
         this.deleted = deleted;
         return this;
     }
     
+    public ImagesDeleteAllResponse(){}
 }

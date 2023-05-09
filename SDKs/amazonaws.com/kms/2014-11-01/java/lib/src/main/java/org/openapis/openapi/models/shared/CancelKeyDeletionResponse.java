@@ -15,9 +15,11 @@ public class CancelKeyDeletionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public CancelKeyDeletionResponse withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public CancelKeyDeletionResponse(){}
 }

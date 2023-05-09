@@ -12,9 +12,13 @@ public class RequestReference {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public RequestReference withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public RequestReference(@JsonProperty("requestId") String requestId) {
+        this.requestId = requestId;
+  }
 }

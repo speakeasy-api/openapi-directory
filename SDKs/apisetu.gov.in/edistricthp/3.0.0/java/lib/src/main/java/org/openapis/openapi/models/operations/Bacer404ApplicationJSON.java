@@ -15,6 +15,7 @@ public class Bacer404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Bacer404ApplicationJSONErrorEnum error;
+
     public Bacer404ApplicationJSON withError(Bacer404ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Bacer404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Bacer404ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Bacer404ApplicationJSON withErrorDescription(Bacer404ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Bacer404ApplicationJSON(){}
 }

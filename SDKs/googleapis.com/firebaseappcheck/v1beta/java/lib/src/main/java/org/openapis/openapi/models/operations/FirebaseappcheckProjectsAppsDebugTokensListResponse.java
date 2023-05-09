@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebaseappcheckProjectsAppsDebugTokensListResponse {
     
     public String contentType;
+
     public FirebaseappcheckProjectsAppsDebugTokensListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebaseappcheckProjectsAppsDebugTokensListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaListDebugTokensResponse googleFirebaseAppcheckV1betaListDebugTokensResponse;
+
     public FirebaseappcheckProjectsAppsDebugTokensListResponse withGoogleFirebaseAppcheckV1betaListDebugTokensResponse(org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaListDebugTokensResponse googleFirebaseAppcheckV1betaListDebugTokensResponse) {
         this.googleFirebaseAppcheckV1betaListDebugTokensResponse = googleFirebaseAppcheckV1betaListDebugTokensResponse;
         return this;
@@ -26,6 +29,7 @@ public class FirebaseappcheckProjectsAppsDebugTokensListResponse {
     
     
     public Integer statusCode;
+
     public FirebaseappcheckProjectsAppsDebugTokensListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebaseappcheckProjectsAppsDebugTokensListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebaseappcheckProjectsAppsDebugTokensListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebaseappcheckProjectsAppsDebugTokensListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

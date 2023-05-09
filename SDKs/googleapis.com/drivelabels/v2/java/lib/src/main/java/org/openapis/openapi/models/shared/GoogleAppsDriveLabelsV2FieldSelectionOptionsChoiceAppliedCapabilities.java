@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceAppliedCapabiliti
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canRead")
     public Boolean canRead;
+
     public GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceAppliedCapabilities withCanRead(Boolean canRead) {
         this.canRead = canRead;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceAppliedCapabiliti
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canSearch")
     public Boolean canSearch;
+
     public GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceAppliedCapabilities withCanSearch(Boolean canSearch) {
         this.canSearch = canSearch;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceAppliedCapabiliti
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canSelect")
     public Boolean canSelect;
+
     public GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceAppliedCapabilities withCanSelect(Boolean canSelect) {
         this.canSelect = canSelect;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceAppliedCapabilities(){}
 }

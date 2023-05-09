@@ -12,6 +12,7 @@ public class MergeBranchesBySquashInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorName")
     public String authorName;
+
     public MergeBranchesBySquashInput withAuthorName(String authorName) {
         this.authorName = authorName;
         return this;
@@ -20,6 +21,7 @@ public class MergeBranchesBySquashInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitMessage")
     public String commitMessage;
+
     public MergeBranchesBySquashInput withCommitMessage(String commitMessage) {
         this.commitMessage = commitMessage;
         return this;
@@ -28,6 +30,7 @@ public class MergeBranchesBySquashInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictDetailLevel")
     public ConflictDetailLevelTypeEnumEnum conflictDetailLevel;
+
     public MergeBranchesBySquashInput withConflictDetailLevel(ConflictDetailLevelTypeEnumEnum conflictDetailLevel) {
         this.conflictDetailLevel = conflictDetailLevel;
         return this;
@@ -36,6 +39,7 @@ public class MergeBranchesBySquashInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictResolution")
     public ConflictResolution conflictResolution;
+
     public MergeBranchesBySquashInput withConflictResolution(ConflictResolution conflictResolution) {
         this.conflictResolution = conflictResolution;
         return this;
@@ -44,6 +48,7 @@ public class MergeBranchesBySquashInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictResolutionStrategy")
     public ConflictResolutionStrategyTypeEnumEnum conflictResolutionStrategy;
+
     public MergeBranchesBySquashInput withConflictResolutionStrategy(ConflictResolutionStrategyTypeEnumEnum conflictResolutionStrategy) {
         this.conflictResolutionStrategy = conflictResolutionStrategy;
         return this;
@@ -51,6 +56,7 @@ public class MergeBranchesBySquashInput {
     
     @JsonProperty("destinationCommitSpecifier")
     public String destinationCommitSpecifier;
+
     public MergeBranchesBySquashInput withDestinationCommitSpecifier(String destinationCommitSpecifier) {
         this.destinationCommitSpecifier = destinationCommitSpecifier;
         return this;
@@ -59,6 +65,7 @@ public class MergeBranchesBySquashInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public MergeBranchesBySquashInput withEmail(String email) {
         this.email = email;
         return this;
@@ -67,6 +74,7 @@ public class MergeBranchesBySquashInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keepEmptyFolders")
     public Boolean keepEmptyFolders;
+
     public MergeBranchesBySquashInput withKeepEmptyFolders(Boolean keepEmptyFolders) {
         this.keepEmptyFolders = keepEmptyFolders;
         return this;
@@ -74,6 +82,7 @@ public class MergeBranchesBySquashInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public MergeBranchesBySquashInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -81,6 +90,7 @@ public class MergeBranchesBySquashInput {
     
     @JsonProperty("sourceCommitSpecifier")
     public String sourceCommitSpecifier;
+
     public MergeBranchesBySquashInput withSourceCommitSpecifier(String sourceCommitSpecifier) {
         this.sourceCommitSpecifier = sourceCommitSpecifier;
         return this;
@@ -89,9 +99,15 @@ public class MergeBranchesBySquashInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetBranch")
     public String targetBranch;
+
     public MergeBranchesBySquashInput withTargetBranch(String targetBranch) {
         this.targetBranch = targetBranch;
         return this;
     }
     
+    public MergeBranchesBySquashInput(@JsonProperty("destinationCommitSpecifier") String destinationCommitSpecifier, @JsonProperty("repositoryName") String repositoryName, @JsonProperty("sourceCommitSpecifier") String sourceCommitSpecifier) {
+        this.destinationCommitSpecifier = destinationCommitSpecifier;
+        this.repositoryName = repositoryName;
+        this.sourceCommitSpecifier = sourceCommitSpecifier;
+  }
 }

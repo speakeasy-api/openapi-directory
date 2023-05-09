@@ -15,6 +15,7 @@ public class CreateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateProjectRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class CreateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementTemplate")
     public CreateProjectRequestBodyPlacementTemplate placementTemplate;
+
     public CreateProjectRequestBody withPlacementTemplate(CreateProjectRequestBodyPlacementTemplate placementTemplate) {
         this.placementTemplate = placementTemplate;
         return this;
@@ -36,6 +38,7 @@ public class CreateProjectRequestBody {
      */
     @JsonProperty("projectName")
     public String projectName;
+
     public CreateProjectRequestBody withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -47,9 +50,13 @@ public class CreateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateProjectRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateProjectRequestBody(@JsonProperty("projectName") String projectName) {
+        this.projectName = projectName;
+  }
 }

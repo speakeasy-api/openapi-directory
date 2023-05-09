@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2PublishLabelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleAppsDriveLabelsV2PublishLabelRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2PublishLabelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useAdminAccess")
     public Boolean useAdminAccess;
+
     public GoogleAppsDriveLabelsV2PublishLabelRequest withUseAdminAccess(Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAppsDriveLabelsV2PublishLabelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeControl")
     public GoogleAppsDriveLabelsV2WriteControl writeControl;
+
     public GoogleAppsDriveLabelsV2PublishLabelRequest withWriteControl(GoogleAppsDriveLabelsV2WriteControl writeControl) {
         this.writeControl = writeControl;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2PublishLabelRequest(){}
 }

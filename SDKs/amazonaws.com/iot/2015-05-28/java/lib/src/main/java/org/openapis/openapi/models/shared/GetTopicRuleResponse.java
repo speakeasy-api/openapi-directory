@@ -15,6 +15,7 @@ public class GetTopicRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public TopicRule rule;
+
     public GetTopicRuleResponse withRule(TopicRule rule) {
         this.rule = rule;
         return this;
@@ -23,9 +24,11 @@ public class GetTopicRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleArn")
     public String ruleArn;
+
     public GetTopicRuleResponse withRuleArn(String ruleArn) {
         this.ruleArn = ruleArn;
         return this;
     }
     
+    public GetTopicRuleResponse(){}
 }

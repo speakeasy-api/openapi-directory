@@ -18,6 +18,7 @@ public class NetworkEndpointGroupPscData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerPscAddress")
     public String consumerPscAddress;
+
     public NetworkEndpointGroupPscData withConsumerPscAddress(String consumerPscAddress) {
         this.consumerPscAddress = consumerPscAddress;
         return this;
@@ -29,6 +30,7 @@ public class NetworkEndpointGroupPscData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pscConnectionId")
     public String pscConnectionId;
+
     public NetworkEndpointGroupPscData withPscConnectionId(String pscConnectionId) {
         this.pscConnectionId = pscConnectionId;
         return this;
@@ -40,9 +42,11 @@ public class NetworkEndpointGroupPscData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pscConnectionStatus")
     public NetworkEndpointGroupPscDataPscConnectionStatusEnum pscConnectionStatus;
+
     public NetworkEndpointGroupPscData withPscConnectionStatus(NetworkEndpointGroupPscDataPscConnectionStatusEnum pscConnectionStatus) {
         this.pscConnectionStatus = pscConnectionStatus;
         return this;
     }
     
+    public NetworkEndpointGroupPscData(){}
 }

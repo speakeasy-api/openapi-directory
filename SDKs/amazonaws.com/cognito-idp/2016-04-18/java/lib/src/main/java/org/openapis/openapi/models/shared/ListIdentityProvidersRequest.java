@@ -12,6 +12,7 @@ public class ListIdentityProvidersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListIdentityProvidersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListIdentityProvidersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIdentityProvidersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListIdentityProvidersRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public ListIdentityProvidersRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public ListIdentityProvidersRequest(@JsonProperty("UserPoolId") String userPoolId) {
+        this.userPoolId = userPoolId;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AuthorizeClientVpnIngressResultStatus {
     
     public AuthorizeClientVpnIngressResultStatusCodeEnum code;
+
     public AuthorizeClientVpnIngressResultStatus withCode(AuthorizeClientVpnIngressResultStatusCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class AuthorizeClientVpnIngressResultStatus {
     
     
     public String message;
+
     public AuthorizeClientVpnIngressResultStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AuthorizeClientVpnIngressResultStatus(){}
 }

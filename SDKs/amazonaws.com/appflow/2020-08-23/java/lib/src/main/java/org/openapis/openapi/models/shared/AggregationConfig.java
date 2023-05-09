@@ -15,6 +15,7 @@ public class AggregationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationType")
     public AggregationTypeEnum aggregationType;
+
     public AggregationConfig withAggregationType(AggregationTypeEnum aggregationType) {
         this.aggregationType = aggregationType;
         return this;
@@ -23,9 +24,11 @@ public class AggregationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetFileSize")
     public Long targetFileSize;
+
     public AggregationConfig withTargetFileSize(Long targetFileSize) {
         this.targetFileSize = targetFileSize;
         return this;
     }
     
+    public AggregationConfig(){}
 }

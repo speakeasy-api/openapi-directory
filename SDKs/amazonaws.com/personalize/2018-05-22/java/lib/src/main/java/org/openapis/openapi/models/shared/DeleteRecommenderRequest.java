@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRecommenderRequest {
     @JsonProperty("recommenderArn")
     public String recommenderArn;
+
     public DeleteRecommenderRequest withRecommenderArn(String recommenderArn) {
         this.recommenderArn = recommenderArn;
         return this;
     }
     
+    public DeleteRecommenderRequest(@JsonProperty("recommenderArn") String recommenderArn) {
+        this.recommenderArn = recommenderArn;
+  }
 }

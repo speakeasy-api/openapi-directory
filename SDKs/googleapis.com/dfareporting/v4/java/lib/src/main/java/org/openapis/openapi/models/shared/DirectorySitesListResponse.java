@@ -18,6 +18,7 @@ public class DirectorySitesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directorySites")
     public DirectorySite[] directorySites;
+
     public DirectorySitesListResponse withDirectorySites(DirectorySite[] directorySites) {
         this.directorySites = directorySites;
         return this;
@@ -29,6 +30,7 @@ public class DirectorySitesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DirectorySitesListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class DirectorySitesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public DirectorySitesListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public DirectorySitesListResponse(){}
 }

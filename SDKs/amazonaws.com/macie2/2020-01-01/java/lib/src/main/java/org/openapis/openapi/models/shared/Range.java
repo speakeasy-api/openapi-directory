@@ -15,6 +15,7 @@ public class Range {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public Long end;
+
     public Range withEnd(Long end) {
         this.end = end;
         return this;
@@ -23,6 +24,7 @@ public class Range {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Long start;
+
     public Range withStart(Long start) {
         this.start = start;
         return this;
@@ -31,9 +33,11 @@ public class Range {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startColumn")
     public Long startColumn;
+
     public Range withStartColumn(Long startColumn) {
         this.startColumn = startColumn;
         return this;
     }
     
+    public Range(){}
 }

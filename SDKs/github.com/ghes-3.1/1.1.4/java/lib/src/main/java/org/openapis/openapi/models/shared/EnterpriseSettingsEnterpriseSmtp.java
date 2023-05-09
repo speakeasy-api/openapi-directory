@@ -12,6 +12,7 @@ public class EnterpriseSettingsEnterpriseSmtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public EnterpriseSettingsEnterpriseSmtp withAddress(String address) {
         this.address = address;
         return this;
@@ -20,6 +21,7 @@ public class EnterpriseSettingsEnterpriseSmtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authentication")
     public String authentication;
+
     public EnterpriseSettingsEnterpriseSmtp withAuthentication(String authentication) {
         this.authentication = authentication;
         return this;
@@ -28,6 +30,7 @@ public class EnterpriseSettingsEnterpriseSmtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discard-to-noreply-address")
     public Boolean discardToNoreplyAddress;
+
     public EnterpriseSettingsEnterpriseSmtp withDiscardToNoreplyAddress(Boolean discardToNoreplyAddress) {
         this.discardToNoreplyAddress = discardToNoreplyAddress;
         return this;
@@ -36,6 +39,7 @@ public class EnterpriseSettingsEnterpriseSmtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public EnterpriseSettingsEnterpriseSmtp withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -44,6 +48,7 @@ public class EnterpriseSettingsEnterpriseSmtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable_starttls_auto")
     public Boolean enableStarttlsAuto;
+
     public EnterpriseSettingsEnterpriseSmtp withEnableStarttlsAuto(Boolean enableStarttlsAuto) {
         this.enableStarttlsAuto = enableStarttlsAuto;
         return this;
@@ -52,6 +57,7 @@ public class EnterpriseSettingsEnterpriseSmtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public EnterpriseSettingsEnterpriseSmtp withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -60,6 +66,7 @@ public class EnterpriseSettingsEnterpriseSmtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noreply_address")
     public String noreplyAddress;
+
     public EnterpriseSettingsEnterpriseSmtp withNoreplyAddress(String noreplyAddress) {
         this.noreplyAddress = noreplyAddress;
         return this;
@@ -68,6 +75,7 @@ public class EnterpriseSettingsEnterpriseSmtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public EnterpriseSettingsEnterpriseSmtp withPassword(String password) {
         this.password = password;
         return this;
@@ -76,6 +84,7 @@ public class EnterpriseSettingsEnterpriseSmtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public String port;
+
     public EnterpriseSettingsEnterpriseSmtp withPort(String port) {
         this.port = port;
         return this;
@@ -84,6 +93,7 @@ public class EnterpriseSettingsEnterpriseSmtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("support_address")
     public String supportAddress;
+
     public EnterpriseSettingsEnterpriseSmtp withSupportAddress(String supportAddress) {
         this.supportAddress = supportAddress;
         return this;
@@ -92,6 +102,7 @@ public class EnterpriseSettingsEnterpriseSmtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("support_address_type")
     public String supportAddressType;
+
     public EnterpriseSettingsEnterpriseSmtp withSupportAddressType(String supportAddressType) {
         this.supportAddressType = supportAddressType;
         return this;
@@ -100,6 +111,7 @@ public class EnterpriseSettingsEnterpriseSmtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_name")
     public String userName;
+
     public EnterpriseSettingsEnterpriseSmtp withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -108,9 +120,11 @@ public class EnterpriseSettingsEnterpriseSmtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public EnterpriseSettingsEnterpriseSmtp withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public EnterpriseSettingsEnterpriseSmtp(){}
 }

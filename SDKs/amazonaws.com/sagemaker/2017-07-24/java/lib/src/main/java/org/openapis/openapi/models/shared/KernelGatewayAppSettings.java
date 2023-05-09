@@ -15,6 +15,7 @@ public class KernelGatewayAppSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomImages")
     public CustomImage[] customImages;
+
     public KernelGatewayAppSettings withCustomImages(CustomImage[] customImages) {
         this.customImages = customImages;
         return this;
@@ -23,6 +24,7 @@ public class KernelGatewayAppSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultResourceSpec")
     public ResourceSpec defaultResourceSpec;
+
     public KernelGatewayAppSettings withDefaultResourceSpec(ResourceSpec defaultResourceSpec) {
         this.defaultResourceSpec = defaultResourceSpec;
         return this;
@@ -31,9 +33,11 @@ public class KernelGatewayAppSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LifecycleConfigArns")
     public String[] lifecycleConfigArns;
+
     public KernelGatewayAppSettings withLifecycleConfigArns(String[] lifecycleConfigArns) {
         this.lifecycleConfigArns = lifecycleConfigArns;
         return this;
     }
     
+    public KernelGatewayAppSettings(){}
 }

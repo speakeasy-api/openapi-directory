@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutCustomersIdFieldsFieldIdRequest {
@@ -12,6 +13,7 @@ public class PutCustomersIdFieldsFieldIdRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CustomerAdditionalFieldEdit customerAdditionalFieldEdit;
+
     public PutCustomersIdFieldsFieldIdRequest withCustomerAdditionalFieldEdit(org.openapis.openapi.models.shared.CustomerAdditionalFieldEdit customerAdditionalFieldEdit) {
         this.customerAdditionalFieldEdit = customerAdditionalFieldEdit;
         return this;
@@ -22,6 +24,7 @@ public class PutCustomersIdFieldsFieldIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PutCustomersIdFieldsFieldIdRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PutCustomersIdFieldsFieldIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=field_id")
     public Integer fieldId;
+
     public PutCustomersIdFieldsFieldIdRequest withFieldId(Integer fieldId) {
         this.fieldId = fieldId;
         return this;
@@ -42,6 +46,7 @@ public class PutCustomersIdFieldsFieldIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PutCustomersIdFieldsFieldIdRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -52,9 +57,17 @@ public class PutCustomersIdFieldsFieldIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PutCustomersIdFieldsFieldIdRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PutCustomersIdFieldsFieldIdRequest(@JsonProperty("CustomerAdditionalFieldEdit") org.openapis.openapi.models.shared.CustomerAdditionalFieldEdit customerAdditionalFieldEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("field_id") Integer fieldId, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.customerAdditionalFieldEdit = customerAdditionalFieldEdit;
+        this.authtoken = authtoken;
+        this.fieldId = fieldId;
+        this.id = id;
+        this.login = login;
+  }
 }

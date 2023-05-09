@@ -15,6 +15,7 @@ public class AwsS3BucketWebsiteConfigurationRoutingRuleCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpErrorCodeReturnedEquals")
     public String httpErrorCodeReturnedEquals;
+
     public AwsS3BucketWebsiteConfigurationRoutingRuleCondition withHttpErrorCodeReturnedEquals(String httpErrorCodeReturnedEquals) {
         this.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
         return this;
@@ -23,9 +24,11 @@ public class AwsS3BucketWebsiteConfigurationRoutingRuleCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyPrefixEquals")
     public String keyPrefixEquals;
+
     public AwsS3BucketWebsiteConfigurationRoutingRuleCondition withKeyPrefixEquals(String keyPrefixEquals) {
         this.keyPrefixEquals = keyPrefixEquals;
         return this;
     }
     
+    public AwsS3BucketWebsiteConfigurationRoutingRuleCondition(){}
 }

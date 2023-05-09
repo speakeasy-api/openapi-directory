@@ -15,6 +15,7 @@ public class CreateResourceDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public CreateResourceDefinitionResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CreateResourceDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTimestamp")
     public String creationTimestamp;
+
     public CreateResourceDefinitionResponse withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -31,6 +33,7 @@ public class CreateResourceDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public CreateResourceDefinitionResponse withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class CreateResourceDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdatedTimestamp")
     public String lastUpdatedTimestamp;
+
     public CreateResourceDefinitionResponse withLastUpdatedTimestamp(String lastUpdatedTimestamp) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         return this;
@@ -47,6 +51,7 @@ public class CreateResourceDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestVersion")
     public String latestVersion;
+
     public CreateResourceDefinitionResponse withLatestVersion(String latestVersion) {
         this.latestVersion = latestVersion;
         return this;
@@ -55,6 +60,7 @@ public class CreateResourceDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestVersionArn")
     public String latestVersionArn;
+
     public CreateResourceDefinitionResponse withLatestVersionArn(String latestVersionArn) {
         this.latestVersionArn = latestVersionArn;
         return this;
@@ -63,9 +69,11 @@ public class CreateResourceDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateResourceDefinitionResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateResourceDefinitionResponse(){}
 }

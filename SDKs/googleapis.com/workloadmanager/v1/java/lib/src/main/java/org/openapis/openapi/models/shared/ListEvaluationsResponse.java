@@ -18,6 +18,7 @@ public class ListEvaluationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluations")
     public Evaluation[] evaluations;
+
     public ListEvaluationsResponse withEvaluations(Evaluation[] evaluations) {
         this.evaluations = evaluations;
         return this;
@@ -29,6 +30,7 @@ public class ListEvaluationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListEvaluationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListEvaluationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListEvaluationsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListEvaluationsResponse(){}
 }

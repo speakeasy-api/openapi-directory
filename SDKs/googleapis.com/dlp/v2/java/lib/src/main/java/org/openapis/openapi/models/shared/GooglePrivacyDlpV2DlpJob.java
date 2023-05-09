@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2DlpJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionDetails")
     public GooglePrivacyDlpV2ActionDetails[] actionDetails;
+
     public GooglePrivacyDlpV2DlpJob withActionDetails(GooglePrivacyDlpV2ActionDetails[] actionDetails) {
         this.actionDetails = actionDetails;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2DlpJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GooglePrivacyDlpV2DlpJob withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2DlpJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GooglePrivacyDlpV2DlpJob withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -51,6 +54,7 @@ public class GooglePrivacyDlpV2DlpJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public GooglePrivacyDlpV2Error[] errors;
+
     public GooglePrivacyDlpV2DlpJob withErrors(GooglePrivacyDlpV2Error[] errors) {
         this.errors = errors;
         return this;
@@ -62,6 +66,7 @@ public class GooglePrivacyDlpV2DlpJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inspectDetails")
     public GooglePrivacyDlpV2InspectDataSourceDetails inspectDetails;
+
     public GooglePrivacyDlpV2DlpJob withInspectDetails(GooglePrivacyDlpV2InspectDataSourceDetails inspectDetails) {
         this.inspectDetails = inspectDetails;
         return this;
@@ -73,6 +78,7 @@ public class GooglePrivacyDlpV2DlpJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTriggerName")
     public String jobTriggerName;
+
     public GooglePrivacyDlpV2DlpJob withJobTriggerName(String jobTriggerName) {
         this.jobTriggerName = jobTriggerName;
         return this;
@@ -84,6 +90,7 @@ public class GooglePrivacyDlpV2DlpJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GooglePrivacyDlpV2DlpJob withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class GooglePrivacyDlpV2DlpJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("riskDetails")
     public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails riskDetails;
+
     public GooglePrivacyDlpV2DlpJob withRiskDetails(GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails riskDetails) {
         this.riskDetails = riskDetails;
         return this;
@@ -106,6 +114,7 @@ public class GooglePrivacyDlpV2DlpJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GooglePrivacyDlpV2DlpJob withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -117,6 +126,7 @@ public class GooglePrivacyDlpV2DlpJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GooglePrivacyDlpV2DlpJobStateEnum state;
+
     public GooglePrivacyDlpV2DlpJob withState(GooglePrivacyDlpV2DlpJobStateEnum state) {
         this.state = state;
         return this;
@@ -128,9 +138,11 @@ public class GooglePrivacyDlpV2DlpJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GooglePrivacyDlpV2DlpJobTypeEnum type;
+
     public GooglePrivacyDlpV2DlpJob withType(GooglePrivacyDlpV2DlpJobTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GooglePrivacyDlpV2DlpJob(){}
 }

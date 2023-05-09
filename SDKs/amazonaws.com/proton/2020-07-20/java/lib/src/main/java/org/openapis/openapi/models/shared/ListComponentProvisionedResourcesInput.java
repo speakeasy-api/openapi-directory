@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListComponentProvisionedResourcesInput {
     @JsonProperty("componentName")
     public String componentName;
+
     public ListComponentProvisionedResourcesInput withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -19,9 +20,13 @@ public class ListComponentProvisionedResourcesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListComponentProvisionedResourcesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListComponentProvisionedResourcesInput(@JsonProperty("componentName") String componentName) {
+        this.componentName = componentName;
+  }
 }

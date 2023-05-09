@@ -18,9 +18,11 @@ public class DistributionGroupsAddUsersForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_emails")
     public String[] userEmails;
+
     public DistributionGroupsAddUsersForOrgRequestBody withUserEmails(String[] userEmails) {
         this.userEmails = userEmails;
         return this;
     }
     
+    public DistributionGroupsAddUsersForOrgRequestBody(){}
 }

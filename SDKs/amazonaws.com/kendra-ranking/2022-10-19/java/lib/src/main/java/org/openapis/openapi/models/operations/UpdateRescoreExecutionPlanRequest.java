@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRescoreExecutionPlanRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateRescoreExecutionPlanRequest updateRescoreExecutionPlanRequest;
+
     public UpdateRescoreExecutionPlanRequest withUpdateRescoreExecutionPlanRequest(org.openapis.openapi.models.shared.UpdateRescoreExecutionPlanRequest updateRescoreExecutionPlanRequest) {
         this.updateRescoreExecutionPlanRequest = updateRescoreExecutionPlanRequest;
         return this;
@@ -16,6 +18,7 @@ public class UpdateRescoreExecutionPlanRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateRescoreExecutionPlanRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateRescoreExecutionPlanRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateRescoreExecutionPlanRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateRescoreExecutionPlanRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateRescoreExecutionPlanRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateRescoreExecutionPlanRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateRescoreExecutionPlanRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateRescoreExecutionPlanRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateRescoreExecutionPlanRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateRescoreExecutionPlanRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateRescoreExecutionPlanRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateRescoreExecutionPlanRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateRescoreExecutionPlanRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class UpdateRescoreExecutionPlanRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public UpdateRescoreExecutionPlanXAmzTargetEnum xAmzTarget;
+
     public UpdateRescoreExecutionPlanRequest withXAmzTarget(UpdateRescoreExecutionPlanXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public UpdateRescoreExecutionPlanRequest(@JsonProperty("UpdateRescoreExecutionPlanRequest") org.openapis.openapi.models.shared.UpdateRescoreExecutionPlanRequest updateRescoreExecutionPlanRequest, @JsonProperty("X-Amz-Target") UpdateRescoreExecutionPlanXAmzTargetEnum xAmzTarget) {
+        this.updateRescoreExecutionPlanRequest = updateRescoreExecutionPlanRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

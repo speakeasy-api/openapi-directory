@@ -18,6 +18,7 @@ public class CreateWatchRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("watch")
     public WatchInput watch;
+
     public CreateWatchRequestInput withWatch(WatchInput watch) {
         this.watch = watch;
         return this;
@@ -29,9 +30,11 @@ public class CreateWatchRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("watchId")
     public String watchId;
+
     public CreateWatchRequestInput withWatchId(String watchId) {
         this.watchId = watchId;
         return this;
     }
     
+    public CreateWatchRequestInput(){}
 }

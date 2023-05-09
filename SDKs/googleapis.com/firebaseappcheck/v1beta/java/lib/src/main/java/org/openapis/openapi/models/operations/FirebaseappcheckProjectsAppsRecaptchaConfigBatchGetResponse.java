@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebaseappcheckProjectsAppsRecaptchaConfigBatchGetResponse {
     
     public String contentType;
+
     public FirebaseappcheckProjectsAppsRecaptchaConfigBatchGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebaseappcheckProjectsAppsRecaptchaConfigBatchGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaBatchGetRecaptchaConfigsResponse googleFirebaseAppcheckV1betaBatchGetRecaptchaConfigsResponse;
+
     public FirebaseappcheckProjectsAppsRecaptchaConfigBatchGetResponse withGoogleFirebaseAppcheckV1betaBatchGetRecaptchaConfigsResponse(org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaBatchGetRecaptchaConfigsResponse googleFirebaseAppcheckV1betaBatchGetRecaptchaConfigsResponse) {
         this.googleFirebaseAppcheckV1betaBatchGetRecaptchaConfigsResponse = googleFirebaseAppcheckV1betaBatchGetRecaptchaConfigsResponse;
         return this;
@@ -26,6 +29,7 @@ public class FirebaseappcheckProjectsAppsRecaptchaConfigBatchGetResponse {
     
     
     public Integer statusCode;
+
     public FirebaseappcheckProjectsAppsRecaptchaConfigBatchGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebaseappcheckProjectsAppsRecaptchaConfigBatchGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebaseappcheckProjectsAppsRecaptchaConfigBatchGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebaseappcheckProjectsAppsRecaptchaConfigBatchGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -23,6 +23,7 @@ public class ApiSpecOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public ApiSpecOutput withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -36,6 +37,7 @@ public class ApiSpecOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public ApiSpecOutput withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -47,6 +49,7 @@ public class ApiSpecOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ApiSpecOutput withDescription(String description) {
         this.description = description;
         return this;
@@ -58,6 +61,7 @@ public class ApiSpecOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public ApiSpecOutput withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -69,6 +73,7 @@ public class ApiSpecOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash")
     public String hash;
+
     public ApiSpecOutput withHash(String hash) {
         this.hash = hash;
         return this;
@@ -80,6 +85,7 @@ public class ApiSpecOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ApiSpecOutput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -91,6 +97,7 @@ public class ApiSpecOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public ApiSpecOutput withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -102,6 +109,7 @@ public class ApiSpecOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ApiSpecOutput withName(String name) {
         this.name = name;
         return this;
@@ -115,6 +123,7 @@ public class ApiSpecOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("revisionCreateTime")
     public OffsetDateTime revisionCreateTime;
+
     public ApiSpecOutput withRevisionCreateTime(OffsetDateTime revisionCreateTime) {
         this.revisionCreateTime = revisionCreateTime;
         return this;
@@ -126,6 +135,7 @@ public class ApiSpecOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public ApiSpecOutput withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -139,6 +149,7 @@ public class ApiSpecOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("revisionUpdateTime")
     public OffsetDateTime revisionUpdateTime;
+
     public ApiSpecOutput withRevisionUpdateTime(OffsetDateTime revisionUpdateTime) {
         this.revisionUpdateTime = revisionUpdateTime;
         return this;
@@ -150,6 +161,7 @@ public class ApiSpecOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeBytes")
     public Integer sizeBytes;
+
     public ApiSpecOutput withSizeBytes(Integer sizeBytes) {
         this.sizeBytes = sizeBytes;
         return this;
@@ -161,9 +173,11 @@ public class ApiSpecOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceUri")
     public String sourceUri;
+
     public ApiSpecOutput withSourceUri(String sourceUri) {
         this.sourceUri = sourceUri;
         return this;
     }
     
+    public ApiSpecOutput(){}
 }

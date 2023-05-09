@@ -15,6 +15,7 @@ public class InAppTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public InAppTemplateResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class InAppTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public InAppMessageContent[] content;
+
     public InAppTemplateResponse withContent(InAppMessageContent[] content) {
         this.content = content;
         return this;
@@ -30,6 +32,7 @@ public class InAppTemplateResponse {
     
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public InAppTemplateResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -38,6 +41,7 @@ public class InAppTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomConfig")
     public java.util.Map<String, String> customConfig;
+
     public InAppTemplateResponse withCustomConfig(java.util.Map<String, String> customConfig) {
         this.customConfig = customConfig;
         return this;
@@ -45,6 +49,7 @@ public class InAppTemplateResponse {
     
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public InAppTemplateResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -53,6 +58,7 @@ public class InAppTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Layout")
     public LayoutEnum layout;
+
     public InAppTemplateResponse withLayout(LayoutEnum layout) {
         this.layout = layout;
         return this;
@@ -61,6 +67,7 @@ public class InAppTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateDescription")
     public String templateDescription;
+
     public InAppTemplateResponse withTemplateDescription(String templateDescription) {
         this.templateDescription = templateDescription;
         return this;
@@ -68,6 +75,7 @@ public class InAppTemplateResponse {
     
     @JsonProperty("TemplateName")
     public String templateName;
+
     public InAppTemplateResponse withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -75,6 +83,7 @@ public class InAppTemplateResponse {
     
     @JsonProperty("TemplateType")
     public TemplateTypeEnum templateType;
+
     public InAppTemplateResponse withTemplateType(TemplateTypeEnum templateType) {
         this.templateType = templateType;
         return this;
@@ -83,6 +92,7 @@ public class InAppTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public InAppTemplateResponse withVersion(String version) {
         this.version = version;
         return this;
@@ -91,9 +101,16 @@ public class InAppTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public InAppTemplateResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public InAppTemplateResponse(@JsonProperty("CreationDate") String creationDate, @JsonProperty("LastModifiedDate") String lastModifiedDate, @JsonProperty("TemplateName") String templateName, @JsonProperty("TemplateType") TemplateTypeEnum templateType) {
+        this.creationDate = creationDate;
+        this.lastModifiedDate = lastModifiedDate;
+        this.templateName = templateName;
+        this.templateType = templateType;
+  }
 }

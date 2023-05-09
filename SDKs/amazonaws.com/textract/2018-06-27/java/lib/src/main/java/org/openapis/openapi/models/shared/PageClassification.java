@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PageClassification {
     @JsonProperty("PageNumber")
     public Prediction[] pageNumber;
+
     public PageClassification withPageNumber(Prediction[] pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -19,9 +20,14 @@ public class PageClassification {
     
     @JsonProperty("PageType")
     public Prediction[] pageType;
+
     public PageClassification withPageType(Prediction[] pageType) {
         this.pageType = pageType;
         return this;
     }
     
+    public PageClassification(@JsonProperty("PageNumber") Prediction[] pageNumber, @JsonProperty("PageType") Prediction[] pageType) {
+        this.pageNumber = pageNumber;
+        this.pageType = pageType;
+  }
 }

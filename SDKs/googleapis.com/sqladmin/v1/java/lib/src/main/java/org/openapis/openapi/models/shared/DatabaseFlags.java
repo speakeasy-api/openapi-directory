@@ -18,6 +18,7 @@ public class DatabaseFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DatabaseFlags withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class DatabaseFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public DatabaseFlags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DatabaseFlags(){}
 }

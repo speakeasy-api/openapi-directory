@@ -18,6 +18,7 @@ public class SearchQueries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPage")
     public SearchQueriesNextPage[] nextPage;
+
     public SearchQueries withNextPage(SearchQueriesNextPage[] nextPage) {
         this.nextPage = nextPage;
         return this;
@@ -29,6 +30,7 @@ public class SearchQueries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousPage")
     public SearchQueriesPreviousPage[] previousPage;
+
     public SearchQueries withPreviousPage(SearchQueriesPreviousPage[] previousPage) {
         this.previousPage = previousPage;
         return this;
@@ -40,9 +42,11 @@ public class SearchQueries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request")
     public SearchQueriesRequest[] request;
+
     public SearchQueries withRequest(SearchQueriesRequest[] request) {
         this.request = request;
         return this;
     }
     
+    public SearchQueries(){}
 }

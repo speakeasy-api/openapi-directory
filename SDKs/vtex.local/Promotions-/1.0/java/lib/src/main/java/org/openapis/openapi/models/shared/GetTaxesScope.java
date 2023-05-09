@@ -18,6 +18,7 @@ public class GetTaxesScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allCatalog")
     public Boolean allCatalog;
+
     public GetTaxesScope withAllCatalog(Boolean allCatalog) {
         this.allCatalog = allCatalog;
         return this;
@@ -29,6 +30,7 @@ public class GetTaxesScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brands")
     public Double brands;
+
     public GetTaxesScope withBrands(Double brands) {
         this.brands = brands;
         return this;
@@ -40,6 +42,7 @@ public class GetTaxesScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandsAreInclusive")
     public Boolean brandsAreInclusive;
+
     public GetTaxesScope withBrandsAreInclusive(Boolean brandsAreInclusive) {
         this.brandsAreInclusive = brandsAreInclusive;
         return this;
@@ -51,6 +54,7 @@ public class GetTaxesScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public Double categories;
+
     public GetTaxesScope withCategories(Double categories) {
         this.categories = categories;
         return this;
@@ -62,6 +66,7 @@ public class GetTaxesScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoriesAreInclusive")
     public Boolean categoriesAreInclusive;
+
     public GetTaxesScope withCategoriesAreInclusive(Boolean categoriesAreInclusive) {
         this.categoriesAreInclusive = categoriesAreInclusive;
         return this;
@@ -73,6 +78,7 @@ public class GetTaxesScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections")
     public Double collections;
+
     public GetTaxesScope withCollections(Double collections) {
         this.collections = collections;
         return this;
@@ -84,6 +90,7 @@ public class GetTaxesScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionsAreInclusive")
     public Boolean collectionsAreInclusive;
+
     public GetTaxesScope withCollectionsAreInclusive(Boolean collectionsAreInclusive) {
         this.collectionsAreInclusive = collectionsAreInclusive;
         return this;
@@ -95,6 +102,7 @@ public class GetTaxesScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public Double products;
+
     public GetTaxesScope withProducts(Double products) {
         this.products = products;
         return this;
@@ -106,6 +114,7 @@ public class GetTaxesScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productsAreInclusive")
     public Boolean productsAreInclusive;
+
     public GetTaxesScope withProductsAreInclusive(Boolean productsAreInclusive) {
         this.productsAreInclusive = productsAreInclusive;
         return this;
@@ -117,6 +126,7 @@ public class GetTaxesScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellers")
     public Double sellers;
+
     public GetTaxesScope withSellers(Double sellers) {
         this.sellers = sellers;
         return this;
@@ -128,6 +138,7 @@ public class GetTaxesScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellersAreInclusive")
     public Boolean sellersAreInclusive;
+
     public GetTaxesScope withSellersAreInclusive(Boolean sellersAreInclusive) {
         this.sellersAreInclusive = sellersAreInclusive;
         return this;
@@ -139,6 +150,7 @@ public class GetTaxesScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skus")
     public Double skus;
+
     public GetTaxesScope withSkus(Double skus) {
         this.skus = skus;
         return this;
@@ -150,9 +162,11 @@ public class GetTaxesScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skusAreInclusive")
     public Boolean skusAreInclusive;
+
     public GetTaxesScope withSkusAreInclusive(Boolean skusAreInclusive) {
         this.skusAreInclusive = skusAreInclusive;
         return this;
     }
     
+    public GetTaxesScope(){}
 }

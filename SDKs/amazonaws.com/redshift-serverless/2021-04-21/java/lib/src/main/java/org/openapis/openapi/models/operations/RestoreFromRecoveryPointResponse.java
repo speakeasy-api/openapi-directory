@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RestoreFromRecoveryPointResponse {
@@ -12,6 +13,7 @@ public class RestoreFromRecoveryPointResponse {
      */
     
     public Object conflictException;
+
     public RestoreFromRecoveryPointResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class RestoreFromRecoveryPointResponse {
     
     
     public String contentType;
+
     public RestoreFromRecoveryPointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RestoreFromRecoveryPointResponse {
      */
     
     public Object internalServerException;
+
     public RestoreFromRecoveryPointResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class RestoreFromRecoveryPointResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RestoreFromRecoveryPointResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RestoreFromRecoveryPointResponse {
      */
     
     public org.openapis.openapi.models.shared.RestoreFromRecoveryPointResponse restoreFromRecoveryPointResponse;
+
     public RestoreFromRecoveryPointResponse withRestoreFromRecoveryPointResponse(org.openapis.openapi.models.shared.RestoreFromRecoveryPointResponse restoreFromRecoveryPointResponse) {
         this.restoreFromRecoveryPointResponse = restoreFromRecoveryPointResponse;
         return this;
@@ -56,6 +62,7 @@ public class RestoreFromRecoveryPointResponse {
     
     
     public Integer statusCode;
+
     public RestoreFromRecoveryPointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RestoreFromRecoveryPointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RestoreFromRecoveryPointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class RestoreFromRecoveryPointResponse {
      */
     
     public Object validationException;
+
     public RestoreFromRecoveryPointResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RestoreFromRecoveryPointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

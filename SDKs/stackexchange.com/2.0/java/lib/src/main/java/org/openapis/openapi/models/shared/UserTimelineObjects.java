@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class UserTimelineObjects {
     
     public Long badgeId;
+
     public UserTimelineObjects withBadgeId(Long badgeId) {
         this.badgeId = badgeId;
         return this;
@@ -16,6 +17,7 @@ public class UserTimelineObjects {
     
     
     public Long commentId;
+
     public UserTimelineObjects withCommentId(Long commentId) {
         this.commentId = commentId;
         return this;
@@ -23,6 +25,7 @@ public class UserTimelineObjects {
     
     
     public Long creationDate;
+
     public UserTimelineObjects withCreationDate(Long creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +33,7 @@ public class UserTimelineObjects {
     
     
     public String detail;
+
     public UserTimelineObjects withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -37,6 +41,7 @@ public class UserTimelineObjects {
     
     
     public String link;
+
     public UserTimelineObjects withLink(String link) {
         this.link = link;
         return this;
@@ -44,6 +49,7 @@ public class UserTimelineObjects {
     
     
     public Long postId;
+
     public UserTimelineObjects withPostId(Long postId) {
         this.postId = postId;
         return this;
@@ -51,6 +57,7 @@ public class UserTimelineObjects {
     
     
     public String postType;
+
     public UserTimelineObjects withPostType(String postType) {
         this.postType = postType;
         return this;
@@ -58,6 +65,7 @@ public class UserTimelineObjects {
     
     
     public Long suggestedEditId;
+
     public UserTimelineObjects withSuggestedEditId(Long suggestedEditId) {
         this.suggestedEditId = suggestedEditId;
         return this;
@@ -65,6 +73,7 @@ public class UserTimelineObjects {
     
     
     public String timelineType;
+
     public UserTimelineObjects withTimelineType(String timelineType) {
         this.timelineType = timelineType;
         return this;
@@ -72,6 +81,7 @@ public class UserTimelineObjects {
     
     
     public String title;
+
     public UserTimelineObjects withTitle(String title) {
         this.title = title;
         return this;
@@ -79,9 +89,11 @@ public class UserTimelineObjects {
     
     
     public Long userId;
+
     public UserTimelineObjects withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public UserTimelineObjects(){}
 }

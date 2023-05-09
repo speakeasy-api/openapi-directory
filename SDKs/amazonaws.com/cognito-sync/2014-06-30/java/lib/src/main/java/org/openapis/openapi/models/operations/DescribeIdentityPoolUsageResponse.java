@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeIdentityPoolUsageResponse {
     
     public String contentType;
+
     public DescribeIdentityPoolUsageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeIdentityPoolUsageResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeIdentityPoolUsageResponse describeIdentityPoolUsageResponse;
+
     public DescribeIdentityPoolUsageResponse withDescribeIdentityPoolUsageResponse(org.openapis.openapi.models.shared.DescribeIdentityPoolUsageResponse describeIdentityPoolUsageResponse) {
         this.describeIdentityPoolUsageResponse = describeIdentityPoolUsageResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeIdentityPoolUsageResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeIdentityPoolUsageResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeIdentityPoolUsageResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeIdentityPoolUsageResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeIdentityPoolUsageResponse {
      */
     
     public Object notAuthorizedException;
+
     public DescribeIdentityPoolUsageResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeIdentityPoolUsageResponse {
     
     
     public Integer statusCode;
+
     public DescribeIdentityPoolUsageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeIdentityPoolUsageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeIdentityPoolUsageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeIdentityPoolUsageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeIdentityPoolUsageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeIdentityPoolUsageResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeIdentityPoolUsageResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeIdentityPoolUsageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

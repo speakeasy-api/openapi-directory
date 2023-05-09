@@ -22,6 +22,7 @@ public class UpdateCustomMetricResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public UpdateCustomMetricResponse withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +31,7 @@ public class UpdateCustomMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public UpdateCustomMetricResponse withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class UpdateCustomMetricResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public UpdateCustomMetricResponse withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -48,6 +51,7 @@ public class UpdateCustomMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricArn")
     public String metricArn;
+
     public UpdateCustomMetricResponse withMetricArn(String metricArn) {
         this.metricArn = metricArn;
         return this;
@@ -56,6 +60,7 @@ public class UpdateCustomMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public String metricName;
+
     public UpdateCustomMetricResponse withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -64,9 +69,11 @@ public class UpdateCustomMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricType")
     public CustomMetricTypeEnum metricType;
+
     public UpdateCustomMetricResponse withMetricType(CustomMetricTypeEnum metricType) {
         this.metricType = metricType;
         return this;
     }
     
+    public UpdateCustomMetricResponse(){}
 }

@@ -18,6 +18,7 @@ public class ProductViewItemIssueItemIssueSeverity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregatedSeverity")
     public ProductViewItemIssueItemIssueSeverityAggregatedSeverityEnum aggregatedSeverity;
+
     public ProductViewItemIssueItemIssueSeverity withAggregatedSeverity(ProductViewItemIssueItemIssueSeverityAggregatedSeverityEnum aggregatedSeverity) {
         this.aggregatedSeverity = aggregatedSeverity;
         return this;
@@ -29,9 +30,11 @@ public class ProductViewItemIssueItemIssueSeverity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityPerDestination")
     public ProductViewItemIssueIssueSeverityPerDestination[] severityPerDestination;
+
     public ProductViewItemIssueItemIssueSeverity withSeverityPerDestination(ProductViewItemIssueIssueSeverityPerDestination[] severityPerDestination) {
         this.severityPerDestination = severityPerDestination;
         return this;
     }
     
+    public ProductViewItemIssueItemIssueSeverity(){}
 }

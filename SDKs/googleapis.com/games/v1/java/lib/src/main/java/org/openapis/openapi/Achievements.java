@@ -59,11 +59,9 @@ public class Achievements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesAchievementsIncrementResponse res = new org.openapis.openapi.models.operations.GamesAchievementsIncrementResponse() {{
+        org.openapis.openapi.models.operations.GamesAchievementsIncrementResponse res = new org.openapis.openapi.models.operations.GamesAchievementsIncrementResponse(contentType, httpRes.statusCode()) {{
             achievementIncrementResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Achievements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesAchievementsListResponse res = new org.openapis.openapi.models.operations.GamesAchievementsListResponse() {{
+        org.openapis.openapi.models.operations.GamesAchievementsListResponse res = new org.openapis.openapi.models.operations.GamesAchievementsListResponse(contentType, httpRes.statusCode()) {{
             playerAchievementListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Achievements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesAchievementsRevealResponse res = new org.openapis.openapi.models.operations.GamesAchievementsRevealResponse() {{
+        org.openapis.openapi.models.operations.GamesAchievementsRevealResponse res = new org.openapis.openapi.models.operations.GamesAchievementsRevealResponse(contentType, httpRes.statusCode()) {{
             achievementRevealResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class Achievements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesAchievementsSetStepsAtLeastResponse res = new org.openapis.openapi.models.operations.GamesAchievementsSetStepsAtLeastResponse() {{
+        org.openapis.openapi.models.operations.GamesAchievementsSetStepsAtLeastResponse res = new org.openapis.openapi.models.operations.GamesAchievementsSetStepsAtLeastResponse(contentType, httpRes.statusCode()) {{
             achievementSetStepsAtLeastResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,11 +235,9 @@ public class Achievements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesAchievementsUnlockResponse res = new org.openapis.openapi.models.operations.GamesAchievementsUnlockResponse() {{
+        org.openapis.openapi.models.operations.GamesAchievementsUnlockResponse res = new org.openapis.openapi.models.operations.GamesAchievementsUnlockResponse(contentType, httpRes.statusCode()) {{
             achievementUnlockResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class Achievements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesAchievementsUpdateMultipleResponse res = new org.openapis.openapi.models.operations.GamesAchievementsUpdateMultipleResponse() {{
+        org.openapis.openapi.models.operations.GamesAchievementsUpdateMultipleResponse res = new org.openapis.openapi.models.operations.GamesAchievementsUpdateMultipleResponse(contentType, httpRes.statusCode()) {{
             achievementUpdateMultipleResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

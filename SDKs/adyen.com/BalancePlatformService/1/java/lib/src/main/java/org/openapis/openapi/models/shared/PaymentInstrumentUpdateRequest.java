@@ -16,6 +16,7 @@ public class PaymentInstrumentUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balanceAccountId")
     public String balanceAccountId;
+
     public PaymentInstrumentUpdateRequest withBalanceAccountId(String balanceAccountId) {
         this.balanceAccountId = balanceAccountId;
         return this;
@@ -24,6 +25,7 @@ public class PaymentInstrumentUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public CardInfo card;
+
     public PaymentInstrumentUpdateRequest withCard(CardInfo card) {
         this.card = card;
         return this;
@@ -53,6 +55,7 @@ public class PaymentInstrumentUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PaymentInstrumentUpdateRequestStatusEnum status;
+
     public PaymentInstrumentUpdateRequest withStatus(PaymentInstrumentUpdateRequestStatusEnum status) {
         this.status = status;
         return this;
@@ -64,9 +67,11 @@ public class PaymentInstrumentUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusComment")
     public String statusComment;
+
     public PaymentInstrumentUpdateRequest withStatusComment(String statusComment) {
         this.statusComment = statusComment;
         return this;
     }
     
+    public PaymentInstrumentUpdateRequest(){}
 }

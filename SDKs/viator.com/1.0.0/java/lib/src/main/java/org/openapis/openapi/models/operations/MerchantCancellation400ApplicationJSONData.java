@@ -15,6 +15,7 @@ public class MerchantCancellation400ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellationResponseDescription")
     public String cancellationResponseDescription;
+
     public MerchantCancellation400ApplicationJSONData withCancellationResponseDescription(String cancellationResponseDescription) {
         this.cancellationResponseDescription = cancellationResponseDescription;
         return this;
@@ -26,6 +27,7 @@ public class MerchantCancellation400ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellationResponseStatusCode")
     public String cancellationResponseStatusCode;
+
     public MerchantCancellation400ApplicationJSONData withCancellationResponseStatusCode(String cancellationResponseStatusCode) {
         this.cancellationResponseStatusCode = cancellationResponseStatusCode;
         return this;
@@ -37,6 +39,7 @@ public class MerchantCancellation400ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributorItemRef")
     public String distributorItemRef;
+
     public MerchantCancellation400ApplicationJSONData withDistributorItemRef(String distributorItemRef) {
         this.distributorItemRef = distributorItemRef;
         return this;
@@ -48,9 +51,11 @@ public class MerchantCancellation400ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public MerchantCancellation400ApplicationJSONData withItemId(String itemId) {
         this.itemId = itemId;
         return this;
     }
     
+    public MerchantCancellation400ApplicationJSONData(){}
 }

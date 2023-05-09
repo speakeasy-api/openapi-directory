@@ -15,9 +15,13 @@ public class PredictiveDialerConfig {
      */
     @JsonProperty("bandwidthAllocation")
     public Double bandwidthAllocation;
+
     public PredictiveDialerConfig withBandwidthAllocation(Double bandwidthAllocation) {
         this.bandwidthAllocation = bandwidthAllocation;
         return this;
     }
     
+    public PredictiveDialerConfig(@JsonProperty("bandwidthAllocation") Double bandwidthAllocation) {
+        this.bandwidthAllocation = bandwidthAllocation;
+  }
 }

@@ -18,6 +18,7 @@ public class CompensationHistogramResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public NumericBucketingResult result;
+
     public CompensationHistogramResult withResult(NumericBucketingResult result) {
         this.result = result;
         return this;
@@ -29,9 +30,11 @@ public class CompensationHistogramResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CompensationHistogramResultTypeEnum type;
+
     public CompensationHistogramResult withType(CompensationHistogramResultTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CompensationHistogramResult(){}
 }

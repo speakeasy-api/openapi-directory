@@ -69,11 +69,9 @@ public class PortfolioConstruction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioConstructionInvestableResponse res = new org.openapis.openapi.models.operations.PostPortfolioConstructionInvestableResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioConstructionInvestableResponse res = new org.openapis.openapi.models.operations.PostPortfolioConstructionInvestableResponse(contentType, httpRes.statusCode()) {{
             postPortfolioConstructionInvestable200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -121,11 +119,9 @@ public class PortfolioConstruction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioConstructionMimickingResponse res = new org.openapis.openapi.models.operations.PostPortfolioConstructionMimickingResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioConstructionMimickingResponse res = new org.openapis.openapi.models.operations.PostPortfolioConstructionMimickingResponse(contentType, httpRes.statusCode()) {{
             postPortfolioConstructionMimicking200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,11 +170,9 @@ public class PortfolioConstruction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioConstructionRandomResponse res = new org.openapis.openapi.models.operations.PostPortfolioConstructionRandomResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioConstructionRandomResponse res = new org.openapis.openapi.models.operations.PostPortfolioConstructionRandomResponse(contentType, httpRes.statusCode()) {{
             postPortfolioConstructionRandom200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableTopicRuleResponse {
@@ -12,6 +13,7 @@ public class EnableTopicRuleResponse {
      */
     
     public Object conflictingResourceUpdateException;
+
     public EnableTopicRuleResponse withConflictingResourceUpdateException(Object conflictingResourceUpdateException) {
         this.conflictingResourceUpdateException = conflictingResourceUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class EnableTopicRuleResponse {
     
     
     public String contentType;
+
     public EnableTopicRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class EnableTopicRuleResponse {
      */
     
     public Object internalException;
+
     public EnableTopicRuleResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class EnableTopicRuleResponse {
      */
     
     public Object invalidRequestException;
+
     public EnableTopicRuleResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class EnableTopicRuleResponse {
     
     
     public Integer statusCode;
+
     public EnableTopicRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class EnableTopicRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableTopicRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class EnableTopicRuleResponse {
      */
     
     public Object serviceUnavailableException;
+
     public EnableTopicRuleResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class EnableTopicRuleResponse {
      */
     
     public Object unauthorizedException;
+
     public EnableTopicRuleResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public EnableTopicRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

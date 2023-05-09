@@ -12,6 +12,7 @@ public class UpdateJobFromSourceControlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthStrategy")
     public SourceControlAuthStrategyEnum authStrategy;
+
     public UpdateJobFromSourceControlRequest withAuthStrategy(SourceControlAuthStrategyEnum authStrategy) {
         this.authStrategy = authStrategy;
         return this;
@@ -20,6 +21,7 @@ public class UpdateJobFromSourceControlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthToken")
     public String authToken;
+
     public UpdateJobFromSourceControlRequest withAuthToken(String authToken) {
         this.authToken = authToken;
         return this;
@@ -28,6 +30,7 @@ public class UpdateJobFromSourceControlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BranchName")
     public String branchName;
+
     public UpdateJobFromSourceControlRequest withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -36,6 +39,7 @@ public class UpdateJobFromSourceControlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommitId")
     public String commitId;
+
     public UpdateJobFromSourceControlRequest withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -44,6 +48,7 @@ public class UpdateJobFromSourceControlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Folder")
     public String folder;
+
     public UpdateJobFromSourceControlRequest withFolder(String folder) {
         this.folder = folder;
         return this;
@@ -52,6 +57,7 @@ public class UpdateJobFromSourceControlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public UpdateJobFromSourceControlRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -60,6 +66,7 @@ public class UpdateJobFromSourceControlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Provider")
     public SourceControlProviderEnum provider;
+
     public UpdateJobFromSourceControlRequest withProvider(SourceControlProviderEnum provider) {
         this.provider = provider;
         return this;
@@ -68,6 +75,7 @@ public class UpdateJobFromSourceControlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepositoryName")
     public String repositoryName;
+
     public UpdateJobFromSourceControlRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -76,9 +84,11 @@ public class UpdateJobFromSourceControlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepositoryOwner")
     public String repositoryOwner;
+
     public UpdateJobFromSourceControlRequest withRepositoryOwner(String repositoryOwner) {
         this.repositoryOwner = repositoryOwner;
         return this;
     }
     
+    public UpdateJobFromSourceControlRequest(){}
 }

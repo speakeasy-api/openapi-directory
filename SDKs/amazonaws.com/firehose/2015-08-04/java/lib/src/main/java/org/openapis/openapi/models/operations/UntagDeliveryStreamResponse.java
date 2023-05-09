@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UntagDeliveryStreamResponse {
     
     public String contentType;
+
     public UntagDeliveryStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UntagDeliveryStreamResponse {
      */
     
     public Object invalidArgumentException;
+
     public UntagDeliveryStreamResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -29,6 +32,7 @@ public class UntagDeliveryStreamResponse {
      */
     
     public Object limitExceededException;
+
     public UntagDeliveryStreamResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -36,6 +40,7 @@ public class UntagDeliveryStreamResponse {
     
     
     public Integer statusCode;
+
     public UntagDeliveryStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UntagDeliveryStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UntagDeliveryStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UntagDeliveryStreamResponse {
      */
     
     public Object resourceInUseException;
+
     public UntagDeliveryStreamResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -63,6 +70,7 @@ public class UntagDeliveryStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UntagDeliveryStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class UntagDeliveryStreamResponse {
      */
     
     public java.util.Map<String, Object> untagDeliveryStreamOutput;
+
     public UntagDeliveryStreamResponse withUntagDeliveryStreamOutput(java.util.Map<String, Object> untagDeliveryStreamOutput) {
         this.untagDeliveryStreamOutput = untagDeliveryStreamOutput;
         return this;
     }
     
+    public UntagDeliveryStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

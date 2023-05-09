@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRepositoriesResponse {
     
     public String contentType;
+
     public ListRepositoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListRepositoriesResponse {
      */
     
     public Object invalidContinuationTokenException;
+
     public ListRepositoriesResponse withInvalidContinuationTokenException(Object invalidContinuationTokenException) {
         this.invalidContinuationTokenException = invalidContinuationTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListRepositoriesResponse {
      */
     
     public Object invalidOrderException;
+
     public ListRepositoriesResponse withInvalidOrderException(Object invalidOrderException) {
         this.invalidOrderException = invalidOrderException;
         return this;
@@ -39,6 +43,7 @@ public class ListRepositoriesResponse {
      */
     
     public Object invalidSortByException;
+
     public ListRepositoriesResponse withInvalidSortByException(Object invalidSortByException) {
         this.invalidSortByException = invalidSortByException;
         return this;
@@ -49,6 +54,7 @@ public class ListRepositoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRepositoriesOutput listRepositoriesOutput;
+
     public ListRepositoriesResponse withListRepositoriesOutput(org.openapis.openapi.models.shared.ListRepositoriesOutput listRepositoriesOutput) {
         this.listRepositoriesOutput = listRepositoriesOutput;
         return this;
@@ -56,6 +62,7 @@ public class ListRepositoriesResponse {
     
     
     public Integer statusCode;
+
     public ListRepositoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListRepositoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRepositoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListRepositoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

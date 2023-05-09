@@ -12,6 +12,7 @@ public class ListUsageForLicenseConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public ListUsageForLicenseConfigurationRequest withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -19,6 +20,7 @@ public class ListUsageForLicenseConfigurationRequest {
     
     @JsonProperty("LicenseConfigurationArn")
     public String licenseConfigurationArn;
+
     public ListUsageForLicenseConfigurationRequest withLicenseConfigurationArn(String licenseConfigurationArn) {
         this.licenseConfigurationArn = licenseConfigurationArn;
         return this;
@@ -27,6 +29,7 @@ public class ListUsageForLicenseConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListUsageForLicenseConfigurationRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,9 +38,13 @@ public class ListUsageForLicenseConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListUsageForLicenseConfigurationRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListUsageForLicenseConfigurationRequest(@JsonProperty("LicenseConfigurationArn") String licenseConfigurationArn) {
+        this.licenseConfigurationArn = licenseConfigurationArn;
+  }
 }

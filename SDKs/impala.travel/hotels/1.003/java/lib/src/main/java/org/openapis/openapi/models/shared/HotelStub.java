@@ -17,6 +17,7 @@ public class HotelStub {
      */
     @JsonProperty("address")
     public Address address;
+
     public HotelStub withAddress(Address address) {
         this.address = address;
         return this;
@@ -28,6 +29,7 @@ public class HotelStub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkIn")
     public TimeRange checkIn;
+
     public HotelStub withCheckIn(TimeRange checkIn) {
         this.checkIn = checkIn;
         return this;
@@ -39,6 +41,7 @@ public class HotelStub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkOut")
     public TimeRange checkOut;
+
     public HotelStub withCheckOut(TimeRange checkOut) {
         this.checkOut = checkOut;
         return this;
@@ -47,6 +50,7 @@ public class HotelStub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public String[] emails;
+
     public HotelStub withEmails(String[] emails) {
         this.emails = emails;
         return this;
@@ -57,6 +61,7 @@ public class HotelStub {
      */
     @JsonProperty("hotelId")
     public String hotelId;
+
     public HotelStub withHotelId(String hotelId) {
         this.hotelId = hotelId;
         return this;
@@ -68,6 +73,7 @@ public class HotelStub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public HotelStub withHref(String href) {
         this.href = href;
         return this;
@@ -78,6 +84,7 @@ public class HotelStub {
      */
     @JsonProperty("images")
     public Image[] images;
+
     public HotelStub withImages(Image[] images) {
         this.images = images;
         return this;
@@ -88,6 +95,7 @@ public class HotelStub {
      */
     @JsonProperty("location")
     public Location location;
+
     public HotelStub withLocation(Location location) {
         this.location = location;
         return this;
@@ -98,6 +106,7 @@ public class HotelStub {
      */
     @JsonProperty("name")
     public String name;
+
     public HotelStub withName(String name) {
         this.name = name;
         return this;
@@ -109,6 +118,7 @@ public class HotelStub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumbers")
     public String[] phoneNumbers;
+
     public HotelStub withPhoneNumbers(String[] phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
         return this;
@@ -119,6 +129,7 @@ public class HotelStub {
      */
     @JsonProperty("starRating")
     public Double starRating;
+
     public HotelStub withStarRating(Double starRating) {
         this.starRating = starRating;
         return this;
@@ -130,9 +141,18 @@ public class HotelStub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public HotelStub withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public HotelStub(@JsonProperty("address") Address address, @JsonProperty("hotelId") String hotelId, @JsonProperty("images") Image[] images, @JsonProperty("location") Location location, @JsonProperty("name") String name, @JsonProperty("starRating") Double starRating) {
+        this.address = address;
+        this.hotelId = hotelId;
+        this.images = images;
+        this.location = location;
+        this.name = name;
+        this.starRating = starRating;
+  }
 }

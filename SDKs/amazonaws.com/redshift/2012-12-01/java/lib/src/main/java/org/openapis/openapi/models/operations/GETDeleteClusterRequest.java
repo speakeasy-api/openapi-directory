@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteClusterRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteClusterActionEnum action;
+
     public GETDeleteClusterRequest withAction(GETDeleteClusterActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
     public String clusterIdentifier;
+
     public GETDeleteClusterRequest withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FinalClusterSnapshotIdentifier")
     public String finalClusterSnapshotIdentifier;
+
     public GETDeleteClusterRequest withFinalClusterSnapshotIdentifier(String finalClusterSnapshotIdentifier) {
         this.finalClusterSnapshotIdentifier = finalClusterSnapshotIdentifier;
         return this;
@@ -39,6 +43,7 @@ public class GETDeleteClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FinalClusterSnapshotRetentionPeriod")
     public Long finalClusterSnapshotRetentionPeriod;
+
     public GETDeleteClusterRequest withFinalClusterSnapshotRetentionPeriod(Long finalClusterSnapshotRetentionPeriod) {
         this.finalClusterSnapshotRetentionPeriod = finalClusterSnapshotRetentionPeriod;
         return this;
@@ -49,6 +54,7 @@ public class GETDeleteClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SkipFinalClusterSnapshot")
     public Boolean skipFinalClusterSnapshot;
+
     public GETDeleteClusterRequest withSkipFinalClusterSnapshot(Boolean skipFinalClusterSnapshot) {
         this.skipFinalClusterSnapshot = skipFinalClusterSnapshot;
         return this;
@@ -56,6 +62,7 @@ public class GETDeleteClusterRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteClusterVersionEnum version;
+
     public GETDeleteClusterRequest withVersion(GETDeleteClusterVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETDeleteClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDeleteClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDeleteClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteClusterRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDeleteClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteClusterRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDeleteClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDeleteClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteClusterRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,15 @@ public class GETDeleteClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteClusterRequest(@JsonProperty("Action") GETDeleteClusterActionEnum action, @JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("Version") GETDeleteClusterVersionEnum version) {
+        this.action = action;
+        this.clusterIdentifier = clusterIdentifier;
+        this.version = version;
+  }
 }

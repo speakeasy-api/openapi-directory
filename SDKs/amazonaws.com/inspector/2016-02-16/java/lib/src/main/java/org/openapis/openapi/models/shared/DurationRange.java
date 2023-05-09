@@ -15,6 +15,7 @@ public class DurationRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSeconds")
     public Long maxSeconds;
+
     public DurationRange withMaxSeconds(Long maxSeconds) {
         this.maxSeconds = maxSeconds;
         return this;
@@ -23,9 +24,11 @@ public class DurationRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minSeconds")
     public Long minSeconds;
+
     public DurationRange withMinSeconds(Long minSeconds) {
         this.minSeconds = minSeconds;
         return this;
     }
     
+    public DurationRange(){}
 }

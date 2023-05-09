@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSimilarRequest {
@@ -12,6 +13,7 @@ public class GetSimilarRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=link")
     public String link;
+
     public GetSimilarRequest withLink(String link) {
         this.link = link;
         return this;
@@ -22,9 +24,13 @@ public class GetSimilarRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetSimilarRequest withPage(String page) {
         this.page = page;
         return this;
     }
     
+    public GetSimilarRequest(@JsonProperty("link") String link) {
+        this.link = link;
+  }
 }

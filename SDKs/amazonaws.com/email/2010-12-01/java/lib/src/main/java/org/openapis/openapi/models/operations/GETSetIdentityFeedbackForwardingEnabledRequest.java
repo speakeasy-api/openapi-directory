@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetIdentityFeedbackForwardingEnabledRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETSetIdentityFeedbackForwardingEnabledActionEnum action;
+
     public GETSetIdentityFeedbackForwardingEnabledRequest withAction(GETSetIdentityFeedbackForwardingEnabledActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETSetIdentityFeedbackForwardingEnabledRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ForwardingEnabled")
     public Boolean forwardingEnabled;
+
     public GETSetIdentityFeedbackForwardingEnabledRequest withForwardingEnabled(Boolean forwardingEnabled) {
         this.forwardingEnabled = forwardingEnabled;
         return this;
@@ -29,6 +32,7 @@ public class GETSetIdentityFeedbackForwardingEnabledRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Identity")
     public String identity;
+
     public GETSetIdentityFeedbackForwardingEnabledRequest withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -36,6 +40,7 @@ public class GETSetIdentityFeedbackForwardingEnabledRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETSetIdentityFeedbackForwardingEnabledVersionEnum version;
+
     public GETSetIdentityFeedbackForwardingEnabledRequest withVersion(GETSetIdentityFeedbackForwardingEnabledVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETSetIdentityFeedbackForwardingEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETSetIdentityFeedbackForwardingEnabledRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETSetIdentityFeedbackForwardingEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETSetIdentityFeedbackForwardingEnabledRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETSetIdentityFeedbackForwardingEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETSetIdentityFeedbackForwardingEnabledRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETSetIdentityFeedbackForwardingEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETSetIdentityFeedbackForwardingEnabledRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETSetIdentityFeedbackForwardingEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETSetIdentityFeedbackForwardingEnabledRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETSetIdentityFeedbackForwardingEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETSetIdentityFeedbackForwardingEnabledRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETSetIdentityFeedbackForwardingEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETSetIdentityFeedbackForwardingEnabledRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETSetIdentityFeedbackForwardingEnabledRequest(@JsonProperty("Action") GETSetIdentityFeedbackForwardingEnabledActionEnum action, @JsonProperty("ForwardingEnabled") Boolean forwardingEnabled, @JsonProperty("Identity") String identity, @JsonProperty("Version") GETSetIdentityFeedbackForwardingEnabledVersionEnum version) {
+        this.action = action;
+        this.forwardingEnabled = forwardingEnabled;
+        this.identity = identity;
+        this.version = version;
+  }
 }

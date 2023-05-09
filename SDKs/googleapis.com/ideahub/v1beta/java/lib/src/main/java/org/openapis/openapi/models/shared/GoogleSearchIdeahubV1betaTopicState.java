@@ -18,6 +18,7 @@ public class GoogleSearchIdeahubV1betaTopicState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dismissed")
     public Boolean dismissed;
+
     public GoogleSearchIdeahubV1betaTopicState withDismissed(Boolean dismissed) {
         this.dismissed = dismissed;
         return this;
@@ -29,6 +30,7 @@ public class GoogleSearchIdeahubV1betaTopicState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleSearchIdeahubV1betaTopicState withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GoogleSearchIdeahubV1betaTopicState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saved")
     public Boolean saved;
+
     public GoogleSearchIdeahubV1betaTopicState withSaved(Boolean saved) {
         this.saved = saved;
         return this;
     }
     
+    public GoogleSearchIdeahubV1betaTopicState(){}
 }

@@ -18,6 +18,7 @@ public class LogConfigCounterOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public LogConfigCounterOptionsCustomField[] customFields;
+
     public LogConfigCounterOptions withCustomFields(LogConfigCounterOptionsCustomField[] customFields) {
         this.customFields = customFields;
         return this;
@@ -29,6 +30,7 @@ public class LogConfigCounterOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public LogConfigCounterOptions withField(String field) {
         this.field = field;
         return this;
@@ -40,9 +42,11 @@ public class LogConfigCounterOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public String metric;
+
     public LogConfigCounterOptions withMetric(String metric) {
         this.metric = metric;
         return this;
     }
     
+    public LogConfigCounterOptions(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterAccountResponse {
@@ -12,6 +13,7 @@ public class DeregisterAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public DeregisterAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterAccountResponse {
     
     
     public String contentType;
+
     public DeregisterAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.DeregisterAccountResponse deregisterAccountResponse;
+
     public DeregisterAccountResponse withDeregisterAccountResponse(org.openapis.openapi.models.shared.DeregisterAccountResponse deregisterAccountResponse) {
         this.deregisterAccountResponse = deregisterAccountResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterAccountResponse {
      */
     
     public Object internalServerException;
+
     public DeregisterAccountResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeregisterAccountResponse {
     
     
     public Integer statusCode;
+
     public DeregisterAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeregisterAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeregisterAccountResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeregisterAccountResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeregisterAccountResponse {
      */
     
     public Object validationException;
+
     public DeregisterAccountResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeregisterAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

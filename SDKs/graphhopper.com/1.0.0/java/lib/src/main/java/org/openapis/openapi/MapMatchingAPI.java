@@ -100,12 +100,10 @@ public class MapMatchingAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostGPXResponse res = new org.openapis.openapi.models.operations.PostGPXResponse() {{
+        org.openapis.openapi.models.operations.PostGPXResponse res = new org.openapis.openapi.models.operations.PostGPXResponse(contentType, httpRes.statusCode()) {{
             routeResponse = null;
             ghError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

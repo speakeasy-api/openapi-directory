@@ -15,6 +15,7 @@ public class AddCustomRoutingEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointDescriptions")
     public CustomRoutingEndpointDescription[] endpointDescriptions;
+
     public AddCustomRoutingEndpointsResponse withEndpointDescriptions(CustomRoutingEndpointDescription[] endpointDescriptions) {
         this.endpointDescriptions = endpointDescriptions;
         return this;
@@ -23,9 +24,11 @@ public class AddCustomRoutingEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointGroupArn")
     public String endpointGroupArn;
+
     public AddCustomRoutingEndpointsResponse withEndpointGroupArn(String endpointGroupArn) {
         this.endpointGroupArn = endpointGroupArn;
         return this;
     }
     
+    public AddCustomRoutingEndpointsResponse(){}
 }

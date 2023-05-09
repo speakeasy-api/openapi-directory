@@ -79,6 +79,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1beta
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1beta2DocumentPageMatrix.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1beta2DocumentPageToken.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreakTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreak.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1beta2DocumentPageTable.java
@@ -107,4 +108,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleTypeDateTime.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleTypeTimeZone.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleTypeDate.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleTypePostalAddress.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

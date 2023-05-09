@@ -15,6 +15,7 @@ public class StreamingImageEncryptionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyArn")
     public String keyArn;
+
     public StreamingImageEncryptionConfiguration withKeyArn(String keyArn) {
         this.keyArn = keyArn;
         return this;
@@ -22,9 +23,13 @@ public class StreamingImageEncryptionConfiguration {
     
     @JsonProperty("keyType")
     public StreamingImageEncryptionConfigurationKeyTypeEnum keyType;
+
     public StreamingImageEncryptionConfiguration withKeyType(StreamingImageEncryptionConfigurationKeyTypeEnum keyType) {
         this.keyType = keyType;
         return this;
     }
     
+    public StreamingImageEncryptionConfiguration(@JsonProperty("keyType") StreamingImageEncryptionConfigurationKeyTypeEnum keyType) {
+        this.keyType = keyType;
+  }
 }

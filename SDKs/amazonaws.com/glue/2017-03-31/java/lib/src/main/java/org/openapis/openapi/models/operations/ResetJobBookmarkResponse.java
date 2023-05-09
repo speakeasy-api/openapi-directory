@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResetJobBookmarkResponse {
     
     public String contentType;
+
     public ResetJobBookmarkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ResetJobBookmarkResponse {
      */
     
     public Object entityNotFoundException;
+
     public ResetJobBookmarkResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class ResetJobBookmarkResponse {
      */
     
     public Object internalServiceException;
+
     public ResetJobBookmarkResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ResetJobBookmarkResponse {
      */
     
     public Object invalidInputException;
+
     public ResetJobBookmarkResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ResetJobBookmarkResponse {
      */
     
     public Object operationTimeoutException;
+
     public ResetJobBookmarkResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -59,6 +65,7 @@ public class ResetJobBookmarkResponse {
      */
     
     public org.openapis.openapi.models.shared.ResetJobBookmarkResponse resetJobBookmarkResponse;
+
     public ResetJobBookmarkResponse withResetJobBookmarkResponse(org.openapis.openapi.models.shared.ResetJobBookmarkResponse resetJobBookmarkResponse) {
         this.resetJobBookmarkResponse = resetJobBookmarkResponse;
         return this;
@@ -66,6 +73,7 @@ public class ResetJobBookmarkResponse {
     
     
     public Integer statusCode;
+
     public ResetJobBookmarkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ResetJobBookmarkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResetJobBookmarkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ResetJobBookmarkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

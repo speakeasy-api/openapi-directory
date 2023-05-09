@@ -18,6 +18,7 @@ public class RfeBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("rfe_due_date")
     public LocalDate rfeDueDate;
+
     public RfeBaseVO withRfeDueDate(LocalDate rfeDueDate) {
         this.rfeDueDate = rfeDueDate;
         return this;
@@ -26,6 +27,7 @@ public class RfeBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfe_id")
     public Long rfeId;
+
     public RfeBaseVO withRfeId(Long rfeId) {
         this.rfeId = rfeId;
         return this;
@@ -34,6 +36,7 @@ public class RfeBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfe_title")
     public String rfeTitle;
+
     public RfeBaseVO withRfeTitle(String rfeTitle) {
         this.rfeTitle = rfeTitle;
         return this;
@@ -42,9 +45,11 @@ public class RfeBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public RfeBaseVO withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public RfeBaseVO(){}
 }

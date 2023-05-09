@@ -12,6 +12,7 @@ public class PutV2TasksIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=current_state")
     public String currentState;
+
     public PutV2TasksIdJsonRequestBody withCurrentState(String currentState) {
         this.currentState = currentState;
         return this;
@@ -22,6 +23,7 @@ public class PutV2TasksIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=description")
     public String description;
+
     public PutV2TasksIdJsonRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +34,7 @@ public class PutV2TasksIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=due_date")
     public String dueDate;
+
     public PutV2TasksIdJsonRequestBody withDueDate(String dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -42,6 +45,7 @@ public class PutV2TasksIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=is_logged")
     public Boolean isLogged;
+
     public PutV2TasksIdJsonRequestBody withIsLogged(Boolean isLogged) {
         this.isLogged = isLogged;
         return this;
@@ -52,6 +56,7 @@ public class PutV2TasksIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=remind_at")
     public String remindAt;
+
     public PutV2TasksIdJsonRequestBody withRemindAt(String remindAt) {
         this.remindAt = remindAt;
         return this;
@@ -62,9 +67,11 @@ public class PutV2TasksIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=subject")
     public String subject;
+
     public PutV2TasksIdJsonRequestBody withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public PutV2TasksIdJsonRequestBody(){}
 }

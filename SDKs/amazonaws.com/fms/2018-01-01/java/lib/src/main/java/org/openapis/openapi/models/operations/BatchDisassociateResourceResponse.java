@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDisassociateResourceResponse {
@@ -12,6 +13,7 @@ public class BatchDisassociateResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDisassociateResourceResponse batchDisassociateResourceResponse;
+
     public BatchDisassociateResourceResponse withBatchDisassociateResourceResponse(org.openapis.openapi.models.shared.BatchDisassociateResourceResponse batchDisassociateResourceResponse) {
         this.batchDisassociateResourceResponse = batchDisassociateResourceResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchDisassociateResourceResponse {
     
     
     public String contentType;
+
     public BatchDisassociateResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchDisassociateResourceResponse {
      */
     
     public Object internalErrorException;
+
     public BatchDisassociateResourceResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class BatchDisassociateResourceResponse {
      */
     
     public Object invalidInputException;
+
     public BatchDisassociateResourceResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class BatchDisassociateResourceResponse {
      */
     
     public Object invalidOperationException;
+
     public BatchDisassociateResourceResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -59,6 +65,7 @@ public class BatchDisassociateResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchDisassociateResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class BatchDisassociateResourceResponse {
     
     
     public Integer statusCode;
+
     public BatchDisassociateResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class BatchDisassociateResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDisassociateResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchDisassociateResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

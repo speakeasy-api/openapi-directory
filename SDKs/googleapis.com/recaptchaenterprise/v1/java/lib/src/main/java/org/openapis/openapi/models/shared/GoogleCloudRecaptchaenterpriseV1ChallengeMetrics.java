@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1ChallengeMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedCount")
     public String failedCount;
+
     public GoogleCloudRecaptchaenterpriseV1ChallengeMetrics withFailedCount(String failedCount) {
         this.failedCount = failedCount;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1ChallengeMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nocaptchaCount")
     public String nocaptchaCount;
+
     public GoogleCloudRecaptchaenterpriseV1ChallengeMetrics withNocaptchaCount(String nocaptchaCount) {
         this.nocaptchaCount = nocaptchaCount;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecaptchaenterpriseV1ChallengeMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageloadCount")
     public String pageloadCount;
+
     public GoogleCloudRecaptchaenterpriseV1ChallengeMetrics withPageloadCount(String pageloadCount) {
         this.pageloadCount = pageloadCount;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudRecaptchaenterpriseV1ChallengeMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passedCount")
     public String passedCount;
+
     public GoogleCloudRecaptchaenterpriseV1ChallengeMetrics withPassedCount(String passedCount) {
         this.passedCount = passedCount;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1ChallengeMetrics(){}
 }

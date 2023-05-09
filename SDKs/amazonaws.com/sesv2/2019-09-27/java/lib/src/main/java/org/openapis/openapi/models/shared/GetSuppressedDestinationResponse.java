@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSuppressedDestinationResponse {
     @JsonProperty("SuppressedDestination")
     public SuppressedDestination suppressedDestination;
+
     public GetSuppressedDestinationResponse withSuppressedDestination(SuppressedDestination suppressedDestination) {
         this.suppressedDestination = suppressedDestination;
         return this;
     }
     
+    public GetSuppressedDestinationResponse(@JsonProperty("SuppressedDestination") SuppressedDestination suppressedDestination) {
+        this.suppressedDestination = suppressedDestination;
+  }
 }

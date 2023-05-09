@@ -22,6 +22,7 @@ public class GetImportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletedTimestamp")
     public OffsetDateTime completedTimestamp;
+
     public GetImportJobResponse withCompletedTimestamp(OffsetDateTime completedTimestamp) {
         this.completedTimestamp = completedTimestamp;
         return this;
@@ -32,6 +33,7 @@ public class GetImportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public GetImportJobResponse withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class GetImportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedRecordsCount")
     public Long failedRecordsCount;
+
     public GetImportJobResponse withFailedRecordsCount(Long failedRecordsCount) {
         this.failedRecordsCount = failedRecordsCount;
         return this;
@@ -48,6 +51,7 @@ public class GetImportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureInfo")
     public FailureInfo failureInfo;
+
     public GetImportJobResponse withFailureInfo(FailureInfo failureInfo) {
         this.failureInfo = failureInfo;
         return this;
@@ -56,6 +60,7 @@ public class GetImportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportDataSource")
     public ImportDataSource importDataSource;
+
     public GetImportJobResponse withImportDataSource(ImportDataSource importDataSource) {
         this.importDataSource = importDataSource;
         return this;
@@ -64,6 +69,7 @@ public class GetImportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportDestination")
     public ImportDestination importDestination;
+
     public GetImportJobResponse withImportDestination(ImportDestination importDestination) {
         this.importDestination = importDestination;
         return this;
@@ -72,6 +78,7 @@ public class GetImportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public GetImportJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -80,6 +87,7 @@ public class GetImportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public GetImportJobResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -88,9 +96,11 @@ public class GetImportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessedRecordsCount")
     public Long processedRecordsCount;
+
     public GetImportJobResponse withProcessedRecordsCount(Long processedRecordsCount) {
         this.processedRecordsCount = processedRecordsCount;
         return this;
     }
     
+    public GetImportJobResponse(){}
 }

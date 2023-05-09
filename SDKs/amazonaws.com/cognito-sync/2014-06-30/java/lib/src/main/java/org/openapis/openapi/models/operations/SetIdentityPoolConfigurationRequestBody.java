@@ -15,6 +15,7 @@ public class SetIdentityPoolConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CognitoStreams")
     public SetIdentityPoolConfigurationRequestBodyCognitoStreams cognitoStreams;
+
     public SetIdentityPoolConfigurationRequestBody withCognitoStreams(SetIdentityPoolConfigurationRequestBodyCognitoStreams cognitoStreams) {
         this.cognitoStreams = cognitoStreams;
         return this;
@@ -26,9 +27,11 @@ public class SetIdentityPoolConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PushSync")
     public SetIdentityPoolConfigurationRequestBodyPushSync pushSync;
+
     public SetIdentityPoolConfigurationRequestBody withPushSync(SetIdentityPoolConfigurationRequestBodyPushSync pushSync) {
         this.pushSync = pushSync;
         return this;
     }
     
+    public SetIdentityPoolConfigurationRequestBody(){}
 }

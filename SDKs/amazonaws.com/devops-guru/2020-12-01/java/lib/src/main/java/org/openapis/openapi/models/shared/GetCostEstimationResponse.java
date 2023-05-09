@@ -15,6 +15,7 @@ public class GetCostEstimationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Costs")
     public ServiceResourceCost[] costs;
+
     public GetCostEstimationResponse withCosts(ServiceResourceCost[] costs) {
         this.costs = costs;
         return this;
@@ -23,6 +24,7 @@ public class GetCostEstimationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetCostEstimationResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,6 +33,7 @@ public class GetCostEstimationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceCollection")
     public CostEstimationResourceCollectionFilter resourceCollection;
+
     public GetCostEstimationResponse withResourceCollection(CostEstimationResourceCollectionFilter resourceCollection) {
         this.resourceCollection = resourceCollection;
         return this;
@@ -39,6 +42,7 @@ public class GetCostEstimationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CostEstimationStatusEnum status;
+
     public GetCostEstimationResponse withStatus(CostEstimationStatusEnum status) {
         this.status = status;
         return this;
@@ -47,6 +51,7 @@ public class GetCostEstimationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeRange")
     public CostEstimationTimeRange timeRange;
+
     public GetCostEstimationResponse withTimeRange(CostEstimationTimeRange timeRange) {
         this.timeRange = timeRange;
         return this;
@@ -55,9 +60,11 @@ public class GetCostEstimationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalCost")
     public Double totalCost;
+
     public GetCostEstimationResponse withTotalCost(Double totalCost) {
         this.totalCost = totalCost;
         return this;
     }
     
+    public GetCostEstimationResponse(){}
 }

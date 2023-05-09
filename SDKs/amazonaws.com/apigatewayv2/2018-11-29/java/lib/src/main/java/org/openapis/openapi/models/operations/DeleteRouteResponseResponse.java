@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRouteResponseResponse {
     
     public String contentType;
+
     public DeleteRouteResponseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRouteResponseResponse {
      */
     
     public Object notFoundException;
+
     public DeleteRouteResponseResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -26,6 +29,7 @@ public class DeleteRouteResponseResponse {
     
     
     public Integer statusCode;
+
     public DeleteRouteResponseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteRouteResponseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRouteResponseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteRouteResponseResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteRouteResponseResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteRouteResponseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class InferSNOMEDCTResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Characters")
     public Characters characters;
+
     public InferSNOMEDCTResponse withCharacters(Characters characters) {
         this.characters = characters;
         return this;
@@ -22,6 +23,7 @@ public class InferSNOMEDCTResponse {
     
     @JsonProperty("Entities")
     public SNOMEDCTEntity[] entities;
+
     public InferSNOMEDCTResponse withEntities(SNOMEDCTEntity[] entities) {
         this.entities = entities;
         return this;
@@ -30,6 +32,7 @@ public class InferSNOMEDCTResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelVersion")
     public String modelVersion;
+
     public InferSNOMEDCTResponse withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
@@ -38,6 +41,7 @@ public class InferSNOMEDCTResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public InferSNOMEDCTResponse withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
@@ -46,9 +50,13 @@ public class InferSNOMEDCTResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SNOMEDCTDetails")
     public SNOMEDCTDetails snomedctDetails;
+
     public InferSNOMEDCTResponse withSNOMEDCTDetails(SNOMEDCTDetails snomedctDetails) {
         this.snomedctDetails = snomedctDetails;
         return this;
     }
     
+    public InferSNOMEDCTResponse(@JsonProperty("Entities") SNOMEDCTEntity[] entities) {
+        this.entities = entities;
+  }
 }

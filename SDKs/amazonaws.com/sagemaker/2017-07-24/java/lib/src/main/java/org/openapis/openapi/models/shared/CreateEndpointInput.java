@@ -15,6 +15,7 @@ public class CreateEndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentConfig")
     public DeploymentConfig deploymentConfig;
+
     public CreateEndpointInput withDeploymentConfig(DeploymentConfig deploymentConfig) {
         this.deploymentConfig = deploymentConfig;
         return this;
@@ -22,6 +23,7 @@ public class CreateEndpointInput {
     
     @JsonProperty("EndpointConfigName")
     public String endpointConfigName;
+
     public CreateEndpointInput withEndpointConfigName(String endpointConfigName) {
         this.endpointConfigName = endpointConfigName;
         return this;
@@ -29,6 +31,7 @@ public class CreateEndpointInput {
     
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public CreateEndpointInput withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -37,9 +40,14 @@ public class CreateEndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateEndpointInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEndpointInput(@JsonProperty("EndpointConfigName") String endpointConfigName, @JsonProperty("EndpointName") String endpointName) {
+        this.endpointConfigName = endpointConfigName;
+        this.endpointName = endpointName;
+  }
 }

@@ -115,6 +115,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -143,11 +148,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApplyYaraRulesResponse res = new org.openapis.openapi.models.operations.ApplyYaraRulesResponse() {{
+        org.openapis.openapi.models.operations.ApplyYaraRulesResponse res = new org.openapis.openapi.models.operations.ApplyYaraRulesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 500) {
@@ -179,11 +182,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CleanResponse res = new org.openapis.openapi.models.operations.CleanResponse() {{
+        org.openapis.openapi.models.operations.CleanResponse res = new org.openapis.openapi.models.operations.CleanResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -223,11 +224,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EmulationOutputResponse res = new org.openapis.openapi.models.operations.EmulationOutputResponse() {{
+        org.openapis.openapi.models.operations.EmulationOutputResponse res = new org.openapis.openapi.models.operations.EmulationOutputResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 500) {
@@ -265,11 +264,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GeneratePartialYaraRuleResponse res = new org.openapis.openapi.models.operations.GeneratePartialYaraRuleResponse() {{
+        org.openapis.openapi.models.operations.GeneratePartialYaraRuleResponse res = new org.openapis.openapi.models.operations.GeneratePartialYaraRuleResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 500) {
@@ -307,12 +304,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnpackResponse res = new org.openapis.openapi.models.operations.UnpackResponse() {{
+        org.openapis.openapi.models.operations.UnpackResponse res = new org.openapis.openapi.models.operations.UnpackResponse(contentType, httpRes.statusCode()) {{
             unpack200WildcardBinaryString = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

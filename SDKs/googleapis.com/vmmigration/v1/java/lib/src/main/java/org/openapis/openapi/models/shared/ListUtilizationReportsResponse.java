@@ -18,6 +18,7 @@ public class ListUtilizationReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListUtilizationReportsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListUtilizationReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListUtilizationReportsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
@@ -40,9 +42,11 @@ public class ListUtilizationReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utilizationReports")
     public UtilizationReport[] utilizationReports;
+
     public ListUtilizationReportsResponse withUtilizationReports(UtilizationReport[] utilizationReports) {
         this.utilizationReports = utilizationReports;
         return this;
     }
     
+    public ListUtilizationReportsResponse(){}
 }

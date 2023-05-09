@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticlePutImageRawRequest {
@@ -12,6 +13,7 @@ public class ArticlePutImageRawRequest {
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public ArticlePutImageRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class ArticlePutImageRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=imageId")
     public Long imageId;
+
     public ArticlePutImageRawRequest withImageId(Long imageId) {
         this.imageId = imageId;
         return this;
@@ -32,9 +35,15 @@ public class ArticlePutImageRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
     public Long productId;
+
     public ArticlePutImageRawRequest withProductId(Long productId) {
         this.productId = productId;
         return this;
     }
     
+    public ArticlePutImageRawRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("imageId") Long imageId, @JsonProperty("productId") Long productId) {
+        this.requestBody = requestBody;
+        this.imageId = imageId;
+        this.productId = productId;
+  }
 }

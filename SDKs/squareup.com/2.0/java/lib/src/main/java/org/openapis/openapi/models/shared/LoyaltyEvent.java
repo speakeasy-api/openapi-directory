@@ -19,6 +19,7 @@ public class LoyaltyEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accumulate_points")
     public LoyaltyEventAccumulatePoints accumulatePoints;
+
     public LoyaltyEvent withAccumulatePoints(LoyaltyEventAccumulatePoints accumulatePoints) {
         this.accumulatePoints = accumulatePoints;
         return this;
@@ -30,6 +31,7 @@ public class LoyaltyEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjust_points")
     public LoyaltyEventAdjustPoints adjustPoints;
+
     public LoyaltyEvent withAdjustPoints(LoyaltyEventAdjustPoints adjustPoints) {
         this.adjustPoints = adjustPoints;
         return this;
@@ -41,6 +43,7 @@ public class LoyaltyEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("create_reward")
     public LoyaltyEventCreateReward createReward;
+
     public LoyaltyEvent withCreateReward(LoyaltyEventCreateReward createReward) {
         this.createReward = createReward;
         return this;
@@ -51,6 +54,7 @@ public class LoyaltyEvent {
      */
     @JsonProperty("created_at")
     public String createdAt;
+
     public LoyaltyEvent withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -62,6 +66,7 @@ public class LoyaltyEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delete_reward")
     public LoyaltyEventDeleteReward deleteReward;
+
     public LoyaltyEvent withDeleteReward(LoyaltyEventDeleteReward deleteReward) {
         this.deleteReward = deleteReward;
         return this;
@@ -73,6 +78,7 @@ public class LoyaltyEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expire_points")
     public LoyaltyEventExpirePoints expirePoints;
+
     public LoyaltyEvent withExpirePoints(LoyaltyEventExpirePoints expirePoints) {
         this.expirePoints = expirePoints;
         return this;
@@ -83,6 +89,7 @@ public class LoyaltyEvent {
      */
     @JsonProperty("id")
     public String id;
+
     public LoyaltyEvent withId(String id) {
         this.id = id;
         return this;
@@ -94,6 +101,7 @@ public class LoyaltyEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public LoyaltyEvent withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -104,6 +112,7 @@ public class LoyaltyEvent {
      */
     @JsonProperty("loyalty_account_id")
     public String loyaltyAccountId;
+
     public LoyaltyEvent withLoyaltyAccountId(String loyaltyAccountId) {
         this.loyaltyAccountId = loyaltyAccountId;
         return this;
@@ -115,6 +124,7 @@ public class LoyaltyEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_event")
     public LoyaltyEventOther otherEvent;
+
     public LoyaltyEvent withOtherEvent(LoyaltyEventOther otherEvent) {
         this.otherEvent = otherEvent;
         return this;
@@ -126,6 +136,7 @@ public class LoyaltyEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redeem_reward")
     public LoyaltyEventRedeemReward redeemReward;
+
     public LoyaltyEvent withRedeemReward(LoyaltyEventRedeemReward redeemReward) {
         this.redeemReward = redeemReward;
         return this;
@@ -136,6 +147,7 @@ public class LoyaltyEvent {
      */
     @JsonProperty("source")
     public String source;
+
     public LoyaltyEvent withSource(String source) {
         this.source = source;
         return this;
@@ -146,9 +158,17 @@ public class LoyaltyEvent {
      */
     @JsonProperty("type")
     public String type;
+
     public LoyaltyEvent withType(String type) {
         this.type = type;
         return this;
     }
     
+    public LoyaltyEvent(@JsonProperty("created_at") String createdAt, @JsonProperty("id") String id, @JsonProperty("loyalty_account_id") String loyaltyAccountId, @JsonProperty("source") String source, @JsonProperty("type") String type) {
+        this.createdAt = createdAt;
+        this.id = id;
+        this.loyaltyAccountId = loyaltyAccountId;
+        this.source = source;
+        this.type = type;
+  }
 }

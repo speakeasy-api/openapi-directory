@@ -18,6 +18,7 @@ public class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdate
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints constraints;
+
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest withConstraints(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -29,6 +30,7 @@ public class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdate
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformType")
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestPlatformTypeEnum platformType;
+
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest withPlatformType(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestPlatformTypeEnum platformType) {
         this.platformType = platformType;
         return this;
@@ -40,6 +42,7 @@ public class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdate
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest withState(String state) {
         this.state = state;
         return this;
@@ -51,6 +54,7 @@ public class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdate
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threatEntryType")
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatEntryTypeEnum threatEntryType;
+
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest withThreatEntryType(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatEntryTypeEnum threatEntryType) {
         this.threatEntryType = threatEntryType;
         return this;
@@ -62,9 +66,11 @@ public class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdate
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threatType")
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatTypeEnum threatType;
+
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest withThreatType(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatTypeEnum threatType) {
         this.threatType = threatType;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest(){}
 }

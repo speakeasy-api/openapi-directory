@@ -3,60 +3,59 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchAcknowledgeAlarmRequestBody;
 import org.openapis.openapi.models.operations.BatchAcknowledgeAlarmRequest;
+import org.openapis.openapi.models.operations.BatchAcknowledgeAlarmRequestBody;
 import org.openapis.openapi.models.operations.BatchAcknowledgeAlarmResponse;
 import org.openapis.openapi.models.shared.AcknowledgeAlarmActionRequest;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            BatchAcknowledgeAlarmRequest req = new BatchAcknowledgeAlarmRequest() {{
-                requestBody = new BatchAcknowledgeAlarmRequestBody() {{
-                    acknowledgeActionRequests = new org.openapis.openapi.models.shared.AcknowledgeAlarmActionRequest[]{{
-                        add(new AcknowledgeAlarmActionRequest() {{
-                            alarmModelName = "provident";
-                            keyValue = "distinctio";
-                            note = "quibusdam";
-                            requestId = "unde";
-                        }}),
-                        add(new AcknowledgeAlarmActionRequest() {{
-                            alarmModelName = "nulla";
-                            keyValue = "corrupti";
-                            note = "illum";
-                            requestId = "vel";
-                        }}),
-                        add(new AcknowledgeAlarmActionRequest() {{
-                            alarmModelName = "error";
-                            keyValue = "deserunt";
-                            note = "suscipit";
-                            requestId = "iure";
-                        }}),
-                    }};
-                }};
-                xAmzAlgorithm = "magnam";
-                xAmzContentSha256 = "debitis";
-                xAmzCredential = "ipsa";
-                xAmzDate = "delectus";
-                xAmzSecurityToken = "tempora";
-                xAmzSignature = "suscipit";
-                xAmzSignedHeaders = "molestiae";
-            }}            
+            BatchAcknowledgeAlarmRequest req = new BatchAcknowledgeAlarmRequest(                new BatchAcknowledgeAlarmRequestBody(                new org.openapis.openapi.models.shared.AcknowledgeAlarmActionRequest[]{{
+                                                add(new AcknowledgeAlarmActionRequest("corrupti", "illum") {{
+                                                    alarmModelName = "distinctio";
+                                                    keyValue = "quibusdam";
+                                                    note = "unde";
+                                                    requestId = "nulla";
+                                                }}),
+                                                add(new AcknowledgeAlarmActionRequest("iure", "magnam") {{
+                                                    alarmModelName = "vel";
+                                                    keyValue = "error";
+                                                    note = "deserunt";
+                                                    requestId = "suscipit";
+                                                }}),
+                                                add(new AcknowledgeAlarmActionRequest("suscipit", "molestiae") {{
+                                                    alarmModelName = "debitis";
+                                                    keyValue = "ipsa";
+                                                    note = "delectus";
+                                                    requestId = "tempora";
+                                                }}),
+                                            }});) {{
+                xAmzAlgorithm = "minus";
+                xAmzContentSha256 = "placeat";
+                xAmzCredential = "voluptatum";
+                xAmzDate = "iusto";
+                xAmzSecurityToken = "excepturi";
+                xAmzSignature = "nisi";
+                xAmzSignedHeaders = "recusandae";
+            }};            
 
             BatchAcknowledgeAlarmResponse res = sdk.batchAcknowledgeAlarm(req);
 
-            if (res.batchAcknowledgeAlarmResponse.isPresent()) {
+            if (res.batchAcknowledgeAlarmResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

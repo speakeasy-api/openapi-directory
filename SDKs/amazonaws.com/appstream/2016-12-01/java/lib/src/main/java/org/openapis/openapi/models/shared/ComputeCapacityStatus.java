@@ -15,6 +15,7 @@ public class ComputeCapacityStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Available")
     public Long available;
+
     public ComputeCapacityStatus withAvailable(Long available) {
         this.available = available;
         return this;
@@ -22,6 +23,7 @@ public class ComputeCapacityStatus {
     
     @JsonProperty("Desired")
     public Long desired;
+
     public ComputeCapacityStatus withDesired(Long desired) {
         this.desired = desired;
         return this;
@@ -30,6 +32,7 @@ public class ComputeCapacityStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InUse")
     public Long inUse;
+
     public ComputeCapacityStatus withInUse(Long inUse) {
         this.inUse = inUse;
         return this;
@@ -38,9 +41,13 @@ public class ComputeCapacityStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Running")
     public Long running;
+
     public ComputeCapacityStatus withRunning(Long running) {
         this.running = running;
         return this;
     }
     
+    public ComputeCapacityStatus(@JsonProperty("Desired") Long desired) {
+        this.desired = desired;
+  }
 }

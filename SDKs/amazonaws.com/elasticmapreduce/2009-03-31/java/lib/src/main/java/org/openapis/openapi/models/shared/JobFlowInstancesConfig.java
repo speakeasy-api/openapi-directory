@@ -15,6 +15,7 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalMasterSecurityGroups")
     public String[] additionalMasterSecurityGroups;
+
     public JobFlowInstancesConfig withAdditionalMasterSecurityGroups(String[] additionalMasterSecurityGroups) {
         this.additionalMasterSecurityGroups = additionalMasterSecurityGroups;
         return this;
@@ -23,6 +24,7 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalSlaveSecurityGroups")
     public String[] additionalSlaveSecurityGroups;
+
     public JobFlowInstancesConfig withAdditionalSlaveSecurityGroups(String[] additionalSlaveSecurityGroups) {
         this.additionalSlaveSecurityGroups = additionalSlaveSecurityGroups;
         return this;
@@ -31,6 +33,7 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2KeyName")
     public String ec2KeyName;
+
     public JobFlowInstancesConfig withEc2KeyName(String ec2KeyName) {
         this.ec2KeyName = ec2KeyName;
         return this;
@@ -39,6 +42,7 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2SubnetId")
     public String ec2SubnetId;
+
     public JobFlowInstancesConfig withEc2SubnetId(String ec2SubnetId) {
         this.ec2SubnetId = ec2SubnetId;
         return this;
@@ -47,6 +51,7 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2SubnetIds")
     public String[] ec2SubnetIds;
+
     public JobFlowInstancesConfig withEc2SubnetIds(String[] ec2SubnetIds) {
         this.ec2SubnetIds = ec2SubnetIds;
         return this;
@@ -55,6 +60,7 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmrManagedMasterSecurityGroup")
     public String emrManagedMasterSecurityGroup;
+
     public JobFlowInstancesConfig withEmrManagedMasterSecurityGroup(String emrManagedMasterSecurityGroup) {
         this.emrManagedMasterSecurityGroup = emrManagedMasterSecurityGroup;
         return this;
@@ -63,6 +69,7 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmrManagedSlaveSecurityGroup")
     public String emrManagedSlaveSecurityGroup;
+
     public JobFlowInstancesConfig withEmrManagedSlaveSecurityGroup(String emrManagedSlaveSecurityGroup) {
         this.emrManagedSlaveSecurityGroup = emrManagedSlaveSecurityGroup;
         return this;
@@ -71,6 +78,7 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HadoopVersion")
     public String hadoopVersion;
+
     public JobFlowInstancesConfig withHadoopVersion(String hadoopVersion) {
         this.hadoopVersion = hadoopVersion;
         return this;
@@ -79,6 +87,7 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceCount")
     public Long instanceCount;
+
     public JobFlowInstancesConfig withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -87,6 +96,7 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceFleets")
     public InstanceFleetConfig[] instanceFleets;
+
     public JobFlowInstancesConfig withInstanceFleets(InstanceFleetConfig[] instanceFleets) {
         this.instanceFleets = instanceFleets;
         return this;
@@ -95,6 +105,7 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceGroups")
     public InstanceGroupConfig[] instanceGroups;
+
     public JobFlowInstancesConfig withInstanceGroups(InstanceGroupConfig[] instanceGroups) {
         this.instanceGroups = instanceGroups;
         return this;
@@ -103,6 +114,7 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeepJobFlowAliveWhenNoSteps")
     public Boolean keepJobFlowAliveWhenNoSteps;
+
     public JobFlowInstancesConfig withKeepJobFlowAliveWhenNoSteps(Boolean keepJobFlowAliveWhenNoSteps) {
         this.keepJobFlowAliveWhenNoSteps = keepJobFlowAliveWhenNoSteps;
         return this;
@@ -111,6 +123,7 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterInstanceType")
     public String masterInstanceType;
+
     public JobFlowInstancesConfig withMasterInstanceType(String masterInstanceType) {
         this.masterInstanceType = masterInstanceType;
         return this;
@@ -119,6 +132,7 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Placement")
     public PlacementType placement;
+
     public JobFlowInstancesConfig withPlacement(PlacementType placement) {
         this.placement = placement;
         return this;
@@ -127,6 +141,7 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceAccessSecurityGroup")
     public String serviceAccessSecurityGroup;
+
     public JobFlowInstancesConfig withServiceAccessSecurityGroup(String serviceAccessSecurityGroup) {
         this.serviceAccessSecurityGroup = serviceAccessSecurityGroup;
         return this;
@@ -135,6 +150,7 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlaveInstanceType")
     public String slaveInstanceType;
+
     public JobFlowInstancesConfig withSlaveInstanceType(String slaveInstanceType) {
         this.slaveInstanceType = slaveInstanceType;
         return this;
@@ -143,9 +159,11 @@ public class JobFlowInstancesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TerminationProtected")
     public Boolean terminationProtected;
+
     public JobFlowInstancesConfig withTerminationProtected(Boolean terminationProtected) {
         this.terminationProtected = terminationProtected;
         return this;
     }
     
+    public JobFlowInstancesConfig(){}
 }

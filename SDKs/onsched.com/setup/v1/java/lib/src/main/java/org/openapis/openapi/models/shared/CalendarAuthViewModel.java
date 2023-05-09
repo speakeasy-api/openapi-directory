@@ -15,6 +15,7 @@ public class CalendarAuthViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendarAuthUrl")
     public String calendarAuthUrl;
+
     public CalendarAuthViewModel withCalendarAuthUrl(String calendarAuthUrl) {
         this.calendarAuthUrl = calendarAuthUrl;
         return this;
@@ -23,6 +24,7 @@ public class CalendarAuthViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendarId")
     public String calendarId;
+
     public CalendarAuthViewModel withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -31,9 +33,11 @@ public class CalendarAuthViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public CalendarAuthViewModel withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public CalendarAuthViewModel(){}
 }

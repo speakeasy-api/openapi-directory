@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBlueprintResponse {
     
     public String contentType;
+
     public GetBlueprintResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetBlueprintResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetBlueprintResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetBlueprintResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBlueprintResponse getBlueprintResponse;
+
     public GetBlueprintResponse withGetBlueprintResponse(org.openapis.openapi.models.shared.GetBlueprintResponse getBlueprintResponse) {
         this.getBlueprintResponse = getBlueprintResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetBlueprintResponse {
      */
     
     public Object internalServiceException;
+
     public GetBlueprintResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetBlueprintResponse {
      */
     
     public Object invalidInputException;
+
     public GetBlueprintResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetBlueprintResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetBlueprintResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class GetBlueprintResponse {
     
     
     public Integer statusCode;
+
     public GetBlueprintResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetBlueprintResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBlueprintResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBlueprintResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

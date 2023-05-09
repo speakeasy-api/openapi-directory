@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetListeNoireResponse {
     
     public String contentType;
+
     public GetListeNoireResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetListeNoireResponse {
      */
     
     public org.openapis.openapi.models.shared.Erreur erreur;
+
     public GetListeNoireResponse withErreur(org.openapis.openapi.models.shared.Erreur erreur) {
         this.erreur = erreur;
         return this;
@@ -26,6 +29,7 @@ public class GetListeNoireResponse {
     
     
     public Integer statusCode;
+
     public GetListeNoireResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetListeNoireResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetListeNoireResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetListeNoireResponse {
      */
     
     public byte[] getListeNoire200ApplicationJSONBinaryString;
+
     public GetListeNoireResponse withGetListeNoire200ApplicationJSONBinaryString(byte[] getListeNoire200ApplicationJSONBinaryString) {
         this.getListeNoire200ApplicationJSONBinaryString = getListeNoire200ApplicationJSONBinaryString;
         return this;
     }
     
+    public GetListeNoireResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

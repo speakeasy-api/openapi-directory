@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBClusterEndpointRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyDBClusterEndpointActionEnum action;
+
     public GETModifyDBClusterEndpointRequest withAction(GETModifyDBClusterEndpointActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyDBClusterEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterEndpointIdentifier")
     public String dbClusterEndpointIdentifier;
+
     public GETModifyDBClusterEndpointRequest withDBClusterEndpointIdentifier(String dbClusterEndpointIdentifier) {
         this.dbClusterEndpointIdentifier = dbClusterEndpointIdentifier;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyDBClusterEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndpointType")
     public String endpointType;
+
     public GETModifyDBClusterEndpointRequest withEndpointType(String endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyDBClusterEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ExcludedMembers")
     public String[] excludedMembers;
+
     public GETModifyDBClusterEndpointRequest withExcludedMembers(String[] excludedMembers) {
         this.excludedMembers = excludedMembers;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyDBClusterEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StaticMembers")
     public String[] staticMembers;
+
     public GETModifyDBClusterEndpointRequest withStaticMembers(String[] staticMembers) {
         this.staticMembers = staticMembers;
         return this;
@@ -56,6 +62,7 @@ public class GETModifyDBClusterEndpointRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyDBClusterEndpointVersionEnum version;
+
     public GETModifyDBClusterEndpointRequest withVersion(GETModifyDBClusterEndpointVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETModifyDBClusterEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyDBClusterEndpointRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETModifyDBClusterEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyDBClusterEndpointRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETModifyDBClusterEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyDBClusterEndpointRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETModifyDBClusterEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyDBClusterEndpointRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETModifyDBClusterEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyDBClusterEndpointRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETModifyDBClusterEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyDBClusterEndpointRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,15 @@ public class GETModifyDBClusterEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyDBClusterEndpointRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyDBClusterEndpointRequest(@JsonProperty("Action") GETModifyDBClusterEndpointActionEnum action, @JsonProperty("DBClusterEndpointIdentifier") String dbClusterEndpointIdentifier, @JsonProperty("Version") GETModifyDBClusterEndpointVersionEnum version) {
+        this.action = action;
+        this.dbClusterEndpointIdentifier = dbClusterEndpointIdentifier;
+        this.version = version;
+  }
 }

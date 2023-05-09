@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateEntitiesToExperienceResponse {
@@ -12,6 +13,7 @@ public class AssociateEntitiesToExperienceResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateEntitiesToExperienceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateEntitiesToExperienceResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateEntitiesToExperienceResponse associateEntitiesToExperienceResponse;
+
     public AssociateEntitiesToExperienceResponse withAssociateEntitiesToExperienceResponse(org.openapis.openapi.models.shared.AssociateEntitiesToExperienceResponse associateEntitiesToExperienceResponse) {
         this.associateEntitiesToExperienceResponse = associateEntitiesToExperienceResponse;
         return this;
@@ -29,6 +32,7 @@ public class AssociateEntitiesToExperienceResponse {
     
     
     public String contentType;
+
     public AssociateEntitiesToExperienceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateEntitiesToExperienceResponse {
      */
     
     public Object internalServerException;
+
     public AssociateEntitiesToExperienceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateEntitiesToExperienceResponse {
      */
     
     public Object resourceAlreadyExistException;
+
     public AssociateEntitiesToExperienceResponse withResourceAlreadyExistException(Object resourceAlreadyExistException) {
         this.resourceAlreadyExistException = resourceAlreadyExistException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateEntitiesToExperienceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateEntitiesToExperienceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AssociateEntitiesToExperienceResponse {
     
     
     public Integer statusCode;
+
     public AssociateEntitiesToExperienceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AssociateEntitiesToExperienceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateEntitiesToExperienceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AssociateEntitiesToExperienceResponse {
      */
     
     public Object throttlingException;
+
     public AssociateEntitiesToExperienceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class AssociateEntitiesToExperienceResponse {
      */
     
     public Object validationException;
+
     public AssociateEntitiesToExperienceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateEntitiesToExperienceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

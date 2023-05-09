@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetIdentityDkimAttributesRequest - Represents a request for the status of Amazon SES Easy DKIM signing for an identity. For domain identities, this request also returns the DKIM tokens that are required for Easy DKIM signing, and whether Amazon SES successfully verified that these tokens were published. For more information about Easy DKIM, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class GetIdentityDkimAttributesRequest {
     
     public String[] identities;
+
     public GetIdentityDkimAttributesRequest withIdentities(String[] identities) {
         this.identities = identities;
         return this;
     }
     
+    public GetIdentityDkimAttributesRequest(@JsonProperty("Identities") String[] identities) {
+        this.identities = identities;
+  }
 }

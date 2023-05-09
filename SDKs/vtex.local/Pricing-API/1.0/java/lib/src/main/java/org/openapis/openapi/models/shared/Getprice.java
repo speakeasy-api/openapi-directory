@@ -15,6 +15,7 @@ public class Getprice {
      */
     @JsonProperty("basePrice")
     public Integer basePrice;
+
     public Getprice withBasePrice(Integer basePrice) {
         this.basePrice = basePrice;
         return this;
@@ -25,6 +26,7 @@ public class Getprice {
      */
     @JsonProperty("costPrice")
     public Integer costPrice;
+
     public Getprice withCostPrice(Integer costPrice) {
         this.costPrice = costPrice;
         return this;
@@ -35,6 +37,7 @@ public class Getprice {
      */
     @JsonProperty("fixedPrices")
     public FixedPrice[] fixedPrices;
+
     public Getprice withFixedPrices(FixedPrice[] fixedPrices) {
         this.fixedPrices = fixedPrices;
         return this;
@@ -45,6 +48,7 @@ public class Getprice {
      */
     @JsonProperty("itemId")
     public String itemId;
+
     public Getprice withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -55,6 +59,7 @@ public class Getprice {
      */
     @JsonProperty("listPrice")
     public Integer listPrice;
+
     public Getprice withListPrice(Integer listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -65,9 +70,18 @@ public class Getprice {
      */
     @JsonProperty("markup")
     public Integer markup;
+
     public Getprice withMarkup(Integer markup) {
         this.markup = markup;
         return this;
     }
     
+    public Getprice(@JsonProperty("basePrice") Integer basePrice, @JsonProperty("costPrice") Integer costPrice, @JsonProperty("fixedPrices") FixedPrice[] fixedPrices, @JsonProperty("itemId") String itemId, @JsonProperty("listPrice") Integer listPrice, @JsonProperty("markup") Integer markup) {
+        this.basePrice = basePrice;
+        this.costPrice = costPrice;
+        this.fixedPrices = fixedPrices;
+        this.itemId = itemId;
+        this.listPrice = listPrice;
+        this.markup = markup;
+  }
 }

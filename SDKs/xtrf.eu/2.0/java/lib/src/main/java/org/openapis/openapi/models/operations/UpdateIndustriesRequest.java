@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateIndustriesRequest {
@@ -12,6 +13,7 @@ public class UpdateIndustriesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public Long[] requestBody;
+
     public UpdateIndustriesRequest withRequestBody(Long[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class UpdateIndustriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
     public Long customerId;
+
     public UpdateIndustriesRequest withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public UpdateIndustriesRequest(@JsonProperty("RequestBody") Long[] requestBody, @JsonProperty("customerId") Long customerId) {
+        this.requestBody = requestBody;
+        this.customerId = customerId;
+  }
 }

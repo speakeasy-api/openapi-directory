@@ -15,9 +15,13 @@ public class BookingCancellation {
      */
     @JsonProperty("fee")
     public CancellationFee fee;
+
     public BookingCancellation withFee(CancellationFee fee) {
         this.fee = fee;
         return this;
     }
     
+    public BookingCancellation(@JsonProperty("fee") CancellationFee fee) {
+        this.fee = fee;
+  }
 }

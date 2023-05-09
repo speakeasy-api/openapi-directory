@@ -15,6 +15,7 @@ public class ListCheckSummariesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CheckSummaries")
     public CheckSummary[] checkSummaries;
+
     public ListCheckSummariesOutput withCheckSummaries(CheckSummary[] checkSummaries) {
         this.checkSummaries = checkSummaries;
         return this;
@@ -26,9 +27,11 @@ public class ListCheckSummariesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCheckSummariesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCheckSummariesOutput(){}
 }

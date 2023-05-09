@@ -18,9 +18,11 @@ public class GoogleCloudAssetV1GcsDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudAssetV1GcsDestination withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudAssetV1GcsDestination(){}
 }

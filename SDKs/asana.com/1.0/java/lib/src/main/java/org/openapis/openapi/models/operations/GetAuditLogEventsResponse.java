@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAuditLogEventsResponse {
     
     public String contentType;
+
     public GetAuditLogEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAuditLogEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetAuditLogEventsResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetAuditLogEventsResponse {
     
     
     public Integer statusCode;
+
     public GetAuditLogEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetAuditLogEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAuditLogEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetAuditLogEventsResponse {
      */
     
     public GetAuditLogEvents200ApplicationJSON getAuditLogEvents200ApplicationJSONObject;
+
     public GetAuditLogEventsResponse withGetAuditLogEvents200ApplicationJSONObject(GetAuditLogEvents200ApplicationJSON getAuditLogEvents200ApplicationJSONObject) {
         this.getAuditLogEvents200ApplicationJSONObject = getAuditLogEvents200ApplicationJSONObject;
         return this;
     }
     
+    public GetAuditLogEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

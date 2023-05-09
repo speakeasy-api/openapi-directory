@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStoreTrackedClicksResponse {
@@ -12,6 +13,7 @@ public class GetStoreTrackedClicksResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetStoreTrackedClicksResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetStoreTrackedClicksResponse {
     
     
     public String contentType;
+
     public GetStoreTrackedClicksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetStoreTrackedClicksResponse {
     
     
     public Integer statusCode;
+
     public GetStoreTrackedClicksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetStoreTrackedClicksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStoreTrackedClicksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetStoreTrackedClicksResponse {
      */
     
     public org.openapis.openapi.models.shared.TrackedClicks trackedClicks;
+
     public GetStoreTrackedClicksResponse withTrackedClicks(org.openapis.openapi.models.shared.TrackedClicks trackedClicks) {
         this.trackedClicks = trackedClicks;
         return this;
     }
     
+    public GetStoreTrackedClicksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

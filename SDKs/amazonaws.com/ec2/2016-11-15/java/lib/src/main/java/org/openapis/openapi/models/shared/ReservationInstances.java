@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ReservationInstances {
     
     public Long amiLaunchIndex;
+
     public ReservationInstances withAmiLaunchIndex(Long amiLaunchIndex) {
         this.amiLaunchIndex = amiLaunchIndex;
         return this;
@@ -19,6 +20,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesArchitectureEnum architecture;
+
     public ReservationInstances withArchitecture(ReservationInstancesArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -26,6 +28,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesBlockDeviceMappings[] blockDeviceMappings;
+
     public ReservationInstances withBlockDeviceMappings(ReservationInstancesBlockDeviceMappings[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -33,6 +36,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesBootModeEnum bootMode;
+
     public ReservationInstances withBootMode(ReservationInstancesBootModeEnum bootMode) {
         this.bootMode = bootMode;
         return this;
@@ -40,6 +44,7 @@ public class ReservationInstances {
     
     
     public String capacityReservationId;
+
     public ReservationInstances withCapacityReservationId(String capacityReservationId) {
         this.capacityReservationId = capacityReservationId;
         return this;
@@ -47,6 +52,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesCapacityReservationSpecification capacityReservationSpecification;
+
     public ReservationInstances withCapacityReservationSpecification(ReservationInstancesCapacityReservationSpecification capacityReservationSpecification) {
         this.capacityReservationSpecification = capacityReservationSpecification;
         return this;
@@ -54,6 +60,7 @@ public class ReservationInstances {
     
     
     public String clientToken;
+
     public ReservationInstances withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -61,6 +68,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesCpuOptions cpuOptions;
+
     public ReservationInstances withCpuOptions(ReservationInstancesCpuOptions cpuOptions) {
         this.cpuOptions = cpuOptions;
         return this;
@@ -68,6 +76,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesCurrentInstanceBootModeEnum currentInstanceBootMode;
+
     public ReservationInstances withCurrentInstanceBootMode(ReservationInstancesCurrentInstanceBootModeEnum currentInstanceBootMode) {
         this.currentInstanceBootMode = currentInstanceBootMode;
         return this;
@@ -75,6 +84,7 @@ public class ReservationInstances {
     
     
     public Boolean ebsOptimized;
+
     public ReservationInstances withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -82,6 +92,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesElasticGpuAssociations[] elasticGpuAssociations;
+
     public ReservationInstances withElasticGpuAssociations(ReservationInstancesElasticGpuAssociations[] elasticGpuAssociations) {
         this.elasticGpuAssociations = elasticGpuAssociations;
         return this;
@@ -89,6 +100,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesElasticInferenceAcceleratorAssociations[] elasticInferenceAcceleratorAssociations;
+
     public ReservationInstances withElasticInferenceAcceleratorAssociations(ReservationInstancesElasticInferenceAcceleratorAssociations[] elasticInferenceAcceleratorAssociations) {
         this.elasticInferenceAcceleratorAssociations = elasticInferenceAcceleratorAssociations;
         return this;
@@ -96,6 +108,7 @@ public class ReservationInstances {
     
     
     public Boolean enaSupport;
+
     public ReservationInstances withEnaSupport(Boolean enaSupport) {
         this.enaSupport = enaSupport;
         return this;
@@ -103,6 +116,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesEnclaveOptions enclaveOptions;
+
     public ReservationInstances withEnclaveOptions(ReservationInstancesEnclaveOptions enclaveOptions) {
         this.enclaveOptions = enclaveOptions;
         return this;
@@ -110,6 +124,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesHibernationOptions hibernationOptions;
+
     public ReservationInstances withHibernationOptions(ReservationInstancesHibernationOptions hibernationOptions) {
         this.hibernationOptions = hibernationOptions;
         return this;
@@ -117,6 +132,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesHypervisorEnum hypervisor;
+
     public ReservationInstances withHypervisor(ReservationInstancesHypervisorEnum hypervisor) {
         this.hypervisor = hypervisor;
         return this;
@@ -124,6 +140,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesIamInstanceProfile iamInstanceProfile;
+
     public ReservationInstances withIamInstanceProfile(ReservationInstancesIamInstanceProfile iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -131,6 +148,7 @@ public class ReservationInstances {
     
     
     public String imageId;
+
     public ReservationInstances withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -138,6 +156,7 @@ public class ReservationInstances {
     
     
     public String instanceId;
+
     public ReservationInstances withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -145,6 +164,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesInstanceLifecycleEnum instanceLifecycle;
+
     public ReservationInstances withInstanceLifecycle(ReservationInstancesInstanceLifecycleEnum instanceLifecycle) {
         this.instanceLifecycle = instanceLifecycle;
         return this;
@@ -152,6 +172,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesInstanceTypeEnum instanceType;
+
     public ReservationInstances withInstanceType(ReservationInstancesInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -159,6 +180,7 @@ public class ReservationInstances {
     
     
     public String ipv6Address;
+
     public ReservationInstances withIpv6Address(String ipv6Address) {
         this.ipv6Address = ipv6Address;
         return this;
@@ -166,6 +188,7 @@ public class ReservationInstances {
     
     
     public String kernelId;
+
     public ReservationInstances withKernelId(String kernelId) {
         this.kernelId = kernelId;
         return this;
@@ -173,6 +196,7 @@ public class ReservationInstances {
     
     
     public String keyName;
+
     public ReservationInstances withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -180,6 +204,7 @@ public class ReservationInstances {
     
     
     public OffsetDateTime launchTime;
+
     public ReservationInstances withLaunchTime(OffsetDateTime launchTime) {
         this.launchTime = launchTime;
         return this;
@@ -187,6 +212,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesLicenses[] licenses;
+
     public ReservationInstances withLicenses(ReservationInstancesLicenses[] licenses) {
         this.licenses = licenses;
         return this;
@@ -194,6 +220,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesMaintenanceOptions maintenanceOptions;
+
     public ReservationInstances withMaintenanceOptions(ReservationInstancesMaintenanceOptions maintenanceOptions) {
         this.maintenanceOptions = maintenanceOptions;
         return this;
@@ -201,6 +228,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesMetadataOptions metadataOptions;
+
     public ReservationInstances withMetadataOptions(ReservationInstancesMetadataOptions metadataOptions) {
         this.metadataOptions = metadataOptions;
         return this;
@@ -208,6 +236,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesMonitoring monitoring;
+
     public ReservationInstances withMonitoring(ReservationInstancesMonitoring monitoring) {
         this.monitoring = monitoring;
         return this;
@@ -215,6 +244,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesNetworkInterfaces[] networkInterfaces;
+
     public ReservationInstances withNetworkInterfaces(ReservationInstancesNetworkInterfaces[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -222,6 +252,7 @@ public class ReservationInstances {
     
     
     public String outpostArn;
+
     public ReservationInstances withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -229,6 +260,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesPlacement placement;
+
     public ReservationInstances withPlacement(ReservationInstancesPlacement placement) {
         this.placement = placement;
         return this;
@@ -236,6 +268,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesPlatformEnum platform;
+
     public ReservationInstances withPlatform(ReservationInstancesPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -243,6 +276,7 @@ public class ReservationInstances {
     
     
     public String platformDetails;
+
     public ReservationInstances withPlatformDetails(String platformDetails) {
         this.platformDetails = platformDetails;
         return this;
@@ -250,6 +284,7 @@ public class ReservationInstances {
     
     
     public String privateDnsName;
+
     public ReservationInstances withPrivateDnsName(String privateDnsName) {
         this.privateDnsName = privateDnsName;
         return this;
@@ -257,6 +292,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesPrivateDnsNameOptions privateDnsNameOptions;
+
     public ReservationInstances withPrivateDnsNameOptions(ReservationInstancesPrivateDnsNameOptions privateDnsNameOptions) {
         this.privateDnsNameOptions = privateDnsNameOptions;
         return this;
@@ -264,6 +300,7 @@ public class ReservationInstances {
     
     
     public String privateIpAddress;
+
     public ReservationInstances withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -271,6 +308,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesProductCodes[] productCodes;
+
     public ReservationInstances withProductCodes(ReservationInstancesProductCodes[] productCodes) {
         this.productCodes = productCodes;
         return this;
@@ -278,6 +316,7 @@ public class ReservationInstances {
     
     
     public String publicDnsName;
+
     public ReservationInstances withPublicDnsName(String publicDnsName) {
         this.publicDnsName = publicDnsName;
         return this;
@@ -285,6 +324,7 @@ public class ReservationInstances {
     
     
     public String publicIpAddress;
+
     public ReservationInstances withPublicIpAddress(String publicIpAddress) {
         this.publicIpAddress = publicIpAddress;
         return this;
@@ -292,6 +332,7 @@ public class ReservationInstances {
     
     
     public String ramdiskId;
+
     public ReservationInstances withRamdiskId(String ramdiskId) {
         this.ramdiskId = ramdiskId;
         return this;
@@ -299,6 +340,7 @@ public class ReservationInstances {
     
     
     public String rootDeviceName;
+
     public ReservationInstances withRootDeviceName(String rootDeviceName) {
         this.rootDeviceName = rootDeviceName;
         return this;
@@ -306,6 +348,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesRootDeviceTypeEnum rootDeviceType;
+
     public ReservationInstances withRootDeviceType(ReservationInstancesRootDeviceTypeEnum rootDeviceType) {
         this.rootDeviceType = rootDeviceType;
         return this;
@@ -313,6 +356,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesSecurityGroups[] securityGroups;
+
     public ReservationInstances withSecurityGroups(ReservationInstancesSecurityGroups[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -320,6 +364,7 @@ public class ReservationInstances {
     
     
     public Boolean sourceDestCheck;
+
     public ReservationInstances withSourceDestCheck(Boolean sourceDestCheck) {
         this.sourceDestCheck = sourceDestCheck;
         return this;
@@ -327,6 +372,7 @@ public class ReservationInstances {
     
     
     public String spotInstanceRequestId;
+
     public ReservationInstances withSpotInstanceRequestId(String spotInstanceRequestId) {
         this.spotInstanceRequestId = spotInstanceRequestId;
         return this;
@@ -334,6 +380,7 @@ public class ReservationInstances {
     
     
     public String sriovNetSupport;
+
     public ReservationInstances withSriovNetSupport(String sriovNetSupport) {
         this.sriovNetSupport = sriovNetSupport;
         return this;
@@ -341,6 +388,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesState state;
+
     public ReservationInstances withState(ReservationInstancesState state) {
         this.state = state;
         return this;
@@ -348,6 +396,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesStateReason stateReason;
+
     public ReservationInstances withStateReason(ReservationInstancesStateReason stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -355,6 +404,7 @@ public class ReservationInstances {
     
     
     public String stateTransitionReason;
+
     public ReservationInstances withStateTransitionReason(String stateTransitionReason) {
         this.stateTransitionReason = stateTransitionReason;
         return this;
@@ -362,6 +412,7 @@ public class ReservationInstances {
     
     
     public String subnetId;
+
     public ReservationInstances withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -369,6 +420,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesTags[] tags;
+
     public ReservationInstances withTags(ReservationInstancesTags[] tags) {
         this.tags = tags;
         return this;
@@ -376,6 +428,7 @@ public class ReservationInstances {
     
     
     public String tpmSupport;
+
     public ReservationInstances withTpmSupport(String tpmSupport) {
         this.tpmSupport = tpmSupport;
         return this;
@@ -383,6 +436,7 @@ public class ReservationInstances {
     
     
     public String usageOperation;
+
     public ReservationInstances withUsageOperation(String usageOperation) {
         this.usageOperation = usageOperation;
         return this;
@@ -390,6 +444,7 @@ public class ReservationInstances {
     
     
     public OffsetDateTime usageOperationUpdateTime;
+
     public ReservationInstances withUsageOperationUpdateTime(OffsetDateTime usageOperationUpdateTime) {
         this.usageOperationUpdateTime = usageOperationUpdateTime;
         return this;
@@ -397,6 +452,7 @@ public class ReservationInstances {
     
     
     public ReservationInstancesVirtualizationTypeEnum virtualizationType;
+
     public ReservationInstances withVirtualizationType(ReservationInstancesVirtualizationTypeEnum virtualizationType) {
         this.virtualizationType = virtualizationType;
         return this;
@@ -404,9 +460,11 @@ public class ReservationInstances {
     
     
     public String vpcId;
+
     public ReservationInstances withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public ReservationInstances(){}
 }

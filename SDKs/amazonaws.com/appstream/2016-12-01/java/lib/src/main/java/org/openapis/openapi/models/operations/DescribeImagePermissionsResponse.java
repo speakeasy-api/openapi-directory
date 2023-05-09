@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeImagePermissionsResponse {
     
     public String contentType;
+
     public DescribeImagePermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeImagePermissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeImagePermissionsResult describeImagePermissionsResult;
+
     public DescribeImagePermissionsResponse withDescribeImagePermissionsResult(org.openapis.openapi.models.shared.DescribeImagePermissionsResult describeImagePermissionsResult) {
         this.describeImagePermissionsResult = describeImagePermissionsResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeImagePermissionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeImagePermissionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeImagePermissionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeImagePermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeImagePermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeImagePermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeImagePermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateSourceRepositoryBranchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headCommitId")
     public String headCommitId;
+
     public CreateSourceRepositoryBranchRequestBody withHeadCommitId(String headCommitId) {
         this.headCommitId = headCommitId;
         return this;
     }
     
+    public CreateSourceRepositoryBranchRequestBody(){}
 }

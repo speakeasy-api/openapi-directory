@@ -12,6 +12,7 @@ public class GenerateDataKeyPairWithoutPlaintextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionContext")
     public java.util.Map<String, String> encryptionContext;
+
     public GenerateDataKeyPairWithoutPlaintextRequest withEncryptionContext(java.util.Map<String, String> encryptionContext) {
         this.encryptionContext = encryptionContext;
         return this;
@@ -20,6 +21,7 @@ public class GenerateDataKeyPairWithoutPlaintextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantTokens")
     public String[] grantTokens;
+
     public GenerateDataKeyPairWithoutPlaintextRequest withGrantTokens(String[] grantTokens) {
         this.grantTokens = grantTokens;
         return this;
@@ -27,6 +29,7 @@ public class GenerateDataKeyPairWithoutPlaintextRequest {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public GenerateDataKeyPairWithoutPlaintextRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -34,9 +37,14 @@ public class GenerateDataKeyPairWithoutPlaintextRequest {
     
     @JsonProperty("KeyPairSpec")
     public DataKeyPairSpecEnum keyPairSpec;
+
     public GenerateDataKeyPairWithoutPlaintextRequest withKeyPairSpec(DataKeyPairSpecEnum keyPairSpec) {
         this.keyPairSpec = keyPairSpec;
         return this;
     }
     
+    public GenerateDataKeyPairWithoutPlaintextRequest(@JsonProperty("KeyId") String keyId, @JsonProperty("KeyPairSpec") DataKeyPairSpecEnum keyPairSpec) {
+        this.keyId = keyId;
+        this.keyPairSpec = keyPairSpec;
+  }
 }

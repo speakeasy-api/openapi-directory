@@ -12,6 +12,7 @@ public class GetLegalSearchDefaultApplicationJSONRegulations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doc_id")
     public String docId;
+
     public GetLegalSearchDefaultApplicationJSONRegulations withDocId(String docId) {
         this.docId = docId;
         return this;
@@ -20,6 +21,7 @@ public class GetLegalSearchDefaultApplicationJSONRegulations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_highlights")
     public java.util.Map<String, Object> documentHighlights;
+
     public GetLegalSearchDefaultApplicationJSONRegulations withDocumentHighlights(java.util.Map<String, Object> documentHighlights) {
         this.documentHighlights = documentHighlights;
         return this;
@@ -28,6 +30,7 @@ public class GetLegalSearchDefaultApplicationJSONRegulations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highlights")
     public String[] highlights;
+
     public GetLegalSearchDefaultApplicationJSONRegulations withHighlights(String[] highlights) {
         this.highlights = highlights;
         return this;
@@ -36,6 +39,7 @@ public class GetLegalSearchDefaultApplicationJSONRegulations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetLegalSearchDefaultApplicationJSONRegulations withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class GetLegalSearchDefaultApplicationJSONRegulations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("no")
     public String no;
+
     public GetLegalSearchDefaultApplicationJSONRegulations withNo(String no) {
         this.no = no;
         return this;
@@ -52,9 +57,11 @@ public class GetLegalSearchDefaultApplicationJSONRegulations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GetLegalSearchDefaultApplicationJSONRegulations withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GetLegalSearchDefaultApplicationJSONRegulations(){}
 }

@@ -18,6 +18,7 @@ public class WindowsVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageType")
     public String imageType;
+
     public WindowsVersion withImageType(String imageType) {
         this.imageType = imageType;
         return this;
@@ -29,6 +30,7 @@ public class WindowsVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osVersion")
     public String osVersion;
+
     public WindowsVersion withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -40,9 +42,11 @@ public class WindowsVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportEndDate")
     public Date supportEndDate;
+
     public WindowsVersion withSupportEndDate(Date supportEndDate) {
         this.supportEndDate = supportEndDate;
         return this;
     }
     
+    public WindowsVersion(){}
 }

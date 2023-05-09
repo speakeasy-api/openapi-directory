@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDocRequest {
@@ -12,6 +13,7 @@ public class DeleteDocRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
     public String slug;
+
     public DeleteDocRequest withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -22,9 +24,14 @@ public class DeleteDocRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-readme-version")
     public String xReadmeVersion;
+
     public DeleteDocRequest withXReadmeVersion(String xReadmeVersion) {
         this.xReadmeVersion = xReadmeVersion;
         return this;
     }
     
+    public DeleteDocRequest(@JsonProperty("slug") String slug, @JsonProperty("x-readme-version") String xReadmeVersion) {
+        this.slug = slug;
+        this.xReadmeVersion = xReadmeVersion;
+  }
 }

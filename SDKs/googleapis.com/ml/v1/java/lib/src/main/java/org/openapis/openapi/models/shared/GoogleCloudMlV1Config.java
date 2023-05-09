@@ -15,9 +15,11 @@ public class GoogleCloudMlV1Config {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tpuServiceAccount")
     public String tpuServiceAccount;
+
     public GoogleCloudMlV1Config withTpuServiceAccount(String tpuServiceAccount) {
         this.tpuServiceAccount = tpuServiceAccount;
         return this;
     }
     
+    public GoogleCloudMlV1Config(){}
 }

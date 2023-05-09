@@ -15,6 +15,7 @@ public class CreateBackendEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentArtifacts")
     public String deploymentArtifacts;
+
     public CreateBackendEnvironmentRequestBody withDeploymentArtifacts(String deploymentArtifacts) {
         this.deploymentArtifacts = deploymentArtifacts;
         return this;
@@ -25,6 +26,7 @@ public class CreateBackendEnvironmentRequestBody {
      */
     @JsonProperty("environmentName")
     public String environmentName;
+
     public CreateBackendEnvironmentRequestBody withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -36,9 +38,13 @@ public class CreateBackendEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackName")
     public String stackName;
+
     public CreateBackendEnvironmentRequestBody withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public CreateBackendEnvironmentRequestBody(@JsonProperty("environmentName") String environmentName) {
+        this.environmentName = environmentName;
+  }
 }

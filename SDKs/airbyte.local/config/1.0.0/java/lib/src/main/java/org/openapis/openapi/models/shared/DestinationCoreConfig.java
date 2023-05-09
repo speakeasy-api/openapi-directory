@@ -14,6 +14,7 @@ public class DestinationCoreConfig {
      */
     @JsonProperty("connectionConfiguration")
     public Object connectionConfiguration;
+
     public DestinationCoreConfig withConnectionConfiguration(Object connectionConfiguration) {
         this.connectionConfiguration = connectionConfiguration;
         return this;
@@ -21,6 +22,7 @@ public class DestinationCoreConfig {
     
     @JsonProperty("destinationDefinitionId")
     public String destinationDefinitionId;
+
     public DestinationCoreConfig withDestinationDefinitionId(String destinationDefinitionId) {
         this.destinationDefinitionId = destinationDefinitionId;
         return this;
@@ -29,6 +31,7 @@ public class DestinationCoreConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationId")
     public String destinationId;
+
     public DestinationCoreConfig withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -36,9 +39,15 @@ public class DestinationCoreConfig {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public DestinationCoreConfig withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public DestinationCoreConfig(@JsonProperty("connectionConfiguration") Object connectionConfiguration, @JsonProperty("destinationDefinitionId") String destinationDefinitionId, @JsonProperty("workspaceId") String workspaceId) {
+        this.connectionConfiguration = connectionConfiguration;
+        this.destinationDefinitionId = destinationDefinitionId;
+        this.workspaceId = workspaceId;
+  }
 }

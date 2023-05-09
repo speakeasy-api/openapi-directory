@@ -15,6 +15,7 @@ public class CampaignEmailMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public CampaignEmailMessage withBody(String body) {
         this.body = body;
         return this;
@@ -23,6 +24,7 @@ public class CampaignEmailMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromAddress")
     public String fromAddress;
+
     public CampaignEmailMessage withFromAddress(String fromAddress) {
         this.fromAddress = fromAddress;
         return this;
@@ -31,6 +33,7 @@ public class CampaignEmailMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HtmlBody")
     public String htmlBody;
+
     public CampaignEmailMessage withHtmlBody(String htmlBody) {
         this.htmlBody = htmlBody;
         return this;
@@ -39,9 +42,11 @@ public class CampaignEmailMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public CampaignEmailMessage withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CampaignEmailMessage(){}
 }

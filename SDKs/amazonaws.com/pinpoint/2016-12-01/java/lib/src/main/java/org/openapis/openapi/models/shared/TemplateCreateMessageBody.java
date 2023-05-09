@@ -15,6 +15,7 @@ public class TemplateCreateMessageBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public TemplateCreateMessageBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class TemplateCreateMessageBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public TemplateCreateMessageBody withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class TemplateCreateMessageBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestID")
     public String requestID;
+
     public TemplateCreateMessageBody withRequestID(String requestID) {
         this.requestID = requestID;
         return this;
     }
     
+    public TemplateCreateMessageBody(){}
 }

@@ -18,9 +18,11 @@ public class AuthorizationCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public AuthorizationCode withCode(String code) {
         this.code = code;
         return this;
     }
     
+    public AuthorizationCode(){}
 }

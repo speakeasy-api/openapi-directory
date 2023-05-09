@@ -19,6 +19,7 @@ public class StartReferenceImportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public StartReferenceImportJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +27,7 @@ public class StartReferenceImportJobResponse {
     
     @JsonProperty("id")
     public String id;
+
     public StartReferenceImportJobResponse withId(String id) {
         this.id = id;
         return this;
@@ -33,6 +35,7 @@ public class StartReferenceImportJobResponse {
     
     @JsonProperty("referenceStoreId")
     public String referenceStoreId;
+
     public StartReferenceImportJobResponse withReferenceStoreId(String referenceStoreId) {
         this.referenceStoreId = referenceStoreId;
         return this;
@@ -40,6 +43,7 @@ public class StartReferenceImportJobResponse {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public StartReferenceImportJobResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -47,9 +51,17 @@ public class StartReferenceImportJobResponse {
     
     @JsonProperty("status")
     public ReferenceImportJobStatusEnum status;
+
     public StartReferenceImportJobResponse withStatus(ReferenceImportJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public StartReferenceImportJobResponse(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") String id, @JsonProperty("referenceStoreId") String referenceStoreId, @JsonProperty("roleArn") String roleArn, @JsonProperty("status") ReferenceImportJobStatusEnum status) {
+        this.creationTime = creationTime;
+        this.id = id;
+        this.referenceStoreId = referenceStoreId;
+        this.roleArn = roleArn;
+        this.status = status;
+  }
 }

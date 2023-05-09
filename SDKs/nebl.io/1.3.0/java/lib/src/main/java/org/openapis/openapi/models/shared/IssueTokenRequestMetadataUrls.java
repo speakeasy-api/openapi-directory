@@ -15,6 +15,7 @@ public class IssueTokenRequestMetadataUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataHash")
     public String dataHash;
+
     public IssueTokenRequestMetadataUrls withDataHash(String dataHash) {
         this.dataHash = dataHash;
         return this;
@@ -26,6 +27,7 @@ public class IssueTokenRequestMetadataUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public IssueTokenRequestMetadataUrls withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -37,6 +39,7 @@ public class IssueTokenRequestMetadataUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IssueTokenRequestMetadataUrls withName(String name) {
         this.name = name;
         return this;
@@ -48,9 +51,11 @@ public class IssueTokenRequestMetadataUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public IssueTokenRequestMetadataUrls withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public IssueTokenRequestMetadataUrls(){}
 }

@@ -18,6 +18,7 @@ public class ChartGroupRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateTimeRule")
     public ChartDateTimeRule dateTimeRule;
+
     public ChartGroupRule withDateTimeRule(ChartDateTimeRule dateTimeRule) {
         this.dateTimeRule = dateTimeRule;
         return this;
@@ -29,9 +30,11 @@ public class ChartGroupRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("histogramRule")
     public ChartHistogramRule histogramRule;
+
     public ChartGroupRule withHistogramRule(ChartHistogramRule histogramRule) {
         this.histogramRule = histogramRule;
         return this;
     }
     
+    public ChartGroupRule(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MunsetValueRequest {
@@ -12,6 +13,7 @@ public class MunsetValueRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String[][] requestBody;
+
     public MunsetValueRequest withRequestBody(String[][] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,13 @@ public class MunsetValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public MunsetValueRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
     }
     
+    public MunsetValueRequest(@JsonProperty("agentNum") Integer agentNum) {
+        this.agentNum = agentNum;
+  }
 }

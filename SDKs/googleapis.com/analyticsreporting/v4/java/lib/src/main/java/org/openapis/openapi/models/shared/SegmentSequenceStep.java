@@ -18,6 +18,7 @@ public class SegmentSequenceStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchType")
     public SegmentSequenceStepMatchTypeEnum matchType;
+
     public SegmentSequenceStep withMatchType(SegmentSequenceStepMatchTypeEnum matchType) {
         this.matchType = matchType;
         return this;
@@ -29,9 +30,11 @@ public class SegmentSequenceStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orFiltersForSegment")
     public OrFiltersForSegment[] orFiltersForSegment;
+
     public SegmentSequenceStep withOrFiltersForSegment(OrFiltersForSegment[] orFiltersForSegment) {
         this.orFiltersForSegment = orFiltersForSegment;
         return this;
     }
     
+    public SegmentSequenceStep(){}
 }

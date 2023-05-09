@@ -60,12 +60,10 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLoginResponse res = new org.openapis.openapi.models.operations.PostLoginResponse() {{
+        org.openapis.openapi.models.operations.PostLoginResponse res = new org.openapis.openapi.models.operations.PostLoginResponse(contentType, httpRes.statusCode()) {{
             loginResponse = null;
             invalidToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLogoutResponse res = new org.openapis.openapi.models.operations.PostLogoutResponse() {{
+        org.openapis.openapi.models.operations.PostLogoutResponse res = new org.openapis.openapi.models.operations.PostLogoutResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

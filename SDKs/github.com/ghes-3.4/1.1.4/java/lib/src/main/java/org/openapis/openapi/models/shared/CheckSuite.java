@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CheckSuite {
     @JsonProperty("after")
     public String after;
+
     public CheckSuite withAfter(String after) {
         this.after = after;
         return this;
@@ -29,6 +30,7 @@ public class CheckSuite {
      */
     @JsonProperty("app")
     public NullableIntegration app;
+
     public CheckSuite withApp(NullableIntegration app) {
         this.app = app;
         return this;
@@ -36,6 +38,7 @@ public class CheckSuite {
     
     @JsonProperty("before")
     public String before;
+
     public CheckSuite withBefore(String before) {
         this.before = before;
         return this;
@@ -43,6 +46,7 @@ public class CheckSuite {
     
     @JsonProperty("check_runs_url")
     public String checkRunsUrl;
+
     public CheckSuite withCheckRunsUrl(String checkRunsUrl) {
         this.checkRunsUrl = checkRunsUrl;
         return this;
@@ -50,6 +54,7 @@ public class CheckSuite {
     
     @JsonProperty("conclusion")
     public CheckSuiteConclusionEnum conclusion;
+
     public CheckSuite withConclusion(CheckSuiteConclusionEnum conclusion) {
         this.conclusion = conclusion;
         return this;
@@ -59,6 +64,7 @@ public class CheckSuite {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public CheckSuite withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -66,6 +72,7 @@ public class CheckSuite {
     
     @JsonProperty("head_branch")
     public String headBranch;
+
     public CheckSuite withHeadBranch(String headBranch) {
         this.headBranch = headBranch;
         return this;
@@ -76,6 +83,7 @@ public class CheckSuite {
      */
     @JsonProperty("head_commit")
     public SimpleCommit headCommit;
+
     public CheckSuite withHeadCommit(SimpleCommit headCommit) {
         this.headCommit = headCommit;
         return this;
@@ -86,6 +94,7 @@ public class CheckSuite {
      */
     @JsonProperty("head_sha")
     public String headSha;
+
     public CheckSuite withHeadSha(String headSha) {
         this.headSha = headSha;
         return this;
@@ -93,6 +102,7 @@ public class CheckSuite {
     
     @JsonProperty("id")
     public Long id;
+
     public CheckSuite withId(Long id) {
         this.id = id;
         return this;
@@ -100,6 +110,7 @@ public class CheckSuite {
     
     @JsonProperty("latest_check_runs_count")
     public Long latestCheckRunsCount;
+
     public CheckSuite withLatestCheckRunsCount(Long latestCheckRunsCount) {
         this.latestCheckRunsCount = latestCheckRunsCount;
         return this;
@@ -107,6 +118,7 @@ public class CheckSuite {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public CheckSuite withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -114,6 +126,7 @@ public class CheckSuite {
     
     @JsonProperty("pull_requests")
     public PullRequestMinimal[] pullRequests;
+
     public CheckSuite withPullRequests(PullRequestMinimal[] pullRequests) {
         this.pullRequests = pullRequests;
         return this;
@@ -124,6 +137,7 @@ public class CheckSuite {
      */
     @JsonProperty("repository")
     public MinimalRepository repository;
+
     public CheckSuite withRepository(MinimalRepository repository) {
         this.repository = repository;
         return this;
@@ -132,6 +146,7 @@ public class CheckSuite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rerequestable")
     public Boolean rerequestable;
+
     public CheckSuite withRerequestable(Boolean rerequestable) {
         this.rerequestable = rerequestable;
         return this;
@@ -140,6 +155,7 @@ public class CheckSuite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runs_rerequestable")
     public Boolean runsRerequestable;
+
     public CheckSuite withRunsRerequestable(Boolean runsRerequestable) {
         this.runsRerequestable = runsRerequestable;
         return this;
@@ -147,6 +163,7 @@ public class CheckSuite {
     
     @JsonProperty("status")
     public CheckSuiteStatusEnum status;
+
     public CheckSuite withStatus(CheckSuiteStatusEnum status) {
         this.status = status;
         return this;
@@ -156,6 +173,7 @@ public class CheckSuite {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public CheckSuite withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -163,9 +181,29 @@ public class CheckSuite {
     
     @JsonProperty("url")
     public String url;
+
     public CheckSuite withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CheckSuite(@JsonProperty("after") String after, @JsonProperty("app") NullableIntegration app, @JsonProperty("before") String before, @JsonProperty("check_runs_url") String checkRunsUrl, @JsonProperty("conclusion") CheckSuiteConclusionEnum conclusion, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("head_branch") String headBranch, @JsonProperty("head_commit") SimpleCommit headCommit, @JsonProperty("head_sha") String headSha, @JsonProperty("id") Long id, @JsonProperty("latest_check_runs_count") Long latestCheckRunsCount, @JsonProperty("node_id") String nodeId, @JsonProperty("pull_requests") PullRequestMinimal[] pullRequests, @JsonProperty("repository") MinimalRepository repository, @JsonProperty("status") CheckSuiteStatusEnum status, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.after = after;
+        this.app = app;
+        this.before = before;
+        this.checkRunsUrl = checkRunsUrl;
+        this.conclusion = conclusion;
+        this.createdAt = createdAt;
+        this.headBranch = headBranch;
+        this.headCommit = headCommit;
+        this.headSha = headSha;
+        this.id = id;
+        this.latestCheckRunsCount = latestCheckRunsCount;
+        this.nodeId = nodeId;
+        this.pullRequests = pullRequests;
+        this.repository = repository;
+        this.status = status;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateCustomerGatewayResultCustomerGateway {
     
     public String bgpAsn;
+
     public CreateCustomerGatewayResultCustomerGateway withBgpAsn(String bgpAsn) {
         this.bgpAsn = bgpAsn;
         return this;
@@ -19,6 +20,7 @@ public class CreateCustomerGatewayResultCustomerGateway {
     
     
     public String certificateArn;
+
     public CreateCustomerGatewayResultCustomerGateway withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -26,6 +28,7 @@ public class CreateCustomerGatewayResultCustomerGateway {
     
     
     public String customerGatewayId;
+
     public CreateCustomerGatewayResultCustomerGateway withCustomerGatewayId(String customerGatewayId) {
         this.customerGatewayId = customerGatewayId;
         return this;
@@ -33,6 +36,7 @@ public class CreateCustomerGatewayResultCustomerGateway {
     
     
     public String deviceName;
+
     public CreateCustomerGatewayResultCustomerGateway withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -40,6 +44,7 @@ public class CreateCustomerGatewayResultCustomerGateway {
     
     
     public String ipAddress;
+
     public CreateCustomerGatewayResultCustomerGateway withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -47,6 +52,7 @@ public class CreateCustomerGatewayResultCustomerGateway {
     
     
     public String state;
+
     public CreateCustomerGatewayResultCustomerGateway withState(String state) {
         this.state = state;
         return this;
@@ -54,6 +60,7 @@ public class CreateCustomerGatewayResultCustomerGateway {
     
     
     public CreateCustomerGatewayResultCustomerGatewayTags[] tags;
+
     public CreateCustomerGatewayResultCustomerGateway withTags(CreateCustomerGatewayResultCustomerGatewayTags[] tags) {
         this.tags = tags;
         return this;
@@ -61,9 +68,11 @@ public class CreateCustomerGatewayResultCustomerGateway {
     
     
     public String type;
+
     public CreateCustomerGatewayResultCustomerGateway withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CreateCustomerGatewayResultCustomerGateway(){}
 }

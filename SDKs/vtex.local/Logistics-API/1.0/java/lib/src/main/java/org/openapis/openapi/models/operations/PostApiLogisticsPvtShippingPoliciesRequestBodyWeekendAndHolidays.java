@@ -15,6 +15,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyWeekendAndHolidays {
      */
     @JsonProperty("holiday")
     public Boolean holiday;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyWeekendAndHolidays withHoliday(Boolean holiday) {
         this.holiday = holiday;
         return this;
@@ -25,6 +26,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyWeekendAndHolidays {
      */
     @JsonProperty("saturday")
     public Boolean saturday;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyWeekendAndHolidays withSaturday(Boolean saturday) {
         this.saturday = saturday;
         return this;
@@ -35,9 +37,15 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyWeekendAndHolidays {
      */
     @JsonProperty("sunday")
     public Boolean sunday;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyWeekendAndHolidays withSunday(Boolean sunday) {
         this.sunday = sunday;
         return this;
     }
     
+    public PostApiLogisticsPvtShippingPoliciesRequestBodyWeekendAndHolidays(@JsonProperty("holiday") Boolean holiday, @JsonProperty("saturday") Boolean saturday, @JsonProperty("sunday") Boolean sunday) {
+        this.holiday = holiday;
+        this.saturday = saturday;
+        this.sunday = sunday;
+  }
 }

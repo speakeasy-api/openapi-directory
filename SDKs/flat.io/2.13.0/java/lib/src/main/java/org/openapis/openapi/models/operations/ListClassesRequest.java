@@ -12,9 +12,11 @@ public class ListClassesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public ListClassesStateEnum state;
+
     public ListClassesRequest withState(ListClassesStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ListClassesRequest(){}
 }

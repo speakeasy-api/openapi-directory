@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class UserToken {
     
     public String[] auditActions;
+
     public UserToken withAuditActions(String[] auditActions) {
         this.auditActions = auditActions;
         return this;
@@ -19,6 +20,7 @@ public class UserToken {
     
     
     public Boolean checkSecretWord;
+
     public UserToken withCheckSecretWord(Boolean checkSecretWord) {
         this.checkSecretWord = checkSecretWord;
         return this;
@@ -26,6 +28,7 @@ public class UserToken {
     
     
     public OffsetDateTime created;
+
     public UserToken withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -33,6 +36,7 @@ public class UserToken {
     
     
     public OffsetDateTime expiration;
+
     public UserToken withExpiration(OffsetDateTime expiration) {
         this.expiration = expiration;
         return this;
@@ -40,6 +44,7 @@ public class UserToken {
     
     
     public ExternalStandard[] externalStandards;
+
     public UserToken withExternalStandards(ExternalStandard[] externalStandards) {
         this.externalStandards = externalStandards;
         return this;
@@ -47,6 +52,7 @@ public class UserToken {
     
     
     public Feature[] groupFeatures;
+
     public UserToken withGroupFeatures(Feature[] groupFeatures) {
         this.groupFeatures = groupFeatures;
         return this;
@@ -54,6 +60,7 @@ public class UserToken {
     
     
     public Boolean groupMessagingEnabled;
+
     public UserToken withGroupMessagingEnabled(Boolean groupMessagingEnabled) {
         this.groupMessagingEnabled = groupMessagingEnabled;
         return this;
@@ -61,6 +68,7 @@ public class UserToken {
     
     
     public Boolean mustSetSecretWord;
+
     public UserToken withMustSetSecretWord(Boolean mustSetSecretWord) {
         this.mustSetSecretWord = mustSetSecretWord;
         return this;
@@ -68,6 +76,7 @@ public class UserToken {
     
     
     public Feature[] patientFeatures;
+
     public UserToken withPatientFeatures(Feature[] patientFeatures) {
         this.patientFeatures = patientFeatures;
         return this;
@@ -75,6 +84,7 @@ public class UserToken {
     
     
     public String[] patientMessagingFeatureTypes;
+
     public UserToken withPatientMessagingFeatureTypes(String[] patientMessagingFeatureTypes) {
         this.patientMessagingFeatureTypes = patientMessagingFeatureTypes;
         return this;
@@ -82,6 +92,7 @@ public class UserToken {
     
     
     public Role[] patientRoles;
+
     public UserToken withPatientRoles(Role[] patientRoles) {
         this.patientRoles = patientRoles;
         return this;
@@ -89,6 +100,7 @@ public class UserToken {
     
     
     public Route[] routes;
+
     public UserToken withRoutes(Route[] routes) {
         this.routes = routes;
         return this;
@@ -96,6 +108,7 @@ public class UserToken {
     
     
     public String secretWord;
+
     public UserToken withSecretWord(String secretWord) {
         this.secretWord = secretWord;
         return this;
@@ -103,6 +116,7 @@ public class UserToken {
     
     
     public java.util.Map<String, Object> secretWordChoices;
+
     public UserToken withSecretWordChoices(java.util.Map<String, Object> secretWordChoices) {
         this.secretWordChoices = secretWordChoices;
         return this;
@@ -110,6 +124,7 @@ public class UserToken {
     
     
     public String[] secretWordIndexes;
+
     public UserToken withSecretWordIndexes(String[] secretWordIndexes) {
         this.secretWordIndexes = secretWordIndexes;
         return this;
@@ -117,6 +132,7 @@ public class UserToken {
     
     
     public String secretWordSalt;
+
     public UserToken withSecretWordSalt(String secretWordSalt) {
         this.secretWordSalt = secretWordSalt;
         return this;
@@ -124,6 +140,7 @@ public class UserToken {
     
     
     public String secretWordToken;
+
     public UserToken withSecretWordToken(String secretWordToken) {
         this.secretWordToken = secretWordToken;
         return this;
@@ -131,6 +148,7 @@ public class UserToken {
     
     
     public Role[] securityRoles;
+
     public UserToken withSecurityRoles(Role[] securityRoles) {
         this.securityRoles = securityRoles;
         return this;
@@ -138,6 +156,7 @@ public class UserToken {
     
     
     public Boolean shouldEnterCondition;
+
     public UserToken withShouldEnterCondition(Boolean shouldEnterCondition) {
         this.shouldEnterCondition = shouldEnterCondition;
         return this;
@@ -145,6 +164,7 @@ public class UserToken {
     
     
     public Feature[] staffFeatures;
+
     public UserToken withStaffFeatures(Feature[] staffFeatures) {
         this.staffFeatures = staffFeatures;
         return this;
@@ -152,6 +172,7 @@ public class UserToken {
     
     
     public Role[] staffRoles;
+
     public UserToken withStaffRoles(Role[] staffRoles) {
         this.staffRoles = staffRoles;
         return this;
@@ -159,6 +180,7 @@ public class UserToken {
     
     
     public String token;
+
     public UserToken withToken(String token) {
         this.token = token;
         return this;
@@ -166,6 +188,7 @@ public class UserToken {
     
     
     public User user;
+
     public UserToken withUser(User user) {
         this.user = user;
         return this;
@@ -173,6 +196,7 @@ public class UserToken {
     
     
     public Feature[] userFeatures;
+
     public UserToken withUserFeatures(Feature[] userFeatures) {
         this.userFeatures = userFeatures;
         return this;
@@ -180,9 +204,11 @@ public class UserToken {
     
     
     public BaseGroup[] userGroups;
+
     public UserToken withUserGroups(BaseGroup[] userGroups) {
         this.userGroups = userGroups;
         return this;
     }
     
+    public UserToken(){}
 }

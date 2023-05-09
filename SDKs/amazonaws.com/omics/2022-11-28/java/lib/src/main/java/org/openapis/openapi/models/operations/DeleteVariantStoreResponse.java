@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVariantStoreResponse {
@@ -12,6 +13,7 @@ public class DeleteVariantStoreResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteVariantStoreResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteVariantStoreResponse {
      */
     
     public Object conflictException;
+
     public DeleteVariantStoreResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteVariantStoreResponse {
     
     
     public String contentType;
+
     public DeleteVariantStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteVariantStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteVariantStoreResponse deleteVariantStoreResponse;
+
     public DeleteVariantStoreResponse withDeleteVariantStoreResponse(org.openapis.openapi.models.shared.DeleteVariantStoreResponse deleteVariantStoreResponse) {
         this.deleteVariantStoreResponse = deleteVariantStoreResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteVariantStoreResponse {
      */
     
     public Object internalServerException;
+
     public DeleteVariantStoreResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteVariantStoreResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteVariantStoreResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteVariantStoreResponse {
     
     
     public Integer statusCode;
+
     public DeleteVariantStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteVariantStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVariantStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteVariantStoreResponse {
      */
     
     public Object throttlingException;
+
     public DeleteVariantStoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteVariantStoreResponse {
      */
     
     public Object validationException;
+
     public DeleteVariantStoreResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteVariantStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

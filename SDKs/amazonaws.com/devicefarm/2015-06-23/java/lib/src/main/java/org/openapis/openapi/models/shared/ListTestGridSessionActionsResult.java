@@ -15,6 +15,7 @@ public class ListTestGridSessionActionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public TestGridSessionAction[] actions;
+
     public ListTestGridSessionActionsResult withActions(TestGridSessionAction[] actions) {
         this.actions = actions;
         return this;
@@ -23,9 +24,11 @@ public class ListTestGridSessionActionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTestGridSessionActionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTestGridSessionActionsResult(){}
 }

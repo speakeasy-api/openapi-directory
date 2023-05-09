@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * AccessConfigTypeEnum - The type of configuration. The default and only option is ONE_TO_ONE_NAT.
+ * AccessConfigTypeEnum - The type of configuration. In accessConfigs (IPv4), the default and only option is ONE_TO_ONE_NAT. In ipv6AccessConfigs, the default and only option is DIRECT_IPV6.
  */
 public enum AccessConfigTypeEnum {
     DIRECT_IPV6("DIRECT_IPV6"),

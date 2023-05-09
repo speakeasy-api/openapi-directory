@@ -18,6 +18,7 @@ public class RunnerLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public RunnerLabel withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +29,7 @@ public class RunnerLabel {
      */
     @JsonProperty("name")
     public String name;
+
     public RunnerLabel withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +41,13 @@ public class RunnerLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public RunnerLabelTypeEnum type;
+
     public RunnerLabel withType(RunnerLabelTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RunnerLabel(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

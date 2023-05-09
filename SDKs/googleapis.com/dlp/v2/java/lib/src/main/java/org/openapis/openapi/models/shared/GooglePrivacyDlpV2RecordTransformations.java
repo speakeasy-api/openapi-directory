@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2RecordTransformations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldTransformations")
     public GooglePrivacyDlpV2FieldTransformation[] fieldTransformations;
+
     public GooglePrivacyDlpV2RecordTransformations withFieldTransformations(GooglePrivacyDlpV2FieldTransformation[] fieldTransformations) {
         this.fieldTransformations = fieldTransformations;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2RecordTransformations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordSuppressions")
     public GooglePrivacyDlpV2RecordSuppression[] recordSuppressions;
+
     public GooglePrivacyDlpV2RecordTransformations withRecordSuppressions(GooglePrivacyDlpV2RecordSuppression[] recordSuppressions) {
         this.recordSuppressions = recordSuppressions;
         return this;
     }
     
+    public GooglePrivacyDlpV2RecordTransformations(){}
 }

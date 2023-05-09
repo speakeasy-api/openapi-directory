@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAuditSuppressionResponse {
     
     public String contentType;
+
     public DescribeAuditSuppressionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAuditSuppressionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAuditSuppressionResponse describeAuditSuppressionResponse;
+
     public DescribeAuditSuppressionResponse withDescribeAuditSuppressionResponse(org.openapis.openapi.models.shared.DescribeAuditSuppressionResponse describeAuditSuppressionResponse) {
         this.describeAuditSuppressionResponse = describeAuditSuppressionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAuditSuppressionResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeAuditSuppressionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAuditSuppressionResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeAuditSuppressionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeAuditSuppressionResponse {
     
     
     public Integer statusCode;
+
     public DescribeAuditSuppressionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeAuditSuppressionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAuditSuppressionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAuditSuppressionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAuditSuppressionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeAuditSuppressionResponse {
      */
     
     public Object throttlingException;
+
     public DescribeAuditSuppressionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeAuditSuppressionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

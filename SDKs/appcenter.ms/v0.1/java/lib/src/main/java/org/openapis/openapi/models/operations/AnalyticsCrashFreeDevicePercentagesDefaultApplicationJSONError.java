@@ -15,6 +15,7 @@ public class AnalyticsCrashFreeDevicePercentagesDefaultApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public AnalyticsCrashFreeDevicePercentagesDefaultApplicationJSONErrorCodeEnum code;
+
     public AnalyticsCrashFreeDevicePercentagesDefaultApplicationJSONError withCode(AnalyticsCrashFreeDevicePercentagesDefaultApplicationJSONErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -26,9 +27,11 @@ public class AnalyticsCrashFreeDevicePercentagesDefaultApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AnalyticsCrashFreeDevicePercentagesDefaultApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AnalyticsCrashFreeDevicePercentagesDefaultApplicationJSONError(){}
 }

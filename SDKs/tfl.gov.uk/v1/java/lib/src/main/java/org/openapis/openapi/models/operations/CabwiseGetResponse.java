@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CabwiseGetResponse {
     
     public byte[] body;
+
     public CabwiseGetResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CabwiseGetResponse {
     
     
     public String contentType;
+
     public CabwiseGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CabwiseGetResponse {
     
     
     public Integer statusCode;
+
     public CabwiseGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class CabwiseGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CabwiseGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class CabwiseGetResponse {
      */
     
     public java.util.Map<String, Object> systemObject;
+
     public CabwiseGetResponse withSystemObject(java.util.Map<String, Object> systemObject) {
         this.systemObject = systemObject;
         return this;
     }
     
+    public CabwiseGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

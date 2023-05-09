@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UntagResourceResponse {
@@ -12,6 +13,7 @@ public class UntagResourceResponse {
      */
     
     public Object cloudHsmAccessDeniedException;
+
     public UntagResourceResponse withCloudHsmAccessDeniedException(Object cloudHsmAccessDeniedException) {
         this.cloudHsmAccessDeniedException = cloudHsmAccessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UntagResourceResponse {
      */
     
     public Object cloudHsmInternalFailureException;
+
     public UntagResourceResponse withCloudHsmInternalFailureException(Object cloudHsmInternalFailureException) {
         this.cloudHsmInternalFailureException = cloudHsmInternalFailureException;
         return this;
@@ -32,6 +35,7 @@ public class UntagResourceResponse {
      */
     
     public Object cloudHsmInvalidRequestException;
+
     public UntagResourceResponse withCloudHsmInvalidRequestException(Object cloudHsmInvalidRequestException) {
         this.cloudHsmInvalidRequestException = cloudHsmInvalidRequestException;
         return this;
@@ -42,6 +46,7 @@ public class UntagResourceResponse {
      */
     
     public Object cloudHsmResourceNotFoundException;
+
     public UntagResourceResponse withCloudHsmResourceNotFoundException(Object cloudHsmResourceNotFoundException) {
         this.cloudHsmResourceNotFoundException = cloudHsmResourceNotFoundException;
         return this;
@@ -52,6 +57,7 @@ public class UntagResourceResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public UntagResourceResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -62,6 +68,7 @@ public class UntagResourceResponse {
      */
     
     public Object cloudHsmTagException;
+
     public UntagResourceResponse withCloudHsmTagException(Object cloudHsmTagException) {
         this.cloudHsmTagException = cloudHsmTagException;
         return this;
@@ -69,6 +76,7 @@ public class UntagResourceResponse {
     
     
     public String contentType;
+
     public UntagResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -76,6 +84,7 @@ public class UntagResourceResponse {
     
     
     public Integer statusCode;
+
     public UntagResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UntagResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UntagResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class UntagResourceResponse {
      */
     
     public java.util.Map<String, Object> untagResourceResponse;
+
     public UntagResourceResponse withUntagResourceResponse(java.util.Map<String, Object> untagResourceResponse) {
         this.untagResourceResponse = untagResourceResponse;
         return this;
     }
     
+    public UntagResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

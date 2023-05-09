@@ -18,6 +18,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public Comment withBody(String body) {
         this.body = body;
         return this;
@@ -29,6 +30,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Comment withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator")
     public Actor creator;
+
     public Comment withCreator(Actor creator) {
         this.creator = creator;
         return this;
@@ -51,20 +54,23 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Comment withName(String name) {
         this.name = name;
         return this;
     }
     
     /**
-     * Output only. An automatically generated plain text version of body with all rich text syntax stripped.
+     * Output only. DEPRECATED. An automatically generated plain text version of body with all rich text syntax stripped.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plainTextBody")
     public String plainTextBody;
+
     public Comment withPlainTextBody(String plainTextBody) {
         this.plainTextBody = plainTextBody;
         return this;
     }
     
+    public Comment(){}
 }

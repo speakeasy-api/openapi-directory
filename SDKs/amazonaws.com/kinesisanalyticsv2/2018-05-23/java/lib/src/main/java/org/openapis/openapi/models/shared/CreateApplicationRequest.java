@@ -12,6 +12,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationConfiguration")
     public ApplicationConfiguration applicationConfiguration;
+
     public CreateApplicationRequest withApplicationConfiguration(ApplicationConfiguration applicationConfiguration) {
         this.applicationConfiguration = applicationConfiguration;
         return this;
@@ -20,6 +21,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationDescription")
     public String applicationDescription;
+
     public CreateApplicationRequest withApplicationDescription(String applicationDescription) {
         this.applicationDescription = applicationDescription;
         return this;
@@ -28,6 +30,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationMode")
     public ApplicationModeEnum applicationMode;
+
     public CreateApplicationRequest withApplicationMode(ApplicationModeEnum applicationMode) {
         this.applicationMode = applicationMode;
         return this;
@@ -35,6 +38,7 @@ public class CreateApplicationRequest {
     
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public CreateApplicationRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -43,6 +47,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptions")
     public CloudWatchLoggingOption[] cloudWatchLoggingOptions;
+
     public CreateApplicationRequest withCloudWatchLoggingOptions(CloudWatchLoggingOption[] cloudWatchLoggingOptions) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         return this;
@@ -50,6 +55,7 @@ public class CreateApplicationRequest {
     
     @JsonProperty("RuntimeEnvironment")
     public RuntimeEnvironmentEnum runtimeEnvironment;
+
     public CreateApplicationRequest withRuntimeEnvironment(RuntimeEnvironmentEnum runtimeEnvironment) {
         this.runtimeEnvironment = runtimeEnvironment;
         return this;
@@ -57,6 +63,7 @@ public class CreateApplicationRequest {
     
     @JsonProperty("ServiceExecutionRole")
     public String serviceExecutionRole;
+
     public CreateApplicationRequest withServiceExecutionRole(String serviceExecutionRole) {
         this.serviceExecutionRole = serviceExecutionRole;
         return this;
@@ -65,9 +72,15 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateApplicationRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateApplicationRequest(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("RuntimeEnvironment") RuntimeEnvironmentEnum runtimeEnvironment, @JsonProperty("ServiceExecutionRole") String serviceExecutionRole) {
+        this.applicationName = applicationName;
+        this.runtimeEnvironment = runtimeEnvironment;
+        this.serviceExecutionRole = serviceExecutionRole;
+  }
 }

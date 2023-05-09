@@ -18,6 +18,7 @@ public class GetTemplates401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public GetTemplates401ApplicationJSONErrorEnum error;
+
     public GetTemplates401ApplicationJSON withError(GetTemplates401ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -29,9 +30,11 @@ public class GetTemplates401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public GetTemplates401ApplicationJSON withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public GetTemplates401ApplicationJSON(){}
 }

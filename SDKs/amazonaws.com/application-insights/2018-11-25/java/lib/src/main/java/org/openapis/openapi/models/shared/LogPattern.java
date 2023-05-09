@@ -15,6 +15,7 @@ public class LogPattern {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pattern")
     public String pattern;
+
     public LogPattern withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -23,6 +24,7 @@ public class LogPattern {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PatternName")
     public String patternName;
+
     public LogPattern withPatternName(String patternName) {
         this.patternName = patternName;
         return this;
@@ -31,6 +33,7 @@ public class LogPattern {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PatternSetName")
     public String patternSetName;
+
     public LogPattern withPatternSetName(String patternSetName) {
         this.patternSetName = patternSetName;
         return this;
@@ -39,9 +42,11 @@ public class LogPattern {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rank")
     public Long rank;
+
     public LogPattern withRank(Long rank) {
         this.rank = rank;
         return this;
     }
     
+    public LogPattern(){}
 }

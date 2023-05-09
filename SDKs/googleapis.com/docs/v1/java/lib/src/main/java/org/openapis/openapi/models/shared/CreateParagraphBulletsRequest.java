@@ -18,6 +18,7 @@ public class CreateParagraphBulletsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bulletPreset")
     public CreateParagraphBulletsRequestBulletPresetEnum bulletPreset;
+
     public CreateParagraphBulletsRequest withBulletPreset(CreateParagraphBulletsRequestBulletPresetEnum bulletPreset) {
         this.bulletPreset = bulletPreset;
         return this;
@@ -29,9 +30,11 @@ public class CreateParagraphBulletsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public Range range;
+
     public CreateParagraphBulletsRequest withRange(Range range) {
         this.range = range;
         return this;
     }
     
+    public CreateParagraphBulletsRequest(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeCount")
     public Integer attributeCount;
+
     public GoogleCloudDataplexV1DataAttribute withAttributeCount(Integer attributeCount) {
         this.attributeCount = attributeCount;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1DataAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDataplexV1DataAttribute withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1DataAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataAccessSpec")
     public GoogleCloudDataplexV1DataAccessSpec dataAccessSpec;
+
     public GoogleCloudDataplexV1DataAttribute withDataAccessSpec(GoogleCloudDataplexV1DataAccessSpec dataAccessSpec) {
         this.dataAccessSpec = dataAccessSpec;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1DataAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1DataAttribute withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1DataAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1DataAttribute withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1DataAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudDataplexV1DataAttribute withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDataplexV1DataAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1DataAttribute withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDataplexV1DataAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1DataAttribute withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDataplexV1DataAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentId")
     public String parentId;
+
     public GoogleCloudDataplexV1DataAttribute withParentId(String parentId) {
         this.parentId = parentId;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDataplexV1DataAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceAccessSpec")
     public GoogleCloudDataplexV1ResourceAccessSpec resourceAccessSpec;
+
     public GoogleCloudDataplexV1DataAttribute withResourceAccessSpec(GoogleCloudDataplexV1ResourceAccessSpec resourceAccessSpec) {
         this.resourceAccessSpec = resourceAccessSpec;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDataplexV1DataAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public GoogleCloudDataplexV1DataAttribute withUid(String uid) {
         this.uid = uid;
         return this;
@@ -139,9 +150,11 @@ public class GoogleCloudDataplexV1DataAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDataplexV1DataAttribute withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataAttribute(){}
 }

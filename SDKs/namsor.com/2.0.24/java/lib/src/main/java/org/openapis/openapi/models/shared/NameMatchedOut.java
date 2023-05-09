@@ -15,6 +15,7 @@ public class NameMatchedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NameMatchedOut withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class NameMatchedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchStatus")
     public NameMatchedOutMatchStatusEnum matchStatus;
+
     public NameMatchedOut withMatchStatus(NameMatchedOutMatchStatusEnum matchStatus) {
         this.matchStatus = matchStatus;
         return this;
@@ -34,6 +36,7 @@ public class NameMatchedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public NameMatchedOut withScore(Double score) {
         this.score = score;
         return this;
@@ -42,9 +45,11 @@ public class NameMatchedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public NameMatchedOut withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public NameMatchedOut(){}
 }

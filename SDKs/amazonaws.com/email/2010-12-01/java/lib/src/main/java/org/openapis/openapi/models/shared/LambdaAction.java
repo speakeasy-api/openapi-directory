@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * LambdaAction - &lt;p&gt;When included in a receipt rule, this action calls an AWS Lambda function and, optionally, publishes a notification to Amazon Simple Notification Service (Amazon SNS).&lt;/p&gt; &lt;p&gt;To enable Amazon SES to call your AWS Lambda function or to publish to an Amazon SNS topic of another account, Amazon SES must have permission to access those resources. For information about giving permissions, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-permissions.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;For information about using AWS Lambda actions in receipt rules, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-action-lambda.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LambdaAction {
     
     public String functionArn;
+
     public LambdaAction withFunctionArn(String functionArn) {
         this.functionArn = functionArn;
         return this;
@@ -19,6 +20,7 @@ public class LambdaAction {
     
     
     public InvocationTypeEnum invocationType;
+
     public LambdaAction withInvocationType(InvocationTypeEnum invocationType) {
         this.invocationType = invocationType;
         return this;
@@ -26,9 +28,13 @@ public class LambdaAction {
     
     
     public String topicArn;
+
     public LambdaAction withTopicArn(String topicArn) {
         this.topicArn = topicArn;
         return this;
     }
     
+    public LambdaAction(@JsonProperty("FunctionArn") String functionArn) {
+        this.functionArn = functionArn;
+  }
 }

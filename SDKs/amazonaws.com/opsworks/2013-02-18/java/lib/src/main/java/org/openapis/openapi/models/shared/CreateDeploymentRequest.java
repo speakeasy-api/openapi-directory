@@ -12,6 +12,7 @@ public class CreateDeploymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppId")
     public String appId;
+
     public CreateDeploymentRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -19,6 +20,7 @@ public class CreateDeploymentRequest {
     
     @JsonProperty("Command")
     public DeploymentCommand command;
+
     public CreateDeploymentRequest withCommand(DeploymentCommand command) {
         this.command = command;
         return this;
@@ -27,6 +29,7 @@ public class CreateDeploymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Comment")
     public String comment;
+
     public CreateDeploymentRequest withComment(String comment) {
         this.comment = comment;
         return this;
@@ -35,6 +38,7 @@ public class CreateDeploymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomJson")
     public String customJson;
+
     public CreateDeploymentRequest withCustomJson(String customJson) {
         this.customJson = customJson;
         return this;
@@ -43,6 +47,7 @@ public class CreateDeploymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceIds")
     public String[] instanceIds;
+
     public CreateDeploymentRequest withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -51,6 +56,7 @@ public class CreateDeploymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerIds")
     public String[] layerIds;
+
     public CreateDeploymentRequest withLayerIds(String[] layerIds) {
         this.layerIds = layerIds;
         return this;
@@ -58,9 +64,14 @@ public class CreateDeploymentRequest {
     
     @JsonProperty("StackId")
     public String stackId;
+
     public CreateDeploymentRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public CreateDeploymentRequest(@JsonProperty("Command") DeploymentCommand command, @JsonProperty("StackId") String stackId) {
+        this.command = command;
+        this.stackId = stackId;
+  }
 }

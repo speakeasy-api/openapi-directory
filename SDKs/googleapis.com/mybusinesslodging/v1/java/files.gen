@@ -356,4 +356,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Accessibility.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetGoogleUpdatedLodgingResponse.java
+docs/sdk/README.md
+docs/locations/README.md
 USAGE.md

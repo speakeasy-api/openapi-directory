@@ -18,6 +18,7 @@ public class FlagsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Flag[] items;
+
     public FlagsListResponse withItems(Flag[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class FlagsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public FlagsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public FlagsListResponse(){}
 }

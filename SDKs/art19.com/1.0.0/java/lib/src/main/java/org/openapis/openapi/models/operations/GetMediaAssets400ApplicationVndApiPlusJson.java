@@ -25,9 +25,11 @@ public class GetMediaAssets400ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public GetMediaAssets400ApplicationVndApiPlusJsonErrors[] errors;
+
     public GetMediaAssets400ApplicationVndApiPlusJson withErrors(GetMediaAssets400ApplicationVndApiPlusJsonErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetMediaAssets400ApplicationVndApiPlusJson(){}
 }

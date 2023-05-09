@@ -12,6 +12,7 @@ public class BusinessDefaultsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoUpdateCustomer")
     public Boolean autoUpdateCustomer;
+
     public BusinessDefaultsViewModel withAutoUpdateCustomer(Boolean autoUpdateCustomer) {
         this.autoUpdateCustomer = autoUpdateCustomer;
         return this;
@@ -20,6 +21,7 @@ public class BusinessDefaultsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessNotification")
     public Boolean businessNotification;
+
     public BusinessDefaultsViewModel withBusinessNotification(Boolean businessNotification) {
         this.businessNotification = businessNotification;
         return this;
@@ -28,6 +30,7 @@ public class BusinessDefaultsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerCity")
     public Boolean customerCity;
+
     public BusinessDefaultsViewModel withCustomerCity(Boolean customerCity) {
         this.customerCity = customerCity;
         return this;
@@ -36,6 +39,7 @@ public class BusinessDefaultsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerState")
     public Boolean customerState;
+
     public BusinessDefaultsViewModel withCustomerState(Boolean customerState) {
         this.customerState = customerState;
         return this;
@@ -44,6 +48,7 @@ public class BusinessDefaultsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailInfo")
     public Boolean emailInfo;
+
     public BusinessDefaultsViewModel withEmailInfo(Boolean emailInfo) {
         this.emailInfo = emailInfo;
         return this;
@@ -52,6 +57,7 @@ public class BusinessDefaultsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableUtcTimezone")
     public Boolean enableUtcTimezone;
+
     public BusinessDefaultsViewModel withEnableUtcTimezone(Boolean enableUtcTimezone) {
         this.enableUtcTimezone = enableUtcTimezone;
         return this;
@@ -60,9 +66,11 @@ public class BusinessDefaultsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public BusinessDefaultsViewModel withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public BusinessDefaultsViewModel(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CreateUserRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.User user;
+
     public CreateUserRequest withUser(org.openapis.openapi.models.shared.User user) {
         this.user = user;
         return this;
@@ -19,9 +20,11 @@ public class CreateUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=notify")
     public Boolean notify;
+
     public CreateUserRequest withNotify(Boolean notify) {
         this.notify = notify;
         return this;
     }
     
+    public CreateUserRequest(){}
 }

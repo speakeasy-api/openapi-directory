@@ -18,6 +18,7 @@ public class SetMonitoringServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public SetMonitoringServiceRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -29,6 +30,7 @@ public class SetMonitoringServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoringService")
     public String monitoringService;
+
     public SetMonitoringServiceRequest withMonitoringService(String monitoringService) {
         this.monitoringService = monitoringService;
         return this;
@@ -40,6 +42,7 @@ public class SetMonitoringServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SetMonitoringServiceRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class SetMonitoringServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public SetMonitoringServiceRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -62,9 +66,11 @@ public class SetMonitoringServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public SetMonitoringServiceRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public SetMonitoringServiceRequest(){}
 }

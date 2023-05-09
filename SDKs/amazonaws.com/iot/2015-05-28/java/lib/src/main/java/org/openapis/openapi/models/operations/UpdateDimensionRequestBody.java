@@ -12,9 +12,13 @@ public class UpdateDimensionRequestBody {
      */
     @JsonProperty("stringValues")
     public String[] stringValues;
+
     public UpdateDimensionRequestBody withStringValues(String[] stringValues) {
         this.stringValues = stringValues;
         return this;
     }
     
+    public UpdateDimensionRequestBody(@JsonProperty("stringValues") String[] stringValues) {
+        this.stringValues = stringValues;
+  }
 }

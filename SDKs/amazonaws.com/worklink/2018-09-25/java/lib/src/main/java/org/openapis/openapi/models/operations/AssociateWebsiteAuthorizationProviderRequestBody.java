@@ -14,6 +14,7 @@ public class AssociateWebsiteAuthorizationProviderRequestBody {
      */
     @JsonProperty("AuthorizationProviderType")
     public AssociateWebsiteAuthorizationProviderRequestBodyAuthorizationProviderTypeEnum authorizationProviderType;
+
     public AssociateWebsiteAuthorizationProviderRequestBody withAuthorizationProviderType(AssociateWebsiteAuthorizationProviderRequestBodyAuthorizationProviderTypeEnum authorizationProviderType) {
         this.authorizationProviderType = authorizationProviderType;
         return this;
@@ -25,6 +26,7 @@ public class AssociateWebsiteAuthorizationProviderRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public AssociateWebsiteAuthorizationProviderRequestBody withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -35,9 +37,14 @@ public class AssociateWebsiteAuthorizationProviderRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public AssociateWebsiteAuthorizationProviderRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
     }
     
+    public AssociateWebsiteAuthorizationProviderRequestBody(@JsonProperty("AuthorizationProviderType") AssociateWebsiteAuthorizationProviderRequestBodyAuthorizationProviderTypeEnum authorizationProviderType, @JsonProperty("FleetArn") String fleetArn) {
+        this.authorizationProviderType = authorizationProviderType;
+        this.fleetArn = fleetArn;
+  }
 }

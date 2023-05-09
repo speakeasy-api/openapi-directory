@@ -15,9 +15,13 @@ public class LegacyTrackingChannelCatalog {
      */
     @JsonProperty("links")
     public LegacyTrackingChannelCatalogLinks links;
+
     public LegacyTrackingChannelCatalog withLinks(LegacyTrackingChannelCatalogLinks links) {
         this.links = links;
         return this;
     }
     
+    public LegacyTrackingChannelCatalog(@JsonProperty("links") LegacyTrackingChannelCatalogLinks links) {
+        this.links = links;
+  }
 }

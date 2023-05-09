@@ -18,9 +18,11 @@ public class HouseholdIncomeTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("householdIncome")
     public HouseholdIncomeTargetingOptionDetailsHouseholdIncomeEnum householdIncome;
+
     public HouseholdIncomeTargetingOptionDetails withHouseholdIncome(HouseholdIncomeTargetingOptionDetailsHouseholdIncomeEnum householdIncome) {
         this.householdIncome = householdIncome;
         return this;
     }
     
+    public HouseholdIncomeTargetingOptionDetails(){}
 }

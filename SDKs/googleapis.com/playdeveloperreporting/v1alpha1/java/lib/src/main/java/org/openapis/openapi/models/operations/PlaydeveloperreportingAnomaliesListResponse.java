@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PlaydeveloperreportingAnomaliesListResponse {
     
     public String contentType;
+
     public PlaydeveloperreportingAnomaliesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PlaydeveloperreportingAnomaliesListResponse {
      */
     
     public org.openapis.openapi.models.shared.GooglePlayDeveloperReportingV1alpha1ListAnomaliesResponse googlePlayDeveloperReportingV1alpha1ListAnomaliesResponse;
+
     public PlaydeveloperreportingAnomaliesListResponse withGooglePlayDeveloperReportingV1alpha1ListAnomaliesResponse(org.openapis.openapi.models.shared.GooglePlayDeveloperReportingV1alpha1ListAnomaliesResponse googlePlayDeveloperReportingV1alpha1ListAnomaliesResponse) {
         this.googlePlayDeveloperReportingV1alpha1ListAnomaliesResponse = googlePlayDeveloperReportingV1alpha1ListAnomaliesResponse;
         return this;
@@ -26,6 +29,7 @@ public class PlaydeveloperreportingAnomaliesListResponse {
     
     
     public Integer statusCode;
+
     public PlaydeveloperreportingAnomaliesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PlaydeveloperreportingAnomaliesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PlaydeveloperreportingAnomaliesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PlaydeveloperreportingAnomaliesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

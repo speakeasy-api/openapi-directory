@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeVolumesResultVolumes {
     
     public DescribeVolumesResultVolumesAttachments[] attachments;
+
     public DescribeVolumesResultVolumes withAttachments(DescribeVolumesResultVolumesAttachments[] attachments) {
         this.attachments = attachments;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVolumesResultVolumes {
     
     
     public String availabilityZone;
+
     public DescribeVolumesResultVolumes withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVolumesResultVolumes {
     
     
     public OffsetDateTime createTime;
+
     public DescribeVolumesResultVolumes withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVolumesResultVolumes {
     
     
     public Boolean encrypted;
+
     public DescribeVolumesResultVolumes withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVolumesResultVolumes {
     
     
     public Boolean fastRestored;
+
     public DescribeVolumesResultVolumes withFastRestored(Boolean fastRestored) {
         this.fastRestored = fastRestored;
         return this;
@@ -47,6 +52,7 @@ public class DescribeVolumesResultVolumes {
     
     
     public Long iops;
+
     public DescribeVolumesResultVolumes withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -54,6 +60,7 @@ public class DescribeVolumesResultVolumes {
     
     
     public String kmsKeyId;
+
     public DescribeVolumesResultVolumes withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -61,6 +68,7 @@ public class DescribeVolumesResultVolumes {
     
     
     public Boolean multiAttachEnabled;
+
     public DescribeVolumesResultVolumes withMultiAttachEnabled(Boolean multiAttachEnabled) {
         this.multiAttachEnabled = multiAttachEnabled;
         return this;
@@ -68,6 +76,7 @@ public class DescribeVolumesResultVolumes {
     
     
     public String outpostArn;
+
     public DescribeVolumesResultVolumes withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -75,6 +84,7 @@ public class DescribeVolumesResultVolumes {
     
     
     public Long size;
+
     public DescribeVolumesResultVolumes withSize(Long size) {
         this.size = size;
         return this;
@@ -82,6 +92,7 @@ public class DescribeVolumesResultVolumes {
     
     
     public String snapshotId;
+
     public DescribeVolumesResultVolumes withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -89,6 +100,7 @@ public class DescribeVolumesResultVolumes {
     
     
     public DescribeVolumesResultVolumesStateEnum state;
+
     public DescribeVolumesResultVolumes withState(DescribeVolumesResultVolumesStateEnum state) {
         this.state = state;
         return this;
@@ -96,6 +108,7 @@ public class DescribeVolumesResultVolumes {
     
     
     public DescribeVolumesResultVolumesTags[] tags;
+
     public DescribeVolumesResultVolumes withTags(DescribeVolumesResultVolumesTags[] tags) {
         this.tags = tags;
         return this;
@@ -103,6 +116,7 @@ public class DescribeVolumesResultVolumes {
     
     
     public Long throughput;
+
     public DescribeVolumesResultVolumes withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -110,6 +124,7 @@ public class DescribeVolumesResultVolumes {
     
     
     public String volumeId;
+
     public DescribeVolumesResultVolumes withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
@@ -117,9 +132,11 @@ public class DescribeVolumesResultVolumes {
     
     
     public DescribeVolumesResultVolumesVolumeTypeEnum volumeType;
+
     public DescribeVolumesResultVolumes withVolumeType(DescribeVolumesResultVolumesVolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public DescribeVolumesResultVolumes(){}
 }

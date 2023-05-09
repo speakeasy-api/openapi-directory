@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateModelCardResponse {
@@ -12,6 +13,7 @@ public class CreateModelCardResponse {
      */
     
     public Object conflictException;
+
     public CreateModelCardResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateModelCardResponse {
     
     
     public String contentType;
+
     public CreateModelCardResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateModelCardResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateModelCardResponse createModelCardResponse;
+
     public CreateModelCardResponse withCreateModelCardResponse(org.openapis.openapi.models.shared.CreateModelCardResponse createModelCardResponse) {
         this.createModelCardResponse = createModelCardResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateModelCardResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateModelCardResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -46,6 +51,7 @@ public class CreateModelCardResponse {
     
     
     public Integer statusCode;
+
     public CreateModelCardResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateModelCardResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateModelCardResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateModelCardResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

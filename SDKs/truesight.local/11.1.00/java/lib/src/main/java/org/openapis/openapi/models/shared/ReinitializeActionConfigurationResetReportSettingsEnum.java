@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * ReinitializeActionConfigurationResetReportSettingsEnum - When set to &lt;em&gt;1&lt;/em&gt;, clears the report schedule.
  */
 public enum ReinitializeActionConfigurationResetReportSettingsEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0),
+    ONE(1);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private ReinitializeActionConfigurationResetReportSettingsEnum(String value) {
+    private ReinitializeActionConfigurationResetReportSettingsEnum(Integer value) {
         this.value = value;
     }
 }

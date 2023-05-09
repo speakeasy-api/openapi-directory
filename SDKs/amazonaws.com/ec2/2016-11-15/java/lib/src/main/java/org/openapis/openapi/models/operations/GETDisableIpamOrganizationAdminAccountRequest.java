@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisableIpamOrganizationAdminAccountRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDisableIpamOrganizationAdminAccountActionEnum action;
+
     public GETDisableIpamOrganizationAdminAccountRequest withAction(GETDisableIpamOrganizationAdminAccountActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDisableIpamOrganizationAdminAccountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DelegatedAdminAccountId")
     public String delegatedAdminAccountId;
+
     public GETDisableIpamOrganizationAdminAccountRequest withDelegatedAdminAccountId(String delegatedAdminAccountId) {
         this.delegatedAdminAccountId = delegatedAdminAccountId;
         return this;
@@ -29,6 +32,7 @@ public class GETDisableIpamOrganizationAdminAccountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDisableIpamOrganizationAdminAccountRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -36,6 +40,7 @@ public class GETDisableIpamOrganizationAdminAccountRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDisableIpamOrganizationAdminAccountVersionEnum version;
+
     public GETDisableIpamOrganizationAdminAccountRequest withVersion(GETDisableIpamOrganizationAdminAccountVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDisableIpamOrganizationAdminAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDisableIpamOrganizationAdminAccountRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDisableIpamOrganizationAdminAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDisableIpamOrganizationAdminAccountRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDisableIpamOrganizationAdminAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDisableIpamOrganizationAdminAccountRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDisableIpamOrganizationAdminAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDisableIpamOrganizationAdminAccountRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDisableIpamOrganizationAdminAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDisableIpamOrganizationAdminAccountRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDisableIpamOrganizationAdminAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDisableIpamOrganizationAdminAccountRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDisableIpamOrganizationAdminAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDisableIpamOrganizationAdminAccountRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDisableIpamOrganizationAdminAccountRequest(@JsonProperty("Action") GETDisableIpamOrganizationAdminAccountActionEnum action, @JsonProperty("DelegatedAdminAccountId") String delegatedAdminAccountId, @JsonProperty("Version") GETDisableIpamOrganizationAdminAccountVersionEnum version) {
+        this.action = action;
+        this.delegatedAdminAccountId = delegatedAdminAccountId;
+        this.version = version;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudPolicysimulatorV1ReplayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public GoogleCloudPolicysimulatorV1ReplayConfig config;
+
     public GoogleCloudPolicysimulatorV1ReplayInput withConfig(GoogleCloudPolicysimulatorV1ReplayConfig config) {
         this.config = config;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudPolicysimulatorV1ReplayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultsSummary")
     public GoogleCloudPolicysimulatorV1ReplayResultsSummary resultsSummary;
+
     public GoogleCloudPolicysimulatorV1ReplayInput withResultsSummary(GoogleCloudPolicysimulatorV1ReplayResultsSummary resultsSummary) {
         this.resultsSummary = resultsSummary;
         return this;
     }
     
+    public GoogleCloudPolicysimulatorV1ReplayInput(){}
 }

@@ -12,6 +12,7 @@ public class ShippingMethodFreq {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public ShippingMethodFreq withCount(String count) {
         this.count = count;
         return this;
@@ -20,9 +21,11 @@ public class ShippingMethodFreq {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ShippingMethodFreq withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ShippingMethodFreq(){}
 }

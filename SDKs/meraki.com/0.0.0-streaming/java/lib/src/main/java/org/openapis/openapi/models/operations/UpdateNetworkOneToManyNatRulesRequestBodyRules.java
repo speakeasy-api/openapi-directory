@@ -12,6 +12,7 @@ public class UpdateNetworkOneToManyNatRulesRequestBodyRules {
      */
     @JsonProperty("portRules")
     public UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRules[] portRules;
+
     public UpdateNetworkOneToManyNatRulesRequestBodyRules withPortRules(UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRules[] portRules) {
         this.portRules = portRules;
         return this;
@@ -22,6 +23,7 @@ public class UpdateNetworkOneToManyNatRulesRequestBodyRules {
      */
     @JsonProperty("publicIp")
     public String publicIp;
+
     public UpdateNetworkOneToManyNatRulesRequestBodyRules withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -32,9 +34,15 @@ public class UpdateNetworkOneToManyNatRulesRequestBodyRules {
      */
     @JsonProperty("uplink")
     public UpdateNetworkOneToManyNatRulesRequestBodyRulesUplinkEnum uplink;
+
     public UpdateNetworkOneToManyNatRulesRequestBodyRules withUplink(UpdateNetworkOneToManyNatRulesRequestBodyRulesUplinkEnum uplink) {
         this.uplink = uplink;
         return this;
     }
     
+    public UpdateNetworkOneToManyNatRulesRequestBodyRules(@JsonProperty("portRules") UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRules[] portRules, @JsonProperty("publicIp") String publicIp, @JsonProperty("uplink") UpdateNetworkOneToManyNatRulesRequestBodyRulesUplinkEnum uplink) {
+        this.portRules = portRules;
+        this.publicIp = publicIp;
+        this.uplink = uplink;
+  }
 }

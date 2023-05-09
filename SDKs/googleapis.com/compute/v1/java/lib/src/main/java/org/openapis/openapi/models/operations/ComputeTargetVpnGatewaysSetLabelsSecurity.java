@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeTargetVpnGatewaysSetLabelsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetVpnGatewaysSetLabelsSecurityOption1 option1;
+
     public ComputeTargetVpnGatewaysSetLabelsSecurity withOption1(ComputeTargetVpnGatewaysSetLabelsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeTargetVpnGatewaysSetLabelsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetVpnGatewaysSetLabelsSecurityOption2 option2;
+
     public ComputeTargetVpnGatewaysSetLabelsSecurity withOption2(ComputeTargetVpnGatewaysSetLabelsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeTargetVpnGatewaysSetLabelsSecurity(){}
 }

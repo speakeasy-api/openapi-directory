@@ -15,9 +15,11 @@ public class IssuesAddLabelsRequestBody1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public IssuesAddLabelsRequestBody1 withLabels(String[] labels) {
         this.labels = labels;
         return this;
     }
     
+    public IssuesAddLabelsRequestBody1(){}
 }

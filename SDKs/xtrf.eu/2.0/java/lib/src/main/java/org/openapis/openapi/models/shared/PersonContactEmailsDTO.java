@@ -18,6 +18,7 @@ public class PersonContactEmailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional")
     public String[] additional;
+
     public PersonContactEmailsDTO withAdditional(String[] additional) {
         this.additional = additional;
         return this;
@@ -28,9 +29,13 @@ public class PersonContactEmailsDTO {
      */
     @JsonProperty("primary")
     public String primary;
+
     public PersonContactEmailsDTO withPrimary(String primary) {
         this.primary = primary;
         return this;
     }
     
+    public PersonContactEmailsDTO(@JsonProperty("primary") String primary) {
+        this.primary = primary;
+  }
 }

@@ -55,10 +55,8 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchVersionNumberGeometryFilterExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberGeometryFilterExtResponse() {{
+        org.openapis.openapi.models.operations.GetSearchVersionNumberGeometryFilterExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberGeometryFilterExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 405 || httpRes.statusCode() == 596 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
@@ -72,7 +70,9 @@ public class Filters {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse getSearchVersionNumberRoutedFilterPositionHeadingExt(org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest.class, baseUrl, "/search/{versionNumber}/routedFilter/{position}/{heading}.{ext}", request, null);
@@ -94,10 +94,8 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse() {{
+        org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 405 || httpRes.statusCode() == 596 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
@@ -129,10 +127,8 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSearchVersionNumberGeometryFilterExtResponse res = new org.openapis.openapi.models.operations.PostSearchVersionNumberGeometryFilterExtResponse() {{
+        org.openapis.openapi.models.operations.PostSearchVersionNumberGeometryFilterExtResponse res = new org.openapis.openapi.models.operations.PostSearchVersionNumberGeometryFilterExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 405 || httpRes.statusCode() == 596 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
@@ -146,7 +142,9 @@ public class Filters {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse postSearchVersionNumberRoutedFilterPositionHeadingExt(org.openapis.openapi.models.operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest.class, baseUrl, "/search/{versionNumber}/routedFilter/{position}/{heading}.{ext}", request, null);
@@ -170,10 +168,8 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse res = new org.openapis.openapi.models.operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse() {{
+        org.openapis.openapi.models.operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse res = new org.openapis.openapi.models.operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 405 || httpRes.statusCode() == 596 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {

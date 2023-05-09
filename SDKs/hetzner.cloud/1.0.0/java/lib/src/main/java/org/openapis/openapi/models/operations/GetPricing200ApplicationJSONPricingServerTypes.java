@@ -12,6 +12,7 @@ public class GetPricing200ApplicationJSONPricingServerTypes {
      */
     @JsonProperty("id")
     public Double id;
+
     public GetPricing200ApplicationJSONPricingServerTypes withId(Double id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class GetPricing200ApplicationJSONPricingServerTypes {
      */
     @JsonProperty("name")
     public String name;
+
     public GetPricing200ApplicationJSONPricingServerTypes withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,15 @@ public class GetPricing200ApplicationJSONPricingServerTypes {
      */
     @JsonProperty("prices")
     public GetPricing200ApplicationJSONPricingServerTypesPrices[] prices;
+
     public GetPricing200ApplicationJSONPricingServerTypes withPrices(GetPricing200ApplicationJSONPricingServerTypesPrices[] prices) {
         this.prices = prices;
         return this;
     }
     
+    public GetPricing200ApplicationJSONPricingServerTypes(@JsonProperty("id") Double id, @JsonProperty("name") String name, @JsonProperty("prices") GetPricing200ApplicationJSONPricingServerTypesPrices[] prices) {
+        this.id = id;
+        this.name = name;
+        this.prices = prices;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateJobTemplateRequestBodyJobExecutionsRetryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criteriaList")
     public org.openapis.openapi.models.shared.RetryCriteria[] criteriaList;
+
     public CreateJobTemplateRequestBodyJobExecutionsRetryConfig withCriteriaList(org.openapis.openapi.models.shared.RetryCriteria[] criteriaList) {
         this.criteriaList = criteriaList;
         return this;
     }
     
+    public CreateJobTemplateRequestBodyJobExecutionsRetryConfig(){}
 }

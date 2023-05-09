@@ -19,6 +19,7 @@ public class ListAppImageConfigsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListAppImageConfigsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListAppImageConfigsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListAppImageConfigsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListAppImageConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAppImageConfigsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -47,6 +50,7 @@ public class ListAppImageConfigsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ModifiedTimeAfter")
     public OffsetDateTime modifiedTimeAfter;
+
     public ListAppImageConfigsRequest withModifiedTimeAfter(OffsetDateTime modifiedTimeAfter) {
         this.modifiedTimeAfter = modifiedTimeAfter;
         return this;
@@ -57,6 +61,7 @@ public class ListAppImageConfigsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ModifiedTimeBefore")
     public OffsetDateTime modifiedTimeBefore;
+
     public ListAppImageConfigsRequest withModifiedTimeBefore(OffsetDateTime modifiedTimeBefore) {
         this.modifiedTimeBefore = modifiedTimeBefore;
         return this;
@@ -65,6 +70,7 @@ public class ListAppImageConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListAppImageConfigsRequest withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -73,6 +79,7 @@ public class ListAppImageConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAppImageConfigsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -81,6 +88,7 @@ public class ListAppImageConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public AppImageConfigSortKeyEnum sortBy;
+
     public ListAppImageConfigsRequest withSortBy(AppImageConfigSortKeyEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -89,9 +97,11 @@ public class ListAppImageConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListAppImageConfigsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListAppImageConfigsRequest(){}
 }

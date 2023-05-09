@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteArchiveResponse {
     
     public String contentType;
+
     public DeleteArchiveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteArchiveResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteArchiveResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteArchiveResponse {
      */
     
     public Object missingParameterValueException;
+
     public DeleteArchiveResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteArchiveResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteArchiveResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteArchiveResponse {
     
     
     public Integer statusCode;
+
     public DeleteArchiveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteArchiveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteArchiveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteArchiveResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteArchiveResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public DeleteArchiveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

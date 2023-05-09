@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05ConsentsHipNotifyJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05ConsentsHipNotifyJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05ConsentsHipNotifyJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05ConsentsHipNotifyJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HIPConsentNotification hipConsentNotification;
+
     public PostV05ConsentsHipNotifyJsonRequest withHIPConsentNotification(org.openapis.openapi.models.shared.HIPConsentNotification hipConsentNotification) {
         this.hipConsentNotification = hipConsentNotification;
         return this;
@@ -29,9 +32,15 @@ public class PostV05ConsentsHipNotifyJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
     public String xHipId;
+
     public PostV05ConsentsHipNotifyJsonRequest withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
     }
     
+    public PostV05ConsentsHipNotifyJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("HIPConsentNotification") org.openapis.openapi.models.shared.HIPConsentNotification hipConsentNotification, @JsonProperty("X-HIP-ID") String xHipId) {
+        this.authorization = authorization;
+        this.hipConsentNotification = hipConsentNotification;
+        this.xHipId = xHipId;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateUserAccessLoggingSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateUserAccessLoggingSettingsRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateUserAccessLoggingSettingsRequestBody {
      */
     @JsonProperty("kinesisStreamArn")
     public String kinesisStreamArn;
+
     public CreateUserAccessLoggingSettingsRequestBody withKinesisStreamArn(String kinesisStreamArn) {
         this.kinesisStreamArn = kinesisStreamArn;
         return this;
@@ -36,9 +38,13 @@ public class CreateUserAccessLoggingSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateUserAccessLoggingSettingsRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateUserAccessLoggingSettingsRequestBody(@JsonProperty("kinesisStreamArn") String kinesisStreamArn) {
+        this.kinesisStreamArn = kinesisStreamArn;
+  }
 }

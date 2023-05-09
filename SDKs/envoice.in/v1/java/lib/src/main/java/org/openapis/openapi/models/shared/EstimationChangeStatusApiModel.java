@@ -17,6 +17,7 @@ public class EstimationChangeStatusApiModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Integer id;
+
     public EstimationChangeStatusApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class EstimationChangeStatusApiModel {
     @JsonProperty("Status")
     @SpeakeasyMetadata("form:name=Status")
     public EstimationChangeStatusApiModelStatusEnum status;
+
     public EstimationChangeStatusApiModel withStatus(EstimationChangeStatusApiModelStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public EstimationChangeStatusApiModel(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class SetTypeDefaultVersionInput {
     
     public String arn;
+
     public SetTypeDefaultVersionInput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -16,6 +17,7 @@ public class SetTypeDefaultVersionInput {
     
     
     public RegistryTypeEnum type;
+
     public SetTypeDefaultVersionInput withType(RegistryTypeEnum type) {
         this.type = type;
         return this;
@@ -23,6 +25,7 @@ public class SetTypeDefaultVersionInput {
     
     
     public String typeName;
+
     public SetTypeDefaultVersionInput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -30,9 +33,11 @@ public class SetTypeDefaultVersionInput {
     
     
     public String versionId;
+
     public SetTypeDefaultVersionInput withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public SetTypeDefaultVersionInput(){}
 }

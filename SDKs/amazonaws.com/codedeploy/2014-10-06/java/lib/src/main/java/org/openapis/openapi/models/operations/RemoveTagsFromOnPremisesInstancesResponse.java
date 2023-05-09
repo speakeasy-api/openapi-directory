@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveTagsFromOnPremisesInstancesResponse {
     
     public String contentType;
+
     public RemoveTagsFromOnPremisesInstancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemoveTagsFromOnPremisesInstancesResponse {
      */
     
     public Object instanceLimitExceededException;
+
     public RemoveTagsFromOnPremisesInstancesResponse withInstanceLimitExceededException(Object instanceLimitExceededException) {
         this.instanceLimitExceededException = instanceLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class RemoveTagsFromOnPremisesInstancesResponse {
      */
     
     public Object instanceNameRequiredException;
+
     public RemoveTagsFromOnPremisesInstancesResponse withInstanceNameRequiredException(Object instanceNameRequiredException) {
         this.instanceNameRequiredException = instanceNameRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class RemoveTagsFromOnPremisesInstancesResponse {
      */
     
     public Object instanceNotRegisteredException;
+
     public RemoveTagsFromOnPremisesInstancesResponse withInstanceNotRegisteredException(Object instanceNotRegisteredException) {
         this.instanceNotRegisteredException = instanceNotRegisteredException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveTagsFromOnPremisesInstancesResponse {
      */
     
     public Object invalidInstanceNameException;
+
     public RemoveTagsFromOnPremisesInstancesResponse withInvalidInstanceNameException(Object invalidInstanceNameException) {
         this.invalidInstanceNameException = invalidInstanceNameException;
         return this;
@@ -59,6 +65,7 @@ public class RemoveTagsFromOnPremisesInstancesResponse {
      */
     
     public Object invalidTagException;
+
     public RemoveTagsFromOnPremisesInstancesResponse withInvalidTagException(Object invalidTagException) {
         this.invalidTagException = invalidTagException;
         return this;
@@ -66,6 +73,7 @@ public class RemoveTagsFromOnPremisesInstancesResponse {
     
     
     public Integer statusCode;
+
     public RemoveTagsFromOnPremisesInstancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class RemoveTagsFromOnPremisesInstancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveTagsFromOnPremisesInstancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class RemoveTagsFromOnPremisesInstancesResponse {
      */
     
     public Object tagLimitExceededException;
+
     public RemoveTagsFromOnPremisesInstancesResponse withTagLimitExceededException(Object tagLimitExceededException) {
         this.tagLimitExceededException = tagLimitExceededException;
         return this;
@@ -93,9 +103,14 @@ public class RemoveTagsFromOnPremisesInstancesResponse {
      */
     
     public Object tagRequiredException;
+
     public RemoveTagsFromOnPremisesInstancesResponse withTagRequiredException(Object tagRequiredException) {
         this.tagRequiredException = tagRequiredException;
         return this;
     }
     
+    public RemoveTagsFromOnPremisesInstancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

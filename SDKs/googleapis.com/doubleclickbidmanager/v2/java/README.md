@@ -16,32 +16,31 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesCreateSecurity;
 import org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesCreateRequest;
 import org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesCreateResponse;
+import org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.QueryInput;
-import org.openapis.openapi.models.shared.QueryScheduleFrequencyEnum;
-import org.openapis.openapi.models.shared.QuerySchedule;
-import org.openapis.openapi.models.shared.Date;
-import org.openapis.openapi.models.shared.ParametersTypeEnum;
-import org.openapis.openapi.models.shared.Parameters;
-import org.openapis.openapi.models.shared.Options;
-import org.openapis.openapi.models.shared.PathQueryOptions;
-import org.openapis.openapi.models.shared.PathFilterPathMatchPositionEnum;
-import org.openapis.openapi.models.shared.PathFilter;
-import org.openapis.openapi.models.shared.EventFilter;
-import org.openapis.openapi.models.shared.PathQueryOptionsFilterMatchEnum;
-import org.openapis.openapi.models.shared.PathQueryOptionsFilter;
 import org.openapis.openapi.models.shared.ChannelGrouping;
-import org.openapis.openapi.models.shared.Rule;
-import org.openapis.openapi.models.shared.DisjunctiveMatchStatement;
-import org.openapis.openapi.models.shared.FilterPair;
-import org.openapis.openapi.models.shared.QueryMetadataFormatEnum;
-import org.openapis.openapi.models.shared.QueryMetadata;
-import org.openapis.openapi.models.shared.DataRangeRangeEnum;
 import org.openapis.openapi.models.shared.DataRange;
+import org.openapis.openapi.models.shared.DataRangeRangeEnum;
+import org.openapis.openapi.models.shared.Date;
+import org.openapis.openapi.models.shared.DisjunctiveMatchStatement;
+import org.openapis.openapi.models.shared.EventFilter;
+import org.openapis.openapi.models.shared.FilterPair;
+import org.openapis.openapi.models.shared.Options;
+import org.openapis.openapi.models.shared.Parameters;
+import org.openapis.openapi.models.shared.ParametersTypeEnum;
+import org.openapis.openapi.models.shared.PathFilter;
+import org.openapis.openapi.models.shared.PathFilterPathMatchPositionEnum;
+import org.openapis.openapi.models.shared.PathQueryOptions;
+import org.openapis.openapi.models.shared.PathQueryOptionsFilter;
+import org.openapis.openapi.models.shared.PathQueryOptionsFilterMatchEnum;
+import org.openapis.openapi.models.shared.QueryInput;
+import org.openapis.openapi.models.shared.QueryMetadata;
+import org.openapis.openapi.models.shared.QueryMetadataFormatEnum;
+import org.openapis.openapi.models.shared.QuerySchedule;
+import org.openapis.openapi.models.shared.QueryScheduleFrequencyEnum;
+import org.openapis.openapi.models.shared.Rule;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -51,7 +50,7 @@ public class Application {
                 .build();
 
             DoubleclickbidmanagerQueriesCreateRequest req = new DoubleclickbidmanagerQueriesCreateRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 queryInput = new QueryInput() {{
                     metadata = new QueryMetadata() {{
                         dataRange = new DataRange() {{
@@ -59,15 +58,15 @@ public class Application {
                                 day = 592845;
                                 month = 715190;
                                 year = 844266;
-                            }};
+                            }};;
                             customStartDate = new Date() {{
                                 day = 602763;
                                 month = 857946;
                                 year = 544883;
-                            }};
-                            range = "ALL_TIME";
-                        }};
-                        format = "CSV";
+                            }};;
+                            range = DataRangeRangeEnum.ALL_TIME;
+                        }};;
+                        format = QueryMetadataFormatEnum.CSV;
                         sendNotification = false;
                         shareEmailAddress = new String[]{{
                             add("deserunt"),
@@ -75,7 +74,7 @@ public class Application {
                             add("iure"),
                         }};
                         title = "Mrs.";
-                    }};
+                    }};;
                     params = new Parameters() {{
                         filters = new org.openapis.openapi.models.shared.FilterPair[]{{
                             add(new FilterPair() {{
@@ -110,7 +109,7 @@ public class Application {
                             pathQueryOptions = new PathQueryOptions() {{
                                 channelGrouping = new ChannelGrouping() {{
                                     fallbackName = "deserunt";
-                                    name = "perferendis";
+                                    name = "Roberta Sipes";
                                     rules = new org.openapis.openapi.models.shared.Rule[]{{
                                         add(new Rule() {{
                                             disjunctiveMatchStatements = new org.openapis.openapi.models.shared.DisjunctiveMatchStatement[]{{
@@ -118,55 +117,43 @@ public class Application {
                                                     eventFilters = new org.openapis.openapi.models.shared.EventFilter[]{{
                                                         add(new EventFilter() {{
                                                             dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "quo";
-                                                                match = "UNKNOWN";
+                                                                filter = "maiores";
+                                                                match = PathQueryOptionsFilterMatchEnum.PARTIAL;
                                                                 values = new String[]{{
-                                                                    add("at"),
-                                                                    add("maiores"),
-                                                                    add("molestiae"),
                                                                     add("quod"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "quod";
-                                                                match = "PARTIAL";
-                                                                values = new String[]{{
+                                                                    add("esse"),
+                                                                    add("totam"),
                                                                     add("porro"),
-                                                                    add("dolorum"),
-                                                                    add("dicta"),
                                                                 }};
                                                             }};
                                                         }}),
                                                         add(new EventFilter() {{
                                                             dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "nam";
-                                                                match = "BEGINS_WITH";
+                                                                filter = "dolorum";
+                                                                match = PathQueryOptionsFilterMatchEnum.UNKNOWN;
                                                                 values = new String[]{{
+                                                                    add("officia"),
+                                                                    add("occaecati"),
                                                                     add("fugit"),
-                                                                    add("deleniti"),
-                                                                    add("hic"),
                                                                 }};
                                                             }};
                                                         }}),
                                                         add(new EventFilter() {{
                                                             dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "optio";
-                                                                match = "PARTIAL";
+                                                                filter = "deleniti";
+                                                                match = PathQueryOptionsFilterMatchEnum.WILDCARD_EXPRESSION;
                                                                 values = new String[]{{
+                                                                    add("totam"),
+                                                                    add("beatae"),
                                                                     add("commodi"),
+                                                                    add("molestiae"),
                                                                 }};
                                                             }};
                                                         }}),
-                                                    }};
-                                                }}),
-                                                add(new DisjunctiveMatchStatement() {{
-                                                    eventFilters = new org.openapis.openapi.models.shared.EventFilter[]{{
                                                         add(new EventFilter() {{
                                                             dimensionFilter = new PathQueryOptionsFilter() {{
                                                                 filter = "modi";
-                                                                match = "UNKNOWN";
+                                                                match = PathQueryOptionsFilterMatchEnum.UNKNOWN;
                                                                 values = new String[]{{
                                                                     add("cum"),
                                                                     add("esse"),
@@ -175,46 +162,18 @@ public class Application {
                                                                 }};
                                                             }};
                                                         }}),
+                                                    }};
+                                                }}),
+                                                add(new DisjunctiveMatchStatement() {{
+                                                    eventFilters = new org.openapis.openapi.models.shared.EventFilter[]{{
                                                         add(new EventFilter() {{
                                                             dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "aspernatur";
-                                                                match = "UNKNOWN";
+                                                                filter = "perferendis";
+                                                                match = PathQueryOptionsFilterMatchEnum.EXACT;
                                                                 values = new String[]{{
-                                                                    add("natus"),
                                                                     add("sed"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new DisjunctiveMatchStatement() {{
-                                                    eventFilters = new org.openapis.openapi.models.shared.EventFilter[]{{
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "dolor";
-                                                                match = "BEGINS_WITH";
-                                                                values = new String[]{{
-                                                                    add("hic"),
-                                                                    add("saepe"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "fuga";
-                                                                match = "PARTIAL";
-                                                                values = new String[]{{
                                                                     add("iste"),
-                                                                    add("iure"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "saepe";
-                                                                match = "BEGINS_WITH";
-                                                                values = new String[]{{
-                                                                    add("ipsa"),
+                                                                    add("dolor"),
                                                                 }};
                                                             }};
                                                         }}),
@@ -222,10 +181,33 @@ public class Application {
                                                 }}),
                                                 add(new DisjunctiveMatchStatement() {{
                                                     eventFilters = new org.openapis.openapi.models.shared.EventFilter[]{{
+                                                        add(new EventFilter() {{
+                                                            dimensionFilter = new PathQueryOptionsFilter() {{
+                                                                filter = "laboriosam";
+                                                                match = PathQueryOptionsFilterMatchEnum.WILDCARD_EXPRESSION;
+                                                                values = new String[]{{
+                                                                    add("fuga"),
+                                                                    add("in"),
+                                                                    add("corporis"),
+                                                                    add("iste"),
+                                                                }};
+                                                            }};
+                                                        }}),
+                                                        add(new EventFilter() {{
+                                                            dimensionFilter = new PathQueryOptionsFilter() {{
+                                                                filter = "iure";
+                                                                match = PathQueryOptionsFilterMatchEnum.WILDCARD_EXPRESSION;
+                                                                values = new String[]{{
+                                                                    add("architecto"),
+                                                                    add("ipsa"),
+                                                                    add("reiciendis"),
+                                                                }};
+                                                            }};
+                                                        }}),
                                                         add(new EventFilter() {{
                                                             dimensionFilter = new PathQueryOptionsFilter() {{
                                                                 filter = "est";
-                                                                match = "BEGINS_WITH";
+                                                                match = PathQueryOptionsFilterMatchEnum.BEGINS_WITH;
                                                                 values = new String[]{{
                                                                     add("dolores"),
                                                                     add("dolorem"),
@@ -233,258 +215,109 @@ public class Application {
                                                                 }};
                                                             }};
                                                         }}),
+                                                    }};
+                                                }}),
+                                                add(new DisjunctiveMatchStatement() {{
+                                                    eventFilters = new org.openapis.openapi.models.shared.EventFilter[]{{
                                                         add(new EventFilter() {{
                                                             dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "explicabo";
-                                                                match = "BEGINS_WITH";
+                                                                filter = "nobis";
+                                                                match = PathQueryOptionsFilterMatchEnum.EXACT;
                                                                 values = new String[]{{
-                                                                    add("omnis"),
                                                                     add("nemo"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "minima";
-                                                                match = "PARTIAL";
-                                                                values = new String[]{{
-                                                                    add("iure"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "culpa";
-                                                                match = "WILDCARD_EXPRESSION";
-                                                                values = new String[]{{
-                                                                    add("architecto"),
-                                                                    add("mollitia"),
-                                                                    add("dolorem"),
-                                                                    add("culpa"),
+                                                                    add("minima"),
+                                                                    add("excepturi"),
                                                                 }};
                                                             }};
                                                         }}),
                                                     }};
                                                 }}),
                                             }};
-                                            name = "consequuntur";
-                                        }}),
-                                        add(new Rule() {{
-                                            disjunctiveMatchStatements = new org.openapis.openapi.models.shared.DisjunctiveMatchStatement[]{{
-                                                add(new DisjunctiveMatchStatement() {{
-                                                    eventFilters = new org.openapis.openapi.models.shared.EventFilter[]{{
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "occaecati";
-                                                                match = "EXACT";
-                                                                values = new String[]{{
-                                                                    add("quam"),
-                                                                    add("molestiae"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "velit";
-                                                                match = "BEGINS_WITH";
-                                                                values = new String[]{{
-                                                                    add("quis"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "vitae";
-                                                                match = "BEGINS_WITH";
-                                                                values = new String[]{{
-                                                                    add("enim"),
-                                                                    add("odit"),
-                                                                    add("quo"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new DisjunctiveMatchStatement() {{
-                                                    eventFilters = new org.openapis.openapi.models.shared.EventFilter[]{{
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "tenetur";
-                                                                match = "EXACT";
-                                                                values = new String[]{{
-                                                                    add("possimus"),
-                                                                    add("aut"),
-                                                                    add("quasi"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new DisjunctiveMatchStatement() {{
-                                                    eventFilters = new org.openapis.openapi.models.shared.EventFilter[]{{
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "temporibus";
-                                                                match = "BEGINS_WITH";
-                                                                values = new String[]{{
-                                                                    add("reiciendis"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "voluptatibus";
-                                                                match = "WILDCARD_EXPRESSION";
-                                                                values = new String[]{{
-                                                                    add("praesentium"),
-                                                                    add("voluptatibus"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "ipsa";
-                                                                match = "BEGINS_WITH";
-                                                                values = new String[]{{
-                                                                    add("cum"),
-                                                                    add("perferendis"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new DisjunctiveMatchStatement() {{
-                                                    eventFilters = new org.openapis.openapi.models.shared.EventFilter[]{{
-                                                        add(new EventFilter() {{
-                                                            dimensionFilter = new PathQueryOptionsFilter() {{
-                                                                filter = "reprehenderit";
-                                                                match = "EXACT";
-                                                                values = new String[]{{
-                                                                    add("dicta"),
-                                                                    add("corporis"),
-                                                                    add("dolore"),
-                                                                    add("iusto"),
-                                                                }};
-                                                            }};
-                                                        }}),
-                                                    }};
-                                                }}),
-                                            }};
-                                            name = "dicta";
+                                            name = "Charlene Nicolas";
                                         }}),
                                     }};
-                                }};
+                                }};;
                                 pathFilters = new org.openapis.openapi.models.shared.PathFilter[]{{
                                     add(new PathFilter() {{
                                         eventFilters = new org.openapis.openapi.models.shared.EventFilter[]{{
                                             add(new EventFilter() {{
                                                 dimensionFilter = new PathQueryOptionsFilter() {{
-                                                    filter = "accusamus";
-                                                    match = "PARTIAL";
+                                                    filter = "dolorem";
+                                                    match = PathQueryOptionsFilterMatchEnum.BEGINS_WITH;
                                                     values = new String[]{{
-                                                        add("quae"),
-                                                        add("ipsum"),
-                                                        add("quidem"),
-                                                        add("molestias"),
+                                                        add("repellat"),
                                                     }};
                                                 }};
                                             }}),
                                             add(new EventFilter() {{
                                                 dimensionFilter = new PathQueryOptionsFilter() {{
-                                                    filter = "excepturi";
-                                                    match = "WILDCARD_EXPRESSION";
+                                                    filter = "mollitia";
+                                                    match = PathQueryOptionsFilterMatchEnum.PARTIAL;
                                                     values = new String[]{{
-                                                        add("praesentium"),
-                                                        add("rem"),
+                                                        add("commodi"),
+                                                        add("quam"),
+                                                    }};
+                                                }};
+                                            }}),
+                                            add(new EventFilter() {{
+                                                dimensionFilter = new PathQueryOptionsFilter() {{
+                                                    filter = "molestiae";
+                                                    match = PathQueryOptionsFilterMatchEnum.EXACT;
+                                                    values = new String[]{{
+                                                        add("quia"),
+                                                        add("quis"),
+                                                        add("vitae"),
                                                     }};
                                                 }};
                                             }}),
                                         }};
-                                        pathMatchPosition = "LAST";
-                                    }}),
-                                    add(new PathFilter() {{
-                                        eventFilters = new org.openapis.openapi.models.shared.EventFilter[]{{
-                                            add(new EventFilter() {{
-                                                dimensionFilter = new PathQueryOptionsFilter() {{
-                                                    filter = "repudiandae";
-                                                    match = "PARTIAL";
-                                                    values = new String[]{{
-                                                        add("itaque"),
-                                                    }};
-                                                }};
-                                            }}),
-                                        }};
-                                        pathMatchPosition = "ANY";
-                                    }}),
-                                    add(new PathFilter() {{
-                                        eventFilters = new org.openapis.openapi.models.shared.EventFilter[]{{
-                                            add(new EventFilter() {{
-                                                dimensionFilter = new PathQueryOptionsFilter() {{
-                                                    filter = "consequatur";
-                                                    match = "BEGINS_WITH";
-                                                    values = new String[]{{
-                                                        add("explicabo"),
-                                                        add("deserunt"),
-                                                        add("distinctio"),
-                                                        add("quibusdam"),
-                                                    }};
-                                                }};
-                                            }}),
-                                            add(new EventFilter() {{
-                                                dimensionFilter = new PathQueryOptionsFilter() {{
-                                                    filter = "labore";
-                                                    match = "EXACT";
-                                                    values = new String[]{{
-                                                        add("aliquid"),
-                                                    }};
-                                                }};
-                                            }}),
-                                        }};
-                                        pathMatchPosition = "FIRST";
+                                        pathMatchPosition = PathFilterPathMatchPositionEnum.FIRST;
                                     }}),
                                 }};
-                            }};
-                        }};
-                        type = "GRP";
-                    }};
+                            }};;
+                        }};;
+                        type = ParametersTypeEnum.YOUTUBE_PROGRAMMATIC_GUARANTEED;
+                    }};;
                     schedule = new QuerySchedule() {{
                         endDate = new Date() {{
-                            day = 20107;
-                            month = 164940;
-                            year = 828940;
-                        }};
-                        frequency = "DAILY";
-                        nextRunTimezoneCode = "alias";
+                            day = 317202;
+                            month = 138183;
+                            year = 778346;
+                        }};;
+                        frequency = QueryScheduleFrequencyEnum.ONE_TIME;
+                        nextRunTimezoneCode = "tenetur";
                         startDate = new Date() {{
-                            day = 146441;
-                            month = 677817;
-                            year = 569618;
-                        }};
-                    }};
-                }};
-                accessToken = "tempora";
-                alt = "proto";
-                callback = "tempore";
-                fields = "labore";
-                key = "delectus";
-                oauthToken = "eum";
+                            day = 368725;
+                            month = 662527;
+                            year = 820994;
+                        }};;
+                    }};;
+                }};;
+                accessToken = "aut";
+                alt = AltEnum.JSON;
+                callback = "error";
+                fields = "temporibus";
+                key = "laborum";
+                oauthToken = "quasi";
                 prettyPrint = false;
-                quotaUser = "non";
-                uploadType = "eligendi";
-                uploadProtocol = "sint";
-            }}            
+                quotaUser = "reiciendis";
+                uploadType = "voluptatibus";
+                uploadProtocol = "vero";
+            }};            
 
-            DoubleclickbidmanagerQueriesCreateResponse res = sdk.queries.doubleclickbidmanagerQueriesCreate(req, new DoubleclickbidmanagerQueriesCreateSecurity() {{
+            DoubleclickbidmanagerQueriesCreateResponse res = sdk.queries.doubleclickbidmanagerQueriesCreate(req, new DoubleclickbidmanagerQueriesCreateSecurity("nihil", "praesentium") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.query.isPresent()) {
+            if (res.query != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -492,15 +325,15 @@ public class Application {
 ## Available Resources and Operations
 
 
-### queries
+### [queries](docs/queries/README.md)
 
-* `doubleclickbidmanagerQueriesCreate` - Creates a query.
-* `doubleclickbidmanagerQueriesDelete` - Deletes a query as well as the associated reports.
-* `doubleclickbidmanagerQueriesGet` - Retrieves a query.
-* `doubleclickbidmanagerQueriesList` - Lists queries created by the current user.
-* `doubleclickbidmanagerQueriesReportsGet` - Retrieves a report.
-* `doubleclickbidmanagerQueriesReportsList` - Lists reports associated with a query.
-* `doubleclickbidmanagerQueriesRun` - Runs a stored query to generate a report.
+* [doubleclickbidmanagerQueriesCreate](docs/queries/README.md#doubleclickbidmanagerqueriescreate) - Creates a query.
+* [doubleclickbidmanagerQueriesDelete](docs/queries/README.md#doubleclickbidmanagerqueriesdelete) - Deletes a query as well as the associated reports.
+* [doubleclickbidmanagerQueriesGet](docs/queries/README.md#doubleclickbidmanagerqueriesget) - Retrieves a query.
+* [doubleclickbidmanagerQueriesList](docs/queries/README.md#doubleclickbidmanagerquerieslist) - Lists queries created by the current user.
+* [doubleclickbidmanagerQueriesReportsGet](docs/queries/README.md#doubleclickbidmanagerqueriesreportsget) - Retrieves a report.
+* [doubleclickbidmanagerQueriesReportsList](docs/queries/README.md#doubleclickbidmanagerqueriesreportslist) - Lists reports associated with a query.
+* [doubleclickbidmanagerQueriesRun](docs/queries/README.md#doubleclickbidmanagerqueriesrun) - Runs a stored query to generate a report.
 <!-- End SDK Available Operations -->
 
 ### Maturity

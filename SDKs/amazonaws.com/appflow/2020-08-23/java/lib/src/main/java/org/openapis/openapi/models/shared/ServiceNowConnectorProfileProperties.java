@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ServiceNowConnectorProfileProperties {
     @JsonProperty("instanceUrl")
     public String instanceUrl;
+
     public ServiceNowConnectorProfileProperties withInstanceUrl(String instanceUrl) {
         this.instanceUrl = instanceUrl;
         return this;
     }
     
+    public ServiceNowConnectorProfileProperties(@JsonProperty("instanceUrl") String instanceUrl) {
+        this.instanceUrl = instanceUrl;
+  }
 }

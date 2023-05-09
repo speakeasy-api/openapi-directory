@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MripcResponse {
     
     public String contentType;
+
     public MripcResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MripcResponse {
     
     
     public Integer statusCode;
+
     public MripcResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MripcResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MripcResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class MripcResponse {
      */
     
     public Mripc400ApplicationJSON mripc400ApplicationJSONObject;
+
     public MripcResponse withMripc400ApplicationJSONObject(Mripc400ApplicationJSON mripc400ApplicationJSONObject) {
         this.mripc400ApplicationJSONObject = mripc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class MripcResponse {
      */
     
     public Mripc401ApplicationJSON mripc401ApplicationJSONObject;
+
     public MripcResponse withMripc401ApplicationJSONObject(Mripc401ApplicationJSON mripc401ApplicationJSONObject) {
         this.mripc401ApplicationJSONObject = mripc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class MripcResponse {
      */
     
     public Mripc404ApplicationJSON mripc404ApplicationJSONObject;
+
     public MripcResponse withMripc404ApplicationJSONObject(Mripc404ApplicationJSON mripc404ApplicationJSONObject) {
         this.mripc404ApplicationJSONObject = mripc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class MripcResponse {
      */
     
     public Mripc500ApplicationJSON mripc500ApplicationJSONObject;
+
     public MripcResponse withMripc500ApplicationJSONObject(Mripc500ApplicationJSON mripc500ApplicationJSONObject) {
         this.mripc500ApplicationJSONObject = mripc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class MripcResponse {
      */
     
     public Mripc502ApplicationJSON mripc502ApplicationJSONObject;
+
     public MripcResponse withMripc502ApplicationJSONObject(Mripc502ApplicationJSON mripc502ApplicationJSONObject) {
         this.mripc502ApplicationJSONObject = mripc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class MripcResponse {
      */
     
     public Mripc503ApplicationJSON mripc503ApplicationJSONObject;
+
     public MripcResponse withMripc503ApplicationJSONObject(Mripc503ApplicationJSON mripc503ApplicationJSONObject) {
         this.mripc503ApplicationJSONObject = mripc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class MripcResponse {
      */
     
     public Mripc504ApplicationJSON mripc504ApplicationJSONObject;
+
     public MripcResponse withMripc504ApplicationJSONObject(Mripc504ApplicationJSON mripc504ApplicationJSONObject) {
         this.mripc504ApplicationJSONObject = mripc504ApplicationJSONObject;
         return this;
     }
     
+    public MripcResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

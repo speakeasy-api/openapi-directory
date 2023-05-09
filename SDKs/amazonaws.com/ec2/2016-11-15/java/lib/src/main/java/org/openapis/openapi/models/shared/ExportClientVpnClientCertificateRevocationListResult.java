@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ExportClientVpnClientCertificateRevocationListResult {
     
     public String certificateRevocationList;
+
     public ExportClientVpnClientCertificateRevocationListResult withCertificateRevocationList(String certificateRevocationList) {
         this.certificateRevocationList = certificateRevocationList;
         return this;
@@ -19,9 +20,11 @@ public class ExportClientVpnClientCertificateRevocationListResult {
     
     
     public ExportClientVpnClientCertificateRevocationListResultStatus status;
+
     public ExportClientVpnClientCertificateRevocationListResult withStatus(ExportClientVpnClientCertificateRevocationListResultStatus status) {
         this.status = status;
         return this;
     }
     
+    public ExportClientVpnClientCertificateRevocationListResult(){}
 }

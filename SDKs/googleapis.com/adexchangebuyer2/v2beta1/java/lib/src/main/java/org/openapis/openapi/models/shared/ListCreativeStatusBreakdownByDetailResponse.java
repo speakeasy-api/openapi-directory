@@ -18,6 +18,7 @@ public class ListCreativeStatusBreakdownByDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailType")
     public ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum detailType;
+
     public ListCreativeStatusBreakdownByDetailResponse withDetailType(ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum detailType) {
         this.detailType = detailType;
         return this;
@@ -29,6 +30,7 @@ public class ListCreativeStatusBreakdownByDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filteredBidDetailRows")
     public FilteredBidDetailRow[] filteredBidDetailRows;
+
     public ListCreativeStatusBreakdownByDetailResponse withFilteredBidDetailRows(FilteredBidDetailRow[] filteredBidDetailRows) {
         this.filteredBidDetailRows = filteredBidDetailRows;
         return this;
@@ -40,9 +42,11 @@ public class ListCreativeStatusBreakdownByDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCreativeStatusBreakdownByDetailResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCreativeStatusBreakdownByDetailResponse(){}
 }

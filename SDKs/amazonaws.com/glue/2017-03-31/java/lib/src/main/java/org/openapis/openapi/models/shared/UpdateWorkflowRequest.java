@@ -12,6 +12,7 @@ public class UpdateWorkflowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultRunProperties")
     public java.util.Map<String, String> defaultRunProperties;
+
     public UpdateWorkflowRequest withDefaultRunProperties(java.util.Map<String, String> defaultRunProperties) {
         this.defaultRunProperties = defaultRunProperties;
         return this;
@@ -20,6 +21,7 @@ public class UpdateWorkflowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateWorkflowRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class UpdateWorkflowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrentRuns")
     public Long maxConcurrentRuns;
+
     public UpdateWorkflowRequest withMaxConcurrentRuns(Long maxConcurrentRuns) {
         this.maxConcurrentRuns = maxConcurrentRuns;
         return this;
@@ -35,9 +38,13 @@ public class UpdateWorkflowRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateWorkflowRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateWorkflowRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

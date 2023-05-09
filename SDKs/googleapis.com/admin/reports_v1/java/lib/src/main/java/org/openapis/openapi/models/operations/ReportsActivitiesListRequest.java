@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReportsActivitiesListRequest {
@@ -12,6 +13,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ReportsActivitiesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ReportsActivitiesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=actorIpAddress")
     public String actorIpAddress;
+
     public ReportsActivitiesListRequest withActorIpAddress(String actorIpAddress) {
         this.actorIpAddress = actorIpAddress;
         return this;
@@ -42,6 +46,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ReportsActivitiesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationName")
     public ReportsActivitiesListApplicationNameEnum applicationName;
+
     public ReportsActivitiesListRequest withApplicationName(ReportsActivitiesListApplicationNameEnum applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -62,6 +68,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ReportsActivitiesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -72,6 +79,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customerId")
     public String customerId;
+
     public ReportsActivitiesListRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -82,6 +90,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
     public String endTime;
+
     public ReportsActivitiesListRequest withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -92,6 +101,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=eventName")
     public String eventName;
+
     public ReportsActivitiesListRequest withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -102,6 +112,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ReportsActivitiesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -112,6 +123,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filters")
     public String filters;
+
     public ReportsActivitiesListRequest withFilters(String filters) {
         this.filters = filters;
         return this;
@@ -122,6 +134,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupIdFilter")
     public String groupIdFilter;
+
     public ReportsActivitiesListRequest withGroupIdFilter(String groupIdFilter) {
         this.groupIdFilter = groupIdFilter;
         return this;
@@ -132,6 +145,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ReportsActivitiesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -142,6 +156,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ReportsActivitiesListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -152,6 +167,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ReportsActivitiesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -162,6 +178,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orgUnitID")
     public String orgUnitID;
+
     public ReportsActivitiesListRequest withOrgUnitID(String orgUnitID) {
         this.orgUnitID = orgUnitID;
         return this;
@@ -172,6 +189,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public ReportsActivitiesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -182,6 +200,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ReportsActivitiesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -192,6 +211,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ReportsActivitiesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -202,6 +222,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
     public String startTime;
+
     public ReportsActivitiesListRequest withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -212,6 +233,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ReportsActivitiesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -222,6 +244,7 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ReportsActivitiesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -232,9 +255,14 @@ public class ReportsActivitiesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userKey")
     public String userKey;
+
     public ReportsActivitiesListRequest withUserKey(String userKey) {
         this.userKey = userKey;
         return this;
     }
     
+    public ReportsActivitiesListRequest(@JsonProperty("applicationName") ReportsActivitiesListApplicationNameEnum applicationName, @JsonProperty("userKey") String userKey) {
+        this.applicationName = applicationName;
+        this.userKey = userKey;
+  }
 }

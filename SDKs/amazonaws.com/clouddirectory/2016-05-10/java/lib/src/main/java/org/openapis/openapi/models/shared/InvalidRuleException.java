@@ -15,9 +15,11 @@ public class InvalidRuleException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public InvalidRuleException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InvalidRuleException(){}
 }

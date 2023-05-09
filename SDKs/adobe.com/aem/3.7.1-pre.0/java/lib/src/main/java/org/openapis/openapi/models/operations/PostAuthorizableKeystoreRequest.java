@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAuthorizableKeystoreRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=:operation")
     public String operation;
+
     public PostAuthorizableKeystoreRequest withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -16,6 +18,7 @@ public class PostAuthorizableKeystoreRequest {
     
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostAuthorizableKeystoreRequestBody requestBody;
+
     public PostAuthorizableKeystoreRequest withRequestBody(PostAuthorizableKeystoreRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class PostAuthorizableKeystoreRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alias")
     public String alias;
+
     public PostAuthorizableKeystoreRequest withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -30,6 +34,7 @@ public class PostAuthorizableKeystoreRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorizableId")
     public String authorizableId;
+
     public PostAuthorizableKeystoreRequest withAuthorizableId(String authorizableId) {
         this.authorizableId = authorizableId;
         return this;
@@ -37,6 +42,7 @@ public class PostAuthorizableKeystoreRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentPassword")
     public String currentPassword;
+
     public PostAuthorizableKeystoreRequest withCurrentPassword(String currentPassword) {
         this.currentPassword = currentPassword;
         return this;
@@ -44,6 +50,7 @@ public class PostAuthorizableKeystoreRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=intermediatePath")
     public String intermediatePath;
+
     public PostAuthorizableKeystoreRequest withIntermediatePath(String intermediatePath) {
         this.intermediatePath = intermediatePath;
         return this;
@@ -51,6 +58,7 @@ public class PostAuthorizableKeystoreRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyPassword")
     public String keyPassword;
+
     public PostAuthorizableKeystoreRequest withKeyPassword(String keyPassword) {
         this.keyPassword = keyPassword;
         return this;
@@ -58,6 +66,7 @@ public class PostAuthorizableKeystoreRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyStorePass")
     public String keyStorePass;
+
     public PostAuthorizableKeystoreRequest withKeyStorePass(String keyStorePass) {
         this.keyStorePass = keyStorePass;
         return this;
@@ -65,6 +74,7 @@ public class PostAuthorizableKeystoreRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=newAlias")
     public String newAlias;
+
     public PostAuthorizableKeystoreRequest withNewAlias(String newAlias) {
         this.newAlias = newAlias;
         return this;
@@ -72,6 +82,7 @@ public class PostAuthorizableKeystoreRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=newPassword")
     public String newPassword;
+
     public PostAuthorizableKeystoreRequest withNewPassword(String newPassword) {
         this.newPassword = newPassword;
         return this;
@@ -79,6 +90,7 @@ public class PostAuthorizableKeystoreRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rePassword")
     public String rePassword;
+
     public PostAuthorizableKeystoreRequest withRePassword(String rePassword) {
         this.rePassword = rePassword;
         return this;
@@ -86,9 +98,14 @@ public class PostAuthorizableKeystoreRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=removeAlias")
     public String removeAlias;
+
     public PostAuthorizableKeystoreRequest withRemoveAlias(String removeAlias) {
         this.removeAlias = removeAlias;
         return this;
     }
     
+    public PostAuthorizableKeystoreRequest(@JsonProperty("authorizableId") String authorizableId, @JsonProperty("intermediatePath") String intermediatePath) {
+        this.authorizableId = authorizableId;
+        this.intermediatePath = intermediatePath;
+  }
 }

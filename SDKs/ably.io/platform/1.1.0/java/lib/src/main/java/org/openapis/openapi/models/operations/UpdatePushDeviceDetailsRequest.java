@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePushDeviceDetailsRequest {
@@ -12,6 +13,7 @@ public class UpdatePushDeviceDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
     public String xAblyVersion;
+
     public UpdatePushDeviceDetailsRequest withXAblyVersion(String xAblyVersion) {
         this.xAblyVersion = xAblyVersion;
         return this;
@@ -22,6 +24,7 @@ public class UpdatePushDeviceDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=device_id")
     public String deviceId;
+
     public UpdatePushDeviceDetailsRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -32,9 +35,13 @@ public class UpdatePushDeviceDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+
     public UpdatePushDeviceDetailsRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public UpdatePushDeviceDetailsRequest(@JsonProperty("device_id") String deviceId) {
+        this.deviceId = deviceId;
+  }
 }

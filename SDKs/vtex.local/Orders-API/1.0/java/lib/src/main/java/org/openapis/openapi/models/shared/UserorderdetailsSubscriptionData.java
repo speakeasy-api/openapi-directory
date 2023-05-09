@@ -15,6 +15,7 @@ public class UserorderdetailsSubscriptionData {
      */
     @JsonProperty("SubscriptionGroupId")
     public String subscriptionGroupId;
+
     public UserorderdetailsSubscriptionData withSubscriptionGroupId(String subscriptionGroupId) {
         this.subscriptionGroupId = subscriptionGroupId;
         return this;
@@ -25,9 +26,14 @@ public class UserorderdetailsSubscriptionData {
      */
     @JsonProperty("Subscriptions")
     public UserorderdetailsSubscriptionDataSubscriptions[] subscriptions;
+
     public UserorderdetailsSubscriptionData withSubscriptions(UserorderdetailsSubscriptionDataSubscriptions[] subscriptions) {
         this.subscriptions = subscriptions;
         return this;
     }
     
+    public UserorderdetailsSubscriptionData(@JsonProperty("SubscriptionGroupId") String subscriptionGroupId, @JsonProperty("Subscriptions") UserorderdetailsSubscriptionDataSubscriptions[] subscriptions) {
+        this.subscriptionGroupId = subscriptionGroupId;
+        this.subscriptions = subscriptions;
+  }
 }

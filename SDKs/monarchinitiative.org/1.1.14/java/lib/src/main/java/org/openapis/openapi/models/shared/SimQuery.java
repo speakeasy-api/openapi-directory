@@ -12,6 +12,7 @@ public class SimQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public Node[] ids;
+
     public SimQuery withIds(Node[] ids) {
         this.ids = ids;
         return this;
@@ -20,6 +21,7 @@ public class SimQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negated_ids")
     public Node[] negatedIds;
+
     public SimQuery withNegatedIds(Node[] negatedIds) {
         this.negatedIds = negatedIds;
         return this;
@@ -31,6 +33,7 @@ public class SimQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public TypedNode reference;
+
     public SimQuery withReference(TypedNode reference) {
         this.reference = reference;
         return this;
@@ -39,6 +42,7 @@ public class SimQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_ids")
     public Node[][] targetIds;
+
     public SimQuery withTargetIds(Node[][] targetIds) {
         this.targetIds = targetIds;
         return this;
@@ -50,9 +54,11 @@ public class SimQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unresolved_ids")
     public String[] unresolvedIds;
+
     public SimQuery withUnresolvedIds(String[] unresolvedIds) {
         this.unresolvedIds = unresolvedIds;
         return this;
     }
     
+    public SimQuery(){}
 }

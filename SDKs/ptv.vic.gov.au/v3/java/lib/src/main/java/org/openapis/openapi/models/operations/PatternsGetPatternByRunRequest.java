@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class PatternsGetPatternByRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_utc")
     public OffsetDateTime dateUtc;
+
     public PatternsGetPatternByRunRequest withDateUtc(OffsetDateTime dateUtc) {
         this.dateUtc = dateUtc;
         return this;
@@ -23,6 +25,7 @@ public class PatternsGetPatternByRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public PatternsGetPatternByRunRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -33,6 +36,7 @@ public class PatternsGetPatternByRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public PatternsGetPatternByRunExpandEnum[] expand;
+
     public PatternsGetPatternByRunRequest withExpand(PatternsGetPatternByRunExpandEnum[] expand) {
         this.expand = expand;
         return this;
@@ -43,6 +47,7 @@ public class PatternsGetPatternByRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_geopath")
     public Boolean includeGeopath;
+
     public PatternsGetPatternByRunRequest withIncludeGeopath(Boolean includeGeopath) {
         this.includeGeopath = includeGeopath;
         return this;
@@ -53,6 +58,7 @@ public class PatternsGetPatternByRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_skipped_stops")
     public Boolean includeSkippedStops;
+
     public PatternsGetPatternByRunRequest withIncludeSkippedStops(Boolean includeSkippedStops) {
         this.includeSkippedStops = includeSkippedStops;
         return this;
@@ -63,6 +69,7 @@ public class PatternsGetPatternByRunRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_type")
     public PatternsGetPatternByRunRouteTypeEnum routeType;
+
     public PatternsGetPatternByRunRequest withRouteType(PatternsGetPatternByRunRouteTypeEnum routeType) {
         this.routeType = routeType;
         return this;
@@ -73,6 +80,7 @@ public class PatternsGetPatternByRunRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_ref")
     public String runRef;
+
     public PatternsGetPatternByRunRequest withRunRef(String runRef) {
         this.runRef = runRef;
         return this;
@@ -83,6 +91,7 @@ public class PatternsGetPatternByRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public PatternsGetPatternByRunRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -93,6 +102,7 @@ public class PatternsGetPatternByRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_id")
     public Integer stopId;
+
     public PatternsGetPatternByRunRequest withStopId(Integer stopId) {
         this.stopId = stopId;
         return this;
@@ -103,9 +113,15 @@ public class PatternsGetPatternByRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public PatternsGetPatternByRunRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public PatternsGetPatternByRunRequest(@JsonProperty("expand") PatternsGetPatternByRunExpandEnum[] expand, @JsonProperty("route_type") PatternsGetPatternByRunRouteTypeEnum routeType, @JsonProperty("run_ref") String runRef) {
+        this.expand = expand;
+        this.routeType = routeType;
+        this.runRef = runRef;
+  }
 }

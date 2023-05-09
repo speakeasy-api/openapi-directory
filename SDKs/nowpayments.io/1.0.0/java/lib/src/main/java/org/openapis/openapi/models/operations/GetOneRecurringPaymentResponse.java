@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOneRecurringPaymentResponse {
     
     public String contentType;
+
     public GetOneRecurringPaymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetOneRecurringPaymentResponse {
     
     
     public Integer statusCode;
+
     public GetOneRecurringPaymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetOneRecurringPaymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOneRecurringPaymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetOneRecurringPaymentResponse {
      */
     
     public GetOneRecurringPayment200ApplicationJSON getOneRecurringPayment200ApplicationJSONObject;
+
     public GetOneRecurringPaymentResponse withGetOneRecurringPayment200ApplicationJSONObject(GetOneRecurringPayment200ApplicationJSON getOneRecurringPayment200ApplicationJSONObject) {
         this.getOneRecurringPayment200ApplicationJSONObject = getOneRecurringPayment200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class GetOneRecurringPaymentResponse {
      */
     
     public GetOneRecurringPayment404ApplicationJSON getOneRecurringPayment404ApplicationJSONObject;
+
     public GetOneRecurringPaymentResponse withGetOneRecurringPayment404ApplicationJSONObject(GetOneRecurringPayment404ApplicationJSON getOneRecurringPayment404ApplicationJSONObject) {
         this.getOneRecurringPayment404ApplicationJSONObject = getOneRecurringPayment404ApplicationJSONObject;
         return this;
     }
     
+    public GetOneRecurringPaymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

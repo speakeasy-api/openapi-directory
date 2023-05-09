@@ -18,9 +18,11 @@ public class GoogleCloudRecommendationengineV1beta1CatalogInlineSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogItems")
     public GoogleCloudRecommendationengineV1beta1CatalogItem[] catalogItems;
+
     public GoogleCloudRecommendationengineV1beta1CatalogInlineSource withCatalogItems(GoogleCloudRecommendationengineV1beta1CatalogItem[] catalogItems) {
         this.catalogItems = catalogItems;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1CatalogInlineSource(){}
 }

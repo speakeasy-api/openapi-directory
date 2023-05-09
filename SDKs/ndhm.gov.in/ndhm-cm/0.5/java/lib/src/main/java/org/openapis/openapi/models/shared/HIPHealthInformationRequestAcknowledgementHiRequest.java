@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HIPHealthInformationRequestAcknowledgementHiRequest {
     @JsonProperty("sessionStatus")
     public HIPHealthInformationRequestAcknowledgementHiRequestSessionStatusEnum sessionStatus;
+
     public HIPHealthInformationRequestAcknowledgementHiRequest withSessionStatus(HIPHealthInformationRequestAcknowledgementHiRequestSessionStatusEnum sessionStatus) {
         this.sessionStatus = sessionStatus;
         return this;
@@ -16,9 +17,14 @@ public class HIPHealthInformationRequestAcknowledgementHiRequest {
     
     @JsonProperty("transactionId")
     public String transactionId;
+
     public HIPHealthInformationRequestAcknowledgementHiRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public HIPHealthInformationRequestAcknowledgementHiRequest(@JsonProperty("sessionStatus") HIPHealthInformationRequestAcknowledgementHiRequestSessionStatusEnum sessionStatus, @JsonProperty("transactionId") String transactionId) {
+        this.sessionStatus = sessionStatus;
+        this.transactionId = transactionId;
+  }
 }

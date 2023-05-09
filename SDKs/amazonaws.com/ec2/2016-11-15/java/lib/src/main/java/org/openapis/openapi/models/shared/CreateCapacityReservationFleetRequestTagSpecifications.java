@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateCapacityReservationFleetRequestTagSpecifications {
     
     public CreateCapacityReservationFleetRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateCapacityReservationFleetRequestTagSpecifications withResourceType(CreateCapacityReservationFleetRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateCapacityReservationFleetRequestTagSpecifications {
     
     
     public CreateCapacityReservationFleetRequestTagSpecificationsTags[] tags;
+
     public CreateCapacityReservationFleetRequestTagSpecifications withTags(CreateCapacityReservationFleetRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCapacityReservationFleetRequestTagSpecifications(){}
 }

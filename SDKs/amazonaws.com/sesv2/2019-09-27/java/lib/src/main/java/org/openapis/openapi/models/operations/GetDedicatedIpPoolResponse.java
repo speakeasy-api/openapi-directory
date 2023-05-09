@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDedicatedIpPoolResponse {
@@ -12,6 +13,7 @@ public class GetDedicatedIpPoolResponse {
      */
     
     public Object badRequestException;
+
     public GetDedicatedIpPoolResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetDedicatedIpPoolResponse {
     
     
     public String contentType;
+
     public GetDedicatedIpPoolResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDedicatedIpPoolResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDedicatedIpPoolResponse getDedicatedIpPoolResponse;
+
     public GetDedicatedIpPoolResponse withGetDedicatedIpPoolResponse(org.openapis.openapi.models.shared.GetDedicatedIpPoolResponse getDedicatedIpPoolResponse) {
         this.getDedicatedIpPoolResponse = getDedicatedIpPoolResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDedicatedIpPoolResponse {
      */
     
     public Object notFoundException;
+
     public GetDedicatedIpPoolResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetDedicatedIpPoolResponse {
     
     
     public Integer statusCode;
+
     public GetDedicatedIpPoolResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetDedicatedIpPoolResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDedicatedIpPoolResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetDedicatedIpPoolResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetDedicatedIpPoolResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetDedicatedIpPoolResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

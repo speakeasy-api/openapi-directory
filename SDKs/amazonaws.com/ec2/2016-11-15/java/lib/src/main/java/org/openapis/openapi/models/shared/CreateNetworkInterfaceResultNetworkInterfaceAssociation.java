@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInterfaceResultNetworkInterfaceAssociation {
     
     public String allocationId;
+
     public CreateNetworkInterfaceResultNetworkInterfaceAssociation withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -19,6 +20,7 @@ public class CreateNetworkInterfaceResultNetworkInterfaceAssociation {
     
     
     public String associationId;
+
     public CreateNetworkInterfaceResultNetworkInterfaceAssociation withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -26,6 +28,7 @@ public class CreateNetworkInterfaceResultNetworkInterfaceAssociation {
     
     
     public String carrierIp;
+
     public CreateNetworkInterfaceResultNetworkInterfaceAssociation withCarrierIp(String carrierIp) {
         this.carrierIp = carrierIp;
         return this;
@@ -33,6 +36,7 @@ public class CreateNetworkInterfaceResultNetworkInterfaceAssociation {
     
     
     public String customerOwnedIp;
+
     public CreateNetworkInterfaceResultNetworkInterfaceAssociation withCustomerOwnedIp(String customerOwnedIp) {
         this.customerOwnedIp = customerOwnedIp;
         return this;
@@ -40,6 +44,7 @@ public class CreateNetworkInterfaceResultNetworkInterfaceAssociation {
     
     
     public String ipOwnerId;
+
     public CreateNetworkInterfaceResultNetworkInterfaceAssociation withIpOwnerId(String ipOwnerId) {
         this.ipOwnerId = ipOwnerId;
         return this;
@@ -47,6 +52,7 @@ public class CreateNetworkInterfaceResultNetworkInterfaceAssociation {
     
     
     public String publicDnsName;
+
     public CreateNetworkInterfaceResultNetworkInterfaceAssociation withPublicDnsName(String publicDnsName) {
         this.publicDnsName = publicDnsName;
         return this;
@@ -54,9 +60,11 @@ public class CreateNetworkInterfaceResultNetworkInterfaceAssociation {
     
     
     public String publicIp;
+
     public CreateNetworkInterfaceResultNetworkInterfaceAssociation withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
     }
     
+    public CreateNetworkInterfaceResultNetworkInterfaceAssociation(){}
 }

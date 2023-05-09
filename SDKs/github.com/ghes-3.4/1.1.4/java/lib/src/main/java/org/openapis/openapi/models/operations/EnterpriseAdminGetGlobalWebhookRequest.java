@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminGetGlobalWebhookRequest {
@@ -12,9 +13,13 @@ public class EnterpriseAdminGetGlobalWebhookRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
     public Long hookId;
+
     public EnterpriseAdminGetGlobalWebhookRequest withHookId(Long hookId) {
         this.hookId = hookId;
         return this;
     }
     
+    public EnterpriseAdminGetGlobalWebhookRequest(@JsonProperty("hook_id") Long hookId) {
+        this.hookId = hookId;
+  }
 }

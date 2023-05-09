@@ -14,6 +14,7 @@ public class BusinessLineInfoInput {
      */
     @JsonProperty("capability")
     public String capability;
+
     public BusinessLineInfoInput withCapability(String capability) {
         this.capability = capability;
         return this;
@@ -24,6 +25,7 @@ public class BusinessLineInfoInput {
      */
     @JsonProperty("industryCode")
     public String industryCode;
+
     public BusinessLineInfoInput withIndustryCode(String industryCode) {
         this.industryCode = industryCode;
         return this;
@@ -34,6 +36,7 @@ public class BusinessLineInfoInput {
      */
     @JsonProperty("legalEntityId")
     public String legalEntityId;
+
     public BusinessLineInfoInput withLegalEntityId(String legalEntityId) {
         this.legalEntityId = legalEntityId;
         return this;
@@ -49,6 +52,7 @@ public class BusinessLineInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesChannels")
     public String[] salesChannels;
+
     public BusinessLineInfoInput withSalesChannels(String[] salesChannels) {
         this.salesChannels = salesChannels;
         return this;
@@ -57,6 +61,7 @@ public class BusinessLineInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceOfFunds")
     public SourceOfFunds sourceOfFunds;
+
     public BusinessLineInfoInput withSourceOfFunds(SourceOfFunds sourceOfFunds) {
         this.sourceOfFunds = sourceOfFunds;
         return this;
@@ -68,6 +73,7 @@ public class BusinessLineInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webData")
     public WebDataInput[] webData;
+
     public BusinessLineInfoInput withWebData(WebDataInput[] webData) {
         this.webData = webData;
         return this;
@@ -76,9 +82,15 @@ public class BusinessLineInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webDataExemption")
     public WebDataExemption webDataExemption;
+
     public BusinessLineInfoInput withWebDataExemption(WebDataExemption webDataExemption) {
         this.webDataExemption = webDataExemption;
         return this;
     }
     
+    public BusinessLineInfoInput(@JsonProperty("capability") String capability, @JsonProperty("industryCode") String industryCode, @JsonProperty("legalEntityId") String legalEntityId) {
+        this.capability = capability;
+        this.industryCode = industryCode;
+        this.legalEntityId = legalEntityId;
+  }
 }

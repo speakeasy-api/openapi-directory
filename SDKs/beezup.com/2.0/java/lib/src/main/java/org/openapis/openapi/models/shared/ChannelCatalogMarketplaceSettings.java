@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ChannelCatalogMarketplaceSettings {
     @JsonProperty("links")
     public ChannelCatalogMarketplaceSettingsLinks links;
+
     public ChannelCatalogMarketplaceSettings withLinks(ChannelCatalogMarketplaceSettingsLinks links) {
         this.links = links;
         return this;
@@ -19,9 +20,14 @@ public class ChannelCatalogMarketplaceSettings {
     
     @JsonProperty("settings")
     public ChannelCatalogMarketplaceSetting[] settings;
+
     public ChannelCatalogMarketplaceSettings withSettings(ChannelCatalogMarketplaceSetting[] settings) {
         this.settings = settings;
         return this;
     }
     
+    public ChannelCatalogMarketplaceSettings(@JsonProperty("links") ChannelCatalogMarketplaceSettingsLinks links, @JsonProperty("settings") ChannelCatalogMarketplaceSetting[] settings) {
+        this.links = links;
+        this.settings = settings;
+  }
 }

@@ -15,6 +15,7 @@ public class ProjectSectionInsertRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("after_section")
     public String afterSection;
+
     public ProjectSectionInsertRequest withAfterSection(String afterSection) {
         this.afterSection = afterSection;
         return this;
@@ -26,6 +27,7 @@ public class ProjectSectionInsertRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("before_section")
     public String beforeSection;
+
     public ProjectSectionInsertRequest withBeforeSection(String beforeSection) {
         this.beforeSection = beforeSection;
         return this;
@@ -36,6 +38,7 @@ public class ProjectSectionInsertRequest {
      */
     @JsonProperty("project")
     public String project;
+
     public ProjectSectionInsertRequest withProject(String project) {
         this.project = project;
         return this;
@@ -46,9 +49,14 @@ public class ProjectSectionInsertRequest {
      */
     @JsonProperty("section")
     public String section;
+
     public ProjectSectionInsertRequest withSection(String section) {
         this.section = section;
         return this;
     }
     
+    public ProjectSectionInsertRequest(@JsonProperty("project") String project, @JsonProperty("section") String section) {
+        this.project = project;
+        this.section = section;
+  }
 }

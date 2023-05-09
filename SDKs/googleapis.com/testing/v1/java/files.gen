@@ -92,6 +92,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/AndroidInstrumentationTestO
 lib/src/main/java/org/openapis/openapi/models/shared/AndroidInstrumentationTest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ShardingOption.java
 lib/src/main/java/org/openapis/openapi/models/shared/UniformSharding.java
+lib/src/main/java/org/openapis/openapi/models/shared/SmartSharding.java
 lib/src/main/java/org/openapis/openapi/models/shared/ManualSharding.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestTargetsForShard.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestExecutionStateEnum.java
@@ -140,4 +141,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/AndroidModelFormFactorEnum.
 lib/src/main/java/org/openapis/openapi/models/shared/AndroidModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/PerAndroidVersionInfoDeviceCapacityEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/PerAndroidVersionInfo.java
+docs/sdk/README.md
+docs/applicationdetailservice/README.md
+docs/projects/README.md
+docs/testenvironmentcatalog/README.md
 USAGE.md

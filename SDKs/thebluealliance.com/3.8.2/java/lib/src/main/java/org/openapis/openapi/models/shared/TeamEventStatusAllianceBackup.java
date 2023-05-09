@@ -18,6 +18,7 @@ public class TeamEventStatusAllianceBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in")
     public String in;
+
     public TeamEventStatusAllianceBackup withIn(String in) {
         this.in = in;
         return this;
@@ -29,9 +30,11 @@ public class TeamEventStatusAllianceBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("out")
     public String out;
+
     public TeamEventStatusAllianceBackup withOut(String out) {
         this.out = out;
         return this;
     }
     
+    public TeamEventStatusAllianceBackup(){}
 }

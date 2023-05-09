@@ -12,6 +12,7 @@ public class ConsentRequestConsent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("careContexts")
     public CareContextDefinition[] careContexts;
+
     public ConsentRequestConsent withCareContexts(CareContextDefinition[] careContexts) {
         this.careContexts = careContexts;
         return this;
@@ -19,6 +20,7 @@ public class ConsentRequestConsent {
     
     @JsonProperty("hiTypes")
     public HITypeEnumEnum[] hiTypes;
+
     public ConsentRequestConsent withHiTypes(HITypeEnumEnum[] hiTypes) {
         this.hiTypes = hiTypes;
         return this;
@@ -27,6 +29,7 @@ public class ConsentRequestConsent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hip")
     public ConsentRequestConsentHip hip;
+
     public ConsentRequestConsent withHip(ConsentRequestConsentHip hip) {
         this.hip = hip;
         return this;
@@ -34,6 +37,7 @@ public class ConsentRequestConsent {
     
     @JsonProperty("hiu")
     public ConsentRequestConsentHiu hiu;
+
     public ConsentRequestConsent withHiu(ConsentRequestConsentHiu hiu) {
         this.hiu = hiu;
         return this;
@@ -41,6 +45,7 @@ public class ConsentRequestConsent {
     
     @JsonProperty("patient")
     public ConsentRequestConsentPatient patient;
+
     public ConsentRequestConsent withPatient(ConsentRequestConsentPatient patient) {
         this.patient = patient;
         return this;
@@ -48,6 +53,7 @@ public class ConsentRequestConsent {
     
     @JsonProperty("permission")
     public Permission permission;
+
     public ConsentRequestConsent withPermission(Permission permission) {
         this.permission = permission;
         return this;
@@ -55,6 +61,7 @@ public class ConsentRequestConsent {
     
     @JsonProperty("purpose")
     public UsePurpose purpose;
+
     public ConsentRequestConsent withPurpose(UsePurpose purpose) {
         this.purpose = purpose;
         return this;
@@ -62,9 +69,18 @@ public class ConsentRequestConsent {
     
     @JsonProperty("requester")
     public Requester requester;
+
     public ConsentRequestConsent withRequester(Requester requester) {
         this.requester = requester;
         return this;
     }
     
+    public ConsentRequestConsent(@JsonProperty("hiTypes") HITypeEnumEnum[] hiTypes, @JsonProperty("hiu") ConsentRequestConsentHiu hiu, @JsonProperty("patient") ConsentRequestConsentPatient patient, @JsonProperty("permission") Permission permission, @JsonProperty("purpose") UsePurpose purpose, @JsonProperty("requester") Requester requester) {
+        this.hiTypes = hiTypes;
+        this.hiu = hiu;
+        this.patient = patient;
+        this.permission = permission;
+        this.purpose = purpose;
+        this.requester = requester;
+  }
 }

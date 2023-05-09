@@ -15,6 +15,7 @@ public class ImportExportAdmins {
      */
     @JsonProperty("createdAt")
     public Long createdAt;
+
     public ImportExportAdmins withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -25,6 +26,7 @@ public class ImportExportAdmins {
      */
     @JsonProperty("label")
     public String label;
+
     public ImportExportAdmins withLabel(String label) {
         this.label = label;
         return this;
@@ -35,6 +37,7 @@ public class ImportExportAdmins {
      */
     @JsonProperty("password")
     public String password;
+
     public ImportExportAdmins withPassword(String password) {
         this.password = password;
         return this;
@@ -45,6 +48,7 @@ public class ImportExportAdmins {
      */
     @JsonProperty("registration")
     public java.util.Map<String, String> registration;
+
     public ImportExportAdmins withRegistration(java.util.Map<String, String> registration) {
         this.registration = registration;
         return this;
@@ -55,9 +59,17 @@ public class ImportExportAdmins {
      */
     @JsonProperty("username")
     public String username;
+
     public ImportExportAdmins withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ImportExportAdmins(@JsonProperty("username") String username, @JsonProperty("password") String password, @JsonProperty("createdAt") Long createdAt, @JsonProperty("label") String label, @JsonProperty("registration") java.util.Map<String, String> registration) {
+        this.username = username;
+        this.password = password;
+        this.createdAt = createdAt;
+        this.label = label;
+        this.registration = registration;
+  }
 }

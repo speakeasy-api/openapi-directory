@@ -15,6 +15,7 @@ public class SharePointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthenticationType")
     public SharePointOnlineAuthenticationTypeEnum authenticationType;
+
     public SharePointConfiguration withAuthenticationType(SharePointOnlineAuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -23,6 +24,7 @@ public class SharePointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlAttachments")
     public Boolean crawlAttachments;
+
     public SharePointConfiguration withCrawlAttachments(Boolean crawlAttachments) {
         this.crawlAttachments = crawlAttachments;
         return this;
@@ -31,6 +33,7 @@ public class SharePointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableLocalGroups")
     public Boolean disableLocalGroups;
+
     public SharePointConfiguration withDisableLocalGroups(Boolean disableLocalGroups) {
         this.disableLocalGroups = disableLocalGroups;
         return this;
@@ -39,6 +42,7 @@ public class SharePointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentTitleFieldName")
     public String documentTitleFieldName;
+
     public SharePointConfiguration withDocumentTitleFieldName(String documentTitleFieldName) {
         this.documentTitleFieldName = documentTitleFieldName;
         return this;
@@ -47,6 +51,7 @@ public class SharePointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusionPatterns")
     public String[] exclusionPatterns;
+
     public SharePointConfiguration withExclusionPatterns(String[] exclusionPatterns) {
         this.exclusionPatterns = exclusionPatterns;
         return this;
@@ -55,6 +60,7 @@ public class SharePointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldMappings")
     public DataSourceToIndexFieldMapping[] fieldMappings;
+
     public SharePointConfiguration withFieldMappings(DataSourceToIndexFieldMapping[] fieldMappings) {
         this.fieldMappings = fieldMappings;
         return this;
@@ -63,6 +69,7 @@ public class SharePointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InclusionPatterns")
     public String[] inclusionPatterns;
+
     public SharePointConfiguration withInclusionPatterns(String[] inclusionPatterns) {
         this.inclusionPatterns = inclusionPatterns;
         return this;
@@ -71,6 +78,7 @@ public class SharePointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProxyConfiguration")
     public ProxyConfiguration proxyConfiguration;
+
     public SharePointConfiguration withProxyConfiguration(ProxyConfiguration proxyConfiguration) {
         this.proxyConfiguration = proxyConfiguration;
         return this;
@@ -78,6 +86,7 @@ public class SharePointConfiguration {
     
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public SharePointConfiguration withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -85,6 +94,7 @@ public class SharePointConfiguration {
     
     @JsonProperty("SharePointVersion")
     public SharePointVersionEnum sharePointVersion;
+
     public SharePointConfiguration withSharePointVersion(SharePointVersionEnum sharePointVersion) {
         this.sharePointVersion = sharePointVersion;
         return this;
@@ -93,6 +103,7 @@ public class SharePointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SslCertificateS3Path")
     public S3Path sslCertificateS3Path;
+
     public SharePointConfiguration withSslCertificateS3Path(S3Path sslCertificateS3Path) {
         this.sslCertificateS3Path = sslCertificateS3Path;
         return this;
@@ -100,6 +111,7 @@ public class SharePointConfiguration {
     
     @JsonProperty("Urls")
     public String[] urls;
+
     public SharePointConfiguration withUrls(String[] urls) {
         this.urls = urls;
         return this;
@@ -108,6 +120,7 @@ public class SharePointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseChangeLog")
     public Boolean useChangeLog;
+
     public SharePointConfiguration withUseChangeLog(Boolean useChangeLog) {
         this.useChangeLog = useChangeLog;
         return this;
@@ -116,9 +129,15 @@ public class SharePointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfiguration")
     public DataSourceVpcConfiguration vpcConfiguration;
+
     public SharePointConfiguration withVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public SharePointConfiguration(@JsonProperty("SecretArn") String secretArn, @JsonProperty("SharePointVersion") SharePointVersionEnum sharePointVersion, @JsonProperty("Urls") String[] urls) {
+        this.secretArn = secretArn;
+        this.sharePointVersion = sharePointVersion;
+        this.urls = urls;
+  }
 }

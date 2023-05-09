@@ -15,9 +15,11 @@ public class DashboardOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngagementMetrics")
     public FeatureStatusEnum engagementMetrics;
+
     public DashboardOptions withEngagementMetrics(FeatureStatusEnum engagementMetrics) {
         this.engagementMetrics = engagementMetrics;
         return this;
     }
     
+    public DashboardOptions(){}
 }

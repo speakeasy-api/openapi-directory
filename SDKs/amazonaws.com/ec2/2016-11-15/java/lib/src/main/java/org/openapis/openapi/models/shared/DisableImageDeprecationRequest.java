@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisableImageDeprecationRequest {
     
     public Boolean dryRun;
+
     public DisableImageDeprecationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DisableImageDeprecationRequest {
     
     
     public String imageId;
+
     public DisableImageDeprecationRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public DisableImageDeprecationRequest(@JsonProperty("ImageId") String imageId) {
+        this.imageId = imageId;
+  }
 }

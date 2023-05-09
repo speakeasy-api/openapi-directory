@@ -18,6 +18,7 @@ public class ProcessOrder500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public ProcessOrder500ApplicationJSONError error;
+
     public ProcessOrder500ApplicationJSON withError(ProcessOrder500ApplicationJSONError error) {
         this.error = error;
         return this;
@@ -29,9 +30,11 @@ public class ProcessOrder500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public ProcessOrder500ApplicationJSON withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public ProcessOrder500ApplicationJSON(){}
 }

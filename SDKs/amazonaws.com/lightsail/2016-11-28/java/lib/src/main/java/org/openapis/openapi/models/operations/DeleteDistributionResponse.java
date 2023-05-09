@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDistributionResponse {
@@ -12,6 +13,7 @@ public class DeleteDistributionResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteDistributionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDistributionResponse {
     
     
     public String contentType;
+
     public DeleteDistributionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDistributionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDistributionResult deleteDistributionResult;
+
     public DeleteDistributionResponse withDeleteDistributionResult(org.openapis.openapi.models.shared.DeleteDistributionResult deleteDistributionResult) {
         this.deleteDistributionResult = deleteDistributionResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDistributionResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteDistributionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDistributionResponse {
      */
     
     public Object notFoundException;
+
     public DeleteDistributionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDistributionResponse {
      */
     
     public Object operationFailureException;
+
     public DeleteDistributionResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteDistributionResponse {
      */
     
     public Object serviceException;
+
     public DeleteDistributionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteDistributionResponse {
     
     
     public Integer statusCode;
+
     public DeleteDistributionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteDistributionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDistributionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DeleteDistributionResponse {
      */
     
     public Object unauthenticatedException;
+
     public DeleteDistributionResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public DeleteDistributionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

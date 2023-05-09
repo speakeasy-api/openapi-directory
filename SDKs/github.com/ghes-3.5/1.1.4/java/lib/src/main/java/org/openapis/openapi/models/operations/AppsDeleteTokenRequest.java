@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsDeleteTokenRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AppsDeleteTokenRequestBody requestBody;
+
     public AppsDeleteTokenRequest withRequestBody(AppsDeleteTokenRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class AppsDeleteTokenRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
     public String clientId;
+
     public AppsDeleteTokenRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
     
+    public AppsDeleteTokenRequest(@JsonProperty("RequestBody") AppsDeleteTokenRequestBody requestBody, @JsonProperty("client_id") String clientId) {
+        this.requestBody = requestBody;
+        this.clientId = clientId;
+  }
 }

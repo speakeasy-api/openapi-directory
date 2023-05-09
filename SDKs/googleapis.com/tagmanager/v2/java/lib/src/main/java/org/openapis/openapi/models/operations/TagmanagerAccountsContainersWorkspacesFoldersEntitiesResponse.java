@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagmanagerAccountsContainersWorkspacesFoldersEntitiesResponse {
     
     public String contentType;
+
     public TagmanagerAccountsContainersWorkspacesFoldersEntitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TagmanagerAccountsContainersWorkspacesFoldersEntitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.FolderEntities folderEntities;
+
     public TagmanagerAccountsContainersWorkspacesFoldersEntitiesResponse withFolderEntities(org.openapis.openapi.models.shared.FolderEntities folderEntities) {
         this.folderEntities = folderEntities;
         return this;
@@ -26,6 +29,7 @@ public class TagmanagerAccountsContainersWorkspacesFoldersEntitiesResponse {
     
     
     public Integer statusCode;
+
     public TagmanagerAccountsContainersWorkspacesFoldersEntitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TagmanagerAccountsContainersWorkspacesFoldersEntitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagmanagerAccountsContainersWorkspacesFoldersEntitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TagmanagerAccountsContainersWorkspacesFoldersEntitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

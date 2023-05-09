@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopSessionRequest {
     @JsonProperty("Id")
     public String id;
+
     public StopSessionRequest withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,13 @@ public class StopSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestOrigin")
     public String requestOrigin;
+
     public StopSessionRequest withRequestOrigin(String requestOrigin) {
         this.requestOrigin = requestOrigin;
         return this;
     }
     
+    public StopSessionRequest(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

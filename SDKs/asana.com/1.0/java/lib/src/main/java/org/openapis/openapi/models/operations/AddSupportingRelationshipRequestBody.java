@@ -15,9 +15,11 @@ public class AddSupportingRelationshipRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.GoalAddSupportingRelationshipRequest data;
+
     public AddSupportingRelationshipRequestBody withData(org.openapis.openapi.models.shared.GoalAddSupportingRelationshipRequest data) {
         this.data = data;
         return this;
     }
     
+    public AddSupportingRelationshipRequestBody(){}
 }

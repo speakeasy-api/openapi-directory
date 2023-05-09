@@ -9,11 +9,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ComponentConfiguration -  Configuration details of the component.
+ * ComponentConfiguration - Configuration details of the component.
  */
 public class ComponentConfiguration {
     @JsonProperty("componentArn")
     public String componentArn;
+
     public ComponentConfiguration withComponentArn(String componentArn) {
         this.componentArn = componentArn;
         return this;
@@ -22,9 +23,13 @@ public class ComponentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public ComponentParameter[] parameters;
+
     public ComponentConfiguration withParameters(ComponentParameter[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public ComponentConfiguration(@JsonProperty("componentArn") String componentArn) {
+        this.componentArn = componentArn;
+  }
 }

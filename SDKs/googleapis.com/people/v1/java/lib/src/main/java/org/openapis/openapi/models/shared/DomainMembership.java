@@ -18,9 +18,11 @@ public class DomainMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inViewerDomain")
     public Boolean inViewerDomain;
+
     public DomainMembership withInViewerDomain(Boolean inViewerDomain) {
         this.inViewerDomain = inViewerDomain;
         return this;
     }
     
+    public DomainMembership(){}
 }

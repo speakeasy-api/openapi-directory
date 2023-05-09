@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDistributionLatestCacheResetResponse {
@@ -12,6 +13,7 @@ public class GetDistributionLatestCacheResetResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDistributionLatestCacheResetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetDistributionLatestCacheResetResponse {
     
     
     public String contentType;
+
     public GetDistributionLatestCacheResetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDistributionLatestCacheResetResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDistributionLatestCacheResetResult getDistributionLatestCacheResetResult;
+
     public GetDistributionLatestCacheResetResponse withGetDistributionLatestCacheResetResult(org.openapis.openapi.models.shared.GetDistributionLatestCacheResetResult getDistributionLatestCacheResetResult) {
         this.getDistributionLatestCacheResetResult = getDistributionLatestCacheResetResult;
         return this;
@@ -39,6 +43,7 @@ public class GetDistributionLatestCacheResetResponse {
      */
     
     public Object invalidInputException;
+
     public GetDistributionLatestCacheResetResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetDistributionLatestCacheResetResponse {
      */
     
     public Object notFoundException;
+
     public GetDistributionLatestCacheResetResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetDistributionLatestCacheResetResponse {
      */
     
     public Object operationFailureException;
+
     public GetDistributionLatestCacheResetResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class GetDistributionLatestCacheResetResponse {
      */
     
     public Object serviceException;
+
     public GetDistributionLatestCacheResetResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class GetDistributionLatestCacheResetResponse {
     
     
     public Integer statusCode;
+
     public GetDistributionLatestCacheResetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetDistributionLatestCacheResetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDistributionLatestCacheResetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetDistributionLatestCacheResetResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetDistributionLatestCacheResetResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetDistributionLatestCacheResetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

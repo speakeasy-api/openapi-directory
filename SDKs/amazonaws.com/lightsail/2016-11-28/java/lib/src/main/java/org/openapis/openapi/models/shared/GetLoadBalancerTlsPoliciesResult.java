@@ -15,6 +15,7 @@ public class GetLoadBalancerTlsPoliciesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetLoadBalancerTlsPoliciesResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class GetLoadBalancerTlsPoliciesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tlsPolicies")
     public LoadBalancerTlsPolicy[] tlsPolicies;
+
     public GetLoadBalancerTlsPoliciesResult withTlsPolicies(LoadBalancerTlsPolicy[] tlsPolicies) {
         this.tlsPolicies = tlsPolicies;
         return this;
     }
     
+    public GetLoadBalancerTlsPoliciesResult(){}
 }

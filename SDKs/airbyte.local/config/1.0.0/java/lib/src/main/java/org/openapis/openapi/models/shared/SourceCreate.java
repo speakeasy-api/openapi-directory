@@ -12,6 +12,7 @@ public class SourceCreate {
      */
     @JsonProperty("connectionConfiguration")
     public Object connectionConfiguration;
+
     public SourceCreate withConnectionConfiguration(Object connectionConfiguration) {
         this.connectionConfiguration = connectionConfiguration;
         return this;
@@ -19,6 +20,7 @@ public class SourceCreate {
     
     @JsonProperty("name")
     public String name;
+
     public SourceCreate withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class SourceCreate {
     
     @JsonProperty("sourceDefinitionId")
     public String sourceDefinitionId;
+
     public SourceCreate withSourceDefinitionId(String sourceDefinitionId) {
         this.sourceDefinitionId = sourceDefinitionId;
         return this;
@@ -33,9 +36,16 @@ public class SourceCreate {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public SourceCreate withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public SourceCreate(@JsonProperty("connectionConfiguration") Object connectionConfiguration, @JsonProperty("name") String name, @JsonProperty("sourceDefinitionId") String sourceDefinitionId, @JsonProperty("workspaceId") String workspaceId) {
+        this.connectionConfiguration = connectionConfiguration;
+        this.name = name;
+        this.sourceDefinitionId = sourceDefinitionId;
+        this.workspaceId = workspaceId;
+  }
 }

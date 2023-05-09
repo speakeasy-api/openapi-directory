@@ -18,6 +18,7 @@ public class TCPSocketAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public TCPSocketAction withHost(String host) {
         this.host = host;
         return this;
@@ -29,9 +30,11 @@ public class TCPSocketAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public TCPSocketAction withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public TCPSocketAction(){}
 }

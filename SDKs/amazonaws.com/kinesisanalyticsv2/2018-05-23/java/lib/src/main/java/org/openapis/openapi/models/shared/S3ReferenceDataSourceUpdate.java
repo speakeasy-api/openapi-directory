@@ -15,6 +15,7 @@ public class S3ReferenceDataSourceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketARNUpdate")
     public String bucketARNUpdate;
+
     public S3ReferenceDataSourceUpdate withBucketARNUpdate(String bucketARNUpdate) {
         this.bucketARNUpdate = bucketARNUpdate;
         return this;
@@ -23,9 +24,11 @@ public class S3ReferenceDataSourceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileKeyUpdate")
     public String fileKeyUpdate;
+
     public S3ReferenceDataSourceUpdate withFileKeyUpdate(String fileKeyUpdate) {
         this.fileKeyUpdate = fileKeyUpdate;
         return this;
     }
     
+    public S3ReferenceDataSourceUpdate(){}
 }

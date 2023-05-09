@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContactChannel {
     @JsonProperty("ActivationStatus")
     public ActivationStatusEnum activationStatus;
+
     public ContactChannel withActivationStatus(ActivationStatusEnum activationStatus) {
         this.activationStatus = activationStatus;
         return this;
@@ -21,6 +22,7 @@ public class ContactChannel {
     
     @JsonProperty("ContactArn")
     public String contactArn;
+
     public ContactChannel withContactArn(String contactArn) {
         this.contactArn = contactArn;
         return this;
@@ -28,6 +30,7 @@ public class ContactChannel {
     
     @JsonProperty("ContactChannelArn")
     public String contactChannelArn;
+
     public ContactChannel withContactChannelArn(String contactChannelArn) {
         this.contactChannelArn = contactChannelArn;
         return this;
@@ -35,6 +38,7 @@ public class ContactChannel {
     
     @JsonProperty("DeliveryAddress")
     public ContactChannelAddress deliveryAddress;
+
     public ContactChannel withDeliveryAddress(ContactChannelAddress deliveryAddress) {
         this.deliveryAddress = deliveryAddress;
         return this;
@@ -42,6 +46,7 @@ public class ContactChannel {
     
     @JsonProperty("Name")
     public String name;
+
     public ContactChannel withName(String name) {
         this.name = name;
         return this;
@@ -50,9 +55,17 @@ public class ContactChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ChannelTypeEnum type;
+
     public ContactChannel withType(ChannelTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ContactChannel(@JsonProperty("ActivationStatus") ActivationStatusEnum activationStatus, @JsonProperty("ContactArn") String contactArn, @JsonProperty("ContactChannelArn") String contactChannelArn, @JsonProperty("DeliveryAddress") ContactChannelAddress deliveryAddress, @JsonProperty("Name") String name) {
+        this.activationStatus = activationStatus;
+        this.contactArn = contactArn;
+        this.contactChannelArn = contactChannelArn;
+        this.deliveryAddress = deliveryAddress;
+        this.name = name;
+  }
 }

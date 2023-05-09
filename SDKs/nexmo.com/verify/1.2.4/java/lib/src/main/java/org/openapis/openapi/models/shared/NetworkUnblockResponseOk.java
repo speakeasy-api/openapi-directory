@@ -18,6 +18,7 @@ public class NetworkUnblockResponseOk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public NetworkUnblockResponseOk withNetwork(String network) {
         this.network = network;
         return this;
@@ -29,9 +30,11 @@ public class NetworkUnblockResponseOk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unblocked_until")
     public String unblockedUntil;
+
     public NetworkUnblockResponseOk withUnblockedUntil(String unblockedUntil) {
         this.unblockedUntil = unblockedUntil;
         return this;
     }
     
+    public NetworkUnblockResponseOk(){}
 }

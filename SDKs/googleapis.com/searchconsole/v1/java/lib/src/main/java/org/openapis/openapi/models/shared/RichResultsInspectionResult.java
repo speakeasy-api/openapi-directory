@@ -18,6 +18,7 @@ public class RichResultsInspectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedItems")
     public DetectedItems[] detectedItems;
+
     public RichResultsInspectionResult withDetectedItems(DetectedItems[] detectedItems) {
         this.detectedItems = detectedItems;
         return this;
@@ -29,9 +30,11 @@ public class RichResultsInspectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verdict")
     public RichResultsInspectionResultVerdictEnum verdict;
+
     public RichResultsInspectionResult withVerdict(RichResultsInspectionResultVerdictEnum verdict) {
         this.verdict = verdict;
         return this;
     }
     
+    public RichResultsInspectionResult(){}
 }

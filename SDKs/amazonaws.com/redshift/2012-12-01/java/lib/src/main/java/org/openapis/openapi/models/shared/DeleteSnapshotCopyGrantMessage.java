@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteSnapshotCopyGrantMessage - The result of the &lt;code&gt;DeleteSnapshotCopyGrant&lt;/code&gt; action.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteSnapshotCopyGrantMessage {
     
     public String snapshotCopyGrantName;
+
     public DeleteSnapshotCopyGrantMessage withSnapshotCopyGrantName(String snapshotCopyGrantName) {
         this.snapshotCopyGrantName = snapshotCopyGrantName;
         return this;
     }
     
+    public DeleteSnapshotCopyGrantMessage(@JsonProperty("SnapshotCopyGrantName") String snapshotCopyGrantName) {
+        this.snapshotCopyGrantName = snapshotCopyGrantName;
+  }
 }

@@ -18,20 +18,23 @@ public class MultiCloudCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterMissing")
     public Boolean clusterMissing;
+
     public MultiCloudCluster withClusterMissing(Boolean clusterMissing) {
         this.clusterMissing = clusterMissing;
         return this;
     }
     
     /**
-     * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/attachedClusters/my-cluster
+     * Immutable. Self-link of the Google Cloud resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/attachedClusters/my-cluster
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLink")
     public String resourceLink;
+
     public MultiCloudCluster withResourceLink(String resourceLink) {
         this.resourceLink = resourceLink;
         return this;
     }
     
+    public MultiCloudCluster(){}
 }

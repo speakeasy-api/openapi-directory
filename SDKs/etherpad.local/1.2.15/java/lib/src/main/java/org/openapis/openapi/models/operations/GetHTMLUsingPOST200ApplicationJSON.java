@@ -15,6 +15,7 @@ public class GetHTMLUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public GetHTMLUsingPOST200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class GetHTMLUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetHTMLUsingPOST200ApplicationJSONData data;
+
     public GetHTMLUsingPOST200ApplicationJSON withData(GetHTMLUsingPOST200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class GetHTMLUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetHTMLUsingPOST200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetHTMLUsingPOST200ApplicationJSON(){}
 }

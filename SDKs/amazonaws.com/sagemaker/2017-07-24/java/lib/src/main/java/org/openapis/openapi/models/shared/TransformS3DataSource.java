@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransformS3DataSource {
     @JsonProperty("S3DataType")
     public S3DataTypeEnum s3DataType;
+
     public TransformS3DataSource withS3DataType(S3DataTypeEnum s3DataType) {
         this.s3DataType = s3DataType;
         return this;
@@ -19,9 +20,14 @@ public class TransformS3DataSource {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public TransformS3DataSource withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public TransformS3DataSource(@JsonProperty("S3DataType") S3DataTypeEnum s3DataType, @JsonProperty("S3Uri") String s3Uri) {
+        this.s3DataType = s3DataType;
+        this.s3Uri = s3Uri;
+  }
 }

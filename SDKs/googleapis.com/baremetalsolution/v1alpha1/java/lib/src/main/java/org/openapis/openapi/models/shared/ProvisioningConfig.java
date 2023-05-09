@@ -18,6 +18,7 @@ public class ProvisioningConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public InstanceConfig[] instances;
+
     public ProvisioningConfig withInstances(InstanceConfig[] instances) {
         this.instances = instances;
         return this;
@@ -29,6 +30,7 @@ public class ProvisioningConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networks")
     public NetworkConfig[] networks;
+
     public ProvisioningConfig withNetworks(NetworkConfig[] networks) {
         this.networks = networks;
         return this;
@@ -40,6 +42,7 @@ public class ProvisioningConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ticketId")
     public String ticketId;
+
     public ProvisioningConfig withTicketId(String ticketId) {
         this.ticketId = ticketId;
         return this;
@@ -51,9 +54,11 @@ public class ProvisioningConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumes")
     public VolumeConfig[] volumes;
+
     public ProvisioningConfig withVolumes(VolumeConfig[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public ProvisioningConfig(){}
 }

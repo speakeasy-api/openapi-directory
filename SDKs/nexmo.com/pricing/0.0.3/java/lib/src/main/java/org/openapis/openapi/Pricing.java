@@ -58,13 +58,11 @@ public class Pricing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrievePrefixPricingResponse res = new org.openapis.openapi.models.operations.RetrievePrefixPricingResponse() {{
+        org.openapis.openapi.models.operations.RetrievePrefixPricingResponse res = new org.openapis.openapi.models.operations.RetrievePrefixPricingResponse(contentType, httpRes.statusCode()) {{
             pricingCountriesResponse = null;
             retrievePrefixPricing400ApplicationJSONObject = null;
             retrievePrefixPricing401ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -122,13 +120,11 @@ public class Pricing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrievePricingAllCountriesResponse res = new org.openapis.openapi.models.operations.RetrievePricingAllCountriesResponse() {{
+        org.openapis.openapi.models.operations.RetrievePricingAllCountriesResponse res = new org.openapis.openapi.models.operations.RetrievePricingAllCountriesResponse(contentType, httpRes.statusCode()) {{
             pricingCountriesResponse = null;
             retrievePricingAllCountries400ApplicationJSONObject = null;
             retrievePricingAllCountries401ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -186,13 +182,11 @@ public class Pricing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrievePricingCountryResponse res = new org.openapis.openapi.models.operations.RetrievePricingCountryResponse() {{
+        org.openapis.openapi.models.operations.RetrievePricingCountryResponse res = new org.openapis.openapi.models.operations.RetrievePricingCountryResponse(contentType, httpRes.statusCode()) {{
             pricingCountryResponse = null;
             retrievePricingCountry400ApplicationJSONObject = null;
             retrievePricingCountry401ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

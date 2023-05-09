@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetMetadataResponse {
     @JsonProperty("features")
     public java.util.Map<String, String> features;
+
     public GetMetadataResponse withFeatures(java.util.Map<String, String> features) {
         this.features = features;
         return this;
     }
     
+    public GetMetadataResponse(@JsonProperty("features") java.util.Map<String, String> features) {
+        this.features = features;
+  }
 }

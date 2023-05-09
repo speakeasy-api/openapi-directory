@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBundlesResponse {
@@ -12,6 +13,7 @@ public class ListBundlesResponse {
      */
     
     public org.openapis.openapi.models.shared.BadRequestException badRequestException;
+
     public ListBundlesResponse withBadRequestException(org.openapis.openapi.models.shared.BadRequestException badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListBundlesResponse {
     
     
     public String contentType;
+
     public ListBundlesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListBundlesResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalFailureException internalFailureException;
+
     public ListBundlesResponse withInternalFailureException(org.openapis.openapi.models.shared.InternalFailureException internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class ListBundlesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBundlesResult listBundlesResult;
+
     public ListBundlesResponse withListBundlesResult(org.openapis.openapi.models.shared.ListBundlesResult listBundlesResult) {
         this.listBundlesResult = listBundlesResult;
         return this;
@@ -46,6 +51,7 @@ public class ListBundlesResponse {
     
     
     public Integer statusCode;
+
     public ListBundlesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListBundlesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBundlesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListBundlesResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceUnavailableException serviceUnavailableException;
+
     public ListBundlesResponse withServiceUnavailableException(org.openapis.openapi.models.shared.ServiceUnavailableException serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,6 +81,7 @@ public class ListBundlesResponse {
      */
     
     public org.openapis.openapi.models.shared.TooManyRequestsException tooManyRequestsException;
+
     public ListBundlesResponse withTooManyRequestsException(org.openapis.openapi.models.shared.TooManyRequestsException tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class ListBundlesResponse {
      */
     
     public org.openapis.openapi.models.shared.UnauthorizedException unauthorizedException;
+
     public ListBundlesResponse withUnauthorizedException(org.openapis.openapi.models.shared.UnauthorizedException unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListBundlesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

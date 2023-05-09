@@ -18,9 +18,11 @@ public class AnthosCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membership")
     public String membership;
+
     public AnthosCluster withMembership(String membership) {
         this.membership = membership;
         return this;
     }
     
+    public AnthosCluster(){}
 }

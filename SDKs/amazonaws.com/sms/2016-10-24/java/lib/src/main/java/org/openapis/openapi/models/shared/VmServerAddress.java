@@ -15,6 +15,7 @@ public class VmServerAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmId")
     public String vmId;
+
     public VmServerAddress withVmId(String vmId) {
         this.vmId = vmId;
         return this;
@@ -23,9 +24,11 @@ public class VmServerAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmManagerId")
     public String vmManagerId;
+
     public VmServerAddress withVmManagerId(String vmManagerId) {
         this.vmManagerId = vmManagerId;
         return this;
     }
     
+    public VmServerAddress(){}
 }

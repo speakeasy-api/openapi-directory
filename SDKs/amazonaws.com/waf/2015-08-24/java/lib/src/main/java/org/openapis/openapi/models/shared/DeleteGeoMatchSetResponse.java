@@ -15,9 +15,11 @@ public class DeleteGeoMatchSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public DeleteGeoMatchSetResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
     }
     
+    public DeleteGeoMatchSetResponse(){}
 }

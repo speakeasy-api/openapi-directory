@@ -15,6 +15,7 @@ public class PreprintsReadPreprintLinks {
      */
     
     public String doi;
+
     public PreprintsReadPreprintLinks withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -25,6 +26,7 @@ public class PreprintsReadPreprintLinks {
      */
     
     public String html;
+
     public PreprintsReadPreprintLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -35,6 +37,7 @@ public class PreprintsReadPreprintLinks {
      */
     
     public String preprintDoi;
+
     public PreprintsReadPreprintLinks withPreprintDoi(String preprintDoi) {
         this.preprintDoi = preprintDoi;
         return this;
@@ -45,9 +48,11 @@ public class PreprintsReadPreprintLinks {
      */
     
     public String self;
+
     public PreprintsReadPreprintLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public PreprintsReadPreprintLinks(){}
 }

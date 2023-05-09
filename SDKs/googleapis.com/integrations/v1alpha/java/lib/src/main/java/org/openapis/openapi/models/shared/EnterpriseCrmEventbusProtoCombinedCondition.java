@@ -18,9 +18,11 @@ public class EnterpriseCrmEventbusProtoCombinedCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public EnterpriseCrmEventbusProtoCondition[] conditions;
+
     public EnterpriseCrmEventbusProtoCombinedCondition withConditions(EnterpriseCrmEventbusProtoCondition[] conditions) {
         this.conditions = conditions;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoCombinedCondition(){}
 }

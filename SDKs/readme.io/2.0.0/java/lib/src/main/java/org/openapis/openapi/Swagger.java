@@ -33,7 +33,9 @@ public class Swagger {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DeleteSwaggerResponse deleteSwagger(org.openapis.openapi.models.operations.DeleteSwaggerRequest request, org.openapis.openapi.models.operations.DeleteSwaggerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSwaggerRequest.class, baseUrl, "/swagger/{id}", request, null);
@@ -49,10 +51,8 @@ public class Swagger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSwaggerResponse res = new org.openapis.openapi.models.operations.DeleteSwaggerResponse() {{
+        org.openapis.openapi.models.operations.DeleteSwaggerResponse res = new org.openapis.openapi.models.operations.DeleteSwaggerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -67,7 +67,9 @@ public class Swagger {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UpdateSwaggerResponse updateSwagger(org.openapis.openapi.models.operations.UpdateSwaggerRequest request, org.openapis.openapi.models.operations.UpdateSwaggerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSwaggerRequest.class, baseUrl, "/swagger/{id}", request, null);
@@ -88,10 +90,8 @@ public class Swagger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSwaggerResponse res = new org.openapis.openapi.models.operations.UpdateSwaggerResponse() {{
+        org.openapis.openapi.models.operations.UpdateSwaggerResponse res = new org.openapis.openapi.models.operations.UpdateSwaggerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -106,7 +106,9 @@ public class Swagger {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UploadSwaggerResponse uploadSwagger(org.openapis.openapi.models.operations.UploadSwaggerRequestBody request, org.openapis.openapi.models.operations.UploadSwaggerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/swagger");
@@ -127,10 +129,8 @@ public class Swagger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UploadSwaggerResponse res = new org.openapis.openapi.models.operations.UploadSwaggerResponse() {{
+        org.openapis.openapi.models.operations.UploadSwaggerResponse res = new org.openapis.openapi.models.operations.UploadSwaggerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 400) {

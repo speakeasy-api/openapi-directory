@@ -12,6 +12,7 @@ public class CatalogCollectionRoleAssignmentsRoles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("editors")
     public CatalogCollectionRole[] editors;
+
     public CatalogCollectionRoleAssignmentsRoles withEditors(CatalogCollectionRole[] editors) {
         this.editors = editors;
         return this;
@@ -20,6 +21,7 @@ public class CatalogCollectionRoleAssignmentsRoles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owners")
     public CatalogCollectionRole[] owners;
+
     public CatalogCollectionRoleAssignmentsRoles withOwners(CatalogCollectionRole[] owners) {
         this.owners = owners;
         return this;
@@ -28,9 +30,11 @@ public class CatalogCollectionRoleAssignmentsRoles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewers")
     public CatalogCollectionRole[] viewers;
+
     public CatalogCollectionRoleAssignmentsRoles withViewers(CatalogCollectionRole[] viewers) {
         this.viewers = viewers;
         return this;
     }
     
+    public CatalogCollectionRoleAssignmentsRoles(){}
 }

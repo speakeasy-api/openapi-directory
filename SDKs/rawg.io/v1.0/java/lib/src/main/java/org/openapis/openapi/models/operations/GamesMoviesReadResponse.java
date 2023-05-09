@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GamesMoviesReadResponse {
     
     public String contentType;
+
     public GamesMoviesReadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GamesMoviesReadResponse {
     
     
     public org.openapis.openapi.models.shared.Movie movie;
+
     public GamesMoviesReadResponse withMovie(org.openapis.openapi.models.shared.Movie movie) {
         this.movie = movie;
         return this;
@@ -23,6 +26,7 @@ public class GamesMoviesReadResponse {
     
     
     public Integer statusCode;
+
     public GamesMoviesReadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GamesMoviesReadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GamesMoviesReadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GamesMoviesReadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

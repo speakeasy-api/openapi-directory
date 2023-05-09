@@ -12,6 +12,7 @@ public class LicerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public LicerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class LicerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public LicerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class LicerRequestBodyCertificateParameters {
      */
     @JsonProperty("POLID")
     public String polid;
+
     public LicerRequestBodyCertificateParameters withPolid(String polid) {
         this.polid = polid;
         return this;
@@ -42,9 +45,16 @@ public class LicerRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public LicerRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public LicerRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("POLID") String polid, @JsonProperty("UID") String uid) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.polid = polid;
+        this.uid = uid;
+  }
 }

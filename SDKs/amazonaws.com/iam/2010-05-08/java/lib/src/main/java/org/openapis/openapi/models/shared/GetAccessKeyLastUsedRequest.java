@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetAccessKeyLastUsedRequest {
     
     public String accessKeyId;
+
     public GetAccessKeyLastUsedRequest withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
     }
     
+    public GetAccessKeyLastUsedRequest(@JsonProperty("AccessKeyId") String accessKeyId) {
+        this.accessKeyId = accessKeyId;
+  }
 }

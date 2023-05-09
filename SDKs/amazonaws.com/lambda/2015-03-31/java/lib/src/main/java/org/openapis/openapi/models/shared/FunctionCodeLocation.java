@@ -15,6 +15,7 @@ public class FunctionCodeLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageUri")
     public String imageUri;
+
     public FunctionCodeLocation withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
@@ -23,6 +24,7 @@ public class FunctionCodeLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public FunctionCodeLocation withLocation(String location) {
         this.location = location;
         return this;
@@ -31,6 +33,7 @@ public class FunctionCodeLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepositoryType")
     public String repositoryType;
+
     public FunctionCodeLocation withRepositoryType(String repositoryType) {
         this.repositoryType = repositoryType;
         return this;
@@ -39,9 +42,11 @@ public class FunctionCodeLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolvedImageUri")
     public String resolvedImageUri;
+
     public FunctionCodeLocation withResolvedImageUri(String resolvedImageUri) {
         this.resolvedImageUri = resolvedImageUri;
         return this;
     }
     
+    public FunctionCodeLocation(){}
 }

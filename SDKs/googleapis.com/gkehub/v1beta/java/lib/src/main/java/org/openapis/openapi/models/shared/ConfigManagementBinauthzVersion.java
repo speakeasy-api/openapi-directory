@@ -18,9 +18,11 @@ public class ConfigManagementBinauthzVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookVersion")
     public String webhookVersion;
+
     public ConfigManagementBinauthzVersion withWebhookVersion(String webhookVersion) {
         this.webhookVersion = webhookVersion;
         return this;
     }
     
+    public ConfigManagementBinauthzVersion(){}
 }

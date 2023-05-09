@@ -15,9 +15,13 @@ public class Insights {
      */
     @JsonProperty("label_performance")
     public InsightsLabelPerformance[] labelPerformance;
+
     public Insights withLabelPerformance(InsightsLabelPerformance[] labelPerformance) {
         this.labelPerformance = labelPerformance;
         return this;
     }
     
+    public Insights(@JsonProperty("label_performance") InsightsLabelPerformance[] labelPerformance) {
+        this.labelPerformance = labelPerformance;
+  }
 }

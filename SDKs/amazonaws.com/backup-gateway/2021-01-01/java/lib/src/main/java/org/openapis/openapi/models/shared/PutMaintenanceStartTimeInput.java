@@ -12,6 +12,7 @@ public class PutMaintenanceStartTimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DayOfMonth")
     public Long dayOfMonth;
+
     public PutMaintenanceStartTimeInput withDayOfMonth(Long dayOfMonth) {
         this.dayOfMonth = dayOfMonth;
         return this;
@@ -20,6 +21,7 @@ public class PutMaintenanceStartTimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DayOfWeek")
     public Long dayOfWeek;
+
     public PutMaintenanceStartTimeInput withDayOfWeek(Long dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -27,6 +29,7 @@ public class PutMaintenanceStartTimeInput {
     
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public PutMaintenanceStartTimeInput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
@@ -34,6 +37,7 @@ public class PutMaintenanceStartTimeInput {
     
     @JsonProperty("HourOfDay")
     public Long hourOfDay;
+
     public PutMaintenanceStartTimeInput withHourOfDay(Long hourOfDay) {
         this.hourOfDay = hourOfDay;
         return this;
@@ -41,9 +45,15 @@ public class PutMaintenanceStartTimeInput {
     
     @JsonProperty("MinuteOfHour")
     public Long minuteOfHour;
+
     public PutMaintenanceStartTimeInput withMinuteOfHour(Long minuteOfHour) {
         this.minuteOfHour = minuteOfHour;
         return this;
     }
     
+    public PutMaintenanceStartTimeInput(@JsonProperty("GatewayArn") String gatewayArn, @JsonProperty("HourOfDay") Long hourOfDay, @JsonProperty("MinuteOfHour") Long minuteOfHour) {
+        this.gatewayArn = gatewayArn;
+        this.hourOfDay = hourOfDay;
+        this.minuteOfHour = minuteOfHour;
+  }
 }

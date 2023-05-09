@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LBCookieStickinessPolicy {
     
     public Long cookieExpirationPeriod;
+
     public LBCookieStickinessPolicy withCookieExpirationPeriod(Long cookieExpirationPeriod) {
         this.cookieExpirationPeriod = cookieExpirationPeriod;
         return this;
@@ -19,9 +20,11 @@ public class LBCookieStickinessPolicy {
     
     
     public String policyName;
+
     public LBCookieStickinessPolicy withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public LBCookieStickinessPolicy(){}
 }

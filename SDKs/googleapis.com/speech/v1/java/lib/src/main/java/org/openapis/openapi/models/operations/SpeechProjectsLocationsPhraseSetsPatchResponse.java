@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SpeechProjectsLocationsPhraseSetsPatchResponse {
     
     public String contentType;
+
     public SpeechProjectsLocationsPhraseSetsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SpeechProjectsLocationsPhraseSetsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.PhraseSet phraseSet;
+
     public SpeechProjectsLocationsPhraseSetsPatchResponse withPhraseSet(org.openapis.openapi.models.shared.PhraseSet phraseSet) {
         this.phraseSet = phraseSet;
         return this;
@@ -26,6 +29,7 @@ public class SpeechProjectsLocationsPhraseSetsPatchResponse {
     
     
     public Integer statusCode;
+
     public SpeechProjectsLocationsPhraseSetsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SpeechProjectsLocationsPhraseSetsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SpeechProjectsLocationsPhraseSetsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SpeechProjectsLocationsPhraseSetsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

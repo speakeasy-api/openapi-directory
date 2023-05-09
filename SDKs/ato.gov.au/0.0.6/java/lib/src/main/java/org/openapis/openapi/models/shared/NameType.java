@@ -18,6 +18,7 @@ public class NameType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NameType withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class NameType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NameType withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class NameType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NameType withName(String name) {
         this.name = name;
         return this;
     }
     
+    public NameType(){}
 }

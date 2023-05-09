@@ -23,6 +23,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acquiring_channel")
     public SessionReadAcquiringChannelEnum acquiringChannel;
+
     public SessionRead withAcquiringChannel(SessionReadAcquiringChannelEnum acquiringChannel) {
         this.acquiringChannel = acquiringChannel;
         return this;
@@ -31,6 +32,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachment")
     public Attachment attachment;
+
     public SessionRead withAttachment(Attachment attachment) {
         this.attachment = attachment;
         return this;
@@ -42,6 +44,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorization_token")
     public String authorizationToken;
+
     public SessionRead withAuthorizationToken(String authorizationToken) {
         this.authorizationToken = authorizationToken;
         return this;
@@ -50,6 +53,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     public Address billingAddress;
+
     public SessionRead withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -61,6 +65,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_token")
     public String clientToken;
+
     public SessionRead withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -72,6 +77,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_payment_method_ids")
     public String[] customPaymentMethodIds;
+
     public SessionRead withCustomPaymentMethodIds(String[] customPaymentMethodIds) {
         this.customPaymentMethodIds = customPaymentMethodIds;
         return this;
@@ -80,6 +86,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public CustomerRead customer;
+
     public SessionRead withCustomer(CustomerRead customer) {
         this.customer = customer;
         return this;
@@ -91,6 +98,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("design")
     public String design;
+
     public SessionRead withDesign(String design) {
         this.design = design;
         return this;
@@ -104,6 +112,7 @@ public class SessionRead {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expires_at")
     public OffsetDateTime expiresAt;
+
     public SessionRead withExpiresAt(OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -115,6 +124,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intent")
     public SessionReadIntentEnum intent;
+
     public SessionRead withIntent(SessionReadIntentEnum intent) {
         this.intent = intent;
         return this;
@@ -142,6 +152,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public SessionRead withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -153,6 +164,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_data")
     public String merchantData;
+
     public SessionRead withMerchantData(String merchantData) {
         this.merchantData = merchantData;
         return this;
@@ -164,6 +176,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_reference1")
     public String merchantReference1;
+
     public SessionRead withMerchantReference1(String merchantReference1) {
         this.merchantReference1 = merchantReference1;
         return this;
@@ -175,6 +188,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_reference2")
     public String merchantReference2;
+
     public SessionRead withMerchantReference2(String merchantReference2) {
         this.merchantReference2 = merchantReference2;
         return this;
@@ -183,6 +197,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_urls")
     public MerchantUrls merchantUrls;
+
     public SessionRead withMerchantUrls(MerchantUrls merchantUrls) {
         this.merchantUrls = merchantUrls;
         return this;
@@ -191,6 +206,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Options options;
+
     public SessionRead withOptions(Options options) {
         this.options = options;
         return this;
@@ -202,6 +218,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_amount")
     public Long orderAmount;
+
     public SessionRead withOrderAmount(Long orderAmount) {
         this.orderAmount = orderAmount;
         return this;
@@ -213,6 +230,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_lines")
     public OrderLine[] orderLines;
+
     public SessionRead withOrderLines(OrderLine[] orderLines) {
         this.orderLines = orderLines;
         return this;
@@ -224,6 +242,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_tax_amount")
     public Long orderTaxAmount;
+
     public SessionRead withOrderTaxAmount(Long orderTaxAmount) {
         this.orderTaxAmount = orderTaxAmount;
         return this;
@@ -235,6 +254,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method_categories")
     public PaymentMethodCategory[] paymentMethodCategories;
+
     public SessionRead withPaymentMethodCategories(PaymentMethodCategory[] paymentMethodCategories) {
         this.paymentMethodCategories = paymentMethodCategories;
         return this;
@@ -246,6 +266,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchase_country")
     public String purchaseCountry;
+
     public SessionRead withPurchaseCountry(String purchaseCountry) {
         this.purchaseCountry = purchaseCountry;
         return this;
@@ -257,6 +278,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchase_currency")
     public String purchaseCurrency;
+
     public SessionRead withPurchaseCurrency(String purchaseCurrency) {
         this.purchaseCurrency = purchaseCurrency;
         return this;
@@ -265,6 +287,7 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
     public Address shippingAddress;
+
     public SessionRead withShippingAddress(Address shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -276,9 +299,11 @@ public class SessionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SessionReadStatusEnum status;
+
     public SessionRead withStatus(SessionReadStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public SessionRead(){}
 }

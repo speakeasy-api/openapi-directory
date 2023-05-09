@@ -18,6 +18,7 @@ public class DiskPartition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityBytes")
     public String capacityBytes;
+
     public DiskPartition withCapacityBytes(String capacityBytes) {
         this.capacityBytes = capacityBytes;
         return this;
@@ -29,6 +30,7 @@ public class DiskPartition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileSystem")
     public String fileSystem;
+
     public DiskPartition withFileSystem(String fileSystem) {
         this.fileSystem = fileSystem;
         return this;
@@ -40,6 +42,7 @@ public class DiskPartition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeBytes")
     public String freeBytes;
+
     public DiskPartition withFreeBytes(String freeBytes) {
         this.freeBytes = freeBytes;
         return this;
@@ -51,6 +54,7 @@ public class DiskPartition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountPoint")
     public String mountPoint;
+
     public DiskPartition withMountPoint(String mountPoint) {
         this.mountPoint = mountPoint;
         return this;
@@ -62,6 +66,7 @@ public class DiskPartition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subPartitions")
     public DiskPartitionList subPartitions;
+
     public DiskPartition withSubPartitions(DiskPartitionList subPartitions) {
         this.subPartitions = subPartitions;
         return this;
@@ -73,6 +78,7 @@ public class DiskPartition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public DiskPartition withType(String type) {
         this.type = type;
         return this;
@@ -84,9 +90,11 @@ public class DiskPartition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uuid")
     public String uuid;
+
     public DiskPartition withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public DiskPartition(){}
 }

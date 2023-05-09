@@ -106,4 +106,14 @@ lib/src/main/java/org/openapis/openapi/models/operations/VersionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ContributeResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetOpenapiSpecResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ServerInfoResponse.java
+docs/sdk/README.md
+docs/attachment/README.md
+docs/batch/README.md
+docs/buckets/README.md
+docs/changess/README.md
+docs/collectionchangeset/README.md
+docs/collections/README.md
+docs/groups/README.md
+docs/records/README.md
+docs/utilities/README.md
 USAGE.md

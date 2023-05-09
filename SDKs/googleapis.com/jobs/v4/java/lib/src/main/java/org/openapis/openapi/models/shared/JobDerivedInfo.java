@@ -18,6 +18,7 @@ public class JobDerivedInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobCategories")
     public JobDerivedInfoJobCategoriesEnum[] jobCategories;
+
     public JobDerivedInfo withJobCategories(JobDerivedInfoJobCategoriesEnum[] jobCategories) {
         this.jobCategories = jobCategories;
         return this;
@@ -29,9 +30,11 @@ public class JobDerivedInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public Location[] locations;
+
     public JobDerivedInfo withLocations(Location[] locations) {
         this.locations = locations;
         return this;
     }
     
+    public JobDerivedInfo(){}
 }

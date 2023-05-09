@@ -12,6 +12,7 @@ public class UpdateHubRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubDescription")
     public String hubDescription;
+
     public UpdateHubRequest withHubDescription(String hubDescription) {
         this.hubDescription = hubDescription;
         return this;
@@ -20,6 +21,7 @@ public class UpdateHubRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubDisplayName")
     public String hubDisplayName;
+
     public UpdateHubRequest withHubDisplayName(String hubDisplayName) {
         this.hubDisplayName = hubDisplayName;
         return this;
@@ -27,6 +29,7 @@ public class UpdateHubRequest {
     
     @JsonProperty("HubName")
     public String hubName;
+
     public UpdateHubRequest withHubName(String hubName) {
         this.hubName = hubName;
         return this;
@@ -35,9 +38,13 @@ public class UpdateHubRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubSearchKeywords")
     public String[] hubSearchKeywords;
+
     public UpdateHubRequest withHubSearchKeywords(String[] hubSearchKeywords) {
         this.hubSearchKeywords = hubSearchKeywords;
         return this;
     }
     
+    public UpdateHubRequest(@JsonProperty("HubName") String hubName) {
+        this.hubName = hubName;
+  }
 }

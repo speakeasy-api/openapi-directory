@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AerodromesByRouteUsV1AerodromesRouteQueryPostResponse {
@@ -12,6 +13,7 @@ public class AerodromesByRouteUsV1AerodromesRouteQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.AerodromeRouteResponse aerodromeRouteResponse;
+
     public AerodromesByRouteUsV1AerodromesRouteQueryPostResponse withAerodromeRouteResponse(org.openapis.openapi.models.shared.AerodromeRouteResponse aerodromeRouteResponse) {
         this.aerodromeRouteResponse = aerodromeRouteResponse;
         return this;
@@ -19,6 +21,7 @@ public class AerodromesByRouteUsV1AerodromesRouteQueryPostResponse {
     
     
     public String contentType;
+
     public AerodromesByRouteUsV1AerodromesRouteQueryPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AerodromesByRouteUsV1AerodromesRouteQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public AerodromesByRouteUsV1AerodromesRouteQueryPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -36,6 +40,7 @@ public class AerodromesByRouteUsV1AerodromesRouteQueryPostResponse {
     
     
     public Integer statusCode;
+
     public AerodromesByRouteUsV1AerodromesRouteQueryPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AerodromesByRouteUsV1AerodromesRouteQueryPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AerodromesByRouteUsV1AerodromesRouteQueryPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AerodromesByRouteUsV1AerodromesRouteQueryPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

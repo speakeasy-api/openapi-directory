@@ -12,6 +12,7 @@ public class ProfilesProfilesProfileConfigLocators {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public ProfilesProfilesProfileConfigLocatorsPassword password;
+
     public ProfilesProfilesProfileConfigLocators withPassword(ProfilesProfilesProfileConfigLocatorsPassword password) {
         this.password = password;
         return this;
@@ -20,6 +21,7 @@ public class ProfilesProfilesProfileConfigLocators {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submit")
     public ProfilesProfilesProfileConfigLocatorsSubmit submit;
+
     public ProfilesProfilesProfileConfigLocators withSubmit(ProfilesProfilesProfileConfigLocatorsSubmit submit) {
         this.submit = submit;
         return this;
@@ -28,9 +30,11 @@ public class ProfilesProfilesProfileConfigLocators {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public ProfilesProfilesProfileConfigLocatorsUsername username;
+
     public ProfilesProfilesProfileConfigLocators withUsername(ProfilesProfilesProfileConfigLocatorsUsername username) {
         this.username = username;
         return this;
     }
     
+    public ProfilesProfilesProfileConfigLocators(){}
 }

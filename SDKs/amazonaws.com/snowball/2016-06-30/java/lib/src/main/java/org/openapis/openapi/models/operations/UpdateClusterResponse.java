@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateClusterResponse {
     
     public String contentType;
+
     public UpdateClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateClusterResponse {
      */
     
     public Object ec2RequestFailedException;
+
     public UpdateClusterResponse withEc2RequestFailedException(Object ec2RequestFailedException) {
         this.ec2RequestFailedException = ec2RequestFailedException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateClusterResponse {
      */
     
     public Object invalidInputCombinationException;
+
     public UpdateClusterResponse withInvalidInputCombinationException(Object invalidInputCombinationException) {
         this.invalidInputCombinationException = invalidInputCombinationException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateClusterResponse {
      */
     
     public Object invalidJobStateException;
+
     public UpdateClusterResponse withInvalidJobStateException(Object invalidJobStateException) {
         this.invalidJobStateException = invalidJobStateException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateClusterResponse {
      */
     
     public Object invalidResourceException;
+
     public UpdateClusterResponse withInvalidResourceException(Object invalidResourceException) {
         this.invalidResourceException = invalidResourceException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateClusterResponse {
      */
     
     public Object kmsRequestFailedException;
+
     public UpdateClusterResponse withKMSRequestFailedException(Object kmsRequestFailedException) {
         this.kmsRequestFailedException = kmsRequestFailedException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateClusterResponse {
     
     
     public Integer statusCode;
+
     public UpdateClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateClusterResponse {
      */
     
     public java.util.Map<String, Object> updateClusterResult;
+
     public UpdateClusterResponse withUpdateClusterResult(java.util.Map<String, Object> updateClusterResult) {
         this.updateClusterResult = updateClusterResult;
         return this;
     }
     
+    public UpdateClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

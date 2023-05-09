@@ -114,6 +114,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -140,11 +145,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectResponse res = new org.openapis.openapi.models.operations.ConnectResponse() {{
+        org.openapis.openapi.models.operations.ConnectResponse res = new org.openapis.openapi.models.operations.ConnectResponse(contentType, httpRes.statusCode()) {{
             connect200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -180,11 +183,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectionsResponse res = new org.openapis.openapi.models.operations.ConnectionsResponse() {{
+        org.openapis.openapi.models.operations.ConnectionsResponse res = new org.openapis.openapi.models.operations.ConnectionsResponse(contentType, httpRes.statusCode()) {{
             connections200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -221,11 +222,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisconnectResponse res = new org.openapis.openapi.models.operations.DisconnectResponse() {{
+        org.openapis.openapi.models.operations.DisconnectResponse res = new org.openapis.openapi.models.operations.DisconnectResponse(contentType, httpRes.statusCode()) {{
             disconnect200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,11 +260,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StatusResponse res = new org.openapis.openapi.models.operations.StatusResponse() {{
+        org.openapis.openapi.models.operations.StatusResponse res = new org.openapis.openapi.models.operations.StatusResponse(contentType, httpRes.statusCode()) {{
             status200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

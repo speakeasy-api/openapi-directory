@@ -12,6 +12,7 @@ public class DescribeParameterGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeParameterGroupsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class DescribeParameterGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeParameterGroupsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class DescribeParameterGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterGroupName")
     public String parameterGroupName;
+
     public DescribeParameterGroupsRequest withParameterGroupName(String parameterGroupName) {
         this.parameterGroupName = parameterGroupName;
         return this;
     }
     
+    public DescribeParameterGroupsRequest(){}
 }

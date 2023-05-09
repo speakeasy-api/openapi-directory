@@ -18,6 +18,7 @@ public class ReplaceImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageObjectId")
     public String imageObjectId;
+
     public ReplaceImageRequest withImageObjectId(String imageObjectId) {
         this.imageObjectId = imageObjectId;
         return this;
@@ -29,6 +30,7 @@ public class ReplaceImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageReplaceMethod")
     public ReplaceImageRequestImageReplaceMethodEnum imageReplaceMethod;
+
     public ReplaceImageRequest withImageReplaceMethod(ReplaceImageRequestImageReplaceMethodEnum imageReplaceMethod) {
         this.imageReplaceMethod = imageReplaceMethod;
         return this;
@@ -40,9 +42,11 @@ public class ReplaceImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public ReplaceImageRequest withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public ReplaceImageRequest(){}
 }

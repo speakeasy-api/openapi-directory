@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CreatePlacementGroupRequest {
     
     public Boolean dryRun;
+
     public CreatePlacementGroupRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreatePlacementGroupRequest {
     
     
     public String groupName;
+
     public CreatePlacementGroupRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -23,6 +25,7 @@ public class CreatePlacementGroupRequest {
     
     
     public Long partitionCount;
+
     public CreatePlacementGroupRequest withPartitionCount(Long partitionCount) {
         this.partitionCount = partitionCount;
         return this;
@@ -30,6 +33,7 @@ public class CreatePlacementGroupRequest {
     
     
     public SpreadLevelEnum spreadLevel;
+
     public CreatePlacementGroupRequest withSpreadLevel(SpreadLevelEnum spreadLevel) {
         this.spreadLevel = spreadLevel;
         return this;
@@ -37,6 +41,7 @@ public class CreatePlacementGroupRequest {
     
     
     public CreatePlacementGroupRequestStrategyEnum strategy;
+
     public CreatePlacementGroupRequest withStrategy(CreatePlacementGroupRequestStrategyEnum strategy) {
         this.strategy = strategy;
         return this;
@@ -44,9 +49,11 @@ public class CreatePlacementGroupRequest {
     
     
     public CreatePlacementGroupRequestTagSpecifications[] tagSpecifications;
+
     public CreatePlacementGroupRequest withTagSpecifications(CreatePlacementGroupRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreatePlacementGroupRequest(){}
 }

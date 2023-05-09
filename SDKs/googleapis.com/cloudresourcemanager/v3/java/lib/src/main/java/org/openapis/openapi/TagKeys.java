@@ -61,11 +61,9 @@ public class TagKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysCreateResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysCreateResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -73,6 +71,50 @@ public class TagKeys {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
                 res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieves a TagKey by its namespaced name. This method will return `PERMISSION_DENIED` if the key does not exist or the user does not have permission to view it.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysGetNamespacedResponse cloudresourcemanagerTagKeysGetNamespaced(org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysGetNamespacedRequest request, org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysGetNamespacedSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v3/tagKeys/namespaced");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysGetNamespacedRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysGetNamespacedResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysGetNamespacedResponse(contentType, httpRes.statusCode()) {{
+            tagKey = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.TagKey out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TagKey.class);
+                res.tagKey = out;
             }
         }
 
@@ -107,11 +149,9 @@ public class TagKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysListResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysListResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysListResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysListResponse(contentType, httpRes.statusCode()) {{
             listTagKeysResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

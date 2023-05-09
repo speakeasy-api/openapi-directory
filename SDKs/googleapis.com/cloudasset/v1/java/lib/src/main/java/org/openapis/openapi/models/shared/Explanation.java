@@ -18,9 +18,11 @@ public class Explanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchedPermissions")
     public java.util.Map<String, Permissions> matchedPermissions;
+
     public Explanation withMatchedPermissions(java.util.Map<String, Permissions> matchedPermissions) {
         this.matchedPermissions = matchedPermissions;
         return this;
     }
     
+    public Explanation(){}
 }

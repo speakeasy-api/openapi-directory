@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProvisionedCapacityResponse {
     
     public String contentType;
+
     public ListProvisionedCapacityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListProvisionedCapacityResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListProvisionedCapacityResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class ListProvisionedCapacityResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProvisionedCapacityOutput listProvisionedCapacityOutput;
+
     public ListProvisionedCapacityResponse withListProvisionedCapacityOutput(org.openapis.openapi.models.shared.ListProvisionedCapacityOutput listProvisionedCapacityOutput) {
         this.listProvisionedCapacityOutput = listProvisionedCapacityOutput;
         return this;
@@ -39,6 +43,7 @@ public class ListProvisionedCapacityResponse {
      */
     
     public Object missingParameterValueException;
+
     public ListProvisionedCapacityResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -46,6 +51,7 @@ public class ListProvisionedCapacityResponse {
     
     
     public Integer statusCode;
+
     public ListProvisionedCapacityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListProvisionedCapacityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProvisionedCapacityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListProvisionedCapacityResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListProvisionedCapacityResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ListProvisionedCapacityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

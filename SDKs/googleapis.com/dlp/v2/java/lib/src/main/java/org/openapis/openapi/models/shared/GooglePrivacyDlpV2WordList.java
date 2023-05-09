@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2WordList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("words")
     public String[] words;
+
     public GooglePrivacyDlpV2WordList withWords(String[] words) {
         this.words = words;
         return this;
     }
     
+    public GooglePrivacyDlpV2WordList(){}
 }

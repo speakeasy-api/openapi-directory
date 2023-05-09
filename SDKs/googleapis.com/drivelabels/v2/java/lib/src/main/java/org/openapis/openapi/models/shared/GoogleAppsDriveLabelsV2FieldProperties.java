@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2FieldProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAppsDriveLabelsV2FieldProperties withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2FieldProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertBeforeField")
     public String insertBeforeField;
+
     public GoogleAppsDriveLabelsV2FieldProperties withInsertBeforeField(String insertBeforeField) {
         this.insertBeforeField = insertBeforeField;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAppsDriveLabelsV2FieldProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public GoogleAppsDriveLabelsV2FieldProperties withRequired(Boolean required) {
         this.required = required;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2FieldProperties(){}
 }

@@ -15,6 +15,7 @@ public class HealthQuestionDefinitionResourceAttributesRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public String property;
+
     public HealthQuestionDefinitionResourceAttributesRequirements withProperty(String property) {
         this.property = property;
         return this;
@@ -26,6 +27,7 @@ public class HealthQuestionDefinitionResourceAttributesRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shouldBeEqual")
     public Boolean shouldBeEqual;
+
     public HealthQuestionDefinitionResourceAttributesRequirements withShouldBeEqual(Boolean shouldBeEqual) {
         this.shouldBeEqual = shouldBeEqual;
         return this;
@@ -37,6 +39,7 @@ public class HealthQuestionDefinitionResourceAttributesRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shouldBeGreaterThan")
     public Double shouldBeGreaterThan;
+
     public HealthQuestionDefinitionResourceAttributesRequirements withShouldBeGreaterThan(Double shouldBeGreaterThan) {
         this.shouldBeGreaterThan = shouldBeGreaterThan;
         return this;
@@ -48,6 +51,7 @@ public class HealthQuestionDefinitionResourceAttributesRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shouldBeLessThan")
     public Double shouldBeLessThan;
+
     public HealthQuestionDefinitionResourceAttributesRequirements withShouldBeLessThan(Double shouldBeLessThan) {
         this.shouldBeLessThan = shouldBeLessThan;
         return this;
@@ -59,9 +63,11 @@ public class HealthQuestionDefinitionResourceAttributesRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public HealthQuestionDefinitionResourceAttributesRequirements withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public HealthQuestionDefinitionResourceAttributesRequirements(){}
 }

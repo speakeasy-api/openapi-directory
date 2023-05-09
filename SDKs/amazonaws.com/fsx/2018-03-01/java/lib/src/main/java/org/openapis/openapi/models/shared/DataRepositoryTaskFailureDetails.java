@@ -18,9 +18,11 @@ public class DataRepositoryTaskFailureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DataRepositoryTaskFailureDetails withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DataRepositoryTaskFailureDetails(){}
 }

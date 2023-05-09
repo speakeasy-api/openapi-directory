@@ -12,9 +12,13 @@ public class GetNotificationConfigurationRequest {
      */
     @JsonProperty("notificationId")
     public Long notificationId;
+
     public GetNotificationConfigurationRequest withNotificationId(Long notificationId) {
         this.notificationId = notificationId;
         return this;
     }
     
+    public GetNotificationConfigurationRequest(@JsonProperty("notificationId") Long notificationId) {
+        this.notificationId = notificationId;
+  }
 }

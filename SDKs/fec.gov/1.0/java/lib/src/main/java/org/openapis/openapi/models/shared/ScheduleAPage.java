@@ -12,6 +12,7 @@ public class ScheduleAPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public SeekInfo pagination;
+
     public ScheduleAPage withPagination(SeekInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class ScheduleAPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ScheduleA[] results;
+
     public ScheduleAPage withResults(ScheduleA[] results) {
         this.results = results;
         return this;
     }
     
+    public ScheduleAPage(){}
 }

@@ -15,6 +15,7 @@ public class EksPodPropertiesOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public EksContainerOverride[] containers;
+
     public EksPodPropertiesOverride withContainers(EksContainerOverride[] containers) {
         this.containers = containers;
         return this;
@@ -23,9 +24,11 @@ public class EksPodPropertiesOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public EksMetadata metadata;
+
     public EksPodPropertiesOverride withMetadata(EksMetadata metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public EksPodPropertiesOverride(){}
 }

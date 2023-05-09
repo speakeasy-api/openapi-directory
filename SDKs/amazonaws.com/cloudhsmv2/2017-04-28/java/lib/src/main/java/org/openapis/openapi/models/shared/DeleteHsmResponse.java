@@ -15,9 +15,11 @@ public class DeleteHsmResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HsmId")
     public String hsmId;
+
     public DeleteHsmResponse withHsmId(String hsmId) {
         this.hsmId = hsmId;
         return this;
     }
     
+    public DeleteHsmResponse(){}
 }

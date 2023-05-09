@@ -15,6 +15,7 @@ public class SMSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalMessage")
     public String additionalMessage;
+
     public SMSConfiguration withAdditionalMessage(String additionalMessage) {
         this.additionalMessage = additionalMessage;
         return this;
@@ -22,6 +23,7 @@ public class SMSConfiguration {
     
     @JsonProperty("recipients")
     public RecipientDetail[] recipients;
+
     public SMSConfiguration withRecipients(RecipientDetail[] recipients) {
         this.recipients = recipients;
         return this;
@@ -30,9 +32,13 @@ public class SMSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("senderId")
     public String senderId;
+
     public SMSConfiguration withSenderId(String senderId) {
         this.senderId = senderId;
         return this;
     }
     
+    public SMSConfiguration(@JsonProperty("recipients") RecipientDetail[] recipients) {
+        this.recipients = recipients;
+  }
 }

@@ -15,6 +15,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryValueWeighted {
      */
     
     public String displayValue;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryValueWeighted withDisplayValue(String displayValue) {
         this.displayValue = displayValue;
         return this;
@@ -25,9 +26,11 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryValueWeighted {
      */
     
     public Double value;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryValueWeighted withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyLeaderboardEntryValueWeighted(){}
 }

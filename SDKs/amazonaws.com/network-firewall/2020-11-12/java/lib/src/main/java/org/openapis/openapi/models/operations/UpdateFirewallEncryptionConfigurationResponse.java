@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFirewallEncryptionConfigurationResponse {
     
     public String contentType;
+
     public UpdateFirewallEncryptionConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFirewallEncryptionConfigurationResponse {
      */
     
     public Object internalServerError;
+
     public UpdateFirewallEncryptionConfigurationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFirewallEncryptionConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateFirewallEncryptionConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFirewallEncryptionConfigurationResponse {
      */
     
     public Object invalidTokenException;
+
     public UpdateFirewallEncryptionConfigurationResponse withInvalidTokenException(Object invalidTokenException) {
         this.invalidTokenException = invalidTokenException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFirewallEncryptionConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFirewallEncryptionConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateFirewallEncryptionConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateFirewallEncryptionConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateFirewallEncryptionConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFirewallEncryptionConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFirewallEncryptionConfigurationResponse {
      */
     
     public Object resourceOwnerCheckException;
+
     public UpdateFirewallEncryptionConfigurationResponse withResourceOwnerCheckException(Object resourceOwnerCheckException) {
         this.resourceOwnerCheckException = resourceOwnerCheckException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateFirewallEncryptionConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateFirewallEncryptionConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateFirewallEncryptionConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFirewallEncryptionConfigurationResponse updateFirewallEncryptionConfigurationResponse;
+
     public UpdateFirewallEncryptionConfigurationResponse withUpdateFirewallEncryptionConfigurationResponse(org.openapis.openapi.models.shared.UpdateFirewallEncryptionConfigurationResponse updateFirewallEncryptionConfigurationResponse) {
         this.updateFirewallEncryptionConfigurationResponse = updateFirewallEncryptionConfigurationResponse;
         return this;
     }
     
+    public UpdateFirewallEncryptionConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

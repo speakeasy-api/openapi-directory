@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportSshPublicKeyResponse {
     
     public String contentType;
+
     public ImportSshPublicKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ImportSshPublicKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportSshPublicKeyResponse importSshPublicKeyResponse;
+
     public ImportSshPublicKeyResponse withImportSshPublicKeyResponse(org.openapis.openapi.models.shared.ImportSshPublicKeyResponse importSshPublicKeyResponse) {
         this.importSshPublicKeyResponse = importSshPublicKeyResponse;
         return this;
@@ -29,6 +32,7 @@ public class ImportSshPublicKeyResponse {
      */
     
     public Object internalServiceError;
+
     public ImportSshPublicKeyResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class ImportSshPublicKeyResponse {
      */
     
     public Object invalidRequestException;
+
     public ImportSshPublicKeyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ImportSshPublicKeyResponse {
      */
     
     public Object resourceExistsException;
+
     public ImportSshPublicKeyResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -59,6 +65,7 @@ public class ImportSshPublicKeyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ImportSshPublicKeyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ImportSshPublicKeyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ImportSshPublicKeyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ImportSshPublicKeyResponse {
     
     
     public Integer statusCode;
+
     public ImportSshPublicKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ImportSshPublicKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportSshPublicKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ImportSshPublicKeyResponse {
      */
     
     public Object throttlingException;
+
     public ImportSshPublicKeyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ImportSshPublicKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

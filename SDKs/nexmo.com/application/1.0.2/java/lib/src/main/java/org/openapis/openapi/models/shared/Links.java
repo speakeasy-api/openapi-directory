@@ -18,9 +18,11 @@ public class Links {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public Links withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public Links(){}
 }

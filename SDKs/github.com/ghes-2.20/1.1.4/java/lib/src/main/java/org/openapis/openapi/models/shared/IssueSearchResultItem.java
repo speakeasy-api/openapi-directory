@@ -20,6 +20,7 @@ public class IssueSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active_lock_reason")
     public String activeLockReason;
+
     public IssueSearchResultItem withActiveLockReason(String activeLockReason) {
         this.activeLockReason = activeLockReason;
         return this;
@@ -30,6 +31,7 @@ public class IssueSearchResultItem {
      */
     @JsonProperty("assignee")
     public NullableSimpleUser assignee;
+
     public IssueSearchResultItem withAssignee(NullableSimpleUser assignee) {
         this.assignee = assignee;
         return this;
@@ -38,6 +40,7 @@ public class IssueSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignees")
     public SimpleUser[] assignees;
+
     public IssueSearchResultItem withAssignees(SimpleUser[] assignees) {
         this.assignees = assignees;
         return this;
@@ -48,6 +51,7 @@ public class IssueSearchResultItem {
      */
     @JsonProperty("author_association")
     public AuthorAssociationEnum authorAssociation;
+
     public IssueSearchResultItem withAuthorAssociation(AuthorAssociationEnum authorAssociation) {
         this.authorAssociation = authorAssociation;
         return this;
@@ -56,6 +60,7 @@ public class IssueSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public IssueSearchResultItem withBody(String body) {
         this.body = body;
         return this;
@@ -64,6 +69,7 @@ public class IssueSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_html")
     public String bodyHtml;
+
     public IssueSearchResultItem withBodyHtml(String bodyHtml) {
         this.bodyHtml = bodyHtml;
         return this;
@@ -72,6 +78,7 @@ public class IssueSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_text")
     public String bodyText;
+
     public IssueSearchResultItem withBodyText(String bodyText) {
         this.bodyText = bodyText;
         return this;
@@ -81,6 +88,7 @@ public class IssueSearchResultItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("closed_at")
     public OffsetDateTime closedAt;
+
     public IssueSearchResultItem withClosedAt(OffsetDateTime closedAt) {
         this.closedAt = closedAt;
         return this;
@@ -88,6 +96,7 @@ public class IssueSearchResultItem {
     
     @JsonProperty("comments")
     public Long comments;
+
     public IssueSearchResultItem withComments(Long comments) {
         this.comments = comments;
         return this;
@@ -95,6 +104,7 @@ public class IssueSearchResultItem {
     
     @JsonProperty("comments_url")
     public String commentsUrl;
+
     public IssueSearchResultItem withCommentsUrl(String commentsUrl) {
         this.commentsUrl = commentsUrl;
         return this;
@@ -104,6 +114,7 @@ public class IssueSearchResultItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public IssueSearchResultItem withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -112,6 +123,7 @@ public class IssueSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("draft")
     public Boolean draft;
+
     public IssueSearchResultItem withDraft(Boolean draft) {
         this.draft = draft;
         return this;
@@ -119,6 +131,7 @@ public class IssueSearchResultItem {
     
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public IssueSearchResultItem withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -126,6 +139,7 @@ public class IssueSearchResultItem {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public IssueSearchResultItem withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -133,6 +147,7 @@ public class IssueSearchResultItem {
     
     @JsonProperty("id")
     public Long id;
+
     public IssueSearchResultItem withId(Long id) {
         this.id = id;
         return this;
@@ -140,6 +155,7 @@ public class IssueSearchResultItem {
     
     @JsonProperty("labels")
     public IssueSearchResultItemLabels[] labels;
+
     public IssueSearchResultItem withLabels(IssueSearchResultItemLabels[] labels) {
         this.labels = labels;
         return this;
@@ -147,6 +163,7 @@ public class IssueSearchResultItem {
     
     @JsonProperty("labels_url")
     public String labelsUrl;
+
     public IssueSearchResultItem withLabelsUrl(String labelsUrl) {
         this.labelsUrl = labelsUrl;
         return this;
@@ -154,6 +171,7 @@ public class IssueSearchResultItem {
     
     @JsonProperty("locked")
     public Boolean locked;
+
     public IssueSearchResultItem withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -164,6 +182,7 @@ public class IssueSearchResultItem {
      */
     @JsonProperty("milestone")
     public NullableMilestone milestone;
+
     public IssueSearchResultItem withMilestone(NullableMilestone milestone) {
         this.milestone = milestone;
         return this;
@@ -171,6 +190,7 @@ public class IssueSearchResultItem {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public IssueSearchResultItem withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -178,6 +198,7 @@ public class IssueSearchResultItem {
     
     @JsonProperty("number")
     public Long number;
+
     public IssueSearchResultItem withNumber(Long number) {
         this.number = number;
         return this;
@@ -189,6 +210,7 @@ public class IssueSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public IssueSearchResultItem withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -197,6 +219,7 @@ public class IssueSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pull_request")
     public IssueSearchResultItemPullRequest pullRequest;
+
     public IssueSearchResultItem withPullRequest(IssueSearchResultItemPullRequest pullRequest) {
         this.pullRequest = pullRequest;
         return this;
@@ -208,6 +231,7 @@ public class IssueSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public Repository repository;
+
     public IssueSearchResultItem withRepository(Repository repository) {
         this.repository = repository;
         return this;
@@ -215,6 +239,7 @@ public class IssueSearchResultItem {
     
     @JsonProperty("repository_url")
     public String repositoryUrl;
+
     public IssueSearchResultItem withRepositoryUrl(String repositoryUrl) {
         this.repositoryUrl = repositoryUrl;
         return this;
@@ -222,6 +247,7 @@ public class IssueSearchResultItem {
     
     @JsonProperty("score")
     public Double score;
+
     public IssueSearchResultItem withScore(Double score) {
         this.score = score;
         return this;
@@ -229,6 +255,7 @@ public class IssueSearchResultItem {
     
     @JsonProperty("state")
     public String state;
+
     public IssueSearchResultItem withState(String state) {
         this.state = state;
         return this;
@@ -237,6 +264,7 @@ public class IssueSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_matches")
     public SearchResultTextMatches[] textMatches;
+
     public IssueSearchResultItem withTextMatches(SearchResultTextMatches[] textMatches) {
         this.textMatches = textMatches;
         return this;
@@ -245,6 +273,7 @@ public class IssueSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeline_url")
     public String timelineUrl;
+
     public IssueSearchResultItem withTimelineUrl(String timelineUrl) {
         this.timelineUrl = timelineUrl;
         return this;
@@ -252,6 +281,7 @@ public class IssueSearchResultItem {
     
     @JsonProperty("title")
     public String title;
+
     public IssueSearchResultItem withTitle(String title) {
         this.title = title;
         return this;
@@ -261,6 +291,7 @@ public class IssueSearchResultItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public IssueSearchResultItem withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -268,6 +299,7 @@ public class IssueSearchResultItem {
     
     @JsonProperty("url")
     public String url;
+
     public IssueSearchResultItem withUrl(String url) {
         this.url = url;
         return this;
@@ -278,9 +310,34 @@ public class IssueSearchResultItem {
      */
     @JsonProperty("user")
     public NullableSimpleUser user;
+
     public IssueSearchResultItem withUser(NullableSimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public IssueSearchResultItem(@JsonProperty("assignee") NullableSimpleUser assignee, @JsonProperty("author_association") AuthorAssociationEnum authorAssociation, @JsonProperty("closed_at") OffsetDateTime closedAt, @JsonProperty("comments") Long comments, @JsonProperty("comments_url") String commentsUrl, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("events_url") String eventsUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("labels") IssueSearchResultItemLabels[] labels, @JsonProperty("labels_url") String labelsUrl, @JsonProperty("locked") Boolean locked, @JsonProperty("milestone") NullableMilestone milestone, @JsonProperty("node_id") String nodeId, @JsonProperty("number") Long number, @JsonProperty("repository_url") String repositoryUrl, @JsonProperty("score") Double score, @JsonProperty("state") String state, @JsonProperty("title") String title, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url, @JsonProperty("user") NullableSimpleUser user) {
+        this.assignee = assignee;
+        this.authorAssociation = authorAssociation;
+        this.closedAt = closedAt;
+        this.comments = comments;
+        this.commentsUrl = commentsUrl;
+        this.createdAt = createdAt;
+        this.eventsUrl = eventsUrl;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.labels = labels;
+        this.labelsUrl = labelsUrl;
+        this.locked = locked;
+        this.milestone = milestone;
+        this.nodeId = nodeId;
+        this.number = number;
+        this.repositoryUrl = repositoryUrl;
+        this.score = score;
+        this.state = state;
+        this.title = title;
+        this.updatedAt = updatedAt;
+        this.url = url;
+        this.user = user;
+  }
 }

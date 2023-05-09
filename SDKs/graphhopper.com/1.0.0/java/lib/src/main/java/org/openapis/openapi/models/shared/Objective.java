@@ -56,6 +56,7 @@ public class Objective {
      */
     @JsonProperty("type")
     public ObjectiveTypeEnum type;
+
     public Objective withType(ObjectiveTypeEnum type) {
         this.type = type;
         return this;
@@ -74,9 +75,14 @@ public class Objective {
      */
     @JsonProperty("value")
     public ObjectiveValueEnum value;
+
     public Objective withValue(ObjectiveValueEnum value) {
         this.value = value;
         return this;
     }
     
+    public Objective(@JsonProperty("type") ObjectiveTypeEnum type, @JsonProperty("value") ObjectiveValueEnum value) {
+        this.type = type;
+        this.value = value;
+  }
 }

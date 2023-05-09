@@ -15,6 +15,7 @@ public class ComponentConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merge")
     public String merge;
+
     public ComponentConfigurationUpdate withMerge(String merge) {
         this.merge = merge;
         return this;
@@ -23,9 +24,11 @@ public class ComponentConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reset")
     public String[] reset;
+
     public ComponentConfigurationUpdate withReset(String[] reset) {
         this.reset = reset;
         return this;
     }
     
+    public ComponentConfigurationUpdate(){}
 }

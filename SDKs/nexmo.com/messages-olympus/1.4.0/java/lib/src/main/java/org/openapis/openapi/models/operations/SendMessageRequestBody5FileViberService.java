@@ -15,6 +15,7 @@ public class SendMessageRequestBody5FileViberService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public SendMessageRequestBody5FileViberServiceCategoryEnum category;
+
     public SendMessageRequestBody5FileViberService withCategory(SendMessageRequestBody5FileViberServiceCategoryEnum category) {
         this.category = category;
         return this;
@@ -26,6 +27,7 @@ public class SendMessageRequestBody5FileViberService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public Long ttl;
+
     public SendMessageRequestBody5FileViberService withTtl(Long ttl) {
         this.ttl = ttl;
         return this;
@@ -37,9 +39,11 @@ public class SendMessageRequestBody5FileViberService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SendMessageRequestBody5FileViberService withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SendMessageRequestBody5FileViberService(){}
 }

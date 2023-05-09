@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateUserProfileRequest {
     @JsonProperty("DomainId")
     public String domainId;
+
     public UpdateUserProfileRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -18,6 +19,7 @@ public class UpdateUserProfileRequest {
     
     @JsonProperty("UserProfileName")
     public String userProfileName;
+
     public UpdateUserProfileRequest withUserProfileName(String userProfileName) {
         this.userProfileName = userProfileName;
         return this;
@@ -26,9 +28,14 @@ public class UpdateUserProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserSettings")
     public UserSettings userSettings;
+
     public UpdateUserProfileRequest withUserSettings(UserSettings userSettings) {
         this.userSettings = userSettings;
         return this;
     }
     
+    public UpdateUserProfileRequest(@JsonProperty("DomainId") String domainId, @JsonProperty("UserProfileName") String userProfileName) {
+        this.domainId = domainId;
+        this.userProfileName = userProfileName;
+  }
 }

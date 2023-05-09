@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetListOfJobsResponse {
     
     public String contentType;
+
     public GetListOfJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetListOfJobsResponse {
      */
     
     public GetListOfJobs400ApplicationProblemPlusJson getListOfJobs400ApplicationProblemPlusJsonObject;
+
     public GetListOfJobsResponse withGetListOfJobs400ApplicationProblemPlusJsonObject(GetListOfJobs400ApplicationProblemPlusJson getListOfJobs400ApplicationProblemPlusJsonObject) {
         this.getListOfJobs400ApplicationProblemPlusJsonObject = getListOfJobs400ApplicationProblemPlusJsonObject;
         return this;
@@ -32,6 +35,7 @@ public class GetListOfJobsResponse {
      */
     
     public GetListOfJobs401ApplicationProblemPlusJson getListOfJobs401ApplicationProblemPlusJsonObject;
+
     public GetListOfJobsResponse withGetListOfJobs401ApplicationProblemPlusJsonObject(GetListOfJobs401ApplicationProblemPlusJson getListOfJobs401ApplicationProblemPlusJsonObject) {
         this.getListOfJobs401ApplicationProblemPlusJsonObject = getListOfJobs401ApplicationProblemPlusJsonObject;
         return this;
@@ -42,6 +46,7 @@ public class GetListOfJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.Job[] jobs;
+
     public GetListOfJobsResponse withJobs(org.openapis.openapi.models.shared.Job[] jobs) {
         this.jobs = jobs;
         return this;
@@ -49,6 +54,7 @@ public class GetListOfJobsResponse {
     
     
     public Integer statusCode;
+
     public GetListOfJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -56,9 +62,14 @@ public class GetListOfJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetListOfJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetListOfJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

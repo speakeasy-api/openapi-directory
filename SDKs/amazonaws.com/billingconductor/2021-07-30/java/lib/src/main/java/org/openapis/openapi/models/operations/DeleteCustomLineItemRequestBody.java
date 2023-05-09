@@ -14,6 +14,7 @@ public class DeleteCustomLineItemRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public DeleteCustomLineItemRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -25,9 +26,13 @@ public class DeleteCustomLineItemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingPeriodRange")
     public DeleteCustomLineItemRequestBodyBillingPeriodRange billingPeriodRange;
+
     public DeleteCustomLineItemRequestBody withBillingPeriodRange(DeleteCustomLineItemRequestBodyBillingPeriodRange billingPeriodRange) {
         this.billingPeriodRange = billingPeriodRange;
         return this;
     }
     
+    public DeleteCustomLineItemRequestBody(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

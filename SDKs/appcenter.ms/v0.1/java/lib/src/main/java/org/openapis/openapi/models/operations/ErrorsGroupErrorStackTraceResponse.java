@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ErrorsGroupErrorStackTraceResponse {
     
     public String contentType;
+
     public ErrorsGroupErrorStackTraceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ErrorsGroupErrorStackTraceResponse {
      */
     
     public org.openapis.openapi.models.shared.DiagnosticsStackTrace diagnosticsStackTrace;
+
     public ErrorsGroupErrorStackTraceResponse withDiagnosticsStackTrace(org.openapis.openapi.models.shared.DiagnosticsStackTrace diagnosticsStackTrace) {
         this.diagnosticsStackTrace = diagnosticsStackTrace;
         return this;
@@ -29,6 +32,7 @@ public class ErrorsGroupErrorStackTraceResponse {
      */
     
     public ErrorsGroupErrorStackTraceDefaultApplicationJSON errorsGroupErrorStackTraceDefaultApplicationJSONObject;
+
     public ErrorsGroupErrorStackTraceResponse withErrorsGroupErrorStackTraceDefaultApplicationJSONObject(ErrorsGroupErrorStackTraceDefaultApplicationJSON errorsGroupErrorStackTraceDefaultApplicationJSONObject) {
         this.errorsGroupErrorStackTraceDefaultApplicationJSONObject = errorsGroupErrorStackTraceDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class ErrorsGroupErrorStackTraceResponse {
     
     
     public Integer statusCode;
+
     public ErrorsGroupErrorStackTraceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ErrorsGroupErrorStackTraceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ErrorsGroupErrorStackTraceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ErrorsGroupErrorStackTraceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

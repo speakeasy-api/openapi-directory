@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartReadSetActivationJobResponse {
@@ -12,6 +13,7 @@ public class StartReadSetActivationJobResponse {
      */
     
     public Object accessDeniedException;
+
     public StartReadSetActivationJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartReadSetActivationJobResponse {
     
     
     public String contentType;
+
     public StartReadSetActivationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartReadSetActivationJobResponse {
      */
     
     public Object internalServerException;
+
     public StartReadSetActivationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartReadSetActivationJobResponse {
      */
     
     public Object requestTimeoutException;
+
     public StartReadSetActivationJobResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class StartReadSetActivationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartReadSetActivationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartReadSetActivationJobResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartReadSetActivationJobResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -69,6 +76,7 @@ public class StartReadSetActivationJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartReadSetActivationJobResponse startReadSetActivationJobResponse;
+
     public StartReadSetActivationJobResponse withStartReadSetActivationJobResponse(org.openapis.openapi.models.shared.StartReadSetActivationJobResponse startReadSetActivationJobResponse) {
         this.startReadSetActivationJobResponse = startReadSetActivationJobResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartReadSetActivationJobResponse {
     
     
     public Integer statusCode;
+
     public StartReadSetActivationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StartReadSetActivationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartReadSetActivationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class StartReadSetActivationJobResponse {
      */
     
     public Object throttlingException;
+
     public StartReadSetActivationJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class StartReadSetActivationJobResponse {
      */
     
     public Object validationException;
+
     public StartReadSetActivationJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartReadSetActivationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkSmRestrictionsResponse {
     
     public String contentType;
+
     public GetNetworkSmRestrictionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkSmRestrictionsResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkSmRestrictionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkSmRestrictionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkSmRestrictionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetNetworkSmRestrictionsResponse {
      */
     
     public java.util.Map<String, Object>[] getNetworkSmRestrictions200ApplicationJSONObjects;
+
     public GetNetworkSmRestrictionsResponse withGetNetworkSmRestrictions200ApplicationJSONObjects(java.util.Map<String, Object>[] getNetworkSmRestrictions200ApplicationJSONObjects) {
         this.getNetworkSmRestrictions200ApplicationJSONObjects = getNetworkSmRestrictions200ApplicationJSONObjects;
         return this;
     }
     
+    public GetNetworkSmRestrictionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

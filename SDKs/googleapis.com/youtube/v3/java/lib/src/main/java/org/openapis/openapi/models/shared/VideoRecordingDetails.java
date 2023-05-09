@@ -23,6 +23,7 @@ public class VideoRecordingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public GeoPoint location;
+
     public VideoRecordingDetails withLocation(GeoPoint location) {
         this.location = location;
         return this;
@@ -34,6 +35,7 @@ public class VideoRecordingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationDescription")
     public String locationDescription;
+
     public VideoRecordingDetails withLocationDescription(String locationDescription) {
         this.locationDescription = locationDescription;
         return this;
@@ -47,9 +49,11 @@ public class VideoRecordingDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("recordingDate")
     public OffsetDateTime recordingDate;
+
     public VideoRecordingDetails withRecordingDate(OffsetDateTime recordingDate) {
         this.recordingDate = recordingDate;
         return this;
     }
     
+    public VideoRecordingDetails(){}
 }

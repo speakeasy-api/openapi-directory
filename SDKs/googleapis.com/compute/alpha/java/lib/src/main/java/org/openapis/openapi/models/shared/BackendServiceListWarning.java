@@ -18,6 +18,7 @@ public class BackendServiceListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public BackendServiceListWarningCodeEnum code;
+
     public BackendServiceListWarning withCode(BackendServiceListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class BackendServiceListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public BackendServiceListWarningData[] data;
+
     public BackendServiceListWarning withData(BackendServiceListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class BackendServiceListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public BackendServiceListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public BackendServiceListWarning(){}
 }

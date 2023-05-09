@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpcResultVpcTags {
     
     public String key;
+
     public CreateVpcResultVpcTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateVpcResultVpcTags {
     
     
     public String value;
+
     public CreateVpcResultVpcTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateVpcResultVpcTags(){}
 }

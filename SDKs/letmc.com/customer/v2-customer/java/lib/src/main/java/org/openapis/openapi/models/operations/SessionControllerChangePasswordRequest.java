@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SessionControllerChangePasswordRequest {
@@ -12,6 +13,7 @@ public class SessionControllerChangePasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=newPassword")
     public String newPassword;
+
     public SessionControllerChangePasswordRequest withNewPassword(String newPassword) {
         this.newPassword = newPassword;
         return this;
@@ -22,6 +24,7 @@ public class SessionControllerChangePasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oldPassword")
     public String oldPassword;
+
     public SessionControllerChangePasswordRequest withOldPassword(String oldPassword) {
         this.oldPassword = oldPassword;
         return this;
@@ -32,6 +35,7 @@ public class SessionControllerChangePasswordRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public SessionControllerChangePasswordRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -42,9 +46,16 @@ public class SessionControllerChangePasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public SessionControllerChangePasswordRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public SessionControllerChangePasswordRequest(@JsonProperty("newPassword") String newPassword, @JsonProperty("oldPassword") String oldPassword, @JsonProperty("shortName") String shortName, @JsonProperty("token") String token) {
+        this.newPassword = newPassword;
+        this.oldPassword = oldPassword;
+        this.shortName = shortName;
+        this.token = token;
+  }
 }

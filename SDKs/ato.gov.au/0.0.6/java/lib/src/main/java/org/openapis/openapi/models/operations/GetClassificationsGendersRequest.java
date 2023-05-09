@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClassificationsGendersRequest {
@@ -12,9 +13,13 @@ public class GetClassificationsGendersRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public GetClassificationsGendersRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public GetClassificationsGendersRequest(@JsonProperty("apiKey") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

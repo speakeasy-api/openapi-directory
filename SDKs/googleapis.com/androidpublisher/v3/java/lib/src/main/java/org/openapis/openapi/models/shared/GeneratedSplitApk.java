@@ -18,6 +18,7 @@ public class GeneratedSplitApk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadId")
     public String downloadId;
+
     public GeneratedSplitApk withDownloadId(String downloadId) {
         this.downloadId = downloadId;
         return this;
@@ -29,6 +30,7 @@ public class GeneratedSplitApk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moduleName")
     public String moduleName;
+
     public GeneratedSplitApk withModuleName(String moduleName) {
         this.moduleName = moduleName;
         return this;
@@ -40,6 +42,7 @@ public class GeneratedSplitApk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("splitId")
     public String splitId;
+
     public GeneratedSplitApk withSplitId(String splitId) {
         this.splitId = splitId;
         return this;
@@ -51,9 +54,11 @@ public class GeneratedSplitApk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variantId")
     public Integer variantId;
+
     public GeneratedSplitApk withVariantId(Integer variantId) {
         this.variantId = variantId;
         return this;
     }
     
+    public GeneratedSplitApk(){}
 }

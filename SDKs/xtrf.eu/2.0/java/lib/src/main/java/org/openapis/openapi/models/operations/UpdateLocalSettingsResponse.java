@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLocalSettingsResponse {
     
     public String contentType;
+
     public UpdateLocalSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateLocalSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.LocalSettingsDTO localSettingsDTO;
+
     public UpdateLocalSettingsResponse withLocalSettingsDTO(org.openapis.openapi.models.shared.LocalSettingsDTO localSettingsDTO) {
         this.localSettingsDTO = localSettingsDTO;
         return this;
@@ -26,6 +29,7 @@ public class UpdateLocalSettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateLocalSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class UpdateLocalSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLocalSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateLocalSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

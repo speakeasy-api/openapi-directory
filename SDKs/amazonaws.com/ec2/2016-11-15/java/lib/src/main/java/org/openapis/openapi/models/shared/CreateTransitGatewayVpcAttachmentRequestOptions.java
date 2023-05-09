@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTransitGatewayVpcAttachmentRequestOptions {
     
     public ApplianceModeSupportValueEnum applianceModeSupport;
+
     public CreateTransitGatewayVpcAttachmentRequestOptions withApplianceModeSupport(ApplianceModeSupportValueEnum applianceModeSupport) {
         this.applianceModeSupport = applianceModeSupport;
         return this;
@@ -19,6 +20,7 @@ public class CreateTransitGatewayVpcAttachmentRequestOptions {
     
     
     public DnsSupportValueEnum dnsSupport;
+
     public CreateTransitGatewayVpcAttachmentRequestOptions withDnsSupport(DnsSupportValueEnum dnsSupport) {
         this.dnsSupport = dnsSupport;
         return this;
@@ -26,9 +28,11 @@ public class CreateTransitGatewayVpcAttachmentRequestOptions {
     
     
     public Ipv6SupportValueEnum ipv6Support;
+
     public CreateTransitGatewayVpcAttachmentRequestOptions withIpv6Support(Ipv6SupportValueEnum ipv6Support) {
         this.ipv6Support = ipv6Support;
         return this;
     }
     
+    public CreateTransitGatewayVpcAttachmentRequestOptions(){}
 }

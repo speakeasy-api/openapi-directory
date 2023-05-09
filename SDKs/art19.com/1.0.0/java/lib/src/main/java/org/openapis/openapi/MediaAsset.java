@@ -109,12 +109,10 @@ public class MediaAsset {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMediaAssetsResponse res = new org.openapis.openapi.models.operations.GetMediaAssetsResponse() {{
+        org.openapis.openapi.models.operations.GetMediaAssetsResponse res = new org.openapis.openapi.models.operations.GetMediaAssetsResponse(contentType, httpRes.statusCode()) {{
             getMediaAssets200ApplicationVndApiPlusJsonObject = null;
             getMediaAssets400ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -212,11 +210,9 @@ public class MediaAsset {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMediaAssetsIdResponse res = new org.openapis.openapi.models.operations.GetMediaAssetsIdResponse() {{
+        org.openapis.openapi.models.operations.GetMediaAssetsIdResponse res = new org.openapis.openapi.models.operations.GetMediaAssetsIdResponse(contentType, httpRes.statusCode()) {{
             getMediaAssetsId200ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

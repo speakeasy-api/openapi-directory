@@ -55,10 +55,8 @@ public class CinemaSchedule {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CinemaScheduleSearchReadResponse res = new org.openapis.openapi.models.operations.CinemaScheduleSearchReadResponse() {{
+        org.openapis.openapi.models.operations.CinemaScheduleSearchReadResponse res = new org.openapis.openapi.models.operations.CinemaScheduleSearchReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,10 +96,8 @@ public class CinemaSchedule {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CinemaScheduleSearchallReadResponse res = new org.openapis.openapi.models.operations.CinemaScheduleSearchallReadResponse() {{
+        org.openapis.openapi.models.operations.CinemaScheduleSearchallReadResponse res = new org.openapis.openapi.models.operations.CinemaScheduleSearchallReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

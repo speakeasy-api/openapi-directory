@@ -18,6 +18,7 @@ public class GeneratedStandaloneApk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadId")
     public String downloadId;
+
     public GeneratedStandaloneApk withDownloadId(String downloadId) {
         this.downloadId = downloadId;
         return this;
@@ -29,9 +30,11 @@ public class GeneratedStandaloneApk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variantId")
     public Integer variantId;
+
     public GeneratedStandaloneApk withVariantId(Integer variantId) {
         this.variantId = variantId;
         return this;
     }
     
+    public GeneratedStandaloneApk(){}
 }

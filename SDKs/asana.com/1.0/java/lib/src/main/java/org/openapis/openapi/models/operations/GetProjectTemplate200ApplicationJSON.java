@@ -15,9 +15,11 @@ public class GetProjectTemplate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ProjectTemplateBase data;
+
     public GetProjectTemplate200ApplicationJSON withData(org.openapis.openapi.models.shared.ProjectTemplateBase data) {
         this.data = data;
         return this;
     }
     
+    public GetProjectTemplate200ApplicationJSON(){}
 }

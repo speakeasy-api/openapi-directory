@@ -12,9 +12,13 @@ public class ReposAddStatusCheckContextsRequestBody1 {
      */
     @JsonProperty("contexts")
     public String[] contexts;
+
     public ReposAddStatusCheckContextsRequestBody1 withContexts(String[] contexts) {
         this.contexts = contexts;
         return this;
     }
     
+    public ReposAddStatusCheckContextsRequestBody1(@JsonProperty("contexts") String[] contexts) {
+        this.contexts = contexts;
+  }
 }

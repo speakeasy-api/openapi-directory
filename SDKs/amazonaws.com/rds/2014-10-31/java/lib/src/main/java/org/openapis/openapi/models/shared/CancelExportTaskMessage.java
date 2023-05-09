@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CancelExportTaskMessage {
     
     public String exportTaskIdentifier;
+
     public CancelExportTaskMessage withExportTaskIdentifier(String exportTaskIdentifier) {
         this.exportTaskIdentifier = exportTaskIdentifier;
         return this;
     }
     
+    public CancelExportTaskMessage(@JsonProperty("ExportTaskIdentifier") String exportTaskIdentifier) {
+        this.exportTaskIdentifier = exportTaskIdentifier;
+  }
 }

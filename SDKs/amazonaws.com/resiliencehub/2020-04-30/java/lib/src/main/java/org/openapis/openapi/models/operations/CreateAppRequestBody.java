@@ -15,6 +15,7 @@ public class CreateAppRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentSchedule")
     public CreateAppRequestBodyAssessmentScheduleEnum assessmentSchedule;
+
     public CreateAppRequestBody withAssessmentSchedule(CreateAppRequestBodyAssessmentScheduleEnum assessmentSchedule) {
         this.assessmentSchedule = assessmentSchedule;
         return this;
@@ -26,6 +27,7 @@ public class CreateAppRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateAppRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -37,6 +39,7 @@ public class CreateAppRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateAppRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +50,7 @@ public class CreateAppRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateAppRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +62,7 @@ public class CreateAppRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyArn")
     public String policyArn;
+
     public CreateAppRequestBody withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -69,9 +74,13 @@ public class CreateAppRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateAppRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAppRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDatalakeDelegatedAdminResponse {
@@ -12,6 +13,7 @@ public class CreateDatalakeDelegatedAdminResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDatalakeDelegatedAdminResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateDatalakeDelegatedAdminResponse {
     
     
     public String contentType;
+
     public CreateDatalakeDelegatedAdminResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateDatalakeDelegatedAdminResponse {
      */
     
     public java.util.Map<String, Object> createDatalakeDelegatedAdminResponse;
+
     public CreateDatalakeDelegatedAdminResponse withCreateDatalakeDelegatedAdminResponse(java.util.Map<String, Object> createDatalakeDelegatedAdminResponse) {
         this.createDatalakeDelegatedAdminResponse = createDatalakeDelegatedAdminResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateDatalakeDelegatedAdminResponse {
      */
     
     public Object internalServerException;
+
     public CreateDatalakeDelegatedAdminResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class CreateDatalakeDelegatedAdminResponse {
     
     
     public Integer statusCode;
+
     public CreateDatalakeDelegatedAdminResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateDatalakeDelegatedAdminResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDatalakeDelegatedAdminResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateDatalakeDelegatedAdminResponse {
      */
     
     public Object throttlingException;
+
     public CreateDatalakeDelegatedAdminResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class CreateDatalakeDelegatedAdminResponse {
      */
     
     public Object validationException;
+
     public CreateDatalakeDelegatedAdminResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateDatalakeDelegatedAdminResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class SnapshotDetails {
     @JsonProperty("ApplicationVersionId")
     public Long applicationVersionId;
+
     public SnapshotDetails withApplicationVersionId(Long applicationVersionId) {
         this.applicationVersionId = applicationVersionId;
         return this;
@@ -29,6 +30,7 @@ public class SnapshotDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SnapshotCreationTimestamp")
     public OffsetDateTime snapshotCreationTimestamp;
+
     public SnapshotDetails withSnapshotCreationTimestamp(OffsetDateTime snapshotCreationTimestamp) {
         this.snapshotCreationTimestamp = snapshotCreationTimestamp;
         return this;
@@ -36,6 +38,7 @@ public class SnapshotDetails {
     
     @JsonProperty("SnapshotName")
     public String snapshotName;
+
     public SnapshotDetails withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -43,9 +46,15 @@ public class SnapshotDetails {
     
     @JsonProperty("SnapshotStatus")
     public SnapshotStatusEnum snapshotStatus;
+
     public SnapshotDetails withSnapshotStatus(SnapshotStatusEnum snapshotStatus) {
         this.snapshotStatus = snapshotStatus;
         return this;
     }
     
+    public SnapshotDetails(@JsonProperty("ApplicationVersionId") Long applicationVersionId, @JsonProperty("SnapshotName") String snapshotName, @JsonProperty("SnapshotStatus") SnapshotStatusEnum snapshotStatus) {
+        this.applicationVersionId = applicationVersionId;
+        this.snapshotName = snapshotName;
+        this.snapshotStatus = snapshotStatus;
+  }
 }

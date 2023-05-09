@@ -20,9 +20,11 @@ public class RemoveGroupFromCustomerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RemoveGroupFromCustomerResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public RemoveGroupFromCustomerResponse(){}
 }

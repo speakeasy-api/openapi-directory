@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateAppImageConfigRequest {
     @JsonProperty("AppImageConfigName")
     public String appImageConfigName;
+
     public UpdateAppImageConfigRequest withAppImageConfigName(String appImageConfigName) {
         this.appImageConfigName = appImageConfigName;
         return this;
@@ -19,9 +20,13 @@ public class UpdateAppImageConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KernelGatewayImageConfig")
     public KernelGatewayImageConfig kernelGatewayImageConfig;
+
     public UpdateAppImageConfigRequest withKernelGatewayImageConfig(KernelGatewayImageConfig kernelGatewayImageConfig) {
         this.kernelGatewayImageConfig = kernelGatewayImageConfig;
         return this;
     }
     
+    public UpdateAppImageConfigRequest(@JsonProperty("AppImageConfigName") String appImageConfigName) {
+        this.appImageConfigName = appImageConfigName;
+  }
 }

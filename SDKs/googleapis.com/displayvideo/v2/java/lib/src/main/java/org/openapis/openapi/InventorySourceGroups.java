@@ -62,11 +62,9 @@ public class InventorySourceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesBulkEditResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesBulkEditResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesBulkEditResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesBulkEditResponse(contentType, httpRes.statusCode()) {{
             bulkEditAssignedInventorySourcesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class InventorySourceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreateResponse(contentType, httpRes.statusCode()) {{
             assignedInventorySource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class InventorySourceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class InventorySourceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesListResponse(contentType, httpRes.statusCode()) {{
             listAssignedInventorySourcesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class InventorySourceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsCreateResponse(contentType, httpRes.statusCode()) {{
             inventorySourceGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class InventorySourceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class InventorySourceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsGetResponse(contentType, httpRes.statusCode()) {{
             inventorySourceGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class InventorySourceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourceGroupsListResponse(contentType, httpRes.statusCode()) {{
             listInventorySourceGroupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class AwsEc2VpnConnectionRoutesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationCidrBlock")
     public String destinationCidrBlock;
+
     public AwsEc2VpnConnectionRoutesDetails withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -23,9 +24,11 @@ public class AwsEc2VpnConnectionRoutesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public AwsEc2VpnConnectionRoutesDetails withState(String state) {
         this.state = state;
         return this;
     }
     
+    public AwsEc2VpnConnectionRoutesDetails(){}
 }

@@ -15,9 +15,11 @@ public class OrdersCreateTestReturnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public OrdersCustomBatchRequestEntryCreateTestReturnReturnItem[] items;
+
     public OrdersCreateTestReturnRequest withItems(OrdersCustomBatchRequestEntryCreateTestReturnReturnItem[] items) {
         this.items = items;
         return this;
     }
     
+    public OrdersCreateTestReturnRequest(){}
 }

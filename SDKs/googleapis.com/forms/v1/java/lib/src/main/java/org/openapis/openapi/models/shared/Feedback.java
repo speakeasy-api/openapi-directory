@@ -18,6 +18,7 @@ public class Feedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("material")
     public ExtraMaterial[] material;
+
     public Feedback withMaterial(ExtraMaterial[] material) {
         this.material = material;
         return this;
@@ -29,9 +30,11 @@ public class Feedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public Feedback withText(String text) {
         this.text = text;
         return this;
     }
     
+    public Feedback(){}
 }

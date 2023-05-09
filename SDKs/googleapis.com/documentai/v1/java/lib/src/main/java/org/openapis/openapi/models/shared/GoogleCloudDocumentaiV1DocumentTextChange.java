@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1DocumentTextChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changedText")
     public String changedText;
+
     public GoogleCloudDocumentaiV1DocumentTextChange withChangedText(String changedText) {
         this.changedText = changedText;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1DocumentTextChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provenance")
     public GoogleCloudDocumentaiV1DocumentProvenance[] provenance;
+
     public GoogleCloudDocumentaiV1DocumentTextChange withProvenance(GoogleCloudDocumentaiV1DocumentProvenance[] provenance) {
         this.provenance = provenance;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDocumentaiV1DocumentTextChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textAnchor")
     public GoogleCloudDocumentaiV1DocumentTextAnchor textAnchor;
+
     public GoogleCloudDocumentaiV1DocumentTextChange withTextAnchor(GoogleCloudDocumentaiV1DocumentTextAnchor textAnchor) {
         this.textAnchor = textAnchor;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentTextChange(){}
 }

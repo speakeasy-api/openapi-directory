@@ -13,11 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class DomainJoinMachineRequest {
     /**
+     * Optional. force if True, forces domain join even if the computer account already exists.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("force")
+    public Boolean force;
+
+    public DomainJoinMachineRequest withForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    
+    /**
      * Optional. OU name to which the VM needs to be domain joined. If the field is not provided, the VM is joined to the default OU which is created. The default OU for the domain join api is created as GCE Instances under the Cloud OU. Example - OU=GCE Instances,OU=Cloud,DC=ad,DC=test,DC=com If the field is provided, then the custom OU is searched for under GCE Instances OU. Example - if ou_name=test_ou then the VM is domain joined to the following OU: OU=test_ou,OU=GCE Instances,OU=Cloud,DC=ad,DC=test,DC=com if present. If OU is not present under GCE Instances, then error is returned.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ouName")
     public String ouName;
+
     public DomainJoinMachineRequest withOuName(String ouName) {
         this.ouName = ouName;
         return this;
@@ -29,9 +42,11 @@ public class DomainJoinMachineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmIdToken")
     public String vmIdToken;
+
     public DomainJoinMachineRequest withVmIdToken(String vmIdToken) {
         this.vmIdToken = vmIdToken;
         return this;
     }
     
+    public DomainJoinMachineRequest(){}
 }

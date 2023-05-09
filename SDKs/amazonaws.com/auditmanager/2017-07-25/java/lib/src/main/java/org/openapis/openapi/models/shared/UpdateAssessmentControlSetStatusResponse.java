@@ -15,9 +15,11 @@ public class UpdateAssessmentControlSetStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlSet")
     public AssessmentControlSet controlSet;
+
     public UpdateAssessmentControlSetStatusResponse withControlSet(AssessmentControlSet controlSet) {
         this.controlSet = controlSet;
         return this;
     }
     
+    public UpdateAssessmentControlSetStatusResponse(){}
 }

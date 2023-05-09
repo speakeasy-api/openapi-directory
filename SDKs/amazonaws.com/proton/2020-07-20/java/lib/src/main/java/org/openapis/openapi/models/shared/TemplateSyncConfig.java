@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TemplateSyncConfig {
     @JsonProperty("branch")
     public String branch;
+
     public TemplateSyncConfig withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -21,6 +22,7 @@ public class TemplateSyncConfig {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public TemplateSyncConfig withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -28,6 +30,7 @@ public class TemplateSyncConfig {
     
     @JsonProperty("repositoryProvider")
     public RepositoryProviderEnum repositoryProvider;
+
     public TemplateSyncConfig withRepositoryProvider(RepositoryProviderEnum repositoryProvider) {
         this.repositoryProvider = repositoryProvider;
         return this;
@@ -36,6 +39,7 @@ public class TemplateSyncConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subdirectory")
     public String subdirectory;
+
     public TemplateSyncConfig withSubdirectory(String subdirectory) {
         this.subdirectory = subdirectory;
         return this;
@@ -43,6 +47,7 @@ public class TemplateSyncConfig {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public TemplateSyncConfig withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -50,9 +55,17 @@ public class TemplateSyncConfig {
     
     @JsonProperty("templateType")
     public TemplateTypeEnum templateType;
+
     public TemplateSyncConfig withTemplateType(TemplateTypeEnum templateType) {
         this.templateType = templateType;
         return this;
     }
     
+    public TemplateSyncConfig(@JsonProperty("branch") String branch, @JsonProperty("repositoryName") String repositoryName, @JsonProperty("repositoryProvider") RepositoryProviderEnum repositoryProvider, @JsonProperty("templateName") String templateName, @JsonProperty("templateType") TemplateTypeEnum templateType) {
+        this.branch = branch;
+        this.repositoryName = repositoryName;
+        this.repositoryProvider = repositoryProvider;
+        this.templateName = templateName;
+        this.templateType = templateType;
+  }
 }

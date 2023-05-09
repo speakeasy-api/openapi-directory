@@ -13,6 +13,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchFecPacsRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchFecPacsRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchFecPacsRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchFecPacsRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchFecPacsRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchFecPacsRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchFecPacsRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchFecPacsRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchFecPacsRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchFecPacsRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchFecPacsRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchFecPacsRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchFecPacsRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchFecPacsRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.beginning_cash")
     public Double searchDbFecPacsBeginningCash;
+
     public SearchFecPacsRequest withSearchDbFecPacsBeginningCash(Double searchDbFecPacsBeginningCash) {
         this.searchDbFecPacsBeginningCash = searchDbFecPacsBeginningCash;
         return this;
@@ -163,6 +178,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.candidate_loan_repayments")
     public Double searchDbFecPacsCandidateLoanRepayments;
+
     public SearchFecPacsRequest withSearchDbFecPacsCandidateLoanRepayments(Double searchDbFecPacsCandidateLoanRepayments) {
         this.searchDbFecPacsCandidateLoanRepayments = searchDbFecPacsCandidateLoanRepayments;
         return this;
@@ -173,6 +189,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.committee")
     public String searchDbFecPacsCommittee;
+
     public SearchFecPacsRequest withSearchDbFecPacsCommittee(String searchDbFecPacsCommittee) {
         this.searchDbFecPacsCommittee = searchDbFecPacsCommittee;
         return this;
@@ -183,6 +200,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.contributions_from_candidate")
     public Double searchDbFecPacsContributionsFromCandidate;
+
     public SearchFecPacsRequest withSearchDbFecPacsContributionsFromCandidate(Double searchDbFecPacsContributionsFromCandidate) {
         this.searchDbFecPacsContributionsFromCandidate = searchDbFecPacsContributionsFromCandidate;
         return this;
@@ -193,6 +211,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.contributions_from_individuals")
     public Double searchDbFecPacsContributionsFromIndividuals;
+
     public SearchFecPacsRequest withSearchDbFecPacsContributionsFromIndividuals(Double searchDbFecPacsContributionsFromIndividuals) {
         this.searchDbFecPacsContributionsFromIndividuals = searchDbFecPacsContributionsFromIndividuals;
         return this;
@@ -203,6 +222,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.contributions_from_other_committees")
     public Double searchDbFecPacsContributionsFromOtherCommittees;
+
     public SearchFecPacsRequest withSearchDbFecPacsContributionsFromOtherCommittees(Double searchDbFecPacsContributionsFromOtherCommittees) {
         this.searchDbFecPacsContributionsFromOtherCommittees = searchDbFecPacsContributionsFromOtherCommittees;
         return this;
@@ -213,6 +233,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.contributions_to_other_committee")
     public Double searchDbFecPacsContributionsToOtherCommittee;
+
     public SearchFecPacsRequest withSearchDbFecPacsContributionsToOtherCommittee(Double searchDbFecPacsContributionsToOtherCommittee) {
         this.searchDbFecPacsContributionsToOtherCommittee = searchDbFecPacsContributionsToOtherCommittee;
         return this;
@@ -223,6 +244,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.ending_cash")
     public Double searchDbFecPacsEndingCash;
+
     public SearchFecPacsRequest withSearchDbFecPacsEndingCash(Double searchDbFecPacsEndingCash) {
         this.searchDbFecPacsEndingCash = searchDbFecPacsEndingCash;
         return this;
@@ -233,6 +255,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.loan_repayments")
     public Double searchDbFecPacsLoanRepayments;
+
     public SearchFecPacsRequest withSearchDbFecPacsLoanRepayments(Double searchDbFecPacsLoanRepayments) {
         this.searchDbFecPacsLoanRepayments = searchDbFecPacsLoanRepayments;
         return this;
@@ -243,6 +266,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.loans_from_candidate")
     public Double searchDbFecPacsLoansFromCandidate;
+
     public SearchFecPacsRequest withSearchDbFecPacsLoansFromCandidate(Double searchDbFecPacsLoansFromCandidate) {
         this.searchDbFecPacsLoansFromCandidate = searchDbFecPacsLoansFromCandidate;
         return this;
@@ -253,6 +277,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.refends_to_othercommittees")
     public Double searchDbFecPacsRefendsToOthercommittees;
+
     public SearchFecPacsRequest withSearchDbFecPacsRefendsToOthercommittees(Double searchDbFecPacsRefendsToOthercommittees) {
         this.searchDbFecPacsRefendsToOthercommittees = searchDbFecPacsRefendsToOthercommittees;
         return this;
@@ -263,6 +288,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.refunds_to_individuals")
     public Double searchDbFecPacsRefundsToIndividuals;
+
     public SearchFecPacsRequest withSearchDbFecPacsRefundsToIndividuals(Double searchDbFecPacsRefundsToIndividuals) {
         this.searchDbFecPacsRefundsToIndividuals = searchDbFecPacsRefundsToIndividuals;
         return this;
@@ -273,6 +299,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.total_distributions")
     public Double searchDbFecPacsTotalDistributions;
+
     public SearchFecPacsRequest withSearchDbFecPacsTotalDistributions(Double searchDbFecPacsTotalDistributions) {
         this.searchDbFecPacsTotalDistributions = searchDbFecPacsTotalDistributions;
         return this;
@@ -283,6 +310,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.total_loans_received")
     public Double searchDbFecPacsTotalLoansReceived;
+
     public SearchFecPacsRequest withSearchDbFecPacsTotalLoansReceived(Double searchDbFecPacsTotalLoansReceived) {
         this.searchDbFecPacsTotalLoansReceived = searchDbFecPacsTotalLoansReceived;
         return this;
@@ -293,6 +321,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.total_receipts")
     public Double searchDbFecPacsTotalReceipts;
+
     public SearchFecPacsRequest withSearchDbFecPacsTotalReceipts(Double searchDbFecPacsTotalReceipts) {
         this.searchDbFecPacsTotalReceipts = searchDbFecPacsTotalReceipts;
         return this;
@@ -303,6 +332,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.trans_from_affiliates")
     public Double searchDbFecPacsTransFromAffiliates;
+
     public SearchFecPacsRequest withSearchDbFecPacsTransFromAffiliates(Double searchDbFecPacsTransFromAffiliates) {
         this.searchDbFecPacsTransFromAffiliates = searchDbFecPacsTransFromAffiliates;
         return this;
@@ -313,6 +343,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_fec_pacs.transfers_to_affiliates")
     public Double searchDbFecPacsTransfersToAffiliates;
+
     public SearchFecPacsRequest withSearchDbFecPacsTransfersToAffiliates(Double searchDbFecPacsTransfersToAffiliates) {
         this.searchDbFecPacsTransfersToAffiliates = searchDbFecPacsTransfersToAffiliates;
         return this;
@@ -323,6 +354,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchFecPacsRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -333,6 +365,7 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchFecPacsRequest withText(String text) {
         this.text = text;
         return this;
@@ -343,9 +376,11 @@ public class SearchFecPacsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchFecPacsRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchFecPacsRequest(){}
 }

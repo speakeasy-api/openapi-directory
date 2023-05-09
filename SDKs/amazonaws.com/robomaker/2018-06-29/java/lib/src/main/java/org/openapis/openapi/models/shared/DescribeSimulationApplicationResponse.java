@@ -20,6 +20,7 @@ public class DescribeSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public DescribeSimulationApplicationResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class DescribeSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public Environment environment;
+
     public DescribeSimulationApplicationResponse withEnvironment(Environment environment) {
         this.environment = environment;
         return this;
@@ -36,6 +38,7 @@ public class DescribeSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageDigest")
     public String imageDigest;
+
     public DescribeSimulationApplicationResponse withImageDigest(String imageDigest) {
         this.imageDigest = imageDigest;
         return this;
@@ -46,6 +49,7 @@ public class DescribeSimulationApplicationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public DescribeSimulationApplicationResponse withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -54,6 +58,7 @@ public class DescribeSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DescribeSimulationApplicationResponse withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class DescribeSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renderingEngine")
     public RenderingEngine renderingEngine;
+
     public DescribeSimulationApplicationResponse withRenderingEngine(RenderingEngine renderingEngine) {
         this.renderingEngine = renderingEngine;
         return this;
@@ -70,6 +76,7 @@ public class DescribeSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public DescribeSimulationApplicationResponse withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -78,6 +85,7 @@ public class DescribeSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("robotSoftwareSuite")
     public RobotSoftwareSuite robotSoftwareSuite;
+
     public DescribeSimulationApplicationResponse withRobotSoftwareSuite(RobotSoftwareSuite robotSoftwareSuite) {
         this.robotSoftwareSuite = robotSoftwareSuite;
         return this;
@@ -86,6 +94,7 @@ public class DescribeSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simulationSoftwareSuite")
     public SimulationSoftwareSuite simulationSoftwareSuite;
+
     public DescribeSimulationApplicationResponse withSimulationSoftwareSuite(SimulationSoftwareSuite simulationSoftwareSuite) {
         this.simulationSoftwareSuite = simulationSoftwareSuite;
         return this;
@@ -94,6 +103,7 @@ public class DescribeSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public Source[] sources;
+
     public DescribeSimulationApplicationResponse withSources(Source[] sources) {
         this.sources = sources;
         return this;
@@ -102,6 +112,7 @@ public class DescribeSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public DescribeSimulationApplicationResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -110,9 +121,11 @@ public class DescribeSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public DescribeSimulationApplicationResponse withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DescribeSimulationApplicationResponse(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransformSortCriteria {
     @JsonProperty("Column")
     public TransformSortColumnTypeEnum column;
+
     public TransformSortCriteria withColumn(TransformSortColumnTypeEnum column) {
         this.column = column;
         return this;
@@ -19,9 +20,14 @@ public class TransformSortCriteria {
     
     @JsonProperty("SortDirection")
     public SortDirectionTypeEnum sortDirection;
+
     public TransformSortCriteria withSortDirection(SortDirectionTypeEnum sortDirection) {
         this.sortDirection = sortDirection;
         return this;
     }
     
+    public TransformSortCriteria(@JsonProperty("Column") TransformSortColumnTypeEnum column, @JsonProperty("SortDirection") SortDirectionTypeEnum sortDirection) {
+        this.column = column;
+        this.sortDirection = sortDirection;
+  }
 }

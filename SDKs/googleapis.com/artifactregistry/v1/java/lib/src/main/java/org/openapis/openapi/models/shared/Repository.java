@@ -18,6 +18,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Repository withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Repository withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockerConfig")
     public DockerRepositoryConfig dockerConfig;
+
     public Repository withDockerConfig(DockerRepositoryConfig dockerConfig) {
         this.dockerConfig = dockerConfig;
         return this;
@@ -51,6 +54,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public RepositoryFormatEnum format;
+
     public Repository withFormat(RepositoryFormatEnum format) {
         this.format = format;
         return this;
@@ -62,6 +66,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public Repository withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
@@ -73,6 +78,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Repository withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,6 +90,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mavenConfig")
     public MavenRepositoryConfig mavenConfig;
+
     public Repository withMavenConfig(MavenRepositoryConfig mavenConfig) {
         this.mavenConfig = mavenConfig;
         return this;
@@ -95,6 +102,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public RepositoryModeEnum mode;
+
     public Repository withMode(RepositoryModeEnum mode) {
         this.mode = mode;
         return this;
@@ -106,6 +114,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Repository withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteRepositoryConfig")
     public RemoteRepositoryConfig remoteRepositoryConfig;
+
     public Repository withRemoteRepositoryConfig(RemoteRepositoryConfig remoteRepositoryConfig) {
         this.remoteRepositoryConfig = remoteRepositoryConfig;
         return this;
@@ -128,6 +138,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satisfiesPzs")
     public Boolean satisfiesPzs;
+
     public Repository withSatisfiesPzs(Boolean satisfiesPzs) {
         this.satisfiesPzs = satisfiesPzs;
         return this;
@@ -139,6 +150,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeBytes")
     public String sizeBytes;
+
     public Repository withSizeBytes(String sizeBytes) {
         this.sizeBytes = sizeBytes;
         return this;
@@ -150,6 +162,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Repository withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -161,9 +174,11 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualRepositoryConfig")
     public VirtualRepositoryConfig virtualRepositoryConfig;
+
     public Repository withVirtualRepositoryConfig(VirtualRepositoryConfig virtualRepositoryConfig) {
         this.virtualRepositoryConfig = virtualRepositoryConfig;
         return this;
     }
     
+    public Repository(){}
 }

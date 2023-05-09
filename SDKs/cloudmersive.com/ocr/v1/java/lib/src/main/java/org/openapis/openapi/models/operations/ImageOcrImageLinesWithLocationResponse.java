@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImageOcrImageLinesWithLocationResponse {
     
     public byte[] body;
+
     public ImageOcrImageLinesWithLocationResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ImageOcrImageLinesWithLocationResponse {
     
     
     public String contentType;
+
     public ImageOcrImageLinesWithLocationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ImageOcrImageLinesWithLocationResponse {
      */
     
     public org.openapis.openapi.models.shared.ImageToLinesWithLocationResult imageToLinesWithLocationResult;
+
     public ImageOcrImageLinesWithLocationResponse withImageToLinesWithLocationResult(org.openapis.openapi.models.shared.ImageToLinesWithLocationResult imageToLinesWithLocationResult) {
         this.imageToLinesWithLocationResult = imageToLinesWithLocationResult;
         return this;
@@ -33,6 +37,7 @@ public class ImageOcrImageLinesWithLocationResponse {
     
     
     public Integer statusCode;
+
     public ImageOcrImageLinesWithLocationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class ImageOcrImageLinesWithLocationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImageOcrImageLinesWithLocationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ImageOcrImageLinesWithLocationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

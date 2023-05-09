@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSubscriptionResponse {
@@ -12,6 +13,7 @@ public class GetSubscriptionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetSubscriptionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetSubscriptionResponse {
      */
     
     public Object conflictException;
+
     public GetSubscriptionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetSubscriptionResponse {
     
     
     public String contentType;
+
     public GetSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetSubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSubscriptionResponse getSubscriptionResponse;
+
     public GetSubscriptionResponse withGetSubscriptionResponse(org.openapis.openapi.models.shared.GetSubscriptionResponse getSubscriptionResponse) {
         this.getSubscriptionResponse = getSubscriptionResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetSubscriptionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSubscriptionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetSubscriptionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetSubscriptionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class GetSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public GetSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetSubscriptionResponse {
      */
     
     public Object throttlingException;
+
     public GetSubscriptionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class GetSubscriptionResponse {
      */
     
     public Object validationException;
+
     public GetSubscriptionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

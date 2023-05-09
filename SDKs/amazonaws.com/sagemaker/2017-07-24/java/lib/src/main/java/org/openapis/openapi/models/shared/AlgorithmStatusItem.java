@@ -15,6 +15,7 @@ public class AlgorithmStatusItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public AlgorithmStatusItem withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -22,6 +23,7 @@ public class AlgorithmStatusItem {
     
     @JsonProperty("Name")
     public String name;
+
     public AlgorithmStatusItem withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class AlgorithmStatusItem {
     
     @JsonProperty("Status")
     public DetailedAlgorithmStatusEnum status;
+
     public AlgorithmStatusItem withStatus(DetailedAlgorithmStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AlgorithmStatusItem(@JsonProperty("Name") String name, @JsonProperty("Status") DetailedAlgorithmStatusEnum status) {
+        this.name = name;
+        this.status = status;
+  }
 }

@@ -104,4 +104,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/EventsResetMultipleForAllRe
 lib/src/main/java/org/openapis/openapi/models/shared/PlayerScoreResetResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlayerScoreResetAllResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScoresResetMultipleForAllRequest.java
+docs/sdk/README.md
+docs/achievements/README.md
+docs/applications/README.md
+docs/events/README.md
+docs/players/README.md
+docs/scores/README.md
 USAGE.md

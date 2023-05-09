@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyResponsesDestinyProfileResponseProfileCommendations {
     
     public DestinyComponentsSocialDestinySocialCommendationsComponent data;
+
     public DestinyResponsesDestinyProfileResponseProfileCommendations withData(DestinyComponentsSocialDestinySocialCommendationsComponent data) {
         this.data = data;
         return this;
@@ -22,6 +23,7 @@ public class DestinyResponsesDestinyProfileResponseProfileCommendations {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyProfileResponseProfileCommendations withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -29,9 +31,11 @@ public class DestinyResponsesDestinyProfileResponseProfileCommendations {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyProfileResponseProfileCommendations withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyProfileResponseProfileCommendations(){}
 }

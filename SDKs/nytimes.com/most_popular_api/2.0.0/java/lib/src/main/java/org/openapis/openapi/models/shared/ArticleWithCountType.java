@@ -12,6 +12,7 @@ public class ArticleWithCountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abstract")
     public String abstract_;
+
     public ArticleWithCountType withAbstract(String abstract_) {
         this.abstract_ = abstract_;
         return this;
@@ -20,6 +21,7 @@ public class ArticleWithCountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byline")
     public String byline;
+
     public ArticleWithCountType withByline(String byline) {
         this.byline = byline;
         return this;
@@ -28,6 +30,7 @@ public class ArticleWithCountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("column")
     public String column;
+
     public ArticleWithCountType withColumn(String column) {
         this.column = column;
         return this;
@@ -36,6 +39,7 @@ public class ArticleWithCountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count_type")
     public String countType;
+
     public ArticleWithCountType withCountType(String countType) {
         this.countType = countType;
         return this;
@@ -44,6 +48,7 @@ public class ArticleWithCountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("des_facet")
     public Object desFacet;
+
     public ArticleWithCountType withDesFacet(Object desFacet) {
         this.desFacet = desFacet;
         return this;
@@ -52,6 +57,7 @@ public class ArticleWithCountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geo_facet")
     public Object geoFacet;
+
     public ArticleWithCountType withGeoFacet(Object geoFacet) {
         this.geoFacet = geoFacet;
         return this;
@@ -60,6 +66,7 @@ public class ArticleWithCountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     public ArticleWithCountTypeMedia[] media;
+
     public ArticleWithCountType withMedia(ArticleWithCountTypeMedia[] media) {
         this.media = media;
         return this;
@@ -68,6 +75,7 @@ public class ArticleWithCountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_facet")
     public Object[] orgFacet;
+
     public ArticleWithCountType withOrgFacet(Object[] orgFacet) {
         this.orgFacet = orgFacet;
         return this;
@@ -76,6 +84,7 @@ public class ArticleWithCountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_facet")
     public Object[] perFacet;
+
     public ArticleWithCountType withPerFacet(Object[] perFacet) {
         this.perFacet = perFacet;
         return this;
@@ -84,6 +93,7 @@ public class ArticleWithCountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published_date")
     public String publishedDate;
+
     public ArticleWithCountType withPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
         return this;
@@ -92,6 +102,7 @@ public class ArticleWithCountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section")
     public String section;
+
     public ArticleWithCountType withSection(String section) {
         this.section = section;
         return this;
@@ -100,6 +111,7 @@ public class ArticleWithCountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public ArticleWithCountType withSource(String source) {
         this.source = source;
         return this;
@@ -108,6 +120,7 @@ public class ArticleWithCountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ArticleWithCountType withTitle(String title) {
         this.title = title;
         return this;
@@ -116,9 +129,11 @@ public class ArticleWithCountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ArticleWithCountType withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ArticleWithCountType(){}
 }

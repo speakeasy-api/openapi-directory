@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryPostFileRequest {
@@ -12,6 +13,7 @@ public class StoryPostFileRequest {
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public StoryPostFileOpenOfficeXmlDocumentEGXlsxPptxFile requestBody;
+
     public StoryPostFileRequest withRequestBody(StoryPostFileOpenOfficeXmlDocumentEGXlsxPptxFile requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,13 @@ public class StoryPostFileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_outline")
     public Boolean includeOutline;
+
     public StoryPostFileRequest withIncludeOutline(Boolean includeOutline) {
         this.includeOutline = includeOutline;
         return this;
     }
     
+    public StoryPostFileRequest(@JsonProperty("RequestBody") StoryPostFileOpenOfficeXmlDocumentEGXlsxPptxFile requestBody) {
+        this.requestBody = requestBody;
+  }
 }

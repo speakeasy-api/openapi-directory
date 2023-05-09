@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListScheduleGroupsResponse {
     
     public String contentType;
+
     public ListScheduleGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListScheduleGroupsResponse {
      */
     
     public Object internalServerException;
+
     public ListScheduleGroupsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListScheduleGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListScheduleGroupsOutput listScheduleGroupsOutput;
+
     public ListScheduleGroupsResponse withListScheduleGroupsOutput(org.openapis.openapi.models.shared.ListScheduleGroupsOutput listScheduleGroupsOutput) {
         this.listScheduleGroupsOutput = listScheduleGroupsOutput;
         return this;
@@ -36,6 +40,7 @@ public class ListScheduleGroupsResponse {
     
     
     public Integer statusCode;
+
     public ListScheduleGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListScheduleGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListScheduleGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ListScheduleGroupsResponse {
      */
     
     public Object throttlingException;
+
     public ListScheduleGroupsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class ListScheduleGroupsResponse {
      */
     
     public Object validationException;
+
     public ListScheduleGroupsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListScheduleGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

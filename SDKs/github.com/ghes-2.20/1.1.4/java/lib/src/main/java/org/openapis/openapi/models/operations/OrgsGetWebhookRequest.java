@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsGetWebhookRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
     public Long hookId;
+
     public OrgsGetWebhookRequest withHookId(Long hookId) {
         this.hookId = hookId;
         return this;
@@ -16,9 +18,14 @@ public class OrgsGetWebhookRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public OrgsGetWebhookRequest withOrg(String org) {
         this.org = org;
         return this;
     }
     
+    public OrgsGetWebhookRequest(@JsonProperty("hook_id") Long hookId, @JsonProperty("org") String org) {
+        this.hookId = hookId;
+        this.org = org;
+  }
 }

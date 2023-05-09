@@ -14,6 +14,7 @@ public class CanvasDataAnalyticsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=canvas_id")
     public String canvasId;
+
     public CanvasDataAnalyticsSummaryRequest withCanvasId(String canvasId) {
         this.canvasId = canvasId;
         return this;
@@ -26,6 +27,7 @@ public class CanvasDataAnalyticsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
     public String endingAt;
+
     public CanvasDataAnalyticsSummaryRequest withEndingAt(String endingAt) {
         this.endingAt = endingAt;
         return this;
@@ -38,6 +40,7 @@ public class CanvasDataAnalyticsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_deleted_step_data")
     public String includeDeletedStepData;
+
     public CanvasDataAnalyticsSummaryRequest withIncludeDeletedStepData(String includeDeletedStepData) {
         this.includeDeletedStepData = includeDeletedStepData;
         return this;
@@ -50,6 +53,7 @@ public class CanvasDataAnalyticsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_step_breakdown")
     public String includeStepBreakdown;
+
     public CanvasDataAnalyticsSummaryRequest withIncludeStepBreakdown(String includeStepBreakdown) {
         this.includeStepBreakdown = includeStepBreakdown;
         return this;
@@ -62,6 +66,7 @@ public class CanvasDataAnalyticsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_variant_breakdown")
     public String includeVariantBreakdown;
+
     public CanvasDataAnalyticsSummaryRequest withIncludeVariantBreakdown(String includeVariantBreakdown) {
         this.includeVariantBreakdown = includeVariantBreakdown;
         return this;
@@ -74,6 +79,7 @@ public class CanvasDataAnalyticsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
     public String length;
+
     public CanvasDataAnalyticsSummaryRequest withLength(String length) {
         this.length = length;
         return this;
@@ -86,9 +92,11 @@ public class CanvasDataAnalyticsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=starting_at")
     public String startingAt;
+
     public CanvasDataAnalyticsSummaryRequest withStartingAt(String startingAt) {
         this.startingAt = startingAt;
         return this;
     }
     
+    public CanvasDataAnalyticsSummaryRequest(){}
 }

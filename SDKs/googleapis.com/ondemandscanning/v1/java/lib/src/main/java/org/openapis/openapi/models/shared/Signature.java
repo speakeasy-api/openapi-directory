@@ -18,6 +18,7 @@ public class Signature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKeyId")
     public String publicKeyId;
+
     public Signature withPublicKeyId(String publicKeyId) {
         this.publicKeyId = publicKeyId;
         return this;
@@ -29,9 +30,11 @@ public class Signature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signature")
     public String signature;
+
     public Signature withSignature(String signature) {
         this.signature = signature;
         return this;
     }
     
+    public Signature(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetIpamDiscoveredAccountsRequestFilters {
     
     public String name;
+
     public GetIpamDiscoveredAccountsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class GetIpamDiscoveredAccountsRequestFilters {
     
     
     public String[] values;
+
     public GetIpamDiscoveredAccountsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public GetIpamDiscoveredAccountsRequestFilters(){}
 }

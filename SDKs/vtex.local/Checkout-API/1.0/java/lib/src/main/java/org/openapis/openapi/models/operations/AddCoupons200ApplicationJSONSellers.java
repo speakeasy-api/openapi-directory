@@ -15,6 +15,7 @@ public class AddCoupons200ApplicationJSONSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AddCoupons200ApplicationJSONSellers withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class AddCoupons200ApplicationJSONSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public AddCoupons200ApplicationJSONSellers withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -37,9 +39,11 @@ public class AddCoupons200ApplicationJSONSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AddCoupons200ApplicationJSONSellers withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AddCoupons200ApplicationJSONSellers(){}
 }

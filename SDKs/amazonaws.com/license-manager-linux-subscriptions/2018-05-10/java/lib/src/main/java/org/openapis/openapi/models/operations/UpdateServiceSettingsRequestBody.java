@@ -15,6 +15,7 @@ public class UpdateServiceSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowUpdate")
     public Boolean allowUpdate;
+
     public UpdateServiceSettingsRequestBody withAllowUpdate(Boolean allowUpdate) {
         this.allowUpdate = allowUpdate;
         return this;
@@ -25,6 +26,7 @@ public class UpdateServiceSettingsRequestBody {
      */
     @JsonProperty("LinuxSubscriptionsDiscovery")
     public UpdateServiceSettingsRequestBodyLinuxSubscriptionsDiscoveryEnum linuxSubscriptionsDiscovery;
+
     public UpdateServiceSettingsRequestBody withLinuxSubscriptionsDiscovery(UpdateServiceSettingsRequestBodyLinuxSubscriptionsDiscoveryEnum linuxSubscriptionsDiscovery) {
         this.linuxSubscriptionsDiscovery = linuxSubscriptionsDiscovery;
         return this;
@@ -35,9 +37,14 @@ public class UpdateServiceSettingsRequestBody {
      */
     @JsonProperty("LinuxSubscriptionsDiscoverySettings")
     public UpdateServiceSettingsRequestBodyLinuxSubscriptionsDiscoverySettings linuxSubscriptionsDiscoverySettings;
+
     public UpdateServiceSettingsRequestBody withLinuxSubscriptionsDiscoverySettings(UpdateServiceSettingsRequestBodyLinuxSubscriptionsDiscoverySettings linuxSubscriptionsDiscoverySettings) {
         this.linuxSubscriptionsDiscoverySettings = linuxSubscriptionsDiscoverySettings;
         return this;
     }
     
+    public UpdateServiceSettingsRequestBody(@JsonProperty("LinuxSubscriptionsDiscovery") UpdateServiceSettingsRequestBodyLinuxSubscriptionsDiscoveryEnum linuxSubscriptionsDiscovery, @JsonProperty("LinuxSubscriptionsDiscoverySettings") UpdateServiceSettingsRequestBodyLinuxSubscriptionsDiscoverySettings linuxSubscriptionsDiscoverySettings) {
+        this.linuxSubscriptionsDiscovery = linuxSubscriptionsDiscovery;
+        this.linuxSubscriptionsDiscoverySettings = linuxSubscriptionsDiscoverySettings;
+  }
 }

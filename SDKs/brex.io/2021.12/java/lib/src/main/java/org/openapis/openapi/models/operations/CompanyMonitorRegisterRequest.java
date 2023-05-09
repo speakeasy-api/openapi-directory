@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyMonitorRegisterRequest {
@@ -12,6 +13,7 @@ public class CompanyMonitorRegisterRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public CompanyMonitorRegisterRequestBody requestBody;
+
     public CompanyMonitorRegisterRequest withRequestBody(CompanyMonitorRegisterRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,13 @@ public class CompanyMonitorRegisterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public CompanyMonitorRegisterRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CompanyMonitorRegisterRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

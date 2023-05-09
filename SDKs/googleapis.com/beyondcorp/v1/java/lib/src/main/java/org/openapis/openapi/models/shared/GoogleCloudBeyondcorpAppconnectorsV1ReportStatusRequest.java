@@ -18,6 +18,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1ReportStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleCloudBeyondcorpAppconnectorsV1ReportStatusRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1ReportStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceInfo")
     public GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo resourceInfo;
+
     public GoogleCloudBeyondcorpAppconnectorsV1ReportStatusRequest withResourceInfo(GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo resourceInfo) {
         this.resourceInfo = resourceInfo;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudBeyondcorpAppconnectorsV1ReportStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public GoogleCloudBeyondcorpAppconnectorsV1ReportStatusRequest withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectorsV1ReportStatusRequest(){}
 }

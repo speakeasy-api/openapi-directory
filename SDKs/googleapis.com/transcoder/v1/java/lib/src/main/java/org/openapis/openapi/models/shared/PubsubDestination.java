@@ -18,9 +18,11 @@ public class PubsubDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public String topic;
+
     public PubsubDestination withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public PubsubDestination(){}
 }

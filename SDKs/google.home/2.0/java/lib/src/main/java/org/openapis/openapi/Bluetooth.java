@@ -64,11 +64,9 @@ public class Bluetooth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeDiscoverabilityResponse res = new org.openapis.openapi.models.operations.ChangeDiscoverabilityResponse() {{
+        org.openapis.openapi.models.operations.ChangeDiscoverabilityResponse res = new org.openapis.openapi.models.operations.ChangeDiscoverabilityResponse(contentType, httpRes.statusCode()) {{
             changeDiscoverability200TextPlainObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -112,11 +110,9 @@ public class Bluetooth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ForgetpaireddeviceResponse res = new org.openapis.openapi.models.operations.ForgetpaireddeviceResponse() {{
+        org.openapis.openapi.models.operations.ForgetpaireddeviceResponse res = new org.openapis.openapi.models.operations.ForgetpaireddeviceResponse(contentType, httpRes.statusCode()) {{
             forgetpaireddevice200TextPlainObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Bluetooth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPairedDevicesResponse res = new org.openapis.openapi.models.operations.GetPairedDevicesResponse() {{
+        org.openapis.openapi.models.operations.GetPairedDevicesResponse res = new org.openapis.openapi.models.operations.GetPairedDevicesResponse(contentType, httpRes.statusCode()) {{
             example111s = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Bluetooth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScanResultsResponse res = new org.openapis.openapi.models.operations.GetScanResultsResponse() {{
+        org.openapis.openapi.models.operations.GetScanResultsResponse res = new org.openapis.openapi.models.operations.GetScanResultsResponse(contentType, httpRes.statusCode()) {{
             example112s = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,11 +243,9 @@ public class Bluetooth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PairwithSpeakerResponse res = new org.openapis.openapi.models.operations.PairwithSpeakerResponse() {{
+        org.openapis.openapi.models.operations.PairwithSpeakerResponse res = new org.openapis.openapi.models.operations.PairwithSpeakerResponse(contentType, httpRes.statusCode()) {{
             pairwithSpeaker200TextPlainObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,11 +290,9 @@ public class Bluetooth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ScanfordevicesResponse res = new org.openapis.openapi.models.operations.ScanfordevicesResponse() {{
+        org.openapis.openapi.models.operations.ScanfordevicesResponse res = new org.openapis.openapi.models.operations.ScanfordevicesResponse(contentType, httpRes.statusCode()) {{
             scanfordevices200TextPlainObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -356,11 +344,9 @@ public class Bluetooth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StatusResponse res = new org.openapis.openapi.models.operations.StatusResponse() {{
+        org.openapis.openapi.models.operations.StatusResponse res = new org.openapis.openapi.models.operations.StatusResponse(contentType, httpRes.statusCode()) {{
             example110 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryCreateApiDeploymentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApiDeploymentInput apiDeploymentInput;
+
     public RegistryCreateApiDeploymentRequest withApiDeploymentInput(org.openapis.openapi.models.shared.ApiDeploymentInput apiDeploymentInput) {
         this.apiDeploymentInput = apiDeploymentInput;
         return this;
@@ -19,6 +21,7 @@ public class RegistryCreateApiDeploymentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
     public String api;
+
     public RegistryCreateApiDeploymentRequest withApi(String api) {
         this.api = api;
         return this;
@@ -29,6 +32,7 @@ public class RegistryCreateApiDeploymentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apiDeploymentId")
     public String apiDeploymentId;
+
     public RegistryCreateApiDeploymentRequest withApiDeploymentId(String apiDeploymentId) {
         this.apiDeploymentId = apiDeploymentId;
         return this;
@@ -39,6 +43,7 @@ public class RegistryCreateApiDeploymentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryCreateApiDeploymentRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -49,9 +54,16 @@ public class RegistryCreateApiDeploymentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryCreateApiDeploymentRequest withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public RegistryCreateApiDeploymentRequest(@JsonProperty("ApiDeploymentInput") org.openapis.openapi.models.shared.ApiDeploymentInput apiDeploymentInput, @JsonProperty("api") String api, @JsonProperty("location") String location, @JsonProperty("project") String project) {
+        this.apiDeploymentInput = apiDeploymentInput;
+        this.api = api;
+        this.location = location;
+        this.project = project;
+  }
 }

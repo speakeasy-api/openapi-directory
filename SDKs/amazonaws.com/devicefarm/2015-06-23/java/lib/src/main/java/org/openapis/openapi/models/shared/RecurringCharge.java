@@ -15,6 +15,7 @@ public class RecurringCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost")
     public MonetaryAmount cost;
+
     public RecurringCharge withCost(MonetaryAmount cost) {
         this.cost = cost;
         return this;
@@ -23,9 +24,11 @@ public class RecurringCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     public RecurringChargeFrequencyEnum frequency;
+
     public RecurringCharge withFrequency(RecurringChargeFrequencyEnum frequency) {
         this.frequency = frequency;
         return this;
     }
     
+    public RecurringCharge(){}
 }

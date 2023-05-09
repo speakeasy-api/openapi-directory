@@ -15,6 +15,7 @@ public class ECSServiceRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerRecommendations")
     public ContainerRecommendation[] containerRecommendations;
+
     public ECSServiceRecommendationOption withContainerRecommendations(ContainerRecommendation[] containerRecommendations) {
         this.containerRecommendations = containerRecommendations;
         return this;
@@ -23,6 +24,7 @@ public class ECSServiceRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu")
     public Long cpu;
+
     public ECSServiceRecommendationOption withCpu(Long cpu) {
         this.cpu = cpu;
         return this;
@@ -31,6 +33,7 @@ public class ECSServiceRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public Long memory;
+
     public ECSServiceRecommendationOption withMemory(Long memory) {
         this.memory = memory;
         return this;
@@ -39,6 +42,7 @@ public class ECSServiceRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectedUtilizationMetrics")
     public ECSServiceProjectedUtilizationMetric[] projectedUtilizationMetrics;
+
     public ECSServiceRecommendationOption withProjectedUtilizationMetrics(ECSServiceProjectedUtilizationMetric[] projectedUtilizationMetrics) {
         this.projectedUtilizationMetrics = projectedUtilizationMetrics;
         return this;
@@ -50,9 +54,11 @@ public class ECSServiceRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsOpportunity")
     public SavingsOpportunity savingsOpportunity;
+
     public ECSServiceRecommendationOption withSavingsOpportunity(SavingsOpportunity savingsOpportunity) {
         this.savingsOpportunity = savingsOpportunity;
         return this;
     }
     
+    public ECSServiceRecommendationOption(){}
 }

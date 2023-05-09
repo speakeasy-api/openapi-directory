@@ -15,9 +15,11 @@ public class CreateNotificationRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public CreateNotificationRuleResult withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public CreateNotificationRuleResult(){}
 }

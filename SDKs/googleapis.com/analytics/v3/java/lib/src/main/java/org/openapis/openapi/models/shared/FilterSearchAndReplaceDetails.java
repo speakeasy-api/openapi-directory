@@ -18,6 +18,7 @@ public class FilterSearchAndReplaceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseSensitive")
     public Boolean caseSensitive;
+
     public FilterSearchAndReplaceDetails withCaseSensitive(Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
         return this;
@@ -29,6 +30,7 @@ public class FilterSearchAndReplaceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public FilterSearchAndReplaceDetails withField(String field) {
         this.field = field;
         return this;
@@ -40,6 +42,7 @@ public class FilterSearchAndReplaceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldIndex")
     public Integer fieldIndex;
+
     public FilterSearchAndReplaceDetails withFieldIndex(Integer fieldIndex) {
         this.fieldIndex = fieldIndex;
         return this;
@@ -51,6 +54,7 @@ public class FilterSearchAndReplaceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceString")
     public String replaceString;
+
     public FilterSearchAndReplaceDetails withReplaceString(String replaceString) {
         this.replaceString = replaceString;
         return this;
@@ -62,9 +66,11 @@ public class FilterSearchAndReplaceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchString")
     public String searchString;
+
     public FilterSearchAndReplaceDetails withSearchString(String searchString) {
         this.searchString = searchString;
         return this;
     }
     
+    public FilterSearchAndReplaceDetails(){}
 }

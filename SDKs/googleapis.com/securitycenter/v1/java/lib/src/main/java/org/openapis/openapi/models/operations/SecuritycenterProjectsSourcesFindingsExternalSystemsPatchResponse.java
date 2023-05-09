@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SecuritycenterProjectsSourcesFindingsExternalSystemsPatchResponse {
     
     public String contentType;
+
     public SecuritycenterProjectsSourcesFindingsExternalSystemsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SecuritycenterProjectsSourcesFindingsExternalSystemsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1ExternalSystem googleCloudSecuritycenterV1ExternalSystem;
+
     public SecuritycenterProjectsSourcesFindingsExternalSystemsPatchResponse withGoogleCloudSecuritycenterV1ExternalSystem(org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1ExternalSystem googleCloudSecuritycenterV1ExternalSystem) {
         this.googleCloudSecuritycenterV1ExternalSystem = googleCloudSecuritycenterV1ExternalSystem;
         return this;
@@ -26,6 +29,7 @@ public class SecuritycenterProjectsSourcesFindingsExternalSystemsPatchResponse {
     
     
     public Integer statusCode;
+
     public SecuritycenterProjectsSourcesFindingsExternalSystemsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SecuritycenterProjectsSourcesFindingsExternalSystemsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SecuritycenterProjectsSourcesFindingsExternalSystemsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SecuritycenterProjectsSourcesFindingsExternalSystemsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

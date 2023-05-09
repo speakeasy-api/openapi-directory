@@ -15,9 +15,11 @@ public class UpdateInstanceMetadataOptionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public UpdateInstanceMetadataOptionsResult withOperation(Operation operation) {
         this.operation = operation;
         return this;
     }
     
+    public UpdateInstanceMetadataOptionsResult(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNotificationRuleResponse {
@@ -12,6 +13,7 @@ public class UpdateNotificationRuleResponse {
      */
     
     public Object configurationException;
+
     public UpdateNotificationRuleResponse withConfigurationException(Object configurationException) {
         this.configurationException = configurationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateNotificationRuleResponse {
     
     
     public String contentType;
+
     public UpdateNotificationRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class UpdateNotificationRuleResponse {
     
     
     public Integer statusCode;
+
     public UpdateNotificationRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateNotificationRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNotificationRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateNotificationRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateNotificationRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateNotificationRuleResponse {
      */
     
     public java.util.Map<String, Object> updateNotificationRuleResult;
+
     public UpdateNotificationRuleResponse withUpdateNotificationRuleResult(java.util.Map<String, Object> updateNotificationRuleResult) {
         this.updateNotificationRuleResult = updateNotificationRuleResult;
         return this;
@@ -63,9 +70,14 @@ public class UpdateNotificationRuleResponse {
      */
     
     public Object validationException;
+
     public UpdateNotificationRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateNotificationRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

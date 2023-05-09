@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpcEndpointServiceConfigurationRequest {
     
     public Boolean acceptanceRequired;
+
     public CreateVpcEndpointServiceConfigurationRequest withAcceptanceRequired(Boolean acceptanceRequired) {
         this.acceptanceRequired = acceptanceRequired;
         return this;
@@ -16,6 +17,7 @@ public class CreateVpcEndpointServiceConfigurationRequest {
     
     
     public String clientToken;
+
     public CreateVpcEndpointServiceConfigurationRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +25,7 @@ public class CreateVpcEndpointServiceConfigurationRequest {
     
     
     public Boolean dryRun;
+
     public CreateVpcEndpointServiceConfigurationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateVpcEndpointServiceConfigurationRequest {
     
     
     public String[] gatewayLoadBalancerArns;
+
     public CreateVpcEndpointServiceConfigurationRequest withGatewayLoadBalancerArns(String[] gatewayLoadBalancerArns) {
         this.gatewayLoadBalancerArns = gatewayLoadBalancerArns;
         return this;
@@ -37,6 +41,7 @@ public class CreateVpcEndpointServiceConfigurationRequest {
     
     
     public String[] networkLoadBalancerArns;
+
     public CreateVpcEndpointServiceConfigurationRequest withNetworkLoadBalancerArns(String[] networkLoadBalancerArns) {
         this.networkLoadBalancerArns = networkLoadBalancerArns;
         return this;
@@ -44,6 +49,7 @@ public class CreateVpcEndpointServiceConfigurationRequest {
     
     
     public String privateDnsName;
+
     public CreateVpcEndpointServiceConfigurationRequest withPrivateDnsName(String privateDnsName) {
         this.privateDnsName = privateDnsName;
         return this;
@@ -51,6 +57,7 @@ public class CreateVpcEndpointServiceConfigurationRequest {
     
     
     public String[] supportedIpAddressTypes;
+
     public CreateVpcEndpointServiceConfigurationRequest withSupportedIpAddressTypes(String[] supportedIpAddressTypes) {
         this.supportedIpAddressTypes = supportedIpAddressTypes;
         return this;
@@ -58,9 +65,11 @@ public class CreateVpcEndpointServiceConfigurationRequest {
     
     
     public CreateVpcEndpointServiceConfigurationRequestTagSpecifications[] tagSpecifications;
+
     public CreateVpcEndpointServiceConfigurationRequest withTagSpecifications(CreateVpcEndpointServiceConfigurationRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateVpcEndpointServiceConfigurationRequest(){}
 }

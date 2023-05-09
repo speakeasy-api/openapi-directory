@@ -18,6 +18,7 @@ public class PacketIntervals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avgMs")
     public String avgMs;
+
     public PacketIntervals withAvgMs(String avgMs) {
         this.avgMs = avgMs;
         return this;
@@ -29,6 +30,7 @@ public class PacketIntervals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public PacketIntervalsDurationEnum duration;
+
     public PacketIntervals withDuration(PacketIntervalsDurationEnum duration) {
         this.duration = duration;
         return this;
@@ -40,6 +42,7 @@ public class PacketIntervals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxMs")
     public String maxMs;
+
     public PacketIntervals withMaxMs(String maxMs) {
         this.maxMs = maxMs;
         return this;
@@ -51,6 +54,7 @@ public class PacketIntervals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minMs")
     public String minMs;
+
     public PacketIntervals withMinMs(String minMs) {
         this.minMs = minMs;
         return this;
@@ -62,6 +66,7 @@ public class PacketIntervals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numIntervals")
     public String numIntervals;
+
     public PacketIntervals withNumIntervals(String numIntervals) {
         this.numIntervals = numIntervals;
         return this;
@@ -73,9 +78,11 @@ public class PacketIntervals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PacketIntervalsTypeEnum type;
+
     public PacketIntervals withType(PacketIntervalsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PacketIntervals(){}
 }

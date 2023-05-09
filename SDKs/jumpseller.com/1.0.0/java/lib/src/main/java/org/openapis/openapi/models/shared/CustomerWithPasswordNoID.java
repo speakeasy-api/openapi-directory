@@ -15,9 +15,11 @@ public class CustomerWithPasswordNoID {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public CustomerFieldsWithPasswordNoID customer;
+
     public CustomerWithPasswordNoID withCustomer(CustomerFieldsWithPasswordNoID customer) {
         this.customer = customer;
         return this;
     }
     
+    public CustomerWithPasswordNoID(){}
 }

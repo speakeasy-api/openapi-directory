@@ -15,6 +15,7 @@ public class TestUploadHashesBatchTestCloudFileHash {
      */
     @JsonProperty("checksum")
     public String checksum;
+
     public TestUploadHashesBatchTestCloudFileHash withChecksum(String checksum) {
         this.checksum = checksum;
         return this;
@@ -25,6 +26,7 @@ public class TestUploadHashesBatchTestCloudFileHash {
      */
     @JsonProperty("fileType")
     public TestUploadHashesBatchTestCloudFileHashFileTypeEnum fileType;
+
     public TestUploadHashesBatchTestCloudFileHash withFileType(TestUploadHashesBatchTestCloudFileHashFileTypeEnum fileType) {
         this.fileType = fileType;
         return this;
@@ -35,9 +37,15 @@ public class TestUploadHashesBatchTestCloudFileHash {
      */
     @JsonProperty("relativePath")
     public String relativePath;
+
     public TestUploadHashesBatchTestCloudFileHash withRelativePath(String relativePath) {
         this.relativePath = relativePath;
         return this;
     }
     
+    public TestUploadHashesBatchTestCloudFileHash(@JsonProperty("checksum") String checksum, @JsonProperty("fileType") TestUploadHashesBatchTestCloudFileHashFileTypeEnum fileType, @JsonProperty("relativePath") String relativePath) {
+        this.checksum = checksum;
+        this.fileType = fileType;
+        this.relativePath = relativePath;
+  }
 }

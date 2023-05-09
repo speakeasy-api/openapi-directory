@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NotificationsGetUserEmailSettingsResponse {
     
     public String contentType;
+
     public NotificationsGetUserEmailSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class NotificationsGetUserEmailSettingsResponse {
     
     
     public Integer statusCode;
+
     public NotificationsGetUserEmailSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class NotificationsGetUserEmailSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NotificationsGetUserEmailSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class NotificationsGetUserEmailSettingsResponse {
      */
     
     public NotificationsGetUserEmailSettings200ApplicationJSON notificationsGetUserEmailSettings200ApplicationJSONObject;
+
     public NotificationsGetUserEmailSettingsResponse withNotificationsGetUserEmailSettings200ApplicationJSONObject(NotificationsGetUserEmailSettings200ApplicationJSON notificationsGetUserEmailSettings200ApplicationJSONObject) {
         this.notificationsGetUserEmailSettings200ApplicationJSONObject = notificationsGetUserEmailSettings200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class NotificationsGetUserEmailSettingsResponse {
      */
     
     public NotificationsGetUserEmailSettingsDefaultApplicationJSON notificationsGetUserEmailSettingsDefaultApplicationJSONObject;
+
     public NotificationsGetUserEmailSettingsResponse withNotificationsGetUserEmailSettingsDefaultApplicationJSONObject(NotificationsGetUserEmailSettingsDefaultApplicationJSON notificationsGetUserEmailSettingsDefaultApplicationJSONObject) {
         this.notificationsGetUserEmailSettingsDefaultApplicationJSONObject = notificationsGetUserEmailSettingsDefaultApplicationJSONObject;
         return this;
     }
     
+    public NotificationsGetUserEmailSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ListDomainMappingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainMappings")
     public DomainMapping[] domainMappings;
+
     public ListDomainMappingsResponse withDomainMappings(DomainMapping[] domainMappings) {
         this.domainMappings = domainMappings;
         return this;
@@ -29,9 +30,11 @@ public class ListDomainMappingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListDomainMappingsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListDomainMappingsResponse(){}
 }

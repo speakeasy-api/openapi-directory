@@ -15,6 +15,7 @@ public class ListOrganizationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListOrganizationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListOrganizationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationSummaries")
     public OrganizationSummary[] organizationSummaries;
+
     public ListOrganizationsResponse withOrganizationSummaries(OrganizationSummary[] organizationSummaries) {
         this.organizationSummaries = organizationSummaries;
         return this;
     }
     
+    public ListOrganizationsResponse(){}
 }

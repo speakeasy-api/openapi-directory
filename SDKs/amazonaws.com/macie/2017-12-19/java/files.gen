@@ -72,4 +72,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateS3ResourcesRequest.ja
 lib/src/main/java/org/openapis/openapi/models/shared/S3ResourceClassificationUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/ClassificationTypeUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

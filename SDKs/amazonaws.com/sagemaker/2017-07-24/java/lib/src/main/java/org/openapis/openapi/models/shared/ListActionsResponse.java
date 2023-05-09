@@ -15,6 +15,7 @@ public class ListActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionSummaries")
     public ActionSummary[] actionSummaries;
+
     public ListActionsResponse withActionSummaries(ActionSummary[] actionSummaries) {
         this.actionSummaries = actionSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListActionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListActionsResponse(){}
 }

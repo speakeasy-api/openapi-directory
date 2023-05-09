@@ -71,12 +71,10 @@ public class SpecialSecurityAreas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SsaByDistanceUsV1SsaDistanceQueryPostResponse res = new org.openapis.openapi.models.operations.SsaByDistanceUsV1SsaDistanceQueryPostResponse() {{
+        org.openapis.openapi.models.operations.SsaByDistanceUsV1SsaDistanceQueryPostResponse res = new org.openapis.openapi.models.operations.SsaByDistanceUsV1SsaDistanceQueryPostResponse(contentType, httpRes.statusCode()) {{
             ssaDistanceResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -132,12 +130,10 @@ public class SpecialSecurityAreas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SsaByPolyUsV1SsaPolygonQueryPostResponse res = new org.openapis.openapi.models.operations.SsaByPolyUsV1SsaPolygonQueryPostResponse() {{
+        org.openapis.openapi.models.operations.SsaByPolyUsV1SsaPolygonQueryPostResponse res = new org.openapis.openapi.models.operations.SsaByPolyUsV1SsaPolygonQueryPostResponse(contentType, httpRes.statusCode()) {{
             ssaPolyResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,12 +189,10 @@ public class SpecialSecurityAreas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SsaByRouteUsV1SsaRouteQueryPostResponse res = new org.openapis.openapi.models.operations.SsaByRouteUsV1SsaRouteQueryPostResponse() {{
+        org.openapis.openapi.models.operations.SsaByRouteUsV1SsaRouteQueryPostResponse res = new org.openapis.openapi.models.operations.SsaByRouteUsV1SsaRouteQueryPostResponse(contentType, httpRes.statusCode()) {{
             ssaRouteResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

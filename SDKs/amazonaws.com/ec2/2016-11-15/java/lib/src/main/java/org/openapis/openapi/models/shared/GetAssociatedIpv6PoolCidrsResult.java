@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetAssociatedIpv6PoolCidrsResult {
     
     public GetAssociatedIpv6PoolCidrsResultIpv6CidrAssociations[] ipv6CidrAssociations;
+
     public GetAssociatedIpv6PoolCidrsResult withIpv6CidrAssociations(GetAssociatedIpv6PoolCidrsResultIpv6CidrAssociations[] ipv6CidrAssociations) {
         this.ipv6CidrAssociations = ipv6CidrAssociations;
         return this;
@@ -19,9 +20,11 @@ public class GetAssociatedIpv6PoolCidrsResult {
     
     
     public String nextToken;
+
     public GetAssociatedIpv6PoolCidrsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetAssociatedIpv6PoolCidrsResult(){}
 }

@@ -15,9 +15,11 @@ public class UpdateScriptTagRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script_tag")
     public UpdateScriptTagRequestBodyScriptTag scriptTag;
+
     public UpdateScriptTagRequestBody withScriptTag(UpdateScriptTagRequestBodyScriptTag scriptTag) {
         this.scriptTag = scriptTag;
         return this;
     }
     
+    public UpdateScriptTagRequestBody(){}
 }

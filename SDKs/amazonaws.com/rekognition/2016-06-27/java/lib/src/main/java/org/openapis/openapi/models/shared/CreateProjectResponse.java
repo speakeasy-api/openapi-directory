@@ -15,9 +15,11 @@ public class CreateProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectArn")
     public String projectArn;
+
     public CreateProjectResponse withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
     }
     
+    public CreateProjectResponse(){}
 }

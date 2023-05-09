@@ -14,12 +14,13 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * Compute - Resources used to host your game servers. A compute resource can be managed GameLift Amazon EC2 instances or your own resources.
+ * Compute - Resources used to host your game servers. A compute resource can be managed Amazon GameLift Amazon EC2 instances or your own resources.
  */
 public class Compute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeArn")
     public String computeArn;
+
     public Compute withComputeArn(String computeArn) {
         this.computeArn = computeArn;
         return this;
@@ -28,6 +29,7 @@ public class Compute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeName")
     public String computeName;
+
     public Compute withComputeName(String computeName) {
         this.computeName = computeName;
         return this;
@@ -36,6 +38,7 @@ public class Compute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeStatus")
     public ComputeStatusEnum computeStatus;
+
     public Compute withComputeStatus(ComputeStatusEnum computeStatus) {
         this.computeStatus = computeStatus;
         return this;
@@ -46,6 +49,7 @@ public class Compute {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Compute withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -54,6 +58,7 @@ public class Compute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsName")
     public String dnsName;
+
     public Compute withDnsName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -62,6 +67,7 @@ public class Compute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public Compute withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -70,6 +76,7 @@ public class Compute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public Compute withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -78,6 +85,7 @@ public class Compute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameLiftServiceSdkEndpoint")
     public String gameLiftServiceSDKEndpoint;
+
     public Compute withGameLiftServiceSDKEndpoint(String gameLiftServiceSDKEndpoint) {
         this.gameLiftServiceSDKEndpoint = gameLiftServiceSDKEndpoint;
         return this;
@@ -86,6 +94,7 @@ public class Compute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public Compute withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -94,6 +103,7 @@ public class Compute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public Compute withLocation(String location) {
         this.location = location;
         return this;
@@ -102,6 +112,7 @@ public class Compute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingSystem")
     public OperatingSystemEnum operatingSystem;
+
     public Compute withOperatingSystem(OperatingSystemEnum operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -110,9 +121,11 @@ public class Compute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public Ec2InstanceTypeEnum type;
+
     public Compute withType(Ec2InstanceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Compute(){}
 }

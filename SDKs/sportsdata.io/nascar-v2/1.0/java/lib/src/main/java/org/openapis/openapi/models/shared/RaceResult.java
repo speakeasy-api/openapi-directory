@@ -12,6 +12,7 @@ public class RaceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DriverRaces")
     public DriverRace[] driverRaces;
+
     public RaceResult withDriverRaces(DriverRace[] driverRaces) {
         this.driverRaces = driverRaces;
         return this;
@@ -20,9 +21,11 @@ public class RaceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Race")
     public Race race;
+
     public RaceResult withRace(Race race) {
         this.race = race;
         return this;
     }
     
+    public RaceResult(){}
 }

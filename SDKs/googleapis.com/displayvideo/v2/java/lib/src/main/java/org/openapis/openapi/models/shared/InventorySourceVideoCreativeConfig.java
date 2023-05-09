@@ -18,9 +18,11 @@ public class InventorySourceVideoCreativeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public InventorySourceVideoCreativeConfig withDuration(String duration) {
         this.duration = duration;
         return this;
     }
     
+    public InventorySourceVideoCreativeConfig(){}
 }

@@ -14,6 +14,7 @@ public class GetOnboardingUrlRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public GetOnboardingUrlRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -22,6 +23,7 @@ public class GetOnboardingUrlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectInformation")
     public CollectInformation collectInformation;
+
     public GetOnboardingUrlRequest withCollectInformation(CollectInformation collectInformation) {
         this.collectInformation = collectInformation;
         return this;
@@ -33,6 +35,7 @@ public class GetOnboardingUrlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("editMode")
     public Boolean editMode;
+
     public GetOnboardingUrlRequest withEditMode(Boolean editMode) {
         this.editMode = editMode;
         return this;
@@ -44,6 +47,7 @@ public class GetOnboardingUrlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileOAuthCallbackUrl")
     public String mobileOAuthCallbackUrl;
+
     public GetOnboardingUrlRequest withMobileOAuthCallbackUrl(String mobileOAuthCallbackUrl) {
         this.mobileOAuthCallbackUrl = mobileOAuthCallbackUrl;
         return this;
@@ -55,6 +59,7 @@ public class GetOnboardingUrlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformName")
     public String platformName;
+
     public GetOnboardingUrlRequest withPlatformName(String platformName) {
         this.platformName = platformName;
         return this;
@@ -66,6 +71,7 @@ public class GetOnboardingUrlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnUrl")
     public String returnUrl;
+
     public GetOnboardingUrlRequest withReturnUrl(String returnUrl) {
         this.returnUrl = returnUrl;
         return this;
@@ -81,6 +87,7 @@ public class GetOnboardingUrlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperLocale")
     public String shopperLocale;
+
     public GetOnboardingUrlRequest withShopperLocale(String shopperLocale) {
         this.shopperLocale = shopperLocale;
         return this;
@@ -89,9 +96,13 @@ public class GetOnboardingUrlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showPages")
     public ShowPages showPages;
+
     public GetOnboardingUrlRequest withShowPages(ShowPages showPages) {
         this.showPages = showPages;
         return this;
     }
     
+    public GetOnboardingUrlRequest(@JsonProperty("accountHolderCode") String accountHolderCode) {
+        this.accountHolderCode = accountHolderCode;
+  }
 }

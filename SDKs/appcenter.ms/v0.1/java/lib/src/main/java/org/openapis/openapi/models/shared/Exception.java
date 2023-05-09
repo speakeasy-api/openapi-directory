@@ -17,6 +17,7 @@ public class Exception {
      */
     @JsonProperty("frames")
     public ExceptionFrames[] frames;
+
     public Exception withFrames(ExceptionFrames[] frames) {
         this.frames = frames;
         return this;
@@ -25,6 +26,7 @@ public class Exception {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inner_exceptions")
     public Exception[] innerExceptions;
+
     public Exception withInnerExceptions(Exception[] innerExceptions) {
         this.innerExceptions = innerExceptions;
         return this;
@@ -36,6 +38,7 @@ public class Exception {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public ExceptionPlatformEnum platform;
+
     public Exception withPlatform(ExceptionPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -47,6 +50,7 @@ public class Exception {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public Exception withReason(String reason) {
         this.reason = reason;
         return this;
@@ -58,6 +62,7 @@ public class Exception {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relevant")
     public Boolean relevant;
+
     public Exception withRelevant(Boolean relevant) {
         this.relevant = relevant;
         return this;
@@ -69,9 +74,13 @@ public class Exception {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Exception withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Exception(@JsonProperty("frames") ExceptionFrames[] frames) {
+        this.frames = frames;
+  }
 }

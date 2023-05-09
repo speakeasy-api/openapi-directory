@@ -15,6 +15,7 @@ public class ListExecutionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executions")
     public ExecutionSummary[] executions;
+
     public ListExecutionsOutput withExecutions(ExecutionSummary[] executions) {
         this.executions = executions;
         return this;
@@ -23,9 +24,11 @@ public class ListExecutionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListExecutionsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListExecutionsOutput(){}
 }

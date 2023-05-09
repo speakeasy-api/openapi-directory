@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudbillingBillingAccountsEstimateCostScenarioResponse {
     
     public String contentType;
+
     public CloudbillingBillingAccountsEstimateCostScenarioResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudbillingBillingAccountsEstimateCostScenarioResponse {
      */
     
     public org.openapis.openapi.models.shared.EstimateCostScenarioForBillingAccountResponse estimateCostScenarioForBillingAccountResponse;
+
     public CloudbillingBillingAccountsEstimateCostScenarioResponse withEstimateCostScenarioForBillingAccountResponse(org.openapis.openapi.models.shared.EstimateCostScenarioForBillingAccountResponse estimateCostScenarioForBillingAccountResponse) {
         this.estimateCostScenarioForBillingAccountResponse = estimateCostScenarioForBillingAccountResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudbillingBillingAccountsEstimateCostScenarioResponse {
     
     
     public Integer statusCode;
+
     public CloudbillingBillingAccountsEstimateCostScenarioResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudbillingBillingAccountsEstimateCostScenarioResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudbillingBillingAccountsEstimateCostScenarioResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudbillingBillingAccountsEstimateCostScenarioResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

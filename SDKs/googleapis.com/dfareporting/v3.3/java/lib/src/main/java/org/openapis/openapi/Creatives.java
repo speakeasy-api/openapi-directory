@@ -59,11 +59,9 @@ public class Creatives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingCreativesGetResponse res = new org.openapis.openapi.models.operations.DfareportingCreativesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingCreativesGetResponse res = new org.openapis.openapi.models.operations.DfareportingCreativesGetResponse(contentType, httpRes.statusCode()) {{
             creative = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Creatives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingCreativesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingCreativesInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingCreativesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingCreativesInsertResponse(contentType, httpRes.statusCode()) {{
             creative = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Creatives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingCreativesListResponse res = new org.openapis.openapi.models.operations.DfareportingCreativesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingCreativesListResponse res = new org.openapis.openapi.models.operations.DfareportingCreativesListResponse(contentType, httpRes.statusCode()) {{
             creativesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class Creatives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingCreativesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingCreativesPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingCreativesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingCreativesPatchResponse(contentType, httpRes.statusCode()) {{
             creative = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class Creatives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingCreativesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingCreativesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingCreativesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingCreativesUpdateResponse(contentType, httpRes.statusCode()) {{
             creative = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

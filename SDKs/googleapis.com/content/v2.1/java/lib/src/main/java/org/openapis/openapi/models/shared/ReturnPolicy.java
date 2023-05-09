@@ -18,6 +18,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ReturnPolicy withCountry(String country) {
         this.country = country;
         return this;
@@ -29,6 +30,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ReturnPolicy withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ReturnPolicy withLabel(String label) {
         this.label = label;
         return this;
@@ -51,6 +54,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReturnPolicy withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonFreeReturnReasons")
     public String[] nonFreeReturnReasons;
+
     public ReturnPolicy withNonFreeReturnReasons(String[] nonFreeReturnReasons) {
         this.nonFreeReturnReasons = nonFreeReturnReasons;
         return this;
@@ -70,6 +75,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public ReturnPolicyPolicy policy;
+
     public ReturnPolicy withPolicy(ReturnPolicyPolicy policy) {
         this.policy = policy;
         return this;
@@ -81,6 +87,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPolicyId")
     public String returnPolicyId;
+
     public ReturnPolicy withReturnPolicyId(String returnPolicyId) {
         this.returnPolicyId = returnPolicyId;
         return this;
@@ -89,6 +96,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnShippingFee")
     public Price returnShippingFee;
+
     public ReturnPolicy withReturnShippingFee(Price returnShippingFee) {
         this.returnShippingFee = returnShippingFee;
         return this;
@@ -100,9 +108,11 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seasonalOverrides")
     public ReturnPolicySeasonalOverride[] seasonalOverrides;
+
     public ReturnPolicy withSeasonalOverrides(ReturnPolicySeasonalOverride[] seasonalOverrides) {
         this.seasonalOverrides = seasonalOverrides;
         return this;
     }
     
+    public ReturnPolicy(){}
 }

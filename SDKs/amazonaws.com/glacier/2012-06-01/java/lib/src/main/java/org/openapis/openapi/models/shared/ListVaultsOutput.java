@@ -15,6 +15,7 @@ public class ListVaultsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListVaultsOutput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +24,11 @@ public class ListVaultsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VaultList")
     public DescribeVaultOutput[] vaultList;
+
     public ListVaultsOutput withVaultList(DescribeVaultOutput[] vaultList) {
         this.vaultList = vaultList;
         return this;
     }
     
+    public ListVaultsOutput(){}
 }

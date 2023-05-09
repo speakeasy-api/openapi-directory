@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PullRequestBaseRepoOwner {
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public PullRequestBaseRepoOwner withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -16,6 +17,7 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public PullRequestBaseRepoOwner withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -23,6 +25,7 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("followers_url")
     public String followersUrl;
+
     public PullRequestBaseRepoOwner withFollowersUrl(String followersUrl) {
         this.followersUrl = followersUrl;
         return this;
@@ -30,6 +33,7 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("following_url")
     public String followingUrl;
+
     public PullRequestBaseRepoOwner withFollowingUrl(String followingUrl) {
         this.followingUrl = followingUrl;
         return this;
@@ -37,6 +41,7 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("gists_url")
     public String gistsUrl;
+
     public PullRequestBaseRepoOwner withGistsUrl(String gistsUrl) {
         this.gistsUrl = gistsUrl;
         return this;
@@ -44,6 +49,7 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("gravatar_id")
     public String gravatarId;
+
     public PullRequestBaseRepoOwner withGravatarId(String gravatarId) {
         this.gravatarId = gravatarId;
         return this;
@@ -51,6 +57,7 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public PullRequestBaseRepoOwner withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -58,6 +65,7 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("id")
     public Long id;
+
     public PullRequestBaseRepoOwner withId(Long id) {
         this.id = id;
         return this;
@@ -65,6 +73,7 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("login")
     public String login;
+
     public PullRequestBaseRepoOwner withLogin(String login) {
         this.login = login;
         return this;
@@ -72,6 +81,7 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public PullRequestBaseRepoOwner withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -79,6 +89,7 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("organizations_url")
     public String organizationsUrl;
+
     public PullRequestBaseRepoOwner withOrganizationsUrl(String organizationsUrl) {
         this.organizationsUrl = organizationsUrl;
         return this;
@@ -86,6 +97,7 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("received_events_url")
     public String receivedEventsUrl;
+
     public PullRequestBaseRepoOwner withReceivedEventsUrl(String receivedEventsUrl) {
         this.receivedEventsUrl = receivedEventsUrl;
         return this;
@@ -93,6 +105,7 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("repos_url")
     public String reposUrl;
+
     public PullRequestBaseRepoOwner withReposUrl(String reposUrl) {
         this.reposUrl = reposUrl;
         return this;
@@ -100,6 +113,7 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("site_admin")
     public Boolean siteAdmin;
+
     public PullRequestBaseRepoOwner withSiteAdmin(Boolean siteAdmin) {
         this.siteAdmin = siteAdmin;
         return this;
@@ -107,6 +121,7 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("starred_url")
     public String starredUrl;
+
     public PullRequestBaseRepoOwner withStarredUrl(String starredUrl) {
         this.starredUrl = starredUrl;
         return this;
@@ -114,6 +129,7 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("subscriptions_url")
     public String subscriptionsUrl;
+
     public PullRequestBaseRepoOwner withSubscriptionsUrl(String subscriptionsUrl) {
         this.subscriptionsUrl = subscriptionsUrl;
         return this;
@@ -121,6 +137,7 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("type")
     public String type;
+
     public PullRequestBaseRepoOwner withType(String type) {
         this.type = type;
         return this;
@@ -128,9 +145,30 @@ public class PullRequestBaseRepoOwner {
     
     @JsonProperty("url")
     public String url;
+
     public PullRequestBaseRepoOwner withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PullRequestBaseRepoOwner(@JsonProperty("avatar_url") String avatarUrl, @JsonProperty("events_url") String eventsUrl, @JsonProperty("followers_url") String followersUrl, @JsonProperty("following_url") String followingUrl, @JsonProperty("gists_url") String gistsUrl, @JsonProperty("gravatar_id") String gravatarId, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("login") String login, @JsonProperty("node_id") String nodeId, @JsonProperty("organizations_url") String organizationsUrl, @JsonProperty("received_events_url") String receivedEventsUrl, @JsonProperty("repos_url") String reposUrl, @JsonProperty("site_admin") Boolean siteAdmin, @JsonProperty("starred_url") String starredUrl, @JsonProperty("subscriptions_url") String subscriptionsUrl, @JsonProperty("type") String type, @JsonProperty("url") String url) {
+        this.avatarUrl = avatarUrl;
+        this.eventsUrl = eventsUrl;
+        this.followersUrl = followersUrl;
+        this.followingUrl = followingUrl;
+        this.gistsUrl = gistsUrl;
+        this.gravatarId = gravatarId;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.login = login;
+        this.nodeId = nodeId;
+        this.organizationsUrl = organizationsUrl;
+        this.receivedEventsUrl = receivedEventsUrl;
+        this.reposUrl = reposUrl;
+        this.siteAdmin = siteAdmin;
+        this.starredUrl = starredUrl;
+        this.subscriptionsUrl = subscriptionsUrl;
+        this.type = type;
+        this.url = url;
+  }
 }

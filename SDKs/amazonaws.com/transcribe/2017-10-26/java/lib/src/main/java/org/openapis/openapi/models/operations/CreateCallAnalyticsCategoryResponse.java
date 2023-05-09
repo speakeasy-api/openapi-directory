@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCallAnalyticsCategoryResponse {
@@ -12,6 +13,7 @@ public class CreateCallAnalyticsCategoryResponse {
      */
     
     public Object badRequestException;
+
     public CreateCallAnalyticsCategoryResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateCallAnalyticsCategoryResponse {
      */
     
     public Object conflictException;
+
     public CreateCallAnalyticsCategoryResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateCallAnalyticsCategoryResponse {
     
     
     public String contentType;
+
     public CreateCallAnalyticsCategoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateCallAnalyticsCategoryResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCallAnalyticsCategoryResponse createCallAnalyticsCategoryResponse;
+
     public CreateCallAnalyticsCategoryResponse withCreateCallAnalyticsCategoryResponse(org.openapis.openapi.models.shared.CreateCallAnalyticsCategoryResponse createCallAnalyticsCategoryResponse) {
         this.createCallAnalyticsCategoryResponse = createCallAnalyticsCategoryResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateCallAnalyticsCategoryResponse {
      */
     
     public Object internalFailureException;
+
     public CreateCallAnalyticsCategoryResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class CreateCallAnalyticsCategoryResponse {
      */
     
     public Object limitExceededException;
+
     public CreateCallAnalyticsCategoryResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateCallAnalyticsCategoryResponse {
     
     
     public Integer statusCode;
+
     public CreateCallAnalyticsCategoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateCallAnalyticsCategoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCallAnalyticsCategoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateCallAnalyticsCategoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

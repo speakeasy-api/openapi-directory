@@ -18,6 +18,7 @@ public class RegionsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RegionsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class RegionsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public Region[] regions;
+
     public RegionsListResponse withRegions(Region[] regions) {
         this.regions = regions;
         return this;
     }
     
+    public RegionsListResponse(){}
 }

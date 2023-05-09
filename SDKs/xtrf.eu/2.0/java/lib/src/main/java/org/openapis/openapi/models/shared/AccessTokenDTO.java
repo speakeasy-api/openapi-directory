@@ -15,6 +15,7 @@ public class AccessTokenDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public AccessTokenDTO withToken(String token) {
         this.token = token;
         return this;
@@ -23,9 +24,11 @@ public class AccessTokenDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public AccessTokenDTO withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AccessTokenDTO(){}
 }

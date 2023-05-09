@@ -12,6 +12,7 @@ public class AppointmentCustomerViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appointmentId")
     public String appointmentId;
+
     public AppointmentCustomerViewModel withAppointmentId(String appointmentId) {
         this.appointmentId = appointmentId;
         return this;
@@ -20,9 +21,11 @@ public class AppointmentCustomerViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public AppointmentCustomerViewModel withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public AppointmentCustomerViewModel(){}
 }

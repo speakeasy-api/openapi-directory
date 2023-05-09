@@ -12,6 +12,7 @@ public class GistHistoryChangeStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additions")
     public Long additions;
+
     public GistHistoryChangeStatus withAdditions(Long additions) {
         this.additions = additions;
         return this;
@@ -20,6 +21,7 @@ public class GistHistoryChangeStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletions")
     public Long deletions;
+
     public GistHistoryChangeStatus withDeletions(Long deletions) {
         this.deletions = deletions;
         return this;
@@ -28,9 +30,11 @@ public class GistHistoryChangeStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public GistHistoryChangeStatus withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public GistHistoryChangeStatus(){}
 }

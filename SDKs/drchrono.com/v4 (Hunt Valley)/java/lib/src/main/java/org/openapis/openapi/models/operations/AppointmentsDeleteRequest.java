@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppointmentsDeleteRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public AppointmentsDeleteRequest withDate(String date) {
         this.date = date;
         return this;
@@ -16,6 +18,7 @@ public class AppointmentsDeleteRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_range")
     public String dateRange;
+
     public AppointmentsDeleteRequest withDateRange(String dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -23,6 +26,7 @@ public class AppointmentsDeleteRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public AppointmentsDeleteRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -30,6 +34,7 @@ public class AppointmentsDeleteRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public AppointmentsDeleteRequest withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +42,7 @@ public class AppointmentsDeleteRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
     public Long office;
+
     public AppointmentsDeleteRequest withOffice(Long office) {
         this.office = office;
         return this;
@@ -44,6 +50,7 @@ public class AppointmentsDeleteRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public AppointmentsDeleteRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -51,6 +58,7 @@ public class AppointmentsDeleteRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public AppointmentsDeleteRequest withSince(String since) {
         this.since = since;
         return this;
@@ -58,9 +66,13 @@ public class AppointmentsDeleteRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public AppointmentsDeleteRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AppointmentsDeleteRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

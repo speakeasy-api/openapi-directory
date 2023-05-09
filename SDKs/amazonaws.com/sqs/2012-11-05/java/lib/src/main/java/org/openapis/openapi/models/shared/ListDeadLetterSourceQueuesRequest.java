@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListDeadLetterSourceQueuesRequest - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListDeadLetterSourceQueuesRequest {
     
     public Long maxResults;
+
     public ListDeadLetterSourceQueuesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -19,6 +20,7 @@ public class ListDeadLetterSourceQueuesRequest {
     
     
     public String nextToken;
+
     public ListDeadLetterSourceQueuesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +28,13 @@ public class ListDeadLetterSourceQueuesRequest {
     
     
     public String queueUrl;
+
     public ListDeadLetterSourceQueuesRequest withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
     }
     
+    public ListDeadLetterSourceQueuesRequest(@JsonProperty("QueueUrl") String queueUrl) {
+        this.queueUrl = queueUrl;
+  }
 }

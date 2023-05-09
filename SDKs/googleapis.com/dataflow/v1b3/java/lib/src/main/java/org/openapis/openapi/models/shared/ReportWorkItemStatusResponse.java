@@ -18,6 +18,7 @@ public class ReportWorkItemStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unifiedWorkerResponse")
     public java.util.Map<String, Object> unifiedWorkerResponse;
+
     public ReportWorkItemStatusResponse withUnifiedWorkerResponse(java.util.Map<String, Object> unifiedWorkerResponse) {
         this.unifiedWorkerResponse = unifiedWorkerResponse;
         return this;
@@ -29,9 +30,11 @@ public class ReportWorkItemStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workItemServiceStates")
     public WorkItemServiceState[] workItemServiceStates;
+
     public ReportWorkItemStatusResponse withWorkItemServiceStates(WorkItemServiceState[] workItemServiceStates) {
         this.workItemServiceStates = workItemServiceStates;
         return this;
     }
     
+    public ReportWorkItemStatusResponse(){}
 }

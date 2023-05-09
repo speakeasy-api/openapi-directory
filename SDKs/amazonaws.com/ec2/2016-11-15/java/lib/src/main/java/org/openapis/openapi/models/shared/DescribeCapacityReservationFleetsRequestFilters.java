@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCapacityReservationFleetsRequestFilters {
     
     public String name;
+
     public DescribeCapacityReservationFleetsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeCapacityReservationFleetsRequestFilters {
     
     
     public String[] values;
+
     public DescribeCapacityReservationFleetsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeCapacityReservationFleetsRequestFilters(){}
 }

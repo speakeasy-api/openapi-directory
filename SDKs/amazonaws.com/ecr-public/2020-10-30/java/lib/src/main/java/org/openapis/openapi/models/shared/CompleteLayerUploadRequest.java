@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CompleteLayerUploadRequest {
     @JsonProperty("layerDigests")
     public String[] layerDigests;
+
     public CompleteLayerUploadRequest withLayerDigests(String[] layerDigests) {
         this.layerDigests = layerDigests;
         return this;
@@ -19,6 +20,7 @@ public class CompleteLayerUploadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public CompleteLayerUploadRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -26,6 +28,7 @@ public class CompleteLayerUploadRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public CompleteLayerUploadRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -33,9 +36,15 @@ public class CompleteLayerUploadRequest {
     
     @JsonProperty("uploadId")
     public String uploadId;
+
     public CompleteLayerUploadRequest withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
     
+    public CompleteLayerUploadRequest(@JsonProperty("layerDigests") String[] layerDigests, @JsonProperty("repositoryName") String repositoryName, @JsonProperty("uploadId") String uploadId) {
+        this.layerDigests = layerDigests;
+        this.repositoryName = repositoryName;
+        this.uploadId = uploadId;
+  }
 }

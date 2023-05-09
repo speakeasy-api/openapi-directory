@@ -16,6 +16,7 @@ public class DestinyResponsesDestinyVendorResponse {
      */
     
     public DestinyResponsesDestinyVendorResponseCategories categories;
+
     public DestinyResponsesDestinyVendorResponse withCategories(DestinyResponsesDestinyVendorResponseCategories categories) {
         this.categories = categories;
         return this;
@@ -27,6 +28,7 @@ public class DestinyResponsesDestinyVendorResponse {
      */
     
     public DestinyResponsesDestinyVendorResponseCurrencyLookups currencyLookups;
+
     public DestinyResponsesDestinyVendorResponse withCurrencyLookups(DestinyResponsesDestinyVendorResponseCurrencyLookups currencyLookups) {
         this.currencyLookups = currencyLookups;
         return this;
@@ -38,6 +40,7 @@ public class DestinyResponsesDestinyVendorResponse {
      */
     
     public DestinyResponsesDestinyVendorResponseItemComponents itemComponents;
+
     public DestinyResponsesDestinyVendorResponse withItemComponents(DestinyResponsesDestinyVendorResponseItemComponents itemComponents) {
         this.itemComponents = itemComponents;
         return this;
@@ -49,6 +52,7 @@ public class DestinyResponsesDestinyVendorResponse {
      */
     
     public DestinyResponsesDestinyVendorResponseSales sales;
+
     public DestinyResponsesDestinyVendorResponse withSales(DestinyResponsesDestinyVendorResponseSales sales) {
         this.sales = sales;
         return this;
@@ -60,6 +64,7 @@ public class DestinyResponsesDestinyVendorResponse {
      */
     
     public DestinyResponsesDestinyVendorResponseStringVariables stringVariables;
+
     public DestinyResponsesDestinyVendorResponse withStringVariables(DestinyResponsesDestinyVendorResponseStringVariables stringVariables) {
         this.stringVariables = stringVariables;
         return this;
@@ -71,9 +76,11 @@ public class DestinyResponsesDestinyVendorResponse {
      */
     
     public DestinyResponsesDestinyVendorResponseVendor vendor;
+
     public DestinyResponsesDestinyVendorResponse withVendor(DestinyResponsesDestinyVendorResponseVendor vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public DestinyResponsesDestinyVendorResponse(){}
 }

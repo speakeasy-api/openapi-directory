@@ -18,6 +18,7 @@ public class MergeTemplate422ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public MergeTemplate422ApplicationJSONErrorEnum error;
+
     public MergeTemplate422ApplicationJSON withError(MergeTemplate422ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -29,9 +30,11 @@ public class MergeTemplate422ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public MergeTemplate422ApplicationJSON withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public MergeTemplate422ApplicationJSON(){}
 }

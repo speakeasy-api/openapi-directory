@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDocumentResponse {
     
     public String contentType;
+
     public UpdateDocumentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDocumentResponse {
      */
     
     public Object documentVersionLimitExceeded;
+
     public UpdateDocumentResponse withDocumentVersionLimitExceeded(Object documentVersionLimitExceeded) {
         this.documentVersionLimitExceeded = documentVersionLimitExceeded;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDocumentResponse {
      */
     
     public Object duplicateDocumentContent;
+
     public UpdateDocumentResponse withDuplicateDocumentContent(Object duplicateDocumentContent) {
         this.duplicateDocumentContent = duplicateDocumentContent;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDocumentResponse {
      */
     
     public Object duplicateDocumentVersionName;
+
     public UpdateDocumentResponse withDuplicateDocumentVersionName(Object duplicateDocumentVersionName) {
         this.duplicateDocumentVersionName = duplicateDocumentVersionName;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDocumentResponse {
      */
     
     public Object internalServerError;
+
     public UpdateDocumentResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class UpdateDocumentResponse {
      */
     
     public Object invalidDocument;
+
     public UpdateDocumentResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -69,6 +76,7 @@ public class UpdateDocumentResponse {
      */
     
     public Object invalidDocumentContent;
+
     public UpdateDocumentResponse withInvalidDocumentContent(Object invalidDocumentContent) {
         this.invalidDocumentContent = invalidDocumentContent;
         return this;
@@ -79,6 +87,7 @@ public class UpdateDocumentResponse {
      */
     
     public Object invalidDocumentOperation;
+
     public UpdateDocumentResponse withInvalidDocumentOperation(Object invalidDocumentOperation) {
         this.invalidDocumentOperation = invalidDocumentOperation;
         return this;
@@ -89,6 +98,7 @@ public class UpdateDocumentResponse {
      */
     
     public Object invalidDocumentSchemaVersion;
+
     public UpdateDocumentResponse withInvalidDocumentSchemaVersion(Object invalidDocumentSchemaVersion) {
         this.invalidDocumentSchemaVersion = invalidDocumentSchemaVersion;
         return this;
@@ -99,6 +109,7 @@ public class UpdateDocumentResponse {
      */
     
     public Object invalidDocumentVersion;
+
     public UpdateDocumentResponse withInvalidDocumentVersion(Object invalidDocumentVersion) {
         this.invalidDocumentVersion = invalidDocumentVersion;
         return this;
@@ -109,6 +120,7 @@ public class UpdateDocumentResponse {
      */
     
     public Object maxDocumentSizeExceeded;
+
     public UpdateDocumentResponse withMaxDocumentSizeExceeded(Object maxDocumentSizeExceeded) {
         this.maxDocumentSizeExceeded = maxDocumentSizeExceeded;
         return this;
@@ -116,6 +128,7 @@ public class UpdateDocumentResponse {
     
     
     public Integer statusCode;
+
     public UpdateDocumentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class UpdateDocumentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDocumentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,9 +147,14 @@ public class UpdateDocumentResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDocumentResult updateDocumentResult;
+
     public UpdateDocumentResponse withUpdateDocumentResult(org.openapis.openapi.models.shared.UpdateDocumentResult updateDocumentResult) {
         this.updateDocumentResult = updateDocumentResult;
         return this;
     }
     
+    public UpdateDocumentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

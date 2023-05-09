@@ -12,9 +12,13 @@ public class UpdateVoiceChannelRequestBody {
      */
     @JsonProperty("VoiceChannelRequest")
     public UpdateVoiceChannelRequestBodyVoiceChannelRequest voiceChannelRequest;
+
     public UpdateVoiceChannelRequestBody withVoiceChannelRequest(UpdateVoiceChannelRequestBodyVoiceChannelRequest voiceChannelRequest) {
         this.voiceChannelRequest = voiceChannelRequest;
         return this;
     }
     
+    public UpdateVoiceChannelRequestBody(@JsonProperty("VoiceChannelRequest") UpdateVoiceChannelRequestBodyVoiceChannelRequest voiceChannelRequest) {
+        this.voiceChannelRequest = voiceChannelRequest;
+  }
 }

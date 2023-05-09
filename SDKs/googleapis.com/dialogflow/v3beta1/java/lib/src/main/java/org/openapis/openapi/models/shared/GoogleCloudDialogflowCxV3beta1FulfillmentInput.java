@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1FulfillmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditionalCases")
     public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesInput[] conditionalCases;
+
     public GoogleCloudDialogflowCxV3beta1FulfillmentInput withConditionalCases(GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesInput[] conditionalCases) {
         this.conditionalCases = conditionalCases;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1FulfillmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public GoogleCloudDialogflowCxV3beta1ResponseMessageInput[] messages;
+
     public GoogleCloudDialogflowCxV3beta1FulfillmentInput withMessages(GoogleCloudDialogflowCxV3beta1ResponseMessageInput[] messages) {
         this.messages = messages;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1FulfillmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPartialResponses")
     public Boolean returnPartialResponses;
+
     public GoogleCloudDialogflowCxV3beta1FulfillmentInput withReturnPartialResponses(Boolean returnPartialResponses) {
         this.returnPartialResponses = returnPartialResponses;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3beta1FulfillmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setParameterActions")
     public GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterAction[] setParameterActions;
+
     public GoogleCloudDialogflowCxV3beta1FulfillmentInput withSetParameterActions(GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterAction[] setParameterActions) {
         this.setParameterActions = setParameterActions;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3beta1FulfillmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public GoogleCloudDialogflowCxV3beta1FulfillmentInput withTag(String tag) {
         this.tag = tag;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowCxV3beta1FulfillmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook")
     public String webhook;
+
     public GoogleCloudDialogflowCxV3beta1FulfillmentInput withWebhook(String webhook) {
         this.webhook = webhook;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1FulfillmentInput(){}
 }

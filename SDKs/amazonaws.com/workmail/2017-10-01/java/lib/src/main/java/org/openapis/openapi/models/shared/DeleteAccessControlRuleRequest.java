@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAccessControlRuleRequest {
     @JsonProperty("Name")
     public String name;
+
     public DeleteAccessControlRuleRequest withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class DeleteAccessControlRuleRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public DeleteAccessControlRuleRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public DeleteAccessControlRuleRequest(@JsonProperty("Name") String name, @JsonProperty("OrganizationId") String organizationId) {
+        this.name = name;
+        this.organizationId = organizationId;
+  }
 }

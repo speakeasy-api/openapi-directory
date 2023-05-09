@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Substring {
     @JsonProperty("length")
     public Long length;
+
     public Substring withLength(Long length) {
         this.length = length;
         return this;
@@ -19,9 +20,14 @@ public class Substring {
     
     @JsonProperty("start")
     public Long start;
+
     public Substring withStart(Long start) {
         this.start = start;
         return this;
     }
     
+    public Substring(@JsonProperty("length") Long length, @JsonProperty("start") Long start) {
+        this.length = length;
+        this.start = start;
+  }
 }

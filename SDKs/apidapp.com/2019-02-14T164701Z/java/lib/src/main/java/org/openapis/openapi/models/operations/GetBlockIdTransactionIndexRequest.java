@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBlockIdTransactionIndexRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetBlockIdTransactionIndexRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +18,14 @@ public class GetBlockIdTransactionIndexRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
     public String index;
+
     public GetBlockIdTransactionIndexRequest withIndex(String index) {
         this.index = index;
         return this;
     }
     
+    public GetBlockIdTransactionIndexRequest(@JsonProperty("id") String id, @JsonProperty("index") String index) {
+        this.id = id;
+        this.index = index;
+  }
 }

@@ -15,6 +15,7 @@ public class LargeTimestampGaps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxTimestampGapInDays")
     public Long maxTimestampGapInDays;
+
     public LargeTimestampGaps withMaxTimestampGapInDays(Long maxTimestampGapInDays) {
         this.maxTimestampGapInDays = maxTimestampGapInDays;
         return this;
@@ -23,6 +24,7 @@ public class LargeTimestampGaps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfLargeTimestampGaps")
     public Long numberOfLargeTimestampGaps;
+
     public LargeTimestampGaps withNumberOfLargeTimestampGaps(Long numberOfLargeTimestampGaps) {
         this.numberOfLargeTimestampGaps = numberOfLargeTimestampGaps;
         return this;
@@ -30,9 +32,13 @@ public class LargeTimestampGaps {
     
     @JsonProperty("Status")
     public StatisticalIssueStatusEnum status;
+
     public LargeTimestampGaps withStatus(StatisticalIssueStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public LargeTimestampGaps(@JsonProperty("Status") StatisticalIssueStatusEnum status) {
+        this.status = status;
+  }
 }

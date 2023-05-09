@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse {
     
     public String contentType;
+
     public PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse {
     
     
     public Integer statusCode;
+
     public PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse {
      */
     
     public java.util.Map<String, Object> snippetComment;
+
     public PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse withSnippetComment(java.util.Map<String, Object> snippetComment) {
         this.snippetComment = snippetComment;
         return this;
     }
     
+    public PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ContainerConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerName")
     public String containerName;
+
     public ContainerConfiguration withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
@@ -23,6 +24,7 @@ public class ContainerConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu")
     public Long cpu;
+
     public ContainerConfiguration withCpu(Long cpu) {
         this.cpu = cpu;
         return this;
@@ -31,9 +33,11 @@ public class ContainerConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memorySizeConfiguration")
     public MemorySizeConfiguration memorySizeConfiguration;
+
     public ContainerConfiguration withMemorySizeConfiguration(MemorySizeConfiguration memorySizeConfiguration) {
         this.memorySizeConfiguration = memorySizeConfiguration;
         return this;
     }
     
+    public ContainerConfiguration(){}
 }

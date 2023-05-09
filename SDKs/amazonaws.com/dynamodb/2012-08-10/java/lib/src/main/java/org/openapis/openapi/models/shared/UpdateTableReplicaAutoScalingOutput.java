@@ -15,9 +15,11 @@ public class UpdateTableReplicaAutoScalingOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableAutoScalingDescription")
     public TableAutoScalingDescription tableAutoScalingDescription;
+
     public UpdateTableReplicaAutoScalingOutput withTableAutoScalingDescription(TableAutoScalingDescription tableAutoScalingDescription) {
         this.tableAutoScalingDescription = tableAutoScalingDescription;
         return this;
     }
     
+    public UpdateTableReplicaAutoScalingOutput(){}
 }

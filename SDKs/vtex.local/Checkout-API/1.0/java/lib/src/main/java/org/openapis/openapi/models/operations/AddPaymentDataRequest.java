@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddPaymentDataRequest {
@@ -12,6 +13,7 @@ public class AddPaymentDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public AddPaymentDataRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class AddPaymentDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public AddPaymentDataRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AddPaymentDataRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AddPaymentDataRequestBody requestBody;
+
     public AddPaymentDataRequest withRequestBody(AddPaymentDataRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,9 +43,16 @@ public class AddPaymentDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderFormId")
     public String orderFormId;
+
     public AddPaymentDataRequest withOrderFormId(String orderFormId) {
         this.orderFormId = orderFormId;
         return this;
     }
     
+    public AddPaymentDataRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") AddPaymentDataRequestBody requestBody, @JsonProperty("orderFormId") String orderFormId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.orderFormId = orderFormId;
+  }
 }

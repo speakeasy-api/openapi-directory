@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetAllContentTypesRequest;
 import org.openapis.openapi.models.operations.GetAllContentTypesResponse;
 
@@ -26,18 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetAllContentTypesRequest req = new GetAllContentTypesRequest() {{
-                builderId = "faststore";
-            }}            
+            GetAllContentTypesRequest req = new GetAllContentTypesRequest("faststore");            
 
             GetAllContentTypesResponse res = sdk.pages.getAllContentTypes(req);
 
-            if (res.getAllContentTypes200ApplicationJSONObject.isPresent()) {
+            if (res.getAllContentTypes200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -45,11 +44,11 @@ public class Application {
 ## Available Resources and Operations
 
 
-### pages
+### [pages](docs/pages/README.md)
 
-* `getAllContentTypes` - Get all Content Types
-* `getCMSpage` - Get CMS page
-* `getPagesbyContentType` - Get all CMS pages by Content Type
+* [getAllContentTypes](docs/pages/README.md#getallcontenttypes) - Get all Content Types
+* [getCMSpage](docs/pages/README.md#getcmspage) - Get CMS page
+* [getPagesbyContentType](docs/pages/README.md#getpagesbycontenttype) - Get all CMS pages by Content Type
 <!-- End SDK Available Operations -->
 
 ### Maturity

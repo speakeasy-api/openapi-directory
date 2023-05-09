@@ -66,4 +66,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/AgentOtherDeviceId.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeviceNames.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeviceInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/SyncRequest.java
+docs/sdk/README.md
+docs/agentusers/README.md
+docs/devices/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class ExpenseCurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public ExpenseCurrency withCode(String code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class ExpenseCurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public ExpenseCurrency withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
     }
     
+    public ExpenseCurrency(){}
 }

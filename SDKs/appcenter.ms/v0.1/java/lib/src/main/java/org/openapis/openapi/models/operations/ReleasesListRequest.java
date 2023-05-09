@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesListRequest {
@@ -12,6 +13,7 @@ public class ReleasesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ReleasesListRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class ReleasesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ReleasesListRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -32,6 +35,7 @@ public class ReleasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published_only")
     public Boolean publishedOnly;
+
     public ReleasesListRequest withPublishedOnly(Boolean publishedOnly) {
         this.publishedOnly = publishedOnly;
         return this;
@@ -42,6 +46,7 @@ public class ReleasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=releaseId")
     public Double releaseId;
+
     public ReleasesListRequest withReleaseId(Double releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -52,6 +57,7 @@ public class ReleasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
     public String scope;
+
     public ReleasesListRequest withScope(String scope) {
         this.scope = scope;
         return this;
@@ -62,9 +68,14 @@ public class ReleasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=top")
     public Double top;
+
     public ReleasesListRequest withTop(Double top) {
         this.top = top;
         return this;
     }
     
+    public ReleasesListRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+  }
 }

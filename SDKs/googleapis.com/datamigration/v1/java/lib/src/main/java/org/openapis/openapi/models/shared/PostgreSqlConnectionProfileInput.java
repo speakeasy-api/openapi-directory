@@ -18,6 +18,7 @@ public class PostgreSqlConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudSqlId")
     public String cloudSqlId;
+
     public PostgreSqlConnectionProfileInput withCloudSqlId(String cloudSqlId) {
         this.cloudSqlId = cloudSqlId;
         return this;
@@ -29,6 +30,7 @@ public class PostgreSqlConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public PostgreSqlConnectionProfileInput withHost(String host) {
         this.host = host;
         return this;
@@ -40,6 +42,7 @@ public class PostgreSqlConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public PostgreSqlConnectionProfileInput withPassword(String password) {
         this.password = password;
         return this;
@@ -51,6 +54,7 @@ public class PostgreSqlConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public PostgreSqlConnectionProfileInput withPort(Integer port) {
         this.port = port;
         return this;
@@ -62,6 +66,7 @@ public class PostgreSqlConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateServiceConnectConnectivity")
     public PrivateServiceConnectConnectivity privateServiceConnectConnectivity;
+
     public PostgreSqlConnectionProfileInput withPrivateServiceConnectConnectivity(PrivateServiceConnectConnectivity privateServiceConnectConnectivity) {
         this.privateServiceConnectConnectivity = privateServiceConnectConnectivity;
         return this;
@@ -73,6 +78,7 @@ public class PostgreSqlConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssl")
     public SslConfigInput ssl;
+
     public PostgreSqlConnectionProfileInput withSsl(SslConfigInput ssl) {
         this.ssl = ssl;
         return this;
@@ -84,6 +90,7 @@ public class PostgreSqlConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staticIpConnectivity")
     public java.util.Map<String, Object> staticIpConnectivity;
+
     public PostgreSqlConnectionProfileInput withStaticIpConnectivity(java.util.Map<String, Object> staticIpConnectivity) {
         this.staticIpConnectivity = staticIpConnectivity;
         return this;
@@ -95,9 +102,11 @@ public class PostgreSqlConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public PostgreSqlConnectionProfileInput withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public PostgreSqlConnectionProfileInput(){}
 }

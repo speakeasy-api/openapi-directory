@@ -15,6 +15,7 @@ public class SecurityPolicyRuleMatcherConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destIpRanges")
     public String[] destIpRanges;
+
     public SecurityPolicyRuleMatcherConfig withDestIpRanges(String[] destIpRanges) {
         this.destIpRanges = destIpRanges;
         return this;
@@ -26,6 +27,7 @@ public class SecurityPolicyRuleMatcherConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layer4Configs")
     public SecurityPolicyRuleMatcherConfigLayer4Config[] layer4Configs;
+
     public SecurityPolicyRuleMatcherConfig withLayer4Configs(SecurityPolicyRuleMatcherConfigLayer4Config[] layer4Configs) {
         this.layer4Configs = layer4Configs;
         return this;
@@ -37,9 +39,11 @@ public class SecurityPolicyRuleMatcherConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcIpRanges")
     public String[] srcIpRanges;
+
     public SecurityPolicyRuleMatcherConfig withSrcIpRanges(String[] srcIpRanges) {
         this.srcIpRanges = srcIpRanges;
         return this;
     }
     
+    public SecurityPolicyRuleMatcherConfig(){}
 }

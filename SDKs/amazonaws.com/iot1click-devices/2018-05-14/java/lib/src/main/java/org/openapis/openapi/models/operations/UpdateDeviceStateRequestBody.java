@@ -16,9 +16,11 @@ public class UpdateDeviceStateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public UpdateDeviceStateRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public UpdateDeviceStateRequestBody(){}
 }

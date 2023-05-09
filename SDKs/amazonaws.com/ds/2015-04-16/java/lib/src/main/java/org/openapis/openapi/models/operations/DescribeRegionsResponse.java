@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRegionsResponse {
@@ -12,6 +13,7 @@ public class DescribeRegionsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeRegionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeRegionsResponse {
      */
     
     public Object clientException;
+
     public DescribeRegionsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRegionsResponse {
     
     
     public String contentType;
+
     public DescribeRegionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRegionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRegionsResult describeRegionsResult;
+
     public DescribeRegionsResponse withDescribeRegionsResult(org.openapis.openapi.models.shared.DescribeRegionsResult describeRegionsResult) {
         this.describeRegionsResult = describeRegionsResult;
         return this;
@@ -49,6 +54,7 @@ public class DescribeRegionsResponse {
      */
     
     public Object directoryDoesNotExistException;
+
     public DescribeRegionsResponse withDirectoryDoesNotExistException(Object directoryDoesNotExistException) {
         this.directoryDoesNotExistException = directoryDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeRegionsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeRegionsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeRegionsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeRegionsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeRegionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeRegionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribeRegionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRegionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DescribeRegionsResponse {
      */
     
     public Object serviceException;
+
     public DescribeRegionsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -103,9 +114,14 @@ public class DescribeRegionsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DescribeRegionsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DescribeRegionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

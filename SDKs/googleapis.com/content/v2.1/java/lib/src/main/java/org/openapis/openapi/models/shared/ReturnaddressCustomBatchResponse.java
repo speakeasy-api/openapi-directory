@@ -18,6 +18,7 @@ public class ReturnaddressCustomBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public ReturnaddressCustomBatchResponseEntry[] entries;
+
     public ReturnaddressCustomBatchResponse withEntries(ReturnaddressCustomBatchResponseEntry[] entries) {
         this.entries = entries;
         return this;
@@ -29,9 +30,11 @@ public class ReturnaddressCustomBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ReturnaddressCustomBatchResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ReturnaddressCustomBatchResponse(){}
 }

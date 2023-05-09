@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MoveReplicationTaskResponse {
@@ -12,6 +13,7 @@ public class MoveReplicationTaskResponse {
      */
     
     public Object accessDeniedFault;
+
     public MoveReplicationTaskResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class MoveReplicationTaskResponse {
     
     
     public String contentType;
+
     public MoveReplicationTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class MoveReplicationTaskResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public MoveReplicationTaskResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -39,6 +43,7 @@ public class MoveReplicationTaskResponse {
      */
     
     public Object kmsKeyNotAccessibleFault;
+
     public MoveReplicationTaskResponse withKMSKeyNotAccessibleFault(Object kmsKeyNotAccessibleFault) {
         this.kmsKeyNotAccessibleFault = kmsKeyNotAccessibleFault;
         return this;
@@ -49,6 +54,7 @@ public class MoveReplicationTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.MoveReplicationTaskResponse moveReplicationTaskResponse;
+
     public MoveReplicationTaskResponse withMoveReplicationTaskResponse(org.openapis.openapi.models.shared.MoveReplicationTaskResponse moveReplicationTaskResponse) {
         this.moveReplicationTaskResponse = moveReplicationTaskResponse;
         return this;
@@ -56,6 +62,7 @@ public class MoveReplicationTaskResponse {
     
     
     public Integer statusCode;
+
     public MoveReplicationTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class MoveReplicationTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MoveReplicationTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class MoveReplicationTaskResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public MoveReplicationTaskResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -83,9 +92,14 @@ public class MoveReplicationTaskResponse {
      */
     
     public Object resourceQuotaExceededFault;
+
     public MoveReplicationTaskResponse withResourceQuotaExceededFault(Object resourceQuotaExceededFault) {
         this.resourceQuotaExceededFault = resourceQuotaExceededFault;
         return this;
     }
     
+    public MoveReplicationTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

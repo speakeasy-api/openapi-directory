@@ -15,9 +15,11 @@ public class AssociatedTranscript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcript")
     public String transcript;
+
     public AssociatedTranscript withTranscript(String transcript) {
         this.transcript = transcript;
         return this;
     }
     
+    public AssociatedTranscript(){}
 }

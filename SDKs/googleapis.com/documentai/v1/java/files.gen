@@ -129,6 +129,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1Norm
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1DocumentPageDetectedLanguage.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1DocumentPageMatrix.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1DocumentPageToken.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1DocumentPageTokenDetectedBreakTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1DocumentPageTokenDetectedBreak.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1DocumentPageTable.java
@@ -192,4 +193,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1RawD
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1TrainProcessorVersionRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1TrainProcessorVersionRequestInputData.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDocumentaiV1SetDefaultProcessorVersionRequest.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

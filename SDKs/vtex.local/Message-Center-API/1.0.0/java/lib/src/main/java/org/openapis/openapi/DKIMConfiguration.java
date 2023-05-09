@@ -52,12 +52,10 @@ public class DKIMConfiguration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDKIMResponse res = new org.openapis.openapi.models.operations.CreateDKIMResponse() {{
+        org.openapis.openapi.models.operations.CreateDKIMResponse res = new org.openapis.openapi.models.operations.CreateDKIMResponse(contentType, httpRes.statusCode()) {{
             twoHundredOK = null;
             fourHundredAndOneUnauthorized = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

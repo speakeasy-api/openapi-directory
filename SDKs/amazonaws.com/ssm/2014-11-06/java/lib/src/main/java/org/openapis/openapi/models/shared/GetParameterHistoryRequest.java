@@ -12,6 +12,7 @@ public class GetParameterHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetParameterHistoryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -19,6 +20,7 @@ public class GetParameterHistoryRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public GetParameterHistoryRequest withName(String name) {
         this.name = name;
         return this;
@@ -27,6 +29,7 @@ public class GetParameterHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetParameterHistoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class GetParameterHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WithDecryption")
     public Boolean withDecryption;
+
     public GetParameterHistoryRequest withWithDecryption(Boolean withDecryption) {
         this.withDecryption = withDecryption;
         return this;
     }
     
+    public GetParameterHistoryRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -15,9 +15,11 @@ public class ClientPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tls")
     public ClientPolicyTls tls;
+
     public ClientPolicy withTls(ClientPolicyTls tls) {
         this.tls = tls;
         return this;
     }
     
+    public ClientPolicy(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdexchangebuyerProposalsGetRequest {
@@ -12,6 +13,7 @@ public class AdexchangebuyerProposalsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdexchangebuyerProposalsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class AdexchangebuyerProposalsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdexchangebuyerProposalsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class AdexchangebuyerProposalsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdexchangebuyerProposalsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +46,7 @@ public class AdexchangebuyerProposalsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdexchangebuyerProposalsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -52,6 +57,7 @@ public class AdexchangebuyerProposalsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdexchangebuyerProposalsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -62,6 +68,7 @@ public class AdexchangebuyerProposalsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=proposalId")
     public String proposalId;
+
     public AdexchangebuyerProposalsGetRequest withProposalId(String proposalId) {
         this.proposalId = proposalId;
         return this;
@@ -72,6 +79,7 @@ public class AdexchangebuyerProposalsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdexchangebuyerProposalsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -82,9 +90,13 @@ public class AdexchangebuyerProposalsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdexchangebuyerProposalsGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdexchangebuyerProposalsGetRequest(@JsonProperty("proposalId") String proposalId) {
+        this.proposalId = proposalId;
+  }
 }

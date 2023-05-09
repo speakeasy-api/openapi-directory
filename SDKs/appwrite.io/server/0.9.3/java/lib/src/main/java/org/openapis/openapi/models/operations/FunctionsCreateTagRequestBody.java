@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FunctionsCreateTagRequestBody {
@@ -12,6 +13,7 @@ public class FunctionsCreateTagRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=code")
     public String code;
+
     public FunctionsCreateTagRequestBody withCode(String code) {
         this.code = code;
         return this;
@@ -22,9 +24,14 @@ public class FunctionsCreateTagRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=command")
     public String command;
+
     public FunctionsCreateTagRequestBody withCommand(String command) {
         this.command = command;
         return this;
     }
     
+    public FunctionsCreateTagRequestBody(@JsonProperty("code") String code, @JsonProperty("command") String command) {
+        this.code = code;
+        this.command = command;
+  }
 }

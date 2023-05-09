@@ -15,6 +15,7 @@ public class ContactFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public String[] channel;
+
     public ContactFilter withChannel(String[] channel) {
         this.channel = channel;
         return this;
@@ -23,9 +24,11 @@ public class ContactFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactArn")
     public String contactArn;
+
     public ContactFilter withContactArn(String contactArn) {
         this.contactArn = contactArn;
         return this;
     }
     
+    public ContactFilter(){}
 }

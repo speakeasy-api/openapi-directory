@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CopySnapshotToExistingGameUsingPOST1Response {
     
     public String contentType;
+
     public CopySnapshotToExistingGameUsingPOST1Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CopySnapshotToExistingGameUsingPOST1Response {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public CopySnapshotToExistingGameUsingPOST1Response withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -29,6 +32,7 @@ public class CopySnapshotToExistingGameUsingPOST1Response {
      */
     
     public org.openapis.openapi.models.shared.SnapshotCreationSuccessModel snapshotCreationSuccessModel;
+
     public CopySnapshotToExistingGameUsingPOST1Response withSnapshotCreationSuccessModel(org.openapis.openapi.models.shared.SnapshotCreationSuccessModel snapshotCreationSuccessModel) {
         this.snapshotCreationSuccessModel = snapshotCreationSuccessModel;
         return this;
@@ -36,6 +40,7 @@ public class CopySnapshotToExistingGameUsingPOST1Response {
     
     
     public Integer statusCode;
+
     public CopySnapshotToExistingGameUsingPOST1Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CopySnapshotToExistingGameUsingPOST1Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CopySnapshotToExistingGameUsingPOST1Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CopySnapshotToExistingGameUsingPOST1Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

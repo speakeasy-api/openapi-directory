@@ -15,6 +15,7 @@ public class FutureReservationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public FutureReservationsListResponse withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -26,6 +27,7 @@ public class FutureReservationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FutureReservationsListResponse withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class FutureReservationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public FutureReservation[] items;
+
     public FutureReservationsListResponse withItems(FutureReservation[] items) {
         this.items = items;
         return this;
@@ -48,6 +51,7 @@ public class FutureReservationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public FutureReservationsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -59,6 +63,7 @@ public class FutureReservationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public FutureReservationsListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -70,6 +75,7 @@ public class FutureReservationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public FutureReservationsListResponse withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -81,6 +87,7 @@ public class FutureReservationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachables")
     public String[] unreachables;
+
     public FutureReservationsListResponse withUnreachables(String[] unreachables) {
         this.unreachables = unreachables;
         return this;
@@ -92,9 +99,11 @@ public class FutureReservationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public FutureReservationsListResponseWarning warning;
+
     public FutureReservationsListResponse withWarning(FutureReservationsListResponseWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public FutureReservationsListResponse(){}
 }

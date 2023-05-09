@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisBeta200ApplicationJSONPortfolios {
      */
     @JsonProperty("portfolioBeta")
     public Double portfolioBeta;
+
     public PostPortfolioAnalysisBeta200ApplicationJSONPortfolios withPortfolioBeta(Double portfolioBeta) {
         this.portfolioBeta = portfolioBeta;
         return this;
     }
     
+    public PostPortfolioAnalysisBeta200ApplicationJSONPortfolios(@JsonProperty("portfolioBeta") Double portfolioBeta) {
+        this.portfolioBeta = portfolioBeta;
+  }
 }

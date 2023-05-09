@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePrimaryEmailAddressRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdatePrimaryEmailAddressRequest updatePrimaryEmailAddressRequest;
+
     public UpdatePrimaryEmailAddressRequest withUpdatePrimaryEmailAddressRequest(org.openapis.openapi.models.shared.UpdatePrimaryEmailAddressRequest updatePrimaryEmailAddressRequest) {
         this.updatePrimaryEmailAddressRequest = updatePrimaryEmailAddressRequest;
         return this;
@@ -16,6 +18,7 @@ public class UpdatePrimaryEmailAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdatePrimaryEmailAddressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdatePrimaryEmailAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdatePrimaryEmailAddressRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdatePrimaryEmailAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdatePrimaryEmailAddressRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdatePrimaryEmailAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdatePrimaryEmailAddressRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdatePrimaryEmailAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdatePrimaryEmailAddressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdatePrimaryEmailAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdatePrimaryEmailAddressRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdatePrimaryEmailAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdatePrimaryEmailAddressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class UpdatePrimaryEmailAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public UpdatePrimaryEmailAddressXAmzTargetEnum xAmzTarget;
+
     public UpdatePrimaryEmailAddressRequest withXAmzTarget(UpdatePrimaryEmailAddressXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public UpdatePrimaryEmailAddressRequest(@JsonProperty("UpdatePrimaryEmailAddressRequest") org.openapis.openapi.models.shared.UpdatePrimaryEmailAddressRequest updatePrimaryEmailAddressRequest, @JsonProperty("X-Amz-Target") UpdatePrimaryEmailAddressXAmzTargetEnum xAmzTarget) {
+        this.updatePrimaryEmailAddressRequest = updatePrimaryEmailAddressRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

@@ -15,6 +15,7 @@ public class SendMessageRequestBody5VideoViberService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public SendMessageRequestBody5VideoViberServiceCategoryEnum category;
+
     public SendMessageRequestBody5VideoViberService withCategory(SendMessageRequestBody5VideoViberServiceCategoryEnum category) {
         this.category = category;
         return this;
@@ -26,6 +27,7 @@ public class SendMessageRequestBody5VideoViberService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public SendMessageRequestBody5VideoViberService withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -37,6 +39,7 @@ public class SendMessageRequestBody5VideoViberService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_size")
     public String fileSize;
+
     public SendMessageRequestBody5VideoViberService withFileSize(String fileSize) {
         this.fileSize = fileSize;
         return this;
@@ -48,6 +51,7 @@ public class SendMessageRequestBody5VideoViberService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public Long ttl;
+
     public SendMessageRequestBody5VideoViberService withTtl(Long ttl) {
         this.ttl = ttl;
         return this;
@@ -59,9 +63,11 @@ public class SendMessageRequestBody5VideoViberService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SendMessageRequestBody5VideoViberService withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SendMessageRequestBody5VideoViberService(){}
 }

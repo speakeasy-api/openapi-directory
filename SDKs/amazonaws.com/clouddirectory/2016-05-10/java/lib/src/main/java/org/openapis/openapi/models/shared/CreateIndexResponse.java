@@ -15,9 +15,11 @@ public class CreateIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectIdentifier")
     public String objectIdentifier;
+
     public CreateIndexResponse withObjectIdentifier(String objectIdentifier) {
         this.objectIdentifier = objectIdentifier;
         return this;
     }
     
+    public CreateIndexResponse(){}
 }

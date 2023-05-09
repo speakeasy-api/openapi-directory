@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ScheduledInstancesPlacement {
     
     public String availabilityZone;
+
     public ScheduledInstancesPlacement withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,9 +20,11 @@ public class ScheduledInstancesPlacement {
     
     
     public String groupName;
+
     public ScheduledInstancesPlacement withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public ScheduledInstancesPlacement(){}
 }

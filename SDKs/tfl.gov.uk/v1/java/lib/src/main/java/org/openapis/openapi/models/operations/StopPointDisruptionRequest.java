@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointDisruptionRequest {
@@ -12,6 +13,7 @@ public class StopPointDisruptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=flattenResponse")
     public Boolean flattenResponse;
+
     public StopPointDisruptionRequest withFlattenResponse(Boolean flattenResponse) {
         this.flattenResponse = flattenResponse;
         return this;
@@ -22,6 +24,7 @@ public class StopPointDisruptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=getFamily")
     public Boolean getFamily;
+
     public StopPointDisruptionRequest withGetFamily(Boolean getFamily) {
         this.getFamily = getFamily;
         return this;
@@ -33,6 +36,7 @@ public class StopPointDisruptionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
     public String[] ids;
+
     public StopPointDisruptionRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -40,9 +44,13 @@ public class StopPointDisruptionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeRouteBlockedStops")
     public Boolean includeRouteBlockedStops;
+
     public StopPointDisruptionRequest withIncludeRouteBlockedStops(Boolean includeRouteBlockedStops) {
         this.includeRouteBlockedStops = includeRouteBlockedStops;
         return this;
     }
     
+    public StopPointDisruptionRequest(@JsonProperty("ids") String[] ids) {
+        this.ids = ids;
+  }
 }

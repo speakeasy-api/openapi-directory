@@ -15,6 +15,7 @@ public class StartImportRequestBodyResourceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botImportSpecification")
     public org.openapis.openapi.models.shared.BotImportSpecification botImportSpecification;
+
     public StartImportRequestBodyResourceSpecification withBotImportSpecification(org.openapis.openapi.models.shared.BotImportSpecification botImportSpecification) {
         this.botImportSpecification = botImportSpecification;
         return this;
@@ -23,6 +24,7 @@ public class StartImportRequestBodyResourceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botLocaleImportSpecification")
     public org.openapis.openapi.models.shared.BotLocaleImportSpecification botLocaleImportSpecification;
+
     public StartImportRequestBodyResourceSpecification withBotLocaleImportSpecification(org.openapis.openapi.models.shared.BotLocaleImportSpecification botLocaleImportSpecification) {
         this.botLocaleImportSpecification = botLocaleImportSpecification;
         return this;
@@ -34,9 +36,11 @@ public class StartImportRequestBodyResourceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customVocabularyImportSpecification")
     public org.openapis.openapi.models.shared.CustomVocabularyImportSpecification customVocabularyImportSpecification;
+
     public StartImportRequestBodyResourceSpecification withCustomVocabularyImportSpecification(org.openapis.openapi.models.shared.CustomVocabularyImportSpecification customVocabularyImportSpecification) {
         this.customVocabularyImportSpecification = customVocabularyImportSpecification;
         return this;
     }
     
+    public StartImportRequestBodyResourceSpecification(){}
 }

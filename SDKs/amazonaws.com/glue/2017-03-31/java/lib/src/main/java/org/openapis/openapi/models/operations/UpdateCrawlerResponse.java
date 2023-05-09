@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCrawlerResponse {
     
     public String contentType;
+
     public UpdateCrawlerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCrawlerResponse {
      */
     
     public Object crawlerRunningException;
+
     public UpdateCrawlerResponse withCrawlerRunningException(Object crawlerRunningException) {
         this.crawlerRunningException = crawlerRunningException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCrawlerResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateCrawlerResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCrawlerResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateCrawlerResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateCrawlerResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateCrawlerResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateCrawlerResponse {
     
     
     public Integer statusCode;
+
     public UpdateCrawlerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateCrawlerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCrawlerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateCrawlerResponse {
      */
     
     public java.util.Map<String, Object> updateCrawlerResponse;
+
     public UpdateCrawlerResponse withUpdateCrawlerResponse(java.util.Map<String, Object> updateCrawlerResponse) {
         this.updateCrawlerResponse = updateCrawlerResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateCrawlerResponse {
      */
     
     public Object versionMismatchException;
+
     public UpdateCrawlerResponse withVersionMismatchException(Object versionMismatchException) {
         this.versionMismatchException = versionMismatchException;
         return this;
     }
     
+    public UpdateCrawlerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

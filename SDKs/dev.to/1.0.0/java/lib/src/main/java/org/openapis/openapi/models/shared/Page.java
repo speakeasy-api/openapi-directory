@@ -18,6 +18,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_json")
     public String bodyJson;
+
     public Page withBodyJson(String bodyJson) {
         this.bodyJson = bodyJson;
         return this;
@@ -29,6 +30,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_markdown")
     public String bodyMarkdown;
+
     public Page withBodyMarkdown(String bodyMarkdown) {
         this.bodyMarkdown = bodyMarkdown;
         return this;
@@ -39,6 +41,7 @@ public class Page {
      */
     @JsonProperty("description")
     public String description;
+
     public Page withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +53,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_top_level_path")
     public Boolean isTopLevelPath;
+
     public Page withIsTopLevelPath(Boolean isTopLevelPath) {
         this.isTopLevelPath = isTopLevelPath;
         return this;
@@ -60,6 +64,7 @@ public class Page {
      */
     @JsonProperty("slug")
     public String slug;
+
     public Page withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -68,6 +73,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("social_image")
     public java.util.Map<String, Object> socialImage;
+
     public Page withSocialImage(java.util.Map<String, Object> socialImage) {
         this.socialImage = socialImage;
         return this;
@@ -78,6 +84,7 @@ public class Page {
      */
     @JsonProperty("template")
     public PageTemplateEnum template;
+
     public Page withTemplate(PageTemplateEnum template) {
         this.template = template;
         return this;
@@ -88,9 +95,16 @@ public class Page {
      */
     @JsonProperty("title")
     public String title;
+
     public Page withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Page(@JsonProperty("description") String description, @JsonProperty("slug") String slug, @JsonProperty("template") PageTemplateEnum template, @JsonProperty("title") String title) {
+        this.description = description;
+        this.slug = slug;
+        this.template = template;
+        this.title = title;
+  }
 }

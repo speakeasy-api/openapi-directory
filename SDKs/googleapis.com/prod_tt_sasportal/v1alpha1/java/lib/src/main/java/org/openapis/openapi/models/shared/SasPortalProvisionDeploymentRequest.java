@@ -18,6 +18,7 @@ public class SasPortalProvisionDeploymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newDeploymentDisplayName")
     public String newDeploymentDisplayName;
+
     public SasPortalProvisionDeploymentRequest withNewDeploymentDisplayName(String newDeploymentDisplayName) {
         this.newDeploymentDisplayName = newDeploymentDisplayName;
         return this;
@@ -29,9 +30,11 @@ public class SasPortalProvisionDeploymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newOrganizationDisplayName")
     public String newOrganizationDisplayName;
+
     public SasPortalProvisionDeploymentRequest withNewOrganizationDisplayName(String newOrganizationDisplayName) {
         this.newOrganizationDisplayName = newOrganizationDisplayName;
         return this;
     }
     
+    public SasPortalProvisionDeploymentRequest(){}
 }

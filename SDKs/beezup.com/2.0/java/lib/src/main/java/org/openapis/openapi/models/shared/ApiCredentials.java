@@ -18,9 +18,11 @@ public class ApiCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentials")
     public ApiCredential[] credentials;
+
     public ApiCredentials withCredentials(ApiCredential[] credentials) {
         this.credentials = credentials;
         return this;
     }
     
+    public ApiCredentials(){}
 }

@@ -15,6 +15,7 @@ public class S3ContentLocationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketARNUpdate")
     public String bucketARNUpdate;
+
     public S3ContentLocationUpdate withBucketARNUpdate(String bucketARNUpdate) {
         this.bucketARNUpdate = bucketARNUpdate;
         return this;
@@ -23,6 +24,7 @@ public class S3ContentLocationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileKeyUpdate")
     public String fileKeyUpdate;
+
     public S3ContentLocationUpdate withFileKeyUpdate(String fileKeyUpdate) {
         this.fileKeyUpdate = fileKeyUpdate;
         return this;
@@ -31,9 +33,11 @@ public class S3ContentLocationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectVersionUpdate")
     public String objectVersionUpdate;
+
     public S3ContentLocationUpdate withObjectVersionUpdate(String objectVersionUpdate) {
         this.objectVersionUpdate = objectVersionUpdate;
         return this;
     }
     
+    public S3ContentLocationUpdate(){}
 }

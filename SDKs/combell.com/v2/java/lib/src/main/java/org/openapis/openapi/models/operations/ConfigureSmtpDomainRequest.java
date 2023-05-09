@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureSmtpDomainRequest {
@@ -12,6 +13,7 @@ public class ConfigureSmtpDomainRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateSmtpDomainRequest updateSmtpDomainRequest;
+
     public ConfigureSmtpDomainRequest withUpdateSmtpDomainRequest(org.openapis.openapi.models.shared.UpdateSmtpDomainRequest updateSmtpDomainRequest) {
         this.updateSmtpDomainRequest = updateSmtpDomainRequest;
         return this;
@@ -22,6 +24,7 @@ public class ConfigureSmtpDomainRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainNamePathParameter;
+
     public ConfigureSmtpDomainRequest withDomainNamePathParameter(String domainNamePathParameter) {
         this.domainNamePathParameter = domainNamePathParameter;
         return this;
@@ -32,6 +35,7 @@ public class ConfigureSmtpDomainRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainNameQueryParameter;
+
     public ConfigureSmtpDomainRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
         this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
@@ -42,9 +46,15 @@ public class ConfigureSmtpDomainRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hostname")
     public String hostname;
+
     public ConfigureSmtpDomainRequest withHostname(String hostname) {
         this.hostname = hostname;
         return this;
     }
     
+    public ConfigureSmtpDomainRequest(@JsonProperty("domainNamePathParameter") String domainNamePathParameter, @JsonProperty("domain_nameQueryParameter") String domainNameQueryParameter, @JsonProperty("hostname") String hostname) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        this.hostname = hostname;
+  }
 }

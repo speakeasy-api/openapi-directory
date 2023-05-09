@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartCrawlerScheduleResponse {
     
     public String contentType;
+
     public StartCrawlerScheduleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartCrawlerScheduleResponse {
      */
     
     public Object entityNotFoundException;
+
     public StartCrawlerScheduleResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class StartCrawlerScheduleResponse {
      */
     
     public Object noScheduleException;
+
     public StartCrawlerScheduleResponse withNoScheduleException(Object noScheduleException) {
         this.noScheduleException = noScheduleException;
         return this;
@@ -39,6 +43,7 @@ public class StartCrawlerScheduleResponse {
      */
     
     public Object operationTimeoutException;
+
     public StartCrawlerScheduleResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class StartCrawlerScheduleResponse {
      */
     
     public Object schedulerRunningException;
+
     public StartCrawlerScheduleResponse withSchedulerRunningException(Object schedulerRunningException) {
         this.schedulerRunningException = schedulerRunningException;
         return this;
@@ -59,6 +65,7 @@ public class StartCrawlerScheduleResponse {
      */
     
     public Object schedulerTransitioningException;
+
     public StartCrawlerScheduleResponse withSchedulerTransitioningException(Object schedulerTransitioningException) {
         this.schedulerTransitioningException = schedulerTransitioningException;
         return this;
@@ -69,6 +76,7 @@ public class StartCrawlerScheduleResponse {
      */
     
     public java.util.Map<String, Object> startCrawlerScheduleResponse;
+
     public StartCrawlerScheduleResponse withStartCrawlerScheduleResponse(java.util.Map<String, Object> startCrawlerScheduleResponse) {
         this.startCrawlerScheduleResponse = startCrawlerScheduleResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartCrawlerScheduleResponse {
     
     
     public Integer statusCode;
+
     public StartCrawlerScheduleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class StartCrawlerScheduleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartCrawlerScheduleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartCrawlerScheduleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

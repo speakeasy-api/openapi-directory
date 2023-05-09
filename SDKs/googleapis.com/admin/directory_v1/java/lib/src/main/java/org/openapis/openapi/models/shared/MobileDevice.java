@@ -23,6 +23,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adbStatus")
     public Boolean adbStatus;
+
     public MobileDevice withAdbStatus(Boolean adbStatus) {
         this.adbStatus = adbStatus;
         return this;
@@ -34,6 +35,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applications")
     public MobileDeviceApplications[] applications;
+
     public MobileDevice withApplications(MobileDeviceApplications[] applications) {
         this.applications = applications;
         return this;
@@ -45,6 +47,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basebandVersion")
     public String basebandVersion;
+
     public MobileDevice withBasebandVersion(String basebandVersion) {
         this.basebandVersion = basebandVersion;
         return this;
@@ -56,6 +59,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootloaderVersion")
     public String bootloaderVersion;
+
     public MobileDevice withBootloaderVersion(String bootloaderVersion) {
         this.bootloaderVersion = bootloaderVersion;
         return this;
@@ -67,6 +71,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public MobileDevice withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -78,6 +83,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildNumber")
     public String buildNumber;
+
     public MobileDevice withBuildNumber(String buildNumber) {
         this.buildNumber = buildNumber;
         return this;
@@ -89,6 +95,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLanguage")
     public String defaultLanguage;
+
     public MobileDevice withDefaultLanguage(String defaultLanguage) {
         this.defaultLanguage = defaultLanguage;
         return this;
@@ -100,6 +107,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerOptionsStatus")
     public Boolean developerOptionsStatus;
+
     public MobileDevice withDeveloperOptionsStatus(Boolean developerOptionsStatus) {
         this.developerOptionsStatus = developerOptionsStatus;
         return this;
@@ -111,6 +119,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceCompromisedStatus")
     public String deviceCompromisedStatus;
+
     public MobileDevice withDeviceCompromisedStatus(String deviceCompromisedStatus) {
         this.deviceCompromisedStatus = deviceCompromisedStatus;
         return this;
@@ -122,6 +131,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public MobileDevice withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -133,6 +143,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devicePasswordStatus")
     public String devicePasswordStatus;
+
     public MobileDevice withDevicePasswordStatus(String devicePasswordStatus) {
         this.devicePasswordStatus = devicePasswordStatus;
         return this;
@@ -144,6 +155,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String[] email;
+
     public MobileDevice withEmail(String[] email) {
         this.email = email;
         return this;
@@ -155,6 +167,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionStatus")
     public String encryptionStatus;
+
     public MobileDevice withEncryptionStatus(String encryptionStatus) {
         this.encryptionStatus = encryptionStatus;
         return this;
@@ -166,6 +179,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public MobileDevice withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -179,6 +193,7 @@ public class MobileDevice {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstSync")
     public OffsetDateTime firstSync;
+
     public MobileDevice withFirstSync(OffsetDateTime firstSync) {
         this.firstSync = firstSync;
         return this;
@@ -190,6 +205,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hardware")
     public String hardware;
+
     public MobileDevice withHardware(String hardware) {
         this.hardware = hardware;
         return this;
@@ -201,6 +217,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hardwareId")
     public String hardwareId;
+
     public MobileDevice withHardwareId(String hardwareId) {
         this.hardwareId = hardwareId;
         return this;
@@ -212,6 +229,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imei")
     public String imei;
+
     public MobileDevice withImei(String imei) {
         this.imei = imei;
         return this;
@@ -223,6 +241,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kernelVersion")
     public String kernelVersion;
+
     public MobileDevice withKernelVersion(String kernelVersion) {
         this.kernelVersion = kernelVersion;
         return this;
@@ -234,6 +253,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public MobileDevice withKind(String kind) {
         this.kind = kind;
         return this;
@@ -247,6 +267,7 @@ public class MobileDevice {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastSync")
     public OffsetDateTime lastSync;
+
     public MobileDevice withLastSync(OffsetDateTime lastSync) {
         this.lastSync = lastSync;
         return this;
@@ -258,6 +279,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedAccountIsOnOwnerProfile")
     public Boolean managedAccountIsOnOwnerProfile;
+
     public MobileDevice withManagedAccountIsOnOwnerProfile(Boolean managedAccountIsOnOwnerProfile) {
         this.managedAccountIsOnOwnerProfile = managedAccountIsOnOwnerProfile;
         return this;
@@ -269,6 +291,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturer")
     public String manufacturer;
+
     public MobileDevice withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -280,6 +303,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meid")
     public String meid;
+
     public MobileDevice withMeid(String meid) {
         this.meid = meid;
         return this;
@@ -291,6 +315,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public MobileDevice withModel(String model) {
         this.model = model;
         return this;
@@ -302,6 +327,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String[] name;
+
     public MobileDevice withName(String[] name) {
         this.name = name;
         return this;
@@ -313,6 +339,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkOperator")
     public String networkOperator;
+
     public MobileDevice withNetworkOperator(String networkOperator) {
         this.networkOperator = networkOperator;
         return this;
@@ -324,6 +351,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     public String os;
+
     public MobileDevice withOs(String os) {
         this.os = os;
         return this;
@@ -335,6 +363,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otherAccountsInfo")
     public String[] otherAccountsInfo;
+
     public MobileDevice withOtherAccountsInfo(String[] otherAccountsInfo) {
         this.otherAccountsInfo = otherAccountsInfo;
         return this;
@@ -346,6 +375,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privilege")
     public String privilege;
+
     public MobileDevice withPrivilege(String privilege) {
         this.privilege = privilege;
         return this;
@@ -357,6 +387,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseVersion")
     public String releaseVersion;
+
     public MobileDevice withReleaseVersion(String releaseVersion) {
         this.releaseVersion = releaseVersion;
         return this;
@@ -368,6 +399,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public MobileDevice withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -379,6 +411,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityPatchLevel")
     public String securityPatchLevel;
+
     public MobileDevice withSecurityPatchLevel(String securityPatchLevel) {
         this.securityPatchLevel = securityPatchLevel;
         return this;
@@ -390,6 +423,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumber")
     public String serialNumber;
+
     public MobileDevice withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -401,6 +435,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public MobileDevice withStatus(String status) {
         this.status = status;
         return this;
@@ -412,6 +447,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportsWorkProfile")
     public Boolean supportsWorkProfile;
+
     public MobileDevice withSupportsWorkProfile(Boolean supportsWorkProfile) {
         this.supportsWorkProfile = supportsWorkProfile;
         return this;
@@ -423,6 +459,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public MobileDevice withType(String type) {
         this.type = type;
         return this;
@@ -434,6 +471,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unknownSourcesStatus")
     public Boolean unknownSourcesStatus;
+
     public MobileDevice withUnknownSourcesStatus(Boolean unknownSourcesStatus) {
         this.unknownSourcesStatus = unknownSourcesStatus;
         return this;
@@ -445,6 +483,7 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAgent")
     public String userAgent;
+
     public MobileDevice withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
@@ -456,9 +495,11 @@ public class MobileDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifiMacAddress")
     public String wifiMacAddress;
+
     public MobileDevice withWifiMacAddress(String wifiMacAddress) {
         this.wifiMacAddress = wifiMacAddress;
         return this;
     }
     
+    public MobileDevice(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateStreamingImageResponse {
@@ -12,6 +13,7 @@ public class CreateStreamingImageResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateStreamingImageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateStreamingImageResponse {
      */
     
     public Object conflictException;
+
     public CreateStreamingImageResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateStreamingImageResponse {
     
     
     public String contentType;
+
     public CreateStreamingImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateStreamingImageResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateStreamingImageResponse createStreamingImageResponse;
+
     public CreateStreamingImageResponse withCreateStreamingImageResponse(org.openapis.openapi.models.shared.CreateStreamingImageResponse createStreamingImageResponse) {
         this.createStreamingImageResponse = createStreamingImageResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateStreamingImageResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateStreamingImageResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class CreateStreamingImageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateStreamingImageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateStreamingImageResponse {
     
     
     public Integer statusCode;
+
     public CreateStreamingImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateStreamingImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateStreamingImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateStreamingImageResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateStreamingImageResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateStreamingImageResponse {
      */
     
     public Object throttlingException;
+
     public CreateStreamingImageResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateStreamingImageResponse {
      */
     
     public Object validationException;
+
     public CreateStreamingImageResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateStreamingImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

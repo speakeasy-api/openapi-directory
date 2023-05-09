@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdexchangebuyerMarketplacenotesInsertRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AddOrderNotesRequest addOrderNotesRequest;
+
     public AdexchangebuyerMarketplacenotesInsertRequest withAddOrderNotesRequest(org.openapis.openapi.models.shared.AddOrderNotesRequest addOrderNotesRequest) {
         this.addOrderNotesRequest = addOrderNotesRequest;
         return this;
@@ -19,6 +21,7 @@ public class AdexchangebuyerMarketplacenotesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdexchangebuyerMarketplacenotesInsertRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class AdexchangebuyerMarketplacenotesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdexchangebuyerMarketplacenotesInsertRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -39,6 +43,7 @@ public class AdexchangebuyerMarketplacenotesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdexchangebuyerMarketplacenotesInsertRequest withKey(String key) {
         this.key = key;
         return this;
@@ -49,6 +54,7 @@ public class AdexchangebuyerMarketplacenotesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdexchangebuyerMarketplacenotesInsertRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -59,6 +65,7 @@ public class AdexchangebuyerMarketplacenotesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdexchangebuyerMarketplacenotesInsertRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -69,6 +76,7 @@ public class AdexchangebuyerMarketplacenotesInsertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=proposalId")
     public String proposalId;
+
     public AdexchangebuyerMarketplacenotesInsertRequest withProposalId(String proposalId) {
         this.proposalId = proposalId;
         return this;
@@ -79,6 +87,7 @@ public class AdexchangebuyerMarketplacenotesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdexchangebuyerMarketplacenotesInsertRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -89,9 +98,13 @@ public class AdexchangebuyerMarketplacenotesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdexchangebuyerMarketplacenotesInsertRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdexchangebuyerMarketplacenotesInsertRequest(@JsonProperty("proposalId") String proposalId) {
+        this.proposalId = proposalId;
+  }
 }

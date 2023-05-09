@@ -15,6 +15,7 @@ public class UpdateDataSourceRequestBodyElasticsearchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsRegion")
     public String awsRegion;
+
     public UpdateDataSourceRequestBodyElasticsearchConfig withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -23,9 +24,11 @@ public class UpdateDataSourceRequestBodyElasticsearchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public UpdateDataSourceRequestBodyElasticsearchConfig withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
+    public UpdateDataSourceRequestBodyElasticsearchConfig(){}
 }

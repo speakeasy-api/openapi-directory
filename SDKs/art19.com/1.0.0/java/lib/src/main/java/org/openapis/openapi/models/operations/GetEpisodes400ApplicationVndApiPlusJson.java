@@ -25,9 +25,11 @@ public class GetEpisodes400ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public GetEpisodes400ApplicationVndApiPlusJsonErrors[] errors;
+
     public GetEpisodes400ApplicationVndApiPlusJson withErrors(GetEpisodes400ApplicationVndApiPlusJsonErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetEpisodes400ApplicationVndApiPlusJson(){}
 }

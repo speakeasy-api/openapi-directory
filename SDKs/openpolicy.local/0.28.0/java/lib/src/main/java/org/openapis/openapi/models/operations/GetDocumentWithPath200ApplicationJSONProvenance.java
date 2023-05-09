@@ -15,6 +15,7 @@ public class GetDocumentWithPath200ApplicationJSONProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build_commit")
     public String buildCommit;
+
     public GetDocumentWithPath200ApplicationJSONProvenance withBuildCommit(String buildCommit) {
         this.buildCommit = buildCommit;
         return this;
@@ -26,6 +27,7 @@ public class GetDocumentWithPath200ApplicationJSONProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build_hostname")
     public String buildHostname;
+
     public GetDocumentWithPath200ApplicationJSONProvenance withBuildHostname(String buildHostname) {
         this.buildHostname = buildHostname;
         return this;
@@ -37,6 +39,7 @@ public class GetDocumentWithPath200ApplicationJSONProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build_timestamp")
     public String buildTimestamp;
+
     public GetDocumentWithPath200ApplicationJSONProvenance withBuildTimestamp(String buildTimestamp) {
         this.buildTimestamp = buildTimestamp;
         return this;
@@ -48,6 +51,7 @@ public class GetDocumentWithPath200ApplicationJSONProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundles")
     public java.util.Map<String, Object> bundles;
+
     public GetDocumentWithPath200ApplicationJSONProvenance withBundles(java.util.Map<String, Object> bundles) {
         this.bundles = bundles;
         return this;
@@ -59,9 +63,11 @@ public class GetDocumentWithPath200ApplicationJSONProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public GetDocumentWithPath200ApplicationJSONProvenance withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GetDocumentWithPath200ApplicationJSONProvenance(){}
 }

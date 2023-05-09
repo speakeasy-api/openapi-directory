@@ -18,6 +18,7 @@ public class SetFindingStateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public SetFindingStateRequest withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -29,9 +30,11 @@ public class SetFindingStateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public SetFindingStateRequestStateEnum state;
+
     public SetFindingStateRequest withState(SetFindingStateRequestStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public SetFindingStateRequest(){}
 }

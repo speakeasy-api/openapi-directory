@@ -15,6 +15,7 @@ public class Nameserver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlueIps")
     public String[] glueIps;
+
     public Nameserver withGlueIps(String[] glueIps) {
         this.glueIps = glueIps;
         return this;
@@ -22,9 +23,13 @@ public class Nameserver {
     
     @JsonProperty("Name")
     public String name;
+
     public Nameserver withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Nameserver(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -4,7 +4,6 @@
 
 package org.openapis.openapi;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
@@ -57,24 +56,32 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OrderApiCreateInvoiceResponse res = new org.openapis.openapi.models.operations.OrderApiCreateInvoiceResponse() {{
-            orderApiCreateInvoice200ApplicationJSONObject = null;
-            orderApiCreateInvoice200TextJSONObject = null;
+        org.openapis.openapi.models.operations.OrderApiCreateInvoiceResponse res = new org.openapis.openapi.models.operations.OrderApiCreateInvoiceResponse(contentType, httpRes.statusCode()) {{
+            rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice = null;
+            rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice = null;
+            body = null;
+            body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.orderApiCreateInvoice200ApplicationJSONObject = out;
+                org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice.class);
+                res.rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice = out;
             }
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "text/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.orderApiCreateInvoice200TextJSONObject = out;
+                org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice.class);
+                res.rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice = out;
+            }
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/xml")) {
+                byte[] out = httpRes.body();
+                res.body = out;
+            }
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "text/xml")) {
+                byte[] out = httpRes.body();
+                res.body = out;
             }
         }
 
@@ -107,24 +114,32 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OrderApiGetInvoiceListResponse res = new org.openapis.openapi.models.operations.OrderApiGetInvoiceListResponse() {{
-            orderApiGetInvoiceList200ApplicationJSONObject = null;
-            orderApiGetInvoiceList200TextJSONObject = null;
+        org.openapis.openapi.models.operations.OrderApiGetInvoiceListResponse res = new org.openapis.openapi.models.operations.OrderApiGetInvoiceListResponse(contentType, httpRes.statusCode()) {{
+            rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel = null;
+            rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel = null;
+            body = null;
+            body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.orderApiGetInvoiceList200ApplicationJSONObject = out;
+                org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel.class);
+                res.rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel = out;
             }
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "text/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.orderApiGetInvoiceList200TextJSONObject = out;
+                org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel.class);
+                res.rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel = out;
+            }
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/xml")) {
+                byte[] out = httpRes.body();
+                res.body = out;
+            }
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "text/xml")) {
+                byte[] out = httpRes.body();
+                res.body = out;
             }
         }
 

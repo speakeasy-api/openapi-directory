@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFileRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file_id")
     public String fileId;
+
     public GetFileRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -16,6 +18,7 @@ public class GetFileRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public String projectId;
+
     public GetFileRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -23,9 +26,15 @@ public class GetFileRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public GetFileRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public GetFileRequest(@JsonProperty("file_id") String fileId, @JsonProperty("project_id") String projectId, @JsonProperty("workgroup_id") String workgroupId) {
+        this.fileId = fileId;
+        this.projectId = projectId;
+        this.workgroupId = workgroupId;
+  }
 }

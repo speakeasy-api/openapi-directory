@@ -12,6 +12,7 @@ public class VoiceWebhooks {
      */
     @JsonProperty("endpoint")
     public String endpoint;
+
     public VoiceWebhooks withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -19,6 +20,7 @@ public class VoiceWebhooks {
     
     @JsonProperty("endpoint_type")
     public VoiceWebhooksEndpointTypeEnum endpointType;
+
     public VoiceWebhooks withEndpointType(VoiceWebhooksEndpointTypeEnum endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -29,9 +31,15 @@ public class VoiceWebhooks {
      */
     @JsonProperty("http_method")
     public VoiceWebhooksHttpMethodEnum httpMethod;
+
     public VoiceWebhooks withHttpMethod(VoiceWebhooksHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
     }
     
+    public VoiceWebhooks(@JsonProperty("endpoint") String endpoint, @JsonProperty("endpoint_type") VoiceWebhooksEndpointTypeEnum endpointType, @JsonProperty("http_method") VoiceWebhooksHttpMethodEnum httpMethod) {
+        this.endpoint = endpoint;
+        this.endpointType = endpointType;
+        this.httpMethod = httpMethod;
+  }
 }

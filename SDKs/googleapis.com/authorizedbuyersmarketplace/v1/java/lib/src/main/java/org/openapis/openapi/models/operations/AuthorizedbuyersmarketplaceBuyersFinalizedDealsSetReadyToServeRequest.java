@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest {
@@ -12,6 +13,7 @@ public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeReque
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,6 +32,7 @@ public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deal")
     public String deal;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest withDeal(String deal) {
         this.deal = deal;
         return this;
@@ -69,6 +76,7 @@ public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest(@JsonProperty("deal") String deal) {
+        this.deal = deal;
+  }
 }

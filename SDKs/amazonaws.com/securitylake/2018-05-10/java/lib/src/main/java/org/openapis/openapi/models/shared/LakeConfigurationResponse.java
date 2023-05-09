@@ -15,6 +15,7 @@ public class LakeConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public String encryptionKey;
+
     public LakeConfigurationResponse withEncryptionKey(String encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -23,6 +24,7 @@ public class LakeConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationDestinationRegions")
     public RegionEnum[] replicationDestinationRegions;
+
     public LakeConfigurationResponse withReplicationDestinationRegions(RegionEnum[] replicationDestinationRegions) {
         this.replicationDestinationRegions = replicationDestinationRegions;
         return this;
@@ -31,6 +33,7 @@ public class LakeConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationRoleArn")
     public String replicationRoleArn;
+
     public LakeConfigurationResponse withReplicationRoleArn(String replicationRoleArn) {
         this.replicationRoleArn = replicationRoleArn;
         return this;
@@ -39,6 +42,7 @@ public class LakeConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionSettings")
     public RetentionSetting[] retentionSettings;
+
     public LakeConfigurationResponse withRetentionSettings(RetentionSetting[] retentionSettings) {
         this.retentionSettings = retentionSettings;
         return this;
@@ -47,6 +51,7 @@ public class LakeConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3BucketArn")
     public String s3BucketArn;
+
     public LakeConfigurationResponse withS3BucketArn(String s3BucketArn) {
         this.s3BucketArn = s3BucketArn;
         return this;
@@ -55,6 +60,7 @@ public class LakeConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SettingsStatusEnum status;
+
     public LakeConfigurationResponse withStatus(SettingsStatusEnum status) {
         this.status = status;
         return this;
@@ -63,6 +69,7 @@ public class LakeConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagsMap")
     public java.util.Map<String, String> tagsMap;
+
     public LakeConfigurationResponse withTagsMap(java.util.Map<String, String> tagsMap) {
         this.tagsMap = tagsMap;
         return this;
@@ -71,9 +78,11 @@ public class LakeConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateStatus")
     public UpdateStatus updateStatus;
+
     public LakeConfigurationResponse withUpdateStatus(UpdateStatus updateStatus) {
         this.updateStatus = updateStatus;
         return this;
     }
     
+    public LakeConfigurationResponse(){}
 }

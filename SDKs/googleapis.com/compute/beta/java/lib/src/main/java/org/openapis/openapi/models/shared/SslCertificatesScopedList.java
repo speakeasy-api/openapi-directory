@@ -15,6 +15,7 @@ public class SslCertificatesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslCertificates")
     public SslCertificate[] sslCertificates;
+
     public SslCertificatesScopedList withSslCertificates(SslCertificate[] sslCertificates) {
         this.sslCertificates = sslCertificates;
         return this;
@@ -26,9 +27,11 @@ public class SslCertificatesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public SslCertificatesScopedListWarning warning;
+
     public SslCertificatesScopedList withWarning(SslCertificatesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public SslCertificatesScopedList(){}
 }

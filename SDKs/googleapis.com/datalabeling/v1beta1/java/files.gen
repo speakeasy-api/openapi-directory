@@ -231,4 +231,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDatalabelingV1be
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDatalabelingV1beta1CsvInstruction.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDatalabelingV1beta1ListInstructionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleLongrunningListOperationsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

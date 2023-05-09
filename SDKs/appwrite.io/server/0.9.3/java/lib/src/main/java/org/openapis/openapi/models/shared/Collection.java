@@ -15,6 +15,7 @@ public class Collection {
      */
     @JsonProperty("$id")
     public String dollarId;
+
     public Collection withDollarId(String dollarId) {
         this.dollarId = dollarId;
         return this;
@@ -25,6 +26,7 @@ public class Collection {
      */
     @JsonProperty("$permissions")
     public java.util.Map<String, Object> dollarPermissions;
+
     public Collection withDollarPermissions(java.util.Map<String, Object> dollarPermissions) {
         this.dollarPermissions = dollarPermissions;
         return this;
@@ -35,6 +37,7 @@ public class Collection {
      */
     @JsonProperty("dateCreated")
     public Integer dateCreated;
+
     public Collection withDateCreated(Integer dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -45,6 +48,7 @@ public class Collection {
      */
     @JsonProperty("dateUpdated")
     public Integer dateUpdated;
+
     public Collection withDateUpdated(Integer dateUpdated) {
         this.dateUpdated = dateUpdated;
         return this;
@@ -55,6 +59,7 @@ public class Collection {
      */
     @JsonProperty("name")
     public String name;
+
     public Collection withName(String name) {
         this.name = name;
         return this;
@@ -65,9 +70,18 @@ public class Collection {
      */
     @JsonProperty("rules")
     public Rule[] rules;
+
     public Collection withRules(Rule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public Collection(@JsonProperty("$id") String dollarId, @JsonProperty("$permissions") java.util.Map<String, Object> dollarPermissions, @JsonProperty("dateCreated") Integer dateCreated, @JsonProperty("dateUpdated") Integer dateUpdated, @JsonProperty("name") String name, @JsonProperty("rules") Rule[] rules) {
+        this.dollarId = dollarId;
+        this.dollarPermissions = dollarPermissions;
+        this.dateCreated = dateCreated;
+        this.dateUpdated = dateUpdated;
+        this.name = name;
+        this.rules = rules;
+  }
 }

@@ -12,9 +12,11 @@ public class UpdateScriptTag200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script_tag")
     public UpdateScriptTag200ApplicationJSONScriptTag scriptTag;
+
     public UpdateScriptTag200ApplicationJSON withScriptTag(UpdateScriptTag200ApplicationJSONScriptTag scriptTag) {
         this.scriptTag = scriptTag;
         return this;
     }
     
+    public UpdateScriptTag200ApplicationJSON(){}
 }

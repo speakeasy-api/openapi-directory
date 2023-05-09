@@ -15,6 +15,7 @@ public class AdminUpdateUserAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientMetadata")
     public java.util.Map<String, String> clientMetadata;
+
     public AdminUpdateUserAttributesRequest withClientMetadata(java.util.Map<String, String> clientMetadata) {
         this.clientMetadata = clientMetadata;
         return this;
@@ -22,6 +23,7 @@ public class AdminUpdateUserAttributesRequest {
     
     @JsonProperty("UserAttributes")
     public AttributeType[] userAttributes;
+
     public AdminUpdateUserAttributesRequest withUserAttributes(AttributeType[] userAttributes) {
         this.userAttributes = userAttributes;
         return this;
@@ -29,6 +31,7 @@ public class AdminUpdateUserAttributesRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AdminUpdateUserAttributesRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
@@ -36,9 +39,15 @@ public class AdminUpdateUserAttributesRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public AdminUpdateUserAttributesRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AdminUpdateUserAttributesRequest(@JsonProperty("UserAttributes") AttributeType[] userAttributes, @JsonProperty("UserPoolId") String userPoolId, @JsonProperty("Username") String username) {
+        this.userAttributes = userAttributes;
+        this.userPoolId = userPoolId;
+        this.username = username;
+  }
 }

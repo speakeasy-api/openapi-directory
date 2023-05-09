@@ -12,6 +12,7 @@ public class AttemptFailureReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalMessage")
     public String externalMessage;
+
     public AttemptFailureReason withExternalMessage(String externalMessage) {
         this.externalMessage = externalMessage;
         return this;
@@ -23,6 +24,7 @@ public class AttemptFailureReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureOrigin")
     public AttemptFailureOriginEnum failureOrigin;
+
     public AttemptFailureReason withFailureOrigin(AttemptFailureOriginEnum failureOrigin) {
         this.failureOrigin = failureOrigin;
         return this;
@@ -34,6 +36,7 @@ public class AttemptFailureReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureType")
     public AttemptFailureTypeEnum failureType;
+
     public AttemptFailureReason withFailureType(AttemptFailureTypeEnum failureType) {
         this.failureType = failureType;
         return this;
@@ -42,6 +45,7 @@ public class AttemptFailureReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalMessage")
     public String internalMessage;
+
     public AttemptFailureReason withInternalMessage(String internalMessage) {
         this.internalMessage = internalMessage;
         return this;
@@ -53,6 +57,7 @@ public class AttemptFailureReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryable")
     public Boolean retryable;
+
     public AttemptFailureReason withRetryable(Boolean retryable) {
         this.retryable = retryable;
         return this;
@@ -61,6 +66,7 @@ public class AttemptFailureReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stacktrace")
     public String stacktrace;
+
     public AttemptFailureReason withStacktrace(String stacktrace) {
         this.stacktrace = stacktrace;
         return this;
@@ -68,9 +74,13 @@ public class AttemptFailureReason {
     
     @JsonProperty("timestamp")
     public Long timestamp;
+
     public AttemptFailureReason withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public AttemptFailureReason(@JsonProperty("timestamp") Long timestamp) {
+        this.timestamp = timestamp;
+  }
 }

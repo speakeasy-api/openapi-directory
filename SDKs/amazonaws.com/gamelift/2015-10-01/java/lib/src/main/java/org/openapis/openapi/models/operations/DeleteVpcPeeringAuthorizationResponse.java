@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVpcPeeringAuthorizationResponse {
     
     public String contentType;
+
     public DeleteVpcPeeringAuthorizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteVpcPeeringAuthorizationResponse {
      */
     
     public java.util.Map<String, Object> deleteVpcPeeringAuthorizationOutput;
+
     public DeleteVpcPeeringAuthorizationResponse withDeleteVpcPeeringAuthorizationOutput(java.util.Map<String, Object> deleteVpcPeeringAuthorizationOutput) {
         this.deleteVpcPeeringAuthorizationOutput = deleteVpcPeeringAuthorizationOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteVpcPeeringAuthorizationResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteVpcPeeringAuthorizationResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteVpcPeeringAuthorizationResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteVpcPeeringAuthorizationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteVpcPeeringAuthorizationResponse {
      */
     
     public Object notFoundException;
+
     public DeleteVpcPeeringAuthorizationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteVpcPeeringAuthorizationResponse {
     
     
     public Integer statusCode;
+
     public DeleteVpcPeeringAuthorizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteVpcPeeringAuthorizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVpcPeeringAuthorizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteVpcPeeringAuthorizationResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteVpcPeeringAuthorizationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteVpcPeeringAuthorizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

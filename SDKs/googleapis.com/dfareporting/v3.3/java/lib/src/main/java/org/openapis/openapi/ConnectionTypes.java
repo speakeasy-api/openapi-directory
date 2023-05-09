@@ -58,11 +58,9 @@ public class ConnectionTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingConnectionTypesGetResponse res = new org.openapis.openapi.models.operations.DfareportingConnectionTypesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingConnectionTypesGetResponse res = new org.openapis.openapi.models.operations.DfareportingConnectionTypesGetResponse(contentType, httpRes.statusCode()) {{
             connectionType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class ConnectionTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingConnectionTypesListResponse res = new org.openapis.openapi.models.operations.DfareportingConnectionTypesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingConnectionTypesListResponse res = new org.openapis.openapi.models.operations.DfareportingConnectionTypesListResponse(contentType, httpRes.statusCode()) {{
             connectionTypesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

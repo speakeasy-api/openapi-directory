@@ -15,9 +15,11 @@ public class RegisterDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceId")
     public String deviceId;
+
     public RegisterDeviceResponse withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
     }
     
+    public RegisterDeviceResponse(){}
 }

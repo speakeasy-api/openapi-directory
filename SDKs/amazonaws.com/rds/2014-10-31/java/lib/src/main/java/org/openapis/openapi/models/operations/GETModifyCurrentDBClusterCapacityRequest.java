@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyCurrentDBClusterCapacityRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyCurrentDBClusterCapacityActionEnum action;
+
     public GETModifyCurrentDBClusterCapacityRequest withAction(GETModifyCurrentDBClusterCapacityActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyCurrentDBClusterCapacityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Capacity")
     public Long capacity;
+
     public GETModifyCurrentDBClusterCapacityRequest withCapacity(Long capacity) {
         this.capacity = capacity;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyCurrentDBClusterCapacityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterIdentifier")
     public String dbClusterIdentifier;
+
     public GETModifyCurrentDBClusterCapacityRequest withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyCurrentDBClusterCapacityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SecondsBeforeTimeout")
     public Long secondsBeforeTimeout;
+
     public GETModifyCurrentDBClusterCapacityRequest withSecondsBeforeTimeout(Long secondsBeforeTimeout) {
         this.secondsBeforeTimeout = secondsBeforeTimeout;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyCurrentDBClusterCapacityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TimeoutAction")
     public String timeoutAction;
+
     public GETModifyCurrentDBClusterCapacityRequest withTimeoutAction(String timeoutAction) {
         this.timeoutAction = timeoutAction;
         return this;
@@ -56,6 +62,7 @@ public class GETModifyCurrentDBClusterCapacityRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyCurrentDBClusterCapacityVersionEnum version;
+
     public GETModifyCurrentDBClusterCapacityRequest withVersion(GETModifyCurrentDBClusterCapacityVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETModifyCurrentDBClusterCapacityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyCurrentDBClusterCapacityRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETModifyCurrentDBClusterCapacityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyCurrentDBClusterCapacityRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETModifyCurrentDBClusterCapacityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyCurrentDBClusterCapacityRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETModifyCurrentDBClusterCapacityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyCurrentDBClusterCapacityRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETModifyCurrentDBClusterCapacityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyCurrentDBClusterCapacityRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETModifyCurrentDBClusterCapacityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyCurrentDBClusterCapacityRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,15 @@ public class GETModifyCurrentDBClusterCapacityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyCurrentDBClusterCapacityRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyCurrentDBClusterCapacityRequest(@JsonProperty("Action") GETModifyCurrentDBClusterCapacityActionEnum action, @JsonProperty("DBClusterIdentifier") String dbClusterIdentifier, @JsonProperty("Version") GETModifyCurrentDBClusterCapacityVersionEnum version) {
+        this.action = action;
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        this.version = version;
+  }
 }

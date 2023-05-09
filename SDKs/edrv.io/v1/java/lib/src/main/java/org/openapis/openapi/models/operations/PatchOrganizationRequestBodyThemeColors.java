@@ -12,6 +12,7 @@ public class PatchOrganizationRequestBodyThemeColors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     public String primary;
+
     public PatchOrganizationRequestBodyThemeColors withPrimary(String primary) {
         this.primary = primary;
         return this;
@@ -20,9 +21,11 @@ public class PatchOrganizationRequestBodyThemeColors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondary")
     public String secondary;
+
     public PatchOrganizationRequestBodyThemeColors withSecondary(String secondary) {
         this.secondary = secondary;
         return this;
     }
     
+    public PatchOrganizationRequestBodyThemeColors(){}
 }

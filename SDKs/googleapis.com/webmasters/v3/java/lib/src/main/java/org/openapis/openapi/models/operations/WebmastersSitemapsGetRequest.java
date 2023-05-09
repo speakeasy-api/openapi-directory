@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebmastersSitemapsGetRequest {
@@ -12,6 +13,7 @@ public class WebmastersSitemapsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public WebmastersSitemapsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class WebmastersSitemapsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=feedpath")
     public String feedpath;
+
     public WebmastersSitemapsGetRequest withFeedpath(String feedpath) {
         this.feedpath = feedpath;
         return this;
@@ -32,6 +35,7 @@ public class WebmastersSitemapsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public WebmastersSitemapsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class WebmastersSitemapsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public WebmastersSitemapsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class WebmastersSitemapsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public WebmastersSitemapsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +68,7 @@ public class WebmastersSitemapsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public WebmastersSitemapsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -72,6 +79,7 @@ public class WebmastersSitemapsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public WebmastersSitemapsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -82,6 +90,7 @@ public class WebmastersSitemapsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=siteUrl")
     public String siteUrl;
+
     public WebmastersSitemapsGetRequest withSiteUrl(String siteUrl) {
         this.siteUrl = siteUrl;
         return this;
@@ -92,9 +101,14 @@ public class WebmastersSitemapsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public WebmastersSitemapsGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public WebmastersSitemapsGetRequest(@JsonProperty("feedpath") String feedpath, @JsonProperty("siteUrl") String siteUrl) {
+        this.feedpath = feedpath;
+        this.siteUrl = siteUrl;
+  }
 }

@@ -18,9 +18,11 @@ public class ExchangeAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange")
     public ExchangeAssignedTargetingOptionDetailsExchangeEnum exchange;
+
     public ExchangeAssignedTargetingOptionDetails withExchange(ExchangeAssignedTargetingOptionDetailsExchangeEnum exchange) {
         this.exchange = exchange;
         return this;
     }
     
+    public ExchangeAssignedTargetingOptionDetails(){}
 }

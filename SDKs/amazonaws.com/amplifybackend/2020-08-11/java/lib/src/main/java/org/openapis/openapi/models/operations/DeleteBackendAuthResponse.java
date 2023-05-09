@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBackendAuthResponse {
@@ -12,6 +13,7 @@ public class DeleteBackendAuthResponse {
      */
     
     public Object badRequestException;
+
     public DeleteBackendAuthResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBackendAuthResponse {
     
     
     public String contentType;
+
     public DeleteBackendAuthResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBackendAuthResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBackendAuthResponse deleteBackendAuthResponse;
+
     public DeleteBackendAuthResponse withDeleteBackendAuthResponse(org.openapis.openapi.models.shared.DeleteBackendAuthResponse deleteBackendAuthResponse) {
         this.deleteBackendAuthResponse = deleteBackendAuthResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteBackendAuthResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public DeleteBackendAuthResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteBackendAuthResponse {
      */
     
     public Object notFoundException;
+
     public DeleteBackendAuthResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteBackendAuthResponse {
     
     
     public Integer statusCode;
+
     public DeleteBackendAuthResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteBackendAuthResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBackendAuthResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteBackendAuthResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteBackendAuthResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteBackendAuthResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingAdsListRequest {
@@ -12,6 +13,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DfareportingAdsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DfareportingAdsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active")
     public Boolean active;
+
     public DfareportingAdsListRequest withActive(Boolean active) {
         this.active = active;
         return this;
@@ -42,6 +46,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserId")
     public String advertiserId;
+
     public DfareportingAdsListRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -52,6 +57,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DfareportingAdsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -62,6 +68,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=archived")
     public Boolean archived;
+
     public DfareportingAdsListRequest withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -72,6 +79,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=audienceSegmentIds")
     public String[] audienceSegmentIds;
+
     public DfareportingAdsListRequest withAudienceSegmentIds(String[] audienceSegmentIds) {
         this.audienceSegmentIds = audienceSegmentIds;
         return this;
@@ -82,6 +90,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DfareportingAdsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -92,6 +101,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignIds")
     public String[] campaignIds;
+
     public DfareportingAdsListRequest withCampaignIds(String[] campaignIds) {
         this.campaignIds = campaignIds;
         return this;
@@ -102,6 +112,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=compatibility")
     public DfareportingAdsListCompatibilityEnum compatibility;
+
     public DfareportingAdsListRequest withCompatibility(DfareportingAdsListCompatibilityEnum compatibility) {
         this.compatibility = compatibility;
         return this;
@@ -112,6 +123,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=creativeIds")
     public String[] creativeIds;
+
     public DfareportingAdsListRequest withCreativeIds(String[] creativeIds) {
         this.creativeIds = creativeIds;
         return this;
@@ -122,6 +134,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=creativeOptimizationConfigurationIds")
     public String[] creativeOptimizationConfigurationIds;
+
     public DfareportingAdsListRequest withCreativeOptimizationConfigurationIds(String[] creativeOptimizationConfigurationIds) {
         this.creativeOptimizationConfigurationIds = creativeOptimizationConfigurationIds;
         return this;
@@ -132,6 +145,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dynamicClickTracker")
     public Boolean dynamicClickTracker;
+
     public DfareportingAdsListRequest withDynamicClickTracker(Boolean dynamicClickTracker) {
         this.dynamicClickTracker = dynamicClickTracker;
         return this;
@@ -142,6 +156,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DfareportingAdsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -152,6 +167,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String[] ids;
+
     public DfareportingAdsListRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -162,6 +178,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DfareportingAdsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -172,6 +189,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=landingPageIds")
     public String[] landingPageIds;
+
     public DfareportingAdsListRequest withLandingPageIds(String[] landingPageIds) {
         this.landingPageIds = landingPageIds;
         return this;
@@ -182,6 +200,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DfareportingAdsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -192,6 +211,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DfareportingAdsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -202,6 +222,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=overriddenEventTagId")
     public String overriddenEventTagId;
+
     public DfareportingAdsListRequest withOverriddenEventTagId(String overriddenEventTagId) {
         this.overriddenEventTagId = overriddenEventTagId;
         return this;
@@ -212,6 +233,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DfareportingAdsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -222,6 +244,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placementIds")
     public String[] placementIds;
+
     public DfareportingAdsListRequest withPlacementIds(String[] placementIds) {
         this.placementIds = placementIds;
         return this;
@@ -232,6 +255,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DfareportingAdsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -242,6 +266,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public DfareportingAdsListRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -252,6 +277,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DfareportingAdsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -262,6 +288,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=remarketingListIds")
     public String[] remarketingListIds;
+
     public DfareportingAdsListRequest withRemarketingListIds(String[] remarketingListIds) {
         this.remarketingListIds = remarketingListIds;
         return this;
@@ -272,6 +299,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchString")
     public String searchString;
+
     public DfareportingAdsListRequest withSearchString(String searchString) {
         this.searchString = searchString;
         return this;
@@ -282,6 +310,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sizeIds")
     public String[] sizeIds;
+
     public DfareportingAdsListRequest withSizeIds(String[] sizeIds) {
         this.sizeIds = sizeIds;
         return this;
@@ -292,6 +321,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
     public DfareportingAdsListSortFieldEnum sortField;
+
     public DfareportingAdsListRequest withSortField(DfareportingAdsListSortFieldEnum sortField) {
         this.sortField = sortField;
         return this;
@@ -302,6 +332,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public DfareportingAdsListSortOrderEnum sortOrder;
+
     public DfareportingAdsListRequest withSortOrder(DfareportingAdsListSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -312,6 +343,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sslCompliant")
     public Boolean sslCompliant;
+
     public DfareportingAdsListRequest withSslCompliant(Boolean sslCompliant) {
         this.sslCompliant = sslCompliant;
         return this;
@@ -322,6 +354,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sslRequired")
     public Boolean sslRequired;
+
     public DfareportingAdsListRequest withSslRequired(Boolean sslRequired) {
         this.sslRequired = sslRequired;
         return this;
@@ -332,6 +365,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public DfareportingAdsListTypeEnum[] type;
+
     public DfareportingAdsListRequest withType(DfareportingAdsListTypeEnum[] type) {
         this.type = type;
         return this;
@@ -342,6 +376,7 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DfareportingAdsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -352,9 +387,13 @@ public class DfareportingAdsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DfareportingAdsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DfareportingAdsListRequest(@JsonProperty("profileId") String profileId) {
+        this.profileId = profileId;
+  }
 }

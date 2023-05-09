@@ -15,6 +15,7 @@ public class PaginatedPaymentInstrumentsResponse {
      */
     @JsonProperty("hasNext")
     public Boolean hasNext;
+
     public PaginatedPaymentInstrumentsResponse withHasNext(Boolean hasNext) {
         this.hasNext = hasNext;
         return this;
@@ -25,6 +26,7 @@ public class PaginatedPaymentInstrumentsResponse {
      */
     @JsonProperty("hasPrevious")
     public Boolean hasPrevious;
+
     public PaginatedPaymentInstrumentsResponse withHasPrevious(Boolean hasPrevious) {
         this.hasPrevious = hasPrevious;
         return this;
@@ -35,9 +37,15 @@ public class PaginatedPaymentInstrumentsResponse {
      */
     @JsonProperty("paymentInstruments")
     public PaymentInstrument[] paymentInstruments;
+
     public PaginatedPaymentInstrumentsResponse withPaymentInstruments(PaymentInstrument[] paymentInstruments) {
         this.paymentInstruments = paymentInstruments;
         return this;
     }
     
+    public PaginatedPaymentInstrumentsResponse(@JsonProperty("hasNext") Boolean hasNext, @JsonProperty("hasPrevious") Boolean hasPrevious, @JsonProperty("paymentInstruments") PaymentInstrument[] paymentInstruments) {
+        this.hasNext = hasNext;
+        this.hasPrevious = hasPrevious;
+        this.paymentInstruments = paymentInstruments;
+  }
 }

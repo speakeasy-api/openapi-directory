@@ -14,6 +14,7 @@ public class DescribeImageScanFindingsRequest {
      */
     @JsonProperty("imageId")
     public ImageIdentifier imageId;
+
     public DescribeImageScanFindingsRequest withImageId(ImageIdentifier imageId) {
         this.imageId = imageId;
         return this;
@@ -22,6 +23,7 @@ public class DescribeImageScanFindingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeImageScanFindingsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +32,7 @@ public class DescribeImageScanFindingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeImageScanFindingsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -38,6 +41,7 @@ public class DescribeImageScanFindingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public DescribeImageScanFindingsRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -45,9 +49,14 @@ public class DescribeImageScanFindingsRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public DescribeImageScanFindingsRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public DescribeImageScanFindingsRequest(@JsonProperty("imageId") ImageIdentifier imageId, @JsonProperty("repositoryName") String repositoryName) {
+        this.imageId = imageId;
+        this.repositoryName = repositoryName;
+  }
 }

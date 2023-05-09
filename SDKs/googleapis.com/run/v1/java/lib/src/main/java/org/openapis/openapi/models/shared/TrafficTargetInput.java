@@ -18,6 +18,7 @@ public class TrafficTargetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationName")
     public String configurationName;
+
     public TrafficTargetInput withConfigurationName(String configurationName) {
         this.configurationName = configurationName;
         return this;
@@ -29,6 +30,7 @@ public class TrafficTargetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestRevision")
     public Boolean latestRevision;
+
     public TrafficTargetInput withLatestRevision(Boolean latestRevision) {
         this.latestRevision = latestRevision;
         return this;
@@ -40,6 +42,7 @@ public class TrafficTargetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percent")
     public Integer percent;
+
     public TrafficTargetInput withPercent(Integer percent) {
         this.percent = percent;
         return this;
@@ -51,6 +54,7 @@ public class TrafficTargetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionName")
     public String revisionName;
+
     public TrafficTargetInput withRevisionName(String revisionName) {
         this.revisionName = revisionName;
         return this;
@@ -62,9 +66,11 @@ public class TrafficTargetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public TrafficTargetInput withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public TrafficTargetInput(){}
 }

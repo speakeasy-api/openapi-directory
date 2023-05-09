@@ -18,6 +18,7 @@ public class Orientation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Orientation withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class Orientation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Orientation withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class Orientation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public Orientation withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public Orientation(){}
 }

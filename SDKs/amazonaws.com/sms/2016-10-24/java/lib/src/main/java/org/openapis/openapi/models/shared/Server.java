@@ -15,6 +15,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationJobId")
     public String replicationJobId;
+
     public Server withReplicationJobId(String replicationJobId) {
         this.replicationJobId = replicationJobId;
         return this;
@@ -23,6 +24,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationJobTerminated")
     public Boolean replicationJobTerminated;
+
     public Server withReplicationJobTerminated(Boolean replicationJobTerminated) {
         this.replicationJobTerminated = replicationJobTerminated;
         return this;
@@ -31,6 +33,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverId")
     public String serverId;
+
     public Server withServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -39,6 +42,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverType")
     public ServerTypeEnum serverType;
+
     public Server withServerType(ServerTypeEnum serverType) {
         this.serverType = serverType;
         return this;
@@ -47,9 +51,11 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmServer")
     public VmServer vmServer;
+
     public Server withVmServer(VmServer vmServer) {
         this.vmServer = vmServer;
         return this;
     }
     
+    public Server(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesFpgaInfo {
     
     public DescribeInstanceTypesResultInstanceTypesFpgaInfoFpgas[] fpgas;
+
     public DescribeInstanceTypesResultInstanceTypesFpgaInfo withFpgas(DescribeInstanceTypesResultInstanceTypesFpgaInfoFpgas[] fpgas) {
         this.fpgas = fpgas;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstanceTypesResultInstanceTypesFpgaInfo {
     
     
     public Long totalFpgaMemoryInMiB;
+
     public DescribeInstanceTypesResultInstanceTypesFpgaInfo withTotalFpgaMemoryInMiB(Long totalFpgaMemoryInMiB) {
         this.totalFpgaMemoryInMiB = totalFpgaMemoryInMiB;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesFpgaInfo(){}
 }

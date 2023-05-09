@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudidentityDevicesDeviceUsersLookupRequest {
@@ -12,6 +13,7 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=androidId")
     public String androidId;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withAndroidId(String androidId) {
         this.androidId = androidId;
         return this;
@@ -52,6 +57,7 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -102,6 +112,7 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -112,6 +123,7 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -122,6 +134,7 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rawResourceId")
     public String rawResourceId;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withRawResourceId(String rawResourceId) {
         this.rawResourceId = rawResourceId;
         return this;
@@ -152,6 +167,7 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,6 +178,7 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -172,9 +189,13 @@ public class CloudidentityDevicesDeviceUsersLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public String userId;
+
     public CloudidentityDevicesDeviceUsersLookupRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public CloudidentityDevicesDeviceUsersLookupRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

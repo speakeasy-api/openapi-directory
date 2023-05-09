@@ -18,6 +18,7 @@ public class ListDatacenterConnectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datacenterConnectors")
     public DatacenterConnector[] datacenterConnectors;
+
     public ListDatacenterConnectorsResponse withDatacenterConnectors(DatacenterConnector[] datacenterConnectors) {
         this.datacenterConnectors = datacenterConnectors;
         return this;
@@ -29,6 +30,7 @@ public class ListDatacenterConnectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListDatacenterConnectorsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListDatacenterConnectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListDatacenterConnectorsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListDatacenterConnectorsResponse(){}
 }

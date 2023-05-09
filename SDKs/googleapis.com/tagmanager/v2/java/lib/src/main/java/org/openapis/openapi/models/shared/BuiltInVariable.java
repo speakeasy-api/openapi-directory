@@ -18,6 +18,7 @@ public class BuiltInVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public BuiltInVariable withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class BuiltInVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public BuiltInVariable withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -40,6 +42,7 @@ public class BuiltInVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BuiltInVariable withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class BuiltInVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public BuiltInVariable withPath(String path) {
         this.path = path;
         return this;
@@ -62,6 +66,7 @@ public class BuiltInVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public BuiltInVariableTypeEnum type;
+
     public BuiltInVariable withType(BuiltInVariableTypeEnum type) {
         this.type = type;
         return this;
@@ -73,9 +78,11 @@ public class BuiltInVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public BuiltInVariable withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public BuiltInVariable(){}
 }

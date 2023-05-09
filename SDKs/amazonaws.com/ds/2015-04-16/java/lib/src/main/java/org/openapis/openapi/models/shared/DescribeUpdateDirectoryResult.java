@@ -15,6 +15,7 @@ public class DescribeUpdateDirectoryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeUpdateDirectoryResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeUpdateDirectoryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateActivities")
     public UpdateInfoEntry[] updateActivities;
+
     public DescribeUpdateDirectoryResult withUpdateActivities(UpdateInfoEntry[] updateActivities) {
         this.updateActivities = updateActivities;
         return this;
     }
     
+    public DescribeUpdateDirectoryResult(){}
 }

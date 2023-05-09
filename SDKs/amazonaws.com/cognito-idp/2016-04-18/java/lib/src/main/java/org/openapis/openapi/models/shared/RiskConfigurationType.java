@@ -20,6 +20,7 @@ public class RiskConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountTakeoverRiskConfiguration")
     public AccountTakeoverRiskConfigurationType accountTakeoverRiskConfiguration;
+
     public RiskConfigurationType withAccountTakeoverRiskConfiguration(AccountTakeoverRiskConfigurationType accountTakeoverRiskConfiguration) {
         this.accountTakeoverRiskConfiguration = accountTakeoverRiskConfiguration;
         return this;
@@ -28,6 +29,7 @@ public class RiskConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientId")
     public String clientId;
+
     public RiskConfigurationType withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -36,6 +38,7 @@ public class RiskConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompromisedCredentialsRiskConfiguration")
     public CompromisedCredentialsRiskConfigurationType compromisedCredentialsRiskConfiguration;
+
     public RiskConfigurationType withCompromisedCredentialsRiskConfiguration(CompromisedCredentialsRiskConfigurationType compromisedCredentialsRiskConfiguration) {
         this.compromisedCredentialsRiskConfiguration = compromisedCredentialsRiskConfiguration;
         return this;
@@ -46,6 +49,7 @@ public class RiskConfigurationType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public RiskConfigurationType withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -54,6 +58,7 @@ public class RiskConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RiskExceptionConfiguration")
     public RiskExceptionConfigurationType riskExceptionConfiguration;
+
     public RiskConfigurationType withRiskExceptionConfiguration(RiskExceptionConfigurationType riskExceptionConfiguration) {
         this.riskExceptionConfiguration = riskExceptionConfiguration;
         return this;
@@ -62,9 +67,11 @@ public class RiskConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public RiskConfigurationType withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public RiskConfigurationType(){}
 }

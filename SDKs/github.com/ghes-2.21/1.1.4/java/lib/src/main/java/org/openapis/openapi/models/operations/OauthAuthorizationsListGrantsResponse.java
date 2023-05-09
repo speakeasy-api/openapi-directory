@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OauthAuthorizationsListGrantsResponse {
     
     public String contentType;
+
     public OauthAuthorizationsListGrantsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OauthAuthorizationsListGrantsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public OauthAuthorizationsListGrantsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class OauthAuthorizationsListGrantsResponse {
     
     
     public Integer statusCode;
+
     public OauthAuthorizationsListGrantsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class OauthAuthorizationsListGrantsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OauthAuthorizationsListGrantsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class OauthAuthorizationsListGrantsResponse {
      */
     
     public org.openapis.openapi.models.shared.ApplicationGrant[] applicationGrants;
+
     public OauthAuthorizationsListGrantsResponse withApplicationGrants(org.openapis.openapi.models.shared.ApplicationGrant[] applicationGrants) {
         this.applicationGrants = applicationGrants;
         return this;
@@ -50,9 +56,14 @@ public class OauthAuthorizationsListGrantsResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public OauthAuthorizationsListGrantsResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
     }
     
+    public OauthAuthorizationsListGrantsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

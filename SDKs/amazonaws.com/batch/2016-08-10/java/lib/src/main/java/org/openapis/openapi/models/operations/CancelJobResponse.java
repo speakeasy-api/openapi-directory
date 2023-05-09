@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelJobResponse {
@@ -12,6 +13,7 @@ public class CancelJobResponse {
      */
     
     public java.util.Map<String, Object> cancelJobResponse;
+
     public CancelJobResponse withCancelJobResponse(java.util.Map<String, Object> cancelJobResponse) {
         this.cancelJobResponse = cancelJobResponse;
         return this;
@@ -22,6 +24,7 @@ public class CancelJobResponse {
      */
     
     public Object clientException;
+
     public CancelJobResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class CancelJobResponse {
     
     
     public String contentType;
+
     public CancelJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class CancelJobResponse {
     
     
     public Integer statusCode;
+
     public CancelJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CancelJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CancelJobResponse {
      */
     
     public Object serverException;
+
     public CancelJobResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public CancelJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAgentRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=:operation")
     public String operation;
+
     public PostAgentRequest withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -16,6 +18,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/cq:distribute")
     public Boolean jcrContentCqDistribute;
+
     public PostAgentRequest withJcrContentCqDistribute(Boolean jcrContentCqDistribute) {
         this.jcrContentCqDistribute = jcrContentCqDistribute;
         return this;
@@ -23,6 +26,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/cq:distribute@TypeHint")
     public String jcrContentCqDistributeAtTypeHint;
+
     public PostAgentRequest withJcrContentCqDistributeAtTypeHint(String jcrContentCqDistributeAtTypeHint) {
         this.jcrContentCqDistributeAtTypeHint = jcrContentCqDistributeAtTypeHint;
         return this;
@@ -30,6 +34,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/cq:name")
     public String jcrContentCqName;
+
     public PostAgentRequest withJcrContentCqName(String jcrContentCqName) {
         this.jcrContentCqName = jcrContentCqName;
         return this;
@@ -37,6 +42,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/cq:template")
     public String jcrContentCqTemplate;
+
     public PostAgentRequest withJcrContentCqTemplate(String jcrContentCqTemplate) {
         this.jcrContentCqTemplate = jcrContentCqTemplate;
         return this;
@@ -44,6 +50,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/enabled")
     public Boolean jcrContentEnabled;
+
     public PostAgentRequest withJcrContentEnabled(Boolean jcrContentEnabled) {
         this.jcrContentEnabled = jcrContentEnabled;
         return this;
@@ -51,6 +58,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/jcr:description")
     public String jcrContentJcrDescription;
+
     public PostAgentRequest withJcrContentJcrDescription(String jcrContentJcrDescription) {
         this.jcrContentJcrDescription = jcrContentJcrDescription;
         return this;
@@ -58,6 +66,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/jcr:lastModified")
     public String jcrContentJcrLastModified;
+
     public PostAgentRequest withJcrContentJcrLastModified(String jcrContentJcrLastModified) {
         this.jcrContentJcrLastModified = jcrContentJcrLastModified;
         return this;
@@ -65,6 +74,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/jcr:lastModifiedBy")
     public String jcrContentJcrLastModifiedBy;
+
     public PostAgentRequest withJcrContentJcrLastModifiedBy(String jcrContentJcrLastModifiedBy) {
         this.jcrContentJcrLastModifiedBy = jcrContentJcrLastModifiedBy;
         return this;
@@ -72,6 +82,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/jcr:mixinTypes")
     public String jcrContentJcrMixinTypes;
+
     public PostAgentRequest withJcrContentJcrMixinTypes(String jcrContentJcrMixinTypes) {
         this.jcrContentJcrMixinTypes = jcrContentJcrMixinTypes;
         return this;
@@ -79,6 +90,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/jcr:title")
     public String jcrContentJcrTitle;
+
     public PostAgentRequest withJcrContentJcrTitle(String jcrContentJcrTitle) {
         this.jcrContentJcrTitle = jcrContentJcrTitle;
         return this;
@@ -86,6 +98,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/logLevel")
     public String jcrContentLogLevel;
+
     public PostAgentRequest withJcrContentLogLevel(String jcrContentLogLevel) {
         this.jcrContentLogLevel = jcrContentLogLevel;
         return this;
@@ -93,6 +106,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/noStatusUpdate")
     public Boolean jcrContentNoStatusUpdate;
+
     public PostAgentRequest withJcrContentNoStatusUpdate(Boolean jcrContentNoStatusUpdate) {
         this.jcrContentNoStatusUpdate = jcrContentNoStatusUpdate;
         return this;
@@ -100,6 +114,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/noVersioning")
     public Boolean jcrContentNoVersioning;
+
     public PostAgentRequest withJcrContentNoVersioning(Boolean jcrContentNoVersioning) {
         this.jcrContentNoVersioning = jcrContentNoVersioning;
         return this;
@@ -107,6 +122,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/protocolConnectTimeout")
     public Double jcrContentProtocolConnectTimeout;
+
     public PostAgentRequest withJcrContentProtocolConnectTimeout(Double jcrContentProtocolConnectTimeout) {
         this.jcrContentProtocolConnectTimeout = jcrContentProtocolConnectTimeout;
         return this;
@@ -114,6 +130,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/protocolHTTPConnectionClosed")
     public Boolean jcrContentProtocolHTTPConnectionClosed;
+
     public PostAgentRequest withJcrContentProtocolHTTPConnectionClosed(Boolean jcrContentProtocolHTTPConnectionClosed) {
         this.jcrContentProtocolHTTPConnectionClosed = jcrContentProtocolHTTPConnectionClosed;
         return this;
@@ -121,6 +138,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/protocolHTTPExpired")
     public String jcrContentProtocolHTTPExpired;
+
     public PostAgentRequest withJcrContentProtocolHTTPExpired(String jcrContentProtocolHTTPExpired) {
         this.jcrContentProtocolHTTPExpired = jcrContentProtocolHTTPExpired;
         return this;
@@ -128,6 +146,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/protocolHTTPHeaders")
     public String[] jcrContentProtocolHTTPHeaders;
+
     public PostAgentRequest withJcrContentProtocolHTTPHeaders(String[] jcrContentProtocolHTTPHeaders) {
         this.jcrContentProtocolHTTPHeaders = jcrContentProtocolHTTPHeaders;
         return this;
@@ -135,6 +154,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/protocolHTTPHeaders@TypeHint")
     public String jcrContentProtocolHTTPHeadersAtTypeHint;
+
     public PostAgentRequest withJcrContentProtocolHTTPHeadersAtTypeHint(String jcrContentProtocolHTTPHeadersAtTypeHint) {
         this.jcrContentProtocolHTTPHeadersAtTypeHint = jcrContentProtocolHTTPHeadersAtTypeHint;
         return this;
@@ -142,6 +162,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/protocolHTTPMethod")
     public String jcrContentProtocolHTTPMethod;
+
     public PostAgentRequest withJcrContentProtocolHTTPMethod(String jcrContentProtocolHTTPMethod) {
         this.jcrContentProtocolHTTPMethod = jcrContentProtocolHTTPMethod;
         return this;
@@ -149,6 +170,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/protocolHTTPSRelaxed")
     public Boolean jcrContentProtocolHTTPSRelaxed;
+
     public PostAgentRequest withJcrContentProtocolHTTPSRelaxed(Boolean jcrContentProtocolHTTPSRelaxed) {
         this.jcrContentProtocolHTTPSRelaxed = jcrContentProtocolHTTPSRelaxed;
         return this;
@@ -156,6 +178,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/protocolInterface")
     public String jcrContentProtocolInterface;
+
     public PostAgentRequest withJcrContentProtocolInterface(String jcrContentProtocolInterface) {
         this.jcrContentProtocolInterface = jcrContentProtocolInterface;
         return this;
@@ -163,6 +186,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/protocolSocketTimeout")
     public Double jcrContentProtocolSocketTimeout;
+
     public PostAgentRequest withJcrContentProtocolSocketTimeout(Double jcrContentProtocolSocketTimeout) {
         this.jcrContentProtocolSocketTimeout = jcrContentProtocolSocketTimeout;
         return this;
@@ -170,6 +194,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/protocolVersion")
     public String jcrContentProtocolVersion;
+
     public PostAgentRequest withJcrContentProtocolVersion(String jcrContentProtocolVersion) {
         this.jcrContentProtocolVersion = jcrContentProtocolVersion;
         return this;
@@ -177,6 +202,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/proxyHost")
     public String jcrContentProxyHost;
+
     public PostAgentRequest withJcrContentProxyHost(String jcrContentProxyHost) {
         this.jcrContentProxyHost = jcrContentProxyHost;
         return this;
@@ -184,6 +210,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/proxyNTLMDomain")
     public String jcrContentProxyNTLMDomain;
+
     public PostAgentRequest withJcrContentProxyNTLMDomain(String jcrContentProxyNTLMDomain) {
         this.jcrContentProxyNTLMDomain = jcrContentProxyNTLMDomain;
         return this;
@@ -191,6 +218,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/proxyNTLMHost")
     public String jcrContentProxyNTLMHost;
+
     public PostAgentRequest withJcrContentProxyNTLMHost(String jcrContentProxyNTLMHost) {
         this.jcrContentProxyNTLMHost = jcrContentProxyNTLMHost;
         return this;
@@ -198,6 +226,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/proxyPassword")
     public String jcrContentProxyPassword;
+
     public PostAgentRequest withJcrContentProxyPassword(String jcrContentProxyPassword) {
         this.jcrContentProxyPassword = jcrContentProxyPassword;
         return this;
@@ -205,6 +234,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/proxyPort")
     public Double jcrContentProxyPort;
+
     public PostAgentRequest withJcrContentProxyPort(Double jcrContentProxyPort) {
         this.jcrContentProxyPort = jcrContentProxyPort;
         return this;
@@ -212,6 +242,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/proxyUser")
     public String jcrContentProxyUser;
+
     public PostAgentRequest withJcrContentProxyUser(String jcrContentProxyUser) {
         this.jcrContentProxyUser = jcrContentProxyUser;
         return this;
@@ -219,6 +250,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/queueBatchMaxSize")
     public Double jcrContentQueueBatchMaxSize;
+
     public PostAgentRequest withJcrContentQueueBatchMaxSize(Double jcrContentQueueBatchMaxSize) {
         this.jcrContentQueueBatchMaxSize = jcrContentQueueBatchMaxSize;
         return this;
@@ -226,6 +258,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/queueBatchMode")
     public String jcrContentQueueBatchMode;
+
     public PostAgentRequest withJcrContentQueueBatchMode(String jcrContentQueueBatchMode) {
         this.jcrContentQueueBatchMode = jcrContentQueueBatchMode;
         return this;
@@ -233,6 +266,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/queueBatchWaitTime")
     public Double jcrContentQueueBatchWaitTime;
+
     public PostAgentRequest withJcrContentQueueBatchWaitTime(Double jcrContentQueueBatchWaitTime) {
         this.jcrContentQueueBatchWaitTime = jcrContentQueueBatchWaitTime;
         return this;
@@ -240,6 +274,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/retryDelay")
     public String jcrContentRetryDelay;
+
     public PostAgentRequest withJcrContentRetryDelay(String jcrContentRetryDelay) {
         this.jcrContentRetryDelay = jcrContentRetryDelay;
         return this;
@@ -247,6 +282,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/reverseReplication")
     public Boolean jcrContentReverseReplication;
+
     public PostAgentRequest withJcrContentReverseReplication(Boolean jcrContentReverseReplication) {
         this.jcrContentReverseReplication = jcrContentReverseReplication;
         return this;
@@ -254,6 +290,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/serializationType")
     public String jcrContentSerializationType;
+
     public PostAgentRequest withJcrContentSerializationType(String jcrContentSerializationType) {
         this.jcrContentSerializationType = jcrContentSerializationType;
         return this;
@@ -261,6 +298,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/sling:resourceType")
     public String jcrContentSlingResourceType;
+
     public PostAgentRequest withJcrContentSlingResourceType(String jcrContentSlingResourceType) {
         this.jcrContentSlingResourceType = jcrContentSlingResourceType;
         return this;
@@ -268,6 +306,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/ssl")
     public String jcrContentSsl;
+
     public PostAgentRequest withJcrContentSsl(String jcrContentSsl) {
         this.jcrContentSsl = jcrContentSsl;
         return this;
@@ -275,6 +314,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/transportNTLMDomain")
     public String jcrContentTransportNTLMDomain;
+
     public PostAgentRequest withJcrContentTransportNTLMDomain(String jcrContentTransportNTLMDomain) {
         this.jcrContentTransportNTLMDomain = jcrContentTransportNTLMDomain;
         return this;
@@ -282,6 +322,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/transportNTLMHost")
     public String jcrContentTransportNTLMHost;
+
     public PostAgentRequest withJcrContentTransportNTLMHost(String jcrContentTransportNTLMHost) {
         this.jcrContentTransportNTLMHost = jcrContentTransportNTLMHost;
         return this;
@@ -289,6 +330,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/transportPassword")
     public String jcrContentTransportPassword;
+
     public PostAgentRequest withJcrContentTransportPassword(String jcrContentTransportPassword) {
         this.jcrContentTransportPassword = jcrContentTransportPassword;
         return this;
@@ -296,6 +338,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/transportUri")
     public String jcrContentTransportUri;
+
     public PostAgentRequest withJcrContentTransportUri(String jcrContentTransportUri) {
         this.jcrContentTransportUri = jcrContentTransportUri;
         return this;
@@ -303,6 +346,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/transportUser")
     public String jcrContentTransportUser;
+
     public PostAgentRequest withJcrContentTransportUser(String jcrContentTransportUser) {
         this.jcrContentTransportUser = jcrContentTransportUser;
         return this;
@@ -310,6 +354,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/triggerDistribute")
     public Boolean jcrContentTriggerDistribute;
+
     public PostAgentRequest withJcrContentTriggerDistribute(Boolean jcrContentTriggerDistribute) {
         this.jcrContentTriggerDistribute = jcrContentTriggerDistribute;
         return this;
@@ -317,6 +362,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/triggerModified")
     public Boolean jcrContentTriggerModified;
+
     public PostAgentRequest withJcrContentTriggerModified(Boolean jcrContentTriggerModified) {
         this.jcrContentTriggerModified = jcrContentTriggerModified;
         return this;
@@ -324,6 +370,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/triggerOnOffTime")
     public Boolean jcrContentTriggerOnOffTime;
+
     public PostAgentRequest withJcrContentTriggerOnOffTime(Boolean jcrContentTriggerOnOffTime) {
         this.jcrContentTriggerOnOffTime = jcrContentTriggerOnOffTime;
         return this;
@@ -331,6 +378,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/triggerReceive")
     public Boolean jcrContentTriggerReceive;
+
     public PostAgentRequest withJcrContentTriggerReceive(Boolean jcrContentTriggerReceive) {
         this.jcrContentTriggerReceive = jcrContentTriggerReceive;
         return this;
@@ -338,6 +386,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/triggerSpecific")
     public Boolean jcrContentTriggerSpecific;
+
     public PostAgentRequest withJcrContentTriggerSpecific(Boolean jcrContentTriggerSpecific) {
         this.jcrContentTriggerSpecific = jcrContentTriggerSpecific;
         return this;
@@ -345,6 +394,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:content/userId")
     public String jcrContentUserId;
+
     public PostAgentRequest withJcrContentUserId(String jcrContentUserId) {
         this.jcrContentUserId = jcrContentUserId;
         return this;
@@ -352,6 +402,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:primaryType")
     public String jcrPrimaryType;
+
     public PostAgentRequest withJcrPrimaryType(String jcrPrimaryType) {
         this.jcrPrimaryType = jcrPrimaryType;
         return this;
@@ -359,6 +410,7 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public PostAgentRequest withName(String name) {
         this.name = name;
         return this;
@@ -366,9 +418,14 @@ public class PostAgentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runmode")
     public String runmode;
+
     public PostAgentRequest withRunmode(String runmode) {
         this.runmode = runmode;
         return this;
     }
     
+    public PostAgentRequest(@JsonProperty("name") String name, @JsonProperty("runmode") String runmode) {
+        this.name = name;
+        this.runmode = runmode;
+  }
 }

@@ -20,6 +20,7 @@ public class UpdateKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateKeyRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +34,7 @@ public class UpdateKeyRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpireTime")
     public OffsetDateTime expireTime;
+
     public UpdateKeyRequestBody withExpireTime(OffsetDateTime expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -44,6 +46,7 @@ public class UpdateKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForceUpdate")
     public Boolean forceUpdate;
+
     public UpdateKeyRequestBody withForceUpdate(Boolean forceUpdate) {
         this.forceUpdate = forceUpdate;
         return this;
@@ -55,6 +58,7 @@ public class UpdateKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoExpiry")
     public Boolean noExpiry;
+
     public UpdateKeyRequestBody withNoExpiry(Boolean noExpiry) {
         this.noExpiry = noExpiry;
         return this;
@@ -66,9 +70,11 @@ public class UpdateKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Restrictions")
     public UpdateKeyRequestBodyRestrictions restrictions;
+
     public UpdateKeyRequestBody withRestrictions(UpdateKeyRequestBodyRestrictions restrictions) {
         this.restrictions = restrictions;
         return this;
     }
     
+    public UpdateKeyRequestBody(){}
 }

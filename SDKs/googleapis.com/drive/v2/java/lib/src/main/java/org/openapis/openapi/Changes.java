@@ -60,11 +60,9 @@ public class Changes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveChangesGetResponse res = new org.openapis.openapi.models.operations.DriveChangesGetResponse() {{
+        org.openapis.openapi.models.operations.DriveChangesGetResponse res = new org.openapis.openapi.models.operations.DriveChangesGetResponse(contentType, httpRes.statusCode()) {{
             change = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class Changes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveChangesGetStartPageTokenResponse res = new org.openapis.openapi.models.operations.DriveChangesGetStartPageTokenResponse() {{
+        org.openapis.openapi.models.operations.DriveChangesGetStartPageTokenResponse res = new org.openapis.openapi.models.operations.DriveChangesGetStartPageTokenResponse(contentType, httpRes.statusCode()) {{
             startPageToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,11 +148,9 @@ public class Changes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveChangesListResponse res = new org.openapis.openapi.models.operations.DriveChangesListResponse() {{
+        org.openapis.openapi.models.operations.DriveChangesListResponse res = new org.openapis.openapi.models.operations.DriveChangesListResponse(contentType, httpRes.statusCode()) {{
             changeList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Changes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveChangesWatchResponse res = new org.openapis.openapi.models.operations.DriveChangesWatchResponse() {{
+        org.openapis.openapi.models.operations.DriveChangesWatchResponse res = new org.openapis.openapi.models.operations.DriveChangesWatchResponse(contentType, httpRes.statusCode()) {{
             channel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

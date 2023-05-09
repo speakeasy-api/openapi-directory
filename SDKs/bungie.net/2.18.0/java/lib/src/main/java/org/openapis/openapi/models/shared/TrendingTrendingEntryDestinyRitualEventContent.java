@@ -15,6 +15,7 @@ public class TrendingTrendingEntryDestinyRitualEventContent {
      */
     
     public String about;
+
     public TrendingTrendingEntryDestinyRitualEventContent withAbout(String about) {
         this.about = about;
         return this;
@@ -25,6 +26,7 @@ public class TrendingTrendingEntryDestinyRitualEventContent {
      */
     
     public DestinyMilestonesDestinyMilestoneContentItemCategory[] itemCategories;
+
     public TrendingTrendingEntryDestinyRitualEventContent withItemCategories(DestinyMilestonesDestinyMilestoneContentItemCategory[] itemCategories) {
         this.itemCategories = itemCategories;
         return this;
@@ -35,6 +37,7 @@ public class TrendingTrendingEntryDestinyRitualEventContent {
      */
     
     public String status;
+
     public TrendingTrendingEntryDestinyRitualEventContent withStatus(String status) {
         this.status = status;
         return this;
@@ -45,9 +48,11 @@ public class TrendingTrendingEntryDestinyRitualEventContent {
      */
     
     public String[] tips;
+
     public TrendingTrendingEntryDestinyRitualEventContent withTips(String[] tips) {
         this.tips = tips;
         return this;
     }
     
+    public TrendingTrendingEntryDestinyRitualEventContent(){}
 }

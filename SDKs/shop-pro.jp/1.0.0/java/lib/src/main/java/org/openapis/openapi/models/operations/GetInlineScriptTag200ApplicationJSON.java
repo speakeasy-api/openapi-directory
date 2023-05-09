@@ -12,9 +12,11 @@ public class GetInlineScriptTag200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inline_script_tag")
     public GetInlineScriptTag200ApplicationJSONInlineScriptTag inlineScriptTag;
+
     public GetInlineScriptTag200ApplicationJSON withInlineScriptTag(GetInlineScriptTag200ApplicationJSONInlineScriptTag inlineScriptTag) {
         this.inlineScriptTag = inlineScriptTag;
         return this;
     }
     
+    public GetInlineScriptTag200ApplicationJSON(){}
 }

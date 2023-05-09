@@ -15,9 +15,13 @@ public class PostPortfolioOptimizationMarketCapitalizationWeighted200Application
      */
     @JsonProperty("assetsWeights")
     public Double[] assetsWeights;
+
     public PostPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJSON withAssetsWeights(Double[] assetsWeights) {
         this.assetsWeights = assetsWeights;
         return this;
     }
     
+    public PostPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJSON(@JsonProperty("assetsWeights") Double[] assetsWeights) {
+        this.assetsWeights = assetsWeights;
+  }
 }

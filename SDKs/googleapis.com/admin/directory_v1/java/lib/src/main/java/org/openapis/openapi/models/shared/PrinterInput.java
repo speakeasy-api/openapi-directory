@@ -18,6 +18,7 @@ public class PrinterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PrinterInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class PrinterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public PrinterInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class PrinterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PrinterInput withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class PrinterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("makeAndModel")
     public String makeAndModel;
+
     public PrinterInput withMakeAndModel(String makeAndModel) {
         this.makeAndModel = makeAndModel;
         return this;
@@ -62,6 +66,7 @@ public class PrinterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PrinterInput withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class PrinterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitId")
     public String orgUnitId;
+
     public PrinterInput withOrgUnitId(String orgUnitId) {
         this.orgUnitId = orgUnitId;
         return this;
@@ -84,6 +90,7 @@ public class PrinterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public PrinterInput withUri(String uri) {
         this.uri = uri;
         return this;
@@ -95,9 +102,11 @@ public class PrinterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useDriverlessConfig")
     public Boolean useDriverlessConfig;
+
     public PrinterInput withUseDriverlessConfig(Boolean useDriverlessConfig) {
         this.useDriverlessConfig = useDriverlessConfig;
         return this;
     }
     
+    public PrinterInput(){}
 }

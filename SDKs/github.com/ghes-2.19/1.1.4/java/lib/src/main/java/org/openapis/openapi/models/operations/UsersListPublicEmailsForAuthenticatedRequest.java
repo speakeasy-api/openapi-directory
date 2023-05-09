@@ -12,6 +12,7 @@ public class UsersListPublicEmailsForAuthenticatedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public UsersListPublicEmailsForAuthenticatedRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,9 +23,11 @@ public class UsersListPublicEmailsForAuthenticatedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public UsersListPublicEmailsForAuthenticatedRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public UsersListPublicEmailsForAuthenticatedRequest(){}
 }

@@ -15,6 +15,7 @@ public class RecommendationJobOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompiledOutputConfig")
     public RecommendationJobCompiledOutputConfig compiledOutputConfig;
+
     public RecommendationJobOutputConfig withCompiledOutputConfig(RecommendationJobCompiledOutputConfig compiledOutputConfig) {
         this.compiledOutputConfig = compiledOutputConfig;
         return this;
@@ -23,9 +24,11 @@ public class RecommendationJobOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public RecommendationJobOutputConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public RecommendationJobOutputConfig(){}
 }

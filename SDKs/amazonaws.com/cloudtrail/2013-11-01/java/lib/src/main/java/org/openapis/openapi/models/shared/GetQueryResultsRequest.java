@@ -12,6 +12,7 @@ public class GetQueryResultsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventDataStore")
     public String eventDataStore;
+
     public GetQueryResultsRequest withEventDataStore(String eventDataStore) {
         this.eventDataStore = eventDataStore;
         return this;
@@ -20,6 +21,7 @@ public class GetQueryResultsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxQueryResults")
     public Long maxQueryResults;
+
     public GetQueryResultsRequest withMaxQueryResults(Long maxQueryResults) {
         this.maxQueryResults = maxQueryResults;
         return this;
@@ -28,6 +30,7 @@ public class GetQueryResultsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetQueryResultsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class GetQueryResultsRequest {
     
     @JsonProperty("QueryId")
     public String queryId;
+
     public GetQueryResultsRequest withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
     }
     
+    public GetQueryResultsRequest(@JsonProperty("QueryId") String queryId) {
+        this.queryId = queryId;
+  }
 }

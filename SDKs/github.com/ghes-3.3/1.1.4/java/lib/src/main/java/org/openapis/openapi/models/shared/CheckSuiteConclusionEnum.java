@@ -16,7 +16,7 @@ public enum CheckSuiteConclusionEnum {
     ACTION_REQUIRED("action_required"),
     STARTUP_FAILURE("startup_failure"),
     STALE("stale"),
-    NULL_("null");
+    LESS_THAN_NIL_GREATER_THAN("<nil>");
 
     @JsonValue
     public final String value;

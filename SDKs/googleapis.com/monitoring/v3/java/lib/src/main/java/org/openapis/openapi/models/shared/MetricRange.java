@@ -18,6 +18,7 @@ public class MetricRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GoogleMonitoringV3Range range;
+
     public MetricRange withRange(GoogleMonitoringV3Range range) {
         this.range = range;
         return this;
@@ -29,9 +30,11 @@ public class MetricRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeries")
     public String timeSeries;
+
     public MetricRange withTimeSeries(String timeSeries) {
         this.timeSeries = timeSeries;
         return this;
     }
     
+    public MetricRange(){}
 }

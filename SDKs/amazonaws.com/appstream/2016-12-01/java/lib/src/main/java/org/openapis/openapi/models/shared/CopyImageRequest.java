@@ -12,6 +12,7 @@ public class CopyImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationImageDescription")
     public String destinationImageDescription;
+
     public CopyImageRequest withDestinationImageDescription(String destinationImageDescription) {
         this.destinationImageDescription = destinationImageDescription;
         return this;
@@ -19,6 +20,7 @@ public class CopyImageRequest {
     
     @JsonProperty("DestinationImageName")
     public String destinationImageName;
+
     public CopyImageRequest withDestinationImageName(String destinationImageName) {
         this.destinationImageName = destinationImageName;
         return this;
@@ -26,6 +28,7 @@ public class CopyImageRequest {
     
     @JsonProperty("DestinationRegion")
     public String destinationRegion;
+
     public CopyImageRequest withDestinationRegion(String destinationRegion) {
         this.destinationRegion = destinationRegion;
         return this;
@@ -33,9 +36,15 @@ public class CopyImageRequest {
     
     @JsonProperty("SourceImageName")
     public String sourceImageName;
+
     public CopyImageRequest withSourceImageName(String sourceImageName) {
         this.sourceImageName = sourceImageName;
         return this;
     }
     
+    public CopyImageRequest(@JsonProperty("DestinationImageName") String destinationImageName, @JsonProperty("DestinationRegion") String destinationRegion, @JsonProperty("SourceImageName") String sourceImageName) {
+        this.destinationImageName = destinationImageName;
+        this.destinationRegion = destinationRegion;
+        this.sourceImageName = sourceImageName;
+  }
 }

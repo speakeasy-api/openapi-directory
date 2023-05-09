@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetImagesResponse {
@@ -12,6 +13,7 @@ public class GetImagesResponse {
      */
     
     public Object clientLimitExceededException;
+
     public GetImagesResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class GetImagesResponse {
     
     
     public String contentType;
+
     public GetImagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetImagesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetImagesOutput getImagesOutput;
+
     public GetImagesResponse withGetImagesOutput(org.openapis.openapi.models.shared.GetImagesOutput getImagesOutput) {
         this.getImagesOutput = getImagesOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetImagesResponse {
      */
     
     public Object invalidArgumentException;
+
     public GetImagesResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class GetImagesResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetImagesResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class GetImagesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetImagesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetImagesResponse {
     
     
     public Integer statusCode;
+
     public GetImagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetImagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetImagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetImagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

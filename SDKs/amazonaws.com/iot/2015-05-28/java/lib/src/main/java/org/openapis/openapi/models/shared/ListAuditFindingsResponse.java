@@ -15,6 +15,7 @@ public class ListAuditFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findings")
     public AuditFinding[] findings;
+
     public ListAuditFindingsResponse withFindings(AuditFinding[] findings) {
         this.findings = findings;
         return this;
@@ -23,9 +24,11 @@ public class ListAuditFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAuditFindingsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAuditFindingsResponse(){}
 }

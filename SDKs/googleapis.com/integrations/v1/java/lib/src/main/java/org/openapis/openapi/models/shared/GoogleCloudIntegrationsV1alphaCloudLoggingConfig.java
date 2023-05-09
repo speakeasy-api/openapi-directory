@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaCloudLoggingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public GoogleCloudIntegrationsV1alphaCloudLoggingConfig withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaCloudLoggingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableCloudLogging")
     public Boolean enableCloudLogging;
+
     public GoogleCloudIntegrationsV1alphaCloudLoggingConfig withEnableCloudLogging(Boolean enableCloudLogging) {
         this.enableCloudLogging = enableCloudLogging;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaCloudLoggingConfig(){}
 }

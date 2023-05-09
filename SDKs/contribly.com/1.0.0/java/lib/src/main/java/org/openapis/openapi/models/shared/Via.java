@@ -12,6 +12,7 @@ public class Via {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authority")
     public Authority authority;
+
     public Via withAuthority(Authority authority) {
         this.authority = authority;
         return this;
@@ -20,6 +21,7 @@ public class Via {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public Via withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -28,9 +30,11 @@ public class Via {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddressPlace")
     public Place ipAddressPlace;
+
     public Via withIpAddressPlace(Place ipAddressPlace) {
         this.ipAddressPlace = ipAddressPlace;
         return this;
     }
     
+    public Via(){}
 }

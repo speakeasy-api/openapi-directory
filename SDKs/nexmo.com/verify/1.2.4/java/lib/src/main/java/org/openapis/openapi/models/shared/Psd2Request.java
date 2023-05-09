@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Psd2Request {
@@ -12,6 +13,7 @@ public class Psd2Request {
      */
     @SpeakeasyMetadata("form:name=amount")
     public Float amount;
+
     public Psd2Request withAmount(Float amount) {
         this.amount = amount;
         return this;
@@ -22,6 +24,7 @@ public class Psd2Request {
      */
     @SpeakeasyMetadata("form:name=api_key")
     public String apiKey;
+
     public Psd2Request withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -32,6 +35,7 @@ public class Psd2Request {
      */
     @SpeakeasyMetadata("form:name=api_secret")
     public String apiSecret;
+
     public Psd2Request withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -42,6 +46,7 @@ public class Psd2Request {
      */
     @SpeakeasyMetadata("form:name=code_length")
     public Psd2RequestCodeLengthEnum codeLength;
+
     public Psd2Request withCodeLength(Psd2RequestCodeLengthEnum codeLength) {
         this.codeLength = codeLength;
         return this;
@@ -52,6 +57,7 @@ public class Psd2Request {
      */
     @SpeakeasyMetadata("form:name=country")
     public String country;
+
     public Psd2Request withCountry(String country) {
         this.country = country;
         return this;
@@ -63,6 +69,7 @@ public class Psd2Request {
      */
     @SpeakeasyMetadata("form:name=lg")
     public Psd2RequestLgEnum lg;
+
     public Psd2Request withLg(Psd2RequestLgEnum lg) {
         this.lg = lg;
         return this;
@@ -73,6 +80,7 @@ public class Psd2Request {
      */
     @SpeakeasyMetadata("form:name=next_event_wait")
     public Long nextEventWait;
+
     public Psd2Request withNextEventWait(Long nextEventWait) {
         this.nextEventWait = nextEventWait;
         return this;
@@ -83,6 +91,7 @@ public class Psd2Request {
      */
     @SpeakeasyMetadata("form:name=number")
     public String number;
+
     public Psd2Request withNumber(String number) {
         this.number = number;
         return this;
@@ -93,6 +102,7 @@ public class Psd2Request {
      */
     @SpeakeasyMetadata("form:name=payee")
     public String payee;
+
     public Psd2Request withPayee(String payee) {
         this.payee = payee;
         return this;
@@ -103,6 +113,7 @@ public class Psd2Request {
      */
     @SpeakeasyMetadata("form:name=pin_expiry")
     public Long pinExpiry;
+
     public Psd2Request withPinExpiry(Long pinExpiry) {
         this.pinExpiry = pinExpiry;
         return this;
@@ -113,9 +124,17 @@ public class Psd2Request {
      */
     @SpeakeasyMetadata("form:name=workflow_id")
     public Psd2RequestWorkflowIdEnum workflowId;
+
     public Psd2Request withWorkflowId(Psd2RequestWorkflowIdEnum workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public Psd2Request(@JsonProperty("amount") Float amount, @JsonProperty("api_key") String apiKey, @JsonProperty("api_secret") String apiSecret, @JsonProperty("number") String number, @JsonProperty("payee") String payee) {
+        this.amount = amount;
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+        this.number = number;
+        this.payee = payee;
+  }
 }

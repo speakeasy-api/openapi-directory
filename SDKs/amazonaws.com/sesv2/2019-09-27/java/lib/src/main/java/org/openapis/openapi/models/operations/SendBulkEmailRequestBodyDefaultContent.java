@@ -15,9 +15,11 @@ public class SendBulkEmailRequestBodyDefaultContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Template")
     public org.openapis.openapi.models.shared.Template template;
+
     public SendBulkEmailRequestBodyDefaultContent withTemplate(org.openapis.openapi.models.shared.Template template) {
         this.template = template;
         return this;
     }
     
+    public SendBulkEmailRequestBodyDefaultContent(){}
 }

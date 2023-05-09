@@ -15,6 +15,7 @@ public class ScheduledWindowExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionTime")
     public String executionTime;
+
     public ScheduledWindowExecution withExecutionTime(String executionTime) {
         this.executionTime = executionTime;
         return this;
@@ -23,6 +24,7 @@ public class ScheduledWindowExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ScheduledWindowExecution withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class ScheduledWindowExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowId")
     public String windowId;
+
     public ScheduledWindowExecution withWindowId(String windowId) {
         this.windowId = windowId;
         return this;
     }
     
+    public ScheduledWindowExecution(){}
 }

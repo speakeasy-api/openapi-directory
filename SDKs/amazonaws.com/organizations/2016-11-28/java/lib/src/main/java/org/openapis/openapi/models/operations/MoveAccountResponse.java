@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MoveAccountResponse {
@@ -12,6 +13,7 @@ public class MoveAccountResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public MoveAccountResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class MoveAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public MoveAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class MoveAccountResponse {
      */
     
     public Object accountNotFoundException;
+
     public MoveAccountResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -42,6 +46,7 @@ public class MoveAccountResponse {
      */
     
     public Object concurrentModificationException;
+
     public MoveAccountResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -49,6 +54,7 @@ public class MoveAccountResponse {
     
     
     public String contentType;
+
     public MoveAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class MoveAccountResponse {
      */
     
     public Object destinationParentNotFoundException;
+
     public MoveAccountResponse withDestinationParentNotFoundException(Object destinationParentNotFoundException) {
         this.destinationParentNotFoundException = destinationParentNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class MoveAccountResponse {
      */
     
     public Object duplicateAccountException;
+
     public MoveAccountResponse withDuplicateAccountException(Object duplicateAccountException) {
         this.duplicateAccountException = duplicateAccountException;
         return this;
@@ -79,6 +87,7 @@ public class MoveAccountResponse {
      */
     
     public Object invalidInputException;
+
     public MoveAccountResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -86,6 +95,7 @@ public class MoveAccountResponse {
     
     
     public Integer statusCode;
+
     public MoveAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class MoveAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MoveAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class MoveAccountResponse {
      */
     
     public Object serviceException;
+
     public MoveAccountResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -113,6 +125,7 @@ public class MoveAccountResponse {
      */
     
     public Object sourceParentNotFoundException;
+
     public MoveAccountResponse withSourceParentNotFoundException(Object sourceParentNotFoundException) {
         this.sourceParentNotFoundException = sourceParentNotFoundException;
         return this;
@@ -123,9 +136,14 @@ public class MoveAccountResponse {
      */
     
     public Object tooManyRequestsException;
+
     public MoveAccountResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public MoveAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

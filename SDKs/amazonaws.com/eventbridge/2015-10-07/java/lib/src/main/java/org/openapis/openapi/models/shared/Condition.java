@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Condition {
     @JsonProperty("Key")
     public String key;
+
     public Condition withKey(String key) {
         this.key = key;
         return this;
@@ -19,6 +20,7 @@ public class Condition {
     
     @JsonProperty("Type")
     public String type;
+
     public Condition withType(String type) {
         this.type = type;
         return this;
@@ -26,9 +28,15 @@ public class Condition {
     
     @JsonProperty("Value")
     public String value;
+
     public Condition withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Condition(@JsonProperty("Key") String key, @JsonProperty("Type") String type, @JsonProperty("Value") String value) {
+        this.key = key;
+        this.type = type;
+        this.value = value;
+  }
 }

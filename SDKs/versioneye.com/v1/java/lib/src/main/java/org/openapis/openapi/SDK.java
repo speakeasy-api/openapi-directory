@@ -7,9 +7,6 @@ package org.openapis.openapi;
 import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 
-/**
- * VersionEye is a cross-platform search engine for free/libre/open source software libraries.
- */
 public class SDK {
 	/**
 	 * SERVERS contains the list of server urls available to the SDK.
@@ -108,6 +105,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.scans = new Scans(

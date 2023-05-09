@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartLendingAnalysisResponse {
@@ -12,6 +13,7 @@ public class StartLendingAnalysisResponse {
      */
     
     public Object accessDeniedException;
+
     public StartLendingAnalysisResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartLendingAnalysisResponse {
      */
     
     public Object badDocumentException;
+
     public StartLendingAnalysisResponse withBadDocumentException(Object badDocumentException) {
         this.badDocumentException = badDocumentException;
         return this;
@@ -29,6 +32,7 @@ public class StartLendingAnalysisResponse {
     
     
     public String contentType;
+
     public StartLendingAnalysisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartLendingAnalysisResponse {
      */
     
     public Object documentTooLargeException;
+
     public StartLendingAnalysisResponse withDocumentTooLargeException(Object documentTooLargeException) {
         this.documentTooLargeException = documentTooLargeException;
         return this;
@@ -49,6 +54,7 @@ public class StartLendingAnalysisResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public StartLendingAnalysisResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -59,6 +65,7 @@ public class StartLendingAnalysisResponse {
      */
     
     public Object internalServerError;
+
     public StartLendingAnalysisResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class StartLendingAnalysisResponse {
      */
     
     public Object invalidKMSKeyException;
+
     public StartLendingAnalysisResponse withInvalidKMSKeyException(Object invalidKMSKeyException) {
         this.invalidKMSKeyException = invalidKMSKeyException;
         return this;
@@ -79,6 +87,7 @@ public class StartLendingAnalysisResponse {
      */
     
     public Object invalidParameterException;
+
     public StartLendingAnalysisResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -89,6 +98,7 @@ public class StartLendingAnalysisResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public StartLendingAnalysisResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -99,6 +109,7 @@ public class StartLendingAnalysisResponse {
      */
     
     public Object limitExceededException;
+
     public StartLendingAnalysisResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -109,6 +120,7 @@ public class StartLendingAnalysisResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public StartLendingAnalysisResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -119,6 +131,7 @@ public class StartLendingAnalysisResponse {
      */
     
     public org.openapis.openapi.models.shared.StartLendingAnalysisResponse startLendingAnalysisResponse;
+
     public StartLendingAnalysisResponse withStartLendingAnalysisResponse(org.openapis.openapi.models.shared.StartLendingAnalysisResponse startLendingAnalysisResponse) {
         this.startLendingAnalysisResponse = startLendingAnalysisResponse;
         return this;
@@ -126,6 +139,7 @@ public class StartLendingAnalysisResponse {
     
     
     public Integer statusCode;
+
     public StartLendingAnalysisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class StartLendingAnalysisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartLendingAnalysisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,6 +158,7 @@ public class StartLendingAnalysisResponse {
      */
     
     public Object throttlingException;
+
     public StartLendingAnalysisResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -153,9 +169,14 @@ public class StartLendingAnalysisResponse {
      */
     
     public Object unsupportedDocumentException;
+
     public StartLendingAnalysisResponse withUnsupportedDocumentException(Object unsupportedDocumentException) {
         this.unsupportedDocumentException = unsupportedDocumentException;
         return this;
     }
     
+    public StartLendingAnalysisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

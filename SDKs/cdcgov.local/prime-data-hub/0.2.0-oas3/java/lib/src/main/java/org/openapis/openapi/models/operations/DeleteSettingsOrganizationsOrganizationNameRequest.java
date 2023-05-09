@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSettingsOrganizationsOrganizationNameRequest {
@@ -12,9 +13,13 @@ public class DeleteSettingsOrganizationsOrganizationNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationName")
     public String organizationName;
+
     public DeleteSettingsOrganizationsOrganizationNameRequest withOrganizationName(String organizationName) {
         this.organizationName = organizationName;
         return this;
     }
     
+    public DeleteSettingsOrganizationsOrganizationNameRequest(@JsonProperty("organizationName") String organizationName) {
+        this.organizationName = organizationName;
+  }
 }

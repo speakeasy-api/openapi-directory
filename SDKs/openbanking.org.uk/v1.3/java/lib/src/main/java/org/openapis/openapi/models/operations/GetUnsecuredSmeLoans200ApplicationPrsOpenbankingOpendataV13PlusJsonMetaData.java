@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData {
     @JsonProperty("Agreement")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum agreement;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData withAgreement(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum agreement) {
         this.agreement = agreement;
         return this;
@@ -23,6 +24,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -33,6 +35,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("License")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum license;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData withLicense(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum license) {
         this.license = license;
         return this;
@@ -43,6 +46,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("TermsOfUse")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum termsOfUse;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData withTermsOfUse(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum termsOfUse) {
         this.termsOfUse = termsOfUse;
         return this;
@@ -50,9 +54,17 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     
     @JsonProperty("TotalResults")
     public Long totalResults;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData withTotalResults(Long totalResults) {
         this.totalResults = totalResults;
         return this;
     }
     
+    public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData(@JsonProperty("Agreement") GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum agreement, @JsonProperty("LastUpdated") OffsetDateTime lastUpdated, @JsonProperty("License") GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum license, @JsonProperty("TermsOfUse") GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum termsOfUse, @JsonProperty("TotalResults") Long totalResults) {
+        this.agreement = agreement;
+        this.lastUpdated = lastUpdated;
+        this.license = license;
+        this.termsOfUse = termsOfUse;
+        this.totalResults = totalResults;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
@@ -12,6 +13,7 @@ public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ToolresultsProjectsHistoriesExecutionsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Execution execution;
+
     public ToolresultsProjectsHistoriesExecutionsPatchRequest withExecution(org.openapis.openapi.models.shared.Execution execution) {
         this.execution = execution;
         return this;
@@ -29,6 +32,7 @@ public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ToolresultsProjectsHistoriesExecutionsPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ToolresultsProjectsHistoriesExecutionsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ToolresultsProjectsHistoriesExecutionsPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
     public String executionId;
+
     public ToolresultsProjectsHistoriesExecutionsPatchRequest withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -69,6 +76,7 @@ public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ToolresultsProjectsHistoriesExecutionsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=historyId")
     public String historyId;
+
     public ToolresultsProjectsHistoriesExecutionsPatchRequest withHistoryId(String historyId) {
         this.historyId = historyId;
         return this;
@@ -89,6 +98,7 @@ public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ToolresultsProjectsHistoriesExecutionsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ToolresultsProjectsHistoriesExecutionsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ToolresultsProjectsHistoriesExecutionsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public ToolresultsProjectsHistoriesExecutionsPatchRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -129,6 +142,7 @@ public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ToolresultsProjectsHistoriesExecutionsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ToolresultsProjectsHistoriesExecutionsPatchRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -149,6 +164,7 @@ public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ToolresultsProjectsHistoriesExecutionsPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,9 +175,15 @@ public class ToolresultsProjectsHistoriesExecutionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ToolresultsProjectsHistoriesExecutionsPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ToolresultsProjectsHistoriesExecutionsPatchRequest(@JsonProperty("executionId") String executionId, @JsonProperty("historyId") String historyId, @JsonProperty("projectId") String projectId) {
+        this.executionId = executionId;
+        this.historyId = historyId;
+        this.projectId = projectId;
+  }
 }

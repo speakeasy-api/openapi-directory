@@ -18,6 +18,7 @@ public class UpdateDeveloperMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataFilters")
     public DataFilter[] dataFilters;
+
     public UpdateDeveloperMetadataRequest withDataFilters(DataFilter[] dataFilters) {
         this.dataFilters = dataFilters;
         return this;
@@ -29,6 +30,7 @@ public class UpdateDeveloperMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerMetadata")
     public DeveloperMetadata developerMetadata;
+
     public UpdateDeveloperMetadataRequest withDeveloperMetadata(DeveloperMetadata developerMetadata) {
         this.developerMetadata = developerMetadata;
         return this;
@@ -40,9 +42,11 @@ public class UpdateDeveloperMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateDeveloperMetadataRequest withFields(String fields) {
         this.fields = fields;
         return this;
     }
     
+    public UpdateDeveloperMetadataRequest(){}
 }

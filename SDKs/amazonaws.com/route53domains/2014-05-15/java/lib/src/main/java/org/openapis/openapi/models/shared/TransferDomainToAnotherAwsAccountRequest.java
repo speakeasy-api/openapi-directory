@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransferDomainToAnotherAwsAccountRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public TransferDomainToAnotherAwsAccountRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,9 +20,14 @@ public class TransferDomainToAnotherAwsAccountRequest {
     
     @JsonProperty("DomainName")
     public String domainName;
+
     public TransferDomainToAnotherAwsAccountRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public TransferDomainToAnotherAwsAccountRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("DomainName") String domainName) {
+        this.accountId = accountId;
+        this.domainName = domainName;
+  }
 }

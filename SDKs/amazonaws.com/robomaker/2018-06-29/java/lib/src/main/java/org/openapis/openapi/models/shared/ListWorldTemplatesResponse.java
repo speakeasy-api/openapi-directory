@@ -15,6 +15,7 @@ public class ListWorldTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListWorldTemplatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListWorldTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateSummaries")
     public TemplateSummary[] templateSummaries;
+
     public ListWorldTemplatesResponse withTemplateSummaries(TemplateSummary[] templateSummaries) {
         this.templateSummaries = templateSummaries;
         return this;
     }
     
+    public ListWorldTemplatesResponse(){}
 }

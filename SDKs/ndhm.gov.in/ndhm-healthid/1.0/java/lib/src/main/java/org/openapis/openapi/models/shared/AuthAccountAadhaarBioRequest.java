@@ -15,6 +15,7 @@ public class AuthAccountAadhaarBioRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authType")
     public AuthAccountAadhaarBioRequestAuthTypeEnum authType;
+
     public AuthAccountAadhaarBioRequest withAuthType(AuthAccountAadhaarBioRequestAuthTypeEnum authType) {
         this.authType = authType;
         return this;
@@ -23,6 +24,7 @@ public class AuthAccountAadhaarBioRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bioType")
     public String bioType;
+
     public AuthAccountAadhaarBioRequest withBioType(String bioType) {
         this.bioType = bioType;
         return this;
@@ -31,6 +33,7 @@ public class AuthAccountAadhaarBioRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pid")
     public String pid;
+
     public AuthAccountAadhaarBioRequest withPid(String pid) {
         this.pid = pid;
         return this;
@@ -39,9 +42,11 @@ public class AuthAccountAadhaarBioRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txnId")
     public String txnId;
+
     public AuthAccountAadhaarBioRequest withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public AuthAccountAadhaarBioRequest(){}
 }

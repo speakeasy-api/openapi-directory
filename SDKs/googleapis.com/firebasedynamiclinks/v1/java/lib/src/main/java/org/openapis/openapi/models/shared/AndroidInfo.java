@@ -18,6 +18,7 @@ public class AndroidInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidFallbackLink")
     public String androidFallbackLink;
+
     public AndroidInfo withAndroidFallbackLink(String androidFallbackLink) {
         this.androidFallbackLink = androidFallbackLink;
         return this;
@@ -29,6 +30,7 @@ public class AndroidInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidLink")
     public String androidLink;
+
     public AndroidInfo withAndroidLink(String androidLink) {
         this.androidLink = androidLink;
         return this;
@@ -40,6 +42,7 @@ public class AndroidInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidMinPackageVersionCode")
     public String androidMinPackageVersionCode;
+
     public AndroidInfo withAndroidMinPackageVersionCode(String androidMinPackageVersionCode) {
         this.androidMinPackageVersionCode = androidMinPackageVersionCode;
         return this;
@@ -51,9 +54,11 @@ public class AndroidInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidPackageName")
     public String androidPackageName;
+
     public AndroidInfo withAndroidPackageName(String androidPackageName) {
         this.androidPackageName = androidPackageName;
         return this;
     }
     
+    public AndroidInfo(){}
 }

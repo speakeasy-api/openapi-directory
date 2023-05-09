@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReplaceTransitGatewayRouteResultRoute {
     
     public String destinationCidrBlock;
+
     public ReplaceTransitGatewayRouteResultRoute withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -19,6 +20,7 @@ public class ReplaceTransitGatewayRouteResultRoute {
     
     
     public String prefixListId;
+
     public ReplaceTransitGatewayRouteResultRoute withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -26,6 +28,7 @@ public class ReplaceTransitGatewayRouteResultRoute {
     
     
     public ReplaceTransitGatewayRouteResultRouteStateEnum state;
+
     public ReplaceTransitGatewayRouteResultRoute withState(ReplaceTransitGatewayRouteResultRouteStateEnum state) {
         this.state = state;
         return this;
@@ -33,6 +36,7 @@ public class ReplaceTransitGatewayRouteResultRoute {
     
     
     public ReplaceTransitGatewayRouteResultRouteTransitGatewayAttachments[] transitGatewayAttachments;
+
     public ReplaceTransitGatewayRouteResultRoute withTransitGatewayAttachments(ReplaceTransitGatewayRouteResultRouteTransitGatewayAttachments[] transitGatewayAttachments) {
         this.transitGatewayAttachments = transitGatewayAttachments;
         return this;
@@ -40,6 +44,7 @@ public class ReplaceTransitGatewayRouteResultRoute {
     
     
     public String transitGatewayRouteTableAnnouncementId;
+
     public ReplaceTransitGatewayRouteResultRoute withTransitGatewayRouteTableAnnouncementId(String transitGatewayRouteTableAnnouncementId) {
         this.transitGatewayRouteTableAnnouncementId = transitGatewayRouteTableAnnouncementId;
         return this;
@@ -47,9 +52,11 @@ public class ReplaceTransitGatewayRouteResultRoute {
     
     
     public ReplaceTransitGatewayRouteResultRouteTypeEnum type;
+
     public ReplaceTransitGatewayRouteResultRoute withType(ReplaceTransitGatewayRouteResultRouteTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ReplaceTransitGatewayRouteResultRoute(){}
 }

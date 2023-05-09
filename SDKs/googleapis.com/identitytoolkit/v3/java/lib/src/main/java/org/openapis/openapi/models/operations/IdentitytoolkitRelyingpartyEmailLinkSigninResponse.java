@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitRelyingpartyEmailLinkSigninResponse {
     
     public String contentType;
+
     public IdentitytoolkitRelyingpartyEmailLinkSigninResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitRelyingpartyEmailLinkSigninResponse {
      */
     
     public org.openapis.openapi.models.shared.EmailLinkSigninResponse emailLinkSigninResponse;
+
     public IdentitytoolkitRelyingpartyEmailLinkSigninResponse withEmailLinkSigninResponse(org.openapis.openapi.models.shared.EmailLinkSigninResponse emailLinkSigninResponse) {
         this.emailLinkSigninResponse = emailLinkSigninResponse;
         return this;
@@ -26,6 +29,7 @@ public class IdentitytoolkitRelyingpartyEmailLinkSigninResponse {
     
     
     public Integer statusCode;
+
     public IdentitytoolkitRelyingpartyEmailLinkSigninResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitRelyingpartyEmailLinkSigninResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitRelyingpartyEmailLinkSigninResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyEmailLinkSigninResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

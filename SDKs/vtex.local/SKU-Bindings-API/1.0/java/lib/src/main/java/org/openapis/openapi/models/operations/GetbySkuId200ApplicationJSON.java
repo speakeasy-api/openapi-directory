@@ -18,6 +18,7 @@ public class GetbySkuId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public GetbySkuId200ApplicationJSON withId(Integer id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class GetbySkuId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsActive")
     public Boolean isActive;
+
     public GetbySkuId200ApplicationJSON withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -40,6 +42,7 @@ public class GetbySkuId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdateDate")
     public String lastUpdateDate;
+
     public GetbySkuId200ApplicationJSON withLastUpdateDate(String lastUpdateDate) {
         this.lastUpdateDate = lastUpdateDate;
         return this;
@@ -51,6 +54,7 @@ public class GetbySkuId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SalesPolicy")
     public Integer salesPolicy;
+
     public GetbySkuId200ApplicationJSON withSalesPolicy(Integer salesPolicy) {
         this.salesPolicy = salesPolicy;
         return this;
@@ -62,6 +66,7 @@ public class GetbySkuId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SellerId")
     public String sellerId;
+
     public GetbySkuId200ApplicationJSON withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -73,6 +78,7 @@ public class GetbySkuId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SellerSkuId")
     public String sellerSkuId;
+
     public GetbySkuId200ApplicationJSON withSellerSkuId(String sellerSkuId) {
         this.sellerSkuId = sellerSkuId;
         return this;
@@ -84,9 +90,11 @@ public class GetbySkuId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StockKeepingUnitId")
     public Integer stockKeepingUnitId;
+
     public GetbySkuId200ApplicationJSON withStockKeepingUnitId(Integer stockKeepingUnitId) {
         this.stockKeepingUnitId = stockKeepingUnitId;
         return this;
     }
     
+    public GetbySkuId200ApplicationJSON(){}
 }

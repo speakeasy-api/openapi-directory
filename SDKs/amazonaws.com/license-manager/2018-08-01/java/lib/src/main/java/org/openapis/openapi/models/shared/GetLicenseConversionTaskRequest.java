@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetLicenseConversionTaskRequest {
     @JsonProperty("LicenseConversionTaskId")
     public String licenseConversionTaskId;
+
     public GetLicenseConversionTaskRequest withLicenseConversionTaskId(String licenseConversionTaskId) {
         this.licenseConversionTaskId = licenseConversionTaskId;
         return this;
     }
     
+    public GetLicenseConversionTaskRequest(@JsonProperty("LicenseConversionTaskId") String licenseConversionTaskId) {
+        this.licenseConversionTaskId = licenseConversionTaskId;
+  }
 }

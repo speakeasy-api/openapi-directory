@@ -20,6 +20,7 @@ public class GetItemsBatchInternalTrasnferBatchItemsBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Long amount;
+
     public GetItemsBatchInternalTrasnferBatchItemsBatchItem withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -31,6 +32,7 @@ public class GetItemsBatchInternalTrasnferBatchItemsBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountAfterCharges")
     public Long amountAfterCharges;
+
     public GetItemsBatchInternalTrasnferBatchItemsBatchItem withAmountAfterCharges(Long amountAfterCharges) {
         this.amountAfterCharges = amountAfterCharges;
         return this;
@@ -42,6 +44,7 @@ public class GetItemsBatchInternalTrasnferBatchItemsBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchItemUuid")
     public String batchItemUuid;
+
     public GetItemsBatchInternalTrasnferBatchItemsBatchItem withBatchItemUuid(String batchItemUuid) {
         this.batchItemUuid = batchItemUuid;
         return this;
@@ -55,6 +58,7 @@ public class GetItemsBatchInternalTrasnferBatchItemsBatchItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateCreated")
     public OffsetDateTime dateCreated;
+
     public GetItemsBatchInternalTrasnferBatchItemsBatchItem withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -66,6 +70,7 @@ public class GetItemsBatchInternalTrasnferBatchItemsBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feeAmount")
     public Long feeAmount;
+
     public GetItemsBatchInternalTrasnferBatchItemsBatchItem withFeeAmount(Long feeAmount) {
         this.feeAmount = feeAmount;
         return this;
@@ -77,6 +82,7 @@ public class GetItemsBatchInternalTrasnferBatchItemsBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icanFrom")
     public Long icanFrom;
+
     public GetItemsBatchInternalTrasnferBatchItemsBatchItem withIcanFrom(Long icanFrom) {
         this.icanFrom = icanFrom;
         return this;
@@ -88,6 +94,7 @@ public class GetItemsBatchInternalTrasnferBatchItemsBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icanTo")
     public Long icanTo;
+
     public GetItemsBatchInternalTrasnferBatchItemsBatchItem withIcanTo(Long icanTo) {
         this.icanTo = icanTo;
         return this;
@@ -101,6 +108,7 @@ public class GetItemsBatchInternalTrasnferBatchItemsBatchItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public GetItemsBatchInternalTrasnferBatchItemsBatchItem withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -112,6 +120,7 @@ public class GetItemsBatchInternalTrasnferBatchItemsBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ref")
     public String ref;
+
     public GetItemsBatchInternalTrasnferBatchItemsBatchItem withRef(String ref) {
         this.ref = ref;
         return this;
@@ -123,6 +132,7 @@ public class GetItemsBatchInternalTrasnferBatchItemsBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refId")
     public Long refId;
+
     public GetItemsBatchInternalTrasnferBatchItemsBatchItem withRefId(Long refId) {
         this.refId = refId;
         return this;
@@ -134,6 +144,7 @@ public class GetItemsBatchInternalTrasnferBatchItemsBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public GetItemsBatchInternalTrasnferBatchItemsBatchItemResult result;
+
     public GetItemsBatchInternalTrasnferBatchItemsBatchItem withResult(GetItemsBatchInternalTrasnferBatchItemsBatchItemResult result) {
         this.result = result;
         return this;
@@ -145,6 +156,7 @@ public class GetItemsBatchInternalTrasnferBatchItemsBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetItemsBatchInternalTrasnferBatchItemsBatchItemStatusEnum status;
+
     public GetItemsBatchInternalTrasnferBatchItemsBatchItem withStatus(GetItemsBatchInternalTrasnferBatchItemsBatchItemStatusEnum status) {
         this.status = status;
         return this;
@@ -156,9 +168,11 @@ public class GetItemsBatchInternalTrasnferBatchItemsBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxAmount")
     public Long taxAmount;
+
     public GetItemsBatchInternalTrasnferBatchItemsBatchItem withTaxAmount(Long taxAmount) {
         this.taxAmount = taxAmount;
         return this;
     }
     
+    public GetItemsBatchInternalTrasnferBatchItemsBatchItem(){}
 }

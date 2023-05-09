@@ -22,6 +22,7 @@ public class ListReadSetsRequestBodyFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAfter")
     public OffsetDateTime createdAfter;
+
     public ListReadSetsRequestBodyFilter withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -32,6 +33,7 @@ public class ListReadSetsRequestBodyFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdBefore")
     public OffsetDateTime createdBefore;
+
     public ListReadSetsRequestBodyFilter withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -40,6 +42,7 @@ public class ListReadSetsRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ListReadSetsRequestBodyFilter withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class ListReadSetsRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceArn")
     public String referenceArn;
+
     public ListReadSetsRequestBodyFilter withReferenceArn(String referenceArn) {
         this.referenceArn = referenceArn;
         return this;
@@ -56,9 +60,11 @@ public class ListReadSetsRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public org.openapis.openapi.models.shared.ReadSetStatusEnum status;
+
     public ListReadSetsRequestBodyFilter withStatus(org.openapis.openapi.models.shared.ReadSetStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListReadSetsRequestBodyFilter(){}
 }

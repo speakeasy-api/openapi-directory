@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CountOrgaUsersResponse {
     
     public String contentType;
+
     public CountOrgaUsersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CountOrgaUsersResponse {
      */
     
     public org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse;
+
     public CountOrgaUsersResponse withFlatErrorResponse(org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse) {
         this.flatErrorResponse = flatErrorResponse;
         return this;
@@ -26,6 +29,7 @@ public class CountOrgaUsersResponse {
     
     
     public Integer statusCode;
+
     public CountOrgaUsersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CountOrgaUsersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CountOrgaUsersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class CountOrgaUsersResponse {
      */
     
     public Long countOrgaUsers200ApplicationJSONInteger;
+
     public CountOrgaUsersResponse withCountOrgaUsers200ApplicationJSONInteger(Long countOrgaUsers200ApplicationJSONInteger) {
         this.countOrgaUsers200ApplicationJSONInteger = countOrgaUsers200ApplicationJSONInteger;
         return this;
     }
     
+    public CountOrgaUsersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

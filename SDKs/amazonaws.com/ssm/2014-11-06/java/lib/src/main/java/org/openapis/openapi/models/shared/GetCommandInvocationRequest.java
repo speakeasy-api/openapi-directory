@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetCommandInvocationRequest {
     @JsonProperty("CommandId")
     public String commandId;
+
     public GetCommandInvocationRequest withCommandId(String commandId) {
         this.commandId = commandId;
         return this;
@@ -18,6 +19,7 @@ public class GetCommandInvocationRequest {
     
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public GetCommandInvocationRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -26,9 +28,14 @@ public class GetCommandInvocationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PluginName")
     public String pluginName;
+
     public GetCommandInvocationRequest withPluginName(String pluginName) {
         this.pluginName = pluginName;
         return this;
     }
     
+    public GetCommandInvocationRequest(@JsonProperty("CommandId") String commandId, @JsonProperty("InstanceId") String instanceId) {
+        this.commandId = commandId;
+        this.instanceId = instanceId;
+  }
 }

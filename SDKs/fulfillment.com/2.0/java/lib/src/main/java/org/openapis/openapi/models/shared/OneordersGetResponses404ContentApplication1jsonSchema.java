@@ -15,9 +15,11 @@ public class OneordersGetResponses404ContentApplication1jsonSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public OneordersGetResponses404ContentApplication1jsonSchema withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public OneordersGetResponses404ContentApplication1jsonSchema(){}
 }

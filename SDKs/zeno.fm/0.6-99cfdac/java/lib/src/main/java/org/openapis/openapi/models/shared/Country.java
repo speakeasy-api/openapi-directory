@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Country {
     
     public String iso;
+
     public Country withIso(String iso) {
         this.iso = iso;
         return this;
@@ -19,6 +20,7 @@ public class Country {
     
     
     public String iso3;
+
     public Country withIso3(String iso3) {
         this.iso3 = iso3;
         return this;
@@ -26,9 +28,11 @@ public class Country {
     
     
     public String name;
+
     public Country withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Country(){}
 }

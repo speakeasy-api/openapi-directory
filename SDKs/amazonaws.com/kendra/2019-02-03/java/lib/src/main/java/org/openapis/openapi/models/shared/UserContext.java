@@ -15,6 +15,7 @@ public class UserContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceGroups")
     public DataSourceGroup[] dataSourceGroups;
+
     public UserContext withDataSourceGroups(DataSourceGroup[] dataSourceGroups) {
         this.dataSourceGroups = dataSourceGroups;
         return this;
@@ -23,6 +24,7 @@ public class UserContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Groups")
     public String[] groups;
+
     public UserContext withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -31,6 +33,7 @@ public class UserContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Token")
     public String token;
+
     public UserContext withToken(String token) {
         this.token = token;
         return this;
@@ -39,9 +42,11 @@ public class UserContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public String userId;
+
     public UserContext withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public UserContext(){}
 }

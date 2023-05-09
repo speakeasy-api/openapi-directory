@@ -12,6 +12,7 @@ public class PutRetentionPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public PutRetentionPolicyRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class PutRetentionPolicyRequest {
     
     @JsonProperty("FolderConfigurations")
     public FolderConfiguration[] folderConfigurations;
+
     public PutRetentionPolicyRequest withFolderConfigurations(FolderConfiguration[] folderConfigurations) {
         this.folderConfigurations = folderConfigurations;
         return this;
@@ -27,6 +29,7 @@ public class PutRetentionPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public PutRetentionPolicyRequest withId(String id) {
         this.id = id;
         return this;
@@ -34,6 +37,7 @@ public class PutRetentionPolicyRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public PutRetentionPolicyRequest withName(String name) {
         this.name = name;
         return this;
@@ -41,9 +45,15 @@ public class PutRetentionPolicyRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public PutRetentionPolicyRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public PutRetentionPolicyRequest(@JsonProperty("FolderConfigurations") FolderConfiguration[] folderConfigurations, @JsonProperty("Name") String name, @JsonProperty("OrganizationId") String organizationId) {
+        this.folderConfigurations = folderConfigurations;
+        this.name = name;
+        this.organizationId = organizationId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateDRTRoleResponse {
@@ -12,6 +13,7 @@ public class AssociateDRTRoleResponse {
      */
     
     public Object accessDeniedForDependencyException;
+
     public AssociateDRTRoleResponse withAccessDeniedForDependencyException(Object accessDeniedForDependencyException) {
         this.accessDeniedForDependencyException = accessDeniedForDependencyException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateDRTRoleResponse {
      */
     
     public java.util.Map<String, Object> associateDRTRoleResponse;
+
     public AssociateDRTRoleResponse withAssociateDRTRoleResponse(java.util.Map<String, Object> associateDRTRoleResponse) {
         this.associateDRTRoleResponse = associateDRTRoleResponse;
         return this;
@@ -29,6 +32,7 @@ public class AssociateDRTRoleResponse {
     
     
     public String contentType;
+
     public AssociateDRTRoleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateDRTRoleResponse {
      */
     
     public Object internalErrorException;
+
     public AssociateDRTRoleResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateDRTRoleResponse {
      */
     
     public Object invalidOperationException;
+
     public AssociateDRTRoleResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateDRTRoleResponse {
      */
     
     public Object invalidParameterException;
+
     public AssociateDRTRoleResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateDRTRoleResponse {
      */
     
     public Object optimisticLockException;
+
     public AssociateDRTRoleResponse withOptimisticLockException(Object optimisticLockException) {
         this.optimisticLockException = optimisticLockException;
         return this;
@@ -79,6 +87,7 @@ public class AssociateDRTRoleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateDRTRoleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class AssociateDRTRoleResponse {
     
     
     public Integer statusCode;
+
     public AssociateDRTRoleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class AssociateDRTRoleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateDRTRoleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssociateDRTRoleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

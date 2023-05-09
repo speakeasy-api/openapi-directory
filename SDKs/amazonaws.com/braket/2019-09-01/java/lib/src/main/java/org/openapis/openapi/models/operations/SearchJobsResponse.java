@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchJobsResponse {
@@ -12,6 +13,7 @@ public class SearchJobsResponse {
      */
     
     public Object accessDeniedException;
+
     public SearchJobsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SearchJobsResponse {
     
     
     public String contentType;
+
     public SearchJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SearchJobsResponse {
      */
     
     public Object internalServiceException;
+
     public SearchJobsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class SearchJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchJobsResponse searchJobsResponse;
+
     public SearchJobsResponse withSearchJobsResponse(org.openapis.openapi.models.shared.SearchJobsResponse searchJobsResponse) {
         this.searchJobsResponse = searchJobsResponse;
         return this;
@@ -46,6 +51,7 @@ public class SearchJobsResponse {
     
     
     public Integer statusCode;
+
     public SearchJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class SearchJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class SearchJobsResponse {
      */
     
     public Object throttlingException;
+
     public SearchJobsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class SearchJobsResponse {
      */
     
     public Object validationException;
+
     public SearchJobsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SearchJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ConfigurationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public GoogleCloudRunV1Condition[] conditions;
+
     public ConfigurationStatus withConditions(GoogleCloudRunV1Condition[] conditions) {
         this.conditions = conditions;
         return this;
@@ -29,6 +30,7 @@ public class ConfigurationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestCreatedRevisionName")
     public String latestCreatedRevisionName;
+
     public ConfigurationStatus withLatestCreatedRevisionName(String latestCreatedRevisionName) {
         this.latestCreatedRevisionName = latestCreatedRevisionName;
         return this;
@@ -40,6 +42,7 @@ public class ConfigurationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestReadyRevisionName")
     public String latestReadyRevisionName;
+
     public ConfigurationStatus withLatestReadyRevisionName(String latestReadyRevisionName) {
         this.latestReadyRevisionName = latestReadyRevisionName;
         return this;
@@ -51,9 +54,11 @@ public class ConfigurationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("observedGeneration")
     public Integer observedGeneration;
+
     public ConfigurationStatus withObservedGeneration(Integer observedGeneration) {
         this.observedGeneration = observedGeneration;
         return this;
     }
     
+    public ConfigurationStatus(){}
 }

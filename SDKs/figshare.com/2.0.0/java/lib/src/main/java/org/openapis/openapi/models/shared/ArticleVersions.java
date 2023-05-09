@@ -12,6 +12,7 @@ public class ArticleVersions {
      */
     @JsonProperty("url")
     public String url;
+
     public ArticleVersions withUrl(String url) {
         this.url = url;
         return this;
@@ -22,9 +23,14 @@ public class ArticleVersions {
      */
     @JsonProperty("version")
     public Long version;
+
     public ArticleVersions withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public ArticleVersions(@JsonProperty("url") String url, @JsonProperty("version") Long version) {
+        this.url = url;
+        this.version = version;
+  }
 }

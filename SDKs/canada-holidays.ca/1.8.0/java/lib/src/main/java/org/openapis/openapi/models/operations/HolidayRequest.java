@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HolidayRequest {
@@ -12,6 +13,7 @@ public class HolidayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=holidayId")
     public Long holidayId;
+
     public HolidayRequest withHolidayId(Long holidayId) {
         this.holidayId = holidayId;
         return this;
@@ -22,6 +24,7 @@ public class HolidayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=optional")
     public HolidayOptionalEnum optional;
+
     public HolidayRequest withOptional(HolidayOptionalEnum optional) {
         this.optional = optional;
         return this;
@@ -32,9 +35,13 @@ public class HolidayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public HolidayRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public HolidayRequest(@JsonProperty("holidayId") Long holidayId) {
+        this.holidayId = holidayId;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaDataStreamIosAppStreamDataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleId")
     public String bundleId;
+
     public GoogleAnalyticsAdminV1alphaDataStreamIosAppStreamDataInput withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaDataStreamIosAppStreamDataInput(){}
 }

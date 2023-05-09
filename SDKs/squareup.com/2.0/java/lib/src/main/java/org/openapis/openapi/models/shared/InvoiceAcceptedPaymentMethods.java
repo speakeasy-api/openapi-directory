@@ -20,6 +20,7 @@ public class InvoiceAcceptedPaymentMethods {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_account")
     public Boolean bankAccount;
+
     public InvoiceAcceptedPaymentMethods withBankAccount(Boolean bankAccount) {
         this.bankAccount = bankAccount;
         return this;
@@ -31,6 +32,7 @@ public class InvoiceAcceptedPaymentMethods {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public Boolean card;
+
     public InvoiceAcceptedPaymentMethods withCard(Boolean card) {
         this.card = card;
         return this;
@@ -42,9 +44,11 @@ public class InvoiceAcceptedPaymentMethods {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("square_gift_card")
     public Boolean squareGiftCard;
+
     public InvoiceAcceptedPaymentMethods withSquareGiftCard(Boolean squareGiftCard) {
         this.squareGiftCard = squareGiftCard;
         return this;
     }
     
+    public InvoiceAcceptedPaymentMethods(){}
 }

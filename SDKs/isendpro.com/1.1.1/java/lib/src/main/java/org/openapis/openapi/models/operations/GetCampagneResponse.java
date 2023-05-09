@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCampagneResponse {
     
     public byte[] body;
+
     public GetCampagneResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetCampagneResponse {
     
     
     public String contentType;
+
     public GetCampagneResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetCampagneResponse {
      */
     
     public org.openapis.openapi.models.shared.Erreur erreur;
+
     public GetCampagneResponse withErreur(org.openapis.openapi.models.shared.Erreur erreur) {
         this.erreur = erreur;
         return this;
@@ -33,6 +37,7 @@ public class GetCampagneResponse {
     
     
     public Integer statusCode;
+
     public GetCampagneResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetCampagneResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCampagneResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,6 +56,7 @@ public class GetCampagneResponse {
      */
     
     public byte[] getCampagne200ApplicationJSONBinaryString;
+
     public GetCampagneResponse withGetCampagne200ApplicationJSONBinaryString(byte[] getCampagne200ApplicationJSONBinaryString) {
         this.getCampagne200ApplicationJSONBinaryString = getCampagne200ApplicationJSONBinaryString;
         return this;
@@ -60,9 +67,14 @@ public class GetCampagneResponse {
      */
     
     public byte[] getCampagne200FileBinaryString;
+
     public GetCampagneResponse withGetCampagne200FileBinaryString(byte[] getCampagne200FileBinaryString) {
         this.getCampagne200FileBinaryString = getCampagne200FileBinaryString;
         return this;
     }
     
+    public GetCampagneResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

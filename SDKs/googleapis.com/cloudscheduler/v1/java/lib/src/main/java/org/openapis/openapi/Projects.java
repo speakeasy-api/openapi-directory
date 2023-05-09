@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsDeleteResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsDeleteResponse() {{
+        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsDeleteResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsGetResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsGetResponse() {{
+        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsGetResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsGetResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsListResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsListResponse() {{
+        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsListResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsListResponse(contentType, httpRes.statusCode()) {{
             listJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPatchResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPatchResponse() {{
+        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPatchResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPatchResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPauseResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPauseResponse() {{
+        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPauseResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPauseResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsResumeResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsResumeResponse() {{
+        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsResumeResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsResumeResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsRunResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsRunResponse() {{
+        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsRunResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsRunResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

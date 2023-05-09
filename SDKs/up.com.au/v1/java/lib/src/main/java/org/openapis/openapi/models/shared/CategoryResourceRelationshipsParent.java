@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CategoryResourceRelationshipsParent {
     @JsonProperty("data")
     public CategoryResourceRelationshipsParentData data;
+
     public CategoryResourceRelationshipsParent withData(CategoryResourceRelationshipsParentData data) {
         this.data = data;
         return this;
@@ -19,9 +20,13 @@ public class CategoryResourceRelationshipsParent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public CategoryResourceRelationshipsParentLinks links;
+
     public CategoryResourceRelationshipsParent withLinks(CategoryResourceRelationshipsParentLinks links) {
         this.links = links;
         return this;
     }
     
+    public CategoryResourceRelationshipsParent(@JsonProperty("data") CategoryResourceRelationshipsParentData data) {
+        this.data = data;
+  }
 }

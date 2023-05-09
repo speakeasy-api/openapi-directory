@@ -18,6 +18,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public NetworkInterface withNetwork(String network) {
         this.network = network;
         return this;
@@ -29,6 +30,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noExternalIpAddress")
     public Boolean noExternalIpAddress;
+
     public NetworkInterface withNoExternalIpAddress(Boolean noExternalIpAddress) {
         this.noExternalIpAddress = noExternalIpAddress;
         return this;
@@ -40,9 +42,11 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public NetworkInterface withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
     }
     
+    public NetworkInterface(){}
 }

@@ -18,6 +18,7 @@ public class EffectiveGuestPolicySourcedSoftwareRecipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("softwareRecipe")
     public SoftwareRecipe softwareRecipe;
+
     public EffectiveGuestPolicySourcedSoftwareRecipe withSoftwareRecipe(SoftwareRecipe softwareRecipe) {
         this.softwareRecipe = softwareRecipe;
         return this;
@@ -29,9 +30,11 @@ public class EffectiveGuestPolicySourcedSoftwareRecipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public EffectiveGuestPolicySourcedSoftwareRecipe withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public EffectiveGuestPolicySourcedSoftwareRecipe(){}
 }

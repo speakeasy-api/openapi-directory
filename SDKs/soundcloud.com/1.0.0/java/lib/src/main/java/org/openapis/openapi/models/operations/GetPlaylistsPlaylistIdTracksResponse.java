@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPlaylistsPlaylistIdTracksResponse {
     
     public String contentType;
+
     public GetPlaylistsPlaylistIdTracksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPlaylistsPlaylistIdTracksResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetPlaylistsPlaylistIdTracksResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class GetPlaylistsPlaylistIdTracksResponse {
     
     
     public Integer statusCode;
+
     public GetPlaylistsPlaylistIdTracksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetPlaylistsPlaylistIdTracksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPlaylistsPlaylistIdTracksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetPlaylistsPlaylistIdTracksResponse {
      */
     
     public Object getPlaylistsPlaylistIdTracks200ApplicationJSONOneOf;
+
     public GetPlaylistsPlaylistIdTracksResponse withGetPlaylistsPlaylistIdTracks200ApplicationJSONOneOf(Object getPlaylistsPlaylistIdTracks200ApplicationJSONOneOf) {
         this.getPlaylistsPlaylistIdTracks200ApplicationJSONOneOf = getPlaylistsPlaylistIdTracks200ApplicationJSONOneOf;
         return this;
     }
     
+    public GetPlaylistsPlaylistIdTracksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

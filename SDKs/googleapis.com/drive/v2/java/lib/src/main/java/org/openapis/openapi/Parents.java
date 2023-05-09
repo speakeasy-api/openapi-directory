@@ -59,10 +59,8 @@ public class Parents {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveParentsDeleteResponse res = new org.openapis.openapi.models.operations.DriveParentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DriveParentsDeleteResponse res = new org.openapis.openapi.models.operations.DriveParentsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Parents {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveParentsGetResponse res = new org.openapis.openapi.models.operations.DriveParentsGetResponse() {{
+        org.openapis.openapi.models.operations.DriveParentsGetResponse res = new org.openapis.openapi.models.operations.DriveParentsGetResponse(contentType, httpRes.statusCode()) {{
             parentReference = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Parents {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveParentsInsertResponse res = new org.openapis.openapi.models.operations.DriveParentsInsertResponse() {{
+        org.openapis.openapi.models.operations.DriveParentsInsertResponse res = new org.openapis.openapi.models.operations.DriveParentsInsertResponse(contentType, httpRes.statusCode()) {{
             parentReference = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Parents {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveParentsListResponse res = new org.openapis.openapi.models.operations.DriveParentsListResponse() {{
+        org.openapis.openapi.models.operations.DriveParentsListResponse res = new org.openapis.openapi.models.operations.DriveParentsListResponse(contentType, httpRes.statusCode()) {{
             parentList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

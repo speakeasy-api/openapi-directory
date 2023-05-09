@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaScheduleIntegrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionInfoIds")
     public String[] executionInfoIds;
+
     public GoogleCloudIntegrationsV1alphaScheduleIntegrationsResponse withExecutionInfoIds(String[] executionInfoIds) {
         this.executionInfoIds = executionInfoIds;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaScheduleIntegrationsResponse(){}
 }

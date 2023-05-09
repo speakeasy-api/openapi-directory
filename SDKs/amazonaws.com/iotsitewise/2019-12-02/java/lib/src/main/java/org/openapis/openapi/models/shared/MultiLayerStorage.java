@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MultiLayerStorage {
     @JsonProperty("customerManagedS3Storage")
     public CustomerManagedS3Storage customerManagedS3Storage;
+
     public MultiLayerStorage withCustomerManagedS3Storage(CustomerManagedS3Storage customerManagedS3Storage) {
         this.customerManagedS3Storage = customerManagedS3Storage;
         return this;
     }
     
+    public MultiLayerStorage(@JsonProperty("customerManagedS3Storage") CustomerManagedS3Storage customerManagedS3Storage) {
+        this.customerManagedS3Storage = customerManagedS3Storage;
+  }
 }

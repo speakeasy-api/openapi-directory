@@ -57,12 +57,10 @@ public class Wkhtmltopdf {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WkhtmltopdfFromHtmlPostResponse res = new org.openapis.openapi.models.operations.WkhtmltopdfFromHtmlPostResponse() {{
+        org.openapis.openapi.models.operations.WkhtmltopdfFromHtmlPostResponse res = new org.openapis.openapi.models.operations.WkhtmltopdfFromHtmlPostResponse(contentType, httpRes.statusCode()) {{
             apiResponseSuccess = null;
             apiResponseFailure = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,13 +114,11 @@ public class Wkhtmltopdf {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WkhtmltopdfFromUrlGETResponse res = new org.openapis.openapi.models.operations.WkhtmltopdfFromUrlGETResponse() {{
+        org.openapis.openapi.models.operations.WkhtmltopdfFromUrlGETResponse res = new org.openapis.openapi.models.operations.WkhtmltopdfFromUrlGETResponse(contentType, httpRes.statusCode()) {{
             apiResponseSuccess = null;
             wkhtmltopdfFromUrlGET200ApplicationPdfBinaryString = null;
             apiResponseFailure = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -173,12 +169,10 @@ public class Wkhtmltopdf {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WkhtmltopdfFromUrlPostResponse res = new org.openapis.openapi.models.operations.WkhtmltopdfFromUrlPostResponse() {{
+        org.openapis.openapi.models.operations.WkhtmltopdfFromUrlPostResponse res = new org.openapis.openapi.models.operations.WkhtmltopdfFromUrlPostResponse(contentType, httpRes.statusCode()) {{
             apiResponseSuccess = null;
             apiResponseFailure = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

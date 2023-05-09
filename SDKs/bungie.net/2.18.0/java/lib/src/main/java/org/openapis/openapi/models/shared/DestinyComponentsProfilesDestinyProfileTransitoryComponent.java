@@ -16,6 +16,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryComponent {
      */
     
     public DestinyComponentsProfilesDestinyProfileTransitoryComponentCurrentActivity currentActivity;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryComponent withCurrentActivity(DestinyComponentsProfilesDestinyProfileTransitoryComponentCurrentActivity currentActivity) {
         this.currentActivity = currentActivity;
         return this;
@@ -26,6 +27,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryComponent {
      */
     
     public DestinyComponentsProfilesDestinyProfileTransitoryComponentJoinability joinability;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryComponent withJoinability(DestinyComponentsProfilesDestinyProfileTransitoryComponentJoinability joinability) {
         this.joinability = joinability;
         return this;
@@ -36,6 +38,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryComponent {
      */
     
     public Long lastOrbitedDestinationHash;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryComponent withLastOrbitedDestinationHash(Long lastOrbitedDestinationHash) {
         this.lastOrbitedDestinationHash = lastOrbitedDestinationHash;
         return this;
@@ -46,6 +49,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryComponent {
      */
     
     public DestinyComponentsProfilesDestinyProfileTransitoryPartyMember[] partyMembers;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryComponent withPartyMembers(DestinyComponentsProfilesDestinyProfileTransitoryPartyMember[] partyMembers) {
         this.partyMembers = partyMembers;
         return this;
@@ -56,9 +60,11 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryComponent {
      */
     
     public DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry[] tracking;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryComponent withTracking(DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry[] tracking) {
         this.tracking = tracking;
         return this;
     }
     
+    public DestinyComponentsProfilesDestinyProfileTransitoryComponent(){}
 }

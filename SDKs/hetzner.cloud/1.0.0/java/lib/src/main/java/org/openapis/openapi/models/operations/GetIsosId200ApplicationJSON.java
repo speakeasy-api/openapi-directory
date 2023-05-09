@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetIsosId200ApplicationJSON {
     @JsonProperty("iso")
     public GetIsosId200ApplicationJSONIso iso;
+
     public GetIsosId200ApplicationJSON withIso(GetIsosId200ApplicationJSONIso iso) {
         this.iso = iso;
         return this;
     }
     
+    public GetIsosId200ApplicationJSON(@JsonProperty("iso") GetIsosId200ApplicationJSONIso iso) {
+        this.iso = iso;
+  }
 }

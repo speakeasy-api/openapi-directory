@@ -12,6 +12,7 @@ public class SingleMonitor200ApplicationJSONMonitorSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cron")
     public String cron;
+
     public SingleMonitor200ApplicationJSONMonitorSchedule withCron(String cron) {
         this.cron = cron;
         return this;
@@ -20,6 +21,7 @@ public class SingleMonitor200ApplicationJSONMonitorSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextRun")
     public String nextRun;
+
     public SingleMonitor200ApplicationJSONMonitorSchedule withNextRun(String nextRun) {
         this.nextRun = nextRun;
         return this;
@@ -28,9 +30,11 @@ public class SingleMonitor200ApplicationJSONMonitorSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public SingleMonitor200ApplicationJSONMonitorSchedule withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public SingleMonitor200ApplicationJSONMonitorSchedule(){}
 }

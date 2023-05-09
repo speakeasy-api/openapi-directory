@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListReceivedLicensesResponse {
@@ -12,6 +13,7 @@ public class ListReceivedLicensesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListReceivedLicensesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListReceivedLicensesResponse {
      */
     
     public Object authorizationException;
+
     public ListReceivedLicensesResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class ListReceivedLicensesResponse {
     
     
     public String contentType;
+
     public ListReceivedLicensesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListReceivedLicensesResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListReceivedLicensesResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class ListReceivedLicensesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListReceivedLicensesResponse listReceivedLicensesResponse;
+
     public ListReceivedLicensesResponse withListReceivedLicensesResponse(org.openapis.openapi.models.shared.ListReceivedLicensesResponse listReceivedLicensesResponse) {
         this.listReceivedLicensesResponse = listReceivedLicensesResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListReceivedLicensesResponse {
      */
     
     public Object rateLimitExceededException;
+
     public ListReceivedLicensesResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ListReceivedLicensesResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public ListReceivedLicensesResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListReceivedLicensesResponse {
     
     
     public Integer statusCode;
+
     public ListReceivedLicensesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListReceivedLicensesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListReceivedLicensesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListReceivedLicensesResponse {
      */
     
     public Object serverInternalException;
+
     public ListReceivedLicensesResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -103,9 +114,14 @@ public class ListReceivedLicensesResponse {
      */
     
     public Object validationException;
+
     public ListReceivedLicensesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListReceivedLicensesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

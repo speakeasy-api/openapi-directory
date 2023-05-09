@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCandidatesForAutoMLJobResponse {
     
     public String contentType;
+
     public ListCandidatesForAutoMLJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCandidatesForAutoMLJobResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCandidatesForAutoMLJobResponse listCandidatesForAutoMLJobResponse;
+
     public ListCandidatesForAutoMLJobResponse withListCandidatesForAutoMLJobResponse(org.openapis.openapi.models.shared.ListCandidatesForAutoMLJobResponse listCandidatesForAutoMLJobResponse) {
         this.listCandidatesForAutoMLJobResponse = listCandidatesForAutoMLJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListCandidatesForAutoMLJobResponse {
      */
     
     public Object resourceNotFound;
+
     public ListCandidatesForAutoMLJobResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class ListCandidatesForAutoMLJobResponse {
     
     
     public Integer statusCode;
+
     public ListCandidatesForAutoMLJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListCandidatesForAutoMLJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCandidatesForAutoMLJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCandidatesForAutoMLJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

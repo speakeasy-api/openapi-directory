@@ -20,6 +20,7 @@ public class DeviceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentVersion")
     public String agentVersion;
+
     public DeviceSummary withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -28,6 +29,7 @@ public class DeviceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DeviceSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class DeviceSummary {
     
     @JsonProperty("DeviceArn")
     public String deviceArn;
+
     public DeviceSummary withDeviceArn(String deviceArn) {
         this.deviceArn = deviceArn;
         return this;
@@ -43,6 +46,7 @@ public class DeviceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public DeviceSummary withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -50,6 +54,7 @@ public class DeviceSummary {
     
     @JsonProperty("DeviceName")
     public String deviceName;
+
     public DeviceSummary withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -58,6 +63,7 @@ public class DeviceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IotThingName")
     public String iotThingName;
+
     public DeviceSummary withIotThingName(String iotThingName) {
         this.iotThingName = iotThingName;
         return this;
@@ -68,6 +74,7 @@ public class DeviceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LatestHeartbeat")
     public OffsetDateTime latestHeartbeat;
+
     public DeviceSummary withLatestHeartbeat(OffsetDateTime latestHeartbeat) {
         this.latestHeartbeat = latestHeartbeat;
         return this;
@@ -76,6 +83,7 @@ public class DeviceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Models")
     public EdgeModelSummary[] models;
+
     public DeviceSummary withModels(EdgeModelSummary[] models) {
         this.models = models;
         return this;
@@ -86,9 +94,14 @@ public class DeviceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RegistrationTime")
     public OffsetDateTime registrationTime;
+
     public DeviceSummary withRegistrationTime(OffsetDateTime registrationTime) {
         this.registrationTime = registrationTime;
         return this;
     }
     
+    public DeviceSummary(@JsonProperty("DeviceArn") String deviceArn, @JsonProperty("DeviceName") String deviceName) {
+        this.deviceArn = deviceArn;
+        this.deviceName = deviceName;
+  }
 }

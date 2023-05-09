@@ -12,6 +12,7 @@ public class UpdateMonitorRequestBodyMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateMonitorRequestBodyMonitor withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class UpdateMonitorRequestBodyMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public UpdateMonitorRequestBodyMonitorSchedule schedule;
+
     public UpdateMonitorRequestBodyMonitor withSchedule(UpdateMonitorRequestBodyMonitorSchedule schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public UpdateMonitorRequestBodyMonitor(){}
 }

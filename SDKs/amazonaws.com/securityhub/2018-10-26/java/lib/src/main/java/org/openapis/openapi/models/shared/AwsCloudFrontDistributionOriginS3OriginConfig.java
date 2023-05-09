@@ -15,9 +15,11 @@ public class AwsCloudFrontDistributionOriginS3OriginConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginAccessIdentity")
     public String originAccessIdentity;
+
     public AwsCloudFrontDistributionOriginS3OriginConfig withOriginAccessIdentity(String originAccessIdentity) {
         this.originAccessIdentity = originAccessIdentity;
         return this;
     }
     
+    public AwsCloudFrontDistributionOriginS3OriginConfig(){}
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ExecutionListItem {
     @JsonProperty("executionArn")
     public String executionArn;
+
     public ExecutionListItem withExecutionArn(String executionArn) {
         this.executionArn = executionArn;
         return this;
@@ -27,6 +28,7 @@ public class ExecutionListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemCount")
     public Long itemCount;
+
     public ExecutionListItem withItemCount(Long itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -35,6 +37,7 @@ public class ExecutionListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapRunArn")
     public String mapRunArn;
+
     public ExecutionListItem withMapRunArn(String mapRunArn) {
         this.mapRunArn = mapRunArn;
         return this;
@@ -42,6 +45,7 @@ public class ExecutionListItem {
     
     @JsonProperty("name")
     public String name;
+
     public ExecutionListItem withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +55,7 @@ public class ExecutionListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDate")
     public OffsetDateTime startDate;
+
     public ExecutionListItem withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -58,6 +63,7 @@ public class ExecutionListItem {
     
     @JsonProperty("stateMachineArn")
     public String stateMachineArn;
+
     public ExecutionListItem withStateMachineArn(String stateMachineArn) {
         this.stateMachineArn = stateMachineArn;
         return this;
@@ -65,6 +71,7 @@ public class ExecutionListItem {
     
     @JsonProperty("status")
     public ExecutionStatusEnum status;
+
     public ExecutionListItem withStatus(ExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -75,9 +82,17 @@ public class ExecutionListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stopDate")
     public OffsetDateTime stopDate;
+
     public ExecutionListItem withStopDate(OffsetDateTime stopDate) {
         this.stopDate = stopDate;
         return this;
     }
     
+    public ExecutionListItem(@JsonProperty("executionArn") String executionArn, @JsonProperty("name") String name, @JsonProperty("startDate") OffsetDateTime startDate, @JsonProperty("stateMachineArn") String stateMachineArn, @JsonProperty("status") ExecutionStatusEnum status) {
+        this.executionArn = executionArn;
+        this.name = name;
+        this.startDate = startDate;
+        this.stateMachineArn = stateMachineArn;
+        this.status = status;
+  }
 }

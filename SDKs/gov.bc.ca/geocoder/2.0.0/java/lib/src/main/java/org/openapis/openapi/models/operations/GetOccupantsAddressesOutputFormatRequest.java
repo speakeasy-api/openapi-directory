@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOccupantsAddressesOutputFormatRequest {
@@ -12,6 +13,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=addressString")
     public String addressString;
+
     public GetOccupantsAddressesOutputFormatRequest withAddressString(String addressString) {
         this.addressString = addressString;
         return this;
@@ -22,6 +24,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=autoComplete")
     public Boolean autoComplete;
+
     public GetOccupantsAddressesOutputFormatRequest withAutoComplete(Boolean autoComplete) {
         this.autoComplete = autoComplete;
         return this;
@@ -32,6 +35,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bbox")
     public String bbox;
+
     public GetOccupantsAddressesOutputFormatRequest withBbox(String bbox) {
         this.bbox = bbox;
         return this;
@@ -42,6 +46,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brief")
     public Boolean brief;
+
     public GetOccupantsAddressesOutputFormatRequest withBrief(Boolean brief) {
         this.brief = brief;
         return this;
@@ -52,6 +57,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=centre")
     public String centre;
+
     public GetOccupantsAddressesOutputFormatRequest withCentre(String centre) {
         this.centre = centre;
         return this;
@@ -62,6 +68,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=civicNumber")
     public String civicNumber;
+
     public GetOccupantsAddressesOutputFormatRequest withCivicNumber(String civicNumber) {
         this.civicNumber = civicNumber;
         return this;
@@ -72,6 +79,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=civicNumberSuffix")
     public String civicNumberSuffix;
+
     public GetOccupantsAddressesOutputFormatRequest withCivicNumberSuffix(String civicNumberSuffix) {
         this.civicNumberSuffix = civicNumberSuffix;
         return this;
@@ -82,6 +90,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=echo")
     public Boolean echo;
+
     public GetOccupantsAddressesOutputFormatRequest withEcho(Boolean echo) {
         this.echo = echo;
         return this;
@@ -92,6 +101,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=extrapolate")
     public Boolean extrapolate;
+
     public GetOccupantsAddressesOutputFormatRequest withExtrapolate(Boolean extrapolate) {
         this.extrapolate = extrapolate;
         return this;
@@ -102,6 +112,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interpolation")
     public GetOccupantsAddressesOutputFormatInterpolationEnum interpolation;
+
     public GetOccupantsAddressesOutputFormatRequest withInterpolation(GetOccupantsAddressesOutputFormatInterpolationEnum interpolation) {
         this.interpolation = interpolation;
         return this;
@@ -112,6 +123,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=localities")
     public String localities;
+
     public GetOccupantsAddressesOutputFormatRequest withLocalities(String localities) {
         this.localities = localities;
         return this;
@@ -122,6 +134,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=localityName")
     public String localityName;
+
     public GetOccupantsAddressesOutputFormatRequest withLocalityName(String localityName) {
         this.localityName = localityName;
         return this;
@@ -132,6 +145,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationDescriptor")
     public GetOccupantsAddressesOutputFormatLocationDescriptorEnum locationDescriptor;
+
     public GetOccupantsAddressesOutputFormatRequest withLocationDescriptor(GetOccupantsAddressesOutputFormatLocationDescriptorEnum locationDescriptor) {
         this.locationDescriptor = locationDescriptor;
         return this;
@@ -142,6 +156,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=matchPrecision")
     public String matchPrecision;
+
     public GetOccupantsAddressesOutputFormatRequest withMatchPrecision(String matchPrecision) {
         this.matchPrecision = matchPrecision;
         return this;
@@ -152,6 +167,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=matchPrecisionNot")
     public String matchPrecisionNot;
+
     public GetOccupantsAddressesOutputFormatRequest withMatchPrecisionNot(String matchPrecisionNot) {
         this.matchPrecisionNot = matchPrecisionNot;
         return this;
@@ -162,6 +178,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDistance")
     public Double maxDistance;
+
     public GetOccupantsAddressesOutputFormatRequest withMaxDistance(Double maxDistance) {
         this.maxDistance = maxDistance;
         return this;
@@ -172,6 +189,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public GetOccupantsAddressesOutputFormatRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -182,6 +200,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minScore")
     public Long minScore;
+
     public GetOccupantsAddressesOutputFormatRequest withMinScore(Long minScore) {
         this.minScore = minScore;
         return this;
@@ -192,6 +211,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=notLocalities")
     public String notLocalities;
+
     public GetOccupantsAddressesOutputFormatRequest withNotLocalities(String notLocalities) {
         this.notLocalities = notLocalities;
         return this;
@@ -204,6 +224,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
     public GetOccupantsAddressesOutputFormatOutputFormatEnum outputFormat;
+
     public GetOccupantsAddressesOutputFormatRequest withOutputFormat(GetOccupantsAddressesOutputFormatOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -214,6 +235,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetOccupantsAddressesOutputFormatOutputSrsEnum outputSRS;
+
     public GetOccupantsAddressesOutputFormatRequest withOutputSRS(GetOccupantsAddressesOutputFormatOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -224,6 +246,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parcelPoint")
     public String parcelPoint;
+
     public GetOccupantsAddressesOutputFormatRequest withParcelPoint(String parcelPoint) {
         this.parcelPoint = parcelPoint;
         return this;
@@ -234,6 +257,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=provinceCode")
     public String provinceCode;
+
     public GetOccupantsAddressesOutputFormatRequest withProvinceCode(String provinceCode) {
         this.provinceCode = provinceCode;
         return this;
@@ -244,6 +268,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setBack")
     public Long setBack;
+
     public GetOccupantsAddressesOutputFormatRequest withSetBack(Long setBack) {
         this.setBack = setBack;
         return this;
@@ -254,6 +279,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=siteName")
     public String siteName;
+
     public GetOccupantsAddressesOutputFormatRequest withSiteName(String siteName) {
         this.siteName = siteName;
         return this;
@@ -264,6 +290,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=streetDirection")
     public GetOccupantsAddressesOutputFormatStreetDirectionEnum streetDirection;
+
     public GetOccupantsAddressesOutputFormatRequest withStreetDirection(GetOccupantsAddressesOutputFormatStreetDirectionEnum streetDirection) {
         this.streetDirection = streetDirection;
         return this;
@@ -274,6 +301,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=streetName")
     public String streetName;
+
     public GetOccupantsAddressesOutputFormatRequest withStreetName(String streetName) {
         this.streetName = streetName;
         return this;
@@ -284,6 +312,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=streetQualifier")
     public String streetQualifier;
+
     public GetOccupantsAddressesOutputFormatRequest withStreetQualifier(String streetQualifier) {
         this.streetQualifier = streetQualifier;
         return this;
@@ -294,6 +323,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=streetType")
     public String streetType;
+
     public GetOccupantsAddressesOutputFormatRequest withStreetType(String streetType) {
         this.streetType = streetType;
         return this;
@@ -304,6 +334,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String tags;
+
     public GetOccupantsAddressesOutputFormatRequest withTags(String tags) {
         this.tags = tags;
         return this;
@@ -314,6 +345,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitDesignator")
     public GetOccupantsAddressesOutputFormatUnitDesignatorEnum unitDesignator;
+
     public GetOccupantsAddressesOutputFormatRequest withUnitDesignator(GetOccupantsAddressesOutputFormatUnitDesignatorEnum unitDesignator) {
         this.unitDesignator = unitDesignator;
         return this;
@@ -324,6 +356,7 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitNumber")
     public String unitNumber;
+
     public GetOccupantsAddressesOutputFormatRequest withUnitNumber(String unitNumber) {
         this.unitNumber = unitNumber;
         return this;
@@ -334,9 +367,13 @@ public class GetOccupantsAddressesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitNumberSuffix")
     public String unitNumberSuffix;
+
     public GetOccupantsAddressesOutputFormatRequest withUnitNumberSuffix(String unitNumberSuffix) {
         this.unitNumberSuffix = unitNumberSuffix;
         return this;
     }
     
+    public GetOccupantsAddressesOutputFormatRequest(@JsonProperty("outputFormat") GetOccupantsAddressesOutputFormatOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+  }
 }

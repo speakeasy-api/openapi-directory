@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MasterUserSecret {
     
     public String kmsKeyId;
+
     public MasterUserSecret withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -19,6 +20,7 @@ public class MasterUserSecret {
     
     
     public String secretArn;
+
     public MasterUserSecret withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -26,9 +28,11 @@ public class MasterUserSecret {
     
     
     public String secretStatus;
+
     public MasterUserSecret withSecretStatus(String secretStatus) {
         this.secretStatus = secretStatus;
         return this;
     }
     
+    public MasterUserSecret(){}
 }

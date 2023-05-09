@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeEventSubscriptionsMessage {
     
     public FilterList[] filters;
+
     public DescribeEventSubscriptionsMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -19,6 +20,7 @@ public class DescribeEventSubscriptionsMessage {
     
     
     public String marker;
+
     public DescribeEventSubscriptionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,6 +28,7 @@ public class DescribeEventSubscriptionsMessage {
     
     
     public Long maxRecords;
+
     public DescribeEventSubscriptionsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -33,9 +36,11 @@ public class DescribeEventSubscriptionsMessage {
     
     
     public String subscriptionName;
+
     public DescribeEventSubscriptionsMessage withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
     }
     
+    public DescribeEventSubscriptionsMessage(){}
 }

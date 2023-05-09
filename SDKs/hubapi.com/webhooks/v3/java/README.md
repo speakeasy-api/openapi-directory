@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearSecurity;
 import org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearRequest;
 import org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearResponse;
+import org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,11 +26,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteWebhooksV3AppIdSettingsClearRequest req = new DeleteWebhooksV3AppIdSettingsClearRequest() {{
-                appId = 548814;
-            }}            
+            DeleteWebhooksV3AppIdSettingsClearRequest req = new DeleteWebhooksV3AppIdSettingsClearRequest(548814);            
 
-            DeleteWebhooksV3AppIdSettingsClearResponse res = sdk.settings.deleteWebhooksV3AppIdSettingsClear(req, new DeleteWebhooksV3AppIdSettingsClearSecurity() {{
+            DeleteWebhooksV3AppIdSettingsClearResponse res = sdk.settings.deleteWebhooksV3AppIdSettingsClear(req, new DeleteWebhooksV3AppIdSettingsClearSecurity("provident") {{
                 developerHapikey = "YOUR_API_KEY_HERE";
             }});
 
@@ -41,6 +38,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,20 +47,20 @@ public class Application {
 ## Available Resources and Operations
 
 
-### settings
+### [settings](docs/settings/README.md)
 
-* `deleteWebhooksV3AppIdSettingsClear`
-* `getWebhooksV3AppIdSettingsGetAll`
-* `putWebhooksV3AppIdSettingsConfigure`
+* [deleteWebhooksV3AppIdSettingsClear](docs/settings/README.md#deletewebhooksv3appidsettingsclear)
+* [getWebhooksV3AppIdSettingsGetAll](docs/settings/README.md#getwebhooksv3appidsettingsgetall)
+* [putWebhooksV3AppIdSettingsConfigure](docs/settings/README.md#putwebhooksv3appidsettingsconfigure)
 
-### subscriptions
+### [subscriptions](docs/subscriptions/README.md)
 
-* `deleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchive`
-* `getWebhooksV3AppIdSubscriptionsSubscriptionIdGetById`
-* `getWebhooksV3AppIdSubscriptionsGetAll`
-* `patchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdate`
-* `postWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatch`
-* `postWebhooksV3AppIdSubscriptionsCreate`
+* [deleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchive](docs/subscriptions/README.md#deletewebhooksv3appidsubscriptionssubscriptionidarchive)
+* [getWebhooksV3AppIdSubscriptionsSubscriptionIdGetById](docs/subscriptions/README.md#getwebhooksv3appidsubscriptionssubscriptionidgetbyid)
+* [getWebhooksV3AppIdSubscriptionsGetAll](docs/subscriptions/README.md#getwebhooksv3appidsubscriptionsgetall)
+* [patchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdate](docs/subscriptions/README.md#patchwebhooksv3appidsubscriptionssubscriptionidupdate)
+* [postWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatch](docs/subscriptions/README.md#postwebhooksv3appidsubscriptionsbatchupdateupdatebatch)
+* [postWebhooksV3AppIdSubscriptionsCreate](docs/subscriptions/README.md#postwebhooksv3appidsubscriptionscreate)
 <!-- End SDK Available Operations -->
 
 ### Maturity

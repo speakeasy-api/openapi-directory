@@ -18,6 +18,7 @@ public class ListEntityTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListEntityTypesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListEntityTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("types")
     public EntityType[] types;
+
     public ListEntityTypesResponse withTypes(EntityType[] types) {
         this.types = types;
         return this;
@@ -40,9 +42,11 @@ public class ListEntityTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unsupportedTypeNames")
     public String[] unsupportedTypeNames;
+
     public ListEntityTypesResponse withUnsupportedTypeNames(String[] unsupportedTypeNames) {
         this.unsupportedTypeNames = unsupportedTypeNames;
         return this;
     }
     
+    public ListEntityTypesResponse(){}
 }

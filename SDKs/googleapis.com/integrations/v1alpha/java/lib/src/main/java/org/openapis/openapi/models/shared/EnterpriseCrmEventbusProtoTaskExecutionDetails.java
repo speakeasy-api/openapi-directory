@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoTaskExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskAttemptStats")
     public EnterpriseCrmEventbusProtoTaskExecutionDetailsTaskAttemptStats[] taskAttemptStats;
+
     public EnterpriseCrmEventbusProtoTaskExecutionDetails withTaskAttemptStats(EnterpriseCrmEventbusProtoTaskExecutionDetailsTaskAttemptStats[] taskAttemptStats) {
         this.taskAttemptStats = taskAttemptStats;
         return this;
@@ -23,6 +24,7 @@ public class EnterpriseCrmEventbusProtoTaskExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskExecutionState")
     public EnterpriseCrmEventbusProtoTaskExecutionDetailsTaskExecutionStateEnum taskExecutionState;
+
     public EnterpriseCrmEventbusProtoTaskExecutionDetails withTaskExecutionState(EnterpriseCrmEventbusProtoTaskExecutionDetailsTaskExecutionStateEnum taskExecutionState) {
         this.taskExecutionState = taskExecutionState;
         return this;
@@ -34,9 +36,11 @@ public class EnterpriseCrmEventbusProtoTaskExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskNumber")
     public String taskNumber;
+
     public EnterpriseCrmEventbusProtoTaskExecutionDetails withTaskNumber(String taskNumber) {
         this.taskNumber = taskNumber;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoTaskExecutionDetails(){}
 }

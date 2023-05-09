@@ -18,6 +18,7 @@ public class FilteredBidDetailRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidCount")
     public MetricValue bidCount;
+
     public FilteredBidDetailRow withBidCount(MetricValue bidCount) {
         this.bidCount = bidCount;
         return this;
@@ -29,6 +30,7 @@ public class FilteredBidDetailRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public FilteredBidDetailRow withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -40,6 +42,7 @@ public class FilteredBidDetailRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailId")
     public Integer detailId;
+
     public FilteredBidDetailRow withDetailId(Integer detailId) {
         this.detailId = detailId;
         return this;
@@ -51,9 +54,11 @@ public class FilteredBidDetailRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowDimensions")
     public RowDimensions rowDimensions;
+
     public FilteredBidDetailRow withRowDimensions(RowDimensions rowDimensions) {
         this.rowDimensions = rowDimensions;
         return this;
     }
     
+    public FilteredBidDetailRow(){}
 }

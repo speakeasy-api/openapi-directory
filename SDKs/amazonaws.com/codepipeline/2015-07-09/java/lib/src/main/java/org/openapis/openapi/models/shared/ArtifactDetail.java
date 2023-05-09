@@ -15,6 +15,7 @@ public class ArtifactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ArtifactDetail withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class ArtifactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3location")
     public S3Location s3location;
+
     public ArtifactDetail withS3location(S3Location s3location) {
         this.s3location = s3location;
         return this;
     }
     
+    public ArtifactDetail(){}
 }

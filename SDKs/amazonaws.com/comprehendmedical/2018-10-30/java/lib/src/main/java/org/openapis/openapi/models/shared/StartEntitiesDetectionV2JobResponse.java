@@ -15,9 +15,11 @@ public class StartEntitiesDetectionV2JobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StartEntitiesDetectionV2JobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public StartEntitiesDetectionV2JobResponse(){}
 }

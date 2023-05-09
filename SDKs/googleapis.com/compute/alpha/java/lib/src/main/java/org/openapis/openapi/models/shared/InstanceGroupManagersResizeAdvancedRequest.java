@@ -15,6 +15,7 @@ public class InstanceGroupManagersResizeAdvancedRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noCreationRetries")
     public Boolean noCreationRetries;
+
     public InstanceGroupManagersResizeAdvancedRequest withNoCreationRetries(Boolean noCreationRetries) {
         this.noCreationRetries = noCreationRetries;
         return this;
@@ -26,9 +27,11 @@ public class InstanceGroupManagersResizeAdvancedRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSize")
     public Integer targetSize;
+
     public InstanceGroupManagersResizeAdvancedRequest withTargetSize(Integer targetSize) {
         this.targetSize = targetSize;
         return this;
     }
     
+    public InstanceGroupManagersResizeAdvancedRequest(){}
 }

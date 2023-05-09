@@ -12,6 +12,7 @@ public class ListSharedProjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListSharedProjectsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListSharedProjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSharedProjectsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class ListSharedProjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public SharedResourceSortByTypeEnum sortBy;
+
     public ListSharedProjectsInput withSortBy(SharedResourceSortByTypeEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -36,9 +39,11 @@ public class ListSharedProjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderTypeEnum sortOrder;
+
     public ListSharedProjectsInput withSortOrder(SortOrderTypeEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListSharedProjectsInput(){}
 }

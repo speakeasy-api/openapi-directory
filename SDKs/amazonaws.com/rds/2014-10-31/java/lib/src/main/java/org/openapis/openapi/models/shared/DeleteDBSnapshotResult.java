@@ -15,9 +15,11 @@ public class DeleteDBSnapshotResult {
      */
     
     public DBSnapshot dbSnapshot;
+
     public DeleteDBSnapshotResult withDBSnapshot(DBSnapshot dbSnapshot) {
         this.dbSnapshot = dbSnapshot;
         return this;
     }
     
+    public DeleteDBSnapshotResult(){}
 }

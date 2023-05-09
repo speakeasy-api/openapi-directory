@@ -12,6 +12,7 @@ public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=balance")
     public Float balance;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody withBalance(Float balance) {
         this.balance = balance;
         return this;
@@ -22,6 +23,7 @@ public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=bookmarked")
     public Boolean bookmarked;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody withBookmarked(Boolean bookmarked) {
         this.bookmarked = bookmarked;
         return this;
@@ -32,6 +34,7 @@ public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=disabled")
     public Boolean disabled;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -42,6 +45,7 @@ public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=display")
     public Boolean display;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody withDisplay(Boolean display) {
         this.display = display;
         return this;
@@ -52,6 +56,7 @@ public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=iban")
     public String iban;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody withIban(String iban) {
         this.iban = iban;
         return this;
@@ -62,6 +67,7 @@ public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -72,9 +78,11 @@ public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=usage")
     public String usage;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody withUsage(String usage) {
         this.usage = usage;
         return this;
     }
     
+    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody(){}
 }

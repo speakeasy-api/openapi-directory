@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisableFastSnapshotRestoresResult {
     
     public DisableFastSnapshotRestoresResultSuccessful[] successful;
+
     public DisableFastSnapshotRestoresResult withSuccessful(DisableFastSnapshotRestoresResultSuccessful[] successful) {
         this.successful = successful;
         return this;
@@ -19,9 +20,11 @@ public class DisableFastSnapshotRestoresResult {
     
     
     public DisableFastSnapshotRestoresResultUnsuccessful[] unsuccessful;
+
     public DisableFastSnapshotRestoresResult withUnsuccessful(DisableFastSnapshotRestoresResultUnsuccessful[] unsuccessful) {
         this.unsuccessful = unsuccessful;
         return this;
     }
     
+    public DisableFastSnapshotRestoresResult(){}
 }

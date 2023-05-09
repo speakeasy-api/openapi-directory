@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeStatus2Request {
@@ -12,6 +13,7 @@ public class ChangeStatus2Request {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ProjectStatusDTO projectStatusDTO;
+
     public ChangeStatus2Request withProjectStatusDTO(org.openapis.openapi.models.shared.ProjectStatusDTO projectStatusDTO) {
         this.projectStatusDTO = projectStatusDTO;
         return this;
@@ -22,9 +24,14 @@ public class ChangeStatus2Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public ChangeStatus2Request withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public ChangeStatus2Request(@JsonProperty("ProjectStatusDTO") org.openapis.openapi.models.shared.ProjectStatusDTO projectStatusDTO, @JsonProperty("projectId") String projectId) {
+        this.projectStatusDTO = projectStatusDTO;
+        this.projectId = projectId;
+  }
 }

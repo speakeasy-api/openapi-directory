@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1SuggestSmartRepliesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextSize")
     public Integer contextSize;
+
     public GoogleCloudDialogflowV2beta1SuggestSmartRepliesRequest withContextSize(Integer contextSize) {
         this.contextSize = contextSize;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1SuggestSmartRepliesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentTextInput")
     public GoogleCloudDialogflowV2beta1TextInput currentTextInput;
+
     public GoogleCloudDialogflowV2beta1SuggestSmartRepliesRequest withCurrentTextInput(GoogleCloudDialogflowV2beta1TextInput currentTextInput) {
         this.currentTextInput = currentTextInput;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2beta1SuggestSmartRepliesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestMessage")
     public String latestMessage;
+
     public GoogleCloudDialogflowV2beta1SuggestSmartRepliesRequest withLatestMessage(String latestMessage) {
         this.latestMessage = latestMessage;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1SuggestSmartRepliesRequest(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TransportDescriptor {
     /**
@@ -12,6 +12,7 @@ public class TransportDescriptor {
      */
     
     public String protocol;
+
     public TransportDescriptor withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -22,6 +23,7 @@ public class TransportDescriptor {
      */
     
     public Object security;
+
     public TransportDescriptor withSecurity(Object security) {
         this.security = security;
         return this;
@@ -29,6 +31,7 @@ public class TransportDescriptor {
     
     
     public String type;
+
     public TransportDescriptor withType(String type) {
         this.type = type;
         return this;
@@ -39,9 +42,16 @@ public class TransportDescriptor {
      */
     
     public String version;
+
     public TransportDescriptor withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public TransportDescriptor(@JsonProperty("protocol") String protocol, @JsonProperty("security") Object security, @JsonProperty("type") String type, @JsonProperty("version") String version) {
+        this.protocol = protocol;
+        this.security = security;
+        this.type = type;
+        this.version = version;
+  }
 }

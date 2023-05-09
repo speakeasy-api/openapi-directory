@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUserDefinedFunctionsResponse {
     
     public String contentType;
+
     public GetUserDefinedFunctionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUserDefinedFunctionsResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetUserDefinedFunctionsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetUserDefinedFunctionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetUserDefinedFunctionsResponse getUserDefinedFunctionsResponse;
+
     public GetUserDefinedFunctionsResponse withGetUserDefinedFunctionsResponse(org.openapis.openapi.models.shared.GetUserDefinedFunctionsResponse getUserDefinedFunctionsResponse) {
         this.getUserDefinedFunctionsResponse = getUserDefinedFunctionsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetUserDefinedFunctionsResponse {
      */
     
     public Object glueEncryptionException;
+
     public GetUserDefinedFunctionsResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +54,7 @@ public class GetUserDefinedFunctionsResponse {
      */
     
     public Object internalServiceException;
+
     public GetUserDefinedFunctionsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetUserDefinedFunctionsResponse {
      */
     
     public Object invalidInputException;
+
     public GetUserDefinedFunctionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class GetUserDefinedFunctionsResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetUserDefinedFunctionsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class GetUserDefinedFunctionsResponse {
     
     
     public Integer statusCode;
+
     public GetUserDefinedFunctionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetUserDefinedFunctionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUserDefinedFunctionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetUserDefinedFunctionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudshellUsersEnvironmentsAddPublicKeyResponse {
     
     public String contentType;
+
     public CloudshellUsersEnvironmentsAddPublicKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudshellUsersEnvironmentsAddPublicKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public CloudshellUsersEnvironmentsAddPublicKeyResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class CloudshellUsersEnvironmentsAddPublicKeyResponse {
     
     
     public Integer statusCode;
+
     public CloudshellUsersEnvironmentsAddPublicKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudshellUsersEnvironmentsAddPublicKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudshellUsersEnvironmentsAddPublicKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudshellUsersEnvironmentsAddPublicKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ExportClientVpnClientConfigurationResult {
     
     public String clientConfiguration;
+
     public ExportClientVpnClientConfigurationResult withClientConfiguration(String clientConfiguration) {
         this.clientConfiguration = clientConfiguration;
         return this;
     }
     
+    public ExportClientVpnClientConfigurationResult(){}
 }

@@ -15,6 +15,7 @@ public class GetApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppRegistryArn")
     public String appRegistryArn;
+
     public GetApplicationRequestBody withAppRegistryArn(String appRegistryArn) {
         this.appRegistryArn = appRegistryArn;
         return this;
@@ -26,6 +27,7 @@ public class GetApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationArn")
     public String applicationArn;
+
     public GetApplicationRequestBody withApplicationArn(String applicationArn) {
         this.applicationArn = applicationArn;
         return this;
@@ -37,9 +39,11 @@ public class GetApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public GetApplicationRequestBody withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
     }
     
+    public GetApplicationRequestBody(){}
 }

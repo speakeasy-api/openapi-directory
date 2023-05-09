@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelSimulationJobBatchResponse {
@@ -12,6 +13,7 @@ public class CancelSimulationJobBatchResponse {
      */
     
     public java.util.Map<String, Object> cancelSimulationJobBatchResponse;
+
     public CancelSimulationJobBatchResponse withCancelSimulationJobBatchResponse(java.util.Map<String, Object> cancelSimulationJobBatchResponse) {
         this.cancelSimulationJobBatchResponse = cancelSimulationJobBatchResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelSimulationJobBatchResponse {
     
     
     public String contentType;
+
     public CancelSimulationJobBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelSimulationJobBatchResponse {
      */
     
     public Object internalServerException;
+
     public CancelSimulationJobBatchResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CancelSimulationJobBatchResponse {
      */
     
     public Object invalidParameterException;
+
     public CancelSimulationJobBatchResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CancelSimulationJobBatchResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelSimulationJobBatchResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CancelSimulationJobBatchResponse {
     
     
     public Integer statusCode;
+
     public CancelSimulationJobBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CancelSimulationJobBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelSimulationJobBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CancelSimulationJobBatchResponse {
      */
     
     public Object throttlingException;
+
     public CancelSimulationJobBatchResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CancelSimulationJobBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

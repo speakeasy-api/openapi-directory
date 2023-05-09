@@ -15,6 +15,7 @@ public class MerchantRejectionReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public MerchantRejectionReason withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class MerchantRejectionReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonCode")
     public String reasonCode;
+
     public MerchantRejectionReason withReasonCode(String reasonCode) {
         this.reasonCode = reasonCode;
         return this;
     }
     
+    public MerchantRejectionReason(){}
 }

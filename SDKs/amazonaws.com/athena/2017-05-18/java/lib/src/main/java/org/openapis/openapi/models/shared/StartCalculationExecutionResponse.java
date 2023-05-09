@@ -15,6 +15,7 @@ public class StartCalculationExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CalculationExecutionId")
     public String calculationExecutionId;
+
     public StartCalculationExecutionResponse withCalculationExecutionId(String calculationExecutionId) {
         this.calculationExecutionId = calculationExecutionId;
         return this;
@@ -23,9 +24,11 @@ public class StartCalculationExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public CalculationExecutionStateEnum state;
+
     public StartCalculationExecutionResponse withState(CalculationExecutionStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public StartCalculationExecutionResponse(){}
 }

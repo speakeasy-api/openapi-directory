@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Review - A Review
@@ -15,6 +15,7 @@ public class Review {
      */
     
     public String appId;
+
     public Review withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -25,6 +26,7 @@ public class Review {
      */
     
     public String customData;
+
     public Review withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -35,6 +37,7 @@ public class Review {
      */
     
     public String description;
+
     public Review withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class Review {
      */
     
     public String headline;
+
     public Review withHeadline(String headline) {
         this.headline = headline;
         return this;
@@ -55,6 +59,7 @@ public class Review {
      */
     
     public Long rating;
+
     public Review withRating(Long rating) {
         this.rating = rating;
         return this;
@@ -65,6 +70,7 @@ public class Review {
      */
     
     public Long reportDate;
+
     public Review withReportDate(Long reportDate) {
         this.reportDate = reportDate;
         return this;
@@ -75,6 +81,7 @@ public class Review {
      */
     
     public String reviewId;
+
     public Review withReviewId(String reviewId) {
         this.reviewId = reviewId;
         return this;
@@ -85,6 +92,7 @@ public class Review {
      */
     
     public Status status;
+
     public Review withStatus(Status status) {
         this.status = status;
         return this;
@@ -95,6 +103,7 @@ public class Review {
      */
     
     public String type;
+
     public Review withType(String type) {
         this.type = type;
         return this;
@@ -105,6 +114,7 @@ public class Review {
      */
     
     public User user;
+
     public Review withUser(User user) {
         this.user = user;
         return this;
@@ -115,6 +125,7 @@ public class Review {
      */
     
     public UserAccount userAccount;
+
     public Review withUserAccount(UserAccount userAccount) {
         this.userAccount = userAccount;
         return this;
@@ -125,6 +136,7 @@ public class Review {
      */
     
     public String userAccountId;
+
     public Review withUserAccountId(String userAccountId) {
         this.userAccountId = userAccountId;
         return this;
@@ -135,9 +147,21 @@ public class Review {
      */
     
     public String userId;
+
     public Review withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public Review(@JsonProperty("appId") String appId, @JsonProperty("customData") String customData, @JsonProperty("description") String description, @JsonProperty("headline") String headline, @JsonProperty("rating") Long rating, @JsonProperty("reportDate") Long reportDate, @JsonProperty("reviewId") String reviewId, @JsonProperty("status") Status status, @JsonProperty("userId") String userId) {
+        this.appId = appId;
+        this.customData = customData;
+        this.description = description;
+        this.headline = headline;
+        this.rating = rating;
+        this.reportDate = reportDate;
+        this.reviewId = reviewId;
+        this.status = status;
+        this.userId = userId;
+  }
 }

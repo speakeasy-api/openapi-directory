@@ -15,6 +15,7 @@ public class KYCLegalArrangementCheckResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checks")
     public KYCCheckStatusData[] checks;
+
     public KYCLegalArrangementCheckResult withChecks(KYCCheckStatusData[] checks) {
         this.checks = checks;
         return this;
@@ -26,9 +27,11 @@ public class KYCLegalArrangementCheckResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalArrangementCode")
     public String legalArrangementCode;
+
     public KYCLegalArrangementCheckResult withLegalArrangementCode(String legalArrangementCode) {
         this.legalArrangementCode = legalArrangementCode;
         return this;
     }
     
+    public KYCLegalArrangementCheckResult(){}
 }

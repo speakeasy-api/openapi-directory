@@ -15,6 +15,7 @@ public class ListAllPadsUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public ListAllPadsUsingGET200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class ListAllPadsUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ListAllPadsUsingGET200ApplicationJSONData data;
+
     public ListAllPadsUsingGET200ApplicationJSON withData(ListAllPadsUsingGET200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class ListAllPadsUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ListAllPadsUsingGET200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ListAllPadsUsingGET200ApplicationJSON(){}
 }

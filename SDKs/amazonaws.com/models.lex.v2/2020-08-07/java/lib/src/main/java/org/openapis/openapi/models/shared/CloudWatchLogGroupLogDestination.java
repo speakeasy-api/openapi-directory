@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CloudWatchLogGroupLogDestination {
     @JsonProperty("cloudWatchLogGroupArn")
     public String cloudWatchLogGroupArn;
+
     public CloudWatchLogGroupLogDestination withCloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
         this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
         return this;
@@ -19,9 +20,14 @@ public class CloudWatchLogGroupLogDestination {
     
     @JsonProperty("logPrefix")
     public String logPrefix;
+
     public CloudWatchLogGroupLogDestination withLogPrefix(String logPrefix) {
         this.logPrefix = logPrefix;
         return this;
     }
     
+    public CloudWatchLogGroupLogDestination(@JsonProperty("cloudWatchLogGroupArn") String cloudWatchLogGroupArn, @JsonProperty("logPrefix") String logPrefix) {
+        this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
+        this.logPrefix = logPrefix;
+  }
 }

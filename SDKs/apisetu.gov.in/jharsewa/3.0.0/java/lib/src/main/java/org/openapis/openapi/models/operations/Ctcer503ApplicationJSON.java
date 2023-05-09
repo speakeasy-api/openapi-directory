@@ -15,6 +15,7 @@ public class Ctcer503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Ctcer503ApplicationJSONErrorEnum error;
+
     public Ctcer503ApplicationJSON withError(Ctcer503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Ctcer503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Ctcer503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Ctcer503ApplicationJSON withErrorDescription(Ctcer503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Ctcer503ApplicationJSON(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MergeBranchesByThreeWayResponse {
@@ -12,6 +13,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object branchDoesNotExistException;
+
     public MergeBranchesByThreeWayResponse withBranchDoesNotExistException(Object branchDoesNotExistException) {
         this.branchDoesNotExistException = branchDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object branchNameIsTagNameException;
+
     public MergeBranchesByThreeWayResponse withBranchNameIsTagNameException(Object branchNameIsTagNameException) {
         this.branchNameIsTagNameException = branchNameIsTagNameException;
         return this;
@@ -32,6 +35,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object branchNameRequiredException;
+
     public MergeBranchesByThreeWayResponse withBranchNameRequiredException(Object branchNameRequiredException) {
         this.branchNameRequiredException = branchNameRequiredException;
         return this;
@@ -42,6 +46,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object commitDoesNotExistException;
+
     public MergeBranchesByThreeWayResponse withCommitDoesNotExistException(Object commitDoesNotExistException) {
         this.commitDoesNotExistException = commitDoesNotExistException;
         return this;
@@ -52,6 +57,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object commitMessageLengthExceededException;
+
     public MergeBranchesByThreeWayResponse withCommitMessageLengthExceededException(Object commitMessageLengthExceededException) {
         this.commitMessageLengthExceededException = commitMessageLengthExceededException;
         return this;
@@ -62,6 +68,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object commitRequiredException;
+
     public MergeBranchesByThreeWayResponse withCommitRequiredException(Object commitRequiredException) {
         this.commitRequiredException = commitRequiredException;
         return this;
@@ -72,6 +79,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object concurrentReferenceUpdateException;
+
     public MergeBranchesByThreeWayResponse withConcurrentReferenceUpdateException(Object concurrentReferenceUpdateException) {
         this.concurrentReferenceUpdateException = concurrentReferenceUpdateException;
         return this;
@@ -79,6 +87,7 @@ public class MergeBranchesByThreeWayResponse {
     
     
     public String contentType;
+
     public MergeBranchesByThreeWayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -89,6 +98,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public MergeBranchesByThreeWayResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -99,6 +109,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public MergeBranchesByThreeWayResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -109,6 +120,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public MergeBranchesByThreeWayResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -119,6 +131,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public MergeBranchesByThreeWayResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -129,6 +142,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public MergeBranchesByThreeWayResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -139,6 +153,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object fileContentSizeLimitExceededException;
+
     public MergeBranchesByThreeWayResponse withFileContentSizeLimitExceededException(Object fileContentSizeLimitExceededException) {
         this.fileContentSizeLimitExceededException = fileContentSizeLimitExceededException;
         return this;
@@ -149,6 +164,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object fileModeRequiredException;
+
     public MergeBranchesByThreeWayResponse withFileModeRequiredException(Object fileModeRequiredException) {
         this.fileModeRequiredException = fileModeRequiredException;
         return this;
@@ -159,6 +175,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object folderContentSizeLimitExceededException;
+
     public MergeBranchesByThreeWayResponse withFolderContentSizeLimitExceededException(Object folderContentSizeLimitExceededException) {
         this.folderContentSizeLimitExceededException = folderContentSizeLimitExceededException;
         return this;
@@ -169,6 +186,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object invalidBranchNameException;
+
     public MergeBranchesByThreeWayResponse withInvalidBranchNameException(Object invalidBranchNameException) {
         this.invalidBranchNameException = invalidBranchNameException;
         return this;
@@ -179,6 +197,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object invalidCommitException;
+
     public MergeBranchesByThreeWayResponse withInvalidCommitException(Object invalidCommitException) {
         this.invalidCommitException = invalidCommitException;
         return this;
@@ -189,6 +208,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object invalidConflictDetailLevelException;
+
     public MergeBranchesByThreeWayResponse withInvalidConflictDetailLevelException(Object invalidConflictDetailLevelException) {
         this.invalidConflictDetailLevelException = invalidConflictDetailLevelException;
         return this;
@@ -199,6 +219,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object invalidConflictResolutionException;
+
     public MergeBranchesByThreeWayResponse withInvalidConflictResolutionException(Object invalidConflictResolutionException) {
         this.invalidConflictResolutionException = invalidConflictResolutionException;
         return this;
@@ -209,6 +230,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object invalidConflictResolutionStrategyException;
+
     public MergeBranchesByThreeWayResponse withInvalidConflictResolutionStrategyException(Object invalidConflictResolutionStrategyException) {
         this.invalidConflictResolutionStrategyException = invalidConflictResolutionStrategyException;
         return this;
@@ -219,6 +241,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object invalidEmailException;
+
     public MergeBranchesByThreeWayResponse withInvalidEmailException(Object invalidEmailException) {
         this.invalidEmailException = invalidEmailException;
         return this;
@@ -229,6 +252,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object invalidFileModeException;
+
     public MergeBranchesByThreeWayResponse withInvalidFileModeException(Object invalidFileModeException) {
         this.invalidFileModeException = invalidFileModeException;
         return this;
@@ -239,6 +263,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object invalidPathException;
+
     public MergeBranchesByThreeWayResponse withInvalidPathException(Object invalidPathException) {
         this.invalidPathException = invalidPathException;
         return this;
@@ -249,6 +274,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object invalidReplacementContentException;
+
     public MergeBranchesByThreeWayResponse withInvalidReplacementContentException(Object invalidReplacementContentException) {
         this.invalidReplacementContentException = invalidReplacementContentException;
         return this;
@@ -259,6 +285,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object invalidReplacementTypeException;
+
     public MergeBranchesByThreeWayResponse withInvalidReplacementTypeException(Object invalidReplacementTypeException) {
         this.invalidReplacementTypeException = invalidReplacementTypeException;
         return this;
@@ -269,6 +296,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public MergeBranchesByThreeWayResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -279,6 +307,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object invalidTargetBranchException;
+
     public MergeBranchesByThreeWayResponse withInvalidTargetBranchException(Object invalidTargetBranchException) {
         this.invalidTargetBranchException = invalidTargetBranchException;
         return this;
@@ -289,6 +318,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object manualMergeRequiredException;
+
     public MergeBranchesByThreeWayResponse withManualMergeRequiredException(Object manualMergeRequiredException) {
         this.manualMergeRequiredException = manualMergeRequiredException;
         return this;
@@ -299,6 +329,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object maximumConflictResolutionEntriesExceededException;
+
     public MergeBranchesByThreeWayResponse withMaximumConflictResolutionEntriesExceededException(Object maximumConflictResolutionEntriesExceededException) {
         this.maximumConflictResolutionEntriesExceededException = maximumConflictResolutionEntriesExceededException;
         return this;
@@ -309,6 +340,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object maximumFileContentToLoadExceededException;
+
     public MergeBranchesByThreeWayResponse withMaximumFileContentToLoadExceededException(Object maximumFileContentToLoadExceededException) {
         this.maximumFileContentToLoadExceededException = maximumFileContentToLoadExceededException;
         return this;
@@ -319,6 +351,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object maximumItemsToCompareExceededException;
+
     public MergeBranchesByThreeWayResponse withMaximumItemsToCompareExceededException(Object maximumItemsToCompareExceededException) {
         this.maximumItemsToCompareExceededException = maximumItemsToCompareExceededException;
         return this;
@@ -329,6 +362,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public org.openapis.openapi.models.shared.MergeBranchesByThreeWayOutput mergeBranchesByThreeWayOutput;
+
     public MergeBranchesByThreeWayResponse withMergeBranchesByThreeWayOutput(org.openapis.openapi.models.shared.MergeBranchesByThreeWayOutput mergeBranchesByThreeWayOutput) {
         this.mergeBranchesByThreeWayOutput = mergeBranchesByThreeWayOutput;
         return this;
@@ -339,6 +373,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object multipleConflictResolutionEntriesException;
+
     public MergeBranchesByThreeWayResponse withMultipleConflictResolutionEntriesException(Object multipleConflictResolutionEntriesException) {
         this.multipleConflictResolutionEntriesException = multipleConflictResolutionEntriesException;
         return this;
@@ -349,6 +384,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object nameLengthExceededException;
+
     public MergeBranchesByThreeWayResponse withNameLengthExceededException(Object nameLengthExceededException) {
         this.nameLengthExceededException = nameLengthExceededException;
         return this;
@@ -359,6 +395,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object pathRequiredException;
+
     public MergeBranchesByThreeWayResponse withPathRequiredException(Object pathRequiredException) {
         this.pathRequiredException = pathRequiredException;
         return this;
@@ -369,6 +406,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object replacementContentRequiredException;
+
     public MergeBranchesByThreeWayResponse withReplacementContentRequiredException(Object replacementContentRequiredException) {
         this.replacementContentRequiredException = replacementContentRequiredException;
         return this;
@@ -379,6 +417,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object replacementTypeRequiredException;
+
     public MergeBranchesByThreeWayResponse withReplacementTypeRequiredException(Object replacementTypeRequiredException) {
         this.replacementTypeRequiredException = replacementTypeRequiredException;
         return this;
@@ -389,6 +428,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public MergeBranchesByThreeWayResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -399,6 +439,7 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public MergeBranchesByThreeWayResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -406,6 +447,7 @@ public class MergeBranchesByThreeWayResponse {
     
     
     public Integer statusCode;
+
     public MergeBranchesByThreeWayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -413,6 +455,7 @@ public class MergeBranchesByThreeWayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MergeBranchesByThreeWayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -423,9 +466,14 @@ public class MergeBranchesByThreeWayResponse {
      */
     
     public Object tipsDivergenceExceededException;
+
     public MergeBranchesByThreeWayResponse withTipsDivergenceExceededException(Object tipsDivergenceExceededException) {
         this.tipsDivergenceExceededException = tipsDivergenceExceededException;
         return this;
     }
     
+    public MergeBranchesByThreeWayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

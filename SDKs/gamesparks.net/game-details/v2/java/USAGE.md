@@ -2,13 +2,13 @@
 ```java
 package hello.world;
 
+import java.time.LocalDate;
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETDataTypeEnum;
 import org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETPrecisionEnum;
-import org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETStageEnum;
 import org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETRequest;
 import org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETResponse;
+import org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETStageEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -16,23 +16,19 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GETAnalyticsDataUsingGETRequest req = new GETAnalyticsDataUsingGETRequest() {{
-                apiKey = "corrupti";
-                dataType = "sessionAnalytic";
-                endDate = "2021-04-24";
-                keys = "unde";
-                precision = "MONTHLY";
-                stage = "PREVIEW";
-                startDate = "2021-09-24";
-            }}            
+            GETAnalyticsDataUsingGETRequest req = new GETAnalyticsDataUsingGETRequest("corrupti", GETAnalyticsDataUsingGETDataTypeEnum.SESSION_ANALYTIC, LocalDate.parse("2021-04-24"), GETAnalyticsDataUsingGETPrecisionEnum.DAILY, GETAnalyticsDataUsingGETStageEnum.PREVIEW, LocalDate.parse("2021-04-22")) {{
+                keys = "vel";
+            }};            
 
             GETAnalyticsDataUsingGETResponse res = sdk.analytics.getAnalyticsDataUsingGET(req);
 
-            if (res.analyticsDataSwaggerModels.isPresent()) {
+            if (res.analyticsDataSwaggerModels != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

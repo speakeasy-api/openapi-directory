@@ -15,6 +15,7 @@ public class AccountLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeSizeUnzipped")
     public Long codeSizeUnzipped;
+
     public AccountLimit withCodeSizeUnzipped(Long codeSizeUnzipped) {
         this.codeSizeUnzipped = codeSizeUnzipped;
         return this;
@@ -23,6 +24,7 @@ public class AccountLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeSizeZipped")
     public Long codeSizeZipped;
+
     public AccountLimit withCodeSizeZipped(Long codeSizeZipped) {
         this.codeSizeZipped = codeSizeZipped;
         return this;
@@ -31,6 +33,7 @@ public class AccountLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConcurrentExecutions")
     public Long concurrentExecutions;
+
     public AccountLimit withConcurrentExecutions(Long concurrentExecutions) {
         this.concurrentExecutions = concurrentExecutions;
         return this;
@@ -39,6 +42,7 @@ public class AccountLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalCodeSize")
     public Long totalCodeSize;
+
     public AccountLimit withTotalCodeSize(Long totalCodeSize) {
         this.totalCodeSize = totalCodeSize;
         return this;
@@ -47,9 +51,11 @@ public class AccountLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnreservedConcurrentExecutions")
     public Long unreservedConcurrentExecutions;
+
     public AccountLimit withUnreservedConcurrentExecutions(Long unreservedConcurrentExecutions) {
         this.unreservedConcurrentExecutions = unreservedConcurrentExecutions;
         return this;
     }
     
+    public AccountLimit(){}
 }

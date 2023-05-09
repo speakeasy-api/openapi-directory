@@ -15,6 +15,7 @@ public class SearchResponseChecks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public SearchResponseChecks withCode(String code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class SearchResponseChecks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_received")
     public String dateReceived;
+
     public SearchResponseChecks withDateReceived(String dateReceived) {
         this.dateReceived = dateReceived;
         return this;
@@ -37,6 +39,7 @@ public class SearchResponseChecks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_address")
     public String ipAddress;
+
     public SearchResponseChecks withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -45,9 +48,11 @@ public class SearchResponseChecks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SearchResponseChecksStatusEnum status;
+
     public SearchResponseChecks withStatus(SearchResponseChecksStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public SearchResponseChecks(){}
 }

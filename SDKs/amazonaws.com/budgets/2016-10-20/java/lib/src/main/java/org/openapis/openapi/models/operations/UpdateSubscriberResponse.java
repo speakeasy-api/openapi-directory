@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSubscriberResponse {
@@ -12,6 +13,7 @@ public class UpdateSubscriberResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateSubscriberResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSubscriberResponse {
     
     
     public String contentType;
+
     public UpdateSubscriberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSubscriberResponse {
      */
     
     public Object duplicateRecordException;
+
     public UpdateSubscriberResponse withDuplicateRecordException(Object duplicateRecordException) {
         this.duplicateRecordException = duplicateRecordException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSubscriberResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateSubscriberResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSubscriberResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateSubscriberResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateSubscriberResponse {
      */
     
     public Object notFoundException;
+
     public UpdateSubscriberResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateSubscriberResponse {
     
     
     public Integer statusCode;
+
     public UpdateSubscriberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSubscriberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSubscriberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateSubscriberResponse {
      */
     
     public Object throttlingException;
+
     public UpdateSubscriberResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateSubscriberResponse {
      */
     
     public java.util.Map<String, Object> updateSubscriberResponse;
+
     public UpdateSubscriberResponse withUpdateSubscriberResponse(java.util.Map<String, Object> updateSubscriberResponse) {
         this.updateSubscriberResponse = updateSubscriberResponse;
         return this;
     }
     
+    public UpdateSubscriberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETUpdateConfigurationSetTrackingOptionsTrackingOptions {
     @SpeakeasyMetadata("queryParam:name=CustomRedirectDomain")
     public String customRedirectDomain;
+
     public GETUpdateConfigurationSetTrackingOptionsTrackingOptions withCustomRedirectDomain(String customRedirectDomain) {
         this.customRedirectDomain = customRedirectDomain;
         return this;
     }
     
+    public GETUpdateConfigurationSetTrackingOptionsTrackingOptions(){}
 }

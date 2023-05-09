@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateACLRequest {
     @JsonProperty("ACLName")
     public String aclName;
+
     public UpdateACLRequest withACLName(String aclName) {
         this.aclName = aclName;
         return this;
@@ -19,6 +20,7 @@ public class UpdateACLRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserNamesToAdd")
     public String[] userNamesToAdd;
+
     public UpdateACLRequest withUserNamesToAdd(String[] userNamesToAdd) {
         this.userNamesToAdd = userNamesToAdd;
         return this;
@@ -27,9 +29,13 @@ public class UpdateACLRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserNamesToRemove")
     public String[] userNamesToRemove;
+
     public UpdateACLRequest withUserNamesToRemove(String[] userNamesToRemove) {
         this.userNamesToRemove = userNamesToRemove;
         return this;
     }
     
+    public UpdateACLRequest(@JsonProperty("ACLName") String aclName) {
+        this.aclName = aclName;
+  }
 }

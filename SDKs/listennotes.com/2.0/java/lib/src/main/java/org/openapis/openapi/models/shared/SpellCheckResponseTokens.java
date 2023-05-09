@@ -15,6 +15,7 @@ public class SpellCheckResponseTokens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Long offset;
+
     public SpellCheckResponseTokens withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -26,6 +27,7 @@ public class SpellCheckResponseTokens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestion")
     public String suggestion;
+
     public SpellCheckResponseTokens withSuggestion(String suggestion) {
         this.suggestion = suggestion;
         return this;
@@ -37,9 +39,11 @@ public class SpellCheckResponseTokens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public SpellCheckResponseTokens withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public SpellCheckResponseTokens(){}
 }

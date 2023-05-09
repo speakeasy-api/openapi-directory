@@ -72,14 +72,12 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImagesFromDataResponse res = new org.openapis.openapi.models.operations.CreateImagesFromDataResponse() {{
+        org.openapis.openapi.models.operations.CreateImagesFromDataResponse res = new org.openapis.openapi.models.operations.CreateImagesFromDataResponse(contentType, httpRes.statusCode()) {{
             imageCreateSummary = null;
             imageCreateSummary = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,14 +137,12 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImagesFromFilesFormResponse res = new org.openapis.openapi.models.operations.CreateImagesFromFilesFormResponse() {{
+        org.openapis.openapi.models.operations.CreateImagesFromFilesFormResponse res = new org.openapis.openapi.models.operations.CreateImagesFromFilesFormResponse(contentType, httpRes.statusCode()) {{
             imageCreateSummary = null;
             imageCreateSummary = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -206,14 +202,12 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImagesFromFilesJsonResponse res = new org.openapis.openapi.models.operations.CreateImagesFromFilesJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateImagesFromFilesJsonResponse res = new org.openapis.openapi.models.operations.CreateImagesFromFilesJsonResponse(contentType, httpRes.statusCode()) {{
             imageCreateSummary = null;
             imageCreateSummary = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -273,14 +267,12 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImagesFromFilesRawResponse res = new org.openapis.openapi.models.operations.CreateImagesFromFilesRawResponse() {{
+        org.openapis.openapi.models.operations.CreateImagesFromFilesRawResponse res = new org.openapis.openapi.models.operations.CreateImagesFromFilesRawResponse(contentType, httpRes.statusCode()) {{
             imageCreateSummary = null;
             imageCreateSummary = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -340,14 +332,12 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImagesFromPredictionsFormResponse res = new org.openapis.openapi.models.operations.CreateImagesFromPredictionsFormResponse() {{
+        org.openapis.openapi.models.operations.CreateImagesFromPredictionsFormResponse res = new org.openapis.openapi.models.operations.CreateImagesFromPredictionsFormResponse(contentType, httpRes.statusCode()) {{
             imageCreateSummary = null;
             imageCreateSummary = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -407,14 +397,12 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImagesFromPredictionsJsonResponse res = new org.openapis.openapi.models.operations.CreateImagesFromPredictionsJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateImagesFromPredictionsJsonResponse res = new org.openapis.openapi.models.operations.CreateImagesFromPredictionsJsonResponse(contentType, httpRes.statusCode()) {{
             imageCreateSummary = null;
             imageCreateSummary = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -474,14 +462,12 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImagesFromPredictionsRawResponse res = new org.openapis.openapi.models.operations.CreateImagesFromPredictionsRawResponse() {{
+        org.openapis.openapi.models.operations.CreateImagesFromPredictionsRawResponse res = new org.openapis.openapi.models.operations.CreateImagesFromPredictionsRawResponse(contentType, httpRes.statusCode()) {{
             imageCreateSummary = null;
             imageCreateSummary = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -541,14 +527,12 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImagesFromUrlsFormResponse res = new org.openapis.openapi.models.operations.CreateImagesFromUrlsFormResponse() {{
+        org.openapis.openapi.models.operations.CreateImagesFromUrlsFormResponse res = new org.openapis.openapi.models.operations.CreateImagesFromUrlsFormResponse(contentType, httpRes.statusCode()) {{
             imageCreateSummary = null;
             imageCreateSummary = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -608,14 +592,12 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImagesFromUrlsJsonResponse res = new org.openapis.openapi.models.operations.CreateImagesFromUrlsJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateImagesFromUrlsJsonResponse res = new org.openapis.openapi.models.operations.CreateImagesFromUrlsJsonResponse(contentType, httpRes.statusCode()) {{
             imageCreateSummary = null;
             imageCreateSummary = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -675,14 +657,12 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImagesFromUrlsRawResponse res = new org.openapis.openapi.models.operations.CreateImagesFromUrlsRawResponse() {{
+        org.openapis.openapi.models.operations.CreateImagesFromUrlsRawResponse res = new org.openapis.openapi.models.operations.CreateImagesFromUrlsRawResponse(contentType, httpRes.statusCode()) {{
             imageCreateSummary = null;
             imageCreateSummary = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -743,10 +723,8 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteImageTagsResponse res = new org.openapis.openapi.models.operations.DeleteImageTagsResponse() {{
+        org.openapis.openapi.models.operations.DeleteImageTagsResponse res = new org.openapis.openapi.models.operations.DeleteImageTagsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -789,10 +767,8 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteImagesResponse res = new org.openapis.openapi.models.operations.DeleteImagesResponse() {{
+        org.openapis.openapi.models.operations.DeleteImagesResponse res = new org.openapis.openapi.models.operations.DeleteImagesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -839,14 +815,12 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTaggedImagesResponse res = new org.openapis.openapi.models.operations.GetTaggedImagesResponse() {{
+        org.openapis.openapi.models.operations.GetTaggedImagesResponse res = new org.openapis.openapi.models.operations.GetTaggedImagesResponse(contentType, httpRes.statusCode()) {{
             images = null;
             images = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -909,14 +883,12 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUntaggedImagesResponse res = new org.openapis.openapi.models.operations.GetUntaggedImagesResponse() {{
+        org.openapis.openapi.models.operations.GetUntaggedImagesResponse res = new org.openapis.openapi.models.operations.GetUntaggedImagesResponse(contentType, httpRes.statusCode()) {{
             images = null;
             images = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -976,14 +948,12 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostImageTagsFormResponse res = new org.openapis.openapi.models.operations.PostImageTagsFormResponse() {{
+        org.openapis.openapi.models.operations.PostImageTagsFormResponse res = new org.openapis.openapi.models.operations.PostImageTagsFormResponse(contentType, httpRes.statusCode()) {{
             imageTagCreateSummary = null;
             imageTagCreateSummary = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1043,14 +1013,12 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostImageTagsJsonResponse res = new org.openapis.openapi.models.operations.PostImageTagsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostImageTagsJsonResponse res = new org.openapis.openapi.models.operations.PostImageTagsJsonResponse(contentType, httpRes.statusCode()) {{
             imageTagCreateSummary = null;
             imageTagCreateSummary = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1110,14 +1078,12 @@ public class ImageApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostImageTagsRawResponse res = new org.openapis.openapi.models.operations.PostImageTagsRawResponse() {{
+        org.openapis.openapi.models.operations.PostImageTagsRawResponse res = new org.openapis.openapi.models.operations.PostImageTagsRawResponse(contentType, httpRes.statusCode()) {{
             imageTagCreateSummary = null;
             imageTagCreateSummary = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

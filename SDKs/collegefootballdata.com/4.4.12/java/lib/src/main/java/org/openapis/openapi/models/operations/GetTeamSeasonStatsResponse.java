@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTeamSeasonStatsResponse {
     
     public String contentType;
+
     public GetTeamSeasonStatsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTeamSeasonStatsResponse {
     
     
     public Integer statusCode;
+
     public GetTeamSeasonStatsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetTeamSeasonStatsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTeamSeasonStatsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetTeamSeasonStatsResponse {
      */
     
     public org.openapis.openapi.models.shared.TeamSeasonStat[] teamSeasonStats;
+
     public GetTeamSeasonStatsResponse withTeamSeasonStats(org.openapis.openapi.models.shared.TeamSeasonStat[] teamSeasonStats) {
         this.teamSeasonStats = teamSeasonStats;
         return this;
     }
     
+    public GetTeamSeasonStatsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -22,6 +22,7 @@ public class RelationalDatabaseEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public RelationalDatabaseEvent withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class RelationalDatabaseEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventCategories")
     public String[] eventCategories;
+
     public RelationalDatabaseEvent withEventCategories(String[] eventCategories) {
         this.eventCategories = eventCategories;
         return this;
@@ -38,6 +40,7 @@ public class RelationalDatabaseEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public RelationalDatabaseEvent withMessage(String message) {
         this.message = message;
         return this;
@@ -46,9 +49,11 @@ public class RelationalDatabaseEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public RelationalDatabaseEvent withResource(String resource) {
         this.resource = resource;
         return this;
     }
     
+    public RelationalDatabaseEvent(){}
 }

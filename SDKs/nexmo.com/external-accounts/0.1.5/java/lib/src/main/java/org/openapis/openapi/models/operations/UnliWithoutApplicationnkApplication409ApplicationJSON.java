@@ -18,6 +18,7 @@ public class UnliWithoutApplicationnkApplication409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public UnliWithoutApplicationnkApplication409ApplicationJSON withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -26,6 +27,7 @@ public class UnliWithoutApplicationnkApplication409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public UnliWithoutApplicationnkApplication409ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
@@ -34,9 +36,11 @@ public class UnliWithoutApplicationnkApplication409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public UnliWithoutApplicationnkApplication409ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UnliWithoutApplicationnkApplication409ApplicationJSON(){}
 }

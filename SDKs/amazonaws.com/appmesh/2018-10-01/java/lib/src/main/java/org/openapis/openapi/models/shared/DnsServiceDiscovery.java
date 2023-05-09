@@ -15,9 +15,11 @@ public class DnsServiceDiscovery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public DnsServiceDiscovery withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public DnsServiceDiscovery(){}
 }

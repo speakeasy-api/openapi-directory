@@ -14,6 +14,7 @@ public class NewAttendancePeriodRequestAttendances {
      */
     @JsonProperty("break")
     public Integer break_;
+
     public NewAttendancePeriodRequestAttendances withBreak(Integer break_) {
         this.break_ = break_;
         return this;
@@ -24,6 +25,7 @@ public class NewAttendancePeriodRequestAttendances {
      */
     @JsonProperty("comment")
     public String comment;
+
     public NewAttendancePeriodRequestAttendances withComment(String comment) {
         this.comment = comment;
         return this;
@@ -35,6 +37,7 @@ public class NewAttendancePeriodRequestAttendances {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date")
     public LocalDate date;
+
     public NewAttendancePeriodRequestAttendances withDate(LocalDate date) {
         this.date = date;
         return this;
@@ -45,6 +48,7 @@ public class NewAttendancePeriodRequestAttendances {
      */
     @JsonProperty("employee")
     public Long employee;
+
     public NewAttendancePeriodRequestAttendances withEmployee(Long employee) {
         this.employee = employee;
         return this;
@@ -55,6 +59,7 @@ public class NewAttendancePeriodRequestAttendances {
      */
     @JsonProperty("end_time")
     public String endTime;
+
     public NewAttendancePeriodRequestAttendances withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -65,9 +70,18 @@ public class NewAttendancePeriodRequestAttendances {
      */
     @JsonProperty("start_time")
     public String startTime;
+
     public NewAttendancePeriodRequestAttendances withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public NewAttendancePeriodRequestAttendances(@JsonProperty("break") Integer break_, @JsonProperty("comment") String comment, @JsonProperty("date") LocalDate date, @JsonProperty("employee") Long employee, @JsonProperty("end_time") String endTime, @JsonProperty("start_time") String startTime) {
+        this.break_ = break_;
+        this.comment = comment;
+        this.date = date;
+        this.employee = employee;
+        this.endTime = endTime;
+        this.startTime = startTime;
+  }
 }

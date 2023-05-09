@@ -15,9 +15,11 @@ public class ModifyDBSnapshotResult {
      */
     
     public DBSnapshot dbSnapshot;
+
     public ModifyDBSnapshotResult withDBSnapshot(DBSnapshot dbSnapshot) {
         this.dbSnapshot = dbSnapshot;
         return this;
     }
     
+    public ModifyDBSnapshotResult(){}
 }

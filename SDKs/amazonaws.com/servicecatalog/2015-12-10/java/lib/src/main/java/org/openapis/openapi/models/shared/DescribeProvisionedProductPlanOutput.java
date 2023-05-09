@@ -15,6 +15,7 @@ public class DescribeProvisionedProductPlanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public DescribeProvisionedProductPlanOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,6 +24,7 @@ public class DescribeProvisionedProductPlanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProductPlanDetails")
     public ProvisionedProductPlanDetails provisionedProductPlanDetails;
+
     public DescribeProvisionedProductPlanOutput withProvisionedProductPlanDetails(ProvisionedProductPlanDetails provisionedProductPlanDetails) {
         this.provisionedProductPlanDetails = provisionedProductPlanDetails;
         return this;
@@ -31,9 +33,11 @@ public class DescribeProvisionedProductPlanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceChanges")
     public ResourceChange[] resourceChanges;
+
     public DescribeProvisionedProductPlanOutput withResourceChanges(ResourceChange[] resourceChanges) {
         this.resourceChanges = resourceChanges;
         return this;
     }
     
+    public DescribeProvisionedProductPlanOutput(){}
 }

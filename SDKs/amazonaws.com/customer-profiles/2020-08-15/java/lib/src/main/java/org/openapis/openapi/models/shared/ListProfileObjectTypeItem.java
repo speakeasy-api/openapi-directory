@@ -22,6 +22,7 @@ public class ListProfileObjectTypeItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public ListProfileObjectTypeItem withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class ListProfileObjectTypeItem {
     
     @JsonProperty("Description")
     public String description;
+
     public ListProfileObjectTypeItem withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +41,7 @@ public class ListProfileObjectTypeItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public ListProfileObjectTypeItem withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -46,6 +49,7 @@ public class ListProfileObjectTypeItem {
     
     @JsonProperty("ObjectTypeName")
     public String objectTypeName;
+
     public ListProfileObjectTypeItem withObjectTypeName(String objectTypeName) {
         this.objectTypeName = objectTypeName;
         return this;
@@ -54,9 +58,14 @@ public class ListProfileObjectTypeItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public ListProfileObjectTypeItem withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListProfileObjectTypeItem(@JsonProperty("Description") String description, @JsonProperty("ObjectTypeName") String objectTypeName) {
+        this.description = description;
+        this.objectTypeName = objectTypeName;
+  }
 }

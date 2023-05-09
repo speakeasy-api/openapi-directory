@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeNotificationRequest {
@@ -12,6 +13,7 @@ public class ChangeNotificationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ChangeNotificationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ChangeNotificationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ChangeNotificationRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class ChangeNotificationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
     public String skuId;
+
     public ChangeNotificationRequest withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
     }
     
+    public ChangeNotificationRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("skuId") String skuId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.skuId = skuId;
+  }
 }

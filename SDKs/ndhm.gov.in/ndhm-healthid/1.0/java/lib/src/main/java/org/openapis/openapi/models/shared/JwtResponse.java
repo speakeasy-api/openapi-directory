@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class JwtResponse {
     
     public String token;
+
     public JwtResponse withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public JwtResponse(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateInstanceExportTaskResultExportTaskInstanceExportDetails {
     
     public String instanceId;
+
     public CreateInstanceExportTaskResultExportTaskInstanceExportDetails withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -19,9 +20,11 @@ public class CreateInstanceExportTaskResultExportTaskInstanceExportDetails {
     
     
     public CreateInstanceExportTaskResultExportTaskInstanceExportDetailsTargetEnvironmentEnum targetEnvironment;
+
     public CreateInstanceExportTaskResultExportTaskInstanceExportDetails withTargetEnvironment(CreateInstanceExportTaskResultExportTaskInstanceExportDetailsTargetEnvironmentEnum targetEnvironment) {
         this.targetEnvironment = targetEnvironment;
         return this;
     }
     
+    public CreateInstanceExportTaskResultExportTaskInstanceExportDetails(){}
 }

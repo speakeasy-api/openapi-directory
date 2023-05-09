@@ -15,6 +15,7 @@ public class PortProbeAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blocked")
     public Boolean blocked;
+
     public PortProbeAction withBlocked(Boolean blocked) {
         this.blocked = blocked;
         return this;
@@ -23,9 +24,11 @@ public class PortProbeAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortProbeDetails")
     public PortProbeDetail[] portProbeDetails;
+
     public PortProbeAction withPortProbeDetails(PortProbeDetail[] portProbeDetails) {
         this.portProbeDetails = portProbeDetails;
         return this;
     }
     
+    public PortProbeAction(){}
 }

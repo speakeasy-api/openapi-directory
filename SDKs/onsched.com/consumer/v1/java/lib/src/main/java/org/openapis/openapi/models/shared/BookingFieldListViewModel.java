@@ -15,6 +15,7 @@ public class BookingFieldListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingFields")
     public BookingFieldViewModel[] bookingFields;
+
     public BookingFieldListViewModel withBookingFields(BookingFieldViewModel[] bookingFields) {
         this.bookingFields = bookingFields;
         return this;
@@ -23,6 +24,7 @@ public class BookingFieldListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public BookingFieldListViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -31,9 +33,11 @@ public class BookingFieldListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Integer total;
+
     public BookingFieldListViewModel withTotal(Integer total) {
         this.total = total;
         return this;
     }
     
+    public BookingFieldListViewModel(){}
 }

@@ -62,12 +62,10 @@ public class AuditLogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAuditlogsResponse res = new org.openapis.openapi.models.operations.GetAuditlogsResponse() {{
+        org.openapis.openapi.models.operations.GetAuditlogsResponse res = new org.openapis.openapi.models.operations.GetAuditlogsResponse(contentType, httpRes.statusCode()) {{
             auditLogItemModels = null;
             auditLogItemModels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,12 +108,10 @@ public class AuditLogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeletedSettingsResponse res = new org.openapis.openapi.models.operations.GetDeletedSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetDeletedSettingsResponse res = new org.openapis.openapi.models.operations.GetDeletedSettingsResponse(contentType, httpRes.statusCode()) {{
             settingModelHaljsons = null;
             settingModels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -165,12 +161,10 @@ public class AuditLogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationAuditlogsResponse res = new org.openapis.openapi.models.operations.GetOrganizationAuditlogsResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationAuditlogsResponse res = new org.openapis.openapi.models.operations.GetOrganizationAuditlogsResponse(contentType, httpRes.statusCode()) {{
             auditLogItemModels = null;
             auditLogItemModels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

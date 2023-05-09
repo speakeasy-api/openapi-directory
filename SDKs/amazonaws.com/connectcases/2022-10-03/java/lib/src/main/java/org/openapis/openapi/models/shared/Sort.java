@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Sort {
     @JsonProperty("fieldId")
     public String fieldId;
+
     public Sort withFieldId(String fieldId) {
         this.fieldId = fieldId;
         return this;
@@ -19,9 +20,14 @@ public class Sort {
     
     @JsonProperty("sortOrder")
     public OrderEnum sortOrder;
+
     public Sort withSortOrder(OrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public Sort(@JsonProperty("fieldId") String fieldId, @JsonProperty("sortOrder") OrderEnum sortOrder) {
+        this.fieldId = fieldId;
+        this.sortOrder = sortOrder;
+  }
 }

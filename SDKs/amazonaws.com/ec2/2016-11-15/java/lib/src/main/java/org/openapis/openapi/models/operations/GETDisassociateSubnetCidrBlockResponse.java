@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDisassociateSubnetCidrBlockResponse {
     
     public byte[] body;
+
     public GETDisassociateSubnetCidrBlockResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDisassociateSubnetCidrBlockResponse {
     
     
     public String contentType;
+
     public GETDisassociateSubnetCidrBlockResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDisassociateSubnetCidrBlockResponse {
     
     
     public Integer statusCode;
+
     public GETDisassociateSubnetCidrBlockResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDisassociateSubnetCidrBlockResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDisassociateSubnetCidrBlockResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDisassociateSubnetCidrBlockResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

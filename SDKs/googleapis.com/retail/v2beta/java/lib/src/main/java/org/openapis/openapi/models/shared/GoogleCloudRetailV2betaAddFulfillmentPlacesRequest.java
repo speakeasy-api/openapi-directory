@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaAddFulfillmentPlacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addTime")
     public String addTime;
+
     public GoogleCloudRetailV2betaAddFulfillmentPlacesRequest withAddTime(String addTime) {
         this.addTime = addTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2betaAddFulfillmentPlacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowMissing")
     public Boolean allowMissing;
+
     public GoogleCloudRetailV2betaAddFulfillmentPlacesRequest withAllowMissing(Boolean allowMissing) {
         this.allowMissing = allowMissing;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2betaAddFulfillmentPlacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeIds")
     public String[] placeIds;
+
     public GoogleCloudRetailV2betaAddFulfillmentPlacesRequest withPlaceIds(String[] placeIds) {
         this.placeIds = placeIds;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudRetailV2betaAddFulfillmentPlacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudRetailV2betaAddFulfillmentPlacesRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudRetailV2betaAddFulfillmentPlacesRequest(){}
 }

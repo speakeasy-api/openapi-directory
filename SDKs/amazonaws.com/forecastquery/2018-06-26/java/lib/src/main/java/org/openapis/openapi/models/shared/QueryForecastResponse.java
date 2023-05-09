@@ -15,9 +15,11 @@ public class QueryForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Forecast")
     public Forecast forecast;
+
     public QueryForecastResponse withForecast(Forecast forecast) {
         this.forecast = forecast;
         return this;
     }
     
+    public QueryForecastResponse(){}
 }

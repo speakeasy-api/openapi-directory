@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeviceRegistryEnrichActivity {
     @JsonProperty("attribute")
     public String attribute;
+
     public DeviceRegistryEnrichActivity withAttribute(String attribute) {
         this.attribute = attribute;
         return this;
@@ -21,6 +22,7 @@ public class DeviceRegistryEnrichActivity {
     
     @JsonProperty("name")
     public String name;
+
     public DeviceRegistryEnrichActivity withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +31,7 @@ public class DeviceRegistryEnrichActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public DeviceRegistryEnrichActivity withNext(String next) {
         this.next = next;
         return this;
@@ -36,6 +39,7 @@ public class DeviceRegistryEnrichActivity {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DeviceRegistryEnrichActivity withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -43,9 +47,16 @@ public class DeviceRegistryEnrichActivity {
     
     @JsonProperty("thingName")
     public String thingName;
+
     public DeviceRegistryEnrichActivity withThingName(String thingName) {
         this.thingName = thingName;
         return this;
     }
     
+    public DeviceRegistryEnrichActivity(@JsonProperty("attribute") String attribute, @JsonProperty("name") String name, @JsonProperty("roleArn") String roleArn, @JsonProperty("thingName") String thingName) {
+        this.attribute = attribute;
+        this.name = name;
+        this.roleArn = roleArn;
+        this.thingName = thingName;
+  }
 }

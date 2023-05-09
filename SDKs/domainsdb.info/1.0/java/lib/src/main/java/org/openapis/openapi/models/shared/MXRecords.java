@@ -15,6 +15,7 @@ public class MXRecords {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange")
     public String exchange;
+
     public MXRecords withExchange(String exchange) {
         this.exchange = exchange;
         return this;
@@ -23,9 +24,11 @@ public class MXRecords {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public MXRecords withPriority(Long priority) {
         this.priority = priority;
         return this;
     }
     
+    public MXRecords(){}
 }

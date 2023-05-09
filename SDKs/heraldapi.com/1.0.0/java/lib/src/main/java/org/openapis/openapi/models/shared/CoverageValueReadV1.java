@@ -18,6 +18,7 @@ public class CoverageValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affects_conditions")
     public Boolean affectsConditions;
+
     public CoverageValueReadV1 withAffectsConditions(Boolean affectsConditions) {
         this.affectsConditions = affectsConditions;
         return this;
@@ -31,6 +32,7 @@ public class CoverageValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("child_coverage_values")
     public CoverageValueReadV1[] childCoverageValues;
+
     public CoverageValueReadV1 withChildCoverageValues(CoverageValueReadV1[] childCoverageValues) {
         this.childCoverageValues = childCoverageValues;
         return this;
@@ -42,6 +44,7 @@ public class CoverageValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverage_parameter_id")
     public String coverageParameterId;
+
     public CoverageValueReadV1 withCoverageParameterId(String coverageParameterId) {
         this.coverageParameterId = coverageParameterId;
         return this;
@@ -53,6 +56,7 @@ public class CoverageValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creates_array")
     public Boolean createsArray;
+
     public CoverageValueReadV1 withCreatesArray(Boolean createsArray) {
         this.createsArray = createsArray;
         return this;
@@ -64,6 +68,7 @@ public class CoverageValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input_type")
     public CoverageValueReadV1InputTypeEnum inputType;
+
     public CoverageValueReadV1 withInputType(CoverageValueReadV1InputTypeEnum inputType) {
         this.inputType = inputType;
         return this;
@@ -76,6 +81,7 @@ public class CoverageValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public CoverageValueReadV1 withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -87,6 +93,7 @@ public class CoverageValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter_text")
     public ParameterTextV1 parameterText;
+
     public CoverageValueReadV1 withParameterText(ParameterTextV1 parameterText) {
         this.parameterText = parameterText;
         return this;
@@ -98,6 +105,7 @@ public class CoverageValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relevant_products")
     public String[] relevantProducts;
+
     public CoverageValueReadV1 withRelevantProducts(String[] relevantProducts) {
         this.relevantProducts = relevantProducts;
         return this;
@@ -109,6 +117,7 @@ public class CoverageValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required_for")
     public CoverageValueReadV1RequiredForEnum[] requiredFor;
+
     public CoverageValueReadV1 withRequiredFor(CoverageValueReadV1RequiredForEnum[] requiredFor) {
         this.requiredFor = requiredFor;
         return this;
@@ -120,6 +129,7 @@ public class CoverageValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public java.util.Map<String, Object> schema;
+
     public CoverageValueReadV1 withSchema(java.util.Map<String, Object> schema) {
         this.schema = schema;
         return this;
@@ -131,6 +141,7 @@ public class CoverageValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public CoverageValueReadV1 withText(String text) {
         this.text = text;
         return this;
@@ -142,9 +153,11 @@ public class CoverageValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public CoverageValueReadV1 withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public CoverageValueReadV1(){}
 }

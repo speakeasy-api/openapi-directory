@@ -66,10 +66,8 @@ public class CustomerServiceMetricTask {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCustomerServiceMetricTaskResponse res = new org.openapis.openapi.models.operations.CreateCustomerServiceMetricTaskResponse() {{
+        org.openapis.openapi.models.operations.CreateCustomerServiceMetricTaskResponse res = new org.openapis.openapi.models.operations.CreateCustomerServiceMetricTaskResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 500) {
@@ -100,11 +98,9 @@ public class CustomerServiceMetricTask {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomerServiceMetricTaskResponse res = new org.openapis.openapi.models.operations.GetCustomerServiceMetricTaskResponse() {{
+        org.openapis.openapi.models.operations.GetCustomerServiceMetricTaskResponse res = new org.openapis.openapi.models.operations.GetCustomerServiceMetricTaskResponse(contentType, httpRes.statusCode()) {{
             serviceMetricsTask = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class CustomerServiceMetricTask {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomerServiceMetricTasksResponse res = new org.openapis.openapi.models.operations.GetCustomerServiceMetricTasksResponse() {{
+        org.openapis.openapi.models.operations.GetCustomerServiceMetricTasksResponse res = new org.openapis.openapi.models.operations.GetCustomerServiceMetricTasksResponse(contentType, httpRes.statusCode()) {{
             customerServiceMetricTaskCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

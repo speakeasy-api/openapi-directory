@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFaqResponse {
@@ -12,6 +13,7 @@ public class CreateFaqResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateFaqResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateFaqResponse {
      */
     
     public Object conflictException;
+
     public CreateFaqResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateFaqResponse {
     
     
     public String contentType;
+
     public CreateFaqResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateFaqResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFaqResponse createFaqResponse;
+
     public CreateFaqResponse withCreateFaqResponse(org.openapis.openapi.models.shared.CreateFaqResponse createFaqResponse) {
         this.createFaqResponse = createFaqResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateFaqResponse {
      */
     
     public Object internalServerException;
+
     public CreateFaqResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateFaqResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateFaqResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateFaqResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateFaqResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateFaqResponse {
     
     
     public Integer statusCode;
+
     public CreateFaqResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateFaqResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFaqResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateFaqResponse {
      */
     
     public Object throttlingException;
+
     public CreateFaqResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateFaqResponse {
      */
     
     public Object validationException;
+
     public CreateFaqResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateFaqResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

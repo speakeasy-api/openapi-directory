@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyEntitiesCharactersDestinyCharacterProgressionComponentSeasonalArtifact {
     
     public Long artifactHash;
+
     public DestinyEntitiesCharactersDestinyCharacterProgressionComponentSeasonalArtifact withArtifactHash(Long artifactHash) {
         this.artifactHash = artifactHash;
         return this;
@@ -19,6 +20,7 @@ public class DestinyEntitiesCharactersDestinyCharacterProgressionComponentSeason
     
     
     public Integer pointsUsed;
+
     public DestinyEntitiesCharactersDestinyCharacterProgressionComponentSeasonalArtifact withPointsUsed(Integer pointsUsed) {
         this.pointsUsed = pointsUsed;
         return this;
@@ -26,6 +28,7 @@ public class DestinyEntitiesCharactersDestinyCharacterProgressionComponentSeason
     
     
     public Integer resetCount;
+
     public DestinyEntitiesCharactersDestinyCharacterProgressionComponentSeasonalArtifact withResetCount(Integer resetCount) {
         this.resetCount = resetCount;
         return this;
@@ -33,9 +36,11 @@ public class DestinyEntitiesCharactersDestinyCharacterProgressionComponentSeason
     
     
     public DestinyArtifactsDestinyArtifactTier[] tiers;
+
     public DestinyEntitiesCharactersDestinyCharacterProgressionComponentSeasonalArtifact withTiers(DestinyArtifactsDestinyArtifactTier[] tiers) {
         this.tiers = tiers;
         return this;
     }
     
+    public DestinyEntitiesCharactersDestinyCharacterProgressionComponentSeasonalArtifact(){}
 }

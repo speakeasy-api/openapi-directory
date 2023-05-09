@@ -15,9 +15,11 @@ public class VpcInfoIpv6CidrBlockSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv6CidrBlock")
     public String ipv6CidrBlock;
+
     public VpcInfoIpv6CidrBlockSetDetails withIpv6CidrBlock(String ipv6CidrBlock) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         return this;
     }
     
+    public VpcInfoIpv6CidrBlockSetDetails(){}
 }

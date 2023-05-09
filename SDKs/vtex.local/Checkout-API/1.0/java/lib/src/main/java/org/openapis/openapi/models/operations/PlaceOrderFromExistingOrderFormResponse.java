@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PlaceOrderFromExistingOrderFormResponse {
     
     public String contentType;
+
     public PlaceOrderFromExistingOrderFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PlaceOrderFromExistingOrderFormResponse {
     
     
     public java.util.Map<String, Object> placeOrderFromExistingOrderForm200ApplicationJSONObject;
+
     public PlaceOrderFromExistingOrderFormResponse withPlaceOrderFromExistingOrderForm200ApplicationJSONObject(java.util.Map<String, Object> placeOrderFromExistingOrderForm200ApplicationJSONObject) {
         this.placeOrderFromExistingOrderForm200ApplicationJSONObject = placeOrderFromExistingOrderForm200ApplicationJSONObject;
         return this;
@@ -23,6 +26,7 @@ public class PlaceOrderFromExistingOrderFormResponse {
     
     
     public Integer statusCode;
+
     public PlaceOrderFromExistingOrderFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class PlaceOrderFromExistingOrderFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PlaceOrderFromExistingOrderFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PlaceOrderFromExistingOrderFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

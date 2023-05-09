@@ -15,6 +15,7 @@ public class UpdatePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobExecutionTimeoutMinutes")
     public Long jobExecutionTimeoutMinutes;
+
     public UpdatePolicy withJobExecutionTimeoutMinutes(Long jobExecutionTimeoutMinutes) {
         this.jobExecutionTimeoutMinutes = jobExecutionTimeoutMinutes;
         return this;
@@ -23,9 +24,11 @@ public class UpdatePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminateJobsOnUpdate")
     public Boolean terminateJobsOnUpdate;
+
     public UpdatePolicy withTerminateJobsOnUpdate(Boolean terminateJobsOnUpdate) {
         this.terminateJobsOnUpdate = terminateJobsOnUpdate;
         return this;
     }
     
+    public UpdatePolicy(){}
 }

@@ -18,9 +18,11 @@ public class TeamAddUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public TeamAddUserRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public TeamAddUserRequest(){}
 }

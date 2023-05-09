@@ -18,6 +18,7 @@ public class GdataDiffUploadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectVersion")
     public String objectVersion;
+
     public GdataDiffUploadResponse withObjectVersion(String objectVersion) {
         this.objectVersion = objectVersion;
         return this;
@@ -29,9 +30,11 @@ public class GdataDiffUploadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalObject")
     public GdataCompositeMedia originalObject;
+
     public GdataDiffUploadResponse withOriginalObject(GdataCompositeMedia originalObject) {
         this.originalObject = originalObject;
         return this;
     }
     
+    public GdataDiffUploadResponse(){}
 }

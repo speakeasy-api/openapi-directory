@@ -22,6 +22,7 @@ public class Operation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateDate")
     public OffsetDateTime createDate;
+
     public Operation withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -30,6 +31,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public Operation withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -38,6 +40,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public Operation withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -46,6 +49,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Operation withId(String id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public OperationStatusEnum status;
+
     public Operation withStatus(OperationStatusEnum status) {
         this.status = status;
         return this;
@@ -62,6 +67,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public java.util.Map<String, String> targets;
+
     public Operation withTargets(java.util.Map<String, String> targets) {
         this.targets = targets;
         return this;
@@ -70,6 +76,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public OperationTypeEnum type;
+
     public Operation withType(OperationTypeEnum type) {
         this.type = type;
         return this;
@@ -80,9 +87,11 @@ public class Operation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateDate")
     public OffsetDateTime updateDate;
+
     public Operation withUpdateDate(OffsetDateTime updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public Operation(){}
 }

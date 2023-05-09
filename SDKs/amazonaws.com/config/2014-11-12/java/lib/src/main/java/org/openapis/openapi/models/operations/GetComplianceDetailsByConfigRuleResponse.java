@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetComplianceDetailsByConfigRuleResponse {
     
     public String contentType;
+
     public GetComplianceDetailsByConfigRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetComplianceDetailsByConfigRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.GetComplianceDetailsByConfigRuleResponse getComplianceDetailsByConfigRuleResponse;
+
     public GetComplianceDetailsByConfigRuleResponse withGetComplianceDetailsByConfigRuleResponse(org.openapis.openapi.models.shared.GetComplianceDetailsByConfigRuleResponse getComplianceDetailsByConfigRuleResponse) {
         this.getComplianceDetailsByConfigRuleResponse = getComplianceDetailsByConfigRuleResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetComplianceDetailsByConfigRuleResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetComplianceDetailsByConfigRuleResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class GetComplianceDetailsByConfigRuleResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetComplianceDetailsByConfigRuleResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class GetComplianceDetailsByConfigRuleResponse {
      */
     
     public Object noSuchConfigRuleException;
+
     public GetComplianceDetailsByConfigRuleResponse withNoSuchConfigRuleException(Object noSuchConfigRuleException) {
         this.noSuchConfigRuleException = noSuchConfigRuleException;
         return this;
@@ -56,6 +62,7 @@ public class GetComplianceDetailsByConfigRuleResponse {
     
     
     public Integer statusCode;
+
     public GetComplianceDetailsByConfigRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetComplianceDetailsByConfigRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetComplianceDetailsByConfigRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetComplianceDetailsByConfigRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

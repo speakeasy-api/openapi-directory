@@ -12,6 +12,7 @@ public class ControllersPackageSystemItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available_evra")
     public String availableEvra;
+
     public ControllersPackageSystemItem withAvailableEvra(String availableEvra) {
         this.availableEvra = availableEvra;
         return this;
@@ -20,6 +21,7 @@ public class ControllersPackageSystemItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public ControllersPackageSystemItem withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -28,6 +30,7 @@ public class ControllersPackageSystemItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ControllersPackageSystemItem withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class ControllersPackageSystemItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installed_evra")
     public String installedEvra;
+
     public ControllersPackageSystemItem withInstalledEvra(String installedEvra) {
         this.installedEvra = installedEvra;
         return this;
@@ -44,9 +48,11 @@ public class ControllersPackageSystemItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatable")
     public Boolean updatable;
+
     public ControllersPackageSystemItem withUpdatable(Boolean updatable) {
         this.updatable = updatable;
         return this;
     }
     
+    public ControllersPackageSystemItem(){}
 }

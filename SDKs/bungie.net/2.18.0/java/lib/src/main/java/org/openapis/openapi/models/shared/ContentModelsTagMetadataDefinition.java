@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ContentModelsTagMetadataDefinition {
     
     public String datatype;
+
     public ContentModelsTagMetadataDefinition withDatatype(String datatype) {
         this.datatype = datatype;
         return this;
@@ -16,6 +17,7 @@ public class ContentModelsTagMetadataDefinition {
     
     
     public String description;
+
     public ContentModelsTagMetadataDefinition withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class ContentModelsTagMetadataDefinition {
     
     
     public Boolean isRequired;
+
     public ContentModelsTagMetadataDefinition withIsRequired(Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
@@ -30,6 +33,7 @@ public class ContentModelsTagMetadataDefinition {
     
     
     public ContentModelsTagMetadataItem[] items;
+
     public ContentModelsTagMetadataDefinition withItems(ContentModelsTagMetadataItem[] items) {
         this.items = items;
         return this;
@@ -37,6 +41,7 @@ public class ContentModelsTagMetadataDefinition {
     
     
     public String name;
+
     public ContentModelsTagMetadataDefinition withName(String name) {
         this.name = name;
         return this;
@@ -44,9 +49,11 @@ public class ContentModelsTagMetadataDefinition {
     
     
     public Integer order;
+
     public ContentModelsTagMetadataDefinition withOrder(Integer order) {
         this.order = order;
         return this;
     }
     
+    public ContentModelsTagMetadataDefinition(){}
 }

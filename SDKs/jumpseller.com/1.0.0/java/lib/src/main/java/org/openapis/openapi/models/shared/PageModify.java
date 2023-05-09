@@ -15,9 +15,11 @@ public class PageModify {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public PageModifyFields page;
+
     public PageModify withPage(PageModifyFields page) {
         this.page = page;
         return this;
     }
     
+    public PageModify(){}
 }

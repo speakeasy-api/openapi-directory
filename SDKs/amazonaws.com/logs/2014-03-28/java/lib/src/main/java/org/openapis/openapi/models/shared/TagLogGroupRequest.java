@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TagLogGroupRequest {
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public TagLogGroupRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -19,9 +20,14 @@ public class TagLogGroupRequest {
     
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public TagLogGroupRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagLogGroupRequest(@JsonProperty("logGroupName") String logGroupName, @JsonProperty("tags") java.util.Map<String, String> tags) {
+        this.logGroupName = logGroupName;
+        this.tags = tags;
+  }
 }

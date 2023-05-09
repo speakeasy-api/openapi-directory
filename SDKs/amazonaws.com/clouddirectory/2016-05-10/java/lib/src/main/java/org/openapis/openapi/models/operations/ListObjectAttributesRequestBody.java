@@ -15,6 +15,7 @@ public class ListObjectAttributesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FacetFilter")
     public ListObjectAttributesRequestBodyFacetFilter facetFilter;
+
     public ListObjectAttributesRequestBody withFacetFilter(ListObjectAttributesRequestBodyFacetFilter facetFilter) {
         this.facetFilter = facetFilter;
         return this;
@@ -26,6 +27,7 @@ public class ListObjectAttributesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListObjectAttributesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class ListObjectAttributesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListObjectAttributesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -47,9 +50,13 @@ public class ListObjectAttributesRequestBody {
      */
     @JsonProperty("ObjectReference")
     public ListObjectAttributesRequestBodyObjectReference objectReference;
+
     public ListObjectAttributesRequestBody withObjectReference(ListObjectAttributesRequestBodyObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
     }
     
+    public ListObjectAttributesRequestBody(@JsonProperty("ObjectReference") ListObjectAttributesRequestBodyObjectReference objectReference) {
+        this.objectReference = objectReference;
+  }
 }

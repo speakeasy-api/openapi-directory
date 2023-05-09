@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVpcEndpointServicePayerResponsibilityRequest {
     
     public Boolean dryRun;
+
     public ModifyVpcEndpointServicePayerResponsibilityRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVpcEndpointServicePayerResponsibilityRequest {
     
     
     public PayerResponsibilityEnum payerResponsibility;
+
     public ModifyVpcEndpointServicePayerResponsibilityRequest withPayerResponsibility(PayerResponsibilityEnum payerResponsibility) {
         this.payerResponsibility = payerResponsibility;
         return this;
@@ -23,9 +25,14 @@ public class ModifyVpcEndpointServicePayerResponsibilityRequest {
     
     
     public String serviceId;
+
     public ModifyVpcEndpointServicePayerResponsibilityRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public ModifyVpcEndpointServicePayerResponsibilityRequest(@JsonProperty("PayerResponsibility") PayerResponsibilityEnum payerResponsibility, @JsonProperty("ServiceId") String serviceId) {
+        this.payerResponsibility = payerResponsibility;
+        this.serviceId = serviceId;
+  }
 }

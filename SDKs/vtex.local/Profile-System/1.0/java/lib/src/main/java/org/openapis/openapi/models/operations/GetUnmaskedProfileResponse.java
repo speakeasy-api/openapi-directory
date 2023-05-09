@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUnmaskedProfileResponse {
     
     public String contentType;
+
     public GetUnmaskedProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUnmaskedProfileResponse {
      */
     
     public Object[] getUnmaskedProfile200ApplicationJSONAnies;
+
     public GetUnmaskedProfileResponse withGetUnmaskedProfile200ApplicationJSONAnies(Object[] getUnmaskedProfile200ApplicationJSONAnies) {
         this.getUnmaskedProfile200ApplicationJSONAnies = getUnmaskedProfile200ApplicationJSONAnies;
         return this;
@@ -26,6 +29,7 @@ public class GetUnmaskedProfileResponse {
     
     
     public Integer statusCode;
+
     public GetUnmaskedProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetUnmaskedProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUnmaskedProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetUnmaskedProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

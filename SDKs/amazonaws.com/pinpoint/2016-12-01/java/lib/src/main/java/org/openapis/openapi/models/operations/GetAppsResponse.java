@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAppsResponse {
@@ -12,6 +13,7 @@ public class GetAppsResponse {
      */
     
     public Object badRequestException;
+
     public GetAppsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetAppsResponse {
     
     
     public String contentType;
+
     public GetAppsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAppsResponse {
      */
     
     public Object forbiddenException;
+
     public GetAppsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetAppsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAppsResponse getAppsResponse;
+
     public GetAppsResponse withGetAppsResponse(org.openapis.openapi.models.shared.GetAppsResponse getAppsResponse) {
         this.getAppsResponse = getAppsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetAppsResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetAppsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetAppsResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetAppsResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetAppsResponse {
      */
     
     public Object notFoundException;
+
     public GetAppsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetAppsResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetAppsResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetAppsResponse {
     
     
     public Integer statusCode;
+
     public GetAppsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetAppsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAppsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetAppsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetAppsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetAppsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ public class GETRevisionsCountUsingGET200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisions")
     public Long revisions;
+
     public GETRevisionsCountUsingGET200ApplicationJSONData withRevisions(Long revisions) {
         this.revisions = revisions;
         return this;
     }
     
+    public GETRevisionsCountUsingGET200ApplicationJSONData(){}
 }

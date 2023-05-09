@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DocumentSuggesterOptions - Options for a search suggester.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DocumentSuggesterOptions {
     
     public SuggesterFuzzyMatchingEnum fuzzyMatching;
+
     public DocumentSuggesterOptions withFuzzyMatching(SuggesterFuzzyMatchingEnum fuzzyMatching) {
         this.fuzzyMatching = fuzzyMatching;
         return this;
@@ -19,6 +20,7 @@ public class DocumentSuggesterOptions {
     
     
     public String sortExpression;
+
     public DocumentSuggesterOptions withSortExpression(String sortExpression) {
         this.sortExpression = sortExpression;
         return this;
@@ -26,9 +28,13 @@ public class DocumentSuggesterOptions {
     
     
     public String sourceField;
+
     public DocumentSuggesterOptions withSourceField(String sourceField) {
         this.sourceField = sourceField;
         return this;
     }
     
+    public DocumentSuggesterOptions(@JsonProperty("SourceField") String sourceField) {
+        this.sourceField = sourceField;
+  }
 }

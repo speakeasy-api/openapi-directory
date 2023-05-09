@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ConnectionPoolConfiguration {
     
     public Long connectionBorrowTimeout;
+
     public ConnectionPoolConfiguration withConnectionBorrowTimeout(Long connectionBorrowTimeout) {
         this.connectionBorrowTimeout = connectionBorrowTimeout;
         return this;
@@ -19,6 +20,7 @@ public class ConnectionPoolConfiguration {
     
     
     public String initQuery;
+
     public ConnectionPoolConfiguration withInitQuery(String initQuery) {
         this.initQuery = initQuery;
         return this;
@@ -26,6 +28,7 @@ public class ConnectionPoolConfiguration {
     
     
     public Long maxConnectionsPercent;
+
     public ConnectionPoolConfiguration withMaxConnectionsPercent(Long maxConnectionsPercent) {
         this.maxConnectionsPercent = maxConnectionsPercent;
         return this;
@@ -33,6 +36,7 @@ public class ConnectionPoolConfiguration {
     
     
     public Long maxIdleConnectionsPercent;
+
     public ConnectionPoolConfiguration withMaxIdleConnectionsPercent(Long maxIdleConnectionsPercent) {
         this.maxIdleConnectionsPercent = maxIdleConnectionsPercent;
         return this;
@@ -40,9 +44,11 @@ public class ConnectionPoolConfiguration {
     
     
     public String[] sessionPinningFilters;
+
     public ConnectionPoolConfiguration withSessionPinningFilters(String[] sessionPinningFilters) {
         this.sessionPinningFilters = sessionPinningFilters;
         return this;
     }
     
+    public ConnectionPoolConfiguration(){}
 }

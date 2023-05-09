@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCostCategoryDefinitionResponse {
     
     public String contentType;
+
     public DeleteCostCategoryDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCostCategoryDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteCostCategoryDefinitionResponse deleteCostCategoryDefinitionResponse;
+
     public DeleteCostCategoryDefinitionResponse withDeleteCostCategoryDefinitionResponse(org.openapis.openapi.models.shared.DeleteCostCategoryDefinitionResponse deleteCostCategoryDefinitionResponse) {
         this.deleteCostCategoryDefinitionResponse = deleteCostCategoryDefinitionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCostCategoryDefinitionResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteCostCategoryDefinitionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCostCategoryDefinitionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteCostCategoryDefinitionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteCostCategoryDefinitionResponse {
     
     
     public Integer statusCode;
+
     public DeleteCostCategoryDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteCostCategoryDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCostCategoryDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteCostCategoryDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

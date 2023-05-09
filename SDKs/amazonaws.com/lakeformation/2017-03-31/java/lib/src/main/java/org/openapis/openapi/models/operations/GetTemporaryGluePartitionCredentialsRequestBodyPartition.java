@@ -15,9 +15,11 @@ public class GetTemporaryGluePartitionCredentialsRequestBodyPartition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public GetTemporaryGluePartitionCredentialsRequestBodyPartition withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public GetTemporaryGluePartitionCredentialsRequestBodyPartition(){}
 }

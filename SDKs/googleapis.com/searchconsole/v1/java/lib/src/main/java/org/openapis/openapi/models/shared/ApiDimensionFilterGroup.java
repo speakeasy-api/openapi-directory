@@ -15,6 +15,7 @@ public class ApiDimensionFilterGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public ApiDimensionFilter[] filters;
+
     public ApiDimensionFilterGroup withFilters(ApiDimensionFilter[] filters) {
         this.filters = filters;
         return this;
@@ -23,9 +24,11 @@ public class ApiDimensionFilterGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupType")
     public ApiDimensionFilterGroupGroupTypeEnum groupType;
+
     public ApiDimensionFilterGroup withGroupType(ApiDimensionFilterGroupGroupTypeEnum groupType) {
         this.groupType = groupType;
         return this;
     }
     
+    public ApiDimensionFilterGroup(){}
 }

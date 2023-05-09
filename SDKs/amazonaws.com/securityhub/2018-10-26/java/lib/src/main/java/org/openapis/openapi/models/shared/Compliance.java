@@ -15,6 +15,7 @@ public class Compliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociatedStandards")
     public AssociatedStandard[] associatedStandards;
+
     public Compliance withAssociatedStandards(AssociatedStandard[] associatedStandards) {
         this.associatedStandards = associatedStandards;
         return this;
@@ -23,6 +24,7 @@ public class Compliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelatedRequirements")
     public String[] relatedRequirements;
+
     public Compliance withRelatedRequirements(String[] relatedRequirements) {
         this.relatedRequirements = relatedRequirements;
         return this;
@@ -31,6 +33,7 @@ public class Compliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityControlId")
     public String securityControlId;
+
     public Compliance withSecurityControlId(String securityControlId) {
         this.securityControlId = securityControlId;
         return this;
@@ -39,6 +42,7 @@ public class Compliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ComplianceStatusEnum status;
+
     public Compliance withStatus(ComplianceStatusEnum status) {
         this.status = status;
         return this;
@@ -47,9 +51,11 @@ public class Compliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusReasons")
     public StatusReason[] statusReasons;
+
     public Compliance withStatusReasons(StatusReason[] statusReasons) {
         this.statusReasons = statusReasons;
         return this;
     }
     
+    public Compliance(){}
 }

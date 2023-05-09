@@ -15,9 +15,11 @@ public class EnableImportFindingsForProductResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductSubscriptionArn")
     public String productSubscriptionArn;
+
     public EnableImportFindingsForProductResponse withProductSubscriptionArn(String productSubscriptionArn) {
         this.productSubscriptionArn = productSubscriptionArn;
         return this;
     }
     
+    public EnableImportFindingsForProductResponse(){}
 }

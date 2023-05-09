@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeVpcIngressConnectionResponse {
     
     public String contentType;
+
     public DescribeVpcIngressConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeVpcIngressConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeVpcIngressConnectionResponse describeVpcIngressConnectionResponse;
+
     public DescribeVpcIngressConnectionResponse withDescribeVpcIngressConnectionResponse(org.openapis.openapi.models.shared.DescribeVpcIngressConnectionResponse describeVpcIngressConnectionResponse) {
         this.describeVpcIngressConnectionResponse = describeVpcIngressConnectionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeVpcIngressConnectionResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DescribeVpcIngressConnectionResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeVpcIngressConnectionResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeVpcIngressConnectionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeVpcIngressConnectionResponse {
     
     
     public Integer statusCode;
+
     public DescribeVpcIngressConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeVpcIngressConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeVpcIngressConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeVpcIngressConnectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeVpcIngressConnectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeVpcIngressConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

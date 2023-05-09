@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1Annotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationMetadata")
     public GoogleCloudDatalabelingV1beta1AnnotationMetadata annotationMetadata;
+
     public GoogleCloudDatalabelingV1beta1Annotation withAnnotationMetadata(GoogleCloudDatalabelingV1beta1AnnotationMetadata annotationMetadata) {
         this.annotationMetadata = annotationMetadata;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatalabelingV1beta1Annotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSentiment")
     public GoogleCloudDatalabelingV1beta1AnnotationAnnotationSentimentEnum annotationSentiment;
+
     public GoogleCloudDatalabelingV1beta1Annotation withAnnotationSentiment(GoogleCloudDatalabelingV1beta1AnnotationAnnotationSentimentEnum annotationSentiment) {
         this.annotationSentiment = annotationSentiment;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatalabelingV1beta1Annotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSource")
     public GoogleCloudDatalabelingV1beta1AnnotationAnnotationSourceEnum annotationSource;
+
     public GoogleCloudDatalabelingV1beta1Annotation withAnnotationSource(GoogleCloudDatalabelingV1beta1AnnotationAnnotationSourceEnum annotationSource) {
         this.annotationSource = annotationSource;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatalabelingV1beta1Annotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationValue")
     public GoogleCloudDatalabelingV1beta1AnnotationValue annotationValue;
+
     public GoogleCloudDatalabelingV1beta1Annotation withAnnotationValue(GoogleCloudDatalabelingV1beta1AnnotationValue annotationValue) {
         this.annotationValue = annotationValue;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDatalabelingV1beta1Annotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDatalabelingV1beta1Annotation withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1Annotation(){}
 }

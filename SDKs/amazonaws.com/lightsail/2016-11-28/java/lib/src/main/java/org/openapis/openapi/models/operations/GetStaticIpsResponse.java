@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStaticIpsResponse {
@@ -12,6 +13,7 @@ public class GetStaticIpsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetStaticIpsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetStaticIpsResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetStaticIpsResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetStaticIpsResponse {
     
     
     public String contentType;
+
     public GetStaticIpsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetStaticIpsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetStaticIpsResult getStaticIpsResult;
+
     public GetStaticIpsResponse withGetStaticIpsResult(org.openapis.openapi.models.shared.GetStaticIpsResult getStaticIpsResult) {
         this.getStaticIpsResult = getStaticIpsResult;
         return this;
@@ -49,6 +54,7 @@ public class GetStaticIpsResponse {
      */
     
     public Object invalidInputException;
+
     public GetStaticIpsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetStaticIpsResponse {
      */
     
     public Object notFoundException;
+
     public GetStaticIpsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetStaticIpsResponse {
      */
     
     public Object operationFailureException;
+
     public GetStaticIpsResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetStaticIpsResponse {
      */
     
     public Object serviceException;
+
     public GetStaticIpsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetStaticIpsResponse {
     
     
     public Integer statusCode;
+
     public GetStaticIpsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetStaticIpsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStaticIpsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetStaticIpsResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetStaticIpsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetStaticIpsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class ListTeamMemberWagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public ListTeamMemberWagesResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -31,6 +32,7 @@ public class ListTeamMemberWagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListTeamMemberWagesResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -42,9 +44,11 @@ public class ListTeamMemberWagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_member_wages")
     public TeamMemberWage[] teamMemberWages;
+
     public ListTeamMemberWagesResponse withTeamMemberWages(TeamMemberWage[] teamMemberWages) {
         this.teamMemberWages = teamMemberWages;
         return this;
     }
     
+    public ListTeamMemberWagesResponse(){}
 }

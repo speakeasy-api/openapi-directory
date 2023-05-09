@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ForumGetPostsThreadedPagedResponse {
     
     public byte[] body;
+
     public ForumGetPostsThreadedPagedResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ForumGetPostsThreadedPagedResponse {
     
     
     public String contentType;
+
     public ForumGetPostsThreadedPagedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ForumGetPostsThreadedPagedResponse {
     
     
     public Integer statusCode;
+
     public ForumGetPostsThreadedPagedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ForumGetPostsThreadedPagedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ForumGetPostsThreadedPagedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ForumGetPostsThreadedPagedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

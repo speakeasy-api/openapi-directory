@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Content {
     @JsonProperty("address")
     public String address;
+
     public Content withAddress(String address) {
         this.address = address;
         return this;
@@ -16,6 +17,7 @@ public class Content {
     
     @JsonProperty("crypto")
     public Crypto crypto;
+
     public Content withCrypto(Crypto crypto) {
         this.crypto = crypto;
         return this;
@@ -23,6 +25,7 @@ public class Content {
     
     @JsonProperty("id")
     public String id;
+
     public Content withId(String id) {
         this.id = id;
         return this;
@@ -30,9 +33,16 @@ public class Content {
     
     @JsonProperty("version")
     public Integer version;
+
     public Content withVersion(Integer version) {
         this.version = version;
         return this;
     }
     
+    public Content(@JsonProperty("address") String address, @JsonProperty("crypto") Crypto crypto, @JsonProperty("id") String id, @JsonProperty("version") Integer version) {
+        this.address = address;
+        this.crypto = crypto;
+        this.id = id;
+        this.version = version;
+  }
 }

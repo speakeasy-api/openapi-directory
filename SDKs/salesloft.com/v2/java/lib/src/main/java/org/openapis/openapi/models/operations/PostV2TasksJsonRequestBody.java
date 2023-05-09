@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2TasksJsonRequestBody {
@@ -12,6 +13,7 @@ public class PostV2TasksJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=current_state")
     public String currentState;
+
     public PostV2TasksJsonRequestBody withCurrentState(String currentState) {
         this.currentState = currentState;
         return this;
@@ -22,6 +24,7 @@ public class PostV2TasksJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=description")
     public String description;
+
     public PostV2TasksJsonRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +35,7 @@ public class PostV2TasksJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=due_date")
     public String dueDate;
+
     public PostV2TasksJsonRequestBody withDueDate(String dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -42,6 +46,7 @@ public class PostV2TasksJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=idempotency_key")
     public String idempotencyKey;
+
     public PostV2TasksJsonRequestBody withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -52,6 +57,7 @@ public class PostV2TasksJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=person_id")
     public String personId;
+
     public PostV2TasksJsonRequestBody withPersonId(String personId) {
         this.personId = personId;
         return this;
@@ -62,6 +68,7 @@ public class PostV2TasksJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=remind_at")
     public String remindAt;
+
     public PostV2TasksJsonRequestBody withRemindAt(String remindAt) {
         this.remindAt = remindAt;
         return this;
@@ -72,6 +79,7 @@ public class PostV2TasksJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=subject")
     public String subject;
+
     public PostV2TasksJsonRequestBody withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -82,6 +90,7 @@ public class PostV2TasksJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=task_type")
     public String taskType;
+
     public PostV2TasksJsonRequestBody withTaskType(String taskType) {
         this.taskType = taskType;
         return this;
@@ -92,9 +101,18 @@ public class PostV2TasksJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=user_id")
     public Long userId;
+
     public PostV2TasksJsonRequestBody withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public PostV2TasksJsonRequestBody(@JsonProperty("current_state") String currentState, @JsonProperty("due_date") String dueDate, @JsonProperty("person_id") String personId, @JsonProperty("subject") String subject, @JsonProperty("task_type") String taskType, @JsonProperty("user_id") Long userId) {
+        this.currentState = currentState;
+        this.dueDate = dueDate;
+        this.personId = personId;
+        this.subject = subject;
+        this.taskType = taskType;
+        this.userId = userId;
+  }
 }

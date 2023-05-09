@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEntitiesResponse {
@@ -12,6 +13,7 @@ public class ListEntitiesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListEntitiesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListEntitiesResponse {
     
     
     public String contentType;
+
     public ListEntitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListEntitiesResponse {
      */
     
     public Object internalServiceException;
+
     public ListEntitiesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListEntitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEntitiesResponse listEntitiesResponse;
+
     public ListEntitiesResponse withListEntitiesResponse(org.openapis.openapi.models.shared.ListEntitiesResponse listEntitiesResponse) {
         this.listEntitiesResponse = listEntitiesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListEntitiesResponse {
     
     
     public Integer statusCode;
+
     public ListEntitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListEntitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEntitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListEntitiesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListEntitiesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListEntitiesResponse {
      */
     
     public Object throttlingException;
+
     public ListEntitiesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListEntitiesResponse {
      */
     
     public Object validationException;
+
     public ListEntitiesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListEntitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

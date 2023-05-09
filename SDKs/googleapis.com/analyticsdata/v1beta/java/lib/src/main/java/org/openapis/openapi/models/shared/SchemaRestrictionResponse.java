@@ -18,9 +18,11 @@ public class SchemaRestrictionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeMetricRestrictions")
     public ActiveMetricRestriction[] activeMetricRestrictions;
+
     public SchemaRestrictionResponse withActiveMetricRestrictions(ActiveMetricRestriction[] activeMetricRestrictions) {
         this.activeMetricRestrictions = activeMetricRestrictions;
         return this;
     }
     
+    public SchemaRestrictionResponse(){}
 }

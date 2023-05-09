@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Cards - A User's credit card details
@@ -15,6 +15,7 @@ public class Cards {
      */
     
     public Card[] cards;
+
     public Cards withCards(Card[] cards) {
         this.cards = cards;
         return this;
@@ -25,9 +26,14 @@ public class Cards {
      */
     
     public String userId;
+
     public Cards withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public Cards(@JsonProperty("cards") Card[] cards, @JsonProperty("userId") String userId) {
+        this.cards = cards;
+        this.userId = userId;
+  }
 }

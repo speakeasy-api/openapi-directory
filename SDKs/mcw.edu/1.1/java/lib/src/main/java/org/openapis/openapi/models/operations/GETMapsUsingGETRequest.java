@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETMapsUsingGETRequest {
@@ -12,9 +13,13 @@ public class GETMapsUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
     public Integer speciesTypeKey;
+
     public GETMapsUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
         this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     
+    public GETMapsUsingGETRequest(@JsonProperty("speciesTypeKey") Integer speciesTypeKey) {
+        this.speciesTypeKey = speciesTypeKey;
+  }
 }

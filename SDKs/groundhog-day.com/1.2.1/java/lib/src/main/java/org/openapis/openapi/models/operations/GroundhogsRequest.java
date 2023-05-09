@@ -12,6 +12,7 @@ public class GroundhogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public GroundhogsRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -22,9 +23,11 @@ public class GroundhogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isGroundhog")
     public GroundhogsIsGroundhogEnum isGroundhog;
+
     public GroundhogsRequest withIsGroundhog(GroundhogsIsGroundhogEnum isGroundhog) {
         this.isGroundhog = isGroundhog;
         return this;
     }
     
+    public GroundhogsRequest(){}
 }

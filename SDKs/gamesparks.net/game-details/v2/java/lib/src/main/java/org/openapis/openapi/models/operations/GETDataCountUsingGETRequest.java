@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDataCountUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETDataCountUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public GETDataCountUsingGETRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class GETDataCountUsingGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryName")
     public GETDataCountUsingGETQueryNameEnum queryName;
+
     public GETDataCountUsingGETRequest withQueryName(GETDataCountUsingGETQueryNameEnum queryName) {
         this.queryName = queryName;
         return this;
@@ -32,9 +35,15 @@ public class GETDataCountUsingGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stage")
     public GETDataCountUsingGETStageEnum stage;
+
     public GETDataCountUsingGETRequest withStage(GETDataCountUsingGETStageEnum stage) {
         this.stage = stage;
         return this;
     }
     
+    public GETDataCountUsingGETRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("queryName") GETDataCountUsingGETQueryNameEnum queryName, @JsonProperty("stage") GETDataCountUsingGETStageEnum stage) {
+        this.apiKey = apiKey;
+        this.queryName = queryName;
+        this.stage = stage;
+  }
 }

@@ -20,6 +20,7 @@ public class DescribeMitigationActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionArn")
     public String actionArn;
+
     public DescribeMitigationActionResponse withActionArn(String actionArn) {
         this.actionArn = actionArn;
         return this;
@@ -28,6 +29,7 @@ public class DescribeMitigationActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionId")
     public String actionId;
+
     public DescribeMitigationActionResponse withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -36,6 +38,7 @@ public class DescribeMitigationActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionName")
     public String actionName;
+
     public DescribeMitigationActionResponse withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -44,6 +47,7 @@ public class DescribeMitigationActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionParams")
     public MitigationActionParams actionParams;
+
     public DescribeMitigationActionResponse withActionParams(MitigationActionParams actionParams) {
         this.actionParams = actionParams;
         return this;
@@ -52,6 +56,7 @@ public class DescribeMitigationActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionType")
     public MitigationActionTypeEnum actionType;
+
     public DescribeMitigationActionResponse withActionType(MitigationActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -62,6 +67,7 @@ public class DescribeMitigationActionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public DescribeMitigationActionResponse withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -72,6 +78,7 @@ public class DescribeMitigationActionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public DescribeMitigationActionResponse withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -80,9 +87,11 @@ public class DescribeMitigationActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DescribeMitigationActionResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public DescribeMitigationActionResponse(){}
 }

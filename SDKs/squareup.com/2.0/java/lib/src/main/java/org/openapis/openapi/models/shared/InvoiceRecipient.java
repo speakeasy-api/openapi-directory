@@ -45,6 +45,7 @@ public class InvoiceRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address address;
+
     public InvoiceRecipient withAddress(Address address) {
         this.address = address;
         return this;
@@ -56,6 +57,7 @@ public class InvoiceRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     public String companyName;
+
     public InvoiceRecipient withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -68,6 +70,7 @@ public class InvoiceRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public String customerId;
+
     public InvoiceRecipient withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -79,6 +82,7 @@ public class InvoiceRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_address")
     public String emailAddress;
+
     public InvoiceRecipient withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -90,6 +94,7 @@ public class InvoiceRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family_name")
     public String familyName;
+
     public InvoiceRecipient withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -101,6 +106,7 @@ public class InvoiceRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("given_name")
     public String givenName;
+
     public InvoiceRecipient withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -112,9 +118,11 @@ public class InvoiceRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public InvoiceRecipient withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public InvoiceRecipient(){}
 }

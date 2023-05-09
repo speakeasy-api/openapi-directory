@@ -12,6 +12,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_id")
     public String id;
+
     public Doc withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abstract")
     public String abstract_;
+
     public Doc withAbstract(String abstract_) {
         this.abstract_ = abstract_;
         return this;
@@ -28,6 +30,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blog")
     public Object[] blog;
+
     public Doc withBlog(Object[] blog) {
         this.blog = blog;
         return this;
@@ -36,6 +39,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byline")
     public DocByline byline;
+
     public Doc withByline(DocByline byline) {
         this.byline = byline;
         return this;
@@ -44,6 +48,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_type")
     public String documentType;
+
     public Doc withDocumentType(String documentType) {
         this.documentType = documentType;
         return this;
@@ -52,6 +57,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headline")
     public DocHeadline headline;
+
     public Doc withHeadline(DocHeadline headline) {
         this.headline = headline;
         return this;
@@ -60,6 +66,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public DocKeywords keywords;
+
     public Doc withKeywords(DocKeywords keywords) {
         this.keywords = keywords;
         return this;
@@ -68,6 +75,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lead_paragraph")
     public String leadParagraph;
+
     public Doc withLeadParagraph(String leadParagraph) {
         this.leadParagraph = leadParagraph;
         return this;
@@ -76,6 +84,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multimedia")
     public DocMultimedia[] multimedia;
+
     public Doc withMultimedia(DocMultimedia[] multimedia) {
         this.multimedia = multimedia;
         return this;
@@ -84,6 +93,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("news_desk")
     public String newsDesk;
+
     public Doc withNewsDesk(String newsDesk) {
         this.newsDesk = newsDesk;
         return this;
@@ -92,6 +102,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("print_page")
     public String printPage;
+
     public Doc withPrintPage(String printPage) {
         this.printPage = printPage;
         return this;
@@ -100,6 +111,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pub_date")
     public String pubDate;
+
     public Doc withPubDate(String pubDate) {
         this.pubDate = pubDate;
         return this;
@@ -108,6 +120,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section_name")
     public String sectionName;
+
     public Doc withSectionName(String sectionName) {
         this.sectionName = sectionName;
         return this;
@@ -116,6 +129,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slideshow_credits")
     public String slideshowCredits;
+
     public Doc withSlideshowCredits(String slideshowCredits) {
         this.slideshowCredits = slideshowCredits;
         return this;
@@ -124,6 +138,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public String snippet;
+
     public Doc withSnippet(String snippet) {
         this.snippet = snippet;
         return this;
@@ -132,6 +147,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public Doc withSource(String source) {
         this.source = source;
         return this;
@@ -140,6 +156,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsection_name")
     public String subsectionName;
+
     public Doc withSubsectionName(String subsectionName) {
         this.subsectionName = subsectionName;
         return this;
@@ -148,6 +165,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type_of_material")
     public String typeOfMaterial;
+
     public Doc withTypeOfMaterial(String typeOfMaterial) {
         this.typeOfMaterial = typeOfMaterial;
         return this;
@@ -156,6 +174,7 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
     public String webUrl;
+
     public Doc withWebUrl(String webUrl) {
         this.webUrl = webUrl;
         return this;
@@ -164,9 +183,11 @@ public class Doc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("word_count")
     public String wordCount;
+
     public Doc withWordCount(String wordCount) {
         this.wordCount = wordCount;
         return this;
     }
     
+    public Doc(){}
 }

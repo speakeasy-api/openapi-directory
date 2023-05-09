@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateContentResponse {
@@ -12,6 +13,7 @@ public class CreateContentResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateContentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateContentResponse {
      */
     
     public Object conflictException;
+
     public CreateContentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateContentResponse {
     
     
     public String contentType;
+
     public CreateContentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateContentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateContentResponse createContentResponse;
+
     public CreateContentResponse withCreateContentResponse(org.openapis.openapi.models.shared.CreateContentResponse createContentResponse) {
         this.createContentResponse = createContentResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateContentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateContentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateContentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateContentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateContentResponse {
     
     
     public Integer statusCode;
+
     public CreateContentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateContentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateContentResponse {
      */
     
     public Object validationException;
+
     public CreateContentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateContentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

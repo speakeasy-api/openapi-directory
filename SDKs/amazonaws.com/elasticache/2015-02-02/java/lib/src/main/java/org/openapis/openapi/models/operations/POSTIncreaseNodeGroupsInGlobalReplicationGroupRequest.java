@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTIncreaseNodeGroupsInGlobalReplicationGroupActionEnum action;
+
     public POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest withAction(POSTIncreaseNodeGroupsInGlobalReplicationGroupActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum version;
+
     public POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest withVersion(POSTIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTIncreaseNodeGroupsInGlobalReplicationGroupRequest(@JsonProperty("Action") POSTIncreaseNodeGroupsInGlobalReplicationGroupActionEnum action, @JsonProperty("Version") POSTIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

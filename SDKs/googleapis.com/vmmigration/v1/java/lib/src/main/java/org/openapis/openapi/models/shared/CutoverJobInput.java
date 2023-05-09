@@ -18,6 +18,7 @@ public class CutoverJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeEngineTargetDetails")
     public ComputeEngineTargetDetails computeEngineTargetDetails;
+
     public CutoverJobInput withComputeEngineTargetDetails(ComputeEngineTargetDetails computeEngineTargetDetails) {
         this.computeEngineTargetDetails = computeEngineTargetDetails;
         return this;
@@ -29,9 +30,11 @@ public class CutoverJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public CutoverJobInput withError(Status error) {
         this.error = error;
         return this;
     }
     
+    public CutoverJobInput(){}
 }

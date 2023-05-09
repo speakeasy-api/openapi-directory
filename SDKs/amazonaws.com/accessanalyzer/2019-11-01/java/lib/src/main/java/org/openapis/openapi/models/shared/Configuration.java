@@ -15,6 +15,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ebsSnapshot")
     public EbsSnapshotConfiguration ebsSnapshot;
+
     public Configuration withEbsSnapshot(EbsSnapshotConfiguration ebsSnapshot) {
         this.ebsSnapshot = ebsSnapshot;
         return this;
@@ -23,6 +24,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecrRepository")
     public EcrRepositoryConfiguration ecrRepository;
+
     public Configuration withEcrRepository(EcrRepositoryConfiguration ecrRepository) {
         this.ecrRepository = ecrRepository;
         return this;
@@ -31,6 +33,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("efsFileSystem")
     public EfsFileSystemConfiguration efsFileSystem;
+
     public Configuration withEfsFileSystem(EfsFileSystemConfiguration efsFileSystem) {
         this.efsFileSystem = efsFileSystem;
         return this;
@@ -39,6 +42,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamRole")
     public IamRoleConfiguration iamRole;
+
     public Configuration withIamRole(IamRoleConfiguration iamRole) {
         this.iamRole = iamRole;
         return this;
@@ -47,6 +51,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKey")
     public KmsKeyConfiguration kmsKey;
+
     public Configuration withKmsKey(KmsKeyConfiguration kmsKey) {
         this.kmsKey = kmsKey;
         return this;
@@ -55,6 +60,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rdsDbClusterSnapshot")
     public RdsDbClusterSnapshotConfiguration rdsDbClusterSnapshot;
+
     public Configuration withRdsDbClusterSnapshot(RdsDbClusterSnapshotConfiguration rdsDbClusterSnapshot) {
         this.rdsDbClusterSnapshot = rdsDbClusterSnapshot;
         return this;
@@ -63,6 +69,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rdsDbSnapshot")
     public RdsDbSnapshotConfiguration rdsDbSnapshot;
+
     public Configuration withRdsDbSnapshot(RdsDbSnapshotConfiguration rdsDbSnapshot) {
         this.rdsDbSnapshot = rdsDbSnapshot;
         return this;
@@ -71,6 +78,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Bucket")
     public S3BucketConfiguration s3Bucket;
+
     public Configuration withS3Bucket(S3BucketConfiguration s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -79,6 +87,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretsManagerSecret")
     public SecretsManagerSecretConfiguration secretsManagerSecret;
+
     public Configuration withSecretsManagerSecret(SecretsManagerSecretConfiguration secretsManagerSecret) {
         this.secretsManagerSecret = secretsManagerSecret;
         return this;
@@ -87,6 +96,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snsTopic")
     public SnsTopicConfiguration snsTopic;
+
     public Configuration withSnsTopic(SnsTopicConfiguration snsTopic) {
         this.snsTopic = snsTopic;
         return this;
@@ -95,9 +105,11 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqsQueue")
     public SqsQueueConfiguration sqsQueue;
+
     public Configuration withSqsQueue(SqsQueueConfiguration sqsQueue) {
         this.sqsQueue = sqsQueue;
         return this;
     }
     
+    public Configuration(){}
 }

@@ -20,6 +20,7 @@ public class FormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contribution")
     public String contribution;
+
     public FormResponse withContribution(String contribution) {
         this.contribution = contribution;
         return this;
@@ -30,6 +31,7 @@ public class FormResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public FormResponse withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -38,6 +40,7 @@ public class FormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form")
     public String form;
+
     public FormResponse withForm(String form) {
         this.form = form;
         return this;
@@ -46,6 +49,7 @@ public class FormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FormResponse withId(String id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class FormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responses")
     public java.util.Map<String, String> responses;
+
     public FormResponse withResponses(java.util.Map<String, String> responses) {
         this.responses = responses;
         return this;
@@ -62,9 +67,11 @@ public class FormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public FormResponse withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public FormResponse(){}
 }

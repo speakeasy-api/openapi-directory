@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMLTransformResponse {
@@ -12,6 +13,7 @@ public class UpdateMLTransformResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateMLTransformResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateMLTransformResponse {
     
     
     public String contentType;
+
     public UpdateMLTransformResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMLTransformResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateMLTransformResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateMLTransformResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateMLTransformResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateMLTransformResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateMLTransformResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateMLTransformResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateMLTransformResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateMLTransformResponse {
     
     
     public Integer statusCode;
+
     public UpdateMLTransformResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateMLTransformResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMLTransformResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateMLTransformResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateMLTransformResponse updateMLTransformResponse;
+
     public UpdateMLTransformResponse withUpdateMLTransformResponse(org.openapis.openapi.models.shared.UpdateMLTransformResponse updateMLTransformResponse) {
         this.updateMLTransformResponse = updateMLTransformResponse;
         return this;
     }
     
+    public UpdateMLTransformResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

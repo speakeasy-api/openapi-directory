@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody requestBody;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withRequestBody(PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -23,6 +26,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
     public Long idAccount;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withIdAccount(Long idAccount) {
         this.idAccount = idAccount;
         return this;
@@ -30,6 +34,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
     public Long idConnection;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -40,9 +45,16 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
     }
     
+    public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest(@JsonProperty("RequestBody") PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody requestBody, @JsonProperty("id_account") Long idAccount, @JsonProperty("id_connection") Long idConnection, @JsonProperty("id_user") String idUser) {
+        this.requestBody = requestBody;
+        this.idAccount = idAccount;
+        this.idConnection = idConnection;
+        this.idUser = idUser;
+  }
 }

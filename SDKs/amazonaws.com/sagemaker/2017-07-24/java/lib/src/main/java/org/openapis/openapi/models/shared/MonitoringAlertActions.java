@@ -15,9 +15,11 @@ public class MonitoringAlertActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelDashboardIndicator")
     public ModelDashboardIndicatorAction modelDashboardIndicator;
+
     public MonitoringAlertActions withModelDashboardIndicator(ModelDashboardIndicatorAction modelDashboardIndicator) {
         this.modelDashboardIndicator = modelDashboardIndicator;
         return this;
     }
     
+    public MonitoringAlertActions(){}
 }

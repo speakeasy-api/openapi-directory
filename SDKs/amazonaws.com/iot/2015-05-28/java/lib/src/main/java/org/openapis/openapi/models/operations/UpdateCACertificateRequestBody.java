@@ -15,6 +15,7 @@ public class UpdateCACertificateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationConfig")
     public UpdateCACertificateRequestBodyRegistrationConfig registrationConfig;
+
     public UpdateCACertificateRequestBody withRegistrationConfig(UpdateCACertificateRequestBodyRegistrationConfig registrationConfig) {
         this.registrationConfig = registrationConfig;
         return this;
@@ -26,9 +27,11 @@ public class UpdateCACertificateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeAutoRegistration")
     public Boolean removeAutoRegistration;
+
     public UpdateCACertificateRequestBody withRemoveAutoRegistration(Boolean removeAutoRegistration) {
         this.removeAutoRegistration = removeAutoRegistration;
         return this;
     }
     
+    public UpdateCACertificateRequestBody(){}
 }

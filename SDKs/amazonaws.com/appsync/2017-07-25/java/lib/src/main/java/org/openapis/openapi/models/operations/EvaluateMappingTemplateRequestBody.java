@@ -12,6 +12,7 @@ public class EvaluateMappingTemplateRequestBody {
      */
     @JsonProperty("context")
     public String context;
+
     public EvaluateMappingTemplateRequestBody withContext(String context) {
         this.context = context;
         return this;
@@ -22,9 +23,14 @@ public class EvaluateMappingTemplateRequestBody {
      */
     @JsonProperty("template")
     public String template;
+
     public EvaluateMappingTemplateRequestBody withTemplate(String template) {
         this.template = template;
         return this;
     }
     
+    public EvaluateMappingTemplateRequestBody(@JsonProperty("context") String context, @JsonProperty("template") String template) {
+        this.context = context;
+        this.template = template;
+  }
 }

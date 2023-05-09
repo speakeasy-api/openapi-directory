@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteDirectoryResponse {
     @JsonProperty("DirectoryArn")
     public String directoryArn;
+
     public DeleteDirectoryResponse withDirectoryArn(String directoryArn) {
         this.directoryArn = directoryArn;
         return this;
     }
     
+    public DeleteDirectoryResponse(@JsonProperty("DirectoryArn") String directoryArn) {
+        this.directoryArn = directoryArn;
+  }
 }

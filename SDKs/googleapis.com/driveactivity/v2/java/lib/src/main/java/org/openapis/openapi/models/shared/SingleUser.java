@@ -18,9 +18,11 @@ public class SingleUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public SingleUser withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public SingleUser(){}
 }

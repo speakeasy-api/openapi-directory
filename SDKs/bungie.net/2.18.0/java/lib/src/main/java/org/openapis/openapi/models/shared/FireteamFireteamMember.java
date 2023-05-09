@@ -12,6 +12,7 @@ public class FireteamFireteamMember {
      */
     
     public UserUserInfoCard bungieNetUserInfo;
+
     public FireteamFireteamMember withBungieNetUserInfo(UserUserInfoCard bungieNetUserInfo) {
         this.bungieNetUserInfo = bungieNetUserInfo;
         return this;
@@ -19,6 +20,7 @@ public class FireteamFireteamMember {
     
     
     public Long characterId;
+
     public FireteamFireteamMember withCharacterId(Long characterId) {
         this.characterId = characterId;
         return this;
@@ -26,6 +28,7 @@ public class FireteamFireteamMember {
     
     
     public OffsetDateTime dateJoined;
+
     public FireteamFireteamMember withDateJoined(OffsetDateTime dateJoined) {
         this.dateJoined = dateJoined;
         return this;
@@ -33,6 +36,7 @@ public class FireteamFireteamMember {
     
     
     public FireteamFireteamUserInfoCard destinyUserInfo;
+
     public FireteamFireteamMember withDestinyUserInfo(FireteamFireteamUserInfoCard destinyUserInfo) {
         this.destinyUserInfo = destinyUserInfo;
         return this;
@@ -40,6 +44,7 @@ public class FireteamFireteamMember {
     
     
     public Boolean hasMicrophone;
+
     public FireteamFireteamMember withHasMicrophone(Boolean hasMicrophone) {
         this.hasMicrophone = hasMicrophone;
         return this;
@@ -47,6 +52,7 @@ public class FireteamFireteamMember {
     
     
     public OffsetDateTime lastPlatformInviteAttemptDate;
+
     public FireteamFireteamMember withLastPlatformInviteAttemptDate(OffsetDateTime lastPlatformInviteAttemptDate) {
         this.lastPlatformInviteAttemptDate = lastPlatformInviteAttemptDate;
         return this;
@@ -54,9 +60,11 @@ public class FireteamFireteamMember {
     
     
     public Long lastPlatformInviteAttemptResult;
+
     public FireteamFireteamMember withLastPlatformInviteAttemptResult(Long lastPlatformInviteAttemptResult) {
         this.lastPlatformInviteAttemptResult = lastPlatformInviteAttemptResult;
         return this;
     }
     
+    public FireteamFireteamMember(){}
 }

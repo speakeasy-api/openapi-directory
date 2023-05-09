@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsNetworkInterfaceCount {
     
     public Long max;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsNetworkInterfaceCount withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Long min;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsNetworkInterfaceCount withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsNetworkInterfaceCount(){}
 }

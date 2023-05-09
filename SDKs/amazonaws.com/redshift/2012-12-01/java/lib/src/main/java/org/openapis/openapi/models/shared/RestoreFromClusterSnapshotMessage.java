@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RestoreFromClusterSnapshotMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RestoreFromClusterSnapshotMessage {
     
     public String additionalInfo;
+
     public RestoreFromClusterSnapshotMessage withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -19,6 +20,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public Boolean allowVersionUpgrade;
+
     public RestoreFromClusterSnapshotMessage withAllowVersionUpgrade(Boolean allowVersionUpgrade) {
         this.allowVersionUpgrade = allowVersionUpgrade;
         return this;
@@ -26,6 +28,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public AquaConfigurationStatusEnum aquaConfigurationStatus;
+
     public RestoreFromClusterSnapshotMessage withAquaConfigurationStatus(AquaConfigurationStatusEnum aquaConfigurationStatus) {
         this.aquaConfigurationStatus = aquaConfigurationStatus;
         return this;
@@ -33,6 +36,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public Long automatedSnapshotRetentionPeriod;
+
     public RestoreFromClusterSnapshotMessage withAutomatedSnapshotRetentionPeriod(Long automatedSnapshotRetentionPeriod) {
         this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
         return this;
@@ -40,6 +44,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String availabilityZone;
+
     public RestoreFromClusterSnapshotMessage withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -47,6 +52,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public Boolean availabilityZoneRelocation;
+
     public RestoreFromClusterSnapshotMessage withAvailabilityZoneRelocation(Boolean availabilityZoneRelocation) {
         this.availabilityZoneRelocation = availabilityZoneRelocation;
         return this;
@@ -54,6 +60,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String clusterIdentifier;
+
     public RestoreFromClusterSnapshotMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -61,6 +68,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String clusterParameterGroupName;
+
     public RestoreFromClusterSnapshotMessage withClusterParameterGroupName(String clusterParameterGroupName) {
         this.clusterParameterGroupName = clusterParameterGroupName;
         return this;
@@ -68,6 +76,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String[] clusterSecurityGroups;
+
     public RestoreFromClusterSnapshotMessage withClusterSecurityGroups(String[] clusterSecurityGroups) {
         this.clusterSecurityGroups = clusterSecurityGroups;
         return this;
@@ -75,6 +84,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String clusterSubnetGroupName;
+
     public RestoreFromClusterSnapshotMessage withClusterSubnetGroupName(String clusterSubnetGroupName) {
         this.clusterSubnetGroupName = clusterSubnetGroupName;
         return this;
@@ -82,6 +92,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String defaultIamRoleArn;
+
     public RestoreFromClusterSnapshotMessage withDefaultIamRoleArn(String defaultIamRoleArn) {
         this.defaultIamRoleArn = defaultIamRoleArn;
         return this;
@@ -89,6 +100,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String elasticIp;
+
     public RestoreFromClusterSnapshotMessage withElasticIp(String elasticIp) {
         this.elasticIp = elasticIp;
         return this;
@@ -96,6 +108,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public Boolean encrypted;
+
     public RestoreFromClusterSnapshotMessage withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -103,6 +116,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public Boolean enhancedVpcRouting;
+
     public RestoreFromClusterSnapshotMessage withEnhancedVpcRouting(Boolean enhancedVpcRouting) {
         this.enhancedVpcRouting = enhancedVpcRouting;
         return this;
@@ -110,6 +124,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String hsmClientCertificateIdentifier;
+
     public RestoreFromClusterSnapshotMessage withHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
         this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
         return this;
@@ -117,6 +132,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String hsmConfigurationIdentifier;
+
     public RestoreFromClusterSnapshotMessage withHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
         this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
         return this;
@@ -124,6 +140,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String[] iamRoles;
+
     public RestoreFromClusterSnapshotMessage withIamRoles(String[] iamRoles) {
         this.iamRoles = iamRoles;
         return this;
@@ -131,6 +148,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String kmsKeyId;
+
     public RestoreFromClusterSnapshotMessage withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -138,6 +156,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String maintenanceTrackName;
+
     public RestoreFromClusterSnapshotMessage withMaintenanceTrackName(String maintenanceTrackName) {
         this.maintenanceTrackName = maintenanceTrackName;
         return this;
@@ -145,6 +164,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public Long manualSnapshotRetentionPeriod;
+
     public RestoreFromClusterSnapshotMessage withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
         this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
         return this;
@@ -152,6 +172,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String nodeType;
+
     public RestoreFromClusterSnapshotMessage withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -159,6 +180,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public Long numberOfNodes;
+
     public RestoreFromClusterSnapshotMessage withNumberOfNodes(Long numberOfNodes) {
         this.numberOfNodes = numberOfNodes;
         return this;
@@ -166,6 +188,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String ownerAccount;
+
     public RestoreFromClusterSnapshotMessage withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -173,6 +196,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public Long port;
+
     public RestoreFromClusterSnapshotMessage withPort(Long port) {
         this.port = port;
         return this;
@@ -180,6 +204,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String preferredMaintenanceWindow;
+
     public RestoreFromClusterSnapshotMessage withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -187,6 +212,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public Boolean publiclyAccessible;
+
     public RestoreFromClusterSnapshotMessage withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -194,6 +220,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String reservedNodeId;
+
     public RestoreFromClusterSnapshotMessage withReservedNodeId(String reservedNodeId) {
         this.reservedNodeId = reservedNodeId;
         return this;
@@ -201,6 +228,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String snapshotArn;
+
     public RestoreFromClusterSnapshotMessage withSnapshotArn(String snapshotArn) {
         this.snapshotArn = snapshotArn;
         return this;
@@ -208,6 +236,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String snapshotClusterIdentifier;
+
     public RestoreFromClusterSnapshotMessage withSnapshotClusterIdentifier(String snapshotClusterIdentifier) {
         this.snapshotClusterIdentifier = snapshotClusterIdentifier;
         return this;
@@ -215,6 +244,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String snapshotIdentifier;
+
     public RestoreFromClusterSnapshotMessage withSnapshotIdentifier(String snapshotIdentifier) {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
@@ -222,6 +252,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String snapshotScheduleIdentifier;
+
     public RestoreFromClusterSnapshotMessage withSnapshotScheduleIdentifier(String snapshotScheduleIdentifier) {
         this.snapshotScheduleIdentifier = snapshotScheduleIdentifier;
         return this;
@@ -229,6 +260,7 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String targetReservedNodeOfferingId;
+
     public RestoreFromClusterSnapshotMessage withTargetReservedNodeOfferingId(String targetReservedNodeOfferingId) {
         this.targetReservedNodeOfferingId = targetReservedNodeOfferingId;
         return this;
@@ -236,9 +268,13 @@ public class RestoreFromClusterSnapshotMessage {
     
     
     public String[] vpcSecurityGroupIds;
+
     public RestoreFromClusterSnapshotMessage withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public RestoreFromClusterSnapshotMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+  }
 }

@@ -15,6 +15,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("efsVolumeConfiguration")
     public EFSVolumeConfiguration efsVolumeConfiguration;
+
     public Volume withEfsVolumeConfiguration(EFSVolumeConfiguration efsVolumeConfiguration) {
         this.efsVolumeConfiguration = efsVolumeConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public Host host;
+
     public Volume withHost(Host host) {
         this.host = host;
         return this;
@@ -31,9 +33,11 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Volume withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Volume(){}
 }

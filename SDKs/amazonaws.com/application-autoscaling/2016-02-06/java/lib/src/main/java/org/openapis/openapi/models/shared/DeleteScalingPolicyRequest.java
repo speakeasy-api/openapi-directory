@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteScalingPolicyRequest {
     @JsonProperty("PolicyName")
     public String policyName;
+
     public DeleteScalingPolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -16,6 +17,7 @@ public class DeleteScalingPolicyRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public DeleteScalingPolicyRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -23,6 +25,7 @@ public class DeleteScalingPolicyRequest {
     
     @JsonProperty("ScalableDimension")
     public ScalableDimensionEnum scalableDimension;
+
     public DeleteScalingPolicyRequest withScalableDimension(ScalableDimensionEnum scalableDimension) {
         this.scalableDimension = scalableDimension;
         return this;
@@ -30,9 +33,16 @@ public class DeleteScalingPolicyRequest {
     
     @JsonProperty("ServiceNamespace")
     public ServiceNamespaceEnum serviceNamespace;
+
     public DeleteScalingPolicyRequest withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
     }
     
+    public DeleteScalingPolicyRequest(@JsonProperty("PolicyName") String policyName, @JsonProperty("ResourceId") String resourceId, @JsonProperty("ScalableDimension") ScalableDimensionEnum scalableDimension, @JsonProperty("ServiceNamespace") ServiceNamespaceEnum serviceNamespace) {
+        this.policyName = policyName;
+        this.resourceId = resourceId;
+        this.scalableDimension = scalableDimension;
+        this.serviceNamespace = serviceNamespace;
+  }
 }

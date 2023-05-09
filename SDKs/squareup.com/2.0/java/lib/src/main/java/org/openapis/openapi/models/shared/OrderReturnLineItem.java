@@ -21,6 +21,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_discounts")
     public OrderLineItemAppliedDiscount[] appliedDiscounts;
+
     public OrderReturnLineItem withAppliedDiscounts(OrderLineItemAppliedDiscount[] appliedDiscounts) {
         this.appliedDiscounts = appliedDiscounts;
         return this;
@@ -35,6 +36,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_taxes")
     public OrderLineItemAppliedTax[] appliedTaxes;
+
     public OrderReturnLineItem withAppliedTaxes(OrderLineItemAppliedTax[] appliedTaxes) {
         this.appliedTaxes = appliedTaxes;
         return this;
@@ -51,6 +53,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base_price_money")
     public Money basePriceMoney;
+
     public OrderReturnLineItem withBasePriceMoney(Money basePriceMoney) {
         this.basePriceMoney = basePriceMoney;
         return this;
@@ -62,6 +65,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_id")
     public String catalogObjectId;
+
     public OrderReturnLineItem withCatalogObjectId(String catalogObjectId) {
         this.catalogObjectId = catalogObjectId;
         return this;
@@ -73,6 +77,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_version")
     public Long catalogVersion;
+
     public OrderReturnLineItem withCatalogVersion(Long catalogVersion) {
         this.catalogVersion = catalogVersion;
         return this;
@@ -89,6 +94,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gross_return_money")
     public Money grossReturnMoney;
+
     public OrderReturnLineItem withGrossReturnMoney(Money grossReturnMoney) {
         this.grossReturnMoney = grossReturnMoney;
         return this;
@@ -101,6 +107,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_type")
     public String itemType;
+
     public OrderReturnLineItem withItemType(String itemType) {
         this.itemType = itemType;
         return this;
@@ -112,6 +119,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderReturnLineItem withName(String name) {
         this.name = name;
         return this;
@@ -123,6 +131,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public OrderReturnLineItem withNote(String note) {
         this.note = note;
         return this;
@@ -137,6 +146,7 @@ public class OrderReturnLineItem {
      */
     @JsonProperty("quantity")
     public String quantity;
+
     public OrderReturnLineItem withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -149,6 +159,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_unit")
     public OrderQuantityUnit quantityUnit;
+
     public OrderReturnLineItem withQuantityUnit(OrderQuantityUnit quantityUnit) {
         this.quantityUnit = quantityUnit;
         return this;
@@ -160,6 +171,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_modifiers")
     public OrderReturnLineItemModifier[] returnModifiers;
+
     public OrderReturnLineItem withReturnModifiers(OrderReturnLineItemModifier[] returnModifiers) {
         this.returnModifiers = returnModifiers;
         return this;
@@ -171,6 +183,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_line_item_uid")
     public String sourceLineItemUid;
+
     public OrderReturnLineItem withSourceLineItemUid(String sourceLineItemUid) {
         this.sourceLineItemUid = sourceLineItemUid;
         return this;
@@ -187,6 +200,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_discount_money")
     public Money totalDiscountMoney;
+
     public OrderReturnLineItem withTotalDiscountMoney(Money totalDiscountMoney) {
         this.totalDiscountMoney = totalDiscountMoney;
         return this;
@@ -203,6 +217,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_money")
     public Money totalMoney;
+
     public OrderReturnLineItem withTotalMoney(Money totalMoney) {
         this.totalMoney = totalMoney;
         return this;
@@ -219,6 +234,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_tax_money")
     public Money totalTaxMoney;
+
     public OrderReturnLineItem withTotalTaxMoney(Money totalTaxMoney) {
         this.totalTaxMoney = totalTaxMoney;
         return this;
@@ -230,6 +246,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OrderReturnLineItem withUid(String uid) {
         this.uid = uid;
         return this;
@@ -241,6 +258,7 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variation_name")
     public String variationName;
+
     public OrderReturnLineItem withVariationName(String variationName) {
         this.variationName = variationName;
         return this;
@@ -257,9 +275,13 @@ public class OrderReturnLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variation_total_price_money")
     public Money variationTotalPriceMoney;
+
     public OrderReturnLineItem withVariationTotalPriceMoney(Money variationTotalPriceMoney) {
         this.variationTotalPriceMoney = variationTotalPriceMoney;
         return this;
     }
     
+    public OrderReturnLineItem(@JsonProperty("quantity") String quantity) {
+        this.quantity = quantity;
+  }
 }

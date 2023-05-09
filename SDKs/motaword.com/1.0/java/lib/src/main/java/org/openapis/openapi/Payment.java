@@ -50,12 +50,10 @@ public class Payment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCreditCardResponse res = new org.openapis.openapi.models.operations.DeleteCreditCardResponse() {{
+        org.openapis.openapi.models.operations.DeleteCreditCardResponse res = new org.openapis.openapi.models.operations.DeleteCreditCardResponse(contentType, httpRes.statusCode()) {{
             operationStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,12 +95,10 @@ public class Payment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCreditCardResponse res = new org.openapis.openapi.models.operations.GetCreditCardResponse() {{
+        org.openapis.openapi.models.operations.GetCreditCardResponse res = new org.openapis.openapi.models.operations.GetCreditCardResponse(contentType, httpRes.statusCode()) {{
             creditCard = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,12 +141,10 @@ public class Payment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResetCardPaymentCodeResponse res = new org.openapis.openapi.models.operations.ResetCardPaymentCodeResponse() {{
+        org.openapis.openapi.models.operations.ResetCardPaymentCodeResponse res = new org.openapis.openapi.models.operations.ResetCardPaymentCodeResponse(contentType, httpRes.statusCode()) {{
             creditCard = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -192,12 +186,10 @@ public class Payment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResetCorporatePaymentCodeResponse res = new org.openapis.openapi.models.operations.ResetCorporatePaymentCodeResponse() {{
+        org.openapis.openapi.models.operations.ResetCorporatePaymentCodeResponse res = new org.openapis.openapi.models.operations.ResetCorporatePaymentCodeResponse(contentType, httpRes.statusCode()) {{
             creditCard = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -239,12 +231,10 @@ public class Payment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ToggleCorporateAutoChargeResponse res = new org.openapis.openapi.models.operations.ToggleCorporateAutoChargeResponse() {{
+        org.openapis.openapi.models.operations.ToggleCorporateAutoChargeResponse res = new org.openapis.openapi.models.operations.ToggleCorporateAutoChargeResponse(contentType, httpRes.statusCode()) {{
             operationStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

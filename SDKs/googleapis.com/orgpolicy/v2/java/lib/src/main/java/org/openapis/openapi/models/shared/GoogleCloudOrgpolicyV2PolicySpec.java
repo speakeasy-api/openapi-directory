@@ -18,6 +18,7 @@ public class GoogleCloudOrgpolicyV2PolicySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudOrgpolicyV2PolicySpec withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudOrgpolicyV2PolicySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inheritFromParent")
     public Boolean inheritFromParent;
+
     public GoogleCloudOrgpolicyV2PolicySpec withInheritFromParent(Boolean inheritFromParent) {
         this.inheritFromParent = inheritFromParent;
         return this;
@@ -40,17 +42,19 @@ public class GoogleCloudOrgpolicyV2PolicySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reset")
     public Boolean reset;
+
     public GoogleCloudOrgpolicyV2PolicySpec withReset(Boolean reset) {
         this.reset = reset;
         return this;
     }
     
     /**
-     * Up to 10 policy rules are allowed. In policies for boolean constraints, the following requirements apply: - There must be one and only one policy rule where condition is unset. - Boolean policy rules with conditions must set `enforced` to the opposite of the policy rule without a condition. - During policy evaluation, policy rules with conditions that are true for a target resource take precedence.
+     * In policies for boolean constraints, the following requirements apply: - There must be one and only one policy rule where condition is unset. - Boolean policy rules with conditions must set `enforced` to the opposite of the policy rule without a condition. - During policy evaluation, policy rules with conditions that are true for a target resource take precedence.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public GoogleCloudOrgpolicyV2PolicySpecPolicyRule[] rules;
+
     public GoogleCloudOrgpolicyV2PolicySpec withRules(GoogleCloudOrgpolicyV2PolicySpecPolicyRule[] rules) {
         this.rules = rules;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudOrgpolicyV2PolicySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudOrgpolicyV2PolicySpec withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudOrgpolicyV2PolicySpec(){}
 }

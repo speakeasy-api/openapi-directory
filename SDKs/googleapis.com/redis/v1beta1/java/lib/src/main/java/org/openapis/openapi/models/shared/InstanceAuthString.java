@@ -18,9 +18,11 @@ public class InstanceAuthString {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authString")
     public String authString;
+
     public InstanceAuthString withAuthString(String authString) {
         this.authString = authString;
         return this;
     }
     
+    public InstanceAuthString(){}
 }

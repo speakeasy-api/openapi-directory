@@ -15,6 +15,7 @@ public class RecoveryInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public RecoveryInstance withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class RecoveryInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataReplicationInfo")
     public RecoveryInstanceDataReplicationInfo dataReplicationInfo;
+
     public RecoveryInstance withDataReplicationInfo(RecoveryInstanceDataReplicationInfo dataReplicationInfo) {
         this.dataReplicationInfo = dataReplicationInfo;
         return this;
@@ -31,6 +33,7 @@ public class RecoveryInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2InstanceID")
     public String ec2InstanceID;
+
     public RecoveryInstance withEc2InstanceID(String ec2InstanceID) {
         this.ec2InstanceID = ec2InstanceID;
         return this;
@@ -39,6 +42,7 @@ public class RecoveryInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2InstanceState")
     public Ec2InstanceStateEnum ec2InstanceState;
+
     public RecoveryInstance withEc2InstanceState(Ec2InstanceStateEnum ec2InstanceState) {
         this.ec2InstanceState = ec2InstanceState;
         return this;
@@ -47,6 +51,7 @@ public class RecoveryInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failback")
     public RecoveryInstanceFailback failback;
+
     public RecoveryInstance withFailback(RecoveryInstanceFailback failback) {
         this.failback = failback;
         return this;
@@ -55,6 +60,7 @@ public class RecoveryInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDrill")
     public Boolean isDrill;
+
     public RecoveryInstance withIsDrill(Boolean isDrill) {
         this.isDrill = isDrill;
         return this;
@@ -63,6 +69,7 @@ public class RecoveryInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobID")
     public String jobID;
+
     public RecoveryInstance withJobID(String jobID) {
         this.jobID = jobID;
         return this;
@@ -71,6 +78,7 @@ public class RecoveryInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originAvailabilityZone")
     public String originAvailabilityZone;
+
     public RecoveryInstance withOriginAvailabilityZone(String originAvailabilityZone) {
         this.originAvailabilityZone = originAvailabilityZone;
         return this;
@@ -79,6 +87,7 @@ public class RecoveryInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originEnvironment")
     public OriginEnvironmentEnum originEnvironment;
+
     public RecoveryInstance withOriginEnvironment(OriginEnvironmentEnum originEnvironment) {
         this.originEnvironment = originEnvironment;
         return this;
@@ -87,6 +96,7 @@ public class RecoveryInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointInTimeSnapshotDateTime")
     public String pointInTimeSnapshotDateTime;
+
     public RecoveryInstance withPointInTimeSnapshotDateTime(String pointInTimeSnapshotDateTime) {
         this.pointInTimeSnapshotDateTime = pointInTimeSnapshotDateTime;
         return this;
@@ -95,6 +105,7 @@ public class RecoveryInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recoveryInstanceID")
     public String recoveryInstanceID;
+
     public RecoveryInstance withRecoveryInstanceID(String recoveryInstanceID) {
         this.recoveryInstanceID = recoveryInstanceID;
         return this;
@@ -103,6 +114,7 @@ public class RecoveryInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recoveryInstanceProperties")
     public RecoveryInstanceProperties recoveryInstanceProperties;
+
     public RecoveryInstance withRecoveryInstanceProperties(RecoveryInstanceProperties recoveryInstanceProperties) {
         this.recoveryInstanceProperties = recoveryInstanceProperties;
         return this;
@@ -111,6 +123,7 @@ public class RecoveryInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public RecoveryInstance withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
@@ -119,9 +132,11 @@ public class RecoveryInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public RecoveryInstance withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public RecoveryInstance(){}
 }

@@ -15,6 +15,7 @@ public class RuleGroupVariables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpSets")
     public RuleGroupVariablesIpSetsDetails ipSets;
+
     public RuleGroupVariables withIpSets(RuleGroupVariablesIpSetsDetails ipSets) {
         this.ipSets = ipSets;
         return this;
@@ -23,9 +24,11 @@ public class RuleGroupVariables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortSets")
     public RuleGroupVariablesPortSetsDetails portSets;
+
     public RuleGroupVariables withPortSets(RuleGroupVariablesPortSetsDetails portSets) {
         this.portSets = portSets;
         return this;
     }
     
+    public RuleGroupVariables(){}
 }

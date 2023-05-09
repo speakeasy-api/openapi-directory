@@ -67,10 +67,8 @@ public class CustomType {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCustomTypeResponse res = new org.openapis.openapi.models.operations.DeleteCustomTypeResponse() {{
+        org.openapis.openapi.models.operations.DeleteCustomTypeResponse res = new org.openapis.openapi.models.operations.DeleteCustomTypeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class CustomType {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCustomTypeResponse res = new org.openapis.openapi.models.operations.UpdateCustomTypeResponse() {{
+        org.openapis.openapi.models.operations.UpdateCustomTypeResponse res = new org.openapis.openapi.models.operations.UpdateCustomTypeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,12 +142,10 @@ public class CustomType {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateScoreConfigResponse res = new org.openapis.openapi.models.operations.CreateScoreConfigResponse() {{
+        org.openapis.openapi.models.operations.CreateScoreConfigResponse res = new org.openapis.openapi.models.operations.CreateScoreConfigResponse(contentType, httpRes.statusCode()) {{
             scoreConfigOutput = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -200,11 +194,9 @@ public class CustomType {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListScoreConfigsResponse res = new org.openapis.openapi.models.operations.ListScoreConfigsResponse() {{
+        org.openapis.openapi.models.operations.ListScoreConfigsResponse res = new org.openapis.openapi.models.operations.ListScoreConfigsResponse(contentType, httpRes.statusCode()) {{
             scoreConfigsOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

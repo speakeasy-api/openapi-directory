@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateInstanceProfileRequest {
     
     public String instanceProfileName;
+
     public CreateInstanceProfileRequest withInstanceProfileName(String instanceProfileName) {
         this.instanceProfileName = instanceProfileName;
         return this;
@@ -16,6 +17,7 @@ public class CreateInstanceProfileRequest {
     
     
     public String path;
+
     public CreateInstanceProfileRequest withPath(String path) {
         this.path = path;
         return this;
@@ -23,9 +25,13 @@ public class CreateInstanceProfileRequest {
     
     
     public Tag[] tags;
+
     public CreateInstanceProfileRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateInstanceProfileRequest(@JsonProperty("InstanceProfileName") String instanceProfileName) {
+        this.instanceProfileName = instanceProfileName;
+  }
 }

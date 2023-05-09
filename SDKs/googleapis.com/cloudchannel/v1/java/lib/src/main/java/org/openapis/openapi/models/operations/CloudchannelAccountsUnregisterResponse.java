@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudchannelAccountsUnregisterResponse {
     
     public String contentType;
+
     public CloudchannelAccountsUnregisterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudchannelAccountsUnregisterResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudChannelV1UnregisterSubscriberResponse googleCloudChannelV1UnregisterSubscriberResponse;
+
     public CloudchannelAccountsUnregisterResponse withGoogleCloudChannelV1UnregisterSubscriberResponse(org.openapis.openapi.models.shared.GoogleCloudChannelV1UnregisterSubscriberResponse googleCloudChannelV1UnregisterSubscriberResponse) {
         this.googleCloudChannelV1UnregisterSubscriberResponse = googleCloudChannelV1UnregisterSubscriberResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudchannelAccountsUnregisterResponse {
     
     
     public Integer statusCode;
+
     public CloudchannelAccountsUnregisterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudchannelAccountsUnregisterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudchannelAccountsUnregisterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudchannelAccountsUnregisterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

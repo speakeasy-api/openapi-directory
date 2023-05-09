@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OrderHeader {
     @JsonProperty("id")
     public String id;
+
     public OrderHeader withId(String id) {
         this.id = id;
         return this;
@@ -16,6 +17,7 @@ public class OrderHeader {
     
     @JsonProperty("numberOfLineItems")
     public Long numberOfLineItems;
+
     public OrderHeader withNumberOfLineItems(Long numberOfLineItems) {
         this.numberOfLineItems = numberOfLineItems;
         return this;
@@ -23,6 +25,7 @@ public class OrderHeader {
     
     @JsonProperty("orderNumber")
     public String orderNumber;
+
     public OrderHeader withOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
@@ -30,9 +33,16 @@ public class OrderHeader {
     
     @JsonProperty("orderStatus")
     public OrderHeaderOrderStatusEnum orderStatus;
+
     public OrderHeader withOrderStatus(OrderHeaderOrderStatusEnum orderStatus) {
         this.orderStatus = orderStatus;
         return this;
     }
     
+    public OrderHeader(@JsonProperty("id") String id, @JsonProperty("numberOfLineItems") Long numberOfLineItems, @JsonProperty("orderNumber") String orderNumber, @JsonProperty("orderStatus") OrderHeaderOrderStatusEnum orderStatus) {
+        this.id = id;
+        this.numberOfLineItems = numberOfLineItems;
+        this.orderNumber = orderNumber;
+        this.orderStatus = orderStatus;
+  }
 }

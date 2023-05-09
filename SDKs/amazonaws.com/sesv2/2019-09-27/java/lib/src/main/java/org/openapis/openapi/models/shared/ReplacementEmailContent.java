@@ -15,9 +15,11 @@ public class ReplacementEmailContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplacementTemplate")
     public ReplacementTemplate replacementTemplate;
+
     public ReplacementEmailContent withReplacementTemplate(ReplacementTemplate replacementTemplate) {
         this.replacementTemplate = replacementTemplate;
         return this;
     }
     
+    public ReplacementEmailContent(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StackInstanceFilter {
     
     public StackInstanceFilterNameEnum name;
+
     public StackInstanceFilter withName(StackInstanceFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class StackInstanceFilter {
     
     
     public String values;
+
     public StackInstanceFilter withValues(String values) {
         this.values = values;
         return this;
     }
     
+    public StackInstanceFilter(){}
 }

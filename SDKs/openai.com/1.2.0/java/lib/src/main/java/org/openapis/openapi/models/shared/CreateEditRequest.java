@@ -15,6 +15,7 @@ public class CreateEditRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public CreateEditRequest withInput(String input) {
         this.input = input;
         return this;
@@ -25,6 +26,7 @@ public class CreateEditRequest {
      */
     @JsonProperty("instruction")
     public String instruction;
+
     public CreateEditRequest withInstruction(String instruction) {
         this.instruction = instruction;
         return this;
@@ -35,6 +37,7 @@ public class CreateEditRequest {
      */
     @JsonProperty("model")
     public String model;
+
     public CreateEditRequest withModel(String model) {
         this.model = model;
         return this;
@@ -46,6 +49,7 @@ public class CreateEditRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("n")
     public Long n;
+
     public CreateEditRequest withN(Long n) {
         this.n = n;
         return this;
@@ -60,6 +64,7 @@ public class CreateEditRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperature")
     public Double temperature;
+
     public CreateEditRequest withTemperature(Double temperature) {
         this.temperature = temperature;
         return this;
@@ -74,9 +79,14 @@ public class CreateEditRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("top_p")
     public Double topP;
+
     public CreateEditRequest withTopP(Double topP) {
         this.topP = topP;
         return this;
     }
     
+    public CreateEditRequest(@JsonProperty("instruction") String instruction, @JsonProperty("model") String model) {
+        this.instruction = instruction;
+        this.model = model;
+  }
 }

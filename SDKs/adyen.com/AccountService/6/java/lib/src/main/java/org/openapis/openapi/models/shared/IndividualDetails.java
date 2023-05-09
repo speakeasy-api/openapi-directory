@@ -12,6 +12,7 @@ public class IndividualDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public ViasName name;
+
     public IndividualDetails withName(ViasName name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class IndividualDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalData")
     public ViasPersonalData personalData;
+
     public IndividualDetails withPersonalData(ViasPersonalData personalData) {
         this.personalData = personalData;
         return this;
     }
     
+    public IndividualDetails(){}
 }

@@ -15,6 +15,7 @@ public class ModelLatencyThreshold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Percentile")
     public String percentile;
+
     public ModelLatencyThreshold withPercentile(String percentile) {
         this.percentile = percentile;
         return this;
@@ -23,9 +24,11 @@ public class ModelLatencyThreshold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValueInMilliseconds")
     public Long valueInMilliseconds;
+
     public ModelLatencyThreshold withValueInMilliseconds(Long valueInMilliseconds) {
         this.valueInMilliseconds = valueInMilliseconds;
         return this;
     }
     
+    public ModelLatencyThreshold(){}
 }

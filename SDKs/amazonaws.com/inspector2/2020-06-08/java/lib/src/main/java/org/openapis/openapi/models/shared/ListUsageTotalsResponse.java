@@ -15,6 +15,7 @@ public class ListUsageTotalsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListUsageTotalsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListUsageTotalsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totals")
     public UsageTotal[] totals;
+
     public ListUsageTotalsResponse withTotals(UsageTotal[] totals) {
         this.totals = totals;
         return this;
     }
     
+    public ListUsageTotalsResponse(){}
 }

@@ -12,9 +12,11 @@ public class GetSnippetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
     public GetSnippetsRoleEnum role;
+
     public GetSnippetsRequest withRole(GetSnippetsRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public GetSnippetsRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CrashesGetStacktraceResponse {
     
     public String contentType;
+
     public CrashesGetStacktraceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CrashesGetStacktraceResponse {
      */
     
     public org.openapis.openapi.models.shared.Stacktrace stacktrace;
+
     public CrashesGetStacktraceResponse withStacktrace(org.openapis.openapi.models.shared.Stacktrace stacktrace) {
         this.stacktrace = stacktrace;
         return this;
@@ -26,6 +29,7 @@ public class CrashesGetStacktraceResponse {
     
     
     public Integer statusCode;
+
     public CrashesGetStacktraceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CrashesGetStacktraceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CrashesGetStacktraceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class CrashesGetStacktraceResponse {
      */
     
     public CrashesGetStacktraceDefaultApplicationJSON crashesGetStacktraceDefaultApplicationJSONObject;
+
     public CrashesGetStacktraceResponse withCrashesGetStacktraceDefaultApplicationJSONObject(CrashesGetStacktraceDefaultApplicationJSON crashesGetStacktraceDefaultApplicationJSONObject) {
         this.crashesGetStacktraceDefaultApplicationJSONObject = crashesGetStacktraceDefaultApplicationJSONObject;
         return this;
     }
     
+    public CrashesGetStacktraceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

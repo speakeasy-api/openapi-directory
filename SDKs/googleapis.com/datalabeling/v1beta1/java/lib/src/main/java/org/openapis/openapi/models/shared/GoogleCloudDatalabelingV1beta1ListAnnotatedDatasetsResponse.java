@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1ListAnnotatedDatasetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotatedDatasets")
     public GoogleCloudDatalabelingV1beta1AnnotatedDataset[] annotatedDatasets;
+
     public GoogleCloudDatalabelingV1beta1ListAnnotatedDatasetsResponse withAnnotatedDatasets(GoogleCloudDatalabelingV1beta1AnnotatedDataset[] annotatedDatasets) {
         this.annotatedDatasets = annotatedDatasets;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1ListAnnotatedDatasetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatalabelingV1beta1ListAnnotatedDatasetsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ListAnnotatedDatasetsResponse(){}
 }

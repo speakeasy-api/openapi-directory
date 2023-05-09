@@ -15,6 +15,7 @@ public class LocationAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationState")
     public LocationState locationState;
+
     public LocationAttributes withLocationState(LocationState locationState) {
         this.locationState = locationState;
         return this;
@@ -23,6 +24,7 @@ public class LocationAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoppedActions")
     public FleetActionEnum[] stoppedActions;
+
     public LocationAttributes withStoppedActions(FleetActionEnum[] stoppedActions) {
         this.stoppedActions = stoppedActions;
         return this;
@@ -31,9 +33,11 @@ public class LocationAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateStatus")
     public LocationUpdateStatusEnum updateStatus;
+
     public LocationAttributes withUpdateStatus(LocationUpdateStatusEnum updateStatus) {
         this.updateStatus = updateStatus;
         return this;
     }
     
+    public LocationAttributes(){}
 }

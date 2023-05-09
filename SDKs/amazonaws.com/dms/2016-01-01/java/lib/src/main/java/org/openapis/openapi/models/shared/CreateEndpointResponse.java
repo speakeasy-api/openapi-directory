@@ -15,9 +15,11 @@ public class CreateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoint")
     public Endpoint endpoint;
+
     public CreateEndpointResponse withEndpoint(Endpoint endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
+    public CreateEndpointResponse(){}
 }

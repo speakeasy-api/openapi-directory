@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TerminateSessionRequest {
     @JsonProperty("SessionId")
     public String sessionId;
+
     public TerminateSessionRequest withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public TerminateSessionRequest(@JsonProperty("SessionId") String sessionId) {
+        this.sessionId = sessionId;
+  }
 }

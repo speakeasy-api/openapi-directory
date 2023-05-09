@@ -15,9 +15,13 @@ public class GetApplicationSettingsResponse {
      */
     @JsonProperty("ApplicationSettingsResource")
     public ApplicationSettingsResource applicationSettingsResource;
+
     public GetApplicationSettingsResponse withApplicationSettingsResource(ApplicationSettingsResource applicationSettingsResource) {
         this.applicationSettingsResource = applicationSettingsResource;
         return this;
     }
     
+    public GetApplicationSettingsResponse(@JsonProperty("ApplicationSettingsResource") ApplicationSettingsResource applicationSettingsResource) {
+        this.applicationSettingsResource = applicationSettingsResource;
+  }
 }

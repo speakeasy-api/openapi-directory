@@ -12,6 +12,7 @@ public class ListSchemasInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListSchemasInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListSchemasInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSchemasInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListSchemasInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryId")
     public RegistryId registryId;
+
     public ListSchemasInput withRegistryId(RegistryId registryId) {
         this.registryId = registryId;
         return this;
     }
     
+    public ListSchemasInput(){}
 }

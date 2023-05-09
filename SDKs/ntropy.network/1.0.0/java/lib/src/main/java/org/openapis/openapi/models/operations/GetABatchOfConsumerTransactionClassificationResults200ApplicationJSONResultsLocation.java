@@ -12,6 +12,7 @@ public class GetABatchOfConsumerTransactionClassificationResults200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public GetABatchOfConsumerTransactionClassificationResults200ApplicationJSONResultsLocation withAddress(String address) {
         this.address = address;
         return this;
@@ -20,6 +21,7 @@ public class GetABatchOfConsumerTransactionClassificationResults200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public GetABatchOfConsumerTransactionClassificationResults200ApplicationJSONResultsLocation withCity(String city) {
         this.city = city;
         return this;
@@ -28,6 +30,7 @@ public class GetABatchOfConsumerTransactionClassificationResults200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public GetABatchOfConsumerTransactionClassificationResults200ApplicationJSONResultsLocation withCountry(String country) {
         this.country = country;
         return this;
@@ -36,6 +39,7 @@ public class GetABatchOfConsumerTransactionClassificationResults200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Double lat;
+
     public GetABatchOfConsumerTransactionClassificationResults200ApplicationJSONResultsLocation withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -44,6 +48,7 @@ public class GetABatchOfConsumerTransactionClassificationResults200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lon")
     public Double lon;
+
     public GetABatchOfConsumerTransactionClassificationResults200ApplicationJSONResultsLocation withLon(Double lon) {
         this.lon = lon;
         return this;
@@ -52,9 +57,11 @@ public class GetABatchOfConsumerTransactionClassificationResults200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal_code")
     public String postalCode;
+
     public GetABatchOfConsumerTransactionClassificationResults200ApplicationJSONResultsLocation withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
     
+    public GetABatchOfConsumerTransactionClassificationResults200ApplicationJSONResultsLocation(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBrowserSettingsResponse {
@@ -12,6 +13,7 @@ public class GetBrowserSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetBrowserSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetBrowserSettingsResponse {
     
     
     public String contentType;
+
     public GetBrowserSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetBrowserSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBrowserSettingsResponse getBrowserSettingsResponse;
+
     public GetBrowserSettingsResponse withGetBrowserSettingsResponse(org.openapis.openapi.models.shared.GetBrowserSettingsResponse getBrowserSettingsResponse) {
         this.getBrowserSettingsResponse = getBrowserSettingsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetBrowserSettingsResponse {
      */
     
     public Object internalServerException;
+
     public GetBrowserSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetBrowserSettingsResponse {
     
     
     public Integer statusCode;
+
     public GetBrowserSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetBrowserSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBrowserSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetBrowserSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetBrowserSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetBrowserSettingsResponse {
      */
     
     public Object throttlingException;
+
     public GetBrowserSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetBrowserSettingsResponse {
      */
     
     public Object validationException;
+
     public GetBrowserSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetBrowserSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

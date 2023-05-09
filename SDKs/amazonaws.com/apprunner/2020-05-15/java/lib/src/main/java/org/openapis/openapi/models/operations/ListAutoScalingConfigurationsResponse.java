@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAutoScalingConfigurationsResponse {
     
     public String contentType;
+
     public ListAutoScalingConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAutoScalingConfigurationsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListAutoScalingConfigurationsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListAutoScalingConfigurationsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListAutoScalingConfigurationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListAutoScalingConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAutoScalingConfigurationsResponse listAutoScalingConfigurationsResponse;
+
     public ListAutoScalingConfigurationsResponse withListAutoScalingConfigurationsResponse(org.openapis.openapi.models.shared.ListAutoScalingConfigurationsResponse listAutoScalingConfigurationsResponse) {
         this.listAutoScalingConfigurationsResponse = listAutoScalingConfigurationsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAutoScalingConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public ListAutoScalingConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListAutoScalingConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAutoScalingConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAutoScalingConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

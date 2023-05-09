@@ -15,9 +15,13 @@ public class ChangePinRequest {
      */
     @JsonProperty("pin")
     public String pin;
+
     public ChangePinRequest withPin(String pin) {
         this.pin = pin;
         return this;
     }
     
+    public ChangePinRequest(@JsonProperty("pin") String pin) {
+        this.pin = pin;
+  }
 }

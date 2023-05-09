@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV4LayersAsPlantedResponse {
     
     public String contentType;
+
     public GetV4LayersAsPlantedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetV4LayersAsPlantedResponse {
      */
     
     public java.util.Map<String, Object> empty;
+
     public GetV4LayersAsPlantedResponse withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
@@ -29,6 +32,7 @@ public class GetV4LayersAsPlantedResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetV4LayersAsPlantedResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetV4LayersAsPlantedResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetV4LayersAsPlantedResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -46,6 +51,7 @@ public class GetV4LayersAsPlantedResponse {
      */
     
     public org.openapis.openapi.models.shared.PlantingActivities plantingActivities;
+
     public GetV4LayersAsPlantedResponse withPlantingActivities(org.openapis.openapi.models.shared.PlantingActivities plantingActivities) {
         this.plantingActivities = plantingActivities;
         return this;
@@ -53,6 +59,7 @@ public class GetV4LayersAsPlantedResponse {
     
     
     public Integer statusCode;
+
     public GetV4LayersAsPlantedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,9 +67,14 @@ public class GetV4LayersAsPlantedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV4LayersAsPlantedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetV4LayersAsPlantedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

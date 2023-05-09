@@ -15,6 +15,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public Long duration;
+
     public Session withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -22,6 +23,7 @@ public class Session {
     
     @JsonProperty("Id")
     public String id;
+
     public Session withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +31,7 @@ public class Session {
     
     @JsonProperty("StartTimestamp")
     public String startTimestamp;
+
     public Session withStartTimestamp(String startTimestamp) {
         this.startTimestamp = startTimestamp;
         return this;
@@ -37,9 +40,14 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StopTimestamp")
     public String stopTimestamp;
+
     public Session withStopTimestamp(String stopTimestamp) {
         this.stopTimestamp = stopTimestamp;
         return this;
     }
     
+    public Session(@JsonProperty("Id") String id, @JsonProperty("StartTimestamp") String startTimestamp) {
+        this.id = id;
+        this.startTimestamp = startTimestamp;
+  }
 }

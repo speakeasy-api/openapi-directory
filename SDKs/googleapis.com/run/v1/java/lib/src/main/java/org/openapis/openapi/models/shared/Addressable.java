@@ -15,9 +15,11 @@ public class Addressable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Addressable withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Addressable(){}
 }

@@ -15,9 +15,11 @@ public class NetworkPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public Step[] steps;
+
     public NetworkPath withSteps(Step[] steps) {
         this.steps = steps;
         return this;
     }
     
+    public NetworkPath(){}
 }

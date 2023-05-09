@@ -18,9 +18,11 @@ public class RelationshipDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedTable")
     public String linkedTable;
+
     public RelationshipDetails withLinkedTable(String linkedTable) {
         this.linkedTable = linkedTable;
         return this;
     }
     
+    public RelationshipDetails(){}
 }

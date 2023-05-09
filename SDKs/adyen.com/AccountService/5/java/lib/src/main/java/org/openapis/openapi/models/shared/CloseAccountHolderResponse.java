@@ -15,6 +15,7 @@ public class CloseAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderStatus")
     public AccountHolderStatus accountHolderStatus;
+
     public CloseAccountHolderResponse withAccountHolderStatus(AccountHolderStatus accountHolderStatus) {
         this.accountHolderStatus = accountHolderStatus;
         return this;
@@ -26,6 +27,7 @@ public class CloseAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public CloseAccountHolderResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -37,6 +39,7 @@ public class CloseAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public CloseAccountHolderResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -48,9 +51,11 @@ public class CloseAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public CloseAccountHolderResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public CloseAccountHolderResponse(){}
 }

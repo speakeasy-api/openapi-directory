@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeKeyPairsRequest {
     
     public Boolean dryRun;
+
     public DescribeKeyPairsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeKeyPairsRequest {
     
     
     public DescribeKeyPairsRequestFilters[] filters;
+
     public DescribeKeyPairsRequest withFilters(DescribeKeyPairsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeKeyPairsRequest {
     
     
     public Boolean includePublicKey;
+
     public DescribeKeyPairsRequest withIncludePublicKey(Boolean includePublicKey) {
         this.includePublicKey = includePublicKey;
         return this;
@@ -30,6 +33,7 @@ public class DescribeKeyPairsRequest {
     
     
     public String[] keyNames;
+
     public DescribeKeyPairsRequest withKeyNames(String[] keyNames) {
         this.keyNames = keyNames;
         return this;
@@ -37,9 +41,11 @@ public class DescribeKeyPairsRequest {
     
     
     public String[] keyPairIds;
+
     public DescribeKeyPairsRequest withKeyPairIds(String[] keyPairIds) {
         this.keyPairIds = keyPairIds;
         return this;
     }
     
+    public DescribeKeyPairsRequest(){}
 }

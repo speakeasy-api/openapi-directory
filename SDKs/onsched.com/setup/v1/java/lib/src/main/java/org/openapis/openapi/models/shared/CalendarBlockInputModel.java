@@ -15,6 +15,7 @@ public class CalendarBlockInputModel {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endDate")
     public LocalDate endDate;
+
     public CalendarBlockInputModel withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -23,6 +24,7 @@ public class CalendarBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public Integer endTime;
+
     public CalendarBlockInputModel withEndTime(Integer endTime) {
         this.endTime = endTime;
         return this;
@@ -31,6 +33,7 @@ public class CalendarBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public CalendarBlockInputModel withReason(String reason) {
         this.reason = reason;
         return this;
@@ -39,6 +42,7 @@ public class CalendarBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeat")
     public RepeatInputModel repeat;
+
     public CalendarBlockInputModel withRepeat(RepeatInputModel repeat) {
         this.repeat = repeat;
         return this;
@@ -47,6 +51,7 @@ public class CalendarBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeats")
     public Boolean repeats;
+
     public CalendarBlockInputModel withRepeats(Boolean repeats) {
         this.repeats = repeats;
         return this;
@@ -56,6 +61,7 @@ public class CalendarBlockInputModel {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public CalendarBlockInputModel withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -64,9 +70,11 @@ public class CalendarBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public Integer startTime;
+
     public CalendarBlockInputModel withStartTime(Integer startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public CalendarBlockInputModel(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RewardProgramResourceRelationshipsGroup {
     @JsonProperty("data")
     public RewardProgramResourceRelationshipsGroupData data;
+
     public RewardProgramResourceRelationshipsGroup withData(RewardProgramResourceRelationshipsGroupData data) {
         this.data = data;
         return this;
     }
     
+    public RewardProgramResourceRelationshipsGroup(@JsonProperty("data") RewardProgramResourceRelationshipsGroupData data) {
+        this.data = data;
+  }
 }

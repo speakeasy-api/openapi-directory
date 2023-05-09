@@ -35,6 +35,7 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetCustomerServiceMetricSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCustomerServiceMetricRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCustomerServiceMetricResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/FindSellerStandardsProfilesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/FindSellerStandardsProfilesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSellerStandardsProfileSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSellerStandardsProfileRequest.java
@@ -64,4 +65,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/Definition.java
 lib/src/main/java/org/openapis/openapi/models/shared/Metadata.java
 lib/src/main/java/org/openapis/openapi/models/shared/MetadataRecord.java
 lib/src/main/java/org/openapis/openapi/models/shared/MetadataHeader.java
+docs/sdk/README.md
+docs/customerservicemetric/README.md
+docs/sellerstandardsprofile/README.md
+docs/trafficreport/README.md
 USAGE.md

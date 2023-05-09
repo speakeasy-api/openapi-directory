@@ -177,4 +177,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/DialogAction.java
 lib/src/main/java/org/openapis/openapi/models/shared/Dialog.java
 lib/src/main/java/org/openapis/openapi/models/shared/ActionStatusStatusCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ActionStatus.java
+docs/sdk/README.md
+docs/media/README.md
+docs/spaces/README.md
 USAGE.md

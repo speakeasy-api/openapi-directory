@@ -60,12 +60,10 @@ public class RewardEarning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRewardEarningResponse res = new org.openapis.openapi.models.operations.CreateRewardEarningResponse() {{
+        org.openapis.openapi.models.operations.CreateRewardEarningResponse res = new org.openapis.openapi.models.operations.CreateRewardEarningResponse(contentType, httpRes.statusCode()) {{
             createRewardEarningResponse = null;
             createOrUpdateErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,12 +105,10 @@ public class RewardEarning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchRewardEarningResponse res = new org.openapis.openapi.models.operations.FetchRewardEarningResponse() {{
+        org.openapis.openapi.models.operations.FetchRewardEarningResponse res = new org.openapis.openapi.models.operations.FetchRewardEarningResponse(contentType, httpRes.statusCode()) {{
             fetchRewardEarningResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,12 +156,10 @@ public class RewardEarning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchRewardEarningsResponse res = new org.openapis.openapi.models.operations.FetchRewardEarningsResponse() {{
+        org.openapis.openapi.models.operations.FetchRewardEarningsResponse res = new org.openapis.openapi.models.operations.FetchRewardEarningsResponse(contentType, httpRes.statusCode()) {{
             fetchRewardEarningsResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

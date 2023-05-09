@@ -18,6 +18,7 @@ public class NotificationChannelStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationChannelNames")
     public String[] notificationChannelNames;
+
     public NotificationChannelStrategy withNotificationChannelNames(String[] notificationChannelNames) {
         this.notificationChannelNames = notificationChannelNames;
         return this;
@@ -29,9 +30,11 @@ public class NotificationChannelStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renotifyInterval")
     public String renotifyInterval;
+
     public NotificationChannelStrategy withRenotifyInterval(String renotifyInterval) {
         this.renotifyInterval = renotifyInterval;
         return this;
     }
     
+    public NotificationChannelStrategy(){}
 }

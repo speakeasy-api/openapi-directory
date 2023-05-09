@@ -15,9 +15,13 @@ public class ItvPlans {
      */
     @JsonProperty("plans")
     public ItvPlanListItem[] plans;
+
     public ItvPlans withPlans(ItvPlanListItem[] plans) {
         this.plans = plans;
         return this;
     }
     
+    public ItvPlans(@JsonProperty("plans") ItvPlanListItem[] plans) {
+        this.plans = plans;
+  }
 }

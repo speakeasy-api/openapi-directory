@@ -12,9 +12,13 @@ public class PutDedicatedIpWarmupAttributesRequestBody {
      */
     @JsonProperty("WarmupPercentage")
     public Long warmupPercentage;
+
     public PutDedicatedIpWarmupAttributesRequestBody withWarmupPercentage(Long warmupPercentage) {
         this.warmupPercentage = warmupPercentage;
         return this;
     }
     
+    public PutDedicatedIpWarmupAttributesRequestBody(@JsonProperty("WarmupPercentage") Long warmupPercentage) {
+        this.warmupPercentage = warmupPercentage;
+  }
 }

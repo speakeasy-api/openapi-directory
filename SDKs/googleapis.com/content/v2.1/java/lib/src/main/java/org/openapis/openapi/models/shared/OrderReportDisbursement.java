@@ -15,6 +15,7 @@ public class OrderReportDisbursement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disbursementAmount")
     public Price disbursementAmount;
+
     public OrderReportDisbursement withDisbursementAmount(Price disbursementAmount) {
         this.disbursementAmount = disbursementAmount;
         return this;
@@ -26,6 +27,7 @@ public class OrderReportDisbursement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disbursementCreationDate")
     public String disbursementCreationDate;
+
     public OrderReportDisbursement withDisbursementCreationDate(String disbursementCreationDate) {
         this.disbursementCreationDate = disbursementCreationDate;
         return this;
@@ -37,6 +39,7 @@ public class OrderReportDisbursement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disbursementDate")
     public String disbursementDate;
+
     public OrderReportDisbursement withDisbursementDate(String disbursementDate) {
         this.disbursementDate = disbursementDate;
         return this;
@@ -48,6 +51,7 @@ public class OrderReportDisbursement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disbursementId")
     public String disbursementId;
+
     public OrderReportDisbursement withDisbursementId(String disbursementId) {
         this.disbursementId = disbursementId;
         return this;
@@ -59,9 +63,11 @@ public class OrderReportDisbursement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public String merchantId;
+
     public OrderReportDisbursement withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
     }
     
+    public OrderReportDisbursement(){}
 }

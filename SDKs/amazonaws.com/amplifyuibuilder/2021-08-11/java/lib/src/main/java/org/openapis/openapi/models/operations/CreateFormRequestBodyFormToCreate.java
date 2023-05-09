@@ -15,6 +15,7 @@ public class CreateFormRequestBodyFormToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cta")
     public org.openapis.openapi.models.shared.FormCTA cta;
+
     public CreateFormRequestBodyFormToCreate withCta(org.openapis.openapi.models.shared.FormCTA cta) {
         this.cta = cta;
         return this;
@@ -23,6 +24,7 @@ public class CreateFormRequestBodyFormToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public org.openapis.openapi.models.shared.FormDataTypeConfig dataType;
+
     public CreateFormRequestBodyFormToCreate withDataType(org.openapis.openapi.models.shared.FormDataTypeConfig dataType) {
         this.dataType = dataType;
         return this;
@@ -31,6 +33,7 @@ public class CreateFormRequestBodyFormToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, org.openapis.openapi.models.shared.FieldConfig> fields;
+
     public CreateFormRequestBodyFormToCreate withFields(java.util.Map<String, org.openapis.openapi.models.shared.FieldConfig> fields) {
         this.fields = fields;
         return this;
@@ -39,14 +42,25 @@ public class CreateFormRequestBodyFormToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formActionType")
     public org.openapis.openapi.models.shared.FormActionTypeEnum formActionType;
+
     public CreateFormRequestBodyFormToCreate withFormActionType(org.openapis.openapi.models.shared.FormActionTypeEnum formActionType) {
         this.formActionType = formActionType;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("labelDecorator")
+    public org.openapis.openapi.models.shared.LabelDecoratorEnum labelDecorator;
+
+    public CreateFormRequestBodyFormToCreate withLabelDecorator(org.openapis.openapi.models.shared.LabelDecoratorEnum labelDecorator) {
+        this.labelDecorator = labelDecorator;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateFormRequestBodyFormToCreate withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +69,7 @@ public class CreateFormRequestBodyFormToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaVersion")
     public String schemaVersion;
+
     public CreateFormRequestBodyFormToCreate withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -63,6 +78,7 @@ public class CreateFormRequestBodyFormToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sectionalElements")
     public java.util.Map<String, org.openapis.openapi.models.shared.SectionalElement> sectionalElements;
+
     public CreateFormRequestBodyFormToCreate withSectionalElements(java.util.Map<String, org.openapis.openapi.models.shared.SectionalElement> sectionalElements) {
         this.sectionalElements = sectionalElements;
         return this;
@@ -71,6 +87,7 @@ public class CreateFormRequestBodyFormToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("style")
     public org.openapis.openapi.models.shared.FormStyle style;
+
     public CreateFormRequestBodyFormToCreate withStyle(org.openapis.openapi.models.shared.FormStyle style) {
         this.style = style;
         return this;
@@ -79,9 +96,11 @@ public class CreateFormRequestBodyFormToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateFormRequestBodyFormToCreate withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFormRequestBodyFormToCreate(){}
 }

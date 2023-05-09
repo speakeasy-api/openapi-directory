@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOutpostInstanceTypesResponse {
@@ -12,6 +13,7 @@ public class GetOutpostInstanceTypesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetOutpostInstanceTypesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetOutpostInstanceTypesResponse {
     
     
     public String contentType;
+
     public GetOutpostInstanceTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetOutpostInstanceTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOutpostInstanceTypesOutput getOutpostInstanceTypesOutput;
+
     public GetOutpostInstanceTypesResponse withGetOutpostInstanceTypesOutput(org.openapis.openapi.models.shared.GetOutpostInstanceTypesOutput getOutpostInstanceTypesOutput) {
         this.getOutpostInstanceTypesOutput = getOutpostInstanceTypesOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetOutpostInstanceTypesResponse {
      */
     
     public Object internalServerException;
+
     public GetOutpostInstanceTypesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetOutpostInstanceTypesResponse {
      */
     
     public Object notFoundException;
+
     public GetOutpostInstanceTypesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetOutpostInstanceTypesResponse {
     
     
     public Integer statusCode;
+
     public GetOutpostInstanceTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetOutpostInstanceTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOutpostInstanceTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetOutpostInstanceTypesResponse {
      */
     
     public Object validationException;
+
     public GetOutpostInstanceTypesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetOutpostInstanceTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

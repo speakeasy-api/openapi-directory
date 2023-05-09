@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class RouteRequestBody {
     @SpeakeasyMetadata("form:name=json,json")
     public org.openapis.openapi.models.shared.SeldonMessage json;
+
     public RouteRequestBody withJson(org.openapis.openapi.models.shared.SeldonMessage json) {
         this.json = json;
         return this;
     }
     
+    public RouteRequestBody(){}
 }

@@ -12,6 +12,7 @@ public class FindNumbersLocalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
     public String city;
+
     public FindNumbersLocalRequest withCity(String city) {
         this.city = city;
         return this;
@@ -22,6 +23,7 @@ public class FindNumbersLocalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FindNumbersLocalRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +34,7 @@ public class FindNumbersLocalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FindNumbersLocalRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +45,7 @@ public class FindNumbersLocalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
     public String prefix;
+
     public FindNumbersLocalRequest withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -52,6 +56,7 @@ public class FindNumbersLocalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String state;
+
     public FindNumbersLocalRequest withState(String state) {
         this.state = state;
         return this;
@@ -62,9 +67,11 @@ public class FindNumbersLocalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zipcode")
     public String zipcode;
+
     public FindNumbersLocalRequest withZipcode(String zipcode) {
         this.zipcode = zipcode;
         return this;
     }
     
+    public FindNumbersLocalRequest(){}
 }

@@ -18,9 +18,11 @@ public class UpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blueGreenInfo")
     public BlueGreenInfo blueGreenInfo;
+
     public UpdateInfo withBlueGreenInfo(BlueGreenInfo blueGreenInfo) {
         this.blueGreenInfo = blueGreenInfo;
         return this;
     }
     
+    public UpdateInfo(){}
 }

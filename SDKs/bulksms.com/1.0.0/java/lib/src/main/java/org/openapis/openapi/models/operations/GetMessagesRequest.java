@@ -12,6 +12,7 @@ public class GetMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetMessagesRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -23,6 +24,7 @@ public class GetMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Double limit;
+
     public GetMessagesRequest withLimit(Double limit) {
         this.limit = limit;
         return this;
@@ -36,9 +38,11 @@ public class GetMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public GetMessagesSortOrderEnum sortOrder;
+
     public GetMessagesRequest withSortOrder(GetMessagesSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public GetMessagesRequest(){}
 }

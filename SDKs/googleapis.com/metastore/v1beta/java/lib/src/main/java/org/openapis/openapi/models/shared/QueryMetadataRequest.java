@@ -18,9 +18,11 @@ public class QueryMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public QueryMetadataRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public QueryMetadataRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRoleMappingResponse {
     
     public String contentType;
+
     public GetRoleMappingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRoleMappingResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetRoleMappingResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetRoleMappingResponse {
      */
     
     public org.openapis.openapi.models.shared.RoleMapping roleMapping;
+
     public GetRoleMappingResponse withRoleMapping(org.openapis.openapi.models.shared.RoleMapping roleMapping) {
         this.roleMapping = roleMapping;
         return this;
@@ -36,6 +40,7 @@ public class GetRoleMappingResponse {
     
     
     public Integer statusCode;
+
     public GetRoleMappingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetRoleMappingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRoleMappingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRoleMappingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class Action {
     
     public String id;
+
     public Action withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Action(){}
 }

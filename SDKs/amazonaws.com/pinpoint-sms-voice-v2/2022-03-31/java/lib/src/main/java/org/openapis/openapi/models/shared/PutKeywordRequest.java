@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutKeywordRequest {
     @JsonProperty("Keyword")
     public String keyword;
+
     public PutKeywordRequest withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -19,6 +20,7 @@ public class PutKeywordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeywordAction")
     public KeywordActionEnum keywordAction;
+
     public PutKeywordRequest withKeywordAction(KeywordActionEnum keywordAction) {
         this.keywordAction = keywordAction;
         return this;
@@ -26,6 +28,7 @@ public class PutKeywordRequest {
     
     @JsonProperty("KeywordMessage")
     public String keywordMessage;
+
     public PutKeywordRequest withKeywordMessage(String keywordMessage) {
         this.keywordMessage = keywordMessage;
         return this;
@@ -33,9 +36,15 @@ public class PutKeywordRequest {
     
     @JsonProperty("OriginationIdentity")
     public String originationIdentity;
+
     public PutKeywordRequest withOriginationIdentity(String originationIdentity) {
         this.originationIdentity = originationIdentity;
         return this;
     }
     
+    public PutKeywordRequest(@JsonProperty("Keyword") String keyword, @JsonProperty("KeywordMessage") String keywordMessage, @JsonProperty("OriginationIdentity") String originationIdentity) {
+        this.keyword = keyword;
+        this.keywordMessage = keywordMessage;
+        this.originationIdentity = originationIdentity;
+  }
 }

@@ -21,6 +21,7 @@ public class Endpoint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Endpoint withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -32,6 +33,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCaptureConfig")
     public DataCaptureConfigSummary dataCaptureConfig;
+
     public Endpoint withDataCaptureConfig(DataCaptureConfigSummary dataCaptureConfig) {
         this.dataCaptureConfig = dataCaptureConfig;
         return this;
@@ -39,6 +41,7 @@ public class Endpoint {
     
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public Endpoint withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
@@ -46,6 +49,7 @@ public class Endpoint {
     
     @JsonProperty("EndpointConfigName")
     public String endpointConfigName;
+
     public Endpoint withEndpointConfigName(String endpointConfigName) {
         this.endpointConfigName = endpointConfigName;
         return this;
@@ -53,6 +57,7 @@ public class Endpoint {
     
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public Endpoint withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -60,6 +65,7 @@ public class Endpoint {
     
     @JsonProperty("EndpointStatus")
     public EndpointStatusEnum endpointStatus;
+
     public Endpoint withEndpointStatus(EndpointStatusEnum endpointStatus) {
         this.endpointStatus = endpointStatus;
         return this;
@@ -68,6 +74,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public Endpoint withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -77,6 +84,7 @@ public class Endpoint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public Endpoint withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -85,6 +93,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringSchedules")
     public MonitoringSchedule[] monitoringSchedules;
+
     public Endpoint withMonitoringSchedules(MonitoringSchedule[] monitoringSchedules) {
         this.monitoringSchedules = monitoringSchedules;
         return this;
@@ -93,6 +102,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductionVariants")
     public ProductionVariantSummary[] productionVariants;
+
     public Endpoint withProductionVariants(ProductionVariantSummary[] productionVariants) {
         this.productionVariants = productionVariants;
         return this;
@@ -101,6 +111,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShadowProductionVariants")
     public ProductionVariantSummary[] shadowProductionVariants;
+
     public Endpoint withShadowProductionVariants(ProductionVariantSummary[] shadowProductionVariants) {
         this.shadowProductionVariants = shadowProductionVariants;
         return this;
@@ -109,9 +120,18 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public Endpoint withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public Endpoint(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("EndpointArn") String endpointArn, @JsonProperty("EndpointConfigName") String endpointConfigName, @JsonProperty("EndpointName") String endpointName, @JsonProperty("EndpointStatus") EndpointStatusEnum endpointStatus, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime) {
+        this.creationTime = creationTime;
+        this.endpointArn = endpointArn;
+        this.endpointConfigName = endpointConfigName;
+        this.endpointName = endpointName;
+        this.endpointStatus = endpointStatus;
+        this.lastModifiedTime = lastModifiedTime;
+  }
 }

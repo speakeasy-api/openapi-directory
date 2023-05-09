@@ -15,6 +15,7 @@ public class DescribeJobQueuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobQueues")
     public JobQueueDetail[] jobQueues;
+
     public DescribeJobQueuesResponse withJobQueues(JobQueueDetail[] jobQueues) {
         this.jobQueues = jobQueues;
         return this;
@@ -23,9 +24,11 @@ public class DescribeJobQueuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeJobQueuesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeJobQueuesResponse(){}
 }

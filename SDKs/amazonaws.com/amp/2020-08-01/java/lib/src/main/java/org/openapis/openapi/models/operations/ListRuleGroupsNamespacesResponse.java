@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRuleGroupsNamespacesResponse {
@@ -12,6 +13,7 @@ public class ListRuleGroupsNamespacesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListRuleGroupsNamespacesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListRuleGroupsNamespacesResponse {
     
     
     public String contentType;
+
     public ListRuleGroupsNamespacesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListRuleGroupsNamespacesResponse {
      */
     
     public Object internalServerException;
+
     public ListRuleGroupsNamespacesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListRuleGroupsNamespacesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRuleGroupsNamespacesResponse listRuleGroupsNamespacesResponse;
+
     public ListRuleGroupsNamespacesResponse withListRuleGroupsNamespacesResponse(org.openapis.openapi.models.shared.ListRuleGroupsNamespacesResponse listRuleGroupsNamespacesResponse) {
         this.listRuleGroupsNamespacesResponse = listRuleGroupsNamespacesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListRuleGroupsNamespacesResponse {
     
     
     public Integer statusCode;
+
     public ListRuleGroupsNamespacesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListRuleGroupsNamespacesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRuleGroupsNamespacesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListRuleGroupsNamespacesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListRuleGroupsNamespacesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListRuleGroupsNamespacesResponse {
      */
     
     public Object throttlingException;
+
     public ListRuleGroupsNamespacesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListRuleGroupsNamespacesResponse {
      */
     
     public Object validationException;
+
     public ListRuleGroupsNamespacesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListRuleGroupsNamespacesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

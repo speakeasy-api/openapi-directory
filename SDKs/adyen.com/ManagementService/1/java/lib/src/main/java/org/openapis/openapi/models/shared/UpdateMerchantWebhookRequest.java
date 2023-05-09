@@ -15,6 +15,7 @@ public class UpdateMerchantWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptsExpiredCertificate")
     public Boolean acceptsExpiredCertificate;
+
     public UpdateMerchantWebhookRequest withAcceptsExpiredCertificate(Boolean acceptsExpiredCertificate) {
         this.acceptsExpiredCertificate = acceptsExpiredCertificate;
         return this;
@@ -26,6 +27,7 @@ public class UpdateMerchantWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptsSelfSignedCertificate")
     public Boolean acceptsSelfSignedCertificate;
+
     public UpdateMerchantWebhookRequest withAcceptsSelfSignedCertificate(Boolean acceptsSelfSignedCertificate) {
         this.acceptsSelfSignedCertificate = acceptsSelfSignedCertificate;
         return this;
@@ -37,6 +39,7 @@ public class UpdateMerchantWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptsUntrustedRootCertificate")
     public Boolean acceptsUntrustedRootCertificate;
+
     public UpdateMerchantWebhookRequest withAcceptsUntrustedRootCertificate(Boolean acceptsUntrustedRootCertificate) {
         this.acceptsUntrustedRootCertificate = acceptsUntrustedRootCertificate;
         return this;
@@ -48,6 +51,7 @@ public class UpdateMerchantWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public UpdateMerchantWebhookRequest withActive(Boolean active) {
         this.active = active;
         return this;
@@ -56,6 +60,7 @@ public class UpdateMerchantWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalSettings")
     public AdditionalSettings additionalSettings;
+
     public UpdateMerchantWebhookRequest withAdditionalSettings(AdditionalSettings additionalSettings) {
         this.additionalSettings = additionalSettings;
         return this;
@@ -70,6 +75,7 @@ public class UpdateMerchantWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("communicationFormat")
     public UpdateMerchantWebhookRequestCommunicationFormatEnum communicationFormat;
+
     public UpdateMerchantWebhookRequest withCommunicationFormat(UpdateMerchantWebhookRequestCommunicationFormatEnum communicationFormat) {
         this.communicationFormat = communicationFormat;
         return this;
@@ -81,6 +87,7 @@ public class UpdateMerchantWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateMerchantWebhookRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -96,6 +103,7 @@ public class UpdateMerchantWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkType")
     public UpdateMerchantWebhookRequestNetworkTypeEnum networkType;
+
     public UpdateMerchantWebhookRequest withNetworkType(UpdateMerchantWebhookRequestNetworkTypeEnum networkType) {
         this.networkType = networkType;
         return this;
@@ -107,6 +115,7 @@ public class UpdateMerchantWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public UpdateMerchantWebhookRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -120,6 +129,7 @@ public class UpdateMerchantWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("populateSoapActionHeader")
     public Boolean populateSoapActionHeader;
+
     public UpdateMerchantWebhookRequest withPopulateSoapActionHeader(Boolean populateSoapActionHeader) {
         this.populateSoapActionHeader = populateSoapActionHeader;
         return this;
@@ -136,6 +146,7 @@ public class UpdateMerchantWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslVersion")
     public UpdateMerchantWebhookRequestSslVersionEnum sslVersion;
+
     public UpdateMerchantWebhookRequest withSslVersion(UpdateMerchantWebhookRequestSslVersionEnum sslVersion) {
         this.sslVersion = sslVersion;
         return this;
@@ -147,6 +158,7 @@ public class UpdateMerchantWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public UpdateMerchantWebhookRequest withUrl(String url) {
         this.url = url;
         return this;
@@ -158,9 +170,11 @@ public class UpdateMerchantWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public UpdateMerchantWebhookRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public UpdateMerchantWebhookRequest(){}
 }

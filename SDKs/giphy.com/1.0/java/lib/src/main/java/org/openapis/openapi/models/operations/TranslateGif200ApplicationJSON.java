@@ -12,6 +12,7 @@ public class TranslateGif200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.Gif data;
+
     public TranslateGif200ApplicationJSON withData(org.openapis.openapi.models.shared.Gif data) {
         this.data = data;
         return this;
@@ -24,9 +25,11 @@ public class TranslateGif200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public org.openapis.openapi.models.shared.Meta meta;
+
     public TranslateGif200ApplicationJSON withMeta(org.openapis.openapi.models.shared.Meta meta) {
         this.meta = meta;
         return this;
     }
     
+    public TranslateGif200ApplicationJSON(){}
 }

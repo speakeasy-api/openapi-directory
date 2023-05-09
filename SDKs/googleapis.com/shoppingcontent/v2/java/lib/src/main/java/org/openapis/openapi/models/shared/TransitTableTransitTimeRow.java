@@ -12,9 +12,11 @@ public class TransitTableTransitTimeRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public TransitTableTransitTimeRowTransitTimeValue[] values;
+
     public TransitTableTransitTimeRow withValues(TransitTableTransitTimeRowTransitTimeValue[] values) {
         this.values = values;
         return this;
     }
     
+    public TransitTableTransitTimeRow(){}
 }

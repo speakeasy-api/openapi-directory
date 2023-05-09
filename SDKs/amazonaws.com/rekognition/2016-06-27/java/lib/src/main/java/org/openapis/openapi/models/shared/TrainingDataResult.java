@@ -15,6 +15,7 @@ public class TrainingDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Input")
     public TrainingData input;
+
     public TrainingDataResult withInput(TrainingData input) {
         this.input = input;
         return this;
@@ -23,6 +24,7 @@ public class TrainingDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Output")
     public TrainingData output;
+
     public TrainingDataResult withOutput(TrainingData output) {
         this.output = output;
         return this;
@@ -31,9 +33,11 @@ public class TrainingDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Validation")
     public ValidationData validation;
+
     public TrainingDataResult withValidation(ValidationData validation) {
         this.validation = validation;
         return this;
     }
     
+    public TrainingDataResult(){}
 }

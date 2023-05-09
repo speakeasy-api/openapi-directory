@@ -25,6 +25,7 @@ public class CloudJobSchedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public CloudJobSchedule withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -36,6 +37,7 @@ public class CloudJobSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CloudJobSchedule withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -47,6 +49,7 @@ public class CloudJobSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eTag")
     public String eTag;
+
     public CloudJobSchedule withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -58,6 +61,7 @@ public class CloudJobSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionInfo")
     public JobScheduleExecutionInformation executionInfo;
+
     public CloudJobSchedule withExecutionInfo(JobScheduleExecutionInformation executionInfo) {
         this.executionInfo = executionInfo;
         return this;
@@ -69,6 +73,7 @@ public class CloudJobSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CloudJobSchedule withId(String id) {
         this.id = id;
         return this;
@@ -80,6 +85,7 @@ public class CloudJobSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobSpecification")
     public JobSpecification jobSpecification;
+
     public CloudJobSchedule withJobSpecification(JobSpecification jobSpecification) {
         this.jobSpecification = jobSpecification;
         return this;
@@ -93,6 +99,7 @@ public class CloudJobSchedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModified")
     public OffsetDateTime lastModified;
+
     public CloudJobSchedule withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -104,6 +111,7 @@ public class CloudJobSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public MetadataItem[] metadata;
+
     public CloudJobSchedule withMetadata(MetadataItem[] metadata) {
         this.metadata = metadata;
         return this;
@@ -115,6 +123,7 @@ public class CloudJobSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousState")
     public CloudJobSchedulePreviousStateEnum previousState;
+
     public CloudJobSchedule withPreviousState(CloudJobSchedulePreviousStateEnum previousState) {
         this.previousState = previousState;
         return this;
@@ -128,6 +137,7 @@ public class CloudJobSchedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("previousStateTransitionTime")
     public OffsetDateTime previousStateTransitionTime;
+
     public CloudJobSchedule withPreviousStateTransitionTime(OffsetDateTime previousStateTransitionTime) {
         this.previousStateTransitionTime = previousStateTransitionTime;
         return this;
@@ -139,6 +149,7 @@ public class CloudJobSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public Schedule schedule;
+
     public CloudJobSchedule withSchedule(Schedule schedule) {
         this.schedule = schedule;
         return this;
@@ -150,6 +161,7 @@ public class CloudJobSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CloudJobScheduleStateEnum state;
+
     public CloudJobSchedule withState(CloudJobScheduleStateEnum state) {
         this.state = state;
         return this;
@@ -163,6 +175,7 @@ public class CloudJobSchedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stateTransitionTime")
     public OffsetDateTime stateTransitionTime;
+
     public CloudJobSchedule withStateTransitionTime(OffsetDateTime stateTransitionTime) {
         this.stateTransitionTime = stateTransitionTime;
         return this;
@@ -174,6 +187,7 @@ public class CloudJobSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public JobScheduleStatistics stats;
+
     public CloudJobSchedule withStats(JobScheduleStatistics stats) {
         this.stats = stats;
         return this;
@@ -185,9 +199,11 @@ public class CloudJobSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CloudJobSchedule withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CloudJobSchedule(){}
 }

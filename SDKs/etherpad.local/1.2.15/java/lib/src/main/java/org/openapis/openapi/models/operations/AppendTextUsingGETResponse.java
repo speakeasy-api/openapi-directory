@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppendTextUsingGETResponse {
     
     public String contentType;
+
     public AppendTextUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppendTextUsingGETResponse {
     
     
     public Integer statusCode;
+
     public AppendTextUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppendTextUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppendTextUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppendTextUsingGETResponse {
      */
     
     public AppendTextUsingGET200ApplicationJSON appendTextUsingGET200ApplicationJSONObject;
+
     public AppendTextUsingGETResponse withAppendTextUsingGET200ApplicationJSONObject(AppendTextUsingGET200ApplicationJSON appendTextUsingGET200ApplicationJSONObject) {
         this.appendTextUsingGET200ApplicationJSONObject = appendTextUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class AppendTextUsingGETResponse {
      */
     
     public AppendTextUsingGET400ApplicationJSON appendTextUsingGET400ApplicationJSONObject;
+
     public AppendTextUsingGETResponse withAppendTextUsingGET400ApplicationJSONObject(AppendTextUsingGET400ApplicationJSON appendTextUsingGET400ApplicationJSONObject) {
         this.appendTextUsingGET400ApplicationJSONObject = appendTextUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class AppendTextUsingGETResponse {
      */
     
     public AppendTextUsingGET401ApplicationJSON appendTextUsingGET401ApplicationJSONObject;
+
     public AppendTextUsingGETResponse withAppendTextUsingGET401ApplicationJSONObject(AppendTextUsingGET401ApplicationJSON appendTextUsingGET401ApplicationJSONObject) {
         this.appendTextUsingGET401ApplicationJSONObject = appendTextUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class AppendTextUsingGETResponse {
      */
     
     public AppendTextUsingGET500ApplicationJSON appendTextUsingGET500ApplicationJSONObject;
+
     public AppendTextUsingGETResponse withAppendTextUsingGET500ApplicationJSONObject(AppendTextUsingGET500ApplicationJSON appendTextUsingGET500ApplicationJSONObject) {
         this.appendTextUsingGET500ApplicationJSONObject = appendTextUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public AppendTextUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

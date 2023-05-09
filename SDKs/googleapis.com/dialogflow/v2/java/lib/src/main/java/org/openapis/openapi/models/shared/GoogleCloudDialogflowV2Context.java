@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2Context {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifespanCount")
     public Integer lifespanCount;
+
     public GoogleCloudDialogflowV2Context withLifespanCount(Integer lifespanCount) {
         this.lifespanCount = lifespanCount;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2Context {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2Context withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2Context {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, Object> parameters;
+
     public GoogleCloudDialogflowV2Context withParameters(java.util.Map<String, Object> parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public GoogleCloudDialogflowV2Context(){}
 }

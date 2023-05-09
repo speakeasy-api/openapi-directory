@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAgreementResponse {
     
     public String contentType;
+
     public DeleteAgreementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAgreementResponse {
      */
     
     public Object internalServiceError;
+
     public DeleteAgreementResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAgreementResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteAgreementResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAgreementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAgreementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAgreementResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteAgreementResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteAgreementResponse {
     
     
     public Integer statusCode;
+
     public DeleteAgreementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteAgreementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAgreementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteAgreementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

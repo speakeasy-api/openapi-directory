@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DataQualityRuleRecommendationRunFilter {
     @JsonProperty("DataSource")
     public DataSource dataSource;
+
     public DataQualityRuleRecommendationRunFilter withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -29,6 +30,7 @@ public class DataQualityRuleRecommendationRunFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedAfter")
     public OffsetDateTime startedAfter;
+
     public DataQualityRuleRecommendationRunFilter withStartedAfter(OffsetDateTime startedAfter) {
         this.startedAfter = startedAfter;
         return this;
@@ -39,9 +41,13 @@ public class DataQualityRuleRecommendationRunFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedBefore")
     public OffsetDateTime startedBefore;
+
     public DataQualityRuleRecommendationRunFilter withStartedBefore(OffsetDateTime startedBefore) {
         this.startedBefore = startedBefore;
         return this;
     }
     
+    public DataQualityRuleRecommendationRunFilter(@JsonProperty("DataSource") DataSource dataSource) {
+        this.dataSource = dataSource;
+  }
 }

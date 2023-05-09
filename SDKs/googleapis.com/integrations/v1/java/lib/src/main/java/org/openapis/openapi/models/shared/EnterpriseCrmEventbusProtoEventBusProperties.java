@@ -18,9 +18,11 @@ public class EnterpriseCrmEventbusProtoEventBusProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public EnterpriseCrmEventbusProtoPropertyEntry[] properties;
+
     public EnterpriseCrmEventbusProtoEventBusProperties withProperties(EnterpriseCrmEventbusProtoPropertyEntry[] properties) {
         this.properties = properties;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoEventBusProperties(){}
 }

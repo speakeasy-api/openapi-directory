@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetAuthorNameUsingPOSTRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authorID")
     public String authorID;
+
     public GetAuthorNameUsingPOSTRequest withAuthorID(String authorID) {
         this.authorID = authorID;
         return this;
     }
     
+    public GetAuthorNameUsingPOSTRequest(){}
 }

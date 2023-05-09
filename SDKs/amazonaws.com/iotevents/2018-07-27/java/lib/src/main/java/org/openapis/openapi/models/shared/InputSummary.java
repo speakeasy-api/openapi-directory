@@ -22,6 +22,7 @@ public class InputSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public InputSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class InputSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputArn")
     public String inputArn;
+
     public InputSummary withInputArn(String inputArn) {
         this.inputArn = inputArn;
         return this;
@@ -38,6 +40,7 @@ public class InputSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputDescription")
     public String inputDescription;
+
     public InputSummary withInputDescription(String inputDescription) {
         this.inputDescription = inputDescription;
         return this;
@@ -46,6 +49,7 @@ public class InputSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputName")
     public String inputName;
+
     public InputSummary withInputName(String inputName) {
         this.inputName = inputName;
         return this;
@@ -56,6 +60,7 @@ public class InputSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public InputSummary withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -64,9 +69,11 @@ public class InputSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public InputStatusEnum status;
+
     public InputSummary withStatus(InputStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public InputSummary(){}
 }

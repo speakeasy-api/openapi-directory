@@ -15,6 +15,7 @@ public class ListSuppressedDestinationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSuppressedDestinationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSuppressedDestinationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuppressedDestinationSummaries")
     public SuppressedDestinationSummary[] suppressedDestinationSummaries;
+
     public ListSuppressedDestinationsResponse withSuppressedDestinationSummaries(SuppressedDestinationSummary[] suppressedDestinationSummaries) {
         this.suppressedDestinationSummaries = suppressedDestinationSummaries;
         return this;
     }
     
+    public ListSuppressedDestinationsResponse(){}
 }

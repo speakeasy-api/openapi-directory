@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeScalingPoliciesResponse {
@@ -12,6 +13,7 @@ public class DescribeScalingPoliciesResponse {
      */
     
     public Object concurrentUpdateException;
+
     public DescribeScalingPoliciesResponse withConcurrentUpdateException(Object concurrentUpdateException) {
         this.concurrentUpdateException = concurrentUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeScalingPoliciesResponse {
     
     
     public String contentType;
+
     public DescribeScalingPoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeScalingPoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeScalingPoliciesResponse describeScalingPoliciesResponse;
+
     public DescribeScalingPoliciesResponse withDescribeScalingPoliciesResponse(org.openapis.openapi.models.shared.DescribeScalingPoliciesResponse describeScalingPoliciesResponse) {
         this.describeScalingPoliciesResponse = describeScalingPoliciesResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeScalingPoliciesResponse {
      */
     
     public Object failedResourceAccessException;
+
     public DescribeScalingPoliciesResponse withFailedResourceAccessException(Object failedResourceAccessException) {
         this.failedResourceAccessException = failedResourceAccessException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeScalingPoliciesResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeScalingPoliciesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeScalingPoliciesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeScalingPoliciesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeScalingPoliciesResponse {
     
     
     public Integer statusCode;
+
     public DescribeScalingPoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeScalingPoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeScalingPoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DescribeScalingPoliciesResponse {
      */
     
     public Object validationException;
+
     public DescribeScalingPoliciesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeScalingPoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

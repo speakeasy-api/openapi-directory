@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RemoveTagsFromCertificateRequest {
     @JsonProperty("CertificateArn")
     public String certificateArn;
+
     public RemoveTagsFromCertificateRequest withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -16,9 +17,14 @@ public class RemoveTagsFromCertificateRequest {
     
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public RemoveTagsFromCertificateRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public RemoveTagsFromCertificateRequest(@JsonProperty("CertificateArn") String certificateArn, @JsonProperty("Tags") Tag[] tags) {
+        this.certificateArn = certificateArn;
+        this.tags = tags;
+  }
 }

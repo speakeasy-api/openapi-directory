@@ -15,9 +15,11 @@ public class OpenIdConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwks_uri")
     public String jwksUri;
+
     public OpenIdConfiguration withJwksUri(String jwksUri) {
         this.jwksUri = jwksUri;
         return this;
     }
     
+    public OpenIdConfiguration(){}
 }

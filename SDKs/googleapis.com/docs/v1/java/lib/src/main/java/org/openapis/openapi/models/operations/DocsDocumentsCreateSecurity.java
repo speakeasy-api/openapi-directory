@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DocsDocumentsCreateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DocsDocumentsCreateSecurityOption1 option1;
+
     public DocsDocumentsCreateSecurity withOption1(DocsDocumentsCreateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DocsDocumentsCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DocsDocumentsCreateSecurityOption2 option2;
+
     public DocsDocumentsCreateSecurity withOption2(DocsDocumentsCreateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class DocsDocumentsCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DocsDocumentsCreateSecurityOption3 option3;
+
     public DocsDocumentsCreateSecurity withOption3(DocsDocumentsCreateSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public DocsDocumentsCreateSecurity(){}
 }

@@ -14,6 +14,7 @@ public class Locationsv1GetV1LocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
     public String[] city;
+
     public Locationsv1GetV1LocationsGetRequest withCity(String[] city) {
         this.city = city;
         return this;
@@ -21,6 +22,7 @@ public class Locationsv1GetV1LocationsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=coordinates")
     public String coordinates;
+
     public Locationsv1GetV1LocationsGetRequest withCoordinates(String coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -33,6 +35,7 @@ public class Locationsv1GetV1LocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String[] country;
+
     public Locationsv1GetV1LocationsGetRequest withCountry(String[] country) {
         this.country = country;
         return this;
@@ -45,6 +48,7 @@ public class Locationsv1GetV1LocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country_id")
     public String countryId;
+
     public Locationsv1GetV1LocationsGetRequest withCountryId(String countryId) {
         this.countryId = countryId;
         return this;
@@ -52,6 +56,7 @@ public class Locationsv1GetV1LocationsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dumpRaw")
     public Boolean dumpRaw;
+
     public Locationsv1GetV1LocationsGetRequest withDumpRaw(Boolean dumpRaw) {
         this.dumpRaw = dumpRaw;
         return this;
@@ -62,6 +67,7 @@ public class Locationsv1GetV1LocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity")
     public org.openapis.openapi.models.shared.EntityTypesEnum entity;
+
     public Locationsv1GetV1LocationsGetRequest withEntity(org.openapis.openapi.models.shared.EntityTypesEnum entity) {
         this.entity = entity;
         return this;
@@ -69,6 +75,7 @@ public class Locationsv1GetV1LocationsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=has_geo")
     public Boolean hasGeo;
+
     public Locationsv1GetV1LocationsGetRequest withHasGeo(Boolean hasGeo) {
         this.hasGeo = hasGeo;
         return this;
@@ -79,6 +86,7 @@ public class Locationsv1GetV1LocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isAnalysis")
     public Boolean isAnalysis;
+
     public Locationsv1GetV1LocationsGetRequest withIsAnalysis(Boolean isAnalysis) {
         this.isAnalysis = isAnalysis;
         return this;
@@ -89,6 +97,7 @@ public class Locationsv1GetV1LocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isMobile")
     public Boolean isMobile;
+
     public Locationsv1GetV1LocationsGetRequest withIsMobile(Boolean isMobile) {
         this.isMobile = isMobile;
         return this;
@@ -99,6 +108,7 @@ public class Locationsv1GetV1LocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public Locationsv1GetV1LocationsGetRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -106,6 +116,7 @@ public class Locationsv1GetV1LocationsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
     public Object[] location;
+
     public Locationsv1GetV1LocationsGetRequest withLocation(Object[] location) {
         this.location = location;
         return this;
@@ -113,6 +124,7 @@ public class Locationsv1GetV1LocationsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     public Long locationId;
+
     public Locationsv1GetV1LocationsGetRequest withLocationId(Long locationId) {
         this.locationId = locationId;
         return this;
@@ -123,6 +135,7 @@ public class Locationsv1GetV1LocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manufacturerName")
     public String[] manufacturerName;
+
     public Locationsv1GetV1LocationsGetRequest withManufacturerName(String[] manufacturerName) {
         this.manufacturerName = manufacturerName;
         return this;
@@ -133,6 +146,7 @@ public class Locationsv1GetV1LocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modelName")
     public String[] modelName;
+
     public Locationsv1GetV1LocationsGetRequest withModelName(String[] modelName) {
         this.modelName = modelName;
         return this;
@@ -140,6 +154,7 @@ public class Locationsv1GetV1LocationsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public Locationsv1GetV1LocationsGetRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -150,6 +165,7 @@ public class Locationsv1GetV1LocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public Locationsv1GetV1LocationsGetOrderByLocationsOrderEnum orderBy;
+
     public Locationsv1GetV1LocationsGetRequest withOrderBy(Locationsv1GetV1LocationsGetOrderByLocationsOrderEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -160,6 +176,7 @@ public class Locationsv1GetV1LocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public Locationsv1GetV1LocationsGetRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -167,6 +184,7 @@ public class Locationsv1GetV1LocationsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter")
     public Object[] parameter;
+
     public Locationsv1GetV1LocationsGetRequest withParameter(Object[] parameter) {
         this.parameter = parameter;
         return this;
@@ -174,6 +192,7 @@ public class Locationsv1GetV1LocationsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter_id")
     public Long parameterId;
+
     public Locationsv1GetV1LocationsGetRequest withParameterId(Long parameterId) {
         this.parameterId = parameterId;
         return this;
@@ -181,6 +200,7 @@ public class Locationsv1GetV1LocationsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
     public Long radius;
+
     public Locationsv1GetV1LocationsGetRequest withRadius(Long radius) {
         this.radius = radius;
         return this;
@@ -191,6 +211,7 @@ public class Locationsv1GetV1LocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sensorType")
     public org.openapis.openapi.models.shared.SensorTypesEnum sensorType;
+
     public Locationsv1GetV1LocationsGetRequest withSensorType(org.openapis.openapi.models.shared.SensorTypesEnum sensorType) {
         this.sensorType = sensorType;
         return this;
@@ -201,6 +222,7 @@ public class Locationsv1GetV1LocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public Locationsv1GetV1LocationsGetSortSortEnum sort;
+
     public Locationsv1GetV1LocationsGetRequest withSort(Locationsv1GetV1LocationsGetSortSortEnum sort) {
         this.sort = sort;
         return this;
@@ -211,6 +233,7 @@ public class Locationsv1GetV1LocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceName")
     public String[] sourceName;
+
     public Locationsv1GetV1LocationsGetRequest withSourceName(String[] sourceName) {
         this.sourceName = sourceName;
         return this;
@@ -218,9 +241,11 @@ public class Locationsv1GetV1LocationsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
     public String[] unit;
+
     public Locationsv1GetV1LocationsGetRequest withUnit(String[] unit) {
         this.unit = unit;
         return this;
     }
     
+    public Locationsv1GetV1LocationsGetRequest(){}
 }

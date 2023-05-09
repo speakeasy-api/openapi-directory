@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DynamicTransform {
     @JsonProperty("FunctionName")
     public String functionName;
+
     public DynamicTransform withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -21,6 +22,7 @@ public class DynamicTransform {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public DynamicTransform withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -28,6 +30,7 @@ public class DynamicTransform {
     
     @JsonProperty("Name")
     public String name;
+
     public DynamicTransform withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class DynamicTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public TransformConfigParameter[] parameters;
+
     public DynamicTransform withParameters(TransformConfigParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -43,6 +47,7 @@ public class DynamicTransform {
     
     @JsonProperty("Path")
     public String path;
+
     public DynamicTransform withPath(String path) {
         this.path = path;
         return this;
@@ -50,6 +55,7 @@ public class DynamicTransform {
     
     @JsonProperty("TransformName")
     public String transformName;
+
     public DynamicTransform withTransformName(String transformName) {
         this.transformName = transformName;
         return this;
@@ -58,9 +64,17 @@ public class DynamicTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public DynamicTransform withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DynamicTransform(@JsonProperty("FunctionName") String functionName, @JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("Path") String path, @JsonProperty("TransformName") String transformName) {
+        this.functionName = functionName;
+        this.inputs = inputs;
+        this.name = name;
+        this.path = path;
+        this.transformName = transformName;
+  }
 }

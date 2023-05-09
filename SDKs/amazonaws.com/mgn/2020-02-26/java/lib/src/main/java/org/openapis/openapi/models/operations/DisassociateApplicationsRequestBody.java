@@ -12,6 +12,7 @@ public class DisassociateApplicationsRequestBody {
      */
     @JsonProperty("applicationIDs")
     public String[] applicationIDs;
+
     public DisassociateApplicationsRequestBody withApplicationIDs(String[] applicationIDs) {
         this.applicationIDs = applicationIDs;
         return this;
@@ -22,9 +23,14 @@ public class DisassociateApplicationsRequestBody {
      */
     @JsonProperty("waveID")
     public String waveID;
+
     public DisassociateApplicationsRequestBody withWaveID(String waveID) {
         this.waveID = waveID;
         return this;
     }
     
+    public DisassociateApplicationsRequestBody(@JsonProperty("applicationIDs") String[] applicationIDs, @JsonProperty("waveID") String waveID) {
+        this.applicationIDs = applicationIDs;
+        this.waveID = waveID;
+  }
 }

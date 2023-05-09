@@ -15,6 +15,7 @@ public class CreateFunctionDefinitionRequestBodyInitialVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultConfig")
     public org.openapis.openapi.models.shared.FunctionDefaultConfig defaultConfig;
+
     public CreateFunctionDefinitionRequestBodyInitialVersion withDefaultConfig(org.openapis.openapi.models.shared.FunctionDefaultConfig defaultConfig) {
         this.defaultConfig = defaultConfig;
         return this;
@@ -23,9 +24,11 @@ public class CreateFunctionDefinitionRequestBodyInitialVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Functions")
     public org.openapis.openapi.models.shared.Function[] functions;
+
     public CreateFunctionDefinitionRequestBodyInitialVersion withFunctions(org.openapis.openapi.models.shared.Function[] functions) {
         this.functions = functions;
         return this;
     }
     
+    public CreateFunctionDefinitionRequestBodyInitialVersion(){}
 }

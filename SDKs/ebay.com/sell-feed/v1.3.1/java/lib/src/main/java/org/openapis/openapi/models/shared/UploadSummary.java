@@ -18,6 +18,7 @@ public class UploadSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCount")
     public Integer failureCount;
+
     public UploadSummary withFailureCount(Integer failureCount) {
         this.failureCount = failureCount;
         return this;
@@ -29,9 +30,11 @@ public class UploadSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successCount")
     public Integer successCount;
+
     public UploadSummary withSuccessCount(Integer successCount) {
         this.successCount = successCount;
         return this;
     }
     
+    public UploadSummary(){}
 }

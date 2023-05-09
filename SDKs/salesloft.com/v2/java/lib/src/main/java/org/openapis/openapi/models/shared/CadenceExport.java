@@ -15,9 +15,11 @@ public class CadenceExport {
      */
     
     public java.util.Map<String, Object> cadenceContent;
+
     public CadenceExport withCadenceContent(java.util.Map<String, Object> cadenceContent) {
         this.cadenceContent = cadenceContent;
         return this;
     }
     
+    public CadenceExport(){}
 }

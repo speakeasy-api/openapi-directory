@@ -18,6 +18,7 @@ public class ItemStructuredData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash")
     public String hash;
+
     public ItemStructuredData withHash(String hash) {
         this.hash = hash;
         return this;
@@ -29,9 +30,11 @@ public class ItemStructuredData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public StructuredDataObject object;
+
     public ItemStructuredData withObject(StructuredDataObject object) {
         this.object = object;
         return this;
     }
     
+    public ItemStructuredData(){}
 }

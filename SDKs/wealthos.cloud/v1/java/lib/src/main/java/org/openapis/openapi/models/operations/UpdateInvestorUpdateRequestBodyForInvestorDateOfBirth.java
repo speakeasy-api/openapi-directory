@@ -15,6 +15,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorDateOfBirth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day")
     public String day;
+
     public UpdateInvestorUpdateRequestBodyForInvestorDateOfBirth withDay(String day) {
         this.day = day;
         return this;
@@ -26,6 +27,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorDateOfBirth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("month")
     public String month;
+
     public UpdateInvestorUpdateRequestBodyForInvestorDateOfBirth withMonth(String month) {
         this.month = month;
         return this;
@@ -37,9 +39,11 @@ public class UpdateInvestorUpdateRequestBodyForInvestorDateOfBirth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public String year;
+
     public UpdateInvestorUpdateRequestBodyForInvestorDateOfBirth withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public UpdateInvestorUpdateRequestBodyForInvestorDateOfBirth(){}
 }

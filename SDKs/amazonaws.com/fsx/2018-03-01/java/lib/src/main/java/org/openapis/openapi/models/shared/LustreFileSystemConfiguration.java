@@ -18,6 +18,7 @@ public class LustreFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomaticBackupRetentionDays")
     public Long automaticBackupRetentionDays;
+
     public LustreFileSystemConfiguration withAutomaticBackupRetentionDays(Long automaticBackupRetentionDays) {
         this.automaticBackupRetentionDays = automaticBackupRetentionDays;
         return this;
@@ -26,6 +27,7 @@ public class LustreFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyTagsToBackups")
     public Boolean copyTagsToBackups;
+
     public LustreFileSystemConfiguration withCopyTagsToBackups(Boolean copyTagsToBackups) {
         this.copyTagsToBackups = copyTagsToBackups;
         return this;
@@ -37,6 +39,7 @@ public class LustreFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DailyAutomaticBackupStartTime")
     public String dailyAutomaticBackupStartTime;
+
     public LustreFileSystemConfiguration withDailyAutomaticBackupStartTime(String dailyAutomaticBackupStartTime) {
         this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
         return this;
@@ -45,17 +48,19 @@ public class LustreFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCompressionType")
     public DataCompressionTypeEnum dataCompressionType;
+
     public LustreFileSystemConfiguration withDataCompressionType(DataCompressionTypeEnum dataCompressionType) {
         this.dataCompressionType = dataCompressionType;
         return this;
     }
     
     /**
-     * &lt;p&gt;The data repository configuration object for Lustre file systems returned in the response of the &lt;code&gt;CreateFileSystem&lt;/code&gt; operation.&lt;/p&gt; &lt;p&gt;This data type is not supported for file systems with the &lt;code&gt;Persistent_2&lt;/code&gt; deployment type. Instead, use .&lt;/p&gt;
+     * &lt;p&gt;The data repository configuration object for Lustre file systems returned in the response of the &lt;code&gt;CreateFileSystem&lt;/code&gt; operation.&lt;/p&gt; &lt;p&gt;This data type is not supported on file systems with a data repository association. For file systems with a data repository association, see .&lt;/p&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataRepositoryConfiguration")
     public DataRepositoryConfiguration dataRepositoryConfiguration;
+
     public LustreFileSystemConfiguration withDataRepositoryConfiguration(DataRepositoryConfiguration dataRepositoryConfiguration) {
         this.dataRepositoryConfiguration = dataRepositoryConfiguration;
         return this;
@@ -64,6 +69,7 @@ public class LustreFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentType")
     public LustreDeploymentTypeEnum deploymentType;
+
     public LustreFileSystemConfiguration withDeploymentType(LustreDeploymentTypeEnum deploymentType) {
         this.deploymentType = deploymentType;
         return this;
@@ -72,6 +78,7 @@ public class LustreFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DriveCacheType")
     public DriveCacheTypeEnum driveCacheType;
+
     public LustreFileSystemConfiguration withDriveCacheType(DriveCacheTypeEnum driveCacheType) {
         this.driveCacheType = driveCacheType;
         return this;
@@ -80,6 +87,7 @@ public class LustreFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogConfiguration")
     public LustreLogConfiguration logConfiguration;
+
     public LustreFileSystemConfiguration withLogConfiguration(LustreLogConfiguration logConfiguration) {
         this.logConfiguration = logConfiguration;
         return this;
@@ -88,6 +96,7 @@ public class LustreFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountName")
     public String mountName;
+
     public LustreFileSystemConfiguration withMountName(String mountName) {
         this.mountName = mountName;
         return this;
@@ -96,6 +105,7 @@ public class LustreFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PerUnitStorageThroughput")
     public Long perUnitStorageThroughput;
+
     public LustreFileSystemConfiguration withPerUnitStorageThroughput(Long perUnitStorageThroughput) {
         this.perUnitStorageThroughput = perUnitStorageThroughput;
         return this;
@@ -104,6 +114,7 @@ public class LustreFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootSquashConfiguration")
     public LustreRootSquashConfiguration rootSquashConfiguration;
+
     public LustreFileSystemConfiguration withRootSquashConfiguration(LustreRootSquashConfiguration rootSquashConfiguration) {
         this.rootSquashConfiguration = rootSquashConfiguration;
         return this;
@@ -112,9 +123,11 @@ public class LustreFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeeklyMaintenanceStartTime")
     public String weeklyMaintenanceStartTime;
+
     public LustreFileSystemConfiguration withWeeklyMaintenanceStartTime(String weeklyMaintenanceStartTime) {
         this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
         return this;
     }
     
+    public LustreFileSystemConfiguration(){}
 }

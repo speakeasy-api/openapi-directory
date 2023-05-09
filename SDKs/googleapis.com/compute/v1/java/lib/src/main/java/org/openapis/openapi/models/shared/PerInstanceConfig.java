@@ -15,6 +15,7 @@ public class PerInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public PerInstanceConfig withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -26,6 +27,7 @@ public class PerInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PerInstanceConfig withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class PerInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preservedState")
     public PreservedState preservedState;
+
     public PerInstanceConfig withPreservedState(PreservedState preservedState) {
         this.preservedState = preservedState;
         return this;
@@ -48,9 +51,11 @@ public class PerInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PerInstanceConfigStatusEnum status;
+
     public PerInstanceConfig withStatus(PerInstanceConfigStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PerInstanceConfig(){}
 }

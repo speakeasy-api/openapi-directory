@@ -15,6 +15,7 @@ public class DescribeScalingActivitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeScalingActivitiesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeScalingActivitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalingActivities")
     public ScalingActivity[] scalingActivities;
+
     public DescribeScalingActivitiesResponse withScalingActivities(ScalingActivity[] scalingActivities) {
         this.scalingActivities = scalingActivities;
         return this;
     }
     
+    public DescribeScalingActivitiesResponse(){}
 }

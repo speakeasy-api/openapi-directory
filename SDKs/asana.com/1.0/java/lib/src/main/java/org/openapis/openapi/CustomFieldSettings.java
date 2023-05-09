@@ -61,12 +61,10 @@ public class CustomFieldSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomFieldSettingsForPortfolioResponse res = new org.openapis.openapi.models.operations.GetCustomFieldSettingsForPortfolioResponse() {{
+        org.openapis.openapi.models.operations.GetCustomFieldSettingsForPortfolioResponse res = new org.openapis.openapi.models.operations.GetCustomFieldSettingsForPortfolioResponse(contentType, httpRes.statusCode()) {{
             getCustomFieldSettingsForPortfolio200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,12 +113,10 @@ public class CustomFieldSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomFieldSettingsForProjectResponse res = new org.openapis.openapi.models.operations.GetCustomFieldSettingsForProjectResponse() {{
+        org.openapis.openapi.models.operations.GetCustomFieldSettingsForProjectResponse res = new org.openapis.openapi.models.operations.GetCustomFieldSettingsForProjectResponse(contentType, httpRes.statusCode()) {{
             getCustomFieldSettingsForProject200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

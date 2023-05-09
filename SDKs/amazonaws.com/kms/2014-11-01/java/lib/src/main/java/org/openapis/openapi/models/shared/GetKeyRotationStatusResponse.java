@@ -15,9 +15,11 @@ public class GetKeyRotationStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyRotationEnabled")
     public Boolean keyRotationEnabled;
+
     public GetKeyRotationStatusResponse withKeyRotationEnabled(Boolean keyRotationEnabled) {
         this.keyRotationEnabled = keyRotationEnabled;
         return this;
     }
     
+    public GetKeyRotationStatusResponse(){}
 }

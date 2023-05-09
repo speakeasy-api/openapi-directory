@@ -15,6 +15,7 @@ public class ListEntityRecognizersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityRecognizerPropertiesList")
     public EntityRecognizerProperties[] entityRecognizerPropertiesList;
+
     public ListEntityRecognizersResponse withEntityRecognizerPropertiesList(EntityRecognizerProperties[] entityRecognizerPropertiesList) {
         this.entityRecognizerPropertiesList = entityRecognizerPropertiesList;
         return this;
@@ -23,9 +24,11 @@ public class ListEntityRecognizersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEntityRecognizersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEntityRecognizersResponse(){}
 }

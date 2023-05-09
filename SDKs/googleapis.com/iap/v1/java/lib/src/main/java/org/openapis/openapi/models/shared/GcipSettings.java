@@ -18,6 +18,7 @@ public class GcipSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loginPageUri")
     public String loginPageUri;
+
     public GcipSettings withLoginPageUri(String loginPageUri) {
         this.loginPageUri = loginPageUri;
         return this;
@@ -29,9 +30,11 @@ public class GcipSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenantIds")
     public String[] tenantIds;
+
     public GcipSettings withTenantIds(String[] tenantIds) {
         this.tenantIds = tenantIds;
         return this;
     }
     
+    public GcipSettings(){}
 }

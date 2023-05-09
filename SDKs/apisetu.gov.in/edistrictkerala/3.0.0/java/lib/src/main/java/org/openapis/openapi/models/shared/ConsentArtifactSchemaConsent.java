@@ -17,6 +17,7 @@ public class ConsentArtifactSchemaConsent {
      */
     @JsonProperty("consentId")
     public String consentId;
+
     public ConsentArtifactSchemaConsent withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -24,6 +25,7 @@ public class ConsentArtifactSchemaConsent {
     
     @JsonProperty("data")
     public ConsentArtifactSchemaConsentData data;
+
     public ConsentArtifactSchemaConsent withData(ConsentArtifactSchemaConsentData data) {
         this.data = data;
         return this;
@@ -31,6 +33,7 @@ public class ConsentArtifactSchemaConsent {
     
     @JsonProperty("dataConsumer")
     public ConsentArtifactSchemaConsentDataConsumer dataConsumer;
+
     public ConsentArtifactSchemaConsent withDataConsumer(ConsentArtifactSchemaConsentDataConsumer dataConsumer) {
         this.dataConsumer = dataConsumer;
         return this;
@@ -38,6 +41,7 @@ public class ConsentArtifactSchemaConsent {
     
     @JsonProperty("dataProvider")
     public ConsentArtifactSchemaConsentDataProvider dataProvider;
+
     public ConsentArtifactSchemaConsent withDataProvider(ConsentArtifactSchemaConsentDataProvider dataProvider) {
         this.dataProvider = dataProvider;
         return this;
@@ -45,6 +49,7 @@ public class ConsentArtifactSchemaConsent {
     
     @JsonProperty("permission")
     public ConsentArtifactSchemaConsentPermission permission;
+
     public ConsentArtifactSchemaConsent withPermission(ConsentArtifactSchemaConsentPermission permission) {
         this.permission = permission;
         return this;
@@ -52,6 +57,7 @@ public class ConsentArtifactSchemaConsent {
     
     @JsonProperty("purpose")
     public ConsentArtifactSchemaConsentPurpose purpose;
+
     public ConsentArtifactSchemaConsent withPurpose(ConsentArtifactSchemaConsentPurpose purpose) {
         this.purpose = purpose;
         return this;
@@ -64,6 +70,7 @@ public class ConsentArtifactSchemaConsent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public ConsentArtifactSchemaConsent withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -71,9 +78,20 @@ public class ConsentArtifactSchemaConsent {
     
     @JsonProperty("user")
     public ConsentArtifactSchemaConsentUser user;
+
     public ConsentArtifactSchemaConsent withUser(ConsentArtifactSchemaConsentUser user) {
         this.user = user;
         return this;
     }
     
+    public ConsentArtifactSchemaConsent(@JsonProperty("consentId") String consentId, @JsonProperty("data") ConsentArtifactSchemaConsentData data, @JsonProperty("dataConsumer") ConsentArtifactSchemaConsentDataConsumer dataConsumer, @JsonProperty("dataProvider") ConsentArtifactSchemaConsentDataProvider dataProvider, @JsonProperty("permission") ConsentArtifactSchemaConsentPermission permission, @JsonProperty("purpose") ConsentArtifactSchemaConsentPurpose purpose, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("user") ConsentArtifactSchemaConsentUser user) {
+        this.consentId = consentId;
+        this.data = data;
+        this.dataConsumer = dataConsumer;
+        this.dataProvider = dataProvider;
+        this.permission = permission;
+        this.purpose = purpose;
+        this.timestamp = timestamp;
+        this.user = user;
+  }
 }

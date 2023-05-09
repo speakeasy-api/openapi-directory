@@ -15,9 +15,11 @@ public class InvalidTaggingRequestException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public InvalidTaggingRequestException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InvalidTaggingRequestException(){}
 }

@@ -18,9 +18,11 @@ public class GoogleAppsCardV1ButtonList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buttons")
     public GoogleAppsCardV1Button[] buttons;
+
     public GoogleAppsCardV1ButtonList withButtons(GoogleAppsCardV1Button[] buttons) {
         this.buttons = buttons;
         return this;
     }
     
+    public GoogleAppsCardV1ButtonList(){}
 }

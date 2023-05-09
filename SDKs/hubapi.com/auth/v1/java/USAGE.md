@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetRequest;
 import org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetResponse;
 
@@ -13,17 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetOauthV1AccessTokensTokenGetRequest req = new GetOauthV1AccessTokensTokenGetRequest() {{
-                token = "corrupti";
-            }}            
+            GetOauthV1AccessTokensTokenGetRequest req = new GetOauthV1AccessTokensTokenGetRequest("corrupti");            
 
             GetOauthV1AccessTokensTokenGetResponse res = sdk.accessTokens.getOauthV1AccessTokensTokenGet(req);
 
-            if (res.accessTokenInfoResponse.isPresent()) {
+            if (res.accessTokenInfoResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

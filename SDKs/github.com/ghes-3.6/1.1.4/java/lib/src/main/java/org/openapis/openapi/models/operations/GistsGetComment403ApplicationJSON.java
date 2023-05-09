@@ -15,6 +15,7 @@ public class GistsGetComment403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("block")
     public GistsGetComment403ApplicationJSONBlock block;
+
     public GistsGetComment403ApplicationJSON withBlock(GistsGetComment403ApplicationJSONBlock block) {
         this.block = block;
         return this;
@@ -23,6 +24,7 @@ public class GistsGetComment403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation_url")
     public String documentationUrl;
+
     public GistsGetComment403ApplicationJSON withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -31,9 +33,11 @@ public class GistsGetComment403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GistsGetComment403ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GistsGetComment403ApplicationJSON(){}
 }

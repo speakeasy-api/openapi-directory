@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLanguageModelResponse {
@@ -12,6 +13,7 @@ public class CreateLanguageModelResponse {
      */
     
     public Object badRequestException;
+
     public CreateLanguageModelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateLanguageModelResponse {
      */
     
     public Object conflictException;
+
     public CreateLanguageModelResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateLanguageModelResponse {
     
     
     public String contentType;
+
     public CreateLanguageModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateLanguageModelResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLanguageModelResponse createLanguageModelResponse;
+
     public CreateLanguageModelResponse withCreateLanguageModelResponse(org.openapis.openapi.models.shared.CreateLanguageModelResponse createLanguageModelResponse) {
         this.createLanguageModelResponse = createLanguageModelResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateLanguageModelResponse {
      */
     
     public Object internalFailureException;
+
     public CreateLanguageModelResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class CreateLanguageModelResponse {
      */
     
     public Object limitExceededException;
+
     public CreateLanguageModelResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateLanguageModelResponse {
     
     
     public Integer statusCode;
+
     public CreateLanguageModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateLanguageModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLanguageModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateLanguageModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

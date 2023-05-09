@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDocumentRequest {
@@ -12,6 +13,7 @@ public class GetDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=explain")
     public String explain;
+
     public GetDocumentRequest withExplain(String explain) {
         this.explain = explain;
         return this;
@@ -22,6 +24,7 @@ public class GetDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=input")
     public java.util.Map<String, Object> input;
+
     public GetDocumentRequest withInput(java.util.Map<String, Object> input) {
         this.input = input;
         return this;
@@ -34,6 +37,7 @@ public class GetDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=instrument")
     public Boolean instrument;
+
     public GetDocumentRequest withInstrument(Boolean instrument) {
         this.instrument = instrument;
         return this;
@@ -44,6 +48,7 @@ public class GetDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metrics")
     public Boolean metrics;
+
     public GetDocumentRequest withMetrics(Boolean metrics) {
         this.metrics = metrics;
         return this;
@@ -54,6 +59,7 @@ public class GetDocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public GetDocumentRequest withPath(String path) {
         this.path = path;
         return this;
@@ -64,6 +70,7 @@ public class GetDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
     public Boolean pretty;
+
     public GetDocumentRequest withPretty(Boolean pretty) {
         this.pretty = pretty;
         return this;
@@ -74,9 +81,13 @@ public class GetDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=provenance")
     public Boolean provenance;
+
     public GetDocumentRequest withProvenance(Boolean provenance) {
         this.provenance = provenance;
         return this;
     }
     
+    public GetDocumentRequest(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

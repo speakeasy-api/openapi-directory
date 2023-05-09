@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterAgentResponse {
     
     public String contentType;
+
     public RegisterAgentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterAgentResponse {
      */
     
     public Object dependencyException;
+
     public RegisterAgentResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterAgentResponse {
      */
     
     public Object invalidParameterException;
+
     public RegisterAgentResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterAgentResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterAgentResponse registerAgentResponse;
+
     public RegisterAgentResponse withRegisterAgentResponse(org.openapis.openapi.models.shared.RegisterAgentResponse registerAgentResponse) {
         this.registerAgentResponse = registerAgentResponse;
         return this;
@@ -46,6 +51,7 @@ public class RegisterAgentResponse {
     
     
     public Integer statusCode;
+
     public RegisterAgentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class RegisterAgentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterAgentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class RegisterAgentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RegisterAgentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public RegisterAgentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

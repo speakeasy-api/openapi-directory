@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttributeOperation {
     @JsonProperty("AttributePath")
     public String attributePath;
+
     public AttributeOperation withAttributePath(String attributePath) {
         this.attributePath = attributePath;
         return this;
@@ -22,9 +23,13 @@ public class AttributeOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeValue")
     public java.util.Map<String, Object> attributeValue;
+
     public AttributeOperation withAttributeValue(java.util.Map<String, Object> attributeValue) {
         this.attributeValue = attributeValue;
         return this;
     }
     
+    public AttributeOperation(@JsonProperty("AttributePath") String attributePath) {
+        this.attributePath = attributePath;
+  }
 }

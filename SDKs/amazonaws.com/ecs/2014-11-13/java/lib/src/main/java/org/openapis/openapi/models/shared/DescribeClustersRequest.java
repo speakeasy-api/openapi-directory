@@ -12,6 +12,7 @@ public class DescribeClustersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusters")
     public String[] clusters;
+
     public DescribeClustersRequest withClusters(String[] clusters) {
         this.clusters = clusters;
         return this;
@@ -20,9 +21,11 @@ public class DescribeClustersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include")
     public ClusterFieldEnum[] include;
+
     public DescribeClustersRequest withInclude(ClusterFieldEnum[] include) {
         this.include = include;
         return this;
     }
     
+    public DescribeClustersRequest(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class GroupRole {
     
     public Group group;
+
     public GroupRole withGroup(Group group) {
         this.group = group;
         return this;
@@ -16,6 +17,7 @@ public class GroupRole {
     
     
     public Long id;
+
     public GroupRole withId(Long id) {
         this.id = id;
         return this;
@@ -23,9 +25,11 @@ public class GroupRole {
     
     
     public Role role;
+
     public GroupRole withRole(Role role) {
         this.role = role;
         return this;
     }
     
+    public GroupRole(){}
 }

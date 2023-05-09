@@ -12,6 +12,7 @@ public class MirrorTimelineListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public MirrorTimelineListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +23,7 @@ public class MirrorTimelineListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bundleId")
     public String bundleId;
+
     public MirrorTimelineListRequest withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -32,6 +34,7 @@ public class MirrorTimelineListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public MirrorTimelineListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +45,7 @@ public class MirrorTimelineListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeDeleted")
     public Boolean includeDeleted;
+
     public MirrorTimelineListRequest withIncludeDeleted(Boolean includeDeleted) {
         this.includeDeleted = includeDeleted;
         return this;
@@ -52,6 +56,7 @@ public class MirrorTimelineListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public MirrorTimelineListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +67,7 @@ public class MirrorTimelineListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public MirrorTimelineListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -72,6 +78,7 @@ public class MirrorTimelineListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public MirrorTimelineListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +89,7 @@ public class MirrorTimelineListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public MirrorTimelineListOrderByEnum orderBy;
+
     public MirrorTimelineListRequest withOrderBy(MirrorTimelineListOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -92,6 +100,7 @@ public class MirrorTimelineListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public MirrorTimelineListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -102,6 +111,7 @@ public class MirrorTimelineListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pinnedOnly")
     public Boolean pinnedOnly;
+
     public MirrorTimelineListRequest withPinnedOnly(Boolean pinnedOnly) {
         this.pinnedOnly = pinnedOnly;
         return this;
@@ -112,6 +122,7 @@ public class MirrorTimelineListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public MirrorTimelineListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +133,7 @@ public class MirrorTimelineListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public MirrorTimelineListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +144,7 @@ public class MirrorTimelineListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceItemId")
     public String sourceItemId;
+
     public MirrorTimelineListRequest withSourceItemId(String sourceItemId) {
         this.sourceItemId = sourceItemId;
         return this;
@@ -142,9 +155,11 @@ public class MirrorTimelineListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public MirrorTimelineListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public MirrorTimelineListRequest(){}
 }

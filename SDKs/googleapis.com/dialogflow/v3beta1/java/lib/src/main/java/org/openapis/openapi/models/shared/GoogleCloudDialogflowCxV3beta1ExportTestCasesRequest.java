@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1ExportTestCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataFormat")
     public GoogleCloudDialogflowCxV3beta1ExportTestCasesRequestDataFormatEnum dataFormat;
+
     public GoogleCloudDialogflowCxV3beta1ExportTestCasesRequest withDataFormat(GoogleCloudDialogflowCxV3beta1ExportTestCasesRequestDataFormatEnum dataFormat) {
         this.dataFormat = dataFormat;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1ExportTestCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudDialogflowCxV3beta1ExportTestCasesRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3beta1ExportTestCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsUri")
     public String gcsUri;
+
     public GoogleCloudDialogflowCxV3beta1ExportTestCasesRequest withGcsUri(String gcsUri) {
         this.gcsUri = gcsUri;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1ExportTestCasesRequest(){}
 }

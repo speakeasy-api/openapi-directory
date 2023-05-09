@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAliasRequest {
@@ -12,6 +13,7 @@ public class DeleteAliasRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionName")
     public String functionName;
+
     public DeleteAliasRequest withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -22,6 +24,7 @@ public class DeleteAliasRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Name")
     public String name;
+
     public DeleteAliasRequest withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAliasRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteAliasRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -36,6 +40,7 @@ public class DeleteAliasRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteAliasRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -43,6 +48,7 @@ public class DeleteAliasRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteAliasRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -50,6 +56,7 @@ public class DeleteAliasRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteAliasRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -57,6 +64,7 @@ public class DeleteAliasRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteAliasRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -64,6 +72,7 @@ public class DeleteAliasRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteAliasRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -71,9 +80,14 @@ public class DeleteAliasRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteAliasRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public DeleteAliasRequest(@JsonProperty("FunctionName") String functionName, @JsonProperty("Name") String name) {
+        this.functionName = functionName;
+        this.name = name;
+  }
 }

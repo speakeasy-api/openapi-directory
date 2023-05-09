@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterThingResponse {
@@ -12,6 +13,7 @@ public class RegisterThingResponse {
      */
     
     public Object conflictingResourceUpdateException;
+
     public RegisterThingResponse withConflictingResourceUpdateException(Object conflictingResourceUpdateException) {
         this.conflictingResourceUpdateException = conflictingResourceUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class RegisterThingResponse {
     
     
     public String contentType;
+
     public RegisterThingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RegisterThingResponse {
      */
     
     public Object internalFailureException;
+
     public RegisterThingResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterThingResponse {
      */
     
     public Object invalidRequestException;
+
     public RegisterThingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterThingResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterThingResponse registerThingResponse;
+
     public RegisterThingResponse withRegisterThingResponse(org.openapis.openapi.models.shared.RegisterThingResponse registerThingResponse) {
         this.registerThingResponse = registerThingResponse;
         return this;
@@ -59,6 +65,7 @@ public class RegisterThingResponse {
      */
     
     public Object resourceRegistrationFailureException;
+
     public RegisterThingResponse withResourceRegistrationFailureException(Object resourceRegistrationFailureException) {
         this.resourceRegistrationFailureException = resourceRegistrationFailureException;
         return this;
@@ -66,6 +73,7 @@ public class RegisterThingResponse {
     
     
     public Integer statusCode;
+
     public RegisterThingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class RegisterThingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterThingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class RegisterThingResponse {
      */
     
     public Object serviceUnavailableException;
+
     public RegisterThingResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,6 +103,7 @@ public class RegisterThingResponse {
      */
     
     public Object throttlingException;
+
     public RegisterThingResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class RegisterThingResponse {
      */
     
     public Object unauthorizedException;
+
     public RegisterThingResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public RegisterThingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

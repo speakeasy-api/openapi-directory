@@ -15,9 +15,11 @@ public class AutoRollbackConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Alarms")
     public Alarm[] alarms;
+
     public AutoRollbackConfig withAlarms(Alarm[] alarms) {
         this.alarms = alarms;
         return this;
     }
     
+    public AutoRollbackConfig(){}
 }

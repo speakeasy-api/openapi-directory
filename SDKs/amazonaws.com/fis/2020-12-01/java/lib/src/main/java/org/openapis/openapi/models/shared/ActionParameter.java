@@ -15,6 +15,7 @@ public class ActionParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ActionParameter withDescription(String description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class ActionParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public ActionParameter withRequired(Boolean required) {
         this.required = required;
         return this;
     }
     
+    public ActionParameter(){}
 }

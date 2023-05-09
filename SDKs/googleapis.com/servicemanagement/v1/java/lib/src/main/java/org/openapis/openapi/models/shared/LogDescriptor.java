@@ -18,6 +18,7 @@ public class LogDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LogDescriptor withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class LogDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public LogDescriptor withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class LogDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public LabelDescriptor[] labels;
+
     public LogDescriptor withLabels(LabelDescriptor[] labels) {
         this.labels = labels;
         return this;
@@ -51,9 +54,11 @@ public class LogDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LogDescriptor withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LogDescriptor(){}
 }

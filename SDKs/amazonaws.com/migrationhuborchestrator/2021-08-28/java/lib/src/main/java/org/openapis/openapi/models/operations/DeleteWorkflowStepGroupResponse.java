@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWorkflowStepGroupResponse {
@@ -12,6 +13,7 @@ public class DeleteWorkflowStepGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteWorkflowStepGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteWorkflowStepGroupResponse {
     
     
     public String contentType;
+
     public DeleteWorkflowStepGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWorkflowStepGroupResponse {
      */
     
     public java.util.Map<String, Object> deleteWorkflowStepGroupResponse;
+
     public DeleteWorkflowStepGroupResponse withDeleteWorkflowStepGroupResponse(java.util.Map<String, Object> deleteWorkflowStepGroupResponse) {
         this.deleteWorkflowStepGroupResponse = deleteWorkflowStepGroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteWorkflowStepGroupResponse {
      */
     
     public Object internalServerException;
+
     public DeleteWorkflowStepGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteWorkflowStepGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteWorkflowStepGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteWorkflowStepGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteWorkflowStepGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteWorkflowStepGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWorkflowStepGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteWorkflowStepGroupResponse {
      */
     
     public Object throttlingException;
+
     public DeleteWorkflowStepGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteWorkflowStepGroupResponse {
      */
     
     public Object validationException;
+
     public DeleteWorkflowStepGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteWorkflowStepGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

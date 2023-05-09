@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkAclResultNetworkAclEntries {
     
     public String cidrBlock;
+
     public CreateNetworkAclResultNetworkAclEntries withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -19,6 +20,7 @@ public class CreateNetworkAclResultNetworkAclEntries {
     
     
     public Boolean egress;
+
     public CreateNetworkAclResultNetworkAclEntries withEgress(Boolean egress) {
         this.egress = egress;
         return this;
@@ -26,6 +28,7 @@ public class CreateNetworkAclResultNetworkAclEntries {
     
     
     public CreateNetworkAclResultNetworkAclEntriesIcmpTypeCode icmpTypeCode;
+
     public CreateNetworkAclResultNetworkAclEntries withIcmpTypeCode(CreateNetworkAclResultNetworkAclEntriesIcmpTypeCode icmpTypeCode) {
         this.icmpTypeCode = icmpTypeCode;
         return this;
@@ -33,6 +36,7 @@ public class CreateNetworkAclResultNetworkAclEntries {
     
     
     public String ipv6CidrBlock;
+
     public CreateNetworkAclResultNetworkAclEntries withIpv6CidrBlock(String ipv6CidrBlock) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         return this;
@@ -40,6 +44,7 @@ public class CreateNetworkAclResultNetworkAclEntries {
     
     
     public CreateNetworkAclResultNetworkAclEntriesPortRange portRange;
+
     public CreateNetworkAclResultNetworkAclEntries withPortRange(CreateNetworkAclResultNetworkAclEntriesPortRange portRange) {
         this.portRange = portRange;
         return this;
@@ -47,6 +52,7 @@ public class CreateNetworkAclResultNetworkAclEntries {
     
     
     public String protocol;
+
     public CreateNetworkAclResultNetworkAclEntries withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -54,6 +60,7 @@ public class CreateNetworkAclResultNetworkAclEntries {
     
     
     public CreateNetworkAclResultNetworkAclEntriesRuleActionEnum ruleAction;
+
     public CreateNetworkAclResultNetworkAclEntries withRuleAction(CreateNetworkAclResultNetworkAclEntriesRuleActionEnum ruleAction) {
         this.ruleAction = ruleAction;
         return this;
@@ -61,9 +68,11 @@ public class CreateNetworkAclResultNetworkAclEntries {
     
     
     public Long ruleNumber;
+
     public CreateNetworkAclResultNetworkAclEntries withRuleNumber(Long ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
     }
     
+    public CreateNetworkAclResultNetworkAclEntries(){}
 }

@@ -17,15 +17,20 @@ public class UpdatePaymentInstrument {
      */
     @JsonProperty("balanceAccountId")
     public String balanceAccountId;
+
     public UpdatePaymentInstrument withBalanceAccountId(String balanceAccountId) {
         this.balanceAccountId = balanceAccountId;
         return this;
     }
     
+    /**
+     * Contains the business account details. Returned when you create a payment instrument with `type` **bankAccount**.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccount")
-    public BankAccount bankAccount;
-    public UpdatePaymentInstrument withBankAccount(BankAccount bankAccount) {
+    public Object bankAccount;
+
+    public UpdatePaymentInstrument withBankAccount(Object bankAccount) {
         this.bankAccount = bankAccount;
         return this;
     }
@@ -33,6 +38,7 @@ public class UpdatePaymentInstrument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public Card card;
+
     public UpdatePaymentInstrument withCard(Card card) {
         this.card = card;
         return this;
@@ -44,6 +50,7 @@ public class UpdatePaymentInstrument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdatePaymentInstrument withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +61,7 @@ public class UpdatePaymentInstrument {
      */
     @JsonProperty("id")
     public String id;
+
     public UpdatePaymentInstrument withId(String id) {
         this.id = id;
         return this;
@@ -64,6 +72,7 @@ public class UpdatePaymentInstrument {
      */
     @JsonProperty("issuingCountryCode")
     public String issuingCountryCode;
+
     public UpdatePaymentInstrument withIssuingCountryCode(String issuingCountryCode) {
         this.issuingCountryCode = issuingCountryCode;
         return this;
@@ -75,6 +84,7 @@ public class UpdatePaymentInstrument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentInstrumentGroupId")
     public String paymentInstrumentGroupId;
+
     public UpdatePaymentInstrument withPaymentInstrumentGroupId(String paymentInstrumentGroupId) {
         this.paymentInstrumentGroupId = paymentInstrumentGroupId;
         return this;
@@ -86,6 +96,7 @@ public class UpdatePaymentInstrument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public UpdatePaymentInstrument withReference(String reference) {
         this.reference = reference;
         return this;
@@ -115,6 +126,7 @@ public class UpdatePaymentInstrument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public UpdatePaymentInstrumentStatusEnum status;
+
     public UpdatePaymentInstrument withStatus(UpdatePaymentInstrumentStatusEnum status) {
         this.status = status;
         return this;
@@ -126,6 +138,7 @@ public class UpdatePaymentInstrument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusComment")
     public String statusComment;
+
     public UpdatePaymentInstrument withStatusComment(String statusComment) {
         this.statusComment = statusComment;
         return this;
@@ -138,9 +151,16 @@ public class UpdatePaymentInstrument {
      */
     @JsonProperty("type")
     public UpdatePaymentInstrumentTypeEnum type;
+
     public UpdatePaymentInstrument withType(UpdatePaymentInstrumentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UpdatePaymentInstrument(@JsonProperty("balanceAccountId") String balanceAccountId, @JsonProperty("id") String id, @JsonProperty("issuingCountryCode") String issuingCountryCode, @JsonProperty("type") UpdatePaymentInstrumentTypeEnum type) {
+        this.balanceAccountId = balanceAccountId;
+        this.id = id;
+        this.issuingCountryCode = issuingCountryCode;
+        this.type = type;
+  }
 }

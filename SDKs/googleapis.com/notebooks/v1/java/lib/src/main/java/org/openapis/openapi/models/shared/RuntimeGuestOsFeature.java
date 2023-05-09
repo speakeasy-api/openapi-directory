@@ -18,9 +18,11 @@ public class RuntimeGuestOsFeature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public RuntimeGuestOsFeature withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RuntimeGuestOsFeature(){}
 }

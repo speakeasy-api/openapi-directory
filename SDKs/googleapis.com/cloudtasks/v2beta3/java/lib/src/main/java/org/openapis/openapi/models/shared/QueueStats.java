@@ -18,6 +18,7 @@ public class QueueStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concurrentDispatchesCount")
     public String concurrentDispatchesCount;
+
     public QueueStats withConcurrentDispatchesCount(String concurrentDispatchesCount) {
         this.concurrentDispatchesCount = concurrentDispatchesCount;
         return this;
@@ -29,6 +30,7 @@ public class QueueStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveExecutionRate")
     public Double effectiveExecutionRate;
+
     public QueueStats withEffectiveExecutionRate(Double effectiveExecutionRate) {
         this.effectiveExecutionRate = effectiveExecutionRate;
         return this;
@@ -40,6 +42,7 @@ public class QueueStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executedLastMinuteCount")
     public String executedLastMinuteCount;
+
     public QueueStats withExecutedLastMinuteCount(String executedLastMinuteCount) {
         this.executedLastMinuteCount = executedLastMinuteCount;
         return this;
@@ -51,6 +54,7 @@ public class QueueStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oldestEstimatedArrivalTime")
     public String oldestEstimatedArrivalTime;
+
     public QueueStats withOldestEstimatedArrivalTime(String oldestEstimatedArrivalTime) {
         this.oldestEstimatedArrivalTime = oldestEstimatedArrivalTime;
         return this;
@@ -62,9 +66,11 @@ public class QueueStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasksCount")
     public String tasksCount;
+
     public QueueStats withTasksCount(String tasksCount) {
         this.tasksCount = tasksCount;
         return this;
     }
     
+    public QueueStats(){}
 }

@@ -15,6 +15,7 @@ public class IpRuleItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipRule")
     public String ipRule;
+
     public IpRuleItem withIpRule(String ipRule) {
         this.ipRule = ipRule;
         return this;
@@ -23,9 +24,11 @@ public class IpRuleItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleDesc")
     public String ruleDesc;
+
     public IpRuleItem withRuleDesc(String ruleDesc) {
         this.ruleDesc = ruleDesc;
         return this;
     }
     
+    public IpRuleItem(){}
 }

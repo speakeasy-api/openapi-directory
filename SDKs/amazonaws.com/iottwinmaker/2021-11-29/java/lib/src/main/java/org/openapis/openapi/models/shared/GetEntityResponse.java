@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetEntityResponse {
     @JsonProperty("arn")
     public String arn;
+
     public GetEntityResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -27,6 +28,7 @@ public class GetEntityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("components")
     public java.util.Map<String, ComponentResponse> components;
+
     public GetEntityResponse withComponents(java.util.Map<String, ComponentResponse> components) {
         this.components = components;
         return this;
@@ -36,6 +38,7 @@ public class GetEntityResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public GetEntityResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -44,6 +47,7 @@ public class GetEntityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetEntityResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +55,7 @@ public class GetEntityResponse {
     
     @JsonProperty("entityId")
     public String entityId;
+
     public GetEntityResponse withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -58,6 +63,7 @@ public class GetEntityResponse {
     
     @JsonProperty("entityName")
     public String entityName;
+
     public GetEntityResponse withEntityName(String entityName) {
         this.entityName = entityName;
         return this;
@@ -65,6 +71,7 @@ public class GetEntityResponse {
     
     @JsonProperty("hasChildEntities")
     public Boolean hasChildEntities;
+
     public GetEntityResponse withHasChildEntities(Boolean hasChildEntities) {
         this.hasChildEntities = hasChildEntities;
         return this;
@@ -72,6 +79,7 @@ public class GetEntityResponse {
     
     @JsonProperty("parentEntityId")
     public String parentEntityId;
+
     public GetEntityResponse withParentEntityId(String parentEntityId) {
         this.parentEntityId = parentEntityId;
         return this;
@@ -79,6 +87,7 @@ public class GetEntityResponse {
     
     @JsonProperty("status")
     public Status status;
+
     public GetEntityResponse withStatus(Status status) {
         this.status = status;
         return this;
@@ -87,6 +96,7 @@ public class GetEntityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncSource")
     public String syncSource;
+
     public GetEntityResponse withSyncSource(String syncSource) {
         this.syncSource = syncSource;
         return this;
@@ -96,6 +106,7 @@ public class GetEntityResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateDateTime")
     public OffsetDateTime updateDateTime;
+
     public GetEntityResponse withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
@@ -103,9 +114,21 @@ public class GetEntityResponse {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public GetEntityResponse withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public GetEntityResponse(@JsonProperty("arn") String arn, @JsonProperty("creationDateTime") OffsetDateTime creationDateTime, @JsonProperty("entityId") String entityId, @JsonProperty("entityName") String entityName, @JsonProperty("hasChildEntities") Boolean hasChildEntities, @JsonProperty("parentEntityId") String parentEntityId, @JsonProperty("status") Status status, @JsonProperty("updateDateTime") OffsetDateTime updateDateTime, @JsonProperty("workspaceId") String workspaceId) {
+        this.arn = arn;
+        this.creationDateTime = creationDateTime;
+        this.entityId = entityId;
+        this.entityName = entityName;
+        this.hasChildEntities = hasChildEntities;
+        this.parentEntityId = parentEntityId;
+        this.status = status;
+        this.updateDateTime = updateDateTime;
+        this.workspaceId = workspaceId;
+  }
 }

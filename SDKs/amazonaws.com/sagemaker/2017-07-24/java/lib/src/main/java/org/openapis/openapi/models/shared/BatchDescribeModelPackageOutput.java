@@ -15,6 +15,7 @@ public class BatchDescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchDescribeModelPackageErrorMap")
     public java.util.Map<String, BatchDescribeModelPackageError> batchDescribeModelPackageErrorMap;
+
     public BatchDescribeModelPackageOutput withBatchDescribeModelPackageErrorMap(java.util.Map<String, BatchDescribeModelPackageError> batchDescribeModelPackageErrorMap) {
         this.batchDescribeModelPackageErrorMap = batchDescribeModelPackageErrorMap;
         return this;
@@ -23,9 +24,11 @@ public class BatchDescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageSummaries")
     public java.util.Map<String, BatchDescribeModelPackageSummary> modelPackageSummaries;
+
     public BatchDescribeModelPackageOutput withModelPackageSummaries(java.util.Map<String, BatchDescribeModelPackageSummary> modelPackageSummaries) {
         this.modelPackageSummaries = modelPackageSummaries;
         return this;
     }
     
+    public BatchDescribeModelPackageOutput(){}
 }

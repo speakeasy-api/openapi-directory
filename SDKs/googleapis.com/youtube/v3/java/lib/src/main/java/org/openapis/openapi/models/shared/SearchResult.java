@@ -18,6 +18,7 @@ public class SearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public SearchResult withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class SearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public ResourceId id;
+
     public SearchResult withId(ResourceId id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class SearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SearchResult withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class SearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public SearchResultSnippet snippet;
+
     public SearchResult withSnippet(SearchResultSnippet snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public SearchResult(){}
 }

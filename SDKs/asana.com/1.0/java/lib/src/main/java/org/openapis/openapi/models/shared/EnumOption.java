@@ -28,6 +28,7 @@ public class EnumOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public EnumOption withColor(String color) {
         this.color = color;
         return this;
@@ -39,6 +40,7 @@ public class EnumOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public EnumOption withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -50,6 +52,7 @@ public class EnumOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public EnumOption withGid(String gid) {
         this.gid = gid;
         return this;
@@ -61,6 +64,7 @@ public class EnumOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnumOption withName(String name) {
         this.name = name;
         return this;
@@ -72,9 +76,11 @@ public class EnumOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public EnumOption withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public EnumOption(){}
 }

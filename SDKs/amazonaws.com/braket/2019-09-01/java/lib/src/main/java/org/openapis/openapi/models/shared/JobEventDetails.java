@@ -20,6 +20,7 @@ public class JobEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public JobEventTypeEnum eventType;
+
     public JobEventDetails withEventType(JobEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -28,6 +29,7 @@ public class JobEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public JobEventDetails withMessage(String message) {
         this.message = message;
         return this;
@@ -38,9 +40,11 @@ public class JobEventDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timeOfEvent")
     public OffsetDateTime timeOfEvent;
+
     public JobEventDetails withTimeOfEvent(OffsetDateTime timeOfEvent) {
         this.timeOfEvent = timeOfEvent;
         return this;
     }
     
+    public JobEventDetails(){}
 }

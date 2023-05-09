@@ -18,6 +18,7 @@ public class AdBlockingRecoveryTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorProtectionCode")
     public String errorProtectionCode;
+
     public AdBlockingRecoveryTag withErrorProtectionCode(String errorProtectionCode) {
         this.errorProtectionCode = errorProtectionCode;
         return this;
@@ -29,9 +30,11 @@ public class AdBlockingRecoveryTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public AdBlockingRecoveryTag withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public AdBlockingRecoveryTag(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAssessmentFrameworkResponse {
@@ -12,6 +13,7 @@ public class UpdateAssessmentFrameworkResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateAssessmentFrameworkResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAssessmentFrameworkResponse {
     
     
     public String contentType;
+
     public UpdateAssessmentFrameworkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAssessmentFrameworkResponse {
      */
     
     public Object internalServerException;
+
     public UpdateAssessmentFrameworkResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateAssessmentFrameworkResponse {
     
     
     public Integer statusCode;
+
     public UpdateAssessmentFrameworkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateAssessmentFrameworkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAssessmentFrameworkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAssessmentFrameworkResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAssessmentFrameworkResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAssessmentFrameworkResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAssessmentFrameworkResponse updateAssessmentFrameworkResponse;
+
     public UpdateAssessmentFrameworkResponse withUpdateAssessmentFrameworkResponse(org.openapis.openapi.models.shared.UpdateAssessmentFrameworkResponse updateAssessmentFrameworkResponse) {
         this.updateAssessmentFrameworkResponse = updateAssessmentFrameworkResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateAssessmentFrameworkResponse {
      */
     
     public Object validationException;
+
     public UpdateAssessmentFrameworkResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateAssessmentFrameworkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

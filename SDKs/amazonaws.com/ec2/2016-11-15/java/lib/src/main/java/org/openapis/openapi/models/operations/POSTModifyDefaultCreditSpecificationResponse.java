@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTModifyDefaultCreditSpecificationResponse {
     
     public byte[] body;
+
     public POSTModifyDefaultCreditSpecificationResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTModifyDefaultCreditSpecificationResponse {
     
     
     public String contentType;
+
     public POSTModifyDefaultCreditSpecificationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTModifyDefaultCreditSpecificationResponse {
     
     
     public Integer statusCode;
+
     public POSTModifyDefaultCreditSpecificationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTModifyDefaultCreditSpecificationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTModifyDefaultCreditSpecificationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTModifyDefaultCreditSpecificationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

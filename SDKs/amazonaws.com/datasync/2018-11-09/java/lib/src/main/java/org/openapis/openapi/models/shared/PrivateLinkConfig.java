@@ -15,6 +15,7 @@ public class PrivateLinkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateLinkEndpoint")
     public String privateLinkEndpoint;
+
     public PrivateLinkConfig withPrivateLinkEndpoint(String privateLinkEndpoint) {
         this.privateLinkEndpoint = privateLinkEndpoint;
         return this;
@@ -23,6 +24,7 @@ public class PrivateLinkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupArns")
     public String[] securityGroupArns;
+
     public PrivateLinkConfig withSecurityGroupArns(String[] securityGroupArns) {
         this.securityGroupArns = securityGroupArns;
         return this;
@@ -31,6 +33,7 @@ public class PrivateLinkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetArns")
     public String[] subnetArns;
+
     public PrivateLinkConfig withSubnetArns(String[] subnetArns) {
         this.subnetArns = subnetArns;
         return this;
@@ -39,9 +42,11 @@ public class PrivateLinkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcEndpointId")
     public String vpcEndpointId;
+
     public PrivateLinkConfig withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
     }
     
+    public PrivateLinkConfig(){}
 }

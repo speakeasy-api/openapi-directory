@@ -19,6 +19,7 @@ public class ImageTag {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public ImageTag withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -27,9 +28,11 @@ public class ImageTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagId")
     public String tagId;
+
     public ImageTag withTagId(String tagId) {
         this.tagId = tagId;
         return this;
     }
     
+    public ImageTag(){}
 }

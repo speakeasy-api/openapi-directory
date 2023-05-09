@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetFieldResponse {
@@ -12,6 +13,7 @@ public class BatchGetFieldResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchGetFieldResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetFieldResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetFieldResponse batchGetFieldResponse;
+
     public BatchGetFieldResponse withBatchGetFieldResponse(org.openapis.openapi.models.shared.BatchGetFieldResponse batchGetFieldResponse) {
         this.batchGetFieldResponse = batchGetFieldResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetFieldResponse {
     
     
     public String contentType;
+
     public BatchGetFieldResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetFieldResponse {
      */
     
     public Object internalServerException;
+
     public BatchGetFieldResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class BatchGetFieldResponse {
     
     
     public Integer statusCode;
+
     public BatchGetFieldResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchGetFieldResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetFieldResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchGetFieldResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchGetFieldResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class BatchGetFieldResponse {
      */
     
     public Object throttlingException;
+
     public BatchGetFieldResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class BatchGetFieldResponse {
      */
     
     public Object validationException;
+
     public BatchGetFieldResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchGetFieldResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DocumentMetadataConfiguration {
     @JsonProperty("Name")
     public String name;
+
     public DocumentMetadataConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +23,7 @@ public class DocumentMetadataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Relevance")
     public Relevance relevance;
+
     public DocumentMetadataConfiguration withRelevance(Relevance relevance) {
         this.relevance = relevance;
         return this;
@@ -30,6 +32,7 @@ public class DocumentMetadataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Search")
     public Search search;
+
     public DocumentMetadataConfiguration withSearch(Search search) {
         this.search = search;
         return this;
@@ -37,9 +40,14 @@ public class DocumentMetadataConfiguration {
     
     @JsonProperty("Type")
     public DocumentAttributeValueTypeEnum type;
+
     public DocumentMetadataConfiguration withType(DocumentAttributeValueTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DocumentMetadataConfiguration(@JsonProperty("Name") String name, @JsonProperty("Type") DocumentAttributeValueTypeEnum type) {
+        this.name = name;
+        this.type = type;
+  }
 }

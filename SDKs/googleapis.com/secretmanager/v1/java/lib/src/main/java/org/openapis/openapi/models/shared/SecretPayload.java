@@ -18,6 +18,7 @@ public class SecretPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public SecretPayload withData(String data) {
         this.data = data;
         return this;
@@ -29,9 +30,11 @@ public class SecretPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataCrc32c")
     public String dataCrc32c;
+
     public SecretPayload withDataCrc32c(String dataCrc32c) {
         this.dataCrc32c = dataCrc32c;
         return this;
     }
     
+    public SecretPayload(){}
 }

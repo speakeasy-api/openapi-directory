@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyIdDatasetRequest {
@@ -12,6 +13,7 @@ public class CompanyIdDatasetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=check_stock_listing")
     public Boolean checkStockListing;
+
     public CompanyIdDatasetRequest withCheckStockListing(Boolean checkStockListing) {
         this.checkStockListing = checkStockListing;
         return this;
@@ -22,6 +24,7 @@ public class CompanyIdDatasetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataset")
     public CompanyIdDatasetDatasetEnum dataset;
+
     public CompanyIdDatasetRequest withDataset(CompanyIdDatasetDatasetEnum dataset) {
         this.dataset = dataset;
         return this;
@@ -32,6 +35,7 @@ public class CompanyIdDatasetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public CompanyIdDatasetRequest withId(String id) {
         this.id = id;
         return this;
@@ -42,9 +46,14 @@ public class CompanyIdDatasetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public CompanyIdDatasetLangEnum lang;
+
     public CompanyIdDatasetRequest withLang(CompanyIdDatasetLangEnum lang) {
         this.lang = lang;
         return this;
     }
     
+    public CompanyIdDatasetRequest(@JsonProperty("dataset") CompanyIdDatasetDatasetEnum dataset, @JsonProperty("id") String id) {
+        this.dataset = dataset;
+        this.id = id;
+  }
 }

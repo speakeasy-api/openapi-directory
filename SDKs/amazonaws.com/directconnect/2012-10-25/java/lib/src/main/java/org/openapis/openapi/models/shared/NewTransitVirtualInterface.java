@@ -15,6 +15,7 @@ public class NewTransitVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressFamily")
     public AddressFamilyEnum addressFamily;
+
     public NewTransitVirtualInterface withAddressFamily(AddressFamilyEnum addressFamily) {
         this.addressFamily = addressFamily;
         return this;
@@ -23,6 +24,7 @@ public class NewTransitVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amazonAddress")
     public String amazonAddress;
+
     public NewTransitVirtualInterface withAmazonAddress(String amazonAddress) {
         this.amazonAddress = amazonAddress;
         return this;
@@ -31,6 +33,7 @@ public class NewTransitVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asn")
     public Long asn;
+
     public NewTransitVirtualInterface withAsn(Long asn) {
         this.asn = asn;
         return this;
@@ -39,6 +42,7 @@ public class NewTransitVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authKey")
     public String authKey;
+
     public NewTransitVirtualInterface withAuthKey(String authKey) {
         this.authKey = authKey;
         return this;
@@ -47,6 +51,7 @@ public class NewTransitVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerAddress")
     public String customerAddress;
+
     public NewTransitVirtualInterface withCustomerAddress(String customerAddress) {
         this.customerAddress = customerAddress;
         return this;
@@ -55,6 +60,7 @@ public class NewTransitVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directConnectGatewayId")
     public String directConnectGatewayId;
+
     public NewTransitVirtualInterface withDirectConnectGatewayId(String directConnectGatewayId) {
         this.directConnectGatewayId = directConnectGatewayId;
         return this;
@@ -63,6 +69,7 @@ public class NewTransitVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSiteLink")
     public Boolean enableSiteLink;
+
     public NewTransitVirtualInterface withEnableSiteLink(Boolean enableSiteLink) {
         this.enableSiteLink = enableSiteLink;
         return this;
@@ -71,6 +78,7 @@ public class NewTransitVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mtu")
     public Long mtu;
+
     public NewTransitVirtualInterface withMtu(Long mtu) {
         this.mtu = mtu;
         return this;
@@ -79,6 +87,7 @@ public class NewTransitVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public NewTransitVirtualInterface withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -87,6 +96,7 @@ public class NewTransitVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterfaceName")
     public String virtualInterfaceName;
+
     public NewTransitVirtualInterface withVirtualInterfaceName(String virtualInterfaceName) {
         this.virtualInterfaceName = virtualInterfaceName;
         return this;
@@ -95,9 +105,11 @@ public class NewTransitVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vlan")
     public Long vlan;
+
     public NewTransitVirtualInterface withVlan(Long vlan) {
         this.vlan = vlan;
         return this;
     }
     
+    public NewTransitVirtualInterface(){}
 }

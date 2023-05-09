@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ScalingConfiguration {
     
     public Boolean autoPause;
+
     public ScalingConfiguration withAutoPause(Boolean autoPause) {
         this.autoPause = autoPause;
         return this;
@@ -19,6 +20,7 @@ public class ScalingConfiguration {
     
     
     public Long maxCapacity;
+
     public ScalingConfiguration withMaxCapacity(Long maxCapacity) {
         this.maxCapacity = maxCapacity;
         return this;
@@ -26,6 +28,7 @@ public class ScalingConfiguration {
     
     
     public Long minCapacity;
+
     public ScalingConfiguration withMinCapacity(Long minCapacity) {
         this.minCapacity = minCapacity;
         return this;
@@ -33,6 +36,7 @@ public class ScalingConfiguration {
     
     
     public Long secondsBeforeTimeout;
+
     public ScalingConfiguration withSecondsBeforeTimeout(Long secondsBeforeTimeout) {
         this.secondsBeforeTimeout = secondsBeforeTimeout;
         return this;
@@ -40,6 +44,7 @@ public class ScalingConfiguration {
     
     
     public Long secondsUntilAutoPause;
+
     public ScalingConfiguration withSecondsUntilAutoPause(Long secondsUntilAutoPause) {
         this.secondsUntilAutoPause = secondsUntilAutoPause;
         return this;
@@ -47,9 +52,11 @@ public class ScalingConfiguration {
     
     
     public String timeoutAction;
+
     public ScalingConfiguration withTimeoutAction(String timeoutAction) {
         this.timeoutAction = timeoutAction;
         return this;
     }
     
+    public ScalingConfiguration(){}
 }

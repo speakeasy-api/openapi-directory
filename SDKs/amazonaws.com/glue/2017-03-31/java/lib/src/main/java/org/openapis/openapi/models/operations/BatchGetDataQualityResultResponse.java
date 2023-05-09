@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetDataQualityResultResponse {
@@ -12,6 +13,7 @@ public class BatchGetDataQualityResultResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetDataQualityResultResponse batchGetDataQualityResultResponse;
+
     public BatchGetDataQualityResultResponse withBatchGetDataQualityResultResponse(org.openapis.openapi.models.shared.BatchGetDataQualityResultResponse batchGetDataQualityResultResponse) {
         this.batchGetDataQualityResultResponse = batchGetDataQualityResultResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetDataQualityResultResponse {
     
     
     public String contentType;
+
     public BatchGetDataQualityResultResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetDataQualityResultResponse {
      */
     
     public Object internalServiceException;
+
     public BatchGetDataQualityResultResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetDataQualityResultResponse {
      */
     
     public Object invalidInputException;
+
     public BatchGetDataQualityResultResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetDataQualityResultResponse {
      */
     
     public Object operationTimeoutException;
+
     public BatchGetDataQualityResultResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class BatchGetDataQualityResultResponse {
     
     
     public Integer statusCode;
+
     public BatchGetDataQualityResultResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class BatchGetDataQualityResultResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetDataQualityResultResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetDataQualityResultResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

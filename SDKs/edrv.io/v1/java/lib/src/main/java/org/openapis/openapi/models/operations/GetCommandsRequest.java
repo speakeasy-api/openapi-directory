@@ -13,6 +13,7 @@ public class GetCommandsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$gte]")
     public OffsetDateTime createdAtDollarGte;
+
     public GetCommandsRequest withCreatedAtDollarGte(OffsetDateTime createdAtDollarGte) {
         this.createdAtDollarGte = createdAtDollarGte;
         return this;
@@ -23,6 +24,7 @@ public class GetCommandsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$lte]")
     public OffsetDateTime createdAtDollarLte;
+
     public GetCommandsRequest withCreatedAtDollarLte(OffsetDateTime createdAtDollarLte) {
         this.createdAtDollarLte = createdAtDollarLte;
         return this;
@@ -33,6 +35,7 @@ public class GetCommandsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_chargestation")
     public Boolean includeChargestation;
+
     public GetCommandsRequest withIncludeChargestation(Boolean includeChargestation) {
         this.includeChargestation = includeChargestation;
         return this;
@@ -43,6 +46,7 @@ public class GetCommandsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_driver")
     public Boolean includeDriver;
+
     public GetCommandsRequest withIncludeDriver(Boolean includeDriver) {
         this.includeDriver = includeDriver;
         return this;
@@ -53,6 +57,7 @@ public class GetCommandsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
     public Boolean includeOrganization;
+
     public GetCommandsRequest withIncludeOrganization(Boolean includeOrganization) {
         this.includeOrganization = includeOrganization;
         return this;
@@ -63,6 +68,7 @@ public class GetCommandsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_transaction")
     public Boolean includeTransaction;
+
     public GetCommandsRequest withIncludeTransaction(Boolean includeTransaction) {
         this.includeTransaction = includeTransaction;
         return this;
@@ -73,6 +79,7 @@ public class GetCommandsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_enabled")
     public Boolean paginateEnabled;
+
     public GetCommandsRequest withPaginateEnabled(Boolean paginateEnabled) {
         this.paginateEnabled = paginateEnabled;
         return this;
@@ -83,6 +90,7 @@ public class GetCommandsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_limit")
     public Long paginateLimit;
+
     public GetCommandsRequest withPaginateLimit(Long paginateLimit) {
         this.paginateLimit = paginateLimit;
         return this;
@@ -93,6 +101,7 @@ public class GetCommandsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_page")
     public String paginatePage;
+
     public GetCommandsRequest withPaginatePage(String paginatePage) {
         this.paginatePage = paginatePage;
         return this;
@@ -103,6 +112,7 @@ public class GetCommandsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetCommandsRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -113,6 +123,7 @@ public class GetCommandsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
     public org.openapis.openapi.models.shared.SortOrder1Enum sortOrder;
+
     public GetCommandsRequest withSortOrder(org.openapis.openapi.models.shared.SortOrder1Enum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -123,6 +134,7 @@ public class GetCommandsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$gte]")
     public OffsetDateTime updatedAtDollarGte;
+
     public GetCommandsRequest withUpdatedAtDollarGte(OffsetDateTime updatedAtDollarGte) {
         this.updatedAtDollarGte = updatedAtDollarGte;
         return this;
@@ -133,9 +145,11 @@ public class GetCommandsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$lte]")
     public OffsetDateTime updatedAtDollarLte;
+
     public GetCommandsRequest withUpdatedAtDollarLte(OffsetDateTime updatedAtDollarLte) {
         this.updatedAtDollarLte = updatedAtDollarLte;
         return this;
     }
     
+    public GetCommandsRequest(){}
 }

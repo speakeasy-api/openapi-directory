@@ -18,9 +18,11 @@ public class BufferTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task")
     public Task task;
+
     public BufferTaskResponse withTask(Task task) {
         this.task = task;
         return this;
     }
     
+    public BufferTaskResponse(){}
 }

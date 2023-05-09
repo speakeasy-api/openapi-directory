@@ -15,6 +15,7 @@ public class DescribeGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeGroupResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class DescribeGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public DescribeGroupResponse withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -31,6 +33,7 @@ public class DescribeGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalIds")
     public ExternalId[] externalIds;
+
     public DescribeGroupResponse withExternalIds(ExternalId[] externalIds) {
         this.externalIds = externalIds;
         return this;
@@ -38,6 +41,7 @@ public class DescribeGroupResponse {
     
     @JsonProperty("GroupId")
     public String groupId;
+
     public DescribeGroupResponse withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -45,9 +49,14 @@ public class DescribeGroupResponse {
     
     @JsonProperty("IdentityStoreId")
     public String identityStoreId;
+
     public DescribeGroupResponse withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
     }
     
+    public DescribeGroupResponse(@JsonProperty("GroupId") String groupId, @JsonProperty("IdentityStoreId") String identityStoreId) {
+        this.groupId = groupId;
+        this.identityStoreId = identityStoreId;
+  }
 }

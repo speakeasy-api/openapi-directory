@@ -18,6 +18,7 @@ public class RestrictionChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature")
     public RestrictionChangeFeatureEnum feature;
+
     public RestrictionChange withFeature(RestrictionChangeFeatureEnum feature) {
         this.feature = feature;
         return this;
@@ -29,9 +30,11 @@ public class RestrictionChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newRestriction")
     public RestrictionChangeNewRestrictionEnum newRestriction;
+
     public RestrictionChange withNewRestriction(RestrictionChangeNewRestrictionEnum newRestriction) {
         this.newRestriction = newRestriction;
         return this;
     }
     
+    public RestrictionChange(){}
 }

@@ -18,6 +18,7 @@ public class BasicService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceLabels")
     public java.util.Map<String, String> serviceLabels;
+
     public BasicService withServiceLabels(java.util.Map<String, String> serviceLabels) {
         this.serviceLabels = serviceLabels;
         return this;
@@ -29,9 +30,11 @@ public class BasicService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceType")
     public String serviceType;
+
     public BasicService withServiceType(String serviceType) {
         this.serviceType = serviceType;
         return this;
     }
     
+    public BasicService(){}
 }

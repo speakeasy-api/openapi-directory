@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOfferingsOfferingIdAnalyticsMarksAssignmentsRequest {
@@ -12,9 +13,13 @@ public class GetOfferingsOfferingIdAnalyticsMarksAssignmentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public GetOfferingsOfferingIdAnalyticsMarksAssignmentsRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public GetOfferingsOfferingIdAnalyticsMarksAssignmentsRequest(@JsonProperty("offeringId") String offeringId) {
+        this.offeringId = offeringId;
+  }
 }

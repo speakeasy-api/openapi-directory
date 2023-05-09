@@ -18,6 +18,7 @@ public class TraceSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Attributes attributes;
+
     public TraceSpan withAttributes(Attributes attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class TraceSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childSpanCount")
     public Integer childSpanCount;
+
     public TraceSpan withChildSpanCount(Integer childSpanCount) {
         this.childSpanCount = childSpanCount;
         return this;
@@ -40,6 +42,7 @@ public class TraceSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public TruncatableString displayName;
+
     public TraceSpan withDisplayName(TruncatableString displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class TraceSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public TraceSpan withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -62,6 +66,7 @@ public class TraceSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TraceSpan withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class TraceSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentSpanId")
     public String parentSpanId;
+
     public TraceSpan withParentSpanId(String parentSpanId) {
         this.parentSpanId = parentSpanId;
         return this;
@@ -84,6 +90,7 @@ public class TraceSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sameProcessAsParentSpan")
     public Boolean sameProcessAsParentSpan;
+
     public TraceSpan withSameProcessAsParentSpan(Boolean sameProcessAsParentSpan) {
         this.sameProcessAsParentSpan = sameProcessAsParentSpan;
         return this;
@@ -95,6 +102,7 @@ public class TraceSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spanId")
     public String spanId;
+
     public TraceSpan withSpanId(String spanId) {
         this.spanId = spanId;
         return this;
@@ -106,6 +114,7 @@ public class TraceSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spanKind")
     public TraceSpanSpanKindEnum spanKind;
+
     public TraceSpan withSpanKind(TraceSpanSpanKindEnum spanKind) {
         this.spanKind = spanKind;
         return this;
@@ -117,6 +126,7 @@ public class TraceSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public TraceSpan withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -128,9 +138,11 @@ public class TraceSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Status status;
+
     public TraceSpan withStatus(Status status) {
         this.status = status;
         return this;
     }
     
+    public TraceSpan(){}
 }

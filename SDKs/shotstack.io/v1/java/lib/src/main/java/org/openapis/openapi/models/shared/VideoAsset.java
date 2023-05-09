@@ -18,6 +18,7 @@ public class VideoAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crop")
     public Crop crop;
+
     public VideoAsset withCrop(Crop crop) {
         this.crop = crop;
         return this;
@@ -28,6 +29,7 @@ public class VideoAsset {
      */
     @JsonProperty("src")
     public String src;
+
     public VideoAsset withSrc(String src) {
         this.src = src;
         return this;
@@ -39,6 +41,7 @@ public class VideoAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trim")
     public Double trim;
+
     public VideoAsset withTrim(Double trim) {
         this.trim = trim;
         return this;
@@ -49,6 +52,7 @@ public class VideoAsset {
      */
     @JsonProperty("type")
     public String type;
+
     public VideoAsset withType(String type) {
         this.type = type;
         return this;
@@ -60,9 +64,14 @@ public class VideoAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volume")
     public Double volume;
+
     public VideoAsset withVolume(Double volume) {
         this.volume = volume;
         return this;
     }
     
+    public VideoAsset(@JsonProperty("src") String src, @JsonProperty("type") String type) {
+        this.src = src;
+        this.type = type;
+  }
 }

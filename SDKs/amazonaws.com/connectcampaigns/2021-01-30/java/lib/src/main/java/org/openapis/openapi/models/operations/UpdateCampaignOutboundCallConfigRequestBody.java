@@ -15,6 +15,7 @@ public class UpdateCampaignOutboundCallConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answerMachineDetectionConfig")
     public UpdateCampaignOutboundCallConfigRequestBodyAnswerMachineDetectionConfig answerMachineDetectionConfig;
+
     public UpdateCampaignOutboundCallConfigRequestBody withAnswerMachineDetectionConfig(UpdateCampaignOutboundCallConfigRequestBodyAnswerMachineDetectionConfig answerMachineDetectionConfig) {
         this.answerMachineDetectionConfig = answerMachineDetectionConfig;
         return this;
@@ -26,6 +27,7 @@ public class UpdateCampaignOutboundCallConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectContactFlowId")
     public String connectContactFlowId;
+
     public UpdateCampaignOutboundCallConfigRequestBody withConnectContactFlowId(String connectContactFlowId) {
         this.connectContactFlowId = connectContactFlowId;
         return this;
@@ -37,9 +39,11 @@ public class UpdateCampaignOutboundCallConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectSourcePhoneNumber")
     public String connectSourcePhoneNumber;
+
     public UpdateCampaignOutboundCallConfigRequestBody withConnectSourcePhoneNumber(String connectSourcePhoneNumber) {
         this.connectSourcePhoneNumber = connectSourcePhoneNumber;
         return this;
     }
     
+    public UpdateCampaignOutboundCallConfigRequestBody(){}
 }

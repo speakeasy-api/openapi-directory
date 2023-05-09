@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBatchPredictionsResponse {
     
     public String contentType;
+
     public DescribeBatchPredictionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeBatchPredictionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBatchPredictionsOutput describeBatchPredictionsOutput;
+
     public DescribeBatchPredictionsResponse withDescribeBatchPredictionsOutput(org.openapis.openapi.models.shared.DescribeBatchPredictionsOutput describeBatchPredictionsOutput) {
         this.describeBatchPredictionsOutput = describeBatchPredictionsOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBatchPredictionsResponse {
      */
     
     public Object internalServerException;
+
     public DescribeBatchPredictionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeBatchPredictionsResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeBatchPredictionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeBatchPredictionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeBatchPredictionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeBatchPredictionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBatchPredictionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeBatchPredictionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

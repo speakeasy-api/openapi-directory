@@ -15,6 +15,7 @@ public class ListenerTlsValidationContextTrust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public TlsValidationContextFileTrust file;
+
     public ListenerTlsValidationContextTrust withFile(TlsValidationContextFileTrust file) {
         this.file = file;
         return this;
@@ -23,9 +24,11 @@ public class ListenerTlsValidationContextTrust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sds")
     public TlsValidationContextSdsTrust sds;
+
     public ListenerTlsValidationContextTrust withSds(TlsValidationContextSdsTrust sds) {
         this.sds = sds;
         return this;
     }
     
+    public ListenerTlsValidationContextTrust(){}
 }

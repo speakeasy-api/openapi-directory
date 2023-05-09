@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePortalResponse {
     
     public String contentType;
+
     public DescribePortalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribePortalResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePortalResponse describePortalResponse;
+
     public DescribePortalResponse withDescribePortalResponse(org.openapis.openapi.models.shared.DescribePortalResponse describePortalResponse) {
         this.describePortalResponse = describePortalResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribePortalResponse {
      */
     
     public Object internalFailureException;
+
     public DescribePortalResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribePortalResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribePortalResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribePortalResponse {
     
     
     public Integer statusCode;
+
     public DescribePortalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribePortalResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePortalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribePortalResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribePortalResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribePortalResponse {
      */
     
     public Object throttlingException;
+
     public DescribePortalResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribePortalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

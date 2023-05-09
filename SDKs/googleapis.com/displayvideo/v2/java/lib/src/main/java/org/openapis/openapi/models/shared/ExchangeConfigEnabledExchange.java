@@ -18,6 +18,7 @@ public class ExchangeConfigEnabledExchange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange")
     public ExchangeConfigEnabledExchangeExchangeEnum exchange;
+
     public ExchangeConfigEnabledExchange withExchange(ExchangeConfigEnabledExchangeExchangeEnum exchange) {
         this.exchange = exchange;
         return this;
@@ -29,6 +30,7 @@ public class ExchangeConfigEnabledExchange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAdManagerAgencyId")
     public String googleAdManagerAgencyId;
+
     public ExchangeConfigEnabledExchange withGoogleAdManagerAgencyId(String googleAdManagerAgencyId) {
         this.googleAdManagerAgencyId = googleAdManagerAgencyId;
         return this;
@@ -40,6 +42,7 @@ public class ExchangeConfigEnabledExchange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAdManagerBuyerNetworkId")
     public String googleAdManagerBuyerNetworkId;
+
     public ExchangeConfigEnabledExchange withGoogleAdManagerBuyerNetworkId(String googleAdManagerBuyerNetworkId) {
         this.googleAdManagerBuyerNetworkId = googleAdManagerBuyerNetworkId;
         return this;
@@ -51,9 +54,11 @@ public class ExchangeConfigEnabledExchange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seatId")
     public String seatId;
+
     public ExchangeConfigEnabledExchange withSeatId(String seatId) {
         this.seatId = seatId;
         return this;
     }
     
+    public ExchangeConfigEnabledExchange(){}
 }

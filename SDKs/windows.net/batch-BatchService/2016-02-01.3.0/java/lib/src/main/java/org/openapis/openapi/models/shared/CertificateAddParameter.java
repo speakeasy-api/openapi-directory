@@ -18,6 +18,7 @@ public class CertificateAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateFormat")
     public CertificateAddParameterCertificateFormatEnum certificateFormat;
+
     public CertificateAddParameter withCertificateFormat(CertificateAddParameterCertificateFormatEnum certificateFormat) {
         this.certificateFormat = certificateFormat;
         return this;
@@ -28,6 +29,7 @@ public class CertificateAddParameter {
      */
     @JsonProperty("data")
     public String data;
+
     public CertificateAddParameter withData(String data) {
         this.data = data;
         return this;
@@ -39,6 +41,7 @@ public class CertificateAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public CertificateAddParameter withPassword(String password) {
         this.password = password;
         return this;
@@ -49,6 +52,7 @@ public class CertificateAddParameter {
      */
     @JsonProperty("thumbprint")
     public String thumbprint;
+
     public CertificateAddParameter withThumbprint(String thumbprint) {
         this.thumbprint = thumbprint;
         return this;
@@ -59,9 +63,15 @@ public class CertificateAddParameter {
      */
     @JsonProperty("thumbprintAlgorithm")
     public String thumbprintAlgorithm;
+
     public CertificateAddParameter withThumbprintAlgorithm(String thumbprintAlgorithm) {
         this.thumbprintAlgorithm = thumbprintAlgorithm;
         return this;
     }
     
+    public CertificateAddParameter(@JsonProperty("data") String data, @JsonProperty("thumbprint") String thumbprint, @JsonProperty("thumbprintAlgorithm") String thumbprintAlgorithm) {
+        this.data = data;
+        this.thumbprint = thumbprint;
+        this.thumbprintAlgorithm = thumbprintAlgorithm;
+  }
 }

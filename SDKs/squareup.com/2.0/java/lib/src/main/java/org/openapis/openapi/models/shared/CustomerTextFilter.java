@@ -20,6 +20,7 @@ public class CustomerTextFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exact")
     public String exact;
+
     public CustomerTextFilter withExact(String exact) {
         this.exact = exact;
         return this;
@@ -34,9 +35,11 @@ public class CustomerTextFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fuzzy")
     public String fuzzy;
+
     public CustomerTextFilter withFuzzy(String fuzzy) {
         this.fuzzy = fuzzy;
         return this;
     }
     
+    public CustomerTextFilter(){}
 }

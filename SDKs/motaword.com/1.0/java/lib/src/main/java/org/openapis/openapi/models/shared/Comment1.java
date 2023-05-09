@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Comment1 {
@@ -12,6 +13,7 @@ public class Comment1 {
      */
     @SpeakeasyMetadata("multipartForm:name=comment")
     public String comment;
+
     public Comment1 withComment(String comment) {
         this.comment = comment;
         return this;
@@ -22,6 +24,7 @@ public class Comment1 {
      */
     @SpeakeasyMetadata("multipartForm:name=commented_at")
     public Long commentedAt;
+
     public Comment1 withCommentedAt(Long commentedAt) {
         this.commentedAt = commentedAt;
         return this;
@@ -29,6 +32,7 @@ public class Comment1 {
     
     @SpeakeasyMetadata("multipartForm:name=id")
     public Long id;
+
     public Comment1 withId(Long id) {
         this.id = id;
         return this;
@@ -36,9 +40,13 @@ public class Comment1 {
     
     @SpeakeasyMetadata("multipartForm:name=links,json")
     public Object links;
+
     public Comment1 withLinks(Object links) {
         this.links = links;
         return this;
     }
     
+    public Comment1(@JsonProperty("comment") String comment) {
+        this.comment = comment;
+  }
 }

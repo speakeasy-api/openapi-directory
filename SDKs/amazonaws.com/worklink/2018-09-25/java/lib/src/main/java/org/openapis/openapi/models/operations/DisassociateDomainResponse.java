@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateDomainResponse {
     
     public String contentType;
+
     public DisassociateDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateDomainResponse {
      */
     
     public java.util.Map<String, Object> disassociateDomainResponse;
+
     public DisassociateDomainResponse withDisassociateDomainResponse(java.util.Map<String, Object> disassociateDomainResponse) {
         this.disassociateDomainResponse = disassociateDomainResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateDomainResponse {
      */
     
     public Object internalServerErrorException;
+
     public DisassociateDomainResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateDomainResponse {
      */
     
     public Object invalidRequestException;
+
     public DisassociateDomainResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateDomainResponse {
     
     
     public Integer statusCode;
+
     public DisassociateDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateDomainResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateDomainResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateDomainResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DisassociateDomainResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class DisassociateDomainResponse {
      */
     
     public Object unauthorizedException;
+
     public DisassociateDomainResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DisassociateDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

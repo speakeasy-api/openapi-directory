@@ -15,6 +15,7 @@ public class DestinyChallengesDestinyChallengeStatusObjective {
      */
     
     public Long activityHash;
+
     public DestinyChallengesDestinyChallengeStatusObjective withActivityHash(Long activityHash) {
         this.activityHash = activityHash;
         return this;
@@ -25,6 +26,7 @@ public class DestinyChallengesDestinyChallengeStatusObjective {
      */
     
     public Boolean complete;
+
     public DestinyChallengesDestinyChallengeStatusObjective withComplete(Boolean complete) {
         this.complete = complete;
         return this;
@@ -37,6 +39,7 @@ public class DestinyChallengesDestinyChallengeStatusObjective {
      */
     
     public Integer completionValue;
+
     public DestinyChallengesDestinyChallengeStatusObjective withCompletionValue(Integer completionValue) {
         this.completionValue = completionValue;
         return this;
@@ -47,6 +50,7 @@ public class DestinyChallengesDestinyChallengeStatusObjective {
      */
     
     public Long destinationHash;
+
     public DestinyChallengesDestinyChallengeStatusObjective withDestinationHash(Long destinationHash) {
         this.destinationHash = destinationHash;
         return this;
@@ -57,6 +61,7 @@ public class DestinyChallengesDestinyChallengeStatusObjective {
      */
     
     public Long objectiveHash;
+
     public DestinyChallengesDestinyChallengeStatusObjective withObjectiveHash(Long objectiveHash) {
         this.objectiveHash = objectiveHash;
         return this;
@@ -67,6 +72,7 @@ public class DestinyChallengesDestinyChallengeStatusObjective {
      */
     
     public Integer progress;
+
     public DestinyChallengesDestinyChallengeStatusObjective withProgress(Integer progress) {
         this.progress = progress;
         return this;
@@ -77,9 +83,11 @@ public class DestinyChallengesDestinyChallengeStatusObjective {
      */
     
     public Boolean visible;
+
     public DestinyChallengesDestinyChallengeStatusObjective withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public DestinyChallengesDestinyChallengeStatusObjective(){}
 }

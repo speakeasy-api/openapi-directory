@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CostCenters {
     @JsonProperty("label")
     public String label;
+
     public CostCenters withLabel(String label) {
         this.label = label;
         return this;
@@ -16,9 +17,14 @@ public class CostCenters {
     
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public CostCenters withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public CostCenters(@JsonProperty("label") String label, @JsonProperty("value") java.util.Map<String, Object> value) {
+        this.label = label;
+        this.value = value;
+  }
 }

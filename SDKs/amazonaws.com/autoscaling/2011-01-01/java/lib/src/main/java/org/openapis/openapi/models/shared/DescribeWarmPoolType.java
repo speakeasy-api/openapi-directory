@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeWarmPoolType {
     
     public String autoScalingGroupName;
+
     public DescribeWarmPoolType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeWarmPoolType {
     
     
     public Long maxRecords;
+
     public DescribeWarmPoolType withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -23,9 +25,13 @@ public class DescribeWarmPoolType {
     
     
     public String nextToken;
+
     public DescribeWarmPoolType withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeWarmPoolType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+  }
 }

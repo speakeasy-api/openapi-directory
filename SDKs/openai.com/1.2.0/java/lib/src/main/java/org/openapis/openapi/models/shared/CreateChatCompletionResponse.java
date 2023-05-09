@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateChatCompletionResponse {
     @JsonProperty("choices")
     public CreateChatCompletionResponseChoices[] choices;
+
     public CreateChatCompletionResponse withChoices(CreateChatCompletionResponseChoices[] choices) {
         this.choices = choices;
         return this;
@@ -21,6 +22,7 @@ public class CreateChatCompletionResponse {
     
     @JsonProperty("created")
     public Long created;
+
     public CreateChatCompletionResponse withCreated(Long created) {
         this.created = created;
         return this;
@@ -28,6 +30,7 @@ public class CreateChatCompletionResponse {
     
     @JsonProperty("id")
     public String id;
+
     public CreateChatCompletionResponse withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +38,7 @@ public class CreateChatCompletionResponse {
     
     @JsonProperty("model")
     public String model;
+
     public CreateChatCompletionResponse withModel(String model) {
         this.model = model;
         return this;
@@ -42,6 +46,7 @@ public class CreateChatCompletionResponse {
     
     @JsonProperty("object")
     public String object;
+
     public CreateChatCompletionResponse withObject(String object) {
         this.object = object;
         return this;
@@ -50,9 +55,17 @@ public class CreateChatCompletionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public CreateChatCompletionResponseUsage usage;
+
     public CreateChatCompletionResponse withUsage(CreateChatCompletionResponseUsage usage) {
         this.usage = usage;
         return this;
     }
     
+    public CreateChatCompletionResponse(@JsonProperty("choices") CreateChatCompletionResponseChoices[] choices, @JsonProperty("created") Long created, @JsonProperty("id") String id, @JsonProperty("model") String model, @JsonProperty("object") String object) {
+        this.choices = choices;
+        this.created = created;
+        this.id = id;
+        this.model = model;
+        this.object = object;
+  }
 }

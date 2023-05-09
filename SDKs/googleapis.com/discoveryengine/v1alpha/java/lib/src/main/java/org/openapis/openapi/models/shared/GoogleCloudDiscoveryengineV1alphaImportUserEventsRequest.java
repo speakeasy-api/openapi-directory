@@ -18,6 +18,7 @@ public class GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigquerySource")
     public GoogleCloudDiscoveryengineV1alphaBigQuerySource bigquerySource;
+
     public GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest withBigquerySource(GoogleCloudDiscoveryengineV1alphaBigQuerySource bigquerySource) {
         this.bigquerySource = bigquerySource;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorConfig")
     public GoogleCloudDiscoveryengineV1alphaImportErrorConfig errorConfig;
+
     public GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest withErrorConfig(GoogleCloudDiscoveryengineV1alphaImportErrorConfig errorConfig) {
         this.errorConfig = errorConfig;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GoogleCloudDiscoveryengineV1alphaGcsSource gcsSource;
+
     public GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest withGcsSource(GoogleCloudDiscoveryengineV1alphaGcsSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineSource")
     public GoogleCloudDiscoveryengineV1alphaImportUserEventsRequestInlineSource inlineSource;
+
     public GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest withInlineSource(GoogleCloudDiscoveryengineV1alphaImportUserEventsRequestInlineSource inlineSource) {
         this.inlineSource = inlineSource;
         return this;
     }
     
+    public GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest(){}
 }

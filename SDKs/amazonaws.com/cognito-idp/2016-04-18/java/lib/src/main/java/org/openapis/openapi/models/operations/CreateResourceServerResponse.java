@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateResourceServerResponse {
     
     public String contentType;
+
     public CreateResourceServerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateResourceServerResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateResourceServerResponse createResourceServerResponse;
+
     public CreateResourceServerResponse withCreateResourceServerResponse(org.openapis.openapi.models.shared.CreateResourceServerResponse createResourceServerResponse) {
         this.createResourceServerResponse = createResourceServerResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateResourceServerResponse {
      */
     
     public Object internalErrorException;
+
     public CreateResourceServerResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class CreateResourceServerResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateResourceServerResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateResourceServerResponse {
      */
     
     public Object limitExceededException;
+
     public CreateResourceServerResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateResourceServerResponse {
      */
     
     public Object notAuthorizedException;
+
     public CreateResourceServerResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -66,6 +73,7 @@ public class CreateResourceServerResponse {
     
     
     public Integer statusCode;
+
     public CreateResourceServerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateResourceServerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateResourceServerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateResourceServerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateResourceServerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class CreateResourceServerResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateResourceServerResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateResourceServerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

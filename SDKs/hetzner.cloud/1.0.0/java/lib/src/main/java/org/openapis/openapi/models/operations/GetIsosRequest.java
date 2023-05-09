@@ -8,13 +8,37 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIsosRequest {
     /**
+     * Return only ISOs with the given architecture.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=architecture")
+    public String architecture;
+
+    public GetIsosRequest withArchitecture(String architecture) {
+        this.architecture = architecture;
+        return this;
+    }
+    
+    /**
+     * Include Images with wildcard architecture (architecture is null). Works only if architecture filter is specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_architecture_wildcard")
+    public Boolean includeArchitectureWildcard;
+
+    public GetIsosRequest withIncludeArchitectureWildcard(Boolean includeArchitectureWildcard) {
+        this.includeArchitectureWildcard = includeArchitectureWildcard;
+        return this;
+    }
+    
+    /**
      * Can be used to filter ISOs by their name. The response will only contain the ISO matching the specified name.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetIsosRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetIsosRequest(){}
 }

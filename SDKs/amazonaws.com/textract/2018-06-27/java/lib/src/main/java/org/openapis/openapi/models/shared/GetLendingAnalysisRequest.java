@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetLendingAnalysisRequest {
     @JsonProperty("JobId")
     public String jobId;
+
     public GetLendingAnalysisRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -19,6 +20,7 @@ public class GetLendingAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetLendingAnalysisRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class GetLendingAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetLendingAnalysisRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetLendingAnalysisRequest(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

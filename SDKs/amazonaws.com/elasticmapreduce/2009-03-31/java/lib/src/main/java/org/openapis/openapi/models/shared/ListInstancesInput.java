@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListInstancesInput {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public ListInstancesInput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -22,6 +23,7 @@ public class ListInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceFleetId")
     public String instanceFleetId;
+
     public ListInstancesInput withInstanceFleetId(String instanceFleetId) {
         this.instanceFleetId = instanceFleetId;
         return this;
@@ -30,6 +32,7 @@ public class ListInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceFleetType")
     public InstanceFleetTypeEnum instanceFleetType;
+
     public ListInstancesInput withInstanceFleetType(InstanceFleetTypeEnum instanceFleetType) {
         this.instanceFleetType = instanceFleetType;
         return this;
@@ -38,6 +41,7 @@ public class ListInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceGroupId")
     public String instanceGroupId;
+
     public ListInstancesInput withInstanceGroupId(String instanceGroupId) {
         this.instanceGroupId = instanceGroupId;
         return this;
@@ -46,6 +50,7 @@ public class ListInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceGroupTypes")
     public InstanceGroupTypeEnum[] instanceGroupTypes;
+
     public ListInstancesInput withInstanceGroupTypes(InstanceGroupTypeEnum[] instanceGroupTypes) {
         this.instanceGroupTypes = instanceGroupTypes;
         return this;
@@ -54,6 +59,7 @@ public class ListInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceStates")
     public InstanceStateEnum[] instanceStates;
+
     public ListInstancesInput withInstanceStates(InstanceStateEnum[] instanceStates) {
         this.instanceStates = instanceStates;
         return this;
@@ -62,9 +68,13 @@ public class ListInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListInstancesInput withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListInstancesInput(@JsonProperty("ClusterId") String clusterId) {
+        this.clusterId = clusterId;
+  }
 }

@@ -18,9 +18,11 @@ public class RetryBuildOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build")
     public Build build;
+
     public RetryBuildOutput withBuild(Build build) {
         this.build = build;
         return this;
     }
     
+    public RetryBuildOutput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MonitoringProjectsGroupsListRequest {
@@ -12,6 +13,7 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public MonitoringProjectsGroupsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public MonitoringProjectsGroupsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public MonitoringProjectsGroupsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ancestorsOfGroup")
     public String ancestorsOfGroup;
+
     public MonitoringProjectsGroupsListRequest withAncestorsOfGroup(String ancestorsOfGroup) {
         this.ancestorsOfGroup = ancestorsOfGroup;
         return this;
@@ -52,6 +57,7 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public MonitoringProjectsGroupsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=childrenOfGroup")
     public String childrenOfGroup;
+
     public MonitoringProjectsGroupsListRequest withChildrenOfGroup(String childrenOfGroup) {
         this.childrenOfGroup = childrenOfGroup;
         return this;
@@ -72,6 +79,7 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=descendantsOfGroup")
     public String descendantsOfGroup;
+
     public MonitoringProjectsGroupsListRequest withDescendantsOfGroup(String descendantsOfGroup) {
         this.descendantsOfGroup = descendantsOfGroup;
         return this;
@@ -82,6 +90,7 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public MonitoringProjectsGroupsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -92,6 +101,7 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public MonitoringProjectsGroupsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -102,6 +112,7 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public MonitoringProjectsGroupsListRequest withName(String name) {
         this.name = name;
         return this;
@@ -112,6 +123,7 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public MonitoringProjectsGroupsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -122,6 +134,7 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public MonitoringProjectsGroupsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -132,6 +145,7 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public MonitoringProjectsGroupsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -142,6 +156,7 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public MonitoringProjectsGroupsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -152,6 +167,7 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public MonitoringProjectsGroupsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -162,6 +178,7 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public MonitoringProjectsGroupsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,9 +189,13 @@ public class MonitoringProjectsGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public MonitoringProjectsGroupsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public MonitoringProjectsGroupsListRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

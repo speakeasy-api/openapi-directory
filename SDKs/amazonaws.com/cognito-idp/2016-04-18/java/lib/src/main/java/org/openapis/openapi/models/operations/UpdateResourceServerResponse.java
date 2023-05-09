@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateResourceServerResponse {
     
     public String contentType;
+
     public UpdateResourceServerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateResourceServerResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateResourceServerResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateResourceServerResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateResourceServerResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateResourceServerResponse {
      */
     
     public Object notAuthorizedException;
+
     public UpdateResourceServerResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateResourceServerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateResourceServerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateResourceServerResponse {
     
     
     public Integer statusCode;
+
     public UpdateResourceServerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateResourceServerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateResourceServerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateResourceServerResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateResourceServerResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateResourceServerResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateResourceServerResponse updateResourceServerResponse;
+
     public UpdateResourceServerResponse withUpdateResourceServerResponse(org.openapis.openapi.models.shared.UpdateResourceServerResponse updateResourceServerResponse) {
         this.updateResourceServerResponse = updateResourceServerResponse;
         return this;
     }
     
+    public UpdateResourceServerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

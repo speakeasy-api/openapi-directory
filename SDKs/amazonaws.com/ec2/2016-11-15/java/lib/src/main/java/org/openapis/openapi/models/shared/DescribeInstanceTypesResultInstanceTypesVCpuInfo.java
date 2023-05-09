@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesVCpuInfo {
     
     public Long defaultCores;
+
     public DescribeInstanceTypesResultInstanceTypesVCpuInfo withDefaultCores(Long defaultCores) {
         this.defaultCores = defaultCores;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceTypesResultInstanceTypesVCpuInfo {
     
     
     public Long defaultThreadsPerCore;
+
     public DescribeInstanceTypesResultInstanceTypesVCpuInfo withDefaultThreadsPerCore(Long defaultThreadsPerCore) {
         this.defaultThreadsPerCore = defaultThreadsPerCore;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstanceTypesResultInstanceTypesVCpuInfo {
     
     
     public Long defaultVCpus;
+
     public DescribeInstanceTypesResultInstanceTypesVCpuInfo withDefaultVCpus(Long defaultVCpus) {
         this.defaultVCpus = defaultVCpus;
         return this;
@@ -33,6 +36,7 @@ public class DescribeInstanceTypesResultInstanceTypesVCpuInfo {
     
     
     public Long[] validCores;
+
     public DescribeInstanceTypesResultInstanceTypesVCpuInfo withValidCores(Long[] validCores) {
         this.validCores = validCores;
         return this;
@@ -40,9 +44,11 @@ public class DescribeInstanceTypesResultInstanceTypesVCpuInfo {
     
     
     public Long[] validThreadsPerCore;
+
     public DescribeInstanceTypesResultInstanceTypesVCpuInfo withValidThreadsPerCore(Long[] validThreadsPerCore) {
         this.validThreadsPerCore = validThreadsPerCore;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesVCpuInfo(){}
 }

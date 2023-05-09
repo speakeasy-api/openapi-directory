@@ -1,0 +1,361 @@
+# users
+
+### Available Operations
+
+* [osloginUsersGetLoginProfile](#osloginusersgetloginprofile) - Retrieves the profile information used for logging in to a virtual machine on Google Compute Engine.
+* [osloginUsersImportSshPublicKey](#osloginusersimportsshpublickey) - Adds an SSH public key and returns the profile information. Default POSIX account information is set when no username and UID exist as part of the login profile.
+* [osloginUsersSshPublicKeysCreate](#osloginuserssshpublickeyscreate) - Create an SSH public key
+* [osloginUsersSshPublicKeysDelete](#osloginuserssshpublickeysdelete) - Deletes an SSH public key.
+* [osloginUsersSshPublicKeysGet](#osloginuserssshpublickeysget) - Retrieves an SSH public key.
+* [osloginUsersSshPublicKeysPatch](#osloginuserssshpublickeyspatch) - Updates an SSH public key and returns the profile information. This method supports patch semantics.
+
+## osloginUsersGetLoginProfile
+
+Retrieves the profile information used for logging in to a virtual machine on Google Compute Engine.
+
+### Example Usage
+
+```java
+package hello.world;
+
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileRequest;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileResponse;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurity;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurityOption1;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurityOption2;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurityOption3;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurityOption4;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK sdk = SDK.builder()
+                .build();
+
+            OsloginUsersGetLoginProfileRequest req = new OsloginUsersGetLoginProfileRequest("ipsa") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "tempora";
+                alt = AltEnum.MEDIA;
+                callback = "molestiae";
+                fields = "minus";
+                key = "placeat";
+                oauthToken = "voluptatum";
+                prettyPrint = false;
+                projectId = "iusto";
+                quotaUser = "excepturi";
+                systemId = "nisi";
+                uploadType = "recusandae";
+                uploadProtocol = "temporibus";
+            }};            
+
+            OsloginUsersGetLoginProfileResponse res = sdk.users.osloginUsersGetLoginProfile(req, new OsloginUsersGetLoginProfileSecurity() {{
+                option1 = new OsloginUsersGetLoginProfileSecurityOption1("ab", "quis") {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
+
+            if (res.loginProfile != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+## osloginUsersImportSshPublicKey
+
+Adds an SSH public key and returns the profile information. Default POSIX account information is set when no username and UID exist as part of the login profile.
+
+### Example Usage
+
+```java
+package hello.world;
+
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeyRequest;
+import org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeyResponse;
+import org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeySecurity;
+import org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeySecurityOption1;
+import org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeySecurityOption2;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SshPublicKeyInput;
+import org.openapis.openapi.models.shared.XgafvEnum;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK sdk = SDK.builder()
+                .build();
+
+            OsloginUsersImportSshPublicKeyRequest req = new OsloginUsersImportSshPublicKeyRequest("veritatis") {{
+                dollarXgafv = XgafvEnum.TWO;
+                sshPublicKeyInput = new SshPublicKeyInput() {{
+                    expirationTimeUsec = "perferendis";
+                    key = "ipsam";
+                }};;
+                accessToken = "repellendus";
+                alt = AltEnum.PROTO;
+                callback = "quo";
+                fields = "odit";
+                key = "at";
+                oauthToken = "at";
+                prettyPrint = false;
+                projectId = "maiores";
+                quotaUser = "molestiae";
+                uploadType = "quod";
+                uploadProtocol = "quod";
+            }};            
+
+            OsloginUsersImportSshPublicKeyResponse res = sdk.users.osloginUsersImportSshPublicKey(req, new OsloginUsersImportSshPublicKeySecurity() {{
+                option1 = new OsloginUsersImportSshPublicKeySecurityOption1("esse", "totam") {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
+
+            if (res.importSshPublicKeyResponse != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+## osloginUsersSshPublicKeysCreate
+
+Create an SSH public key
+
+### Example Usage
+
+```java
+package hello.world;
+
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateRequest;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateResponse;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateSecurity;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateSecurityOption1;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateSecurityOption2;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SshPublicKeyInput;
+import org.openapis.openapi.models.shared.XgafvEnum;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK sdk = SDK.builder()
+                .build();
+
+            OsloginUsersSshPublicKeysCreateRequest req = new OsloginUsersSshPublicKeysCreateRequest("porro") {{
+                dollarXgafv = XgafvEnum.TWO;
+                sshPublicKeyInput = new SshPublicKeyInput() {{
+                    expirationTimeUsec = "dicta";
+                    key = "nam";
+                }};;
+                accessToken = "officia";
+                alt = AltEnum.MEDIA;
+                callback = "fugit";
+                fields = "deleniti";
+                key = "hic";
+                oauthToken = "optio";
+                prettyPrint = false;
+                quotaUser = "totam";
+                uploadType = "beatae";
+                uploadProtocol = "commodi";
+            }};            
+
+            OsloginUsersSshPublicKeysCreateResponse res = sdk.users.osloginUsersSshPublicKeysCreate(req, new OsloginUsersSshPublicKeysCreateSecurity() {{
+                option1 = new OsloginUsersSshPublicKeysCreateSecurityOption1("molestiae", "modi") {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
+
+            if (res.sshPublicKey != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+## osloginUsersSshPublicKeysDelete
+
+Deletes an SSH public key.
+
+### Example Usage
+
+```java
+package hello.world;
+
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteRequest;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteResponse;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteSecurity;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteSecurityOption1;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteSecurityOption2;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK sdk = SDK.builder()
+                .build();
+
+            OsloginUsersSshPublicKeysDeleteRequest req = new OsloginUsersSshPublicKeysDeleteRequest("qui") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "cum";
+                alt = AltEnum.MEDIA;
+                callback = "ipsum";
+                fields = "excepturi";
+                key = "aspernatur";
+                oauthToken = "perferendis";
+                prettyPrint = false;
+                quotaUser = "ad";
+                uploadType = "natus";
+                uploadProtocol = "sed";
+            }};            
+
+            OsloginUsersSshPublicKeysDeleteResponse res = sdk.users.osloginUsersSshPublicKeysDelete(req, new OsloginUsersSshPublicKeysDeleteSecurity() {{
+                option1 = new OsloginUsersSshPublicKeysDeleteSecurityOption1("iste", "dolor") {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
+
+            if (res.empty != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+## osloginUsersSshPublicKeysGet
+
+Retrieves an SSH public key.
+
+### Example Usage
+
+```java
+package hello.world;
+
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetRequest;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetResponse;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetSecurity;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetSecurityOption1;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetSecurityOption2;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK sdk = SDK.builder()
+                .build();
+
+            OsloginUsersSshPublicKeysGetRequest req = new OsloginUsersSshPublicKeysGetRequest("natus") {{
+                dollarXgafv = XgafvEnum.ONE;
+                accessToken = "hic";
+                alt = AltEnum.PROTO;
+                callback = "fuga";
+                fields = "in";
+                key = "corporis";
+                oauthToken = "iste";
+                prettyPrint = false;
+                quotaUser = "iure";
+                uploadType = "saepe";
+                uploadProtocol = "quidem";
+            }};            
+
+            OsloginUsersSshPublicKeysGetResponse res = sdk.users.osloginUsersSshPublicKeysGet(req, new OsloginUsersSshPublicKeysGetSecurity() {{
+                option1 = new OsloginUsersSshPublicKeysGetSecurityOption1("architecto", "ipsa") {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
+
+            if (res.sshPublicKey != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+## osloginUsersSshPublicKeysPatch
+
+Updates an SSH public key and returns the profile information. This method supports patch semantics.
+
+### Example Usage
+
+```java
+package hello.world;
+
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchRequest;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchResponse;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchSecurity;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchSecurityOption1;
+import org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchSecurityOption2;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SshPublicKeyInput;
+import org.openapis.openapi.models.shared.XgafvEnum;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            SDK sdk = SDK.builder()
+                .build();
+
+            OsloginUsersSshPublicKeysPatchRequest req = new OsloginUsersSshPublicKeysPatchRequest("reiciendis") {{
+                dollarXgafv = XgafvEnum.TWO;
+                sshPublicKeyInput = new SshPublicKeyInput() {{
+                    expirationTimeUsec = "mollitia";
+                    key = "laborum";
+                }};;
+                accessToken = "dolores";
+                alt = AltEnum.JSON;
+                callback = "corporis";
+                fields = "explicabo";
+                key = "nobis";
+                oauthToken = "enim";
+                prettyPrint = false;
+                quotaUser = "omnis";
+                updateMask = "nemo";
+                uploadType = "minima";
+                uploadProtocol = "excepturi";
+            }};            
+
+            OsloginUsersSshPublicKeysPatchResponse res = sdk.users.osloginUsersSshPublicKeysPatch(req, new OsloginUsersSshPublicKeysPatchSecurity() {{
+                option1 = new OsloginUsersSshPublicKeysPatchSecurityOption1("accusantium", "iure") {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
+
+            if (res.sshPublicKey != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```

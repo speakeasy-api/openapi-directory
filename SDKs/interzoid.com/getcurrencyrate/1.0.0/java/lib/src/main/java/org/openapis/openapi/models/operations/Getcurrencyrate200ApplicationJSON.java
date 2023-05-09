@@ -15,6 +15,7 @@ public class Getcurrencyrate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Getcurrencyrate200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class Getcurrencyrate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public Getcurrencyrate200ApplicationJSON withCountry(String country) {
         this.country = country;
         return this;
@@ -31,6 +33,7 @@ public class Getcurrencyrate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credits")
     public String credits;
+
     public Getcurrencyrate200ApplicationJSON withCredits(String credits) {
         this.credits = credits;
         return this;
@@ -39,6 +42,7 @@ public class Getcurrencyrate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Getcurrencyrate200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class Getcurrencyrate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rate")
     public String rate;
+
     public Getcurrencyrate200ApplicationJSON withRate(String rate) {
         this.rate = rate;
         return this;
@@ -55,9 +60,11 @@ public class Getcurrencyrate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Symbol")
     public String symbol;
+
     public Getcurrencyrate200ApplicationJSON withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
     }
     
+    public Getcurrencyrate200ApplicationJSON(){}
 }

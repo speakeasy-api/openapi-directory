@@ -15,6 +15,7 @@ public class ProjectCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public ProjectCache withLocation(String location) {
         this.location = location;
         return this;
@@ -23,6 +24,7 @@ public class ProjectCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modes")
     public CacheModeEnum[] modes;
+
     public ProjectCache withModes(CacheModeEnum[] modes) {
         this.modes = modes;
         return this;
@@ -30,9 +32,13 @@ public class ProjectCache {
     
     @JsonProperty("type")
     public CacheTypeEnum type;
+
     public ProjectCache withType(CacheTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ProjectCache(@JsonProperty("type") CacheTypeEnum type) {
+        this.type = type;
+  }
 }

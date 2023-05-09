@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Metadatum {
     @JsonProperty("name")
     public String name;
+
     public Metadatum withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class Metadatum {
     
     @JsonProperty("properties")
     public Properties properties;
+
     public Metadatum withProperties(Properties properties) {
         this.properties = properties;
         return this;
     }
     
+    public Metadatum(@JsonProperty("name") String name, @JsonProperty("properties") Properties properties) {
+        this.name = name;
+        this.properties = properties;
+  }
 }

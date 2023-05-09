@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateContextRequest {
     @JsonProperty("ContextName")
     public String contextName;
+
     public UpdateContextRequest withContextName(String contextName) {
         this.contextName = contextName;
         return this;
@@ -19,6 +20,7 @@ public class UpdateContextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateContextRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class UpdateContextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public java.util.Map<String, String> properties;
+
     public UpdateContextRequest withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -35,9 +38,13 @@ public class UpdateContextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PropertiesToRemove")
     public String[] propertiesToRemove;
+
     public UpdateContextRequest withPropertiesToRemove(String[] propertiesToRemove) {
         this.propertiesToRemove = propertiesToRemove;
         return this;
     }
     
+    public UpdateContextRequest(@JsonProperty("ContextName") String contextName) {
+        this.contextName = contextName;
+  }
 }

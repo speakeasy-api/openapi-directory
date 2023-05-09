@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFunctionGeneAssociationsResponse {
@@ -12,6 +13,7 @@ public class GetFunctionGeneAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociationResults associationResults;
+
     public GetFunctionGeneAssociationsResponse withAssociationResults(org.openapis.openapi.models.shared.AssociationResults associationResults) {
         this.associationResults = associationResults;
         return this;
@@ -19,6 +21,7 @@ public class GetFunctionGeneAssociationsResponse {
     
     
     public String contentType;
+
     public GetFunctionGeneAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetFunctionGeneAssociationsResponse {
     
     
     public Integer statusCode;
+
     public GetFunctionGeneAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetFunctionGeneAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFunctionGeneAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFunctionGeneAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

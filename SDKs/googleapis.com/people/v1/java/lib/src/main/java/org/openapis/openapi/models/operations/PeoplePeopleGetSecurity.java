@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PeoplePeopleGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public PeoplePeopleGetSecurityOption1 option1;
+
     public PeoplePeopleGetSecurity withOption1(PeoplePeopleGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class PeoplePeopleGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public PeoplePeopleGetSecurityOption10 option10;
+
     public PeoplePeopleGetSecurity withOption10(PeoplePeopleGetSecurityOption10 option10) {
         this.option10 = option10;
         return this;
@@ -23,6 +25,7 @@ public class PeoplePeopleGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public PeoplePeopleGetSecurityOption11 option11;
+
     public PeoplePeopleGetSecurity withOption11(PeoplePeopleGetSecurityOption11 option11) {
         this.option11 = option11;
         return this;
@@ -30,6 +33,7 @@ public class PeoplePeopleGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public PeoplePeopleGetSecurityOption2 option2;
+
     public PeoplePeopleGetSecurity withOption2(PeoplePeopleGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -37,6 +41,7 @@ public class PeoplePeopleGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public PeoplePeopleGetSecurityOption3 option3;
+
     public PeoplePeopleGetSecurity withOption3(PeoplePeopleGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -44,6 +49,7 @@ public class PeoplePeopleGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public PeoplePeopleGetSecurityOption4 option4;
+
     public PeoplePeopleGetSecurity withOption4(PeoplePeopleGetSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -51,6 +57,7 @@ public class PeoplePeopleGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public PeoplePeopleGetSecurityOption5 option5;
+
     public PeoplePeopleGetSecurity withOption5(PeoplePeopleGetSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -58,6 +65,7 @@ public class PeoplePeopleGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public PeoplePeopleGetSecurityOption6 option6;
+
     public PeoplePeopleGetSecurity withOption6(PeoplePeopleGetSecurityOption6 option6) {
         this.option6 = option6;
         return this;
@@ -65,6 +73,7 @@ public class PeoplePeopleGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public PeoplePeopleGetSecurityOption7 option7;
+
     public PeoplePeopleGetSecurity withOption7(PeoplePeopleGetSecurityOption7 option7) {
         this.option7 = option7;
         return this;
@@ -72,6 +81,7 @@ public class PeoplePeopleGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public PeoplePeopleGetSecurityOption8 option8;
+
     public PeoplePeopleGetSecurity withOption8(PeoplePeopleGetSecurityOption8 option8) {
         this.option8 = option8;
         return this;
@@ -79,9 +89,11 @@ public class PeoplePeopleGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public PeoplePeopleGetSecurityOption9 option9;
+
     public PeoplePeopleGetSecurity withOption9(PeoplePeopleGetSecurityOption9 option9) {
         this.option9 = option9;
         return this;
     }
     
+    public PeoplePeopleGetSecurity(){}
 }

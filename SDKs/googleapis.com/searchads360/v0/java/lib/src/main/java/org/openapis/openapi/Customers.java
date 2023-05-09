@@ -59,11 +59,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListResponse res = new org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListResponse() {{
+        org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListResponse res = new org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListResponse(contentType, httpRes.statusCode()) {{
             googleAdsSearchads360V0ServicesListCustomColumnsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchResponse res = new org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchResponse() {{
+        org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchResponse res = new org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchResponse(contentType, httpRes.statusCode()) {{
             googleAdsSearchads360V0ServicesSearchSearchAds360Response = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -119,54 +115,6 @@ public class Customers {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.GoogleAdsSearchads360V0ServicesSearchSearchAds360Response out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleAdsSearchads360V0ServicesSearchSearchAds360Response.class);
                 res.googleAdsSearchads360V0ServicesSearchSearchAds360Response = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Returns all rows that match the search stream query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchStreamResponse searchads360CustomersSearchAds360SearchStream(org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchStreamRequest request, org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchStreamSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchStreamRequest.class, baseUrl, "/v0/customers/{customerId}/searchAds360:searchStream", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAdsSearchads360V0ServicesSearchSearchAds360StreamRequest", "json");
-        req.setBody(serializedRequestBody);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchStreamRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchStreamResponse res = new org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchStreamResponse() {{
-            googleAdsSearchads360V0ServicesSearchSearchAds360StreamResponse = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.GoogleAdsSearchads360V0ServicesSearchSearchAds360StreamResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleAdsSearchads360V0ServicesSearchSearchAds360StreamResponse.class);
-                res.googleAdsSearchads360V0ServicesSearchSearchAds360StreamResponse = out;
             }
         }
 

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendSmsResponse {
     
     public String contentType;
+
     public SendSmsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SendSmsResponse {
      */
     
     public org.openapis.openapi.models.shared.Erreur erreur;
+
     public SendSmsResponse withErreur(org.openapis.openapi.models.shared.Erreur erreur) {
         this.erreur = erreur;
         return this;
@@ -29,6 +32,7 @@ public class SendSmsResponse {
      */
     
     public org.openapis.openapi.models.shared.SMSReponse smsReponse;
+
     public SendSmsResponse withSMSReponse(org.openapis.openapi.models.shared.SMSReponse smsReponse) {
         this.smsReponse = smsReponse;
         return this;
@@ -36,6 +40,7 @@ public class SendSmsResponse {
     
     
     public Integer statusCode;
+
     public SendSmsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class SendSmsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendSmsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SendSmsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

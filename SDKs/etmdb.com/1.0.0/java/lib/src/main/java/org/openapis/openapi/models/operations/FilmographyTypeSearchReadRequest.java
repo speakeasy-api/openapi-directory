@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FilmographyTypeSearchReadRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filmography_description")
     public String filmographyDescription;
+
     public FilmographyTypeSearchReadRequest withFilmographyDescription(String filmographyDescription) {
         this.filmographyDescription = filmographyDescription;
         return this;
     }
     
+    public FilmographyTypeSearchReadRequest(@JsonProperty("filmography_description") String filmographyDescription) {
+        this.filmographyDescription = filmographyDescription;
+  }
 }

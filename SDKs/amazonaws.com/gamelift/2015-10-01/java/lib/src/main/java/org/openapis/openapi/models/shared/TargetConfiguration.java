@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TargetConfiguration {
     @JsonProperty("TargetValue")
     public Double targetValue;
+
     public TargetConfiguration withTargetValue(Double targetValue) {
         this.targetValue = targetValue;
         return this;
     }
     
+    public TargetConfiguration(@JsonProperty("TargetValue") Double targetValue) {
+        this.targetValue = targetValue;
+  }
 }

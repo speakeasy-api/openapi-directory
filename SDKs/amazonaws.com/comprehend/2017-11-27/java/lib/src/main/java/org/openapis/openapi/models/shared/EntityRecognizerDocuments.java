@@ -15,6 +15,7 @@ public class EntityRecognizerDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputFormat")
     public InputFormatEnum inputFormat;
+
     public EntityRecognizerDocuments withInputFormat(InputFormatEnum inputFormat) {
         this.inputFormat = inputFormat;
         return this;
@@ -22,6 +23,7 @@ public class EntityRecognizerDocuments {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public EntityRecognizerDocuments withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
@@ -30,9 +32,13 @@ public class EntityRecognizerDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TestS3Uri")
     public String testS3Uri;
+
     public EntityRecognizerDocuments withTestS3Uri(String testS3Uri) {
         this.testS3Uri = testS3Uri;
         return this;
     }
     
+    public EntityRecognizerDocuments(@JsonProperty("S3Uri") String s3Uri) {
+        this.s3Uri = s3Uri;
+  }
 }

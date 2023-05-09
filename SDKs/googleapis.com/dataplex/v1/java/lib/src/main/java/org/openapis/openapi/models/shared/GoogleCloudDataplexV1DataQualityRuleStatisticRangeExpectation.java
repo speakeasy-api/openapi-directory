@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public String maxValue;
+
     public GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation withMaxValue(String maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -29,14 +30,19 @@ public class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public String minValue;
+
     public GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation withMinValue(String minValue) {
         this.minValue = minValue;
         return this;
     }
     
+    /**
+     * The aggregate metric to evaluate.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistic")
     public GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum statistic;
+
     public GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation withStatistic(GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum statistic) {
         this.statistic = statistic;
         return this;
@@ -48,6 +54,7 @@ public class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strictMaxEnabled")
     public Boolean strictMaxEnabled;
+
     public GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation withStrictMaxEnabled(Boolean strictMaxEnabled) {
         this.strictMaxEnabled = strictMaxEnabled;
         return this;
@@ -59,9 +66,11 @@ public class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strictMinEnabled")
     public Boolean strictMinEnabled;
+
     public GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation withStrictMinEnabled(Boolean strictMinEnabled) {
         this.strictMinEnabled = strictMinEnabled;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation(){}
 }

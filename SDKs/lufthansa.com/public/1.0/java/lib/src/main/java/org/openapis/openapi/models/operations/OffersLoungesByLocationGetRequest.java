@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OffersLoungesByLocationGetRequest {
@@ -12,6 +13,7 @@ public class OffersLoungesByLocationGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public OffersLoungesByLocationGetRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class OffersLoungesByLocationGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cabinClass")
     public String cabinClass;
+
     public OffersLoungesByLocationGetRequest withCabinClass(String cabinClass) {
         this.cabinClass = cabinClass;
         return this;
@@ -32,6 +35,7 @@ public class OffersLoungesByLocationGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public OffersLoungesByLocationGetRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -42,6 +46,7 @@ public class OffersLoungesByLocationGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public OffersLoungesByLocationGetRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -52,9 +57,14 @@ public class OffersLoungesByLocationGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tierCode")
     public String tierCode;
+
     public OffersLoungesByLocationGetRequest withTierCode(String tierCode) {
         this.tierCode = tierCode;
         return this;
     }
     
+    public OffersLoungesByLocationGetRequest(@JsonProperty("Accept") String accept, @JsonProperty("location") String location) {
+        this.accept = accept;
+        this.location = location;
+  }
 }

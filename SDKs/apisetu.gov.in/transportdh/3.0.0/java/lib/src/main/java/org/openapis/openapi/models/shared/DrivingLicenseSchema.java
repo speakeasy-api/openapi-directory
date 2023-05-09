@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DrivingLicenseSchema - The certificate data in response body in PDF, XML or JSON format as requested in format parameter.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DrivingLicenseSchema {
     
     public DrivingLicenseSchemaCertificateData certificateData;
+
     public DrivingLicenseSchema withCertificateData(DrivingLicenseSchemaCertificateData certificateData) {
         this.certificateData = certificateData;
         return this;
@@ -19,6 +20,7 @@ public class DrivingLicenseSchema {
     
     
     public DrivingLicenseSchemaIssuedBy issuedBy;
+
     public DrivingLicenseSchema withIssuedBy(DrivingLicenseSchemaIssuedBy issuedBy) {
         this.issuedBy = issuedBy;
         return this;
@@ -26,6 +28,7 @@ public class DrivingLicenseSchema {
     
     
     public DrivingLicenseSchemaIssuedTo issuedTo;
+
     public DrivingLicenseSchema withIssuedTo(DrivingLicenseSchemaIssuedTo issuedTo) {
         this.issuedTo = issuedTo;
         return this;
@@ -33,6 +36,7 @@ public class DrivingLicenseSchema {
     
     
     public String expiryDate;
+
     public DrivingLicenseSchema withExpiryDate(String expiryDate) {
         this.expiryDate = expiryDate;
         return this;
@@ -40,6 +44,7 @@ public class DrivingLicenseSchema {
     
     
     public String issueDate;
+
     public DrivingLicenseSchema withIssueDate(String issueDate) {
         this.issueDate = issueDate;
         return this;
@@ -47,6 +52,7 @@ public class DrivingLicenseSchema {
     
     
     public String issuedAt;
+
     public DrivingLicenseSchema withIssuedAt(String issuedAt) {
         this.issuedAt = issuedAt;
         return this;
@@ -54,6 +60,7 @@ public class DrivingLicenseSchema {
     
     
     public String language;
+
     public DrivingLicenseSchema withLanguage(String language) {
         this.language = language;
         return this;
@@ -61,6 +68,7 @@ public class DrivingLicenseSchema {
     
     
     public String name;
+
     public DrivingLicenseSchema withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +76,7 @@ public class DrivingLicenseSchema {
     
     
     public Long number;
+
     public DrivingLicenseSchema withNumber(Long number) {
         this.number = number;
         return this;
@@ -75,6 +84,7 @@ public class DrivingLicenseSchema {
     
     
     public Long prevNumber;
+
     public DrivingLicenseSchema withPrevNumber(Long prevNumber) {
         this.prevNumber = prevNumber;
         return this;
@@ -82,6 +92,7 @@ public class DrivingLicenseSchema {
     
     
     public String status;
+
     public DrivingLicenseSchema withStatus(String status) {
         this.status = status;
         return this;
@@ -89,6 +100,7 @@ public class DrivingLicenseSchema {
     
     
     public String type;
+
     public DrivingLicenseSchema withType(String type) {
         this.type = type;
         return this;
@@ -96,9 +108,23 @@ public class DrivingLicenseSchema {
     
     
     public String validFromDate;
+
     public DrivingLicenseSchema withValidFromDate(String validFromDate) {
         this.validFromDate = validFromDate;
         return this;
     }
     
+    public DrivingLicenseSchema(@JsonProperty("CertificateData") DrivingLicenseSchemaCertificateData certificateData, @JsonProperty("IssuedBy") DrivingLicenseSchemaIssuedBy issuedBy, @JsonProperty("IssuedTo") DrivingLicenseSchemaIssuedTo issuedTo, @JsonProperty("issueDate") String issueDate, @JsonProperty("issuedAt") String issuedAt, @JsonProperty("language") String language, @JsonProperty("name") String name, @JsonProperty("number") Long number, @JsonProperty("status") String status, @JsonProperty("type") String type, @JsonProperty("validFromDate") String validFromDate) {
+        this.certificateData = certificateData;
+        this.issuedBy = issuedBy;
+        this.issuedTo = issuedTo;
+        this.issueDate = issueDate;
+        this.issuedAt = issuedAt;
+        this.language = language;
+        this.name = name;
+        this.number = number;
+        this.status = status;
+        this.type = type;
+        this.validFromDate = validFromDate;
+  }
 }

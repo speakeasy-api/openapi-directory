@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisPercentage")
     public Float analysisPercentage;
+
     public GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest withAnalysisPercentage(Float analysisPercentage) {
         this.analysisPercentage = analysisPercentage;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotatorSelector")
     public GoogleCloudContactcenterinsightsV1AnnotatorSelector annotatorSelector;
+
     public GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest withAnnotatorSelector(GoogleCloudContactcenterinsightsV1AnnotatorSelector annotatorSelector) {
         this.annotatorSelector = annotatorSelector;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest withParent(String parent) {
         this.parent = parent;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest(){}
 }

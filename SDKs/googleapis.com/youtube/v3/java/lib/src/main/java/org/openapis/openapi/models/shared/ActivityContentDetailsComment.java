@@ -18,9 +18,11 @@ public class ActivityContentDetailsComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public ResourceId resourceId;
+
     public ActivityContentDetailsComment withResourceId(ResourceId resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public ActivityContentDetailsComment(){}
 }

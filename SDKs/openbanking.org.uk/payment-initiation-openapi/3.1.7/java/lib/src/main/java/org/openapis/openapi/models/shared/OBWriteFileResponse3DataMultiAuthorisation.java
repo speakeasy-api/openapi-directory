@@ -27,6 +27,7 @@ public class OBWriteFileResponse3DataMultiAuthorisation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationDateTime")
     public OffsetDateTime expirationDateTime;
+
     public OBWriteFileResponse3DataMultiAuthorisation withExpirationDateTime(OffsetDateTime expirationDateTime) {
         this.expirationDateTime = expirationDateTime;
         return this;
@@ -42,6 +43,7 @@ public class OBWriteFileResponse3DataMultiAuthorisation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateDateTime")
     public OffsetDateTime lastUpdateDateTime;
+
     public OBWriteFileResponse3DataMultiAuthorisation withLastUpdateDateTime(OffsetDateTime lastUpdateDateTime) {
         this.lastUpdateDateTime = lastUpdateDateTime;
         return this;
@@ -53,6 +55,7 @@ public class OBWriteFileResponse3DataMultiAuthorisation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberReceived")
     public Long numberReceived;
+
     public OBWriteFileResponse3DataMultiAuthorisation withNumberReceived(Long numberReceived) {
         this.numberReceived = numberReceived;
         return this;
@@ -64,6 +67,7 @@ public class OBWriteFileResponse3DataMultiAuthorisation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberRequired")
     public Long numberRequired;
+
     public OBWriteFileResponse3DataMultiAuthorisation withNumberRequired(Long numberRequired) {
         this.numberRequired = numberRequired;
         return this;
@@ -74,9 +78,13 @@ public class OBWriteFileResponse3DataMultiAuthorisation {
      */
     @JsonProperty("Status")
     public OBWriteFileResponse3DataMultiAuthorisationStatusEnum status;
+
     public OBWriteFileResponse3DataMultiAuthorisation withStatus(OBWriteFileResponse3DataMultiAuthorisationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public OBWriteFileResponse3DataMultiAuthorisation(@JsonProperty("Status") OBWriteFileResponse3DataMultiAuthorisationStatusEnum status) {
+        this.status = status;
+  }
 }

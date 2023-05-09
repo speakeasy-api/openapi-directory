@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InjuredPlayersByCompetitionRequest {
@@ -12,6 +13,7 @@ public class InjuredPlayersByCompetitionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=competition")
     public String competition;
+
     public InjuredPlayersByCompetitionRequest withCompetition(String competition) {
         this.competition = competition;
         return this;
@@ -22,9 +24,14 @@ public class InjuredPlayersByCompetitionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public InjuredPlayersByCompetitionFormatEnum format;
+
     public InjuredPlayersByCompetitionRequest withFormat(InjuredPlayersByCompetitionFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public InjuredPlayersByCompetitionRequest(@JsonProperty("competition") String competition, @JsonProperty("format") InjuredPlayersByCompetitionFormatEnum format) {
+        this.competition = competition;
+        this.format = format;
+  }
 }

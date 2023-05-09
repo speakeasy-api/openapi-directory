@@ -15,6 +15,7 @@ public class StartEarthObservationJobRequestBodyJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BandMathConfig")
     public org.openapis.openapi.models.shared.BandMathConfigInput bandMathConfig;
+
     public StartEarthObservationJobRequestBodyJobConfig withBandMathConfig(org.openapis.openapi.models.shared.BandMathConfigInput bandMathConfig) {
         this.bandMathConfig = bandMathConfig;
         return this;
@@ -23,6 +24,7 @@ public class StartEarthObservationJobRequestBodyJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudMaskingConfig")
     public java.util.Map<String, Object> cloudMaskingConfig;
+
     public StartEarthObservationJobRequestBodyJobConfig withCloudMaskingConfig(java.util.Map<String, Object> cloudMaskingConfig) {
         this.cloudMaskingConfig = cloudMaskingConfig;
         return this;
@@ -31,6 +33,7 @@ public class StartEarthObservationJobRequestBodyJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudRemovalConfig")
     public org.openapis.openapi.models.shared.CloudRemovalConfigInput cloudRemovalConfig;
+
     public StartEarthObservationJobRequestBodyJobConfig withCloudRemovalConfig(org.openapis.openapi.models.shared.CloudRemovalConfigInput cloudRemovalConfig) {
         this.cloudRemovalConfig = cloudRemovalConfig;
         return this;
@@ -39,6 +42,7 @@ public class StartEarthObservationJobRequestBodyJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeoMosaicConfig")
     public org.openapis.openapi.models.shared.GeoMosaicConfigInput geoMosaicConfig;
+
     public StartEarthObservationJobRequestBodyJobConfig withGeoMosaicConfig(org.openapis.openapi.models.shared.GeoMosaicConfigInput geoMosaicConfig) {
         this.geoMosaicConfig = geoMosaicConfig;
         return this;
@@ -47,6 +51,7 @@ public class StartEarthObservationJobRequestBodyJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LandCoverSegmentationConfig")
     public java.util.Map<String, Object> landCoverSegmentationConfig;
+
     public StartEarthObservationJobRequestBodyJobConfig withLandCoverSegmentationConfig(java.util.Map<String, Object> landCoverSegmentationConfig) {
         this.landCoverSegmentationConfig = landCoverSegmentationConfig;
         return this;
@@ -55,6 +60,7 @@ public class StartEarthObservationJobRequestBodyJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResamplingConfig")
     public org.openapis.openapi.models.shared.ResamplingConfigInput resamplingConfig;
+
     public StartEarthObservationJobRequestBodyJobConfig withResamplingConfig(org.openapis.openapi.models.shared.ResamplingConfigInput resamplingConfig) {
         this.resamplingConfig = resamplingConfig;
         return this;
@@ -63,6 +69,7 @@ public class StartEarthObservationJobRequestBodyJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackConfig")
     public org.openapis.openapi.models.shared.StackConfigInput stackConfig;
+
     public StartEarthObservationJobRequestBodyJobConfig withStackConfig(org.openapis.openapi.models.shared.StackConfigInput stackConfig) {
         this.stackConfig = stackConfig;
         return this;
@@ -71,6 +78,7 @@ public class StartEarthObservationJobRequestBodyJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemporalStatisticsConfig")
     public org.openapis.openapi.models.shared.TemporalStatisticsConfigInput temporalStatisticsConfig;
+
     public StartEarthObservationJobRequestBodyJobConfig withTemporalStatisticsConfig(org.openapis.openapi.models.shared.TemporalStatisticsConfigInput temporalStatisticsConfig) {
         this.temporalStatisticsConfig = temporalStatisticsConfig;
         return this;
@@ -79,9 +87,11 @@ public class StartEarthObservationJobRequestBodyJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZonalStatisticsConfig")
     public org.openapis.openapi.models.shared.ZonalStatisticsConfigInput zonalStatisticsConfig;
+
     public StartEarthObservationJobRequestBodyJobConfig withZonalStatisticsConfig(org.openapis.openapi.models.shared.ZonalStatisticsConfigInput zonalStatisticsConfig) {
         this.zonalStatisticsConfig = zonalStatisticsConfig;
         return this;
     }
     
+    public StartEarthObservationJobRequestBodyJobConfig(){}
 }

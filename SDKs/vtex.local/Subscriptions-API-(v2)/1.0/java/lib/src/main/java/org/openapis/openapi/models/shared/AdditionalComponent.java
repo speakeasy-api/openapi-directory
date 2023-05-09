@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdditionalComponent {
     @JsonProperty("longName")
     public String longName;
+
     public AdditionalComponent withLongName(String longName) {
         this.longName = longName;
         return this;
@@ -16,6 +17,7 @@ public class AdditionalComponent {
     
     @JsonProperty("shortName")
     public String shortName;
+
     public AdditionalComponent withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -23,9 +25,15 @@ public class AdditionalComponent {
     
     @JsonProperty("types")
     public String[] types;
+
     public AdditionalComponent withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public AdditionalComponent(@JsonProperty("longName") String longName, @JsonProperty("shortName") String shortName, @JsonProperty("types") String[] types) {
+        this.longName = longName;
+        this.shortName = shortName;
+        this.types = types;
+  }
 }

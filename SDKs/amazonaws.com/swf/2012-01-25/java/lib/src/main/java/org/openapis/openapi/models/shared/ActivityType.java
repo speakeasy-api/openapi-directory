@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActivityType {
     @JsonProperty("name")
     public String name;
+
     public ActivityType withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class ActivityType {
     
     @JsonProperty("version")
     public String version;
+
     public ActivityType withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ActivityType(@JsonProperty("name") String name, @JsonProperty("version") String version) {
+        this.name = name;
+        this.version = version;
+  }
 }

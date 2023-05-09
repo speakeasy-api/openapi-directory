@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Userorderslist {
     @JsonProperty("facets")
     public String[] facets;
+
     public Userorderslist withFacets(String[] facets) {
         this.facets = facets;
         return this;
@@ -22,6 +23,7 @@ public class Userorderslist {
      */
     @JsonProperty("list")
     public List1[] list;
+
     public Userorderslist withList(List1[] list) {
         this.list = list;
         return this;
@@ -29,6 +31,7 @@ public class Userorderslist {
     
     @JsonProperty("paging")
     public Paging paging;
+
     public Userorderslist withPaging(Paging paging) {
         this.paging = paging;
         return this;
@@ -36,9 +39,16 @@ public class Userorderslist {
     
     @JsonProperty("stats")
     public Stats2 stats;
+
     public Userorderslist withStats(Stats2 stats) {
         this.stats = stats;
         return this;
     }
     
+    public Userorderslist(@JsonProperty("facets") String[] facets, @JsonProperty("list") List1[] list, @JsonProperty("paging") Paging paging, @JsonProperty("stats") Stats2 stats) {
+        this.facets = facets;
+        this.list = list;
+        this.paging = paging;
+        this.stats = stats;
+  }
 }

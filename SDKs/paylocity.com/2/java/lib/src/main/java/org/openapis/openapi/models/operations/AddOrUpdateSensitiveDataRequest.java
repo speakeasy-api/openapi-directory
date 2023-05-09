@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddOrUpdateSensitiveDataRequest {
@@ -12,6 +13,7 @@ public class AddOrUpdateSensitiveDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public AddOrUpdateSensitiveDataRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,6 +24,7 @@ public class AddOrUpdateSensitiveDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
     public String employeeId;
+
     public AddOrUpdateSensitiveDataRequest withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -32,9 +35,15 @@ public class AddOrUpdateSensitiveDataRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SensitiveData sensitiveData;
+
     public AddOrUpdateSensitiveDataRequest withSensitiveData(org.openapis.openapi.models.shared.SensitiveData sensitiveData) {
         this.sensitiveData = sensitiveData;
         return this;
     }
     
+    public AddOrUpdateSensitiveDataRequest(@JsonProperty("companyId") String companyId, @JsonProperty("employeeId") String employeeId, @JsonProperty("sensitiveData") org.openapis.openapi.models.shared.SensitiveData sensitiveData) {
+        this.companyId = companyId;
+        this.employeeId = employeeId;
+        this.sensitiveData = sensitiveData;
+  }
 }

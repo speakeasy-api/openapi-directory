@@ -15,6 +15,7 @@ public class ListSourceRepositoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ListSourceRepositoriesItem[] items;
+
     public ListSourceRepositoriesResponse withItems(ListSourceRepositoriesItem[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class ListSourceRepositoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSourceRepositoriesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListSourceRepositoriesResponse(){}
 }

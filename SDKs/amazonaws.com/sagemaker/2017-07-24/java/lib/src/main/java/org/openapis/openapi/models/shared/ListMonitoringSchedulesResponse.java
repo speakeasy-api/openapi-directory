@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListMonitoringSchedulesResponse {
     @JsonProperty("MonitoringScheduleSummaries")
     public MonitoringScheduleSummary[] monitoringScheduleSummaries;
+
     public ListMonitoringSchedulesResponse withMonitoringScheduleSummaries(MonitoringScheduleSummary[] monitoringScheduleSummaries) {
         this.monitoringScheduleSummaries = monitoringScheduleSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListMonitoringSchedulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMonitoringSchedulesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMonitoringSchedulesResponse(@JsonProperty("MonitoringScheduleSummaries") MonitoringScheduleSummary[] monitoringScheduleSummaries) {
+        this.monitoringScheduleSummaries = monitoringScheduleSummaries;
+  }
 }

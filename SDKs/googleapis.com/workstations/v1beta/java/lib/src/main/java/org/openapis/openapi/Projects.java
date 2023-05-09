@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersCreateResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersCreateResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersCreateResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersListResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersListResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersListResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersListResponse(contentType, httpRes.statusCode()) {{
             listWorkstationClustersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsCreateResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsCreateResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsCreateResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListResponse(contentType, httpRes.statusCode()) {{
             listWorkstationConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsableResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsableResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsableResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsListUsableResponse(contentType, httpRes.statusCode()) {{
             listUsableWorkstationConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsCreateResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsCreateResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsCreateResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,11 +420,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsDeleteResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsDeleteResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +466,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGenerateAccessTokenResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGenerateAccessTokenResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGenerateAccessTokenResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGenerateAccessTokenResponse(contentType, httpRes.statusCode()) {{
             generateAccessTokenResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -530,11 +510,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetResponse(contentType, httpRes.statusCode()) {{
             workstation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -576,11 +554,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -595,7 +571,7 @@ public class Projects {
     }
 
     /**
-     * Returns all Workstations using the specified config.
+     * Returns all Workstations using the specified workstation configuration.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -622,11 +598,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListResponse(contentType, httpRes.statusCode()) {{
             listWorkstationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -641,7 +615,7 @@ public class Projects {
     }
 
     /**
-     * Returns all Workstations using the specified config on which the caller has the "workstations.workstations.use" permission.
+     * Returns all workstations using the specified workstation configuration on which the caller has the "workstations.workstations.use" permission.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -668,11 +642,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListUsableResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListUsableResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListUsableResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListUsableResponse(contentType, httpRes.statusCode()) {{
             listUsableWorkstationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -716,11 +688,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -764,11 +734,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -812,11 +780,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStartResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStartResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStartResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStartResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -860,11 +826,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStopResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStopResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStopResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsStopResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -908,11 +872,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class GetConsumerV1LocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=friendlyId")
     public String friendlyId;
+
     public GetConsumerV1LocationsRequest withFriendlyId(String friendlyId) {
         this.friendlyId = friendlyId;
         return this;
@@ -22,6 +23,7 @@ public class GetConsumerV1LocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ignorePrimary")
     public Boolean ignorePrimary;
+
     public GetConsumerV1LocationsRequest withIgnorePrimary(Boolean ignorePrimary) {
         this.ignorePrimary = ignorePrimary;
         return this;
@@ -32,6 +34,7 @@ public class GetConsumerV1LocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetConsumerV1LocationsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +45,7 @@ public class GetConsumerV1LocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetConsumerV1LocationsRequest withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +56,7 @@ public class GetConsumerV1LocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nearestTo")
     public String nearestTo;
+
     public GetConsumerV1LocationsRequest withNearestTo(String nearestTo) {
         this.nearestTo = nearestTo;
         return this;
@@ -62,6 +67,7 @@ public class GetConsumerV1LocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetConsumerV1LocationsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -72,6 +78,7 @@ public class GetConsumerV1LocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proximity")
     public Integer proximity;
+
     public GetConsumerV1LocationsRequest withProximity(Integer proximity) {
         this.proximity = proximity;
         return this;
@@ -82,6 +89,7 @@ public class GetConsumerV1LocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regionId")
     public String regionId;
+
     public GetConsumerV1LocationsRequest withRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -92,6 +100,7 @@ public class GetConsumerV1LocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceId")
     public String serviceId;
+
     public GetConsumerV1LocationsRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -102,9 +111,11 @@ public class GetConsumerV1LocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=units")
     public String units;
+
     public GetConsumerV1LocationsRequest withUnits(String units) {
         this.units = units;
         return this;
     }
     
+    public GetConsumerV1LocationsRequest(){}
 }

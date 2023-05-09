@@ -15,6 +15,7 @@ public class PostFloatingIpsCreateFloatingIPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PostFloatingIpsCreateFloatingIPRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class PostFloatingIpsCreateFloatingIPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("home_location")
     public String homeLocation;
+
     public PostFloatingIpsCreateFloatingIPRequest withHomeLocation(String homeLocation) {
         this.homeLocation = homeLocation;
         return this;
@@ -37,6 +39,7 @@ public class PostFloatingIpsCreateFloatingIPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, Object> labels;
+
     public PostFloatingIpsCreateFloatingIPRequest withLabels(java.util.Map<String, Object> labels) {
         this.labels = labels;
         return this;
@@ -45,6 +48,7 @@ public class PostFloatingIpsCreateFloatingIPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PostFloatingIpsCreateFloatingIPRequest withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class PostFloatingIpsCreateFloatingIPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public Long server;
+
     public PostFloatingIpsCreateFloatingIPRequest withServer(Long server) {
         this.server = server;
         return this;
@@ -66,9 +71,13 @@ public class PostFloatingIpsCreateFloatingIPRequest {
      */
     @JsonProperty("type")
     public PostFloatingIpsCreateFloatingIPRequestTypeEnum type;
+
     public PostFloatingIpsCreateFloatingIPRequest withType(PostFloatingIpsCreateFloatingIPRequestTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostFloatingIpsCreateFloatingIPRequest(@JsonProperty("type") PostFloatingIpsCreateFloatingIPRequestTypeEnum type) {
+        this.type = type;
+  }
 }

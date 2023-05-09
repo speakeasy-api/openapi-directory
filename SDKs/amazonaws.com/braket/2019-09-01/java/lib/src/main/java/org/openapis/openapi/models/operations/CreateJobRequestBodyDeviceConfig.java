@@ -15,9 +15,11 @@ public class CreateJobRequestBodyDeviceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public String device;
+
     public CreateJobRequestBodyDeviceConfig withDevice(String device) {
         this.device = device;
         return this;
     }
     
+    public CreateJobRequestBodyDeviceConfig(){}
 }

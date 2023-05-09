@@ -158,6 +158,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -195,7 +200,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEnvironmentEc2Response res = new org.openapis.openapi.models.operations.CreateEnvironmentEc2Response() {{
+        org.openapis.openapi.models.operations.CreateEnvironmentEc2Response res = new org.openapis.openapi.models.operations.CreateEnvironmentEc2Response(contentType, httpRes.statusCode()) {{
             createEnvironmentEc2Result = null;
             badRequestException = null;
             conflictException = null;
@@ -205,8 +210,6 @@ public class SDK {
             limitExceededException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -303,7 +306,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEnvironmentMembershipResponse res = new org.openapis.openapi.models.operations.CreateEnvironmentMembershipResponse() {{
+        org.openapis.openapi.models.operations.CreateEnvironmentMembershipResponse res = new org.openapis.openapi.models.operations.CreateEnvironmentMembershipResponse(contentType, httpRes.statusCode()) {{
             createEnvironmentMembershipResult = null;
             badRequestException = null;
             conflictException = null;
@@ -313,8 +316,6 @@ public class SDK {
             limitExceededException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -411,7 +412,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteEnvironmentResponse res = new org.openapis.openapi.models.operations.DeleteEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.DeleteEnvironmentResponse res = new org.openapis.openapi.models.operations.DeleteEnvironmentResponse(contentType, httpRes.statusCode()) {{
             deleteEnvironmentResult = null;
             badRequestException = null;
             conflictException = null;
@@ -421,8 +422,6 @@ public class SDK {
             limitExceededException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -519,7 +518,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteEnvironmentMembershipResponse res = new org.openapis.openapi.models.operations.DeleteEnvironmentMembershipResponse() {{
+        org.openapis.openapi.models.operations.DeleteEnvironmentMembershipResponse res = new org.openapis.openapi.models.operations.DeleteEnvironmentMembershipResponse(contentType, httpRes.statusCode()) {{
             deleteEnvironmentMembershipResult = null;
             badRequestException = null;
             conflictException = null;
@@ -529,8 +528,6 @@ public class SDK {
             limitExceededException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -633,7 +630,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeEnvironmentMembershipsResponse res = new org.openapis.openapi.models.operations.DescribeEnvironmentMembershipsResponse() {{
+        org.openapis.openapi.models.operations.DescribeEnvironmentMembershipsResponse res = new org.openapis.openapi.models.operations.DescribeEnvironmentMembershipsResponse(contentType, httpRes.statusCode()) {{
             describeEnvironmentMembershipsResult = null;
             badRequestException = null;
             conflictException = null;
@@ -643,8 +640,6 @@ public class SDK {
             limitExceededException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -741,7 +736,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeEnvironmentStatusResponse res = new org.openapis.openapi.models.operations.DescribeEnvironmentStatusResponse() {{
+        org.openapis.openapi.models.operations.DescribeEnvironmentStatusResponse res = new org.openapis.openapi.models.operations.DescribeEnvironmentStatusResponse(contentType, httpRes.statusCode()) {{
             describeEnvironmentStatusResult = null;
             badRequestException = null;
             conflictException = null;
@@ -751,8 +746,6 @@ public class SDK {
             limitExceededException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -849,7 +842,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeEnvironmentsResponse res = new org.openapis.openapi.models.operations.DescribeEnvironmentsResponse() {{
+        org.openapis.openapi.models.operations.DescribeEnvironmentsResponse res = new org.openapis.openapi.models.operations.DescribeEnvironmentsResponse(contentType, httpRes.statusCode()) {{
             describeEnvironmentsResult = null;
             badRequestException = null;
             conflictException = null;
@@ -859,8 +852,6 @@ public class SDK {
             limitExceededException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -963,7 +954,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListEnvironmentsResponse res = new org.openapis.openapi.models.operations.ListEnvironmentsResponse() {{
+        org.openapis.openapi.models.operations.ListEnvironmentsResponse res = new org.openapis.openapi.models.operations.ListEnvironmentsResponse(contentType, httpRes.statusCode()) {{
             listEnvironmentsResult = null;
             badRequestException = null;
             conflictException = null;
@@ -973,8 +964,6 @@ public class SDK {
             limitExceededException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1071,14 +1060,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             notFoundException = null;
             internalServerErrorException = null;
             badRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1147,15 +1134,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             notFoundException = null;
             internalServerErrorException = null;
             badRequestException = null;
             concurrentAccessException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1231,15 +1216,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             notFoundException = null;
             internalServerErrorException = null;
             badRequestException = null;
             concurrentAccessException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1315,7 +1298,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateEnvironmentResponse res = new org.openapis.openapi.models.operations.UpdateEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.UpdateEnvironmentResponse res = new org.openapis.openapi.models.operations.UpdateEnvironmentResponse(contentType, httpRes.statusCode()) {{
             updateEnvironmentResult = null;
             badRequestException = null;
             conflictException = null;
@@ -1325,8 +1308,6 @@ public class SDK {
             limitExceededException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1423,7 +1404,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateEnvironmentMembershipResponse res = new org.openapis.openapi.models.operations.UpdateEnvironmentMembershipResponse() {{
+        org.openapis.openapi.models.operations.UpdateEnvironmentMembershipResponse res = new org.openapis.openapi.models.operations.UpdateEnvironmentMembershipResponse(contentType, httpRes.statusCode()) {{
             updateEnvironmentMembershipResult = null;
             badRequestException = null;
             conflictException = null;
@@ -1433,8 +1414,6 @@ public class SDK {
             limitExceededException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

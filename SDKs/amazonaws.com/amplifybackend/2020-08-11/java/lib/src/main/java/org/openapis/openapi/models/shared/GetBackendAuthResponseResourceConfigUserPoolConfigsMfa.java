@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBackendAuthResponseResourceConfigUserPoolConfigsMfa {
     @JsonProperty("MFAMode")
     public MFAModeEnum mfaMode;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsMfa withMFAMode(MFAModeEnum mfaMode) {
         this.mfaMode = mfaMode;
         return this;
@@ -22,9 +23,13 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsMfa {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public GetBackendAuthResponseResourceConfigUserPoolConfigsMfaSettings settings;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsMfa withSettings(GetBackendAuthResponseResourceConfigUserPoolConfigsMfaSettings settings) {
         this.settings = settings;
         return this;
     }
     
+    public GetBackendAuthResponseResourceConfigUserPoolConfigsMfa(@JsonProperty("MFAMode") MFAModeEnum mfaMode) {
+        this.mfaMode = mfaMode;
+  }
 }

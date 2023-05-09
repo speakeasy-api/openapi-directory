@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdSecurity;
 import org.openapis.openapi.models.operations.GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest;
 import org.openapis.openapi.models.operations.GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdResponse;
+import org.openapis.openapi.models.operations.GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,37 +26,36 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest req = new GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest() {{
-                baseVersionId = 548814;
-                callback = "provident";
-                format = "distinctio";
-                targetScreenshotTestId = 844266;
-                targetVersionId = 602763;
+            GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest req = new GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest(548814L, 592845L, 715190L) {{
+                callback = "quibusdam";
+                format = "unde";
                 tolerance = 8579.46;
-            }}            
+            }};            
 
-            GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdResponse res = sdk.getScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionId(req, new GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdSecurity() {{
+            GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdResponse res = sdk.getScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionId(req, new GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdSecurity("corrupti", "illum") {{
                 password = "YOUR_PASSWORD_HERE";
                 username = "YOUR_USERNAME_HERE";
             }});
 
-            if (res.singleComparisonTests.isPresent()) {
+            if (res.singleComparisonTests != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionId` - Compare Screenshot Test Versions
-* `getScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonBaseResultId` - Compare Full Screenshot Test
-* `getScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultId` - Compare Single Screenshot
+* [getScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionId](docs/sdk/README.md#getscreenshotstargetscreenshottestidtargetversionidcomparisonparallelbaseversionid) - Compare Screenshot Test Versions
+* [getScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonBaseResultId](docs/sdk/README.md#getscreenshotstargetscreenshottestidtargetversionidcomparisonbaseresultid) - Compare Full Screenshot Test
+* [getScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultId](docs/sdk/README.md#getscreenshotstargetscreenshottestidtargetversionidtargetresultidcomparisonbaseresultid) - Compare Single Screenshot
 <!-- End SDK Available Operations -->
 
 ### Maturity

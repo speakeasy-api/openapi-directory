@@ -12,6 +12,7 @@ public class DatasetModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public DatasetTypeEnum name;
+
     public DatasetModel withName(DatasetTypeEnum name) {
         this.name = name;
         return this;
@@ -20,6 +21,7 @@ public class DatasetModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timespans")
     public TimespanTypeEnum[] timespans;
+
     public DatasetModel withTimespans(TimespanTypeEnum[] timespans) {
         this.timespans = timespans;
         return this;
@@ -28,9 +30,11 @@ public class DatasetModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("views")
     public DataviewTypeEnum[] views;
+
     public DatasetModel withViews(DataviewTypeEnum[] views) {
         this.views = views;
         return this;
     }
     
+    public DatasetModel(){}
 }

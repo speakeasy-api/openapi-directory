@@ -18,9 +18,11 @@ public class AddCreativeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creative")
     public String creative;
+
     public AddCreativeRequest withCreative(String creative) {
         this.creative = creative;
         return this;
     }
     
+    public AddCreativeRequest(){}
 }

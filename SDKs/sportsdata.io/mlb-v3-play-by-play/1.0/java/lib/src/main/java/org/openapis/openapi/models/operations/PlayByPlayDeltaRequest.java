@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayByPlayDeltaRequest {
@@ -13,6 +14,7 @@ public class PlayByPlayDeltaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
     public String date;
+
     public PlayByPlayDeltaRequest withDate(String date) {
         this.date = date;
         return this;
@@ -23,6 +25,7 @@ public class PlayByPlayDeltaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public PlayByPlayDeltaFormatEnum format;
+
     public PlayByPlayDeltaRequest withFormat(PlayByPlayDeltaFormatEnum format) {
         this.format = format;
         return this;
@@ -34,9 +37,15 @@ public class PlayByPlayDeltaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=minutes")
     public String minutes;
+
     public PlayByPlayDeltaRequest withMinutes(String minutes) {
         this.minutes = minutes;
         return this;
     }
     
+    public PlayByPlayDeltaRequest(@JsonProperty("date") String date, @JsonProperty("format") PlayByPlayDeltaFormatEnum format, @JsonProperty("minutes") String minutes) {
+        this.date = date;
+        this.format = format;
+        this.minutes = minutes;
+  }
 }

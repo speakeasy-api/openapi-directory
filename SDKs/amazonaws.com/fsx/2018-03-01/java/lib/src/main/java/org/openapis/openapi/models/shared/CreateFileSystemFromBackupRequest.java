@@ -17,6 +17,7 @@ public class CreateFileSystemFromBackupRequest {
      */
     @JsonProperty("BackupId")
     public String backupId;
+
     public CreateFileSystemFromBackupRequest withBackupId(String backupId) {
         this.backupId = backupId;
         return this;
@@ -25,6 +26,7 @@ public class CreateFileSystemFromBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateFileSystemFromBackupRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -33,6 +35,7 @@ public class CreateFileSystemFromBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemTypeVersion")
     public String fileSystemTypeVersion;
+
     public CreateFileSystemFromBackupRequest withFileSystemTypeVersion(String fileSystemTypeVersion) {
         this.fileSystemTypeVersion = fileSystemTypeVersion;
         return this;
@@ -44,17 +47,19 @@ public class CreateFileSystemFromBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CreateFileSystemFromBackupRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
     /**
-     * &lt;p&gt;The Lustre configuration for the file system being created.&lt;/p&gt; &lt;note&gt; &lt;p&gt;The following parameters are not supported for file systems with the &lt;code&gt;Persistent_2&lt;/code&gt; deployment type. Instead, use &lt;code&gt;CreateDataRepositoryAssociation&lt;/code&gt; to create a data repository association to link your Lustre file system to a data repository.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AutoImportPolicy&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ExportPath&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ImportedChunkSize&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ImportPath&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/note&gt;
+     * &lt;p&gt;The Lustre configuration for the file system being created.&lt;/p&gt; &lt;note&gt; &lt;p&gt;The following parameters are not supported for file systems with a data repository association created with .&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AutoImportPolicy&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ExportPath&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ImportedChunkSize&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ImportPath&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/note&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LustreConfiguration")
     public CreateFileSystemLustreConfiguration lustreConfiguration;
+
     public CreateFileSystemFromBackupRequest withLustreConfiguration(CreateFileSystemLustreConfiguration lustreConfiguration) {
         this.lustreConfiguration = lustreConfiguration;
         return this;
@@ -63,6 +68,7 @@ public class CreateFileSystemFromBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenZFSConfiguration")
     public CreateFileSystemOpenZFSConfiguration openZFSConfiguration;
+
     public CreateFileSystemFromBackupRequest withOpenZFSConfiguration(CreateFileSystemOpenZFSConfiguration openZFSConfiguration) {
         this.openZFSConfiguration = openZFSConfiguration;
         return this;
@@ -71,6 +77,7 @@ public class CreateFileSystemFromBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public CreateFileSystemFromBackupRequest withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -79,6 +86,7 @@ public class CreateFileSystemFromBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageCapacity")
     public Long storageCapacity;
+
     public CreateFileSystemFromBackupRequest withStorageCapacity(Long storageCapacity) {
         this.storageCapacity = storageCapacity;
         return this;
@@ -87,6 +95,7 @@ public class CreateFileSystemFromBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageType")
     public StorageTypeEnum storageType;
+
     public CreateFileSystemFromBackupRequest withStorageType(StorageTypeEnum storageType) {
         this.storageType = storageType;
         return this;
@@ -94,6 +103,7 @@ public class CreateFileSystemFromBackupRequest {
     
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public CreateFileSystemFromBackupRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -102,6 +112,7 @@ public class CreateFileSystemFromBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateFileSystemFromBackupRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -110,9 +121,14 @@ public class CreateFileSystemFromBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowsConfiguration")
     public CreateFileSystemWindowsConfiguration windowsConfiguration;
+
     public CreateFileSystemFromBackupRequest withWindowsConfiguration(CreateFileSystemWindowsConfiguration windowsConfiguration) {
         this.windowsConfiguration = windowsConfiguration;
         return this;
     }
     
+    public CreateFileSystemFromBackupRequest(@JsonProperty("BackupId") String backupId, @JsonProperty("SubnetIds") String[] subnetIds) {
+        this.backupId = backupId;
+        this.subnetIds = subnetIds;
+  }
 }

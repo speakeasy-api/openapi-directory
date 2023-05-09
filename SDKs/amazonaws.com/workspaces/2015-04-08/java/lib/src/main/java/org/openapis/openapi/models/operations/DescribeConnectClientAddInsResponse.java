@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeConnectClientAddInsResponse {
@@ -12,6 +13,7 @@ public class DescribeConnectClientAddInsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeConnectClientAddInsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeConnectClientAddInsResponse {
     
     
     public String contentType;
+
     public DescribeConnectClientAddInsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeConnectClientAddInsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeConnectClientAddInsResult describeConnectClientAddInsResult;
+
     public DescribeConnectClientAddInsResponse withDescribeConnectClientAddInsResult(org.openapis.openapi.models.shared.DescribeConnectClientAddInsResult describeConnectClientAddInsResult) {
         this.describeConnectClientAddInsResult = describeConnectClientAddInsResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeConnectClientAddInsResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public DescribeConnectClientAddInsResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeConnectClientAddInsResponse {
     
     
     public Integer statusCode;
+
     public DescribeConnectClientAddInsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeConnectClientAddInsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeConnectClientAddInsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeConnectClientAddInsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeConnectClientAddInsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeConnectClientAddInsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

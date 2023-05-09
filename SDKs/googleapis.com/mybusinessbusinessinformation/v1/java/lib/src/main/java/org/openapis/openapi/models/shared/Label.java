@@ -18,6 +18,7 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Label withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Label withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,9 +42,11 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public Label withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
     }
     
+    public Label(){}
 }

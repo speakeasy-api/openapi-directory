@@ -15,9 +15,11 @@ public class NotificationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationTopicArn")
     public String notificationTopicArn;
+
     public NotificationConfiguration withNotificationTopicArn(String notificationTopicArn) {
         this.notificationTopicArn = notificationTopicArn;
         return this;
     }
     
+    public NotificationConfiguration(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListRolePoliciesRequest {
     
     public String marker;
+
     public ListRolePoliciesRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class ListRolePoliciesRequest {
     
     
     public Long maxItems;
+
     public ListRolePoliciesRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -23,9 +25,13 @@ public class ListRolePoliciesRequest {
     
     
     public String roleName;
+
     public ListRolePoliciesRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
     }
     
+    public ListRolePoliciesRequest(@JsonProperty("RoleName") String roleName) {
+        this.roleName = roleName;
+  }
 }

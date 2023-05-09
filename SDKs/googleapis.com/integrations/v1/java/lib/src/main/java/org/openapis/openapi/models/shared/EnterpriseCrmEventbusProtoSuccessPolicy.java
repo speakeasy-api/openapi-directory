@@ -18,9 +18,11 @@ public class EnterpriseCrmEventbusProtoSuccessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalState")
     public EnterpriseCrmEventbusProtoSuccessPolicyFinalStateEnum finalState;
+
     public EnterpriseCrmEventbusProtoSuccessPolicy withFinalState(EnterpriseCrmEventbusProtoSuccessPolicyFinalStateEnum finalState) {
         this.finalState = finalState;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoSuccessPolicy(){}
 }

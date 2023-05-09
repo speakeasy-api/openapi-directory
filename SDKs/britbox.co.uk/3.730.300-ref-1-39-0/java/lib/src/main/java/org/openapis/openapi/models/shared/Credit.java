@@ -15,6 +15,7 @@ public class Credit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("character")
     public String character;
+
     public Credit withCharacter(String character) {
         this.character = character;
         return this;
@@ -25,6 +26,7 @@ public class Credit {
      */
     @JsonProperty("name")
     public String name;
+
     public Credit withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +37,7 @@ public class Credit {
      */
     @JsonProperty("path")
     public String path;
+
     public Credit withPath(String path) {
         this.path = path;
         return this;
@@ -45,9 +48,15 @@ public class Credit {
      */
     @JsonProperty("role")
     public CreditRoleEnum role;
+
     public Credit withRole(CreditRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public Credit(@JsonProperty("name") String name, @JsonProperty("path") String path, @JsonProperty("role") CreditRoleEnum role) {
+        this.name = name;
+        this.path = path;
+        this.role = role;
+  }
 }

@@ -15,6 +15,7 @@ public class WLTRecord {
      */
     @JsonProperty("losses")
     public Long losses;
+
     public WLTRecord withLosses(Long losses) {
         this.losses = losses;
         return this;
@@ -25,6 +26,7 @@ public class WLTRecord {
      */
     @JsonProperty("ties")
     public Long ties;
+
     public WLTRecord withTies(Long ties) {
         this.ties = ties;
         return this;
@@ -35,9 +37,15 @@ public class WLTRecord {
      */
     @JsonProperty("wins")
     public Long wins;
+
     public WLTRecord withWins(Long wins) {
         this.wins = wins;
         return this;
     }
     
+    public WLTRecord(@JsonProperty("losses") Long losses, @JsonProperty("ties") Long ties, @JsonProperty("wins") Long wins) {
+        this.losses = losses;
+        this.ties = ties;
+        this.wins = wins;
+  }
 }

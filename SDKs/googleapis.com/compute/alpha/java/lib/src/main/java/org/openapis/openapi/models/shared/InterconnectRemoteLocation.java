@@ -18,6 +18,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public InterconnectRemoteLocation withAddress(String address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachmentConfigurationConstraints")
     public InterconnectAttachmentConfigurationConstraints attachmentConfigurationConstraints;
+
     public InterconnectRemoteLocation withAttachmentConfigurationConstraints(InterconnectAttachmentConfigurationConstraints attachmentConfigurationConstraints) {
         this.attachmentConfigurationConstraints = attachmentConfigurationConstraints;
         return this;
@@ -37,6 +39,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public InterconnectRemoteLocation withCity(String city) {
         this.city = city;
         return this;
@@ -45,6 +48,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public InterconnectRemoteLocationConstraints constraints;
+
     public InterconnectRemoteLocation withConstraints(InterconnectRemoteLocationConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -56,6 +60,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continent")
     public InterconnectRemoteLocationContinentEnum continent;
+
     public InterconnectRemoteLocation withContinent(InterconnectRemoteLocationContinentEnum continent) {
         this.continent = continent;
         return this;
@@ -67,6 +72,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public InterconnectRemoteLocation withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -78,6 +84,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InterconnectRemoteLocation withDescription(String description) {
         this.description = description;
         return this;
@@ -89,6 +96,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facilityProvider")
     public String facilityProvider;
+
     public InterconnectRemoteLocation withFacilityProvider(String facilityProvider) {
         this.facilityProvider = facilityProvider;
         return this;
@@ -100,6 +108,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facilityProviderFacilityId")
     public String facilityProviderFacilityId;
+
     public InterconnectRemoteLocation withFacilityProviderFacilityId(String facilityProviderFacilityId) {
         this.facilityProviderFacilityId = facilityProviderFacilityId;
         return this;
@@ -111,6 +120,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public InterconnectRemoteLocation withId(String id) {
         this.id = id;
         return this;
@@ -122,6 +132,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public InterconnectRemoteLocation withKind(String kind) {
         this.kind = kind;
         return this;
@@ -133,6 +144,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lacp")
     public InterconnectRemoteLocationLacpEnum lacp;
+
     public InterconnectRemoteLocation withLacp(InterconnectRemoteLocationLacpEnum lacp) {
         this.lacp = lacp;
         return this;
@@ -144,6 +156,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxLagSize100Gbps")
     public Integer maxLagSize100Gbps;
+
     public InterconnectRemoteLocation withMaxLagSize100Gbps(Integer maxLagSize100Gbps) {
         this.maxLagSize100Gbps = maxLagSize100Gbps;
         return this;
@@ -155,6 +168,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxLagSize10Gbps")
     public Integer maxLagSize10Gbps;
+
     public InterconnectRemoteLocation withMaxLagSize10Gbps(Integer maxLagSize10Gbps) {
         this.maxLagSize10Gbps = maxLagSize10Gbps;
         return this;
@@ -166,6 +180,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InterconnectRemoteLocation withName(String name) {
         this.name = name;
         return this;
@@ -177,6 +192,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peeringdbFacilityId")
     public String peeringdbFacilityId;
+
     public InterconnectRemoteLocation withPeeringdbFacilityId(String peeringdbFacilityId) {
         this.peeringdbFacilityId = peeringdbFacilityId;
         return this;
@@ -188,6 +204,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permittedConnections")
     public InterconnectRemoteLocationPermittedConnections[] permittedConnections;
+
     public InterconnectRemoteLocation withPermittedConnections(InterconnectRemoteLocationPermittedConnections[] permittedConnections) {
         this.permittedConnections = permittedConnections;
         return this;
@@ -199,6 +216,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteService")
     public String remoteService;
+
     public InterconnectRemoteLocation withRemoteService(String remoteService) {
         this.remoteService = remoteService;
         return this;
@@ -210,6 +228,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public InterconnectRemoteLocation withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -221,6 +240,7 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public InterconnectRemoteLocation withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -232,9 +252,11 @@ public class InterconnectRemoteLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public InterconnectRemoteLocationStatusEnum status;
+
     public InterconnectRemoteLocation withStatus(InterconnectRemoteLocationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public InterconnectRemoteLocation(){}
 }

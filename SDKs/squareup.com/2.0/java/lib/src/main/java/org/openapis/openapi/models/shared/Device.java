@@ -15,6 +15,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Device withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Device withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Device(){}
 }

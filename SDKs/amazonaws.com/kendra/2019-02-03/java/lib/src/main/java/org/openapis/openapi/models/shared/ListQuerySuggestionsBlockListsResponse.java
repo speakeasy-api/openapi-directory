@@ -15,6 +15,7 @@ public class ListQuerySuggestionsBlockListsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockListSummaryItems")
     public QuerySuggestionsBlockListSummary[] blockListSummaryItems;
+
     public ListQuerySuggestionsBlockListsResponse withBlockListSummaryItems(QuerySuggestionsBlockListSummary[] blockListSummaryItems) {
         this.blockListSummaryItems = blockListSummaryItems;
         return this;
@@ -23,9 +24,11 @@ public class ListQuerySuggestionsBlockListsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListQuerySuggestionsBlockListsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListQuerySuggestionsBlockListsResponse(){}
 }

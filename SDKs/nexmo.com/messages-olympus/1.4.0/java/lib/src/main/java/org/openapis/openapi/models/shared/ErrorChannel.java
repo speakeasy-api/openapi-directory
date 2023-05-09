@@ -15,6 +15,7 @@ public class ErrorChannel {
      */
     @JsonProperty("detail")
     public String detail;
+
     public ErrorChannel withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -25,6 +26,7 @@ public class ErrorChannel {
      */
     @JsonProperty("instance")
     public String instance;
+
     public ErrorChannel withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -35,6 +37,7 @@ public class ErrorChannel {
      */
     @JsonProperty("title")
     public String title;
+
     public ErrorChannel withTitle(String title) {
         this.title = title;
         return this;
@@ -45,9 +48,16 @@ public class ErrorChannel {
      */
     @JsonProperty("type")
     public String type;
+
     public ErrorChannel withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ErrorChannel(@JsonProperty("detail") String detail, @JsonProperty("instance") String instance, @JsonProperty("title") String title, @JsonProperty("type") String type) {
+        this.detail = detail;
+        this.instance = instance;
+        this.title = title;
+        this.type = type;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1ProductPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleOnePayload")
     public GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload googleOnePayload;
+
     public GoogleCloudPaymentsResellerSubscriptionV1ProductPayload withGoogleOnePayload(GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload googleOnePayload) {
         this.googleOnePayload = googleOnePayload;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1ProductPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("youtubePayload")
     public GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload youtubePayload;
+
     public GoogleCloudPaymentsResellerSubscriptionV1ProductPayload withYoutubePayload(GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload youtubePayload) {
         this.youtubePayload = youtubePayload;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1ProductPayload(){}
 }

@@ -115,4 +115,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateControlPanelResponse.
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateRoutingControlResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSafetyRuleResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

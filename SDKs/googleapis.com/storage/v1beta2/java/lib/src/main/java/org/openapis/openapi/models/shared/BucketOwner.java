@@ -18,6 +18,7 @@ public class BucketOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public String entity;
+
     public BucketOwner withEntity(String entity) {
         this.entity = entity;
         return this;
@@ -29,9 +30,11 @@ public class BucketOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityId")
     public String entityId;
+
     public BucketOwner withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
     }
     
+    public BucketOwner(){}
 }

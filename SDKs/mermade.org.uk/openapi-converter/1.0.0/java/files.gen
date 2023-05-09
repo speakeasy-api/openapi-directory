@@ -45,4 +45,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/ValidateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ValidateUrlRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ValidateUrlResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidationResult.java
+docs/sdk/README.md
+docs/conversion/README.md
+docs/metadata/README.md
+docs/validation/README.md
 USAGE.md

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTargetsByRuleResponse {
     
     public String contentType;
+
     public ListTargetsByRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTargetsByRuleResponse {
      */
     
     public Object internalException;
+
     public ListTargetsByRuleResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class ListTargetsByRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTargetsByRuleResponse listTargetsByRuleResponse;
+
     public ListTargetsByRuleResponse withListTargetsByRuleResponse(org.openapis.openapi.models.shared.ListTargetsByRuleResponse listTargetsByRuleResponse) {
         this.listTargetsByRuleResponse = listTargetsByRuleResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListTargetsByRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTargetsByRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListTargetsByRuleResponse {
     
     
     public Integer statusCode;
+
     public ListTargetsByRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListTargetsByRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTargetsByRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTargetsByRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

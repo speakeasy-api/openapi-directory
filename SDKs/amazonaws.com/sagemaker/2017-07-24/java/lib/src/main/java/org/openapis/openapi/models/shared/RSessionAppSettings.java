@@ -15,6 +15,7 @@ public class RSessionAppSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomImages")
     public CustomImage[] customImages;
+
     public RSessionAppSettings withCustomImages(CustomImage[] customImages) {
         this.customImages = customImages;
         return this;
@@ -26,9 +27,11 @@ public class RSessionAppSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultResourceSpec")
     public ResourceSpec defaultResourceSpec;
+
     public RSessionAppSettings withDefaultResourceSpec(ResourceSpec defaultResourceSpec) {
         this.defaultResourceSpec = defaultResourceSpec;
         return this;
     }
     
+    public RSessionAppSettings(){}
 }

@@ -12,6 +12,7 @@ public class ImagesResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("b64_json")
     public String b64Json;
+
     public ImagesResponseData withB64Json(String b64Json) {
         this.b64Json = b64Json;
         return this;
@@ -20,9 +21,11 @@ public class ImagesResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ImagesResponseData withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ImagesResponseData(){}
 }

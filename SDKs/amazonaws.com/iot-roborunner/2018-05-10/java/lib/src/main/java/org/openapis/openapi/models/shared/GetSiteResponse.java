@@ -22,6 +22,7 @@ public class GetSiteResponse {
      */
     @JsonProperty("arn")
     public String arn;
+
     public GetSiteResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -32,6 +33,7 @@ public class GetSiteResponse {
      */
     @JsonProperty("countryCode")
     public String countryCode;
+
     public GetSiteResponse withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -44,6 +46,7 @@ public class GetSiteResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public GetSiteResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -55,6 +58,7 @@ public class GetSiteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetSiteResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -65,6 +69,7 @@ public class GetSiteResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public GetSiteResponse withId(String id) {
         this.id = id;
         return this;
@@ -75,6 +80,7 @@ public class GetSiteResponse {
      */
     @JsonProperty("name")
     public String name;
+
     public GetSiteResponse withName(String name) {
         this.name = name;
         return this;
@@ -87,9 +93,18 @@ public class GetSiteResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public GetSiteResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetSiteResponse(@JsonProperty("arn") String arn, @JsonProperty("countryCode") String countryCode, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.arn = arn;
+        this.countryCode = countryCode;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.name = name;
+        this.updatedAt = updatedAt;
+  }
 }

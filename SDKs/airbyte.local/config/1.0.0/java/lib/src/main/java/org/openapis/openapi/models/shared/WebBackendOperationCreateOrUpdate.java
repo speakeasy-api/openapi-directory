@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebBackendOperationCreateOrUpdate {
     @JsonProperty("name")
     public String name;
+
     public WebBackendOperationCreateOrUpdate withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class WebBackendOperationCreateOrUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public WebBackendOperationCreateOrUpdate withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -26,6 +28,7 @@ public class WebBackendOperationCreateOrUpdate {
     
     @JsonProperty("operatorConfiguration")
     public OperatorConfiguration operatorConfiguration;
+
     public WebBackendOperationCreateOrUpdate withOperatorConfiguration(OperatorConfiguration operatorConfiguration) {
         this.operatorConfiguration = operatorConfiguration;
         return this;
@@ -33,9 +36,15 @@ public class WebBackendOperationCreateOrUpdate {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public WebBackendOperationCreateOrUpdate withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public WebBackendOperationCreateOrUpdate(@JsonProperty("name") String name, @JsonProperty("operatorConfiguration") OperatorConfiguration operatorConfiguration, @JsonProperty("workspaceId") String workspaceId) {
+        this.name = name;
+        this.operatorConfiguration = operatorConfiguration;
+        this.workspaceId = workspaceId;
+  }
 }

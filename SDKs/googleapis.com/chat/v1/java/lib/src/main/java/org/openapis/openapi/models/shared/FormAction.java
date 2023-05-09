@@ -18,6 +18,7 @@ public class FormAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionMethodName")
     public String actionMethodName;
+
     public FormAction withActionMethodName(String actionMethodName) {
         this.actionMethodName = actionMethodName;
         return this;
@@ -29,9 +30,11 @@ public class FormAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public ActionParameter[] parameters;
+
     public FormAction withParameters(ActionParameter[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public FormAction(){}
 }

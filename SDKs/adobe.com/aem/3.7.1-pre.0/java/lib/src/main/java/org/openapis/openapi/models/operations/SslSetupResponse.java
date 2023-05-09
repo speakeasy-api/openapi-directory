@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SslSetupResponse {
     
     public String contentType;
+
     public SslSetupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SslSetupResponse {
     
     
     public Integer statusCode;
+
     public SslSetupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SslSetupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SslSetupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class SslSetupResponse {
      */
     
     public String sslSetupDefaultTextPlainString;
+
     public SslSetupResponse withSslSetupDefaultTextPlainString(String sslSetupDefaultTextPlainString) {
         this.sslSetupDefaultTextPlainString = sslSetupDefaultTextPlainString;
         return this;
     }
     
+    public SslSetupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

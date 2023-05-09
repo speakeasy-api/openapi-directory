@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectionGroupArbitraryPatternLimits {
     @JsonProperty("MaxMembers")
     public Long maxMembers;
+
     public ProtectionGroupArbitraryPatternLimits withMaxMembers(Long maxMembers) {
         this.maxMembers = maxMembers;
         return this;
     }
     
+    public ProtectionGroupArbitraryPatternLimits(@JsonProperty("MaxMembers") Long maxMembers) {
+        this.maxMembers = maxMembers;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInstallStatusResponse {
     
     public String contentType;
+
     public GetInstallStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetInstallStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.InstallStatus installStatus;
+
     public GetInstallStatusResponse withInstallStatus(org.openapis.openapi.models.shared.InstallStatus installStatus) {
         this.installStatus = installStatus;
         return this;
@@ -26,6 +29,7 @@ public class GetInstallStatusResponse {
     
     
     public Integer statusCode;
+
     public GetInstallStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetInstallStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInstallStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetInstallStatusResponse {
      */
     
     public String getInstallStatusDefaultApplicationJSONString;
+
     public GetInstallStatusResponse withGetInstallStatusDefaultApplicationJSONString(String getInstallStatusDefaultApplicationJSONString) {
         this.getInstallStatusDefaultApplicationJSONString = getInstallStatusDefaultApplicationJSONString;
         return this;
     }
     
+    public GetInstallStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

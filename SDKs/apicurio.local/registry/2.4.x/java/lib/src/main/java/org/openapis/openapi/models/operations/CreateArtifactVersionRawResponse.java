@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateArtifactVersionRawResponse {
     
     public String contentType;
+
     public CreateArtifactVersionRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateArtifactVersionRawResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public CreateArtifactVersionRawResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class CreateArtifactVersionRawResponse {
      */
     
     public org.openapis.openapi.models.shared.RuleViolationError ruleViolationError;
+
     public CreateArtifactVersionRawResponse withRuleViolationError(org.openapis.openapi.models.shared.RuleViolationError ruleViolationError) {
         this.ruleViolationError = ruleViolationError;
         return this;
@@ -36,6 +40,7 @@ public class CreateArtifactVersionRawResponse {
     
     
     public Integer statusCode;
+
     public CreateArtifactVersionRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateArtifactVersionRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateArtifactVersionRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CreateArtifactVersionRawResponse {
      */
     
     public org.openapis.openapi.models.shared.VersionMetaData versionMetaData;
+
     public CreateArtifactVersionRawResponse withVersionMetaData(org.openapis.openapi.models.shared.VersionMetaData versionMetaData) {
         this.versionMetaData = versionMetaData;
         return this;
     }
     
+    public CreateArtifactVersionRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

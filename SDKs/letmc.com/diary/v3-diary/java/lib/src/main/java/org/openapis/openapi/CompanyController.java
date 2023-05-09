@@ -56,14 +56,12 @@ public class CompanyController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyControllerGetBranchesResponse res = new org.openapis.openapi.models.operations.CompanyControllerGetBranchesResponse() {{
+        org.openapis.openapi.models.operations.CompanyControllerGetBranchesResponse res = new org.openapis.openapi.models.operations.CompanyControllerGetBranchesResponse(contentType, httpRes.statusCode()) {{
             advertisingBranchModelResults = null;
             advertisingBranchModelResults = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,14 +108,12 @@ public class CompanyController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV3DiaryShortNameCompanyBranchesBranchIDResponse res = new org.openapis.openapi.models.operations.GetV3DiaryShortNameCompanyBranchesBranchIDResponse() {{
+        org.openapis.openapi.models.operations.GetV3DiaryShortNameCompanyBranchesBranchIDResponse res = new org.openapis.openapi.models.operations.GetV3DiaryShortNameCompanyBranchesBranchIDResponse(contentType, httpRes.statusCode()) {{
             advertisingBranchModel = null;
             advertisingBranchModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

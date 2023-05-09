@@ -15,9 +15,13 @@ public class CatalogQueryItemsForTax {
      */
     @JsonProperty("tax_ids")
     public String[] taxIds;
+
     public CatalogQueryItemsForTax withTaxIds(String[] taxIds) {
         this.taxIds = taxIds;
         return this;
     }
     
+    public CatalogQueryItemsForTax(@JsonProperty("tax_ids") String[] taxIds) {
+        this.taxIds = taxIds;
+  }
 }

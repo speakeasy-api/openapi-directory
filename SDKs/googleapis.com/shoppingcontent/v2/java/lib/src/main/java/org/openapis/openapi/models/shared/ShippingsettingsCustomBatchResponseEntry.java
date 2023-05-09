@@ -18,6 +18,7 @@ public class ShippingsettingsCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchId")
     public Long batchId;
+
     public ShippingsettingsCustomBatchResponseEntry withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -29,6 +30,7 @@ public class ShippingsettingsCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Errors errors;
+
     public ShippingsettingsCustomBatchResponseEntry withErrors(Errors errors) {
         this.errors = errors;
         return this;
@@ -40,6 +42,7 @@ public class ShippingsettingsCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ShippingsettingsCustomBatchResponseEntry withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class ShippingsettingsCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingSettings")
     public ShippingSettings shippingSettings;
+
     public ShippingsettingsCustomBatchResponseEntry withShippingSettings(ShippingSettings shippingSettings) {
         this.shippingSettings = shippingSettings;
         return this;
     }
     
+    public ShippingsettingsCustomBatchResponseEntry(){}
 }

@@ -15,6 +15,7 @@ public class GetTemplateSyncStatusOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredState")
     public Revision desiredState;
+
     public GetTemplateSyncStatusOutput withDesiredState(Revision desiredState) {
         this.desiredState = desiredState;
         return this;
@@ -23,6 +24,7 @@ public class GetTemplateSyncStatusOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestSuccessfulSync")
     public ResourceSyncAttempt latestSuccessfulSync;
+
     public GetTemplateSyncStatusOutput withLatestSuccessfulSync(ResourceSyncAttempt latestSuccessfulSync) {
         this.latestSuccessfulSync = latestSuccessfulSync;
         return this;
@@ -31,9 +33,11 @@ public class GetTemplateSyncStatusOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestSync")
     public ResourceSyncAttempt latestSync;
+
     public GetTemplateSyncStatusOutput withLatestSync(ResourceSyncAttempt latestSync) {
         this.latestSync = latestSync;
         return this;
     }
     
+    public GetTemplateSyncStatusOutput(){}
 }

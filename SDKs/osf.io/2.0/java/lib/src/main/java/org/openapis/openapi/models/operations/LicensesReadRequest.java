@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LicensesReadRequest {
@@ -12,9 +13,13 @@ public class LicensesReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=license_id")
     public String licenseId;
+
     public LicensesReadRequest withLicenseId(String licenseId) {
         this.licenseId = licenseId;
         return this;
     }
     
+    public LicensesReadRequest(@JsonProperty("license_id") String licenseId) {
+        this.licenseId = licenseId;
+  }
 }

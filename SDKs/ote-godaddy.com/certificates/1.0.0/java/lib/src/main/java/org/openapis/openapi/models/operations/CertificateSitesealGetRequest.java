@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateSitesealGetRequest {
@@ -12,6 +13,7 @@ public class CertificateSitesealGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
     public String certificateId;
+
     public CertificateSitesealGetRequest withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -22,6 +24,7 @@ public class CertificateSitesealGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public CertificateSitesealGetRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -32,9 +35,13 @@ public class CertificateSitesealGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=theme")
     public CertificateSitesealGetThemeEnum theme;
+
     public CertificateSitesealGetRequest withTheme(CertificateSitesealGetThemeEnum theme) {
         this.theme = theme;
         return this;
     }
     
+    public CertificateSitesealGetRequest(@JsonProperty("certificateId") String certificateId) {
+        this.certificateId = certificateId;
+  }
 }

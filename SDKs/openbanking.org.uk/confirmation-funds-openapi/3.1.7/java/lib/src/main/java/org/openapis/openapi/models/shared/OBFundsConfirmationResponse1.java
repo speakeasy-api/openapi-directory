@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OBFundsConfirmationResponse1 {
     @JsonProperty("Data")
     public OBFundsConfirmationResponse1Data data;
+
     public OBFundsConfirmationResponse1 withData(OBFundsConfirmationResponse1Data data) {
         this.data = data;
         return this;
@@ -25,6 +26,7 @@ public class OBFundsConfirmationResponse1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Links")
     public Links links;
+
     public OBFundsConfirmationResponse1 withLinks(Links links) {
         this.links = links;
         return this;
@@ -36,9 +38,13 @@ public class OBFundsConfirmationResponse1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Meta")
     public Meta meta;
+
     public OBFundsConfirmationResponse1 withMeta(Meta meta) {
         this.meta = meta;
         return this;
     }
     
+    public OBFundsConfirmationResponse1(@JsonProperty("Data") OBFundsConfirmationResponse1Data data) {
+        this.data = data;
+  }
 }

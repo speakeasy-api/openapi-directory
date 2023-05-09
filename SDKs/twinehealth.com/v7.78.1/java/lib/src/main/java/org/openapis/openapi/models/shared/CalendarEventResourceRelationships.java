@@ -15,9 +15,11 @@ public class CalendarEventResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public CalendarEventResourceRelationshipsOwner owner;
+
     public CalendarEventResourceRelationships withOwner(CalendarEventResourceRelationshipsOwner owner) {
         this.owner = owner;
         return this;
     }
     
+    public CalendarEventResourceRelationships(){}
 }

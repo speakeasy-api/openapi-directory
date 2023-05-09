@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class SimpleCommit {
     @JsonProperty("author")
     public SimpleCommitAuthor author;
+
     public SimpleCommit withAuthor(SimpleCommitAuthor author) {
         this.author = author;
         return this;
@@ -24,6 +25,7 @@ public class SimpleCommit {
     
     @JsonProperty("committer")
     public SimpleCommitCommitter committer;
+
     public SimpleCommit withCommitter(SimpleCommitCommitter committer) {
         this.committer = committer;
         return this;
@@ -31,6 +33,7 @@ public class SimpleCommit {
     
     @JsonProperty("id")
     public String id;
+
     public SimpleCommit withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +41,7 @@ public class SimpleCommit {
     
     @JsonProperty("message")
     public String message;
+
     public SimpleCommit withMessage(String message) {
         this.message = message;
         return this;
@@ -47,6 +51,7 @@ public class SimpleCommit {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public SimpleCommit withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -54,9 +59,18 @@ public class SimpleCommit {
     
     @JsonProperty("tree_id")
     public String treeId;
+
     public SimpleCommit withTreeId(String treeId) {
         this.treeId = treeId;
         return this;
     }
     
+    public SimpleCommit(@JsonProperty("author") SimpleCommitAuthor author, @JsonProperty("committer") SimpleCommitCommitter committer, @JsonProperty("id") String id, @JsonProperty("message") String message, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("tree_id") String treeId) {
+        this.author = author;
+        this.committer = committer;
+        this.id = id;
+        this.message = message;
+        this.timestamp = timestamp;
+        this.treeId = treeId;
+  }
 }

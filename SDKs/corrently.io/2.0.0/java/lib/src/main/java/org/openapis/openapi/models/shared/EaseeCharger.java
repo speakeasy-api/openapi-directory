@@ -15,6 +15,7 @@ public class EaseeCharger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public EaseeCharger withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class EaseeCharger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastSession")
     public String lastSession;
+
     public EaseeCharger withLastSession(String lastSession) {
         this.lastSession = lastSession;
         return this;
@@ -37,9 +39,11 @@ public class EaseeCharger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EaseeCharger withName(String name) {
         this.name = name;
         return this;
     }
     
+    public EaseeCharger(){}
 }

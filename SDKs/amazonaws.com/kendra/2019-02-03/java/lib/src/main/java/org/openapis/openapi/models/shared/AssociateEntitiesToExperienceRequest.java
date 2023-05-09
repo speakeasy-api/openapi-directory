@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateEntitiesToExperienceRequest {
     @JsonProperty("EntityList")
     public EntityConfiguration[] entityList;
+
     public AssociateEntitiesToExperienceRequest withEntityList(EntityConfiguration[] entityList) {
         this.entityList = entityList;
         return this;
@@ -16,6 +17,7 @@ public class AssociateEntitiesToExperienceRequest {
     
     @JsonProperty("Id")
     public String id;
+
     public AssociateEntitiesToExperienceRequest withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +25,15 @@ public class AssociateEntitiesToExperienceRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public AssociateEntitiesToExperienceRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
     }
     
+    public AssociateEntitiesToExperienceRequest(@JsonProperty("EntityList") EntityConfiguration[] entityList, @JsonProperty("Id") String id, @JsonProperty("IndexId") String indexId) {
+        this.entityList = entityList;
+        this.id = id;
+        this.indexId = indexId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05CareContextsOnDiscoverRawRequest {
@@ -12,6 +13,7 @@ public class PostV05CareContextsOnDiscoverRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05CareContextsOnDiscoverRawRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05CareContextsOnDiscoverRawRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/xml")
     public byte[] requestBody;
+
     public PostV05CareContextsOnDiscoverRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,9 +32,15 @@ public class PostV05CareContextsOnDiscoverRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
     public String xCmId;
+
     public PostV05CareContextsOnDiscoverRawRequest withXCmId(String xCmId) {
         this.xCmId = xCmId;
         return this;
     }
     
+    public PostV05CareContextsOnDiscoverRawRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("X-CM-ID") String xCmId) {
+        this.authorization = authorization;
+        this.requestBody = requestBody;
+        this.xCmId = xCmId;
+  }
 }

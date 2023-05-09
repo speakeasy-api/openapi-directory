@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsersIdAttachmentsResponse {
@@ -12,6 +13,7 @@ public class GetUsersIdAttachmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.Attachment[] attachments;
+
     public GetUsersIdAttachmentsResponse withAttachments(org.openapis.openapi.models.shared.Attachment[] attachments) {
         this.attachments = attachments;
         return this;
@@ -19,6 +21,7 @@ public class GetUsersIdAttachmentsResponse {
     
     
     public String contentType;
+
     public GetUsersIdAttachmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetUsersIdAttachmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetUsersIdAttachmentsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetUsersIdAttachmentsResponse {
     
     
     public Integer statusCode;
+
     public GetUsersIdAttachmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetUsersIdAttachmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsersIdAttachmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetUsersIdAttachmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

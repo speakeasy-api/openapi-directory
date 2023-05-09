@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaRemoveLocalInventoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowMissing")
     public Boolean allowMissing;
+
     public GoogleCloudRetailV2alphaRemoveLocalInventoriesRequest withAllowMissing(Boolean allowMissing) {
         this.allowMissing = allowMissing;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaRemoveLocalInventoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeIds")
     public String[] placeIds;
+
     public GoogleCloudRetailV2alphaRemoveLocalInventoriesRequest withPlaceIds(String[] placeIds) {
         this.placeIds = placeIds;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2alphaRemoveLocalInventoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeTime")
     public String removeTime;
+
     public GoogleCloudRetailV2alphaRemoveLocalInventoriesRequest withRemoveTime(String removeTime) {
         this.removeTime = removeTime;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaRemoveLocalInventoriesRequest(){}
 }

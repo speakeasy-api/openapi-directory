@@ -15,9 +15,11 @@ public class CreateOTAUpdateRequestBodyAwsJobTimeoutConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inProgressTimeoutInMinutes")
     public Long inProgressTimeoutInMinutes;
+
     public CreateOTAUpdateRequestBodyAwsJobTimeoutConfig withInProgressTimeoutInMinutes(Long inProgressTimeoutInMinutes) {
         this.inProgressTimeoutInMinutes = inProgressTimeoutInMinutes;
         return this;
     }
     
+    public CreateOTAUpdateRequestBodyAwsJobTimeoutConfig(){}
 }

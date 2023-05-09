@@ -12,9 +12,11 @@ public class EpisodeRelationshipsTheSeriesAnEpisodeBelongsTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceIdentifier data;
+
     public EpisodeRelationshipsTheSeriesAnEpisodeBelongsTo withData(ResourceIdentifier data) {
         this.data = data;
         return this;
     }
     
+    public EpisodeRelationshipsTheSeriesAnEpisodeBelongsTo(){}
 }

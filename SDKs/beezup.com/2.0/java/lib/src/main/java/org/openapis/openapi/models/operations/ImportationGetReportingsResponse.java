@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportationGetReportingsResponse {
@@ -12,6 +13,7 @@ public class ImportationGetReportingsResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public ImportationGetReportingsResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class ImportationGetReportingsResponse {
     
     
     public String contentType;
+
     public ImportationGetReportingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ImportationGetReportingsResponse {
     
     
     public Integer statusCode;
+
     public ImportationGetReportingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ImportationGetReportingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportationGetReportingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class ImportationGetReportingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportationsResponse importationsResponse;
+
     public ImportationGetReportingsResponse withImportationsResponse(org.openapis.openapi.models.shared.ImportationsResponse importationsResponse) {
         this.importationsResponse = importationsResponse;
         return this;
     }
     
+    public ImportationGetReportingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

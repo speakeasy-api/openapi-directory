@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLanguagesResponse {
     
     public String contentType;
+
     public ListLanguagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListLanguagesResponse {
      */
     
     public Object internalServerException;
+
     public ListLanguagesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListLanguagesResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListLanguagesResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class ListLanguagesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLanguagesResponse listLanguagesResponse;
+
     public ListLanguagesResponse withListLanguagesResponse(org.openapis.openapi.models.shared.ListLanguagesResponse listLanguagesResponse) {
         this.listLanguagesResponse = listLanguagesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListLanguagesResponse {
     
     
     public Integer statusCode;
+
     public ListLanguagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListLanguagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLanguagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListLanguagesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListLanguagesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class ListLanguagesResponse {
      */
     
     public Object unsupportedDisplayLanguageCodeException;
+
     public ListLanguagesResponse withUnsupportedDisplayLanguageCodeException(Object unsupportedDisplayLanguageCodeException) {
         this.unsupportedDisplayLanguageCodeException = unsupportedDisplayLanguageCodeException;
         return this;
     }
     
+    public ListLanguagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

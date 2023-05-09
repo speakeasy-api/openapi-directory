@@ -49,4 +49,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Word.java
 lib/src/main/java/org/openapis/openapi/models/shared/TextOperationResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/TextRecognitionModeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

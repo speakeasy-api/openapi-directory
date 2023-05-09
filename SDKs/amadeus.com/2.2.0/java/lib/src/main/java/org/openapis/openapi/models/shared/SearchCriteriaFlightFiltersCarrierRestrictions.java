@@ -18,6 +18,7 @@ public class SearchCriteriaFlightFiltersCarrierRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blacklistedInEUAllowed")
     public Boolean blacklistedInEUAllowed;
+
     public SearchCriteriaFlightFiltersCarrierRestrictions withBlacklistedInEUAllowed(Boolean blacklistedInEUAllowed) {
         this.blacklistedInEUAllowed = blacklistedInEUAllowed;
         return this;
@@ -29,6 +30,7 @@ public class SearchCriteriaFlightFiltersCarrierRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedCarrierCodes")
     public String[] excludedCarrierCodes;
+
     public SearchCriteriaFlightFiltersCarrierRestrictions withExcludedCarrierCodes(String[] excludedCarrierCodes) {
         this.excludedCarrierCodes = excludedCarrierCodes;
         return this;
@@ -40,9 +42,11 @@ public class SearchCriteriaFlightFiltersCarrierRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedCarrierCodes")
     public String[] includedCarrierCodes;
+
     public SearchCriteriaFlightFiltersCarrierRestrictions withIncludedCarrierCodes(String[] includedCarrierCodes) {
         this.includedCarrierCodes = includedCarrierCodes;
         return this;
     }
     
+    public SearchCriteriaFlightFiltersCarrierRestrictions(){}
 }

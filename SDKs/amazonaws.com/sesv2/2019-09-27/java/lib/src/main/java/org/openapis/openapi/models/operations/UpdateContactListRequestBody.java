@@ -15,6 +15,7 @@ public class UpdateContactListRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateContactListRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class UpdateContactListRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Topics")
     public org.openapis.openapi.models.shared.Topic[] topics;
+
     public UpdateContactListRequestBody withTopics(org.openapis.openapi.models.shared.Topic[] topics) {
         this.topics = topics;
         return this;
     }
     
+    public UpdateContactListRequestBody(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateDBClusterParameterGroupMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateDBClusterParameterGroupMessage {
     
     public String dbClusterParameterGroupName;
+
     public CreateDBClusterParameterGroupMessage withDBClusterParameterGroupName(String dbClusterParameterGroupName) {
         this.dbClusterParameterGroupName = dbClusterParameterGroupName;
         return this;
@@ -19,6 +20,7 @@ public class CreateDBClusterParameterGroupMessage {
     
     
     public String dbParameterGroupFamily;
+
     public CreateDBClusterParameterGroupMessage withDBParameterGroupFamily(String dbParameterGroupFamily) {
         this.dbParameterGroupFamily = dbParameterGroupFamily;
         return this;
@@ -26,6 +28,7 @@ public class CreateDBClusterParameterGroupMessage {
     
     
     public String description;
+
     public CreateDBClusterParameterGroupMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -33,9 +36,15 @@ public class CreateDBClusterParameterGroupMessage {
     
     
     public TagList[] tags;
+
     public CreateDBClusterParameterGroupMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDBClusterParameterGroupMessage(@JsonProperty("DBClusterParameterGroupName") String dbClusterParameterGroupName, @JsonProperty("DBParameterGroupFamily") String dbParameterGroupFamily, @JsonProperty("Description") String description) {
+        this.dbClusterParameterGroupName = dbClusterParameterGroupName;
+        this.dbParameterGroupFamily = dbParameterGroupFamily;
+        this.description = description;
+  }
 }

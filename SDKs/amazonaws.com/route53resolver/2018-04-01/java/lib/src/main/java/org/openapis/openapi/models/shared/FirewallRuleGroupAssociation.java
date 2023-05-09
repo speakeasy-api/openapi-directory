@@ -15,6 +15,7 @@ public class FirewallRuleGroupAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public FirewallRuleGroupAssociation withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class FirewallRuleGroupAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTime")
     public String creationTime;
+
     public FirewallRuleGroupAssociation withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -31,6 +33,7 @@ public class FirewallRuleGroupAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public FirewallRuleGroupAssociation withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -39,6 +42,7 @@ public class FirewallRuleGroupAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallRuleGroupId")
     public String firewallRuleGroupId;
+
     public FirewallRuleGroupAssociation withFirewallRuleGroupId(String firewallRuleGroupId) {
         this.firewallRuleGroupId = firewallRuleGroupId;
         return this;
@@ -47,6 +51,7 @@ public class FirewallRuleGroupAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public FirewallRuleGroupAssociation withId(String id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class FirewallRuleGroupAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManagedOwnerName")
     public String managedOwnerName;
+
     public FirewallRuleGroupAssociation withManagedOwnerName(String managedOwnerName) {
         this.managedOwnerName = managedOwnerName;
         return this;
@@ -63,6 +69,7 @@ public class FirewallRuleGroupAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModificationTime")
     public String modificationTime;
+
     public FirewallRuleGroupAssociation withModificationTime(String modificationTime) {
         this.modificationTime = modificationTime;
         return this;
@@ -71,6 +78,7 @@ public class FirewallRuleGroupAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MutationProtection")
     public MutationProtectionStatusEnum mutationProtection;
+
     public FirewallRuleGroupAssociation withMutationProtection(MutationProtectionStatusEnum mutationProtection) {
         this.mutationProtection = mutationProtection;
         return this;
@@ -79,6 +87,7 @@ public class FirewallRuleGroupAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public FirewallRuleGroupAssociation withName(String name) {
         this.name = name;
         return this;
@@ -87,6 +96,7 @@ public class FirewallRuleGroupAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public FirewallRuleGroupAssociation withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -95,6 +105,7 @@ public class FirewallRuleGroupAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public FirewallRuleGroupAssociationStatusEnum status;
+
     public FirewallRuleGroupAssociation withStatus(FirewallRuleGroupAssociationStatusEnum status) {
         this.status = status;
         return this;
@@ -103,6 +114,7 @@ public class FirewallRuleGroupAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public FirewallRuleGroupAssociation withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -111,9 +123,11 @@ public class FirewallRuleGroupAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public FirewallRuleGroupAssociation withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public FirewallRuleGroupAssociation(){}
 }

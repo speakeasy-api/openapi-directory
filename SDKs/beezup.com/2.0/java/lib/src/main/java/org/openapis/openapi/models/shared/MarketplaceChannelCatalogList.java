@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MarketplaceChannelCatalogList {
     @JsonProperty("links")
     public MarketplaceChannelCatalogListLinks links;
+
     public MarketplaceChannelCatalogList withLinks(MarketplaceChannelCatalogListLinks links) {
         this.links = links;
         return this;
@@ -22,9 +23,14 @@ public class MarketplaceChannelCatalogList {
      */
     @JsonProperty("marketplaceChannelCatalogs")
     public MarketplaceChannelCatalog[] marketplaceChannelCatalogs;
+
     public MarketplaceChannelCatalogList withMarketplaceChannelCatalogs(MarketplaceChannelCatalog[] marketplaceChannelCatalogs) {
         this.marketplaceChannelCatalogs = marketplaceChannelCatalogs;
         return this;
     }
     
+    public MarketplaceChannelCatalogList(@JsonProperty("links") MarketplaceChannelCatalogListLinks links, @JsonProperty("marketplaceChannelCatalogs") MarketplaceChannelCatalog[] marketplaceChannelCatalogs) {
+        this.links = links;
+        this.marketplaceChannelCatalogs = marketplaceChannelCatalogs;
+  }
 }

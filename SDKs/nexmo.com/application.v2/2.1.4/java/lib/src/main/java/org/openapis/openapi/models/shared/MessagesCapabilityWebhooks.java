@@ -15,6 +15,7 @@ public class MessagesCapabilityWebhooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inbound_url")
     public MessagesCapabilityWebhooksInboundUrl inboundUrl;
+
     public MessagesCapabilityWebhooks withInboundUrl(MessagesCapabilityWebhooksInboundUrl inboundUrl) {
         this.inboundUrl = inboundUrl;
         return this;
@@ -26,9 +27,11 @@ public class MessagesCapabilityWebhooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_url")
     public MessagesCapabilityWebhooksStatusUrl statusUrl;
+
     public MessagesCapabilityWebhooks withStatusUrl(MessagesCapabilityWebhooksStatusUrl statusUrl) {
         this.statusUrl = statusUrl;
         return this;
     }
     
+    public MessagesCapabilityWebhooks(){}
 }

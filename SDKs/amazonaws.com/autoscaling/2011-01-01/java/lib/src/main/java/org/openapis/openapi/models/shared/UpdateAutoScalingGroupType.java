@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateAutoScalingGroupType {
     
     public String autoScalingGroupName;
+
     public UpdateAutoScalingGroupType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public String[] availabilityZones;
+
     public UpdateAutoScalingGroupType withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -23,6 +25,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public Boolean capacityRebalance;
+
     public UpdateAutoScalingGroupType withCapacityRebalance(Boolean capacityRebalance) {
         this.capacityRebalance = capacityRebalance;
         return this;
@@ -30,6 +33,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public String context;
+
     public UpdateAutoScalingGroupType withContext(String context) {
         this.context = context;
         return this;
@@ -37,6 +41,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public Long defaultCooldown;
+
     public UpdateAutoScalingGroupType withDefaultCooldown(Long defaultCooldown) {
         this.defaultCooldown = defaultCooldown;
         return this;
@@ -44,6 +49,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public Long defaultInstanceWarmup;
+
     public UpdateAutoScalingGroupType withDefaultInstanceWarmup(Long defaultInstanceWarmup) {
         this.defaultInstanceWarmup = defaultInstanceWarmup;
         return this;
@@ -51,6 +57,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public Long desiredCapacity;
+
     public UpdateAutoScalingGroupType withDesiredCapacity(Long desiredCapacity) {
         this.desiredCapacity = desiredCapacity;
         return this;
@@ -58,6 +65,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public String desiredCapacityType;
+
     public UpdateAutoScalingGroupType withDesiredCapacityType(String desiredCapacityType) {
         this.desiredCapacityType = desiredCapacityType;
         return this;
@@ -65,6 +73,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public Long healthCheckGracePeriod;
+
     public UpdateAutoScalingGroupType withHealthCheckGracePeriod(Long healthCheckGracePeriod) {
         this.healthCheckGracePeriod = healthCheckGracePeriod;
         return this;
@@ -72,6 +81,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public String healthCheckType;
+
     public UpdateAutoScalingGroupType withHealthCheckType(String healthCheckType) {
         this.healthCheckType = healthCheckType;
         return this;
@@ -79,6 +89,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public String launchConfigurationName;
+
     public UpdateAutoScalingGroupType withLaunchConfigurationName(String launchConfigurationName) {
         this.launchConfigurationName = launchConfigurationName;
         return this;
@@ -86,6 +97,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public LaunchTemplateSpecification launchTemplate;
+
     public UpdateAutoScalingGroupType withLaunchTemplate(LaunchTemplateSpecification launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
@@ -93,6 +105,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public Long maxInstanceLifetime;
+
     public UpdateAutoScalingGroupType withMaxInstanceLifetime(Long maxInstanceLifetime) {
         this.maxInstanceLifetime = maxInstanceLifetime;
         return this;
@@ -100,6 +113,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public Long maxSize;
+
     public UpdateAutoScalingGroupType withMaxSize(Long maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -107,6 +121,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public Long minSize;
+
     public UpdateAutoScalingGroupType withMinSize(Long minSize) {
         this.minSize = minSize;
         return this;
@@ -114,6 +129,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public MixedInstancesPolicy mixedInstancesPolicy;
+
     public UpdateAutoScalingGroupType withMixedInstancesPolicy(MixedInstancesPolicy mixedInstancesPolicy) {
         this.mixedInstancesPolicy = mixedInstancesPolicy;
         return this;
@@ -121,6 +137,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public Boolean newInstancesProtectedFromScaleIn;
+
     public UpdateAutoScalingGroupType withNewInstancesProtectedFromScaleIn(Boolean newInstancesProtectedFromScaleIn) {
         this.newInstancesProtectedFromScaleIn = newInstancesProtectedFromScaleIn;
         return this;
@@ -128,6 +145,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public String placementGroup;
+
     public UpdateAutoScalingGroupType withPlacementGroup(String placementGroup) {
         this.placementGroup = placementGroup;
         return this;
@@ -135,6 +153,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public String serviceLinkedRoleARN;
+
     public UpdateAutoScalingGroupType withServiceLinkedRoleARN(String serviceLinkedRoleARN) {
         this.serviceLinkedRoleARN = serviceLinkedRoleARN;
         return this;
@@ -142,6 +161,7 @@ public class UpdateAutoScalingGroupType {
     
     
     public String[] terminationPolicies;
+
     public UpdateAutoScalingGroupType withTerminationPolicies(String[] terminationPolicies) {
         this.terminationPolicies = terminationPolicies;
         return this;
@@ -149,9 +169,13 @@ public class UpdateAutoScalingGroupType {
     
     
     public String vpcZoneIdentifier;
+
     public UpdateAutoScalingGroupType withVPCZoneIdentifier(String vpcZoneIdentifier) {
         this.vpcZoneIdentifier = vpcZoneIdentifier;
         return this;
     }
     
+    public UpdateAutoScalingGroupType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+  }
 }

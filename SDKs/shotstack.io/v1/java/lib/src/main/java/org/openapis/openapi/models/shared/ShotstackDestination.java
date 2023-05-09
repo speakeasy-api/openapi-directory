@@ -18,6 +18,7 @@ public class ShotstackDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclude")
     public Boolean exclude;
+
     public ShotstackDestination withExclude(Boolean exclude) {
         this.exclude = exclude;
         return this;
@@ -28,9 +29,13 @@ public class ShotstackDestination {
      */
     @JsonProperty("provider")
     public String provider;
+
     public ShotstackDestination withProvider(String provider) {
         this.provider = provider;
         return this;
     }
     
+    public ShotstackDestination(@JsonProperty("provider") String provider) {
+        this.provider = provider;
+  }
 }

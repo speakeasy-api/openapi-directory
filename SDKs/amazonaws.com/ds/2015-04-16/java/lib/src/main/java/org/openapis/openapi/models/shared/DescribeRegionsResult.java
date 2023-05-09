@@ -15,6 +15,7 @@ public class DescribeRegionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeRegionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeRegionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionsDescription")
     public RegionDescription[] regionsDescription;
+
     public DescribeRegionsResult withRegionsDescription(RegionDescription[] regionsDescription) {
         this.regionsDescription = regionsDescription;
         return this;
     }
     
+    public DescribeRegionsResult(){}
 }

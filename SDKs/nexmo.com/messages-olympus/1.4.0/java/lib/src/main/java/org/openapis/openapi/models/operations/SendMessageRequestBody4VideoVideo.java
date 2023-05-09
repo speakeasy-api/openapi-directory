@@ -14,9 +14,13 @@ public class SendMessageRequestBody4VideoVideo {
      */
     @JsonProperty("url")
     public String url;
+
     public SendMessageRequestBody4VideoVideo withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SendMessageRequestBody4VideoVideo(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

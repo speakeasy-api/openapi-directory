@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3BucketSource {
     @JsonProperty("s3Bucket")
     public String s3Bucket;
+
     public S3BucketSource withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -22,6 +23,7 @@ public class S3BucketSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3BucketOwner")
     public String s3BucketOwner;
+
     public S3BucketSource withS3BucketOwner(String s3BucketOwner) {
         this.s3BucketOwner = s3BucketOwner;
         return this;
@@ -29,9 +31,14 @@ public class S3BucketSource {
     
     @JsonProperty("s3Key")
     public String s3Key;
+
     public S3BucketSource withS3Key(String s3Key) {
         this.s3Key = s3Key;
         return this;
     }
     
+    public S3BucketSource(@JsonProperty("s3Bucket") String s3Bucket, @JsonProperty("s3Key") String s3Key) {
+        this.s3Bucket = s3Bucket;
+        this.s3Key = s3Key;
+  }
 }

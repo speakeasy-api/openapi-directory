@@ -15,6 +15,7 @@ public class BookingHotels200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public BookingHotels200ApplicationJSONData withAddress(String address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class BookingHotels200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public BookingHotels200ApplicationJSONData withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -37,6 +39,7 @@ public class BookingHotels200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public BookingHotels200ApplicationJSONData withCity(String city) {
         this.city = city;
         return this;
@@ -48,6 +51,7 @@ public class BookingHotels200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationId")
     public Long destinationId;
+
     public BookingHotels200ApplicationJSONData withDestinationId(Long destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -59,6 +63,7 @@ public class BookingHotels200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotelString")
     public String hotelString;
+
     public BookingHotels200ApplicationJSONData withHotelString(String hotelString) {
         this.hotelString = hotelString;
         return this;
@@ -70,6 +75,7 @@ public class BookingHotels200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BookingHotels200ApplicationJSONData withId(String id) {
         this.id = id;
         return this;
@@ -81,6 +87,7 @@ public class BookingHotels200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public BookingHotels200ApplicationJSONData withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -92,6 +99,7 @@ public class BookingHotels200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public BookingHotels200ApplicationJSONData withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -103,6 +111,7 @@ public class BookingHotels200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BookingHotels200ApplicationJSONData withName(String name) {
         this.name = name;
         return this;
@@ -114,6 +123,7 @@ public class BookingHotels200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public BookingHotels200ApplicationJSONData withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -125,6 +135,7 @@ public class BookingHotels200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public BookingHotels200ApplicationJSONData withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -136,6 +147,7 @@ public class BookingHotels200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postcode")
     public String postcode;
+
     public BookingHotels200ApplicationJSONData withPostcode(String postcode) {
         this.postcode = postcode;
         return this;
@@ -147,6 +159,7 @@ public class BookingHotels200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCodes")
     public String[] productCodes;
+
     public BookingHotels200ApplicationJSONData withProductCodes(String[] productCodes) {
         this.productCodes = productCodes;
         return this;
@@ -158,9 +171,11 @@ public class BookingHotels200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public BookingHotels200ApplicationJSONData withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public BookingHotels200ApplicationJSONData(){}
 }

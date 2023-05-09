@@ -18,6 +18,7 @@ public class TextInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public TextInput withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class TextInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("track")
     public Integer track;
+
     public TextInput withTrack(Integer track) {
         this.track = track;
         return this;
     }
     
+    public TextInput(){}
 }

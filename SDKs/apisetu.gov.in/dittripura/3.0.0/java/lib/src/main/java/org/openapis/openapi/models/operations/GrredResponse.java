@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GrredResponse {
     
     public String contentType;
+
     public GrredResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GrredResponse {
     
     
     public Integer statusCode;
+
     public GrredResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GrredResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GrredResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GrredResponse {
      */
     
     public Grred400ApplicationJSON grred400ApplicationJSONObject;
+
     public GrredResponse withGrred400ApplicationJSONObject(Grred400ApplicationJSON grred400ApplicationJSONObject) {
         this.grred400ApplicationJSONObject = grred400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GrredResponse {
      */
     
     public Grred401ApplicationJSON grred401ApplicationJSONObject;
+
     public GrredResponse withGrred401ApplicationJSONObject(Grred401ApplicationJSON grred401ApplicationJSONObject) {
         this.grred401ApplicationJSONObject = grred401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GrredResponse {
      */
     
     public Grred404ApplicationJSON grred404ApplicationJSONObject;
+
     public GrredResponse withGrred404ApplicationJSONObject(Grred404ApplicationJSON grred404ApplicationJSONObject) {
         this.grred404ApplicationJSONObject = grred404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GrredResponse {
      */
     
     public Grred500ApplicationJSON grred500ApplicationJSONObject;
+
     public GrredResponse withGrred500ApplicationJSONObject(Grred500ApplicationJSON grred500ApplicationJSONObject) {
         this.grred500ApplicationJSONObject = grred500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GrredResponse {
      */
     
     public Grred502ApplicationJSON grred502ApplicationJSONObject;
+
     public GrredResponse withGrred502ApplicationJSONObject(Grred502ApplicationJSON grred502ApplicationJSONObject) {
         this.grred502ApplicationJSONObject = grred502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class GrredResponse {
      */
     
     public Grred503ApplicationJSON grred503ApplicationJSONObject;
+
     public GrredResponse withGrred503ApplicationJSONObject(Grred503ApplicationJSON grred503ApplicationJSONObject) {
         this.grred503ApplicationJSONObject = grred503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class GrredResponse {
      */
     
     public Grred504ApplicationJSON grred504ApplicationJSONObject;
+
     public GrredResponse withGrred504ApplicationJSONObject(Grred504ApplicationJSON grred504ApplicationJSONObject) {
         this.grred504ApplicationJSONObject = grred504ApplicationJSONObject;
         return this;
     }
     
+    public GrredResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

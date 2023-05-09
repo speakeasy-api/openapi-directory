@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIpv6PoolsRequestFilters {
     
     public String name;
+
     public DescribeIpv6PoolsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeIpv6PoolsRequestFilters {
     
     
     public String[] values;
+
     public DescribeIpv6PoolsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeIpv6PoolsRequestFilters(){}
 }

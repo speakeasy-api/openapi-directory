@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutVCustomPricesRulesPriceAssociationIdResponse {
     
     public String contentType;
+
     public PutVCustomPricesRulesPriceAssociationIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutVCustomPricesRulesPriceAssociationIdResponse {
     
     
     public Integer statusCode;
+
     public PutVCustomPricesRulesPriceAssociationIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PutVCustomPricesRulesPriceAssociationIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutVCustomPricesRulesPriceAssociationIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PutVCustomPricesRulesPriceAssociationIdResponse {
      */
     
     public PutVCustomPricesRulesPriceAssociationId200ApplicationJSON putVCustomPricesRulesPriceAssociationId200ApplicationJSONObject;
+
     public PutVCustomPricesRulesPriceAssociationIdResponse withPutVCustomPricesRulesPriceAssociationId200ApplicationJSONObject(PutVCustomPricesRulesPriceAssociationId200ApplicationJSON putVCustomPricesRulesPriceAssociationId200ApplicationJSONObject) {
         this.putVCustomPricesRulesPriceAssociationId200ApplicationJSONObject = putVCustomPricesRulesPriceAssociationId200ApplicationJSONObject;
         return this;
     }
     
+    public PutVCustomPricesRulesPriceAssociationIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

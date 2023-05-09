@@ -18,9 +18,11 @@ public class ExtractionRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extractionRule")
     public ExtractionRule[] extractionRule;
+
     public ExtractionRules withExtractionRule(ExtractionRule[] extractionRule) {
         this.extractionRule = extractionRule;
         return this;
     }
     
+    public ExtractionRules(){}
 }

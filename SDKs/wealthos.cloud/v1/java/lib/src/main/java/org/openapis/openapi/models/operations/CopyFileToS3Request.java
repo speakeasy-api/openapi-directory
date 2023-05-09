@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CopyFileToS3Request {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CopyFileToS3RequestBody requestBody;
+
     public CopyFileToS3Request withRequestBody(CopyFileToS3RequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class CopyFileToS3Request {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public CopyFileToS3Request withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public CopyFileToS3Request(@JsonProperty("x-api-key") String xApiKey) {
+        this.xApiKey = xApiKey;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCodeCoveragesResponse {
     
     public String contentType;
+
     public DescribeCodeCoveragesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCodeCoveragesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCodeCoveragesOutput describeCodeCoveragesOutput;
+
     public DescribeCodeCoveragesResponse withDescribeCodeCoveragesOutput(org.openapis.openapi.models.shared.DescribeCodeCoveragesOutput describeCodeCoveragesOutput) {
         this.describeCodeCoveragesOutput = describeCodeCoveragesOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCodeCoveragesResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeCodeCoveragesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeCodeCoveragesResponse {
     
     
     public Integer statusCode;
+
     public DescribeCodeCoveragesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeCodeCoveragesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCodeCoveragesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeCodeCoveragesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

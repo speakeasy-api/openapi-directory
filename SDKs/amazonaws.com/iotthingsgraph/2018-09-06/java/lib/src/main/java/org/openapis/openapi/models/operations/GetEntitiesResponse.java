@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEntitiesResponse {
     
     public String contentType;
+
     public GetEntitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEntitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEntitiesResponse getEntitiesResponse;
+
     public GetEntitiesResponse withGetEntitiesResponse(org.openapis.openapi.models.shared.GetEntitiesResponse getEntitiesResponse) {
         this.getEntitiesResponse = getEntitiesResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetEntitiesResponse {
      */
     
     public Object internalFailureException;
+
     public GetEntitiesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetEntitiesResponse {
      */
     
     public Object invalidRequestException;
+
     public GetEntitiesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetEntitiesResponse {
     
     
     public Integer statusCode;
+
     public GetEntitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetEntitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEntitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetEntitiesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetEntitiesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetEntitiesResponse {
      */
     
     public Object throttlingException;
+
     public GetEntitiesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetEntitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

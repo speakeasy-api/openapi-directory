@@ -18,6 +18,7 @@ public class EmissionsGramsPerPax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("business")
     public Integer business;
+
     public EmissionsGramsPerPax withBusiness(Integer business) {
         this.business = business;
         return this;
@@ -29,6 +30,7 @@ public class EmissionsGramsPerPax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("economy")
     public Integer economy;
+
     public EmissionsGramsPerPax withEconomy(Integer economy) {
         this.economy = economy;
         return this;
@@ -40,6 +42,7 @@ public class EmissionsGramsPerPax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first")
     public Integer first;
+
     public EmissionsGramsPerPax withFirst(Integer first) {
         this.first = first;
         return this;
@@ -51,9 +54,11 @@ public class EmissionsGramsPerPax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("premiumEconomy")
     public Integer premiumEconomy;
+
     public EmissionsGramsPerPax withPremiumEconomy(Integer premiumEconomy) {
         this.premiumEconomy = premiumEconomy;
         return this;
     }
     
+    public EmissionsGramsPerPax(){}
 }

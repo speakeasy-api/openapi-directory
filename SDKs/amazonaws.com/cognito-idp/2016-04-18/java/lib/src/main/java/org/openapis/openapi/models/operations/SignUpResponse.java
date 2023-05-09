@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SignUpResponse {
@@ -12,6 +13,7 @@ public class SignUpResponse {
      */
     
     public Object codeDeliveryFailureException;
+
     public SignUpResponse withCodeDeliveryFailureException(Object codeDeliveryFailureException) {
         this.codeDeliveryFailureException = codeDeliveryFailureException;
         return this;
@@ -19,6 +21,7 @@ public class SignUpResponse {
     
     
     public String contentType;
+
     public SignUpResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SignUpResponse {
      */
     
     public Object forbiddenException;
+
     public SignUpResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class SignUpResponse {
      */
     
     public Object internalErrorException;
+
     public SignUpResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class SignUpResponse {
      */
     
     public Object invalidEmailRoleAccessPolicyException;
+
     public SignUpResponse withInvalidEmailRoleAccessPolicyException(Object invalidEmailRoleAccessPolicyException) {
         this.invalidEmailRoleAccessPolicyException = invalidEmailRoleAccessPolicyException;
         return this;
@@ -59,6 +65,7 @@ public class SignUpResponse {
      */
     
     public Object invalidLambdaResponseException;
+
     public SignUpResponse withInvalidLambdaResponseException(Object invalidLambdaResponseException) {
         this.invalidLambdaResponseException = invalidLambdaResponseException;
         return this;
@@ -69,6 +76,7 @@ public class SignUpResponse {
      */
     
     public Object invalidParameterException;
+
     public SignUpResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class SignUpResponse {
      */
     
     public Object invalidPasswordException;
+
     public SignUpResponse withInvalidPasswordException(Object invalidPasswordException) {
         this.invalidPasswordException = invalidPasswordException;
         return this;
@@ -89,6 +98,7 @@ public class SignUpResponse {
      */
     
     public Object invalidSmsRoleAccessPolicyException;
+
     public SignUpResponse withInvalidSmsRoleAccessPolicyException(Object invalidSmsRoleAccessPolicyException) {
         this.invalidSmsRoleAccessPolicyException = invalidSmsRoleAccessPolicyException;
         return this;
@@ -99,6 +109,7 @@ public class SignUpResponse {
      */
     
     public Object invalidSmsRoleTrustRelationshipException;
+
     public SignUpResponse withInvalidSmsRoleTrustRelationshipException(Object invalidSmsRoleTrustRelationshipException) {
         this.invalidSmsRoleTrustRelationshipException = invalidSmsRoleTrustRelationshipException;
         return this;
@@ -109,6 +120,7 @@ public class SignUpResponse {
      */
     
     public Object notAuthorizedException;
+
     public SignUpResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -119,6 +131,7 @@ public class SignUpResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SignUpResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -129,6 +142,7 @@ public class SignUpResponse {
      */
     
     public org.openapis.openapi.models.shared.SignUpResponse signUpResponse;
+
     public SignUpResponse withSignUpResponse(org.openapis.openapi.models.shared.SignUpResponse signUpResponse) {
         this.signUpResponse = signUpResponse;
         return this;
@@ -136,6 +150,7 @@ public class SignUpResponse {
     
     
     public Integer statusCode;
+
     public SignUpResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,6 +158,7 @@ public class SignUpResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SignUpResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -153,6 +169,7 @@ public class SignUpResponse {
      */
     
     public Object tooManyRequestsException;
+
     public SignUpResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -163,6 +180,7 @@ public class SignUpResponse {
      */
     
     public Object unexpectedLambdaException;
+
     public SignUpResponse withUnexpectedLambdaException(Object unexpectedLambdaException) {
         this.unexpectedLambdaException = unexpectedLambdaException;
         return this;
@@ -173,6 +191,7 @@ public class SignUpResponse {
      */
     
     public Object userLambdaValidationException;
+
     public SignUpResponse withUserLambdaValidationException(Object userLambdaValidationException) {
         this.userLambdaValidationException = userLambdaValidationException;
         return this;
@@ -183,9 +202,14 @@ public class SignUpResponse {
      */
     
     public Object usernameExistsException;
+
     public SignUpResponse withUsernameExistsException(Object usernameExistsException) {
         this.usernameExistsException = usernameExistsException;
         return this;
     }
     
+    public SignUpResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

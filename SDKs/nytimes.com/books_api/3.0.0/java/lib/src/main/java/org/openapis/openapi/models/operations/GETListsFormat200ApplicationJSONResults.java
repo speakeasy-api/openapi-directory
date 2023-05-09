@@ -12,6 +12,7 @@ public class GETListsFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amazon_product_url")
     public String amazonProductUrl;
+
     public GETListsFormat200ApplicationJSONResults withAmazonProductUrl(String amazonProductUrl) {
         this.amazonProductUrl = amazonProductUrl;
         return this;
@@ -20,6 +21,7 @@ public class GETListsFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asterisk")
     public Long asterisk;
+
     public GETListsFormat200ApplicationJSONResults withAsterisk(Long asterisk) {
         this.asterisk = asterisk;
         return this;
@@ -28,6 +30,7 @@ public class GETListsFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestsellers_date")
     public String bestsellersDate;
+
     public GETListsFormat200ApplicationJSONResults withBestsellersDate(String bestsellersDate) {
         this.bestsellersDate = bestsellersDate;
         return this;
@@ -36,6 +39,7 @@ public class GETListsFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("book_details")
     public GETListsFormat200ApplicationJSONResultsBookDetails[] bookDetails;
+
     public GETListsFormat200ApplicationJSONResults withBookDetails(GETListsFormat200ApplicationJSONResultsBookDetails[] bookDetails) {
         this.bookDetails = bookDetails;
         return this;
@@ -44,6 +48,7 @@ public class GETListsFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dagger")
     public Long dagger;
+
     public GETListsFormat200ApplicationJSONResults withDagger(Long dagger) {
         this.dagger = dagger;
         return this;
@@ -52,6 +57,7 @@ public class GETListsFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public GETListsFormat200ApplicationJSONResults withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -60,6 +66,7 @@ public class GETListsFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isbns")
     public GETListsFormat200ApplicationJSONResultsIsbns[] isbns;
+
     public GETListsFormat200ApplicationJSONResults withIsbns(GETListsFormat200ApplicationJSONResultsIsbns[] isbns) {
         this.isbns = isbns;
         return this;
@@ -68,6 +75,7 @@ public class GETListsFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_name")
     public String listName;
+
     public GETListsFormat200ApplicationJSONResults withListName(String listName) {
         this.listName = listName;
         return this;
@@ -76,6 +84,7 @@ public class GETListsFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published_date")
     public String publishedDate;
+
     public GETListsFormat200ApplicationJSONResults withPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
         return this;
@@ -84,6 +93,7 @@ public class GETListsFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rank")
     public Long rank;
+
     public GETListsFormat200ApplicationJSONResults withRank(Long rank) {
         this.rank = rank;
         return this;
@@ -92,6 +102,7 @@ public class GETListsFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rank_last_week")
     public Long rankLastWeek;
+
     public GETListsFormat200ApplicationJSONResults withRankLastWeek(Long rankLastWeek) {
         this.rankLastWeek = rankLastWeek;
         return this;
@@ -100,6 +111,7 @@ public class GETListsFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviews")
     public GETListsFormat200ApplicationJSONResultsReviews[] reviews;
+
     public GETListsFormat200ApplicationJSONResults withReviews(GETListsFormat200ApplicationJSONResultsReviews[] reviews) {
         this.reviews = reviews;
         return this;
@@ -108,9 +120,11 @@ public class GETListsFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weeks_on_list")
     public Long weeksOnList;
+
     public GETListsFormat200ApplicationJSONResults withWeeksOnList(Long weeksOnList) {
         this.weeksOnList = weeksOnList;
         return this;
     }
     
+    public GETListsFormat200ApplicationJSONResults(){}
 }

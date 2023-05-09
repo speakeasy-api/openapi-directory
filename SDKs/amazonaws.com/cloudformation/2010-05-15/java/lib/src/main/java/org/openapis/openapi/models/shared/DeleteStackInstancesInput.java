@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteStackInstancesInput {
     
     public String[] accounts;
+
     public DeleteStackInstancesInput withAccounts(String[] accounts) {
         this.accounts = accounts;
         return this;
@@ -16,6 +17,7 @@ public class DeleteStackInstancesInput {
     
     
     public CallAsEnum callAs;
+
     public DeleteStackInstancesInput withCallAs(CallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -23,6 +25,7 @@ public class DeleteStackInstancesInput {
     
     
     public DeploymentTargets deploymentTargets;
+
     public DeleteStackInstancesInput withDeploymentTargets(DeploymentTargets deploymentTargets) {
         this.deploymentTargets = deploymentTargets;
         return this;
@@ -30,6 +33,7 @@ public class DeleteStackInstancesInput {
     
     
     public String operationId;
+
     public DeleteStackInstancesInput withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -37,6 +41,7 @@ public class DeleteStackInstancesInput {
     
     
     public StackSetOperationPreferences operationPreferences;
+
     public DeleteStackInstancesInput withOperationPreferences(StackSetOperationPreferences operationPreferences) {
         this.operationPreferences = operationPreferences;
         return this;
@@ -44,6 +49,7 @@ public class DeleteStackInstancesInput {
     
     
     public String[] regions;
+
     public DeleteStackInstancesInput withRegions(String[] regions) {
         this.regions = regions;
         return this;
@@ -51,6 +57,7 @@ public class DeleteStackInstancesInput {
     
     
     public Boolean retainStacks;
+
     public DeleteStackInstancesInput withRetainStacks(Boolean retainStacks) {
         this.retainStacks = retainStacks;
         return this;
@@ -58,9 +65,15 @@ public class DeleteStackInstancesInput {
     
     
     public String stackSetName;
+
     public DeleteStackInstancesInput withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
     }
     
+    public DeleteStackInstancesInput(@JsonProperty("Regions") String[] regions, @JsonProperty("RetainStacks") Boolean retainStacks, @JsonProperty("StackSetName") String stackSetName) {
+        this.regions = regions;
+        this.retainStacks = retainStacks;
+        this.stackSetName = stackSetName;
+  }
 }

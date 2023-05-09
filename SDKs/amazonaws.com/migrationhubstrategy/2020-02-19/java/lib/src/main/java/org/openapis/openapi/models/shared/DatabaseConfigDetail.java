@@ -15,9 +15,11 @@ public class DatabaseConfigDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretName")
     public String secretName;
+
     public DatabaseConfigDetail withSecretName(String secretName) {
         this.secretName = secretName;
         return this;
     }
     
+    public DatabaseConfigDetail(){}
 }

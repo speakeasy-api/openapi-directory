@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ByteMatchSet {
     @JsonProperty("ByteMatchSetId")
     public String byteMatchSetId;
+
     public ByteMatchSet withByteMatchSetId(String byteMatchSetId) {
         this.byteMatchSetId = byteMatchSetId;
         return this;
@@ -21,6 +22,7 @@ public class ByteMatchSet {
     
     @JsonProperty("ByteMatchTuples")
     public ByteMatchTuple[] byteMatchTuples;
+
     public ByteMatchSet withByteMatchTuples(ByteMatchTuple[] byteMatchTuples) {
         this.byteMatchTuples = byteMatchTuples;
         return this;
@@ -29,9 +31,14 @@ public class ByteMatchSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ByteMatchSet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ByteMatchSet(@JsonProperty("ByteMatchSetId") String byteMatchSetId, @JsonProperty("ByteMatchTuples") ByteMatchTuple[] byteMatchTuples) {
+        this.byteMatchSetId = byteMatchSetId;
+        this.byteMatchTuples = byteMatchTuples;
+  }
 }

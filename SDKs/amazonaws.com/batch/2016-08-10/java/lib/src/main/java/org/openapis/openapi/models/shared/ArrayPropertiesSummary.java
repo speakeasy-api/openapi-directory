@@ -15,6 +15,7 @@ public class ArrayPropertiesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Long index;
+
     public ArrayPropertiesSummary withIndex(Long index) {
         this.index = index;
         return this;
@@ -23,9 +24,11 @@ public class ArrayPropertiesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public ArrayPropertiesSummary withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public ArrayPropertiesSummary(){}
 }

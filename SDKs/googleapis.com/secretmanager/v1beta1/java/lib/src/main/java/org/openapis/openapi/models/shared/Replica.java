@@ -18,9 +18,11 @@ public class Replica {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Replica withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public Replica(){}
 }

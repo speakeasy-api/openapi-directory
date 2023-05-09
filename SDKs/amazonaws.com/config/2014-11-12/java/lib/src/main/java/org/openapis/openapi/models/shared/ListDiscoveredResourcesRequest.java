@@ -15,6 +15,7 @@ public class ListDiscoveredResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeDeletedResources")
     public Boolean includeDeletedResources;
+
     public ListDiscoveredResourcesRequest withIncludeDeletedResources(Boolean includeDeletedResources) {
         this.includeDeletedResources = includeDeletedResources;
         return this;
@@ -23,6 +24,7 @@ public class ListDiscoveredResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public ListDiscoveredResourcesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -31,6 +33,7 @@ public class ListDiscoveredResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDiscoveredResourcesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -39,6 +42,7 @@ public class ListDiscoveredResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceIds")
     public String[] resourceIds;
+
     public ListDiscoveredResourcesRequest withResourceIds(String[] resourceIds) {
         this.resourceIds = resourceIds;
         return this;
@@ -47,6 +51,7 @@ public class ListDiscoveredResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public ListDiscoveredResourcesRequest withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -54,9 +59,13 @@ public class ListDiscoveredResourcesRequest {
     
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public ListDiscoveredResourcesRequest withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ListDiscoveredResourcesRequest(@JsonProperty("resourceType") ResourceTypeEnum resourceType) {
+        this.resourceType = resourceType;
+  }
 }

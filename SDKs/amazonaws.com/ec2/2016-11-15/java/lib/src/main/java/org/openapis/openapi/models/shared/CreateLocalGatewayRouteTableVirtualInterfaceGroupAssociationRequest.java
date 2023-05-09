@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest {
     
     public Boolean dryRun;
+
     public CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest
     
     
     public String localGatewayRouteTableId;
+
     public CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
@@ -23,6 +25,7 @@ public class CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest
     
     
     public String localGatewayVirtualInterfaceGroupId;
+
     public CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest withLocalGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
         this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
         return this;
@@ -30,9 +33,14 @@ public class CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest
     
     
     public CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequestTagSpecifications[] tagSpecifications;
+
     public CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest withTagSpecifications(CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest(@JsonProperty("LocalGatewayRouteTableId") String localGatewayRouteTableId, @JsonProperty("LocalGatewayVirtualInterfaceGroupId") String localGatewayVirtualInterfaceGroupId) {
+        this.localGatewayRouteTableId = localGatewayRouteTableId;
+        this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
+  }
 }

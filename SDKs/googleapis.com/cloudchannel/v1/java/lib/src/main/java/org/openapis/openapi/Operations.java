@@ -62,11 +62,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelOperationsCancelResponse res = new org.openapis.openapi.models.operations.CloudchannelOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelOperationsCancelResponse res = new org.openapis.openapi.models.operations.CloudchannelOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelOperationsDeleteResponse res = new org.openapis.openapi.models.operations.CloudchannelOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelOperationsDeleteResponse res = new org.openapis.openapi.models.operations.CloudchannelOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelOperationsListResponse res = new org.openapis.openapi.models.operations.CloudchannelOperationsListResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelOperationsListResponse res = new org.openapis.openapi.models.operations.CloudchannelOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

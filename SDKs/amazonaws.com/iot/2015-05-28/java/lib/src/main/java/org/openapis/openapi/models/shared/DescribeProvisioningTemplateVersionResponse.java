@@ -22,6 +22,7 @@ public class DescribeProvisioningTemplateVersionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public DescribeProvisioningTemplateVersionResponse withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +31,7 @@ public class DescribeProvisioningTemplateVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefaultVersion")
     public Boolean isDefaultVersion;
+
     public DescribeProvisioningTemplateVersionResponse withIsDefaultVersion(Boolean isDefaultVersion) {
         this.isDefaultVersion = isDefaultVersion;
         return this;
@@ -38,6 +40,7 @@ public class DescribeProvisioningTemplateVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateBody")
     public String templateBody;
+
     public DescribeProvisioningTemplateVersionResponse withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
@@ -46,9 +49,11 @@ public class DescribeProvisioningTemplateVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionId")
     public Long versionId;
+
     public DescribeProvisioningTemplateVersionResponse withVersionId(Long versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public DescribeProvisioningTemplateVersionResponse(){}
 }

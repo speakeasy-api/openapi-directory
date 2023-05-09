@@ -74,4 +74,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPolicysimulatorV
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipRelevanceEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembership.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPolicysimulatorV1AccessTuple.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

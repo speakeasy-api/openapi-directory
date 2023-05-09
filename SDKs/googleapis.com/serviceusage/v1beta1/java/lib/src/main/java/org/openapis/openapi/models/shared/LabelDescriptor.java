@@ -18,6 +18,7 @@ public class LabelDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LabelDescriptor withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class LabelDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public LabelDescriptor withKey(String key) {
         this.key = key;
         return this;
@@ -40,9 +42,11 @@ public class LabelDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueType")
     public LabelDescriptorValueTypeEnum valueType;
+
     public LabelDescriptor withValueType(LabelDescriptorValueTypeEnum valueType) {
         this.valueType = valueType;
         return this;
     }
     
+    public LabelDescriptor(){}
 }

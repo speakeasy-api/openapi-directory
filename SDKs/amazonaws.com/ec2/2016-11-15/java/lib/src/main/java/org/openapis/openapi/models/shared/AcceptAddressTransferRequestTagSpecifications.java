@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AcceptAddressTransferRequestTagSpecifications {
     
     public AcceptAddressTransferRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public AcceptAddressTransferRequestTagSpecifications withResourceType(AcceptAddressTransferRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class AcceptAddressTransferRequestTagSpecifications {
     
     
     public AcceptAddressTransferRequestTagSpecificationsTags[] tags;
+
     public AcceptAddressTransferRequestTagSpecifications withTags(AcceptAddressTransferRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public AcceptAddressTransferRequestTagSpecifications(){}
 }

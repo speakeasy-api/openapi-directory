@@ -15,9 +15,11 @@ public class UpdateThingRuntimeConfigurationRequestBodyTelemetryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Telemetry")
     public org.openapis.openapi.models.shared.TelemetryEnum telemetry;
+
     public UpdateThingRuntimeConfigurationRequestBodyTelemetryConfiguration withTelemetry(org.openapis.openapi.models.shared.TelemetryEnum telemetry) {
         this.telemetry = telemetry;
         return this;
     }
     
+    public UpdateThingRuntimeConfigurationRequestBodyTelemetryConfiguration(){}
 }

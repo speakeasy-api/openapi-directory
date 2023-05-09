@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AttributeBooleanValue {
     
     public Boolean value;
+
     public AttributeBooleanValue withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public AttributeBooleanValue(){}
 }

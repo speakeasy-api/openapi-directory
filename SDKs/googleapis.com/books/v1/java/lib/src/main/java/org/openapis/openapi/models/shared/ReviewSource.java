@@ -18,6 +18,7 @@ public class ReviewSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ReviewSource withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class ReviewSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extraDescription")
     public String extraDescription;
+
     public ReviewSource withExtraDescription(String extraDescription) {
         this.extraDescription = extraDescription;
         return this;
@@ -40,9 +42,11 @@ public class ReviewSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ReviewSource withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ReviewSource(){}
 }

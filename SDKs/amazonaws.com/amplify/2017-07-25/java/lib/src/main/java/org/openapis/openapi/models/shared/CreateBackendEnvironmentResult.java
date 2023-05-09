@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateBackendEnvironmentResult {
     @JsonProperty("backendEnvironment")
     public BackendEnvironment backendEnvironment;
+
     public CreateBackendEnvironmentResult withBackendEnvironment(BackendEnvironment backendEnvironment) {
         this.backendEnvironment = backendEnvironment;
         return this;
     }
     
+    public CreateBackendEnvironmentResult(@JsonProperty("backendEnvironment") BackendEnvironment backendEnvironment) {
+        this.backendEnvironment = backendEnvironment;
+  }
 }

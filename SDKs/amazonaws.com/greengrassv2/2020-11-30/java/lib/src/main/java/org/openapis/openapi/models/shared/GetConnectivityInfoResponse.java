@@ -15,6 +15,7 @@ public class GetConnectivityInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectivityInfo")
     public ConnectivityInfo[] connectivityInfo;
+
     public GetConnectivityInfoResponse withConnectivityInfo(ConnectivityInfo[] connectivityInfo) {
         this.connectivityInfo = connectivityInfo;
         return this;
@@ -23,9 +24,11 @@ public class GetConnectivityInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetConnectivityInfoResponse withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetConnectivityInfoResponse(){}
 }

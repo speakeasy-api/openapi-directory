@@ -59,10 +59,8 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryGroupsAliasesDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsAliasesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DirectoryGroupsAliasesDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsAliasesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryGroupsAliasesInsertResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsAliasesInsertResponse() {{
+        org.openapis.openapi.models.operations.DirectoryGroupsAliasesInsertResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsAliasesInsertResponse(contentType, httpRes.statusCode()) {{
             alias = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryGroupsAliasesListResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsAliasesListResponse() {{
+        org.openapis.openapi.models.operations.DirectoryGroupsAliasesListResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsAliasesListResponse(contentType, httpRes.statusCode()) {{
             aliases = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,10 +187,8 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryGroupsDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DirectoryGroupsDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -233,11 +225,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryGroupsGetResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsGetResponse() {{
+        org.openapis.openapi.models.operations.DirectoryGroupsGetResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsGetResponse(contentType, httpRes.statusCode()) {{
             group = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,11 +271,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryGroupsInsertResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsInsertResponse() {{
+        org.openapis.openapi.models.operations.DirectoryGroupsInsertResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsInsertResponse(contentType, httpRes.statusCode()) {{
             group = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -327,11 +315,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryGroupsListResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsListResponse() {{
+        org.openapis.openapi.models.operations.DirectoryGroupsListResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsListResponse(contentType, httpRes.statusCode()) {{
             groups = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -375,11 +361,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryGroupsPatchResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsPatchResponse() {{
+        org.openapis.openapi.models.operations.DirectoryGroupsPatchResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsPatchResponse(contentType, httpRes.statusCode()) {{
             group = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -423,11 +407,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryGroupsUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DirectoryGroupsUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryGroupsUpdateResponse(contentType, httpRes.statusCode()) {{
             group = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

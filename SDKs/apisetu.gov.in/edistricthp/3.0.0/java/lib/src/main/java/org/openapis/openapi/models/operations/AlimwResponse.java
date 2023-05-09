@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AlimwResponse {
     
     public String contentType;
+
     public AlimwResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AlimwResponse {
     
     
     public Integer statusCode;
+
     public AlimwResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AlimwResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AlimwResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AlimwResponse {
      */
     
     public Alimw400ApplicationJSON alimw400ApplicationJSONObject;
+
     public AlimwResponse withAlimw400ApplicationJSONObject(Alimw400ApplicationJSON alimw400ApplicationJSONObject) {
         this.alimw400ApplicationJSONObject = alimw400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class AlimwResponse {
      */
     
     public Alimw401ApplicationJSON alimw401ApplicationJSONObject;
+
     public AlimwResponse withAlimw401ApplicationJSONObject(Alimw401ApplicationJSON alimw401ApplicationJSONObject) {
         this.alimw401ApplicationJSONObject = alimw401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class AlimwResponse {
      */
     
     public Alimw404ApplicationJSON alimw404ApplicationJSONObject;
+
     public AlimwResponse withAlimw404ApplicationJSONObject(Alimw404ApplicationJSON alimw404ApplicationJSONObject) {
         this.alimw404ApplicationJSONObject = alimw404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class AlimwResponse {
      */
     
     public Alimw500ApplicationJSON alimw500ApplicationJSONObject;
+
     public AlimwResponse withAlimw500ApplicationJSONObject(Alimw500ApplicationJSON alimw500ApplicationJSONObject) {
         this.alimw500ApplicationJSONObject = alimw500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class AlimwResponse {
      */
     
     public Alimw502ApplicationJSON alimw502ApplicationJSONObject;
+
     public AlimwResponse withAlimw502ApplicationJSONObject(Alimw502ApplicationJSON alimw502ApplicationJSONObject) {
         this.alimw502ApplicationJSONObject = alimw502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class AlimwResponse {
      */
     
     public Alimw503ApplicationJSON alimw503ApplicationJSONObject;
+
     public AlimwResponse withAlimw503ApplicationJSONObject(Alimw503ApplicationJSON alimw503ApplicationJSONObject) {
         this.alimw503ApplicationJSONObject = alimw503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class AlimwResponse {
      */
     
     public Alimw504ApplicationJSON alimw504ApplicationJSONObject;
+
     public AlimwResponse withAlimw504ApplicationJSONObject(Alimw504ApplicationJSON alimw504ApplicationJSONObject) {
         this.alimw504ApplicationJSONObject = alimw504ApplicationJSONObject;
         return this;
     }
     
+    public AlimwResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

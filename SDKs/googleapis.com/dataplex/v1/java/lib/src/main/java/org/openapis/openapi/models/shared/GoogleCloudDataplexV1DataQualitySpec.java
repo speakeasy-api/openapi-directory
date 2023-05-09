@@ -13,14 +13,40 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudDataplexV1DataQualitySpec {
     /**
+     * Optional. A filter applied to all rows in a single DataScan job. The filter needs to be a valid SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 &gt;= 0 AND col2 &lt; 10
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rowFilter")
+    public String rowFilter;
+
+    public GoogleCloudDataplexV1DataQualitySpec withRowFilter(String rowFilter) {
+        this.rowFilter = rowFilter;
+        return this;
+    }
+    
+    /**
      * The list of rules to evaluate against a data source. At least one rule is required.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public GoogleCloudDataplexV1DataQualityRule[] rules;
+
     public GoogleCloudDataplexV1DataQualitySpec withRules(GoogleCloudDataplexV1DataQualityRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    /**
+     * Optional. The percentage of the records to be selected from the dataset for DataScan. Value can range between 0.0 and 100.0 with up to 3 significant decimal digits. Sampling is not applied if sampling_percent is not specified, 0 or 100.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("samplingPercent")
+    public Float samplingPercent;
+
+    public GoogleCloudDataplexV1DataQualitySpec withSamplingPercent(Float samplingPercent) {
+        this.samplingPercent = samplingPercent;
+        return this;
+    }
+    
+    public GoogleCloudDataplexV1DataQualitySpec(){}
 }

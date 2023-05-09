@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETNCBIGeneMappingUsingGETResponse {
     
     public byte[] body;
+
     public GETNCBIGeneMappingUsingGETResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETNCBIGeneMappingUsingGETResponse {
     
     
     public String contentType;
+
     public GETNCBIGeneMappingUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETNCBIGeneMappingUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETNCBIGeneMappingUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETNCBIGeneMappingUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETNCBIGeneMappingUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETNCBIGeneMappingUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

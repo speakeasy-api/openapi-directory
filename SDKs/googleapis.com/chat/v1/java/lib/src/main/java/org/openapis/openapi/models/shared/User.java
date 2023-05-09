@@ -18,6 +18,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public User withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainId")
     public String domainId;
+
     public User withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -40,6 +42,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAnonymous")
     public Boolean isAnonymous;
+
     public User withIsAnonymous(Boolean isAnonymous) {
         this.isAnonymous = isAnonymous;
         return this;
@@ -51,6 +54,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public User withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UserTypeEnum type;
+
     public User withType(UserTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public User(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateNonceResponse {
@@ -12,6 +13,7 @@ public class GenerateNonceResponse {
      */
     
     public org.openapis.openapi.models.shared.AccountNonce accountNonce;
+
     public GenerateNonceResponse withAccountNonce(org.openapis.openapi.models.shared.AccountNonce accountNonce) {
         this.accountNonce = accountNonce;
         return this;
@@ -19,6 +21,7 @@ public class GenerateNonceResponse {
     
     
     public String contentType;
+
     public GenerateNonceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GenerateNonceResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GenerateNonceResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GenerateNonceResponse {
     
     
     public Integer statusCode;
+
     public GenerateNonceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GenerateNonceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateNonceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GenerateNonceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

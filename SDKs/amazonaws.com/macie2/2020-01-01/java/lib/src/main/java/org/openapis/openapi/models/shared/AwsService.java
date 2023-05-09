@@ -15,9 +15,11 @@ public class AwsService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invokedBy")
     public String invokedBy;
+
     public AwsService withInvokedBy(String invokedBy) {
         this.invokedBy = invokedBy;
         return this;
     }
     
+    public AwsService(){}
 }

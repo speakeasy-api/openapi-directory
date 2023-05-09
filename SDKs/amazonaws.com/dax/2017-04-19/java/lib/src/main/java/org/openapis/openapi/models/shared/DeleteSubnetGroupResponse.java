@@ -15,9 +15,11 @@ public class DeleteSubnetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionMessage")
     public String deletionMessage;
+
     public DeleteSubnetGroupResponse withDeletionMessage(String deletionMessage) {
         this.deletionMessage = deletionMessage;
         return this;
     }
     
+    public DeleteSubnetGroupResponse(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CountPendingDecisionTasksInput {
     @JsonProperty("domain")
     public String domain;
+
     public CountPendingDecisionTasksInput withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -16,9 +17,14 @@ public class CountPendingDecisionTasksInput {
     
     @JsonProperty("taskList")
     public TaskList taskList;
+
     public CountPendingDecisionTasksInput withTaskList(TaskList taskList) {
         this.taskList = taskList;
         return this;
     }
     
+    public CountPendingDecisionTasksInput(@JsonProperty("domain") String domain, @JsonProperty("taskList") TaskList taskList) {
+        this.domain = domain;
+        this.taskList = taskList;
+  }
 }

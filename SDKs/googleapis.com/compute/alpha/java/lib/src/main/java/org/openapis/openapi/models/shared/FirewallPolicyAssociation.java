@@ -18,6 +18,7 @@ public class FirewallPolicyAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachmentTarget")
     public String attachmentTarget;
+
     public FirewallPolicyAssociation withAttachmentTarget(String attachmentTarget) {
         this.attachmentTarget = attachmentTarget;
         return this;
@@ -29,6 +30,7 @@ public class FirewallPolicyAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public FirewallPolicyAssociation withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class FirewallPolicyAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewallPolicyId")
     public String firewallPolicyId;
+
     public FirewallPolicyAssociation withFirewallPolicyId(String firewallPolicyId) {
         this.firewallPolicyId = firewallPolicyId;
         return this;
@@ -51,8 +54,21 @@ public class FirewallPolicyAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FirewallPolicyAssociation withName(String name) {
         this.name = name;
+        return this;
+    }
+    
+    /**
+     * An integer indicating the priority of an association. The priority must be a positive value between 1 and 2147483647. Firewall Policies are evaluated from highest to lowest priority where 1 is the highest priority and 2147483647 is the lowest priority. The default value is `1000`. If two associations have the same priority then lexicographical order on association names is applied.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("priority")
+    public Integer priority;
+
+    public FirewallPolicyAssociation withPriority(Integer priority) {
+        this.priority = priority;
         return this;
     }
     
@@ -62,9 +78,11 @@ public class FirewallPolicyAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortName")
     public String shortName;
+
     public FirewallPolicyAssociation withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public FirewallPolicyAssociation(){}
 }

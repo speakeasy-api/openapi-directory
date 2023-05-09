@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2CloudStorageFileSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GooglePrivacyDlpV2CloudStorageFileSet withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GooglePrivacyDlpV2CloudStorageFileSet(){}
 }

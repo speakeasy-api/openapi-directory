@@ -15,6 +15,7 @@ public class CreateAccessPointRequestBodyPosixUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gid")
     public Long gid;
+
     public CreateAccessPointRequestBodyPosixUser withGid(Long gid) {
         this.gid = gid;
         return this;
@@ -23,6 +24,7 @@ public class CreateAccessPointRequestBodyPosixUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryGids")
     public Long[] secondaryGids;
+
     public CreateAccessPointRequestBodyPosixUser withSecondaryGids(Long[] secondaryGids) {
         this.secondaryGids = secondaryGids;
         return this;
@@ -31,9 +33,11 @@ public class CreateAccessPointRequestBodyPosixUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Uid")
     public Long uid;
+
     public CreateAccessPointRequestBodyPosixUser withUid(Long uid) {
         this.uid = uid;
         return this;
     }
     
+    public CreateAccessPointRequestBodyPosixUser(){}
 }

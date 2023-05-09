@@ -15,9 +15,11 @@ public class CreateReportGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportGroup")
     public ReportGroup reportGroup;
+
     public CreateReportGroupOutput withReportGroup(ReportGroup reportGroup) {
         this.reportGroup = reportGroup;
         return this;
     }
     
+    public CreateReportGroupOutput(){}
 }

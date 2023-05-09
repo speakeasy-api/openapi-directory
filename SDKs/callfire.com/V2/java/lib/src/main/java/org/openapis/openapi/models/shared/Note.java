@@ -18,6 +18,7 @@ public class Note {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public Long created;
+
     public Note withCreated(Long created) {
         this.created = created;
         return this;
@@ -29,9 +30,11 @@ public class Note {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public Note withText(String text) {
         this.text = text;
         return this;
     }
     
+    public Note(){}
 }

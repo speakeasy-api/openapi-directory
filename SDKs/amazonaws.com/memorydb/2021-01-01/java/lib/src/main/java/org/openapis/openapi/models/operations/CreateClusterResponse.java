@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateClusterResponse {
@@ -12,6 +13,7 @@ public class CreateClusterResponse {
      */
     
     public Object aclNotFoundFault;
+
     public CreateClusterResponse withACLNotFoundFault(Object aclNotFoundFault) {
         this.aclNotFoundFault = aclNotFoundFault;
         return this;
@@ -22,6 +24,7 @@ public class CreateClusterResponse {
      */
     
     public Object clusterAlreadyExistsFault;
+
     public CreateClusterResponse withClusterAlreadyExistsFault(Object clusterAlreadyExistsFault) {
         this.clusterAlreadyExistsFault = clusterAlreadyExistsFault;
         return this;
@@ -32,6 +35,7 @@ public class CreateClusterResponse {
      */
     
     public Object clusterQuotaForCustomerExceededFault;
+
     public CreateClusterResponse withClusterQuotaForCustomerExceededFault(Object clusterQuotaForCustomerExceededFault) {
         this.clusterQuotaForCustomerExceededFault = clusterQuotaForCustomerExceededFault;
         return this;
@@ -39,6 +43,7 @@ public class CreateClusterResponse {
     
     
     public String contentType;
+
     public CreateClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateClusterResponse createClusterResponse;
+
     public CreateClusterResponse withCreateClusterResponse(org.openapis.openapi.models.shared.CreateClusterResponse createClusterResponse) {
         this.createClusterResponse = createClusterResponse;
         return this;
@@ -59,6 +65,7 @@ public class CreateClusterResponse {
      */
     
     public Object insufficientClusterCapacityFault;
+
     public CreateClusterResponse withInsufficientClusterCapacityFault(Object insufficientClusterCapacityFault) {
         this.insufficientClusterCapacityFault = insufficientClusterCapacityFault;
         return this;
@@ -69,6 +76,7 @@ public class CreateClusterResponse {
      */
     
     public Object invalidACLStateFault;
+
     public CreateClusterResponse withInvalidACLStateFault(Object invalidACLStateFault) {
         this.invalidACLStateFault = invalidACLStateFault;
         return this;
@@ -79,6 +87,7 @@ public class CreateClusterResponse {
      */
     
     public Object invalidCredentialsException;
+
     public CreateClusterResponse withInvalidCredentialsException(Object invalidCredentialsException) {
         this.invalidCredentialsException = invalidCredentialsException;
         return this;
@@ -89,6 +98,7 @@ public class CreateClusterResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public CreateClusterResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -99,6 +109,7 @@ public class CreateClusterResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CreateClusterResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -109,6 +120,7 @@ public class CreateClusterResponse {
      */
     
     public Object invalidVPCNetworkStateFault;
+
     public CreateClusterResponse withInvalidVPCNetworkStateFault(Object invalidVPCNetworkStateFault) {
         this.invalidVPCNetworkStateFault = invalidVPCNetworkStateFault;
         return this;
@@ -119,6 +131,7 @@ public class CreateClusterResponse {
      */
     
     public Object nodeQuotaForClusterExceededFault;
+
     public CreateClusterResponse withNodeQuotaForClusterExceededFault(Object nodeQuotaForClusterExceededFault) {
         this.nodeQuotaForClusterExceededFault = nodeQuotaForClusterExceededFault;
         return this;
@@ -129,6 +142,7 @@ public class CreateClusterResponse {
      */
     
     public Object nodeQuotaForCustomerExceededFault;
+
     public CreateClusterResponse withNodeQuotaForCustomerExceededFault(Object nodeQuotaForCustomerExceededFault) {
         this.nodeQuotaForCustomerExceededFault = nodeQuotaForCustomerExceededFault;
         return this;
@@ -139,6 +153,7 @@ public class CreateClusterResponse {
      */
     
     public Object parameterGroupNotFoundFault;
+
     public CreateClusterResponse withParameterGroupNotFoundFault(Object parameterGroupNotFoundFault) {
         this.parameterGroupNotFoundFault = parameterGroupNotFoundFault;
         return this;
@@ -149,6 +164,7 @@ public class CreateClusterResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public CreateClusterResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -159,6 +175,7 @@ public class CreateClusterResponse {
      */
     
     public Object shardsPerClusterQuotaExceededFault;
+
     public CreateClusterResponse withShardsPerClusterQuotaExceededFault(Object shardsPerClusterQuotaExceededFault) {
         this.shardsPerClusterQuotaExceededFault = shardsPerClusterQuotaExceededFault;
         return this;
@@ -166,6 +183,7 @@ public class CreateClusterResponse {
     
     
     public Integer statusCode;
+
     public CreateClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -173,6 +191,7 @@ public class CreateClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -183,6 +202,7 @@ public class CreateClusterResponse {
      */
     
     public Object subnetGroupNotFoundFault;
+
     public CreateClusterResponse withSubnetGroupNotFoundFault(Object subnetGroupNotFoundFault) {
         this.subnetGroupNotFoundFault = subnetGroupNotFoundFault;
         return this;
@@ -193,9 +213,14 @@ public class CreateClusterResponse {
      */
     
     public Object tagQuotaPerResourceExceeded;
+
     public CreateClusterResponse withTagQuotaPerResourceExceeded(Object tagQuotaPerResourceExceeded) {
         this.tagQuotaPerResourceExceeded = tagQuotaPerResourceExceeded;
         return this;
     }
     
+    public CreateClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

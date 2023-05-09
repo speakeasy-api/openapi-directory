@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDataIntegrationResponse {
@@ -12,6 +13,7 @@ public class CreateDataIntegrationResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDataIntegrationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateDataIntegrationResponse {
     
     
     public String contentType;
+
     public CreateDataIntegrationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateDataIntegrationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDataIntegrationResponse createDataIntegrationResponse;
+
     public CreateDataIntegrationResponse withCreateDataIntegrationResponse(org.openapis.openapi.models.shared.CreateDataIntegrationResponse createDataIntegrationResponse) {
         this.createDataIntegrationResponse = createDataIntegrationResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateDataIntegrationResponse {
      */
     
     public Object duplicateResourceException;
+
     public CreateDataIntegrationResponse withDuplicateResourceException(Object duplicateResourceException) {
         this.duplicateResourceException = duplicateResourceException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDataIntegrationResponse {
      */
     
     public Object internalServiceError;
+
     public CreateDataIntegrationResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -59,6 +65,7 @@ public class CreateDataIntegrationResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateDataIntegrationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -66,6 +73,7 @@ public class CreateDataIntegrationResponse {
     
     
     public Integer statusCode;
+
     public CreateDataIntegrationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateDataIntegrationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDataIntegrationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateDataIntegrationResponse {
      */
     
     public Object resourceQuotaExceededException;
+
     public CreateDataIntegrationResponse withResourceQuotaExceededException(Object resourceQuotaExceededException) {
         this.resourceQuotaExceededException = resourceQuotaExceededException;
         return this;
@@ -93,9 +103,14 @@ public class CreateDataIntegrationResponse {
      */
     
     public Object throttlingException;
+
     public CreateDataIntegrationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateDataIntegrationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class SecurityPolicyRulePreconfiguredWafConfigExclusion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestCookiesToExclude")
     public SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams[] requestCookiesToExclude;
+
     public SecurityPolicyRulePreconfiguredWafConfigExclusion withRequestCookiesToExclude(SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams[] requestCookiesToExclude) {
         this.requestCookiesToExclude = requestCookiesToExclude;
         return this;
@@ -26,6 +27,7 @@ public class SecurityPolicyRulePreconfiguredWafConfigExclusion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestHeadersToExclude")
     public SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams[] requestHeadersToExclude;
+
     public SecurityPolicyRulePreconfiguredWafConfigExclusion withRequestHeadersToExclude(SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams[] requestHeadersToExclude) {
         this.requestHeadersToExclude = requestHeadersToExclude;
         return this;
@@ -37,6 +39,7 @@ public class SecurityPolicyRulePreconfiguredWafConfigExclusion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestQueryParamsToExclude")
     public SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams[] requestQueryParamsToExclude;
+
     public SecurityPolicyRulePreconfiguredWafConfigExclusion withRequestQueryParamsToExclude(SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams[] requestQueryParamsToExclude) {
         this.requestQueryParamsToExclude = requestQueryParamsToExclude;
         return this;
@@ -48,6 +51,7 @@ public class SecurityPolicyRulePreconfiguredWafConfigExclusion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestUrisToExclude")
     public SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams[] requestUrisToExclude;
+
     public SecurityPolicyRulePreconfiguredWafConfigExclusion withRequestUrisToExclude(SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams[] requestUrisToExclude) {
         this.requestUrisToExclude = requestUrisToExclude;
         return this;
@@ -59,6 +63,7 @@ public class SecurityPolicyRulePreconfiguredWafConfigExclusion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetRuleIds")
     public String[] targetRuleIds;
+
     public SecurityPolicyRulePreconfiguredWafConfigExclusion withTargetRuleIds(String[] targetRuleIds) {
         this.targetRuleIds = targetRuleIds;
         return this;
@@ -70,9 +75,11 @@ public class SecurityPolicyRulePreconfiguredWafConfigExclusion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetRuleSet")
     public String targetRuleSet;
+
     public SecurityPolicyRulePreconfiguredWafConfigExclusion withTargetRuleSet(String targetRuleSet) {
         this.targetRuleSet = targetRuleSet;
         return this;
     }
     
+    public SecurityPolicyRulePreconfiguredWafConfigExclusion(){}
 }

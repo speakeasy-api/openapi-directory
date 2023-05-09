@@ -14,7 +14,8 @@ public enum ExecutionStateEnum {
     ACTIVE("ACTIVE"),
     SUCCEEDED("SUCCEEDED"),
     FAILED("FAILED"),
-    CANCELLED("CANCELLED");
+    CANCELLED("CANCELLED"),
+    UNAVAILABLE("UNAVAILABLE");
 
     @JsonValue
     public final String value;

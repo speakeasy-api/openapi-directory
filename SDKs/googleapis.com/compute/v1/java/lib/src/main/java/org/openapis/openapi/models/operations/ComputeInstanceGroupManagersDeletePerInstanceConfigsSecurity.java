@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeInstanceGroupManagersDeletePerInstanceConfigsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstanceGroupManagersDeletePerInstanceConfigsSecurityOption1 option1;
+
     public ComputeInstanceGroupManagersDeletePerInstanceConfigsSecurity withOption1(ComputeInstanceGroupManagersDeletePerInstanceConfigsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeInstanceGroupManagersDeletePerInstanceConfigsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstanceGroupManagersDeletePerInstanceConfigsSecurityOption2 option2;
+
     public ComputeInstanceGroupManagersDeletePerInstanceConfigsSecurity withOption2(ComputeInstanceGroupManagersDeletePerInstanceConfigsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsSecurity(){}
 }

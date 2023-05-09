@@ -15,6 +15,7 @@ public class DescribeConnectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorConfigurations")
     public java.util.Map<String, ConnectorConfiguration> connectorConfigurations;
+
     public DescribeConnectorsResponse withConnectorConfigurations(java.util.Map<String, ConnectorConfiguration> connectorConfigurations) {
         this.connectorConfigurations = connectorConfigurations;
         return this;
@@ -23,6 +24,7 @@ public class DescribeConnectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectors")
     public ConnectorDetail[] connectors;
+
     public DescribeConnectorsResponse withConnectors(ConnectorDetail[] connectors) {
         this.connectors = connectors;
         return this;
@@ -31,9 +33,11 @@ public class DescribeConnectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeConnectorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeConnectorsResponse(){}
 }

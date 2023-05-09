@@ -67,12 +67,10 @@ public class FundsConfirmations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFundsConfirmationConsentsResponse res = new org.openapis.openapi.models.operations.CreateFundsConfirmationConsentsResponse() {{
+        org.openapis.openapi.models.operations.CreateFundsConfirmationConsentsResponse res = new org.openapis.openapi.models.operations.CreateFundsConfirmationConsentsResponse(contentType, httpRes.statusCode()) {{
             obFundsConfirmationConsentResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -134,12 +132,10 @@ public class FundsConfirmations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFundsConfirmationsResponse res = new org.openapis.openapi.models.operations.CreateFundsConfirmationsResponse() {{
+        org.openapis.openapi.models.operations.CreateFundsConfirmationsResponse res = new org.openapis.openapi.models.operations.CreateFundsConfirmationsResponse(contentType, httpRes.statusCode()) {{
             obFundsConfirmationResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -196,11 +192,9 @@ public class FundsConfirmations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFundsConfirmationConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.DeleteFundsConfirmationConsentsConsentIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteFundsConfirmationConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.DeleteFundsConfirmationConsentsConsentIdResponse(contentType, httpRes.statusCode()) {{
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 405 || httpRes.statusCode() == 406) {
@@ -250,12 +244,10 @@ public class FundsConfirmations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFundsConfirmationConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.GetFundsConfirmationConsentsConsentIdResponse() {{
+        org.openapis.openapi.models.operations.GetFundsConfirmationConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.GetFundsConfirmationConsentsConsentIdResponse(contentType, httpRes.statusCode()) {{
             obFundsConfirmationConsentResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

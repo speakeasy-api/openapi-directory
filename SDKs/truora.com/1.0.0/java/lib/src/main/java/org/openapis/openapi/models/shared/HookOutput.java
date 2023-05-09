@@ -18,6 +18,7 @@ public class HookOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hooks")
     public Hook[] hooks;
+
     public HookOutput withHooks(Hook[] hooks) {
         this.hooks = hooks;
         return this;
@@ -29,6 +30,7 @@ public class HookOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public HookOutput withNext(String next) {
         this.next = next;
         return this;
@@ -40,6 +42,7 @@ public class HookOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public HookOutput withSelf(String self) {
         this.self = self;
         return this;
@@ -51,9 +54,11 @@ public class HookOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signing_key")
     public String signingKey;
+
     public HookOutput withSigningKey(String signingKey) {
         this.signingKey = signingKey;
         return this;
     }
     
+    public HookOutput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrgArticlesResponse {
@@ -12,6 +13,7 @@ public class GetOrgArticlesResponse {
      */
     
     public org.openapis.openapi.models.shared.ArticleIndex[] articleIndices;
+
     public GetOrgArticlesResponse withArticleIndices(org.openapis.openapi.models.shared.ArticleIndex[] articleIndices) {
         this.articleIndices = articleIndices;
         return this;
@@ -19,6 +21,7 @@ public class GetOrgArticlesResponse {
     
     
     public String contentType;
+
     public GetOrgArticlesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetOrgArticlesResponse {
     
     
     public Integer statusCode;
+
     public GetOrgArticlesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetOrgArticlesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrgArticlesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOrgArticlesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class UserIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assumedRole")
     public AssumedRole assumedRole;
+
     public UserIdentity withAssumedRole(AssumedRole assumedRole) {
         this.assumedRole = assumedRole;
         return this;
@@ -23,6 +24,7 @@ public class UserIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsAccount")
     public AwsAccount awsAccount;
+
     public UserIdentity withAwsAccount(AwsAccount awsAccount) {
         this.awsAccount = awsAccount;
         return this;
@@ -31,6 +33,7 @@ public class UserIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsService")
     public AwsService awsService;
+
     public UserIdentity withAwsService(AwsService awsService) {
         this.awsService = awsService;
         return this;
@@ -39,6 +42,7 @@ public class UserIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("federatedUser")
     public FederatedUser federatedUser;
+
     public UserIdentity withFederatedUser(FederatedUser federatedUser) {
         this.federatedUser = federatedUser;
         return this;
@@ -47,6 +51,7 @@ public class UserIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamUser")
     public IamUser iamUser;
+
     public UserIdentity withIamUser(IamUser iamUser) {
         this.iamUser = iamUser;
         return this;
@@ -55,6 +60,7 @@ public class UserIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("root")
     public UserIdentityRoot root;
+
     public UserIdentity withRoot(UserIdentityRoot root) {
         this.root = root;
         return this;
@@ -63,9 +69,11 @@ public class UserIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UserIdentityTypeEnum type;
+
     public UserIdentity withType(UserIdentityTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UserIdentity(){}
 }

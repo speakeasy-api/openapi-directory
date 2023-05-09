@@ -15,6 +15,7 @@ public class RecoveryInstanceDataReplicationInitiationStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public RecoveryInstanceDataReplicationInitiationStepNameEnum name;
+
     public RecoveryInstanceDataReplicationInitiationStep withName(RecoveryInstanceDataReplicationInitiationStepNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class RecoveryInstanceDataReplicationInitiationStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RecoveryInstanceDataReplicationInitiationStepStatusEnum status;
+
     public RecoveryInstanceDataReplicationInitiationStep withStatus(RecoveryInstanceDataReplicationInitiationStepStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public RecoveryInstanceDataReplicationInitiationStep(){}
 }

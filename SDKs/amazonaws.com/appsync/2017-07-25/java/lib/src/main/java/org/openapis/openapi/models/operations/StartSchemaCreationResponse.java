@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartSchemaCreationResponse {
@@ -12,6 +13,7 @@ public class StartSchemaCreationResponse {
      */
     
     public Object badRequestException;
+
     public StartSchemaCreationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class StartSchemaCreationResponse {
      */
     
     public Object concurrentModificationException;
+
     public StartSchemaCreationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class StartSchemaCreationResponse {
     
     
     public String contentType;
+
     public StartSchemaCreationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartSchemaCreationResponse {
      */
     
     public Object internalFailureException;
+
     public StartSchemaCreationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class StartSchemaCreationResponse {
      */
     
     public Object notFoundException;
+
     public StartSchemaCreationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartSchemaCreationResponse {
      */
     
     public org.openapis.openapi.models.shared.StartSchemaCreationResponse startSchemaCreationResponse;
+
     public StartSchemaCreationResponse withStartSchemaCreationResponse(org.openapis.openapi.models.shared.StartSchemaCreationResponse startSchemaCreationResponse) {
         this.startSchemaCreationResponse = startSchemaCreationResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartSchemaCreationResponse {
     
     
     public Integer statusCode;
+
     public StartSchemaCreationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartSchemaCreationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartSchemaCreationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class StartSchemaCreationResponse {
      */
     
     public Object unauthorizedException;
+
     public StartSchemaCreationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public StartSchemaCreationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

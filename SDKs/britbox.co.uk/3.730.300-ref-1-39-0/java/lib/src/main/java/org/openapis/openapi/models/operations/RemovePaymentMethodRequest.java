@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemovePaymentMethodRequest {
@@ -32,6 +33,7 @@ public class RemovePaymentMethodRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public RemovePaymentMethodRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -42,6 +44,7 @@ public class RemovePaymentMethodRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public RemovePaymentMethodRequest withId(String id) {
         this.id = id;
         return this;
@@ -62,9 +65,13 @@ public class RemovePaymentMethodRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public RemovePaymentMethodRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public RemovePaymentMethodRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

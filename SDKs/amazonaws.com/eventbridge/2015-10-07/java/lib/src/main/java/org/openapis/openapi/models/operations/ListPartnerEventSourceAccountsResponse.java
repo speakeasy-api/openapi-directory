@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPartnerEventSourceAccountsResponse {
     
     public String contentType;
+
     public ListPartnerEventSourceAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPartnerEventSourceAccountsResponse {
      */
     
     public Object internalException;
+
     public ListPartnerEventSourceAccountsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class ListPartnerEventSourceAccountsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPartnerEventSourceAccountsResponse listPartnerEventSourceAccountsResponse;
+
     public ListPartnerEventSourceAccountsResponse withListPartnerEventSourceAccountsResponse(org.openapis.openapi.models.shared.ListPartnerEventSourceAccountsResponse listPartnerEventSourceAccountsResponse) {
         this.listPartnerEventSourceAccountsResponse = listPartnerEventSourceAccountsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListPartnerEventSourceAccountsResponse {
      */
     
     public Object operationDisabledException;
+
     public ListPartnerEventSourceAccountsResponse withOperationDisabledException(Object operationDisabledException) {
         this.operationDisabledException = operationDisabledException;
         return this;
@@ -49,6 +54,7 @@ public class ListPartnerEventSourceAccountsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListPartnerEventSourceAccountsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListPartnerEventSourceAccountsResponse {
     
     
     public Integer statusCode;
+
     public ListPartnerEventSourceAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListPartnerEventSourceAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPartnerEventSourceAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListPartnerEventSourceAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class GetDataCatalogEncryptionSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCatalogEncryptionSettings")
     public DataCatalogEncryptionSettings dataCatalogEncryptionSettings;
+
     public GetDataCatalogEncryptionSettingsResponse withDataCatalogEncryptionSettings(DataCatalogEncryptionSettings dataCatalogEncryptionSettings) {
         this.dataCatalogEncryptionSettings = dataCatalogEncryptionSettings;
         return this;
     }
     
+    public GetDataCatalogEncryptionSettingsResponse(){}
 }

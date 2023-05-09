@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeBundleTasksResult {
     
     public DescribeBundleTasksResultBundleTasks[] bundleTasks;
+
     public DescribeBundleTasksResult withBundleTasks(DescribeBundleTasksResultBundleTasks[] bundleTasks) {
         this.bundleTasks = bundleTasks;
         return this;
     }
     
+    public DescribeBundleTasksResult(){}
 }

@@ -12,6 +12,7 @@ public class CustomerTokenCreationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     public Address billingAddress;
+
     public CustomerTokenCreationRequest withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -20,6 +21,7 @@ public class CustomerTokenCreationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public Customer customer;
+
     public CustomerTokenCreationRequest withCustomer(Customer customer) {
         this.customer = customer;
         return this;
@@ -30,6 +32,7 @@ public class CustomerTokenCreationRequest {
      */
     @JsonProperty("description")
     public String description;
+
     public CustomerTokenCreationRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +43,7 @@ public class CustomerTokenCreationRequest {
      */
     @JsonProperty("intended_use")
     public CustomerTokenCreationRequestIntendedUseEnum intendedUse;
+
     public CustomerTokenCreationRequest withIntendedUse(CustomerTokenCreationRequestIntendedUseEnum intendedUse) {
         this.intendedUse = intendedUse;
         return this;
@@ -50,6 +54,7 @@ public class CustomerTokenCreationRequest {
      */
     @JsonProperty("locale")
     public String locale;
+
     public CustomerTokenCreationRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -60,6 +65,7 @@ public class CustomerTokenCreationRequest {
      */
     @JsonProperty("purchase_country")
     public String purchaseCountry;
+
     public CustomerTokenCreationRequest withPurchaseCountry(String purchaseCountry) {
         this.purchaseCountry = purchaseCountry;
         return this;
@@ -70,9 +76,17 @@ public class CustomerTokenCreationRequest {
      */
     @JsonProperty("purchase_currency")
     public String purchaseCurrency;
+
     public CustomerTokenCreationRequest withPurchaseCurrency(String purchaseCurrency) {
         this.purchaseCurrency = purchaseCurrency;
         return this;
     }
     
+    public CustomerTokenCreationRequest(@JsonProperty("description") String description, @JsonProperty("intended_use") CustomerTokenCreationRequestIntendedUseEnum intendedUse, @JsonProperty("locale") String locale, @JsonProperty("purchase_country") String purchaseCountry, @JsonProperty("purchase_currency") String purchaseCurrency) {
+        this.description = description;
+        this.intendedUse = intendedUse;
+        this.locale = locale;
+        this.purchaseCountry = purchaseCountry;
+        this.purchaseCurrency = purchaseCurrency;
+  }
 }

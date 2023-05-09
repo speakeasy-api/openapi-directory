@@ -15,9 +15,11 @@ public class CreateTaskSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskSet")
     public TaskSet taskSet;
+
     public CreateTaskSetResponse withTaskSet(TaskSet taskSet) {
         this.taskSet = taskSet;
         return this;
     }
     
+    public CreateTaskSetResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListOpsItemRelatedItemsResponse {
     
     public String contentType;
+
     public ListOpsItemRelatedItemsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListOpsItemRelatedItemsResponse {
      */
     
     public Object internalServerError;
+
     public ListOpsItemRelatedItemsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ListOpsItemRelatedItemsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListOpsItemRelatedItemsResponse listOpsItemRelatedItemsResponse;
+
     public ListOpsItemRelatedItemsResponse withListOpsItemRelatedItemsResponse(org.openapis.openapi.models.shared.ListOpsItemRelatedItemsResponse listOpsItemRelatedItemsResponse) {
         this.listOpsItemRelatedItemsResponse = listOpsItemRelatedItemsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListOpsItemRelatedItemsResponse {
      */
     
     public Object opsItemInvalidParameterException;
+
     public ListOpsItemRelatedItemsResponse withOpsItemInvalidParameterException(Object opsItemInvalidParameterException) {
         this.opsItemInvalidParameterException = opsItemInvalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class ListOpsItemRelatedItemsResponse {
     
     
     public Integer statusCode;
+
     public ListOpsItemRelatedItemsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListOpsItemRelatedItemsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListOpsItemRelatedItemsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListOpsItemRelatedItemsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

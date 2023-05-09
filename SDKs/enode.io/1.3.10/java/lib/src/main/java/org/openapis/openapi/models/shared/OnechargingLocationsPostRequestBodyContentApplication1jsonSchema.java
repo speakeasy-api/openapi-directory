@@ -17,6 +17,7 @@ public class OnechargingLocationsPostRequestBodyContentApplication1jsonSchema {
      */
     @JsonProperty("id")
     public String id;
+
     public OnechargingLocationsPostRequestBodyContentApplication1jsonSchema withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +29,7 @@ public class OnechargingLocationsPostRequestBodyContentApplication1jsonSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public OnechargingLocationsPostRequestBodyContentApplication1jsonSchema withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -39,6 +41,7 @@ public class OnechargingLocationsPostRequestBodyContentApplication1jsonSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public OnechargingLocationsPostRequestBodyContentApplication1jsonSchema withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -50,9 +53,13 @@ public class OnechargingLocationsPostRequestBodyContentApplication1jsonSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OnechargingLocationsPostRequestBodyContentApplication1jsonSchema withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OnechargingLocationsPostRequestBodyContentApplication1jsonSchema(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

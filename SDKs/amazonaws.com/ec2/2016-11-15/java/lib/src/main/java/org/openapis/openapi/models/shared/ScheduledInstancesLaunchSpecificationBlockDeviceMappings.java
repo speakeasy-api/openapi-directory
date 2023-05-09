@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ScheduledInstancesLaunchSpecificationBlockDeviceMappings {
     
     public String deviceName;
+
     public ScheduledInstancesLaunchSpecificationBlockDeviceMappings withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -19,6 +20,7 @@ public class ScheduledInstancesLaunchSpecificationBlockDeviceMappings {
     
     
     public ScheduledInstancesEbs ebs;
+
     public ScheduledInstancesLaunchSpecificationBlockDeviceMappings withEbs(ScheduledInstancesEbs ebs) {
         this.ebs = ebs;
         return this;
@@ -26,6 +28,7 @@ public class ScheduledInstancesLaunchSpecificationBlockDeviceMappings {
     
     
     public String noDevice;
+
     public ScheduledInstancesLaunchSpecificationBlockDeviceMappings withNoDevice(String noDevice) {
         this.noDevice = noDevice;
         return this;
@@ -33,9 +36,11 @@ public class ScheduledInstancesLaunchSpecificationBlockDeviceMappings {
     
     
     public String virtualName;
+
     public ScheduledInstancesLaunchSpecificationBlockDeviceMappings withVirtualName(String virtualName) {
         this.virtualName = virtualName;
         return this;
     }
     
+    public ScheduledInstancesLaunchSpecificationBlockDeviceMappings(){}
 }

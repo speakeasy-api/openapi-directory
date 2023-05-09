@@ -18,6 +18,7 @@ public class RoutineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arguments")
     public Argument[] arguments;
+
     public RoutineInput withArguments(Argument[] arguments) {
         this.arguments = arguments;
         return this;
@@ -29,6 +30,7 @@ public class RoutineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definitionBody")
     public String definitionBody;
+
     public RoutineInput withDefinitionBody(String definitionBody) {
         this.definitionBody = definitionBody;
         return this;
@@ -40,6 +42,7 @@ public class RoutineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RoutineInput withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class RoutineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("determinismLevel")
     public RoutineDeterminismLevelEnum determinismLevel;
+
     public RoutineInput withDeterminismLevel(RoutineDeterminismLevelEnum determinismLevel) {
         this.determinismLevel = determinismLevel;
         return this;
@@ -62,6 +66,7 @@ public class RoutineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importedLibraries")
     public String[] importedLibraries;
+
     public RoutineInput withImportedLibraries(String[] importedLibraries) {
         this.importedLibraries = importedLibraries;
         return this;
@@ -73,6 +78,7 @@ public class RoutineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public RoutineLanguageEnum language;
+
     public RoutineInput withLanguage(RoutineLanguageEnum language) {
         this.language = language;
         return this;
@@ -84,6 +90,7 @@ public class RoutineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteFunctionOptions")
     public RemoteFunctionOptions remoteFunctionOptions;
+
     public RoutineInput withRemoteFunctionOptions(RemoteFunctionOptions remoteFunctionOptions) {
         this.remoteFunctionOptions = remoteFunctionOptions;
         return this;
@@ -95,6 +102,7 @@ public class RoutineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnTableType")
     public StandardSqlTableType returnTableType;
+
     public RoutineInput withReturnTableType(StandardSqlTableType returnTableType) {
         this.returnTableType = returnTableType;
         return this;
@@ -106,6 +114,7 @@ public class RoutineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnType")
     public StandardSqlDataType returnType;
+
     public RoutineInput withReturnType(StandardSqlDataType returnType) {
         this.returnType = returnType;
         return this;
@@ -114,6 +123,7 @@ public class RoutineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routineReference")
     public RoutineReference routineReference;
+
     public RoutineInput withRoutineReference(RoutineReference routineReference) {
         this.routineReference = routineReference;
         return this;
@@ -125,6 +135,7 @@ public class RoutineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routineType")
     public RoutineRoutineTypeEnum routineType;
+
     public RoutineInput withRoutineType(RoutineRoutineTypeEnum routineType) {
         this.routineType = routineType;
         return this;
@@ -136,6 +147,7 @@ public class RoutineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkOptions")
     public SparkOptions sparkOptions;
+
     public RoutineInput withSparkOptions(SparkOptions sparkOptions) {
         this.sparkOptions = sparkOptions;
         return this;
@@ -147,9 +159,11 @@ public class RoutineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strictMode")
     public Boolean strictMode;
+
     public RoutineInput withStrictMode(Boolean strictMode) {
         this.strictMode = strictMode;
         return this;
     }
     
+    public RoutineInput(){}
 }

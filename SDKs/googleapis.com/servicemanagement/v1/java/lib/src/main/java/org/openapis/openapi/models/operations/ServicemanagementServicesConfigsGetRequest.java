@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServicemanagementServicesConfigsGetRequest {
@@ -12,6 +13,7 @@ public class ServicemanagementServicesConfigsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ServicemanagementServicesConfigsGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ServicemanagementServicesConfigsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ServicemanagementServicesConfigsGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ServicemanagementServicesConfigsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ServicemanagementServicesConfigsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ServicemanagementServicesConfigsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ServicemanagementServicesConfigsGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ServicemanagementServicesConfigsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=configId")
     public String configId;
+
     public ServicemanagementServicesConfigsGetRequest withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -62,6 +68,7 @@ public class ServicemanagementServicesConfigsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ServicemanagementServicesConfigsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class ServicemanagementServicesConfigsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ServicemanagementServicesConfigsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class ServicemanagementServicesConfigsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ServicemanagementServicesConfigsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class ServicemanagementServicesConfigsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ServicemanagementServicesConfigsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class ServicemanagementServicesConfigsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ServicemanagementServicesConfigsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class ServicemanagementServicesConfigsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceName")
     public String serviceName;
+
     public ServicemanagementServicesConfigsGetRequest withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -122,6 +134,7 @@ public class ServicemanagementServicesConfigsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ServicemanagementServicesConfigsGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -132,6 +145,7 @@ public class ServicemanagementServicesConfigsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ServicemanagementServicesConfigsGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -142,9 +156,14 @@ public class ServicemanagementServicesConfigsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public ServicemanagementServicesConfigsGetViewEnum view;
+
     public ServicemanagementServicesConfigsGetRequest withView(ServicemanagementServicesConfigsGetViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public ServicemanagementServicesConfigsGetRequest(@JsonProperty("configId") String configId, @JsonProperty("serviceName") String serviceName) {
+        this.configId = configId;
+        this.serviceName = serviceName;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudIdentitytoolkitAdminV2IdpCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x509Certificate")
     public String x509Certificate;
+
     public GoogleCloudIdentitytoolkitAdminV2IdpCertificate withX509Certificate(String x509Certificate) {
         this.x509Certificate = x509Certificate;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2IdpCertificate(){}
 }

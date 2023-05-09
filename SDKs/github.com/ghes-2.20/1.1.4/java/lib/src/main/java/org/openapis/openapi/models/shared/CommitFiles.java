@@ -12,6 +12,7 @@ public class CommitFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additions")
     public Long additions;
+
     public CommitFiles withAdditions(Long additions) {
         this.additions = additions;
         return this;
@@ -20,6 +21,7 @@ public class CommitFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blob_url")
     public String blobUrl;
+
     public CommitFiles withBlobUrl(String blobUrl) {
         this.blobUrl = blobUrl;
         return this;
@@ -28,6 +30,7 @@ public class CommitFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changes")
     public Long changes;
+
     public CommitFiles withChanges(Long changes) {
         this.changes = changes;
         return this;
@@ -36,6 +39,7 @@ public class CommitFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents_url")
     public String contentsUrl;
+
     public CommitFiles withContentsUrl(String contentsUrl) {
         this.contentsUrl = contentsUrl;
         return this;
@@ -44,6 +48,7 @@ public class CommitFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletions")
     public Long deletions;
+
     public CommitFiles withDeletions(Long deletions) {
         this.deletions = deletions;
         return this;
@@ -52,6 +57,7 @@ public class CommitFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public CommitFiles withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -60,6 +66,7 @@ public class CommitFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patch")
     public String patch;
+
     public CommitFiles withPatch(String patch) {
         this.patch = patch;
         return this;
@@ -68,6 +75,7 @@ public class CommitFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous_filename")
     public String previousFilename;
+
     public CommitFiles withPreviousFilename(String previousFilename) {
         this.previousFilename = previousFilename;
         return this;
@@ -76,6 +84,7 @@ public class CommitFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw_url")
     public String rawUrl;
+
     public CommitFiles withRawUrl(String rawUrl) {
         this.rawUrl = rawUrl;
         return this;
@@ -84,6 +93,7 @@ public class CommitFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha")
     public String sha;
+
     public CommitFiles withSha(String sha) {
         this.sha = sha;
         return this;
@@ -92,9 +102,11 @@ public class CommitFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public CommitFiles withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public CommitFiles(){}
 }

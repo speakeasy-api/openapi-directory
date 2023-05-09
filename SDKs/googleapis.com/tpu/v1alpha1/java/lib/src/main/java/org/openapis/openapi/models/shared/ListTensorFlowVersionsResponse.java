@@ -18,6 +18,7 @@ public class ListTensorFlowVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTensorFlowVersionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListTensorFlowVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tensorflowVersions")
     public TensorFlowVersion[] tensorflowVersions;
+
     public ListTensorFlowVersionsResponse withTensorflowVersions(TensorFlowVersion[] tensorflowVersions) {
         this.tensorflowVersions = tensorflowVersions;
         return this;
@@ -40,9 +42,11 @@ public class ListTensorFlowVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListTensorFlowVersionsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListTensorFlowVersionsResponse(){}
 }

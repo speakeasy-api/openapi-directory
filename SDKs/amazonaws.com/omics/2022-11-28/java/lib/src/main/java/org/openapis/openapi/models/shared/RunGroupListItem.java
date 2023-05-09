@@ -20,6 +20,7 @@ public class RunGroupListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public RunGroupListItem withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class RunGroupListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public RunGroupListItem withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class RunGroupListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RunGroupListItem withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class RunGroupListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxCpus")
     public Long maxCpus;
+
     public RunGroupListItem withMaxCpus(Long maxCpus) {
         this.maxCpus = maxCpus;
         return this;
@@ -54,6 +58,7 @@ public class RunGroupListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDuration")
     public Long maxDuration;
+
     public RunGroupListItem withMaxDuration(Long maxDuration) {
         this.maxDuration = maxDuration;
         return this;
@@ -62,6 +67,7 @@ public class RunGroupListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRuns")
     public Long maxRuns;
+
     public RunGroupListItem withMaxRuns(Long maxRuns) {
         this.maxRuns = maxRuns;
         return this;
@@ -70,9 +76,11 @@ public class RunGroupListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RunGroupListItem withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RunGroupListItem(){}
 }

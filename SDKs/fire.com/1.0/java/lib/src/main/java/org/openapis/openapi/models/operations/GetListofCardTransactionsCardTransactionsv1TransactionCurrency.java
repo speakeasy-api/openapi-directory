@@ -18,6 +18,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionCurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public GetListofCardTransactionsCardTransactionsv1TransactionCurrencyCodeEnum code;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionCurrency withCode(GetListofCardTransactionsCardTransactionsv1TransactionCurrencyCodeEnum code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionCurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionCurrency withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public GetListofCardTransactionsCardTransactionsv1TransactionCurrency(){}
 }

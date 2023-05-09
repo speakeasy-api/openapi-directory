@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesMode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFarePaying")
     public Boolean isFarePaying;
+
     public TflApiPresentationEntitiesMode withIsFarePaying(Boolean isFarePaying) {
         this.isFarePaying = isFarePaying;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesMode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isScheduledService")
     public Boolean isScheduledService;
+
     public TflApiPresentationEntitiesMode withIsScheduledService(Boolean isScheduledService) {
         this.isScheduledService = isScheduledService;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesMode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTflService")
     public Boolean isTflService;
+
     public TflApiPresentationEntitiesMode withIsTflService(Boolean isTflService) {
         this.isTflService = isTflService;
         return this;
@@ -36,6 +39,7 @@ public class TflApiPresentationEntitiesMode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modeName")
     public String modeName;
+
     public TflApiPresentationEntitiesMode withModeName(String modeName) {
         this.modeName = modeName;
         return this;
@@ -44,6 +48,7 @@ public class TflApiPresentationEntitiesMode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("motType")
     public String motType;
+
     public TflApiPresentationEntitiesMode withMotType(String motType) {
         this.motType = motType;
         return this;
@@ -52,9 +57,11 @@ public class TflApiPresentationEntitiesMode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public TflApiPresentationEntitiesMode withNetwork(String network) {
         this.network = network;
         return this;
     }
     
+    public TflApiPresentationEntitiesMode(){}
 }

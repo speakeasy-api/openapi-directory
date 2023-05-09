@@ -18,6 +18,7 @@ public class ListUsableSubnetworksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListUsableSubnetworksResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListUsableSubnetworksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetworks")
     public UsableSubnetwork[] subnetworks;
+
     public ListUsableSubnetworksResponse withSubnetworks(UsableSubnetwork[] subnetworks) {
         this.subnetworks = subnetworks;
         return this;
     }
     
+    public ListUsableSubnetworksResponse(){}
 }

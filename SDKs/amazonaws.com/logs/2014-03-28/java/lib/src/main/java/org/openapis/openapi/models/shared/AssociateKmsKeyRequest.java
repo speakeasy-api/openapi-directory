@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateKmsKeyRequest {
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public AssociateKmsKeyRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -16,9 +17,14 @@ public class AssociateKmsKeyRequest {
     
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public AssociateKmsKeyRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
     }
     
+    public AssociateKmsKeyRequest(@JsonProperty("kmsKeyId") String kmsKeyId, @JsonProperty("logGroupName") String logGroupName) {
+        this.kmsKeyId = kmsKeyId;
+        this.logGroupName = logGroupName;
+  }
 }

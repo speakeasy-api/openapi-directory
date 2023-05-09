@@ -18,6 +18,7 @@ public class RpcResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public java.util.Map<String, Object> error;
+
     public RpcResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -29,6 +30,7 @@ public class RpcResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RpcResponse withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class RpcResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public java.util.Map<String, Object> result;
+
     public RpcResponse withResult(java.util.Map<String, Object> result) {
         this.result = result;
         return this;
     }
     
+    public RpcResponse(){}
 }

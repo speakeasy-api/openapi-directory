@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdWebProfilesRequest {
@@ -12,6 +13,7 @@ public class GetUsersUserIdWebProfilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetUsersUserIdWebProfilesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,9 +24,13 @@ public class GetUsersUserIdWebProfilesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
     public Long userId;
+
     public GetUsersUserIdWebProfilesRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetUsersUserIdWebProfilesRequest(@JsonProperty("user_id") Long userId) {
+        this.userId = userId;
+  }
 }

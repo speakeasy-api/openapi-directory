@@ -12,6 +12,7 @@ public class UpdateStudioSessionMappingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityId")
     public String identityId;
+
     public UpdateStudioSessionMappingInput withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -20,6 +21,7 @@ public class UpdateStudioSessionMappingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityName")
     public String identityName;
+
     public UpdateStudioSessionMappingInput withIdentityName(String identityName) {
         this.identityName = identityName;
         return this;
@@ -27,6 +29,7 @@ public class UpdateStudioSessionMappingInput {
     
     @JsonProperty("IdentityType")
     public IdentityTypeEnum identityType;
+
     public UpdateStudioSessionMappingInput withIdentityType(IdentityTypeEnum identityType) {
         this.identityType = identityType;
         return this;
@@ -34,6 +37,7 @@ public class UpdateStudioSessionMappingInput {
     
     @JsonProperty("SessionPolicyArn")
     public String sessionPolicyArn;
+
     public UpdateStudioSessionMappingInput withSessionPolicyArn(String sessionPolicyArn) {
         this.sessionPolicyArn = sessionPolicyArn;
         return this;
@@ -41,9 +45,15 @@ public class UpdateStudioSessionMappingInput {
     
     @JsonProperty("StudioId")
     public String studioId;
+
     public UpdateStudioSessionMappingInput withStudioId(String studioId) {
         this.studioId = studioId;
         return this;
     }
     
+    public UpdateStudioSessionMappingInput(@JsonProperty("IdentityType") IdentityTypeEnum identityType, @JsonProperty("SessionPolicyArn") String sessionPolicyArn, @JsonProperty("StudioId") String studioId) {
+        this.identityType = identityType;
+        this.sessionPolicyArn = sessionPolicyArn;
+        this.studioId = studioId;
+  }
 }

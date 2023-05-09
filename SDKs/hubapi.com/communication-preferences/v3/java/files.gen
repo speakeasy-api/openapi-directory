@@ -31,6 +31,7 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
+lib/src/main/java/org/openapis/openapi/models/operations/GetCommunicationPreferencesV3DefinitionsGetPageSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCommunicationPreferencesV3DefinitionsGetPageResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusRequest.java
@@ -50,4 +51,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/PublicSubscriptionStatusSta
 lib/src/main/java/org/openapis/openapi/models/shared/PublicSubscriptionStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/PublicUpdateSubscriptionStatusRequestLegalBasisEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/PublicUpdateSubscriptionStatusRequest.java
+docs/sdk/README.md
+docs/definition/README.md
+docs/status/README.md
 USAGE.md

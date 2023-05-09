@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMonatsbelegeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=month")
     public Long month;
+
     public GetMonatsbelegeRequest withMonth(Long month) {
         this.month = month;
         return this;
@@ -19,6 +21,7 @@ public class GetMonatsbelegeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrierkasseUuid")
     public String registrierkasseUuid;
+
     public GetMonatsbelegeRequest withRegistrierkasseUuid(String registrierkasseUuid) {
         this.registrierkasseUuid = registrierkasseUuid;
         return this;
@@ -26,9 +29,13 @@ public class GetMonatsbelegeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetMonatsbelegeRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetMonatsbelegeRequest(@JsonProperty("registrierkasseUuid") String registrierkasseUuid) {
+        this.registrierkasseUuid = registrierkasseUuid;
+  }
 }

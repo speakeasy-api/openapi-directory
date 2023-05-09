@@ -15,6 +15,7 @@ public class ListCustomVocabularyItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public ListCustomVocabularyItemsResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -23,6 +24,7 @@ public class ListCustomVocabularyItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public ListCustomVocabularyItemsResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -31,6 +33,7 @@ public class ListCustomVocabularyItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customVocabularyItems")
     public CustomVocabularyItem[] customVocabularyItems;
+
     public ListCustomVocabularyItemsResponse withCustomVocabularyItems(CustomVocabularyItem[] customVocabularyItems) {
         this.customVocabularyItems = customVocabularyItems;
         return this;
@@ -39,6 +42,7 @@ public class ListCustomVocabularyItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public ListCustomVocabularyItemsResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -47,9 +51,11 @@ public class ListCustomVocabularyItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListCustomVocabularyItemsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomVocabularyItemsResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistrationSchemaReadRequest {
@@ -12,9 +13,13 @@ public class RegistrationSchemaReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registration_schema_id")
     public String registrationSchemaId;
+
     public RegistrationSchemaReadRequest withRegistrationSchemaId(String registrationSchemaId) {
         this.registrationSchemaId = registrationSchemaId;
         return this;
     }
     
+    public RegistrationSchemaReadRequest(@JsonProperty("registration_schema_id") String registrationSchemaId) {
+        this.registrationSchemaId = registrationSchemaId;
+  }
 }

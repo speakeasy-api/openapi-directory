@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectRequest {
@@ -12,6 +13,7 @@ public class GetProjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetProjectRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +24,13 @@ public class GetProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with[]")
     public GetProjectWithEnum[] with;
+
     public GetProjectRequest withWith(GetProjectWithEnum[] with) {
         this.with = with;
         return this;
     }
     
+    public GetProjectRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

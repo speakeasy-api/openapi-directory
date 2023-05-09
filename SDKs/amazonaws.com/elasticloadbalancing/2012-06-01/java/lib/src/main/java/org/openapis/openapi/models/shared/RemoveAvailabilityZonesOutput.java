@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RemoveAvailabilityZonesOutput {
     
     public String[] availabilityZones;
+
     public RemoveAvailabilityZonesOutput withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
     }
     
+    public RemoveAvailabilityZonesOutput(){}
 }

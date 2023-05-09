@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAuthorizerResponse {
     
     public String contentType;
+
     public CreateAuthorizerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateAuthorizerResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAuthorizerResponse createAuthorizerResponse;
+
     public CreateAuthorizerResponse withCreateAuthorizerResponse(org.openapis.openapi.models.shared.CreateAuthorizerResponse createAuthorizerResponse) {
         this.createAuthorizerResponse = createAuthorizerResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateAuthorizerResponse {
      */
     
     public Object internalFailureException;
+
     public CreateAuthorizerResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateAuthorizerResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateAuthorizerResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAuthorizerResponse {
      */
     
     public Object limitExceededException;
+
     public CreateAuthorizerResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAuthorizerResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateAuthorizerResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -66,6 +73,7 @@ public class CreateAuthorizerResponse {
     
     
     public Integer statusCode;
+
     public CreateAuthorizerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateAuthorizerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAuthorizerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateAuthorizerResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateAuthorizerResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,6 +103,7 @@ public class CreateAuthorizerResponse {
      */
     
     public Object throttlingException;
+
     public CreateAuthorizerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateAuthorizerResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateAuthorizerResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateAuthorizerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -53,11 +53,9 @@ public class MGLANSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeviceCellularGatewaySettingsResponse res = new org.openapis.openapi.models.operations.GetDeviceCellularGatewaySettingsResponse() {{
+        org.openapis.openapi.models.operations.GetDeviceCellularGatewaySettingsResponse res = new org.openapis.openapi.models.operations.GetDeviceCellularGatewaySettingsResponse(contentType, httpRes.statusCode()) {{
             getDeviceCellularGatewaySettings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,11 +93,9 @@ public class MGLANSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDeviceCellularGatewaySettingsResponse res = new org.openapis.openapi.models.operations.UpdateDeviceCellularGatewaySettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateDeviceCellularGatewaySettingsResponse res = new org.openapis.openapi.models.operations.UpdateDeviceCellularGatewaySettingsResponse(contentType, httpRes.statusCode()) {{
             updateDeviceCellularGatewaySettings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

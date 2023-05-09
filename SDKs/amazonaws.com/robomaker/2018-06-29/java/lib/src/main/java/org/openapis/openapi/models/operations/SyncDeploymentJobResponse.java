@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SyncDeploymentJobResponse {
@@ -12,6 +13,7 @@ public class SyncDeploymentJobResponse {
      */
     
     public Object concurrentDeploymentException;
+
     public SyncDeploymentJobResponse withConcurrentDeploymentException(Object concurrentDeploymentException) {
         this.concurrentDeploymentException = concurrentDeploymentException;
         return this;
@@ -19,6 +21,7 @@ public class SyncDeploymentJobResponse {
     
     
     public String contentType;
+
     public SyncDeploymentJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SyncDeploymentJobResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public SyncDeploymentJobResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class SyncDeploymentJobResponse {
      */
     
     public Object internalServerException;
+
     public SyncDeploymentJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class SyncDeploymentJobResponse {
      */
     
     public Object invalidParameterException;
+
     public SyncDeploymentJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class SyncDeploymentJobResponse {
      */
     
     public Object limitExceededException;
+
     public SyncDeploymentJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class SyncDeploymentJobResponse {
     
     
     public Integer statusCode;
+
     public SyncDeploymentJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class SyncDeploymentJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SyncDeploymentJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class SyncDeploymentJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SyncDeploymentJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class SyncDeploymentJobResponse {
      */
     
     public org.openapis.openapi.models.shared.SyncDeploymentJobResponse syncDeploymentJobResponse;
+
     public SyncDeploymentJobResponse withSyncDeploymentJobResponse(org.openapis.openapi.models.shared.SyncDeploymentJobResponse syncDeploymentJobResponse) {
         this.syncDeploymentJobResponse = syncDeploymentJobResponse;
         return this;
@@ -103,9 +114,14 @@ public class SyncDeploymentJobResponse {
      */
     
     public Object throttlingException;
+
     public SyncDeploymentJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public SyncDeploymentJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

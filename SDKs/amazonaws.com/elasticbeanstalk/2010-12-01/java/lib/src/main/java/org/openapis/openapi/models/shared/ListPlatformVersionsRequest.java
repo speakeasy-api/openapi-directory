@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListPlatformVersionsRequest {
     
     public PlatformFilter[] filters;
+
     public ListPlatformVersionsRequest withFilters(PlatformFilter[] filters) {
         this.filters = filters;
         return this;
@@ -16,6 +17,7 @@ public class ListPlatformVersionsRequest {
     
     
     public Long maxRecords;
+
     public ListPlatformVersionsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -23,9 +25,11 @@ public class ListPlatformVersionsRequest {
     
     
     public String nextToken;
+
     public ListPlatformVersionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListPlatformVersionsRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExchangeRateRequest {
@@ -12,6 +13,7 @@ public class GetExchangeRateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public GetExchangeRateRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class GetExchangeRateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetExchangeRateRequest getExchangeRateRequest;
+
     public GetExchangeRateRequest withGetExchangeRateRequest(org.openapis.openapi.models.shared.GetExchangeRateRequest getExchangeRateRequest) {
         this.getExchangeRateRequest = getExchangeRateRequest;
         return this;
     }
     
+    public GetExchangeRateRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("getExchangeRateRequest") org.openapis.openapi.models.shared.GetExchangeRateRequest getExchangeRateRequest) {
+        this.authorization = authorization;
+        this.getExchangeRateRequest = getExchangeRateRequest;
+  }
 }

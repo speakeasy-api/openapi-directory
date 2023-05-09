@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListResourcesAssociatedToCustomLineItemRequest {
@@ -12,6 +13,7 @@ public class ListResourcesAssociatedToCustomLineItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public ListResourcesAssociatedToCustomLineItemRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -22,6 +24,7 @@ public class ListResourcesAssociatedToCustomLineItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListResourcesAssociatedToCustomLineItemRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,6 +32,7 @@ public class ListResourcesAssociatedToCustomLineItemRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ListResourcesAssociatedToCustomLineItemRequestBody requestBody;
+
     public ListResourcesAssociatedToCustomLineItemRequest withRequestBody(ListResourcesAssociatedToCustomLineItemRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -36,6 +40,7 @@ public class ListResourcesAssociatedToCustomLineItemRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListResourcesAssociatedToCustomLineItemRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class ListResourcesAssociatedToCustomLineItemRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListResourcesAssociatedToCustomLineItemRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class ListResourcesAssociatedToCustomLineItemRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListResourcesAssociatedToCustomLineItemRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class ListResourcesAssociatedToCustomLineItemRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListResourcesAssociatedToCustomLineItemRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class ListResourcesAssociatedToCustomLineItemRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListResourcesAssociatedToCustomLineItemRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class ListResourcesAssociatedToCustomLineItemRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListResourcesAssociatedToCustomLineItemRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,9 +88,13 @@ public class ListResourcesAssociatedToCustomLineItemRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListResourcesAssociatedToCustomLineItemRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public ListResourcesAssociatedToCustomLineItemRequest(@JsonProperty("RequestBody") ListResourcesAssociatedToCustomLineItemRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

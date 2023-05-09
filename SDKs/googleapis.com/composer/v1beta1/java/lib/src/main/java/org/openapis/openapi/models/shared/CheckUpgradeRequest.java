@@ -18,9 +18,11 @@ public class CheckUpgradeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageVersion")
     public String imageVersion;
+
     public CheckUpgradeRequest withImageVersion(String imageVersion) {
         this.imageVersion = imageVersion;
         return this;
     }
     
+    public CheckUpgradeRequest(){}
 }

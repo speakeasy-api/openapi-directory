@@ -60,12 +60,10 @@ public class Changess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChangessResponse res = new org.openapis.openapi.models.operations.GetChangessResponse() {{
+        org.openapis.openapi.models.operations.GetChangessResponse res = new org.openapis.openapi.models.operations.GetChangessResponse(contentType, httpRes.statusCode()) {{
             schema = null;
             errorSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

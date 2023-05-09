@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1TaskExecutionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public java.util.Map<String, String> args;
+
     public GoogleCloudDataplexV1TaskExecutionSpec withArgs(java.util.Map<String, String> args) {
         this.args = args;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1TaskExecutionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKey")
     public String kmsKey;
+
     public GoogleCloudDataplexV1TaskExecutionSpec withKmsKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1TaskExecutionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxJobExecutionLifetime")
     public String maxJobExecutionLifetime;
+
     public GoogleCloudDataplexV1TaskExecutionSpec withMaxJobExecutionLifetime(String maxJobExecutionLifetime) {
         this.maxJobExecutionLifetime = maxJobExecutionLifetime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1TaskExecutionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public GoogleCloudDataplexV1TaskExecutionSpec withProject(String project) {
         this.project = project;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDataplexV1TaskExecutionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public GoogleCloudDataplexV1TaskExecutionSpec withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
     }
     
+    public GoogleCloudDataplexV1TaskExecutionSpec(){}
 }

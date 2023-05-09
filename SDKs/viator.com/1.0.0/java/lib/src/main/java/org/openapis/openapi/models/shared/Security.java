@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class Security {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=exp-api-key")
     public String apiKey;
+
     public Security withAPIKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -16,9 +17,11 @@ public class Security {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=apiKey")
     public String legacyAPIKey;
+
     public Security withLegacyAPIKey(String legacyAPIKey) {
         this.legacyAPIKey = legacyAPIKey;
         return this;
     }
     
+    public Security(){}
 }

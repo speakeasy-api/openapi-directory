@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListIdentityProvidersResponse {
     @JsonProperty("IdentityProviderSummaries")
     public IdentityProviderSummary[] identityProviderSummaries;
+
     public ListIdentityProvidersResponse withIdentityProviderSummaries(IdentityProviderSummary[] identityProviderSummaries) {
         this.identityProviderSummaries = identityProviderSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListIdentityProvidersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIdentityProvidersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIdentityProvidersResponse(@JsonProperty("IdentityProviderSummaries") IdentityProviderSummary[] identityProviderSummaries) {
+        this.identityProviderSummaries = identityProviderSummaries;
+  }
 }

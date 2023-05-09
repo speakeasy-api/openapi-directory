@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEnvironmentResponse {
     
     public String contentType;
+
     public DeleteEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public DeleteEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeleteEnvironmentResponse {
      */
     
     public DeleteEnvironment200ApplicationJSON deleteEnvironment200ApplicationJSONObject;
+
     public DeleteEnvironmentResponse withDeleteEnvironment200ApplicationJSONObject(DeleteEnvironment200ApplicationJSON deleteEnvironment200ApplicationJSONObject) {
         this.deleteEnvironment200ApplicationJSONObject = deleteEnvironment200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class DeleteEnvironmentResponse {
      */
     
     public DeleteEnvironment404ApplicationJSON deleteEnvironment404ApplicationJSONObject;
+
     public DeleteEnvironmentResponse withDeleteEnvironment404ApplicationJSONObject(DeleteEnvironment404ApplicationJSON deleteEnvironment404ApplicationJSONObject) {
         this.deleteEnvironment404ApplicationJSONObject = deleteEnvironment404ApplicationJSONObject;
         return this;
     }
     
+    public DeleteEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlerDetails")
     public CrawlerNodeDetails crawlerDetails;
+
     public Node withCrawlerDetails(CrawlerNodeDetails crawlerDetails) {
         this.crawlerDetails = crawlerDetails;
         return this;
@@ -23,6 +24,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobDetails")
     public JobNodeDetails jobDetails;
+
     public Node withJobDetails(JobNodeDetails jobDetails) {
         this.jobDetails = jobDetails;
         return this;
@@ -31,6 +33,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Node withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TriggerDetails")
     public TriggerNodeDetails triggerDetails;
+
     public Node withTriggerDetails(TriggerNodeDetails triggerDetails) {
         this.triggerDetails = triggerDetails;
         return this;
@@ -47,6 +51,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public NodeTypeEnum type;
+
     public Node withType(NodeTypeEnum type) {
         this.type = type;
         return this;
@@ -55,9 +60,11 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UniqueId")
     public String uniqueId;
+
     public Node withUniqueId(String uniqueId) {
         this.uniqueId = uniqueId;
         return this;
     }
     
+    public Node(){}
 }

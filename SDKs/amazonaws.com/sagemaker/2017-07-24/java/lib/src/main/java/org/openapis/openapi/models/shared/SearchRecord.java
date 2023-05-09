@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * SearchRecord - A single resource returned as part of the &lt;a&gt;Search&lt;/a&gt; API response.
+ * SearchRecord - A single resource returned as part of the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html"&gt;Search&lt;/a&gt; API response.
  */
 public class SearchRecord {
     /**
@@ -18,6 +18,7 @@ public class SearchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoint")
     public Endpoint endpoint;
+
     public SearchRecord withEndpoint(Endpoint endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -26,6 +27,7 @@ public class SearchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Experiment")
     public Experiment experiment;
+
     public SearchRecord withExperiment(Experiment experiment) {
         this.experiment = experiment;
         return this;
@@ -37,6 +39,7 @@ public class SearchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureGroup")
     public FeatureGroup featureGroup;
+
     public SearchRecord withFeatureGroup(FeatureGroup featureGroup) {
         this.featureGroup = featureGroup;
         return this;
@@ -45,6 +48,7 @@ public class SearchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureMetadata")
     public FeatureMetadata featureMetadata;
+
     public SearchRecord withFeatureMetadata(FeatureMetadata featureMetadata) {
         this.featureMetadata = featureMetadata;
         return this;
@@ -53,6 +57,7 @@ public class SearchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HyperParameterTuningJob")
     public HyperParameterTuningJobSearchEntity hyperParameterTuningJob;
+
     public SearchRecord withHyperParameterTuningJob(HyperParameterTuningJobSearchEntity hyperParameterTuningJob) {
         this.hyperParameterTuningJob = hyperParameterTuningJob;
         return this;
@@ -64,6 +69,7 @@ public class SearchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Model")
     public ModelDashboardModel model;
+
     public SearchRecord withModel(ModelDashboardModel model) {
         this.model = model;
         return this;
@@ -72,6 +78,7 @@ public class SearchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelCard")
     public ModelCard modelCard;
+
     public SearchRecord withModelCard(ModelCard modelCard) {
         this.modelCard = modelCard;
         return this;
@@ -83,6 +90,7 @@ public class SearchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackage")
     public ModelPackage modelPackage;
+
     public SearchRecord withModelPackage(ModelPackage modelPackage) {
         this.modelPackage = modelPackage;
         return this;
@@ -94,6 +102,7 @@ public class SearchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageGroup")
     public ModelPackageGroup modelPackageGroup;
+
     public SearchRecord withModelPackageGroup(ModelPackageGroup modelPackageGroup) {
         this.modelPackageGroup = modelPackageGroup;
         return this;
@@ -105,6 +114,7 @@ public class SearchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pipeline")
     public Pipeline pipeline;
+
     public SearchRecord withPipeline(Pipeline pipeline) {
         this.pipeline = pipeline;
         return this;
@@ -116,6 +126,7 @@ public class SearchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecution")
     public PipelineExecution pipelineExecution;
+
     public SearchRecord withPipelineExecution(PipelineExecution pipelineExecution) {
         this.pipelineExecution = pipelineExecution;
         return this;
@@ -124,6 +135,7 @@ public class SearchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Project")
     public Project project;
+
     public SearchRecord withProject(Project project) {
         this.project = project;
         return this;
@@ -132,6 +144,7 @@ public class SearchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingJob")
     public TrainingJob trainingJob;
+
     public SearchRecord withTrainingJob(TrainingJob trainingJob) {
         this.trainingJob = trainingJob;
         return this;
@@ -140,6 +153,7 @@ public class SearchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Trial")
     public Trial trial;
+
     public SearchRecord withTrial(Trial trial) {
         this.trial = trial;
         return this;
@@ -148,9 +162,11 @@ public class SearchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponent")
     public TrialComponent trialComponent;
+
     public SearchRecord withTrialComponent(TrialComponent trialComponent) {
         this.trialComponent = trialComponent;
         return this;
     }
     
+    public SearchRecord(){}
 }

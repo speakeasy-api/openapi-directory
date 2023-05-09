@@ -18,6 +18,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Source withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("official")
     public Boolean official;
+
     public Source withOfficial(Boolean official) {
         this.official = official;
         return this;
     }
     
+    public Source(){}
 }

@@ -15,6 +15,7 @@ public class RelationalDatabaseEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public RelationalDatabaseEndpoint withAddress(String address) {
         this.address = address;
         return this;
@@ -23,9 +24,11 @@ public class RelationalDatabaseEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Long port;
+
     public RelationalDatabaseEndpoint withPort(Long port) {
         this.port = port;
         return this;
     }
     
+    public RelationalDatabaseEndpoint(){}
 }

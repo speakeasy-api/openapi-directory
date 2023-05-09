@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PurchaseHostReservationResultPurchase {
     
     public PurchaseHostReservationResultPurchaseCurrencyCodeEnum currencyCode;
+
     public PurchaseHostReservationResultPurchase withCurrencyCode(PurchaseHostReservationResultPurchaseCurrencyCodeEnum currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -19,6 +20,7 @@ public class PurchaseHostReservationResultPurchase {
     
     
     public Long duration;
+
     public PurchaseHostReservationResultPurchase withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -26,6 +28,7 @@ public class PurchaseHostReservationResultPurchase {
     
     
     public String[] hostIdSet;
+
     public PurchaseHostReservationResultPurchase withHostIdSet(String[] hostIdSet) {
         this.hostIdSet = hostIdSet;
         return this;
@@ -33,6 +36,7 @@ public class PurchaseHostReservationResultPurchase {
     
     
     public String hostReservationId;
+
     public PurchaseHostReservationResultPurchase withHostReservationId(String hostReservationId) {
         this.hostReservationId = hostReservationId;
         return this;
@@ -40,6 +44,7 @@ public class PurchaseHostReservationResultPurchase {
     
     
     public String hourlyPrice;
+
     public PurchaseHostReservationResultPurchase withHourlyPrice(String hourlyPrice) {
         this.hourlyPrice = hourlyPrice;
         return this;
@@ -47,6 +52,7 @@ public class PurchaseHostReservationResultPurchase {
     
     
     public String instanceFamily;
+
     public PurchaseHostReservationResultPurchase withInstanceFamily(String instanceFamily) {
         this.instanceFamily = instanceFamily;
         return this;
@@ -54,6 +60,7 @@ public class PurchaseHostReservationResultPurchase {
     
     
     public PurchaseHostReservationResultPurchasePaymentOptionEnum paymentOption;
+
     public PurchaseHostReservationResultPurchase withPaymentOption(PurchaseHostReservationResultPurchasePaymentOptionEnum paymentOption) {
         this.paymentOption = paymentOption;
         return this;
@@ -61,9 +68,11 @@ public class PurchaseHostReservationResultPurchase {
     
     
     public String upfrontPrice;
+
     public PurchaseHostReservationResultPurchase withUpfrontPrice(String upfrontPrice) {
         this.upfrontPrice = upfrontPrice;
         return this;
     }
     
+    public PurchaseHostReservationResultPurchase(){}
 }

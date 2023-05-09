@@ -15,6 +15,7 @@ public class Pvcer400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Pvcer400ApplicationJSONErrorEnum error;
+
     public Pvcer400ApplicationJSON withError(Pvcer400ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Pvcer400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Pvcer400ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Pvcer400ApplicationJSON withErrorDescription(Pvcer400ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Pvcer400ApplicationJSON(){}
 }

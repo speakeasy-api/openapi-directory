@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReplaceRootVolumeTasksResult {
     
     public String nextToken;
+
     public DescribeReplaceRootVolumeTasksResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeReplaceRootVolumeTasksResult {
     
     
     public DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks[] replaceRootVolumeTasks;
+
     public DescribeReplaceRootVolumeTasksResult withReplaceRootVolumeTasks(DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks[] replaceRootVolumeTasks) {
         this.replaceRootVolumeTasks = replaceRootVolumeTasks;
         return this;
     }
     
+    public DescribeReplaceRootVolumeTasksResult(){}
 }

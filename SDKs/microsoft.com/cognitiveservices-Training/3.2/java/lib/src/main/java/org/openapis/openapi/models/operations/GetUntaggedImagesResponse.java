@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUntaggedImagesResponse {
     
     public byte[] body;
+
     public GetUntaggedImagesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetUntaggedImagesResponse {
     
     
     public String contentType;
+
     public GetUntaggedImagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetUntaggedImagesResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomVisionError customVisionError;
+
     public GetUntaggedImagesResponse withCustomVisionError(org.openapis.openapi.models.shared.CustomVisionError customVisionError) {
         this.customVisionError = customVisionError;
         return this;
@@ -36,6 +40,7 @@ public class GetUntaggedImagesResponse {
      */
     
     public org.openapis.openapi.models.shared.Image[] images;
+
     public GetUntaggedImagesResponse withImages(org.openapis.openapi.models.shared.Image[] images) {
         this.images = images;
         return this;
@@ -43,6 +48,7 @@ public class GetUntaggedImagesResponse {
     
     
     public Integer statusCode;
+
     public GetUntaggedImagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetUntaggedImagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUntaggedImagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetUntaggedImagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ public class CreateSuiteDefinitionRequestBody {
      */
     @JsonProperty("suiteDefinitionConfiguration")
     public CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration suiteDefinitionConfiguration;
+
     public CreateSuiteDefinitionRequestBody withSuiteDefinitionConfiguration(CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration suiteDefinitionConfiguration) {
         this.suiteDefinitionConfiguration = suiteDefinitionConfiguration;
         return this;
@@ -25,9 +26,13 @@ public class CreateSuiteDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateSuiteDefinitionRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSuiteDefinitionRequestBody(@JsonProperty("suiteDefinitionConfiguration") CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration suiteDefinitionConfiguration) {
+        this.suiteDefinitionConfiguration = suiteDefinitionConfiguration;
+  }
 }

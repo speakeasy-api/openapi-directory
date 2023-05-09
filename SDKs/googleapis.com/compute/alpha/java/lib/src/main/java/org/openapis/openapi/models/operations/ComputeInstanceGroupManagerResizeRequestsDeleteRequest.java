@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
@@ -12,6 +13,7 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instanceGroupManager")
     public String instanceGroupManager;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withInstanceGroupManager(String instanceGroupManager) {
         this.instanceGroupManager = instanceGroupManager;
         return this;
@@ -72,6 +79,7 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withProject(String project) {
         this.project = project;
         return this;
@@ -112,6 +123,7 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -132,6 +145,7 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resizeRequest")
     public String resizeRequest;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withResizeRequest(String resizeRequest) {
         this.resizeRequest = resizeRequest;
         return this;
@@ -142,6 +156,7 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,6 +167,7 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -162,6 +178,7 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -172,9 +189,16 @@ public class ComputeInstanceGroupManagerResizeRequestsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
     public String zone;
+
     public ComputeInstanceGroupManagerResizeRequestsDeleteRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ComputeInstanceGroupManagerResizeRequestsDeleteRequest(@JsonProperty("instanceGroupManager") String instanceGroupManager, @JsonProperty("project") String project, @JsonProperty("resizeRequest") String resizeRequest, @JsonProperty("zone") String zone) {
+        this.instanceGroupManager = instanceGroupManager;
+        this.project = project;
+        this.resizeRequest = resizeRequest;
+        this.zone = zone;
+  }
 }

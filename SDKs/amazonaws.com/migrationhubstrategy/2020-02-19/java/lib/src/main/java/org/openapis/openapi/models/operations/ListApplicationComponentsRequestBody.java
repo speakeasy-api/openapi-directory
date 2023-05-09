@@ -15,6 +15,7 @@ public class ListApplicationComponentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationComponentCriteria")
     public ListApplicationComponentsRequestBodyApplicationComponentCriteriaEnum applicationComponentCriteria;
+
     public ListApplicationComponentsRequestBody withApplicationComponentCriteria(ListApplicationComponentsRequestBodyApplicationComponentCriteriaEnum applicationComponentCriteria) {
         this.applicationComponentCriteria = applicationComponentCriteria;
         return this;
@@ -26,6 +27,7 @@ public class ListApplicationComponentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterValue")
     public String filterValue;
+
     public ListApplicationComponentsRequestBody withFilterValue(String filterValue) {
         this.filterValue = filterValue;
         return this;
@@ -37,6 +39,7 @@ public class ListApplicationComponentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupIdFilter")
     public org.openapis.openapi.models.shared.Group[] groupIdFilter;
+
     public ListApplicationComponentsRequestBody withGroupIdFilter(org.openapis.openapi.models.shared.Group[] groupIdFilter) {
         this.groupIdFilter = groupIdFilter;
         return this;
@@ -48,6 +51,7 @@ public class ListApplicationComponentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListApplicationComponentsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -59,6 +63,7 @@ public class ListApplicationComponentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListApplicationComponentsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -70,9 +75,11 @@ public class ListApplicationComponentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public ListApplicationComponentsRequestBodySortEnum sort;
+
     public ListApplicationComponentsRequestBody withSort(ListApplicationComponentsRequestBodySortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public ListApplicationComponentsRequestBody(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListThirdPartyFirewallFirewallPoliciesRequest {
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListThirdPartyFirewallFirewallPoliciesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -19,6 +20,7 @@ public class ListThirdPartyFirewallFirewallPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListThirdPartyFirewallFirewallPoliciesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +28,14 @@ public class ListThirdPartyFirewallFirewallPoliciesRequest {
     
     @JsonProperty("ThirdPartyFirewall")
     public ThirdPartyFirewallEnum thirdPartyFirewall;
+
     public ListThirdPartyFirewallFirewallPoliciesRequest withThirdPartyFirewall(ThirdPartyFirewallEnum thirdPartyFirewall) {
         this.thirdPartyFirewall = thirdPartyFirewall;
         return this;
     }
     
+    public ListThirdPartyFirewallFirewallPoliciesRequest(@JsonProperty("MaxResults") Long maxResults, @JsonProperty("ThirdPartyFirewall") ThirdPartyFirewallEnum thirdPartyFirewall) {
+        this.maxResults = maxResults;
+        this.thirdPartyFirewall = thirdPartyFirewall;
+  }
 }

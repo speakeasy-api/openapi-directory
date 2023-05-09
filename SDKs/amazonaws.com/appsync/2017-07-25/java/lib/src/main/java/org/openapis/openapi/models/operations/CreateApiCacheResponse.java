@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateApiCacheResponse {
@@ -12,6 +13,7 @@ public class CreateApiCacheResponse {
      */
     
     public Object badRequestException;
+
     public CreateApiCacheResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateApiCacheResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateApiCacheResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class CreateApiCacheResponse {
     
     
     public String contentType;
+
     public CreateApiCacheResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateApiCacheResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateApiCacheResponse createApiCacheResponse;
+
     public CreateApiCacheResponse withCreateApiCacheResponse(org.openapis.openapi.models.shared.CreateApiCacheResponse createApiCacheResponse) {
         this.createApiCacheResponse = createApiCacheResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateApiCacheResponse {
      */
     
     public Object internalFailureException;
+
     public CreateApiCacheResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class CreateApiCacheResponse {
      */
     
     public Object notFoundException;
+
     public CreateApiCacheResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateApiCacheResponse {
     
     
     public Integer statusCode;
+
     public CreateApiCacheResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateApiCacheResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateApiCacheResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateApiCacheResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateApiCacheResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateApiCacheResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

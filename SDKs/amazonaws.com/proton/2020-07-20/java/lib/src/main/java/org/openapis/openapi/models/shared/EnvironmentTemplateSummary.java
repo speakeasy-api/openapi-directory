@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class EnvironmentTemplateSummary {
     @JsonProperty("arn")
     public String arn;
+
     public EnvironmentTemplateSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class EnvironmentTemplateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public EnvironmentTemplateSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -36,6 +38,7 @@ public class EnvironmentTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EnvironmentTemplateSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class EnvironmentTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public EnvironmentTemplateSummary withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -53,6 +57,7 @@ public class EnvironmentTemplateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public EnvironmentTemplateSummary withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -60,6 +65,7 @@ public class EnvironmentTemplateSummary {
     
     @JsonProperty("name")
     public String name;
+
     public EnvironmentTemplateSummary withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +74,7 @@ public class EnvironmentTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioning")
     public ProvisioningEnum provisioning;
+
     public EnvironmentTemplateSummary withProvisioning(ProvisioningEnum provisioning) {
         this.provisioning = provisioning;
         return this;
@@ -76,9 +83,16 @@ public class EnvironmentTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedVersion")
     public String recommendedVersion;
+
     public EnvironmentTemplateSummary withRecommendedVersion(String recommendedVersion) {
         this.recommendedVersion = recommendedVersion;
         return this;
     }
     
+    public EnvironmentTemplateSummary(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("lastModifiedAt") OffsetDateTime lastModifiedAt, @JsonProperty("name") String name) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.lastModifiedAt = lastModifiedAt;
+        this.name = name;
+  }
 }

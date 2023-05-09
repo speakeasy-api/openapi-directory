@@ -12,9 +12,13 @@ public class StopVectorEnrichmentJobRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public StopVectorEnrichmentJobRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public StopVectorEnrichmentJobRequestBody(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

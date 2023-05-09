@@ -18,6 +18,7 @@ public class SetupAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public UserFacingMessage description;
+
     public SetupAction withDescription(UserFacingMessage description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class SetupAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchApp")
     public LaunchAppAction launchApp;
+
     public SetupAction withLaunchApp(LaunchAppAction launchApp) {
         this.launchApp = launchApp;
         return this;
@@ -40,9 +42,11 @@ public class SetupAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public UserFacingMessage title;
+
     public SetupAction withTitle(UserFacingMessage title) {
         this.title = title;
         return this;
     }
     
+    public SetupAction(){}
 }

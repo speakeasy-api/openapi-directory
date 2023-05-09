@@ -15,6 +15,7 @@ public class FindingSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public FindingSourceDetail detail;
+
     public FindingSource withDetail(FindingSourceDetail detail) {
         this.detail = detail;
         return this;
@@ -22,9 +23,13 @@ public class FindingSource {
     
     @JsonProperty("type")
     public FindingSourceTypeEnum type;
+
     public FindingSource withType(FindingSourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public FindingSource(@JsonProperty("type") FindingSourceTypeEnum type) {
+        this.type = type;
+  }
 }

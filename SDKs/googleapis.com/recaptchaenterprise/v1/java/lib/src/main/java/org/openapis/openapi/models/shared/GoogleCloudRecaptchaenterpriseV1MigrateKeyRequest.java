@@ -18,9 +18,11 @@ public class GoogleCloudRecaptchaenterpriseV1MigrateKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipBillingCheck")
     public Boolean skipBillingCheck;
+
     public GoogleCloudRecaptchaenterpriseV1MigrateKeyRequest withSkipBillingCheck(Boolean skipBillingCheck) {
         this.skipBillingCheck = skipBillingCheck;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1MigrateKeyRequest(){}
 }

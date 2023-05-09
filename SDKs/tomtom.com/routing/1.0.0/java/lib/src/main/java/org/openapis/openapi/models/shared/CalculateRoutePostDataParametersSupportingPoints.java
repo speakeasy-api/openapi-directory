@@ -12,6 +12,7 @@ public class CalculateRoutePostDataParametersSupportingPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public String latitude;
+
     public CalculateRoutePostDataParametersSupportingPoints withLatitude(String latitude) {
         this.latitude = latitude;
         return this;
@@ -20,9 +21,11 @@ public class CalculateRoutePostDataParametersSupportingPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public String longitude;
+
     public CalculateRoutePostDataParametersSupportingPoints withLongitude(String longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public CalculateRoutePostDataParametersSupportingPoints(){}
 }

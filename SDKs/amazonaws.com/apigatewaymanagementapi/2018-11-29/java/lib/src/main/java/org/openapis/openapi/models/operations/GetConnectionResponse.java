@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConnectionResponse {
     
     public String contentType;
+
     public GetConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetConnectionResponse {
      */
     
     public Object forbiddenException;
+
     public GetConnectionResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -29,6 +32,7 @@ public class GetConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetConnectionResponse getConnectionResponse;
+
     public GetConnectionResponse withGetConnectionResponse(org.openapis.openapi.models.shared.GetConnectionResponse getConnectionResponse) {
         this.getConnectionResponse = getConnectionResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetConnectionResponse {
      */
     
     public Object goneException;
+
     public GetConnectionResponse withGoneException(Object goneException) {
         this.goneException = goneException;
         return this;
@@ -49,6 +54,7 @@ public class GetConnectionResponse {
      */
     
     public Object limitExceededException;
+
     public GetConnectionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class GetConnectionResponse {
     
     
     public Integer statusCode;
+
     public GetConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

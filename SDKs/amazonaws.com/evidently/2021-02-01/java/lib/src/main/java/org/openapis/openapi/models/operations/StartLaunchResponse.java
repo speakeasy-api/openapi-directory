@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartLaunchResponse {
@@ -12,6 +13,7 @@ public class StartLaunchResponse {
      */
     
     public Object accessDeniedException;
+
     public StartLaunchResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartLaunchResponse {
      */
     
     public Object conflictException;
+
     public StartLaunchResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartLaunchResponse {
     
     
     public String contentType;
+
     public StartLaunchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartLaunchResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartLaunchResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartLaunchResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartLaunchResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -59,6 +65,7 @@ public class StartLaunchResponse {
      */
     
     public org.openapis.openapi.models.shared.StartLaunchResponse startLaunchResponse;
+
     public StartLaunchResponse withStartLaunchResponse(org.openapis.openapi.models.shared.StartLaunchResponse startLaunchResponse) {
         this.startLaunchResponse = startLaunchResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartLaunchResponse {
     
     
     public Integer statusCode;
+
     public StartLaunchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartLaunchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartLaunchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class StartLaunchResponse {
      */
     
     public Object throttlingException;
+
     public StartLaunchResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class StartLaunchResponse {
      */
     
     public Object validationException;
+
     public StartLaunchResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartLaunchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetGithubActionsDefaultWorkflowPermissionsRepositoryRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ActionsSetDefaultWorkflowPermissions actionsSetDefaultWorkflowPermissions;
+
     public ActionsSetGithubActionsDefaultWorkflowPermissionsRepositoryRequest withActionsSetDefaultWorkflowPermissions(org.openapis.openapi.models.shared.ActionsSetDefaultWorkflowPermissions actionsSetDefaultWorkflowPermissions) {
         this.actionsSetDefaultWorkflowPermissions = actionsSetDefaultWorkflowPermissions;
         return this;
@@ -19,6 +21,7 @@ public class ActionsSetGithubActionsDefaultWorkflowPermissionsRepositoryRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsSetGithubActionsDefaultWorkflowPermissionsRepositoryRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -29,9 +32,15 @@ public class ActionsSetGithubActionsDefaultWorkflowPermissionsRepositoryRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsSetGithubActionsDefaultWorkflowPermissionsRepositoryRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ActionsSetGithubActionsDefaultWorkflowPermissionsRepositoryRequest(@JsonProperty("actions-set-default-workflow-permissions") org.openapis.openapi.models.shared.ActionsSetDefaultWorkflowPermissions actionsSetDefaultWorkflowPermissions, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.actionsSetDefaultWorkflowPermissions = actionsSetDefaultWorkflowPermissions;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

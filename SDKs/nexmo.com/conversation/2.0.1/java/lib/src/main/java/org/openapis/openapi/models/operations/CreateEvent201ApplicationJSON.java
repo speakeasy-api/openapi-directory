@@ -18,6 +18,7 @@ public class CreateEvent201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public CreateEvent201ApplicationJSON withHref(String href) {
         this.href = href;
         return this;
@@ -29,6 +30,7 @@ public class CreateEvent201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateEvent201ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class CreateEvent201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public CreateEvent201ApplicationJSON withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public CreateEvent201ApplicationJSON(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NodeProperties {
     @JsonProperty("mainNode")
     public Long mainNode;
+
     public NodeProperties withMainNode(Long mainNode) {
         this.mainNode = mainNode;
         return this;
@@ -19,6 +20,7 @@ public class NodeProperties {
     
     @JsonProperty("nodeRangeProperties")
     public NodeRangeProperty[] nodeRangeProperties;
+
     public NodeProperties withNodeRangeProperties(NodeRangeProperty[] nodeRangeProperties) {
         this.nodeRangeProperties = nodeRangeProperties;
         return this;
@@ -26,9 +28,15 @@ public class NodeProperties {
     
     @JsonProperty("numNodes")
     public Long numNodes;
+
     public NodeProperties withNumNodes(Long numNodes) {
         this.numNodes = numNodes;
         return this;
     }
     
+    public NodeProperties(@JsonProperty("mainNode") Long mainNode, @JsonProperty("nodeRangeProperties") NodeRangeProperty[] nodeRangeProperties, @JsonProperty("numNodes") Long numNodes) {
+        this.mainNode = mainNode;
+        this.nodeRangeProperties = nodeRangeProperties;
+        this.numNodes = numNodes;
+  }
 }

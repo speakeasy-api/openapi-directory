@@ -12,6 +12,7 @@ public class GetCostAndUsageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public Expression filter;
+
     public GetCostAndUsageRequest withFilter(Expression filter) {
         this.filter = filter;
         return this;
@@ -19,6 +20,7 @@ public class GetCostAndUsageRequest {
     
     @JsonProperty("Granularity")
     public GranularityEnum granularity;
+
     public GetCostAndUsageRequest withGranularity(GranularityEnum granularity) {
         this.granularity = granularity;
         return this;
@@ -27,6 +29,7 @@ public class GetCostAndUsageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupBy")
     public GroupDefinition[] groupBy;
+
     public GetCostAndUsageRequest withGroupBy(GroupDefinition[] groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -34,6 +37,7 @@ public class GetCostAndUsageRequest {
     
     @JsonProperty("Metrics")
     public String[] metrics;
+
     public GetCostAndUsageRequest withMetrics(String[] metrics) {
         this.metrics = metrics;
         return this;
@@ -42,6 +46,7 @@ public class GetCostAndUsageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetCostAndUsageRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -49,9 +54,15 @@ public class GetCostAndUsageRequest {
     
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public GetCostAndUsageRequest withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public GetCostAndUsageRequest(@JsonProperty("Granularity") GranularityEnum granularity, @JsonProperty("Metrics") String[] metrics, @JsonProperty("TimePeriod") DateInterval timePeriod) {
+        this.granularity = granularity;
+        this.metrics = metrics;
+        this.timePeriod = timePeriod;
+  }
 }

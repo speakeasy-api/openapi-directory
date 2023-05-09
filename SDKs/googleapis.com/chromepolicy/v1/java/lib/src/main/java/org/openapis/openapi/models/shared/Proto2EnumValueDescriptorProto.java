@@ -15,6 +15,7 @@ public class Proto2EnumValueDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Proto2EnumValueDescriptorProto withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class Proto2EnumValueDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Integer number;
+
     public Proto2EnumValueDescriptorProto withNumber(Integer number) {
         this.number = number;
         return this;
     }
     
+    public Proto2EnumValueDescriptorProto(){}
 }

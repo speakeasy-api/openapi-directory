@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserSearchByGlobalNamePrefixRequest {
@@ -12,6 +13,7 @@ public class UserSearchByGlobalNamePrefixRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=displayNamePrefix")
     public String displayNamePrefix;
+
     public UserSearchByGlobalNamePrefixRequest withDisplayNamePrefix(String displayNamePrefix) {
         this.displayNamePrefix = displayNamePrefix;
         return this;
@@ -22,9 +24,14 @@ public class UserSearchByGlobalNamePrefixRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
     public Integer page;
+
     public UserSearchByGlobalNamePrefixRequest withPage(Integer page) {
         this.page = page;
         return this;
     }
     
+    public UserSearchByGlobalNamePrefixRequest(@JsonProperty("displayNamePrefix") String displayNamePrefix, @JsonProperty("page") Integer page) {
+        this.displayNamePrefix = displayNamePrefix;
+        this.page = page;
+  }
 }

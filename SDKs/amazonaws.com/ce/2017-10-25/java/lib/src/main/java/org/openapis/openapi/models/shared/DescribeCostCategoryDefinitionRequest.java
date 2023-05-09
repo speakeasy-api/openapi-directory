@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeCostCategoryDefinitionRequest {
     @JsonProperty("CostCategoryArn")
     public String costCategoryArn;
+
     public DescribeCostCategoryDefinitionRequest withCostCategoryArn(String costCategoryArn) {
         this.costCategoryArn = costCategoryArn;
         return this;
@@ -19,9 +20,13 @@ public class DescribeCostCategoryDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EffectiveOn")
     public String effectiveOn;
+
     public DescribeCostCategoryDefinitionRequest withEffectiveOn(String effectiveOn) {
         this.effectiveOn = effectiveOn;
         return this;
     }
     
+    public DescribeCostCategoryDefinitionRequest(@JsonProperty("CostCategoryArn") String costCategoryArn) {
+        this.costCategoryArn = costCategoryArn;
+  }
 }

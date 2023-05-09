@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateExperienceResponse {
@@ -12,6 +13,7 @@ public class CreateExperienceResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateExperienceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateExperienceResponse {
      */
     
     public Object conflictException;
+
     public CreateExperienceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateExperienceResponse {
     
     
     public String contentType;
+
     public CreateExperienceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateExperienceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateExperienceResponse createExperienceResponse;
+
     public CreateExperienceResponse withCreateExperienceResponse(org.openapis.openapi.models.shared.CreateExperienceResponse createExperienceResponse) {
         this.createExperienceResponse = createExperienceResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateExperienceResponse {
      */
     
     public Object internalServerException;
+
     public CreateExperienceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateExperienceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateExperienceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateExperienceResponse {
     
     
     public Integer statusCode;
+
     public CreateExperienceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateExperienceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateExperienceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateExperienceResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateExperienceResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateExperienceResponse {
      */
     
     public Object throttlingException;
+
     public CreateExperienceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateExperienceResponse {
      */
     
     public Object validationException;
+
     public CreateExperienceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateExperienceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

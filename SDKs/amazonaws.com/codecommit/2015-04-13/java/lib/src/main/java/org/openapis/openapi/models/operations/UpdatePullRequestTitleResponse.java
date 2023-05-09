@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePullRequestTitleResponse {
     
     public String contentType;
+
     public UpdatePullRequestTitleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePullRequestTitleResponse {
      */
     
     public Object invalidPullRequestIdException;
+
     public UpdatePullRequestTitleResponse withInvalidPullRequestIdException(Object invalidPullRequestIdException) {
         this.invalidPullRequestIdException = invalidPullRequestIdException;
         return this;
@@ -29,6 +32,7 @@ public class UpdatePullRequestTitleResponse {
      */
     
     public Object invalidTitleException;
+
     public UpdatePullRequestTitleResponse withInvalidTitleException(Object invalidTitleException) {
         this.invalidTitleException = invalidTitleException;
         return this;
@@ -39,6 +43,7 @@ public class UpdatePullRequestTitleResponse {
      */
     
     public Object pullRequestAlreadyClosedException;
+
     public UpdatePullRequestTitleResponse withPullRequestAlreadyClosedException(Object pullRequestAlreadyClosedException) {
         this.pullRequestAlreadyClosedException = pullRequestAlreadyClosedException;
         return this;
@@ -49,6 +54,7 @@ public class UpdatePullRequestTitleResponse {
      */
     
     public Object pullRequestDoesNotExistException;
+
     public UpdatePullRequestTitleResponse withPullRequestDoesNotExistException(Object pullRequestDoesNotExistException) {
         this.pullRequestDoesNotExistException = pullRequestDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class UpdatePullRequestTitleResponse {
      */
     
     public Object pullRequestIdRequiredException;
+
     public UpdatePullRequestTitleResponse withPullRequestIdRequiredException(Object pullRequestIdRequiredException) {
         this.pullRequestIdRequiredException = pullRequestIdRequiredException;
         return this;
@@ -66,6 +73,7 @@ public class UpdatePullRequestTitleResponse {
     
     
     public Integer statusCode;
+
     public UpdatePullRequestTitleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdatePullRequestTitleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePullRequestTitleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdatePullRequestTitleResponse {
      */
     
     public Object titleRequiredException;
+
     public UpdatePullRequestTitleResponse withTitleRequiredException(Object titleRequiredException) {
         this.titleRequiredException = titleRequiredException;
         return this;
@@ -93,9 +103,14 @@ public class UpdatePullRequestTitleResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdatePullRequestTitleOutput updatePullRequestTitleOutput;
+
     public UpdatePullRequestTitleResponse withUpdatePullRequestTitleOutput(org.openapis.openapi.models.shared.UpdatePullRequestTitleOutput updatePullRequestTitleOutput) {
         this.updatePullRequestTitleOutput = updatePullRequestTitleOutput;
         return this;
     }
     
+    public UpdatePullRequestTitleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

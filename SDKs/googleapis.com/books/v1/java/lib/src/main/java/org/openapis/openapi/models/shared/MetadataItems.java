@@ -12,6 +12,7 @@ public class MetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_url")
     public String downloadUrl;
+
     public MetadataItems withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -20,6 +21,7 @@ public class MetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encrypted_key")
     public String encryptedKey;
+
     public MetadataItems withEncryptedKey(String encryptedKey) {
         this.encryptedKey = encryptedKey;
         return this;
@@ -28,6 +30,7 @@ public class MetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public MetadataItems withLanguage(String language) {
         this.language = language;
         return this;
@@ -36,6 +39,7 @@ public class MetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public String size;
+
     public MetadataItems withSize(String size) {
         this.size = size;
         return this;
@@ -44,9 +48,11 @@ public class MetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public MetadataItems withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public MetadataItems(){}
 }

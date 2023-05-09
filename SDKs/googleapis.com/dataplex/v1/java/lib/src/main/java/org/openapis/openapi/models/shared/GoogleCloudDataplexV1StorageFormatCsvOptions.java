@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1StorageFormatCsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delimiter")
     public String delimiter;
+
     public GoogleCloudDataplexV1StorageFormatCsvOptions withDelimiter(String delimiter) {
         this.delimiter = delimiter;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1StorageFormatCsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoding")
     public String encoding;
+
     public GoogleCloudDataplexV1StorageFormatCsvOptions withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1StorageFormatCsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerRows")
     public Integer headerRows;
+
     public GoogleCloudDataplexV1StorageFormatCsvOptions withHeaderRows(Integer headerRows) {
         this.headerRows = headerRows;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDataplexV1StorageFormatCsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote")
     public String quote;
+
     public GoogleCloudDataplexV1StorageFormatCsvOptions withQuote(String quote) {
         this.quote = quote;
         return this;
     }
     
+    public GoogleCloudDataplexV1StorageFormatCsvOptions(){}
 }

@@ -19,6 +19,7 @@ public class GetAnnotationImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completionTime")
     public OffsetDateTime completionTime;
+
     public GetAnnotationImportResponse withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -28,6 +29,7 @@ public class GetAnnotationImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetAnnotationImportResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -35,6 +37,7 @@ public class GetAnnotationImportResponse {
     
     @JsonProperty("destinationName")
     public String destinationName;
+
     public GetAnnotationImportResponse withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -45,6 +48,7 @@ public class GetAnnotationImportResponse {
      */
     @JsonProperty("formatOptions")
     public FormatOptions formatOptions;
+
     public GetAnnotationImportResponse withFormatOptions(FormatOptions formatOptions) {
         this.formatOptions = formatOptions;
         return this;
@@ -52,6 +56,7 @@ public class GetAnnotationImportResponse {
     
     @JsonProperty("id")
     public String id;
+
     public GetAnnotationImportResponse withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +64,7 @@ public class GetAnnotationImportResponse {
     
     @JsonProperty("items")
     public AnnotationImportItemDetail[] items;
+
     public GetAnnotationImportResponse withItems(AnnotationImportItemDetail[] items) {
         this.items = items;
         return this;
@@ -66,6 +72,7 @@ public class GetAnnotationImportResponse {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public GetAnnotationImportResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -73,6 +80,7 @@ public class GetAnnotationImportResponse {
     
     @JsonProperty("runLeftNormalization")
     public Boolean runLeftNormalization;
+
     public GetAnnotationImportResponse withRunLeftNormalization(Boolean runLeftNormalization) {
         this.runLeftNormalization = runLeftNormalization;
         return this;
@@ -80,6 +88,7 @@ public class GetAnnotationImportResponse {
     
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public GetAnnotationImportResponse withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
@@ -87,6 +96,7 @@ public class GetAnnotationImportResponse {
     
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public GetAnnotationImportResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -96,9 +106,23 @@ public class GetAnnotationImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public GetAnnotationImportResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GetAnnotationImportResponse(@JsonProperty("completionTime") OffsetDateTime completionTime, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("destinationName") String destinationName, @JsonProperty("formatOptions") FormatOptions formatOptions, @JsonProperty("id") String id, @JsonProperty("items") AnnotationImportItemDetail[] items, @JsonProperty("roleArn") String roleArn, @JsonProperty("runLeftNormalization") Boolean runLeftNormalization, @JsonProperty("status") JobStatusEnum status, @JsonProperty("statusMessage") String statusMessage, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.completionTime = completionTime;
+        this.creationTime = creationTime;
+        this.destinationName = destinationName;
+        this.formatOptions = formatOptions;
+        this.id = id;
+        this.items = items;
+        this.roleArn = roleArn;
+        this.runLeftNormalization = runLeftNormalization;
+        this.status = status;
+        this.statusMessage = statusMessage;
+        this.updateTime = updateTime;
+  }
 }

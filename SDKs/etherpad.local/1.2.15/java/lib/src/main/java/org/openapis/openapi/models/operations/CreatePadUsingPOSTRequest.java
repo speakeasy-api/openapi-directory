@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CreatePadUsingPOSTRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
     public String padID;
+
     public CreatePadUsingPOSTRequest withPadID(String padID) {
         this.padID = padID;
         return this;
@@ -16,9 +17,11 @@ public class CreatePadUsingPOSTRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public CreatePadUsingPOSTRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public CreatePadUsingPOSTRequest(){}
 }

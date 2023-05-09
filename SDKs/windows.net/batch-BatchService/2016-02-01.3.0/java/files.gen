@@ -321,4 +321,14 @@ lib/src/main/java/org/openapis/openapi/models/shared/SubtaskInformationPreviousS
 lib/src/main/java/org/openapis/openapi/models/shared/SubtaskInformationStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SubtaskInformation.java
 lib/src/main/java/org/openapis/openapi/models/shared/TaskUpdateParameter.java
+docs/sdk/README.md
+docs/accounts/README.md
+docs/applications/README.md
+docs/certificates/README.md
+docs/computenodes/README.md
+docs/files/README.md
+docs/jobschedules/README.md
+docs/jobs/README.md
+docs/pools/README.md
+docs/tasks/README.md
 USAGE.md

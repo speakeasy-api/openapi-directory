@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Greengrass {
     @JsonProperty("groupArn")
     public String groupArn;
+
     public Greengrass withGroupArn(String groupArn) {
         this.groupArn = groupArn;
         return this;
     }
     
+    public Greengrass(@JsonProperty("groupArn") String groupArn) {
+        this.groupArn = groupArn;
+  }
 }

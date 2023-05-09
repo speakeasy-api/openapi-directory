@@ -15,6 +15,7 @@ public class DestinyQuestsDestinyObjectiveProgress {
      */
     
     public Long activityHash;
+
     public DestinyQuestsDestinyObjectiveProgress withActivityHash(Long activityHash) {
         this.activityHash = activityHash;
         return this;
@@ -25,6 +26,7 @@ public class DestinyQuestsDestinyObjectiveProgress {
      */
     
     public Boolean complete;
+
     public DestinyQuestsDestinyObjectiveProgress withComplete(Boolean complete) {
         this.complete = complete;
         return this;
@@ -37,6 +39,7 @@ public class DestinyQuestsDestinyObjectiveProgress {
      */
     
     public Integer completionValue;
+
     public DestinyQuestsDestinyObjectiveProgress withCompletionValue(Integer completionValue) {
         this.completionValue = completionValue;
         return this;
@@ -47,6 +50,7 @@ public class DestinyQuestsDestinyObjectiveProgress {
      */
     
     public Long destinationHash;
+
     public DestinyQuestsDestinyObjectiveProgress withDestinationHash(Long destinationHash) {
         this.destinationHash = destinationHash;
         return this;
@@ -57,6 +61,7 @@ public class DestinyQuestsDestinyObjectiveProgress {
      */
     
     public Long objectiveHash;
+
     public DestinyQuestsDestinyObjectiveProgress withObjectiveHash(Long objectiveHash) {
         this.objectiveHash = objectiveHash;
         return this;
@@ -67,6 +72,7 @@ public class DestinyQuestsDestinyObjectiveProgress {
      */
     
     public Integer progress;
+
     public DestinyQuestsDestinyObjectiveProgress withProgress(Integer progress) {
         this.progress = progress;
         return this;
@@ -77,9 +83,11 @@ public class DestinyQuestsDestinyObjectiveProgress {
      */
     
     public Boolean visible;
+
     public DestinyQuestsDestinyObjectiveProgress withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public DestinyQuestsDestinyObjectiveProgress(){}
 }

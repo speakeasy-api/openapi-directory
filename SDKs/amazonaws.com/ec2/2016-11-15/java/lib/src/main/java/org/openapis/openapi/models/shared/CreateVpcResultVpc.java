@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpcResultVpc {
     
     public String cidrBlock;
+
     public CreateVpcResultVpc withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -19,6 +20,7 @@ public class CreateVpcResultVpc {
     
     
     public CreateVpcResultVpcCidrBlockAssociationSet[] cidrBlockAssociationSet;
+
     public CreateVpcResultVpc withCidrBlockAssociationSet(CreateVpcResultVpcCidrBlockAssociationSet[] cidrBlockAssociationSet) {
         this.cidrBlockAssociationSet = cidrBlockAssociationSet;
         return this;
@@ -26,6 +28,7 @@ public class CreateVpcResultVpc {
     
     
     public String dhcpOptionsId;
+
     public CreateVpcResultVpc withDhcpOptionsId(String dhcpOptionsId) {
         this.dhcpOptionsId = dhcpOptionsId;
         return this;
@@ -33,6 +36,7 @@ public class CreateVpcResultVpc {
     
     
     public CreateVpcResultVpcInstanceTenancyEnum instanceTenancy;
+
     public CreateVpcResultVpc withInstanceTenancy(CreateVpcResultVpcInstanceTenancyEnum instanceTenancy) {
         this.instanceTenancy = instanceTenancy;
         return this;
@@ -40,6 +44,7 @@ public class CreateVpcResultVpc {
     
     
     public CreateVpcResultVpcIpv6CidrBlockAssociationSet[] ipv6CidrBlockAssociationSet;
+
     public CreateVpcResultVpc withIpv6CidrBlockAssociationSet(CreateVpcResultVpcIpv6CidrBlockAssociationSet[] ipv6CidrBlockAssociationSet) {
         this.ipv6CidrBlockAssociationSet = ipv6CidrBlockAssociationSet;
         return this;
@@ -47,6 +52,7 @@ public class CreateVpcResultVpc {
     
     
     public Boolean isDefault;
+
     public CreateVpcResultVpc withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -54,6 +60,7 @@ public class CreateVpcResultVpc {
     
     
     public String ownerId;
+
     public CreateVpcResultVpc withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -61,6 +68,7 @@ public class CreateVpcResultVpc {
     
     
     public CreateVpcResultVpcStateEnum state;
+
     public CreateVpcResultVpc withState(CreateVpcResultVpcStateEnum state) {
         this.state = state;
         return this;
@@ -68,6 +76,7 @@ public class CreateVpcResultVpc {
     
     
     public CreateVpcResultVpcTags[] tags;
+
     public CreateVpcResultVpc withTags(CreateVpcResultVpcTags[] tags) {
         this.tags = tags;
         return this;
@@ -75,9 +84,11 @@ public class CreateVpcResultVpc {
     
     
     public String vpcId;
+
     public CreateVpcResultVpc withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateVpcResultVpc(){}
 }

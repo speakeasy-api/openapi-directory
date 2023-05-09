@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLifecyclePolicyPreviewResponse {
     
     public String contentType;
+
     public GetLifecyclePolicyPreviewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetLifecyclePolicyPreviewResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLifecyclePolicyPreviewResponse getLifecyclePolicyPreviewResponse;
+
     public GetLifecyclePolicyPreviewResponse withGetLifecyclePolicyPreviewResponse(org.openapis.openapi.models.shared.GetLifecyclePolicyPreviewResponse getLifecyclePolicyPreviewResponse) {
         this.getLifecyclePolicyPreviewResponse = getLifecyclePolicyPreviewResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetLifecyclePolicyPreviewResponse {
      */
     
     public Object invalidParameterException;
+
     public GetLifecyclePolicyPreviewResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class GetLifecyclePolicyPreviewResponse {
      */
     
     public Object lifecyclePolicyPreviewNotFoundException;
+
     public GetLifecyclePolicyPreviewResponse withLifecyclePolicyPreviewNotFoundException(Object lifecyclePolicyPreviewNotFoundException) {
         this.lifecyclePolicyPreviewNotFoundException = lifecyclePolicyPreviewNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class GetLifecyclePolicyPreviewResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public GetLifecyclePolicyPreviewResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetLifecyclePolicyPreviewResponse {
      */
     
     public Object serverException;
+
     public GetLifecyclePolicyPreviewResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -66,6 +73,7 @@ public class GetLifecyclePolicyPreviewResponse {
     
     
     public Integer statusCode;
+
     public GetLifecyclePolicyPreviewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetLifecyclePolicyPreviewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLifecyclePolicyPreviewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetLifecyclePolicyPreviewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

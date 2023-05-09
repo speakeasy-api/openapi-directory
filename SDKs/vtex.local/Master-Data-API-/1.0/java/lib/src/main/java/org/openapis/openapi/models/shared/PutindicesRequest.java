@@ -15,6 +15,7 @@ public class PutindicesRequest {
      */
     @JsonProperty("fields")
     public String fields;
+
     public PutindicesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -25,6 +26,7 @@ public class PutindicesRequest {
      */
     @JsonProperty("multiple")
     public Boolean multiple;
+
     public PutindicesRequest withMultiple(Boolean multiple) {
         this.multiple = multiple;
         return this;
@@ -35,9 +37,15 @@ public class PutindicesRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public PutindicesRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PutindicesRequest(@JsonProperty("fields") String fields, @JsonProperty("multiple") Boolean multiple, @JsonProperty("name") String name) {
+        this.fields = fields;
+        this.multiple = multiple;
+        this.name = name;
+  }
 }

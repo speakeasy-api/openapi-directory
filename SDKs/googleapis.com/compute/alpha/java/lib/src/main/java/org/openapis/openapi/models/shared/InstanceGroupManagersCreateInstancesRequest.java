@@ -18,9 +18,11 @@ public class InstanceGroupManagersCreateInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public PerInstanceConfig[] instances;
+
     public InstanceGroupManagersCreateInstancesRequest withInstances(PerInstanceConfig[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public InstanceGroupManagersCreateInstancesRequest(){}
 }

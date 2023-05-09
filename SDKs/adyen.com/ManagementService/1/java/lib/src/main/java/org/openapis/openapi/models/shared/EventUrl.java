@@ -15,6 +15,7 @@ public class EventUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventLocalUrls")
     public Url[] eventLocalUrls;
+
     public EventUrl withEventLocalUrls(Url[] eventLocalUrls) {
         this.eventLocalUrls = eventLocalUrls;
         return this;
@@ -26,9 +27,11 @@ public class EventUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventPublicUrls")
     public Url[] eventPublicUrls;
+
     public EventUrl withEventPublicUrls(Url[] eventPublicUrls) {
         this.eventPublicUrls = eventPublicUrls;
         return this;
     }
     
+    public EventUrl(){}
 }

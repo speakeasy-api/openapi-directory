@@ -18,6 +18,7 @@ public class TaskStatusesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TaskStatus[] data;
+
     public TaskStatusesList200ApplicationJSON withData(org.openapis.openapi.models.shared.TaskStatus[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class TaskStatusesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public TaskStatusesList200ApplicationJSON withNext(String next) {
         this.next = next;
         return this;
@@ -40,9 +42,11 @@ public class TaskStatusesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public TaskStatusesList200ApplicationJSON withPrevious(String previous) {
         this.previous = previous;
         return this;
     }
     
+    public TaskStatusesList200ApplicationJSON(){}
 }

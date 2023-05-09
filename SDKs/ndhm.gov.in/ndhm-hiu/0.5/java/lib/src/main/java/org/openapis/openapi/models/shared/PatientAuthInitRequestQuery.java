@@ -20,6 +20,7 @@ public class PatientAuthInitRequestQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authMode")
     public AuthenticationModeEnum authMode;
+
     public PatientAuthInitRequestQuery withAuthMode(AuthenticationModeEnum authMode) {
         this.authMode = authMode;
         return this;
@@ -30,6 +31,7 @@ public class PatientAuthInitRequestQuery {
      */
     @JsonProperty("id")
     public String id;
+
     public PatientAuthInitRequestQuery withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class PatientAuthInitRequestQuery {
      */
     @JsonProperty("purpose")
     public PatientAuthPurposeEnum purpose;
+
     public PatientAuthInitRequestQuery withPurpose(PatientAuthPurposeEnum purpose) {
         this.purpose = purpose;
         return this;
@@ -50,9 +53,15 @@ public class PatientAuthInitRequestQuery {
      */
     @JsonProperty("requester")
     public PatientAuthInitRequestQueryRequester requester;
+
     public PatientAuthInitRequestQuery withRequester(PatientAuthInitRequestQueryRequester requester) {
         this.requester = requester;
         return this;
     }
     
+    public PatientAuthInitRequestQuery(@JsonProperty("id") String id, @JsonProperty("purpose") PatientAuthPurposeEnum purpose, @JsonProperty("requester") PatientAuthInitRequestQueryRequester requester) {
+        this.id = id;
+        this.purpose = purpose;
+        this.requester = requester;
+  }
 }

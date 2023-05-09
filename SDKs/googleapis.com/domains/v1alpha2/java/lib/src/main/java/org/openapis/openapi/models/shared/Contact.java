@@ -18,6 +18,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Contact withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +30,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("faxNumber")
     public String faxNumber;
+
     public Contact withFaxNumber(String faxNumber) {
         this.faxNumber = faxNumber;
         return this;
@@ -40,6 +42,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public Contact withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -51,9 +54,11 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalAddress")
     public PostalAddress postalAddress;
+
     public Contact withPostalAddress(PostalAddress postalAddress) {
         this.postalAddress = postalAddress;
         return this;
     }
     
+    public Contact(){}
 }

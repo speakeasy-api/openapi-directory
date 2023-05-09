@@ -14,6 +14,7 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBody {
      */
     @JsonProperty("deliveryOnWeekends")
     public Boolean deliveryOnWeekends;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBody withDeliveryOnWeekends(Boolean deliveryOnWeekends) {
         this.deliveryOnWeekends = deliveryOnWeekends;
         return this;
@@ -25,6 +26,7 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryScheduleSettings")
     public PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettings deliveryScheduleSettings;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBody withDeliveryScheduleSettings(PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettings deliveryScheduleSettings) {
         this.deliveryScheduleSettings = deliveryScheduleSettings;
         return this;
@@ -35,6 +37,7 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBody {
      */
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBody withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -45,6 +48,7 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBody {
      */
     @JsonProperty("maxDimension")
     public PutApiLogisticsPvtShippingPoliciesIdRequestBodyMaxDimension maxDimension;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBody withMaxDimension(PutApiLogisticsPvtShippingPoliciesIdRequestBodyMaxDimension maxDimension) {
         this.maxDimension = maxDimension;
         return this;
@@ -55,6 +59,7 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -65,9 +70,17 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBody {
      */
     @JsonProperty("shippingMethod")
     public String shippingMethod;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBody withShippingMethod(String shippingMethod) {
         this.shippingMethod = shippingMethod;
         return this;
     }
     
+    public PutApiLogisticsPvtShippingPoliciesIdRequestBody(@JsonProperty("deliveryOnWeekends") Boolean deliveryOnWeekends, @JsonProperty("isActive") Boolean isActive, @JsonProperty("maxDimension") PutApiLogisticsPvtShippingPoliciesIdRequestBodyMaxDimension maxDimension, @JsonProperty("name") String name, @JsonProperty("shippingMethod") String shippingMethod) {
+        this.deliveryOnWeekends = deliveryOnWeekends;
+        this.isActive = isActive;
+        this.maxDimension = maxDimension;
+        this.name = name;
+        this.shippingMethod = shippingMethod;
+  }
 }

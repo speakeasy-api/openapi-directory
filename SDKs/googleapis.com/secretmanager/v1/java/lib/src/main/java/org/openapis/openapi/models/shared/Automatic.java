@@ -18,9 +18,11 @@ public class Automatic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerManagedEncryption")
     public CustomerManagedEncryption customerManagedEncryption;
+
     public Automatic withCustomerManagedEncryption(CustomerManagedEncryption customerManagedEncryption) {
         this.customerManagedEncryption = customerManagedEncryption;
         return this;
     }
     
+    public Automatic(){}
 }

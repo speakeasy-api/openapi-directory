@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFindingsReportResponse {
@@ -12,6 +13,7 @@ public class CreateFindingsReportResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateFindingsReportResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateFindingsReportResponse {
     
     
     public String contentType;
+
     public CreateFindingsReportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateFindingsReportResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFindingsReportResponse createFindingsReportResponse;
+
     public CreateFindingsReportResponse withCreateFindingsReportResponse(org.openapis.openapi.models.shared.CreateFindingsReportResponse createFindingsReportResponse) {
         this.createFindingsReportResponse = createFindingsReportResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateFindingsReportResponse {
      */
     
     public Object internalServerException;
+
     public CreateFindingsReportResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateFindingsReportResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateFindingsReportResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateFindingsReportResponse {
     
     
     public Integer statusCode;
+
     public CreateFindingsReportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateFindingsReportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFindingsReportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateFindingsReportResponse {
      */
     
     public Object throttlingException;
+
     public CreateFindingsReportResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class CreateFindingsReportResponse {
      */
     
     public Object validationException;
+
     public CreateFindingsReportResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateFindingsReportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

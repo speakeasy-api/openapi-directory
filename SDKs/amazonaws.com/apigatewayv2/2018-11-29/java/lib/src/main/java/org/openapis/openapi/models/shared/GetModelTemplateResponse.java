@@ -15,9 +15,11 @@ public class GetModelTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public GetModelTemplateResponse withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetModelTemplateResponse(){}
 }

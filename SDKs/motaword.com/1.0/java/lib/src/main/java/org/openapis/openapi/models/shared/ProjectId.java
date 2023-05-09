@@ -15,6 +15,7 @@ public class ProjectId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internal-id")
     public Long internalId;
+
     public ProjectId withInternalId(Long internalId) {
         this.internalId = internalId;
         return this;
@@ -23,9 +24,11 @@ public class ProjectId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public-id")
     public Long publicId;
+
     public ProjectId withPublicId(Long publicId) {
         this.publicId = publicId;
         return this;
     }
     
+    public ProjectId(){}
 }

@@ -13,14 +13,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class EdgeCluster {
     /**
-     * Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
+     * Immutable. Self-link of the Google Cloud resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLink")
     public String resourceLink;
+
     public EdgeCluster withResourceLink(String resourceLink) {
         this.resourceLink = resourceLink;
         return this;
     }
     
+    public EdgeCluster(){}
 }

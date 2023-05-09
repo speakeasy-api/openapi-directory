@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CatalogIndexResponse {
@@ -12,6 +13,7 @@ public class CatalogIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public CatalogIndexResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class CatalogIndexResponse {
     
     
     public String contentType;
+
     public CatalogIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CatalogIndexResponse {
     
     
     public Integer statusCode;
+
     public CatalogIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CatalogIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CatalogIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class CatalogIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.CatalogIndex catalogIndex;
+
     public CatalogIndexResponse withCatalogIndex(org.openapis.openapi.models.shared.CatalogIndex catalogIndex) {
         this.catalogIndex = catalogIndex;
         return this;
     }
     
+    public CatalogIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

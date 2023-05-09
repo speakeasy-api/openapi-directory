@@ -15,6 +15,7 @@ public class ProductUnitPricingBaseMeasure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public ProductUnitPricingBaseMeasure withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -26,9 +27,11 @@ public class ProductUnitPricingBaseMeasure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ProductUnitPricingBaseMeasure withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ProductUnitPricingBaseMeasure(){}
 }

@@ -16,6 +16,7 @@ import java.time.LocalDate;
 public class ProductNotifier200ApplicationJSON {
     @JsonProperty("callback")
     public String callback;
+
     public ProductNotifier200ApplicationJSON withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -24,6 +25,7 @@ public class ProductNotifier200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identity")
     public String identity;
+
     public ProductNotifier200ApplicationJSON withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -32,6 +34,7 @@ public class ProductNotifier200ApplicationJSON {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("lastCallTime")
     public LocalDate lastCallTime;
+
     public ProductNotifier200ApplicationJSON withLastCallTime(LocalDate lastCallTime) {
         this.lastCallTime = lastCallTime;
         return this;
@@ -39,6 +42,7 @@ public class ProductNotifier200ApplicationJSON {
     
     @JsonProperty("lastResponseCode")
     public Long lastResponseCode;
+
     public ProductNotifier200ApplicationJSON withLastResponseCode(Long lastResponseCode) {
         this.lastResponseCode = lastResponseCode;
         return this;
@@ -46,6 +50,7 @@ public class ProductNotifier200ApplicationJSON {
     
     @JsonProperty("notifierType")
     public String notifierType;
+
     public ProductNotifier200ApplicationJSON withNotifierType(String notifierType) {
         this.notifierType = notifierType;
         return this;
@@ -53,9 +58,17 @@ public class ProductNotifier200ApplicationJSON {
     
     @JsonProperty("productOrderIdentity")
     public String productOrderIdentity;
+
     public ProductNotifier200ApplicationJSON withProductOrderIdentity(String productOrderIdentity) {
         this.productOrderIdentity = productOrderIdentity;
         return this;
     }
     
+    public ProductNotifier200ApplicationJSON(@JsonProperty("callback") String callback, @JsonProperty("lastCallTime") LocalDate lastCallTime, @JsonProperty("lastResponseCode") Long lastResponseCode, @JsonProperty("notifierType") String notifierType, @JsonProperty("productOrderIdentity") String productOrderIdentity) {
+        this.callback = callback;
+        this.lastCallTime = lastCallTime;
+        this.lastResponseCode = lastResponseCode;
+        this.notifierType = notifierType;
+        this.productOrderIdentity = productOrderIdentity;
+  }
 }

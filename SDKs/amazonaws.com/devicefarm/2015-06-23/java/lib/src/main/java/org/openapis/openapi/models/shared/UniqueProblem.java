@@ -15,6 +15,7 @@ public class UniqueProblem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public UniqueProblem withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class UniqueProblem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("problems")
     public Problem[] problems;
+
     public UniqueProblem withProblems(Problem[] problems) {
         this.problems = problems;
         return this;
     }
     
+    public UniqueProblem(){}
 }

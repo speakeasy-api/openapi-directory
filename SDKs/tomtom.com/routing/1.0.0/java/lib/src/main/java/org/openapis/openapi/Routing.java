@@ -56,10 +56,8 @@ public class Routing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeResponse res = new org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeResponse() {{
+        org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeResponse res = new org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 408 || httpRes.statusCode() == 414 || httpRes.statusCode() == 500 || httpRes.statusCode() == 502 || httpRes.statusCode() == 503 || httpRes.statusCode() == 504 || httpRes.statusCode() == 596) {
@@ -96,10 +94,8 @@ public class Routing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateRouteLocationsContentTypeResponse res = new org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateRouteLocationsContentTypeResponse() {{
+        org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateRouteLocationsContentTypeResponse res = new org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateRouteLocationsContentTypeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 408 || httpRes.statusCode() == 414 || httpRes.statusCode() == 500 || httpRes.statusCode() == 502 || httpRes.statusCode() == 503 || httpRes.statusCode() == 504 || httpRes.statusCode() == 596) {
@@ -138,10 +134,8 @@ public class Routing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJsonResponse res = new org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJsonResponse() {{
+        org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJsonResponse res = new org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 408 || httpRes.statusCode() == 414 || httpRes.statusCode() == 500 || httpRes.statusCode() == 502 || httpRes.statusCode() == 503 || httpRes.statusCode() == 504 || httpRes.statusCode() == 596) {
@@ -180,10 +174,8 @@ public class Routing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeRawResponse res = new org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeRawResponse() {{
+        org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeRawResponse res = new org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeRawResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 408 || httpRes.statusCode() == 414 || httpRes.statusCode() == 500 || httpRes.statusCode() == 502 || httpRes.statusCode() == 503 || httpRes.statusCode() == 504 || httpRes.statusCode() == 596) {
@@ -222,10 +214,8 @@ public class Routing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeJsonResponse res = new org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeJsonResponse() {{
+        org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeJsonResponse res = new org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 408 || httpRes.statusCode() == 414 || httpRes.statusCode() == 500 || httpRes.statusCode() == 502 || httpRes.statusCode() == 503 || httpRes.statusCode() == 504 || httpRes.statusCode() == 596) {
@@ -264,10 +254,8 @@ public class Routing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawResponse res = new org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawResponse() {{
+        org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawResponse res = new org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 408 || httpRes.statusCode() == 414 || httpRes.statusCode() == 500 || httpRes.statusCode() == 502 || httpRes.statusCode() == 503 || httpRes.statusCode() == 504 || httpRes.statusCode() == 596) {

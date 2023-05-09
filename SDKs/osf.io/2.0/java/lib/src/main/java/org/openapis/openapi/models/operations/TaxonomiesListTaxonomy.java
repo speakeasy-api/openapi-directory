@@ -12,6 +12,7 @@ public class TaxonomiesListTaxonomy {
      */
     
     public TaxonomiesListTaxonomyAttributes attributes;
+
     public TaxonomiesListTaxonomy withAttributes(TaxonomiesListTaxonomyAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class TaxonomiesListTaxonomy {
      */
     
     public String id;
+
     public TaxonomiesListTaxonomy withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class TaxonomiesListTaxonomy {
      */
     
     public TaxonomiesListTaxonomyLinks links;
+
     public TaxonomiesListTaxonomy withLinks(TaxonomiesListTaxonomyLinks links) {
         this.links = links;
         return this;
@@ -42,9 +45,11 @@ public class TaxonomiesListTaxonomy {
      */
     
     public String type;
+
     public TaxonomiesListTaxonomy withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TaxonomiesListTaxonomy(){}
 }

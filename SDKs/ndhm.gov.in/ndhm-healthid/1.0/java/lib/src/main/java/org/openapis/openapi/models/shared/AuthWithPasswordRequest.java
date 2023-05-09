@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AuthWithPasswordRequest {
     @JsonProperty("password")
     public String password;
+
     public AuthWithPasswordRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -19,9 +20,14 @@ public class AuthWithPasswordRequest {
     
     @JsonProperty("txnId")
     public String txnId;
+
     public AuthWithPasswordRequest withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public AuthWithPasswordRequest(@JsonProperty("password") String password, @JsonProperty("txnId") String txnId) {
+        this.password = password;
+        this.txnId = txnId;
+  }
 }

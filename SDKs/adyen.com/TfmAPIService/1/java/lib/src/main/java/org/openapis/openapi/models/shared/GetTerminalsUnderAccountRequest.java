@@ -14,6 +14,7 @@ public class GetTerminalsUnderAccountRequest {
      */
     @JsonProperty("companyAccount")
     public String companyAccount;
+
     public GetTerminalsUnderAccountRequest withCompanyAccount(String companyAccount) {
         this.companyAccount = companyAccount;
         return this;
@@ -25,6 +26,7 @@ public class GetTerminalsUnderAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public GetTerminalsUnderAccountRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -36,9 +38,13 @@ public class GetTerminalsUnderAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("store")
     public String store;
+
     public GetTerminalsUnderAccountRequest withStore(String store) {
         this.store = store;
         return this;
     }
     
+    public GetTerminalsUnderAccountRequest(@JsonProperty("companyAccount") String companyAccount) {
+        this.companyAccount = companyAccount;
+  }
 }

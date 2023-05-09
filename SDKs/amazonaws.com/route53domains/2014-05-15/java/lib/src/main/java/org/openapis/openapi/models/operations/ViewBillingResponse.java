@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ViewBillingResponse {
     
     public String contentType;
+
     public ViewBillingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ViewBillingResponse {
      */
     
     public Object invalidInput;
+
     public ViewBillingResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -26,6 +29,7 @@ public class ViewBillingResponse {
     
     
     public Integer statusCode;
+
     public ViewBillingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ViewBillingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ViewBillingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class ViewBillingResponse {
      */
     
     public org.openapis.openapi.models.shared.ViewBillingResponse viewBillingResponse;
+
     public ViewBillingResponse withViewBillingResponse(org.openapis.openapi.models.shared.ViewBillingResponse viewBillingResponse) {
         this.viewBillingResponse = viewBillingResponse;
         return this;
     }
     
+    public ViewBillingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

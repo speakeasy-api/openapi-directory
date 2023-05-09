@@ -15,6 +15,7 @@ public class GetPrimaryIpsPrimaryIPsResponsePrimaryIPDatacenterServerTypes {
      */
     @JsonProperty("available")
     public Double[] available;
+
     public GetPrimaryIpsPrimaryIPsResponsePrimaryIPDatacenterServerTypes withAvailable(Double[] available) {
         this.available = available;
         return this;
@@ -25,6 +26,7 @@ public class GetPrimaryIpsPrimaryIPsResponsePrimaryIPDatacenterServerTypes {
      */
     @JsonProperty("available_for_migration")
     public Double[] availableForMigration;
+
     public GetPrimaryIpsPrimaryIPsResponsePrimaryIPDatacenterServerTypes withAvailableForMigration(Double[] availableForMigration) {
         this.availableForMigration = availableForMigration;
         return this;
@@ -35,9 +37,15 @@ public class GetPrimaryIpsPrimaryIPsResponsePrimaryIPDatacenterServerTypes {
      */
     @JsonProperty("supported")
     public Double[] supported;
+
     public GetPrimaryIpsPrimaryIPsResponsePrimaryIPDatacenterServerTypes withSupported(Double[] supported) {
         this.supported = supported;
         return this;
     }
     
+    public GetPrimaryIpsPrimaryIPsResponsePrimaryIPDatacenterServerTypes(@JsonProperty("available") Double[] available, @JsonProperty("available_for_migration") Double[] availableForMigration, @JsonProperty("supported") Double[] supported) {
+        this.available = available;
+        this.availableForMigration = availableForMigration;
+        this.supported = supported;
+  }
 }

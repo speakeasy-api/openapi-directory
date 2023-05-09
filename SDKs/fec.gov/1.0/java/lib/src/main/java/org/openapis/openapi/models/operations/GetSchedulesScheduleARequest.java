@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -14,6 +15,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetSchedulesScheduleARequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -25,6 +27,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
     public String[] committeeId;
+
     public GetSchedulesScheduleARequest withCommitteeId(String[] committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -35,6 +38,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor_city")
     public String[] contributorCity;
+
     public GetSchedulesScheduleARequest withContributorCity(String[] contributorCity) {
         this.contributorCity = contributorCity;
         return this;
@@ -45,6 +49,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor_employer")
     public String[] contributorEmployer;
+
     public GetSchedulesScheduleARequest withContributorEmployer(String[] contributorEmployer) {
         this.contributorEmployer = contributorEmployer;
         return this;
@@ -55,6 +60,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor_id")
     public String[] contributorId;
+
     public GetSchedulesScheduleARequest withContributorId(String[] contributorId) {
         this.contributorId = contributorId;
         return this;
@@ -65,6 +71,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor_name")
     public String[] contributorName;
+
     public GetSchedulesScheduleARequest withContributorName(String[] contributorName) {
         this.contributorName = contributorName;
         return this;
@@ -75,6 +82,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor_occupation")
     public String[] contributorOccupation;
+
     public GetSchedulesScheduleARequest withContributorOccupation(String[] contributorOccupation) {
         this.contributorOccupation = contributorOccupation;
         return this;
@@ -85,6 +93,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor_state")
     public String[] contributorState;
+
     public GetSchedulesScheduleARequest withContributorState(String[] contributorState) {
         this.contributorState = contributorState;
         return this;
@@ -95,6 +104,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor_type")
     public GetSchedulesScheduleAContributorTypeEnum[] contributorType;
+
     public GetSchedulesScheduleARequest withContributorType(GetSchedulesScheduleAContributorTypeEnum[] contributorType) {
         this.contributorType = contributorType;
         return this;
@@ -105,6 +115,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor_zip")
     public String[] contributorZip;
+
     public GetSchedulesScheduleARequest withContributorZip(String[] contributorZip) {
         this.contributorZip = contributorZip;
         return this;
@@ -116,6 +127,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=image_number")
     public String[] imageNumber;
+
     public GetSchedulesScheduleARequest withImageNumber(String[] imageNumber) {
         this.imageNumber = imageNumber;
         return this;
@@ -126,6 +138,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_individual")
     public Boolean isIndividual;
+
     public GetSchedulesScheduleARequest withIsIndividual(Boolean isIndividual) {
         this.isIndividual = isIndividual;
         return this;
@@ -136,6 +149,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_contribution_receipt_amount")
     public Float lastContributionReceiptAmount;
+
     public GetSchedulesScheduleARequest withLastContributionReceiptAmount(Float lastContributionReceiptAmount) {
         this.lastContributionReceiptAmount = lastContributionReceiptAmount;
         return this;
@@ -146,6 +160,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_contribution_receipt_date")
     public LocalDate lastContributionReceiptDate;
+
     public GetSchedulesScheduleARequest withLastContributionReceiptDate(LocalDate lastContributionReceiptDate) {
         this.lastContributionReceiptDate = lastContributionReceiptDate;
         return this;
@@ -156,6 +171,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_index")
     public Integer lastIndex;
+
     public GetSchedulesScheduleARequest withLastIndex(Integer lastIndex) {
         this.lastIndex = lastIndex;
         return this;
@@ -166,6 +182,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=line_number")
     public String lineNumber;
+
     public GetSchedulesScheduleARequest withLineNumber(String lineNumber) {
         this.lineNumber = lineNumber;
         return this;
@@ -176,6 +193,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_amount")
     public String maxAmount;
+
     public GetSchedulesScheduleARequest withMaxAmount(String maxAmount) {
         this.maxAmount = maxAmount;
         return this;
@@ -186,6 +204,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
     public LocalDate maxDate;
+
     public GetSchedulesScheduleARequest withMaxDate(LocalDate maxDate) {
         this.maxDate = maxDate;
         return this;
@@ -196,6 +215,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_image_number")
     public String maxImageNumber;
+
     public GetSchedulesScheduleARequest withMaxImageNumber(String maxImageNumber) {
         this.maxImageNumber = maxImageNumber;
         return this;
@@ -206,6 +226,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_load_date")
     public LocalDate maxLoadDate;
+
     public GetSchedulesScheduleARequest withMaxLoadDate(LocalDate maxLoadDate) {
         this.maxLoadDate = maxLoadDate;
         return this;
@@ -216,6 +237,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_amount")
     public String minAmount;
+
     public GetSchedulesScheduleARequest withMinAmount(String minAmount) {
         this.minAmount = minAmount;
         return this;
@@ -226,6 +248,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
     public LocalDate minDate;
+
     public GetSchedulesScheduleARequest withMinDate(LocalDate minDate) {
         this.minDate = minDate;
         return this;
@@ -236,6 +259,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_image_number")
     public String minImageNumber;
+
     public GetSchedulesScheduleARequest withMinImageNumber(String minImageNumber) {
         this.minImageNumber = minImageNumber;
         return this;
@@ -246,6 +270,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_load_date")
     public LocalDate minLoadDate;
+
     public GetSchedulesScheduleARequest withMinLoadDate(LocalDate minLoadDate) {
         this.minLoadDate = minLoadDate;
         return this;
@@ -256,6 +281,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetSchedulesScheduleARequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -273,6 +299,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recipient_committee_designation")
     public GetSchedulesScheduleARecipientCommitteeDesignationEnum[] recipientCommitteeDesignation;
+
     public GetSchedulesScheduleARequest withRecipientCommitteeDesignation(GetSchedulesScheduleARecipientCommitteeDesignationEnum[] recipientCommitteeDesignation) {
         this.recipientCommitteeDesignation = recipientCommitteeDesignation;
         return this;
@@ -290,6 +317,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recipient_committee_org_type")
     public GetSchedulesScheduleARecipientCommitteeOrgTypeEnum[] recipientCommitteeOrgType;
+
     public GetSchedulesScheduleARequest withRecipientCommitteeOrgType(GetSchedulesScheduleARecipientCommitteeOrgTypeEnum[] recipientCommitteeOrgType) {
         this.recipientCommitteeOrgType = recipientCommitteeOrgType;
         return this;
@@ -317,6 +345,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recipient_committee_type")
     public GetSchedulesScheduleARecipientCommitteeTypeEnum[] recipientCommitteeType;
+
     public GetSchedulesScheduleARequest withRecipientCommitteeType(GetSchedulesScheduleARecipientCommitteeTypeEnum[] recipientCommitteeType) {
         this.recipientCommitteeType = recipientCommitteeType;
         return this;
@@ -328,6 +357,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetSchedulesScheduleARequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -338,6 +368,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetSchedulesScheduleARequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -348,6 +379,7 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetSchedulesScheduleARequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -365,9 +397,13 @@ public class GetSchedulesScheduleARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=two_year_transaction_period")
     public Integer[] twoYearTransactionPeriod;
+
     public GetSchedulesScheduleARequest withTwoYearTransactionPeriod(Integer[] twoYearTransactionPeriod) {
         this.twoYearTransactionPeriod = twoYearTransactionPeriod;
         return this;
     }
     
+    public GetSchedulesScheduleARequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateImagesFromFilesJsonRequest {
@@ -12,6 +13,7 @@ public class CreateImagesFromFilesJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ImageFileCreateBatch imageFileCreateBatch;
+
     public CreateImagesFromFilesJsonRequest withImageFileCreateBatch(org.openapis.openapi.models.shared.ImageFileCreateBatch imageFileCreateBatch) {
         this.imageFileCreateBatch = imageFileCreateBatch;
         return this;
@@ -19,6 +21,7 @@ public class CreateImagesFromFilesJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public CreateImagesFromFilesJsonRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -29,9 +32,15 @@ public class CreateImagesFromFilesJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public CreateImagesFromFilesJsonRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public CreateImagesFromFilesJsonRequest(@JsonProperty("ImageFileCreateBatch") org.openapis.openapi.models.shared.ImageFileCreateBatch imageFileCreateBatch, @JsonProperty("Training-Key") String trainingKey, @JsonProperty("projectId") String projectId) {
+        this.imageFileCreateBatch = imageFileCreateBatch;
+        this.trainingKey = trainingKey;
+        this.projectId = projectId;
+  }
 }

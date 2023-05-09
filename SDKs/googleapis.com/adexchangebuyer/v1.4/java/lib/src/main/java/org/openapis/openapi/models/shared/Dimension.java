@@ -15,6 +15,7 @@ public class Dimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionType")
     public String dimensionType;
+
     public Dimension withDimensionType(String dimensionType) {
         this.dimensionType = dimensionType;
         return this;
@@ -23,9 +24,11 @@ public class Dimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionValues")
     public DimensionDimensionValue[] dimensionValues;
+
     public Dimension withDimensionValues(DimensionDimensionValue[] dimensionValues) {
         this.dimensionValues = dimensionValues;
         return this;
     }
     
+    public Dimension(){}
 }

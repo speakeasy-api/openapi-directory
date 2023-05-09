@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrthologsByListUsingPOSTResponse {
     
     public byte[] body;
+
     public GetOrthologsByListUsingPOSTResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetOrthologsByListUsingPOSTResponse {
     
     
     public String contentType;
+
     public GetOrthologsByListUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetOrthologsByListUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public GetOrthologsByListUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetOrthologsByListUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrthologsByListUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOrthologsByListUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

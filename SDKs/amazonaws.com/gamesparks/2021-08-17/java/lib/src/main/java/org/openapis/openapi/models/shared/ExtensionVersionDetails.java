@@ -15,6 +15,7 @@ public class ExtensionVersionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ExtensionVersionDetails withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class ExtensionVersionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Namespace")
     public String namespace;
+
     public ExtensionVersionDetails withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -31,6 +33,7 @@ public class ExtensionVersionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schema")
     public String schema;
+
     public ExtensionVersionDetails withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -39,9 +42,11 @@ public class ExtensionVersionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public ExtensionVersionDetails withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ExtensionVersionDetails(){}
 }

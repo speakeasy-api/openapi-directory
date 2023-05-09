@@ -15,9 +15,11 @@ public class RedshiftRetryOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationInSeconds")
     public Long durationInSeconds;
+
     public RedshiftRetryOptions withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
     }
     
+    public RedshiftRetryOptions(){}
 }

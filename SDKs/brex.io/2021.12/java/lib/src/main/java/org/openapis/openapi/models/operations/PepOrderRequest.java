@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PepOrderRequest {
@@ -12,6 +13,7 @@ public class PepOrderRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public PepOrderRequestBody requestBody;
+
     public PepOrderRequest withRequestBody(PepOrderRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class PepOrderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=search")
     public String search;
+
     public PepOrderRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -32,9 +35,14 @@ public class PepOrderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public PepOrderTypeEnum type;
+
     public PepOrderRequest withType(PepOrderTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PepOrderRequest(@JsonProperty("search") String search, @JsonProperty("type") PepOrderTypeEnum type) {
+        this.search = search;
+        this.type = type;
+  }
 }

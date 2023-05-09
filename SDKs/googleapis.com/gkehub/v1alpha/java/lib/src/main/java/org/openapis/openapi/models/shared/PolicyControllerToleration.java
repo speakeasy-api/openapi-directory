@@ -18,6 +18,7 @@ public class PolicyControllerToleration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effect")
     public String effect;
+
     public PolicyControllerToleration withEffect(String effect) {
         this.effect = effect;
         return this;
@@ -29,6 +30,7 @@ public class PolicyControllerToleration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public PolicyControllerToleration withKey(String key) {
         this.key = key;
         return this;
@@ -40,6 +42,7 @@ public class PolicyControllerToleration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public String operator;
+
     public PolicyControllerToleration withOperator(String operator) {
         this.operator = operator;
         return this;
@@ -51,9 +54,11 @@ public class PolicyControllerToleration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public PolicyControllerToleration withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PolicyControllerToleration(){}
 }

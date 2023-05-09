@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class YoutubeSubscriptionsDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public YoutubeSubscriptionsDeleteSecurityOption1 option1;
+
     public YoutubeSubscriptionsDeleteSecurity withOption1(YoutubeSubscriptionsDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class YoutubeSubscriptionsDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubeSubscriptionsDeleteSecurityOption2 option2;
+
     public YoutubeSubscriptionsDeleteSecurity withOption2(YoutubeSubscriptionsDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class YoutubeSubscriptionsDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubeSubscriptionsDeleteSecurityOption3 option3;
+
     public YoutubeSubscriptionsDeleteSecurity withOption3(YoutubeSubscriptionsDeleteSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public YoutubeSubscriptionsDeleteSecurity(){}
 }

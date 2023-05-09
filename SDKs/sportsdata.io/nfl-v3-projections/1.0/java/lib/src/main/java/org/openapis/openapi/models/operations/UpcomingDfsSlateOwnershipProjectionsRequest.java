@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpcomingDfsSlateOwnershipProjectionsRequest {
@@ -12,9 +13,13 @@ public class UpcomingDfsSlateOwnershipProjectionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public UpcomingDfsSlateOwnershipProjectionsFormatEnum format;
+
     public UpcomingDfsSlateOwnershipProjectionsRequest withFormat(UpcomingDfsSlateOwnershipProjectionsFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public UpcomingDfsSlateOwnershipProjectionsRequest(@JsonProperty("format") UpcomingDfsSlateOwnershipProjectionsFormatEnum format) {
+        this.format = format;
+  }
 }

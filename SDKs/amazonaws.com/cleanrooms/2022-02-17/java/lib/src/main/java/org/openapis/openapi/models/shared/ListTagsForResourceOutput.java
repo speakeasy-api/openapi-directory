@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListTagsForResourceOutput {
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ListTagsForResourceOutput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListTagsForResourceOutput(@JsonProperty("tags") java.util.Map<String, String> tags) {
+        this.tags = tags;
+  }
 }

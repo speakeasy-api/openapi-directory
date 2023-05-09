@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetpagedadminRequest {
@@ -12,6 +13,7 @@ public class GetpagedadminRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetpagedadminRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetpagedadminRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetpagedadminRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetpagedadminRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isActive")
     public Boolean isActive;
+
     public GetpagedadminRequest withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -42,6 +46,7 @@ public class GetpagedadminRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sellerId")
     public String sellerId;
+
     public GetpagedadminRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -52,6 +57,7 @@ public class GetpagedadminRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sellerSkuId")
     public String sellerSkuId;
+
     public GetpagedadminRequest withSellerSkuId(String sellerSkuId) {
         this.sellerSkuId = sellerSkuId;
         return this;
@@ -62,6 +68,7 @@ public class GetpagedadminRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public String size;
+
     public GetpagedadminRequest withSize(String size) {
         this.size = size;
         return this;
@@ -72,9 +79,14 @@ public class GetpagedadminRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skuId")
     public String skuId;
+
     public GetpagedadminRequest withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
     }
     
+    public GetpagedadminRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

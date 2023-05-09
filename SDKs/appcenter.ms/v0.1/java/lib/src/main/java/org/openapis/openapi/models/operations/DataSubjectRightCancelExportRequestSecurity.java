@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataSubjectRightCancelExportRequestSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-Token")
     public String apiToken;
+
     public DataSubjectRightCancelExportRequestSecurity withAPIToken(String apiToken) {
         this.apiToken = apiToken;
         return this;
     }
     
+    public DataSubjectRightCancelExportRequestSecurity(@JsonProperty("APIToken") String apiToken) {
+        this.apiToken = apiToken;
+  }
 }

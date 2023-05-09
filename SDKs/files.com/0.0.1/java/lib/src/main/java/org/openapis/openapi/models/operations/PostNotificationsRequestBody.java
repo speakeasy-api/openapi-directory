@@ -12,6 +12,7 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=group_id")
     public Integer groupId;
+
     public PostNotificationsRequestBody withGroupId(Integer groupId) {
         this.groupId = groupId;
         return this;
@@ -22,6 +23,7 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=message")
     public String message;
+
     public PostNotificationsRequestBody withMessage(String message) {
         this.message = message;
         return this;
@@ -32,6 +34,7 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=notify_on_copy")
     public Boolean notifyOnCopy;
+
     public PostNotificationsRequestBody withNotifyOnCopy(Boolean notifyOnCopy) {
         this.notifyOnCopy = notifyOnCopy;
         return this;
@@ -42,6 +45,7 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=notify_on_delete")
     public Boolean notifyOnDelete;
+
     public PostNotificationsRequestBody withNotifyOnDelete(Boolean notifyOnDelete) {
         this.notifyOnDelete = notifyOnDelete;
         return this;
@@ -52,6 +56,7 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=notify_on_download")
     public Boolean notifyOnDownload;
+
     public PostNotificationsRequestBody withNotifyOnDownload(Boolean notifyOnDownload) {
         this.notifyOnDownload = notifyOnDownload;
         return this;
@@ -62,6 +67,7 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=notify_on_move")
     public Boolean notifyOnMove;
+
     public PostNotificationsRequestBody withNotifyOnMove(Boolean notifyOnMove) {
         this.notifyOnMove = notifyOnMove;
         return this;
@@ -72,6 +78,7 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=notify_on_upload")
     public Boolean notifyOnUpload;
+
     public PostNotificationsRequestBody withNotifyOnUpload(Boolean notifyOnUpload) {
         this.notifyOnUpload = notifyOnUpload;
         return this;
@@ -82,6 +89,7 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=notify_user_actions")
     public Boolean notifyUserActions;
+
     public PostNotificationsRequestBody withNotifyUserActions(Boolean notifyUserActions) {
         this.notifyUserActions = notifyUserActions;
         return this;
@@ -92,6 +100,7 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=path")
     public String path;
+
     public PostNotificationsRequestBody withPath(String path) {
         this.path = path;
         return this;
@@ -102,6 +111,7 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=recursive")
     public Boolean recursive;
+
     public PostNotificationsRequestBody withRecursive(Boolean recursive) {
         this.recursive = recursive;
         return this;
@@ -112,6 +122,7 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=send_interval")
     public String sendInterval;
+
     public PostNotificationsRequestBody withSendInterval(String sendInterval) {
         this.sendInterval = sendInterval;
         return this;
@@ -122,6 +133,7 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=trigger_by_share_recipients")
     public Boolean triggerByShareRecipients;
+
     public PostNotificationsRequestBody withTriggerByShareRecipients(Boolean triggerByShareRecipients) {
         this.triggerByShareRecipients = triggerByShareRecipients;
         return this;
@@ -132,6 +144,7 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=triggering_filenames")
     public String[] triggeringFilenames;
+
     public PostNotificationsRequestBody withTriggeringFilenames(String[] triggeringFilenames) {
         this.triggeringFilenames = triggeringFilenames;
         return this;
@@ -142,6 +155,7 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=triggering_group_ids")
     public Integer[] triggeringGroupIds;
+
     public PostNotificationsRequestBody withTriggeringGroupIds(Integer[] triggeringGroupIds) {
         this.triggeringGroupIds = triggeringGroupIds;
         return this;
@@ -152,6 +166,7 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=triggering_user_ids")
     public Integer[] triggeringUserIds;
+
     public PostNotificationsRequestBody withTriggeringUserIds(Integer[] triggeringUserIds) {
         this.triggeringUserIds = triggeringUserIds;
         return this;
@@ -162,6 +177,7 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=user_id")
     public Integer userId;
+
     public PostNotificationsRequestBody withUserId(Integer userId) {
         this.userId = userId;
         return this;
@@ -172,9 +188,11 @@ public class PostNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=username")
     public String username;
+
     public PostNotificationsRequestBody withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public PostNotificationsRequestBody(){}
 }

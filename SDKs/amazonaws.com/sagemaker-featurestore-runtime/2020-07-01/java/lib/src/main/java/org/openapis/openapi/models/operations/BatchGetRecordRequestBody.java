@@ -12,9 +12,13 @@ public class BatchGetRecordRequestBody {
      */
     @JsonProperty("Identifiers")
     public org.openapis.openapi.models.shared.BatchGetRecordIdentifier[] identifiers;
+
     public BatchGetRecordRequestBody withIdentifiers(org.openapis.openapi.models.shared.BatchGetRecordIdentifier[] identifiers) {
         this.identifiers = identifiers;
         return this;
     }
     
+    public BatchGetRecordRequestBody(@JsonProperty("Identifiers") org.openapis.openapi.models.shared.BatchGetRecordIdentifier[] identifiers) {
+        this.identifiers = identifiers;
+  }
 }

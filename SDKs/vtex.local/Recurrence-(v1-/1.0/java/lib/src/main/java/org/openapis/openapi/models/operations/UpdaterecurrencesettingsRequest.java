@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdaterecurrencesettingsRequest {
@@ -12,6 +13,7 @@ public class UpdaterecurrencesettingsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpdaterecurrencesettingsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpdaterecurrencesettingsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpdaterecurrencesettingsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class UpdaterecurrencesettingsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdaterecurrencesettingsRequest updaterecurrencesettingsRequest;
+
     public UpdaterecurrencesettingsRequest withUpdaterecurrencesettingsRequest(org.openapis.openapi.models.shared.UpdaterecurrencesettingsRequest updaterecurrencesettingsRequest) {
         this.updaterecurrencesettingsRequest = updaterecurrencesettingsRequest;
         return this;
     }
     
+    public UpdaterecurrencesettingsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("UpdaterecurrencesettingsRequest") org.openapis.openapi.models.shared.UpdaterecurrencesettingsRequest updaterecurrencesettingsRequest) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.updaterecurrencesettingsRequest = updaterecurrencesettingsRequest;
+  }
 }

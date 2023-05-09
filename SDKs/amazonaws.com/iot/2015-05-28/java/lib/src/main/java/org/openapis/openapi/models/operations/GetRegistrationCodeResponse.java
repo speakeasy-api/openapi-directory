@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRegistrationCodeResponse {
     
     public String contentType;
+
     public GetRegistrationCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRegistrationCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRegistrationCodeResponse getRegistrationCodeResponse;
+
     public GetRegistrationCodeResponse withGetRegistrationCodeResponse(org.openapis.openapi.models.shared.GetRegistrationCodeResponse getRegistrationCodeResponse) {
         this.getRegistrationCodeResponse = getRegistrationCodeResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetRegistrationCodeResponse {
      */
     
     public Object internalFailureException;
+
     public GetRegistrationCodeResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetRegistrationCodeResponse {
      */
     
     public Object invalidRequestException;
+
     public GetRegistrationCodeResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetRegistrationCodeResponse {
     
     
     public Integer statusCode;
+
     public GetRegistrationCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetRegistrationCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRegistrationCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetRegistrationCodeResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetRegistrationCodeResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,6 +81,7 @@ public class GetRegistrationCodeResponse {
      */
     
     public Object throttlingException;
+
     public GetRegistrationCodeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetRegistrationCodeResponse {
      */
     
     public Object unauthorizedException;
+
     public GetRegistrationCodeResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetRegistrationCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

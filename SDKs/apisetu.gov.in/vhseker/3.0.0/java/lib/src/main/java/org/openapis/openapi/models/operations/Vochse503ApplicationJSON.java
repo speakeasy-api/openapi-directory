@@ -15,6 +15,7 @@ public class Vochse503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Vochse503ApplicationJSONErrorEnum error;
+
     public Vochse503ApplicationJSON withError(Vochse503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Vochse503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Vochse503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Vochse503ApplicationJSON withErrorDescription(Vochse503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Vochse503ApplicationJSON(){}
 }

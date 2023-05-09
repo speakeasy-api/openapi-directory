@@ -18,6 +18,7 @@ public class GoogleCloudSecuritycenterV1BigQueryExportInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataset")
     public String dataset;
+
     public GoogleCloudSecuritycenterV1BigQueryExportInput withDataset(String dataset) {
         this.dataset = dataset;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudSecuritycenterV1BigQueryExportInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudSecuritycenterV1BigQueryExportInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudSecuritycenterV1BigQueryExportInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudSecuritycenterV1BigQueryExportInput withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudSecuritycenterV1BigQueryExportInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudSecuritycenterV1BigQueryExportInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudSecuritycenterV1BigQueryExportInput(){}
 }

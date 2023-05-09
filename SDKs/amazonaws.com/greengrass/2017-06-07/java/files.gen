@@ -387,4 +387,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StartBulkDeploymentResponse
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateConnectivityInfoResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateGroupCertificateConfigurationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

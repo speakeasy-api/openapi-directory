@@ -15,6 +15,7 @@ public class SourceCloudProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originAccountID")
     public String originAccountID;
+
     public SourceCloudProperties withOriginAccountID(String originAccountID) {
         this.originAccountID = originAccountID;
         return this;
@@ -23,6 +24,7 @@ public class SourceCloudProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originAvailabilityZone")
     public String originAvailabilityZone;
+
     public SourceCloudProperties withOriginAvailabilityZone(String originAvailabilityZone) {
         this.originAvailabilityZone = originAvailabilityZone;
         return this;
@@ -31,9 +33,11 @@ public class SourceCloudProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originRegion")
     public String originRegion;
+
     public SourceCloudProperties withOriginRegion(String originRegion) {
         this.originRegion = originRegion;
         return this;
     }
     
+    public SourceCloudProperties(){}
 }

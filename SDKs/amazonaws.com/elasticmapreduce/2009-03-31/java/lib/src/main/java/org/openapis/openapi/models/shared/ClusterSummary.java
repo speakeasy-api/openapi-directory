@@ -15,6 +15,7 @@ public class ClusterSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterArn")
     public String clusterArn;
+
     public ClusterSummary withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -23,6 +24,7 @@ public class ClusterSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ClusterSummary withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class ClusterSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ClusterSummary withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class ClusterSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NormalizedInstanceHours")
     public Long normalizedInstanceHours;
+
     public ClusterSummary withNormalizedInstanceHours(Long normalizedInstanceHours) {
         this.normalizedInstanceHours = normalizedInstanceHours;
         return this;
@@ -47,6 +51,7 @@ public class ClusterSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutpostArn")
     public String outpostArn;
+
     public ClusterSummary withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -55,9 +60,11 @@ public class ClusterSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ClusterStatus status;
+
     public ClusterSummary withStatus(ClusterStatus status) {
         this.status = status;
         return this;
     }
     
+    public ClusterSummary(){}
 }

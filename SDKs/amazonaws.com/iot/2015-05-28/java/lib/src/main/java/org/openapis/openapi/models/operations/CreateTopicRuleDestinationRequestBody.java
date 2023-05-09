@@ -12,9 +12,13 @@ public class CreateTopicRuleDestinationRequestBody {
      */
     @JsonProperty("destinationConfiguration")
     public CreateTopicRuleDestinationRequestBodyDestinationConfiguration destinationConfiguration;
+
     public CreateTopicRuleDestinationRequestBody withDestinationConfiguration(CreateTopicRuleDestinationRequestBodyDestinationConfiguration destinationConfiguration) {
         this.destinationConfiguration = destinationConfiguration;
         return this;
     }
     
+    public CreateTopicRuleDestinationRequestBody(@JsonProperty("destinationConfiguration") CreateTopicRuleDestinationRequestBodyDestinationConfiguration destinationConfiguration) {
+        this.destinationConfiguration = destinationConfiguration;
+  }
 }

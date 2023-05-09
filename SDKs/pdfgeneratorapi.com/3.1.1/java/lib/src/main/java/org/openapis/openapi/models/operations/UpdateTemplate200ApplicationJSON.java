@@ -15,9 +15,11 @@ public class UpdateTemplate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public org.openapis.openapi.models.shared.TemplateDefinition response;
+
     public UpdateTemplate200ApplicationJSON withResponse(org.openapis.openapi.models.shared.TemplateDefinition response) {
         this.response = response;
         return this;
     }
     
+    public UpdateTemplate200ApplicationJSON(){}
 }

@@ -15,6 +15,7 @@ public class InstanceFleetResizingSpecifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDemandResizeSpecification")
     public OnDemandResizingSpecification onDemandResizeSpecification;
+
     public InstanceFleetResizingSpecifications withOnDemandResizeSpecification(OnDemandResizingSpecification onDemandResizeSpecification) {
         this.onDemandResizeSpecification = onDemandResizeSpecification;
         return this;
@@ -23,9 +24,11 @@ public class InstanceFleetResizingSpecifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpotResizeSpecification")
     public SpotResizingSpecification spotResizeSpecification;
+
     public InstanceFleetResizingSpecifications withSpotResizeSpecification(SpotResizingSpecification spotResizeSpecification) {
         this.spotResizeSpecification = spotResizeSpecification;
         return this;
     }
     
+    public InstanceFleetResizingSpecifications(){}
 }

@@ -15,6 +15,7 @@ public class Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmationState")
     public ConfirmationStateEnum confirmationState;
+
     public Intent withConfirmationState(ConfirmationStateEnum confirmationState) {
         this.confirmationState = confirmationState;
         return this;
@@ -22,6 +23,7 @@ public class Intent {
     
     @JsonProperty("name")
     public String name;
+
     public Intent withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +32,7 @@ public class Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slots")
     public java.util.Map<String, Slot> slots;
+
     public Intent withSlots(java.util.Map<String, Slot> slots) {
         this.slots = slots;
         return this;
@@ -38,9 +41,13 @@ public class Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public IntentStateEnum state;
+
     public Intent withState(IntentStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Intent(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

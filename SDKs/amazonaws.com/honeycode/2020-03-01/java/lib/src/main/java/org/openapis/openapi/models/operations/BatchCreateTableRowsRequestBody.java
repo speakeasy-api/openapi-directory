@@ -15,6 +15,7 @@ public class BatchCreateTableRowsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public BatchCreateTableRowsRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -25,9 +26,13 @@ public class BatchCreateTableRowsRequestBody {
      */
     @JsonProperty("rowsToCreate")
     public org.openapis.openapi.models.shared.CreateRowData[] rowsToCreate;
+
     public BatchCreateTableRowsRequestBody withRowsToCreate(org.openapis.openapi.models.shared.CreateRowData[] rowsToCreate) {
         this.rowsToCreate = rowsToCreate;
         return this;
     }
     
+    public BatchCreateTableRowsRequestBody(@JsonProperty("rowsToCreate") org.openapis.openapi.models.shared.CreateRowData[] rowsToCreate) {
+        this.rowsToCreate = rowsToCreate;
+  }
 }

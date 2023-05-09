@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeTimeToLiveInput {
     @JsonProperty("TableName")
     public String tableName;
+
     public DescribeTimeToLiveInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DescribeTimeToLiveInput(@JsonProperty("TableName") String tableName) {
+        this.tableName = tableName;
+  }
 }

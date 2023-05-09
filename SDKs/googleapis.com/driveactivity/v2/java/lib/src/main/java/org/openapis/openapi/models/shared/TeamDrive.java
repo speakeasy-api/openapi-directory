@@ -18,6 +18,7 @@ public class TeamDrive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TeamDrive withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class TeamDrive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("root")
     public DriveItem root;
+
     public TeamDrive withRoot(DriveItem root) {
         this.root = root;
         return this;
@@ -40,9 +42,11 @@ public class TeamDrive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public TeamDrive withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public TeamDrive(){}
 }

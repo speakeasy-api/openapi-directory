@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateGatewaySoftwareNowInput {
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public UpdateGatewaySoftwareNowInput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
     }
     
+    public UpdateGatewaySoftwareNowInput(@JsonProperty("GatewayArn") String gatewayArn) {
+        this.gatewayArn = gatewayArn;
+  }
 }

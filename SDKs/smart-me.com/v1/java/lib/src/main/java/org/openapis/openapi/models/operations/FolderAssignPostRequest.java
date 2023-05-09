@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FolderAssignPostRequest {
@@ -12,6 +13,7 @@ public class FolderAssignPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public String source;
+
     public FolderAssignPostRequest withSource(String source) {
         this.source = source;
         return this;
@@ -22,9 +24,14 @@ public class FolderAssignPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target")
     public String target;
+
     public FolderAssignPostRequest withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public FolderAssignPostRequest(@JsonProperty("source") String source, @JsonProperty("target") String target) {
+        this.source = source;
+        this.target = target;
+  }
 }

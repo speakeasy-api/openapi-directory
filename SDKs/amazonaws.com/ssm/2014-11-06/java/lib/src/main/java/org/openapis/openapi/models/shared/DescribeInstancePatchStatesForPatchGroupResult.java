@@ -15,6 +15,7 @@ public class DescribeInstancePatchStatesForPatchGroupResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancePatchStates")
     public InstancePatchState[] instancePatchStates;
+
     public DescribeInstancePatchStatesForPatchGroupResult withInstancePatchStates(InstancePatchState[] instancePatchStates) {
         this.instancePatchStates = instancePatchStates;
         return this;
@@ -23,9 +24,11 @@ public class DescribeInstancePatchStatesForPatchGroupResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeInstancePatchStatesForPatchGroupResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstancePatchStatesForPatchGroupResult(){}
 }

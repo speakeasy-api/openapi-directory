@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutComponentPolicyResponse {
@@ -12,6 +13,7 @@ public class PutComponentPolicyResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public PutComponentPolicyResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class PutComponentPolicyResponse {
      */
     
     public Object clientException;
+
     public PutComponentPolicyResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class PutComponentPolicyResponse {
     
     
     public String contentType;
+
     public PutComponentPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutComponentPolicyResponse {
      */
     
     public Object forbiddenException;
+
     public PutComponentPolicyResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class PutComponentPolicyResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutComponentPolicyResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class PutComponentPolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public PutComponentPolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class PutComponentPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PutComponentPolicyResponse putComponentPolicyResponse;
+
     public PutComponentPolicyResponse withPutComponentPolicyResponse(org.openapis.openapi.models.shared.PutComponentPolicyResponse putComponentPolicyResponse) {
         this.putComponentPolicyResponse = putComponentPolicyResponse;
         return this;
@@ -79,6 +87,7 @@ public class PutComponentPolicyResponse {
      */
     
     public Object serviceException;
+
     public PutComponentPolicyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class PutComponentPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutComponentPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class PutComponentPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutComponentPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class PutComponentPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutComponentPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,9 +125,14 @@ public class PutComponentPolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public PutComponentPolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public PutComponentPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

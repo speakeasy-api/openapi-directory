@@ -12,6 +12,7 @@ public class CreateAlgorithmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlgorithmDescription")
     public String algorithmDescription;
+
     public CreateAlgorithmInput withAlgorithmDescription(String algorithmDescription) {
         this.algorithmDescription = algorithmDescription;
         return this;
@@ -19,6 +20,7 @@ public class CreateAlgorithmInput {
     
     @JsonProperty("AlgorithmName")
     public String algorithmName;
+
     public CreateAlgorithmInput withAlgorithmName(String algorithmName) {
         this.algorithmName = algorithmName;
         return this;
@@ -27,6 +29,7 @@ public class CreateAlgorithmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertifyForMarketplace")
     public Boolean certifyForMarketplace;
+
     public CreateAlgorithmInput withCertifyForMarketplace(Boolean certifyForMarketplace) {
         this.certifyForMarketplace = certifyForMarketplace;
         return this;
@@ -35,6 +38,7 @@ public class CreateAlgorithmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSpecification")
     public InferenceSpecification inferenceSpecification;
+
     public CreateAlgorithmInput withInferenceSpecification(InferenceSpecification inferenceSpecification) {
         this.inferenceSpecification = inferenceSpecification;
         return this;
@@ -43,6 +47,7 @@ public class CreateAlgorithmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateAlgorithmInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -50,6 +55,7 @@ public class CreateAlgorithmInput {
     
     @JsonProperty("TrainingSpecification")
     public TrainingSpecification trainingSpecification;
+
     public CreateAlgorithmInput withTrainingSpecification(TrainingSpecification trainingSpecification) {
         this.trainingSpecification = trainingSpecification;
         return this;
@@ -58,9 +64,14 @@ public class CreateAlgorithmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationSpecification")
     public AlgorithmValidationSpecification validationSpecification;
+
     public CreateAlgorithmInput withValidationSpecification(AlgorithmValidationSpecification validationSpecification) {
         this.validationSpecification = validationSpecification;
         return this;
     }
     
+    public CreateAlgorithmInput(@JsonProperty("AlgorithmName") String algorithmName, @JsonProperty("TrainingSpecification") TrainingSpecification trainingSpecification) {
+        this.algorithmName = algorithmName;
+        this.trainingSpecification = trainingSpecification;
+  }
 }

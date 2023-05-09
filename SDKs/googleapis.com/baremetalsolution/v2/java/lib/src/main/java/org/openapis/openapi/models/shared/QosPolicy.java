@@ -18,9 +18,11 @@ public class QosPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandwidthGbps")
     public Double bandwidthGbps;
+
     public QosPolicy withBandwidthGbps(Double bandwidthGbps) {
         this.bandwidthGbps = bandwidthGbps;
         return this;
     }
     
+    public QosPolicy(){}
 }

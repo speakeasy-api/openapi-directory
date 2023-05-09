@@ -15,6 +15,7 @@ public class UpdateDashboardRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateDashboardRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class UpdateDashboardRequestBody {
      */
     @JsonProperty("dashboardDefinition")
     public String dashboardDefinition;
+
     public UpdateDashboardRequestBody withDashboardDefinition(String dashboardDefinition) {
         this.dashboardDefinition = dashboardDefinition;
         return this;
@@ -36,6 +38,7 @@ public class UpdateDashboardRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashboardDescription")
     public String dashboardDescription;
+
     public UpdateDashboardRequestBody withDashboardDescription(String dashboardDescription) {
         this.dashboardDescription = dashboardDescription;
         return this;
@@ -46,9 +49,14 @@ public class UpdateDashboardRequestBody {
      */
     @JsonProperty("dashboardName")
     public String dashboardName;
+
     public UpdateDashboardRequestBody withDashboardName(String dashboardName) {
         this.dashboardName = dashboardName;
         return this;
     }
     
+    public UpdateDashboardRequestBody(@JsonProperty("dashboardDefinition") String dashboardDefinition, @JsonProperty("dashboardName") String dashboardName) {
+        this.dashboardDefinition = dashboardDefinition;
+        this.dashboardName = dashboardName;
+  }
 }

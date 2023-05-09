@@ -18,6 +18,7 @@ public class GroupMembershipQuestionnaire {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GroupMembershipQuestionnaire withMessage(String message) {
         this.message = message;
         return this;
@@ -29,9 +30,11 @@ public class GroupMembershipQuestionnaire {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("questions")
     public String[] questions;
+
     public GroupMembershipQuestionnaire withQuestions(String[] questions) {
         this.questions = questions;
         return this;
     }
     
+    public GroupMembershipQuestionnaire(){}
 }

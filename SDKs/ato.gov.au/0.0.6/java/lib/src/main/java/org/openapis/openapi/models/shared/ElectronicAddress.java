@@ -23,6 +23,7 @@ public class ElectronicAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("areaCode")
     public String areaCode;
+
     public ElectronicAddress withAreaCode(String areaCode) {
         this.areaCode = areaCode;
         return this;
@@ -34,6 +35,7 @@ public class ElectronicAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryPrefix")
     public String countryPrefix;
+
     public ElectronicAddress withCountryPrefix(String countryPrefix) {
         this.countryPrefix = countryPrefix;
         return this;
@@ -45,6 +47,7 @@ public class ElectronicAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electronicAddressType")
     public ElectronicAddressElectronicAddressTypeEnum electronicAddressType;
+
     public ElectronicAddress withElectronicAddressType(ElectronicAddressElectronicAddressTypeEnum electronicAddressType) {
         this.electronicAddressType = electronicAddressType;
         return this;
@@ -56,6 +59,7 @@ public class ElectronicAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ElectronicAddress withEmail(String email) {
         this.email = email;
         return this;
@@ -67,6 +71,7 @@ public class ElectronicAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extension")
     public String extension;
+
     public ElectronicAddress withExtension(String extension) {
         this.extension = extension;
         return this;
@@ -80,6 +85,7 @@ public class ElectronicAddress {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("fromDate")
     public OffsetDateTime fromDate;
+
     public ElectronicAddress withFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -91,6 +97,7 @@ public class ElectronicAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ElectronicAddress withId(String id) {
         this.id = id;
         return this;
@@ -102,6 +109,7 @@ public class ElectronicAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public ElectronicAddress withNumber(String number) {
         this.number = number;
         return this;
@@ -115,6 +123,7 @@ public class ElectronicAddress {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("toDate")
     public OffsetDateTime toDate;
+
     public ElectronicAddress withToDate(OffsetDateTime toDate) {
         this.toDate = toDate;
         return this;
@@ -126,9 +135,11 @@ public class ElectronicAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ElectronicAddress withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ElectronicAddress(){}
 }

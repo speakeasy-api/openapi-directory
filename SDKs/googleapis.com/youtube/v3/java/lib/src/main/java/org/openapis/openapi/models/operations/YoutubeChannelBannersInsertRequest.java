@@ -12,6 +12,7 @@ public class YoutubeChannelBannersInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubeChannelBannersInsertRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +20,7 @@ public class YoutubeChannelBannersInsertRequest {
     
     @SpeakeasyMetadata("request:mediaType=image/png")
     public byte[] requestBody;
+
     public YoutubeChannelBannersInsertRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,6 +31,7 @@ public class YoutubeChannelBannersInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubeChannelBannersInsertRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +42,7 @@ public class YoutubeChannelBannersInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubeChannelBannersInsertRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +53,7 @@ public class YoutubeChannelBannersInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubeChannelBannersInsertRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +64,7 @@ public class YoutubeChannelBannersInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channelId")
     public String channelId;
+
     public YoutubeChannelBannersInsertRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -69,6 +75,7 @@ public class YoutubeChannelBannersInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubeChannelBannersInsertRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +86,7 @@ public class YoutubeChannelBannersInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubeChannelBannersInsertRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +97,7 @@ public class YoutubeChannelBannersInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubeChannelBannersInsertRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +108,7 @@ public class YoutubeChannelBannersInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwner")
     public String onBehalfOfContentOwner;
+
     public YoutubeChannelBannersInsertRequest withOnBehalfOfContentOwner(String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
         return this;
@@ -109,6 +119,7 @@ public class YoutubeChannelBannersInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwnerChannel")
     public String onBehalfOfContentOwnerChannel;
+
     public YoutubeChannelBannersInsertRequest withOnBehalfOfContentOwnerChannel(String onBehalfOfContentOwnerChannel) {
         this.onBehalfOfContentOwnerChannel = onBehalfOfContentOwnerChannel;
         return this;
@@ -119,6 +130,7 @@ public class YoutubeChannelBannersInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubeChannelBannersInsertRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -129,6 +141,7 @@ public class YoutubeChannelBannersInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubeChannelBannersInsertRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +152,7 @@ public class YoutubeChannelBannersInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubeChannelBannersInsertRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +163,11 @@ public class YoutubeChannelBannersInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubeChannelBannersInsertRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public YoutubeChannelBannersInsertRequest(){}
 }

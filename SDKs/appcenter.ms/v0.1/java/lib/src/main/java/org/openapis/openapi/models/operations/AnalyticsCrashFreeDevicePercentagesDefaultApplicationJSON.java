@@ -15,9 +15,11 @@ public class AnalyticsCrashFreeDevicePercentagesDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public AnalyticsCrashFreeDevicePercentagesDefaultApplicationJSONError error;
+
     public AnalyticsCrashFreeDevicePercentagesDefaultApplicationJSON withError(AnalyticsCrashFreeDevicePercentagesDefaultApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public AnalyticsCrashFreeDevicePercentagesDefaultApplicationJSON(){}
 }

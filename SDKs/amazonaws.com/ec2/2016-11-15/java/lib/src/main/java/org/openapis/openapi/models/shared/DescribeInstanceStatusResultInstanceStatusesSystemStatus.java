@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceStatusResultInstanceStatusesSystemStatus {
     
     public DescribeInstanceStatusResultInstanceStatusesSystemStatusDetails[] details;
+
     public DescribeInstanceStatusResultInstanceStatusesSystemStatus withDetails(DescribeInstanceStatusResultInstanceStatusesSystemStatusDetails[] details) {
         this.details = details;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstanceStatusResultInstanceStatusesSystemStatus {
     
     
     public DescribeInstanceStatusResultInstanceStatusesSystemStatusStatusEnum status;
+
     public DescribeInstanceStatusResultInstanceStatusesSystemStatus withStatus(DescribeInstanceStatusResultInstanceStatusesSystemStatusStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeInstanceStatusResultInstanceStatusesSystemStatus(){}
 }

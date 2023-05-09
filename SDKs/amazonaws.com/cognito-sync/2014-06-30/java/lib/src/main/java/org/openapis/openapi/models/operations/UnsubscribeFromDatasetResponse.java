@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UnsubscribeFromDatasetResponse {
     
     public String contentType;
+
     public UnsubscribeFromDatasetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UnsubscribeFromDatasetResponse {
      */
     
     public Object internalErrorException;
+
     public UnsubscribeFromDatasetResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UnsubscribeFromDatasetResponse {
      */
     
     public Object invalidConfigurationException;
+
     public UnsubscribeFromDatasetResponse withInvalidConfigurationException(Object invalidConfigurationException) {
         this.invalidConfigurationException = invalidConfigurationException;
         return this;
@@ -39,6 +43,7 @@ public class UnsubscribeFromDatasetResponse {
      */
     
     public Object invalidParameterException;
+
     public UnsubscribeFromDatasetResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class UnsubscribeFromDatasetResponse {
      */
     
     public Object notAuthorizedException;
+
     public UnsubscribeFromDatasetResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class UnsubscribeFromDatasetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UnsubscribeFromDatasetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UnsubscribeFromDatasetResponse {
     
     
     public Integer statusCode;
+
     public UnsubscribeFromDatasetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UnsubscribeFromDatasetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UnsubscribeFromDatasetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UnsubscribeFromDatasetResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UnsubscribeFromDatasetResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class UnsubscribeFromDatasetResponse {
      */
     
     public java.util.Map<String, Object> unsubscribeFromDatasetResponse;
+
     public UnsubscribeFromDatasetResponse withUnsubscribeFromDatasetResponse(java.util.Map<String, Object> unsubscribeFromDatasetResponse) {
         this.unsubscribeFromDatasetResponse = unsubscribeFromDatasetResponse;
         return this;
     }
     
+    public UnsubscribeFromDatasetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

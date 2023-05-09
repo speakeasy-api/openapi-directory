@@ -12,6 +12,7 @@ public class Nexo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayUrls")
     public NotificationUrl displayUrls;
+
     public Nexo withDisplayUrls(NotificationUrl displayUrls) {
         this.displayUrls = displayUrls;
         return this;
@@ -20,6 +21,7 @@ public class Nexo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public Key encryptionKey;
+
     public Nexo withEncryptionKey(Key encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -28,6 +30,7 @@ public class Nexo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventUrls")
     public EventUrl eventUrls;
+
     public Nexo withEventUrls(EventUrl eventUrls) {
         this.eventUrls = eventUrls;
         return this;
@@ -39,9 +42,11 @@ public class Nexo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nexoEventUrls")
     public String[] nexoEventUrls;
+
     public Nexo withNexoEventUrls(String[] nexoEventUrls) {
         this.nexoEventUrls = nexoEventUrls;
         return this;
     }
     
+    public Nexo(){}
 }

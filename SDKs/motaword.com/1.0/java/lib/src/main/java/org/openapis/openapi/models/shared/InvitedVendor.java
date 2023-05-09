@@ -17,6 +17,7 @@ public class InvitedVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public InvitedVendor withAction(String action) {
         this.action = action;
         return this;
@@ -28,6 +29,7 @@ public class InvitedVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_open_rate")
     public Double emailOpenRate;
+
     public InvitedVendor withEmailOpenRate(Double emailOpenRate) {
         this.emailOpenRate = emailOpenRate;
         return this;
@@ -39,6 +41,7 @@ public class InvitedVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_entered")
     public Boolean isEntered;
+
     public InvitedVendor withIsEntered(Boolean isEntered) {
         this.isEntered = isEntered;
         return this;
@@ -50,6 +53,7 @@ public class InvitedVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_get_paid")
     public Boolean isGetPaid;
+
     public InvitedVendor withIsGetPaid(Boolean isGetPaid) {
         this.isGetPaid = isGetPaid;
         return this;
@@ -61,6 +65,7 @@ public class InvitedVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_worked")
     public Boolean isWorked;
+
     public InvitedVendor withIsWorked(Boolean isWorked) {
         this.isWorked = isWorked;
         return this;
@@ -72,6 +77,7 @@ public class InvitedVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_worked_in_any_project")
     public Boolean isWorkedInAnyProject;
+
     public InvitedVendor withIsWorkedInAnyProject(Boolean isWorkedInAnyProject) {
         this.isWorkedInAnyProject = isWorkedInAnyProject;
         return this;
@@ -84,6 +90,7 @@ public class InvitedVendor {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_project_date")
     public LocalDate lastProjectDate;
+
     public InvitedVendor withLastProjectDate(LocalDate lastProjectDate) {
         this.lastProjectDate = lastProjectDate;
         return this;
@@ -95,6 +102,7 @@ public class InvitedVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_status_when_interacted")
     public Double projectStatusWhenInteracted;
+
     public InvitedVendor withProjectStatusWhenInteracted(Double projectStatusWhenInteracted) {
         this.projectStatusWhenInteracted = projectStatusWhenInteracted;
         return this;
@@ -107,6 +115,7 @@ public class InvitedVendor {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("registration_date")
     public LocalDate registrationDate;
+
     public InvitedVendor withRegistrationDate(LocalDate registrationDate) {
         this.registrationDate = registrationDate;
         return this;
@@ -118,6 +127,7 @@ public class InvitedVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responsiveness")
     public Double responsiveness;
+
     public InvitedVendor withResponsiveness(Double responsiveness) {
         this.responsiveness = responsiveness;
         return this;
@@ -129,6 +139,7 @@ public class InvitedVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Double userId;
+
     public InvitedVendor withUserId(Double userId) {
         this.userId = userId;
         return this;
@@ -140,6 +151,7 @@ public class InvitedVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_id")
     public Double vendorId;
+
     public InvitedVendor withVendorId(Double vendorId) {
         this.vendorId = vendorId;
         return this;
@@ -151,6 +163,7 @@ public class InvitedVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_name")
     public String vendorName;
+
     public InvitedVendor withVendorName(String vendorName) {
         this.vendorName = vendorName;
         return this;
@@ -162,9 +175,11 @@ public class InvitedVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_type")
     public String vendorType;
+
     public InvitedVendor withVendorType(String vendorType) {
         this.vendorType = vendorType;
         return this;
     }
     
+    public InvitedVendor(){}
 }

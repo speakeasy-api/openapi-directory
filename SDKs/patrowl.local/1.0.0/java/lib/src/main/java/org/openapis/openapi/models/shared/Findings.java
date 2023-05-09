@@ -17,6 +17,7 @@ public class Findings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public String confidence;
+
     public Findings withConfidence(String confidence) {
         this.confidence = confidence;
         return this;
@@ -25,6 +26,7 @@ public class Findings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Findings withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +35,7 @@ public class Findings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issue_id")
     public Long issueId;
+
     public Findings withIssueId(Long issueId) {
         this.issueId = issueId;
         return this;
@@ -41,6 +44,7 @@ public class Findings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta_links")
     public String[] metaLinks;
+
     public Findings withMetaLinks(String[] metaLinks) {
         this.metaLinks = metaLinks;
         return this;
@@ -49,6 +53,7 @@ public class Findings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta_risk")
     public FindingsMetaRisk metaRisk;
+
     public Findings withMetaRisk(FindingsMetaRisk metaRisk) {
         this.metaRisk = metaRisk;
         return this;
@@ -57,6 +62,7 @@ public class Findings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta_tags")
     public String[] metaTags;
+
     public Findings withMetaTags(String[] metaTags) {
         this.metaTags = metaTags;
         return this;
@@ -65,6 +71,7 @@ public class Findings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta_vuln_refs")
     public FindingsMetaVulnRefs metaVulnRefs;
+
     public Findings withMetaVulnRefs(FindingsMetaVulnRefs metaVulnRefs) {
         this.metaVulnRefs = metaVulnRefs;
         return this;
@@ -73,6 +80,7 @@ public class Findings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public String raw;
+
     public Findings withRaw(String raw) {
         this.raw = raw;
         return this;
@@ -81,6 +89,7 @@ public class Findings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public FindingsSeverityEnum severity;
+
     public Findings withSeverity(FindingsSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -89,6 +98,7 @@ public class Findings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solution")
     public String solution;
+
     public Findings withSolution(String solution) {
         this.solution = solution;
         return this;
@@ -97,6 +107,7 @@ public class Findings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_addrs")
     public String[] targetAddrs;
+
     public Findings withTargetAddrs(String[] targetAddrs) {
         this.targetAddrs = targetAddrs;
         return this;
@@ -105,6 +116,7 @@ public class Findings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_proto")
     public String[] targetProto;
+
     public Findings withTargetProto(String[] targetProto) {
         this.targetProto = targetProto;
         return this;
@@ -115,6 +127,7 @@ public class Findings {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public Findings withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -123,6 +136,7 @@ public class Findings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Findings withTitle(String title) {
         this.title = title;
         return this;
@@ -131,9 +145,11 @@ public class Findings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Findings withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Findings(){}
 }

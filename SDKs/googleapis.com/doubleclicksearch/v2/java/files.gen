@@ -84,4 +84,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/ReportRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportApiColumnSpec.java
 lib/src/main/java/org/openapis/openapi/models/shared/SavedColumnList.java
 lib/src/main/java/org/openapis/openapi/models/shared/SavedColumn.java
+docs/sdk/README.md
+docs/conversion/README.md
+docs/reports/README.md
+docs/savedcolumns/README.md
 USAGE.md

@@ -16,10 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DriverDetailsFormatEnum;
 import org.openapis.openapi.models.operations.DriverDetailsRequest;
 import org.openapis.openapi.models.operations.DriverDetailsResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,33 +30,32 @@ public class Application {
                 }})
                 .build();
 
-            DriverDetailsRequest req = new DriverDetailsRequest() {{
-                driverid = "corrupti";
-                format = "json";
-            }}            
+            DriverDetailsRequest req = new DriverDetailsRequest("corrupti", DriverDetailsFormatEnum.JSON);            
 
             DriverDetailsResponse res = sdk.driverDetails(req);
 
-            if (res.driver.isPresent()) {
+            if (res.driver != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `driverDetails` - Driver Details
-* `driverRaceProjectionsEntryList` - Driver Race Projections (Entry List)
-* `drivers` - Drivers
-* `raceResults` - Race Results
-* `racesSchedule` - Races / Schedule
-* `series` - Series
+* [driverDetails](docs/sdk/README.md#driverdetails) - Driver Details
+* [driverRaceProjectionsEntryList](docs/sdk/README.md#driverraceprojectionsentrylist) - Driver Race Projections (Entry List)
+* [drivers](docs/sdk/README.md#drivers) - Drivers
+* [raceResults](docs/sdk/README.md#raceresults) - Race Results
+* [racesSchedule](docs/sdk/README.md#racesschedule) - Races / Schedule
+* [series](docs/sdk/README.md#series) - Series
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetExpenseAnalysisResponse {
@@ -12,6 +13,7 @@ public class GetExpenseAnalysisResponse {
      */
     
     public Object accessDeniedException;
+
     public GetExpenseAnalysisResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetExpenseAnalysisResponse {
     
     
     public String contentType;
+
     public GetExpenseAnalysisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetExpenseAnalysisResponse {
      */
     
     public org.openapis.openapi.models.shared.GetExpenseAnalysisResponse getExpenseAnalysisResponse;
+
     public GetExpenseAnalysisResponse withGetExpenseAnalysisResponse(org.openapis.openapi.models.shared.GetExpenseAnalysisResponse getExpenseAnalysisResponse) {
         this.getExpenseAnalysisResponse = getExpenseAnalysisResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetExpenseAnalysisResponse {
      */
     
     public Object internalServerError;
+
     public GetExpenseAnalysisResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class GetExpenseAnalysisResponse {
      */
     
     public Object invalidJobIdException;
+
     public GetExpenseAnalysisResponse withInvalidJobIdException(Object invalidJobIdException) {
         this.invalidJobIdException = invalidJobIdException;
         return this;
@@ -59,6 +65,7 @@ public class GetExpenseAnalysisResponse {
      */
     
     public Object invalidKMSKeyException;
+
     public GetExpenseAnalysisResponse withInvalidKMSKeyException(Object invalidKMSKeyException) {
         this.invalidKMSKeyException = invalidKMSKeyException;
         return this;
@@ -69,6 +76,7 @@ public class GetExpenseAnalysisResponse {
      */
     
     public Object invalidParameterException;
+
     public GetExpenseAnalysisResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class GetExpenseAnalysisResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public GetExpenseAnalysisResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -89,6 +98,7 @@ public class GetExpenseAnalysisResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public GetExpenseAnalysisResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -96,6 +106,7 @@ public class GetExpenseAnalysisResponse {
     
     
     public Integer statusCode;
+
     public GetExpenseAnalysisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class GetExpenseAnalysisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetExpenseAnalysisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class GetExpenseAnalysisResponse {
      */
     
     public Object throttlingException;
+
     public GetExpenseAnalysisResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetExpenseAnalysisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

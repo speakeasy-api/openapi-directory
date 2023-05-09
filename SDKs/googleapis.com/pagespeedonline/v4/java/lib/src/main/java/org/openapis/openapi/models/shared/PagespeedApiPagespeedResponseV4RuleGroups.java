@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PagespeedApiPagespeedResponseV4RuleGroups {
     
     public Boolean pass;
+
     public PagespeedApiPagespeedResponseV4RuleGroups withPass(Boolean pass) {
         this.pass = pass;
         return this;
@@ -22,9 +23,11 @@ public class PagespeedApiPagespeedResponseV4RuleGroups {
      */
     
     public Integer score;
+
     public PagespeedApiPagespeedResponseV4RuleGroups withScore(Integer score) {
         this.score = score;
         return this;
     }
     
+    public PagespeedApiPagespeedResponseV4RuleGroups(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddScoreTrackRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ScoreTrackCreation scoreTrackCreation;
+
     public AddScoreTrackRequest withScoreTrackCreation(org.openapis.openapi.models.shared.ScoreTrackCreation scoreTrackCreation) {
         this.scoreTrackCreation = scoreTrackCreation;
         return this;
@@ -20,9 +22,14 @@ public class AddScoreTrackRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
     public String score;
+
     public AddScoreTrackRequest withScore(String score) {
         this.score = score;
         return this;
     }
     
+    public AddScoreTrackRequest(@JsonProperty("ScoreTrackCreation") org.openapis.openapi.models.shared.ScoreTrackCreation scoreTrackCreation, @JsonProperty("score") String score) {
+        this.scoreTrackCreation = scoreTrackCreation;
+        this.score = score;
+  }
 }

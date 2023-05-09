@@ -15,6 +15,7 @@ public class TeamMemberPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role_id")
     public Long roleId;
+
     public TeamMemberPO withRoleId(Long roleId) {
         this.roleId = roleId;
         return this;
@@ -23,6 +24,7 @@ public class TeamMemberPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_template_id")
     public Long teamTemplateId;
+
     public TeamMemberPO withTeamTemplateId(Long teamTemplateId) {
         this.teamTemplateId = teamTemplateId;
         return this;
@@ -31,9 +33,11 @@ public class TeamMemberPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Long userId;
+
     public TeamMemberPO withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public TeamMemberPO(){}
 }

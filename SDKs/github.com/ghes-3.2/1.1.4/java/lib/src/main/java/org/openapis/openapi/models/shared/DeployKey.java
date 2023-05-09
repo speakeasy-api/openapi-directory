@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeployKey {
     @JsonProperty("created_at")
     public String createdAt;
+
     public DeployKey withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -19,6 +20,7 @@ public class DeployKey {
     
     @JsonProperty("id")
     public Long id;
+
     public DeployKey withId(Long id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class DeployKey {
     
     @JsonProperty("key")
     public String key;
+
     public DeployKey withKey(String key) {
         this.key = key;
         return this;
@@ -33,6 +36,7 @@ public class DeployKey {
     
     @JsonProperty("read_only")
     public Boolean readOnly;
+
     public DeployKey withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -40,6 +44,7 @@ public class DeployKey {
     
     @JsonProperty("title")
     public String title;
+
     public DeployKey withTitle(String title) {
         this.title = title;
         return this;
@@ -47,6 +52,7 @@ public class DeployKey {
     
     @JsonProperty("url")
     public String url;
+
     public DeployKey withUrl(String url) {
         this.url = url;
         return this;
@@ -54,9 +60,19 @@ public class DeployKey {
     
     @JsonProperty("verified")
     public Boolean verified;
+
     public DeployKey withVerified(Boolean verified) {
         this.verified = verified;
         return this;
     }
     
+    public DeployKey(@JsonProperty("created_at") String createdAt, @JsonProperty("id") Long id, @JsonProperty("key") String key, @JsonProperty("read_only") Boolean readOnly, @JsonProperty("title") String title, @JsonProperty("url") String url, @JsonProperty("verified") Boolean verified) {
+        this.createdAt = createdAt;
+        this.id = id;
+        this.key = key;
+        this.readOnly = readOnly;
+        this.title = title;
+        this.url = url;
+        this.verified = verified;
+  }
 }

@@ -12,6 +12,7 @@ public class OnlineSzamlaStatusMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("human_readable_message")
     public String humanReadableMessage;
+
     public OnlineSzamlaStatusMessage withHumanReadableMessage(String humanReadableMessage) {
         this.humanReadableMessage = humanReadableMessage;
         return this;
@@ -20,6 +21,7 @@ public class OnlineSzamlaStatusMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validation_error_code")
     public String validationErrorCode;
+
     public OnlineSzamlaStatusMessage withValidationErrorCode(String validationErrorCode) {
         this.validationErrorCode = validationErrorCode;
         return this;
@@ -28,9 +30,11 @@ public class OnlineSzamlaStatusMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validation_result_code")
     public String validationResultCode;
+
     public OnlineSzamlaStatusMessage withValidationResultCode(String validationResultCode) {
         this.validationResultCode = validationResultCode;
         return this;
     }
     
+    public OnlineSzamlaStatusMessage(){}
 }

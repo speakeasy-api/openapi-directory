@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyMilestonesDestinyMilestoneContentItemCategory {
     
     public Long[] itemHashes;
+
     public DestinyMilestonesDestinyMilestoneContentItemCategory withItemHashes(Long[] itemHashes) {
         this.itemHashes = itemHashes;
         return this;
@@ -19,9 +20,11 @@ public class DestinyMilestonesDestinyMilestoneContentItemCategory {
     
     
     public String title;
+
     public DestinyMilestonesDestinyMilestoneContentItemCategory withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public DestinyMilestonesDestinyMilestoneContentItemCategory(){}
 }

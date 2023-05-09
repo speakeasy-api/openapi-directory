@@ -59,11 +59,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImportResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImportResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImportResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImportResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUploadResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUploadResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUploadResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUploadResponse(contentType, httpRes.statusCode()) {{
             uploadAptArtifactMediaResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +197,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesCreateResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesCreateResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesCreateResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesDockerImagesListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesDockerImagesListResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesDockerImagesListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesDockerImagesListResponse(contentType, httpRes.statusCode()) {{
             listDockerImagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesFilesListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesFilesListResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesFilesListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesFilesListResponse(contentType, httpRes.statusCode()) {{
             listFilesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -353,6 +339,98 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.Policy out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Policy.class);
                 res.policy = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Imports GooGet artifacts. The returned Operation will complete once the resources are imported. Package, Version, and File resources are created based on the imported artifacts. Imported artifacts that conflict with existing resources are ignored.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportResponse artifactregistryProjectsLocationsRepositoriesGoogetArtifactsImport(org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportRequest request, org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportRequest.class, baseUrl, "/v1/{parent}/googetArtifacts:import", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "importGoogetArtifactsRequest", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Directly uploads a GooGet artifact. The returned Operation will complete once the resources are uploaded. Package, Version, and File resources are created based on the imported artifact. Imported artifacts that conflict with existing resources are ignored.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadResponse artifactregistryProjectsLocationsRepositoriesGoogetArtifactsUpload(org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadRequest request, org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadRequest.class, baseUrl, "/v1/{parent}/googetArtifacts:create", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadResponse(contentType, httpRes.statusCode()) {{
+            uploadGoogetArtifactMediaResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.UploadGoogetArtifactMediaResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.UploadGoogetArtifactMediaResponse.class);
+                res.uploadGoogetArtifactMediaResponse = out;
             }
         }
 
@@ -389,11 +467,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadResponse(contentType, httpRes.statusCode()) {{
             uploadKfpArtifactMediaResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -435,11 +511,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesListResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesListResponse(contentType, httpRes.statusCode()) {{
             listRepositoriesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -481,11 +555,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsListResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsListResponse(contentType, httpRes.statusCode()) {{
             listMavenArtifactsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -527,11 +599,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListResponse(contentType, httpRes.statusCode()) {{
             listNpmPackagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -573,11 +643,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesListResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesListResponse(contentType, httpRes.statusCode()) {{
             listPackagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -621,11 +689,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreateResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreateResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreateResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreateResponse(contentType, httpRes.statusCode()) {{
             tag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -667,11 +733,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse(contentType, httpRes.statusCode()) {{
             listTagsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -715,11 +779,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchResponse(contentType, httpRes.statusCode()) {{
             tag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -761,11 +823,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDeleteResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDeleteResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -807,11 +867,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListResponse(contentType, httpRes.statusCode()) {{
             listVersionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -853,11 +911,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGetResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGetResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGetResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGetResponse(contentType, httpRes.statusCode()) {{
             pythonPackage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -899,11 +955,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListResponse(contentType, httpRes.statusCode()) {{
             listPythonPackagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -947,11 +1001,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -995,11 +1047,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1043,11 +1093,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImportResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImportResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImportResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImportResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1091,11 +1139,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadResponse() {{
+        org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadResponse res = new org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadResponse(contentType, httpRes.statusCode()) {{
             uploadYumArtifactMediaResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

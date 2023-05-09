@@ -22,6 +22,7 @@ public class UpdateExportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public UpdateExportResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class UpdateExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportId")
     public String exportId;
+
     public UpdateExportResponse withExportId(String exportId) {
         this.exportId = exportId;
         return this;
@@ -38,6 +40,7 @@ public class UpdateExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportStatus")
     public ExportStatusEnum exportStatus;
+
     public UpdateExportResponse withExportStatus(ExportStatusEnum exportStatus) {
         this.exportStatus = exportStatus;
         return this;
@@ -46,6 +49,7 @@ public class UpdateExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileFormat")
     public ImportExportFileFormatEnum fileFormat;
+
     public UpdateExportResponse withFileFormat(ImportExportFileFormatEnum fileFormat) {
         this.fileFormat = fileFormat;
         return this;
@@ -56,6 +60,7 @@ public class UpdateExportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public UpdateExportResponse withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -64,9 +69,11 @@ public class UpdateExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceSpecification")
     public ExportResourceSpecification resourceSpecification;
+
     public UpdateExportResponse withResourceSpecification(ExportResourceSpecification resourceSpecification) {
         this.resourceSpecification = resourceSpecification;
         return this;
     }
     
+    public UpdateExportResponse(){}
 }

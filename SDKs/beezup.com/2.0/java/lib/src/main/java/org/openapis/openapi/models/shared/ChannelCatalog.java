@@ -15,6 +15,7 @@ public class ChannelCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryMappingSettings")
     public ChannelCatalogCategoryMappingSettings categoryMappingSettings;
+
     public ChannelCatalog withCategoryMappingSettings(ChannelCatalogCategoryMappingSettings categoryMappingSettings) {
         this.categoryMappingSettings = categoryMappingSettings;
         return this;
@@ -25,6 +26,7 @@ public class ChannelCatalog {
      */
     @JsonProperty("channelCatalogId")
     public String channelCatalogId;
+
     public ChannelCatalog withChannelCatalogId(String channelCatalogId) {
         this.channelCatalogId = channelCatalogId;
         return this;
@@ -32,6 +34,7 @@ public class ChannelCatalog {
     
     @JsonProperty("channelCategorySettings")
     public ChannelCategorySettings channelCategorySettings;
+
     public ChannelCatalog withChannelCategorySettings(ChannelCategorySettings channelCategorySettings) {
         this.channelCategorySettings = channelCategorySettings;
         return this;
@@ -42,6 +45,7 @@ public class ChannelCatalog {
      */
     @JsonProperty("channelCostSettings")
     public ChannelCostSettings channelCostSettings;
+
     public ChannelCatalog withChannelCostSettings(ChannelCostSettings channelCostSettings) {
         this.channelCostSettings = channelCostSettings;
         return this;
@@ -52,6 +56,7 @@ public class ChannelCatalog {
      */
     @JsonProperty("channelId")
     public String channelId;
+
     public ChannelCatalog withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -62,6 +67,7 @@ public class ChannelCatalog {
      */
     @JsonProperty("channelImageUrl")
     public String channelImageUrl;
+
     public ChannelCatalog withChannelImageUrl(String channelImageUrl) {
         this.channelImageUrl = channelImageUrl;
         return this;
@@ -72,6 +78,7 @@ public class ChannelCatalog {
      */
     @JsonProperty("channelName")
     public String channelName;
+
     public ChannelCatalog withChannelName(String channelName) {
         this.channelName = channelName;
         return this;
@@ -83,6 +90,7 @@ public class ChannelCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnMappings")
     public ChannelCatalogColumnMappingWithName[] columnMappings;
+
     public ChannelCatalog withColumnMappings(ChannelCatalogColumnMappingWithName[] columnMappings) {
         this.columnMappings = columnMappings;
         return this;
@@ -96,6 +104,7 @@ public class ChannelCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costSettings")
     public CostSettings costSettings;
+
     public ChannelCatalog withCostSettings(CostSettings costSettings) {
         this.costSettings = costSettings;
         return this;
@@ -106,6 +115,7 @@ public class ChannelCatalog {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ChannelCatalog withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -117,6 +127,7 @@ public class ChannelCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusionFilters")
     public ExclusionFilter[] exclusionFilters;
+
     public ChannelCatalog withExclusionFilters(ExclusionFilter[] exclusionFilters) {
         this.exclusionFilters = exclusionFilters;
         return this;
@@ -128,6 +139,7 @@ public class ChannelCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportUrl")
     public String exportUrl;
+
     public ChannelCatalog withExportUrl(String exportUrl) {
         this.exportUrl = exportUrl;
         return this;
@@ -138,6 +150,7 @@ public class ChannelCatalog {
      */
     @JsonProperty("generalSettings")
     public GeneralSettings generalSettings;
+
     public ChannelCatalog withGeneralSettings(GeneralSettings generalSettings) {
         this.generalSettings = generalSettings;
         return this;
@@ -148,6 +161,7 @@ public class ChannelCatalog {
      */
     @JsonProperty("isMarketplace")
     public Boolean isMarketplace;
+
     public ChannelCatalog withIsMarketplace(Boolean isMarketplace) {
         this.isMarketplace = isMarketplace;
         return this;
@@ -158,6 +172,7 @@ public class ChannelCatalog {
      */
     @JsonProperty("links")
     public ChannelCatalogLinks links;
+
     public ChannelCatalog withLinks(ChannelCatalogLinks links) {
         this.links = links;
         return this;
@@ -168,6 +183,7 @@ public class ChannelCatalog {
      */
     @JsonProperty("state")
     public ChannelCatalogState state;
+
     public ChannelCatalog withState(ChannelCatalogState state) {
         this.state = state;
         return this;
@@ -178,6 +194,7 @@ public class ChannelCatalog {
      */
     @JsonProperty("storeId")
     public String storeId;
+
     public ChannelCatalog withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
@@ -188,9 +205,25 @@ public class ChannelCatalog {
      */
     @JsonProperty("types")
     public String[] types;
+
     public ChannelCatalog withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public ChannelCatalog(@JsonProperty("channelCatalogId") String channelCatalogId, @JsonProperty("channelCategorySettings") ChannelCategorySettings channelCategorySettings, @JsonProperty("channelCostSettings") ChannelCostSettings channelCostSettings, @JsonProperty("channelId") String channelId, @JsonProperty("channelImageUrl") String channelImageUrl, @JsonProperty("channelName") String channelName, @JsonProperty("enabled") Boolean enabled, @JsonProperty("generalSettings") GeneralSettings generalSettings, @JsonProperty("isMarketplace") Boolean isMarketplace, @JsonProperty("links") ChannelCatalogLinks links, @JsonProperty("state") ChannelCatalogState state, @JsonProperty("storeId") String storeId, @JsonProperty("types") String[] types) {
+        this.channelCatalogId = channelCatalogId;
+        this.channelCategorySettings = channelCategorySettings;
+        this.channelCostSettings = channelCostSettings;
+        this.channelId = channelId;
+        this.channelImageUrl = channelImageUrl;
+        this.channelName = channelName;
+        this.enabled = enabled;
+        this.generalSettings = generalSettings;
+        this.isMarketplace = isMarketplace;
+        this.links = links;
+        this.state = state;
+        this.storeId = storeId;
+        this.types = types;
+  }
 }

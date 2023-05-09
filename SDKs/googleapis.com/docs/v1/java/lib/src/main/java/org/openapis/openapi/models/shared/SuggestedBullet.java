@@ -18,6 +18,7 @@ public class SuggestedBullet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bullet")
     public Bullet bullet;
+
     public SuggestedBullet withBullet(Bullet bullet) {
         this.bullet = bullet;
         return this;
@@ -29,9 +30,11 @@ public class SuggestedBullet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bulletSuggestionState")
     public BulletSuggestionState bulletSuggestionState;
+
     public SuggestedBullet withBulletSuggestionState(BulletSuggestionState bulletSuggestionState) {
         this.bulletSuggestionState = bulletSuggestionState;
         return this;
     }
     
+    public SuggestedBullet(){}
 }

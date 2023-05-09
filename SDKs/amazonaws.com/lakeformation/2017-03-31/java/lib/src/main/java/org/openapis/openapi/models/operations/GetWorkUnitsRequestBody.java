@@ -15,6 +15,7 @@ public class GetWorkUnitsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetWorkUnitsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,6 +27,7 @@ public class GetWorkUnitsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public GetWorkUnitsRequestBody withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -36,9 +38,13 @@ public class GetWorkUnitsRequestBody {
      */
     @JsonProperty("QueryId")
     public String queryId;
+
     public GetWorkUnitsRequestBody withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
     }
     
+    public GetWorkUnitsRequestBody(@JsonProperty("QueryId") String queryId) {
+        this.queryId = queryId;
+  }
 }

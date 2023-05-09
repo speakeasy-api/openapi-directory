@@ -12,6 +12,7 @@ public class ResourceHourViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public Integer endTime;
+
     public ResourceHourViewModel withEndTime(Integer endTime) {
         this.endTime = endTime;
         return this;
@@ -20,9 +21,11 @@ public class ResourceHourViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public Integer startTime;
+
     public ResourceHourViewModel withStartTime(Integer startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ResourceHourViewModel(){}
 }

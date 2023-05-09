@@ -157,6 +157,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/RevisionSpec.java
 lib/src/main/java/org/openapis/openapi/models/shared/Volume.java
 lib/src/main/java/org/openapis/openapi/models/shared/SecretVolumeSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/KeyToPath.java
+lib/src/main/java/org/openapis/openapi/models/shared/EmptyDirVolumeSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConfigMapVolumeSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/LocalObjectReference.java
 lib/src/main/java/org/openapis/openapi/models/shared/Container.java
@@ -201,6 +202,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/ExecutionReference.java
 lib/src/main/java/org/openapis/openapi/models/shared/JobSpec.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExecutionTemplateSpec.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListJobsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/RunJobRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/Overrides.java
+lib/src/main/java/org/openapis/openapi/models/shared/ContainerOverride.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListRevisionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Revision.java
 lib/src/main/java/org/openapis/openapi/models/shared/RevisionStatus.java
@@ -234,4 +238,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/AuditLogConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/SetIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.java
+docs/sdk/README.md
+docs/namespaces/README.md
+docs/projects/README.md
 USAGE.md

@@ -14,6 +14,7 @@ public class AppsScopeTokenRequestBody {
      */
     @JsonProperty("access_token")
     public String accessToken;
+
     public AppsScopeTokenRequestBody withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -25,6 +26,7 @@ public class AppsScopeTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public org.openapis.openapi.models.shared.AppPermissions permissions;
+
     public AppsScopeTokenRequestBody withPermissions(org.openapis.openapi.models.shared.AppPermissions permissions) {
         this.permissions = permissions;
         return this;
@@ -36,6 +38,7 @@ public class AppsScopeTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositories")
     public String[] repositories;
+
     public AppsScopeTokenRequestBody withRepositories(String[] repositories) {
         this.repositories = repositories;
         return this;
@@ -47,6 +50,7 @@ public class AppsScopeTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository_ids")
     public Long[] repositoryIds;
+
     public AppsScopeTokenRequestBody withRepositoryIds(Long[] repositoryIds) {
         this.repositoryIds = repositoryIds;
         return this;
@@ -58,6 +62,7 @@ public class AppsScopeTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public AppsScopeTokenRequestBody withTarget(String target) {
         this.target = target;
         return this;
@@ -69,9 +74,13 @@ public class AppsScopeTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_id")
     public Long targetId;
+
     public AppsScopeTokenRequestBody withTargetId(Long targetId) {
         this.targetId = targetId;
         return this;
     }
     
+    public AppsScopeTokenRequestBody(@JsonProperty("access_token") String accessToken) {
+        this.accessToken = accessToken;
+  }
 }

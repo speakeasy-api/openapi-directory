@@ -15,6 +15,7 @@ public class SlotValueOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public SlotValue value;
+
     public SlotValueOverride withValue(SlotValue value) {
         this.value = value;
         return this;
@@ -23,9 +24,11 @@ public class SlotValueOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public SlotValueOverride[] values;
+
     public SlotValueOverride withValues(SlotValueOverride[] values) {
         this.values = values;
         return this;
     }
     
+    public SlotValueOverride(){}
 }

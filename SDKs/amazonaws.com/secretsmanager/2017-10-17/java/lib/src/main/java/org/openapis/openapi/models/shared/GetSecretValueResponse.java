@@ -20,6 +20,7 @@ public class GetSecretValueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public GetSecretValueResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class GetSecretValueResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public GetSecretValueResponse withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -38,6 +40,7 @@ public class GetSecretValueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetSecretValueResponse withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +49,7 @@ public class GetSecretValueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretBinary")
     public String secretBinary;
+
     public GetSecretValueResponse withSecretBinary(String secretBinary) {
         this.secretBinary = secretBinary;
         return this;
@@ -54,6 +58,7 @@ public class GetSecretValueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretString")
     public String secretString;
+
     public GetSecretValueResponse withSecretString(String secretString) {
         this.secretString = secretString;
         return this;
@@ -62,6 +67,7 @@ public class GetSecretValueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public GetSecretValueResponse withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
@@ -70,9 +76,11 @@ public class GetSecretValueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionStages")
     public String[] versionStages;
+
     public GetSecretValueResponse withVersionStages(String[] versionStages) {
         this.versionStages = versionStages;
         return this;
     }
     
+    public GetSecretValueResponse(){}
 }

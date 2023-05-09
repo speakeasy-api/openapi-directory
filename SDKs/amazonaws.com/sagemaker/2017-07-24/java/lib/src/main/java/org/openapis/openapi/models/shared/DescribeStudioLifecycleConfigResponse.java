@@ -22,6 +22,7 @@ public class DescribeStudioLifecycleConfigResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeStudioLifecycleConfigResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -32,6 +33,7 @@ public class DescribeStudioLifecycleConfigResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeStudioLifecycleConfigResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -40,6 +42,7 @@ public class DescribeStudioLifecycleConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StudioLifecycleConfigAppType")
     public StudioLifecycleConfigAppTypeEnum studioLifecycleConfigAppType;
+
     public DescribeStudioLifecycleConfigResponse withStudioLifecycleConfigAppType(StudioLifecycleConfigAppTypeEnum studioLifecycleConfigAppType) {
         this.studioLifecycleConfigAppType = studioLifecycleConfigAppType;
         return this;
@@ -48,6 +51,7 @@ public class DescribeStudioLifecycleConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StudioLifecycleConfigArn")
     public String studioLifecycleConfigArn;
+
     public DescribeStudioLifecycleConfigResponse withStudioLifecycleConfigArn(String studioLifecycleConfigArn) {
         this.studioLifecycleConfigArn = studioLifecycleConfigArn;
         return this;
@@ -56,6 +60,7 @@ public class DescribeStudioLifecycleConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StudioLifecycleConfigContent")
     public String studioLifecycleConfigContent;
+
     public DescribeStudioLifecycleConfigResponse withStudioLifecycleConfigContent(String studioLifecycleConfigContent) {
         this.studioLifecycleConfigContent = studioLifecycleConfigContent;
         return this;
@@ -64,9 +69,11 @@ public class DescribeStudioLifecycleConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StudioLifecycleConfigName")
     public String studioLifecycleConfigName;
+
     public DescribeStudioLifecycleConfigResponse withStudioLifecycleConfigName(String studioLifecycleConfigName) {
         this.studioLifecycleConfigName = studioLifecycleConfigName;
         return this;
     }
     
+    public DescribeStudioLifecycleConfigResponse(){}
 }

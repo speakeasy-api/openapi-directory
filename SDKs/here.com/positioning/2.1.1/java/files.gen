@@ -35,4 +35,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetHealthResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ApiVersion.java
 lib/src/main/java/org/openapis/openapi/models/shared/ApiHealthStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/apiinformation/README.md
 USAGE.md

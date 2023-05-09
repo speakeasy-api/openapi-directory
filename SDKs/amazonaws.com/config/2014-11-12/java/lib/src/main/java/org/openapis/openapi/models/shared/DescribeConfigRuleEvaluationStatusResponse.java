@@ -15,6 +15,7 @@ public class DescribeConfigRuleEvaluationStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRulesEvaluationStatus")
     public ConfigRuleEvaluationStatus[] configRulesEvaluationStatus;
+
     public DescribeConfigRuleEvaluationStatusResponse withConfigRulesEvaluationStatus(ConfigRuleEvaluationStatus[] configRulesEvaluationStatus) {
         this.configRulesEvaluationStatus = configRulesEvaluationStatus;
         return this;
@@ -23,9 +24,11 @@ public class DescribeConfigRuleEvaluationStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeConfigRuleEvaluationStatusResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeConfigRuleEvaluationStatusResponse(){}
 }

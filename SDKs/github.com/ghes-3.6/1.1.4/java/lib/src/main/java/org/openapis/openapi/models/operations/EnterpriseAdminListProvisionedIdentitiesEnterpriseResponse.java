@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminListProvisionedIdentitiesEnterpriseResponse {
     
     public String contentType;
+
     public EnterpriseAdminListProvisionedIdentitiesEnterpriseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminListProvisionedIdentitiesEnterpriseResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminListProvisionedIdentitiesEnterpriseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminListProvisionedIdentitiesEnterpriseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminListProvisionedIdentitiesEnterpriseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class EnterpriseAdminListProvisionedIdentitiesEnterpriseResponse {
      */
     
     public org.openapis.openapi.models.shared.ScimEnterpriseUserList scimEnterpriseUserList;
+
     public EnterpriseAdminListProvisionedIdentitiesEnterpriseResponse withScimEnterpriseUserList(org.openapis.openapi.models.shared.ScimEnterpriseUserList scimEnterpriseUserList) {
         this.scimEnterpriseUserList = scimEnterpriseUserList;
         return this;
@@ -43,9 +48,14 @@ public class EnterpriseAdminListProvisionedIdentitiesEnterpriseResponse {
      */
     
     public org.openapis.openapi.models.shared.ScimError scimError;
+
     public EnterpriseAdminListProvisionedIdentitiesEnterpriseResponse withScimError(org.openapis.openapi.models.shared.ScimError scimError) {
         this.scimError = scimError;
         return this;
     }
     
+    public EnterpriseAdminListProvisionedIdentitiesEnterpriseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class TaxIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eu_vat")
     public String euVat;
+
     public TaxIds withEuVat(String euVat) {
         this.euVat = euVat;
         return this;
@@ -33,6 +34,7 @@ public class TaxIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fr_naf")
     public String frNaf;
+
     public TaxIds withFrNaf(String frNaf) {
         this.frNaf = frNaf;
         return this;
@@ -45,9 +47,11 @@ public class TaxIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fr_siret")
     public String frSiret;
+
     public TaxIds withFrSiret(String frSiret) {
         this.frSiret = frSiret;
         return this;
     }
     
+    public TaxIds(){}
 }

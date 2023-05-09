@@ -18,6 +18,7 @@ public class ElectionOfficial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public ElectionOfficial withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -29,6 +30,7 @@ public class ElectionOfficial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("faxNumber")
     public String faxNumber;
+
     public ElectionOfficial withFaxNumber(String faxNumber) {
         this.faxNumber = faxNumber;
         return this;
@@ -40,6 +42,7 @@ public class ElectionOfficial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ElectionOfficial withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class ElectionOfficial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("officePhoneNumber")
     public String officePhoneNumber;
+
     public ElectionOfficial withOfficePhoneNumber(String officePhoneNumber) {
         this.officePhoneNumber = officePhoneNumber;
         return this;
@@ -62,9 +66,11 @@ public class ElectionOfficial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ElectionOfficial withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ElectionOfficial(){}
 }

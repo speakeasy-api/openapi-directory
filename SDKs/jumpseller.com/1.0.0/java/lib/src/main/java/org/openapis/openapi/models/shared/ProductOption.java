@@ -15,9 +15,11 @@ public class ProductOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("option")
     public ProductOptionFields option;
+
     public ProductOption withOption(ProductOptionFields option) {
         this.option = option;
         return this;
     }
     
+    public ProductOption(){}
 }

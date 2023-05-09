@@ -12,6 +12,7 @@ public class GetCertificatesIdActionsActionsResponseMetaPagination {
      */
     @JsonProperty("last_page")
     public Double lastPage;
+
     public GetCertificatesIdActionsActionsResponseMetaPagination withLastPage(Double lastPage) {
         this.lastPage = lastPage;
         return this;
@@ -22,6 +23,7 @@ public class GetCertificatesIdActionsActionsResponseMetaPagination {
      */
     @JsonProperty("next_page")
     public Double nextPage;
+
     public GetCertificatesIdActionsActionsResponseMetaPagination withNextPage(Double nextPage) {
         this.nextPage = nextPage;
         return this;
@@ -32,6 +34,7 @@ public class GetCertificatesIdActionsActionsResponseMetaPagination {
      */
     @JsonProperty("page")
     public Double page;
+
     public GetCertificatesIdActionsActionsResponseMetaPagination withPage(Double page) {
         this.page = page;
         return this;
@@ -42,6 +45,7 @@ public class GetCertificatesIdActionsActionsResponseMetaPagination {
      */
     @JsonProperty("per_page")
     public Double perPage;
+
     public GetCertificatesIdActionsActionsResponseMetaPagination withPerPage(Double perPage) {
         this.perPage = perPage;
         return this;
@@ -52,6 +56,7 @@ public class GetCertificatesIdActionsActionsResponseMetaPagination {
      */
     @JsonProperty("previous_page")
     public Double previousPage;
+
     public GetCertificatesIdActionsActionsResponseMetaPagination withPreviousPage(Double previousPage) {
         this.previousPage = previousPage;
         return this;
@@ -62,9 +67,18 @@ public class GetCertificatesIdActionsActionsResponseMetaPagination {
      */
     @JsonProperty("total_entries")
     public Double totalEntries;
+
     public GetCertificatesIdActionsActionsResponseMetaPagination withTotalEntries(Double totalEntries) {
         this.totalEntries = totalEntries;
         return this;
     }
     
+    public GetCertificatesIdActionsActionsResponseMetaPagination(@JsonProperty("last_page") Double lastPage, @JsonProperty("next_page") Double nextPage, @JsonProperty("page") Double page, @JsonProperty("per_page") Double perPage, @JsonProperty("previous_page") Double previousPage, @JsonProperty("total_entries") Double totalEntries) {
+        this.lastPage = lastPage;
+        this.nextPage = nextPage;
+        this.page = page;
+        this.perPage = perPage;
+        this.previousPage = previousPage;
+        this.totalEntries = totalEntries;
+  }
 }

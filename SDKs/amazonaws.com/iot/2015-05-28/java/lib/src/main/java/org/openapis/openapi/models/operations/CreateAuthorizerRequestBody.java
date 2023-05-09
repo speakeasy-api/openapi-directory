@@ -14,6 +14,7 @@ public class CreateAuthorizerRequestBody {
      */
     @JsonProperty("authorizerFunctionArn")
     public String authorizerFunctionArn;
+
     public CreateAuthorizerRequestBody withAuthorizerFunctionArn(String authorizerFunctionArn) {
         this.authorizerFunctionArn = authorizerFunctionArn;
         return this;
@@ -25,6 +26,7 @@ public class CreateAuthorizerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableCachingForHttp")
     public Boolean enableCachingForHttp;
+
     public CreateAuthorizerRequestBody withEnableCachingForHttp(Boolean enableCachingForHttp) {
         this.enableCachingForHttp = enableCachingForHttp;
         return this;
@@ -36,6 +38,7 @@ public class CreateAuthorizerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signingDisabled")
     public Boolean signingDisabled;
+
     public CreateAuthorizerRequestBody withSigningDisabled(Boolean signingDisabled) {
         this.signingDisabled = signingDisabled;
         return this;
@@ -47,6 +50,7 @@ public class CreateAuthorizerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CreateAuthorizerRequestBodyStatusEnum status;
+
     public CreateAuthorizerRequestBody withStatus(CreateAuthorizerRequestBodyStatusEnum status) {
         this.status = status;
         return this;
@@ -58,6 +62,7 @@ public class CreateAuthorizerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateAuthorizerRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -69,6 +74,7 @@ public class CreateAuthorizerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenKeyName")
     public String tokenKeyName;
+
     public CreateAuthorizerRequestBody withTokenKeyName(String tokenKeyName) {
         this.tokenKeyName = tokenKeyName;
         return this;
@@ -80,9 +86,13 @@ public class CreateAuthorizerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenSigningPublicKeys")
     public java.util.Map<String, String> tokenSigningPublicKeys;
+
     public CreateAuthorizerRequestBody withTokenSigningPublicKeys(java.util.Map<String, String> tokenSigningPublicKeys) {
         this.tokenSigningPublicKeys = tokenSigningPublicKeys;
         return this;
     }
     
+    public CreateAuthorizerRequestBody(@JsonProperty("authorizerFunctionArn") String authorizerFunctionArn) {
+        this.authorizerFunctionArn = authorizerFunctionArn;
+  }
 }

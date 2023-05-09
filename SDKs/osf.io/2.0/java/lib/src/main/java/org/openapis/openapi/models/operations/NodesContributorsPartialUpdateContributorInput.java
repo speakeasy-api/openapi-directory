@@ -15,6 +15,7 @@ public class NodesContributorsPartialUpdateContributorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public NodesContributorsPartialUpdateContributorAttributesInput attributes;
+
     public NodesContributorsPartialUpdateContributorInput withAttributes(NodesContributorsPartialUpdateContributorAttributesInput attributes) {
         this.attributes = attributes;
         return this;
@@ -25,9 +26,13 @@ public class NodesContributorsPartialUpdateContributorInput {
      */
     @JsonProperty("relationships")
     public NodesContributorsPartialUpdateContributorRelationshipsInput relationships;
+
     public NodesContributorsPartialUpdateContributorInput withRelationships(NodesContributorsPartialUpdateContributorRelationshipsInput relationships) {
         this.relationships = relationships;
         return this;
     }
     
+    public NodesContributorsPartialUpdateContributorInput(@JsonProperty("relationships") NodesContributorsPartialUpdateContributorRelationshipsInput relationships) {
+        this.relationships = relationships;
+  }
 }

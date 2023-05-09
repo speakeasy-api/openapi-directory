@@ -12,6 +12,7 @@ public class GETListsDateListJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright")
     public String copyright;
+
     public GETListsDateListJSON200ApplicationJSON withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -20,6 +21,7 @@ public class GETListsDateListJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_modified")
     public String lastModified;
+
     public GETListsDateListJSON200ApplicationJSON withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -28,6 +30,7 @@ public class GETListsDateListJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_results")
     public Long numResults;
+
     public GETListsDateListJSON200ApplicationJSON withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -36,6 +39,7 @@ public class GETListsDateListJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GETListsDateListJSON200ApplicationJSONResults results;
+
     public GETListsDateListJSON200ApplicationJSON withResults(GETListsDateListJSON200ApplicationJSONResults results) {
         this.results = results;
         return this;
@@ -44,9 +48,11 @@ public class GETListsDateListJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GETListsDateListJSON200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GETListsDateListJSON200ApplicationJSON(){}
 }

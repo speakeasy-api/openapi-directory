@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class MappedQTL {
     
     public String chromosome;
+
     public MappedQTL withChromosome(String chromosome) {
         this.chromosome = chromosome;
         return this;
@@ -16,6 +17,7 @@ public class MappedQTL {
     
     
     public Integer mapKey;
+
     public MappedQTL withMapKey(Integer mapKey) {
         this.mapKey = mapKey;
         return this;
@@ -23,6 +25,7 @@ public class MappedQTL {
     
     
     public Qtl qtl;
+
     public MappedQTL withQtl(Qtl qtl) {
         this.qtl = qtl;
         return this;
@@ -30,6 +33,7 @@ public class MappedQTL {
     
     
     public Long start;
+
     public MappedQTL withStart(Long start) {
         this.start = start;
         return this;
@@ -37,6 +41,7 @@ public class MappedQTL {
     
     
     public Long stop;
+
     public MappedQTL withStop(Long stop) {
         this.stop = stop;
         return this;
@@ -44,9 +49,11 @@ public class MappedQTL {
     
     
     public String strand;
+
     public MappedQTL withStrand(String strand) {
         this.strand = strand;
         return this;
     }
     
+    public MappedQTL(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SAPODataConnectorProfileProperties {
     @JsonProperty("applicationHostUrl")
     public String applicationHostUrl;
+
     public SAPODataConnectorProfileProperties withApplicationHostUrl(String applicationHostUrl) {
         this.applicationHostUrl = applicationHostUrl;
         return this;
@@ -21,6 +22,7 @@ public class SAPODataConnectorProfileProperties {
     
     @JsonProperty("applicationServicePath")
     public String applicationServicePath;
+
     public SAPODataConnectorProfileProperties withApplicationServicePath(String applicationServicePath) {
         this.applicationServicePath = applicationServicePath;
         return this;
@@ -28,6 +30,7 @@ public class SAPODataConnectorProfileProperties {
     
     @JsonProperty("clientNumber")
     public String clientNumber;
+
     public SAPODataConnectorProfileProperties withClientNumber(String clientNumber) {
         this.clientNumber = clientNumber;
         return this;
@@ -36,6 +39,7 @@ public class SAPODataConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logonLanguage")
     public String logonLanguage;
+
     public SAPODataConnectorProfileProperties withLogonLanguage(String logonLanguage) {
         this.logonLanguage = logonLanguage;
         return this;
@@ -44,6 +48,7 @@ public class SAPODataConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthProperties")
     public OAuthProperties oAuthProperties;
+
     public SAPODataConnectorProfileProperties withOAuthProperties(OAuthProperties oAuthProperties) {
         this.oAuthProperties = oAuthProperties;
         return this;
@@ -51,6 +56,7 @@ public class SAPODataConnectorProfileProperties {
     
     @JsonProperty("portNumber")
     public Long portNumber;
+
     public SAPODataConnectorProfileProperties withPortNumber(Long portNumber) {
         this.portNumber = portNumber;
         return this;
@@ -59,9 +65,16 @@ public class SAPODataConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateLinkServiceName")
     public String privateLinkServiceName;
+
     public SAPODataConnectorProfileProperties withPrivateLinkServiceName(String privateLinkServiceName) {
         this.privateLinkServiceName = privateLinkServiceName;
         return this;
     }
     
+    public SAPODataConnectorProfileProperties(@JsonProperty("applicationHostUrl") String applicationHostUrl, @JsonProperty("applicationServicePath") String applicationServicePath, @JsonProperty("clientNumber") String clientNumber, @JsonProperty("portNumber") Long portNumber) {
+        this.applicationHostUrl = applicationHostUrl;
+        this.applicationServicePath = applicationServicePath;
+        this.clientNumber = clientNumber;
+        this.portNumber = portNumber;
+  }
 }

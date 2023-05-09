@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetchargingscheduleResponse {
     
     public String contentType;
+
     public SetchargingscheduleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SetchargingscheduleResponse {
     
     
     public Integer statusCode;
+
     public SetchargingscheduleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SetchargingscheduleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetchargingscheduleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class SetchargingscheduleResponse {
      */
     
     public Setchargingschedule201ApplicationJSON setchargingschedule201ApplicationJSONObject;
+
     public SetchargingscheduleResponse withSetchargingschedule201ApplicationJSONObject(Setchargingschedule201ApplicationJSON setchargingschedule201ApplicationJSONObject) {
         this.setchargingschedule201ApplicationJSONObject = setchargingschedule201ApplicationJSONObject;
         return this;
     }
     
+    public SetchargingscheduleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindTextAutoReplysResponse {
     
     public String contentType;
+
     public FindTextAutoReplysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FindTextAutoReplysResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public FindTextAutoReplysResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class FindTextAutoReplysResponse {
     
     
     public Integer statusCode;
+
     public FindTextAutoReplysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class FindTextAutoReplysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindTextAutoReplysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class FindTextAutoReplysResponse {
      */
     
     public org.openapis.openapi.models.shared.TextAutoReplyPage textAutoReplyPage;
+
     public FindTextAutoReplysResponse withTextAutoReplyPage(org.openapis.openapi.models.shared.TextAutoReplyPage textAutoReplyPage) {
         this.textAutoReplyPage = textAutoReplyPage;
         return this;
     }
     
+    public FindTextAutoReplysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

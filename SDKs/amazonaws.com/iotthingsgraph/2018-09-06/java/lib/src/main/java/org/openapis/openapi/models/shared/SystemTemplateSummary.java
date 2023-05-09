@@ -20,6 +20,7 @@ public class SystemTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public SystemTemplateSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class SystemTemplateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public SystemTemplateSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class SystemTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SystemTemplateSummary withId(String id) {
         this.id = id;
         return this;
@@ -46,9 +49,11 @@ public class SystemTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionNumber")
     public Long revisionNumber;
+
     public SystemTemplateSummary withRevisionNumber(Long revisionNumber) {
         this.revisionNumber = revisionNumber;
         return this;
     }
     
+    public SystemTemplateSummary(){}
 }

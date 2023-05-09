@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateMobileOTPUsingPOSTRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public GenerateMobileOTPUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class GenerateMobileOTPUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GenerateMobileOTPRequest generateMobileOTPRequest;
+
     public GenerateMobileOTPUsingPOSTRequest withGenerateMobileOTPRequest(org.openapis.openapi.models.shared.GenerateMobileOTPRequest generateMobileOTPRequest) {
         this.generateMobileOTPRequest = generateMobileOTPRequest;
         return this;
     }
     
+    public GenerateMobileOTPUsingPOSTRequest(@JsonProperty("GenerateMobileOTPRequest") org.openapis.openapi.models.shared.GenerateMobileOTPRequest generateMobileOTPRequest) {
+        this.generateMobileOTPRequest = generateMobileOTPRequest;
+  }
 }

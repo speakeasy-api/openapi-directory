@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisassociateAddressRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDisassociateAddressActionEnum action;
+
     public GETDisassociateAddressRequest withAction(GETDisassociateAddressActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDisassociateAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AssociationId")
     public String associationId;
+
     public GETDisassociateAddressRequest withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -29,6 +32,7 @@ public class GETDisassociateAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDisassociateAddressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETDisassociateAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PublicIp")
     public String publicIp;
+
     public GETDisassociateAddressRequest withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -46,6 +51,7 @@ public class GETDisassociateAddressRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDisassociateAddressVersionEnum version;
+
     public GETDisassociateAddressRequest withVersion(GETDisassociateAddressVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETDisassociateAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDisassociateAddressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETDisassociateAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDisassociateAddressRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETDisassociateAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDisassociateAddressRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETDisassociateAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDisassociateAddressRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETDisassociateAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDisassociateAddressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETDisassociateAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDisassociateAddressRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,14 @@ public class GETDisassociateAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDisassociateAddressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDisassociateAddressRequest(@JsonProperty("Action") GETDisassociateAddressActionEnum action, @JsonProperty("Version") GETDisassociateAddressVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

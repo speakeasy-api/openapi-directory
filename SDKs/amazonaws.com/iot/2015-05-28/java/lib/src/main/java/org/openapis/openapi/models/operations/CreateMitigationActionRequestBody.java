@@ -14,6 +14,7 @@ public class CreateMitigationActionRequestBody {
      */
     @JsonProperty("actionParams")
     public CreateMitigationActionRequestBodyActionParams actionParams;
+
     public CreateMitigationActionRequestBody withActionParams(CreateMitigationActionRequestBodyActionParams actionParams) {
         this.actionParams = actionParams;
         return this;
@@ -24,6 +25,7 @@ public class CreateMitigationActionRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateMitigationActionRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -35,9 +37,14 @@ public class CreateMitigationActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateMitigationActionRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateMitigationActionRequestBody(@JsonProperty("actionParams") CreateMitigationActionRequestBodyActionParams actionParams, @JsonProperty("roleArn") String roleArn) {
+        this.actionParams = actionParams;
+        this.roleArn = roleArn;
+  }
 }

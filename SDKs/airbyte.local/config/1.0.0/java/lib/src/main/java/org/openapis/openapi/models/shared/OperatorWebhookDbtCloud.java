@@ -12,6 +12,7 @@ public class OperatorWebhookDbtCloud {
      */
     @JsonProperty("accountId")
     public Long accountId;
+
     public OperatorWebhookDbtCloud withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -22,9 +23,14 @@ public class OperatorWebhookDbtCloud {
      */
     @JsonProperty("jobId")
     public Long jobId;
+
     public OperatorWebhookDbtCloud withJobId(Long jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public OperatorWebhookDbtCloud(@JsonProperty("accountId") Long accountId, @JsonProperty("jobId") Long jobId) {
+        this.accountId = accountId;
+        this.jobId = jobId;
+  }
 }

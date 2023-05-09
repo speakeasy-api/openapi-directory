@@ -18,6 +18,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlasPickupStoreInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInfo")
     public String additionalInfo;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlasPickupStoreInfo withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -29,6 +30,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlasPickupStoreInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public java.util.Map<String, Object> address;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlasPickupStoreInfo withAddress(java.util.Map<String, Object> address) {
         this.address = address;
         return this;
@@ -40,6 +42,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlasPickupStoreInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockId")
     public String dockId;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlasPickupStoreInfo withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -51,6 +54,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlasPickupStoreInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyName")
     public String friendlyName;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlasPickupStoreInfo withFriendlyName(String friendlyName) {
         this.friendlyName = friendlyName;
         return this;
@@ -62,9 +66,11 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlasPickupStoreInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPickupStore")
     public Boolean isPickupStore;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlasPickupStoreInfo withIsPickupStore(Boolean isPickupStore) {
         this.isPickupStore = isPickupStore;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONLogisticsInfoSlasPickupStoreInfo(){}
 }

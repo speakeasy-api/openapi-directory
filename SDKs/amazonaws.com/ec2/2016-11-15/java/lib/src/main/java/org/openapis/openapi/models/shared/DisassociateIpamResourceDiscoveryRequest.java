@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisassociateIpamResourceDiscoveryRequest {
     
     public Boolean dryRun;
+
     public DisassociateIpamResourceDiscoveryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DisassociateIpamResourceDiscoveryRequest {
     
     
     public String ipamResourceDiscoveryAssociationId;
+
     public DisassociateIpamResourceDiscoveryRequest withIpamResourceDiscoveryAssociationId(String ipamResourceDiscoveryAssociationId) {
         this.ipamResourceDiscoveryAssociationId = ipamResourceDiscoveryAssociationId;
         return this;
     }
     
+    public DisassociateIpamResourceDiscoveryRequest(@JsonProperty("IpamResourceDiscoveryAssociationId") String ipamResourceDiscoveryAssociationId) {
+        this.ipamResourceDiscoveryAssociationId = ipamResourceDiscoveryAssociationId;
+  }
 }

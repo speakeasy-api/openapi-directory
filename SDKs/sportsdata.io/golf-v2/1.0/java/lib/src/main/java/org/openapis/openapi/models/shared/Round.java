@@ -12,6 +12,7 @@ public class Round {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Day")
     public String day;
+
     public Round withDay(String day) {
         this.day = day;
         return this;
@@ -20,6 +21,7 @@ public class Round {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public Round withNumber(Long number) {
         this.number = number;
         return this;
@@ -28,6 +30,7 @@ public class Round {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoundID")
     public Long roundID;
+
     public Round withRoundID(Long roundID) {
         this.roundID = roundID;
         return this;
@@ -36,9 +39,11 @@ public class Round {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TournamentID")
     public Long tournamentID;
+
     public Round withTournamentID(Long tournamentID) {
         this.tournamentID = tournamentID;
         return this;
     }
     
+    public Round(){}
 }

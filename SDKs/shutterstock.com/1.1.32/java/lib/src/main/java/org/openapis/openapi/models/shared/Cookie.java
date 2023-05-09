@@ -15,6 +15,7 @@ public class Cookie {
      */
     @JsonProperty("name")
     public String name;
+
     public Cookie withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,14 @@ public class Cookie {
      */
     @JsonProperty("value")
     public String value;
+
     public Cookie withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Cookie(@JsonProperty("name") String name, @JsonProperty("value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

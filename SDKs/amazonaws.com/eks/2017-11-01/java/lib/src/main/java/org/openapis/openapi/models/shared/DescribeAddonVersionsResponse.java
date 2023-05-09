@@ -15,6 +15,7 @@ public class DescribeAddonVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addons")
     public AddonInfo[] addons;
+
     public DescribeAddonVersionsResponse withAddons(AddonInfo[] addons) {
         this.addons = addons;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAddonVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeAddonVersionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAddonVersionsResponse(){}
 }

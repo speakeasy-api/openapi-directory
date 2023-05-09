@@ -15,6 +15,7 @@ public class AssociateOriginationIdentityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsoCountryCode")
     public String isoCountryCode;
+
     public AssociateOriginationIdentityResult withIsoCountryCode(String isoCountryCode) {
         this.isoCountryCode = isoCountryCode;
         return this;
@@ -23,6 +24,7 @@ public class AssociateOriginationIdentityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginationIdentity")
     public String originationIdentity;
+
     public AssociateOriginationIdentityResult withOriginationIdentity(String originationIdentity) {
         this.originationIdentity = originationIdentity;
         return this;
@@ -31,6 +33,7 @@ public class AssociateOriginationIdentityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginationIdentityArn")
     public String originationIdentityArn;
+
     public AssociateOriginationIdentityResult withOriginationIdentityArn(String originationIdentityArn) {
         this.originationIdentityArn = originationIdentityArn;
         return this;
@@ -39,6 +42,7 @@ public class AssociateOriginationIdentityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoolArn")
     public String poolArn;
+
     public AssociateOriginationIdentityResult withPoolArn(String poolArn) {
         this.poolArn = poolArn;
         return this;
@@ -47,9 +51,11 @@ public class AssociateOriginationIdentityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoolId")
     public String poolId;
+
     public AssociateOriginationIdentityResult withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
     }
     
+    public AssociateOriginationIdentityResult(){}
 }

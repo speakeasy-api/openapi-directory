@@ -18,6 +18,7 @@ public class MySqlDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     public Integer accountId;
+
     public MySqlDatabase withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class MySqlDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actual_size")
     public Integer actualSize;
+
     public MySqlDatabase withActualSize(Integer actualSize) {
         this.actualSize = actualSize;
         return this;
@@ -40,6 +42,7 @@ public class MySqlDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public MySqlDatabase withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -51,6 +54,7 @@ public class MySqlDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_size")
     public Integer maxSize;
+
     public MySqlDatabase withMaxSize(Integer maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -62,6 +66,7 @@ public class MySqlDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MySqlDatabase withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class MySqlDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_count")
     public Integer userCount;
+
     public MySqlDatabase withUserCount(Integer userCount) {
         this.userCount = userCount;
         return this;
     }
     
+    public MySqlDatabase(){}
 }

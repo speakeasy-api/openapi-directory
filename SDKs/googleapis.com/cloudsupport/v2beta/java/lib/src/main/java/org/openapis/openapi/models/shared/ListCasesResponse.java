@@ -13,25 +13,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ListCasesResponse {
     /**
-     * The list of cases associated with the cloud resource, after any filters have been applied.
+     * The list of cases associated with the Google Cloud Resource, after any filters have been applied.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cases")
     public Case[] cases;
+
     public ListCasesResponse withCases(Case[] cases) {
         this.cases = cases;
         return this;
     }
     
     /**
-     * A token to retrieve the next page of results. This should be set in the `page_token` field of subsequent `ListCasesRequest` message that is issued. If unspecified, there are no more results to retrieve.
+     * A token to retrieve the next page of results. This should be set in the `page_token` field of the subsequent `ListCasesRequest` message that is issued. If unspecified, there are no more results to retrieve.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCasesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCasesResponse(){}
 }

@@ -15,9 +15,11 @@ public class ListGroupCertificateAuthoritiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupCertificateAuthorities")
     public GroupCertificateAuthorityProperties[] groupCertificateAuthorities;
+
     public ListGroupCertificateAuthoritiesResponse withGroupCertificateAuthorities(GroupCertificateAuthorityProperties[] groupCertificateAuthorities) {
         this.groupCertificateAuthorities = groupCertificateAuthorities;
         return this;
     }
     
+    public ListGroupCertificateAuthoritiesResponse(){}
 }

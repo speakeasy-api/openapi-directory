@@ -12,6 +12,7 @@ public class RegistrationsFilesListFile {
      */
     
     public RegistrationsFilesListFileAttributes attributes;
+
     public RegistrationsFilesListFile withAttributes(RegistrationsFilesListFileAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class RegistrationsFilesListFile {
      */
     
     public String id;
+
     public RegistrationsFilesListFile withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class RegistrationsFilesListFile {
      */
     
     public RegistrationsFilesListFileLinks links;
+
     public RegistrationsFilesListFile withLinks(RegistrationsFilesListFileLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class RegistrationsFilesListFile {
      */
     
     public RegistrationsFilesListFileRelationships relationships;
+
     public RegistrationsFilesListFile withRelationships(RegistrationsFilesListFileRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,11 @@ public class RegistrationsFilesListFile {
      */
     
     public String type;
+
     public RegistrationsFilesListFile withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RegistrationsFilesListFile(){}
 }

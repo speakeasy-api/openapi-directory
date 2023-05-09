@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSchemaResponse {
@@ -12,6 +13,7 @@ public class DeleteSchemaResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteSchemaResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteSchemaResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteSchemaResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSchemaResponse {
     
     
     public String contentType;
+
     public DeleteSchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteSchemaResponse deleteSchemaResponse;
+
     public DeleteSchemaResponse withDeleteSchemaResponse(org.openapis.openapi.models.shared.DeleteSchemaResponse deleteSchemaResponse) {
         this.deleteSchemaResponse = deleteSchemaResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSchemaResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteSchemaResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteSchemaResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteSchemaResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteSchemaResponse {
     
     
     public Integer statusCode;
+
     public DeleteSchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteSchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteSchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

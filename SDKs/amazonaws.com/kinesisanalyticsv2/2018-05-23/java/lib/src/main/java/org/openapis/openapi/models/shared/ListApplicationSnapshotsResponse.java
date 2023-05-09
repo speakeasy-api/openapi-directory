@@ -15,6 +15,7 @@ public class ListApplicationSnapshotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListApplicationSnapshotsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListApplicationSnapshotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotSummaries")
     public SnapshotDetails[] snapshotSummaries;
+
     public ListApplicationSnapshotsResponse withSnapshotSummaries(SnapshotDetails[] snapshotSummaries) {
         this.snapshotSummaries = snapshotSummaries;
         return this;
     }
     
+    public ListApplicationSnapshotsResponse(){}
 }

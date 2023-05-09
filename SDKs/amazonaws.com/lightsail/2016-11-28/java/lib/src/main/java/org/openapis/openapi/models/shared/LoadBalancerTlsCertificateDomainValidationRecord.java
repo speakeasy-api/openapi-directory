@@ -15,6 +15,7 @@ public class LoadBalancerTlsCertificateDomainValidationRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsRecordCreationState")
     public LoadBalancerTlsCertificateDnsRecordCreationState dnsRecordCreationState;
+
     public LoadBalancerTlsCertificateDomainValidationRecord withDnsRecordCreationState(LoadBalancerTlsCertificateDnsRecordCreationState dnsRecordCreationState) {
         this.dnsRecordCreationState = dnsRecordCreationState;
         return this;
@@ -23,6 +24,7 @@ public class LoadBalancerTlsCertificateDomainValidationRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public LoadBalancerTlsCertificateDomainValidationRecord withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -31,6 +33,7 @@ public class LoadBalancerTlsCertificateDomainValidationRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LoadBalancerTlsCertificateDomainValidationRecord withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class LoadBalancerTlsCertificateDomainValidationRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public LoadBalancerTlsCertificateDomainValidationRecord withType(String type) {
         this.type = type;
         return this;
@@ -47,6 +51,7 @@ public class LoadBalancerTlsCertificateDomainValidationRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationStatus")
     public LoadBalancerTlsCertificateDomainStatusEnum validationStatus;
+
     public LoadBalancerTlsCertificateDomainValidationRecord withValidationStatus(LoadBalancerTlsCertificateDomainStatusEnum validationStatus) {
         this.validationStatus = validationStatus;
         return this;
@@ -55,9 +60,11 @@ public class LoadBalancerTlsCertificateDomainValidationRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public LoadBalancerTlsCertificateDomainValidationRecord withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public LoadBalancerTlsCertificateDomainValidationRecord(){}
 }

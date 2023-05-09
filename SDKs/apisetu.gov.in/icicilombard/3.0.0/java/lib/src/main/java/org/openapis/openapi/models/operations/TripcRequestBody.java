@@ -15,6 +15,7 @@ public class TripcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public TripcRequestBodyCertificateParameters certificateParameters;
+
     public TripcRequestBody withCertificateParameters(TripcRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class TripcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public TripcRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class TripcRequestBody {
      */
     @JsonProperty("format")
     public TripcRequestBodyFormatEnum format;
+
     public TripcRequestBody withFormat(TripcRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class TripcRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public TripcRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public TripcRequestBody(@JsonProperty("format") TripcRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

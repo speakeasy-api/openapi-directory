@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDisableStandardsResponse {
@@ -12,6 +13,7 @@ public class BatchDisableStandardsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDisableStandardsResponse batchDisableStandardsResponse;
+
     public BatchDisableStandardsResponse withBatchDisableStandardsResponse(org.openapis.openapi.models.shared.BatchDisableStandardsResponse batchDisableStandardsResponse) {
         this.batchDisableStandardsResponse = batchDisableStandardsResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchDisableStandardsResponse {
     
     
     public String contentType;
+
     public BatchDisableStandardsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchDisableStandardsResponse {
      */
     
     public Object internalException;
+
     public BatchDisableStandardsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class BatchDisableStandardsResponse {
      */
     
     public Object invalidAccessException;
+
     public BatchDisableStandardsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class BatchDisableStandardsResponse {
      */
     
     public Object invalidInputException;
+
     public BatchDisableStandardsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class BatchDisableStandardsResponse {
      */
     
     public Object limitExceededException;
+
     public BatchDisableStandardsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class BatchDisableStandardsResponse {
     
     
     public Integer statusCode;
+
     public BatchDisableStandardsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class BatchDisableStandardsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDisableStandardsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchDisableStandardsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

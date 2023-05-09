@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetArtifactRequest {
@@ -12,6 +13,7 @@ public class ActionsGetArtifactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifact_id")
     public Long artifactId;
+
     public ActionsGetArtifactRequest withArtifactId(Long artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -22,6 +24,7 @@ public class ActionsGetArtifactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsGetArtifactRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,9 +35,15 @@ public class ActionsGetArtifactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsGetArtifactRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ActionsGetArtifactRequest(@JsonProperty("artifact_id") Long artifactId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.artifactId = artifactId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

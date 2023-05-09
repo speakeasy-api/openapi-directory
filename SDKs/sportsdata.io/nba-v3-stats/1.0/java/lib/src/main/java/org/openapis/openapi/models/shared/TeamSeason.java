@@ -12,6 +12,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Assists")
     public Double assists;
+
     public TeamSeason withAssists(Double assists) {
         this.assists = assists;
         return this;
@@ -20,6 +21,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssistsPercentage")
     public Double assistsPercentage;
+
     public TeamSeason withAssistsPercentage(Double assistsPercentage) {
         this.assistsPercentage = assistsPercentage;
         return this;
@@ -28,6 +30,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedShots")
     public Double blockedShots;
+
     public TeamSeason withBlockedShots(Double blockedShots) {
         this.blockedShots = blockedShots;
         return this;
@@ -36,6 +39,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlocksPercentage")
     public Double blocksPercentage;
+
     public TeamSeason withBlocksPercentage(Double blocksPercentage) {
         this.blocksPercentage = blocksPercentage;
         return this;
@@ -44,6 +48,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefensiveRebounds")
     public Double defensiveRebounds;
+
     public TeamSeason withDefensiveRebounds(Double defensiveRebounds) {
         this.defensiveRebounds = defensiveRebounds;
         return this;
@@ -52,6 +57,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefensiveReboundsPercentage")
     public Double defensiveReboundsPercentage;
+
     public TeamSeason withDefensiveReboundsPercentage(Double defensiveReboundsPercentage) {
         this.defensiveReboundsPercentage = defensiveReboundsPercentage;
         return this;
@@ -60,6 +66,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DoubleDoubles")
     public Double doubleDoubles;
+
     public TeamSeason withDoubleDoubles(Double doubleDoubles) {
         this.doubleDoubles = doubleDoubles;
         return this;
@@ -68,6 +75,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EffectiveFieldGoalsPercentage")
     public Double effectiveFieldGoalsPercentage;
+
     public TeamSeason withEffectiveFieldGoalsPercentage(Double effectiveFieldGoalsPercentage) {
         this.effectiveFieldGoalsPercentage = effectiveFieldGoalsPercentage;
         return this;
@@ -76,6 +84,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public TeamSeason withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -84,6 +93,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsDraftKings")
     public Double fantasyPointsDraftKings;
+
     public TeamSeason withFantasyPointsDraftKings(Double fantasyPointsDraftKings) {
         this.fantasyPointsDraftKings = fantasyPointsDraftKings;
         return this;
@@ -92,6 +102,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFanDuel")
     public Double fantasyPointsFanDuel;
+
     public TeamSeason withFantasyPointsFanDuel(Double fantasyPointsFanDuel) {
         this.fantasyPointsFanDuel = fantasyPointsFanDuel;
         return this;
@@ -100,6 +111,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFantasyDraft")
     public Double fantasyPointsFantasyDraft;
+
     public TeamSeason withFantasyPointsFantasyDraft(Double fantasyPointsFantasyDraft) {
         this.fantasyPointsFantasyDraft = fantasyPointsFantasyDraft;
         return this;
@@ -108,6 +120,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsYahoo")
     public Double fantasyPointsYahoo;
+
     public TeamSeason withFantasyPointsYahoo(Double fantasyPointsYahoo) {
         this.fantasyPointsYahoo = fantasyPointsYahoo;
         return this;
@@ -116,6 +129,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsAttempted")
     public Double fieldGoalsAttempted;
+
     public TeamSeason withFieldGoalsAttempted(Double fieldGoalsAttempted) {
         this.fieldGoalsAttempted = fieldGoalsAttempted;
         return this;
@@ -124,6 +138,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsMade")
     public Double fieldGoalsMade;
+
     public TeamSeason withFieldGoalsMade(Double fieldGoalsMade) {
         this.fieldGoalsMade = fieldGoalsMade;
         return this;
@@ -132,6 +147,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsPercentage")
     public Double fieldGoalsPercentage;
+
     public TeamSeason withFieldGoalsPercentage(Double fieldGoalsPercentage) {
         this.fieldGoalsPercentage = fieldGoalsPercentage;
         return this;
@@ -140,6 +156,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FreeThrowsAttempted")
     public Double freeThrowsAttempted;
+
     public TeamSeason withFreeThrowsAttempted(Double freeThrowsAttempted) {
         this.freeThrowsAttempted = freeThrowsAttempted;
         return this;
@@ -148,6 +165,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FreeThrowsMade")
     public Double freeThrowsMade;
+
     public TeamSeason withFreeThrowsMade(Double freeThrowsMade) {
         this.freeThrowsMade = freeThrowsMade;
         return this;
@@ -156,6 +174,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FreeThrowsPercentage")
     public Double freeThrowsPercentage;
+
     public TeamSeason withFreeThrowsPercentage(Double freeThrowsPercentage) {
         this.freeThrowsPercentage = freeThrowsPercentage;
         return this;
@@ -164,6 +183,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Games")
     public Long games;
+
     public TeamSeason withGames(Long games) {
         this.games = games;
         return this;
@@ -172,6 +192,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTeamID")
     public Long globalTeamID;
+
     public TeamSeason withGlobalTeamID(Long globalTeamID) {
         this.globalTeamID = globalTeamID;
         return this;
@@ -180,6 +201,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsClosed")
     public Boolean isClosed;
+
     public TeamSeason withIsClosed(Boolean isClosed) {
         this.isClosed = isClosed;
         return this;
@@ -188,6 +210,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineupConfirmed")
     public Boolean lineupConfirmed;
+
     public TeamSeason withLineupConfirmed(Boolean lineupConfirmed) {
         this.lineupConfirmed = lineupConfirmed;
         return this;
@@ -196,6 +219,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineupStatus")
     public String lineupStatus;
+
     public TeamSeason withLineupStatus(String lineupStatus) {
         this.lineupStatus = lineupStatus;
         return this;
@@ -204,6 +228,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Losses")
     public Long losses;
+
     public TeamSeason withLosses(Long losses) {
         this.losses = losses;
         return this;
@@ -212,6 +237,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Minutes")
     public Long minutes;
+
     public TeamSeason withMinutes(Long minutes) {
         this.minutes = minutes;
         return this;
@@ -220,6 +246,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public TeamSeason withName(String name) {
         this.name = name;
         return this;
@@ -228,6 +255,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OffensiveRebounds")
     public Double offensiveRebounds;
+
     public TeamSeason withOffensiveRebounds(Double offensiveRebounds) {
         this.offensiveRebounds = offensiveRebounds;
         return this;
@@ -236,6 +264,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OffensiveReboundsPercentage")
     public Double offensiveReboundsPercentage;
+
     public TeamSeason withOffensiveReboundsPercentage(Double offensiveReboundsPercentage) {
         this.offensiveReboundsPercentage = offensiveReboundsPercentage;
         return this;
@@ -244,6 +273,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPosition")
     public String opponentPosition;
+
     public TeamSeason withOpponentPosition(String opponentPosition) {
         this.opponentPosition = opponentPosition;
         return this;
@@ -252,6 +282,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentStat")
     public OpponentSeason opponentStat;
+
     public TeamSeason withOpponentStat(OpponentSeason opponentStat) {
         this.opponentStat = opponentStat;
         return this;
@@ -260,6 +291,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PersonalFouls")
     public Double personalFouls;
+
     public TeamSeason withPersonalFouls(Double personalFouls) {
         this.personalFouls = personalFouls;
         return this;
@@ -268,6 +300,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerEfficiencyRating")
     public Double playerEfficiencyRating;
+
     public TeamSeason withPlayerEfficiencyRating(Double playerEfficiencyRating) {
         this.playerEfficiencyRating = playerEfficiencyRating;
         return this;
@@ -276,6 +309,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlusMinus")
     public Double plusMinus;
+
     public TeamSeason withPlusMinus(Double plusMinus) {
         this.plusMinus = plusMinus;
         return this;
@@ -284,6 +318,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Points")
     public Double points;
+
     public TeamSeason withPoints(Double points) {
         this.points = points;
         return this;
@@ -292,6 +327,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Possessions")
     public Double possessions;
+
     public TeamSeason withPossessions(Double possessions) {
         this.possessions = possessions;
         return this;
@@ -300,6 +336,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rebounds")
     public Double rebounds;
+
     public TeamSeason withRebounds(Double rebounds) {
         this.rebounds = rebounds;
         return this;
@@ -308,6 +345,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public TeamSeason withSeason(Long season) {
         this.season = season;
         return this;
@@ -316,6 +354,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public TeamSeason withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -324,6 +363,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Seconds")
     public Long seconds;
+
     public TeamSeason withSeconds(Long seconds) {
         this.seconds = seconds;
         return this;
@@ -332,6 +372,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatID")
     public Long statID;
+
     public TeamSeason withStatID(Long statID) {
         this.statID = statID;
         return this;
@@ -340,6 +381,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Steals")
     public Double steals;
+
     public TeamSeason withSteals(Double steals) {
         this.steals = steals;
         return this;
@@ -348,6 +390,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StealsPercentage")
     public Double stealsPercentage;
+
     public TeamSeason withStealsPercentage(Double stealsPercentage) {
         this.stealsPercentage = stealsPercentage;
         return this;
@@ -356,6 +399,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public TeamSeason withTeam(String team) {
         this.team = team;
         return this;
@@ -364,6 +408,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public TeamSeason withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
@@ -372,6 +417,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThreePointersAttempted")
     public Double threePointersAttempted;
+
     public TeamSeason withThreePointersAttempted(Double threePointersAttempted) {
         this.threePointersAttempted = threePointersAttempted;
         return this;
@@ -380,6 +426,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThreePointersMade")
     public Double threePointersMade;
+
     public TeamSeason withThreePointersMade(Double threePointersMade) {
         this.threePointersMade = threePointersMade;
         return this;
@@ -388,6 +435,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThreePointersPercentage")
     public Double threePointersPercentage;
+
     public TeamSeason withThreePointersPercentage(Double threePointersPercentage) {
         this.threePointersPercentage = threePointersPercentage;
         return this;
@@ -396,6 +444,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalReboundsPercentage")
     public Double totalReboundsPercentage;
+
     public TeamSeason withTotalReboundsPercentage(Double totalReboundsPercentage) {
         this.totalReboundsPercentage = totalReboundsPercentage;
         return this;
@@ -404,6 +453,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TripleDoubles")
     public Double tripleDoubles;
+
     public TeamSeason withTripleDoubles(Double tripleDoubles) {
         this.tripleDoubles = tripleDoubles;
         return this;
@@ -412,6 +462,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrueShootingAttempts")
     public Double trueShootingAttempts;
+
     public TeamSeason withTrueShootingAttempts(Double trueShootingAttempts) {
         this.trueShootingAttempts = trueShootingAttempts;
         return this;
@@ -420,6 +471,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrueShootingPercentage")
     public Double trueShootingPercentage;
+
     public TeamSeason withTrueShootingPercentage(Double trueShootingPercentage) {
         this.trueShootingPercentage = trueShootingPercentage;
         return this;
@@ -428,6 +480,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TurnOversPercentage")
     public Double turnOversPercentage;
+
     public TeamSeason withTurnOversPercentage(Double turnOversPercentage) {
         this.turnOversPercentage = turnOversPercentage;
         return this;
@@ -436,6 +489,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Turnovers")
     public Double turnovers;
+
     public TeamSeason withTurnovers(Double turnovers) {
         this.turnovers = turnovers;
         return this;
@@ -444,6 +498,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointersAttempted")
     public Double twoPointersAttempted;
+
     public TeamSeason withTwoPointersAttempted(Double twoPointersAttempted) {
         this.twoPointersAttempted = twoPointersAttempted;
         return this;
@@ -452,6 +507,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointersMade")
     public Double twoPointersMade;
+
     public TeamSeason withTwoPointersMade(Double twoPointersMade) {
         this.twoPointersMade = twoPointersMade;
         return this;
@@ -460,6 +516,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointersPercentage")
     public Double twoPointersPercentage;
+
     public TeamSeason withTwoPointersPercentage(Double twoPointersPercentage) {
         this.twoPointersPercentage = twoPointersPercentage;
         return this;
@@ -468,6 +525,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public TeamSeason withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -476,6 +534,7 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsageRatePercentage")
     public Double usageRatePercentage;
+
     public TeamSeason withUsageRatePercentage(Double usageRatePercentage) {
         this.usageRatePercentage = usageRatePercentage;
         return this;
@@ -484,9 +543,11 @@ public class TeamSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Wins")
     public Long wins;
+
     public TeamSeason withWins(Long wins) {
         this.wins = wins;
         return this;
     }
     
+    public TeamSeason(){}
 }

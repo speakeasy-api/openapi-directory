@@ -18,6 +18,7 @@ public class GetUserProperties400ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, String> fields;
+
     public GetUserProperties400ApplicationJSONErrors withFields(java.util.Map<String, String> fields) {
         this.fields = fields;
         return this;
@@ -29,9 +30,11 @@ public class GetUserProperties400ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public GetUserProperties400ApplicationJSONErrorsParameters parameters;
+
     public GetUserProperties400ApplicationJSONErrors withParameters(GetUserProperties400ApplicationJSONErrorsParameters parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public GetUserProperties400ApplicationJSONErrors(){}
 }

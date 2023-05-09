@@ -15,6 +15,7 @@ public class RegexMatchSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RegexMatchSet withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class RegexMatchSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegexMatchSetId")
     public String regexMatchSetId;
+
     public RegexMatchSet withRegexMatchSetId(String regexMatchSetId) {
         this.regexMatchSetId = regexMatchSetId;
         return this;
@@ -31,9 +33,11 @@ public class RegexMatchSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegexMatchTuples")
     public RegexMatchTuple[] regexMatchTuples;
+
     public RegexMatchSet withRegexMatchTuples(RegexMatchTuple[] regexMatchTuples) {
         this.regexMatchTuples = regexMatchTuples;
         return this;
     }
     
+    public RegexMatchSet(){}
 }

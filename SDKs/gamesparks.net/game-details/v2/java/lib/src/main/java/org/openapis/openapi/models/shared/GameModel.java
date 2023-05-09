@@ -12,6 +12,7 @@ public class GameModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("@id")
     public String atId;
+
     public GameModel withAtId(String atId) {
         this.atId = atId;
         return this;
@@ -20,9 +21,11 @@ public class GameModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GameModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GameModel(){}
 }

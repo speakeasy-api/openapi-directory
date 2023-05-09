@@ -15,6 +15,7 @@ public class CreateUserRequest {
      */
     @JsonProperty("email")
     public String email;
+
     public CreateUserRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -25,9 +26,14 @@ public class CreateUserRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateUserRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateUserRequest(@JsonProperty("email") String email, @JsonProperty("name") String name) {
+        this.email = email;
+        this.name = name;
+  }
 }

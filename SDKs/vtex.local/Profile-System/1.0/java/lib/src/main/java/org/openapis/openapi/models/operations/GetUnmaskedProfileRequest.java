@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUnmaskedProfileRequest {
@@ -12,6 +13,7 @@ public class GetUnmaskedProfileRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetUnmaskedProfileRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetUnmaskedProfileRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetUnmaskedProfileRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -34,6 +37,7 @@ public class GetUnmaskedProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternativeKey")
     public String alternativeKey;
+
     public GetUnmaskedProfileRequest withAlternativeKey(String alternativeKey) {
         this.alternativeKey = alternativeKey;
         return this;
@@ -44,6 +48,7 @@ public class GetUnmaskedProfileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public GetUnmaskedProfileRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -54,9 +59,16 @@ public class GetUnmaskedProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
     public String reason;
+
     public GetUnmaskedProfileRequest withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public GetUnmaskedProfileRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("profileId") String profileId, @JsonProperty("reason") String reason) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.profileId = profileId;
+        this.reason = reason;
+  }
 }

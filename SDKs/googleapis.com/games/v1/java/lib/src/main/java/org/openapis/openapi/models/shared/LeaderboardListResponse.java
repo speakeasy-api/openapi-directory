@@ -18,6 +18,7 @@ public class LeaderboardListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Leaderboard[] items;
+
     public LeaderboardListResponse withItems(Leaderboard[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class LeaderboardListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LeaderboardListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class LeaderboardListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public LeaderboardListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public LeaderboardListResponse(){}
 }

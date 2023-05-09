@@ -15,6 +15,7 @@ public class ImportTaskError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorData")
     public ImportErrorData errorData;
+
     public ImportTaskError withErrorData(ImportErrorData errorData) {
         this.errorData = errorData;
         return this;
@@ -23,6 +24,7 @@ public class ImportTaskError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDateTime")
     public String errorDateTime;
+
     public ImportTaskError withErrorDateTime(String errorDateTime) {
         this.errorDateTime = errorDateTime;
         return this;
@@ -31,9 +33,11 @@ public class ImportTaskError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorType")
     public ImportErrorTypeEnum errorType;
+
     public ImportTaskError withErrorType(ImportErrorTypeEnum errorType) {
         this.errorType = errorType;
         return this;
     }
     
+    public ImportTaskError(){}
 }

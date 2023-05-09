@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDatalakeExceptionsSubscriptionResponse {
     @JsonProperty("protocolAndNotificationEndpoint")
     public ProtocolAndNotificationEndpoint protocolAndNotificationEndpoint;
+
     public GetDatalakeExceptionsSubscriptionResponse withProtocolAndNotificationEndpoint(ProtocolAndNotificationEndpoint protocolAndNotificationEndpoint) {
         this.protocolAndNotificationEndpoint = protocolAndNotificationEndpoint;
         return this;
     }
     
+    public GetDatalakeExceptionsSubscriptionResponse(@JsonProperty("protocolAndNotificationEndpoint") ProtocolAndNotificationEndpoint protocolAndNotificationEndpoint) {
+        this.protocolAndNotificationEndpoint = protocolAndNotificationEndpoint;
+  }
 }

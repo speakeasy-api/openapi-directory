@@ -18,9 +18,11 @@ public class ListBrandsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brands")
     public Brand[] brands;
+
     public ListBrandsResponse withBrands(Brand[] brands) {
         this.brands = brands;
         return this;
     }
     
+    public ListBrandsResponse(){}
 }

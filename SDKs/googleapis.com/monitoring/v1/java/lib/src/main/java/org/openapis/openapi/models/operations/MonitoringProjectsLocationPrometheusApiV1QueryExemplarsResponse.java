@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MonitoringProjectsLocationPrometheusApiV1QueryExemplarsResponse {
     
     public String contentType;
+
     public MonitoringProjectsLocationPrometheusApiV1QueryExemplarsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MonitoringProjectsLocationPrometheusApiV1QueryExemplarsResponse {
      */
     
     public org.openapis.openapi.models.shared.HttpBody httpBody;
+
     public MonitoringProjectsLocationPrometheusApiV1QueryExemplarsResponse withHttpBody(org.openapis.openapi.models.shared.HttpBody httpBody) {
         this.httpBody = httpBody;
         return this;
@@ -26,6 +29,7 @@ public class MonitoringProjectsLocationPrometheusApiV1QueryExemplarsResponse {
     
     
     public Integer statusCode;
+
     public MonitoringProjectsLocationPrometheusApiV1QueryExemplarsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MonitoringProjectsLocationPrometheusApiV1QueryExemplarsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MonitoringProjectsLocationPrometheusApiV1QueryExemplarsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MonitoringProjectsLocationPrometheusApiV1QueryExemplarsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

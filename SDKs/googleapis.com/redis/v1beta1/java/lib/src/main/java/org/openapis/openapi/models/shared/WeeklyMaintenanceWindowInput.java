@@ -18,6 +18,7 @@ public class WeeklyMaintenanceWindowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day")
     public WeeklyMaintenanceWindowDayEnum day;
+
     public WeeklyMaintenanceWindowInput withDay(WeeklyMaintenanceWindowDayEnum day) {
         this.day = day;
         return this;
@@ -29,9 +30,11 @@ public class WeeklyMaintenanceWindowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public TimeOfDay startTime;
+
     public WeeklyMaintenanceWindowInput withStartTime(TimeOfDay startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public WeeklyMaintenanceWindowInput(){}
 }

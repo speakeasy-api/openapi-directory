@@ -57,15 +57,13 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GeneralApiCountriesResponse res = new org.openapis.openapi.models.operations.GeneralApiCountriesResponse() {{
+        org.openapis.openapi.models.operations.GeneralApiCountriesResponse res = new org.openapis.openapi.models.operations.GeneralApiCountriesResponse(contentType, httpRes.statusCode()) {{
             countryDetailsApiModels = null;
             countryDetailsApiModels = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,15 +122,13 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GeneralApiCurrenciesResponse res = new org.openapis.openapi.models.operations.GeneralApiCurrenciesResponse() {{
+        org.openapis.openapi.models.operations.GeneralApiCurrenciesResponse res = new org.openapis.openapi.models.operations.GeneralApiCurrenciesResponse(contentType, httpRes.statusCode()) {{
             currencyDetailsApiModels = null;
             currencyDetailsApiModels = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -191,15 +187,13 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GeneralApiDateFormatsResponse res = new org.openapis.openapi.models.operations.GeneralApiDateFormatsResponse() {{
+        org.openapis.openapi.models.operations.GeneralApiDateFormatsResponse res = new org.openapis.openapi.models.operations.GeneralApiDateFormatsResponse(contentType, httpRes.statusCode()) {{
             generalApiDateFormats200ApplicationJSONStrings = null;
             body = null;
             body = null;
             body = null;
             generalApiDateFormats200TextJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -258,15 +252,13 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GeneralApiUiLanguagesResponse res = new org.openapis.openapi.models.operations.GeneralApiUiLanguagesResponse() {{
+        org.openapis.openapi.models.operations.GeneralApiUiLanguagesResponse res = new org.openapis.openapi.models.operations.GeneralApiUiLanguagesResponse(contentType, httpRes.statusCode()) {{
             uiLanguageDetailsApiModels = null;
             uiLanguageDetailsApiModels = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class ListAssociationsForLicenseConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseConfigurationAssociations")
     public LicenseConfigurationAssociation[] licenseConfigurationAssociations;
+
     public ListAssociationsForLicenseConfigurationResponse withLicenseConfigurationAssociations(LicenseConfigurationAssociation[] licenseConfigurationAssociations) {
         this.licenseConfigurationAssociations = licenseConfigurationAssociations;
         return this;
@@ -23,9 +24,11 @@ public class ListAssociationsForLicenseConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAssociationsForLicenseConfigurationResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssociationsForLicenseConfigurationResponse(){}
 }

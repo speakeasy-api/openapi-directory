@@ -12,6 +12,7 @@ public class GamePlatforms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public GamePlatformsPlatform platform;
+
     public GamePlatforms withPlatform(GamePlatformsPlatform platform) {
         this.platform = platform;
         return this;
@@ -20,6 +21,7 @@ public class GamePlatforms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("released_at")
     public String releasedAt;
+
     public GamePlatforms withReleasedAt(String releasedAt) {
         this.releasedAt = releasedAt;
         return this;
@@ -28,9 +30,11 @@ public class GamePlatforms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requirements")
     public GamePlatformsRequirements requirements;
+
     public GamePlatforms withRequirements(GamePlatformsRequirements requirements) {
         this.requirements = requirements;
         return this;
     }
     
+    public GamePlatforms(){}
 }

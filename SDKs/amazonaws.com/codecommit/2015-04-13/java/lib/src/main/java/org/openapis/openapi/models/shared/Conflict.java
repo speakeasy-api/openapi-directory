@@ -15,6 +15,7 @@ public class Conflict {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictMetadata")
     public ConflictMetadata conflictMetadata;
+
     public Conflict withConflictMetadata(ConflictMetadata conflictMetadata) {
         this.conflictMetadata = conflictMetadata;
         return this;
@@ -23,9 +24,11 @@ public class Conflict {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeHunks")
     public MergeHunk[] mergeHunks;
+
     public Conflict withMergeHunks(MergeHunk[] mergeHunks) {
         this.mergeHunks = mergeHunks;
         return this;
     }
     
+    public Conflict(){}
 }

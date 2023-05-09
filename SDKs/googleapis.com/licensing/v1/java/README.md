@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteSecurity;
 import org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteRequest;
 import org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteResponse;
+import org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,34 +28,33 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            LicensingLicenseAssignmentsDeleteRequest req = new LicensingLicenseAssignmentsDeleteRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                oauthToken = "corrupti";
+            LicensingLicenseAssignmentsDeleteRequest req = new LicensingLicenseAssignmentsDeleteRequest("corrupti", "provident", "distinctio") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "unde";
+                alt = AltEnum.PROTO;
+                callback = "corrupti";
+                fields = "illum";
+                key = "vel";
+                oauthToken = "error";
                 prettyPrint = false;
-                productId = "illum";
-                quotaUser = "vel";
-                skuId = "error";
-                uploadType = "deserunt";
-                uploadProtocol = "suscipit";
-                userId = "iure";
-            }}            
+                quotaUser = "deserunt";
+                uploadType = "suscipit";
+                uploadProtocol = "iure";
+            }};            
 
-            LicensingLicenseAssignmentsDeleteResponse res = sdk.licenseAssignments.licensingLicenseAssignmentsDelete(req, new LicensingLicenseAssignmentsDeleteSecurity() {{
+            LicensingLicenseAssignmentsDeleteResponse res = sdk.licenseAssignments.licensingLicenseAssignmentsDelete(req, new LicensingLicenseAssignmentsDeleteSecurity("magnam", "debitis") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.empty.isPresent()) {
+            if (res.empty != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -64,15 +62,15 @@ public class Application {
 ## Available Resources and Operations
 
 
-### licenseAssignments
+### [licenseAssignments](docs/licenseassignments/README.md)
 
-* `licensingLicenseAssignmentsDelete` - Revoke a license.
-* `licensingLicenseAssignmentsGet` - Get a specific user's license by product SKU.
-* `licensingLicenseAssignmentsInsert` - Assign a license.
-* `licensingLicenseAssignmentsListForProduct` - List all users assigned licenses for a specific product SKU.
-* `licensingLicenseAssignmentsListForProductAndSku` - List all users assigned licenses for a specific product SKU.
-* `licensingLicenseAssignmentsPatch` - Reassign a user's product SKU with a different SKU in the same product. This method supports patch semantics.
-* `licensingLicenseAssignmentsUpdate` - Reassign a user's product SKU with a different SKU in the same product.
+* [licensingLicenseAssignmentsDelete](docs/licenseassignments/README.md#licensinglicenseassignmentsdelete) - Revoke a license.
+* [licensingLicenseAssignmentsGet](docs/licenseassignments/README.md#licensinglicenseassignmentsget) - Get a specific user's license by product SKU.
+* [licensingLicenseAssignmentsInsert](docs/licenseassignments/README.md#licensinglicenseassignmentsinsert) - Assign a license.
+* [licensingLicenseAssignmentsListForProduct](docs/licenseassignments/README.md#licensinglicenseassignmentslistforproduct) - List all users assigned licenses for a specific product SKU.
+* [licensingLicenseAssignmentsListForProductAndSku](docs/licenseassignments/README.md#licensinglicenseassignmentslistforproductandsku) - List all users assigned licenses for a specific product SKU.
+* [licensingLicenseAssignmentsPatch](docs/licenseassignments/README.md#licensinglicenseassignmentspatch) - Reassign a user's product SKU with a different SKU in the same product. This method supports patch semantics.
+* [licensingLicenseAssignmentsUpdate](docs/licenseassignments/README.md#licensinglicenseassignmentsupdate) - Reassign a user's product SKU with a different SKU in the same product.
 <!-- End SDK Available Operations -->
 
 ### Maturity

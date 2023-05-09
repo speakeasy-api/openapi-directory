@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CrashesGetAppCrashesInfo200ApplicationJSON {
     @JsonProperty("features")
     public CrashesGetAppCrashesInfo200ApplicationJSONFeatures features;
+
     public CrashesGetAppCrashesInfo200ApplicationJSON withFeatures(CrashesGetAppCrashesInfo200ApplicationJSONFeatures features) {
         this.features = features;
         return this;
@@ -19,9 +20,14 @@ public class CrashesGetAppCrashesInfo200ApplicationJSON {
     
     @JsonProperty("has_crashes")
     public Boolean hasCrashes;
+
     public CrashesGetAppCrashesInfo200ApplicationJSON withHasCrashes(Boolean hasCrashes) {
         this.hasCrashes = hasCrashes;
         return this;
     }
     
+    public CrashesGetAppCrashesInfo200ApplicationJSON(@JsonProperty("features") CrashesGetAppCrashesInfo200ApplicationJSONFeatures features, @JsonProperty("has_crashes") Boolean hasCrashes) {
+        this.features = features;
+        this.hasCrashes = hasCrashes;
+  }
 }

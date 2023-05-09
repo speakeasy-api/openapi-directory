@@ -12,6 +12,7 @@ public class ListResolverEndpointIpAddressesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListResolverEndpointIpAddressesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListResolverEndpointIpAddressesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResolverEndpointIpAddressesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListResolverEndpointIpAddressesRequest {
     
     @JsonProperty("ResolverEndpointId")
     public String resolverEndpointId;
+
     public ListResolverEndpointIpAddressesRequest withResolverEndpointId(String resolverEndpointId) {
         this.resolverEndpointId = resolverEndpointId;
         return this;
     }
     
+    public ListResolverEndpointIpAddressesRequest(@JsonProperty("ResolverEndpointId") String resolverEndpointId) {
+        this.resolverEndpointId = resolverEndpointId;
+  }
 }

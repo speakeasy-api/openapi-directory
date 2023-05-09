@@ -18,6 +18,7 @@ public class OSPolicyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exec")
     public OSPolicyResourceExecResource exec;
+
     public OSPolicyResource withExec(OSPolicyResourceExecResource exec) {
         this.exec = exec;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public OSPolicyResourceFileResource file;
+
     public OSPolicyResource withFile(OSPolicyResourceFileResource file) {
         this.file = file;
         return this;
@@ -40,6 +42,7 @@ public class OSPolicyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OSPolicyResource withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class OSPolicyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pkg")
     public OSPolicyResourcePackageResource pkg;
+
     public OSPolicyResource withPkg(OSPolicyResourcePackageResource pkg) {
         this.pkg = pkg;
         return this;
@@ -62,9 +66,11 @@ public class OSPolicyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public OSPolicyResourceRepositoryResource repository;
+
     public OSPolicyResource withRepository(OSPolicyResourceRepositoryResource repository) {
         this.repository = repository;
         return this;
     }
     
+    public OSPolicyResource(){}
 }

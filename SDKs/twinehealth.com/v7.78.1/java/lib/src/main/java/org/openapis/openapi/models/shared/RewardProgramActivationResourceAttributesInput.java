@@ -14,6 +14,7 @@ public class RewardProgramActivationResourceAttributesInput {
      */
     @JsonProperty("activated_at")
     public String activatedAt;
+
     public RewardProgramActivationResourceAttributesInput withActivatedAt(String activatedAt) {
         this.activatedAt = activatedAt;
         return this;
@@ -25,6 +26,7 @@ public class RewardProgramActivationResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public RewardProgramActivationResourceAttributesInput withActive(Boolean active) {
         this.active = active;
         return this;
@@ -36,9 +38,13 @@ public class RewardProgramActivationResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deactivated_at")
     public String deactivatedAt;
+
     public RewardProgramActivationResourceAttributesInput withDeactivatedAt(String deactivatedAt) {
         this.deactivatedAt = deactivatedAt;
         return this;
     }
     
+    public RewardProgramActivationResourceAttributesInput(@JsonProperty("activated_at") String activatedAt) {
+        this.activatedAt = activatedAt;
+  }
 }

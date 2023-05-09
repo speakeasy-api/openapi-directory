@@ -18,6 +18,7 @@ public class ListCourseWorkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courseWork")
     public CourseWork[] courseWork;
+
     public ListCourseWorkResponse withCourseWork(CourseWork[] courseWork) {
         this.courseWork = courseWork;
         return this;
@@ -29,9 +30,11 @@ public class ListCourseWorkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCourseWorkResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCourseWorkResponse(){}
 }

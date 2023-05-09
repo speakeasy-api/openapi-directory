@@ -15,6 +15,7 @@ public class DataLocationResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public DataLocationResource withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -22,9 +23,13 @@ public class DataLocationResource {
     
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public DataLocationResource withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public DataLocationResource(@JsonProperty("ResourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

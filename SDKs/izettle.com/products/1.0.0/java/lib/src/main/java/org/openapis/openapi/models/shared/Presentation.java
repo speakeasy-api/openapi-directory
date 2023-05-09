@@ -12,6 +12,7 @@ public class Presentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalImageUrls")
     public String[] additionalImageUrls;
+
     public Presentation withAdditionalImageUrls(String[] additionalImageUrls) {
         this.additionalImageUrls = additionalImageUrls;
         return this;
@@ -20,6 +21,7 @@ public class Presentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayImageUrl")
     public String displayImageUrl;
+
     public Presentation withDisplayImageUrl(String displayImageUrl) {
         this.displayImageUrl = displayImageUrl;
         return this;
@@ -28,9 +30,11 @@ public class Presentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaUrls")
     public String[] mediaUrls;
+
     public Presentation withMediaUrls(String[] mediaUrls) {
         this.mediaUrls = mediaUrls;
         return this;
     }
     
+    public Presentation(){}
 }

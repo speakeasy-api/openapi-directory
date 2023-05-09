@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListOrganizationInsightsResponse {
@@ -12,6 +13,7 @@ public class ListOrganizationInsightsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListOrganizationInsightsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListOrganizationInsightsResponse {
     
     
     public String contentType;
+
     public ListOrganizationInsightsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListOrganizationInsightsResponse {
      */
     
     public Object internalServerException;
+
     public ListOrganizationInsightsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListOrganizationInsightsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListOrganizationInsightsResponse listOrganizationInsightsResponse;
+
     public ListOrganizationInsightsResponse withListOrganizationInsightsResponse(org.openapis.openapi.models.shared.ListOrganizationInsightsResponse listOrganizationInsightsResponse) {
         this.listOrganizationInsightsResponse = listOrganizationInsightsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListOrganizationInsightsResponse {
     
     
     public Integer statusCode;
+
     public ListOrganizationInsightsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListOrganizationInsightsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListOrganizationInsightsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListOrganizationInsightsResponse {
      */
     
     public Object throttlingException;
+
     public ListOrganizationInsightsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListOrganizationInsightsResponse {
      */
     
     public Object validationException;
+
     public ListOrganizationInsightsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListOrganizationInsightsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class SnapshotLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManualSnapshotsCurrentCount")
     public Long manualSnapshotsCurrentCount;
+
     public SnapshotLimits withManualSnapshotsCurrentCount(Long manualSnapshotsCurrentCount) {
         this.manualSnapshotsCurrentCount = manualSnapshotsCurrentCount;
         return this;
@@ -23,6 +24,7 @@ public class SnapshotLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManualSnapshotsLimit")
     public Long manualSnapshotsLimit;
+
     public SnapshotLimits withManualSnapshotsLimit(Long manualSnapshotsLimit) {
         this.manualSnapshotsLimit = manualSnapshotsLimit;
         return this;
@@ -31,9 +33,11 @@ public class SnapshotLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManualSnapshotsLimitReached")
     public Boolean manualSnapshotsLimitReached;
+
     public SnapshotLimits withManualSnapshotsLimitReached(Boolean manualSnapshotsLimitReached) {
         this.manualSnapshotsLimitReached = manualSnapshotsLimitReached;
         return this;
     }
     
+    public SnapshotLimits(){}
 }

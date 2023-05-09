@@ -18,9 +18,11 @@ public class ListWorkerPoolsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerPools")
     public WorkerPool[] workerPools;
+
     public ListWorkerPoolsResponse withWorkerPools(WorkerPool[] workerPools) {
         this.workerPools = workerPools;
         return this;
     }
     
+    public ListWorkerPoolsResponse(){}
 }

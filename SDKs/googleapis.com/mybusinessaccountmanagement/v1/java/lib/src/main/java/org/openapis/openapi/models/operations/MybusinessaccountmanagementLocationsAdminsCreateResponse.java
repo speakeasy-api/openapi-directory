@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MybusinessaccountmanagementLocationsAdminsCreateResponse {
@@ -12,6 +13,7 @@ public class MybusinessaccountmanagementLocationsAdminsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.Admin admin;
+
     public MybusinessaccountmanagementLocationsAdminsCreateResponse withAdmin(org.openapis.openapi.models.shared.Admin admin) {
         this.admin = admin;
         return this;
@@ -19,6 +21,7 @@ public class MybusinessaccountmanagementLocationsAdminsCreateResponse {
     
     
     public String contentType;
+
     public MybusinessaccountmanagementLocationsAdminsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class MybusinessaccountmanagementLocationsAdminsCreateResponse {
     
     
     public Integer statusCode;
+
     public MybusinessaccountmanagementLocationsAdminsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MybusinessaccountmanagementLocationsAdminsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MybusinessaccountmanagementLocationsAdminsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MybusinessaccountmanagementLocationsAdminsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class InputLambdaProcessorUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARNUpdate")
     public String resourceARNUpdate;
+
     public InputLambdaProcessorUpdate withResourceARNUpdate(String resourceARNUpdate) {
         this.resourceARNUpdate = resourceARNUpdate;
         return this;
@@ -23,9 +24,11 @@ public class InputLambdaProcessorUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARNUpdate")
     public String roleARNUpdate;
+
     public InputLambdaProcessorUpdate withRoleARNUpdate(String roleARNUpdate) {
         this.roleARNUpdate = roleARNUpdate;
         return this;
     }
     
+    public InputLambdaProcessorUpdate(){}
 }

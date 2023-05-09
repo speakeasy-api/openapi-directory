@@ -23,6 +23,7 @@ public class OBAccount6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Account")
     public OBCashAccount5[] account;
+
     public OBAccount6 withAccount(OBCashAccount5[] account) {
         this.account = account;
         return this;
@@ -33,6 +34,7 @@ public class OBAccount6 {
      */
     @JsonProperty("AccountId")
     public String accountId;
+
     public OBAccount6 withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -40,6 +42,7 @@ public class OBAccount6 {
     
     @JsonProperty("AccountSubType")
     public OBExternalAccountSubType1CodeEnum accountSubType;
+
     public OBAccount6 withAccountSubType(OBExternalAccountSubType1CodeEnum accountSubType) {
         this.accountSubType = accountSubType;
         return this;
@@ -47,6 +50,7 @@ public class OBAccount6 {
     
     @JsonProperty("AccountType")
     public OBExternalAccountType1CodeEnum accountType;
+
     public OBAccount6 withAccountType(OBExternalAccountType1CodeEnum accountType) {
         this.accountType = accountType;
         return this;
@@ -57,6 +61,7 @@ public class OBAccount6 {
      */
     @JsonProperty("Currency")
     public String currency;
+
     public OBAccount6 withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -68,6 +73,7 @@ public class OBAccount6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public OBAccount6 withDescription(String description) {
         this.description = description;
         return this;
@@ -79,6 +85,7 @@ public class OBAccount6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Nickname")
     public String nickname;
+
     public OBAccount6 withNickname(String nickname) {
         this.nickname = nickname;
         return this;
@@ -92,6 +99,7 @@ public class OBAccount6 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("OpeningDate")
     public OffsetDateTime openingDate;
+
     public OBAccount6 withOpeningDate(OffsetDateTime openingDate) {
         this.openingDate = openingDate;
         return this;
@@ -100,9 +108,16 @@ public class OBAccount6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Servicer")
     public OBBranchAndFinancialInstitutionIdentification5 servicer;
+
     public OBAccount6 withServicer(OBBranchAndFinancialInstitutionIdentification5 servicer) {
         this.servicer = servicer;
         return this;
     }
     
+    public OBAccount6(@JsonProperty("AccountId") String accountId, @JsonProperty("AccountSubType") OBExternalAccountSubType1CodeEnum accountSubType, @JsonProperty("AccountType") OBExternalAccountType1CodeEnum accountType, @JsonProperty("Currency") String currency) {
+        this.accountId = accountId;
+        this.accountSubType = accountSubType;
+        this.accountType = accountType;
+        this.currency = currency;
+  }
 }

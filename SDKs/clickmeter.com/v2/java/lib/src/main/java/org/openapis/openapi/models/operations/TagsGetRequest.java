@@ -12,6 +12,7 @@ public class TagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=datapoints")
     public String datapoints;
+
     public TagsGetRequest withDatapoints(String datapoints) {
         this.datapoints = datapoints;
         return this;
@@ -22,6 +23,7 @@ public class TagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groups")
     public String groups;
+
     public TagsGetRequest withGroups(String groups) {
         this.groups = groups;
         return this;
@@ -32,6 +34,7 @@ public class TagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public TagsGetRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +45,7 @@ public class TagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public TagsGetRequest withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +56,7 @@ public class TagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public TagsGetRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -62,9 +67,11 @@ public class TagsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public TagsGetTypeEnum type;
+
     public TagsGetRequest withType(TagsGetTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TagsGetRequest(){}
 }

@@ -12,9 +12,13 @@ public class BatchUpdateCustomVocabularyItemRequestBody {
      */
     @JsonProperty("customVocabularyItemList")
     public org.openapis.openapi.models.shared.CustomVocabularyItem[] customVocabularyItemList;
+
     public BatchUpdateCustomVocabularyItemRequestBody withCustomVocabularyItemList(org.openapis.openapi.models.shared.CustomVocabularyItem[] customVocabularyItemList) {
         this.customVocabularyItemList = customVocabularyItemList;
         return this;
     }
     
+    public BatchUpdateCustomVocabularyItemRequestBody(@JsonProperty("customVocabularyItemList") org.openapis.openapi.models.shared.CustomVocabularyItem[] customVocabularyItemList) {
+        this.customVocabularyItemList = customVocabularyItemList;
+  }
 }

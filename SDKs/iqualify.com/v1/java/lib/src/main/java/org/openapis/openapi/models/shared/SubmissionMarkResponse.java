@@ -17,6 +17,7 @@ public class SubmissionMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentId")
     public String assessmentId;
+
     public SubmissionMarkResponse withAssessmentId(String assessmentId) {
         this.assessmentId = assessmentId;
         return this;
@@ -25,6 +26,7 @@ public class SubmissionMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentItemDetails")
     public String assessmentItemDetails;
+
     public SubmissionMarkResponse withAssessmentItemDetails(String assessmentItemDetails) {
         this.assessmentItemDetails = assessmentItemDetails;
         return this;
@@ -33,6 +35,7 @@ public class SubmissionMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentItemName")
     public String assessmentItemName;
+
     public SubmissionMarkResponse withAssessmentItemName(String assessmentItemName) {
         this.assessmentItemName = assessmentItemName;
         return this;
@@ -41,6 +44,7 @@ public class SubmissionMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courseName")
     public String courseName;
+
     public SubmissionMarkResponse withCourseName(String courseName) {
         this.courseName = courseName;
         return this;
@@ -49,6 +53,7 @@ public class SubmissionMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public Document[] files;
+
     public SubmissionMarkResponse withFiles(Document[] files) {
         this.files = files;
         return this;
@@ -57,6 +62,7 @@ public class SubmissionMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html")
     public String html;
+
     public SubmissionMarkResponse withHtml(String html) {
         this.html = html;
         return this;
@@ -65,6 +71,7 @@ public class SubmissionMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnerEmail")
     public String learnerEmail;
+
     public SubmissionMarkResponse withLearnerEmail(String learnerEmail) {
         this.learnerEmail = learnerEmail;
         return this;
@@ -73,6 +80,7 @@ public class SubmissionMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnerFirstName")
     public String learnerFirstName;
+
     public SubmissionMarkResponse withLearnerFirstName(String learnerFirstName) {
         this.learnerFirstName = learnerFirstName;
         return this;
@@ -81,6 +89,7 @@ public class SubmissionMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnerLastName")
     public String learnerLastName;
+
     public SubmissionMarkResponse withLearnerLastName(String learnerLastName) {
         this.learnerLastName = learnerLastName;
         return this;
@@ -89,6 +98,7 @@ public class SubmissionMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnerPersonId")
     public String learnerPersonId;
+
     public SubmissionMarkResponse withLearnerPersonId(String learnerPersonId) {
         this.learnerPersonId = learnerPersonId;
         return this;
@@ -97,6 +107,7 @@ public class SubmissionMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marks")
     public Mark[] marks;
+
     public SubmissionMarkResponse withMarks(Mark[] marks) {
         this.marks = marks;
         return this;
@@ -105,6 +116,7 @@ public class SubmissionMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public SubmissionMarkResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -115,9 +127,11 @@ public class SubmissionMarkResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("submissionDateTime")
     public OffsetDateTime submissionDateTime;
+
     public SubmissionMarkResponse withSubmissionDateTime(OffsetDateTime submissionDateTime) {
         this.submissionDateTime = submissionDateTime;
         return this;
     }
     
+    public SubmissionMarkResponse(){}
 }

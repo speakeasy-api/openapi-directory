@@ -18,6 +18,7 @@ public class CommitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public String transaction;
+
     public CommitRequest withTransaction(String transaction) {
         this.transaction = transaction;
         return this;
@@ -29,9 +30,11 @@ public class CommitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writes")
     public Write[] writes;
+
     public CommitRequest withWrites(Write[] writes) {
         this.writes = writes;
         return this;
     }
     
+    public CommitRequest(){}
 }

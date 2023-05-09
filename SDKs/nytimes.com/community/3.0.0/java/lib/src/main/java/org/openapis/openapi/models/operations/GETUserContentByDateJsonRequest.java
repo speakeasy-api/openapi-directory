@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETUserContentByDateJsonRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public GETUserContentByDateJsonRequest withDate(String date) {
         this.date = date;
         return this;
     }
     
+    public GETUserContentByDateJsonRequest(){}
 }

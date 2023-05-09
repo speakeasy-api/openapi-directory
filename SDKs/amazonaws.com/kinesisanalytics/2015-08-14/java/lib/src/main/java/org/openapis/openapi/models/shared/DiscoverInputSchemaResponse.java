@@ -15,6 +15,7 @@ public class DiscoverInputSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputSchema")
     public SourceSchema inputSchema;
+
     public DiscoverInputSchemaResponse withInputSchema(SourceSchema inputSchema) {
         this.inputSchema = inputSchema;
         return this;
@@ -23,6 +24,7 @@ public class DiscoverInputSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParsedInputRecords")
     public String[][] parsedInputRecords;
+
     public DiscoverInputSchemaResponse withParsedInputRecords(String[][] parsedInputRecords) {
         this.parsedInputRecords = parsedInputRecords;
         return this;
@@ -31,6 +33,7 @@ public class DiscoverInputSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessedInputRecords")
     public String[] processedInputRecords;
+
     public DiscoverInputSchemaResponse withProcessedInputRecords(String[] processedInputRecords) {
         this.processedInputRecords = processedInputRecords;
         return this;
@@ -39,9 +42,11 @@ public class DiscoverInputSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RawInputRecords")
     public String[] rawInputRecords;
+
     public DiscoverInputSchemaResponse withRawInputRecords(String[] rawInputRecords) {
         this.rawInputRecords = rawInputRecords;
         return this;
     }
     
+    public DiscoverInputSchemaResponse(){}
 }

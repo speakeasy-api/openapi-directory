@@ -12,6 +12,7 @@ public class SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configs")
     public String configs;
+
     public SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks withConfigs(String configs) {
         this.configs = configs;
         return this;
@@ -20,6 +21,7 @@ public class SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environments")
     public String environments;
+
     public SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks withEnvironments(String environments) {
         this.environments = environments;
         return this;
@@ -28,6 +30,7 @@ public class SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public String members;
+
     public SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks withMembers(String members) {
         this.members = members;
         return this;
@@ -36,6 +39,7 @@ public class SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission-groups")
     public String permissionGroups;
+
     public SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks withPermissionGroups(String permissionGroups) {
         this.permissionGroups = permissionGroups;
         return this;
@@ -44,6 +48,7 @@ public class SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segments")
     public String segments;
+
     public SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks withSegments(String segments) {
         this.segments = segments;
         return this;
@@ -52,6 +57,7 @@ public class SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks withSelf(String self) {
         this.self = self;
         return this;
@@ -60,9 +66,11 @@ public class SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String tags;
+
     public SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks withTags(String tags) {
         this.tags = tags;
         return this;
     }
     
+    public SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks(){}
 }

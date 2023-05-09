@@ -18,6 +18,7 @@ public class GeographicDivision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alsoKnownAs")
     public String[] alsoKnownAs;
+
     public GeographicDivision withAlsoKnownAs(String[] alsoKnownAs) {
         this.alsoKnownAs = alsoKnownAs;
         return this;
@@ -29,6 +30,7 @@ public class GeographicDivision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GeographicDivision withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GeographicDivision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("officeIndices")
     public Long[] officeIndices;
+
     public GeographicDivision withOfficeIndices(Long[] officeIndices) {
         this.officeIndices = officeIndices;
         return this;
     }
     
+    public GeographicDivision(){}
 }

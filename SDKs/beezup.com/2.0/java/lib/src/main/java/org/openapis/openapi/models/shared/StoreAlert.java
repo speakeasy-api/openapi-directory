@@ -14,6 +14,7 @@ public class StoreAlert {
      */
     @JsonProperty("alertId")
     public Integer alertId;
+
     public StoreAlert withAlertId(Integer alertId) {
         this.alertId = alertId;
         return this;
@@ -24,6 +25,7 @@ public class StoreAlert {
      */
     @JsonProperty("alertName")
     public String alertName;
+
     public StoreAlert withAlertName(String alertName) {
         this.alertName = alertName;
         return this;
@@ -34,6 +36,7 @@ public class StoreAlert {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public StoreAlert withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -44,6 +47,7 @@ public class StoreAlert {
      */
     @JsonProperty("links")
     public StoreAlertLinks links;
+
     public StoreAlert withLinks(StoreAlertLinks links) {
         this.links = links;
         return this;
@@ -55,9 +59,16 @@ public class StoreAlert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public StoreAlertPropertyInfo[] properties;
+
     public StoreAlert withProperties(StoreAlertPropertyInfo[] properties) {
         this.properties = properties;
         return this;
     }
     
+    public StoreAlert(@JsonProperty("alertId") Integer alertId, @JsonProperty("alertName") String alertName, @JsonProperty("enabled") Boolean enabled, @JsonProperty("links") StoreAlertLinks links) {
+        this.alertId = alertId;
+        this.alertName = alertName;
+        this.enabled = enabled;
+        this.links = links;
+  }
 }

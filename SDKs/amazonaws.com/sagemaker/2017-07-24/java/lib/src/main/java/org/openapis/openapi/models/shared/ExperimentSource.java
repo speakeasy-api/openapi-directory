@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExperimentSource {
     @JsonProperty("SourceArn")
     public String sourceArn;
+
     public ExperimentSource withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -22,9 +23,13 @@ public class ExperimentSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public String sourceType;
+
     public ExperimentSource withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public ExperimentSource(@JsonProperty("SourceArn") String sourceArn) {
+        this.sourceArn = sourceArn;
+  }
 }

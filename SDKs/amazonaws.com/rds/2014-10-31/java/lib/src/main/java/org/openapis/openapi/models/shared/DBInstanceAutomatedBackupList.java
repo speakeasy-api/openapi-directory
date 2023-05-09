@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DBInstanceAutomatedBackupList {
     
     public Long allocatedStorage;
+
     public DBInstanceAutomatedBackupList withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -19,6 +20,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String availabilityZone;
+
     public DBInstanceAutomatedBackupList withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public Long backupRetentionPeriod;
+
     public DBInstanceAutomatedBackupList withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -33,6 +36,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String backupTarget;
+
     public DBInstanceAutomatedBackupList withBackupTarget(String backupTarget) {
         this.backupTarget = backupTarget;
         return this;
@@ -40,6 +44,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String dbInstanceArn;
+
     public DBInstanceAutomatedBackupList withDBInstanceArn(String dbInstanceArn) {
         this.dbInstanceArn = dbInstanceArn;
         return this;
@@ -47,6 +52,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String dbInstanceAutomatedBackupsArn;
+
     public DBInstanceAutomatedBackupList withDBInstanceAutomatedBackupsArn(String dbInstanceAutomatedBackupsArn) {
         this.dbInstanceAutomatedBackupsArn = dbInstanceAutomatedBackupsArn;
         return this;
@@ -54,6 +60,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public DBInstanceAutomatedBackupsReplicationList[] dbInstanceAutomatedBackupsReplications;
+
     public DBInstanceAutomatedBackupList withDBInstanceAutomatedBackupsReplications(DBInstanceAutomatedBackupsReplicationList[] dbInstanceAutomatedBackupsReplications) {
         this.dbInstanceAutomatedBackupsReplications = dbInstanceAutomatedBackupsReplications;
         return this;
@@ -61,6 +68,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String dbInstanceIdentifier;
+
     public DBInstanceAutomatedBackupList withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -68,6 +76,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String dbiResourceId;
+
     public DBInstanceAutomatedBackupList withDbiResourceId(String dbiResourceId) {
         this.dbiResourceId = dbiResourceId;
         return this;
@@ -75,6 +84,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public Boolean encrypted;
+
     public DBInstanceAutomatedBackupList withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -82,6 +92,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String engine;
+
     public DBInstanceAutomatedBackupList withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -89,6 +100,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String engineVersion;
+
     public DBInstanceAutomatedBackupList withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -96,6 +108,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public Boolean iamDatabaseAuthenticationEnabled;
+
     public DBInstanceAutomatedBackupList withIAMDatabaseAuthenticationEnabled(Boolean iamDatabaseAuthenticationEnabled) {
         this.iamDatabaseAuthenticationEnabled = iamDatabaseAuthenticationEnabled;
         return this;
@@ -103,6 +116,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public OffsetDateTime instanceCreateTime;
+
     public DBInstanceAutomatedBackupList withInstanceCreateTime(OffsetDateTime instanceCreateTime) {
         this.instanceCreateTime = instanceCreateTime;
         return this;
@@ -110,6 +124,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public Long iops;
+
     public DBInstanceAutomatedBackupList withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -117,6 +132,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String kmsKeyId;
+
     public DBInstanceAutomatedBackupList withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -124,6 +140,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String licenseModel;
+
     public DBInstanceAutomatedBackupList withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -131,6 +148,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String masterUsername;
+
     public DBInstanceAutomatedBackupList withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -138,6 +156,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String optionGroupName;
+
     public DBInstanceAutomatedBackupList withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -145,6 +164,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public Long port;
+
     public DBInstanceAutomatedBackupList withPort(Long port) {
         this.port = port;
         return this;
@@ -152,6 +172,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String region;
+
     public DBInstanceAutomatedBackupList withRegion(String region) {
         this.region = region;
         return this;
@@ -159,6 +180,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public RestoreWindow restoreWindow;
+
     public DBInstanceAutomatedBackupList withRestoreWindow(RestoreWindow restoreWindow) {
         this.restoreWindow = restoreWindow;
         return this;
@@ -166,6 +188,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String status;
+
     public DBInstanceAutomatedBackupList withStatus(String status) {
         this.status = status;
         return this;
@@ -173,6 +196,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public Long storageThroughput;
+
     public DBInstanceAutomatedBackupList withStorageThroughput(Long storageThroughput) {
         this.storageThroughput = storageThroughput;
         return this;
@@ -180,6 +204,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String storageType;
+
     public DBInstanceAutomatedBackupList withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
@@ -187,6 +212,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String tdeCredentialArn;
+
     public DBInstanceAutomatedBackupList withTdeCredentialArn(String tdeCredentialArn) {
         this.tdeCredentialArn = tdeCredentialArn;
         return this;
@@ -194,6 +220,7 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String timezone;
+
     public DBInstanceAutomatedBackupList withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -201,9 +228,11 @@ public class DBInstanceAutomatedBackupList {
     
     
     public String vpcId;
+
     public DBInstanceAutomatedBackupList withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DBInstanceAutomatedBackupList(){}
 }

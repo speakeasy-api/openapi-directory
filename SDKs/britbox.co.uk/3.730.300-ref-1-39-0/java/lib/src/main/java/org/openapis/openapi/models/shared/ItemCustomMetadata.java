@@ -15,6 +15,7 @@ public class ItemCustomMetadata {
      */
     @JsonProperty("name")
     public String name;
+
     public ItemCustomMetadata withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,14 @@ public class ItemCustomMetadata {
      */
     @JsonProperty("value")
     public String value;
+
     public ItemCustomMetadata withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ItemCustomMetadata(@JsonProperty("name") String name, @JsonProperty("value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTrailResponse {
@@ -12,6 +13,7 @@ public class DeleteTrailResponse {
      */
     
     public Object cloudTrailARNInvalidException;
+
     public DeleteTrailResponse withCloudTrailARNInvalidException(Object cloudTrailARNInvalidException) {
         this.cloudTrailARNInvalidException = cloudTrailARNInvalidException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteTrailResponse {
      */
     
     public Object conflictException;
+
     public DeleteTrailResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTrailResponse {
     
     
     public String contentType;
+
     public DeleteTrailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTrailResponse {
      */
     
     public java.util.Map<String, Object> deleteTrailResponse;
+
     public DeleteTrailResponse withDeleteTrailResponse(java.util.Map<String, Object> deleteTrailResponse) {
         this.deleteTrailResponse = deleteTrailResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTrailResponse {
      */
     
     public Object insufficientDependencyServiceAccessPermissionException;
+
     public DeleteTrailResponse withInsufficientDependencyServiceAccessPermissionException(Object insufficientDependencyServiceAccessPermissionException) {
         this.insufficientDependencyServiceAccessPermissionException = insufficientDependencyServiceAccessPermissionException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteTrailResponse {
      */
     
     public Object invalidHomeRegionException;
+
     public DeleteTrailResponse withInvalidHomeRegionException(Object invalidHomeRegionException) {
         this.invalidHomeRegionException = invalidHomeRegionException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteTrailResponse {
      */
     
     public Object invalidTrailNameException;
+
     public DeleteTrailResponse withInvalidTrailNameException(Object invalidTrailNameException) {
         this.invalidTrailNameException = invalidTrailNameException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteTrailResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public DeleteTrailResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -89,6 +98,7 @@ public class DeleteTrailResponse {
      */
     
     public Object notOrganizationMasterAccountException;
+
     public DeleteTrailResponse withNotOrganizationMasterAccountException(Object notOrganizationMasterAccountException) {
         this.notOrganizationMasterAccountException = notOrganizationMasterAccountException;
         return this;
@@ -99,6 +109,7 @@ public class DeleteTrailResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DeleteTrailResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -106,6 +117,7 @@ public class DeleteTrailResponse {
     
     
     public Integer statusCode;
+
     public DeleteTrailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class DeleteTrailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTrailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class DeleteTrailResponse {
      */
     
     public Object trailNotFoundException;
+
     public DeleteTrailResponse withTrailNotFoundException(Object trailNotFoundException) {
         this.trailNotFoundException = trailNotFoundException;
         return this;
@@ -133,9 +147,14 @@ public class DeleteTrailResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DeleteTrailResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DeleteTrailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

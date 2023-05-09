@@ -18,6 +18,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UserTypeEnum type;
+
     public User withType(UserTypeEnum type) {
         this.type = type;
         return this;
@@ -29,9 +30,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public User withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public User(){}
 }

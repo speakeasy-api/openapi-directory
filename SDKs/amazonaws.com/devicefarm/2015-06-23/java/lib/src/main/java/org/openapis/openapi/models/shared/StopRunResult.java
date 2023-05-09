@@ -15,9 +15,11 @@ public class StopRunResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("run")
     public Run run;
+
     public StopRunResult withRun(Run run) {
         this.run = run;
         return this;
     }
     
+    public StopRunResult(){}
 }

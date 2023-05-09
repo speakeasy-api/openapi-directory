@@ -14,6 +14,7 @@ public class StartCutoverRequestBody {
      */
     @JsonProperty("sourceServerIDs")
     public String[] sourceServerIDs;
+
     public StartCutoverRequestBody withSourceServerIDs(String[] sourceServerIDs) {
         this.sourceServerIDs = sourceServerIDs;
         return this;
@@ -25,9 +26,13 @@ public class StartCutoverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StartCutoverRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartCutoverRequestBody(@JsonProperty("sourceServerIDs") String[] sourceServerIDs) {
+        this.sourceServerIDs = sourceServerIDs;
+  }
 }

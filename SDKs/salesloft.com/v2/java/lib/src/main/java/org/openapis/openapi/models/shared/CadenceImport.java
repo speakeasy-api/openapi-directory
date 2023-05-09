@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CadenceImport {
     
     public EmbeddedResource cadence;
+
     public CadenceImport withCadence(EmbeddedResource cadence) {
         this.cadence = cadence;
         return this;
     }
     
+    public CadenceImport(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetAssetPropertyAggregatesSuccessEntry {
     @JsonProperty("aggregatedValues")
     public AggregatedValue[] aggregatedValues;
+
     public BatchGetAssetPropertyAggregatesSuccessEntry withAggregatedValues(AggregatedValue[] aggregatedValues) {
         this.aggregatedValues = aggregatedValues;
         return this;
@@ -19,9 +20,14 @@ public class BatchGetAssetPropertyAggregatesSuccessEntry {
     
     @JsonProperty("entryId")
     public String entryId;
+
     public BatchGetAssetPropertyAggregatesSuccessEntry withEntryId(String entryId) {
         this.entryId = entryId;
         return this;
     }
     
+    public BatchGetAssetPropertyAggregatesSuccessEntry(@JsonProperty("aggregatedValues") AggregatedValue[] aggregatedValues, @JsonProperty("entryId") String entryId) {
+        this.aggregatedValues = aggregatedValues;
+        this.entryId = entryId;
+  }
 }

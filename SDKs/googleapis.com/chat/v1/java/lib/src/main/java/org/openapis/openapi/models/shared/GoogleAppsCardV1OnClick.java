@@ -18,6 +18,7 @@ public class GoogleAppsCardV1OnClick {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public GoogleAppsCardV1Action action;
+
     public GoogleAppsCardV1OnClick withAction(GoogleAppsCardV1Action action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCardV1OnClick {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public GoogleAppsCardV1Card card;
+
     public GoogleAppsCardV1OnClick withCard(GoogleAppsCardV1Card card) {
         this.card = card;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsCardV1OnClick {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openDynamicLinkAction")
     public GoogleAppsCardV1Action openDynamicLinkAction;
+
     public GoogleAppsCardV1OnClick withOpenDynamicLinkAction(GoogleAppsCardV1Action openDynamicLinkAction) {
         this.openDynamicLinkAction = openDynamicLinkAction;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAppsCardV1OnClick {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openLink")
     public GoogleAppsCardV1OpenLink openLink;
+
     public GoogleAppsCardV1OnClick withOpenLink(GoogleAppsCardV1OpenLink openLink) {
         this.openLink = openLink;
         return this;
     }
     
+    public GoogleAppsCardV1OnClick(){}
 }

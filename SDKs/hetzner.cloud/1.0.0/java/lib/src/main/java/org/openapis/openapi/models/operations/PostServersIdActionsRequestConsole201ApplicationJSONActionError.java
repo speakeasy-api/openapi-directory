@@ -15,6 +15,7 @@ public class PostServersIdActionsRequestConsole201ApplicationJSONActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostServersIdActionsRequestConsole201ApplicationJSONActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostServersIdActionsRequestConsole201ApplicationJSONActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostServersIdActionsRequestConsole201ApplicationJSONActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostServersIdActionsRequestConsole201ApplicationJSONActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

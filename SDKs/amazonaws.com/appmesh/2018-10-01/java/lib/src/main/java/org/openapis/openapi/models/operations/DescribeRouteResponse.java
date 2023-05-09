@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRouteResponse {
@@ -12,6 +13,7 @@ public class DescribeRouteResponse {
      */
     
     public Object badRequestException;
+
     public DescribeRouteResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRouteResponse {
     
     
     public String contentType;
+
     public DescribeRouteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRouteResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRouteOutput describeRouteOutput;
+
     public DescribeRouteResponse withDescribeRouteOutput(org.openapis.openapi.models.shared.DescribeRouteOutput describeRouteOutput) {
         this.describeRouteOutput = describeRouteOutput;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRouteResponse {
      */
     
     public Object forbiddenException;
+
     public DescribeRouteResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeRouteResponse {
      */
     
     public Object internalServerErrorException;
+
     public DescribeRouteResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeRouteResponse {
      */
     
     public Object notFoundException;
+
     public DescribeRouteResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeRouteResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeRouteResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeRouteResponse {
     
     
     public Integer statusCode;
+
     public DescribeRouteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribeRouteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRouteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DescribeRouteResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeRouteResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeRouteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

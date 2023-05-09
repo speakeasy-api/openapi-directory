@@ -18,6 +18,7 @@ public class ComputeNodeListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("odata.nextLink")
     public String odataNextLink;
+
     public ComputeNodeListResult withOdataNextLink(String odataNextLink) {
         this.odataNextLink = odataNextLink;
         return this;
@@ -29,9 +30,11 @@ public class ComputeNodeListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public ComputeNode[] value;
+
     public ComputeNodeListResult withValue(ComputeNode[] value) {
         this.value = value;
         return this;
     }
     
+    public ComputeNodeListResult(){}
 }

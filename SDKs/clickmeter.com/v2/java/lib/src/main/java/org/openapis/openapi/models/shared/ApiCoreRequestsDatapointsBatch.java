@@ -17,9 +17,11 @@ public class ApiCoreRequestsDatapointsBatch {
     @JsonProperty("List")
     @SpeakeasyMetadata("form:name=List,json")
     public ApiCoreDtoDatapointsDatapoint[] list;
+
     public ApiCoreRequestsDatapointsBatch withList(ApiCoreDtoDatapointsDatapoint[] list) {
         this.list = list;
         return this;
     }
     
+    public ApiCoreRequestsDatapointsBatch(){}
 }

@@ -52,10 +52,8 @@ public class MarkedEpisodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUserEpisodesEpisodeIdResponse res = new org.openapis.openapi.models.operations.DeleteUserEpisodesEpisodeIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteUserEpisodesEpisodeIdResponse res = new org.openapis.openapi.models.operations.DeleteUserEpisodesEpisodeIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -91,11 +89,9 @@ public class MarkedEpisodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserEpisodesResponse res = new org.openapis.openapi.models.operations.GetUserEpisodesResponse() {{
+        org.openapis.openapi.models.operations.GetUserEpisodesResponse res = new org.openapis.openapi.models.operations.GetUserEpisodesResponse(contentType, httpRes.statusCode()) {{
             markedEpisodes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,11 +126,9 @@ public class MarkedEpisodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserEpisodesEpisodeIdResponse res = new org.openapis.openapi.models.operations.GetUserEpisodesEpisodeIdResponse() {{
+        org.openapis.openapi.models.operations.GetUserEpisodesEpisodeIdResponse res = new org.openapis.openapi.models.operations.GetUserEpisodesEpisodeIdResponse(contentType, httpRes.statusCode()) {{
             markedEpisode = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,11 +168,9 @@ public class MarkedEpisodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutUserEpisodesEpisodeIdResponse res = new org.openapis.openapi.models.operations.PutUserEpisodesEpisodeIdResponse() {{
+        org.openapis.openapi.models.operations.PutUserEpisodesEpisodeIdResponse res = new org.openapis.openapi.models.operations.PutUserEpisodesEpisodeIdResponse(contentType, httpRes.statusCode()) {{
             markedEpisode = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

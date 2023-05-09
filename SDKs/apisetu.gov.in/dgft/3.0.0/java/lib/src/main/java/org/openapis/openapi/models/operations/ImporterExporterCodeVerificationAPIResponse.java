@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImporterExporterCodeVerificationAPIResponse {
     
     public String contentType;
+
     public ImporterExporterCodeVerificationAPIResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ImporterExporterCodeVerificationAPIResponse {
      */
     
     public ImporterExporterCodeVerificationAPI200ApplicationJSON importerExporterCodeVerificationAPI200ApplicationJSONObject;
+
     public ImporterExporterCodeVerificationAPIResponse withImporterExporterCodeVerificationAPI200ApplicationJSONObject(ImporterExporterCodeVerificationAPI200ApplicationJSON importerExporterCodeVerificationAPI200ApplicationJSONObject) {
         this.importerExporterCodeVerificationAPI200ApplicationJSONObject = importerExporterCodeVerificationAPI200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class ImporterExporterCodeVerificationAPIResponse {
      */
     
     public ImporterExporterCodeVerificationAPI400ApplicationJSON importerExporterCodeVerificationAPI400ApplicationJSONObject;
+
     public ImporterExporterCodeVerificationAPIResponse withImporterExporterCodeVerificationAPI400ApplicationJSONObject(ImporterExporterCodeVerificationAPI400ApplicationJSON importerExporterCodeVerificationAPI400ApplicationJSONObject) {
         this.importerExporterCodeVerificationAPI400ApplicationJSONObject = importerExporterCodeVerificationAPI400ApplicationJSONObject;
         return this;
@@ -39,6 +43,7 @@ public class ImporterExporterCodeVerificationAPIResponse {
      */
     
     public ImporterExporterCodeVerificationAPI401ApplicationJSON importerExporterCodeVerificationAPI401ApplicationJSONObject;
+
     public ImporterExporterCodeVerificationAPIResponse withImporterExporterCodeVerificationAPI401ApplicationJSONObject(ImporterExporterCodeVerificationAPI401ApplicationJSON importerExporterCodeVerificationAPI401ApplicationJSONObject) {
         this.importerExporterCodeVerificationAPI401ApplicationJSONObject = importerExporterCodeVerificationAPI401ApplicationJSONObject;
         return this;
@@ -49,6 +54,7 @@ public class ImporterExporterCodeVerificationAPIResponse {
      */
     
     public ImporterExporterCodeVerificationAPI404ApplicationJSON importerExporterCodeVerificationAPI404ApplicationJSONObject;
+
     public ImporterExporterCodeVerificationAPIResponse withImporterExporterCodeVerificationAPI404ApplicationJSONObject(ImporterExporterCodeVerificationAPI404ApplicationJSON importerExporterCodeVerificationAPI404ApplicationJSONObject) {
         this.importerExporterCodeVerificationAPI404ApplicationJSONObject = importerExporterCodeVerificationAPI404ApplicationJSONObject;
         return this;
@@ -59,6 +65,7 @@ public class ImporterExporterCodeVerificationAPIResponse {
      */
     
     public ImporterExporterCodeVerificationAPI500ApplicationJSON importerExporterCodeVerificationAPI500ApplicationJSONObject;
+
     public ImporterExporterCodeVerificationAPIResponse withImporterExporterCodeVerificationAPI500ApplicationJSONObject(ImporterExporterCodeVerificationAPI500ApplicationJSON importerExporterCodeVerificationAPI500ApplicationJSONObject) {
         this.importerExporterCodeVerificationAPI500ApplicationJSONObject = importerExporterCodeVerificationAPI500ApplicationJSONObject;
         return this;
@@ -69,6 +76,7 @@ public class ImporterExporterCodeVerificationAPIResponse {
      */
     
     public ImporterExporterCodeVerificationAPI502ApplicationJSON importerExporterCodeVerificationAPI502ApplicationJSONObject;
+
     public ImporterExporterCodeVerificationAPIResponse withImporterExporterCodeVerificationAPI502ApplicationJSONObject(ImporterExporterCodeVerificationAPI502ApplicationJSON importerExporterCodeVerificationAPI502ApplicationJSONObject) {
         this.importerExporterCodeVerificationAPI502ApplicationJSONObject = importerExporterCodeVerificationAPI502ApplicationJSONObject;
         return this;
@@ -79,6 +87,7 @@ public class ImporterExporterCodeVerificationAPIResponse {
      */
     
     public ImporterExporterCodeVerificationAPI503ApplicationJSON importerExporterCodeVerificationAPI503ApplicationJSONObject;
+
     public ImporterExporterCodeVerificationAPIResponse withImporterExporterCodeVerificationAPI503ApplicationJSONObject(ImporterExporterCodeVerificationAPI503ApplicationJSON importerExporterCodeVerificationAPI503ApplicationJSONObject) {
         this.importerExporterCodeVerificationAPI503ApplicationJSONObject = importerExporterCodeVerificationAPI503ApplicationJSONObject;
         return this;
@@ -89,6 +98,7 @@ public class ImporterExporterCodeVerificationAPIResponse {
      */
     
     public ImporterExporterCodeVerificationAPI504ApplicationJSON importerExporterCodeVerificationAPI504ApplicationJSONObject;
+
     public ImporterExporterCodeVerificationAPIResponse withImporterExporterCodeVerificationAPI504ApplicationJSONObject(ImporterExporterCodeVerificationAPI504ApplicationJSON importerExporterCodeVerificationAPI504ApplicationJSONObject) {
         this.importerExporterCodeVerificationAPI504ApplicationJSONObject = importerExporterCodeVerificationAPI504ApplicationJSONObject;
         return this;
@@ -96,6 +106,7 @@ public class ImporterExporterCodeVerificationAPIResponse {
     
     
     public Integer statusCode;
+
     public ImporterExporterCodeVerificationAPIResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class ImporterExporterCodeVerificationAPIResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImporterExporterCodeVerificationAPIResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ImporterExporterCodeVerificationAPIResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

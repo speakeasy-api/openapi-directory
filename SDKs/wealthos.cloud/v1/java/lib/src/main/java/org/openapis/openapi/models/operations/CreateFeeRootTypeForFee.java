@@ -15,6 +15,7 @@ public class CreateFeeRootTypeForFee {
      */
     @JsonProperty("currency")
     public String currency;
+
     public CreateFeeRootTypeForFee withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -25,6 +26,7 @@ public class CreateFeeRootTypeForFee {
      */
     @JsonProperty("pot_id")
     public String potId;
+
     public CreateFeeRootTypeForFee withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -35,6 +37,7 @@ public class CreateFeeRootTypeForFee {
      */
     @JsonProperty("request_id")
     public String requestId;
+
     public CreateFeeRootTypeForFee withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -45,6 +48,7 @@ public class CreateFeeRootTypeForFee {
      */
     @JsonProperty("sub_transaction_type")
     public CreateFeeRootTypeForFeeSubTransactionTypeEnum subTransactionType;
+
     public CreateFeeRootTypeForFee withSubTransactionType(CreateFeeRootTypeForFeeSubTransactionTypeEnum subTransactionType) {
         this.subTransactionType = subTransactionType;
         return this;
@@ -55,9 +59,17 @@ public class CreateFeeRootTypeForFee {
      */
     @JsonProperty("transaction_value")
     public String transactionValue;
+
     public CreateFeeRootTypeForFee withTransactionValue(String transactionValue) {
         this.transactionValue = transactionValue;
         return this;
     }
     
+    public CreateFeeRootTypeForFee(@JsonProperty("currency") String currency, @JsonProperty("pot_id") String potId, @JsonProperty("request_id") String requestId, @JsonProperty("sub_transaction_type") CreateFeeRootTypeForFeeSubTransactionTypeEnum subTransactionType, @JsonProperty("transaction_value") String transactionValue) {
+        this.currency = currency;
+        this.potId = potId;
+        this.requestId = requestId;
+        this.subTransactionType = subTransactionType;
+        this.transactionValue = transactionValue;
+  }
 }

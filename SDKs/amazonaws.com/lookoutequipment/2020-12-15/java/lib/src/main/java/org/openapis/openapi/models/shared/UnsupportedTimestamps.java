@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UnsupportedTimestamps {
     @JsonProperty("TotalNumberOfUnsupportedTimestamps")
     public Long totalNumberOfUnsupportedTimestamps;
+
     public UnsupportedTimestamps withTotalNumberOfUnsupportedTimestamps(Long totalNumberOfUnsupportedTimestamps) {
         this.totalNumberOfUnsupportedTimestamps = totalNumberOfUnsupportedTimestamps;
         return this;
     }
     
+    public UnsupportedTimestamps(@JsonProperty("TotalNumberOfUnsupportedTimestamps") Long totalNumberOfUnsupportedTimestamps) {
+        this.totalNumberOfUnsupportedTimestamps = totalNumberOfUnsupportedTimestamps;
+  }
 }

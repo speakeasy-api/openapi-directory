@@ -15,9 +15,11 @@ public class UpdateGraphqlApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("graphqlApi")
     public GraphqlApi graphqlApi;
+
     public UpdateGraphqlApiResponse withGraphqlApi(GraphqlApi graphqlApi) {
         this.graphqlApi = graphqlApi;
         return this;
     }
     
+    public UpdateGraphqlApiResponse(){}
 }

@@ -18,6 +18,7 @@ public class ProvinceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public ProvinceDTO withActive(Boolean active) {
         this.active = active;
         return this;
@@ -29,6 +30,7 @@ public class ProvinceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryId")
     public Long countryId;
+
     public ProvinceDTO withCountryId(Long countryId) {
         this.countryId = countryId;
         return this;
@@ -40,6 +42,7 @@ public class ProvinceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public Boolean default_;
+
     public ProvinceDTO withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -51,6 +54,7 @@ public class ProvinceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ProvinceDTO withId(Long id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class ProvinceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProvinceDTO withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class ProvinceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferred")
     public Boolean preferred;
+
     public ProvinceDTO withPreferred(Boolean preferred) {
         this.preferred = preferred;
         return this;
     }
     
+    public ProvinceDTO(){}
 }

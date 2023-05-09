@@ -17,6 +17,7 @@ public class SubmitTaskStateChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     public AttachmentStateChange[] attachments;
+
     public SubmitTaskStateChangeRequest withAttachments(AttachmentStateChange[] attachments) {
         this.attachments = attachments;
         return this;
@@ -25,6 +26,7 @@ public class SubmitTaskStateChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public SubmitTaskStateChangeRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -33,6 +35,7 @@ public class SubmitTaskStateChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public ContainerStateChange[] containers;
+
     public SubmitTaskStateChangeRequest withContainers(ContainerStateChange[] containers) {
         this.containers = containers;
         return this;
@@ -43,6 +46,7 @@ public class SubmitTaskStateChangeRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("executionStoppedAt")
     public OffsetDateTime executionStoppedAt;
+
     public SubmitTaskStateChangeRequest withExecutionStoppedAt(OffsetDateTime executionStoppedAt) {
         this.executionStoppedAt = executionStoppedAt;
         return this;
@@ -51,6 +55,7 @@ public class SubmitTaskStateChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedAgents")
     public ManagedAgentStateChange[] managedAgents;
+
     public SubmitTaskStateChangeRequest withManagedAgents(ManagedAgentStateChange[] managedAgents) {
         this.managedAgents = managedAgents;
         return this;
@@ -61,6 +66,7 @@ public class SubmitTaskStateChangeRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("pullStartedAt")
     public OffsetDateTime pullStartedAt;
+
     public SubmitTaskStateChangeRequest withPullStartedAt(OffsetDateTime pullStartedAt) {
         this.pullStartedAt = pullStartedAt;
         return this;
@@ -71,6 +77,7 @@ public class SubmitTaskStateChangeRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("pullStoppedAt")
     public OffsetDateTime pullStoppedAt;
+
     public SubmitTaskStateChangeRequest withPullStoppedAt(OffsetDateTime pullStoppedAt) {
         this.pullStoppedAt = pullStoppedAt;
         return this;
@@ -79,6 +86,7 @@ public class SubmitTaskStateChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public SubmitTaskStateChangeRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -87,6 +95,7 @@ public class SubmitTaskStateChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public SubmitTaskStateChangeRequest withStatus(String status) {
         this.status = status;
         return this;
@@ -95,9 +104,11 @@ public class SubmitTaskStateChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task")
     public String task;
+
     public SubmitTaskStateChangeRequest withTask(String task) {
         this.task = task;
         return this;
     }
     
+    public SubmitTaskStateChangeRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesResponse {
     
     public String contentType;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducer
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducer
     
     
     public Integer statusCode;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducer
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

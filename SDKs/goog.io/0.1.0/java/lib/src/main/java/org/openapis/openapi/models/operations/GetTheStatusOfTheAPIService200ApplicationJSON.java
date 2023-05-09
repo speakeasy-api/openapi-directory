@@ -15,9 +15,11 @@ public class GetTheStatusOfTheAPIService200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Boolean status;
+
     public GetTheStatusOfTheAPIService200ApplicationJSON withStatus(Boolean status) {
         this.status = status;
         return this;
     }
     
+    public GetTheStatusOfTheAPIService200ApplicationJSON(){}
 }

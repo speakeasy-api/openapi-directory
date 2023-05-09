@@ -15,6 +15,7 @@ public class Detail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Detail withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -26,6 +27,7 @@ public class Detail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Detail withId(String id) {
         this.id = id;
         return this;
@@ -37,9 +39,11 @@ public class Detail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public DetailScopeEnum scope;
+
     public Detail withScope(DetailScopeEnum scope) {
         this.scope = scope;
         return this;
     }
     
+    public Detail(){}
 }

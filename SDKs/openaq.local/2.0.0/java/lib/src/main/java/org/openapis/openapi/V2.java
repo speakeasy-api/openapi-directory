@@ -56,12 +56,10 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AveragesV2GetV2AveragesGetResponse res = new org.openapis.openapi.models.operations.AveragesV2GetV2AveragesGetResponse() {{
+        org.openapis.openapi.models.operations.AveragesV2GetV2AveragesGetResponse res = new org.openapis.openapi.models.operations.AveragesV2GetV2AveragesGetResponse(contentType, httpRes.statusCode()) {{
             openAQResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,12 +106,10 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CitiesGetV2CitiesGetResponse res = new org.openapis.openapi.models.operations.CitiesGetV2CitiesGetResponse() {{
+        org.openapis.openapi.models.operations.CitiesGetV2CitiesGetResponse res = new org.openapis.openapi.models.operations.CitiesGetV2CitiesGetResponse(contentType, httpRes.statusCode()) {{
             openAQCitiesResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,12 +156,10 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CountriesGetV2CountriesCountryIdGetResponse res = new org.openapis.openapi.models.operations.CountriesGetV2CountriesCountryIdGetResponse() {{
+        org.openapis.openapi.models.operations.CountriesGetV2CountriesCountryIdGetResponse res = new org.openapis.openapi.models.operations.CountriesGetV2CountriesCountryIdGetResponse(contentType, httpRes.statusCode()) {{
             openAQCountriesResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -212,12 +206,10 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CountriesGetV2CountriesGetResponse res = new org.openapis.openapi.models.operations.CountriesGetV2CountriesGetResponse() {{
+        org.openapis.openapi.models.operations.CountriesGetV2CountriesGetResponse res = new org.openapis.openapi.models.operations.CountriesGetV2CountriesGetResponse(contentType, httpRes.statusCode()) {{
             openAQCountriesResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -257,11 +249,9 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DemoV2LocationsTilesViewerGetResponse res = new org.openapis.openapi.models.operations.DemoV2LocationsTilesViewerGetResponse() {{
+        org.openapis.openapi.models.operations.DemoV2LocationsTilesViewerGetResponse res = new org.openapis.openapi.models.operations.DemoV2LocationsTilesViewerGetResponse(contentType, httpRes.statusCode()) {{
             demoV2LocationsTilesViewerGet200TextHTMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,11 +290,9 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetResponse res = new org.openapis.openapi.models.operations.GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetResponse() {{
+        org.openapis.openapi.models.operations.GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetResponse res = new org.openapis.openapi.models.operations.GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetResponse(contentType, httpRes.statusCode()) {{
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,11 +334,9 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse res = new org.openapis.openapi.models.operations.GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse() {{
+        org.openapis.openapi.models.operations.GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse res = new org.openapis.openapi.models.operations.GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse(contentType, httpRes.statusCode()) {{
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTileV2LocationsTilesZXYPbfGetResponse res = new org.openapis.openapi.models.operations.GetTileV2LocationsTilesZXYPbfGetResponse() {{
+        org.openapis.openapi.models.operations.GetTileV2LocationsTilesZXYPbfGetResponse res = new org.openapis.openapi.models.operations.GetTileV2LocationsTilesZXYPbfGetResponse(contentType, httpRes.statusCode()) {{
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,12 +422,10 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LatestGetV2LatestLocationIdGetResponse res = new org.openapis.openapi.models.operations.LatestGetV2LatestLocationIdGetResponse() {{
+        org.openapis.openapi.models.operations.LatestGetV2LatestLocationIdGetResponse res = new org.openapis.openapi.models.operations.LatestGetV2LatestLocationIdGetResponse(contentType, httpRes.statusCode()) {{
             openAQResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -490,12 +472,10 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LatestGetV2LatestGetResponse res = new org.openapis.openapi.models.operations.LatestGetV2LatestGetResponse() {{
+        org.openapis.openapi.models.operations.LatestGetV2LatestGetResponse res = new org.openapis.openapi.models.operations.LatestGetV2LatestGetResponse(contentType, httpRes.statusCode()) {{
             openAQResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -542,12 +522,10 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LocationsGetV2LocationsLocationIdGetResponse res = new org.openapis.openapi.models.operations.LocationsGetV2LocationsLocationIdGetResponse() {{
+        org.openapis.openapi.models.operations.LocationsGetV2LocationsLocationIdGetResponse res = new org.openapis.openapi.models.operations.LocationsGetV2LocationsLocationIdGetResponse(contentType, httpRes.statusCode()) {{
             openAQResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -594,12 +572,10 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LocationsGetV2LocationsGetResponse res = new org.openapis.openapi.models.operations.LocationsGetV2LocationsGetResponse() {{
+        org.openapis.openapi.models.operations.LocationsGetV2LocationsGetResponse res = new org.openapis.openapi.models.operations.LocationsGetV2LocationsGetResponse(contentType, httpRes.statusCode()) {{
             openAQResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -646,12 +622,10 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MeasurementsGetV2MeasurementsGetResponse res = new org.openapis.openapi.models.operations.MeasurementsGetV2MeasurementsGetResponse() {{
+        org.openapis.openapi.models.operations.MeasurementsGetV2MeasurementsGetResponse res = new org.openapis.openapi.models.operations.MeasurementsGetV2MeasurementsGetResponse(contentType, httpRes.statusCode()) {{
             measurementsGetV2MeasurementsGet200ApplicationJSONAny = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -691,11 +665,9 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MfrGetV2ManufacturersGetResponse res = new org.openapis.openapi.models.operations.MfrGetV2ManufacturersGetResponse() {{
+        org.openapis.openapi.models.operations.MfrGetV2ManufacturersGetResponse res = new org.openapis.openapi.models.operations.MfrGetV2ManufacturersGetResponse(contentType, httpRes.statusCode()) {{
             openAQResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -728,11 +700,9 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MobilegentilejsonV2LocationsTilesMobileGeneralizedTilesJsonGetResponse res = new org.openapis.openapi.models.operations.MobilegentilejsonV2LocationsTilesMobileGeneralizedTilesJsonGetResponse() {{
+        org.openapis.openapi.models.operations.MobilegentilejsonV2LocationsTilesMobileGeneralizedTilesJsonGetResponse res = new org.openapis.openapi.models.operations.MobilegentilejsonV2LocationsTilesMobileGeneralizedTilesJsonGetResponse(contentType, httpRes.statusCode()) {{
             tileJSON = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -765,11 +735,9 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MobiletilejsonV2LocationsTilesMobileTilesJsonGetResponse res = new org.openapis.openapi.models.operations.MobiletilejsonV2LocationsTilesMobileTilesJsonGetResponse() {{
+        org.openapis.openapi.models.operations.MobiletilejsonV2LocationsTilesMobileTilesJsonGetResponse res = new org.openapis.openapi.models.operations.MobiletilejsonV2LocationsTilesMobileTilesJsonGetResponse(contentType, httpRes.statusCode()) {{
             tileJSON = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -802,11 +770,9 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ModelGetV2ModelsGetResponse res = new org.openapis.openapi.models.operations.ModelGetV2ModelsGetResponse() {{
+        org.openapis.openapi.models.operations.ModelGetV2ModelsGetResponse res = new org.openapis.openapi.models.operations.ModelGetV2ModelsGetResponse(contentType, httpRes.statusCode()) {{
             openAQResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -846,12 +812,10 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ParametersGetV2ParametersGetResponse res = new org.openapis.openapi.models.operations.ParametersGetV2ParametersGetResponse() {{
+        org.openapis.openapi.models.operations.ParametersGetV2ParametersGetResponse res = new org.openapis.openapi.models.operations.ParametersGetV2ParametersGetResponse(contentType, httpRes.statusCode()) {{
             openAQParametersResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -898,12 +862,10 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProjectsGetV2ProjectsProjectIdGetResponse res = new org.openapis.openapi.models.operations.ProjectsGetV2ProjectsProjectIdGetResponse() {{
+        org.openapis.openapi.models.operations.ProjectsGetV2ProjectsProjectIdGetResponse res = new org.openapis.openapi.models.operations.ProjectsGetV2ProjectsProjectIdGetResponse(contentType, httpRes.statusCode()) {{
             openAQProjectsResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -950,12 +912,10 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProjectsGetV2ProjectsGetResponse res = new org.openapis.openapi.models.operations.ProjectsGetV2ProjectsGetResponse() {{
+        org.openapis.openapi.models.operations.ProjectsGetV2ProjectsGetResponse res = new org.openapis.openapi.models.operations.ProjectsGetV2ProjectsGetResponse(contentType, httpRes.statusCode()) {{
             openAQProjectsResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -996,12 +956,10 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReadmeGetV2SourcesReadmeSlugGetResponse res = new org.openapis.openapi.models.operations.ReadmeGetV2SourcesReadmeSlugGetResponse() {{
+        org.openapis.openapi.models.operations.ReadmeGetV2SourcesReadmeSlugGetResponse res = new org.openapis.openapi.models.operations.ReadmeGetV2SourcesReadmeSlugGetResponse(contentType, httpRes.statusCode()) {{
             readmeGetV2SourcesReadmeSlugGet200ApplicationJSONAny = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1048,12 +1006,10 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SourcesGetV2SourcesGetResponse res = new org.openapis.openapi.models.operations.SourcesGetV2SourcesGetResponse() {{
+        org.openapis.openapi.models.operations.SourcesGetV2SourcesGetResponse res = new org.openapis.openapi.models.operations.SourcesGetV2SourcesGetResponse(contentType, httpRes.statusCode()) {{
             openAQResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1093,11 +1049,9 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SummaryGetV2SummaryGetResponse res = new org.openapis.openapi.models.operations.SummaryGetV2SummaryGetResponse() {{
+        org.openapis.openapi.models.operations.SummaryGetV2SummaryGetResponse res = new org.openapis.openapi.models.operations.SummaryGetV2SummaryGetResponse(contentType, httpRes.statusCode()) {{
             openAQResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1130,11 +1084,9 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TilejsonV2LocationsTilesTilesJsonGetResponse res = new org.openapis.openapi.models.operations.TilejsonV2LocationsTilesTilesJsonGetResponse() {{
+        org.openapis.openapi.models.operations.TilejsonV2LocationsTilesTilesJsonGetResponse res = new org.openapis.openapi.models.operations.TilejsonV2LocationsTilesTilesJsonGetResponse(contentType, httpRes.statusCode()) {{
             tileJSON = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

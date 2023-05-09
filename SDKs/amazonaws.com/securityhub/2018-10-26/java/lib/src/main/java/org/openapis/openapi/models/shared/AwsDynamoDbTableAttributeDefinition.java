@@ -15,6 +15,7 @@ public class AwsDynamoDbTableAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public AwsDynamoDbTableAttributeDefinition withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -23,9 +24,11 @@ public class AwsDynamoDbTableAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeType")
     public String attributeType;
+
     public AwsDynamoDbTableAttributeDefinition withAttributeType(String attributeType) {
         this.attributeType = attributeType;
         return this;
     }
     
+    public AwsDynamoDbTableAttributeDefinition(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1ProcessorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDocumentaiV1ProcessorVersion withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1ProcessorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecationInfo")
     public GoogleCloudDocumentaiV1ProcessorVersionDeprecationInfo deprecationInfo;
+
     public GoogleCloudDocumentaiV1ProcessorVersion withDeprecationInfo(GoogleCloudDocumentaiV1ProcessorVersionDeprecationInfo deprecationInfo) {
         this.deprecationInfo = deprecationInfo;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1ProcessorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDocumentaiV1ProcessorVersion withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1ProcessorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentSchema")
     public GoogleCloudDocumentaiV1DocumentSchema documentSchema;
+
     public GoogleCloudDocumentaiV1ProcessorVersion withDocumentSchema(GoogleCloudDocumentaiV1DocumentSchema documentSchema) {
         this.documentSchema = documentSchema;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDocumentaiV1ProcessorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleManaged")
     public Boolean googleManaged;
+
     public GoogleCloudDocumentaiV1ProcessorVersion withGoogleManaged(Boolean googleManaged) {
         this.googleManaged = googleManaged;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDocumentaiV1ProcessorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public GoogleCloudDocumentaiV1ProcessorVersion withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDocumentaiV1ProcessorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyVersionName")
     public String kmsKeyVersionName;
+
     public GoogleCloudDocumentaiV1ProcessorVersion withKmsKeyVersionName(String kmsKeyVersionName) {
         this.kmsKeyVersionName = kmsKeyVersionName;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDocumentaiV1ProcessorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestEvaluation")
     public GoogleCloudDocumentaiV1EvaluationReference latestEvaluation;
+
     public GoogleCloudDocumentaiV1ProcessorVersion withLatestEvaluation(GoogleCloudDocumentaiV1EvaluationReference latestEvaluation) {
         this.latestEvaluation = latestEvaluation;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDocumentaiV1ProcessorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDocumentaiV1ProcessorVersion withName(String name) {
         this.name = name;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudDocumentaiV1ProcessorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDocumentaiV1ProcessorVersionStateEnum state;
+
     public GoogleCloudDocumentaiV1ProcessorVersion withState(GoogleCloudDocumentaiV1ProcessorVersionStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1ProcessorVersion(){}
 }

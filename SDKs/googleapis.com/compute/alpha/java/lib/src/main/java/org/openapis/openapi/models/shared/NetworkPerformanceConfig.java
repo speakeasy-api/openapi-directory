@@ -12,6 +12,7 @@ public class NetworkPerformanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIpEgressBandwidthTier")
     public NetworkPerformanceConfigExternalIpEgressBandwidthTierEnum externalIpEgressBandwidthTier;
+
     public NetworkPerformanceConfig withExternalIpEgressBandwidthTier(NetworkPerformanceConfigExternalIpEgressBandwidthTierEnum externalIpEgressBandwidthTier) {
         this.externalIpEgressBandwidthTier = externalIpEgressBandwidthTier;
         return this;
@@ -20,9 +21,11 @@ public class NetworkPerformanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalEgressBandwidthTier")
     public NetworkPerformanceConfigTotalEgressBandwidthTierEnum totalEgressBandwidthTier;
+
     public NetworkPerformanceConfig withTotalEgressBandwidthTier(NetworkPerformanceConfigTotalEgressBandwidthTierEnum totalEgressBandwidthTier) {
         this.totalEgressBandwidthTier = totalEgressBandwidthTier;
         return this;
     }
     
+    public NetworkPerformanceConfig(){}
 }

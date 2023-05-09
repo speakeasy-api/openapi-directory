@@ -15,6 +15,7 @@ public class ListForecastsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Forecasts")
     public ForecastSummary[] forecasts;
+
     public ListForecastsResponse withForecasts(ForecastSummary[] forecasts) {
         this.forecasts = forecasts;
         return this;
@@ -23,9 +24,11 @@ public class ListForecastsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListForecastsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListForecastsResponse(){}
 }

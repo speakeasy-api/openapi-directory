@@ -17,6 +17,7 @@ public class ReportExchangeRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contractIdentification")
     public String contractIdentification;
+
     public ReportExchangeRate withContractIdentification(String contractIdentification) {
         this.contractIdentification = contractIdentification;
         return this;
@@ -24,6 +25,7 @@ public class ReportExchangeRate {
     
     @JsonProperty("exchangeRate")
     public String exchangeRate;
+
     public ReportExchangeRate withExchangeRate(String exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -32,6 +34,7 @@ public class ReportExchangeRate {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("quotationDate")
     public LocalDate quotationDate;
+
     public ReportExchangeRate withQuotationDate(LocalDate quotationDate) {
         this.quotationDate = quotationDate;
         return this;
@@ -43,6 +46,7 @@ public class ReportExchangeRate {
      */
     @JsonProperty("sourceCurrency")
     public String sourceCurrency;
+
     public ReportExchangeRate withSourceCurrency(String sourceCurrency) {
         this.sourceCurrency = sourceCurrency;
         return this;
@@ -54,6 +58,7 @@ public class ReportExchangeRate {
      */
     @JsonProperty("targetCurrency")
     public String targetCurrency;
+
     public ReportExchangeRate withTargetCurrency(String targetCurrency) {
         this.targetCurrency = targetCurrency;
         return this;
@@ -61,9 +66,17 @@ public class ReportExchangeRate {
     
     @JsonProperty("unitCurrency")
     public String unitCurrency;
+
     public ReportExchangeRate withUnitCurrency(String unitCurrency) {
         this.unitCurrency = unitCurrency;
         return this;
     }
     
+    public ReportExchangeRate(@JsonProperty("exchangeRate") String exchangeRate, @JsonProperty("quotationDate") LocalDate quotationDate, @JsonProperty("sourceCurrency") String sourceCurrency, @JsonProperty("targetCurrency") String targetCurrency, @JsonProperty("unitCurrency") String unitCurrency) {
+        this.exchangeRate = exchangeRate;
+        this.quotationDate = quotationDate;
+        this.sourceCurrency = sourceCurrency;
+        this.targetCurrency = targetCurrency;
+        this.unitCurrency = unitCurrency;
+  }
 }

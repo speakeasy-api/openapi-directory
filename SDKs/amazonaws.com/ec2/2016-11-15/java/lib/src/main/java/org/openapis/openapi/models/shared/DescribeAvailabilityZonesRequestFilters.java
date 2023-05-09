@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAvailabilityZonesRequestFilters {
     
     public String name;
+
     public DescribeAvailabilityZonesRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeAvailabilityZonesRequestFilters {
     
     
     public String[] values;
+
     public DescribeAvailabilityZonesRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeAvailabilityZonesRequestFilters(){}
 }

@@ -15,6 +15,7 @@ public class ComponentChild {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("children")
     public ComponentChild[] children;
+
     public ComponentChild withChildren(ComponentChild[] children) {
         this.children = children;
         return this;
@@ -22,6 +23,7 @@ public class ComponentChild {
     
     @JsonProperty("componentType")
     public String componentType;
+
     public ComponentChild withComponentType(String componentType) {
         this.componentType = componentType;
         return this;
@@ -30,6 +32,7 @@ public class ComponentChild {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public java.util.Map<String, ComponentEvent> events;
+
     public ComponentChild withEvents(java.util.Map<String, ComponentEvent> events) {
         this.events = events;
         return this;
@@ -37,6 +40,7 @@ public class ComponentChild {
     
     @JsonProperty("name")
     public String name;
+
     public ComponentChild withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class ComponentChild {
      */
     @JsonProperty("properties")
     public Object properties;
+
     public ComponentChild withProperties(Object properties) {
         this.properties = properties;
         return this;
@@ -55,9 +60,15 @@ public class ComponentChild {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceId")
     public String sourceId;
+
     public ComponentChild withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
     }
     
+    public ComponentChild(@JsonProperty("componentType") String componentType, @JsonProperty("name") String name, @JsonProperty("properties") Object properties) {
+        this.componentType = componentType;
+        this.name = name;
+        this.properties = properties;
+  }
 }

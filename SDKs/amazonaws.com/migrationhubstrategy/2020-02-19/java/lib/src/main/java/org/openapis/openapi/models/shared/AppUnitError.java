@@ -15,9 +15,11 @@ public class AppUnitError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appUnitErrorCategory")
     public AppUnitErrorCategoryEnum appUnitErrorCategory;
+
     public AppUnitError withAppUnitErrorCategory(AppUnitErrorCategoryEnum appUnitErrorCategory) {
         this.appUnitErrorCategory = appUnitErrorCategory;
         return this;
     }
     
+    public AppUnitError(){}
 }

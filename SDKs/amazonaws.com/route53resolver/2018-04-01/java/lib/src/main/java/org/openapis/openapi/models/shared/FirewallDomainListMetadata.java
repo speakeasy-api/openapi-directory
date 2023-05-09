@@ -15,6 +15,7 @@ public class FirewallDomainListMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public FirewallDomainListMetadata withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class FirewallDomainListMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public FirewallDomainListMetadata withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -31,6 +33,7 @@ public class FirewallDomainListMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public FirewallDomainListMetadata withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class FirewallDomainListMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManagedOwnerName")
     public String managedOwnerName;
+
     public FirewallDomainListMetadata withManagedOwnerName(String managedOwnerName) {
         this.managedOwnerName = managedOwnerName;
         return this;
@@ -47,9 +51,11 @@ public class FirewallDomainListMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public FirewallDomainListMetadata withName(String name) {
         this.name = name;
         return this;
     }
     
+    public FirewallDomainListMetadata(){}
 }

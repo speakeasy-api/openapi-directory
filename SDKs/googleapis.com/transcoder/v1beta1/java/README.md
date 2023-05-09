@@ -16,51 +16,50 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateSecurity;
 import org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateRequest;
 import org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateResponse;
-import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.JobTemplate;
-import org.openapis.openapi.models.shared.JobConfig;
-import org.openapis.openapi.models.shared.SpriteSheet;
-import org.openapis.openapi.models.shared.PubsubDestination;
-import org.openapis.openapi.models.shared.Overlay;
-import org.openapis.openapi.models.shared.Image;
-import org.openapis.openapi.models.shared.NormalizedCoordinate;
-import org.openapis.openapi.models.shared.Animation;
-import org.openapis.openapi.models.shared.AnimationStatic;
-import org.openapis.openapi.models.shared.AnimationFadeFadeTypeEnum;
-import org.openapis.openapi.models.shared.AnimationFade;
-import org.openapis.openapi.models.shared.AnimationEnd;
-import org.openapis.openapi.models.shared.Output;
-import org.openapis.openapi.models.shared.MuxStream;
-import org.openapis.openapi.models.shared.SegmentSettings;
-import org.openapis.openapi.models.shared.Encryption;
-import org.openapis.openapi.models.shared.SampleAesEncryption;
-import org.openapis.openapi.models.shared.MpegCommonEncryption;
+import org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateSecurity;
+import org.openapis.openapi.models.shared.AdBreak;
 import org.openapis.openapi.models.shared.Aes128Encryption;
-import org.openapis.openapi.models.shared.ManifestTypeEnum;
-import org.openapis.openapi.models.shared.Manifest;
-import org.openapis.openapi.models.shared.Input;
-import org.openapis.openapi.models.shared.PreprocessingConfig;
-import org.openapis.openapi.models.shared.Pad;
-import org.openapis.openapi.models.shared.Denoise;
-import org.openapis.openapi.models.shared.Deblock;
-import org.openapis.openapi.models.shared.Crop;
-import org.openapis.openapi.models.shared.Color;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.Animation;
+import org.openapis.openapi.models.shared.AnimationEnd;
+import org.openapis.openapi.models.shared.AnimationFade;
+import org.openapis.openapi.models.shared.AnimationFadeFadeTypeEnum;
+import org.openapis.openapi.models.shared.AnimationStatic;
 import org.openapis.openapi.models.shared.Audio;
-import org.openapis.openapi.models.shared.ElementaryStream;
-import org.openapis.openapi.models.shared.VideoStream;
-import org.openapis.openapi.models.shared.TextStream;
-import org.openapis.openapi.models.shared.TextAtom;
-import org.openapis.openapi.models.shared.TextInput;
-import org.openapis.openapi.models.shared.AudioStream;
 import org.openapis.openapi.models.shared.AudioAtom;
 import org.openapis.openapi.models.shared.AudioChannel;
 import org.openapis.openapi.models.shared.AudioChannelInput;
+import org.openapis.openapi.models.shared.AudioStream;
+import org.openapis.openapi.models.shared.Color;
+import org.openapis.openapi.models.shared.Crop;
+import org.openapis.openapi.models.shared.Deblock;
+import org.openapis.openapi.models.shared.Denoise;
 import org.openapis.openapi.models.shared.EditAtom;
-import org.openapis.openapi.models.shared.AdBreak;
+import org.openapis.openapi.models.shared.ElementaryStream;
+import org.openapis.openapi.models.shared.Encryption;
+import org.openapis.openapi.models.shared.Image;
+import org.openapis.openapi.models.shared.Input;
+import org.openapis.openapi.models.shared.JobConfig;
+import org.openapis.openapi.models.shared.JobTemplate;
+import org.openapis.openapi.models.shared.Manifest;
+import org.openapis.openapi.models.shared.ManifestTypeEnum;
+import org.openapis.openapi.models.shared.MpegCommonEncryption;
+import org.openapis.openapi.models.shared.MuxStream;
+import org.openapis.openapi.models.shared.NormalizedCoordinate;
+import org.openapis.openapi.models.shared.Output;
+import org.openapis.openapi.models.shared.Overlay;
+import org.openapis.openapi.models.shared.Pad;
+import org.openapis.openapi.models.shared.PreprocessingConfig;
+import org.openapis.openapi.models.shared.PubsubDestination;
+import org.openapis.openapi.models.shared.SampleAesEncryption;
+import org.openapis.openapi.models.shared.SegmentSettings;
+import org.openapis.openapi.models.shared.SpriteSheet;
+import org.openapis.openapi.models.shared.TextAtom;
+import org.openapis.openapi.models.shared.TextInput;
+import org.openapis.openapi.models.shared.TextStream;
+import org.openapis.openapi.models.shared.VideoStream;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -69,724 +68,919 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            TranscoderProjectsLocationsJobTemplatesCreateRequest req = new TranscoderProjectsLocationsJobTemplatesCreateRequest() {{
-                dollarXgafv = "2";
+            TranscoderProjectsLocationsJobTemplatesCreateRequest req = new TranscoderProjectsLocationsJobTemplatesCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 jobTemplate = new JobTemplate() {{
                     config = new JobConfig() {{
                         adBreaks = new org.openapis.openapi.models.shared.AdBreak[]{{
-                            add(new AdBreak() {{
-                                startTimeOffset = "distinctio";
-                            }}),
                             add(new AdBreak() {{
                                 startTimeOffset = "quibusdam";
                             }}),
                             add(new AdBreak() {{
                                 startTimeOffset = "unde";
                             }}),
+                            add(new AdBreak() {{
+                                startTimeOffset = "nulla";
+                            }}),
                         }};
                         editList = new org.openapis.openapi.models.shared.EditAtom[]{{
                             add(new EditAtom() {{
-                                endTimeOffset = "corrupti";
+                                endTimeOffset = "illum";
                                 inputs = new String[]{{
-                                    add("vel"),
                                     add("error"),
                                     add("deserunt"),
+                                }};
+                                key = "suscipit";
+                                startTimeOffset = "iure";
+                            }}),
+                            add(new EditAtom() {{
+                                endTimeOffset = "magnam";
+                                inputs = new String[]{{
+                                    add("ipsa"),
+                                    add("delectus"),
+                                    add("tempora"),
                                     add("suscipit"),
                                 }};
-                                key = "iure";
-                                startTimeOffset = "magnam";
+                                key = "molestiae";
+                                startTimeOffset = "minus";
                             }}),
                             add(new EditAtom() {{
-                                endTimeOffset = "debitis";
+                                endTimeOffset = "placeat";
                                 inputs = new String[]{{
-                                    add("delectus"),
-                                }};
-                                key = "tempora";
-                                startTimeOffset = "suscipit";
-                            }}),
-                            add(new EditAtom() {{
-                                endTimeOffset = "molestiae";
-                                inputs = new String[]{{
-                                    add("placeat"),
-                                    add("voluptatum"),
                                     add("iusto"),
                                     add("excepturi"),
+                                    add("nisi"),
                                 }};
-                                key = "nisi";
-                                startTimeOffset = "recusandae";
-                            }}),
-                            add(new EditAtom() {{
-                                endTimeOffset = "temporibus";
-                                inputs = new String[]{{
-                                    add("quis"),
-                                }};
-                                key = "veritatis";
-                                startTimeOffset = "deserunt";
+                                key = "recusandae";
+                                startTimeOffset = "temporibus";
                             }}),
                         }};
                         elementaryStreams = new org.openapis.openapi.models.shared.ElementaryStream[]{{
                             add(new ElementaryStream() {{
                                 audioStream = new AudioStream() {{
-                                    bitrateBps = 368241;
-                                    channelCount = 832620;
+                                    bitrateBps = 337396;
+                                    channelCount = 87129;
                                     channelLayout = new String[]{{
-                                        add("quo"),
-                                        add("odit"),
-                                        add("at"),
-                                        add("at"),
+                                        add("perferendis"),
+                                        add("ipsam"),
+                                        add("repellendus"),
                                     }};
-                                    codec = "maiores";
+                                    codec = "sapiente";
                                     mapping = new org.openapis.openapi.models.shared.AudioAtom[]{{
                                         add(new AudioAtom() {{
                                             channels = new org.openapis.openapi.models.shared.AudioChannel[]{{
                                                 add(new AudioChannel() {{
                                                     inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
                                                         add(new AudioChannelInput() {{
-                                                            channel = 461479;
-                                                            gainDb = 5204.78;
-                                                            key = "porro";
-                                                            track = 678880;
+                                                            channel = 870088;
+                                                            gainDb = 9786.19;
+                                                            key = "molestiae";
+                                                            track = 799159;
                                                         }}),
                                                         add(new AudioChannelInput() {{
-                                                            channel = 118274;
-                                                            gainDb = 7206.33;
-                                                            key = "officia";
-                                                            track = 582020;
+                                                            channel = 800911;
+                                                            gainDb = 4614.79;
+                                                            key = "totam";
+                                                            track = 780529;
                                                         }}),
                                                         add(new AudioChannelInput() {{
-                                                            channel = 143353;
-                                                            gainDb = 5373.73;
-                                                            key = "hic";
-                                                            track = 758616;
+                                                            channel = 678880;
+                                                            gainDb = 1182.74;
+                                                            key = "nam";
+                                                            track = 639921;
                                                         }}),
                                                         add(new AudioChannelInput() {{
-                                                            channel = 521848;
-                                                            gainDb = 1059.07;
-                                                            key = "commodi";
-                                                            track = 473600;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 186332;
-                                                            gainDb = 7742.34;
-                                                            key = "cum";
-                                                            track = 456150;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 216550;
-                                                            gainDb = 5684.34;
-                                                            key = "aspernatur";
-                                                            track = 18789;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 617636;
-                                                            gainDb = 1496.75;
-                                                            key = "iste";
-                                                            track = 222321;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 616934;
-                                                            gainDb = 3864.89;
-                                                            key = "hic";
-                                                            track = 902599;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 449950;
-                                                            gainDb = 3595.08;
-                                                            key = "iste";
-                                                            track = 437032;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 902349;
-                                                            gainDb = 6976.31;
-                                                            key = "architecto";
-                                                            track = 60225;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 969810;
-                                                            gainDb = 6667.67;
-                                                            key = "mollitia";
-                                                            track = 670638;
+                                                            channel = 582020;
+                                                            gainDb = 1433.53;
+                                                            key = "deleniti";
+                                                            track = 944669;
                                                         }}),
                                                     }};
                                                 }}),
                                             }};
-                                            key = "dolores";
+                                            key = "optio";
                                         }}),
                                         add(new AudioAtom() {{
                                             channels = new org.openapis.openapi.models.shared.AudioChannel[]{{
                                                 add(new AudioChannel() {{
                                                     inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
                                                         add(new AudioChannelInput() {{
-                                                            channel = 128926;
-                                                            gainDb = 7506.86;
-                                                            key = "enim";
-                                                            track = 607831;
+                                                            channel = 414662;
+                                                            gainDb = 4736;
+                                                            key = "modi";
+                                                            track = 186332;
+                                                        }}),
+                                                    }};
+                                                }}),
+                                                add(new AudioChannel() {{
+                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 736918;
+                                                            gainDb = 4561.5;
+                                                            key = "ipsum";
+                                                            track = 568434;
                                                         }}),
                                                         add(new AudioChannelInput() {{
-                                                            channel = 363711;
-                                                            gainDb = 3250.47;
-                                                            key = "excepturi";
-                                                            track = 38425;
+                                                            channel = 135218;
+                                                            gainDb = 187.89;
+                                                            key = "ad";
+                                                            track = 617636;
+                                                        }}),
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 149675;
+                                                            gainDb = 6120.96;
+                                                            key = "dolor";
+                                                            track = 616934;
+                                                        }}),
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 386489;
+                                                            gainDb = 9437.49;
+                                                            key = "saepe";
+                                                            track = 681820;
+                                                        }}),
+                                                    }};
+                                                }}),
+                                                add(new AudioChannel() {{
+                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 359508;
+                                                            gainDb = 6130.64;
+                                                            key = "iure";
+                                                            track = 902349;
+                                                        }}),
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 697631;
+                                                            gainDb = 992.8;
+                                                            key = "ipsa";
+                                                            track = 969810;
                                                         }}),
                                                     }};
                                                 }}),
                                             }};
-                                            key = "iure";
+                                            key = "est";
+                                        }}),
+                                        add(new AudioAtom() {{
+                                            channels = new org.openapis.openapi.models.shared.AudioChannel[]{{
+                                                add(new AudioChannel() {{
+                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 170909;
+                                                            gainDb = 2103.82;
+                                                            key = "corporis";
+                                                            track = 128926;
+                                                        }}),
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 750686;
+                                                            gainDb = 3154.28;
+                                                            key = "omnis";
+                                                            track = 363711;
+                                                        }}),
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 325047;
+                                                            gainDb = 5701.97;
+                                                            key = "accusantium";
+                                                            track = 438601;
+                                                        }}),
+                                                    }};
+                                                }}),
+                                                add(new AudioChannel() {{
+                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 988374;
+                                                            gainDb = 9589.5;
+                                                            key = "architecto";
+                                                            track = 652790;
+                                                        }}),
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 208876;
+                                                            gainDb = 6350.59;
+                                                            key = "consequuntur";
+                                                            track = 995300;
+                                                        }}),
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 653108;
+                                                            gainDb = 5818.5;
+                                                            key = "numquam";
+                                                            track = 414369;
+                                                        }}),
+                                                    }};
+                                                }}),
+                                                add(new AudioChannel() {{
+                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 474697;
+                                                            gainDb = 2444.25;
+                                                            key = "error";
+                                                            track = 158969;
+                                                        }}),
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 338007;
+                                                            gainDb = 1103.75;
+                                                            key = "laborum";
+                                                            track = 656330;
+                                                        }}),
+                                                    }};
+                                                }}),
+                                            }};
+                                            key = "enim";
+                                        }}),
+                                        add(new AudioAtom() {{
+                                            channels = new org.openapis.openapi.models.shared.AudioChannel[]{{
+                                                add(new AudioChannel() {{
+                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 196582;
+                                                            gainDb = 9495.72;
+                                                            key = "ipsam";
+                                                            track = 662527;
+                                                        }}),
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 820994;
+                                                            gainDb = 135.71;
+                                                            key = "quasi";
+                                                            track = 622846;
+                                                        }}),
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 837945;
+                                                            gainDb = 6736.6;
+                                                            key = "quasi";
+                                                            track = 971945;
+                                                        }}),
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 976460;
+                                                            gainDb = 8781.94;
+                                                            key = "nihil";
+                                                            track = 509624;
+                                                        }}),
+                                                    }};
+                                                }}),
+                                            }};
+                                            key = "voluptatibus";
                                         }}),
                                     }};
-                                    sampleRateHertz = 634274;
+                                    sampleRateHertz = 55714;
                                 }};
-                                key = "doloribus";
+                                key = "omnis";
                                 textStream = new TextStream() {{
-                                    codec = "sapiente";
-                                    languageCode = "architecto";
+                                    codec = "voluptate";
+                                    languageCode = "cum";
                                     mapping = new org.openapis.openapi.models.shared.TextAtom[]{{
                                         add(new TextAtom() {{
                                             inputs = new org.openapis.openapi.models.shared.TextInput[]{{
                                                 add(new TextInput() {{
-                                                    key = "culpa";
-                                                    track = 161309;
+                                                    key = "reprehenderit";
+                                                    track = 282807;
                                                 }}),
                                             }};
-                                            key = "repellat";
-                                        }}),
-                                        add(new TextAtom() {{
-                                            inputs = new org.openapis.openapi.models.shared.TextInput[]{{
-                                                add(new TextInput() {{
-                                                    key = "occaecati";
-                                                    track = 253291;
-                                                }}),
-                                                add(new TextInput() {{
-                                                    key = "commodi";
-                                                    track = 466311;
-                                                }}),
-                                                add(new TextInput() {{
-                                                    key = "molestiae";
-                                                    track = 244425;
-                                                }}),
-                                            }};
-                                            key = "error";
-                                        }}),
-                                        add(new TextAtom() {{
-                                            inputs = new org.openapis.openapi.models.shared.TextInput[]{{
-                                                add(new TextInput() {{
-                                                    key = "quis";
-                                                    track = 110375;
-                                                }}),
-                                            }};
-                                            key = "laborum";
+                                            key = "maiores";
                                         }}),
                                     }};
                                 }};
                                 videoStream = new VideoStream() {{
                                     allowOpenGop = false;
-                                    aqStrength = 6563.3;
-                                    bFrameCount = 317202;
+                                    aqStrength = 1201.96;
+                                    bFrameCount = 359444;
                                     bPyramid = false;
-                                    bitrateBps = 138183;
-                                    codec = "quo";
-                                    crfLevel = 196582;
+                                    bitrateBps = 296140;
+                                    codec = "iusto";
+                                    crfLevel = 118727;
                                     enableTwoPass = false;
-                                    entropyCoder = "tenetur";
-                                    frameRate = 3687.25;
-                                    gopDuration = "id";
-                                    gopFrameCount = 820994;
-                                    heightPixels = 13571;
-                                    pixelFormat = "quasi";
-                                    preset = "error";
-                                    profile = "temporibus";
-                                    rateControlMode = "laborum";
-                                    tune = "quasi";
-                                    vbvFullnessBits = 971945;
-                                    vbvSizeBits = 976460;
-                                    widthPixels = 878194;
+                                    entropyCoder = "harum";
+                                    frameRate = 3179.83;
+                                    gopDuration = "accusamus";
+                                    gopFrameCount = 414263;
+                                    heightPixels = 918236;
+                                    pixelFormat = "quae";
+                                    preset = "ipsum";
+                                    profile = "quidem";
+                                    rateControlMode = "molestias";
+                                    tune = "excepturi";
+                                    vbvFullnessBits = 865103;
+                                    vbvSizeBits = 265389;
+                                    widthPixels = 508969;
                                 }};
                             }}),
                         }};
                         inputs = new org.openapis.openapi.models.shared.Input[]{{
                             add(new Input() {{
-                                key = "praesentium";
+                                key = "voluptates";
                                 preprocessingConfig = new PreprocessingConfig() {{
                                     audio = new Audio() {{
                                         highBoost = false;
                                         lowBoost = false;
-                                        lufs = 9767.62;
+                                        lufs = 939.4;
                                     }};
                                     color = new Color() {{
-                                        brightness = 557.14;
-                                        contrast = 6048.46;
-                                        saturation = 4511.59;
+                                        brightness = 9211.58;
+                                        contrast = 5759.47;
+                                        saturation = 831.12;
                                     }};
                                     crop = new Crop() {{
-                                        bottomPixels = 739264;
-                                        leftPixels = 19987;
-                                        rightPixels = 39187;
-                                        topPixels = 441711;
+                                        bottomPixels = 929297;
+                                        leftPixels = 277718;
+                                        rightPixels = 318569;
+                                        topPixels = 9356;
                                     }};
                                     deblock = new Deblock() {{
                                         enabled = false;
-                                        strength = 2828.07;
+                                        strength = 6674.11;
                                     }};
                                     denoise = new Denoise() {{
-                                        strength = 9795.87;
-                                        tune = "dicta";
+                                        strength = 8423.42;
+                                        tune = "explicabo";
                                     }};
                                     pad = new Pad() {{
-                                        bottomPixels = 359444;
-                                        leftPixels = 296140;
-                                        rightPixels = 480894;
-                                        topPixels = 118727;
+                                        bottomPixels = 647174;
+                                        leftPixels = 716327;
+                                        rightPixels = 841386;
+                                        topPixels = 289406;
                                     }};
                                 }};
-                                uri = "https://frugal-sympathy.info";
+                                uri = "http://delightful-graph.name";
                             }}),
                             add(new Input() {{
-                                key = "repudiandae";
+                                key = "quos";
                                 preprocessingConfig = new PreprocessingConfig() {{
                                     audio = new Audio() {{
                                         highBoost = false;
                                         lowBoost = false;
-                                        lufs = 641.47;
+                                        lufs = 201.07;
                                     }};
                                     color = new Color() {{
-                                        brightness = 2168.22;
-                                        contrast = 6924.72;
-                                        saturation = 5651.89;
+                                        brightness = 1649.4;
+                                        contrast = 8289.4;
+                                        saturation = 3698.08;
                                     }};
                                     crop = new Crop() {{
-                                        bottomPixels = 566602;
-                                        leftPixels = 865103;
-                                        rightPixels = 265389;
-                                        topPixels = 508969;
+                                        bottomPixels = 4695;
+                                        leftPixels = 146441;
+                                        rightPixels = 677817;
+                                        topPixels = 569618;
                                     }};
                                     deblock = new Deblock() {{
                                         enabled = false;
-                                        strength = 5232.48;
+                                        strength = 2700.08;
                                     }};
                                     denoise = new Denoise() {{
-                                        strength = 9167.23;
-                                        tune = "quasi";
+                                        strength = 7037.37;
+                                        tune = "tempore";
                                     }};
                                     pad = new Pad() {{
-                                        bottomPixels = 921158;
-                                        leftPixels = 575947;
-                                        rightPixels = 83112;
-                                        topPixels = 929297;
+                                        bottomPixels = 288476;
+                                        leftPixels = 962189;
+                                        rightPixels = 433288;
+                                        topPixels = 248753;
                                     }};
                                 }};
-                                uri = "http://fruitful-adjective.net";
+                                uri = "https://novel-grandfather.name";
+                            }}),
+                            add(new Input() {{
+                                key = "necessitatibus";
+                                preprocessingConfig = new PreprocessingConfig() {{
+                                    audio = new Audio() {{
+                                        highBoost = false;
+                                        lowBoost = false;
+                                        lufs = 5722.52;
+                                    }};
+                                    color = new Color() {{
+                                        brightness = 6389.21;
+                                        contrast = 2230.81;
+                                        saturation = 8915.55;
+                                    }};
+                                    crop = new Crop() {{
+                                        bottomPixels = 952749;
+                                        leftPixels = 680056;
+                                        rightPixels = 447125;
+                                        topPixels = 449198;
+                                    }};
+                                    deblock = new Deblock() {{
+                                        enabled = false;
+                                        strength = 8464.09;
+                                    }};
+                                    denoise = new Denoise() {{
+                                        strength = 9785.71;
+                                        tune = "rerum";
+                                    }};
+                                    pad = new Pad() {{
+                                        bottomPixels = 116202;
+                                        leftPixels = 297437;
+                                        rightPixels = 767024;
+                                        topPixels = 813798;
+                                    }};
+                                }};
+                                uri = "http://humming-police.org";
                             }}),
                         }};
                         manifests = new org.openapis.openapi.models.shared.Manifest[]{{
                             add(new Manifest() {{
-                                fileName = "explicabo";
+                                fileName = "occaecati";
                                 muxStreams = new String[]{{
-                                    add("distinctio"),
-                                    add("quibusdam"),
-                                    add("labore"),
-                                }};
-                                type = "MANIFEST_TYPE_UNSPECIFIED";
-                            }}),
-                            add(new Manifest() {{
-                                fileName = "qui";
-                                muxStreams = new String[]{{
-                                    add("cupiditate"),
-                                    add("quos"),
-                                }};
-                                type = "MANIFEST_TYPE_UNSPECIFIED";
-                            }}),
-                            add(new Manifest() {{
-                                fileName = "magni";
-                                muxStreams = new String[]{{
-                                    add("ipsam"),
-                                    add("alias"),
-                                    add("fugit"),
-                                    add("dolorum"),
-                                }};
-                                type = "HLS";
-                            }}),
-                            add(new Manifest() {{
-                                fileName = "tempora";
-                                muxStreams = new String[]{{
-                                    add("tempore"),
-                                    add("labore"),
+                                    add("accusamus"),
                                     add("delectus"),
                                 }};
-                                type = "HLS";
+                                type = ManifestTypeEnum.DASH;
                             }}),
                         }};
                         muxStreams = new org.openapis.openapi.models.shared.MuxStream[]{{
                             add(new MuxStream() {{
-                                container = "eligendi";
+                                container = "nam";
                                 elementaryStreams = new String[]{{
-                                    add("aliquid"),
+                                    add("blanditiis"),
+                                    add("deleniti"),
+                                    add("sapiente"),
+                                }};
+                                encryption = new Encryption() {{
+                                    aes128 = new Aes128Encryption() {{
+                                        keyUri = "amet";
+                                    }};
+                                    iv = "deserunt";
+                                    key = "nisi";
+                                    mpegCenc = new MpegCommonEncryption() {{
+                                        keyId = "vel";
+                                        scheme = "natus";
+                                    }};
+                                    sampleAes = new SampleAesEncryption() {{
+                                        keyUri = "omnis";
+                                    }};
+                                }};
+                                fileName = "molestiae";
+                                key = "perferendis";
+                                segmentSettings = new SegmentSettings() {{
+                                    individualSegments = false;
+                                    segmentDuration = "nihil";
+                                }};
+                            }}),
+                            add(new MuxStream() {{
+                                container = "magnam";
+                                elementaryStreams = new String[]{{
+                                    add("id"),
+                                    add("labore"),
+                                    add("labore"),
+                                }};
+                                encryption = new Encryption() {{
+                                    aes128 = new Aes128Encryption() {{
+                                        keyUri = "suscipit";
+                                    }};
+                                    iv = "natus";
+                                    key = "nobis";
+                                    mpegCenc = new MpegCommonEncryption() {{
+                                        keyId = "eum";
+                                        scheme = "vero";
+                                    }};
+                                    sampleAes = new SampleAesEncryption() {{
+                                        keyUri = "aspernatur";
+                                    }};
+                                }};
+                                fileName = "architecto";
+                                key = "magnam";
+                                segmentSettings = new SegmentSettings() {{
+                                    individualSegments = false;
+                                    segmentDuration = "et";
+                                }};
+                            }}),
+                            add(new MuxStream() {{
+                                container = "excepturi";
+                                elementaryStreams = new String[]{{
                                     add("provident"),
-                                    add("necessitatibus"),
+                                    add("quos"),
                                 }};
                                 encryption = new Encryption() {{
                                     aes128 = new Aes128Encryption() {{
                                         keyUri = "sint";
                                     }};
-                                    iv = "officia";
-                                    key = "dolor";
+                                    iv = "accusantium";
+                                    key = "mollitia";
                                     mpegCenc = new MpegCommonEncryption() {{
-                                        keyId = "debitis";
-                                        scheme = "a";
+                                        keyId = "reiciendis";
+                                        scheme = "mollitia";
                                     }};
                                     sampleAes = new SampleAesEncryption() {{
-                                        keyUri = "dolorum";
+                                        keyUri = "ad";
                                     }};
                                 }};
-                                fileName = "in";
-                                key = "in";
+                                fileName = "eum";
+                                key = "dolor";
                                 segmentSettings = new SegmentSettings() {{
                                     individualSegments = false;
-                                    segmentDuration = "illum";
+                                    segmentDuration = "necessitatibus";
                                 }};
                             }}),
                         }};
                         output = new Output() {{
-                            uri = "https://right-burn.biz";
-                        }};
+                            uri = "http://handy-borrowing.info";
+                        }};;
                         overlays = new org.openapis.openapi.models.shared.Overlay[]{{
                             add(new Overlay() {{
                                 animations = new org.openapis.openapi.models.shared.Animation[]{{
                                     add(new Animation() {{
                                         animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "ea";
+                                            startTimeOffset = "eius";
                                         }};
                                         animationFade = new AnimationFade() {{
-                                            endTimeOffset = "aliquid";
-                                            fadeType = "FADE_OUT";
-                                            startTimeOffset = "accusamus";
+                                            endTimeOffset = "maxime";
+                                            fadeType = AnimationFadeFadeTypeEnum.FADE_IN;
+                                            startTimeOffset = "facilis";
                                             xy = new NormalizedCoordinate() {{
-                                                x = 2497.96;
-                                                y = 5812.73;
+                                                x = 4479.26;
+                                                y = 1002.26;
                                             }};
                                         }};
                                         animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "enim";
+                                            startTimeOffset = "architecto";
                                             xy = new NormalizedCoordinate() {{
-                                                x = 8817.36;
-                                                y = 9654.17;
+                                                x = 9194.83;
+                                                y = 3523.12;
                                             }};
                                         }};
                                     }}),
                                     add(new Animation() {{
                                         animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "quidem";
+                                            startTimeOffset = "expedita";
                                         }};
                                         animationFade = new AnimationFade() {{
-                                            endTimeOffset = "provident";
-                                            fadeType = "FADE_OUT";
-                                            startTimeOffset = "id";
+                                            endTimeOffset = "nihil";
+                                            fadeType = AnimationFadeFadeTypeEnum.FADE_OUT;
+                                            startTimeOffset = "quibusdam";
                                             xy = new NormalizedCoordinate() {{
-                                                x = 5013.24;
-                                                y = 5332.06;
+                                                x = 1494.48;
+                                                y = 9046.48;
                                             }};
                                         }};
                                         animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "sapiente";
+                                            startTimeOffset = "pariatur";
                                             xy = new NormalizedCoordinate() {{
-                                                x = 2305.33;
-                                                y = 6439.9;
+                                                x = 375.59;
+                                                y = 1624.93;
                                             }};
                                         }};
                                     }}),
                                     add(new Animation() {{
                                         animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "nisi";
+                                            startTimeOffset = "praesentium";
                                         }};
                                         animationFade = new AnimationFade() {{
-                                            endTimeOffset = "vel";
-                                            fadeType = "FADE_IN";
-                                            startTimeOffset = "omnis";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 4748.67;
-                                                y = 191.93;
-                                            }};
-                                        }};
-                                        animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "nihil";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 3015.75;
-                                                y = 7160.75;
-                                            }};
-                                        }};
-                                    }}),
-                                    add(new Animation() {{
-                                        animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "id";
-                                        }};
-                                        animationFade = new AnimationFade() {{
-                                            endTimeOffset = "labore";
-                                            fadeType = "FADE_TYPE_UNSPECIFIED";
-                                            startTimeOffset = "suscipit";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 6180.16;
-                                                y = 7491.7;
-                                            }};
-                                        }};
-                                        animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "eum";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 8784.53;
-                                                y = 1354.74;
-                                            }};
-                                        }};
-                                    }}),
-                                }};
-                                image = new Image() {{
-                                    alpha = 1028.63;
-                                    resolution = new NormalizedCoordinate() {{
-                                        x = 2982.82;
-                                        y = 923.73;
-                                    }};
-                                    uri = "https://grizzled-nest.name";
-                                }};
-                            }}),
-                            add(new Overlay() {{
-                                animations = new org.openapis.openapi.models.shared.Animation[]{{
-                                    add(new Animation() {{
-                                        animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "accusantium";
-                                        }};
-                                        animationFade = new AnimationFade() {{
-                                            endTimeOffset = "mollitia";
-                                            fadeType = "FADE_OUT";
-                                            startTimeOffset = "mollitia";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 3209.97;
-                                                y = 4314.18;
-                                            }};
-                                        }};
-                                        animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "dolor";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 8965.47;
-                                                y = 1412.64;
-                                            }};
-                                        }};
-                                    }}),
-                                    add(new Animation() {{
-                                        animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "nemo";
-                                        }};
-                                        animationFade = new AnimationFade() {{
-                                            endTimeOffset = "quasi";
-                                            fadeType = "FADE_IN";
-                                            startTimeOffset = "doloribus";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 8919.24;
-                                                y = 2603.41;
-                                            }};
-                                        }};
-                                        animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "maxime";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 5370.23;
-                                                y = 7038.89;
-                                            }};
-                                        }};
-                                    }}),
-                                    add(new Animation() {{
-                                        animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "in";
-                                        }};
-                                        animationFade = new AnimationFade() {{
-                                            endTimeOffset = "architecto";
-                                            fadeType = "FADE_TYPE_UNSPECIFIED";
-                                            startTimeOffset = "repudiandae";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 3523.12;
-                                                y = 7142.42;
-                                            }};
-                                        }};
-                                        animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "nihil";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 9988.48;
-                                                y = 8411.4;
-                                            }};
-                                        }};
-                                    }}),
-                                }};
-                                image = new Image() {{
-                                    alpha = 1494.48;
-                                    resolution = new NormalizedCoordinate() {{
-                                        x = 9046.48;
-                                        y = 8681.26;
-                                    }};
-                                    uri = "http://cute-lens.name";
-                                }};
-                            }}),
-                            add(new Overlay() {{
-                                animations = new org.openapis.openapi.models.shared.Animation[]{{
-                                    add(new Animation() {{
-                                        animationEnd = new AnimationEnd() {{
+                                            endTimeOffset = "natus";
+                                            fadeType = AnimationFadeFadeTypeEnum.FADE_TYPE_UNSPECIFIED;
                                             startTimeOffset = "sunt";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 7790.51;
+                                                y = 8480.09;
+                                            }};
                                         }};
-                                        animationFade = new AnimationFade() {{
-                                            endTimeOffset = "quo";
-                                            fadeType = "FADE_OUT";
+                                        animationStatic = new AnimationStatic() {{
                                             startTimeOffset = "pariatur";
                                             xy = new NormalizedCoordinate() {{
                                                 x = 8073.19;
                                                 y = 4113.97;
                                             }};
                                         }};
-                                        animationStatic = new AnimationStatic() {{
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
                                             startTimeOffset = "excepturi";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "odit";
+                                            fadeType = AnimationFadeFadeTypeEnum.FADE_IN;
+                                            startTimeOffset = "accusantium";
                                             xy = new NormalizedCoordinate() {{
-                                                x = 1399.72;
-                                                y = 4071.83;
+                                                x = 691.67;
+                                                y = 9825.75;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "quidem";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 3732.91;
+                                                y = 4535.43;
                                             }};
                                         }};
                                     }}),
                                 }};
                                 image = new Image() {{
-                                    alpha = 332.22;
+                                    alpha = 4200.75;
                                     resolution = new NormalizedCoordinate() {{
-                                        x = 691.67;
-                                        y = 9825.75;
+                                        x = 7220.56;
+                                        y = 505.88;
                                     }};
-                                    uri = "https://harmonious-in-joke.info";
+                                    uri = "https://half-wedge.com";
                                 }};
                             }}),
                             add(new Overlay() {{
                                 animations = new org.openapis.openapi.models.shared.Animation[]{{
                                     add(new Animation() {{
                                         animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "eaque";
+                                            startTimeOffset = "amet";
                                         }};
                                         animationFade = new AnimationFade() {{
-                                            endTimeOffset = "pariatur";
-                                            fadeType = "FADE_IN";
-                                            startTimeOffset = "voluptatibus";
+                                            endTimeOffset = "aut";
+                                            fadeType = AnimationFadeFadeTypeEnum.FADE_OUT;
+                                            startTimeOffset = "corporis";
                                             xy = new NormalizedCoordinate() {{
-                                                x = 166.27;
-                                                y = 8558.04;
+                                                x = 9441.24;
+                                                y = 7299.91;
                                             }};
                                         }};
                                         animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "amet";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 117.14;
-                                                y = 7649.12;
-                                            }};
-                                        }};
-                                    }}),
-                                    add(new Animation() {{
-                                        animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "corporis";
-                                        }};
-                                        animationFade = new AnimationFade() {{
-                                            endTimeOffset = "hic";
-                                            fadeType = "FADE_OUT";
                                             startTimeOffset = "nobis";
                                             xy = new NormalizedCoordinate() {{
                                                 x = 1716.29;
                                                 y = 3394.04;
                                             }};
                                         }};
-                                        animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "totam";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 4895.49;
-                                                y = 543.38;
-                                            }};
-                                        }};
                                     }}),
                                     add(new Animation() {{
                                         animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "quis";
+                                            startTimeOffset = "totam";
                                         }};
                                         animationFade = new AnimationFade() {{
-                                            endTimeOffset = "nesciunt";
-                                            fadeType = "FADE_TYPE_UNSPECIFIED";
+                                            endTimeOffset = "dignissimos";
+                                            fadeType = AnimationFadeFadeTypeEnum.FADE_TYPE_UNSPECIFIED;
+                                            startTimeOffset = "quis";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 1999.96;
+                                                y = 1794.9;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
                                             startTimeOffset = "perferendis";
                                             xy = new NormalizedCoordinate() {{
                                                 x = 1709.86;
                                                 y = 7936.98;
                                             }};
                                         }};
-                                        animationStatic = new AnimationStatic() {{
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
                                             startTimeOffset = "quam";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "dolor";
+                                            fadeType = AnimationFadeFadeTypeEnum.FADE_OUT;
+                                            startTimeOffset = "nostrum";
                                             xy = new NormalizedCoordinate() {{
-                                                x = 2239.24;
-                                                y = 8745.73;
+                                                x = 9441.2;
+                                                y = 9280.82;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "omnis";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 7044.15;
+                                                y = 5966.56;
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "voluptatem";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "porro";
+                                            fadeType = AnimationFadeFadeTypeEnum.FADE_TYPE_UNSPECIFIED;
+                                            startTimeOffset = "blanditiis";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 6214.79;
+                                                y = 503.7;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "occaecati";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 6990.98;
+                                                y = 2378.93;
                                             }};
                                         }};
                                     }}),
                                 }};
                                 image = new Image() {{
-                                    alpha = 3453.52;
+                                    alpha = 9923.97;
                                     resolution = new NormalizedCoordinate() {{
-                                        x = 9441.2;
-                                        y = 9280.82;
+                                        x = 9342.14;
+                                        y = 2672.62;
                                     }};
-                                    uri = "https://rotten-noir.com";
+                                    uri = "https://rash-mallard.org";
+                                }};
+                            }}),
+                            add(new Overlay() {{
+                                animations = new org.openapis.openapi.models.shared.Animation[]{{
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "nobis";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "libero";
+                                            fadeType = AnimationFadeFadeTypeEnum.FADE_OUT;
+                                            startTimeOffset = "quaerat";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 5542.42;
+                                                y = 3982.21;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "dolorem";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 2098.43;
+                                                y = 2224.43;
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "qui";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "ipsum";
+                                            fadeType = AnimationFadeFadeTypeEnum.FADE_OUT;
+                                            startTimeOffset = "excepturi";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 7395.51;
+                                                y = 4521.09;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "dignissimos";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 9702.37;
+                                                y = 2274.14;
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "dolorum";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "numquam";
+                                            fadeType = AnimationFadeFadeTypeEnum.FADE_TYPE_UNSPECIFIED;
+                                            startTimeOffset = "ipsa";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 564.18;
+                                                y = 4344.17;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "odio";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 3117.96;
+                                                y = 8810.05;
+                                            }};
+                                        }};
+                                    }}),
+                                }};
+                                image = new Image() {{
+                                    alpha = 6963.44;
+                                    resolution = new NormalizedCoordinate() {{
+                                        x = 9764.05;
+                                        y = 3777.52;
+                                    }};
+                                    uri = "https://definite-marines.com";
+                                }};
+                            }}),
+                            add(new Overlay() {{
+                                animations = new org.openapis.openapi.models.shared.Animation[]{{
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "ab";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "soluta";
+                                            fadeType = AnimationFadeFadeTypeEnum.FADE_OUT;
+                                            startTimeOffset = "iusto";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 4536.97;
+                                                y = 6770.82;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "deleniti";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 6070.45;
+                                                y = 8966.72;
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "distinctio";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "asperiores";
+                                            fadeType = AnimationFadeFadeTypeEnum.FADE_IN;
+                                            startTimeOffset = "ipsum";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 4560.15;
+                                                y = 6630.78;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "saepe";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 2633.22;
+                                                y = 1372.2;
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "perferendis";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "amet";
+                                            fadeType = AnimationFadeFadeTypeEnum.FADE_OUT;
+                                            startTimeOffset = "accusamus";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 3200.17;
+                                                y = 9044.25;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "suscipit";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 6457.85;
+                                                y = 5883.17;
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "minima";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "repellendus";
+                                            fadeType = AnimationFadeFadeTypeEnum.FADE_IN;
+                                            startTimeOffset = "similique";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 0.55;
+                                                y = 8726.51;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "quaerat";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 2735.42;
+                                                y = 4254.51;
+                                            }};
+                                        }};
+                                    }}),
+                                }};
+                                image = new Image() {{
+                                    alpha = 7980.47;
+                                    resolution = new NormalizedCoordinate() {{
+                                        x = 8853.38;
+                                        y = 1856.36;
+                                    }};
+                                    uri = "https://weepy-increase.net";
                                 }};
                             }}),
                         }};
                         pubsubDestination = new PubsubDestination() {{
-                            topic = "porro";
-                        }};
+                            topic = "iusto";
+                        }};;
                         spriteSheets = new org.openapis.openapi.models.shared.SpriteSheet[]{{
                             add(new SpriteSheet() {{
-                                columnCount = 500026;
-                                endTimeOffset = "error";
-                                filePrefix = "eaque";
-                                format = "occaecati";
-                                interval = "rerum";
-                                quality = 237893;
-                                rowCount = 992397;
-                                spriteHeightPixels = 934214;
-                                spriteWidthPixels = 267262;
-                                startTimeOffset = "iste";
-                                totalCount = 679091;
+                                columnCount = 788740;
+                                endTimeOffset = "tenetur";
+                                filePrefix = "amet";
+                                format = "tempore";
+                                interval = "accusamus";
+                                quality = 253941;
+                                rowCount = 313692;
+                                spriteHeightPixels = 213312;
+                                spriteWidthPixels = 957451;
+                                startTimeOffset = "totam";
+                                totalCount = 471752;
                             }}),
                         }};
-                    }};
-                    name = "deleniti";
-                }};
-                accessToken = "pariatur";
-                alt = "media";
-                callback = "nobis";
-                fields = "libero";
-                jobTemplateId = "delectus";
-                key = "quaerat";
-                oauthToken = "quos";
-                parent = "aliquid";
+                    }};;
+                    name = "Mamie Durgan";
+                }};;
+                accessToken = "libero";
+                alt = AltEnum.MEDIA;
+                callback = "deserunt";
+                fields = "quam";
+                jobTemplateId = "ipsum";
+                key = "incidunt";
+                oauthToken = "qui";
                 prettyPrint = false;
-                quotaUser = "dolorem";
-                uploadType = "dolorem";
-                uploadProtocol = "dolor";
-            }}            
+                quotaUser = "cupiditate";
+                uploadType = "maxime";
+                uploadProtocol = "pariatur";
+            }};            
 
-            TranscoderProjectsLocationsJobTemplatesCreateResponse res = sdk.projects.transcoderProjectsLocationsJobTemplatesCreate(req, new TranscoderProjectsLocationsJobTemplatesCreateSecurity() {{
+            TranscoderProjectsLocationsJobTemplatesCreateResponse res = sdk.projects.transcoderProjectsLocationsJobTemplatesCreate(req, new TranscoderProjectsLocationsJobTemplatesCreateSecurity("soluta", "dicta") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.jobTemplate.isPresent()) {
+            if (res.jobTemplate != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -794,14 +988,14 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `transcoderProjectsLocationsJobTemplatesCreate` - Creates a job template in the specified region.
-* `transcoderProjectsLocationsJobTemplatesDelete` - Deletes a job template.
-* `transcoderProjectsLocationsJobTemplatesGet` - Returns the job template data.
-* `transcoderProjectsLocationsJobTemplatesList` - Lists job templates in the specified region.
-* `transcoderProjectsLocationsJobsCreate` - Creates a job in the specified region.
-* `transcoderProjectsLocationsJobsList` - Lists jobs in the specified region.
+* [transcoderProjectsLocationsJobTemplatesCreate](docs/projects/README.md#transcoderprojectslocationsjobtemplatescreate) - Creates a job template in the specified region.
+* [transcoderProjectsLocationsJobTemplatesDelete](docs/projects/README.md#transcoderprojectslocationsjobtemplatesdelete) - Deletes a job template.
+* [transcoderProjectsLocationsJobTemplatesGet](docs/projects/README.md#transcoderprojectslocationsjobtemplatesget) - Returns the job template data.
+* [transcoderProjectsLocationsJobTemplatesList](docs/projects/README.md#transcoderprojectslocationsjobtemplateslist) - Lists job templates in the specified region.
+* [transcoderProjectsLocationsJobsCreate](docs/projects/README.md#transcoderprojectslocationsjobscreate) - Creates a job in the specified region.
+* [transcoderProjectsLocationsJobsList](docs/projects/README.md#transcoderprojectslocationsjobslist) - Lists jobs in the specified region.
 <!-- End SDK Available Operations -->
 
 ### Maturity

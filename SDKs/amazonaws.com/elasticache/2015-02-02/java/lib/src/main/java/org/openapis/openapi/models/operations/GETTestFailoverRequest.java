@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTestFailoverRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETTestFailoverActionEnum action;
+
     public GETTestFailoverRequest withAction(GETTestFailoverActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETTestFailoverRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NodeGroupId")
     public String nodeGroupId;
+
     public GETTestFailoverRequest withNodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
         return this;
@@ -29,6 +32,7 @@ public class GETTestFailoverRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReplicationGroupId")
     public String replicationGroupId;
+
     public GETTestFailoverRequest withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -36,6 +40,7 @@ public class GETTestFailoverRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETTestFailoverVersionEnum version;
+
     public GETTestFailoverRequest withVersion(GETTestFailoverVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETTestFailoverRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETTestFailoverRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETTestFailoverRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETTestFailoverRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETTestFailoverRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETTestFailoverRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETTestFailoverRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETTestFailoverRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETTestFailoverRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETTestFailoverRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETTestFailoverRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETTestFailoverRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETTestFailoverRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETTestFailoverRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETTestFailoverRequest(@JsonProperty("Action") GETTestFailoverActionEnum action, @JsonProperty("NodeGroupId") String nodeGroupId, @JsonProperty("ReplicationGroupId") String replicationGroupId, @JsonProperty("Version") GETTestFailoverVersionEnum version) {
+        this.action = action;
+        this.nodeGroupId = nodeGroupId;
+        this.replicationGroupId = replicationGroupId;
+        this.version = version;
+  }
 }

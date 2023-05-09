@@ -18,6 +18,7 @@ public class TextExtractionAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public TextExtractionAnnotation withScore(Float score) {
         this.score = score;
         return this;
@@ -29,9 +30,11 @@ public class TextExtractionAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textSegment")
     public TextSegment textSegment;
+
     public TextExtractionAnnotation withTextSegment(TextSegment textSegment) {
         this.textSegment = textSegment;
         return this;
     }
     
+    public TextExtractionAnnotation(){}
 }

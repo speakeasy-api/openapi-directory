@@ -18,9 +18,11 @@ public class AccountShippingImprovements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowShippingImprovements")
     public Boolean allowShippingImprovements;
+
     public AccountShippingImprovements withAllowShippingImprovements(Boolean allowShippingImprovements) {
         this.allowShippingImprovements = allowShippingImprovements;
         return this;
     }
     
+    public AccountShippingImprovements(){}
 }

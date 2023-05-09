@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBProxyTargetGroupsResponse {
     
     public String marker;
+
     public DescribeDBProxyTargetGroupsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class DescribeDBProxyTargetGroupsResponse {
     
     
     public DBProxyTargetGroup[] targetGroups;
+
     public DescribeDBProxyTargetGroupsResponse withTargetGroups(DBProxyTargetGroup[] targetGroups) {
         this.targetGroups = targetGroups;
         return this;
     }
     
+    public DescribeDBProxyTargetGroupsResponse(){}
 }

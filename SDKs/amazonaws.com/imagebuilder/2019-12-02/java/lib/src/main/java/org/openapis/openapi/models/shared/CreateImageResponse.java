@@ -15,6 +15,7 @@ public class CreateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateImageResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +24,7 @@ public class CreateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageBuildVersionArn")
     public String imageBuildVersionArn;
+
     public CreateImageResponse withImageBuildVersionArn(String imageBuildVersionArn) {
         this.imageBuildVersionArn = imageBuildVersionArn;
         return this;
@@ -31,9 +33,11 @@ public class CreateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public CreateImageResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public CreateImageResponse(){}
 }

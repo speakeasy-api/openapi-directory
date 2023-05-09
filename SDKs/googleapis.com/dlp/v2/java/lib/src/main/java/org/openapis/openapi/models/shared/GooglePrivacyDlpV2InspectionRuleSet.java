@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2InspectionRuleSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infoTypes")
     public GooglePrivacyDlpV2InfoType[] infoTypes;
+
     public GooglePrivacyDlpV2InspectionRuleSet withInfoTypes(GooglePrivacyDlpV2InfoType[] infoTypes) {
         this.infoTypes = infoTypes;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2InspectionRuleSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public GooglePrivacyDlpV2InspectionRule[] rules;
+
     public GooglePrivacyDlpV2InspectionRuleSet withRules(GooglePrivacyDlpV2InspectionRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public GooglePrivacyDlpV2InspectionRuleSet(){}
 }

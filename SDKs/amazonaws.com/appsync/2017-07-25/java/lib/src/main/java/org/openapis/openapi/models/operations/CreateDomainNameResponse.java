@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDomainNameResponse {
@@ -12,6 +13,7 @@ public class CreateDomainNameResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDomainNameResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDomainNameResponse {
      */
     
     public Object badRequestException;
+
     public CreateDomainNameResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class CreateDomainNameResponse {
     
     
     public String contentType;
+
     public CreateDomainNameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateDomainNameResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDomainNameResponse createDomainNameResponse;
+
     public CreateDomainNameResponse withCreateDomainNameResponse(org.openapis.openapi.models.shared.CreateDomainNameResponse createDomainNameResponse) {
         this.createDomainNameResponse = createDomainNameResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateDomainNameResponse {
      */
     
     public Object internalFailureException;
+
     public CreateDomainNameResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -56,6 +62,7 @@ public class CreateDomainNameResponse {
     
     
     public Integer statusCode;
+
     public CreateDomainNameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateDomainNameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDomainNameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDomainNameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

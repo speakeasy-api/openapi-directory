@@ -22,6 +22,7 @@ public class Member {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DisabledDate")
     public OffsetDateTime disabledDate;
+
     public Member withDisabledDate(OffsetDateTime disabledDate) {
         this.disabledDate = disabledDate;
         return this;
@@ -32,6 +33,7 @@ public class Member {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EnabledDate")
     public OffsetDateTime enabledDate;
+
     public Member withEnabledDate(OffsetDateTime enabledDate) {
         this.enabledDate = enabledDate;
         return this;
@@ -40,6 +42,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Member withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Member withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public EntityStateEnum state;
+
     public Member withState(EntityStateEnum state) {
         this.state = state;
         return this;
@@ -64,9 +69,11 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public MemberTypeEnum type;
+
     public Member withType(MemberTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Member(){}
 }

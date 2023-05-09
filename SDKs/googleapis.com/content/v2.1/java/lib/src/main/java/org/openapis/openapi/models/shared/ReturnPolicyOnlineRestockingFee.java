@@ -18,6 +18,7 @@ public class ReturnPolicyOnlineRestockingFee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedFee")
     public PriceAmount fixedFee;
+
     public ReturnPolicyOnlineRestockingFee withFixedFee(PriceAmount fixedFee) {
         this.fixedFee = fixedFee;
         return this;
@@ -29,9 +30,11 @@ public class ReturnPolicyOnlineRestockingFee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("microPercent")
     public Integer microPercent;
+
     public ReturnPolicyOnlineRestockingFee withMicroPercent(Integer microPercent) {
         this.microPercent = microPercent;
         return this;
     }
     
+    public ReturnPolicyOnlineRestockingFee(){}
 }

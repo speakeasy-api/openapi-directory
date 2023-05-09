@@ -18,9 +18,11 @@ public class GoogleAppsCardV1SuggestionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleAppsCardV1SuggestionItem withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleAppsCardV1SuggestionItem(){}
 }

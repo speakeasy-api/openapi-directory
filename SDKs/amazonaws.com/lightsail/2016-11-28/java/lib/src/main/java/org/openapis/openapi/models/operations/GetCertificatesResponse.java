@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCertificatesResponse {
@@ -12,6 +13,7 @@ public class GetCertificatesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetCertificatesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetCertificatesResponse {
     
     
     public String contentType;
+
     public GetCertificatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCertificatesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCertificatesResult getCertificatesResult;
+
     public GetCertificatesResponse withGetCertificatesResult(org.openapis.openapi.models.shared.GetCertificatesResult getCertificatesResult) {
         this.getCertificatesResult = getCertificatesResult;
         return this;
@@ -39,6 +43,7 @@ public class GetCertificatesResponse {
      */
     
     public Object invalidInputException;
+
     public GetCertificatesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetCertificatesResponse {
      */
     
     public Object notFoundException;
+
     public GetCertificatesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetCertificatesResponse {
      */
     
     public Object serviceException;
+
     public GetCertificatesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class GetCertificatesResponse {
     
     
     public Integer statusCode;
+
     public GetCertificatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetCertificatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCertificatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetCertificatesResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetCertificatesResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetCertificatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

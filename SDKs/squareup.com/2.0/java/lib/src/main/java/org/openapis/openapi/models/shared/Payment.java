@@ -23,6 +23,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public Payment withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -39,6 +40,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_fee_money")
     public Money appFeeMoney;
+
     public Payment withAppFeeMoney(Money appFeeMoney) {
         this.appFeeMoney = appFeeMoney;
         return this;
@@ -55,6 +57,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approved_money")
     public Money approvedMoney;
+
     public Payment withApprovedMoney(Money approvedMoney) {
         this.approvedMoney = approvedMoney;
         return this;
@@ -66,6 +69,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_account_details")
     public BankAccountPaymentDetails bankAccountDetails;
+
     public Payment withBankAccountDetails(BankAccountPaymentDetails bankAccountDetails) {
         this.bankAccountDetails = bankAccountDetails;
         return this;
@@ -104,6 +108,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     public Address billingAddress;
+
     public Payment withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -115,6 +120,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer_email_address")
     public String buyerEmailAddress;
+
     public Payment withBuyerEmailAddress(String buyerEmailAddress) {
         this.buyerEmailAddress = buyerEmailAddress;
         return this;
@@ -130,6 +136,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public String[] capabilities;
+
     public Payment withCapabilities(String[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -141,6 +148,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_details")
     public CardPaymentDetails cardDetails;
+
     public Payment withCardDetails(CardPaymentDetails cardDetails) {
         this.cardDetails = cardDetails;
         return this;
@@ -153,6 +161,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_details")
     public CashPaymentDetails cashDetails;
+
     public Payment withCashDetails(CashPaymentDetails cashDetails) {
         this.cashDetails = cashDetails;
         return this;
@@ -164,6 +173,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Payment withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -175,6 +185,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public String customerId;
+
     public Payment withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -189,6 +200,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delay_action")
     public String delayAction;
+
     public Payment withDelayAction(String delayAction) {
         this.delayAction = delayAction;
         return this;
@@ -213,6 +225,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delay_duration")
     public String delayDuration;
+
     public Payment withDelayDuration(String delayDuration) {
         this.delayDuration = delayDuration;
         return this;
@@ -229,6 +242,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delayed_until")
     public String delayedUntil;
+
     public Payment withDelayedUntil(String delayedUntil) {
         this.delayedUntil = delayedUntil;
         return this;
@@ -240,6 +254,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_id")
     public String employeeId;
+
     public Payment withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -253,6 +268,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_details")
     public ExternalPaymentDetails externalDetails;
+
     public Payment withExternalDetails(ExternalPaymentDetails externalDetails) {
         this.externalDetails = externalDetails;
         return this;
@@ -264,6 +280,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Payment withId(String id) {
         this.id = id;
         return this;
@@ -275,6 +292,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public Payment withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -286,6 +304,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public Payment withNote(String note) {
         this.note = note;
         return this;
@@ -297,6 +316,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public String orderId;
+
     public Payment withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -308,6 +328,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processing_fee")
     public ProcessingFee[] processingFee;
+
     public Payment withProcessingFee(ProcessingFee[] processingFee) {
         this.processingFee = processingFee;
         return this;
@@ -320,6 +341,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receipt_number")
     public String receiptNumber;
+
     public Payment withReceiptNumber(String receiptNumber) {
         this.receiptNumber = receiptNumber;
         return this;
@@ -332,6 +354,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receipt_url")
     public String receiptUrl;
+
     public Payment withReceiptUrl(String receiptUrl) {
         this.receiptUrl = receiptUrl;
         return this;
@@ -344,6 +367,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public Payment withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -355,6 +379,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund_ids")
     public String[] refundIds;
+
     public Payment withRefundIds(String[] refundIds) {
         this.refundIds = refundIds;
         return this;
@@ -371,6 +396,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_money")
     public Money refundedMoney;
+
     public Payment withRefundedMoney(Money refundedMoney) {
         this.refundedMoney = refundedMoney;
         return this;
@@ -387,6 +413,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("risk_evaluation")
     public RiskEvaluation riskEvaluation;
+
     public Payment withRiskEvaluation(RiskEvaluation riskEvaluation) {
         this.riskEvaluation = riskEvaluation;
         return this;
@@ -425,6 +452,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
     public Address shippingAddress;
+
     public Payment withShippingAddress(Address shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -438,6 +466,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_type")
     public String sourceType;
+
     public Payment withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -454,6 +483,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statement_description_identifier")
     public String statementDescriptionIdentifier;
+
     public Payment withStatementDescriptionIdentifier(String statementDescriptionIdentifier) {
         this.statementDescriptionIdentifier = statementDescriptionIdentifier;
         return this;
@@ -465,6 +495,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Payment withStatus(String status) {
         this.status = status;
         return this;
@@ -481,6 +512,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tip_money")
     public Money tipMoney;
+
     public Payment withTipMoney(Money tipMoney) {
         this.tipMoney = tipMoney;
         return this;
@@ -497,6 +529,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_money")
     public Money totalMoney;
+
     public Payment withTotalMoney(Money totalMoney) {
         this.totalMoney = totalMoney;
         return this;
@@ -508,6 +541,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Payment withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -520,6 +554,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version_token")
     public String versionToken;
+
     public Payment withVersionToken(String versionToken) {
         this.versionToken = versionToken;
         return this;
@@ -531,9 +566,11 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wallet_details")
     public DigitalWalletDetails walletDetails;
+
     public Payment withWalletDetails(DigitalWalletDetails walletDetails) {
         this.walletDetails = walletDetails;
         return this;
     }
     
+    public Payment(){}
 }

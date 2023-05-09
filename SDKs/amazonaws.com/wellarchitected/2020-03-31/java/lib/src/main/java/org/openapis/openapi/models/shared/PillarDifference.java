@@ -15,6 +15,7 @@ public class PillarDifference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DifferenceStatus")
     public DifferenceStatusEnum differenceStatus;
+
     public PillarDifference withDifferenceStatus(DifferenceStatusEnum differenceStatus) {
         this.differenceStatus = differenceStatus;
         return this;
@@ -26,6 +27,7 @@ public class PillarDifference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PillarId")
     public String pillarId;
+
     public PillarDifference withPillarId(String pillarId) {
         this.pillarId = pillarId;
         return this;
@@ -37,6 +39,7 @@ public class PillarDifference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PillarName")
     public String pillarName;
+
     public PillarDifference withPillarName(String pillarName) {
         this.pillarName = pillarName;
         return this;
@@ -45,9 +48,11 @@ public class PillarDifference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuestionDifferences")
     public QuestionDifference[] questionDifferences;
+
     public PillarDifference withQuestionDifferences(QuestionDifference[] questionDifferences) {
         this.questionDifferences = questionDifferences;
         return this;
     }
     
+    public PillarDifference(){}
 }

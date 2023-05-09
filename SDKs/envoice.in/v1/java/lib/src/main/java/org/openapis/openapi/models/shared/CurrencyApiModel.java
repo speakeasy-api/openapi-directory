@@ -15,6 +15,7 @@ public class CurrencyApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CurrencyApiModel withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class CurrencyApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public CurrencyApiModel withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CurrencyApiModel(){}
 }

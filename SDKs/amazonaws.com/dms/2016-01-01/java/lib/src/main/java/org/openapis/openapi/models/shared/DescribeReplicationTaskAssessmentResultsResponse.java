@@ -15,6 +15,7 @@ public class DescribeReplicationTaskAssessmentResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketName")
     public String bucketName;
+
     public DescribeReplicationTaskAssessmentResultsResponse withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -23,6 +24,7 @@ public class DescribeReplicationTaskAssessmentResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeReplicationTaskAssessmentResultsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -31,9 +33,11 @@ public class DescribeReplicationTaskAssessmentResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationTaskAssessmentResults")
     public ReplicationTaskAssessmentResult[] replicationTaskAssessmentResults;
+
     public DescribeReplicationTaskAssessmentResultsResponse withReplicationTaskAssessmentResults(ReplicationTaskAssessmentResult[] replicationTaskAssessmentResults) {
         this.replicationTaskAssessmentResults = replicationTaskAssessmentResults;
         return this;
     }
     
+    public DescribeReplicationTaskAssessmentResultsResponse(){}
 }

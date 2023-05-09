@@ -12,6 +12,7 @@ public class LocationInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public AddressInputModel address;
+
     public LocationInputModel withAddress(AddressInputModel address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class LocationInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminEmail")
     public String adminEmail;
+
     public LocationInputModel withAdminEmail(String adminEmail) {
         this.adminEmail = adminEmail;
         return this;
@@ -34,6 +36,7 @@ public class LocationInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminName")
     public String adminName;
+
     public LocationInputModel withAdminName(String adminName) {
         this.adminName = adminName;
         return this;
@@ -42,6 +45,7 @@ public class LocationInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appointmentReminders")
     public AppointmentRemindersInputModel appointmentReminders;
+
     public LocationInputModel withAppointmentReminders(AppointmentRemindersInputModel appointmentReminders) {
         this.appointmentReminders = appointmentReminders;
         return this;
@@ -50,6 +54,7 @@ public class LocationInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessHours")
     public BusinessHoursInputModel businessHours;
+
     public LocationInputModel withBusinessHours(BusinessHoursInputModel businessHours) {
         this.businessHours = businessHours;
         return this;
@@ -58,6 +63,7 @@ public class LocationInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaults")
     public BusinessDefaultsInputModel defaults;
+
     public LocationInputModel withDefaults(BusinessDefaultsInputModel defaults) {
         this.defaults = defaults;
         return this;
@@ -66,6 +72,7 @@ public class LocationInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public LocationInputModel withEmail(String email) {
         this.email = email;
         return this;
@@ -74,6 +81,7 @@ public class LocationInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fax")
     public String fax;
+
     public LocationInputModel withFax(String fax) {
         this.fax = fax;
         return this;
@@ -87,6 +95,7 @@ public class LocationInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyId")
     public String friendlyId;
+
     public LocationInputModel withFriendlyId(String friendlyId) {
         this.friendlyId = friendlyId;
         return this;
@@ -95,6 +104,7 @@ public class LocationInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LocationInputModel withName(String name) {
         this.name = name;
         return this;
@@ -107,6 +117,7 @@ public class LocationInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public LocationInputModel withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -115,6 +126,7 @@ public class LocationInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionId")
     public String regionId;
+
     public LocationInputModel withRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -123,6 +135,7 @@ public class LocationInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public OnlineSettingsInputModel settings;
+
     public LocationInputModel withSettings(OnlineSettingsInputModel settings) {
         this.settings = settings;
         return this;
@@ -134,6 +147,7 @@ public class LocationInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezoneName")
     public String timezoneName;
+
     public LocationInputModel withTimezoneName(String timezoneName) {
         this.timezoneName = timezoneName;
         return this;
@@ -142,9 +156,11 @@ public class LocationInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public LocationInputModel withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public LocationInputModel(){}
 }

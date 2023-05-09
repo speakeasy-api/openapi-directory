@@ -15,6 +15,7 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
      */
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequest withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -25,6 +26,7 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
      */
     @JsonProperty("mode")
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnum mode;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequest withMode(GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnum mode) {
         this.mode = mode;
         return this;
@@ -35,9 +37,15 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
      */
     @JsonProperty("value")
     public String value;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequest(@JsonProperty("investment_product_id") String investmentProductId, @JsonProperty("mode") GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnum mode, @JsonProperty("value") String value) {
+        this.investmentProductId = investmentProductId;
+        this.mode = mode;
+        this.value = value;
+  }
 }

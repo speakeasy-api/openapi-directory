@@ -18,6 +18,7 @@ public class Argument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("argumentKind")
     public ArgumentArgumentKindEnum argumentKind;
+
     public Argument withArgumentKind(ArgumentArgumentKindEnum argumentKind) {
         this.argumentKind = argumentKind;
         return this;
@@ -29,6 +30,7 @@ public class Argument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public StandardSqlDataType dataType;
+
     public Argument withDataType(StandardSqlDataType dataType) {
         this.dataType = dataType;
         return this;
@@ -40,6 +42,7 @@ public class Argument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public ArgumentModeEnum mode;
+
     public Argument withMode(ArgumentModeEnum mode) {
         this.mode = mode;
         return this;
@@ -51,9 +54,11 @@ public class Argument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Argument withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Argument(){}
 }

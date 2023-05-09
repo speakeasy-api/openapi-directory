@@ -15,6 +15,7 @@ public class ListEnvironmentsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentIds")
     public String[] environmentIds;
+
     public ListEnvironmentsResult withEnvironmentIds(String[] environmentIds) {
         this.environmentIds = environmentIds;
         return this;
@@ -23,9 +24,11 @@ public class ListEnvironmentsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEnvironmentsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEnvironmentsResult(){}
 }

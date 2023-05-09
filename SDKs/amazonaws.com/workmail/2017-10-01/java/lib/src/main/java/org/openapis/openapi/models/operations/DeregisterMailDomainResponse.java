@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterMailDomainResponse {
     
     public String contentType;
+
     public DeregisterMailDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterMailDomainResponse {
      */
     
     public java.util.Map<String, Object> deregisterMailDomainResponse;
+
     public DeregisterMailDomainResponse withDeregisterMailDomainResponse(java.util.Map<String, Object> deregisterMailDomainResponse) {
         this.deregisterMailDomainResponse = deregisterMailDomainResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterMailDomainResponse {
      */
     
     public Object invalidCustomSesConfigurationException;
+
     public DeregisterMailDomainResponse withInvalidCustomSesConfigurationException(Object invalidCustomSesConfigurationException) {
         this.invalidCustomSesConfigurationException = invalidCustomSesConfigurationException;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterMailDomainResponse {
      */
     
     public Object invalidParameterException;
+
     public DeregisterMailDomainResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeregisterMailDomainResponse {
      */
     
     public Object mailDomainInUseException;
+
     public DeregisterMailDomainResponse withMailDomainInUseException(Object mailDomainInUseException) {
         this.mailDomainInUseException = mailDomainInUseException;
         return this;
@@ -59,6 +65,7 @@ public class DeregisterMailDomainResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DeregisterMailDomainResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeregisterMailDomainResponse {
      */
     
     public Object organizationStateException;
+
     public DeregisterMailDomainResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -76,6 +84,7 @@ public class DeregisterMailDomainResponse {
     
     
     public Integer statusCode;
+
     public DeregisterMailDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeregisterMailDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterMailDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeregisterMailDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

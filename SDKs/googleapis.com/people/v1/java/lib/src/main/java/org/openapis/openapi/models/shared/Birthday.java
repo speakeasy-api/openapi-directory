@@ -18,6 +18,7 @@ public class Birthday {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public Birthday withDate(Date date) {
         this.date = date;
         return this;
@@ -29,6 +30,7 @@ public class Birthday {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FieldMetadata metadata;
+
     public Birthday withMetadata(FieldMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -40,9 +42,11 @@ public class Birthday {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public Birthday withText(String text) {
         this.text = text;
         return this;
     }
     
+    public Birthday(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudassetEffectiveIamPoliciesBatchGetResponse {
@@ -12,6 +13,7 @@ public class CloudassetEffectiveIamPoliciesBatchGetResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetEffectiveIamPoliciesResponse batchGetEffectiveIamPoliciesResponse;
+
     public CloudassetEffectiveIamPoliciesBatchGetResponse withBatchGetEffectiveIamPoliciesResponse(org.openapis.openapi.models.shared.BatchGetEffectiveIamPoliciesResponse batchGetEffectiveIamPoliciesResponse) {
         this.batchGetEffectiveIamPoliciesResponse = batchGetEffectiveIamPoliciesResponse;
         return this;
@@ -19,6 +21,7 @@ public class CloudassetEffectiveIamPoliciesBatchGetResponse {
     
     
     public String contentType;
+
     public CloudassetEffectiveIamPoliciesBatchGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CloudassetEffectiveIamPoliciesBatchGetResponse {
     
     
     public Integer statusCode;
+
     public CloudassetEffectiveIamPoliciesBatchGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudassetEffectiveIamPoliciesBatchGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudassetEffectiveIamPoliciesBatchGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudassetEffectiveIamPoliciesBatchGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

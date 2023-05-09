@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RaceResultsRequest {
@@ -12,6 +13,7 @@ public class RaceResultsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public RaceResultsFormatEnum format;
+
     public RaceResultsRequest withFormat(RaceResultsFormatEnum format) {
         this.format = format;
         return this;
@@ -23,9 +25,14 @@ public class RaceResultsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=raceid")
     public String raceid;
+
     public RaceResultsRequest withRaceid(String raceid) {
         this.raceid = raceid;
         return this;
     }
     
+    public RaceResultsRequest(@JsonProperty("format") RaceResultsFormatEnum format, @JsonProperty("raceid") String raceid) {
+        this.format = format;
+        this.raceid = raceid;
+  }
 }

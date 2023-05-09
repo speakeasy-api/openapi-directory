@@ -15,6 +15,7 @@ public class ReviewResultDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionId")
     public String actionId;
+
     public ReviewResultDetail withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -23,6 +24,7 @@ public class ReviewResultDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public ReviewResultDetail withKey(String key) {
         this.key = key;
         return this;
@@ -31,6 +33,7 @@ public class ReviewResultDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuestionId")
     public String questionId;
+
     public ReviewResultDetail withQuestionId(String questionId) {
         this.questionId = questionId;
         return this;
@@ -39,6 +42,7 @@ public class ReviewResultDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubjectId")
     public String subjectId;
+
     public ReviewResultDetail withSubjectId(String subjectId) {
         this.subjectId = subjectId;
         return this;
@@ -47,6 +51,7 @@ public class ReviewResultDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubjectType")
     public String subjectType;
+
     public ReviewResultDetail withSubjectType(String subjectType) {
         this.subjectType = subjectType;
         return this;
@@ -55,9 +60,11 @@ public class ReviewResultDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public ReviewResultDetail withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ReviewResultDetail(){}
 }

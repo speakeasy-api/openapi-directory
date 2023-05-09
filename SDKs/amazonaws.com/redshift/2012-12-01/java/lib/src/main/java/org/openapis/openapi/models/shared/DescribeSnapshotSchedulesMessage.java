@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSnapshotSchedulesMessage {
     
     public String clusterIdentifier;
+
     public DescribeSnapshotSchedulesMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class DescribeSnapshotSchedulesMessage {
     
     
     public String marker;
+
     public DescribeSnapshotSchedulesMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +25,7 @@ public class DescribeSnapshotSchedulesMessage {
     
     
     public Long maxRecords;
+
     public DescribeSnapshotSchedulesMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -30,6 +33,7 @@ public class DescribeSnapshotSchedulesMessage {
     
     
     public String scheduleIdentifier;
+
     public DescribeSnapshotSchedulesMessage withScheduleIdentifier(String scheduleIdentifier) {
         this.scheduleIdentifier = scheduleIdentifier;
         return this;
@@ -37,6 +41,7 @@ public class DescribeSnapshotSchedulesMessage {
     
     
     public String[] tagKeys;
+
     public DescribeSnapshotSchedulesMessage withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -44,9 +49,11 @@ public class DescribeSnapshotSchedulesMessage {
     
     
     public String[] tagValues;
+
     public DescribeSnapshotSchedulesMessage withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     
+    public DescribeSnapshotSchedulesMessage(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePipelineVariableForWorkspaceRequest {
@@ -12,6 +13,7 @@ public class UpdatePipelineVariableForWorkspaceRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public UpdatePipelineVariableForWorkspaceRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class UpdatePipelineVariableForWorkspaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variable_uuid")
     public String variableUuid;
+
     public UpdatePipelineVariableForWorkspaceRequest withVariableUuid(String variableUuid) {
         this.variableUuid = variableUuid;
         return this;
@@ -32,9 +35,15 @@ public class UpdatePipelineVariableForWorkspaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public UpdatePipelineVariableForWorkspaceRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public UpdatePipelineVariableForWorkspaceRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("variable_uuid") String variableUuid, @JsonProperty("workspace") String workspace) {
+        this.requestBody = requestBody;
+        this.variableUuid = variableUuid;
+        this.workspace = workspace;
+  }
 }

@@ -18,6 +18,7 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeMap")
     public java.util.Map<String, AttributeValue> attributeMap;
+
     public Attributes withAttributeMap(java.util.Map<String, AttributeValue> attributeMap) {
         this.attributeMap = attributeMap;
         return this;
@@ -29,9 +30,11 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("droppedAttributesCount")
     public Integer droppedAttributesCount;
+
     public Attributes withDroppedAttributesCount(Integer droppedAttributesCount) {
         this.droppedAttributesCount = droppedAttributesCount;
         return this;
     }
     
+    public Attributes(){}
 }

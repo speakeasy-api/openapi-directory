@@ -18,6 +18,7 @@ public class GtagConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public GtagConfig withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class GtagConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public GtagConfig withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -40,6 +42,7 @@ public class GtagConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public GtagConfig withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -51,6 +54,7 @@ public class GtagConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gtagConfigId")
     public String gtagConfigId;
+
     public GtagConfig withGtagConfigId(String gtagConfigId) {
         this.gtagConfigId = gtagConfigId;
         return this;
@@ -62,6 +66,7 @@ public class GtagConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public Parameter[] parameter;
+
     public GtagConfig withParameter(Parameter[] parameter) {
         this.parameter = parameter;
         return this;
@@ -73,6 +78,7 @@ public class GtagConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public GtagConfig withPath(String path) {
         this.path = path;
         return this;
@@ -84,6 +90,7 @@ public class GtagConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagManagerUrl")
     public String tagManagerUrl;
+
     public GtagConfig withTagManagerUrl(String tagManagerUrl) {
         this.tagManagerUrl = tagManagerUrl;
         return this;
@@ -95,6 +102,7 @@ public class GtagConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GtagConfig withType(String type) {
         this.type = type;
         return this;
@@ -106,9 +114,11 @@ public class GtagConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public GtagConfig withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public GtagConfig(){}
 }

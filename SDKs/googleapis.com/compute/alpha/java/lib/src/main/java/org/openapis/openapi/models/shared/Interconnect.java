@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Interconnect - Represents an Interconnect resource. An Interconnect resource is a dedicated connection between the GCP network and your on-premises network. For more information, read the Dedicated Interconnect Overview.
+ * Interconnect - Represents an Interconnect resource. An Interconnect resource is a dedicated connection between the Google Cloud network and your on-premises network. For more information, read the Dedicated Interconnect Overview.
  */
 public class Interconnect {
     /**
@@ -18,8 +18,21 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminEnabled")
     public Boolean adminEnabled;
+
     public Interconnect withAdminEnabled(Boolean adminEnabled) {
         this.adminEnabled = adminEnabled;
+        return this;
+    }
+    
+    /**
+     * [Output only] List of features available for this interconnect, which can take one of the following values: - MACSEC If present then the interconnect was created on MACsec capable hardware ports. If not present then the interconnect is provisioned on non-MACsec capable ports and MACsec enablement will fail.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("availableFeatures")
+    public InterconnectAvailableFeaturesEnum[] availableFeatures;
+
+    public Interconnect withAvailableFeatures(InterconnectAvailableFeaturesEnum[] availableFeatures) {
+        this.availableFeatures = availableFeatures;
         return this;
     }
     
@@ -29,6 +42,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("circuitInfos")
     public InterconnectCircuitInfo[] circuitInfos;
+
     public Interconnect withCircuitInfos(InterconnectCircuitInfo[] circuitInfos) {
         this.circuitInfos = circuitInfos;
         return this;
@@ -40,6 +54,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public Interconnect withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -51,6 +66,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerName")
     public String customerName;
+
     public Interconnect withCustomerName(String customerName) {
         this.customerName = customerName;
         return this;
@@ -62,6 +78,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Interconnect withDescription(String description) {
         this.description = description;
         return this;
@@ -73,6 +90,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedOutages")
     public InterconnectOutageNotification[] expectedOutages;
+
     public Interconnect withExpectedOutages(InterconnectOutageNotification[] expectedOutages) {
         this.expectedOutages = expectedOutages;
         return this;
@@ -84,6 +102,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleIpAddress")
     public String googleIpAddress;
+
     public Interconnect withGoogleIpAddress(String googleIpAddress) {
         this.googleIpAddress = googleIpAddress;
         return this;
@@ -95,6 +114,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleReferenceId")
     public String googleReferenceId;
+
     public Interconnect withGoogleReferenceId(String googleReferenceId) {
         this.googleReferenceId = googleReferenceId;
         return this;
@@ -106,6 +126,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Interconnect withId(String id) {
         this.id = id;
         return this;
@@ -117,6 +138,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interconnectAttachments")
     public String[] interconnectAttachments;
+
     public Interconnect withInterconnectAttachments(String[] interconnectAttachments) {
         this.interconnectAttachments = interconnectAttachments;
         return this;
@@ -128,6 +150,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interconnectType")
     public InterconnectInterconnectTypeEnum interconnectType;
+
     public Interconnect withInterconnectType(InterconnectInterconnectTypeEnum interconnectType) {
         this.interconnectType = interconnectType;
         return this;
@@ -139,6 +162,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Interconnect withKind(String kind) {
         this.kind = kind;
         return this;
@@ -150,6 +174,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public Interconnect withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -161,6 +186,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Interconnect withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -172,6 +198,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkType")
     public InterconnectLinkTypeEnum linkType;
+
     public Interconnect withLinkType(InterconnectLinkTypeEnum linkType) {
         this.linkType = linkType;
         return this;
@@ -183,6 +210,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Interconnect withLocation(String location) {
         this.location = location;
         return this;
@@ -194,6 +222,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macsec")
     public InterconnectMacsec macsec;
+
     public Interconnect withMacsec(InterconnectMacsec macsec) {
         this.macsec = macsec;
         return this;
@@ -205,6 +234,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macsecEnabled")
     public Boolean macsecEnabled;
+
     public Interconnect withMacsecEnabled(Boolean macsecEnabled) {
         this.macsecEnabled = macsecEnabled;
         return this;
@@ -216,6 +246,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Interconnect withName(String name) {
         this.name = name;
         return this;
@@ -227,6 +258,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nocContactEmail")
     public String nocContactEmail;
+
     public Interconnect withNocContactEmail(String nocContactEmail) {
         this.nocContactEmail = nocContactEmail;
         return this;
@@ -238,6 +270,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationalStatus")
     public InterconnectOperationalStatusEnum operationalStatus;
+
     public Interconnect withOperationalStatus(InterconnectOperationalStatusEnum operationalStatus) {
         this.operationalStatus = operationalStatus;
         return this;
@@ -249,6 +282,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerIpAddress")
     public String peerIpAddress;
+
     public Interconnect withPeerIpAddress(String peerIpAddress) {
         this.peerIpAddress = peerIpAddress;
         return this;
@@ -260,6 +294,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisionedLinkCount")
     public Integer provisionedLinkCount;
+
     public Interconnect withProvisionedLinkCount(Integer provisionedLinkCount) {
         this.provisionedLinkCount = provisionedLinkCount;
         return this;
@@ -271,8 +306,21 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteLocation")
     public String remoteLocation;
+
     public Interconnect withRemoteLocation(String remoteLocation) {
         this.remoteLocation = remoteLocation;
+        return this;
+    }
+    
+    /**
+     * Optional. List of features requested for this interconnect, which can take one of the following values: - MACSEC If specified then the interconnect will be created on MACsec capable hardware ports. If not specified, the default value is false, which will allocate non-MACsec capable ports first if available. This parameter can only be provided during interconnect INSERT and cannot be changed using interconnect PATCH. Please review Interconnect Pricing for implications on enabling this flag.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("requestedFeatures")
+    public InterconnectRequestedFeaturesEnum[] requestedFeatures;
+
+    public Interconnect withRequestedFeatures(InterconnectRequestedFeaturesEnum[] requestedFeatures) {
+        this.requestedFeatures = requestedFeatures;
         return this;
     }
     
@@ -282,6 +330,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedLinkCount")
     public Integer requestedLinkCount;
+
     public Interconnect withRequestedLinkCount(Integer requestedLinkCount) {
         this.requestedLinkCount = requestedLinkCount;
         return this;
@@ -293,6 +342,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satisfiesPzs")
     public Boolean satisfiesPzs;
+
     public Interconnect withSatisfiesPzs(Boolean satisfiesPzs) {
         this.satisfiesPzs = satisfiesPzs;
         return this;
@@ -304,6 +354,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Interconnect withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -315,6 +366,7 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public Interconnect withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -326,9 +378,11 @@ public class Interconnect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public InterconnectStateEnum state;
+
     public Interconnect withState(InterconnectStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Interconnect(){}
 }

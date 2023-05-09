@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAtms408ErrorObject {
     @JsonProperty("description")
     public GetAtms408ErrorObjectDescriptionEnum description;
+
     public GetAtms408ErrorObject withDescription(GetAtms408ErrorObjectDescriptionEnum description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class GetAtms408ErrorObject {
     
     @JsonProperty("status")
     public GetAtms408ErrorObjectStatusEnum status;
+
     public GetAtms408ErrorObject withStatus(GetAtms408ErrorObjectStatusEnum status) {
         this.status = status;
         return this;
@@ -26,9 +28,15 @@ public class GetAtms408ErrorObject {
     
     @JsonProperty("title")
     public GetAtms408ErrorObjectTitleEnum title;
+
     public GetAtms408ErrorObject withTitle(GetAtms408ErrorObjectTitleEnum title) {
         this.title = title;
         return this;
     }
     
+    public GetAtms408ErrorObject(@JsonProperty("description") GetAtms408ErrorObjectDescriptionEnum description, @JsonProperty("status") GetAtms408ErrorObjectStatusEnum status, @JsonProperty("title") GetAtms408ErrorObjectTitleEnum title) {
+        this.description = description;
+        this.status = status;
+        this.title = title;
+  }
 }

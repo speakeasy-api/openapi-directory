@@ -23,6 +23,7 @@ public class InvoiceRecurringApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DayOfMonth")
     public Integer dayOfMonth;
+
     public InvoiceRecurringApiModel withDayOfMonth(Integer dayOfMonth) {
         this.dayOfMonth = dayOfMonth;
         return this;
@@ -34,6 +35,7 @@ public class InvoiceRecurringApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DayOfWeek")
     public InvoiceRecurringApiModelDayOfWeekEnum dayOfWeek;
+
     public InvoiceRecurringApiModel withDayOfWeek(InvoiceRecurringApiModelDayOfWeekEnum dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -45,6 +47,7 @@ public class InvoiceRecurringApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DueDateInDays")
     public Integer dueDateInDays;
+
     public InvoiceRecurringApiModel withDueDateInDays(Integer dueDateInDays) {
         this.dueDateInDays = dueDateInDays;
         return this;
@@ -58,6 +61,7 @@ public class InvoiceRecurringApiModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndOfRecurrance")
     public OffsetDateTime endOfRecurrance;
+
     public InvoiceRecurringApiModel withEndOfRecurrance(OffsetDateTime endOfRecurrance) {
         this.endOfRecurrance = endOfRecurrance;
         return this;
@@ -69,6 +73,7 @@ public class InvoiceRecurringApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Month")
     public Integer month;
+
     public InvoiceRecurringApiModel withMonth(Integer month) {
         this.month = month;
         return this;
@@ -80,6 +85,7 @@ public class InvoiceRecurringApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecurrancePattern")
     public InvoiceRecurringApiModelRecurrancePatternEnum recurrancePattern;
+
     public InvoiceRecurringApiModel withRecurrancePattern(InvoiceRecurringApiModelRecurrancePatternEnum recurrancePattern) {
         this.recurrancePattern = recurrancePattern;
         return this;
@@ -92,6 +98,7 @@ public class InvoiceRecurringApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecurranceValue")
     public Integer recurranceValue;
+
     public InvoiceRecurringApiModel withRecurranceValue(Integer recurranceValue) {
         this.recurranceValue = recurranceValue;
         return this;
@@ -105,6 +112,7 @@ public class InvoiceRecurringApiModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartOfRecurrance")
     public OffsetDateTime startOfRecurrance;
+
     public InvoiceRecurringApiModel withStartOfRecurrance(OffsetDateTime startOfRecurrance) {
         this.startOfRecurrance = startOfRecurrance;
         return this;
@@ -116,6 +124,7 @@ public class InvoiceRecurringApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public InvoiceRecurringApiModelStatusEnum status;
+
     public InvoiceRecurringApiModel withStatus(InvoiceRecurringApiModelStatusEnum status) {
         this.status = status;
         return this;
@@ -128,9 +137,11 @@ public class InvoiceRecurringApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public InvoiceRecurringApiModel withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public InvoiceRecurringApiModel(){}
 }

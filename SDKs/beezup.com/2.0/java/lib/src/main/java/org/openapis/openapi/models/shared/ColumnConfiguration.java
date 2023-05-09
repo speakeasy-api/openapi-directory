@@ -18,6 +18,7 @@ public class ColumnConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beezUPColumnName")
     public String beezUPColumnName;
+
     public ColumnConfiguration withBeezUPColumnName(String beezUPColumnName) {
         this.beezUPColumnName = beezUPColumnName;
         return this;
@@ -29,6 +30,7 @@ public class ColumnConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canBeTruncated")
     public Boolean canBeTruncated;
+
     public ColumnConfiguration withCanBeTruncated(Boolean canBeTruncated) {
         this.canBeTruncated = canBeTruncated;
         return this;
@@ -40,6 +42,7 @@ public class ColumnConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnCultureName")
     public String columnCultureName;
+
     public ColumnConfiguration withColumnCultureName(String columnCultureName) {
         this.columnCultureName = columnCultureName;
         return this;
@@ -50,6 +53,7 @@ public class ColumnConfiguration {
      */
     @JsonProperty("columnDataType")
     public BeezUPCommonColumnDataTypeEnum columnDataType;
+
     public ColumnConfiguration withColumnDataType(BeezUPCommonColumnDataTypeEnum columnDataType) {
         this.columnDataType = columnDataType;
         return this;
@@ -61,6 +65,7 @@ public class ColumnConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnFormat")
     public String columnFormat;
+
     public ColumnConfiguration withColumnFormat(String columnFormat) {
         this.columnFormat = columnFormat;
         return this;
@@ -71,6 +76,7 @@ public class ColumnConfiguration {
      */
     @JsonProperty("columnImportance")
     public BeezUPCommonColumnImportanceEnum columnImportance;
+
     public ColumnConfiguration withColumnImportance(BeezUPCommonColumnImportanceEnum columnImportance) {
         this.columnImportance = columnImportance;
         return this;
@@ -82,9 +88,14 @@ public class ColumnConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayGroupName")
     public String displayGroupName;
+
     public ColumnConfiguration withDisplayGroupName(String displayGroupName) {
         this.displayGroupName = displayGroupName;
         return this;
     }
     
+    public ColumnConfiguration(@JsonProperty("columnDataType") BeezUPCommonColumnDataTypeEnum columnDataType, @JsonProperty("columnImportance") BeezUPCommonColumnImportanceEnum columnImportance) {
+        this.columnDataType = columnDataType;
+        this.columnImportance = columnImportance;
+  }
 }

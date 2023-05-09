@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSfxListDetailsResponse {
     
     public String contentType;
+
     public GetSfxListDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSfxListDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.SFXDataList sfxDataList;
+
     public GetSfxListDetailsResponse withSFXDataList(org.openapis.openapi.models.shared.SFXDataList sfxDataList) {
         this.sfxDataList = sfxDataList;
         return this;
@@ -26,6 +29,7 @@ public class GetSfxListDetailsResponse {
     
     
     public Integer statusCode;
+
     public GetSfxListDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSfxListDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSfxListDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSfxListDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

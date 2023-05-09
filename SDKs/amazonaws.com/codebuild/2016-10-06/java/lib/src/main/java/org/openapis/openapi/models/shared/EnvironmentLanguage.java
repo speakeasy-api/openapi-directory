@@ -15,6 +15,7 @@ public class EnvironmentLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("images")
     public EnvironmentImage[] images;
+
     public EnvironmentLanguage withImages(EnvironmentImage[] images) {
         this.images = images;
         return this;
@@ -23,9 +24,11 @@ public class EnvironmentLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public LanguageTypeEnum language;
+
     public EnvironmentLanguage withLanguage(LanguageTypeEnum language) {
         this.language = language;
         return this;
     }
     
+    public EnvironmentLanguage(){}
 }

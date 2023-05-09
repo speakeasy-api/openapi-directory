@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * IdentityVerificationAttributes - Represents the verification attributes of a single identity.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class IdentityVerificationAttributes {
     
     public VerificationStatusEnum verificationStatus;
+
     public IdentityVerificationAttributes withVerificationStatus(VerificationStatusEnum verificationStatus) {
         this.verificationStatus = verificationStatus;
         return this;
@@ -19,9 +20,13 @@ public class IdentityVerificationAttributes {
     
     
     public String verificationToken;
+
     public IdentityVerificationAttributes withVerificationToken(String verificationToken) {
         this.verificationToken = verificationToken;
         return this;
     }
     
+    public IdentityVerificationAttributes(@JsonProperty("VerificationStatus") VerificationStatusEnum verificationStatus) {
+        this.verificationStatus = verificationStatus;
+  }
 }

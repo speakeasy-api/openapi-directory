@@ -18,6 +18,7 @@ public class AppsCreate201ApplicationJSONOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public AppsCreate201ApplicationJSONOwner withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -28,6 +29,7 @@ public class AppsCreate201ApplicationJSONOwner {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public AppsCreate201ApplicationJSONOwner withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -39,6 +41,7 @@ public class AppsCreate201ApplicationJSONOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AppsCreate201ApplicationJSONOwner withEmail(String email) {
         this.email = email;
         return this;
@@ -49,6 +52,7 @@ public class AppsCreate201ApplicationJSONOwner {
      */
     @JsonProperty("id")
     public String id;
+
     public AppsCreate201ApplicationJSONOwner withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class AppsCreate201ApplicationJSONOwner {
      */
     @JsonProperty("name")
     public String name;
+
     public AppsCreate201ApplicationJSONOwner withName(String name) {
         this.name = name;
         return this;
@@ -69,9 +74,16 @@ public class AppsCreate201ApplicationJSONOwner {
      */
     @JsonProperty("type")
     public AppsCreate201ApplicationJSONOwnerTypeEnum type;
+
     public AppsCreate201ApplicationJSONOwner withType(AppsCreate201ApplicationJSONOwnerTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AppsCreate201ApplicationJSONOwner(@JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("type") AppsCreate201ApplicationJSONOwnerTypeEnum type) {
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.type = type;
+  }
 }

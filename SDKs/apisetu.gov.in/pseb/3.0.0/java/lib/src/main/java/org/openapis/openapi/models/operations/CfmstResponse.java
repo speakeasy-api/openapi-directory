@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CfmstResponse {
     
     public String contentType;
+
     public CfmstResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CfmstResponse {
     
     
     public Integer statusCode;
+
     public CfmstResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CfmstResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CfmstResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CfmstResponse {
      */
     
     public Cfmst400ApplicationJSON cfmst400ApplicationJSONObject;
+
     public CfmstResponse withCfmst400ApplicationJSONObject(Cfmst400ApplicationJSON cfmst400ApplicationJSONObject) {
         this.cfmst400ApplicationJSONObject = cfmst400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CfmstResponse {
      */
     
     public Cfmst401ApplicationJSON cfmst401ApplicationJSONObject;
+
     public CfmstResponse withCfmst401ApplicationJSONObject(Cfmst401ApplicationJSON cfmst401ApplicationJSONObject) {
         this.cfmst401ApplicationJSONObject = cfmst401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CfmstResponse {
      */
     
     public Cfmst404ApplicationJSON cfmst404ApplicationJSONObject;
+
     public CfmstResponse withCfmst404ApplicationJSONObject(Cfmst404ApplicationJSON cfmst404ApplicationJSONObject) {
         this.cfmst404ApplicationJSONObject = cfmst404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CfmstResponse {
      */
     
     public Cfmst500ApplicationJSON cfmst500ApplicationJSONObject;
+
     public CfmstResponse withCfmst500ApplicationJSONObject(Cfmst500ApplicationJSON cfmst500ApplicationJSONObject) {
         this.cfmst500ApplicationJSONObject = cfmst500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class CfmstResponse {
      */
     
     public Cfmst502ApplicationJSON cfmst502ApplicationJSONObject;
+
     public CfmstResponse withCfmst502ApplicationJSONObject(Cfmst502ApplicationJSON cfmst502ApplicationJSONObject) {
         this.cfmst502ApplicationJSONObject = cfmst502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class CfmstResponse {
      */
     
     public Cfmst503ApplicationJSON cfmst503ApplicationJSONObject;
+
     public CfmstResponse withCfmst503ApplicationJSONObject(Cfmst503ApplicationJSON cfmst503ApplicationJSONObject) {
         this.cfmst503ApplicationJSONObject = cfmst503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class CfmstResponse {
      */
     
     public Cfmst504ApplicationJSON cfmst504ApplicationJSONObject;
+
     public CfmstResponse withCfmst504ApplicationJSONObject(Cfmst504ApplicationJSON cfmst504ApplicationJSONObject) {
         this.cfmst504ApplicationJSONObject = cfmst504ApplicationJSONObject;
         return this;
     }
     
+    public CfmstResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

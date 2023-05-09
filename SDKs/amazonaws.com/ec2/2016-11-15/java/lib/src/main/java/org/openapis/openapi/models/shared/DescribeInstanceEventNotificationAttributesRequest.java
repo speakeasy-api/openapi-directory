@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceEventNotificationAttributesRequest {
     
     public Boolean dryRun;
+
     public DescribeInstanceEventNotificationAttributesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public DescribeInstanceEventNotificationAttributesRequest(){}
 }

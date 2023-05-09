@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetMaintenanceWindowExecutionRequest {
     @JsonProperty("WindowExecutionId")
     public String windowExecutionId;
+
     public GetMaintenanceWindowExecutionRequest withWindowExecutionId(String windowExecutionId) {
         this.windowExecutionId = windowExecutionId;
         return this;
     }
     
+    public GetMaintenanceWindowExecutionRequest(@JsonProperty("WindowExecutionId") String windowExecutionId) {
+        this.windowExecutionId = windowExecutionId;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeServiceAccessPoliciesResponse - The result of a &lt;code&gt;DescribeServiceAccessPolicies&lt;/code&gt; request.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DescribeServiceAccessPoliciesResponse {
     
     public AccessPoliciesStatus accessPolicies;
+
     public DescribeServiceAccessPoliciesResponse withAccessPolicies(AccessPoliciesStatus accessPolicies) {
         this.accessPolicies = accessPolicies;
         return this;
     }
     
+    public DescribeServiceAccessPoliciesResponse(@JsonProperty("AccessPolicies") AccessPoliciesStatus accessPolicies) {
+        this.accessPolicies = accessPolicies;
+  }
 }

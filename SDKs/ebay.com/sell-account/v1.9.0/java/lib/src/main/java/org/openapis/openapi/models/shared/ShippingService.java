@@ -18,6 +18,7 @@ public class ShippingService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalShippingCost")
     public Amount additionalShippingCost;
+
     public ShippingService withAdditionalShippingCost(Amount additionalShippingCost) {
         this.additionalShippingCost = additionalShippingCost;
         return this;
@@ -29,6 +30,7 @@ public class ShippingService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyerResponsibleForPickup")
     public Boolean buyerResponsibleForPickup;
+
     public ShippingService withBuyerResponsibleForPickup(Boolean buyerResponsibleForPickup) {
         this.buyerResponsibleForPickup = buyerResponsibleForPickup;
         return this;
@@ -40,6 +42,7 @@ public class ShippingService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyerResponsibleForShipping")
     public Boolean buyerResponsibleForShipping;
+
     public ShippingService withBuyerResponsibleForShipping(Boolean buyerResponsibleForShipping) {
         this.buyerResponsibleForShipping = buyerResponsibleForShipping;
         return this;
@@ -51,6 +54,7 @@ public class ShippingService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cashOnDeliveryFee")
     public Amount cashOnDeliveryFee;
+
     public ShippingService withCashOnDeliveryFee(Amount cashOnDeliveryFee) {
         this.cashOnDeliveryFee = cashOnDeliveryFee;
         return this;
@@ -62,6 +66,7 @@ public class ShippingService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeShipping")
     public Boolean freeShipping;
+
     public ShippingService withFreeShipping(Boolean freeShipping) {
         this.freeShipping = freeShipping;
         return this;
@@ -73,6 +78,7 @@ public class ShippingService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipToLocations")
     public RegionSet shipToLocations;
+
     public ShippingService withShipToLocations(RegionSet shipToLocations) {
         this.shipToLocations = shipToLocations;
         return this;
@@ -84,6 +90,7 @@ public class ShippingService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingCarrierCode")
     public String shippingCarrierCode;
+
     public ShippingService withShippingCarrierCode(String shippingCarrierCode) {
         this.shippingCarrierCode = shippingCarrierCode;
         return this;
@@ -95,6 +102,7 @@ public class ShippingService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingCost")
     public Amount shippingCost;
+
     public ShippingService withShippingCost(Amount shippingCost) {
         this.shippingCost = shippingCost;
         return this;
@@ -106,6 +114,7 @@ public class ShippingService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingServiceCode")
     public String shippingServiceCode;
+
     public ShippingService withShippingServiceCode(String shippingServiceCode) {
         this.shippingServiceCode = shippingServiceCode;
         return this;
@@ -117,6 +126,7 @@ public class ShippingService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Integer sortOrder;
+
     public ShippingService withSortOrder(Integer sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -128,9 +138,11 @@ public class ShippingService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surcharge")
     public Amount surcharge;
+
     public ShippingService withSurcharge(Amount surcharge) {
         this.surcharge = surcharge;
         return this;
     }
     
+    public ShippingService(){}
 }

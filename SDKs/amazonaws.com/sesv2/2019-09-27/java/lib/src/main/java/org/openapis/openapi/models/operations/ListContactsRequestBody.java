@@ -15,9 +15,11 @@ public class ListContactsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public ListContactsRequestBodyFilter filter;
+
     public ListContactsRequestBody withFilter(ListContactsRequestBodyFilter filter) {
         this.filter = filter;
         return this;
     }
     
+    public ListContactsRequestBody(){}
 }

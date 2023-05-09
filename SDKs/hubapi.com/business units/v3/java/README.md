@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetBusinessUnitsV3BusinessUnitsUserUserIdSecurity;
 import org.openapis.openapi.models.operations.GetBusinessUnitsV3BusinessUnitsUserUserIdRequest;
 import org.openapis.openapi.models.operations.GetBusinessUnitsV3BusinessUnitsUserUserIdResponse;
+import org.openapis.openapi.models.operations.GetBusinessUnitsV3BusinessUnitsUserUserIdSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,30 +26,32 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetBusinessUnitsV3BusinessUnitsUserUserIdRequest req = new GetBusinessUnitsV3BusinessUnitsUserUserIdRequest() {{
+            GetBusinessUnitsV3BusinessUnitsUserUserIdRequest req = new GetBusinessUnitsV3BusinessUnitsUserUserIdRequest("corrupti") {{
                 name = new String[]{{
-                    add("provident"),
                     add("distinctio"),
                     add("quibusdam"),
+                    add("unde"),
                 }};
                 properties = new String[]{{
-                    add("nulla"),
                     add("corrupti"),
                     add("illum"),
+                    add("vel"),
+                    add("error"),
                 }};
-                userId = "vel";
-            }}            
+            }};            
 
             GetBusinessUnitsV3BusinessUnitsUserUserIdResponse res = sdk.businessUnit.getBusinessUnitsV3BusinessUnitsUserUserId(req, new GetBusinessUnitsV3BusinessUnitsUserUserIdSecurity() {{
                 oauth2Legacy = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.collectionResponsePublicBusinessUnitNoPaging.isPresent()) {
+            if (res.collectionResponsePublicBusinessUnitNoPaging != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -58,9 +59,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### businessUnit
+### [businessUnit](docs/businessunit/README.md)
 
-* `getBusinessUnitsV3BusinessUnitsUserUserId` - Get Business Units for a user
+* [getBusinessUnitsV3BusinessUnitsUserUserId](docs/businessunit/README.md#getbusinessunitsv3businessunitsuseruserid) - Get Business Units for a user
 <!-- End SDK Available Operations -->
 
 ### Maturity

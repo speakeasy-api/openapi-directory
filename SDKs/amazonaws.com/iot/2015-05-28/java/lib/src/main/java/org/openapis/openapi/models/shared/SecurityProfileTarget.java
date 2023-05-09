@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SecurityProfileTarget {
     @JsonProperty("arn")
     public String arn;
+
     public SecurityProfileTarget withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public SecurityProfileTarget(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

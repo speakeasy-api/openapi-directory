@@ -22,6 +22,7 @@ public class WebhookResourceAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public WebhookResourceAttributes withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -34,6 +35,7 @@ public class WebhookResourceAttributes {
      */
     @JsonProperty("description")
     public String description;
+
     public WebhookResourceAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -57,6 +59,7 @@ public class WebhookResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretKey")
     public String secretKey;
+
     public WebhookResourceAttributes withSecretKey(String secretKey) {
         this.secretKey = secretKey;
         return this;
@@ -68,9 +71,15 @@ public class WebhookResourceAttributes {
      */
     @JsonProperty("url")
     public String url;
+
     public WebhookResourceAttributes withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public WebhookResourceAttributes(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("description") String description, @JsonProperty("url") String url) {
+        this.createdAt = createdAt;
+        this.description = description;
+        this.url = url;
+  }
 }

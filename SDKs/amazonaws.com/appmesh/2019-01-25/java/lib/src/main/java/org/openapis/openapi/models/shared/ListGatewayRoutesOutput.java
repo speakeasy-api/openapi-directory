@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListGatewayRoutesOutput {
     @JsonProperty("gatewayRoutes")
     public GatewayRouteRef[] gatewayRoutes;
+
     public ListGatewayRoutesOutput withGatewayRoutes(GatewayRouteRef[] gatewayRoutes) {
         this.gatewayRoutes = gatewayRoutes;
         return this;
@@ -22,9 +23,13 @@ public class ListGatewayRoutesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListGatewayRoutesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListGatewayRoutesOutput(@JsonProperty("gatewayRoutes") GatewayRouteRef[] gatewayRoutes) {
+        this.gatewayRoutes = gatewayRoutes;
+  }
 }

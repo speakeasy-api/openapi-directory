@@ -15,9 +15,11 @@ public class DeleteBlueGreenDeploymentResponse {
      */
     
     public BlueGreenDeployment blueGreenDeployment;
+
     public DeleteBlueGreenDeploymentResponse withBlueGreenDeployment(BlueGreenDeployment blueGreenDeployment) {
         this.blueGreenDeployment = blueGreenDeployment;
         return this;
     }
     
+    public DeleteBlueGreenDeploymentResponse(){}
 }

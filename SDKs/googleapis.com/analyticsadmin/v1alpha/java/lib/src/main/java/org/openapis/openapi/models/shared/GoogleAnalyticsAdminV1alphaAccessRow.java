@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAccessRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionValues")
     public GoogleAnalyticsAdminV1alphaAccessDimensionValue[] dimensionValues;
+
     public GoogleAnalyticsAdminV1alphaAccessRow withDimensionValues(GoogleAnalyticsAdminV1alphaAccessDimensionValue[] dimensionValues) {
         this.dimensionValues = dimensionValues;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaAccessRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricValues")
     public GoogleAnalyticsAdminV1alphaAccessMetricValue[] metricValues;
+
     public GoogleAnalyticsAdminV1alphaAccessRow withMetricValues(GoogleAnalyticsAdminV1alphaAccessMetricValue[] metricValues) {
         this.metricValues = metricValues;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAccessRow(){}
 }

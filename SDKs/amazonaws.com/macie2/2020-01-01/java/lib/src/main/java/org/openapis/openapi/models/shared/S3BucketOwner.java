@@ -15,6 +15,7 @@ public class S3BucketOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public S3BucketOwner withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -23,9 +24,11 @@ public class S3BucketOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public S3BucketOwner withId(String id) {
         this.id = id;
         return this;
     }
     
+    public S3BucketOwner(){}
 }

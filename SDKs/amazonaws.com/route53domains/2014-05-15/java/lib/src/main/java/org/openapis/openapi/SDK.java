@@ -180,6 +180,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -217,15 +222,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AcceptDomainTransferFromAnotherAwsAccountResponse res = new org.openapis.openapi.models.operations.AcceptDomainTransferFromAnotherAwsAccountResponse() {{
+        org.openapis.openapi.models.operations.AcceptDomainTransferFromAnotherAwsAccountResponse res = new org.openapis.openapi.models.operations.AcceptDomainTransferFromAnotherAwsAccountResponse(contentType, httpRes.statusCode()) {{
             acceptDomainTransferFromAnotherAwsAccountResponse = null;
             invalidInput = null;
             operationLimitExceeded = null;
             domainLimitExceeded = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -301,7 +304,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateDelegationSignerToDomainResponse res = new org.openapis.openapi.models.operations.AssociateDelegationSignerToDomainResponse() {{
+        org.openapis.openapi.models.operations.AssociateDelegationSignerToDomainResponse res = new org.openapis.openapi.models.operations.AssociateDelegationSignerToDomainResponse(contentType, httpRes.statusCode()) {{
             associateDelegationSignerToDomainResponse = null;
             duplicateRequest = null;
             invalidInput = null;
@@ -310,8 +313,6 @@ public class SDK {
             unsupportedTLD = null;
             dnssecLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -401,14 +402,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelDomainTransferToAnotherAwsAccountResponse res = new org.openapis.openapi.models.operations.CancelDomainTransferToAnotherAwsAccountResponse() {{
+        org.openapis.openapi.models.operations.CancelDomainTransferToAnotherAwsAccountResponse res = new org.openapis.openapi.models.operations.CancelDomainTransferToAnotherAwsAccountResponse(contentType, httpRes.statusCode()) {{
             cancelDomainTransferToAnotherAwsAccountResponse = null;
             invalidInput = null;
             operationLimitExceeded = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -477,13 +476,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckDomainAvailabilityResponse res = new org.openapis.openapi.models.operations.CheckDomainAvailabilityResponse() {{
+        org.openapis.openapi.models.operations.CheckDomainAvailabilityResponse res = new org.openapis.openapi.models.operations.CheckDomainAvailabilityResponse(contentType, httpRes.statusCode()) {{
             checkDomainAvailabilityResponse = null;
             invalidInput = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -545,13 +542,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckDomainTransferabilityResponse res = new org.openapis.openapi.models.operations.CheckDomainTransferabilityResponse() {{
+        org.openapis.openapi.models.operations.CheckDomainTransferabilityResponse res = new org.openapis.openapi.models.operations.CheckDomainTransferabilityResponse(contentType, httpRes.statusCode()) {{
             checkDomainTransferabilityResponse = null;
             invalidInput = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -613,15 +608,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDomainResponse res = new org.openapis.openapi.models.operations.DeleteDomainResponse() {{
+        org.openapis.openapi.models.operations.DeleteDomainResponse res = new org.openapis.openapi.models.operations.DeleteDomainResponse(contentType, httpRes.statusCode()) {{
             deleteDomainResponse = null;
             invalidInput = null;
             duplicateRequest = null;
             tldRulesViolation = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -697,14 +690,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTagsForDomainResponse res = new org.openapis.openapi.models.operations.DeleteTagsForDomainResponse() {{
+        org.openapis.openapi.models.operations.DeleteTagsForDomainResponse res = new org.openapis.openapi.models.operations.DeleteTagsForDomainResponse(contentType, httpRes.statusCode()) {{
             deleteTagsForDomainResponse = null;
             invalidInput = null;
             operationLimitExceeded = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -773,13 +764,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableDomainAutoRenewResponse res = new org.openapis.openapi.models.operations.DisableDomainAutoRenewResponse() {{
+        org.openapis.openapi.models.operations.DisableDomainAutoRenewResponse res = new org.openapis.openapi.models.operations.DisableDomainAutoRenewResponse(contentType, httpRes.statusCode()) {{
             disableDomainAutoRenewResponse = null;
             invalidInput = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -841,7 +830,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableDomainTransferLockResponse res = new org.openapis.openapi.models.operations.DisableDomainTransferLockResponse() {{
+        org.openapis.openapi.models.operations.DisableDomainTransferLockResponse res = new org.openapis.openapi.models.operations.DisableDomainTransferLockResponse(contentType, httpRes.statusCode()) {{
             disableDomainTransferLockResponse = null;
             invalidInput = null;
             duplicateRequest = null;
@@ -849,8 +838,6 @@ public class SDK {
             operationLimitExceeded = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -933,7 +920,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateDelegationSignerFromDomainResponse res = new org.openapis.openapi.models.operations.DisassociateDelegationSignerFromDomainResponse() {{
+        org.openapis.openapi.models.operations.DisassociateDelegationSignerFromDomainResponse res = new org.openapis.openapi.models.operations.DisassociateDelegationSignerFromDomainResponse(contentType, httpRes.statusCode()) {{
             disassociateDelegationSignerFromDomainResponse = null;
             duplicateRequest = null;
             invalidInput = null;
@@ -941,8 +928,6 @@ public class SDK {
             tldRulesViolation = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1025,14 +1010,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableDomainAutoRenewResponse res = new org.openapis.openapi.models.operations.EnableDomainAutoRenewResponse() {{
+        org.openapis.openapi.models.operations.EnableDomainAutoRenewResponse res = new org.openapis.openapi.models.operations.EnableDomainAutoRenewResponse(contentType, httpRes.statusCode()) {{
             enableDomainAutoRenewResponse = null;
             invalidInput = null;
             unsupportedTLD = null;
             tldRulesViolation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1101,7 +1084,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableDomainTransferLockResponse res = new org.openapis.openapi.models.operations.EnableDomainTransferLockResponse() {{
+        org.openapis.openapi.models.operations.EnableDomainTransferLockResponse res = new org.openapis.openapi.models.operations.EnableDomainTransferLockResponse(contentType, httpRes.statusCode()) {{
             enableDomainTransferLockResponse = null;
             invalidInput = null;
             duplicateRequest = null;
@@ -1109,8 +1092,6 @@ public class SDK {
             operationLimitExceeded = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1193,14 +1174,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContactReachabilityStatusResponse res = new org.openapis.openapi.models.operations.GetContactReachabilityStatusResponse() {{
+        org.openapis.openapi.models.operations.GetContactReachabilityStatusResponse res = new org.openapis.openapi.models.operations.GetContactReachabilityStatusResponse(contentType, httpRes.statusCode()) {{
             getContactReachabilityStatusResponse = null;
             invalidInput = null;
             operationLimitExceeded = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1269,13 +1248,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomainDetailResponse res = new org.openapis.openapi.models.operations.GetDomainDetailResponse() {{
+        org.openapis.openapi.models.operations.GetDomainDetailResponse res = new org.openapis.openapi.models.operations.GetDomainDetailResponse(contentType, httpRes.statusCode()) {{
             getDomainDetailResponse = null;
             invalidInput = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1337,13 +1314,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomainSuggestionsResponse res = new org.openapis.openapi.models.operations.GetDomainSuggestionsResponse() {{
+        org.openapis.openapi.models.operations.GetDomainSuggestionsResponse res = new org.openapis.openapi.models.operations.GetDomainSuggestionsResponse(contentType, httpRes.statusCode()) {{
             getDomainSuggestionsResponse = null;
             invalidInput = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1405,12 +1380,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOperationDetailResponse res = new org.openapis.openapi.models.operations.GetOperationDetailResponse() {{
+        org.openapis.openapi.models.operations.GetOperationDetailResponse res = new org.openapis.openapi.models.operations.GetOperationDetailResponse(contentType, httpRes.statusCode()) {{
             getOperationDetailResponse = null;
             invalidInput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1471,12 +1444,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDomainsResponse res = new org.openapis.openapi.models.operations.ListDomainsResponse() {{
+        org.openapis.openapi.models.operations.ListDomainsResponse res = new org.openapis.openapi.models.operations.ListDomainsResponse(contentType, httpRes.statusCode()) {{
             listDomainsResponse = null;
             invalidInput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1537,12 +1508,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListOperationsResponse res = new org.openapis.openapi.models.operations.ListOperationsResponse() {{
+        org.openapis.openapi.models.operations.ListOperationsResponse res = new org.openapis.openapi.models.operations.ListOperationsResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
             invalidInput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1603,13 +1572,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPricesResponse res = new org.openapis.openapi.models.operations.ListPricesResponse() {{
+        org.openapis.openapi.models.operations.ListPricesResponse res = new org.openapis.openapi.models.operations.ListPricesResponse(contentType, httpRes.statusCode()) {{
             listPricesResponse = null;
             invalidInput = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1671,14 +1638,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForDomainResponse res = new org.openapis.openapi.models.operations.ListTagsForDomainResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForDomainResponse res = new org.openapis.openapi.models.operations.ListTagsForDomainResponse(contentType, httpRes.statusCode()) {{
             listTagsForDomainResponse = null;
             invalidInput = null;
             operationLimitExceeded = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1747,13 +1712,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PushDomainResponse res = new org.openapis.openapi.models.operations.PushDomainResponse() {{
+        org.openapis.openapi.models.operations.PushDomainResponse res = new org.openapis.openapi.models.operations.PushDomainResponse(contentType, httpRes.statusCode()) {{
             invalidInput = null;
             operationLimitExceeded = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1817,7 +1780,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterDomainResponse res = new org.openapis.openapi.models.operations.RegisterDomainResponse() {{
+        org.openapis.openapi.models.operations.RegisterDomainResponse res = new org.openapis.openapi.models.operations.RegisterDomainResponse(contentType, httpRes.statusCode()) {{
             registerDomainResponse = null;
             invalidInput = null;
             unsupportedTLD = null;
@@ -1826,8 +1789,6 @@ public class SDK {
             domainLimitExceeded = null;
             operationLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1917,14 +1878,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RejectDomainTransferFromAnotherAwsAccountResponse res = new org.openapis.openapi.models.operations.RejectDomainTransferFromAnotherAwsAccountResponse() {{
+        org.openapis.openapi.models.operations.RejectDomainTransferFromAnotherAwsAccountResponse res = new org.openapis.openapi.models.operations.RejectDomainTransferFromAnotherAwsAccountResponse(contentType, httpRes.statusCode()) {{
             rejectDomainTransferFromAnotherAwsAccountResponse = null;
             invalidInput = null;
             operationLimitExceeded = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1993,7 +1952,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RenewDomainResponse res = new org.openapis.openapi.models.operations.RenewDomainResponse() {{
+        org.openapis.openapi.models.operations.RenewDomainResponse res = new org.openapis.openapi.models.operations.RenewDomainResponse(contentType, httpRes.statusCode()) {{
             renewDomainResponse = null;
             invalidInput = null;
             unsupportedTLD = null;
@@ -2001,8 +1960,6 @@ public class SDK {
             tldRulesViolation = null;
             operationLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2085,14 +2042,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResendContactReachabilityEmailResponse res = new org.openapis.openapi.models.operations.ResendContactReachabilityEmailResponse() {{
+        org.openapis.openapi.models.operations.ResendContactReachabilityEmailResponse res = new org.openapis.openapi.models.operations.ResendContactReachabilityEmailResponse(contentType, httpRes.statusCode()) {{
             resendContactReachabilityEmailResponse = null;
             invalidInput = null;
             operationLimitExceeded = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2161,11 +2116,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResendOperationAuthorizationResponse res = new org.openapis.openapi.models.operations.ResendOperationAuthorizationResponse() {{
+        org.openapis.openapi.models.operations.ResendOperationAuthorizationResponse res = new org.openapis.openapi.models.operations.ResendOperationAuthorizationResponse(contentType, httpRes.statusCode()) {{
             invalidInput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2215,13 +2168,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveDomainAuthCodeResponse res = new org.openapis.openapi.models.operations.RetrieveDomainAuthCodeResponse() {{
+        org.openapis.openapi.models.operations.RetrieveDomainAuthCodeResponse res = new org.openapis.openapi.models.operations.RetrieveDomainAuthCodeResponse(contentType, httpRes.statusCode()) {{
             retrieveDomainAuthCodeResponse = null;
             invalidInput = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2283,7 +2234,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TransferDomainResponse res = new org.openapis.openapi.models.operations.TransferDomainResponse() {{
+        org.openapis.openapi.models.operations.TransferDomainResponse res = new org.openapis.openapi.models.operations.TransferDomainResponse(contentType, httpRes.statusCode()) {{
             transferDomainResponse = null;
             invalidInput = null;
             unsupportedTLD = null;
@@ -2292,8 +2243,6 @@ public class SDK {
             domainLimitExceeded = null;
             operationLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2383,15 +2332,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TransferDomainToAnotherAwsAccountResponse res = new org.openapis.openapi.models.operations.TransferDomainToAnotherAwsAccountResponse() {{
+        org.openapis.openapi.models.operations.TransferDomainToAnotherAwsAccountResponse res = new org.openapis.openapi.models.operations.TransferDomainToAnotherAwsAccountResponse(contentType, httpRes.statusCode()) {{
             transferDomainToAnotherAwsAccountResponse = null;
             invalidInput = null;
             operationLimitExceeded = null;
             duplicateRequest = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2467,7 +2414,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDomainContactResponse res = new org.openapis.openapi.models.operations.UpdateDomainContactResponse() {{
+        org.openapis.openapi.models.operations.UpdateDomainContactResponse res = new org.openapis.openapi.models.operations.UpdateDomainContactResponse(contentType, httpRes.statusCode()) {{
             updateDomainContactResponse = null;
             invalidInput = null;
             duplicateRequest = null;
@@ -2475,8 +2422,6 @@ public class SDK {
             operationLimitExceeded = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2559,7 +2504,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDomainContactPrivacyResponse res = new org.openapis.openapi.models.operations.UpdateDomainContactPrivacyResponse() {{
+        org.openapis.openapi.models.operations.UpdateDomainContactPrivacyResponse res = new org.openapis.openapi.models.operations.UpdateDomainContactPrivacyResponse(contentType, httpRes.statusCode()) {{
             updateDomainContactPrivacyResponse = null;
             invalidInput = null;
             duplicateRequest = null;
@@ -2567,8 +2512,6 @@ public class SDK {
             operationLimitExceeded = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2651,7 +2594,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDomainNameserversResponse res = new org.openapis.openapi.models.operations.UpdateDomainNameserversResponse() {{
+        org.openapis.openapi.models.operations.UpdateDomainNameserversResponse res = new org.openapis.openapi.models.operations.UpdateDomainNameserversResponse(contentType, httpRes.statusCode()) {{
             updateDomainNameserversResponse = null;
             invalidInput = null;
             duplicateRequest = null;
@@ -2659,8 +2602,6 @@ public class SDK {
             operationLimitExceeded = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2743,14 +2684,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTagsForDomainResponse res = new org.openapis.openapi.models.operations.UpdateTagsForDomainResponse() {{
+        org.openapis.openapi.models.operations.UpdateTagsForDomainResponse res = new org.openapis.openapi.models.operations.UpdateTagsForDomainResponse(contentType, httpRes.statusCode()) {{
             updateTagsForDomainResponse = null;
             invalidInput = null;
             operationLimitExceeded = null;
             unsupportedTLD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2825,12 +2764,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ViewBillingResponse res = new org.openapis.openapi.models.operations.ViewBillingResponse() {{
+        org.openapis.openapi.models.operations.ViewBillingResponse res = new org.openapis.openapi.models.operations.ViewBillingResponse(contentType, httpRes.statusCode()) {{
             viewBillingResponse = null;
             invalidInput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

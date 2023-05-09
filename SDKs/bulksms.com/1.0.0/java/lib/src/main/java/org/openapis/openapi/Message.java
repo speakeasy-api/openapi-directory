@@ -94,12 +94,10 @@ public class Message {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMessagesResponse res = new org.openapis.openapi.models.operations.GetMessagesResponse() {{
+        org.openapis.openapi.models.operations.GetMessagesResponse res = new org.openapis.openapi.models.operations.GetMessagesResponse(contentType, httpRes.statusCode()) {{
             messages = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -168,12 +166,10 @@ public class Message {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMessagesSendResponse res = new org.openapis.openapi.models.operations.GetMessagesSendResponse() {{
+        org.openapis.openapi.models.operations.GetMessagesSendResponse res = new org.openapis.openapi.models.operations.GetMessagesSendResponse(contentType, httpRes.statusCode()) {{
             messages = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -220,12 +216,10 @@ public class Message {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMessagesIdResponse res = new org.openapis.openapi.models.operations.GetMessagesIdResponse() {{
+        org.openapis.openapi.models.operations.GetMessagesIdResponse res = new org.openapis.openapi.models.operations.GetMessagesIdResponse(contentType, httpRes.statusCode()) {{
             message = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -272,12 +266,10 @@ public class Message {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMessagesIdRelatedReceivedMessagesResponse res = new org.openapis.openapi.models.operations.GetMessagesIdRelatedReceivedMessagesResponse() {{
+        org.openapis.openapi.models.operations.GetMessagesIdRelatedReceivedMessagesResponse res = new org.openapis.openapi.models.operations.GetMessagesIdRelatedReceivedMessagesResponse(contentType, httpRes.statusCode()) {{
             messages = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,12 +382,10 @@ public class Message {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMessagesResponse res = new org.openapis.openapi.models.operations.PostMessagesResponse() {{
+        org.openapis.openapi.models.operations.PostMessagesResponse res = new org.openapis.openapi.models.operations.PostMessagesResponse(contentType, httpRes.statusCode()) {{
             messages = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CancelAuthorizationRequest;
 import org.openapis.openapi.models.operations.CancelAuthorizationResponse;
 
@@ -26,9 +25,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CancelAuthorizationRequest req = new CancelAuthorizationRequest() {{
-                authorizationToken = "corrupti";
-            }}            
+            CancelAuthorizationRequest req = new CancelAuthorizationRequest("corrupti");            
 
             CancelAuthorizationResponse res = sdk.orders.cancelAuthorization(req);
 
@@ -38,6 +35,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -45,17 +44,17 @@ public class Application {
 ## Available Resources and Operations
 
 
-### orders
+### [orders](docs/orders/README.md)
 
-* `cancelAuthorization` - Cancel an existing authorization
-* `createOrder` - Create a new order
-* `purchaseToken` - Generate a consumer token
+* [cancelAuthorization](docs/orders/README.md#cancelauthorization) - Cancel an existing authorization
+* [createOrder](docs/orders/README.md#createorder) - Create a new order
+* [purchaseToken](docs/orders/README.md#purchasetoken) - Generate a consumer token
 
-### sessions
+### [sessions](docs/sessions/README.md)
 
-* `createCreditSession` - Create a new payment session
-* `readCreditSession` - Read an existing payment session
-* `updateCreditSession` - Update an existing payment session
+* [createCreditSession](docs/sessions/README.md#createcreditsession) - Create a new payment session
+* [readCreditSession](docs/sessions/README.md#readcreditsession) - Read an existing payment session
+* [updateCreditSession](docs/sessions/README.md#updatecreditsession) - Update an existing payment session
 <!-- End SDK Available Operations -->
 
 ### Maturity

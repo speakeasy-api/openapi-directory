@@ -18,6 +18,7 @@ public class UserFacingMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultMessage")
     public String defaultMessage;
+
     public UserFacingMessage withDefaultMessage(String defaultMessage) {
         this.defaultMessage = defaultMessage;
         return this;
@@ -29,9 +30,11 @@ public class UserFacingMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizedMessages")
     public java.util.Map<String, String> localizedMessages;
+
     public UserFacingMessage withLocalizedMessages(java.util.Map<String, String> localizedMessages) {
         this.localizedMessages = localizedMessages;
         return this;
     }
     
+    public UserFacingMessage(){}
 }

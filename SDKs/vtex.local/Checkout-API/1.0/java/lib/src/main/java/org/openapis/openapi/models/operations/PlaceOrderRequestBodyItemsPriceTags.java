@@ -15,6 +15,7 @@ public class PlaceOrderRequestBodyItemsPriceTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public PlaceOrderRequestBodyItemsPriceTags withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrderRequestBodyItemsPriceTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPercentual")
     public Boolean isPercentual;
+
     public PlaceOrderRequestBodyItemsPriceTags withIsPercentual(Boolean isPercentual) {
         this.isPercentual = isPercentual;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrderRequestBodyItemsPriceTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlaceOrderRequestBodyItemsPriceTags withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class PlaceOrderRequestBodyItemsPriceTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawValue")
     public Long rawValue;
+
     public PlaceOrderRequestBodyItemsPriceTags withRawValue(Long rawValue) {
         this.rawValue = rawValue;
         return this;
@@ -59,9 +63,11 @@ public class PlaceOrderRequestBodyItemsPriceTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public PlaceOrderRequestBodyItemsPriceTags withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public PlaceOrderRequestBodyItemsPriceTags(){}
 }

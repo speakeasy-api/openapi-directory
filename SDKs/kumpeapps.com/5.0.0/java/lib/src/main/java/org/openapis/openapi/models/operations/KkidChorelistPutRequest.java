@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidChorelistPutRequest {
@@ -12,6 +13,7 @@ public class KkidChorelistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=altitude")
     public Long altitude;
+
     public KkidChorelistPutRequest withAltitude(Long altitude) {
         this.altitude = altitude;
         return this;
@@ -22,6 +24,7 @@ public class KkidChorelistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idChoreList")
     public Long idChoreList;
+
     public KkidChorelistPutRequest withIdChoreList(Long idChoreList) {
         this.idChoreList = idChoreList;
         return this;
@@ -32,6 +35,7 @@ public class KkidChorelistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
     public Long latitude;
+
     public KkidChorelistPutRequest withLatitude(Long latitude) {
         this.latitude = latitude;
         return this;
@@ -42,6 +46,7 @@ public class KkidChorelistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
     public Long longitude;
+
     public KkidChorelistPutRequest withLongitude(Long longitude) {
         this.longitude = longitude;
         return this;
@@ -52,6 +57,7 @@ public class KkidChorelistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nfcTag")
     public String nfcTag;
+
     public KkidChorelistPutRequest withNfcTag(String nfcTag) {
         this.nfcTag = nfcTag;
         return this;
@@ -62,6 +68,7 @@ public class KkidChorelistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=notes")
     public String notes;
+
     public KkidChorelistPutRequest withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -72,6 +79,7 @@ public class KkidChorelistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public KkidChorelistPutRequest withStatus(String status) {
         this.status = status;
         return this;
@@ -82,6 +90,7 @@ public class KkidChorelistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stolen")
     public Boolean stolen;
+
     public KkidChorelistPutRequest withStolen(Boolean stolen) {
         this.stolen = stolen;
         return this;
@@ -92,6 +101,7 @@ public class KkidChorelistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stolenBy")
     public String stolenBy;
+
     public KkidChorelistPutRequest withStolenBy(String stolenBy) {
         this.stolenBy = stolenBy;
         return this;
@@ -102,6 +112,7 @@ public class KkidChorelistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedByAutomation")
     public Boolean updatedByAutomation;
+
     public KkidChorelistPutRequest withUpdatedByAutomation(Boolean updatedByAutomation) {
         this.updatedByAutomation = updatedByAutomation;
         return this;
@@ -112,6 +123,7 @@ public class KkidChorelistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=whereDay")
     public KkidChorelistPutWhereDayEnum whereDay;
+
     public KkidChorelistPutRequest withWhereDay(KkidChorelistPutWhereDayEnum whereDay) {
         this.whereDay = whereDay;
         return this;
@@ -122,6 +134,7 @@ public class KkidChorelistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=whereName")
     public String whereName;
+
     public KkidChorelistPutRequest withWhereName(String whereName) {
         this.whereName = whereName;
         return this;
@@ -132,9 +145,13 @@ public class KkidChorelistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=whereStatus")
     public String whereStatus;
+
     public KkidChorelistPutRequest withWhereStatus(String whereStatus) {
         this.whereStatus = whereStatus;
         return this;
     }
     
+    public KkidChorelistPutRequest(@JsonProperty("idChoreList") Long idChoreList) {
+        this.idChoreList = idChoreList;
+  }
 }

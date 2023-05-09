@@ -15,9 +15,11 @@ public class StartOnDemandReplicationRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationRunId")
     public String replicationRunId;
+
     public StartOnDemandReplicationRunResponse withReplicationRunId(String replicationRunId) {
         this.replicationRunId = replicationRunId;
         return this;
     }
     
+    public StartOnDemandReplicationRunResponse(){}
 }

@@ -15,9 +15,11 @@ public class PutEncryptionConfigResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfig")
     public EncryptionConfig encryptionConfig;
+
     public PutEncryptionConfigResult withEncryptionConfig(EncryptionConfig encryptionConfig) {
         this.encryptionConfig = encryptionConfig;
         return this;
     }
     
+    public PutEncryptionConfigResult(){}
 }

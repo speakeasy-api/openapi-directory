@@ -12,6 +12,7 @@ public class GetSetupV1CompaniesRegionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetSetupV1CompaniesRegionsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -22,9 +23,11 @@ public class GetSetupV1CompaniesRegionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetSetupV1CompaniesRegionsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetSetupV1CompaniesRegionsRequest(){}
 }

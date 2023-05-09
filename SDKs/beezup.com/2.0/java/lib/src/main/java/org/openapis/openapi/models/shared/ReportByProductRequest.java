@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ReportByProductRequest {
     @JsonProperty("advancedFilters")
     public ReportAdvancedFilters advancedFilters;
+
     public ReportByProductRequest withAdvancedFilters(ReportAdvancedFilters advancedFilters) {
         this.advancedFilters = advancedFilters;
         return this;
@@ -27,6 +28,7 @@ public class ReportByProductRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analyticsProductColumnFilters")
     public AnalyticsProductColumnFilters analyticsProductColumnFilters;
+
     public ReportByProductRequest withAnalyticsProductColumnFilters(AnalyticsProductColumnFilters analyticsProductColumnFilters) {
         this.analyticsProductColumnFilters = analyticsProductColumnFilters;
         return this;
@@ -39,6 +41,7 @@ public class ReportByProductRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("beginPeriodUtcDate")
     public OffsetDateTime beginPeriodUtcDate;
+
     public ReportByProductRequest withBeginPeriodUtcDate(OffsetDateTime beginPeriodUtcDate) {
         this.beginPeriodUtcDate = beginPeriodUtcDate;
         return this;
@@ -47,6 +50,7 @@ public class ReportByProductRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryFilter")
     public BeezUPCommonCatalogCategoryFilter categoryFilter;
+
     public ReportByProductRequest withCategoryFilter(BeezUPCommonCatalogCategoryFilter categoryFilter) {
         this.categoryFilter = categoryFilter;
         return this;
@@ -58,6 +62,7 @@ public class ReportByProductRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelId")
     public String channelId;
+
     public ReportByProductRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -70,6 +75,7 @@ public class ReportByProductRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endPeriodUtcDate")
     public OffsetDateTime endPeriodUtcDate;
+
     public ReportByProductRequest withEndPeriodUtcDate(OffsetDateTime endPeriodUtcDate) {
         this.endPeriodUtcDate = endPeriodUtcDate;
         return this;
@@ -81,6 +87,7 @@ public class ReportByProductRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public PerformanceIndicatorTypeEnum orderBy;
+
     public ReportByProductRequest withOrderBy(PerformanceIndicatorTypeEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -92,6 +99,7 @@ public class ReportByProductRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderByDirection")
     public OrderByDirectionEnum orderByDirection;
+
     public ReportByProductRequest withOrderByDirection(OrderByDirectionEnum orderByDirection) {
         this.orderByDirection = orderByDirection;
         return this;
@@ -103,6 +111,7 @@ public class ReportByProductRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageNumber")
     public Integer pageNumber;
+
     public ReportByProductRequest withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -114,6 +123,7 @@ public class ReportByProductRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public ReportByProductRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -122,6 +132,7 @@ public class ReportByProductRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceIndicatorFilters")
     public PerformanceIndicatorFilter[] performanceIndicatorFilters;
+
     public ReportByProductRequest withPerformanceIndicatorFilters(PerformanceIndicatorFilter[] performanceIndicatorFilters) {
         this.performanceIndicatorFilters = performanceIndicatorFilters;
         return this;
@@ -132,6 +143,7 @@ public class ReportByProductRequest {
      */
     @JsonProperty("periodType")
     public ReportFilterPeriodTypeEnum periodType;
+
     public ReportByProductRequest withPeriodType(ReportFilterPeriodTypeEnum periodType) {
         this.periodType = periodType;
         return this;
@@ -140,6 +152,7 @@ public class ReportByProductRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productColumnsToDisplay")
     public String[] productColumnsToDisplay;
+
     public ReportByProductRequest withProductColumnsToDisplay(String[] productColumnsToDisplay) {
         this.productColumnsToDisplay = productColumnsToDisplay;
         return this;
@@ -150,9 +163,17 @@ public class ReportByProductRequest {
      */
     @JsonProperty("productState")
     public ProductStateFilterEnum productState;
+
     public ReportByProductRequest withProductState(ProductStateFilterEnum productState) {
         this.productState = productState;
         return this;
     }
     
+    public ReportByProductRequest(@JsonProperty("advancedFilters") ReportAdvancedFilters advancedFilters, @JsonProperty("beginPeriodUtcDate") OffsetDateTime beginPeriodUtcDate, @JsonProperty("endPeriodUtcDate") OffsetDateTime endPeriodUtcDate, @JsonProperty("periodType") ReportFilterPeriodTypeEnum periodType, @JsonProperty("productState") ProductStateFilterEnum productState) {
+        this.advancedFilters = advancedFilters;
+        this.beginPeriodUtcDate = beginPeriodUtcDate;
+        this.endPeriodUtcDate = endPeriodUtcDate;
+        this.periodType = periodType;
+        this.productState = productState;
+  }
 }

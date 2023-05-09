@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcEndpointConnectionNotificationsRequest {
     
     public String connectionNotificationId;
+
     public DescribeVpcEndpointConnectionNotificationsRequest withConnectionNotificationId(String connectionNotificationId) {
         this.connectionNotificationId = connectionNotificationId;
         return this;
@@ -16,6 +17,7 @@ public class DescribeVpcEndpointConnectionNotificationsRequest {
     
     
     public Boolean dryRun;
+
     public DescribeVpcEndpointConnectionNotificationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class DescribeVpcEndpointConnectionNotificationsRequest {
     
     
     public DescribeVpcEndpointConnectionNotificationsRequestFilters[] filters;
+
     public DescribeVpcEndpointConnectionNotificationsRequest withFilters(DescribeVpcEndpointConnectionNotificationsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class DescribeVpcEndpointConnectionNotificationsRequest {
     
     
     public Long maxResults;
+
     public DescribeVpcEndpointConnectionNotificationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeVpcEndpointConnectionNotificationsRequest {
     
     
     public String nextToken;
+
     public DescribeVpcEndpointConnectionNotificationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeVpcEndpointConnectionNotificationsRequest(){}
 }

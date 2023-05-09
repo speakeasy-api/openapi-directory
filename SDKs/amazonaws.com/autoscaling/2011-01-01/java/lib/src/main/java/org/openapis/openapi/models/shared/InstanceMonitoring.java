@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class InstanceMonitoring {
     
     public Boolean enabled;
+
     public InstanceMonitoring withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public InstanceMonitoring(){}
 }

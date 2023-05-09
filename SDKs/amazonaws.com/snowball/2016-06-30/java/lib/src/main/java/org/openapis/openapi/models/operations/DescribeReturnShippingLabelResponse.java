@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeReturnShippingLabelResponse {
@@ -12,6 +13,7 @@ public class DescribeReturnShippingLabelResponse {
      */
     
     public Object conflictException;
+
     public DescribeReturnShippingLabelResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeReturnShippingLabelResponse {
     
     
     public String contentType;
+
     public DescribeReturnShippingLabelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeReturnShippingLabelResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeReturnShippingLabelResult describeReturnShippingLabelResult;
+
     public DescribeReturnShippingLabelResponse withDescribeReturnShippingLabelResult(org.openapis.openapi.models.shared.DescribeReturnShippingLabelResult describeReturnShippingLabelResult) {
         this.describeReturnShippingLabelResult = describeReturnShippingLabelResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeReturnShippingLabelResponse {
      */
     
     public Object invalidJobStateException;
+
     public DescribeReturnShippingLabelResponse withInvalidJobStateException(Object invalidJobStateException) {
         this.invalidJobStateException = invalidJobStateException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeReturnShippingLabelResponse {
      */
     
     public Object invalidResourceException;
+
     public DescribeReturnShippingLabelResponse withInvalidResourceException(Object invalidResourceException) {
         this.invalidResourceException = invalidResourceException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeReturnShippingLabelResponse {
     
     
     public Integer statusCode;
+
     public DescribeReturnShippingLabelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeReturnShippingLabelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeReturnShippingLabelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeReturnShippingLabelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

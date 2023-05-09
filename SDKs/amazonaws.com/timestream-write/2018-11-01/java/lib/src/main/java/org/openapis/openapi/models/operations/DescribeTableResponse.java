@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTableResponse {
@@ -12,6 +13,7 @@ public class DescribeTableResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeTableResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTableResponse {
     
     
     public String contentType;
+
     public DescribeTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTableResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTableResponse describeTableResponse;
+
     public DescribeTableResponse withDescribeTableResponse(org.openapis.openapi.models.shared.DescribeTableResponse describeTableResponse) {
         this.describeTableResponse = describeTableResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeTableResponse {
      */
     
     public Object internalServerException;
+
     public DescribeTableResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeTableResponse {
      */
     
     public Object invalidEndpointException;
+
     public DescribeTableResponse withInvalidEndpointException(Object invalidEndpointException) {
         this.invalidEndpointException = invalidEndpointException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeTableResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeTableResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeTableResponse {
     
     
     public Integer statusCode;
+
     public DescribeTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeTableResponse {
      */
     
     public Object throttlingException;
+
     public DescribeTableResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeTableResponse {
      */
     
     public Object validationException;
+
     public DescribeTableResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

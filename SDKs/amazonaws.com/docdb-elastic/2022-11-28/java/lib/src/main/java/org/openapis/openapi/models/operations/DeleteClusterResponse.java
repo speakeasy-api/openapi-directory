@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteClusterResponse {
@@ -12,6 +13,7 @@ public class DeleteClusterResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteClusterResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteClusterResponse {
      */
     
     public Object conflictException;
+
     public DeleteClusterResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteClusterResponse {
     
     
     public String contentType;
+
     public DeleteClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteClusterOutput deleteClusterOutput;
+
     public DeleteClusterResponse withDeleteClusterOutput(org.openapis.openapi.models.shared.DeleteClusterOutput deleteClusterOutput) {
         this.deleteClusterOutput = deleteClusterOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteClusterResponse {
      */
     
     public Object internalServerException;
+
     public DeleteClusterResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteClusterResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteClusterResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteClusterResponse {
     
     
     public Integer statusCode;
+
     public DeleteClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteClusterResponse {
      */
     
     public Object throttlingException;
+
     public DeleteClusterResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteClusterResponse {
      */
     
     public Object validationException;
+
     public DeleteClusterResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

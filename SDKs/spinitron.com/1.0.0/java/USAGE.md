@@ -3,9 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetPersonasRequest;
 import org.openapis.openapi.models.operations.GetPersonasResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class Application {
                 .build();
 
             GetPersonasRequest req = new GetPersonasRequest() {{
-                count = 548814;
+                count = 548814L;
                 expand = new String[]{{
                     add("distinctio"),
                     add("quibusdam"),
@@ -29,17 +29,19 @@ public class Application {
                     add("vel"),
                     add("error"),
                 }};
-                name = "deserunt";
-                page = 384382;
-            }}            
+                name = "Rick Kertzmann";
+                page = 56713L;
+            }};            
 
             GetPersonasResponse res = sdk.persona.getPersonas(req);
 
-            if (res.getPersonas200ApplicationJSONObject.isPresent()) {
+            if (res.getPersonas200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

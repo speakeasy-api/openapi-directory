@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupsGroupIdPermissionsRequest {
@@ -12,6 +13,7 @@ public class GetGroupsGroupIdPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetGroupsGroupIdPermissionsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,58 +24,20 @@ public class GetGroupsGroupIdPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public java.util.Map<String, Object> filter;
+
     public GetGroupsGroupIdPermissionsRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
+     * If set, return records where the specified field is prefixed by the supplied value. Valid fields are `path`.
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gt")
-    public java.util.Map<String, Object> filterGt;
-    public GetGroupsGroupIdPermissionsRequest withFilterGt(java.util.Map<String, Object> filterGt) {
-        this.filterGt = filterGt;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gteq")
-    public java.util.Map<String, Object> filterGteq;
-    public GetGroupsGroupIdPermissionsRequest withFilterGteq(java.util.Map<String, Object> filterGteq) {
-        this.filterGteq = filterGteq;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_like")
-    public java.util.Map<String, Object> filterLike;
-    public GetGroupsGroupIdPermissionsRequest withFilterLike(java.util.Map<String, Object> filterLike) {
-        this.filterLike = filterLike;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lt")
-    public java.util.Map<String, Object> filterLt;
-    public GetGroupsGroupIdPermissionsRequest withFilterLt(java.util.Map<String, Object> filterLt) {
-        this.filterLt = filterLt;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lteq")
-    public java.util.Map<String, Object> filterLteq;
-    public GetGroupsGroupIdPermissionsRequest withFilterLteq(java.util.Map<String, Object> filterLteq) {
-        this.filterLteq = filterLteq;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_prefix")
+    public java.util.Map<String, Object> filterPrefix;
+
+    public GetGroupsGroupIdPermissionsRequest withFilterPrefix(java.util.Map<String, Object> filterPrefix) {
+        this.filterPrefix = filterPrefix;
         return this;
     }
     
@@ -82,6 +46,7 @@ public class GetGroupsGroupIdPermissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
     public String groupId;
+
     public GetGroupsGroupIdPermissionsRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -92,6 +57,7 @@ public class GetGroupsGroupIdPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_groups")
     public Boolean includeGroups;
+
     public GetGroupsGroupIdPermissionsRequest withIncludeGroups(Boolean includeGroups) {
         this.includeGroups = includeGroups;
         return this;
@@ -102,6 +68,7 @@ public class GetGroupsGroupIdPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
     public String path;
+
     public GetGroupsGroupIdPermissionsRequest withPath(String path) {
         this.path = path;
         return this;
@@ -112,6 +79,7 @@ public class GetGroupsGroupIdPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetGroupsGroupIdPermissionsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -122,6 +90,7 @@ public class GetGroupsGroupIdPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public GetGroupsGroupIdPermissionsRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -132,9 +101,13 @@ public class GetGroupsGroupIdPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public String userId;
+
     public GetGroupsGroupIdPermissionsRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetGroupsGroupIdPermissionsRequest(@JsonProperty("group_id") String groupId) {
+        this.groupId = groupId;
+  }
 }

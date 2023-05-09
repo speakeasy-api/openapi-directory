@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class BatchDeleteClusterSnapshotsResult {
     
     public BatchSnapshotOperationErrorList[] errors;
+
     public BatchDeleteClusterSnapshotsResult withErrors(BatchSnapshotOperationErrorList[] errors) {
         this.errors = errors;
         return this;
@@ -19,9 +20,11 @@ public class BatchDeleteClusterSnapshotsResult {
     
     
     public String[] resources;
+
     public BatchDeleteClusterSnapshotsResult withResources(String[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public BatchDeleteClusterSnapshotsResult(){}
 }

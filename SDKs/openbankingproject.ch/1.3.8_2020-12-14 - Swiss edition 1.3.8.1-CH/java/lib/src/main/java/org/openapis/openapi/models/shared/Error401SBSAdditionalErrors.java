@@ -17,6 +17,7 @@ public class Error401SBSAdditionalErrors {
      */
     @JsonProperty("code")
     public MessageCode401SBSEnum code;
+
     public Error401SBSAdditionalErrors withCode(MessageCode401SBSEnum code) {
         this.code = code;
         return this;
@@ -31,6 +32,7 @@ public class Error401SBSAdditionalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error401SBSAdditionalErrors withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -45,9 +47,13 @@ public class Error401SBSAdditionalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error401SBSAdditionalErrors withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Error401SBSAdditionalErrors(@JsonProperty("code") MessageCode401SBSEnum code) {
+        this.code = code;
+  }
 }

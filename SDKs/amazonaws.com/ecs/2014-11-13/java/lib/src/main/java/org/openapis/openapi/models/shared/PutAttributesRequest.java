@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutAttributesRequest {
     @JsonProperty("attributes")
     public Attribute[] attributes;
+
     public PutAttributesRequest withAttributes(Attribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -19,9 +20,13 @@ public class PutAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public PutAttributesRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
     }
     
+    public PutAttributesRequest(@JsonProperty("attributes") Attribute[] attributes) {
+        this.attributes = attributes;
+  }
 }

@@ -21,6 +21,7 @@ public class CreateCustomerGroupRequest {
      */
     @JsonProperty("group")
     public CustomerGroup group;
+
     public CreateCustomerGroupRequest withGroup(CustomerGroup group) {
         this.group = group;
         return this;
@@ -32,9 +33,13 @@ public class CreateCustomerGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateCustomerGroupRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
     }
     
+    public CreateCustomerGroupRequest(@JsonProperty("group") CustomerGroup group) {
+        this.group = group;
+  }
 }

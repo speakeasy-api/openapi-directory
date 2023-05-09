@@ -18,9 +18,11 @@ public class EstimationUriApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Link")
     public String link;
+
     public EstimationUriApiModel withLink(String link) {
         this.link = link;
         return this;
     }
     
+    public EstimationUriApiModel(){}
 }

@@ -18,6 +18,7 @@ public class CelebritiesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Double confidence;
+
     public CelebritiesModel withConfidence(Double confidence) {
         this.confidence = confidence;
         return this;
@@ -29,6 +30,7 @@ public class CelebritiesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("faceRectangle")
     public FaceRectangle faceRectangle;
+
     public CelebritiesModel withFaceRectangle(FaceRectangle faceRectangle) {
         this.faceRectangle = faceRectangle;
         return this;
@@ -40,9 +42,11 @@ public class CelebritiesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CelebritiesModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CelebritiesModel(){}
 }

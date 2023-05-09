@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NetworkUnblockResponse {
     
     public String contentType;
+
     public NetworkUnblockResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class NetworkUnblockResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorThrottled errorThrottled;
+
     public NetworkUnblockResponse withErrorThrottled(org.openapis.openapi.models.shared.ErrorThrottled errorThrottled) {
         this.errorThrottled = errorThrottled;
         return this;
@@ -26,6 +29,7 @@ public class NetworkUnblockResponse {
     
     
     public Integer statusCode;
+
     public NetworkUnblockResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class NetworkUnblockResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NetworkUnblockResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class NetworkUnblockResponse {
      */
     
     public org.openapis.openapi.models.shared.NetworkUnblockResponseForbidden networkUnblockResponseForbidden;
+
     public NetworkUnblockResponse withNetworkUnblockResponseForbidden(org.openapis.openapi.models.shared.NetworkUnblockResponseForbidden networkUnblockResponseForbidden) {
         this.networkUnblockResponseForbidden = networkUnblockResponseForbidden;
         return this;
@@ -53,6 +59,7 @@ public class NetworkUnblockResponse {
      */
     
     public org.openapis.openapi.models.shared.NetworkUnblockResponseNotFound networkUnblockResponseNotFound;
+
     public NetworkUnblockResponse withNetworkUnblockResponseNotFound(org.openapis.openapi.models.shared.NetworkUnblockResponseNotFound networkUnblockResponseNotFound) {
         this.networkUnblockResponseNotFound = networkUnblockResponseNotFound;
         return this;
@@ -63,6 +70,7 @@ public class NetworkUnblockResponse {
      */
     
     public org.openapis.openapi.models.shared.NetworkUnblockResponseOk networkUnblockResponseOk;
+
     public NetworkUnblockResponse withNetworkUnblockResponseOk(org.openapis.openapi.models.shared.NetworkUnblockResponseOk networkUnblockResponseOk) {
         this.networkUnblockResponseOk = networkUnblockResponseOk;
         return this;
@@ -73,9 +81,14 @@ public class NetworkUnblockResponse {
      */
     
     public Object networkUnblock422ApplicationJSONOneOf;
+
     public NetworkUnblockResponse withNetworkUnblock422ApplicationJSONOneOf(Object networkUnblock422ApplicationJSONOneOf) {
         this.networkUnblock422ApplicationJSONOneOf = networkUnblock422ApplicationJSONOneOf;
         return this;
     }
     
+    public NetworkUnblockResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

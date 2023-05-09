@@ -15,6 +15,7 @@ public class GetStagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public Stage[] items;
+
     public GetStagesResponse withItems(Stage[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class GetStagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetStagesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetStagesResponse(){}
 }

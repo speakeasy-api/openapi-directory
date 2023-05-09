@@ -12,9 +12,11 @@ public class DescribeEventBusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeEventBusRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DescribeEventBusRequest(){}
 }

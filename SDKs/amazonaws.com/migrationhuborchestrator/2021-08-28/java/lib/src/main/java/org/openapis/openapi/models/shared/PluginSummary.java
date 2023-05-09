@@ -15,6 +15,7 @@ public class PluginSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public PluginSummary withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -23,6 +24,7 @@ public class PluginSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public PluginSummary withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -31,6 +33,7 @@ public class PluginSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pluginId")
     public String pluginId;
+
     public PluginSummary withPluginId(String pluginId) {
         this.pluginId = pluginId;
         return this;
@@ -39,6 +42,7 @@ public class PluginSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registeredTime")
     public String registeredTime;
+
     public PluginSummary withRegisteredTime(String registeredTime) {
         this.registeredTime = registeredTime;
         return this;
@@ -47,6 +51,7 @@ public class PluginSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PluginHealthEnum status;
+
     public PluginSummary withStatus(PluginHealthEnum status) {
         this.status = status;
         return this;
@@ -55,9 +60,11 @@ public class PluginSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public PluginSummary withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public PluginSummary(){}
 }

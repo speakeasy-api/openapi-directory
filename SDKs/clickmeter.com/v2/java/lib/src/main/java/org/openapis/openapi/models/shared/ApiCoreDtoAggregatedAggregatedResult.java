@@ -15,6 +15,7 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityDay")
     public String activityDay;
+
     public ApiCoreDtoAggregatedAggregatedResult withActivityDay(String activityDay) {
         this.activityDay = activityDay;
         return this;
@@ -23,6 +24,7 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commissionsCost")
     public Double commissionsCost;
+
     public ApiCoreDtoAggregatedAggregatedResult withCommissionsCost(Double commissionsCost) {
         this.commissionsCost = commissionsCost;
         return this;
@@ -31,6 +33,7 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionsCost")
     public Double conversionsCost;
+
     public ApiCoreDtoAggregatedAggregatedResult withConversionsCost(Double conversionsCost) {
         this.conversionsCost = conversionsCost;
         return this;
@@ -39,6 +42,7 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionsValue")
     public Double conversionsValue;
+
     public ApiCoreDtoAggregatedAggregatedResult withConversionsValue(Double conversionsValue) {
         this.conversionsValue = conversionsValue;
         return this;
@@ -47,6 +51,7 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("convertedClicks")
     public Long convertedClicks;
+
     public ApiCoreDtoAggregatedAggregatedResult withConvertedClicks(Long convertedClicks) {
         this.convertedClicks = convertedClicks;
         return this;
@@ -55,6 +60,7 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityData")
     public java.util.Map<String, Object> entityData;
+
     public ApiCoreDtoAggregatedAggregatedResult withEntityData(java.util.Map<String, Object> entityData) {
         this.entityData = entityData;
         return this;
@@ -63,6 +69,7 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityId")
     public String entityId;
+
     public ApiCoreDtoAggregatedAggregatedResult withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -74,6 +81,7 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromDay")
     public String fromDay;
+
     public ApiCoreDtoAggregatedAggregatedResult withFromDay(String fromDay) {
         this.fromDay = fromDay;
         return this;
@@ -82,6 +90,7 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hourlyBreakDown")
     public java.util.Map<String, ApiCoreDtoAggregatedAggregatedResult> hourlyBreakDown;
+
     public ApiCoreDtoAggregatedAggregatedResult withHourlyBreakDown(java.util.Map<String, ApiCoreDtoAggregatedAggregatedResult> hourlyBreakDown) {
         this.hourlyBreakDown = hourlyBreakDown;
         return this;
@@ -93,6 +102,7 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastHitDate")
     public String lastHitDate;
+
     public ApiCoreDtoAggregatedAggregatedResult withLastHitDate(String lastHitDate) {
         this.lastHitDate = lastHitDate;
         return this;
@@ -101,6 +111,7 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spiderHitsCount")
     public Long spiderHitsCount;
+
     public ApiCoreDtoAggregatedAggregatedResult withSpiderHitsCount(Long spiderHitsCount) {
         this.spiderHitsCount = spiderHitsCount;
         return this;
@@ -112,6 +123,7 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toDay")
     public String toDay;
+
     public ApiCoreDtoAggregatedAggregatedResult withToDay(String toDay) {
         this.toDay = toDay;
         return this;
@@ -120,6 +132,7 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalClicks")
     public Long totalClicks;
+
     public ApiCoreDtoAggregatedAggregatedResult withTotalClicks(Long totalClicks) {
         this.totalClicks = totalClicks;
         return this;
@@ -128,6 +141,7 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalViews")
     public Long totalViews;
+
     public ApiCoreDtoAggregatedAggregatedResult withTotalViews(Long totalViews) {
         this.totalViews = totalViews;
         return this;
@@ -136,6 +150,7 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniqueClicks")
     public Long uniqueClicks;
+
     public ApiCoreDtoAggregatedAggregatedResult withUniqueClicks(Long uniqueClicks) {
         this.uniqueClicks = uniqueClicks;
         return this;
@@ -144,6 +159,7 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniqueConversions")
     public Long uniqueConversions;
+
     public ApiCoreDtoAggregatedAggregatedResult withUniqueConversions(Long uniqueConversions) {
         this.uniqueConversions = uniqueConversions;
         return this;
@@ -152,9 +168,11 @@ public class ApiCoreDtoAggregatedAggregatedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniqueViews")
     public Long uniqueViews;
+
     public ApiCoreDtoAggregatedAggregatedResult withUniqueViews(Long uniqueViews) {
         this.uniqueViews = uniqueViews;
         return this;
     }
     
+    public ApiCoreDtoAggregatedAggregatedResult(){}
 }

@@ -15,6 +15,7 @@ public class ListApiKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKeys")
     public ApiKey[] apiKeys;
+
     public ListApiKeysResponse withApiKeys(ApiKey[] apiKeys) {
         this.apiKeys = apiKeys;
         return this;
@@ -23,9 +24,11 @@ public class ListApiKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListApiKeysResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListApiKeysResponse(){}
 }

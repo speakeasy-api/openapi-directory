@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReferencesCitiesByCityCodeGetRequest {
@@ -12,6 +13,7 @@ public class ReferencesCitiesByCityCodeGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ReferencesCitiesByCityCodeGetRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ReferencesCitiesByCityCodeGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cityCode")
     public String cityCode;
+
     public ReferencesCitiesByCityCodeGetRequest withCityCode(String cityCode) {
         this.cityCode = cityCode;
         return this;
@@ -32,6 +35,7 @@ public class ReferencesCitiesByCityCodeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public ReferencesCitiesByCityCodeGetRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -42,6 +46,7 @@ public class ReferencesCitiesByCityCodeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public ReferencesCitiesByCityCodeGetRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -52,9 +57,14 @@ public class ReferencesCitiesByCityCodeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public ReferencesCitiesByCityCodeGetRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public ReferencesCitiesByCityCodeGetRequest(@JsonProperty("Accept") String accept, @JsonProperty("cityCode") String cityCode) {
+        this.accept = accept;
+        this.cityCode = cityCode;
+  }
 }

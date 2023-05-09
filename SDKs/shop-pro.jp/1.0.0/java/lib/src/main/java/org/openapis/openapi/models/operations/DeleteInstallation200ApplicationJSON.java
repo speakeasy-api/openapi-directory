@@ -18,6 +18,7 @@ public class DeleteInstallation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     public String accountId;
+
     public DeleteInstallation200ApplicationJSON withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class DeleteInstallation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_charge_source_id")
     public String applicationChargeSourceId;
+
     public DeleteInstallation200ApplicationJSON withApplicationChargeSourceId(String applicationChargeSourceId) {
         this.applicationChargeSourceId = applicationChargeSourceId;
         return this;
@@ -40,6 +42,7 @@ public class DeleteInstallation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurring_application_charge_id")
     public String recurringApplicationChargeId;
+
     public DeleteInstallation200ApplicationJSON withRecurringApplicationChargeId(String recurringApplicationChargeId) {
         this.recurringApplicationChargeId = recurringApplicationChargeId;
         return this;
@@ -51,6 +54,7 @@ public class DeleteInstallation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uninstalled_at")
     public Long uninstalledAt;
+
     public DeleteInstallation200ApplicationJSON withUninstalledAt(Long uninstalledAt) {
         this.uninstalledAt = uninstalledAt;
         return this;
@@ -62,9 +66,11 @@ public class DeleteInstallation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage_charge")
     public DeleteInstallation200ApplicationJSONUsageCharge usageCharge;
+
     public DeleteInstallation200ApplicationJSON withUsageCharge(DeleteInstallation200ApplicationJSONUsageCharge usageCharge) {
         this.usageCharge = usageCharge;
         return this;
     }
     
+    public DeleteInstallation200ApplicationJSON(){}
 }

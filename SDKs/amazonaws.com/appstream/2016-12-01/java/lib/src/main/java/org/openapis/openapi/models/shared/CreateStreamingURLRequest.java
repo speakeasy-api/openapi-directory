@@ -12,6 +12,7 @@ public class CreateStreamingURLRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public CreateStreamingURLRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -19,6 +20,7 @@ public class CreateStreamingURLRequest {
     
     @JsonProperty("FleetName")
     public String fleetName;
+
     public CreateStreamingURLRequest withFleetName(String fleetName) {
         this.fleetName = fleetName;
         return this;
@@ -27,6 +29,7 @@ public class CreateStreamingURLRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionContext")
     public String sessionContext;
+
     public CreateStreamingURLRequest withSessionContext(String sessionContext) {
         this.sessionContext = sessionContext;
         return this;
@@ -34,6 +37,7 @@ public class CreateStreamingURLRequest {
     
     @JsonProperty("StackName")
     public String stackName;
+
     public CreateStreamingURLRequest withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -41,6 +45,7 @@ public class CreateStreamingURLRequest {
     
     @JsonProperty("UserId")
     public String userId;
+
     public CreateStreamingURLRequest withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -49,9 +54,15 @@ public class CreateStreamingURLRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Validity")
     public Long validity;
+
     public CreateStreamingURLRequest withValidity(Long validity) {
         this.validity = validity;
         return this;
     }
     
+    public CreateStreamingURLRequest(@JsonProperty("FleetName") String fleetName, @JsonProperty("StackName") String stackName, @JsonProperty("UserId") String userId) {
+        this.fleetName = fleetName;
+        this.stackName = stackName;
+        this.userId = userId;
+  }
 }

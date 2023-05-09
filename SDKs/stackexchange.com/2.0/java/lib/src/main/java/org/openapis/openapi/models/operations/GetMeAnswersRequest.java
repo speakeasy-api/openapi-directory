@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMeAnswersRequest {
@@ -13,6 +14,7 @@ public class GetMeAnswersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetMeAnswersRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetMeAnswersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetMeAnswersRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -63,6 +66,7 @@ public class GetMeAnswersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public Long fromdate;
+
     public GetMeAnswersRequest withFromdate(Long fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -76,6 +80,7 @@ public class GetMeAnswersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public String max;
+
     public GetMeAnswersRequest withMax(String max) {
         this.max = max;
         return this;
@@ -89,6 +94,7 @@ public class GetMeAnswersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min")
     public String min;
+
     public GetMeAnswersRequest withMin(String min) {
         this.min = min;
         return this;
@@ -96,6 +102,7 @@ public class GetMeAnswersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetMeAnswersOrderEnum order;
+
     public GetMeAnswersRequest withOrder(GetMeAnswersOrderEnum order) {
         this.order = order;
         return this;
@@ -103,6 +110,7 @@ public class GetMeAnswersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetMeAnswersRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -110,6 +118,7 @@ public class GetMeAnswersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetMeAnswersRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -121,6 +130,7 @@ public class GetMeAnswersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetMeAnswersRequest withSite(String site) {
         this.site = site;
         return this;
@@ -128,6 +138,7 @@ public class GetMeAnswersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetMeAnswersSortEnum sort;
+
     public GetMeAnswersRequest withSort(GetMeAnswersSortEnum sort) {
         this.sort = sort;
         return this;
@@ -138,9 +149,13 @@ public class GetMeAnswersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public Long todate;
+
     public GetMeAnswersRequest withTodate(Long todate) {
         this.todate = todate;
         return this;
     }
     
+    public GetMeAnswersRequest(@JsonProperty("site") String site) {
+        this.site = site;
+  }
 }

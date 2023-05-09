@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAllPayments200ApplicationJSONRootTypeForPayments {
     @JsonProperty("amount")
     public String amount;
+
     public GetAllPayments200ApplicationJSONRootTypeForPayments withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -18,6 +19,7 @@ public class GetAllPayments200ApplicationJSONRootTypeForPayments {
     
     @JsonProperty("currency")
     public String currency;
+
     public GetAllPayments200ApplicationJSONRootTypeForPayments withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -29,6 +31,7 @@ public class GetAllPayments200ApplicationJSONRootTypeForPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("investment_instructions")
     public GetAllPayments200ApplicationJSONRootTypeForPaymentsInvestmentInstructions[] investmentInstructions;
+
     public GetAllPayments200ApplicationJSONRootTypeForPayments withInvestmentInstructions(GetAllPayments200ApplicationJSONRootTypeForPaymentsInvestmentInstructions[] investmentInstructions) {
         this.investmentInstructions = investmentInstructions;
         return this;
@@ -36,6 +39,7 @@ public class GetAllPayments200ApplicationJSONRootTypeForPayments {
     
     @JsonProperty("payment_type")
     public GetAllPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum paymentType;
+
     public GetAllPayments200ApplicationJSONRootTypeForPayments withPaymentType(GetAllPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum paymentType) {
         this.paymentType = paymentType;
         return this;
@@ -43,6 +47,7 @@ public class GetAllPayments200ApplicationJSONRootTypeForPayments {
     
     @JsonProperty("pot_id")
     public String potId;
+
     public GetAllPayments200ApplicationJSONRootTypeForPayments withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -50,6 +55,7 @@ public class GetAllPayments200ApplicationJSONRootTypeForPayments {
     
     @JsonProperty("purpose")
     public GetAllPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum purpose;
+
     public GetAllPayments200ApplicationJSONRootTypeForPayments withPurpose(GetAllPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum purpose) {
         this.purpose = purpose;
         return this;
@@ -57,6 +63,7 @@ public class GetAllPayments200ApplicationJSONRootTypeForPayments {
     
     @JsonProperty("service_provider")
     public GetAllPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum serviceProvider;
+
     public GetAllPayments200ApplicationJSONRootTypeForPayments withServiceProvider(GetAllPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum serviceProvider) {
         this.serviceProvider = serviceProvider;
         return this;
@@ -68,6 +75,7 @@ public class GetAllPayments200ApplicationJSONRootTypeForPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_provider_params")
     public GetAllPayments200ApplicationJSONRootTypeForPaymentsServiceProviderParams serviceProviderParams;
+
     public GetAllPayments200ApplicationJSONRootTypeForPayments withServiceProviderParams(GetAllPayments200ApplicationJSONRootTypeForPaymentsServiceProviderParams serviceProviderParams) {
         this.serviceProviderParams = serviceProviderParams;
         return this;
@@ -84,6 +92,7 @@ public class GetAllPayments200ApplicationJSONRootTypeForPayments {
      */
     @JsonProperty("status")
     public GetAllPayments200ApplicationJSONRootTypeForPaymentsStatusEnum status;
+
     public GetAllPayments200ApplicationJSONRootTypeForPayments withStatus(GetAllPayments200ApplicationJSONRootTypeForPaymentsStatusEnum status) {
         this.status = status;
         return this;
@@ -91,9 +100,20 @@ public class GetAllPayments200ApplicationJSONRootTypeForPayments {
     
     @JsonProperty("transaction_id")
     public String transactionId;
+
     public GetAllPayments200ApplicationJSONRootTypeForPayments withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public GetAllPayments200ApplicationJSONRootTypeForPayments(@JsonProperty("amount") String amount, @JsonProperty("currency") String currency, @JsonProperty("payment_type") GetAllPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum paymentType, @JsonProperty("pot_id") String potId, @JsonProperty("purpose") GetAllPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum purpose, @JsonProperty("service_provider") GetAllPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum serviceProvider, @JsonProperty("status") GetAllPayments200ApplicationJSONRootTypeForPaymentsStatusEnum status, @JsonProperty("transaction_id") String transactionId) {
+        this.amount = amount;
+        this.currency = currency;
+        this.paymentType = paymentType;
+        this.potId = potId;
+        this.purpose = purpose;
+        this.serviceProvider = serviceProvider;
+        this.status = status;
+        this.transactionId = transactionId;
+  }
 }

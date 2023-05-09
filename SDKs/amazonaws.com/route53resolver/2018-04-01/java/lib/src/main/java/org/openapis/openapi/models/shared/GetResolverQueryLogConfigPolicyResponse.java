@@ -15,9 +15,11 @@ public class GetResolverQueryLogConfigPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverQueryLogConfigPolicy")
     public String resolverQueryLogConfigPolicy;
+
     public GetResolverQueryLogConfigPolicyResponse withResolverQueryLogConfigPolicy(String resolverQueryLogConfigPolicy) {
         this.resolverQueryLogConfigPolicy = resolverQueryLogConfigPolicy;
         return this;
     }
     
+    public GetResolverQueryLogConfigPolicyResponse(){}
 }

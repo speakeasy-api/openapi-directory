@@ -12,9 +12,13 @@ public class UpdateProtectedQueryRequestBody {
      */
     @JsonProperty("targetStatus")
     public UpdateProtectedQueryRequestBodyTargetStatusEnum targetStatus;
+
     public UpdateProtectedQueryRequestBody withTargetStatus(UpdateProtectedQueryRequestBodyTargetStatusEnum targetStatus) {
         this.targetStatus = targetStatus;
         return this;
     }
     
+    public UpdateProtectedQueryRequestBody(@JsonProperty("targetStatus") UpdateProtectedQueryRequestBodyTargetStatusEnum targetStatus) {
+        this.targetStatus = targetStatus;
+  }
 }

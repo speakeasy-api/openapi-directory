@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SSMLMessage {
     @JsonProperty("value")
     public String value;
+
     public SSMLMessage withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public SSMLMessage(@JsonProperty("value") String value) {
+        this.value = value;
+  }
 }

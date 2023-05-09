@@ -15,9 +15,13 @@ public class ReleasesUpdateReleaseUploadStatusRequestBody {
      */
     @JsonProperty("upload_status")
     public ReleasesUpdateReleaseUploadStatusRequestBodyUploadStatusEnum uploadStatus;
+
     public ReleasesUpdateReleaseUploadStatusRequestBody withUploadStatus(ReleasesUpdateReleaseUploadStatusRequestBodyUploadStatusEnum uploadStatus) {
         this.uploadStatus = uploadStatus;
         return this;
     }
     
+    public ReleasesUpdateReleaseUploadStatusRequestBody(@JsonProperty("upload_status") ReleasesUpdateReleaseUploadStatusRequestBodyUploadStatusEnum uploadStatus) {
+        this.uploadStatus = uploadStatus;
+  }
 }

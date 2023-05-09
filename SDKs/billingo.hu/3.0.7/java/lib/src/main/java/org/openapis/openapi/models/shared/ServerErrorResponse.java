@@ -15,9 +15,11 @@ public class ServerErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public ServerError error;
+
     public ServerErrorResponse withError(ServerError error) {
         this.error = error;
         return this;
     }
     
+    public ServerErrorResponse(){}
 }

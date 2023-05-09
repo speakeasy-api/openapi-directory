@@ -18,6 +18,7 @@ public class GetInventoryItemInventoryArrayV2ItemInventoryV2Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetInventoryItemInventoryArrayV2ItemInventoryV2Item withId(Long id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class GetInventoryItemInventoryArrayV2ItemInventoryV2Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skuReference")
     public String skuReference;
+
     public GetInventoryItemInventoryArrayV2ItemInventoryV2Item withSkuReference(String skuReference) {
         this.skuReference = skuReference;
         return this;
     }
     
+    public GetInventoryItemInventoryArrayV2ItemInventoryV2Item(){}
 }

@@ -15,9 +15,11 @@ public class Get200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Get200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public Get200ApplicationJSON(){}
 }

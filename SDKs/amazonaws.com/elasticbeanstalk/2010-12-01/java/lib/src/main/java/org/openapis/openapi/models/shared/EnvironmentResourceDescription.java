@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class EnvironmentResourceDescription {
     
     public AutoScalingGroup[] autoScalingGroups;
+
     public EnvironmentResourceDescription withAutoScalingGroups(AutoScalingGroup[] autoScalingGroups) {
         this.autoScalingGroups = autoScalingGroups;
         return this;
@@ -19,6 +20,7 @@ public class EnvironmentResourceDescription {
     
     
     public String environmentName;
+
     public EnvironmentResourceDescription withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -26,6 +28,7 @@ public class EnvironmentResourceDescription {
     
     
     public Instance[] instances;
+
     public EnvironmentResourceDescription withInstances(Instance[] instances) {
         this.instances = instances;
         return this;
@@ -33,6 +36,7 @@ public class EnvironmentResourceDescription {
     
     
     public LaunchConfiguration[] launchConfigurations;
+
     public EnvironmentResourceDescription withLaunchConfigurations(LaunchConfiguration[] launchConfigurations) {
         this.launchConfigurations = launchConfigurations;
         return this;
@@ -40,6 +44,7 @@ public class EnvironmentResourceDescription {
     
     
     public LaunchTemplate[] launchTemplates;
+
     public EnvironmentResourceDescription withLaunchTemplates(LaunchTemplate[] launchTemplates) {
         this.launchTemplates = launchTemplates;
         return this;
@@ -47,6 +52,7 @@ public class EnvironmentResourceDescription {
     
     
     public LoadBalancer[] loadBalancers;
+
     public EnvironmentResourceDescription withLoadBalancers(LoadBalancer[] loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
@@ -54,6 +60,7 @@ public class EnvironmentResourceDescription {
     
     
     public Queue[] queues;
+
     public EnvironmentResourceDescription withQueues(Queue[] queues) {
         this.queues = queues;
         return this;
@@ -61,9 +68,11 @@ public class EnvironmentResourceDescription {
     
     
     public Trigger[] triggers;
+
     public EnvironmentResourceDescription withTriggers(Trigger[] triggers) {
         this.triggers = triggers;
         return this;
     }
     
+    public EnvironmentResourceDescription(){}
 }

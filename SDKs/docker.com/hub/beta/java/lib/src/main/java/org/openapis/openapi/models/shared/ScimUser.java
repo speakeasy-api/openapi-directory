@@ -12,6 +12,7 @@ public class ScimUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public ScimUser withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class ScimUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ScimUser withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -31,6 +33,7 @@ public class ScimUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public ScimEmail[] emails;
+
     public ScimUser withEmails(ScimEmail[] emails) {
         this.emails = emails;
         return this;
@@ -39,6 +42,7 @@ public class ScimUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public ScimGroup[] groups;
+
     public ScimUser withGroups(ScimGroup[] groups) {
         this.groups = groups;
         return this;
@@ -50,6 +54,7 @@ public class ScimUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ScimUser withId(String id) {
         this.id = id;
         return this;
@@ -58,6 +63,7 @@ public class ScimUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public ScimUserMeta meta;
+
     public ScimUser withMeta(ScimUserMeta meta) {
         this.meta = meta;
         return this;
@@ -66,6 +72,7 @@ public class ScimUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public ScimUserName name;
+
     public ScimUser withName(ScimUserName name) {
         this.name = name;
         return this;
@@ -74,6 +81,7 @@ public class ScimUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemas")
     public String[] schemas;
+
     public ScimUser withSchemas(String[] schemas) {
         this.schemas = schemas;
         return this;
@@ -85,9 +93,11 @@ public class ScimUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public ScimUser withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ScimUser(){}
 }

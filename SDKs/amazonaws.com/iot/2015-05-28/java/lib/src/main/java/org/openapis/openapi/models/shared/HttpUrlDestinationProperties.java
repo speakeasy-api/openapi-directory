@@ -15,9 +15,11 @@ public class HttpUrlDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmationUrl")
     public String confirmationUrl;
+
     public HttpUrlDestinationProperties withConfirmationUrl(String confirmationUrl) {
         this.confirmationUrl = confirmationUrl;
         return this;
     }
     
+    public HttpUrlDestinationProperties(){}
 }

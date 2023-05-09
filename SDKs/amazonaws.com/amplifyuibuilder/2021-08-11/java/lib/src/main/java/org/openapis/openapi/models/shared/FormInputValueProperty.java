@@ -13,11 +13,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class FormInputValueProperty {
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bindingProperties")
+    public FormInputValuePropertyBindingProperties bindingProperties;
+
+    public FormInputValueProperty withBindingProperties(FormInputValuePropertyBindingProperties bindingProperties) {
+        this.bindingProperties = bindingProperties;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("concat")
+    public FormInputValueProperty[] concat;
+
+    public FormInputValueProperty withConcat(FormInputValueProperty[] concat) {
+        this.concat = concat;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public FormInputValueProperty withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public FormInputValueProperty(){}
 }

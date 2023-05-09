@@ -159,4 +159,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/OpenAQProjectsResultMeta.ja
 lib/src/main/java/org/openapis/openapi/models/shared/OpenAQProjectsResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/ProjectsRow.java
 lib/src/main/java/org/openapis/openapi/models/shared/ProjectParameterDetails.java
+docs/sdk/README.md
+docs/v1/README.md
+docs/v2/README.md
 USAGE.md

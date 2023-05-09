@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OBReadScheduledPayment3 {
     @JsonProperty("Data")
     public OBReadDataScheduledPayment3 data;
+
     public OBReadScheduledPayment3 withData(OBReadDataScheduledPayment3 data) {
         this.data = data;
         return this;
@@ -25,6 +26,7 @@ public class OBReadScheduledPayment3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Links")
     public Links links;
+
     public OBReadScheduledPayment3 withLinks(Links links) {
         this.links = links;
         return this;
@@ -36,9 +38,13 @@ public class OBReadScheduledPayment3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Meta")
     public Meta meta;
+
     public OBReadScheduledPayment3 withMeta(Meta meta) {
         this.meta = meta;
         return this;
     }
     
+    public OBReadScheduledPayment3(@JsonProperty("Data") OBReadDataScheduledPayment3 data) {
+        this.data = data;
+  }
 }

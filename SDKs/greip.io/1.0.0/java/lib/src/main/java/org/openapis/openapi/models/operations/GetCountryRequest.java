@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCountryRequest {
@@ -12,6 +13,7 @@ public class GetCountryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CountryCode")
     public String countryCode;
+
     public GetCountryRequest withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -22,6 +24,7 @@ public class GetCountryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public String format;
+
     public GetCountryRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -32,6 +35,7 @@ public class GetCountryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GetCountryRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +46,7 @@ public class GetCountryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetCountryRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -52,9 +57,14 @@ public class GetCountryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=params")
     public String params;
+
     public GetCountryRequest withParams(String params) {
         this.params = params;
         return this;
     }
     
+    public GetCountryRequest(@JsonProperty("CountryCode") String countryCode, @JsonProperty("key") String key) {
+        this.countryCode = countryCode;
+        this.key = key;
+  }
 }

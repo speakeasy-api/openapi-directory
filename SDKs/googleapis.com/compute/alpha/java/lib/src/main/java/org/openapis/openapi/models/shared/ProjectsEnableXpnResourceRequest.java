@@ -15,9 +15,11 @@ public class ProjectsEnableXpnResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xpnResource")
     public XpnResourceId xpnResource;
+
     public ProjectsEnableXpnResourceRequest withXpnResource(XpnResourceId xpnResource) {
         this.xpnResource = xpnResource;
         return this;
     }
     
+    public ProjectsEnableXpnResourceRequest(){}
 }

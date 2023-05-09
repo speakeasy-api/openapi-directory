@@ -22,9 +22,11 @@ public class CheckEeBtEligibilityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public CheckEeBtEligibilityRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public CheckEeBtEligibilityRequest(){}
 }

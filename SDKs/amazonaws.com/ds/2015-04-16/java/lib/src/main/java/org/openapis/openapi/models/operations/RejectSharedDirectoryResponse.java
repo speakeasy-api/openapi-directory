@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RejectSharedDirectoryResponse {
@@ -12,6 +13,7 @@ public class RejectSharedDirectoryResponse {
      */
     
     public Object clientException;
+
     public RejectSharedDirectoryResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class RejectSharedDirectoryResponse {
     
     
     public String contentType;
+
     public RejectSharedDirectoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RejectSharedDirectoryResponse {
      */
     
     public Object directoryAlreadySharedException;
+
     public RejectSharedDirectoryResponse withDirectoryAlreadySharedException(Object directoryAlreadySharedException) {
         this.directoryAlreadySharedException = directoryAlreadySharedException;
         return this;
@@ -39,6 +43,7 @@ public class RejectSharedDirectoryResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public RejectSharedDirectoryResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class RejectSharedDirectoryResponse {
      */
     
     public Object invalidParameterException;
+
     public RejectSharedDirectoryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class RejectSharedDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.RejectSharedDirectoryResult rejectSharedDirectoryResult;
+
     public RejectSharedDirectoryResponse withRejectSharedDirectoryResult(org.openapis.openapi.models.shared.RejectSharedDirectoryResult rejectSharedDirectoryResult) {
         this.rejectSharedDirectoryResult = rejectSharedDirectoryResult;
         return this;
@@ -69,6 +76,7 @@ public class RejectSharedDirectoryResponse {
      */
     
     public Object serviceException;
+
     public RejectSharedDirectoryResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class RejectSharedDirectoryResponse {
     
     
     public Integer statusCode;
+
     public RejectSharedDirectoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class RejectSharedDirectoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RejectSharedDirectoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RejectSharedDirectoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

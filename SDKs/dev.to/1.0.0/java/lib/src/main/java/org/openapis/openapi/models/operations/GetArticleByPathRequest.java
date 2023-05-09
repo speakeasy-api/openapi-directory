@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetArticleByPathRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
     public String slug;
+
     public GetArticleByPathRequest withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -16,9 +18,14 @@ public class GetArticleByPathRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GetArticleByPathRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetArticleByPathRequest(@JsonProperty("slug") String slug, @JsonProperty("username") String username) {
+        this.slug = slug;
+        this.username = username;
+  }
 }

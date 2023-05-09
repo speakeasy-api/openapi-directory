@@ -15,9 +15,11 @@ public class RegisterElasticIpResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElasticIp")
     public String elasticIp;
+
     public RegisterElasticIpResult withElasticIp(String elasticIp) {
         this.elasticIp = elasticIp;
         return this;
     }
     
+    public RegisterElasticIpResult(){}
 }

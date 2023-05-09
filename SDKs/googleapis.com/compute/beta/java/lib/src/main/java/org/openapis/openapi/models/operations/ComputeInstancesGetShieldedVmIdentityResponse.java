@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeInstancesGetShieldedVmIdentityResponse {
     
     public String contentType;
+
     public ComputeInstancesGetShieldedVmIdentityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeInstancesGetShieldedVmIdentityResponse {
      */
     
     public org.openapis.openapi.models.shared.ShieldedVmIdentity shieldedVmIdentity;
+
     public ComputeInstancesGetShieldedVmIdentityResponse withShieldedVmIdentity(org.openapis.openapi.models.shared.ShieldedVmIdentity shieldedVmIdentity) {
         this.shieldedVmIdentity = shieldedVmIdentity;
         return this;
@@ -26,6 +29,7 @@ public class ComputeInstancesGetShieldedVmIdentityResponse {
     
     
     public Integer statusCode;
+
     public ComputeInstancesGetShieldedVmIdentityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeInstancesGetShieldedVmIdentityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeInstancesGetShieldedVmIdentityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeInstancesGetShieldedVmIdentityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

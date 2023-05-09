@@ -18,6 +18,7 @@ public class DynamicTargetingKeysListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicTargetingKeys")
     public DynamicTargetingKey[] dynamicTargetingKeys;
+
     public DynamicTargetingKeysListResponse withDynamicTargetingKeys(DynamicTargetingKey[] dynamicTargetingKeys) {
         this.dynamicTargetingKeys = dynamicTargetingKeys;
         return this;
@@ -29,9 +30,11 @@ public class DynamicTargetingKeysListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DynamicTargetingKeysListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public DynamicTargetingKeysListResponse(){}
 }

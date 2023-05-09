@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRecommendationPreferencesResponse {
@@ -12,6 +13,7 @@ public class GetRecommendationPreferencesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRecommendationPreferencesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetRecommendationPreferencesResponse {
     
     
     public String contentType;
+
     public GetRecommendationPreferencesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetRecommendationPreferencesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRecommendationPreferencesResponse getRecommendationPreferencesResponse;
+
     public GetRecommendationPreferencesResponse withGetRecommendationPreferencesResponse(org.openapis.openapi.models.shared.GetRecommendationPreferencesResponse getRecommendationPreferencesResponse) {
         this.getRecommendationPreferencesResponse = getRecommendationPreferencesResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetRecommendationPreferencesResponse {
      */
     
     public Object internalServerException;
+
     public GetRecommendationPreferencesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetRecommendationPreferencesResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetRecommendationPreferencesResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class GetRecommendationPreferencesResponse {
      */
     
     public Object missingAuthenticationToken;
+
     public GetRecommendationPreferencesResponse withMissingAuthenticationToken(Object missingAuthenticationToken) {
         this.missingAuthenticationToken = missingAuthenticationToken;
         return this;
@@ -69,6 +76,7 @@ public class GetRecommendationPreferencesResponse {
      */
     
     public Object optInRequiredException;
+
     public GetRecommendationPreferencesResponse withOptInRequiredException(Object optInRequiredException) {
         this.optInRequiredException = optInRequiredException;
         return this;
@@ -76,6 +84,7 @@ public class GetRecommendationPreferencesResponse {
     
     
     public Integer statusCode;
+
     public GetRecommendationPreferencesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetRecommendationPreferencesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRecommendationPreferencesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetRecommendationPreferencesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetRecommendationPreferencesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class GetRecommendationPreferencesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetRecommendationPreferencesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class GetRecommendationPreferencesResponse {
      */
     
     public Object throttlingException;
+
     public GetRecommendationPreferencesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetRecommendationPreferencesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

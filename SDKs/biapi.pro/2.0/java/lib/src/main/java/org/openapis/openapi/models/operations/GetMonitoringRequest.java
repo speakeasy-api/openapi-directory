@@ -12,9 +12,11 @@ public class GetMonitoringRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
     public Long period;
+
     public GetMonitoringRequest withPeriod(Long period) {
         this.period = period;
         return this;
     }
     
+    public GetMonitoringRequest(){}
 }

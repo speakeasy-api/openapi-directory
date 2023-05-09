@@ -38,7 +38,9 @@ public class Crash {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CrashGroupsGetResponse crashGroupsGet(org.openapis.openapi.models.operations.CrashGroupsGetRequest request, org.openapis.openapi.models.operations.CrashGroupsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashGroupsGetRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}", request, null);
@@ -54,12 +56,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashGroupsGetResponse res = new org.openapis.openapi.models.operations.CrashGroupsGetResponse() {{
+        org.openapis.openapi.models.operations.CrashGroupsGetResponse res = new org.openapis.openapi.models.operations.CrashGroupsGetResponse(contentType, httpRes.statusCode()) {{
             crashGroupsGet200ApplicationJSONObject = null;
             crashGroupsGetDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -86,7 +86,9 @@ public class Crash {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CrashGroupsGetStacktraceResponse crashGroupsGetStacktrace(org.openapis.openapi.models.operations.CrashGroupsGetStacktraceRequest request, org.openapis.openapi.models.operations.CrashGroupsGetStacktraceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashGroupsGetStacktraceRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/stacktrace", request, null);
@@ -108,12 +110,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashGroupsGetStacktraceResponse res = new org.openapis.openapi.models.operations.CrashGroupsGetStacktraceResponse() {{
+        org.openapis.openapi.models.operations.CrashGroupsGetStacktraceResponse res = new org.openapis.openapi.models.operations.CrashGroupsGetStacktraceResponse(contentType, httpRes.statusCode()) {{
             stacktrace = null;
             crashGroupsGetStacktraceDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -140,7 +140,9 @@ public class Crash {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CrashGroupsListResponse crashGroupsList(org.openapis.openapi.models.operations.CrashGroupsListRequest request, org.openapis.openapi.models.operations.CrashGroupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashGroupsListRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crash_groups", request, null);
@@ -162,12 +164,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashGroupsListResponse res = new org.openapis.openapi.models.operations.CrashGroupsListResponse() {{
+        org.openapis.openapi.models.operations.CrashGroupsListResponse res = new org.openapis.openapi.models.operations.CrashGroupsListResponse(contentType, httpRes.statusCode()) {{
             crashGroupsList200ApplicationJSONObject = null;
             crashGroupsListDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,7 +194,9 @@ public class Crash {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CrashGroupsUpdateResponse crashGroupsUpdate(org.openapis.openapi.models.operations.CrashGroupsUpdateRequest request, org.openapis.openapi.models.operations.CrashGroupsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashGroupsUpdateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}", request, null);
@@ -215,12 +217,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashGroupsUpdateResponse res = new org.openapis.openapi.models.operations.CrashGroupsUpdateResponse() {{
+        org.openapis.openapi.models.operations.CrashGroupsUpdateResponse res = new org.openapis.openapi.models.operations.CrashGroupsUpdateResponse(contentType, httpRes.statusCode()) {{
             crashGroupsUpdate200ApplicationJSONObject = null;
             crashGroupsUpdateDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,7 +247,9 @@ public class Crash {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CrashesDeleteResponse crashesDelete(org.openapis.openapi.models.operations.CrashesDeleteRequest request, org.openapis.openapi.models.operations.CrashesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashesDeleteRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}", request, null);
@@ -269,12 +271,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashesDeleteResponse res = new org.openapis.openapi.models.operations.CrashesDeleteResponse() {{
+        org.openapis.openapi.models.operations.CrashesDeleteResponse res = new org.openapis.openapi.models.operations.CrashesDeleteResponse(contentType, httpRes.statusCode()) {{
             crashesDelete200ApplicationJSONObject = null;
             crashesDeleteDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -301,7 +301,9 @@ public class Crash {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CrashesGetResponse crashesGet(org.openapis.openapi.models.operations.CrashesGetRequest request, org.openapis.openapi.models.operations.CrashesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashesGetRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}", request, null);
@@ -323,12 +325,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashesGetResponse res = new org.openapis.openapi.models.operations.CrashesGetResponse() {{
+        org.openapis.openapi.models.operations.CrashesGetResponse res = new org.openapis.openapi.models.operations.CrashesGetResponse(contentType, httpRes.statusCode()) {{
             crash = null;
             crashesGetDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -355,7 +355,9 @@ public class Crash {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CrashesGetAppCrashesInfoResponse crashesGetAppCrashesInfo(org.openapis.openapi.models.operations.CrashesGetAppCrashesInfoRequest request, org.openapis.openapi.models.operations.CrashesGetAppCrashesInfoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashesGetAppCrashesInfoRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crashes_info", request, null);
@@ -371,12 +373,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashesGetAppCrashesInfoResponse res = new org.openapis.openapi.models.operations.CrashesGetAppCrashesInfoResponse() {{
+        org.openapis.openapi.models.operations.CrashesGetAppCrashesInfoResponse res = new org.openapis.openapi.models.operations.CrashesGetAppCrashesInfoResponse(contentType, httpRes.statusCode()) {{
             crashesGetAppCrashesInfo200ApplicationJSONObject = null;
             crashesGetAppCrashesInfoDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -403,7 +403,9 @@ public class Crash {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CrashesGetAppVersionsResponse crashesGetAppVersions(org.openapis.openapi.models.operations.CrashesGetAppVersionsRequest request, org.openapis.openapi.models.operations.CrashesGetAppVersionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashesGetAppVersionsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/versions", request, null);
@@ -419,12 +421,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashesGetAppVersionsResponse res = new org.openapis.openapi.models.operations.CrashesGetAppVersionsResponse() {{
+        org.openapis.openapi.models.operations.CrashesGetAppVersionsResponse res = new org.openapis.openapi.models.operations.CrashesGetAppVersionsResponse(contentType, httpRes.statusCode()) {{
             crashesGetAppVersions200ApplicationJSONObjects = null;
             crashesGetAppVersionsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -451,7 +451,9 @@ public class Crash {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CrashesGetCrashAttachmentLocationResponse crashesGetCrashAttachmentLocation(org.openapis.openapi.models.operations.CrashesGetCrashAttachmentLocationRequest request, org.openapis.openapi.models.operations.CrashesGetCrashAttachmentLocationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashesGetCrashAttachmentLocationRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/attachments/{attachment_id}/location", request, null);
@@ -467,12 +469,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashesGetCrashAttachmentLocationResponse res = new org.openapis.openapi.models.operations.CrashesGetCrashAttachmentLocationResponse() {{
+        org.openapis.openapi.models.operations.CrashesGetCrashAttachmentLocationResponse res = new org.openapis.openapi.models.operations.CrashesGetCrashAttachmentLocationResponse(contentType, httpRes.statusCode()) {{
             crashesGetCrashAttachmentLocation200ApplicationJSONObject = null;
             crashesGetCrashAttachmentLocationDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -499,7 +499,9 @@ public class Crash {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CrashesGetCrashTextAttachmentContentResponse crashesGetCrashTextAttachmentContent(org.openapis.openapi.models.operations.CrashesGetCrashTextAttachmentContentRequest request, org.openapis.openapi.models.operations.CrashesGetCrashTextAttachmentContentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashesGetCrashTextAttachmentContentRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/attachments/{attachment_id}/text", request, null);
@@ -515,12 +517,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashesGetCrashTextAttachmentContentResponse res = new org.openapis.openapi.models.operations.CrashesGetCrashTextAttachmentContentResponse() {{
+        org.openapis.openapi.models.operations.CrashesGetCrashTextAttachmentContentResponse res = new org.openapis.openapi.models.operations.CrashesGetCrashTextAttachmentContentResponse(contentType, httpRes.statusCode()) {{
             crashesGetCrashTextAttachmentContent200ApplicationJSONString = null;
             crashesGetCrashTextAttachmentContentDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -546,7 +546,9 @@ public class Crash {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CrashesGetNativeCrashResponse crashesGetNativeCrash(org.openapis.openapi.models.operations.CrashesGetNativeCrashRequest request, org.openapis.openapi.models.operations.CrashesGetNativeCrashSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashesGetNativeCrashRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/native", request, null);
@@ -562,12 +564,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashesGetNativeCrashResponse res = new org.openapis.openapi.models.operations.CrashesGetNativeCrashResponse() {{
+        org.openapis.openapi.models.operations.CrashesGetNativeCrashResponse res = new org.openapis.openapi.models.operations.CrashesGetNativeCrashResponse(contentType, httpRes.statusCode()) {{
             crashesGetNativeCrash200ApplicationJSONString = null;
             crashesGetNativeCrashDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -593,7 +593,9 @@ public class Crash {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CrashesGetNativeCrashDownloadResponse crashesGetNativeCrashDownload(org.openapis.openapi.models.operations.CrashesGetNativeCrashDownloadRequest request, org.openapis.openapi.models.operations.CrashesGetNativeCrashDownloadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashesGetNativeCrashDownloadRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/native/download", request, null);
@@ -609,12 +611,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashesGetNativeCrashDownloadResponse res = new org.openapis.openapi.models.operations.CrashesGetNativeCrashDownloadResponse() {{
+        org.openapis.openapi.models.operations.CrashesGetNativeCrashDownloadResponse res = new org.openapis.openapi.models.operations.CrashesGetNativeCrashDownloadResponse(contentType, httpRes.statusCode()) {{
             crashesGetNativeCrashDownload200ApplicationJSONString = null;
             crashesGetNativeCrashDownloadDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -640,7 +640,9 @@ public class Crash {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CrashesGetRawCrashLocationResponse crashesGetRawCrashLocation(org.openapis.openapi.models.operations.CrashesGetRawCrashLocationRequest request, org.openapis.openapi.models.operations.CrashesGetRawCrashLocationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashesGetRawCrashLocationRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/raw/location", request, null);
@@ -656,12 +658,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashesGetRawCrashLocationResponse res = new org.openapis.openapi.models.operations.CrashesGetRawCrashLocationResponse() {{
+        org.openapis.openapi.models.operations.CrashesGetRawCrashLocationResponse res = new org.openapis.openapi.models.operations.CrashesGetRawCrashLocationResponse(contentType, httpRes.statusCode()) {{
             crashesGetRawCrashLocation200ApplicationJSONObject = null;
             crashesGetRawCrashLocationDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -688,7 +688,9 @@ public class Crash {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CrashesGetStacktraceResponse crashesGetStacktrace(org.openapis.openapi.models.operations.CrashesGetStacktraceRequest request, org.openapis.openapi.models.operations.CrashesGetStacktraceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashesGetStacktraceRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/stacktrace", request, null);
@@ -710,12 +712,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashesGetStacktraceResponse res = new org.openapis.openapi.models.operations.CrashesGetStacktraceResponse() {{
+        org.openapis.openapi.models.operations.CrashesGetStacktraceResponse res = new org.openapis.openapi.models.operations.CrashesGetStacktraceResponse(contentType, httpRes.statusCode()) {{
             stacktrace = null;
             crashesGetStacktraceDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -742,7 +742,9 @@ public class Crash {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CrashesListResponse crashesList(org.openapis.openapi.models.operations.CrashesListRequest request, org.openapis.openapi.models.operations.CrashesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashesListRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes", request, null);
@@ -764,12 +766,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashesListResponse res = new org.openapis.openapi.models.operations.CrashesListResponse() {{
+        org.openapis.openapi.models.operations.CrashesListResponse res = new org.openapis.openapi.models.operations.CrashesListResponse(contentType, httpRes.statusCode()) {{
             crashes = null;
             crashesListDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -796,7 +796,9 @@ public class Crash {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CrashesListAttachmentsResponse crashesListAttachments(org.openapis.openapi.models.operations.CrashesListAttachmentsRequest request, org.openapis.openapi.models.operations.CrashesListAttachmentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashesListAttachmentsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/attachments", request, null);
@@ -812,12 +814,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashesListAttachmentsResponse res = new org.openapis.openapi.models.operations.CrashesListAttachmentsResponse() {{
+        org.openapis.openapi.models.operations.CrashesListAttachmentsResponse res = new org.openapis.openapi.models.operations.CrashesListAttachmentsResponse(contentType, httpRes.statusCode()) {{
             crashesListAttachments200ApplicationJSONObjects = null;
             crashesListAttachmentsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -861,12 +861,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MissingSymbolGroupsGetResponse res = new org.openapis.openapi.models.operations.MissingSymbolGroupsGetResponse() {{
+        org.openapis.openapi.models.operations.MissingSymbolGroupsGetResponse res = new org.openapis.openapi.models.operations.MissingSymbolGroupsGetResponse(contentType, httpRes.statusCode()) {{
             missingSymbolGroupsGet200ApplicationJSONObject = null;
             missingSymbolGroupsGetDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -910,12 +908,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MissingSymbolGroupsInfoResponse res = new org.openapis.openapi.models.operations.MissingSymbolGroupsInfoResponse() {{
+        org.openapis.openapi.models.operations.MissingSymbolGroupsInfoResponse res = new org.openapis.openapi.models.operations.MissingSymbolGroupsInfoResponse(contentType, httpRes.statusCode()) {{
             missingSymbolGroupsInfo200ApplicationJSONObject = null;
             missingSymbolGroupsInfoDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -965,12 +961,10 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MissingSymbolGroupsListResponse res = new org.openapis.openapi.models.operations.MissingSymbolGroupsListResponse() {{
+        org.openapis.openapi.models.operations.MissingSymbolGroupsListResponse res = new org.openapis.openapi.models.operations.MissingSymbolGroupsListResponse(contentType, httpRes.statusCode()) {{
             missingSymbolGroupsList200ApplicationJSONObject = null;
             missingSymbolGroupsListDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1018,14 +1012,12 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SymbolUploadsCompleteResponse res = new org.openapis.openapi.models.operations.SymbolUploadsCompleteResponse() {{
+        org.openapis.openapi.models.operations.SymbolUploadsCompleteResponse res = new org.openapis.openapi.models.operations.SymbolUploadsCompleteResponse(contentType, httpRes.statusCode()) {{
             symbolUploadsComplete200ApplicationJSONObject = null;
             symbolUploadsComplete400ApplicationJSONObject = null;
             symbolUploadsComplete403ApplicationJSONObject = null;
             symbolUploadsComplete500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1087,14 +1079,12 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SymbolUploadsCreateResponse res = new org.openapis.openapi.models.operations.SymbolUploadsCreateResponse() {{
+        org.openapis.openapi.models.operations.SymbolUploadsCreateResponse res = new org.openapis.openapi.models.operations.SymbolUploadsCreateResponse(contentType, httpRes.statusCode()) {{
             symbolUploadsCreate200ApplicationJSONObject = null;
             symbolUploadsCreate400ApplicationJSONObject = null;
             symbolUploadsCreate403ApplicationJSONObject = null;
             symbolUploadsCreate500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1151,14 +1141,12 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SymbolUploadsDeleteResponse res = new org.openapis.openapi.models.operations.SymbolUploadsDeleteResponse() {{
+        org.openapis.openapi.models.operations.SymbolUploadsDeleteResponse res = new org.openapis.openapi.models.operations.SymbolUploadsDeleteResponse(contentType, httpRes.statusCode()) {{
             symbolUploadsDelete200ApplicationJSONObject = null;
             symbolUploadsDelete403ApplicationJSONObject = null;
             symbolUploadsDelete404ApplicationJSONObject = null;
             symbolUploadsDelete500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1215,14 +1203,12 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SymbolUploadsGetResponse res = new org.openapis.openapi.models.operations.SymbolUploadsGetResponse() {{
+        org.openapis.openapi.models.operations.SymbolUploadsGetResponse res = new org.openapis.openapi.models.operations.SymbolUploadsGetResponse(contentType, httpRes.statusCode()) {{
             symbolUploadsGet200ApplicationJSONObject = null;
             symbolUploadsGet403ApplicationJSONObject = null;
             symbolUploadsGet404ApplicationJSONObject = null;
             symbolUploadsGet500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1279,14 +1265,12 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SymbolUploadsGetLocationResponse res = new org.openapis.openapi.models.operations.SymbolUploadsGetLocationResponse() {{
+        org.openapis.openapi.models.operations.SymbolUploadsGetLocationResponse res = new org.openapis.openapi.models.operations.SymbolUploadsGetLocationResponse(contentType, httpRes.statusCode()) {{
             symbolUploadsGetLocation200ApplicationJSONObject = null;
             symbolUploadsGetLocation403ApplicationJSONObject = null;
             symbolUploadsGetLocation404ApplicationJSONObject = null;
             symbolUploadsGetLocation500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1349,13 +1333,11 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SymbolUploadsListResponse res = new org.openapis.openapi.models.operations.SymbolUploadsListResponse() {{
+        org.openapis.openapi.models.operations.SymbolUploadsListResponse res = new org.openapis.openapi.models.operations.SymbolUploadsListResponse(contentType, httpRes.statusCode()) {{
             symbolUploadsList200ApplicationJSONObjects = null;
             symbolUploadsList403ApplicationJSONObject = null;
             symbolUploadsList500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1405,14 +1387,12 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SymbolsGetResponse res = new org.openapis.openapi.models.operations.SymbolsGetResponse() {{
+        org.openapis.openapi.models.operations.SymbolsGetResponse res = new org.openapis.openapi.models.operations.SymbolsGetResponse(contentType, httpRes.statusCode()) {{
             symbolsGet200ApplicationJSONObject = null;
             symbolsGet403ApplicationJSONObject = null;
             symbolsGet404ApplicationJSONObject = null;
             symbolsGet500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1469,14 +1449,12 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SymbolsGetLocationResponse res = new org.openapis.openapi.models.operations.SymbolsGetLocationResponse() {{
+        org.openapis.openapi.models.operations.SymbolsGetLocationResponse res = new org.openapis.openapi.models.operations.SymbolsGetLocationResponse(contentType, httpRes.statusCode()) {{
             symbolsGetLocation200ApplicationJSONObject = null;
             symbolsGetLocation403ApplicationJSONObject = null;
             symbolsGetLocation404ApplicationJSONObject = null;
             symbolsGetLocation500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1533,14 +1511,12 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SymbolsGetStatusResponse res = new org.openapis.openapi.models.operations.SymbolsGetStatusResponse() {{
+        org.openapis.openapi.models.operations.SymbolsGetStatusResponse res = new org.openapis.openapi.models.operations.SymbolsGetStatusResponse(contentType, httpRes.statusCode()) {{
             symbolsGetStatus200ApplicationJSONObject = null;
             symbolsGetStatus403ApplicationJSONObject = null;
             symbolsGetStatus404ApplicationJSONObject = null;
             symbolsGetStatus500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1597,14 +1573,12 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SymbolsIgnoreResponse res = new org.openapis.openapi.models.operations.SymbolsIgnoreResponse() {{
+        org.openapis.openapi.models.operations.SymbolsIgnoreResponse res = new org.openapis.openapi.models.operations.SymbolsIgnoreResponse(contentType, httpRes.statusCode()) {{
             symbolsIgnore200ApplicationJSONObject = null;
             symbolsIgnore403ApplicationJSONObject = null;
             symbolsIgnore404ApplicationJSONObject = null;
             symbolsIgnore500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1661,13 +1635,11 @@ public class Crash {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SymbolsListResponse res = new org.openapis.openapi.models.operations.SymbolsListResponse() {{
+        org.openapis.openapi.models.operations.SymbolsListResponse res = new org.openapis.openapi.models.operations.SymbolsListResponse(contentType, httpRes.statusCode()) {{
             symbolsList200ApplicationJSONObjects = null;
             symbolsList403ApplicationJSONObject = null;
             symbolsList500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

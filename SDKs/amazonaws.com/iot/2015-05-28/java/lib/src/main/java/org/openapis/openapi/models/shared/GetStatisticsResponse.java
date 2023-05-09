@@ -15,9 +15,11 @@ public class GetStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistics")
     public Statistics statistics;
+
     public GetStatisticsResponse withStatistics(Statistics statistics) {
         this.statistics = statistics;
         return this;
     }
     
+    public GetStatisticsResponse(){}
 }

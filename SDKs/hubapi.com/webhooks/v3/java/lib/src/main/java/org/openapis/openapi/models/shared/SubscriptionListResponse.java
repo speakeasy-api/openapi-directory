@@ -15,9 +15,13 @@ public class SubscriptionListResponse {
      */
     @JsonProperty("results")
     public SubscriptionResponse[] results;
+
     public SubscriptionListResponse withResults(SubscriptionResponse[] results) {
         this.results = results;
         return this;
     }
     
+    public SubscriptionListResponse(@JsonProperty("results") SubscriptionResponse[] results) {
+        this.results = results;
+  }
 }

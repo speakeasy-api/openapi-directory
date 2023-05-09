@@ -21,6 +21,7 @@ public class OrderLineItemPricingBlocklistsBlockedDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_catalog_object_id")
     public String discountCatalogObjectId;
+
     public OrderLineItemPricingBlocklistsBlockedDiscount withDiscountCatalogObjectId(String discountCatalogObjectId) {
         this.discountCatalogObjectId = discountCatalogObjectId;
         return this;
@@ -33,6 +34,7 @@ public class OrderLineItemPricingBlocklistsBlockedDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_uid")
     public String discountUid;
+
     public OrderLineItemPricingBlocklistsBlockedDiscount withDiscountUid(String discountUid) {
         this.discountUid = discountUid;
         return this;
@@ -44,9 +46,11 @@ public class OrderLineItemPricingBlocklistsBlockedDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OrderLineItemPricingBlocklistsBlockedDiscount withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public OrderLineItemPricingBlocklistsBlockedDiscount(){}
 }

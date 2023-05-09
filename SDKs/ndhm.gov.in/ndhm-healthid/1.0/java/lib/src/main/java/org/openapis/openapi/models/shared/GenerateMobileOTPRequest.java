@@ -15,9 +15,11 @@ public class GenerateMobileOTPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile")
     public String mobile;
+
     public GenerateMobileOTPRequest withMobile(String mobile) {
         this.mobile = mobile;
         return this;
     }
     
+    public GenerateMobileOTPRequest(){}
 }

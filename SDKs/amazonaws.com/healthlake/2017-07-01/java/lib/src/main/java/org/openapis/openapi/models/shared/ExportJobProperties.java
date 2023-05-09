@@ -20,6 +20,7 @@ public class ExportJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public ExportJobProperties withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -27,6 +28,7 @@ public class ExportJobProperties {
     
     @JsonProperty("DatastoreId")
     public String datastoreId;
+
     public ExportJobProperties withDatastoreId(String datastoreId) {
         this.datastoreId = datastoreId;
         return this;
@@ -37,6 +39,7 @@ public class ExportJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public ExportJobProperties withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -44,6 +47,7 @@ public class ExportJobProperties {
     
     @JsonProperty("JobId")
     public String jobId;
+
     public ExportJobProperties withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -52,6 +56,7 @@ public class ExportJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public ExportJobProperties withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -59,6 +64,7 @@ public class ExportJobProperties {
     
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public ExportJobProperties withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -67,6 +73,7 @@ public class ExportJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ExportJobProperties withMessage(String message) {
         this.message = message;
         return this;
@@ -74,6 +81,7 @@ public class ExportJobProperties {
     
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public ExportJobProperties withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -83,9 +91,17 @@ public class ExportJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTime")
     public OffsetDateTime submitTime;
+
     public ExportJobProperties withSubmitTime(OffsetDateTime submitTime) {
         this.submitTime = submitTime;
         return this;
     }
     
+    public ExportJobProperties(@JsonProperty("DatastoreId") String datastoreId, @JsonProperty("JobId") String jobId, @JsonProperty("JobStatus") JobStatusEnum jobStatus, @JsonProperty("OutputDataConfig") OutputDataConfig outputDataConfig, @JsonProperty("SubmitTime") OffsetDateTime submitTime) {
+        this.datastoreId = datastoreId;
+        this.jobId = jobId;
+        this.jobStatus = jobStatus;
+        this.outputDataConfig = outputDataConfig;
+        this.submitTime = submitTime;
+  }
 }

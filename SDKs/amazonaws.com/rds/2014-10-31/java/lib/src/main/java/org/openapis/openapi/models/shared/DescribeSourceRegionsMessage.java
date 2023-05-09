@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSourceRegionsMessage {
     
     public FilterList[] filters;
+
     public DescribeSourceRegionsMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSourceRegionsMessage {
     
     
     public String marker;
+
     public DescribeSourceRegionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSourceRegionsMessage {
     
     
     public Long maxRecords;
+
     public DescribeSourceRegionsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -33,9 +36,11 @@ public class DescribeSourceRegionsMessage {
     
     
     public String regionName;
+
     public DescribeSourceRegionsMessage withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
     }
     
+    public DescribeSourceRegionsMessage(){}
 }

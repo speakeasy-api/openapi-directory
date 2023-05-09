@@ -15,6 +15,7 @@ public class ViewDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access")
     public AccessDTO access;
+
     public ViewDetailsDTO withAccess(AccessDTO access) {
         this.access = access;
         return this;
@@ -23,6 +24,7 @@ public class ViewDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public ActionDTO[] actions;
+
     public ViewDetailsDTO withActions(ActionDTO[] actions) {
         this.actions = actions;
         return this;
@@ -31,6 +33,7 @@ public class ViewDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public FilterDTO filter;
+
     public ViewDetailsDTO withFilter(FilterDTO filter) {
         this.filter = filter;
         return this;
@@ -39,6 +42,7 @@ public class ViewDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view")
     public ViewDTO view;
+
     public ViewDetailsDTO withView(ViewDTO view) {
         this.view = view;
         return this;
@@ -47,9 +51,11 @@ public class ViewDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewId")
     public Long viewId;
+
     public ViewDetailsDTO withViewId(Long viewId) {
         this.viewId = viewId;
         return this;
     }
     
+    public ViewDetailsDTO(){}
 }

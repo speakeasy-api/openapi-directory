@@ -18,9 +18,11 @@ public class KycResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kycChecks")
     public KycCheck[] kycChecks;
+
     public KycResponse withKycChecks(KycCheck[] kycChecks) {
         this.kycChecks = kycChecks;
         return this;
     }
     
+    public KycResponse(){}
 }

@@ -15,6 +15,7 @@ public class SchemaResponsesReadSchemaResponsesAttributes {
      */
     
     public Long dateCreated;
+
     public SchemaResponsesReadSchemaResponsesAttributes withDateCreated(Long dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -25,6 +26,7 @@ public class SchemaResponsesReadSchemaResponsesAttributes {
      */
     
     public Long dateModified;
+
     public SchemaResponsesReadSchemaResponsesAttributes withDateModified(Long dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -35,6 +37,7 @@ public class SchemaResponsesReadSchemaResponsesAttributes {
      */
     
     public Long dateSubmitted;
+
     public SchemaResponsesReadSchemaResponsesAttributes withDateSubmitted(Long dateSubmitted) {
         this.dateSubmitted = dateSubmitted;
         return this;
@@ -45,6 +48,7 @@ public class SchemaResponsesReadSchemaResponsesAttributes {
      */
     
     public Boolean isOriginalResponse;
+
     public SchemaResponsesReadSchemaResponsesAttributes withIsOriginalResponse(Boolean isOriginalResponse) {
         this.isOriginalResponse = isOriginalResponse;
         return this;
@@ -55,6 +59,7 @@ public class SchemaResponsesReadSchemaResponsesAttributes {
      */
     
     public Boolean isPendingCurrentUserApproval;
+
     public SchemaResponsesReadSchemaResponsesAttributes withIsPendingCurrentUserApproval(Boolean isPendingCurrentUserApproval) {
         this.isPendingCurrentUserApproval = isPendingCurrentUserApproval;
         return this;
@@ -65,6 +70,7 @@ public class SchemaResponsesReadSchemaResponsesAttributes {
      */
     
     public SchemaResponsesReadSchemaResponsesAttributesReviewsStateEnum reviewsState;
+
     public SchemaResponsesReadSchemaResponsesAttributes withReviewsState(SchemaResponsesReadSchemaResponsesAttributesReviewsStateEnum reviewsState) {
         this.reviewsState = reviewsState;
         return this;
@@ -75,6 +81,7 @@ public class SchemaResponsesReadSchemaResponsesAttributes {
      */
     
     public String revisionJustification;
+
     public SchemaResponsesReadSchemaResponsesAttributes withRevisionJustification(String revisionJustification) {
         this.revisionJustification = revisionJustification;
         return this;
@@ -85,6 +92,7 @@ public class SchemaResponsesReadSchemaResponsesAttributes {
      */
     
     public java.util.Map<String, Object> revisionResponses;
+
     public SchemaResponsesReadSchemaResponsesAttributes withRevisionResponses(java.util.Map<String, Object> revisionResponses) {
         this.revisionResponses = revisionResponses;
         return this;
@@ -95,9 +103,11 @@ public class SchemaResponsesReadSchemaResponsesAttributes {
      */
     
     public Object[] updatedResponseKeys;
+
     public SchemaResponsesReadSchemaResponsesAttributes withUpdatedResponseKeys(Object[] updatedResponseKeys) {
         this.updatedResponseKeys = updatedResponseKeys;
         return this;
     }
     
+    public SchemaResponsesReadSchemaResponsesAttributes(){}
 }

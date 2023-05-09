@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRxNormInferenceJobResponse {
     
     public String contentType;
+
     public DescribeRxNormInferenceJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRxNormInferenceJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRxNormInferenceJobResponse describeRxNormInferenceJobResponse;
+
     public DescribeRxNormInferenceJobResponse withDescribeRxNormInferenceJobResponse(org.openapis.openapi.models.shared.DescribeRxNormInferenceJobResponse describeRxNormInferenceJobResponse) {
         this.describeRxNormInferenceJobResponse = describeRxNormInferenceJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRxNormInferenceJobResponse {
      */
     
     public Object internalServerException;
+
     public DescribeRxNormInferenceJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRxNormInferenceJobResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeRxNormInferenceJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeRxNormInferenceJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeRxNormInferenceJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeRxNormInferenceJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeRxNormInferenceJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeRxNormInferenceJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRxNormInferenceJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeRxNormInferenceJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeRxNormInferenceJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeRxNormInferenceJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

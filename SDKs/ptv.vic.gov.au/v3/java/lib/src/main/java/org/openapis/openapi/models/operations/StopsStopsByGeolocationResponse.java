@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopsStopsByGeolocationResponse {
     
     public byte[] body;
+
     public StopsStopsByGeolocationResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class StopsStopsByGeolocationResponse {
     
     
     public String contentType;
+
     public StopsStopsByGeolocationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class StopsStopsByGeolocationResponse {
     
     
     public Integer statusCode;
+
     public StopsStopsByGeolocationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class StopsStopsByGeolocationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopsStopsByGeolocationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class StopsStopsByGeolocationResponse {
      */
     
     public org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse;
+
     public StopsStopsByGeolocationResponse withV3ErrorResponse(org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse) {
         this.v3ErrorResponse = v3ErrorResponse;
         return this;
@@ -50,9 +56,14 @@ public class StopsStopsByGeolocationResponse {
      */
     
     public org.openapis.openapi.models.shared.V3StopsByDistanceResponse v3StopsByDistanceResponse;
+
     public StopsStopsByGeolocationResponse withV3StopsByDistanceResponse(org.openapis.openapi.models.shared.V3StopsByDistanceResponse v3StopsByDistanceResponse) {
         this.v3StopsByDistanceResponse = v3StopsByDistanceResponse;
         return this;
     }
     
+    public StopsStopsByGeolocationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

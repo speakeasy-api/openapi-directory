@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpsertSnippetResponse {
     
     public String contentType;
+
     public UpsertSnippetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpsertSnippetResponse {
     
     
     public Integer statusCode;
+
     public UpsertSnippetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpsertSnippetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpsertSnippetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class UpsertSnippetResponse {
      */
     
     public org.openapis.openapi.models.shared.UpsertSnippetResponse upsertSnippetResponse;
+
     public UpsertSnippetResponse withUpsertSnippetResponse(org.openapis.openapi.models.shared.UpsertSnippetResponse upsertSnippetResponse) {
         this.upsertSnippetResponse = upsertSnippetResponse;
         return this;
     }
     
+    public UpsertSnippetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

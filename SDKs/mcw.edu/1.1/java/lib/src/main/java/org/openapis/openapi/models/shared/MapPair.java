@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class MapPair {
     
     public String keyValue;
+
     public MapPair withKeyValue(String keyValue) {
         this.keyValue = keyValue;
         return this;
@@ -16,9 +17,11 @@ public class MapPair {
     
     
     public String stringValue;
+
     public MapPair withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public MapPair(){}
 }

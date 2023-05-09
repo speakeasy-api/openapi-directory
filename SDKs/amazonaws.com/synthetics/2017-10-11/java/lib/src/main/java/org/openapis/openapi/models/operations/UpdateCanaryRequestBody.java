@@ -15,6 +15,7 @@ public class UpdateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactConfig")
     public UpdateCanaryRequestBodyArtifactConfig artifactConfig;
+
     public UpdateCanaryRequestBody withArtifactConfig(UpdateCanaryRequestBodyArtifactConfig artifactConfig) {
         this.artifactConfig = artifactConfig;
         return this;
@@ -26,6 +27,7 @@ public class UpdateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactS3Location")
     public String artifactS3Location;
+
     public UpdateCanaryRequestBody withArtifactS3Location(String artifactS3Location) {
         this.artifactS3Location = artifactS3Location;
         return this;
@@ -37,6 +39,7 @@ public class UpdateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public UpdateCanaryRequestBodyCode code;
+
     public UpdateCanaryRequestBody withCode(UpdateCanaryRequestBodyCode code) {
         this.code = code;
         return this;
@@ -48,6 +51,7 @@ public class UpdateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public UpdateCanaryRequestBody withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -59,6 +63,7 @@ public class UpdateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureRetentionPeriodInDays")
     public Long failureRetentionPeriodInDays;
+
     public UpdateCanaryRequestBody withFailureRetentionPeriodInDays(Long failureRetentionPeriodInDays) {
         this.failureRetentionPeriodInDays = failureRetentionPeriodInDays;
         return this;
@@ -70,6 +75,7 @@ public class UpdateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunConfig")
     public UpdateCanaryRequestBodyRunConfig runConfig;
+
     public UpdateCanaryRequestBody withRunConfig(UpdateCanaryRequestBodyRunConfig runConfig) {
         this.runConfig = runConfig;
         return this;
@@ -81,6 +87,7 @@ public class UpdateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuntimeVersion")
     public String runtimeVersion;
+
     public UpdateCanaryRequestBody withRuntimeVersion(String runtimeVersion) {
         this.runtimeVersion = runtimeVersion;
         return this;
@@ -92,6 +99,7 @@ public class UpdateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public UpdateCanaryRequestBodySchedule schedule;
+
     public UpdateCanaryRequestBody withSchedule(UpdateCanaryRequestBodySchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -103,6 +111,7 @@ public class UpdateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuccessRetentionPeriodInDays")
     public Long successRetentionPeriodInDays;
+
     public UpdateCanaryRequestBody withSuccessRetentionPeriodInDays(Long successRetentionPeriodInDays) {
         this.successRetentionPeriodInDays = successRetentionPeriodInDays;
         return this;
@@ -114,6 +123,7 @@ public class UpdateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VisualReference")
     public UpdateCanaryRequestBodyVisualReference visualReference;
+
     public UpdateCanaryRequestBody withVisualReference(UpdateCanaryRequestBodyVisualReference visualReference) {
         this.visualReference = visualReference;
         return this;
@@ -125,9 +135,11 @@ public class UpdateCanaryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public UpdateCanaryRequestBodyVpcConfig vpcConfig;
+
     public UpdateCanaryRequestBody withVpcConfig(UpdateCanaryRequestBodyVpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public UpdateCanaryRequestBody(){}
 }

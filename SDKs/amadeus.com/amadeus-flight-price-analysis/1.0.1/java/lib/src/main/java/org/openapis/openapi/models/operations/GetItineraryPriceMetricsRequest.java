@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItineraryPriceMetricsRequest {
@@ -12,6 +13,7 @@ public class GetItineraryPriceMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currencyCode")
     public String currencyCode;
+
     public GetItineraryPriceMetricsRequest withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -24,6 +26,7 @@ public class GetItineraryPriceMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=departureDate")
     public String departureDate;
+
     public GetItineraryPriceMetricsRequest withDepartureDate(String departureDate) {
         this.departureDate = departureDate;
         return this;
@@ -34,6 +37,7 @@ public class GetItineraryPriceMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationIataCode")
     public String destinationIataCode;
+
     public GetItineraryPriceMetricsRequest withDestinationIataCode(String destinationIataCode) {
         this.destinationIataCode = destinationIataCode;
         return this;
@@ -45,6 +49,7 @@ public class GetItineraryPriceMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oneWay")
     public Boolean oneWay;
+
     public GetItineraryPriceMetricsRequest withOneWay(Boolean oneWay) {
         this.oneWay = oneWay;
         return this;
@@ -56,9 +61,15 @@ public class GetItineraryPriceMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=originIataCode")
     public String originIataCode;
+
     public GetItineraryPriceMetricsRequest withOriginIataCode(String originIataCode) {
         this.originIataCode = originIataCode;
         return this;
     }
     
+    public GetItineraryPriceMetricsRequest(@JsonProperty("departureDate") String departureDate, @JsonProperty("destinationIataCode") String destinationIataCode, @JsonProperty("originIataCode") String originIataCode) {
+        this.departureDate = departureDate;
+        this.destinationIataCode = destinationIataCode;
+        this.originIataCode = originIataCode;
+  }
 }

@@ -15,6 +15,7 @@ public class NewProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callback_url")
     public String callbackUrl;
+
     public NewProject withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -26,6 +27,7 @@ public class NewProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coupon_code")
     public String couponCode;
+
     public NewProject withCouponCode(String couponCode) {
         this.couponCode = couponCode;
         return this;
@@ -37,6 +39,7 @@ public class NewProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom")
     public String[] custom;
+
     public NewProject withCustom(String[] custom) {
         this.custom = custom;
         return this;
@@ -48,6 +51,7 @@ public class NewProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents[]")
     public byte[] documents;
+
     public NewProject withDocuments(byte[] documents) {
         this.documents = documents;
         return this;
@@ -59,6 +63,7 @@ public class NewProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glossaries[]")
     public byte[] glossaries;
+
     public NewProject withGlossaries(byte[] glossaries) {
         this.glossaries = glossaries;
         return this;
@@ -67,6 +72,7 @@ public class NewProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_language")
     public String sourceLanguage;
+
     public NewProject withSourceLanguage(String sourceLanguage) {
         this.sourceLanguage = sourceLanguage;
         return this;
@@ -78,6 +84,7 @@ public class NewProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("styleguides[]")
     public byte[] styleguides;
+
     public NewProject withStyleguides(byte[] styleguides) {
         this.styleguides = styleguides;
         return this;
@@ -86,9 +93,11 @@ public class NewProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_languages[]")
     public String[] targetLanguages;
+
     public NewProject withTargetLanguages(String[] targetLanguages) {
         this.targetLanguages = targetLanguages;
         return this;
     }
     
+    public NewProject(){}
 }

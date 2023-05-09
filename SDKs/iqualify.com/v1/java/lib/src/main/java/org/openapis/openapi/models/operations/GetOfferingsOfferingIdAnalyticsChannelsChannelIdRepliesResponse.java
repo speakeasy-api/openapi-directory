@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse {
@@ -12,6 +13,7 @@ public class GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse {
      */
     
     public org.openapis.openapi.models.shared.Comment[] comments;
+
     public GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse withComments(org.openapis.openapi.models.shared.Comment[] comments) {
         this.comments = comments;
         return this;
@@ -19,6 +21,7 @@ public class GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse {
     
     
     public String contentType;
+
     public GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse {
     
     
     public Integer statusCode;
+
     public GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

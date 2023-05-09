@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateFirewallPolicyResponse {
@@ -12,6 +13,7 @@ public class AssociateFirewallPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateFirewallPolicyResponse associateFirewallPolicyResponse;
+
     public AssociateFirewallPolicyResponse withAssociateFirewallPolicyResponse(org.openapis.openapi.models.shared.AssociateFirewallPolicyResponse associateFirewallPolicyResponse) {
         this.associateFirewallPolicyResponse = associateFirewallPolicyResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateFirewallPolicyResponse {
     
     
     public String contentType;
+
     public AssociateFirewallPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateFirewallPolicyResponse {
      */
     
     public Object internalServerError;
+
     public AssociateFirewallPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class AssociateFirewallPolicyResponse {
      */
     
     public Object invalidOperationException;
+
     public AssociateFirewallPolicyResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateFirewallPolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public AssociateFirewallPolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateFirewallPolicyResponse {
      */
     
     public Object invalidTokenException;
+
     public AssociateFirewallPolicyResponse withInvalidTokenException(Object invalidTokenException) {
         this.invalidTokenException = invalidTokenException;
         return this;
@@ -66,6 +73,7 @@ public class AssociateFirewallPolicyResponse {
     
     
     public Integer statusCode;
+
     public AssociateFirewallPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AssociateFirewallPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateFirewallPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AssociateFirewallPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateFirewallPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class AssociateFirewallPolicyResponse {
      */
     
     public Object throttlingException;
+
     public AssociateFirewallPolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public AssociateFirewallPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

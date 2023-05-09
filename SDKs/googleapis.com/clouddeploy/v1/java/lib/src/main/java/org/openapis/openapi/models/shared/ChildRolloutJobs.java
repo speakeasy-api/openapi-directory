@@ -18,6 +18,7 @@ public class ChildRolloutJobs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advanceRolloutJobs")
     public Job[] advanceRolloutJobs;
+
     public ChildRolloutJobs withAdvanceRolloutJobs(Job[] advanceRolloutJobs) {
         this.advanceRolloutJobs = advanceRolloutJobs;
         return this;
@@ -29,9 +30,11 @@ public class ChildRolloutJobs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createRolloutJobs")
     public Job[] createRolloutJobs;
+
     public ChildRolloutJobs withCreateRolloutJobs(Job[] createRolloutJobs) {
         this.createRolloutJobs = createRolloutJobs;
         return this;
     }
     
+    public ChildRolloutJobs(){}
 }

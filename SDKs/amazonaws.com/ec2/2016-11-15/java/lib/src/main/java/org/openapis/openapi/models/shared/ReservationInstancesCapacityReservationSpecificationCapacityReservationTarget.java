@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReservationInstancesCapacityReservationSpecificationCapacityReservationTarget {
     
     public String capacityReservationId;
+
     public ReservationInstancesCapacityReservationSpecificationCapacityReservationTarget withCapacityReservationId(String capacityReservationId) {
         this.capacityReservationId = capacityReservationId;
         return this;
@@ -19,9 +20,11 @@ public class ReservationInstancesCapacityReservationSpecificationCapacityReserva
     
     
     public String capacityReservationResourceGroupArn;
+
     public ReservationInstancesCapacityReservationSpecificationCapacityReservationTarget withCapacityReservationResourceGroupArn(String capacityReservationResourceGroupArn) {
         this.capacityReservationResourceGroupArn = capacityReservationResourceGroupArn;
         return this;
     }
     
+    public ReservationInstancesCapacityReservationSpecificationCapacityReservationTarget(){}
 }

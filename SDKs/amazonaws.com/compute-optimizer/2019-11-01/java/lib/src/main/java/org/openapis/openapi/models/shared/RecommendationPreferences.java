@@ -15,9 +15,11 @@ public class RecommendationPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuVendorArchitectures")
     public CpuVendorArchitectureEnum[] cpuVendorArchitectures;
+
     public RecommendationPreferences withCpuVendorArchitectures(CpuVendorArchitectureEnum[] cpuVendorArchitectures) {
         this.cpuVendorArchitectures = cpuVendorArchitectures;
         return this;
     }
     
+    public RecommendationPreferences(){}
 }

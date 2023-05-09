@@ -15,9 +15,11 @@ public class AwsEc2NetworkInterfaceIpV6AddressDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpV6Address")
     public String ipV6Address;
+
     public AwsEc2NetworkInterfaceIpV6AddressDetail withIpV6Address(String ipV6Address) {
         this.ipV6Address = ipV6Address;
         return this;
     }
     
+    public AwsEc2NetworkInterfaceIpV6AddressDetail(){}
 }

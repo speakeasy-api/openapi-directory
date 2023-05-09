@@ -16,31 +16,31 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetApplicationsApplicationIdRequest;
 import org.openapis.openapi.models.operations.GetApplicationsApplicationIdResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     bearerToken = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
-            GetApplicationsApplicationIdRequest req = new GetApplicationsApplicationIdRequest() {{
-                applicationId = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-            }}            
+            GetApplicationsApplicationIdRequest req = new GetApplicationsApplicationIdRequest("9bd9d8d6-9a67-44e0-b467-cc8796ed151a");            
 
             GetApplicationsApplicationIdResponse res = sdk.applications.getApplicationsApplicationId(req);
 
-            if (res.getApplicationsApplicationId200ApplicationJSONObject.isPresent()) {
+            if (res.getApplicationsApplicationId200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,62 +48,62 @@ public class Application {
 ## Available Resources and Operations
 
 
-### applications
+### [applications](docs/applications/README.md)
 
-* `getApplicationsApplicationId` - /applications/{application_id}
-* `postApplications` - /applications
-* `putApplicationsApplicationId` - /applications/{application_id}
+* [getApplicationsApplicationId](docs/applications/README.md#getapplicationsapplicationid) - /applications/{application_id}
+* [postApplications](docs/applications/README.md#postapplications) - /applications
+* [putApplicationsApplicationId](docs/applications/README.md#putapplicationsapplicationid) - /applications/{application_id}
 
-### auth
+### [auth](docs/auth/README.md)
 
-* `postAuthToken` - /auth/token
+* [postAuthToken](docs/auth/README.md#postauthtoken) - /auth/token
 
-### classifications
+### [classifications](docs/classifications/README.md)
 
-* `getClassifications` - /classifications/naics_index_entries
+* [getClassifications](docs/classifications/README.md#getclassifications) - /classifications/naics_index_entries
 
-### coverageParameters
+### [coverageParameters](docs/coverageparameters/README.md)
 
-* `getCoverageParameters` - /coverage_parameters
+* [getCoverageParameters](docs/coverageparameters/README.md#getcoverageparameters) - /coverage_parameters
 
-### files
+### [files](docs/files/README.md)
 
-* `getFilesFileId` - /files/{file_id}
-* `postFilesFileIdGetTemporaryLink` - /files/{file_id}/get_temporary_link
+* [getFilesFileId](docs/files/README.md#getfilesfileid) - /files/{file_id}
+* [postFilesFileIdGetTemporaryLink](docs/files/README.md#postfilesfileidgettemporarylink) - /files/{file_id}/get_temporary_link
 
-### institutions
+### [institutions](docs/institutions/README.md)
 
-* `getInstitutions` - /institutions
+* [getInstitutions](docs/institutions/README.md#getinstitutions) - /institutions
 
-### policies
+### [policies](docs/policies/README.md)
 
-* `getPoliciesPolicyId` - /policies/{policy_id}
-* `postPolicies` - /policies
+* [getPoliciesPolicyId](docs/policies/README.md#getpoliciespolicyid) - /policies/{policy_id}
+* [postPolicies](docs/policies/README.md#postpolicies) - /policies
 
-### producers
+### [producers](docs/producers/README.md)
 
-* `getProducers` - /producers
+* [getProducers](docs/producers/README.md#getproducers) - /producers
 
-### products
+### [products](docs/products/README.md)
 
-* `getProducts` - /products
+* [getProducts](docs/products/README.md#getproducts) - /products
 
-### quotes
+### [quotes](docs/quotes/README.md)
 
-* `getQuotesQuoteId` - /quotes/{quote_id}
+* [getQuotesQuoteId](docs/quotes/README.md#getquotesquoteid) - /quotes/{quote_id}
 
-### riskParameters
+### [riskParameters](docs/riskparameters/README.md)
 
-* `getRiskParameters` - /risk_parameters
+* [getRiskParameters](docs/riskparameters/README.md#getriskparameters) - /risk_parameters
 
-### submissions
+### [submissions](docs/submissions/README.md)
 
-* `getSubmissionsSubmissionId` - /submissions/{submission_id}
-* `postSubmissions` - /submissions
+* [getSubmissionsSubmissionId](docs/submissions/README.md#getsubmissionssubmissionid) - /submissions/{submission_id}
+* [postSubmissions](docs/submissions/README.md#postsubmissions) - /submissions
 
-### welcomeAndHealthCheck
+### [welcomeAndHealthCheck](docs/welcomeandhealthcheck/README.md)
 
-* `get` - /
+* [get](docs/welcomeandhealthcheck/README.md#get) - /
 <!-- End SDK Available Operations -->
 
 ### Maturity

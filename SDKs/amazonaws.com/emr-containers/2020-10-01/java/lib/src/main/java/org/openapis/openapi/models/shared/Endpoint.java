@@ -20,6 +20,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Endpoint withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateArn")
     public String certificateArn;
+
     public Endpoint withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -36,6 +38,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateAuthority")
     public Certificate certificateAuthority;
+
     public Endpoint withCertificateAuthority(Certificate certificateAuthority) {
         this.certificateAuthority = certificateAuthority;
         return this;
@@ -44,6 +47,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationOverrides")
     public ConfigurationOverrides configurationOverrides;
+
     public Endpoint withConfigurationOverrides(ConfigurationOverrides configurationOverrides) {
         this.configurationOverrides = configurationOverrides;
         return this;
@@ -54,6 +58,7 @@ public class Endpoint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Endpoint withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -62,6 +67,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionRoleArn")
     public String executionRoleArn;
+
     public Endpoint withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -70,6 +76,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public FailureReasonEnum failureReason;
+
     public Endpoint withFailureReason(FailureReasonEnum failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -78,6 +85,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Endpoint withId(String id) {
         this.id = id;
         return this;
@@ -86,6 +94,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Endpoint withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +103,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseLabel")
     public String releaseLabel;
+
     public Endpoint withReleaseLabel(String releaseLabel) {
         this.releaseLabel = releaseLabel;
         return this;
@@ -102,6 +112,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroup")
     public String securityGroup;
+
     public Endpoint withSecurityGroup(String securityGroup) {
         this.securityGroup = securityGroup;
         return this;
@@ -110,6 +121,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverUrl")
     public String serverUrl;
+
     public Endpoint withServerUrl(String serverUrl) {
         this.serverUrl = serverUrl;
         return this;
@@ -118,6 +130,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public EndpointStateEnum state;
+
     public Endpoint withState(EndpointStateEnum state) {
         this.state = state;
         return this;
@@ -126,6 +139,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateDetails")
     public String stateDetails;
+
     public Endpoint withStateDetails(String stateDetails) {
         this.stateDetails = stateDetails;
         return this;
@@ -134,6 +148,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public Endpoint withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -142,6 +157,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Endpoint withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -150,6 +166,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Endpoint withType(String type) {
         this.type = type;
         return this;
@@ -158,9 +175,11 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualClusterId")
     public String virtualClusterId;
+
     public Endpoint withVirtualClusterId(String virtualClusterId) {
         this.virtualClusterId = virtualClusterId;
         return this;
     }
     
+    public Endpoint(){}
 }

@@ -15,6 +15,7 @@ public class UpdateJobExecutionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionNumber")
     public Long executionNumber;
+
     public UpdateJobExecutionRequestBody withExecutionNumber(Long executionNumber) {
         this.executionNumber = executionNumber;
         return this;
@@ -26,6 +27,7 @@ public class UpdateJobExecutionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedVersion")
     public Long expectedVersion;
+
     public UpdateJobExecutionRequestBody withExpectedVersion(Long expectedVersion) {
         this.expectedVersion = expectedVersion;
         return this;
@@ -37,6 +39,7 @@ public class UpdateJobExecutionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeJobDocument")
     public Boolean includeJobDocument;
+
     public UpdateJobExecutionRequestBody withIncludeJobDocument(Boolean includeJobDocument) {
         this.includeJobDocument = includeJobDocument;
         return this;
@@ -48,6 +51,7 @@ public class UpdateJobExecutionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeJobExecutionState")
     public Boolean includeJobExecutionState;
+
     public UpdateJobExecutionRequestBody withIncludeJobExecutionState(Boolean includeJobExecutionState) {
         this.includeJobExecutionState = includeJobExecutionState;
         return this;
@@ -58,6 +62,7 @@ public class UpdateJobExecutionRequestBody {
      */
     @JsonProperty("status")
     public UpdateJobExecutionRequestBodyStatusEnum status;
+
     public UpdateJobExecutionRequestBody withStatus(UpdateJobExecutionRequestBodyStatusEnum status) {
         this.status = status;
         return this;
@@ -69,6 +74,7 @@ public class UpdateJobExecutionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusDetails")
     public java.util.Map<String, String> statusDetails;
+
     public UpdateJobExecutionRequestBody withStatusDetails(java.util.Map<String, String> statusDetails) {
         this.statusDetails = statusDetails;
         return this;
@@ -80,9 +86,13 @@ public class UpdateJobExecutionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepTimeoutInMinutes")
     public Long stepTimeoutInMinutes;
+
     public UpdateJobExecutionRequestBody withStepTimeoutInMinutes(Long stepTimeoutInMinutes) {
         this.stepTimeoutInMinutes = stepTimeoutInMinutes;
         return this;
     }
     
+    public UpdateJobExecutionRequestBody(@JsonProperty("status") UpdateJobExecutionRequestBodyStatusEnum status) {
+        this.status = status;
+  }
 }

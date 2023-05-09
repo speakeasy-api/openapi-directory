@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InsightResults {
     @JsonProperty("GroupByAttribute")
     public String groupByAttribute;
+
     public InsightResults withGroupByAttribute(String groupByAttribute) {
         this.groupByAttribute = groupByAttribute;
         return this;
@@ -19,6 +20,7 @@ public class InsightResults {
     
     @JsonProperty("InsightArn")
     public String insightArn;
+
     public InsightResults withInsightArn(String insightArn) {
         this.insightArn = insightArn;
         return this;
@@ -26,9 +28,15 @@ public class InsightResults {
     
     @JsonProperty("ResultValues")
     public InsightResultValue[] resultValues;
+
     public InsightResults withResultValues(InsightResultValue[] resultValues) {
         this.resultValues = resultValues;
         return this;
     }
     
+    public InsightResults(@JsonProperty("GroupByAttribute") String groupByAttribute, @JsonProperty("InsightArn") String insightArn, @JsonProperty("ResultValues") InsightResultValue[] resultValues) {
+        this.groupByAttribute = groupByAttribute;
+        this.insightArn = insightArn;
+        this.resultValues = resultValues;
+  }
 }

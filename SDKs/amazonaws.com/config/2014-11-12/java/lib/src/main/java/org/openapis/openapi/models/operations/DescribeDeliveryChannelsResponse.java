@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDeliveryChannelsResponse {
     
     public String contentType;
+
     public DescribeDeliveryChannelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDeliveryChannelsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDeliveryChannelsResponse describeDeliveryChannelsResponse;
+
     public DescribeDeliveryChannelsResponse withDescribeDeliveryChannelsResponse(org.openapis.openapi.models.shared.DescribeDeliveryChannelsResponse describeDeliveryChannelsResponse) {
         this.describeDeliveryChannelsResponse = describeDeliveryChannelsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDeliveryChannelsResponse {
      */
     
     public Object noSuchDeliveryChannelException;
+
     public DescribeDeliveryChannelsResponse withNoSuchDeliveryChannelException(Object noSuchDeliveryChannelException) {
         this.noSuchDeliveryChannelException = noSuchDeliveryChannelException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeDeliveryChannelsResponse {
     
     
     public Integer statusCode;
+
     public DescribeDeliveryChannelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeDeliveryChannelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDeliveryChannelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeDeliveryChannelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

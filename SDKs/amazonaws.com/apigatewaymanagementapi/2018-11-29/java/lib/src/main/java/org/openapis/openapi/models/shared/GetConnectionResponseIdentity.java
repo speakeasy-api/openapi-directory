@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetConnectionResponseIdentity {
     @JsonProperty("SourceIp")
     public String sourceIp;
+
     public GetConnectionResponseIdentity withSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;
@@ -16,9 +17,14 @@ public class GetConnectionResponseIdentity {
     
     @JsonProperty("UserAgent")
     public String userAgent;
+
     public GetConnectionResponseIdentity withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
     }
     
+    public GetConnectionResponseIdentity(@JsonProperty("SourceIp") String sourceIp, @JsonProperty("UserAgent") String userAgent) {
+        this.sourceIp = sourceIp;
+        this.userAgent = userAgent;
+  }
 }

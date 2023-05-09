@@ -56,11 +56,9 @@ public class AllowedOriginsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse res = new org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse res = new org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse(contentType, httpRes.statusCode()) {{
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -102,12 +100,10 @@ public class AllowedOriginsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsResponse(contentType, httpRes.statusCode()) {{
             allowedOriginsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,12 +152,10 @@ public class AllowedOriginsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse(contentType, httpRes.statusCode()) {{
             allowedOrigin = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -212,12 +206,10 @@ public class AllowedOriginsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsResponse() {{
+        org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsResponse(contentType, httpRes.statusCode()) {{
             allowedOriginsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

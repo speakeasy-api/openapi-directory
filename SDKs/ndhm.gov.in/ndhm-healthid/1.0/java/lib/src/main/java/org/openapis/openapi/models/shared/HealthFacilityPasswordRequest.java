@@ -15,9 +15,11 @@ public class HealthFacilityPasswordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hfrUid")
     public String hfrUid;
+
     public HealthFacilityPasswordRequest withHfrUid(String hfrUid) {
         this.hfrUid = hfrUid;
         return this;
     }
     
+    public HealthFacilityPasswordRequest(){}
 }

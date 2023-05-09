@@ -15,6 +15,7 @@ public class ContainersGroupsNameOrIdGetDetailsRouteStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_progress")
     public Boolean inProgress;
+
     public ContainersGroupsNameOrIdGetDetailsRouteStatus withInProgress(Boolean inProgress) {
         this.inProgress = inProgress;
         return this;
@@ -26,6 +27,7 @@ public class ContainersGroupsNameOrIdGetDetailsRouteStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ContainersGroupsNameOrIdGetDetailsRouteStatus withMessage(String message) {
         this.message = message;
         return this;
@@ -37,9 +39,11 @@ public class ContainersGroupsNameOrIdGetDetailsRouteStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successful")
     public Boolean successful;
+
     public ContainersGroupsNameOrIdGetDetailsRouteStatus withSuccessful(Boolean successful) {
         this.successful = successful;
         return this;
     }
     
+    public ContainersGroupsNameOrIdGetDetailsRouteStatus(){}
 }

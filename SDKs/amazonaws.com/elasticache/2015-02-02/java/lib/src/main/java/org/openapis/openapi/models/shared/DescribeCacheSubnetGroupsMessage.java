@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCacheSubnetGroupsMessage {
     
     public String cacheSubnetGroupName;
+
     public DescribeCacheSubnetGroupsMessage withCacheSubnetGroupName(String cacheSubnetGroupName) {
         this.cacheSubnetGroupName = cacheSubnetGroupName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeCacheSubnetGroupsMessage {
     
     
     public String marker;
+
     public DescribeCacheSubnetGroupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,9 +28,11 @@ public class DescribeCacheSubnetGroupsMessage {
     
     
     public Long maxRecords;
+
     public DescribeCacheSubnetGroupsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeCacheSubnetGroupsMessage(){}
 }

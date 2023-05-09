@@ -12,6 +12,7 @@ public class FileNeedsVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileId")
     public Long fileId;
+
     public FileNeedsVendor withFileId(Long fileId) {
         this.fileId = fileId;
         return this;
@@ -20,6 +21,7 @@ public class FileNeedsVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guid")
     public String guid;
+
     public FileNeedsVendor withGuid(String guid) {
         this.guid = guid;
         return this;
@@ -28,6 +30,7 @@ public class FileNeedsVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public Long projectId;
+
     public FileNeedsVendor withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -36,6 +39,7 @@ public class FileNeedsVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public FileNeedsVendor withReason(String reason) {
         this.reason = reason;
         return this;
@@ -44,6 +48,7 @@ public class FileNeedsVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLanguage")
     public String[] targetLanguage;
+
     public FileNeedsVendor withTargetLanguage(String[] targetLanguage) {
         this.targetLanguage = targetLanguage;
         return this;
@@ -52,9 +57,11 @@ public class FileNeedsVendor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskType")
     public String[] taskType;
+
     public FileNeedsVendor withTaskType(String[] taskType) {
         this.taskType = taskType;
         return this;
     }
     
+    public FileNeedsVendor(){}
 }

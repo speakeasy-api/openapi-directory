@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StoryIdFileOoxmlautomationidGetResponse {
     
     public String contentType;
+
     public StoryIdFileOoxmlautomationidGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StoryIdFileOoxmlautomationidGetResponse {
      */
     
     public byte[] excelSpreadsheet;
+
     public StoryIdFileOoxmlautomationidGetResponse withExcelSpreadsheet(byte[] excelSpreadsheet) {
         this.excelSpreadsheet = excelSpreadsheet;
         return this;
@@ -29,6 +32,7 @@ public class StoryIdFileOoxmlautomationidGetResponse {
      */
     
     public byte[] powerpointPresentation;
+
     public StoryIdFileOoxmlautomationidGetResponse withPowerpointPresentation(byte[] powerpointPresentation) {
         this.powerpointPresentation = powerpointPresentation;
         return this;
@@ -36,6 +40,7 @@ public class StoryIdFileOoxmlautomationidGetResponse {
     
     
     public Integer statusCode;
+
     public StoryIdFileOoxmlautomationidGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StoryIdFileOoxmlautomationidGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StoryIdFileOoxmlautomationidGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StoryIdFileOoxmlautomationidGetResponse {
      */
     
     public byte[] wordDocument;
+
     public StoryIdFileOoxmlautomationidGetResponse withWordDocument(byte[] wordDocument) {
         this.wordDocument = wordDocument;
         return this;
@@ -63,9 +70,14 @@ public class StoryIdFileOoxmlautomationidGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ProblemDetail problemDetail;
+
     public StoryIdFileOoxmlautomationidGetResponse withProblemDetail(org.openapis.openapi.models.shared.ProblemDetail problemDetail) {
         this.problemDetail = problemDetail;
         return this;
     }
     
+    public StoryIdFileOoxmlautomationidGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

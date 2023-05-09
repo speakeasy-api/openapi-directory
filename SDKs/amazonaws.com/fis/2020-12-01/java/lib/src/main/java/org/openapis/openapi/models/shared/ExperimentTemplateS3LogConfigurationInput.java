@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExperimentTemplateS3LogConfigurationInput {
     @JsonProperty("bucketName")
     public String bucketName;
+
     public ExperimentTemplateS3LogConfigurationInput withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -22,9 +23,13 @@ public class ExperimentTemplateS3LogConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public ExperimentTemplateS3LogConfigurationInput withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public ExperimentTemplateS3LogConfigurationInput(@JsonProperty("bucketName") String bucketName) {
+        this.bucketName = bucketName;
+  }
 }

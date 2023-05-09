@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetOpenIdTokenInput {
     @JsonProperty("IdentityId")
     public String identityId;
+
     public GetOpenIdTokenInput withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -22,9 +23,13 @@ public class GetOpenIdTokenInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Logins")
     public java.util.Map<String, String> logins;
+
     public GetOpenIdTokenInput withLogins(java.util.Map<String, String> logins) {
         this.logins = logins;
         return this;
     }
     
+    public GetOpenIdTokenInput(@JsonProperty("IdentityId") String identityId) {
+        this.identityId = identityId;
+  }
 }

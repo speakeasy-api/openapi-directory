@@ -15,6 +15,7 @@ public class UpdateIdentityProviderSettingsRequestBodyUpdateSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddSubnets")
     public String[] addSubnets;
+
     public UpdateIdentityProviderSettingsRequestBodyUpdateSettings withAddSubnets(String[] addSubnets) {
         this.addSubnets = addSubnets;
         return this;
@@ -23,6 +24,7 @@ public class UpdateIdentityProviderSettingsRequestBodyUpdateSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoveSubnets")
     public String[] removeSubnets;
+
     public UpdateIdentityProviderSettingsRequestBodyUpdateSettings withRemoveSubnets(String[] removeSubnets) {
         this.removeSubnets = removeSubnets;
         return this;
@@ -31,9 +33,11 @@ public class UpdateIdentityProviderSettingsRequestBodyUpdateSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupId")
     public String securityGroupId;
+
     public UpdateIdentityProviderSettingsRequestBodyUpdateSettings withSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
     
+    public UpdateIdentityProviderSettingsRequestBodyUpdateSettings(){}
 }

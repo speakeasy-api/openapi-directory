@@ -15,9 +15,11 @@ public class CreateDatasetContentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionId")
     public String versionId;
+
     public CreateDatasetContentRequestBody withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public CreateDatasetContentRequestBody(){}
 }

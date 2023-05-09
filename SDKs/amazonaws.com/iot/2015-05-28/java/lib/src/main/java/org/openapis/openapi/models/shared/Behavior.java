@@ -15,6 +15,7 @@ public class Behavior {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criteria")
     public BehaviorCriteria criteria;
+
     public Behavior withCriteria(BehaviorCriteria criteria) {
         this.criteria = criteria;
         return this;
@@ -23,6 +24,7 @@ public class Behavior {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public String metric;
+
     public Behavior withMetric(String metric) {
         this.metric = metric;
         return this;
@@ -31,6 +33,7 @@ public class Behavior {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricDimension")
     public MetricDimension metricDimension;
+
     public Behavior withMetricDimension(MetricDimension metricDimension) {
         this.metricDimension = metricDimension;
         return this;
@@ -38,6 +41,7 @@ public class Behavior {
     
     @JsonProperty("name")
     public String name;
+
     public Behavior withName(String name) {
         this.name = name;
         return this;
@@ -46,9 +50,13 @@ public class Behavior {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suppressAlerts")
     public Boolean suppressAlerts;
+
     public Behavior withSuppressAlerts(Boolean suppressAlerts) {
         this.suppressAlerts = suppressAlerts;
         return this;
     }
     
+    public Behavior(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

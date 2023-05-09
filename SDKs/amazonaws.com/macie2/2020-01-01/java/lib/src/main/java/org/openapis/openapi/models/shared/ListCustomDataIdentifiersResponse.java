@@ -15,6 +15,7 @@ public class ListCustomDataIdentifiersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public CustomDataIdentifierSummary[] items;
+
     public ListCustomDataIdentifiersResponse withItems(CustomDataIdentifierSummary[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class ListCustomDataIdentifiersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListCustomDataIdentifiersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomDataIdentifiersResponse(){}
 }

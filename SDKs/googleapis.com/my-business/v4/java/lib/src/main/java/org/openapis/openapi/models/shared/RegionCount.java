@@ -18,6 +18,7 @@ public class RegionCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public RegionCount withCount(String count) {
         this.count = count;
         return this;
@@ -29,6 +30,7 @@ public class RegionCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public RegionCount withLabel(String label) {
         this.label = label;
         return this;
@@ -40,9 +42,11 @@ public class RegionCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latlng")
     public LatLng latlng;
+
     public RegionCount withLatlng(LatLng latlng) {
         this.latlng = latlng;
         return this;
     }
     
+    public RegionCount(){}
 }

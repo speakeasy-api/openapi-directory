@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerResponse {
     
     public String contentType;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerResponse {
      */
     
     public org.openapis.openapi.models.shared.FindDevicesByOwnerResponse findDevicesByOwnerResponse;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerResponse withFindDevicesByOwnerResponse(org.openapis.openapi.models.shared.FindDevicesByOwnerResponse findDevicesByOwnerResponse) {
         this.findDevicesByOwnerResponse = findDevicesByOwnerResponse;
         return this;
@@ -26,6 +29,7 @@ public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerResponse {
     
     
     public Integer statusCode;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AndroiddeviceprovisioningPartnersDevicesFindByOwnerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class GetAdminMappingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetAdminMappingsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,9 +23,11 @@ public class GetAdminMappingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetAdminMappingsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetAdminMappingsRequest(){}
 }

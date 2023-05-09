@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListFilesResponse {
     @JsonProperty("data")
     public OpenAIFile[] data;
+
     public ListFilesResponse withData(OpenAIFile[] data) {
         this.data = data;
         return this;
@@ -19,9 +20,14 @@ public class ListFilesResponse {
     
     @JsonProperty("object")
     public String object;
+
     public ListFilesResponse withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public ListFilesResponse(@JsonProperty("data") OpenAIFile[] data, @JsonProperty("object") String object) {
+        this.data = data;
+        this.object = object;
+  }
 }

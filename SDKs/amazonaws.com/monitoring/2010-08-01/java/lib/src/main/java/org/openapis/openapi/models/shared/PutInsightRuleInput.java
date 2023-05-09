@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PutInsightRuleInput {
     
     public String ruleDefinition;
+
     public PutInsightRuleInput withRuleDefinition(String ruleDefinition) {
         this.ruleDefinition = ruleDefinition;
         return this;
@@ -16,6 +17,7 @@ public class PutInsightRuleInput {
     
     
     public String ruleName;
+
     public PutInsightRuleInput withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -23,6 +25,7 @@ public class PutInsightRuleInput {
     
     
     public String ruleState;
+
     public PutInsightRuleInput withRuleState(String ruleState) {
         this.ruleState = ruleState;
         return this;
@@ -30,9 +33,14 @@ public class PutInsightRuleInput {
     
     
     public Tag[] tags;
+
     public PutInsightRuleInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public PutInsightRuleInput(@JsonProperty("RuleDefinition") String ruleDefinition, @JsonProperty("RuleName") String ruleName) {
+        this.ruleDefinition = ruleDefinition;
+        this.ruleName = ruleName;
+  }
 }

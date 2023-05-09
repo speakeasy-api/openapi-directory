@@ -22,6 +22,7 @@ public class GetTemplateStepGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetTemplateStepGroupResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class GetTemplateStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetTemplateStepGroupResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class GetTemplateStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetTemplateStepGroupResponse withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class GetTemplateStepGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public GetTemplateStepGroupResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -56,6 +60,7 @@ public class GetTemplateStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetTemplateStepGroupResponse withName(String name) {
         this.name = name;
         return this;
@@ -64,6 +69,7 @@ public class GetTemplateStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String[] next;
+
     public GetTemplateStepGroupResponse withNext(String[] next) {
         this.next = next;
         return this;
@@ -72,6 +78,7 @@ public class GetTemplateStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String[] previous;
+
     public GetTemplateStepGroupResponse withPrevious(String[] previous) {
         this.previous = previous;
         return this;
@@ -80,6 +87,7 @@ public class GetTemplateStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StepGroupStatusEnum status;
+
     public GetTemplateStepGroupResponse withStatus(StepGroupStatusEnum status) {
         this.status = status;
         return this;
@@ -88,6 +96,7 @@ public class GetTemplateStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateId")
     public String templateId;
+
     public GetTemplateStepGroupResponse withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
@@ -96,9 +105,11 @@ public class GetTemplateStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tools")
     public Tool[] tools;
+
     public GetTemplateStepGroupResponse withTools(Tool[] tools) {
         this.tools = tools;
         return this;
     }
     
+    public GetTemplateStepGroupResponse(){}
 }

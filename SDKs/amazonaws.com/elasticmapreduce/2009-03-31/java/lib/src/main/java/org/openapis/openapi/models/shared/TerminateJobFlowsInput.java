@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TerminateJobFlowsInput {
     @JsonProperty("JobFlowIds")
     public String[] jobFlowIds;
+
     public TerminateJobFlowsInput withJobFlowIds(String[] jobFlowIds) {
         this.jobFlowIds = jobFlowIds;
         return this;
     }
     
+    public TerminateJobFlowsInput(@JsonProperty("JobFlowIds") String[] jobFlowIds) {
+        this.jobFlowIds = jobFlowIds;
+  }
 }

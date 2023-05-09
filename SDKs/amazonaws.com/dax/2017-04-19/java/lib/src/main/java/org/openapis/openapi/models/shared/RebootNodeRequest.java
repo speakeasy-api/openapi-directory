@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RebootNodeRequest {
     @JsonProperty("ClusterName")
     public String clusterName;
+
     public RebootNodeRequest withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -16,9 +17,14 @@ public class RebootNodeRequest {
     
     @JsonProperty("NodeId")
     public String nodeId;
+
     public RebootNodeRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
     }
     
+    public RebootNodeRequest(@JsonProperty("ClusterName") String clusterName, @JsonProperty("NodeId") String nodeId) {
+        this.clusterName = clusterName;
+        this.nodeId = nodeId;
+  }
 }

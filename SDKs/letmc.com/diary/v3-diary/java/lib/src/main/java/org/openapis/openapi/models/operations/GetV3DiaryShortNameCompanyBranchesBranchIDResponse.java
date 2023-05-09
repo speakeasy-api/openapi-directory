@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV3DiaryShortNameCompanyBranchesBranchIDResponse {
@@ -12,6 +13,7 @@ public class GetV3DiaryShortNameCompanyBranchesBranchIDResponse {
      */
     
     public org.openapis.openapi.models.shared.AdvertisingBranchModel advertisingBranchModel;
+
     public GetV3DiaryShortNameCompanyBranchesBranchIDResponse withAdvertisingBranchModel(org.openapis.openapi.models.shared.AdvertisingBranchModel advertisingBranchModel) {
         this.advertisingBranchModel = advertisingBranchModel;
         return this;
@@ -19,6 +21,7 @@ public class GetV3DiaryShortNameCompanyBranchesBranchIDResponse {
     
     
     public byte[] body;
+
     public GetV3DiaryShortNameCompanyBranchesBranchIDResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -26,6 +29,7 @@ public class GetV3DiaryShortNameCompanyBranchesBranchIDResponse {
     
     
     public String contentType;
+
     public GetV3DiaryShortNameCompanyBranchesBranchIDResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class GetV3DiaryShortNameCompanyBranchesBranchIDResponse {
     
     
     public Integer statusCode;
+
     public GetV3DiaryShortNameCompanyBranchesBranchIDResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetV3DiaryShortNameCompanyBranchesBranchIDResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV3DiaryShortNameCompanyBranchesBranchIDResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetV3DiaryShortNameCompanyBranchesBranchIDResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TaskStartedEventDetails {
     @JsonProperty("resource")
     public String resource;
+
     public TaskStartedEventDetails withResource(String resource) {
         this.resource = resource;
         return this;
@@ -19,9 +20,14 @@ public class TaskStartedEventDetails {
     
     @JsonProperty("resourceType")
     public String resourceType;
+
     public TaskStartedEventDetails withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public TaskStartedEventDetails(@JsonProperty("resource") String resource, @JsonProperty("resourceType") String resourceType) {
+        this.resource = resource;
+        this.resourceType = resourceType;
+  }
 }

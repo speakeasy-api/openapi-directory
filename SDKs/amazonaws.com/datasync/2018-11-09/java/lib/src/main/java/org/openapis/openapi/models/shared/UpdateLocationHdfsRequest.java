@@ -12,6 +12,7 @@ public class UpdateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentArns")
     public String[] agentArns;
+
     public UpdateLocationHdfsRequest withAgentArns(String[] agentArns) {
         this.agentArns = agentArns;
         return this;
@@ -20,6 +21,7 @@ public class UpdateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthenticationType")
     public HdfsAuthenticationTypeEnum authenticationType;
+
     public UpdateLocationHdfsRequest withAuthenticationType(HdfsAuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -28,6 +30,7 @@ public class UpdateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockSize")
     public Long blockSize;
+
     public UpdateLocationHdfsRequest withBlockSize(Long blockSize) {
         this.blockSize = blockSize;
         return this;
@@ -36,6 +39,7 @@ public class UpdateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KerberosKeytab")
     public String kerberosKeytab;
+
     public UpdateLocationHdfsRequest withKerberosKeytab(String kerberosKeytab) {
         this.kerberosKeytab = kerberosKeytab;
         return this;
@@ -44,6 +48,7 @@ public class UpdateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KerberosKrb5Conf")
     public String kerberosKrb5Conf;
+
     public UpdateLocationHdfsRequest withKerberosKrb5Conf(String kerberosKrb5Conf) {
         this.kerberosKrb5Conf = kerberosKrb5Conf;
         return this;
@@ -52,6 +57,7 @@ public class UpdateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KerberosPrincipal")
     public String kerberosPrincipal;
+
     public UpdateLocationHdfsRequest withKerberosPrincipal(String kerberosPrincipal) {
         this.kerberosPrincipal = kerberosPrincipal;
         return this;
@@ -60,6 +66,7 @@ public class UpdateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyProviderUri")
     public String kmsKeyProviderUri;
+
     public UpdateLocationHdfsRequest withKmsKeyProviderUri(String kmsKeyProviderUri) {
         this.kmsKeyProviderUri = kmsKeyProviderUri;
         return this;
@@ -67,6 +74,7 @@ public class UpdateLocationHdfsRequest {
     
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public UpdateLocationHdfsRequest withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
@@ -75,6 +83,7 @@ public class UpdateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameNodes")
     public HdfsNameNode[] nameNodes;
+
     public UpdateLocationHdfsRequest withNameNodes(HdfsNameNode[] nameNodes) {
         this.nameNodes = nameNodes;
         return this;
@@ -83,6 +92,7 @@ public class UpdateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QopConfiguration")
     public QopConfiguration qopConfiguration;
+
     public UpdateLocationHdfsRequest withQopConfiguration(QopConfiguration qopConfiguration) {
         this.qopConfiguration = qopConfiguration;
         return this;
@@ -91,6 +101,7 @@ public class UpdateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationFactor")
     public Long replicationFactor;
+
     public UpdateLocationHdfsRequest withReplicationFactor(Long replicationFactor) {
         this.replicationFactor = replicationFactor;
         return this;
@@ -99,6 +110,7 @@ public class UpdateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SimpleUser")
     public String simpleUser;
+
     public UpdateLocationHdfsRequest withSimpleUser(String simpleUser) {
         this.simpleUser = simpleUser;
         return this;
@@ -107,9 +119,13 @@ public class UpdateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subdirectory")
     public String subdirectory;
+
     public UpdateLocationHdfsRequest withSubdirectory(String subdirectory) {
         this.subdirectory = subdirectory;
         return this;
     }
     
+    public UpdateLocationHdfsRequest(@JsonProperty("LocationArn") String locationArn) {
+        this.locationArn = locationArn;
+  }
 }

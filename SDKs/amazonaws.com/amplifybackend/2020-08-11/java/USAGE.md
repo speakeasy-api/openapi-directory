@@ -3,42 +3,39 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CloneBackendRequestBody;
 import org.openapis.openapi.models.operations.CloneBackendRequest;
+import org.openapis.openapi.models.operations.CloneBackendRequestBody;
 import org.openapis.openapi.models.operations.CloneBackendResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CloneBackendRequest req = new CloneBackendRequest() {{
-                requestBody = new CloneBackendRequestBody() {{
-                    targetEnvironmentName = "corrupti";
-                }};
-                xAmzAlgorithm = "provident";
-                xAmzContentSha256 = "distinctio";
-                xAmzCredential = "quibusdam";
-                xAmzDate = "unde";
-                xAmzSecurityToken = "nulla";
-                xAmzSignature = "corrupti";
-                xAmzSignedHeaders = "illum";
-                appId = "vel";
-                backendEnvironmentName = "error";
-            }}            
+            CloneBackendRequest req = new CloneBackendRequest(                new CloneBackendRequestBody("provident");, "distinctio", "quibusdam") {{
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+            }};            
 
             CloneBackendResponse res = sdk.cloneBackend(req);
 
-            if (res.cloneBackendResponse.isPresent()) {
+            if (res.cloneBackendResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

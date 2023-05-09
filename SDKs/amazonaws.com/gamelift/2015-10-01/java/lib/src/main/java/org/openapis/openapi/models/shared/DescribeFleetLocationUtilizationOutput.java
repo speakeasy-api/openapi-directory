@@ -15,9 +15,11 @@ public class DescribeFleetLocationUtilizationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetUtilization")
     public FleetUtilization fleetUtilization;
+
     public DescribeFleetLocationUtilizationOutput withFleetUtilization(FleetUtilization fleetUtilization) {
         this.fleetUtilization = fleetUtilization;
         return this;
     }
     
+    public DescribeFleetLocationUtilizationOutput(){}
 }

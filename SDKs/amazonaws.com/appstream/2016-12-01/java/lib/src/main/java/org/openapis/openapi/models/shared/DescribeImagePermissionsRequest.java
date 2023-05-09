@@ -12,6 +12,7 @@ public class DescribeImagePermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeImagePermissionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -19,6 +20,7 @@ public class DescribeImagePermissionsRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public DescribeImagePermissionsRequest withName(String name) {
         this.name = name;
         return this;
@@ -27,6 +29,7 @@ public class DescribeImagePermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeImagePermissionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class DescribeImagePermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedAwsAccountIds")
     public String[] sharedAwsAccountIds;
+
     public DescribeImagePermissionsRequest withSharedAwsAccountIds(String[] sharedAwsAccountIds) {
         this.sharedAwsAccountIds = sharedAwsAccountIds;
         return this;
     }
     
+    public DescribeImagePermissionsRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

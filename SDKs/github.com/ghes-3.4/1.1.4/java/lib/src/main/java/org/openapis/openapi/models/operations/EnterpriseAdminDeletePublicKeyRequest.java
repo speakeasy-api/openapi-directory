@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminDeletePublicKeyRequest {
@@ -12,9 +13,13 @@ public class EnterpriseAdminDeletePublicKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key_ids")
     public String keyIds;
+
     public EnterpriseAdminDeletePublicKeyRequest withKeyIds(String keyIds) {
         this.keyIds = keyIds;
         return this;
     }
     
+    public EnterpriseAdminDeletePublicKeyRequest(@JsonProperty("key_ids") String keyIds) {
+        this.keyIds = keyIds;
+  }
 }

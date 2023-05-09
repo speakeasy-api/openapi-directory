@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsListLabelsForSelfHostedRunnerForRepoResponse {
     
     public String contentType;
+
     public ActionsListLabelsForSelfHostedRunnerForRepoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsListLabelsForSelfHostedRunnerForRepoResponse {
     
     
     public Integer statusCode;
+
     public ActionsListLabelsForSelfHostedRunnerForRepoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsListLabelsForSelfHostedRunnerForRepoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsListLabelsForSelfHostedRunnerForRepoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ActionsListLabelsForSelfHostedRunnerForRepoResponse {
      */
     
     public ActionsListLabelsForSelfHostedRunnerForRepo200ApplicationJSON actionsListLabelsForSelfHostedRunnerForRepo200ApplicationJSONObject;
+
     public ActionsListLabelsForSelfHostedRunnerForRepoResponse withActionsListLabelsForSelfHostedRunnerForRepo200ApplicationJSONObject(ActionsListLabelsForSelfHostedRunnerForRepo200ApplicationJSON actionsListLabelsForSelfHostedRunnerForRepo200ApplicationJSONObject) {
         this.actionsListLabelsForSelfHostedRunnerForRepo200ApplicationJSONObject = actionsListLabelsForSelfHostedRunnerForRepo200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class ActionsListLabelsForSelfHostedRunnerForRepoResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ActionsListLabelsForSelfHostedRunnerForRepoResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
     }
     
+    public ActionsListLabelsForSelfHostedRunnerForRepoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

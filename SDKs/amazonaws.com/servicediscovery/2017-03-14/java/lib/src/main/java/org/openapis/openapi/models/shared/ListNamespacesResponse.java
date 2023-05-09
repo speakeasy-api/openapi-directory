@@ -15,6 +15,7 @@ public class ListNamespacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Namespaces")
     public NamespaceSummary[] namespaces;
+
     public ListNamespacesResponse withNamespaces(NamespaceSummary[] namespaces) {
         this.namespaces = namespaces;
         return this;
@@ -23,9 +24,11 @@ public class ListNamespacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListNamespacesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListNamespacesResponse(){}
 }

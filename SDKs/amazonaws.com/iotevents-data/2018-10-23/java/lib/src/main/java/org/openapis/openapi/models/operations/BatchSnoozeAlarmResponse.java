@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchSnoozeAlarmResponse {
@@ -12,6 +13,7 @@ public class BatchSnoozeAlarmResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchSnoozeAlarmResponse batchSnoozeAlarmResponse;
+
     public BatchSnoozeAlarmResponse withBatchSnoozeAlarmResponse(org.openapis.openapi.models.shared.BatchSnoozeAlarmResponse batchSnoozeAlarmResponse) {
         this.batchSnoozeAlarmResponse = batchSnoozeAlarmResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchSnoozeAlarmResponse {
     
     
     public String contentType;
+
     public BatchSnoozeAlarmResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchSnoozeAlarmResponse {
      */
     
     public Object internalFailureException;
+
     public BatchSnoozeAlarmResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class BatchSnoozeAlarmResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchSnoozeAlarmResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class BatchSnoozeAlarmResponse {
     
     
     public Integer statusCode;
+
     public BatchSnoozeAlarmResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchSnoozeAlarmResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchSnoozeAlarmResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchSnoozeAlarmResponse {
      */
     
     public Object serviceUnavailableException;
+
     public BatchSnoozeAlarmResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class BatchSnoozeAlarmResponse {
      */
     
     public Object throttlingException;
+
     public BatchSnoozeAlarmResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public BatchSnoozeAlarmResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

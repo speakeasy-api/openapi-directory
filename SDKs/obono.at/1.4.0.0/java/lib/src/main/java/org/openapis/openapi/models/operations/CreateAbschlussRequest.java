@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAbschlussRequest {
@@ -12,6 +13,7 @@ public class CreateAbschlussRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Abschlussbelegdaten abschlussbelegdaten;
+
     public CreateAbschlussRequest withAbschlussbelegdaten(org.openapis.openapi.models.shared.Abschlussbelegdaten abschlussbelegdaten) {
         this.abschlussbelegdaten = abschlussbelegdaten;
         return this;
@@ -22,9 +24,14 @@ public class CreateAbschlussRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrierkasseUuid")
     public String registrierkasseUuid;
+
     public CreateAbschlussRequest withRegistrierkasseUuid(String registrierkasseUuid) {
         this.registrierkasseUuid = registrierkasseUuid;
         return this;
     }
     
+    public CreateAbschlussRequest(@JsonProperty("Abschlussbelegdaten") org.openapis.openapi.models.shared.Abschlussbelegdaten abschlussbelegdaten, @JsonProperty("registrierkasseUuid") String registrierkasseUuid) {
+        this.abschlussbelegdaten = abschlussbelegdaten;
+        this.registrierkasseUuid = registrierkasseUuid;
+  }
 }

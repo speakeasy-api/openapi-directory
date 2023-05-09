@@ -15,6 +15,7 @@ public class ContainersUsageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailableSizes")
     public ContainersUsageInfoAvailableSizes[] availableSizes;
+
     public ContainersUsageInfo withAvailableSizes(ContainersUsageInfoAvailableSizes[] availableSizes) {
         this.availableSizes = availableSizes;
         return this;
@@ -26,6 +27,7 @@ public class ContainersUsageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public String environment;
+
     public ContainersUsageInfo withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -34,6 +36,7 @@ public class ContainersUsageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limits")
     public ContainersUsageInfoLimits limits;
+
     public ContainersUsageInfo withLimits(ContainersUsageInfoLimits limits) {
         this.limits = limits;
         return this;
@@ -42,9 +45,11 @@ public class ContainersUsageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Usage")
     public ContainersUsageInfoUsage usage;
+
     public ContainersUsageInfo withUsage(ContainersUsageInfoUsage usage) {
         this.usage = usage;
         return this;
     }
     
+    public ContainersUsageInfo(){}
 }

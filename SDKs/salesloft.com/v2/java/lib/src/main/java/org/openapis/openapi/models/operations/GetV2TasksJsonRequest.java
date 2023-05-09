@@ -12,6 +12,7 @@ public class GetV2TasksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=account_id")
     public Long[] accountId;
+
     public GetV2TasksJsonRequest withAccountId(Long[] accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +23,7 @@ public class GetV2TasksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=current_state")
     public String[] currentState;
+
     public GetV2TasksJsonRequest withCurrentState(String[] currentState) {
         this.currentState = currentState;
         return this;
@@ -32,6 +34,7 @@ public class GetV2TasksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idempotency_key")
     public String idempotencyKey;
+
     public GetV2TasksJsonRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -42,6 +45,7 @@ public class GetV2TasksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Long[] ids;
+
     public GetV2TasksJsonRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -52,6 +56,7 @@ public class GetV2TasksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2TasksJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -62,6 +67,7 @@ public class GetV2TasksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2TasksJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -72,6 +78,7 @@ public class GetV2TasksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=locale")
     public String[] locale;
+
     public GetV2TasksJsonRequest withLocale(String[] locale) {
         this.locale = locale;
         return this;
@@ -82,6 +89,7 @@ public class GetV2TasksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2TasksJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -92,6 +100,7 @@ public class GetV2TasksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2TasksJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -102,6 +111,7 @@ public class GetV2TasksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=person_id")
     public Long[] personId;
+
     public GetV2TasksJsonRequest withPersonId(Long[] personId) {
         this.personId = personId;
         return this;
@@ -112,6 +122,7 @@ public class GetV2TasksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2TasksJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -122,6 +133,7 @@ public class GetV2TasksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2TasksJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -132,6 +144,7 @@ public class GetV2TasksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=task_type")
     public String[] taskType;
+
     public GetV2TasksJsonRequest withTaskType(String[] taskType) {
         this.taskType = taskType;
         return this;
@@ -142,6 +155,7 @@ public class GetV2TasksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time_interval_filter")
     public String timeIntervalFilter;
+
     public GetV2TasksJsonRequest withTimeIntervalFilter(String timeIntervalFilter) {
         this.timeIntervalFilter = timeIntervalFilter;
         return this;
@@ -152,9 +166,11 @@ public class GetV2TasksJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_id")
     public Long[] userId;
+
     public GetV2TasksJsonRequest withUserId(Long[] userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetV2TasksJsonRequest(){}
 }

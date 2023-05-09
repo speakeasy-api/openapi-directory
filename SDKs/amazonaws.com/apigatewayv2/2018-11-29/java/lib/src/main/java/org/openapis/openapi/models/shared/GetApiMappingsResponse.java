@@ -15,6 +15,7 @@ public class GetApiMappingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public ApiMapping[] items;
+
     public GetApiMappingsResponse withItems(ApiMapping[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class GetApiMappingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetApiMappingsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetApiMappingsResponse(){}
 }

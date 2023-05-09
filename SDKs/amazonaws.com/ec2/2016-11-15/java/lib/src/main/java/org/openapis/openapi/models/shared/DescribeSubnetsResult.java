@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSubnetsResult {
     
     public String nextToken;
+
     public DescribeSubnetsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSubnetsResult {
     
     
     public DescribeSubnetsResultSubnets[] subnets;
+
     public DescribeSubnetsResult withSubnets(DescribeSubnetsResultSubnets[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public DescribeSubnetsResult(){}
 }

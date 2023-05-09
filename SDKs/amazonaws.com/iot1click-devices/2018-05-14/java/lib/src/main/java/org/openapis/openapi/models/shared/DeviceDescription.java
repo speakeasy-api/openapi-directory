@@ -12,6 +12,7 @@ public class DeviceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DeviceDescription withArn(String arn) {
         this.arn = arn;
         return this;
@@ -20,6 +21,7 @@ public class DeviceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public DeviceDescription withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -28,6 +30,7 @@ public class DeviceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceId")
     public String deviceId;
+
     public DeviceDescription withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -36,6 +39,7 @@ public class DeviceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public DeviceDescription withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -44,6 +48,7 @@ public class DeviceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemainingLife")
     public Double remainingLife;
+
     public DeviceDescription withRemainingLife(Double remainingLife) {
         this.remainingLife = remainingLife;
         return this;
@@ -52,6 +57,7 @@ public class DeviceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public DeviceDescription withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -60,9 +66,11 @@ public class DeviceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public DeviceDescription withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DeviceDescription(){}
 }

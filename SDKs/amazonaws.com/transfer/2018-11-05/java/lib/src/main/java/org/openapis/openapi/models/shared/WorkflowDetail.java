@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkflowDetail {
     @JsonProperty("ExecutionRole")
     public String executionRole;
+
     public WorkflowDetail withExecutionRole(String executionRole) {
         this.executionRole = executionRole;
         return this;
@@ -19,9 +20,14 @@ public class WorkflowDetail {
     
     @JsonProperty("WorkflowId")
     public String workflowId;
+
     public WorkflowDetail withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public WorkflowDetail(@JsonProperty("ExecutionRole") String executionRole, @JsonProperty("WorkflowId") String workflowId) {
+        this.executionRole = executionRole;
+        this.workflowId = workflowId;
+  }
 }

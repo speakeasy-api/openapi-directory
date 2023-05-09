@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAvailableNumbersResponse {
     
     public byte[] body;
+
     public GetAvailableNumbersResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetAvailableNumbersResponse {
     
     
     public String contentType;
+
     public GetAvailableNumbersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetAvailableNumbersResponse {
     
     
     public Integer statusCode;
+
     public GetAvailableNumbersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetAvailableNumbersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAvailableNumbersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetAvailableNumbersResponse {
      */
     
     public org.openapis.openapi.models.shared.AccountUnauthorized accountUnauthorized;
+
     public GetAvailableNumbersResponse withAccountUnauthorized(org.openapis.openapi.models.shared.AccountUnauthorized accountUnauthorized) {
         this.accountUnauthorized = accountUnauthorized;
         return this;
@@ -50,9 +56,14 @@ public class GetAvailableNumbersResponse {
      */
     
     public org.openapis.openapi.models.shared.AvailableNumbers availableNumbers;
+
     public GetAvailableNumbersResponse withAvailableNumbers(org.openapis.openapi.models.shared.AvailableNumbers availableNumbers) {
         this.availableNumbers = availableNumbers;
         return this;
     }
     
+    public GetAvailableNumbersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

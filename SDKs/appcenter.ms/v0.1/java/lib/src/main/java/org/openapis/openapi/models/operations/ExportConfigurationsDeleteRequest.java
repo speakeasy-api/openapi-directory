@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportConfigurationsDeleteRequest {
@@ -12,6 +13,7 @@ public class ExportConfigurationsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ExportConfigurationsDeleteRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class ExportConfigurationsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=export_configuration_id")
     public String exportConfigurationId;
+
     public ExportConfigurationsDeleteRequest withExportConfigurationId(String exportConfigurationId) {
         this.exportConfigurationId = exportConfigurationId;
         return this;
@@ -32,9 +35,15 @@ public class ExportConfigurationsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ExportConfigurationsDeleteRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public ExportConfigurationsDeleteRequest(@JsonProperty("app_name") String appName, @JsonProperty("export_configuration_id") String exportConfigurationId, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.exportConfigurationId = exportConfigurationId;
+        this.ownerName = ownerName;
+  }
 }

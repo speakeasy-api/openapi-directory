@@ -12,6 +12,7 @@ public class ListMigrationTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListMigrationTasksRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListMigrationTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMigrationTasksRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListMigrationTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceName")
     public String resourceName;
+
     public ListMigrationTasksRequest withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public ListMigrationTasksRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostVoidTransactionResponse {
     
     public String contentType;
+
     public PostVoidTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostVoidTransactionResponse {
     
     
     public Integer statusCode;
+
     public PostVoidTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostVoidTransactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostVoidTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostVoidTransactionResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostVoidTransactionResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -43,9 +48,14 @@ public class PostVoidTransactionResponse {
      */
     
     public org.openapis.openapi.models.shared.StoredValueVoidResponse storedValueVoidResponse;
+
     public PostVoidTransactionResponse withStoredValueVoidResponse(org.openapis.openapi.models.shared.StoredValueVoidResponse storedValueVoidResponse) {
         this.storedValueVoidResponse = storedValueVoidResponse;
         return this;
     }
     
+    public PostVoidTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

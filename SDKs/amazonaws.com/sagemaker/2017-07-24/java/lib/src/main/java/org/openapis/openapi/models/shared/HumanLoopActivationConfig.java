@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HumanLoopActivationConfig {
     @JsonProperty("HumanLoopActivationConditionsConfig")
     public HumanLoopActivationConditionsConfig humanLoopActivationConditionsConfig;
+
     public HumanLoopActivationConfig withHumanLoopActivationConditionsConfig(HumanLoopActivationConditionsConfig humanLoopActivationConditionsConfig) {
         this.humanLoopActivationConditionsConfig = humanLoopActivationConditionsConfig;
         return this;
     }
     
+    public HumanLoopActivationConfig(@JsonProperty("HumanLoopActivationConditionsConfig") HumanLoopActivationConditionsConfig humanLoopActivationConditionsConfig) {
+        this.humanLoopActivationConditionsConfig = humanLoopActivationConditionsConfig;
+  }
 }

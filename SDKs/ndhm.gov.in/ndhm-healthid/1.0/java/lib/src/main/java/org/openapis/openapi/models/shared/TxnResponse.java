@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class TxnResponse {
     
     public String txnId;
+
     public TxnResponse withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public TxnResponse(){}
 }

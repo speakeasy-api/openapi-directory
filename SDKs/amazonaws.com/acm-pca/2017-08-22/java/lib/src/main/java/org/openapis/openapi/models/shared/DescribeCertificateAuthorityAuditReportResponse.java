@@ -20,6 +20,7 @@ public class DescribeCertificateAuthorityAuditReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuditReportStatus")
     public AuditReportStatusEnum auditReportStatus;
+
     public DescribeCertificateAuthorityAuditReportResponse withAuditReportStatus(AuditReportStatusEnum auditReportStatus) {
         this.auditReportStatus = auditReportStatus;
         return this;
@@ -30,6 +31,7 @@ public class DescribeCertificateAuthorityAuditReportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public DescribeCertificateAuthorityAuditReportResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class DescribeCertificateAuthorityAuditReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public DescribeCertificateAuthorityAuditReportResponse withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -46,9 +49,11 @@ public class DescribeCertificateAuthorityAuditReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Key")
     public String s3Key;
+
     public DescribeCertificateAuthorityAuditReportResponse withS3Key(String s3Key) {
         this.s3Key = s3Key;
         return this;
     }
     
+    public DescribeCertificateAuthorityAuditReportResponse(){}
 }

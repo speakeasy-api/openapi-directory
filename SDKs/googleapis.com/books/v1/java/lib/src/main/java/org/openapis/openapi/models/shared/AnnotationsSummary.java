@@ -15,6 +15,7 @@ public class AnnotationsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AnnotationsSummary withKind(String kind) {
         this.kind = kind;
         return this;
@@ -23,9 +24,11 @@ public class AnnotationsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layers")
     public AnnotationsSummaryLayers[] layers;
+
     public AnnotationsSummary withLayers(AnnotationsSummaryLayers[] layers) {
         this.layers = layers;
         return this;
     }
     
+    public AnnotationsSummary(){}
 }

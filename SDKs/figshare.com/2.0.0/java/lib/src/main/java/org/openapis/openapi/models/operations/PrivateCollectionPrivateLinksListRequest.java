@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateCollectionPrivateLinksListRequest {
@@ -12,9 +13,13 @@ public class PrivateCollectionPrivateLinksListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
     public Long collectionId;
+
     public PrivateCollectionPrivateLinksListRequest withCollectionId(Long collectionId) {
         this.collectionId = collectionId;
         return this;
     }
     
+    public PrivateCollectionPrivateLinksListRequest(@JsonProperty("collection_id") Long collectionId) {
+        this.collectionId = collectionId;
+  }
 }

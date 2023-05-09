@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InvoiceApiPdfRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public Integer id;
+
     public InvoiceApiPdfRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -16,6 +18,7 @@ public class InvoiceApiPdfRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signedVersion")
     public Boolean signedVersion;
+
     public InvoiceApiPdfRequest withSignedVersion(Boolean signedVersion) {
         this.signedVersion = signedVersion;
         return this;
@@ -23,6 +26,7 @@ public class InvoiceApiPdfRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public InvoiceApiPdfRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -30,9 +34,15 @@ public class InvoiceApiPdfRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public InvoiceApiPdfRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public InvoiceApiPdfRequest(@JsonProperty("id") Integer id, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.id = id;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

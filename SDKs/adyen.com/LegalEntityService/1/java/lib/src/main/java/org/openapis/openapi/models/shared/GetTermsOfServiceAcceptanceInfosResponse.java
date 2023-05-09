@@ -18,9 +18,11 @@ public class GetTermsOfServiceAcceptanceInfosResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public TermsOfServiceAcceptanceInfo[] data;
+
     public GetTermsOfServiceAcceptanceInfosResponse withData(TermsOfServiceAcceptanceInfo[] data) {
         this.data = data;
         return this;
     }
     
+    public GetTermsOfServiceAcceptanceInfosResponse(){}
 }

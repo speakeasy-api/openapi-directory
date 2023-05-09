@@ -20,6 +20,7 @@ public class InstanceSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public InstanceSnapshot withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class InstanceSnapshot {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public InstanceSnapshot withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class InstanceSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromAttachedDisks")
     public Disk[] fromAttachedDisks;
+
     public InstanceSnapshot withFromAttachedDisks(Disk[] fromAttachedDisks) {
         this.fromAttachedDisks = fromAttachedDisks;
         return this;
@@ -46,6 +49,7 @@ public class InstanceSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromBlueprintId")
     public String fromBlueprintId;
+
     public InstanceSnapshot withFromBlueprintId(String fromBlueprintId) {
         this.fromBlueprintId = fromBlueprintId;
         return this;
@@ -54,6 +58,7 @@ public class InstanceSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromBundleId")
     public String fromBundleId;
+
     public InstanceSnapshot withFromBundleId(String fromBundleId) {
         this.fromBundleId = fromBundleId;
         return this;
@@ -62,6 +67,7 @@ public class InstanceSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromInstanceArn")
     public String fromInstanceArn;
+
     public InstanceSnapshot withFromInstanceArn(String fromInstanceArn) {
         this.fromInstanceArn = fromInstanceArn;
         return this;
@@ -70,6 +76,7 @@ public class InstanceSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromInstanceName")
     public String fromInstanceName;
+
     public InstanceSnapshot withFromInstanceName(String fromInstanceName) {
         this.fromInstanceName = fromInstanceName;
         return this;
@@ -78,6 +85,7 @@ public class InstanceSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFromAutoSnapshot")
     public Boolean isFromAutoSnapshot;
+
     public InstanceSnapshot withIsFromAutoSnapshot(Boolean isFromAutoSnapshot) {
         this.isFromAutoSnapshot = isFromAutoSnapshot;
         return this;
@@ -86,6 +94,7 @@ public class InstanceSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public ResourceLocation location;
+
     public InstanceSnapshot withLocation(ResourceLocation location) {
         this.location = location;
         return this;
@@ -94,6 +103,7 @@ public class InstanceSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InstanceSnapshot withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +112,7 @@ public class InstanceSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     public String progress;
+
     public InstanceSnapshot withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -110,6 +121,7 @@ public class InstanceSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public InstanceSnapshot withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -118,6 +130,7 @@ public class InstanceSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeInGb")
     public Long sizeInGb;
+
     public InstanceSnapshot withSizeInGb(Long sizeInGb) {
         this.sizeInGb = sizeInGb;
         return this;
@@ -126,6 +139,7 @@ public class InstanceSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public InstanceSnapshotStateEnum state;
+
     public InstanceSnapshot withState(InstanceSnapshotStateEnum state) {
         this.state = state;
         return this;
@@ -134,6 +148,7 @@ public class InstanceSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportCode")
     public String supportCode;
+
     public InstanceSnapshot withSupportCode(String supportCode) {
         this.supportCode = supportCode;
         return this;
@@ -142,9 +157,11 @@ public class InstanceSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public InstanceSnapshot withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public InstanceSnapshot(){}
 }

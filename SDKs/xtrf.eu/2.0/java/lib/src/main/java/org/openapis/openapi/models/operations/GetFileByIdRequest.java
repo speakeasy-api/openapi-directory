@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFileByIdRequest {
@@ -12,9 +13,13 @@ public class GetFileByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public GetFileByIdRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
     }
     
+    public GetFileByIdRequest(@JsonProperty("fileId") String fileId) {
+        this.fileId = fileId;
+  }
 }

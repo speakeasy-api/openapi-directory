@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClusterSecurityGroup {
     
     public String clusterSecurityGroupName;
+
     public ClusterSecurityGroup withClusterSecurityGroupName(String clusterSecurityGroupName) {
         this.clusterSecurityGroupName = clusterSecurityGroupName;
         return this;
@@ -19,6 +20,7 @@ public class ClusterSecurityGroup {
     
     
     public String description;
+
     public ClusterSecurityGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class ClusterSecurityGroup {
     
     
     public Ec2SecurityGroupList[] ec2SecurityGroups;
+
     public ClusterSecurityGroup withEc2SecurityGroups(Ec2SecurityGroupList[] ec2SecurityGroups) {
         this.ec2SecurityGroups = ec2SecurityGroups;
         return this;
@@ -33,6 +36,7 @@ public class ClusterSecurityGroup {
     
     
     public IPRangeList[] ipRanges;
+
     public ClusterSecurityGroup withIPRanges(IPRangeList[] ipRanges) {
         this.ipRanges = ipRanges;
         return this;
@@ -40,9 +44,11 @@ public class ClusterSecurityGroup {
     
     
     public TagList[] tags;
+
     public ClusterSecurityGroup withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ClusterSecurityGroup(){}
 }

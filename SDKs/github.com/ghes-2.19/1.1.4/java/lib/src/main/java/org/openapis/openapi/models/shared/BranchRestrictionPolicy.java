@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BranchRestrictionPolicy {
     @JsonProperty("apps")
     public BranchRestrictionPolicyApps[] apps;
+
     public BranchRestrictionPolicy withApps(BranchRestrictionPolicyApps[] apps) {
         this.apps = apps;
         return this;
@@ -21,6 +22,7 @@ public class BranchRestrictionPolicy {
     
     @JsonProperty("apps_url")
     public String appsUrl;
+
     public BranchRestrictionPolicy withAppsUrl(String appsUrl) {
         this.appsUrl = appsUrl;
         return this;
@@ -29,6 +31,7 @@ public class BranchRestrictionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictions")
     public BranchRestrictionPolicyRestrictions[] restrictions;
+
     public BranchRestrictionPolicy withRestrictions(BranchRestrictionPolicyRestrictions[] restrictions) {
         this.restrictions = restrictions;
         return this;
@@ -36,6 +39,7 @@ public class BranchRestrictionPolicy {
     
     @JsonProperty("teams")
     public BranchRestrictionPolicyTeams[] teams;
+
     public BranchRestrictionPolicy withTeams(BranchRestrictionPolicyTeams[] teams) {
         this.teams = teams;
         return this;
@@ -43,6 +47,7 @@ public class BranchRestrictionPolicy {
     
     @JsonProperty("teams_url")
     public String teamsUrl;
+
     public BranchRestrictionPolicy withTeamsUrl(String teamsUrl) {
         this.teamsUrl = teamsUrl;
         return this;
@@ -50,6 +55,7 @@ public class BranchRestrictionPolicy {
     
     @JsonProperty("url")
     public String url;
+
     public BranchRestrictionPolicy withUrl(String url) {
         this.url = url;
         return this;
@@ -57,6 +63,7 @@ public class BranchRestrictionPolicy {
     
     @JsonProperty("users")
     public BranchRestrictionPolicyUsers[] users;
+
     public BranchRestrictionPolicy withUsers(BranchRestrictionPolicyUsers[] users) {
         this.users = users;
         return this;
@@ -64,9 +71,19 @@ public class BranchRestrictionPolicy {
     
     @JsonProperty("users_url")
     public String usersUrl;
+
     public BranchRestrictionPolicy withUsersUrl(String usersUrl) {
         this.usersUrl = usersUrl;
         return this;
     }
     
+    public BranchRestrictionPolicy(@JsonProperty("apps") BranchRestrictionPolicyApps[] apps, @JsonProperty("apps_url") String appsUrl, @JsonProperty("teams") BranchRestrictionPolicyTeams[] teams, @JsonProperty("teams_url") String teamsUrl, @JsonProperty("url") String url, @JsonProperty("users") BranchRestrictionPolicyUsers[] users, @JsonProperty("users_url") String usersUrl) {
+        this.apps = apps;
+        this.appsUrl = appsUrl;
+        this.teams = teams;
+        this.teamsUrl = teamsUrl;
+        this.url = url;
+        this.users = users;
+        this.usersUrl = usersUrl;
+  }
 }

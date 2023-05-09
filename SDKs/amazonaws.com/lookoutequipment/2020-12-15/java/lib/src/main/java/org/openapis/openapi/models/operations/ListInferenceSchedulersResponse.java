@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListInferenceSchedulersResponse {
@@ -12,6 +13,7 @@ public class ListInferenceSchedulersResponse {
      */
     
     public Object accessDeniedException;
+
     public ListInferenceSchedulersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListInferenceSchedulersResponse {
     
     
     public String contentType;
+
     public ListInferenceSchedulersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListInferenceSchedulersResponse {
      */
     
     public Object internalServerException;
+
     public ListInferenceSchedulersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListInferenceSchedulersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListInferenceSchedulersResponse listInferenceSchedulersResponse;
+
     public ListInferenceSchedulersResponse withListInferenceSchedulersResponse(org.openapis.openapi.models.shared.ListInferenceSchedulersResponse listInferenceSchedulersResponse) {
         this.listInferenceSchedulersResponse = listInferenceSchedulersResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListInferenceSchedulersResponse {
     
     
     public Integer statusCode;
+
     public ListInferenceSchedulersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListInferenceSchedulersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListInferenceSchedulersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListInferenceSchedulersResponse {
      */
     
     public Object throttlingException;
+
     public ListInferenceSchedulersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListInferenceSchedulersResponse {
      */
     
     public Object validationException;
+
     public ListInferenceSchedulersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListInferenceSchedulersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

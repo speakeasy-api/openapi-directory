@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTransitGatewayPolicyTableAssociationsResult {
     
     public GetTransitGatewayPolicyTableAssociationsResultAssociations[] associations;
+
     public GetTransitGatewayPolicyTableAssociationsResult withAssociations(GetTransitGatewayPolicyTableAssociationsResultAssociations[] associations) {
         this.associations = associations;
         return this;
@@ -19,9 +20,11 @@ public class GetTransitGatewayPolicyTableAssociationsResult {
     
     
     public String nextToken;
+
     public GetTransitGatewayPolicyTableAssociationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetTransitGatewayPolicyTableAssociationsResult(){}
 }

@@ -15,6 +15,7 @@ public class ColumnDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ColumnDescription withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class ColumnDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ColumnTypeEnum type;
+
     public ColumnDescription withType(ColumnTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ColumnDescription(){}
 }

@@ -12,6 +12,7 @@ public class AttachObjectRequestBody {
      */
     @JsonProperty("ChildReference")
     public AttachObjectRequestBodyChildReference childReference;
+
     public AttachObjectRequestBody withChildReference(AttachObjectRequestBodyChildReference childReference) {
         this.childReference = childReference;
         return this;
@@ -22,6 +23,7 @@ public class AttachObjectRequestBody {
      */
     @JsonProperty("LinkName")
     public String linkName;
+
     public AttachObjectRequestBody withLinkName(String linkName) {
         this.linkName = linkName;
         return this;
@@ -32,9 +34,15 @@ public class AttachObjectRequestBody {
      */
     @JsonProperty("ParentReference")
     public AttachObjectRequestBodyParentReference parentReference;
+
     public AttachObjectRequestBody withParentReference(AttachObjectRequestBodyParentReference parentReference) {
         this.parentReference = parentReference;
         return this;
     }
     
+    public AttachObjectRequestBody(@JsonProperty("ChildReference") AttachObjectRequestBodyChildReference childReference, @JsonProperty("LinkName") String linkName, @JsonProperty("ParentReference") AttachObjectRequestBodyParentReference parentReference) {
+        this.childReference = childReference;
+        this.linkName = linkName;
+        this.parentReference = parentReference;
+  }
 }

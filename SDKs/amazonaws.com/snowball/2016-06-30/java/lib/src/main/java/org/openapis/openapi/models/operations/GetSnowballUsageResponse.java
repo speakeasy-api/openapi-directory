@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSnowballUsageResponse {
     
     public String contentType;
+
     public GetSnowballUsageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSnowballUsageResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSnowballUsageResult getSnowballUsageResult;
+
     public GetSnowballUsageResponse withGetSnowballUsageResult(org.openapis.openapi.models.shared.GetSnowballUsageResult getSnowballUsageResult) {
         this.getSnowballUsageResult = getSnowballUsageResult;
         return this;
@@ -26,6 +29,7 @@ public class GetSnowballUsageResponse {
     
     
     public Integer statusCode;
+
     public GetSnowballUsageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSnowballUsageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSnowballUsageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSnowballUsageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

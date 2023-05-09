@@ -15,6 +15,7 @@ public class PatchBaselineIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineDescription")
     public String baselineDescription;
+
     public PatchBaselineIdentity withBaselineDescription(String baselineDescription) {
         this.baselineDescription = baselineDescription;
         return this;
@@ -23,6 +24,7 @@ public class PatchBaselineIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineId")
     public String baselineId;
+
     public PatchBaselineIdentity withBaselineId(String baselineId) {
         this.baselineId = baselineId;
         return this;
@@ -31,6 +33,7 @@ public class PatchBaselineIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineName")
     public String baselineName;
+
     public PatchBaselineIdentity withBaselineName(String baselineName) {
         this.baselineName = baselineName;
         return this;
@@ -39,6 +42,7 @@ public class PatchBaselineIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultBaseline")
     public Boolean defaultBaseline;
+
     public PatchBaselineIdentity withDefaultBaseline(Boolean defaultBaseline) {
         this.defaultBaseline = defaultBaseline;
         return this;
@@ -47,9 +51,11 @@ public class PatchBaselineIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingSystem")
     public OperatingSystemEnum operatingSystem;
+
     public PatchBaselineIdentity withOperatingSystem(OperatingSystemEnum operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
     }
     
+    public PatchBaselineIdentity(){}
 }

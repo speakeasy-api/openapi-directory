@@ -15,6 +15,7 @@ public class UpdateVpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UpdateVpcEndpointDetail withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class UpdateVpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedDate")
     public Long lastModifiedDate;
+
     public UpdateVpcEndpointDetail withLastModifiedDate(Long lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -31,6 +33,7 @@ public class UpdateVpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateVpcEndpointDetail withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class UpdateVpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public UpdateVpcEndpointDetail withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -47,6 +51,7 @@ public class UpdateVpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public VpcEndpointStatusEnum status;
+
     public UpdateVpcEndpointDetail withStatus(VpcEndpointStatusEnum status) {
         this.status = status;
         return this;
@@ -55,9 +60,11 @@ public class UpdateVpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public UpdateVpcEndpointDetail withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public UpdateVpcEndpointDetail(){}
 }

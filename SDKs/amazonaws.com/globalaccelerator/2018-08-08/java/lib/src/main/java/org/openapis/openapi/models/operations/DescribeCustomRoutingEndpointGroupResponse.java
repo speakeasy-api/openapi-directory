@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCustomRoutingEndpointGroupResponse {
     
     public String contentType;
+
     public DescribeCustomRoutingEndpointGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCustomRoutingEndpointGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCustomRoutingEndpointGroupResponse describeCustomRoutingEndpointGroupResponse;
+
     public DescribeCustomRoutingEndpointGroupResponse withDescribeCustomRoutingEndpointGroupResponse(org.openapis.openapi.models.shared.DescribeCustomRoutingEndpointGroupResponse describeCustomRoutingEndpointGroupResponse) {
         this.describeCustomRoutingEndpointGroupResponse = describeCustomRoutingEndpointGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCustomRoutingEndpointGroupResponse {
      */
     
     public Object endpointGroupNotFoundException;
+
     public DescribeCustomRoutingEndpointGroupResponse withEndpointGroupNotFoundException(Object endpointGroupNotFoundException) {
         this.endpointGroupNotFoundException = endpointGroupNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCustomRoutingEndpointGroupResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DescribeCustomRoutingEndpointGroupResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeCustomRoutingEndpointGroupResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeCustomRoutingEndpointGroupResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeCustomRoutingEndpointGroupResponse {
     
     
     public Integer statusCode;
+
     public DescribeCustomRoutingEndpointGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeCustomRoutingEndpointGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCustomRoutingEndpointGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeCustomRoutingEndpointGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

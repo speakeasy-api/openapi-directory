@@ -15,6 +15,7 @@ public class Restrictions {
      */
     
     public java.util.Map<String, Object> own;
+
     public Restrictions withOwn(java.util.Map<String, Object> own) {
         this.own = own;
         return this;
@@ -25,9 +26,11 @@ public class Restrictions {
      */
     
     public java.util.Map<String, Object> view;
+
     public Restrictions withView(java.util.Map<String, Object> view) {
         this.view = view;
         return this;
     }
     
+    public Restrictions(){}
 }

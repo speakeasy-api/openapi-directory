@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindDoNotContactsResponse {
     
     public String contentType;
+
     public FindDoNotContactsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FindDoNotContactsResponse {
      */
     
     public org.openapis.openapi.models.shared.DoNotContactPage doNotContactPage;
+
     public FindDoNotContactsResponse withDoNotContactPage(org.openapis.openapi.models.shared.DoNotContactPage doNotContactPage) {
         this.doNotContactPage = doNotContactPage;
         return this;
@@ -29,6 +32,7 @@ public class FindDoNotContactsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public FindDoNotContactsResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -36,6 +40,7 @@ public class FindDoNotContactsResponse {
     
     
     public Integer statusCode;
+
     public FindDoNotContactsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class FindDoNotContactsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindDoNotContactsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FindDoNotContactsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

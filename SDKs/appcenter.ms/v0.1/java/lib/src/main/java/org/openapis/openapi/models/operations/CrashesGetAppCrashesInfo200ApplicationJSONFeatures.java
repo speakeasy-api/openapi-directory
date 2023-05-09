@@ -15,6 +15,7 @@ public class CrashesGetAppCrashesInfo200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crash_download_raw")
     public Boolean crashDownloadRaw;
+
     public CrashesGetAppCrashesInfo200ApplicationJSONFeatures withCrashDownloadRaw(Boolean crashDownloadRaw) {
         this.crashDownloadRaw = crashDownloadRaw;
         return this;
@@ -26,6 +27,7 @@ public class CrashesGetAppCrashesInfo200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crashgroup_analytics_crashfreeusers")
     public Boolean crashgroupAnalyticsCrashfreeusers;
+
     public CrashesGetAppCrashesInfo200ApplicationJSONFeatures withCrashgroupAnalyticsCrashfreeusers(Boolean crashgroupAnalyticsCrashfreeusers) {
         this.crashgroupAnalyticsCrashfreeusers = crashgroupAnalyticsCrashfreeusers;
         return this;
@@ -37,6 +39,7 @@ public class CrashesGetAppCrashesInfo200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crashgroup_analytics_impactedusers")
     public Boolean crashgroupAnalyticsImpactedusers;
+
     public CrashesGetAppCrashesInfo200ApplicationJSONFeatures withCrashgroupAnalyticsImpactedusers(Boolean crashgroupAnalyticsImpactedusers) {
         this.crashgroupAnalyticsImpactedusers = crashgroupAnalyticsImpactedusers;
         return this;
@@ -48,6 +51,7 @@ public class CrashesGetAppCrashesInfo200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crashgroup_modify_annotation")
     public Boolean crashgroupModifyAnnotation;
+
     public CrashesGetAppCrashesInfo200ApplicationJSONFeatures withCrashgroupModifyAnnotation(Boolean crashgroupModifyAnnotation) {
         this.crashgroupModifyAnnotation = crashgroupModifyAnnotation;
         return this;
@@ -59,6 +63,7 @@ public class CrashesGetAppCrashesInfo200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crashgroup_modify_status")
     public Boolean crashgroupModifyStatus;
+
     public CrashesGetAppCrashesInfo200ApplicationJSONFeatures withCrashgroupModifyStatus(Boolean crashgroupModifyStatus) {
         this.crashgroupModifyStatus = crashgroupModifyStatus;
         return this;
@@ -70,9 +75,11 @@ public class CrashesGetAppCrashesInfo200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search")
     public Boolean search;
+
     public CrashesGetAppCrashesInfo200ApplicationJSONFeatures withSearch(Boolean search) {
         this.search = search;
         return this;
     }
     
+    public CrashesGetAppCrashesInfo200ApplicationJSONFeatures(){}
 }

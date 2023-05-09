@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetryDataReplicationResponse {
     
     public String contentType;
+
     public RetryDataReplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetryDataReplicationResponse {
      */
     
     public Object internalServerException;
+
     public RetryDataReplicationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class RetryDataReplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RetryDataReplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class RetryDataReplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.SourceServer sourceServer;
+
     public RetryDataReplicationResponse withSourceServer(org.openapis.openapi.models.shared.SourceServer sourceServer) {
         this.sourceServer = sourceServer;
         return this;
@@ -46,6 +51,7 @@ public class RetryDataReplicationResponse {
     
     
     public Integer statusCode;
+
     public RetryDataReplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class RetryDataReplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetryDataReplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class RetryDataReplicationResponse {
      */
     
     public Object throttlingException;
+
     public RetryDataReplicationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class RetryDataReplicationResponse {
      */
     
     public Object uninitializedAccountException;
+
     public RetryDataReplicationResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -83,9 +92,14 @@ public class RetryDataReplicationResponse {
      */
     
     public Object validationException;
+
     public RetryDataReplicationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RetryDataReplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

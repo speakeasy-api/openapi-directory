@@ -18,6 +18,7 @@ public class LicenseImageVector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth_cookie")
     public Cookie authCookie;
+
     public LicenseImageVector withAuthCookie(Cookie authCookie) {
         this.authCookie = authCookie;
         return this;
@@ -29,6 +30,7 @@ public class LicenseImageVector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("editorial_acknowledgement")
     public Boolean editorialAcknowledgement;
+
     public LicenseImageVector withEditorialAcknowledgement(Boolean editorialAcknowledgement) {
         this.editorialAcknowledgement = editorialAcknowledgement;
         return this;
@@ -40,6 +42,7 @@ public class LicenseImageVector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public LicenseImageVectorFormatEnum format;
+
     public LicenseImageVector withFormat(LicenseImageVectorFormatEnum format) {
         this.format = format;
         return this;
@@ -50,6 +53,7 @@ public class LicenseImageVector {
      */
     @JsonProperty("image_id")
     public String imageId;
+
     public LicenseImageVector withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -61,6 +65,7 @@ public class LicenseImageVector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public LicenseImageVector withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -72,6 +77,7 @@ public class LicenseImageVector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Double price;
+
     public LicenseImageVector withPrice(Double price) {
         this.price = price;
         return this;
@@ -83,6 +89,7 @@ public class LicenseImageVector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_id")
     public String searchId;
+
     public LicenseImageVector withSearchId(String searchId) {
         this.searchId = searchId;
         return this;
@@ -94,6 +101,7 @@ public class LicenseImageVector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_modal")
     public Boolean showModal;
+
     public LicenseImageVector withShowModal(Boolean showModal) {
         this.showModal = showModal;
         return this;
@@ -105,6 +113,7 @@ public class LicenseImageVector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public LicenseImageVectorSizeEnum size;
+
     public LicenseImageVector withSize(LicenseImageVectorSizeEnum size) {
         this.size = size;
         return this;
@@ -116,6 +125,7 @@ public class LicenseImageVector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription_id")
     public String subscriptionId;
+
     public LicenseImageVector withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -127,9 +137,13 @@ public class LicenseImageVector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification_code")
     public String verificationCode;
+
     public LicenseImageVector withVerificationCode(String verificationCode) {
         this.verificationCode = verificationCode;
         return this;
     }
     
+    public LicenseImageVector(@JsonProperty("image_id") String imageId) {
+        this.imageId = imageId;
+  }
 }

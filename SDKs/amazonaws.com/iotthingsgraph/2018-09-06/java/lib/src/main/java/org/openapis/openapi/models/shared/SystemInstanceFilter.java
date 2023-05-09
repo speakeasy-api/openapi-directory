@@ -15,6 +15,7 @@ public class SystemInstanceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public SystemInstanceFilterNameEnum name;
+
     public SystemInstanceFilter withName(SystemInstanceFilterNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class SystemInstanceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String[] value;
+
     public SystemInstanceFilter withValue(String[] value) {
         this.value = value;
         return this;
     }
     
+    public SystemInstanceFilter(){}
 }

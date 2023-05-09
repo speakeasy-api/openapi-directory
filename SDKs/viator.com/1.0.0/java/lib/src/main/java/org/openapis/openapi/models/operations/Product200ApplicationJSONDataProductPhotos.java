@@ -15,6 +15,7 @@ public class Product200ApplicationJSONDataProductPhotos {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caption")
     public String caption;
+
     public Product200ApplicationJSONDataProductPhotos withCaption(String caption) {
         this.caption = caption;
         return this;
@@ -26,6 +27,7 @@ public class Product200ApplicationJSONDataProductPhotos {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photoURL")
     public String photoURL;
+
     public Product200ApplicationJSONDataProductPhotos withPhotoURL(String photoURL) {
         this.photoURL = photoURL;
         return this;
@@ -37,9 +39,11 @@ public class Product200ApplicationJSONDataProductPhotos {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier")
     public String supplier;
+
     public Product200ApplicationJSONDataProductPhotos withSupplier(String supplier) {
         this.supplier = supplier;
         return this;
     }
     
+    public Product200ApplicationJSONDataProductPhotos(){}
 }

@@ -15,6 +15,7 @@ public class CertificateSummariesV2 {
      */
     @JsonProperty("certificates")
     public CertificateSummaryV2[] certificates;
+
     public CertificateSummariesV2 withCertificates(CertificateSummaryV2[] certificates) {
         this.certificates = certificates;
         return this;
@@ -22,9 +23,14 @@ public class CertificateSummariesV2 {
     
     @JsonProperty("pagination")
     public Pagination pagination;
+
     public CertificateSummariesV2 withPagination(Pagination pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public CertificateSummariesV2(@JsonProperty("certificates") CertificateSummaryV2[] certificates, @JsonProperty("pagination") Pagination pagination) {
+        this.certificates = certificates;
+        this.pagination = pagination;
+  }
 }

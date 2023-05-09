@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AutomlProjectsLocationsModelsListResponse {
     
     public String contentType;
+
     public AutomlProjectsLocationsModelsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AutomlProjectsLocationsModelsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListModelsResponse listModelsResponse;
+
     public AutomlProjectsLocationsModelsListResponse withListModelsResponse(org.openapis.openapi.models.shared.ListModelsResponse listModelsResponse) {
         this.listModelsResponse = listModelsResponse;
         return this;
@@ -26,6 +29,7 @@ public class AutomlProjectsLocationsModelsListResponse {
     
     
     public Integer statusCode;
+
     public AutomlProjectsLocationsModelsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AutomlProjectsLocationsModelsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AutomlProjectsLocationsModelsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AutomlProjectsLocationsModelsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

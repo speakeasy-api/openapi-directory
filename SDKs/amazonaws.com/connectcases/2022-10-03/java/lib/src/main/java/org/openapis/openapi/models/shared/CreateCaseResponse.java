@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCaseResponse {
     @JsonProperty("caseArn")
     public String caseArn;
+
     public CreateCaseResponse withCaseArn(String caseArn) {
         this.caseArn = caseArn;
         return this;
@@ -19,9 +20,14 @@ public class CreateCaseResponse {
     
     @JsonProperty("caseId")
     public String caseId;
+
     public CreateCaseResponse withCaseId(String caseId) {
         this.caseId = caseId;
         return this;
     }
     
+    public CreateCaseResponse(@JsonProperty("caseArn") String caseArn, @JsonProperty("caseId") String caseId) {
+        this.caseArn = caseArn;
+        this.caseId = caseId;
+  }
 }

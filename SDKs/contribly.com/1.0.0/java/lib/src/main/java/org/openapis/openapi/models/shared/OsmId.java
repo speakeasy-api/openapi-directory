@@ -12,6 +12,7 @@ public class OsmId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osmId")
     public Double osmId;
+
     public OsmId withOsmId(Double osmId) {
         this.osmId = osmId;
         return this;
@@ -20,9 +21,11 @@ public class OsmId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osmType")
     public String osmType;
+
     public OsmId withOsmType(String osmType) {
         this.osmType = osmType;
         return this;
     }
     
+    public OsmId(){}
 }

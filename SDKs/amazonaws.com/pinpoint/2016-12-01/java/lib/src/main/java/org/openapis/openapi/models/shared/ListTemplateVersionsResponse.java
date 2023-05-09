@@ -15,9 +15,13 @@ public class ListTemplateVersionsResponse {
      */
     @JsonProperty("TemplateVersionsResponse")
     public TemplateVersionsResponse templateVersionsResponse;
+
     public ListTemplateVersionsResponse withTemplateVersionsResponse(TemplateVersionsResponse templateVersionsResponse) {
         this.templateVersionsResponse = templateVersionsResponse;
         return this;
     }
     
+    public ListTemplateVersionsResponse(@JsonProperty("TemplateVersionsResponse") TemplateVersionsResponse templateVersionsResponse) {
+        this.templateVersionsResponse = templateVersionsResponse;
+  }
 }

@@ -18,6 +18,7 @@ public class GetWebhooks200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetWebhooks200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
@@ -25,9 +26,13 @@ public class GetWebhooks200ApplicationJSON {
     
     @JsonProperty("webhooks")
     public org.openapis.openapi.models.shared.Webhook[] webhooks;
+
     public GetWebhooks200ApplicationJSON withWebhooks(org.openapis.openapi.models.shared.Webhook[] webhooks) {
         this.webhooks = webhooks;
         return this;
     }
     
+    public GetWebhooks200ApplicationJSON(@JsonProperty("webhooks") org.openapis.openapi.models.shared.Webhook[] webhooks) {
+        this.webhooks = webhooks;
+  }
 }

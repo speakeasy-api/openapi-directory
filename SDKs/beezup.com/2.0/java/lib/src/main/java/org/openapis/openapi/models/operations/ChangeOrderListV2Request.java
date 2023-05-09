@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeOrderListV2Request {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ChangeOrderListRequestV2 changeOrderListRequestV2;
+
     public ChangeOrderListV2Request withChangeOrderListRequestV2(org.openapis.openapi.models.shared.ChangeOrderListRequestV2 changeOrderListRequestV2) {
         this.changeOrderListRequestV2 = changeOrderListRequestV2;
         return this;
@@ -19,6 +21,7 @@ public class ChangeOrderListV2Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=changeOrderType")
     public String changeOrderType;
+
     public ChangeOrderListV2Request withChangeOrderType(String changeOrderType) {
         this.changeOrderType = changeOrderType;
         return this;
@@ -29,6 +32,7 @@ public class ChangeOrderListV2Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=testMode")
     public Boolean testMode;
+
     public ChangeOrderListV2Request withTestMode(Boolean testMode) {
         this.testMode = testMode;
         return this;
@@ -39,9 +43,15 @@ public class ChangeOrderListV2Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userName")
     public String userName;
+
     public ChangeOrderListV2Request withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ChangeOrderListV2Request(@JsonProperty("changeOrderListRequestV2") org.openapis.openapi.models.shared.ChangeOrderListRequestV2 changeOrderListRequestV2, @JsonProperty("changeOrderType") String changeOrderType, @JsonProperty("userName") String userName) {
+        this.changeOrderListRequestV2 = changeOrderListRequestV2;
+        this.changeOrderType = changeOrderType;
+        this.userName = userName;
+  }
 }

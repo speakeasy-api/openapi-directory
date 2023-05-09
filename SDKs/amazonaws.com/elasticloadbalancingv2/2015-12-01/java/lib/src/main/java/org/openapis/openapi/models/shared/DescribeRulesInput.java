@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeRulesInput {
     
     public String listenerArn;
+
     public DescribeRulesInput withListenerArn(String listenerArn) {
         this.listenerArn = listenerArn;
         return this;
@@ -16,6 +17,7 @@ public class DescribeRulesInput {
     
     
     public String marker;
+
     public DescribeRulesInput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +25,7 @@ public class DescribeRulesInput {
     
     
     public Long pageSize;
+
     public DescribeRulesInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -30,9 +33,11 @@ public class DescribeRulesInput {
     
     
     public String[] ruleArns;
+
     public DescribeRulesInput withRuleArns(String[] ruleArns) {
         this.ruleArns = ruleArns;
         return this;
     }
     
+    public DescribeRulesInput(){}
 }

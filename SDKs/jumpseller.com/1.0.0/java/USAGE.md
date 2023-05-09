@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DeleteJsappsCodeJsonRequest;
 import org.openapis.openapi.models.operations.DeleteJsappsCodeJsonResponse;
 
@@ -13,19 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteJsappsCodeJsonRequest req = new DeleteJsappsCodeJsonRequest() {{
-                authtoken = "corrupti";
-                code = "provident";
-                login = "distinctio";
-            }}            
+            DeleteJsappsCodeJsonRequest req = new DeleteJsappsCodeJsonRequest("corrupti", "provident", "distinctio");            
 
             DeleteJsappsCodeJsonResponse res = sdk.apps.deleteJsappsCodeJson(req);
 
-            if (res.deleteJsappsCodeJSON200ApplicationJSONString.isPresent()) {
+            if (res.deleteJsappsCodeJSON200ApplicationJSONString != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -17,6 +17,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billedBuyer")
     public Buyer billedBuyer;
+
     public Product withBilledBuyer(Buyer billedBuyer) {
         this.billedBuyer = billedBuyer;
         return this;
@@ -25,6 +26,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer")
     public Buyer buyer;
+
     public Product withBuyer(Buyer buyer) {
         this.buyer = buyer;
         return this;
@@ -36,6 +38,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimeMs")
     public String creationTimeMs;
+
     public Product withCreationTimeMs(String creationTimeMs) {
         this.creationTimeMs = creationTimeMs;
         return this;
@@ -47,6 +50,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorContacts")
     public ContactInformation[] creatorContacts;
+
     public Product withCreatorContacts(ContactInformation[] creatorContacts) {
         this.creatorContacts = creatorContacts;
         return this;
@@ -58,6 +62,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorRole")
     public String creatorRole;
+
     public Product withCreatorRole(String creatorRole) {
         this.creatorRole = creatorRole;
         return this;
@@ -66,6 +71,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryControl")
     public DeliveryControl deliveryControl;
+
     public Product withDeliveryControl(DeliveryControl deliveryControl) {
         this.deliveryControl = deliveryControl;
         return this;
@@ -77,6 +83,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flightEndTimeMs")
     public String flightEndTimeMs;
+
     public Product withFlightEndTimeMs(String flightEndTimeMs) {
         this.flightEndTimeMs = flightEndTimeMs;
         return this;
@@ -88,6 +95,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flightStartTimeMs")
     public String flightStartTimeMs;
+
     public Product withFlightStartTimeMs(String flightStartTimeMs) {
         this.flightStartTimeMs = flightStartTimeMs;
         return this;
@@ -99,6 +107,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasCreatorSignedOff")
     public Boolean hasCreatorSignedOff;
+
     public Product withHasCreatorSignedOff(Boolean hasCreatorSignedOff) {
         this.hasCreatorSignedOff = hasCreatorSignedOff;
         return this;
@@ -110,6 +119,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventorySource")
     public String inventorySource;
+
     public Product withInventorySource(String inventorySource) {
         this.inventorySource = inventorySource;
         return this;
@@ -121,6 +131,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Product withKind(String kind) {
         this.kind = kind;
         return this;
@@ -132,6 +143,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public MarketplaceLabel[] labels;
+
     public Product withLabels(MarketplaceLabel[] labels) {
         this.labels = labels;
         return this;
@@ -143,6 +155,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdateTimeMs")
     public String lastUpdateTimeMs;
+
     public Product withLastUpdateTimeMs(String lastUpdateTimeMs) {
         this.lastUpdateTimeMs = lastUpdateTimeMs;
         return this;
@@ -154,6 +167,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacyOfferId")
     public String legacyOfferId;
+
     public Product withLegacyOfferId(String legacyOfferId) {
         this.legacyOfferId = legacyOfferId;
         return this;
@@ -165,6 +179,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplacePublisherProfileId")
     public String marketplacePublisherProfileId;
+
     public Product withMarketplacePublisherProfileId(String marketplacePublisherProfileId) {
         this.marketplacePublisherProfileId = marketplacePublisherProfileId;
         return this;
@@ -176,6 +191,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Product withName(String name) {
         this.name = name;
         return this;
@@ -187,6 +203,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateAuctionId")
     public String privateAuctionId;
+
     public Product withPrivateAuctionId(String privateAuctionId) {
         this.privateAuctionId = privateAuctionId;
         return this;
@@ -198,6 +215,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public Product withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -209,6 +227,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherProfileId")
     public String publisherProfileId;
+
     public Product withPublisherProfileId(String publisherProfileId) {
         this.publisherProfileId = publisherProfileId;
         return this;
@@ -220,6 +239,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherProvidedForecast")
     public PublisherProvidedForecast publisherProvidedForecast;
+
     public Product withPublisherProvidedForecast(PublisherProvidedForecast publisherProvidedForecast) {
         this.publisherProvidedForecast = publisherProvidedForecast;
         return this;
@@ -231,6 +251,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionNumber")
     public String revisionNumber;
+
     public Product withRevisionNumber(String revisionNumber) {
         this.revisionNumber = revisionNumber;
         return this;
@@ -239,6 +260,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seller")
     public Seller seller;
+
     public Product withSeller(Seller seller) {
         this.seller = seller;
         return this;
@@ -250,6 +272,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedTargetings")
     public SharedTargeting[] sharedTargetings;
+
     public Product withSharedTargetings(SharedTargeting[] sharedTargetings) {
         this.sharedTargetings = sharedTargetings;
         return this;
@@ -261,6 +284,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public Product withState(String state) {
         this.state = state;
         return this;
@@ -272,6 +296,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syndicationProduct")
     public String syndicationProduct;
+
     public Product withSyndicationProduct(String syndicationProduct) {
         this.syndicationProduct = syndicationProduct;
         return this;
@@ -280,6 +305,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terms")
     public DealTerms terms;
+
     public Product withTerms(DealTerms terms) {
         this.terms = terms;
         return this;
@@ -291,9 +317,11 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webPropertyCode")
     public String webPropertyCode;
+
     public Product withWebPropertyCode(String webPropertyCode) {
         this.webPropertyCode = webPropertyCode;
         return this;
     }
     
+    public Product(){}
 }

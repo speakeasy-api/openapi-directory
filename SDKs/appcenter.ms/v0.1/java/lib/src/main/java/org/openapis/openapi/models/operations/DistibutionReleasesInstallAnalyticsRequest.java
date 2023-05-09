@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistibutionReleasesInstallAnalyticsRequest {
@@ -12,6 +13,7 @@ public class DistibutionReleasesInstallAnalyticsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public DistibutionReleasesInstallAnalyticsRequestBody requestBody;
+
     public DistibutionReleasesInstallAnalyticsRequest withRequestBody(DistibutionReleasesInstallAnalyticsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class DistibutionReleasesInstallAnalyticsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public DistibutionReleasesInstallAnalyticsRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,9 +35,15 @@ public class DistibutionReleasesInstallAnalyticsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public DistibutionReleasesInstallAnalyticsRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public DistibutionReleasesInstallAnalyticsRequest(@JsonProperty("RequestBody") DistibutionReleasesInstallAnalyticsRequestBody requestBody, @JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.ownerName = ownerName;
+  }
 }

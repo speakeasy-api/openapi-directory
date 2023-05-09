@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CatalogCollectionRoleAssignments {
     @JsonProperty("collection_id")
     public String collectionId;
+
     public CatalogCollectionRoleAssignments withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -19,9 +20,14 @@ public class CatalogCollectionRoleAssignments {
     
     @JsonProperty("roles")
     public CatalogCollectionRoleAssignmentsRoles roles;
+
     public CatalogCollectionRoleAssignments withRoles(CatalogCollectionRoleAssignmentsRoles roles) {
         this.roles = roles;
         return this;
     }
     
+    public CatalogCollectionRoleAssignments(@JsonProperty("collection_id") String collectionId, @JsonProperty("roles") CatalogCollectionRoleAssignmentsRoles roles) {
+        this.collectionId = collectionId;
+        this.roles = roles;
+  }
 }

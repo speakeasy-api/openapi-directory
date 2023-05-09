@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OrderLinks {
     @JsonProperty("clearMerchantInfo")
     public LinksClearMerchantOrderInfoLink clearMerchantInfo;
+
     public OrderLinks withClearMerchantInfo(LinksClearMerchantOrderInfoLink clearMerchantInfo) {
         this.clearMerchantInfo = clearMerchantInfo;
         return this;
@@ -16,6 +17,7 @@ public class OrderLinks {
     
     @JsonProperty("harvest")
     public LinksHarvestOrderLink harvest;
+
     public OrderLinks withHarvest(LinksHarvestOrderLink harvest) {
         this.harvest = harvest;
         return this;
@@ -23,6 +25,7 @@ public class OrderLinks {
     
     @JsonProperty("history")
     public LinksGetOrderHistoryLink history;
+
     public OrderLinks withHistory(LinksGetOrderHistoryLink history) {
         this.history = history;
         return this;
@@ -30,6 +33,7 @@ public class OrderLinks {
     
     @JsonProperty("self")
     public LinksGetOrderLink self;
+
     public OrderLinks withSelf(LinksGetOrderLink self) {
         this.self = self;
         return this;
@@ -37,9 +41,17 @@ public class OrderLinks {
     
     @JsonProperty("setMerchantInfo")
     public LinksSetMerchantOrderInfoLink setMerchantInfo;
+
     public OrderLinks withSetMerchantInfo(LinksSetMerchantOrderInfoLink setMerchantInfo) {
         this.setMerchantInfo = setMerchantInfo;
         return this;
     }
     
+    public OrderLinks(@JsonProperty("clearMerchantInfo") LinksClearMerchantOrderInfoLink clearMerchantInfo, @JsonProperty("harvest") LinksHarvestOrderLink harvest, @JsonProperty("history") LinksGetOrderHistoryLink history, @JsonProperty("self") LinksGetOrderLink self, @JsonProperty("setMerchantInfo") LinksSetMerchantOrderInfoLink setMerchantInfo) {
+        this.clearMerchantInfo = clearMerchantInfo;
+        this.harvest = harvest;
+        this.history = history;
+        this.self = self;
+        this.setMerchantInfo = setMerchantInfo;
+  }
 }

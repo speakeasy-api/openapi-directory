@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class User {
     
     public ApiKey apiKey;
+
     public User withApiKey(ApiKey apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -19,6 +20,7 @@ public class User {
     
     
     public Boolean canSwitchUser;
+
     public User withCanSwitchUser(Boolean canSwitchUser) {
         this.canSwitchUser = canSwitchUser;
         return this;
@@ -26,6 +28,7 @@ public class User {
     
     
     public Boolean changePassword;
+
     public User withChangePassword(Boolean changePassword) {
         this.changePassword = changePassword;
         return this;
@@ -33,6 +36,7 @@ public class User {
     
     
     public String contactNumber;
+
     public User withContactNumber(String contactNumber) {
         this.contactNumber = contactNumber;
         return this;
@@ -40,6 +44,7 @@ public class User {
     
     
     public OffsetDateTime created;
+
     public User withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -47,6 +52,7 @@ public class User {
     
     
     public OffsetDateTime currentLogin;
+
     public User withCurrentLogin(OffsetDateTime currentLogin) {
         this.currentLogin = currentLogin;
         return this;
@@ -54,6 +60,7 @@ public class User {
     
     
     public String currentLoginIpAddress;
+
     public User withCurrentLoginIpAddress(String currentLoginIpAddress) {
         this.currentLoginIpAddress = currentLoginIpAddress;
         return this;
@@ -61,6 +68,7 @@ public class User {
     
     
     public OffsetDateTime dateOfBirth;
+
     public User withDateOfBirth(OffsetDateTime dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -68,6 +76,7 @@ public class User {
     
     
     public Boolean deleted;
+
     public User withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -75,6 +84,7 @@ public class User {
     
     
     public Boolean dummy;
+
     public User withDummy(Boolean dummy) {
         this.dummy = dummy;
         return this;
@@ -82,6 +92,7 @@ public class User {
     
     
     public String email;
+
     public User withEmail(String email) {
         this.email = email;
         return this;
@@ -89,6 +100,7 @@ public class User {
     
     
     public Boolean emailVerified;
+
     public User withEmailVerified(Boolean emailVerified) {
         this.emailVerified = emailVerified;
         return this;
@@ -96,6 +108,7 @@ public class User {
     
     
     public String forename;
+
     public User withForename(String forename) {
         this.forename = forename;
         return this;
@@ -103,6 +116,7 @@ public class User {
     
     
     public GroupRole[] groupRoles;
+
     public User withGroupRoles(GroupRole[] groupRoles) {
         this.groupRoles = groupRoles;
         return this;
@@ -110,6 +124,7 @@ public class User {
     
     
     public Boolean hideSecretWordNotification;
+
     public User withHideSecretWordNotification(Boolean hideSecretWordNotification) {
         this.hideSecretWordNotification = hideSecretWordNotification;
         return this;
@@ -117,6 +132,7 @@ public class User {
     
     
     public Long id;
+
     public User withId(Long id) {
         this.id = id;
         return this;
@@ -124,6 +140,7 @@ public class User {
     
     
     public java.util.Map<String, Object>[] identifiers;
+
     public User withIdentifiers(java.util.Map<String, Object>[] identifiers) {
         this.identifiers = identifiers;
         return this;
@@ -131,6 +148,7 @@ public class User {
     
     
     public OffsetDateTime lastLogin;
+
     public User withLastLogin(OffsetDateTime lastLogin) {
         this.lastLogin = lastLogin;
         return this;
@@ -138,6 +156,7 @@ public class User {
     
     
     public String lastLoginIpAddress;
+
     public User withLastLoginIpAddress(String lastLoginIpAddress) {
         this.lastLoginIpAddress = lastLoginIpAddress;
         return this;
@@ -145,6 +164,7 @@ public class User {
     
     
     public BaseGroup latestDataReceivedBy;
+
     public User withLatestDataReceivedBy(BaseGroup latestDataReceivedBy) {
         this.latestDataReceivedBy = latestDataReceivedBy;
         return this;
@@ -152,6 +172,7 @@ public class User {
     
     
     public OffsetDateTime latestDataReceivedDate;
+
     public User withLatestDataReceivedDate(OffsetDateTime latestDataReceivedDate) {
         this.latestDataReceivedDate = latestDataReceivedDate;
         return this;
@@ -159,6 +180,7 @@ public class User {
     
     
     public Boolean locked;
+
     public User withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -166,6 +188,7 @@ public class User {
     
     
     public String picture;
+
     public User withPicture(String picture) {
         this.picture = picture;
         return this;
@@ -173,6 +196,7 @@ public class User {
     
     
     public String roleDescription;
+
     public User withRoleDescription(String roleDescription) {
         this.roleDescription = roleDescription;
         return this;
@@ -180,6 +204,7 @@ public class User {
     
     
     public Boolean secretWordIsSet;
+
     public User withSecretWordIsSet(Boolean secretWordIsSet) {
         this.secretWordIsSet = secretWordIsSet;
         return this;
@@ -187,6 +212,7 @@ public class User {
     
     
     public String surname;
+
     public User withSurname(String surname) {
         this.surname = surname;
         return this;
@@ -194,6 +220,7 @@ public class User {
     
     
     public UserFeature[] userFeatures;
+
     public User withUserFeatures(UserFeature[] userFeatures) {
         this.userFeatures = userFeatures;
         return this;
@@ -201,9 +228,11 @@ public class User {
     
     
     public String username;
+
     public User withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public User(){}
 }

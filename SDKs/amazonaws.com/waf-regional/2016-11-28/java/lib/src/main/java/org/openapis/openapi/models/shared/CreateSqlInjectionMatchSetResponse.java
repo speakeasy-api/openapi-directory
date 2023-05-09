@@ -15,6 +15,7 @@ public class CreateSqlInjectionMatchSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public CreateSqlInjectionMatchSetResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -23,9 +24,11 @@ public class CreateSqlInjectionMatchSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SqlInjectionMatchSet")
     public SqlInjectionMatchSet sqlInjectionMatchSet;
+
     public CreateSqlInjectionMatchSetResponse withSqlInjectionMatchSet(SqlInjectionMatchSet sqlInjectionMatchSet) {
         this.sqlInjectionMatchSet = sqlInjectionMatchSet;
         return this;
     }
     
+    public CreateSqlInjectionMatchSetResponse(){}
 }

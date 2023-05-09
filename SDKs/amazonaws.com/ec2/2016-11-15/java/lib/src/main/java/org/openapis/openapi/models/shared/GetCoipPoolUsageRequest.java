@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetCoipPoolUsageRequest {
     
     public Boolean dryRun;
+
     public GetCoipPoolUsageRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetCoipPoolUsageRequest {
     
     
     public GetCoipPoolUsageRequestFilters[] filters;
+
     public GetCoipPoolUsageRequest withFilters(GetCoipPoolUsageRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class GetCoipPoolUsageRequest {
     
     
     public Long maxResults;
+
     public GetCoipPoolUsageRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class GetCoipPoolUsageRequest {
     
     
     public String nextToken;
+
     public GetCoipPoolUsageRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,13 @@ public class GetCoipPoolUsageRequest {
     
     
     public String poolId;
+
     public GetCoipPoolUsageRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
     }
     
+    public GetCoipPoolUsageRequest(@JsonProperty("PoolId") String poolId) {
+        this.poolId = poolId;
+  }
 }

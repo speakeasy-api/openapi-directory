@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostImageTagsFormRequest {
@@ -12,6 +13,7 @@ public class PostImageTagsFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.ImageTagCreateBatch imageTagCreateBatch;
+
     public PostImageTagsFormRequest withImageTagCreateBatch(org.openapis.openapi.models.shared.ImageTagCreateBatch imageTagCreateBatch) {
         this.imageTagCreateBatch = imageTagCreateBatch;
         return this;
@@ -19,6 +21,7 @@ public class PostImageTagsFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public PostImageTagsFormRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -29,9 +32,15 @@ public class PostImageTagsFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public PostImageTagsFormRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public PostImageTagsFormRequest(@JsonProperty("ImageTagCreateBatch") org.openapis.openapi.models.shared.ImageTagCreateBatch imageTagCreateBatch, @JsonProperty("Training-Key") String trainingKey, @JsonProperty("projectId") String projectId) {
+        this.imageTagCreateBatch = imageTagCreateBatch;
+        this.trainingKey = trainingKey;
+        this.projectId = projectId;
+  }
 }

@@ -61,13 +61,11 @@ public class AppPkgm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppDGETResponse res = new org.openapis.openapi.models.operations.AppDGETResponse() {{
+        org.openapis.openapi.models.operations.AppDGETResponse res = new org.openapis.openapi.models.operations.AppDGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
             appD = null;
             problemDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -112,11 +110,9 @@ public class AppPkgm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppDIdGETResponse res = new org.openapis.openapi.models.operations.AppDIdGETResponse() {{
+        org.openapis.openapi.models.operations.AppDIdGETResponse res = new org.openapis.openapi.models.operations.AppDIdGETResponse(contentType, httpRes.statusCode()) {{
             problemDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 206 || httpRes.statusCode() == 416) {
@@ -155,11 +151,9 @@ public class AppPkgm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppDIdPUTResponse res = new org.openapis.openapi.models.operations.AppDIdPUTResponse() {{
+        org.openapis.openapi.models.operations.AppDIdPUTResponse res = new org.openapis.openapi.models.operations.AppDIdPUTResponse(contentType, httpRes.statusCode()) {{
             problemDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -196,11 +190,9 @@ public class AppPkgm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppPkgGETResponse res = new org.openapis.openapi.models.operations.AppPkgGETResponse() {{
+        org.openapis.openapi.models.operations.AppPkgGETResponse res = new org.openapis.openapi.models.operations.AppPkgGETResponse(contentType, httpRes.statusCode()) {{
             problemDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 206 || httpRes.statusCode() == 416) {
@@ -243,13 +235,11 @@ public class AppPkgm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppPkgIdGETResponse res = new org.openapis.openapi.models.operations.AppPkgIdGETResponse() {{
+        org.openapis.openapi.models.operations.AppPkgIdGETResponse res = new org.openapis.openapi.models.operations.AppPkgIdGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
             appD = null;
             problemDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class AppPkgm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppPkgPUTResponse res = new org.openapis.openapi.models.operations.AppPkgPUTResponse() {{
+        org.openapis.openapi.models.operations.AppPkgPUTResponse res = new org.openapis.openapi.models.operations.AppPkgPUTResponse(contentType, httpRes.statusCode()) {{
             problemDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -337,11 +325,9 @@ public class AppPkgm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppPackageDELETEResponse res = new org.openapis.openapi.models.operations.AppPackageDELETEResponse() {{
+        org.openapis.openapi.models.operations.AppPackageDELETEResponse res = new org.openapis.openapi.models.operations.AppPackageDELETEResponse(contentType, httpRes.statusCode()) {{
             problemDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -378,12 +364,10 @@ public class AppPkgm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppPackageGETResponse res = new org.openapis.openapi.models.operations.AppPackageGETResponse() {{
+        org.openapis.openapi.models.operations.AppPackageGETResponse res = new org.openapis.openapi.models.operations.AppPackageGETResponse(contentType, httpRes.statusCode()) {{
             appPkgInfo = null;
             problemDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -430,12 +414,10 @@ public class AppPkgm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppPackagePATCHResponse res = new org.openapis.openapi.models.operations.AppPackagePATCHResponse() {{
+        org.openapis.openapi.models.operations.AppPackagePATCHResponse res = new org.openapis.openapi.models.operations.AppPackagePATCHResponse(contentType, httpRes.statusCode()) {{
             appPkgInfoModifications = null;
             problemDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -483,12 +465,10 @@ public class AppPkgm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppPackagesGETResponse res = new org.openapis.openapi.models.operations.AppPackagesGETResponse() {{
+        org.openapis.openapi.models.operations.AppPackagesGETResponse res = new org.openapis.openapi.models.operations.AppPackagesGETResponse(contentType, httpRes.statusCode()) {{
             appPkgInfos = null;
             problemDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -535,12 +515,10 @@ public class AppPkgm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppPackagesPOSTResponse res = new org.openapis.openapi.models.operations.AppPackagesPOSTResponse() {{
+        org.openapis.openapi.models.operations.AppPackagesPOSTResponse res = new org.openapis.openapi.models.operations.AppPackagesPOSTResponse(contentType, httpRes.statusCode()) {{
             appPkgInfos = null;
             problemDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -582,11 +560,9 @@ public class AppPkgm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IndividualSubscriptionDELETEResponse res = new org.openapis.openapi.models.operations.IndividualSubscriptionDELETEResponse() {{
+        org.openapis.openapi.models.operations.IndividualSubscriptionDELETEResponse res = new org.openapis.openapi.models.operations.IndividualSubscriptionDELETEResponse(contentType, httpRes.statusCode()) {{
             problemDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -623,12 +599,10 @@ public class AppPkgm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IndividualSubscriptionGETResponse res = new org.openapis.openapi.models.operations.IndividualSubscriptionGETResponse() {{
+        org.openapis.openapi.models.operations.IndividualSubscriptionGETResponse res = new org.openapis.openapi.models.operations.IndividualSubscriptionGETResponse(contentType, httpRes.statusCode()) {{
             appPkgSubscriptionInfo = null;
             problemDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -669,12 +643,10 @@ public class AppPkgm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubscriptionsGETResponse res = new org.openapis.openapi.models.operations.SubscriptionsGETResponse() {{
+        org.openapis.openapi.models.operations.SubscriptionsGETResponse res = new org.openapis.openapi.models.operations.SubscriptionsGETResponse(contentType, httpRes.statusCode()) {{
             appPkgSubscriptionLinkList = null;
             problemDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -721,12 +693,10 @@ public class AppPkgm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubscriptionsPOSTResponse res = new org.openapis.openapi.models.operations.SubscriptionsPOSTResponse() {{
+        org.openapis.openapi.models.operations.SubscriptionsPOSTResponse res = new org.openapis.openapi.models.operations.SubscriptionsPOSTResponse(contentType, httpRes.statusCode()) {{
             appPkgSubscriptionInfo = null;
             problemDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

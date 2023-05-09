@@ -15,6 +15,7 @@ public class IntentOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IntentOverride withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class IntentOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slots")
     public java.util.Map<String, SlotValueOverride> slots;
+
     public IntentOverride withSlots(java.util.Map<String, SlotValueOverride> slots) {
         this.slots = slots;
         return this;
     }
     
+    public IntentOverride(){}
 }

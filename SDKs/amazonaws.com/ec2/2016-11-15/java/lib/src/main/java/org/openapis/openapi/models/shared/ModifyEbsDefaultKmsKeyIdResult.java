@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyEbsDefaultKmsKeyIdResult {
     
     public String kmsKeyId;
+
     public ModifyEbsDefaultKmsKeyIdResult withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public ModifyEbsDefaultKmsKeyIdResult(){}
 }

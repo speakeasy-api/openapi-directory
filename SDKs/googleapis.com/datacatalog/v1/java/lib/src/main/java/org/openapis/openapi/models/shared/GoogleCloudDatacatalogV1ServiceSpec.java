@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1ServiceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudBigtableInstanceSpec")
     public GoogleCloudDatacatalogV1CloudBigtableInstanceSpec cloudBigtableInstanceSpec;
+
     public GoogleCloudDatacatalogV1ServiceSpec withCloudBigtableInstanceSpec(GoogleCloudDatacatalogV1CloudBigtableInstanceSpec cloudBigtableInstanceSpec) {
         this.cloudBigtableInstanceSpec = cloudBigtableInstanceSpec;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1ServiceSpec(){}
 }

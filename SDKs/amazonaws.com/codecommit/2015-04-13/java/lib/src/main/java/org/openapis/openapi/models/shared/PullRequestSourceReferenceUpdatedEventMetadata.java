@@ -15,6 +15,7 @@ public class PullRequestSourceReferenceUpdatedEventMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("afterCommitId")
     public String afterCommitId;
+
     public PullRequestSourceReferenceUpdatedEventMetadata withAfterCommitId(String afterCommitId) {
         this.afterCommitId = afterCommitId;
         return this;
@@ -23,6 +24,7 @@ public class PullRequestSourceReferenceUpdatedEventMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beforeCommitId")
     public String beforeCommitId;
+
     public PullRequestSourceReferenceUpdatedEventMetadata withBeforeCommitId(String beforeCommitId) {
         this.beforeCommitId = beforeCommitId;
         return this;
@@ -31,6 +33,7 @@ public class PullRequestSourceReferenceUpdatedEventMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeBase")
     public String mergeBase;
+
     public PullRequestSourceReferenceUpdatedEventMetadata withMergeBase(String mergeBase) {
         this.mergeBase = mergeBase;
         return this;
@@ -39,9 +42,11 @@ public class PullRequestSourceReferenceUpdatedEventMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public PullRequestSourceReferenceUpdatedEventMetadata withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public PullRequestSourceReferenceUpdatedEventMetadata(){}
 }

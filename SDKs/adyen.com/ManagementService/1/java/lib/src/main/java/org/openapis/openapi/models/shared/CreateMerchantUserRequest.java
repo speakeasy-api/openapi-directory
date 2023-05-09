@@ -15,6 +15,7 @@ public class CreateMerchantUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountGroups")
     public String[] accountGroups;
+
     public CreateMerchantUserRequest withAccountGroups(String[] accountGroups) {
         this.accountGroups = accountGroups;
         return this;
@@ -26,6 +27,7 @@ public class CreateMerchantUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authnApps")
     public String[] authnApps;
+
     public CreateMerchantUserRequest withAuthnApps(String[] authnApps) {
         this.authnApps = authnApps;
         return this;
@@ -36,6 +38,7 @@ public class CreateMerchantUserRequest {
      */
     @JsonProperty("email")
     public String email;
+
     public CreateMerchantUserRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -43,6 +46,7 @@ public class CreateMerchantUserRequest {
     
     @JsonProperty("name")
     public Name name;
+
     public CreateMerchantUserRequest withName(Name name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class CreateMerchantUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public String[] roles;
+
     public CreateMerchantUserRequest withRoles(String[] roles) {
         this.roles = roles;
         return this;
@@ -65,6 +70,7 @@ public class CreateMerchantUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZoneCode")
     public String timeZoneCode;
+
     public CreateMerchantUserRequest withTimeZoneCode(String timeZoneCode) {
         this.timeZoneCode = timeZoneCode;
         return this;
@@ -75,9 +81,15 @@ public class CreateMerchantUserRequest {
      */
     @JsonProperty("username")
     public String username;
+
     public CreateMerchantUserRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public CreateMerchantUserRequest(@JsonProperty("email") String email, @JsonProperty("name") Name name, @JsonProperty("username") String username) {
+        this.email = email;
+        this.name = name;
+        this.username = username;
+  }
 }

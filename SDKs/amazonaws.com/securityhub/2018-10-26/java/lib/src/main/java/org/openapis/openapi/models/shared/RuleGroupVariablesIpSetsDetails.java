@@ -15,9 +15,11 @@ public class RuleGroupVariablesIpSetsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Definition")
     public String[] definition;
+
     public RuleGroupVariablesIpSetsDetails withDefinition(String[] definition) {
         this.definition = definition;
         return this;
     }
     
+    public RuleGroupVariablesIpSetsDetails(){}
 }

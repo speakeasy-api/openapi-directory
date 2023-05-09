@@ -15,6 +15,7 @@ public class RepositoryAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public RepositoryAggregationResponse withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class RepositoryAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affectedImages")
     public Long affectedImages;
+
     public RepositoryAggregationResponse withAffectedImages(Long affectedImages) {
         this.affectedImages = affectedImages;
         return this;
@@ -30,6 +32,7 @@ public class RepositoryAggregationResponse {
     
     @JsonProperty("repository")
     public String repository;
+
     public RepositoryAggregationResponse withRepository(String repository) {
         this.repository = repository;
         return this;
@@ -38,9 +41,13 @@ public class RepositoryAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityCounts")
     public SeverityCounts severityCounts;
+
     public RepositoryAggregationResponse withSeverityCounts(SeverityCounts severityCounts) {
         this.severityCounts = severityCounts;
         return this;
     }
     
+    public RepositoryAggregationResponse(@JsonProperty("repository") String repository) {
+        this.repository = repository;
+  }
 }

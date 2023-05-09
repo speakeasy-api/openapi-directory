@@ -18,9 +18,11 @@ public class ApigatewayGatewayConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backendConfig")
     public ApigatewayBackendConfig backendConfig;
+
     public ApigatewayGatewayConfig withBackendConfig(ApigatewayBackendConfig backendConfig) {
         this.backendConfig = backendConfig;
         return this;
     }
     
+    public ApigatewayGatewayConfig(){}
 }

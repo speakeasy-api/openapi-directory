@@ -18,6 +18,7 @@ public class ServiceMeshControlPlaneManagement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public ServiceMeshStatusDetails[] details;
+
     public ServiceMeshControlPlaneManagement withDetails(ServiceMeshStatusDetails[] details) {
         this.details = details;
         return this;
@@ -29,9 +30,11 @@ public class ServiceMeshControlPlaneManagement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ServiceMeshControlPlaneManagementStateEnum state;
+
     public ServiceMeshControlPlaneManagement withState(ServiceMeshControlPlaneManagementStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ServiceMeshControlPlaneManagement(){}
 }

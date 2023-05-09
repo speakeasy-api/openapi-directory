@@ -18,9 +18,11 @@ public class DateTimeRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DateTimeRuleTypeEnum type;
+
     public DateTimeRule withType(DateTimeRuleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DateTimeRule(){}
 }

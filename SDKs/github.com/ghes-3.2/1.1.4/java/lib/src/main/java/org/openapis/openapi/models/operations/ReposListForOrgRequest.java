@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListForOrgRequest {
@@ -12,6 +13,7 @@ public class ReposListForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public ReposListForOrgDirectionEnum direction;
+
     public ReposListForOrgRequest withDirection(ReposListForOrgDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -22,6 +24,7 @@ public class ReposListForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ReposListForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -32,6 +35,7 @@ public class ReposListForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ReposListForOrgRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class ReposListForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ReposListForOrgRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,6 +57,7 @@ public class ReposListForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public ReposListForOrgSortEnum sort;
+
     public ReposListForOrgRequest withSort(ReposListForOrgSortEnum sort) {
         this.sort = sort;
         return this;
@@ -62,9 +68,13 @@ public class ReposListForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public ReposListForOrgTypeEnum type;
+
     public ReposListForOrgRequest withType(ReposListForOrgTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ReposListForOrgRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

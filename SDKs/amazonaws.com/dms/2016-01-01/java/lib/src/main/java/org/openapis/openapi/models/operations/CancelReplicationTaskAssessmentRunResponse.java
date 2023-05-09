@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelReplicationTaskAssessmentRunResponse {
@@ -12,6 +13,7 @@ public class CancelReplicationTaskAssessmentRunResponse {
      */
     
     public Object accessDeniedFault;
+
     public CancelReplicationTaskAssessmentRunResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -22,6 +24,7 @@ public class CancelReplicationTaskAssessmentRunResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelReplicationTaskAssessmentRunResponse cancelReplicationTaskAssessmentRunResponse;
+
     public CancelReplicationTaskAssessmentRunResponse withCancelReplicationTaskAssessmentRunResponse(org.openapis.openapi.models.shared.CancelReplicationTaskAssessmentRunResponse cancelReplicationTaskAssessmentRunResponse) {
         this.cancelReplicationTaskAssessmentRunResponse = cancelReplicationTaskAssessmentRunResponse;
         return this;
@@ -29,6 +32,7 @@ public class CancelReplicationTaskAssessmentRunResponse {
     
     
     public String contentType;
+
     public CancelReplicationTaskAssessmentRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CancelReplicationTaskAssessmentRunResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public CancelReplicationTaskAssessmentRunResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -46,6 +51,7 @@ public class CancelReplicationTaskAssessmentRunResponse {
     
     
     public Integer statusCode;
+
     public CancelReplicationTaskAssessmentRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CancelReplicationTaskAssessmentRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelReplicationTaskAssessmentRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CancelReplicationTaskAssessmentRunResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public CancelReplicationTaskAssessmentRunResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
     }
     
+    public CancelReplicationTaskAssessmentRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbee
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel data;
+
     public RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAPIModel withData(BillbeeInterfacesBillbeeAPIModelCustomerAPIModel data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbee
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAPIModelErrorCodeEnum errorCode;
+
     public RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAPIModel withErrorCode(RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAPIModelErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -31,6 +33,7 @@ public class RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbee
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDescription")
     public RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAPIModelErrorDescriptionEnum errorDescription;
+
     public RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAPIModel withErrorDescription(RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAPIModelErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
@@ -39,9 +42,11 @@ public class RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbee
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAPIModel withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAPIModel(){}
 }

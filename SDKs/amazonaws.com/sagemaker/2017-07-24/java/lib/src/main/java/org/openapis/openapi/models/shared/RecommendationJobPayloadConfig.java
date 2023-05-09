@@ -15,6 +15,7 @@ public class RecommendationJobPayloadConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SamplePayloadUrl")
     public String samplePayloadUrl;
+
     public RecommendationJobPayloadConfig withSamplePayloadUrl(String samplePayloadUrl) {
         this.samplePayloadUrl = samplePayloadUrl;
         return this;
@@ -23,9 +24,11 @@ public class RecommendationJobPayloadConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedContentTypes")
     public String[] supportedContentTypes;
+
     public RecommendationJobPayloadConfig withSupportedContentTypes(String[] supportedContentTypes) {
         this.supportedContentTypes = supportedContentTypes;
         return this;
     }
     
+    public RecommendationJobPayloadConfig(){}
 }

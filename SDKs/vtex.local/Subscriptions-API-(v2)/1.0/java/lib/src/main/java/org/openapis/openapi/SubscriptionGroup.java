@@ -62,10 +62,8 @@ public class SubscriptionGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdditemsubscriptionGroupIdResponse res = new org.openapis.openapi.models.operations.AdditemsubscriptionGroupIdResponse() {{
+        org.openapis.openapi.models.operations.AdditemsubscriptionGroupIdResponse res = new org.openapis.openapi.models.operations.AdditemsubscriptionGroupIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,10 +102,8 @@ public class SubscriptionGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelSubscriptionbygroupIdResponse res = new org.openapis.openapi.models.operations.CancelSubscriptionbygroupIdResponse() {{
+        org.openapis.openapi.models.operations.CancelSubscriptionbygroupIdResponse res = new org.openapis.openapi.models.operations.CancelSubscriptionbygroupIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,10 +142,8 @@ public class SubscriptionGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllsubscriptiongroupResponse res = new org.openapis.openapi.models.operations.GetAllsubscriptiongroupResponse() {{
+        org.openapis.openapi.models.operations.GetAllsubscriptiongroupResponse res = new org.openapis.openapi.models.operations.GetAllsubscriptiongroupResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,10 +182,8 @@ public class SubscriptionGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConfigsubscriptionsgroupResponse res = new org.openapis.openapi.models.operations.GetConfigsubscriptionsgroupResponse() {{
+        org.openapis.openapi.models.operations.GetConfigsubscriptionsgroupResponse res = new org.openapis.openapi.models.operations.GetConfigsubscriptionsgroupResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -230,10 +222,8 @@ public class SubscriptionGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConversationMessagebygroupIdResponse res = new org.openapis.openapi.models.operations.GetConversationMessagebygroupIdResponse() {{
+        org.openapis.openapi.models.operations.GetConversationMessagebygroupIdResponse res = new org.openapis.openapi.models.operations.GetConversationMessagebygroupIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -272,10 +262,8 @@ public class SubscriptionGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNextpurchaseResponse res = new org.openapis.openapi.models.operations.GetNextpurchaseResponse() {{
+        org.openapis.openapi.models.operations.GetNextpurchaseResponse res = new org.openapis.openapi.models.operations.GetNextpurchaseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -314,10 +302,8 @@ public class SubscriptionGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSimulatebysubscriptionGroupResponse res = new org.openapis.openapi.models.operations.GetSimulatebysubscriptionGroupResponse() {{
+        org.openapis.openapi.models.operations.GetSimulatebysubscriptionGroupResponse res = new org.openapis.openapi.models.operations.GetSimulatebysubscriptionGroupResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -356,10 +342,8 @@ public class SubscriptionGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubscriptionbygroupIdResponse res = new org.openapis.openapi.models.operations.GetSubscriptionbygroupIdResponse() {{
+        org.openapis.openapi.models.operations.GetSubscriptionbygroupIdResponse res = new org.openapis.openapi.models.operations.GetSubscriptionbygroupIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -398,10 +382,8 @@ public class SubscriptionGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetaddressesbygroupIdResponse res = new org.openapis.openapi.models.operations.GetaddressesbygroupIdResponse() {{
+        org.openapis.openapi.models.operations.GetaddressesbygroupIdResponse res = new org.openapis.openapi.models.operations.GetaddressesbygroupIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,10 +422,8 @@ public class SubscriptionGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetfrequencyoptionsbygroupIdResponse res = new org.openapis.openapi.models.operations.GetfrequencyoptionsbygroupIdResponse() {{
+        org.openapis.openapi.models.operations.GetfrequencyoptionsbygroupIdResponse res = new org.openapis.openapi.models.operations.GetfrequencyoptionsbygroupIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,10 +462,8 @@ public class SubscriptionGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetpaymentSystembygroupIdResponse res = new org.openapis.openapi.models.operations.GetpaymentSystembygroupIdResponse() {{
+        org.openapis.openapi.models.operations.GetpaymentSystembygroupIdResponse res = new org.openapis.openapi.models.operations.GetpaymentSystembygroupIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -524,10 +502,8 @@ public class SubscriptionGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetsubscriptiongrouplistResponse res = new org.openapis.openapi.models.operations.GetsubscriptiongrouplistResponse() {{
+        org.openapis.openapi.models.operations.GetsubscriptiongrouplistResponse res = new org.openapis.openapi.models.operations.GetsubscriptiongrouplistResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -566,10 +542,8 @@ public class SubscriptionGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetwillcreatebygroupIdResponse res = new org.openapis.openapi.models.operations.GetwillcreatebygroupIdResponse() {{
+        org.openapis.openapi.models.operations.GetwillcreatebygroupIdResponse res = new org.openapis.openapi.models.operations.GetwillcreatebygroupIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -613,10 +587,8 @@ public class SubscriptionGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InsertAddressesbygroupIdResponse res = new org.openapis.openapi.models.operations.InsertAddressesbygroupIdResponse() {{
+        org.openapis.openapi.models.operations.InsertAddressesbygroupIdResponse res = new org.openapis.openapi.models.operations.InsertAddressesbygroupIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -655,10 +627,8 @@ public class SubscriptionGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrysubscriptionbygroupIdResponse res = new org.openapis.openapi.models.operations.RetrysubscriptionbygroupIdResponse() {{
+        org.openapis.openapi.models.operations.RetrysubscriptionbygroupIdResponse res = new org.openapis.openapi.models.operations.RetrysubscriptionbygroupIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -694,10 +664,8 @@ public class SubscriptionGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSubscriptionbygroupIdResponse res = new org.openapis.openapi.models.operations.UpdateSubscriptionbygroupIdResponse() {{
+        org.openapis.openapi.models.operations.UpdateSubscriptionbygroupIdResponse res = new org.openapis.openapi.models.operations.UpdateSubscriptionbygroupIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

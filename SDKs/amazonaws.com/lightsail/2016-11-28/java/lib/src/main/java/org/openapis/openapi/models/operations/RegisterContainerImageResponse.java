@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterContainerImageResponse {
@@ -12,6 +13,7 @@ public class RegisterContainerImageResponse {
      */
     
     public Object accessDeniedException;
+
     public RegisterContainerImageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class RegisterContainerImageResponse {
     
     
     public String contentType;
+
     public RegisterContainerImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RegisterContainerImageResponse {
      */
     
     public Object invalidInputException;
+
     public RegisterContainerImageResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterContainerImageResponse {
      */
     
     public Object notFoundException;
+
     public RegisterContainerImageResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterContainerImageResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterContainerImageResult registerContainerImageResult;
+
     public RegisterContainerImageResponse withRegisterContainerImageResult(org.openapis.openapi.models.shared.RegisterContainerImageResult registerContainerImageResult) {
         this.registerContainerImageResult = registerContainerImageResult;
         return this;
@@ -59,6 +65,7 @@ public class RegisterContainerImageResponse {
      */
     
     public Object serviceException;
+
     public RegisterContainerImageResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class RegisterContainerImageResponse {
     
     
     public Integer statusCode;
+
     public RegisterContainerImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class RegisterContainerImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterContainerImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class RegisterContainerImageResponse {
      */
     
     public Object unauthenticatedException;
+
     public RegisterContainerImageResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public RegisterContainerImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

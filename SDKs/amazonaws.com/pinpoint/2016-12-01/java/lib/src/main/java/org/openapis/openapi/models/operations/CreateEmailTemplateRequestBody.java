@@ -12,9 +12,13 @@ public class CreateEmailTemplateRequestBody {
      */
     @JsonProperty("EmailTemplateRequest")
     public CreateEmailTemplateRequestBodyEmailTemplateRequest emailTemplateRequest;
+
     public CreateEmailTemplateRequestBody withEmailTemplateRequest(CreateEmailTemplateRequestBodyEmailTemplateRequest emailTemplateRequest) {
         this.emailTemplateRequest = emailTemplateRequest;
         return this;
     }
     
+    public CreateEmailTemplateRequestBody(@JsonProperty("EmailTemplateRequest") CreateEmailTemplateRequestBodyEmailTemplateRequest emailTemplateRequest) {
+        this.emailTemplateRequest = emailTemplateRequest;
+  }
 }

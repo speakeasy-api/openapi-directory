@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherEditsExpansionfilesUploadRequest {
@@ -12,6 +13,7 @@ public class AndroidpublisherEditsExpansionfilesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherEditsExpansionfilesUploadRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class AndroidpublisherEditsExpansionfilesUploadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apkVersionCode")
     public Long apkVersionCode;
+
     public AndroidpublisherEditsExpansionfilesUploadRequest withApkVersionCode(Long apkVersionCode) {
         this.apkVersionCode = apkVersionCode;
         return this;
@@ -32,6 +35,7 @@ public class AndroidpublisherEditsExpansionfilesUploadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=editId")
     public String editId;
+
     public AndroidpublisherEditsExpansionfilesUploadRequest withEditId(String editId) {
         this.editId = editId;
         return this;
@@ -39,6 +43,7 @@ public class AndroidpublisherEditsExpansionfilesUploadRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=expansionFileType")
     public AndroidpublisherEditsExpansionfilesUploadExpansionFileTypeEnum expansionFileType;
+
     public AndroidpublisherEditsExpansionfilesUploadRequest withExpansionFileType(AndroidpublisherEditsExpansionfilesUploadExpansionFileTypeEnum expansionFileType) {
         this.expansionFileType = expansionFileType;
         return this;
@@ -49,6 +54,7 @@ public class AndroidpublisherEditsExpansionfilesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherEditsExpansionfilesUploadRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -59,6 +65,7 @@ public class AndroidpublisherEditsExpansionfilesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherEditsExpansionfilesUploadRequest withKey(String key) {
         this.key = key;
         return this;
@@ -69,6 +76,7 @@ public class AndroidpublisherEditsExpansionfilesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherEditsExpansionfilesUploadRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -79,6 +87,7 @@ public class AndroidpublisherEditsExpansionfilesUploadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherEditsExpansionfilesUploadRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -89,6 +98,7 @@ public class AndroidpublisherEditsExpansionfilesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherEditsExpansionfilesUploadRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class AndroidpublisherEditsExpansionfilesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherEditsExpansionfilesUploadRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -109,9 +120,16 @@ public class AndroidpublisherEditsExpansionfilesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AndroidpublisherEditsExpansionfilesUploadRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AndroidpublisherEditsExpansionfilesUploadRequest(@JsonProperty("apkVersionCode") Long apkVersionCode, @JsonProperty("editId") String editId, @JsonProperty("expansionFileType") AndroidpublisherEditsExpansionfilesUploadExpansionFileTypeEnum expansionFileType, @JsonProperty("packageName") String packageName) {
+        this.apkVersionCode = apkVersionCode;
+        this.editId = editId;
+        this.expansionFileType = expansionFileType;
+        this.packageName = packageName;
+  }
 }

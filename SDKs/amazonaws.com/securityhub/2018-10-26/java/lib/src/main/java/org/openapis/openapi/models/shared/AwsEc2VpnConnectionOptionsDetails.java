@@ -15,6 +15,7 @@ public class AwsEc2VpnConnectionOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StaticRoutesOnly")
     public Boolean staticRoutesOnly;
+
     public AwsEc2VpnConnectionOptionsDetails withStaticRoutesOnly(Boolean staticRoutesOnly) {
         this.staticRoutesOnly = staticRoutesOnly;
         return this;
@@ -23,9 +24,11 @@ public class AwsEc2VpnConnectionOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TunnelOptions")
     public AwsEc2VpnConnectionOptionsTunnelOptionsDetails[] tunnelOptions;
+
     public AwsEc2VpnConnectionOptionsDetails withTunnelOptions(AwsEc2VpnConnectionOptionsTunnelOptionsDetails[] tunnelOptions) {
         this.tunnelOptions = tunnelOptions;
         return this;
     }
     
+    public AwsEc2VpnConnectionOptionsDetails(){}
 }

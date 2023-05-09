@@ -15,6 +15,7 @@ public class AwsDynamoDbTableReplicaGlobalSecondaryIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public AwsDynamoDbTableReplicaGlobalSecondaryIndex withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -23,9 +24,11 @@ public class AwsDynamoDbTableReplicaGlobalSecondaryIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughputOverride")
     public AwsDynamoDbTableProvisionedThroughputOverride provisionedThroughputOverride;
+
     public AwsDynamoDbTableReplicaGlobalSecondaryIndex withProvisionedThroughputOverride(AwsDynamoDbTableProvisionedThroughputOverride provisionedThroughputOverride) {
         this.provisionedThroughputOverride = provisionedThroughputOverride;
         return this;
     }
     
+    public AwsDynamoDbTableReplicaGlobalSecondaryIndex(){}
 }

@@ -18,6 +18,7 @@ public class ListRuntimeVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListRuntimeVersionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListRuntimeVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeVersions")
     public RuntimeVersion[] runtimeVersions;
+
     public ListRuntimeVersionsResponse withRuntimeVersions(RuntimeVersion[] runtimeVersions) {
         this.runtimeVersions = runtimeVersions;
         return this;
@@ -40,9 +42,11 @@ public class ListRuntimeVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListRuntimeVersionsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListRuntimeVersionsResponse(){}
 }

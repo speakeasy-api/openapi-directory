@@ -18,6 +18,7 @@ public class MicrosoftGraphAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternateLink")
     public String alternateLink;
+
     public MicrosoftGraphAssignment withAlternateLink(String alternateLink) {
         this.alternateLink = alternateLink;
         return this;
@@ -29,6 +30,7 @@ public class MicrosoftGraphAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public String[] categories;
+
     public MicrosoftGraphAssignment withCategories(String[] categories) {
         this.categories = categories;
         return this;
@@ -40,6 +42,7 @@ public class MicrosoftGraphAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public MicrosoftGraphAssignment withId(String id) {
         this.id = id;
         return this;
@@ -51,9 +54,11 @@ public class MicrosoftGraphAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public MicrosoftGraphAssignment withState(String state) {
         this.state = state;
         return this;
     }
     
+    public MicrosoftGraphAssignment(){}
 }

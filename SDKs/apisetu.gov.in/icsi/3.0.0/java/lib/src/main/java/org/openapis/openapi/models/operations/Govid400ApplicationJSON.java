@@ -15,6 +15,7 @@ public class Govid400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Govid400ApplicationJSONErrorEnum error;
+
     public Govid400ApplicationJSON withError(Govid400ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Govid400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Govid400ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Govid400ApplicationJSON withErrorDescription(Govid400ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Govid400ApplicationJSON(){}
 }

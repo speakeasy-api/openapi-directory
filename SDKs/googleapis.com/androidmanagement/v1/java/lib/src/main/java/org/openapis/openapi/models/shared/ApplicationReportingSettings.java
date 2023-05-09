@@ -18,9 +18,11 @@ public class ApplicationReportingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeRemovedApps")
     public Boolean includeRemovedApps;
+
     public ApplicationReportingSettings withIncludeRemovedApps(Boolean includeRemovedApps) {
         this.includeRemovedApps = includeRemovedApps;
         return this;
     }
     
+    public ApplicationReportingSettings(){}
 }

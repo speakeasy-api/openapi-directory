@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDefaultMailDomainResponse {
     
     public String contentType;
+
     public UpdateDefaultMailDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDefaultMailDomainResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateDefaultMailDomainResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDefaultMailDomainResponse {
      */
     
     public Object mailDomainNotFoundException;
+
     public UpdateDefaultMailDomainResponse withMailDomainNotFoundException(Object mailDomainNotFoundException) {
         this.mailDomainNotFoundException = mailDomainNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDefaultMailDomainResponse {
      */
     
     public Object mailDomainStateException;
+
     public UpdateDefaultMailDomainResponse withMailDomainStateException(Object mailDomainStateException) {
         this.mailDomainStateException = mailDomainStateException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDefaultMailDomainResponse {
      */
     
     public Object organizationNotFoundException;
+
     public UpdateDefaultMailDomainResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateDefaultMailDomainResponse {
      */
     
     public Object organizationStateException;
+
     public UpdateDefaultMailDomainResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateDefaultMailDomainResponse {
     
     
     public Integer statusCode;
+
     public UpdateDefaultMailDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDefaultMailDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDefaultMailDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDefaultMailDomainResponse {
      */
     
     public java.util.Map<String, Object> updateDefaultMailDomainResponse;
+
     public UpdateDefaultMailDomainResponse withUpdateDefaultMailDomainResponse(java.util.Map<String, Object> updateDefaultMailDomainResponse) {
         this.updateDefaultMailDomainResponse = updateDefaultMailDomainResponse;
         return this;
     }
     
+    public UpdateDefaultMailDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

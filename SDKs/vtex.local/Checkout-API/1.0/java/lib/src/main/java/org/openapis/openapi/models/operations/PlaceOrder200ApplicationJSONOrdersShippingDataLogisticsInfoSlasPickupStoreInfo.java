@@ -18,6 +18,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasPick
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInfo")
     public String additionalInfo;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasPickupStoreInfo withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -29,6 +30,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasPick
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasPickupStoreInfoAddress address;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasPickupStoreInfo withAddress(PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasPickupStoreInfoAddress address) {
         this.address = address;
         return this;
@@ -40,6 +42,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasPick
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockId")
     public String dockId;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasPickupStoreInfo withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -51,6 +54,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasPick
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyName")
     public String friendlyName;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasPickupStoreInfo withFriendlyName(String friendlyName) {
         this.friendlyName = friendlyName;
         return this;
@@ -62,9 +66,11 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasPick
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPickupStore")
     public Boolean isPickupStore;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasPickupStoreInfo withIsPickupStore(Boolean isPickupStore) {
         this.isPickupStore = isPickupStore;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlasPickupStoreInfo(){}
 }

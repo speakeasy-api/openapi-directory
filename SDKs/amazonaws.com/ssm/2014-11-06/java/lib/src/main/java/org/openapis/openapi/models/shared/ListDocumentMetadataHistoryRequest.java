@@ -12,6 +12,7 @@ public class ListDocumentMetadataHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public ListDocumentMetadataHistoryRequest withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -20,6 +21,7 @@ public class ListDocumentMetadataHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDocumentMetadataHistoryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class ListDocumentMetadataHistoryRequest {
     
     @JsonProperty("Metadata")
     public DocumentMetadataEnumEnum metadata;
+
     public ListDocumentMetadataHistoryRequest withMetadata(DocumentMetadataEnumEnum metadata) {
         this.metadata = metadata;
         return this;
@@ -34,6 +37,7 @@ public class ListDocumentMetadataHistoryRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public ListDocumentMetadataHistoryRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +46,14 @@ public class ListDocumentMetadataHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDocumentMetadataHistoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDocumentMetadataHistoryRequest(@JsonProperty("Metadata") DocumentMetadataEnumEnum metadata, @JsonProperty("Name") String name) {
+        this.metadata = metadata;
+        this.name = name;
+  }
 }

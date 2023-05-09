@@ -18,6 +18,7 @@ public class LayoutProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public LayoutProperties withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class LayoutProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterObjectId")
     public String masterObjectId;
+
     public LayoutProperties withMasterObjectId(String masterObjectId) {
         this.masterObjectId = masterObjectId;
         return this;
@@ -40,9 +42,11 @@ public class LayoutProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LayoutProperties withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LayoutProperties(){}
 }

@@ -18,6 +18,7 @@ public class CanaryDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentages")
     public Integer[] percentages;
+
     public CanaryDeployment withPercentages(Integer[] percentages) {
         this.percentages = percentages;
         return this;
@@ -29,9 +30,11 @@ public class CanaryDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verify")
     public Boolean verify;
+
     public CanaryDeployment withVerify(Boolean verify) {
         this.verify = verify;
         return this;
     }
     
+    public CanaryDeployment(){}
 }

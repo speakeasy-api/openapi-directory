@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProfilePictureUpload1 {
@@ -12,9 +13,13 @@ public class ProfilePictureUpload1 {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public ProfilePictureUploadProfilePicture profilePicture;
+
     public ProfilePictureUpload1 withProfilePicture(ProfilePictureUploadProfilePicture profilePicture) {
         this.profilePicture = profilePicture;
         return this;
     }
     
+    public ProfilePictureUpload1(@JsonProperty("profile_picture") ProfilePictureUploadProfilePicture profilePicture) {
+        this.profilePicture = profilePicture;
+  }
 }

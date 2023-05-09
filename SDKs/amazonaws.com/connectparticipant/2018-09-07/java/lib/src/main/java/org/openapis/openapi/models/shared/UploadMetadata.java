@@ -15,6 +15,7 @@ public class UploadMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeadersToInclude")
     public java.util.Map<String, String> headersToInclude;
+
     public UploadMetadata withHeadersToInclude(java.util.Map<String, String> headersToInclude) {
         this.headersToInclude = headersToInclude;
         return this;
@@ -23,6 +24,7 @@ public class UploadMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public UploadMetadata withUrl(String url) {
         this.url = url;
         return this;
@@ -31,9 +33,11 @@ public class UploadMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UrlExpiry")
     public String urlExpiry;
+
     public UploadMetadata withUrlExpiry(String urlExpiry) {
         this.urlExpiry = urlExpiry;
         return this;
     }
     
+    public UploadMetadata(){}
 }

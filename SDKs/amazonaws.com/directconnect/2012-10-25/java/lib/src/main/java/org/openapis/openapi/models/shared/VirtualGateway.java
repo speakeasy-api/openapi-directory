@@ -15,6 +15,7 @@ public class VirtualGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualGatewayId")
     public String virtualGatewayId;
+
     public VirtualGateway withVirtualGatewayId(String virtualGatewayId) {
         this.virtualGatewayId = virtualGatewayId;
         return this;
@@ -23,9 +24,11 @@ public class VirtualGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualGatewayState")
     public String virtualGatewayState;
+
     public VirtualGateway withVirtualGatewayState(String virtualGatewayState) {
         this.virtualGatewayState = virtualGatewayState;
         return this;
     }
     
+    public VirtualGateway(){}
 }

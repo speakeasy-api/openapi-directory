@@ -15,9 +15,11 @@ public class ListPricingRulesRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arns")
     public String[] arns;
+
     public ListPricingRulesRequestBodyFilters withArns(String[] arns) {
         this.arns = arns;
         return this;
     }
     
+    public ListPricingRulesRequestBodyFilters(){}
 }

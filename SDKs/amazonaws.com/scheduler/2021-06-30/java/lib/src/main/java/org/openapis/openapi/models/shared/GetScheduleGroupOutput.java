@@ -20,6 +20,7 @@ public class GetScheduleGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public GetScheduleGroupOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class GetScheduleGroupOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public GetScheduleGroupOutput withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -40,6 +42,7 @@ public class GetScheduleGroupOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationDate")
     public OffsetDateTime lastModificationDate;
+
     public GetScheduleGroupOutput withLastModificationDate(OffsetDateTime lastModificationDate) {
         this.lastModificationDate = lastModificationDate;
         return this;
@@ -48,6 +51,7 @@ public class GetScheduleGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetScheduleGroupOutput withName(String name) {
         this.name = name;
         return this;
@@ -56,9 +60,11 @@ public class GetScheduleGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ScheduleGroupStateEnum state;
+
     public GetScheduleGroupOutput withState(ScheduleGroupStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GetScheduleGroupOutput(){}
 }

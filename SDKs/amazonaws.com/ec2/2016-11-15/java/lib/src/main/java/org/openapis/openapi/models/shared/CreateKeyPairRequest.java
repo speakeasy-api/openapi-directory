@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateKeyPairRequest {
     
     public Boolean dryRun;
+
     public CreateKeyPairRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreateKeyPairRequest {
     
     
     public KeyFormatEnum keyFormat;
+
     public CreateKeyPairRequest withKeyFormat(KeyFormatEnum keyFormat) {
         this.keyFormat = keyFormat;
         return this;
@@ -23,6 +25,7 @@ public class CreateKeyPairRequest {
     
     
     public String keyName;
+
     public CreateKeyPairRequest withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -30,6 +33,7 @@ public class CreateKeyPairRequest {
     
     
     public KeyTypeEnum keyType;
+
     public CreateKeyPairRequest withKeyType(KeyTypeEnum keyType) {
         this.keyType = keyType;
         return this;
@@ -37,9 +41,13 @@ public class CreateKeyPairRequest {
     
     
     public CreateKeyPairRequestTagSpecifications[] tagSpecifications;
+
     public CreateKeyPairRequest withTagSpecifications(CreateKeyPairRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateKeyPairRequest(@JsonProperty("KeyName") String keyName) {
+        this.keyName = keyName;
+  }
 }

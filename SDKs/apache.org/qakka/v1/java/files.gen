@@ -51,4 +51,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/StatusResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ApiResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Queue.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueueMessage.java
+docs/sdk/README.md
+docs/queues/README.md
+docs/status/README.md
 USAGE.md

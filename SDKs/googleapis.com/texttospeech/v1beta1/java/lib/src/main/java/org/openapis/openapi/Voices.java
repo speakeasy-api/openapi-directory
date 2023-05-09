@@ -58,11 +58,9 @@ public class Voices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TexttospeechVoicesListResponse res = new org.openapis.openapi.models.operations.TexttospeechVoicesListResponse() {{
+        org.openapis.openapi.models.operations.TexttospeechVoicesListResponse res = new org.openapis.openapi.models.operations.TexttospeechVoicesListResponse(contentType, httpRes.statusCode()) {{
             listVoicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class PostApiV1StatusesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Idempotency-Key")
     public String idempotencyKey;
+
     public PostApiV1StatusesRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -19,9 +20,11 @@ public class PostApiV1StatusesRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostApiV1StatusesRequestBody[] requestBody;
+
     public PostApiV1StatusesRequest withRequestBody(PostApiV1StatusesRequestBody[] requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public PostApiV1StatusesRequest(){}
 }

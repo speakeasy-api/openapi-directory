@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSnapshotRequest {
@@ -12,6 +13,7 @@ public class UpdateSnapshotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=GameName")
     public String gameName;
+
     public UpdateSnapshotRequest withGameName(String gameName) {
         this.gameName = gameName;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSnapshotRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateSnapshotRequestBody requestBody;
+
     public UpdateSnapshotRequest withRequestBody(UpdateSnapshotRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSnapshotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SnapshotId")
     public String snapshotId;
+
     public UpdateSnapshotRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -36,6 +40,7 @@ public class UpdateSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateSnapshotRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class UpdateSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateSnapshotRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class UpdateSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateSnapshotRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class UpdateSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateSnapshotRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class UpdateSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateSnapshotRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class UpdateSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateSnapshotRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,9 +88,15 @@ public class UpdateSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateSnapshotRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public UpdateSnapshotRequest(@JsonProperty("GameName") String gameName, @JsonProperty("RequestBody") UpdateSnapshotRequestBody requestBody, @JsonProperty("SnapshotId") String snapshotId) {
+        this.gameName = gameName;
+        this.requestBody = requestBody;
+        this.snapshotId = snapshotId;
+  }
 }

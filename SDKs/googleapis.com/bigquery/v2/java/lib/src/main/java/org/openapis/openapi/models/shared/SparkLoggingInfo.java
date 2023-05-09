@@ -15,6 +15,7 @@ public class SparkLoggingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     public String projectId;
+
     public SparkLoggingInfo withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -26,9 +27,11 @@ public class SparkLoggingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public SparkLoggingInfo withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public SparkLoggingInfo(){}
 }

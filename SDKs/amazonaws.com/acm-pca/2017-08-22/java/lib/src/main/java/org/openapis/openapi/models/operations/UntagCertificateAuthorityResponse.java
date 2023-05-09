@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UntagCertificateAuthorityResponse {
     
     public String contentType;
+
     public UntagCertificateAuthorityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UntagCertificateAuthorityResponse {
      */
     
     public Object invalidArnException;
+
     public UntagCertificateAuthorityResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -29,6 +32,7 @@ public class UntagCertificateAuthorityResponse {
      */
     
     public Object invalidStateException;
+
     public UntagCertificateAuthorityResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -39,6 +43,7 @@ public class UntagCertificateAuthorityResponse {
      */
     
     public Object invalidTagException;
+
     public UntagCertificateAuthorityResponse withInvalidTagException(Object invalidTagException) {
         this.invalidTagException = invalidTagException;
         return this;
@@ -49,6 +54,7 @@ public class UntagCertificateAuthorityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UntagCertificateAuthorityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UntagCertificateAuthorityResponse {
     
     
     public Integer statusCode;
+
     public UntagCertificateAuthorityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class UntagCertificateAuthorityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UntagCertificateAuthorityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UntagCertificateAuthorityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

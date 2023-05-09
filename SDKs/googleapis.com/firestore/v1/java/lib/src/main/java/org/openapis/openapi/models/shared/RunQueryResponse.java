@@ -18,6 +18,7 @@ public class RunQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public Document document;
+
     public RunQueryResponse withDocument(Document document) {
         this.document = document;
         return this;
@@ -29,6 +30,7 @@ public class RunQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("done")
     public Boolean done;
+
     public RunQueryResponse withDone(Boolean done) {
         this.done = done;
         return this;
@@ -40,6 +42,7 @@ public class RunQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public RunQueryResponse withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -51,6 +54,7 @@ public class RunQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skippedResults")
     public Integer skippedResults;
+
     public RunQueryResponse withSkippedResults(Integer skippedResults) {
         this.skippedResults = skippedResults;
         return this;
@@ -62,9 +66,11 @@ public class RunQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public String transaction;
+
     public RunQueryResponse withTransaction(String transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public RunQueryResponse(){}
 }

@@ -15,6 +15,7 @@ public class ListSpacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public SpaceSummary[] items;
+
     public ListSpacesResponse withItems(SpaceSummary[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class ListSpacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSpacesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListSpacesResponse(){}
 }

@@ -15,6 +15,7 @@ public class BuiltInSlotTypeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BuiltInSlotTypeSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class BuiltInSlotTypeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotTypeSignature")
     public String slotTypeSignature;
+
     public BuiltInSlotTypeSummary withSlotTypeSignature(String slotTypeSignature) {
         this.slotTypeSignature = slotTypeSignature;
         return this;
     }
     
+    public BuiltInSlotTypeSummary(){}
 }

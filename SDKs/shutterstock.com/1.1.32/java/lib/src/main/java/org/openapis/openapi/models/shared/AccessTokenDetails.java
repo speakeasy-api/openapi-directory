@@ -18,6 +18,7 @@ public class AccessTokenDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_id")
     public String clientId;
+
     public AccessTokenDetails withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -29,6 +30,7 @@ public class AccessTokenDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contributor_id")
     public String contributorId;
+
     public AccessTokenDetails withContributorId(String contributorId) {
         this.contributorId = contributorId;
         return this;
@@ -40,6 +42,7 @@ public class AccessTokenDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public String customerId;
+
     public AccessTokenDetails withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -51,6 +54,7 @@ public class AccessTokenDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_in")
     public Long expiresIn;
+
     public AccessTokenDetails withExpiresIn(Long expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -62,6 +66,7 @@ public class AccessTokenDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     public String organizationId;
+
     public AccessTokenDetails withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -73,6 +78,7 @@ public class AccessTokenDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("realm")
     public AccessTokenDetailsRealmEnum realm;
+
     public AccessTokenDetails withRealm(AccessTokenDetailsRealmEnum realm) {
         this.realm = realm;
         return this;
@@ -84,6 +90,7 @@ public class AccessTokenDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public String[] scopes;
+
     public AccessTokenDetails withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
@@ -95,6 +102,7 @@ public class AccessTokenDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public String userId;
+
     public AccessTokenDetails withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -106,9 +114,11 @@ public class AccessTokenDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public AccessTokenDetails withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AccessTokenDetails(){}
 }

@@ -18,6 +18,7 @@ public class PrivateClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablePrivateEndpoint")
     public Boolean enablePrivateEndpoint;
+
     public PrivateClusterConfig withEnablePrivateEndpoint(Boolean enablePrivateEndpoint) {
         this.enablePrivateEndpoint = enablePrivateEndpoint;
         return this;
@@ -29,6 +30,7 @@ public class PrivateClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablePrivateNodes")
     public Boolean enablePrivateNodes;
+
     public PrivateClusterConfig withEnablePrivateNodes(Boolean enablePrivateNodes) {
         this.enablePrivateNodes = enablePrivateNodes;
         return this;
@@ -40,6 +42,7 @@ public class PrivateClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterGlobalAccessConfig")
     public PrivateClusterMasterGlobalAccessConfig masterGlobalAccessConfig;
+
     public PrivateClusterConfig withMasterGlobalAccessConfig(PrivateClusterMasterGlobalAccessConfig masterGlobalAccessConfig) {
         this.masterGlobalAccessConfig = masterGlobalAccessConfig;
         return this;
@@ -51,6 +54,7 @@ public class PrivateClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterIpv4CidrBlock")
     public String masterIpv4CidrBlock;
+
     public PrivateClusterConfig withMasterIpv4CidrBlock(String masterIpv4CidrBlock) {
         this.masterIpv4CidrBlock = masterIpv4CidrBlock;
         return this;
@@ -62,6 +66,7 @@ public class PrivateClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peeringName")
     public String peeringName;
+
     public PrivateClusterConfig withPeeringName(String peeringName) {
         this.peeringName = peeringName;
         return this;
@@ -73,6 +78,7 @@ public class PrivateClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateEndpoint")
     public String privateEndpoint;
+
     public PrivateClusterConfig withPrivateEndpoint(String privateEndpoint) {
         this.privateEndpoint = privateEndpoint;
         return this;
@@ -84,6 +90,7 @@ public class PrivateClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateEndpointSubnetwork")
     public String privateEndpointSubnetwork;
+
     public PrivateClusterConfig withPrivateEndpointSubnetwork(String privateEndpointSubnetwork) {
         this.privateEndpointSubnetwork = privateEndpointSubnetwork;
         return this;
@@ -95,9 +102,11 @@ public class PrivateClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicEndpoint")
     public String publicEndpoint;
+
     public PrivateClusterConfig withPublicEndpoint(String publicEndpoint) {
         this.publicEndpoint = publicEndpoint;
         return this;
     }
     
+    public PrivateClusterConfig(){}
 }

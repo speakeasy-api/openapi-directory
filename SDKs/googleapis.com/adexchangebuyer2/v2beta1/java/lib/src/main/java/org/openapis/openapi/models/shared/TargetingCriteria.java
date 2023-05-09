@@ -18,6 +18,7 @@ public class TargetingCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusions")
     public TargetingValue[] exclusions;
+
     public TargetingCriteria withExclusions(TargetingValue[] exclusions) {
         this.exclusions = exclusions;
         return this;
@@ -29,6 +30,7 @@ public class TargetingCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inclusions")
     public TargetingValue[] inclusions;
+
     public TargetingCriteria withInclusions(TargetingValue[] inclusions) {
         this.inclusions = inclusions;
         return this;
@@ -40,9 +42,11 @@ public class TargetingCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public TargetingCriteria withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public TargetingCriteria(){}
 }

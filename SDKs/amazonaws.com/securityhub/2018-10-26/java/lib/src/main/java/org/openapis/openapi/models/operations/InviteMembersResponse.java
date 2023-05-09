@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InviteMembersResponse {
     
     public String contentType;
+
     public InviteMembersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InviteMembersResponse {
      */
     
     public Object internalException;
+
     public InviteMembersResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class InviteMembersResponse {
      */
     
     public Object invalidAccessException;
+
     public InviteMembersResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -39,6 +43,7 @@ public class InviteMembersResponse {
      */
     
     public Object invalidInputException;
+
     public InviteMembersResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class InviteMembersResponse {
      */
     
     public org.openapis.openapi.models.shared.InviteMembersResponse inviteMembersResponse;
+
     public InviteMembersResponse withInviteMembersResponse(org.openapis.openapi.models.shared.InviteMembersResponse inviteMembersResponse) {
         this.inviteMembersResponse = inviteMembersResponse;
         return this;
@@ -59,6 +65,7 @@ public class InviteMembersResponse {
      */
     
     public Object limitExceededException;
+
     public InviteMembersResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class InviteMembersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public InviteMembersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class InviteMembersResponse {
     
     
     public Integer statusCode;
+
     public InviteMembersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class InviteMembersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InviteMembersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public InviteMembersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

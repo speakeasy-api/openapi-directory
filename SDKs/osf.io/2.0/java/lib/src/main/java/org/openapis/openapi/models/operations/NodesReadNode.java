@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * NodesReadNode - OK
@@ -15,6 +15,7 @@ public class NodesReadNode {
      */
     
     public NodesReadNodeAttributes attributes;
+
     public NodesReadNode withAttributes(NodesReadNodeAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class NodesReadNode {
      */
     
     public String id;
+
     public NodesReadNode withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class NodesReadNode {
      */
     
     public NodesReadNodeLinks links;
+
     public NodesReadNode withLinks(NodesReadNodeLinks links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class NodesReadNode {
      */
     
     public NodesReadNodeRelationships relationships;
+
     public NodesReadNode withRelationships(NodesReadNodeRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -55,9 +59,14 @@ public class NodesReadNode {
      */
     
     public String type;
+
     public NodesReadNode withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesReadNode(@JsonProperty("attributes") NodesReadNodeAttributes attributes, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.type = type;
+  }
 }

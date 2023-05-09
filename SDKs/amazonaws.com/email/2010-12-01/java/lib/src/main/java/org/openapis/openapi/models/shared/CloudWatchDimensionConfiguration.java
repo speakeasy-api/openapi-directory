@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CloudWatchDimensionConfiguration - &lt;p&gt;Contains the dimension configuration to use when you publish email sending events to Amazon CloudWatch.&lt;/p&gt; &lt;p&gt;For information about publishing email sending events to Amazon CloudWatch, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CloudWatchDimensionConfiguration {
     
     public String defaultDimensionValue;
+
     public CloudWatchDimensionConfiguration withDefaultDimensionValue(String defaultDimensionValue) {
         this.defaultDimensionValue = defaultDimensionValue;
         return this;
@@ -19,6 +20,7 @@ public class CloudWatchDimensionConfiguration {
     
     
     public String dimensionName;
+
     public CloudWatchDimensionConfiguration withDimensionName(String dimensionName) {
         this.dimensionName = dimensionName;
         return this;
@@ -26,9 +28,15 @@ public class CloudWatchDimensionConfiguration {
     
     
     public DimensionValueSourceEnum dimensionValueSource;
+
     public CloudWatchDimensionConfiguration withDimensionValueSource(DimensionValueSourceEnum dimensionValueSource) {
         this.dimensionValueSource = dimensionValueSource;
         return this;
     }
     
+    public CloudWatchDimensionConfiguration(@JsonProperty("DefaultDimensionValue") String defaultDimensionValue, @JsonProperty("DimensionName") String dimensionName, @JsonProperty("DimensionValueSource") DimensionValueSourceEnum dimensionValueSource) {
+        this.defaultDimensionValue = defaultDimensionValue;
+        this.dimensionName = dimensionName;
+        this.dimensionValueSource = dimensionValueSource;
+  }
 }

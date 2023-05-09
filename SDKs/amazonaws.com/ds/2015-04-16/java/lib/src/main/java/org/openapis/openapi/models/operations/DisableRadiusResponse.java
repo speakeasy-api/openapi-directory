@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableRadiusResponse {
@@ -12,6 +13,7 @@ public class DisableRadiusResponse {
      */
     
     public Object clientException;
+
     public DisableRadiusResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DisableRadiusResponse {
     
     
     public String contentType;
+
     public DisableRadiusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisableRadiusResponse {
      */
     
     public java.util.Map<String, Object> disableRadiusResult;
+
     public DisableRadiusResponse withDisableRadiusResult(java.util.Map<String, Object> disableRadiusResult) {
         this.disableRadiusResult = disableRadiusResult;
         return this;
@@ -39,6 +43,7 @@ public class DisableRadiusResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public DisableRadiusResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -46,6 +51,7 @@ public class DisableRadiusResponse {
     
     
     public Integer statusCode;
+
     public DisableRadiusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisableRadiusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableRadiusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DisableRadiusResponse {
      */
     
     public Object serviceException;
+
     public DisableRadiusResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
     }
     
+    public DisableRadiusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

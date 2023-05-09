@@ -15,6 +15,7 @@ public class RoutineReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetId")
     public String datasetId;
+
     public RoutineReference withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -26,6 +27,7 @@ public class RoutineReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public RoutineReference withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -37,9 +39,11 @@ public class RoutineReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routineId")
     public String routineId;
+
     public RoutineReference withRoutineId(String routineId) {
         this.routineId = routineId;
         return this;
     }
     
+    public RoutineReference(){}
 }

@@ -12,6 +12,7 @@ public class MrcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public MrcerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class MrcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public MrcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class MrcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RROLL")
     public String rroll;
+
     public MrcerRequestBodyCertificateParameters withRroll(String rroll) {
         this.rroll = rroll;
         return this;
@@ -42,9 +45,16 @@ public class MrcerRequestBodyCertificateParameters {
      */
     @JsonProperty("year")
     public String year;
+
     public MrcerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public MrcerRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("RROLL") String rroll, @JsonProperty("year") String year) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.rroll = rroll;
+        this.year = year;
+  }
 }

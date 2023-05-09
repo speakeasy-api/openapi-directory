@@ -15,6 +15,7 @@ public class GetModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public Model[] items;
+
     public GetModelsResponse withItems(Model[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class GetModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetModelsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetModelsResponse(){}
 }

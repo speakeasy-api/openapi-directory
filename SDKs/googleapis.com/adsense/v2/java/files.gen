@@ -196,4 +196,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListSavedReportsResponse.ja
 lib/src/main/java/org/openapis/openapi/models/shared/SiteStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Site.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListSitesResponse.java
+docs/sdk/README.md
+docs/accounts/README.md
 USAGE.md

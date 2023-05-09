@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class GETDefineExpressionExpression {
      */
     @SpeakeasyMetadata("queryParam:name=ExpressionName")
     public String expressionName;
+
     public GETDefineExpressionExpression withExpressionName(String expressionName) {
         this.expressionName = expressionName;
         return this;
@@ -25,9 +27,14 @@ public class GETDefineExpressionExpression {
      */
     @SpeakeasyMetadata("queryParam:name=ExpressionValue")
     public String expressionValue;
+
     public GETDefineExpressionExpression withExpressionValue(String expressionValue) {
         this.expressionValue = expressionValue;
         return this;
     }
     
+    public GETDefineExpressionExpression(@JsonProperty("ExpressionName") String expressionName, @JsonProperty("ExpressionValue") String expressionValue) {
+        this.expressionName = expressionName;
+        this.expressionValue = expressionValue;
+  }
 }

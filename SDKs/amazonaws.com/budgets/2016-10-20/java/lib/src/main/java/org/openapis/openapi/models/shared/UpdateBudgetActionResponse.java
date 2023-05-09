@@ -15,6 +15,7 @@ public class UpdateBudgetActionResponse {
      */
     @JsonProperty("AccountId")
     public String accountId;
+
     public UpdateBudgetActionResponse withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class UpdateBudgetActionResponse {
      */
     @JsonProperty("BudgetName")
     public String budgetName;
+
     public UpdateBudgetActionResponse withBudgetName(String budgetName) {
         this.budgetName = budgetName;
         return this;
@@ -32,6 +34,7 @@ public class UpdateBudgetActionResponse {
     
     @JsonProperty("NewAction")
     public Action newAction;
+
     public UpdateBudgetActionResponse withNewAction(Action newAction) {
         this.newAction = newAction;
         return this;
@@ -39,9 +42,16 @@ public class UpdateBudgetActionResponse {
     
     @JsonProperty("OldAction")
     public Action oldAction;
+
     public UpdateBudgetActionResponse withOldAction(Action oldAction) {
         this.oldAction = oldAction;
         return this;
     }
     
+    public UpdateBudgetActionResponse(@JsonProperty("AccountId") String accountId, @JsonProperty("BudgetName") String budgetName, @JsonProperty("NewAction") Action newAction, @JsonProperty("OldAction") Action oldAction) {
+        this.accountId = accountId;
+        this.budgetName = budgetName;
+        this.newAction = newAction;
+        this.oldAction = oldAction;
+  }
 }

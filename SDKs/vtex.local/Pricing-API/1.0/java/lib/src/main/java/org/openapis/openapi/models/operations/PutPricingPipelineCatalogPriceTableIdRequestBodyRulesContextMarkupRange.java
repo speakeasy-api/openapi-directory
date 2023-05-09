@@ -15,6 +15,7 @@ public class PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContextMarkupR
      */
     @JsonProperty("from")
     public Long from;
+
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContextMarkupRange withFrom(Long from) {
         this.from = from;
         return this;
@@ -25,9 +26,14 @@ public class PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContextMarkupR
      */
     @JsonProperty("to")
     public Long to;
+
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContextMarkupRange withTo(Long to) {
         this.to = to;
         return this;
     }
     
+    public PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContextMarkupRange(@JsonProperty("from") Long from, @JsonProperty("to") Long to) {
+        this.from = from;
+        this.to = to;
+  }
 }

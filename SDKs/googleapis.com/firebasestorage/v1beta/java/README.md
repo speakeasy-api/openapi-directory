@@ -16,12 +16,11 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseSecurityOption1;
-import org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseSecurityOption2;
-import org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseSecurity;
 import org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseRequest;
 import org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseResponse;
+import org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseSecurity;
+import org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseSecurityOption1;
+import org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -31,16 +30,15 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            FirebasestorageProjectsBucketsAddFirebaseRequest req = new FirebasestorageProjectsBucketsAddFirebaseRequest() {{
-                dollarXgafv = "2";
+            FirebasestorageProjectsBucketsAddFirebaseRequest req = new FirebasestorageProjectsBucketsAddFirebaseRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 requestBody = new java.util.HashMap<String, Object>() {{
-                    put("distinctio", "quibusdam");
-                    put("unde", "nulla");
-                    put("corrupti", "illum");
+                    put("quibusdam", "unde");
+                    put("nulla", "corrupti");
+                    put("illum", "vel");
                 }};
-                accessToken = "vel";
-                alt = "media";
-                bucket = "deserunt";
+                accessToken = "error";
+                alt = AltEnum.MEDIA;
                 callback = "suscipit";
                 fields = "iure";
                 key = "magnam";
@@ -49,21 +47,23 @@ public class Application {
                 quotaUser = "ipsa";
                 uploadType = "delectus";
                 uploadProtocol = "tempora";
-            }}            
+            }};            
 
             FirebasestorageProjectsBucketsAddFirebaseResponse res = sdk.projects.firebasestorageProjectsBucketsAddFirebase(req, new FirebasestorageProjectsBucketsAddFirebaseSecurity() {{
-                option1 = new FirebasestorageProjectsBucketsAddFirebaseSecurityOption1() {{
+                option1 = new FirebasestorageProjectsBucketsAddFirebaseSecurityOption1("suscipit", "molestiae") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.bucket.isPresent()) {
+            if (res.bucket != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -71,12 +71,12 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `firebasestorageProjectsBucketsAddFirebase` - Links a Google Cloud Storage bucket to a Firebase project.
-* `firebasestorageProjectsBucketsGet` - Gets a single linked storage bucket.
-* `firebasestorageProjectsBucketsList` - Lists the linked storage buckets for a project.
-* `firebasestorageProjectsBucketsRemoveFirebase` - Unlinks a linked Google Cloud Storage bucket from a Firebase project.
+* [firebasestorageProjectsBucketsAddFirebase](docs/projects/README.md#firebasestorageprojectsbucketsaddfirebase) - Links a Google Cloud Storage bucket to a Firebase project.
+* [firebasestorageProjectsBucketsGet](docs/projects/README.md#firebasestorageprojectsbucketsget) - Gets a single linked storage bucket.
+* [firebasestorageProjectsBucketsList](docs/projects/README.md#firebasestorageprojectsbucketslist) - Lists the linked storage buckets for a project.
+* [firebasestorageProjectsBucketsRemoveFirebase](docs/projects/README.md#firebasestorageprojectsbucketsremovefirebase) - Unlinks a linked Google Cloud Storage bucket from a Firebase project.
 <!-- End SDK Available Operations -->
 
 ### Maturity

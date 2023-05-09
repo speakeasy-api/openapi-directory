@@ -15,6 +15,7 @@ public class CustomField {
      */
     
     public OffsetDateTime createdAt;
+
     public CustomField withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -25,6 +26,7 @@ public class CustomField {
      */
     
     public String fieldType;
+
     public CustomField withFieldType(String fieldType) {
         this.fieldType = fieldType;
         return this;
@@ -35,6 +37,7 @@ public class CustomField {
      */
     
     public Long id;
+
     public CustomField withId(Long id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class CustomField {
      */
     
     public String name;
+
     public CustomField withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +59,7 @@ public class CustomField {
      */
     
     public OffsetDateTime updatedAt;
+
     public CustomField withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -65,9 +70,11 @@ public class CustomField {
      */
     
     public String valueType;
+
     public CustomField withValueType(String valueType) {
         this.valueType = valueType;
         return this;
     }
     
+    public CustomField(){}
 }

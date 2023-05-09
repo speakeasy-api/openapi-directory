@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HealthCheckPolicy {
     @JsonProperty("healthyThreshold")
     public Long healthyThreshold;
+
     public HealthCheckPolicy withHealthyThreshold(Long healthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         return this;
@@ -21,6 +22,7 @@ public class HealthCheckPolicy {
     
     @JsonProperty("intervalMillis")
     public Long intervalMillis;
+
     public HealthCheckPolicy withIntervalMillis(Long intervalMillis) {
         this.intervalMillis = intervalMillis;
         return this;
@@ -29,6 +31,7 @@ public class HealthCheckPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public HealthCheckPolicy withPath(String path) {
         this.path = path;
         return this;
@@ -37,6 +40,7 @@ public class HealthCheckPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Long port;
+
     public HealthCheckPolicy withPort(Long port) {
         this.port = port;
         return this;
@@ -44,6 +48,7 @@ public class HealthCheckPolicy {
     
     @JsonProperty("protocol")
     public PortProtocolEnum protocol;
+
     public HealthCheckPolicy withProtocol(PortProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -51,6 +56,7 @@ public class HealthCheckPolicy {
     
     @JsonProperty("timeoutMillis")
     public Long timeoutMillis;
+
     public HealthCheckPolicy withTimeoutMillis(Long timeoutMillis) {
         this.timeoutMillis = timeoutMillis;
         return this;
@@ -58,9 +64,17 @@ public class HealthCheckPolicy {
     
     @JsonProperty("unhealthyThreshold")
     public Long unhealthyThreshold;
+
     public HealthCheckPolicy withUnhealthyThreshold(Long unhealthyThreshold) {
         this.unhealthyThreshold = unhealthyThreshold;
         return this;
     }
     
+    public HealthCheckPolicy(@JsonProperty("healthyThreshold") Long healthyThreshold, @JsonProperty("intervalMillis") Long intervalMillis, @JsonProperty("protocol") PortProtocolEnum protocol, @JsonProperty("timeoutMillis") Long timeoutMillis, @JsonProperty("unhealthyThreshold") Long unhealthyThreshold) {
+        this.healthyThreshold = healthyThreshold;
+        this.intervalMillis = intervalMillis;
+        this.protocol = protocol;
+        this.timeoutMillis = timeoutMillis;
+        this.unhealthyThreshold = unhealthyThreshold;
+  }
 }

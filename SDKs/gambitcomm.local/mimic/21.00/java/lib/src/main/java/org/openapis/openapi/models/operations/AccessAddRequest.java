@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccessAddRequest {
@@ -12,6 +13,7 @@ public class AccessAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agents")
     public String agents;
+
     public AccessAddRequest withAgents(String agents) {
         this.agents = agents;
         return this;
@@ -22,6 +24,7 @@ public class AccessAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mask")
     public String mask;
+
     public AccessAddRequest withMask(String mask) {
         this.mask = mask;
         return this;
@@ -32,9 +35,15 @@ public class AccessAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user")
     public String user;
+
     public AccessAddRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public AccessAddRequest(@JsonProperty("agents") String agents, @JsonProperty("mask") String mask, @JsonProperty("user") String user) {
+        this.agents = agents;
+        this.mask = mask;
+        this.user = user;
+  }
 }

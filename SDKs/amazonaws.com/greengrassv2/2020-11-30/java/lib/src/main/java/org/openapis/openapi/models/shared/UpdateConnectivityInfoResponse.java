@@ -15,6 +15,7 @@ public class UpdateConnectivityInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public UpdateConnectivityInfoResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class UpdateConnectivityInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public UpdateConnectivityInfoResponse withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public UpdateConnectivityInfoResponse(){}
 }

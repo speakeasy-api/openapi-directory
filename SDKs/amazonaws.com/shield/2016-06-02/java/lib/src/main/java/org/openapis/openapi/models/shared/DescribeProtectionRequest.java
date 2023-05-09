@@ -12,6 +12,7 @@ public class DescribeProtectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProtectionId")
     public String protectionId;
+
     public DescribeProtectionRequest withProtectionId(String protectionId) {
         this.protectionId = protectionId;
         return this;
@@ -20,9 +21,11 @@ public class DescribeProtectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public DescribeProtectionRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public DescribeProtectionRequest(){}
 }

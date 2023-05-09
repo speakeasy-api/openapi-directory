@@ -56,10 +56,8 @@ public class ReviewsFindAndModifyReviews {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteReviewsReviewIdResponse res = new org.openapis.openapi.models.operations.DeleteReviewsReviewIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteReviewsReviewIdResponse res = new org.openapis.openapi.models.operations.DeleteReviewsReviewIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -97,11 +95,9 @@ public class ReviewsFindAndModifyReviews {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReviewsResponse res = new org.openapis.openapi.models.operations.GetReviewsResponse() {{
+        org.openapis.openapi.models.operations.GetReviewsResponse res = new org.openapis.openapi.models.operations.GetReviewsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -137,11 +133,9 @@ public class ReviewsFindAndModifyReviews {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReviewsReviewIdResponse res = new org.openapis.openapi.models.operations.GetReviewsReviewIdResponse() {{
+        org.openapis.openapi.models.operations.GetReviewsReviewIdResponse res = new org.openapis.openapi.models.operations.GetReviewsReviewIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -186,11 +180,9 @@ public class ReviewsFindAndModifyReviews {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchReviewsReviewIdResponse res = new org.openapis.openapi.models.operations.PatchReviewsReviewIdResponse() {{
+        org.openapis.openapi.models.operations.PatchReviewsReviewIdResponse res = new org.openapis.openapi.models.operations.PatchReviewsReviewIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -235,11 +227,9 @@ public class ReviewsFindAndModifyReviews {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostReviewsResponse res = new org.openapis.openapi.models.operations.PostReviewsResponse() {{
+        org.openapis.openapi.models.operations.PostReviewsResponse res = new org.openapis.openapi.models.operations.PostReviewsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 409) {
@@ -284,11 +274,9 @@ public class ReviewsFindAndModifyReviews {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostReviewsReviewIdResponse res = new org.openapis.openapi.models.operations.PostReviewsReviewIdResponse() {{
+        org.openapis.openapi.models.operations.PostReviewsReviewIdResponse res = new org.openapis.openapi.models.operations.PostReviewsReviewIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {

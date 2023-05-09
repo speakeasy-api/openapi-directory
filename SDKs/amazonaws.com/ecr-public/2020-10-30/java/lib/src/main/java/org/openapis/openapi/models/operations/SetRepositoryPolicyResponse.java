@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetRepositoryPolicyResponse {
     
     public String contentType;
+
     public SetRepositoryPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SetRepositoryPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public SetRepositoryPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class SetRepositoryPolicyResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public SetRepositoryPolicyResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class SetRepositoryPolicyResponse {
      */
     
     public Object serverException;
+
     public SetRepositoryPolicyResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -49,6 +54,7 @@ public class SetRepositoryPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.SetRepositoryPolicyResponse setRepositoryPolicyResponse;
+
     public SetRepositoryPolicyResponse withSetRepositoryPolicyResponse(org.openapis.openapi.models.shared.SetRepositoryPolicyResponse setRepositoryPolicyResponse) {
         this.setRepositoryPolicyResponse = setRepositoryPolicyResponse;
         return this;
@@ -56,6 +62,7 @@ public class SetRepositoryPolicyResponse {
     
     
     public Integer statusCode;
+
     public SetRepositoryPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class SetRepositoryPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetRepositoryPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class SetRepositoryPolicyResponse {
      */
     
     public Object unsupportedCommandException;
+
     public SetRepositoryPolicyResponse withUnsupportedCommandException(Object unsupportedCommandException) {
         this.unsupportedCommandException = unsupportedCommandException;
         return this;
     }
     
+    public SetRepositoryPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

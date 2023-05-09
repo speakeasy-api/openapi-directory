@@ -18,6 +18,7 @@ public class CreateMessengerAccountRequestBody {
      */
     @JsonProperty("access_token")
     public String accessToken;
+
     public CreateMessengerAccountRequestBody withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -29,6 +30,7 @@ public class CreateMessengerAccountRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applications")
     public String[] applications;
+
     public CreateMessengerAccountRequestBody withApplications(String[] applications) {
         this.applications = applications;
         return this;
@@ -39,6 +41,7 @@ public class CreateMessengerAccountRequestBody {
      */
     @JsonProperty("external_id")
     public String externalId;
+
     public CreateMessengerAccountRequestBody withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -50,9 +53,14 @@ public class CreateMessengerAccountRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateMessengerAccountRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateMessengerAccountRequestBody(@JsonProperty("access_token") String accessToken, @JsonProperty("external_id") String externalId) {
+        this.accessToken = accessToken;
+        this.externalId = externalId;
+  }
 }

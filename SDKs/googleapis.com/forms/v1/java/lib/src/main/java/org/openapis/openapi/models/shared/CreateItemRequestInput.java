@@ -18,6 +18,7 @@ public class CreateItemRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public ItemInput item;
+
     public CreateItemRequestInput withItem(ItemInput item) {
         this.item = item;
         return this;
@@ -29,9 +30,11 @@ public class CreateItemRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public CreateItemRequestInput withLocation(Location location) {
         this.location = location;
         return this;
     }
     
+    public CreateItemRequestInput(){}
 }

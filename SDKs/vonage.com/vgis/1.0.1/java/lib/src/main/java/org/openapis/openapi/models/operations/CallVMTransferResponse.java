@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CallVMTransferResponse {
@@ -12,6 +13,7 @@ public class CallVMTransferResponse {
      */
     
     public org.openapis.openapi.models.shared.Call call;
+
     public CallVMTransferResponse withCall(org.openapis.openapi.models.shared.Call call) {
         this.call = call;
         return this;
@@ -19,6 +21,7 @@ public class CallVMTransferResponse {
     
     
     public String contentType;
+
     public CallVMTransferResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CallVMTransferResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public CallVMTransferResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -36,6 +40,7 @@ public class CallVMTransferResponse {
     
     
     public Integer statusCode;
+
     public CallVMTransferResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CallVMTransferResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CallVMTransferResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CallVMTransferResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

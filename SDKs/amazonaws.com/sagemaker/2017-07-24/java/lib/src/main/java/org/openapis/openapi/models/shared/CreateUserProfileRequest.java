@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUserProfileRequest {
     @JsonProperty("DomainId")
     public String domainId;
+
     public CreateUserProfileRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -19,6 +20,7 @@ public class CreateUserProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SingleSignOnUserIdentifier")
     public String singleSignOnUserIdentifier;
+
     public CreateUserProfileRequest withSingleSignOnUserIdentifier(String singleSignOnUserIdentifier) {
         this.singleSignOnUserIdentifier = singleSignOnUserIdentifier;
         return this;
@@ -27,6 +29,7 @@ public class CreateUserProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SingleSignOnUserValue")
     public String singleSignOnUserValue;
+
     public CreateUserProfileRequest withSingleSignOnUserValue(String singleSignOnUserValue) {
         this.singleSignOnUserValue = singleSignOnUserValue;
         return this;
@@ -35,6 +38,7 @@ public class CreateUserProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateUserProfileRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -42,6 +46,7 @@ public class CreateUserProfileRequest {
     
     @JsonProperty("UserProfileName")
     public String userProfileName;
+
     public CreateUserProfileRequest withUserProfileName(String userProfileName) {
         this.userProfileName = userProfileName;
         return this;
@@ -50,9 +55,14 @@ public class CreateUserProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserSettings")
     public UserSettings userSettings;
+
     public CreateUserProfileRequest withUserSettings(UserSettings userSettings) {
         this.userSettings = userSettings;
         return this;
     }
     
+    public CreateUserProfileRequest(@JsonProperty("DomainId") String domainId, @JsonProperty("UserProfileName") String userProfileName) {
+        this.domainId = domainId;
+        this.userProfileName = userProfileName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTeamPPAResponse {
     
     public String contentType;
+
     public GetTeamPPAResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTeamPPAResponse {
     
     
     public Integer statusCode;
+
     public GetTeamPPAResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetTeamPPAResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTeamPPAResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetTeamPPAResponse {
      */
     
     public org.openapis.openapi.models.shared.TeamPPA[] teamPPAS;
+
     public GetTeamPPAResponse withTeamPPAS(org.openapis.openapi.models.shared.TeamPPA[] teamPPAS) {
         this.teamPPAS = teamPPAS;
         return this;
     }
     
+    public GetTeamPPAResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

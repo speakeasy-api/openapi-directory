@@ -18,6 +18,7 @@ public class StreamingComputationRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computationId")
     public String computationId;
+
     public StreamingComputationRanges withComputationId(String computationId) {
         this.computationId = computationId;
         return this;
@@ -29,9 +30,11 @@ public class StreamingComputationRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rangeAssignments")
     public KeyRangeDataDiskAssignment[] rangeAssignments;
+
     public StreamingComputationRanges withRangeAssignments(KeyRangeDataDiskAssignment[] rangeAssignments) {
         this.rangeAssignments = rangeAssignments;
         return this;
     }
     
+    public StreamingComputationRanges(){}
 }

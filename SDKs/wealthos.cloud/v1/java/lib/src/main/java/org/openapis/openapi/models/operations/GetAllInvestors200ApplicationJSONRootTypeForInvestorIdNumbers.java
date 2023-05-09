@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAllInvestors200ApplicationJSONRootTypeForInvestorIdNumbers {
     @JsonProperty("id_number")
     public String idNumber;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorIdNumbers withIdNumber(String idNumber) {
         this.idNumber = idNumber;
         return this;
@@ -16,9 +17,14 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestorIdNumbers {
     
     @JsonProperty("id_type")
     public String idType;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorIdNumbers withIdType(String idType) {
         this.idType = idType;
         return this;
     }
     
+    public GetAllInvestors200ApplicationJSONRootTypeForInvestorIdNumbers(@JsonProperty("id_number") String idNumber, @JsonProperty("id_type") String idType) {
+        this.idNumber = idNumber;
+        this.idType = idType;
+  }
 }

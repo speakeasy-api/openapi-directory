@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEdgeConfigurationResponse {
@@ -12,6 +13,7 @@ public class DescribeEdgeConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeEdgeConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeEdgeConfigurationResponse {
      */
     
     public Object clientLimitExceededException;
+
     public DescribeEdgeConfigurationResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEdgeConfigurationResponse {
     
     
     public String contentType;
+
     public DescribeEdgeConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEdgeConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEdgeConfigurationOutput describeEdgeConfigurationOutput;
+
     public DescribeEdgeConfigurationResponse withDescribeEdgeConfigurationOutput(org.openapis.openapi.models.shared.DescribeEdgeConfigurationOutput describeEdgeConfigurationOutput) {
         this.describeEdgeConfigurationOutput = describeEdgeConfigurationOutput;
         return this;
@@ -49,6 +54,7 @@ public class DescribeEdgeConfigurationResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeEdgeConfigurationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeEdgeConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeEdgeConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeEdgeConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeEdgeConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeEdgeConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEdgeConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DescribeEdgeConfigurationResponse {
      */
     
     public Object streamEdgeConfigurationNotFoundException;
+
     public DescribeEdgeConfigurationResponse withStreamEdgeConfigurationNotFoundException(Object streamEdgeConfigurationNotFoundException) {
         this.streamEdgeConfigurationNotFoundException = streamEdgeConfigurationNotFoundException;
         return this;
     }
     
+    public DescribeEdgeConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

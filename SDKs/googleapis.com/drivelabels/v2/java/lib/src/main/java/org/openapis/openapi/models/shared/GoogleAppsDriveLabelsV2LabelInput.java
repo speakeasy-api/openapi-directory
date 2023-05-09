@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2LabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appliedCapabilities")
     public GoogleAppsDriveLabelsV2LabelAppliedCapabilities appliedCapabilities;
+
     public GoogleAppsDriveLabelsV2LabelInput withAppliedCapabilities(GoogleAppsDriveLabelsV2LabelAppliedCapabilities appliedCapabilities) {
         this.appliedCapabilities = appliedCapabilities;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2LabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appliedLabelPolicy")
     public GoogleAppsDriveLabelsV2LabelAppliedLabelPolicy appliedLabelPolicy;
+
     public GoogleAppsDriveLabelsV2LabelInput withAppliedLabelPolicy(GoogleAppsDriveLabelsV2LabelAppliedLabelPolicy appliedLabelPolicy) {
         this.appliedLabelPolicy = appliedLabelPolicy;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsDriveLabelsV2LabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator")
     public GoogleAppsDriveLabelsV2UserInfo creator;
+
     public GoogleAppsDriveLabelsV2LabelInput withCreator(GoogleAppsDriveLabelsV2UserInfo creator) {
         this.creator = creator;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsDriveLabelsV2LabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabler")
     public GoogleAppsDriveLabelsV2UserInfo disabler;
+
     public GoogleAppsDriveLabelsV2LabelInput withDisabler(GoogleAppsDriveLabelsV2UserInfo disabler) {
         this.disabler = disabler;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAppsDriveLabelsV2LabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayHints")
     public GoogleAppsDriveLabelsV2LabelDisplayHints displayHints;
+
     public GoogleAppsDriveLabelsV2LabelInput withDisplayHints(GoogleAppsDriveLabelsV2LabelDisplayHints displayHints) {
         this.displayHints = displayHints;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAppsDriveLabelsV2LabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public GoogleAppsDriveLabelsV2FieldInput[] fields;
+
     public GoogleAppsDriveLabelsV2LabelInput withFields(GoogleAppsDriveLabelsV2FieldInput[] fields) {
         this.fields = fields;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAppsDriveLabelsV2LabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelType")
     public GoogleAppsDriveLabelsV2LabelLabelTypeEnum labelType;
+
     public GoogleAppsDriveLabelsV2LabelInput withLabelType(GoogleAppsDriveLabelsV2LabelLabelTypeEnum labelType) {
         this.labelType = labelType;
         return this;
@@ -95,6 +102,7 @@ public class GoogleAppsDriveLabelsV2LabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnMoreUri")
     public String learnMoreUri;
+
     public GoogleAppsDriveLabelsV2LabelInput withLearnMoreUri(String learnMoreUri) {
         this.learnMoreUri = learnMoreUri;
         return this;
@@ -106,6 +114,7 @@ public class GoogleAppsDriveLabelsV2LabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycle")
     public GoogleAppsDriveLabelsV2LifecycleInput lifecycle;
+
     public GoogleAppsDriveLabelsV2LabelInput withLifecycle(GoogleAppsDriveLabelsV2LifecycleInput lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -117,6 +126,7 @@ public class GoogleAppsDriveLabelsV2LabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public GoogleAppsDriveLabelsV2LabelProperties properties;
+
     public GoogleAppsDriveLabelsV2LabelInput withProperties(GoogleAppsDriveLabelsV2LabelProperties properties) {
         this.properties = properties;
         return this;
@@ -128,6 +138,7 @@ public class GoogleAppsDriveLabelsV2LabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher")
     public GoogleAppsDriveLabelsV2UserInfo publisher;
+
     public GoogleAppsDriveLabelsV2LabelInput withPublisher(GoogleAppsDriveLabelsV2UserInfo publisher) {
         this.publisher = publisher;
         return this;
@@ -139,6 +150,7 @@ public class GoogleAppsDriveLabelsV2LabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionCreator")
     public GoogleAppsDriveLabelsV2UserInfo revisionCreator;
+
     public GoogleAppsDriveLabelsV2LabelInput withRevisionCreator(GoogleAppsDriveLabelsV2UserInfo revisionCreator) {
         this.revisionCreator = revisionCreator;
         return this;
@@ -150,9 +162,11 @@ public class GoogleAppsDriveLabelsV2LabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaCapabilities")
     public GoogleAppsDriveLabelsV2LabelSchemaCapabilities schemaCapabilities;
+
     public GoogleAppsDriveLabelsV2LabelInput withSchemaCapabilities(GoogleAppsDriveLabelsV2LabelSchemaCapabilities schemaCapabilities) {
         this.schemaCapabilities = schemaCapabilities;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2LabelInput(){}
 }

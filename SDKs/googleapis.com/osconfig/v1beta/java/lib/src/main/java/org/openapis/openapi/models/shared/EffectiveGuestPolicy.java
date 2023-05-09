@@ -18,6 +18,7 @@ public class EffectiveGuestPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageRepositories")
     public EffectiveGuestPolicySourcedPackageRepository[] packageRepositories;
+
     public EffectiveGuestPolicy withPackageRepositories(EffectiveGuestPolicySourcedPackageRepository[] packageRepositories) {
         this.packageRepositories = packageRepositories;
         return this;
@@ -29,6 +30,7 @@ public class EffectiveGuestPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packages")
     public EffectiveGuestPolicySourcedPackage[] packages;
+
     public EffectiveGuestPolicy withPackages(EffectiveGuestPolicySourcedPackage[] packages) {
         this.packages = packages;
         return this;
@@ -40,9 +42,11 @@ public class EffectiveGuestPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("softwareRecipes")
     public EffectiveGuestPolicySourcedSoftwareRecipe[] softwareRecipes;
+
     public EffectiveGuestPolicy withSoftwareRecipes(EffectiveGuestPolicySourcedSoftwareRecipe[] softwareRecipes) {
         this.softwareRecipes = softwareRecipes;
         return this;
     }
     
+    public EffectiveGuestPolicy(){}
 }

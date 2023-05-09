@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateJobFromSourceControlResponse {
@@ -12,6 +13,7 @@ public class UpdateJobFromSourceControlResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateJobFromSourceControlResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateJobFromSourceControlResponse {
      */
     
     public Object alreadyExistsException;
+
     public UpdateJobFromSourceControlResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateJobFromSourceControlResponse {
     
     
     public String contentType;
+
     public UpdateJobFromSourceControlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateJobFromSourceControlResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateJobFromSourceControlResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateJobFromSourceControlResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateJobFromSourceControlResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateJobFromSourceControlResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateJobFromSourceControlResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateJobFromSourceControlResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateJobFromSourceControlResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateJobFromSourceControlResponse {
     
     
     public Integer statusCode;
+
     public UpdateJobFromSourceControlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateJobFromSourceControlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateJobFromSourceControlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateJobFromSourceControlResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateJobFromSourceControlResponse updateJobFromSourceControlResponse;
+
     public UpdateJobFromSourceControlResponse withUpdateJobFromSourceControlResponse(org.openapis.openapi.models.shared.UpdateJobFromSourceControlResponse updateJobFromSourceControlResponse) {
         this.updateJobFromSourceControlResponse = updateJobFromSourceControlResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateJobFromSourceControlResponse {
      */
     
     public Object validationException;
+
     public UpdateJobFromSourceControlResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateJobFromSourceControlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

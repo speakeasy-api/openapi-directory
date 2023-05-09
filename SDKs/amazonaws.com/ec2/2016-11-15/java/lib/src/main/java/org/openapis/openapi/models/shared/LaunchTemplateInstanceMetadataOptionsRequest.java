@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LaunchTemplateInstanceMetadataOptionsRequest {
     
     public LaunchTemplateInstanceMetadataEndpointStateEnum httpEndpoint;
+
     public LaunchTemplateInstanceMetadataOptionsRequest withHttpEndpoint(LaunchTemplateInstanceMetadataEndpointStateEnum httpEndpoint) {
         this.httpEndpoint = httpEndpoint;
         return this;
@@ -19,6 +20,7 @@ public class LaunchTemplateInstanceMetadataOptionsRequest {
     
     
     public LaunchTemplateInstanceMetadataProtocolIpv6Enum httpProtocolIpv6;
+
     public LaunchTemplateInstanceMetadataOptionsRequest withHttpProtocolIpv6(LaunchTemplateInstanceMetadataProtocolIpv6Enum httpProtocolIpv6) {
         this.httpProtocolIpv6 = httpProtocolIpv6;
         return this;
@@ -26,6 +28,7 @@ public class LaunchTemplateInstanceMetadataOptionsRequest {
     
     
     public Long httpPutResponseHopLimit;
+
     public LaunchTemplateInstanceMetadataOptionsRequest withHttpPutResponseHopLimit(Long httpPutResponseHopLimit) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         return this;
@@ -33,6 +36,7 @@ public class LaunchTemplateInstanceMetadataOptionsRequest {
     
     
     public LaunchTemplateHttpTokensStateEnum httpTokens;
+
     public LaunchTemplateInstanceMetadataOptionsRequest withHttpTokens(LaunchTemplateHttpTokensStateEnum httpTokens) {
         this.httpTokens = httpTokens;
         return this;
@@ -40,9 +44,11 @@ public class LaunchTemplateInstanceMetadataOptionsRequest {
     
     
     public LaunchTemplateInstanceMetadataTagsStateEnum instanceMetadataTags;
+
     public LaunchTemplateInstanceMetadataOptionsRequest withInstanceMetadataTags(LaunchTemplateInstanceMetadataTagsStateEnum instanceMetadataTags) {
         this.instanceMetadataTags = instanceMetadataTags;
         return this;
     }
     
+    public LaunchTemplateInstanceMetadataOptionsRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDetectorsResponse {
     
     public String contentType;
+
     public ListDetectorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDetectorsResponse {
      */
     
     public Object internalFailureException;
+
     public ListDetectorsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListDetectorsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDetectorsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListDetectorsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDetectorsResponse listDetectorsResponse;
+
     public ListDetectorsResponse withListDetectorsResponse(org.openapis.openapi.models.shared.ListDetectorsResponse listDetectorsResponse) {
         this.listDetectorsResponse = listDetectorsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListDetectorsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListDetectorsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class ListDetectorsResponse {
     
     
     public Integer statusCode;
+
     public ListDetectorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListDetectorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDetectorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListDetectorsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListDetectorsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class ListDetectorsResponse {
      */
     
     public Object throttlingException;
+
     public ListDetectorsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListDetectorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

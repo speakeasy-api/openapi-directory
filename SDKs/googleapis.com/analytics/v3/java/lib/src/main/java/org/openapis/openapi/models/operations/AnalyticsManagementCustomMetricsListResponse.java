@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsManagementCustomMetricsListResponse {
     
     public String contentType;
+
     public AnalyticsManagementCustomMetricsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsManagementCustomMetricsListResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomMetrics customMetrics;
+
     public AnalyticsManagementCustomMetricsListResponse withCustomMetrics(org.openapis.openapi.models.shared.CustomMetrics customMetrics) {
         this.customMetrics = customMetrics;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsManagementCustomMetricsListResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsManagementCustomMetricsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsManagementCustomMetricsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsManagementCustomMetricsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsManagementCustomMetricsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

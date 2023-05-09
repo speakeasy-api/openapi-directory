@@ -12,6 +12,7 @@ public class FindApiCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FindApiCredentialsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -22,6 +23,7 @@ public class FindApiCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FindApiCredentialsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,6 +34,7 @@ public class FindApiCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public FindApiCredentialsRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +45,11 @@ public class FindApiCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public FindApiCredentialsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public FindApiCredentialsRequest(){}
 }

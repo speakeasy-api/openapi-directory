@@ -12,6 +12,7 @@ public class DetectedCatalogColumnLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configure")
     public LinksImportationConfigureCatalogColumnLink configure;
+
     public DetectedCatalogColumnLinks withConfigure(LinksImportationConfigureCatalogColumnLink configure) {
         this.configure = configure;
         return this;
@@ -20,6 +21,7 @@ public class DetectedCatalogColumnLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignore")
     public LinksImportationIgnoreColumnLink ignore;
+
     public DetectedCatalogColumnLinks withIgnore(LinksImportationIgnoreColumnLink ignore) {
         this.ignore = ignore;
         return this;
@@ -28,6 +30,7 @@ public class DetectedCatalogColumnLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("map")
     public LinksImportationMapCatalogColumnLink map;
+
     public DetectedCatalogColumnLinks withMap(LinksImportationMapCatalogColumnLink map) {
         this.map = map;
         return this;
@@ -36,6 +39,7 @@ public class DetectedCatalogColumnLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reattend")
     public LinksImportationReattendColumnLink reattend;
+
     public DetectedCatalogColumnLinks withReattend(LinksImportationReattendColumnLink reattend) {
         this.reattend = reattend;
         return this;
@@ -44,9 +48,11 @@ public class DetectedCatalogColumnLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unmap")
     public LinksImportationUnmapCatalogColumnLink unmap;
+
     public DetectedCatalogColumnLinks withUnmap(LinksImportationUnmapCatalogColumnLink unmap) {
         this.unmap = unmap;
         return this;
     }
     
+    public DetectedCatalogColumnLinks(){}
 }

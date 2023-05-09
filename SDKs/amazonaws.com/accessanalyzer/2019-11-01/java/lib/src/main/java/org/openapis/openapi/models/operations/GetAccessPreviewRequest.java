@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccessPreviewRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetAccessPreviewRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class GetAccessPreviewRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetAccessPreviewRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class GetAccessPreviewRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetAccessPreviewRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class GetAccessPreviewRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetAccessPreviewRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class GetAccessPreviewRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetAccessPreviewRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class GetAccessPreviewRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetAccessPreviewRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class GetAccessPreviewRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetAccessPreviewRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class GetAccessPreviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accessPreviewId")
     public String accessPreviewId;
+
     public GetAccessPreviewRequest withAccessPreviewId(String accessPreviewId) {
         this.accessPreviewId = accessPreviewId;
         return this;
@@ -71,9 +80,14 @@ public class GetAccessPreviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=analyzerArn")
     public String analyzerArn;
+
     public GetAccessPreviewRequest withAnalyzerArn(String analyzerArn) {
         this.analyzerArn = analyzerArn;
         return this;
     }
     
+    public GetAccessPreviewRequest(@JsonProperty("accessPreviewId") String accessPreviewId, @JsonProperty("analyzerArn") String analyzerArn) {
+        this.accessPreviewId = accessPreviewId;
+        this.analyzerArn = analyzerArn;
+  }
 }

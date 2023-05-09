@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableAWSOrganizationsAccessResponse {
     
     public String contentType;
+
     public DisableAWSOrganizationsAccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisableAWSOrganizationsAccessResponse {
      */
     
     public java.util.Map<String, Object> disableAWSOrganizationsAccessOutput;
+
     public DisableAWSOrganizationsAccessResponse withDisableAWSOrganizationsAccessOutput(java.util.Map<String, Object> disableAWSOrganizationsAccessOutput) {
         this.disableAWSOrganizationsAccessOutput = disableAWSOrganizationsAccessOutput;
         return this;
@@ -29,6 +32,7 @@ public class DisableAWSOrganizationsAccessResponse {
      */
     
     public Object invalidStateException;
+
     public DisableAWSOrganizationsAccessResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -39,6 +43,7 @@ public class DisableAWSOrganizationsAccessResponse {
      */
     
     public Object operationNotSupportedException;
+
     public DisableAWSOrganizationsAccessResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -49,6 +54,7 @@ public class DisableAWSOrganizationsAccessResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisableAWSOrganizationsAccessResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DisableAWSOrganizationsAccessResponse {
     
     
     public Integer statusCode;
+
     public DisableAWSOrganizationsAccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DisableAWSOrganizationsAccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableAWSOrganizationsAccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisableAWSOrganizationsAccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

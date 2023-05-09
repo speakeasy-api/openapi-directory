@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JobDeleteRequest {
@@ -12,6 +13,7 @@ public class JobDeleteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public JobDeleteRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -22,6 +24,7 @@ public class JobDeleteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
     public String ifModifiedSince;
+
     public JobDeleteRequest withIfModifiedSince(String ifModifiedSince) {
         this.ifModifiedSince = ifModifiedSince;
         return this;
@@ -32,6 +35,7 @@ public class JobDeleteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public JobDeleteRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -42,6 +46,7 @@ public class JobDeleteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
     public String ifUnmodifiedSince;
+
     public JobDeleteRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
         this.ifUnmodifiedSince = ifUnmodifiedSince;
         return this;
@@ -52,6 +57,7 @@ public class JobDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public JobDeleteRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -62,6 +68,7 @@ public class JobDeleteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public JobDeleteRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -72,6 +79,7 @@ public class JobDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public JobDeleteRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -82,6 +90,7 @@ public class JobDeleteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public JobDeleteRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -92,6 +101,7 @@ public class JobDeleteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public JobDeleteRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -102,9 +112,14 @@ public class JobDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public JobDeleteRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public JobDeleteRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("jobId") String jobId) {
+        this.apiVersion = apiVersion;
+        this.jobId = jobId;
+  }
 }

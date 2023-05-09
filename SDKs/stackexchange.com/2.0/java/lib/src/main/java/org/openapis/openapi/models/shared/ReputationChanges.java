@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ReputationChanges {
     
     public String link;
+
     public ReputationChanges withLink(String link) {
         this.link = link;
         return this;
@@ -16,6 +17,7 @@ public class ReputationChanges {
     
     
     public Long onDate;
+
     public ReputationChanges withOnDate(Long onDate) {
         this.onDate = onDate;
         return this;
@@ -23,6 +25,7 @@ public class ReputationChanges {
     
     
     public Long postId;
+
     public ReputationChanges withPostId(Long postId) {
         this.postId = postId;
         return this;
@@ -30,6 +33,7 @@ public class ReputationChanges {
     
     
     public String postType;
+
     public ReputationChanges withPostType(String postType) {
         this.postType = postType;
         return this;
@@ -37,6 +41,7 @@ public class ReputationChanges {
     
     
     public Long reputationChange;
+
     public ReputationChanges withReputationChange(Long reputationChange) {
         this.reputationChange = reputationChange;
         return this;
@@ -44,6 +49,7 @@ public class ReputationChanges {
     
     
     public String title;
+
     public ReputationChanges withTitle(String title) {
         this.title = title;
         return this;
@@ -51,6 +57,7 @@ public class ReputationChanges {
     
     
     public Long userId;
+
     public ReputationChanges withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -58,9 +65,11 @@ public class ReputationChanges {
     
     
     public String voteType;
+
     public ReputationChanges withVoteType(String voteType) {
         this.voteType = voteType;
         return this;
     }
     
+    public ReputationChanges(){}
 }

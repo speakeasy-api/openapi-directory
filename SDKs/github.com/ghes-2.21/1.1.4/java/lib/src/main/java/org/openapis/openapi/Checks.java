@@ -69,11 +69,9 @@ public class Checks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChecksCreateResponse res = new org.openapis.openapi.models.operations.ChecksCreateResponse() {{
+        org.openapis.openapi.models.operations.ChecksCreateResponse res = new org.openapis.openapi.models.operations.ChecksCreateResponse(contentType, httpRes.statusCode()) {{
             checkRun = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -113,11 +111,9 @@ public class Checks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChecksCreateSuiteResponse res = new org.openapis.openapi.models.operations.ChecksCreateSuiteResponse() {{
+        org.openapis.openapi.models.operations.ChecksCreateSuiteResponse res = new org.openapis.openapi.models.operations.ChecksCreateSuiteResponse(contentType, httpRes.statusCode()) {{
             checkSuite = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201) {
@@ -155,11 +151,9 @@ public class Checks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChecksGetResponse res = new org.openapis.openapi.models.operations.ChecksGetResponse() {{
+        org.openapis.openapi.models.operations.ChecksGetResponse res = new org.openapis.openapi.models.operations.ChecksGetResponse(contentType, httpRes.statusCode()) {{
             checkRun = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class Checks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChecksGetSuiteResponse res = new org.openapis.openapi.models.operations.ChecksGetSuiteResponse() {{
+        org.openapis.openapi.models.operations.ChecksGetSuiteResponse res = new org.openapis.openapi.models.operations.ChecksGetSuiteResponse(contentType, httpRes.statusCode()) {{
             checkSuite = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,11 +235,9 @@ public class Checks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChecksListAnnotationsResponse res = new org.openapis.openapi.models.operations.ChecksListAnnotationsResponse() {{
+        org.openapis.openapi.models.operations.ChecksListAnnotationsResponse res = new org.openapis.openapi.models.operations.ChecksListAnnotationsResponse(contentType, httpRes.statusCode()) {{
             checkAnnotations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class Checks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChecksListForRefResponse res = new org.openapis.openapi.models.operations.ChecksListForRefResponse() {{
+        org.openapis.openapi.models.operations.ChecksListForRefResponse res = new org.openapis.openapi.models.operations.ChecksListForRefResponse(contentType, httpRes.statusCode()) {{
             checksListForRef200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +331,9 @@ public class Checks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChecksListForSuiteResponse res = new org.openapis.openapi.models.operations.ChecksListForSuiteResponse() {{
+        org.openapis.openapi.models.operations.ChecksListForSuiteResponse res = new org.openapis.openapi.models.operations.ChecksListForSuiteResponse(contentType, httpRes.statusCode()) {{
             checksListForSuite200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -393,11 +379,9 @@ public class Checks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChecksListSuitesForRefResponse res = new org.openapis.openapi.models.operations.ChecksListSuitesForRefResponse() {{
+        org.openapis.openapi.models.operations.ChecksListSuitesForRefResponse res = new org.openapis.openapi.models.operations.ChecksListSuitesForRefResponse(contentType, httpRes.statusCode()) {{
             checksListSuitesForRef200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -437,11 +421,9 @@ public class Checks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChecksRerequestSuiteResponse res = new org.openapis.openapi.models.operations.ChecksRerequestSuiteResponse() {{
+        org.openapis.openapi.models.operations.ChecksRerequestSuiteResponse res = new org.openapis.openapi.models.operations.ChecksRerequestSuiteResponse(contentType, httpRes.statusCode()) {{
             checksRerequestSuite201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -482,11 +464,9 @@ public class Checks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChecksSetSuitesPreferencesResponse res = new org.openapis.openapi.models.operations.ChecksSetSuitesPreferencesResponse() {{
+        org.openapis.openapi.models.operations.ChecksSetSuitesPreferencesResponse res = new org.openapis.openapi.models.operations.ChecksSetSuitesPreferencesResponse(contentType, httpRes.statusCode()) {{
             checkSuitePreference = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -526,11 +506,9 @@ public class Checks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChecksUpdateResponse res = new org.openapis.openapi.models.operations.ChecksUpdateResponse() {{
+        org.openapis.openapi.models.operations.ChecksUpdateResponse res = new org.openapis.openapi.models.operations.ChecksUpdateResponse(contentType, httpRes.statusCode()) {{
             checkRun = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

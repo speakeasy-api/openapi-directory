@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PublishMetricAction {
     @JsonProperty("Dimensions")
     public Dimension[] dimensions;
+
     public PublishMetricAction withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
     }
     
+    public PublishMetricAction(@JsonProperty("Dimensions") Dimension[] dimensions) {
+        this.dimensions = dimensions;
+  }
 }

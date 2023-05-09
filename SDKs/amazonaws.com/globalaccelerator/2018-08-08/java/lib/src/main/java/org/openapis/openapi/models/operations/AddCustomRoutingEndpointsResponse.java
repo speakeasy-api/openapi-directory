@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddCustomRoutingEndpointsResponse {
@@ -12,6 +13,7 @@ public class AddCustomRoutingEndpointsResponse {
      */
     
     public Object accessDeniedException;
+
     public AddCustomRoutingEndpointsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AddCustomRoutingEndpointsResponse {
      */
     
     public org.openapis.openapi.models.shared.AddCustomRoutingEndpointsResponse addCustomRoutingEndpointsResponse;
+
     public AddCustomRoutingEndpointsResponse withAddCustomRoutingEndpointsResponse(org.openapis.openapi.models.shared.AddCustomRoutingEndpointsResponse addCustomRoutingEndpointsResponse) {
         this.addCustomRoutingEndpointsResponse = addCustomRoutingEndpointsResponse;
         return this;
@@ -32,6 +35,7 @@ public class AddCustomRoutingEndpointsResponse {
      */
     
     public Object conflictException;
+
     public AddCustomRoutingEndpointsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AddCustomRoutingEndpointsResponse {
     
     
     public String contentType;
+
     public AddCustomRoutingEndpointsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AddCustomRoutingEndpointsResponse {
      */
     
     public Object endpointAlreadyExistsException;
+
     public AddCustomRoutingEndpointsResponse withEndpointAlreadyExistsException(Object endpointAlreadyExistsException) {
         this.endpointAlreadyExistsException = endpointAlreadyExistsException;
         return this;
@@ -59,6 +65,7 @@ public class AddCustomRoutingEndpointsResponse {
      */
     
     public Object endpointGroupNotFoundException;
+
     public AddCustomRoutingEndpointsResponse withEndpointGroupNotFoundException(Object endpointGroupNotFoundException) {
         this.endpointGroupNotFoundException = endpointGroupNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class AddCustomRoutingEndpointsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public AddCustomRoutingEndpointsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -79,6 +87,7 @@ public class AddCustomRoutingEndpointsResponse {
      */
     
     public Object invalidArgumentException;
+
     public AddCustomRoutingEndpointsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -89,6 +98,7 @@ public class AddCustomRoutingEndpointsResponse {
      */
     
     public Object limitExceededException;
+
     public AddCustomRoutingEndpointsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -96,6 +106,7 @@ public class AddCustomRoutingEndpointsResponse {
     
     
     public Integer statusCode;
+
     public AddCustomRoutingEndpointsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class AddCustomRoutingEndpointsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddCustomRoutingEndpointsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddCustomRoutingEndpointsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

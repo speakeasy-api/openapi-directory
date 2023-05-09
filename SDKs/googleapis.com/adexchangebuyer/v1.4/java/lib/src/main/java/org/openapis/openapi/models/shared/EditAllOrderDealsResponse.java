@@ -18,6 +18,7 @@ public class EditAllOrderDealsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deals")
     public MarketplaceDeal[] deals;
+
     public EditAllOrderDealsResponse withDeals(MarketplaceDeal[] deals) {
         this.deals = deals;
         return this;
@@ -29,9 +30,11 @@ public class EditAllOrderDealsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderRevisionNumber")
     public String orderRevisionNumber;
+
     public EditAllOrderDealsResponse withOrderRevisionNumber(String orderRevisionNumber) {
         this.orderRevisionNumber = orderRevisionNumber;
         return this;
     }
     
+    public EditAllOrderDealsResponse(){}
 }

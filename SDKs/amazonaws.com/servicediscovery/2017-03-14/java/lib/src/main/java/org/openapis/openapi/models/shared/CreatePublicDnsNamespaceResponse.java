@@ -15,9 +15,11 @@ public class CreatePublicDnsNamespaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public CreatePublicDnsNamespaceResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public CreatePublicDnsNamespaceResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSnapshotResponse {
@@ -12,6 +13,7 @@ public class DeleteSnapshotResponse {
      */
     
     public Object clientException;
+
     public DeleteSnapshotResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSnapshotResponse {
     
     
     public String contentType;
+
     public DeleteSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteSnapshotResult deleteSnapshotResult;
+
     public DeleteSnapshotResponse withDeleteSnapshotResult(org.openapis.openapi.models.shared.DeleteSnapshotResult deleteSnapshotResult) {
         this.deleteSnapshotResult = deleteSnapshotResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSnapshotResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public DeleteSnapshotResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSnapshotResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteSnapshotResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteSnapshotResponse {
      */
     
     public Object serviceException;
+
     public DeleteSnapshotResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteSnapshotResponse {
     
     
     public Integer statusCode;
+
     public DeleteSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

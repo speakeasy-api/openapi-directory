@@ -15,6 +15,7 @@ public class TrustStore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedPortalArns")
     public String[] associatedPortalArns;
+
     public TrustStore withAssociatedPortalArns(String[] associatedPortalArns) {
         this.associatedPortalArns = associatedPortalArns;
         return this;
@@ -23,9 +24,11 @@ public class TrustStore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustStoreArn")
     public String trustStoreArn;
+
     public TrustStore withTrustStoreArn(String trustStoreArn) {
         this.trustStoreArn = trustStoreArn;
         return this;
     }
     
+    public TrustStore(){}
 }

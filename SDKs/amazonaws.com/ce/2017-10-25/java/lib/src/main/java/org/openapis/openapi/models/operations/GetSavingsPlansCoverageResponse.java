@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSavingsPlansCoverageResponse {
     
     public String contentType;
+
     public GetSavingsPlansCoverageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSavingsPlansCoverageResponse {
      */
     
     public Object dataUnavailableException;
+
     public GetSavingsPlansCoverageResponse withDataUnavailableException(Object dataUnavailableException) {
         this.dataUnavailableException = dataUnavailableException;
         return this;
@@ -29,6 +32,7 @@ public class GetSavingsPlansCoverageResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSavingsPlansCoverageResponse getSavingsPlansCoverageResponse;
+
     public GetSavingsPlansCoverageResponse withGetSavingsPlansCoverageResponse(org.openapis.openapi.models.shared.GetSavingsPlansCoverageResponse getSavingsPlansCoverageResponse) {
         this.getSavingsPlansCoverageResponse = getSavingsPlansCoverageResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetSavingsPlansCoverageResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetSavingsPlansCoverageResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class GetSavingsPlansCoverageResponse {
      */
     
     public Object limitExceededException;
+
     public GetSavingsPlansCoverageResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class GetSavingsPlansCoverageResponse {
     
     
     public Integer statusCode;
+
     public GetSavingsPlansCoverageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetSavingsPlansCoverageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSavingsPlansCoverageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSavingsPlansCoverageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

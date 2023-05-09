@@ -18,6 +18,7 @@ public class AudioContentTypeAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioContentType")
     public AudioContentTypeAssignedTargetingOptionDetailsAudioContentTypeEnum audioContentType;
+
     public AudioContentTypeAssignedTargetingOptionDetails withAudioContentType(AudioContentTypeAssignedTargetingOptionDetailsAudioContentTypeEnum audioContentType) {
         this.audioContentType = audioContentType;
         return this;
@@ -29,9 +30,11 @@ public class AudioContentTypeAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public AudioContentTypeAssignedTargetingOptionDetails withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public AudioContentTypeAssignedTargetingOptionDetails(){}
 }

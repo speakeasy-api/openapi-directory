@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchemaVersionsDiffRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetSchemaVersionsDiffInput getSchemaVersionsDiffInput;
+
     public GetSchemaVersionsDiffRequest withGetSchemaVersionsDiffInput(org.openapis.openapi.models.shared.GetSchemaVersionsDiffInput getSchemaVersionsDiffInput) {
         this.getSchemaVersionsDiffInput = getSchemaVersionsDiffInput;
         return this;
@@ -16,6 +18,7 @@ public class GetSchemaVersionsDiffRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetSchemaVersionsDiffRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class GetSchemaVersionsDiffRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetSchemaVersionsDiffRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class GetSchemaVersionsDiffRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetSchemaVersionsDiffRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class GetSchemaVersionsDiffRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetSchemaVersionsDiffRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class GetSchemaVersionsDiffRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetSchemaVersionsDiffRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class GetSchemaVersionsDiffRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetSchemaVersionsDiffRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class GetSchemaVersionsDiffRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetSchemaVersionsDiffRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class GetSchemaVersionsDiffRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public GetSchemaVersionsDiffXAmzTargetEnum xAmzTarget;
+
     public GetSchemaVersionsDiffRequest withXAmzTarget(GetSchemaVersionsDiffXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public GetSchemaVersionsDiffRequest(@JsonProperty("GetSchemaVersionsDiffInput") org.openapis.openapi.models.shared.GetSchemaVersionsDiffInput getSchemaVersionsDiffInput, @JsonProperty("X-Amz-Target") GetSchemaVersionsDiffXAmzTargetEnum xAmzTarget) {
+        this.getSchemaVersionsDiffInput = getSchemaVersionsDiffInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

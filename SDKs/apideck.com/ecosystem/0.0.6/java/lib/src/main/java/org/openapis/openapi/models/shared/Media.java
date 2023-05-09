@@ -12,6 +12,7 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caption")
     public String caption;
+
     public Media withCaption(String caption) {
         this.caption = caption;
         return this;
@@ -20,6 +21,7 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Media withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequence")
     public Long sequence;
+
     public Media withSequence(Long sequence) {
         this.sequence = sequence;
         return this;
@@ -36,6 +39,7 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translations")
     public Translation[] translations;
+
     public Media withTranslations(Translation[] translations) {
         this.translations = translations;
         return this;
@@ -44,6 +48,7 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public MediaTypeEnum type;
+
     public Media withType(MediaTypeEnum type) {
         this.type = type;
         return this;
@@ -51,9 +56,13 @@ public class Media {
     
     @JsonProperty("url")
     public String url;
+
     public Media withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Media(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGenericAssociationsResponse {
@@ -12,6 +13,7 @@ public class GetGenericAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociationResults associationResults;
+
     public GetGenericAssociationsResponse withAssociationResults(org.openapis.openapi.models.shared.AssociationResults associationResults) {
         this.associationResults = associationResults;
         return this;
@@ -19,6 +21,7 @@ public class GetGenericAssociationsResponse {
     
     
     public String contentType;
+
     public GetGenericAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetGenericAssociationsResponse {
     
     
     public Integer statusCode;
+
     public GetGenericAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetGenericAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGenericAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetGenericAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

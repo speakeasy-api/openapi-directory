@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStreamKeyResponse {
@@ -12,6 +13,7 @@ public class GetStreamKeyResponse {
      */
     
     public Object accessDeniedException;
+
     public GetStreamKeyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetStreamKeyResponse {
     
     
     public String contentType;
+
     public GetStreamKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetStreamKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetStreamKeyResponse getStreamKeyResponse;
+
     public GetStreamKeyResponse withGetStreamKeyResponse(org.openapis.openapi.models.shared.GetStreamKeyResponse getStreamKeyResponse) {
         this.getStreamKeyResponse = getStreamKeyResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetStreamKeyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetStreamKeyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetStreamKeyResponse {
     
     
     public Integer statusCode;
+
     public GetStreamKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetStreamKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStreamKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetStreamKeyResponse {
      */
     
     public Object validationException;
+
     public GetStreamKeyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetStreamKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

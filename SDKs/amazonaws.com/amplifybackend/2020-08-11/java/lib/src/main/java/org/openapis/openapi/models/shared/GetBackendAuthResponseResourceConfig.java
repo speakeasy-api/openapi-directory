@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBackendAuthResponseResourceConfig {
     @JsonProperty("AuthResources")
     public GetBackendAuthResponseResourceConfigAuthResourcesEnum authResources;
+
     public GetBackendAuthResponseResourceConfig withAuthResources(GetBackendAuthResponseResourceConfigAuthResourcesEnum authResources) {
         this.authResources = authResources;
         return this;
@@ -22,6 +23,7 @@ public class GetBackendAuthResponseResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityPoolConfigs")
     public GetBackendAuthResponseResourceConfigIdentityPoolConfigs identityPoolConfigs;
+
     public GetBackendAuthResponseResourceConfig withIdentityPoolConfigs(GetBackendAuthResponseResourceConfigIdentityPoolConfigs identityPoolConfigs) {
         this.identityPoolConfigs = identityPoolConfigs;
         return this;
@@ -29,6 +31,7 @@ public class GetBackendAuthResponseResourceConfig {
     
     @JsonProperty("Service")
     public GetBackendAuthResponseResourceConfigServiceEnum service;
+
     public GetBackendAuthResponseResourceConfig withService(GetBackendAuthResponseResourceConfigServiceEnum service) {
         this.service = service;
         return this;
@@ -36,9 +39,15 @@ public class GetBackendAuthResponseResourceConfig {
     
     @JsonProperty("UserPoolConfigs")
     public GetBackendAuthResponseResourceConfigUserPoolConfigs userPoolConfigs;
+
     public GetBackendAuthResponseResourceConfig withUserPoolConfigs(GetBackendAuthResponseResourceConfigUserPoolConfigs userPoolConfigs) {
         this.userPoolConfigs = userPoolConfigs;
         return this;
     }
     
+    public GetBackendAuthResponseResourceConfig(@JsonProperty("AuthResources") GetBackendAuthResponseResourceConfigAuthResourcesEnum authResources, @JsonProperty("Service") GetBackendAuthResponseResourceConfigServiceEnum service, @JsonProperty("UserPoolConfigs") GetBackendAuthResponseResourceConfigUserPoolConfigs userPoolConfigs) {
+        this.authResources = authResources;
+        this.service = service;
+        this.userPoolConfigs = userPoolConfigs;
+  }
 }

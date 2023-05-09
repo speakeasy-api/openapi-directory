@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ConfiguredTable {
     @JsonProperty("allowedColumns")
     public String[] allowedColumns;
+
     public ConfiguredTable withAllowedColumns(String[] allowedColumns) {
         this.allowedColumns = allowedColumns;
         return this;
@@ -26,6 +27,7 @@ public class ConfiguredTable {
     
     @JsonProperty("analysisMethod")
     public AnalysisMethodEnum analysisMethod;
+
     public ConfiguredTable withAnalysisMethod(AnalysisMethodEnum analysisMethod) {
         this.analysisMethod = analysisMethod;
         return this;
@@ -33,6 +35,7 @@ public class ConfiguredTable {
     
     @JsonProperty("analysisRuleTypes")
     public ConfiguredTableAnalysisRuleTypeEnum[] analysisRuleTypes;
+
     public ConfiguredTable withAnalysisRuleTypes(ConfiguredTableAnalysisRuleTypeEnum[] analysisRuleTypes) {
         this.analysisRuleTypes = analysisRuleTypes;
         return this;
@@ -40,6 +43,7 @@ public class ConfiguredTable {
     
     @JsonProperty("arn")
     public String arn;
+
     public ConfiguredTable withArn(String arn) {
         this.arn = arn;
         return this;
@@ -49,6 +53,7 @@ public class ConfiguredTable {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public ConfiguredTable withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -57,6 +62,7 @@ public class ConfiguredTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ConfiguredTable withDescription(String description) {
         this.description = description;
         return this;
@@ -64,6 +70,7 @@ public class ConfiguredTable {
     
     @JsonProperty("id")
     public String id;
+
     public ConfiguredTable withId(String id) {
         this.id = id;
         return this;
@@ -71,6 +78,7 @@ public class ConfiguredTable {
     
     @JsonProperty("name")
     public String name;
+
     public ConfiguredTable withName(String name) {
         this.name = name;
         return this;
@@ -78,6 +86,7 @@ public class ConfiguredTable {
     
     @JsonProperty("tableReference")
     public TableReference tableReference;
+
     public ConfiguredTable withTableReference(TableReference tableReference) {
         this.tableReference = tableReference;
         return this;
@@ -87,9 +96,21 @@ public class ConfiguredTable {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public ConfiguredTable withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ConfiguredTable(@JsonProperty("allowedColumns") String[] allowedColumns, @JsonProperty("analysisMethod") AnalysisMethodEnum analysisMethod, @JsonProperty("analysisRuleTypes") ConfiguredTableAnalysisRuleTypeEnum[] analysisRuleTypes, @JsonProperty("arn") String arn, @JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("tableReference") TableReference tableReference, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.allowedColumns = allowedColumns;
+        this.analysisMethod = analysisMethod;
+        this.analysisRuleTypes = analysisRuleTypes;
+        this.arn = arn;
+        this.createTime = createTime;
+        this.id = id;
+        this.name = name;
+        this.tableReference = tableReference;
+        this.updateTime = updateTime;
+  }
 }

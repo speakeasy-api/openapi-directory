@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest {
@@ -12,6 +13,7 @@ public class GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=encoded_id")
     public String encodedId;
+
     public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest withEncodedId(String encodedId) {
         this.encodedId = encodedId;
         return this;
@@ -22,6 +24,7 @@ public class GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
     public String nodeId;
+
     public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -32,6 +35,7 @@ public class GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest withPath(String path) {
         this.path = path;
         return this;
@@ -44,9 +48,16 @@ public class GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest(@JsonProperty("encoded_id") String encodedId, @JsonProperty("node_id") String nodeId, @JsonProperty("path") String path, @JsonProperty("workspace") String workspace) {
+        this.encodedId = encodedId;
+        this.nodeId = nodeId;
+        this.path = path;
+        this.workspace = workspace;
+  }
 }

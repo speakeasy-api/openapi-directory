@@ -15,6 +15,7 @@ public class AnnotationValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BooleanValue")
     public Boolean booleanValue;
+
     public AnnotationValue withBooleanValue(Boolean booleanValue) {
         this.booleanValue = booleanValue;
         return this;
@@ -23,6 +24,7 @@ public class AnnotationValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberValue")
     public Double numberValue;
+
     public AnnotationValue withNumberValue(Double numberValue) {
         this.numberValue = numberValue;
         return this;
@@ -31,9 +33,11 @@ public class AnnotationValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StringValue")
     public String stringValue;
+
     public AnnotationValue withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public AnnotationValue(){}
 }

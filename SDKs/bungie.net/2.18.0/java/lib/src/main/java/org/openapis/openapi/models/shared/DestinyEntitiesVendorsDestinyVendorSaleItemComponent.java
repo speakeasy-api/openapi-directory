@@ -16,6 +16,7 @@ public class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
      */
     
     public Boolean apiPurchasable;
+
     public DestinyEntitiesVendorsDestinyVendorSaleItemComponent withApiPurchasable(Boolean apiPurchasable) {
         this.apiPurchasable = apiPurchasable;
         return this;
@@ -27,6 +28,7 @@ public class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
      */
     
     public Integer augments;
+
     public DestinyEntitiesVendorsDestinyVendorSaleItemComponent withAugments(Integer augments) {
         this.augments = augments;
         return this;
@@ -37,6 +39,7 @@ public class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
      */
     
     public DestinyDestinyItemQuantity[] costs;
+
     public DestinyEntitiesVendorsDestinyVendorSaleItemComponent withCosts(DestinyDestinyItemQuantity[] costs) {
         this.costs = costs;
         return this;
@@ -48,6 +51,7 @@ public class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
      */
     
     public Integer[] failureIndexes;
+
     public DestinyEntitiesVendorsDestinyVendorSaleItemComponent withFailureIndexes(Integer[] failureIndexes) {
         this.failureIndexes = failureIndexes;
         return this;
@@ -58,6 +62,7 @@ public class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
      */
     
     public Long itemHash;
+
     public DestinyEntitiesVendorsDestinyVendorSaleItemComponent withItemHash(Long itemHash) {
         this.itemHash = itemHash;
         return this;
@@ -68,6 +73,7 @@ public class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
      */
     
     public Boolean[] itemValueVisibility;
+
     public DestinyEntitiesVendorsDestinyVendorSaleItemComponent withItemValueVisibility(Boolean[] itemValueVisibility) {
         this.itemValueVisibility = itemValueVisibility;
         return this;
@@ -79,6 +85,7 @@ public class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
      */
     
     public OffsetDateTime overrideNextRefreshDate;
+
     public DestinyEntitiesVendorsDestinyVendorSaleItemComponent withOverrideNextRefreshDate(OffsetDateTime overrideNextRefreshDate) {
         this.overrideNextRefreshDate = overrideNextRefreshDate;
         return this;
@@ -90,6 +97,7 @@ public class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
      */
     
     public Long overrideStyleItemHash;
+
     public DestinyEntitiesVendorsDestinyVendorSaleItemComponent withOverrideStyleItemHash(Long overrideStyleItemHash) {
         this.overrideStyleItemHash = overrideStyleItemHash;
         return this;
@@ -100,6 +108,7 @@ public class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
      */
     
     public Integer quantity;
+
     public DestinyEntitiesVendorsDestinyVendorSaleItemComponent withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -111,6 +120,7 @@ public class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
      */
     
     public Long[] requiredUnlocks;
+
     public DestinyEntitiesVendorsDestinyVendorSaleItemComponent withRequiredUnlocks(Long[] requiredUnlocks) {
         this.requiredUnlocks = requiredUnlocks;
         return this;
@@ -121,6 +131,7 @@ public class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
      */
     
     public Integer saleStatus;
+
     public DestinyEntitiesVendorsDestinyVendorSaleItemComponent withSaleStatus(Integer saleStatus) {
         this.saleStatus = saleStatus;
         return this;
@@ -132,6 +143,7 @@ public class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
      */
     
     public DestinyDestinyUnlockStatus[] unlockStatuses;
+
     public DestinyEntitiesVendorsDestinyVendorSaleItemComponent withUnlockStatuses(DestinyDestinyUnlockStatus[] unlockStatuses) {
         this.unlockStatuses = unlockStatuses;
         return this;
@@ -143,9 +155,11 @@ public class DestinyEntitiesVendorsDestinyVendorSaleItemComponent {
      */
     
     public Integer vendorItemIndex;
+
     public DestinyEntitiesVendorsDestinyVendorSaleItemComponent withVendorItemIndex(Integer vendorItemIndex) {
         this.vendorItemIndex = vendorItemIndex;
         return this;
     }
     
+    public DestinyEntitiesVendorsDestinyVendorSaleItemComponent(){}
 }

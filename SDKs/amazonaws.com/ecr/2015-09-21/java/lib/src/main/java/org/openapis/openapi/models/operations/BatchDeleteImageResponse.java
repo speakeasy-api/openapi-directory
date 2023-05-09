@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDeleteImageResponse {
@@ -12,6 +13,7 @@ public class BatchDeleteImageResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDeleteImageResponse batchDeleteImageResponse;
+
     public BatchDeleteImageResponse withBatchDeleteImageResponse(org.openapis.openapi.models.shared.BatchDeleteImageResponse batchDeleteImageResponse) {
         this.batchDeleteImageResponse = batchDeleteImageResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchDeleteImageResponse {
     
     
     public String contentType;
+
     public BatchDeleteImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchDeleteImageResponse {
      */
     
     public Object invalidParameterException;
+
     public BatchDeleteImageResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class BatchDeleteImageResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public BatchDeleteImageResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class BatchDeleteImageResponse {
      */
     
     public Object serverException;
+
     public BatchDeleteImageResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class BatchDeleteImageResponse {
     
     
     public Integer statusCode;
+
     public BatchDeleteImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class BatchDeleteImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDeleteImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchDeleteImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

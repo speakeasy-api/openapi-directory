@@ -20,6 +20,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("creationDate")
     @SpeakeasyMetadata("form:name=creationDate")
     public String creationDate;
+
     public ApiCoreDtoDatapointsDatapoint withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -29,6 +30,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("encodeIp")
     @SpeakeasyMetadata("form:name=encodeIp")
     public Boolean encodeIp;
+
     public ApiCoreDtoDatapointsDatapoint withEncodeIp(Boolean encodeIp) {
         this.encodeIp = encodeIp;
         return this;
@@ -38,6 +40,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("fifthConversionId")
     @SpeakeasyMetadata("form:name=fifthConversionId")
     public Long fifthConversionId;
+
     public ApiCoreDtoDatapointsDatapoint withFifthConversionId(Long fifthConversionId) {
         this.fifthConversionId = fifthConversionId;
         return this;
@@ -47,6 +50,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("fifthConversionName")
     @SpeakeasyMetadata("form:name=fifthConversionName")
     public String fifthConversionName;
+
     public ApiCoreDtoDatapointsDatapoint withFifthConversionName(String fifthConversionName) {
         this.fifthConversionName = fifthConversionName;
         return this;
@@ -56,6 +60,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("firstConversionId")
     @SpeakeasyMetadata("form:name=firstConversionId")
     public Long firstConversionId;
+
     public ApiCoreDtoDatapointsDatapoint withFirstConversionId(Long firstConversionId) {
         this.firstConversionId = firstConversionId;
         return this;
@@ -65,6 +70,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("firstConversionName")
     @SpeakeasyMetadata("form:name=firstConversionName")
     public String firstConversionName;
+
     public ApiCoreDtoDatapointsDatapoint withFirstConversionName(String firstConversionName) {
         this.firstConversionName = firstConversionName;
         return this;
@@ -74,6 +80,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("fourthConversionId")
     @SpeakeasyMetadata("form:name=fourthConversionId")
     public Long fourthConversionId;
+
     public ApiCoreDtoDatapointsDatapoint withFourthConversionId(Long fourthConversionId) {
         this.fourthConversionId = fourthConversionId;
         return this;
@@ -83,6 +90,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("fourthConversionName")
     @SpeakeasyMetadata("form:name=fourthConversionName")
     public String fourthConversionName;
+
     public ApiCoreDtoDatapointsDatapoint withFourthConversionName(String fourthConversionName) {
         this.fourthConversionName = fourthConversionName;
         return this;
@@ -92,6 +100,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("groupId")
     @SpeakeasyMetadata("form:name=groupId")
     public Long groupId;
+
     public ApiCoreDtoDatapointsDatapoint withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -101,6 +110,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("groupName")
     @SpeakeasyMetadata("form:name=groupName")
     public String groupName;
+
     public ApiCoreDtoDatapointsDatapoint withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -110,6 +120,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("id")
     @SpeakeasyMetadata("form:name=id")
     public Long id;
+
     public ApiCoreDtoDatapointsDatapoint withId(Long id) {
         this.id = id;
         return this;
@@ -119,6 +130,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("isPublic")
     @SpeakeasyMetadata("form:name=isPublic")
     public Boolean isPublic;
+
     public ApiCoreDtoDatapointsDatapoint withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -128,6 +140,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("isSecured")
     @SpeakeasyMetadata("form:name=isSecured")
     public Boolean isSecured;
+
     public ApiCoreDtoDatapointsDatapoint withIsSecured(Boolean isSecured) {
         this.isSecured = isSecured;
         return this;
@@ -137,6 +150,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("lightTracking")
     @SpeakeasyMetadata("form:name=lightTracking")
     public Boolean lightTracking;
+
     public ApiCoreDtoDatapointsDatapoint withLightTracking(Boolean lightTracking) {
         this.lightTracking = lightTracking;
         return this;
@@ -146,6 +160,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("name")
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public ApiCoreDtoDatapointsDatapoint withName(String name) {
         this.name = name;
         return this;
@@ -155,6 +170,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("notes")
     @SpeakeasyMetadata("form:name=notes")
     public String notes;
+
     public ApiCoreDtoDatapointsDatapoint withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -164,6 +180,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("preferred")
     @SpeakeasyMetadata("form:name=preferred")
     public Boolean preferred;
+
     public ApiCoreDtoDatapointsDatapoint withPreferred(Boolean preferred) {
         this.preferred = preferred;
         return this;
@@ -173,6 +190,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("redirectOnly")
     @SpeakeasyMetadata("form:name=redirectOnly")
     public Boolean redirectOnly;
+
     public ApiCoreDtoDatapointsDatapoint withRedirectOnly(Boolean redirectOnly) {
         this.redirectOnly = redirectOnly;
         return this;
@@ -182,6 +200,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("secondConversionId")
     @SpeakeasyMetadata("form:name=secondConversionId")
     public Long secondConversionId;
+
     public ApiCoreDtoDatapointsDatapoint withSecondConversionId(Long secondConversionId) {
         this.secondConversionId = secondConversionId;
         return this;
@@ -191,6 +210,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("secondConversionName")
     @SpeakeasyMetadata("form:name=secondConversionName")
     public String secondConversionName;
+
     public ApiCoreDtoDatapointsDatapoint withSecondConversionName(String secondConversionName) {
         this.secondConversionName = secondConversionName;
         return this;
@@ -200,6 +220,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("status")
     @SpeakeasyMetadata("form:name=status")
     public ApiCoreDtoDatapointsDatapointStatusEnum status;
+
     public ApiCoreDtoDatapointsDatapoint withStatus(ApiCoreDtoDatapointsDatapointStatusEnum status) {
         this.status = status;
         return this;
@@ -209,6 +230,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("tags")
     @SpeakeasyMetadata("form:name=tags,json")
     public ApiCoreDtoTagsTag[] tags;
+
     public ApiCoreDtoDatapointsDatapoint withTags(ApiCoreDtoTagsTag[] tags) {
         this.tags = tags;
         return this;
@@ -218,6 +240,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("thirdConversionId")
     @SpeakeasyMetadata("form:name=thirdConversionId")
     public Long thirdConversionId;
+
     public ApiCoreDtoDatapointsDatapoint withThirdConversionId(Long thirdConversionId) {
         this.thirdConversionId = thirdConversionId;
         return this;
@@ -227,6 +250,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("thirdConversionName")
     @SpeakeasyMetadata("form:name=thirdConversionName")
     public String thirdConversionName;
+
     public ApiCoreDtoDatapointsDatapoint withThirdConversionName(String thirdConversionName) {
         this.thirdConversionName = thirdConversionName;
         return this;
@@ -236,6 +260,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("title")
     @SpeakeasyMetadata("form:name=title")
     public String title;
+
     public ApiCoreDtoDatapointsDatapoint withTitle(String title) {
         this.title = title;
         return this;
@@ -245,6 +270,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("trackingCode")
     @SpeakeasyMetadata("form:name=trackingCode")
     public String trackingCode;
+
     public ApiCoreDtoDatapointsDatapoint withTrackingCode(String trackingCode) {
         this.trackingCode = trackingCode;
         return this;
@@ -254,6 +280,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("type")
     @SpeakeasyMetadata("form:name=type")
     public ApiCoreDtoDatapointsDatapointTypeEnum type;
+
     public ApiCoreDtoDatapointsDatapoint withType(ApiCoreDtoDatapointsDatapointTypeEnum type) {
         this.type = type;
         return this;
@@ -263,6 +290,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("typeTL")
     @SpeakeasyMetadata("form:name=typeTL,json")
     public ApiCoreDtoDatapointsTrackingLinkSpecifics typeTL;
+
     public ApiCoreDtoDatapointsDatapoint withTypeTL(ApiCoreDtoDatapointsTrackingLinkSpecifics typeTL) {
         this.typeTL = typeTL;
         return this;
@@ -272,6 +300,7 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("typeTP")
     @SpeakeasyMetadata("form:name=typeTP,json")
     public ApiCoreDtoDatapointsTrackingPixelSpecifics typeTP;
+
     public ApiCoreDtoDatapointsDatapoint withTypeTP(ApiCoreDtoDatapointsTrackingPixelSpecifics typeTP) {
         this.typeTP = typeTP;
         return this;
@@ -281,9 +310,11 @@ public class ApiCoreDtoDatapointsDatapoint {
     @JsonProperty("writePermited")
     @SpeakeasyMetadata("form:name=writePermited")
     public Boolean writePermited;
+
     public ApiCoreDtoDatapointsDatapoint withWritePermited(Boolean writePermited) {
         this.writePermited = writePermited;
         return this;
     }
     
+    public ApiCoreDtoDatapointsDatapoint(){}
 }

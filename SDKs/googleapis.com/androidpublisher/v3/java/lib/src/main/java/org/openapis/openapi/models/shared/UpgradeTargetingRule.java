@@ -18,6 +18,7 @@ public class UpgradeTargetingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingPeriodDuration")
     public String billingPeriodDuration;
+
     public UpgradeTargetingRule withBillingPeriodDuration(String billingPeriodDuration) {
         this.billingPeriodDuration = billingPeriodDuration;
         return this;
@@ -29,6 +30,7 @@ public class UpgradeTargetingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oncePerUser")
     public Boolean oncePerUser;
+
     public UpgradeTargetingRule withOncePerUser(Boolean oncePerUser) {
         this.oncePerUser = oncePerUser;
         return this;
@@ -40,9 +42,11 @@ public class UpgradeTargetingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public TargetingRuleScope scope;
+
     public UpgradeTargetingRule withScope(TargetingRuleScope scope) {
         this.scope = scope;
         return this;
     }
     
+    public UpgradeTargetingRule(){}
 }

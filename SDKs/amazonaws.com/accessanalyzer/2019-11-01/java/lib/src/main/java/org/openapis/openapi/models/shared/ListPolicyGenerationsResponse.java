@@ -15,6 +15,7 @@ public class ListPolicyGenerationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListPolicyGenerationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListPolicyGenerationsResponse {
     
     @JsonProperty("policyGenerations")
     public PolicyGeneration[] policyGenerations;
+
     public ListPolicyGenerationsResponse withPolicyGenerations(PolicyGeneration[] policyGenerations) {
         this.policyGenerations = policyGenerations;
         return this;
     }
     
+    public ListPolicyGenerationsResponse(@JsonProperty("policyGenerations") PolicyGeneration[] policyGenerations) {
+        this.policyGenerations = policyGenerations;
+  }
 }

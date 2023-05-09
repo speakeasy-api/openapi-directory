@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWorkflowStepGroupResponse {
@@ -12,6 +13,7 @@ public class CreateWorkflowStepGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateWorkflowStepGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateWorkflowStepGroupResponse {
     
     
     public String contentType;
+
     public CreateWorkflowStepGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateWorkflowStepGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWorkflowStepGroupResponse createWorkflowStepGroupResponse;
+
     public CreateWorkflowStepGroupResponse withCreateWorkflowStepGroupResponse(org.openapis.openapi.models.shared.CreateWorkflowStepGroupResponse createWorkflowStepGroupResponse) {
         this.createWorkflowStepGroupResponse = createWorkflowStepGroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateWorkflowStepGroupResponse {
      */
     
     public Object internalServerException;
+
     public CreateWorkflowStepGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class CreateWorkflowStepGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateWorkflowStepGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateWorkflowStepGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWorkflowStepGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateWorkflowStepGroupResponse {
      */
     
     public Object throttlingException;
+
     public CreateWorkflowStepGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class CreateWorkflowStepGroupResponse {
      */
     
     public Object validationException;
+
     public CreateWorkflowStepGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateWorkflowStepGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

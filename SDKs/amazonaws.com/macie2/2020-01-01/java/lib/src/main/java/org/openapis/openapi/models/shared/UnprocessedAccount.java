@@ -15,6 +15,7 @@ public class UnprocessedAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public UnprocessedAccount withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class UnprocessedAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public ErrorCodeEnum errorCode;
+
     public UnprocessedAccount withErrorCode(ErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -31,9 +33,11 @@ public class UnprocessedAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public UnprocessedAccount withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public UnprocessedAccount(){}
 }

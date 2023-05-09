@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPlayerSeasonPPAResponse {
     
     public String contentType;
+
     public GetPlayerSeasonPPAResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPlayerSeasonPPAResponse {
      */
     
     public org.openapis.openapi.models.shared.PlayerSeasonPPA[] playerSeasonPPAS;
+
     public GetPlayerSeasonPPAResponse withPlayerSeasonPPAS(org.openapis.openapi.models.shared.PlayerSeasonPPA[] playerSeasonPPAS) {
         this.playerSeasonPPAS = playerSeasonPPAS;
         return this;
@@ -26,6 +29,7 @@ public class GetPlayerSeasonPPAResponse {
     
     
     public Integer statusCode;
+
     public GetPlayerSeasonPPAResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetPlayerSeasonPPAResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPlayerSeasonPPAResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPlayerSeasonPPAResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

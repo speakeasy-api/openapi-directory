@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class RestoreWindow {
     
     public OffsetDateTime earliestTime;
+
     public RestoreWindow withEarliestTime(OffsetDateTime earliestTime) {
         this.earliestTime = earliestTime;
         return this;
@@ -19,9 +20,11 @@ public class RestoreWindow {
     
     
     public OffsetDateTime latestTime;
+
     public RestoreWindow withLatestTime(OffsetDateTime latestTime) {
         this.latestTime = latestTime;
         return this;
     }
     
+    public RestoreWindow(){}
 }

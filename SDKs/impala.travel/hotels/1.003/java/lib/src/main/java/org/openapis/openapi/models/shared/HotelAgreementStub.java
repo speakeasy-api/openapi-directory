@@ -18,6 +18,7 @@ public class HotelAgreementStub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public String[] conditions;
+
     public HotelAgreementStub withConditions(String[] conditions) {
         this.conditions = conditions;
         return this;
@@ -28,6 +29,7 @@ public class HotelAgreementStub {
      */
     @JsonProperty("dealId")
     public String dealId;
+
     public HotelAgreementStub withDealId(String dealId) {
         this.dealId = dealId;
         return this;
@@ -39,6 +41,7 @@ public class HotelAgreementStub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealsSellable")
     public HotelAgreementStubDealsSellable dealsSellable;
+
     public HotelAgreementStub withDealsSellable(HotelAgreementStubDealsSellable dealsSellable) {
         this.dealsSellable = dealsSellable;
         return this;
@@ -50,6 +53,7 @@ public class HotelAgreementStub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount")
     public HotelAgreementStubDiscount discount;
+
     public HotelAgreementStub withDiscount(HotelAgreementStubDiscount discount) {
         this.discount = discount;
         return this;
@@ -60,6 +64,7 @@ public class HotelAgreementStub {
      */
     @JsonProperty("hotelAgreementId")
     public String hotelAgreementId;
+
     public HotelAgreementStub withHotelAgreementId(String hotelAgreementId) {
         this.hotelAgreementId = hotelAgreementId;
         return this;
@@ -71,6 +76,7 @@ public class HotelAgreementStub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public HotelAgreementStub withHref(String href) {
         this.href = href;
         return this;
@@ -81,9 +87,15 @@ public class HotelAgreementStub {
      */
     @JsonProperty("specialInstructions")
     public String specialInstructions;
+
     public HotelAgreementStub withSpecialInstructions(String specialInstructions) {
         this.specialInstructions = specialInstructions;
         return this;
     }
     
+    public HotelAgreementStub(@JsonProperty("dealId") String dealId, @JsonProperty("hotelAgreementId") String hotelAgreementId, @JsonProperty("specialInstructions") String specialInstructions) {
+        this.dealId = dealId;
+        this.hotelAgreementId = hotelAgreementId;
+        this.specialInstructions = specialInstructions;
+  }
 }

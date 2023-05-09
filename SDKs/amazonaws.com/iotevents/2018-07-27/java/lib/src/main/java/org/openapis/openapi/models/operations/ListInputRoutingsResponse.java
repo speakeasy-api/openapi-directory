@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListInputRoutingsResponse {
     
     public String contentType;
+
     public ListInputRoutingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListInputRoutingsResponse {
      */
     
     public Object internalFailureException;
+
     public ListInputRoutingsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListInputRoutingsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListInputRoutingsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListInputRoutingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListInputRoutingsResponse listInputRoutingsResponse;
+
     public ListInputRoutingsResponse withListInputRoutingsResponse(org.openapis.openapi.models.shared.ListInputRoutingsResponse listInputRoutingsResponse) {
         this.listInputRoutingsResponse = listInputRoutingsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListInputRoutingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListInputRoutingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListInputRoutingsResponse {
     
     
     public Integer statusCode;
+
     public ListInputRoutingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListInputRoutingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListInputRoutingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListInputRoutingsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListInputRoutingsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,9 +92,14 @@ public class ListInputRoutingsResponse {
      */
     
     public Object throttlingException;
+
     public ListInputRoutingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListInputRoutingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

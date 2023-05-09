@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteMessageBatchResultEntryList - Encloses the &lt;code&gt;Id&lt;/code&gt; of an entry in &lt;code&gt; &lt;a&gt;DeleteMessageBatch&lt;/a&gt;.&lt;/code&gt; 
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteMessageBatchResultEntryList {
     
     public String id;
+
     public DeleteMessageBatchResultEntryList withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteMessageBatchResultEntryList(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

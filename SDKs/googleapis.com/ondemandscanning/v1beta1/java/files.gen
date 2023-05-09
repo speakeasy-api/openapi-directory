@@ -59,10 +59,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListOperationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AnalyzePackagesRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/PackageDataPackageTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/PackageData.java
+lib/src/main/java/org/openapis/openapi/models/shared/PackageVersion.java
 lib/src/main/java/org/openapis/openapi/models/shared/Maintainer.java
 lib/src/main/java/org/openapis/openapi/models/shared/FileLocation.java
 lib/src/main/java/org/openapis/openapi/models/shared/LanguagePackageDependency.java
-lib/src/main/java/org/openapis/openapi/models/shared/Binary.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListVulnerabilitiesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/OccurrenceKindEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Occurrence.java
@@ -97,6 +97,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/WindowsUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/Identity.java
 lib/src/main/java/org/openapis/openapi/models/shared/Category.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpgradeDistribution.java
+lib/src/main/java/org/openapis/openapi/models/shared/SBOMReferenceOccurrence.java
+lib/src/main/java/org/openapis/openapi/models/shared/EnvelopeSignature.java
+lib/src/main/java/org/openapis/openapi/models/shared/SbomReferenceIntotoPayload.java
+lib/src/main/java/org/openapis/openapi/models/shared/Subject.java
+lib/src/main/java/org/openapis/openapi/models/shared/SbomReferenceIntotoPredicate.java
 lib/src/main/java/org/openapis/openapi/models/shared/PackageOccurrenceArchitectureEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/PackageOccurrence.java
 lib/src/main/java/org/openapis/openapi/models/shared/Location.java
@@ -105,10 +110,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/ImageOccurrence.java
 lib/src/main/java/org/openapis/openapi/models/shared/Layer.java
 lib/src/main/java/org/openapis/openapi/models/shared/Fingerprint.java
 lib/src/main/java/org/openapis/openapi/models/shared/Envelope.java
-lib/src/main/java/org/openapis/openapi/models/shared/EnvelopeSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/DSSEAttestationOccurrence.java
 lib/src/main/java/org/openapis/openapi/models/shared/InTotoStatement.java
-lib/src/main/java/org/openapis/openapi/models/shared/Subject.java
 lib/src/main/java/org/openapis/openapi/models/shared/SlsaProvenanceZeroTwo.java
 lib/src/main/java/org/openapis/openapi/models/shared/GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata.java
 lib/src/main/java/org/openapis/openapi/models/shared/GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness.java
@@ -153,4 +156,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Artifact.java
 lib/src/main/java/org/openapis/openapi/models/shared/AttestationOccurrence.java
 lib/src/main/java/org/openapis/openapi/models/shared/Signature.java
 lib/src/main/java/org/openapis/openapi/models/shared/Jwt.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

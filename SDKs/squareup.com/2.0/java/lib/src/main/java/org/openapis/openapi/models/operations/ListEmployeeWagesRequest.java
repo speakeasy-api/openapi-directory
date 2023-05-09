@@ -12,6 +12,7 @@ public class ListEmployeeWagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListEmployeeWagesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +23,7 @@ public class ListEmployeeWagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=employee_id")
     public String employeeId;
+
     public ListEmployeeWagesRequest withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -33,9 +35,11 @@ public class ListEmployeeWagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListEmployeeWagesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public ListEmployeeWagesRequest(){}
 }

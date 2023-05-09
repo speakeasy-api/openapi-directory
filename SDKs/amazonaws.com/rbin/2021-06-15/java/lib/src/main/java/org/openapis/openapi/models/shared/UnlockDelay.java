@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UnlockDelay {
     @JsonProperty("UnlockDelayUnit")
     public UnlockDelayUnitEnum unlockDelayUnit;
+
     public UnlockDelay withUnlockDelayUnit(UnlockDelayUnitEnum unlockDelayUnit) {
         this.unlockDelayUnit = unlockDelayUnit;
         return this;
@@ -19,9 +20,14 @@ public class UnlockDelay {
     
     @JsonProperty("UnlockDelayValue")
     public Long unlockDelayValue;
+
     public UnlockDelay withUnlockDelayValue(Long unlockDelayValue) {
         this.unlockDelayValue = unlockDelayValue;
         return this;
     }
     
+    public UnlockDelay(@JsonProperty("UnlockDelayUnit") UnlockDelayUnitEnum unlockDelayUnit, @JsonProperty("UnlockDelayValue") Long unlockDelayValue) {
+        this.unlockDelayUnit = unlockDelayUnit;
+        this.unlockDelayValue = unlockDelayValue;
+  }
 }

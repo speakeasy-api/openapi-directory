@@ -12,6 +12,7 @@ public class RegisterAgentRequestBody {
      */
     @JsonProperty("agentDetails")
     public RegisterAgentRequestBodyAgentDetails agentDetails;
+
     public RegisterAgentRequestBody withAgentDetails(RegisterAgentRequestBodyAgentDetails agentDetails) {
         this.agentDetails = agentDetails;
         return this;
@@ -22,9 +23,14 @@ public class RegisterAgentRequestBody {
      */
     @JsonProperty("discoveryData")
     public RegisterAgentRequestBodyDiscoveryData discoveryData;
+
     public RegisterAgentRequestBody withDiscoveryData(RegisterAgentRequestBodyDiscoveryData discoveryData) {
         this.discoveryData = discoveryData;
         return this;
     }
     
+    public RegisterAgentRequestBody(@JsonProperty("agentDetails") RegisterAgentRequestBodyAgentDetails agentDetails, @JsonProperty("discoveryData") RegisterAgentRequestBodyDiscoveryData discoveryData) {
+        this.agentDetails = agentDetails;
+        this.discoveryData = discoveryData;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBuildResponse {
     
     public String contentType;
+
     public UpdateBuildResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateBuildResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateBuildResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateBuildResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateBuildResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateBuildResponse {
      */
     
     public Object notFoundException;
+
     public UpdateBuildResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateBuildResponse {
     
     
     public Integer statusCode;
+
     public UpdateBuildResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateBuildResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBuildResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateBuildResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateBuildResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateBuildResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateBuildOutput updateBuildOutput;
+
     public UpdateBuildResponse withUpdateBuildOutput(org.openapis.openapi.models.shared.UpdateBuildOutput updateBuildOutput) {
         this.updateBuildOutput = updateBuildOutput;
         return this;
     }
     
+    public UpdateBuildResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

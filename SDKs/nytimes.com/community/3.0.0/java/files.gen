@@ -36,6 +36,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentByDateJSO
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentByDateJSON200ApplicationJSONResults.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentByDateJSON200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentByDateJsonResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentRecentJsonSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentRecentJSON200ApplicationJSONDebug.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetAllProperties.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPropertiesAutomoderationOn.java
@@ -68,4 +69,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUserJSON2
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUserJSON200ApplicationJSONResults.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUserJSON200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUserJsonResponse.java
+docs/sdk/README.md
 USAGE.md

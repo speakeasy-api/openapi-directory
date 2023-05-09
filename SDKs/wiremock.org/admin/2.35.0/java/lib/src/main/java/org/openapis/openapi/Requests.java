@@ -54,10 +54,8 @@ public class Requests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAdminRequestsResponse res = new org.openapis.openapi.models.operations.DeleteAdminRequestsResponse() {{
+        org.openapis.openapi.models.operations.DeleteAdminRequestsResponse res = new org.openapis.openapi.models.operations.DeleteAdminRequestsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -86,10 +84,8 @@ public class Requests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAdminRequestsRequestIdResponse res = new org.openapis.openapi.models.operations.DeleteAdminRequestsRequestIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteAdminRequestsRequestIdResponse res = new org.openapis.openapi.models.operations.DeleteAdminRequestsRequestIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,10 +120,8 @@ public class Requests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAdminRequestsResponse res = new org.openapis.openapi.models.operations.GetAdminRequestsResponse() {{
+        org.openapis.openapi.models.operations.GetAdminRequestsResponse res = new org.openapis.openapi.models.operations.GetAdminRequestsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,10 +150,8 @@ public class Requests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAdminRequestsUnmatchedResponse res = new org.openapis.openapi.models.operations.GetAdminRequestsUnmatchedResponse() {{
+        org.openapis.openapi.models.operations.GetAdminRequestsUnmatchedResponse res = new org.openapis.openapi.models.operations.GetAdminRequestsUnmatchedResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,10 +180,8 @@ public class Requests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAdminRequestsRequestIdResponse res = new org.openapis.openapi.models.operations.GetAdminRequestsRequestIdResponse() {{
+        org.openapis.openapi.models.operations.GetAdminRequestsRequestIdResponse res = new org.openapis.openapi.models.operations.GetAdminRequestsRequestIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -226,11 +216,9 @@ public class Requests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminRequestsCountResponse res = new org.openapis.openapi.models.operations.PostAdminRequestsCountResponse() {{
+        org.openapis.openapi.models.operations.PostAdminRequestsCountResponse res = new org.openapis.openapi.models.operations.PostAdminRequestsCountResponse(contentType, httpRes.statusCode()) {{
             postAdminRequestsCount200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -270,10 +258,8 @@ public class Requests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminRequestsFindResponse res = new org.openapis.openapi.models.operations.PostAdminRequestsFindResponse() {{
+        org.openapis.openapi.models.operations.PostAdminRequestsFindResponse res = new org.openapis.openapi.models.operations.PostAdminRequestsFindResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -308,10 +294,8 @@ public class Requests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminRequestsRemoveResponse res = new org.openapis.openapi.models.operations.PostAdminRequestsRemoveResponse() {{
+        org.openapis.openapi.models.operations.PostAdminRequestsRemoveResponse res = new org.openapis.openapi.models.operations.PostAdminRequestsRemoveResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,10 +326,8 @@ public class Requests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminRequestsRemoveByMetadataResponse res = new org.openapis.openapi.models.operations.PostAdminRequestsRemoveByMetadataResponse() {{
+        org.openapis.openapi.models.operations.PostAdminRequestsRemoveByMetadataResponse res = new org.openapis.openapi.models.operations.PostAdminRequestsRemoveByMetadataResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -358,7 +340,9 @@ public class Requests {
      * Empty the request journal
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.PostAdminRequestsResetResponse postAdminRequestsReset() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/__admin/requests/reset");
@@ -373,10 +357,8 @@ public class Requests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminRequestsResetResponse res = new org.openapis.openapi.models.operations.PostAdminRequestsResetResponse() {{
+        org.openapis.openapi.models.operations.PostAdminRequestsResetResponse res = new org.openapis.openapi.models.operations.PostAdminRequestsResetResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

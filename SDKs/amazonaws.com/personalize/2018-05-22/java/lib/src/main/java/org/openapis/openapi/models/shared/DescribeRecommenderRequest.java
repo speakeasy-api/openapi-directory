@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeRecommenderRequest {
     @JsonProperty("recommenderArn")
     public String recommenderArn;
+
     public DescribeRecommenderRequest withRecommenderArn(String recommenderArn) {
         this.recommenderArn = recommenderArn;
         return this;
     }
     
+    public DescribeRecommenderRequest(@JsonProperty("recommenderArn") String recommenderArn) {
+        this.recommenderArn = recommenderArn;
+  }
 }

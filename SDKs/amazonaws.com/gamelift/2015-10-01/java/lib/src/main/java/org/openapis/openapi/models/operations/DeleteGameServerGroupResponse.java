@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteGameServerGroupResponse {
     
     public String contentType;
+
     public DeleteGameServerGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteGameServerGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteGameServerGroupOutput deleteGameServerGroupOutput;
+
     public DeleteGameServerGroupResponse withDeleteGameServerGroupOutput(org.openapis.openapi.models.shared.DeleteGameServerGroupOutput deleteGameServerGroupOutput) {
         this.deleteGameServerGroupOutput = deleteGameServerGroupOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteGameServerGroupResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteGameServerGroupResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteGameServerGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteGameServerGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteGameServerGroupResponse {
      */
     
     public Object notFoundException;
+
     public DeleteGameServerGroupResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteGameServerGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteGameServerGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteGameServerGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteGameServerGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteGameServerGroupResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteGameServerGroupResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteGameServerGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

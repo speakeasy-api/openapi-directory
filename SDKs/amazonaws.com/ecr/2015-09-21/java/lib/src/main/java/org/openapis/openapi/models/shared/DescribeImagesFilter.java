@@ -15,9 +15,11 @@ public class DescribeImagesFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagStatus")
     public TagStatusEnum tagStatus;
+
     public DescribeImagesFilter withTagStatus(TagStatusEnum tagStatus) {
         this.tagStatus = tagStatus;
         return this;
     }
     
+    public DescribeImagesFilter(){}
 }

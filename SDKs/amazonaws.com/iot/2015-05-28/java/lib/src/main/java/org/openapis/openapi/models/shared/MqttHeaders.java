@@ -15,6 +15,7 @@ public class MqttHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public MqttHeaders withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +24,7 @@ public class MqttHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correlationData")
     public String correlationData;
+
     public MqttHeaders withCorrelationData(String correlationData) {
         this.correlationData = correlationData;
         return this;
@@ -31,6 +33,7 @@ public class MqttHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageExpiry")
     public String messageExpiry;
+
     public MqttHeaders withMessageExpiry(String messageExpiry) {
         this.messageExpiry = messageExpiry;
         return this;
@@ -39,6 +42,7 @@ public class MqttHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payloadFormatIndicator")
     public String payloadFormatIndicator;
+
     public MqttHeaders withPayloadFormatIndicator(String payloadFormatIndicator) {
         this.payloadFormatIndicator = payloadFormatIndicator;
         return this;
@@ -47,6 +51,7 @@ public class MqttHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseTopic")
     public String responseTopic;
+
     public MqttHeaders withResponseTopic(String responseTopic) {
         this.responseTopic = responseTopic;
         return this;
@@ -55,9 +60,11 @@ public class MqttHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userProperties")
     public UserProperty[] userProperties;
+
     public MqttHeaders withUserProperties(UserProperty[] userProperties) {
         this.userProperties = userProperties;
         return this;
     }
     
+    public MqttHeaders(){}
 }

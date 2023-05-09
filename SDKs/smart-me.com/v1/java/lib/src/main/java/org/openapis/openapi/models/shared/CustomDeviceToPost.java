@@ -25,6 +25,7 @@ public class CustomDeviceToPost {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public String id;
+
     public CustomDeviceToPost withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +38,7 @@ public class CustomDeviceToPost {
     @JsonProperty("Name")
     @SpeakeasyMetadata("form:name=Name")
     public String name;
+
     public CustomDeviceToPost withName(String name) {
         this.name = name;
         return this;
@@ -49,6 +51,7 @@ public class CustomDeviceToPost {
     @JsonProperty("Serial")
     @SpeakeasyMetadata("form:name=Serial")
     public Long serial;
+
     public CustomDeviceToPost withSerial(Long serial) {
         this.serial = serial;
         return this;
@@ -63,6 +66,7 @@ public class CustomDeviceToPost {
     @JsonProperty("ValueDate")
     @SpeakeasyMetadata("form:name=ValueDate")
     public OffsetDateTime valueDate;
+
     public CustomDeviceToPost withValueDate(OffsetDateTime valueDate) {
         this.valueDate = valueDate;
         return this;
@@ -75,9 +79,11 @@ public class CustomDeviceToPost {
     @JsonProperty("Values")
     @SpeakeasyMetadata("form:name=Values,json")
     public CustomDeviceValues[] values;
+
     public CustomDeviceToPost withValues(CustomDeviceValues[] values) {
         this.values = values;
         return this;
     }
     
+    public CustomDeviceToPost(){}
 }

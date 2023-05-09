@@ -12,9 +12,11 @@ public class TargetingValueDemogGenderCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("demogGenderCriteriaIds")
     public String[] demogGenderCriteriaIds;
+
     public TargetingValueDemogGenderCriteria withDemogGenderCriteriaIds(String[] demogGenderCriteriaIds) {
         this.demogGenderCriteriaIds = demogGenderCriteriaIds;
         return this;
     }
     
+    public TargetingValueDemogGenderCriteria(){}
 }

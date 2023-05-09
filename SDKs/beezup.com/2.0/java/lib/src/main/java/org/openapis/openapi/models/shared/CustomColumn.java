@@ -15,6 +15,7 @@ public class CustomColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogColumnDependencies")
     public String[] catalogColumnDependencies;
+
     public CustomColumn withCatalogColumnDependencies(String[] catalogColumnDependencies) {
         this.catalogColumnDependencies = catalogColumnDependencies;
         return this;
@@ -25,6 +26,7 @@ public class CustomColumn {
      */
     @JsonProperty("configuration")
     public ColumnConfiguration configuration;
+
     public CustomColumn withConfiguration(ColumnConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -35,6 +37,7 @@ public class CustomColumn {
      */
     @JsonProperty("id")
     public String id;
+
     public CustomColumn withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class CustomColumn {
     
     @JsonProperty("links")
     public CustomColumnLinks links;
+
     public CustomColumn withLinks(CustomColumnLinks links) {
         this.links = links;
         return this;
@@ -52,9 +56,16 @@ public class CustomColumn {
      */
     @JsonProperty("userColumName")
     public String userColumName;
+
     public CustomColumn withUserColumName(String userColumName) {
         this.userColumName = userColumName;
         return this;
     }
     
+    public CustomColumn(@JsonProperty("configuration") ColumnConfiguration configuration, @JsonProperty("id") String id, @JsonProperty("links") CustomColumnLinks links, @JsonProperty("userColumName") String userColumName) {
+        this.configuration = configuration;
+        this.id = id;
+        this.links = links;
+        this.userColumName = userColumName;
+  }
 }

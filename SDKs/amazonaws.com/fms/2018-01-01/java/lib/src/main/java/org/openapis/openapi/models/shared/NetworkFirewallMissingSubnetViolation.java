@@ -15,6 +15,7 @@ public class NetworkFirewallMissingSubnetViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public NetworkFirewallMissingSubnetViolation withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -23,6 +24,7 @@ public class NetworkFirewallMissingSubnetViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetViolationReason")
     public String targetViolationReason;
+
     public NetworkFirewallMissingSubnetViolation withTargetViolationReason(String targetViolationReason) {
         this.targetViolationReason = targetViolationReason;
         return this;
@@ -31,6 +33,7 @@ public class NetworkFirewallMissingSubnetViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VPC")
     public String vpc;
+
     public NetworkFirewallMissingSubnetViolation withVpc(String vpc) {
         this.vpc = vpc;
         return this;
@@ -39,9 +42,11 @@ public class NetworkFirewallMissingSubnetViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolationTarget")
     public String violationTarget;
+
     public NetworkFirewallMissingSubnetViolation withViolationTarget(String violationTarget) {
         this.violationTarget = violationTarget;
         return this;
     }
     
+    public NetworkFirewallMissingSubnetViolation(){}
 }

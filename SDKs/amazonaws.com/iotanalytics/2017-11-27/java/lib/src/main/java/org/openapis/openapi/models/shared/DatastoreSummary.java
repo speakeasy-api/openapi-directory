@@ -22,6 +22,7 @@ public class DatastoreSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public DatastoreSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DatastoreSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datastoreName")
     public String datastoreName;
+
     public DatastoreSummary withDatastoreName(String datastoreName) {
         this.datastoreName = datastoreName;
         return this;
@@ -38,6 +40,7 @@ public class DatastoreSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datastorePartitions")
     public DatastorePartitions datastorePartitions;
+
     public DatastoreSummary withDatastorePartitions(DatastorePartitions datastorePartitions) {
         this.datastorePartitions = datastorePartitions;
         return this;
@@ -46,6 +49,7 @@ public class DatastoreSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datastoreStorage")
     public DatastoreStorageSummary datastoreStorage;
+
     public DatastoreSummary withDatastoreStorage(DatastoreStorageSummary datastoreStorage) {
         this.datastoreStorage = datastoreStorage;
         return this;
@@ -54,6 +58,7 @@ public class DatastoreSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileFormatType")
     public FileFormatTypeEnum fileFormatType;
+
     public DatastoreSummary withFileFormatType(FileFormatTypeEnum fileFormatType) {
         this.fileFormatType = fileFormatType;
         return this;
@@ -64,6 +69,7 @@ public class DatastoreSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastMessageArrivalTime")
     public OffsetDateTime lastMessageArrivalTime;
+
     public DatastoreSummary withLastMessageArrivalTime(OffsetDateTime lastMessageArrivalTime) {
         this.lastMessageArrivalTime = lastMessageArrivalTime;
         return this;
@@ -74,6 +80,7 @@ public class DatastoreSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public DatastoreSummary withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -82,9 +89,11 @@ public class DatastoreSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DatastoreStatusEnum status;
+
     public DatastoreSummary withStatus(DatastoreStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DatastoreSummary(){}
 }

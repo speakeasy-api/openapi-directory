@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsRemoveSelectedRepoFromOrgSecretRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ActionsRemoveSelectedRepoFromOrgSecretRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -16,6 +18,7 @@ public class ActionsRemoveSelectedRepoFromOrgSecretRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
     public Long repositoryId;
+
     public ActionsRemoveSelectedRepoFromOrgSecretRequest withRepositoryId(Long repositoryId) {
         this.repositoryId = repositoryId;
         return this;
@@ -26,9 +29,15 @@ public class ActionsRemoveSelectedRepoFromOrgSecretRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
     public String secretName;
+
     public ActionsRemoveSelectedRepoFromOrgSecretRequest withSecretName(String secretName) {
         this.secretName = secretName;
         return this;
     }
     
+    public ActionsRemoveSelectedRepoFromOrgSecretRequest(@JsonProperty("org") String org, @JsonProperty("repository_id") Long repositoryId, @JsonProperty("secret_name") String secretName) {
+        this.org = org;
+        this.repositoryId = repositoryId;
+        this.secretName = secretName;
+  }
 }

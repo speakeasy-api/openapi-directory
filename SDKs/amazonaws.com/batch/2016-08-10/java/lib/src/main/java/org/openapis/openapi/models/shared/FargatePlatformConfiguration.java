@@ -15,9 +15,11 @@ public class FargatePlatformConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformVersion")
     public String platformVersion;
+
     public FargatePlatformConfiguration withPlatformVersion(String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
     }
     
+    public FargatePlatformConfiguration(){}
 }

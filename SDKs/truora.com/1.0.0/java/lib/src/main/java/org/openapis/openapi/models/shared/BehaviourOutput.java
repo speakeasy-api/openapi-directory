@@ -15,6 +15,7 @@ public class BehaviourOutput {
      */
     @JsonProperty("behavior")
     public Behavior[] behavior;
+
     public BehaviourOutput withBehavior(Behavior[] behavior) {
         this.behavior = behavior;
         return this;
@@ -25,9 +26,14 @@ public class BehaviourOutput {
      */
     @JsonProperty("self")
     public String self;
+
     public BehaviourOutput withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public BehaviourOutput(@JsonProperty("behavior") Behavior[] behavior, @JsonProperty("self") String self) {
+        this.behavior = behavior;
+        this.self = self;
+  }
 }

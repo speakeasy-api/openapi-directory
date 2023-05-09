@@ -14,6 +14,7 @@ public class StartFailbackLaunchRequestBody {
      */
     @JsonProperty("recoveryInstanceIDs")
     public String[] recoveryInstanceIDs;
+
     public StartFailbackLaunchRequestBody withRecoveryInstanceIDs(String[] recoveryInstanceIDs) {
         this.recoveryInstanceIDs = recoveryInstanceIDs;
         return this;
@@ -25,9 +26,13 @@ public class StartFailbackLaunchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StartFailbackLaunchRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartFailbackLaunchRequestBody(@JsonProperty("recoveryInstanceIDs") String[] recoveryInstanceIDs) {
+        this.recoveryInstanceIDs = recoveryInstanceIDs;
+  }
 }

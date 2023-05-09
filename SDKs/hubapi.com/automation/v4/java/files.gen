@@ -117,4 +117,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/ActionFunction.java
 lib/src/main/java/org/openapis/openapi/models/shared/CollectionResponseActionFunctionIdentifierNoPaging.java
 lib/src/main/java/org/openapis/openapi/models/shared/ActionRevision.java
 lib/src/main/java/org/openapis/openapi/models/shared/CollectionResponseActionRevisionForwardPaging.java
+docs/sdk/README.md
+docs/callbacks/README.md
+docs/definitions/README.md
+docs/functions/README.md
+docs/revisions/README.md
 USAGE.md

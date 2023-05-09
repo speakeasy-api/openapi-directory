@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GeneratePartialYaraRuleRequestBody {
@@ -12,6 +13,7 @@ public class GeneratePartialYaraRuleRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public GeneratePartialYaraRuleRequestBodyFile file;
+
     public GeneratePartialYaraRuleRequestBody withFile(GeneratePartialYaraRuleRequestBodyFile file) {
         this.file = file;
         return this;
@@ -19,6 +21,7 @@ public class GeneratePartialYaraRuleRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=is_unpacking_required")
     public GeneratePartialYaraRuleRequestBodyIsUnpackingRequiredEnum isUnpackingRequired;
+
     public GeneratePartialYaraRuleRequestBody withIsUnpackingRequired(GeneratePartialYaraRuleRequestBodyIsUnpackingRequiredEnum isUnpackingRequired) {
         this.isUnpackingRequired = isUnpackingRequired;
         return this;
@@ -26,6 +29,7 @@ public class GeneratePartialYaraRuleRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=minimum_string_length")
     public String minimumStringLength;
+
     public GeneratePartialYaraRuleRequestBody withMinimumStringLength(String minimumStringLength) {
         this.minimumStringLength = minimumStringLength;
         return this;
@@ -33,9 +37,13 @@ public class GeneratePartialYaraRuleRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=strings_to_ignore")
     public String[] stringsToIgnore;
+
     public GeneratePartialYaraRuleRequestBody withStringsToIgnore(String[] stringsToIgnore) {
         this.stringsToIgnore = stringsToIgnore;
         return this;
     }
     
+    public GeneratePartialYaraRuleRequestBody(@JsonProperty("file") GeneratePartialYaraRuleRequestBodyFile file) {
+        this.file = file;
+  }
 }

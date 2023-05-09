@@ -15,6 +15,7 @@ public class AwsS3BucketLoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationBucketName")
     public String destinationBucketName;
+
     public AwsS3BucketLoggingConfiguration withDestinationBucketName(String destinationBucketName) {
         this.destinationBucketName = destinationBucketName;
         return this;
@@ -23,9 +24,11 @@ public class AwsS3BucketLoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogFilePrefix")
     public String logFilePrefix;
+
     public AwsS3BucketLoggingConfiguration withLogFilePrefix(String logFilePrefix) {
         this.logFilePrefix = logFilePrefix;
         return this;
     }
     
+    public AwsS3BucketLoggingConfiguration(){}
 }

@@ -15,6 +15,7 @@ public class SearchCasesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public org.openapis.openapi.models.shared.FieldIdentifier[] fields;
+
     public SearchCasesRequestBody withFields(org.openapis.openapi.models.shared.FieldIdentifier[] fields) {
         this.fields = fields;
         return this;
@@ -26,6 +27,7 @@ public class SearchCasesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public SearchCasesRequestBodyFilter filter;
+
     public SearchCasesRequestBody withFilter(SearchCasesRequestBodyFilter filter) {
         this.filter = filter;
         return this;
@@ -37,6 +39,7 @@ public class SearchCasesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public SearchCasesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -48,6 +51,7 @@ public class SearchCasesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchCasesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -59,6 +63,7 @@ public class SearchCasesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchTerm")
     public String searchTerm;
+
     public SearchCasesRequestBody withSearchTerm(String searchTerm) {
         this.searchTerm = searchTerm;
         return this;
@@ -70,9 +75,11 @@ public class SearchCasesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sorts")
     public org.openapis.openapi.models.shared.Sort[] sorts;
+
     public SearchCasesRequestBody withSorts(org.openapis.openapi.models.shared.Sort[] sorts) {
         this.sorts = sorts;
         return this;
     }
     
+    public SearchCasesRequestBody(){}
 }

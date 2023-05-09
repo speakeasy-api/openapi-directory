@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentRequestInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionInfo")
     public String sessionInfo;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentRequestInfo withSessionInfo(String sessionInfo) {
         this.sessionInfo = sessionInfo;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentRequestInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationCode")
     public String verificationCode;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentRequestInfo withVerificationCode(String verificationCode) {
         this.verificationCode = verificationCode;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentRequestInfo(){}
 }

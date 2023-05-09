@@ -18,6 +18,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceFolder")
     public String resourceFolder;
+
     public Folder withResourceFolder(String resourceFolder) {
         this.resourceFolder = resourceFolder;
         return this;
@@ -29,9 +30,11 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceFolderDisplayName")
     public String resourceFolderDisplayName;
+
     public Folder withResourceFolderDisplayName(String resourceFolderDisplayName) {
         this.resourceFolderDisplayName = resourceFolderDisplayName;
         return this;
     }
     
+    public Folder(){}
 }

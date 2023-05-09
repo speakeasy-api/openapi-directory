@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAddonResponse {
@@ -12,6 +13,7 @@ public class DeleteAddonResponse {
      */
     
     public Object clientException;
+
     public DeleteAddonResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAddonResponse {
     
     
     public String contentType;
+
     public DeleteAddonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAddonResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteAddonResponse deleteAddonResponse;
+
     public DeleteAddonResponse withDeleteAddonResponse(org.openapis.openapi.models.shared.DeleteAddonResponse deleteAddonResponse) {
         this.deleteAddonResponse = deleteAddonResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAddonResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteAddonResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAddonResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteAddonResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteAddonResponse {
     
     
     public Integer statusCode;
+
     public DeleteAddonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteAddonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAddonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteAddonResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAddonResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteAddonResponse {
      */
     
     public Object serverException;
+
     public DeleteAddonResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public DeleteAddonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

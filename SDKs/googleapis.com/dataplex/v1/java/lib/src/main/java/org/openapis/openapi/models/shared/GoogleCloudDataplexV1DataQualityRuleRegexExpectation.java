@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1DataQualityRuleRegexExpectation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regex")
     public String regex;
+
     public GoogleCloudDataplexV1DataQualityRuleRegexExpectation withRegex(String regex) {
         this.regex = regex;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataQualityRuleRegexExpectation(){}
 }

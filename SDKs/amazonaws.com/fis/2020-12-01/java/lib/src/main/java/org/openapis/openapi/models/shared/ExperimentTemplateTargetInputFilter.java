@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExperimentTemplateTargetInputFilter {
     @JsonProperty("path")
     public String path;
+
     public ExperimentTemplateTargetInputFilter withPath(String path) {
         this.path = path;
         return this;
@@ -19,9 +20,14 @@ public class ExperimentTemplateTargetInputFilter {
     
     @JsonProperty("values")
     public String[] values;
+
     public ExperimentTemplateTargetInputFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ExperimentTemplateTargetInputFilter(@JsonProperty("path") String path, @JsonProperty("values") String[] values) {
+        this.path = path;
+        this.values = values;
+  }
 }

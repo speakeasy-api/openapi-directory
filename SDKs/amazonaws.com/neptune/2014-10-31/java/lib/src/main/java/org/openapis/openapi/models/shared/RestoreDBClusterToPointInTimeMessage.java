@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class RestoreDBClusterToPointInTimeMessage {
     
     public String dbClusterIdentifier;
+
     public RestoreDBClusterToPointInTimeMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -16,6 +18,7 @@ public class RestoreDBClusterToPointInTimeMessage {
     
     
     public String dbClusterParameterGroupName;
+
     public RestoreDBClusterToPointInTimeMessage withDBClusterParameterGroupName(String dbClusterParameterGroupName) {
         this.dbClusterParameterGroupName = dbClusterParameterGroupName;
         return this;
@@ -23,6 +26,7 @@ public class RestoreDBClusterToPointInTimeMessage {
     
     
     public String dbSubnetGroupName;
+
     public RestoreDBClusterToPointInTimeMessage withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -30,6 +34,7 @@ public class RestoreDBClusterToPointInTimeMessage {
     
     
     public Boolean deletionProtection;
+
     public RestoreDBClusterToPointInTimeMessage withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -37,6 +42,7 @@ public class RestoreDBClusterToPointInTimeMessage {
     
     
     public String[] enableCloudwatchLogsExports;
+
     public RestoreDBClusterToPointInTimeMessage withEnableCloudwatchLogsExports(String[] enableCloudwatchLogsExports) {
         this.enableCloudwatchLogsExports = enableCloudwatchLogsExports;
         return this;
@@ -44,6 +50,7 @@ public class RestoreDBClusterToPointInTimeMessage {
     
     
     public Boolean enableIAMDatabaseAuthentication;
+
     public RestoreDBClusterToPointInTimeMessage withEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
         this.enableIAMDatabaseAuthentication = enableIAMDatabaseAuthentication;
         return this;
@@ -51,6 +58,7 @@ public class RestoreDBClusterToPointInTimeMessage {
     
     
     public String kmsKeyId;
+
     public RestoreDBClusterToPointInTimeMessage withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -58,6 +66,7 @@ public class RestoreDBClusterToPointInTimeMessage {
     
     
     public String optionGroupName;
+
     public RestoreDBClusterToPointInTimeMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -65,6 +74,7 @@ public class RestoreDBClusterToPointInTimeMessage {
     
     
     public Long port;
+
     public RestoreDBClusterToPointInTimeMessage withPort(Long port) {
         this.port = port;
         return this;
@@ -72,6 +82,7 @@ public class RestoreDBClusterToPointInTimeMessage {
     
     
     public OffsetDateTime restoreToTime;
+
     public RestoreDBClusterToPointInTimeMessage withRestoreToTime(OffsetDateTime restoreToTime) {
         this.restoreToTime = restoreToTime;
         return this;
@@ -79,6 +90,7 @@ public class RestoreDBClusterToPointInTimeMessage {
     
     
     public String restoreType;
+
     public RestoreDBClusterToPointInTimeMessage withRestoreType(String restoreType) {
         this.restoreType = restoreType;
         return this;
@@ -89,6 +101,7 @@ public class RestoreDBClusterToPointInTimeMessage {
      */
     
     public ServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration;
+
     public RestoreDBClusterToPointInTimeMessage withServerlessV2ScalingConfiguration(ServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration) {
         this.serverlessV2ScalingConfiguration = serverlessV2ScalingConfiguration;
         return this;
@@ -96,6 +109,7 @@ public class RestoreDBClusterToPointInTimeMessage {
     
     
     public String sourceDBClusterIdentifier;
+
     public RestoreDBClusterToPointInTimeMessage withSourceDBClusterIdentifier(String sourceDBClusterIdentifier) {
         this.sourceDBClusterIdentifier = sourceDBClusterIdentifier;
         return this;
@@ -103,6 +117,7 @@ public class RestoreDBClusterToPointInTimeMessage {
     
     
     public TagList[] tags;
+
     public RestoreDBClusterToPointInTimeMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -110,6 +125,7 @@ public class RestoreDBClusterToPointInTimeMessage {
     
     
     public Boolean useLatestRestorableTime;
+
     public RestoreDBClusterToPointInTimeMessage withUseLatestRestorableTime(Boolean useLatestRestorableTime) {
         this.useLatestRestorableTime = useLatestRestorableTime;
         return this;
@@ -117,9 +133,14 @@ public class RestoreDBClusterToPointInTimeMessage {
     
     
     public String[] vpcSecurityGroupIds;
+
     public RestoreDBClusterToPointInTimeMessage withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public RestoreDBClusterToPointInTimeMessage(@JsonProperty("DBClusterIdentifier") String dbClusterIdentifier, @JsonProperty("SourceDBClusterIdentifier") String sourceDBClusterIdentifier) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        this.sourceDBClusterIdentifier = sourceDBClusterIdentifier;
+  }
 }

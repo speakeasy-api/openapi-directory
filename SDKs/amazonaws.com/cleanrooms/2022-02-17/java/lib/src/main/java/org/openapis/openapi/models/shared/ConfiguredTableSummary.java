@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ConfiguredTableSummary {
     @JsonProperty("analysisMethod")
     public AnalysisMethodEnum analysisMethod;
+
     public ConfiguredTableSummary withAnalysisMethod(AnalysisMethodEnum analysisMethod) {
         this.analysisMethod = analysisMethod;
         return this;
@@ -24,6 +25,7 @@ public class ConfiguredTableSummary {
     
     @JsonProperty("analysisRuleTypes")
     public ConfiguredTableAnalysisRuleTypeEnum[] analysisRuleTypes;
+
     public ConfiguredTableSummary withAnalysisRuleTypes(ConfiguredTableAnalysisRuleTypeEnum[] analysisRuleTypes) {
         this.analysisRuleTypes = analysisRuleTypes;
         return this;
@@ -31,6 +33,7 @@ public class ConfiguredTableSummary {
     
     @JsonProperty("arn")
     public String arn;
+
     public ConfiguredTableSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -40,6 +43,7 @@ public class ConfiguredTableSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public ConfiguredTableSummary withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -47,6 +51,7 @@ public class ConfiguredTableSummary {
     
     @JsonProperty("id")
     public String id;
+
     public ConfiguredTableSummary withId(String id) {
         this.id = id;
         return this;
@@ -54,6 +59,7 @@ public class ConfiguredTableSummary {
     
     @JsonProperty("name")
     public String name;
+
     public ConfiguredTableSummary withName(String name) {
         this.name = name;
         return this;
@@ -63,9 +69,19 @@ public class ConfiguredTableSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public ConfiguredTableSummary withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ConfiguredTableSummary(@JsonProperty("analysisMethod") AnalysisMethodEnum analysisMethod, @JsonProperty("analysisRuleTypes") ConfiguredTableAnalysisRuleTypeEnum[] analysisRuleTypes, @JsonProperty("arn") String arn, @JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.analysisMethod = analysisMethod;
+        this.analysisRuleTypes = analysisRuleTypes;
+        this.arn = arn;
+        this.createTime = createTime;
+        this.id = id;
+        this.name = name;
+        this.updateTime = updateTime;
+  }
 }

@@ -46,6 +46,7 @@ public class UpdateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address address;
+
     public UpdateCustomerRequest withAddress(Address address) {
         this.address = address;
         return this;
@@ -59,6 +60,7 @@ public class UpdateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthday")
     public String birthday;
+
     public UpdateCustomerRequest withBirthday(String birthday) {
         this.birthday = birthday;
         return this;
@@ -70,6 +72,7 @@ public class UpdateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     public String companyName;
+
     public UpdateCustomerRequest withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -81,6 +84,7 @@ public class UpdateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_address")
     public String emailAddress;
+
     public UpdateCustomerRequest withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -92,6 +96,7 @@ public class UpdateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family_name")
     public String familyName;
+
     public UpdateCustomerRequest withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -103,6 +108,7 @@ public class UpdateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("given_name")
     public String givenName;
+
     public UpdateCustomerRequest withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -114,6 +120,7 @@ public class UpdateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nickname")
     public String nickname;
+
     public UpdateCustomerRequest withNickname(String nickname) {
         this.nickname = nickname;
         return this;
@@ -125,6 +132,7 @@ public class UpdateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public UpdateCustomerRequest withNote(String note) {
         this.note = note;
         return this;
@@ -136,6 +144,7 @@ public class UpdateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public UpdateCustomerRequest withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -148,6 +157,7 @@ public class UpdateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public UpdateCustomerRequest withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -161,9 +171,11 @@ public class UpdateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public UpdateCustomerRequest withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public UpdateCustomerRequest(){}
 }

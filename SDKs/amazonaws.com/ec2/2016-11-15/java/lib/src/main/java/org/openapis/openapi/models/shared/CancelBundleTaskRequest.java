@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CancelBundleTaskRequest - Contains the parameters for CancelBundleTask.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CancelBundleTaskRequest {
     
     public String bundleId;
+
     public CancelBundleTaskRequest withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -19,9 +20,13 @@ public class CancelBundleTaskRequest {
     
     
     public Boolean dryRun;
+
     public CancelBundleTaskRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public CancelBundleTaskRequest(@JsonProperty("BundleId") String bundleId) {
+        this.bundleId = bundleId;
+  }
 }

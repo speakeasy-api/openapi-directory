@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class UpdateTerminationProtectionOutput {
     
     public String stackId;
+
     public UpdateTerminationProtectionOutput withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public UpdateTerminationProtectionOutput(){}
 }

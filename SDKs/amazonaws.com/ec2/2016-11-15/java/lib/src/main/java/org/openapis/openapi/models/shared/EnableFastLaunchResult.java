@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class EnableFastLaunchResult {
     
     public String imageId;
+
     public EnableFastLaunchResult withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -19,6 +20,7 @@ public class EnableFastLaunchResult {
     
     
     public EnableFastLaunchResultLaunchTemplate launchTemplate;
+
     public EnableFastLaunchResult withLaunchTemplate(EnableFastLaunchResultLaunchTemplate launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
@@ -26,6 +28,7 @@ public class EnableFastLaunchResult {
     
     
     public Long maxParallelLaunches;
+
     public EnableFastLaunchResult withMaxParallelLaunches(Long maxParallelLaunches) {
         this.maxParallelLaunches = maxParallelLaunches;
         return this;
@@ -33,6 +36,7 @@ public class EnableFastLaunchResult {
     
     
     public String ownerId;
+
     public EnableFastLaunchResult withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -40,6 +44,7 @@ public class EnableFastLaunchResult {
     
     
     public EnableFastLaunchResultResourceTypeEnum resourceType;
+
     public EnableFastLaunchResult withResourceType(EnableFastLaunchResultResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -47,6 +52,7 @@ public class EnableFastLaunchResult {
     
     
     public EnableFastLaunchResultSnapshotConfiguration snapshotConfiguration;
+
     public EnableFastLaunchResult withSnapshotConfiguration(EnableFastLaunchResultSnapshotConfiguration snapshotConfiguration) {
         this.snapshotConfiguration = snapshotConfiguration;
         return this;
@@ -54,6 +60,7 @@ public class EnableFastLaunchResult {
     
     
     public EnableFastLaunchResultStateEnum state;
+
     public EnableFastLaunchResult withState(EnableFastLaunchResultStateEnum state) {
         this.state = state;
         return this;
@@ -61,6 +68,7 @@ public class EnableFastLaunchResult {
     
     
     public String stateTransitionReason;
+
     public EnableFastLaunchResult withStateTransitionReason(String stateTransitionReason) {
         this.stateTransitionReason = stateTransitionReason;
         return this;
@@ -68,9 +76,11 @@ public class EnableFastLaunchResult {
     
     
     public OffsetDateTime stateTransitionTime;
+
     public EnableFastLaunchResult withStateTransitionTime(OffsetDateTime stateTransitionTime) {
         this.stateTransitionTime = stateTransitionTime;
         return this;
     }
     
+    public EnableFastLaunchResult(){}
 }

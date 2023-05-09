@@ -15,9 +15,11 @@ public class CreateSubscriptionDefinitionRequestBodyInitialVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subscriptions")
     public org.openapis.openapi.models.shared.Subscription[] subscriptions;
+
     public CreateSubscriptionDefinitionRequestBodyInitialVersion withSubscriptions(org.openapis.openapi.models.shared.Subscription[] subscriptions) {
         this.subscriptions = subscriptions;
         return this;
     }
     
+    public CreateSubscriptionDefinitionRequestBodyInitialVersion(){}
 }

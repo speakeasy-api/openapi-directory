@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBalancePlatformsIdAccountHoldersResponse {
     
     public String contentType;
+
     public GetBalancePlatformsIdAccountHoldersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetBalancePlatformsIdAccountHoldersResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedAccountHoldersResponse paginatedAccountHoldersResponse;
+
     public GetBalancePlatformsIdAccountHoldersResponse withPaginatedAccountHoldersResponse(org.openapis.openapi.models.shared.PaginatedAccountHoldersResponse paginatedAccountHoldersResponse) {
         this.paginatedAccountHoldersResponse = paginatedAccountHoldersResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetBalancePlatformsIdAccountHoldersResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetBalancePlatformsIdAccountHoldersResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class GetBalancePlatformsIdAccountHoldersResponse {
     
     
     public Integer statusCode;
+
     public GetBalancePlatformsIdAccountHoldersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetBalancePlatformsIdAccountHoldersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBalancePlatformsIdAccountHoldersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBalancePlatformsIdAccountHoldersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

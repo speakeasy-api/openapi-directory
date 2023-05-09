@@ -15,9 +15,11 @@ public class CreateResourceDefinitionVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public org.openapis.openapi.models.shared.Resource[] resources;
+
     public CreateResourceDefinitionVersionRequestBody withResources(org.openapis.openapi.models.shared.Resource[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public CreateResourceDefinitionVersionRequestBody(){}
 }

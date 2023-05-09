@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartOnDemandAuditTaskResponse {
     
     public String contentType;
+
     public StartOnDemandAuditTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartOnDemandAuditTaskResponse {
      */
     
     public Object internalFailureException;
+
     public StartOnDemandAuditTaskResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class StartOnDemandAuditTaskResponse {
      */
     
     public Object invalidRequestException;
+
     public StartOnDemandAuditTaskResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartOnDemandAuditTaskResponse {
      */
     
     public Object limitExceededException;
+
     public StartOnDemandAuditTaskResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StartOnDemandAuditTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.StartOnDemandAuditTaskResponse startOnDemandAuditTaskResponse;
+
     public StartOnDemandAuditTaskResponse withStartOnDemandAuditTaskResponse(org.openapis.openapi.models.shared.StartOnDemandAuditTaskResponse startOnDemandAuditTaskResponse) {
         this.startOnDemandAuditTaskResponse = startOnDemandAuditTaskResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartOnDemandAuditTaskResponse {
     
     
     public Integer statusCode;
+
     public StartOnDemandAuditTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartOnDemandAuditTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartOnDemandAuditTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class StartOnDemandAuditTaskResponse {
      */
     
     public Object throttlingException;
+
     public StartOnDemandAuditTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public StartOnDemandAuditTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

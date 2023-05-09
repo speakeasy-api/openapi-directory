@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRegistryScanningConfigurationResponse {
     
     public String contentType;
+
     public PutRegistryScanningConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutRegistryScanningConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public PutRegistryScanningConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class PutRegistryScanningConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.PutRegistryScanningConfigurationResponse putRegistryScanningConfigurationResponse;
+
     public PutRegistryScanningConfigurationResponse withPutRegistryScanningConfigurationResponse(org.openapis.openapi.models.shared.PutRegistryScanningConfigurationResponse putRegistryScanningConfigurationResponse) {
         this.putRegistryScanningConfigurationResponse = putRegistryScanningConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class PutRegistryScanningConfigurationResponse {
      */
     
     public Object serverException;
+
     public PutRegistryScanningConfigurationResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -46,6 +51,7 @@ public class PutRegistryScanningConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PutRegistryScanningConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutRegistryScanningConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRegistryScanningConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutRegistryScanningConfigurationResponse {
      */
     
     public Object validationException;
+
     public PutRegistryScanningConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutRegistryScanningConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

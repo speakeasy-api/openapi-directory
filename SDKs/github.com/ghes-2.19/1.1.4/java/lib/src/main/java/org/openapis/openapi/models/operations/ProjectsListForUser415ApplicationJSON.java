@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProjectsListForUser415ApplicationJSON {
     @JsonProperty("documentation_url")
     public String documentationUrl;
+
     public ProjectsListForUser415ApplicationJSON withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -19,9 +20,14 @@ public class ProjectsListForUser415ApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public ProjectsListForUser415ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ProjectsListForUser415ApplicationJSON(@JsonProperty("documentation_url") String documentationUrl, @JsonProperty("message") String message) {
+        this.documentationUrl = documentationUrl;
+        this.message = message;
+  }
 }

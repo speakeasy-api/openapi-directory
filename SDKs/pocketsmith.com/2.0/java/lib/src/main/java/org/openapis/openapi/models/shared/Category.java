@@ -18,6 +18,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("children")
     public Category[] children;
+
     public Category withChildren(Category[] children) {
         this.children = children;
         return this;
@@ -29,6 +30,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colour")
     public String colour;
+
     public Category withColour(String colour) {
         this.colour = colour;
         return this;
@@ -40,6 +42,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Category withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -51,6 +54,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Category withId(Long id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_bill")
     public Boolean isBill;
+
     public Category withIsBill(Boolean isBill) {
         this.isBill = isBill;
         return this;
@@ -73,6 +78,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_transfer")
     public Boolean isTransfer;
+
     public Category withIsTransfer(Boolean isTransfer) {
         this.isTransfer = isTransfer;
         return this;
@@ -84,6 +90,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     public Long parentId;
+
     public Category withParentId(Long parentId) {
         this.parentId = parentId;
         return this;
@@ -95,6 +102,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund_behaviour")
     public CategoryRefundBehaviourEnum refundBehaviour;
+
     public Category withRefundBehaviour(CategoryRefundBehaviourEnum refundBehaviour) {
         this.refundBehaviour = refundBehaviour;
         return this;
@@ -106,6 +114,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roll_up")
     public Boolean rollUp;
+
     public Category withRollUp(Boolean rollUp) {
         this.rollUp = rollUp;
         return this;
@@ -117,6 +126,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Category withTitle(String title) {
         this.title = title;
         return this;
@@ -128,9 +138,11 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Category withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Category(){}
 }

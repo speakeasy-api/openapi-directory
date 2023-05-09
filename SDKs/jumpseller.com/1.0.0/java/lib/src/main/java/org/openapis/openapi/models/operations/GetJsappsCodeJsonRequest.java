@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetJsappsCodeJsonRequest {
@@ -12,6 +13,7 @@ public class GetJsappsCodeJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public GetJsappsCodeJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class GetJsappsCodeJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=code")
     public String code;
+
     public GetJsappsCodeJsonRequest withCode(String code) {
         this.code = code;
         return this;
@@ -32,9 +35,15 @@ public class GetJsappsCodeJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public GetJsappsCodeJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public GetJsappsCodeJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("code") String code, @JsonProperty("login") String login) {
+        this.authtoken = authtoken;
+        this.code = code;
+        this.login = login;
+  }
 }

@@ -15,6 +15,7 @@ public class CollectionErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public CollectionErrorDetail withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class CollectionErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public CollectionErrorDetail withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,6 +33,7 @@ public class CollectionErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CollectionErrorDetail withId(String id) {
         this.id = id;
         return this;
@@ -39,9 +42,11 @@ public class CollectionErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CollectionErrorDetail withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CollectionErrorDetail(){}
 }

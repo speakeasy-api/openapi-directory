@@ -22,6 +22,7 @@ public class PayoutScheduleResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("nextScheduledPayout")
     public OffsetDateTime nextScheduledPayout;
+
     public PayoutScheduleResponse withNextScheduledPayout(OffsetDateTime nextScheduledPayout) {
         this.nextScheduledPayout = nextScheduledPayout;
         return this;
@@ -34,9 +35,11 @@ public class PayoutScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public PayoutScheduleResponseScheduleEnum schedule;
+
     public PayoutScheduleResponse withSchedule(PayoutScheduleResponseScheduleEnum schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public PayoutScheduleResponse(){}
 }

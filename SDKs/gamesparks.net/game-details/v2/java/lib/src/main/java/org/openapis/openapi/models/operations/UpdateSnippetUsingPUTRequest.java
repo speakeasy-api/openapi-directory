@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSnippetUsingPUTRequest {
@@ -12,6 +13,7 @@ public class UpdateSnippetUsingPUTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ManageSnippet manageSnippet;
+
     public UpdateSnippetUsingPUTRequest withManageSnippet(org.openapis.openapi.models.shared.ManageSnippet manageSnippet) {
         this.manageSnippet = manageSnippet;
         return this;
@@ -22,6 +24,7 @@ public class UpdateSnippetUsingPUTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public UpdateSnippetUsingPUTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -32,9 +35,15 @@ public class UpdateSnippetUsingPUTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortCode")
     public String shortCode;
+
     public UpdateSnippetUsingPUTRequest withShortCode(String shortCode) {
         this.shortCode = shortCode;
         return this;
     }
     
+    public UpdateSnippetUsingPUTRequest(@JsonProperty("ManageSnippet") org.openapis.openapi.models.shared.ManageSnippet manageSnippet, @JsonProperty("apiKey") String apiKey, @JsonProperty("shortCode") String shortCode) {
+        this.manageSnippet = manageSnippet;
+        this.apiKey = apiKey;
+        this.shortCode = shortCode;
+  }
 }

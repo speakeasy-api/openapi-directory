@@ -15,6 +15,7 @@ public class ListImportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public ListImportsRequestBody withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -26,6 +27,7 @@ public class ListImportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public ListImportsRequestBody withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -37,6 +39,7 @@ public class ListImportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.ImportFilter[] filters;
+
     public ListImportsRequestBody withFilters(org.openapis.openapi.models.shared.ImportFilter[] filters) {
         this.filters = filters;
         return this;
@@ -48,6 +51,7 @@ public class ListImportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public ListImportsRequestBody withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -59,6 +63,7 @@ public class ListImportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListImportsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -70,6 +75,7 @@ public class ListImportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListImportsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -81,9 +87,11 @@ public class ListImportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public ListImportsRequestBodySortBy sortBy;
+
     public ListImportsRequestBody withSortBy(ListImportsRequestBodySortBy sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public ListImportsRequestBody(){}
 }

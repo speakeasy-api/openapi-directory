@@ -15,6 +15,7 @@ public class RollbackInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollbackDeploymentId")
     public String rollbackDeploymentId;
+
     public RollbackInfo withRollbackDeploymentId(String rollbackDeploymentId) {
         this.rollbackDeploymentId = rollbackDeploymentId;
         return this;
@@ -23,6 +24,7 @@ public class RollbackInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollbackMessage")
     public String rollbackMessage;
+
     public RollbackInfo withRollbackMessage(String rollbackMessage) {
         this.rollbackMessage = rollbackMessage;
         return this;
@@ -31,9 +33,11 @@ public class RollbackInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollbackTriggeringDeploymentId")
     public String rollbackTriggeringDeploymentId;
+
     public RollbackInfo withRollbackTriggeringDeploymentId(String rollbackTriggeringDeploymentId) {
         this.rollbackTriggeringDeploymentId = rollbackTriggeringDeploymentId;
         return this;
     }
     
+    public RollbackInfo(){}
 }

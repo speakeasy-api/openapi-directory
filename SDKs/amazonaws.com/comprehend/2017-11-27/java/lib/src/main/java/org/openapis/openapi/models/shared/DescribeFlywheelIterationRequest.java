@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeFlywheelIterationRequest {
     @JsonProperty("FlywheelArn")
     public String flywheelArn;
+
     public DescribeFlywheelIterationRequest withFlywheelArn(String flywheelArn) {
         this.flywheelArn = flywheelArn;
         return this;
@@ -16,9 +17,14 @@ public class DescribeFlywheelIterationRequest {
     
     @JsonProperty("FlywheelIterationId")
     public String flywheelIterationId;
+
     public DescribeFlywheelIterationRequest withFlywheelIterationId(String flywheelIterationId) {
         this.flywheelIterationId = flywheelIterationId;
         return this;
     }
     
+    public DescribeFlywheelIterationRequest(@JsonProperty("FlywheelArn") String flywheelArn, @JsonProperty("FlywheelIterationId") String flywheelIterationId) {
+        this.flywheelArn = flywheelArn;
+        this.flywheelIterationId = flywheelIterationId;
+  }
 }

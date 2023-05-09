@@ -15,6 +15,7 @@ public class CatalogKafkaSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataPreviewOptions")
     public StreamingDataPreviewOptions dataPreviewOptions;
+
     public CatalogKafkaSource withDataPreviewOptions(StreamingDataPreviewOptions dataPreviewOptions) {
         this.dataPreviewOptions = dataPreviewOptions;
         return this;
@@ -22,6 +23,7 @@ public class CatalogKafkaSource {
     
     @JsonProperty("Database")
     public String database;
+
     public CatalogKafkaSource withDatabase(String database) {
         this.database = database;
         return this;
@@ -30,6 +32,7 @@ public class CatalogKafkaSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetectSchema")
     public Boolean detectSchema;
+
     public CatalogKafkaSource withDetectSchema(Boolean detectSchema) {
         this.detectSchema = detectSchema;
         return this;
@@ -37,6 +40,7 @@ public class CatalogKafkaSource {
     
     @JsonProperty("Name")
     public String name;
+
     public CatalogKafkaSource withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +49,7 @@ public class CatalogKafkaSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamingOptions")
     public KafkaStreamingSourceOptions streamingOptions;
+
     public CatalogKafkaSource withStreamingOptions(KafkaStreamingSourceOptions streamingOptions) {
         this.streamingOptions = streamingOptions;
         return this;
@@ -52,6 +57,7 @@ public class CatalogKafkaSource {
     
     @JsonProperty("Table")
     public String table;
+
     public CatalogKafkaSource withTable(String table) {
         this.table = table;
         return this;
@@ -60,9 +66,15 @@ public class CatalogKafkaSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowSize")
     public Long windowSize;
+
     public CatalogKafkaSource withWindowSize(Long windowSize) {
         this.windowSize = windowSize;
         return this;
     }
     
+    public CatalogKafkaSource(@JsonProperty("Database") String database, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.name = name;
+        this.table = table;
+  }
 }

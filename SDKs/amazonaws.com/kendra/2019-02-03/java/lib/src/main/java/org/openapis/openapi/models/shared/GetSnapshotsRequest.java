@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSnapshotsRequest {
     @JsonProperty("IndexId")
     public String indexId;
+
     public GetSnapshotsRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -18,6 +19,7 @@ public class GetSnapshotsRequest {
     
     @JsonProperty("Interval")
     public IntervalEnum interval;
+
     public GetSnapshotsRequest withInterval(IntervalEnum interval) {
         this.interval = interval;
         return this;
@@ -26,6 +28,7 @@ public class GetSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetSnapshotsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -33,6 +36,7 @@ public class GetSnapshotsRequest {
     
     @JsonProperty("MetricType")
     public MetricTypeEnum metricType;
+
     public GetSnapshotsRequest withMetricType(MetricTypeEnum metricType) {
         this.metricType = metricType;
         return this;
@@ -41,9 +45,15 @@ public class GetSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetSnapshotsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetSnapshotsRequest(@JsonProperty("IndexId") String indexId, @JsonProperty("Interval") IntervalEnum interval, @JsonProperty("MetricType") MetricTypeEnum metricType) {
+        this.indexId = indexId;
+        this.interval = interval;
+        this.metricType = metricType;
+  }
 }

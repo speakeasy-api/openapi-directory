@@ -61,7 +61,7 @@ public class PaymentDetails {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdPaymentDetailsResponse res = new org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdPaymentDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdPaymentDetailsResponse res = new org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdPaymentDetailsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWritePaymentDetailsResponse1 = null;
             obWritePaymentDetailsResponse1 = null;
@@ -69,8 +69,6 @@ public class PaymentDetails {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,7 +143,7 @@ public class PaymentDetails {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetailsResponse res = new org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetailsResponse res = new org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetailsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWritePaymentDetailsResponse1 = null;
             obWritePaymentDetailsResponse1 = null;
@@ -153,8 +151,6 @@ public class PaymentDetails {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -229,7 +225,7 @@ public class PaymentDetails {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsResponse res = new org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsResponse res = new org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWritePaymentDetailsResponse1 = null;
             obWritePaymentDetailsResponse1 = null;
@@ -237,8 +233,6 @@ public class PaymentDetails {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -313,7 +307,7 @@ public class PaymentDetails {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdPaymentDetailsResponse res = new org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdPaymentDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdPaymentDetailsResponse res = new org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdPaymentDetailsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWritePaymentDetailsResponse1 = null;
             obWritePaymentDetailsResponse1 = null;
@@ -321,8 +315,6 @@ public class PaymentDetails {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -397,7 +389,7 @@ public class PaymentDetails {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInternationalPaymentsInternationalPaymentIdPaymentDetailsResponse res = new org.openapis.openapi.models.operations.GetInternationalPaymentsInternationalPaymentIdPaymentDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetInternationalPaymentsInternationalPaymentIdPaymentDetailsResponse res = new org.openapis.openapi.models.operations.GetInternationalPaymentsInternationalPaymentIdPaymentDetailsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWritePaymentDetailsResponse1 = null;
             obWritePaymentDetailsResponse1 = null;
@@ -405,8 +397,6 @@ public class PaymentDetails {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -481,7 +471,7 @@ public class PaymentDetails {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsResponse res = new org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsResponse res = new org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWritePaymentDetailsResponse1 = null;
             obWritePaymentDetailsResponse1 = null;
@@ -489,8 +479,6 @@ public class PaymentDetails {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -565,7 +553,7 @@ public class PaymentDetails {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetailsResponse res = new org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetailsResponse res = new org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetailsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWritePaymentDetailsResponse1 = null;
             obWritePaymentDetailsResponse1 = null;
@@ -573,8 +561,6 @@ public class PaymentDetails {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

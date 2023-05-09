@@ -18,6 +18,7 @@ public class LifecycleConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoDeleteTime")
     public String autoDeleteTime;
+
     public LifecycleConfigInput withAutoDeleteTime(String autoDeleteTime) {
         this.autoDeleteTime = autoDeleteTime;
         return this;
@@ -29,6 +30,7 @@ public class LifecycleConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoDeleteTtl")
     public String autoDeleteTtl;
+
     public LifecycleConfigInput withAutoDeleteTtl(String autoDeleteTtl) {
         this.autoDeleteTtl = autoDeleteTtl;
         return this;
@@ -40,9 +42,11 @@ public class LifecycleConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idleDeleteTtl")
     public String idleDeleteTtl;
+
     public LifecycleConfigInput withIdleDeleteTtl(String idleDeleteTtl) {
         this.idleDeleteTtl = idleDeleteTtl;
         return this;
     }
     
+    public LifecycleConfigInput(){}
 }

@@ -32,6 +32,12 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/CreateExtendedSourceServerRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateExtendedSourceServerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateExtendedSourceServerResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/CreateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/CreateLaunchConfigurationTemplateRequestBodyLicensing.java
+lib/src/main/java/org/openapis/openapi/models/operations/CreateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/CreateLaunchConfigurationTemplateRequestBody.java
+lib/src/main/java/org/openapis/openapi/models/operations/CreateLaunchConfigurationTemplateRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/CreateLaunchConfigurationTemplateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum.java
@@ -41,6 +47,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateReplicationConfig
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteJobRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteJobRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteJobResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/DeleteLaunchConfigurationTemplateRequestBody.java
+lib/src/main/java/org/openapis/openapi/models/operations/DeleteLaunchConfigurationTemplateRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/DeleteLaunchConfigurationTemplateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteRecoveryInstanceRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteRecoveryInstanceRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteRecoveryInstanceResponse.java
@@ -57,6 +66,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/DescribeJobsRequestBody
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeJobsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeJobsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeJobsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/DescribeLaunchConfigurationTemplatesRequestBody.java
+lib/src/main/java/org/openapis/openapi/models/operations/DescribeLaunchConfigurationTemplatesRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/DescribeLaunchConfigurationTemplatesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeRecoveryInstancesRequestBodyFilters.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeRecoveryInstancesRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeRecoveryInstancesRequest.java
@@ -135,6 +147,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateLaunchConfigurati
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateLaunchConfigurationRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateLaunchConfigurationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateLaunchConfigurationResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateLaunchConfigurationTemplateRequestBodyLicensing.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateLaunchConfigurationTemplateRequestBody.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateLaunchConfigurationTemplateRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateLaunchConfigurationTemplateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateReplicationConfigurationRequestBodyDataPlaneRoutingEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateReplicationConfigurationRequestBodyDefaultLargeStagingDiskTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateReplicationConfigurationRequestBodyEbsEncryptionEnum.java
@@ -174,6 +192,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/DataReplicationInitiationSt
 lib/src/main/java/org/openapis/openapi/models/shared/DataReplicationInitiationStepNameEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DataReplicationError.java
 lib/src/main/java/org/openapis/openapi/models/shared/DataReplicationErrorStringEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/CreateLaunchConfigurationTemplateResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/LaunchConfigurationTemplate.java
+lib/src/main/java/org/openapis/openapi/models/shared/TargetInstanceTypeRightSizingMethodEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/Licensing.java
+lib/src/main/java/org/openapis/openapi/models/shared/LaunchDispositionEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReplicationConfigurationTemplate.java
 lib/src/main/java/org/openapis/openapi/models/shared/PITPolicyRule.java
 lib/src/main/java/org/openapis/openapi/models/shared/PITPolicyRuleUnitsEnum.java
@@ -191,6 +214,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/JobTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/JobStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ParticipatingServer.java
 lib/src/main/java/org/openapis/openapi/models/shared/InitiatedByEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/DescribeLaunchConfigurationTemplatesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeRecoveryInstancesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RecoveryInstance.java
 lib/src/main/java/org/openapis/openapi/models/shared/RecoveryInstanceProperties.java
@@ -215,9 +239,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/DescribeReplicationConfigur
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeSourceServersResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetFailbackReplicationConfigurationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/LaunchConfiguration.java
-lib/src/main/java/org/openapis/openapi/models/shared/TargetInstanceTypeRightSizingMethodEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/Licensing.java
-lib/src/main/java/org/openapis/openapi/models/shared/LaunchDispositionEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReplicationConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReplicationConfigurationReplicatedDisk.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum.java
@@ -233,5 +254,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/StartRecoveryRequestSourceS
 lib/src/main/java/org/openapis/openapi/models/shared/StartReplicationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/StopReplicationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TerminateRecoveryInstancesResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/UpdateLaunchConfigurationTemplateResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

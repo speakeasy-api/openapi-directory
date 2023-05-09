@@ -63,12 +63,10 @@ public class AccountMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsResponse res = new org.openapis.openapi.models.operations.GetMerchantsResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsResponse res = new org.openapis.openapi.models.operations.GetMerchantsResponse(contentType, httpRes.statusCode()) {{
             listMerchantResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,12 +115,10 @@ public class AccountMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdResponse(contentType, httpRes.statusCode()) {{
             merchant = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,12 +171,10 @@ public class AccountMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMerchantsResponse res = new org.openapis.openapi.models.operations.PostMerchantsResponse() {{
+        org.openapis.openapi.models.operations.PostMerchantsResponse res = new org.openapis.openapi.models.operations.PostMerchantsResponse(contentType, httpRes.statusCode()) {{
             createMerchantResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -233,12 +227,10 @@ public class AccountMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMerchantsMerchantIdActivateResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdActivateResponse() {{
+        org.openapis.openapi.models.operations.PostMerchantsMerchantIdActivateResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdActivateResponse(contentType, httpRes.statusCode()) {{
             requestActivationResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

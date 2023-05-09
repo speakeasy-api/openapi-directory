@@ -12,9 +12,13 @@ public class DeleteIncidentRecordRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public DeleteIncidentRecordRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteIncidentRecordRequestBody(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

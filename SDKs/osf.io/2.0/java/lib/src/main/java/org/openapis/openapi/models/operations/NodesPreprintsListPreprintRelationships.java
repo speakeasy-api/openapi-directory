@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * NodesPreprintsListPreprintRelationships - URLs to other entities or entity collections that have a relationship to the preprint entity.
@@ -15,6 +15,7 @@ public class NodesPreprintsListPreprintRelationships {
      */
     
     public String bibliographicContributors;
+
     public NodesPreprintsListPreprintRelationships withBibliographicContributors(String bibliographicContributors) {
         this.bibliographicContributors = bibliographicContributors;
         return this;
@@ -25,6 +26,7 @@ public class NodesPreprintsListPreprintRelationships {
      */
     
     public String citation;
+
     public NodesPreprintsListPreprintRelationships withCitation(String citation) {
         this.citation = citation;
         return this;
@@ -35,6 +37,7 @@ public class NodesPreprintsListPreprintRelationships {
      */
     
     public String identifiers;
+
     public NodesPreprintsListPreprintRelationships withIdentifiers(String identifiers) {
         this.identifiers = identifiers;
         return this;
@@ -45,6 +48,7 @@ public class NodesPreprintsListPreprintRelationships {
      */
     
     public String license;
+
     public NodesPreprintsListPreprintRelationships withLicense(String license) {
         this.license = license;
         return this;
@@ -55,6 +59,7 @@ public class NodesPreprintsListPreprintRelationships {
      */
     
     public String node;
+
     public NodesPreprintsListPreprintRelationships withNode(String node) {
         this.node = node;
         return this;
@@ -65,6 +70,7 @@ public class NodesPreprintsListPreprintRelationships {
      */
     
     public String primaryFile;
+
     public NodesPreprintsListPreprintRelationships withPrimaryFile(String primaryFile) {
         this.primaryFile = primaryFile;
         return this;
@@ -75,9 +81,15 @@ public class NodesPreprintsListPreprintRelationships {
      */
     
     public String provider;
+
     public NodesPreprintsListPreprintRelationships withProvider(String provider) {
         this.provider = provider;
         return this;
     }
     
+    public NodesPreprintsListPreprintRelationships(@JsonProperty("node") String node, @JsonProperty("primary_file") String primaryFile, @JsonProperty("provider") String provider) {
+        this.node = node;
+        this.primaryFile = primaryFile;
+        this.provider = provider;
+  }
 }

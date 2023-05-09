@@ -15,6 +15,7 @@ public class BatchImportEvidenceToAssessmentControlError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public BatchImportEvidenceToAssessmentControlError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class BatchImportEvidenceToAssessmentControlError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public BatchImportEvidenceToAssessmentControlError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class BatchImportEvidenceToAssessmentControlError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualEvidence")
     public ManualEvidence manualEvidence;
+
     public BatchImportEvidenceToAssessmentControlError withManualEvidence(ManualEvidence manualEvidence) {
         this.manualEvidence = manualEvidence;
         return this;
     }
     
+    public BatchImportEvidenceToAssessmentControlError(){}
 }

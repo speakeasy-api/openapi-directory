@@ -12,6 +12,7 @@ public class DestinyConfigImagePyramidEntry {
      */
     
     public Float factor;
+
     public DestinyConfigImagePyramidEntry withFactor(Float factor) {
         this.factor = factor;
         return this;
@@ -22,9 +23,11 @@ public class DestinyConfigImagePyramidEntry {
      */
     
     public String name;
+
     public DestinyConfigImagePyramidEntry withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DestinyConfigImagePyramidEntry(){}
 }

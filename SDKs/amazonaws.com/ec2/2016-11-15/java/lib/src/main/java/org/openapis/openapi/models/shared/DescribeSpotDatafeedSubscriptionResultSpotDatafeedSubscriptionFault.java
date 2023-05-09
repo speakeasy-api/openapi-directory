@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault {
     
     public String code;
+
     public DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault
     
     
     public String message;
+
     public DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault(){}
 }

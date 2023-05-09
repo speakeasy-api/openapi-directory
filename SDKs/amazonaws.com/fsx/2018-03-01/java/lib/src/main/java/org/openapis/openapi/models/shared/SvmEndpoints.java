@@ -15,6 +15,7 @@ public class SvmEndpoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Iscsi")
     public SvmEndpoint iscsi;
+
     public SvmEndpoints withIscsi(SvmEndpoint iscsi) {
         this.iscsi = iscsi;
         return this;
@@ -23,6 +24,7 @@ public class SvmEndpoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Management")
     public SvmEndpoint management;
+
     public SvmEndpoints withManagement(SvmEndpoint management) {
         this.management = management;
         return this;
@@ -31,6 +33,7 @@ public class SvmEndpoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Nfs")
     public SvmEndpoint nfs;
+
     public SvmEndpoints withNfs(SvmEndpoint nfs) {
         this.nfs = nfs;
         return this;
@@ -39,9 +42,11 @@ public class SvmEndpoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Smb")
     public SvmEndpoint smb;
+
     public SvmEndpoints withSmb(SvmEndpoint smb) {
         this.smb = smb;
         return this;
     }
     
+    public SvmEndpoints(){}
 }

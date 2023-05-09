@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DevicesRegisterUserForDeviceResponse {
     
     public String contentType;
+
     public DevicesRegisterUserForDeviceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DevicesRegisterUserForDeviceResponse {
     
     
     public Integer statusCode;
+
     public DevicesRegisterUserForDeviceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DevicesRegisterUserForDeviceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DevicesRegisterUserForDeviceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DevicesRegisterUserForDeviceResponse {
      */
     
     public DevicesRegisterUserForDevice200ApplicationJSON devicesRegisterUserForDevice200ApplicationJSONObject;
+
     public DevicesRegisterUserForDeviceResponse withDevicesRegisterUserForDevice200ApplicationJSONObject(DevicesRegisterUserForDevice200ApplicationJSON devicesRegisterUserForDevice200ApplicationJSONObject) {
         this.devicesRegisterUserForDevice200ApplicationJSONObject = devicesRegisterUserForDevice200ApplicationJSONObject;
         return this;
@@ -44,9 +49,14 @@ public class DevicesRegisterUserForDeviceResponse {
      */
     
     public DevicesRegisterUserForDevice404ApplicationJSON devicesRegisterUserForDevice404ApplicationJSONObject;
+
     public DevicesRegisterUserForDeviceResponse withDevicesRegisterUserForDevice404ApplicationJSONObject(DevicesRegisterUserForDevice404ApplicationJSON devicesRegisterUserForDevice404ApplicationJSONObject) {
         this.devicesRegisterUserForDevice404ApplicationJSONObject = devicesRegisterUserForDevice404ApplicationJSONObject;
         return this;
     }
     
+    public DevicesRegisterUserForDeviceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

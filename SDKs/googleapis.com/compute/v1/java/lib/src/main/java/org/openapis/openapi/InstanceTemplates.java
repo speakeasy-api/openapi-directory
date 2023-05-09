@@ -59,11 +59,9 @@ public class InstanceTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstanceTemplatesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeInstanceTemplatesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstanceTemplatesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeInstanceTemplatesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             instanceTemplateAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class InstanceTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstanceTemplatesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeInstanceTemplatesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstanceTemplatesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeInstanceTemplatesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class InstanceTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstanceTemplatesGetResponse res = new org.openapis.openapi.models.operations.ComputeInstanceTemplatesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstanceTemplatesGetResponse res = new org.openapis.openapi.models.operations.ComputeInstanceTemplatesGetResponse(contentType, httpRes.statusCode()) {{
             instanceTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class InstanceTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstanceTemplatesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInstanceTemplatesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstanceTemplatesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInstanceTemplatesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class InstanceTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstanceTemplatesInsertResponse res = new org.openapis.openapi.models.operations.ComputeInstanceTemplatesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstanceTemplatesInsertResponse res = new org.openapis.openapi.models.operations.ComputeInstanceTemplatesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class InstanceTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstanceTemplatesListResponse res = new org.openapis.openapi.models.operations.ComputeInstanceTemplatesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstanceTemplatesListResponse res = new org.openapis.openapi.models.operations.ComputeInstanceTemplatesListResponse(contentType, httpRes.statusCode()) {{
             instanceTemplateList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class InstanceTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstanceTemplatesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInstanceTemplatesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstanceTemplatesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInstanceTemplatesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +373,9 @@ public class InstanceTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstanceTemplatesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeInstanceTemplatesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstanceTemplatesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeInstanceTemplatesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

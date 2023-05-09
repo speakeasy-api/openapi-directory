@@ -12,9 +12,11 @@ public class CheckSuitePreferencePreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_trigger_checks")
     public CheckSuitePreferencePreferencesAutoTriggerChecks[] autoTriggerChecks;
+
     public CheckSuitePreferencePreferences withAutoTriggerChecks(CheckSuitePreferencePreferencesAutoTriggerChecks[] autoTriggerChecks) {
         this.autoTriggerChecks = autoTriggerChecks;
         return this;
     }
     
+    public CheckSuitePreferencePreferences(){}
 }

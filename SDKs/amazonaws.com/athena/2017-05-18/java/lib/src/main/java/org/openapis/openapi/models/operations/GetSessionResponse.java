@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSessionResponse {
     
     public String contentType;
+
     public GetSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSessionResponse getSessionResponse;
+
     public GetSessionResponse withGetSessionResponse(org.openapis.openapi.models.shared.GetSessionResponse getSessionResponse) {
         this.getSessionResponse = getSessionResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetSessionResponse {
      */
     
     public Object internalServerException;
+
     public GetSessionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetSessionResponse {
      */
     
     public Object invalidRequestException;
+
     public GetSessionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetSessionResponse {
     
     
     public Integer statusCode;
+
     public GetSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

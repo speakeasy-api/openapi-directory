@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AuthkeyPatchResponse {
     
     public String contentType;
+
     public AuthkeyPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AuthkeyPatchResponse {
     
     
     public Integer statusCode;
+
     public AuthkeyPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AuthkeyPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AuthkeyPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class AuthkeyPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.InlineResponse202 inlineResponse202;
+
     public AuthkeyPatchResponse withInlineResponse202(org.openapis.openapi.models.shared.InlineResponse202 inlineResponse202) {
         this.inlineResponse202 = inlineResponse202;
         return this;
     }
     
+    public AuthkeyPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

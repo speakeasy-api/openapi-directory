@@ -16,6 +16,7 @@ public class CatalogQuerySet {
      */
     @JsonProperty("attribute_name")
     public String attributeName;
+
     public CatalogQuerySet withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -27,9 +28,14 @@ public class CatalogQuerySet {
      */
     @JsonProperty("attribute_values")
     public String[] attributeValues;
+
     public CatalogQuerySet withAttributeValues(String[] attributeValues) {
         this.attributeValues = attributeValues;
         return this;
     }
     
+    public CatalogQuerySet(@JsonProperty("attribute_name") String attributeName, @JsonProperty("attribute_values") String[] attributeValues) {
+        this.attributeName = attributeName;
+        this.attributeValues = attributeValues;
+  }
 }

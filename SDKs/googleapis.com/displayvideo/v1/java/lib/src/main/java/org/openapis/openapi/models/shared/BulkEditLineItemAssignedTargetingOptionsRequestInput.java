@@ -18,6 +18,7 @@ public class BulkEditLineItemAssignedTargetingOptionsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createRequests")
     public CreateAssignedTargetingOptionsRequestInput[] createRequests;
+
     public BulkEditLineItemAssignedTargetingOptionsRequestInput withCreateRequests(CreateAssignedTargetingOptionsRequestInput[] createRequests) {
         this.createRequests = createRequests;
         return this;
@@ -29,9 +30,11 @@ public class BulkEditLineItemAssignedTargetingOptionsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteRequests")
     public DeleteAssignedTargetingOptionsRequest[] deleteRequests;
+
     public BulkEditLineItemAssignedTargetingOptionsRequestInput withDeleteRequests(DeleteAssignedTargetingOptionsRequest[] deleteRequests) {
         this.deleteRequests = deleteRequests;
         return this;
     }
     
+    public BulkEditLineItemAssignedTargetingOptionsRequestInput(){}
 }

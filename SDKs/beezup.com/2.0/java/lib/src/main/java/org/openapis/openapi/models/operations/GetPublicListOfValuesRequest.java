@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPublicListOfValuesRequest {
@@ -12,6 +13,7 @@ public class GetPublicListOfValuesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String[] acceptLanguage;
+
     public GetPublicListOfValuesRequest withAcceptLanguage(String[] acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -26,6 +28,7 @@ public class GetPublicListOfValuesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetPublicListOfValuesRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -36,9 +39,13 @@ public class GetPublicListOfValuesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=listName")
     public String listName;
+
     public GetPublicListOfValuesRequest withListName(String listName) {
         this.listName = listName;
         return this;
     }
     
+    public GetPublicListOfValuesRequest(@JsonProperty("listName") String listName) {
+        this.listName = listName;
+  }
 }

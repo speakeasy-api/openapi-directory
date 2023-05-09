@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alertConfig")
     public GoogleCloudIntegrationsV1alphaIntegrationAlertConfig[] alertConfig;
+
     public GoogleCloudIntegrationsV1alphaTriggerConfig withAlertConfig(GoogleCloudIntegrationsV1alphaIntegrationAlertConfig[] alertConfig) {
         this.alertConfig = alertConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudSchedulerConfig")
     public GoogleCloudIntegrationsV1alphaCloudSchedulerConfig cloudSchedulerConfig;
+
     public GoogleCloudIntegrationsV1alphaTriggerConfig withCloudSchedulerConfig(GoogleCloudIntegrationsV1alphaCloudSchedulerConfig cloudSchedulerConfig) {
         this.cloudSchedulerConfig = cloudSchedulerConfig;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudIntegrationsV1alphaTriggerConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCatcherId")
     public String errorCatcherId;
+
     public GoogleCloudIntegrationsV1alphaTriggerConfig withErrorCatcherId(String errorCatcherId) {
         this.errorCatcherId = errorCatcherId;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public GoogleCloudIntegrationsV1alphaTriggerConfig withLabel(String label) {
         this.label = label;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextTasksExecutionPolicy")
     public GoogleCloudIntegrationsV1alphaTriggerConfigNextTasksExecutionPolicyEnum nextTasksExecutionPolicy;
+
     public GoogleCloudIntegrationsV1alphaTriggerConfig withNextTasksExecutionPolicy(GoogleCloudIntegrationsV1alphaTriggerConfigNextTasksExecutionPolicyEnum nextTasksExecutionPolicy) {
         this.nextTasksExecutionPolicy = nextTasksExecutionPolicy;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudIntegrationsV1alphaTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public GoogleCloudIntegrationsV1alphaCoordinate position;
+
     public GoogleCloudIntegrationsV1alphaTriggerConfig withPosition(GoogleCloudIntegrationsV1alphaCoordinate position) {
         this.position = position;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudIntegrationsV1alphaTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public GoogleCloudIntegrationsV1alphaTriggerConfig withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudIntegrationsV1alphaTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTasks")
     public GoogleCloudIntegrationsV1alphaNextTask[] startTasks;
+
     public GoogleCloudIntegrationsV1alphaTriggerConfig withStartTasks(GoogleCloudIntegrationsV1alphaNextTask[] startTasks) {
         this.startTasks = startTasks;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudIntegrationsV1alphaTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerId")
     public String triggerId;
+
     public GoogleCloudIntegrationsV1alphaTriggerConfig withTriggerId(String triggerId) {
         this.triggerId = triggerId;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudIntegrationsV1alphaTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerNumber")
     public String triggerNumber;
+
     public GoogleCloudIntegrationsV1alphaTriggerConfig withTriggerNumber(String triggerNumber) {
         this.triggerNumber = triggerNumber;
         return this;
@@ -139,9 +150,11 @@ public class GoogleCloudIntegrationsV1alphaTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerType")
     public GoogleCloudIntegrationsV1alphaTriggerConfigTriggerTypeEnum triggerType;
+
     public GoogleCloudIntegrationsV1alphaTriggerConfig withTriggerType(GoogleCloudIntegrationsV1alphaTriggerConfigTriggerTypeEnum triggerType) {
         this.triggerType = triggerType;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaTriggerConfig(){}
 }

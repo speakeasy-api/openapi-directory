@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class RoadDisruptedStreetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public OffsetDateTime endDate;
+
     public RoadDisruptedStreetsRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -23,9 +25,14 @@ public class RoadDisruptedStreetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public OffsetDateTime startDate;
+
     public RoadDisruptedStreetsRequest withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public RoadDisruptedStreetsRequest(@JsonProperty("endDate") OffsetDateTime endDate, @JsonProperty("startDate") OffsetDateTime startDate) {
+        this.endDate = endDate;
+        this.startDate = startDate;
+  }
 }

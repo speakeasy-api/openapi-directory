@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnRoutesResultRoutes {
     
     public String clientVpnEndpointId;
+
     public DescribeClientVpnRoutesResultRoutes withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeClientVpnRoutesResultRoutes {
     
     
     public String description;
+
     public DescribeClientVpnRoutesResultRoutes withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class DescribeClientVpnRoutesResultRoutes {
     
     
     public String destinationCidr;
+
     public DescribeClientVpnRoutesResultRoutes withDestinationCidr(String destinationCidr) {
         this.destinationCidr = destinationCidr;
         return this;
@@ -33,6 +36,7 @@ public class DescribeClientVpnRoutesResultRoutes {
     
     
     public String origin;
+
     public DescribeClientVpnRoutesResultRoutes withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -40,6 +44,7 @@ public class DescribeClientVpnRoutesResultRoutes {
     
     
     public DescribeClientVpnRoutesResultRoutesStatus status;
+
     public DescribeClientVpnRoutesResultRoutes withStatus(DescribeClientVpnRoutesResultRoutesStatus status) {
         this.status = status;
         return this;
@@ -47,6 +52,7 @@ public class DescribeClientVpnRoutesResultRoutes {
     
     
     public String targetSubnet;
+
     public DescribeClientVpnRoutesResultRoutes withTargetSubnet(String targetSubnet) {
         this.targetSubnet = targetSubnet;
         return this;
@@ -54,9 +60,11 @@ public class DescribeClientVpnRoutesResultRoutes {
     
     
     public String type;
+
     public DescribeClientVpnRoutesResultRoutes withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DescribeClientVpnRoutesResultRoutes(){}
 }

@@ -108,10 +108,8 @@ public class Logs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LogsActionsResponse res = new org.openapis.openapi.models.operations.LogsActionsResponse() {{
+        org.openapis.openapi.models.operations.LogsActionsResponse res = new org.openapis.openapi.models.operations.LogsActionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,11 +144,9 @@ public class Logs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LogsReadResponse res = new org.openapis.openapi.models.operations.LogsReadResponse() {{
+        org.openapis.openapi.models.operations.LogsReadResponse res = new org.openapis.openapi.models.operations.LogsReadResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

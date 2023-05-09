@@ -15,9 +15,13 @@ public class CertificateSiteSeal {
      */
     @JsonProperty("html")
     public String html;
+
     public CertificateSiteSeal withHtml(String html) {
         this.html = html;
         return this;
     }
     
+    public CertificateSiteSeal(@JsonProperty("html") String html) {
+        this.html = html;
+  }
 }

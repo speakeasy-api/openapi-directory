@@ -15,6 +15,7 @@ public class ListServiceQuotasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListServiceQuotasResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListServiceQuotasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quotas")
     public ServiceQuota[] quotas;
+
     public ListServiceQuotasResponse withQuotas(ServiceQuota[] quotas) {
         this.quotas = quotas;
         return this;
     }
     
+    public ListServiceQuotasResponse(){}
 }

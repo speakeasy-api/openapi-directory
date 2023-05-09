@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SqlInstancesFailoverRequest {
@@ -12,6 +13,7 @@ public class SqlInstancesFailoverRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public SqlInstancesFailoverRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class SqlInstancesFailoverRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.InstancesFailoverRequest instancesFailoverRequest;
+
     public SqlInstancesFailoverRequest withInstancesFailoverRequest(org.openapis.openapi.models.shared.InstancesFailoverRequest instancesFailoverRequest) {
         this.instancesFailoverRequest = instancesFailoverRequest;
         return this;
@@ -29,6 +32,7 @@ public class SqlInstancesFailoverRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public SqlInstancesFailoverRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class SqlInstancesFailoverRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public SqlInstancesFailoverRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class SqlInstancesFailoverRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public SqlInstancesFailoverRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class SqlInstancesFailoverRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public SqlInstancesFailoverRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class SqlInstancesFailoverRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instance")
     public String instance;
+
     public SqlInstancesFailoverRequest withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -79,6 +87,7 @@ public class SqlInstancesFailoverRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public SqlInstancesFailoverRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class SqlInstancesFailoverRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public SqlInstancesFailoverRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class SqlInstancesFailoverRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public SqlInstancesFailoverRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class SqlInstancesFailoverRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public SqlInstancesFailoverRequest withProject(String project) {
         this.project = project;
         return this;
@@ -119,6 +131,7 @@ public class SqlInstancesFailoverRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public SqlInstancesFailoverRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class SqlInstancesFailoverRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public SqlInstancesFailoverRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,14 @@ public class SqlInstancesFailoverRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public SqlInstancesFailoverRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public SqlInstancesFailoverRequest(@JsonProperty("instance") String instance, @JsonProperty("project") String project) {
+        this.instance = instance;
+        this.project = project;
+  }
 }

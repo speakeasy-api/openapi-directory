@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConfiguredInvestmentProductsRequest {
@@ -12,6 +13,7 @@ public class GetConfiguredInvestmentProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
     public String pageNumber;
+
     public GetConfiguredInvestmentProductsRequest withPageNumber(String pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -22,6 +24,7 @@ public class GetConfiguredInvestmentProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public String pageSize;
+
     public GetConfiguredInvestmentProductsRequest withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -32,6 +35,7 @@ public class GetConfiguredInvestmentProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public GetConfiguredInvestmentProductsStatusEnum status;
+
     public GetConfiguredInvestmentProductsRequest withStatus(GetConfiguredInvestmentProductsStatusEnum status) {
         this.status = status;
         return this;
@@ -42,9 +46,13 @@ public class GetConfiguredInvestmentProductsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetConfiguredInvestmentProductsRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetConfiguredInvestmentProductsRequest(@JsonProperty("x-api-key") String xApiKey) {
+        this.xApiKey = xApiKey;
+  }
 }

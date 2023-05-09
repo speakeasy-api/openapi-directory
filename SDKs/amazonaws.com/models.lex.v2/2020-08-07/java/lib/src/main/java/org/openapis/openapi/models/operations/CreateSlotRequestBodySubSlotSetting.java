@@ -15,6 +15,7 @@ public class CreateSlotRequestBodySubSlotSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public CreateSlotRequestBodySubSlotSetting withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -23,9 +24,11 @@ public class CreateSlotRequestBodySubSlotSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotSpecifications")
     public java.util.Map<String, org.openapis.openapi.models.shared.Specifications> slotSpecifications;
+
     public CreateSlotRequestBodySubSlotSetting withSlotSpecifications(java.util.Map<String, org.openapis.openapi.models.shared.Specifications> slotSpecifications) {
         this.slotSpecifications = slotSpecifications;
         return this;
     }
     
+    public CreateSlotRequestBodySubSlotSetting(){}
 }

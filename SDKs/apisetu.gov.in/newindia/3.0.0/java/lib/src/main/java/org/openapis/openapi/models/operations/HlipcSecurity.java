@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HlipcSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-APISETU-APIKEY")
     public String apiKey;
+
     public HlipcSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -16,9 +18,14 @@ public class HlipcSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-APISETU-CLIENTID")
     public String clientId;
+
     public HlipcSecurity withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
     
+    public HlipcSecurity(@JsonProperty("apiKey") String apiKey, @JsonProperty("clientId") String clientId) {
+        this.apiKey = apiKey;
+        this.clientId = clientId;
+  }
 }

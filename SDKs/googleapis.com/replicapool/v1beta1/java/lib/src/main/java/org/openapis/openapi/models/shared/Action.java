@@ -18,6 +18,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commands")
     public String[] commands;
+
     public Action withCommands(String[] commands) {
         this.commands = commands;
         return this;
@@ -29,6 +30,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("envVariables")
     public EnvVariable[] envVariables;
+
     public Action withEnvVariables(EnvVariable[] envVariables) {
         this.envVariables = envVariables;
         return this;
@@ -40,9 +42,11 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutMilliSeconds")
     public Integer timeoutMilliSeconds;
+
     public Action withTimeoutMilliSeconds(Integer timeoutMilliSeconds) {
         this.timeoutMilliSeconds = timeoutMilliSeconds;
         return this;
     }
     
+    public Action(){}
 }

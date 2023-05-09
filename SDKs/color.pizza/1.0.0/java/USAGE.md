@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetRequest;
 import org.openapis.openapi.models.operations.GetResponse;
 import org.openapis.openapi.models.shared.PossibleListsEnum;
@@ -15,18 +14,20 @@ public class Application {
                 .build();
 
             GetRequest req = new GetRequest() {{
-                list = "nbsIscc";
+                list = PossibleListsEnum.NBS_ISCC;
                 noduplicates = false;
                 values = "provident";
-            }}            
+            }};            
 
             GetResponse res = sdk.get(req);
 
-            if (res.get200ApplicationJSONObject.isPresent()) {
+            if (res.get200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

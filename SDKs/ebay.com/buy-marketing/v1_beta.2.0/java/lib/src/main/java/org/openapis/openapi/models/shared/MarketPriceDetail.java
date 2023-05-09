@@ -15,6 +15,7 @@ public class MarketPriceDetail {
      */
     
     public String conditionGroup;
+
     public MarketPriceDetail withConditionGroup(String conditionGroup) {
         this.conditionGroup = conditionGroup;
         return this;
@@ -25,6 +26,7 @@ public class MarketPriceDetail {
      */
     
     public String[] conditionIds;
+
     public MarketPriceDetail withConditionIds(String[] conditionIds) {
         this.conditionIds = conditionIds;
         return this;
@@ -35,9 +37,11 @@ public class MarketPriceDetail {
      */
     
     public Amount estimatedStartPrice;
+
     public MarketPriceDetail withEstimatedStartPrice(Amount estimatedStartPrice) {
         this.estimatedStartPrice = estimatedStartPrice;
         return this;
     }
     
+    public MarketPriceDetail(){}
 }

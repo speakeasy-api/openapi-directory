@@ -15,9 +15,11 @@ public class PlaylistStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacyStatus")
     public PlaylistStatusPrivacyStatusEnum privacyStatus;
+
     public PlaylistStatus withPrivacyStatus(PlaylistStatusPrivacyStatusEnum privacyStatus) {
         this.privacyStatus = privacyStatus;
         return this;
     }
     
+    public PlaylistStatus(){}
 }

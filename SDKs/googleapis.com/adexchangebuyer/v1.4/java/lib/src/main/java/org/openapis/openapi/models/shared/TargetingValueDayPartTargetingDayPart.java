@@ -12,6 +12,7 @@ public class TargetingValueDayPartTargetingDayPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfWeek")
     public String dayOfWeek;
+
     public TargetingValueDayPartTargetingDayPart withDayOfWeek(String dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -20,6 +21,7 @@ public class TargetingValueDayPartTargetingDayPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endHour")
     public Integer endHour;
+
     public TargetingValueDayPartTargetingDayPart withEndHour(Integer endHour) {
         this.endHour = endHour;
         return this;
@@ -28,6 +30,7 @@ public class TargetingValueDayPartTargetingDayPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endMinute")
     public Integer endMinute;
+
     public TargetingValueDayPartTargetingDayPart withEndMinute(Integer endMinute) {
         this.endMinute = endMinute;
         return this;
@@ -36,6 +39,7 @@ public class TargetingValueDayPartTargetingDayPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startHour")
     public Integer startHour;
+
     public TargetingValueDayPartTargetingDayPart withStartHour(Integer startHour) {
         this.startHour = startHour;
         return this;
@@ -44,9 +48,11 @@ public class TargetingValueDayPartTargetingDayPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startMinute")
     public Integer startMinute;
+
     public TargetingValueDayPartTargetingDayPart withStartMinute(Integer startMinute) {
         this.startMinute = startMinute;
         return this;
     }
     
+    public TargetingValueDayPartTargetingDayPart(){}
 }

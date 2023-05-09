@@ -15,9 +15,11 @@ public class GetEvidenceFolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidenceFolder")
     public AssessmentEvidenceFolder evidenceFolder;
+
     public GetEvidenceFolderResponse withEvidenceFolder(AssessmentEvidenceFolder evidenceFolder) {
         this.evidenceFolder = evidenceFolder;
         return this;
     }
     
+    public GetEvidenceFolderResponse(){}
 }

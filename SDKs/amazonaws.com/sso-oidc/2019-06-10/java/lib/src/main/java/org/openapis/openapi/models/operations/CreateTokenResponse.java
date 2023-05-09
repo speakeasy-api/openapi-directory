@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTokenResponse {
@@ -12,6 +13,7 @@ public class CreateTokenResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateTokenResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateTokenResponse {
      */
     
     public Object authorizationPendingException;
+
     public CreateTokenResponse withAuthorizationPendingException(Object authorizationPendingException) {
         this.authorizationPendingException = authorizationPendingException;
         return this;
@@ -29,6 +32,7 @@ public class CreateTokenResponse {
     
     
     public String contentType;
+
     public CreateTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTokenResponse createTokenResponse;
+
     public CreateTokenResponse withCreateTokenResponse(org.openapis.openapi.models.shared.CreateTokenResponse createTokenResponse) {
         this.createTokenResponse = createTokenResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateTokenResponse {
      */
     
     public Object expiredTokenException;
+
     public CreateTokenResponse withExpiredTokenException(Object expiredTokenException) {
         this.expiredTokenException = expiredTokenException;
         return this;
@@ -59,6 +65,7 @@ public class CreateTokenResponse {
      */
     
     public Object internalServerException;
+
     public CreateTokenResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -69,6 +76,7 @@ public class CreateTokenResponse {
      */
     
     public Object invalidClientException;
+
     public CreateTokenResponse withInvalidClientException(Object invalidClientException) {
         this.invalidClientException = invalidClientException;
         return this;
@@ -79,6 +87,7 @@ public class CreateTokenResponse {
      */
     
     public Object invalidGrantException;
+
     public CreateTokenResponse withInvalidGrantException(Object invalidGrantException) {
         this.invalidGrantException = invalidGrantException;
         return this;
@@ -89,6 +98,7 @@ public class CreateTokenResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateTokenResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -99,6 +109,7 @@ public class CreateTokenResponse {
      */
     
     public Object invalidScopeException;
+
     public CreateTokenResponse withInvalidScopeException(Object invalidScopeException) {
         this.invalidScopeException = invalidScopeException;
         return this;
@@ -106,6 +117,7 @@ public class CreateTokenResponse {
     
     
     public Integer statusCode;
+
     public CreateTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class CreateTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class CreateTokenResponse {
      */
     
     public Object slowDownException;
+
     public CreateTokenResponse withSlowDownException(Object slowDownException) {
         this.slowDownException = slowDownException;
         return this;
@@ -133,6 +147,7 @@ public class CreateTokenResponse {
      */
     
     public Object unauthorizedClientException;
+
     public CreateTokenResponse withUnauthorizedClientException(Object unauthorizedClientException) {
         this.unauthorizedClientException = unauthorizedClientException;
         return this;
@@ -143,9 +158,14 @@ public class CreateTokenResponse {
      */
     
     public Object unsupportedGrantTypeException;
+
     public CreateTokenResponse withUnsupportedGrantTypeException(Object unsupportedGrantTypeException) {
         this.unsupportedGrantTypeException = unsupportedGrantTypeException;
         return this;
     }
     
+    public CreateTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

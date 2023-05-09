@@ -53,11 +53,9 @@ public class MXL3OutboundFirewall {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkL3FirewallRulesResponse res = new org.openapis.openapi.models.operations.GetNetworkL3FirewallRulesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkL3FirewallRulesResponse res = new org.openapis.openapi.models.operations.GetNetworkL3FirewallRulesResponse(contentType, httpRes.statusCode()) {{
             getNetworkL3FirewallRules200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,11 +93,9 @@ public class MXL3OutboundFirewall {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkL3FirewallRulesResponse res = new org.openapis.openapi.models.operations.UpdateNetworkL3FirewallRulesResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkL3FirewallRulesResponse res = new org.openapis.openapi.models.operations.UpdateNetworkL3FirewallRulesResponse(contentType, httpRes.statusCode()) {{
             updateNetworkL3FirewallRules200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

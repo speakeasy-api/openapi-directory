@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETChartInfoUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETChartInfoUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=refRgdId")
     public Integer refRgdId;
+
     public GETChartInfoUsingGETRequest withRefRgdId(Integer refRgdId) {
         this.refRgdId = refRgdId;
         return this;
@@ -22,6 +24,7 @@ public class GETChartInfoUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
     public Integer speciesTypeKey;
+
     public GETChartInfoUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
         this.speciesTypeKey = speciesTypeKey;
         return this;
@@ -32,9 +35,15 @@ public class GETChartInfoUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=termString")
     public String termString;
+
     public GETChartInfoUsingGETRequest withTermString(String termString) {
         this.termString = termString;
         return this;
     }
     
+    public GETChartInfoUsingGETRequest(@JsonProperty("refRgdId") Integer refRgdId, @JsonProperty("speciesTypeKey") Integer speciesTypeKey, @JsonProperty("termString") String termString) {
+        this.refRgdId = refRgdId;
+        this.speciesTypeKey = speciesTypeKey;
+        this.termString = termString;
+  }
 }

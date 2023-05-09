@@ -15,6 +15,7 @@ public class PostAuthToken200ApplicationJSON {
      */
     @JsonProperty("access_token")
     public String accessToken;
+
     public PostAuthToken200ApplicationJSON withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -25,9 +26,14 @@ public class PostAuthToken200ApplicationJSON {
      */
     @JsonProperty("expires_at")
     public Long expiresAt;
+
     public PostAuthToken200ApplicationJSON withExpiresAt(Long expiresAt) {
         this.expiresAt = expiresAt;
         return this;
     }
     
+    public PostAuthToken200ApplicationJSON(@JsonProperty("access_token") String accessToken, @JsonProperty("expires_at") Long expiresAt) {
+        this.accessToken = accessToken;
+        this.expiresAt = expiresAt;
+  }
 }

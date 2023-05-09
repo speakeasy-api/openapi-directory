@@ -12,9 +12,13 @@ public class ResendSellerLeadRequestRequest {
      */
     @JsonProperty("status")
     public String status;
+
     public ResendSellerLeadRequestRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ResendSellerLeadRequestRequest(@JsonProperty("status") String status) {
+        this.status = status;
+  }
 }

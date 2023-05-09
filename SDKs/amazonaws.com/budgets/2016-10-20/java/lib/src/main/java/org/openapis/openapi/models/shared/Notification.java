@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Notification {
     @JsonProperty("ComparisonOperator")
     public ComparisonOperatorEnum comparisonOperator;
+
     public Notification withComparisonOperator(ComparisonOperatorEnum comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
@@ -22,6 +23,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationState")
     public NotificationStateEnum notificationState;
+
     public Notification withNotificationState(NotificationStateEnum notificationState) {
         this.notificationState = notificationState;
         return this;
@@ -29,6 +31,7 @@ public class Notification {
     
     @JsonProperty("NotificationType")
     public NotificationTypeEnum notificationType;
+
     public Notification withNotificationType(NotificationTypeEnum notificationType) {
         this.notificationType = notificationType;
         return this;
@@ -36,6 +39,7 @@ public class Notification {
     
     @JsonProperty("Threshold")
     public Double threshold;
+
     public Notification withThreshold(Double threshold) {
         this.threshold = threshold;
         return this;
@@ -44,9 +48,15 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThresholdType")
     public ThresholdTypeEnum thresholdType;
+
     public Notification withThresholdType(ThresholdTypeEnum thresholdType) {
         this.thresholdType = thresholdType;
         return this;
     }
     
+    public Notification(@JsonProperty("ComparisonOperator") ComparisonOperatorEnum comparisonOperator, @JsonProperty("NotificationType") NotificationTypeEnum notificationType, @JsonProperty("Threshold") Double threshold) {
+        this.comparisonOperator = comparisonOperator;
+        this.notificationType = notificationType;
+        this.threshold = threshold;
+  }
 }

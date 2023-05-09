@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodePushAcquisitionUpdateCheckRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_version")
     public String appVersion;
+
     public CodePushAcquisitionUpdateCheckRequest withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -16,6 +18,7 @@ public class CodePushAcquisitionUpdateCheckRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_unique_id")
     public String clientUniqueId;
+
     public CodePushAcquisitionUpdateCheckRequest withClientUniqueId(String clientUniqueId) {
         this.clientUniqueId = clientUniqueId;
         return this;
@@ -23,6 +26,7 @@ public class CodePushAcquisitionUpdateCheckRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deployment_key")
     public String deploymentKey;
+
     public CodePushAcquisitionUpdateCheckRequest withDeploymentKey(String deploymentKey) {
         this.deploymentKey = deploymentKey;
         return this;
@@ -30,6 +34,7 @@ public class CodePushAcquisitionUpdateCheckRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_companion")
     public Boolean isCompanion;
+
     public CodePushAcquisitionUpdateCheckRequest withIsCompanion(Boolean isCompanion) {
         this.isCompanion = isCompanion;
         return this;
@@ -37,6 +42,7 @@ public class CodePushAcquisitionUpdateCheckRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label")
     public String label;
+
     public CodePushAcquisitionUpdateCheckRequest withLabel(String label) {
         this.label = label;
         return this;
@@ -44,6 +50,7 @@ public class CodePushAcquisitionUpdateCheckRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=package_hash")
     public String packageHash;
+
     public CodePushAcquisitionUpdateCheckRequest withPackageHash(String packageHash) {
         this.packageHash = packageHash;
         return this;
@@ -51,6 +58,7 @@ public class CodePushAcquisitionUpdateCheckRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=previous_deployment_key")
     public String previousDeploymentKey;
+
     public CodePushAcquisitionUpdateCheckRequest withPreviousDeploymentKey(String previousDeploymentKey) {
         this.previousDeploymentKey = previousDeploymentKey;
         return this;
@@ -58,9 +66,14 @@ public class CodePushAcquisitionUpdateCheckRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=previous_label_or_app_version")
     public String previousLabelOrAppVersion;
+
     public CodePushAcquisitionUpdateCheckRequest withPreviousLabelOrAppVersion(String previousLabelOrAppVersion) {
         this.previousLabelOrAppVersion = previousLabelOrAppVersion;
         return this;
     }
     
+    public CodePushAcquisitionUpdateCheckRequest(@JsonProperty("app_version") String appVersion, @JsonProperty("deployment_key") String deploymentKey) {
+        this.appVersion = appVersion;
+        this.deploymentKey = deploymentKey;
+  }
 }

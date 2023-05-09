@@ -15,9 +15,11 @@ public class SelfManagedKafkaEventSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumerGroupId")
     public String consumerGroupId;
+
     public SelfManagedKafkaEventSourceConfig withConsumerGroupId(String consumerGroupId) {
         this.consumerGroupId = consumerGroupId;
         return this;
     }
     
+    public SelfManagedKafkaEventSourceConfig(){}
 }

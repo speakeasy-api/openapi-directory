@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DataprocProjectsRegionsClustersListResponse {
     
     public String contentType;
+
     public DataprocProjectsRegionsClustersListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DataprocProjectsRegionsClustersListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListClustersResponse listClustersResponse;
+
     public DataprocProjectsRegionsClustersListResponse withListClustersResponse(org.openapis.openapi.models.shared.ListClustersResponse listClustersResponse) {
         this.listClustersResponse = listClustersResponse;
         return this;
@@ -26,6 +29,7 @@ public class DataprocProjectsRegionsClustersListResponse {
     
     
     public Integer statusCode;
+
     public DataprocProjectsRegionsClustersListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DataprocProjectsRegionsClustersListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DataprocProjectsRegionsClustersListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DataprocProjectsRegionsClustersListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

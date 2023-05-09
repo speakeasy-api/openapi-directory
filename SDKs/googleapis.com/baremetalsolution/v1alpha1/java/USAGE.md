@@ -3,26 +3,25 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity;
 import org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest;
 import org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse;
+import org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.SubmitProvisioningConfigRequest;
-import org.openapis.openapi.models.shared.ProvisioningConfig;
-import org.openapis.openapi.models.shared.VolumeConfigProtocolEnum;
-import org.openapis.openapi.models.shared.VolumeConfigTypeEnum;
-import org.openapis.openapi.models.shared.VolumeConfig;
-import org.openapis.openapi.models.shared.NfsExportPermissionsEnum;
-import org.openapis.openapi.models.shared.NfsExport;
+import org.openapis.openapi.models.shared.InstanceConfig;
 import org.openapis.openapi.models.shared.LunRange;
+import org.openapis.openapi.models.shared.NetworkAddress;
+import org.openapis.openapi.models.shared.NetworkConfig;
 import org.openapis.openapi.models.shared.NetworkConfigBandwidthEnum;
 import org.openapis.openapi.models.shared.NetworkConfigServiceCidrEnum;
 import org.openapis.openapi.models.shared.NetworkConfigTypeEnum;
-import org.openapis.openapi.models.shared.NetworkConfig;
+import org.openapis.openapi.models.shared.NfsExport;
+import org.openapis.openapi.models.shared.NfsExportPermissionsEnum;
+import org.openapis.openapi.models.shared.ProvisioningConfig;
+import org.openapis.openapi.models.shared.SubmitProvisioningConfigRequest;
 import org.openapis.openapi.models.shared.VlanAttachment;
-import org.openapis.openapi.models.shared.InstanceConfig;
-import org.openapis.openapi.models.shared.NetworkAddress;
+import org.openapis.openapi.models.shared.VolumeConfig;
+import org.openapis.openapi.models.shared.VolumeConfigProtocolEnum;
+import org.openapis.openapi.models.shared.VolumeConfigTypeEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -31,290 +30,228 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest req = new BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest() {{
-                dollarXgafv = "2";
+            BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest req = new BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest("corrupti", "provident") {{
+                dollarXgafv = XgafvEnum.TWO;
                 submitProvisioningConfigRequest = new SubmitProvisioningConfigRequest() {{
-                    email = "Micheal_Sporer@yahoo.com";
+                    email = "Leda_Stiedemann@hotmail.com";
                     provisioningConfig = new ProvisioningConfig() {{
                         instances = new org.openapis.openapi.models.shared.InstanceConfig[]{{
                             add(new InstanceConfig() {{
                                 clientNetwork = new NetworkAddress() {{
-                                    address = "466 Hunter Fort";
-                                    existingNetworkId = "debitis";
-                                    networkId = "ipsa";
+                                    address = "6342 Bednar Vista";
+                                    existingNetworkId = "tempora";
+                                    networkId = "suscipit";
                                 }};
                                 hyperthreading = false;
-                                id = "delectus";
-                                instanceType = "tempora";
-                                location = "suscipit";
-                                osImage = "molestiae";
+                                id = "7cc8796e-d151-4a05-9fc2-ddf7cc78ca1b";
+                                instanceType = "officia";
+                                location = "occaecati";
+                                osImage = "fugit";
                                 privateNetwork = new NetworkAddress() {{
-                                    address = "854 Huel Via";
-                                    existingNetworkId = "temporibus";
-                                    networkId = "ab";
+                                    address = "9751 Jaren Ford";
+                                    existingNetworkId = "qui";
+                                    networkId = "impedit";
                                 }};
-                                userNote = "quis";
+                                userNote = "cum";
                             }}),
                             add(new InstanceConfig() {{
                                 clientNetwork = new NetworkAddress() {{
-                                    address = "60389 Connelly Trace";
-                                    existingNetworkId = "at";
-                                    networkId = "maiores";
+                                    address = "2510 Lia Crescent";
+                                    existingNetworkId = "iste";
+                                    networkId = "dolor";
                                 }};
                                 hyperthreading = false;
-                                id = "molestiae";
-                                instanceType = "quod";
-                                location = "quod";
-                                osImage = "esse";
+                                id = "96fea759-6eb1-40fa-aa23-52c5955907af";
+                                instanceType = "sapiente";
+                                location = "architecto";
+                                osImage = "mollitia";
                                 privateNetwork = new NetworkAddress() {{
-                                    address = "7617 McCullough Coves";
-                                    existingNetworkId = "deleniti";
-                                    networkId = "hic";
+                                    address = "61965 Harvey Landing";
+                                    existingNetworkId = "molestiae";
+                                    networkId = "velit";
                                 }};
-                                userNote = "optio";
-                            }}),
-                            add(new InstanceConfig() {{
-                                clientNetwork = new NetworkAddress() {{
-                                    address = "1442 Ona River";
-                                    existingNetworkId = "esse";
-                                    networkId = "ipsum";
-                                }};
-                                hyperthreading = false;
-                                id = "excepturi";
-                                instanceType = "aspernatur";
-                                location = "perferendis";
-                                osImage = "ad";
-                                privateNetwork = new NetworkAddress() {{
-                                    address = "1626 Tyra Union";
-                                    existingNetworkId = "fuga";
-                                    networkId = "in";
-                                }};
-                                userNote = "corporis";
+                                userNote = "error";
                             }}),
                         }};
                         networks = new org.openapis.openapi.models.shared.NetworkConfig[]{{
                             add(new NetworkConfig() {{
-                                bandwidth = "BW_2_GBPS";
-                                cidr = "saepe";
-                                id = "quidem";
-                                location = "architecto";
-                                serviceCidr = "SERVICE_CIDR_UNSPECIFIED";
-                                type = "PRIVATE";
-                                userNote = "est";
+                                bandwidth = NetworkConfigBandwidthEnum.BW1_GBPS;
+                                cidr = "vitae";
+                                id = "aa52c3f5-ad01-49da-9ffe-78f097b0074f";
+                                location = "dicta";
+                                serviceCidr = NetworkConfigServiceCidrEnum.DISABLED;
+                                type = NetworkConfigTypeEnum.TYPE_UNSPECIFIED;
+                                userNote = "iusto";
                                 vlanAttachments = new org.openapis.openapi.models.shared.VlanAttachment[]{{
                                     add(new VlanAttachment() {{
-                                        id = "laborum";
-                                        pairingKey = "dolores";
-                                    }}),
-                                    add(new VlanAttachment() {{
-                                        id = "dolorem";
-                                        pairingKey = "corporis";
-                                    }}),
-                                    add(new VlanAttachment() {{
-                                        id = "explicabo";
-                                        pairingKey = "nobis";
-                                    }}),
-                                }};
-                            }}),
-                            add(new NetworkConfig() {{
-                                bandwidth = "BW_1_GBPS";
-                                cidr = "omnis";
-                                id = "nemo";
-                                location = "minima";
-                                serviceCidr = "HIGH_26";
-                                type = "TYPE_UNSPECIFIED";
-                                userNote = "iure";
-                                vlanAttachments = new org.openapis.openapi.models.shared.VlanAttachment[]{{
-                                    add(new VlanAttachment() {{
-                                        id = "doloribus";
-                                        pairingKey = "sapiente";
-                                    }}),
-                                    add(new VlanAttachment() {{
-                                        id = "architecto";
-                                        pairingKey = "mollitia";
-                                    }}),
-                                    add(new VlanAttachment() {{
-                                        id = "dolorem";
-                                        pairingKey = "culpa";
-                                    }}),
-                                }};
-                            }}),
-                            add(new NetworkConfig() {{
-                                bandwidth = "BANDWIDTH_UNSPECIFIED";
-                                cidr = "repellat";
-                                id = "mollitia";
-                                location = "occaecati";
-                                serviceCidr = "DISABLED";
-                                type = "CLIENT";
-                                userNote = "quam";
-                                vlanAttachments = new org.openapis.openapi.models.shared.VlanAttachment[]{{
-                                    add(new VlanAttachment() {{
-                                        id = "velit";
-                                        pairingKey = "error";
-                                    }}),
-                                    add(new VlanAttachment() {{
-                                        id = "quia";
-                                        pairingKey = "quis";
+                                        id = "b5e6e13b-99d4-488e-9e91-e450ad2abd44";
+                                        pairingKey = "qui";
                                     }}),
                                 }};
                             }}),
                         }};
-                        ticketId = "vitae";
+                        ticketId = "aliquid";
                         volumes = new org.openapis.openapi.models.shared.VolumeConfig[]{{
                             add(new VolumeConfig() {{
-                                id = "animi";
-                                location = "enim";
+                                id = "802d502a-94bb-44f6-bc96-9e9a3efa77df";
+                                location = "rerum";
                                 lunRanges = new org.openapis.openapi.models.shared.LunRange[]{{
                                     add(new LunRange() {{
-                                        quantity = 778346;
-                                        sizeGb = 196582;
+                                        quantity = 297437;
+                                        sizeGb = 767024;
                                     }}),
                                 }};
                                 machineIds = new String[]{{
-                                    add("ipsam"),
-                                    add("id"),
-                                    add("possimus"),
+                                    add("ea"),
+                                    add("aliquid"),
+                                    add("laborum"),
+                                    add("accusamus"),
+                                }};
+                                nfsExports = new org.openapis.openapi.models.shared.NfsExport[]{{
+                                    add(new NfsExport() {{
+                                        allowDev = false;
+                                        allowSuid = false;
+                                        cidr = "occaecati";
+                                        machineId = "enim";
+                                        networkId = "accusamus";
+                                        noRootSquash = false;
+                                        permissions = NfsExportPermissionsEnum.READ_WRITE;
+                                    }}),
+                                }};
+                                protocol = VolumeConfigProtocolEnum.PROTOCOL_NFS;
+                                sizeGb = 588465;
+                                snapshotsEnabled = false;
+                                type = VolumeConfigTypeEnum.DISK;
+                                userNote = "id";
+                            }}),
+                            add(new VolumeConfig() {{
+                                id = "88f3a669-9707-44ba-8469-b6e214195989";
+                                location = "accusantium";
+                                lunRanges = new org.openapis.openapi.models.shared.LunRange[]{{
+                                    add(new LunRange() {{
+                                        quantity = 968962;
+                                        sizeGb = 652103;
+                                    }}),
+                                    add(new LunRange() {{
+                                        quantity = 320997;
+                                        sizeGb = 431418;
+                                    }}),
+                                    add(new LunRange() {{
+                                        quantity = 221262;
+                                        sizeGb = 896547;
+                                    }}),
+                                }};
+                                machineIds = new String[]{{
+                                    add("nemo"),
+                                }};
+                                nfsExports = new org.openapis.openapi.models.shared.NfsExport[]{{
+                                    add(new NfsExport() {{
+                                        allowDev = false;
+                                        allowSuid = false;
+                                        cidr = "iure";
+                                        machineId = "doloribus";
+                                        networkId = "debitis";
+                                        noRootSquash = false;
+                                        permissions = NfsExportPermissionsEnum.PERMISSIONS_UNSPECIFIED;
+                                    }}),
+                                }};
+                                protocol = VolumeConfigProtocolEnum.PROTOCOL_NFS;
+                                sizeGb = 537023;
+                                snapshotsEnabled = false;
+                                type = VolumeConfigTypeEnum.DISK;
+                                userNote = "in";
+                            }}),
+                            add(new VolumeConfig() {{
+                                id = "11e5b7fd-2ed0-4289-a1cd-dc692601fb57";
+                                location = "autem";
+                                lunRanges = new org.openapis.openapi.models.shared.LunRange[]{{
+                                    add(new LunRange() {{
+                                        quantity = 50588;
+                                        sizeGb = 866383;
+                                    }}),
+                                    add(new LunRange() {{
+                                        quantity = 365496;
+                                        sizeGb = 975522;
+                                    }}),
+                                    add(new LunRange() {{
+                                        quantity = 16627;
+                                        sizeGb = 855804;
+                                    }}),
+                                }};
+                                machineIds = new String[]{{
                                     add("aut"),
                                 }};
                                 nfsExports = new org.openapis.openapi.models.shared.NfsExport[]{{
                                     add(new NfsExport() {{
                                         allowDev = false;
                                         allowSuid = false;
-                                        cidr = "error";
-                                        machineId = "temporibus";
-                                        networkId = "laborum";
+                                        cidr = "corporis";
+                                        machineId = "hic";
+                                        networkId = "libero";
                                         noRootSquash = false;
-                                        permissions = "PERMISSIONS_UNSPECIFIED";
+                                        permissions = NfsExportPermissionsEnum.READ_WRITE;
+                                    }}),
+                                    add(new NfsExport() {{
+                                        allowDev = false;
+                                        allowSuid = false;
+                                        cidr = "dolores";
+                                        machineId = "quis";
+                                        networkId = "totam";
+                                        noRootSquash = false;
+                                        permissions = NfsExportPermissionsEnum.READ_ONLY;
+                                    }}),
+                                    add(new NfsExport() {{
+                                        allowDev = false;
+                                        allowSuid = false;
+                                        cidr = "eaque";
+                                        machineId = "quis";
+                                        networkId = "nesciunt";
+                                        noRootSquash = false;
+                                        permissions = NfsExportPermissionsEnum.PERMISSIONS_UNSPECIFIED;
+                                    }}),
+                                    add(new NfsExport() {{
+                                        allowDev = false;
+                                        allowSuid = false;
+                                        cidr = "perferendis";
+                                        machineId = "dolores";
+                                        networkId = "minus";
+                                        noRootSquash = false;
+                                        permissions = NfsExportPermissionsEnum.READ_ONLY;
                                     }}),
                                 }};
-                                protocol = "PROTOCOL_NFS";
-                                sizeGb = 976460;
+                                protocol = VolumeConfigProtocolEnum.PROTOCOL_UNSPECIFIED;
+                                sizeGb = 874573;
                                 snapshotsEnabled = false;
-                                type = "DISK";
-                                userNote = "nihil";
-                            }}),
-                            add(new VolumeConfig() {{
-                                id = "praesentium";
-                                location = "voluptatibus";
-                                lunRanges = new org.openapis.openapi.models.shared.LunRange[]{{
-                                    add(new LunRange() {{
-                                        quantity = 604846;
-                                        sizeGb = 451159;
-                                    }}),
-                                }};
-                                machineIds = new String[]{{
-                                    add("perferendis"),
-                                    add("doloremque"),
-                                    add("reprehenderit"),
-                                }};
-                                nfsExports = new org.openapis.openapi.models.shared.NfsExport[]{{
-                                    add(new NfsExport() {{
-                                        allowDev = false;
-                                        allowSuid = false;
-                                        cidr = "maiores";
-                                        machineId = "dicta";
-                                        networkId = "corporis";
-                                        noRootSquash = false;
-                                        permissions = "PERMISSIONS_UNSPECIFIED";
-                                    }}),
-                                    add(new NfsExport() {{
-                                        allowDev = false;
-                                        allowSuid = false;
-                                        cidr = "iusto";
-                                        machineId = "dicta";
-                                        networkId = "harum";
-                                        noRootSquash = false;
-                                        permissions = "PERMISSIONS_UNSPECIFIED";
-                                    }}),
-                                }};
-                                protocol = "PROTOCOL_NFS";
-                                sizeGb = 414263;
-                                snapshotsEnabled = false;
-                                type = "DISK";
-                                userNote = "quae";
-                            }}),
-                            add(new VolumeConfig() {{
-                                id = "ipsum";
-                                location = "quidem";
-                                lunRanges = new org.openapis.openapi.models.shared.LunRange[]{{
-                                    add(new LunRange() {{
-                                        quantity = 566602;
-                                        sizeGb = 865103;
-                                    }}),
-                                    add(new LunRange() {{
-                                        quantity = 265389;
-                                        sizeGb = 508969;
-                                    }}),
-                                    add(new LunRange() {{
-                                        quantity = 523248;
-                                        sizeGb = 916723;
-                                    }}),
-                                }};
-                                machineIds = new String[]{{
-                                    add("repudiandae"),
-                                }};
-                                nfsExports = new org.openapis.openapi.models.shared.NfsExport[]{{
-                                    add(new NfsExport() {{
-                                        allowDev = false;
-                                        allowSuid = false;
-                                        cidr = "veritatis";
-                                        machineId = "itaque";
-                                        networkId = "incidunt";
-                                        noRootSquash = false;
-                                        permissions = "PERMISSIONS_UNSPECIFIED";
-                                    }}),
-                                    add(new NfsExport() {{
-                                        allowDev = false;
-                                        allowSuid = false;
-                                        cidr = "consequatur";
-                                        machineId = "est";
-                                        networkId = "quibusdam";
-                                        noRootSquash = false;
-                                        permissions = "PERMISSIONS_UNSPECIFIED";
-                                    }}),
-                                    add(new NfsExport() {{
-                                        allowDev = false;
-                                        allowSuid = false;
-                                        cidr = "deserunt";
-                                        machineId = "distinctio";
-                                        networkId = "quibusdam";
-                                        noRootSquash = false;
-                                        permissions = "PERMISSIONS_UNSPECIFIED";
-                                    }}),
-                                }};
-                                protocol = "PROTOCOL_UNSPECIFIED";
-                                sizeGb = 183191;
-                                snapshotsEnabled = false;
-                                type = "FLASH";
-                                userNote = "cupiditate";
+                                type = VolumeConfigTypeEnum.FLASH;
+                                userNote = "hic";
                             }}),
                         }};
-                    }};
-                }};
-                accessToken = "quos";
-                alt = "json";
-                callback = "magni";
-                fields = "assumenda";
-                key = "ipsam";
-                location = "alias";
-                oauthToken = "fugit";
+                    }};;
+                }};;
+                accessToken = "recusandae";
+                alt = AltEnum.MEDIA;
+                callback = "facilis";
+                fields = "perspiciatis";
+                key = "voluptatem";
+                oauthToken = "porro";
                 prettyPrint = false;
-                project = "dolorum";
-                quotaUser = "excepturi";
-                uploadType = "tempora";
-                uploadProtocol = "facilis";
-            }}            
+                quotaUser = "consequuntur";
+                uploadType = "blanditiis";
+                uploadProtocol = "error";
+            }};            
 
-            BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse res = sdk.projects.baremetalsolutionProjectsLocationsSubmitProvisioningConfig(req, new BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity() {{
+            BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse res = sdk.projects.baremetalsolutionProjectsLocationsSubmitProvisioningConfig(req, new BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity("eaque", "occaecati") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.provisioningConfig.isPresent()) {
+            if (res.provisioningConfig != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

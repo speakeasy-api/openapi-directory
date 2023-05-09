@@ -12,6 +12,7 @@ public class DeleteAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public DeleteAssociationRequest withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -20,6 +21,7 @@ public class DeleteAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public DeleteAssociationRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -28,9 +30,11 @@ public class DeleteAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DeleteAssociationRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteAssociationRequest(){}
 }

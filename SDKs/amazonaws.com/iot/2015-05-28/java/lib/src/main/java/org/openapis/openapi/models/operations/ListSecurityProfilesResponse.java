@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSecurityProfilesResponse {
     
     public String contentType;
+
     public ListSecurityProfilesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSecurityProfilesResponse {
      */
     
     public Object internalFailureException;
+
     public ListSecurityProfilesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListSecurityProfilesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListSecurityProfilesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListSecurityProfilesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSecurityProfilesResponse listSecurityProfilesResponse;
+
     public ListSecurityProfilesResponse withListSecurityProfilesResponse(org.openapis.openapi.models.shared.ListSecurityProfilesResponse listSecurityProfilesResponse) {
         this.listSecurityProfilesResponse = listSecurityProfilesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListSecurityProfilesResponse {
     
     
     public Integer statusCode;
+
     public ListSecurityProfilesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListSecurityProfilesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSecurityProfilesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListSecurityProfilesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSecurityProfilesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListSecurityProfilesResponse {
      */
     
     public Object throttlingException;
+
     public ListSecurityProfilesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListSecurityProfilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

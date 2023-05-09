@@ -59,12 +59,10 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateResponse res = new org.openapis.openapi.models.operations.CreateResponse() {{
+        org.openapis.openapi.models.operations.CreateResponse res = new org.openapis.openapi.models.operations.CreateResponse(contentType, httpRes.statusCode()) {{
             token = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -91,10 +89,11 @@ public class Authentication {
      * Delete an auth token.
      * Deletes the auth token provided in Authorization header.
      * Deleting an expired or invalid token will result in 401 Unauthorized error.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteResponse delete() throws Exception {
+    public org.openapis.openapi.models.operations.DeleteResponse delete(org.openapis.openapi.models.operations.DeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth/token");
         
@@ -103,15 +102,14 @@ public class Authentication {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteResponse res = new org.openapis.openapi.models.operations.DeleteResponse() {{
+        org.openapis.openapi.models.operations.DeleteResponse res = new org.openapis.openapi.models.operations.DeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 500) {

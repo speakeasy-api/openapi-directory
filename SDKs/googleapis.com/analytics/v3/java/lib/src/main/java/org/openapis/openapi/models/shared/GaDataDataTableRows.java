@@ -12,9 +12,11 @@ public class GaDataDataTableRows {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("c")
     public GaDataDataTableRowsC[] c;
+
     public GaDataDataTableRows withC(GaDataDataTableRowsC[] c) {
         this.c = c;
         return this;
     }
     
+    public GaDataDataTableRows(){}
 }

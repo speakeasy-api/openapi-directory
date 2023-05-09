@@ -15,6 +15,7 @@ public class Rucer502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Rucer502ApplicationJSONErrorEnum error;
+
     public Rucer502ApplicationJSON withError(Rucer502ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Rucer502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Rucer502ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Rucer502ApplicationJSON withErrorDescription(Rucer502ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Rucer502ApplicationJSON(){}
 }

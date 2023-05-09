@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse {
     
     public String contentType;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse {
     
     
     public Integer statusCode;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse {
      */
     
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSON userSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONObject;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse withUserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONObject(UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSON userSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONObject) {
         this.userSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONObject = userSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONObject;
         return this;
     }
     
+    public UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

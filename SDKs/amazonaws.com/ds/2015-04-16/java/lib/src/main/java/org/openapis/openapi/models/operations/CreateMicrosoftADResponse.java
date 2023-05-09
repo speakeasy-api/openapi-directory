@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMicrosoftADResponse {
@@ -12,6 +13,7 @@ public class CreateMicrosoftADResponse {
      */
     
     public Object clientException;
+
     public CreateMicrosoftADResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class CreateMicrosoftADResponse {
     
     
     public String contentType;
+
     public CreateMicrosoftADResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateMicrosoftADResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMicrosoftADResult createMicrosoftADResult;
+
     public CreateMicrosoftADResponse withCreateMicrosoftADResult(org.openapis.openapi.models.shared.CreateMicrosoftADResult createMicrosoftADResult) {
         this.createMicrosoftADResult = createMicrosoftADResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateMicrosoftADResponse {
      */
     
     public Object directoryLimitExceededException;
+
     public CreateMicrosoftADResponse withDirectoryLimitExceededException(Object directoryLimitExceededException) {
         this.directoryLimitExceededException = directoryLimitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateMicrosoftADResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateMicrosoftADResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateMicrosoftADResponse {
      */
     
     public Object serviceException;
+
     public CreateMicrosoftADResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class CreateMicrosoftADResponse {
     
     
     public Integer statusCode;
+
     public CreateMicrosoftADResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateMicrosoftADResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMicrosoftADResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateMicrosoftADResponse {
      */
     
     public Object unsupportedOperationException;
+
     public CreateMicrosoftADResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public CreateMicrosoftADResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListOrdersRequest {
@@ -12,6 +13,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ListOrdersRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ListOrdersRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_RnB")
     public String fRnB;
+
     public ListOrdersRequest withFRnB(String fRnB) {
         this.fRnB = fRnB;
         return this;
@@ -42,6 +46,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_UtmSource")
     public String fUtmSource;
+
     public ListOrdersRequest withFUtmSource(String fUtmSource) {
         this.fUtmSource = fUtmSource;
         return this;
@@ -52,6 +57,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_affiliateId")
     public String fAffiliateId;
+
     public ListOrdersRequest withFAffiliateId(String fAffiliateId) {
         this.fAffiliateId = fAffiliateId;
         return this;
@@ -65,6 +71,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_authorizedDate")
     public String fAuthorizedDate;
+
     public ListOrdersRequest withFAuthorizedDate(String fAuthorizedDate) {
         this.fAuthorizedDate = fAuthorizedDate;
         return this;
@@ -75,6 +82,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_callCenterOperatorName")
     public String fCallCenterOperatorName;
+
     public ListOrdersRequest withFCallCenterOperatorName(String fCallCenterOperatorName) {
         this.fCallCenterOperatorName = fCallCenterOperatorName;
         return this;
@@ -85,6 +93,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_creationDate")
     public String fCreationDate;
+
     public ListOrdersRequest withFCreationDate(String fCreationDate) {
         this.fCreationDate = fCreationDate;
         return this;
@@ -95,6 +104,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_hasInputInvoice")
     public Boolean fHasInputInvoice;
+
     public ListOrdersRequest withFHasInputInvoice(Boolean fHasInputInvoice) {
         this.fHasInputInvoice = fHasInputInvoice;
         return this;
@@ -108,6 +118,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_invoicedDate")
     public String fInvoicedDate;
+
     public ListOrdersRequest withFInvoicedDate(String fInvoicedDate) {
         this.fInvoicedDate = fInvoicedDate;
         return this;
@@ -118,6 +129,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_isInstore")
     public Boolean fIsInstore;
+
     public ListOrdersRequest withFIsInstore(Boolean fIsInstore) {
         this.fIsInstore = fIsInstore;
         return this;
@@ -128,6 +140,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_paymentNames")
     public String fPaymentNames;
+
     public ListOrdersRequest withFPaymentNames(String fPaymentNames) {
         this.fPaymentNames = fPaymentNames;
         return this;
@@ -138,6 +151,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_salesChannel")
     public String fSalesChannel;
+
     public ListOrdersRequest withFSalesChannel(String fSalesChannel) {
         this.fSalesChannel = fSalesChannel;
         return this;
@@ -148,6 +162,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_sellerNames")
     public String fSellerNames;
+
     public ListOrdersRequest withFSellerNames(String fSellerNames) {
         this.fSellerNames = fSellerNames;
         return this;
@@ -162,6 +177,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_shippingEstimate")
     public String fShippingEstimate;
+
     public ListOrdersRequest withFShippingEstimate(String fShippingEstimate) {
         this.fShippingEstimate = fShippingEstimate;
         return this;
@@ -179,6 +195,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_status")
     public String fStatus;
+
     public ListOrdersRequest withFStatus(String fStatus) {
         this.fStatus = fStatus;
         return this;
@@ -189,6 +206,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=incompleteOrders")
     public Boolean incompleteOrders;
+
     public ListOrdersRequest withIncompleteOrders(Boolean incompleteOrders) {
         this.incompleteOrders = incompleteOrders;
         return this;
@@ -201,6 +219,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public ListOrdersRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -211,6 +230,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public ListOrdersRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -221,6 +241,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public ListOrdersRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -235,6 +256,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public ListOrdersRequest withQ(String q) {
         this.q = q;
         return this;
@@ -245,6 +267,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=salesChannelId")
     public String salesChannelId;
+
     public ListOrdersRequest withSalesChannelId(String salesChannelId) {
         this.salesChannelId = salesChannelId;
         return this;
@@ -261,6 +284,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchField")
     public String searchField;
+
     public ListOrdersRequest withSearchField(String searchField) {
         this.searchField = searchField;
         return this;
@@ -271,9 +295,15 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=utc")
     public Integer utc;
+
     public ListOrdersRequest withUtc(Integer utc) {
         this.utc = utc;
         return this;
     }
     
+    public ListOrdersRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("f_creationDate") String fCreationDate) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.fCreationDate = fCreationDate;
+  }
 }

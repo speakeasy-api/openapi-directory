@@ -18,6 +18,7 @@ public class PermissionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PermissionList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class PermissionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public PermissionList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class PermissionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public Permission[] permissions;
+
     public PermissionList withPermissions(Permission[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public PermissionList(){}
 }

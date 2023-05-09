@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InitiateVaultLockResponse {
     
     public String contentType;
+
     public InitiateVaultLockResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InitiateVaultLockResponse {
      */
     
     public java.util.Map<String, Object> initiateVaultLockOutput;
+
     public InitiateVaultLockResponse withInitiateVaultLockOutput(java.util.Map<String, Object> initiateVaultLockOutput) {
         this.initiateVaultLockOutput = initiateVaultLockOutput;
         return this;
@@ -29,6 +32,7 @@ public class InitiateVaultLockResponse {
      */
     
     public Object invalidParameterValueException;
+
     public InitiateVaultLockResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class InitiateVaultLockResponse {
      */
     
     public Object missingParameterValueException;
+
     public InitiateVaultLockResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class InitiateVaultLockResponse {
      */
     
     public Object resourceNotFoundException;
+
     public InitiateVaultLockResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class InitiateVaultLockResponse {
      */
     
     public Object serviceUnavailableException;
+
     public InitiateVaultLockResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class InitiateVaultLockResponse {
     
     
     public Integer statusCode;
+
     public InitiateVaultLockResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class InitiateVaultLockResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InitiateVaultLockResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public InitiateVaultLockResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

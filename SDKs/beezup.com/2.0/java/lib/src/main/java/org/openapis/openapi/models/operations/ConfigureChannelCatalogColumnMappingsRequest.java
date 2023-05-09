@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureChannelCatalogColumnMappingsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ChannelCatalogColumnMapping[] requestBody;
+
     public ConfigureChannelCatalogColumnMappingsRequest withRequestBody(org.openapis.openapi.models.shared.ChannelCatalogColumnMapping[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class ConfigureChannelCatalogColumnMappingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
     public String channelCatalogId;
+
     public ConfigureChannelCatalogColumnMappingsRequest withChannelCatalogId(String channelCatalogId) {
         this.channelCatalogId = channelCatalogId;
         return this;
     }
     
+    public ConfigureChannelCatalogColumnMappingsRequest(@JsonProperty("RequestBody") org.openapis.openapi.models.shared.ChannelCatalogColumnMapping[] requestBody, @JsonProperty("channelCatalogId") String channelCatalogId) {
+        this.requestBody = requestBody;
+        this.channelCatalogId = channelCatalogId;
+  }
 }

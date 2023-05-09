@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAss
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consolidatedPolicy")
     public AnalyzerOrgPolicy consolidatedPolicy;
+
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAsset withConsolidatedPolicy(AnalyzerOrgPolicy consolidatedPolicy) {
         this.consolidatedPolicy = consolidatedPolicy;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAss
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("governedIamPolicy")
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy governedIamPolicy;
+
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAsset withGovernedIamPolicy(GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy governedIamPolicy) {
         this.governedIamPolicy = governedIamPolicy;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAss
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("governedResource")
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource governedResource;
+
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAsset withGovernedResource(GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource governedResource) {
         this.governedResource = governedResource;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAss
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyBundle")
     public AnalyzerOrgPolicy[] policyBundle;
+
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAsset withPolicyBundle(AnalyzerOrgPolicy[] policyBundle) {
         this.policyBundle = policyBundle;
         return this;
     }
     
+    public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAsset(){}
 }

@@ -52,7 +52,7 @@ public class Estimate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEstimateResponse res = new org.openapis.openapi.models.operations.GetEstimateResponse() {{
+        org.openapis.openapi.models.operations.GetEstimateResponse res = new org.openapis.openapi.models.operations.GetEstimateResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -70,8 +70,6 @@ public class Estimate {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -171,7 +169,7 @@ public class Estimate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEstimateListResponse res = new org.openapis.openapi.models.operations.GetEstimateListResponse() {{
+        org.openapis.openapi.models.operations.GetEstimateListResponse res = new org.openapis.openapi.models.operations.GetEstimateListResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -189,8 +187,6 @@ public class Estimate {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,7 +288,7 @@ public class Estimate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostEstimateJsonResponse res = new org.openapis.openapi.models.operations.PostEstimateJsonResponse() {{
+        org.openapis.openapi.models.operations.PostEstimateJsonResponse res = new org.openapis.openapi.models.operations.PostEstimateJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -310,8 +306,6 @@ public class Estimate {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -413,7 +407,7 @@ public class Estimate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostEstimateRawResponse res = new org.openapis.openapi.models.operations.PostEstimateRawResponse() {{
+        org.openapis.openapi.models.operations.PostEstimateRawResponse res = new org.openapis.openapi.models.operations.PostEstimateRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -431,8 +425,6 @@ public class Estimate {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

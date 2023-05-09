@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReportsReadRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=report_number")
     public String reportNumber;
+
     public ReportsReadRequest withReportNumber(String reportNumber) {
         this.reportNumber = reportNumber;
         return this;
     }
     
+    public ReportsReadRequest(@JsonProperty("report_number") String reportNumber) {
+        this.reportNumber = reportNumber;
+  }
 }

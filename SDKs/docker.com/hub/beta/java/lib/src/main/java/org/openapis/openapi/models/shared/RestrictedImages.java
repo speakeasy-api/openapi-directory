@@ -15,6 +15,7 @@ public class RestrictedImages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_official_images")
     public Boolean allowOfficialImages;
+
     public RestrictedImages withAllowOfficialImages(Boolean allowOfficialImages) {
         this.allowOfficialImages = allowOfficialImages;
         return this;
@@ -26,6 +27,7 @@ public class RestrictedImages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_verified_publishers")
     public Boolean allowVerifiedPublishers;
+
     public RestrictedImages withAllowVerifiedPublishers(Boolean allowVerifiedPublishers) {
         this.allowVerifiedPublishers = allowVerifiedPublishers;
         return this;
@@ -37,9 +39,11 @@ public class RestrictedImages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public RestrictedImages withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public RestrictedImages(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3DetectIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowCancellation")
     public Boolean allowCancellation;
+
     public GoogleCloudDialogflowCxV3DetectIntentResponse withAllowCancellation(Boolean allowCancellation) {
         this.allowCancellation = allowCancellation;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3DetectIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputAudio")
     public String outputAudio;
+
     public GoogleCloudDialogflowCxV3DetectIntentResponse withOutputAudio(String outputAudio) {
         this.outputAudio = outputAudio;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3DetectIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputAudioConfig")
     public GoogleCloudDialogflowCxV3OutputAudioConfig outputAudioConfig;
+
     public GoogleCloudDialogflowCxV3DetectIntentResponse withOutputAudioConfig(GoogleCloudDialogflowCxV3OutputAudioConfig outputAudioConfig) {
         this.outputAudioConfig = outputAudioConfig;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3DetectIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryResult")
     public GoogleCloudDialogflowCxV3QueryResult queryResult;
+
     public GoogleCloudDialogflowCxV3DetectIntentResponse withQueryResult(GoogleCloudDialogflowCxV3QueryResult queryResult) {
         this.queryResult = queryResult;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3DetectIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseId")
     public String responseId;
+
     public GoogleCloudDialogflowCxV3DetectIntentResponse withResponseId(String responseId) {
         this.responseId = responseId;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowCxV3DetectIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseType")
     public GoogleCloudDialogflowCxV3DetectIntentResponseResponseTypeEnum responseType;
+
     public GoogleCloudDialogflowCxV3DetectIntentResponse withResponseType(GoogleCloudDialogflowCxV3DetectIntentResponseResponseTypeEnum responseType) {
         this.responseType = responseType;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3DetectIntentResponse(){}
 }

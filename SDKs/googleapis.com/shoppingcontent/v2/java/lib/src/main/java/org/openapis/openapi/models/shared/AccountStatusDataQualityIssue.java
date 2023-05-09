@@ -12,6 +12,7 @@ public class AccountStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public AccountStatusDataQualityIssue withCountry(String country) {
         this.country = country;
         return this;
@@ -20,6 +21,7 @@ public class AccountStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public AccountStatusDataQualityIssue withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -28,6 +30,7 @@ public class AccountStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public AccountStatusDataQualityIssue withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -36,6 +39,7 @@ public class AccountStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayedValue")
     public String displayedValue;
+
     public AccountStatusDataQualityIssue withDisplayedValue(String displayedValue) {
         this.displayedValue = displayedValue;
         return this;
@@ -44,6 +48,7 @@ public class AccountStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exampleItems")
     public AccountStatusExampleItem[] exampleItems;
+
     public AccountStatusDataQualityIssue withExampleItems(AccountStatusExampleItem[] exampleItems) {
         this.exampleItems = exampleItems;
         return this;
@@ -52,6 +57,7 @@ public class AccountStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AccountStatusDataQualityIssue withId(String id) {
         this.id = id;
         return this;
@@ -60,6 +66,7 @@ public class AccountStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastChecked")
     public String lastChecked;
+
     public AccountStatusDataQualityIssue withLastChecked(String lastChecked) {
         this.lastChecked = lastChecked;
         return this;
@@ -68,6 +75,7 @@ public class AccountStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public AccountStatusDataQualityIssue withLocation(String location) {
         this.location = location;
         return this;
@@ -76,6 +84,7 @@ public class AccountStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numItems")
     public Long numItems;
+
     public AccountStatusDataQualityIssue withNumItems(Long numItems) {
         this.numItems = numItems;
         return this;
@@ -87,6 +96,7 @@ public class AccountStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public String severity;
+
     public AccountStatusDataQualityIssue withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -95,9 +105,11 @@ public class AccountStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedValue")
     public String submittedValue;
+
     public AccountStatusDataQualityIssue withSubmittedValue(String submittedValue) {
         this.submittedValue = submittedValue;
         return this;
     }
     
+    public AccountStatusDataQualityIssue(){}
 }

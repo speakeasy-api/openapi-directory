@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePartitionResponse {
     
     public String contentType;
+
     public DeletePartitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeletePartitionResponse {
      */
     
     public java.util.Map<String, Object> deletePartitionResponse;
+
     public DeletePartitionResponse withDeletePartitionResponse(java.util.Map<String, Object> deletePartitionResponse) {
         this.deletePartitionResponse = deletePartitionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeletePartitionResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeletePartitionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeletePartitionResponse {
      */
     
     public Object internalServiceException;
+
     public DeletePartitionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DeletePartitionResponse {
      */
     
     public Object invalidInputException;
+
     public DeletePartitionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeletePartitionResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeletePartitionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class DeletePartitionResponse {
     
     
     public Integer statusCode;
+
     public DeletePartitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeletePartitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePartitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeletePartitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

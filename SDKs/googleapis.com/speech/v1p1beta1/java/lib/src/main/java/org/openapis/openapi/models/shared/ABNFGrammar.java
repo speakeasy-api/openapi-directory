@@ -15,9 +15,11 @@ public class ABNFGrammar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abnfStrings")
     public String[] abnfStrings;
+
     public ABNFGrammar withAbnfStrings(String[] abnfStrings) {
         this.abnfStrings = abnfStrings;
         return this;
     }
     
+    public ABNFGrammar(){}
 }

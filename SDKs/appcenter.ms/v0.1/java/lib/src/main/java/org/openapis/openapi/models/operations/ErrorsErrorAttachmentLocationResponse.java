@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ErrorsErrorAttachmentLocationResponse {
     
     public String contentType;
+
     public ErrorsErrorAttachmentLocationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ErrorsErrorAttachmentLocationResponse {
      */
     
     public ErrorsErrorAttachmentLocation200ApplicationJSON errorsErrorAttachmentLocation200ApplicationJSONObject;
+
     public ErrorsErrorAttachmentLocationResponse withErrorsErrorAttachmentLocation200ApplicationJSONObject(ErrorsErrorAttachmentLocation200ApplicationJSON errorsErrorAttachmentLocation200ApplicationJSONObject) {
         this.errorsErrorAttachmentLocation200ApplicationJSONObject = errorsErrorAttachmentLocation200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class ErrorsErrorAttachmentLocationResponse {
      */
     
     public ErrorsErrorAttachmentLocationDefaultApplicationJSON errorsErrorAttachmentLocationDefaultApplicationJSONObject;
+
     public ErrorsErrorAttachmentLocationResponse withErrorsErrorAttachmentLocationDefaultApplicationJSONObject(ErrorsErrorAttachmentLocationDefaultApplicationJSON errorsErrorAttachmentLocationDefaultApplicationJSONObject) {
         this.errorsErrorAttachmentLocationDefaultApplicationJSONObject = errorsErrorAttachmentLocationDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class ErrorsErrorAttachmentLocationResponse {
     
     
     public Integer statusCode;
+
     public ErrorsErrorAttachmentLocationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ErrorsErrorAttachmentLocationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ErrorsErrorAttachmentLocationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ErrorsErrorAttachmentLocationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

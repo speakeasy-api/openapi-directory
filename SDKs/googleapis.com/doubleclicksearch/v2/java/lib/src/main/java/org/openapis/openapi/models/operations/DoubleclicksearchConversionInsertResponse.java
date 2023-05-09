@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DoubleclicksearchConversionInsertResponse {
     
     public String contentType;
+
     public DoubleclicksearchConversionInsertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DoubleclicksearchConversionInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.ConversionList conversionList;
+
     public DoubleclicksearchConversionInsertResponse withConversionList(org.openapis.openapi.models.shared.ConversionList conversionList) {
         this.conversionList = conversionList;
         return this;
@@ -26,6 +29,7 @@ public class DoubleclicksearchConversionInsertResponse {
     
     
     public Integer statusCode;
+
     public DoubleclicksearchConversionInsertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DoubleclicksearchConversionInsertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DoubleclicksearchConversionInsertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DoubleclicksearchConversionInsertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

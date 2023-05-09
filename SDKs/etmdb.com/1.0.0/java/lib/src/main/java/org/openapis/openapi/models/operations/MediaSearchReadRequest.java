@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MediaSearchReadRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=movie_title")
     public String movieTitle;
+
     public MediaSearchReadRequest withMovieTitle(String movieTitle) {
         this.movieTitle = movieTitle;
         return this;
     }
     
+    public MediaSearchReadRequest(@JsonProperty("movie_title") String movieTitle) {
+        this.movieTitle = movieTitle;
+  }
 }

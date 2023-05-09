@@ -15,9 +15,11 @@ public class CreateApi200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api")
     public CreateApi200ApplicationJSONApi api;
+
     public CreateApi200ApplicationJSON withApi(CreateApi200ApplicationJSONApi api) {
         this.api = api;
         return this;
     }
     
+    public CreateApi200ApplicationJSON(){}
 }

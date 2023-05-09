@@ -10,8 +10,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * ListWorkflowsTypeEnum - The workflows' type.
  */
 public enum ListWorkflowsTypeEnum {
-    PRIVATE_("PRIVATE"),
-    SERVICE("SERVICE");
+    PRIVATE_("PRIVATE");
 
     @JsonValue
     public final String value;

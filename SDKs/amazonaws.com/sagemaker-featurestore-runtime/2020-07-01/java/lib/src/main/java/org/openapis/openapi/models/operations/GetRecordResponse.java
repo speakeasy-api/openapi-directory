@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRecordResponse {
@@ -12,6 +13,7 @@ public class GetRecordResponse {
      */
     
     public Object accessForbidden;
+
     public GetRecordResponse withAccessForbidden(Object accessForbidden) {
         this.accessForbidden = accessForbidden;
         return this;
@@ -19,6 +21,7 @@ public class GetRecordResponse {
     
     
     public String contentType;
+
     public GetRecordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetRecordResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRecordResponse getRecordResponse;
+
     public GetRecordResponse withGetRecordResponse(org.openapis.openapi.models.shared.GetRecordResponse getRecordResponse) {
         this.getRecordResponse = getRecordResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetRecordResponse {
      */
     
     public Object internalFailure;
+
     public GetRecordResponse withInternalFailure(Object internalFailure) {
         this.internalFailure = internalFailure;
         return this;
@@ -49,6 +54,7 @@ public class GetRecordResponse {
      */
     
     public Object resourceNotFound;
+
     public GetRecordResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -56,6 +62,7 @@ public class GetRecordResponse {
     
     
     public Integer statusCode;
+
     public GetRecordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetRecordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRecordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetRecordResponse {
      */
     
     public Object serviceUnavailable;
+
     public GetRecordResponse withServiceUnavailable(Object serviceUnavailable) {
         this.serviceUnavailable = serviceUnavailable;
         return this;
@@ -83,9 +92,14 @@ public class GetRecordResponse {
      */
     
     public Object validationError;
+
     public GetRecordResponse withValidationError(Object validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public GetRecordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

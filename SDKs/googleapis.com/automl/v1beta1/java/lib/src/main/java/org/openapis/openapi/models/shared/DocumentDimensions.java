@@ -18,6 +18,7 @@ public class DocumentDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Float height;
+
     public DocumentDimensions withHeight(Float height) {
         this.height = height;
         return this;
@@ -29,6 +30,7 @@ public class DocumentDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public DocumentDimensionsUnitEnum unit;
+
     public DocumentDimensions withUnit(DocumentDimensionsUnitEnum unit) {
         this.unit = unit;
         return this;
@@ -40,9 +42,11 @@ public class DocumentDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Float width;
+
     public DocumentDimensions withWidth(Float width) {
         this.width = width;
         return this;
     }
     
+    public DocumentDimensions(){}
 }

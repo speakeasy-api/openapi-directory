@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SystemTemplateFilter {
     @JsonProperty("name")
     public SystemTemplateFilterNameEnum name;
+
     public SystemTemplateFilter withName(SystemTemplateFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class SystemTemplateFilter {
     
     @JsonProperty("value")
     public String[] value;
+
     public SystemTemplateFilter withValue(String[] value) {
         this.value = value;
         return this;
     }
     
+    public SystemTemplateFilter(@JsonProperty("name") SystemTemplateFilterNameEnum name, @JsonProperty("value") String[] value) {
+        this.name = name;
+        this.value = value;
+  }
 }

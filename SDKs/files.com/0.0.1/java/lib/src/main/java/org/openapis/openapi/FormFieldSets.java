@@ -55,10 +55,8 @@ public class FormFieldSets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFormFieldSetsIdResponse res = new org.openapis.openapi.models.operations.DeleteFormFieldSetsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteFormFieldSetsIdResponse res = new org.openapis.openapi.models.operations.DeleteFormFieldSetsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {
@@ -94,11 +92,9 @@ public class FormFieldSets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFormFieldSetsResponse res = new org.openapis.openapi.models.operations.GetFormFieldSetsResponse() {{
+        org.openapis.openapi.models.operations.GetFormFieldSetsResponse res = new org.openapis.openapi.models.operations.GetFormFieldSetsResponse(contentType, httpRes.statusCode()) {{
             formFieldSetEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +131,9 @@ public class FormFieldSets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFormFieldSetsIdResponse res = new org.openapis.openapi.models.operations.GetFormFieldSetsIdResponse() {{
+        org.openapis.openapi.models.operations.GetFormFieldSetsIdResponse res = new org.openapis.openapi.models.operations.GetFormFieldSetsIdResponse(contentType, httpRes.statusCode()) {{
             formFieldSetEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -181,11 +175,9 @@ public class FormFieldSets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchFormFieldSetsIdResponse res = new org.openapis.openapi.models.operations.PatchFormFieldSetsIdResponse() {{
+        org.openapis.openapi.models.operations.PatchFormFieldSetsIdResponse res = new org.openapis.openapi.models.operations.PatchFormFieldSetsIdResponse(contentType, httpRes.statusCode()) {{
             formFieldSetEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -227,11 +219,9 @@ public class FormFieldSets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFormFieldSetsResponse res = new org.openapis.openapi.models.operations.PostFormFieldSetsResponse() {{
+        org.openapis.openapi.models.operations.PostFormFieldSetsResponse res = new org.openapis.openapi.models.operations.PostFormFieldSetsResponse(contentType, httpRes.statusCode()) {{
             formFieldSetEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

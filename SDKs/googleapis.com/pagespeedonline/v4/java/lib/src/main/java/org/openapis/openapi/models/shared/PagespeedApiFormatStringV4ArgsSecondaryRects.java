@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class PagespeedApiFormatStringV4ArgsSecondaryRects {
     
     public Integer height;
+
     public PagespeedApiFormatStringV4ArgsSecondaryRects withHeight(Integer height) {
         this.height = height;
         return this;
@@ -16,6 +17,7 @@ public class PagespeedApiFormatStringV4ArgsSecondaryRects {
     
     
     public Integer left;
+
     public PagespeedApiFormatStringV4ArgsSecondaryRects withLeft(Integer left) {
         this.left = left;
         return this;
@@ -23,6 +25,7 @@ public class PagespeedApiFormatStringV4ArgsSecondaryRects {
     
     
     public Integer top;
+
     public PagespeedApiFormatStringV4ArgsSecondaryRects withTop(Integer top) {
         this.top = top;
         return this;
@@ -30,9 +33,11 @@ public class PagespeedApiFormatStringV4ArgsSecondaryRects {
     
     
     public Integer width;
+
     public PagespeedApiFormatStringV4ArgsSecondaryRects withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public PagespeedApiFormatStringV4ArgsSecondaryRects(){}
 }

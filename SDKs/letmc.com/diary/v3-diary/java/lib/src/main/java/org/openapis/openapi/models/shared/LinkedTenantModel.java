@@ -18,6 +18,7 @@ public class LinkedTenantModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ETag")
     public String eTag;
+
     public LinkedTenantModel withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -29,6 +30,7 @@ public class LinkedTenantModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public LinkedTenantModel withEmail(String email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class LinkedTenantModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Forename")
     public String forename;
+
     public LinkedTenantModel withForename(String forename) {
         this.forename = forename;
         return this;
@@ -51,6 +54,7 @@ public class LinkedTenantModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OID")
     public String oid;
+
     public LinkedTenantModel withOid(String oid) {
         this.oid = oid;
         return this;
@@ -62,6 +66,7 @@ public class LinkedTenantModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumber")
     public String phoneNumber;
+
     public LinkedTenantModel withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -73,6 +78,7 @@ public class LinkedTenantModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Surname")
     public String surname;
+
     public LinkedTenantModel withSurname(String surname) {
         this.surname = surname;
         return this;
@@ -84,9 +90,11 @@ public class LinkedTenantModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public LinkedTenantModel withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public LinkedTenantModel(){}
 }

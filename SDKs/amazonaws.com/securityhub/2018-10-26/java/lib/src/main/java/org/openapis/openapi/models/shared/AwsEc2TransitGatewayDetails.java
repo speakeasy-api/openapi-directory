@@ -15,6 +15,7 @@ public class AwsEc2TransitGatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmazonSideAsn")
     public Long amazonSideAsn;
+
     public AwsEc2TransitGatewayDetails withAmazonSideAsn(Long amazonSideAsn) {
         this.amazonSideAsn = amazonSideAsn;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2TransitGatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationDefaultRouteTableId")
     public String associationDefaultRouteTableId;
+
     public AwsEc2TransitGatewayDetails withAssociationDefaultRouteTableId(String associationDefaultRouteTableId) {
         this.associationDefaultRouteTableId = associationDefaultRouteTableId;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2TransitGatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoAcceptSharedAttachments")
     public String autoAcceptSharedAttachments;
+
     public AwsEc2TransitGatewayDetails withAutoAcceptSharedAttachments(String autoAcceptSharedAttachments) {
         this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2TransitGatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultRouteTableAssociation")
     public String defaultRouteTableAssociation;
+
     public AwsEc2TransitGatewayDetails withDefaultRouteTableAssociation(String defaultRouteTableAssociation) {
         this.defaultRouteTableAssociation = defaultRouteTableAssociation;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2TransitGatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultRouteTablePropagation")
     public String defaultRouteTablePropagation;
+
     public AwsEc2TransitGatewayDetails withDefaultRouteTablePropagation(String defaultRouteTablePropagation) {
         this.defaultRouteTablePropagation = defaultRouteTablePropagation;
         return this;
@@ -55,6 +60,7 @@ public class AwsEc2TransitGatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public AwsEc2TransitGatewayDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +69,7 @@ public class AwsEc2TransitGatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsSupport")
     public String dnsSupport;
+
     public AwsEc2TransitGatewayDetails withDnsSupport(String dnsSupport) {
         this.dnsSupport = dnsSupport;
         return this;
@@ -71,6 +78,7 @@ public class AwsEc2TransitGatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public AwsEc2TransitGatewayDetails withId(String id) {
         this.id = id;
         return this;
@@ -79,6 +87,7 @@ public class AwsEc2TransitGatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MulticastSupport")
     public String multicastSupport;
+
     public AwsEc2TransitGatewayDetails withMulticastSupport(String multicastSupport) {
         this.multicastSupport = multicastSupport;
         return this;
@@ -87,6 +96,7 @@ public class AwsEc2TransitGatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PropagationDefaultRouteTableId")
     public String propagationDefaultRouteTableId;
+
     public AwsEc2TransitGatewayDetails withPropagationDefaultRouteTableId(String propagationDefaultRouteTableId) {
         this.propagationDefaultRouteTableId = propagationDefaultRouteTableId;
         return this;
@@ -95,6 +105,7 @@ public class AwsEc2TransitGatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransitGatewayCidrBlocks")
     public String[] transitGatewayCidrBlocks;
+
     public AwsEc2TransitGatewayDetails withTransitGatewayCidrBlocks(String[] transitGatewayCidrBlocks) {
         this.transitGatewayCidrBlocks = transitGatewayCidrBlocks;
         return this;
@@ -103,9 +114,11 @@ public class AwsEc2TransitGatewayDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpnEcmpSupport")
     public String vpnEcmpSupport;
+
     public AwsEc2TransitGatewayDetails withVpnEcmpSupport(String vpnEcmpSupport) {
         this.vpnEcmpSupport = vpnEcmpSupport;
         return this;
     }
     
+    public AwsEc2TransitGatewayDetails(){}
 }

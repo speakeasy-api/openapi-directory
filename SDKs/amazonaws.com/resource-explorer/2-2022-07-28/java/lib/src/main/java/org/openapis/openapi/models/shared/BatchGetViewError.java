@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetViewError {
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public BatchGetViewError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -19,9 +20,14 @@ public class BatchGetViewError {
     
     @JsonProperty("ViewArn")
     public String viewArn;
+
     public BatchGetViewError withViewArn(String viewArn) {
         this.viewArn = viewArn;
         return this;
     }
     
+    public BatchGetViewError(@JsonProperty("ErrorMessage") String errorMessage, @JsonProperty("ViewArn") String viewArn) {
+        this.errorMessage = errorMessage;
+        this.viewArn = viewArn;
+  }
 }

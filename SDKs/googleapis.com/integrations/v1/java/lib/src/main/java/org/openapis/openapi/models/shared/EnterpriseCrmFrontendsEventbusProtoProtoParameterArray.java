@@ -12,9 +12,11 @@ public class EnterpriseCrmFrontendsEventbusProtoProtoParameterArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protoValues")
     public java.util.Map<String, Object>[] protoValues;
+
     public EnterpriseCrmFrontendsEventbusProtoProtoParameterArray withProtoValues(java.util.Map<String, Object>[] protoValues) {
         this.protoValues = protoValues;
         return this;
     }
     
+    public EnterpriseCrmFrontendsEventbusProtoProtoParameterArray(){}
 }

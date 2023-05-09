@@ -18,6 +18,7 @@ public class GoogleCloudMemcacheV1beta2MaintenancePolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudMemcacheV1beta2MaintenancePolicyInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudMemcacheV1beta2MaintenancePolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weeklyMaintenanceWindow")
     public WeeklyMaintenanceWindow[] weeklyMaintenanceWindow;
+
     public GoogleCloudMemcacheV1beta2MaintenancePolicyInput withWeeklyMaintenanceWindow(WeeklyMaintenanceWindow[] weeklyMaintenanceWindow) {
         this.weeklyMaintenanceWindow = weeklyMaintenanceWindow;
         return this;
     }
     
+    public GoogleCloudMemcacheV1beta2MaintenancePolicyInput(){}
 }

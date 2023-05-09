@@ -15,6 +15,7 @@ public class ControlPanel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterArn")
     public String clusterArn;
+
     public ControlPanel withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -23,6 +24,7 @@ public class ControlPanel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlPanelArn")
     public String controlPanelArn;
+
     public ControlPanel withControlPanelArn(String controlPanelArn) {
         this.controlPanelArn = controlPanelArn;
         return this;
@@ -31,6 +33,7 @@ public class ControlPanel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultControlPanel")
     public Boolean defaultControlPanel;
+
     public ControlPanel withDefaultControlPanel(Boolean defaultControlPanel) {
         this.defaultControlPanel = defaultControlPanel;
         return this;
@@ -39,6 +42,7 @@ public class ControlPanel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ControlPanel withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class ControlPanel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingControlCount")
     public Long routingControlCount;
+
     public ControlPanel withRoutingControlCount(Long routingControlCount) {
         this.routingControlCount = routingControlCount;
         return this;
@@ -55,9 +60,11 @@ public class ControlPanel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusEnum status;
+
     public ControlPanel withStatus(StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ControlPanel(){}
 }

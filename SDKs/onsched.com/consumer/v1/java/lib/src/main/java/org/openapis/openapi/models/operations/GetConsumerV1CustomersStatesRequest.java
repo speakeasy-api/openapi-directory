@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetConsumerV1CustomersStatesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public GetConsumerV1CustomersStatesRequest withCountry(String country) {
         this.country = country;
         return this;
     }
     
+    public GetConsumerV1CustomersStatesRequest(){}
 }

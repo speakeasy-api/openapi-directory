@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StatusCheckPolicy {
     @JsonProperty("checks")
     public StatusCheckPolicyChecks[] checks;
+
     public StatusCheckPolicy withChecks(StatusCheckPolicyChecks[] checks) {
         this.checks = checks;
         return this;
@@ -19,6 +20,7 @@ public class StatusCheckPolicy {
     
     @JsonProperty("contexts")
     public String[] contexts;
+
     public StatusCheckPolicy withContexts(String[] contexts) {
         this.contexts = contexts;
         return this;
@@ -26,6 +28,7 @@ public class StatusCheckPolicy {
     
     @JsonProperty("contexts_url")
     public String contextsUrl;
+
     public StatusCheckPolicy withContextsUrl(String contextsUrl) {
         this.contextsUrl = contextsUrl;
         return this;
@@ -33,6 +36,7 @@ public class StatusCheckPolicy {
     
     @JsonProperty("strict")
     public Boolean strict;
+
     public StatusCheckPolicy withStrict(Boolean strict) {
         this.strict = strict;
         return this;
@@ -40,9 +44,17 @@ public class StatusCheckPolicy {
     
     @JsonProperty("url")
     public String url;
+
     public StatusCheckPolicy withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public StatusCheckPolicy(@JsonProperty("checks") StatusCheckPolicyChecks[] checks, @JsonProperty("contexts") String[] contexts, @JsonProperty("contexts_url") String contextsUrl, @JsonProperty("strict") Boolean strict, @JsonProperty("url") String url) {
+        this.checks = checks;
+        this.contexts = contexts;
+        this.contextsUrl = contextsUrl;
+        this.strict = strict;
+        this.url = url;
+  }
 }

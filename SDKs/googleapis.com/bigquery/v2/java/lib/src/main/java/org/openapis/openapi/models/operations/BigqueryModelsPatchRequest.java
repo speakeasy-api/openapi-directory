@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BigqueryModelsPatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ModelInput modelInput;
+
     public BigqueryModelsPatchRequest withModelInput(org.openapis.openapi.models.shared.ModelInput modelInput) {
         this.modelInput = modelInput;
         return this;
@@ -19,6 +21,7 @@ public class BigqueryModelsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BigqueryModelsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class BigqueryModelsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
     public String datasetId;
+
     public BigqueryModelsPatchRequest withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -39,6 +43,7 @@ public class BigqueryModelsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BigqueryModelsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class BigqueryModelsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BigqueryModelsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +65,7 @@ public class BigqueryModelsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modelId")
     public String modelId;
+
     public BigqueryModelsPatchRequest withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -69,6 +76,7 @@ public class BigqueryModelsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BigqueryModelsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -79,6 +87,7 @@ public class BigqueryModelsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BigqueryModelsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -89,6 +98,7 @@ public class BigqueryModelsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public BigqueryModelsPatchRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -99,6 +109,7 @@ public class BigqueryModelsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BigqueryModelsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -109,9 +120,15 @@ public class BigqueryModelsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public BigqueryModelsPatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public BigqueryModelsPatchRequest(@JsonProperty("datasetId") String datasetId, @JsonProperty("modelId") String modelId, @JsonProperty("projectId") String projectId) {
+        this.datasetId = datasetId;
+        this.modelId = modelId;
+        this.projectId = projectId;
+  }
 }

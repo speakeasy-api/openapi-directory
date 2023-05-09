@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopEventsDetectionJobResponse {
     
     public String contentType;
+
     public StopEventsDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopEventsDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public StopEventsDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StopEventsDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StopEventsDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StopEventsDetectionJobResponse {
      */
     
     public Object jobNotFoundException;
+
     public StopEventsDetectionJobResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopEventsDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public StopEventsDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopEventsDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopEventsDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StopEventsDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StopEventsDetectionJobResponse stopEventsDetectionJobResponse;
+
     public StopEventsDetectionJobResponse withStopEventsDetectionJobResponse(org.openapis.openapi.models.shared.StopEventsDetectionJobResponse stopEventsDetectionJobResponse) {
         this.stopEventsDetectionJobResponse = stopEventsDetectionJobResponse;
         return this;
     }
     
+    public StopEventsDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

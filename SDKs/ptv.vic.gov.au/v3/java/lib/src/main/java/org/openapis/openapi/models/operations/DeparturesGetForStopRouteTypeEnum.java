@@ -10,16 +10,16 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * DeparturesGetForStopRouteTypeEnum - Number identifying transport mode; values returned via RouteTypes API
  */
 public enum DeparturesGetForStopRouteTypeEnum {
-    ZERO("0"),
-    ONE("1"),
-    TWO("2"),
-    THREE("3"),
-    FOUR("4");
+    ZERO(0),
+    ONE(1),
+    TWO(2),
+    THREE(3),
+    FOUR(4);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private DeparturesGetForStopRouteTypeEnum(String value) {
+    private DeparturesGetForStopRouteTypeEnum(Integer value) {
         this.value = value;
     }
 }

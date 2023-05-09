@@ -38,9 +38,9 @@ public class Accounts {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountsBalancesRetrieveResponse accountsBalancesRetrieve(org.openapis.openapi.models.operations.AccountsBalancesRetrieveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveAccountBalancesV2Response retrieveAccountBalancesV2(org.openapis.openapi.models.operations.RetrieveAccountBalancesV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountsBalancesRetrieveRequest.class, baseUrl, "/api/v2/accounts/{id}/balances/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAccountBalancesV2Request.class, baseUrl, "/api/v2/accounts/{id}/balances/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -53,74 +53,80 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountsBalancesRetrieveResponse res = new org.openapis.openapi.models.operations.AccountsBalancesRetrieveResponse() {{
-            accountsBalancesRetrieve400ApplicationJSONObject = null;
-            accountsBalancesRetrieve401ApplicationJSONObject = null;
-            accountsBalancesRetrieve403ApplicationJSONObject = null;
-            accountsBalancesRetrieve404ApplicationJSONObject = null;
-            accountsBalancesRetrieve409ApplicationJSONObject = null;
-            accountsBalancesRetrieve429ApplicationJSONObject = null;
-            accountsBalancesRetrieve500ApplicationJSONObject = null;
-            accountsBalancesRetrieve503ApplicationJSONObject = null;
+        org.openapis.openapi.models.operations.RetrieveAccountBalancesV2Response res = new org.openapis.openapi.models.operations.RetrieveAccountBalancesV2Response(contentType, httpRes.statusCode()) {{
+            retrieveAccountBalancesV2200ApplicationJSONObject = null;
+            retrieveAccountBalancesV2400ApplicationJSONObject = null;
+            retrieveAccountBalancesV2401ApplicationJSONObject = null;
+            retrieveAccountBalancesV2403ApplicationJSONObject = null;
+            retrieveAccountBalancesV2404ApplicationJSONObject = null;
+            retrieveAccountBalancesV2409ApplicationJSONObject = null;
+            retrieveAccountBalancesV2429ApplicationJSONObject = null;
+            retrieveAccountBalancesV2500ApplicationJSONObject = null;
+            retrieveAccountBalancesV2503ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 400) {
+        if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsBalancesRetrieve400ApplicationJSONObject = out;
+                res.retrieveAccountBalancesV2200ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 400) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveAccountBalancesV2400ApplicationJSONObject = out;
             }
         }
         else if (httpRes.statusCode() == 401) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsBalancesRetrieve401ApplicationJSONObject = out;
+                res.retrieveAccountBalancesV2401ApplicationJSONObject = out;
             }
         }
         else if (httpRes.statusCode() == 403) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsBalancesRetrieve403ApplicationJSONObject = out;
+                res.retrieveAccountBalancesV2403ApplicationJSONObject = out;
             }
         }
         else if (httpRes.statusCode() == 404) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsBalancesRetrieve404ApplicationJSONObject = out;
+                res.retrieveAccountBalancesV2404ApplicationJSONObject = out;
             }
         }
         else if (httpRes.statusCode() == 409) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsBalancesRetrieve409ApplicationJSONObject = out;
+                res.retrieveAccountBalancesV2409ApplicationJSONObject = out;
             }
         }
         else if (httpRes.statusCode() == 429) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsBalancesRetrieve429ApplicationJSONObject = out;
+                res.retrieveAccountBalancesV2429ApplicationJSONObject = out;
             }
         }
         else if (httpRes.statusCode() == 500) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsBalancesRetrieve500ApplicationJSONObject = out;
+                res.retrieveAccountBalancesV2500ApplicationJSONObject = out;
             }
         }
         else if (httpRes.statusCode() == 503) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsBalancesRetrieve503ApplicationJSONObject = out;
+                res.retrieveAccountBalancesV2503ApplicationJSONObject = out;
             }
         }
 
@@ -133,9 +139,9 @@ public class Accounts {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountsDetailsRetrieveResponse accountsDetailsRetrieve(org.openapis.openapi.models.operations.AccountsDetailsRetrieveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveAccountDetailsV2Response retrieveAccountDetailsV2(org.openapis.openapi.models.operations.RetrieveAccountDetailsV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountsDetailsRetrieveRequest.class, baseUrl, "/api/v2/accounts/{id}/details/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAccountDetailsV2Request.class, baseUrl, "/api/v2/accounts/{id}/details/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -148,175 +154,80 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountsDetailsRetrieveResponse res = new org.openapis.openapi.models.operations.AccountsDetailsRetrieveResponse() {{
-            accountsDetailsRetrieve400ApplicationJSONObject = null;
-            accountsDetailsRetrieve401ApplicationJSONObject = null;
-            accountsDetailsRetrieve403ApplicationJSONObject = null;
-            accountsDetailsRetrieve404ApplicationJSONObject = null;
-            accountsDetailsRetrieve409ApplicationJSONObject = null;
-            accountsDetailsRetrieve429ApplicationJSONObject = null;
-            accountsDetailsRetrieve500ApplicationJSONObject = null;
-            accountsDetailsRetrieve503ApplicationJSONObject = null;
+        org.openapis.openapi.models.operations.RetrieveAccountDetailsV2Response res = new org.openapis.openapi.models.operations.RetrieveAccountDetailsV2Response(contentType, httpRes.statusCode()) {{
+            retrieveAccountDetailsV2200ApplicationJSONObject = null;
+            retrieveAccountDetailsV2400ApplicationJSONObject = null;
+            retrieveAccountDetailsV2401ApplicationJSONObject = null;
+            retrieveAccountDetailsV2403ApplicationJSONObject = null;
+            retrieveAccountDetailsV2404ApplicationJSONObject = null;
+            retrieveAccountDetailsV2409ApplicationJSONObject = null;
+            retrieveAccountDetailsV2429ApplicationJSONObject = null;
+            retrieveAccountDetailsV2500ApplicationJSONObject = null;
+            retrieveAccountDetailsV2503ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 400) {
+        if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsDetailsRetrieve400ApplicationJSONObject = out;
+                res.retrieveAccountDetailsV2200ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 400) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveAccountDetailsV2400ApplicationJSONObject = out;
             }
         }
         else if (httpRes.statusCode() == 401) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsDetailsRetrieve401ApplicationJSONObject = out;
+                res.retrieveAccountDetailsV2401ApplicationJSONObject = out;
             }
         }
         else if (httpRes.statusCode() == 403) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsDetailsRetrieve403ApplicationJSONObject = out;
+                res.retrieveAccountDetailsV2403ApplicationJSONObject = out;
             }
         }
         else if (httpRes.statusCode() == 404) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsDetailsRetrieve404ApplicationJSONObject = out;
+                res.retrieveAccountDetailsV2404ApplicationJSONObject = out;
             }
         }
         else if (httpRes.statusCode() == 409) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsDetailsRetrieve409ApplicationJSONObject = out;
+                res.retrieveAccountDetailsV2409ApplicationJSONObject = out;
             }
         }
         else if (httpRes.statusCode() == 429) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsDetailsRetrieve429ApplicationJSONObject = out;
+                res.retrieveAccountDetailsV2429ApplicationJSONObject = out;
             }
         }
         else if (httpRes.statusCode() == 500) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsDetailsRetrieve500ApplicationJSONObject = out;
+                res.retrieveAccountDetailsV2500ApplicationJSONObject = out;
             }
         }
         else if (httpRes.statusCode() == 503) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsDetailsRetrieve503ApplicationJSONObject = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Access account transactions. -  - Transactions will be returned in Berlin Group PSD2 format.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.AccountsTransactionsRetrieveResponse accountsTransactionsRetrieve(org.openapis.openapi.models.operations.AccountsTransactionsRetrieveRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountsTransactionsRetrieveRequest.class, baseUrl, "/api/v2/accounts/{id}/transactions/", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountsTransactionsRetrieveRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.AccountsTransactionsRetrieveResponse res = new org.openapis.openapi.models.operations.AccountsTransactionsRetrieveResponse() {{
-            accountsTransactionsRetrieve400ApplicationJSONObject = null;
-            accountsTransactionsRetrieve401ApplicationJSONObject = null;
-            accountsTransactionsRetrieve403ApplicationJSONObject = null;
-            accountsTransactionsRetrieve404ApplicationJSONObject = null;
-            accountsTransactionsRetrieve409ApplicationJSONObject = null;
-            accountsTransactionsRetrieve429ApplicationJSONObject = null;
-            accountsTransactionsRetrieve500ApplicationJSONObject = null;
-            accountsTransactionsRetrieve503ApplicationJSONObject = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 400) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsTransactionsRetrieve400ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 401) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsTransactionsRetrieve401ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 403) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsTransactionsRetrieve403ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 404) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsTransactionsRetrieve404ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 409) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsTransactionsRetrieve409ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 429) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsTransactionsRetrieve429ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 500) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsTransactionsRetrieve500ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 503) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.accountsTransactionsRetrieve503ApplicationJSONObject = out;
+                res.retrieveAccountDetailsV2503ApplicationJSONObject = out;
             }
         }
 
@@ -344,21 +255,20 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveAccountMetadataResponse res = new org.openapis.openapi.models.operations.RetrieveAccountMetadataResponse() {{
-            accountV2 = null;
+        org.openapis.openapi.models.operations.RetrieveAccountMetadataResponse res = new org.openapis.openapi.models.operations.RetrieveAccountMetadataResponse(contentType, httpRes.statusCode()) {{
+            account = null;
             retrieveAccountMetadata401ApplicationJSONObject = null;
             retrieveAccountMetadata403ApplicationJSONObject = null;
             retrieveAccountMetadata404ApplicationJSONObject = null;
+            retrieveAccountMetadata429ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.AccountV2 out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.AccountV2.class);
-                res.accountV2 = out;
+                org.openapis.openapi.models.shared.Account out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Account.class);
+                res.account = out;
             }
         }
         else if (httpRes.statusCode() == 401) {
@@ -380,6 +290,120 @@ public class Accounts {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
                 res.retrieveAccountMetadata404ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveAccountMetadata429ApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Access account transactions. -  - Transactions will be returned in Berlin Group PSD2 format.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.RetrieveAccountTransactionsV22Response retrieveAccountTransactionsV22(org.openapis.openapi.models.operations.RetrieveAccountTransactionsV22Request request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAccountTransactionsV22Request.class, baseUrl, "/api/v2/accounts/{id}/transactions/", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveAccountTransactionsV22Request.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.RetrieveAccountTransactionsV22Response res = new org.openapis.openapi.models.operations.RetrieveAccountTransactionsV22Response(contentType, httpRes.statusCode()) {{
+            retrieveAccountTransactionsV22200ApplicationJSONObject = null;
+            retrieveAccountTransactionsV22400ApplicationJSONObject = null;
+            retrieveAccountTransactionsV22401ApplicationJSONObject = null;
+            retrieveAccountTransactionsV22403ApplicationJSONObject = null;
+            retrieveAccountTransactionsV22404ApplicationJSONObject = null;
+            retrieveAccountTransactionsV22409ApplicationJSONObject = null;
+            retrieveAccountTransactionsV22429ApplicationJSONObject = null;
+            retrieveAccountTransactionsV22500ApplicationJSONObject = null;
+            retrieveAccountTransactionsV22503ApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveAccountTransactionsV22200ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 400) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveAccountTransactionsV22400ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveAccountTransactionsV22401ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 403) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveAccountTransactionsV22403ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 404) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveAccountTransactionsV22404ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 409) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveAccountTransactionsV22409ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveAccountTransactionsV22429ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 500) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveAccountTransactionsV22500ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 503) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveAccountTransactionsV22503ApplicationJSONObject = out;
             }
         }
 

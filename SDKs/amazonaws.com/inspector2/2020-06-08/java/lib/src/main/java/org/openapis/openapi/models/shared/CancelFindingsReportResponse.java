@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelFindingsReportResponse {
     @JsonProperty("reportId")
     public String reportId;
+
     public CancelFindingsReportResponse withReportId(String reportId) {
         this.reportId = reportId;
         return this;
     }
     
+    public CancelFindingsReportResponse(@JsonProperty("reportId") String reportId) {
+        this.reportId = reportId;
+  }
 }

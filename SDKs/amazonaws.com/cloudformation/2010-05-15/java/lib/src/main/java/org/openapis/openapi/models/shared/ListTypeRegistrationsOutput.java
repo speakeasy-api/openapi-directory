@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListTypeRegistrationsOutput {
     
     public String nextToken;
+
     public ListTypeRegistrationsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class ListTypeRegistrationsOutput {
     
     
     public String[] registrationTokenList;
+
     public ListTypeRegistrationsOutput withRegistrationTokenList(String[] registrationTokenList) {
         this.registrationTokenList = registrationTokenList;
         return this;
     }
     
+    public ListTypeRegistrationsOutput(){}
 }

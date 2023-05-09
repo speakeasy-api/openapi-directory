@@ -15,9 +15,11 @@ public class GetKnowledgeBaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knowledgeBase")
     public KnowledgeBaseData knowledgeBase;
+
     public GetKnowledgeBaseResponse withKnowledgeBase(KnowledgeBaseData knowledgeBase) {
         this.knowledgeBase = knowledgeBase;
         return this;
     }
     
+    public GetKnowledgeBaseResponse(){}
 }

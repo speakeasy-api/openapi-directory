@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaRuntimeActionSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public GoogleCloudIntegrationsV1alphaRuntimeActionSchema withAction(String action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaRuntimeActionSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputSchema")
     public String inputSchema;
+
     public GoogleCloudIntegrationsV1alphaRuntimeActionSchema withInputSchema(String inputSchema) {
         this.inputSchema = inputSchema;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudIntegrationsV1alphaRuntimeActionSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputSchema")
     public String outputSchema;
+
     public GoogleCloudIntegrationsV1alphaRuntimeActionSchema withOutputSchema(String outputSchema) {
         this.outputSchema = outputSchema;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaRuntimeActionSchema(){}
 }

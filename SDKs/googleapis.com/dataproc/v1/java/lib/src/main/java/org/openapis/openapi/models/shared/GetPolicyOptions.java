@@ -18,9 +18,11 @@ public class GetPolicyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedPolicyVersion")
     public Integer requestedPolicyVersion;
+
     public GetPolicyOptions withRequestedPolicyVersion(Integer requestedPolicyVersion) {
         this.requestedPolicyVersion = requestedPolicyVersion;
         return this;
     }
     
+    public GetPolicyOptions(){}
 }

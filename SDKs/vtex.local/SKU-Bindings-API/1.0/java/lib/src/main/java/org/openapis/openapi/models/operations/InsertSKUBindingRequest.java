@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InsertSKUBindingRequest {
@@ -12,6 +13,7 @@ public class InsertSKUBindingRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public InsertSKUBindingRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class InsertSKUBindingRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public InsertSKUBindingRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class InsertSKUBindingRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public InsertSKUBindingRequestBody requestBody;
+
     public InsertSKUBindingRequest withRequestBody(InsertSKUBindingRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public InsertSKUBindingRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") InsertSKUBindingRequestBody requestBody) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+  }
 }

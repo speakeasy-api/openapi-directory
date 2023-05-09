@@ -15,9 +15,13 @@ public class DeleteAdmChannelResponse {
      */
     @JsonProperty("ADMChannelResponse")
     public ADMChannelResponse admChannelResponse;
+
     public DeleteAdmChannelResponse withADMChannelResponse(ADMChannelResponse admChannelResponse) {
         this.admChannelResponse = admChannelResponse;
         return this;
     }
     
+    public DeleteAdmChannelResponse(@JsonProperty("ADMChannelResponse") ADMChannelResponse admChannelResponse) {
+        this.admChannelResponse = admChannelResponse;
+  }
 }

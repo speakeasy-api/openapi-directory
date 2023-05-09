@@ -12,6 +12,7 @@ public class ListServiceQuotaIncreaseRequestsInTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsRegion")
     public String awsRegion;
+
     public ListServiceQuotaIncreaseRequestsInTemplateRequest withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -20,6 +21,7 @@ public class ListServiceQuotaIncreaseRequestsInTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListServiceQuotaIncreaseRequestsInTemplateRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListServiceQuotaIncreaseRequestsInTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListServiceQuotaIncreaseRequestsInTemplateRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class ListServiceQuotaIncreaseRequestsInTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCode")
     public String serviceCode;
+
     public ListServiceQuotaIncreaseRequestsInTemplateRequest withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
     
+    public ListServiceQuotaIncreaseRequestsInTemplateRequest(){}
 }

@@ -12,6 +12,7 @@ public class StoreSharesLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public LinksGetStoreSharesLink self;
+
     public StoreSharesLinks withSelf(LinksGetStoreSharesLink self) {
         this.self = self;
         return this;
@@ -20,9 +21,11 @@ public class StoreSharesLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("share")
     public LinksShareStoreLink share;
+
     public StoreSharesLinks withShare(LinksShareStoreLink share) {
         this.share = share;
         return this;
     }
     
+    public StoreSharesLinks(){}
 }

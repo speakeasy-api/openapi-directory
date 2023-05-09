@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAdminMappingsRemoveByMetadataRequestBodyXPathMatch {
     @JsonProperty("matchesXpath")
     public String matchesXpath;
+
     public PostAdminMappingsRemoveByMetadataRequestBodyXPathMatch withMatchesXpath(String matchesXpath) {
         this.matchesXpath = matchesXpath;
         return this;
@@ -19,6 +20,7 @@ public class PostAdminMappingsRemoveByMetadataRequestBodyXPathMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaces")
     public java.util.Map<String, Object> namespaces;
+
     public PostAdminMappingsRemoveByMetadataRequestBodyXPathMatch withNamespaces(java.util.Map<String, Object> namespaces) {
         this.namespaces = namespaces;
         return this;
@@ -27,9 +29,13 @@ public class PostAdminMappingsRemoveByMetadataRequestBodyXPathMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valuePattern")
     public java.util.Map<String, Object> valuePattern;
+
     public PostAdminMappingsRemoveByMetadataRequestBodyXPathMatch withValuePattern(java.util.Map<String, Object> valuePattern) {
         this.valuePattern = valuePattern;
         return this;
     }
     
+    public PostAdminMappingsRemoveByMetadataRequestBodyXPathMatch(@JsonProperty("matchesXpath") String matchesXpath) {
+        this.matchesXpath = matchesXpath;
+  }
 }

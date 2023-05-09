@@ -18,6 +18,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Model withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,19 +30,9 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataset")
     public String dataset;
+
     public Model withDataset(String dataset) {
         this.dataset = dataset;
-        return this;
-    }
-    
-    /**
-     * Output only. Timestamp when the model training finished and ready to be used for translation.
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("deployTime")
-    public String deployTime;
-    public Model withDeployTime(String deployTime) {
-        this.deployTime = deployTime;
         return this;
     }
     
@@ -51,6 +42,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Model withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +54,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Model withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +66,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLanguageCode")
     public String sourceLanguageCode;
+
     public Model withSourceLanguageCode(String sourceLanguageCode) {
         this.sourceLanguageCode = sourceLanguageCode;
         return this;
@@ -84,6 +78,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLanguageCode")
     public String targetLanguageCode;
+
     public Model withTargetLanguageCode(String targetLanguageCode) {
         this.targetLanguageCode = targetLanguageCode;
         return this;
@@ -95,6 +90,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testExampleCount")
     public Integer testExampleCount;
+
     public Model withTestExampleCount(Integer testExampleCount) {
         this.testExampleCount = testExampleCount;
         return this;
@@ -106,6 +102,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainExampleCount")
     public Integer trainExampleCount;
+
     public Model withTrainExampleCount(Integer trainExampleCount) {
         this.trainExampleCount = trainExampleCount;
         return this;
@@ -117,6 +114,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Model withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -128,9 +126,11 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateExampleCount")
     public Integer validateExampleCount;
+
     public Model withValidateExampleCount(Integer validateExampleCount) {
         this.validateExampleCount = validateExampleCount;
         return this;
     }
     
+    public Model(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Applications {
     @JsonProperty("_embedded")
     public Embedded embedded;
+
     public Applications withEmbedded(Embedded embedded) {
         this.embedded = embedded;
         return this;
@@ -22,6 +23,7 @@ public class Applications {
      */
     @JsonProperty("_links")
     public Links links;
+
     public Applications withLinks(Links links) {
         this.links = links;
         return this;
@@ -32,6 +34,7 @@ public class Applications {
      */
     @JsonProperty("count")
     public Long count;
+
     public Applications withCount(Long count) {
         this.count = count;
         return this;
@@ -42,6 +45,7 @@ public class Applications {
      */
     @JsonProperty("page_index")
     public Long pageIndex;
+
     public Applications withPageIndex(Long pageIndex) {
         this.pageIndex = pageIndex;
         return this;
@@ -52,9 +56,17 @@ public class Applications {
      */
     @JsonProperty("page_size")
     public Long pageSize;
+
     public Applications withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public Applications(@JsonProperty("_embedded") Embedded embedded, @JsonProperty("_links") Links links, @JsonProperty("count") Long count, @JsonProperty("page_index") Long pageIndex, @JsonProperty("page_size") Long pageSize) {
+        this.embedded = embedded;
+        this.links = links;
+        this.count = count;
+        this.pageIndex = pageIndex;
+        this.pageSize = pageSize;
+  }
 }

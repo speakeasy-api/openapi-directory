@@ -15,6 +15,7 @@ public class ItemAttachment {
      */
     @JsonProperty("content")
     public java.util.Map<String, Object> content;
+
     public ItemAttachment withContent(java.util.Map<String, Object> content) {
         this.content = content;
         return this;
@@ -25,9 +26,14 @@ public class ItemAttachment {
      */
     @JsonProperty("name")
     public String name;
+
     public ItemAttachment withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ItemAttachment(@JsonProperty("content") java.util.Map<String, Object> content, @JsonProperty("name") String name) {
+        this.content = content;
+        this.name = name;
+  }
 }

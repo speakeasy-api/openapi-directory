@@ -12,6 +12,7 @@ public class ListCostAllocationTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListCostAllocationTagsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListCostAllocationTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCostAllocationTagsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class ListCostAllocationTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CostAllocationTagStatusEnum status;
+
     public ListCostAllocationTagsRequest withStatus(CostAllocationTagStatusEnum status) {
         this.status = status;
         return this;
@@ -36,6 +39,7 @@ public class ListCostAllocationTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagKeys")
     public String[] tagKeys;
+
     public ListCostAllocationTagsRequest withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -44,9 +48,11 @@ public class ListCostAllocationTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public CostAllocationTagTypeEnum type;
+
     public ListCostAllocationTagsRequest withType(CostAllocationTagTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListCostAllocationTagsRequest(){}
 }

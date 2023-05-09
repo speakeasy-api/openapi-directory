@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
@@ -12,6 +13,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput googleCloudBeyondcorpAppconnectorsV1AppConnectorInput;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateRequest withGoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput(org.openapis.openapi.models.shared.GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput googleCloudBeyondcorpAppconnectorsV1AppConnectorInput) {
         this.googleCloudBeyondcorpAppconnectorsV1AppConnectorInput = googleCloudBeyondcorpAppconnectorsV1AppConnectorInput;
         return this;
@@ -29,6 +32,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appConnectorId")
     public String appConnectorId;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateRequest withAppConnectorId(String appConnectorId) {
         this.appConnectorId = appConnectorId;
         return this;
@@ -59,6 +65,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -109,6 +120,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -139,6 +153,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,6 +164,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -159,9 +175,13 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=validateOnly")
     public Boolean validateOnly;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateRequest withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public BeyondcorpProjectsLocationsAppConnectorsCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

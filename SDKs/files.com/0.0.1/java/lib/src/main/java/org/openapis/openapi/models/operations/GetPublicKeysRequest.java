@@ -12,6 +12,7 @@ public class GetPublicKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetPublicKeysRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +23,7 @@ public class GetPublicKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetPublicKeysRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -32,9 +34,11 @@ public class GetPublicKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public Integer userId;
+
     public GetPublicKeysRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetPublicKeysRequest(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus {
     
     public String code;
+
     public RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAtt
     
     
     public String message;
+
     public RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus(){}
 }

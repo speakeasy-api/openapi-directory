@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DefinitionDocument {
     @JsonProperty("language")
     public DefinitionLanguageEnum language;
+
     public DefinitionDocument withLanguage(DefinitionLanguageEnum language) {
         this.language = language;
         return this;
@@ -19,9 +20,14 @@ public class DefinitionDocument {
     
     @JsonProperty("text")
     public String text;
+
     public DefinitionDocument withText(String text) {
         this.text = text;
         return this;
     }
     
+    public DefinitionDocument(@JsonProperty("language") DefinitionLanguageEnum language, @JsonProperty("text") String text) {
+        this.language = language;
+        this.text = text;
+  }
 }

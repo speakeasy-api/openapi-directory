@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetApiV1BookmarksRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetApiV1BookmarksRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -16,6 +17,7 @@ public class GetApiV1BookmarksRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
     public String maxId;
+
     public GetApiV1BookmarksRequest withMaxId(String maxId) {
         this.maxId = maxId;
         return this;
@@ -23,6 +25,7 @@ public class GetApiV1BookmarksRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_id")
     public String minId;
+
     public GetApiV1BookmarksRequest withMinId(String minId) {
         this.minId = minId;
         return this;
@@ -30,9 +33,11 @@ public class GetApiV1BookmarksRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_id")
     public String sinceId;
+
     public GetApiV1BookmarksRequest withSinceId(String sinceId) {
         this.sinceId = sinceId;
         return this;
     }
     
+    public GetApiV1BookmarksRequest(){}
 }

@@ -33,10 +33,11 @@ public class Users {
     /**
      * About Me
      * Returns the user profile of the access token's owner. This could be useful if managing multiple accounts or confirming validity of a token.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUsersMeResponse getUsersMe() throws Exception {
+    public org.openapis.openapi.models.operations.GetUsersMeResponse getUsersMe(org.openapis.openapi.models.operations.GetUsersMeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/me");
         
@@ -45,16 +46,15 @@ public class Users {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersMeResponse res = new org.openapis.openapi.models.operations.GetUsersMeResponse() {{
+        org.openapis.openapi.models.operations.GetUsersMeResponse res = new org.openapis.openapi.models.operations.GetUsersMeResponse(contentType, httpRes.statusCode()) {{
             userContactV2 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

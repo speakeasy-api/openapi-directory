@@ -15,9 +15,13 @@ public class GetJourneyDateRangeKpiResponse {
      */
     @JsonProperty("JourneyDateRangeKpiResponse")
     public JourneyDateRangeKpiResponse journeyDateRangeKpiResponse;
+
     public GetJourneyDateRangeKpiResponse withJourneyDateRangeKpiResponse(JourneyDateRangeKpiResponse journeyDateRangeKpiResponse) {
         this.journeyDateRangeKpiResponse = journeyDateRangeKpiResponse;
         return this;
     }
     
+    public GetJourneyDateRangeKpiResponse(@JsonProperty("JourneyDateRangeKpiResponse") JourneyDateRangeKpiResponse journeyDateRangeKpiResponse) {
+        this.journeyDateRangeKpiResponse = journeyDateRangeKpiResponse;
+  }
 }

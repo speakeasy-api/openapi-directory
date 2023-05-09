@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteMedicalTranscriptionJobRequest {
     @JsonProperty("MedicalTranscriptionJobName")
     public String medicalTranscriptionJobName;
+
     public DeleteMedicalTranscriptionJobRequest withMedicalTranscriptionJobName(String medicalTranscriptionJobName) {
         this.medicalTranscriptionJobName = medicalTranscriptionJobName;
         return this;
     }
     
+    public DeleteMedicalTranscriptionJobRequest(@JsonProperty("MedicalTranscriptionJobName") String medicalTranscriptionJobName) {
+        this.medicalTranscriptionJobName = medicalTranscriptionJobName;
+  }
 }

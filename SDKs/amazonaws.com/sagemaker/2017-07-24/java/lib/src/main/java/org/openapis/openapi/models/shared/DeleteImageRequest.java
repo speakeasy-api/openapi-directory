@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteImageRequest {
     @JsonProperty("ImageName")
     public String imageName;
+
     public DeleteImageRequest withImageName(String imageName) {
         this.imageName = imageName;
         return this;
     }
     
+    public DeleteImageRequest(@JsonProperty("ImageName") String imageName) {
+        this.imageName = imageName;
+  }
 }

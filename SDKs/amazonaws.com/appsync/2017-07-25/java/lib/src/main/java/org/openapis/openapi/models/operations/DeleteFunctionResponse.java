@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFunctionResponse {
@@ -12,6 +13,7 @@ public class DeleteFunctionResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteFunctionResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFunctionResponse {
     
     
     public String contentType;
+
     public DeleteFunctionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFunctionResponse {
      */
     
     public java.util.Map<String, Object> deleteFunctionResponse;
+
     public DeleteFunctionResponse withDeleteFunctionResponse(java.util.Map<String, Object> deleteFunctionResponse) {
         this.deleteFunctionResponse = deleteFunctionResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFunctionResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteFunctionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFunctionResponse {
      */
     
     public Object notFoundException;
+
     public DeleteFunctionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteFunctionResponse {
     
     
     public Integer statusCode;
+
     public DeleteFunctionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteFunctionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFunctionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteFunctionResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteFunctionResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteFunctionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeOrganizationalUnitResponse {
@@ -12,6 +13,7 @@ public class DescribeOrganizationalUnitResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public DescribeOrganizationalUnitResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeOrganizationalUnitResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeOrganizationalUnitResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeOrganizationalUnitResponse {
     
     
     public String contentType;
+
     public DescribeOrganizationalUnitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeOrganizationalUnitResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeOrganizationalUnitResponse describeOrganizationalUnitResponse;
+
     public DescribeOrganizationalUnitResponse withDescribeOrganizationalUnitResponse(org.openapis.openapi.models.shared.DescribeOrganizationalUnitResponse describeOrganizationalUnitResponse) {
         this.describeOrganizationalUnitResponse = describeOrganizationalUnitResponse;
         return this;
@@ -49,6 +54,7 @@ public class DescribeOrganizationalUnitResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeOrganizationalUnitResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeOrganizationalUnitResponse {
      */
     
     public Object organizationalUnitNotFoundException;
+
     public DescribeOrganizationalUnitResponse withOrganizationalUnitNotFoundException(Object organizationalUnitNotFoundException) {
         this.organizationalUnitNotFoundException = organizationalUnitNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeOrganizationalUnitResponse {
      */
     
     public Object serviceException;
+
     public DescribeOrganizationalUnitResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeOrganizationalUnitResponse {
     
     
     public Integer statusCode;
+
     public DescribeOrganizationalUnitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribeOrganizationalUnitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeOrganizationalUnitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DescribeOrganizationalUnitResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeOrganizationalUnitResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeOrganizationalUnitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

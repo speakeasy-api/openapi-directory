@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAuditSuppressionResponse {
     
     public String contentType;
+
     public UpdateAuditSuppressionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAuditSuppressionResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateAuditSuppressionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAuditSuppressionResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateAuditSuppressionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAuditSuppressionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAuditSuppressionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateAuditSuppressionResponse {
     
     
     public Integer statusCode;
+
     public UpdateAuditSuppressionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAuditSuppressionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAuditSuppressionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAuditSuppressionResponse {
      */
     
     public Object throttlingException;
+
     public UpdateAuditSuppressionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateAuditSuppressionResponse {
      */
     
     public java.util.Map<String, Object> updateAuditSuppressionResponse;
+
     public UpdateAuditSuppressionResponse withUpdateAuditSuppressionResponse(java.util.Map<String, Object> updateAuditSuppressionResponse) {
         this.updateAuditSuppressionResponse = updateAuditSuppressionResponse;
         return this;
     }
     
+    public UpdateAuditSuppressionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class RegistrationsFilesReadFileAttributes {
      */
     
     public String checkout;
+
     public RegistrationsFilesReadFileAttributes withCheckout(String checkout) {
         this.checkout = checkout;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsFilesReadFileAttributes {
      */
     
     public Boolean currentUserCanComment;
+
     public RegistrationsFilesReadFileAttributes withCurrentUserCanComment(Boolean currentUserCanComment) {
         this.currentUserCanComment = currentUserCanComment;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationsFilesReadFileAttributes {
      */
     
     public Long currentVersion;
+
     public RegistrationsFilesReadFileAttributes withCurrentVersion(Long currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -45,6 +48,7 @@ public class RegistrationsFilesReadFileAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public RegistrationsFilesReadFileAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -55,6 +59,7 @@ public class RegistrationsFilesReadFileAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public RegistrationsFilesReadFileAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -65,6 +70,7 @@ public class RegistrationsFilesReadFileAttributes {
      */
     
     public Boolean deleteAllowed;
+
     public RegistrationsFilesReadFileAttributes withDeleteAllowed(Boolean deleteAllowed) {
         this.deleteAllowed = deleteAllowed;
         return this;
@@ -75,6 +81,7 @@ public class RegistrationsFilesReadFileAttributes {
      */
     
     public java.util.Map<String, Object> extra;
+
     public RegistrationsFilesReadFileAttributes withExtra(java.util.Map<String, Object> extra) {
         this.extra = extra;
         return this;
@@ -85,6 +92,7 @@ public class RegistrationsFilesReadFileAttributes {
      */
     
     public String guid;
+
     public RegistrationsFilesReadFileAttributes withGuid(String guid) {
         this.guid = guid;
         return this;
@@ -95,6 +103,7 @@ public class RegistrationsFilesReadFileAttributes {
      */
     
     public String kind;
+
     public RegistrationsFilesReadFileAttributes withKind(String kind) {
         this.kind = kind;
         return this;
@@ -105,6 +114,7 @@ public class RegistrationsFilesReadFileAttributes {
      */
     
     public OffsetDateTime lastTouched;
+
     public RegistrationsFilesReadFileAttributes withLastTouched(OffsetDateTime lastTouched) {
         this.lastTouched = lastTouched;
         return this;
@@ -115,6 +125,7 @@ public class RegistrationsFilesReadFileAttributes {
      */
     
     public String materializedPath;
+
     public RegistrationsFilesReadFileAttributes withMaterializedPath(String materializedPath) {
         this.materializedPath = materializedPath;
         return this;
@@ -125,6 +136,7 @@ public class RegistrationsFilesReadFileAttributes {
      */
     
     public String name;
+
     public RegistrationsFilesReadFileAttributes withName(String name) {
         this.name = name;
         return this;
@@ -135,6 +147,7 @@ public class RegistrationsFilesReadFileAttributes {
      */
     
     public String path;
+
     public RegistrationsFilesReadFileAttributes withPath(String path) {
         this.path = path;
         return this;
@@ -145,6 +158,7 @@ public class RegistrationsFilesReadFileAttributes {
      */
     
     public String provider;
+
     public RegistrationsFilesReadFileAttributes withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -155,6 +169,7 @@ public class RegistrationsFilesReadFileAttributes {
      */
     
     public Long size;
+
     public RegistrationsFilesReadFileAttributes withSize(Long size) {
         this.size = size;
         return this;
@@ -165,9 +180,11 @@ public class RegistrationsFilesReadFileAttributes {
      */
     
     public String[] tags;
+
     public RegistrationsFilesReadFileAttributes withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public RegistrationsFilesReadFileAttributes(){}
 }

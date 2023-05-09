@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePortfolioTemplateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdatePortfolioTemplateRequestBody requestBody;
+
     public UpdatePortfolioTemplateRequest withRequestBody(UpdatePortfolioTemplateRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePortfolioTemplateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portfolio_template_id")
     public String portfolioTemplateId;
+
     public UpdatePortfolioTemplateRequest withPortfolioTemplateId(String portfolioTemplateId) {
         this.portfolioTemplateId = portfolioTemplateId;
         return this;
@@ -29,9 +32,15 @@ public class UpdatePortfolioTemplateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public UpdatePortfolioTemplateRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public UpdatePortfolioTemplateRequest(@JsonProperty("RequestBody") UpdatePortfolioTemplateRequestBody requestBody, @JsonProperty("portfolio_template_id") String portfolioTemplateId, @JsonProperty("x-api-key") String xApiKey) {
+        this.requestBody = requestBody;
+        this.portfolioTemplateId = portfolioTemplateId;
+        this.xApiKey = xApiKey;
+  }
 }

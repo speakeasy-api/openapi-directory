@@ -15,9 +15,11 @@ public class ReturnaddressCustomBatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public ReturnaddressCustomBatchRequestEntry[] entries;
+
     public ReturnaddressCustomBatchRequest withEntries(ReturnaddressCustomBatchRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public ReturnaddressCustomBatchRequest(){}
 }

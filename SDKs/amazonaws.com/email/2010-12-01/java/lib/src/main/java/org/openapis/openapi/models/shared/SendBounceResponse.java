@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class SendBounceResponse {
     
     public String messageId;
+
     public SendBounceResponse withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
     }
     
+    public SendBounceResponse(){}
 }

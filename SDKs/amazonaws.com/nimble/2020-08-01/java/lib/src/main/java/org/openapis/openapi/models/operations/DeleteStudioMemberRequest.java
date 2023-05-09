@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteStudioMemberRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteStudioMemberRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -19,6 +21,7 @@ public class DeleteStudioMemberRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Client-Token")
     public String xAmzClientToken;
+
     public DeleteStudioMemberRequest withXAmzClientToken(String xAmzClientToken) {
         this.xAmzClientToken = xAmzClientToken;
         return this;
@@ -26,6 +29,7 @@ public class DeleteStudioMemberRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteStudioMemberRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -33,6 +37,7 @@ public class DeleteStudioMemberRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteStudioMemberRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -40,6 +45,7 @@ public class DeleteStudioMemberRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteStudioMemberRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -47,6 +53,7 @@ public class DeleteStudioMemberRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteStudioMemberRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -54,6 +61,7 @@ public class DeleteStudioMemberRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteStudioMemberRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -61,6 +69,7 @@ public class DeleteStudioMemberRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteStudioMemberRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -71,6 +80,7 @@ public class DeleteStudioMemberRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=principalId")
     public String principalId;
+
     public DeleteStudioMemberRequest withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
@@ -81,9 +91,14 @@ public class DeleteStudioMemberRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioId")
     public String studioId;
+
     public DeleteStudioMemberRequest withStudioId(String studioId) {
         this.studioId = studioId;
         return this;
     }
     
+    public DeleteStudioMemberRequest(@JsonProperty("principalId") String principalId, @JsonProperty("studioId") String studioId) {
+        this.principalId = principalId;
+        this.studioId = studioId;
+  }
 }

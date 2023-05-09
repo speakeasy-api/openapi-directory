@@ -15,6 +15,7 @@ public class LocalPostMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localPostName")
     public String localPostName;
+
     public LocalPostMetrics withLocalPostName(String localPostName) {
         this.localPostName = localPostName;
         return this;
@@ -26,9 +27,11 @@ public class LocalPostMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricValues")
     public MetricValue[] metricValues;
+
     public LocalPostMetrics withMetricValues(MetricValue[] metricValues) {
         this.metricValues = metricValues;
         return this;
     }
     
+    public LocalPostMetrics(){}
 }

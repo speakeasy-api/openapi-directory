@@ -69,11 +69,9 @@ public class ListingRecommendation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindListingRecommendationsResponse res = new org.openapis.openapi.models.operations.FindListingRecommendationsResponse() {{
+        org.openapis.openapi.models.operations.FindListingRecommendationsResponse res = new org.openapis.openapi.models.operations.FindListingRecommendationsResponse(contentType, httpRes.statusCode()) {{
             pagedListingRecommendationCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

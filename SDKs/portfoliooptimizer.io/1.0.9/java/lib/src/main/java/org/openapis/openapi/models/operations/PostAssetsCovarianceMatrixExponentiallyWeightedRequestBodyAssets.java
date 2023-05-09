@@ -12,9 +12,13 @@ public class PostAssetsCovarianceMatrixExponentiallyWeightedRequestBodyAssets {
      */
     @JsonProperty("assetReturns")
     public Double[] assetReturns;
+
     public PostAssetsCovarianceMatrixExponentiallyWeightedRequestBodyAssets withAssetReturns(Double[] assetReturns) {
         this.assetReturns = assetReturns;
         return this;
     }
     
+    public PostAssetsCovarianceMatrixExponentiallyWeightedRequestBodyAssets(@JsonProperty("assetReturns") Double[] assetReturns) {
+        this.assetReturns = assetReturns;
+  }
 }

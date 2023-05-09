@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLanguageModelRequest {
     @JsonProperty("BaseModelName")
     public BaseModelNameEnum baseModelName;
+
     public CreateLanguageModelRequest withBaseModelName(BaseModelNameEnum baseModelName) {
         this.baseModelName = baseModelName;
         return this;
@@ -18,6 +19,7 @@ public class CreateLanguageModelRequest {
     
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public CreateLanguageModelRequest withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -25,6 +27,7 @@ public class CreateLanguageModelRequest {
     
     @JsonProperty("LanguageCode")
     public CLMLanguageCodeEnum languageCode;
+
     public CreateLanguageModelRequest withLanguageCode(CLMLanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -32,6 +35,7 @@ public class CreateLanguageModelRequest {
     
     @JsonProperty("ModelName")
     public String modelName;
+
     public CreateLanguageModelRequest withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -40,9 +44,16 @@ public class CreateLanguageModelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateLanguageModelRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLanguageModelRequest(@JsonProperty("BaseModelName") BaseModelNameEnum baseModelName, @JsonProperty("InputDataConfig") InputDataConfig inputDataConfig, @JsonProperty("LanguageCode") CLMLanguageCodeEnum languageCode, @JsonProperty("ModelName") String modelName) {
+        this.baseModelName = baseModelName;
+        this.inputDataConfig = inputDataConfig;
+        this.languageCode = languageCode;
+        this.modelName = modelName;
+  }
 }

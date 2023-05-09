@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherEditsTracksGetRequest {
@@ -12,6 +13,7 @@ public class AndroidpublisherEditsTracksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherEditsTracksGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class AndroidpublisherEditsTracksGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=editId")
     public String editId;
+
     public AndroidpublisherEditsTracksGetRequest withEditId(String editId) {
         this.editId = editId;
         return this;
@@ -32,6 +35,7 @@ public class AndroidpublisherEditsTracksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherEditsTracksGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class AndroidpublisherEditsTracksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherEditsTracksGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class AndroidpublisherEditsTracksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherEditsTracksGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +68,7 @@ public class AndroidpublisherEditsTracksGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherEditsTracksGetRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -72,6 +79,7 @@ public class AndroidpublisherEditsTracksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherEditsTracksGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class AndroidpublisherEditsTracksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherEditsTracksGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,6 +101,7 @@ public class AndroidpublisherEditsTracksGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track")
     public String track;
+
     public AndroidpublisherEditsTracksGetRequest withTrack(String track) {
         this.track = track;
         return this;
@@ -102,9 +112,15 @@ public class AndroidpublisherEditsTracksGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AndroidpublisherEditsTracksGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AndroidpublisherEditsTracksGetRequest(@JsonProperty("editId") String editId, @JsonProperty("packageName") String packageName, @JsonProperty("track") String track) {
+        this.editId = editId;
+        this.packageName = packageName;
+        this.track = track;
+  }
 }

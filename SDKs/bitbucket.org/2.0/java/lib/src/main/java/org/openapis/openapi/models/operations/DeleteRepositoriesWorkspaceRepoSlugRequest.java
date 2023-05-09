@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoriesWorkspaceRepoSlugRequest {
@@ -16,6 +17,7 @@ public class DeleteRepositoriesWorkspaceRepoSlugRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect_to")
     public String redirectTo;
+
     public DeleteRepositoriesWorkspaceRepoSlugRequest withRedirectTo(String redirectTo) {
         this.redirectTo = redirectTo;
         return this;
@@ -28,6 +30,7 @@ public class DeleteRepositoriesWorkspaceRepoSlugRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public DeleteRepositoriesWorkspaceRepoSlugRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -40,9 +43,14 @@ public class DeleteRepositoriesWorkspaceRepoSlugRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public DeleteRepositoriesWorkspaceRepoSlugRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public DeleteRepositoriesWorkspaceRepoSlugRequest(@JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

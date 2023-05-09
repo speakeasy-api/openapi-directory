@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubscriberVidResponse {
     @JsonProperty("vid")
     public Integer vid;
+
     public SubscriberVidResponse withVid(Integer vid) {
         this.vid = vid;
         return this;
     }
     
+    public SubscriberVidResponse(@JsonProperty("vid") Integer vid) {
+        this.vid = vid;
+  }
 }

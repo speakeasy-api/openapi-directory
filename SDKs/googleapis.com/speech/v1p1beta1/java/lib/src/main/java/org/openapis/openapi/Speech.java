@@ -61,11 +61,9 @@ public class Speech {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpeechSpeechLongrunningrecognizeResponse res = new org.openapis.openapi.models.operations.SpeechSpeechLongrunningrecognizeResponse() {{
+        org.openapis.openapi.models.operations.SpeechSpeechLongrunningrecognizeResponse res = new org.openapis.openapi.models.operations.SpeechSpeechLongrunningrecognizeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Speech {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpeechSpeechRecognizeResponse res = new org.openapis.openapi.models.operations.SpeechSpeechRecognizeResponse() {{
+        org.openapis.openapi.models.operations.SpeechSpeechRecognizeResponse res = new org.openapis.openapi.models.operations.SpeechSpeechRecognizeResponse(contentType, httpRes.statusCode()) {{
             recognizeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

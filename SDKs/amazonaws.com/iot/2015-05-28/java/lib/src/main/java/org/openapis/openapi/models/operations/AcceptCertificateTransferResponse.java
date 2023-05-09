@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcceptCertificateTransferResponse {
     
     public String contentType;
+
     public AcceptCertificateTransferResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AcceptCertificateTransferResponse {
      */
     
     public Object internalFailureException;
+
     public AcceptCertificateTransferResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class AcceptCertificateTransferResponse {
      */
     
     public Object invalidRequestException;
+
     public AcceptCertificateTransferResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class AcceptCertificateTransferResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AcceptCertificateTransferResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class AcceptCertificateTransferResponse {
     
     
     public Integer statusCode;
+
     public AcceptCertificateTransferResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AcceptCertificateTransferResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcceptCertificateTransferResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class AcceptCertificateTransferResponse {
      */
     
     public Object serviceUnavailableException;
+
     public AcceptCertificateTransferResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,6 +81,7 @@ public class AcceptCertificateTransferResponse {
      */
     
     public Object throttlingException;
+
     public AcceptCertificateTransferResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class AcceptCertificateTransferResponse {
      */
     
     public Object transferAlreadyCompletedException;
+
     public AcceptCertificateTransferResponse withTransferAlreadyCompletedException(Object transferAlreadyCompletedException) {
         this.transferAlreadyCompletedException = transferAlreadyCompletedException;
         return this;
@@ -93,9 +103,14 @@ public class AcceptCertificateTransferResponse {
      */
     
     public Object unauthorizedException;
+
     public AcceptCertificateTransferResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public AcceptCertificateTransferResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

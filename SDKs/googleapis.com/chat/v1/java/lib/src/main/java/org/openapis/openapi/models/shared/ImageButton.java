@@ -18,6 +18,7 @@ public class ImageButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public ImageButtonIconEnum icon;
+
     public ImageButton withIcon(ImageButtonIconEnum icon) {
         this.icon = icon;
         return this;
@@ -29,6 +30,7 @@ public class ImageButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iconUrl")
     public String iconUrl;
+
     public ImageButton withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -40,6 +42,7 @@ public class ImageButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ImageButton withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class ImageButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onClick")
     public OnClick onClick;
+
     public ImageButton withOnClick(OnClick onClick) {
         this.onClick = onClick;
         return this;
     }
     
+    public ImageButton(){}
 }

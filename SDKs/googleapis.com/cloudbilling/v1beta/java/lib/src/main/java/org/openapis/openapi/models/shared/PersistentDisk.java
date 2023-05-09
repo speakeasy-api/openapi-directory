@@ -18,6 +18,7 @@ public class PersistentDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSize")
     public Usage diskSize;
+
     public PersistentDisk withDiskSize(Usage diskSize) {
         this.diskSize = diskSize;
         return this;
@@ -29,6 +30,7 @@ public class PersistentDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskType")
     public String diskType;
+
     public PersistentDisk withDiskType(String diskType) {
         this.diskType = diskType;
         return this;
@@ -40,6 +42,7 @@ public class PersistentDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisionedIops")
     public Usage provisionedIops;
+
     public PersistentDisk withProvisionedIops(Usage provisionedIops) {
         this.provisionedIops = provisionedIops;
         return this;
@@ -51,9 +54,11 @@ public class PersistentDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public PersistentDiskScopeEnum scope;
+
     public PersistentDisk withScope(PersistentDiskScopeEnum scope) {
         this.scope = scope;
         return this;
     }
     
+    public PersistentDisk(){}
 }

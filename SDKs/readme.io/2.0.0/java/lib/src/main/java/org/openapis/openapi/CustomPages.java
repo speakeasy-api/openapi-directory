@@ -58,10 +58,8 @@ public class CustomPages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCustomPageResponse res = new org.openapis.openapi.models.operations.CreateCustomPageResponse() {{
+        org.openapis.openapi.models.operations.CreateCustomPageResponse res = new org.openapis.openapi.models.operations.CreateCustomPageResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 400) {
@@ -93,10 +91,8 @@ public class CustomPages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCustomPageResponse res = new org.openapis.openapi.models.operations.DeleteCustomPageResponse() {{
+        org.openapis.openapi.models.operations.DeleteCustomPageResponse res = new org.openapis.openapi.models.operations.DeleteCustomPageResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -128,10 +124,8 @@ public class CustomPages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomPageResponse res = new org.openapis.openapi.models.operations.GetCustomPageResponse() {{
+        org.openapis.openapi.models.operations.GetCustomPageResponse res = new org.openapis.openapi.models.operations.GetCustomPageResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -169,10 +163,8 @@ public class CustomPages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomPagesResponse res = new org.openapis.openapi.models.operations.GetCustomPagesResponse() {{
+        org.openapis.openapi.models.operations.GetCustomPagesResponse res = new org.openapis.openapi.models.operations.GetCustomPagesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -211,10 +203,8 @@ public class CustomPages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCustomPageResponse res = new org.openapis.openapi.models.operations.UpdateCustomPageResponse() {{
+        org.openapis.openapi.models.operations.UpdateCustomPageResponse res = new org.openapis.openapi.models.operations.UpdateCustomPageResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {

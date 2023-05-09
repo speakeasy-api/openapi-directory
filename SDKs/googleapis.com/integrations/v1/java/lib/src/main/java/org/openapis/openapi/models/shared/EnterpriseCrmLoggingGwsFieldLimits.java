@@ -15,6 +15,7 @@ public class EnterpriseCrmLoggingGwsFieldLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logAction")
     public EnterpriseCrmLoggingGwsFieldLimitsLogActionEnum logAction;
+
     public EnterpriseCrmLoggingGwsFieldLimits withLogAction(EnterpriseCrmLoggingGwsFieldLimitsLogActionEnum logAction) {
         this.logAction = logAction;
         return this;
@@ -26,6 +27,7 @@ public class EnterpriseCrmLoggingGwsFieldLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logType")
     public EnterpriseCrmLoggingGwsFieldLimitsLogTypeEnum[] logType;
+
     public EnterpriseCrmLoggingGwsFieldLimits withLogType(EnterpriseCrmLoggingGwsFieldLimitsLogTypeEnum[] logType) {
         this.logType = logType;
         return this;
@@ -37,6 +39,7 @@ public class EnterpriseCrmLoggingGwsFieldLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxArraySize")
     public Integer maxArraySize;
+
     public EnterpriseCrmLoggingGwsFieldLimits withMaxArraySize(Integer maxArraySize) {
         this.maxArraySize = maxArraySize;
         return this;
@@ -48,6 +51,7 @@ public class EnterpriseCrmLoggingGwsFieldLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxStringLength")
     public Integer maxStringLength;
+
     public EnterpriseCrmLoggingGwsFieldLimits withMaxStringLength(Integer maxStringLength) {
         this.maxStringLength = maxStringLength;
         return this;
@@ -56,9 +60,11 @@ public class EnterpriseCrmLoggingGwsFieldLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortenerType")
     public EnterpriseCrmLoggingGwsFieldLimitsShortenerTypeEnum shortenerType;
+
     public EnterpriseCrmLoggingGwsFieldLimits withShortenerType(EnterpriseCrmLoggingGwsFieldLimitsShortenerTypeEnum shortenerType) {
         this.shortenerType = shortenerType;
         return this;
     }
     
+    public EnterpriseCrmLoggingGwsFieldLimits(){}
 }

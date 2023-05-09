@@ -15,6 +15,7 @@ public class ComponentBindingPropertiesValueProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public ComponentBindingPropertiesValueProperties withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,6 +24,7 @@ public class ComponentBindingPropertiesValueProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public String defaultValue;
+
     public ComponentBindingPropertiesValueProperties withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -31,6 +33,7 @@ public class ComponentBindingPropertiesValueProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public ComponentBindingPropertiesValueProperties withField(String field) {
         this.field = field;
         return this;
@@ -39,6 +42,7 @@ public class ComponentBindingPropertiesValueProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public ComponentBindingPropertiesValueProperties withKey(String key) {
         this.key = key;
         return this;
@@ -47,6 +51,7 @@ public class ComponentBindingPropertiesValueProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public ComponentBindingPropertiesValueProperties withModel(String model) {
         this.model = model;
         return this;
@@ -55,6 +60,7 @@ public class ComponentBindingPropertiesValueProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predicates")
     public Predicate[] predicates;
+
     public ComponentBindingPropertiesValueProperties withPredicates(Predicate[] predicates) {
         this.predicates = predicates;
         return this;
@@ -63,6 +69,7 @@ public class ComponentBindingPropertiesValueProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotName")
     public String slotName;
+
     public ComponentBindingPropertiesValueProperties withSlotName(String slotName) {
         this.slotName = slotName;
         return this;
@@ -71,9 +78,11 @@ public class ComponentBindingPropertiesValueProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAttribute")
     public String userAttribute;
+
     public ComponentBindingPropertiesValueProperties withUserAttribute(String userAttribute) {
         this.userAttribute = userAttribute;
         return this;
     }
     
+    public ComponentBindingPropertiesValueProperties(){}
 }

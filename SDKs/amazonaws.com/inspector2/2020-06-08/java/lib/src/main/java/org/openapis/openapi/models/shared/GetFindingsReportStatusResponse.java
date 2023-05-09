@@ -15,6 +15,7 @@ public class GetFindingsReportStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public Destination destination;
+
     public GetFindingsReportStatusResponse withDestination(Destination destination) {
         this.destination = destination;
         return this;
@@ -23,6 +24,7 @@ public class GetFindingsReportStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public ReportingErrorCodeEnum errorCode;
+
     public GetFindingsReportStatusResponse withErrorCode(ReportingErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -31,6 +33,7 @@ public class GetFindingsReportStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public GetFindingsReportStatusResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -39,6 +42,7 @@ public class GetFindingsReportStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterCriteria")
     public FilterCriteria filterCriteria;
+
     public GetFindingsReportStatusResponse withFilterCriteria(FilterCriteria filterCriteria) {
         this.filterCriteria = filterCriteria;
         return this;
@@ -47,6 +51,7 @@ public class GetFindingsReportStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportId")
     public String reportId;
+
     public GetFindingsReportStatusResponse withReportId(String reportId) {
         this.reportId = reportId;
         return this;
@@ -55,9 +60,11 @@ public class GetFindingsReportStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ExternalReportStatusEnum status;
+
     public GetFindingsReportStatusResponse withStatus(ExternalReportStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetFindingsReportStatusResponse(){}
 }

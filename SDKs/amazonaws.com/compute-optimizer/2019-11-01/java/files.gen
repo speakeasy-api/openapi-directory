@@ -167,6 +167,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/RecommendationSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/RecommendationSourceTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/InstanceRecommendationOption.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlatformDifferenceEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/InstanceStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/InstanceRecommendationFindingReasonCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetEc2InstanceRecommendationsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetEc2RecommendationProjectedMetricsResponse.java
@@ -228,4 +229,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/PutRecommendationPreference
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateEnrollmentStatusResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateEnrollmentStatusRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

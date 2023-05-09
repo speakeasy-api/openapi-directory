@@ -58,12 +58,10 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BillingAggregatedInformationGetAllResponse res = new org.openapis.openapi.models.operations.BillingAggregatedInformationGetAllResponse() {{
+        org.openapis.openapi.models.operations.BillingAggregatedInformationGetAllResponse res = new org.openapis.openapi.models.operations.BillingAggregatedInformationGetAllResponse(contentType, httpRes.statusCode()) {{
             billingAggregatedInformationGetAll200ApplicationJSONObject = null;
             billingAggregatedInformationGetAllDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -112,12 +110,10 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BillingAggregatedInformationGetByAppResponse res = new org.openapis.openapi.models.operations.BillingAggregatedInformationGetByAppResponse() {{
+        org.openapis.openapi.models.operations.BillingAggregatedInformationGetByAppResponse res = new org.openapis.openapi.models.operations.BillingAggregatedInformationGetByAppResponse(contentType, httpRes.statusCode()) {{
             billingAggregatedInformationGetByApp200ApplicationJSONObject = null;
             billingAggregatedInformationGetByAppDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -166,12 +162,10 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BillingAggregatedInformationGetForOrgResponse res = new org.openapis.openapi.models.operations.BillingAggregatedInformationGetForOrgResponse() {{
+        org.openapis.openapi.models.operations.BillingAggregatedInformationGetForOrgResponse res = new org.openapis.openapi.models.operations.BillingAggregatedInformationGetForOrgResponse(contentType, httpRes.statusCode()) {{
             billingAggregatedInformationGetForOrg200ApplicationJSONObject = null;
             billingAggregatedInformationGetForOrgDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

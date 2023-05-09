@@ -12,6 +12,7 @@ public class StartFraudsterRegistrationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public StartFraudsterRegistrationJobRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class StartFraudsterRegistrationJobRequest {
     
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public StartFraudsterRegistrationJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -26,6 +28,7 @@ public class StartFraudsterRegistrationJobRequest {
     
     @JsonProperty("DomainId")
     public String domainId;
+
     public StartFraudsterRegistrationJobRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -33,6 +36,7 @@ public class StartFraudsterRegistrationJobRequest {
     
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public StartFraudsterRegistrationJobRequest withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -41,6 +45,7 @@ public class StartFraudsterRegistrationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public StartFraudsterRegistrationJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -48,6 +53,7 @@ public class StartFraudsterRegistrationJobRequest {
     
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public StartFraudsterRegistrationJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -56,9 +62,16 @@ public class StartFraudsterRegistrationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistrationConfig")
     public RegistrationConfig registrationConfig;
+
     public StartFraudsterRegistrationJobRequest withRegistrationConfig(RegistrationConfig registrationConfig) {
         this.registrationConfig = registrationConfig;
         return this;
     }
     
+    public StartFraudsterRegistrationJobRequest(@JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("DomainId") String domainId, @JsonProperty("InputDataConfig") InputDataConfig inputDataConfig, @JsonProperty("OutputDataConfig") OutputDataConfig outputDataConfig) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.domainId = domainId;
+        this.inputDataConfig = inputDataConfig;
+        this.outputDataConfig = outputDataConfig;
+  }
 }

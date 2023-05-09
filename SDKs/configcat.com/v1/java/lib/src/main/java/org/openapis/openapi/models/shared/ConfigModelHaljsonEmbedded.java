@@ -12,9 +12,11 @@ public class ConfigModelHaljsonEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public ConfigModelHaljsonEmbeddedProduct product;
+
     public ConfigModelHaljsonEmbedded withProduct(ConfigModelHaljsonEmbeddedProduct product) {
         this.product = product;
         return this;
     }
     
+    public ConfigModelHaljsonEmbedded(){}
 }

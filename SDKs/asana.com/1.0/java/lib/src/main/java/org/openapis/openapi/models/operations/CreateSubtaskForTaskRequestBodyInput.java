@@ -15,9 +15,11 @@ public class CreateSubtaskForTaskRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TaskRequestInput data;
+
     public CreateSubtaskForTaskRequestBodyInput withData(org.openapis.openapi.models.shared.TaskRequestInput data) {
         this.data = data;
         return this;
     }
     
+    public CreateSubtaskForTaskRequestBodyInput(){}
 }

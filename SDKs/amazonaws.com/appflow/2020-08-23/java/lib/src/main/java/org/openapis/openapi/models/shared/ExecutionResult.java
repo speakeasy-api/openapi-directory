@@ -15,6 +15,7 @@ public class ExecutionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bytesProcessed")
     public Long bytesProcessed;
+
     public ExecutionResult withBytesProcessed(Long bytesProcessed) {
         this.bytesProcessed = bytesProcessed;
         return this;
@@ -23,6 +24,7 @@ public class ExecutionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bytesWritten")
     public Long bytesWritten;
+
     public ExecutionResult withBytesWritten(Long bytesWritten) {
         this.bytesWritten = bytesWritten;
         return this;
@@ -31,6 +33,7 @@ public class ExecutionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorInfo")
     public ErrorInfo errorInfo;
+
     public ExecutionResult withErrorInfo(ErrorInfo errorInfo) {
         this.errorInfo = errorInfo;
         return this;
@@ -39,9 +42,11 @@ public class ExecutionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordsProcessed")
     public Long recordsProcessed;
+
     public ExecutionResult withRecordsProcessed(Long recordsProcessed) {
         this.recordsProcessed = recordsProcessed;
         return this;
     }
     
+    public ExecutionResult(){}
 }

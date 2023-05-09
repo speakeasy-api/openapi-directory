@@ -15,6 +15,7 @@ public class DeleteConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorArn")
     public String connectorArn;
+
     public DeleteConnectorResponse withConnectorArn(String connectorArn) {
         this.connectorArn = connectorArn;
         return this;
@@ -23,9 +24,11 @@ public class DeleteConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorState")
     public ConnectorStateEnum connectorState;
+
     public DeleteConnectorResponse withConnectorState(ConnectorStateEnum connectorState) {
         this.connectorState = connectorState;
         return this;
     }
     
+    public DeleteConnectorResponse(){}
 }

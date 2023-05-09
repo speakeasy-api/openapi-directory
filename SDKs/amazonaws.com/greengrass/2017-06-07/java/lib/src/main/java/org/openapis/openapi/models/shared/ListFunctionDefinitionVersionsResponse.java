@@ -15,6 +15,7 @@ public class ListFunctionDefinitionVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFunctionDefinitionVersionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListFunctionDefinitionVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Versions")
     public VersionInformation[] versions;
+
     public ListFunctionDefinitionVersionsResponse withVersions(VersionInformation[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public ListFunctionDefinitionVersionsResponse(){}
 }

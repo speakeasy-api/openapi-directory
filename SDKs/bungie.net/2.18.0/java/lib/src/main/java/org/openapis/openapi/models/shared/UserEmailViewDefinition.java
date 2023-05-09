@@ -15,6 +15,7 @@ public class UserEmailViewDefinition {
      */
     
     public String name;
+
     public UserEmailViewDefinition withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,11 @@ public class UserEmailViewDefinition {
      */
     
     public UserEmailViewDefinitionSetting[] viewSettings;
+
     public UserEmailViewDefinition withViewSettings(UserEmailViewDefinitionSetting[] viewSettings) {
         this.viewSettings = viewSettings;
         return this;
     }
     
+    public UserEmailViewDefinition(){}
 }

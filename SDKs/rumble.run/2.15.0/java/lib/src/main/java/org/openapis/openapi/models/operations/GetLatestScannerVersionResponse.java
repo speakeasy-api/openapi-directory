@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLatestScannerVersionResponse {
@@ -12,6 +13,7 @@ public class GetLatestScannerVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.ComponentVersion componentVersion;
+
     public GetLatestScannerVersionResponse withComponentVersion(org.openapis.openapi.models.shared.ComponentVersion componentVersion) {
         this.componentVersion = componentVersion;
         return this;
@@ -19,6 +21,7 @@ public class GetLatestScannerVersionResponse {
     
     
     public String contentType;
+
     public GetLatestScannerVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetLatestScannerVersionResponse {
     
     
     public Integer statusCode;
+
     public GetLatestScannerVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetLatestScannerVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLatestScannerVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetLatestScannerVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

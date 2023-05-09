@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MybusinessChainsGetResponse {
@@ -12,6 +13,7 @@ public class MybusinessChainsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Chain chain;
+
     public MybusinessChainsGetResponse withChain(org.openapis.openapi.models.shared.Chain chain) {
         this.chain = chain;
         return this;
@@ -19,6 +21,7 @@ public class MybusinessChainsGetResponse {
     
     
     public String contentType;
+
     public MybusinessChainsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class MybusinessChainsGetResponse {
     
     
     public Integer statusCode;
+
     public MybusinessChainsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MybusinessChainsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MybusinessChainsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MybusinessChainsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

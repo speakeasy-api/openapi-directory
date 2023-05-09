@@ -12,6 +12,7 @@ public class CreateImageBuilderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessEndpoints")
     public AccessEndpoint[] accessEndpoints;
+
     public CreateImageBuilderRequest withAccessEndpoints(AccessEndpoint[] accessEndpoints) {
         this.accessEndpoints = accessEndpoints;
         return this;
@@ -20,6 +21,7 @@ public class CreateImageBuilderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppstreamAgentVersion")
     public String appstreamAgentVersion;
+
     public CreateImageBuilderRequest withAppstreamAgentVersion(String appstreamAgentVersion) {
         this.appstreamAgentVersion = appstreamAgentVersion;
         return this;
@@ -28,6 +30,7 @@ public class CreateImageBuilderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateImageBuilderRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class CreateImageBuilderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public CreateImageBuilderRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -44,6 +48,7 @@ public class CreateImageBuilderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainJoinInfo")
     public DomainJoinInfo domainJoinInfo;
+
     public CreateImageBuilderRequest withDomainJoinInfo(DomainJoinInfo domainJoinInfo) {
         this.domainJoinInfo = domainJoinInfo;
         return this;
@@ -52,6 +57,7 @@ public class CreateImageBuilderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableDefaultInternetAccess")
     public Boolean enableDefaultInternetAccess;
+
     public CreateImageBuilderRequest withEnableDefaultInternetAccess(Boolean enableDefaultInternetAccess) {
         this.enableDefaultInternetAccess = enableDefaultInternetAccess;
         return this;
@@ -60,6 +66,7 @@ public class CreateImageBuilderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamRoleArn")
     public String iamRoleArn;
+
     public CreateImageBuilderRequest withIamRoleArn(String iamRoleArn) {
         this.iamRoleArn = iamRoleArn;
         return this;
@@ -68,6 +75,7 @@ public class CreateImageBuilderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageArn")
     public String imageArn;
+
     public CreateImageBuilderRequest withImageArn(String imageArn) {
         this.imageArn = imageArn;
         return this;
@@ -76,6 +84,7 @@ public class CreateImageBuilderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageName")
     public String imageName;
+
     public CreateImageBuilderRequest withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -83,6 +92,7 @@ public class CreateImageBuilderRequest {
     
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public CreateImageBuilderRequest withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -90,6 +100,7 @@ public class CreateImageBuilderRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateImageBuilderRequest withName(String name) {
         this.name = name;
         return this;
@@ -98,6 +109,7 @@ public class CreateImageBuilderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateImageBuilderRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -106,9 +118,14 @@ public class CreateImageBuilderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public CreateImageBuilderRequest withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public CreateImageBuilderRequest(@JsonProperty("InstanceType") String instanceType, @JsonProperty("Name") String name) {
+        this.instanceType = instanceType;
+        this.name = name;
+  }
 }

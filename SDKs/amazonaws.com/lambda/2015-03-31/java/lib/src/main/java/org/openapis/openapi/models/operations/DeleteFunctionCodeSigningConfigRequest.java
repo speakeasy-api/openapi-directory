@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFunctionCodeSigningConfigRequest {
@@ -12,6 +13,7 @@ public class DeleteFunctionCodeSigningConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionName")
     public String functionName;
+
     public DeleteFunctionCodeSigningConfigRequest withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFunctionCodeSigningConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteFunctionCodeSigningConfigRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -26,6 +29,7 @@ public class DeleteFunctionCodeSigningConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteFunctionCodeSigningConfigRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -33,6 +37,7 @@ public class DeleteFunctionCodeSigningConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteFunctionCodeSigningConfigRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -40,6 +45,7 @@ public class DeleteFunctionCodeSigningConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteFunctionCodeSigningConfigRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -47,6 +53,7 @@ public class DeleteFunctionCodeSigningConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteFunctionCodeSigningConfigRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -54,6 +61,7 @@ public class DeleteFunctionCodeSigningConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteFunctionCodeSigningConfigRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -61,9 +69,13 @@ public class DeleteFunctionCodeSigningConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteFunctionCodeSigningConfigRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public DeleteFunctionCodeSigningConfigRequest(@JsonProperty("FunctionName") String functionName) {
+        this.functionName = functionName;
+  }
 }

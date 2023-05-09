@@ -18,6 +18,7 @@ public class BillingInfoList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public BillingInfo[] items;
+
     public BillingInfoList withItems(BillingInfo[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class BillingInfoList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public BillingInfoList withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public BillingInfoList(){}
 }

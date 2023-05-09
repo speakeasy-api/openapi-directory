@@ -15,6 +15,7 @@ public class AwsCodeBuildProjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Artifacts")
     public AwsCodeBuildProjectArtifactsDetails[] artifacts;
+
     public AwsCodeBuildProjectDetails withArtifacts(AwsCodeBuildProjectArtifactsDetails[] artifacts) {
         this.artifacts = artifacts;
         return this;
@@ -23,6 +24,7 @@ public class AwsCodeBuildProjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionKey")
     public String encryptionKey;
+
     public AwsCodeBuildProjectDetails withEncryptionKey(String encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -31,6 +33,7 @@ public class AwsCodeBuildProjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public AwsCodeBuildProjectEnvironment environment;
+
     public AwsCodeBuildProjectDetails withEnvironment(AwsCodeBuildProjectEnvironment environment) {
         this.environment = environment;
         return this;
@@ -39,6 +42,7 @@ public class AwsCodeBuildProjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogsConfig")
     public AwsCodeBuildProjectLogsConfigDetails logsConfig;
+
     public AwsCodeBuildProjectDetails withLogsConfig(AwsCodeBuildProjectLogsConfigDetails logsConfig) {
         this.logsConfig = logsConfig;
         return this;
@@ -47,6 +51,7 @@ public class AwsCodeBuildProjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsCodeBuildProjectDetails withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +60,7 @@ public class AwsCodeBuildProjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryArtifacts")
     public AwsCodeBuildProjectArtifactsDetails[] secondaryArtifacts;
+
     public AwsCodeBuildProjectDetails withSecondaryArtifacts(AwsCodeBuildProjectArtifactsDetails[] secondaryArtifacts) {
         this.secondaryArtifacts = secondaryArtifacts;
         return this;
@@ -63,6 +69,7 @@ public class AwsCodeBuildProjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRole")
     public String serviceRole;
+
     public AwsCodeBuildProjectDetails withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -71,6 +78,7 @@ public class AwsCodeBuildProjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public AwsCodeBuildProjectSource source;
+
     public AwsCodeBuildProjectDetails withSource(AwsCodeBuildProjectSource source) {
         this.source = source;
         return this;
@@ -79,9 +87,11 @@ public class AwsCodeBuildProjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public AwsCodeBuildProjectVpcConfig vpcConfig;
+
     public AwsCodeBuildProjectDetails withVpcConfig(AwsCodeBuildProjectVpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public AwsCodeBuildProjectDetails(){}
 }

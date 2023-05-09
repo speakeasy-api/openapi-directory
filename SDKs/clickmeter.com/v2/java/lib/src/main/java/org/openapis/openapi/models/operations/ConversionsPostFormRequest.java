@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsPostFormRequest {
@@ -12,6 +13,7 @@ public class ConversionsPostFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.ApiCoreDtoConversionsConversion apiCoreDtoConversionsConversion;
+
     public ConversionsPostFormRequest withApiCoreDtoConversionsConversion(org.openapis.openapi.models.shared.ApiCoreDtoConversionsConversion apiCoreDtoConversionsConversion) {
         this.apiCoreDtoConversionsConversion = apiCoreDtoConversionsConversion;
         return this;
@@ -22,9 +24,14 @@ public class ConversionsPostFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
     public Long conversionId;
+
     public ConversionsPostFormRequest withConversionId(Long conversionId) {
         this.conversionId = conversionId;
         return this;
     }
     
+    public ConversionsPostFormRequest(@JsonProperty("Api.Core.Dto.Conversions.Conversion") org.openapis.openapi.models.shared.ApiCoreDtoConversionsConversion apiCoreDtoConversionsConversion, @JsonProperty("conversionId") Long conversionId) {
+        this.apiCoreDtoConversionsConversion = apiCoreDtoConversionsConversion;
+        this.conversionId = conversionId;
+  }
 }

@@ -18,6 +18,7 @@ public class OcrLineElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineText")
     public String lineText;
+
     public OcrLineElement withLineText(String lineText) {
         this.lineText = lineText;
         return this;
@@ -29,9 +30,11 @@ public class OcrLineElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Words")
     public OcrWordElement[] words;
+
     public OcrLineElement withWords(OcrWordElement[] words) {
         this.words = words;
         return this;
     }
     
+    public OcrLineElement(){}
 }

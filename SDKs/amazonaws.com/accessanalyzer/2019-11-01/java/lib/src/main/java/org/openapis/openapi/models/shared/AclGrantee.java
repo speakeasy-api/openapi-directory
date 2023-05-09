@@ -15,6 +15,7 @@ public class AclGrantee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AclGrantee withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class AclGrantee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public AclGrantee withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public AclGrantee(){}
 }

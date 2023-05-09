@@ -19,6 +19,7 @@ public class ReleasesListLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build")
     public ReleasesListLatest200ApplicationJSONBuild build;
+
     public ReleasesListLatest200ApplicationJSON withBuild(ReleasesListLatest200ApplicationJSONBuild build) {
         this.build = build;
         return this;
@@ -33,6 +34,7 @@ public class ReleasesListLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_type")
     public ReleasesListLatest200ApplicationJSONDestinationTypeEnum destinationType;
+
     public ReleasesListLatest200ApplicationJSON withDestinationType(ReleasesListLatest200ApplicationJSONDestinationTypeEnum destinationType) {
         this.destinationType = destinationType;
         return this;
@@ -44,6 +46,7 @@ public class ReleasesListLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public ReleasesListLatest200ApplicationJSONDestinations[] destinations;
+
     public ReleasesListLatest200ApplicationJSON withDestinations(ReleasesListLatest200ApplicationJSONDestinations[] destinations) {
         this.destinations = destinations;
         return this;
@@ -55,6 +58,7 @@ public class ReleasesListLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distribution_groups")
     public ReleasesListLatest200ApplicationJSONDistributionGroups[] distributionGroups;
+
     public ReleasesListLatest200ApplicationJSON withDistributionGroups(ReleasesListLatest200ApplicationJSONDistributionGroups[] distributionGroups) {
         this.distributionGroups = distributionGroups;
         return this;
@@ -66,6 +70,7 @@ public class ReleasesListLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distribution_stores")
     public ReleasesListLatest200ApplicationJSONDistributionStores[] distributionStores;
+
     public ReleasesListLatest200ApplicationJSON withDistributionStores(ReleasesListLatest200ApplicationJSONDistributionStores[] distributionStores) {
         this.distributionStores = distributionStores;
         return this;
@@ -76,6 +81,7 @@ public class ReleasesListLatest200ApplicationJSON {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ReleasesListLatest200ApplicationJSON withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -87,6 +93,7 @@ public class ReleasesListLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_extension")
     public String fileExtension;
+
     public ReleasesListLatest200ApplicationJSON withFileExtension(String fileExtension) {
         this.fileExtension = fileExtension;
         return this;
@@ -97,6 +104,7 @@ public class ReleasesListLatest200ApplicationJSON {
      */
     @JsonProperty("id")
     public Long id;
+
     public ReleasesListLatest200ApplicationJSON withId(Long id) {
         this.id = id;
         return this;
@@ -108,6 +116,7 @@ public class ReleasesListLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_external_build")
     public Boolean isExternalBuild;
+
     public ReleasesListLatest200ApplicationJSON withIsExternalBuild(Boolean isExternalBuild) {
         this.isExternalBuild = isExternalBuild;
         return this;
@@ -119,6 +128,7 @@ public class ReleasesListLatest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public ReleasesListLatest200ApplicationJSONOriginEnum origin;
+
     public ReleasesListLatest200ApplicationJSON withOrigin(ReleasesListLatest200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -132,6 +142,7 @@ public class ReleasesListLatest200ApplicationJSON {
      */
     @JsonProperty("short_version")
     public String shortVersion;
+
     public ReleasesListLatest200ApplicationJSON withShortVersion(String shortVersion) {
         this.shortVersion = shortVersion;
         return this;
@@ -142,6 +153,7 @@ public class ReleasesListLatest200ApplicationJSON {
      */
     @JsonProperty("uploaded_at")
     public String uploadedAt;
+
     public ReleasesListLatest200ApplicationJSON withUploadedAt(String uploadedAt) {
         this.uploadedAt = uploadedAt;
         return this;
@@ -155,9 +167,17 @@ public class ReleasesListLatest200ApplicationJSON {
      */
     @JsonProperty("version")
     public String version;
+
     public ReleasesListLatest200ApplicationJSON withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ReleasesListLatest200ApplicationJSON(@JsonProperty("enabled") Boolean enabled, @JsonProperty("id") Long id, @JsonProperty("short_version") String shortVersion, @JsonProperty("uploaded_at") String uploadedAt, @JsonProperty("version") String version) {
+        this.enabled = enabled;
+        this.id = id;
+        this.shortVersion = shortVersion;
+        this.uploadedAt = uploadedAt;
+        this.version = version;
+  }
 }

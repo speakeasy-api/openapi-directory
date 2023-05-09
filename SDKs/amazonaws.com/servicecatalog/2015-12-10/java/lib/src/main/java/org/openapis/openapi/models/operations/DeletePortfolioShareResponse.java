@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePortfolioShareResponse {
     
     public String contentType;
+
     public DeletePortfolioShareResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeletePortfolioShareResponse {
      */
     
     public org.openapis.openapi.models.shared.DeletePortfolioShareOutput deletePortfolioShareOutput;
+
     public DeletePortfolioShareResponse withDeletePortfolioShareOutput(org.openapis.openapi.models.shared.DeletePortfolioShareOutput deletePortfolioShareOutput) {
         this.deletePortfolioShareOutput = deletePortfolioShareOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeletePortfolioShareResponse {
      */
     
     public Object invalidParametersException;
+
     public DeletePortfolioShareResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class DeletePortfolioShareResponse {
      */
     
     public Object invalidStateException;
+
     public DeletePortfolioShareResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class DeletePortfolioShareResponse {
      */
     
     public Object operationNotSupportedException;
+
     public DeletePortfolioShareResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -59,6 +65,7 @@ public class DeletePortfolioShareResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeletePortfolioShareResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeletePortfolioShareResponse {
     
     
     public Integer statusCode;
+
     public DeletePortfolioShareResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeletePortfolioShareResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePortfolioShareResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeletePortfolioShareResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

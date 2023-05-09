@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCustomRoutingAcceleratorsResponse {
     
     public String contentType;
+
     public ListCustomRoutingAcceleratorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCustomRoutingAcceleratorsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListCustomRoutingAcceleratorsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListCustomRoutingAcceleratorsResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListCustomRoutingAcceleratorsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class ListCustomRoutingAcceleratorsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListCustomRoutingAcceleratorsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListCustomRoutingAcceleratorsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCustomRoutingAcceleratorsResponse listCustomRoutingAcceleratorsResponse;
+
     public ListCustomRoutingAcceleratorsResponse withListCustomRoutingAcceleratorsResponse(org.openapis.openapi.models.shared.ListCustomRoutingAcceleratorsResponse listCustomRoutingAcceleratorsResponse) {
         this.listCustomRoutingAcceleratorsResponse = listCustomRoutingAcceleratorsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListCustomRoutingAcceleratorsResponse {
     
     
     public Integer statusCode;
+
     public ListCustomRoutingAcceleratorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListCustomRoutingAcceleratorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCustomRoutingAcceleratorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCustomRoutingAcceleratorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

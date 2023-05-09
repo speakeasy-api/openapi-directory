@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkAclResultNetworkAclTags {
     
     public String key;
+
     public CreateNetworkAclResultNetworkAclTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateNetworkAclResultNetworkAclTags {
     
     
     public String value;
+
     public CreateNetworkAclResultNetworkAclTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateNetworkAclResultNetworkAclTags(){}
 }

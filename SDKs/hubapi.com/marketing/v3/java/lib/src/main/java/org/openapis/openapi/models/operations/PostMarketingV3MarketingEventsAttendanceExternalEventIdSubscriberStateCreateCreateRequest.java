@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest {
@@ -12,6 +13,7 @@ public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberSt
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BatchInputMarketingEventSubscriber batchInputMarketingEventSubscriber;
+
     public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest withBatchInputMarketingEventSubscriber(org.openapis.openapi.models.shared.BatchInputMarketingEventSubscriber batchInputMarketingEventSubscriber) {
         this.batchInputMarketingEventSubscriber = batchInputMarketingEventSubscriber;
         return this;
@@ -22,6 +24,7 @@ public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberSt
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=externalAccountId")
     public String externalAccountId;
+
     public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest withExternalAccountId(String externalAccountId) {
         this.externalAccountId = externalAccountId;
         return this;
@@ -32,6 +35,7 @@ public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberSt
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalEventId")
     public String externalEventId;
+
     public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest withExternalEventId(String externalEventId) {
         this.externalEventId = externalEventId;
         return this;
@@ -42,9 +46,15 @@ public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberSt
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriberState")
     public String subscriberState;
+
     public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest withSubscriberState(String subscriberState) {
         this.subscriberState = subscriberState;
         return this;
     }
     
+    public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest(@JsonProperty("BatchInputMarketingEventSubscriber") org.openapis.openapi.models.shared.BatchInputMarketingEventSubscriber batchInputMarketingEventSubscriber, @JsonProperty("externalEventId") String externalEventId, @JsonProperty("subscriberState") String subscriberState) {
+        this.batchInputMarketingEventSubscriber = batchInputMarketingEventSubscriber;
+        this.externalEventId = externalEventId;
+        this.subscriberState = subscriberState;
+  }
 }

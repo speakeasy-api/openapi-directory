@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * TargetTrackingMetricDataQuery - The metric data to return. Also defines whether this call is returning data for one metric only, or whether it is performing a math expression on the values of returned metric statistics to create a new time series. A time series is a series of data points, each of which is associated with a timestamp.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TargetTrackingMetricDataQuery {
     
     public String expression;
+
     public TargetTrackingMetricDataQuery withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -19,6 +20,7 @@ public class TargetTrackingMetricDataQuery {
     
     
     public String id;
+
     public TargetTrackingMetricDataQuery withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class TargetTrackingMetricDataQuery {
     
     
     public String label;
+
     public TargetTrackingMetricDataQuery withLabel(String label) {
         this.label = label;
         return this;
@@ -33,6 +36,7 @@ public class TargetTrackingMetricDataQuery {
     
     
     public TargetTrackingMetricStat metricStat;
+
     public TargetTrackingMetricDataQuery withMetricStat(TargetTrackingMetricStat metricStat) {
         this.metricStat = metricStat;
         return this;
@@ -40,9 +44,13 @@ public class TargetTrackingMetricDataQuery {
     
     
     public Boolean returnData;
+
     public TargetTrackingMetricDataQuery withReturnData(Boolean returnData) {
         this.returnData = returnData;
         return this;
     }
     
+    public TargetTrackingMetricDataQuery(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

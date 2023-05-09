@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMeFollowingsTracksResponse {
     
     public String contentType;
+
     public GetMeFollowingsTracksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMeFollowingsTracksResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetMeFollowingsTracksResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class GetMeFollowingsTracksResponse {
     
     
     public Integer statusCode;
+
     public GetMeFollowingsTracksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetMeFollowingsTracksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMeFollowingsTracksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetMeFollowingsTracksResponse {
      */
     
     public org.openapis.openapi.models.shared.Track[] tracksList;
+
     public GetMeFollowingsTracksResponse withTracksList(org.openapis.openapi.models.shared.Track[] tracksList) {
         this.tracksList = tracksList;
         return this;
     }
     
+    public GetMeFollowingsTracksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

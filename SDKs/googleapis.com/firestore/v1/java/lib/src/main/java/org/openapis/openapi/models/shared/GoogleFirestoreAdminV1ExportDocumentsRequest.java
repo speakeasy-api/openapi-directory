@@ -18,6 +18,7 @@ public class GoogleFirestoreAdminV1ExportDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionIds")
     public String[] collectionIds;
+
     public GoogleFirestoreAdminV1ExportDocumentsRequest withCollectionIds(String[] collectionIds) {
         this.collectionIds = collectionIds;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirestoreAdminV1ExportDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceIds")
     public String[] namespaceIds;
+
     public GoogleFirestoreAdminV1ExportDocumentsRequest withNamespaceIds(String[] namespaceIds) {
         this.namespaceIds = namespaceIds;
         return this;
@@ -40,9 +42,11 @@ public class GoogleFirestoreAdminV1ExportDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputUriPrefix")
     public String outputUriPrefix;
+
     public GoogleFirestoreAdminV1ExportDocumentsRequest withOutputUriPrefix(String outputUriPrefix) {
         this.outputUriPrefix = outputUriPrefix;
         return this;
     }
     
+    public GoogleFirestoreAdminV1ExportDocumentsRequest(){}
 }

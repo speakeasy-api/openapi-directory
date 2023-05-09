@@ -12,6 +12,7 @@ public class CompanyFinancialYearViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstMonth")
     public Integer firstMonth;
+
     public CompanyFinancialYearViewModel withFirstMonth(Integer firstMonth) {
         this.firstMonth = firstMonth;
         return this;
@@ -20,6 +21,7 @@ public class CompanyFinancialYearViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startMonth")
     public Integer startMonth;
+
     public CompanyFinancialYearViewModel withStartMonth(Integer startMonth) {
         this.startMonth = startMonth;
         return this;
@@ -28,9 +30,11 @@ public class CompanyFinancialYearViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startYear")
     public Integer startYear;
+
     public CompanyFinancialYearViewModel withStartYear(Integer startYear) {
         this.startYear = startYear;
         return this;
     }
     
+    public CompanyFinancialYearViewModel(){}
 }

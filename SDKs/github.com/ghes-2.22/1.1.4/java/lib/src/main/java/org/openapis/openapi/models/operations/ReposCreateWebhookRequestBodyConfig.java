@@ -18,6 +18,7 @@ public class ReposCreateWebhookRequestBodyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_type")
     public String contentType;
+
     public ReposCreateWebhookRequestBodyConfig withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +27,7 @@ public class ReposCreateWebhookRequestBodyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public String digest;
+
     public ReposCreateWebhookRequestBodyConfig withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -34,6 +36,7 @@ public class ReposCreateWebhookRequestBodyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insecure_ssl")
     public Object insecureSsl;
+
     public ReposCreateWebhookRequestBodyConfig withInsecureSsl(Object insecureSsl) {
         this.insecureSsl = insecureSsl;
         return this;
@@ -45,6 +48,7 @@ public class ReposCreateWebhookRequestBodyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public ReposCreateWebhookRequestBodyConfig withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -53,6 +57,7 @@ public class ReposCreateWebhookRequestBodyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public ReposCreateWebhookRequestBodyConfig withToken(String token) {
         this.token = token;
         return this;
@@ -64,9 +69,11 @@ public class ReposCreateWebhookRequestBodyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ReposCreateWebhookRequestBodyConfig withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ReposCreateWebhookRequestBodyConfig(){}
 }

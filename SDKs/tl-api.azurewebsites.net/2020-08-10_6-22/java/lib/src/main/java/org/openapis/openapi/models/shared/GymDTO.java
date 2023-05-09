@@ -17,6 +17,7 @@ public class GymDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalGymNumber")
     public Integer externalGymNumber;
+
     public GymDTO withExternalGymNumber(Integer externalGymNumber) {
         this.externalGymNumber = externalGymNumber;
         return this;
@@ -25,6 +26,7 @@ public class GymDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gymId")
     public Integer gymId;
+
     public GymDTO withGymId(Integer gymId) {
         this.gymId = gymId;
         return this;
@@ -33,6 +35,7 @@ public class GymDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gymName")
     public String gymName;
+
     public GymDTO withGymName(String gymName) {
         this.gymName = gymName;
         return this;
@@ -41,9 +44,11 @@ public class GymDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GymDTO withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public GymDTO(){}
 }

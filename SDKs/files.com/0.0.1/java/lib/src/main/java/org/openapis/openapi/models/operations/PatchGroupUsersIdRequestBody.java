@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchGroupUsersIdRequestBody {
@@ -12,6 +13,7 @@ public class PatchGroupUsersIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=admin")
     public Boolean admin;
+
     public PatchGroupUsersIdRequestBody withAdmin(Boolean admin) {
         this.admin = admin;
         return this;
@@ -22,6 +24,7 @@ public class PatchGroupUsersIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=group_id")
     public Integer groupId;
+
     public PatchGroupUsersIdRequestBody withGroupId(Integer groupId) {
         this.groupId = groupId;
         return this;
@@ -32,9 +35,14 @@ public class PatchGroupUsersIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=user_id")
     public Integer userId;
+
     public PatchGroupUsersIdRequestBody withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public PatchGroupUsersIdRequestBody(@JsonProperty("group_id") Integer groupId, @JsonProperty("user_id") Integer userId) {
+        this.groupId = groupId;
+        this.userId = userId;
+  }
 }

@@ -15,6 +15,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowedValues")
     public String allowedValues;
+
     public Parameter withAllowedValues(String allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -23,6 +24,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataType")
     public String dataType;
+
     public Parameter withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -31,6 +33,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Parameter withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumEngineVersion")
     public String minimumEngineVersion;
+
     public Parameter withMinimumEngineVersion(String minimumEngineVersion) {
         this.minimumEngineVersion = minimumEngineVersion;
         return this;
@@ -47,6 +51,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Parameter withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +60,11 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public Parameter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Parameter(){}
 }

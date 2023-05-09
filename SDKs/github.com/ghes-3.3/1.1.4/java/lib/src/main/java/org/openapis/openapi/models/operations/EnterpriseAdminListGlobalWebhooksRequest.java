@@ -12,6 +12,7 @@ public class EnterpriseAdminListGlobalWebhooksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public EnterpriseAdminListGlobalWebhooksRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,9 +23,11 @@ public class EnterpriseAdminListGlobalWebhooksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public EnterpriseAdminListGlobalWebhooksRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public EnterpriseAdminListGlobalWebhooksRequest(){}
 }

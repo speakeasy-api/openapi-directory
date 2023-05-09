@@ -14,6 +14,7 @@ public class TppMessage400AIS {
      */
     @JsonProperty("category")
     public TppMessageCategoryEnum category;
+
     public TppMessage400AIS withCategory(TppMessageCategoryEnum category) {
         this.category = category;
         return this;
@@ -24,6 +25,7 @@ public class TppMessage400AIS {
      */
     @JsonProperty("code")
     public MessageCode400AISEnum code;
+
     public TppMessage400AIS withCode(MessageCode400AISEnum code) {
         this.code = code;
         return this;
@@ -32,6 +34,7 @@ public class TppMessage400AIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public TppMessage400AIS withPath(String path) {
         this.path = path;
         return this;
@@ -43,9 +46,14 @@ public class TppMessage400AIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public TppMessage400AIS withText(String text) {
         this.text = text;
         return this;
     }
     
+    public TppMessage400AIS(@JsonProperty("category") TppMessageCategoryEnum category, @JsonProperty("code") MessageCode400AISEnum code) {
+        this.category = category;
+        this.code = code;
+  }
 }

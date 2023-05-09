@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class UserUserSearchResponseDetail {
     
     public String bungieGlobalDisplayName;
+
     public UserUserSearchResponseDetail withBungieGlobalDisplayName(String bungieGlobalDisplayName) {
         this.bungieGlobalDisplayName = bungieGlobalDisplayName;
         return this;
@@ -16,6 +17,7 @@ public class UserUserSearchResponseDetail {
     
     
     public Long bungieGlobalDisplayNameCode;
+
     public UserUserSearchResponseDetail withBungieGlobalDisplayNameCode(Long bungieGlobalDisplayNameCode) {
         this.bungieGlobalDisplayNameCode = bungieGlobalDisplayNameCode;
         return this;
@@ -23,6 +25,7 @@ public class UserUserSearchResponseDetail {
     
     
     public Long bungieNetMembershipId;
+
     public UserUserSearchResponseDetail withBungieNetMembershipId(Long bungieNetMembershipId) {
         this.bungieNetMembershipId = bungieNetMembershipId;
         return this;
@@ -30,9 +33,11 @@ public class UserUserSearchResponseDetail {
     
     
     public UserUserInfoCard[] destinyMemberships;
+
     public UserUserSearchResponseDetail withDestinyMemberships(UserUserInfoCard[] destinyMemberships) {
         this.destinyMemberships = destinyMemberships;
         return this;
     }
     
+    public UserUserSearchResponseDetail(){}
 }

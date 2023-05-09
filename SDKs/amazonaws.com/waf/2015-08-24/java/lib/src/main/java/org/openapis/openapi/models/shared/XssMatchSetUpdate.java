@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class XssMatchSetUpdate {
     @JsonProperty("Action")
     public ChangeActionEnum action;
+
     public XssMatchSetUpdate withAction(ChangeActionEnum action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class XssMatchSetUpdate {
     
     @JsonProperty("XssMatchTuple")
     public XssMatchTuple xssMatchTuple;
+
     public XssMatchSetUpdate withXssMatchTuple(XssMatchTuple xssMatchTuple) {
         this.xssMatchTuple = xssMatchTuple;
         return this;
     }
     
+    public XssMatchSetUpdate(@JsonProperty("Action") ChangeActionEnum action, @JsonProperty("XssMatchTuple") XssMatchTuple xssMatchTuple) {
+        this.action = action;
+        this.xssMatchTuple = xssMatchTuple;
+  }
 }

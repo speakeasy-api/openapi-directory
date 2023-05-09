@@ -12,6 +12,7 @@ public class LicenseSFX {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audio_layout")
     public LicenseSFXAudioLayoutEnum audioLayout;
+
     public LicenseSFX withAudioLayout(LicenseSFXAudioLayoutEnum audioLayout) {
         this.audioLayout = audioLayout;
         return this;
@@ -20,6 +21,7 @@ public class LicenseSFX {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public LicenseSFXFormatEnum format;
+
     public LicenseSFX withFormat(LicenseSFXFormatEnum format) {
         this.format = format;
         return this;
@@ -31,6 +33,7 @@ public class LicenseSFX {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_id")
     public String searchId;
+
     public LicenseSFX withSearchId(String searchId) {
         this.searchId = searchId;
         return this;
@@ -41,6 +44,7 @@ public class LicenseSFX {
      */
     @JsonProperty("sfx_id")
     public String sfxId;
+
     public LicenseSFX withSfxId(String sfxId) {
         this.sfxId = sfxId;
         return this;
@@ -51,9 +55,14 @@ public class LicenseSFX {
      */
     @JsonProperty("subscription_id")
     public String subscriptionId;
+
     public LicenseSFX withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public LicenseSFX(@JsonProperty("sfx_id") String sfxId, @JsonProperty("subscription_id") String subscriptionId) {
+        this.sfxId = sfxId;
+        this.subscriptionId = subscriptionId;
+  }
 }

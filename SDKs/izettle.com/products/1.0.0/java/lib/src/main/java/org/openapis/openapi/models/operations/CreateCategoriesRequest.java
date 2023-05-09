@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCategoriesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateCategoriesRequest createCategoriesRequest;
+
     public CreateCategoriesRequest withCreateCategoriesRequest(org.openapis.openapi.models.shared.CreateCategoriesRequest createCategoriesRequest) {
         this.createCategoriesRequest = createCategoriesRequest;
         return this;
@@ -16,9 +18,14 @@ public class CreateCategoriesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
     public String organizationUuid;
+
     public CreateCategoriesRequest withOrganizationUuid(String organizationUuid) {
         this.organizationUuid = organizationUuid;
         return this;
     }
     
+    public CreateCategoriesRequest(@JsonProperty("CreateCategoriesRequest") org.openapis.openapi.models.shared.CreateCategoriesRequest createCategoriesRequest, @JsonProperty("organizationUuid") String organizationUuid) {
+        this.createCategoriesRequest = createCategoriesRequest;
+        this.organizationUuid = organizationUuid;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeTargetGrpcProxiesGetResponse {
     
     public String contentType;
+
     public ComputeTargetGrpcProxiesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ComputeTargetGrpcProxiesGetResponse {
     
     
     public Integer statusCode;
+
     public ComputeTargetGrpcProxiesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ComputeTargetGrpcProxiesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeTargetGrpcProxiesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ComputeTargetGrpcProxiesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.TargetGrpcProxy targetGrpcProxy;
+
     public ComputeTargetGrpcProxiesGetResponse withTargetGrpcProxy(org.openapis.openapi.models.shared.TargetGrpcProxy targetGrpcProxy) {
         this.targetGrpcProxy = targetGrpcProxy;
         return this;
     }
     
+    public ComputeTargetGrpcProxiesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

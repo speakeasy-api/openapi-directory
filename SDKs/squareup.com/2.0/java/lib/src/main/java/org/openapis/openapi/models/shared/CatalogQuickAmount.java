@@ -22,6 +22,7 @@ public class CatalogQuickAmount {
      */
     @JsonProperty("amount")
     public Money amount;
+
     public CatalogQuickAmount withAmount(Money amount) {
         this.amount = amount;
         return this;
@@ -33,6 +34,7 @@ public class CatalogQuickAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ordinal")
     public Long ordinal;
+
     public CatalogQuickAmount withOrdinal(Long ordinal) {
         this.ordinal = ordinal;
         return this;
@@ -45,6 +47,7 @@ public class CatalogQuickAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Long score;
+
     public CatalogQuickAmount withScore(Long score) {
         this.score = score;
         return this;
@@ -55,9 +58,14 @@ public class CatalogQuickAmount {
      */
     @JsonProperty("type")
     public String type;
+
     public CatalogQuickAmount withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CatalogQuickAmount(@JsonProperty("amount") Money amount, @JsonProperty("type") String type) {
+        this.amount = amount;
+        this.type = type;
+  }
 }

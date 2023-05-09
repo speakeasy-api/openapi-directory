@@ -15,6 +15,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String addon;
+
     public NodesLogsListLogAttributesLogParams withAddon(String addon) {
         this.addon = addon;
         return this;
@@ -25,6 +26,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public Boolean anonymousLink;
+
     public NodesLogsListLogAttributesLogParams withAnonymousLink(Boolean anonymousLink) {
         this.anonymousLink = anonymousLink;
         return this;
@@ -35,6 +37,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String bucket;
+
     public NodesLogsListLogAttributesLogParams withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -45,6 +48,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String citationName;
+
     public NodesLogsListLogAttributesLogParams withCitationName(String citationName) {
         this.citationName = citationName;
         return this;
@@ -55,6 +59,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String contributors;
+
     public NodesLogsListLogAttributesLogParams withContributors(String contributors) {
         this.contributors = contributors;
         return this;
@@ -65,6 +70,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String dataSet;
+
     public NodesLogsListLogAttributesLogParams withDataSet(String dataSet) {
         this.dataSet = dataSet;
         return this;
@@ -75,6 +81,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String destination;
+
     public NodesLogsListLogAttributesLogParams withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -85,6 +92,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String figshareTitle;
+
     public NodesLogsListLogAttributesLogParams withFigshareTitle(String figshareTitle) {
         this.figshareTitle = figshareTitle;
         return this;
@@ -95,6 +103,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String file;
+
     public NodesLogsListLogAttributesLogParams withFile(String file) {
         this.file = file;
         return this;
@@ -105,6 +114,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String filename;
+
     public NodesLogsListLogAttributesLogParams withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -115,6 +125,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String folder;
+
     public NodesLogsListLogAttributesLogParams withFolder(String folder) {
         this.folder = folder;
         return this;
@@ -125,6 +136,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String folderName;
+
     public NodesLogsListLogAttributesLogParams withFolderName(String folderName) {
         this.folderName = folderName;
         return this;
@@ -135,6 +147,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String forwardUrl;
+
     public NodesLogsListLogAttributesLogParams withForwardUrl(String forwardUrl) {
         this.forwardUrl = forwardUrl;
         return this;
@@ -145,6 +158,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String githubRepo;
+
     public NodesLogsListLogAttributesLogParams withGithubRepo(String githubRepo) {
         this.githubRepo = githubRepo;
         return this;
@@ -155,6 +169,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String githubUser;
+
     public NodesLogsListLogAttributesLogParams withGithubUser(String githubUser) {
         this.githubUser = githubUser;
         return this;
@@ -165,6 +180,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String identifiers;
+
     public NodesLogsListLogAttributesLogParams withIdentifiers(String identifiers) {
         this.identifiers = identifiers;
         return this;
@@ -175,6 +191,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String institution;
+
     public NodesLogsListLogAttributesLogParams withInstitution(String institution) {
         this.institution = institution;
         return this;
@@ -185,6 +202,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String kind;
+
     public NodesLogsListLogAttributesLogParams withKind(String kind) {
         this.kind = kind;
         return this;
@@ -195,6 +213,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String license;
+
     public NodesLogsListLogAttributesLogParams withLicense(String license) {
         this.license = license;
         return this;
@@ -205,6 +224,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String oldPage;
+
     public NodesLogsListLogAttributesLogParams withOldPage(String oldPage) {
         this.oldPage = oldPage;
         return this;
@@ -215,6 +235,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String page;
+
     public NodesLogsListLogAttributesLogParams withPage(String page) {
         this.page = page;
         return this;
@@ -225,6 +246,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String pageId;
+
     public NodesLogsListLogAttributesLogParams withPageId(String pageId) {
         this.pageId = pageId;
         return this;
@@ -235,6 +257,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String paramsNode;
+
     public NodesLogsListLogAttributesLogParams withParamsNode(String paramsNode) {
         this.paramsNode = paramsNode;
         return this;
@@ -245,6 +268,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String paramsProject;
+
     public NodesLogsListLogAttributesLogParams withParamsProject(String paramsProject) {
         this.paramsProject = paramsProject;
         return this;
@@ -255,6 +279,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String path;
+
     public NodesLogsListLogAttributesLogParams withPath(String path) {
         this.path = path;
         return this;
@@ -265,6 +290,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String pointer;
+
     public NodesLogsListLogAttributesLogParams withPointer(String pointer) {
         this.pointer = pointer;
         return this;
@@ -275,6 +301,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String preprint;
+
     public NodesLogsListLogAttributesLogParams withPreprint(String preprint) {
         this.preprint = preprint;
         return this;
@@ -285,6 +312,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String preprintProvider;
+
     public NodesLogsListLogAttributesLogParams withPreprintProvider(String preprintProvider) {
         this.preprintProvider = preprintProvider;
         return this;
@@ -295,6 +323,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String previousInstitution;
+
     public NodesLogsListLogAttributesLogParams withPreviousInstitution(String previousInstitution) {
         this.previousInstitution = previousInstitution;
         return this;
@@ -305,6 +334,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String source;
+
     public NodesLogsListLogAttributesLogParams withSource(String source) {
         this.source = source;
         return this;
@@ -315,6 +345,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String study;
+
     public NodesLogsListLogAttributesLogParams withStudy(String study) {
         this.study = study;
         return this;
@@ -325,6 +356,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String tag;
+
     public NodesLogsListLogAttributesLogParams withTag(String tag) {
         this.tag = tag;
         return this;
@@ -335,6 +367,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String tags;
+
     public NodesLogsListLogAttributesLogParams withTags(String tags) {
         this.tags = tags;
         return this;
@@ -345,6 +378,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String target;
+
     public NodesLogsListLogAttributesLogParams withTarget(String target) {
         this.target = target;
         return this;
@@ -355,6 +389,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String templateNode;
+
     public NodesLogsListLogAttributesLogParams withTemplateNode(String templateNode) {
         this.templateNode = templateNode;
         return this;
@@ -365,6 +400,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String titleNew;
+
     public NodesLogsListLogAttributesLogParams withTitleNew(String titleNew) {
         this.titleNew = titleNew;
         return this;
@@ -375,6 +411,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String titleOriginal;
+
     public NodesLogsListLogAttributesLogParams withTitleOriginal(String titleOriginal) {
         this.titleOriginal = titleOriginal;
         return this;
@@ -385,6 +422,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String updatedFields;
+
     public NodesLogsListLogAttributesLogParams withUpdatedFields(String updatedFields) {
         this.updatedFields = updatedFields;
         return this;
@@ -395,6 +433,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String urls;
+
     public NodesLogsListLogAttributesLogParams withUrls(String urls) {
         this.urls = urls;
         return this;
@@ -405,6 +444,7 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String version;
+
     public NodesLogsListLogAttributesLogParams withVersion(String version) {
         this.version = version;
         return this;
@@ -415,9 +455,11 @@ public class NodesLogsListLogAttributesLogParams {
      */
     
     public String wiki;
+
     public NodesLogsListLogAttributesLogParams withWiki(String wiki) {
         this.wiki = wiki;
         return this;
     }
     
+    public NodesLogsListLogAttributesLogParams(){}
 }

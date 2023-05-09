@@ -17,6 +17,7 @@ public class ExportConfigurationsCreate202ApplicationJSON {
      */
     @JsonProperty("creation_time")
     public String creationTime;
+
     public ExportConfigurationsCreate202ApplicationJSON withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class ExportConfigurationsCreate202ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_configuration")
     public ExportConfigurationsCreate202ApplicationJSONExportConfiguration exportConfiguration;
+
     public ExportConfigurationsCreate202ApplicationJSON withExportConfiguration(ExportConfigurationsCreate202ApplicationJSONExportConfiguration exportConfiguration) {
         this.exportConfiguration = exportConfiguration;
         return this;
@@ -36,6 +38,7 @@ public class ExportConfigurationsCreate202ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_entities")
     public ExportConfigurationsCreate202ApplicationJSONExportEntitiesEnum[] exportEntities;
+
     public ExportConfigurationsCreate202ApplicationJSON withExportEntities(ExportConfigurationsCreate202ApplicationJSONExportEntitiesEnum[] exportEntities) {
         this.exportEntities = exportEntities;
         return this;
@@ -46,6 +49,7 @@ public class ExportConfigurationsCreate202ApplicationJSON {
      */
     @JsonProperty("export_type")
     public ExportConfigurationsCreate202ApplicationJSONExportTypeEnum exportType;
+
     public ExportConfigurationsCreate202ApplicationJSON withExportType(ExportConfigurationsCreate202ApplicationJSONExportTypeEnum exportType) {
         this.exportType = exportType;
         return this;
@@ -56,6 +60,7 @@ public class ExportConfigurationsCreate202ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public ExportConfigurationsCreate202ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -67,6 +72,7 @@ public class ExportConfigurationsCreate202ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_run_time")
     public String lastRunTime;
+
     public ExportConfigurationsCreate202ApplicationJSON withLastRunTime(String lastRunTime) {
         this.lastRunTime = lastRunTime;
         return this;
@@ -78,6 +84,7 @@ public class ExportConfigurationsCreate202ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_group")
     public String resourceGroup;
+
     public ExportConfigurationsCreate202ApplicationJSON withResourceGroup(String resourceGroup) {
         this.resourceGroup = resourceGroup;
         return this;
@@ -89,6 +96,7 @@ public class ExportConfigurationsCreate202ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_name")
     public String resourceName;
+
     public ExportConfigurationsCreate202ApplicationJSON withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -99,6 +107,7 @@ public class ExportConfigurationsCreate202ApplicationJSON {
      */
     @JsonProperty("state")
     public ExportConfigurationsCreate202ApplicationJSONStateEnum state;
+
     public ExportConfigurationsCreate202ApplicationJSON withState(ExportConfigurationsCreate202ApplicationJSONStateEnum state) {
         this.state = state;
         return this;
@@ -110,9 +119,16 @@ public class ExportConfigurationsCreate202ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state_info")
     public String stateInfo;
+
     public ExportConfigurationsCreate202ApplicationJSON withStateInfo(String stateInfo) {
         this.stateInfo = stateInfo;
         return this;
     }
     
+    public ExportConfigurationsCreate202ApplicationJSON(@JsonProperty("creation_time") String creationTime, @JsonProperty("export_type") ExportConfigurationsCreate202ApplicationJSONExportTypeEnum exportType, @JsonProperty("id") String id, @JsonProperty("state") ExportConfigurationsCreate202ApplicationJSONStateEnum state) {
+        this.creationTime = creationTime;
+        this.exportType = exportType;
+        this.id = id;
+        this.state = state;
+  }
 }

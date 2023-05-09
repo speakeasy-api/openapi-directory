@@ -18,9 +18,11 @@ public class AllocationResourceStatusSpecificSKUAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceInstanceTemplateId")
     public String sourceInstanceTemplateId;
+
     public AllocationResourceStatusSpecificSKUAllocation withSourceInstanceTemplateId(String sourceInstanceTemplateId) {
         this.sourceInstanceTemplateId = sourceInstanceTemplateId;
         return this;
     }
     
+    public AllocationResourceStatusSpecificSKUAllocation(){}
 }

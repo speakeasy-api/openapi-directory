@@ -18,6 +18,7 @@ public class GoogleCloudRecommenderV1beta1Impact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public GoogleCloudRecommenderV1beta1ImpactCategoryEnum category;
+
     public GoogleCloudRecommenderV1beta1Impact withCategory(GoogleCloudRecommenderV1beta1ImpactCategoryEnum category) {
         this.category = category;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecommenderV1beta1Impact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costProjection")
     public GoogleCloudRecommenderV1beta1CostProjection costProjection;
+
     public GoogleCloudRecommenderV1beta1Impact withCostProjection(GoogleCloudRecommenderV1beta1CostProjection costProjection) {
         this.costProjection = costProjection;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecommenderV1beta1Impact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reliabilityProjection")
     public GoogleCloudRecommenderV1beta1ReliabilityProjection reliabilityProjection;
+
     public GoogleCloudRecommenderV1beta1Impact withReliabilityProjection(GoogleCloudRecommenderV1beta1ReliabilityProjection reliabilityProjection) {
         this.reliabilityProjection = reliabilityProjection;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecommenderV1beta1Impact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityProjection")
     public GoogleCloudRecommenderV1beta1SecurityProjection securityProjection;
+
     public GoogleCloudRecommenderV1beta1Impact withSecurityProjection(GoogleCloudRecommenderV1beta1SecurityProjection securityProjection) {
         this.securityProjection = securityProjection;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudRecommenderV1beta1Impact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sustainabilityProjection")
     public GoogleCloudRecommenderV1beta1SustainabilityProjection sustainabilityProjection;
+
     public GoogleCloudRecommenderV1beta1Impact withSustainabilityProjection(GoogleCloudRecommenderV1beta1SustainabilityProjection sustainabilityProjection) {
         this.sustainabilityProjection = sustainabilityProjection;
         return this;
     }
     
+    public GoogleCloudRecommenderV1beta1Impact(){}
 }

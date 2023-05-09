@@ -20,6 +20,7 @@ public class AggregatedUtterancesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containsDataFromDeletedResources")
     public Boolean containsDataFromDeletedResources;
+
     public AggregatedUtterancesSummary withContainsDataFromDeletedResources(Boolean containsDataFromDeletedResources) {
         this.containsDataFromDeletedResources = containsDataFromDeletedResources;
         return this;
@@ -28,6 +29,7 @@ public class AggregatedUtterancesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hitCount")
     public Long hitCount;
+
     public AggregatedUtterancesSummary withHitCount(Long hitCount) {
         this.hitCount = hitCount;
         return this;
@@ -36,6 +38,7 @@ public class AggregatedUtterancesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missedCount")
     public Long missedCount;
+
     public AggregatedUtterancesSummary withMissedCount(Long missedCount) {
         this.missedCount = missedCount;
         return this;
@@ -44,6 +47,7 @@ public class AggregatedUtterancesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utterance")
     public String utterance;
+
     public AggregatedUtterancesSummary withUtterance(String utterance) {
         this.utterance = utterance;
         return this;
@@ -54,6 +58,7 @@ public class AggregatedUtterancesSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("utteranceFirstRecordedInAggregationDuration")
     public OffsetDateTime utteranceFirstRecordedInAggregationDuration;
+
     public AggregatedUtterancesSummary withUtteranceFirstRecordedInAggregationDuration(OffsetDateTime utteranceFirstRecordedInAggregationDuration) {
         this.utteranceFirstRecordedInAggregationDuration = utteranceFirstRecordedInAggregationDuration;
         return this;
@@ -64,9 +69,11 @@ public class AggregatedUtterancesSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("utteranceLastRecordedInAggregationDuration")
     public OffsetDateTime utteranceLastRecordedInAggregationDuration;
+
     public AggregatedUtterancesSummary withUtteranceLastRecordedInAggregationDuration(OffsetDateTime utteranceLastRecordedInAggregationDuration) {
         this.utteranceLastRecordedInAggregationDuration = utteranceLastRecordedInAggregationDuration;
         return this;
     }
     
+    public AggregatedUtterancesSummary(){}
 }

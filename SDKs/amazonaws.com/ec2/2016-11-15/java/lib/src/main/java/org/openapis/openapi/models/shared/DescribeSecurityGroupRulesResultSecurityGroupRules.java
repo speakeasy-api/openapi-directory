@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSecurityGroupRulesResultSecurityGroupRules {
     
     public String cidrIpv4;
+
     public DescribeSecurityGroupRulesResultSecurityGroupRules withCidrIpv4(String cidrIpv4) {
         this.cidrIpv4 = cidrIpv4;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSecurityGroupRulesResultSecurityGroupRules {
     
     
     public String cidrIpv6;
+
     public DescribeSecurityGroupRulesResultSecurityGroupRules withCidrIpv6(String cidrIpv6) {
         this.cidrIpv6 = cidrIpv6;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSecurityGroupRulesResultSecurityGroupRules {
     
     
     public String description;
+
     public DescribeSecurityGroupRulesResultSecurityGroupRules withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSecurityGroupRulesResultSecurityGroupRules {
     
     
     public Long fromPort;
+
     public DescribeSecurityGroupRulesResultSecurityGroupRules withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -40,6 +44,7 @@ public class DescribeSecurityGroupRulesResultSecurityGroupRules {
     
     
     public String groupId;
+
     public DescribeSecurityGroupRulesResultSecurityGroupRules withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeSecurityGroupRulesResultSecurityGroupRules {
     
     
     public String groupOwnerId;
+
     public DescribeSecurityGroupRulesResultSecurityGroupRules withGroupOwnerId(String groupOwnerId) {
         this.groupOwnerId = groupOwnerId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeSecurityGroupRulesResultSecurityGroupRules {
     
     
     public String ipProtocol;
+
     public DescribeSecurityGroupRulesResultSecurityGroupRules withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -61,6 +68,7 @@ public class DescribeSecurityGroupRulesResultSecurityGroupRules {
     
     
     public Boolean isEgress;
+
     public DescribeSecurityGroupRulesResultSecurityGroupRules withIsEgress(Boolean isEgress) {
         this.isEgress = isEgress;
         return this;
@@ -68,6 +76,7 @@ public class DescribeSecurityGroupRulesResultSecurityGroupRules {
     
     
     public String prefixListId;
+
     public DescribeSecurityGroupRulesResultSecurityGroupRules withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -75,6 +84,7 @@ public class DescribeSecurityGroupRulesResultSecurityGroupRules {
     
     
     public DescribeSecurityGroupRulesResultSecurityGroupRulesReferencedGroupInfo referencedGroupInfo;
+
     public DescribeSecurityGroupRulesResultSecurityGroupRules withReferencedGroupInfo(DescribeSecurityGroupRulesResultSecurityGroupRulesReferencedGroupInfo referencedGroupInfo) {
         this.referencedGroupInfo = referencedGroupInfo;
         return this;
@@ -82,6 +92,7 @@ public class DescribeSecurityGroupRulesResultSecurityGroupRules {
     
     
     public String securityGroupRuleId;
+
     public DescribeSecurityGroupRulesResultSecurityGroupRules withSecurityGroupRuleId(String securityGroupRuleId) {
         this.securityGroupRuleId = securityGroupRuleId;
         return this;
@@ -89,6 +100,7 @@ public class DescribeSecurityGroupRulesResultSecurityGroupRules {
     
     
     public DescribeSecurityGroupRulesResultSecurityGroupRulesTags[] tags;
+
     public DescribeSecurityGroupRulesResultSecurityGroupRules withTags(DescribeSecurityGroupRulesResultSecurityGroupRulesTags[] tags) {
         this.tags = tags;
         return this;
@@ -96,9 +108,11 @@ public class DescribeSecurityGroupRulesResultSecurityGroupRules {
     
     
     public Long toPort;
+
     public DescribeSecurityGroupRulesResultSecurityGroupRules withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
     }
     
+    public DescribeSecurityGroupRulesResultSecurityGroupRules(){}
 }

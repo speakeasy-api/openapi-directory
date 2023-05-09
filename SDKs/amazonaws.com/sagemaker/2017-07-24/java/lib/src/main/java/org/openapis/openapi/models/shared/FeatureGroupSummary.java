@@ -21,6 +21,7 @@ public class FeatureGroupSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public FeatureGroupSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class FeatureGroupSummary {
     
     @JsonProperty("FeatureGroupArn")
     public String featureGroupArn;
+
     public FeatureGroupSummary withFeatureGroupArn(String featureGroupArn) {
         this.featureGroupArn = featureGroupArn;
         return this;
@@ -35,6 +37,7 @@ public class FeatureGroupSummary {
     
     @JsonProperty("FeatureGroupName")
     public String featureGroupName;
+
     public FeatureGroupSummary withFeatureGroupName(String featureGroupName) {
         this.featureGroupName = featureGroupName;
         return this;
@@ -43,6 +46,7 @@ public class FeatureGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureGroupStatus")
     public FeatureGroupStatusEnum featureGroupStatus;
+
     public FeatureGroupSummary withFeatureGroupStatus(FeatureGroupStatusEnum featureGroupStatus) {
         this.featureGroupStatus = featureGroupStatus;
         return this;
@@ -51,9 +55,15 @@ public class FeatureGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OfflineStoreStatus")
     public OfflineStoreStatus offlineStoreStatus;
+
     public FeatureGroupSummary withOfflineStoreStatus(OfflineStoreStatus offlineStoreStatus) {
         this.offlineStoreStatus = offlineStoreStatus;
         return this;
     }
     
+    public FeatureGroupSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("FeatureGroupArn") String featureGroupArn, @JsonProperty("FeatureGroupName") String featureGroupName) {
+        this.creationTime = creationTime;
+        this.featureGroupArn = featureGroupArn;
+        this.featureGroupName = featureGroupName;
+  }
 }

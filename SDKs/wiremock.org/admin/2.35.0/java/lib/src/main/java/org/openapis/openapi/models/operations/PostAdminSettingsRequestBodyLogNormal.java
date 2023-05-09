@@ -15,6 +15,7 @@ public class PostAdminSettingsRequestBodyLogNormal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedDelay")
     public Double fixedDelay;
+
     public PostAdminSettingsRequestBodyLogNormal withFixedDelay(Double fixedDelay) {
         this.fixedDelay = fixedDelay;
         return this;
@@ -23,6 +24,7 @@ public class PostAdminSettingsRequestBodyLogNormal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("median")
     public Long median;
+
     public PostAdminSettingsRequestBodyLogNormal withMedian(Long median) {
         this.median = median;
         return this;
@@ -31,6 +33,7 @@ public class PostAdminSettingsRequestBodyLogNormal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sigma")
     public Double sigma;
+
     public PostAdminSettingsRequestBodyLogNormal withSigma(Double sigma) {
         this.sigma = sigma;
         return this;
@@ -39,9 +42,11 @@ public class PostAdminSettingsRequestBodyLogNormal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PostAdminSettingsRequestBodyLogNormalTypeEnum type;
+
     public PostAdminSettingsRequestBodyLogNormal withType(PostAdminSettingsRequestBodyLogNormalTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostAdminSettingsRequestBodyLogNormal(){}
 }

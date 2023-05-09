@@ -18,9 +18,11 @@ public class AddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mailerContactName")
     public String mailerContactName;
+
     public AddressInput withMailerContactName(String mailerContactName) {
         this.mailerContactName = mailerContactName;
         return this;
     }
     
+    public AddressInput(){}
 }

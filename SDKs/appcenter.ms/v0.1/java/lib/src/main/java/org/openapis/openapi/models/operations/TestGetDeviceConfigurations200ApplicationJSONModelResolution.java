@@ -15,6 +15,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelResolution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public String height;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelResolution withHeight(String height) {
         this.height = height;
         return this;
@@ -23,6 +24,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelResolution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ppi")
     public String ppi;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelResolution withPpi(String ppi) {
         this.ppi = ppi;
         return this;
@@ -31,9 +33,11 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelResolution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public String width;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelResolution withWidth(String width) {
         this.width = width;
         return this;
     }
     
+    public TestGetDeviceConfigurations200ApplicationJSONModelResolution(){}
 }

@@ -58,11 +58,9 @@ public class ImageFamilyViews {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeImageFamilyViewsGetResponse res = new org.openapis.openapi.models.operations.ComputeImageFamilyViewsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeImageFamilyViewsGetResponse res = new org.openapis.openapi.models.operations.ComputeImageFamilyViewsGetResponse(contentType, httpRes.statusCode()) {{
             imageFamilyView = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

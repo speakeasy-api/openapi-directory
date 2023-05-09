@@ -18,9 +18,11 @@ public class RemarketingAudienceAudienceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeConditions")
     public IncludeConditions includeConditions;
+
     public RemarketingAudienceAudienceDefinition withIncludeConditions(IncludeConditions includeConditions) {
         this.includeConditions = includeConditions;
         return this;
     }
     
+    public RemarketingAudienceAudienceDefinition(){}
 }

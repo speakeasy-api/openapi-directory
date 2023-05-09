@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateNetworkInsightsPathRequest {
     
     public String clientToken;
+
     public CreateNetworkInsightsPathRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateNetworkInsightsPathRequest {
     
     
     public String destination;
+
     public CreateNetworkInsightsPathRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -23,6 +25,7 @@ public class CreateNetworkInsightsPathRequest {
     
     
     public String destinationIp;
+
     public CreateNetworkInsightsPathRequest withDestinationIp(String destinationIp) {
         this.destinationIp = destinationIp;
         return this;
@@ -30,6 +33,7 @@ public class CreateNetworkInsightsPathRequest {
     
     
     public Long destinationPort;
+
     public CreateNetworkInsightsPathRequest withDestinationPort(Long destinationPort) {
         this.destinationPort = destinationPort;
         return this;
@@ -37,6 +41,7 @@ public class CreateNetworkInsightsPathRequest {
     
     
     public Boolean dryRun;
+
     public CreateNetworkInsightsPathRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -44,6 +49,7 @@ public class CreateNetworkInsightsPathRequest {
     
     
     public PathRequestFilter filterAtDestination;
+
     public CreateNetworkInsightsPathRequest withFilterAtDestination(PathRequestFilter filterAtDestination) {
         this.filterAtDestination = filterAtDestination;
         return this;
@@ -51,6 +57,7 @@ public class CreateNetworkInsightsPathRequest {
     
     
     public PathRequestFilter filterAtSource;
+
     public CreateNetworkInsightsPathRequest withFilterAtSource(PathRequestFilter filterAtSource) {
         this.filterAtSource = filterAtSource;
         return this;
@@ -58,6 +65,7 @@ public class CreateNetworkInsightsPathRequest {
     
     
     public ProtocolEnum protocol;
+
     public CreateNetworkInsightsPathRequest withProtocol(ProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -65,6 +73,7 @@ public class CreateNetworkInsightsPathRequest {
     
     
     public String source;
+
     public CreateNetworkInsightsPathRequest withSource(String source) {
         this.source = source;
         return this;
@@ -72,6 +81,7 @@ public class CreateNetworkInsightsPathRequest {
     
     
     public String sourceIp;
+
     public CreateNetworkInsightsPathRequest withSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;
@@ -79,9 +89,15 @@ public class CreateNetworkInsightsPathRequest {
     
     
     public CreateNetworkInsightsPathRequestTagSpecifications[] tagSpecifications;
+
     public CreateNetworkInsightsPathRequest withTagSpecifications(CreateNetworkInsightsPathRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateNetworkInsightsPathRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("Protocol") ProtocolEnum protocol, @JsonProperty("Source") String source) {
+        this.clientToken = clientToken;
+        this.protocol = protocol;
+        this.source = source;
+  }
 }

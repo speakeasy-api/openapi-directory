@@ -15,6 +15,7 @@ public class UpdateLaunchConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootMode")
     public UpdateLaunchConfigurationRequestBodyBootModeEnum bootMode;
+
     public UpdateLaunchConfigurationRequestBody withBootMode(UpdateLaunchConfigurationRequestBodyBootModeEnum bootMode) {
         this.bootMode = bootMode;
         return this;
@@ -26,6 +27,7 @@ public class UpdateLaunchConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyPrivateIp")
     public Boolean copyPrivateIp;
+
     public UpdateLaunchConfigurationRequestBody withCopyPrivateIp(Boolean copyPrivateIp) {
         this.copyPrivateIp = copyPrivateIp;
         return this;
@@ -37,6 +39,7 @@ public class UpdateLaunchConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyTags")
     public Boolean copyTags;
+
     public UpdateLaunchConfigurationRequestBody withCopyTags(Boolean copyTags) {
         this.copyTags = copyTags;
         return this;
@@ -48,6 +51,7 @@ public class UpdateLaunchConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableMapAutoTagging")
     public Boolean enableMapAutoTagging;
+
     public UpdateLaunchConfigurationRequestBody withEnableMapAutoTagging(Boolean enableMapAutoTagging) {
         this.enableMapAutoTagging = enableMapAutoTagging;
         return this;
@@ -59,6 +63,7 @@ public class UpdateLaunchConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchDisposition")
     public UpdateLaunchConfigurationRequestBodyLaunchDispositionEnum launchDisposition;
+
     public UpdateLaunchConfigurationRequestBody withLaunchDisposition(UpdateLaunchConfigurationRequestBodyLaunchDispositionEnum launchDisposition) {
         this.launchDisposition = launchDisposition;
         return this;
@@ -70,6 +75,7 @@ public class UpdateLaunchConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licensing")
     public UpdateLaunchConfigurationRequestBodyLicensing licensing;
+
     public UpdateLaunchConfigurationRequestBody withLicensing(UpdateLaunchConfigurationRequestBodyLicensing licensing) {
         this.licensing = licensing;
         return this;
@@ -81,6 +87,7 @@ public class UpdateLaunchConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapAutoTaggingMpeID")
     public String mapAutoTaggingMpeID;
+
     public UpdateLaunchConfigurationRequestBody withMapAutoTaggingMpeID(String mapAutoTaggingMpeID) {
         this.mapAutoTaggingMpeID = mapAutoTaggingMpeID;
         return this;
@@ -92,6 +99,7 @@ public class UpdateLaunchConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateLaunchConfigurationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -103,6 +111,7 @@ public class UpdateLaunchConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postLaunchActions")
     public UpdateLaunchConfigurationRequestBodyPostLaunchActions postLaunchActions;
+
     public UpdateLaunchConfigurationRequestBody withPostLaunchActions(UpdateLaunchConfigurationRequestBodyPostLaunchActions postLaunchActions) {
         this.postLaunchActions = postLaunchActions;
         return this;
@@ -113,6 +122,7 @@ public class UpdateLaunchConfigurationRequestBody {
      */
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public UpdateLaunchConfigurationRequestBody withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
@@ -124,9 +134,13 @@ public class UpdateLaunchConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetInstanceTypeRightSizingMethod")
     public UpdateLaunchConfigurationRequestBodyTargetInstanceTypeRightSizingMethodEnum targetInstanceTypeRightSizingMethod;
+
     public UpdateLaunchConfigurationRequestBody withTargetInstanceTypeRightSizingMethod(UpdateLaunchConfigurationRequestBodyTargetInstanceTypeRightSizingMethodEnum targetInstanceTypeRightSizingMethod) {
         this.targetInstanceTypeRightSizingMethod = targetInstanceTypeRightSizingMethod;
         return this;
     }
     
+    public UpdateLaunchConfigurationRequestBody(@JsonProperty("sourceServerID") String sourceServerID) {
+        this.sourceServerID = sourceServerID;
+  }
 }

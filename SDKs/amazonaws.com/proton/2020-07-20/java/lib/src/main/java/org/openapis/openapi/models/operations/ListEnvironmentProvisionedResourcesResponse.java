@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEnvironmentProvisionedResourcesResponse {
@@ -12,6 +13,7 @@ public class ListEnvironmentProvisionedResourcesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListEnvironmentProvisionedResourcesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListEnvironmentProvisionedResourcesResponse {
     
     
     public String contentType;
+
     public ListEnvironmentProvisionedResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListEnvironmentProvisionedResourcesResponse {
      */
     
     public Object internalServerException;
+
     public ListEnvironmentProvisionedResourcesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListEnvironmentProvisionedResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEnvironmentProvisionedResourcesOutput listEnvironmentProvisionedResourcesOutput;
+
     public ListEnvironmentProvisionedResourcesResponse withListEnvironmentProvisionedResourcesOutput(org.openapis.openapi.models.shared.ListEnvironmentProvisionedResourcesOutput listEnvironmentProvisionedResourcesOutput) {
         this.listEnvironmentProvisionedResourcesOutput = listEnvironmentProvisionedResourcesOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListEnvironmentProvisionedResourcesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListEnvironmentProvisionedResourcesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListEnvironmentProvisionedResourcesResponse {
     
     
     public Integer statusCode;
+
     public ListEnvironmentProvisionedResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListEnvironmentProvisionedResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEnvironmentProvisionedResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListEnvironmentProvisionedResourcesResponse {
      */
     
     public Object throttlingException;
+
     public ListEnvironmentProvisionedResourcesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListEnvironmentProvisionedResourcesResponse {
      */
     
     public Object validationException;
+
     public ListEnvironmentProvisionedResourcesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListEnvironmentProvisionedResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

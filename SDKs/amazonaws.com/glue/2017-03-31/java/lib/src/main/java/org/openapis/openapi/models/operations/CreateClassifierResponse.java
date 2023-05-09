@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateClassifierResponse {
@@ -12,6 +13,7 @@ public class CreateClassifierResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateClassifierResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -19,6 +21,7 @@ public class CreateClassifierResponse {
     
     
     public String contentType;
+
     public CreateClassifierResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateClassifierResponse {
      */
     
     public java.util.Map<String, Object> createClassifierResponse;
+
     public CreateClassifierResponse withCreateClassifierResponse(java.util.Map<String, Object> createClassifierResponse) {
         this.createClassifierResponse = createClassifierResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateClassifierResponse {
      */
     
     public Object invalidInputException;
+
     public CreateClassifierResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class CreateClassifierResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateClassifierResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class CreateClassifierResponse {
     
     
     public Integer statusCode;
+
     public CreateClassifierResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateClassifierResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateClassifierResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateClassifierResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

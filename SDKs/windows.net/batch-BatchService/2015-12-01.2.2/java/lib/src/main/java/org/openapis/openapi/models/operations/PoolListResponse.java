@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PoolListResponse {
@@ -12,6 +13,7 @@ public class PoolListResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public PoolListResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class PoolListResponse {
     
     
     public org.openapis.openapi.models.shared.CloudPoolListResult cloudPoolListResult;
+
     public PoolListResponse withCloudPoolListResult(org.openapis.openapi.models.shared.CloudPoolListResult cloudPoolListResult) {
         this.cloudPoolListResult = cloudPoolListResult;
         return this;
@@ -26,6 +29,7 @@ public class PoolListResponse {
     
     
     public String contentType;
+
     public PoolListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class PoolListResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PoolListResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -40,6 +45,7 @@ public class PoolListResponse {
     
     
     public Integer statusCode;
+
     public PoolListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class PoolListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PoolListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PoolListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

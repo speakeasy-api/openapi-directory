@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ClassroomCoursesCourseWorkStudentSubmissionsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption1 option1;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsListSecurity withOption1(ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption2 option2;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsListSecurity withOption2(ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption3 option3;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsListSecurity withOption3(ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption4 option4;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsListSecurity withOption4(ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption5 option5;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsListSecurity withOption5(ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,9 +49,11 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption6 option6;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsListSecurity withOption6(ClassroomCoursesCourseWorkStudentSubmissionsListSecurityOption6 option6) {
         this.option6 = option6;
         return this;
     }
     
+    public ClassroomCoursesCourseWorkStudentSubmissionsListSecurity(){}
 }

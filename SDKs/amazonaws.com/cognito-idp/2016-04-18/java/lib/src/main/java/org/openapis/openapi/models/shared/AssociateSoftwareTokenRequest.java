@@ -12,6 +12,7 @@ public class AssociateSoftwareTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public AssociateSoftwareTokenRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -20,9 +21,11 @@ public class AssociateSoftwareTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Session")
     public String session;
+
     public AssociateSoftwareTokenRequest withSession(String session) {
         this.session = session;
         return this;
     }
     
+    public AssociateSoftwareTokenRequest(){}
 }

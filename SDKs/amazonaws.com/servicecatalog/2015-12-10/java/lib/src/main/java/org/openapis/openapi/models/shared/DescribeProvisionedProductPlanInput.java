@@ -12,6 +12,7 @@ public class DescribeProvisionedProductPlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DescribeProvisionedProductPlanInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class DescribeProvisionedProductPlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public DescribeProvisionedProductPlanInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -28,6 +30,7 @@ public class DescribeProvisionedProductPlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public DescribeProvisionedProductPlanInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -35,9 +38,13 @@ public class DescribeProvisionedProductPlanInput {
     
     @JsonProperty("PlanId")
     public String planId;
+
     public DescribeProvisionedProductPlanInput withPlanId(String planId) {
         this.planId = planId;
         return this;
     }
     
+    public DescribeProvisionedProductPlanInput(@JsonProperty("PlanId") String planId) {
+        this.planId = planId;
+  }
 }

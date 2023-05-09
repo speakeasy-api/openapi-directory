@@ -18,6 +18,7 @@ public class AndroidDeviceCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("models")
     public AndroidModel[] models;
+
     public AndroidDeviceCatalog withModels(AndroidModel[] models) {
         this.models = models;
         return this;
@@ -29,6 +30,7 @@ public class AndroidDeviceCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeConfiguration")
     public AndroidRuntimeConfiguration runtimeConfiguration;
+
     public AndroidDeviceCatalog withRuntimeConfiguration(AndroidRuntimeConfiguration runtimeConfiguration) {
         this.runtimeConfiguration = runtimeConfiguration;
         return this;
@@ -40,9 +42,11 @@ public class AndroidDeviceCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versions")
     public AndroidVersion[] versions;
+
     public AndroidDeviceCatalog withVersions(AndroidVersion[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public AndroidDeviceCatalog(){}
 }

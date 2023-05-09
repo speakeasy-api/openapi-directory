@@ -60,11 +60,9 @@ public class Dates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCalendarDatesResponse res = new org.openapis.openapi.models.operations.GetCalendarDatesResponse() {{
+        org.openapis.openapi.models.operations.GetCalendarDatesResponse res = new org.openapis.openapi.models.operations.GetCalendarDatesResponse(contentType, httpRes.statusCode()) {{
             calendarDatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -105,11 +103,9 @@ public class Dates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCalendarDatesExportResponse res = new org.openapis.openapi.models.operations.GetCalendarDatesExportResponse() {{
+        org.openapis.openapi.models.operations.GetCalendarDatesExportResponse res = new org.openapis.openapi.models.operations.GetCalendarDatesExportResponse(contentType, httpRes.statusCode()) {{
             calendarDatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -150,11 +146,9 @@ public class Dates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetElectionDatesResponse res = new org.openapis.openapi.models.operations.GetElectionDatesResponse() {{
+        org.openapis.openapi.models.operations.GetElectionDatesResponse res = new org.openapis.openapi.models.operations.GetElectionDatesResponse(contentType, httpRes.statusCode()) {{
             getElectionDatesDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -195,11 +189,9 @@ public class Dates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReportingDatesResponse res = new org.openapis.openapi.models.operations.GetReportingDatesResponse() {{
+        org.openapis.openapi.models.operations.GetReportingDatesResponse res = new org.openapis.openapi.models.operations.GetReportingDatesResponse(contentType, httpRes.statusCode()) {{
             getReportingDatesDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

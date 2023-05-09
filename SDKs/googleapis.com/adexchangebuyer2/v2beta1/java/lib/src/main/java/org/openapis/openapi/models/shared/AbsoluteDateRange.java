@@ -18,6 +18,7 @@ public class AbsoluteDateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public Date endDate;
+
     public AbsoluteDateRange withEndDate(Date endDate) {
         this.endDate = endDate;
         return this;
@@ -29,9 +30,11 @@ public class AbsoluteDateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public Date startDate;
+
     public AbsoluteDateRange withStartDate(Date startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public AbsoluteDateRange(){}
 }

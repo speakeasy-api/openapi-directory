@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse {
     
     public String contentType;
+
     public UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse {
     
     
     public Integer statusCode;
+
     public UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse {
      */
     
     public UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSON userSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSONObject;
+
     public UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse withUserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSONObject(UserSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSON userSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSONObject) {
         this.userSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSONObject = userSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSONObject;
         return this;
     }
     
+    public UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

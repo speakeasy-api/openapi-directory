@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1TransferableOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offer")
     public GoogleCloudChannelV1Offer offer;
+
     public GoogleCloudChannelV1TransferableOffer withOffer(GoogleCloudChannelV1Offer offer) {
         this.offer = offer;
         return this;
     }
     
+    public GoogleCloudChannelV1TransferableOffer(){}
 }

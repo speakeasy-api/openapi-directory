@@ -32,4 +32,5 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PostOriginKeysResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CheckoutUtilityResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CheckoutUtilityRequest.java
+docs/sdk/README.md
 USAGE.md

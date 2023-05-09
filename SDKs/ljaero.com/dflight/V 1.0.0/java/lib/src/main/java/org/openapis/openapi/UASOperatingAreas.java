@@ -71,12 +71,10 @@ public class UASOperatingAreas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UoaByDistanceUsV1UoaDistanceQueryPostResponse res = new org.openapis.openapi.models.operations.UoaByDistanceUsV1UoaDistanceQueryPostResponse() {{
+        org.openapis.openapi.models.operations.UoaByDistanceUsV1UoaDistanceQueryPostResponse res = new org.openapis.openapi.models.operations.UoaByDistanceUsV1UoaDistanceQueryPostResponse(contentType, httpRes.statusCode()) {{
             uoAsDistanceResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -132,12 +130,10 @@ public class UASOperatingAreas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UoaByPolyUsV1UoaPolygonQueryPostResponse res = new org.openapis.openapi.models.operations.UoaByPolyUsV1UoaPolygonQueryPostResponse() {{
+        org.openapis.openapi.models.operations.UoaByPolyUsV1UoaPolygonQueryPostResponse res = new org.openapis.openapi.models.operations.UoaByPolyUsV1UoaPolygonQueryPostResponse(contentType, httpRes.statusCode()) {{
             uoAsPolyResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,12 +189,10 @@ public class UASOperatingAreas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UoaByRouteUsV1UoaRouteQueryPostResponse res = new org.openapis.openapi.models.operations.UoaByRouteUsV1UoaRouteQueryPostResponse() {{
+        org.openapis.openapi.models.operations.UoaByRouteUsV1UoaRouteQueryPostResponse res = new org.openapis.openapi.models.operations.UoaByRouteUsV1UoaRouteQueryPostResponse(contentType, httpRes.statusCode()) {{
             uoAsRouteResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class BoundingBox {
      */
     @JsonProperty("height")
     public Float height;
+
     public BoundingBox withHeight(Float height) {
         this.height = height;
         return this;
@@ -25,6 +26,7 @@ public class BoundingBox {
      */
     @JsonProperty("left")
     public Float left;
+
     public BoundingBox withLeft(Float left) {
         this.left = left;
         return this;
@@ -35,6 +37,7 @@ public class BoundingBox {
      */
     @JsonProperty("top")
     public Float top;
+
     public BoundingBox withTop(Float top) {
         this.top = top;
         return this;
@@ -45,9 +48,16 @@ public class BoundingBox {
      */
     @JsonProperty("width")
     public Float width;
+
     public BoundingBox withWidth(Float width) {
         this.width = width;
         return this;
     }
     
+    public BoundingBox(@JsonProperty("height") Float height, @JsonProperty("left") Float left, @JsonProperty("top") Float top, @JsonProperty("width") Float width) {
+        this.height = height;
+        this.left = left;
+        this.top = top;
+        this.width = width;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRelationalDatabaseResponse {
@@ -12,6 +13,7 @@ public class CreateRelationalDatabaseResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateRelationalDatabaseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateRelationalDatabaseResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public CreateRelationalDatabaseResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class CreateRelationalDatabaseResponse {
     
     
     public String contentType;
+
     public CreateRelationalDatabaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateRelationalDatabaseResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRelationalDatabaseResult createRelationalDatabaseResult;
+
     public CreateRelationalDatabaseResponse withCreateRelationalDatabaseResult(org.openapis.openapi.models.shared.CreateRelationalDatabaseResult createRelationalDatabaseResult) {
         this.createRelationalDatabaseResult = createRelationalDatabaseResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateRelationalDatabaseResponse {
      */
     
     public Object invalidInputException;
+
     public CreateRelationalDatabaseResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CreateRelationalDatabaseResponse {
      */
     
     public Object notFoundException;
+
     public CreateRelationalDatabaseResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateRelationalDatabaseResponse {
      */
     
     public Object operationFailureException;
+
     public CreateRelationalDatabaseResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class CreateRelationalDatabaseResponse {
      */
     
     public Object serviceException;
+
     public CreateRelationalDatabaseResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class CreateRelationalDatabaseResponse {
     
     
     public Integer statusCode;
+
     public CreateRelationalDatabaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateRelationalDatabaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRelationalDatabaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateRelationalDatabaseResponse {
      */
     
     public Object unauthenticatedException;
+
     public CreateRelationalDatabaseResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public CreateRelationalDatabaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

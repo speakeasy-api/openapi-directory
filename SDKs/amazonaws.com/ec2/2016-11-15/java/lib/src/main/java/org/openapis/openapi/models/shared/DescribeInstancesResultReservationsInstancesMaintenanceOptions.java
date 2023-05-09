@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstancesResultReservationsInstancesMaintenanceOptions {
     
     public DescribeInstancesResultReservationsInstancesMaintenanceOptionsAutoRecoveryEnum autoRecovery;
+
     public DescribeInstancesResultReservationsInstancesMaintenanceOptions withAutoRecovery(DescribeInstancesResultReservationsInstancesMaintenanceOptionsAutoRecoveryEnum autoRecovery) {
         this.autoRecovery = autoRecovery;
         return this;
     }
     
+    public DescribeInstancesResultReservationsInstancesMaintenanceOptions(){}
 }

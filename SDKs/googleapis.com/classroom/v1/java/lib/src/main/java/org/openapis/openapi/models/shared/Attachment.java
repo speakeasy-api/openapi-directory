@@ -18,6 +18,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driveFile")
     public DriveFile driveFile;
+
     public Attachment withDriveFile(DriveFile driveFile) {
         this.driveFile = driveFile;
         return this;
@@ -29,6 +30,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form")
     public Form form;
+
     public Attachment withForm(Form form) {
         this.form = form;
         return this;
@@ -40,6 +42,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public Link link;
+
     public Attachment withLink(Link link) {
         this.link = link;
         return this;
@@ -51,9 +54,11 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("youTubeVideo")
     public YouTubeVideo youTubeVideo;
+
     public Attachment withYouTubeVideo(YouTubeVideo youTubeVideo) {
         this.youTubeVideo = youTubeVideo;
         return this;
     }
     
+    public Attachment(){}
 }

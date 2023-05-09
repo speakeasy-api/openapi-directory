@@ -14,6 +14,7 @@ public class DeleteAppAssessmentRequestBody {
      */
     @JsonProperty("assessmentArn")
     public String assessmentArn;
+
     public DeleteAppAssessmentRequestBody withAssessmentArn(String assessmentArn) {
         this.assessmentArn = assessmentArn;
         return this;
@@ -25,9 +26,13 @@ public class DeleteAppAssessmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DeleteAppAssessmentRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
+    public DeleteAppAssessmentRequestBody(@JsonProperty("assessmentArn") String assessmentArn) {
+        this.assessmentArn = assessmentArn;
+  }
 }

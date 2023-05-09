@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetRecentChangesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetGetRecentChangesFormatEnum format;
+
     public GetGetRecentChangesRequest withFormat(GetGetRecentChangesFormatEnum format) {
         this.format = format;
         return this;
@@ -19,9 +21,13 @@ public class GetGetRecentChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
     public String timestamp;
+
     public GetGetRecentChangesRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public GetGetRecentChangesRequest(@JsonProperty("timestamp") String timestamp) {
+        this.timestamp = timestamp;
+  }
 }

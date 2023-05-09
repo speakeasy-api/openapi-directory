@@ -12,6 +12,7 @@ public class RouterNatRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public RouterNatRuleAction action;
+
     public RouterNatRule withAction(RouterNatRuleAction action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class RouterNatRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RouterNatRule withDescription(String description) {
         this.description = description;
         return this;
@@ -34,6 +36,7 @@ public class RouterNatRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match")
     public String match;
+
     public RouterNatRule withMatch(String match) {
         this.match = match;
         return this;
@@ -45,9 +48,11 @@ public class RouterNatRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleNumber")
     public Long ruleNumber;
+
     public RouterNatRule withRuleNumber(Long ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
     }
     
+    public RouterNatRule(){}
 }

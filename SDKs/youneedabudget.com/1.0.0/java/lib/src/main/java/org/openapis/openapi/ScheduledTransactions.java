@@ -55,12 +55,10 @@ public class ScheduledTransactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScheduledTransactionByIdResponse res = new org.openapis.openapi.models.operations.GetScheduledTransactionByIdResponse() {{
+        org.openapis.openapi.models.operations.GetScheduledTransactionByIdResponse res = new org.openapis.openapi.models.operations.GetScheduledTransactionByIdResponse(contentType, httpRes.statusCode()) {{
             scheduledTransactionResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,12 +107,10 @@ public class ScheduledTransactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScheduledTransactionsResponse res = new org.openapis.openapi.models.operations.GetScheduledTransactionsResponse() {{
+        org.openapis.openapi.models.operations.GetScheduledTransactionsResponse res = new org.openapis.openapi.models.operations.GetScheduledTransactionsResponse(contentType, httpRes.statusCode()) {{
             scheduledTransactionsResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

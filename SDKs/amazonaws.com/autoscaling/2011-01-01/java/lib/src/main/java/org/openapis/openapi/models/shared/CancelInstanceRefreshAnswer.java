@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CancelInstanceRefreshAnswer {
     
     public String instanceRefreshId;
+
     public CancelInstanceRefreshAnswer withInstanceRefreshId(String instanceRefreshId) {
         this.instanceRefreshId = instanceRefreshId;
         return this;
     }
     
+    public CancelInstanceRefreshAnswer(){}
 }

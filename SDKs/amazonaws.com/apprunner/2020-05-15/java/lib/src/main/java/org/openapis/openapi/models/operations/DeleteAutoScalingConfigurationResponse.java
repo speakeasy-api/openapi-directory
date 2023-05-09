@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAutoScalingConfigurationResponse {
     
     public String contentType;
+
     public DeleteAutoScalingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAutoScalingConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteAutoScalingConfigurationResponse deleteAutoScalingConfigurationResponse;
+
     public DeleteAutoScalingConfigurationResponse withDeleteAutoScalingConfigurationResponse(org.openapis.openapi.models.shared.DeleteAutoScalingConfigurationResponse deleteAutoScalingConfigurationResponse) {
         this.deleteAutoScalingConfigurationResponse = deleteAutoScalingConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAutoScalingConfigurationResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteAutoScalingConfigurationResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAutoScalingConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteAutoScalingConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteAutoScalingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteAutoScalingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteAutoScalingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAutoScalingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteAutoScalingConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAutoScalingConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteAutoScalingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

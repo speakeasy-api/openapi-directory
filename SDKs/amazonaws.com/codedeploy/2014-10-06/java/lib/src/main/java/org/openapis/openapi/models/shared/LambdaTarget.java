@@ -20,6 +20,7 @@ public class LambdaTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public LambdaTarget withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -28,6 +29,7 @@ public class LambdaTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionInfo")
     public LambdaFunctionInfo lambdaFunctionInfo;
+
     public LambdaTarget withLambdaFunctionInfo(LambdaFunctionInfo lambdaFunctionInfo) {
         this.lambdaFunctionInfo = lambdaFunctionInfo;
         return this;
@@ -38,6 +40,7 @@ public class LambdaTarget {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public LambdaTarget withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -46,6 +49,7 @@ public class LambdaTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleEvents")
     public LifecycleEvent[] lifecycleEvents;
+
     public LambdaTarget withLifecycleEvents(LifecycleEvent[] lifecycleEvents) {
         this.lifecycleEvents = lifecycleEvents;
         return this;
@@ -54,6 +58,7 @@ public class LambdaTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TargetStatusEnum status;
+
     public LambdaTarget withStatus(TargetStatusEnum status) {
         this.status = status;
         return this;
@@ -62,6 +67,7 @@ public class LambdaTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetArn")
     public String targetArn;
+
     public LambdaTarget withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
@@ -70,9 +76,11 @@ public class LambdaTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetId")
     public String targetId;
+
     public LambdaTarget withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
     }
     
+    public LambdaTarget(){}
 }

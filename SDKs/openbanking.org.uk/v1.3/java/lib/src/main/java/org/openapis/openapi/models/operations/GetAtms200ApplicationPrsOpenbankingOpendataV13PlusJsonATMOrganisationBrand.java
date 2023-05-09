@@ -15,6 +15,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisati
      */
     @JsonProperty("TrademarkID")
     public String trademarkID;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationBrand withTrademarkID(String trademarkID) {
         this.trademarkID = trademarkID;
         return this;
@@ -25,9 +26,14 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisati
      */
     @JsonProperty("TrademarkIPOCode")
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationBrandTrademarkIPOCodeEnum trademarkIPOCode;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationBrand withTrademarkIPOCode(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationBrandTrademarkIPOCodeEnum trademarkIPOCode) {
         this.trademarkIPOCode = trademarkIPOCode;
         return this;
     }
     
+    public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationBrand(@JsonProperty("TrademarkID") String trademarkID, @JsonProperty("TrademarkIPOCode") GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationBrandTrademarkIPOCodeEnum trademarkIPOCode) {
+        this.trademarkID = trademarkID;
+        this.trademarkIPOCode = trademarkIPOCode;
+  }
 }

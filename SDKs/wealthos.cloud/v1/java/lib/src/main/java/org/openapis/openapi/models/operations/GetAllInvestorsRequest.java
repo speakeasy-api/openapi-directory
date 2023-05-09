@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllInvestorsRequest {
@@ -12,6 +13,7 @@ public class GetAllInvestorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
     public String pageNumber;
+
     public GetAllInvestorsRequest withPageNumber(String pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -22,6 +24,7 @@ public class GetAllInvestorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public String pageSize;
+
     public GetAllInvestorsRequest withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -32,6 +35,7 @@ public class GetAllInvestorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetAllInvestorsSortEnum sort;
+
     public GetAllInvestorsRequest withSort(GetAllInvestorsSortEnum sort) {
         this.sort = sort;
         return this;
@@ -42,9 +46,13 @@ public class GetAllInvestorsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetAllInvestorsRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetAllInvestorsRequest(@JsonProperty("x-api-key") String xApiKey) {
+        this.xApiKey = xApiKey;
+  }
 }

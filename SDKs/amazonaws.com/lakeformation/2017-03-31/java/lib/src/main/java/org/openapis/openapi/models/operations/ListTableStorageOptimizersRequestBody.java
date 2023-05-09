@@ -15,6 +15,7 @@ public class ListTableStorageOptimizersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public ListTableStorageOptimizersRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -25,6 +26,7 @@ public class ListTableStorageOptimizersRequestBody {
      */
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public ListTableStorageOptimizersRequestBody withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -36,6 +38,7 @@ public class ListTableStorageOptimizersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTableStorageOptimizersRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -47,6 +50,7 @@ public class ListTableStorageOptimizersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTableStorageOptimizersRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -58,6 +62,7 @@ public class ListTableStorageOptimizersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageOptimizerType")
     public ListTableStorageOptimizersRequestBodyStorageOptimizerTypeEnum storageOptimizerType;
+
     public ListTableStorageOptimizersRequestBody withStorageOptimizerType(ListTableStorageOptimizersRequestBodyStorageOptimizerTypeEnum storageOptimizerType) {
         this.storageOptimizerType = storageOptimizerType;
         return this;
@@ -68,9 +73,14 @@ public class ListTableStorageOptimizersRequestBody {
      */
     @JsonProperty("TableName")
     public String tableName;
+
     public ListTableStorageOptimizersRequestBody withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public ListTableStorageOptimizersRequestBody(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+  }
 }

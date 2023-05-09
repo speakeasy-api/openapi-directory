@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReservationInstancesStateReason {
     
     public String code;
+
     public ReservationInstancesStateReason withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class ReservationInstancesStateReason {
     
     
     public String message;
+
     public ReservationInstancesStateReason withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ReservationInstancesStateReason(){}
 }

@@ -20,6 +20,7 @@ public class TermsOfServiceAcceptanceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptedBy")
     public String acceptedBy;
+
     public TermsOfServiceAcceptanceInfo withAcceptedBy(String acceptedBy) {
         this.acceptedBy = acceptedBy;
         return this;
@@ -31,6 +32,7 @@ public class TermsOfServiceAcceptanceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptedFor")
     public String acceptedFor;
+
     public TermsOfServiceAcceptanceInfo withAcceptedFor(String acceptedFor) {
         this.acceptedFor = acceptedFor;
         return this;
@@ -44,6 +46,7 @@ public class TermsOfServiceAcceptanceInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public TermsOfServiceAcceptanceInfo withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -55,6 +58,7 @@ public class TermsOfServiceAcceptanceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TermsOfServiceAcceptanceInfo withId(String id) {
         this.id = id;
         return this;
@@ -66,9 +70,11 @@ public class TermsOfServiceAcceptanceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TermsOfServiceAcceptanceInfoTypeEnum type;
+
     public TermsOfServiceAcceptanceInfo withType(TermsOfServiceAcceptanceInfoTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TermsOfServiceAcceptanceInfo(){}
 }

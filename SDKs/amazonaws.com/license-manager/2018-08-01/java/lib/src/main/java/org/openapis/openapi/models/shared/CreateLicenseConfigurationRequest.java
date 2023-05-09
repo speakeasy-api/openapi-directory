@@ -12,6 +12,7 @@ public class CreateLicenseConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateLicenseConfigurationRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class CreateLicenseConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisassociateWhenNotFound")
     public Boolean disassociateWhenNotFound;
+
     public CreateLicenseConfigurationRequest withDisassociateWhenNotFound(Boolean disassociateWhenNotFound) {
         this.disassociateWhenNotFound = disassociateWhenNotFound;
         return this;
@@ -28,6 +30,7 @@ public class CreateLicenseConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseCount")
     public Long licenseCount;
+
     public CreateLicenseConfigurationRequest withLicenseCount(Long licenseCount) {
         this.licenseCount = licenseCount;
         return this;
@@ -36,6 +39,7 @@ public class CreateLicenseConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseCountHardLimit")
     public Boolean licenseCountHardLimit;
+
     public CreateLicenseConfigurationRequest withLicenseCountHardLimit(Boolean licenseCountHardLimit) {
         this.licenseCountHardLimit = licenseCountHardLimit;
         return this;
@@ -43,6 +47,7 @@ public class CreateLicenseConfigurationRequest {
     
     @JsonProperty("LicenseCountingType")
     public LicenseCountingTypeEnum licenseCountingType;
+
     public CreateLicenseConfigurationRequest withLicenseCountingType(LicenseCountingTypeEnum licenseCountingType) {
         this.licenseCountingType = licenseCountingType;
         return this;
@@ -51,6 +56,7 @@ public class CreateLicenseConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseRules")
     public String[] licenseRules;
+
     public CreateLicenseConfigurationRequest withLicenseRules(String[] licenseRules) {
         this.licenseRules = licenseRules;
         return this;
@@ -58,6 +64,7 @@ public class CreateLicenseConfigurationRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateLicenseConfigurationRequest withName(String name) {
         this.name = name;
         return this;
@@ -66,6 +73,7 @@ public class CreateLicenseConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductInformationList")
     public ProductInformation[] productInformationList;
+
     public CreateLicenseConfigurationRequest withProductInformationList(ProductInformation[] productInformationList) {
         this.productInformationList = productInformationList;
         return this;
@@ -74,9 +82,14 @@ public class CreateLicenseConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateLicenseConfigurationRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLicenseConfigurationRequest(@JsonProperty("LicenseCountingType") LicenseCountingTypeEnum licenseCountingType, @JsonProperty("Name") String name) {
+        this.licenseCountingType = licenseCountingType;
+        this.name = name;
+  }
 }

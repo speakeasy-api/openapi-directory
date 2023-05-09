@@ -18,6 +18,7 @@ public class JobUpdateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public JobConstraints constraints;
+
     public JobUpdateParameter withConstraints(JobConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -29,6 +30,7 @@ public class JobUpdateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public MetadataItem[] metadata;
+
     public JobUpdateParameter withMetadata(MetadataItem[] metadata) {
         this.metadata = metadata;
         return this;
@@ -39,6 +41,7 @@ public class JobUpdateParameter {
      */
     @JsonProperty("poolInfo")
     public PoolInformation poolInfo;
+
     public JobUpdateParameter withPoolInfo(PoolInformation poolInfo) {
         this.poolInfo = poolInfo;
         return this;
@@ -50,9 +53,13 @@ public class JobUpdateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public JobUpdateParameter withPriority(Integer priority) {
         this.priority = priority;
         return this;
     }
     
+    public JobUpdateParameter(@JsonProperty("poolInfo") PoolInformation poolInfo) {
+        this.poolInfo = poolInfo;
+  }
 }

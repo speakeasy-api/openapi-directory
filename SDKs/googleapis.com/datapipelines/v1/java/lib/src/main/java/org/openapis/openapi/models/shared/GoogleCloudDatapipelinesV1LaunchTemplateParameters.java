@@ -18,6 +18,7 @@ public class GoogleCloudDatapipelinesV1LaunchTemplateParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public GoogleCloudDatapipelinesV1RuntimeEnvironment environment;
+
     public GoogleCloudDatapipelinesV1LaunchTemplateParameters withEnvironment(GoogleCloudDatapipelinesV1RuntimeEnvironment environment) {
         this.environment = environment;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatapipelinesV1LaunchTemplateParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobName")
     public String jobName;
+
     public GoogleCloudDatapipelinesV1LaunchTemplateParameters withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatapipelinesV1LaunchTemplateParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, String> parameters;
+
     public GoogleCloudDatapipelinesV1LaunchTemplateParameters withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatapipelinesV1LaunchTemplateParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformNameMapping")
     public java.util.Map<String, String> transformNameMapping;
+
     public GoogleCloudDatapipelinesV1LaunchTemplateParameters withTransformNameMapping(java.util.Map<String, String> transformNameMapping) {
         this.transformNameMapping = transformNameMapping;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDatapipelinesV1LaunchTemplateParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public Boolean update;
+
     public GoogleCloudDatapipelinesV1LaunchTemplateParameters withUpdate(Boolean update) {
         this.update = update;
         return this;
     }
     
+    public GoogleCloudDatapipelinesV1LaunchTemplateParameters(){}
 }

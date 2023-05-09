@@ -18,6 +18,7 @@ public class DomainCalls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public DomainCalls withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -29,9 +30,11 @@ public class DomainCalls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpCallCount")
     public Integer httpCallCount;
+
     public DomainCalls withHttpCallCount(Integer httpCallCount) {
         this.httpCallCount = httpCallCount;
         return this;
     }
     
+    public DomainCalls(){}
 }

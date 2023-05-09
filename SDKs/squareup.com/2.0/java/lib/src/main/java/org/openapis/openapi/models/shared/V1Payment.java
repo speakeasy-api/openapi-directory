@@ -36,6 +36,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additive_tax")
     public V1PaymentTax[] additiveTax;
+
     public V1Payment withAdditiveTax(V1PaymentTax[] additiveTax) {
         this.additiveTax = additiveTax;
         return this;
@@ -44,6 +45,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additive_tax_money")
     public V1Money additiveTaxMoney;
+
     public V1Payment withAdditiveTaxMoney(V1Money additiveTaxMoney) {
         this.additiveTaxMoney = additiveTaxMoney;
         return this;
@@ -55,6 +57,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public V1Payment withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -66,6 +69,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator_id")
     public String creatorId;
+
     public V1Payment withCreatorId(String creatorId) {
         this.creatorId = creatorId;
         return this;
@@ -74,6 +78,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public Device device;
+
     public V1Payment withDevice(Device device) {
         this.device = device;
         return this;
@@ -82,6 +87,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_money")
     public V1Money discountMoney;
+
     public V1Payment withDiscountMoney(V1Money discountMoney) {
         this.discountMoney = discountMoney;
         return this;
@@ -90,6 +96,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gross_sales_money")
     public V1Money grossSalesMoney;
+
     public V1Payment withGrossSalesMoney(V1Money grossSalesMoney) {
         this.grossSalesMoney = grossSalesMoney;
         return this;
@@ -101,6 +108,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public V1Payment withId(String id) {
         this.id = id;
         return this;
@@ -112,6 +120,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inclusive_tax")
     public V1PaymentTax[] inclusiveTax;
+
     public V1Payment withInclusiveTax(V1PaymentTax[] inclusiveTax) {
         this.inclusiveTax = inclusiveTax;
         return this;
@@ -120,6 +129,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inclusive_tax_money")
     public V1Money inclusiveTaxMoney;
+
     public V1Payment withInclusiveTaxMoney(V1Money inclusiveTaxMoney) {
         this.inclusiveTaxMoney = inclusiveTaxMoney;
         return this;
@@ -133,6 +143,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_partial")
     public Boolean isPartial;
+
     public V1Payment withIsPartial(Boolean isPartial) {
         this.isPartial = isPartial;
         return this;
@@ -144,6 +155,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemizations")
     public V1PaymentItemization[] itemizations;
+
     public V1Payment withItemizations(V1PaymentItemization[] itemizations) {
         this.itemizations = itemizations;
         return this;
@@ -155,6 +167,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_id")
     public String merchantId;
+
     public V1Payment withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -163,6 +176,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_sales_money")
     public V1Money netSalesMoney;
+
     public V1Payment withNetSalesMoney(V1Money netSalesMoney) {
         this.netSalesMoney = netSalesMoney;
         return this;
@@ -171,6 +185,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_total_money")
     public V1Money netTotalMoney;
+
     public V1Payment withNetTotalMoney(V1Money netTotalMoney) {
         this.netTotalMoney = netTotalMoney;
         return this;
@@ -182,6 +197,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_url")
     public String paymentUrl;
+
     public V1Payment withPaymentUrl(String paymentUrl) {
         this.paymentUrl = paymentUrl;
         return this;
@@ -190,6 +206,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processing_fee_money")
     public V1Money processingFeeMoney;
+
     public V1Payment withProcessingFeeMoney(V1Money processingFeeMoney) {
         this.processingFeeMoney = processingFeeMoney;
         return this;
@@ -205,6 +222,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receipt_url")
     public String receiptUrl;
+
     public V1Payment withReceiptUrl(String receiptUrl) {
         this.receiptUrl = receiptUrl;
         return this;
@@ -213,6 +231,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_money")
     public V1Money refundedMoney;
+
     public V1Payment withRefundedMoney(V1Money refundedMoney) {
         this.refundedMoney = refundedMoney;
         return this;
@@ -224,6 +243,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunds")
     public V1Refund[] refunds;
+
     public V1Payment withRefunds(V1Refund[] refunds) {
         this.refunds = refunds;
         return this;
@@ -232,6 +252,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surcharge_money")
     public V1Money surchargeMoney;
+
     public V1Payment withSurchargeMoney(V1Money surchargeMoney) {
         this.surchargeMoney = surchargeMoney;
         return this;
@@ -243,6 +264,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surcharges")
     public V1PaymentSurcharge[] surcharges;
+
     public V1Payment withSurcharges(V1PaymentSurcharge[] surcharges) {
         this.surcharges = surcharges;
         return this;
@@ -251,6 +273,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("swedish_rounding_money")
     public V1Money swedishRoundingMoney;
+
     public V1Payment withSwedishRoundingMoney(V1Money swedishRoundingMoney) {
         this.swedishRoundingMoney = swedishRoundingMoney;
         return this;
@@ -259,6 +282,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_money")
     public V1Money taxMoney;
+
     public V1Payment withTaxMoney(V1Money taxMoney) {
         this.taxMoney = taxMoney;
         return this;
@@ -270,6 +294,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tender")
     public V1Tender[] tender;
+
     public V1Payment withTender(V1Tender[] tender) {
         this.tender = tender;
         return this;
@@ -278,6 +303,7 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tip_money")
     public V1Money tipMoney;
+
     public V1Payment withTipMoney(V1Money tipMoney) {
         this.tipMoney = tipMoney;
         return this;
@@ -286,9 +312,11 @@ public class V1Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_collected_money")
     public V1Money totalCollectedMoney;
+
     public V1Payment withTotalCollectedMoney(V1Money totalCollectedMoney) {
         this.totalCollectedMoney = totalCollectedMoney;
         return this;
     }
     
+    public V1Payment(){}
 }

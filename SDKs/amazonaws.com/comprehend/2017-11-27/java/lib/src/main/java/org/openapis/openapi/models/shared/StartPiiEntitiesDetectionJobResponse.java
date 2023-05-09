@@ -15,6 +15,7 @@ public class StartPiiEntitiesDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobArn")
     public String jobArn;
+
     public StartPiiEntitiesDetectionJobResponse withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -23,6 +24,7 @@ public class StartPiiEntitiesDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StartPiiEntitiesDetectionJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -31,9 +33,11 @@ public class StartPiiEntitiesDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public StartPiiEntitiesDetectionJobResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
     }
     
+    public StartPiiEntitiesDetectionJobResponse(){}
 }

@@ -18,6 +18,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alertConfig")
     public EnterpriseCrmEventbusProtoWorkflowAlertConfig[] alertConfig;
+
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfig withAlertConfig(EnterpriseCrmEventbusProtoWorkflowAlertConfig[] alertConfig) {
         this.alertConfig = alertConfig;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudSchedulerConfig")
     public EnterpriseCrmEventbusProtoCloudSchedulerConfig cloudSchedulerConfig;
+
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfig withCloudSchedulerConfig(EnterpriseCrmEventbusProtoCloudSchedulerConfig cloudSchedulerConfig) {
         this.cloudSchedulerConfig = cloudSchedulerConfig;
         return this;
@@ -40,6 +42,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabledClients")
     public String[] enabledClients;
+
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfig withEnabledClients(String[] enabledClients) {
         this.enabledClients = enabledClients;
         return this;
@@ -62,6 +66,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCatcherId")
     public String errorCatcherId;
+
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfig withErrorCatcherId(String errorCatcherId) {
         this.errorCatcherId = errorCatcherId;
         return this;
@@ -73,6 +78,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfig withLabel(String label) {
         this.label = label;
         return this;
@@ -84,6 +90,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextTasksExecutionPolicy")
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfigNextTasksExecutionPolicyEnum nextTasksExecutionPolicy;
+
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfig withNextTasksExecutionPolicy(EnterpriseCrmFrontendsEventbusProtoTriggerConfigNextTasksExecutionPolicyEnum nextTasksExecutionPolicy) {
         this.nextTasksExecutionPolicy = nextTasksExecutionPolicy;
         return this;
@@ -95,6 +102,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pauseWorkflowExecutions")
     public Boolean pauseWorkflowExecutions;
+
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfig withPauseWorkflowExecutions(Boolean pauseWorkflowExecutions) {
         this.pauseWorkflowExecutions = pauseWorkflowExecutions;
         return this;
@@ -106,6 +114,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public EnterpriseCrmEventbusProtoCoordinate position;
+
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfig withPosition(EnterpriseCrmEventbusProtoCoordinate position) {
         this.position = position;
         return this;
@@ -117,6 +126,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfig withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -128,6 +138,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTasks")
     public EnterpriseCrmEventbusProtoNextTask[] startTasks;
+
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfig withStartTasks(EnterpriseCrmEventbusProtoNextTask[] startTasks) {
         this.startTasks = startTasks;
         return this;
@@ -136,6 +147,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerCriteria")
     public EnterpriseCrmEventbusProtoTriggerCriteria triggerCriteria;
+
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfig withTriggerCriteria(EnterpriseCrmEventbusProtoTriggerCriteria triggerCriteria) {
         this.triggerCriteria = triggerCriteria;
         return this;
@@ -147,6 +159,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerId")
     public String triggerId;
+
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfig withTriggerId(String triggerId) {
         this.triggerId = triggerId;
         return this;
@@ -158,6 +171,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerNumber")
     public String triggerNumber;
+
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfig withTriggerNumber(String triggerNumber) {
         this.triggerNumber = triggerNumber;
         return this;
@@ -166,9 +180,11 @@ public class EnterpriseCrmFrontendsEventbusProtoTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerType")
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfigTriggerTypeEnum triggerType;
+
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfig withTriggerType(EnterpriseCrmFrontendsEventbusProtoTriggerConfigTriggerTypeEnum triggerType) {
         this.triggerType = triggerType;
         return this;
     }
     
+    public EnterpriseCrmFrontendsEventbusProtoTriggerConfig(){}
 }

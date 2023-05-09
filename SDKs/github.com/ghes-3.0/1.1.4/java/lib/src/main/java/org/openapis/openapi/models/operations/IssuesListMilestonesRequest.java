@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesListMilestonesRequest {
@@ -12,6 +13,7 @@ public class IssuesListMilestonesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public IssuesListMilestonesDirectionEnum direction;
+
     public IssuesListMilestonesRequest withDirection(IssuesListMilestonesDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -19,6 +21,7 @@ public class IssuesListMilestonesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public IssuesListMilestonesRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -29,6 +32,7 @@ public class IssuesListMilestonesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public IssuesListMilestonesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -39,6 +43,7 @@ public class IssuesListMilestonesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public IssuesListMilestonesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -46,6 +51,7 @@ public class IssuesListMilestonesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public IssuesListMilestonesRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -56,6 +62,7 @@ public class IssuesListMilestonesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public IssuesListMilestonesSortEnum sort;
+
     public IssuesListMilestonesRequest withSort(IssuesListMilestonesSortEnum sort) {
         this.sort = sort;
         return this;
@@ -66,9 +73,14 @@ public class IssuesListMilestonesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public IssuesListMilestonesStateEnum state;
+
     public IssuesListMilestonesRequest withState(IssuesListMilestonesStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public IssuesListMilestonesRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

@@ -18,6 +18,7 @@ public class JobPreparationTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commandLine")
     public String commandLine;
+
     public JobPreparationTask withCommandLine(String commandLine) {
         this.commandLine = commandLine;
         return this;
@@ -29,6 +30,7 @@ public class JobPreparationTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public TaskConstraints constraints;
+
     public JobPreparationTask withConstraints(TaskConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -40,6 +42,7 @@ public class JobPreparationTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentSettings")
     public EnvironmentSetting[] environmentSettings;
+
     public JobPreparationTask withEnvironmentSettings(EnvironmentSetting[] environmentSettings) {
         this.environmentSettings = environmentSettings;
         return this;
@@ -51,6 +54,7 @@ public class JobPreparationTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public JobPreparationTask withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class JobPreparationTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rerunOnNodeRebootAfterSuccess")
     public Boolean rerunOnNodeRebootAfterSuccess;
+
     public JobPreparationTask withRerunOnNodeRebootAfterSuccess(Boolean rerunOnNodeRebootAfterSuccess) {
         this.rerunOnNodeRebootAfterSuccess = rerunOnNodeRebootAfterSuccess;
         return this;
@@ -73,6 +78,7 @@ public class JobPreparationTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceFiles")
     public ResourceFile[] resourceFiles;
+
     public JobPreparationTask withResourceFiles(ResourceFile[] resourceFiles) {
         this.resourceFiles = resourceFiles;
         return this;
@@ -84,6 +90,7 @@ public class JobPreparationTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runElevated")
     public Boolean runElevated;
+
     public JobPreparationTask withRunElevated(Boolean runElevated) {
         this.runElevated = runElevated;
         return this;
@@ -95,9 +102,11 @@ public class JobPreparationTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waitForSuccess")
     public Boolean waitForSuccess;
+
     public JobPreparationTask withWaitForSuccess(Boolean waitForSuccess) {
         this.waitForSuccess = waitForSuccess;
         return this;
     }
     
+    public JobPreparationTask(){}
 }

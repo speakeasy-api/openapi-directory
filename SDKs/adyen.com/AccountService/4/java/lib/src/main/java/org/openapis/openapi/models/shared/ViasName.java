@@ -15,6 +15,7 @@ public class ViasName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public ViasName withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -27,6 +28,7 @@ public class ViasName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public ViasNameGenderEnum gender;
+
     public ViasName withGender(ViasNameGenderEnum gender) {
         this.gender = gender;
         return this;
@@ -39,6 +41,7 @@ public class ViasName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infix")
     public String infix;
+
     public ViasName withInfix(String infix) {
         this.infix = infix;
         return this;
@@ -50,9 +53,11 @@ public class ViasName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public ViasName withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public ViasName(){}
 }

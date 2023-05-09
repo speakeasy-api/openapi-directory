@@ -15,6 +15,7 @@ public class ServiceAllocationListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public ServiceAllocationListViewModel withCount(Integer count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class ServiceAllocationListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ServiceAllocationViewModel[] data;
+
     public ServiceAllocationListViewModel withData(ServiceAllocationViewModel[] data) {
         this.data = data;
         return this;
@@ -31,6 +33,7 @@ public class ServiceAllocationListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasMore")
     public Boolean hasMore;
+
     public ServiceAllocationListViewModel withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
@@ -39,6 +42,7 @@ public class ServiceAllocationListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public ServiceAllocationListViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -47,6 +51,7 @@ public class ServiceAllocationListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Integer total;
+
     public ServiceAllocationListViewModel withTotal(Integer total) {
         this.total = total;
         return this;
@@ -55,9 +60,11 @@ public class ServiceAllocationListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ServiceAllocationListViewModel withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ServiceAllocationListViewModel(){}
 }

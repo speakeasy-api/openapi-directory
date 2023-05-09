@@ -15,6 +15,7 @@ public class Tripc401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Tripc401ApplicationJSONErrorEnum error;
+
     public Tripc401ApplicationJSON withError(Tripc401ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Tripc401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Tripc401ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Tripc401ApplicationJSON withErrorDescription(Tripc401ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Tripc401ApplicationJSON(){}
 }

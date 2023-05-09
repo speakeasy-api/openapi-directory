@@ -18,6 +18,7 @@ public class ConcatPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Integer index;
+
     public ConcatPosition withIndex(Integer index) {
         this.index = index;
         return this;
@@ -29,9 +30,11 @@ public class ConcatPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Position position;
+
     public ConcatPosition withPosition(Position position) {
         this.position = position;
         return this;
     }
     
+    public ConcatPosition(){}
 }

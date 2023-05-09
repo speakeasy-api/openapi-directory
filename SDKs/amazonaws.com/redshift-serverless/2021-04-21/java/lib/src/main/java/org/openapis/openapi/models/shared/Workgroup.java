@@ -20,6 +20,7 @@ public class Workgroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseCapacity")
     public Long baseCapacity;
+
     public Workgroup withBaseCapacity(Long baseCapacity) {
         this.baseCapacity = baseCapacity;
         return this;
@@ -28,6 +29,7 @@ public class Workgroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configParameters")
     public ConfigParameter[] configParameters;
+
     public Workgroup withConfigParameters(ConfigParameter[] configParameters) {
         this.configParameters = configParameters;
         return this;
@@ -38,6 +40,7 @@ public class Workgroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public Workgroup withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -46,6 +49,7 @@ public class Workgroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public Endpoint endpoint;
+
     public Workgroup withEndpoint(Endpoint endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -54,6 +58,7 @@ public class Workgroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enhancedVpcRouting")
     public Boolean enhancedVpcRouting;
+
     public Workgroup withEnhancedVpcRouting(Boolean enhancedVpcRouting) {
         this.enhancedVpcRouting = enhancedVpcRouting;
         return this;
@@ -62,6 +67,7 @@ public class Workgroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public Workgroup withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -70,6 +76,7 @@ public class Workgroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Long port;
+
     public Workgroup withPort(Long port) {
         this.port = port;
         return this;
@@ -78,6 +85,7 @@ public class Workgroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publiclyAccessible")
     public Boolean publiclyAccessible;
+
     public Workgroup withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -86,6 +94,7 @@ public class Workgroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public Workgroup withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -94,6 +103,7 @@ public class Workgroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public WorkgroupStatusEnum status;
+
     public Workgroup withStatus(WorkgroupStatusEnum status) {
         this.status = status;
         return this;
@@ -102,6 +112,7 @@ public class Workgroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public Workgroup withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -110,6 +121,7 @@ public class Workgroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroupArn")
     public String workgroupArn;
+
     public Workgroup withWorkgroupArn(String workgroupArn) {
         this.workgroupArn = workgroupArn;
         return this;
@@ -118,6 +130,7 @@ public class Workgroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroupId")
     public String workgroupId;
+
     public Workgroup withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
@@ -126,9 +139,11 @@ public class Workgroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroupName")
     public String workgroupName;
+
     public Workgroup withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public Workgroup(){}
 }

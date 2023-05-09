@@ -50,6 +50,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line_1")
     public String addressLine1;
+
     public Address withAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
         return this;
@@ -61,6 +62,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line_2")
     public String addressLine2;
+
     public Address withAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
         return this;
@@ -72,6 +74,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line_3")
     public String addressLine3;
+
     public Address withAddressLine3(String addressLine3) {
         this.addressLine3 = addressLine3;
         return this;
@@ -84,6 +87,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("administrative_district_level_1")
     public String administrativeDistrictLevel1;
+
     public Address withAdministrativeDistrictLevel1(String administrativeDistrictLevel1) {
         this.administrativeDistrictLevel1 = administrativeDistrictLevel1;
         return this;
@@ -96,6 +100,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("administrative_district_level_2")
     public String administrativeDistrictLevel2;
+
     public Address withAdministrativeDistrictLevel2(String administrativeDistrictLevel2) {
         this.administrativeDistrictLevel2 = administrativeDistrictLevel2;
         return this;
@@ -108,6 +113,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("administrative_district_level_3")
     public String administrativeDistrictLevel3;
+
     public Address withAdministrativeDistrictLevel3(String administrativeDistrictLevel3) {
         this.administrativeDistrictLevel3 = administrativeDistrictLevel3;
         return this;
@@ -119,6 +125,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public Address withCountry(String country) {
         this.country = country;
         return this;
@@ -130,6 +137,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public Address withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -141,6 +149,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public Address withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -152,6 +161,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locality")
     public String locality;
+
     public Address withLocality(String locality) {
         this.locality = locality;
         return this;
@@ -163,6 +173,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public Address withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -174,6 +185,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal_code")
     public String postalCode;
+
     public Address withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -185,6 +197,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sublocality")
     public String sublocality;
+
     public Address withSublocality(String sublocality) {
         this.sublocality = sublocality;
         return this;
@@ -196,6 +209,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sublocality_2")
     public String sublocality2;
+
     public Address withSublocality2(String sublocality2) {
         this.sublocality2 = sublocality2;
         return this;
@@ -207,9 +221,11 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sublocality_3")
     public String sublocality3;
+
     public Address withSublocality3(String sublocality3) {
         this.sublocality3 = sublocality3;
         return this;
     }
     
+    public Address(){}
 }

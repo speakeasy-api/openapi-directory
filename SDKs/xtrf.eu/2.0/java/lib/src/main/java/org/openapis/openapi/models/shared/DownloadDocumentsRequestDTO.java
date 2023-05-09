@@ -15,9 +15,11 @@ public class DownloadDocumentsRequestDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public Long[] ids;
+
     public DownloadDocumentsRequestDTO withIds(Long[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public DownloadDocumentsRequestDTO(){}
 }

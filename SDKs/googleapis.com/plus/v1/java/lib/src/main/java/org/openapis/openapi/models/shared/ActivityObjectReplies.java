@@ -18,6 +18,7 @@ public class ActivityObjectReplies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public ActivityObjectReplies withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -29,9 +30,11 @@ public class ActivityObjectReplies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItems")
     public Long totalItems;
+
     public ActivityObjectReplies withTotalItems(Long totalItems) {
         this.totalItems = totalItems;
         return this;
     }
     
+    public ActivityObjectReplies(){}
 }

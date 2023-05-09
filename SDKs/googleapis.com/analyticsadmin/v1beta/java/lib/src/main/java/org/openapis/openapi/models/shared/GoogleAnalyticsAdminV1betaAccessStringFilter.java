@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaAccessStringFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseSensitive")
     public Boolean caseSensitive;
+
     public GoogleAnalyticsAdminV1betaAccessStringFilter withCaseSensitive(Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1betaAccessStringFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchType")
     public GoogleAnalyticsAdminV1betaAccessStringFilterMatchTypeEnum matchType;
+
     public GoogleAnalyticsAdminV1betaAccessStringFilter withMatchType(GoogleAnalyticsAdminV1betaAccessStringFilterMatchTypeEnum matchType) {
         this.matchType = matchType;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsAdminV1betaAccessStringFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleAnalyticsAdminV1betaAccessStringFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaAccessStringFilter(){}
 }

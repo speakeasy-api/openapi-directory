@@ -20,6 +20,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibilities")
     public CompatibilityEnum[] compatibilities;
+
     public TaskDefinition withCompatibilities(CompatibilityEnum[] compatibilities) {
         this.compatibilities = compatibilities;
         return this;
@@ -28,6 +29,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerDefinitions")
     public ContainerDefinition[] containerDefinitions;
+
     public TaskDefinition withContainerDefinitions(ContainerDefinition[] containerDefinitions) {
         this.containerDefinitions = containerDefinitions;
         return this;
@@ -36,6 +38,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu")
     public String cpu;
+
     public TaskDefinition withCpu(String cpu) {
         this.cpu = cpu;
         return this;
@@ -46,6 +49,7 @@ public class TaskDefinition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deregisteredAt")
     public OffsetDateTime deregisteredAt;
+
     public TaskDefinition withDeregisteredAt(OffsetDateTime deregisteredAt) {
         this.deregisteredAt = deregisteredAt;
         return this;
@@ -54,6 +58,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ephemeralStorage")
     public EphemeralStorage ephemeralStorage;
+
     public TaskDefinition withEphemeralStorage(EphemeralStorage ephemeralStorage) {
         this.ephemeralStorage = ephemeralStorage;
         return this;
@@ -62,6 +67,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionRoleArn")
     public String executionRoleArn;
+
     public TaskDefinition withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -70,6 +76,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family")
     public String family;
+
     public TaskDefinition withFamily(String family) {
         this.family = family;
         return this;
@@ -78,6 +85,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inferenceAccelerators")
     public InferenceAccelerator[] inferenceAccelerators;
+
     public TaskDefinition withInferenceAccelerators(InferenceAccelerator[] inferenceAccelerators) {
         this.inferenceAccelerators = inferenceAccelerators;
         return this;
@@ -86,6 +94,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipcMode")
     public IpcModeEnum ipcMode;
+
     public TaskDefinition withIpcMode(IpcModeEnum ipcMode) {
         this.ipcMode = ipcMode;
         return this;
@@ -94,6 +103,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public String memory;
+
     public TaskDefinition withMemory(String memory) {
         this.memory = memory;
         return this;
@@ -102,6 +112,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkMode")
     public NetworkModeEnum networkMode;
+
     public TaskDefinition withNetworkMode(NetworkModeEnum networkMode) {
         this.networkMode = networkMode;
         return this;
@@ -110,6 +121,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pidMode")
     public PidModeEnum pidMode;
+
     public TaskDefinition withPidMode(PidModeEnum pidMode) {
         this.pidMode = pidMode;
         return this;
@@ -118,6 +130,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementConstraints")
     public TaskDefinitionPlacementConstraint[] placementConstraints;
+
     public TaskDefinition withPlacementConstraints(TaskDefinitionPlacementConstraint[] placementConstraints) {
         this.placementConstraints = placementConstraints;
         return this;
@@ -126,6 +139,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxyConfiguration")
     public ProxyConfiguration proxyConfiguration;
+
     public TaskDefinition withProxyConfiguration(ProxyConfiguration proxyConfiguration) {
         this.proxyConfiguration = proxyConfiguration;
         return this;
@@ -136,6 +150,7 @@ public class TaskDefinition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("registeredAt")
     public OffsetDateTime registeredAt;
+
     public TaskDefinition withRegisteredAt(OffsetDateTime registeredAt) {
         this.registeredAt = registeredAt;
         return this;
@@ -144,6 +159,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registeredBy")
     public String registeredBy;
+
     public TaskDefinition withRegisteredBy(String registeredBy) {
         this.registeredBy = registeredBy;
         return this;
@@ -152,6 +168,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiresAttributes")
     public Attribute[] requiresAttributes;
+
     public TaskDefinition withRequiresAttributes(Attribute[] requiresAttributes) {
         this.requiresAttributes = requiresAttributes;
         return this;
@@ -160,6 +177,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiresCompatibilities")
     public CompatibilityEnum[] requiresCompatibilities;
+
     public TaskDefinition withRequiresCompatibilities(CompatibilityEnum[] requiresCompatibilities) {
         this.requiresCompatibilities = requiresCompatibilities;
         return this;
@@ -168,6 +186,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public Long revision;
+
     public TaskDefinition withRevision(Long revision) {
         this.revision = revision;
         return this;
@@ -176,6 +195,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimePlatform")
     public RuntimePlatform runtimePlatform;
+
     public TaskDefinition withRuntimePlatform(RuntimePlatform runtimePlatform) {
         this.runtimePlatform = runtimePlatform;
         return this;
@@ -184,6 +204,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TaskDefinitionStatusEnum status;
+
     public TaskDefinition withStatus(TaskDefinitionStatusEnum status) {
         this.status = status;
         return this;
@@ -192,6 +213,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskDefinitionArn")
     public String taskDefinitionArn;
+
     public TaskDefinition withTaskDefinitionArn(String taskDefinitionArn) {
         this.taskDefinitionArn = taskDefinitionArn;
         return this;
@@ -200,6 +222,7 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskRoleArn")
     public String taskRoleArn;
+
     public TaskDefinition withTaskRoleArn(String taskRoleArn) {
         this.taskRoleArn = taskRoleArn;
         return this;
@@ -208,9 +231,11 @@ public class TaskDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumes")
     public Volume[] volumes;
+
     public TaskDefinition withVolumes(Volume[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public TaskDefinition(){}
 }

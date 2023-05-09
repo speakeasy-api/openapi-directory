@@ -12,6 +12,7 @@ public class SourceSnippetRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
+
     public SourceSnippetRead withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -19,6 +20,7 @@ public class SourceSnippetRead {
     
     @JsonProperty("name")
     public String name;
+
     public SourceSnippetRead withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class SourceSnippetRead {
     
     @JsonProperty("sourceDefinitionId")
     public String sourceDefinitionId;
+
     public SourceSnippetRead withSourceDefinitionId(String sourceDefinitionId) {
         this.sourceDefinitionId = sourceDefinitionId;
         return this;
@@ -33,6 +36,7 @@ public class SourceSnippetRead {
     
     @JsonProperty("sourceId")
     public String sourceId;
+
     public SourceSnippetRead withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -40,9 +44,16 @@ public class SourceSnippetRead {
     
     @JsonProperty("sourceName")
     public String sourceName;
+
     public SourceSnippetRead withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
     }
     
+    public SourceSnippetRead(@JsonProperty("name") String name, @JsonProperty("sourceDefinitionId") String sourceDefinitionId, @JsonProperty("sourceId") String sourceId, @JsonProperty("sourceName") String sourceName) {
+        this.name = name;
+        this.sourceDefinitionId = sourceDefinitionId;
+        this.sourceId = sourceId;
+        this.sourceName = sourceName;
+  }
 }

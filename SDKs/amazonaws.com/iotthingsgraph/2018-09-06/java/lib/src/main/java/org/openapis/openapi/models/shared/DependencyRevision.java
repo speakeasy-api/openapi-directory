@@ -15,6 +15,7 @@ public class DependencyRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DependencyRevision withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class DependencyRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionNumber")
     public Long revisionNumber;
+
     public DependencyRevision withRevisionNumber(Long revisionNumber) {
         this.revisionNumber = revisionNumber;
         return this;
     }
     
+    public DependencyRevision(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganisationsRequest {
@@ -12,6 +13,7 @@ public class GetOrganisationsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public GetOrganisationsRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class GetOrganisationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=identifier")
     public String identifier;
+
     public GetOrganisationsRequest withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -32,9 +35,13 @@ public class GetOrganisationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=registeredIdentifier")
     public String registeredIdentifier;
+
     public GetOrganisationsRequest withRegisteredIdentifier(String registeredIdentifier) {
         this.registeredIdentifier = registeredIdentifier;
         return this;
     }
     
+    public GetOrganisationsRequest(@JsonProperty("apiKey") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

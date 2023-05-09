@@ -15,6 +15,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestorExpressionOfWis
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sipp_beneficiaries")
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorExpressionOfWishSippBeneficiaries[] sippBeneficiaries;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorExpressionOfWish withSippBeneficiaries(GetAllInvestors200ApplicationJSONRootTypeForInvestorExpressionOfWishSippBeneficiaries[] sippBeneficiaries) {
         this.sippBeneficiaries = sippBeneficiaries;
         return this;
@@ -23,9 +24,11 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestorExpressionOfWis
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sipp_nominees")
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorExpressionOfWishSippNominees[] sippNominees;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorExpressionOfWish withSippNominees(GetAllInvestors200ApplicationJSONRootTypeForInvestorExpressionOfWishSippNominees[] sippNominees) {
         this.sippNominees = sippNominees;
         return this;
     }
     
+    public GetAllInvestors200ApplicationJSONRootTypeForInvestorExpressionOfWish(){}
 }

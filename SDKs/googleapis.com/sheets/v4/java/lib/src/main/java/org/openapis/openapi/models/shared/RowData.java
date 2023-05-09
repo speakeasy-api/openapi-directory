@@ -18,9 +18,11 @@ public class RowData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public CellData[] values;
+
     public RowData withValues(CellData[] values) {
         this.values = values;
         return this;
     }
     
+    public RowData(){}
 }

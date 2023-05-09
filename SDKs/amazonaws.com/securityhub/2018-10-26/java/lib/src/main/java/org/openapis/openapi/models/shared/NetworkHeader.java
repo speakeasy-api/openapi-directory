@@ -15,6 +15,7 @@ public class NetworkHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destination")
     public NetworkPathComponentDetails destination;
+
     public NetworkHeader withDestination(NetworkPathComponentDetails destination) {
         this.destination = destination;
         return this;
@@ -23,6 +24,7 @@ public class NetworkHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocol")
     public String protocol;
+
     public NetworkHeader withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -31,9 +33,11 @@ public class NetworkHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public NetworkPathComponentDetails source;
+
     public NetworkHeader withSource(NetworkPathComponentDetails source) {
         this.source = source;
         return this;
     }
     
+    public NetworkHeader(){}
 }

@@ -15,6 +15,7 @@ public class CatalogTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionName")
     public String connectionName;
+
     public CatalogTarget withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -22,6 +23,7 @@ public class CatalogTarget {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public CatalogTarget withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -30,6 +32,7 @@ public class CatalogTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DlqEventQueueArn")
     public String dlqEventQueueArn;
+
     public CatalogTarget withDlqEventQueueArn(String dlqEventQueueArn) {
         this.dlqEventQueueArn = dlqEventQueueArn;
         return this;
@@ -38,6 +41,7 @@ public class CatalogTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventQueueArn")
     public String eventQueueArn;
+
     public CatalogTarget withEventQueueArn(String eventQueueArn) {
         this.eventQueueArn = eventQueueArn;
         return this;
@@ -45,9 +49,14 @@ public class CatalogTarget {
     
     @JsonProperty("Tables")
     public String[] tables;
+
     public CatalogTarget withTables(String[] tables) {
         this.tables = tables;
         return this;
     }
     
+    public CatalogTarget(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("Tables") String[] tables) {
+        this.databaseName = databaseName;
+        this.tables = tables;
+  }
 }

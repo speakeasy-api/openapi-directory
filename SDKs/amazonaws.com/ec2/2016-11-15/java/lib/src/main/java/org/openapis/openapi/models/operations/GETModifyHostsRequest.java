@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyHostsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyHostsActionEnum action;
+
     public GETModifyHostsRequest withAction(GETModifyHostsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyHostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoPlacement")
     public GETModifyHostsAutoPlacementEnum autoPlacement;
+
     public GETModifyHostsRequest withAutoPlacement(GETModifyHostsAutoPlacementEnum autoPlacement) {
         this.autoPlacement = autoPlacement;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyHostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HostId")
     public String[] hostId;
+
     public GETModifyHostsRequest withHostId(String[] hostId) {
         this.hostId = hostId;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyHostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HostMaintenance")
     public GETModifyHostsHostMaintenanceEnum hostMaintenance;
+
     public GETModifyHostsRequest withHostMaintenance(GETModifyHostsHostMaintenanceEnum hostMaintenance) {
         this.hostMaintenance = hostMaintenance;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyHostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HostRecovery")
     public GETModifyHostsHostRecoveryEnum hostRecovery;
+
     public GETModifyHostsRequest withHostRecovery(GETModifyHostsHostRecoveryEnum hostRecovery) {
         this.hostRecovery = hostRecovery;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyHostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceFamily")
     public String instanceFamily;
+
     public GETModifyHostsRequest withInstanceFamily(String instanceFamily) {
         this.instanceFamily = instanceFamily;
         return this;
@@ -69,6 +76,7 @@ public class GETModifyHostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceType")
     public String instanceType;
+
     public GETModifyHostsRequest withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -76,6 +84,7 @@ public class GETModifyHostsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyHostsVersionEnum version;
+
     public GETModifyHostsRequest withVersion(GETModifyHostsVersionEnum version) {
         this.version = version;
         return this;
@@ -83,6 +92,7 @@ public class GETModifyHostsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyHostsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -90,6 +100,7 @@ public class GETModifyHostsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyHostsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -97,6 +108,7 @@ public class GETModifyHostsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyHostsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -104,6 +116,7 @@ public class GETModifyHostsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyHostsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -111,6 +124,7 @@ public class GETModifyHostsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyHostsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -118,6 +132,7 @@ public class GETModifyHostsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyHostsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -125,9 +140,15 @@ public class GETModifyHostsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyHostsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyHostsRequest(@JsonProperty("Action") GETModifyHostsActionEnum action, @JsonProperty("HostId") String[] hostId, @JsonProperty("Version") GETModifyHostsVersionEnum version) {
+        this.action = action;
+        this.hostId = hostId;
+        this.version = version;
+  }
 }

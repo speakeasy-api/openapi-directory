@@ -18,9 +18,11 @@ public class AlertChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AlertChart withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AlertChart(){}
 }

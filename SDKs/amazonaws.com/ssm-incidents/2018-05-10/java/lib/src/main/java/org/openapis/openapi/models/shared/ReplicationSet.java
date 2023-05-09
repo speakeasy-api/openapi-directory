@@ -20,6 +20,7 @@ public class ReplicationSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ReplicationSet withArn(String arn) {
         this.arn = arn;
         return this;
@@ -27,6 +28,7 @@ public class ReplicationSet {
     
     @JsonProperty("createdBy")
     public String createdBy;
+
     public ReplicationSet withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -36,6 +38,7 @@ public class ReplicationSet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdTime")
     public OffsetDateTime createdTime;
+
     public ReplicationSet withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -43,6 +46,7 @@ public class ReplicationSet {
     
     @JsonProperty("deletionProtected")
     public Boolean deletionProtected;
+
     public ReplicationSet withDeletionProtected(Boolean deletionProtected) {
         this.deletionProtected = deletionProtected;
         return this;
@@ -50,6 +54,7 @@ public class ReplicationSet {
     
     @JsonProperty("lastModifiedBy")
     public String lastModifiedBy;
+
     public ReplicationSet withLastModifiedBy(String lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -59,6 +64,7 @@ public class ReplicationSet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public ReplicationSet withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -66,6 +72,7 @@ public class ReplicationSet {
     
     @JsonProperty("regionMap")
     public java.util.Map<String, RegionInfo> regionMap;
+
     public ReplicationSet withRegionMap(java.util.Map<String, RegionInfo> regionMap) {
         this.regionMap = regionMap;
         return this;
@@ -73,9 +80,19 @@ public class ReplicationSet {
     
     @JsonProperty("status")
     public ReplicationSetStatusEnum status;
+
     public ReplicationSet withStatus(ReplicationSetStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ReplicationSet(@JsonProperty("createdBy") String createdBy, @JsonProperty("createdTime") OffsetDateTime createdTime, @JsonProperty("deletionProtected") Boolean deletionProtected, @JsonProperty("lastModifiedBy") String lastModifiedBy, @JsonProperty("lastModifiedTime") OffsetDateTime lastModifiedTime, @JsonProperty("regionMap") java.util.Map<String, RegionInfo> regionMap, @JsonProperty("status") ReplicationSetStatusEnum status) {
+        this.createdBy = createdBy;
+        this.createdTime = createdTime;
+        this.deletionProtected = deletionProtected;
+        this.lastModifiedBy = lastModifiedBy;
+        this.lastModifiedTime = lastModifiedTime;
+        this.regionMap = regionMap;
+        this.status = status;
+  }
 }

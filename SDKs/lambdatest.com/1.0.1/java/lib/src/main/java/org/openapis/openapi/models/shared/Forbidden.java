@@ -15,9 +15,11 @@ public class Forbidden {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Forbidden withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public Forbidden(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PreprocessingUnskewRequestBody {
@@ -12,9 +13,13 @@ public class PreprocessingUnskewRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public PreprocessingUnskewRequestBodyImageFile imageFile;
+
     public PreprocessingUnskewRequestBody withImageFile(PreprocessingUnskewRequestBodyImageFile imageFile) {
         this.imageFile = imageFile;
         return this;
     }
     
+    public PreprocessingUnskewRequestBody(@JsonProperty("imageFile") PreprocessingUnskewRequestBodyImageFile imageFile) {
+        this.imageFile = imageFile;
+  }
 }

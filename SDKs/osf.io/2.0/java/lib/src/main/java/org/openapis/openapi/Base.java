@@ -54,10 +54,8 @@ public class Base {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaseReadResponse res = new org.openapis.openapi.models.operations.BaseReadResponse() {{
+        org.openapis.openapi.models.operations.BaseReadResponse res = new org.openapis.openapi.models.operations.BaseReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

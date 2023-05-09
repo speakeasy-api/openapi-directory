@@ -15,6 +15,7 @@ public class PlaceOrderRequestBodyShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryWindow")
     public PlaceOrderRequestBodyShippingDataLogisticsInfoDeliveryWindow deliveryWindow;
+
     public PlaceOrderRequestBodyShippingDataLogisticsInfo withDeliveryWindow(PlaceOrderRequestBodyShippingDataLogisticsInfoDeliveryWindow deliveryWindow) {
         this.deliveryWindow = deliveryWindow;
         return this;
@@ -25,6 +26,7 @@ public class PlaceOrderRequestBodyShippingDataLogisticsInfo {
      */
     @JsonProperty("itemIndex")
     public Long itemIndex;
+
     public PlaceOrderRequestBodyShippingDataLogisticsInfo withItemIndex(Long itemIndex) {
         this.itemIndex = itemIndex;
         return this;
@@ -36,6 +38,7 @@ public class PlaceOrderRequestBodyShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lockTTL")
     public String lockTTL;
+
     public PlaceOrderRequestBodyShippingDataLogisticsInfo withLockTTL(String lockTTL) {
         this.lockTTL = lockTTL;
         return this;
@@ -46,6 +49,7 @@ public class PlaceOrderRequestBodyShippingDataLogisticsInfo {
      */
     @JsonProperty("price")
     public Long price;
+
     public PlaceOrderRequestBodyShippingDataLogisticsInfo withPrice(Long price) {
         this.price = price;
         return this;
@@ -56,6 +60,7 @@ public class PlaceOrderRequestBodyShippingDataLogisticsInfo {
      */
     @JsonProperty("selectedSla")
     public String selectedSla;
+
     public PlaceOrderRequestBodyShippingDataLogisticsInfo withSelectedSla(String selectedSla) {
         this.selectedSla = selectedSla;
         return this;
@@ -67,9 +72,15 @@ public class PlaceOrderRequestBodyShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingEstimate")
     public String shippingEstimate;
+
     public PlaceOrderRequestBodyShippingDataLogisticsInfo withShippingEstimate(String shippingEstimate) {
         this.shippingEstimate = shippingEstimate;
         return this;
     }
     
+    public PlaceOrderRequestBodyShippingDataLogisticsInfo(@JsonProperty("itemIndex") Long itemIndex, @JsonProperty("price") Long price, @JsonProperty("selectedSla") String selectedSla) {
+        this.itemIndex = itemIndex;
+        this.price = price;
+        this.selectedSla = selectedSla;
+  }
 }

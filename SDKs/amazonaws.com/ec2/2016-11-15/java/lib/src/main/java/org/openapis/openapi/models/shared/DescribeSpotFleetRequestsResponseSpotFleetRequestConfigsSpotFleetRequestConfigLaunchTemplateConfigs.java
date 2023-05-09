@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchTemplateConfigs {
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchTemplateConfigsLaunchTemplateSpecification launchTemplateSpecification;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchTemplateConfigs withLaunchTemplateSpecification(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchTemplateConfigsLaunchTemplateSpecification launchTemplateSpecification) {
         this.launchTemplateSpecification = launchTemplateSpecification;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchTemplateConfigsOverrides[] overrides;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchTemplateConfigs withOverrides(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchTemplateConfigsOverrides[] overrides) {
         this.overrides = overrides;
         return this;
     }
     
+    public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchTemplateConfigs(){}
 }

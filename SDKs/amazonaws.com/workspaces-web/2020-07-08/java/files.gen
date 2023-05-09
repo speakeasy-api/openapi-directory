@@ -221,4 +221,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateTrustStoreResponse.ja
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateUserAccessLoggingSettingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateUserSettingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -12,6 +12,7 @@ public class PatientPlanSummaryResourceRelationshipsBundles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public PatientPlanSummaryResourceRelationshipsBundlesData[] data;
+
     public PatientPlanSummaryResourceRelationshipsBundles withData(PatientPlanSummaryResourceRelationshipsBundlesData[] data) {
         this.data = data;
         return this;
@@ -20,9 +21,11 @@ public class PatientPlanSummaryResourceRelationshipsBundles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public PatientPlanSummaryResourceRelationshipsBundlesLinks links;
+
     public PatientPlanSummaryResourceRelationshipsBundles withLinks(PatientPlanSummaryResourceRelationshipsBundlesLinks links) {
         this.links = links;
         return this;
     }
     
+    public PatientPlanSummaryResourceRelationshipsBundles(){}
 }

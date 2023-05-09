@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccountTakeoverRiskConfigurationType {
     @JsonProperty("Actions")
     public AccountTakeoverActionsType actions;
+
     public AccountTakeoverRiskConfigurationType withActions(AccountTakeoverActionsType actions) {
         this.actions = actions;
         return this;
@@ -22,9 +23,13 @@ public class AccountTakeoverRiskConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotifyConfiguration")
     public NotifyConfigurationType notifyConfiguration;
+
     public AccountTakeoverRiskConfigurationType withNotifyConfiguration(NotifyConfigurationType notifyConfiguration) {
         this.notifyConfiguration = notifyConfiguration;
         return this;
     }
     
+    public AccountTakeoverRiskConfigurationType(@JsonProperty("Actions") AccountTakeoverActionsType actions) {
+        this.actions = actions;
+  }
 }

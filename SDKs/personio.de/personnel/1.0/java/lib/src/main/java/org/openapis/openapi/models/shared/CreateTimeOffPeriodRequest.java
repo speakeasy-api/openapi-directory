@@ -20,6 +20,7 @@ public class CreateTimeOffPeriodRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public CreateTimeOffPeriodRequest withComment(String comment) {
         this.comment = comment;
         return this;
@@ -30,6 +31,7 @@ public class CreateTimeOffPeriodRequest {
      */
     @JsonProperty("employee_id")
     public Long employeeId;
+
     public CreateTimeOffPeriodRequest withEmployeeId(Long employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -41,6 +43,7 @@ public class CreateTimeOffPeriodRequest {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("end_date")
     public LocalDate endDate;
+
     public CreateTimeOffPeriodRequest withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -51,6 +54,7 @@ public class CreateTimeOffPeriodRequest {
      */
     @JsonProperty("half_day_end")
     public Boolean halfDayEnd;
+
     public CreateTimeOffPeriodRequest withHalfDayEnd(Boolean halfDayEnd) {
         this.halfDayEnd = halfDayEnd;
         return this;
@@ -61,6 +65,7 @@ public class CreateTimeOffPeriodRequest {
      */
     @JsonProperty("half_day_start")
     public Boolean halfDayStart;
+
     public CreateTimeOffPeriodRequest withHalfDayStart(Boolean halfDayStart) {
         this.halfDayStart = halfDayStart;
         return this;
@@ -72,6 +77,7 @@ public class CreateTimeOffPeriodRequest {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("start_date")
     public LocalDate startDate;
+
     public CreateTimeOffPeriodRequest withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -82,9 +88,18 @@ public class CreateTimeOffPeriodRequest {
      */
     @JsonProperty("time_off_type_id")
     public Long timeOffTypeId;
+
     public CreateTimeOffPeriodRequest withTimeOffTypeId(Long timeOffTypeId) {
         this.timeOffTypeId = timeOffTypeId;
         return this;
     }
     
+    public CreateTimeOffPeriodRequest(@JsonProperty("employee_id") Long employeeId, @JsonProperty("end_date") LocalDate endDate, @JsonProperty("half_day_end") Boolean halfDayEnd, @JsonProperty("half_day_start") Boolean halfDayStart, @JsonProperty("start_date") LocalDate startDate, @JsonProperty("time_off_type_id") Long timeOffTypeId) {
+        this.employeeId = employeeId;
+        this.endDate = endDate;
+        this.halfDayEnd = halfDayEnd;
+        this.halfDayStart = halfDayStart;
+        this.startDate = startDate;
+        this.timeOffTypeId = timeOffTypeId;
+  }
 }

@@ -57,12 +57,10 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventApiGetListResponse res = new org.openapis.openapi.models.operations.EventApiGetListResponse() {{
+        org.openapis.openapi.models.operations.EventApiGetListResponse res = new org.openapis.openapi.models.operations.EventApiGetListResponse(contentType, httpRes.statusCode()) {{
             eventApiGetList200ApplicationJSONObject = null;
             eventApiGetList200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

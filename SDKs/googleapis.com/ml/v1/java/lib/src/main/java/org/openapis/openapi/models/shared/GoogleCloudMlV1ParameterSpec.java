@@ -18,6 +18,7 @@ public class GoogleCloudMlV1ParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoricalValues")
     public String[] categoricalValues;
+
     public GoogleCloudMlV1ParameterSpec withCategoricalValues(String[] categoricalValues) {
         this.categoricalValues = categoricalValues;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1ParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discreteValues")
     public Double[] discreteValues;
+
     public GoogleCloudMlV1ParameterSpec withDiscreteValues(Double[] discreteValues) {
         this.discreteValues = discreteValues;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1ParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public Double maxValue;
+
     public GoogleCloudMlV1ParameterSpec withMaxValue(Double maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudMlV1ParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public Double minValue;
+
     public GoogleCloudMlV1ParameterSpec withMinValue(Double minValue) {
         this.minValue = minValue;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudMlV1ParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterName")
     public String parameterName;
+
     public GoogleCloudMlV1ParameterSpec withParameterName(String parameterName) {
         this.parameterName = parameterName;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudMlV1ParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaleType")
     public GoogleCloudMlV1ParameterSpecScaleTypeEnum scaleType;
+
     public GoogleCloudMlV1ParameterSpec withScaleType(GoogleCloudMlV1ParameterSpecScaleTypeEnum scaleType) {
         this.scaleType = scaleType;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudMlV1ParameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudMlV1ParameterSpecTypeEnum type;
+
     public GoogleCloudMlV1ParameterSpec withType(GoogleCloudMlV1ParameterSpecTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudMlV1ParameterSpec(){}
 }

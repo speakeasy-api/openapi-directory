@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductsSearchJsonRequest {
@@ -12,6 +13,7 @@ public class GetProductsSearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public GetProductsSearchJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class GetProductsSearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public GetProductsSearchJsonFieldsEnum fields;
+
     public GetProductsSearchJsonRequest withFields(GetProductsSearchJsonFieldsEnum fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class GetProductsSearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetProductsSearchJsonRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -42,6 +46,7 @@ public class GetProductsSearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public GetProductsSearchJsonRequest withLogin(String login) {
         this.login = login;
         return this;
@@ -52,9 +57,15 @@ public class GetProductsSearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetProductsSearchJsonRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public GetProductsSearchJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("login") String login, @JsonProperty("query") String query) {
+        this.authtoken = authtoken;
+        this.login = login;
+        this.query = query;
+  }
 }

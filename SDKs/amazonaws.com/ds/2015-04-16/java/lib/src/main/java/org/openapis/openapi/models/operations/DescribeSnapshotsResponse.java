@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSnapshotsResponse {
@@ -12,6 +13,7 @@ public class DescribeSnapshotsResponse {
      */
     
     public Object clientException;
+
     public DescribeSnapshotsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSnapshotsResponse {
     
     
     public String contentType;
+
     public DescribeSnapshotsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSnapshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSnapshotsResult describeSnapshotsResult;
+
     public DescribeSnapshotsResponse withDescribeSnapshotsResult(org.openapis.openapi.models.shared.DescribeSnapshotsResult describeSnapshotsResult) {
         this.describeSnapshotsResult = describeSnapshotsResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeSnapshotsResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public DescribeSnapshotsResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeSnapshotsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeSnapshotsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeSnapshotsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeSnapshotsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeSnapshotsResponse {
      */
     
     public Object serviceException;
+
     public DescribeSnapshotsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeSnapshotsResponse {
     
     
     public Integer statusCode;
+
     public DescribeSnapshotsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DescribeSnapshotsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSnapshotsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeSnapshotsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

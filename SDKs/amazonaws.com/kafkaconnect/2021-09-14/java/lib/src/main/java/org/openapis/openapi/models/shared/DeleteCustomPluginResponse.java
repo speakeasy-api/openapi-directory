@@ -15,6 +15,7 @@ public class DeleteCustomPluginResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customPluginArn")
     public String customPluginArn;
+
     public DeleteCustomPluginResponse withCustomPluginArn(String customPluginArn) {
         this.customPluginArn = customPluginArn;
         return this;
@@ -23,9 +24,11 @@ public class DeleteCustomPluginResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customPluginState")
     public CustomPluginStateEnum customPluginState;
+
     public DeleteCustomPluginResponse withCustomPluginState(CustomPluginStateEnum customPluginState) {
         this.customPluginState = customPluginState;
         return this;
     }
     
+    public DeleteCustomPluginResponse(){}
 }

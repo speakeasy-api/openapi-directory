@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDevicePositionResponse {
@@ -12,6 +13,7 @@ public class GetDevicePositionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDevicePositionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetDevicePositionResponse {
     
     
     public String contentType;
+
     public GetDevicePositionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDevicePositionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDevicePositionResponse getDevicePositionResponse;
+
     public GetDevicePositionResponse withGetDevicePositionResponse(org.openapis.openapi.models.shared.GetDevicePositionResponse getDevicePositionResponse) {
         this.getDevicePositionResponse = getDevicePositionResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDevicePositionResponse {
      */
     
     public Object internalServerException;
+
     public GetDevicePositionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetDevicePositionResponse {
     
     
     public Integer statusCode;
+
     public GetDevicePositionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetDevicePositionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDevicePositionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetDevicePositionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetDevicePositionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetDevicePositionResponse {
      */
     
     public Object throttlingException;
+
     public GetDevicePositionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetDevicePositionResponse {
      */
     
     public Object validationException;
+
     public GetDevicePositionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetDevicePositionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class SecurityConfigStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SamlConfigCount")
     public Long samlConfigCount;
+
     public SecurityConfigStats withSamlConfigCount(Long samlConfigCount) {
         this.samlConfigCount = samlConfigCount;
         return this;
     }
     
+    public SecurityConfigStats(){}
 }

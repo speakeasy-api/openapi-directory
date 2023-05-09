@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelAnAccountTransferDefaultApplicationJSON5 {
     @JsonProperty("detail")
     public String detail;
+
     public CancelAnAccountTransferDefaultApplicationJSON5 withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -16,6 +17,7 @@ public class CancelAnAccountTransferDefaultApplicationJSON5 {
     
     @JsonProperty("status")
     public CancelAnAccountTransferDefaultApplicationJSON5StatusEnum status;
+
     public CancelAnAccountTransferDefaultApplicationJSON5 withStatus(CancelAnAccountTransferDefaultApplicationJSON5StatusEnum status) {
         this.status = status;
         return this;
@@ -23,6 +25,7 @@ public class CancelAnAccountTransferDefaultApplicationJSON5 {
     
     @JsonProperty("title")
     public String title;
+
     public CancelAnAccountTransferDefaultApplicationJSON5 withTitle(String title) {
         this.title = title;
         return this;
@@ -30,9 +33,16 @@ public class CancelAnAccountTransferDefaultApplicationJSON5 {
     
     @JsonProperty("type")
     public CancelAnAccountTransferDefaultApplicationJSON5TypeEnum type;
+
     public CancelAnAccountTransferDefaultApplicationJSON5 withType(CancelAnAccountTransferDefaultApplicationJSON5TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CancelAnAccountTransferDefaultApplicationJSON5(@JsonProperty("detail") String detail, @JsonProperty("status") CancelAnAccountTransferDefaultApplicationJSON5StatusEnum status, @JsonProperty("title") String title, @JsonProperty("type") CancelAnAccountTransferDefaultApplicationJSON5TypeEnum type) {
+        this.detail = detail;
+        this.status = status;
+        this.title = title;
+        this.type = type;
+  }
 }

@@ -12,6 +12,7 @@ public class DfsSlate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DfsSlatePlayers")
     public DfsSlatePlayer[] dfsSlatePlayers;
+
     public DfsSlate withDfsSlatePlayers(DfsSlatePlayer[] dfsSlatePlayers) {
         this.dfsSlatePlayers = dfsSlatePlayers;
         return this;
@@ -20,6 +21,7 @@ public class DfsSlate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DfsSlateTournaments")
     public DfsSlateTournament[] dfsSlateTournaments;
+
     public DfsSlate withDfsSlateTournaments(DfsSlateTournament[] dfsSlateTournaments) {
         this.dfsSlateTournaments = dfsSlateTournaments;
         return this;
@@ -28,6 +30,7 @@ public class DfsSlate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsMultiDaySlate")
     public Boolean isMultiDaySlate;
+
     public DfsSlate withIsMultiDaySlate(Boolean isMultiDaySlate) {
         this.isMultiDaySlate = isMultiDaySlate;
         return this;
@@ -36,6 +39,7 @@ public class DfsSlate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfTournaments")
     public Long numberOfTournaments;
+
     public DfsSlate withNumberOfTournaments(Long numberOfTournaments) {
         this.numberOfTournaments = numberOfTournaments;
         return this;
@@ -44,6 +48,7 @@ public class DfsSlate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Operator")
     public String operator;
+
     public DfsSlate withOperator(String operator) {
         this.operator = operator;
         return this;
@@ -52,6 +57,7 @@ public class DfsSlate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorDay")
     public String operatorDay;
+
     public DfsSlate withOperatorDay(String operatorDay) {
         this.operatorDay = operatorDay;
         return this;
@@ -60,6 +66,7 @@ public class DfsSlate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorGameType")
     public String operatorGameType;
+
     public DfsSlate withOperatorGameType(String operatorGameType) {
         this.operatorGameType = operatorGameType;
         return this;
@@ -68,6 +75,7 @@ public class DfsSlate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorName")
     public String operatorName;
+
     public DfsSlate withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
@@ -76,6 +84,7 @@ public class DfsSlate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorSlateID")
     public Long operatorSlateID;
+
     public DfsSlate withOperatorSlateID(Long operatorSlateID) {
         this.operatorSlateID = operatorSlateID;
         return this;
@@ -84,6 +93,7 @@ public class DfsSlate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorStartTime")
     public String operatorStartTime;
+
     public DfsSlate withOperatorStartTime(String operatorStartTime) {
         this.operatorStartTime = operatorStartTime;
         return this;
@@ -92,6 +102,7 @@ public class DfsSlate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemovedByOperator")
     public Boolean removedByOperator;
+
     public DfsSlate withRemovedByOperator(Boolean removedByOperator) {
         this.removedByOperator = removedByOperator;
         return this;
@@ -100,6 +111,7 @@ public class DfsSlate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlateID")
     public Long slateID;
+
     public DfsSlate withSlateID(Long slateID) {
         this.slateID = slateID;
         return this;
@@ -108,9 +120,11 @@ public class DfsSlate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlateRosterSlots")
     public String[] slateRosterSlots;
+
     public DfsSlate withSlateRosterSlots(String[] slateRosterSlots) {
         this.slateRosterSlots = slateRosterSlots;
         return this;
     }
     
+    public DfsSlate(){}
 }

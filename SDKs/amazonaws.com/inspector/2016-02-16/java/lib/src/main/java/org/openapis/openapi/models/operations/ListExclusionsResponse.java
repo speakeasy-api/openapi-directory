@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListExclusionsResponse {
@@ -12,6 +13,7 @@ public class ListExclusionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListExclusionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListExclusionsResponse {
     
     
     public String contentType;
+
     public ListExclusionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListExclusionsResponse {
      */
     
     public Object internalException;
+
     public ListExclusionsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class ListExclusionsResponse {
      */
     
     public Object invalidInputException;
+
     public ListExclusionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListExclusionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListExclusionsResponse listExclusionsResponse;
+
     public ListExclusionsResponse withListExclusionsResponse(org.openapis.openapi.models.shared.ListExclusionsResponse listExclusionsResponse) {
         this.listExclusionsResponse = listExclusionsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListExclusionsResponse {
      */
     
     public Object noSuchEntityException;
+
     public ListExclusionsResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -66,6 +73,7 @@ public class ListExclusionsResponse {
     
     
     public Integer statusCode;
+
     public ListExclusionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListExclusionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListExclusionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListExclusionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

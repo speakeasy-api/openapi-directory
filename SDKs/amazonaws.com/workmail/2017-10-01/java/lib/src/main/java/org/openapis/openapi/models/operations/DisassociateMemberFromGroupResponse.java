@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateMemberFromGroupResponse {
     
     public String contentType;
+
     public DisassociateMemberFromGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateMemberFromGroupResponse {
      */
     
     public Object directoryServiceAuthenticationFailedException;
+
     public DisassociateMemberFromGroupResponse withDirectoryServiceAuthenticationFailedException(Object directoryServiceAuthenticationFailedException) {
         this.directoryServiceAuthenticationFailedException = directoryServiceAuthenticationFailedException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateMemberFromGroupResponse {
      */
     
     public Object directoryUnavailableException;
+
     public DisassociateMemberFromGroupResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateMemberFromGroupResponse {
      */
     
     public java.util.Map<String, Object> disassociateMemberFromGroupResponse;
+
     public DisassociateMemberFromGroupResponse withDisassociateMemberFromGroupResponse(java.util.Map<String, Object> disassociateMemberFromGroupResponse) {
         this.disassociateMemberFromGroupResponse = disassociateMemberFromGroupResponse;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateMemberFromGroupResponse {
      */
     
     public Object entityNotFoundException;
+
     public DisassociateMemberFromGroupResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateMemberFromGroupResponse {
      */
     
     public Object entityStateException;
+
     public DisassociateMemberFromGroupResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -69,6 +76,7 @@ public class DisassociateMemberFromGroupResponse {
      */
     
     public Object invalidParameterException;
+
     public DisassociateMemberFromGroupResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class DisassociateMemberFromGroupResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DisassociateMemberFromGroupResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class DisassociateMemberFromGroupResponse {
      */
     
     public Object organizationStateException;
+
     public DisassociateMemberFromGroupResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -96,6 +106,7 @@ public class DisassociateMemberFromGroupResponse {
     
     
     public Integer statusCode;
+
     public DisassociateMemberFromGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class DisassociateMemberFromGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateMemberFromGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class DisassociateMemberFromGroupResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DisassociateMemberFromGroupResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DisassociateMemberFromGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

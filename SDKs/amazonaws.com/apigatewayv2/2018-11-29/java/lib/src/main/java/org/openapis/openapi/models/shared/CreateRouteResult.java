@@ -15,6 +15,7 @@ public class CreateRouteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiGatewayManaged")
     public Boolean apiGatewayManaged;
+
     public CreateRouteResult withApiGatewayManaged(Boolean apiGatewayManaged) {
         this.apiGatewayManaged = apiGatewayManaged;
         return this;
@@ -23,6 +24,7 @@ public class CreateRouteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiKeyRequired")
     public Boolean apiKeyRequired;
+
     public CreateRouteResult withApiKeyRequired(Boolean apiKeyRequired) {
         this.apiKeyRequired = apiKeyRequired;
         return this;
@@ -31,6 +33,7 @@ public class CreateRouteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizationScopes")
     public String[] authorizationScopes;
+
     public CreateRouteResult withAuthorizationScopes(String[] authorizationScopes) {
         this.authorizationScopes = authorizationScopes;
         return this;
@@ -39,6 +42,7 @@ public class CreateRouteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizationType")
     public CreateRouteResultAuthorizationTypeEnum authorizationType;
+
     public CreateRouteResult withAuthorizationType(CreateRouteResultAuthorizationTypeEnum authorizationType) {
         this.authorizationType = authorizationType;
         return this;
@@ -47,6 +51,7 @@ public class CreateRouteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizerId")
     public String authorizerId;
+
     public CreateRouteResult withAuthorizerId(String authorizerId) {
         this.authorizerId = authorizerId;
         return this;
@@ -55,6 +60,7 @@ public class CreateRouteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelSelectionExpression")
     public String modelSelectionExpression;
+
     public CreateRouteResult withModelSelectionExpression(String modelSelectionExpression) {
         this.modelSelectionExpression = modelSelectionExpression;
         return this;
@@ -63,6 +69,7 @@ public class CreateRouteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationName")
     public String operationName;
+
     public CreateRouteResult withOperationName(String operationName) {
         this.operationName = operationName;
         return this;
@@ -71,6 +78,7 @@ public class CreateRouteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestModels")
     public java.util.Map<String, String> requestModels;
+
     public CreateRouteResult withRequestModels(java.util.Map<String, String> requestModels) {
         this.requestModels = requestModels;
         return this;
@@ -79,6 +87,7 @@ public class CreateRouteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestParameters")
     public java.util.Map<String, ParameterConstraints> requestParameters;
+
     public CreateRouteResult withRequestParameters(java.util.Map<String, ParameterConstraints> requestParameters) {
         this.requestParameters = requestParameters;
         return this;
@@ -87,6 +96,7 @@ public class CreateRouteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteId")
     public String routeId;
+
     public CreateRouteResult withRouteId(String routeId) {
         this.routeId = routeId;
         return this;
@@ -95,6 +105,7 @@ public class CreateRouteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteKey")
     public String routeKey;
+
     public CreateRouteResult withRouteKey(String routeKey) {
         this.routeKey = routeKey;
         return this;
@@ -103,6 +114,7 @@ public class CreateRouteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteResponseSelectionExpression")
     public String routeResponseSelectionExpression;
+
     public CreateRouteResult withRouteResponseSelectionExpression(String routeResponseSelectionExpression) {
         this.routeResponseSelectionExpression = routeResponseSelectionExpression;
         return this;
@@ -111,9 +123,11 @@ public class CreateRouteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public String target;
+
     public CreateRouteResult withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public CreateRouteResult(){}
 }

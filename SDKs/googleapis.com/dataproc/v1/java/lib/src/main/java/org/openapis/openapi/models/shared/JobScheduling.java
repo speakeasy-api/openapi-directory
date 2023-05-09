@@ -18,6 +18,7 @@ public class JobScheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxFailuresPerHour")
     public Integer maxFailuresPerHour;
+
     public JobScheduling withMaxFailuresPerHour(Integer maxFailuresPerHour) {
         this.maxFailuresPerHour = maxFailuresPerHour;
         return this;
@@ -29,9 +30,11 @@ public class JobScheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxFailuresTotal")
     public Integer maxFailuresTotal;
+
     public JobScheduling withMaxFailuresTotal(Integer maxFailuresTotal) {
         this.maxFailuresTotal = maxFailuresTotal;
         return this;
     }
     
+    public JobScheduling(){}
 }

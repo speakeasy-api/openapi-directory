@@ -18,6 +18,7 @@ public class ChannelLocalization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ChannelLocalization withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class ChannelLocalization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ChannelLocalization withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ChannelLocalization(){}
 }

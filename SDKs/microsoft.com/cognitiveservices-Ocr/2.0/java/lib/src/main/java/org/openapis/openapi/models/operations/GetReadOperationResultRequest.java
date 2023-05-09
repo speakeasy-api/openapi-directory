@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReadOperationResultRequest {
@@ -12,9 +13,13 @@ public class GetReadOperationResultRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=operationId")
     public String operationId;
+
     public GetReadOperationResultRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public GetReadOperationResultRequest(@JsonProperty("operationId") String operationId) {
+        this.operationId = operationId;
+  }
 }

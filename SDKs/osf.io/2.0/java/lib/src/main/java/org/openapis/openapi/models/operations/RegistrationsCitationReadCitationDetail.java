@@ -15,6 +15,7 @@ public class RegistrationsCitationReadCitationDetail {
      */
     
     public RegistrationsCitationReadCitationDetailAttributes attributes;
+
     public RegistrationsCitationReadCitationDetail withAttributes(RegistrationsCitationReadCitationDetailAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsCitationReadCitationDetail {
      */
     
     public String id;
+
     public RegistrationsCitationReadCitationDetail withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationsCitationReadCitationDetail {
      */
     
     public RegistrationsCitationReadCitationDetailLinks links;
+
     public RegistrationsCitationReadCitationDetail withLinks(RegistrationsCitationReadCitationDetailLinks links) {
         this.links = links;
         return this;
@@ -45,9 +48,11 @@ public class RegistrationsCitationReadCitationDetail {
      */
     
     public String type;
+
     public RegistrationsCitationReadCitationDetail withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RegistrationsCitationReadCitationDetail(){}
 }

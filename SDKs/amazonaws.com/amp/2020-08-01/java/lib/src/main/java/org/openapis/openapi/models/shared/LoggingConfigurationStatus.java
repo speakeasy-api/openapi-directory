@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LoggingConfigurationStatus {
     @JsonProperty("statusCode")
     public LoggingConfigurationStatusCodeEnum statusCode;
+
     public LoggingConfigurationStatus withStatusCode(LoggingConfigurationStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -22,9 +23,13 @@ public class LoggingConfigurationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public LoggingConfigurationStatus withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public LoggingConfigurationStatus(@JsonProperty("statusCode") LoggingConfigurationStatusCodeEnum statusCode) {
+        this.statusCode = statusCode;
+  }
 }

@@ -22,6 +22,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public DescribeQuerySuggestionsBlockListResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeQuerySuggestionsBlockListResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public DescribeQuerySuggestionsBlockListResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -46,6 +49,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSizeBytes")
     public Long fileSizeBytes;
+
     public DescribeQuerySuggestionsBlockListResponse withFileSizeBytes(Long fileSizeBytes) {
         this.fileSizeBytes = fileSizeBytes;
         return this;
@@ -54,6 +58,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public DescribeQuerySuggestionsBlockListResponse withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexId")
     public String indexId;
+
     public DescribeQuerySuggestionsBlockListResponse withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -70,6 +76,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemCount")
     public Long itemCount;
+
     public DescribeQuerySuggestionsBlockListResponse withItemCount(Long itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -78,6 +85,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeQuerySuggestionsBlockListResponse withName(String name) {
         this.name = name;
         return this;
@@ -86,6 +94,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeQuerySuggestionsBlockListResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -94,6 +103,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceS3Path")
     public S3Path sourceS3Path;
+
     public DescribeQuerySuggestionsBlockListResponse withSourceS3Path(S3Path sourceS3Path) {
         this.sourceS3Path = sourceS3Path;
         return this;
@@ -102,6 +112,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public QuerySuggestionsBlockListStatusEnum status;
+
     public DescribeQuerySuggestionsBlockListResponse withStatus(QuerySuggestionsBlockListStatusEnum status) {
         this.status = status;
         return this;
@@ -112,9 +123,11 @@ public class DescribeQuerySuggestionsBlockListResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public DescribeQuerySuggestionsBlockListResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public DescribeQuerySuggestionsBlockListResponse(){}
 }

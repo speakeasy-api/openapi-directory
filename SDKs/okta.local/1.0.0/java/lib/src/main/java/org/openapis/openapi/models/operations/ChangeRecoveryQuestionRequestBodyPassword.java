@@ -12,9 +12,11 @@ public class ChangeRecoveryQuestionRequestBodyPassword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ChangeRecoveryQuestionRequestBodyPassword withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ChangeRecoveryQuestionRequestBodyPassword(){}
 }

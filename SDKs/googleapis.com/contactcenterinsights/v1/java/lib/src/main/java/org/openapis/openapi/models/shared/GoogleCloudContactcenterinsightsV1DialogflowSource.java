@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1DialogflowSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioUri")
     public String audioUri;
+
     public GoogleCloudContactcenterinsightsV1DialogflowSource withAudioUri(String audioUri) {
         this.audioUri = audioUri;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1DialogflowSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialogflowConversation")
     public String dialogflowConversation;
+
     public GoogleCloudContactcenterinsightsV1DialogflowSource withDialogflowConversation(String dialogflowConversation) {
         this.dialogflowConversation = dialogflowConversation;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1DialogflowSource(){}
 }

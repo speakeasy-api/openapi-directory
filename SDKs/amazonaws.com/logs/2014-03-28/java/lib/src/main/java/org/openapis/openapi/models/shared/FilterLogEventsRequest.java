@@ -12,6 +12,7 @@ public class FilterLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public Long endTime;
+
     public FilterLogEventsRequest withEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
@@ -20,6 +21,7 @@ public class FilterLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterPattern")
     public String filterPattern;
+
     public FilterLogEventsRequest withFilterPattern(String filterPattern) {
         this.filterPattern = filterPattern;
         return this;
@@ -28,6 +30,7 @@ public class FilterLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interleaved")
     public Boolean interleaved;
+
     public FilterLogEventsRequest withInterleaved(Boolean interleaved) {
         this.interleaved = interleaved;
         return this;
@@ -36,6 +39,7 @@ public class FilterLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public FilterLogEventsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -44,6 +48,7 @@ public class FilterLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupIdentifier")
     public String logGroupIdentifier;
+
     public FilterLogEventsRequest withLogGroupIdentifier(String logGroupIdentifier) {
         this.logGroupIdentifier = logGroupIdentifier;
         return this;
@@ -52,6 +57,7 @@ public class FilterLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public FilterLogEventsRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -60,6 +66,7 @@ public class FilterLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logStreamNamePrefix")
     public String logStreamNamePrefix;
+
     public FilterLogEventsRequest withLogStreamNamePrefix(String logStreamNamePrefix) {
         this.logStreamNamePrefix = logStreamNamePrefix;
         return this;
@@ -68,6 +75,7 @@ public class FilterLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logStreamNames")
     public String[] logStreamNames;
+
     public FilterLogEventsRequest withLogStreamNames(String[] logStreamNames) {
         this.logStreamNames = logStreamNames;
         return this;
@@ -76,6 +84,7 @@ public class FilterLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public FilterLogEventsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -84,6 +93,7 @@ public class FilterLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public Long startTime;
+
     public FilterLogEventsRequest withStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
@@ -92,9 +102,11 @@ public class FilterLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unmask")
     public Boolean unmask;
+
     public FilterLogEventsRequest withUnmask(Boolean unmask) {
         this.unmask = unmask;
         return this;
     }
     
+    public FilterLogEventsRequest(){}
 }

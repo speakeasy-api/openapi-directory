@@ -12,6 +12,7 @@ public class GetFileshareDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fs")
     public Fileshare[] fs;
+
     public GetFileshareDetails withFs(Fileshare[] fs) {
         this.fs = fs;
         return this;
@@ -20,6 +21,7 @@ public class GetFileshareDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fsUsage")
     public FileshareUsage[] fsUsage;
+
     public GetFileshareDetails withFsUsage(FileshareUsage[] fsUsage) {
         this.fsUsage = fsUsage;
         return this;
@@ -31,9 +33,11 @@ public class GetFileshareDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volnames")
     public String[] volnames;
+
     public GetFileshareDetails withVolnames(String[] volnames) {
         this.volnames = volnames;
         return this;
     }
     
+    public GetFileshareDetails(){}
 }

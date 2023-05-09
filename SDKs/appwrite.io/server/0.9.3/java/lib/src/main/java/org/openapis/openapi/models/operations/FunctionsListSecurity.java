@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FunctionsListSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-Key")
     public String key;
+
     public FunctionsListSecurity withKey(String key) {
         this.key = key;
         return this;
@@ -16,9 +18,14 @@ public class FunctionsListSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-Project")
     public String project;
+
     public FunctionsListSecurity withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public FunctionsListSecurity(@JsonProperty("Key") String key, @JsonProperty("Project") String project) {
+        this.key = key;
+        this.project = project;
+  }
 }

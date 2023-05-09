@@ -403,4 +403,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateTrustRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/VerifyTrustResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/VerifyTrustRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

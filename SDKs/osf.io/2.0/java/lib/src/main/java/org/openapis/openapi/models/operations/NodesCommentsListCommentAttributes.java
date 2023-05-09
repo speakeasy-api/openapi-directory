@@ -15,6 +15,7 @@ public class NodesCommentsListCommentAttributes {
      */
     
     public Boolean canEdit;
+
     public NodesCommentsListCommentAttributes withCanEdit(Boolean canEdit) {
         this.canEdit = canEdit;
         return this;
@@ -25,6 +26,7 @@ public class NodesCommentsListCommentAttributes {
      */
     
     public String content;
+
     public NodesCommentsListCommentAttributes withContent(String content) {
         this.content = content;
         return this;
@@ -35,6 +37,7 @@ public class NodesCommentsListCommentAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public NodesCommentsListCommentAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -45,6 +48,7 @@ public class NodesCommentsListCommentAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public NodesCommentsListCommentAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -55,6 +59,7 @@ public class NodesCommentsListCommentAttributes {
      */
     
     public Boolean deleted;
+
     public NodesCommentsListCommentAttributes withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -65,6 +70,7 @@ public class NodesCommentsListCommentAttributes {
      */
     
     public Boolean hasChildren;
+
     public NodesCommentsListCommentAttributes withHasChildren(Boolean hasChildren) {
         this.hasChildren = hasChildren;
         return this;
@@ -75,6 +81,7 @@ public class NodesCommentsListCommentAttributes {
      */
     
     public Boolean hasReport;
+
     public NodesCommentsListCommentAttributes withHasReport(Boolean hasReport) {
         this.hasReport = hasReport;
         return this;
@@ -85,6 +92,7 @@ public class NodesCommentsListCommentAttributes {
      */
     
     public Boolean isAbuse;
+
     public NodesCommentsListCommentAttributes withIsAbuse(Boolean isAbuse) {
         this.isAbuse = isAbuse;
         return this;
@@ -95,6 +103,7 @@ public class NodesCommentsListCommentAttributes {
      */
     
     public Boolean isHam;
+
     public NodesCommentsListCommentAttributes withIsHam(Boolean isHam) {
         this.isHam = isHam;
         return this;
@@ -105,6 +114,7 @@ public class NodesCommentsListCommentAttributes {
      */
     
     public Boolean modified;
+
     public NodesCommentsListCommentAttributes withModified(Boolean modified) {
         this.modified = modified;
         return this;
@@ -115,9 +125,11 @@ public class NodesCommentsListCommentAttributes {
      */
     
     public String page;
+
     public NodesCommentsListCommentAttributes withPage(String page) {
         this.page = page;
         return this;
     }
     
+    public NodesCommentsListCommentAttributes(){}
 }

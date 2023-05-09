@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatacatalogProjectsLocationsTaxonomiesPolicyTagsListResponse {
     
     public String contentType;
+
     public DatacatalogProjectsLocationsTaxonomiesPolicyTagsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatacatalogProjectsLocationsTaxonomiesPolicyTagsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1beta1ListPolicyTagsResponse googleCloudDatacatalogV1beta1ListPolicyTagsResponse;
+
     public DatacatalogProjectsLocationsTaxonomiesPolicyTagsListResponse withGoogleCloudDatacatalogV1beta1ListPolicyTagsResponse(org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1beta1ListPolicyTagsResponse googleCloudDatacatalogV1beta1ListPolicyTagsResponse) {
         this.googleCloudDatacatalogV1beta1ListPolicyTagsResponse = googleCloudDatacatalogV1beta1ListPolicyTagsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DatacatalogProjectsLocationsTaxonomiesPolicyTagsListResponse {
     
     
     public Integer statusCode;
+
     public DatacatalogProjectsLocationsTaxonomiesPolicyTagsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatacatalogProjectsLocationsTaxonomiesPolicyTagsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatacatalogProjectsLocationsTaxonomiesPolicyTagsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

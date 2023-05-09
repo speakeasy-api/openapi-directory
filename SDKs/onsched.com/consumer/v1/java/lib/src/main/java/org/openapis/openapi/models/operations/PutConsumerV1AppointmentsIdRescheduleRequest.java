@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConsumerV1AppointmentsIdRescheduleRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AppointmentRescheduleModel appointmentRescheduleModel;
+
     public PutConsumerV1AppointmentsIdRescheduleRequest withAppointmentRescheduleModel(org.openapis.openapi.models.shared.AppointmentRescheduleModel appointmentRescheduleModel) {
         this.appointmentRescheduleModel = appointmentRescheduleModel;
         return this;
@@ -19,9 +21,13 @@ public class PutConsumerV1AppointmentsIdRescheduleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutConsumerV1AppointmentsIdRescheduleRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PutConsumerV1AppointmentsIdRescheduleRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

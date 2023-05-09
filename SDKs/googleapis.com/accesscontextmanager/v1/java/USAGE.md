@@ -3,22 +3,21 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity;
 import org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest;
 import org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse;
-import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity;
 import org.openapis.openapi.models.shared.AccessLevel;
-import org.openapis.openapi.models.shared.CustomLevel;
-import org.openapis.openapi.models.shared.Expr;
-import org.openapis.openapi.models.shared.BasicLevelCombiningFunctionEnum;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.BasicLevel;
+import org.openapis.openapi.models.shared.BasicLevelCombiningFunctionEnum;
 import org.openapis.openapi.models.shared.Condition;
+import org.openapis.openapi.models.shared.CustomLevel;
+import org.openapis.openapi.models.shared.DevicePolicy;
 import org.openapis.openapi.models.shared.DevicePolicyAllowedDeviceManagementLevelsEnum;
 import org.openapis.openapi.models.shared.DevicePolicyAllowedEncryptionStatusesEnum;
-import org.openapis.openapi.models.shared.DevicePolicy;
-import org.openapis.openapi.models.shared.OsConstraintOsTypeEnum;
+import org.openapis.openapi.models.shared.Expr;
 import org.openapis.openapi.models.shared.OsConstraint;
+import org.openapis.openapi.models.shared.OsConstraintOsTypeEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -27,33 +26,32 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest req = new AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest() {{
-                dollarXgafv = "2";
+            AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest req = new AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 accessLevel = new AccessLevel() {{
                     basic = new BasicLevel() {{
-                        combiningFunction = "OR";
+                        combiningFunction = BasicLevelCombiningFunctionEnum.OR;
                         conditions = new org.openapis.openapi.models.shared.Condition[]{{
                             add(new Condition() {{
                                 devicePolicy = new DevicePolicy() {{
                                     allowedDeviceManagementLevels = new org.openapis.openapi.models.shared.DevicePolicyAllowedDeviceManagementLevelsEnum[]{{
-                                        add("BASIC"),
-                                        add("COMPLETE"),
-                                        add("BASIC"),
-                                        add("COMPLETE"),
+                                        add(DevicePolicyAllowedDeviceManagementLevelsEnum.COMPLETE),
+                                        add(DevicePolicyAllowedDeviceManagementLevelsEnum.BASIC),
+                                        add(DevicePolicyAllowedDeviceManagementLevelsEnum.COMPLETE),
                                     }};
                                     allowedEncryptionStatuses = new org.openapis.openapi.models.shared.DevicePolicyAllowedEncryptionStatusesEnum[]{{
-                                        add("UNENCRYPTED"),
-                                        add("UNENCRYPTED"),
+                                        add(DevicePolicyAllowedEncryptionStatusesEnum.UNENCRYPTED),
+                                        add(DevicePolicyAllowedEncryptionStatusesEnum.UNENCRYPTED),
                                     }};
                                     osConstraints = new org.openapis.openapi.models.shared.OsConstraint[]{{
                                         add(new OsConstraint() {{
                                             minimumVersion = "iure";
-                                            osType = "DESKTOP_WINDOWS";
+                                            osType = OsConstraintOsTypeEnum.DESKTOP_WINDOWS;
                                             requireVerifiedChromeOs = false;
                                         }}),
                                         add(new OsConstraint() {{
                                             minimumVersion = "debitis";
-                                            osType = "OS_UNSPECIFIED";
+                                            osType = OsConstraintOsTypeEnum.OS_UNSPECIFIED;
                                             requireVerifiedChromeOs = false;
                                         }}),
                                     }};
@@ -89,31 +87,31 @@ public class Application {
                             add(new Condition() {{
                                 devicePolicy = new DevicePolicy() {{
                                     allowedDeviceManagementLevels = new org.openapis.openapi.models.shared.DevicePolicyAllowedDeviceManagementLevelsEnum[]{{
-                                        add("COMPLETE"),
-                                        add("MANAGEMENT_UNSPECIFIED"),
-                                        add("COMPLETE"),
-                                        add("COMPLETE"),
+                                        add(DevicePolicyAllowedDeviceManagementLevelsEnum.COMPLETE),
+                                        add(DevicePolicyAllowedDeviceManagementLevelsEnum.MANAGEMENT_UNSPECIFIED),
+                                        add(DevicePolicyAllowedDeviceManagementLevelsEnum.COMPLETE),
+                                        add(DevicePolicyAllowedDeviceManagementLevelsEnum.COMPLETE),
                                     }};
                                     allowedEncryptionStatuses = new org.openapis.openapi.models.shared.DevicePolicyAllowedEncryptionStatusesEnum[]{{
-                                        add("ENCRYPTION_UNSUPPORTED"),
-                                        add("ENCRYPTED"),
-                                        add("ENCRYPTED"),
-                                        add("ENCRYPTION_UNSUPPORTED"),
+                                        add(DevicePolicyAllowedEncryptionStatusesEnum.ENCRYPTION_UNSUPPORTED),
+                                        add(DevicePolicyAllowedEncryptionStatusesEnum.ENCRYPTED),
+                                        add(DevicePolicyAllowedEncryptionStatusesEnum.ENCRYPTED),
+                                        add(DevicePolicyAllowedEncryptionStatusesEnum.ENCRYPTION_UNSUPPORTED),
                                     }};
                                     osConstraints = new org.openapis.openapi.models.shared.OsConstraint[]{{
                                         add(new OsConstraint() {{
                                             minimumVersion = "porro";
-                                            osType = "DESKTOP_CHROME_OS";
+                                            osType = OsConstraintOsTypeEnum.DESKTOP_CHROME_OS;
                                             requireVerifiedChromeOs = false;
                                         }}),
                                         add(new OsConstraint() {{
                                             minimumVersion = "dicta";
-                                            osType = "ANDROID";
+                                            osType = OsConstraintOsTypeEnum.ANDROID;
                                             requireVerifiedChromeOs = false;
                                         }}),
                                         add(new OsConstraint() {{
                                             minimumVersion = "officia";
-                                            osType = "DESKTOP_CHROME_OS";
+                                            osType = OsConstraintOsTypeEnum.DESKTOP_CHROME_OS;
                                             requireVerifiedChromeOs = false;
                                         }}),
                                     }};
@@ -145,26 +143,26 @@ public class Application {
                             add(new Condition() {{
                                 devicePolicy = new DevicePolicy() {{
                                     allowedDeviceManagementLevels = new org.openapis.openapi.models.shared.DevicePolicyAllowedDeviceManagementLevelsEnum[]{{
-                                        add("MANAGEMENT_UNSPECIFIED"),
+                                        add(DevicePolicyAllowedDeviceManagementLevelsEnum.MANAGEMENT_UNSPECIFIED),
                                     }};
                                     allowedEncryptionStatuses = new org.openapis.openapi.models.shared.DevicePolicyAllowedEncryptionStatusesEnum[]{{
-                                        add("UNENCRYPTED"),
-                                        add("ENCRYPTION_UNSPECIFIED"),
+                                        add(DevicePolicyAllowedEncryptionStatusesEnum.UNENCRYPTED),
+                                        add(DevicePolicyAllowedEncryptionStatusesEnum.ENCRYPTION_UNSPECIFIED),
                                     }};
                                     osConstraints = new org.openapis.openapi.models.shared.OsConstraint[]{{
                                         add(new OsConstraint() {{
                                             minimumVersion = "dolor";
-                                            osType = "DESKTOP_CHROME_OS";
+                                            osType = OsConstraintOsTypeEnum.DESKTOP_CHROME_OS;
                                             requireVerifiedChromeOs = false;
                                         }}),
                                         add(new OsConstraint() {{
                                             minimumVersion = "laboriosam";
-                                            osType = "IOS";
+                                            osType = OsConstraintOsTypeEnum.IOS;
                                             requireVerifiedChromeOs = false;
                                         }}),
                                         add(new OsConstraint() {{
                                             minimumVersion = "saepe";
-                                            osType = "DESKTOP_CHROME_OS";
+                                            osType = OsConstraintOsTypeEnum.DESKTOP_CHROME_OS;
                                             requireVerifiedChromeOs = false;
                                         }}),
                                     }};
@@ -191,43 +189,89 @@ public class Application {
                                     add("dolores"),
                                 }};
                             }}),
+                            add(new Condition() {{
+                                devicePolicy = new DevicePolicy() {{
+                                    allowedDeviceManagementLevels = new org.openapis.openapi.models.shared.DevicePolicyAllowedDeviceManagementLevelsEnum[]{{
+                                        add(DevicePolicyAllowedDeviceManagementLevelsEnum.NONE),
+                                    }};
+                                    allowedEncryptionStatuses = new org.openapis.openapi.models.shared.DevicePolicyAllowedEncryptionStatusesEnum[]{{
+                                        add(DevicePolicyAllowedEncryptionStatusesEnum.ENCRYPTED),
+                                    }};
+                                    osConstraints = new org.openapis.openapi.models.shared.OsConstraint[]{{
+                                        add(new OsConstraint() {{
+                                            minimumVersion = "omnis";
+                                            osType = OsConstraintOsTypeEnum.DESKTOP_WINDOWS;
+                                            requireVerifiedChromeOs = false;
+                                        }}),
+                                        add(new OsConstraint() {{
+                                            minimumVersion = "minima";
+                                            osType = OsConstraintOsTypeEnum.DESKTOP_LINUX;
+                                            requireVerifiedChromeOs = false;
+                                        }}),
+                                    }};
+                                    requireAdminApproval = false;
+                                    requireCorpOwned = false;
+                                    requireScreenlock = false;
+                                }};
+                                ipSubnetworks = new String[]{{
+                                    add("iure"),
+                                }};
+                                members = new String[]{{
+                                    add("doloribus"),
+                                    add("sapiente"),
+                                    add("architecto"),
+                                }};
+                                negate = false;
+                                regions = new String[]{{
+                                    add("dolorem"),
+                                    add("culpa"),
+                                    add("consequuntur"),
+                                }};
+                                requiredAccessLevels = new String[]{{
+                                    add("mollitia"),
+                                    add("occaecati"),
+                                    add("numquam"),
+                                    add("commodi"),
+                                }};
+                            }}),
                         }};
-                    }};
+                    }};;
                     custom = new CustomLevel() {{
                         expr = new Expr() {{
-                            description = "dolorem";
-                            expression = "corporis";
-                            location = "explicabo";
+                            description = "quam";
+                            expression = "molestiae";
+                            location = "velit";
                             title = "Miss";
-                        }};
-                    }};
-                    description = "enim";
-                    name = "omnis";
-                    title = "Mrs.";
-                }};
-                accessToken = "minima";
-                alt = "media";
-                callback = "accusantium";
-                fields = "iure";
-                key = "culpa";
-                oauthToken = "doloribus";
-                parent = "sapiente";
+                        }};;
+                    }};;
+                    description = "quia";
+                    name = "Gloria Padberg";
+                    title = "Mr.";
+                }};;
+                accessToken = "quo";
+                alt = AltEnum.JSON;
+                callback = "tenetur";
+                fields = "ipsam";
+                key = "id";
+                oauthToken = "possimus";
                 prettyPrint = false;
-                quotaUser = "architecto";
-                uploadType = "mollitia";
-                uploadProtocol = "dolorem";
-            }}            
+                quotaUser = "aut";
+                uploadType = "quasi";
+                uploadProtocol = "error";
+            }};            
 
-            AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse res = sdk.accessPolicies.accesscontextmanagerAccessPoliciesAccessLevelsCreate(req, new AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity() {{
+            AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse res = sdk.accessPolicies.accesscontextmanagerAccessPoliciesAccessLevelsCreate(req, new AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity("temporibus", "laborum") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

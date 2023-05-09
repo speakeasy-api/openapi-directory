@@ -15,6 +15,7 @@ public class GetDistributionMetricDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricData")
     public MetricDatapoint[] metricData;
+
     public GetDistributionMetricDataResult withMetricData(MetricDatapoint[] metricData) {
         this.metricData = metricData;
         return this;
@@ -23,9 +24,11 @@ public class GetDistributionMetricDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public DistributionMetricNameEnum metricName;
+
     public GetDistributionMetricDataResult withMetricName(DistributionMetricNameEnum metricName) {
         this.metricName = metricName;
         return this;
     }
     
+    public GetDistributionMetricDataResult(){}
 }

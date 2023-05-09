@@ -15,6 +15,7 @@ public class ListGroundStationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groundStationList")
     public GroundStationData[] groundStationList;
+
     public ListGroundStationsResponse withGroundStationList(GroundStationData[] groundStationList) {
         this.groundStationList = groundStationList;
         return this;
@@ -23,9 +24,11 @@ public class ListGroundStationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListGroundStationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListGroundStationsResponse(){}
 }

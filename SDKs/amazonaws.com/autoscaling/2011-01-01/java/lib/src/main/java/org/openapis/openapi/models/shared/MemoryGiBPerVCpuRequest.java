@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MemoryGiBPerVCpuRequest {
     
     public Double max;
+
     public MemoryGiBPerVCpuRequest withMax(Double max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class MemoryGiBPerVCpuRequest {
     
     
     public Double min;
+
     public MemoryGiBPerVCpuRequest withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public MemoryGiBPerVCpuRequest(){}
 }

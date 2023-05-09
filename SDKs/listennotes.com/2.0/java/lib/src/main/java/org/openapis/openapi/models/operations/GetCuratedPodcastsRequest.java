@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCuratedPodcastsRequest {
@@ -12,6 +13,7 @@ public class GetCuratedPodcastsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
     public String xListenAPIKey;
+
     public GetCuratedPodcastsRequest withXListenAPIKey(String xListenAPIKey) {
         this.xListenAPIKey = xListenAPIKey;
         return this;
@@ -22,9 +24,13 @@ public class GetCuratedPodcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetCuratedPodcastsRequest withPage(Long page) {
         this.page = page;
         return this;
     }
     
+    public GetCuratedPodcastsRequest(@JsonProperty("X-ListenAPI-Key") String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
+  }
 }

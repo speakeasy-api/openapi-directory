@@ -15,6 +15,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public Key withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -26,6 +27,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passphrase")
     public String passphrase;
+
     public Key withPassphrase(String passphrase) {
         this.passphrase = passphrase;
         return this;
@@ -37,9 +39,11 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Integer version;
+
     public Key withVersion(Integer version) {
         this.version = version;
         return this;
     }
     
+    public Key(){}
 }

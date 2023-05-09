@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ServicebrokerTestIamPermissionsResponse {
     
     public byte[] body;
+
     public ServicebrokerTestIamPermissionsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ServicebrokerTestIamPermissionsResponse {
     
     
     public String contentType;
+
     public ServicebrokerTestIamPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ServicebrokerTestIamPermissionsResponse {
     
     
     public Integer statusCode;
+
     public ServicebrokerTestIamPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ServicebrokerTestIamPermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ServicebrokerTestIamPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ServicebrokerTestIamPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

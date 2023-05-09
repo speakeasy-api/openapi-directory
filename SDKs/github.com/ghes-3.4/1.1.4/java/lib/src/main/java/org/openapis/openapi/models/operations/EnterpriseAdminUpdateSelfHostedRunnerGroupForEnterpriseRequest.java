@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody requestBody;
+
     public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest withRequestBody(EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
@@ -29,9 +32,14 @@ public class EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_group_id")
     public Long runnerGroupId;
+
     public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest withRunnerGroupId(Long runnerGroupId) {
         this.runnerGroupId = runnerGroupId;
         return this;
     }
     
+    public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest(@JsonProperty("enterprise") String enterprise, @JsonProperty("runner_group_id") Long runnerGroupId) {
+        this.enterprise = enterprise;
+        this.runnerGroupId = runnerGroupId;
+  }
 }

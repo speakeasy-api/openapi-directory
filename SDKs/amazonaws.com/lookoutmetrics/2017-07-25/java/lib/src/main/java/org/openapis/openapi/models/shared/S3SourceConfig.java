@@ -15,6 +15,7 @@ public class S3SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileFormatDescriptor")
     public FileFormatDescriptor fileFormatDescriptor;
+
     public S3SourceConfig withFileFormatDescriptor(FileFormatDescriptor fileFormatDescriptor) {
         this.fileFormatDescriptor = fileFormatDescriptor;
         return this;
@@ -23,6 +24,7 @@ public class S3SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HistoricalDataPathList")
     public String[] historicalDataPathList;
+
     public S3SourceConfig withHistoricalDataPathList(String[] historicalDataPathList) {
         this.historicalDataPathList = historicalDataPathList;
         return this;
@@ -31,6 +33,7 @@ public class S3SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public S3SourceConfig withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -39,9 +42,11 @@ public class S3SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplatedPathList")
     public String[] templatedPathList;
+
     public S3SourceConfig withTemplatedPathList(String[] templatedPathList) {
         this.templatedPathList = templatedPathList;
         return this;
     }
     
+    public S3SourceConfig(){}
 }

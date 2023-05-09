@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateImageEditRequest {
@@ -12,6 +13,7 @@ public class CreateImageEditRequest {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public CreateImageEditRequestImage image;
+
     public CreateImageEditRequest withImage(CreateImageEditRequestImage image) {
         this.image = image;
         return this;
@@ -22,6 +24,7 @@ public class CreateImageEditRequest {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public CreateImageEditRequestMask mask;
+
     public CreateImageEditRequest withMask(CreateImageEditRequestMask mask) {
         this.mask = mask;
         return this;
@@ -32,6 +35,7 @@ public class CreateImageEditRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=n")
     public Long n;
+
     public CreateImageEditRequest withN(Long n) {
         this.n = n;
         return this;
@@ -42,6 +46,7 @@ public class CreateImageEditRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=prompt")
     public String prompt;
+
     public CreateImageEditRequest withPrompt(String prompt) {
         this.prompt = prompt;
         return this;
@@ -52,6 +57,7 @@ public class CreateImageEditRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=response_format")
     public ResponseFormatEnum responseFormat;
+
     public CreateImageEditRequest withResponseFormat(ResponseFormatEnum responseFormat) {
         this.responseFormat = responseFormat;
         return this;
@@ -62,6 +68,7 @@ public class CreateImageEditRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=size")
     public SizeEnum size;
+
     public CreateImageEditRequest withSize(SizeEnum size) {
         this.size = size;
         return this;
@@ -73,9 +80,14 @@ public class CreateImageEditRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=user")
     public String user;
+
     public CreateImageEditRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public CreateImageEditRequest(@JsonProperty("image") CreateImageEditRequestImage image, @JsonProperty("prompt") String prompt) {
+        this.image = image;
+        this.prompt = prompt;
+  }
 }

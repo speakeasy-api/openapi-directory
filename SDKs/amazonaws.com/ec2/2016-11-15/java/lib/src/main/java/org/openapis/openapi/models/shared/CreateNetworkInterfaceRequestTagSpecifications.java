@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInterfaceRequestTagSpecifications {
     
     public CreateNetworkInterfaceRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateNetworkInterfaceRequestTagSpecifications withResourceType(CreateNetworkInterfaceRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateNetworkInterfaceRequestTagSpecifications {
     
     
     public CreateNetworkInterfaceRequestTagSpecificationsTags[] tags;
+
     public CreateNetworkInterfaceRequestTagSpecifications withTags(CreateNetworkInterfaceRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateNetworkInterfaceRequestTagSpecifications(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FailoverConfig {
     @JsonProperty("Primary")
     public Primary primary;
+
     public FailoverConfig withPrimary(Primary primary) {
         this.primary = primary;
         return this;
@@ -19,9 +20,14 @@ public class FailoverConfig {
     
     @JsonProperty("Secondary")
     public Secondary secondary;
+
     public FailoverConfig withSecondary(Secondary secondary) {
         this.secondary = secondary;
         return this;
     }
     
+    public FailoverConfig(@JsonProperty("Primary") Primary primary, @JsonProperty("Secondary") Secondary secondary) {
+        this.primary = primary;
+        this.secondary = secondary;
+  }
 }

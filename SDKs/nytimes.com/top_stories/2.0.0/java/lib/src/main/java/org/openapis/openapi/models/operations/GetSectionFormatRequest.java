@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSectionFormatRequest {
@@ -13,6 +14,7 @@ public class GetSectionFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetSectionFormatRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -23,6 +25,7 @@ public class GetSectionFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public GetSectionFormatFormatEnum format;
+
     public GetSectionFormatRequest withFormat(GetSectionFormatFormatEnum format) {
         this.format = format;
         return this;
@@ -33,9 +36,14 @@ public class GetSectionFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=section")
     public GetSectionFormatSectionEnum section;
+
     public GetSectionFormatRequest withSection(GetSectionFormatSectionEnum section) {
         this.section = section;
         return this;
     }
     
+    public GetSectionFormatRequest(@JsonProperty("format") GetSectionFormatFormatEnum format, @JsonProperty("section") GetSectionFormatSectionEnum section) {
+        this.format = format;
+        this.section = section;
+  }
 }

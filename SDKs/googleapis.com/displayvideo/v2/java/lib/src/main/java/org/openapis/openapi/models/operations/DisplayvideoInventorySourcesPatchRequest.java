@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisplayvideoInventorySourcesPatchRequest {
@@ -12,6 +13,7 @@ public class DisplayvideoInventorySourcesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DisplayvideoInventorySourcesPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoInventorySourcesPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.InventorySourceInput inventorySourceInput;
+
     public DisplayvideoInventorySourcesPatchRequest withInventorySourceInput(org.openapis.openapi.models.shared.InventorySourceInput inventorySourceInput) {
         this.inventorySourceInput = inventorySourceInput;
         return this;
@@ -29,6 +32,7 @@ public class DisplayvideoInventorySourcesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DisplayvideoInventorySourcesPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DisplayvideoInventorySourcesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserId")
     public String advertiserId;
+
     public DisplayvideoInventorySourcesPatchRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -49,6 +54,7 @@ public class DisplayvideoInventorySourcesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DisplayvideoInventorySourcesPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -59,6 +65,7 @@ public class DisplayvideoInventorySourcesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DisplayvideoInventorySourcesPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class DisplayvideoInventorySourcesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DisplayvideoInventorySourcesPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class DisplayvideoInventorySourcesPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inventorySourceId")
     public String inventorySourceId;
+
     public DisplayvideoInventorySourcesPatchRequest withInventorySourceId(String inventorySourceId) {
         this.inventorySourceId = inventorySourceId;
         return this;
@@ -89,6 +98,7 @@ public class DisplayvideoInventorySourcesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DisplayvideoInventorySourcesPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class DisplayvideoInventorySourcesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DisplayvideoInventorySourcesPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class DisplayvideoInventorySourcesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partnerId")
     public String partnerId;
+
     public DisplayvideoInventorySourcesPatchRequest withPartnerId(String partnerId) {
         this.partnerId = partnerId;
         return this;
@@ -119,6 +131,7 @@ public class DisplayvideoInventorySourcesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DisplayvideoInventorySourcesPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -129,6 +142,7 @@ public class DisplayvideoInventorySourcesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DisplayvideoInventorySourcesPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class DisplayvideoInventorySourcesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
     public String updateMask;
+
     public DisplayvideoInventorySourcesPatchRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -149,6 +164,7 @@ public class DisplayvideoInventorySourcesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DisplayvideoInventorySourcesPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,9 +175,13 @@ public class DisplayvideoInventorySourcesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DisplayvideoInventorySourcesPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DisplayvideoInventorySourcesPatchRequest(@JsonProperty("inventorySourceId") String inventorySourceId) {
+        this.inventorySourceId = inventorySourceId;
+  }
 }

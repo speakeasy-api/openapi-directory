@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssociateIamInstanceProfileRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAssociateIamInstanceProfileActionEnum action;
+
     public GETAssociateIamInstanceProfileRequest withAction(GETAssociateIamInstanceProfileActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETAssociateIamInstanceProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IamInstanceProfile")
     public GETAssociateIamInstanceProfileIamInstanceProfile iamInstanceProfile;
+
     public GETAssociateIamInstanceProfileRequest withIamInstanceProfile(GETAssociateIamInstanceProfileIamInstanceProfile iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -29,6 +32,7 @@ public class GETAssociateIamInstanceProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
     public String instanceId;
+
     public GETAssociateIamInstanceProfileRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -36,6 +40,7 @@ public class GETAssociateIamInstanceProfileRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAssociateIamInstanceProfileVersionEnum version;
+
     public GETAssociateIamInstanceProfileRequest withVersion(GETAssociateIamInstanceProfileVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETAssociateIamInstanceProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAssociateIamInstanceProfileRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETAssociateIamInstanceProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAssociateIamInstanceProfileRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETAssociateIamInstanceProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAssociateIamInstanceProfileRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETAssociateIamInstanceProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAssociateIamInstanceProfileRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETAssociateIamInstanceProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAssociateIamInstanceProfileRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETAssociateIamInstanceProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAssociateIamInstanceProfileRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETAssociateIamInstanceProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAssociateIamInstanceProfileRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAssociateIamInstanceProfileRequest(@JsonProperty("Action") GETAssociateIamInstanceProfileActionEnum action, @JsonProperty("IamInstanceProfile") GETAssociateIamInstanceProfileIamInstanceProfile iamInstanceProfile, @JsonProperty("InstanceId") String instanceId, @JsonProperty("Version") GETAssociateIamInstanceProfileVersionEnum version) {
+        this.action = action;
+        this.iamInstanceProfile = iamInstanceProfile;
+        this.instanceId = instanceId;
+        this.version = version;
+  }
 }

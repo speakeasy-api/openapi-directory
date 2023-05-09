@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteVerifiedAccessTrustProviderRequest {
     
     public String clientToken;
+
     public DeleteVerifiedAccessTrustProviderRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class DeleteVerifiedAccessTrustProviderRequest {
     
     
     public Boolean dryRun;
+
     public DeleteVerifiedAccessTrustProviderRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,13 @@ public class DeleteVerifiedAccessTrustProviderRequest {
     
     
     public String verifiedAccessTrustProviderId;
+
     public DeleteVerifiedAccessTrustProviderRequest withVerifiedAccessTrustProviderId(String verifiedAccessTrustProviderId) {
         this.verifiedAccessTrustProviderId = verifiedAccessTrustProviderId;
         return this;
     }
     
+    public DeleteVerifiedAccessTrustProviderRequest(@JsonProperty("VerifiedAccessTrustProviderId") String verifiedAccessTrustProviderId) {
+        this.verifiedAccessTrustProviderId = verifiedAccessTrustProviderId;
+  }
 }

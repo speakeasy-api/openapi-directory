@@ -15,6 +15,7 @@ public class SearchItemsByViewUrlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugOptions")
     public DebugOptions debugOptions;
+
     public SearchItemsByViewUrlRequest withDebugOptions(DebugOptions debugOptions) {
         this.debugOptions = debugOptions;
         return this;
@@ -26,6 +27,7 @@ public class SearchItemsByViewUrlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public SearchItemsByViewUrlRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -37,9 +39,11 @@ public class SearchItemsByViewUrlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewUrl")
     public String viewUrl;
+
     public SearchItemsByViewUrlRequest withViewUrl(String viewUrl) {
         this.viewUrl = viewUrl;
         return this;
     }
     
+    public SearchItemsByViewUrlRequest(){}
 }

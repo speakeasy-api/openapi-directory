@@ -55,10 +55,8 @@ public class VariationSet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVariantSetItemResponse res = new org.openapis.openapi.models.operations.DeleteVariantSetItemResponse() {{
+        org.openapis.openapi.models.operations.DeleteVariantSetItemResponse res = new org.openapis.openapi.models.operations.DeleteVariantSetItemResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -87,11 +85,9 @@ public class VariationSet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVariantAnalyzeResponse res = new org.openapis.openapi.models.operations.GetVariantAnalyzeResponse() {{
+        org.openapis.openapi.models.operations.GetVariantAnalyzeResponse res = new org.openapis.openapi.models.operations.GetVariantAnalyzeResponse(contentType, httpRes.statusCode()) {{
             associations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -125,11 +121,9 @@ public class VariationSet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVariantSetItemResponse res = new org.openapis.openapi.models.operations.GetVariantSetItemResponse() {{
+        org.openapis.openapi.models.operations.GetVariantSetItemResponse res = new org.openapis.openapi.models.operations.GetVariantSetItemResponse(contentType, httpRes.statusCode()) {{
             variantSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -171,11 +165,9 @@ public class VariationSet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVariantSetsArchiveCollectionResponse res = new org.openapis.openapi.models.operations.GetVariantSetsArchiveCollectionResponse() {{
+        org.openapis.openapi.models.operations.GetVariantSetsArchiveCollectionResponse res = new org.openapis.openapi.models.operations.GetVariantSetsArchiveCollectionResponse(contentType, httpRes.statusCode()) {{
             pageOfVariantSets = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -215,11 +207,9 @@ public class VariationSet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVariantSetsCollectionResponse res = new org.openapis.openapi.models.operations.GetVariantSetsCollectionResponse() {{
+        org.openapis.openapi.models.operations.GetVariantSetsCollectionResponse res = new org.openapis.openapi.models.operations.GetVariantSetsCollectionResponse(contentType, httpRes.statusCode()) {{
             pageOfVariantSets = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -258,10 +248,8 @@ public class VariationSet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostVariantSetsCollectionResponse res = new org.openapis.openapi.models.operations.PostVariantSetsCollectionResponse() {{
+        org.openapis.openapi.models.operations.PostVariantSetsCollectionResponse res = new org.openapis.openapi.models.operations.PostVariantSetsCollectionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,10 +283,8 @@ public class VariationSet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutVariantSetItemResponse res = new org.openapis.openapi.models.operations.PutVariantSetItemResponse() {{
+        org.openapis.openapi.models.operations.PutVariantSetItemResponse res = new org.openapis.openapi.models.operations.PutVariantSetItemResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {

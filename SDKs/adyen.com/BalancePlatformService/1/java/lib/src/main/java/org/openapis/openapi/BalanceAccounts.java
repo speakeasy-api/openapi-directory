@@ -54,12 +54,10 @@ public class BalanceAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBalanceAccountsIdResponse res = new org.openapis.openapi.models.operations.GetBalanceAccountsIdResponse() {{
+        org.openapis.openapi.models.operations.GetBalanceAccountsIdResponse res = new org.openapis.openapi.models.operations.GetBalanceAccountsIdResponse(contentType, httpRes.statusCode()) {{
             balanceAccount = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,12 +109,10 @@ public class BalanceAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBalanceAccountsIdPaymentInstrumentsResponse res = new org.openapis.openapi.models.operations.GetBalanceAccountsIdPaymentInstrumentsResponse() {{
+        org.openapis.openapi.models.operations.GetBalanceAccountsIdPaymentInstrumentsResponse res = new org.openapis.openapi.models.operations.GetBalanceAccountsIdPaymentInstrumentsResponse(contentType, httpRes.statusCode()) {{
             paginatedPaymentInstrumentsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,12 +158,10 @@ public class BalanceAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchBalanceAccountsIdResponse res = new org.openapis.openapi.models.operations.PatchBalanceAccountsIdResponse() {{
+        org.openapis.openapi.models.operations.PatchBalanceAccountsIdResponse res = new org.openapis.openapi.models.operations.PatchBalanceAccountsIdResponse(contentType, httpRes.statusCode()) {{
             balanceAccount = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -213,12 +207,10 @@ public class BalanceAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostBalanceAccountsResponse res = new org.openapis.openapi.models.operations.PostBalanceAccountsResponse() {{
+        org.openapis.openapi.models.operations.PostBalanceAccountsResponse res = new org.openapis.openapi.models.operations.PostBalanceAccountsResponse(contentType, httpRes.statusCode()) {{
             balanceAccount = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

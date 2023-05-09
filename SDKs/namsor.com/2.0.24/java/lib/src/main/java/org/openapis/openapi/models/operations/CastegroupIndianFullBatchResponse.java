@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CastegroupIndianFullBatchResponse {
@@ -12,6 +13,7 @@ public class CastegroupIndianFullBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchPersonalNameCastegroupOut batchPersonalNameCastegroupOut;
+
     public CastegroupIndianFullBatchResponse withBatchPersonalNameCastegroupOut(org.openapis.openapi.models.shared.BatchPersonalNameCastegroupOut batchPersonalNameCastegroupOut) {
         this.batchPersonalNameCastegroupOut = batchPersonalNameCastegroupOut;
         return this;
@@ -19,6 +21,7 @@ public class CastegroupIndianFullBatchResponse {
     
     
     public String contentType;
+
     public CastegroupIndianFullBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CastegroupIndianFullBatchResponse {
     
     
     public Integer statusCode;
+
     public CastegroupIndianFullBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CastegroupIndianFullBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CastegroupIndianFullBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CastegroupIndianFullBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ListSlackWorkspaceConfigurationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSlackWorkspaceConfigurationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSlackWorkspaceConfigurationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slackWorkspaceConfigurations")
     public SlackWorkspaceConfiguration[] slackWorkspaceConfigurations;
+
     public ListSlackWorkspaceConfigurationsResult withSlackWorkspaceConfigurations(SlackWorkspaceConfiguration[] slackWorkspaceConfigurations) {
         this.slackWorkspaceConfigurations = slackWorkspaceConfigurations;
         return this;
     }
     
+    public ListSlackWorkspaceConfigurationsResult(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETChangeMessageVisibilityRequest {
@@ -12,6 +13,7 @@ public class GETChangeMessageVisibilityRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountNumber")
     public Long accountNumber;
+
     public GETChangeMessageVisibilityRequest withAccountNumber(Long accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -19,6 +21,7 @@ public class GETChangeMessageVisibilityRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETChangeMessageVisibilityActionEnum action;
+
     public GETChangeMessageVisibilityRequest withAction(GETChangeMessageVisibilityActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +32,7 @@ public class GETChangeMessageVisibilityRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=QueueName")
     public String queueName;
+
     public GETChangeMessageVisibilityRequest withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
@@ -39,6 +43,7 @@ public class GETChangeMessageVisibilityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReceiptHandle")
     public String receiptHandle;
+
     public GETChangeMessageVisibilityRequest withReceiptHandle(String receiptHandle) {
         this.receiptHandle = receiptHandle;
         return this;
@@ -46,6 +51,7 @@ public class GETChangeMessageVisibilityRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETChangeMessageVisibilityVersionEnum version;
+
     public GETChangeMessageVisibilityRequest withVersion(GETChangeMessageVisibilityVersionEnum version) {
         this.version = version;
         return this;
@@ -56,6 +62,7 @@ public class GETChangeMessageVisibilityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VisibilityTimeout")
     public Long visibilityTimeout;
+
     public GETChangeMessageVisibilityRequest withVisibilityTimeout(Long visibilityTimeout) {
         this.visibilityTimeout = visibilityTimeout;
         return this;
@@ -63,6 +70,7 @@ public class GETChangeMessageVisibilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETChangeMessageVisibilityRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETChangeMessageVisibilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETChangeMessageVisibilityRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETChangeMessageVisibilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETChangeMessageVisibilityRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETChangeMessageVisibilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETChangeMessageVisibilityRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETChangeMessageVisibilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETChangeMessageVisibilityRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETChangeMessageVisibilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETChangeMessageVisibilityRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,18 @@ public class GETChangeMessageVisibilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETChangeMessageVisibilityRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETChangeMessageVisibilityRequest(@JsonProperty("AccountNumber") Long accountNumber, @JsonProperty("Action") GETChangeMessageVisibilityActionEnum action, @JsonProperty("QueueName") String queueName, @JsonProperty("ReceiptHandle") String receiptHandle, @JsonProperty("Version") GETChangeMessageVisibilityVersionEnum version, @JsonProperty("VisibilityTimeout") Long visibilityTimeout) {
+        this.accountNumber = accountNumber;
+        this.action = action;
+        this.queueName = queueName;
+        this.receiptHandle = receiptHandle;
+        this.version = version;
+        this.visibilityTimeout = visibilityTimeout;
+  }
 }

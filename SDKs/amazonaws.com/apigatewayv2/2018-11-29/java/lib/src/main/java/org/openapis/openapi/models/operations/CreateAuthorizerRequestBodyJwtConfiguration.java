@@ -15,6 +15,7 @@ public class CreateAuthorizerRequestBodyJwtConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Audience")
     public String[] audience;
+
     public CreateAuthorizerRequestBodyJwtConfiguration withAudience(String[] audience) {
         this.audience = audience;
         return this;
@@ -23,9 +24,11 @@ public class CreateAuthorizerRequestBodyJwtConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Issuer")
     public String issuer;
+
     public CreateAuthorizerRequestBodyJwtConfiguration withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
     }
     
+    public CreateAuthorizerRequestBodyJwtConfiguration(){}
 }

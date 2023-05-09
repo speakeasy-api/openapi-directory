@@ -15,6 +15,7 @@ public class HttpRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public HttpRouteAction action;
+
     public HttpRoute withAction(HttpRouteAction action) {
         this.action = action;
         return this;
@@ -23,9 +24,11 @@ public class HttpRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match")
     public HttpRouteMatch match;
+
     public HttpRoute withMatch(HttpRouteMatch match) {
         this.match = match;
         return this;
     }
     
+    public HttpRoute(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AuthorizeSecurityGroupEgressRequestTagSpecificationsTags {
     
     public String key;
+
     public AuthorizeSecurityGroupEgressRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class AuthorizeSecurityGroupEgressRequestTagSpecificationsTags {
     
     
     public String value;
+
     public AuthorizeSecurityGroupEgressRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AuthorizeSecurityGroupEgressRequestTagSpecificationsTags(){}
 }

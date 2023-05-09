@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartBatchJobResponse {
@@ -12,6 +13,7 @@ public class StartBatchJobResponse {
      */
     
     public Object accessDeniedException;
+
     public StartBatchJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartBatchJobResponse {
      */
     
     public Object conflictException;
+
     public StartBatchJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartBatchJobResponse {
     
     
     public String contentType;
+
     public StartBatchJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartBatchJobResponse {
      */
     
     public Object internalServerException;
+
     public StartBatchJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class StartBatchJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartBatchJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartBatchJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartBatchJobResponse startBatchJobResponse;
+
     public StartBatchJobResponse withStartBatchJobResponse(org.openapis.openapi.models.shared.StartBatchJobResponse startBatchJobResponse) {
         this.startBatchJobResponse = startBatchJobResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartBatchJobResponse {
     
     
     public Integer statusCode;
+
     public StartBatchJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartBatchJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartBatchJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class StartBatchJobResponse {
      */
     
     public Object throttlingException;
+
     public StartBatchJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class StartBatchJobResponse {
      */
     
     public Object validationException;
+
     public StartBatchJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartBatchJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

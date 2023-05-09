@@ -65,4 +65,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/DialogStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/PredictedIntent.java
 lib/src/main/java/org/openapis/openapi/models/shared/PutSessionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

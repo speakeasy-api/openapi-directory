@@ -18,6 +18,7 @@ public class TeamMemberBookingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TeamMemberBookingProfile withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class TeamMemberBookingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public TeamMemberBookingProfile withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class TeamMemberBookingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_bookable")
     public Boolean isBookable;
+
     public TeamMemberBookingProfile withIsBookable(Boolean isBookable) {
         this.isBookable = isBookable;
         return this;
@@ -51,6 +54,7 @@ public class TeamMemberBookingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_image_url")
     public String profileImageUrl;
+
     public TeamMemberBookingProfile withProfileImageUrl(String profileImageUrl) {
         this.profileImageUrl = profileImageUrl;
         return this;
@@ -62,9 +66,11 @@ public class TeamMemberBookingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_member_id")
     public String teamMemberId;
+
     public TeamMemberBookingProfile withTeamMemberId(String teamMemberId) {
         this.teamMemberId = teamMemberId;
         return this;
     }
     
+    public TeamMemberBookingProfile(){}
 }

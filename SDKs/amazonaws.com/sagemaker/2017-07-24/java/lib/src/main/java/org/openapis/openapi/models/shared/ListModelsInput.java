@@ -19,6 +19,7 @@ public class ListModelsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListModelsInput withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListModelsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListModelsInput withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListModelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListModelsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -45,6 +48,7 @@ public class ListModelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListModelsInput withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -53,6 +57,7 @@ public class ListModelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListModelsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -61,6 +66,7 @@ public class ListModelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public ModelSortKeyEnum sortBy;
+
     public ListModelsInput withSortBy(ModelSortKeyEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -69,9 +75,11 @@ public class ListModelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public OrderKeyEnum sortOrder;
+
     public ListModelsInput withSortOrder(OrderKeyEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListModelsInput(){}
 }

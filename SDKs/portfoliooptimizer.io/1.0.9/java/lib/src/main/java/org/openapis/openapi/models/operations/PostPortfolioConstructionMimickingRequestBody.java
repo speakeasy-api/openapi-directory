@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostPortfolioConstructionMimickingRequestBody {
     @JsonProperty("assets")
     public PostPortfolioConstructionMimickingRequestBodyAssets[] assets;
+
     public PostPortfolioConstructionMimickingRequestBody withAssets(PostPortfolioConstructionMimickingRequestBodyAssets[] assets) {
         this.assets = assets;
         return this;
@@ -21,6 +22,7 @@ public class PostPortfolioConstructionMimickingRequestBody {
      */
     @JsonProperty("benchmarkReturns")
     public Double[] benchmarkReturns;
+
     public PostPortfolioConstructionMimickingRequestBody withBenchmarkReturns(Double[] benchmarkReturns) {
         this.benchmarkReturns = benchmarkReturns;
         return this;
@@ -29,9 +31,14 @@ public class PostPortfolioConstructionMimickingRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public PostPortfolioConstructionMimickingRequestBodyConstraints constraints;
+
     public PostPortfolioConstructionMimickingRequestBody withConstraints(PostPortfolioConstructionMimickingRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
     }
     
+    public PostPortfolioConstructionMimickingRequestBody(@JsonProperty("assets") PostPortfolioConstructionMimickingRequestBodyAssets[] assets, @JsonProperty("benchmarkReturns") Double[] benchmarkReturns) {
+        this.assets = assets;
+        this.benchmarkReturns = benchmarkReturns;
+  }
 }

@@ -12,6 +12,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentLength")
     public Double contentLength;
+
     public Artifact withContentLength(Double contentLength) {
         this.contentLength = contentLength;
         return this;
@@ -20,6 +21,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public Artifact withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -28,6 +30,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Double height;
+
     public Artifact withHeight(Double height) {
         this.height = height;
         return this;
@@ -36,6 +39,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public Artifact withLabel(String label) {
         this.label = label;
         return this;
@@ -44,6 +48,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Artifact withUrl(String url) {
         this.url = url;
         return this;
@@ -52,9 +57,11 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Double width;
+
     public Artifact withWidth(Double width) {
         this.width = width;
         return this;
     }
     
+    public Artifact(){}
 }

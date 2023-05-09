@@ -18,6 +18,7 @@ public class RouteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public ResponseInfo info;
+
     public RouteResponse withInfo(ResponseInfo info) {
         this.info = info;
         return this;
@@ -26,9 +27,11 @@ public class RouteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paths")
     public RouteResponsePath[] paths;
+
     public RouteResponse withPaths(RouteResponsePath[] paths) {
         this.paths = paths;
         return this;
     }
     
+    public RouteResponse(){}
 }

@@ -15,9 +15,11 @@ public class ConfirmConnectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionState")
     public ConnectionStateEnum connectionState;
+
     public ConfirmConnectionResponse withConnectionState(ConnectionStateEnum connectionState) {
         this.connectionState = connectionState;
         return this;
     }
     
+    public ConfirmConnectionResponse(){}
 }

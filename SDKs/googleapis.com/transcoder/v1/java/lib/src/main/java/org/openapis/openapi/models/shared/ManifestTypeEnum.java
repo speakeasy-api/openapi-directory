@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * ManifestTypeEnum - Required. Type of the manifest, can be `HLS` or `DASH`.
+ * ManifestTypeEnum - Required. Type of the manifest.
  */
 public enum ManifestTypeEnum {
     MANIFEST_TYPE_UNSPECIFIED("MANIFEST_TYPE_UNSPECIFIED"),

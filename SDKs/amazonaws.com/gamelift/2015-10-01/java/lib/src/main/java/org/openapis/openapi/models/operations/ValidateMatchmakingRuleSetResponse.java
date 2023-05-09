@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ValidateMatchmakingRuleSetResponse {
     
     public String contentType;
+
     public ValidateMatchmakingRuleSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ValidateMatchmakingRuleSetResponse {
      */
     
     public Object internalServiceException;
+
     public ValidateMatchmakingRuleSetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ValidateMatchmakingRuleSetResponse {
      */
     
     public Object invalidRequestException;
+
     public ValidateMatchmakingRuleSetResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class ValidateMatchmakingRuleSetResponse {
     
     
     public Integer statusCode;
+
     public ValidateMatchmakingRuleSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ValidateMatchmakingRuleSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ValidateMatchmakingRuleSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ValidateMatchmakingRuleSetResponse {
      */
     
     public Object unsupportedRegionException;
+
     public ValidateMatchmakingRuleSetResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
@@ -63,9 +70,14 @@ public class ValidateMatchmakingRuleSetResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidateMatchmakingRuleSetOutput validateMatchmakingRuleSetOutput;
+
     public ValidateMatchmakingRuleSetResponse withValidateMatchmakingRuleSetOutput(org.openapis.openapi.models.shared.ValidateMatchmakingRuleSetOutput validateMatchmakingRuleSetOutput) {
         this.validateMatchmakingRuleSetOutput = validateMatchmakingRuleSetOutput;
         return this;
     }
     
+    public ValidateMatchmakingRuleSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

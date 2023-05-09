@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribePublicIpv4PoolsResultPublicIpv4PoolsPoolAddressRanges {
     
     public Long addressCount;
+
     public DescribePublicIpv4PoolsResultPublicIpv4PoolsPoolAddressRanges withAddressCount(Long addressCount) {
         this.addressCount = addressCount;
         return this;
@@ -19,6 +20,7 @@ public class DescribePublicIpv4PoolsResultPublicIpv4PoolsPoolAddressRanges {
     
     
     public Long availableAddressCount;
+
     public DescribePublicIpv4PoolsResultPublicIpv4PoolsPoolAddressRanges withAvailableAddressCount(Long availableAddressCount) {
         this.availableAddressCount = availableAddressCount;
         return this;
@@ -26,6 +28,7 @@ public class DescribePublicIpv4PoolsResultPublicIpv4PoolsPoolAddressRanges {
     
     
     public String firstAddress;
+
     public DescribePublicIpv4PoolsResultPublicIpv4PoolsPoolAddressRanges withFirstAddress(String firstAddress) {
         this.firstAddress = firstAddress;
         return this;
@@ -33,9 +36,11 @@ public class DescribePublicIpv4PoolsResultPublicIpv4PoolsPoolAddressRanges {
     
     
     public String lastAddress;
+
     public DescribePublicIpv4PoolsResultPublicIpv4PoolsPoolAddressRanges withLastAddress(String lastAddress) {
         this.lastAddress = lastAddress;
         return this;
     }
     
+    public DescribePublicIpv4PoolsResultPublicIpv4PoolsPoolAddressRanges(){}
 }

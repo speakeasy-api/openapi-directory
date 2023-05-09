@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Filter - Used to streamline results of a search based on the property being filtered.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Filter {
     
     public String name;
+
     public Filter withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class Filter {
     
     
     public String[] values;
+
     public Filter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public Filter(@JsonProperty("Name") String name, @JsonProperty("Values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

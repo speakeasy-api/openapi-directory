@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaModelPageOptimizationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageOptimizationEventType")
     public String pageOptimizationEventType;
+
     public GoogleCloudRetailV2alphaModelPageOptimizationConfig withPageOptimizationEventType(String pageOptimizationEventType) {
         this.pageOptimizationEventType = pageOptimizationEventType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaModelPageOptimizationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("panels")
     public GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel[] panels;
+
     public GoogleCloudRetailV2alphaModelPageOptimizationConfig withPanels(GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel[] panels) {
         this.panels = panels;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2alphaModelPageOptimizationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restriction")
     public GoogleCloudRetailV2alphaModelPageOptimizationConfigRestrictionEnum restriction;
+
     public GoogleCloudRetailV2alphaModelPageOptimizationConfig withRestriction(GoogleCloudRetailV2alphaModelPageOptimizationConfigRestrictionEnum restriction) {
         this.restriction = restriction;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaModelPageOptimizationConfig(){}
 }

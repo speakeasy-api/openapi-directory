@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePricingPlanResponse {
@@ -12,6 +13,7 @@ public class UpdatePricingPlanResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdatePricingPlanResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePricingPlanResponse {
     
     
     public String contentType;
+
     public UpdatePricingPlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdatePricingPlanResponse {
      */
     
     public Object internalServerException;
+
     public UpdatePricingPlanResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdatePricingPlanResponse {
     
     
     public Integer statusCode;
+
     public UpdatePricingPlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdatePricingPlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePricingPlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdatePricingPlanResponse {
      */
     
     public Object throttlingException;
+
     public UpdatePricingPlanResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,6 +70,7 @@ public class UpdatePricingPlanResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdatePricingPlanResponse updatePricingPlanResponse;
+
     public UpdatePricingPlanResponse withUpdatePricingPlanResponse(org.openapis.openapi.models.shared.UpdatePricingPlanResponse updatePricingPlanResponse) {
         this.updatePricingPlanResponse = updatePricingPlanResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdatePricingPlanResponse {
      */
     
     public Object validationException;
+
     public UpdatePricingPlanResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdatePricingPlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

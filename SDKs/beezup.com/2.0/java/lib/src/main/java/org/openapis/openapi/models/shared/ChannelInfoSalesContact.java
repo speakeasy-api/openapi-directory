@@ -15,6 +15,7 @@ public class ChannelInfoSalesContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ChannelInfoSalesContact withEmail(String email) {
         this.email = email;
         return this;
@@ -26,6 +27,7 @@ public class ChannelInfoSalesContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ChannelInfoSalesContact withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class ChannelInfoSalesContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public ChannelInfoSalesContact withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public ChannelInfoSalesContact(){}
 }

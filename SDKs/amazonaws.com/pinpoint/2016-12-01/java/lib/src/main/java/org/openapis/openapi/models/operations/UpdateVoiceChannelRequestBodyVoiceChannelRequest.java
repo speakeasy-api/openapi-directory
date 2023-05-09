@@ -15,9 +15,11 @@ public class UpdateVoiceChannelRequestBodyVoiceChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public UpdateVoiceChannelRequestBodyVoiceChannelRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public UpdateVoiceChannelRequestBodyVoiceChannelRequest(){}
 }

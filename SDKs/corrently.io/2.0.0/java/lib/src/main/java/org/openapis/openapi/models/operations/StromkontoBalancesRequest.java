@@ -12,9 +12,11 @@ public class StromkontoBalancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account")
     public String account;
+
     public StromkontoBalancesRequest withAccount(String account) {
         this.account = account;
         return this;
     }
     
+    public StromkontoBalancesRequest(){}
 }

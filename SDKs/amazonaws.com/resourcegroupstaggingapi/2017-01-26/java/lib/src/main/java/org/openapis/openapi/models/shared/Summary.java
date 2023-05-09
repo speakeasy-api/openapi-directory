@@ -15,6 +15,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdated")
     public String lastUpdated;
+
     public Summary withLastUpdated(String lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -23,6 +24,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonCompliantResources")
     public Long nonCompliantResources;
+
     public Summary withNonCompliantResources(Long nonCompliantResources) {
         this.nonCompliantResources = nonCompliantResources;
         return this;
@@ -31,6 +33,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public Summary withRegion(String region) {
         this.region = region;
         return this;
@@ -39,6 +42,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public Summary withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -47,6 +51,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetId")
     public String targetId;
+
     public Summary withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
@@ -55,9 +60,11 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetIdType")
     public TargetIdTypeEnum targetIdType;
+
     public Summary withTargetIdType(TargetIdTypeEnum targetIdType) {
         this.targetIdType = targetIdType;
         return this;
     }
     
+    public Summary(){}
 }

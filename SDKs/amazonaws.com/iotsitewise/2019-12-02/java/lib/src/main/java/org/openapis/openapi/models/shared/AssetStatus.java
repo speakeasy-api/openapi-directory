@@ -15,6 +15,7 @@ public class AssetStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public ErrorDetails error;
+
     public AssetStatus withError(ErrorDetails error) {
         this.error = error;
         return this;
@@ -22,9 +23,13 @@ public class AssetStatus {
     
     @JsonProperty("state")
     public AssetStateEnum state;
+
     public AssetStatus withState(AssetStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public AssetStatus(@JsonProperty("state") AssetStateEnum state) {
+        this.state = state;
+  }
 }

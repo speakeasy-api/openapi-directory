@@ -15,6 +15,7 @@ public class PutGeofenceRequestBodyGeometry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Circle")
     public org.openapis.openapi.models.shared.Circle circle;
+
     public PutGeofenceRequestBodyGeometry withCircle(org.openapis.openapi.models.shared.Circle circle) {
         this.circle = circle;
         return this;
@@ -23,9 +24,11 @@ public class PutGeofenceRequestBodyGeometry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Polygon")
     public Double[][][] polygon;
+
     public PutGeofenceRequestBodyGeometry withPolygon(Double[][][] polygon) {
         this.polygon = polygon;
         return this;
     }
     
+    public PutGeofenceRequestBodyGeometry(){}
 }

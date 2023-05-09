@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssml")
     public String ssml;
+
     public GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextInput withSsml(String ssml) {
         this.ssml = ssml;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextInput withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextInput(){}
 }

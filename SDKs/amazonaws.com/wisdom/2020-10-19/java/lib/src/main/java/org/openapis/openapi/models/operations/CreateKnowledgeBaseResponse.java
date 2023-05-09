@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateKnowledgeBaseResponse {
@@ -12,6 +13,7 @@ public class CreateKnowledgeBaseResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateKnowledgeBaseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateKnowledgeBaseResponse {
      */
     
     public Object conflictException;
+
     public CreateKnowledgeBaseResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateKnowledgeBaseResponse {
     
     
     public String contentType;
+
     public CreateKnowledgeBaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateKnowledgeBaseResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateKnowledgeBaseResponse createKnowledgeBaseResponse;
+
     public CreateKnowledgeBaseResponse withCreateKnowledgeBaseResponse(org.openapis.openapi.models.shared.CreateKnowledgeBaseResponse createKnowledgeBaseResponse) {
         this.createKnowledgeBaseResponse = createKnowledgeBaseResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateKnowledgeBaseResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateKnowledgeBaseResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateKnowledgeBaseResponse {
     
     
     public Integer statusCode;
+
     public CreateKnowledgeBaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateKnowledgeBaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateKnowledgeBaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateKnowledgeBaseResponse {
      */
     
     public Object validationException;
+
     public CreateKnowledgeBaseResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateKnowledgeBaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

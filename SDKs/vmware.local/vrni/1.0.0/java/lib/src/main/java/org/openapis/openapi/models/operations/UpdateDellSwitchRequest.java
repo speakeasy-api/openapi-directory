@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDellSwitchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DellSwitchDataSource dellSwitchDataSource;
+
     public UpdateDellSwitchRequest withDellSwitchDataSource(org.openapis.openapi.models.shared.DellSwitchDataSource dellSwitchDataSource) {
         this.dellSwitchDataSource = dellSwitchDataSource;
         return this;
@@ -19,9 +21,13 @@ public class UpdateDellSwitchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdateDellSwitchRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateDellSwitchRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

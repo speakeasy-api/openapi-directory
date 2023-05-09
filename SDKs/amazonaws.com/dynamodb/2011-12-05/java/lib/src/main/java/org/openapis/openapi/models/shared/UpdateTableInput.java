@@ -12,6 +12,7 @@ public class UpdateTableInput {
      */
     @JsonProperty("ProvisionedThroughput")
     public ProvisionedThroughput provisionedThroughput;
+
     public UpdateTableInput withProvisionedThroughput(ProvisionedThroughput provisionedThroughput) {
         this.provisionedThroughput = provisionedThroughput;
         return this;
@@ -19,9 +20,14 @@ public class UpdateTableInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public UpdateTableInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public UpdateTableInput(@JsonProperty("ProvisionedThroughput") ProvisionedThroughput provisionedThroughput, @JsonProperty("TableName") String tableName) {
+        this.provisionedThroughput = provisionedThroughput;
+        this.tableName = tableName;
+  }
 }

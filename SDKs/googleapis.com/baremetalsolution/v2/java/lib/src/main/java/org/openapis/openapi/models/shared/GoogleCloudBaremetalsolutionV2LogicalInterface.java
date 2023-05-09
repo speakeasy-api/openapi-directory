@@ -18,6 +18,7 @@ public class GoogleCloudBaremetalsolutionV2LogicalInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interfaceIndex")
     public Integer interfaceIndex;
+
     public GoogleCloudBaremetalsolutionV2LogicalInterface withInterfaceIndex(Integer interfaceIndex) {
         this.interfaceIndex = interfaceIndex;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudBaremetalsolutionV2LogicalInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logicalNetworkInterfaces")
     public LogicalNetworkInterface[] logicalNetworkInterfaces;
+
     public GoogleCloudBaremetalsolutionV2LogicalInterface withLogicalNetworkInterfaces(LogicalNetworkInterface[] logicalNetworkInterfaces) {
         this.logicalNetworkInterfaces = logicalNetworkInterfaces;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudBaremetalsolutionV2LogicalInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudBaremetalsolutionV2LogicalInterface withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudBaremetalsolutionV2LogicalInterface(){}
 }

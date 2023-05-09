@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetSparkleFeedRequest {
@@ -12,9 +13,13 @@ public class ReleasesGetSparkleFeedRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_secret")
     public String appSecret;
+
     public ReleasesGetSparkleFeedRequest withAppSecret(String appSecret) {
         this.appSecret = appSecret;
         return this;
     }
     
+    public ReleasesGetSparkleFeedRequest(@JsonProperty("app_secret") String appSecret) {
+        this.appSecret = appSecret;
+  }
 }

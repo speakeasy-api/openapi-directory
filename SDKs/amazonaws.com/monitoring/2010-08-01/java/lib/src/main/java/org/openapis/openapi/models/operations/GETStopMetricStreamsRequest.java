@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETStopMetricStreamsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETStopMetricStreamsActionEnum action;
+
     public GETStopMetricStreamsRequest withAction(GETStopMetricStreamsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETStopMetricStreamsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Names")
     public String[] names;
+
     public GETStopMetricStreamsRequest withNames(String[] names) {
         this.names = names;
         return this;
@@ -26,6 +29,7 @@ public class GETStopMetricStreamsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETStopMetricStreamsVersionEnum version;
+
     public GETStopMetricStreamsRequest withVersion(GETStopMetricStreamsVersionEnum version) {
         this.version = version;
         return this;
@@ -33,6 +37,7 @@ public class GETStopMetricStreamsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETStopMetricStreamsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -40,6 +45,7 @@ public class GETStopMetricStreamsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETStopMetricStreamsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -47,6 +53,7 @@ public class GETStopMetricStreamsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETStopMetricStreamsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -54,6 +61,7 @@ public class GETStopMetricStreamsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETStopMetricStreamsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -61,6 +69,7 @@ public class GETStopMetricStreamsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETStopMetricStreamsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -68,6 +77,7 @@ public class GETStopMetricStreamsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETStopMetricStreamsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -75,9 +85,15 @@ public class GETStopMetricStreamsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETStopMetricStreamsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETStopMetricStreamsRequest(@JsonProperty("Action") GETStopMetricStreamsActionEnum action, @JsonProperty("Names") String[] names, @JsonProperty("Version") GETStopMetricStreamsVersionEnum version) {
+        this.action = action;
+        this.names = names;
+        this.version = version;
+  }
 }

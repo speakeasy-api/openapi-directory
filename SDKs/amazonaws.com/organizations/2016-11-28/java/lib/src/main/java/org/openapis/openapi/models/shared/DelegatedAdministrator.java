@@ -20,6 +20,7 @@ public class DelegatedAdministrator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DelegatedAdministrator withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class DelegatedAdministrator {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DelegationEnabledDate")
     public OffsetDateTime delegationEnabledDate;
+
     public DelegatedAdministrator withDelegationEnabledDate(OffsetDateTime delegationEnabledDate) {
         this.delegationEnabledDate = delegationEnabledDate;
         return this;
@@ -38,6 +40,7 @@ public class DelegatedAdministrator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public DelegatedAdministrator withEmail(String email) {
         this.email = email;
         return this;
@@ -46,6 +49,7 @@ public class DelegatedAdministrator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public DelegatedAdministrator withId(String id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class DelegatedAdministrator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JoinedMethod")
     public AccountJoinedMethodEnum joinedMethod;
+
     public DelegatedAdministrator withJoinedMethod(AccountJoinedMethodEnum joinedMethod) {
         this.joinedMethod = joinedMethod;
         return this;
@@ -64,6 +69,7 @@ public class DelegatedAdministrator {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("JoinedTimestamp")
     public OffsetDateTime joinedTimestamp;
+
     public DelegatedAdministrator withJoinedTimestamp(OffsetDateTime joinedTimestamp) {
         this.joinedTimestamp = joinedTimestamp;
         return this;
@@ -72,6 +78,7 @@ public class DelegatedAdministrator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DelegatedAdministrator withName(String name) {
         this.name = name;
         return this;
@@ -80,9 +87,11 @@ public class DelegatedAdministrator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AccountStatusEnum status;
+
     public DelegatedAdministrator withStatus(AccountStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DelegatedAdministrator(){}
 }

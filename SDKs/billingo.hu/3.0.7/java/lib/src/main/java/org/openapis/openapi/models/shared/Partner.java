@@ -15,6 +15,7 @@ public class Partner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_number")
     public String accountNumber;
+
     public Partner withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -22,6 +23,7 @@ public class Partner {
     
     @JsonProperty("address")
     public Address address;
+
     public Partner withAddress(Address address) {
         this.address = address;
         return this;
@@ -30,6 +32,7 @@ public class Partner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public String[] emails;
+
     public Partner withEmails(String[] emails) {
         this.emails = emails;
         return this;
@@ -38,6 +41,7 @@ public class Partner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("general_ledger_number")
     public String generalLedgerNumber;
+
     public Partner withGeneralLedgerNumber(String generalLedgerNumber) {
         this.generalLedgerNumber = generalLedgerNumber;
         return this;
@@ -46,6 +50,7 @@ public class Partner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iban")
     public String iban;
+
     public Partner withIban(String iban) {
         this.iban = iban;
         return this;
@@ -54,6 +59,7 @@ public class Partner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Partner withId(Long id) {
         this.id = id;
         return this;
@@ -61,6 +67,7 @@ public class Partner {
     
     @JsonProperty("name")
     public String name;
+
     public Partner withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +76,7 @@ public class Partner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public Partner withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -77,6 +85,7 @@ public class Partner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("swift")
     public String swift;
+
     public Partner withSwift(String swift) {
         this.swift = swift;
         return this;
@@ -85,9 +94,14 @@ public class Partner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxcode")
     public String taxcode;
+
     public Partner withTaxcode(String taxcode) {
         this.taxcode = taxcode;
         return this;
     }
     
+    public Partner(@JsonProperty("address") Address address, @JsonProperty("name") String name) {
+        this.address = address;
+        this.name = name;
+  }
 }

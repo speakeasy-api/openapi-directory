@@ -15,9 +15,11 @@ public class RuleExecutionReportingLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public LinksGetRuleLink rule;
+
     public RuleExecutionReportingLinks withRule(LinksGetRuleLink rule) {
         this.rule = rule;
         return this;
     }
     
+    public RuleExecutionReportingLinks(){}
 }

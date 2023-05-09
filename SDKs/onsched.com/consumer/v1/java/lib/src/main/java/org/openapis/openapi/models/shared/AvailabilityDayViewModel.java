@@ -15,6 +15,7 @@ public class AvailabilityDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableDays")
     public AvailableDayViewModel[] availableDays;
+
     public AvailabilityDayViewModel withAvailableDays(AvailableDayViewModel[] availableDays) {
         this.availableDays = availableDays;
         return this;
@@ -23,6 +24,7 @@ public class AvailabilityDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public AvailabilityDayViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -31,6 +33,7 @@ public class AvailabilityDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceDescription")
     public String resourceDescription;
+
     public AvailabilityDayViewModel withResourceDescription(String resourceDescription) {
         this.resourceDescription = resourceDescription;
         return this;
@@ -39,6 +42,7 @@ public class AvailabilityDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public AvailabilityDayViewModel withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -47,6 +51,7 @@ public class AvailabilityDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public AvailabilityDayViewModel withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -55,6 +60,7 @@ public class AvailabilityDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceDescription")
     public String serviceDescription;
+
     public AvailabilityDayViewModel withServiceDescription(String serviceDescription) {
         this.serviceDescription = serviceDescription;
         return this;
@@ -63,6 +69,7 @@ public class AvailabilityDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public String serviceId;
+
     public AvailabilityDayViewModel withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -71,6 +78,7 @@ public class AvailabilityDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public AvailabilityDayViewModel withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -79,6 +87,7 @@ public class AvailabilityDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tzRequested")
     public Integer tzRequested;
+
     public AvailabilityDayViewModel withTzRequested(Integer tzRequested) {
         this.tzRequested = tzRequested;
         return this;
@@ -87,9 +96,11 @@ public class AvailabilityDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public AvailabilityDayViewModel withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AvailabilityDayViewModel(){}
 }

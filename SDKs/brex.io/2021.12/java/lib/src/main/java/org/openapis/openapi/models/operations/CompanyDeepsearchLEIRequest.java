@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyDeepsearchLEIRequest {
@@ -12,6 +13,7 @@ public class CompanyDeepsearchLEIRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
     public String number;
+
     public CompanyDeepsearchLEIRequest withNumber(String number) {
         this.number = number;
         return this;
@@ -22,9 +24,13 @@ public class CompanyDeepsearchLEIRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public CompanyDeepsearchLEIRequest withPage(Integer page) {
         this.page = page;
         return this;
     }
     
+    public CompanyDeepsearchLEIRequest(@JsonProperty("number") String number) {
+        this.number = number;
+  }
 }

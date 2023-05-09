@@ -15,6 +15,7 @@ public class ColumnRowFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnName")
     public String columnName;
+
     public ColumnRowFilter withColumnName(String columnName) {
         this.columnName = columnName;
         return this;
@@ -23,9 +24,11 @@ public class ColumnRowFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RowFilterExpression")
     public String rowFilterExpression;
+
     public ColumnRowFilter withRowFilterExpression(String rowFilterExpression) {
         this.rowFilterExpression = rowFilterExpression;
         return this;
     }
     
+    public ColumnRowFilter(){}
 }

@@ -12,6 +12,7 @@ public class DescribePatchPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribePatchPropertiesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class DescribePatchPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribePatchPropertiesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,6 +29,7 @@ public class DescribePatchPropertiesRequest {
     
     @JsonProperty("OperatingSystem")
     public OperatingSystemEnum operatingSystem;
+
     public DescribePatchPropertiesRequest withOperatingSystem(OperatingSystemEnum operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -35,6 +38,7 @@ public class DescribePatchPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PatchSet")
     public PatchSetEnum patchSet;
+
     public DescribePatchPropertiesRequest withPatchSet(PatchSetEnum patchSet) {
         this.patchSet = patchSet;
         return this;
@@ -42,9 +46,14 @@ public class DescribePatchPropertiesRequest {
     
     @JsonProperty("Property")
     public PatchPropertyEnum property;
+
     public DescribePatchPropertiesRequest withProperty(PatchPropertyEnum property) {
         this.property = property;
         return this;
     }
     
+    public DescribePatchPropertiesRequest(@JsonProperty("OperatingSystem") OperatingSystemEnum operatingSystem, @JsonProperty("Property") PatchPropertyEnum property) {
+        this.operatingSystem = operatingSystem;
+        this.property = property;
+  }
 }

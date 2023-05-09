@@ -15,6 +15,7 @@ public class ListResourcesForTagOptionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public ListResourcesForTagOptionOutput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -23,9 +24,11 @@ public class ListResourcesForTagOptionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceDetails")
     public ResourceDetail[] resourceDetails;
+
     public ListResourcesForTagOptionOutput withResourceDetails(ResourceDetail[] resourceDetails) {
         this.resourceDetails = resourceDetails;
         return this;
     }
     
+    public ListResourcesForTagOptionOutput(){}
 }

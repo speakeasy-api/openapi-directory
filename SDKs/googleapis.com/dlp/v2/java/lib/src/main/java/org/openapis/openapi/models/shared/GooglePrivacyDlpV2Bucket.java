@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2Bucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
     public GooglePrivacyDlpV2Value max;
+
     public GooglePrivacyDlpV2Bucket withMax(GooglePrivacyDlpV2Value max) {
         this.max = max;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2Bucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min")
     public GooglePrivacyDlpV2Value min;
+
     public GooglePrivacyDlpV2Bucket withMin(GooglePrivacyDlpV2Value min) {
         this.min = min;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2Bucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replacementValue")
     public GooglePrivacyDlpV2Value replacementValue;
+
     public GooglePrivacyDlpV2Bucket withReplacementValue(GooglePrivacyDlpV2Value replacementValue) {
         this.replacementValue = replacementValue;
         return this;
     }
     
+    public GooglePrivacyDlpV2Bucket(){}
 }

@@ -18,6 +18,7 @@ public class SasPortalSetPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableNotification")
     public Boolean disableNotification;
+
     public SasPortalSetPolicyRequest withDisableNotification(Boolean disableNotification) {
         this.disableNotification = disableNotification;
         return this;
@@ -29,6 +30,7 @@ public class SasPortalSetPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public SasPortalPolicy policy;
+
     public SasPortalSetPolicyRequest withPolicy(SasPortalPolicy policy) {
         this.policy = policy;
         return this;
@@ -40,9 +42,11 @@ public class SasPortalSetPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public SasPortalSetPolicyRequest withResource(String resource) {
         this.resource = resource;
         return this;
     }
     
+    public SasPortalSetPolicyRequest(){}
 }

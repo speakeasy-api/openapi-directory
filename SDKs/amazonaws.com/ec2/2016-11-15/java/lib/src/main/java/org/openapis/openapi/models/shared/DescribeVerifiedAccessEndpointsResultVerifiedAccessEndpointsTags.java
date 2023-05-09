@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsTags {
     
     public String key;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsTags {
     
     
     public String value;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsTags(){}
 }

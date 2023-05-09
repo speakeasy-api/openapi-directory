@@ -15,6 +15,7 @@ public class BlueprintDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlueprintName")
     public String blueprintName;
+
     public BlueprintDetails withBlueprintName(String blueprintName) {
         this.blueprintName = blueprintName;
         return this;
@@ -23,9 +24,11 @@ public class BlueprintDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunId")
     public String runId;
+
     public BlueprintDetails withRunId(String runId) {
         this.runId = runId;
         return this;
     }
     
+    public BlueprintDetails(){}
 }

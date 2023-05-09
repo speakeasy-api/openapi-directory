@@ -18,6 +18,7 @@ public class FileUploadPartEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public FileUploadPartEntity withAction(String action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class FileUploadPartEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ask_about_overwrites")
     public Boolean askAboutOverwrites;
+
     public FileUploadPartEntity withAskAboutOverwrites(Boolean askAboutOverwrites) {
         this.askAboutOverwrites = askAboutOverwrites;
         return this;
@@ -40,6 +42,7 @@ public class FileUploadPartEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available_parts")
     public Integer availableParts;
+
     public FileUploadPartEntity withAvailableParts(Integer availableParts) {
         this.availableParts = availableParts;
         return this;
@@ -51,6 +54,7 @@ public class FileUploadPartEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires")
     public String expires;
+
     public FileUploadPartEntity withExpires(String expires) {
         this.expires = expires;
         return this;
@@ -62,6 +66,7 @@ public class FileUploadPartEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, Object> headers;
+
     public FileUploadPartEntity withHeaders(java.util.Map<String, Object> headers) {
         this.headers = headers;
         return this;
@@ -73,6 +78,7 @@ public class FileUploadPartEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http_method")
     public String httpMethod;
+
     public FileUploadPartEntity withHttpMethod(String httpMethod) {
         this.httpMethod = httpMethod;
         return this;
@@ -84,6 +90,7 @@ public class FileUploadPartEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next_partsize")
     public Integer nextPartsize;
+
     public FileUploadPartEntity withNextPartsize(Integer nextPartsize) {
         this.nextPartsize = nextPartsize;
         return this;
@@ -95,6 +102,7 @@ public class FileUploadPartEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parallel_parts")
     public Boolean parallelParts;
+
     public FileUploadPartEntity withParallelParts(Boolean parallelParts) {
         this.parallelParts = parallelParts;
         return this;
@@ -106,6 +114,7 @@ public class FileUploadPartEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, Object> parameters;
+
     public FileUploadPartEntity withParameters(java.util.Map<String, Object> parameters) {
         this.parameters = parameters;
         return this;
@@ -117,6 +126,7 @@ public class FileUploadPartEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("part_number")
     public Integer partNumber;
+
     public FileUploadPartEntity withPartNumber(Integer partNumber) {
         this.partNumber = partNumber;
         return this;
@@ -128,6 +138,7 @@ public class FileUploadPartEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partsize")
     public Integer partsize;
+
     public FileUploadPartEntity withPartsize(Integer partsize) {
         this.partsize = partsize;
         return this;
@@ -139,6 +150,7 @@ public class FileUploadPartEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public FileUploadPartEntity withPath(String path) {
         this.path = path;
         return this;
@@ -150,8 +162,21 @@ public class FileUploadPartEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ref")
     public String ref;
+
     public FileUploadPartEntity withRef(String ref) {
         this.ref = ref;
+        return this;
+    }
+    
+    /**
+     * If `true`, parts may be retried. If `false`, a part cannot be retried and the upload should be restarted.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("retry_parts")
+    public Boolean retryParts;
+
+    public FileUploadPartEntity withRetryParts(Boolean retryParts) {
+        this.retryParts = retryParts;
         return this;
     }
     
@@ -161,6 +186,7 @@ public class FileUploadPartEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("send")
     public java.util.Map<String, Object> send;
+
     public FileUploadPartEntity withSend(java.util.Map<String, Object> send) {
         this.send = send;
         return this;
@@ -172,9 +198,11 @@ public class FileUploadPartEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upload_uri")
     public String uploadUri;
+
     public FileUploadPartEntity withUploadUri(String uploadUri) {
         this.uploadUri = uploadUri;
         return this;
     }
     
+    public FileUploadPartEntity(){}
 }

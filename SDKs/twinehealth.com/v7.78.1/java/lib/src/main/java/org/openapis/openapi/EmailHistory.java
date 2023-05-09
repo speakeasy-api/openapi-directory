@@ -60,12 +60,10 @@ public class EmailHistory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchEmailHistoriesResponse res = new org.openapis.openapi.models.operations.FetchEmailHistoriesResponse() {{
+        org.openapis.openapi.models.operations.FetchEmailHistoriesResponse res = new org.openapis.openapi.models.operations.FetchEmailHistoriesResponse(contentType, httpRes.statusCode()) {{
             fetchEmailHistoriesResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,12 +105,10 @@ public class EmailHistory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchEmailHistoryResponse res = new org.openapis.openapi.models.operations.FetchEmailHistoryResponse() {{
+        org.openapis.openapi.models.operations.FetchEmailHistoryResponse res = new org.openapis.openapi.models.operations.FetchEmailHistoryResponse(contentType, httpRes.statusCode()) {{
             fetchEmailHistoryResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

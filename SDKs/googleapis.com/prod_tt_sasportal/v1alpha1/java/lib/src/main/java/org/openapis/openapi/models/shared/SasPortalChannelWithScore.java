@@ -18,6 +18,7 @@ public class SasPortalChannelWithScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequencyRange")
     public SasPortalFrequencyRange frequencyRange;
+
     public SasPortalChannelWithScore withFrequencyRange(SasPortalFrequencyRange frequencyRange) {
         this.frequencyRange = frequencyRange;
         return this;
@@ -29,9 +30,11 @@ public class SasPortalChannelWithScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public SasPortalChannelWithScore withScore(Double score) {
         this.score = score;
         return this;
     }
     
+    public SasPortalChannelWithScore(){}
 }

@@ -50,11 +50,9 @@ public class EncodedUpdates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SafebrowsingEncodedUpdatesGetResponse res = new org.openapis.openapi.models.operations.SafebrowsingEncodedUpdatesGetResponse() {{
+        org.openapis.openapi.models.operations.SafebrowsingEncodedUpdatesGetResponse res = new org.openapis.openapi.models.operations.SafebrowsingEncodedUpdatesGetResponse(contentType, httpRes.statusCode()) {{
             googleSecuritySafebrowsingV4FetchThreatListUpdatesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -22,6 +22,7 @@ public class DescribeThesaurusResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public DescribeThesaurusResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class DescribeThesaurusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeThesaurusResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class DescribeThesaurusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public DescribeThesaurusResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -46,6 +49,7 @@ public class DescribeThesaurusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSizeBytes")
     public Long fileSizeBytes;
+
     public DescribeThesaurusResponse withFileSizeBytes(Long fileSizeBytes) {
         this.fileSizeBytes = fileSizeBytes;
         return this;
@@ -54,6 +58,7 @@ public class DescribeThesaurusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public DescribeThesaurusResponse withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class DescribeThesaurusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexId")
     public String indexId;
+
     public DescribeThesaurusResponse withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -70,6 +76,7 @@ public class DescribeThesaurusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeThesaurusResponse withName(String name) {
         this.name = name;
         return this;
@@ -78,6 +85,7 @@ public class DescribeThesaurusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeThesaurusResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -89,6 +97,7 @@ public class DescribeThesaurusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceS3Path")
     public S3Path sourceS3Path;
+
     public DescribeThesaurusResponse withSourceS3Path(S3Path sourceS3Path) {
         this.sourceS3Path = sourceS3Path;
         return this;
@@ -97,6 +106,7 @@ public class DescribeThesaurusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ThesaurusStatusEnum status;
+
     public DescribeThesaurusResponse withStatus(ThesaurusStatusEnum status) {
         this.status = status;
         return this;
@@ -105,6 +115,7 @@ public class DescribeThesaurusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SynonymRuleCount")
     public Long synonymRuleCount;
+
     public DescribeThesaurusResponse withSynonymRuleCount(Long synonymRuleCount) {
         this.synonymRuleCount = synonymRuleCount;
         return this;
@@ -113,6 +124,7 @@ public class DescribeThesaurusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TermCount")
     public Long termCount;
+
     public DescribeThesaurusResponse withTermCount(Long termCount) {
         this.termCount = termCount;
         return this;
@@ -123,9 +135,11 @@ public class DescribeThesaurusResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public DescribeThesaurusResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public DescribeThesaurusResponse(){}
 }

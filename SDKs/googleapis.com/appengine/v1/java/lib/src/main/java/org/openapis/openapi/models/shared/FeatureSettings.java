@@ -18,6 +18,7 @@ public class FeatureSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("splitHealthChecks")
     public Boolean splitHealthChecks;
+
     public FeatureSettings withSplitHealthChecks(Boolean splitHealthChecks) {
         this.splitHealthChecks = splitHealthChecks;
         return this;
@@ -29,9 +30,11 @@ public class FeatureSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useContainerOptimizedOs")
     public Boolean useContainerOptimizedOs;
+
     public FeatureSettings withUseContainerOptimizedOs(Boolean useContainerOptimizedOs) {
         this.useContainerOptimizedOs = useContainerOptimizedOs;
         return this;
     }
     
+    public FeatureSettings(){}
 }

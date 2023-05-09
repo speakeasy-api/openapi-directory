@@ -12,6 +12,7 @@ public class UpdatePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionProtectionEnabled")
     public Boolean deletionProtectionEnabled;
+
     public UpdatePoolRequest withDeletionProtectionEnabled(Boolean deletionProtectionEnabled) {
         this.deletionProtectionEnabled = deletionProtectionEnabled;
         return this;
@@ -20,6 +21,7 @@ public class UpdatePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOutListName")
     public String optOutListName;
+
     public UpdatePoolRequest withOptOutListName(String optOutListName) {
         this.optOutListName = optOutListName;
         return this;
@@ -27,6 +29,7 @@ public class UpdatePoolRequest {
     
     @JsonProperty("PoolId")
     public String poolId;
+
     public UpdatePoolRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -35,6 +38,7 @@ public class UpdatePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelfManagedOptOutsEnabled")
     public Boolean selfManagedOptOutsEnabled;
+
     public UpdatePoolRequest withSelfManagedOptOutsEnabled(Boolean selfManagedOptOutsEnabled) {
         this.selfManagedOptOutsEnabled = selfManagedOptOutsEnabled;
         return this;
@@ -43,6 +47,7 @@ public class UpdatePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedRoutesEnabled")
     public Boolean sharedRoutesEnabled;
+
     public UpdatePoolRequest withSharedRoutesEnabled(Boolean sharedRoutesEnabled) {
         this.sharedRoutesEnabled = sharedRoutesEnabled;
         return this;
@@ -51,6 +56,7 @@ public class UpdatePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoWayChannelArn")
     public String twoWayChannelArn;
+
     public UpdatePoolRequest withTwoWayChannelArn(String twoWayChannelArn) {
         this.twoWayChannelArn = twoWayChannelArn;
         return this;
@@ -59,9 +65,13 @@ public class UpdatePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoWayEnabled")
     public Boolean twoWayEnabled;
+
     public UpdatePoolRequest withTwoWayEnabled(Boolean twoWayEnabled) {
         this.twoWayEnabled = twoWayEnabled;
         return this;
     }
     
+    public UpdatePoolRequest(@JsonProperty("PoolId") String poolId) {
+        this.poolId = poolId;
+  }
 }

@@ -116,6 +116,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -145,12 +150,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResponse res = new org.openapis.openapi.models.operations.GetResponse() {{
+        org.openapis.openapi.models.operations.GetResponse res = new org.openapis.openapi.models.operations.GetResponse(contentType, httpRes.statusCode()) {{
             get200ApplicationJSONObject = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,12 +193,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetListsResponse res = new org.openapis.openapi.models.operations.GetListsResponse() {{
+        org.openapis.openapi.models.operations.GetListsResponse res = new org.openapis.openapi.models.operations.GetListsResponse(contentType, httpRes.statusCode()) {{
             getLists200ApplicationJSONObject = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,12 +243,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamesResponse res = new org.openapis.openapi.models.operations.GetNamesResponse() {{
+        org.openapis.openapi.models.operations.GetNamesResponse res = new org.openapis.openapi.models.operations.GetNamesResponse(contentType, httpRes.statusCode()) {{
             getNames200ApplicationJSONObject = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,12 +293,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSwatchResponse res = new org.openapis.openapi.models.operations.GetSwatchResponse() {{
+        org.openapis.openapi.models.operations.GetSwatchResponse res = new org.openapis.openapi.models.operations.GetSwatchResponse(contentType, httpRes.statusCode()) {{
             getSwatch200ImageSvgPlusXmlString = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

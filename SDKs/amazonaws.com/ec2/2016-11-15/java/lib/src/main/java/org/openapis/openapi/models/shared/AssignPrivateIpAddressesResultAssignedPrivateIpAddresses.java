@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AssignPrivateIpAddressesResultAssignedPrivateIpAddresses {
     
     public String privateIpAddress;
+
     public AssignPrivateIpAddressesResultAssignedPrivateIpAddresses withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
     }
     
+    public AssignPrivateIpAddressesResultAssignedPrivateIpAddresses(){}
 }

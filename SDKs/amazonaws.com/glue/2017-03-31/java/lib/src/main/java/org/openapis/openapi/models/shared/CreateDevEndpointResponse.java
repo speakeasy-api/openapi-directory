@@ -20,6 +20,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arguments")
     public java.util.Map<String, String> arguments;
+
     public CreateDevEndpointResponse withArguments(java.util.Map<String, String> arguments) {
         this.arguments = arguments;
         return this;
@@ -28,6 +29,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public CreateDevEndpointResponse withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -38,6 +40,7 @@ public class CreateDevEndpointResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public CreateDevEndpointResponse withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -46,6 +49,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public CreateDevEndpointResponse withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -54,6 +58,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraJarsS3Path")
     public String extraJarsS3Path;
+
     public CreateDevEndpointResponse withExtraJarsS3Path(String extraJarsS3Path) {
         this.extraJarsS3Path = extraJarsS3Path;
         return this;
@@ -62,6 +67,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPythonLibsS3Path")
     public String extraPythonLibsS3Path;
+
     public CreateDevEndpointResponse withExtraPythonLibsS3Path(String extraPythonLibsS3Path) {
         this.extraPythonLibsS3Path = extraPythonLibsS3Path;
         return this;
@@ -70,6 +76,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public CreateDevEndpointResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -78,6 +85,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlueVersion")
     public String glueVersion;
+
     public CreateDevEndpointResponse withGlueVersion(String glueVersion) {
         this.glueVersion = glueVersion;
         return this;
@@ -86,6 +94,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfNodes")
     public Long numberOfNodes;
+
     public CreateDevEndpointResponse withNumberOfNodes(Long numberOfNodes) {
         this.numberOfNodes = numberOfNodes;
         return this;
@@ -94,6 +103,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfWorkers")
     public Long numberOfWorkers;
+
     public CreateDevEndpointResponse withNumberOfWorkers(Long numberOfWorkers) {
         this.numberOfWorkers = numberOfWorkers;
         return this;
@@ -102,6 +112,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateDevEndpointResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -110,6 +121,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfiguration")
     public String securityConfiguration;
+
     public CreateDevEndpointResponse withSecurityConfiguration(String securityConfiguration) {
         this.securityConfiguration = securityConfiguration;
         return this;
@@ -118,6 +130,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public CreateDevEndpointResponse withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -126,6 +139,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public CreateDevEndpointResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -134,6 +148,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public CreateDevEndpointResponse withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -142,6 +157,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public CreateDevEndpointResponse withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -150,6 +166,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkerType")
     public WorkerTypeEnum workerType;
+
     public CreateDevEndpointResponse withWorkerType(WorkerTypeEnum workerType) {
         this.workerType = workerType;
         return this;
@@ -158,6 +175,7 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YarnEndpointAddress")
     public String yarnEndpointAddress;
+
     public CreateDevEndpointResponse withYarnEndpointAddress(String yarnEndpointAddress) {
         this.yarnEndpointAddress = yarnEndpointAddress;
         return this;
@@ -166,9 +184,11 @@ public class CreateDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZeppelinRemoteSparkInterpreterPort")
     public Long zeppelinRemoteSparkInterpreterPort;
+
     public CreateDevEndpointResponse withZeppelinRemoteSparkInterpreterPort(Long zeppelinRemoteSparkInterpreterPort) {
         this.zeppelinRemoteSparkInterpreterPort = zeppelinRemoteSparkInterpreterPort;
         return this;
     }
     
+    public CreateDevEndpointResponse(){}
 }

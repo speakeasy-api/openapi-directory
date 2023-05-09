@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateInferenceSchedulerResponse {
@@ -12,6 +13,7 @@ public class CreateInferenceSchedulerResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateInferenceSchedulerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateInferenceSchedulerResponse {
      */
     
     public Object conflictException;
+
     public CreateInferenceSchedulerResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateInferenceSchedulerResponse {
     
     
     public String contentType;
+
     public CreateInferenceSchedulerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateInferenceSchedulerResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateInferenceSchedulerResponse createInferenceSchedulerResponse;
+
     public CreateInferenceSchedulerResponse withCreateInferenceSchedulerResponse(org.openapis.openapi.models.shared.CreateInferenceSchedulerResponse createInferenceSchedulerResponse) {
         this.createInferenceSchedulerResponse = createInferenceSchedulerResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateInferenceSchedulerResponse {
      */
     
     public Object internalServerException;
+
     public CreateInferenceSchedulerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateInferenceSchedulerResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateInferenceSchedulerResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateInferenceSchedulerResponse {
     
     
     public Integer statusCode;
+
     public CreateInferenceSchedulerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateInferenceSchedulerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateInferenceSchedulerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateInferenceSchedulerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateInferenceSchedulerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class CreateInferenceSchedulerResponse {
      */
     
     public Object throttlingException;
+
     public CreateInferenceSchedulerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateInferenceSchedulerResponse {
      */
     
     public Object validationException;
+
     public CreateInferenceSchedulerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateInferenceSchedulerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

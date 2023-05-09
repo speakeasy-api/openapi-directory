@@ -15,6 +15,7 @@ public class ListUserAssociationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public org.openapis.openapi.models.shared.Filter[] filters;
+
     public ListUserAssociationsRequestBody withFilters(org.openapis.openapi.models.shared.Filter[] filters) {
         this.filters = filters;
         return this;
@@ -25,6 +26,7 @@ public class ListUserAssociationsRequestBody {
      */
     @JsonProperty("IdentityProvider")
     public ListUserAssociationsRequestBodyIdentityProvider identityProvider;
+
     public ListUserAssociationsRequestBody withIdentityProvider(ListUserAssociationsRequestBodyIdentityProvider identityProvider) {
         this.identityProvider = identityProvider;
         return this;
@@ -35,6 +37,7 @@ public class ListUserAssociationsRequestBody {
      */
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public ListUserAssociationsRequestBody withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -46,6 +49,7 @@ public class ListUserAssociationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListUserAssociationsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -57,9 +61,14 @@ public class ListUserAssociationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListUserAssociationsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListUserAssociationsRequestBody(@JsonProperty("IdentityProvider") ListUserAssociationsRequestBodyIdentityProvider identityProvider, @JsonProperty("InstanceId") String instanceId) {
+        this.identityProvider = identityProvider;
+        this.instanceId = instanceId;
+  }
 }

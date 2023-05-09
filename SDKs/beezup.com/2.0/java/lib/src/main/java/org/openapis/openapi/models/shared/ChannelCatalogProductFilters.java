@@ -17,6 +17,7 @@ public class ChannelCatalogProductFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalProductFilters")
     public java.util.Map<String, BeezUPCommonAdditionalProductFiltersValue> additionalProductFilters;
+
     public ChannelCatalogProductFilters withAdditionalProductFilters(java.util.Map<String, BeezUPCommonAdditionalProductFiltersValue> additionalProductFilters) {
         this.additionalProductFilters = additionalProductFilters;
         return this;
@@ -28,6 +29,7 @@ public class ChannelCatalogProductFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogEans")
     public String[] catalogEans;
+
     public ChannelCatalogProductFilters withCatalogEans(String[] catalogEans) {
         this.catalogEans = catalogEans;
         return this;
@@ -39,6 +41,7 @@ public class ChannelCatalogProductFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogMpns")
     public String[] catalogMpns;
+
     public ChannelCatalogProductFilters withCatalogMpns(String[] catalogMpns) {
         this.catalogMpns = catalogMpns;
         return this;
@@ -50,6 +53,7 @@ public class ChannelCatalogProductFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogSkus")
     public String[] catalogSkus;
+
     public ChannelCatalogProductFilters withCatalogSkus(String[] catalogSkus) {
         this.catalogSkus = catalogSkus;
         return this;
@@ -61,6 +65,7 @@ public class ChannelCatalogProductFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelEans")
     public String[] channelEans;
+
     public ChannelCatalogProductFilters withChannelEans(String[] channelEans) {
         this.channelEans = channelEans;
         return this;
@@ -72,6 +77,7 @@ public class ChannelCatalogProductFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelMpns")
     public String[] channelMpns;
+
     public ChannelCatalogProductFilters withChannelMpns(String[] channelMpns) {
         this.channelMpns = channelMpns;
         return this;
@@ -83,6 +89,7 @@ public class ChannelCatalogProductFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelSkus")
     public String[] channelSkus;
+
     public ChannelCatalogProductFilters withChannelSkus(String[] channelSkus) {
         this.channelSkus = channelSkus;
         return this;
@@ -94,9 +101,11 @@ public class ChannelCatalogProductFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ChannelCatalogProductFilters withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ChannelCatalogProductFilters(){}
 }

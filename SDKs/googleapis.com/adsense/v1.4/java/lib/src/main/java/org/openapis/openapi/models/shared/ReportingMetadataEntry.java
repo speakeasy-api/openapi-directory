@@ -15,6 +15,7 @@ public class ReportingMetadataEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibleDimensions")
     public String[] compatibleDimensions;
+
     public ReportingMetadataEntry withCompatibleDimensions(String[] compatibleDimensions) {
         this.compatibleDimensions = compatibleDimensions;
         return this;
@@ -26,6 +27,7 @@ public class ReportingMetadataEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibleMetrics")
     public String[] compatibleMetrics;
+
     public ReportingMetadataEntry withCompatibleMetrics(String[] compatibleMetrics) {
         this.compatibleMetrics = compatibleMetrics;
         return this;
@@ -37,6 +39,7 @@ public class ReportingMetadataEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ReportingMetadataEntry withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class ReportingMetadataEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ReportingMetadataEntry withKind(String kind) {
         this.kind = kind;
         return this;
@@ -59,6 +63,7 @@ public class ReportingMetadataEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredDimensions")
     public String[] requiredDimensions;
+
     public ReportingMetadataEntry withRequiredDimensions(String[] requiredDimensions) {
         this.requiredDimensions = requiredDimensions;
         return this;
@@ -70,6 +75,7 @@ public class ReportingMetadataEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredMetrics")
     public String[] requiredMetrics;
+
     public ReportingMetadataEntry withRequiredMetrics(String[] requiredMetrics) {
         this.requiredMetrics = requiredMetrics;
         return this;
@@ -81,9 +87,11 @@ public class ReportingMetadataEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedProducts")
     public String[] supportedProducts;
+
     public ReportingMetadataEntry withSupportedProducts(String[] supportedProducts) {
         this.supportedProducts = supportedProducts;
         return this;
     }
     
+    public ReportingMetadataEntry(){}
 }

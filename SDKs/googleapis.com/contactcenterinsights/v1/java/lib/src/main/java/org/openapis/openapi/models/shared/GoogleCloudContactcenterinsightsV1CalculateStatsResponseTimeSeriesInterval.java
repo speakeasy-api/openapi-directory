@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1CalculateStatsResponseTimeSeriesI
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationCount")
     public Integer conversationCount;
+
     public GoogleCloudContactcenterinsightsV1CalculateStatsResponseTimeSeriesInterval withConversationCount(Integer conversationCount) {
         this.conversationCount = conversationCount;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1CalculateStatsResponseTimeSeriesI
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudContactcenterinsightsV1CalculateStatsResponseTimeSeriesInterval withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1CalculateStatsResponseTimeSeriesInterval(){}
 }

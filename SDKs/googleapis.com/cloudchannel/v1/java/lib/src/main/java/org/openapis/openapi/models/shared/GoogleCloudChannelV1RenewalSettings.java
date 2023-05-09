@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1RenewalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableRenewal")
     public Boolean enableRenewal;
+
     public GoogleCloudChannelV1RenewalSettings withEnableRenewal(Boolean enableRenewal) {
         this.enableRenewal = enableRenewal;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1RenewalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentCycle")
     public GoogleCloudChannelV1Period paymentCycle;
+
     public GoogleCloudChannelV1RenewalSettings withPaymentCycle(GoogleCloudChannelV1Period paymentCycle) {
         this.paymentCycle = paymentCycle;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudChannelV1RenewalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentPlan")
     public GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum paymentPlan;
+
     public GoogleCloudChannelV1RenewalSettings withPaymentPlan(GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum paymentPlan) {
         this.paymentPlan = paymentPlan;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudChannelV1RenewalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resizeUnitCount")
     public Boolean resizeUnitCount;
+
     public GoogleCloudChannelV1RenewalSettings withResizeUnitCount(Boolean resizeUnitCount) {
         this.resizeUnitCount = resizeUnitCount;
         return this;
     }
     
+    public GoogleCloudChannelV1RenewalSettings(){}
 }

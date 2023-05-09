@@ -15,6 +15,7 @@ public class ListIndexesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListIndexesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListIndexesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIndexesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,6 +39,7 @@ public class ListIndexesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Regions")
     public String[] regions;
+
     public ListIndexesRequestBody withRegions(String[] regions) {
         this.regions = regions;
         return this;
@@ -48,9 +51,11 @@ public class ListIndexesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ListIndexesRequestBodyTypeEnum type;
+
     public ListIndexesRequestBody withType(ListIndexesRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListIndexesRequestBody(){}
 }

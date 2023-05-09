@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDlQueryResponse {
@@ -12,6 +13,7 @@ public class GetDlQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.Association[] associations;
+
     public GetDlQueryResponse withAssociations(org.openapis.openapi.models.shared.Association[] associations) {
         this.associations = associations;
         return this;
@@ -19,6 +21,7 @@ public class GetDlQueryResponse {
     
     
     public String contentType;
+
     public GetDlQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetDlQueryResponse {
     
     
     public Integer statusCode;
+
     public GetDlQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetDlQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDlQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDlQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

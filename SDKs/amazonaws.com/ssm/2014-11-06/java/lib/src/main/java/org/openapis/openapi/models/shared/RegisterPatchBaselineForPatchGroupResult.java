@@ -15,6 +15,7 @@ public class RegisterPatchBaselineForPatchGroupResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineId")
     public String baselineId;
+
     public RegisterPatchBaselineForPatchGroupResult withBaselineId(String baselineId) {
         this.baselineId = baselineId;
         return this;
@@ -23,9 +24,11 @@ public class RegisterPatchBaselineForPatchGroupResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PatchGroup")
     public String patchGroup;
+
     public RegisterPatchBaselineForPatchGroupResult withPatchGroup(String patchGroup) {
         this.patchGroup = patchGroup;
         return this;
     }
     
+    public RegisterPatchBaselineForPatchGroupResult(){}
 }

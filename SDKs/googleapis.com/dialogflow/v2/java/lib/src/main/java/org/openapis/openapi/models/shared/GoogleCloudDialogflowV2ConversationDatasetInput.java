@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ConversationDatasetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationInfo")
     public GoogleCloudDialogflowV2ConversationInfo conversationInfo;
+
     public GoogleCloudDialogflowV2ConversationDatasetInput withConversationInfo(GoogleCloudDialogflowV2ConversationInfo conversationInfo) {
         this.conversationInfo = conversationInfo;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2ConversationDatasetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowV2ConversationDatasetInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2ConversationDatasetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowV2ConversationDatasetInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2ConversationDatasetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfig")
     public GoogleCloudDialogflowV2InputConfig inputConfig;
+
     public GoogleCloudDialogflowV2ConversationDatasetInput withInputConfig(GoogleCloudDialogflowV2InputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ConversationDatasetInput(){}
 }

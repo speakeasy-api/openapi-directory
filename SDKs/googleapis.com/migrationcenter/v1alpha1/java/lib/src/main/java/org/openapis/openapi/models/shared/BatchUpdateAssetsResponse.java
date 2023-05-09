@@ -18,9 +18,11 @@ public class BatchUpdateAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
     public Asset[] assets;
+
     public BatchUpdateAssetsResponse withAssets(Asset[] assets) {
         this.assets = assets;
         return this;
     }
     
+    public BatchUpdateAssetsResponse(){}
 }

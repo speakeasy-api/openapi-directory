@@ -12,7 +12,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public enum GoogleAnalyticsAdminV1betaCustomDimensionScopeEnum {
     DIMENSION_SCOPE_UNSPECIFIED("DIMENSION_SCOPE_UNSPECIFIED"),
     EVENT("EVENT"),
-    USER("USER");
+    USER("USER"),
+    ITEM("ITEM");
 
     @JsonValue
     public final String value;

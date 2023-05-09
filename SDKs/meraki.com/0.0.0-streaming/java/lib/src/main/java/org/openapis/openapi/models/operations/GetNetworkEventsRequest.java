@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkEventsRequest {
@@ -12,6 +13,7 @@ public class GetNetworkEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientIp")
     public String clientIp;
+
     public GetNetworkEventsRequest withClientIp(String clientIp) {
         this.clientIp = clientIp;
         return this;
@@ -22,6 +24,7 @@ public class GetNetworkEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientMac")
     public String clientMac;
+
     public GetNetworkEventsRequest withClientMac(String clientMac) {
         this.clientMac = clientMac;
         return this;
@@ -32,6 +35,7 @@ public class GetNetworkEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientName")
     public String clientName;
+
     public GetNetworkEventsRequest withClientName(String clientName) {
         this.clientName = clientName;
         return this;
@@ -42,6 +46,7 @@ public class GetNetworkEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceMac")
     public String deviceMac;
+
     public GetNetworkEventsRequest withDeviceMac(String deviceMac) {
         this.deviceMac = deviceMac;
         return this;
@@ -52,6 +57,7 @@ public class GetNetworkEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceName")
     public String deviceName;
+
     public GetNetworkEventsRequest withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -62,6 +68,7 @@ public class GetNetworkEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceSerial")
     public String deviceSerial;
+
     public GetNetworkEventsRequest withDeviceSerial(String deviceSerial) {
         this.deviceSerial = deviceSerial;
         return this;
@@ -72,6 +79,7 @@ public class GetNetworkEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
     public String endingBefore;
+
     public GetNetworkEventsRequest withEndingBefore(String endingBefore) {
         this.endingBefore = endingBefore;
         return this;
@@ -82,6 +90,7 @@ public class GetNetworkEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=excludedEventTypes")
     public String[] excludedEventTypes;
+
     public GetNetworkEventsRequest withExcludedEventTypes(String[] excludedEventTypes) {
         this.excludedEventTypes = excludedEventTypes;
         return this;
@@ -92,6 +101,7 @@ public class GetNetworkEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=includedEventTypes")
     public String[] includedEventTypes;
+
     public GetNetworkEventsRequest withIncludedEventTypes(String[] includedEventTypes) {
         this.includedEventTypes = includedEventTypes;
         return this;
@@ -99,6 +109,7 @@ public class GetNetworkEventsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public GetNetworkEventsRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -109,6 +120,7 @@ public class GetNetworkEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
     public Long perPage;
+
     public GetNetworkEventsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -119,6 +131,7 @@ public class GetNetworkEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=productType")
     public String productType;
+
     public GetNetworkEventsRequest withProductType(String productType) {
         this.productType = productType;
         return this;
@@ -129,6 +142,7 @@ public class GetNetworkEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=smDeviceMac")
     public String smDeviceMac;
+
     public GetNetworkEventsRequest withSmDeviceMac(String smDeviceMac) {
         this.smDeviceMac = smDeviceMac;
         return this;
@@ -139,6 +153,7 @@ public class GetNetworkEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=smDeviceName")
     public String smDeviceName;
+
     public GetNetworkEventsRequest withSmDeviceName(String smDeviceName) {
         this.smDeviceName = smDeviceName;
         return this;
@@ -149,9 +164,13 @@ public class GetNetworkEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
     public String startingAfter;
+
     public GetNetworkEventsRequest withStartingAfter(String startingAfter) {
         this.startingAfter = startingAfter;
         return this;
     }
     
+    public GetNetworkEventsRequest(@JsonProperty("networkId") String networkId) {
+        this.networkId = networkId;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudRecommenderV1beta1OperationGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public GoogleCloudRecommenderV1beta1Operation[] operations;
+
     public GoogleCloudRecommenderV1beta1OperationGroup withOperations(GoogleCloudRecommenderV1beta1Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public GoogleCloudRecommenderV1beta1OperationGroup(){}
 }

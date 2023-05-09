@@ -18,6 +18,7 @@ public class Bucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
     public Integer max;
+
     public Bucket withMax(Integer max) {
         this.max = max;
         return this;
@@ -29,6 +30,7 @@ public class Bucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min")
     public Integer min;
+
     public Bucket withMin(Integer min) {
         this.min = min;
         return this;
@@ -40,9 +42,11 @@ public class Bucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proportion")
     public Double proportion;
+
     public Bucket withProportion(Double proportion) {
         this.proportion = proportion;
         return this;
     }
     
+    public Bucket(){}
 }

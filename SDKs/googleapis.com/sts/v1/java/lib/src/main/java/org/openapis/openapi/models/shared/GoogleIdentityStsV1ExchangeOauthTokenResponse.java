@@ -18,6 +18,7 @@ public class GoogleIdentityStsV1ExchangeOauthTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access_token")
     public String accessToken;
+
     public GoogleIdentityStsV1ExchangeOauthTokenResponse withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleIdentityStsV1ExchangeOauthTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_in")
     public Integer expiresIn;
+
     public GoogleIdentityStsV1ExchangeOauthTokenResponse withExpiresIn(Integer expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -40,6 +42,7 @@ public class GoogleIdentityStsV1ExchangeOauthTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_token")
     public String idToken;
+
     public GoogleIdentityStsV1ExchangeOauthTokenResponse withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
@@ -51,6 +54,7 @@ public class GoogleIdentityStsV1ExchangeOauthTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh_token")
     public String refreshToken;
+
     public GoogleIdentityStsV1ExchangeOauthTokenResponse withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
@@ -62,6 +66,7 @@ public class GoogleIdentityStsV1ExchangeOauthTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public GoogleIdentityStsV1ExchangeOauthTokenResponse withScope(String scope) {
         this.scope = scope;
         return this;
@@ -73,9 +78,11 @@ public class GoogleIdentityStsV1ExchangeOauthTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token_type")
     public String tokenType;
+
     public GoogleIdentityStsV1ExchangeOauthTokenResponse withTokenType(String tokenType) {
         this.tokenType = tokenType;
         return this;
     }
     
+    public GoogleIdentityStsV1ExchangeOauthTokenResponse(){}
 }

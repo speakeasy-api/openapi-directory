@@ -15,6 +15,7 @@ public class MonitoringInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchTransformInput")
     public BatchTransformInput batchTransformInput;
+
     public MonitoringInput withBatchTransformInput(BatchTransformInput batchTransformInput) {
         this.batchTransformInput = batchTransformInput;
         return this;
@@ -23,9 +24,11 @@ public class MonitoringInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointInput")
     public EndpointInput endpointInput;
+
     public MonitoringInput withEndpointInput(EndpointInput endpointInput) {
         this.endpointInput = endpointInput;
         return this;
     }
     
+    public MonitoringInput(){}
 }

@@ -15,9 +15,11 @@ public class LayoutContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basic")
     public BasicLayout basic;
+
     public LayoutContent withBasic(BasicLayout basic) {
         this.basic = basic;
         return this;
     }
     
+    public LayoutContent(){}
 }

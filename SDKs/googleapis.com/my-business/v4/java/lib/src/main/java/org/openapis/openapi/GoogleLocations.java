@@ -60,11 +60,9 @@ public class GoogleLocations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessGoogleLocationsReportResponse res = new org.openapis.openapi.models.operations.MybusinessGoogleLocationsReportResponse() {{
+        org.openapis.openapi.models.operations.MybusinessGoogleLocationsReportResponse res = new org.openapis.openapi.models.operations.MybusinessGoogleLocationsReportResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class GoogleLocations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessGoogleLocationsSearchResponse res = new org.openapis.openapi.models.operations.MybusinessGoogleLocationsSearchResponse() {{
+        org.openapis.openapi.models.operations.MybusinessGoogleLocationsSearchResponse res = new org.openapis.openapi.models.operations.MybusinessGoogleLocationsSearchResponse(contentType, httpRes.statusCode()) {{
             searchGoogleLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

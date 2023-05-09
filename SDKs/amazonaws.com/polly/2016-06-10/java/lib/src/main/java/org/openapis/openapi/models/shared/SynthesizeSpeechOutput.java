@@ -15,9 +15,11 @@ public class SynthesizeSpeechOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AudioStream")
     public String audioStream;
+
     public SynthesizeSpeechOutput withAudioStream(String audioStream) {
         this.audioStream = audioStream;
         return this;
     }
     
+    public SynthesizeSpeechOutput(){}
 }

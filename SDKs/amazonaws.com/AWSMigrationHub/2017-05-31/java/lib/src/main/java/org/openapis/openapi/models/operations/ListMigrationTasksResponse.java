@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMigrationTasksResponse {
@@ -12,6 +13,7 @@ public class ListMigrationTasksResponse {
      */
     
     public Object accessDeniedException;
+
     public ListMigrationTasksResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListMigrationTasksResponse {
     
     
     public String contentType;
+
     public ListMigrationTasksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListMigrationTasksResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public ListMigrationTasksResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -39,6 +43,7 @@ public class ListMigrationTasksResponse {
      */
     
     public Object internalServerError;
+
     public ListMigrationTasksResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class ListMigrationTasksResponse {
      */
     
     public Object invalidInputException;
+
     public ListMigrationTasksResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class ListMigrationTasksResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMigrationTasksResult listMigrationTasksResult;
+
     public ListMigrationTasksResponse withListMigrationTasksResult(org.openapis.openapi.models.shared.ListMigrationTasksResult listMigrationTasksResult) {
         this.listMigrationTasksResult = listMigrationTasksResult;
         return this;
@@ -69,6 +76,7 @@ public class ListMigrationTasksResponse {
      */
     
     public Object policyErrorException;
+
     public ListMigrationTasksResponse withPolicyErrorException(Object policyErrorException) {
         this.policyErrorException = policyErrorException;
         return this;
@@ -76,6 +84,7 @@ public class ListMigrationTasksResponse {
     
     
     public Integer statusCode;
+
     public ListMigrationTasksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListMigrationTasksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMigrationTasksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListMigrationTasksResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListMigrationTasksResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class ListMigrationTasksResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListMigrationTasksResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class ListMigrationTasksResponse {
      */
     
     public Object throttlingException;
+
     public ListMigrationTasksResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListMigrationTasksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

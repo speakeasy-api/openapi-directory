@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchProfilesResponse {
@@ -12,6 +13,7 @@ public class SearchProfilesResponse {
      */
     
     public Object accessDeniedException;
+
     public SearchProfilesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class SearchProfilesResponse {
      */
     
     public Object badRequestException;
+
     public SearchProfilesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class SearchProfilesResponse {
     
     
     public String contentType;
+
     public SearchProfilesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class SearchProfilesResponse {
      */
     
     public Object internalServerException;
+
     public SearchProfilesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class SearchProfilesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SearchProfilesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class SearchProfilesResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchProfilesResponse searchProfilesResponse;
+
     public SearchProfilesResponse withSearchProfilesResponse(org.openapis.openapi.models.shared.SearchProfilesResponse searchProfilesResponse) {
         this.searchProfilesResponse = searchProfilesResponse;
         return this;
@@ -66,6 +73,7 @@ public class SearchProfilesResponse {
     
     
     public Integer statusCode;
+
     public SearchProfilesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class SearchProfilesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchProfilesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class SearchProfilesResponse {
      */
     
     public Object throttlingException;
+
     public SearchProfilesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public SearchProfilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class ChannelCatalogProductInfoListLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export")
     public LinksExportChannelCatalogProductInfoListLink export;
+
     public ChannelCatalogProductInfoListLinks withExport(LinksExportChannelCatalogProductInfoListLink export) {
         this.export = export;
         return this;
@@ -19,9 +20,13 @@ public class ChannelCatalogProductInfoListLinks {
     
     @JsonProperty("self")
     public LinksGetChannelCatalogProductInfoListLink self;
+
     public ChannelCatalogProductInfoListLinks withSelf(LinksGetChannelCatalogProductInfoListLink self) {
         this.self = self;
         return this;
     }
     
+    public ChannelCatalogProductInfoListLinks(@JsonProperty("self") LinksGetChannelCatalogProductInfoListLink self) {
+        this.self = self;
+  }
 }

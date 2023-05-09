@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRequest {
@@ -12,6 +13,7 @@ public class GetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Market-Id")
     public String xMarketId;
+
     public GetRequest withXMarketId(String xMarketId) {
         this.xMarketId = xMarketId;
         return this;
@@ -22,6 +24,7 @@ public class GetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Shopper-Id")
     public String xShopperId;
+
     public GetRequest withXShopperId(String xShopperId) {
         this.xShopperId = xShopperId;
         return this;
@@ -32,9 +35,13 @@ public class GetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
     public String orderId;
+
     public GetRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     
+    public GetRequest(@JsonProperty("orderId") String orderId) {
+        this.orderId = orderId;
+  }
 }

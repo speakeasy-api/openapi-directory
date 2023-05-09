@@ -15,6 +15,7 @@ public class FailedCreateAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Entry")
     public CreateAssociationBatchRequestEntry entry;
+
     public FailedCreateAssociation withEntry(CreateAssociationBatchRequestEntry entry) {
         this.entry = entry;
         return this;
@@ -23,6 +24,7 @@ public class FailedCreateAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Fault")
     public FaultEnum fault;
+
     public FailedCreateAssociation withFault(FaultEnum fault) {
         this.fault = fault;
         return this;
@@ -31,9 +33,11 @@ public class FailedCreateAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public FailedCreateAssociation withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public FailedCreateAssociation(){}
 }

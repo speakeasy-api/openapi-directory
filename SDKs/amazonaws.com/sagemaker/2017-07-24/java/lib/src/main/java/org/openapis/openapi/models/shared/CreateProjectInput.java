@@ -12,6 +12,7 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectDescription")
     public String projectDescription;
+
     public CreateProjectInput withProjectDescription(String projectDescription) {
         this.projectDescription = projectDescription;
         return this;
@@ -19,6 +20,7 @@ public class CreateProjectInput {
     
     @JsonProperty("ProjectName")
     public String projectName;
+
     public CreateProjectInput withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -26,6 +28,7 @@ public class CreateProjectInput {
     
     @JsonProperty("ServiceCatalogProvisioningDetails")
     public ServiceCatalogProvisioningDetails serviceCatalogProvisioningDetails;
+
     public CreateProjectInput withServiceCatalogProvisioningDetails(ServiceCatalogProvisioningDetails serviceCatalogProvisioningDetails) {
         this.serviceCatalogProvisioningDetails = serviceCatalogProvisioningDetails;
         return this;
@@ -34,9 +37,14 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateProjectInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateProjectInput(@JsonProperty("ProjectName") String projectName, @JsonProperty("ServiceCatalogProvisioningDetails") ServiceCatalogProvisioningDetails serviceCatalogProvisioningDetails) {
+        this.projectName = projectName;
+        this.serviceCatalogProvisioningDetails = serviceCatalogProvisioningDetails;
+  }
 }

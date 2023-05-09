@@ -12,6 +12,7 @@ public class CommitteeSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CommitteeSearch withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class CommitteeSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public CommitteeSearch withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -28,9 +30,11 @@ public class CommitteeSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CommitteeSearch withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CommitteeSearch(){}
 }

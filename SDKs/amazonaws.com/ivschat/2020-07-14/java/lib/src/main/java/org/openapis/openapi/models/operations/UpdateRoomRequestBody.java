@@ -14,6 +14,7 @@ public class UpdateRoomRequestBody {
      */
     @JsonProperty("identifier")
     public String identifier;
+
     public UpdateRoomRequestBody withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -25,6 +26,7 @@ public class UpdateRoomRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfigurationIdentifiers")
     public String[] loggingConfigurationIdentifiers;
+
     public UpdateRoomRequestBody withLoggingConfigurationIdentifiers(String[] loggingConfigurationIdentifiers) {
         this.loggingConfigurationIdentifiers = loggingConfigurationIdentifiers;
         return this;
@@ -36,6 +38,7 @@ public class UpdateRoomRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumMessageLength")
     public Long maximumMessageLength;
+
     public UpdateRoomRequestBody withMaximumMessageLength(Long maximumMessageLength) {
         this.maximumMessageLength = maximumMessageLength;
         return this;
@@ -47,6 +50,7 @@ public class UpdateRoomRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumMessageRatePerSecond")
     public Long maximumMessageRatePerSecond;
+
     public UpdateRoomRequestBody withMaximumMessageRatePerSecond(Long maximumMessageRatePerSecond) {
         this.maximumMessageRatePerSecond = maximumMessageRatePerSecond;
         return this;
@@ -58,6 +62,7 @@ public class UpdateRoomRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageReviewHandler")
     public UpdateRoomRequestBodyMessageReviewHandler messageReviewHandler;
+
     public UpdateRoomRequestBody withMessageReviewHandler(UpdateRoomRequestBodyMessageReviewHandler messageReviewHandler) {
         this.messageReviewHandler = messageReviewHandler;
         return this;
@@ -69,9 +74,13 @@ public class UpdateRoomRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateRoomRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateRoomRequestBody(@JsonProperty("identifier") String identifier) {
+        this.identifier = identifier;
+  }
 }

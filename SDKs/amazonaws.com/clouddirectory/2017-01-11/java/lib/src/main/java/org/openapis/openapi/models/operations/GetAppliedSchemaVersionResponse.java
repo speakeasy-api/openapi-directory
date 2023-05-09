@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAppliedSchemaVersionResponse {
@@ -12,6 +13,7 @@ public class GetAppliedSchemaVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAppliedSchemaVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetAppliedSchemaVersionResponse {
     
     
     public String contentType;
+
     public GetAppliedSchemaVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAppliedSchemaVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAppliedSchemaVersionResponse getAppliedSchemaVersionResponse;
+
     public GetAppliedSchemaVersionResponse withGetAppliedSchemaVersionResponse(org.openapis.openapi.models.shared.GetAppliedSchemaVersionResponse getAppliedSchemaVersionResponse) {
         this.getAppliedSchemaVersionResponse = getAppliedSchemaVersionResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAppliedSchemaVersionResponse {
      */
     
     public Object internalServiceException;
+
     public GetAppliedSchemaVersionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetAppliedSchemaVersionResponse {
      */
     
     public Object invalidArnException;
+
     public GetAppliedSchemaVersionResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class GetAppliedSchemaVersionResponse {
      */
     
     public Object limitExceededException;
+
     public GetAppliedSchemaVersionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class GetAppliedSchemaVersionResponse {
     
     
     public Integer statusCode;
+
     public GetAppliedSchemaVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetAppliedSchemaVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAppliedSchemaVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetAppliedSchemaVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAppliedSchemaVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class GetAppliedSchemaVersionResponse {
      */
     
     public Object retryableConflictException;
+
     public GetAppliedSchemaVersionResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -103,9 +114,14 @@ public class GetAppliedSchemaVersionResponse {
      */
     
     public Object validationException;
+
     public GetAppliedSchemaVersionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAppliedSchemaVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

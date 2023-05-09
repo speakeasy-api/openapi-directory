@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSellOrderRawRequest {
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public PutSellOrderRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class PutSellOrderRawRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=order_id")
     public String orderId;
+
     public PutSellOrderRawRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -23,6 +26,7 @@ public class PutSellOrderRawRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public String projectId;
+
     public PutSellOrderRawRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -30,9 +34,15 @@ public class PutSellOrderRawRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public PutSellOrderRawRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public PutSellOrderRawRequest(@JsonProperty("order_id") String orderId, @JsonProperty("project_id") String projectId, @JsonProperty("workgroup_id") String workgroupId) {
+        this.orderId = orderId;
+        this.projectId = projectId;
+        this.workgroupId = workgroupId;
+  }
 }

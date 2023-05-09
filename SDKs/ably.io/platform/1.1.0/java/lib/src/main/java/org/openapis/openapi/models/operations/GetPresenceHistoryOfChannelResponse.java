@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPresenceHistoryOfChannelResponse {
     
     public byte[] body;
+
     public GetPresenceHistoryOfChannelResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetPresenceHistoryOfChannelResponse {
     
     
     public String contentType;
+
     public GetPresenceHistoryOfChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetPresenceHistoryOfChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetPresenceHistoryOfChannelResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -33,6 +37,7 @@ public class GetPresenceHistoryOfChannelResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetPresenceHistoryOfChannelResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -43,6 +48,7 @@ public class GetPresenceHistoryOfChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.PresenceMessage[] presenceMessages;
+
     public GetPresenceHistoryOfChannelResponse withPresenceMessages(org.openapis.openapi.models.shared.PresenceMessage[] presenceMessages) {
         this.presenceMessages = presenceMessages;
         return this;
@@ -50,6 +56,7 @@ public class GetPresenceHistoryOfChannelResponse {
     
     
     public Integer statusCode;
+
     public GetPresenceHistoryOfChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,6 +64,7 @@ public class GetPresenceHistoryOfChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPresenceHistoryOfChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -67,9 +75,14 @@ public class GetPresenceHistoryOfChannelResponse {
      */
     
     public String getPresenceHistoryOfChannel2XXTextHTMLString;
+
     public GetPresenceHistoryOfChannelResponse withGetPresenceHistoryOfChannel2XXTextHTMLString(String getPresenceHistoryOfChannel2XXTextHTMLString) {
         this.getPresenceHistoryOfChannel2XXTextHTMLString = getPresenceHistoryOfChannel2XXTextHTMLString;
         return this;
     }
     
+    public GetPresenceHistoryOfChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

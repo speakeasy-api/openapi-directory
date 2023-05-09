@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFacetResponse {
@@ -12,6 +13,7 @@ public class GetFacetResponse {
      */
     
     public Object accessDeniedException;
+
     public GetFacetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetFacetResponse {
     
     
     public String contentType;
+
     public GetFacetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetFacetResponse {
      */
     
     public Object facetNotFoundException;
+
     public GetFacetResponse withFacetNotFoundException(Object facetNotFoundException) {
         this.facetNotFoundException = facetNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFacetResponse getFacetResponse;
+
     public GetFacetResponse withGetFacetResponse(org.openapis.openapi.models.shared.GetFacetResponse getFacetResponse) {
         this.getFacetResponse = getFacetResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetFacetResponse {
      */
     
     public Object internalServiceException;
+
     public GetFacetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetFacetResponse {
      */
     
     public Object invalidArnException;
+
     public GetFacetResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class GetFacetResponse {
      */
     
     public Object limitExceededException;
+
     public GetFacetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class GetFacetResponse {
     
     
     public Integer statusCode;
+
     public GetFacetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetFacetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFacetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetFacetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFacetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class GetFacetResponse {
      */
     
     public Object retryableConflictException;
+
     public GetFacetResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class GetFacetResponse {
      */
     
     public Object validationException;
+
     public GetFacetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetFacetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

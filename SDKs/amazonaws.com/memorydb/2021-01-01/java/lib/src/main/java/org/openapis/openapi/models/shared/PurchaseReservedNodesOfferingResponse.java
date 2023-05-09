@@ -15,9 +15,11 @@ public class PurchaseReservedNodesOfferingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReservedNode")
     public ReservedNode reservedNode;
+
     public PurchaseReservedNodesOfferingResponse withReservedNode(ReservedNode reservedNode) {
         this.reservedNode = reservedNode;
         return this;
     }
     
+    public PurchaseReservedNodesOfferingResponse(){}
 }

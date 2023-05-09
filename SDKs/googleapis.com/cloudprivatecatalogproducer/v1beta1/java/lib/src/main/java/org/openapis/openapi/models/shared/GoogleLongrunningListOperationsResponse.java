@@ -15,6 +15,7 @@ public class GoogleLongrunningListOperationsResponse {
      */
     
     public String nextPageToken;
+
     public GoogleLongrunningListOperationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -25,9 +26,11 @@ public class GoogleLongrunningListOperationsResponse {
      */
     
     public GoogleLongrunningOperation[] operations;
+
     public GoogleLongrunningListOperationsResponse withOperations(GoogleLongrunningOperation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public GoogleLongrunningListOperationsResponse(){}
 }

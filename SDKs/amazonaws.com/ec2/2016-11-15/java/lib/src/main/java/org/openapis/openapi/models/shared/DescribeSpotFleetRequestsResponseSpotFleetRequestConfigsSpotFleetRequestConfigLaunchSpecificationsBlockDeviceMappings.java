@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappings {
     
     public String deviceName;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappings withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbs ebs;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappings withEbs(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbs ebs) {
         this.ebs = ebs;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String noDevice;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappings withNoDevice(String noDevice) {
         this.noDevice = noDevice;
         return this;
@@ -33,9 +36,11 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String virtualName;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappings withVirtualName(String virtualName) {
         this.virtualName = virtualName;
         return this;
     }
     
+    public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappings(){}
 }

@@ -15,6 +15,7 @@ public class SNOMEDCTDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Edition")
     public String edition;
+
     public SNOMEDCTDetails withEdition(String edition) {
         this.edition = edition;
         return this;
@@ -23,6 +24,7 @@ public class SNOMEDCTDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Language")
     public String language;
+
     public SNOMEDCTDetails withLanguage(String language) {
         this.language = language;
         return this;
@@ -31,9 +33,11 @@ public class SNOMEDCTDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionDate")
     public String versionDate;
+
     public SNOMEDCTDetails withVersionDate(String versionDate) {
         this.versionDate = versionDate;
         return this;
     }
     
+    public SNOMEDCTDetails(){}
 }

@@ -18,6 +18,7 @@ public class ChannelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public ChannelInput withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -29,6 +30,7 @@ public class ChannelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ChannelInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class ChannelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ChannelInput withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class ChannelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release")
     public Release release;
+
     public ChannelInput withRelease(Release release) {
         this.release = release;
         return this;
@@ -62,6 +66,7 @@ public class ChannelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retainedReleaseCount")
     public Integer retainedReleaseCount;
+
     public ChannelInput withRetainedReleaseCount(Integer retainedReleaseCount) {
         this.retainedReleaseCount = retainedReleaseCount;
         return this;
@@ -73,9 +78,11 @@ public class ChannelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public String ttl;
+
     public ChannelInput withTtl(String ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public ChannelInput(){}
 }

@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaCustomDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleAnalyticsAdminV1alphaCustomDimension withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaCustomDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disallowAdsPersonalization")
     public Boolean disallowAdsPersonalization;
+
     public GoogleAnalyticsAdminV1alphaCustomDimension withDisallowAdsPersonalization(Boolean disallowAdsPersonalization) {
         this.disallowAdsPersonalization = disallowAdsPersonalization;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaCustomDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAnalyticsAdminV1alphaCustomDimension withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,17 +54,19 @@ public class GoogleAnalyticsAdminV1alphaCustomDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1alphaCustomDimension withName(String name) {
         this.name = name;
         return this;
     }
     
     /**
-     * Required. Immutable. Tagging parameter name for this custom dimension. If this is a user-scoped dimension, then this is the user property name. If this is an event-scoped dimension, then this is the event parameter name. May only contain alphanumeric and underscore characters, starting with a letter. Max length of 24 characters for user-scoped dimensions, 40 characters for event-scoped dimensions.
+     * Required. Immutable. Tagging parameter name for this custom dimension. If this is a user-scoped dimension, then this is the user property name. If this is an event-scoped dimension, then this is the event parameter name. If this is an item-scoped dimension, then this is the parameter name found in the eCommerce items array. May only contain alphanumeric and underscore characters, starting with a letter. Max length of 24 characters for user-scoped dimensions, 40 characters for event-scoped dimensions.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterName")
     public String parameterName;
+
     public GoogleAnalyticsAdminV1alphaCustomDimension withParameterName(String parameterName) {
         this.parameterName = parameterName;
         return this;
@@ -73,9 +78,11 @@ public class GoogleAnalyticsAdminV1alphaCustomDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public GoogleAnalyticsAdminV1alphaCustomDimensionScopeEnum scope;
+
     public GoogleAnalyticsAdminV1alphaCustomDimension withScope(GoogleAnalyticsAdminV1alphaCustomDimensionScopeEnum scope) {
         this.scope = scope;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaCustomDimension(){}
 }

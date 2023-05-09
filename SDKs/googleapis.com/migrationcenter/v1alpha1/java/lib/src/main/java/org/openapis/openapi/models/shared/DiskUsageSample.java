@@ -18,9 +18,11 @@ public class DiskUsageSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageIops")
     public Float averageIops;
+
     public DiskUsageSample withAverageIops(Float averageIops) {
         this.averageIops = averageIops;
         return this;
     }
     
+    public DiskUsageSample(){}
 }

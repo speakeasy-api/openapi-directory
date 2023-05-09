@@ -15,6 +15,7 @@ public class ListKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keys")
     public KeyListEntry[] keys;
+
     public ListKeysResponse withKeys(KeyListEntry[] keys) {
         this.keys = keys;
         return this;
@@ -23,6 +24,7 @@ public class ListKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListKeysResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -31,9 +33,11 @@ public class ListKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Truncated")
     public Boolean truncated;
+
     public ListKeysResponse withTruncated(Boolean truncated) {
         this.truncated = truncated;
         return this;
     }
     
+    public ListKeysResponse(){}
 }

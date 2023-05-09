@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeStoreImageTasksResultStoreImageTaskResults {
     
     public String amiId;
+
     public DescribeStoreImageTasksResultStoreImageTaskResults withAmiId(String amiId) {
         this.amiId = amiId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeStoreImageTasksResultStoreImageTaskResults {
     
     
     public String bucket;
+
     public DescribeStoreImageTasksResultStoreImageTaskResults withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -26,6 +28,7 @@ public class DescribeStoreImageTasksResultStoreImageTaskResults {
     
     
     public Long progressPercentage;
+
     public DescribeStoreImageTasksResultStoreImageTaskResults withProgressPercentage(Long progressPercentage) {
         this.progressPercentage = progressPercentage;
         return this;
@@ -33,6 +36,7 @@ public class DescribeStoreImageTasksResultStoreImageTaskResults {
     
     
     public String s3objectKey;
+
     public DescribeStoreImageTasksResultStoreImageTaskResults withS3objectKey(String s3objectKey) {
         this.s3objectKey = s3objectKey;
         return this;
@@ -40,6 +44,7 @@ public class DescribeStoreImageTasksResultStoreImageTaskResults {
     
     
     public String storeTaskFailureReason;
+
     public DescribeStoreImageTasksResultStoreImageTaskResults withStoreTaskFailureReason(String storeTaskFailureReason) {
         this.storeTaskFailureReason = storeTaskFailureReason;
         return this;
@@ -47,6 +52,7 @@ public class DescribeStoreImageTasksResultStoreImageTaskResults {
     
     
     public String storeTaskState;
+
     public DescribeStoreImageTasksResultStoreImageTaskResults withStoreTaskState(String storeTaskState) {
         this.storeTaskState = storeTaskState;
         return this;
@@ -54,9 +60,11 @@ public class DescribeStoreImageTasksResultStoreImageTaskResults {
     
     
     public OffsetDateTime taskStartTime;
+
     public DescribeStoreImageTasksResultStoreImageTaskResults withTaskStartTime(OffsetDateTime taskStartTime) {
         this.taskStartTime = taskStartTime;
         return this;
     }
     
+    public DescribeStoreImageTasksResultStoreImageTaskResults(){}
 }

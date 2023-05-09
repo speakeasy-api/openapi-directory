@@ -12,6 +12,7 @@ public class RejectPortfolioShareInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public RejectPortfolioShareInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class RejectPortfolioShareInput {
     
     @JsonProperty("PortfolioId")
     public String portfolioId;
+
     public RejectPortfolioShareInput withPortfolioId(String portfolioId) {
         this.portfolioId = portfolioId;
         return this;
@@ -27,9 +29,13 @@ public class RejectPortfolioShareInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortfolioShareType")
     public PortfolioShareTypeEnum portfolioShareType;
+
     public RejectPortfolioShareInput withPortfolioShareType(PortfolioShareTypeEnum portfolioShareType) {
         this.portfolioShareType = portfolioShareType;
         return this;
     }
     
+    public RejectPortfolioShareInput(@JsonProperty("PortfolioId") String portfolioId) {
+        this.portfolioId = portfolioId;
+  }
 }

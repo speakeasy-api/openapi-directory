@@ -14,6 +14,7 @@ public class UpdateAccountHolderRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public UpdateAccountHolderRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -22,6 +23,7 @@ public class UpdateAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderDetails")
     public AccountHolderDetails accountHolderDetails;
+
     public UpdateAccountHolderRequest withAccountHolderDetails(AccountHolderDetails accountHolderDetails) {
         this.accountHolderDetails = accountHolderDetails;
         return this;
@@ -33,6 +35,7 @@ public class UpdateAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateAccountHolderRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class UpdateAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryCurrency")
     public String primaryCurrency;
+
     public UpdateAccountHolderRequest withPrimaryCurrency(String primaryCurrency) {
         this.primaryCurrency = primaryCurrency;
         return this;
@@ -58,9 +62,13 @@ public class UpdateAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processingTier")
     public Integer processingTier;
+
     public UpdateAccountHolderRequest withProcessingTier(Integer processingTier) {
         this.processingTier = processingTier;
         return this;
     }
     
+    public UpdateAccountHolderRequest(@JsonProperty("accountHolderCode") String accountHolderCode) {
+        this.accountHolderCode = accountHolderCode;
+  }
 }

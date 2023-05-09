@@ -12,6 +12,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateApplicationRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,9 +20,13 @@ public class CreateApplicationRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateApplicationRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateApplicationRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSetBrokerRequest {
@@ -12,6 +13,7 @@ public class ProtocolMqttClientSetBrokerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolMqttClientSetBrokerRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolMqttClientSetBrokerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=brokerAddr")
     public String brokerAddr;
+
     public ProtocolMqttClientSetBrokerRequest withBrokerAddr(String brokerAddr) {
         this.brokerAddr = brokerAddr;
         return this;
     }
     
+    public ProtocolMqttClientSetBrokerRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("brokerAddr") String brokerAddr) {
+        this.agentNum = agentNum;
+        this.brokerAddr = brokerAddr;
+  }
 }

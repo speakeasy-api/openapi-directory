@@ -18,6 +18,7 @@ public class GeoRegionAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negative")
     public Boolean negative;
+
     public GeoRegionAssignedTargetingOptionDetailsInput withNegative(Boolean negative) {
         this.negative = negative;
         return this;
@@ -29,9 +30,11 @@ public class GeoRegionAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public GeoRegionAssignedTargetingOptionDetailsInput withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public GeoRegionAssignedTargetingOptionDetailsInput(){}
 }

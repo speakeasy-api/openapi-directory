@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PagespeedonlinePagespeedapiRunpagespeedRequest {
@@ -12,6 +13,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_third_party_resources")
     public Boolean filterThirdPartyResources;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withFilterThirdPartyResources(Boolean filterThirdPartyResources) {
         this.filterThirdPartyResources = filterThirdPartyResources;
         return this;
@@ -42,6 +46,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -62,6 +68,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,6 +101,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rule")
     public String[] rule;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withRule(String[] rule) {
         this.rule = rule;
         return this;
@@ -102,6 +112,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=screenshot")
     public Boolean screenshot;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withScreenshot(Boolean screenshot) {
         this.screenshot = screenshot;
         return this;
@@ -112,6 +123,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=strategy")
     public PagespeedonlinePagespeedapiRunpagespeedStrategyEnum strategy;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withStrategy(PagespeedonlinePagespeedapiRunpagespeedStrategyEnum strategy) {
         this.strategy = strategy;
         return this;
@@ -122,6 +134,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withUrl(String url) {
         this.url = url;
         return this;
@@ -132,9 +145,13 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public PagespeedonlinePagespeedapiRunpagespeedRequest(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

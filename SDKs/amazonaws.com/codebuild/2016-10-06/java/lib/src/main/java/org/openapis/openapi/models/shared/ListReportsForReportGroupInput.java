@@ -12,6 +12,7 @@ public class ListReportsForReportGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public ReportFilter filter;
+
     public ListReportsForReportGroupInput withFilter(ReportFilter filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListReportsForReportGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListReportsForReportGroupInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListReportsForReportGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListReportsForReportGroupInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,6 +38,7 @@ public class ListReportsForReportGroupInput {
     
     @JsonProperty("reportGroupArn")
     public String reportGroupArn;
+
     public ListReportsForReportGroupInput withReportGroupArn(String reportGroupArn) {
         this.reportGroupArn = reportGroupArn;
         return this;
@@ -43,9 +47,13 @@ public class ListReportsForReportGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderTypeEnum sortOrder;
+
     public ListReportsForReportGroupInput withSortOrder(SortOrderTypeEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListReportsForReportGroupInput(@JsonProperty("reportGroupArn") String reportGroupArn) {
+        this.reportGroupArn = reportGroupArn;
+  }
 }

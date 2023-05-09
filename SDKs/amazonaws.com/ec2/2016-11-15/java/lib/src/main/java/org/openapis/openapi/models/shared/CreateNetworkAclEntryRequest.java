@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateNetworkAclEntryRequest {
     
     public String cidrBlock;
+
     public CreateNetworkAclEntryRequest withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -16,6 +17,7 @@ public class CreateNetworkAclEntryRequest {
     
     
     public Boolean dryRun;
+
     public CreateNetworkAclEntryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class CreateNetworkAclEntryRequest {
     
     
     public Boolean egress;
+
     public CreateNetworkAclEntryRequest withEgress(Boolean egress) {
         this.egress = egress;
         return this;
@@ -30,6 +33,7 @@ public class CreateNetworkAclEntryRequest {
     
     
     public CreateNetworkAclEntryRequestIcmpTypeCode icmpTypeCode;
+
     public CreateNetworkAclEntryRequest withIcmpTypeCode(CreateNetworkAclEntryRequestIcmpTypeCode icmpTypeCode) {
         this.icmpTypeCode = icmpTypeCode;
         return this;
@@ -37,6 +41,7 @@ public class CreateNetworkAclEntryRequest {
     
     
     public String ipv6CidrBlock;
+
     public CreateNetworkAclEntryRequest withIpv6CidrBlock(String ipv6CidrBlock) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         return this;
@@ -44,6 +49,7 @@ public class CreateNetworkAclEntryRequest {
     
     
     public String networkAclId;
+
     public CreateNetworkAclEntryRequest withNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
@@ -51,6 +57,7 @@ public class CreateNetworkAclEntryRequest {
     
     
     public CreateNetworkAclEntryRequestPortRange portRange;
+
     public CreateNetworkAclEntryRequest withPortRange(CreateNetworkAclEntryRequestPortRange portRange) {
         this.portRange = portRange;
         return this;
@@ -58,6 +65,7 @@ public class CreateNetworkAclEntryRequest {
     
     
     public String protocol;
+
     public CreateNetworkAclEntryRequest withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -65,6 +73,7 @@ public class CreateNetworkAclEntryRequest {
     
     
     public CreateNetworkAclEntryRequestRuleActionEnum ruleAction;
+
     public CreateNetworkAclEntryRequest withRuleAction(CreateNetworkAclEntryRequestRuleActionEnum ruleAction) {
         this.ruleAction = ruleAction;
         return this;
@@ -72,9 +81,17 @@ public class CreateNetworkAclEntryRequest {
     
     
     public Long ruleNumber;
+
     public CreateNetworkAclEntryRequest withRuleNumber(Long ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
     }
     
+    public CreateNetworkAclEntryRequest(@JsonProperty("Egress") Boolean egress, @JsonProperty("NetworkAclId") String networkAclId, @JsonProperty("Protocol") String protocol, @JsonProperty("RuleAction") CreateNetworkAclEntryRequestRuleActionEnum ruleAction, @JsonProperty("RuleNumber") Long ruleNumber) {
+        this.egress = egress;
+        this.networkAclId = networkAclId;
+        this.protocol = protocol;
+        this.ruleAction = ruleAction;
+        this.ruleNumber = ruleNumber;
+  }
 }

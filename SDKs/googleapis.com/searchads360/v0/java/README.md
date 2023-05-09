@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListSecurity;
 import org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListRequest;
 import org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListResponse;
+import org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,12 +28,11 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            Searchads360CustomersCustomColumnsListRequest req = new Searchads360CustomersCustomColumnsListRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                customerId = "unde";
+            Searchads360CustomersCustomColumnsListRequest req = new Searchads360CustomersCustomColumnsListRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
                 fields = "nulla";
                 key = "corrupti";
                 oauthToken = "illum";
@@ -42,19 +40,21 @@ public class Application {
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
-            Searchads360CustomersCustomColumnsListResponse res = sdk.customers.searchads360CustomersCustomColumnsList(req, new Searchads360CustomersCustomColumnsListSecurity() {{
+            Searchads360CustomersCustomColumnsListResponse res = sdk.customers.searchads360CustomersCustomColumnsList(req, new Searchads360CustomersCustomColumnsListSecurity("suscipit", "iure") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleAdsSearchads360V0ServicesListCustomColumnsResponse.isPresent()) {
+            if (res.googleAdsSearchads360V0ServicesListCustomColumnsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -62,16 +62,15 @@ public class Application {
 ## Available Resources and Operations
 
 
-### customers
+### [customers](docs/customers/README.md)
 
-* `searchads360CustomersCustomColumnsList` - Returns all the custom columns associated with the customer in full detail.
-* `searchads360CustomersSearchAds360Search` - Returns all rows that match the search query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
-* `searchads360CustomersSearchAds360SearchStream` - Returns all rows that match the search stream query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
+* [searchads360CustomersCustomColumnsList](docs/customers/README.md#searchads360customerscustomcolumnslist) - Returns all the custom columns associated with the customer in full detail.
+* [searchads360CustomersSearchAds360Search](docs/customers/README.md#searchads360customerssearchads360search) - Returns all rows that match the search query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
 
-### searchAds360Fields
+### [searchAds360Fields](docs/searchads360fields/README.md)
 
-* `searchads360SearchAds360FieldsGet` - Returns just the requested field. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QuotaError]() [RequestError]()
-* `searchads360SearchAds360FieldsSearch` - Returns all fields that match the search query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
+* [searchads360SearchAds360FieldsGet](docs/searchads360fields/README.md#searchads360searchads360fieldsget) - Returns just the requested field. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QuotaError]() [RequestError]()
+* [searchads360SearchAds360FieldsSearch](docs/searchads360fields/README.md#searchads360searchads360fieldssearch) - Returns all fields that match the search query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
 <!-- End SDK Available Operations -->
 
 ### Maturity

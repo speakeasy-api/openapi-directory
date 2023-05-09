@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSmUsersRequest {
@@ -12,6 +13,7 @@ public class GetNetworkSmUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=emails")
     public String emails;
+
     public GetNetworkSmUsersRequest withEmails(String emails) {
         this.emails = emails;
         return this;
@@ -22,6 +24,7 @@ public class GetNetworkSmUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String ids;
+
     public GetNetworkSmUsersRequest withIds(String ids) {
         this.ids = ids;
         return this;
@@ -29,6 +32,7 @@ public class GetNetworkSmUsersRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public GetNetworkSmUsersRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -39,6 +43,7 @@ public class GetNetworkSmUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
     public String scope;
+
     public GetNetworkSmUsersRequest withScope(String scope) {
         this.scope = scope;
         return this;
@@ -49,9 +54,13 @@ public class GetNetworkSmUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=usernames")
     public String usernames;
+
     public GetNetworkSmUsersRequest withUsernames(String usernames) {
         this.usernames = usernames;
         return this;
     }
     
+    public GetNetworkSmUsersRequest(@JsonProperty("networkId") String networkId) {
+        this.networkId = networkId;
+  }
 }

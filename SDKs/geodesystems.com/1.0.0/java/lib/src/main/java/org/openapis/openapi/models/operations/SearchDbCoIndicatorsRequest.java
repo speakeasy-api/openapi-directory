@@ -13,6 +13,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchDbCoIndicatorsRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchDbCoIndicatorsRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchDbCoIndicatorsRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchDbCoIndicatorsRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchDbCoIndicatorsRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchDbCoIndicatorsRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchDbCoIndicatorsRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchDbCoIndicatorsRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchDbCoIndicatorsRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchDbCoIndicatorsRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchDbCoIndicatorsRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchDbCoIndicatorsRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchDbCoIndicatorsRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchDbCoIndicatorsRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_db_co_indicators.description")
     public String searchDbDbCoIndicatorsDescription;
+
     public SearchDbCoIndicatorsRequest withSearchDbDbCoIndicatorsDescription(String searchDbDbCoIndicatorsDescription) {
         this.searchDbDbCoIndicatorsDescription = searchDbDbCoIndicatorsDescription;
         return this;
@@ -163,6 +178,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_db_co_indicators.domain")
     public String searchDbDbCoIndicatorsDomain;
+
     public SearchDbCoIndicatorsRequest withSearchDbDbCoIndicatorsDomain(String searchDbDbCoIndicatorsDomain) {
         this.searchDbDbCoIndicatorsDomain = searchDbDbCoIndicatorsDomain;
         return this;
@@ -173,6 +189,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_db_co_indicators.geo_name")
     public String searchDbDbCoIndicatorsGeoName;
+
     public SearchDbCoIndicatorsRequest withSearchDbDbCoIndicatorsGeoName(String searchDbDbCoIndicatorsGeoName) {
         this.searchDbDbCoIndicatorsGeoName = searchDbDbCoIndicatorsGeoName;
         return this;
@@ -183,6 +200,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_db_co_indicators.indicatorName")
     public String searchDbDbCoIndicatorsIndicatorName;
+
     public SearchDbCoIndicatorsRequest withSearchDbDbCoIndicatorsIndicatorName(String searchDbDbCoIndicatorsIndicatorName) {
         this.searchDbDbCoIndicatorsIndicatorName = searchDbDbCoIndicatorsIndicatorName;
         return this;
@@ -193,6 +211,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_db_co_indicators.location")
     public String searchDbDbCoIndicatorsLocation;
+
     public SearchDbCoIndicatorsRequest withSearchDbDbCoIndicatorsLocation(String searchDbDbCoIndicatorsLocation) {
         this.searchDbDbCoIndicatorsLocation = searchDbDbCoIndicatorsLocation;
         return this;
@@ -203,6 +222,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_db_co_indicators.measure")
     public Double searchDbDbCoIndicatorsMeasure;
+
     public SearchDbCoIndicatorsRequest withSearchDbDbCoIndicatorsMeasure(Double searchDbDbCoIndicatorsMeasure) {
         this.searchDbDbCoIndicatorsMeasure = searchDbDbCoIndicatorsMeasure;
         return this;
@@ -213,6 +233,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_db_co_indicators.subdomain")
     public String searchDbDbCoIndicatorsSubdomain;
+
     public SearchDbCoIndicatorsRequest withSearchDbDbCoIndicatorsSubdomain(String searchDbDbCoIndicatorsSubdomain) {
         this.searchDbDbCoIndicatorsSubdomain = searchDbDbCoIndicatorsSubdomain;
         return this;
@@ -223,6 +244,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchDbCoIndicatorsRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -233,6 +255,7 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchDbCoIndicatorsRequest withText(String text) {
         this.text = text;
         return this;
@@ -243,9 +266,11 @@ public class SearchDbCoIndicatorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchDbCoIndicatorsRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchDbCoIndicatorsRequest(){}
 }

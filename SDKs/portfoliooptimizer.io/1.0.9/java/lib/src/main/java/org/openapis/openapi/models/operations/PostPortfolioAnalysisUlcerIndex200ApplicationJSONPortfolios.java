@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisUlcerIndex200ApplicationJSONPortfolios {
      */
     @JsonProperty("portfolioUlcerIndex")
     public Double portfolioUlcerIndex;
+
     public PostPortfolioAnalysisUlcerIndex200ApplicationJSONPortfolios withPortfolioUlcerIndex(Double portfolioUlcerIndex) {
         this.portfolioUlcerIndex = portfolioUlcerIndex;
         return this;
     }
     
+    public PostPortfolioAnalysisUlcerIndex200ApplicationJSONPortfolios(@JsonProperty("portfolioUlcerIndex") Double portfolioUlcerIndex) {
+        this.portfolioUlcerIndex = portfolioUlcerIndex;
+  }
 }

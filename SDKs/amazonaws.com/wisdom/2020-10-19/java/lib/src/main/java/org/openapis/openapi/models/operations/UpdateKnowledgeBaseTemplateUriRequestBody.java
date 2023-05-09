@@ -12,9 +12,13 @@ public class UpdateKnowledgeBaseTemplateUriRequestBody {
      */
     @JsonProperty("templateUri")
     public String templateUri;
+
     public UpdateKnowledgeBaseTemplateUriRequestBody withTemplateUri(String templateUri) {
         this.templateUri = templateUri;
         return this;
     }
     
+    public UpdateKnowledgeBaseTemplateUriRequestBody(@JsonProperty("templateUri") String templateUri) {
+        this.templateUri = templateUri;
+  }
 }

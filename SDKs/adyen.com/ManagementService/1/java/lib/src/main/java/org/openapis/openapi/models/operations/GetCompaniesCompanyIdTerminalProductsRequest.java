@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdTerminalProductsRequest {
@@ -12,6 +13,7 @@ public class GetCompaniesCompanyIdTerminalProductsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public GetCompaniesCompanyIdTerminalProductsRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,6 +24,7 @@ public class GetCompaniesCompanyIdTerminalProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public GetCompaniesCompanyIdTerminalProductsRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -32,6 +35,7 @@ public class GetCompaniesCompanyIdTerminalProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetCompaniesCompanyIdTerminalProductsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +46,7 @@ public class GetCompaniesCompanyIdTerminalProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetCompaniesCompanyIdTerminalProductsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -52,9 +57,14 @@ public class GetCompaniesCompanyIdTerminalProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=terminalModelId")
     public String terminalModelId;
+
     public GetCompaniesCompanyIdTerminalProductsRequest withTerminalModelId(String terminalModelId) {
         this.terminalModelId = terminalModelId;
         return this;
     }
     
+    public GetCompaniesCompanyIdTerminalProductsRequest(@JsonProperty("companyId") String companyId, @JsonProperty("country") String country) {
+        this.companyId = companyId;
+        this.country = country;
+  }
 }

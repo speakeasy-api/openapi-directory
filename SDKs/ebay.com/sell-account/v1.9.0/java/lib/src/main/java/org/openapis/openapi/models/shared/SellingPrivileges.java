@@ -18,6 +18,7 @@ public class SellingPrivileges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerRegistrationCompleted")
     public Boolean sellerRegistrationCompleted;
+
     public SellingPrivileges withSellerRegistrationCompleted(Boolean sellerRegistrationCompleted) {
         this.sellerRegistrationCompleted = sellerRegistrationCompleted;
         return this;
@@ -29,9 +30,11 @@ public class SellingPrivileges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellingLimit")
     public SellingLimit sellingLimit;
+
     public SellingPrivileges withSellingLimit(SellingLimit sellingLimit) {
         this.sellingLimit = sellingLimit;
         return this;
     }
     
+    public SellingPrivileges(){}
 }

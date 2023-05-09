@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartingLineupsByDateResponse {
     
     public String contentType;
+
     public StartingLineupsByDateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class StartingLineupsByDateResponse {
     
     
     public org.openapis.openapi.models.shared.StartingLineups[] startingLineups;
+
     public StartingLineupsByDateResponse withStartingLineups(org.openapis.openapi.models.shared.StartingLineups[] startingLineups) {
         this.startingLineups = startingLineups;
         return this;
@@ -23,6 +26,7 @@ public class StartingLineupsByDateResponse {
     
     
     public Integer statusCode;
+
     public StartingLineupsByDateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class StartingLineupsByDateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartingLineupsByDateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartingLineupsByDateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

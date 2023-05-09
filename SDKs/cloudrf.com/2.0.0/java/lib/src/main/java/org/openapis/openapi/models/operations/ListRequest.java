@@ -12,6 +12,7 @@ public class ListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=e")
     public Float e;
+
     public ListRequest withE(Float e) {
         this.e = e;
         return this;
@@ -22,6 +23,7 @@ public class ListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=n")
     public Float n;
+
     public ListRequest withN(Float n) {
         this.n = n;
         return this;
@@ -32,6 +34,7 @@ public class ListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=s")
     public Float s;
+
     public ListRequest withS(Float s) {
         this.s = s;
         return this;
@@ -42,9 +45,11 @@ public class ListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=w")
     public Float w;
+
     public ListRequest withW(Float w) {
         this.w = w;
         return this;
     }
     
+    public ListRequest(){}
 }

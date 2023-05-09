@@ -15,6 +15,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyPayeeAccount account;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyPayee withAccount(GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyPayeeAccount account) {
         this.account = account;
         return this;
@@ -23,9 +24,11 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyPayeeTypeEnum type;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyPayee withType(GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyPayeeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyPayee(){}
 }

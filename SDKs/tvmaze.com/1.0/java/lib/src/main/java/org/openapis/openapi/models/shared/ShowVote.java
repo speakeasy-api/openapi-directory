@@ -15,6 +15,7 @@ public class ShowVote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_id")
     public Long showId;
+
     public ShowVote withShowId(Long showId) {
         this.showId = showId;
         return this;
@@ -26,6 +27,7 @@ public class ShowVote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vote")
     public Long vote;
+
     public ShowVote withVote(Long vote) {
         this.vote = vote;
         return this;
@@ -37,9 +39,11 @@ public class ShowVote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voted_at")
     public Long votedAt;
+
     public ShowVote withVotedAt(Long votedAt) {
         this.votedAt = votedAt;
         return this;
     }
     
+    public ShowVote(){}
 }

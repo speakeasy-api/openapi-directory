@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Duplicate1Request {
@@ -12,9 +13,13 @@ public class Duplicate1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
     public Long reportId;
+
     public Duplicate1Request withReportId(Long reportId) {
         this.reportId = reportId;
         return this;
     }
     
+    public Duplicate1Request(@JsonProperty("reportId") Long reportId) {
+        this.reportId = reportId;
+  }
 }

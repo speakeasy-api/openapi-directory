@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLifecyclePolicyResponse {
     
     public String contentType;
+
     public GetLifecyclePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetLifecyclePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLifecyclePolicyResponse getLifecyclePolicyResponse;
+
     public GetLifecyclePolicyResponse withGetLifecyclePolicyResponse(org.openapis.openapi.models.shared.GetLifecyclePolicyResponse getLifecyclePolicyResponse) {
         this.getLifecyclePolicyResponse = getLifecyclePolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetLifecyclePolicyResponse {
      */
     
     public Object internalServerException;
+
     public GetLifecyclePolicyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetLifecyclePolicyResponse {
      */
     
     public Object limitExceededException;
+
     public GetLifecyclePolicyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class GetLifecyclePolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetLifecyclePolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetLifecyclePolicyResponse {
     
     
     public Integer statusCode;
+
     public GetLifecyclePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetLifecyclePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLifecyclePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetLifecyclePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

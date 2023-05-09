@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class PostV2CalendarEventsUpsertRequestBody {
      */
     @SpeakeasyMetadata("form:name=all_day")
     public Boolean allDay;
+
     public PostV2CalendarEventsUpsertRequestBody withAllDay(Boolean allDay) {
         this.allDay = allDay;
         return this;
@@ -51,6 +53,7 @@ public class PostV2CalendarEventsUpsertRequestBody {
      */
     @SpeakeasyMetadata("form:name=attendees,json")
     public java.util.Map<String, Object> attendees;
+
     public PostV2CalendarEventsUpsertRequestBody withAttendees(java.util.Map<String, Object> attendees) {
         this.attendees = attendees;
         return this;
@@ -64,6 +67,7 @@ public class PostV2CalendarEventsUpsertRequestBody {
      */
     @SpeakeasyMetadata("form:name=calendar_id")
     public String calendarId;
+
     public PostV2CalendarEventsUpsertRequestBody withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -76,6 +80,7 @@ public class PostV2CalendarEventsUpsertRequestBody {
      */
     @SpeakeasyMetadata("form:name=canceled_at")
     public String canceledAt;
+
     public PostV2CalendarEventsUpsertRequestBody withCanceledAt(String canceledAt) {
         this.canceledAt = canceledAt;
         return this;
@@ -86,6 +91,7 @@ public class PostV2CalendarEventsUpsertRequestBody {
      */
     @SpeakeasyMetadata("form:name=description")
     public String description;
+
     public PostV2CalendarEventsUpsertRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -98,6 +104,7 @@ public class PostV2CalendarEventsUpsertRequestBody {
      */
     @SpeakeasyMetadata("form:name=end_time")
     public LocalDate endTime;
+
     public PostV2CalendarEventsUpsertRequestBody withEndTime(LocalDate endTime) {
         this.endTime = endTime;
         return this;
@@ -111,6 +118,7 @@ public class PostV2CalendarEventsUpsertRequestBody {
      */
     @SpeakeasyMetadata("form:name=i_cal_uid")
     public String iCalUid;
+
     public PostV2CalendarEventsUpsertRequestBody withICalUid(String iCalUid) {
         this.iCalUid = iCalUid;
         return this;
@@ -124,6 +132,7 @@ public class PostV2CalendarEventsUpsertRequestBody {
      */
     @SpeakeasyMetadata("form:name=id")
     public String id;
+
     public PostV2CalendarEventsUpsertRequestBody withId(String id) {
         this.id = id;
         return this;
@@ -134,6 +143,7 @@ public class PostV2CalendarEventsUpsertRequestBody {
      */
     @SpeakeasyMetadata("form:name=location")
     public String location;
+
     public PostV2CalendarEventsUpsertRequestBody withLocation(String location) {
         this.location = location;
         return this;
@@ -145,6 +155,7 @@ public class PostV2CalendarEventsUpsertRequestBody {
      */
     @SpeakeasyMetadata("form:name=organizer")
     public String organizer;
+
     public PostV2CalendarEventsUpsertRequestBody withOrganizer(String organizer) {
         this.organizer = organizer;
         return this;
@@ -155,6 +166,7 @@ public class PostV2CalendarEventsUpsertRequestBody {
      */
     @SpeakeasyMetadata("form:name=recurring")
     public Boolean recurring;
+
     public PostV2CalendarEventsUpsertRequestBody withRecurring(Boolean recurring) {
         this.recurring = recurring;
         return this;
@@ -167,6 +179,7 @@ public class PostV2CalendarEventsUpsertRequestBody {
      */
     @SpeakeasyMetadata("form:name=start_time")
     public LocalDate startTime;
+
     public PostV2CalendarEventsUpsertRequestBody withStartTime(LocalDate startTime) {
         this.startTime = startTime;
         return this;
@@ -180,6 +193,7 @@ public class PostV2CalendarEventsUpsertRequestBody {
      */
     @SpeakeasyMetadata("form:name=status")
     public String status;
+
     public PostV2CalendarEventsUpsertRequestBody withStatus(String status) {
         this.status = status;
         return this;
@@ -190,9 +204,30 @@ public class PostV2CalendarEventsUpsertRequestBody {
      */
     @SpeakeasyMetadata("form:name=title")
     public String title;
+
     public PostV2CalendarEventsUpsertRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    /**
+     *   Last modification time of the event in the ISO 8601 format with a time zone offset. The event will not be updated if the 'updated_at' timestamp from the payload is earlier than the one in the database.
+     *   Example: `2022-02-14T10:12:59+00:00`.
+     * 
+     */
+    @SpeakeasyMetadata("form:name=updated_at")
+    public String updatedAt;
+
+    public PostV2CalendarEventsUpsertRequestBody withUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    
+    public PostV2CalendarEventsUpsertRequestBody(@JsonProperty("calendar_id") String calendarId, @JsonProperty("end_time") LocalDate endTime, @JsonProperty("i_cal_uid") String iCalUid, @JsonProperty("id") String id, @JsonProperty("start_time") LocalDate startTime) {
+        this.calendarId = calendarId;
+        this.endTime = endTime;
+        this.iCalUid = iCalUid;
+        this.id = id;
+        this.startTime = startTime;
+  }
 }

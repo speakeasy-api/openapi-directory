@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSubscribersResponse {
@@ -12,6 +13,7 @@ public class ListSubscribersResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSubscribersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListSubscribersResponse {
      */
     
     public Object accountNotFoundException;
+
     public ListSubscribersResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class ListSubscribersResponse {
     
     
     public String contentType;
+
     public ListSubscribersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListSubscribersResponse {
      */
     
     public Object internalServerException;
+
     public ListSubscribersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListSubscribersResponse {
      */
     
     public Object invalidInputException;
+
     public ListSubscribersResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class ListSubscribersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSubscribersResponse listSubscribersResponse;
+
     public ListSubscribersResponse withListSubscribersResponse(org.openapis.openapi.models.shared.ListSubscribersResponse listSubscribersResponse) {
         this.listSubscribersResponse = listSubscribersResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListSubscribersResponse {
     
     
     public Integer statusCode;
+
     public ListSubscribersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListSubscribersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSubscribersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListSubscribersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSubscribersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class ListSubscribersResponse {
      */
     
     public Object validationException;
+
     public ListSubscribersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSubscribersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

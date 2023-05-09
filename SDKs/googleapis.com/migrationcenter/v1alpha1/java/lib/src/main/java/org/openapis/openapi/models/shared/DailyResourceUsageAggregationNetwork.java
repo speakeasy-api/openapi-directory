@@ -18,6 +18,7 @@ public class DailyResourceUsageAggregationNetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("egressBps")
     public DailyResourceUsageAggregationStats egressBps;
+
     public DailyResourceUsageAggregationNetwork withEgressBps(DailyResourceUsageAggregationStats egressBps) {
         this.egressBps = egressBps;
         return this;
@@ -29,9 +30,11 @@ public class DailyResourceUsageAggregationNetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingressBps")
     public DailyResourceUsageAggregationStats ingressBps;
+
     public DailyResourceUsageAggregationNetwork withIngressBps(DailyResourceUsageAggregationStats ingressBps) {
         this.ingressBps = ingressBps;
         return this;
     }
     
+    public DailyResourceUsageAggregationNetwork(){}
 }

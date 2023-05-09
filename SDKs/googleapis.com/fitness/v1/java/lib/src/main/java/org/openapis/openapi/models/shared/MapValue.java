@@ -18,9 +18,11 @@ public class MapValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fpVal")
     public Double fpVal;
+
     public MapValue withFpVal(Double fpVal) {
         this.fpVal = fpVal;
         return this;
     }
     
+    public MapValue(){}
 }

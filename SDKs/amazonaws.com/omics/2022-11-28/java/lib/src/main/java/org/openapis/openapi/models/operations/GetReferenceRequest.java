@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReferenceRequest {
@@ -12,6 +13,7 @@ public class GetReferenceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
     public String range;
+
     public GetReferenceRequest withRange(String range) {
         this.range = range;
         return this;
@@ -19,6 +21,7 @@ public class GetReferenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetReferenceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -26,6 +29,7 @@ public class GetReferenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetReferenceRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -33,6 +37,7 @@ public class GetReferenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetReferenceRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -40,6 +45,7 @@ public class GetReferenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetReferenceRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -47,6 +53,7 @@ public class GetReferenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetReferenceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -54,6 +61,7 @@ public class GetReferenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetReferenceRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -61,6 +69,7 @@ public class GetReferenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetReferenceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -71,6 +80,7 @@ public class GetReferenceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file")
     public GetReferenceFileEnum file;
+
     public GetReferenceRequest withFile(GetReferenceFileEnum file) {
         this.file = file;
         return this;
@@ -81,6 +91,7 @@ public class GetReferenceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetReferenceRequest withId(String id) {
         this.id = id;
         return this;
@@ -91,6 +102,7 @@ public class GetReferenceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partNumber")
     public Long partNumber;
+
     public GetReferenceRequest withPartNumber(Long partNumber) {
         this.partNumber = partNumber;
         return this;
@@ -101,9 +113,15 @@ public class GetReferenceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=referenceStoreId")
     public String referenceStoreId;
+
     public GetReferenceRequest withReferenceStoreId(String referenceStoreId) {
         this.referenceStoreId = referenceStoreId;
         return this;
     }
     
+    public GetReferenceRequest(@JsonProperty("id") String id, @JsonProperty("partNumber") Long partNumber, @JsonProperty("referenceStoreId") String referenceStoreId) {
+        this.id = id;
+        this.partNumber = partNumber;
+        this.referenceStoreId = referenceStoreId;
+  }
 }

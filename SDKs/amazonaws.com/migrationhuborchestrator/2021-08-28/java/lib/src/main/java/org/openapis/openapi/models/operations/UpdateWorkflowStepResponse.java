@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWorkflowStepResponse {
@@ -12,6 +13,7 @@ public class UpdateWorkflowStepResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateWorkflowStepResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateWorkflowStepResponse {
     
     
     public String contentType;
+
     public UpdateWorkflowStepResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateWorkflowStepResponse {
      */
     
     public Object internalServerException;
+
     public UpdateWorkflowStepResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateWorkflowStepResponse {
     
     
     public Integer statusCode;
+
     public UpdateWorkflowStepResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateWorkflowStepResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWorkflowStepResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateWorkflowStepResponse {
      */
     
     public Object throttlingException;
+
     public UpdateWorkflowStepResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateWorkflowStepResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateWorkflowStepResponse updateWorkflowStepResponse;
+
     public UpdateWorkflowStepResponse withUpdateWorkflowStepResponse(org.openapis.openapi.models.shared.UpdateWorkflowStepResponse updateWorkflowStepResponse) {
         this.updateWorkflowStepResponse = updateWorkflowStepResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateWorkflowStepResponse {
      */
     
     public Object validationException;
+
     public UpdateWorkflowStepResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateWorkflowStepResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

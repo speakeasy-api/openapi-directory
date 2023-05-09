@@ -16,7 +16,7 @@ import org.openapis.openapi.utils.SerializedBody;
 import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 
 /**
- * &lt;p&gt; &lt;b&gt;Introduction&lt;/b&gt; &lt;/p&gt; &lt;p&gt;The Amazon Interactive Video Service (IVS) API is REST compatible, using a standard HTTP API and an Amazon Web Services EventBridge event stream for responses. JSON is used for both requests and responses, including errors.&lt;/p&gt; &lt;p&gt;The API is an Amazon Web Services regional service. For a list of supported regions and Amazon IVS HTTPS service endpoints, see the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/ivs.html"&gt;Amazon IVS page&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General Reference&lt;/i&gt;.&lt;/p&gt; &lt;p&gt; &lt;i&gt; &lt;b&gt;All API request parameters and URLs are case sensitive. &lt;/b&gt; &lt;/i&gt; &lt;/p&gt; &lt;p&gt;For a summary of notable documentation changes in each release, see &lt;a href="https://docs.aws.amazon.com/ivs/latest/userguide/doc-history.html"&gt; Document History&lt;/a&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Allowed Header Values&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt; &lt;b&gt;Accept:&lt;/b&gt; &lt;/code&gt; application/json&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt; &lt;b&gt;Accept-Encoding:&lt;/b&gt; &lt;/code&gt; gzip, deflate&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt; &lt;b&gt;Content-Type:&lt;/b&gt; &lt;/code&gt;application/json&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;Resources&lt;/b&gt; &lt;/p&gt; &lt;p&gt;The following resources contain information about your IVS live stream (see &lt;a href="https://docs.aws.amazon.com/ivs/latest/userguide/getting-started.html"&gt; Getting Started with Amazon IVS&lt;/a&gt;):&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Channel \u2014 Stores configuration data related to your live stream. You first create a channel and then use the channel\u2019s stream key to start your live stream. See the Channel endpoints for more information. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Stream key \u2014 An identifier assigned by Amazon IVS when you create a channel, which is then used to authorize streaming. See the StreamKey endpoints for more information. &lt;i&gt; &lt;b&gt;Treat the stream key like a secret, since it allows anyone to stream to the channel.&lt;/b&gt; &lt;/i&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Playback key pair \u2014 Video playback may be restricted using playback-authorization tokens, which use public-key encryption. A playback key pair is the public-private pair of keys used to sign and validate the playback-authorization token. See the PlaybackKeyPair endpoints for more information.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Recording configuration \u2014 Stores configuration related to recording a live stream and where to store the recorded content. Multiple channels can reference the same recording configuration. See the Recording Configuration endpoints for more information.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;Tagging&lt;/b&gt; &lt;/p&gt; &lt;p&gt;A &lt;i&gt;tag&lt;/i&gt; is a metadata label that you assign to an Amazon Web Services resource. A tag comprises a &lt;i&gt;key&lt;/i&gt; and a &lt;i&gt;value&lt;/i&gt;, both set by you. For example, you might set a tag as &lt;code&gt;topic:nature&lt;/code&gt; to label a particular video category. See &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"&gt;Tagging Amazon Web Services Resources&lt;/a&gt; for more information, including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon IVS has no service-specific constraints beyond what is documented there.&lt;/p&gt; &lt;p&gt;Tags can help you identify and organize your Amazon Web Services resources. For example, you can use the same tag for different resources to indicate that they are related. You can also use tags to manage access (see &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html"&gt; Access Tags&lt;/a&gt;). &lt;/p&gt; &lt;p&gt;The Amazon IVS API has these tag-related endpoints: &lt;a&gt;TagResource&lt;/a&gt;, &lt;a&gt;UntagResource&lt;/a&gt;, and &lt;a&gt;ListTagsForResource&lt;/a&gt;. The following resources support tagging: Channels, Stream Keys, Playback Key Pairs, and Recording Configurations.&lt;/p&gt; &lt;p&gt;At most 50 tags can be applied to a resource. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Authentication versus Authorization&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Note the differences between these concepts:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;i&gt;Authentication&lt;/i&gt; is about verifying identity. You need to be authenticated to sign Amazon IVS API requests.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;i&gt;Authorization&lt;/i&gt; is about granting permissions. Your IAM roles need to have permissions for Amazon IVS API requests. In addition, authorization is needed to view &lt;a href="https://docs.aws.amazon.com/ivs/latest/userguide/private-channels.html"&gt;Amazon IVS private channels&lt;/a&gt;. (Private channels are channels that are enabled for "playback authorization.")&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;Authentication&lt;/b&gt; &lt;/p&gt; &lt;p&gt;All Amazon IVS API requests must be authenticated with a signature. The Amazon Web Services Command-Line Interface (CLI) and Amazon IVS Player SDKs take care of signing the underlying API calls for you. However, if your application calls the Amazon IVS API directly, it\u2019s your responsibility to sign the requests.&lt;/p&gt; &lt;p&gt;You generate a signature using valid Amazon Web Services credentials that have permission to perform the requested action. For example, you must sign PutMetadata requests with a signature generated from a user account that has the &lt;code&gt;ivs:PutMetadata&lt;/code&gt; permission.&lt;/p&gt; &lt;p&gt;For more information:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Authentication and generating signatures \u2014 See &lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html"&gt;Authenticating Requests (Amazon Web Services Signature Version 4)&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General Reference&lt;/i&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Managing Amazon IVS permissions \u2014 See &lt;a href="https://docs.aws.amazon.com/ivs/latest/userguide/security-iam.html"&gt;Identity and Access Management&lt;/a&gt; on the Security page of the &lt;i&gt;Amazon IVS User Guide&lt;/i&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;Amazon Resource Names (ARNs)&lt;/b&gt; &lt;/p&gt; &lt;p&gt;ARNs uniquely identify AWS resources. An ARN is required when you need to specify a resource unambiguously across all of AWS, such as in IAM policies and API calls. For more information, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Names&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Channel Endpoints&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateChannel&lt;/a&gt; \u2014 Creates a new channel and an associated stream key to start streaming.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetChannel&lt;/a&gt; \u2014 Gets the channel configuration for the specified channel ARN.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;BatchGetChannel&lt;/a&gt; \u2014 Performs &lt;a&gt;GetChannel&lt;/a&gt; on multiple ARNs simultaneously.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListChannels&lt;/a&gt; \u2014 Gets summary information about all channels in your account, in the Amazon Web Services region where the API request is processed. This list can be filtered to match a specified name or recording-configuration ARN. Filters are mutually exclusive and cannot be used together. If you try to use both filters, you will get an error (409 Conflict Exception).&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;UpdateChannel&lt;/a&gt; \u2014 Updates a channel's configuration. This does not affect an ongoing stream of this channel. You must stop and restart the stream for the changes to take effect.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;DeleteChannel&lt;/a&gt; \u2014 Deletes the specified channel.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;StreamKey Endpoints&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateStreamKey&lt;/a&gt; \u2014 Creates a stream key, used to initiate a stream, for the specified channel ARN.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetStreamKey&lt;/a&gt; \u2014 Gets stream key information for the specified ARN.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;BatchGetStreamKey&lt;/a&gt; \u2014 Performs &lt;a&gt;GetStreamKey&lt;/a&gt; on multiple ARNs simultaneously.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListStreamKeys&lt;/a&gt; \u2014 Gets summary information about stream keys for the specified channel.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;DeleteStreamKey&lt;/a&gt; \u2014 Deletes the stream key for the specified ARN, so it can no longer be used to stream.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;Stream Endpoints&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetStream&lt;/a&gt; \u2014 Gets information about the active (live) stream on a specified channel.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetStreamSession&lt;/a&gt; \u2014 Gets metadata on a specified stream.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListStreams&lt;/a&gt; \u2014 Gets summary information about live streams in your account, in the Amazon Web Services region where the API request is processed.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListStreamSessions&lt;/a&gt; \u2014 Gets a summary of current and previous streams for a specified channel in your account, in the AWS region where the API request is processed.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;StopStream&lt;/a&gt; \u2014 Disconnects the incoming RTMPS stream for the specified channel. Can be used in conjunction with &lt;a&gt;DeleteStreamKey&lt;/a&gt; to prevent further streaming to a channel.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;PutMetadata&lt;/a&gt; \u2014 Inserts metadata into the active stream of the specified channel. At most 5 requests per second per channel are allowed, each with a maximum 1 KB payload. (If 5 TPS is not sufficient for your needs, we recommend batching your data into a single PutMetadata call.) At most 155 requests per second per account are allowed.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;PlaybackKeyPair Endpoints&lt;/b&gt; &lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/ivs/latest/userguide/private-channels.html"&gt;Setting Up Private Channels&lt;/a&gt; in the &lt;i&gt;Amazon IVS User Guide&lt;/i&gt;.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ImportPlaybackKeyPair&lt;/a&gt; \u2014 Imports the public portion of a new key pair and returns its &lt;code&gt;arn&lt;/code&gt; and &lt;code&gt;fingerprint&lt;/code&gt;. The &lt;code&gt;privateKey&lt;/code&gt; can then be used to generate viewer authorization tokens, to grant viewers access to private channels (channels enabled for playback authorization).&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetPlaybackKeyPair&lt;/a&gt; \u2014 Gets a specified playback authorization key pair and returns the &lt;code&gt;arn&lt;/code&gt; and &lt;code&gt;fingerprint&lt;/code&gt;. The &lt;code&gt;privateKey&lt;/code&gt; held by the caller can be used to generate viewer authorization tokens, to grant viewers access to private channels.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListPlaybackKeyPairs&lt;/a&gt; \u2014 Gets summary information about playback key pairs.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;DeletePlaybackKeyPair&lt;/a&gt; \u2014 Deletes a specified authorization key pair. This invalidates future viewer tokens generated using the key pair\u2019s &lt;code&gt;privateKey&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;RecordingConfiguration Endpoints&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateRecordingConfiguration&lt;/a&gt; \u2014 Creates a new recording configuration, used to enable recording to Amazon S3.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetRecordingConfiguration&lt;/a&gt; \u2014 Gets the recording-configuration metadata for the specified ARN.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListRecordingConfigurations&lt;/a&gt; \u2014 Gets summary information about all recording configurations in your account, in the Amazon Web Services region where the API request is processed.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;DeleteRecordingConfiguration&lt;/a&gt; \u2014 Deletes the recording configuration for the specified ARN.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;Amazon Web Services Tags Endpoints&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;TagResource&lt;/a&gt; \u2014 Adds or updates tags for the Amazon Web Services resource with the specified ARN.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;UntagResource&lt;/a&gt; \u2014 Removes tags from the resource with the specified ARN.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListTagsForResource&lt;/a&gt; \u2014 Gets information about Amazon Web Services tags for the specified ARN.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+ * &lt;p&gt; &lt;b&gt;Introduction&lt;/b&gt; &lt;/p&gt; &lt;p&gt;The Amazon Interactive Video Service (IVS) API is REST compatible, using a standard HTTP API and an Amazon Web Services EventBridge event stream for responses. JSON is used for both requests and responses, including errors.&lt;/p&gt; &lt;p&gt;The API is an Amazon Web Services regional service. For a list of supported regions and Amazon IVS HTTPS service endpoints, see the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/ivs.html"&gt;Amazon IVS page&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General Reference&lt;/i&gt;.&lt;/p&gt; &lt;p&gt; &lt;i&gt; &lt;b&gt;All API request parameters and URLs are case sensitive. &lt;/b&gt; &lt;/i&gt; &lt;/p&gt; &lt;p&gt;For a summary of notable documentation changes in each release, see &lt;a href="https://docs.aws.amazon.com/ivs/latest/userguide/doc-history.html"&gt; Document History&lt;/a&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Allowed Header Values&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt; &lt;b&gt;Accept:&lt;/b&gt; &lt;/code&gt; application/json&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt; &lt;b&gt;Accept-Encoding:&lt;/b&gt; &lt;/code&gt; gzip, deflate&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt; &lt;b&gt;Content-Type:&lt;/b&gt; &lt;/code&gt;application/json&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;Resources&lt;/b&gt; &lt;/p&gt; &lt;p&gt;The following resources contain information about your IVS live stream (see &lt;a href="https://docs.aws.amazon.com/ivs/latest/userguide/getting-started.html"&gt; Getting Started with Amazon IVS&lt;/a&gt;):&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Channel&lt;/b&gt; \u2014 Stores configuration data related to your live stream. You first create a channel and then use the channel\u2019s stream key to start your live stream. See the Channel endpoints for more information. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Stream key&lt;/b&gt; \u2014 An identifier assigned by Amazon IVS when you create a channel, which is then used to authorize streaming. See the StreamKey endpoints for more information. &lt;i&gt; &lt;b&gt;Treat the stream key like a secret, since it allows anyone to stream to the channel.&lt;/b&gt; &lt;/i&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Playback key pair&lt;/b&gt; \u2014 Video playback may be restricted using playback-authorization tokens, which use public-key encryption. A playback key pair is the public-private pair of keys used to sign and validate the playback-authorization token. See the PlaybackKeyPair endpoints for more information.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Recording configuration&lt;/b&gt; \u2014 Stores configuration related to recording a live stream and where to store the recorded content. Multiple channels can reference the same recording configuration. See the Recording Configuration endpoints for more information.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;Tagging&lt;/b&gt; &lt;/p&gt; &lt;p&gt;A &lt;i&gt;tag&lt;/i&gt; is a metadata label that you assign to an Amazon Web Services resource. A tag comprises a &lt;i&gt;key&lt;/i&gt; and a &lt;i&gt;value&lt;/i&gt;, both set by you. For example, you might set a tag as &lt;code&gt;topic:nature&lt;/code&gt; to label a particular video category. See &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"&gt;Tagging Amazon Web Services Resources&lt;/a&gt; for more information, including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon IVS has no service-specific constraints beyond what is documented there.&lt;/p&gt; &lt;p&gt;Tags can help you identify and organize your Amazon Web Services resources. For example, you can use the same tag for different resources to indicate that they are related. You can also use tags to manage access (see &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html"&gt; Access Tags&lt;/a&gt;). &lt;/p&gt; &lt;p&gt;The Amazon IVS API has these tag-related endpoints: &lt;a&gt;TagResource&lt;/a&gt;, &lt;a&gt;UntagResource&lt;/a&gt;, and &lt;a&gt;ListTagsForResource&lt;/a&gt;. The following resources support tagging: Channels, Stream Keys, Playback Key Pairs, and Recording Configurations.&lt;/p&gt; &lt;p&gt;At most 50 tags can be applied to a resource. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Authentication versus Authorization&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Note the differences between these concepts:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;i&gt;Authentication&lt;/i&gt; is about verifying identity. You need to be authenticated to sign Amazon IVS API requests.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;i&gt;Authorization&lt;/i&gt; is about granting permissions. Your IAM roles need to have permissions for Amazon IVS API requests. In addition, authorization is needed to view &lt;a href="https://docs.aws.amazon.com/ivs/latest/userguide/private-channels.html"&gt;Amazon IVS private channels&lt;/a&gt;. (Private channels are channels that are enabled for "playback authorization.")&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;Authentication&lt;/b&gt; &lt;/p&gt; &lt;p&gt;All Amazon IVS API requests must be authenticated with a signature. The Amazon Web Services Command-Line Interface (CLI) and Amazon IVS Player SDKs take care of signing the underlying API calls for you. However, if your application calls the Amazon IVS API directly, it\u2019s your responsibility to sign the requests.&lt;/p&gt; &lt;p&gt;You generate a signature using valid Amazon Web Services credentials that have permission to perform the requested action. For example, you must sign PutMetadata requests with a signature generated from a user account that has the &lt;code&gt;ivs:PutMetadata&lt;/code&gt; permission.&lt;/p&gt; &lt;p&gt;For more information:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Authentication and generating signatures \u2014 See &lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html"&gt;Authenticating Requests (Amazon Web Services Signature Version 4)&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General Reference&lt;/i&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Managing Amazon IVS permissions \u2014 See &lt;a href="https://docs.aws.amazon.com/ivs/latest/userguide/security-iam.html"&gt;Identity and Access Management&lt;/a&gt; on the Security page of the &lt;i&gt;Amazon IVS User Guide&lt;/i&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;Amazon Resource Names (ARNs)&lt;/b&gt; &lt;/p&gt; &lt;p&gt;ARNs uniquely identify AWS resources. An ARN is required when you need to specify a resource unambiguously across all of AWS, such as in IAM policies and API calls. For more information, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Names&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Channel Endpoints&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateChannel&lt;/a&gt; \u2014 Creates a new channel and an associated stream key to start streaming.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetChannel&lt;/a&gt; \u2014 Gets the channel configuration for the specified channel ARN.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;BatchGetChannel&lt;/a&gt; \u2014 Performs &lt;a&gt;GetChannel&lt;/a&gt; on multiple ARNs simultaneously.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListChannels&lt;/a&gt; \u2014 Gets summary information about all channels in your account, in the Amazon Web Services region where the API request is processed. This list can be filtered to match a specified name or recording-configuration ARN. Filters are mutually exclusive and cannot be used together. If you try to use both filters, you will get an error (409 Conflict Exception).&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;UpdateChannel&lt;/a&gt; \u2014 Updates a channel's configuration. This does not affect an ongoing stream of this channel. You must stop and restart the stream for the changes to take effect.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;DeleteChannel&lt;/a&gt; \u2014 Deletes the specified channel.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;StreamKey Endpoints&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateStreamKey&lt;/a&gt; \u2014 Creates a stream key, used to initiate a stream, for the specified channel ARN.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetStreamKey&lt;/a&gt; \u2014 Gets stream key information for the specified ARN.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;BatchGetStreamKey&lt;/a&gt; \u2014 Performs &lt;a&gt;GetStreamKey&lt;/a&gt; on multiple ARNs simultaneously.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListStreamKeys&lt;/a&gt; \u2014 Gets summary information about stream keys for the specified channel.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;DeleteStreamKey&lt;/a&gt; \u2014 Deletes the stream key for the specified ARN, so it can no longer be used to stream.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;Stream Endpoints&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetStream&lt;/a&gt; \u2014 Gets information about the active (live) stream on a specified channel.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetStreamSession&lt;/a&gt; \u2014 Gets metadata on a specified stream.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListStreams&lt;/a&gt; \u2014 Gets summary information about live streams in your account, in the Amazon Web Services region where the API request is processed.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListStreamSessions&lt;/a&gt; \u2014 Gets a summary of current and previous streams for a specified channel in your account, in the AWS region where the API request is processed.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;StopStream&lt;/a&gt; \u2014 Disconnects the incoming RTMPS stream for the specified channel. Can be used in conjunction with &lt;a&gt;DeleteStreamKey&lt;/a&gt; to prevent further streaming to a channel.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;PutMetadata&lt;/a&gt; \u2014 Inserts metadata into the active stream of the specified channel. At most 5 requests per second per channel are allowed, each with a maximum 1 KB payload. (If 5 TPS is not sufficient for your needs, we recommend batching your data into a single PutMetadata call.) At most 155 requests per second per account are allowed.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;PlaybackKeyPair Endpoints&lt;/b&gt; &lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/ivs/latest/userguide/private-channels.html"&gt;Setting Up Private Channels&lt;/a&gt; in the &lt;i&gt;Amazon IVS User Guide&lt;/i&gt;.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ImportPlaybackKeyPair&lt;/a&gt; \u2014 Imports the public portion of a new key pair and returns its &lt;code&gt;arn&lt;/code&gt; and &lt;code&gt;fingerprint&lt;/code&gt;. The &lt;code&gt;privateKey&lt;/code&gt; can then be used to generate viewer authorization tokens, to grant viewers access to private channels (channels enabled for playback authorization).&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetPlaybackKeyPair&lt;/a&gt; \u2014 Gets a specified playback authorization key pair and returns the &lt;code&gt;arn&lt;/code&gt; and &lt;code&gt;fingerprint&lt;/code&gt;. The &lt;code&gt;privateKey&lt;/code&gt; held by the caller can be used to generate viewer authorization tokens, to grant viewers access to private channels.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListPlaybackKeyPairs&lt;/a&gt; \u2014 Gets summary information about playback key pairs.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;DeletePlaybackKeyPair&lt;/a&gt; \u2014 Deletes a specified authorization key pair. This invalidates future viewer tokens generated using the key pair\u2019s &lt;code&gt;privateKey&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;RecordingConfiguration Endpoints&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateRecordingConfiguration&lt;/a&gt; \u2014 Creates a new recording configuration, used to enable recording to Amazon S3.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetRecordingConfiguration&lt;/a&gt; \u2014 Gets the recording-configuration metadata for the specified ARN.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListRecordingConfigurations&lt;/a&gt; \u2014 Gets summary information about all recording configurations in your account, in the Amazon Web Services region where the API request is processed.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;DeleteRecordingConfiguration&lt;/a&gt; \u2014 Deletes the recording configuration for the specified ARN.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;Amazon Web Services Tags Endpoints&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;TagResource&lt;/a&gt; \u2014 Adds or updates tags for the Amazon Web Services resource with the specified ARN.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;UntagResource&lt;/a&gt; \u2014 Removes tags from the resource with the specified ARN.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListTagsForResource&lt;/a&gt; \u2014 Gets information about Amazon Web Services tags for the specified ARN.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
  * https://docs.aws.amazon.com/ivs/ - Amazon Web Services documentation
  */
 public class SDK {
@@ -173,6 +173,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -210,11 +215,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchGetChannelResponse res = new org.openapis.openapi.models.operations.BatchGetChannelResponse() {{
+        org.openapis.openapi.models.operations.BatchGetChannelResponse res = new org.openapis.openapi.models.operations.BatchGetChannelResponse(contentType, httpRes.statusCode()) {{
             batchGetChannelResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -262,11 +265,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchGetStreamKeyResponse res = new org.openapis.openapi.models.operations.BatchGetStreamKeyResponse() {{
+        org.openapis.openapi.models.operations.BatchGetStreamKeyResponse res = new org.openapis.openapi.models.operations.BatchGetStreamKeyResponse(contentType, httpRes.statusCode()) {{
             batchGetStreamKeyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -314,7 +315,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateChannelResponse res = new org.openapis.openapi.models.operations.CreateChannelResponse() {{
+        org.openapis.openapi.models.operations.CreateChannelResponse res = new org.openapis.openapi.models.operations.CreateChannelResponse(contentType, httpRes.statusCode()) {{
             createChannelResponse = null;
             resourceNotFoundException = null;
             accessDeniedException = null;
@@ -322,8 +323,6 @@ public class SDK {
             pendingVerification = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -406,7 +405,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRecordingConfigurationResponse res = new org.openapis.openapi.models.operations.CreateRecordingConfigurationResponse() {{
+        org.openapis.openapi.models.operations.CreateRecordingConfigurationResponse res = new org.openapis.openapi.models.operations.CreateRecordingConfigurationResponse(contentType, httpRes.statusCode()) {{
             createRecordingConfigurationResponse = null;
             internalServerException = null;
             accessDeniedException = null;
@@ -415,8 +414,6 @@ public class SDK {
             conflictException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -506,7 +503,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateStreamKeyResponse res = new org.openapis.openapi.models.operations.CreateStreamKeyResponse() {{
+        org.openapis.openapi.models.operations.CreateStreamKeyResponse res = new org.openapis.openapi.models.operations.CreateStreamKeyResponse(contentType, httpRes.statusCode()) {{
             createStreamKeyResponse = null;
             resourceNotFoundException = null;
             accessDeniedException = null;
@@ -514,8 +511,6 @@ public class SDK {
             pendingVerification = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -598,15 +593,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteChannelResponse res = new org.openapis.openapi.models.operations.DeleteChannelResponse() {{
+        org.openapis.openapi.models.operations.DeleteChannelResponse res = new org.openapis.openapi.models.operations.DeleteChannelResponse(contentType, httpRes.statusCode()) {{
             resourceNotFoundException = null;
             accessDeniedException = null;
             validationException = null;
             pendingVerification = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -684,15 +677,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePlaybackKeyPairResponse res = new org.openapis.openapi.models.operations.DeletePlaybackKeyPairResponse() {{
+        org.openapis.openapi.models.operations.DeletePlaybackKeyPairResponse res = new org.openapis.openapi.models.operations.DeletePlaybackKeyPairResponse(contentType, httpRes.statusCode()) {{
             deletePlaybackKeyPairResponse = null;
             resourceNotFoundException = null;
             accessDeniedException = null;
             validationException = null;
             pendingVerification = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -768,15 +759,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRecordingConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteRecordingConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DeleteRecordingConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteRecordingConfigurationResponse(contentType, httpRes.statusCode()) {{
             resourceNotFoundException = null;
             internalServerException = null;
             accessDeniedException = null;
             validationException = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -854,14 +843,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteStreamKeyResponse res = new org.openapis.openapi.models.operations.DeleteStreamKeyResponse() {{
+        org.openapis.openapi.models.operations.DeleteStreamKeyResponse res = new org.openapis.openapi.models.operations.DeleteStreamKeyResponse(contentType, httpRes.statusCode()) {{
             resourceNotFoundException = null;
             accessDeniedException = null;
             validationException = null;
             pendingVerification = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -932,14 +919,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelResponse res = new org.openapis.openapi.models.operations.GetChannelResponse() {{
+        org.openapis.openapi.models.operations.GetChannelResponse res = new org.openapis.openapi.models.operations.GetChannelResponse(contentType, httpRes.statusCode()) {{
             getChannelResponse = null;
             resourceNotFoundException = null;
             accessDeniedException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1008,14 +993,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPlaybackKeyPairResponse res = new org.openapis.openapi.models.operations.GetPlaybackKeyPairResponse() {{
+        org.openapis.openapi.models.operations.GetPlaybackKeyPairResponse res = new org.openapis.openapi.models.operations.GetPlaybackKeyPairResponse(contentType, httpRes.statusCode()) {{
             getPlaybackKeyPairResponse = null;
             resourceNotFoundException = null;
             accessDeniedException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1084,15 +1067,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRecordingConfigurationResponse res = new org.openapis.openapi.models.operations.GetRecordingConfigurationResponse() {{
+        org.openapis.openapi.models.operations.GetRecordingConfigurationResponse res = new org.openapis.openapi.models.operations.GetRecordingConfigurationResponse(contentType, httpRes.statusCode()) {{
             getRecordingConfigurationResponse = null;
             resourceNotFoundException = null;
             internalServerException = null;
             accessDeniedException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1168,15 +1149,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStreamResponse res = new org.openapis.openapi.models.operations.GetStreamResponse() {{
+        org.openapis.openapi.models.operations.GetStreamResponse res = new org.openapis.openapi.models.operations.GetStreamResponse(contentType, httpRes.statusCode()) {{
             getStreamResponse = null;
             resourceNotFoundException = null;
             accessDeniedException = null;
             validationException = null;
             channelNotBroadcasting = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1252,14 +1231,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStreamKeyResponse res = new org.openapis.openapi.models.operations.GetStreamKeyResponse() {{
+        org.openapis.openapi.models.operations.GetStreamKeyResponse res = new org.openapis.openapi.models.operations.GetStreamKeyResponse(contentType, httpRes.statusCode()) {{
             getStreamKeyResponse = null;
             resourceNotFoundException = null;
             accessDeniedException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1328,14 +1305,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStreamSessionResponse res = new org.openapis.openapi.models.operations.GetStreamSessionResponse() {{
+        org.openapis.openapi.models.operations.GetStreamSessionResponse res = new org.openapis.openapi.models.operations.GetStreamSessionResponse(contentType, httpRes.statusCode()) {{
             getStreamSessionResponse = null;
             resourceNotFoundException = null;
             accessDeniedException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1404,7 +1379,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportPlaybackKeyPairResponse res = new org.openapis.openapi.models.operations.ImportPlaybackKeyPairResponse() {{
+        org.openapis.openapi.models.operations.ImportPlaybackKeyPairResponse res = new org.openapis.openapi.models.operations.ImportPlaybackKeyPairResponse(contentType, httpRes.statusCode()) {{
             importPlaybackKeyPairResponse = null;
             accessDeniedException = null;
             validationException = null;
@@ -1412,8 +1387,6 @@ public class SDK {
             conflictException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1502,14 +1475,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListChannelsResponse res = new org.openapis.openapi.models.operations.ListChannelsResponse() {{
+        org.openapis.openapi.models.operations.ListChannelsResponse res = new org.openapis.openapi.models.operations.ListChannelsResponse(contentType, httpRes.statusCode()) {{
             listChannelsResponse = null;
             accessDeniedException = null;
             validationException = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1584,13 +1555,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPlaybackKeyPairsResponse res = new org.openapis.openapi.models.operations.ListPlaybackKeyPairsResponse() {{
+        org.openapis.openapi.models.operations.ListPlaybackKeyPairsResponse res = new org.openapis.openapi.models.operations.ListPlaybackKeyPairsResponse(contentType, httpRes.statusCode()) {{
             listPlaybackKeyPairsResponse = null;
             accessDeniedException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1658,14 +1627,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRecordingConfigurationsResponse res = new org.openapis.openapi.models.operations.ListRecordingConfigurationsResponse() {{
+        org.openapis.openapi.models.operations.ListRecordingConfigurationsResponse res = new org.openapis.openapi.models.operations.ListRecordingConfigurationsResponse(contentType, httpRes.statusCode()) {{
             listRecordingConfigurationsResponse = null;
             internalServerException = null;
             accessDeniedException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1740,14 +1707,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListStreamKeysResponse res = new org.openapis.openapi.models.operations.ListStreamKeysResponse() {{
+        org.openapis.openapi.models.operations.ListStreamKeysResponse res = new org.openapis.openapi.models.operations.ListStreamKeysResponse(contentType, httpRes.statusCode()) {{
             listStreamKeysResponse = null;
             resourceNotFoundException = null;
             accessDeniedException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1822,14 +1787,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListStreamSessionsResponse res = new org.openapis.openapi.models.operations.ListStreamSessionsResponse() {{
+        org.openapis.openapi.models.operations.ListStreamSessionsResponse res = new org.openapis.openapi.models.operations.ListStreamSessionsResponse(contentType, httpRes.statusCode()) {{
             listStreamSessionsResponse = null;
             resourceNotFoundException = null;
             accessDeniedException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1904,13 +1867,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListStreamsResponse res = new org.openapis.openapi.models.operations.ListStreamsResponse() {{
+        org.openapis.openapi.models.operations.ListStreamsResponse res = new org.openapis.openapi.models.operations.ListStreamsResponse(contentType, httpRes.statusCode()) {{
             listStreamsResponse = null;
             accessDeniedException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1967,14 +1928,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             resourceNotFoundException = null;
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2043,15 +2002,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutMetadataResponse res = new org.openapis.openapi.models.operations.PutMetadataResponse() {{
+        org.openapis.openapi.models.operations.PutMetadataResponse res = new org.openapis.openapi.models.operations.PutMetadataResponse(contentType, httpRes.statusCode()) {{
             resourceNotFoundException = null;
             accessDeniedException = null;
             validationException = null;
             channelNotBroadcasting = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2129,7 +2086,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopStreamResponse res = new org.openapis.openapi.models.operations.StopStreamResponse() {{
+        org.openapis.openapi.models.operations.StopStreamResponse res = new org.openapis.openapi.models.operations.StopStreamResponse(contentType, httpRes.statusCode()) {{
             stopStreamResponse = null;
             resourceNotFoundException = null;
             accessDeniedException = null;
@@ -2137,8 +2094,6 @@ public class SDK {
             channelNotBroadcasting = null;
             streamUnavailable = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2221,14 +2176,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             resourceNotFoundException = null;
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2298,14 +2251,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             resourceNotFoundException = null;
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2374,7 +2325,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateChannelResponse res = new org.openapis.openapi.models.operations.UpdateChannelResponse() {{
+        org.openapis.openapi.models.operations.UpdateChannelResponse res = new org.openapis.openapi.models.operations.UpdateChannelResponse(contentType, httpRes.statusCode()) {{
             updateChannelResponse = null;
             resourceNotFoundException = null;
             accessDeniedException = null;
@@ -2382,8 +2333,6 @@ public class SDK {
             pendingVerification = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

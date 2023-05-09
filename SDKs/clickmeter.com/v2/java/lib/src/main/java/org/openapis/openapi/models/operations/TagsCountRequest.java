@@ -12,6 +12,7 @@ public class TagsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=datapoints")
     public String datapoints;
+
     public TagsCountRequest withDatapoints(String datapoints) {
         this.datapoints = datapoints;
         return this;
@@ -22,6 +23,7 @@ public class TagsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groups")
     public String groups;
+
     public TagsCountRequest withGroups(String groups) {
         this.groups = groups;
         return this;
@@ -32,6 +34,7 @@ public class TagsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public TagsCountRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +45,11 @@ public class TagsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public TagsCountTypeEnum type;
+
     public TagsCountRequest withType(TagsCountTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TagsCountRequest(){}
 }

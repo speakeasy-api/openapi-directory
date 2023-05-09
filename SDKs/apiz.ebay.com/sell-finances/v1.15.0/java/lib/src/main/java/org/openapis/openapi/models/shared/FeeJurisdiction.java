@@ -18,6 +18,7 @@ public class FeeJurisdiction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionName")
     public String regionName;
+
     public FeeJurisdiction withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -29,9 +30,11 @@ public class FeeJurisdiction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionType")
     public String regionType;
+
     public FeeJurisdiction withRegionType(String regionType) {
         this.regionType = regionType;
         return this;
     }
     
+    public FeeJurisdiction(){}
 }

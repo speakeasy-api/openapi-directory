@@ -17,6 +17,7 @@ public class EditorialLivefeedList {
      */
     @JsonProperty("data")
     public EditorialLivefeed[] data;
+
     public EditorialLivefeedList withData(EditorialLivefeed[] data) {
         this.data = data;
         return this;
@@ -28,6 +29,7 @@ public class EditorialLivefeedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public EditorialLivefeedList withMessage(String message) {
         this.message = message;
         return this;
@@ -39,6 +41,7 @@ public class EditorialLivefeedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public EditorialLivefeedList withPage(Long page) {
         this.page = page;
         return this;
@@ -50,6 +53,7 @@ public class EditorialLivefeedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public EditorialLivefeedList withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -60,9 +64,14 @@ public class EditorialLivefeedList {
      */
     @JsonProperty("total_count")
     public Long totalCount;
+
     public EditorialLivefeedList withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public EditorialLivefeedList(@JsonProperty("data") EditorialLivefeed[] data, @JsonProperty("total_count") Long totalCount) {
+        this.data = data;
+        this.totalCount = totalCount;
+  }
 }

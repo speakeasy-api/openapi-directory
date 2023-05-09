@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateModelResponse {
@@ -12,6 +13,7 @@ public class CreateModelResponse {
      */
     
     public Object badRequestException;
+
     public CreateModelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateModelResponse {
      */
     
     public Object conflictException;
+
     public CreateModelResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateModelResponse {
     
     
     public String contentType;
+
     public CreateModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateModelResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateModelResponse createModelResponse;
+
     public CreateModelResponse withCreateModelResponse(org.openapis.openapi.models.shared.CreateModelResponse createModelResponse) {
         this.createModelResponse = createModelResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateModelResponse {
      */
     
     public Object notFoundException;
+
     public CreateModelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateModelResponse {
     
     
     public Integer statusCode;
+
     public CreateModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateModelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateModelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

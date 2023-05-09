@@ -18,9 +18,11 @@ public class Impersonation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impersonatedUser")
     public User impersonatedUser;
+
     public Impersonation withImpersonatedUser(User impersonatedUser) {
         this.impersonatedUser = impersonatedUser;
         return this;
     }
     
+    public Impersonation(){}
 }

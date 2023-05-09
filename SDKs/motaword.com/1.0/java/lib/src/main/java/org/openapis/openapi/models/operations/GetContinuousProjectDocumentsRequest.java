@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContinuousProjectDocumentsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterByLanguage")
     public String filterByLanguage;
+
     public GetContinuousProjectDocumentsRequest withFilterByLanguage(String filterByLanguage) {
         this.filterByLanguage = filterByLanguage;
         return this;
@@ -19,9 +21,13 @@ public class GetContinuousProjectDocumentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public GetContinuousProjectDocumentsRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GetContinuousProjectDocumentsRequest(@JsonProperty("projectId") Long projectId) {
+        this.projectId = projectId;
+  }
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetails {
     
     public OffsetDateTime impairedSince;
+
     public DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetails withImpairedSince(OffsetDateTime impairedSince) {
         this.impairedSince = impairedSince;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetails {
     
     
     public DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsNameEnum name;
+
     public DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetails withName(DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsNameEnum name) {
         this.name = name;
         return this;
@@ -26,9 +28,11 @@ public class DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetails {
     
     
     public DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsStatusEnum status;
+
     public DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetails withStatus(DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetails(){}
 }

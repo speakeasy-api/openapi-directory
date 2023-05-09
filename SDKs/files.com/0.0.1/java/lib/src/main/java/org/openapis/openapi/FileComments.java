@@ -55,10 +55,8 @@ public class FileComments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFileCommentsIdResponse res = new org.openapis.openapi.models.operations.DeleteFileCommentsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteFileCommentsIdResponse res = new org.openapis.openapi.models.operations.DeleteFileCommentsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {
@@ -94,11 +92,9 @@ public class FileComments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FileCommentListForPathResponse res = new org.openapis.openapi.models.operations.FileCommentListForPathResponse() {{
+        org.openapis.openapi.models.operations.FileCommentListForPathResponse res = new org.openapis.openapi.models.operations.FileCommentListForPathResponse(contentType, httpRes.statusCode()) {{
             fileCommentEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -140,11 +136,9 @@ public class FileComments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchFileCommentsIdResponse res = new org.openapis.openapi.models.operations.PatchFileCommentsIdResponse() {{
+        org.openapis.openapi.models.operations.PatchFileCommentsIdResponse res = new org.openapis.openapi.models.operations.PatchFileCommentsIdResponse(contentType, httpRes.statusCode()) {{
             fileCommentEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -186,11 +180,9 @@ public class FileComments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFileCommentsResponse res = new org.openapis.openapi.models.operations.PostFileCommentsResponse() {{
+        org.openapis.openapi.models.operations.PostFileCommentsResponse res = new org.openapis.openapi.models.operations.PostFileCommentsResponse(contentType, httpRes.statusCode()) {{
             fileCommentEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

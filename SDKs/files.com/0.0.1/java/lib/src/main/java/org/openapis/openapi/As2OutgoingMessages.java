@@ -60,11 +60,9 @@ public class As2OutgoingMessages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAs2OutgoingMessagesResponse res = new org.openapis.openapi.models.operations.GetAs2OutgoingMessagesResponse() {{
+        org.openapis.openapi.models.operations.GetAs2OutgoingMessagesResponse res = new org.openapis.openapi.models.operations.GetAs2OutgoingMessagesResponse(contentType, httpRes.statusCode()) {{
             as2OutgoingMessageEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

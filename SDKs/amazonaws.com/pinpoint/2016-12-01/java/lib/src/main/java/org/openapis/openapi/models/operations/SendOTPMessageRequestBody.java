@@ -12,9 +12,13 @@ public class SendOTPMessageRequestBody {
      */
     @JsonProperty("SendOTPMessageRequestParameters")
     public SendOTPMessageRequestBodySendOTPMessageRequestParameters sendOTPMessageRequestParameters;
+
     public SendOTPMessageRequestBody withSendOTPMessageRequestParameters(SendOTPMessageRequestBodySendOTPMessageRequestParameters sendOTPMessageRequestParameters) {
         this.sendOTPMessageRequestParameters = sendOTPMessageRequestParameters;
         return this;
     }
     
+    public SendOTPMessageRequestBody(@JsonProperty("SendOTPMessageRequestParameters") SendOTPMessageRequestBodySendOTPMessageRequestParameters sendOTPMessageRequestParameters) {
+        this.sendOTPMessageRequestParameters = sendOTPMessageRequestParameters;
+  }
 }

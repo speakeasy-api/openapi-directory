@@ -60,11 +60,9 @@ public class Cloudloading {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksCloudloadingAddBookResponse res = new org.openapis.openapi.models.operations.BooksCloudloadingAddBookResponse() {{
+        org.openapis.openapi.models.operations.BooksCloudloadingAddBookResponse res = new org.openapis.openapi.models.operations.BooksCloudloadingAddBookResponse(contentType, httpRes.statusCode()) {{
             booksCloudloadingResource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class Cloudloading {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksCloudloadingDeleteBookResponse res = new org.openapis.openapi.models.operations.BooksCloudloadingDeleteBookResponse() {{
+        org.openapis.openapi.models.operations.BooksCloudloadingDeleteBookResponse res = new org.openapis.openapi.models.operations.BooksCloudloadingDeleteBookResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Cloudloading {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksCloudloadingUpdateBookResponse res = new org.openapis.openapi.models.operations.BooksCloudloadingUpdateBookResponse() {{
+        org.openapis.openapi.models.operations.BooksCloudloadingUpdateBookResponse res = new org.openapis.openapi.models.operations.BooksCloudloadingUpdateBookResponse(contentType, httpRes.statusCode()) {{
             booksCloudloadingResource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

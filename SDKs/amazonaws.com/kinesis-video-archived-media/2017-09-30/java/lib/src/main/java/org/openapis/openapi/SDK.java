@@ -150,6 +150,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -187,7 +192,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClipResponse res = new org.openapis.openapi.models.operations.GetClipResponse() {{
+        org.openapis.openapi.models.operations.GetClipResponse res = new org.openapis.openapi.models.operations.GetClipResponse(contentType, httpRes.statusCode()) {{
             getClipOutput = null;
             resourceNotFoundException = null;
             invalidArgumentException = null;
@@ -199,8 +204,6 @@ public class SDK {
             invalidMediaFrameException = null;
             noDataRetentionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -311,7 +314,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDASHStreamingSessionURLResponse res = new org.openapis.openapi.models.operations.GetDASHStreamingSessionURLResponse() {{
+        org.openapis.openapi.models.operations.GetDASHStreamingSessionURLResponse res = new org.openapis.openapi.models.operations.GetDASHStreamingSessionURLResponse(contentType, httpRes.statusCode()) {{
             getDASHStreamingSessionURLOutput = null;
             resourceNotFoundException = null;
             invalidArgumentException = null;
@@ -322,8 +325,6 @@ public class SDK {
             missingCodecPrivateDataException = null;
             invalidCodecPrivateDataException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -427,7 +428,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHLSStreamingSessionURLResponse res = new org.openapis.openapi.models.operations.GetHLSStreamingSessionURLResponse() {{
+        org.openapis.openapi.models.operations.GetHLSStreamingSessionURLResponse res = new org.openapis.openapi.models.operations.GetHLSStreamingSessionURLResponse(contentType, httpRes.statusCode()) {{
             getHLSStreamingSessionURLOutput = null;
             resourceNotFoundException = null;
             invalidArgumentException = null;
@@ -438,8 +439,6 @@ public class SDK {
             missingCodecPrivateDataException = null;
             invalidCodecPrivateDataException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -549,15 +548,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetImagesResponse res = new org.openapis.openapi.models.operations.GetImagesResponse() {{
+        org.openapis.openapi.models.operations.GetImagesResponse res = new org.openapis.openapi.models.operations.GetImagesResponse(contentType, httpRes.statusCode()) {{
             getImagesOutput = null;
             resourceNotFoundException = null;
             invalidArgumentException = null;
             clientLimitExceededException = null;
             notAuthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -633,15 +630,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMediaForFragmentListResponse res = new org.openapis.openapi.models.operations.GetMediaForFragmentListResponse() {{
+        org.openapis.openapi.models.operations.GetMediaForFragmentListResponse res = new org.openapis.openapi.models.operations.GetMediaForFragmentListResponse(contentType, httpRes.statusCode()) {{
             getMediaForFragmentListOutput = null;
             resourceNotFoundException = null;
             invalidArgumentException = null;
             clientLimitExceededException = null;
             notAuthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -723,15 +718,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFragmentsResponse res = new org.openapis.openapi.models.operations.ListFragmentsResponse() {{
+        org.openapis.openapi.models.operations.ListFragmentsResponse res = new org.openapis.openapi.models.operations.ListFragmentsResponse(contentType, httpRes.statusCode()) {{
             listFragmentsOutput = null;
             resourceNotFoundException = null;
             invalidArgumentException = null;
             clientLimitExceededException = null;
             notAuthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

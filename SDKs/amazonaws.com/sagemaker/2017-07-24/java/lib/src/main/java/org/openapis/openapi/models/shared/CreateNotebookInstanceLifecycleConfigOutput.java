@@ -15,9 +15,11 @@ public class CreateNotebookInstanceLifecycleConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceLifecycleConfigArn")
     public String notebookInstanceLifecycleConfigArn;
+
     public CreateNotebookInstanceLifecycleConfigOutput withNotebookInstanceLifecycleConfigArn(String notebookInstanceLifecycleConfigArn) {
         this.notebookInstanceLifecycleConfigArn = notebookInstanceLifecycleConfigArn;
         return this;
     }
     
+    public CreateNotebookInstanceLifecycleConfigOutput(){}
 }

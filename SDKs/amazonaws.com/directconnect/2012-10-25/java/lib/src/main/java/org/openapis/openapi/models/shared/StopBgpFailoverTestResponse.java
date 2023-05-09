@@ -15,9 +15,11 @@ public class StopBgpFailoverTestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterfaceTest")
     public VirtualInterfaceTestHistory virtualInterfaceTest;
+
     public StopBgpFailoverTestResponse withVirtualInterfaceTest(VirtualInterfaceTestHistory virtualInterfaceTest) {
         this.virtualInterfaceTest = virtualInterfaceTest;
         return this;
     }
     
+    public StopBgpFailoverTestResponse(){}
 }

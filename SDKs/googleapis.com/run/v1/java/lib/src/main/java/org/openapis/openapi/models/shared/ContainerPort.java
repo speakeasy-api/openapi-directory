@@ -18,6 +18,7 @@ public class ContainerPort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerPort")
     public Integer containerPort;
+
     public ContainerPort withContainerPort(Integer containerPort) {
         this.containerPort = containerPort;
         return this;
@@ -29,6 +30,7 @@ public class ContainerPort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContainerPort withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class ContainerPort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public String protocol;
+
     public ContainerPort withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public ContainerPort(){}
 }

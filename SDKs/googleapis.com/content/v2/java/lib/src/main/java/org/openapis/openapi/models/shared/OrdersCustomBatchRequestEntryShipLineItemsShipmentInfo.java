@@ -15,6 +15,7 @@ public class OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier")
     public String carrier;
+
     public OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo withCarrier(String carrier) {
         this.carrier = carrier;
         return this;
@@ -26,6 +27,7 @@ public class OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipmentId")
     public String shipmentId;
+
     public OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo withShipmentId(String shipmentId) {
         this.shipmentId = shipmentId;
         return this;
@@ -37,9 +39,11 @@ public class OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingId")
     public String trackingId;
+
     public OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo withTrackingId(String trackingId) {
         this.trackingId = trackingId;
         return this;
     }
     
+    public OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserTaskListForUserRequest {
@@ -14,6 +15,7 @@ public class GetUserTaskListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetUserTaskListForUserRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -25,6 +27,7 @@ public class GetUserTaskListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetUserTaskListForUserRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -35,6 +38,7 @@ public class GetUserTaskListForUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_gid")
     public String userGid;
+
     public GetUserTaskListForUserRequest withUserGid(String userGid) {
         this.userGid = userGid;
         return this;
@@ -45,9 +49,14 @@ public class GetUserTaskListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
     public String workspace;
+
     public GetUserTaskListForUserRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetUserTaskListForUserRequest(@JsonProperty("user_gid") String userGid, @JsonProperty("workspace") String workspace) {
+        this.userGid = userGid;
+        this.workspace = workspace;
+  }
 }

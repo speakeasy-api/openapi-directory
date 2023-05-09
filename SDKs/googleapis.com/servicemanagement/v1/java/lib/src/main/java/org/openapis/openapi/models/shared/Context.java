@@ -18,9 +18,11 @@ public class Context {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public ContextRule[] rules;
+
     public Context withRules(ContextRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public Context(){}
 }

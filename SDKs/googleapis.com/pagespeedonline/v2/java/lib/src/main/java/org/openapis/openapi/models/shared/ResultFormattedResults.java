@@ -15,6 +15,7 @@ public class ResultFormattedResults {
      */
     
     public String locale;
+
     public ResultFormattedResults withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -25,9 +26,11 @@ public class ResultFormattedResults {
      */
     
     public java.util.Map<String, ResultFormattedResultsRuleResults> ruleResults;
+
     public ResultFormattedResults withRuleResults(java.util.Map<String, ResultFormattedResultsRuleResults> ruleResults) {
         this.ruleResults = ruleResults;
         return this;
     }
     
+    public ResultFormattedResults(){}
 }

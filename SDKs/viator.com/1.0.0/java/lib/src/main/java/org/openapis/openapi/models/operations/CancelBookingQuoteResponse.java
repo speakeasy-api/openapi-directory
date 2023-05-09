@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelBookingQuoteResponse {
@@ -12,6 +13,7 @@ public class CancelBookingQuoteResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOneUNAUTHORIZED fourHundredAndOneUNAUTHORIZED;
+
     public CancelBookingQuoteResponse withFourHundredAndOneUNAUTHORIZED(org.openapis.openapi.models.shared.FourHundredAndOneUNAUTHORIZED fourHundredAndOneUNAUTHORIZED) {
         this.fourHundredAndOneUNAUTHORIZED = fourHundredAndOneUNAUTHORIZED;
         return this;
@@ -22,6 +24,7 @@ public class CancelBookingQuoteResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndSixNOTACCEPTABLE fourHundredAndSixNOTACCEPTABLE;
+
     public CancelBookingQuoteResponse withFourHundredAndSixNOTACCEPTABLE(org.openapis.openapi.models.shared.FourHundredAndSixNOTACCEPTABLE fourHundredAndSixNOTACCEPTABLE) {
         this.fourHundredAndSixNOTACCEPTABLE = fourHundredAndSixNOTACCEPTABLE;
         return this;
@@ -32,6 +35,7 @@ public class CancelBookingQuoteResponse {
      */
     
     public org.openapis.openapi.models.shared.FiveHundredINTERNALSERVERERROR fiveHundredINTERNALSERVERERROR;
+
     public CancelBookingQuoteResponse withFiveHundredINTERNALSERVERERROR(org.openapis.openapi.models.shared.FiveHundredINTERNALSERVERERROR fiveHundredINTERNALSERVERERROR) {
         this.fiveHundredINTERNALSERVERERROR = fiveHundredINTERNALSERVERERROR;
         return this;
@@ -42,6 +46,7 @@ public class CancelBookingQuoteResponse {
      */
     
     public org.openapis.openapi.models.shared.FiveHundredAndThreeSERVICEUNAVAILABLE fiveHundredAndThreeSERVICEUNAVAILABLE;
+
     public CancelBookingQuoteResponse withFiveHundredAndThreeSERVICEUNAVAILABLE(org.openapis.openapi.models.shared.FiveHundredAndThreeSERVICEUNAVAILABLE fiveHundredAndThreeSERVICEUNAVAILABLE) {
         this.fiveHundredAndThreeSERVICEUNAVAILABLE = fiveHundredAndThreeSERVICEUNAVAILABLE;
         return this;
@@ -52,6 +57,7 @@ public class CancelBookingQuoteResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelBookingQuoteResponse cancelBookingQuoteResponse;
+
     public CancelBookingQuoteResponse withCancelBookingQuoteResponse(org.openapis.openapi.models.shared.CancelBookingQuoteResponse cancelBookingQuoteResponse) {
         this.cancelBookingQuoteResponse = cancelBookingQuoteResponse;
         return this;
@@ -59,6 +65,7 @@ public class CancelBookingQuoteResponse {
     
     
     public String contentType;
+
     public CancelBookingQuoteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -66,6 +73,7 @@ public class CancelBookingQuoteResponse {
     
     
     public Integer statusCode;
+
     public CancelBookingQuoteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CancelBookingQuoteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelBookingQuoteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CancelBookingQuoteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class LicenseSFXResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allotment_charge")
     public Long allotmentCharge;
+
     public LicenseSFXResult withAllotmentCharge(Long allotmentCharge) {
         this.allotmentCharge = allotmentCharge;
         return this;
@@ -29,6 +30,7 @@ public class LicenseSFXResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download")
     public Url download;
+
     public LicenseSFXResult withDownload(Url download) {
         this.download = download;
         return this;
@@ -40,6 +42,7 @@ public class LicenseSFXResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public LicenseSFXResult withError(String error) {
         this.error = error;
         return this;
@@ -51,6 +54,7 @@ public class LicenseSFXResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license_id")
     public String licenseId;
+
     public LicenseSFXResult withLicenseId(String licenseId) {
         this.licenseId = licenseId;
         return this;
@@ -61,9 +65,13 @@ public class LicenseSFXResult {
      */
     @JsonProperty("sfx_id")
     public String sfxId;
+
     public LicenseSFXResult withSfxId(String sfxId) {
         this.sfxId = sfxId;
         return this;
     }
     
+    public LicenseSFXResult(@JsonProperty("sfx_id") String sfxId) {
+        this.sfxId = sfxId;
+  }
 }

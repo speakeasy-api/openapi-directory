@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectedQueryError {
     @JsonProperty("code")
     public String code;
+
     public ProtectedQueryError withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,14 @@ public class ProtectedQueryError {
     
     @JsonProperty("message")
     public String message;
+
     public ProtectedQueryError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ProtectedQueryError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

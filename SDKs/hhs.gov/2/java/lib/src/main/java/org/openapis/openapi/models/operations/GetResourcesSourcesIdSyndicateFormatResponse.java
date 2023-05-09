@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourcesSourcesIdSyndicateFormatResponse {
     
     public String contentType;
+
     public GetResourcesSourcesIdSyndicateFormatResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetResourcesSourcesIdSyndicateFormatResponse {
      */
     
     public org.openapis.openapi.models.shared.MediaItemWrapped[] mediaItemWrappeds;
+
     public GetResourcesSourcesIdSyndicateFormatResponse withMediaItemWrappeds(org.openapis.openapi.models.shared.MediaItemWrapped[] mediaItemWrappeds) {
         this.mediaItemWrappeds = mediaItemWrappeds;
         return this;
@@ -26,6 +29,7 @@ public class GetResourcesSourcesIdSyndicateFormatResponse {
     
     
     public Integer statusCode;
+
     public GetResourcesSourcesIdSyndicateFormatResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetResourcesSourcesIdSyndicateFormatResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourcesSourcesIdSyndicateFormatResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetResourcesSourcesIdSyndicateFormatResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

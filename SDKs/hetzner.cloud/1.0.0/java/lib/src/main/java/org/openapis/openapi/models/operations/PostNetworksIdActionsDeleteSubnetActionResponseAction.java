@@ -12,6 +12,7 @@ public class PostNetworksIdActionsDeleteSubnetActionResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostNetworksIdActionsDeleteSubnetActionResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostNetworksIdActionsDeleteSubnetActionResponseAction {
      */
     @JsonProperty("error")
     public PostNetworksIdActionsDeleteSubnetActionResponseActionError error;
+
     public PostNetworksIdActionsDeleteSubnetActionResponseAction withError(PostNetworksIdActionsDeleteSubnetActionResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostNetworksIdActionsDeleteSubnetActionResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostNetworksIdActionsDeleteSubnetActionResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostNetworksIdActionsDeleteSubnetActionResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostNetworksIdActionsDeleteSubnetActionResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostNetworksIdActionsDeleteSubnetActionResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostNetworksIdActionsDeleteSubnetActionResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostNetworksIdActionsDeleteSubnetActionResponseAction {
      */
     @JsonProperty("resources")
     public PostNetworksIdActionsDeleteSubnetActionResponseActionResources[] resources;
+
     public PostNetworksIdActionsDeleteSubnetActionResponseAction withResources(PostNetworksIdActionsDeleteSubnetActionResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostNetworksIdActionsDeleteSubnetActionResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostNetworksIdActionsDeleteSubnetActionResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostNetworksIdActionsDeleteSubnetActionResponseAction {
      */
     @JsonProperty("status")
     public PostNetworksIdActionsDeleteSubnetActionResponseActionStatusEnum status;
+
     public PostNetworksIdActionsDeleteSubnetActionResponseAction withStatus(PostNetworksIdActionsDeleteSubnetActionResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostNetworksIdActionsDeleteSubnetActionResponseAction(@JsonProperty("command") String command, @JsonProperty("error") PostNetworksIdActionsDeleteSubnetActionResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostNetworksIdActionsDeleteSubnetActionResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostNetworksIdActionsDeleteSubnetActionResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericVa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericValue withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericVa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("int64Value")
     public String int64Value;
+
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericValue withInt64Value(String int64Value) {
         this.int64Value = int64Value;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericValue(){}
 }

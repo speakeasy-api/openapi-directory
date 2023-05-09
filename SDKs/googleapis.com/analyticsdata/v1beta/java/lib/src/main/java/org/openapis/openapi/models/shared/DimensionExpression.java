@@ -18,6 +18,7 @@ public class DimensionExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concatenate")
     public ConcatenateExpression concatenate;
+
     public DimensionExpression withConcatenate(ConcatenateExpression concatenate) {
         this.concatenate = concatenate;
         return this;
@@ -29,6 +30,7 @@ public class DimensionExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowerCase")
     public CaseExpression lowerCase;
+
     public DimensionExpression withLowerCase(CaseExpression lowerCase) {
         this.lowerCase = lowerCase;
         return this;
@@ -40,9 +42,11 @@ public class DimensionExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upperCase")
     public CaseExpression upperCase;
+
     public DimensionExpression withUpperCase(CaseExpression upperCase) {
         this.upperCase = upperCase;
         return this;
     }
     
+    public DimensionExpression(){}
 }

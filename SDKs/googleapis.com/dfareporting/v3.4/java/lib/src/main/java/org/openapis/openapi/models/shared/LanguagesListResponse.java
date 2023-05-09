@@ -18,6 +18,7 @@ public class LanguagesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LanguagesListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class LanguagesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public Language[] languages;
+
     public LanguagesListResponse withLanguages(Language[] languages) {
         this.languages = languages;
         return this;
     }
     
+    public LanguagesListResponse(){}
 }

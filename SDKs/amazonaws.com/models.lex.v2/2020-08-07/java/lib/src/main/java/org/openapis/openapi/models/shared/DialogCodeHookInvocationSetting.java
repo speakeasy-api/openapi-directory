@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DialogCodeHookInvocationSetting {
     @JsonProperty("active")
     public Boolean active;
+
     public DialogCodeHookInvocationSetting withActive(Boolean active) {
         this.active = active;
         return this;
@@ -21,6 +22,7 @@ public class DialogCodeHookInvocationSetting {
     
     @JsonProperty("enableCodeHookInvocation")
     public Boolean enableCodeHookInvocation;
+
     public DialogCodeHookInvocationSetting withEnableCodeHookInvocation(Boolean enableCodeHookInvocation) {
         this.enableCodeHookInvocation = enableCodeHookInvocation;
         return this;
@@ -29,6 +31,7 @@ public class DialogCodeHookInvocationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invocationLabel")
     public String invocationLabel;
+
     public DialogCodeHookInvocationSetting withInvocationLabel(String invocationLabel) {
         this.invocationLabel = invocationLabel;
         return this;
@@ -36,9 +39,15 @@ public class DialogCodeHookInvocationSetting {
     
     @JsonProperty("postCodeHookSpecification")
     public PostDialogCodeHookInvocationSpecification postCodeHookSpecification;
+
     public DialogCodeHookInvocationSetting withPostCodeHookSpecification(PostDialogCodeHookInvocationSpecification postCodeHookSpecification) {
         this.postCodeHookSpecification = postCodeHookSpecification;
         return this;
     }
     
+    public DialogCodeHookInvocationSetting(@JsonProperty("active") Boolean active, @JsonProperty("enableCodeHookInvocation") Boolean enableCodeHookInvocation, @JsonProperty("postCodeHookSpecification") PostDialogCodeHookInvocationSpecification postCodeHookSpecification) {
+        this.active = active;
+        this.enableCodeHookInvocation = enableCodeHookInvocation;
+        this.postCodeHookSpecification = postCodeHookSpecification;
+  }
 }

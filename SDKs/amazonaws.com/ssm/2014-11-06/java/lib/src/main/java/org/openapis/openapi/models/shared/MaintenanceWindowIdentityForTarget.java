@@ -15,6 +15,7 @@ public class MaintenanceWindowIdentityForTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public MaintenanceWindowIdentityForTarget withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class MaintenanceWindowIdentityForTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowId")
     public String windowId;
+
     public MaintenanceWindowIdentityForTarget withWindowId(String windowId) {
         this.windowId = windowId;
         return this;
     }
     
+    public MaintenanceWindowIdentityForTarget(){}
 }

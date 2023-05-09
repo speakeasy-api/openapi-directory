@@ -18,17 +18,19 @@ public class IamBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public IamBindingActionEnum action;
+
     public IamBinding withAction(IamBindingActionEnum action) {
         this.action = action;
         return this;
     }
     
     /**
-     * A single identity requesting access for a Cloud Platform resource, e.g. "foo@google.com".
+     * A single identity requesting access for a Cloud Platform resource, for example, "foo@google.com".
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member")
     public String member;
+
     public IamBinding withMember(String member) {
         this.member = member;
         return this;
@@ -40,9 +42,11 @@ public class IamBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public IamBinding withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public IamBinding(){}
 }

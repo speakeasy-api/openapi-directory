@@ -12,6 +12,7 @@ public class DetectMetricSetConfigRequestBody {
      */
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public DetectMetricSetConfigRequestBody withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -22,9 +23,14 @@ public class DetectMetricSetConfigRequestBody {
      */
     @JsonProperty("AutoDetectionMetricSource")
     public DetectMetricSetConfigRequestBodyAutoDetectionMetricSource autoDetectionMetricSource;
+
     public DetectMetricSetConfigRequestBody withAutoDetectionMetricSource(DetectMetricSetConfigRequestBodyAutoDetectionMetricSource autoDetectionMetricSource) {
         this.autoDetectionMetricSource = autoDetectionMetricSource;
         return this;
     }
     
+    public DetectMetricSetConfigRequestBody(@JsonProperty("AnomalyDetectorArn") String anomalyDetectorArn, @JsonProperty("AutoDetectionMetricSource") DetectMetricSetConfigRequestBodyAutoDetectionMetricSource autoDetectionMetricSource) {
+        this.anomalyDetectorArn = anomalyDetectorArn;
+        this.autoDetectionMetricSource = autoDetectionMetricSource;
+  }
 }

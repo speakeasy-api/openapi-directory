@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TagsType {
     
     public String nextToken;
+
     public TagsType withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class TagsType {
     
     
     public TagDescription[] tags;
+
     public TagsType withTags(TagDescription[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagsType(){}
 }

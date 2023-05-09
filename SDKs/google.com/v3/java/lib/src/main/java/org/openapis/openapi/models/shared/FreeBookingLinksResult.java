@@ -18,6 +18,7 @@ public class FreeBookingLinksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickCount")
     public String clickCount;
+
     public FreeBookingLinksResult withClickCount(String clickCount) {
         this.clickCount = clickCount;
         return this;
@@ -29,6 +30,7 @@ public class FreeBookingLinksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public FreeBookingLinksResult withDate(Date date) {
         this.date = date;
         return this;
@@ -40,6 +42,7 @@ public class FreeBookingLinksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceType")
     public FreeBookingLinksResultDeviceTypeEnum deviceType;
+
     public FreeBookingLinksResult withDeviceType(FreeBookingLinksResultDeviceTypeEnum deviceType) {
         this.deviceType = deviceType;
         return this;
@@ -51,6 +54,7 @@ public class FreeBookingLinksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerHotelDisplayName")
     public String partnerHotelDisplayName;
+
     public FreeBookingLinksResult withPartnerHotelDisplayName(String partnerHotelDisplayName) {
         this.partnerHotelDisplayName = partnerHotelDisplayName;
         return this;
@@ -62,6 +66,7 @@ public class FreeBookingLinksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerHotelId")
     public String partnerHotelId;
+
     public FreeBookingLinksResult withPartnerHotelId(String partnerHotelId) {
         this.partnerHotelId = partnerHotelId;
         return this;
@@ -73,9 +78,11 @@ public class FreeBookingLinksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userRegionCode")
     public String userRegionCode;
+
     public FreeBookingLinksResult withUserRegionCode(String userRegionCode) {
         this.userRegionCode = userRegionCode;
         return this;
     }
     
+    public FreeBookingLinksResult(){}
 }

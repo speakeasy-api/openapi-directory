@@ -58,10 +58,8 @@ public class GlobalOrganizationOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class GlobalOrganizationOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsGetResponse res = new org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsGetResponse res = new org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +140,9 @@ public class GlobalOrganizationOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsListResponse res = new org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsListResponse res = new org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsListResponse(contentType, httpRes.statusCode()) {{
             operationList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

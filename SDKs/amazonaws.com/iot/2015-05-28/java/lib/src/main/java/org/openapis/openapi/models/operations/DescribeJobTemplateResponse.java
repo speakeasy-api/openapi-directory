@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeJobTemplateResponse {
     
     public String contentType;
+
     public DescribeJobTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeJobTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeJobTemplateResponse describeJobTemplateResponse;
+
     public DescribeJobTemplateResponse withDescribeJobTemplateResponse(org.openapis.openapi.models.shared.DescribeJobTemplateResponse describeJobTemplateResponse) {
         this.describeJobTemplateResponse = describeJobTemplateResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeJobTemplateResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeJobTemplateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeJobTemplateResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeJobTemplateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeJobTemplateResponse {
     
     
     public Integer statusCode;
+
     public DescribeJobTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeJobTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeJobTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeJobTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeJobTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeJobTemplateResponse {
      */
     
     public Object throttlingException;
+
     public DescribeJobTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeJobTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

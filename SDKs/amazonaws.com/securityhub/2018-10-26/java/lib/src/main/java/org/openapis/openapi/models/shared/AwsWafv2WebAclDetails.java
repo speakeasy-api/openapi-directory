@@ -15,6 +15,7 @@ public class AwsWafv2WebAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public AwsWafv2WebAclDetails withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class AwsWafv2WebAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Capacity")
     public Long capacity;
+
     public AwsWafv2WebAclDetails withCapacity(Long capacity) {
         this.capacity = capacity;
         return this;
@@ -31,6 +33,7 @@ public class AwsWafv2WebAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CaptchaConfig")
     public AwsWafv2WebAclCaptchaConfigDetails captchaConfig;
+
     public AwsWafv2WebAclDetails withCaptchaConfig(AwsWafv2WebAclCaptchaConfigDetails captchaConfig) {
         this.captchaConfig = captchaConfig;
         return this;
@@ -39,6 +42,7 @@ public class AwsWafv2WebAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultAction")
     public AwsWafv2WebAclActionDetails defaultAction;
+
     public AwsWafv2WebAclDetails withDefaultAction(AwsWafv2WebAclActionDetails defaultAction) {
         this.defaultAction = defaultAction;
         return this;
@@ -47,6 +51,7 @@ public class AwsWafv2WebAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public AwsWafv2WebAclDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -55,6 +60,7 @@ public class AwsWafv2WebAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public AwsWafv2WebAclDetails withId(String id) {
         this.id = id;
         return this;
@@ -63,6 +69,7 @@ public class AwsWafv2WebAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManagedbyFirewallManager")
     public Boolean managedbyFirewallManager;
+
     public AwsWafv2WebAclDetails withManagedbyFirewallManager(Boolean managedbyFirewallManager) {
         this.managedbyFirewallManager = managedbyFirewallManager;
         return this;
@@ -71,6 +78,7 @@ public class AwsWafv2WebAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsWafv2WebAclDetails withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +87,7 @@ public class AwsWafv2WebAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public AwsWafv2RulesDetails[] rules;
+
     public AwsWafv2WebAclDetails withRules(AwsWafv2RulesDetails[] rules) {
         this.rules = rules;
         return this;
@@ -87,9 +96,11 @@ public class AwsWafv2WebAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VisibilityConfig")
     public AwsWafv2VisibilityConfigDetails visibilityConfig;
+
     public AwsWafv2WebAclDetails withVisibilityConfig(AwsWafv2VisibilityConfigDetails visibilityConfig) {
         this.visibilityConfig = visibilityConfig;
         return this;
     }
     
+    public AwsWafv2WebAclDetails(){}
 }

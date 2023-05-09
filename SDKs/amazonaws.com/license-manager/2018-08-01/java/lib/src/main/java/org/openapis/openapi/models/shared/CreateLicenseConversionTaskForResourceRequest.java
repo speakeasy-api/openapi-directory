@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLicenseConversionTaskForResourceRequest {
     @JsonProperty("DestinationLicenseContext")
     public LicenseConversionContext destinationLicenseContext;
+
     public CreateLicenseConversionTaskForResourceRequest withDestinationLicenseContext(LicenseConversionContext destinationLicenseContext) {
         this.destinationLicenseContext = destinationLicenseContext;
         return this;
@@ -16,6 +17,7 @@ public class CreateLicenseConversionTaskForResourceRequest {
     
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public CreateLicenseConversionTaskForResourceRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -23,9 +25,15 @@ public class CreateLicenseConversionTaskForResourceRequest {
     
     @JsonProperty("SourceLicenseContext")
     public LicenseConversionContext sourceLicenseContext;
+
     public CreateLicenseConversionTaskForResourceRequest withSourceLicenseContext(LicenseConversionContext sourceLicenseContext) {
         this.sourceLicenseContext = sourceLicenseContext;
         return this;
     }
     
+    public CreateLicenseConversionTaskForResourceRequest(@JsonProperty("DestinationLicenseContext") LicenseConversionContext destinationLicenseContext, @JsonProperty("ResourceArn") String resourceArn, @JsonProperty("SourceLicenseContext") LicenseConversionContext sourceLicenseContext) {
+        this.destinationLicenseContext = destinationLicenseContext;
+        this.resourceArn = resourceArn;
+        this.sourceLicenseContext = sourceLicenseContext;
+  }
 }

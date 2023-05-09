@@ -23,6 +23,7 @@ public class WorkloadSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImprovementStatus")
     public WorkloadImprovementStatusEnum improvementStatus;
+
     public WorkloadSummary withImprovementStatus(WorkloadImprovementStatusEnum improvementStatus) {
         this.improvementStatus = improvementStatus;
         return this;
@@ -34,6 +35,7 @@ public class WorkloadSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lenses")
     public String[] lenses;
+
     public WorkloadSummary withLenses(String[] lenses) {
         this.lenses = lenses;
         return this;
@@ -45,17 +47,19 @@ public class WorkloadSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public WorkloadSummary withOwner(String owner) {
         this.owner = owner;
         return this;
     }
     
     /**
-     * A map from risk names to the count of how questions have that rating.
+     * A map from risk names to the count of how many questions have that rating.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RiskCounts")
     public java.util.Map<String, Long> riskCounts;
+
     public WorkloadSummary withRiskCounts(java.util.Map<String, Long> riskCounts) {
         this.riskCounts = riskCounts;
         return this;
@@ -69,6 +73,7 @@ public class WorkloadSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public WorkloadSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -80,6 +85,7 @@ public class WorkloadSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadArn")
     public String workloadArn;
+
     public WorkloadSummary withWorkloadArn(String workloadArn) {
         this.workloadArn = workloadArn;
         return this;
@@ -91,6 +97,7 @@ public class WorkloadSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadId")
     public String workloadId;
+
     public WorkloadSummary withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
@@ -102,9 +109,11 @@ public class WorkloadSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadName")
     public String workloadName;
+
     public WorkloadSummary withWorkloadName(String workloadName) {
         this.workloadName = workloadName;
         return this;
     }
     
+    public WorkloadSummary(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CatalogCollectionRole {
     @JsonProperty("email")
     public String email;
+
     public CatalogCollectionRole withEmail(String email) {
         this.email = email;
         return this;
@@ -19,6 +20,7 @@ public class CatalogCollectionRole {
     
     @JsonProperty("id")
     public String id;
+
     public CatalogCollectionRole withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +28,15 @@ public class CatalogCollectionRole {
     
     @JsonProperty("type")
     public CatalogCollectionRoleTypeEnum type;
+
     public CatalogCollectionRole withType(CatalogCollectionRoleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CatalogCollectionRole(@JsonProperty("email") String email, @JsonProperty("id") String id, @JsonProperty("type") CatalogCollectionRoleTypeEnum type) {
+        this.email = email;
+        this.id = id;
+        this.type = type;
+  }
 }

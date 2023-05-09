@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsBulkDeleteAppsRequest {
@@ -12,6 +13,7 @@ public class DistributionGroupsBulkDeleteAppsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public DistributionGroupsBulkDeleteAppsRequestBody requestBody;
+
     public DistributionGroupsBulkDeleteAppsRequest withRequestBody(DistributionGroupsBulkDeleteAppsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class DistributionGroupsBulkDeleteAppsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
     public String distributionGroupName;
+
     public DistributionGroupsBulkDeleteAppsRequest withDistributionGroupName(String distributionGroupName) {
         this.distributionGroupName = distributionGroupName;
         return this;
@@ -32,9 +35,15 @@ public class DistributionGroupsBulkDeleteAppsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
     public String orgName;
+
     public DistributionGroupsBulkDeleteAppsRequest withOrgName(String orgName) {
         this.orgName = orgName;
         return this;
     }
     
+    public DistributionGroupsBulkDeleteAppsRequest(@JsonProperty("RequestBody") DistributionGroupsBulkDeleteAppsRequestBody requestBody, @JsonProperty("distribution_group_name") String distributionGroupName, @JsonProperty("org_name") String orgName) {
+        this.requestBody = requestBody;
+        this.distributionGroupName = distributionGroupName;
+        this.orgName = orgName;
+  }
 }

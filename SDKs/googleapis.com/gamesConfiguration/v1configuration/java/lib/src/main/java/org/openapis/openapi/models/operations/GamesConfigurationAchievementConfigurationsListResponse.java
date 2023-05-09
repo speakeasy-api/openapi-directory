@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GamesConfigurationAchievementConfigurationsListResponse {
@@ -12,6 +13,7 @@ public class GamesConfigurationAchievementConfigurationsListResponse {
      */
     
     public org.openapis.openapi.models.shared.AchievementConfigurationListResponse achievementConfigurationListResponse;
+
     public GamesConfigurationAchievementConfigurationsListResponse withAchievementConfigurationListResponse(org.openapis.openapi.models.shared.AchievementConfigurationListResponse achievementConfigurationListResponse) {
         this.achievementConfigurationListResponse = achievementConfigurationListResponse;
         return this;
@@ -19,6 +21,7 @@ public class GamesConfigurationAchievementConfigurationsListResponse {
     
     
     public String contentType;
+
     public GamesConfigurationAchievementConfigurationsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GamesConfigurationAchievementConfigurationsListResponse {
     
     
     public Integer statusCode;
+
     public GamesConfigurationAchievementConfigurationsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GamesConfigurationAchievementConfigurationsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GamesConfigurationAchievementConfigurationsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GamesConfigurationAchievementConfigurationsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

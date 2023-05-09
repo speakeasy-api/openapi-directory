@@ -22,6 +22,7 @@ public class Resource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DisabledDate")
     public OffsetDateTime disabledDate;
+
     public Resource withDisabledDate(OffsetDateTime disabledDate) {
         this.disabledDate = disabledDate;
         return this;
@@ -30,6 +31,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public Resource withEmail(String email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class Resource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EnabledDate")
     public OffsetDateTime enabledDate;
+
     public Resource withEnabledDate(OffsetDateTime enabledDate) {
         this.enabledDate = enabledDate;
         return this;
@@ -48,6 +51,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Resource withId(String id) {
         this.id = id;
         return this;
@@ -56,6 +60,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Resource withName(String name) {
         this.name = name;
         return this;
@@ -64,6 +69,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public EntityStateEnum state;
+
     public Resource withState(EntityStateEnum state) {
         this.state = state;
         return this;
@@ -72,9 +78,11 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ResourceTypeEnum type;
+
     public Resource withType(ResourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Resource(){}
 }

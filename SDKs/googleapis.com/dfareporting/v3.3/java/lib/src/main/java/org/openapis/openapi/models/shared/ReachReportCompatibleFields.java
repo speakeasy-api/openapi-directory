@@ -18,6 +18,7 @@ public class ReachReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilters")
     public Dimension[] dimensionFilters;
+
     public ReachReportCompatibleFields withDimensionFilters(Dimension[] dimensionFilters) {
         this.dimensionFilters = dimensionFilters;
         return this;
@@ -29,6 +30,7 @@ public class ReachReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public Dimension[] dimensions;
+
     public ReachReportCompatibleFields withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -40,6 +42,7 @@ public class ReachReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ReachReportCompatibleFields withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class ReachReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public Metric[] metrics;
+
     public ReachReportCompatibleFields withMetrics(Metric[] metrics) {
         this.metrics = metrics;
         return this;
@@ -62,6 +66,7 @@ public class ReachReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pivotedActivityMetrics")
     public Metric[] pivotedActivityMetrics;
+
     public ReachReportCompatibleFields withPivotedActivityMetrics(Metric[] pivotedActivityMetrics) {
         this.pivotedActivityMetrics = pivotedActivityMetrics;
         return this;
@@ -73,9 +78,11 @@ public class ReachReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reachByFrequencyMetrics")
     public Metric[] reachByFrequencyMetrics;
+
     public ReachReportCompatibleFields withReachByFrequencyMetrics(Metric[] reachByFrequencyMetrics) {
         this.reachByFrequencyMetrics = reachByFrequencyMetrics;
         return this;
     }
     
+    public ReachReportCompatibleFields(){}
 }

@@ -338,4 +338,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateApplicationInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateDeploymentGroupOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateDeploymentGroupInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

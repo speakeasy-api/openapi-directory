@@ -18,9 +18,11 @@ public class RegionInstanceGroupManagerUpdateInstanceConfigReq {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perInstanceConfigs")
     public PerInstanceConfig[] perInstanceConfigs;
+
     public RegionInstanceGroupManagerUpdateInstanceConfigReq withPerInstanceConfigs(PerInstanceConfig[] perInstanceConfigs) {
         this.perInstanceConfigs = perInstanceConfigs;
         return this;
     }
     
+    public RegionInstanceGroupManagerUpdateInstanceConfigReq(){}
 }

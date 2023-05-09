@@ -18,6 +18,7 @@ public class OrderExpandWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public OrderDetailWorkgroupLevelVO result;
+
     public OrderExpandWorkgroupLevelVO withResult(OrderDetailWorkgroupLevelVO result) {
         this.result = result;
         return this;
@@ -26,6 +27,7 @@ public class OrderExpandWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public OrderExpandWorkgroupLevelVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -34,9 +36,11 @@ public class OrderExpandWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public OrderExpandWorkgroupLevelVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public OrderExpandWorkgroupLevelVO(){}
 }

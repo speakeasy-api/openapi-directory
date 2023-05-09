@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAnomalyMonitorsResponse {
     @JsonProperty("AnomalyMonitors")
     public AnomalyMonitor[] anomalyMonitors;
+
     public GetAnomalyMonitorsResponse withAnomalyMonitors(AnomalyMonitor[] anomalyMonitors) {
         this.anomalyMonitors = anomalyMonitors;
         return this;
@@ -22,9 +23,13 @@ public class GetAnomalyMonitorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetAnomalyMonitorsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetAnomalyMonitorsResponse(@JsonProperty("AnomalyMonitors") AnomalyMonitor[] anomalyMonitors) {
+        this.anomalyMonitors = anomalyMonitors;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2HashConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public GoogleCloudIdentitytoolkitAdminV2HashConfigAlgorithmEnum algorithm;
+
     public GoogleCloudIdentitytoolkitAdminV2HashConfig withAlgorithm(GoogleCloudIdentitytoolkitAdminV2HashConfigAlgorithmEnum algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIdentitytoolkitAdminV2HashConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryCost")
     public Integer memoryCost;
+
     public GoogleCloudIdentitytoolkitAdminV2HashConfig withMemoryCost(Integer memoryCost) {
         this.memoryCost = memoryCost;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIdentitytoolkitAdminV2HashConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rounds")
     public Integer rounds;
+
     public GoogleCloudIdentitytoolkitAdminV2HashConfig withRounds(Integer rounds) {
         this.rounds = rounds;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIdentitytoolkitAdminV2HashConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saltSeparator")
     public String saltSeparator;
+
     public GoogleCloudIdentitytoolkitAdminV2HashConfig withSaltSeparator(String saltSeparator) {
         this.saltSeparator = saltSeparator;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudIdentitytoolkitAdminV2HashConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signerKey")
     public String signerKey;
+
     public GoogleCloudIdentitytoolkitAdminV2HashConfig withSignerKey(String signerKey) {
         this.signerKey = signerKey;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2HashConfig(){}
 }

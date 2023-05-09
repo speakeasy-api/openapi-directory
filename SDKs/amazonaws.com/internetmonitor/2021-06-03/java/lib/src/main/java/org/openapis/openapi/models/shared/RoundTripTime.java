@@ -15,6 +15,7 @@ public class RoundTripTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("P50")
     public Double p50;
+
     public RoundTripTime withP50(Double p50) {
         this.p50 = p50;
         return this;
@@ -23,6 +24,7 @@ public class RoundTripTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("P90")
     public Double p90;
+
     public RoundTripTime withP90(Double p90) {
         this.p90 = p90;
         return this;
@@ -31,9 +33,11 @@ public class RoundTripTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("P95")
     public Double p95;
+
     public RoundTripTime withP95(Double p95) {
         this.p95 = p95;
         return this;
     }
     
+    public RoundTripTime(){}
 }

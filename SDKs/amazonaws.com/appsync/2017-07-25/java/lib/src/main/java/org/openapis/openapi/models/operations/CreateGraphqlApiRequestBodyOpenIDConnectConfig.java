@@ -15,6 +15,7 @@ public class CreateGraphqlApiRequestBodyOpenIDConnectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authTTL")
     public Long authTTL;
+
     public CreateGraphqlApiRequestBodyOpenIDConnectConfig withAuthTTL(Long authTTL) {
         this.authTTL = authTTL;
         return this;
@@ -23,6 +24,7 @@ public class CreateGraphqlApiRequestBodyOpenIDConnectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public CreateGraphqlApiRequestBodyOpenIDConnectConfig withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -31,6 +33,7 @@ public class CreateGraphqlApiRequestBodyOpenIDConnectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iatTTL")
     public Long iatTTL;
+
     public CreateGraphqlApiRequestBodyOpenIDConnectConfig withIatTTL(Long iatTTL) {
         this.iatTTL = iatTTL;
         return this;
@@ -39,9 +42,11 @@ public class CreateGraphqlApiRequestBodyOpenIDConnectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuer")
     public String issuer;
+
     public CreateGraphqlApiRequestBodyOpenIDConnectConfig withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
     }
     
+    public CreateGraphqlApiRequestBodyOpenIDConnectConfig(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostScheduleAccountUpdaterResponse {
     
     public String contentType;
+
     public PostScheduleAccountUpdaterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostScheduleAccountUpdaterResponse {
      */
     
     public org.openapis.openapi.models.shared.ScheduleAccountUpdaterResult scheduleAccountUpdaterResult;
+
     public PostScheduleAccountUpdaterResponse withScheduleAccountUpdaterResult(org.openapis.openapi.models.shared.ScheduleAccountUpdaterResult scheduleAccountUpdaterResult) {
         this.scheduleAccountUpdaterResult = scheduleAccountUpdaterResult;
         return this;
@@ -29,6 +32,7 @@ public class PostScheduleAccountUpdaterResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostScheduleAccountUpdaterResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostScheduleAccountUpdaterResponse {
     
     
     public Integer statusCode;
+
     public PostScheduleAccountUpdaterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostScheduleAccountUpdaterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostScheduleAccountUpdaterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostScheduleAccountUpdaterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

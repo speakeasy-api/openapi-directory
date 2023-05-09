@@ -18,6 +18,7 @@ public class VpnGatewayStatusTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localGatewayInterface")
     public Long localGatewayInterface;
+
     public VpnGatewayStatusTunnel withLocalGatewayInterface(Long localGatewayInterface) {
         this.localGatewayInterface = localGatewayInterface;
         return this;
@@ -29,6 +30,7 @@ public class VpnGatewayStatusTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerGatewayInterface")
     public Long peerGatewayInterface;
+
     public VpnGatewayStatusTunnel withPeerGatewayInterface(Long peerGatewayInterface) {
         this.peerGatewayInterface = peerGatewayInterface;
         return this;
@@ -40,9 +42,11 @@ public class VpnGatewayStatusTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tunnelUrl")
     public String tunnelUrl;
+
     public VpnGatewayStatusTunnel withTunnelUrl(String tunnelUrl) {
         this.tunnelUrl = tunnelUrl;
         return this;
     }
     
+    public VpnGatewayStatusTunnel(){}
 }

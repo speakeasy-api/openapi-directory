@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SendBulkTemplatedEmailRequest - Represents a request to send a templated email to multiple destinations using Amazon SES. For more information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-personalized-email-api.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SendBulkTemplatedEmailRequest {
     
     public String configurationSetName;
+
     public SendBulkTemplatedEmailRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -19,6 +20,7 @@ public class SendBulkTemplatedEmailRequest {
     
     
     public MessageTag[] defaultTags;
+
     public SendBulkTemplatedEmailRequest withDefaultTags(MessageTag[] defaultTags) {
         this.defaultTags = defaultTags;
         return this;
@@ -26,6 +28,7 @@ public class SendBulkTemplatedEmailRequest {
     
     
     public String defaultTemplateData;
+
     public SendBulkTemplatedEmailRequest withDefaultTemplateData(String defaultTemplateData) {
         this.defaultTemplateData = defaultTemplateData;
         return this;
@@ -33,6 +36,7 @@ public class SendBulkTemplatedEmailRequest {
     
     
     public BulkEmailDestination[] destinations;
+
     public SendBulkTemplatedEmailRequest withDestinations(BulkEmailDestination[] destinations) {
         this.destinations = destinations;
         return this;
@@ -40,6 +44,7 @@ public class SendBulkTemplatedEmailRequest {
     
     
     public String[] replyToAddresses;
+
     public SendBulkTemplatedEmailRequest withReplyToAddresses(String[] replyToAddresses) {
         this.replyToAddresses = replyToAddresses;
         return this;
@@ -47,6 +52,7 @@ public class SendBulkTemplatedEmailRequest {
     
     
     public String returnPath;
+
     public SendBulkTemplatedEmailRequest withReturnPath(String returnPath) {
         this.returnPath = returnPath;
         return this;
@@ -54,6 +60,7 @@ public class SendBulkTemplatedEmailRequest {
     
     
     public String returnPathArn;
+
     public SendBulkTemplatedEmailRequest withReturnPathArn(String returnPathArn) {
         this.returnPathArn = returnPathArn;
         return this;
@@ -61,6 +68,7 @@ public class SendBulkTemplatedEmailRequest {
     
     
     public String source;
+
     public SendBulkTemplatedEmailRequest withSource(String source) {
         this.source = source;
         return this;
@@ -68,6 +76,7 @@ public class SendBulkTemplatedEmailRequest {
     
     
     public String sourceArn;
+
     public SendBulkTemplatedEmailRequest withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -75,6 +84,7 @@ public class SendBulkTemplatedEmailRequest {
     
     
     public String template;
+
     public SendBulkTemplatedEmailRequest withTemplate(String template) {
         this.template = template;
         return this;
@@ -82,9 +92,15 @@ public class SendBulkTemplatedEmailRequest {
     
     
     public String templateArn;
+
     public SendBulkTemplatedEmailRequest withTemplateArn(String templateArn) {
         this.templateArn = templateArn;
         return this;
     }
     
+    public SendBulkTemplatedEmailRequest(@JsonProperty("Destinations") BulkEmailDestination[] destinations, @JsonProperty("Source") String source, @JsonProperty("Template") String template) {
+        this.destinations = destinations;
+        this.source = source;
+        this.template = template;
+  }
 }

@@ -15,6 +15,7 @@ public class ResourceUpdateWarnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ResourceUpdateWarningsCodeEnum code;
+
     public ResourceUpdateWarnings withCode(ResourceUpdateWarningsCodeEnum code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class ResourceUpdateWarnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceUpdateWarningsData[] data;
+
     public ResourceUpdateWarnings withData(ResourceUpdateWarningsData[] data) {
         this.data = data;
         return this;
@@ -37,9 +39,11 @@ public class ResourceUpdateWarnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ResourceUpdateWarnings withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ResourceUpdateWarnings(){}
 }

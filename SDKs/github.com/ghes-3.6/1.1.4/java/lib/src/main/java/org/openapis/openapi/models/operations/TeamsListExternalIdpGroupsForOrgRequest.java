@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsListExternalIdpGroupsForOrgRequest {
@@ -12,6 +13,7 @@ public class TeamsListExternalIdpGroupsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=display_name")
     public String displayName;
+
     public TeamsListExternalIdpGroupsForOrgRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -22,6 +24,7 @@ public class TeamsListExternalIdpGroupsForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public TeamsListExternalIdpGroupsForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -32,6 +35,7 @@ public class TeamsListExternalIdpGroupsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public TeamsListExternalIdpGroupsForOrgRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,9 +46,13 @@ public class TeamsListExternalIdpGroupsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public TeamsListExternalIdpGroupsForOrgRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public TeamsListExternalIdpGroupsForOrgRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

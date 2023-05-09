@@ -15,9 +15,11 @@ public class StartTaskExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskExecutionArn")
     public String taskExecutionArn;
+
     public StartTaskExecutionResponse withTaskExecutionArn(String taskExecutionArn) {
         this.taskExecutionArn = taskExecutionArn;
         return this;
     }
     
+    public StartTaskExecutionResponse(){}
 }

@@ -15,6 +15,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowedValues")
     public String allowedValues;
+
     public Parameter withAllowedValues(String allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -23,6 +24,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeType")
     public ChangeTypeEnum changeType;
+
     public Parameter withChangeType(ChangeTypeEnum changeType) {
         this.changeType = changeType;
         return this;
@@ -31,6 +33,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataType")
     public String dataType;
+
     public Parameter withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -39,6 +42,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Parameter withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +51,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsModifiable")
     public IsModifiableEnum isModifiable;
+
     public Parameter withIsModifiable(IsModifiableEnum isModifiable) {
         this.isModifiable = isModifiable;
         return this;
@@ -55,6 +60,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeTypeSpecificValues")
     public NodeTypeSpecificValue[] nodeTypeSpecificValues;
+
     public Parameter withNodeTypeSpecificValues(NodeTypeSpecificValue[] nodeTypeSpecificValues) {
         this.nodeTypeSpecificValues = nodeTypeSpecificValues;
         return this;
@@ -63,6 +69,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterName")
     public String parameterName;
+
     public Parameter withParameterName(String parameterName) {
         this.parameterName = parameterName;
         return this;
@@ -71,6 +78,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterType")
     public ParameterTypeEnum parameterType;
+
     public Parameter withParameterType(ParameterTypeEnum parameterType) {
         this.parameterType = parameterType;
         return this;
@@ -79,6 +87,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterValue")
     public String parameterValue;
+
     public Parameter withParameterValue(String parameterValue) {
         this.parameterValue = parameterValue;
         return this;
@@ -87,9 +96,11 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public Parameter withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public Parameter(){}
 }

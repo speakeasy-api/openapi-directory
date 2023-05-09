@@ -15,6 +15,7 @@ public class SlotCaptureSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("captureConditional")
     public ConditionalSpecification captureConditional;
+
     public SlotCaptureSetting withCaptureConditional(ConditionalSpecification captureConditional) {
         this.captureConditional = captureConditional;
         return this;
@@ -23,6 +24,7 @@ public class SlotCaptureSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("captureNextStep")
     public DialogState captureNextStep;
+
     public SlotCaptureSetting withCaptureNextStep(DialogState captureNextStep) {
         this.captureNextStep = captureNextStep;
         return this;
@@ -34,6 +36,7 @@ public class SlotCaptureSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("captureResponse")
     public ResponseSpecification captureResponse;
+
     public SlotCaptureSetting withCaptureResponse(ResponseSpecification captureResponse) {
         this.captureResponse = captureResponse;
         return this;
@@ -42,6 +45,7 @@ public class SlotCaptureSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeHook")
     public DialogCodeHookInvocationSetting codeHook;
+
     public SlotCaptureSetting withCodeHook(DialogCodeHookInvocationSetting codeHook) {
         this.codeHook = codeHook;
         return this;
@@ -50,6 +54,7 @@ public class SlotCaptureSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elicitationCodeHook")
     public ElicitationCodeHookInvocationSetting elicitationCodeHook;
+
     public SlotCaptureSetting withElicitationCodeHook(ElicitationCodeHookInvocationSetting elicitationCodeHook) {
         this.elicitationCodeHook = elicitationCodeHook;
         return this;
@@ -58,6 +63,7 @@ public class SlotCaptureSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureConditional")
     public ConditionalSpecification failureConditional;
+
     public SlotCaptureSetting withFailureConditional(ConditionalSpecification failureConditional) {
         this.failureConditional = failureConditional;
         return this;
@@ -66,6 +72,7 @@ public class SlotCaptureSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureNextStep")
     public DialogState failureNextStep;
+
     public SlotCaptureSetting withFailureNextStep(DialogState failureNextStep) {
         this.failureNextStep = failureNextStep;
         return this;
@@ -77,9 +84,11 @@ public class SlotCaptureSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureResponse")
     public ResponseSpecification failureResponse;
+
     public SlotCaptureSetting withFailureResponse(ResponseSpecification failureResponse) {
         this.failureResponse = failureResponse;
         return this;
     }
     
+    public SlotCaptureSetting(){}
 }

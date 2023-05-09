@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetInstancePortStatesRequest {
     @JsonProperty("instanceName")
     public String instanceName;
+
     public GetInstancePortStatesRequest withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
     
+    public GetInstancePortStatesRequest(@JsonProperty("instanceName") String instanceName) {
+        this.instanceName = instanceName;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActionHistoryDetails {
     @JsonProperty("Action")
     public Action action;
+
     public ActionHistoryDetails withAction(Action action) {
         this.action = action;
         return this;
@@ -22,9 +23,14 @@ public class ActionHistoryDetails {
      */
     @JsonProperty("Message")
     public String message;
+
     public ActionHistoryDetails withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ActionHistoryDetails(@JsonProperty("Action") Action action, @JsonProperty("Message") String message) {
+        this.action = action;
+        this.message = message;
+  }
 }

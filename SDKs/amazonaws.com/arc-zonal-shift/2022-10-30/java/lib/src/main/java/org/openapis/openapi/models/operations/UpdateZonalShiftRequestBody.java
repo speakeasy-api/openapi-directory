@@ -15,6 +15,7 @@ public class UpdateZonalShiftRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public UpdateZonalShiftRequestBody withComment(String comment) {
         this.comment = comment;
         return this;
@@ -26,9 +27,11 @@ public class UpdateZonalShiftRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiresIn")
     public String expiresIn;
+
     public UpdateZonalShiftRequestBody withExpiresIn(String expiresIn) {
         this.expiresIn = expiresIn;
         return this;
     }
     
+    public UpdateZonalShiftRequestBody(){}
 }

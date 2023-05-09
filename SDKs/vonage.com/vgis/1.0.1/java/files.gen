@@ -112,4 +112,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/WebhookCreateEventsEnum.jav
 lib/src/main/java/org/openapis/openapi/models/shared/WebhookCreateMetadataPolicyEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/WebhookCreateSigningAlgoEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/WebhookCreate.java
+docs/sdk/README.md
+docs/accounts/README.md
+docs/calls/README.md
+docs/events/README.md
+docs/users/README.md
+docs/webhooks/README.md
 USAGE.md

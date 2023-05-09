@@ -15,6 +15,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public PlaceAddress address;
+
     public Place withAddress(PlaceAddress address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Place withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -37,6 +39,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Place withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Place withKind(String kind) {
         this.kind = kind;
         return this;
@@ -59,9 +63,11 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public PlacePosition position;
+
     public Place withPosition(PlacePosition position) {
         this.position = position;
         return this;
     }
     
+    public Place(){}
 }

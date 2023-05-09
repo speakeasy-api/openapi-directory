@@ -18,6 +18,7 @@ public class MoveAnalysisResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockers")
     public MoveImpact[] blockers;
+
     public MoveAnalysisResult withBlockers(MoveImpact[] blockers) {
         this.blockers = blockers;
         return this;
@@ -29,9 +30,11 @@ public class MoveAnalysisResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public MoveImpact[] warnings;
+
     public MoveAnalysisResult withWarnings(MoveImpact[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public MoveAnalysisResult(){}
 }

@@ -12,6 +12,7 @@ public class StoredValueStatusChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Amount amount;
+
     public StoredValueStatusChangeRequest withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -22,6 +23,7 @@ public class StoredValueStatusChangeRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public StoredValueStatusChangeRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -32,6 +34,7 @@ public class StoredValueStatusChangeRequest {
      */
     @JsonProperty("paymentMethod")
     public java.util.Map<String, String> paymentMethod;
+
     public StoredValueStatusChangeRequest withPaymentMethod(java.util.Map<String, String> paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -40,6 +43,7 @@ public class StoredValueStatusChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringDetailReference")
     public String recurringDetailReference;
+
     public StoredValueStatusChangeRequest withRecurringDetailReference(String recurringDetailReference) {
         this.recurringDetailReference = recurringDetailReference;
         return this;
@@ -52,6 +56,7 @@ public class StoredValueStatusChangeRequest {
      */
     @JsonProperty("reference")
     public String reference;
+
     public StoredValueStatusChangeRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -70,6 +75,7 @@ public class StoredValueStatusChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperInteraction")
     public StoredValueStatusChangeRequestShopperInteractionEnum shopperInteraction;
+
     public StoredValueStatusChangeRequest withShopperInteraction(StoredValueStatusChangeRequestShopperInteractionEnum shopperInteraction) {
         this.shopperInteraction = shopperInteraction;
         return this;
@@ -78,6 +84,7 @@ public class StoredValueStatusChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public StoredValueStatusChangeRequest withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
@@ -88,6 +95,7 @@ public class StoredValueStatusChangeRequest {
      */
     @JsonProperty("status")
     public StoredValueStatusChangeRequestStatusEnum status;
+
     public StoredValueStatusChangeRequest withStatus(StoredValueStatusChangeRequestStatusEnum status) {
         this.status = status;
         return this;
@@ -99,9 +107,16 @@ public class StoredValueStatusChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("store")
     public String store;
+
     public StoredValueStatusChangeRequest withStore(String store) {
         this.store = store;
         return this;
     }
     
+    public StoredValueStatusChangeRequest(@JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("paymentMethod") java.util.Map<String, String> paymentMethod, @JsonProperty("reference") String reference, @JsonProperty("status") StoredValueStatusChangeRequestStatusEnum status) {
+        this.merchantAccount = merchantAccount;
+        this.paymentMethod = paymentMethod;
+        this.reference = reference;
+        this.status = status;
+  }
 }

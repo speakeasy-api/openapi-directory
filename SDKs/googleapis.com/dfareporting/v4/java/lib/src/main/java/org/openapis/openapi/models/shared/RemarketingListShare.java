@@ -18,6 +18,7 @@ public class RemarketingListShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RemarketingListShare withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class RemarketingListShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remarketingListId")
     public String remarketingListId;
+
     public RemarketingListShare withRemarketingListId(String remarketingListId) {
         this.remarketingListId = remarketingListId;
         return this;
@@ -40,6 +42,7 @@ public class RemarketingListShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedAccountIds")
     public String[] sharedAccountIds;
+
     public RemarketingListShare withSharedAccountIds(String[] sharedAccountIds) {
         this.sharedAccountIds = sharedAccountIds;
         return this;
@@ -51,9 +54,11 @@ public class RemarketingListShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedAdvertiserIds")
     public String[] sharedAdvertiserIds;
+
     public RemarketingListShare withSharedAdvertiserIds(String[] sharedAdvertiserIds) {
         this.sharedAdvertiserIds = sharedAdvertiserIds;
         return this;
     }
     
+    public RemarketingListShare(){}
 }

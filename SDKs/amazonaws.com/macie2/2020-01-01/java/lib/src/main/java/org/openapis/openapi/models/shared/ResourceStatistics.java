@@ -15,6 +15,7 @@ public class ResourceStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalBytesClassified")
     public Long totalBytesClassified;
+
     public ResourceStatistics withTotalBytesClassified(Long totalBytesClassified) {
         this.totalBytesClassified = totalBytesClassified;
         return this;
@@ -23,6 +24,7 @@ public class ResourceStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalDetections")
     public Long totalDetections;
+
     public ResourceStatistics withTotalDetections(Long totalDetections) {
         this.totalDetections = totalDetections;
         return this;
@@ -31,6 +33,7 @@ public class ResourceStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalDetectionsSuppressed")
     public Long totalDetectionsSuppressed;
+
     public ResourceStatistics withTotalDetectionsSuppressed(Long totalDetectionsSuppressed) {
         this.totalDetectionsSuppressed = totalDetectionsSuppressed;
         return this;
@@ -39,6 +42,7 @@ public class ResourceStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItemsClassified")
     public Long totalItemsClassified;
+
     public ResourceStatistics withTotalItemsClassified(Long totalItemsClassified) {
         this.totalItemsClassified = totalItemsClassified;
         return this;
@@ -47,6 +51,7 @@ public class ResourceStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItemsSensitive")
     public Long totalItemsSensitive;
+
     public ResourceStatistics withTotalItemsSensitive(Long totalItemsSensitive) {
         this.totalItemsSensitive = totalItemsSensitive;
         return this;
@@ -55,6 +60,7 @@ public class ResourceStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItemsSkipped")
     public Long totalItemsSkipped;
+
     public ResourceStatistics withTotalItemsSkipped(Long totalItemsSkipped) {
         this.totalItemsSkipped = totalItemsSkipped;
         return this;
@@ -63,6 +69,7 @@ public class ResourceStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItemsSkippedInvalidEncryption")
     public Long totalItemsSkippedInvalidEncryption;
+
     public ResourceStatistics withTotalItemsSkippedInvalidEncryption(Long totalItemsSkippedInvalidEncryption) {
         this.totalItemsSkippedInvalidEncryption = totalItemsSkippedInvalidEncryption;
         return this;
@@ -71,6 +78,7 @@ public class ResourceStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItemsSkippedInvalidKms")
     public Long totalItemsSkippedInvalidKms;
+
     public ResourceStatistics withTotalItemsSkippedInvalidKms(Long totalItemsSkippedInvalidKms) {
         this.totalItemsSkippedInvalidKms = totalItemsSkippedInvalidKms;
         return this;
@@ -79,9 +87,11 @@ public class ResourceStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItemsSkippedPermissionDenied")
     public Long totalItemsSkippedPermissionDenied;
+
     public ResourceStatistics withTotalItemsSkippedPermissionDenied(Long totalItemsSkippedPermissionDenied) {
         this.totalItemsSkippedPermissionDenied = totalItemsSkippedPermissionDenied;
         return this;
     }
     
+    public ResourceStatistics(){}
 }

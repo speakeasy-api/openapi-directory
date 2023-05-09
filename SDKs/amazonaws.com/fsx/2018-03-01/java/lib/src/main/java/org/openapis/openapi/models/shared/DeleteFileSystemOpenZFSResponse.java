@@ -18,6 +18,7 @@ public class DeleteFileSystemOpenZFSResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalBackupId")
     public String finalBackupId;
+
     public DeleteFileSystemOpenZFSResponse withFinalBackupId(String finalBackupId) {
         this.finalBackupId = finalBackupId;
         return this;
@@ -29,9 +30,11 @@ public class DeleteFileSystemOpenZFSResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalBackupTags")
     public Tag[] finalBackupTags;
+
     public DeleteFileSystemOpenZFSResponse withFinalBackupTags(Tag[] finalBackupTags) {
         this.finalBackupTags = finalBackupTags;
         return this;
     }
     
+    public DeleteFileSystemOpenZFSResponse(){}
 }

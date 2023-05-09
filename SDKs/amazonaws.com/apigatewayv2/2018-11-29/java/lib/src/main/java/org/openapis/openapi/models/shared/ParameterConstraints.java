@@ -15,9 +15,11 @@ public class ParameterConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Required")
     public Boolean required;
+
     public ParameterConstraints withRequired(Boolean required) {
         this.required = required;
         return this;
     }
     
+    public ParameterConstraints(){}
 }

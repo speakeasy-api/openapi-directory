@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FunctionsGetExecutionRequest {
@@ -12,6 +13,7 @@ public class FunctionsGetExecutionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
     public String executionId;
+
     public FunctionsGetExecutionRequest withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -22,9 +24,14 @@ public class FunctionsGetExecutionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionId")
     public String functionId;
+
     public FunctionsGetExecutionRequest withFunctionId(String functionId) {
         this.functionId = functionId;
         return this;
     }
     
+    public FunctionsGetExecutionRequest(@JsonProperty("executionId") String executionId, @JsonProperty("functionId") String functionId) {
+        this.executionId = executionId;
+        this.functionId = functionId;
+  }
 }

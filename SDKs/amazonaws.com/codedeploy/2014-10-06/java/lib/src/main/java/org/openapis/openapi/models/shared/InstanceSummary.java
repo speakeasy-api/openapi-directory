@@ -20,6 +20,7 @@ public class InstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public InstanceSummary withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -28,6 +29,7 @@ public class InstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceId")
     public String instanceId;
+
     public InstanceSummary withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -36,6 +38,7 @@ public class InstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceType")
     public InstanceTypeEnum instanceType;
+
     public InstanceSummary withInstanceType(InstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -46,6 +49,7 @@ public class InstanceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public InstanceSummary withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -54,6 +58,7 @@ public class InstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleEvents")
     public LifecycleEvent[] lifecycleEvents;
+
     public InstanceSummary withLifecycleEvents(LifecycleEvent[] lifecycleEvents) {
         this.lifecycleEvents = lifecycleEvents;
         return this;
@@ -62,9 +67,11 @@ public class InstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public InstanceStatusEnum status;
+
     public InstanceSummary withStatus(InstanceStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public InstanceSummary(){}
 }

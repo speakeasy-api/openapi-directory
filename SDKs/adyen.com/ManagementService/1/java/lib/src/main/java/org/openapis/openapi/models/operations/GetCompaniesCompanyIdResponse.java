@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCompaniesCompanyIdResponse {
@@ -12,6 +13,7 @@ public class GetCompaniesCompanyIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Company company;
+
     public GetCompaniesCompanyIdResponse withCompany(org.openapis.openapi.models.shared.Company company) {
         this.company = company;
         return this;
@@ -19,6 +21,7 @@ public class GetCompaniesCompanyIdResponse {
     
     
     public String contentType;
+
     public GetCompaniesCompanyIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCompaniesCompanyIdResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetCompaniesCompanyIdResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class GetCompaniesCompanyIdResponse {
     
     
     public Integer statusCode;
+
     public GetCompaniesCompanyIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCompaniesCompanyIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCompaniesCompanyIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCompaniesCompanyIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

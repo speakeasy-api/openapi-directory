@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRejectTransitGatewayMulticastDomainAssociationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRejectTransitGatewayMulticastDomainAssociationsActionEnum action;
+
     public GETRejectTransitGatewayMulticastDomainAssociationsRequest withAction(GETRejectTransitGatewayMulticastDomainAssociationsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRejectTransitGatewayMulticastDomainAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETRejectTransitGatewayMulticastDomainAssociationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETRejectTransitGatewayMulticastDomainAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SubnetIds")
     public String[] subnetIds;
+
     public GETRejectTransitGatewayMulticastDomainAssociationsRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -39,6 +43,7 @@ public class GETRejectTransitGatewayMulticastDomainAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayAttachmentId")
     public String transitGatewayAttachmentId;
+
     public GETRejectTransitGatewayMulticastDomainAssociationsRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -49,6 +54,7 @@ public class GETRejectTransitGatewayMulticastDomainAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayMulticastDomainId")
     public String transitGatewayMulticastDomainId;
+
     public GETRejectTransitGatewayMulticastDomainAssociationsRequest withTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
         this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
         return this;
@@ -56,6 +62,7 @@ public class GETRejectTransitGatewayMulticastDomainAssociationsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRejectTransitGatewayMulticastDomainAssociationsVersionEnum version;
+
     public GETRejectTransitGatewayMulticastDomainAssociationsRequest withVersion(GETRejectTransitGatewayMulticastDomainAssociationsVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETRejectTransitGatewayMulticastDomainAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRejectTransitGatewayMulticastDomainAssociationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETRejectTransitGatewayMulticastDomainAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRejectTransitGatewayMulticastDomainAssociationsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETRejectTransitGatewayMulticastDomainAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRejectTransitGatewayMulticastDomainAssociationsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETRejectTransitGatewayMulticastDomainAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRejectTransitGatewayMulticastDomainAssociationsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETRejectTransitGatewayMulticastDomainAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRejectTransitGatewayMulticastDomainAssociationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETRejectTransitGatewayMulticastDomainAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRejectTransitGatewayMulticastDomainAssociationsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,14 @@ public class GETRejectTransitGatewayMulticastDomainAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRejectTransitGatewayMulticastDomainAssociationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRejectTransitGatewayMulticastDomainAssociationsRequest(@JsonProperty("Action") GETRejectTransitGatewayMulticastDomainAssociationsActionEnum action, @JsonProperty("Version") GETRejectTransitGatewayMulticastDomainAssociationsVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

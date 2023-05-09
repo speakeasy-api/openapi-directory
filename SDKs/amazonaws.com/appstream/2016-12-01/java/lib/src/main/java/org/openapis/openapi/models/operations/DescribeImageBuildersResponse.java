@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeImageBuildersResponse {
     
     public String contentType;
+
     public DescribeImageBuildersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeImageBuildersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeImageBuildersResult describeImageBuildersResult;
+
     public DescribeImageBuildersResponse withDescribeImageBuildersResult(org.openapis.openapi.models.shared.DescribeImageBuildersResult describeImageBuildersResult) {
         this.describeImageBuildersResult = describeImageBuildersResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeImageBuildersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeImageBuildersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeImageBuildersResponse {
     
     
     public Integer statusCode;
+
     public DescribeImageBuildersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeImageBuildersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeImageBuildersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeImageBuildersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

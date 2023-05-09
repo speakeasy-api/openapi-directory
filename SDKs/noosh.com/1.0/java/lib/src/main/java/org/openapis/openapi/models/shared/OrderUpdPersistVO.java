@@ -20,6 +20,7 @@ public class OrderUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public OrderUpdPersistVO withAction(String action) {
         this.action = action;
         return this;
@@ -28,6 +29,7 @@ public class OrderUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget_type_field_id")
     public Long budgetTypeFieldId;
+
     public OrderUpdPersistVO withBudgetTypeFieldId(Long budgetTypeFieldId) {
         this.budgetTypeFieldId = budgetTypeFieldId;
         return this;
@@ -36,6 +38,7 @@ public class OrderUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public OrderUpdPersistVO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -44,6 +47,7 @@ public class OrderUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public CustomFieldPersistVO[] customFields;
+
     public OrderUpdPersistVO withCustomFields(CustomFieldPersistVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -53,6 +57,7 @@ public class OrderUpdPersistVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("order_completion_date")
     public LocalDate orderCompletionDate;
+
     public OrderUpdPersistVO withOrderCompletionDate(LocalDate orderCompletionDate) {
         this.orderCompletionDate = orderCompletionDate;
         return this;
@@ -61,6 +66,7 @@ public class OrderUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public Long orderId;
+
     public OrderUpdPersistVO withOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
@@ -69,6 +75,7 @@ public class OrderUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_selection_reason")
     public String otherSelectionReason;
+
     public OrderUpdPersistVO withOtherSelectionReason(String otherSelectionReason) {
         this.otherSelectionReason = otherSelectionReason;
         return this;
@@ -80,6 +87,7 @@ public class OrderUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overs_percent")
     public Object oversPercent;
+
     public OrderUpdPersistVO withOversPercent(Object oversPercent) {
         this.oversPercent = oversPercent;
         return this;
@@ -88,6 +96,7 @@ public class OrderUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method_id")
     public Long paymentMethodId;
+
     public OrderUpdPersistVO withPaymentMethodId(Long paymentMethodId) {
         this.paymentMethodId = paymentMethodId;
         return this;
@@ -96,6 +105,7 @@ public class OrderUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_reference_no")
     public String paymentReferenceNo;
+
     public OrderUpdPersistVO withPaymentReferenceNo(String paymentReferenceNo) {
         this.paymentReferenceNo = paymentReferenceNo;
         return this;
@@ -104,6 +114,7 @@ public class OrderUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reject_reason")
     public String rejectReason;
+
     public OrderUpdPersistVO withRejectReason(String rejectReason) {
         this.rejectReason = rejectReason;
         return this;
@@ -112,6 +123,7 @@ public class OrderUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_selection_reason_id")
     public Long supplierSelectionReasonId;
+
     public OrderUpdPersistVO withSupplierSelectionReasonId(Long supplierSelectionReasonId) {
         this.supplierSelectionReasonId = supplierSelectionReasonId;
         return this;
@@ -123,9 +135,11 @@ public class OrderUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unders_percent")
     public Object undersPercent;
+
     public OrderUpdPersistVO withUndersPercent(Object undersPercent) {
         this.undersPercent = undersPercent;
         return this;
     }
     
+    public OrderUpdPersistVO(){}
 }

@@ -8,11 +8,12 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBundleNotificationsRequest {
     /**
-     * Bundle ID to notify on
+     * If set, return records where the specified field is equal to the supplied value.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bundle_id")
-    public Integer bundleId;
-    public GetBundleNotificationsRequest withBundleId(Integer bundleId) {
+    public String bundleId;
+
+    public GetBundleNotificationsRequest withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
     }
@@ -22,8 +23,20 @@ public class GetBundleNotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetBundleNotificationsRequest withCursor(String cursor) {
         this.cursor = cursor;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is equal to the supplied value. Valid fields are `bundle_id`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public java.util.Map<String, Object> filter;
+
+    public GetBundleNotificationsRequest withFilter(java.util.Map<String, Object> filter) {
+        this.filter = filter;
         return this;
     }
     
@@ -32,8 +45,20 @@ public class GetBundleNotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetBundleNotificationsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[bundle_id]=desc`). Valid fields are `bundle_id`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public java.util.Map<String, Object> sortBy;
+
+    public GetBundleNotificationsRequest withSortBy(java.util.Map<String, Object> sortBy) {
+        this.sortBy = sortBy;
         return this;
     }
     
@@ -42,9 +67,11 @@ public class GetBundleNotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public Integer userId;
+
     public GetBundleNotificationsRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetBundleNotificationsRequest(){}
 }

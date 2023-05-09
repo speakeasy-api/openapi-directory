@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDhcpOptionsRequest {
     
     public String[] dhcpOptionsIds;
+
     public DescribeDhcpOptionsRequest withDhcpOptionsIds(String[] dhcpOptionsIds) {
         this.dhcpOptionsIds = dhcpOptionsIds;
         return this;
@@ -16,6 +17,7 @@ public class DescribeDhcpOptionsRequest {
     
     
     public Boolean dryRun;
+
     public DescribeDhcpOptionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class DescribeDhcpOptionsRequest {
     
     
     public DescribeDhcpOptionsRequestFilters[] filters;
+
     public DescribeDhcpOptionsRequest withFilters(DescribeDhcpOptionsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class DescribeDhcpOptionsRequest {
     
     
     public Long maxResults;
+
     public DescribeDhcpOptionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeDhcpOptionsRequest {
     
     
     public String nextToken;
+
     public DescribeDhcpOptionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeDhcpOptionsRequest(){}
 }

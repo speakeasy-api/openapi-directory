@@ -18,9 +18,11 @@ public class SeedJobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionProfile")
     public String connectionProfile;
+
     public SeedJobDetails withConnectionProfile(String connectionProfile) {
         this.connectionProfile = connectionProfile;
         return this;
     }
     
+    public SeedJobDetails(){}
 }

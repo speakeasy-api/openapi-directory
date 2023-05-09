@@ -12,6 +12,7 @@ public class CreateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudHsmClusterId")
     public String cloudHsmClusterId;
+
     public CreateCustomKeyStoreRequest withCloudHsmClusterId(String cloudHsmClusterId) {
         this.cloudHsmClusterId = cloudHsmClusterId;
         return this;
@@ -19,6 +20,7 @@ public class CreateCustomKeyStoreRequest {
     
     @JsonProperty("CustomKeyStoreName")
     public String customKeyStoreName;
+
     public CreateCustomKeyStoreRequest withCustomKeyStoreName(String customKeyStoreName) {
         this.customKeyStoreName = customKeyStoreName;
         return this;
@@ -27,6 +29,7 @@ public class CreateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomKeyStoreType")
     public CustomKeyStoreTypeEnum customKeyStoreType;
+
     public CreateCustomKeyStoreRequest withCustomKeyStoreType(CustomKeyStoreTypeEnum customKeyStoreType) {
         this.customKeyStoreType = customKeyStoreType;
         return this;
@@ -35,6 +38,7 @@ public class CreateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyStorePassword")
     public String keyStorePassword;
+
     public CreateCustomKeyStoreRequest withKeyStorePassword(String keyStorePassword) {
         this.keyStorePassword = keyStorePassword;
         return this;
@@ -43,6 +47,7 @@ public class CreateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrustAnchorCertificate")
     public String trustAnchorCertificate;
+
     public CreateCustomKeyStoreRequest withTrustAnchorCertificate(String trustAnchorCertificate) {
         this.trustAnchorCertificate = trustAnchorCertificate;
         return this;
@@ -51,6 +56,7 @@ public class CreateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XksProxyAuthenticationCredential")
     public XksProxyAuthenticationCredentialType xksProxyAuthenticationCredential;
+
     public CreateCustomKeyStoreRequest withXksProxyAuthenticationCredential(XksProxyAuthenticationCredentialType xksProxyAuthenticationCredential) {
         this.xksProxyAuthenticationCredential = xksProxyAuthenticationCredential;
         return this;
@@ -59,6 +65,7 @@ public class CreateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XksProxyConnectivity")
     public XksProxyConnectivityTypeEnum xksProxyConnectivity;
+
     public CreateCustomKeyStoreRequest withXksProxyConnectivity(XksProxyConnectivityTypeEnum xksProxyConnectivity) {
         this.xksProxyConnectivity = xksProxyConnectivity;
         return this;
@@ -67,6 +74,7 @@ public class CreateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XksProxyUriEndpoint")
     public String xksProxyUriEndpoint;
+
     public CreateCustomKeyStoreRequest withXksProxyUriEndpoint(String xksProxyUriEndpoint) {
         this.xksProxyUriEndpoint = xksProxyUriEndpoint;
         return this;
@@ -75,6 +83,7 @@ public class CreateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XksProxyUriPath")
     public String xksProxyUriPath;
+
     public CreateCustomKeyStoreRequest withXksProxyUriPath(String xksProxyUriPath) {
         this.xksProxyUriPath = xksProxyUriPath;
         return this;
@@ -83,9 +92,13 @@ public class CreateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XksProxyVpcEndpointServiceName")
     public String xksProxyVpcEndpointServiceName;
+
     public CreateCustomKeyStoreRequest withXksProxyVpcEndpointServiceName(String xksProxyVpcEndpointServiceName) {
         this.xksProxyVpcEndpointServiceName = xksProxyVpcEndpointServiceName;
         return this;
     }
     
+    public CreateCustomKeyStoreRequest(@JsonProperty("CustomKeyStoreName") String customKeyStoreName) {
+        this.customKeyStoreName = customKeyStoreName;
+  }
 }

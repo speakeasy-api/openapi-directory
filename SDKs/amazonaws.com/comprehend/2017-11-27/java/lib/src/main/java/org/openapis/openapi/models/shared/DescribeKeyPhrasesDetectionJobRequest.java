@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeKeyPhrasesDetectionJobRequest {
     @JsonProperty("JobId")
     public String jobId;
+
     public DescribeKeyPhrasesDetectionJobRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public DescribeKeyPhrasesDetectionJobRequest(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

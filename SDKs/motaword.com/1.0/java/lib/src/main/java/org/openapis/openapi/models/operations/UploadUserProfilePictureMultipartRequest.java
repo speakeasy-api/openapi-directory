@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadUserProfilePictureMultipartRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public org.openapis.openapi.models.shared.ProfilePictureUpload1 profilePictureUpload1;
+
     public UploadUserProfilePictureMultipartRequest withProfilePictureUpload1(org.openapis.openapi.models.shared.ProfilePictureUpload1 profilePictureUpload1) {
         this.profilePictureUpload1 = profilePictureUpload1;
         return this;
@@ -19,9 +21,13 @@ public class UploadUserProfilePictureMultipartRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public Long userId;
+
     public UploadUserProfilePictureMultipartRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public UploadUserProfilePictureMultipartRequest(@JsonProperty("userId") Long userId) {
+        this.userId = userId;
+  }
 }

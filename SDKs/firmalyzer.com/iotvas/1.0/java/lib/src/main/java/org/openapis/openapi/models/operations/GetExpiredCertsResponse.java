@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetExpiredCertsResponse {
     
     public String contentType;
+
     public GetExpiredCertsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetExpiredCertsResponse {
      */
     
     public org.openapis.openapi.models.shared.ExpiredCert[] expiredCerts;
+
     public GetExpiredCertsResponse withExpiredCerts(org.openapis.openapi.models.shared.ExpiredCert[] expiredCerts) {
         this.expiredCerts = expiredCerts;
         return this;
@@ -29,6 +32,7 @@ public class GetExpiredCertsResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public GetExpiredCertsResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -36,6 +40,7 @@ public class GetExpiredCertsResponse {
     
     
     public Integer statusCode;
+
     public GetExpiredCertsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetExpiredCertsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetExpiredCertsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetExpiredCertsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class PutDataLakeSettingsRequestBodyDataLakeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowExternalDataFiltering")
     public Boolean allowExternalDataFiltering;
+
     public PutDataLakeSettingsRequestBodyDataLakeSettings withAllowExternalDataFiltering(Boolean allowExternalDataFiltering) {
         this.allowExternalDataFiltering = allowExternalDataFiltering;
         return this;
@@ -23,6 +24,7 @@ public class PutDataLakeSettingsRequestBodyDataLakeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizedSessionTagValueList")
     public String[] authorizedSessionTagValueList;
+
     public PutDataLakeSettingsRequestBodyDataLakeSettings withAuthorizedSessionTagValueList(String[] authorizedSessionTagValueList) {
         this.authorizedSessionTagValueList = authorizedSessionTagValueList;
         return this;
@@ -31,6 +33,7 @@ public class PutDataLakeSettingsRequestBodyDataLakeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateDatabaseDefaultPermissions")
     public org.openapis.openapi.models.shared.PrincipalPermissions[] createDatabaseDefaultPermissions;
+
     public PutDataLakeSettingsRequestBodyDataLakeSettings withCreateDatabaseDefaultPermissions(org.openapis.openapi.models.shared.PrincipalPermissions[] createDatabaseDefaultPermissions) {
         this.createDatabaseDefaultPermissions = createDatabaseDefaultPermissions;
         return this;
@@ -39,6 +42,7 @@ public class PutDataLakeSettingsRequestBodyDataLakeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateTableDefaultPermissions")
     public org.openapis.openapi.models.shared.PrincipalPermissions[] createTableDefaultPermissions;
+
     public PutDataLakeSettingsRequestBodyDataLakeSettings withCreateTableDefaultPermissions(org.openapis.openapi.models.shared.PrincipalPermissions[] createTableDefaultPermissions) {
         this.createTableDefaultPermissions = createTableDefaultPermissions;
         return this;
@@ -47,6 +51,7 @@ public class PutDataLakeSettingsRequestBodyDataLakeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataLakeAdmins")
     public org.openapis.openapi.models.shared.DataLakePrincipal[] dataLakeAdmins;
+
     public PutDataLakeSettingsRequestBodyDataLakeSettings withDataLakeAdmins(org.openapis.openapi.models.shared.DataLakePrincipal[] dataLakeAdmins) {
         this.dataLakeAdmins = dataLakeAdmins;
         return this;
@@ -55,6 +60,7 @@ public class PutDataLakeSettingsRequestBodyDataLakeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalDataFilteringAllowList")
     public org.openapis.openapi.models.shared.DataLakePrincipal[] externalDataFilteringAllowList;
+
     public PutDataLakeSettingsRequestBodyDataLakeSettings withExternalDataFilteringAllowList(org.openapis.openapi.models.shared.DataLakePrincipal[] externalDataFilteringAllowList) {
         this.externalDataFilteringAllowList = externalDataFilteringAllowList;
         return this;
@@ -63,6 +69,7 @@ public class PutDataLakeSettingsRequestBodyDataLakeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public PutDataLakeSettingsRequestBodyDataLakeSettings withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -71,9 +78,11 @@ public class PutDataLakeSettingsRequestBodyDataLakeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrustedResourceOwners")
     public String[] trustedResourceOwners;
+
     public PutDataLakeSettingsRequestBodyDataLakeSettings withTrustedResourceOwners(String[] trustedResourceOwners) {
         this.trustedResourceOwners = trustedResourceOwners;
         return this;
     }
     
+    public PutDataLakeSettingsRequestBodyDataLakeSettings(){}
 }

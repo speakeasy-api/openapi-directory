@@ -20,6 +20,7 @@ public class StoredValueLoadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authCode")
     public String authCode;
+
     public StoredValueLoadResponse withAuthCode(String authCode) {
         this.authCode = authCode;
         return this;
@@ -28,6 +29,7 @@ public class StoredValueLoadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentBalance")
     public Amount currentBalance;
+
     public StoredValueLoadResponse withCurrentBalance(Amount currentBalance) {
         this.currentBalance = currentBalance;
         return this;
@@ -39,6 +41,7 @@ public class StoredValueLoadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public StoredValueLoadResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -52,6 +55,7 @@ public class StoredValueLoadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refusalReason")
     public String refusalReason;
+
     public StoredValueLoadResponse withRefusalReason(String refusalReason) {
         this.refusalReason = refusalReason;
         return this;
@@ -69,6 +73,7 @@ public class StoredValueLoadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public StoredValueLoadResponseResultCodeEnum resultCode;
+
     public StoredValueLoadResponse withResultCode(StoredValueLoadResponseResultCodeEnum resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -80,9 +85,11 @@ public class StoredValueLoadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thirdPartyRefusalReason")
     public String thirdPartyRefusalReason;
+
     public StoredValueLoadResponse withThirdPartyRefusalReason(String thirdPartyRefusalReason) {
         this.thirdPartyRefusalReason = thirdPartyRefusalReason;
         return this;
     }
     
+    public StoredValueLoadResponse(){}
 }

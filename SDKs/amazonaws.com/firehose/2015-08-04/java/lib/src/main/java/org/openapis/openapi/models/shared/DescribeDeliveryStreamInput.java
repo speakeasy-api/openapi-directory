@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeDeliveryStreamInput {
     @JsonProperty("DeliveryStreamName")
     public String deliveryStreamName;
+
     public DescribeDeliveryStreamInput withDeliveryStreamName(String deliveryStreamName) {
         this.deliveryStreamName = deliveryStreamName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveStartDestinationId")
     public String exclusiveStartDestinationId;
+
     public DescribeDeliveryStreamInput withExclusiveStartDestinationId(String exclusiveStartDestinationId) {
         this.exclusiveStartDestinationId = exclusiveStartDestinationId;
         return this;
@@ -27,9 +29,13 @@ public class DescribeDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeDeliveryStreamInput withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public DescribeDeliveryStreamInput(@JsonProperty("DeliveryStreamName") String deliveryStreamName) {
+        this.deliveryStreamName = deliveryStreamName;
+  }
 }

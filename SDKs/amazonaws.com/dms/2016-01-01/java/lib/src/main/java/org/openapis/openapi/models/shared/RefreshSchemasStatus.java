@@ -20,6 +20,7 @@ public class RefreshSchemasStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public RefreshSchemasStatus withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
@@ -28,6 +29,7 @@ public class RefreshSchemasStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastFailureMessage")
     public String lastFailureMessage;
+
     public RefreshSchemasStatus withLastFailureMessage(String lastFailureMessage) {
         this.lastFailureMessage = lastFailureMessage;
         return this;
@@ -38,6 +40,7 @@ public class RefreshSchemasStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastRefreshDate")
     public OffsetDateTime lastRefreshDate;
+
     public RefreshSchemasStatus withLastRefreshDate(OffsetDateTime lastRefreshDate) {
         this.lastRefreshDate = lastRefreshDate;
         return this;
@@ -46,6 +49,7 @@ public class RefreshSchemasStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationInstanceArn")
     public String replicationInstanceArn;
+
     public RefreshSchemasStatus withReplicationInstanceArn(String replicationInstanceArn) {
         this.replicationInstanceArn = replicationInstanceArn;
         return this;
@@ -54,9 +58,11 @@ public class RefreshSchemasStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public RefreshSchemasStatusTypeValueEnum status;
+
     public RefreshSchemasStatus withStatus(RefreshSchemasStatusTypeValueEnum status) {
         this.status = status;
         return this;
     }
     
+    public RefreshSchemasStatus(){}
 }

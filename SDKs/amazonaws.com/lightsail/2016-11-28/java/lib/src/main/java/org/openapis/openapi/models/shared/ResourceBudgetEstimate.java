@@ -20,6 +20,7 @@ public class ResourceBudgetEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costEstimates")
     public CostEstimate[] costEstimates;
+
     public ResourceBudgetEstimate withCostEstimates(CostEstimate[] costEstimates) {
         this.costEstimates = costEstimates;
         return this;
@@ -30,6 +31,7 @@ public class ResourceBudgetEstimate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public ResourceBudgetEstimate withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class ResourceBudgetEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public ResourceBudgetEstimate withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -46,6 +49,7 @@ public class ResourceBudgetEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public ResourceBudgetEstimate withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -56,9 +60,11 @@ public class ResourceBudgetEstimate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ResourceBudgetEstimate withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ResourceBudgetEstimate(){}
 }

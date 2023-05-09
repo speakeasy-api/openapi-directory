@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResolverQueryLogConfigPolicyResponse {
@@ -12,6 +13,7 @@ public class GetResolverQueryLogConfigPolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public GetResolverQueryLogConfigPolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetResolverQueryLogConfigPolicyResponse {
     
     
     public String contentType;
+
     public GetResolverQueryLogConfigPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetResolverQueryLogConfigPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResolverQueryLogConfigPolicyResponse getResolverQueryLogConfigPolicyResponse;
+
     public GetResolverQueryLogConfigPolicyResponse withGetResolverQueryLogConfigPolicyResponse(org.openapis.openapi.models.shared.GetResolverQueryLogConfigPolicyResponse getResolverQueryLogConfigPolicyResponse) {
         this.getResolverQueryLogConfigPolicyResponse = getResolverQueryLogConfigPolicyResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetResolverQueryLogConfigPolicyResponse {
      */
     
     public Object internalServiceErrorException;
+
     public GetResolverQueryLogConfigPolicyResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class GetResolverQueryLogConfigPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public GetResolverQueryLogConfigPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetResolverQueryLogConfigPolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public GetResolverQueryLogConfigPolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -66,6 +73,7 @@ public class GetResolverQueryLogConfigPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetResolverQueryLogConfigPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetResolverQueryLogConfigPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResolverQueryLogConfigPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetResolverQueryLogConfigPolicyResponse {
      */
     
     public Object unknownResourceException;
+
     public GetResolverQueryLogConfigPolicyResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    public GetResolverQueryLogConfigPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

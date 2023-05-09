@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1ServicesIdResourcesRequest {
@@ -12,6 +13,7 @@ public class GetSetupV1ServicesIdResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=googleAuthReturnUrl")
     public String googleAuthReturnUrl;
+
     public GetSetupV1ServicesIdResourcesRequest withGoogleAuthReturnUrl(String googleAuthReturnUrl) {
         this.googleAuthReturnUrl = googleAuthReturnUrl;
         return this;
@@ -22,6 +24,7 @@ public class GetSetupV1ServicesIdResourcesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetSetupV1ServicesIdResourcesRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class GetSetupV1ServicesIdResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetSetupV1ServicesIdResourcesRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +46,7 @@ public class GetSetupV1ServicesIdResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetSetupV1ServicesIdResourcesRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -52,9 +57,13 @@ public class GetSetupV1ServicesIdResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outlookAuthReturnUrl")
     public String outlookAuthReturnUrl;
+
     public GetSetupV1ServicesIdResourcesRequest withOutlookAuthReturnUrl(String outlookAuthReturnUrl) {
         this.outlookAuthReturnUrl = outlookAuthReturnUrl;
         return this;
     }
     
+    public GetSetupV1ServicesIdResourcesRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostJmxRepositoryRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=action")
     public String action;
+
     public PostJmxRepositoryRequest withAction(String action) {
         this.action = action;
         return this;
     }
     
+    public PostJmxRepositoryRequest(@JsonProperty("action") String action) {
+        this.action = action;
+  }
 }

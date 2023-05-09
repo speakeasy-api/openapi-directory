@@ -15,9 +15,13 @@ public class CreateVoiceTemplateResponse {
      */
     @JsonProperty("CreateTemplateMessageBody")
     public CreateTemplateMessageBody createTemplateMessageBody;
+
     public CreateVoiceTemplateResponse withCreateTemplateMessageBody(CreateTemplateMessageBody createTemplateMessageBody) {
         this.createTemplateMessageBody = createTemplateMessageBody;
         return this;
     }
     
+    public CreateVoiceTemplateResponse(@JsonProperty("CreateTemplateMessageBody") CreateTemplateMessageBody createTemplateMessageBody) {
+        this.createTemplateMessageBody = createTemplateMessageBody;
+  }
 }

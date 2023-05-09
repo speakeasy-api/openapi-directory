@@ -18,9 +18,11 @@ public class GuestOsFeature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GuestOsFeatureTypeEnum type;
+
     public GuestOsFeature withType(GuestOsFeatureTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GuestOsFeature(){}
 }

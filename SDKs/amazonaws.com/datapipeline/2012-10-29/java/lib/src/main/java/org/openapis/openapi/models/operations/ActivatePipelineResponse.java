@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActivatePipelineResponse {
@@ -12,6 +13,7 @@ public class ActivatePipelineResponse {
      */
     
     public java.util.Map<String, Object> activatePipelineOutput;
+
     public ActivatePipelineResponse withActivatePipelineOutput(java.util.Map<String, Object> activatePipelineOutput) {
         this.activatePipelineOutput = activatePipelineOutput;
         return this;
@@ -19,6 +21,7 @@ public class ActivatePipelineResponse {
     
     
     public String contentType;
+
     public ActivatePipelineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ActivatePipelineResponse {
      */
     
     public Object internalServiceError;
+
     public ActivatePipelineResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class ActivatePipelineResponse {
      */
     
     public Object invalidRequestException;
+
     public ActivatePipelineResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ActivatePipelineResponse {
      */
     
     public Object pipelineDeletedException;
+
     public ActivatePipelineResponse withPipelineDeletedException(Object pipelineDeletedException) {
         this.pipelineDeletedException = pipelineDeletedException;
         return this;
@@ -59,6 +65,7 @@ public class ActivatePipelineResponse {
      */
     
     public Object pipelineNotFoundException;
+
     public ActivatePipelineResponse withPipelineNotFoundException(Object pipelineNotFoundException) {
         this.pipelineNotFoundException = pipelineNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ActivatePipelineResponse {
     
     
     public Integer statusCode;
+
     public ActivatePipelineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ActivatePipelineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActivatePipelineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ActivatePipelineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

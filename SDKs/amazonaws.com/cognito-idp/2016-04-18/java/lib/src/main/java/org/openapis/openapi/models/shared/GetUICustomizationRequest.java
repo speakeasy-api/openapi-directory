@@ -12,6 +12,7 @@ public class GetUICustomizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientId")
     public String clientId;
+
     public GetUICustomizationRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -19,9 +20,13 @@ public class GetUICustomizationRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public GetUICustomizationRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public GetUICustomizationRequest(@JsonProperty("UserPoolId") String userPoolId) {
+        this.userPoolId = userPoolId;
+  }
 }

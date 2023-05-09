@@ -59,11 +59,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlProjectsInstancesGetDiskShrinkConfigResponse res = new org.openapis.openapi.models.operations.SqlProjectsInstancesGetDiskShrinkConfigResponse() {{
+        org.openapis.openapi.models.operations.SqlProjectsInstancesGetDiskShrinkConfigResponse res = new org.openapis.openapi.models.operations.SqlProjectsInstancesGetDiskShrinkConfigResponse(contentType, httpRes.statusCode()) {{
             sqlInstancesGetDiskShrinkConfigResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlProjectsInstancesPerformDiskShrinkResponse res = new org.openapis.openapi.models.operations.SqlProjectsInstancesPerformDiskShrinkResponse() {{
+        org.openapis.openapi.models.operations.SqlProjectsInstancesPerformDiskShrinkResponse res = new org.openapis.openapi.models.operations.SqlProjectsInstancesPerformDiskShrinkResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlProjectsInstancesRescheduleMaintenanceResponse res = new org.openapis.openapi.models.operations.SqlProjectsInstancesRescheduleMaintenanceResponse() {{
+        org.openapis.openapi.models.operations.SqlProjectsInstancesRescheduleMaintenanceResponse res = new org.openapis.openapi.models.operations.SqlProjectsInstancesRescheduleMaintenanceResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +197,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlProjectsInstancesResetReplicaSizeResponse res = new org.openapis.openapi.models.operations.SqlProjectsInstancesResetReplicaSizeResponse() {{
+        org.openapis.openapi.models.operations.SqlProjectsInstancesResetReplicaSizeResponse res = new org.openapis.openapi.models.operations.SqlProjectsInstancesResetReplicaSizeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,11 +243,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlProjectsInstancesStartExternalSyncResponse res = new org.openapis.openapi.models.operations.SqlProjectsInstancesStartExternalSyncResponse() {{
+        org.openapis.openapi.models.operations.SqlProjectsInstancesStartExternalSyncResponse res = new org.openapis.openapi.models.operations.SqlProjectsInstancesStartExternalSyncResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -299,11 +289,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlProjectsInstancesVerifyExternalSyncSettingsResponse res = new org.openapis.openapi.models.operations.SqlProjectsInstancesVerifyExternalSyncSettingsResponse() {{
+        org.openapis.openapi.models.operations.SqlProjectsInstancesVerifyExternalSyncSettingsResponse res = new org.openapis.openapi.models.operations.SqlProjectsInstancesVerifyExternalSyncSettingsResponse(contentType, httpRes.statusCode()) {{
             sqlInstancesVerifyExternalSyncSettingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

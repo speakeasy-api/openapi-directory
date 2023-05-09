@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeNodeGetRemoteLoginSettingsRequest {
@@ -12,6 +13,7 @@ public class ComputeNodeGetRemoteLoginSettingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public ComputeNodeGetRemoteLoginSettingsRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -22,6 +24,7 @@ public class ComputeNodeGetRemoteLoginSettingsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public ComputeNodeGetRemoteLoginSettingsRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -32,6 +35,7 @@ public class ComputeNodeGetRemoteLoginSettingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nodeId")
     public String nodeId;
+
     public ComputeNodeGetRemoteLoginSettingsRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -42,6 +46,7 @@ public class ComputeNodeGetRemoteLoginSettingsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public ComputeNodeGetRemoteLoginSettingsRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -52,6 +57,7 @@ public class ComputeNodeGetRemoteLoginSettingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
     public String poolId;
+
     public ComputeNodeGetRemoteLoginSettingsRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -62,6 +68,7 @@ public class ComputeNodeGetRemoteLoginSettingsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public ComputeNodeGetRemoteLoginSettingsRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -72,9 +79,15 @@ public class ComputeNodeGetRemoteLoginSettingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public ComputeNodeGetRemoteLoginSettingsRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public ComputeNodeGetRemoteLoginSettingsRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("nodeId") String nodeId, @JsonProperty("poolId") String poolId) {
+        this.apiVersion = apiVersion;
+        this.nodeId = nodeId;
+        this.poolId = poolId;
+  }
 }

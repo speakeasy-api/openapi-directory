@@ -12,6 +12,7 @@ public class PostCoursesRootContentIdPermissionsUserEmailPermissionToBeGrantedTo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isBuilder")
     public Boolean isBuilder;
+
     public PostCoursesRootContentIdPermissionsUserEmailPermissionToBeGrantedToTheUser withIsBuilder(Boolean isBuilder) {
         this.isBuilder = isBuilder;
         return this;
@@ -20,9 +21,11 @@ public class PostCoursesRootContentIdPermissionsUserEmailPermissionToBeGrantedTo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isReviewer")
     public Boolean isReviewer;
+
     public PostCoursesRootContentIdPermissionsUserEmailPermissionToBeGrantedToTheUser withIsReviewer(Boolean isReviewer) {
         this.isReviewer = isReviewer;
         return this;
     }
     
+    public PostCoursesRootContentIdPermissionsUserEmailPermissionToBeGrantedToTheUser(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAddonConfigurationResponse {
     
     public String contentType;
+
     public DescribeAddonConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAddonConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAddonConfigurationResponse describeAddonConfigurationResponse;
+
     public DescribeAddonConfigurationResponse withDescribeAddonConfigurationResponse(org.openapis.openapi.models.shared.DescribeAddonConfigurationResponse describeAddonConfigurationResponse) {
         this.describeAddonConfigurationResponse = describeAddonConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAddonConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeAddonConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAddonConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAddonConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAddonConfigurationResponse {
      */
     
     public Object serverException;
+
     public DescribeAddonConfigurationResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeAddonConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeAddonConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeAddonConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAddonConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAddonConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

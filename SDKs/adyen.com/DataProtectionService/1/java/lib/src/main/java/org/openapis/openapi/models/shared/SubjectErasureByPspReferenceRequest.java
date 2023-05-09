@@ -15,6 +15,7 @@ public class SubjectErasureByPspReferenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceErasure")
     public Boolean forceErasure;
+
     public SubjectErasureByPspReferenceRequest withForceErasure(Boolean forceErasure) {
         this.forceErasure = forceErasure;
         return this;
@@ -26,6 +27,7 @@ public class SubjectErasureByPspReferenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public SubjectErasureByPspReferenceRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -37,9 +39,11 @@ public class SubjectErasureByPspReferenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public SubjectErasureByPspReferenceRequest withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
     }
     
+    public SubjectErasureByPspReferenceRequest(){}
 }

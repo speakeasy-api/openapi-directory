@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MetricAttribution {
     @JsonProperty("eventAttributionSource")
     public String eventAttributionSource;
+
     public MetricAttribution withEventAttributionSource(String eventAttributionSource) {
         this.eventAttributionSource = eventAttributionSource;
         return this;
     }
     
+    public MetricAttribution(@JsonProperty("eventAttributionSource") String eventAttributionSource) {
+        this.eventAttributionSource = eventAttributionSource;
+  }
 }

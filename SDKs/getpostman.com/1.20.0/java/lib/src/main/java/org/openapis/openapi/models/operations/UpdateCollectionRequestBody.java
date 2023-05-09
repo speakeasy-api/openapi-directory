@@ -12,9 +12,11 @@ public class UpdateCollectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public UpdateCollectionRequestBodyCollection collection;
+
     public UpdateCollectionRequestBody withCollection(UpdateCollectionRequestBodyCollection collection) {
         this.collection = collection;
         return this;
     }
     
+    public UpdateCollectionRequestBody(){}
 }

@@ -20,6 +20,7 @@ public class BotLocaleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botLocaleStatus")
     public BotLocaleStatusEnum botLocaleStatus;
+
     public BotLocaleSummary withBotLocaleStatus(BotLocaleStatusEnum botLocaleStatus) {
         this.botLocaleStatus = botLocaleStatus;
         return this;
@@ -28,6 +29,7 @@ public class BotLocaleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BotLocaleSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class BotLocaleSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastBuildSubmittedDateTime")
     public OffsetDateTime lastBuildSubmittedDateTime;
+
     public BotLocaleSummary withLastBuildSubmittedDateTime(OffsetDateTime lastBuildSubmittedDateTime) {
         this.lastBuildSubmittedDateTime = lastBuildSubmittedDateTime;
         return this;
@@ -48,6 +51,7 @@ public class BotLocaleSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public BotLocaleSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -56,6 +60,7 @@ public class BotLocaleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public BotLocaleSummary withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -64,9 +69,11 @@ public class BotLocaleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeName")
     public String localeName;
+
     public BotLocaleSummary withLocaleName(String localeName) {
         this.localeName = localeName;
         return this;
     }
     
+    public BotLocaleSummary(){}
 }

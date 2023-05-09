@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpcomingScheduleByPlayerRequest {
@@ -12,6 +13,7 @@ public class UpcomingScheduleByPlayerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public UpcomingScheduleByPlayerFormatEnum format;
+
     public UpcomingScheduleByPlayerRequest withFormat(UpcomingScheduleByPlayerFormatEnum format) {
         this.format = format;
         return this;
@@ -23,9 +25,14 @@ public class UpcomingScheduleByPlayerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playerid")
     public String playerid;
+
     public UpcomingScheduleByPlayerRequest withPlayerid(String playerid) {
         this.playerid = playerid;
         return this;
     }
     
+    public UpcomingScheduleByPlayerRequest(@JsonProperty("format") UpcomingScheduleByPlayerFormatEnum format, @JsonProperty("playerid") String playerid) {
+        this.format = format;
+        this.playerid = playerid;
+  }
 }

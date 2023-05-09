@@ -18,9 +18,11 @@ public class CustomListTargetingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customListId")
     public String customListId;
+
     public CustomListTargetingSetting withCustomListId(String customListId) {
         this.customListId = customListId;
         return this;
     }
     
+    public CustomListTargetingSetting(){}
 }

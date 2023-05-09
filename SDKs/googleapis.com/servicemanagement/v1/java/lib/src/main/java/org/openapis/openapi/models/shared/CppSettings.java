@@ -18,9 +18,11 @@ public class CppSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("common")
     public CommonLanguageSettings common;
+
     public CppSettings withCommon(CommonLanguageSettings common) {
         this.common = common;
         return this;
     }
     
+    public CppSettings(){}
 }

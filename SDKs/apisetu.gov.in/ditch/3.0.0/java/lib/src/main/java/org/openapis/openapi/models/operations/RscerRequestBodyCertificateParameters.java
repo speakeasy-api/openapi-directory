@@ -12,6 +12,7 @@ public class RscerRequestBodyCertificateParameters {
      */
     @JsonProperty("APPNO")
     public String appno;
+
     public RscerRequestBodyCertificateParameters withAppno(String appno) {
         this.appno = appno;
         return this;
@@ -22,9 +23,14 @@ public class RscerRequestBodyCertificateParameters {
      */
     @JsonProperty("CERTNO")
     public String certno;
+
     public RscerRequestBodyCertificateParameters withCertno(String certno) {
         this.certno = certno;
         return this;
     }
     
+    public RscerRequestBodyCertificateParameters(@JsonProperty("APPNO") String appno, @JsonProperty("CERTNO") String certno) {
+        this.appno = appno;
+        this.certno = certno;
+  }
 }

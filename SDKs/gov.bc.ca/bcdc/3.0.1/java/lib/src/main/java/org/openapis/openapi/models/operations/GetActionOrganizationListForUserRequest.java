@@ -12,9 +12,11 @@ public class GetActionOrganizationListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=permission")
     public String permission;
+
     public GetActionOrganizationListForUserRequest withPermission(String permission) {
         this.permission = permission;
         return this;
     }
     
+    public GetActionOrganizationListForUserRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementCustomMetricsPatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CustomMetricInput customMetricInput;
+
     public AnalyticsManagementCustomMetricsPatchRequest withCustomMetricInput(org.openapis.openapi.models.shared.CustomMetricInput customMetricInput) {
         this.customMetricInput = customMetricInput;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsManagementCustomMetricsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AnalyticsManagementCustomMetricsPatchRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsManagementCustomMetricsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsManagementCustomMetricsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -39,6 +43,7 @@ public class AnalyticsManagementCustomMetricsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customMetricId")
     public String customMetricId;
+
     public AnalyticsManagementCustomMetricsPatchRequest withCustomMetricId(String customMetricId) {
         this.customMetricId = customMetricId;
         return this;
@@ -49,6 +54,7 @@ public class AnalyticsManagementCustomMetricsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsManagementCustomMetricsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -59,6 +65,7 @@ public class AnalyticsManagementCustomMetricsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ignoreCustomDataSourceLinks")
     public Boolean ignoreCustomDataSourceLinks;
+
     public AnalyticsManagementCustomMetricsPatchRequest withIgnoreCustomDataSourceLinks(Boolean ignoreCustomDataSourceLinks) {
         this.ignoreCustomDataSourceLinks = ignoreCustomDataSourceLinks;
         return this;
@@ -69,6 +76,7 @@ public class AnalyticsManagementCustomMetricsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsManagementCustomMetricsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class AnalyticsManagementCustomMetricsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsManagementCustomMetricsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class AnalyticsManagementCustomMetricsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsManagementCustomMetricsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class AnalyticsManagementCustomMetricsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsManagementCustomMetricsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -109,6 +120,7 @@ public class AnalyticsManagementCustomMetricsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AnalyticsManagementCustomMetricsPatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -119,9 +131,15 @@ public class AnalyticsManagementCustomMetricsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
     public String webPropertyId;
+
     public AnalyticsManagementCustomMetricsPatchRequest withWebPropertyId(String webPropertyId) {
         this.webPropertyId = webPropertyId;
         return this;
     }
     
+    public AnalyticsManagementCustomMetricsPatchRequest(@JsonProperty("accountId") String accountId, @JsonProperty("customMetricId") String customMetricId, @JsonProperty("webPropertyId") String webPropertyId) {
+        this.accountId = accountId;
+        this.customMetricId = customMetricId;
+        this.webPropertyId = webPropertyId;
+  }
 }

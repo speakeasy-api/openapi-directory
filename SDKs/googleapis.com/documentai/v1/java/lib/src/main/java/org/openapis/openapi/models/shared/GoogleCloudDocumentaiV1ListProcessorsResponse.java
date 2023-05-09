@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDocumentaiV1ListProcessorsResponse - Response message for list processors.
+ * GoogleCloudDocumentaiV1ListProcessorsResponse - Response message for the ListProcessors method.
  */
 public class GoogleCloudDocumentaiV1ListProcessorsResponse {
     /**
@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1ListProcessorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDocumentaiV1ListProcessorsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1ListProcessorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processors")
     public GoogleCloudDocumentaiV1Processor[] processors;
+
     public GoogleCloudDocumentaiV1ListProcessorsResponse withProcessors(GoogleCloudDocumentaiV1Processor[] processors) {
         this.processors = processors;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1ListProcessorsResponse(){}
 }

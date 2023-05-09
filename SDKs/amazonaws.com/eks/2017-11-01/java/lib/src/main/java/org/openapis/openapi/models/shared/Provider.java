@@ -15,9 +15,11 @@ public class Provider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyArn")
     public String keyArn;
+
     public Provider withKeyArn(String keyArn) {
         this.keyArn = keyArn;
         return this;
     }
     
+    public Provider(){}
 }

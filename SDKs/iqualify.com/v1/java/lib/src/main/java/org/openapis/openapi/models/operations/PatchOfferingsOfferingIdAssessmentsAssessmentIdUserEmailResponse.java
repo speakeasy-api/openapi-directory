@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailResponse {
     
     public String contentType;
+
     public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailResponse {
     
     
     public Integer statusCode;
+
     public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

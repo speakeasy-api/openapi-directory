@@ -18,6 +18,7 @@ public class InstantiateWorkflowTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, String> parameters;
+
     public InstantiateWorkflowTemplateRequest withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -29,6 +30,7 @@ public class InstantiateWorkflowTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public InstantiateWorkflowTemplateRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -40,9 +42,11 @@ public class InstantiateWorkflowTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Integer version;
+
     public InstantiateWorkflowTemplateRequest withVersion(Integer version) {
         this.version = version;
         return this;
     }
     
+    public InstantiateWorkflowTemplateRequest(){}
 }

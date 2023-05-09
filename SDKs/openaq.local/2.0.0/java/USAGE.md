@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.FavicoFaviconIcoGetResponse;
 
 public class Application {
@@ -14,11 +13,13 @@ public class Application {
 
             FavicoFaviconIcoGetResponse res = sdk.favicoFaviconIcoGet();
 
-            if (res.favicoFaviconIcoGet200ApplicationJSONAny.isPresent()) {
+            if (res.favicoFaviconIcoGet200ApplicationJSONAny != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

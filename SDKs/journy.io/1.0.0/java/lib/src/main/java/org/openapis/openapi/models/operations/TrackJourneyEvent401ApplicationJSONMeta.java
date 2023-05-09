@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrackJourneyEvent401ApplicationJSONMeta {
     @JsonProperty("requestId")
     public String requestId;
+
     public TrackJourneyEvent401ApplicationJSONMeta withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -16,9 +17,14 @@ public class TrackJourneyEvent401ApplicationJSONMeta {
     
     @JsonProperty("status")
     public Double status;
+
     public TrackJourneyEvent401ApplicationJSONMeta withStatus(Double status) {
         this.status = status;
         return this;
     }
     
+    public TrackJourneyEvent401ApplicationJSONMeta(@JsonProperty("requestId") String requestId, @JsonProperty("status") Double status) {
+        this.requestId = requestId;
+        this.status = status;
+  }
 }

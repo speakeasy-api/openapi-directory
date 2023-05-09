@@ -29,6 +29,7 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
+lib/src/main/java/org/openapis/openapi/models/operations/CreateMonitorRequestBodyInternetMeasurementsLogDelivery.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateMonitorRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateMonitorRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateMonitorResponse.java
@@ -50,12 +51,15 @@ lib/src/main/java/org/openapis/openapi/models/operations/TagResourceRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/TagResourceResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UntagResourceRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UntagResourceResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateMonitorRequestBodyInternetMeasurementsLogDelivery.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateMonitorRequestBodyStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateMonitorRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateMonitorRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateMonitorResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateMonitorOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/MonitorConfigStateEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/S3Config.java
+lib/src/main/java/org/openapis/openapi/models/shared/LogDeliveryStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetHealthEventOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/HealthEventStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImpactedLocation.java
@@ -69,6 +73,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/TriangulationEventTypeEnum.
 lib/src/main/java/org/openapis/openapi/models/shared/HealthEventImpactTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetMonitorOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/MonitorProcessingStatusCodeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/InternetMeasurementsLogDelivery.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListHealthEventsOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/HealthEvent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListMonitorsOutput.java
@@ -76,4 +81,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Monitor.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForResourceOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateMonitorOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class DecryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalAuthenticatedData")
     public String additionalAuthenticatedData;
+
     public DecryptRequest withAdditionalAuthenticatedData(String additionalAuthenticatedData) {
         this.additionalAuthenticatedData = additionalAuthenticatedData;
         return this;
@@ -29,6 +30,7 @@ public class DecryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalAuthenticatedDataCrc32c")
     public String additionalAuthenticatedDataCrc32c;
+
     public DecryptRequest withAdditionalAuthenticatedDataCrc32c(String additionalAuthenticatedDataCrc32c) {
         this.additionalAuthenticatedDataCrc32c = additionalAuthenticatedDataCrc32c;
         return this;
@@ -40,6 +42,7 @@ public class DecryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ciphertext")
     public String ciphertext;
+
     public DecryptRequest withCiphertext(String ciphertext) {
         this.ciphertext = ciphertext;
         return this;
@@ -51,9 +54,11 @@ public class DecryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ciphertextCrc32c")
     public String ciphertextCrc32c;
+
     public DecryptRequest withCiphertextCrc32c(String ciphertextCrc32c) {
         this.ciphertextCrc32c = ciphertextCrc32c;
         return this;
     }
     
+    public DecryptRequest(){}
 }

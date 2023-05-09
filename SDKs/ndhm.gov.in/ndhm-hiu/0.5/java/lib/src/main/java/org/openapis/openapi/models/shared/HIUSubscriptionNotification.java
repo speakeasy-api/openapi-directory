@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class HIUSubscriptionNotification {
     @JsonProperty("event")
     public HIUSubscriptionNotificationEvent event;
+
     public HIUSubscriptionNotification withEvent(HIUSubscriptionNotificationEvent event) {
         this.event = event;
         return this;
@@ -24,6 +25,7 @@ public class HIUSubscriptionNotification {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public HIUSubscriptionNotification withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -36,9 +38,15 @@ public class HIUSubscriptionNotification {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public HIUSubscriptionNotification withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public HIUSubscriptionNotification(@JsonProperty("event") HIUSubscriptionNotificationEvent event, @JsonProperty("requestId") String requestId, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.event = event;
+        this.requestId = requestId;
+        this.timestamp = timestamp;
+  }
 }

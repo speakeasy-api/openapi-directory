@@ -15,6 +15,7 @@ public class StartKeyPhrasesDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobArn")
     public String jobArn;
+
     public StartKeyPhrasesDetectionJobResponse withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -23,6 +24,7 @@ public class StartKeyPhrasesDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StartKeyPhrasesDetectionJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -31,9 +33,11 @@ public class StartKeyPhrasesDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public StartKeyPhrasesDetectionJobResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
     }
     
+    public StartKeyPhrasesDetectionJobResponse(){}
 }

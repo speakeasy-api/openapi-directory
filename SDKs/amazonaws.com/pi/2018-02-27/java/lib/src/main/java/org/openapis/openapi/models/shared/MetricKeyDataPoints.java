@@ -15,6 +15,7 @@ public class MetricKeyDataPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataPoints")
     public DataPoint[] dataPoints;
+
     public MetricKeyDataPoints withDataPoints(DataPoint[] dataPoints) {
         this.dataPoints = dataPoints;
         return this;
@@ -23,9 +24,11 @@ public class MetricKeyDataPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public ResponseResourceMetricKey key;
+
     public MetricKeyDataPoints withKey(ResponseResourceMetricKey key) {
         this.key = key;
         return this;
     }
     
+    public MetricKeyDataPoints(){}
 }

@@ -18,9 +18,11 @@ public class PrimaryAdmin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryEmail")
     public String primaryEmail;
+
     public PrimaryAdmin withPrimaryEmail(String primaryEmail) {
         this.primaryEmail = primaryEmail;
         return this;
     }
     
+    public PrimaryAdmin(){}
 }

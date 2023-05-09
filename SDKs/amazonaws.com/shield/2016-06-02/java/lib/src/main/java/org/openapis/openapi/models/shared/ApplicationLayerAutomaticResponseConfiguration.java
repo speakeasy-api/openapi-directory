@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApplicationLayerAutomaticResponseConfiguration {
     @JsonProperty("Action")
     public ResponseAction action;
+
     public ApplicationLayerAutomaticResponseConfiguration withAction(ResponseAction action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class ApplicationLayerAutomaticResponseConfiguration {
     
     @JsonProperty("Status")
     public ApplicationLayerAutomaticResponseStatusEnum status;
+
     public ApplicationLayerAutomaticResponseConfiguration withStatus(ApplicationLayerAutomaticResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ApplicationLayerAutomaticResponseConfiguration(@JsonProperty("Action") ResponseAction action, @JsonProperty("Status") ApplicationLayerAutomaticResponseStatusEnum status) {
+        this.action = action;
+        this.status = status;
+  }
 }

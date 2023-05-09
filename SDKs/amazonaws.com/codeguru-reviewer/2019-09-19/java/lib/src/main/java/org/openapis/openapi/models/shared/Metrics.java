@@ -15,6 +15,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindingsCount")
     public Long findingsCount;
+
     public Metrics withFindingsCount(Long findingsCount) {
         this.findingsCount = findingsCount;
         return this;
@@ -23,6 +24,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeteredLinesOfCodeCount")
     public Long meteredLinesOfCodeCount;
+
     public Metrics withMeteredLinesOfCodeCount(Long meteredLinesOfCodeCount) {
         this.meteredLinesOfCodeCount = meteredLinesOfCodeCount;
         return this;
@@ -31,9 +33,11 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuppressedLinesOfCodeCount")
     public Long suppressedLinesOfCodeCount;
+
     public Metrics withSuppressedLinesOfCodeCount(Long suppressedLinesOfCodeCount) {
         this.suppressedLinesOfCodeCount = suppressedLinesOfCodeCount;
         return this;
     }
     
+    public Metrics(){}
 }

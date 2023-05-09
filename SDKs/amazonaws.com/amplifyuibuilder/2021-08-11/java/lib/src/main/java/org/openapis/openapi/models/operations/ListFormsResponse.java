@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFormsResponse {
     
     public String contentType;
+
     public ListFormsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListFormsResponse {
      */
     
     public Object internalServerException;
+
     public ListFormsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListFormsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListFormsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListFormsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFormsResponse listFormsResponse;
+
     public ListFormsResponse withListFormsResponse(org.openapis.openapi.models.shared.ListFormsResponse listFormsResponse) {
         this.listFormsResponse = listFormsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListFormsResponse {
     
     
     public Integer statusCode;
+
     public ListFormsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListFormsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFormsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListFormsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

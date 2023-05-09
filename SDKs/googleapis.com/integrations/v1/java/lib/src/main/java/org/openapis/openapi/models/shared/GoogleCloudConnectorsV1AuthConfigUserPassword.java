@@ -18,6 +18,7 @@ public class GoogleCloudConnectorsV1AuthConfigUserPassword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public GoogleCloudConnectorsV1Secret password;
+
     public GoogleCloudConnectorsV1AuthConfigUserPassword withPassword(GoogleCloudConnectorsV1Secret password) {
         this.password = password;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudConnectorsV1AuthConfigUserPassword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public GoogleCloudConnectorsV1AuthConfigUserPassword withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GoogleCloudConnectorsV1AuthConfigUserPassword(){}
 }

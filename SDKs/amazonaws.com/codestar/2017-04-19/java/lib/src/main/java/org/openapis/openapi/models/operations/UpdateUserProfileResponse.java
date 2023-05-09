@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateUserProfileResponse {
     
     public String contentType;
+
     public UpdateUserProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateUserProfileResponse {
     
     
     public Integer statusCode;
+
     public UpdateUserProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateUserProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateUserProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateUserProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateUserProfileResult updateUserProfileResult;
+
     public UpdateUserProfileResponse withUpdateUserProfileResult(org.openapis.openapi.models.shared.UpdateUserProfileResult updateUserProfileResult) {
         this.updateUserProfileResult = updateUserProfileResult;
         return this;
@@ -43,6 +48,7 @@ public class UpdateUserProfileResponse {
      */
     
     public Object userProfileNotFoundException;
+
     public UpdateUserProfileResponse withUserProfileNotFoundException(Object userProfileNotFoundException) {
         this.userProfileNotFoundException = userProfileNotFoundException;
         return this;
@@ -53,9 +59,14 @@ public class UpdateUserProfileResponse {
      */
     
     public Object validationException;
+
     public UpdateUserProfileResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateUserProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

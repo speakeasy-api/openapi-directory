@@ -18,6 +18,7 @@ public class BatchUpsertCatalogObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public BatchUpsertCatalogObjectsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -29,6 +30,7 @@ public class BatchUpsertCatalogObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_mappings")
     public CatalogIdMapping[] idMappings;
+
     public BatchUpsertCatalogObjectsResponse withIdMappings(CatalogIdMapping[] idMappings) {
         this.idMappings = idMappings;
         return this;
@@ -40,6 +42,7 @@ public class BatchUpsertCatalogObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objects")
     public CatalogObject[] objects;
+
     public BatchUpsertCatalogObjectsResponse withObjects(CatalogObject[] objects) {
         this.objects = objects;
         return this;
@@ -51,9 +54,11 @@ public class BatchUpsertCatalogObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public BatchUpsertCatalogObjectsResponse withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public BatchUpsertCatalogObjectsResponse(){}
 }

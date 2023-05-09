@@ -18,6 +18,7 @@ public class ListDeviceRegistriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceRegistries")
     public DeviceRegistry[] deviceRegistries;
+
     public ListDeviceRegistriesResponse withDeviceRegistries(DeviceRegistry[] deviceRegistries) {
         this.deviceRegistries = deviceRegistries;
         return this;
@@ -29,9 +30,11 @@ public class ListDeviceRegistriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListDeviceRegistriesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListDeviceRegistriesResponse(){}
 }

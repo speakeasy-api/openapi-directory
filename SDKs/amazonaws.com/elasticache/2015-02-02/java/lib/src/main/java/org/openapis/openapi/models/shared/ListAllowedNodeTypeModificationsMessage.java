@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListAllowedNodeTypeModificationsMessage {
     
     public String cacheClusterId;
+
     public ListAllowedNodeTypeModificationsMessage withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -19,9 +20,11 @@ public class ListAllowedNodeTypeModificationsMessage {
     
     
     public String replicationGroupId;
+
     public ListAllowedNodeTypeModificationsMessage withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
     }
     
+    public ListAllowedNodeTypeModificationsMessage(){}
 }

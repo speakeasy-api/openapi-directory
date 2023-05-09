@@ -23,6 +23,7 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affinityInfo")
     public AffinityInformation affinityInfo;
+
     public CloudTask withAffinityInfo(AffinityInformation affinityInfo) {
         this.affinityInfo = affinityInfo;
         return this;
@@ -34,6 +35,7 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commandLine")
     public String commandLine;
+
     public CloudTask withCommandLine(String commandLine) {
         this.commandLine = commandLine;
         return this;
@@ -45,6 +47,7 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public TaskConstraints constraints;
+
     public CloudTask withConstraints(TaskConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -58,6 +61,7 @@ public class CloudTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public CloudTask withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -69,6 +73,7 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dependsOn")
     public TaskDependencies dependsOn;
+
     public CloudTask withDependsOn(TaskDependencies dependsOn) {
         this.dependsOn = dependsOn;
         return this;
@@ -80,6 +85,7 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CloudTask withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -91,6 +97,7 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eTag")
     public String eTag;
+
     public CloudTask withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -102,6 +109,7 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentSettings")
     public EnvironmentSetting[] environmentSettings;
+
     public CloudTask withEnvironmentSettings(EnvironmentSetting[] environmentSettings) {
         this.environmentSettings = environmentSettings;
         return this;
@@ -113,6 +121,7 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionInfo")
     public TaskExecutionInformation executionInfo;
+
     public CloudTask withExecutionInfo(TaskExecutionInformation executionInfo) {
         this.executionInfo = executionInfo;
         return this;
@@ -124,6 +133,7 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CloudTask withId(String id) {
         this.id = id;
         return this;
@@ -137,6 +147,7 @@ public class CloudTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModified")
     public OffsetDateTime lastModified;
+
     public CloudTask withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -148,6 +159,7 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiInstanceSettings")
     public MultiInstanceSettings multiInstanceSettings;
+
     public CloudTask withMultiInstanceSettings(MultiInstanceSettings multiInstanceSettings) {
         this.multiInstanceSettings = multiInstanceSettings;
         return this;
@@ -159,6 +171,7 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeInfo")
     public ComputeNodeInformation nodeInfo;
+
     public CloudTask withNodeInfo(ComputeNodeInformation nodeInfo) {
         this.nodeInfo = nodeInfo;
         return this;
@@ -170,6 +183,7 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousState")
     public CloudTaskPreviousStateEnum previousState;
+
     public CloudTask withPreviousState(CloudTaskPreviousStateEnum previousState) {
         this.previousState = previousState;
         return this;
@@ -183,6 +197,7 @@ public class CloudTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("previousStateTransitionTime")
     public OffsetDateTime previousStateTransitionTime;
+
     public CloudTask withPreviousStateTransitionTime(OffsetDateTime previousStateTransitionTime) {
         this.previousStateTransitionTime = previousStateTransitionTime;
         return this;
@@ -194,6 +209,7 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceFiles")
     public ResourceFile[] resourceFiles;
+
     public CloudTask withResourceFiles(ResourceFile[] resourceFiles) {
         this.resourceFiles = resourceFiles;
         return this;
@@ -205,6 +221,7 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runElevated")
     public Boolean runElevated;
+
     public CloudTask withRunElevated(Boolean runElevated) {
         this.runElevated = runElevated;
         return this;
@@ -216,6 +233,7 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CloudTaskStateEnum state;
+
     public CloudTask withState(CloudTaskStateEnum state) {
         this.state = state;
         return this;
@@ -229,6 +247,7 @@ public class CloudTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stateTransitionTime")
     public OffsetDateTime stateTransitionTime;
+
     public CloudTask withStateTransitionTime(OffsetDateTime stateTransitionTime) {
         this.stateTransitionTime = stateTransitionTime;
         return this;
@@ -240,6 +259,7 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public TaskStatistics stats;
+
     public CloudTask withStats(TaskStatistics stats) {
         this.stats = stats;
         return this;
@@ -251,9 +271,11 @@ public class CloudTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CloudTask withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CloudTask(){}
 }

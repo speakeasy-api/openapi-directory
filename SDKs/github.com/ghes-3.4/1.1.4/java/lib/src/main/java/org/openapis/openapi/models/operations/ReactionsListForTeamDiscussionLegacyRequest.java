@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsListForTeamDiscussionLegacyRequest {
@@ -12,6 +13,7 @@ public class ReactionsListForTeamDiscussionLegacyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
     public ReactionsListForTeamDiscussionLegacyContentEnum content;
+
     public ReactionsListForTeamDiscussionLegacyRequest withContent(ReactionsListForTeamDiscussionLegacyContentEnum content) {
         this.content = content;
         return this;
@@ -22,6 +24,7 @@ public class ReactionsListForTeamDiscussionLegacyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
     public Long discussionNumber;
+
     public ReactionsListForTeamDiscussionLegacyRequest withDiscussionNumber(Long discussionNumber) {
         this.discussionNumber = discussionNumber;
         return this;
@@ -32,6 +35,7 @@ public class ReactionsListForTeamDiscussionLegacyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ReactionsListForTeamDiscussionLegacyRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class ReactionsListForTeamDiscussionLegacyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ReactionsListForTeamDiscussionLegacyRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,9 +57,14 @@ public class ReactionsListForTeamDiscussionLegacyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public ReactionsListForTeamDiscussionLegacyRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public ReactionsListForTeamDiscussionLegacyRequest(@JsonProperty("discussion_number") Long discussionNumber, @JsonProperty("team_id") Long teamId) {
+        this.discussionNumber = discussionNumber;
+        this.teamId = teamId;
+  }
 }

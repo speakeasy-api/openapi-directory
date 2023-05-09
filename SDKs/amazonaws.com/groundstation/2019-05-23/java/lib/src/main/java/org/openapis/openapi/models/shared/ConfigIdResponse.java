@@ -15,6 +15,7 @@ public class ConfigIdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configArn")
     public String configArn;
+
     public ConfigIdResponse withConfigArn(String configArn) {
         this.configArn = configArn;
         return this;
@@ -23,6 +24,7 @@ public class ConfigIdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configId")
     public String configId;
+
     public ConfigIdResponse withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -31,9 +33,11 @@ public class ConfigIdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configType")
     public ConfigCapabilityTypeEnum configType;
+
     public ConfigIdResponse withConfigType(ConfigCapabilityTypeEnum configType) {
         this.configType = configType;
         return this;
     }
     
+    public ConfigIdResponse(){}
 }

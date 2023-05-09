@@ -18,9 +18,11 @@ public class GoogleCloudRecommenderV1beta1ValueMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchesPattern")
     public String matchesPattern;
+
     public GoogleCloudRecommenderV1beta1ValueMatcher withMatchesPattern(String matchesPattern) {
         this.matchesPattern = matchesPattern;
         return this;
     }
     
+    public GoogleCloudRecommenderV1beta1ValueMatcher(){}
 }

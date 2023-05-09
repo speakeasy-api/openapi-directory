@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeStackDriftDetectionStatusInput {
     
     public String stackDriftDetectionId;
+
     public DescribeStackDriftDetectionStatusInput withStackDriftDetectionId(String stackDriftDetectionId) {
         this.stackDriftDetectionId = stackDriftDetectionId;
         return this;
     }
     
+    public DescribeStackDriftDetectionStatusInput(@JsonProperty("StackDriftDetectionId") String stackDriftDetectionId) {
+        this.stackDriftDetectionId = stackDriftDetectionId;
+  }
 }

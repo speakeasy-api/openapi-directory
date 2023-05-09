@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateSAMLProviderRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUpdateSAMLProviderActionEnum action;
+
     public GETUpdateSAMLProviderRequest withAction(GETUpdateSAMLProviderActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETUpdateSAMLProviderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SAMLMetadataDocument")
     public String samlMetadataDocument;
+
     public GETUpdateSAMLProviderRequest withSAMLMetadataDocument(String samlMetadataDocument) {
         this.samlMetadataDocument = samlMetadataDocument;
         return this;
@@ -29,6 +32,7 @@ public class GETUpdateSAMLProviderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SAMLProviderArn")
     public String samlProviderArn;
+
     public GETUpdateSAMLProviderRequest withSAMLProviderArn(String samlProviderArn) {
         this.samlProviderArn = samlProviderArn;
         return this;
@@ -36,6 +40,7 @@ public class GETUpdateSAMLProviderRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUpdateSAMLProviderVersionEnum version;
+
     public GETUpdateSAMLProviderRequest withVersion(GETUpdateSAMLProviderVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETUpdateSAMLProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUpdateSAMLProviderRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETUpdateSAMLProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUpdateSAMLProviderRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETUpdateSAMLProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUpdateSAMLProviderRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETUpdateSAMLProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUpdateSAMLProviderRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETUpdateSAMLProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUpdateSAMLProviderRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETUpdateSAMLProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUpdateSAMLProviderRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETUpdateSAMLProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUpdateSAMLProviderRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUpdateSAMLProviderRequest(@JsonProperty("Action") GETUpdateSAMLProviderActionEnum action, @JsonProperty("SAMLMetadataDocument") String samlMetadataDocument, @JsonProperty("SAMLProviderArn") String samlProviderArn, @JsonProperty("Version") GETUpdateSAMLProviderVersionEnum version) {
+        this.action = action;
+        this.samlMetadataDocument = samlMetadataDocument;
+        this.samlProviderArn = samlProviderArn;
+        this.version = version;
+  }
 }

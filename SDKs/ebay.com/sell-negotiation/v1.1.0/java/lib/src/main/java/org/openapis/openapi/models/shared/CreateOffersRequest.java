@@ -18,6 +18,7 @@ public class CreateOffersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowCounterOffer")
     public Boolean allowCounterOffer;
+
     public CreateOffersRequest withAllowCounterOffer(Boolean allowCounterOffer) {
         this.allowCounterOffer = allowCounterOffer;
         return this;
@@ -29,6 +30,7 @@ public class CreateOffersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CreateOffersRequest withMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +42,7 @@ public class CreateOffersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerDuration")
     public TimeDuration offerDuration;
+
     public CreateOffersRequest withOfferDuration(TimeDuration offerDuration) {
         this.offerDuration = offerDuration;
         return this;
@@ -51,9 +54,11 @@ public class CreateOffersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeredItems")
     public OfferedItem[] offeredItems;
+
     public CreateOffersRequest withOfferedItems(OfferedItem[] offeredItems) {
         this.offeredItems = offeredItems;
         return this;
     }
     
+    public CreateOffersRequest(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAssessmentTemplatesResponse {
     @JsonProperty("assessmentTemplateArns")
     public String[] assessmentTemplateArns;
+
     public ListAssessmentTemplatesResponse withAssessmentTemplateArns(String[] assessmentTemplateArns) {
         this.assessmentTemplateArns = assessmentTemplateArns;
         return this;
@@ -22,9 +23,13 @@ public class ListAssessmentTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAssessmentTemplatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssessmentTemplatesResponse(@JsonProperty("assessmentTemplateArns") String[] assessmentTemplateArns) {
+        this.assessmentTemplateArns = assessmentTemplateArns;
+  }
 }

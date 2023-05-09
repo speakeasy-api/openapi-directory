@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddApplicationVpcConfigurationRequest {
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public AddApplicationVpcConfigurationRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class AddApplicationVpcConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConditionalToken")
     public String conditionalToken;
+
     public AddApplicationVpcConfigurationRequest withConditionalToken(String conditionalToken) {
         this.conditionalToken = conditionalToken;
         return this;
@@ -27,6 +29,7 @@ public class AddApplicationVpcConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentApplicationVersionId")
     public Long currentApplicationVersionId;
+
     public AddApplicationVpcConfigurationRequest withCurrentApplicationVersionId(Long currentApplicationVersionId) {
         this.currentApplicationVersionId = currentApplicationVersionId;
         return this;
@@ -34,9 +37,14 @@ public class AddApplicationVpcConfigurationRequest {
     
     @JsonProperty("VpcConfiguration")
     public VpcConfiguration vpcConfiguration;
+
     public AddApplicationVpcConfigurationRequest withVpcConfiguration(VpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public AddApplicationVpcConfigurationRequest(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("VpcConfiguration") VpcConfiguration vpcConfiguration) {
+        this.applicationName = applicationName;
+        this.vpcConfiguration = vpcConfiguration;
+  }
 }

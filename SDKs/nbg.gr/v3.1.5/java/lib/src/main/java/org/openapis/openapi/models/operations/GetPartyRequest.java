@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPartyRequest {
@@ -12,6 +13,7 @@ public class GetPartyRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=sandbox-id")
     public String sandboxId;
+
     public GetPartyRequest withSandboxId(String sandboxId) {
         this.sandboxId = sandboxId;
         return this;
@@ -22,6 +24,7 @@ public class GetPartyRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
     public String xCustomerUserAgent;
+
     public GetPartyRequest withXCustomerUserAgent(String xCustomerUserAgent) {
         this.xCustomerUserAgent = xCustomerUserAgent;
         return this;
@@ -34,6 +37,7 @@ public class GetPartyRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
     public String xFapiAuthDate;
+
     public GetPartyRequest withXFapiAuthDate(String xFapiAuthDate) {
         this.xFapiAuthDate = xFapiAuthDate;
         return this;
@@ -44,6 +48,7 @@ public class GetPartyRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
     public String xFapiCustomerIpAddress;
+
     public GetPartyRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
         this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
         return this;
@@ -54,9 +59,13 @@ public class GetPartyRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public GetPartyRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
     }
     
+    public GetPartyRequest(@JsonProperty("sandbox-id") String sandboxId) {
+        this.sandboxId = sandboxId;
+  }
 }

@@ -15,9 +15,11 @@ public class CancelReplicationTaskAssessmentRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationTaskAssessmentRun")
     public ReplicationTaskAssessmentRun replicationTaskAssessmentRun;
+
     public CancelReplicationTaskAssessmentRunResponse withReplicationTaskAssessmentRun(ReplicationTaskAssessmentRun replicationTaskAssessmentRun) {
         this.replicationTaskAssessmentRun = replicationTaskAssessmentRun;
         return this;
     }
     
+    public CancelReplicationTaskAssessmentRunResponse(){}
 }

@@ -18,9 +18,11 @@ public class ReimageNodeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tensorflowVersion")
     public String tensorflowVersion;
+
     public ReimageNodeRequest withTensorflowVersion(String tensorflowVersion) {
         this.tensorflowVersion = tensorflowVersion;
         return this;
     }
     
+    public ReimageNodeRequest(){}
 }

@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class HealthInformationNotification {
     @JsonProperty("notification")
     public HealthInformationNotificationNotification notification;
+
     public HealthInformationNotification withNotification(HealthInformationNotificationNotification notification) {
         this.notification = notification;
         return this;
@@ -24,6 +25,7 @@ public class HealthInformationNotification {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public HealthInformationNotification withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -36,9 +38,15 @@ public class HealthInformationNotification {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public HealthInformationNotification withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public HealthInformationNotification(@JsonProperty("notification") HealthInformationNotificationNotification notification, @JsonProperty("requestId") String requestId, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.notification = notification;
+        this.requestId = requestId;
+        this.timestamp = timestamp;
+  }
 }

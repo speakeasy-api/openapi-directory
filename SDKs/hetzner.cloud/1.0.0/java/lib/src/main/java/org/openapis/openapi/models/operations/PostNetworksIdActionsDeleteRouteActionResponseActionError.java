@@ -15,6 +15,7 @@ public class PostNetworksIdActionsDeleteRouteActionResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostNetworksIdActionsDeleteRouteActionResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostNetworksIdActionsDeleteRouteActionResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostNetworksIdActionsDeleteRouteActionResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostNetworksIdActionsDeleteRouteActionResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

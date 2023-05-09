@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportHypervisorConfigurationInput {
     @JsonProperty("Host")
     public String host;
+
     public ImportHypervisorConfigurationInput withHost(String host) {
         this.host = host;
         return this;
@@ -19,6 +20,7 @@ public class ImportHypervisorConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyArn")
     public String kmsKeyArn;
+
     public ImportHypervisorConfigurationInput withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -26,6 +28,7 @@ public class ImportHypervisorConfigurationInput {
     
     @JsonProperty("Name")
     public String name;
+
     public ImportHypervisorConfigurationInput withName(String name) {
         this.name = name;
         return this;
@@ -34,6 +37,7 @@ public class ImportHypervisorConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public ImportHypervisorConfigurationInput withPassword(String password) {
         this.password = password;
         return this;
@@ -42,6 +46,7 @@ public class ImportHypervisorConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ImportHypervisorConfigurationInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -50,9 +55,14 @@ public class ImportHypervisorConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public ImportHypervisorConfigurationInput withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ImportHypervisorConfigurationInput(@JsonProperty("Host") String host, @JsonProperty("Name") String name) {
+        this.host = host;
+        this.name = name;
+  }
 }

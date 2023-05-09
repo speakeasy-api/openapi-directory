@@ -15,6 +15,7 @@ public class ProtectiveEquipmentPerson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BodyParts")
     public ProtectiveEquipmentBodyPart[] bodyParts;
+
     public ProtectiveEquipmentPerson withBodyParts(ProtectiveEquipmentBodyPart[] bodyParts) {
         this.bodyParts = bodyParts;
         return this;
@@ -23,6 +24,7 @@ public class ProtectiveEquipmentPerson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundingBox")
     public BoundingBox boundingBox;
+
     public ProtectiveEquipmentPerson withBoundingBox(BoundingBox boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -31,6 +33,7 @@ public class ProtectiveEquipmentPerson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public ProtectiveEquipmentPerson withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -39,9 +42,11 @@ public class ProtectiveEquipmentPerson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public ProtectiveEquipmentPerson withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public ProtectiveEquipmentPerson(){}
 }

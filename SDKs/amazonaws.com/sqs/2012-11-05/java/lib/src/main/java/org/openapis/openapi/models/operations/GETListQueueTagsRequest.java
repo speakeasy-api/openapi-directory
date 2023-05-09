@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListQueueTagsRequest {
@@ -12,6 +13,7 @@ public class GETListQueueTagsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountNumber")
     public Long accountNumber;
+
     public GETListQueueTagsRequest withAccountNumber(Long accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -19,6 +21,7 @@ public class GETListQueueTagsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETListQueueTagsActionEnum action;
+
     public GETListQueueTagsRequest withAction(GETListQueueTagsActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +32,7 @@ public class GETListQueueTagsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=QueueName")
     public String queueName;
+
     public GETListQueueTagsRequest withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
@@ -36,6 +40,7 @@ public class GETListQueueTagsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETListQueueTagsVersionEnum version;
+
     public GETListQueueTagsRequest withVersion(GETListQueueTagsVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETListQueueTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETListQueueTagsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETListQueueTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETListQueueTagsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETListQueueTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETListQueueTagsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETListQueueTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETListQueueTagsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETListQueueTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETListQueueTagsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETListQueueTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETListQueueTagsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETListQueueTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETListQueueTagsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETListQueueTagsRequest(@JsonProperty("AccountNumber") Long accountNumber, @JsonProperty("Action") GETListQueueTagsActionEnum action, @JsonProperty("QueueName") String queueName, @JsonProperty("Version") GETListQueueTagsVersionEnum version) {
+        this.accountNumber = accountNumber;
+        this.action = action;
+        this.queueName = queueName;
+        this.version = version;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateKeyspaceResponse {
@@ -12,6 +13,7 @@ public class CreateKeyspaceResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateKeyspaceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateKeyspaceResponse {
      */
     
     public Object conflictException;
+
     public CreateKeyspaceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateKeyspaceResponse {
     
     
     public String contentType;
+
     public CreateKeyspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateKeyspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateKeyspaceResponse createKeyspaceResponse;
+
     public CreateKeyspaceResponse withCreateKeyspaceResponse(org.openapis.openapi.models.shared.CreateKeyspaceResponse createKeyspaceResponse) {
         this.createKeyspaceResponse = createKeyspaceResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateKeyspaceResponse {
      */
     
     public Object internalServerException;
+
     public CreateKeyspaceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateKeyspaceResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateKeyspaceResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateKeyspaceResponse {
     
     
     public Integer statusCode;
+
     public CreateKeyspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateKeyspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateKeyspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateKeyspaceResponse {
      */
     
     public Object validationException;
+
     public CreateKeyspaceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateKeyspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

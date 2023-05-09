@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDimensionResponse {
     
     public String contentType;
+
     public UpdateDimensionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDimensionResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateDimensionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDimensionResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateDimensionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDimensionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDimensionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDimensionResponse {
     
     
     public Integer statusCode;
+
     public UpdateDimensionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDimensionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDimensionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDimensionResponse {
      */
     
     public Object throttlingException;
+
     public UpdateDimensionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateDimensionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDimensionResponse updateDimensionResponse;
+
     public UpdateDimensionResponse withUpdateDimensionResponse(org.openapis.openapi.models.shared.UpdateDimensionResponse updateDimensionResponse) {
         this.updateDimensionResponse = updateDimensionResponse;
         return this;
     }
     
+    public UpdateDimensionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

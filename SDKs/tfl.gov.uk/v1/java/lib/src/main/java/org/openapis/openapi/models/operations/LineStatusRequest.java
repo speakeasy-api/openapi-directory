@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class LineStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EndDate")
     public String endDatePathParameter;
+
     public LineStatusRequest withEndDatePathParameter(String endDatePathParameter) {
         this.endDatePathParameter = endDatePathParameter;
         return this;
@@ -23,6 +25,7 @@ public class LineStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=StartDate")
     public String startDatePathParameter;
+
     public LineStatusRequest withStartDatePathParameter(String startDatePathParameter) {
         this.startDatePathParameter = startDatePathParameter;
         return this;
@@ -30,6 +33,7 @@ public class LineStatusRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateRange.endDate")
     public OffsetDateTime dateRangeEndDate;
+
     public LineStatusRequest withDateRangeEndDate(OffsetDateTime dateRangeEndDate) {
         this.dateRangeEndDate = dateRangeEndDate;
         return this;
@@ -37,6 +41,7 @@ public class LineStatusRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateRange.startDate")
     public OffsetDateTime dateRangeStartDate;
+
     public LineStatusRequest withDateRangeStartDate(OffsetDateTime dateRangeStartDate) {
         this.dateRangeStartDate = dateRangeStartDate;
         return this;
@@ -47,6 +52,7 @@ public class LineStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=detail")
     public Boolean detail;
+
     public LineStatusRequest withDetail(Boolean detail) {
         this.detail = detail;
         return this;
@@ -54,6 +60,7 @@ public class LineStatusRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public String endDateQueryParameter;
+
     public LineStatusRequest withEndDateQueryParameter(String endDateQueryParameter) {
         this.endDateQueryParameter = endDateQueryParameter;
         return this;
@@ -64,6 +71,7 @@ public class LineStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
     public String[] ids;
+
     public LineStatusRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -71,9 +79,17 @@ public class LineStatusRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public String startDateQueryParameter;
+
     public LineStatusRequest withStartDateQueryParameter(String startDateQueryParameter) {
         this.startDateQueryParameter = startDateQueryParameter;
         return this;
     }
     
+    public LineStatusRequest(@JsonProperty("EndDatePathParameter") String endDatePathParameter, @JsonProperty("StartDatePathParameter") String startDatePathParameter, @JsonProperty("endDateQueryParameter") String endDateQueryParameter, @JsonProperty("ids") String[] ids, @JsonProperty("startDateQueryParameter") String startDateQueryParameter) {
+        this.endDatePathParameter = endDatePathParameter;
+        this.startDatePathParameter = startDatePathParameter;
+        this.endDateQueryParameter = endDateQueryParameter;
+        this.ids = ids;
+        this.startDateQueryParameter = startDateQueryParameter;
+  }
 }

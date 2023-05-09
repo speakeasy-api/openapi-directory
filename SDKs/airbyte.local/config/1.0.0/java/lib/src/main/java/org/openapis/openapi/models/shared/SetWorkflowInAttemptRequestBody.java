@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetWorkflowInAttemptRequestBody {
     @JsonProperty("attemptNumber")
     public Integer attemptNumber;
+
     public SetWorkflowInAttemptRequestBody withAttemptNumber(Integer attemptNumber) {
         this.attemptNumber = attemptNumber;
         return this;
@@ -18,6 +19,7 @@ public class SetWorkflowInAttemptRequestBody {
     
     @JsonProperty("jobId")
     public Long jobId;
+
     public SetWorkflowInAttemptRequestBody withJobId(Long jobId) {
         this.jobId = jobId;
         return this;
@@ -26,6 +28,7 @@ public class SetWorkflowInAttemptRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processingTaskQueue")
     public String processingTaskQueue;
+
     public SetWorkflowInAttemptRequestBody withProcessingTaskQueue(String processingTaskQueue) {
         this.processingTaskQueue = processingTaskQueue;
         return this;
@@ -33,9 +36,15 @@ public class SetWorkflowInAttemptRequestBody {
     
     @JsonProperty("workflowId")
     public String workflowId;
+
     public SetWorkflowInAttemptRequestBody withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public SetWorkflowInAttemptRequestBody(@JsonProperty("attemptNumber") Integer attemptNumber, @JsonProperty("jobId") Long jobId, @JsonProperty("workflowId") String workflowId) {
+        this.attemptNumber = attemptNumber;
+        this.jobId = jobId;
+        this.workflowId = workflowId;
+  }
 }

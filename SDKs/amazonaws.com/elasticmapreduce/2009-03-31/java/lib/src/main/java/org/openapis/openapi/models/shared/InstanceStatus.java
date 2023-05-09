@@ -15,6 +15,7 @@ public class InstanceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public InstanceStateEnum state;
+
     public InstanceStatus withState(InstanceStateEnum state) {
         this.state = state;
         return this;
@@ -23,6 +24,7 @@ public class InstanceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateChangeReason")
     public InstanceStateChangeReason stateChangeReason;
+
     public InstanceStatus withStateChangeReason(InstanceStateChangeReason stateChangeReason) {
         this.stateChangeReason = stateChangeReason;
         return this;
@@ -31,9 +33,11 @@ public class InstanceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeline")
     public InstanceTimeline timeline;
+
     public InstanceStatus withTimeline(InstanceTimeline timeline) {
         this.timeline = timeline;
         return this;
     }
     
+    public InstanceStatus(){}
 }

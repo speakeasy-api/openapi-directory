@@ -15,6 +15,7 @@ public class Lexicon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public String content;
+
     public Lexicon withContent(String content) {
         this.content = content;
         return this;
@@ -23,9 +24,11 @@ public class Lexicon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Lexicon withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Lexicon(){}
 }

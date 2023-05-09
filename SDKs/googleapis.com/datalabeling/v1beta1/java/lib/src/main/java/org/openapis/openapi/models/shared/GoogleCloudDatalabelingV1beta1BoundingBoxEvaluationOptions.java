@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iouThreshold")
     public Float iouThreshold;
+
     public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptions withIouThreshold(Float iouThreshold) {
         this.iouThreshold = iouThreshold;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptions(){}
 }

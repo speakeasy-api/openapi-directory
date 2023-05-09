@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdMessagesPostRequest {
@@ -12,6 +13,7 @@ public class StoryIdMessagesPostRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String requestBody;
+
     public StoryIdMessagesPostRequest withRequestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class StoryIdMessagesPostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public StoryIdMessagesPostRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public StoryIdMessagesPostRequest(@JsonProperty("RequestBody") String requestBody, @JsonProperty("id") String id) {
+        this.requestBody = requestBody;
+        this.id = id;
+  }
 }

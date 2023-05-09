@@ -18,9 +18,11 @@ public class BatchRunPivotReportsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public RunPivotReportRequest[] requests;
+
     public BatchRunPivotReportsRequest withRequests(RunPivotReportRequest[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public BatchRunPivotReportsRequest(){}
 }

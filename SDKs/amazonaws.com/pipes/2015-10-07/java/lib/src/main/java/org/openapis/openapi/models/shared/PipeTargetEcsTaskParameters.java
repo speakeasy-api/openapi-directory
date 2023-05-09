@@ -15,6 +15,7 @@ public class PipeTargetEcsTaskParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityProviderStrategy")
     public CapacityProviderStrategyItem[] capacityProviderStrategy;
+
     public PipeTargetEcsTaskParameters withCapacityProviderStrategy(CapacityProviderStrategyItem[] capacityProviderStrategy) {
         this.capacityProviderStrategy = capacityProviderStrategy;
         return this;
@@ -23,6 +24,7 @@ public class PipeTargetEcsTaskParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableECSManagedTags")
     public Boolean enableECSManagedTags;
+
     public PipeTargetEcsTaskParameters withEnableECSManagedTags(Boolean enableECSManagedTags) {
         this.enableECSManagedTags = enableECSManagedTags;
         return this;
@@ -31,6 +33,7 @@ public class PipeTargetEcsTaskParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableExecuteCommand")
     public Boolean enableExecuteCommand;
+
     public PipeTargetEcsTaskParameters withEnableExecuteCommand(Boolean enableExecuteCommand) {
         this.enableExecuteCommand = enableExecuteCommand;
         return this;
@@ -39,6 +42,7 @@ public class PipeTargetEcsTaskParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Group")
     public String group;
+
     public PipeTargetEcsTaskParameters withGroup(String group) {
         this.group = group;
         return this;
@@ -47,6 +51,7 @@ public class PipeTargetEcsTaskParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchType")
     public LaunchTypeEnum launchType;
+
     public PipeTargetEcsTaskParameters withLaunchType(LaunchTypeEnum launchType) {
         this.launchType = launchType;
         return this;
@@ -55,6 +60,7 @@ public class PipeTargetEcsTaskParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConfiguration")
     public NetworkConfiguration networkConfiguration;
+
     public PipeTargetEcsTaskParameters withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -63,6 +69,7 @@ public class PipeTargetEcsTaskParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Overrides")
     public EcsTaskOverride overrides;
+
     public PipeTargetEcsTaskParameters withOverrides(EcsTaskOverride overrides) {
         this.overrides = overrides;
         return this;
@@ -71,6 +78,7 @@ public class PipeTargetEcsTaskParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlacementConstraints")
     public PlacementConstraint[] placementConstraints;
+
     public PipeTargetEcsTaskParameters withPlacementConstraints(PlacementConstraint[] placementConstraints) {
         this.placementConstraints = placementConstraints;
         return this;
@@ -79,6 +87,7 @@ public class PipeTargetEcsTaskParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlacementStrategy")
     public PlacementStrategy[] placementStrategy;
+
     public PipeTargetEcsTaskParameters withPlacementStrategy(PlacementStrategy[] placementStrategy) {
         this.placementStrategy = placementStrategy;
         return this;
@@ -87,6 +96,7 @@ public class PipeTargetEcsTaskParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlatformVersion")
     public String platformVersion;
+
     public PipeTargetEcsTaskParameters withPlatformVersion(String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
@@ -95,6 +105,7 @@ public class PipeTargetEcsTaskParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PropagateTags")
     public PropagateTagsEnum propagateTags;
+
     public PipeTargetEcsTaskParameters withPropagateTags(PropagateTagsEnum propagateTags) {
         this.propagateTags = propagateTags;
         return this;
@@ -103,6 +114,7 @@ public class PipeTargetEcsTaskParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceId")
     public String referenceId;
+
     public PipeTargetEcsTaskParameters withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -111,6 +123,7 @@ public class PipeTargetEcsTaskParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public PipeTargetEcsTaskParameters withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -119,6 +132,7 @@ public class PipeTargetEcsTaskParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskCount")
     public Long taskCount;
+
     public PipeTargetEcsTaskParameters withTaskCount(Long taskCount) {
         this.taskCount = taskCount;
         return this;
@@ -126,9 +140,13 @@ public class PipeTargetEcsTaskParameters {
     
     @JsonProperty("TaskDefinitionArn")
     public String taskDefinitionArn;
+
     public PipeTargetEcsTaskParameters withTaskDefinitionArn(String taskDefinitionArn) {
         this.taskDefinitionArn = taskDefinitionArn;
         return this;
     }
     
+    public PipeTargetEcsTaskParameters(@JsonProperty("TaskDefinitionArn") String taskDefinitionArn) {
+        this.taskDefinitionArn = taskDefinitionArn;
+  }
 }

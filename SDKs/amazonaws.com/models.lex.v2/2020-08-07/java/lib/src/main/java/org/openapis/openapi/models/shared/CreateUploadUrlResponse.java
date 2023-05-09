@@ -15,6 +15,7 @@ public class CreateUploadUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importId")
     public String importId;
+
     public CreateUploadUrlResponse withImportId(String importId) {
         this.importId = importId;
         return this;
@@ -23,9 +24,11 @@ public class CreateUploadUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadUrl")
     public String uploadUrl;
+
     public CreateUploadUrlResponse withUploadUrl(String uploadUrl) {
         this.uploadUrl = uploadUrl;
         return this;
     }
     
+    public CreateUploadUrlResponse(){}
 }

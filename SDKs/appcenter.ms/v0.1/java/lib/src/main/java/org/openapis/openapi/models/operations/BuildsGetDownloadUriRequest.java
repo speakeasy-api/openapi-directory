@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BuildsGetDownloadUriRequest {
@@ -12,6 +13,7 @@ public class BuildsGetDownloadUriRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public BuildsGetDownloadUriRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class BuildsGetDownloadUriRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=build_id")
     public Long buildId;
+
     public BuildsGetDownloadUriRequest withBuildId(Long buildId) {
         this.buildId = buildId;
         return this;
@@ -32,6 +35,7 @@ public class BuildsGetDownloadUriRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=download_type")
     public BuildsGetDownloadUriDownloadTypeEnum downloadType;
+
     public BuildsGetDownloadUriRequest withDownloadType(BuildsGetDownloadUriDownloadTypeEnum downloadType) {
         this.downloadType = downloadType;
         return this;
@@ -42,9 +46,16 @@ public class BuildsGetDownloadUriRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public BuildsGetDownloadUriRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public BuildsGetDownloadUriRequest(@JsonProperty("app_name") String appName, @JsonProperty("build_id") Long buildId, @JsonProperty("download_type") BuildsGetDownloadUriDownloadTypeEnum downloadType, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.buildId = buildId;
+        this.downloadType = downloadType;
+        this.ownerName = ownerName;
+  }
 }

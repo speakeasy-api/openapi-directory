@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest {
@@ -12,6 +13,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=debugOptions.enableDebugging")
     public Boolean debugOptionsEnableDebugging;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withDebugOptionsEnableDebugging(Boolean debugOptionsEnableDebugging) {
         this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
         return this;
@@ -62,6 +68,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupResourceName")
     public String groupResourceName;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withGroupResourceName(String groupResourceName) {
         this.groupResourceName = groupResourceName;
         return this;
@@ -79,6 +87,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -109,6 +120,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -119,6 +131,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -129,6 +142,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -139,6 +153,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -149,6 +164,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,6 +175,7 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -166,9 +183,13 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest 
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userResourceName")
     public String userResourceName;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest withUserResourceName(String userResourceName) {
         this.userResourceName = userResourceName;
         return this;
     }
     
+    public CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

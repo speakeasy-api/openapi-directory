@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsListDevicePropertyValuesResponse {
@@ -12,6 +13,7 @@ public class AnalyticsListDevicePropertyValuesResponse {
      */
     
     public AnalyticsListDevicePropertyValues200ApplicationJSON analyticsListDevicePropertyValues200ApplicationJSONObject;
+
     public AnalyticsListDevicePropertyValuesResponse withAnalyticsListDevicePropertyValues200ApplicationJSONObject(AnalyticsListDevicePropertyValues200ApplicationJSON analyticsListDevicePropertyValues200ApplicationJSONObject) {
         this.analyticsListDevicePropertyValues200ApplicationJSONObject = analyticsListDevicePropertyValues200ApplicationJSONObject;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsListDevicePropertyValuesResponse {
      */
     
     public AnalyticsListDevicePropertyValuesDefaultApplicationJSON analyticsListDevicePropertyValuesDefaultApplicationJSONObject;
+
     public AnalyticsListDevicePropertyValuesResponse withAnalyticsListDevicePropertyValuesDefaultApplicationJSONObject(AnalyticsListDevicePropertyValuesDefaultApplicationJSON analyticsListDevicePropertyValuesDefaultApplicationJSONObject) {
         this.analyticsListDevicePropertyValuesDefaultApplicationJSONObject = analyticsListDevicePropertyValuesDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsListDevicePropertyValuesResponse {
     
     
     public String contentType;
+
     public AnalyticsListDevicePropertyValuesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class AnalyticsListDevicePropertyValuesResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsListDevicePropertyValuesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AnalyticsListDevicePropertyValuesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsListDevicePropertyValuesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsListDevicePropertyValuesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

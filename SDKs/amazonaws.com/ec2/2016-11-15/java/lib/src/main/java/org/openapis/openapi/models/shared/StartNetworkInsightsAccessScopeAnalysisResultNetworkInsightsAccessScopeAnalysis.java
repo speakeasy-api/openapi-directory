@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysis {
     
     public Long analyzedEniCount;
+
     public StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysis withAnalyzedEniCount(Long analyzedEniCount) {
         this.analyzedEniCount = analyzedEniCount;
         return this;
@@ -19,6 +20,7 @@ public class StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessS
     
     
     public OffsetDateTime endDate;
+
     public StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysis withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -26,6 +28,7 @@ public class StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessS
     
     
     public StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisFindingsFoundEnum findingsFound;
+
     public StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysis withFindingsFound(StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisFindingsFoundEnum findingsFound) {
         this.findingsFound = findingsFound;
         return this;
@@ -33,6 +36,7 @@ public class StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessS
     
     
     public String networkInsightsAccessScopeAnalysisArn;
+
     public StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysis withNetworkInsightsAccessScopeAnalysisArn(String networkInsightsAccessScopeAnalysisArn) {
         this.networkInsightsAccessScopeAnalysisArn = networkInsightsAccessScopeAnalysisArn;
         return this;
@@ -40,6 +44,7 @@ public class StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessS
     
     
     public String networkInsightsAccessScopeAnalysisId;
+
     public StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysis withNetworkInsightsAccessScopeAnalysisId(String networkInsightsAccessScopeAnalysisId) {
         this.networkInsightsAccessScopeAnalysisId = networkInsightsAccessScopeAnalysisId;
         return this;
@@ -47,6 +52,7 @@ public class StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessS
     
     
     public String networkInsightsAccessScopeId;
+
     public StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysis withNetworkInsightsAccessScopeId(String networkInsightsAccessScopeId) {
         this.networkInsightsAccessScopeId = networkInsightsAccessScopeId;
         return this;
@@ -54,6 +60,7 @@ public class StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessS
     
     
     public OffsetDateTime startDate;
+
     public StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysis withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -61,6 +68,7 @@ public class StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessS
     
     
     public StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisStatusEnum status;
+
     public StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysis withStatus(StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisStatusEnum status) {
         this.status = status;
         return this;
@@ -68,6 +76,7 @@ public class StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessS
     
     
     public String statusMessage;
+
     public StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysis withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -75,6 +84,7 @@ public class StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessS
     
     
     public StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisTags[] tags;
+
     public StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysis withTags(StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisTags[] tags) {
         this.tags = tags;
         return this;
@@ -82,9 +92,11 @@ public class StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessS
     
     
     public String warningMessage;
+
     public StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysis withWarningMessage(String warningMessage) {
         this.warningMessage = warningMessage;
         return this;
     }
     
+    public StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysis(){}
 }

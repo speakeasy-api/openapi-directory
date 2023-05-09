@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePermissionGroupRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreatePermissionGroupRequest createPermissionGroupRequest;
+
     public CreatePermissionGroupRequest withCreatePermissionGroupRequest(org.openapis.openapi.models.shared.CreatePermissionGroupRequest createPermissionGroupRequest) {
         this.createPermissionGroupRequest = createPermissionGroupRequest;
         return this;
@@ -19,9 +21,14 @@ public class CreatePermissionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
     public String productId;
+
     public CreatePermissionGroupRequest withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public CreatePermissionGroupRequest(@JsonProperty("CreatePermissionGroupRequest") org.openapis.openapi.models.shared.CreatePermissionGroupRequest createPermissionGroupRequest, @JsonProperty("productId") String productId) {
+        this.createPermissionGroupRequest = createPermissionGroupRequest;
+        this.productId = productId;
+  }
 }

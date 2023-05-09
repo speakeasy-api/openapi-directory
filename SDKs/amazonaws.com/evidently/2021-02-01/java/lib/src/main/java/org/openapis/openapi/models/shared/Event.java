@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Event {
     @JsonProperty("data")
     public String data;
+
     public Event withData(String data) {
         this.data = data;
         return this;
@@ -26,6 +27,7 @@ public class Event {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public Event withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -33,9 +35,15 @@ public class Event {
     
     @JsonProperty("type")
     public EventTypeEnum type;
+
     public Event withType(EventTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Event(@JsonProperty("data") String data, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("type") EventTypeEnum type) {
+        this.data = data;
+        this.timestamp = timestamp;
+        this.type = type;
+  }
 }

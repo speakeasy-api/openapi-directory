@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateTargetGroupInput {
     
     public Boolean healthCheckEnabled;
+
     public CreateTargetGroupInput withHealthCheckEnabled(Boolean healthCheckEnabled) {
         this.healthCheckEnabled = healthCheckEnabled;
         return this;
@@ -16,6 +17,7 @@ public class CreateTargetGroupInput {
     
     
     public Long healthCheckIntervalSeconds;
+
     public CreateTargetGroupInput withHealthCheckIntervalSeconds(Long healthCheckIntervalSeconds) {
         this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
         return this;
@@ -23,6 +25,7 @@ public class CreateTargetGroupInput {
     
     
     public String healthCheckPath;
+
     public CreateTargetGroupInput withHealthCheckPath(String healthCheckPath) {
         this.healthCheckPath = healthCheckPath;
         return this;
@@ -30,6 +33,7 @@ public class CreateTargetGroupInput {
     
     
     public String healthCheckPort;
+
     public CreateTargetGroupInput withHealthCheckPort(String healthCheckPort) {
         this.healthCheckPort = healthCheckPort;
         return this;
@@ -37,6 +41,7 @@ public class CreateTargetGroupInput {
     
     
     public ProtocolEnumEnum healthCheckProtocol;
+
     public CreateTargetGroupInput withHealthCheckProtocol(ProtocolEnumEnum healthCheckProtocol) {
         this.healthCheckProtocol = healthCheckProtocol;
         return this;
@@ -44,6 +49,7 @@ public class CreateTargetGroupInput {
     
     
     public Long healthCheckTimeoutSeconds;
+
     public CreateTargetGroupInput withHealthCheckTimeoutSeconds(Long healthCheckTimeoutSeconds) {
         this.healthCheckTimeoutSeconds = healthCheckTimeoutSeconds;
         return this;
@@ -51,6 +57,7 @@ public class CreateTargetGroupInput {
     
     
     public Long healthyThresholdCount;
+
     public CreateTargetGroupInput withHealthyThresholdCount(Long healthyThresholdCount) {
         this.healthyThresholdCount = healthyThresholdCount;
         return this;
@@ -58,6 +65,7 @@ public class CreateTargetGroupInput {
     
     
     public TargetGroupIpAddressTypeEnumEnum ipAddressType;
+
     public CreateTargetGroupInput withIpAddressType(TargetGroupIpAddressTypeEnumEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -65,6 +73,7 @@ public class CreateTargetGroupInput {
     
     
     public Matcher matcher;
+
     public CreateTargetGroupInput withMatcher(Matcher matcher) {
         this.matcher = matcher;
         return this;
@@ -72,6 +81,7 @@ public class CreateTargetGroupInput {
     
     
     public String name;
+
     public CreateTargetGroupInput withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +89,7 @@ public class CreateTargetGroupInput {
     
     
     public Long port;
+
     public CreateTargetGroupInput withPort(Long port) {
         this.port = port;
         return this;
@@ -86,6 +97,7 @@ public class CreateTargetGroupInput {
     
     
     public ProtocolEnumEnum protocol;
+
     public CreateTargetGroupInput withProtocol(ProtocolEnumEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -93,6 +105,7 @@ public class CreateTargetGroupInput {
     
     
     public String protocolVersion;
+
     public CreateTargetGroupInput withProtocolVersion(String protocolVersion) {
         this.protocolVersion = protocolVersion;
         return this;
@@ -100,6 +113,7 @@ public class CreateTargetGroupInput {
     
     
     public Tag[] tags;
+
     public CreateTargetGroupInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -107,6 +121,7 @@ public class CreateTargetGroupInput {
     
     
     public TargetTypeEnumEnum targetType;
+
     public CreateTargetGroupInput withTargetType(TargetTypeEnumEnum targetType) {
         this.targetType = targetType;
         return this;
@@ -114,6 +129,7 @@ public class CreateTargetGroupInput {
     
     
     public Long unhealthyThresholdCount;
+
     public CreateTargetGroupInput withUnhealthyThresholdCount(Long unhealthyThresholdCount) {
         this.unhealthyThresholdCount = unhealthyThresholdCount;
         return this;
@@ -121,9 +137,13 @@ public class CreateTargetGroupInput {
     
     
     public String vpcId;
+
     public CreateTargetGroupInput withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateTargetGroupInput(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

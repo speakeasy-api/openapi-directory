@@ -12,6 +12,7 @@ public class ListServiceTemplateVersionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("majorVersion")
     public String majorVersion;
+
     public ListServiceTemplateVersionsInput withMajorVersion(String majorVersion) {
         this.majorVersion = majorVersion;
         return this;
@@ -20,6 +21,7 @@ public class ListServiceTemplateVersionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListServiceTemplateVersionsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListServiceTemplateVersionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListServiceTemplateVersionsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class ListServiceTemplateVersionsInput {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public ListServiceTemplateVersionsInput withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public ListServiceTemplateVersionsInput(@JsonProperty("templateName") String templateName) {
+        this.templateName = templateName;
+  }
 }

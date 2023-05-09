@@ -15,6 +15,7 @@ public class TargetTrackingScalingPolicyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomizedMetricSpecification")
     public CustomizedMetricSpecification customizedMetricSpecification;
+
     public TargetTrackingScalingPolicyConfiguration withCustomizedMetricSpecification(CustomizedMetricSpecification customizedMetricSpecification) {
         this.customizedMetricSpecification = customizedMetricSpecification;
         return this;
@@ -23,6 +24,7 @@ public class TargetTrackingScalingPolicyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableScaleIn")
     public Boolean disableScaleIn;
+
     public TargetTrackingScalingPolicyConfiguration withDisableScaleIn(Boolean disableScaleIn) {
         this.disableScaleIn = disableScaleIn;
         return this;
@@ -31,6 +33,7 @@ public class TargetTrackingScalingPolicyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredefinedMetricSpecification")
     public PredefinedMetricSpecification predefinedMetricSpecification;
+
     public TargetTrackingScalingPolicyConfiguration withPredefinedMetricSpecification(PredefinedMetricSpecification predefinedMetricSpecification) {
         this.predefinedMetricSpecification = predefinedMetricSpecification;
         return this;
@@ -39,6 +42,7 @@ public class TargetTrackingScalingPolicyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScaleInCooldown")
     public Long scaleInCooldown;
+
     public TargetTrackingScalingPolicyConfiguration withScaleInCooldown(Long scaleInCooldown) {
         this.scaleInCooldown = scaleInCooldown;
         return this;
@@ -47,6 +51,7 @@ public class TargetTrackingScalingPolicyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScaleOutCooldown")
     public Long scaleOutCooldown;
+
     public TargetTrackingScalingPolicyConfiguration withScaleOutCooldown(Long scaleOutCooldown) {
         this.scaleOutCooldown = scaleOutCooldown;
         return this;
@@ -54,9 +59,13 @@ public class TargetTrackingScalingPolicyConfiguration {
     
     @JsonProperty("TargetValue")
     public Double targetValue;
+
     public TargetTrackingScalingPolicyConfiguration withTargetValue(Double targetValue) {
         this.targetValue = targetValue;
         return this;
     }
     
+    public TargetTrackingScalingPolicyConfiguration(@JsonProperty("TargetValue") Double targetValue) {
+        this.targetValue = targetValue;
+  }
 }

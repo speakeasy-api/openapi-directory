@@ -18,6 +18,7 @@ public class ActivityContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bulletin")
     public ActivityContentDetailsBulletin bulletin;
+
     public ActivityContentDetails withBulletin(ActivityContentDetailsBulletin bulletin) {
         this.bulletin = bulletin;
         return this;
@@ -29,6 +30,7 @@ public class ActivityContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelItem")
     public ActivityContentDetailsChannelItem channelItem;
+
     public ActivityContentDetails withChannelItem(ActivityContentDetailsChannelItem channelItem) {
         this.channelItem = channelItem;
         return this;
@@ -40,6 +42,7 @@ public class ActivityContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public ActivityContentDetailsComment comment;
+
     public ActivityContentDetails withComment(ActivityContentDetailsComment comment) {
         this.comment = comment;
         return this;
@@ -51,6 +54,7 @@ public class ActivityContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("favorite")
     public ActivityContentDetailsFavorite favorite;
+
     public ActivityContentDetails withFavorite(ActivityContentDetailsFavorite favorite) {
         this.favorite = favorite;
         return this;
@@ -62,6 +66,7 @@ public class ActivityContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("like")
     public ActivityContentDetailsLike like;
+
     public ActivityContentDetails withLike(ActivityContentDetailsLike like) {
         this.like = like;
         return this;
@@ -73,6 +78,7 @@ public class ActivityContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playlistItem")
     public ActivityContentDetailsPlaylistItem playlistItem;
+
     public ActivityContentDetails withPlaylistItem(ActivityContentDetailsPlaylistItem playlistItem) {
         this.playlistItem = playlistItem;
         return this;
@@ -84,6 +90,7 @@ public class ActivityContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotedItem")
     public ActivityContentDetailsPromotedItem promotedItem;
+
     public ActivityContentDetails withPromotedItem(ActivityContentDetailsPromotedItem promotedItem) {
         this.promotedItem = promotedItem;
         return this;
@@ -95,6 +102,7 @@ public class ActivityContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendation")
     public ActivityContentDetailsRecommendation recommendation;
+
     public ActivityContentDetails withRecommendation(ActivityContentDetailsRecommendation recommendation) {
         this.recommendation = recommendation;
         return this;
@@ -106,6 +114,7 @@ public class ActivityContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("social")
     public ActivityContentDetailsSocial social;
+
     public ActivityContentDetails withSocial(ActivityContentDetailsSocial social) {
         this.social = social;
         return this;
@@ -117,6 +126,7 @@ public class ActivityContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public ActivityContentDetailsSubscription subscription;
+
     public ActivityContentDetails withSubscription(ActivityContentDetailsSubscription subscription) {
         this.subscription = subscription;
         return this;
@@ -128,9 +138,11 @@ public class ActivityContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upload")
     public ActivityContentDetailsUpload upload;
+
     public ActivityContentDetails withUpload(ActivityContentDetailsUpload upload) {
         this.upload = upload;
         return this;
     }
     
+    public ActivityContentDetails(){}
 }

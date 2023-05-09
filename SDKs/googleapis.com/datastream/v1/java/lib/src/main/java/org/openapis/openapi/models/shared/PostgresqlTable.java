@@ -18,6 +18,7 @@ public class PostgresqlTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postgresqlColumns")
     public PostgresqlColumn[] postgresqlColumns;
+
     public PostgresqlTable withPostgresqlColumns(PostgresqlColumn[] postgresqlColumns) {
         this.postgresqlColumns = postgresqlColumns;
         return this;
@@ -29,9 +30,11 @@ public class PostgresqlTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public String table;
+
     public PostgresqlTable withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public PostgresqlTable(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInstanceMetricDataResponse {
@@ -12,6 +13,7 @@ public class GetInstanceMetricDataResponse {
      */
     
     public Object accessDeniedException;
+
     public GetInstanceMetricDataResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetInstanceMetricDataResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetInstanceMetricDataResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetInstanceMetricDataResponse {
     
     
     public String contentType;
+
     public GetInstanceMetricDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetInstanceMetricDataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInstanceMetricDataResult getInstanceMetricDataResult;
+
     public GetInstanceMetricDataResponse withGetInstanceMetricDataResult(org.openapis.openapi.models.shared.GetInstanceMetricDataResult getInstanceMetricDataResult) {
         this.getInstanceMetricDataResult = getInstanceMetricDataResult;
         return this;
@@ -49,6 +54,7 @@ public class GetInstanceMetricDataResponse {
      */
     
     public Object invalidInputException;
+
     public GetInstanceMetricDataResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetInstanceMetricDataResponse {
      */
     
     public Object notFoundException;
+
     public GetInstanceMetricDataResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetInstanceMetricDataResponse {
      */
     
     public Object operationFailureException;
+
     public GetInstanceMetricDataResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetInstanceMetricDataResponse {
      */
     
     public Object serviceException;
+
     public GetInstanceMetricDataResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetInstanceMetricDataResponse {
     
     
     public Integer statusCode;
+
     public GetInstanceMetricDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetInstanceMetricDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInstanceMetricDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetInstanceMetricDataResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetInstanceMetricDataResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetInstanceMetricDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

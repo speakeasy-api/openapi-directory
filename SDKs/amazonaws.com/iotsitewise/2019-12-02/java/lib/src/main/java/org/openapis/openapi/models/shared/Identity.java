@@ -15,6 +15,7 @@ public class Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public GroupIdentity group;
+
     public Identity withGroup(GroupIdentity group) {
         this.group = group;
         return this;
@@ -23,6 +24,7 @@ public class Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamRole")
     public IAMRoleIdentity iamRole;
+
     public Identity withIamRole(IAMRoleIdentity iamRole) {
         this.iamRole = iamRole;
         return this;
@@ -31,6 +33,7 @@ public class Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamUser")
     public IAMUserIdentity iamUser;
+
     public Identity withIamUser(IAMUserIdentity iamUser) {
         this.iamUser = iamUser;
         return this;
@@ -39,9 +42,11 @@ public class Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public UserIdentity user;
+
     public Identity withUser(UserIdentity user) {
         this.user = user;
         return this;
     }
     
+    public Identity(){}
 }

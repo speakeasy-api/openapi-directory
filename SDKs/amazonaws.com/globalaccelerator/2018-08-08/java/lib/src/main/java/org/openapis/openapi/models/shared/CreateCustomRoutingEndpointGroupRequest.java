@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCustomRoutingEndpointGroupRequest {
     @JsonProperty("DestinationConfigurations")
     public CustomRoutingDestinationConfiguration[] destinationConfigurations;
+
     public CreateCustomRoutingEndpointGroupRequest withDestinationConfigurations(CustomRoutingDestinationConfiguration[] destinationConfigurations) {
         this.destinationConfigurations = destinationConfigurations;
         return this;
@@ -16,6 +17,7 @@ public class CreateCustomRoutingEndpointGroupRequest {
     
     @JsonProperty("EndpointGroupRegion")
     public String endpointGroupRegion;
+
     public CreateCustomRoutingEndpointGroupRequest withEndpointGroupRegion(String endpointGroupRegion) {
         this.endpointGroupRegion = endpointGroupRegion;
         return this;
@@ -23,6 +25,7 @@ public class CreateCustomRoutingEndpointGroupRequest {
     
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public CreateCustomRoutingEndpointGroupRequest withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -30,9 +33,16 @@ public class CreateCustomRoutingEndpointGroupRequest {
     
     @JsonProperty("ListenerArn")
     public String listenerArn;
+
     public CreateCustomRoutingEndpointGroupRequest withListenerArn(String listenerArn) {
         this.listenerArn = listenerArn;
         return this;
     }
     
+    public CreateCustomRoutingEndpointGroupRequest(@JsonProperty("DestinationConfigurations") CustomRoutingDestinationConfiguration[] destinationConfigurations, @JsonProperty("EndpointGroupRegion") String endpointGroupRegion, @JsonProperty("IdempotencyToken") String idempotencyToken, @JsonProperty("ListenerArn") String listenerArn) {
+        this.destinationConfigurations = destinationConfigurations;
+        this.endpointGroupRegion = endpointGroupRegion;
+        this.idempotencyToken = idempotencyToken;
+        this.listenerArn = listenerArn;
+  }
 }

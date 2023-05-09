@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StreamQueryRequest {
@@ -12,6 +13,7 @@ public class StreamQueryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=customer-id")
     public Long customerId;
+
     public StreamQueryRequest withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
@@ -19,9 +21,14 @@ public class StreamQueryRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ServingBatchQueryRequest servingBatchQueryRequest;
+
     public StreamQueryRequest withServingBatchQueryRequest(org.openapis.openapi.models.shared.ServingBatchQueryRequest servingBatchQueryRequest) {
         this.servingBatchQueryRequest = servingBatchQueryRequest;
         return this;
     }
     
+    public StreamQueryRequest(@JsonProperty("customer-id") Long customerId, @JsonProperty("servingBatchQueryRequest") org.openapis.openapi.models.shared.ServingBatchQueryRequest servingBatchQueryRequest) {
+        this.customerId = customerId;
+        this.servingBatchQueryRequest = servingBatchQueryRequest;
+  }
 }

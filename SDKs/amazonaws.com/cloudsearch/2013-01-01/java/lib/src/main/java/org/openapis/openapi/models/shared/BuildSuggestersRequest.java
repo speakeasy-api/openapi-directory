@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * BuildSuggestersRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;BuildSuggester&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to update.
@@ -15,9 +15,13 @@ public class BuildSuggestersRequest {
      */
     
     public String domainName;
+
     public BuildSuggestersRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public BuildSuggestersRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

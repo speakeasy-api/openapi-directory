@@ -18,6 +18,7 @@ public class GoogleIdentityAccesscontextmanagerV1OsConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumVersion")
     public String minimumVersion;
+
     public GoogleIdentityAccesscontextmanagerV1OsConstraint withMinimumVersion(String minimumVersion) {
         this.minimumVersion = minimumVersion;
         return this;
@@ -29,6 +30,7 @@ public class GoogleIdentityAccesscontextmanagerV1OsConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osType")
     public GoogleIdentityAccesscontextmanagerV1OsConstraintOsTypeEnum osType;
+
     public GoogleIdentityAccesscontextmanagerV1OsConstraint withOsType(GoogleIdentityAccesscontextmanagerV1OsConstraintOsTypeEnum osType) {
         this.osType = osType;
         return this;
@@ -40,9 +42,11 @@ public class GoogleIdentityAccesscontextmanagerV1OsConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireVerifiedChromeOs")
     public Boolean requireVerifiedChromeOs;
+
     public GoogleIdentityAccesscontextmanagerV1OsConstraint withRequireVerifiedChromeOs(Boolean requireVerifiedChromeOs) {
         this.requireVerifiedChromeOs = requireVerifiedChromeOs;
         return this;
     }
     
+    public GoogleIdentityAccesscontextmanagerV1OsConstraint(){}
 }

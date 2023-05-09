@@ -18,6 +18,7 @@ public class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedValues")
     public String[] allowedValues;
+
     public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValues withAllowedValues(String[] allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deniedValues")
     public String[] deniedValues;
+
     public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValues withDeniedValues(String[] deniedValues) {
         this.deniedValues = deniedValues;
         return this;
     }
     
+    public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValues(){}
 }

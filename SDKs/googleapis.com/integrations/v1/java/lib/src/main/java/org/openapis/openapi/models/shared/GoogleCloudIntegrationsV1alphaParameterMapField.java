@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaParameterMapField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("literalValue")
     public GoogleCloudIntegrationsV1alphaValueType literalValue;
+
     public GoogleCloudIntegrationsV1alphaParameterMapField withLiteralValue(GoogleCloudIntegrationsV1alphaValueType literalValue) {
         this.literalValue = literalValue;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaParameterMapField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceKey")
     public String referenceKey;
+
     public GoogleCloudIntegrationsV1alphaParameterMapField withReferenceKey(String referenceKey) {
         this.referenceKey = referenceKey;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaParameterMapField(){}
 }

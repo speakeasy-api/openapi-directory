@@ -18,6 +18,7 @@ public class KeywordConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyword")
     public String keyword;
+
     public KeywordConfig withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -29,9 +30,11 @@ public class KeywordConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textInboundConfig")
     public TextInboundConfig textInboundConfig;
+
     public KeywordConfig withTextInboundConfig(TextInboundConfig textInboundConfig) {
         this.textInboundConfig = textInboundConfig;
         return this;
     }
     
+    public KeywordConfig(){}
 }

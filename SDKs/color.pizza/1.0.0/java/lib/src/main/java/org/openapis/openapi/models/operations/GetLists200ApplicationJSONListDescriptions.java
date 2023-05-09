@@ -12,6 +12,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basic")
     public org.openapis.openapi.models.shared.ListDescription basic;
+
     public GetLists200ApplicationJSONListDescriptions withBasic(org.openapis.openapi.models.shared.ListDescription basic) {
         this.basic = basic;
         return this;
@@ -20,6 +21,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestOf")
     public org.openapis.openapi.models.shared.ListDescription bestOf;
+
     public GetLists200ApplicationJSONListDescriptions withBestOf(org.openapis.openapi.models.shared.ListDescription bestOf) {
         this.bestOf = bestOf;
         return this;
@@ -28,6 +30,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chineseTraditional")
     public org.openapis.openapi.models.shared.ListDescription chineseTraditional;
+
     public GetLists200ApplicationJSONListDescriptions withChineseTraditional(org.openapis.openapi.models.shared.ListDescription chineseTraditional) {
         this.chineseTraditional = chineseTraditional;
         return this;
@@ -36,6 +39,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public org.openapis.openapi.models.shared.ListDescription default_;
+
     public GetLists200ApplicationJSONListDescriptions withDefault(org.openapis.openapi.models.shared.ListDescription default_) {
         this.default_ = default_;
         return this;
@@ -44,6 +48,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("french")
     public org.openapis.openapi.models.shared.ListDescription french;
+
     public GetLists200ApplicationJSONListDescriptions withFrench(org.openapis.openapi.models.shared.ListDescription french) {
         this.french = french;
         return this;
@@ -52,6 +57,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html")
     public org.openapis.openapi.models.shared.ListDescription html;
+
     public GetLists200ApplicationJSONListDescriptions withHtml(org.openapis.openapi.models.shared.ListDescription html) {
         this.html = html;
         return this;
@@ -60,6 +66,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("japaneseTraditional")
     public org.openapis.openapi.models.shared.ListDescription japaneseTraditional;
+
     public GetLists200ApplicationJSONListDescriptions withJapaneseTraditional(org.openapis.openapi.models.shared.ListDescription japaneseTraditional) {
         this.japaneseTraditional = japaneseTraditional;
         return this;
@@ -68,6 +75,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leCorbusier")
     public org.openapis.openapi.models.shared.ListDescription leCorbusier;
+
     public GetLists200ApplicationJSONListDescriptions withLeCorbusier(org.openapis.openapi.models.shared.ListDescription leCorbusier) {
         this.leCorbusier = leCorbusier;
         return this;
@@ -76,6 +84,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nbsIscc")
     public org.openapis.openapi.models.shared.ListDescription nbsIscc;
+
     public GetLists200ApplicationJSONListDescriptions withNbsIscc(org.openapis.openapi.models.shared.ListDescription nbsIscc) {
         this.nbsIscc = nbsIscc;
         return this;
@@ -84,6 +93,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ntc")
     public org.openapis.openapi.models.shared.ListDescription ntc;
+
     public GetLists200ApplicationJSONListDescriptions withNtc(org.openapis.openapi.models.shared.ListDescription ntc) {
         this.ntc = ntc;
         return this;
@@ -92,6 +102,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osxcrayons")
     public org.openapis.openapi.models.shared.ListDescription osxcrayons;
+
     public GetLists200ApplicationJSONListDescriptions withOsxcrayons(org.openapis.openapi.models.shared.ListDescription osxcrayons) {
         this.osxcrayons = osxcrayons;
         return this;
@@ -100,6 +111,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ral")
     public org.openapis.openapi.models.shared.ListDescription ral;
+
     public GetLists200ApplicationJSONListDescriptions withRal(org.openapis.openapi.models.shared.ListDescription ral) {
         this.ral = ral;
         return this;
@@ -108,6 +120,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ridgway")
     public org.openapis.openapi.models.shared.ListDescription ridgway;
+
     public GetLists200ApplicationJSONListDescriptions withRidgway(org.openapis.openapi.models.shared.ListDescription ridgway) {
         this.ridgway = ridgway;
         return this;
@@ -116,6 +129,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("risograph")
     public org.openapis.openapi.models.shared.ListDescription risograph;
+
     public GetLists200ApplicationJSONListDescriptions withRisograph(org.openapis.openapi.models.shared.ListDescription risograph) {
         this.risograph = risograph;
         return this;
@@ -124,6 +138,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sanzoWadaI")
     public org.openapis.openapi.models.shared.ListDescription sanzoWadaI;
+
     public GetLists200ApplicationJSONListDescriptions withSanzoWadaI(org.openapis.openapi.models.shared.ListDescription sanzoWadaI) {
         this.sanzoWadaI = sanzoWadaI;
         return this;
@@ -132,6 +147,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thesaurus")
     public org.openapis.openapi.models.shared.ListDescription thesaurus;
+
     public GetLists200ApplicationJSONListDescriptions withThesaurus(org.openapis.openapi.models.shared.ListDescription thesaurus) {
         this.thesaurus = thesaurus;
         return this;
@@ -140,6 +156,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("werner")
     public org.openapis.openapi.models.shared.ListDescription werner;
+
     public GetLists200ApplicationJSONListDescriptions withWerner(org.openapis.openapi.models.shared.ListDescription werner) {
         this.werner = werner;
         return this;
@@ -148,6 +165,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wikipedia")
     public org.openapis.openapi.models.shared.ListDescription wikipedia;
+
     public GetLists200ApplicationJSONListDescriptions withWikipedia(org.openapis.openapi.models.shared.ListDescription wikipedia) {
         this.wikipedia = wikipedia;
         return this;
@@ -156,6 +174,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windows")
     public org.openapis.openapi.models.shared.ListDescription windows;
+
     public GetLists200ApplicationJSONListDescriptions withWindows(org.openapis.openapi.models.shared.ListDescription windows) {
         this.windows = windows;
         return this;
@@ -164,6 +183,7 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x11")
     public org.openapis.openapi.models.shared.ListDescription x11;
+
     public GetLists200ApplicationJSONListDescriptions withX11(org.openapis.openapi.models.shared.ListDescription x11) {
         this.x11 = x11;
         return this;
@@ -172,9 +192,11 @@ public class GetLists200ApplicationJSONListDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xkcd")
     public org.openapis.openapi.models.shared.ListDescription xkcd;
+
     public GetLists200ApplicationJSONListDescriptions withXkcd(org.openapis.openapi.models.shared.ListDescription xkcd) {
         this.xkcd = xkcd;
         return this;
     }
     
+    public GetLists200ApplicationJSONListDescriptions(){}
 }

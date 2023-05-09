@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDownloadDBLogFilePortionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDownloadDBLogFilePortionActionEnum action;
+
     public GETDownloadDBLogFilePortionRequest withAction(GETDownloadDBLogFilePortionActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class GETDownloadDBLogFilePortionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceIdentifier")
     public String dbInstanceIdentifier;
+
     public GETDownloadDBLogFilePortionRequest withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -23,6 +26,7 @@ public class GETDownloadDBLogFilePortionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LogFileName")
     public String logFileName;
+
     public GETDownloadDBLogFilePortionRequest withLogFileName(String logFileName) {
         this.logFileName = logFileName;
         return this;
@@ -30,6 +34,7 @@ public class GETDownloadDBLogFilePortionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDownloadDBLogFilePortionRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -37,6 +42,7 @@ public class GETDownloadDBLogFilePortionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NumberOfLines")
     public Long numberOfLines;
+
     public GETDownloadDBLogFilePortionRequest withNumberOfLines(Long numberOfLines) {
         this.numberOfLines = numberOfLines;
         return this;
@@ -44,6 +50,7 @@ public class GETDownloadDBLogFilePortionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDownloadDBLogFilePortionVersionEnum version;
+
     public GETDownloadDBLogFilePortionRequest withVersion(GETDownloadDBLogFilePortionVersionEnum version) {
         this.version = version;
         return this;
@@ -51,6 +58,7 @@ public class GETDownloadDBLogFilePortionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDownloadDBLogFilePortionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -58,6 +66,7 @@ public class GETDownloadDBLogFilePortionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDownloadDBLogFilePortionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -65,6 +74,7 @@ public class GETDownloadDBLogFilePortionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDownloadDBLogFilePortionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -72,6 +82,7 @@ public class GETDownloadDBLogFilePortionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDownloadDBLogFilePortionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -79,6 +90,7 @@ public class GETDownloadDBLogFilePortionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDownloadDBLogFilePortionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -86,6 +98,7 @@ public class GETDownloadDBLogFilePortionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDownloadDBLogFilePortionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -93,9 +106,16 @@ public class GETDownloadDBLogFilePortionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDownloadDBLogFilePortionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDownloadDBLogFilePortionRequest(@JsonProperty("Action") GETDownloadDBLogFilePortionActionEnum action, @JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier, @JsonProperty("LogFileName") String logFileName, @JsonProperty("Version") GETDownloadDBLogFilePortionVersionEnum version) {
+        this.action = action;
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        this.logFileName = logFileName;
+        this.version = version;
+  }
 }

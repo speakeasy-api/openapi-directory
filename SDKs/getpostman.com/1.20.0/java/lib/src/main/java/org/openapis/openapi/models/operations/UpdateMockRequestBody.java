@@ -12,9 +12,11 @@ public class UpdateMockRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mock")
     public UpdateMockRequestBodyMock mock;
+
     public UpdateMockRequestBody withMock(UpdateMockRequestBodyMock mock) {
         this.mock = mock;
         return this;
     }
     
+    public UpdateMockRequestBody(){}
 }

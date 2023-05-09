@@ -18,6 +18,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public Event withDate(Date date) {
         this.date = date;
         return this;
@@ -29,6 +30,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedType")
     public String formattedType;
+
     public Event withFormattedType(String formattedType) {
         this.formattedType = formattedType;
         return this;
@@ -40,6 +42,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FieldMetadata metadata;
+
     public Event withMetadata(FieldMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -51,9 +54,11 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Event withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Event(){}
 }

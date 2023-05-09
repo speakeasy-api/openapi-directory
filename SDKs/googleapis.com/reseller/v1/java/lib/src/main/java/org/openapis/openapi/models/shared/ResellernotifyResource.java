@@ -18,9 +18,11 @@ public class ResellernotifyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicName")
     public String topicName;
+
     public ResellernotifyResource withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     
+    public ResellernotifyResource(){}
 }

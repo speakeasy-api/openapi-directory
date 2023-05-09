@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSampledRequestsRequest {
     @JsonProperty("MaxItems")
     public Long maxItems;
+
     public GetSampledRequestsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -16,6 +17,7 @@ public class GetSampledRequestsRequest {
     
     @JsonProperty("RuleId")
     public String ruleId;
+
     public GetSampledRequestsRequest withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
@@ -23,6 +25,7 @@ public class GetSampledRequestsRequest {
     
     @JsonProperty("TimeWindow")
     public TimeWindow timeWindow;
+
     public GetSampledRequestsRequest withTimeWindow(TimeWindow timeWindow) {
         this.timeWindow = timeWindow;
         return this;
@@ -30,9 +33,16 @@ public class GetSampledRequestsRequest {
     
     @JsonProperty("WebAclId")
     public String webAclId;
+
     public GetSampledRequestsRequest withWebAclId(String webAclId) {
         this.webAclId = webAclId;
         return this;
     }
     
+    public GetSampledRequestsRequest(@JsonProperty("MaxItems") Long maxItems, @JsonProperty("RuleId") String ruleId, @JsonProperty("TimeWindow") TimeWindow timeWindow, @JsonProperty("WebAclId") String webAclId) {
+        this.maxItems = maxItems;
+        this.ruleId = ruleId;
+        this.timeWindow = timeWindow;
+        this.webAclId = webAclId;
+  }
 }

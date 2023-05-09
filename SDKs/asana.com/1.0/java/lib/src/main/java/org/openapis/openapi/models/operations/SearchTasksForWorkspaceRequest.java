@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
@@ -14,6 +15,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assigned_by.any")
     public String assignedByAny;
+
     public SearchTasksForWorkspaceRequest withAssignedByAny(String assignedByAny) {
         this.assignedByAny = assignedByAny;
         return this;
@@ -24,6 +26,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assigned_by.not")
     public String assignedByNot;
+
     public SearchTasksForWorkspaceRequest withAssignedByNot(String assignedByNot) {
         this.assignedByNot = assignedByNot;
         return this;
@@ -34,6 +37,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee.any")
     public String assigneeAny;
+
     public SearchTasksForWorkspaceRequest withAssigneeAny(String assigneeAny) {
         this.assigneeAny = assigneeAny;
         return this;
@@ -44,6 +48,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee.not")
     public String assigneeNot;
+
     public SearchTasksForWorkspaceRequest withAssigneeNot(String assigneeNot) {
         this.assigneeNot = assigneeNot;
         return this;
@@ -54,6 +59,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=commented_on_by.not")
     public String commentedOnByNot;
+
     public SearchTasksForWorkspaceRequest withCommentedOnByNot(String commentedOnByNot) {
         this.commentedOnByNot = commentedOnByNot;
         return this;
@@ -64,6 +70,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed")
     public Boolean completed;
+
     public SearchTasksForWorkspaceRequest withCompleted(Boolean completed) {
         this.completed = completed;
         return this;
@@ -74,6 +81,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed_at.after")
     public OffsetDateTime completedAtAfter;
+
     public SearchTasksForWorkspaceRequest withCompletedAtAfter(OffsetDateTime completedAtAfter) {
         this.completedAtAfter = completedAtAfter;
         return this;
@@ -84,6 +92,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed_at.before")
     public OffsetDateTime completedAtBefore;
+
     public SearchTasksForWorkspaceRequest withCompletedAtBefore(OffsetDateTime completedAtBefore) {
         this.completedAtBefore = completedAtBefore;
         return this;
@@ -94,6 +103,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed_on")
     public LocalDate completedOn;
+
     public SearchTasksForWorkspaceRequest withCompletedOn(LocalDate completedOn) {
         this.completedOn = completedOn;
         return this;
@@ -104,6 +114,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed_on.after")
     public LocalDate completedOnAfter;
+
     public SearchTasksForWorkspaceRequest withCompletedOnAfter(LocalDate completedOnAfter) {
         this.completedOnAfter = completedOnAfter;
         return this;
@@ -114,6 +125,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed_on.before")
     public LocalDate completedOnBefore;
+
     public SearchTasksForWorkspaceRequest withCompletedOnBefore(LocalDate completedOnBefore) {
         this.completedOnBefore = completedOnBefore;
         return this;
@@ -124,6 +136,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at.after")
     public OffsetDateTime createdAtAfter;
+
     public SearchTasksForWorkspaceRequest withCreatedAtAfter(OffsetDateTime createdAtAfter) {
         this.createdAtAfter = createdAtAfter;
         return this;
@@ -134,6 +147,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at.before")
     public OffsetDateTime createdAtBefore;
+
     public SearchTasksForWorkspaceRequest withCreatedAtBefore(OffsetDateTime createdAtBefore) {
         this.createdAtBefore = createdAtBefore;
         return this;
@@ -144,6 +158,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_by.any")
     public String createdByAny;
+
     public SearchTasksForWorkspaceRequest withCreatedByAny(String createdByAny) {
         this.createdByAny = createdByAny;
         return this;
@@ -154,6 +169,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_by.not")
     public String createdByNot;
+
     public SearchTasksForWorkspaceRequest withCreatedByNot(String createdByNot) {
         this.createdByNot = createdByNot;
         return this;
@@ -164,6 +180,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_on")
     public LocalDate createdOn;
+
     public SearchTasksForWorkspaceRequest withCreatedOn(LocalDate createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -174,6 +191,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_on.after")
     public LocalDate createdOnAfter;
+
     public SearchTasksForWorkspaceRequest withCreatedOnAfter(LocalDate createdOnAfter) {
         this.createdOnAfter = createdOnAfter;
         return this;
@@ -184,6 +202,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_on.before")
     public LocalDate createdOnBefore;
+
     public SearchTasksForWorkspaceRequest withCreatedOnBefore(LocalDate createdOnBefore) {
         this.createdOnBefore = createdOnBefore;
         return this;
@@ -194,6 +213,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at.after")
     public OffsetDateTime dueAtAfter;
+
     public SearchTasksForWorkspaceRequest withDueAtAfter(OffsetDateTime dueAtAfter) {
         this.dueAtAfter = dueAtAfter;
         return this;
@@ -204,6 +224,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at.before")
     public OffsetDateTime dueAtBefore;
+
     public SearchTasksForWorkspaceRequest withDueAtBefore(OffsetDateTime dueAtBefore) {
         this.dueAtBefore = dueAtBefore;
         return this;
@@ -214,6 +235,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_on")
     public LocalDate dueOn;
+
     public SearchTasksForWorkspaceRequest withDueOn(LocalDate dueOn) {
         this.dueOn = dueOn;
         return this;
@@ -224,6 +246,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_on.after")
     public LocalDate dueOnAfter;
+
     public SearchTasksForWorkspaceRequest withDueOnAfter(LocalDate dueOnAfter) {
         this.dueOnAfter = dueOnAfter;
         return this;
@@ -234,6 +257,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_on.before")
     public LocalDate dueOnBefore;
+
     public SearchTasksForWorkspaceRequest withDueOnBefore(LocalDate dueOnBefore) {
         this.dueOnBefore = dueOnBefore;
         return this;
@@ -244,6 +268,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=followers.not")
     public String followersNot;
+
     public SearchTasksForWorkspaceRequest withFollowersNot(String followersNot) {
         this.followersNot = followersNot;
         return this;
@@ -254,6 +279,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=has_attachment")
     public Boolean hasAttachment;
+
     public SearchTasksForWorkspaceRequest withHasAttachment(Boolean hasAttachment) {
         this.hasAttachment = hasAttachment;
         return this;
@@ -264,6 +290,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_blocked")
     public Boolean isBlocked;
+
     public SearchTasksForWorkspaceRequest withIsBlocked(Boolean isBlocked) {
         this.isBlocked = isBlocked;
         return this;
@@ -274,6 +301,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_blocking")
     public Boolean isBlocking;
+
     public SearchTasksForWorkspaceRequest withIsBlocking(Boolean isBlocking) {
         this.isBlocking = isBlocking;
         return this;
@@ -284,6 +312,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_subtask")
     public Boolean isSubtask;
+
     public SearchTasksForWorkspaceRequest withIsSubtask(Boolean isSubtask) {
         this.isSubtask = isSubtask;
         return this;
@@ -294,6 +323,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=liked_by.not")
     public String likedByNot;
+
     public SearchTasksForWorkspaceRequest withLikedByNot(String likedByNot) {
         this.likedByNot = likedByNot;
         return this;
@@ -304,6 +334,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_at.after")
     public OffsetDateTime modifiedAtAfter;
+
     public SearchTasksForWorkspaceRequest withModifiedAtAfter(OffsetDateTime modifiedAtAfter) {
         this.modifiedAtAfter = modifiedAtAfter;
         return this;
@@ -314,6 +345,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_at.before")
     public OffsetDateTime modifiedAtBefore;
+
     public SearchTasksForWorkspaceRequest withModifiedAtBefore(OffsetDateTime modifiedAtBefore) {
         this.modifiedAtBefore = modifiedAtBefore;
         return this;
@@ -324,6 +356,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_on")
     public LocalDate modifiedOn;
+
     public SearchTasksForWorkspaceRequest withModifiedOn(LocalDate modifiedOn) {
         this.modifiedOn = modifiedOn;
         return this;
@@ -334,6 +367,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_on.after")
     public LocalDate modifiedOnAfter;
+
     public SearchTasksForWorkspaceRequest withModifiedOnAfter(LocalDate modifiedOnAfter) {
         this.modifiedOnAfter = modifiedOnAfter;
         return this;
@@ -344,6 +378,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_on.before")
     public LocalDate modifiedOnBefore;
+
     public SearchTasksForWorkspaceRequest withModifiedOnBefore(LocalDate modifiedOnBefore) {
         this.modifiedOnBefore = modifiedOnBefore;
         return this;
@@ -356,6 +391,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public SearchTasksForWorkspaceRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -367,6 +403,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public SearchTasksForWorkspaceRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -377,6 +414,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=portfolios.any")
     public String portfoliosAny;
+
     public SearchTasksForWorkspaceRequest withPortfoliosAny(String portfoliosAny) {
         this.portfoliosAny = portfoliosAny;
         return this;
@@ -387,6 +425,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projects.all")
     public String projectsAll;
+
     public SearchTasksForWorkspaceRequest withProjectsAll(String projectsAll) {
         this.projectsAll = projectsAll;
         return this;
@@ -397,6 +436,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projects.any")
     public String projectsAny;
+
     public SearchTasksForWorkspaceRequest withProjectsAny(String projectsAny) {
         this.projectsAny = projectsAny;
         return this;
@@ -407,6 +447,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projects.not")
     public String projectsNot;
+
     public SearchTasksForWorkspaceRequest withProjectsNot(String projectsNot) {
         this.projectsNot = projectsNot;
         return this;
@@ -417,6 +458,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource_subtype")
     public SearchTasksForWorkspaceResourceSubtypeEnum resourceSubtype;
+
     public SearchTasksForWorkspaceRequest withResourceSubtype(SearchTasksForWorkspaceResourceSubtypeEnum resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -427,6 +469,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sections.all")
     public String sectionsAll;
+
     public SearchTasksForWorkspaceRequest withSectionsAll(String sectionsAll) {
         this.sectionsAll = sectionsAll;
         return this;
@@ -437,6 +480,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sections.any")
     public String sectionsAny;
+
     public SearchTasksForWorkspaceRequest withSectionsAny(String sectionsAny) {
         this.sectionsAny = sectionsAny;
         return this;
@@ -447,6 +491,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sections.not")
     public String sectionsNot;
+
     public SearchTasksForWorkspaceRequest withSectionsNot(String sectionsNot) {
         this.sectionsNot = sectionsNot;
         return this;
@@ -457,6 +502,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_ascending")
     public Boolean sortAscending;
+
     public SearchTasksForWorkspaceRequest withSortAscending(Boolean sortAscending) {
         this.sortAscending = sortAscending;
         return this;
@@ -467,6 +513,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public SearchTasksForWorkspaceSortByEnum sortBy;
+
     public SearchTasksForWorkspaceRequest withSortBy(SearchTasksForWorkspaceSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -477,6 +524,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_on")
     public LocalDate startOn;
+
     public SearchTasksForWorkspaceRequest withStartOn(LocalDate startOn) {
         this.startOn = startOn;
         return this;
@@ -487,6 +535,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_on.after")
     public LocalDate startOnAfter;
+
     public SearchTasksForWorkspaceRequest withStartOnAfter(LocalDate startOnAfter) {
         this.startOnAfter = startOnAfter;
         return this;
@@ -497,6 +546,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_on.before")
     public LocalDate startOnBefore;
+
     public SearchTasksForWorkspaceRequest withStartOnBefore(LocalDate startOnBefore) {
         this.startOnBefore = startOnBefore;
         return this;
@@ -507,6 +557,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags.all")
     public String tagsAll;
+
     public SearchTasksForWorkspaceRequest withTagsAll(String tagsAll) {
         this.tagsAll = tagsAll;
         return this;
@@ -517,6 +568,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags.any")
     public String tagsAny;
+
     public SearchTasksForWorkspaceRequest withTagsAny(String tagsAny) {
         this.tagsAny = tagsAny;
         return this;
@@ -527,6 +579,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags.not")
     public String tagsNot;
+
     public SearchTasksForWorkspaceRequest withTagsNot(String tagsNot) {
         this.tagsNot = tagsNot;
         return this;
@@ -537,6 +590,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=teams.any")
     public String teamsAny;
+
     public SearchTasksForWorkspaceRequest withTeamsAny(String teamsAny) {
         this.teamsAny = teamsAny;
         return this;
@@ -547,6 +601,7 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchTasksForWorkspaceRequest withText(String text) {
         this.text = text;
         return this;
@@ -557,9 +612,13 @@ public class SearchTasksForWorkspaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_gid")
     public String workspaceGid;
+
     public SearchTasksForWorkspaceRequest withWorkspaceGid(String workspaceGid) {
         this.workspaceGid = workspaceGid;
         return this;
     }
     
+    public SearchTasksForWorkspaceRequest(@JsonProperty("workspace_gid") String workspaceGid) {
+        this.workspaceGid = workspaceGid;
+  }
 }

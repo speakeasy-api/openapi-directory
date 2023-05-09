@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetWebhookResult {
     @JsonProperty("webhook")
     public Webhook webhook;
+
     public GetWebhookResult withWebhook(Webhook webhook) {
         this.webhook = webhook;
         return this;
     }
     
+    public GetWebhookResult(@JsonProperty("webhook") Webhook webhook) {
+        this.webhook = webhook;
+  }
 }

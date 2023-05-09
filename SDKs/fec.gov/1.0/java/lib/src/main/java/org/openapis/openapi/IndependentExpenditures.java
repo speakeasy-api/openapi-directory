@@ -64,11 +64,9 @@ public class IndependentExpenditures {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleEResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleEResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleEResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleEResponse(contentType, httpRes.statusCode()) {{
             scheduleEPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -109,11 +107,9 @@ public class IndependentExpenditures {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleEByCandidateResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleEByCandidateResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleEByCandidateResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleEByCandidateResponse(contentType, httpRes.statusCode()) {{
             scheduleEByCandidatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -154,11 +150,9 @@ public class IndependentExpenditures {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleEEfileResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleEEfileResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleEEfileResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleEEfileResponse(contentType, httpRes.statusCode()) {{
             scheduleEEfilePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -199,11 +193,9 @@ public class IndependentExpenditures {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleETotalsByCandidateResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleETotalsByCandidateResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleETotalsByCandidateResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleETotalsByCandidateResponse(contentType, httpRes.statusCode()) {{
             ieTotalsByCandidatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

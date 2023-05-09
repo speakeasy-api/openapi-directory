@@ -12,6 +12,7 @@ public class StoreSingle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public StoreSingle withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class StoreSingle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public StoreSingle withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -28,6 +30,7 @@ public class StoreSingle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("games_count")
     public Long gamesCount;
+
     public StoreSingle withGamesCount(Long gamesCount) {
         this.gamesCount = gamesCount;
         return this;
@@ -36,6 +39,7 @@ public class StoreSingle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public StoreSingle withId(Long id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class StoreSingle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_background")
     public String imageBackground;
+
     public StoreSingle withImageBackground(String imageBackground) {
         this.imageBackground = imageBackground;
         return this;
@@ -51,6 +56,7 @@ public class StoreSingle {
     
     @JsonProperty("name")
     public String name;
+
     public StoreSingle withName(String name) {
         this.name = name;
         return this;
@@ -59,9 +65,13 @@ public class StoreSingle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public StoreSingle withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public StoreSingle(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

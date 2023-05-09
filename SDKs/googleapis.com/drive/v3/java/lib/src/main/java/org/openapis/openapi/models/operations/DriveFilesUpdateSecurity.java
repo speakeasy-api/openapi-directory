@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DriveFilesUpdateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DriveFilesUpdateSecurityOption1 option1;
+
     public DriveFilesUpdateSecurity withOption1(DriveFilesUpdateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DriveFilesUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveFilesUpdateSecurityOption2 option2;
+
     public DriveFilesUpdateSecurity withOption2(DriveFilesUpdateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DriveFilesUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveFilesUpdateSecurityOption3 option3;
+
     public DriveFilesUpdateSecurity withOption3(DriveFilesUpdateSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class DriveFilesUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveFilesUpdateSecurityOption4 option4;
+
     public DriveFilesUpdateSecurity withOption4(DriveFilesUpdateSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,9 +41,11 @@ public class DriveFilesUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveFilesUpdateSecurityOption5 option5;
+
     public DriveFilesUpdateSecurity withOption5(DriveFilesUpdateSecurityOption5 option5) {
         this.option5 = option5;
         return this;
     }
     
+    public DriveFilesUpdateSecurity(){}
 }

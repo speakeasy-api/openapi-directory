@@ -15,9 +15,13 @@ public class SearchEntitiesRequest {
      */
     @JsonProperty("text")
     public String text;
+
     public SearchEntitiesRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public SearchEntitiesRequest(@JsonProperty("text") String text) {
+        this.text = text;
+  }
 }

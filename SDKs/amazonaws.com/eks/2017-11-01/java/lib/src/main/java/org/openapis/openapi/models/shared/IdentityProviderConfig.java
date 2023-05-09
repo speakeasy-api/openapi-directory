@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IdentityProviderConfig {
     @JsonProperty("name")
     public String name;
+
     public IdentityProviderConfig withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class IdentityProviderConfig {
     
     @JsonProperty("type")
     public String type;
+
     public IdentityProviderConfig withType(String type) {
         this.type = type;
         return this;
     }
     
+    public IdentityProviderConfig(@JsonProperty("name") String name, @JsonProperty("type") String type) {
+        this.name = name;
+        this.type = type;
+  }
 }

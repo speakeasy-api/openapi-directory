@@ -18,9 +18,11 @@ public class AddProtectedRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protectedRange")
     public ProtectedRange protectedRange;
+
     public AddProtectedRangeRequest withProtectedRange(ProtectedRange protectedRange) {
         this.protectedRange = protectedRange;
         return this;
     }
     
+    public AddProtectedRangeRequest(){}
 }

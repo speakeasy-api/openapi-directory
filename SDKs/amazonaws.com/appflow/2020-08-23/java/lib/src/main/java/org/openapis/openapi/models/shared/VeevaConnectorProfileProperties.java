@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VeevaConnectorProfileProperties {
     @JsonProperty("instanceUrl")
     public String instanceUrl;
+
     public VeevaConnectorProfileProperties withInstanceUrl(String instanceUrl) {
         this.instanceUrl = instanceUrl;
         return this;
     }
     
+    public VeevaConnectorProfileProperties(@JsonProperty("instanceUrl") String instanceUrl) {
+        this.instanceUrl = instanceUrl;
+  }
 }

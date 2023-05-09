@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDatasetResponse {
@@ -12,6 +13,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteDatasetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDatasetResponse {
     
     
     public String contentType;
+
     public DeleteDatasetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDatasetResponse {
      */
     
     public java.util.Map<String, Object> deleteDatasetResponse;
+
     public DeleteDatasetResponse withDeleteDatasetResponse(java.util.Map<String, Object> deleteDatasetResponse) {
         this.deleteDatasetResponse = deleteDatasetResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object internalServerError;
+
     public DeleteDatasetResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteDatasetResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteDatasetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public DeleteDatasetResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteDatasetResponse {
     
     
     public Integer statusCode;
+
     public DeleteDatasetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteDatasetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDatasetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteDatasetResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -103,6 +114,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteDatasetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,9 +125,14 @@ public class DeleteDatasetResponse {
      */
     
     public Object throttlingException;
+
     public DeleteDatasetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteDatasetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

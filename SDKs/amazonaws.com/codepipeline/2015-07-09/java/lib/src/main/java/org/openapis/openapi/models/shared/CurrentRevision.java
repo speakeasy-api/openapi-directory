@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CurrentRevision {
     @JsonProperty("changeIdentifier")
     public String changeIdentifier;
+
     public CurrentRevision withChangeIdentifier(String changeIdentifier) {
         this.changeIdentifier = changeIdentifier;
         return this;
@@ -29,6 +30,7 @@ public class CurrentRevision {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public CurrentRevision withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -36,6 +38,7 @@ public class CurrentRevision {
     
     @JsonProperty("revision")
     public String revision;
+
     public CurrentRevision withRevision(String revision) {
         this.revision = revision;
         return this;
@@ -44,9 +47,14 @@ public class CurrentRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionSummary")
     public String revisionSummary;
+
     public CurrentRevision withRevisionSummary(String revisionSummary) {
         this.revisionSummary = revisionSummary;
         return this;
     }
     
+    public CurrentRevision(@JsonProperty("changeIdentifier") String changeIdentifier, @JsonProperty("revision") String revision) {
+        this.changeIdentifier = changeIdentifier;
+        this.revision = revision;
+  }
 }

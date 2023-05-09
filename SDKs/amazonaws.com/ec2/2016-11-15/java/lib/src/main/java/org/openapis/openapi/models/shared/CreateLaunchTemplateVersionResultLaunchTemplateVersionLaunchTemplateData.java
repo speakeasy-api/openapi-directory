@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData {
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappings[] blockDeviceMappings;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withBlockDeviceMappings(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappings[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -19,6 +20,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCapacityReservationSpecification capacityReservationSpecification;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withCapacityReservationSpecification(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCapacityReservationSpecification capacityReservationSpecification) {
         this.capacityReservationSpecification = capacityReservationSpecification;
         return this;
@@ -26,6 +28,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCpuOptions cpuOptions;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withCpuOptions(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCpuOptions cpuOptions) {
         this.cpuOptions = cpuOptions;
         return this;
@@ -33,6 +36,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCreditSpecification creditSpecification;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withCreditSpecification(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCreditSpecification creditSpecification) {
         this.creditSpecification = creditSpecification;
         return this;
@@ -40,6 +44,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public Boolean disableApiStop;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withDisableApiStop(Boolean disableApiStop) {
         this.disableApiStop = disableApiStop;
         return this;
@@ -47,6 +52,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public Boolean disableApiTermination;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withDisableApiTermination(Boolean disableApiTermination) {
         this.disableApiTermination = disableApiTermination;
         return this;
@@ -54,6 +60,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public Boolean ebsOptimized;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -61,6 +68,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataElasticGpuSpecifications[] elasticGpuSpecifications;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withElasticGpuSpecifications(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataElasticGpuSpecifications[] elasticGpuSpecifications) {
         this.elasticGpuSpecifications = elasticGpuSpecifications;
         return this;
@@ -68,6 +76,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataElasticInferenceAccelerators[] elasticInferenceAccelerators;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withElasticInferenceAccelerators(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataElasticInferenceAccelerators[] elasticInferenceAccelerators) {
         this.elasticInferenceAccelerators = elasticInferenceAccelerators;
         return this;
@@ -75,6 +84,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataEnclaveOptions enclaveOptions;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withEnclaveOptions(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataEnclaveOptions enclaveOptions) {
         this.enclaveOptions = enclaveOptions;
         return this;
@@ -82,6 +92,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataHibernationOptions hibernationOptions;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withHibernationOptions(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataHibernationOptions hibernationOptions) {
         this.hibernationOptions = hibernationOptions;
         return this;
@@ -89,6 +100,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataIamInstanceProfile iamInstanceProfile;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withIamInstanceProfile(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataIamInstanceProfile iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -96,6 +108,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String imageId;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -103,6 +116,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceInitiatedShutdownBehaviorEnum instanceInitiatedShutdownBehavior;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withInstanceInitiatedShutdownBehavior(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceInitiatedShutdownBehaviorEnum instanceInitiatedShutdownBehavior) {
         this.instanceInitiatedShutdownBehavior = instanceInitiatedShutdownBehavior;
         return this;
@@ -110,6 +124,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptions instanceMarketOptions;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withInstanceMarketOptions(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptions instanceMarketOptions) {
         this.instanceMarketOptions = instanceMarketOptions;
         return this;
@@ -117,6 +132,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirements instanceRequirements;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withInstanceRequirements(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirements instanceRequirements) {
         this.instanceRequirements = instanceRequirements;
         return this;
@@ -124,6 +140,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum instanceType;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withInstanceType(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -131,6 +148,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String kernelId;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withKernelId(String kernelId) {
         this.kernelId = kernelId;
         return this;
@@ -138,6 +156,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String keyName;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -145,6 +164,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataLicenseSpecifications[] licenseSpecifications;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withLicenseSpecifications(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataLicenseSpecifications[] licenseSpecifications) {
         this.licenseSpecifications = licenseSpecifications;
         return this;
@@ -152,6 +172,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMaintenanceOptions maintenanceOptions;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withMaintenanceOptions(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMaintenanceOptions maintenanceOptions) {
         this.maintenanceOptions = maintenanceOptions;
         return this;
@@ -159,6 +180,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptions metadataOptions;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withMetadataOptions(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptions metadataOptions) {
         this.metadataOptions = metadataOptions;
         return this;
@@ -166,6 +188,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMonitoring monitoring;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withMonitoring(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMonitoring monitoring) {
         this.monitoring = monitoring;
         return this;
@@ -173,6 +196,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataNetworkInterfaces[] networkInterfaces;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withNetworkInterfaces(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataNetworkInterfaces[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -180,6 +204,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacement placement;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withPlacement(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacement placement) {
         this.placement = placement;
         return this;
@@ -187,6 +212,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPrivateDnsNameOptions privateDnsNameOptions;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withPrivateDnsNameOptions(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPrivateDnsNameOptions privateDnsNameOptions) {
         this.privateDnsNameOptions = privateDnsNameOptions;
         return this;
@@ -194,6 +220,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String ramDiskId;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withRamDiskId(String ramDiskId) {
         this.ramDiskId = ramDiskId;
         return this;
@@ -201,6 +228,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String[] securityGroupIds;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -208,6 +236,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String[] securityGroups;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -215,6 +244,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataTagSpecifications[] tagSpecifications;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withTagSpecifications(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -222,9 +252,11 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String userData;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData withUserData(String userData) {
         this.userData = userData;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData(){}
 }

@@ -15,6 +15,7 @@ public class AlfrescoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlogFieldMappings")
     public DataSourceToIndexFieldMapping[] blogFieldMappings;
+
     public AlfrescoConfiguration withBlogFieldMappings(DataSourceToIndexFieldMapping[] blogFieldMappings) {
         this.blogFieldMappings = blogFieldMappings;
         return this;
@@ -23,6 +24,7 @@ public class AlfrescoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlComments")
     public Boolean crawlComments;
+
     public AlfrescoConfiguration withCrawlComments(Boolean crawlComments) {
         this.crawlComments = crawlComments;
         return this;
@@ -31,6 +33,7 @@ public class AlfrescoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlSystemFolders")
     public Boolean crawlSystemFolders;
+
     public AlfrescoConfiguration withCrawlSystemFolders(Boolean crawlSystemFolders) {
         this.crawlSystemFolders = crawlSystemFolders;
         return this;
@@ -39,6 +42,7 @@ public class AlfrescoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentLibraryFieldMappings")
     public DataSourceToIndexFieldMapping[] documentLibraryFieldMappings;
+
     public AlfrescoConfiguration withDocumentLibraryFieldMappings(DataSourceToIndexFieldMapping[] documentLibraryFieldMappings) {
         this.documentLibraryFieldMappings = documentLibraryFieldMappings;
         return this;
@@ -47,6 +51,7 @@ public class AlfrescoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityFilter")
     public AlfrescoEntityEnum[] entityFilter;
+
     public AlfrescoConfiguration withEntityFilter(AlfrescoEntityEnum[] entityFilter) {
         this.entityFilter = entityFilter;
         return this;
@@ -55,6 +60,7 @@ public class AlfrescoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusionPatterns")
     public String[] exclusionPatterns;
+
     public AlfrescoConfiguration withExclusionPatterns(String[] exclusionPatterns) {
         this.exclusionPatterns = exclusionPatterns;
         return this;
@@ -63,6 +69,7 @@ public class AlfrescoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InclusionPatterns")
     public String[] inclusionPatterns;
+
     public AlfrescoConfiguration withInclusionPatterns(String[] inclusionPatterns) {
         this.inclusionPatterns = inclusionPatterns;
         return this;
@@ -70,6 +77,7 @@ public class AlfrescoConfiguration {
     
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public AlfrescoConfiguration withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -77,6 +85,7 @@ public class AlfrescoConfiguration {
     
     @JsonProperty("SiteId")
     public String siteId;
+
     public AlfrescoConfiguration withSiteId(String siteId) {
         this.siteId = siteId;
         return this;
@@ -84,6 +93,7 @@ public class AlfrescoConfiguration {
     
     @JsonProperty("SiteUrl")
     public String siteUrl;
+
     public AlfrescoConfiguration withSiteUrl(String siteUrl) {
         this.siteUrl = siteUrl;
         return this;
@@ -91,6 +101,7 @@ public class AlfrescoConfiguration {
     
     @JsonProperty("SslCertificateS3Path")
     public S3Path sslCertificateS3Path;
+
     public AlfrescoConfiguration withSslCertificateS3Path(S3Path sslCertificateS3Path) {
         this.sslCertificateS3Path = sslCertificateS3Path;
         return this;
@@ -99,6 +110,7 @@ public class AlfrescoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfiguration")
     public DataSourceVpcConfiguration vpcConfiguration;
+
     public AlfrescoConfiguration withVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
@@ -107,9 +119,16 @@ public class AlfrescoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WikiFieldMappings")
     public DataSourceToIndexFieldMapping[] wikiFieldMappings;
+
     public AlfrescoConfiguration withWikiFieldMappings(DataSourceToIndexFieldMapping[] wikiFieldMappings) {
         this.wikiFieldMappings = wikiFieldMappings;
         return this;
     }
     
+    public AlfrescoConfiguration(@JsonProperty("SecretArn") String secretArn, @JsonProperty("SiteId") String siteId, @JsonProperty("SiteUrl") String siteUrl, @JsonProperty("SslCertificateS3Path") S3Path sslCertificateS3Path) {
+        this.secretArn = secretArn;
+        this.siteId = siteId;
+        this.siteUrl = siteUrl;
+        this.sslCertificateS3Path = sslCertificateS3Path;
+  }
 }

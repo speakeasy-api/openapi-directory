@@ -12,6 +12,7 @@ public class UpdateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectDescription")
     public String projectDescription;
+
     public UpdateProjectInput withProjectDescription(String projectDescription) {
         this.projectDescription = projectDescription;
         return this;
@@ -19,6 +20,7 @@ public class UpdateProjectInput {
     
     @JsonProperty("ProjectName")
     public String projectName;
+
     public UpdateProjectInput withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -27,6 +29,7 @@ public class UpdateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCatalogProvisioningUpdateDetails")
     public ServiceCatalogProvisioningUpdateDetails serviceCatalogProvisioningUpdateDetails;
+
     public UpdateProjectInput withServiceCatalogProvisioningUpdateDetails(ServiceCatalogProvisioningUpdateDetails serviceCatalogProvisioningUpdateDetails) {
         this.serviceCatalogProvisioningUpdateDetails = serviceCatalogProvisioningUpdateDetails;
         return this;
@@ -35,9 +38,13 @@ public class UpdateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public UpdateProjectInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public UpdateProjectInput(@JsonProperty("ProjectName") String projectName) {
+        this.projectName = projectName;
+  }
 }

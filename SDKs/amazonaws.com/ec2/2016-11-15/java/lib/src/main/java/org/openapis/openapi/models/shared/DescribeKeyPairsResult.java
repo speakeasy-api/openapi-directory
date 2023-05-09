@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeKeyPairsResult {
     
     public DescribeKeyPairsResultKeyPairs[] keyPairs;
+
     public DescribeKeyPairsResult withKeyPairs(DescribeKeyPairsResultKeyPairs[] keyPairs) {
         this.keyPairs = keyPairs;
         return this;
     }
     
+    public DescribeKeyPairsResult(){}
 }

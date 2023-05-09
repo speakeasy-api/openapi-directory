@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisableEnhancedMonitoringInput {
     @JsonProperty("ShardLevelMetrics")
     public MetricsNameEnum[] shardLevelMetrics;
+
     public DisableEnhancedMonitoringInput withShardLevelMetrics(MetricsNameEnum[] shardLevelMetrics) {
         this.shardLevelMetrics = shardLevelMetrics;
         return this;
@@ -22,6 +23,7 @@ public class DisableEnhancedMonitoringInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public DisableEnhancedMonitoringInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -30,9 +32,13 @@ public class DisableEnhancedMonitoringInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public DisableEnhancedMonitoringInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public DisableEnhancedMonitoringInput(@JsonProperty("ShardLevelMetrics") MetricsNameEnum[] shardLevelMetrics) {
+        this.shardLevelMetrics = shardLevelMetrics;
+  }
 }

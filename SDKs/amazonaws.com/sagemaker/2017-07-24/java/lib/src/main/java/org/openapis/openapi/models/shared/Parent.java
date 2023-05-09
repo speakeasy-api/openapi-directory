@@ -15,6 +15,7 @@ public class Parent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentName")
     public String experimentName;
+
     public Parent withExperimentName(String experimentName) {
         this.experimentName = experimentName;
         return this;
@@ -23,9 +24,11 @@ public class Parent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialName")
     public String trialName;
+
     public Parent withTrialName(String trialName) {
         this.trialName = trialName;
         return this;
     }
     
+    public Parent(){}
 }

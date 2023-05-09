@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeEventSubscriptionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeEventSubscriptionsActionEnum action;
+
     public GETDescribeEventSubscriptionsRequest withAction(GETDescribeEventSubscriptionsActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class GETDescribeEventSubscriptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeEventSubscriptionsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +26,7 @@ public class GETDescribeEventSubscriptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeEventSubscriptionsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -30,6 +34,7 @@ public class GETDescribeEventSubscriptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SubscriptionName")
     public String subscriptionName;
+
     public GETDescribeEventSubscriptionsRequest withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
@@ -37,6 +42,7 @@ public class GETDescribeEventSubscriptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeEventSubscriptionsVersionEnum version;
+
     public GETDescribeEventSubscriptionsRequest withVersion(GETDescribeEventSubscriptionsVersionEnum version) {
         this.version = version;
         return this;
@@ -44,6 +50,7 @@ public class GETDescribeEventSubscriptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeEventSubscriptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -51,6 +58,7 @@ public class GETDescribeEventSubscriptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeEventSubscriptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -58,6 +66,7 @@ public class GETDescribeEventSubscriptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeEventSubscriptionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -65,6 +74,7 @@ public class GETDescribeEventSubscriptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeEventSubscriptionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -72,6 +82,7 @@ public class GETDescribeEventSubscriptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeEventSubscriptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -79,6 +90,7 @@ public class GETDescribeEventSubscriptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeEventSubscriptionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -86,9 +98,14 @@ public class GETDescribeEventSubscriptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeEventSubscriptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeEventSubscriptionsRequest(@JsonProperty("Action") GETDescribeEventSubscriptionsActionEnum action, @JsonProperty("Version") GETDescribeEventSubscriptionsVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

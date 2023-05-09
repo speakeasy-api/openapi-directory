@@ -20,6 +20,7 @@ public class CreateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public CreateBotResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -28,6 +29,7 @@ public class CreateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botMembers")
     public BotMember[] botMembers;
+
     public CreateBotResponse withBotMembers(BotMember[] botMembers) {
         this.botMembers = botMembers;
         return this;
@@ -36,6 +38,7 @@ public class CreateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botName")
     public String botName;
+
     public CreateBotResponse withBotName(String botName) {
         this.botName = botName;
         return this;
@@ -44,6 +47,7 @@ public class CreateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botStatus")
     public BotStatusEnum botStatus;
+
     public CreateBotResponse withBotStatus(BotStatusEnum botStatus) {
         this.botStatus = botStatus;
         return this;
@@ -52,6 +56,7 @@ public class CreateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botTags")
     public java.util.Map<String, String> botTags;
+
     public CreateBotResponse withBotTags(java.util.Map<String, String> botTags) {
         this.botTags = botTags;
         return this;
@@ -60,6 +65,7 @@ public class CreateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botType")
     public BotTypeEnum botType;
+
     public CreateBotResponse withBotType(BotTypeEnum botType) {
         this.botType = botType;
         return this;
@@ -70,6 +76,7 @@ public class CreateBotResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public CreateBotResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -78,6 +85,7 @@ public class CreateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataPrivacy")
     public DataPrivacy dataPrivacy;
+
     public CreateBotResponse withDataPrivacy(DataPrivacy dataPrivacy) {
         this.dataPrivacy = dataPrivacy;
         return this;
@@ -86,6 +94,7 @@ public class CreateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateBotResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -94,6 +103,7 @@ public class CreateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idleSessionTTLInSeconds")
     public Long idleSessionTTLInSeconds;
+
     public CreateBotResponse withIdleSessionTTLInSeconds(Long idleSessionTTLInSeconds) {
         this.idleSessionTTLInSeconds = idleSessionTTLInSeconds;
         return this;
@@ -102,6 +112,7 @@ public class CreateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateBotResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -110,9 +121,11 @@ public class CreateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testBotAliasTags")
     public java.util.Map<String, String> testBotAliasTags;
+
     public CreateBotResponse withTestBotAliasTags(java.util.Map<String, String> testBotAliasTags) {
         this.testBotAliasTags = testBotAliasTags;
         return this;
     }
     
+    public CreateBotResponse(){}
 }

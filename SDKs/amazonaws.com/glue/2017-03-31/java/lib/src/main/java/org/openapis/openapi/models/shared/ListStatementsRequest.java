@@ -12,6 +12,7 @@ public class ListStatementsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListStatementsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -20,6 +21,7 @@ public class ListStatementsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestOrigin")
     public String requestOrigin;
+
     public ListStatementsRequest withRequestOrigin(String requestOrigin) {
         this.requestOrigin = requestOrigin;
         return this;
@@ -27,9 +29,13 @@ public class ListStatementsRequest {
     
     @JsonProperty("SessionId")
     public String sessionId;
+
     public ListStatementsRequest withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public ListStatementsRequest(@JsonProperty("SessionId") String sessionId) {
+        this.sessionId = sessionId;
+  }
 }

@@ -23,6 +23,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteCertificateError")
     public DeleteCertificateError deleteCertificateError;
+
     public Certificate withDeleteCertificateError(DeleteCertificateError deleteCertificateError) {
         this.deleteCertificateError = deleteCertificateError;
         return this;
@@ -34,6 +35,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousState")
     public CertificatePreviousStateEnum previousState;
+
     public Certificate withPreviousState(CertificatePreviousStateEnum previousState) {
         this.previousState = previousState;
         return this;
@@ -47,6 +49,7 @@ public class Certificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("previousStateTransitionTime")
     public OffsetDateTime previousStateTransitionTime;
+
     public Certificate withPreviousStateTransitionTime(OffsetDateTime previousStateTransitionTime) {
         this.previousStateTransitionTime = previousStateTransitionTime;
         return this;
@@ -58,6 +61,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicData")
     public String publicData;
+
     public Certificate withPublicData(String publicData) {
         this.publicData = publicData;
         return this;
@@ -69,6 +73,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CertificateStateEnum state;
+
     public Certificate withState(CertificateStateEnum state) {
         this.state = state;
         return this;
@@ -82,6 +87,7 @@ public class Certificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stateTransitionTime")
     public OffsetDateTime stateTransitionTime;
+
     public Certificate withStateTransitionTime(OffsetDateTime stateTransitionTime) {
         this.stateTransitionTime = stateTransitionTime;
         return this;
@@ -93,6 +99,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbprint")
     public String thumbprint;
+
     public Certificate withThumbprint(String thumbprint) {
         this.thumbprint = thumbprint;
         return this;
@@ -104,6 +111,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbprintAlgorithm")
     public String thumbprintAlgorithm;
+
     public Certificate withThumbprintAlgorithm(String thumbprintAlgorithm) {
         this.thumbprintAlgorithm = thumbprintAlgorithm;
         return this;
@@ -115,9 +123,11 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Certificate withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Certificate(){}
 }

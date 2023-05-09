@@ -15,6 +15,7 @@ public class Pipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public Long mode;
+
     public Pipe withMode(Long mode) {
         this.mode = mode;
         return this;
@@ -26,9 +27,11 @@ public class Pipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public Pipe withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public Pipe(){}
 }

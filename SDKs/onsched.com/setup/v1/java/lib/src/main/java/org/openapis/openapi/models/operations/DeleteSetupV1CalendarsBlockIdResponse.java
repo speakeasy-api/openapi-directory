@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSetupV1CalendarsBlockIdResponse {
@@ -12,6 +13,7 @@ public class DeleteSetupV1CalendarsBlockIdResponse {
      */
     
     public org.openapis.openapi.models.shared.CalendarBlockViewModel calendarBlockViewModel;
+
     public DeleteSetupV1CalendarsBlockIdResponse withCalendarBlockViewModel(org.openapis.openapi.models.shared.CalendarBlockViewModel calendarBlockViewModel) {
         this.calendarBlockViewModel = calendarBlockViewModel;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSetupV1CalendarsBlockIdResponse {
     
     
     public String contentType;
+
     public DeleteSetupV1CalendarsBlockIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DeleteSetupV1CalendarsBlockIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteSetupV1CalendarsBlockIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteSetupV1CalendarsBlockIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSetupV1CalendarsBlockIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteSetupV1CalendarsBlockIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

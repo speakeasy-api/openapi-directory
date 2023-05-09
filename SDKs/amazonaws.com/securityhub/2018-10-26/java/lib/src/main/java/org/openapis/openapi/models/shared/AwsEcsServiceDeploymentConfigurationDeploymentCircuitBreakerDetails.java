@@ -15,6 +15,7 @@ public class AwsEcsServiceDeploymentConfigurationDeploymentCircuitBreakerDetails
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enable")
     public Boolean enable;
+
     public AwsEcsServiceDeploymentConfigurationDeploymentCircuitBreakerDetails withEnable(Boolean enable) {
         this.enable = enable;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsServiceDeploymentConfigurationDeploymentCircuitBreakerDetails
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rollback")
     public Boolean rollback;
+
     public AwsEcsServiceDeploymentConfigurationDeploymentCircuitBreakerDetails withRollback(Boolean rollback) {
         this.rollback = rollback;
         return this;
     }
     
+    public AwsEcsServiceDeploymentConfigurationDeploymentCircuitBreakerDetails(){}
 }

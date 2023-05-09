@@ -20,6 +20,7 @@ public class VirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostName")
     public String hostName;
+
     public VirtualMachine withHostName(String hostName) {
         this.hostName = hostName;
         return this;
@@ -28,6 +29,7 @@ public class VirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HypervisorId")
     public String hypervisorId;
+
     public VirtualMachine withHypervisorId(String hypervisorId) {
         this.hypervisorId = hypervisorId;
         return this;
@@ -38,6 +40,7 @@ public class VirtualMachine {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastBackupDate")
     public OffsetDateTime lastBackupDate;
+
     public VirtualMachine withLastBackupDate(OffsetDateTime lastBackupDate) {
         this.lastBackupDate = lastBackupDate;
         return this;
@@ -46,6 +49,7 @@ public class VirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public VirtualMachine withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class VirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public VirtualMachine withPath(String path) {
         this.path = path;
         return this;
@@ -62,9 +67,11 @@ public class VirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public VirtualMachine withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public VirtualMachine(){}
 }

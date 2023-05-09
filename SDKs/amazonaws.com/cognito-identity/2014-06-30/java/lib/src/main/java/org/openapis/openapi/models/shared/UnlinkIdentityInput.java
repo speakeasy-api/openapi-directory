@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UnlinkIdentityInput {
     @JsonProperty("IdentityId")
     public String identityId;
+
     public UnlinkIdentityInput withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -19,6 +20,7 @@ public class UnlinkIdentityInput {
     
     @JsonProperty("Logins")
     public java.util.Map<String, String> logins;
+
     public UnlinkIdentityInput withLogins(java.util.Map<String, String> logins) {
         this.logins = logins;
         return this;
@@ -26,9 +28,15 @@ public class UnlinkIdentityInput {
     
     @JsonProperty("LoginsToRemove")
     public String[] loginsToRemove;
+
     public UnlinkIdentityInput withLoginsToRemove(String[] loginsToRemove) {
         this.loginsToRemove = loginsToRemove;
         return this;
     }
     
+    public UnlinkIdentityInput(@JsonProperty("IdentityId") String identityId, @JsonProperty("Logins") java.util.Map<String, String> logins, @JsonProperty("LoginsToRemove") String[] loginsToRemove) {
+        this.identityId = identityId;
+        this.logins = logins;
+        this.loginsToRemove = loginsToRemove;
+  }
 }

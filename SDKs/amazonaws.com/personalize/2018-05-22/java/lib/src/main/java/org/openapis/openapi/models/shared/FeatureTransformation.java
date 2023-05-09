@@ -22,6 +22,7 @@ public class FeatureTransformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public FeatureTransformation withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class FeatureTransformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultParameters")
     public java.util.Map<String, String> defaultParameters;
+
     public FeatureTransformation withDefaultParameters(java.util.Map<String, String> defaultParameters) {
         this.defaultParameters = defaultParameters;
         return this;
@@ -38,6 +40,7 @@ public class FeatureTransformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureTransformationArn")
     public String featureTransformationArn;
+
     public FeatureTransformation withFeatureTransformationArn(String featureTransformationArn) {
         this.featureTransformationArn = featureTransformationArn;
         return this;
@@ -48,6 +51,7 @@ public class FeatureTransformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public FeatureTransformation withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -56,6 +60,7 @@ public class FeatureTransformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FeatureTransformation withName(String name) {
         this.name = name;
         return this;
@@ -64,9 +69,11 @@ public class FeatureTransformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public FeatureTransformation withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public FeatureTransformation(){}
 }

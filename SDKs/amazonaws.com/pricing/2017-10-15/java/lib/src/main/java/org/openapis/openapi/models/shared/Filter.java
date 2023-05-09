@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Filter {
     @JsonProperty("Field")
     public String field;
+
     public Filter withField(String field) {
         this.field = field;
         return this;
@@ -19,6 +20,7 @@ public class Filter {
     
     @JsonProperty("Type")
     public FilterTypeEnum type;
+
     public Filter withType(FilterTypeEnum type) {
         this.type = type;
         return this;
@@ -26,9 +28,15 @@ public class Filter {
     
     @JsonProperty("Value")
     public String value;
+
     public Filter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Filter(@JsonProperty("Field") String field, @JsonProperty("Type") FilterTypeEnum type, @JsonProperty("Value") String value) {
+        this.field = field;
+        this.type = type;
+        this.value = value;
+  }
 }

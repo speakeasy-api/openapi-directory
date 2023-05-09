@@ -26,6 +26,7 @@ public class SingleSignOnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookieType")
     public SingleSignOnRequestCookieTypeEnum cookieType;
+
     public SingleSignOnRequest withCookieType(SingleSignOnRequestCookieTypeEnum cookieType) {
         this.cookieType = cookieType;
         return this;
@@ -47,6 +48,7 @@ public class SingleSignOnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkAccounts")
     public Boolean linkAccounts;
+
     public SingleSignOnRequest withLinkAccounts(Boolean linkAccounts) {
         this.linkAccounts = linkAccounts;
         return this;
@@ -57,6 +59,7 @@ public class SingleSignOnRequest {
      */
     @JsonProperty("provider")
     public SingleSignOnRequestProviderEnum provider;
+
     public SingleSignOnRequest withProvider(SingleSignOnRequestProviderEnum provider) {
         this.provider = provider;
         return this;
@@ -70,6 +73,7 @@ public class SingleSignOnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public SingleSignOnRequestScopesEnum[] scopes;
+
     public SingleSignOnRequest withScopes(SingleSignOnRequestScopesEnum[] scopes) {
         this.scopes = scopes;
         return this;
@@ -80,9 +84,14 @@ public class SingleSignOnRequest {
      */
     @JsonProperty("token")
     public String token;
+
     public SingleSignOnRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public SingleSignOnRequest(@JsonProperty("provider") SingleSignOnRequestProviderEnum provider, @JsonProperty("token") String token) {
+        this.provider = provider;
+        this.token = token;
+  }
 }

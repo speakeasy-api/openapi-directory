@@ -18,6 +18,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public Volume withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -29,6 +30,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcs")
     public Gcs gcs;
+
     public Volume withGcs(Gcs gcs) {
         this.gcs = gcs;
         return this;
@@ -40,6 +42,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountOptions")
     public String[] mountOptions;
+
     public Volume withMountOptions(String[] mountOptions) {
         this.mountOptions = mountOptions;
         return this;
@@ -51,6 +54,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountPath")
     public String mountPath;
+
     public Volume withMountPath(String mountPath) {
         this.mountPath = mountPath;
         return this;
@@ -62,9 +66,11 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nfs")
     public Nfs nfs;
+
     public Volume withNfs(Nfs nfs) {
         this.nfs = nfs;
         return this;
     }
     
+    public Volume(){}
 }

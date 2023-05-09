@@ -15,9 +15,13 @@ public class UpgradeOfferRequired {
      */
     @JsonProperty("offerId")
     public Integer offerId;
+
     public UpgradeOfferRequired withOfferId(Integer offerId) {
         this.offerId = offerId;
         return this;
     }
     
+    public UpgradeOfferRequired(@JsonProperty("offerId") Integer offerId) {
+        this.offerId = offerId;
+  }
 }

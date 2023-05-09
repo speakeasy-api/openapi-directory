@@ -15,6 +15,7 @@ public class S3DataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public S3DataConfig withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -22,9 +23,13 @@ public class S3DataConfig {
     
     @JsonProperty("path")
     public String path;
+
     public S3DataConfig withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public S3DataConfig(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class HttpRequestMethodConditionConfig {
     
     public String[] values;
+
     public HttpRequestMethodConditionConfig withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public HttpRequestMethodConditionConfig(){}
 }

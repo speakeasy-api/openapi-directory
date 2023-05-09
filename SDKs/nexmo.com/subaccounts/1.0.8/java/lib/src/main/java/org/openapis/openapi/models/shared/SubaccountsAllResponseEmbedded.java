@@ -12,6 +12,7 @@ public class SubaccountsAllResponseEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_account")
     public SubaccountResponse primaryAccount;
+
     public SubaccountsAllResponseEmbedded withPrimaryAccount(SubaccountResponse primaryAccount) {
         this.primaryAccount = primaryAccount;
         return this;
@@ -20,9 +21,11 @@ public class SubaccountsAllResponseEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subaccounts")
     public SubaccountResponse[] subaccounts;
+
     public SubaccountsAllResponseEmbedded withSubaccounts(SubaccountResponse[] subaccounts) {
         this.subaccounts = subaccounts;
         return this;
     }
     
+    public SubaccountsAllResponseEmbedded(){}
 }

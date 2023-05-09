@@ -12,6 +12,7 @@ public class GetPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("assignee_id")
     public Long assigneeId;
+
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIP withAssigneeId(Long assigneeId) {
         this.assigneeId = assigneeId;
         return this;
@@ -22,6 +23,7 @@ public class GetPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("assignee_type")
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIPAssigneeTypeEnum assigneeType;
+
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIP withAssigneeType(GetPrimaryIpsIdPrimaryIPResponsePrimaryIPAssigneeTypeEnum assigneeType) {
         this.assigneeType = assigneeType;
         return this;
@@ -32,6 +34,7 @@ public class GetPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("auto_delete")
     public Boolean autoDelete;
+
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIP withAutoDelete(Boolean autoDelete) {
         this.autoDelete = autoDelete;
         return this;
@@ -42,6 +45,7 @@ public class GetPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("blocked")
     public Boolean blocked;
+
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIP withBlocked(Boolean blocked) {
         this.blocked = blocked;
         return this;
@@ -52,6 +56,7 @@ public class GetPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("created")
     public String created;
+
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIP withCreated(String created) {
         this.created = created;
         return this;
@@ -62,6 +67,7 @@ public class GetPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("datacenter")
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter datacenter;
+
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIP withDatacenter(GetPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter datacenter) {
         this.datacenter = datacenter;
         return this;
@@ -72,6 +78,7 @@ public class GetPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("dns_ptr")
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIPDnsPtr[] dnsPtr;
+
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIP withDnsPtr(GetPrimaryIpsIdPrimaryIPResponsePrimaryIPDnsPtr[] dnsPtr) {
         this.dnsPtr = dnsPtr;
         return this;
@@ -82,6 +89,7 @@ public class GetPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIP withId(Long id) {
         this.id = id;
         return this;
@@ -92,6 +100,7 @@ public class GetPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("ip")
     public String ip;
+
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIP withIp(String ip) {
         this.ip = ip;
         return this;
@@ -102,6 +111,7 @@ public class GetPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIP withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -112,6 +122,7 @@ public class GetPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("name")
     public String name;
+
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIP withName(String name) {
         this.name = name;
         return this;
@@ -122,6 +133,7 @@ public class GetPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("protection")
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIPProtection protection;
+
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIP withProtection(GetPrimaryIpsIdPrimaryIPResponsePrimaryIPProtection protection) {
         this.protection = protection;
         return this;
@@ -132,9 +144,25 @@ public class GetPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("type")
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIPTypeEnum type;
+
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIP withType(GetPrimaryIpsIdPrimaryIPResponsePrimaryIPTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetPrimaryIpsIdPrimaryIPResponsePrimaryIP(@JsonProperty("assignee_id") Long assigneeId, @JsonProperty("assignee_type") GetPrimaryIpsIdPrimaryIPResponsePrimaryIPAssigneeTypeEnum assigneeType, @JsonProperty("auto_delete") Boolean autoDelete, @JsonProperty("blocked") Boolean blocked, @JsonProperty("created") String created, @JsonProperty("datacenter") GetPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter datacenter, @JsonProperty("dns_ptr") GetPrimaryIpsIdPrimaryIPResponsePrimaryIPDnsPtr[] dnsPtr, @JsonProperty("id") Long id, @JsonProperty("ip") String ip, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("name") String name, @JsonProperty("protection") GetPrimaryIpsIdPrimaryIPResponsePrimaryIPProtection protection, @JsonProperty("type") GetPrimaryIpsIdPrimaryIPResponsePrimaryIPTypeEnum type) {
+        this.assigneeId = assigneeId;
+        this.assigneeType = assigneeType;
+        this.autoDelete = autoDelete;
+        this.blocked = blocked;
+        this.created = created;
+        this.datacenter = datacenter;
+        this.dnsPtr = dnsPtr;
+        this.id = id;
+        this.ip = ip;
+        this.labels = labels;
+        this.name = name;
+        this.protection = protection;
+        this.type = type;
+  }
 }

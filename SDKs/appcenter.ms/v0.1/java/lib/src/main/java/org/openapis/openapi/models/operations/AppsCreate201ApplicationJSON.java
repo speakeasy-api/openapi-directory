@@ -17,6 +17,7 @@ public class AppsCreate201ApplicationJSON {
      */
     @JsonProperty("app_secret")
     public String appSecret;
+
     public AppsCreate201ApplicationJSON withAppSecret(String appSecret) {
         this.appSecret = appSecret;
         return this;
@@ -25,6 +26,7 @@ public class AppsCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azure_subscription")
     public AppsCreate201ApplicationJSONAzureSubscription azureSubscription;
+
     public AppsCreate201ApplicationJSON withAzureSubscription(AppsCreate201ApplicationJSONAzureSubscription azureSubscription) {
         this.azureSubscription = azureSubscription;
         return this;
@@ -36,6 +38,7 @@ public class AppsCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public AppsCreate201ApplicationJSON withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -47,6 +50,7 @@ public class AppsCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AppsCreate201ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -57,6 +61,7 @@ public class AppsCreate201ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public AppsCreate201ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -68,6 +73,7 @@ public class AppsCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_source")
     public String iconSource;
+
     public AppsCreate201ApplicationJSON withIconSource(String iconSource) {
         this.iconSource = iconSource;
         return this;
@@ -79,6 +85,7 @@ public class AppsCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_url")
     public String iconUrl;
+
     public AppsCreate201ApplicationJSON withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -89,6 +96,7 @@ public class AppsCreate201ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public AppsCreate201ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -100,6 +108,7 @@ public class AppsCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_permissions")
     public AppsCreate201ApplicationJSONMemberPermissionsEnum[] memberPermissions;
+
     public AppsCreate201ApplicationJSON withMemberPermissions(AppsCreate201ApplicationJSONMemberPermissionsEnum[] memberPermissions) {
         this.memberPermissions = memberPermissions;
         return this;
@@ -110,6 +119,7 @@ public class AppsCreate201ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public AppsCreate201ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -120,6 +130,7 @@ public class AppsCreate201ApplicationJSON {
      */
     @JsonProperty("origin")
     public AppsCreate201ApplicationJSONOriginEnum origin;
+
     public AppsCreate201ApplicationJSON withOrigin(AppsCreate201ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -130,6 +141,7 @@ public class AppsCreate201ApplicationJSON {
      */
     @JsonProperty("os")
     public AppsCreate201ApplicationJSONOsEnum os;
+
     public AppsCreate201ApplicationJSON withOs(AppsCreate201ApplicationJSONOsEnum os) {
         this.os = os;
         return this;
@@ -140,6 +152,7 @@ public class AppsCreate201ApplicationJSON {
      */
     @JsonProperty("owner")
     public AppsCreate201ApplicationJSONOwner owner;
+
     public AppsCreate201ApplicationJSON withOwner(AppsCreate201ApplicationJSONOwner owner) {
         this.owner = owner;
         return this;
@@ -150,6 +163,7 @@ public class AppsCreate201ApplicationJSON {
      */
     @JsonProperty("platform")
     public AppsCreate201ApplicationJSONPlatformEnum platform;
+
     public AppsCreate201ApplicationJSON withPlatform(AppsCreate201ApplicationJSONPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -161,6 +175,7 @@ public class AppsCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_type")
     public String releaseType;
+
     public AppsCreate201ApplicationJSON withReleaseType(String releaseType) {
         this.releaseType = releaseType;
         return this;
@@ -172,9 +187,20 @@ public class AppsCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public AppsCreate201ApplicationJSON withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public AppsCreate201ApplicationJSON(@JsonProperty("app_secret") String appSecret, @JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("origin") AppsCreate201ApplicationJSONOriginEnum origin, @JsonProperty("os") AppsCreate201ApplicationJSONOsEnum os, @JsonProperty("owner") AppsCreate201ApplicationJSONOwner owner, @JsonProperty("platform") AppsCreate201ApplicationJSONPlatformEnum platform) {
+        this.appSecret = appSecret;
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.origin = origin;
+        this.os = os;
+        this.owner = owner;
+        this.platform = platform;
+  }
 }

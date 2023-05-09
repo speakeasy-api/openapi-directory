@@ -15,6 +15,7 @@ public class RouteHasOutOfScopeEndpointViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentFirewallSubnetRouteTable")
     public String currentFirewallSubnetRouteTable;
+
     public RouteHasOutOfScopeEndpointViolation withCurrentFirewallSubnetRouteTable(String currentFirewallSubnetRouteTable) {
         this.currentFirewallSubnetRouteTable = currentFirewallSubnetRouteTable;
         return this;
@@ -23,6 +24,7 @@ public class RouteHasOutOfScopeEndpointViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentInternetGatewayRouteTable")
     public String currentInternetGatewayRouteTable;
+
     public RouteHasOutOfScopeEndpointViolation withCurrentInternetGatewayRouteTable(String currentInternetGatewayRouteTable) {
         this.currentInternetGatewayRouteTable = currentInternetGatewayRouteTable;
         return this;
@@ -31,6 +33,7 @@ public class RouteHasOutOfScopeEndpointViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallSubnetId")
     public String firewallSubnetId;
+
     public RouteHasOutOfScopeEndpointViolation withFirewallSubnetId(String firewallSubnetId) {
         this.firewallSubnetId = firewallSubnetId;
         return this;
@@ -39,6 +42,7 @@ public class RouteHasOutOfScopeEndpointViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallSubnetRoutes")
     public Route[] firewallSubnetRoutes;
+
     public RouteHasOutOfScopeEndpointViolation withFirewallSubnetRoutes(Route[] firewallSubnetRoutes) {
         this.firewallSubnetRoutes = firewallSubnetRoutes;
         return this;
@@ -47,6 +51,7 @@ public class RouteHasOutOfScopeEndpointViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InternetGatewayId")
     public String internetGatewayId;
+
     public RouteHasOutOfScopeEndpointViolation withInternetGatewayId(String internetGatewayId) {
         this.internetGatewayId = internetGatewayId;
         return this;
@@ -55,6 +60,7 @@ public class RouteHasOutOfScopeEndpointViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InternetGatewayRoutes")
     public Route[] internetGatewayRoutes;
+
     public RouteHasOutOfScopeEndpointViolation withInternetGatewayRoutes(Route[] internetGatewayRoutes) {
         this.internetGatewayRoutes = internetGatewayRoutes;
         return this;
@@ -63,6 +69,7 @@ public class RouteHasOutOfScopeEndpointViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteTableId")
     public String routeTableId;
+
     public RouteHasOutOfScopeEndpointViolation withRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -71,6 +78,7 @@ public class RouteHasOutOfScopeEndpointViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetAvailabilityZone")
     public String subnetAvailabilityZone;
+
     public RouteHasOutOfScopeEndpointViolation withSubnetAvailabilityZone(String subnetAvailabilityZone) {
         this.subnetAvailabilityZone = subnetAvailabilityZone;
         return this;
@@ -79,6 +87,7 @@ public class RouteHasOutOfScopeEndpointViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetAvailabilityZoneId")
     public String subnetAvailabilityZoneId;
+
     public RouteHasOutOfScopeEndpointViolation withSubnetAvailabilityZoneId(String subnetAvailabilityZoneId) {
         this.subnetAvailabilityZoneId = subnetAvailabilityZoneId;
         return this;
@@ -87,6 +96,7 @@ public class RouteHasOutOfScopeEndpointViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public RouteHasOutOfScopeEndpointViolation withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -95,6 +105,7 @@ public class RouteHasOutOfScopeEndpointViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolatingRoutes")
     public Route[] violatingRoutes;
+
     public RouteHasOutOfScopeEndpointViolation withViolatingRoutes(Route[] violatingRoutes) {
         this.violatingRoutes = violatingRoutes;
         return this;
@@ -103,9 +114,11 @@ public class RouteHasOutOfScopeEndpointViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public RouteHasOutOfScopeEndpointViolation withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public RouteHasOutOfScopeEndpointViolation(){}
 }

@@ -22,6 +22,7 @@ public class SharedDirectory {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDateTime")
     public OffsetDateTime createdDateTime;
+
     public SharedDirectory withCreatedDateTime(OffsetDateTime createdDateTime) {
         this.createdDateTime = createdDateTime;
         return this;
@@ -32,6 +33,7 @@ public class SharedDirectory {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public SharedDirectory withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -40,6 +42,7 @@ public class SharedDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerAccountId")
     public String ownerAccountId;
+
     public SharedDirectory withOwnerAccountId(String ownerAccountId) {
         this.ownerAccountId = ownerAccountId;
         return this;
@@ -48,6 +51,7 @@ public class SharedDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerDirectoryId")
     public String ownerDirectoryId;
+
     public SharedDirectory withOwnerDirectoryId(String ownerDirectoryId) {
         this.ownerDirectoryId = ownerDirectoryId;
         return this;
@@ -56,6 +60,7 @@ public class SharedDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareMethod")
     public ShareMethodEnum shareMethod;
+
     public SharedDirectory withShareMethod(ShareMethodEnum shareMethod) {
         this.shareMethod = shareMethod;
         return this;
@@ -64,6 +69,7 @@ public class SharedDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareNotes")
     public String shareNotes;
+
     public SharedDirectory withShareNotes(String shareNotes) {
         this.shareNotes = shareNotes;
         return this;
@@ -72,6 +78,7 @@ public class SharedDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareStatus")
     public ShareStatusEnum shareStatus;
+
     public SharedDirectory withShareStatus(ShareStatusEnum shareStatus) {
         this.shareStatus = shareStatus;
         return this;
@@ -80,6 +87,7 @@ public class SharedDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedAccountId")
     public String sharedAccountId;
+
     public SharedDirectory withSharedAccountId(String sharedAccountId) {
         this.sharedAccountId = sharedAccountId;
         return this;
@@ -88,9 +96,11 @@ public class SharedDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedDirectoryId")
     public String sharedDirectoryId;
+
     public SharedDirectory withSharedDirectoryId(String sharedDirectoryId) {
         this.sharedDirectoryId = sharedDirectoryId;
         return this;
     }
     
+    public SharedDirectory(){}
 }

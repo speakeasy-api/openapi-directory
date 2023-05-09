@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportDataSource {
     @JsonProperty("dataSourceConfig")
     public ImportDataSourceConfig dataSourceConfig;
+
     public ImportDataSource withDataSourceConfig(ImportDataSourceConfig dataSourceConfig) {
         this.dataSourceConfig = dataSourceConfig;
         return this;
     }
     
+    public ImportDataSource(@JsonProperty("dataSourceConfig") ImportDataSourceConfig dataSourceConfig) {
+        this.dataSourceConfig = dataSourceConfig;
+  }
 }

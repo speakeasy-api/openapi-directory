@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissions {
     
     public String awsAccountId;
+
     public DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissions withAwsAccountId(String awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInterfacePermissionsResultNetworkInterfacePermission
     
     
     public String awsService;
+
     public DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissions withAwsService(String awsService) {
         this.awsService = awsService;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInterfacePermissionsResultNetworkInterfacePermission
     
     
     public String networkInterfaceId;
+
     public DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissions withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkInterfacePermissionsResultNetworkInterfacePermission
     
     
     public String networkInterfacePermissionId;
+
     public DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissions withNetworkInterfacePermissionId(String networkInterfacePermissionId) {
         this.networkInterfacePermissionId = networkInterfacePermissionId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeNetworkInterfacePermissionsResultNetworkInterfacePermission
     
     
     public DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionEnum permission;
+
     public DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissions withPermission(DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionEnum permission) {
         this.permission = permission;
         return this;
@@ -47,9 +52,11 @@ public class DescribeNetworkInterfacePermissionsResultNetworkInterfacePermission
     
     
     public DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionState permissionState;
+
     public DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissions withPermissionState(DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionState permissionState) {
         this.permissionState = permissionState;
         return this;
     }
     
+    public DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissions(){}
 }

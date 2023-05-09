@@ -51,12 +51,10 @@ public class SavedSearches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdSavedSearchesResponse res = new org.openapis.openapi.models.operations.GetUsersIdSavedSearchesResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdSavedSearchesResponse res = new org.openapis.openapi.models.operations.GetUsersIdSavedSearchesResponse(contentType, httpRes.statusCode()) {{
             savedSearches = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

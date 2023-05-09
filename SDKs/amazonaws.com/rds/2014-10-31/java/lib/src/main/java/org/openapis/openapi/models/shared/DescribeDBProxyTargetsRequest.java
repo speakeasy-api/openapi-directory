@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeDBProxyTargetsRequest {
     
     public String dbProxyName;
+
     public DescribeDBProxyTargetsRequest withDBProxyName(String dbProxyName) {
         this.dbProxyName = dbProxyName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeDBProxyTargetsRequest {
     
     
     public FilterList[] filters;
+
     public DescribeDBProxyTargetsRequest withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeDBProxyTargetsRequest {
     
     
     public String marker;
+
     public DescribeDBProxyTargetsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,6 +33,7 @@ public class DescribeDBProxyTargetsRequest {
     
     
     public Long maxRecords;
+
     public DescribeDBProxyTargetsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -37,9 +41,13 @@ public class DescribeDBProxyTargetsRequest {
     
     
     public String targetGroupName;
+
     public DescribeDBProxyTargetsRequest withTargetGroupName(String targetGroupName) {
         this.targetGroupName = targetGroupName;
         return this;
     }
     
+    public DescribeDBProxyTargetsRequest(@JsonProperty("DBProxyName") String dbProxyName) {
+        this.dbProxyName = dbProxyName;
+  }
 }

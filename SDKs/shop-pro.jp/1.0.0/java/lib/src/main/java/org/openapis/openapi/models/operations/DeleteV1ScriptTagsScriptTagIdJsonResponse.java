@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteV1ScriptTagsScriptTagIdJsonResponse {
     
     public String contentType;
+
     public DeleteV1ScriptTagsScriptTagIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteV1ScriptTagsScriptTagIdJsonResponse {
     
     
     public Integer statusCode;
+
     public DeleteV1ScriptTagsScriptTagIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class DeleteV1ScriptTagsScriptTagIdJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteV1ScriptTagsScriptTagIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteV1ScriptTagsScriptTagIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

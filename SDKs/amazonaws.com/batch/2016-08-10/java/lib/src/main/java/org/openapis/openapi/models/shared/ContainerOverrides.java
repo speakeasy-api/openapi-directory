@@ -15,6 +15,7 @@ public class ContainerOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public String[] command;
+
     public ContainerOverrides withCommand(String[] command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class ContainerOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public KeyValuePair[] environment;
+
     public ContainerOverrides withEnvironment(KeyValuePair[] environment) {
         this.environment = environment;
         return this;
@@ -31,6 +33,7 @@ public class ContainerOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceType")
     public String instanceType;
+
     public ContainerOverrides withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -39,6 +42,7 @@ public class ContainerOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public Long memory;
+
     public ContainerOverrides withMemory(Long memory) {
         this.memory = memory;
         return this;
@@ -47,6 +51,7 @@ public class ContainerOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRequirements")
     public ResourceRequirement[] resourceRequirements;
+
     public ContainerOverrides withResourceRequirements(ResourceRequirement[] resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
@@ -55,9 +60,11 @@ public class ContainerOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcpus")
     public Long vcpus;
+
     public ContainerOverrides withVcpus(Long vcpus) {
         this.vcpus = vcpus;
         return this;
     }
     
+    public ContainerOverrides(){}
 }

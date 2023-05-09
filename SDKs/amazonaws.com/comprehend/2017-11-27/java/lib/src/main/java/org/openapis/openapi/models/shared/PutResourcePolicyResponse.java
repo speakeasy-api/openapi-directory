@@ -15,9 +15,11 @@ public class PutResourcePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyRevisionId")
     public String policyRevisionId;
+
     public PutResourcePolicyResponse withPolicyRevisionId(String policyRevisionId) {
         this.policyRevisionId = policyRevisionId;
         return this;
     }
     
+    public PutResourcePolicyResponse(){}
 }

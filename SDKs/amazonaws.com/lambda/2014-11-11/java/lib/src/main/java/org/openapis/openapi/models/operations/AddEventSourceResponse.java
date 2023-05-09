@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddEventSourceResponse {
     
     public String contentType;
+
     public AddEventSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AddEventSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.EventSourceConfiguration eventSourceConfiguration;
+
     public AddEventSourceResponse withEventSourceConfiguration(org.openapis.openapi.models.shared.EventSourceConfiguration eventSourceConfiguration) {
         this.eventSourceConfiguration = eventSourceConfiguration;
         return this;
@@ -29,6 +32,7 @@ public class AddEventSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidParameterValueException invalidParameterValueException;
+
     public AddEventSourceResponse withInvalidParameterValueException(org.openapis.openapi.models.shared.InvalidParameterValueException invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -36,6 +40,7 @@ public class AddEventSourceResponse {
     
     
     public Integer statusCode;
+
     public AddEventSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class AddEventSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddEventSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class AddEventSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceException serviceException;
+
     public AddEventSourceResponse withServiceException(org.openapis.openapi.models.shared.ServiceException serviceException) {
         this.serviceException = serviceException;
         return this;
     }
     
+    public AddEventSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnableMFADeviceRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETEnableMFADeviceActionEnum action;
+
     public GETEnableMFADeviceRequest withAction(GETEnableMFADeviceActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETEnableMFADeviceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AuthenticationCode1")
     public String authenticationCode1;
+
     public GETEnableMFADeviceRequest withAuthenticationCode1(String authenticationCode1) {
         this.authenticationCode1 = authenticationCode1;
         return this;
@@ -29,6 +32,7 @@ public class GETEnableMFADeviceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AuthenticationCode2")
     public String authenticationCode2;
+
     public GETEnableMFADeviceRequest withAuthenticationCode2(String authenticationCode2) {
         this.authenticationCode2 = authenticationCode2;
         return this;
@@ -39,6 +43,7 @@ public class GETEnableMFADeviceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SerialNumber")
     public String serialNumber;
+
     public GETEnableMFADeviceRequest withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -49,6 +54,7 @@ public class GETEnableMFADeviceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
     public String userName;
+
     public GETEnableMFADeviceRequest withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -56,6 +62,7 @@ public class GETEnableMFADeviceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETEnableMFADeviceVersionEnum version;
+
     public GETEnableMFADeviceRequest withVersion(GETEnableMFADeviceVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETEnableMFADeviceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETEnableMFADeviceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETEnableMFADeviceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETEnableMFADeviceRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETEnableMFADeviceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETEnableMFADeviceRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETEnableMFADeviceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETEnableMFADeviceRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETEnableMFADeviceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETEnableMFADeviceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETEnableMFADeviceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETEnableMFADeviceRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,18 @@ public class GETEnableMFADeviceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETEnableMFADeviceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETEnableMFADeviceRequest(@JsonProperty("Action") GETEnableMFADeviceActionEnum action, @JsonProperty("AuthenticationCode1") String authenticationCode1, @JsonProperty("AuthenticationCode2") String authenticationCode2, @JsonProperty("SerialNumber") String serialNumber, @JsonProperty("UserName") String userName, @JsonProperty("Version") GETEnableMFADeviceVersionEnum version) {
+        this.action = action;
+        this.authenticationCode1 = authenticationCode1;
+        this.authenticationCode2 = authenticationCode2;
+        this.serialNumber = serialNumber;
+        this.userName = userName;
+        this.version = version;
+  }
 }

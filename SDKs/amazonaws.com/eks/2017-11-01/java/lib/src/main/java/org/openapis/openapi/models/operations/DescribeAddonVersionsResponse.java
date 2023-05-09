@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAddonVersionsResponse {
     
     public String contentType;
+
     public DescribeAddonVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAddonVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAddonVersionsResponse describeAddonVersionsResponse;
+
     public DescribeAddonVersionsResponse withDescribeAddonVersionsResponse(org.openapis.openapi.models.shared.DescribeAddonVersionsResponse describeAddonVersionsResponse) {
         this.describeAddonVersionsResponse = describeAddonVersionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAddonVersionsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeAddonVersionsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAddonVersionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAddonVersionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAddonVersionsResponse {
      */
     
     public Object serverException;
+
     public DescribeAddonVersionsResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeAddonVersionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeAddonVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeAddonVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAddonVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAddonVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class AddMatterPermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ccMe")
     public Boolean ccMe;
+
     public AddMatterPermissionsRequest withCcMe(Boolean ccMe) {
         this.ccMe = ccMe;
         return this;
@@ -29,6 +30,7 @@ public class AddMatterPermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matterPermission")
     public MatterPermission matterPermission;
+
     public AddMatterPermissionsRequest withMatterPermission(MatterPermission matterPermission) {
         this.matterPermission = matterPermission;
         return this;
@@ -40,9 +42,11 @@ public class AddMatterPermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sendEmails")
     public Boolean sendEmails;
+
     public AddMatterPermissionsRequest withSendEmails(Boolean sendEmails) {
         this.sendEmails = sendEmails;
         return this;
     }
     
+    public AddMatterPermissionsRequest(){}
 }

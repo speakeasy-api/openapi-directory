@@ -15,6 +15,7 @@ public class ListCheckDetailsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CheckDetails")
     public CheckDetail[] checkDetails;
+
     public ListCheckDetailsOutput withCheckDetails(CheckDetail[] checkDetails) {
         this.checkDetails = checkDetails;
         return this;
@@ -26,9 +27,11 @@ public class ListCheckDetailsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCheckDetailsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCheckDetailsOutput(){}
 }

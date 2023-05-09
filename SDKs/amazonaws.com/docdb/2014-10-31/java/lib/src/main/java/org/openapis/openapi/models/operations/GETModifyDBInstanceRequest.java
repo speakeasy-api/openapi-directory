@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBInstanceRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyDBInstanceActionEnum action;
+
     public GETModifyDBInstanceRequest withAction(GETModifyDBInstanceActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplyImmediately")
     public Boolean applyImmediately;
+
     public GETModifyDBInstanceRequest withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoMinorVersionUpgrade")
     public Boolean autoMinorVersionUpgrade;
+
     public GETModifyDBInstanceRequest withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CACertificateIdentifier")
     public String caCertificateIdentifier;
+
     public GETModifyDBInstanceRequest withCACertificateIdentifier(String caCertificateIdentifier) {
         this.caCertificateIdentifier = caCertificateIdentifier;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CopyTagsToSnapshot")
     public Boolean copyTagsToSnapshot;
+
     public GETModifyDBInstanceRequest withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceClass")
     public String dbInstanceClass;
+
     public GETModifyDBInstanceRequest withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -69,6 +76,7 @@ public class GETModifyDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceIdentifier")
     public String dbInstanceIdentifier;
+
     public GETModifyDBInstanceRequest withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -79,6 +87,7 @@ public class GETModifyDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnablePerformanceInsights")
     public Boolean enablePerformanceInsights;
+
     public GETModifyDBInstanceRequest withEnablePerformanceInsights(Boolean enablePerformanceInsights) {
         this.enablePerformanceInsights = enablePerformanceInsights;
         return this;
@@ -89,6 +98,7 @@ public class GETModifyDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewDBInstanceIdentifier")
     public String newDBInstanceIdentifier;
+
     public GETModifyDBInstanceRequest withNewDBInstanceIdentifier(String newDBInstanceIdentifier) {
         this.newDBInstanceIdentifier = newDBInstanceIdentifier;
         return this;
@@ -99,6 +109,7 @@ public class GETModifyDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PerformanceInsightsKMSKeyId")
     public String performanceInsightsKMSKeyId;
+
     public GETModifyDBInstanceRequest withPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
         this.performanceInsightsKMSKeyId = performanceInsightsKMSKeyId;
         return this;
@@ -109,6 +120,7 @@ public class GETModifyDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public GETModifyDBInstanceRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -119,6 +131,7 @@ public class GETModifyDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PromotionTier")
     public Long promotionTier;
+
     public GETModifyDBInstanceRequest withPromotionTier(Long promotionTier) {
         this.promotionTier = promotionTier;
         return this;
@@ -126,6 +139,7 @@ public class GETModifyDBInstanceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyDBInstanceVersionEnum version;
+
     public GETModifyDBInstanceRequest withVersion(GETModifyDBInstanceVersionEnum version) {
         this.version = version;
         return this;
@@ -133,6 +147,7 @@ public class GETModifyDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyDBInstanceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -140,6 +155,7 @@ public class GETModifyDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyDBInstanceRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -147,6 +163,7 @@ public class GETModifyDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyDBInstanceRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -154,6 +171,7 @@ public class GETModifyDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyDBInstanceRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -161,6 +179,7 @@ public class GETModifyDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyDBInstanceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -168,6 +187,7 @@ public class GETModifyDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyDBInstanceRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -175,9 +195,15 @@ public class GETModifyDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyDBInstanceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyDBInstanceRequest(@JsonProperty("Action") GETModifyDBInstanceActionEnum action, @JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier, @JsonProperty("Version") GETModifyDBInstanceVersionEnum version) {
+        this.action = action;
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        this.version = version;
+  }
 }

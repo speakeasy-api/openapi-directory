@@ -20,6 +20,7 @@ public class DescribeApplicationStateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationStatus")
     public ApplicationStatusEnum applicationStatus;
+
     public DescribeApplicationStateResult withApplicationStatus(ApplicationStatusEnum applicationStatus) {
         this.applicationStatus = applicationStatus;
         return this;
@@ -30,9 +31,11 @@ public class DescribeApplicationStateResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public DescribeApplicationStateResult withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
     }
     
+    public DescribeApplicationStateResult(){}
 }

@@ -15,6 +15,7 @@ public class InstanceFleetProvisioningSpecifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDemandSpecification")
     public OnDemandProvisioningSpecification onDemandSpecification;
+
     public InstanceFleetProvisioningSpecifications withOnDemandSpecification(OnDemandProvisioningSpecification onDemandSpecification) {
         this.onDemandSpecification = onDemandSpecification;
         return this;
@@ -23,9 +24,11 @@ public class InstanceFleetProvisioningSpecifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpotSpecification")
     public SpotProvisioningSpecification spotSpecification;
+
     public InstanceFleetProvisioningSpecifications withSpotSpecification(SpotProvisioningSpecification spotSpecification) {
         this.spotSpecification = spotSpecification;
         return this;
     }
     
+    public InstanceFleetProvisioningSpecifications(){}
 }

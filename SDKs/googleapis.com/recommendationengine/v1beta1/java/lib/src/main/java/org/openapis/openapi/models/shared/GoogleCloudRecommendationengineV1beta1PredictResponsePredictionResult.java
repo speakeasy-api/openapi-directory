@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1PredictResponsePredictionResu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudRecommendationengineV1beta1PredictResponsePredictionResult withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecommendationengineV1beta1PredictResponsePredictionResu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemMetadata")
     public java.util.Map<String, Object> itemMetadata;
+
     public GoogleCloudRecommendationengineV1beta1PredictResponsePredictionResult withItemMetadata(java.util.Map<String, Object> itemMetadata) {
         this.itemMetadata = itemMetadata;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1PredictResponsePredictionResult(){}
 }

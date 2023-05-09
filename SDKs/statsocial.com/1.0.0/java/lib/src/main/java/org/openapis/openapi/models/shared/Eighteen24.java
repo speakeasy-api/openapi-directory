@@ -12,6 +12,7 @@ public class Eighteen24 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average")
     public Long average;
+
     public Eighteen24 withAverage(Long average) {
         this.average = average;
         return this;
@@ -20,6 +21,7 @@ public class Eighteen24 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiplicity")
     public Long multiplicity;
+
     public Eighteen24 withMultiplicity(Long multiplicity) {
         this.multiplicity = multiplicity;
         return this;
@@ -28,6 +30,7 @@ public class Eighteen24 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentile")
     public Long percentile;
+
     public Eighteen24 withPercentile(Long percentile) {
         this.percentile = percentile;
         return this;
@@ -36,6 +39,7 @@ public class Eighteen24 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistical_info")
     public StatisticalInfo18 statisticalInfo;
+
     public Eighteen24 withStatisticalInfo(StatisticalInfo18 statisticalInfo) {
         this.statisticalInfo = statisticalInfo;
         return this;
@@ -44,6 +48,7 @@ public class Eighteen24 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stdev")
     public Long stdev;
+
     public Eighteen24 withStdev(Long stdev) {
         this.stdev = stdev;
         return this;
@@ -52,9 +57,11 @@ public class Eighteen24 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public Eighteen24 withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public Eighteen24(){}
 }

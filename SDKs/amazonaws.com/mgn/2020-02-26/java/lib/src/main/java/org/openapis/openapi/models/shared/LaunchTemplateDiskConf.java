@@ -15,6 +15,7 @@ public class LaunchTemplateDiskConf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iops")
     public Long iops;
+
     public LaunchTemplateDiskConf withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -23,6 +24,7 @@ public class LaunchTemplateDiskConf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("throughput")
     public Long throughput;
+
     public LaunchTemplateDiskConf withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -31,9 +33,11 @@ public class LaunchTemplateDiskConf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeType")
     public VolumeTypeEnum volumeType;
+
     public LaunchTemplateDiskConf withVolumeType(VolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public LaunchTemplateDiskConf(){}
 }

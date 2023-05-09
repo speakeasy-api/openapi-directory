@@ -18,6 +18,7 @@ public class RefundNotPaidOutTransfersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public RefundNotPaidOutTransfersResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -29,6 +30,7 @@ public class RefundNotPaidOutTransfersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public RefundNotPaidOutTransfersResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -40,9 +42,11 @@ public class RefundNotPaidOutTransfersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public RefundNotPaidOutTransfersResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public RefundNotPaidOutTransfersResponse(){}
 }

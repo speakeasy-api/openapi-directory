@@ -18,6 +18,7 @@ public class GenderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressMeAs")
     public String addressMeAs;
+
     public GenderInput withAddressMeAs(String addressMeAs) {
         this.addressMeAs = addressMeAs;
         return this;
@@ -29,6 +30,7 @@ public class GenderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FieldMetadataInput metadata;
+
     public GenderInput withMetadata(FieldMetadataInput metadata) {
         this.metadata = metadata;
         return this;
@@ -40,9 +42,11 @@ public class GenderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GenderInput withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GenderInput(){}
 }

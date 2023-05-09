@@ -12,9 +12,11 @@ public class SeasonRelationshipsAListOfCreditsGivenToPeopleInTheSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceIdentifier[] data;
+
     public SeasonRelationshipsAListOfCreditsGivenToPeopleInTheSeason withData(ResourceIdentifier[] data) {
         this.data = data;
         return this;
     }
     
+    public SeasonRelationshipsAListOfCreditsGivenToPeopleInTheSeason(){}
 }

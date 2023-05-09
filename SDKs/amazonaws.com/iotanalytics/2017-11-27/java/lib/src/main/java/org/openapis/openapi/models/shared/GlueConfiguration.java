@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GlueConfiguration {
     @JsonProperty("databaseName")
     public String databaseName;
+
     public GlueConfiguration withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -19,9 +20,14 @@ public class GlueConfiguration {
     
     @JsonProperty("tableName")
     public String tableName;
+
     public GlueConfiguration withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public GlueConfiguration(@JsonProperty("databaseName") String databaseName, @JsonProperty("tableName") String tableName) {
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+  }
 }

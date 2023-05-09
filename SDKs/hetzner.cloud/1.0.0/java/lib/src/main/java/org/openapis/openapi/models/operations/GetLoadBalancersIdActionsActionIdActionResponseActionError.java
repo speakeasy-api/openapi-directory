@@ -15,6 +15,7 @@ public class GetLoadBalancersIdActionsActionIdActionResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public GetLoadBalancersIdActionsActionIdActionResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class GetLoadBalancersIdActionsActionIdActionResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public GetLoadBalancersIdActionsActionIdActionResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetLoadBalancersIdActionsActionIdActionResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

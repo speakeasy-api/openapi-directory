@@ -15,9 +15,11 @@ public class CloudWatchDashboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CloudWatchDashboard withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CloudWatchDashboard(){}
 }

@@ -15,6 +15,7 @@ public class ReferenceFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public FileInformation index;
+
     public ReferenceFiles withIndex(FileInformation index) {
         this.index = index;
         return this;
@@ -23,9 +24,11 @@ public class ReferenceFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public FileInformation source;
+
     public ReferenceFiles withSource(FileInformation source) {
         this.source = source;
         return this;
     }
     
+    public ReferenceFiles(){}
 }

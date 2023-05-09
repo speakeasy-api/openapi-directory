@@ -56,4 +56,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetApiV2PredictionsIdRe
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV2PredictionsId404ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV2PredictionsId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV2PredictionsIdResponse.java
+docs/sdk/README.md
 USAGE.md

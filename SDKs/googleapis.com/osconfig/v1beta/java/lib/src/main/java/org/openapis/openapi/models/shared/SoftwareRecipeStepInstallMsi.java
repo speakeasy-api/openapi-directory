@@ -18,6 +18,7 @@ public class SoftwareRecipeStepInstallMsi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedExitCodes")
     public Integer[] allowedExitCodes;
+
     public SoftwareRecipeStepInstallMsi withAllowedExitCodes(Integer[] allowedExitCodes) {
         this.allowedExitCodes = allowedExitCodes;
         return this;
@@ -29,6 +30,7 @@ public class SoftwareRecipeStepInstallMsi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactId")
     public String artifactId;
+
     public SoftwareRecipeStepInstallMsi withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -40,9 +42,11 @@ public class SoftwareRecipeStepInstallMsi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flags")
     public String[] flags;
+
     public SoftwareRecipeStepInstallMsi withFlags(String[] flags) {
         this.flags = flags;
         return this;
     }
     
+    public SoftwareRecipeStepInstallMsi(){}
 }

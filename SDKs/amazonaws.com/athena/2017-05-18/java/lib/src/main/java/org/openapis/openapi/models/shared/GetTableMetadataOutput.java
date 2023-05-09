@@ -15,9 +15,11 @@ public class GetTableMetadataOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableMetadata")
     public TableMetadata tableMetadata;
+
     public GetTableMetadataOutput withTableMetadata(TableMetadata tableMetadata) {
         this.tableMetadata = tableMetadata;
         return this;
     }
     
+    public GetTableMetadataOutput(){}
 }

@@ -15,6 +15,7 @@ public class UpdateOrganizationSecurityIntrusionSettingsRequestBodyWhitelistedRu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public UpdateOrganizationSecurityIntrusionSettingsRequestBodyWhitelistedRules withMessage(String message) {
         this.message = message;
         return this;
@@ -25,9 +26,13 @@ public class UpdateOrganizationSecurityIntrusionSettingsRequestBodyWhitelistedRu
      */
     @JsonProperty("ruleId")
     public String ruleId;
+
     public UpdateOrganizationSecurityIntrusionSettingsRequestBodyWhitelistedRules withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
     }
     
+    public UpdateOrganizationSecurityIntrusionSettingsRequestBodyWhitelistedRules(@JsonProperty("ruleId") String ruleId) {
+        this.ruleId = ruleId;
+  }
 }

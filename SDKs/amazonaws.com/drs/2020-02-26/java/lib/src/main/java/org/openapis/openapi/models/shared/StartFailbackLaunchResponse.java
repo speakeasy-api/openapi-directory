@@ -15,9 +15,11 @@ public class StartFailbackLaunchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public Job job;
+
     public StartFailbackLaunchResponse withJob(Job job) {
         this.job = job;
         return this;
     }
     
+    public StartFailbackLaunchResponse(){}
 }

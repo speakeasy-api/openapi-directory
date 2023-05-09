@@ -12,9 +12,11 @@ public class GetUuidRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Long count;
+
     public GetUuidRequest withCount(Long count) {
         this.count = count;
         return this;
     }
     
+    public GetUuidRequest(){}
 }

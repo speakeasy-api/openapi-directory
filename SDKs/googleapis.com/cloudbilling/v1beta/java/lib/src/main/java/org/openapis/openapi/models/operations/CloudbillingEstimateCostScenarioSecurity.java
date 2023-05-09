@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudbillingEstimateCostScenarioSecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudbillingEstimateCostScenarioSecurityOption1 option1;
+
     public CloudbillingEstimateCostScenarioSecurity withOption1(CloudbillingEstimateCostScenarioSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class CloudbillingEstimateCostScenarioSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudbillingEstimateCostScenarioSecurityOption2 option2;
+
     public CloudbillingEstimateCostScenarioSecurity withOption2(CloudbillingEstimateCostScenarioSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class CloudbillingEstimateCostScenarioSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudbillingEstimateCostScenarioSecurityOption3 option3;
+
     public CloudbillingEstimateCostScenarioSecurity withOption3(CloudbillingEstimateCostScenarioSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public CloudbillingEstimateCostScenarioSecurity(){}
 }

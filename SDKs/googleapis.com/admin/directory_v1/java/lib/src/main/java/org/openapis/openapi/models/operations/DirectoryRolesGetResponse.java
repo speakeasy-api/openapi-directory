@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DirectoryRolesGetResponse {
     
     public String contentType;
+
     public DirectoryRolesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DirectoryRolesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Role role;
+
     public DirectoryRolesGetResponse withRole(org.openapis.openapi.models.shared.Role role) {
         this.role = role;
         return this;
@@ -26,6 +29,7 @@ public class DirectoryRolesGetResponse {
     
     
     public Integer statusCode;
+
     public DirectoryRolesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DirectoryRolesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DirectoryRolesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DirectoryRolesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

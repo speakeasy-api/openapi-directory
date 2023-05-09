@@ -18,6 +18,7 @@ public class CrossProfilePolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crossProfileCopyPaste")
     public CrossProfilePoliciesCrossProfileCopyPasteEnum crossProfileCopyPaste;
+
     public CrossProfilePolicies withCrossProfileCopyPaste(CrossProfilePoliciesCrossProfileCopyPasteEnum crossProfileCopyPaste) {
         this.crossProfileCopyPaste = crossProfileCopyPaste;
         return this;
@@ -29,6 +30,7 @@ public class CrossProfilePolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crossProfileDataSharing")
     public CrossProfilePoliciesCrossProfileDataSharingEnum crossProfileDataSharing;
+
     public CrossProfilePolicies withCrossProfileDataSharing(CrossProfilePoliciesCrossProfileDataSharingEnum crossProfileDataSharing) {
         this.crossProfileDataSharing = crossProfileDataSharing;
         return this;
@@ -40,6 +42,7 @@ public class CrossProfilePolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showWorkContactsInPersonalProfile")
     public CrossProfilePoliciesShowWorkContactsInPersonalProfileEnum showWorkContactsInPersonalProfile;
+
     public CrossProfilePolicies withShowWorkContactsInPersonalProfile(CrossProfilePoliciesShowWorkContactsInPersonalProfileEnum showWorkContactsInPersonalProfile) {
         this.showWorkContactsInPersonalProfile = showWorkContactsInPersonalProfile;
         return this;
@@ -51,9 +54,11 @@ public class CrossProfilePolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workProfileWidgetsDefault")
     public CrossProfilePoliciesWorkProfileWidgetsDefaultEnum workProfileWidgetsDefault;
+
     public CrossProfilePolicies withWorkProfileWidgetsDefault(CrossProfilePoliciesWorkProfileWidgetsDefaultEnum workProfileWidgetsDefault) {
         this.workProfileWidgetsDefault = workProfileWidgetsDefault;
         return this;
     }
     
+    public CrossProfilePolicies(){}
 }

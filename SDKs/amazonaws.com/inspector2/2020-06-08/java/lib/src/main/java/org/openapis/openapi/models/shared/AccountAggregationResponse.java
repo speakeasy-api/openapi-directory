@@ -15,6 +15,7 @@ public class AccountAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public AccountAggregationResponse withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,9 +24,11 @@ public class AccountAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityCounts")
     public SeverityCounts severityCounts;
+
     public AccountAggregationResponse withSeverityCounts(SeverityCounts severityCounts) {
         this.severityCounts = severityCounts;
         return this;
     }
     
+    public AccountAggregationResponse(){}
 }

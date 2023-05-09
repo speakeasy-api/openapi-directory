@@ -15,6 +15,7 @@ public class PutEventStreamRequestBodyWriteEventStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationStreamArn")
     public String destinationStreamArn;
+
     public PutEventStreamRequestBodyWriteEventStream withDestinationStreamArn(String destinationStreamArn) {
         this.destinationStreamArn = destinationStreamArn;
         return this;
@@ -23,9 +24,11 @@ public class PutEventStreamRequestBodyWriteEventStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public PutEventStreamRequestBodyWriteEventStream withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public PutEventStreamRequestBodyWriteEventStream(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetJobRequest {
@@ -12,6 +13,7 @@ public class GetJobRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=job_gid")
     public String jobGid;
+
     public GetJobRequest withJobGid(String jobGid) {
         this.jobGid = jobGid;
         return this;
@@ -24,6 +26,7 @@ public class GetJobRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetJobRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,9 +38,13 @@ public class GetJobRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetJobRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public GetJobRequest(@JsonProperty("job_gid") String jobGid) {
+        this.jobGid = jobGid;
+  }
 }

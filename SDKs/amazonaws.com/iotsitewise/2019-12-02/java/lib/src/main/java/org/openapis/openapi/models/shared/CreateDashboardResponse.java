@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDashboardResponse {
     @JsonProperty("dashboardArn")
     public String dashboardArn;
+
     public CreateDashboardResponse withDashboardArn(String dashboardArn) {
         this.dashboardArn = dashboardArn;
         return this;
@@ -19,9 +20,14 @@ public class CreateDashboardResponse {
     
     @JsonProperty("dashboardId")
     public String dashboardId;
+
     public CreateDashboardResponse withDashboardId(String dashboardId) {
         this.dashboardId = dashboardId;
         return this;
     }
     
+    public CreateDashboardResponse(@JsonProperty("dashboardArn") String dashboardArn, @JsonProperty("dashboardId") String dashboardId) {
+        this.dashboardArn = dashboardArn;
+        this.dashboardId = dashboardId;
+  }
 }

@@ -15,6 +15,7 @@ public class ListAvailableManagementCidrRangesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManagementCidrRanges")
     public String[] managementCidrRanges;
+
     public ListAvailableManagementCidrRangesResult withManagementCidrRanges(String[] managementCidrRanges) {
         this.managementCidrRanges = managementCidrRanges;
         return this;
@@ -23,9 +24,11 @@ public class ListAvailableManagementCidrRangesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAvailableManagementCidrRangesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAvailableManagementCidrRangesResult(){}
 }

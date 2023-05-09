@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0CommonSegments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionAction")
     public String conversionAction;
+
     public GoogleAdsSearchads360V0CommonSegments withConversionAction(String conversionAction) {
         this.conversionAction = conversionAction;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0CommonSegments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionActionCategory")
     public GoogleAdsSearchads360V0CommonSegmentsConversionActionCategoryEnum conversionActionCategory;
+
     public GoogleAdsSearchads360V0CommonSegments withConversionActionCategory(GoogleAdsSearchads360V0CommonSegmentsConversionActionCategoryEnum conversionActionCategory) {
         this.conversionActionCategory = conversionActionCategory;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0CommonSegments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionActionName")
     public String conversionActionName;
+
     public GoogleAdsSearchads360V0CommonSegments withConversionActionName(String conversionActionName) {
         this.conversionActionName = conversionActionName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAdsSearchads360V0CommonSegments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public GoogleAdsSearchads360V0CommonSegments withDate(String date) {
         this.date = date;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAdsSearchads360V0CommonSegments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfWeek")
     public GoogleAdsSearchads360V0CommonSegmentsDayOfWeekEnum dayOfWeek;
+
     public GoogleAdsSearchads360V0CommonSegments withDayOfWeek(GoogleAdsSearchads360V0CommonSegmentsDayOfWeekEnum dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -73,8 +78,21 @@ public class GoogleAdsSearchads360V0CommonSegments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public GoogleAdsSearchads360V0CommonSegmentsDeviceEnum device;
+
     public GoogleAdsSearchads360V0CommonSegments withDevice(GoogleAdsSearchads360V0CommonSegmentsDeviceEnum device) {
         this.device = device;
+        return this;
+    }
+    
+    /**
+     * A Keyword criterion segment.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("keyword")
+    public GoogleAdsSearchads360V0CommonKeyword keyword;
+
+    public GoogleAdsSearchads360V0CommonSegments withKeyword(GoogleAdsSearchads360V0CommonKeyword keyword) {
+        this.keyword = keyword;
         return this;
     }
     
@@ -84,6 +102,7 @@ public class GoogleAdsSearchads360V0CommonSegments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("month")
     public String month;
+
     public GoogleAdsSearchads360V0CommonSegments withMonth(String month) {
         this.month = month;
         return this;
@@ -95,6 +114,7 @@ public class GoogleAdsSearchads360V0CommonSegments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quarter")
     public String quarter;
+
     public GoogleAdsSearchads360V0CommonSegments withQuarter(String quarter) {
         this.quarter = quarter;
         return this;
@@ -106,6 +126,7 @@ public class GoogleAdsSearchads360V0CommonSegments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("week")
     public String week;
+
     public GoogleAdsSearchads360V0CommonSegments withWeek(String week) {
         this.week = week;
         return this;
@@ -117,9 +138,11 @@ public class GoogleAdsSearchads360V0CommonSegments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public Integer year;
+
     public GoogleAdsSearchads360V0CommonSegments withYear(Integer year) {
         this.year = year;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonSegments(){}
 }

@@ -12,6 +12,7 @@ public class DescribeDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public DescribeDocumentRequest withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -19,6 +20,7 @@ public class DescribeDocumentRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public DescribeDocumentRequest withName(String name) {
         this.name = name;
         return this;
@@ -27,9 +29,13 @@ public class DescribeDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionName")
     public String versionName;
+
     public DescribeDocumentRequest withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public DescribeDocumentRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

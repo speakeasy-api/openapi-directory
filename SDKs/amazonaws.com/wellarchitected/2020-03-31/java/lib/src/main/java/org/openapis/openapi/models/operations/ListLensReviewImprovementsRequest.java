@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListLensReviewImprovementsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LensAlias")
     public String lensAlias;
+
     public ListLensReviewImprovementsRequest withLensAlias(String lensAlias) {
         this.lensAlias = lensAlias;
         return this;
@@ -19,6 +21,7 @@ public class ListLensReviewImprovementsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public Long maxResults;
+
     public ListLensReviewImprovementsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +29,7 @@ public class ListLensReviewImprovementsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MilestoneNumber")
     public Long milestoneNumber;
+
     public ListLensReviewImprovementsRequest withMilestoneNumber(Long milestoneNumber) {
         this.milestoneNumber = milestoneNumber;
         return this;
@@ -33,6 +37,7 @@ public class ListLensReviewImprovementsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListLensReviewImprovementsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -40,6 +45,7 @@ public class ListLensReviewImprovementsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PillarId")
     public String pillarId;
+
     public ListLensReviewImprovementsRequest withPillarId(String pillarId) {
         this.pillarId = pillarId;
         return this;
@@ -47,6 +53,7 @@ public class ListLensReviewImprovementsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkloadId")
     public String workloadId;
+
     public ListLensReviewImprovementsRequest withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
@@ -54,6 +61,7 @@ public class ListLensReviewImprovementsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListLensReviewImprovementsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -61,6 +69,7 @@ public class ListLensReviewImprovementsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListLensReviewImprovementsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -68,6 +77,7 @@ public class ListLensReviewImprovementsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListLensReviewImprovementsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -75,6 +85,7 @@ public class ListLensReviewImprovementsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListLensReviewImprovementsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -82,6 +93,7 @@ public class ListLensReviewImprovementsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListLensReviewImprovementsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -89,6 +101,7 @@ public class ListLensReviewImprovementsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListLensReviewImprovementsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -96,9 +109,14 @@ public class ListLensReviewImprovementsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListLensReviewImprovementsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public ListLensReviewImprovementsRequest(@JsonProperty("LensAlias") String lensAlias, @JsonProperty("WorkloadId") String workloadId) {
+        this.lensAlias = lensAlias;
+        this.workloadId = workloadId;
+  }
 }

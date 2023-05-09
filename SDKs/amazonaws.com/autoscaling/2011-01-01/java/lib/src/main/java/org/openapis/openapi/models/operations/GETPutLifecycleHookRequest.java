@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPutLifecycleHookRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETPutLifecycleHookActionEnum action;
+
     public GETPutLifecycleHookRequest withAction(GETPutLifecycleHookActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETPutLifecycleHookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
     public String autoScalingGroupName;
+
     public GETPutLifecycleHookRequest withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -29,6 +32,7 @@ public class GETPutLifecycleHookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DefaultResult")
     public String defaultResult;
+
     public GETPutLifecycleHookRequest withDefaultResult(String defaultResult) {
         this.defaultResult = defaultResult;
         return this;
@@ -39,6 +43,7 @@ public class GETPutLifecycleHookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HeartbeatTimeout")
     public Long heartbeatTimeout;
+
     public GETPutLifecycleHookRequest withHeartbeatTimeout(Long heartbeatTimeout) {
         this.heartbeatTimeout = heartbeatTimeout;
         return this;
@@ -49,6 +54,7 @@ public class GETPutLifecycleHookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LifecycleHookName")
     public String lifecycleHookName;
+
     public GETPutLifecycleHookRequest withLifecycleHookName(String lifecycleHookName) {
         this.lifecycleHookName = lifecycleHookName;
         return this;
@@ -59,6 +65,7 @@ public class GETPutLifecycleHookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LifecycleTransition")
     public String lifecycleTransition;
+
     public GETPutLifecycleHookRequest withLifecycleTransition(String lifecycleTransition) {
         this.lifecycleTransition = lifecycleTransition;
         return this;
@@ -69,6 +76,7 @@ public class GETPutLifecycleHookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NotificationMetadata")
     public String notificationMetadata;
+
     public GETPutLifecycleHookRequest withNotificationMetadata(String notificationMetadata) {
         this.notificationMetadata = notificationMetadata;
         return this;
@@ -79,6 +87,7 @@ public class GETPutLifecycleHookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NotificationTargetARN")
     public String notificationTargetARN;
+
     public GETPutLifecycleHookRequest withNotificationTargetARN(String notificationTargetARN) {
         this.notificationTargetARN = notificationTargetARN;
         return this;
@@ -89,6 +98,7 @@ public class GETPutLifecycleHookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleARN")
     public String roleARN;
+
     public GETPutLifecycleHookRequest withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -96,6 +106,7 @@ public class GETPutLifecycleHookRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETPutLifecycleHookVersionEnum version;
+
     public GETPutLifecycleHookRequest withVersion(GETPutLifecycleHookVersionEnum version) {
         this.version = version;
         return this;
@@ -103,6 +114,7 @@ public class GETPutLifecycleHookRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETPutLifecycleHookRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -110,6 +122,7 @@ public class GETPutLifecycleHookRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETPutLifecycleHookRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -117,6 +130,7 @@ public class GETPutLifecycleHookRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETPutLifecycleHookRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -124,6 +138,7 @@ public class GETPutLifecycleHookRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETPutLifecycleHookRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -131,6 +146,7 @@ public class GETPutLifecycleHookRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETPutLifecycleHookRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -138,6 +154,7 @@ public class GETPutLifecycleHookRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETPutLifecycleHookRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -145,9 +162,16 @@ public class GETPutLifecycleHookRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETPutLifecycleHookRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETPutLifecycleHookRequest(@JsonProperty("Action") GETPutLifecycleHookActionEnum action, @JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("LifecycleHookName") String lifecycleHookName, @JsonProperty("Version") GETPutLifecycleHookVersionEnum version) {
+        this.action = action;
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.lifecycleHookName = lifecycleHookName;
+        this.version = version;
+  }
 }

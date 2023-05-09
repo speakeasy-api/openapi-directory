@@ -14,6 +14,7 @@ public class SearchDevicesRequestBody {
      */
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.SearchDevicesFilter[] filters;
+
     public SearchDevicesRequestBody withFilters(org.openapis.openapi.models.shared.SearchDevicesFilter[] filters) {
         this.filters = filters;
         return this;
@@ -25,6 +26,7 @@ public class SearchDevicesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public SearchDevicesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class SearchDevicesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchDevicesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SearchDevicesRequestBody(@JsonProperty("filters") org.openapis.openapi.models.shared.SearchDevicesFilter[] filters) {
+        this.filters = filters;
+  }
 }

@@ -18,6 +18,7 @@ public class BuildVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public BuildVersion withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -29,9 +30,11 @@ public class BuildVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public SemanticVersion version;
+
     public BuildVersion withVersion(SemanticVersion version) {
         this.version = version;
         return this;
     }
     
+    public BuildVersion(){}
 }

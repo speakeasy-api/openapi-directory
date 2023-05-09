@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeExpressionsResponse - The result of a &lt;code&gt;DescribeExpressions&lt;/code&gt; request. Contains the expressions configured for the domain specified in the request.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DescribeExpressionsResponse {
     
     public ExpressionStatus[] expressions;
+
     public DescribeExpressionsResponse withExpressions(ExpressionStatus[] expressions) {
         this.expressions = expressions;
         return this;
     }
     
+    public DescribeExpressionsResponse(@JsonProperty("Expressions") ExpressionStatus[] expressions) {
+        this.expressions = expressions;
+  }
 }

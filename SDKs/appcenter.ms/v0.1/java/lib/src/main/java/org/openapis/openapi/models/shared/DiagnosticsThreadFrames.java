@@ -18,6 +18,7 @@ public class DiagnosticsThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public DiagnosticsThreadFrames withAddress(String address) {
         this.address = address;
         return this;
@@ -28,6 +29,7 @@ public class DiagnosticsThreadFrames {
      */
     @JsonProperty("app_code")
     public Boolean appCode;
+
     public DiagnosticsThreadFrames withAppCode(Boolean appCode) {
         this.appCode = appCode;
         return this;
@@ -39,6 +41,7 @@ public class DiagnosticsThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("class_method")
     public Boolean classMethod;
+
     public DiagnosticsThreadFrames withClassMethod(Boolean classMethod) {
         this.classMethod = classMethod;
         return this;
@@ -50,6 +53,7 @@ public class DiagnosticsThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("class_name")
     public String className;
+
     public DiagnosticsThreadFrames withClassName(String className) {
         this.className = className;
         return this;
@@ -60,6 +64,7 @@ public class DiagnosticsThreadFrames {
      */
     @JsonProperty("code_formatted")
     public String codeFormatted;
+
     public DiagnosticsThreadFrames withCodeFormatted(String codeFormatted) {
         this.codeFormatted = codeFormatted;
         return this;
@@ -70,6 +75,7 @@ public class DiagnosticsThreadFrames {
      */
     @JsonProperty("code_raw")
     public String codeRaw;
+
     public DiagnosticsThreadFrames withCodeRaw(String codeRaw) {
         this.codeRaw = codeRaw;
         return this;
@@ -81,6 +87,7 @@ public class DiagnosticsThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public String file;
+
     public DiagnosticsThreadFrames withFile(String file) {
         this.file = file;
         return this;
@@ -92,6 +99,7 @@ public class DiagnosticsThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("framework_name")
     public String frameworkName;
+
     public DiagnosticsThreadFrames withFrameworkName(String frameworkName) {
         this.frameworkName = frameworkName;
         return this;
@@ -103,6 +111,7 @@ public class DiagnosticsThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public DiagnosticsThreadFramesLanguageEnum language;
+
     public DiagnosticsThreadFrames withLanguage(DiagnosticsThreadFramesLanguageEnum language) {
         this.language = language;
         return this;
@@ -114,6 +123,7 @@ public class DiagnosticsThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line")
     public Long line;
+
     public DiagnosticsThreadFrames withLine(Long line) {
         this.line = line;
         return this;
@@ -125,6 +135,7 @@ public class DiagnosticsThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public DiagnosticsThreadFrames withMethod(String method) {
         this.method = method;
         return this;
@@ -136,6 +147,7 @@ public class DiagnosticsThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method_params")
     public String methodParams;
+
     public DiagnosticsThreadFrames withMethodParams(String methodParams) {
         this.methodParams = methodParams;
         return this;
@@ -147,9 +159,15 @@ public class DiagnosticsThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relevant")
     public Boolean relevant;
+
     public DiagnosticsThreadFrames withRelevant(Boolean relevant) {
         this.relevant = relevant;
         return this;
     }
     
+    public DiagnosticsThreadFrames(@JsonProperty("app_code") Boolean appCode, @JsonProperty("code_formatted") String codeFormatted, @JsonProperty("code_raw") String codeRaw) {
+        this.appCode = appCode;
+        this.codeFormatted = codeFormatted;
+        this.codeRaw = codeRaw;
+  }
 }

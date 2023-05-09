@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LowShelf {
     @JsonProperty("frequency")
     public Integer frequency;
+
     public LowShelf withFrequency(Integer frequency) {
         this.frequency = frequency;
         return this;
@@ -16,6 +17,7 @@ public class LowShelf {
     
     @JsonProperty("gain_db")
     public Integer gainDb;
+
     public LowShelf withGainDb(Integer gainDb) {
         this.gainDb = gainDb;
         return this;
@@ -23,9 +25,15 @@ public class LowShelf {
     
     @JsonProperty("quality")
     public Double quality;
+
     public LowShelf withQuality(Double quality) {
         this.quality = quality;
         return this;
     }
     
+    public LowShelf(@JsonProperty("frequency") Integer frequency, @JsonProperty("gain_db") Integer gainDb, @JsonProperty("quality") Double quality) {
+        this.frequency = frequency;
+        this.gainDb = gainDb;
+        this.quality = quality;
+  }
 }

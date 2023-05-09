@@ -18,6 +18,7 @@ public class LocalizedStringBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LocalizedStringBundle withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class LocalizedStringBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translations")
     public LocalizedString[] translations;
+
     public LocalizedStringBundle withTranslations(LocalizedString[] translations) {
         this.translations = translations;
         return this;
     }
     
+    public LocalizedStringBundle(){}
 }

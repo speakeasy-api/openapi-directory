@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAddonLinkersLinkerKeyValuesResponse {
     
     public String contentType;
+
     public PostAddonLinkersLinkerKeyValuesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostAddonLinkersLinkerKeyValuesResponse {
     
     
     public Integer statusCode;
+
     public PostAddonLinkersLinkerKeyValuesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostAddonLinkersLinkerKeyValuesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAddonLinkersLinkerKeyValuesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostAddonLinkersLinkerKeyValuesResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public PostAddonLinkersLinkerKeyValuesResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
     }
     
+    public PostAddonLinkersLinkerKeyValuesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

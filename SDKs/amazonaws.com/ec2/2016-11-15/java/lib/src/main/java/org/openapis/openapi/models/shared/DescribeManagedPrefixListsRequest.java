@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeManagedPrefixListsRequest {
     
     public Boolean dryRun;
+
     public DescribeManagedPrefixListsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeManagedPrefixListsRequest {
     
     
     public DescribeManagedPrefixListsRequestFilters[] filters;
+
     public DescribeManagedPrefixListsRequest withFilters(DescribeManagedPrefixListsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeManagedPrefixListsRequest {
     
     
     public Long maxResults;
+
     public DescribeManagedPrefixListsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeManagedPrefixListsRequest {
     
     
     public String nextToken;
+
     public DescribeManagedPrefixListsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,11 @@ public class DescribeManagedPrefixListsRequest {
     
     
     public String[] prefixListIds;
+
     public DescribeManagedPrefixListsRequest withPrefixListIds(String[] prefixListIds) {
         this.prefixListIds = prefixListIds;
         return this;
     }
     
+    public DescribeManagedPrefixListsRequest(){}
 }

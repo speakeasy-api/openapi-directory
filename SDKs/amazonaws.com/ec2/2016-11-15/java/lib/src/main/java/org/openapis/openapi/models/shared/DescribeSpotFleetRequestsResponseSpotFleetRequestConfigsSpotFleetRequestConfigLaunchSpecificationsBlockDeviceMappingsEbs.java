@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbs {
     
     public Boolean deleteOnTermination;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbs withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Boolean encrypted;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbs withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Long iops;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbs withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String kmsKeyId;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbs withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String outpostArn;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbs withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -47,6 +52,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String snapshotId;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbs withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Long throughput;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbs withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -61,6 +68,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Long volumeSize;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbs withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
@@ -68,9 +76,11 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbsVolumeTypeEnum volumeType;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbs withVolumeType(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbsVolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbs(){}
 }

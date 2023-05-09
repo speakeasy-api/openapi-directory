@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopApplicationResponse {
@@ -12,6 +13,7 @@ public class StopApplicationResponse {
      */
     
     public Object concurrentModificationException;
+
     public StopApplicationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class StopApplicationResponse {
     
     
     public String contentType;
+
     public StopApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopApplicationResponse {
      */
     
     public Object invalidApplicationConfigurationException;
+
     public StopApplicationResponse withInvalidApplicationConfigurationException(Object invalidApplicationConfigurationException) {
         this.invalidApplicationConfigurationException = invalidApplicationConfigurationException;
         return this;
@@ -39,6 +43,7 @@ public class StopApplicationResponse {
      */
     
     public Object invalidArgumentException;
+
     public StopApplicationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class StopApplicationResponse {
      */
     
     public Object invalidRequestException;
+
     public StopApplicationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class StopApplicationResponse {
     
     
     public Integer statusCode;
+
     public StopApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StopApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StopApplicationResponse {
      */
     
     public Object resourceInUseException;
+
     public StopApplicationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -83,6 +92,7 @@ public class StopApplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopApplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class StopApplicationResponse {
      */
     
     public java.util.Map<String, Object> stopApplicationResponse;
+
     public StopApplicationResponse withStopApplicationResponse(java.util.Map<String, Object> stopApplicationResponse) {
         this.stopApplicationResponse = stopApplicationResponse;
         return this;
     }
     
+    public StopApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

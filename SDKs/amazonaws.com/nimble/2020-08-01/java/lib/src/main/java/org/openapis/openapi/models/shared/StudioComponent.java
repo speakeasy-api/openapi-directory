@@ -20,6 +20,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public StudioComponent withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public StudioComponentConfiguration configuration;
+
     public StudioComponent withConfiguration(StudioComponentConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -38,6 +40,7 @@ public class StudioComponent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public StudioComponent withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public StudioComponent withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -54,6 +58,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public StudioComponent withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2SecurityGroupIds")
     public String[] ec2SecurityGroupIds;
+
     public StudioComponent withEc2SecurityGroupIds(String[] ec2SecurityGroupIds) {
         this.ec2SecurityGroupIds = ec2SecurityGroupIds;
         return this;
@@ -70,6 +76,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initializationScripts")
     public StudioComponentInitializationScript[] initializationScripts;
+
     public StudioComponent withInitializationScripts(StudioComponentInitializationScript[] initializationScripts) {
         this.initializationScripts = initializationScripts;
         return this;
@@ -78,6 +85,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StudioComponent withName(String name) {
         this.name = name;
         return this;
@@ -86,6 +94,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeRoleArn")
     public String runtimeRoleArn;
+
     public StudioComponent withRuntimeRoleArn(String runtimeRoleArn) {
         this.runtimeRoleArn = runtimeRoleArn;
         return this;
@@ -94,6 +103,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptParameters")
     public ScriptParameterKeyValue[] scriptParameters;
+
     public StudioComponent withScriptParameters(ScriptParameterKeyValue[] scriptParameters) {
         this.scriptParameters = scriptParameters;
         return this;
@@ -102,6 +112,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secureInitializationRoleArn")
     public String secureInitializationRoleArn;
+
     public StudioComponent withSecureInitializationRoleArn(String secureInitializationRoleArn) {
         this.secureInitializationRoleArn = secureInitializationRoleArn;
         return this;
@@ -110,6 +121,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public StudioComponentStateEnum state;
+
     public StudioComponent withState(StudioComponentStateEnum state) {
         this.state = state;
         return this;
@@ -118,6 +130,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public StudioComponentStatusCodeEnum statusCode;
+
     public StudioComponent withStatusCode(StudioComponentStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -126,6 +139,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public StudioComponent withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -134,6 +148,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studioComponentId")
     public String studioComponentId;
+
     public StudioComponent withStudioComponentId(String studioComponentId) {
         this.studioComponentId = studioComponentId;
         return this;
@@ -142,6 +157,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtype")
     public StudioComponentSubtypeEnum subtype;
+
     public StudioComponent withSubtype(StudioComponentSubtypeEnum subtype) {
         this.subtype = subtype;
         return this;
@@ -150,6 +166,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StudioComponent withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -158,6 +175,7 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public StudioComponentTypeEnum type;
+
     public StudioComponent withType(StudioComponentTypeEnum type) {
         this.type = type;
         return this;
@@ -168,6 +186,7 @@ public class StudioComponent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public StudioComponent withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -176,9 +195,11 @@ public class StudioComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedBy")
     public String updatedBy;
+
     public StudioComponent withUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
         return this;
     }
     
+    public StudioComponent(){}
 }

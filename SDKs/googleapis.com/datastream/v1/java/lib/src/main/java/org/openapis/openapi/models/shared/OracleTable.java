@@ -18,6 +18,7 @@ public class OracleTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oracleColumns")
     public OracleColumn[] oracleColumns;
+
     public OracleTable withOracleColumns(OracleColumn[] oracleColumns) {
         this.oracleColumns = oracleColumns;
         return this;
@@ -29,9 +30,11 @@ public class OracleTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public String table;
+
     public OracleTable withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public OracleTable(){}
 }

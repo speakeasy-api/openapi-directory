@@ -15,9 +15,11 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public Value[] values;
+
     public Record withValues(Value[] values) {
         this.values = values;
         return this;
     }
     
+    public Record(){}
 }

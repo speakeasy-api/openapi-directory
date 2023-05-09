@@ -15,6 +15,7 @@ public class UpdateAddonRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addonVersion")
     public String addonVersion;
+
     public UpdateAddonRequestBody withAddonVersion(String addonVersion) {
         this.addonVersion = addonVersion;
         return this;
@@ -26,6 +27,7 @@ public class UpdateAddonRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public UpdateAddonRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -37,6 +39,7 @@ public class UpdateAddonRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationValues")
     public String configurationValues;
+
     public UpdateAddonRequestBody withConfigurationValues(String configurationValues) {
         this.configurationValues = configurationValues;
         return this;
@@ -48,6 +51,7 @@ public class UpdateAddonRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolveConflicts")
     public UpdateAddonRequestBodyResolveConflictsEnum resolveConflicts;
+
     public UpdateAddonRequestBody withResolveConflicts(UpdateAddonRequestBodyResolveConflictsEnum resolveConflicts) {
         this.resolveConflicts = resolveConflicts;
         return this;
@@ -59,9 +63,11 @@ public class UpdateAddonRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountRoleArn")
     public String serviceAccountRoleArn;
+
     public UpdateAddonRequestBody withServiceAccountRoleArn(String serviceAccountRoleArn) {
         this.serviceAccountRoleArn = serviceAccountRoleArn;
         return this;
     }
     
+    public UpdateAddonRequestBody(){}
 }

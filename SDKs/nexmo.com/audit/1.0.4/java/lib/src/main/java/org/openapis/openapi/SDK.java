@@ -118,6 +118,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -145,13 +150,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventResponse res = new org.openapis.openapi.models.operations.GetEventResponse() {{
+        org.openapis.openapi.models.operations.GetEventResponse res = new org.openapis.openapi.models.operations.GetEventResponse(contentType, httpRes.statusCode()) {{
             auditEvent = null;
             errorUnauthorized = null;
             errorNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -209,14 +212,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventsResponse res = new org.openapis.openapi.models.operations.GetEventsResponse() {{
+        org.openapis.openapi.models.operations.GetEventsResponse res = new org.openapis.openapi.models.operations.GetEventsResponse(contentType, httpRes.statusCode()) {{
             auditResp = null;
             errorUnauthorized = null;
             errorForbidden = null;
             errorNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -255,10 +256,11 @@ public class SDK {
      * Retrieve audit event types
      * Get audit event types.
      * 
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventsOptionsResponse getEventsOptions() throws Exception {
+    public org.openapis.openapi.models.operations.GetEventsOptionsResponse getEventsOptions(org.openapis.openapi.models.operations.GetEventsOptionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/events");
         
@@ -267,19 +269,18 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventsOptionsResponse res = new org.openapis.openapi.models.operations.GetEventsOptionsResponse() {{
+        org.openapis.openapi.models.operations.GetEventsOptionsResponse res = new org.openapis.openapi.models.operations.GetEventsOptionsResponse(contentType, httpRes.statusCode()) {{
             auditEventTypesResp = null;
             noContent = null;
             errorUnauthorized = null;
             errorForbidden = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -14,6 +14,7 @@ public class CreateAttributeGroupRequestBody {
      */
     @JsonProperty("attributes")
     public String attributes;
+
     public CreateAttributeGroupRequestBody withAttributes(String attributes) {
         this.attributes = attributes;
         return this;
@@ -24,6 +25,7 @@ public class CreateAttributeGroupRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateAttributeGroupRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -35,6 +37,7 @@ public class CreateAttributeGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateAttributeGroupRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class CreateAttributeGroupRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateAttributeGroupRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -56,9 +60,15 @@ public class CreateAttributeGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateAttributeGroupRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAttributeGroupRequestBody(@JsonProperty("attributes") String attributes, @JsonProperty("clientToken") String clientToken, @JsonProperty("name") String name) {
+        this.attributes = attributes;
+        this.clientToken = clientToken;
+        this.name = name;
+  }
 }

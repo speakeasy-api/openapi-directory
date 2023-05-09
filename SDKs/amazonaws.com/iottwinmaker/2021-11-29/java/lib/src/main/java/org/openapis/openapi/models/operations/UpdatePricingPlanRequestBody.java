@@ -15,6 +15,7 @@ public class UpdatePricingPlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleNames")
     public String[] bundleNames;
+
     public UpdatePricingPlanRequestBody withBundleNames(String[] bundleNames) {
         this.bundleNames = bundleNames;
         return this;
@@ -25,9 +26,13 @@ public class UpdatePricingPlanRequestBody {
      */
     @JsonProperty("pricingMode")
     public UpdatePricingPlanRequestBodyPricingModeEnum pricingMode;
+
     public UpdatePricingPlanRequestBody withPricingMode(UpdatePricingPlanRequestBodyPricingModeEnum pricingMode) {
         this.pricingMode = pricingMode;
         return this;
     }
     
+    public UpdatePricingPlanRequestBody(@JsonProperty("pricingMode") UpdatePricingPlanRequestBodyPricingModeEnum pricingMode) {
+        this.pricingMode = pricingMode;
+  }
 }

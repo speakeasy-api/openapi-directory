@@ -15,9 +15,11 @@ public class CreateBillingGroupRequestBodyComputationPreference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlanArn")
     public String pricingPlanArn;
+
     public CreateBillingGroupRequestBodyComputationPreference withPricingPlanArn(String pricingPlanArn) {
         this.pricingPlanArn = pricingPlanArn;
         return this;
     }
     
+    public CreateBillingGroupRequestBodyComputationPreference(){}
 }

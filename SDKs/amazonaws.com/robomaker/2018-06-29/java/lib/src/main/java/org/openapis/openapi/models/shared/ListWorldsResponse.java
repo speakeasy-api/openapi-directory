@@ -15,6 +15,7 @@ public class ListWorldsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListWorldsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListWorldsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("worldSummaries")
     public WorldSummary[] worldSummaries;
+
     public ListWorldsResponse withWorldSummaries(WorldSummary[] worldSummaries) {
         this.worldSummaries = worldSummaries;
         return this;
     }
     
+    public ListWorldsResponse(){}
 }

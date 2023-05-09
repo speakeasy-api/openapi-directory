@@ -18,6 +18,7 @@ public class GoogleCloudPolicysimulatorV1ReplayConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logSource")
     public GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum logSource;
+
     public GoogleCloudPolicysimulatorV1ReplayConfig withLogSource(GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum logSource) {
         this.logSource = logSource;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudPolicysimulatorV1ReplayConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyOverlay")
     public java.util.Map<String, GoogleIamV1Policy> policyOverlay;
+
     public GoogleCloudPolicysimulatorV1ReplayConfig withPolicyOverlay(java.util.Map<String, GoogleIamV1Policy> policyOverlay) {
         this.policyOverlay = policyOverlay;
         return this;
     }
     
+    public GoogleCloudPolicysimulatorV1ReplayConfig(){}
 }

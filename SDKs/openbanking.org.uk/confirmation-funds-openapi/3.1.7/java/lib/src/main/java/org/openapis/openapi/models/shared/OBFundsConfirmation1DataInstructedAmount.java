@@ -15,6 +15,7 @@ public class OBFundsConfirmation1DataInstructedAmount {
      */
     @JsonProperty("Amount")
     public String amount;
+
     public OBFundsConfirmation1DataInstructedAmount withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -25,9 +26,14 @@ public class OBFundsConfirmation1DataInstructedAmount {
      */
     @JsonProperty("Currency")
     public String currency;
+
     public OBFundsConfirmation1DataInstructedAmount withCurrency(String currency) {
         this.currency = currency;
         return this;
     }
     
+    public OBFundsConfirmation1DataInstructedAmount(@JsonProperty("Amount") String amount, @JsonProperty("Currency") String currency) {
+        this.amount = amount;
+        this.currency = currency;
+  }
 }

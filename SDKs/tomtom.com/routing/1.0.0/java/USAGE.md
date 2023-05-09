@@ -3,63 +3,60 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeVehicleEngineTypeEnum;
 import org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest;
 import org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeResponse;
-import org.openapis.openapi.models.shared.WindingnessEnum;
-import org.openapis.openapi.models.shared.VersionNumberEnum;
-import org.openapis.openapi.models.shared.TravelModeEnum;
-import org.openapis.openapi.models.shared.RouteTypeEnum;
-import org.openapis.openapi.models.shared.ReportEnum;
-import org.openapis.openapi.models.shared.HillinessEnum;
+import org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeVehicleEngineTypeEnum;
 import org.openapis.openapi.models.shared.ContentTypeEnum;
+import org.openapis.openapi.models.shared.HillinessEnum;
+import org.openapis.openapi.models.shared.ReportEnum;
+import org.openapis.openapi.models.shared.RouteTypeEnum;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.shared.TravelModeEnum;
+import org.openapis.openapi.models.shared.VersionNumberEnum;
+import org.openapis.openapi.models.shared.WindingnessEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest req = new GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest() {{
-                accelerationEfficiency = 5488.14;
-                arriveAt = "provident";
-                auxiliaryPowerInLitersPerHour = 7151.9;
-                avoid = "quibusdam";
-                callback = "unde";
-                constantSpeedConsumptionInLitersPerHundredkm = "nulla";
-                constantSpeedConsumptionInkWhPerHundredkm = "corrupti";
-                contentType = "jsonp";
-                currentFuelInLiters = 4236.55;
-                decelerationEfficiency = 6235.64;
-                departAt = "deserunt";
-                downhillEfficiency = 3843.82;
-                energyBudgetInkWh = 4375.87;
-                fuelBudgetInLiters = 2975.34;
-                fuelEnergyDensityInMJoulesPerLiter = 8917.73;
-                hilliness = "low";
-                origin = "delectus";
-                report = "effectiveSettings";
-                routeType = "shortest";
-                timeBudgetInSec = 3834.41;
+            GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest req = new GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest(ContentTypeEnum.JSON, "distinctio", VersionNumberEnum.ONE) {{
+                accelerationEfficiency = 8442.66;
+                arriveAt = "unde";
+                auxiliaryPowerInLitersPerHour = 8579.46;
+                avoid = "corrupti";
+                callback = "illum";
+                constantSpeedConsumptionInLitersPerHundredkm = "vel";
+                constantSpeedConsumptionInkWhPerHundredkm = "error";
+                currentFuelInLiters = 6458.94;
+                decelerationEfficiency = 3843.82;
+                departAt = "iure";
+                downhillEfficiency = 2975.34;
+                energyBudgetInkWh = 8917.73;
+                fuelBudgetInLiters = 567.13;
+                fuelEnergyDensityInMJoulesPerLiter = 9636.63;
+                hilliness = HillinessEnum.LOW;
+                report = ReportEnum.EFFECTIVE_SETTINGS;
+                routeType = RouteTypeEnum.SHORTEST;
+                timeBudgetInSec = 4776.65;
                 traffic = false;
-                travelMode = "bus";
-                uphillEfficiency = 7917.25;
-                vehicleAxleWeight = 812169;
+                travelMode = TravelModeEnum.BICYCLE;
+                uphillEfficiency = 8121.69;
+                vehicleAxleWeight = 528895L;
                 vehicleCommercial = false;
-                vehicleEngineType = "electric";
-                vehicleHeight = 4799.77;
-                vehicleLength = 5680.45;
-                vehicleLoadType = "nisi";
-                vehicleMaxSpeed = 925597;
-                vehicleWeight = 836079;
-                vehicleWidth = 710.36;
-                versionNumber = "1";
-                windingness = "normal";
-            }}            
+                vehicleEngineType = GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeVehicleEngineTypeEnum.COMBUSTION;
+                vehicleHeight = 5680.45;
+                vehicleLength = 3927.85;
+                vehicleLoadType = "recusandae";
+                vehicleMaxSpeed = 836079L;
+                vehicleWeight = 71036L;
+                vehicleWidth = 3373.96;
+                windingness = WindingnessEnum.LOW;
+            }};            
 
             GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeResponse res = sdk.routing.getRoutingVersionNumberCalculateReachableRangeOriginContentType(req);
 
@@ -69,5 +66,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

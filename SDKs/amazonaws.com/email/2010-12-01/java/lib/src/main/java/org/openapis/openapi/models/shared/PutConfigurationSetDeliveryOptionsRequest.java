@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PutConfigurationSetDeliveryOptionsRequest - A request to modify the delivery options for a configuration set.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PutConfigurationSetDeliveryOptionsRequest {
     
     public String configurationSetName;
+
     public PutConfigurationSetDeliveryOptionsRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -19,9 +20,13 @@ public class PutConfigurationSetDeliveryOptionsRequest {
     
     
     public DeliveryOptions deliveryOptions;
+
     public PutConfigurationSetDeliveryOptionsRequest withDeliveryOptions(DeliveryOptions deliveryOptions) {
         this.deliveryOptions = deliveryOptions;
         return this;
     }
     
+    public PutConfigurationSetDeliveryOptionsRequest(@JsonProperty("ConfigurationSetName") String configurationSetName) {
+        this.configurationSetName = configurationSetName;
+  }
 }

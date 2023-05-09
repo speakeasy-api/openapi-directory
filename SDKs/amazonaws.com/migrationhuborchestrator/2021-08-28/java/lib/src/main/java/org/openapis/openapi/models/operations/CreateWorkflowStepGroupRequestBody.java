@@ -15,6 +15,7 @@ public class CreateWorkflowStepGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateWorkflowStepGroupRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class CreateWorkflowStepGroupRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateWorkflowStepGroupRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +38,7 @@ public class CreateWorkflowStepGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String[] next;
+
     public CreateWorkflowStepGroupRequestBody withNext(String[] next) {
         this.next = next;
         return this;
@@ -47,6 +50,7 @@ public class CreateWorkflowStepGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String[] previous;
+
     public CreateWorkflowStepGroupRequestBody withPrevious(String[] previous) {
         this.previous = previous;
         return this;
@@ -57,9 +61,14 @@ public class CreateWorkflowStepGroupRequestBody {
      */
     @JsonProperty("workflowId")
     public String workflowId;
+
     public CreateWorkflowStepGroupRequestBody withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public CreateWorkflowStepGroupRequestBody(@JsonProperty("name") String name, @JsonProperty("workflowId") String workflowId) {
+        this.name = name;
+        this.workflowId = workflowId;
+  }
 }

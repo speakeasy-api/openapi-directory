@@ -15,6 +15,7 @@ public class GetDelegationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegations")
     public DelegationMetadata[] delegations;
+
     public GetDelegationsResponse withDelegations(DelegationMetadata[] delegations) {
         this.delegations = delegations;
         return this;
@@ -23,9 +24,11 @@ public class GetDelegationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetDelegationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetDelegationsResponse(){}
 }

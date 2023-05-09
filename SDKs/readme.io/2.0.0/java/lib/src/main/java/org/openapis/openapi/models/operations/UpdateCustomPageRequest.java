@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomPageRequest {
@@ -12,6 +13,7 @@ public class UpdateCustomPageRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CustomPage customPage;
+
     public UpdateCustomPageRequest withCustomPage(org.openapis.openapi.models.shared.CustomPage customPage) {
         this.customPage = customPage;
         return this;
@@ -22,9 +24,14 @@ public class UpdateCustomPageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
     public String slug;
+
     public UpdateCustomPageRequest withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public UpdateCustomPageRequest(@JsonProperty("CustomPage") org.openapis.openapi.models.shared.CustomPage customPage, @JsonProperty("slug") String slug) {
+        this.customPage = customPage;
+        this.slug = slug;
+  }
 }

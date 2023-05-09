@@ -18,6 +18,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activationToken")
     public String activationToken;
+
     public Channel withActivationToken(String activationToken) {
         this.activationToken = activationToken;
         return this;
@@ -29,17 +30,19 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Channel withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
     }
     
     /**
-     * Optional. Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern `projects/* /locations/* /keyRings/* /cryptoKeys/*`.
+     * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern `projects/* /locations/* /keyRings/* /cryptoKeys/*`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cryptoKeyName")
     public String cryptoKeyName;
+
     public Channel withCryptoKeyName(String cryptoKeyName) {
         this.cryptoKeyName = cryptoKeyName;
         return this;
@@ -51,6 +54,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Channel withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider")
     public String provider;
+
     public Channel withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -73,6 +78,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubTopic")
     public String pubsubTopic;
+
     public Channel withPubsubTopic(String pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
         return this;
@@ -84,6 +90,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ChannelStateEnum state;
+
     public Channel withState(ChannelStateEnum state) {
         this.state = state;
         return this;
@@ -95,6 +102,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public Channel withUid(String uid) {
         this.uid = uid;
         return this;
@@ -106,9 +114,11 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Channel withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Channel(){}
 }

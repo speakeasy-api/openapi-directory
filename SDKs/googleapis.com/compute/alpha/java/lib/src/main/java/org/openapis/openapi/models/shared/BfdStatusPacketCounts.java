@@ -15,6 +15,7 @@ public class BfdStatusPacketCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numRx")
     public Long numRx;
+
     public BfdStatusPacketCounts withNumRx(Long numRx) {
         this.numRx = numRx;
         return this;
@@ -26,6 +27,7 @@ public class BfdStatusPacketCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numRxRejected")
     public Long numRxRejected;
+
     public BfdStatusPacketCounts withNumRxRejected(Long numRxRejected) {
         this.numRxRejected = numRxRejected;
         return this;
@@ -37,6 +39,7 @@ public class BfdStatusPacketCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numRxSuccessful")
     public Long numRxSuccessful;
+
     public BfdStatusPacketCounts withNumRxSuccessful(Long numRxSuccessful) {
         this.numRxSuccessful = numRxSuccessful;
         return this;
@@ -48,9 +51,11 @@ public class BfdStatusPacketCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numTx")
     public Long numTx;
+
     public BfdStatusPacketCounts withNumTx(Long numTx) {
         this.numTx = numTx;
         return this;
     }
     
+    public BfdStatusPacketCounts(){}
 }

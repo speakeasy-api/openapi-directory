@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HarvestActivities {
     @JsonProperty("results")
     public HarvestActivitySummary[] results;
+
     public HarvestActivities withResults(HarvestActivitySummary[] results) {
         this.results = results;
         return this;
     }
     
+    public HarvestActivities(@JsonProperty("results") HarvestActivitySummary[] results) {
+        this.results = results;
+  }
 }

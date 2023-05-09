@@ -15,6 +15,7 @@ public class RegistrationsProvidersListFileRelationships {
      */
     
     public String checkout;
+
     public RegistrationsProvidersListFileRelationships withCheckout(String checkout) {
         this.checkout = checkout;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsProvidersListFileRelationships {
      */
     
     public String comments;
+
     public RegistrationsProvidersListFileRelationships withComments(String comments) {
         this.comments = comments;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationsProvidersListFileRelationships {
      */
     
     public String node;
+
     public RegistrationsProvidersListFileRelationships withNode(String node) {
         this.node = node;
         return this;
@@ -45,9 +48,11 @@ public class RegistrationsProvidersListFileRelationships {
      */
     
     public String versions;
+
     public RegistrationsProvidersListFileRelationships withVersions(String versions) {
         this.versions = versions;
         return this;
     }
     
+    public RegistrationsProvidersListFileRelationships(){}
 }

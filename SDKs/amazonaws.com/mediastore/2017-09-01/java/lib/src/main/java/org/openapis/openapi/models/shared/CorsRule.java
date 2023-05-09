@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CorsRule {
     @JsonProperty("AllowedHeaders")
     public String[] allowedHeaders;
+
     public CorsRule withAllowedHeaders(String[] allowedHeaders) {
         this.allowedHeaders = allowedHeaders;
         return this;
@@ -22,6 +23,7 @@ public class CorsRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowedMethods")
     public MethodNameEnum[] allowedMethods;
+
     public CorsRule withAllowedMethods(MethodNameEnum[] allowedMethods) {
         this.allowedMethods = allowedMethods;
         return this;
@@ -29,6 +31,7 @@ public class CorsRule {
     
     @JsonProperty("AllowedOrigins")
     public String[] allowedOrigins;
+
     public CorsRule withAllowedOrigins(String[] allowedOrigins) {
         this.allowedOrigins = allowedOrigins;
         return this;
@@ -37,6 +40,7 @@ public class CorsRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExposeHeaders")
     public String[] exposeHeaders;
+
     public CorsRule withExposeHeaders(String[] exposeHeaders) {
         this.exposeHeaders = exposeHeaders;
         return this;
@@ -45,9 +49,14 @@ public class CorsRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxAgeSeconds")
     public Long maxAgeSeconds;
+
     public CorsRule withMaxAgeSeconds(Long maxAgeSeconds) {
         this.maxAgeSeconds = maxAgeSeconds;
         return this;
     }
     
+    public CorsRule(@JsonProperty("AllowedHeaders") String[] allowedHeaders, @JsonProperty("AllowedOrigins") String[] allowedOrigins) {
+        this.allowedHeaders = allowedHeaders;
+        this.allowedOrigins = allowedOrigins;
+  }
 }

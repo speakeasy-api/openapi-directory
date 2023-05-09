@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifySnapshotScheduleRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifySnapshotScheduleActionEnum action;
+
     public GETModifySnapshotScheduleRequest withAction(GETModifySnapshotScheduleActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifySnapshotScheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ScheduleDefinitions")
     public String[] scheduleDefinitions;
+
     public GETModifySnapshotScheduleRequest withScheduleDefinitions(String[] scheduleDefinitions) {
         this.scheduleDefinitions = scheduleDefinitions;
         return this;
@@ -29,6 +32,7 @@ public class GETModifySnapshotScheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ScheduleIdentifier")
     public String scheduleIdentifier;
+
     public GETModifySnapshotScheduleRequest withScheduleIdentifier(String scheduleIdentifier) {
         this.scheduleIdentifier = scheduleIdentifier;
         return this;
@@ -36,6 +40,7 @@ public class GETModifySnapshotScheduleRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifySnapshotScheduleVersionEnum version;
+
     public GETModifySnapshotScheduleRequest withVersion(GETModifySnapshotScheduleVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETModifySnapshotScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifySnapshotScheduleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETModifySnapshotScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifySnapshotScheduleRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETModifySnapshotScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifySnapshotScheduleRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETModifySnapshotScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifySnapshotScheduleRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETModifySnapshotScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifySnapshotScheduleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETModifySnapshotScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifySnapshotScheduleRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETModifySnapshotScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifySnapshotScheduleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifySnapshotScheduleRequest(@JsonProperty("Action") GETModifySnapshotScheduleActionEnum action, @JsonProperty("ScheduleDefinitions") String[] scheduleDefinitions, @JsonProperty("ScheduleIdentifier") String scheduleIdentifier, @JsonProperty("Version") GETModifySnapshotScheduleVersionEnum version) {
+        this.action = action;
+        this.scheduleDefinitions = scheduleDefinitions;
+        this.scheduleIdentifier = scheduleIdentifier;
+        this.version = version;
+  }
 }

@@ -12,6 +12,7 @@ public class GetAliasesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=continueFrom")
     public String continueFrom;
+
     public GetAliasesRequest withContinueFrom(String continueFrom) {
         this.continueFrom = continueFrom;
         return this;
@@ -22,6 +23,7 @@ public class GetAliasesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domainName")
     public String domainName;
+
     public GetAliasesRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -32,9 +34,11 @@ public class GetAliasesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetAliasesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetAliasesRequest(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebBackendGeographiesListResult {
     @JsonProperty("geographies")
     public GeographyEnum[] geographies;
+
     public WebBackendGeographiesListResult withGeographies(GeographyEnum[] geographies) {
         this.geographies = geographies;
         return this;
     }
     
+    public WebBackendGeographiesListResult(@JsonProperty("geographies") GeographyEnum[] geographies) {
+        this.geographies = geographies;
+  }
 }

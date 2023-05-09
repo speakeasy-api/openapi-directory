@@ -15,6 +15,7 @@ public class FindingTypeAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingType")
     public AggregationFindingTypeEnum findingType;
+
     public FindingTypeAggregation withFindingType(AggregationFindingTypeEnum findingType) {
         this.findingType = findingType;
         return this;
@@ -23,6 +24,7 @@ public class FindingTypeAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public AggregationResourceTypeEnum resourceType;
+
     public FindingTypeAggregation withResourceType(AggregationResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -31,6 +33,7 @@ public class FindingTypeAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public FindingTypeSortByEnum sortBy;
+
     public FindingTypeAggregation withSortBy(FindingTypeSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -39,9 +42,11 @@ public class FindingTypeAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderEnum sortOrder;
+
     public FindingTypeAggregation withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public FindingTypeAggregation(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest {
@@ -12,6 +13,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=creativeStatusId")
     public Long creativeStatusId;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest withCreativeStatusId(Long creativeStatusId) {
         this.creativeStatusId = creativeStatusId;
         return this;
@@ -62,6 +68,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filterSetName")
     public String filterSetName;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest withFilterSetName(String filterSetName) {
         this.filterSetName = filterSetName;
         return this;
@@ -82,6 +90,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -112,6 +123,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -122,6 +134,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +167,14 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest(@JsonProperty("creativeStatusId") Long creativeStatusId, @JsonProperty("filterSetName") String filterSetName) {
+        this.creativeStatusId = creativeStatusId;
+        this.filterSetName = filterSetName;
+  }
 }

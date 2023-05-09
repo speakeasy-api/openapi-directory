@@ -18,6 +18,7 @@ public class Padding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bottom")
     public Integer bottom;
+
     public Padding withBottom(Integer bottom) {
         this.bottom = bottom;
         return this;
@@ -29,6 +30,7 @@ public class Padding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("left")
     public Integer left;
+
     public Padding withLeft(Integer left) {
         this.left = left;
         return this;
@@ -40,6 +42,7 @@ public class Padding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("right")
     public Integer right;
+
     public Padding withRight(Integer right) {
         this.right = right;
         return this;
@@ -51,9 +54,11 @@ public class Padding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("top")
     public Integer top;
+
     public Padding withTop(Integer top) {
         this.top = top;
         return this;
     }
     
+    public Padding(){}
 }

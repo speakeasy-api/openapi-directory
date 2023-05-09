@@ -15,6 +15,7 @@ public class Kecer502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Kecer502ApplicationJSONErrorEnum error;
+
     public Kecer502ApplicationJSON withError(Kecer502ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Kecer502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Kecer502ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Kecer502ApplicationJSON withErrorDescription(Kecer502ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Kecer502ApplicationJSON(){}
 }

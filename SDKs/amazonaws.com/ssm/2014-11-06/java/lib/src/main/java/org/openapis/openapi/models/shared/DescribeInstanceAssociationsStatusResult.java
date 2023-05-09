@@ -15,6 +15,7 @@ public class DescribeInstanceAssociationsStatusResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceAssociationStatusInfos")
     public InstanceAssociationStatusInfo[] instanceAssociationStatusInfos;
+
     public DescribeInstanceAssociationsStatusResult withInstanceAssociationStatusInfos(InstanceAssociationStatusInfo[] instanceAssociationStatusInfos) {
         this.instanceAssociationStatusInfos = instanceAssociationStatusInfos;
         return this;
@@ -23,9 +24,11 @@ public class DescribeInstanceAssociationsStatusResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeInstanceAssociationsStatusResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstanceAssociationsStatusResult(){}
 }

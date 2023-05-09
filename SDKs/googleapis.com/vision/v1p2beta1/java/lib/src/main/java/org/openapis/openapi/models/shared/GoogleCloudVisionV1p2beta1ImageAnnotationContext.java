@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p2beta1ImageAnnotationContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageNumber")
     public Integer pageNumber;
+
     public GoogleCloudVisionV1p2beta1ImageAnnotationContext withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVisionV1p2beta1ImageAnnotationContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudVisionV1p2beta1ImageAnnotationContext withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1ImageAnnotationContext(){}
 }

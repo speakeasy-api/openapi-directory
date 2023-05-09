@@ -53,11 +53,9 @@ public class MXCellularFirewall {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkCellularFirewallRulesResponse res = new org.openapis.openapi.models.operations.GetNetworkCellularFirewallRulesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkCellularFirewallRulesResponse res = new org.openapis.openapi.models.operations.GetNetworkCellularFirewallRulesResponse(contentType, httpRes.statusCode()) {{
             getNetworkCellularFirewallRules200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,11 +93,9 @@ public class MXCellularFirewall {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkCellularFirewallRulesResponse res = new org.openapis.openapi.models.operations.UpdateNetworkCellularFirewallRulesResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkCellularFirewallRulesResponse res = new org.openapis.openapi.models.operations.UpdateNetworkCellularFirewallRulesResponse(contentType, httpRes.statusCode()) {{
             updateNetworkCellularFirewallRules200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

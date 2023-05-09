@@ -12,6 +12,7 @@ public class PresidentialBySizePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public PresidentialBySizePage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class PresidentialBySizePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public PresidentialBySize[] results;
+
     public PresidentialBySizePage withResults(PresidentialBySize[] results) {
         this.results = results;
         return this;
     }
     
+    public PresidentialBySizePage(){}
 }

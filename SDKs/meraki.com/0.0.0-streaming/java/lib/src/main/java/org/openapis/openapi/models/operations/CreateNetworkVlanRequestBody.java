@@ -14,6 +14,7 @@ public class CreateNetworkVlanRequestBody {
      */
     @JsonProperty("applianceIp")
     public String applianceIp;
+
     public CreateNetworkVlanRequestBody withApplianceIp(String applianceIp) {
         this.applianceIp = applianceIp;
         return this;
@@ -25,6 +26,7 @@ public class CreateNetworkVlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupPolicyId")
     public String groupPolicyId;
+
     public CreateNetworkVlanRequestBody withGroupPolicyId(String groupPolicyId) {
         this.groupPolicyId = groupPolicyId;
         return this;
@@ -35,6 +37,7 @@ public class CreateNetworkVlanRequestBody {
      */
     @JsonProperty("id")
     public String id;
+
     public CreateNetworkVlanRequestBody withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class CreateNetworkVlanRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateNetworkVlanRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +59,16 @@ public class CreateNetworkVlanRequestBody {
      */
     @JsonProperty("subnet")
     public String subnet;
+
     public CreateNetworkVlanRequestBody withSubnet(String subnet) {
         this.subnet = subnet;
         return this;
     }
     
+    public CreateNetworkVlanRequestBody(@JsonProperty("applianceIp") String applianceIp, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("subnet") String subnet) {
+        this.applianceIp = applianceIp;
+        this.id = id;
+        this.name = name;
+        this.subnet = subnet;
+  }
 }

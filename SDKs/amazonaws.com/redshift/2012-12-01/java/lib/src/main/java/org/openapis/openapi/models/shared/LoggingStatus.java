@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class LoggingStatus {
     
     public String bucketName;
+
     public LoggingStatus withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -19,6 +20,7 @@ public class LoggingStatus {
     
     
     public String lastFailureMessage;
+
     public LoggingStatus withLastFailureMessage(String lastFailureMessage) {
         this.lastFailureMessage = lastFailureMessage;
         return this;
@@ -26,6 +28,7 @@ public class LoggingStatus {
     
     
     public OffsetDateTime lastFailureTime;
+
     public LoggingStatus withLastFailureTime(OffsetDateTime lastFailureTime) {
         this.lastFailureTime = lastFailureTime;
         return this;
@@ -33,6 +36,7 @@ public class LoggingStatus {
     
     
     public OffsetDateTime lastSuccessfulDeliveryTime;
+
     public LoggingStatus withLastSuccessfulDeliveryTime(OffsetDateTime lastSuccessfulDeliveryTime) {
         this.lastSuccessfulDeliveryTime = lastSuccessfulDeliveryTime;
         return this;
@@ -40,6 +44,7 @@ public class LoggingStatus {
     
     
     public LogDestinationTypeEnum logDestinationType;
+
     public LoggingStatus withLogDestinationType(LogDestinationTypeEnum logDestinationType) {
         this.logDestinationType = logDestinationType;
         return this;
@@ -47,6 +52,7 @@ public class LoggingStatus {
     
     
     public String[] logExports;
+
     public LoggingStatus withLogExports(String[] logExports) {
         this.logExports = logExports;
         return this;
@@ -54,6 +60,7 @@ public class LoggingStatus {
     
     
     public Boolean loggingEnabled;
+
     public LoggingStatus withLoggingEnabled(Boolean loggingEnabled) {
         this.loggingEnabled = loggingEnabled;
         return this;
@@ -61,9 +68,11 @@ public class LoggingStatus {
     
     
     public String s3KeyPrefix;
+
     public LoggingStatus withS3KeyPrefix(String s3KeyPrefix) {
         this.s3KeyPrefix = s3KeyPrefix;
         return this;
     }
     
+    public LoggingStatus(){}
 }

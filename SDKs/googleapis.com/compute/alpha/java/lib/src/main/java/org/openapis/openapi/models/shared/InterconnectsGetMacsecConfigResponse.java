@@ -18,6 +18,7 @@ public class InterconnectsGetMacsecConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public InterconnectsGetMacsecConfigResponse withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,9 +30,11 @@ public class InterconnectsGetMacsecConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public InterconnectMacsecConfig result;
+
     public InterconnectsGetMacsecConfigResponse withResult(InterconnectMacsecConfig result) {
         this.result = result;
         return this;
     }
     
+    public InterconnectsGetMacsecConfigResponse(){}
 }

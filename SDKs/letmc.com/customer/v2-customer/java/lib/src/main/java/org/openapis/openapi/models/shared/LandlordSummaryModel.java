@@ -23,6 +23,7 @@ public class LandlordSummaryModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountBalance")
     public Double accountBalance;
+
     public LandlordSummaryModel withAccountBalance(Double accountBalance) {
         this.accountBalance = accountBalance;
         return this;
@@ -36,6 +37,7 @@ public class LandlordSummaryModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastPayment")
     public OffsetDateTime lastPayment;
+
     public LandlordSummaryModel withLastPayment(OffsetDateTime lastPayment) {
         this.lastPayment = lastPayment;
         return this;
@@ -47,6 +49,7 @@ public class LandlordSummaryModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tenancies")
     public LandlordSummaryTenancyModel[] tenancies;
+
     public LandlordSummaryModel withTenancies(LandlordSummaryTenancyModel[] tenancies) {
         this.tenancies = tenancies;
         return this;
@@ -58,9 +61,11 @@ public class LandlordSummaryModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalRentArrears")
     public Double totalRentArrears;
+
     public LandlordSummaryModel withTotalRentArrears(Double totalRentArrears) {
         this.totalRentArrears = totalRentArrears;
         return this;
     }
     
+    public LandlordSummaryModel(){}
 }

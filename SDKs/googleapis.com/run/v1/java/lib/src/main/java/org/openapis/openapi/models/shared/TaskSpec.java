@@ -18,6 +18,7 @@ public class TaskSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public Container[] containers;
+
     public TaskSpec withContainers(Container[] containers) {
         this.containers = containers;
         return this;
@@ -29,6 +30,7 @@ public class TaskSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRetries")
     public Integer maxRetries;
+
     public TaskSpec withMaxRetries(Integer maxRetries) {
         this.maxRetries = maxRetries;
         return this;
@@ -40,6 +42,7 @@ public class TaskSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountName")
     public String serviceAccountName;
+
     public TaskSpec withServiceAccountName(String serviceAccountName) {
         this.serviceAccountName = serviceAccountName;
         return this;
@@ -51,20 +54,23 @@ public class TaskSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutSeconds")
     public String timeoutSeconds;
+
     public TaskSpec withTimeoutSeconds(String timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
     }
     
     /**
-     * Optional. List of volumes that can be mounted by containers belonging to the task. More info: https://kubernetes.io/docs/concepts/storage/volumes
+     * Optional. List of volumes that can be mounted by containers belonging to the task.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumes")
     public Volume[] volumes;
+
     public TaskSpec withVolumes(Volume[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public TaskSpec(){}
 }

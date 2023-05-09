@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContentLiasettingsCustombatchResponse {
     
     public String contentType;
+
     public ContentLiasettingsCustombatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContentLiasettingsCustombatchResponse {
      */
     
     public org.openapis.openapi.models.shared.LiasettingsCustomBatchResponse liasettingsCustomBatchResponse;
+
     public ContentLiasettingsCustombatchResponse withLiasettingsCustomBatchResponse(org.openapis.openapi.models.shared.LiasettingsCustomBatchResponse liasettingsCustomBatchResponse) {
         this.liasettingsCustomBatchResponse = liasettingsCustomBatchResponse;
         return this;
@@ -26,6 +29,7 @@ public class ContentLiasettingsCustombatchResponse {
     
     
     public Integer statusCode;
+
     public ContentLiasettingsCustombatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContentLiasettingsCustombatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContentLiasettingsCustombatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContentLiasettingsCustombatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

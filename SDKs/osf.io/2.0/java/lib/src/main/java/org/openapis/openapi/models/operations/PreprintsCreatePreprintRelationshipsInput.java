@@ -18,6 +18,7 @@ public class PreprintsCreatePreprintRelationshipsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bibliographic_contributors")
     public String bibliographicContributors;
+
     public PreprintsCreatePreprintRelationshipsInput withBibliographicContributors(String bibliographicContributors) {
         this.bibliographicContributors = bibliographicContributors;
         return this;
@@ -29,6 +30,7 @@ public class PreprintsCreatePreprintRelationshipsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license")
     public String license;
+
     public PreprintsCreatePreprintRelationshipsInput withLicense(String license) {
         this.license = license;
         return this;
@@ -39,6 +41,7 @@ public class PreprintsCreatePreprintRelationshipsInput {
      */
     @JsonProperty("node")
     public String node;
+
     public PreprintsCreatePreprintRelationshipsInput withNode(String node) {
         this.node = node;
         return this;
@@ -49,6 +52,7 @@ public class PreprintsCreatePreprintRelationshipsInput {
      */
     @JsonProperty("primary_file")
     public String primaryFile;
+
     public PreprintsCreatePreprintRelationshipsInput withPrimaryFile(String primaryFile) {
         this.primaryFile = primaryFile;
         return this;
@@ -59,9 +63,15 @@ public class PreprintsCreatePreprintRelationshipsInput {
      */
     @JsonProperty("provider")
     public String provider;
+
     public PreprintsCreatePreprintRelationshipsInput withProvider(String provider) {
         this.provider = provider;
         return this;
     }
     
+    public PreprintsCreatePreprintRelationshipsInput(@JsonProperty("node") String node, @JsonProperty("primary_file") String primaryFile, @JsonProperty("provider") String provider) {
+        this.node = node;
+        this.primaryFile = primaryFile;
+        this.provider = provider;
+  }
 }

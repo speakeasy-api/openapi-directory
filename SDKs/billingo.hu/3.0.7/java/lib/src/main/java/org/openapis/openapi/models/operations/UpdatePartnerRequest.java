@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePartnerRequest {
@@ -12,6 +13,7 @@ public class UpdatePartnerRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PartnerUpsert partnerUpsert;
+
     public UpdatePartnerRequest withPartnerUpsert(org.openapis.openapi.models.shared.PartnerUpsert partnerUpsert) {
         this.partnerUpsert = partnerUpsert;
         return this;
@@ -19,9 +21,14 @@ public class UpdatePartnerRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public UpdatePartnerRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public UpdatePartnerRequest(@JsonProperty("PartnerUpsert") org.openapis.openapi.models.shared.PartnerUpsert partnerUpsert, @JsonProperty("id") Long id) {
+        this.partnerUpsert = partnerUpsert;
+        this.id = id;
+  }
 }

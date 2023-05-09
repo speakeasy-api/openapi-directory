@@ -18,6 +18,7 @@ public class ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessLevels")
     public String[] accessLevels;
+
     public ServicePerimeterConfig withAccessLevels(String[] accessLevels) {
         this.accessLevels = accessLevels;
         return this;
@@ -29,6 +30,7 @@ public class ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public String[] resources;
+
     public ServicePerimeterConfig withResources(String[] resources) {
         this.resources = resources;
         return this;
@@ -40,6 +42,7 @@ public class ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictedServices")
     public String[] restrictedServices;
+
     public ServicePerimeterConfig withRestrictedServices(String[] restrictedServices) {
         this.restrictedServices = restrictedServices;
         return this;
@@ -51,6 +54,7 @@ public class ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unrestrictedServices")
     public String[] unrestrictedServices;
+
     public ServicePerimeterConfig withUnrestrictedServices(String[] unrestrictedServices) {
         this.unrestrictedServices = unrestrictedServices;
         return this;
@@ -62,9 +66,11 @@ public class ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcAccessibleServices")
     public VpcAccessibleServices vpcAccessibleServices;
+
     public ServicePerimeterConfig withVpcAccessibleServices(VpcAccessibleServices vpcAccessibleServices) {
         this.vpcAccessibleServices = vpcAccessibleServices;
         return this;
     }
     
+    public ServicePerimeterConfig(){}
 }

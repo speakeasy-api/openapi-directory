@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateHttpNamespaceResponse {
     
     public String contentType;
+
     public CreateHttpNamespaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateHttpNamespaceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateHttpNamespaceResponse createHttpNamespaceResponse;
+
     public CreateHttpNamespaceResponse withCreateHttpNamespaceResponse(org.openapis.openapi.models.shared.CreateHttpNamespaceResponse createHttpNamespaceResponse) {
         this.createHttpNamespaceResponse = createHttpNamespaceResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateHttpNamespaceResponse {
      */
     
     public Object duplicateRequest;
+
     public CreateHttpNamespaceResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -39,6 +43,7 @@ public class CreateHttpNamespaceResponse {
      */
     
     public Object invalidInput;
+
     public CreateHttpNamespaceResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -49,6 +54,7 @@ public class CreateHttpNamespaceResponse {
      */
     
     public Object namespaceAlreadyExists;
+
     public CreateHttpNamespaceResponse withNamespaceAlreadyExists(Object namespaceAlreadyExists) {
         this.namespaceAlreadyExists = namespaceAlreadyExists;
         return this;
@@ -56,6 +62,7 @@ public class CreateHttpNamespaceResponse {
     
     
     public Integer statusCode;
+
     public CreateHttpNamespaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateHttpNamespaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateHttpNamespaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateHttpNamespaceResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateHttpNamespaceResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -83,9 +92,14 @@ public class CreateHttpNamespaceResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateHttpNamespaceResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public CreateHttpNamespaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

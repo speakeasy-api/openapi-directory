@@ -12,9 +12,13 @@ public class PhoneNumberValidateRequestBody {
      */
     @JsonProperty("NumberValidateRequest")
     public PhoneNumberValidateRequestBodyNumberValidateRequest numberValidateRequest;
+
     public PhoneNumberValidateRequestBody withNumberValidateRequest(PhoneNumberValidateRequestBodyNumberValidateRequest numberValidateRequest) {
         this.numberValidateRequest = numberValidateRequest;
         return this;
     }
     
+    public PhoneNumberValidateRequestBody(@JsonProperty("NumberValidateRequest") PhoneNumberValidateRequestBodyNumberValidateRequest numberValidateRequest) {
+        this.numberValidateRequest = numberValidateRequest;
+  }
 }

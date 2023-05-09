@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AllowListStatus {
     @JsonProperty("code")
     public AllowListStatusCodeEnum code;
+
     public AllowListStatus withCode(AllowListStatusCodeEnum code) {
         this.code = code;
         return this;
@@ -22,9 +23,13 @@ public class AllowListStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AllowListStatus withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public AllowListStatus(@JsonProperty("code") AllowListStatusCodeEnum code) {
+        this.code = code;
+  }
 }

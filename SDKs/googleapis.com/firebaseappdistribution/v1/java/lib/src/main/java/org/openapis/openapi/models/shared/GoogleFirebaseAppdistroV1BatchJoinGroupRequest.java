@@ -18,6 +18,7 @@ public class GoogleFirebaseAppdistroV1BatchJoinGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createMissingTesters")
     public Boolean createMissingTesters;
+
     public GoogleFirebaseAppdistroV1BatchJoinGroupRequest withCreateMissingTesters(Boolean createMissingTesters) {
         this.createMissingTesters = createMissingTesters;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseAppdistroV1BatchJoinGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public String[] emails;
+
     public GoogleFirebaseAppdistroV1BatchJoinGroupRequest withEmails(String[] emails) {
         this.emails = emails;
         return this;
     }
     
+    public GoogleFirebaseAppdistroV1BatchJoinGroupRequest(){}
 }

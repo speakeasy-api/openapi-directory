@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMobileDeviceAccessRuleResponse {
     
     public String contentType;
+
     public DeleteMobileDeviceAccessRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMobileDeviceAccessRuleResponse {
      */
     
     public java.util.Map<String, Object> deleteMobileDeviceAccessRuleResponse;
+
     public DeleteMobileDeviceAccessRuleResponse withDeleteMobileDeviceAccessRuleResponse(java.util.Map<String, Object> deleteMobileDeviceAccessRuleResponse) {
         this.deleteMobileDeviceAccessRuleResponse = deleteMobileDeviceAccessRuleResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMobileDeviceAccessRuleResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteMobileDeviceAccessRuleResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMobileDeviceAccessRuleResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DeleteMobileDeviceAccessRuleResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteMobileDeviceAccessRuleResponse {
      */
     
     public Object organizationStateException;
+
     public DeleteMobileDeviceAccessRuleResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteMobileDeviceAccessRuleResponse {
     
     
     public Integer statusCode;
+
     public DeleteMobileDeviceAccessRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteMobileDeviceAccessRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMobileDeviceAccessRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteMobileDeviceAccessRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

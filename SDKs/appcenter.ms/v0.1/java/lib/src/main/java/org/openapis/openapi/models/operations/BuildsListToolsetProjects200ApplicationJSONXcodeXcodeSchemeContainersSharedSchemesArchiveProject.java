@@ -14,6 +14,7 @@ public class BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContaine
      */
     @JsonProperty("archiveTargetId")
     public String archiveTargetId;
+
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersSharedSchemesArchiveProject withArchiveTargetId(String archiveTargetId) {
         this.archiveTargetId = archiveTargetId;
         return this;
@@ -24,6 +25,7 @@ public class BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContaine
      */
     @JsonProperty("projectName")
     public String projectName;
+
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersSharedSchemesArchiveProject withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -35,9 +37,14 @@ public class BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContaine
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectPath")
     public String projectPath;
+
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersSharedSchemesArchiveProject withProjectPath(String projectPath) {
         this.projectPath = projectPath;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersSharedSchemesArchiveProject(@JsonProperty("archiveTargetId") String archiveTargetId, @JsonProperty("projectName") String projectName) {
+        this.archiveTargetId = archiveTargetId;
+        this.projectName = projectName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOutpostResponse {
@@ -12,6 +13,7 @@ public class GetOutpostResponse {
      */
     
     public Object accessDeniedException;
+
     public GetOutpostResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetOutpostResponse {
     
     
     public String contentType;
+
     public GetOutpostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetOutpostResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOutpostOutput getOutpostOutput;
+
     public GetOutpostResponse withGetOutpostOutput(org.openapis.openapi.models.shared.GetOutpostOutput getOutpostOutput) {
         this.getOutpostOutput = getOutpostOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetOutpostResponse {
      */
     
     public Object internalServerException;
+
     public GetOutpostResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetOutpostResponse {
      */
     
     public Object notFoundException;
+
     public GetOutpostResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetOutpostResponse {
     
     
     public Integer statusCode;
+
     public GetOutpostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetOutpostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOutpostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetOutpostResponse {
      */
     
     public Object validationException;
+
     public GetOutpostResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetOutpostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

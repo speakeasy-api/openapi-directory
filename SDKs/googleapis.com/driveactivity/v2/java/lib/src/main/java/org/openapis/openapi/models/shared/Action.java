@@ -18,6 +18,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actor")
     public Actor actor;
+
     public Action withActor(Actor actor) {
         this.actor = actor;
         return this;
@@ -29,6 +30,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public ActionDetail detail;
+
     public Action withDetail(ActionDetail detail) {
         this.detail = detail;
         return this;
@@ -40,6 +42,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public Target target;
+
     public Action withTarget(Target target) {
         this.target = target;
         return this;
@@ -51,6 +54,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeRange")
     public TimeRange timeRange;
+
     public Action withTimeRange(TimeRange timeRange) {
         this.timeRange = timeRange;
         return this;
@@ -62,9 +66,11 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public Action withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public Action(){}
 }

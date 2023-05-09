@@ -17,6 +17,7 @@ public class ObservationHeading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ObservationHeading withCode(String code) {
         this.code = code;
         return this;
@@ -27,6 +28,7 @@ public class ObservationHeading {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public ObservationHeading withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -35,6 +37,7 @@ public class ObservationHeading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decimalPlaces")
     public Long decimalPlaces;
+
     public ObservationHeading withDecimalPlaces(Long decimalPlaces) {
         this.decimalPlaces = decimalPlaces;
         return this;
@@ -43,6 +46,7 @@ public class ObservationHeading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultPanel")
     public Long defaultPanel;
+
     public ObservationHeading withDefaultPanel(Long defaultPanel) {
         this.defaultPanel = defaultPanel;
         return this;
@@ -51,6 +55,7 @@ public class ObservationHeading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultPanelOrder")
     public Long defaultPanelOrder;
+
     public ObservationHeading withDefaultPanelOrder(Long defaultPanelOrder) {
         this.defaultPanelOrder = defaultPanelOrder;
         return this;
@@ -59,6 +64,7 @@ public class ObservationHeading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heading")
     public String heading;
+
     public ObservationHeading withHeading(String heading) {
         this.heading = heading;
         return this;
@@ -67,6 +73,7 @@ public class ObservationHeading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ObservationHeading withId(Long id) {
         this.id = id;
         return this;
@@ -75,6 +82,7 @@ public class ObservationHeading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infoLink")
     public String infoLink;
+
     public ObservationHeading withInfoLink(String infoLink) {
         this.infoLink = infoLink;
         return this;
@@ -85,6 +93,7 @@ public class ObservationHeading {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdate")
     public OffsetDateTime lastUpdate;
+
     public ObservationHeading withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -93,6 +102,7 @@ public class ObservationHeading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxGraph")
     public Double maxGraph;
+
     public ObservationHeading withMaxGraph(Double maxGraph) {
         this.maxGraph = maxGraph;
         return this;
@@ -101,6 +111,7 @@ public class ObservationHeading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minGraph")
     public Double minGraph;
+
     public ObservationHeading withMinGraph(Double minGraph) {
         this.minGraph = minGraph;
         return this;
@@ -109,6 +120,7 @@ public class ObservationHeading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ObservationHeading withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +129,7 @@ public class ObservationHeading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalRange")
     public String normalRange;
+
     public ObservationHeading withNormalRange(String normalRange) {
         this.normalRange = normalRange;
         return this;
@@ -125,6 +138,7 @@ public class ObservationHeading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("observationHeadingGroups")
     public ObservationHeadingGroup[] observationHeadingGroups;
+
     public ObservationHeading withObservationHeadingGroups(ObservationHeadingGroup[] observationHeadingGroups) {
         this.observationHeadingGroups = observationHeadingGroups;
         return this;
@@ -133,9 +147,11 @@ public class ObservationHeading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("units")
     public String units;
+
     public ObservationHeading withUnits(String units) {
         this.units = units;
         return this;
     }
     
+    public ObservationHeading(){}
 }

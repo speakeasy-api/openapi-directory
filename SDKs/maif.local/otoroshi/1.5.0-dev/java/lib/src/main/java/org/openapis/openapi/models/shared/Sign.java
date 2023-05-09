@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Sign {
     @JsonProperty("algoSettings")
     public Object algoSettings;
+
     public Sign withAlgoSettings(Object algoSettings) {
         this.algoSettings = algoSettings;
         return this;
@@ -22,6 +23,7 @@ public class Sign {
      */
     @JsonProperty("type")
     public String type;
+
     public Sign withType(String type) {
         this.type = type;
         return this;
@@ -32,9 +34,15 @@ public class Sign {
      */
     @JsonProperty("verificationSettings")
     public VerificationSettings verificationSettings;
+
     public Sign withVerificationSettings(VerificationSettings verificationSettings) {
         this.verificationSettings = verificationSettings;
         return this;
     }
     
+    public Sign(@JsonProperty("algoSettings") Object algoSettings, @JsonProperty("type") String type, @JsonProperty("verificationSettings") VerificationSettings verificationSettings) {
+        this.algoSettings = algoSettings;
+        this.type = type;
+        this.verificationSettings = verificationSettings;
+  }
 }

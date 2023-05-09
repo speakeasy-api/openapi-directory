@@ -12,6 +12,7 @@ public class BatchDeleteConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public BatchDeleteConnectionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,9 +20,13 @@ public class BatchDeleteConnectionRequest {
     
     @JsonProperty("ConnectionNameList")
     public String[] connectionNameList;
+
     public BatchDeleteConnectionRequest withConnectionNameList(String[] connectionNameList) {
         this.connectionNameList = connectionNameList;
         return this;
     }
     
+    public BatchDeleteConnectionRequest(@JsonProperty("ConnectionNameList") String[] connectionNameList) {
+        this.connectionNameList = connectionNameList;
+  }
 }

@@ -18,6 +18,7 @@ public class RestorePlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupPlan")
     public String backupPlan;
+
     public RestorePlanInput withBackupPlan(String backupPlan) {
         this.backupPlan = backupPlan;
         return this;
@@ -29,6 +30,7 @@ public class RestorePlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public RestorePlanInput withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -40,6 +42,7 @@ public class RestorePlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RestorePlanInput withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class RestorePlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public RestorePlanInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,9 +66,11 @@ public class RestorePlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restoreConfig")
     public RestoreConfig restoreConfig;
+
     public RestorePlanInput withRestoreConfig(RestoreConfig restoreConfig) {
         this.restoreConfig = restoreConfig;
         return this;
     }
     
+    public RestorePlanInput(){}
 }

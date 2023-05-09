@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopPointMetaStopTypesResponse {
     
     public byte[] body;
+
     public StopPointMetaStopTypesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class StopPointMetaStopTypesResponse {
     
     
     public String contentType;
+
     public StopPointMetaStopTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class StopPointMetaStopTypesResponse {
     
     
     public Integer statusCode;
+
     public StopPointMetaStopTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class StopPointMetaStopTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopPointMetaStopTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class StopPointMetaStopTypesResponse {
      */
     
     public String[] stopPointMetaStopTypes200ApplicationJSONStrings;
+
     public StopPointMetaStopTypesResponse withStopPointMetaStopTypes200ApplicationJSONStrings(String[] stopPointMetaStopTypes200ApplicationJSONStrings) {
         this.stopPointMetaStopTypes200ApplicationJSONStrings = stopPointMetaStopTypes200ApplicationJSONStrings;
         return this;
@@ -50,9 +56,14 @@ public class StopPointMetaStopTypesResponse {
      */
     
     public String[] stopPointMetaStopTypes200TextJSONStrings;
+
     public StopPointMetaStopTypesResponse withStopPointMetaStopTypes200TextJSONStrings(String[] stopPointMetaStopTypes200TextJSONStrings) {
         this.stopPointMetaStopTypes200TextJSONStrings = stopPointMetaStopTypes200TextJSONStrings;
         return this;
     }
     
+    public StopPointMetaStopTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

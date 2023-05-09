@@ -12,6 +12,7 @@ public class ControllersSystemPackageData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ControllersSystemPackageData withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class ControllersSystemPackageData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evra")
     public String evra;
+
     public ControllersSystemPackageData withEvra(String evra) {
         this.evra = evra;
         return this;
@@ -28,6 +30,7 @@ public class ControllersSystemPackageData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ControllersSystemPackageData withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class ControllersSystemPackageData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public ControllersSystemPackageData withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -44,6 +48,7 @@ public class ControllersSystemPackageData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatable")
     public Boolean updatable;
+
     public ControllersSystemPackageData withUpdatable(Boolean updatable) {
         this.updatable = updatable;
         return this;
@@ -52,9 +57,11 @@ public class ControllersSystemPackageData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updates")
     public ModelsPackageUpdate[] updates;
+
     public ControllersSystemPackageData withUpdates(ModelsPackageUpdate[] updates) {
         this.updates = updates;
         return this;
     }
     
+    public ControllersSystemPackageData(){}
 }

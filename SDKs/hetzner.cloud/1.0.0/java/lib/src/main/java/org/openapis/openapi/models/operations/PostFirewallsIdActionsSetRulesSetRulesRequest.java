@@ -12,9 +12,13 @@ public class PostFirewallsIdActionsSetRulesSetRulesRequest {
      */
     @JsonProperty("rules")
     public PostFirewallsIdActionsSetRulesSetRulesRequestRule[] rules;
+
     public PostFirewallsIdActionsSetRulesSetRulesRequest withRules(PostFirewallsIdActionsSetRulesSetRulesRequestRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public PostFirewallsIdActionsSetRulesSetRulesRequest(@JsonProperty("rules") PostFirewallsIdActionsSetRulesSetRulesRequestRule[] rules) {
+        this.rules = rules;
+  }
 }

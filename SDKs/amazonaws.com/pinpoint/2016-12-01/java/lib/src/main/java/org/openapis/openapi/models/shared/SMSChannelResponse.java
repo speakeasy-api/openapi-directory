@@ -15,6 +15,7 @@ public class SMSChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public SMSChannelResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -23,6 +24,7 @@ public class SMSChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public SMSChannelResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -31,6 +33,7 @@ public class SMSChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public SMSChannelResponse withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -39,6 +42,7 @@ public class SMSChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasCredential")
     public Boolean hasCredential;
+
     public SMSChannelResponse withHasCredential(Boolean hasCredential) {
         this.hasCredential = hasCredential;
         return this;
@@ -47,6 +51,7 @@ public class SMSChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public SMSChannelResponse withId(String id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class SMSChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsArchived")
     public Boolean isArchived;
+
     public SMSChannelResponse withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -63,6 +69,7 @@ public class SMSChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public String lastModifiedBy;
+
     public SMSChannelResponse withLastModifiedBy(String lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -71,6 +78,7 @@ public class SMSChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public SMSChannelResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -78,6 +86,7 @@ public class SMSChannelResponse {
     
     @JsonProperty("Platform")
     public String platform;
+
     public SMSChannelResponse withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -86,6 +95,7 @@ public class SMSChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PromotionalMessagesPerSecond")
     public Long promotionalMessagesPerSecond;
+
     public SMSChannelResponse withPromotionalMessagesPerSecond(Long promotionalMessagesPerSecond) {
         this.promotionalMessagesPerSecond = promotionalMessagesPerSecond;
         return this;
@@ -94,6 +104,7 @@ public class SMSChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SenderId")
     public String senderId;
+
     public SMSChannelResponse withSenderId(String senderId) {
         this.senderId = senderId;
         return this;
@@ -102,6 +113,7 @@ public class SMSChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortCode")
     public String shortCode;
+
     public SMSChannelResponse withShortCode(String shortCode) {
         this.shortCode = shortCode;
         return this;
@@ -110,6 +122,7 @@ public class SMSChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionalMessagesPerSecond")
     public Long transactionalMessagesPerSecond;
+
     public SMSChannelResponse withTransactionalMessagesPerSecond(Long transactionalMessagesPerSecond) {
         this.transactionalMessagesPerSecond = transactionalMessagesPerSecond;
         return this;
@@ -118,9 +131,13 @@ public class SMSChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public SMSChannelResponse withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public SMSChannelResponse(@JsonProperty("Platform") String platform) {
+        this.platform = platform;
+  }
 }

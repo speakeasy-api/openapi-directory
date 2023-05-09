@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchV2AccessTokensUuidRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatchAccessTokenRequest patchAccessTokenRequest;
+
     public PatchV2AccessTokensUuidRequest withPatchAccessTokenRequest(org.openapis.openapi.models.shared.PatchAccessTokenRequest patchAccessTokenRequest) {
         this.patchAccessTokenRequest = patchAccessTokenRequest;
         return this;
@@ -16,9 +18,14 @@ public class PatchV2AccessTokensUuidRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
     public String uuid;
+
     public PatchV2AccessTokensUuidRequest withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public PatchV2AccessTokensUuidRequest(@JsonProperty("patchAccessTokenRequest") org.openapis.openapi.models.shared.PatchAccessTokenRequest patchAccessTokenRequest, @JsonProperty("uuid") String uuid) {
+        this.patchAccessTokenRequest = patchAccessTokenRequest;
+        this.uuid = uuid;
+  }
 }

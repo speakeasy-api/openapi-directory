@@ -18,6 +18,7 @@ public class ListAuthorizedDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domains")
     public AuthorizedDomain[] domains;
+
     public ListAuthorizedDomainsResponse withDomains(AuthorizedDomain[] domains) {
         this.domains = domains;
         return this;
@@ -29,9 +30,11 @@ public class ListAuthorizedDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAuthorizedDomainsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAuthorizedDomainsResponse(){}
 }

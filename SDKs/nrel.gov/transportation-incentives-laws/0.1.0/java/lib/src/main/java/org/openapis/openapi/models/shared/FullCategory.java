@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class FullCategory {
     /**
@@ -12,6 +12,7 @@ public class FullCategory {
      */
     
     public String categoryType;
+
     public FullCategory withCategoryType(String categoryType) {
         this.categoryType = categoryType;
         return this;
@@ -22,6 +23,7 @@ public class FullCategory {
      */
     
     public String code;
+
     public FullCategory withCode(String code) {
         this.code = code;
         return this;
@@ -32,6 +34,7 @@ public class FullCategory {
      */
     
     public String helpText;
+
     public FullCategory withHelpText(String helpText) {
         this.helpText = helpText;
         return this;
@@ -42,6 +45,7 @@ public class FullCategory {
      */
     
     public String sortOrder;
+
     public FullCategory withSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -52,9 +56,16 @@ public class FullCategory {
      */
     
     public String title;
+
     public FullCategory withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public FullCategory(@JsonProperty("category_type") String categoryType, @JsonProperty("code") String code, @JsonProperty("sort_order") String sortOrder, @JsonProperty("title") String title) {
+        this.categoryType = categoryType;
+        this.code = code;
+        this.sortOrder = sortOrder;
+        this.title = title;
+  }
 }

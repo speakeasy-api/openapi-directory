@@ -12,6 +12,7 @@ public class RokuPlanListItem {
      */
     @JsonProperty("amount")
     public Float amount;
+
     public RokuPlanListItem withAmount(Float amount) {
         this.amount = amount;
         return this;
@@ -22,6 +23,7 @@ public class RokuPlanListItem {
      */
     @JsonProperty("currency")
     public String currency;
+
     public RokuPlanListItem withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -32,6 +34,7 @@ public class RokuPlanListItem {
      */
     @JsonProperty("description")
     public String description;
+
     public RokuPlanListItem withDescription(String description) {
         this.description = description;
         return this;
@@ -42,6 +45,7 @@ public class RokuPlanListItem {
      */
     @JsonProperty("interval")
     public RokuPlanListItemIntervalEnum interval;
+
     public RokuPlanListItem withInterval(RokuPlanListItemIntervalEnum interval) {
         this.interval = interval;
         return this;
@@ -52,6 +56,7 @@ public class RokuPlanListItem {
      */
     @JsonProperty("intervalCount")
     public Integer intervalCount;
+
     public RokuPlanListItem withIntervalCount(Integer intervalCount) {
         this.intervalCount = intervalCount;
         return this;
@@ -62,6 +67,7 @@ public class RokuPlanListItem {
      */
     @JsonProperty("nickname")
     public String nickname;
+
     public RokuPlanListItem withNickname(String nickname) {
         this.nickname = nickname;
         return this;
@@ -72,6 +78,7 @@ public class RokuPlanListItem {
      */
     @JsonProperty("product")
     public String product;
+
     public RokuPlanListItem withProduct(String product) {
         this.product = product;
         return this;
@@ -82,6 +89,7 @@ public class RokuPlanListItem {
      */
     @JsonProperty("productCode")
     public String productCode;
+
     public RokuPlanListItem withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -92,6 +100,7 @@ public class RokuPlanListItem {
      */
     @JsonProperty("savingLabel")
     public String savingLabel;
+
     public RokuPlanListItem withSavingLabel(String savingLabel) {
         this.savingLabel = savingLabel;
         return this;
@@ -102,9 +111,22 @@ public class RokuPlanListItem {
      */
     @JsonProperty("trialPeriodDays")
     public Integer trialPeriodDays;
+
     public RokuPlanListItem withTrialPeriodDays(Integer trialPeriodDays) {
         this.trialPeriodDays = trialPeriodDays;
         return this;
     }
     
+    public RokuPlanListItem(@JsonProperty("amount") Float amount, @JsonProperty("currency") String currency, @JsonProperty("description") String description, @JsonProperty("interval") RokuPlanListItemIntervalEnum interval, @JsonProperty("intervalCount") Integer intervalCount, @JsonProperty("nickname") String nickname, @JsonProperty("product") String product, @JsonProperty("productCode") String productCode, @JsonProperty("savingLabel") String savingLabel, @JsonProperty("trialPeriodDays") Integer trialPeriodDays) {
+        this.amount = amount;
+        this.currency = currency;
+        this.description = description;
+        this.interval = interval;
+        this.intervalCount = intervalCount;
+        this.nickname = nickname;
+        this.product = product;
+        this.productCode = productCode;
+        this.savingLabel = savingLabel;
+        this.trialPeriodDays = trialPeriodDays;
+  }
 }

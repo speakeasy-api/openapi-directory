@@ -18,6 +18,7 @@ public class InstanceWebDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public InstanceWebDetails withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class InstanceWebDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchUrl")
     public String launchUrl;
+
     public InstanceWebDetails withLaunchUrl(String launchUrl) {
         this.launchUrl = launchUrl;
         return this;
@@ -40,9 +42,11 @@ public class InstanceWebDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferred")
     public Boolean preferred;
+
     public InstanceWebDetails withPreferred(Boolean preferred) {
         this.preferred = preferred;
         return this;
     }
     
+    public InstanceWebDetails(){}
 }

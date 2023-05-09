@@ -12,6 +12,7 @@ public class GenerateDataKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionContext")
     public java.util.Map<String, String> encryptionContext;
+
     public GenerateDataKeyRequest withEncryptionContext(java.util.Map<String, String> encryptionContext) {
         this.encryptionContext = encryptionContext;
         return this;
@@ -20,6 +21,7 @@ public class GenerateDataKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantTokens")
     public String[] grantTokens;
+
     public GenerateDataKeyRequest withGrantTokens(String[] grantTokens) {
         this.grantTokens = grantTokens;
         return this;
@@ -27,6 +29,7 @@ public class GenerateDataKeyRequest {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public GenerateDataKeyRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -35,6 +38,7 @@ public class GenerateDataKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeySpec")
     public DataKeySpecEnum keySpec;
+
     public GenerateDataKeyRequest withKeySpec(DataKeySpecEnum keySpec) {
         this.keySpec = keySpec;
         return this;
@@ -43,9 +47,13 @@ public class GenerateDataKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfBytes")
     public Long numberOfBytes;
+
     public GenerateDataKeyRequest withNumberOfBytes(Long numberOfBytes) {
         this.numberOfBytes = numberOfBytes;
         return this;
     }
     
+    public GenerateDataKeyRequest(@JsonProperty("KeyId") String keyId) {
+        this.keyId = keyId;
+  }
 }

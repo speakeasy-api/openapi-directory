@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetMultipleCustomFieldValuesRequest {
@@ -12,6 +13,7 @@ public class SetMultipleCustomFieldValuesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public SetMultipleCustomFieldValuesRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class SetMultipleCustomFieldValuesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public SetMultipleCustomFieldValuesRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SetMultipleCustomFieldValuesRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public SetMultipleCustomFieldValuesRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,6 +43,7 @@ public class SetMultipleCustomFieldValuesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public String appId;
+
     public SetMultipleCustomFieldValuesRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -49,9 +54,17 @@ public class SetMultipleCustomFieldValuesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderFormId")
     public String orderFormId;
+
     public SetMultipleCustomFieldValuesRequest withOrderFormId(String orderFormId) {
         this.orderFormId = orderFormId;
         return this;
     }
     
+    public SetMultipleCustomFieldValuesRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("appId") String appId, @JsonProperty("orderFormId") String orderFormId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.appId = appId;
+        this.orderFormId = orderFormId;
+  }
 }

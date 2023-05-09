@@ -15,9 +15,11 @@ public class CreateDeploymentGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentGroupId")
     public String deploymentGroupId;
+
     public CreateDeploymentGroupOutput withDeploymentGroupId(String deploymentGroupId) {
         this.deploymentGroupId = deploymentGroupId;
         return this;
     }
     
+    public CreateDeploymentGroupOutput(){}
 }

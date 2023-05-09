@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppengineAppsAuthorizedCertificatesDeleteResponse {
     
     public String contentType;
+
     public AppengineAppsAuthorizedCertificatesDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AppengineAppsAuthorizedCertificatesDeleteResponse {
      */
     
     public java.util.Map<String, Object> empty;
+
     public AppengineAppsAuthorizedCertificatesDeleteResponse withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
@@ -26,6 +29,7 @@ public class AppengineAppsAuthorizedCertificatesDeleteResponse {
     
     
     public Integer statusCode;
+
     public AppengineAppsAuthorizedCertificatesDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AppengineAppsAuthorizedCertificatesDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppengineAppsAuthorizedCertificatesDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AppengineAppsAuthorizedCertificatesDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

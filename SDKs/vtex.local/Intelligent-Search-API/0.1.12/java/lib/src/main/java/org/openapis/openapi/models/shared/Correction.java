@@ -18,9 +18,11 @@ public class Correction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correction")
     public CorrectionCorrection correction;
+
     public Correction withCorrection(CorrectionCorrection correction) {
         this.correction = correction;
         return this;
     }
     
+    public Correction(){}
 }

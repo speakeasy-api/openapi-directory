@@ -15,6 +15,7 @@ public class LogTargetConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logLevel")
     public LogLevelEnum logLevel;
+
     public LogTargetConfiguration withLogLevel(LogLevelEnum logLevel) {
         this.logLevel = logLevel;
         return this;
@@ -23,9 +24,11 @@ public class LogTargetConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logTarget")
     public LogTarget logTarget;
+
     public LogTargetConfiguration withLogTarget(LogTarget logTarget) {
         this.logTarget = logTarget;
         return this;
     }
     
+    public LogTargetConfiguration(){}
 }

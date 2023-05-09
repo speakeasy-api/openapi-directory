@@ -15,6 +15,7 @@ public class ListFaxMediaListFaxMediaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     public org.openapis.openapi.models.shared.FaxV1FaxFaxMedia[] media;
+
     public ListFaxMediaListFaxMediaResponse withMedia(org.openapis.openapi.models.shared.FaxV1FaxFaxMedia[] media) {
         this.media = media;
         return this;
@@ -23,9 +24,11 @@ public class ListFaxMediaListFaxMediaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public ListFaxMediaListFaxMediaResponseMeta meta;
+
     public ListFaxMediaListFaxMediaResponse withMeta(ListFaxMediaListFaxMediaResponseMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public ListFaxMediaListFaxMediaResponse(){}
 }

@@ -55,10 +55,8 @@ public class Clickwraps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteClickwrapsIdResponse res = new org.openapis.openapi.models.operations.DeleteClickwrapsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteClickwrapsIdResponse res = new org.openapis.openapi.models.operations.DeleteClickwrapsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {
@@ -94,11 +92,9 @@ public class Clickwraps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClickwrapsResponse res = new org.openapis.openapi.models.operations.GetClickwrapsResponse() {{
+        org.openapis.openapi.models.operations.GetClickwrapsResponse res = new org.openapis.openapi.models.operations.GetClickwrapsResponse(contentType, httpRes.statusCode()) {{
             clickwrapEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +131,9 @@ public class Clickwraps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClickwrapsIdResponse res = new org.openapis.openapi.models.operations.GetClickwrapsIdResponse() {{
+        org.openapis.openapi.models.operations.GetClickwrapsIdResponse res = new org.openapis.openapi.models.operations.GetClickwrapsIdResponse(contentType, httpRes.statusCode()) {{
             clickwrapEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +172,9 @@ public class Clickwraps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchClickwrapsIdResponse res = new org.openapis.openapi.models.operations.PatchClickwrapsIdResponse() {{
+        org.openapis.openapi.models.operations.PatchClickwrapsIdResponse res = new org.openapis.openapi.models.operations.PatchClickwrapsIdResponse(contentType, httpRes.statusCode()) {{
             clickwrapEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -221,11 +213,9 @@ public class Clickwraps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostClickwrapsResponse res = new org.openapis.openapi.models.operations.PostClickwrapsResponse() {{
+        org.openapis.openapi.models.operations.PostClickwrapsResponse res = new org.openapis.openapi.models.operations.PostClickwrapsResponse(contentType, httpRes.statusCode()) {{
             clickwrapEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

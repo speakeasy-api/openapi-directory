@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DatadogConnectorProfileProperties {
     @JsonProperty("instanceUrl")
     public String instanceUrl;
+
     public DatadogConnectorProfileProperties withInstanceUrl(String instanceUrl) {
         this.instanceUrl = instanceUrl;
         return this;
     }
     
+    public DatadogConnectorProfileProperties(@JsonProperty("instanceUrl") String instanceUrl) {
+        this.instanceUrl = instanceUrl;
+  }
 }

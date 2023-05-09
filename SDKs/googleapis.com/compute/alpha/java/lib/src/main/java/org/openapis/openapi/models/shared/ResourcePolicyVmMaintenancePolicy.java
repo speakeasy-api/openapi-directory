@@ -15,6 +15,7 @@ public class ResourcePolicyVmMaintenancePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concurrencyControlGroup")
     public ResourcePolicyVmMaintenancePolicyConcurrencyControl concurrencyControlGroup;
+
     public ResourcePolicyVmMaintenancePolicy withConcurrencyControlGroup(ResourcePolicyVmMaintenancePolicyConcurrencyControl concurrencyControlGroup) {
         this.concurrencyControlGroup = concurrencyControlGroup;
         return this;
@@ -26,9 +27,11 @@ public class ResourcePolicyVmMaintenancePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenanceWindow")
     public ResourcePolicyVmMaintenancePolicyMaintenanceWindow maintenanceWindow;
+
     public ResourcePolicyVmMaintenancePolicy withMaintenanceWindow(ResourcePolicyVmMaintenancePolicyMaintenanceWindow maintenanceWindow) {
         this.maintenanceWindow = maintenanceWindow;
         return this;
     }
     
+    public ResourcePolicyVmMaintenancePolicy(){}
 }

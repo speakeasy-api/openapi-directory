@@ -15,6 +15,7 @@ public class ExtendedKeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public ExtendedKeyUsageNameEnum name;
+
     public ExtendedKeyUsage withName(ExtendedKeyUsageNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class ExtendedKeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OID")
     public String oid;
+
     public ExtendedKeyUsage withOid(String oid) {
         this.oid = oid;
         return this;
     }
     
+    public ExtendedKeyUsage(){}
 }

@@ -15,6 +15,7 @@ public class ListStreamingImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListStreamingImagesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListStreamingImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingImages")
     public StreamingImage[] streamingImages;
+
     public ListStreamingImagesResponse withStreamingImages(StreamingImage[] streamingImages) {
         this.streamingImages = streamingImages;
         return this;
     }
     
+    public ListStreamingImagesResponse(){}
 }

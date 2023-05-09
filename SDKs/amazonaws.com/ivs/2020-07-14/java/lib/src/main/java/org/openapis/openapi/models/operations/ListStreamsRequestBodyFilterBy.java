@@ -15,9 +15,11 @@ public class ListStreamsRequestBodyFilterBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("health")
     public org.openapis.openapi.models.shared.StreamHealthEnum health;
+
     public ListStreamsRequestBodyFilterBy withHealth(org.openapis.openapi.models.shared.StreamHealthEnum health) {
         this.health = health;
         return this;
     }
     
+    public ListStreamsRequestBodyFilterBy(){}
 }

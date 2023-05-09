@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IticrResponse {
     
     public String contentType;
+
     public IticrResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IticrResponse {
     
     
     public Integer statusCode;
+
     public IticrResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class IticrResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IticrResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class IticrResponse {
      */
     
     public Iticr400ApplicationJSON iticr400ApplicationJSONObject;
+
     public IticrResponse withIticr400ApplicationJSONObject(Iticr400ApplicationJSON iticr400ApplicationJSONObject) {
         this.iticr400ApplicationJSONObject = iticr400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class IticrResponse {
      */
     
     public Iticr401ApplicationJSON iticr401ApplicationJSONObject;
+
     public IticrResponse withIticr401ApplicationJSONObject(Iticr401ApplicationJSON iticr401ApplicationJSONObject) {
         this.iticr401ApplicationJSONObject = iticr401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class IticrResponse {
      */
     
     public Iticr404ApplicationJSON iticr404ApplicationJSONObject;
+
     public IticrResponse withIticr404ApplicationJSONObject(Iticr404ApplicationJSON iticr404ApplicationJSONObject) {
         this.iticr404ApplicationJSONObject = iticr404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class IticrResponse {
      */
     
     public Iticr500ApplicationJSON iticr500ApplicationJSONObject;
+
     public IticrResponse withIticr500ApplicationJSONObject(Iticr500ApplicationJSON iticr500ApplicationJSONObject) {
         this.iticr500ApplicationJSONObject = iticr500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class IticrResponse {
      */
     
     public Iticr502ApplicationJSON iticr502ApplicationJSONObject;
+
     public IticrResponse withIticr502ApplicationJSONObject(Iticr502ApplicationJSON iticr502ApplicationJSONObject) {
         this.iticr502ApplicationJSONObject = iticr502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class IticrResponse {
      */
     
     public Iticr503ApplicationJSON iticr503ApplicationJSONObject;
+
     public IticrResponse withIticr503ApplicationJSONObject(Iticr503ApplicationJSON iticr503ApplicationJSONObject) {
         this.iticr503ApplicationJSONObject = iticr503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class IticrResponse {
      */
     
     public Iticr504ApplicationJSON iticr504ApplicationJSONObject;
+
     public IticrResponse withIticr504ApplicationJSONObject(Iticr504ApplicationJSON iticr504ApplicationJSONObject) {
         this.iticr504ApplicationJSONObject = iticr504ApplicationJSONObject;
         return this;
     }
     
+    public IticrResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

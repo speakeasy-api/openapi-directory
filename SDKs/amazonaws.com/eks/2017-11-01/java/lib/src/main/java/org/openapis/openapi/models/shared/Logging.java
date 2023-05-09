@@ -15,9 +15,11 @@ public class Logging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterLogging")
     public LogSetup[] clusterLogging;
+
     public Logging withClusterLogging(LogSetup[] clusterLogging) {
         this.clusterLogging = clusterLogging;
         return this;
     }
     
+    public Logging(){}
 }

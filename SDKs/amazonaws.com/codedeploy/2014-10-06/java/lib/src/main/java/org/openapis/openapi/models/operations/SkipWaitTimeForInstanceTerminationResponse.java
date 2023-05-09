@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SkipWaitTimeForInstanceTerminationResponse {
     
     public String contentType;
+
     public SkipWaitTimeForInstanceTerminationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SkipWaitTimeForInstanceTerminationResponse {
      */
     
     public Object deploymentAlreadyCompletedException;
+
     public SkipWaitTimeForInstanceTerminationResponse withDeploymentAlreadyCompletedException(Object deploymentAlreadyCompletedException) {
         this.deploymentAlreadyCompletedException = deploymentAlreadyCompletedException;
         return this;
@@ -29,6 +32,7 @@ public class SkipWaitTimeForInstanceTerminationResponse {
      */
     
     public Object deploymentDoesNotExistException;
+
     public SkipWaitTimeForInstanceTerminationResponse withDeploymentDoesNotExistException(Object deploymentDoesNotExistException) {
         this.deploymentDoesNotExistException = deploymentDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class SkipWaitTimeForInstanceTerminationResponse {
      */
     
     public Object deploymentIdRequiredException;
+
     public SkipWaitTimeForInstanceTerminationResponse withDeploymentIdRequiredException(Object deploymentIdRequiredException) {
         this.deploymentIdRequiredException = deploymentIdRequiredException;
         return this;
@@ -49,6 +54,7 @@ public class SkipWaitTimeForInstanceTerminationResponse {
      */
     
     public Object deploymentNotStartedException;
+
     public SkipWaitTimeForInstanceTerminationResponse withDeploymentNotStartedException(Object deploymentNotStartedException) {
         this.deploymentNotStartedException = deploymentNotStartedException;
         return this;
@@ -59,6 +65,7 @@ public class SkipWaitTimeForInstanceTerminationResponse {
      */
     
     public Object invalidDeploymentIdException;
+
     public SkipWaitTimeForInstanceTerminationResponse withInvalidDeploymentIdException(Object invalidDeploymentIdException) {
         this.invalidDeploymentIdException = invalidDeploymentIdException;
         return this;
@@ -66,6 +73,7 @@ public class SkipWaitTimeForInstanceTerminationResponse {
     
     
     public Integer statusCode;
+
     public SkipWaitTimeForInstanceTerminationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class SkipWaitTimeForInstanceTerminationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SkipWaitTimeForInstanceTerminationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class SkipWaitTimeForInstanceTerminationResponse {
      */
     
     public Object unsupportedActionForDeploymentTypeException;
+
     public SkipWaitTimeForInstanceTerminationResponse withUnsupportedActionForDeploymentTypeException(Object unsupportedActionForDeploymentTypeException) {
         this.unsupportedActionForDeploymentTypeException = unsupportedActionForDeploymentTypeException;
         return this;
     }
     
+    public SkipWaitTimeForInstanceTerminationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

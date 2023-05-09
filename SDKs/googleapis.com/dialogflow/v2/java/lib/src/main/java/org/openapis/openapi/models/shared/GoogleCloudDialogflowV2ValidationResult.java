@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2ValidationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationErrors")
     public GoogleCloudDialogflowV2ValidationError[] validationErrors;
+
     public GoogleCloudDialogflowV2ValidationResult withValidationErrors(GoogleCloudDialogflowV2ValidationError[] validationErrors) {
         this.validationErrors = validationErrors;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ValidationResult(){}
 }

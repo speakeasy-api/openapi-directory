@@ -15,6 +15,7 @@ public class UserorderdetailsSubscriptionDataSubscriptionsPlanFrequency {
      */
     @JsonProperty("interval")
     public Long interval;
+
     public UserorderdetailsSubscriptionDataSubscriptionsPlanFrequency withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -25,9 +26,14 @@ public class UserorderdetailsSubscriptionDataSubscriptionsPlanFrequency {
      */
     @JsonProperty("periodicity")
     public String periodicity;
+
     public UserorderdetailsSubscriptionDataSubscriptionsPlanFrequency withPeriodicity(String periodicity) {
         this.periodicity = periodicity;
         return this;
     }
     
+    public UserorderdetailsSubscriptionDataSubscriptionsPlanFrequency(@JsonProperty("interval") Long interval, @JsonProperty("periodicity") String periodicity) {
+        this.interval = interval;
+        this.periodicity = periodicity;
+  }
 }

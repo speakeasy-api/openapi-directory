@@ -12,9 +12,13 @@ public class ReposAddTeamAccessRestrictionsRequestBody1 {
      */
     @JsonProperty("teams")
     public String[] teams;
+
     public ReposAddTeamAccessRestrictionsRequestBody1 withTeams(String[] teams) {
         this.teams = teams;
         return this;
     }
     
+    public ReposAddTeamAccessRestrictionsRequestBody1(@JsonProperty("teams") String[] teams) {
+        this.teams = teams;
+  }
 }

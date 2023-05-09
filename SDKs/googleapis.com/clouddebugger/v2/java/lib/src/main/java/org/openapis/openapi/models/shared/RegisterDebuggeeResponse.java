@@ -18,6 +18,7 @@ public class RegisterDebuggeeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentId")
     public String agentId;
+
     public RegisterDebuggeeResponse withAgentId(String agentId) {
         this.agentId = agentId;
         return this;
@@ -29,9 +30,11 @@ public class RegisterDebuggeeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debuggee")
     public Debuggee debuggee;
+
     public RegisterDebuggeeResponse withDebuggee(Debuggee debuggee) {
         this.debuggee = debuggee;
         return this;
     }
     
+    public RegisterDebuggeeResponse(){}
 }

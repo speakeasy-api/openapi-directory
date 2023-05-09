@@ -15,9 +15,11 @@ public class UpdateMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLModelId")
     public String mlModelId;
+
     public UpdateMLModelOutput withMLModelId(String mlModelId) {
         this.mlModelId = mlModelId;
         return this;
     }
     
+    public UpdateMLModelOutput(){}
 }

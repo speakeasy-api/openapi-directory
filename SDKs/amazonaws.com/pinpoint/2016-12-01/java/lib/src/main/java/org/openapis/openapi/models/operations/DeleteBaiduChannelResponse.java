@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBaiduChannelResponse {
@@ -12,6 +13,7 @@ public class DeleteBaiduChannelResponse {
      */
     
     public Object badRequestException;
+
     public DeleteBaiduChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBaiduChannelResponse {
     
     
     public String contentType;
+
     public DeleteBaiduChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBaiduChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBaiduChannelResponse deleteBaiduChannelResponse;
+
     public DeleteBaiduChannelResponse withDeleteBaiduChannelResponse(org.openapis.openapi.models.shared.DeleteBaiduChannelResponse deleteBaiduChannelResponse) {
         this.deleteBaiduChannelResponse = deleteBaiduChannelResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteBaiduChannelResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteBaiduChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteBaiduChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteBaiduChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteBaiduChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public DeleteBaiduChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteBaiduChannelResponse {
      */
     
     public Object notFoundException;
+
     public DeleteBaiduChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteBaiduChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public DeleteBaiduChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteBaiduChannelResponse {
     
     
     public Integer statusCode;
+
     public DeleteBaiduChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteBaiduChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBaiduChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteBaiduChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteBaiduChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteBaiduChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

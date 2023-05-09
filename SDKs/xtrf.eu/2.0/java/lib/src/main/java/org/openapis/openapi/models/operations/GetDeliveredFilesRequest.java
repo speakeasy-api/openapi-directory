@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeliveredFilesRequest {
@@ -12,9 +13,13 @@ public class GetDeliveredFilesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public GetDeliveredFilesRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public GetDeliveredFilesRequest(@JsonProperty("jobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetIndividualsResponse {
     
     public String contentType;
+
     public GetIndividualsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetIndividualsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetIndividualsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetIndividualsResponse {
     
     
     public Integer statusCode;
+
     public GetIndividualsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetIndividualsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetIndividualsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetIndividualsResponse {
      */
     
     public org.openapis.openapi.models.shared.Individual[] individuals;
+
     public GetIndividualsResponse withIndividuals(org.openapis.openapi.models.shared.Individual[] individuals) {
         this.individuals = individuals;
         return this;
@@ -50,6 +56,7 @@ public class GetIndividualsResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetIndividualsResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -60,9 +67,14 @@ public class GetIndividualsResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public GetIndividualsResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public GetIndividualsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

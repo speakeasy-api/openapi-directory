@@ -18,6 +18,7 @@ public class BillingAccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public BillingAccountInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class BillingAccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterBillingAccount")
     public String masterBillingAccount;
+
     public BillingAccountInput withMasterBillingAccount(String masterBillingAccount) {
         this.masterBillingAccount = masterBillingAccount;
         return this;
     }
     
+    public BillingAccountInput(){}
 }

@@ -15,6 +15,7 @@ public class DeliveryStreamEncryptionConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyARN")
     public String keyARN;
+
     public DeliveryStreamEncryptionConfigurationInput withKeyARN(String keyARN) {
         this.keyARN = keyARN;
         return this;
@@ -22,9 +23,13 @@ public class DeliveryStreamEncryptionConfigurationInput {
     
     @JsonProperty("KeyType")
     public KeyTypeEnum keyType;
+
     public DeliveryStreamEncryptionConfigurationInput withKeyType(KeyTypeEnum keyType) {
         this.keyType = keyType;
         return this;
     }
     
+    public DeliveryStreamEncryptionConfigurationInput(@JsonProperty("KeyType") KeyTypeEnum keyType) {
+        this.keyType = keyType;
+  }
 }

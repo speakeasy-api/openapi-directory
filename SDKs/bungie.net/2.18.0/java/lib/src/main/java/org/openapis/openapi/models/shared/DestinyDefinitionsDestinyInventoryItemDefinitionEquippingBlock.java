@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock {
      */
     
     public Integer ammoType;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock withAmmoType(Integer ammoType) {
         this.ammoType = ammoType;
         return this;
@@ -26,6 +27,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock {
      */
     
     public Integer attributes;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock withAttributes(Integer attributes) {
         this.attributes = attributes;
         return this;
@@ -36,6 +38,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock {
      */
     
     public String[] displayStrings;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock withDisplayStrings(String[] displayStrings) {
         this.displayStrings = displayStrings;
         return this;
@@ -46,6 +49,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock {
      */
     
     public Long equipmentSlotTypeHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock withEquipmentSlotTypeHash(Long equipmentSlotTypeHash) {
         this.equipmentSlotTypeHash = equipmentSlotTypeHash;
         return this;
@@ -56,6 +60,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock {
      */
     
     public Long gearsetItemHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock withGearsetItemHash(Long gearsetItemHash) {
         this.gearsetItemHash = gearsetItemHash;
         return this;
@@ -67,6 +72,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock {
      */
     
     public String uniqueLabel;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock withUniqueLabel(String uniqueLabel) {
         this.uniqueLabel = uniqueLabel;
         return this;
@@ -77,9 +83,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock {
      */
     
     public Long uniqueLabelHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock withUniqueLabelHash(Long uniqueLabelHash) {
         this.uniqueLabelHash = uniqueLabelHash;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock(){}
 }

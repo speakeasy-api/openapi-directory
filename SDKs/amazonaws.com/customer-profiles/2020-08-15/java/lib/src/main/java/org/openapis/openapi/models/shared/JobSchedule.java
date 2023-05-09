@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JobSchedule {
     @JsonProperty("DayOfTheWeek")
     public JobScheduleDayOfTheWeekEnum dayOfTheWeek;
+
     public JobSchedule withDayOfTheWeek(JobScheduleDayOfTheWeekEnum dayOfTheWeek) {
         this.dayOfTheWeek = dayOfTheWeek;
         return this;
@@ -19,9 +20,14 @@ public class JobSchedule {
     
     @JsonProperty("Time")
     public String time;
+
     public JobSchedule withTime(String time) {
         this.time = time;
         return this;
     }
     
+    public JobSchedule(@JsonProperty("DayOfTheWeek") JobScheduleDayOfTheWeekEnum dayOfTheWeek, @JsonProperty("Time") String time) {
+        this.dayOfTheWeek = dayOfTheWeek;
+        this.time = time;
+  }
 }

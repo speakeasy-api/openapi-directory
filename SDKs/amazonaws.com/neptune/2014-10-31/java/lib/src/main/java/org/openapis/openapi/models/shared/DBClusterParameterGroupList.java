@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBClusterParameterGroupList {
     
     public String dbClusterParameterGroupArn;
+
     public DBClusterParameterGroupList withDBClusterParameterGroupArn(String dbClusterParameterGroupArn) {
         this.dbClusterParameterGroupArn = dbClusterParameterGroupArn;
         return this;
@@ -19,6 +20,7 @@ public class DBClusterParameterGroupList {
     
     
     public String dbClusterParameterGroupName;
+
     public DBClusterParameterGroupList withDBClusterParameterGroupName(String dbClusterParameterGroupName) {
         this.dbClusterParameterGroupName = dbClusterParameterGroupName;
         return this;
@@ -26,6 +28,7 @@ public class DBClusterParameterGroupList {
     
     
     public String dbParameterGroupFamily;
+
     public DBClusterParameterGroupList withDBParameterGroupFamily(String dbParameterGroupFamily) {
         this.dbParameterGroupFamily = dbParameterGroupFamily;
         return this;
@@ -33,9 +36,11 @@ public class DBClusterParameterGroupList {
     
     
     public String description;
+
     public DBClusterParameterGroupList withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public DBClusterParameterGroupList(){}
 }

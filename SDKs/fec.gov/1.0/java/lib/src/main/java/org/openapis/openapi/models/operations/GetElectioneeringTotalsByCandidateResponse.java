@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetElectioneeringTotalsByCandidateResponse {
     
     public String contentType;
+
     public GetElectioneeringTotalsByCandidateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetElectioneeringTotalsByCandidateResponse {
     
     
     public org.openapis.openapi.models.shared.ECTotalsByCandidatePage ecTotalsByCandidatePage;
+
     public GetElectioneeringTotalsByCandidateResponse withECTotalsByCandidatePage(org.openapis.openapi.models.shared.ECTotalsByCandidatePage ecTotalsByCandidatePage) {
         this.ecTotalsByCandidatePage = ecTotalsByCandidatePage;
         return this;
@@ -23,6 +26,7 @@ public class GetElectioneeringTotalsByCandidateResponse {
     
     
     public Integer statusCode;
+
     public GetElectioneeringTotalsByCandidateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetElectioneeringTotalsByCandidateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetElectioneeringTotalsByCandidateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetElectioneeringTotalsByCandidateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

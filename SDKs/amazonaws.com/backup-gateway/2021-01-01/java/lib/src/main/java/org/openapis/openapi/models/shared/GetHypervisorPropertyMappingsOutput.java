@@ -15,6 +15,7 @@ public class GetHypervisorPropertyMappingsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HypervisorArn")
     public String hypervisorArn;
+
     public GetHypervisorPropertyMappingsOutput withHypervisorArn(String hypervisorArn) {
         this.hypervisorArn = hypervisorArn;
         return this;
@@ -23,6 +24,7 @@ public class GetHypervisorPropertyMappingsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamRoleArn")
     public String iamRoleArn;
+
     public GetHypervisorPropertyMappingsOutput withIamRoleArn(String iamRoleArn) {
         this.iamRoleArn = iamRoleArn;
         return this;
@@ -31,9 +33,11 @@ public class GetHypervisorPropertyMappingsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VmwareToAwsTagMappings")
     public VmwareToAwsTagMapping[] vmwareToAwsTagMappings;
+
     public GetHypervisorPropertyMappingsOutput withVmwareToAwsTagMappings(VmwareToAwsTagMapping[] vmwareToAwsTagMappings) {
         this.vmwareToAwsTagMappings = vmwareToAwsTagMappings;
         return this;
     }
     
+    public GetHypervisorPropertyMappingsOutput(){}
 }

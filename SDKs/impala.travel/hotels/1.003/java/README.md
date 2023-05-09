@@ -16,31 +16,31 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CancelBookingRequest;
 import org.openapis.openapi.models.operations.CancelBookingResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     apiKeyAuthentication = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CancelBookingRequest req = new CancelBookingRequest() {{
-                bookingId = "corrupti";
-            }}            
+            CancelBookingRequest req = new CancelBookingRequest("provident");            
 
             CancelBookingResponse res = sdk.bookings.cancelBooking(req);
 
-            if (res.booking.isPresent()) {
+            if (res.booking != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,24 +48,24 @@ public class Application {
 ## Available Resources and Operations
 
 
-### bookings
+### [bookings](docs/bookings/README.md)
 
-* `cancelBooking` - Cancel a booking
-* `createBooking` - Create a booking
-* `listBookings` - List all bookings
-* `retrieveBooking` - Retrieve a booking
-* `updateBooking` - Change a booking
-* `updateBookingContact` - Change a booking contact
+* [cancelBooking](docs/bookings/README.md#cancelbooking) - Cancel a booking
+* [createBooking](docs/bookings/README.md#createbooking) - Create a booking
+* [listBookings](docs/bookings/README.md#listbookings) - List all bookings
+* [retrieveBooking](docs/bookings/README.md#retrievebooking) - Retrieve a booking
+* [updateBooking](docs/bookings/README.md#updatebooking) - Change a booking
+* [updateBookingContact](docs/bookings/README.md#updatebookingcontact) - Change a booking contact
 
-### hotels
+### [hotels](docs/hotels/README.md)
 
-* `listHotels` - List all hotels
-* `retrieveHotel` - Retrieve a hotel
+* [listHotels](docs/hotels/README.md#listhotels) - List all hotels
+* [retrieveHotel](docs/hotels/README.md#retrievehotel) - Retrieve a hotel
 
-### rateCalendar
+### [rateCalendar](docs/ratecalendar/README.md)
 
-* `listRatePlanForHotelForRatePlanId` - List a rate plan (rate calendar) for a hotel (Beta endpoint).
-* `listRatePlansForHotel` - List all rate plans (rate calendar) for a hotel (Beta endpoint)
+* [listRatePlanForHotelForRatePlanId](docs/ratecalendar/README.md#listrateplanforhotelforrateplanid) - List a rate plan (rate calendar) for a hotel (Beta endpoint).
+* [listRatePlansForHotel](docs/ratecalendar/README.md#listrateplansforhotel) - List all rate plans (rate calendar) for a hotel (Beta endpoint)
 <!-- End SDK Available Operations -->
 
 ### Maturity

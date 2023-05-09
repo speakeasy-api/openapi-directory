@@ -15,6 +15,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelImmediately")
     public Boolean cancelImmediately;
+
     public GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest withCancelImmediately(Boolean cancelImmediately) {
         this.cancelImmediately = cancelImmediately;
         return this;
@@ -26,9 +27,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellationReason")
     public GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum cancellationReason;
+
     public GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest withCancellationReason(GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum cancellationReason) {
         this.cancellationReason = cancellationReason;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest(){}
 }

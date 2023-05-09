@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsNetworkBandwidthGbps {
     
     public Double max;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsNetworkBandwidthGbps withMax(Double max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Double min;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsNetworkBandwidthGbps withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsNetworkBandwidthGbps(){}
 }

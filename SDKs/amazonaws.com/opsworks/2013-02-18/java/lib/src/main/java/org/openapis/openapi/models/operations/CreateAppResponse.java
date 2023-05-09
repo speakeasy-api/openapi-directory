@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAppResponse {
     
     public String contentType;
+
     public CreateAppResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateAppResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAppResult createAppResult;
+
     public CreateAppResponse withCreateAppResult(org.openapis.openapi.models.shared.CreateAppResult createAppResult) {
         this.createAppResult = createAppResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateAppResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAppResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class CreateAppResponse {
     
     
     public Integer statusCode;
+
     public CreateAppResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateAppResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAppResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CreateAppResponse {
      */
     
     public Object validationException;
+
     public CreateAppResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateAppResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class TimelineCommittedEventTree {
      */
     @JsonProperty("sha")
     public String sha;
+
     public TimelineCommittedEventTree withSha(String sha) {
         this.sha = sha;
         return this;
@@ -19,9 +20,14 @@ public class TimelineCommittedEventTree {
     
     @JsonProperty("url")
     public String url;
+
     public TimelineCommittedEventTree withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TimelineCommittedEventTree(@JsonProperty("sha") String sha, @JsonProperty("url") String url) {
+        this.sha = sha;
+        this.url = url;
+  }
 }

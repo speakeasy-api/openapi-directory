@@ -15,6 +15,7 @@ public class ListPartnerEventSourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPartnerEventSourcesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPartnerEventSourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartnerEventSources")
     public PartnerEventSource[] partnerEventSources;
+
     public ListPartnerEventSourcesResponse withPartnerEventSources(PartnerEventSource[] partnerEventSources) {
         this.partnerEventSources = partnerEventSources;
         return this;
     }
     
+    public ListPartnerEventSourcesResponse(){}
 }

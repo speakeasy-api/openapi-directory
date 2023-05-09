@@ -15,6 +15,7 @@ public class Dpcer404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Dpcer404ApplicationJSONErrorEnum error;
+
     public Dpcer404ApplicationJSON withError(Dpcer404ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Dpcer404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Dpcer404ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Dpcer404ApplicationJSON withErrorDescription(Dpcer404ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Dpcer404ApplicationJSON(){}
 }

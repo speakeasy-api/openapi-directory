@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSchedulesScheduleETotalsByCandidateResponse {
     
     public String contentType;
+
     public GetSchedulesScheduleETotalsByCandidateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSchedulesScheduleETotalsByCandidateResponse {
     
     
     public org.openapis.openapi.models.shared.IETotalsByCandidatePage ieTotalsByCandidatePage;
+
     public GetSchedulesScheduleETotalsByCandidateResponse withIETotalsByCandidatePage(org.openapis.openapi.models.shared.IETotalsByCandidatePage ieTotalsByCandidatePage) {
         this.ieTotalsByCandidatePage = ieTotalsByCandidatePage;
         return this;
@@ -23,6 +26,7 @@ public class GetSchedulesScheduleETotalsByCandidateResponse {
     
     
     public Integer statusCode;
+
     public GetSchedulesScheduleETotalsByCandidateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetSchedulesScheduleETotalsByCandidateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSchedulesScheduleETotalsByCandidateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSchedulesScheduleETotalsByCandidateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

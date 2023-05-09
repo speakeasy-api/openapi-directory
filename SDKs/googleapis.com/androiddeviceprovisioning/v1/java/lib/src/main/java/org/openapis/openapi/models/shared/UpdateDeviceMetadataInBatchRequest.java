@@ -18,9 +18,11 @@ public class UpdateDeviceMetadataInBatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updates")
     public UpdateMetadataArguments[] updates;
+
     public UpdateDeviceMetadataInBatchRequest withUpdates(UpdateMetadataArguments[] updates) {
         this.updates = updates;
         return this;
     }
     
+    public UpdateDeviceMetadataInBatchRequest(){}
 }

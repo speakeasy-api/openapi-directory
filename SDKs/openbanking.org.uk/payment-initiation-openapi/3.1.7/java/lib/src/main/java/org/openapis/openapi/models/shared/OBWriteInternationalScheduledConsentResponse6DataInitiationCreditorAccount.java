@@ -17,6 +17,7 @@ public class OBWriteInternationalScheduledConsentResponse6DataInitiationCreditor
      */
     @JsonProperty("Identification")
     public String identification;
+
     public OBWriteInternationalScheduledConsentResponse6DataInitiationCreditorAccount withIdentification(String identification) {
         this.identification = identification;
         return this;
@@ -29,6 +30,7 @@ public class OBWriteInternationalScheduledConsentResponse6DataInitiationCreditor
      */
     @JsonProperty("Name")
     public String name;
+
     public OBWriteInternationalScheduledConsentResponse6DataInitiationCreditorAccount withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +41,7 @@ public class OBWriteInternationalScheduledConsentResponse6DataInitiationCreditor
      */
     @JsonProperty("SchemeName")
     public String schemeName;
+
     public OBWriteInternationalScheduledConsentResponse6DataInitiationCreditorAccount withSchemeName(String schemeName) {
         this.schemeName = schemeName;
         return this;
@@ -51,9 +54,15 @@ public class OBWriteInternationalScheduledConsentResponse6DataInitiationCreditor
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryIdentification")
     public String secondaryIdentification;
+
     public OBWriteInternationalScheduledConsentResponse6DataInitiationCreditorAccount withSecondaryIdentification(String secondaryIdentification) {
         this.secondaryIdentification = secondaryIdentification;
         return this;
     }
     
+    public OBWriteInternationalScheduledConsentResponse6DataInitiationCreditorAccount(@JsonProperty("Identification") String identification, @JsonProperty("Name") String name, @JsonProperty("SchemeName") String schemeName) {
+        this.identification = identification;
+        this.name = name;
+        this.schemeName = schemeName;
+  }
 }

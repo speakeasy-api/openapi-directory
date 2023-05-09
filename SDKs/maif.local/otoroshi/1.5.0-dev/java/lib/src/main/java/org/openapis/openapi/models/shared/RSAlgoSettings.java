@@ -18,6 +18,7 @@ public class RSAlgoSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateKey")
     public String privateKey;
+
     public RSAlgoSettings withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -28,6 +29,7 @@ public class RSAlgoSettings {
      */
     @JsonProperty("publicKey")
     public String publicKey;
+
     public RSAlgoSettings withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -38,6 +40,7 @@ public class RSAlgoSettings {
      */
     @JsonProperty("size")
     public Integer size;
+
     public RSAlgoSettings withSize(Integer size) {
         this.size = size;
         return this;
@@ -48,9 +51,15 @@ public class RSAlgoSettings {
      */
     @JsonProperty("type")
     public String type;
+
     public RSAlgoSettings withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RSAlgoSettings(@JsonProperty("publicKey") String publicKey, @JsonProperty("size") Integer size, @JsonProperty("type") String type) {
+        this.publicKey = publicKey;
+        this.size = size;
+        this.type = type;
+  }
 }

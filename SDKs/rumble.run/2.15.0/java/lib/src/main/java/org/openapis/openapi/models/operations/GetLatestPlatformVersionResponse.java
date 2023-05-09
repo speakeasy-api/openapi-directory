@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLatestPlatformVersionResponse {
@@ -12,6 +13,7 @@ public class GetLatestPlatformVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.ComponentVersion componentVersion;
+
     public GetLatestPlatformVersionResponse withComponentVersion(org.openapis.openapi.models.shared.ComponentVersion componentVersion) {
         this.componentVersion = componentVersion;
         return this;
@@ -19,6 +21,7 @@ public class GetLatestPlatformVersionResponse {
     
     
     public String contentType;
+
     public GetLatestPlatformVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetLatestPlatformVersionResponse {
     
     
     public Integer statusCode;
+
     public GetLatestPlatformVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetLatestPlatformVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLatestPlatformVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetLatestPlatformVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

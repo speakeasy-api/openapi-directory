@@ -18,6 +18,7 @@ public class SearchAllResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SearchAllResourcesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class SearchAllResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public StandardResourceMetadata[] results;
+
     public SearchAllResourcesResponse withResults(StandardResourceMetadata[] results) {
         this.results = results;
         return this;
     }
     
+    public SearchAllResourcesResponse(){}
 }

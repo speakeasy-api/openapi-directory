@@ -12,6 +12,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awayScore")
     public Long awayScore;
+
     public LivePlayByPlayDrivesPlays withAwayScore(Long awayScore) {
         this.awayScore = awayScore;
         return this;
@@ -20,6 +21,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clock")
     public String clock;
+
     public LivePlayByPlayDrivesPlays withClock(String clock) {
         this.clock = clock;
         return this;
@@ -28,6 +30,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     public Long distance;
+
     public LivePlayByPlayDrivesPlays withDistance(Long distance) {
         this.distance = distance;
         return this;
@@ -36,6 +39,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("down")
     public Long down;
+
     public LivePlayByPlayDrivesPlays withDown(Long down) {
         this.down = down;
         return this;
@@ -44,6 +48,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downType")
     public String downType;
+
     public LivePlayByPlayDrivesPlays withDownType(String downType) {
         this.downType = downType;
         return this;
@@ -52,6 +57,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("epa")
     public Double epa;
+
     public LivePlayByPlayDrivesPlays withEpa(Double epa) {
         this.epa = epa;
         return this;
@@ -60,6 +66,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("garbageTime")
     public Boolean garbageTime;
+
     public LivePlayByPlayDrivesPlays withGarbageTime(Boolean garbageTime) {
         this.garbageTime = garbageTime;
         return this;
@@ -68,6 +75,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homeScore")
     public Long homeScore;
+
     public LivePlayByPlayDrivesPlays withHomeScore(Long homeScore) {
         this.homeScore = homeScore;
         return this;
@@ -76,6 +84,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public LivePlayByPlayDrivesPlays withId(Long id) {
         this.id = id;
         return this;
@@ -84,6 +93,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public Long period;
+
     public LivePlayByPlayDrivesPlays withPeriod(Long period) {
         this.period = period;
         return this;
@@ -92,6 +102,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playText")
     public String playText;
+
     public LivePlayByPlayDrivesPlays withPlayText(String playText) {
         this.playText = playText;
         return this;
@@ -100,6 +111,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playType")
     public String playType;
+
     public LivePlayByPlayDrivesPlays withPlayType(String playType) {
         this.playType = playType;
         return this;
@@ -108,6 +120,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playTypeId")
     public Long playTypeId;
+
     public LivePlayByPlayDrivesPlays withPlayTypeId(Long playTypeId) {
         this.playTypeId = playTypeId;
         return this;
@@ -116,6 +129,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rushPass")
     public String rushPass;
+
     public LivePlayByPlayDrivesPlays withRushPass(String rushPass) {
         this.rushPass = rushPass;
         return this;
@@ -124,6 +138,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public LivePlayByPlayDrivesPlays withSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -132,6 +147,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public LivePlayByPlayDrivesPlays withTeam(String team) {
         this.team = team;
         return this;
@@ -140,6 +156,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teamId")
     public Long teamId;
+
     public LivePlayByPlayDrivesPlays withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -148,6 +165,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wallclock")
     public String wallclock;
+
     public LivePlayByPlayDrivesPlays withWallclock(String wallclock) {
         this.wallclock = wallclock;
         return this;
@@ -156,6 +174,7 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yardsGained")
     public Long yardsGained;
+
     public LivePlayByPlayDrivesPlays withYardsGained(Long yardsGained) {
         this.yardsGained = yardsGained;
         return this;
@@ -164,9 +183,11 @@ public class LivePlayByPlayDrivesPlays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yardsToGoal")
     public Long yardsToGoal;
+
     public LivePlayByPlayDrivesPlays withYardsToGoal(Long yardsToGoal) {
         this.yardsToGoal = yardsToGoal;
         return this;
     }
     
+    public LivePlayByPlayDrivesPlays(){}
 }

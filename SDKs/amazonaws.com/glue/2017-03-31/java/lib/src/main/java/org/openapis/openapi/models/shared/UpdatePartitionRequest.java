@@ -12,6 +12,7 @@ public class UpdatePartitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public UpdatePartitionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class UpdatePartitionRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public UpdatePartitionRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +28,7 @@ public class UpdatePartitionRequest {
     
     @JsonProperty("PartitionInput")
     public PartitionInput partitionInput;
+
     public UpdatePartitionRequest withPartitionInput(PartitionInput partitionInput) {
         this.partitionInput = partitionInput;
         return this;
@@ -33,6 +36,7 @@ public class UpdatePartitionRequest {
     
     @JsonProperty("PartitionValueList")
     public String[] partitionValueList;
+
     public UpdatePartitionRequest withPartitionValueList(String[] partitionValueList) {
         this.partitionValueList = partitionValueList;
         return this;
@@ -40,9 +44,16 @@ public class UpdatePartitionRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public UpdatePartitionRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public UpdatePartitionRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("PartitionInput") PartitionInput partitionInput, @JsonProperty("PartitionValueList") String[] partitionValueList, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.partitionInput = partitionInput;
+        this.partitionValueList = partitionValueList;
+        this.tableName = tableName;
+  }
 }

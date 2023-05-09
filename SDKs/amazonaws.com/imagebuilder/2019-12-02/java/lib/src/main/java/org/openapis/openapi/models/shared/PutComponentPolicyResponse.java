@@ -15,6 +15,7 @@ public class PutComponentPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentArn")
     public String componentArn;
+
     public PutComponentPolicyResponse withComponentArn(String componentArn) {
         this.componentArn = componentArn;
         return this;
@@ -23,9 +24,11 @@ public class PutComponentPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public PutComponentPolicyResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public PutComponentPolicyResponse(){}
 }

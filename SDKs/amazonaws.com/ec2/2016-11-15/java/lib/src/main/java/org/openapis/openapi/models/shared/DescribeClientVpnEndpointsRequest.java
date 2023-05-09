@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnEndpointsRequest {
     
     public String[] clientVpnEndpointIds;
+
     public DescribeClientVpnEndpointsRequest withClientVpnEndpointIds(String[] clientVpnEndpointIds) {
         this.clientVpnEndpointIds = clientVpnEndpointIds;
         return this;
@@ -16,6 +17,7 @@ public class DescribeClientVpnEndpointsRequest {
     
     
     public Boolean dryRun;
+
     public DescribeClientVpnEndpointsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class DescribeClientVpnEndpointsRequest {
     
     
     public DescribeClientVpnEndpointsRequestFilters[] filters;
+
     public DescribeClientVpnEndpointsRequest withFilters(DescribeClientVpnEndpointsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class DescribeClientVpnEndpointsRequest {
     
     
     public Long maxResults;
+
     public DescribeClientVpnEndpointsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeClientVpnEndpointsRequest {
     
     
     public String nextToken;
+
     public DescribeClientVpnEndpointsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeClientVpnEndpointsRequest(){}
 }

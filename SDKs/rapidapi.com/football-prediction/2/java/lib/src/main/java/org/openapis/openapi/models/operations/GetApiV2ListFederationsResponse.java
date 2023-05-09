@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiV2ListFederationsResponse {
     
     public String contentType;
+
     public GetApiV2ListFederationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetApiV2ListFederationsResponse {
     
     
     public Integer statusCode;
+
     public GetApiV2ListFederationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetApiV2ListFederationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiV2ListFederationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetApiV2ListFederationsResponse {
      */
     
     public GetApiV2ListFederations200ApplicationJSON getApiV2ListFederations200ApplicationJSONObject;
+
     public GetApiV2ListFederationsResponse withGetApiV2ListFederations200ApplicationJSONObject(GetApiV2ListFederations200ApplicationJSON getApiV2ListFederations200ApplicationJSONObject) {
         this.getApiV2ListFederations200ApplicationJSONObject = getApiV2ListFederations200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class GetApiV2ListFederationsResponse {
      */
     
     public GetApiV2ListFederations404ApplicationJSON getApiV2ListFederations404ApplicationJSONObject;
+
     public GetApiV2ListFederationsResponse withGetApiV2ListFederations404ApplicationJSONObject(GetApiV2ListFederations404ApplicationJSON getApiV2ListFederations404ApplicationJSONObject) {
         this.getApiV2ListFederations404ApplicationJSONObject = getApiV2ListFederations404ApplicationJSONObject;
         return this;
     }
     
+    public GetApiV2ListFederationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

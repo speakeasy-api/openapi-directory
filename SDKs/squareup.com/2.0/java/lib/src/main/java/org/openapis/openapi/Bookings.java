@@ -59,11 +59,9 @@ public class Bookings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelBookingResponse res = new org.openapis.openapi.models.operations.CancelBookingResponse() {{
+        org.openapis.openapi.models.operations.CancelBookingResponse res = new org.openapis.openapi.models.operations.CancelBookingResponse(contentType, httpRes.statusCode()) {{
             cancelBookingResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Bookings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateBookingResponse res = new org.openapis.openapi.models.operations.CreateBookingResponse() {{
+        org.openapis.openapi.models.operations.CreateBookingResponse res = new org.openapis.openapi.models.operations.CreateBookingResponse(contentType, httpRes.statusCode()) {{
             createBookingResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,11 +148,9 @@ public class Bookings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTeamMemberBookingProfilesResponse res = new org.openapis.openapi.models.operations.ListTeamMemberBookingProfilesResponse() {{
+        org.openapis.openapi.models.operations.ListTeamMemberBookingProfilesResponse res = new org.openapis.openapi.models.operations.ListTeamMemberBookingProfilesResponse(contentType, httpRes.statusCode()) {{
             listTeamMemberBookingProfilesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Bookings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveBookingResponse res = new org.openapis.openapi.models.operations.RetrieveBookingResponse() {{
+        org.openapis.openapi.models.operations.RetrieveBookingResponse res = new org.openapis.openapi.models.operations.RetrieveBookingResponse(contentType, httpRes.statusCode()) {{
             retrieveBookingResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -214,10 +206,11 @@ public class Bookings {
     /**
      * RetrieveBusinessBookingProfile
      * Retrieves a seller's booking profile.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveBusinessBookingProfileResponse retrieveBusinessBookingProfile() throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveBusinessBookingProfileResponse retrieveBusinessBookingProfile(org.openapis.openapi.models.operations.RetrieveBusinessBookingProfileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/bookings/business-booking-profile");
         
@@ -226,16 +219,15 @@ public class Bookings {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveBusinessBookingProfileResponse res = new org.openapis.openapi.models.operations.RetrieveBusinessBookingProfileResponse() {{
+        org.openapis.openapi.models.operations.RetrieveBusinessBookingProfileResponse res = new org.openapis.openapi.models.operations.RetrieveBusinessBookingProfileResponse(contentType, httpRes.statusCode()) {{
             retrieveBusinessBookingProfileResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -272,11 +264,9 @@ public class Bookings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveTeamMemberBookingProfileResponse res = new org.openapis.openapi.models.operations.RetrieveTeamMemberBookingProfileResponse() {{
+        org.openapis.openapi.models.operations.RetrieveTeamMemberBookingProfileResponse res = new org.openapis.openapi.models.operations.RetrieveTeamMemberBookingProfileResponse(contentType, httpRes.statusCode()) {{
             retrieveTeamMemberBookingProfileResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -318,11 +308,9 @@ public class Bookings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchAvailabilityResponse res = new org.openapis.openapi.models.operations.SearchAvailabilityResponse() {{
+        org.openapis.openapi.models.operations.SearchAvailabilityResponse res = new org.openapis.openapi.models.operations.SearchAvailabilityResponse(contentType, httpRes.statusCode()) {{
             searchAvailabilityResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -364,11 +352,9 @@ public class Bookings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateBookingResponse res = new org.openapis.openapi.models.operations.UpdateBookingResponse() {{
+        org.openapis.openapi.models.operations.UpdateBookingResponse res = new org.openapis.openapi.models.operations.UpdateBookingResponse(contentType, httpRes.statusCode()) {{
             updateBookingResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

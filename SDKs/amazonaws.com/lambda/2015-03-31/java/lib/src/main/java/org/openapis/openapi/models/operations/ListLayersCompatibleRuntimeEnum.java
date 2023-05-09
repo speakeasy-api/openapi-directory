@@ -37,7 +37,8 @@ public enum ListLayersCompatibleRuntimeEnum {
     RUBY27("ruby2.7"),
     PROVIDED("provided"),
     PROVIDED_AL2("provided.al2"),
-    NODEJS18_X("nodejs18.x");
+    NODEJS18_X("nodejs18.x"),
+    PYTHON310("python3.10");
 
     @JsonValue
     public final String value;

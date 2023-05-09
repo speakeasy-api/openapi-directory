@@ -18,6 +18,7 @@ public class ReportWorkItemStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentWorkerTime")
     public String currentWorkerTime;
+
     public ReportWorkItemStatusRequest withCurrentWorkerTime(String currentWorkerTime) {
         this.currentWorkerTime = currentWorkerTime;
         return this;
@@ -29,6 +30,7 @@ public class ReportWorkItemStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public ReportWorkItemStatusRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -40,6 +42,7 @@ public class ReportWorkItemStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unifiedWorkerRequest")
     public java.util.Map<String, Object> unifiedWorkerRequest;
+
     public ReportWorkItemStatusRequest withUnifiedWorkerRequest(java.util.Map<String, Object> unifiedWorkerRequest) {
         this.unifiedWorkerRequest = unifiedWorkerRequest;
         return this;
@@ -51,6 +54,7 @@ public class ReportWorkItemStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workItemStatuses")
     public WorkItemStatus[] workItemStatuses;
+
     public ReportWorkItemStatusRequest withWorkItemStatuses(WorkItemStatus[] workItemStatuses) {
         this.workItemStatuses = workItemStatuses;
         return this;
@@ -62,9 +66,11 @@ public class ReportWorkItemStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerId")
     public String workerId;
+
     public ReportWorkItemStatusRequest withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public ReportWorkItemStatusRequest(){}
 }

@@ -15,6 +15,7 @@ public class AuthResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public AuthResult withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -23,9 +24,11 @@ public class AuthResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrierkasseUuid")
     public String registrierkasseUuid;
+
     public AuthResult withRegistrierkasseUuid(String registrierkasseUuid) {
         this.registrierkasseUuid = registrierkasseUuid;
         return this;
     }
     
+    public AuthResult(){}
 }

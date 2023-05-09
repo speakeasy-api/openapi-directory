@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CollectionsDetailCollection {
     /**
@@ -12,6 +12,7 @@ public class CollectionsDetailCollection {
      */
     
     public CollectionsDetailCollectionAttributes attributes;
+
     public CollectionsDetailCollection withAttributes(CollectionsDetailCollectionAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class CollectionsDetailCollection {
      */
     
     public String id;
+
     public CollectionsDetailCollection withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class CollectionsDetailCollection {
      */
     
     public CollectionsDetailCollectionLinks links;
+
     public CollectionsDetailCollection withLinks(CollectionsDetailCollectionLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class CollectionsDetailCollection {
      */
     
     public CollectionsDetailCollectionRelationships relationships;
+
     public CollectionsDetailCollection withRelationships(CollectionsDetailCollectionRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,13 @@ public class CollectionsDetailCollection {
      */
     
     public String type;
+
     public CollectionsDetailCollection withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CollectionsDetailCollection(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

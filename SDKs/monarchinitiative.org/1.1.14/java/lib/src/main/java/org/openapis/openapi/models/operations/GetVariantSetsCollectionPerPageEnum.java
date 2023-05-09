@@ -10,17 +10,17 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * GetVariantSetsCollectionPerPageEnum - Results per page {error_msg}
  */
 public enum GetVariantSetsCollectionPerPageEnum {
-    TWO("2"),
-    TEN("10"),
-    TWENTY("20"),
-    THIRTY("30"),
-    FORTY("40"),
-    FIFTY("50");
+    TWO(2L),
+    TEN(10L),
+    TWENTY(20L),
+    THIRTY(30L),
+    FORTY(40L),
+    FIFTY(50L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private GetVariantSetsCollectionPerPageEnum(String value) {
+    private GetVariantSetsCollectionPerPageEnum(Long value) {
         this.value = value;
     }
 }

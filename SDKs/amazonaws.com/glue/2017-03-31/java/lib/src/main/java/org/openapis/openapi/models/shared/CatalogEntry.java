@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CatalogEntry {
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public CatalogEntry withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -19,9 +20,14 @@ public class CatalogEntry {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public CatalogEntry withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public CatalogEntry(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+  }
 }

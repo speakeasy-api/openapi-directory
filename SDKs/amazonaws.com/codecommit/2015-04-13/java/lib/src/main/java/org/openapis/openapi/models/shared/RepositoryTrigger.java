@@ -15,6 +15,7 @@ public class RepositoryTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branches")
     public String[] branches;
+
     public RepositoryTrigger withBranches(String[] branches) {
         this.branches = branches;
         return this;
@@ -23,6 +24,7 @@ public class RepositoryTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customData")
     public String customData;
+
     public RepositoryTrigger withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -30,6 +32,7 @@ public class RepositoryTrigger {
     
     @JsonProperty("destinationArn")
     public String destinationArn;
+
     public RepositoryTrigger withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -37,6 +40,7 @@ public class RepositoryTrigger {
     
     @JsonProperty("events")
     public RepositoryTriggerEventEnumEnum[] events;
+
     public RepositoryTrigger withEvents(RepositoryTriggerEventEnumEnum[] events) {
         this.events = events;
         return this;
@@ -44,9 +48,15 @@ public class RepositoryTrigger {
     
     @JsonProperty("name")
     public String name;
+
     public RepositoryTrigger withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RepositoryTrigger(@JsonProperty("destinationArn") String destinationArn, @JsonProperty("events") RepositoryTriggerEventEnumEnum[] events, @JsonProperty("name") String name) {
+        this.destinationArn = destinationArn;
+        this.events = events;
+        this.name = name;
+  }
 }

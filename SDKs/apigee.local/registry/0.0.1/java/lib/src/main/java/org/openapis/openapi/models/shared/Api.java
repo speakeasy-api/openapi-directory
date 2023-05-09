@@ -23,6 +23,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public Api withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -34,6 +35,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public String availability;
+
     public Api withAvailability(String availability) {
         this.availability = availability;
         return this;
@@ -47,6 +49,7 @@ public class Api {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public Api withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -58,6 +61,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Api withDescription(String description) {
         this.description = description;
         return this;
@@ -69,6 +73,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Api withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -80,6 +85,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Api withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -91,6 +97,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Api withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +109,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedDeployment")
     public String recommendedDeployment;
+
     public Api withRecommendedDeployment(String recommendedDeployment) {
         this.recommendedDeployment = recommendedDeployment;
         return this;
@@ -113,6 +121,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedVersion")
     public String recommendedVersion;
+
     public Api withRecommendedVersion(String recommendedVersion) {
         this.recommendedVersion = recommendedVersion;
         return this;
@@ -126,9 +135,11 @@ public class Api {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public Api withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Api(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetRequestSpotFleetRequestConfigLoadBalancersConfigTargetGroupsConfig {
     
     public RequestSpotFleetRequestSpotFleetRequestConfigLoadBalancersConfigTargetGroupsConfigTargetGroups[] targetGroups;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLoadBalancersConfigTargetGroupsConfig withTargetGroups(RequestSpotFleetRequestSpotFleetRequestConfigLoadBalancersConfigTargetGroupsConfigTargetGroups[] targetGroups) {
         this.targetGroups = targetGroups;
         return this;
     }
     
+    public RequestSpotFleetRequestSpotFleetRequestConfigLoadBalancersConfigTargetGroupsConfig(){}
 }

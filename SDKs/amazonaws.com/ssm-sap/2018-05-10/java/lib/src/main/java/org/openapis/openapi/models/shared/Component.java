@@ -20,6 +20,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public Component withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -28,6 +29,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComponentId")
     public String componentId;
+
     public Component withComponentId(String componentId) {
         this.componentId = componentId;
         return this;
@@ -36,6 +38,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComponentType")
     public ComponentTypeEnum componentType;
+
     public Component withComponentType(ComponentTypeEnum componentType) {
         this.componentType = componentType;
         return this;
@@ -44,6 +47,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Databases")
     public String[] databases;
+
     public Component withDatabases(String[] databases) {
         this.databases = databases;
         return this;
@@ -52,6 +56,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hosts")
     public Host[] hosts;
+
     public Component withHosts(Host[] hosts) {
         this.hosts = hosts;
         return this;
@@ -62,6 +67,7 @@ public class Component {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public Component withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -70,6 +76,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryHost")
     public String primaryHost;
+
     public Component withPrimaryHost(String primaryHost) {
         this.primaryHost = primaryHost;
         return this;
@@ -78,9 +85,11 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ComponentStatusEnum status;
+
     public Component withStatus(ComponentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Component(){}
 }

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsListRequest;
 import org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -28,31 +27,32 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            VersionhistoryPlatformsChannelsListRequest req = new VersionhistoryPlatformsChannelsListRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                oauthToken = "corrupti";
-                pageSize = 847252;
-                pageToken = "vel";
-                parent = "error";
+            VersionhistoryPlatformsChannelsListRequest req = new VersionhistoryPlatformsChannelsListRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                pageSize = 423655L;
+                pageToken = "error";
                 prettyPrint = false;
                 quotaUser = "deserunt";
                 uploadType = "suscipit";
                 uploadProtocol = "iure";
-            }}            
+            }};            
 
             VersionhistoryPlatformsChannelsListResponse res = sdk.platforms.versionhistoryPlatformsChannelsList(req);
 
-            if (res.listChannelsResponse.isPresent()) {
+            if (res.listChannelsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -60,12 +60,12 @@ public class Application {
 ## Available Resources and Operations
 
 
-### platforms
+### [platforms](docs/platforms/README.md)
 
-* `versionhistoryPlatformsChannelsList` - Returns list of channels that are available for a given platform.
-* `versionhistoryPlatformsChannelsVersionsList` - Returns list of version for the given platform/channel.
-* `versionhistoryPlatformsChannelsVersionsReleasesList` - Returns list of releases of the given version.
-* `versionhistoryPlatformsList` - Returns list of platforms that are available for a given product. The resource "product" has no resource name in its name.
+* [versionhistoryPlatformsChannelsList](docs/platforms/README.md#versionhistoryplatformschannelslist) - Returns list of channels that are available for a given platform.
+* [versionhistoryPlatformsChannelsVersionsList](docs/platforms/README.md#versionhistoryplatformschannelsversionslist) - Returns list of version for the given platform/channel.
+* [versionhistoryPlatformsChannelsVersionsReleasesList](docs/platforms/README.md#versionhistoryplatformschannelsversionsreleaseslist) - Returns list of releases of the given version.
+* [versionhistoryPlatformsList](docs/platforms/README.md#versionhistoryplatformslist) - Returns list of platforms that are available for a given product. The resource "product" has no resource name in its name.
 <!-- End SDK Available Operations -->
 
 ### Maturity

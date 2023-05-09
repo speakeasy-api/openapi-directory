@@ -15,9 +15,11 @@ public class CreateReturnShippingLabelResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ShippingLabelStatusEnum status;
+
     public CreateReturnShippingLabelResult withStatus(ShippingLabelStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateReturnShippingLabelResult(){}
 }

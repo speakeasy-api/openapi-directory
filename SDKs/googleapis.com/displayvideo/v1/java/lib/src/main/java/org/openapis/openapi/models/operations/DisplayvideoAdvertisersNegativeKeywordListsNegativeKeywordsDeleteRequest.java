@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=advertiserId")
     public String advertiserId;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -42,6 +46,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=keywordValue")
     public String keywordValue;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest withKeywordValue(String keywordValue) {
         this.keywordValue = keywordValue;
         return this;
@@ -92,6 +101,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=negativeKeywordListId")
     public String negativeKeywordListId;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest withNegativeKeywordListId(String negativeKeywordListId) {
         this.negativeKeywordListId = negativeKeywordListId;
         return this;
@@ -102,6 +112,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,15 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest(@JsonProperty("advertiserId") String advertiserId, @JsonProperty("keywordValue") String keywordValue, @JsonProperty("negativeKeywordListId") String negativeKeywordListId) {
+        this.advertiserId = advertiserId;
+        this.keywordValue = keywordValue;
+        this.negativeKeywordListId = negativeKeywordListId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopFleetActionsResponse {
     
     public String contentType;
+
     public StopFleetActionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopFleetActionsResponse {
      */
     
     public Object internalServiceException;
+
     public StopFleetActionsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class StopFleetActionsResponse {
      */
     
     public Object invalidRequestException;
+
     public StopFleetActionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StopFleetActionsResponse {
      */
     
     public Object notFoundException;
+
     public StopFleetActionsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopFleetActionsResponse {
     
     
     public Integer statusCode;
+
     public StopFleetActionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopFleetActionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopFleetActionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopFleetActionsResponse {
      */
     
     public org.openapis.openapi.models.shared.StopFleetActionsOutput stopFleetActionsOutput;
+
     public StopFleetActionsResponse withStopFleetActionsOutput(org.openapis.openapi.models.shared.StopFleetActionsOutput stopFleetActionsOutput) {
         this.stopFleetActionsOutput = stopFleetActionsOutput;
         return this;
@@ -73,6 +81,7 @@ public class StopFleetActionsResponse {
      */
     
     public Object unauthorizedException;
+
     public StopFleetActionsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class StopFleetActionsResponse {
      */
     
     public Object unsupportedRegionException;
+
     public StopFleetActionsResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public StopFleetActionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -62,11 +62,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HomegraphDevicesQueryResponse res = new org.openapis.openapi.models.operations.HomegraphDevicesQueryResponse() {{
+        org.openapis.openapi.models.operations.HomegraphDevicesQueryResponse res = new org.openapis.openapi.models.operations.HomegraphDevicesQueryResponse(contentType, httpRes.statusCode()) {{
             queryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HomegraphDevicesReportStateAndNotificationResponse res = new org.openapis.openapi.models.operations.HomegraphDevicesReportStateAndNotificationResponse() {{
+        org.openapis.openapi.models.operations.HomegraphDevicesReportStateAndNotificationResponse res = new org.openapis.openapi.models.operations.HomegraphDevicesReportStateAndNotificationResponse(contentType, httpRes.statusCode()) {{
             reportStateAndNotificationResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HomegraphDevicesRequestSyncResponse res = new org.openapis.openapi.models.operations.HomegraphDevicesRequestSyncResponse() {{
+        org.openapis.openapi.models.operations.HomegraphDevicesRequestSyncResponse res = new org.openapis.openapi.models.operations.HomegraphDevicesRequestSyncResponse(contentType, httpRes.statusCode()) {{
             requestSyncDevicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -206,11 +200,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HomegraphDevicesSyncResponse res = new org.openapis.openapi.models.operations.HomegraphDevicesSyncResponse() {{
+        org.openapis.openapi.models.operations.HomegraphDevicesSyncResponse res = new org.openapis.openapi.models.operations.HomegraphDevicesSyncResponse(contentType, httpRes.statusCode()) {{
             syncResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MarketplaceChannelCatalogLinks {
     @JsonProperty("properties")
     public LinksGetChannelCatalogMarketplacePropertiesLink properties;
+
     public MarketplaceChannelCatalogLinks withProperties(LinksGetChannelCatalogMarketplacePropertiesLink properties) {
         this.properties = properties;
         return this;
@@ -22,6 +23,7 @@ public class MarketplaceChannelCatalogLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publications")
     public LinksGetPublicationsLink publications;
+
     public MarketplaceChannelCatalogLinks withPublications(LinksGetPublicationsLink publications) {
         this.publications = publications;
         return this;
@@ -30,6 +32,7 @@ public class MarketplaceChannelCatalogLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishOptions")
     public MarketplaceChannelCatalogPublicationOption[] publishOptions;
+
     public MarketplaceChannelCatalogLinks withPublishOptions(MarketplaceChannelCatalogPublicationOption[] publishOptions) {
         this.publishOptions = publishOptions;
         return this;
@@ -37,9 +40,14 @@ public class MarketplaceChannelCatalogLinks {
     
     @JsonProperty("settings")
     public LinksGetChannelCatalogMarketplaceSettingsLink settings;
+
     public MarketplaceChannelCatalogLinks withSettings(LinksGetChannelCatalogMarketplaceSettingsLink settings) {
         this.settings = settings;
         return this;
     }
     
+    public MarketplaceChannelCatalogLinks(@JsonProperty("properties") LinksGetChannelCatalogMarketplacePropertiesLink properties, @JsonProperty("settings") LinksGetChannelCatalogMarketplaceSettingsLink settings) {
+        this.properties = properties;
+        this.settings = settings;
+  }
 }

@@ -15,6 +15,7 @@ public class ListCoverageStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countsByGroup")
     public Counts[] countsByGroup;
+
     public ListCoverageStatisticsResponse withCountsByGroup(Counts[] countsByGroup) {
         this.countsByGroup = countsByGroup;
         return this;
@@ -23,6 +24,7 @@ public class ListCoverageStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListCoverageStatisticsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +32,13 @@ public class ListCoverageStatisticsResponse {
     
     @JsonProperty("totalCounts")
     public Long totalCounts;
+
     public ListCoverageStatisticsResponse withTotalCounts(Long totalCounts) {
         this.totalCounts = totalCounts;
         return this;
     }
     
+    public ListCoverageStatisticsResponse(@JsonProperty("totalCounts") Long totalCounts) {
+        this.totalCounts = totalCounts;
+  }
 }

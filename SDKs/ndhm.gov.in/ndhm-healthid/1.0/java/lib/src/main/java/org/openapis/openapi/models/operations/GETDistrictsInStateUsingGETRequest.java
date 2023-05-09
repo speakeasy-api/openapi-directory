@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDistrictsInStateUsingGETRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public GETDistrictsInStateUsingGETRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class GETDistrictsInStateUsingGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stateCode")
     public String stateCode;
+
     public GETDistrictsInStateUsingGETRequest withStateCode(String stateCode) {
         this.stateCode = stateCode;
         return this;
     }
     
+    public GETDistrictsInStateUsingGETRequest(@JsonProperty("stateCode") String stateCode) {
+        this.stateCode = stateCode;
+  }
 }

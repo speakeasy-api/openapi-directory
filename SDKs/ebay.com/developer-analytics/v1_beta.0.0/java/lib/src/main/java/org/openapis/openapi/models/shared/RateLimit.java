@@ -18,6 +18,7 @@ public class RateLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiContext")
     public String apiContext;
+
     public RateLimit withApiContext(String apiContext) {
         this.apiContext = apiContext;
         return this;
@@ -29,6 +30,7 @@ public class RateLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiName")
     public String apiName;
+
     public RateLimit withApiName(String apiName) {
         this.apiName = apiName;
         return this;
@@ -40,6 +42,7 @@ public class RateLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public String apiVersion;
+
     public RateLimit withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -51,9 +54,11 @@ public class RateLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public Resource[] resources;
+
     public RateLimit withResources(Resource[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public RateLimit(){}
 }

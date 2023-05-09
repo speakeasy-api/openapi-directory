@@ -20,6 +20,7 @@ public class OrganizationConfigRuleStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public OrganizationConfigRuleStatus withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,6 +29,7 @@ public class OrganizationConfigRuleStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public OrganizationConfigRuleStatus withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -38,6 +40,7 @@ public class OrganizationConfigRuleStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public OrganizationConfigRuleStatus withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -45,6 +48,7 @@ public class OrganizationConfigRuleStatus {
     
     @JsonProperty("OrganizationConfigRuleName")
     public String organizationConfigRuleName;
+
     public OrganizationConfigRuleStatus withOrganizationConfigRuleName(String organizationConfigRuleName) {
         this.organizationConfigRuleName = organizationConfigRuleName;
         return this;
@@ -52,9 +56,14 @@ public class OrganizationConfigRuleStatus {
     
     @JsonProperty("OrganizationRuleStatus")
     public OrganizationRuleStatusEnum organizationRuleStatus;
+
     public OrganizationConfigRuleStatus withOrganizationRuleStatus(OrganizationRuleStatusEnum organizationRuleStatus) {
         this.organizationRuleStatus = organizationRuleStatus;
         return this;
     }
     
+    public OrganizationConfigRuleStatus(@JsonProperty("OrganizationConfigRuleName") String organizationConfigRuleName, @JsonProperty("OrganizationRuleStatus") OrganizationRuleStatusEnum organizationRuleStatus) {
+        this.organizationConfigRuleName = organizationConfigRuleName;
+        this.organizationRuleStatus = organizationRuleStatus;
+  }
 }

@@ -12,6 +12,7 @@ public class TeamPPAOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cumulative")
     public TeamPPAOffenseCumulative cumulative;
+
     public TeamPPAOffense withCumulative(TeamPPAOffenseCumulative cumulative) {
         this.cumulative = cumulative;
         return this;
@@ -20,6 +21,7 @@ public class TeamPPAOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstDown")
     public Double firstDown;
+
     public TeamPPAOffense withFirstDown(Double firstDown) {
         this.firstDown = firstDown;
         return this;
@@ -28,6 +30,7 @@ public class TeamPPAOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overall")
     public Double overall;
+
     public TeamPPAOffense withOverall(Double overall) {
         this.overall = overall;
         return this;
@@ -36,6 +39,7 @@ public class TeamPPAOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passing")
     public Double passing;
+
     public TeamPPAOffense withPassing(Double passing) {
         this.passing = passing;
         return this;
@@ -44,6 +48,7 @@ public class TeamPPAOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rushing")
     public Double rushing;
+
     public TeamPPAOffense withRushing(Double rushing) {
         this.rushing = rushing;
         return this;
@@ -52,6 +57,7 @@ public class TeamPPAOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondDown")
     public Double secondDown;
+
     public TeamPPAOffense withSecondDown(Double secondDown) {
         this.secondDown = secondDown;
         return this;
@@ -60,9 +66,11 @@ public class TeamPPAOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thirdDown")
     public Double thirdDown;
+
     public TeamPPAOffense withThirdDown(Double thirdDown) {
         this.thirdDown = thirdDown;
         return this;
     }
     
+    public TeamPPAOffense(){}
 }

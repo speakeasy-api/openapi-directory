@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRule {
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRuleDestinationPorts[] destinationPorts;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRule withDestinationPorts(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRuleDestinationPorts[] destinationPorts) {
         this.destinationPorts = destinationPorts;
         return this;
@@ -19,6 +20,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String[] destinations;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRule withDestinations(String[] destinations) {
         this.destinations = destinations;
         return this;
@@ -26,6 +28,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String direction;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRule withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -33,6 +36,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String protocol;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRule withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -40,6 +44,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String ruleAction;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRule withRuleAction(String ruleAction) {
         this.ruleAction = ruleAction;
         return this;
@@ -47,6 +52,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String ruleGroupArn;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRule withRuleGroupArn(String ruleGroupArn) {
         this.ruleGroupArn = ruleGroupArn;
         return this;
@@ -54,6 +60,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRuleSourcePorts[] sourcePorts;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRule withSourcePorts(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRuleSourcePorts[] sourcePorts) {
         this.sourcePorts = sourcePorts;
         return this;
@@ -61,9 +68,11 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String[] sources;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRule withSources(String[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRule(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAppValidationConfigurationResponse {
     
     public String contentType;
+
     public PutAppValidationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutAppValidationConfigurationResponse {
      */
     
     public Object internalError;
+
     public PutAppValidationConfigurationResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -29,6 +32,7 @@ public class PutAppValidationConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public PutAppValidationConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class PutAppValidationConfigurationResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public PutAppValidationConfigurationResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -49,6 +54,7 @@ public class PutAppValidationConfigurationResponse {
      */
     
     public Object operationNotPermittedException;
+
     public PutAppValidationConfigurationResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -59,6 +65,7 @@ public class PutAppValidationConfigurationResponse {
      */
     
     public java.util.Map<String, Object> putAppValidationConfigurationResponse;
+
     public PutAppValidationConfigurationResponse withPutAppValidationConfigurationResponse(java.util.Map<String, Object> putAppValidationConfigurationResponse) {
         this.putAppValidationConfigurationResponse = putAppValidationConfigurationResponse;
         return this;
@@ -66,6 +73,7 @@ public class PutAppValidationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PutAppValidationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutAppValidationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAppValidationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class PutAppValidationConfigurationResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public PutAppValidationConfigurationResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public PutAppValidationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

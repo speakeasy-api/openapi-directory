@@ -18,6 +18,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions2
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
@@ -25,9 +26,13 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions2
     
     @JsonProperty("transactions")
     public org.openapis.openapi.models.shared.Transaction[] transactions;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions200ApplicationJSON withTransactions(org.openapis.openapi.models.shared.Transaction[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions200ApplicationJSON(@JsonProperty("transactions") org.openapis.openapi.models.shared.Transaction[] transactions) {
+        this.transactions = transactions;
+  }
 }

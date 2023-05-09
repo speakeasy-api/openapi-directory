@@ -12,6 +12,7 @@ public class GistSimpleGistFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public GistSimpleGistFiles withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -20,6 +21,7 @@ public class GistSimpleGistFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public GistSimpleGistFiles withLanguage(String language) {
         this.language = language;
         return this;
@@ -28,6 +30,7 @@ public class GistSimpleGistFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw_url")
     public String rawUrl;
+
     public GistSimpleGistFiles withRawUrl(String rawUrl) {
         this.rawUrl = rawUrl;
         return this;
@@ -36,6 +39,7 @@ public class GistSimpleGistFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public GistSimpleGistFiles withSize(Long size) {
         this.size = size;
         return this;
@@ -44,9 +48,11 @@ public class GistSimpleGistFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GistSimpleGistFiles withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GistSimpleGistFiles(){}
 }

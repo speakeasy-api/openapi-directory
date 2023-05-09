@@ -15,6 +15,7 @@ public class Listener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionPool")
     public VirtualNodeConnectionPool connectionPool;
+
     public Listener withConnectionPool(VirtualNodeConnectionPool connectionPool) {
         this.connectionPool = connectionPool;
         return this;
@@ -23,6 +24,7 @@ public class Listener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheck")
     public HealthCheckPolicy healthCheck;
+
     public Listener withHealthCheck(HealthCheckPolicy healthCheck) {
         this.healthCheck = healthCheck;
         return this;
@@ -31,6 +33,7 @@ public class Listener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outlierDetection")
     public OutlierDetection outlierDetection;
+
     public Listener withOutlierDetection(OutlierDetection outlierDetection) {
         this.outlierDetection = outlierDetection;
         return this;
@@ -38,6 +41,7 @@ public class Listener {
     
     @JsonProperty("portMapping")
     public PortMapping portMapping;
+
     public Listener withPortMapping(PortMapping portMapping) {
         this.portMapping = portMapping;
         return this;
@@ -46,6 +50,7 @@ public class Listener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public ListenerTimeout timeout;
+
     public Listener withTimeout(ListenerTimeout timeout) {
         this.timeout = timeout;
         return this;
@@ -54,9 +59,13 @@ public class Listener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tls")
     public ListenerTls tls;
+
     public Listener withTls(ListenerTls tls) {
         this.tls = tls;
         return this;
     }
     
+    public Listener(@JsonProperty("portMapping") PortMapping portMapping) {
+        this.portMapping = portMapping;
+  }
 }

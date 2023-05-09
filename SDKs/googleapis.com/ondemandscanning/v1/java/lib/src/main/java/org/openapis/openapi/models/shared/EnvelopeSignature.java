@@ -12,6 +12,7 @@ public class EnvelopeSignature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyid")
     public String keyid;
+
     public EnvelopeSignature withKeyid(String keyid) {
         this.keyid = keyid;
         return this;
@@ -20,9 +21,11 @@ public class EnvelopeSignature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sig")
     public String sig;
+
     public EnvelopeSignature withSig(String sig) {
         this.sig = sig;
         return this;
     }
     
+    public EnvelopeSignature(){}
 }

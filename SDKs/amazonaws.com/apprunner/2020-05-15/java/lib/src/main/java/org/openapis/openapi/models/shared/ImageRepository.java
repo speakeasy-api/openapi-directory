@@ -15,6 +15,7 @@ public class ImageRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageConfiguration")
     public ImageConfiguration imageConfiguration;
+
     public ImageRepository withImageConfiguration(ImageConfiguration imageConfiguration) {
         this.imageConfiguration = imageConfiguration;
         return this;
@@ -22,6 +23,7 @@ public class ImageRepository {
     
     @JsonProperty("ImageIdentifier")
     public String imageIdentifier;
+
     public ImageRepository withImageIdentifier(String imageIdentifier) {
         this.imageIdentifier = imageIdentifier;
         return this;
@@ -29,9 +31,14 @@ public class ImageRepository {
     
     @JsonProperty("ImageRepositoryType")
     public ImageRepositoryTypeEnum imageRepositoryType;
+
     public ImageRepository withImageRepositoryType(ImageRepositoryTypeEnum imageRepositoryType) {
         this.imageRepositoryType = imageRepositoryType;
         return this;
     }
     
+    public ImageRepository(@JsonProperty("ImageIdentifier") String imageIdentifier, @JsonProperty("ImageRepositoryType") ImageRepositoryTypeEnum imageRepositoryType) {
+        this.imageIdentifier = imageIdentifier;
+        this.imageRepositoryType = imageRepositoryType;
+  }
 }

@@ -18,6 +18,7 @@ public class HostsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostNames")
     public String[] hostNames;
+
     public HostsEntry withHostNames(String[] hostNames) {
         this.hostNames = hostNames;
         return this;
@@ -29,9 +30,11 @@ public class HostsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public HostsEntry withIp(String ip) {
         this.ip = ip;
         return this;
     }
     
+    public HostsEntry(){}
 }

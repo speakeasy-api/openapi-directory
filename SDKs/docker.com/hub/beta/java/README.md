@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DeleteV2AccessTokensUuidRequest;
 import org.openapis.openapi.models.operations.DeleteV2AccessTokensUuidResponse;
 
@@ -26,9 +25,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteV2AccessTokensUuidRequest req = new DeleteV2AccessTokensUuidRequest() {{
-                uuid = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-            }}            
+            DeleteV2AccessTokensUuidRequest req = new DeleteV2AccessTokensUuidRequest("corrupti");            
 
             DeleteV2AccessTokensUuidResponse res = sdk.accessTokens.deleteV2AccessTokensUuid(req);
 
@@ -38,6 +35,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -45,54 +44,54 @@ public class Application {
 ## Available Resources and Operations
 
 
-### accessTokens
+### [accessTokens](docs/accesstokens/README.md)
 
-* `deleteV2AccessTokensUuid` - Delete a personal access token
-* `getV2AccessTokens` - Get a list of personal access tokens
-* `getV2AccessTokensUuid` - Get a personal access token
-* `patchV2AccessTokensUuid` - Update a personal access token
-* `postV2AccessTokens` - Create a personal access token
+* [deleteV2AccessTokensUuid](docs/accesstokens/README.md#deletev2accesstokensuuid) - Delete a personal access token
+* [getV2AccessTokens](docs/accesstokens/README.md#getv2accesstokens) - Get a list of personal access tokens
+* [getV2AccessTokensUuid](docs/accesstokens/README.md#getv2accesstokensuuid) - Get a personal access token
+* [patchV2AccessTokensUuid](docs/accesstokens/README.md#patchv2accesstokensuuid) - Update a personal access token
+* [postV2AccessTokens](docs/accesstokens/README.md#postv2accesstokens) - Create a personal access token
 
-### auditLogs
+### [auditLogs](docs/auditlogs/README.md)
 
-* `auditLogsGetAuditActions` - Returns list of audit log actions.
-* `auditLogsGetAuditLogs` - Returns list of audit log  events.
+* [auditLogsGetAuditActions](docs/auditlogs/README.md#auditlogsgetauditactions) - Returns list of audit log actions.
+* [auditLogsGetAuditLogs](docs/auditlogs/README.md#auditlogsgetauditlogs) - Returns list of audit log  events.
 
-### authentication
+### [authentication](docs/authentication/README.md)
 
-* `postUsers2FALogin` - Second factor authentication.
-* `postUsersLogin` - Create an authentication token
+* [postUsers2FALogin](docs/authentication/README.md#postusers2falogin) - Second factor authentication.
+* [postUsersLogin](docs/authentication/README.md#postuserslogin) - Create an authentication token
 
-### images
+### [images](docs/images/README.md)
 
-* `getNamespacesRepositoriesImages` - Get details of repository's images
-* `getNamespacesRepositoriesImagesSummary` - Get summary of repository's images
-* `getNamespacesRepositoriesImagesTags` - Get image's tags
-* `postNamespacesDeleteImages` - Delete images
+* [getNamespacesRepositoriesImages](docs/images/README.md#getnamespacesrepositoriesimages) - Get details of repository's images
+* [getNamespacesRepositoriesImagesSummary](docs/images/README.md#getnamespacesrepositoriesimagessummary) - Get summary of repository's images
+* [getNamespacesRepositoriesImagesTags](docs/images/README.md#getnamespacesrepositoriesimagestags) - Get image's tags
+* [postNamespacesDeleteImages](docs/images/README.md#postnamespacesdeleteimages) - Delete images
 
-### orgSettings
+### [orgSettings](docs/orgsettings/README.md)
 
-* `getV2OrgsNameSettings` - Get organization settings
-* `putV2OrgsNameSettings` - Update organization settings
+* [getV2OrgsNameSettings](docs/orgsettings/README.md#getv2orgsnamesettings) - Get organization settings
+* [putV2OrgsNameSettings](docs/orgsettings/README.md#putv2orgsnamesettings) - Update organization settings
 
-### repositories
+### [repositories](docs/repositories/README.md)
 
-* `getV2NamespacesNamespaceRepositoriesRepositoryTags` - List repository tags
-* `getV2NamespacesNamespaceRepositoriesRepositoryTagsTag` - Read repository tag
-* `headV2NamespacesNamespaceRepositoriesRepositoryTags` - Check repository tags
-* `headV2NamespacesNamespaceRepositoriesRepositoryTagsTag` - Check repository tag
+* [getV2NamespacesNamespaceRepositoriesRepositoryTags](docs/repositories/README.md#getv2namespacesnamespacerepositoriesrepositorytags) - List repository tags
+* [getV2NamespacesNamespaceRepositoriesRepositoryTagsTag](docs/repositories/README.md#getv2namespacesnamespacerepositoriesrepositorytagstag) - Read repository tag
+* [headV2NamespacesNamespaceRepositoriesRepositoryTags](docs/repositories/README.md#headv2namespacesnamespacerepositoriesrepositorytags) - Check repository tags
+* [headV2NamespacesNamespaceRepositoriesRepositoryTagsTag](docs/repositories/README.md#headv2namespacesnamespacerepositoriesrepositorytagstag) - Check repository tag
 
-### scim
+### [scim](docs/scim/README.md)
 
-* `getV2Scim20ResourceTypes` - List resource types
-* `getV2Scim20ResourceTypesName` - Get a resource type
-* `getV2Scim20Schemas` - List schemas
-* `getV2Scim20SchemasId` - Get a schema
-* `getV2Scim20ServiceProviderConfig` - Get service provider config
-* `getV2Scim20Users` - List users
-* `getV2Scim20UsersId` - Get a user
-* `postV2Scim20Users` - Create user
-* `putV2Scim20UsersId` - Update a user
+* [getV2Scim20ResourceTypes](docs/scim/README.md#getv2scim20resourcetypes) - List resource types
+* [getV2Scim20ResourceTypesName](docs/scim/README.md#getv2scim20resourcetypesname) - Get a resource type
+* [getV2Scim20Schemas](docs/scim/README.md#getv2scim20schemas) - List schemas
+* [getV2Scim20SchemasId](docs/scim/README.md#getv2scim20schemasid) - Get a schema
+* [getV2Scim20ServiceProviderConfig](docs/scim/README.md#getv2scim20serviceproviderconfig) - Get service provider config
+* [getV2Scim20Users](docs/scim/README.md#getv2scim20users) - List users
+* [getV2Scim20UsersId](docs/scim/README.md#getv2scim20usersid) - Get a user
+* [postV2Scim20Users](docs/scim/README.md#postv2scim20users) - Create user
+* [putV2Scim20UsersId](docs/scim/README.md#putv2scim20usersid) - Update a user
 <!-- End SDK Available Operations -->
 
 ### Maturity

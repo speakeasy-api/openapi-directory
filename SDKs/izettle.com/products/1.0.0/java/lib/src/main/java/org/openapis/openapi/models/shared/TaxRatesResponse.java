@@ -15,9 +15,11 @@ public class TaxRatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxRates")
     public TaxRate[] taxRates;
+
     public TaxRatesResponse withTaxRates(TaxRate[] taxRates) {
         this.taxRates = taxRates;
         return this;
     }
     
+    public TaxRatesResponse(){}
 }

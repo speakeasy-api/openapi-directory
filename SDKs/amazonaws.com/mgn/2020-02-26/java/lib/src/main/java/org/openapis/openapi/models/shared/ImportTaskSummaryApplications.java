@@ -15,6 +15,7 @@ public class ImportTaskSummaryApplications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdCount")
     public Long createdCount;
+
     public ImportTaskSummaryApplications withCreatedCount(Long createdCount) {
         this.createdCount = createdCount;
         return this;
@@ -23,9 +24,11 @@ public class ImportTaskSummaryApplications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiedCount")
     public Long modifiedCount;
+
     public ImportTaskSummaryApplications withModifiedCount(Long modifiedCount) {
         this.modifiedCount = modifiedCount;
         return this;
     }
     
+    public ImportTaskSummaryApplications(){}
 }

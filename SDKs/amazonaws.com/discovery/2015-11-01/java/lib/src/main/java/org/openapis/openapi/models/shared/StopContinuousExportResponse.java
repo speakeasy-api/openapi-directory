@@ -22,6 +22,7 @@ public class StopContinuousExportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public StopContinuousExportResponse withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -32,9 +33,11 @@ public class StopContinuousExportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stopTime")
     public OffsetDateTime stopTime;
+
     public StopContinuousExportResponse withStopTime(OffsetDateTime stopTime) {
         this.stopTime = stopTime;
         return this;
     }
     
+    public StopContinuousExportResponse(){}
 }

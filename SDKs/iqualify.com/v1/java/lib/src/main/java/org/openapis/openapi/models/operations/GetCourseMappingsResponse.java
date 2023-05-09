@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCourseMappingsResponse {
     
     public String contentType;
+
     public GetCourseMappingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCourseMappingsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetCourseMappingsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class GetCourseMappingsResponse {
     
     
     public Integer statusCode;
+
     public GetCourseMappingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetCourseMappingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCourseMappingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetCourseMappingsResponse {
      */
     
     public java.util.Map<String, String> courseMappings;
+
     public GetCourseMappingsResponse withCourseMappings(java.util.Map<String, String> courseMappings) {
         this.courseMappings = courseMappings;
         return this;
     }
     
+    public GetCourseMappingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

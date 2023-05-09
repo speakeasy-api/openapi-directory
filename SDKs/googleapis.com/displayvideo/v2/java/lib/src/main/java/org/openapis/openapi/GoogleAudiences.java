@@ -58,11 +58,9 @@ public class GoogleAudiences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoGoogleAudiencesGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoGoogleAudiencesGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoGoogleAudiencesGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoGoogleAudiencesGetResponse(contentType, httpRes.statusCode()) {{
             googleAudience = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class GoogleAudiences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoGoogleAudiencesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoGoogleAudiencesListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoGoogleAudiencesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoGoogleAudiencesListResponse(contentType, httpRes.statusCode()) {{
             listGoogleAudiencesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

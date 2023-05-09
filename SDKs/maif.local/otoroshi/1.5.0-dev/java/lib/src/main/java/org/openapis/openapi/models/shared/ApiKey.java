@@ -17,6 +17,7 @@ public class ApiKey {
      */
     @JsonProperty("authorizedEntities")
     public String[] authorizedEntities;
+
     public ApiKey withAuthorizedEntities(String[] authorizedEntities) {
         this.authorizedEntities = authorizedEntities;
         return this;
@@ -27,6 +28,7 @@ public class ApiKey {
      */
     @JsonProperty("clientId")
     public String clientId;
+
     public ApiKey withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -37,6 +39,7 @@ public class ApiKey {
      */
     @JsonProperty("clientName")
     public String clientName;
+
     public ApiKey withClientName(String clientName) {
         this.clientName = clientName;
         return this;
@@ -47,6 +50,7 @@ public class ApiKey {
      */
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public ApiKey withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -58,6 +62,7 @@ public class ApiKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailyQuota")
     public Long dailyQuota;
+
     public ApiKey withDailyQuota(Long dailyQuota) {
         this.dailyQuota = dailyQuota;
         return this;
@@ -68,6 +73,7 @@ public class ApiKey {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ApiKey withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -79,6 +85,7 @@ public class ApiKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public ApiKey withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -90,6 +97,7 @@ public class ApiKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monthlyQuota")
     public Long monthlyQuota;
+
     public ApiKey withMonthlyQuota(Long monthlyQuota) {
         this.monthlyQuota = monthlyQuota;
         return this;
@@ -101,9 +109,17 @@ public class ApiKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("throttlingQuota")
     public Long throttlingQuota;
+
     public ApiKey withThrottlingQuota(Long throttlingQuota) {
         this.throttlingQuota = throttlingQuota;
         return this;
     }
     
+    public ApiKey(@JsonProperty("authorizedEntities") String[] authorizedEntities, @JsonProperty("clientId") String clientId, @JsonProperty("clientName") String clientName, @JsonProperty("clientSecret") String clientSecret, @JsonProperty("enabled") Boolean enabled) {
+        this.authorizedEntities = authorizedEntities;
+        this.clientId = clientId;
+        this.clientName = clientName;
+        this.clientSecret = clientSecret;
+        this.enabled = enabled;
+  }
 }

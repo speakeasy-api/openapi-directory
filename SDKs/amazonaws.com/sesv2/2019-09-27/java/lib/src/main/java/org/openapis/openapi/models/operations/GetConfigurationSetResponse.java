@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConfigurationSetResponse {
@@ -12,6 +13,7 @@ public class GetConfigurationSetResponse {
      */
     
     public Object badRequestException;
+
     public GetConfigurationSetResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetConfigurationSetResponse {
     
     
     public String contentType;
+
     public GetConfigurationSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetConfigurationSetResponse {
      */
     
     public org.openapis.openapi.models.shared.GetConfigurationSetResponse getConfigurationSetResponse;
+
     public GetConfigurationSetResponse withGetConfigurationSetResponse(org.openapis.openapi.models.shared.GetConfigurationSetResponse getConfigurationSetResponse) {
         this.getConfigurationSetResponse = getConfigurationSetResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetConfigurationSetResponse {
      */
     
     public Object notFoundException;
+
     public GetConfigurationSetResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetConfigurationSetResponse {
     
     
     public Integer statusCode;
+
     public GetConfigurationSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetConfigurationSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConfigurationSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetConfigurationSetResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetConfigurationSetResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetConfigurationSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

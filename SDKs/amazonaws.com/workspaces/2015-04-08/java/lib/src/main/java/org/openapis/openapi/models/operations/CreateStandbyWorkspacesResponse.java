@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateStandbyWorkspacesResponse {
@@ -12,6 +13,7 @@ public class CreateStandbyWorkspacesResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateStandbyWorkspacesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateStandbyWorkspacesResponse {
     
     
     public String contentType;
+
     public CreateStandbyWorkspacesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateStandbyWorkspacesResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateStandbyWorkspacesResult createStandbyWorkspacesResult;
+
     public CreateStandbyWorkspacesResponse withCreateStandbyWorkspacesResult(org.openapis.openapi.models.shared.CreateStandbyWorkspacesResult createStandbyWorkspacesResult) {
         this.createStandbyWorkspacesResult = createStandbyWorkspacesResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateStandbyWorkspacesResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public CreateStandbyWorkspacesResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class CreateStandbyWorkspacesResponse {
      */
     
     public Object operationNotSupportedException;
+
     public CreateStandbyWorkspacesResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -59,6 +65,7 @@ public class CreateStandbyWorkspacesResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateStandbyWorkspacesResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateStandbyWorkspacesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateStandbyWorkspacesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreateStandbyWorkspacesResponse {
     
     
     public Integer statusCode;
+
     public CreateStandbyWorkspacesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateStandbyWorkspacesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateStandbyWorkspacesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateStandbyWorkspacesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

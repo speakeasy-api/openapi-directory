@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SecurityControlDefinition {
     @JsonProperty("CurrentRegionAvailability")
     public RegionAvailabilityStatusEnum currentRegionAvailability;
+
     public SecurityControlDefinition withCurrentRegionAvailability(RegionAvailabilityStatusEnum currentRegionAvailability) {
         this.currentRegionAvailability = currentRegionAvailability;
         return this;
@@ -19,6 +20,7 @@ public class SecurityControlDefinition {
     
     @JsonProperty("Description")
     public String description;
+
     public SecurityControlDefinition withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class SecurityControlDefinition {
     
     @JsonProperty("RemediationUrl")
     public String remediationUrl;
+
     public SecurityControlDefinition withRemediationUrl(String remediationUrl) {
         this.remediationUrl = remediationUrl;
         return this;
@@ -33,6 +36,7 @@ public class SecurityControlDefinition {
     
     @JsonProperty("SecurityControlId")
     public String securityControlId;
+
     public SecurityControlDefinition withSecurityControlId(String securityControlId) {
         this.securityControlId = securityControlId;
         return this;
@@ -40,6 +44,7 @@ public class SecurityControlDefinition {
     
     @JsonProperty("SeverityRating")
     public SeverityRatingEnum severityRating;
+
     public SecurityControlDefinition withSeverityRating(SeverityRatingEnum severityRating) {
         this.severityRating = severityRating;
         return this;
@@ -47,9 +52,18 @@ public class SecurityControlDefinition {
     
     @JsonProperty("Title")
     public String title;
+
     public SecurityControlDefinition withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public SecurityControlDefinition(@JsonProperty("CurrentRegionAvailability") RegionAvailabilityStatusEnum currentRegionAvailability, @JsonProperty("Description") String description, @JsonProperty("RemediationUrl") String remediationUrl, @JsonProperty("SecurityControlId") String securityControlId, @JsonProperty("SeverityRating") SeverityRatingEnum severityRating, @JsonProperty("Title") String title) {
+        this.currentRegionAvailability = currentRegionAvailability;
+        this.description = description;
+        this.remediationUrl = remediationUrl;
+        this.securityControlId = securityControlId;
+        this.severityRating = severityRating;
+        this.title = title;
+  }
 }

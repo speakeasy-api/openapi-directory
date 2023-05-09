@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSuggestionRequest {
@@ -12,6 +13,7 @@ public class GetSuggestionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetSuggestionRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetSuggestionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetSuggestionRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetSuggestionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public GetSuggestionRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -42,6 +46,7 @@ public class GetSuggestionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public GetSuggestionRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -52,9 +57,17 @@ public class GetSuggestionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerSkuId")
     public String sellerSkuId;
+
     public GetSuggestionRequest withSellerSkuId(String sellerSkuId) {
         this.sellerSkuId = sellerSkuId;
         return this;
     }
     
+    public GetSuggestionRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("accountName") String accountName, @JsonProperty("sellerId") String sellerId, @JsonProperty("sellerSkuId") String sellerSkuId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.accountName = accountName;
+        this.sellerId = sellerId;
+        this.sellerSkuId = sellerSkuId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAccountResponse {
@@ -12,6 +13,7 @@ public class DescribeAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAccountResponse {
     
     
     public String contentType;
+
     public DescribeAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAccountResult describeAccountResult;
+
     public DescribeAccountResponse withDescribeAccountResult(org.openapis.openapi.models.shared.DescribeAccountResult describeAccountResult) {
         this.describeAccountResult = describeAccountResult;
         return this;
@@ -36,6 +40,7 @@ public class DescribeAccountResponse {
     
     
     public Integer statusCode;
+
     public DescribeAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

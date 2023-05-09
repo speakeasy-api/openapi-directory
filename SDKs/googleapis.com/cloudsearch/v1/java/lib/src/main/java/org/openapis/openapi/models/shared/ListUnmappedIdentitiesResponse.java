@@ -18,6 +18,7 @@ public class ListUnmappedIdentitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListUnmappedIdentitiesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -26,9 +27,11 @@ public class ListUnmappedIdentitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unmappedIdentities")
     public UnmappedIdentity[] unmappedIdentities;
+
     public ListUnmappedIdentitiesResponse withUnmappedIdentities(UnmappedIdentity[] unmappedIdentities) {
         this.unmappedIdentities = unmappedIdentities;
         return this;
     }
     
+    public ListUnmappedIdentitiesResponse(){}
 }

@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Group - A group object that contains a specified group\u2019s metadata and attributes.
+ * Group - A group object that contains the metadata and attributes for a specified group.
  */
 public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Group withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public Group withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -31,6 +33,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalIds")
     public ExternalId[] externalIds;
+
     public Group withExternalIds(ExternalId[] externalIds) {
         this.externalIds = externalIds;
         return this;
@@ -38,6 +41,7 @@ public class Group {
     
     @JsonProperty("GroupId")
     public String groupId;
+
     public Group withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -45,9 +49,14 @@ public class Group {
     
     @JsonProperty("IdentityStoreId")
     public String identityStoreId;
+
     public Group withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
     }
     
+    public Group(@JsonProperty("GroupId") String groupId, @JsonProperty("IdentityStoreId") String identityStoreId) {
+        this.groupId = groupId;
+        this.identityStoreId = identityStoreId;
+  }
 }

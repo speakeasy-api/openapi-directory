@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AppflowIntegrationWorkflowStep {
     @JsonProperty("BatchRecordsEndTime")
     public String batchRecordsEndTime;
+
     public AppflowIntegrationWorkflowStep withBatchRecordsEndTime(String batchRecordsEndTime) {
         this.batchRecordsEndTime = batchRecordsEndTime;
         return this;
@@ -24,6 +25,7 @@ public class AppflowIntegrationWorkflowStep {
     
     @JsonProperty("BatchRecordsStartTime")
     public String batchRecordsStartTime;
+
     public AppflowIntegrationWorkflowStep withBatchRecordsStartTime(String batchRecordsStartTime) {
         this.batchRecordsStartTime = batchRecordsStartTime;
         return this;
@@ -33,6 +35,7 @@ public class AppflowIntegrationWorkflowStep {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public AppflowIntegrationWorkflowStep withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -40,6 +43,7 @@ public class AppflowIntegrationWorkflowStep {
     
     @JsonProperty("ExecutionMessage")
     public String executionMessage;
+
     public AppflowIntegrationWorkflowStep withExecutionMessage(String executionMessage) {
         this.executionMessage = executionMessage;
         return this;
@@ -47,6 +51,7 @@ public class AppflowIntegrationWorkflowStep {
     
     @JsonProperty("FlowName")
     public String flowName;
+
     public AppflowIntegrationWorkflowStep withFlowName(String flowName) {
         this.flowName = flowName;
         return this;
@@ -56,6 +61,7 @@ public class AppflowIntegrationWorkflowStep {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public AppflowIntegrationWorkflowStep withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -63,6 +69,7 @@ public class AppflowIntegrationWorkflowStep {
     
     @JsonProperty("RecordsProcessed")
     public Long recordsProcessed;
+
     public AppflowIntegrationWorkflowStep withRecordsProcessed(Long recordsProcessed) {
         this.recordsProcessed = recordsProcessed;
         return this;
@@ -70,9 +77,20 @@ public class AppflowIntegrationWorkflowStep {
     
     @JsonProperty("Status")
     public StatusEnum status;
+
     public AppflowIntegrationWorkflowStep withStatus(StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AppflowIntegrationWorkflowStep(@JsonProperty("BatchRecordsEndTime") String batchRecordsEndTime, @JsonProperty("BatchRecordsStartTime") String batchRecordsStartTime, @JsonProperty("CreatedAt") OffsetDateTime createdAt, @JsonProperty("ExecutionMessage") String executionMessage, @JsonProperty("FlowName") String flowName, @JsonProperty("LastUpdatedAt") OffsetDateTime lastUpdatedAt, @JsonProperty("RecordsProcessed") Long recordsProcessed, @JsonProperty("Status") StatusEnum status) {
+        this.batchRecordsEndTime = batchRecordsEndTime;
+        this.batchRecordsStartTime = batchRecordsStartTime;
+        this.createdAt = createdAt;
+        this.executionMessage = executionMessage;
+        this.flowName = flowName;
+        this.lastUpdatedAt = lastUpdatedAt;
+        this.recordsProcessed = recordsProcessed;
+        this.status = status;
+  }
 }

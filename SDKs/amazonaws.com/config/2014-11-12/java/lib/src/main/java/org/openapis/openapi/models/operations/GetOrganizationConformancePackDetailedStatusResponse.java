@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrganizationConformancePackDetailedStatusResponse {
     
     public String contentType;
+
     public GetOrganizationConformancePackDetailedStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetOrganizationConformancePackDetailedStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOrganizationConformancePackDetailedStatusResponse getOrganizationConformancePackDetailedStatusResponse;
+
     public GetOrganizationConformancePackDetailedStatusResponse withGetOrganizationConformancePackDetailedStatusResponse(org.openapis.openapi.models.shared.GetOrganizationConformancePackDetailedStatusResponse getOrganizationConformancePackDetailedStatusResponse) {
         this.getOrganizationConformancePackDetailedStatusResponse = getOrganizationConformancePackDetailedStatusResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetOrganizationConformancePackDetailedStatusResponse {
      */
     
     public Object invalidLimitException;
+
     public GetOrganizationConformancePackDetailedStatusResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -39,6 +43,7 @@ public class GetOrganizationConformancePackDetailedStatusResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetOrganizationConformancePackDetailedStatusResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class GetOrganizationConformancePackDetailedStatusResponse {
      */
     
     public Object noSuchOrganizationConformancePackException;
+
     public GetOrganizationConformancePackDetailedStatusResponse withNoSuchOrganizationConformancePackException(Object noSuchOrganizationConformancePackException) {
         this.noSuchOrganizationConformancePackException = noSuchOrganizationConformancePackException;
         return this;
@@ -59,6 +65,7 @@ public class GetOrganizationConformancePackDetailedStatusResponse {
      */
     
     public Object organizationAccessDeniedException;
+
     public GetOrganizationConformancePackDetailedStatusResponse withOrganizationAccessDeniedException(Object organizationAccessDeniedException) {
         this.organizationAccessDeniedException = organizationAccessDeniedException;
         return this;
@@ -66,6 +73,7 @@ public class GetOrganizationConformancePackDetailedStatusResponse {
     
     
     public Integer statusCode;
+
     public GetOrganizationConformancePackDetailedStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetOrganizationConformancePackDetailedStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrganizationConformancePackDetailedStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOrganizationConformancePackDetailedStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

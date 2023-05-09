@@ -18,9 +18,11 @@ public class InterconnectMacsecConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preSharedKeys")
     public InterconnectMacsecConfigPreSharedKey[] preSharedKeys;
+
     public InterconnectMacsecConfig withPreSharedKeys(InterconnectMacsecConfigPreSharedKey[] preSharedKeys) {
         this.preSharedKeys = preSharedKeys;
         return this;
     }
     
+    public InterconnectMacsecConfig(){}
 }

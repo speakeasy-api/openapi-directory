@@ -55,11 +55,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsProductsSearchResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsProductsSearchResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsProductsSearchResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsProductsSearchResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,11 +141,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsVersionsSearchResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsVersionsSearchResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsVersionsSearchResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsVersionsSearchResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

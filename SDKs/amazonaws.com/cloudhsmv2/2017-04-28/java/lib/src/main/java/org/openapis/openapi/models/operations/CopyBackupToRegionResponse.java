@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CopyBackupToRegionResponse {
@@ -12,6 +13,7 @@ public class CopyBackupToRegionResponse {
      */
     
     public Object cloudHsmAccessDeniedException;
+
     public CopyBackupToRegionResponse withCloudHsmAccessDeniedException(Object cloudHsmAccessDeniedException) {
         this.cloudHsmAccessDeniedException = cloudHsmAccessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CopyBackupToRegionResponse {
      */
     
     public Object cloudHsmInternalFailureException;
+
     public CopyBackupToRegionResponse withCloudHsmInternalFailureException(Object cloudHsmInternalFailureException) {
         this.cloudHsmInternalFailureException = cloudHsmInternalFailureException;
         return this;
@@ -32,6 +35,7 @@ public class CopyBackupToRegionResponse {
      */
     
     public Object cloudHsmInvalidRequestException;
+
     public CopyBackupToRegionResponse withCloudHsmInvalidRequestException(Object cloudHsmInvalidRequestException) {
         this.cloudHsmInvalidRequestException = cloudHsmInvalidRequestException;
         return this;
@@ -42,6 +46,7 @@ public class CopyBackupToRegionResponse {
      */
     
     public Object cloudHsmResourceNotFoundException;
+
     public CopyBackupToRegionResponse withCloudHsmResourceNotFoundException(Object cloudHsmResourceNotFoundException) {
         this.cloudHsmResourceNotFoundException = cloudHsmResourceNotFoundException;
         return this;
@@ -52,6 +57,7 @@ public class CopyBackupToRegionResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public CopyBackupToRegionResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -62,6 +68,7 @@ public class CopyBackupToRegionResponse {
      */
     
     public Object cloudHsmTagException;
+
     public CopyBackupToRegionResponse withCloudHsmTagException(Object cloudHsmTagException) {
         this.cloudHsmTagException = cloudHsmTagException;
         return this;
@@ -69,6 +76,7 @@ public class CopyBackupToRegionResponse {
     
     
     public String contentType;
+
     public CopyBackupToRegionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -79,6 +87,7 @@ public class CopyBackupToRegionResponse {
      */
     
     public org.openapis.openapi.models.shared.CopyBackupToRegionResponse copyBackupToRegionResponse;
+
     public CopyBackupToRegionResponse withCopyBackupToRegionResponse(org.openapis.openapi.models.shared.CopyBackupToRegionResponse copyBackupToRegionResponse) {
         this.copyBackupToRegionResponse = copyBackupToRegionResponse;
         return this;
@@ -86,6 +95,7 @@ public class CopyBackupToRegionResponse {
     
     
     public Integer statusCode;
+
     public CopyBackupToRegionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class CopyBackupToRegionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CopyBackupToRegionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CopyBackupToRegionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CartSimulationRequestBodyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CartSimulationRequestBodyItems withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class CartSimulationRequestBodyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Integer quantity;
+
     public CartSimulationRequestBodyItems withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -37,9 +39,11 @@ public class CartSimulationRequestBodyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seller")
     public String seller;
+
     public CartSimulationRequestBodyItems withSeller(String seller) {
         this.seller = seller;
         return this;
     }
     
+    public CartSimulationRequestBodyItems(){}
 }

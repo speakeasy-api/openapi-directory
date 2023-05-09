@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetCurationTagsByNameRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetGetCurationTagsByNameFormatEnum format;
+
     public GetGetCurationTagsByNameRequest withFormat(GetGetCurationTagsByNameFormatEnum format) {
         this.format = format;
         return this;
@@ -19,9 +21,13 @@ public class GetGetCurationTagsByNameRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagName")
     public String tagName;
+
     public GetGetCurationTagsByNameRequest withTagName(String tagName) {
         this.tagName = tagName;
         return this;
     }
     
+    public GetGetCurationTagsByNameRequest(@JsonProperty("tagName") String tagName) {
+        this.tagName = tagName;
+  }
 }

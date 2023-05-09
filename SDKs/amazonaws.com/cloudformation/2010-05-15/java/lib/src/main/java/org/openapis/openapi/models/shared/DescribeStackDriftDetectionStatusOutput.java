@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class DescribeStackDriftDetectionStatusOutput {
     
     public StackDriftDetectionStatusEnum detectionStatus;
+
     public DescribeStackDriftDetectionStatusOutput withDetectionStatus(StackDriftDetectionStatusEnum detectionStatus) {
         this.detectionStatus = detectionStatus;
         return this;
@@ -19,6 +21,7 @@ public class DescribeStackDriftDetectionStatusOutput {
     
     
     public String detectionStatusReason;
+
     public DescribeStackDriftDetectionStatusOutput withDetectionStatusReason(String detectionStatusReason) {
         this.detectionStatusReason = detectionStatusReason;
         return this;
@@ -26,6 +29,7 @@ public class DescribeStackDriftDetectionStatusOutput {
     
     
     public Long driftedStackResourceCount;
+
     public DescribeStackDriftDetectionStatusOutput withDriftedStackResourceCount(Long driftedStackResourceCount) {
         this.driftedStackResourceCount = driftedStackResourceCount;
         return this;
@@ -33,6 +37,7 @@ public class DescribeStackDriftDetectionStatusOutput {
     
     
     public String stackDriftDetectionId;
+
     public DescribeStackDriftDetectionStatusOutput withStackDriftDetectionId(String stackDriftDetectionId) {
         this.stackDriftDetectionId = stackDriftDetectionId;
         return this;
@@ -40,6 +45,7 @@ public class DescribeStackDriftDetectionStatusOutput {
     
     
     public StackDriftStatusEnum stackDriftStatus;
+
     public DescribeStackDriftDetectionStatusOutput withStackDriftStatus(StackDriftStatusEnum stackDriftStatus) {
         this.stackDriftStatus = stackDriftStatus;
         return this;
@@ -47,6 +53,7 @@ public class DescribeStackDriftDetectionStatusOutput {
     
     
     public String stackId;
+
     public DescribeStackDriftDetectionStatusOutput withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -54,9 +61,16 @@ public class DescribeStackDriftDetectionStatusOutput {
     
     
     public OffsetDateTime timestamp;
+
     public DescribeStackDriftDetectionStatusOutput withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public DescribeStackDriftDetectionStatusOutput(@JsonProperty("DetectionStatus") StackDriftDetectionStatusEnum detectionStatus, @JsonProperty("StackDriftDetectionId") String stackDriftDetectionId, @JsonProperty("StackId") String stackId, @JsonProperty("Timestamp") OffsetDateTime timestamp) {
+        this.detectionStatus = detectionStatus;
+        this.stackDriftDetectionId = stackDriftDetectionId;
+        this.stackId = stackId;
+        this.timestamp = timestamp;
+  }
 }

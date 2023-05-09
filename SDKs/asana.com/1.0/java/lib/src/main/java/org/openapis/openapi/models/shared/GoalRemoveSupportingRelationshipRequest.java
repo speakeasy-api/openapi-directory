@@ -12,9 +12,13 @@ public class GoalRemoveSupportingRelationshipRequest {
      */
     @JsonProperty("supporting_resource")
     public String supportingResource;
+
     public GoalRemoveSupportingRelationshipRequest withSupportingResource(String supportingResource) {
         this.supportingResource = supportingResource;
         return this;
     }
     
+    public GoalRemoveSupportingRelationshipRequest(@JsonProperty("supporting_resource") String supportingResource) {
+        this.supportingResource = supportingResource;
+  }
 }

@@ -15,6 +15,7 @@ public class Loa {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loaContent")
     public String loaContent;
+
     public Loa withLoaContent(String loaContent) {
         this.loaContent = loaContent;
         return this;
@@ -23,9 +24,11 @@ public class Loa {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loaContentType")
     public LoaContentTypeEnum loaContentType;
+
     public Loa withLoaContentType(LoaContentTypeEnum loaContentType) {
         this.loaContentType = loaContentType;
         return this;
     }
     
+    public Loa(){}
 }

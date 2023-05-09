@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TaskRunSortCriteria {
     @JsonProperty("Column")
     public TaskRunSortColumnTypeEnum column;
+
     public TaskRunSortCriteria withColumn(TaskRunSortColumnTypeEnum column) {
         this.column = column;
         return this;
@@ -19,9 +20,14 @@ public class TaskRunSortCriteria {
     
     @JsonProperty("SortDirection")
     public SortDirectionTypeEnum sortDirection;
+
     public TaskRunSortCriteria withSortDirection(SortDirectionTypeEnum sortDirection) {
         this.sortDirection = sortDirection;
         return this;
     }
     
+    public TaskRunSortCriteria(@JsonProperty("Column") TaskRunSortColumnTypeEnum column, @JsonProperty("SortDirection") SortDirectionTypeEnum sortDirection) {
+        this.column = column;
+        this.sortDirection = sortDirection;
+  }
 }

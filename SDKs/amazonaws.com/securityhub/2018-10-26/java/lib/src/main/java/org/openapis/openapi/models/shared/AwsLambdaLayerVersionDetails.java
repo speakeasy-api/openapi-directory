@@ -15,6 +15,7 @@ public class AwsLambdaLayerVersionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompatibleRuntimes")
     public String[] compatibleRuntimes;
+
     public AwsLambdaLayerVersionDetails withCompatibleRuntimes(String[] compatibleRuntimes) {
         this.compatibleRuntimes = compatibleRuntimes;
         return this;
@@ -23,6 +24,7 @@ public class AwsLambdaLayerVersionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedDate")
     public String createdDate;
+
     public AwsLambdaLayerVersionDetails withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -31,9 +33,11 @@ public class AwsLambdaLayerVersionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public AwsLambdaLayerVersionDetails withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public AwsLambdaLayerVersionDetails(){}
 }

@@ -61,11 +61,9 @@ public class Catalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogCatalogSearchResponse res = new org.openapis.openapi.models.operations.DatacatalogCatalogSearchResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogCatalogSearchResponse res = new org.openapis.openapi.models.operations.DatacatalogCatalogSearchResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1SearchCatalogResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

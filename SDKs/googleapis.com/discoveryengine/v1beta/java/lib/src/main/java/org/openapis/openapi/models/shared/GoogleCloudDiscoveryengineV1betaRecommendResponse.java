@@ -18,6 +18,7 @@ public class GoogleCloudDiscoveryengineV1betaRecommendResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributionToken")
     public String attributionToken;
+
     public GoogleCloudDiscoveryengineV1betaRecommendResponse withAttributionToken(String attributionToken) {
         this.attributionToken = attributionToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDiscoveryengineV1betaRecommendResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missingIds")
     public String[] missingIds;
+
     public GoogleCloudDiscoveryengineV1betaRecommendResponse withMissingIds(String[] missingIds) {
         this.missingIds = missingIds;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDiscoveryengineV1betaRecommendResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GoogleCloudDiscoveryengineV1betaRecommendResponseRecommendationResult[] results;
+
     public GoogleCloudDiscoveryengineV1betaRecommendResponse withResults(GoogleCloudDiscoveryengineV1betaRecommendResponseRecommendationResult[] results) {
         this.results = results;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDiscoveryengineV1betaRecommendResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public GoogleCloudDiscoveryengineV1betaRecommendResponse withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public GoogleCloudDiscoveryengineV1betaRecommendResponse(){}
 }

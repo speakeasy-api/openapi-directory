@@ -15,6 +15,7 @@ public class RegistrationsCitationReadCitationDetailAttributes {
      */
     
     public String author;
+
     public RegistrationsCitationReadCitationDetailAttributes withAuthor(String author) {
         this.author = author;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsCitationReadCitationDetailAttributes {
      */
     
     public String doi;
+
     public RegistrationsCitationReadCitationDetailAttributes withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationsCitationReadCitationDetailAttributes {
      */
     
     public String publisher;
+
     public RegistrationsCitationReadCitationDetailAttributes withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
@@ -45,9 +48,11 @@ public class RegistrationsCitationReadCitationDetailAttributes {
      */
     
     public String title;
+
     public RegistrationsCitationReadCitationDetailAttributes withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public RegistrationsCitationReadCitationDetailAttributes(){}
 }

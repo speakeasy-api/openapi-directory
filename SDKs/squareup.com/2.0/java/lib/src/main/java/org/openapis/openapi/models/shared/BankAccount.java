@@ -19,6 +19,7 @@ public class BankAccount {
      */
     @JsonProperty("account_number_suffix")
     public String accountNumberSuffix;
+
     public BankAccount withAccountNumberSuffix(String accountNumberSuffix) {
         this.accountNumberSuffix = accountNumberSuffix;
         return this;
@@ -29,6 +30,7 @@ public class BankAccount {
      */
     @JsonProperty("account_type")
     public String accountType;
+
     public BankAccount withAccountType(String accountType) {
         this.accountType = accountType;
         return this;
@@ -41,6 +43,7 @@ public class BankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_name")
     public String bankName;
+
     public BankAccount withBankName(String bankName) {
         this.bankName = bankName;
         return this;
@@ -51,6 +54,7 @@ public class BankAccount {
      */
     @JsonProperty("country")
     public String country;
+
     public BankAccount withCountry(String country) {
         this.country = country;
         return this;
@@ -61,6 +65,7 @@ public class BankAccount {
      */
     @JsonProperty("creditable")
     public Boolean creditable;
+
     public BankAccount withCreditable(Boolean creditable) {
         this.creditable = creditable;
         return this;
@@ -73,6 +78,7 @@ public class BankAccount {
      */
     @JsonProperty("currency")
     public String currency;
+
     public BankAccount withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -85,6 +91,7 @@ public class BankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debit_mandate_reference_id")
     public String debitMandateReferenceId;
+
     public BankAccount withDebitMandateReferenceId(String debitMandateReferenceId) {
         this.debitMandateReferenceId = debitMandateReferenceId;
         return this;
@@ -96,6 +103,7 @@ public class BankAccount {
      */
     @JsonProperty("debitable")
     public Boolean debitable;
+
     public BankAccount withDebitable(Boolean debitable) {
         this.debitable = debitable;
         return this;
@@ -109,6 +117,7 @@ public class BankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public BankAccount withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -120,6 +129,7 @@ public class BankAccount {
      */
     @JsonProperty("holder_name")
     public String holderName;
+
     public BankAccount withHolderName(String holderName) {
         this.holderName = holderName;
         return this;
@@ -130,6 +140,7 @@ public class BankAccount {
      */
     @JsonProperty("id")
     public String id;
+
     public BankAccount withId(String id) {
         this.id = id;
         return this;
@@ -141,6 +152,7 @@ public class BankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public BankAccount withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -152,6 +164,7 @@ public class BankAccount {
      */
     @JsonProperty("primary_bank_identification_number")
     public String primaryBankIdentificationNumber;
+
     public BankAccount withPrimaryBankIdentificationNumber(String primaryBankIdentificationNumber) {
         this.primaryBankIdentificationNumber = primaryBankIdentificationNumber;
         return this;
@@ -164,6 +177,7 @@ public class BankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public BankAccount withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -176,6 +190,7 @@ public class BankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondary_bank_identification_number")
     public String secondaryBankIdentificationNumber;
+
     public BankAccount withSecondaryBankIdentificationNumber(String secondaryBankIdentificationNumber) {
         this.secondaryBankIdentificationNumber = secondaryBankIdentificationNumber;
         return this;
@@ -186,6 +201,7 @@ public class BankAccount {
      */
     @JsonProperty("status")
     public String status;
+
     public BankAccount withStatus(String status) {
         this.status = status;
         return this;
@@ -197,9 +213,22 @@ public class BankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public BankAccount withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public BankAccount(@JsonProperty("account_number_suffix") String accountNumberSuffix, @JsonProperty("account_type") String accountType, @JsonProperty("country") String country, @JsonProperty("creditable") Boolean creditable, @JsonProperty("currency") String currency, @JsonProperty("debitable") Boolean debitable, @JsonProperty("holder_name") String holderName, @JsonProperty("id") String id, @JsonProperty("primary_bank_identification_number") String primaryBankIdentificationNumber, @JsonProperty("status") String status) {
+        this.accountNumberSuffix = accountNumberSuffix;
+        this.accountType = accountType;
+        this.country = country;
+        this.creditable = creditable;
+        this.currency = currency;
+        this.debitable = debitable;
+        this.holderName = holderName;
+        this.id = id;
+        this.primaryBankIdentificationNumber = primaryBankIdentificationNumber;
+        this.status = status;
+  }
 }

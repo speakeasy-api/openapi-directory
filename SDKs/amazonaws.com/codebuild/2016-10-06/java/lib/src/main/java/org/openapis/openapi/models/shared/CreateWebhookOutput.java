@@ -15,9 +15,11 @@ public class CreateWebhookOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook")
     public Webhook webhook;
+
     public CreateWebhookOutput withWebhook(Webhook webhook) {
         this.webhook = webhook;
         return this;
     }
     
+    public CreateWebhookOutput(){}
 }

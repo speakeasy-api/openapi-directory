@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OneCreateanewtransactionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OneCreateanewtransactionRequest oneCreateanewtransactionRequest;
+
     public OneCreateanewtransactionRequest withOneCreateanewtransactionRequest(org.openapis.openapi.models.shared.OneCreateanewtransactionRequest oneCreateanewtransactionRequest) {
         this.oneCreateanewtransactionRequest = oneCreateanewtransactionRequest;
         return this;
@@ -19,6 +21,7 @@ public class OneCreateanewtransactionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public OneCreateanewtransactionRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -29,6 +32,7 @@ public class OneCreateanewtransactionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public OneCreateanewtransactionRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class OneCreateanewtransactionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
     public String xPROVIDERAPIAppKey;
+
     public OneCreateanewtransactionRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
         this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
         return this;
@@ -49,9 +54,17 @@ public class OneCreateanewtransactionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
     public String xPROVIDERAPIAppToken;
+
     public OneCreateanewtransactionRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
         this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
         return this;
     }
     
+    public OneCreateanewtransactionRequest(@JsonProperty("1.CreateanewtransactionRequest") org.openapis.openapi.models.shared.OneCreateanewtransactionRequest oneCreateanewtransactionRequest, @JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("X-PROVIDER-API-AppKey") String xPROVIDERAPIAppKey, @JsonProperty("X-PROVIDER-API-AppToken") String xPROVIDERAPIAppToken) {
+        this.oneCreateanewtransactionRequest = oneCreateanewtransactionRequest;
+        this.accept = accept;
+        this.contentType = contentType;
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
+  }
 }

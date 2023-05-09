@@ -18,6 +18,7 @@ public class GetRebalanceDetails404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public GetRebalanceDetails404ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class GetRebalanceDetails404ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public GetRebalanceDetails404ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetRebalanceDetails404ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

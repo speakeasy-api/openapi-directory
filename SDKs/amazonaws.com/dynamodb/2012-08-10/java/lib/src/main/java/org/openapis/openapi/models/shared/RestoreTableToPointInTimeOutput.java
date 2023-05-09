@@ -15,9 +15,11 @@ public class RestoreTableToPointInTimeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableDescription")
     public TableDescription tableDescription;
+
     public RestoreTableToPointInTimeOutput withTableDescription(TableDescription tableDescription) {
         this.tableDescription = tableDescription;
         return this;
     }
     
+    public RestoreTableToPointInTimeOutput(){}
 }

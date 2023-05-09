@@ -18,6 +18,7 @@ public class Xss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public Xss withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -29,9 +30,11 @@ public class Xss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackTraces")
     public String[] stackTraces;
+
     public Xss withStackTraces(String[] stackTraces) {
         this.stackTraces = stackTraces;
         return this;
     }
     
+    public Xss(){}
 }

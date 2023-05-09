@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetUnsecuredSmeLoans503ErrorObject {
     @JsonProperty("description")
     public GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum description;
+
     public GetUnsecuredSmeLoans503ErrorObject withDescription(GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class GetUnsecuredSmeLoans503ErrorObject {
     
     @JsonProperty("status")
     public GetUnsecuredSmeLoans503ErrorObjectStatusEnum status;
+
     public GetUnsecuredSmeLoans503ErrorObject withStatus(GetUnsecuredSmeLoans503ErrorObjectStatusEnum status) {
         this.status = status;
         return this;
@@ -26,9 +28,15 @@ public class GetUnsecuredSmeLoans503ErrorObject {
     
     @JsonProperty("title")
     public GetUnsecuredSmeLoans503ErrorObjectTitleEnum title;
+
     public GetUnsecuredSmeLoans503ErrorObject withTitle(GetUnsecuredSmeLoans503ErrorObjectTitleEnum title) {
         this.title = title;
         return this;
     }
     
+    public GetUnsecuredSmeLoans503ErrorObject(@JsonProperty("description") GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum description, @JsonProperty("status") GetUnsecuredSmeLoans503ErrorObjectStatusEnum status, @JsonProperty("title") GetUnsecuredSmeLoans503ErrorObjectTitleEnum title) {
+        this.description = description;
+        this.status = status;
+        this.title = title;
+  }
 }

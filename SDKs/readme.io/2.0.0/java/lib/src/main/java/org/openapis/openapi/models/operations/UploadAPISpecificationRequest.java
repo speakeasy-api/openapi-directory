@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadAPISpecificationRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public UploadAPISpecificationRequestBody requestBody;
+
     public UploadAPISpecificationRequest withRequestBody(UploadAPISpecificationRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class UploadAPISpecificationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-readme-version")
     public String xReadmeVersion;
+
     public UploadAPISpecificationRequest withXReadmeVersion(String xReadmeVersion) {
         this.xReadmeVersion = xReadmeVersion;
         return this;
     }
     
+    public UploadAPISpecificationRequest(@JsonProperty("RequestBody") UploadAPISpecificationRequestBody requestBody, @JsonProperty("x-readme-version") String xReadmeVersion) {
+        this.requestBody = requestBody;
+        this.xReadmeVersion = xReadmeVersion;
+  }
 }

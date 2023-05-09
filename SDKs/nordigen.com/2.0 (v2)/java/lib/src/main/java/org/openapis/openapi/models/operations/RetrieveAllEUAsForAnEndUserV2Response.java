@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrieveAllEUAsForAnEndUserV2Response {
     
     public String contentType;
+
     public RetrieveAllEUAsForAnEndUserV2Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetrieveAllEUAsForAnEndUserV2Response {
      */
     
     public org.openapis.openapi.models.shared.PaginatedEndUserAgreementList paginatedEndUserAgreementList;
+
     public RetrieveAllEUAsForAnEndUserV2Response withPaginatedEndUserAgreementList(org.openapis.openapi.models.shared.PaginatedEndUserAgreementList paginatedEndUserAgreementList) {
         this.paginatedEndUserAgreementList = paginatedEndUserAgreementList;
         return this;
@@ -26,6 +29,7 @@ public class RetrieveAllEUAsForAnEndUserV2Response {
     
     
     public Integer statusCode;
+
     public RetrieveAllEUAsForAnEndUserV2Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RetrieveAllEUAsForAnEndUserV2Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrieveAllEUAsForAnEndUserV2Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class RetrieveAllEUAsForAnEndUserV2Response {
      */
     
     public java.util.Map<String, Object> retrieveAllEUAsForAnEndUserV2401ApplicationJSONObject;
+
     public RetrieveAllEUAsForAnEndUserV2Response withRetrieveAllEUAsForAnEndUserV2401ApplicationJSONObject(java.util.Map<String, Object> retrieveAllEUAsForAnEndUserV2401ApplicationJSONObject) {
         this.retrieveAllEUAsForAnEndUserV2401ApplicationJSONObject = retrieveAllEUAsForAnEndUserV2401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RetrieveAllEUAsForAnEndUserV2Response {
      */
     
     public java.util.Map<String, Object> retrieveAllEUAsForAnEndUserV2403ApplicationJSONObject;
+
     public RetrieveAllEUAsForAnEndUserV2Response withRetrieveAllEUAsForAnEndUserV2403ApplicationJSONObject(java.util.Map<String, Object> retrieveAllEUAsForAnEndUserV2403ApplicationJSONObject) {
         this.retrieveAllEUAsForAnEndUserV2403ApplicationJSONObject = retrieveAllEUAsForAnEndUserV2403ApplicationJSONObject;
         return this;
@@ -63,9 +70,25 @@ public class RetrieveAllEUAsForAnEndUserV2Response {
      */
     
     public java.util.Map<String, Object> retrieveAllEUAsForAnEndUserV2404ApplicationJSONObject;
+
     public RetrieveAllEUAsForAnEndUserV2Response withRetrieveAllEUAsForAnEndUserV2404ApplicationJSONObject(java.util.Map<String, Object> retrieveAllEUAsForAnEndUserV2404ApplicationJSONObject) {
         this.retrieveAllEUAsForAnEndUserV2404ApplicationJSONObject = retrieveAllEUAsForAnEndUserV2404ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Nordigen rate limit exceeded
+     */
+    
+    public java.util.Map<String, Object> retrieveAllEUAsForAnEndUserV2429ApplicationJSONObject;
+
+    public RetrieveAllEUAsForAnEndUserV2Response withRetrieveAllEUAsForAnEndUserV2429ApplicationJSONObject(java.util.Map<String, Object> retrieveAllEUAsForAnEndUserV2429ApplicationJSONObject) {
+        this.retrieveAllEUAsForAnEndUserV2429ApplicationJSONObject = retrieveAllEUAsForAnEndUserV2429ApplicationJSONObject;
+        return this;
+    }
+    
+    public RetrieveAllEUAsForAnEndUserV2Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

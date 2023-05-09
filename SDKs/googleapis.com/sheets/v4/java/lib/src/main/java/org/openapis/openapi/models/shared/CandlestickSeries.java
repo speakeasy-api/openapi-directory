@@ -18,9 +18,11 @@ public class CandlestickSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ChartData data;
+
     public CandlestickSeries withData(ChartData data) {
         this.data = data;
         return this;
     }
     
+    public CandlestickSeries(){}
 }

@@ -15,6 +15,7 @@ public class AttachmentsListResponse {
      */
     
     public Attachment[] items;
+
     public AttachmentsListResponse withItems(Attachment[] items) {
         this.items = items;
         return this;
@@ -25,9 +26,11 @@ public class AttachmentsListResponse {
      */
     
     public String kind;
+
     public AttachmentsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public AttachmentsListResponse(){}
 }

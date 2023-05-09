@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JapaneseNameKanjiCandidatesRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=japaneseGivenNameLatin")
     public String japaneseGivenNameLatin;
+
     public JapaneseNameKanjiCandidatesRequest withJapaneseGivenNameLatin(String japaneseGivenNameLatin) {
         this.japaneseGivenNameLatin = japaneseGivenNameLatin;
         return this;
@@ -16,9 +18,23 @@ public class JapaneseNameKanjiCandidatesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=japaneseSurnameLatin")
     public String japaneseSurnameLatin;
+
     public JapaneseNameKanjiCandidatesRequest withJapaneseSurnameLatin(String japaneseSurnameLatin) {
         this.japaneseSurnameLatin = japaneseSurnameLatin;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=knownGender")
+    public String knownGender;
+
+    public JapaneseNameKanjiCandidatesRequest withKnownGender(String knownGender) {
+        this.knownGender = knownGender;
+        return this;
+    }
+    
+    public JapaneseNameKanjiCandidatesRequest(@JsonProperty("japaneseGivenNameLatin") String japaneseGivenNameLatin, @JsonProperty("japaneseSurnameLatin") String japaneseSurnameLatin, @JsonProperty("knownGender") String knownGender) {
+        this.japaneseGivenNameLatin = japaneseGivenNameLatin;
+        this.japaneseSurnameLatin = japaneseSurnameLatin;
+        this.knownGender = knownGender;
+  }
 }

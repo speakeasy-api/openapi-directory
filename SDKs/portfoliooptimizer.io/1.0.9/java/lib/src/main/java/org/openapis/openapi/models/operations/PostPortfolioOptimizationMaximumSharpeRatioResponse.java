@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPortfolioOptimizationMaximumSharpeRatioResponse {
     
     public String contentType;
+
     public PostPortfolioOptimizationMaximumSharpeRatioResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioResponse {
     
     
     public Integer statusCode;
+
     public PostPortfolioOptimizationMaximumSharpeRatioResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPortfolioOptimizationMaximumSharpeRatioResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostPortfolioOptimizationMaximumSharpeRatioResponse {
      */
     
     public PostPortfolioOptimizationMaximumSharpeRatio200ApplicationJSON postPortfolioOptimizationMaximumSharpeRatio200ApplicationJSONObject;
+
     public PostPortfolioOptimizationMaximumSharpeRatioResponse withPostPortfolioOptimizationMaximumSharpeRatio200ApplicationJSONObject(PostPortfolioOptimizationMaximumSharpeRatio200ApplicationJSON postPortfolioOptimizationMaximumSharpeRatio200ApplicationJSONObject) {
         this.postPortfolioOptimizationMaximumSharpeRatio200ApplicationJSONObject = postPortfolioOptimizationMaximumSharpeRatio200ApplicationJSONObject;
         return this;
     }
     
+    public PostPortfolioOptimizationMaximumSharpeRatioResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

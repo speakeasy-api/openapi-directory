@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ToggleTextBroadcastRecipientsStatusResponse {
     
     public String contentType;
+
     public ToggleTextBroadcastRecipientsStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ToggleTextBroadcastRecipientsStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public ToggleTextBroadcastRecipientsStatusResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class ToggleTextBroadcastRecipientsStatusResponse {
     
     
     public Integer statusCode;
+
     public ToggleTextBroadcastRecipientsStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ToggleTextBroadcastRecipientsStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ToggleTextBroadcastRecipientsStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ToggleTextBroadcastRecipientsStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LocalJwtVerifier {
     @JsonProperty("algoSettings")
     public Object algoSettings;
+
     public LocalJwtVerifier withAlgoSettings(Object algoSettings) {
         this.algoSettings = algoSettings;
         return this;
@@ -22,6 +23,7 @@ public class LocalJwtVerifier {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public LocalJwtVerifier withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,6 +31,7 @@ public class LocalJwtVerifier {
     
     @JsonProperty("source")
     public Object source;
+
     public LocalJwtVerifier withSource(Object source) {
         this.source = source;
         return this;
@@ -36,6 +39,7 @@ public class LocalJwtVerifier {
     
     @JsonProperty("strategy")
     public Object strategy;
+
     public LocalJwtVerifier withStrategy(Object strategy) {
         this.strategy = strategy;
         return this;
@@ -46,6 +50,7 @@ public class LocalJwtVerifier {
      */
     @JsonProperty("strict")
     public Boolean strict;
+
     public LocalJwtVerifier withStrict(Boolean strict) {
         this.strict = strict;
         return this;
@@ -56,9 +61,18 @@ public class LocalJwtVerifier {
      */
     @JsonProperty("type")
     public String type;
+
     public LocalJwtVerifier withType(String type) {
         this.type = type;
         return this;
     }
     
+    public LocalJwtVerifier(@JsonProperty("algoSettings") Object algoSettings, @JsonProperty("enabled") Boolean enabled, @JsonProperty("source") Object source, @JsonProperty("strategy") Object strategy, @JsonProperty("strict") Boolean strict, @JsonProperty("type") String type) {
+        this.algoSettings = algoSettings;
+        this.enabled = enabled;
+        this.source = source;
+        this.strategy = strategy;
+        this.strict = strict;
+        this.type = type;
+  }
 }

@@ -18,6 +18,7 @@ public class UrlMapListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public UrlMapListWarningCodeEnum code;
+
     public UrlMapListWarning withCode(UrlMapListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class UrlMapListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public UrlMapListWarningData[] data;
+
     public UrlMapListWarning withData(UrlMapListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class UrlMapListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public UrlMapListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public UrlMapListWarning(){}
 }

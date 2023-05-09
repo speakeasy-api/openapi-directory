@@ -15,6 +15,7 @@ public class S3RepositoryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketName")
     public String bucketName;
+
     public S3RepositoryDetails withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -23,9 +24,11 @@ public class S3RepositoryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeArtifacts")
     public CodeArtifacts codeArtifacts;
+
     public S3RepositoryDetails withCodeArtifacts(CodeArtifacts codeArtifacts) {
         this.codeArtifacts = codeArtifacts;
         return this;
     }
     
+    public S3RepositoryDetails(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SecurityDetails {
     @JsonProperty("roleArn")
     public String roleArn;
+
     public SecurityDetails withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -19,6 +20,7 @@ public class SecurityDetails {
     
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public SecurityDetails withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -26,9 +28,15 @@ public class SecurityDetails {
     
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public SecurityDetails withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public SecurityDetails(@JsonProperty("roleArn") String roleArn, @JsonProperty("securityGroupIds") String[] securityGroupIds, @JsonProperty("subnetIds") String[] subnetIds) {
+        this.roleArn = roleArn;
+        this.securityGroupIds = securityGroupIds;
+        this.subnetIds = subnetIds;
+  }
 }

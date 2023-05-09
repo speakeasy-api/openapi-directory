@@ -18,6 +18,7 @@ public class V1x1InvitedTeamMemberVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public RoleSimpleVO role;
+
     public V1x1InvitedTeamMemberVO withRole(RoleSimpleVO role) {
         this.role = role;
         return this;
@@ -26,6 +27,7 @@ public class V1x1InvitedTeamMemberVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_member_id")
     public Long teamMemberId;
+
     public V1x1InvitedTeamMemberVO withTeamMemberId(Long teamMemberId) {
         this.teamMemberId = teamMemberId;
         return this;
@@ -37,6 +39,7 @@ public class V1x1InvitedTeamMemberVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public UserPersonVO user;
+
     public V1x1InvitedTeamMemberVO withUser(UserPersonVO user) {
         this.user = user;
         return this;
@@ -45,9 +48,11 @@ public class V1x1InvitedTeamMemberVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("was_invited_before")
     public Boolean wasInvitedBefore;
+
     public V1x1InvitedTeamMemberVO withWasInvitedBefore(Boolean wasInvitedBefore) {
         this.wasInvitedBefore = wasInvitedBefore;
         return this;
     }
     
+    public V1x1InvitedTeamMemberVO(){}
 }

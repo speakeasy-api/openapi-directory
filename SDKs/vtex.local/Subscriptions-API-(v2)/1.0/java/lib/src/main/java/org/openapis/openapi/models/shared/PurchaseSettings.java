@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PurchaseSettings {
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public PurchaseSettings withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -16,6 +17,7 @@ public class PurchaseSettings {
     
     @JsonProperty("paymentMethod")
     public PaymentMethod paymentMethod;
+
     public PurchaseSettings withPaymentMethod(PaymentMethod paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -23,6 +25,7 @@ public class PurchaseSettings {
     
     @JsonProperty("purchaseDay")
     public String purchaseDay;
+
     public PurchaseSettings withPurchaseDay(String purchaseDay) {
         this.purchaseDay = purchaseDay;
         return this;
@@ -30,6 +33,7 @@ public class PurchaseSettings {
     
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public PurchaseSettings withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -37,6 +41,7 @@ public class PurchaseSettings {
     
     @JsonProperty("selectedSla")
     public String selectedSla;
+
     public PurchaseSettings withSelectedSla(String selectedSla) {
         this.selectedSla = selectedSla;
         return this;
@@ -44,9 +49,18 @@ public class PurchaseSettings {
     
     @JsonProperty("seller")
     public String seller;
+
     public PurchaseSettings withSeller(String seller) {
         this.seller = seller;
         return this;
     }
     
+    public PurchaseSettings(@JsonProperty("currencyCode") String currencyCode, @JsonProperty("paymentMethod") PaymentMethod paymentMethod, @JsonProperty("purchaseDay") String purchaseDay, @JsonProperty("salesChannel") String salesChannel, @JsonProperty("selectedSla") String selectedSla, @JsonProperty("seller") String seller) {
+        this.currencyCode = currencyCode;
+        this.paymentMethod = paymentMethod;
+        this.purchaseDay = purchaseDay;
+        this.salesChannel = salesChannel;
+        this.selectedSla = selectedSla;
+        this.seller = seller;
+  }
 }

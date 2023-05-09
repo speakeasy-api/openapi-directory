@@ -15,6 +15,7 @@ public class BatchDeleteImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failures")
     public ImageFailure[] failures;
+
     public BatchDeleteImageResponse withFailures(ImageFailure[] failures) {
         this.failures = failures;
         return this;
@@ -23,9 +24,11 @@ public class BatchDeleteImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageIds")
     public ImageIdentifier[] imageIds;
+
     public BatchDeleteImageResponse withImageIds(ImageIdentifier[] imageIds) {
         this.imageIds = imageIds;
         return this;
     }
     
+    public BatchDeleteImageResponse(){}
 }

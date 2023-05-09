@@ -18,9 +18,11 @@ public class GoogleChromePolicyVersionsV1FieldConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numericRangeConstraint")
     public GoogleChromePolicyVersionsV1NumericRangeConstraint numericRangeConstraint;
+
     public GoogleChromePolicyVersionsV1FieldConstraints withNumericRangeConstraint(GoogleChromePolicyVersionsV1NumericRangeConstraint numericRangeConstraint) {
         this.numericRangeConstraint = numericRangeConstraint;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1FieldConstraints(){}
 }

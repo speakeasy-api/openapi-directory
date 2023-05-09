@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateIntegrationResponseRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateIntegrationResponseRequestBody requestBody;
+
     public UpdateIntegrationResponseRequest withRequestBody(UpdateIntegrationResponseRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateIntegrationResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateIntegrationResponseRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateIntegrationResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateIntegrationResponseRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateIntegrationResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateIntegrationResponseRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateIntegrationResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateIntegrationResponseRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateIntegrationResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateIntegrationResponseRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateIntegrationResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateIntegrationResponseRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateIntegrationResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateIntegrationResponseRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class UpdateIntegrationResponseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
     public String apiId;
+
     public UpdateIntegrationResponseRequest withApiId(String apiId) {
         this.apiId = apiId;
         return this;
@@ -78,6 +88,7 @@ public class UpdateIntegrationResponseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=integrationId")
     public String integrationId;
+
     public UpdateIntegrationResponseRequest withIntegrationId(String integrationId) {
         this.integrationId = integrationId;
         return this;
@@ -88,9 +99,16 @@ public class UpdateIntegrationResponseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=integrationResponseId")
     public String integrationResponseId;
+
     public UpdateIntegrationResponseRequest withIntegrationResponseId(String integrationResponseId) {
         this.integrationResponseId = integrationResponseId;
         return this;
     }
     
+    public UpdateIntegrationResponseRequest(@JsonProperty("RequestBody") UpdateIntegrationResponseRequestBody requestBody, @JsonProperty("apiId") String apiId, @JsonProperty("integrationId") String integrationId, @JsonProperty("integrationResponseId") String integrationResponseId) {
+        this.requestBody = requestBody;
+        this.apiId = apiId;
+        this.integrationId = integrationId;
+        this.integrationResponseId = integrationResponseId;
+  }
 }

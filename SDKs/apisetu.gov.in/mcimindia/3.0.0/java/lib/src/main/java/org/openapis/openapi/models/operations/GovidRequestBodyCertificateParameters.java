@@ -12,6 +12,7 @@ public class GovidRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public GovidRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class GovidRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public GovidRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class GovidRequestBodyCertificateParameters {
      */
     @JsonProperty("REGN_NO")
     public String regnNo;
+
     public GovidRequestBodyCertificateParameters withRegnNo(String regnNo) {
         this.regnNo = regnNo;
         return this;
@@ -42,9 +45,16 @@ public class GovidRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public GovidRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public GovidRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("REGN_NO") String regnNo, @JsonProperty("UID") String uid) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.regnNo = regnNo;
+        this.uid = uid;
+  }
 }

@@ -15,6 +15,7 @@ public class PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public String digest;
+
     public PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarnings withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -26,6 +27,7 @@ public class PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public String repository;
+
     public PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarnings withRepository(String repository) {
         this.repository = repository;
         return this;
@@ -37,6 +39,7 @@ public class PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarnings withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -48,9 +51,11 @@ public class PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarningsWarningEnum warning;
+
     public PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarnings withWarning(PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarningsWarningEnum warning) {
         this.warning = warning;
         return this;
     }
     
+    public PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarnings(){}
 }

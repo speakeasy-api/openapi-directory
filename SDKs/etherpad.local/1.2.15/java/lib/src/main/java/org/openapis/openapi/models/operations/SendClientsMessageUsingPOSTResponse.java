@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendClientsMessageUsingPOSTResponse {
     
     public String contentType;
+
     public SendClientsMessageUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SendClientsMessageUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public SendClientsMessageUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SendClientsMessageUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendClientsMessageUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SendClientsMessageUsingPOSTResponse {
      */
     
     public SendClientsMessageUsingPOST200ApplicationJSON sendClientsMessageUsingPOST200ApplicationJSONObject;
+
     public SendClientsMessageUsingPOSTResponse withSendClientsMessageUsingPOST200ApplicationJSONObject(SendClientsMessageUsingPOST200ApplicationJSON sendClientsMessageUsingPOST200ApplicationJSONObject) {
         this.sendClientsMessageUsingPOST200ApplicationJSONObject = sendClientsMessageUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SendClientsMessageUsingPOSTResponse {
      */
     
     public SendClientsMessageUsingPOST400ApplicationJSON sendClientsMessageUsingPOST400ApplicationJSONObject;
+
     public SendClientsMessageUsingPOSTResponse withSendClientsMessageUsingPOST400ApplicationJSONObject(SendClientsMessageUsingPOST400ApplicationJSON sendClientsMessageUsingPOST400ApplicationJSONObject) {
         this.sendClientsMessageUsingPOST400ApplicationJSONObject = sendClientsMessageUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SendClientsMessageUsingPOSTResponse {
      */
     
     public SendClientsMessageUsingPOST401ApplicationJSON sendClientsMessageUsingPOST401ApplicationJSONObject;
+
     public SendClientsMessageUsingPOSTResponse withSendClientsMessageUsingPOST401ApplicationJSONObject(SendClientsMessageUsingPOST401ApplicationJSON sendClientsMessageUsingPOST401ApplicationJSONObject) {
         this.sendClientsMessageUsingPOST401ApplicationJSONObject = sendClientsMessageUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class SendClientsMessageUsingPOSTResponse {
      */
     
     public SendClientsMessageUsingPOST500ApplicationJSON sendClientsMessageUsingPOST500ApplicationJSONObject;
+
     public SendClientsMessageUsingPOSTResponse withSendClientsMessageUsingPOST500ApplicationJSONObject(SendClientsMessageUsingPOST500ApplicationJSON sendClientsMessageUsingPOST500ApplicationJSONObject) {
         this.sendClientsMessageUsingPOST500ApplicationJSONObject = sendClientsMessageUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public SendClientsMessageUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

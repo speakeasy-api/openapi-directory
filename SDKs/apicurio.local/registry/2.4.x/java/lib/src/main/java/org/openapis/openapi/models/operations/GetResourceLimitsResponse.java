@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourceLimitsResponse {
     
     public String contentType;
+
     public GetResourceLimitsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetResourceLimitsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetResourceLimitsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetResourceLimitsResponse {
      */
     
     public org.openapis.openapi.models.shared.Limits limits;
+
     public GetResourceLimitsResponse withLimits(org.openapis.openapi.models.shared.Limits limits) {
         this.limits = limits;
         return this;
@@ -36,6 +40,7 @@ public class GetResourceLimitsResponse {
     
     
     public Integer statusCode;
+
     public GetResourceLimitsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetResourceLimitsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourceLimitsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetResourceLimitsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

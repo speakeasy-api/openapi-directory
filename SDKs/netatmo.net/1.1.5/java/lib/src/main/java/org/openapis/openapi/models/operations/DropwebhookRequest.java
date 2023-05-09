@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DropwebhookRequest {
@@ -12,9 +13,13 @@ public class DropwebhookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_type")
     public String appType;
+
     public DropwebhookRequest withAppType(String appType) {
         this.appType = appType;
         return this;
     }
     
+    public DropwebhookRequest(@JsonProperty("app_type") String appType) {
+        this.appType = appType;
+  }
 }

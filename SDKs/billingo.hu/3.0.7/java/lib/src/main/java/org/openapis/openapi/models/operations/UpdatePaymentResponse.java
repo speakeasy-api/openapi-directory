@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePaymentResponse {
@@ -12,6 +13,7 @@ public class UpdatePaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse;
+
     public UpdatePaymentResponse withClientErrorResponse(org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse) {
         this.clientErrorResponse = clientErrorResponse;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePaymentResponse {
     
     
     public String contentType;
+
     public UpdatePaymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class UpdatePaymentResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public UpdatePaymentResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -36,6 +40,7 @@ public class UpdatePaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.PaymentHistory[] paymentHistories;
+
     public UpdatePaymentResponse withPaymentHistories(org.openapis.openapi.models.shared.PaymentHistory[] paymentHistories) {
         this.paymentHistories = paymentHistories;
         return this;
@@ -46,6 +51,7 @@ public class UpdatePaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse;
+
     public UpdatePaymentResponse withServerErrorResponse(org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse) {
         this.serverErrorResponse = serverErrorResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdatePaymentResponse {
     
     
     public Integer statusCode;
+
     public UpdatePaymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,6 +67,7 @@ public class UpdatePaymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePaymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -70,9 +78,14 @@ public class UpdatePaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse;
+
     public UpdatePaymentResponse withValidationErrorResponse(org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse) {
         this.validationErrorResponse = validationErrorResponse;
         return this;
     }
     
+    public UpdatePaymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

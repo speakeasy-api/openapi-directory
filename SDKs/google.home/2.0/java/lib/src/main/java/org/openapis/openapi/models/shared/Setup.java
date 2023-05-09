@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Setup {
     @JsonProperty("qr_ssid_suffix")
     public String qrSsidSuffix;
+
     public Setup withQrSsidSuffix(String qrSsidSuffix) {
         this.qrSsidSuffix = qrSsidSuffix;
         return this;
@@ -16,6 +17,7 @@ public class Setup {
     
     @JsonProperty("setup_state")
     public Integer setupState;
+
     public Setup withSetupState(Integer setupState) {
         this.setupState = setupState;
         return this;
@@ -23,6 +25,7 @@ public class Setup {
     
     @JsonProperty("ssid_suffix")
     public String ssidSuffix;
+
     public Setup withSsidSuffix(String ssidSuffix) {
         this.ssidSuffix = ssidSuffix;
         return this;
@@ -30,6 +33,7 @@ public class Setup {
     
     @JsonProperty("stats")
     public Stats stats;
+
     public Setup withStats(Stats stats) {
         this.stats = stats;
         return this;
@@ -37,9 +41,17 @@ public class Setup {
     
     @JsonProperty("tos_accepted")
     public Boolean tosAccepted;
+
     public Setup withTosAccepted(Boolean tosAccepted) {
         this.tosAccepted = tosAccepted;
         return this;
     }
     
+    public Setup(@JsonProperty("qr_ssid_suffix") String qrSsidSuffix, @JsonProperty("setup_state") Integer setupState, @JsonProperty("ssid_suffix") String ssidSuffix, @JsonProperty("stats") Stats stats, @JsonProperty("tos_accepted") Boolean tosAccepted) {
+        this.qrSsidSuffix = qrSsidSuffix;
+        this.setupState = setupState;
+        this.ssidSuffix = ssidSuffix;
+        this.stats = stats;
+        this.tosAccepted = tosAccepted;
+  }
 }

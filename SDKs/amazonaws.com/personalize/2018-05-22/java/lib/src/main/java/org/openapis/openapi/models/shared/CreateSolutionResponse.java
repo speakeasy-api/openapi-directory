@@ -15,9 +15,11 @@ public class CreateSolutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionArn")
     public String solutionArn;
+
     public CreateSolutionResponse withSolutionArn(String solutionArn) {
         this.solutionArn = solutionArn;
         return this;
     }
     
+    public CreateSolutionResponse(){}
 }

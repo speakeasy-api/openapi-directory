@@ -15,6 +15,7 @@ public class Serializer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrcSerDe")
     public OrcSerDe orcSerDe;
+
     public Serializer withOrcSerDe(OrcSerDe orcSerDe) {
         this.orcSerDe = orcSerDe;
         return this;
@@ -23,9 +24,11 @@ public class Serializer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParquetSerDe")
     public ParquetSerDe parquetSerDe;
+
     public Serializer withParquetSerDe(ParquetSerDe parquetSerDe) {
         this.parquetSerDe = parquetSerDe;
         return this;
     }
     
+    public Serializer(){}
 }

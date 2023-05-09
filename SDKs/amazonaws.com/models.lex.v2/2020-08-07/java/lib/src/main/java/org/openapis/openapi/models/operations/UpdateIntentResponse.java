@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateIntentResponse {
@@ -12,6 +13,7 @@ public class UpdateIntentResponse {
      */
     
     public Object conflictException;
+
     public UpdateIntentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateIntentResponse {
     
     
     public String contentType;
+
     public UpdateIntentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateIntentResponse {
      */
     
     public Object internalServerException;
+
     public UpdateIntentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateIntentResponse {
      */
     
     public Object preconditionFailedException;
+
     public UpdateIntentResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateIntentResponse {
     
     
     public Integer statusCode;
+
     public UpdateIntentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateIntentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateIntentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateIntentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateIntentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateIntentResponse {
      */
     
     public Object throttlingException;
+
     public UpdateIntentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateIntentResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateIntentResponse updateIntentResponse;
+
     public UpdateIntentResponse withUpdateIntentResponse(org.openapis.openapi.models.shared.UpdateIntentResponse updateIntentResponse) {
         this.updateIntentResponse = updateIntentResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateIntentResponse {
      */
     
     public Object validationException;
+
     public UpdateIntentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateIntentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

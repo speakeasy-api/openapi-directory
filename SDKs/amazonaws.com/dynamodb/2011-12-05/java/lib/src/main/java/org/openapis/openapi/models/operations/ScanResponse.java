@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ScanResponse {
     
     public String contentType;
+
     public ScanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ScanResponse {
      */
     
     public Object internalServerError;
+
     public ScanResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ScanResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public ScanResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -39,6 +43,7 @@ public class ScanResponse {
      */
     
     public Object requestLimitExceeded;
+
     public ScanResponse withRequestLimitExceeded(Object requestLimitExceeded) {
         this.requestLimitExceeded = requestLimitExceeded;
         return this;
@@ -49,6 +54,7 @@ public class ScanResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ScanResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ScanResponse {
      */
     
     public org.openapis.openapi.models.shared.ScanOutput scanOutput;
+
     public ScanResponse withScanOutput(org.openapis.openapi.models.shared.ScanOutput scanOutput) {
         this.scanOutput = scanOutput;
         return this;
@@ -66,6 +73,7 @@ public class ScanResponse {
     
     
     public Integer statusCode;
+
     public ScanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ScanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ScanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ScanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

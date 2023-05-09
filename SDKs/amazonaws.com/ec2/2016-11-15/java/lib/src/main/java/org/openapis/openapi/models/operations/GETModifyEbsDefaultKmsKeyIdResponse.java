@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETModifyEbsDefaultKmsKeyIdResponse {
     
     public byte[] body;
+
     public GETModifyEbsDefaultKmsKeyIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETModifyEbsDefaultKmsKeyIdResponse {
     
     
     public String contentType;
+
     public GETModifyEbsDefaultKmsKeyIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETModifyEbsDefaultKmsKeyIdResponse {
     
     
     public Integer statusCode;
+
     public GETModifyEbsDefaultKmsKeyIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETModifyEbsDefaultKmsKeyIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETModifyEbsDefaultKmsKeyIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETModifyEbsDefaultKmsKeyIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

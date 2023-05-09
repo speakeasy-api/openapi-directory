@@ -18,9 +18,11 @@ public class GetOrder2200ApplicationJSONPackageAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packages")
     public GetOrder2200ApplicationJSONPackageAttachmentPackages[] packages;
+
     public GetOrder2200ApplicationJSONPackageAttachment withPackages(GetOrder2200ApplicationJSONPackageAttachmentPackages[] packages) {
         this.packages = packages;
         return this;
     }
     
+    public GetOrder2200ApplicationJSONPackageAttachment(){}
 }

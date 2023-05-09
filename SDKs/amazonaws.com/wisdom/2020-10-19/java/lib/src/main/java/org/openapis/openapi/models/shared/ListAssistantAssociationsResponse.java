@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAssistantAssociationsResponse {
     @JsonProperty("assistantAssociationSummaries")
     public AssistantAssociationSummary[] assistantAssociationSummaries;
+
     public ListAssistantAssociationsResponse withAssistantAssociationSummaries(AssistantAssociationSummary[] assistantAssociationSummaries) {
         this.assistantAssociationSummaries = assistantAssociationSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListAssistantAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAssistantAssociationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssistantAssociationsResponse(@JsonProperty("assistantAssociationSummaries") AssistantAssociationSummary[] assistantAssociationSummaries) {
+        this.assistantAssociationSummaries = assistantAssociationSummaries;
+  }
 }

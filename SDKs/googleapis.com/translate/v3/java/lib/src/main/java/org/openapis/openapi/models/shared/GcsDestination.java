@@ -18,9 +18,11 @@ public class GcsDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputUriPrefix")
     public String outputUriPrefix;
+
     public GcsDestination withOutputUriPrefix(String outputUriPrefix) {
         this.outputUriPrefix = outputUriPrefix;
         return this;
     }
     
+    public GcsDestination(){}
 }

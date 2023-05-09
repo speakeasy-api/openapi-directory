@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRelationalDatabaseSnapshotResponse {
@@ -12,6 +13,7 @@ public class GetRelationalDatabaseSnapshotResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRelationalDatabaseSnapshotResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetRelationalDatabaseSnapshotResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetRelationalDatabaseSnapshotResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetRelationalDatabaseSnapshotResponse {
     
     
     public String contentType;
+
     public GetRelationalDatabaseSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetRelationalDatabaseSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRelationalDatabaseSnapshotResult getRelationalDatabaseSnapshotResult;
+
     public GetRelationalDatabaseSnapshotResponse withGetRelationalDatabaseSnapshotResult(org.openapis.openapi.models.shared.GetRelationalDatabaseSnapshotResult getRelationalDatabaseSnapshotResult) {
         this.getRelationalDatabaseSnapshotResult = getRelationalDatabaseSnapshotResult;
         return this;
@@ -49,6 +54,7 @@ public class GetRelationalDatabaseSnapshotResponse {
      */
     
     public Object invalidInputException;
+
     public GetRelationalDatabaseSnapshotResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetRelationalDatabaseSnapshotResponse {
      */
     
     public Object notFoundException;
+
     public GetRelationalDatabaseSnapshotResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetRelationalDatabaseSnapshotResponse {
      */
     
     public Object operationFailureException;
+
     public GetRelationalDatabaseSnapshotResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetRelationalDatabaseSnapshotResponse {
      */
     
     public Object serviceException;
+
     public GetRelationalDatabaseSnapshotResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetRelationalDatabaseSnapshotResponse {
     
     
     public Integer statusCode;
+
     public GetRelationalDatabaseSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetRelationalDatabaseSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRelationalDatabaseSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetRelationalDatabaseSnapshotResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetRelationalDatabaseSnapshotResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetRelationalDatabaseSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

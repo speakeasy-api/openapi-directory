@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostExtractOntologySubgraphResourceRequest {
@@ -12,6 +13,7 @@ public class PostExtractOntologySubgraphResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cnode")
     public String[] cnode;
+
     public PostExtractOntologySubgraphResourceRequest withCnode(String[] cnode) {
         this.cnode = cnode;
         return this;
@@ -22,6 +24,7 @@ public class PostExtractOntologySubgraphResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_ancestors")
     public Boolean includeAncestors;
+
     public PostExtractOntologySubgraphResourceRequest withIncludeAncestors(Boolean includeAncestors) {
         this.includeAncestors = includeAncestors;
         return this;
@@ -32,6 +35,7 @@ public class PostExtractOntologySubgraphResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_descendants")
     public Boolean includeDescendants;
+
     public PostExtractOntologySubgraphResourceRequest withIncludeDescendants(Boolean includeDescendants) {
         this.includeDescendants = includeDescendants;
         return this;
@@ -42,6 +46,7 @@ public class PostExtractOntologySubgraphResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_meta")
     public Boolean includeMeta;
+
     public PostExtractOntologySubgraphResourceRequest withIncludeMeta(Boolean includeMeta) {
         this.includeMeta = includeMeta;
         return this;
@@ -52,6 +57,7 @@ public class PostExtractOntologySubgraphResourceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node")
     public String node;
+
     public PostExtractOntologySubgraphResourceRequest withNode(String node) {
         this.node = node;
         return this;
@@ -62,6 +68,7 @@ public class PostExtractOntologySubgraphResourceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ontology")
     public String ontology;
+
     public PostExtractOntologySubgraphResourceRequest withOntology(String ontology) {
         this.ontology = ontology;
         return this;
@@ -72,9 +79,14 @@ public class PostExtractOntologySubgraphResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relation")
     public String[] relation;
+
     public PostExtractOntologySubgraphResourceRequest withRelation(String[] relation) {
         this.relation = relation;
         return this;
     }
     
+    public PostExtractOntologySubgraphResourceRequest(@JsonProperty("node") String node, @JsonProperty("ontology") String ontology) {
+        this.node = node;
+        this.ontology = ontology;
+  }
 }

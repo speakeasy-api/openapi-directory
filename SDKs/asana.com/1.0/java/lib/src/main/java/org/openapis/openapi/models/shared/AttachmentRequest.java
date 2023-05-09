@@ -25,6 +25,7 @@ public class AttachmentRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=connect_to_app")
     public Boolean connectToApp;
+
     public AttachmentRequest withConnectToApp(Boolean connectToApp) {
         this.connectToApp = connectToApp;
         return this;
@@ -36,6 +37,7 @@ public class AttachmentRequest {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public AttachmentRequestFile file;
+
     public AttachmentRequest withFile(AttachmentRequestFile file) {
         this.file = file;
         return this;
@@ -47,6 +49,7 @@ public class AttachmentRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public AttachmentRequest withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +61,7 @@ public class AttachmentRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=parent")
     public String parent;
+
     public AttachmentRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -69,6 +73,7 @@ public class AttachmentRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=resource_subtype")
     public AttachmentRequestResourceSubtypeEnum resourceSubtype;
+
     public AttachmentRequest withResourceSubtype(AttachmentRequestResourceSubtypeEnum resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -80,9 +85,11 @@ public class AttachmentRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=url")
     public String url;
+
     public AttachmentRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AttachmentRequest(){}
 }

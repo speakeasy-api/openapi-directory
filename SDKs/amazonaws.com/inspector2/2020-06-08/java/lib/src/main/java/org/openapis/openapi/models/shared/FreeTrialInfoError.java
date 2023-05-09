@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FreeTrialInfoError {
     @JsonProperty("accountId")
     public String accountId;
+
     public FreeTrialInfoError withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +20,7 @@ public class FreeTrialInfoError {
     
     @JsonProperty("code")
     public FreeTrialInfoErrorCodeEnum code;
+
     public FreeTrialInfoError withCode(FreeTrialInfoErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -26,9 +28,15 @@ public class FreeTrialInfoError {
     
     @JsonProperty("message")
     public String message;
+
     public FreeTrialInfoError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public FreeTrialInfoError(@JsonProperty("accountId") String accountId, @JsonProperty("code") FreeTrialInfoErrorCodeEnum code, @JsonProperty("message") String message) {
+        this.accountId = accountId;
+        this.code = code;
+        this.message = message;
+  }
 }

@@ -55,12 +55,10 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCloseAccountResponse res = new org.openapis.openapi.models.operations.PostCloseAccountResponse() {{
+        org.openapis.openapi.models.operations.PostCloseAccountResponse res = new org.openapis.openapi.models.operations.PostCloseAccountResponse(contentType, httpRes.statusCode()) {{
             closeAccountResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 202) {
@@ -106,12 +104,10 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCreateAccountResponse res = new org.openapis.openapi.models.operations.PostCreateAccountResponse() {{
+        org.openapis.openapi.models.operations.PostCreateAccountResponse res = new org.openapis.openapi.models.operations.PostCreateAccountResponse(contentType, httpRes.statusCode()) {{
             createAccountResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 202) {
@@ -157,12 +153,10 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUpdateAccountResponse res = new org.openapis.openapi.models.operations.PostUpdateAccountResponse() {{
+        org.openapis.openapi.models.operations.PostUpdateAccountResponse res = new org.openapis.openapi.models.operations.PostUpdateAccountResponse(contentType, httpRes.statusCode()) {{
             updateAccountResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 202) {

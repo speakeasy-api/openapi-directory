@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateQueueRequest - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateQueueRequest {
     
     public java.util.Map<String, String> attributes;
+
     public CreateQueueRequest withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -19,6 +20,7 @@ public class CreateQueueRequest {
     
     
     public String queueName;
+
     public CreateQueueRequest withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
@@ -26,9 +28,13 @@ public class CreateQueueRequest {
     
     
     public java.util.Map<String, String> tags;
+
     public CreateQueueRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateQueueRequest(@JsonProperty("QueueName") String queueName) {
+        this.queueName = queueName;
+  }
 }

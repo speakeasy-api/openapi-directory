@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UnshareDirectoryResponse {
@@ -12,6 +13,7 @@ public class UnshareDirectoryResponse {
      */
     
     public Object clientException;
+
     public UnshareDirectoryResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class UnshareDirectoryResponse {
     
     
     public String contentType;
+
     public UnshareDirectoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UnshareDirectoryResponse {
      */
     
     public Object directoryNotSharedException;
+
     public UnshareDirectoryResponse withDirectoryNotSharedException(Object directoryNotSharedException) {
         this.directoryNotSharedException = directoryNotSharedException;
         return this;
@@ -39,6 +43,7 @@ public class UnshareDirectoryResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public UnshareDirectoryResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class UnshareDirectoryResponse {
      */
     
     public Object invalidTargetException;
+
     public UnshareDirectoryResponse withInvalidTargetException(Object invalidTargetException) {
         this.invalidTargetException = invalidTargetException;
         return this;
@@ -56,6 +62,7 @@ public class UnshareDirectoryResponse {
     
     
     public Integer statusCode;
+
     public UnshareDirectoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UnshareDirectoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UnshareDirectoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UnshareDirectoryResponse {
      */
     
     public Object serviceException;
+
     public UnshareDirectoryResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -83,9 +92,14 @@ public class UnshareDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.UnshareDirectoryResult unshareDirectoryResult;
+
     public UnshareDirectoryResponse withUnshareDirectoryResult(org.openapis.openapi.models.shared.UnshareDirectoryResult unshareDirectoryResult) {
         this.unshareDirectoryResult = unshareDirectoryResult;
         return this;
     }
     
+    public UnshareDirectoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

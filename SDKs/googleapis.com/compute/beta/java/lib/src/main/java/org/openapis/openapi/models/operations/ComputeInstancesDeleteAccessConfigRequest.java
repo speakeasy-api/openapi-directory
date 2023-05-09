@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeInstancesDeleteAccessConfigRequest {
@@ -12,6 +13,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeInstancesDeleteAccessConfigRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accessConfig")
     public String accessConfig;
+
     public ComputeInstancesDeleteAccessConfigRequest withAccessConfig(String accessConfig) {
         this.accessConfig = accessConfig;
         return this;
@@ -32,6 +35,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeInstancesDeleteAccessConfigRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -42,6 +46,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeInstancesDeleteAccessConfigRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeInstancesDeleteAccessConfigRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeInstancesDeleteAccessConfigRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instance")
     public String instance;
+
     public ComputeInstancesDeleteAccessConfigRequest withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -82,6 +90,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeInstancesDeleteAccessConfigRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=networkInterface")
     public String networkInterface;
+
     public ComputeInstancesDeleteAccessConfigRequest withNetworkInterface(String networkInterface) {
         this.networkInterface = networkInterface;
         return this;
@@ -102,6 +112,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeInstancesDeleteAccessConfigRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeInstancesDeleteAccessConfigRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeInstancesDeleteAccessConfigRequest withProject(String project) {
         this.project = project;
         return this;
@@ -132,6 +145,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeInstancesDeleteAccessConfigRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeInstancesDeleteAccessConfigRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -152,6 +167,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeInstancesDeleteAccessConfigRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,6 +178,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeInstancesDeleteAccessConfigRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -172,6 +189,7 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeInstancesDeleteAccessConfigRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -182,9 +200,17 @@ public class ComputeInstancesDeleteAccessConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
     public String zone;
+
     public ComputeInstancesDeleteAccessConfigRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ComputeInstancesDeleteAccessConfigRequest(@JsonProperty("accessConfig") String accessConfig, @JsonProperty("instance") String instance, @JsonProperty("networkInterface") String networkInterface, @JsonProperty("project") String project, @JsonProperty("zone") String zone) {
+        this.accessConfig = accessConfig;
+        this.instance = instance;
+        this.networkInterface = networkInterface;
+        this.project = project;
+        this.zone = zone;
+  }
 }

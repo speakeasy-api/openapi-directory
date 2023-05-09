@@ -15,9 +15,11 @@ public class DisableSnapshotCopyResult {
      */
     
     public Cluster cluster;
+
     public DisableSnapshotCopyResult withCluster(Cluster cluster) {
         this.cluster = cluster;
         return this;
     }
     
+    public DisableSnapshotCopyResult(){}
 }

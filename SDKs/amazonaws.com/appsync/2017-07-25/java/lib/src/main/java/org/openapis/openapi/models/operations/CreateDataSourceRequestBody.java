@@ -15,6 +15,7 @@ public class CreateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateDataSourceRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class CreateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamodbConfig")
     public CreateDataSourceRequestBodyDynamodbConfig dynamodbConfig;
+
     public CreateDataSourceRequestBody withDynamodbConfig(CreateDataSourceRequestBodyDynamodbConfig dynamodbConfig) {
         this.dynamodbConfig = dynamodbConfig;
         return this;
@@ -37,6 +39,7 @@ public class CreateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elasticsearchConfig")
     public CreateDataSourceRequestBodyElasticsearchConfig elasticsearchConfig;
+
     public CreateDataSourceRequestBody withElasticsearchConfig(CreateDataSourceRequestBodyElasticsearchConfig elasticsearchConfig) {
         this.elasticsearchConfig = elasticsearchConfig;
         return this;
@@ -48,6 +51,7 @@ public class CreateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventBridgeConfig")
     public CreateDataSourceRequestBodyEventBridgeConfig eventBridgeConfig;
+
     public CreateDataSourceRequestBody withEventBridgeConfig(CreateDataSourceRequestBodyEventBridgeConfig eventBridgeConfig) {
         this.eventBridgeConfig = eventBridgeConfig;
         return this;
@@ -59,6 +63,7 @@ public class CreateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpConfig")
     public CreateDataSourceRequestBodyHttpConfig httpConfig;
+
     public CreateDataSourceRequestBody withHttpConfig(CreateDataSourceRequestBodyHttpConfig httpConfig) {
         this.httpConfig = httpConfig;
         return this;
@@ -70,6 +75,7 @@ public class CreateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaConfig")
     public CreateDataSourceRequestBodyLambdaConfig lambdaConfig;
+
     public CreateDataSourceRequestBody withLambdaConfig(CreateDataSourceRequestBodyLambdaConfig lambdaConfig) {
         this.lambdaConfig = lambdaConfig;
         return this;
@@ -80,6 +86,7 @@ public class CreateDataSourceRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateDataSourceRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -91,6 +98,7 @@ public class CreateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openSearchServiceConfig")
     public CreateDataSourceRequestBodyOpenSearchServiceConfig openSearchServiceConfig;
+
     public CreateDataSourceRequestBody withOpenSearchServiceConfig(CreateDataSourceRequestBodyOpenSearchServiceConfig openSearchServiceConfig) {
         this.openSearchServiceConfig = openSearchServiceConfig;
         return this;
@@ -102,6 +110,7 @@ public class CreateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationalDatabaseConfig")
     public CreateDataSourceRequestBodyRelationalDatabaseConfig relationalDatabaseConfig;
+
     public CreateDataSourceRequestBody withRelationalDatabaseConfig(CreateDataSourceRequestBodyRelationalDatabaseConfig relationalDatabaseConfig) {
         this.relationalDatabaseConfig = relationalDatabaseConfig;
         return this;
@@ -113,6 +122,7 @@ public class CreateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRoleArn")
     public String serviceRoleArn;
+
     public CreateDataSourceRequestBody withServiceRoleArn(String serviceRoleArn) {
         this.serviceRoleArn = serviceRoleArn;
         return this;
@@ -123,9 +133,14 @@ public class CreateDataSourceRequestBody {
      */
     @JsonProperty("type")
     public CreateDataSourceRequestBodyTypeEnum type;
+
     public CreateDataSourceRequestBody withType(CreateDataSourceRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateDataSourceRequestBody(@JsonProperty("name") String name, @JsonProperty("type") CreateDataSourceRequestBodyTypeEnum type) {
+        this.name = name;
+        this.type = type;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCoursesContentIdActivationsResponse {
@@ -12,6 +13,7 @@ public class GetCoursesContentIdActivationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ActivationResponse activationResponse;
+
     public GetCoursesContentIdActivationsResponse withActivationResponse(org.openapis.openapi.models.shared.ActivationResponse activationResponse) {
         this.activationResponse = activationResponse;
         return this;
@@ -19,6 +21,7 @@ public class GetCoursesContentIdActivationsResponse {
     
     
     public String contentType;
+
     public GetCoursesContentIdActivationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCoursesContentIdActivationsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetCoursesContentIdActivationsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetCoursesContentIdActivationsResponse {
     
     
     public Integer statusCode;
+
     public GetCoursesContentIdActivationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCoursesContentIdActivationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCoursesContentIdActivationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCoursesContentIdActivationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

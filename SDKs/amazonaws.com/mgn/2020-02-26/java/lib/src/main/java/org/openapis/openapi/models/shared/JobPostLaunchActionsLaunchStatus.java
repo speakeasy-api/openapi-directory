@@ -15,6 +15,7 @@ public class JobPostLaunchActionsLaunchStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionID")
     public String executionID;
+
     public JobPostLaunchActionsLaunchStatus withExecutionID(String executionID) {
         this.executionID = executionID;
         return this;
@@ -23,6 +24,7 @@ public class JobPostLaunchActionsLaunchStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionStatus")
     public PostLaunchActionExecutionStatusEnum executionStatus;
+
     public JobPostLaunchActionsLaunchStatus withExecutionStatus(PostLaunchActionExecutionStatusEnum executionStatus) {
         this.executionStatus = executionStatus;
         return this;
@@ -31,6 +33,7 @@ public class JobPostLaunchActionsLaunchStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public JobPostLaunchActionsLaunchStatus withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -39,6 +42,7 @@ public class JobPostLaunchActionsLaunchStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssmDocument")
     public SsmDocument ssmDocument;
+
     public JobPostLaunchActionsLaunchStatus withSsmDocument(SsmDocument ssmDocument) {
         this.ssmDocument = ssmDocument;
         return this;
@@ -47,9 +51,11 @@ public class JobPostLaunchActionsLaunchStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssmDocumentType")
     public SsmDocumentTypeEnum ssmDocumentType;
+
     public JobPostLaunchActionsLaunchStatus withSsmDocumentType(SsmDocumentTypeEnum ssmDocumentType) {
         this.ssmDocumentType = ssmDocumentType;
         return this;
     }
     
+    public JobPostLaunchActionsLaunchStatus(){}
 }

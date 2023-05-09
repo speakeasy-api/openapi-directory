@@ -22,6 +22,7 @@ public class SuiteDefinitionInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public SuiteDefinitionInformation withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class SuiteDefinitionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultDevices")
     public DeviceUnderTest[] defaultDevices;
+
     public SuiteDefinitionInformation withDefaultDevices(DeviceUnderTest[] defaultDevices) {
         this.defaultDevices = defaultDevices;
         return this;
@@ -38,6 +40,7 @@ public class SuiteDefinitionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intendedForQualification")
     public Boolean intendedForQualification;
+
     public SuiteDefinitionInformation withIntendedForQualification(Boolean intendedForQualification) {
         this.intendedForQualification = intendedForQualification;
         return this;
@@ -46,6 +49,7 @@ public class SuiteDefinitionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isLongDurationTest")
     public Boolean isLongDurationTest;
+
     public SuiteDefinitionInformation withIsLongDurationTest(Boolean isLongDurationTest) {
         this.isLongDurationTest = isLongDurationTest;
         return this;
@@ -54,6 +58,7 @@ public class SuiteDefinitionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public ProtocolEnum protocol;
+
     public SuiteDefinitionInformation withProtocol(ProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -62,6 +67,7 @@ public class SuiteDefinitionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteDefinitionId")
     public String suiteDefinitionId;
+
     public SuiteDefinitionInformation withSuiteDefinitionId(String suiteDefinitionId) {
         this.suiteDefinitionId = suiteDefinitionId;
         return this;
@@ -70,9 +76,11 @@ public class SuiteDefinitionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteDefinitionName")
     public String suiteDefinitionName;
+
     public SuiteDefinitionInformation withSuiteDefinitionName(String suiteDefinitionName) {
         this.suiteDefinitionName = suiteDefinitionName;
         return this;
     }
     
+    public SuiteDefinitionInformation(){}
 }

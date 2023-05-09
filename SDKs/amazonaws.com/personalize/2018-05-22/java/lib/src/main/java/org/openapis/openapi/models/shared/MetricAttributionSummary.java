@@ -22,6 +22,7 @@ public class MetricAttributionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public MetricAttributionSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class MetricAttributionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public MetricAttributionSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -40,6 +42,7 @@ public class MetricAttributionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public MetricAttributionSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -48,6 +51,7 @@ public class MetricAttributionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricAttributionArn")
     public String metricAttributionArn;
+
     public MetricAttributionSummary withMetricAttributionArn(String metricAttributionArn) {
         this.metricAttributionArn = metricAttributionArn;
         return this;
@@ -56,6 +60,7 @@ public class MetricAttributionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MetricAttributionSummary withName(String name) {
         this.name = name;
         return this;
@@ -64,9 +69,11 @@ public class MetricAttributionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public MetricAttributionSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public MetricAttributionSummary(){}
 }

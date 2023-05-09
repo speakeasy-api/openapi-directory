@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReindexrecurrenceRequest {
@@ -12,6 +13,7 @@ public class ReindexrecurrenceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ReindexrecurrenceRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ReindexrecurrenceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ReindexrecurrenceRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ReindexrecurrenceRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ReindexrecurrenceRequest[] requestBody;
+
     public ReindexrecurrenceRequest withRequestBody(org.openapis.openapi.models.shared.ReindexrecurrenceRequest[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -36,9 +40,16 @@ public class ReindexrecurrenceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=recurrenceId")
     public String recurrenceId;
+
     public ReindexrecurrenceRequest withRecurrenceId(String recurrenceId) {
         this.recurrenceId = recurrenceId;
         return this;
     }
     
+    public ReindexrecurrenceRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") org.openapis.openapi.models.shared.ReindexrecurrenceRequest[] requestBody, @JsonProperty("recurrenceId") String recurrenceId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.recurrenceId = recurrenceId;
+  }
 }

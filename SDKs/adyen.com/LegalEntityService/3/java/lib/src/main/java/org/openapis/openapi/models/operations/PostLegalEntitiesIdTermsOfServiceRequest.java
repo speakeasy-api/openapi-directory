@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostLegalEntitiesIdTermsOfServiceRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetTermsOfServiceDocumentRequest getTermsOfServiceDocumentRequest;
+
     public PostLegalEntitiesIdTermsOfServiceRequest withGetTermsOfServiceDocumentRequest(org.openapis.openapi.models.shared.GetTermsOfServiceDocumentRequest getTermsOfServiceDocumentRequest) {
         this.getTermsOfServiceDocumentRequest = getTermsOfServiceDocumentRequest;
         return this;
@@ -19,9 +21,13 @@ public class PostLegalEntitiesIdTermsOfServiceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PostLegalEntitiesIdTermsOfServiceRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PostLegalEntitiesIdTermsOfServiceRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

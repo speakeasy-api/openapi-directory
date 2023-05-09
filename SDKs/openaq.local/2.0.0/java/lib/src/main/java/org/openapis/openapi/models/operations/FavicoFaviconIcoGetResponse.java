@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FavicoFaviconIcoGetResponse {
     
     public String contentType;
+
     public FavicoFaviconIcoGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class FavicoFaviconIcoGetResponse {
     
     
     public Integer statusCode;
+
     public FavicoFaviconIcoGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class FavicoFaviconIcoGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FavicoFaviconIcoGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class FavicoFaviconIcoGetResponse {
      */
     
     public Object favicoFaviconIcoGet200ApplicationJSONAny;
+
     public FavicoFaviconIcoGetResponse withFavicoFaviconIcoGet200ApplicationJSONAny(Object favicoFaviconIcoGet200ApplicationJSONAny) {
         this.favicoFaviconIcoGet200ApplicationJSONAny = favicoFaviconIcoGet200ApplicationJSONAny;
         return this;
     }
     
+    public FavicoFaviconIcoGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateSlotTypeRequestBodyValueSelectionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advancedRecognitionSetting")
     public org.openapis.openapi.models.shared.AdvancedRecognitionSetting advancedRecognitionSetting;
+
     public CreateSlotTypeRequestBodyValueSelectionSetting withAdvancedRecognitionSetting(org.openapis.openapi.models.shared.AdvancedRecognitionSetting advancedRecognitionSetting) {
         this.advancedRecognitionSetting = advancedRecognitionSetting;
         return this;
@@ -23,6 +24,7 @@ public class CreateSlotTypeRequestBodyValueSelectionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regexFilter")
     public org.openapis.openapi.models.shared.SlotValueRegexFilter regexFilter;
+
     public CreateSlotTypeRequestBodyValueSelectionSetting withRegexFilter(org.openapis.openapi.models.shared.SlotValueRegexFilter regexFilter) {
         this.regexFilter = regexFilter;
         return this;
@@ -31,9 +33,11 @@ public class CreateSlotTypeRequestBodyValueSelectionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolutionStrategy")
     public org.openapis.openapi.models.shared.SlotValueResolutionStrategyEnum resolutionStrategy;
+
     public CreateSlotTypeRequestBodyValueSelectionSetting withResolutionStrategy(org.openapis.openapi.models.shared.SlotValueResolutionStrategyEnum resolutionStrategy) {
         this.resolutionStrategy = resolutionStrategy;
         return this;
     }
     
+    public CreateSlotTypeRequestBodyValueSelectionSetting(){}
 }

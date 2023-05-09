@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PutMetricDataInput {
     
     public MetricDatum[] metricData;
+
     public PutMetricDataInput withMetricData(MetricDatum[] metricData) {
         this.metricData = metricData;
         return this;
@@ -16,9 +17,14 @@ public class PutMetricDataInput {
     
     
     public String namespace;
+
     public PutMetricDataInput withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public PutMetricDataInput(@JsonProperty("MetricData") MetricDatum[] metricData, @JsonProperty("Namespace") String namespace) {
+        this.metricData = metricData;
+        this.namespace = namespace;
+  }
 }

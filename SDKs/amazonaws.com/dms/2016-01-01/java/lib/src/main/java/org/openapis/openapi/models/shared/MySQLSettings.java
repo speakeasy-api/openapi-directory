@@ -15,6 +15,7 @@ public class MySQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AfterConnectScript")
     public String afterConnectScript;
+
     public MySQLSettings withAfterConnectScript(String afterConnectScript) {
         this.afterConnectScript = afterConnectScript;
         return this;
@@ -23,6 +24,7 @@ public class MySQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CleanSourceMetadataOnMismatch")
     public Boolean cleanSourceMetadataOnMismatch;
+
     public MySQLSettings withCleanSourceMetadataOnMismatch(Boolean cleanSourceMetadataOnMismatch) {
         this.cleanSourceMetadataOnMismatch = cleanSourceMetadataOnMismatch;
         return this;
@@ -31,6 +33,7 @@ public class MySQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public MySQLSettings withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -39,6 +42,7 @@ public class MySQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventsPollInterval")
     public Long eventsPollInterval;
+
     public MySQLSettings withEventsPollInterval(Long eventsPollInterval) {
         this.eventsPollInterval = eventsPollInterval;
         return this;
@@ -47,6 +51,7 @@ public class MySQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxFileSize")
     public Long maxFileSize;
+
     public MySQLSettings withMaxFileSize(Long maxFileSize) {
         this.maxFileSize = maxFileSize;
         return this;
@@ -55,6 +60,7 @@ public class MySQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParallelLoadThreads")
     public Long parallelLoadThreads;
+
     public MySQLSettings withParallelLoadThreads(Long parallelLoadThreads) {
         this.parallelLoadThreads = parallelLoadThreads;
         return this;
@@ -63,6 +69,7 @@ public class MySQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public MySQLSettings withPassword(String password) {
         this.password = password;
         return this;
@@ -71,6 +78,7 @@ public class MySQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public MySQLSettings withPort(Long port) {
         this.port = port;
         return this;
@@ -79,6 +87,7 @@ public class MySQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretsManagerAccessRoleArn")
     public String secretsManagerAccessRoleArn;
+
     public MySQLSettings withSecretsManagerAccessRoleArn(String secretsManagerAccessRoleArn) {
         this.secretsManagerAccessRoleArn = secretsManagerAccessRoleArn;
         return this;
@@ -87,6 +96,7 @@ public class MySQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretsManagerSecretId")
     public String secretsManagerSecretId;
+
     public MySQLSettings withSecretsManagerSecretId(String secretsManagerSecretId) {
         this.secretsManagerSecretId = secretsManagerSecretId;
         return this;
@@ -95,6 +105,7 @@ public class MySQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerName")
     public String serverName;
+
     public MySQLSettings withServerName(String serverName) {
         this.serverName = serverName;
         return this;
@@ -103,6 +114,7 @@ public class MySQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerTimezone")
     public String serverTimezone;
+
     public MySQLSettings withServerTimezone(String serverTimezone) {
         this.serverTimezone = serverTimezone;
         return this;
@@ -111,6 +123,7 @@ public class MySQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetDbType")
     public TargetDbTypeEnum targetDbType;
+
     public MySQLSettings withTargetDbType(TargetDbTypeEnum targetDbType) {
         this.targetDbType = targetDbType;
         return this;
@@ -119,9 +132,11 @@ public class MySQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public MySQLSettings withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public MySQLSettings(){}
 }

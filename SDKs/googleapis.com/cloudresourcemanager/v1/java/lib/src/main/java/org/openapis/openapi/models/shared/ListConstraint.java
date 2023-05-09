@@ -18,6 +18,7 @@ public class ListConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedValue")
     public String suggestedValue;
+
     public ListConstraint withSuggestedValue(String suggestedValue) {
         this.suggestedValue = suggestedValue;
         return this;
@@ -29,9 +30,11 @@ public class ListConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportsUnder")
     public Boolean supportsUnder;
+
     public ListConstraint withSupportsUnder(Boolean supportsUnder) {
         this.supportsUnder = supportsUnder;
         return this;
     }
     
+    public ListConstraint(){}
 }

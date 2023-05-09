@@ -18,6 +18,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupLabels")
     public AssignmentGroupLabel[] groupLabels;
+
     public Assignment withGroupLabels(AssignmentGroupLabel[] groupLabels) {
         this.groupLabels = groupLabels;
         return this;
@@ -29,6 +30,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceNamePrefixes")
     public String[] instanceNamePrefixes;
+
     public Assignment withInstanceNamePrefixes(String[] instanceNamePrefixes) {
         this.instanceNamePrefixes = instanceNamePrefixes;
         return this;
@@ -40,6 +42,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public String[] instances;
+
     public Assignment withInstances(String[] instances) {
         this.instances = instances;
         return this;
@@ -51,6 +54,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osTypes")
     public AssignmentOsType[] osTypes;
+
     public Assignment withOsTypes(AssignmentOsType[] osTypes) {
         this.osTypes = osTypes;
         return this;
@@ -62,9 +66,11 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zones")
     public String[] zones;
+
     public Assignment withZones(String[] zones) {
         this.zones = zones;
         return this;
     }
     
+    public Assignment(){}
 }

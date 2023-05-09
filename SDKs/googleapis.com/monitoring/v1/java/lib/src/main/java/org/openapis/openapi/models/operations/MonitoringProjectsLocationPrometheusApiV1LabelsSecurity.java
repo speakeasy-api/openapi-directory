@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class MonitoringProjectsLocationPrometheusApiV1LabelsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public MonitoringProjectsLocationPrometheusApiV1LabelsSecurityOption1 option1;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelsSecurity withOption1(MonitoringProjectsLocationPrometheusApiV1LabelsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public MonitoringProjectsLocationPrometheusApiV1LabelsSecurityOption2 option2;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelsSecurity withOption2(MonitoringProjectsLocationPrometheusApiV1LabelsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public MonitoringProjectsLocationPrometheusApiV1LabelsSecurityOption3 option3;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelsSecurity withOption3(MonitoringProjectsLocationPrometheusApiV1LabelsSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public MonitoringProjectsLocationPrometheusApiV1LabelsSecurity(){}
 }

@@ -12,6 +12,7 @@ public class GetResourcesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludeCompliantResources")
     public Boolean excludeCompliantResources;
+
     public GetResourcesInput withExcludeCompliantResources(Boolean excludeCompliantResources) {
         this.excludeCompliantResources = excludeCompliantResources;
         return this;
@@ -20,6 +21,7 @@ public class GetResourcesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeComplianceDetails")
     public Boolean includeComplianceDetails;
+
     public GetResourcesInput withIncludeComplianceDetails(Boolean includeComplianceDetails) {
         this.includeComplianceDetails = includeComplianceDetails;
         return this;
@@ -28,6 +30,7 @@ public class GetResourcesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public GetResourcesInput withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
@@ -36,6 +39,7 @@ public class GetResourcesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARNList")
     public String[] resourceARNList;
+
     public GetResourcesInput withResourceARNList(String[] resourceARNList) {
         this.resourceARNList = resourceARNList;
         return this;
@@ -44,6 +48,7 @@ public class GetResourcesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTypeFilters")
     public String[] resourceTypeFilters;
+
     public GetResourcesInput withResourceTypeFilters(String[] resourceTypeFilters) {
         this.resourceTypeFilters = resourceTypeFilters;
         return this;
@@ -52,6 +57,7 @@ public class GetResourcesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourcesPerPage")
     public Long resourcesPerPage;
+
     public GetResourcesInput withResourcesPerPage(Long resourcesPerPage) {
         this.resourcesPerPage = resourcesPerPage;
         return this;
@@ -60,6 +66,7 @@ public class GetResourcesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagFilters")
     public TagFilter[] tagFilters;
+
     public GetResourcesInput withTagFilters(TagFilter[] tagFilters) {
         this.tagFilters = tagFilters;
         return this;
@@ -68,9 +75,11 @@ public class GetResourcesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagsPerPage")
     public Long tagsPerPage;
+
     public GetResourcesInput withTagsPerPage(Long tagsPerPage) {
         this.tagsPerPage = tagsPerPage;
         return this;
     }
     
+    public GetResourcesInput(){}
 }

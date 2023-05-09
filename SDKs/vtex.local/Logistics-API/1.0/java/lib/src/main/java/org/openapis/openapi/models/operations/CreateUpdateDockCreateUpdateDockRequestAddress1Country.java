@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUpdateDockCreateUpdateDockRequestAddress1Country {
     @JsonProperty("acronym")
     public String acronym;
+
     public CreateUpdateDockCreateUpdateDockRequestAddress1Country withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
@@ -16,9 +17,14 @@ public class CreateUpdateDockCreateUpdateDockRequestAddress1Country {
     
     @JsonProperty("name")
     public String name;
+
     public CreateUpdateDockCreateUpdateDockRequestAddress1Country withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateUpdateDockCreateUpdateDockRequestAddress1Country(@JsonProperty("acronym") String acronym, @JsonProperty("name") String name) {
+        this.acronym = acronym;
+        this.name = name;
+  }
 }

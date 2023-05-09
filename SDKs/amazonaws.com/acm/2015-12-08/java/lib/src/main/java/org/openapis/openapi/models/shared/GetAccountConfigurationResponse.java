@@ -15,9 +15,11 @@ public class GetAccountConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpiryEvents")
     public ExpiryEventsConfiguration expiryEvents;
+
     public GetAccountConfigurationResponse withExpiryEvents(ExpiryEventsConfiguration expiryEvents) {
         this.expiryEvents = expiryEvents;
         return this;
     }
     
+    public GetAccountConfigurationResponse(){}
 }

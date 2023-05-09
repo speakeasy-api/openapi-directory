@@ -55,10 +55,8 @@ public class Geofences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteGeofencesIdResponse res = new org.openapis.openapi.models.operations.DeleteGeofencesIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteGeofencesIdResponse res = new org.openapis.openapi.models.operations.DeleteGeofencesIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -95,11 +93,9 @@ public class Geofences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGeofencesResponse res = new org.openapis.openapi.models.operations.GetGeofencesResponse() {{
+        org.openapis.openapi.models.operations.GetGeofencesResponse res = new org.openapis.openapi.models.operations.GetGeofencesResponse(contentType, httpRes.statusCode()) {{
             geofences = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class Geofences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostGeofencesResponse res = new org.openapis.openapi.models.operations.PostGeofencesResponse() {{
+        org.openapis.openapi.models.operations.PostGeofencesResponse res = new org.openapis.openapi.models.operations.PostGeofencesResponse(contentType, httpRes.statusCode()) {{
             geofence = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,11 +177,9 @@ public class Geofences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutGeofencesIdResponse res = new org.openapis.openapi.models.operations.PutGeofencesIdResponse() {{
+        org.openapis.openapi.models.operations.PutGeofencesIdResponse res = new org.openapis.openapi.models.operations.PutGeofencesIdResponse(contentType, httpRes.statusCode()) {{
             geofence = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

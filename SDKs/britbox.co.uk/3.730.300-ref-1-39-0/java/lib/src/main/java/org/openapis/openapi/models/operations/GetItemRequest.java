@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemRequest {
@@ -12,6 +13,7 @@ public class GetItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public GetItemRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -40,6 +42,7 @@ public class GetItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public GetItemExpandEnum expand;
+
     public GetItemRequest withExpand(GetItemExpandEnum expand) {
         this.expand = expand;
         return this;
@@ -70,6 +73,7 @@ public class GetItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetItemRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -83,6 +87,7 @@ public class GetItemRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetItemRequest withId(String id) {
         this.id = id;
         return this;
@@ -103,6 +108,7 @@ public class GetItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetItemRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -113,6 +119,7 @@ public class GetItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_rating")
     public String maxRating;
+
     public GetItemRequest withMaxRating(String maxRating) {
         this.maxRating = maxRating;
         return this;
@@ -123,6 +130,7 @@ public class GetItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public GetItemRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -141,6 +149,7 @@ public class GetItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=select_season")
     public GetItemSelectSeasonEnum selectSeason;
+
     public GetItemRequest withSelectSeason(GetItemSelectSeasonEnum selectSeason) {
         this.selectSeason = selectSeason;
         return this;
@@ -151,6 +160,7 @@ public class GetItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
     public String sub;
+
     public GetItemRequest withSub(String sub) {
         this.sub = sub;
         return this;
@@ -161,9 +171,13 @@ public class GetItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_custom_id")
     public Boolean useCustomId;
+
     public GetItemRequest withUseCustomId(Boolean useCustomId) {
         this.useCustomId = useCustomId;
         return this;
     }
     
+    public GetItemRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

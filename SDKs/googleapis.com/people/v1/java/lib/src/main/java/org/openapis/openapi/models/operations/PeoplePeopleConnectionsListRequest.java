@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PeoplePeopleConnectionsListRequest {
@@ -12,6 +13,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public PeoplePeopleConnectionsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public PeoplePeopleConnectionsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public PeoplePeopleConnectionsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public PeoplePeopleConnectionsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public PeoplePeopleConnectionsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public PeoplePeopleConnectionsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public PeoplePeopleConnectionsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public PeoplePeopleConnectionsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -92,6 +101,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public PeoplePeopleConnectionsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -102,6 +112,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=personFields")
     public String personFields;
+
     public PeoplePeopleConnectionsListRequest withPersonFields(String personFields) {
         this.personFields = personFields;
         return this;
@@ -112,6 +123,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public PeoplePeopleConnectionsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public PeoplePeopleConnectionsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestMask.includeField")
     public String requestMaskIncludeField;
+
     public PeoplePeopleConnectionsListRequest withRequestMaskIncludeField(String requestMaskIncludeField) {
         this.requestMaskIncludeField = requestMaskIncludeField;
         return this;
@@ -142,6 +156,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestSyncToken")
     public Boolean requestSyncToken;
+
     public PeoplePeopleConnectionsListRequest withRequestSyncToken(Boolean requestSyncToken) {
         this.requestSyncToken = requestSyncToken;
         return this;
@@ -152,6 +167,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resourceName")
     public String resourceName;
+
     public PeoplePeopleConnectionsListRequest withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -162,6 +178,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public PeoplePeopleConnectionsListSortOrderEnum sortOrder;
+
     public PeoplePeopleConnectionsListRequest withSortOrder(PeoplePeopleConnectionsListSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -172,6 +189,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sources")
     public PeoplePeopleConnectionsListSourcesEnum[] sources;
+
     public PeoplePeopleConnectionsListRequest withSources(PeoplePeopleConnectionsListSourcesEnum[] sources) {
         this.sources = sources;
         return this;
@@ -182,6 +200,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=syncToken")
     public String syncToken;
+
     public PeoplePeopleConnectionsListRequest withSyncToken(String syncToken) {
         this.syncToken = syncToken;
         return this;
@@ -192,6 +211,7 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public PeoplePeopleConnectionsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -202,9 +222,13 @@ public class PeoplePeopleConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public PeoplePeopleConnectionsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public PeoplePeopleConnectionsListRequest(@JsonProperty("resourceName") String resourceName) {
+        this.resourceName = resourceName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTagValuesResponse {
     
     public String contentType;
+
     public GetTagValuesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTagValuesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTagValuesOutput getTagValuesOutput;
+
     public GetTagValuesResponse withGetTagValuesOutput(org.openapis.openapi.models.shared.GetTagValuesOutput getTagValuesOutput) {
         this.getTagValuesOutput = getTagValuesOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetTagValuesResponse {
      */
     
     public Object internalServiceException;
+
     public GetTagValuesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class GetTagValuesResponse {
      */
     
     public Object invalidParameterException;
+
     public GetTagValuesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetTagValuesResponse {
      */
     
     public Object paginationTokenExpiredException;
+
     public GetTagValuesResponse withPaginationTokenExpiredException(Object paginationTokenExpiredException) {
         this.paginationTokenExpiredException = paginationTokenExpiredException;
         return this;
@@ -56,6 +62,7 @@ public class GetTagValuesResponse {
     
     
     public Integer statusCode;
+
     public GetTagValuesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetTagValuesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTagValuesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetTagValuesResponse {
      */
     
     public Object throttledException;
+
     public GetTagValuesResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
     }
     
+    public GetTagValuesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

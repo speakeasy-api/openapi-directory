@@ -54,11 +54,9 @@ public class FetchAccountInfo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountResponse res = new org.openapis.openapi.models.operations.GetAccountResponse() {{
+        org.openapis.openapi.models.operations.GetAccountResponse res = new org.openapis.openapi.models.operations.GetAccountResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 403 || httpRes.statusCode() == 429) {

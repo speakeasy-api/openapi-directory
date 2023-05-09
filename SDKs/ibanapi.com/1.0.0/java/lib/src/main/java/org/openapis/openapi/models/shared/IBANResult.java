@@ -15,6 +15,7 @@ public class IBANResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public IBANResult withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class IBANResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expremental")
     public Long expremental;
+
     public IBANResult withExpremental(Long expremental) {
         this.expremental = expremental;
         return this;
@@ -31,6 +33,7 @@ public class IBANResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public IBANResult withMessage(String message) {
         this.message = message;
         return this;
@@ -39,6 +42,7 @@ public class IBANResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Long result;
+
     public IBANResult withResult(Long result) {
         this.result = result;
         return this;
@@ -47,9 +51,11 @@ public class IBANResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validations")
     public Object[] validations;
+
     public IBANResult withValidations(Object[] validations) {
         this.validations = validations;
         return this;
     }
     
+    public IBANResult(){}
 }

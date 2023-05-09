@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTDeregisterTransitGatewayMulticastGroupSourcesResponse {
     
     public byte[] body;
+
     public POSTDeregisterTransitGatewayMulticastGroupSourcesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTDeregisterTransitGatewayMulticastGroupSourcesResponse {
     
     
     public String contentType;
+
     public POSTDeregisterTransitGatewayMulticastGroupSourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTDeregisterTransitGatewayMulticastGroupSourcesResponse {
     
     
     public Integer statusCode;
+
     public POSTDeregisterTransitGatewayMulticastGroupSourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTDeregisterTransitGatewayMulticastGroupSourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTDeregisterTransitGatewayMulticastGroupSourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTDeregisterTransitGatewayMulticastGroupSourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

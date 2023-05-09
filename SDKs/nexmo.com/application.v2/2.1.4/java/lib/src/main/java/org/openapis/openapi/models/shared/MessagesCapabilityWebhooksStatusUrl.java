@@ -15,6 +15,7 @@ public class MessagesCapabilityWebhooksStatusUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public MessagesCapabilityWebhooksStatusUrl withAddress(String address) {
         this.address = address;
         return this;
@@ -23,9 +24,11 @@ public class MessagesCapabilityWebhooksStatusUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http_method")
     public MessagesCapabilityWebhooksStatusUrlHttpMethodEnum httpMethod;
+
     public MessagesCapabilityWebhooksStatusUrl withHttpMethod(MessagesCapabilityWebhooksStatusUrlHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
     }
     
+    public MessagesCapabilityWebhooksStatusUrl(){}
 }

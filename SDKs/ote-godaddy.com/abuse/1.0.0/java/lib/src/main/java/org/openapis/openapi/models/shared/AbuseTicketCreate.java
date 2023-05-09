@@ -18,6 +18,7 @@ public class AbuseTicketCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public String info;
+
     public AbuseTicketCreate withInfo(String info) {
         this.info = info;
         return this;
@@ -29,6 +30,7 @@ public class AbuseTicketCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infoUrl")
     public String infoUrl;
+
     public AbuseTicketCreate withInfoUrl(String infoUrl) {
         this.infoUrl = infoUrl;
         return this;
@@ -40,6 +42,7 @@ public class AbuseTicketCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentional")
     public Boolean intentional;
+
     public AbuseTicketCreate withIntentional(Boolean intentional) {
         this.intentional = intentional;
         return this;
@@ -51,6 +54,7 @@ public class AbuseTicketCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxy")
     public String proxy;
+
     public AbuseTicketCreate withProxy(String proxy) {
         this.proxy = proxy;
         return this;
@@ -62,6 +66,7 @@ public class AbuseTicketCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public AbuseTicketCreate withSource(String source) {
         this.source = source;
         return this;
@@ -73,6 +78,7 @@ public class AbuseTicketCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public AbuseTicketCreate withTarget(String target) {
         this.target = target;
         return this;
@@ -84,9 +90,11 @@ public class AbuseTicketCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AbuseTicketCreateTypeEnum type;
+
     public AbuseTicketCreate withType(AbuseTicketCreateTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AbuseTicketCreate(){}
 }

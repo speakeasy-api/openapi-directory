@@ -17,6 +17,7 @@ public class BeezUPColumnConfiguration {
      */
     @JsonProperty("beezUPColumnName")
     public String beezUPColumnName;
+
     public BeezUPColumnConfiguration withBeezUPColumnName(String beezUPColumnName) {
         this.beezUPColumnName = beezUPColumnName;
         return this;
@@ -28,6 +29,7 @@ public class BeezUPColumnConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canBeTruncated")
     public Boolean canBeTruncated;
+
     public BeezUPColumnConfiguration withCanBeTruncated(Boolean canBeTruncated) {
         this.canBeTruncated = canBeTruncated;
         return this;
@@ -39,6 +41,7 @@ public class BeezUPColumnConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnDataType")
     public BeezUPCommonColumnDataTypeEnum columnDataType;
+
     public BeezUPColumnConfiguration withColumnDataType(BeezUPCommonColumnDataTypeEnum columnDataType) {
         this.columnDataType = columnDataType;
         return this;
@@ -49,6 +52,7 @@ public class BeezUPColumnConfiguration {
      */
     @JsonProperty("columnImportance")
     public BeezUPCommonColumnImportanceEnum columnImportance;
+
     public BeezUPColumnConfiguration withColumnImportance(BeezUPCommonColumnImportanceEnum columnImportance) {
         this.columnImportance = columnImportance;
         return this;
@@ -60,6 +64,7 @@ public class BeezUPColumnConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BeezUPColumnConfiguration withDescription(String description) {
         this.description = description;
         return this;
@@ -70,6 +75,7 @@ public class BeezUPColumnConfiguration {
      */
     @JsonProperty("displayGroupName")
     public String displayGroupName;
+
     public BeezUPColumnConfiguration withDisplayGroupName(String displayGroupName) {
         this.displayGroupName = displayGroupName;
         return this;
@@ -83,9 +89,15 @@ public class BeezUPColumnConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unique")
     public Boolean unique;
+
     public BeezUPColumnConfiguration withUnique(Boolean unique) {
         this.unique = unique;
         return this;
     }
     
+    public BeezUPColumnConfiguration(@JsonProperty("beezUPColumnName") String beezUPColumnName, @JsonProperty("columnImportance") BeezUPCommonColumnImportanceEnum columnImportance, @JsonProperty("displayGroupName") String displayGroupName) {
+        this.beezUPColumnName = beezUPColumnName;
+        this.columnImportance = columnImportance;
+        this.displayGroupName = displayGroupName;
+  }
 }

@@ -57,14 +57,12 @@ public class TravelTime {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelTimeGetCompareOverlayResponse res = new org.openapis.openapi.models.operations.TravelTimeGetCompareOverlayResponse() {{
+        org.openapis.openapi.models.operations.TravelTimeGetCompareOverlayResponse res = new org.openapis.openapi.models.operations.TravelTimeGetCompareOverlayResponse(contentType, httpRes.statusCode()) {{
             systemObject = null;
             systemObject = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,14 +115,12 @@ public class TravelTime {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelTimeGetOverlayResponse res = new org.openapis.openapi.models.operations.TravelTimeGetOverlayResponse() {{
+        org.openapis.openapi.models.operations.TravelTimeGetOverlayResponse res = new org.openapis.openapi.models.operations.TravelTimeGetOverlayResponse(contentType, httpRes.statusCode()) {{
             systemObject = null;
             systemObject = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

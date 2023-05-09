@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPageResolutionsResponse {
@@ -12,6 +13,7 @@ public class ListPageResolutionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPageResolutionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPageResolutionsResponse {
     
     
     public String contentType;
+
     public ListPageResolutionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPageResolutionsResponse {
      */
     
     public Object internalServerException;
+
     public ListPageResolutionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListPageResolutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPageResolutionsResult listPageResolutionsResult;
+
     public ListPageResolutionsResponse withListPageResolutionsResult(org.openapis.openapi.models.shared.ListPageResolutionsResult listPageResolutionsResult) {
         this.listPageResolutionsResult = listPageResolutionsResult;
         return this;
@@ -46,6 +51,7 @@ public class ListPageResolutionsResponse {
     
     
     public Integer statusCode;
+
     public ListPageResolutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListPageResolutionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPageResolutionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListPageResolutionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListPageResolutionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListPageResolutionsResponse {
      */
     
     public Object throttlingException;
+
     public ListPageResolutionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListPageResolutionsResponse {
      */
     
     public Object validationException;
+
     public ListPageResolutionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPageResolutionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

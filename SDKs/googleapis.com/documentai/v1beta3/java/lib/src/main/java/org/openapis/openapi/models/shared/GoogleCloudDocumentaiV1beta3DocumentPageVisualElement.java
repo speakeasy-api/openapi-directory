@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageVisualElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedLanguages")
     public GoogleCloudDocumentaiV1beta3DocumentPageDetectedLanguage[] detectedLanguages;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageVisualElement withDetectedLanguages(GoogleCloudDocumentaiV1beta3DocumentPageDetectedLanguage[] detectedLanguages) {
         this.detectedLanguages = detectedLanguages;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageVisualElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public GoogleCloudDocumentaiV1beta3DocumentPageLayout layout;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageVisualElement withLayout(GoogleCloudDocumentaiV1beta3DocumentPageLayout layout) {
         this.layout = layout;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageVisualElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageVisualElement withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3DocumentPageVisualElement(){}
 }

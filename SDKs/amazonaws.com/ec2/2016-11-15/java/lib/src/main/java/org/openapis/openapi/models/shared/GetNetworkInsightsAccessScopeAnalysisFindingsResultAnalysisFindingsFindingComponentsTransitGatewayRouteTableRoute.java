@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsTransitGatewayRouteTableRoute {
     
     public String attachmentId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsTransitGatewayRouteTableRoute withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -19,6 +20,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String destinationCidr;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsTransitGatewayRouteTableRoute withDestinationCidr(String destinationCidr) {
         this.destinationCidr = destinationCidr;
         return this;
@@ -26,6 +28,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String prefixListId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsTransitGatewayRouteTableRoute withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -33,6 +36,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String resourceId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsTransitGatewayRouteTableRoute withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -40,6 +44,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String resourceType;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsTransitGatewayRouteTableRoute withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -47,6 +52,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String routeOrigin;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsTransitGatewayRouteTableRoute withRouteOrigin(String routeOrigin) {
         this.routeOrigin = routeOrigin;
         return this;
@@ -54,9 +60,11 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String state;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsTransitGatewayRouteTableRoute withState(String state) {
         this.state = state;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsTransitGatewayRouteTableRoute(){}
 }

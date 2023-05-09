@@ -15,6 +15,7 @@ public class NumberLeasePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public NumberLease[] items;
+
     public NumberLeasePage withItems(NumberLease[] items) {
         this.items = items;
         return this;
@@ -26,6 +27,7 @@ public class NumberLeasePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public NumberLeasePage withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -37,6 +39,7 @@ public class NumberLeasePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public NumberLeasePage withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -48,9 +51,11 @@ public class NumberLeasePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public NumberLeasePage withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public NumberLeasePage(){}
 }

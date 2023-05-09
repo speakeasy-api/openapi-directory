@@ -20,6 +20,7 @@ public class DescribeBotVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public DescribeBotVersionResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -28,6 +29,7 @@ public class DescribeBotVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botMembers")
     public BotMember[] botMembers;
+
     public DescribeBotVersionResponse withBotMembers(BotMember[] botMembers) {
         this.botMembers = botMembers;
         return this;
@@ -36,6 +38,7 @@ public class DescribeBotVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botName")
     public String botName;
+
     public DescribeBotVersionResponse withBotName(String botName) {
         this.botName = botName;
         return this;
@@ -44,6 +47,7 @@ public class DescribeBotVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botStatus")
     public BotStatusEnum botStatus;
+
     public DescribeBotVersionResponse withBotStatus(BotStatusEnum botStatus) {
         this.botStatus = botStatus;
         return this;
@@ -52,6 +56,7 @@ public class DescribeBotVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botType")
     public BotTypeEnum botType;
+
     public DescribeBotVersionResponse withBotType(BotTypeEnum botType) {
         this.botType = botType;
         return this;
@@ -60,6 +65,7 @@ public class DescribeBotVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public DescribeBotVersionResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -70,6 +76,7 @@ public class DescribeBotVersionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public DescribeBotVersionResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -78,6 +85,7 @@ public class DescribeBotVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataPrivacy")
     public DataPrivacy dataPrivacy;
+
     public DescribeBotVersionResponse withDataPrivacy(DataPrivacy dataPrivacy) {
         this.dataPrivacy = dataPrivacy;
         return this;
@@ -86,6 +94,7 @@ public class DescribeBotVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DescribeBotVersionResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -94,6 +103,7 @@ public class DescribeBotVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReasons")
     public String[] failureReasons;
+
     public DescribeBotVersionResponse withFailureReasons(String[] failureReasons) {
         this.failureReasons = failureReasons;
         return this;
@@ -102,6 +112,7 @@ public class DescribeBotVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idleSessionTTLInSeconds")
     public Long idleSessionTTLInSeconds;
+
     public DescribeBotVersionResponse withIdleSessionTTLInSeconds(Long idleSessionTTLInSeconds) {
         this.idleSessionTTLInSeconds = idleSessionTTLInSeconds;
         return this;
@@ -110,6 +121,7 @@ public class DescribeBotVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentBotNetworks")
     public ParentBotNetwork[] parentBotNetworks;
+
     public DescribeBotVersionResponse withParentBotNetworks(ParentBotNetwork[] parentBotNetworks) {
         this.parentBotNetworks = parentBotNetworks;
         return this;
@@ -118,9 +130,11 @@ public class DescribeBotVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DescribeBotVersionResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public DescribeBotVersionResponse(){}
 }

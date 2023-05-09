@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMySqlDatabaseRequest {
@@ -12,6 +13,7 @@ public class GetMySqlDatabaseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=databaseName")
     public String databaseNamePathParameter;
+
     public GetMySqlDatabaseRequest withDatabaseNamePathParameter(String databaseNamePathParameter) {
         this.databaseNamePathParameter = databaseNamePathParameter;
         return this;
@@ -19,9 +21,14 @@ public class GetMySqlDatabaseRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=database_name")
     public String databaseNameQueryParameter;
+
     public GetMySqlDatabaseRequest withDatabaseNameQueryParameter(String databaseNameQueryParameter) {
         this.databaseNameQueryParameter = databaseNameQueryParameter;
         return this;
     }
     
+    public GetMySqlDatabaseRequest(@JsonProperty("databaseNamePathParameter") String databaseNamePathParameter, @JsonProperty("database_nameQueryParameter") String databaseNameQueryParameter) {
+        this.databaseNamePathParameter = databaseNamePathParameter;
+        this.databaseNameQueryParameter = databaseNameQueryParameter;
+  }
 }

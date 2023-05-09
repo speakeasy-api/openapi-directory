@@ -12,6 +12,7 @@ public class EventsQueue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("empty")
     public Boolean empty;
+
     public EventsQueue withEmpty(Boolean empty) {
         this.empty = empty;
         return this;
@@ -20,9 +21,11 @@ public class EventsQueue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readyToBeDispatched")
     public Boolean readyToBeDispatched;
+
     public EventsQueue withReadyToBeDispatched(Boolean readyToBeDispatched) {
         this.readyToBeDispatched = readyToBeDispatched;
         return this;
     }
     
+    public EventsQueue(){}
 }

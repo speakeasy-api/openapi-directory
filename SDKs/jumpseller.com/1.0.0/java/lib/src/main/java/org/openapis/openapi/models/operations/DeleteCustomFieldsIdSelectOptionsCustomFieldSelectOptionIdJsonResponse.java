@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse {
     
     public String contentType;
+
     public DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRespo
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -26,6 +29,7 @@ public class DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRespo
     
     
     public Integer statusCode;
+
     public DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRespo
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRespo
      */
     
     public String deleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJSON200ApplicationJSONString;
+
     public DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse withDeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJSON200ApplicationJSONString(String deleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJSON200ApplicationJSONString) {
         this.deleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJSON200ApplicationJSONString = deleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJSON200ApplicationJSONString;
         return this;
     }
     
+    public DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

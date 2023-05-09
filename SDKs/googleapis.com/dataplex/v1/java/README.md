@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateSecurity;
 import org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateRequest;
 import org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateResponse;
+import org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudDataplexV1DataAttributeBindingInput;
 import org.openapis.openapi.models.shared.GoogleCloudDataplexV1DataAttributeBindingPath;
@@ -31,69 +30,83 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DataplexProjectsLocationsDataAttributeBindingsCreateRequest req = new DataplexProjectsLocationsDataAttributeBindingsCreateRequest() {{
-                dollarXgafv = "2";
+            DataplexProjectsLocationsDataAttributeBindingsCreateRequest req = new DataplexProjectsLocationsDataAttributeBindingsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 googleCloudDataplexV1DataAttributeBindingInput = new GoogleCloudDataplexV1DataAttributeBindingInput() {{
                     attributes = new String[]{{
-                        add("distinctio"),
                         add("quibusdam"),
                         add("unde"),
+                        add("nulla"),
                     }};
-                    description = "nulla";
-                    displayName = "corrupti";
-                    etag = "illum";
+                    description = "corrupti";
+                    displayName = "illum";
+                    etag = "vel";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("error", "deserunt");
-                        put("suscipit", "iure");
+                        put("deserunt", "suscipit");
+                        put("iure", "magnam");
+                        put("debitis", "ipsa");
                     }};
                     paths = new org.openapis.openapi.models.shared.GoogleCloudDataplexV1DataAttributeBindingPath[]{{
                         add(new GoogleCloudDataplexV1DataAttributeBindingPath() {{
                             attributes = new String[]{{
-                                add("ipsa"),
-                                add("delectus"),
-                                add("tempora"),
                                 add("suscipit"),
+                                add("molestiae"),
                             }};
-                            name = "molestiae";
+                            name = "Irving Lehner";
                         }}),
                         add(new GoogleCloudDataplexV1DataAttributeBindingPath() {{
                             attributes = new String[]{{
-                                add("placeat"),
-                                add("voluptatum"),
-                                add("iusto"),
-                                add("excepturi"),
+                                add("recusandae"),
+                                add("temporibus"),
                             }};
-                            name = "nisi";
+                            name = "Erica Bogisich III";
+                        }}),
+                        add(new GoogleCloudDataplexV1DataAttributeBindingPath() {{
+                            attributes = new String[]{{
+                                add("sapiente"),
+                                add("quo"),
+                                add("odit"),
+                                add("at"),
+                            }};
+                            name = "Emilio Krajcik";
+                        }}),
+                        add(new GoogleCloudDataplexV1DataAttributeBindingPath() {{
+                            attributes = new String[]{{
+                                add("totam"),
+                                add("porro"),
+                            }};
+                            name = "Samuel Reichel";
                         }}),
                     }};
-                    resource = "recusandae";
-                }};
-                accessToken = "temporibus";
-                alt = "json";
-                callback = "quis";
-                dataAttributeBindingId = "veritatis";
-                fields = "deserunt";
-                key = "perferendis";
-                oauthToken = "ipsam";
-                parent = "repellendus";
+                    resource = "fugit";
+                }};;
+                accessToken = "deleniti";
+                alt = AltEnum.PROTO;
+                callback = "optio";
+                dataAttributeBindingId = "totam";
+                fields = "beatae";
+                key = "commodi";
+                oauthToken = "molestiae";
                 prettyPrint = false;
-                quotaUser = "sapiente";
-                uploadType = "quo";
-                uploadProtocol = "odit";
+                quotaUser = "modi";
+                uploadType = "qui";
+                uploadProtocol = "impedit";
                 validateOnly = false;
-            }}            
+            }};            
 
-            DataplexProjectsLocationsDataAttributeBindingsCreateResponse res = sdk.projects.dataplexProjectsLocationsDataAttributeBindingsCreate(req, new DataplexProjectsLocationsDataAttributeBindingsCreateSecurity() {{
+            DataplexProjectsLocationsDataAttributeBindingsCreateResponse res = sdk.projects.dataplexProjectsLocationsDataAttributeBindingsCreate(req, new DataplexProjectsLocationsDataAttributeBindingsCreateSecurity("cum", "esse") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleLongrunningOperation.isPresent()) {
+            if (res.googleLongrunningOperation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -101,48 +114,48 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `dataplexProjectsLocationsDataAttributeBindingsCreate` - Create a DataAttributeBinding resource.
-* `dataplexProjectsLocationsDataAttributeBindingsList` - Lists DataAttributeBinding resources in a project and location.
-* `dataplexProjectsLocationsDataScansCreate` - Creates a DataScan resource.
-* `dataplexProjectsLocationsDataScansList` - Lists DataScans.
-* `dataplexProjectsLocationsDataTaxonomiesAttributesCreate` - Create a DataAttribute resource.
-* `dataplexProjectsLocationsDataTaxonomiesAttributesList` - Lists Data Attribute resources in a DataTaxonomy.
-* `dataplexProjectsLocationsDataTaxonomiesCreate` - Create a DataTaxonomy resource.
-* `dataplexProjectsLocationsDataTaxonomiesList` - Lists DataTaxonomy resources in a project and location.
-* `dataplexProjectsLocationsLakesContentCreate` - Create a content.
-* `dataplexProjectsLocationsLakesContentList` - List content.
-* `dataplexProjectsLocationsLakesContentitemsCreate` - Create a content.
-* `dataplexProjectsLocationsLakesContentitemsList` - List content.
-* `dataplexProjectsLocationsLakesCreate` - Creates a lake resource.
-* `dataplexProjectsLocationsLakesEnvironmentsCreate` - Create an environment resource.
-* `dataplexProjectsLocationsLakesEnvironmentsList` - Lists environments under the given lake.
-* `dataplexProjectsLocationsLakesEnvironmentsSessionsList` - Lists session resources in an environment.
-* `dataplexProjectsLocationsLakesList` - Lists lake resources in a project and location.
-* `dataplexProjectsLocationsLakesTasksCreate` - Creates a task resource within a lake.
-* `dataplexProjectsLocationsLakesTasksJobsList` - Lists Jobs under the given task.
-* `dataplexProjectsLocationsLakesTasksList` - Lists tasks under the given lake.
-* `dataplexProjectsLocationsLakesTasksRun` - Run an on demand execution of a Task.
-* `dataplexProjectsLocationsLakesZonesAssetsActionsList` - Lists action resources in an asset.
-* `dataplexProjectsLocationsLakesZonesAssetsCreate` - Creates an asset resource.
-* `dataplexProjectsLocationsLakesZonesAssetsGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-* `dataplexProjectsLocationsLakesZonesAssetsList` - Lists asset resources in a zone.
-* `dataplexProjectsLocationsLakesZonesAssetsPatch` - Updates an asset resource.
-* `dataplexProjectsLocationsLakesZonesAssetsSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy.Can return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
-* `dataplexProjectsLocationsLakesZonesAssetsTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-* `dataplexProjectsLocationsLakesZonesCreate` - Creates a zone resource within a lake.
-* `dataplexProjectsLocationsLakesZonesEntitiesCreate` - Create a metadata entity.
-* `dataplexProjectsLocationsLakesZonesEntitiesList` - List metadata entities in a zone.
-* `dataplexProjectsLocationsLakesZonesEntitiesPartitionsCreate` - Create a metadata partition.
-* `dataplexProjectsLocationsLakesZonesEntitiesPartitionsList` - List metadata partitions of an entity.
-* `dataplexProjectsLocationsLakesZonesEntitiesUpdate` - Update a metadata entity. Only supports full resource update.
-* `dataplexProjectsLocationsLakesZonesList` - Lists zone resources in a lake.
-* `dataplexProjectsLocationsList` - Lists information about the supported locations for this service.
-* `dataplexProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
-* `dataplexProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED.
-* `dataplexProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `dataplexProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
+* [dataplexProjectsLocationsDataAttributeBindingsCreate](docs/projects/README.md#dataplexprojectslocationsdataattributebindingscreate) - Create a DataAttributeBinding resource.
+* [dataplexProjectsLocationsDataAttributeBindingsList](docs/projects/README.md#dataplexprojectslocationsdataattributebindingslist) - Lists DataAttributeBinding resources in a project and location.
+* [dataplexProjectsLocationsDataScansCreate](docs/projects/README.md#dataplexprojectslocationsdatascanscreate) - Creates a DataScan resource.
+* [dataplexProjectsLocationsDataScansList](docs/projects/README.md#dataplexprojectslocationsdatascanslist) - Lists DataScans.
+* [dataplexProjectsLocationsDataTaxonomiesAttributesCreate](docs/projects/README.md#dataplexprojectslocationsdatataxonomiesattributescreate) - Create a DataAttribute resource.
+* [dataplexProjectsLocationsDataTaxonomiesAttributesList](docs/projects/README.md#dataplexprojectslocationsdatataxonomiesattributeslist) - Lists Data Attribute resources in a DataTaxonomy.
+* [dataplexProjectsLocationsDataTaxonomiesCreate](docs/projects/README.md#dataplexprojectslocationsdatataxonomiescreate) - Create a DataTaxonomy resource.
+* [dataplexProjectsLocationsDataTaxonomiesList](docs/projects/README.md#dataplexprojectslocationsdatataxonomieslist) - Lists DataTaxonomy resources in a project and location.
+* [dataplexProjectsLocationsLakesContentCreate](docs/projects/README.md#dataplexprojectslocationslakescontentcreate) - Create a content.
+* [dataplexProjectsLocationsLakesContentList](docs/projects/README.md#dataplexprojectslocationslakescontentlist) - List content.
+* [dataplexProjectsLocationsLakesContentitemsCreate](docs/projects/README.md#dataplexprojectslocationslakescontentitemscreate) - Create a content.
+* [dataplexProjectsLocationsLakesContentitemsList](docs/projects/README.md#dataplexprojectslocationslakescontentitemslist) - List content.
+* [dataplexProjectsLocationsLakesCreate](docs/projects/README.md#dataplexprojectslocationslakescreate) - Creates a lake resource.
+* [dataplexProjectsLocationsLakesEnvironmentsCreate](docs/projects/README.md#dataplexprojectslocationslakesenvironmentscreate) - Create an environment resource.
+* [dataplexProjectsLocationsLakesEnvironmentsList](docs/projects/README.md#dataplexprojectslocationslakesenvironmentslist) - Lists environments under the given lake.
+* [dataplexProjectsLocationsLakesEnvironmentsSessionsList](docs/projects/README.md#dataplexprojectslocationslakesenvironmentssessionslist) - Lists session resources in an environment.
+* [dataplexProjectsLocationsLakesList](docs/projects/README.md#dataplexprojectslocationslakeslist) - Lists lake resources in a project and location.
+* [dataplexProjectsLocationsLakesTasksCreate](docs/projects/README.md#dataplexprojectslocationslakestaskscreate) - Creates a task resource within a lake.
+* [dataplexProjectsLocationsLakesTasksJobsList](docs/projects/README.md#dataplexprojectslocationslakestasksjobslist) - Lists Jobs under the given task.
+* [dataplexProjectsLocationsLakesTasksList](docs/projects/README.md#dataplexprojectslocationslakestaskslist) - Lists tasks under the given lake.
+* [dataplexProjectsLocationsLakesTasksRun](docs/projects/README.md#dataplexprojectslocationslakestasksrun) - Run an on demand execution of a Task.
+* [dataplexProjectsLocationsLakesZonesAssetsActionsList](docs/projects/README.md#dataplexprojectslocationslakeszonesassetsactionslist) - Lists action resources in an asset.
+* [dataplexProjectsLocationsLakesZonesAssetsCreate](docs/projects/README.md#dataplexprojectslocationslakeszonesassetscreate) - Creates an asset resource.
+* [dataplexProjectsLocationsLakesZonesAssetsGetIamPolicy](docs/projects/README.md#dataplexprojectslocationslakeszonesassetsgetiampolicy) - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+* [dataplexProjectsLocationsLakesZonesAssetsList](docs/projects/README.md#dataplexprojectslocationslakeszonesassetslist) - Lists asset resources in a zone.
+* [dataplexProjectsLocationsLakesZonesAssetsPatch](docs/projects/README.md#dataplexprojectslocationslakeszonesassetspatch) - Updates an asset resource.
+* [dataplexProjectsLocationsLakesZonesAssetsSetIamPolicy](docs/projects/README.md#dataplexprojectslocationslakeszonesassetssetiampolicy) - Sets the access control policy on the specified resource. Replaces any existing policy.Can return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
+* [dataplexProjectsLocationsLakesZonesAssetsTestIamPermissions](docs/projects/README.md#dataplexprojectslocationslakeszonesassetstestiampermissions) - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+* [dataplexProjectsLocationsLakesZonesCreate](docs/projects/README.md#dataplexprojectslocationslakeszonescreate) - Creates a zone resource within a lake.
+* [dataplexProjectsLocationsLakesZonesEntitiesCreate](docs/projects/README.md#dataplexprojectslocationslakeszonesentitiescreate) - Create a metadata entity.
+* [dataplexProjectsLocationsLakesZonesEntitiesList](docs/projects/README.md#dataplexprojectslocationslakeszonesentitieslist) - List metadata entities in a zone.
+* [dataplexProjectsLocationsLakesZonesEntitiesPartitionsCreate](docs/projects/README.md#dataplexprojectslocationslakeszonesentitiespartitionscreate) - Create a metadata partition.
+* [dataplexProjectsLocationsLakesZonesEntitiesPartitionsList](docs/projects/README.md#dataplexprojectslocationslakeszonesentitiespartitionslist) - List metadata partitions of an entity.
+* [dataplexProjectsLocationsLakesZonesEntitiesUpdate](docs/projects/README.md#dataplexprojectslocationslakeszonesentitiesupdate) - Update a metadata entity. Only supports full resource update.
+* [dataplexProjectsLocationsLakesZonesList](docs/projects/README.md#dataplexprojectslocationslakeszoneslist) - Lists zone resources in a lake.
+* [dataplexProjectsLocationsList](docs/projects/README.md#dataplexprojectslocationslist) - Lists information about the supported locations for this service.
+* [dataplexProjectsLocationsOperationsCancel](docs/projects/README.md#dataplexprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
+* [dataplexProjectsLocationsOperationsDelete](docs/projects/README.md#dataplexprojectslocationsoperationsdelete) - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED.
+* [dataplexProjectsLocationsOperationsGet](docs/projects/README.md#dataplexprojectslocationsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [dataplexProjectsLocationsOperationsList](docs/projects/README.md#dataplexprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
 <!-- End SDK Available Operations -->
 
 ### Maturity

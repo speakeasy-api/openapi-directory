@@ -15,6 +15,7 @@ public class ListRunTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public TaskListItem[] items;
+
     public ListRunTasksResponse withItems(TaskListItem[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class ListRunTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRunTasksResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListRunTasksResponse(){}
 }

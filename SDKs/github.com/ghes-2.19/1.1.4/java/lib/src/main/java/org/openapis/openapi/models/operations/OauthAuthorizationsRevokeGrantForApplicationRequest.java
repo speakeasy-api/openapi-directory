@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OauthAuthorizationsRevokeGrantForApplicationRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=access_token")
     public String accessToken;
+
     public OauthAuthorizationsRevokeGrantForApplicationRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -19,9 +21,14 @@ public class OauthAuthorizationsRevokeGrantForApplicationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
     public String clientId;
+
     public OauthAuthorizationsRevokeGrantForApplicationRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
     
+    public OauthAuthorizationsRevokeGrantForApplicationRequest(@JsonProperty("access_token") String accessToken, @JsonProperty("client_id") String clientId) {
+        this.accessToken = accessToken;
+        this.clientId = clientId;
+  }
 }

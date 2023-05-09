@@ -37,10 +37,10 @@ public class MarketplacesOrdersSubscriptionsSubscriptions {
     /**
      * Activate a subscription to the orders
      * At this moment, BeezUP will ensure that your callback url is respecting this specification: 
-     * - https://app.swaggerhub.com/apis/BeezUP/public_marketplaces_orders_subscriptions_consumer-dev/1.0#/Subscriptions/Verification
+     * - https://api.beezup.com/swaggerhub/apis/BeezUP/public_marketplaces_orders_subscriptions_consumer-dev/1.0#/Subscriptions/Verification
      * 
      * After that we will send you the orders related to your subscription, respecting this specification: 
-     * - https://app.swaggerhub.com/apis/BeezUP/public_marketplaces_orders_subscriptions_consumer-dev/1.0#/Subscriptions/PushOrders
+     * - https://api.beezup.com/swaggerhub/apis/BeezUP/public_marketplaces_orders_subscriptions_consumer-dev/1.0#/Subscriptions/PushOrders
      * 
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -62,12 +62,10 @@ public class MarketplacesOrdersSubscriptionsSubscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActivateSubscriptionResponse res = new org.openapis.openapi.models.operations.ActivateSubscriptionResponse() {{
+        org.openapis.openapi.models.operations.ActivateSubscriptionResponse res = new org.openapis.openapi.models.operations.ActivateSubscriptionResponse(contentType, httpRes.statusCode()) {{
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -116,12 +114,10 @@ public class MarketplacesOrdersSubscriptionsSubscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSubscriptionResponse res = new org.openapis.openapi.models.operations.CreateSubscriptionResponse() {{
+        org.openapis.openapi.models.operations.CreateSubscriptionResponse res = new org.openapis.openapi.models.operations.CreateSubscriptionResponse(contentType, httpRes.statusCode()) {{
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -164,12 +160,10 @@ public class MarketplacesOrdersSubscriptionsSubscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeactivateSubscriptionResponse res = new org.openapis.openapi.models.operations.DeactivateSubscriptionResponse() {{
+        org.openapis.openapi.models.operations.DeactivateSubscriptionResponse res = new org.openapis.openapi.models.operations.DeactivateSubscriptionResponse(contentType, httpRes.statusCode()) {{
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -212,12 +206,10 @@ public class MarketplacesOrdersSubscriptionsSubscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSubscriptionResponse res = new org.openapis.openapi.models.operations.DeleteSubscriptionResponse() {{
+        org.openapis.openapi.models.operations.DeleteSubscriptionResponse res = new org.openapis.openapi.models.operations.DeleteSubscriptionResponse(contentType, httpRes.statusCode()) {{
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -260,13 +252,11 @@ public class MarketplacesOrdersSubscriptionsSubscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubscriptionResponse res = new org.openapis.openapi.models.operations.GetSubscriptionResponse() {{
+        org.openapis.openapi.models.operations.GetSubscriptionResponse res = new org.openapis.openapi.models.operations.GetSubscriptionResponse(contentType, httpRes.statusCode()) {{
             subscriptionIndex = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -313,12 +303,10 @@ public class MarketplacesOrdersSubscriptionsSubscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubscriptionListResponse res = new org.openapis.openapi.models.operations.GetSubscriptionListResponse() {{
+        org.openapis.openapi.models.operations.GetSubscriptionListResponse res = new org.openapis.openapi.models.operations.GetSubscriptionListResponse(contentType, httpRes.statusCode()) {{
             subscriptionIndices = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -365,13 +353,11 @@ public class MarketplacesOrdersSubscriptionsSubscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubscriptionPushReportingResponse res = new org.openapis.openapi.models.operations.GetSubscriptionPushReportingResponse() {{
+        org.openapis.openapi.models.operations.GetSubscriptionPushReportingResponse res = new org.openapis.openapi.models.operations.GetSubscriptionPushReportingResponse(contentType, httpRes.statusCode()) {{
             subscriptionPushReportings = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -422,12 +408,10 @@ public class MarketplacesOrdersSubscriptionsSubscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetryPushOrdersResponse res = new org.openapis.openapi.models.operations.RetryPushOrdersResponse() {{
+        org.openapis.openapi.models.operations.RetryPushOrdersResponse res = new org.openapis.openapi.models.operations.RetryPushOrdersResponse(contentType, httpRes.statusCode()) {{
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

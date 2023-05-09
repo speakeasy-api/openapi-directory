@@ -18,9 +18,11 @@ public class TranscriptNormalization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public Entry[] entries;
+
     public TranscriptNormalization withEntries(Entry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public TranscriptNormalization(){}
 }

@@ -15,9 +15,11 @@ public class InstanceGroupManagersRecreateInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public String[] instances;
+
     public InstanceGroupManagersRecreateInstancesRequest withInstances(String[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public InstanceGroupManagersRecreateInstancesRequest(){}
 }

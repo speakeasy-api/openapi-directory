@@ -18,9 +18,11 @@ public class OncWifiContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifiGuid")
     public String wifiGuid;
+
     public OncWifiContext withWifiGuid(String wifiGuid) {
         this.wifiGuid = wifiGuid;
         return this;
     }
     
+    public OncWifiContext(){}
 }

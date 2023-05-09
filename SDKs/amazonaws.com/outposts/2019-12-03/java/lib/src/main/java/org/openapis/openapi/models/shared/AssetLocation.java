@@ -15,9 +15,11 @@ public class AssetLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RackElevation")
     public Float rackElevation;
+
     public AssetLocation withRackElevation(Float rackElevation) {
         this.rackElevation = rackElevation;
         return this;
     }
     
+    public AssetLocation(){}
 }

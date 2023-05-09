@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopDevEnvironmentRequest {
@@ -12,6 +13,7 @@ public class StopDevEnvironmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public StopDevEnvironmentRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class StopDevEnvironmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectName")
     public String projectName;
+
     public StopDevEnvironmentRequest withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -32,9 +35,15 @@ public class StopDevEnvironmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
     public String spaceName;
+
     public StopDevEnvironmentRequest withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
     }
     
+    public StopDevEnvironmentRequest(@JsonProperty("id") String id, @JsonProperty("projectName") String projectName, @JsonProperty("spaceName") String spaceName) {
+        this.id = id;
+        this.projectName = projectName;
+        this.spaceName = spaceName;
+  }
 }

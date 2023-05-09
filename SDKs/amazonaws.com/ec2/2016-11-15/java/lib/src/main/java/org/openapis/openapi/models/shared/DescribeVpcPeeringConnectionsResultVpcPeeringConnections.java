@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeVpcPeeringConnectionsResultVpcPeeringConnections {
     
     public DescribeVpcPeeringConnectionsResultVpcPeeringConnectionsAccepterVpcInfo accepterVpcInfo;
+
     public DescribeVpcPeeringConnectionsResultVpcPeeringConnections withAccepterVpcInfo(DescribeVpcPeeringConnectionsResultVpcPeeringConnectionsAccepterVpcInfo accepterVpcInfo) {
         this.accepterVpcInfo = accepterVpcInfo;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVpcPeeringConnectionsResultVpcPeeringConnections {
     
     
     public OffsetDateTime expirationTime;
+
     public DescribeVpcPeeringConnectionsResultVpcPeeringConnections withExpirationTime(OffsetDateTime expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVpcPeeringConnectionsResultVpcPeeringConnections {
     
     
     public DescribeVpcPeeringConnectionsResultVpcPeeringConnectionsRequesterVpcInfo requesterVpcInfo;
+
     public DescribeVpcPeeringConnectionsResultVpcPeeringConnections withRequesterVpcInfo(DescribeVpcPeeringConnectionsResultVpcPeeringConnectionsRequesterVpcInfo requesterVpcInfo) {
         this.requesterVpcInfo = requesterVpcInfo;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVpcPeeringConnectionsResultVpcPeeringConnections {
     
     
     public DescribeVpcPeeringConnectionsResultVpcPeeringConnectionsStatus status;
+
     public DescribeVpcPeeringConnectionsResultVpcPeeringConnections withStatus(DescribeVpcPeeringConnectionsResultVpcPeeringConnectionsStatus status) {
         this.status = status;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVpcPeeringConnectionsResultVpcPeeringConnections {
     
     
     public DescribeVpcPeeringConnectionsResultVpcPeeringConnectionsTags[] tags;
+
     public DescribeVpcPeeringConnectionsResultVpcPeeringConnections withTags(DescribeVpcPeeringConnectionsResultVpcPeeringConnectionsTags[] tags) {
         this.tags = tags;
         return this;
@@ -47,9 +52,11 @@ public class DescribeVpcPeeringConnectionsResultVpcPeeringConnections {
     
     
     public String vpcPeeringConnectionId;
+
     public DescribeVpcPeeringConnectionsResultVpcPeeringConnections withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public DescribeVpcPeeringConnectionsResultVpcPeeringConnections(){}
 }

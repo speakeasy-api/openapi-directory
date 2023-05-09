@@ -15,6 +15,7 @@ public class DescribeFirewallPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallPolicy")
     public FirewallPolicy firewallPolicy;
+
     public DescribeFirewallPolicyResponse withFirewallPolicy(FirewallPolicy firewallPolicy) {
         this.firewallPolicy = firewallPolicy;
         return this;
@@ -22,6 +23,7 @@ public class DescribeFirewallPolicyResponse {
     
     @JsonProperty("FirewallPolicyResponse")
     public FirewallPolicyResponse firewallPolicyResponse;
+
     public DescribeFirewallPolicyResponse withFirewallPolicyResponse(FirewallPolicyResponse firewallPolicyResponse) {
         this.firewallPolicyResponse = firewallPolicyResponse;
         return this;
@@ -29,9 +31,14 @@ public class DescribeFirewallPolicyResponse {
     
     @JsonProperty("UpdateToken")
     public String updateToken;
+
     public DescribeFirewallPolicyResponse withUpdateToken(String updateToken) {
         this.updateToken = updateToken;
         return this;
     }
     
+    public DescribeFirewallPolicyResponse(@JsonProperty("FirewallPolicyResponse") FirewallPolicyResponse firewallPolicyResponse, @JsonProperty("UpdateToken") String updateToken) {
+        this.firewallPolicyResponse = firewallPolicyResponse;
+        this.updateToken = updateToken;
+  }
 }

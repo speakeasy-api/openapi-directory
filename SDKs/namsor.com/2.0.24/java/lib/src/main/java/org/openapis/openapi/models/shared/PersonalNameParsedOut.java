@@ -18,6 +18,7 @@ public class PersonalNameParsedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstLastName")
     public FirstLastNameOut firstLastName;
+
     public PersonalNameParsedOut withFirstLastName(FirstLastNameOut firstLastName) {
         this.firstLastName = firstLastName;
         return this;
@@ -26,6 +27,7 @@ public class PersonalNameParsedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PersonalNameParsedOut withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class PersonalNameParsedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PersonalNameParsedOut withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class PersonalNameParsedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameParserType")
     public PersonalNameParsedOutNameParserTypeEnum nameParserType;
+
     public PersonalNameParsedOut withNameParserType(PersonalNameParsedOutNameParserTypeEnum nameParserType) {
         this.nameParserType = nameParserType;
         return this;
@@ -59,6 +63,7 @@ public class PersonalNameParsedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameParserTypeAlt")
     public PersonalNameParsedOutNameParserTypeAltEnum nameParserTypeAlt;
+
     public PersonalNameParsedOut withNameParserTypeAlt(PersonalNameParsedOutNameParserTypeAltEnum nameParserTypeAlt) {
         this.nameParserTypeAlt = nameParserTypeAlt;
         return this;
@@ -70,6 +75,7 @@ public class PersonalNameParsedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public PersonalNameParsedOut withScore(Double score) {
         this.score = score;
         return this;
@@ -78,9 +84,11 @@ public class PersonalNameParsedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public PersonalNameParsedOut withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public PersonalNameParsedOut(){}
 }

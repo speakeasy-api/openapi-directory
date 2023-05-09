@@ -15,6 +15,7 @@ public class BatchGetChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channels")
     public Channel[] channels;
+
     public BatchGetChannelResponse withChannels(Channel[] channels) {
         this.channels = channels;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public BatchError[] errors;
+
     public BatchGetChannelResponse withErrors(BatchError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchGetChannelResponse(){}
 }

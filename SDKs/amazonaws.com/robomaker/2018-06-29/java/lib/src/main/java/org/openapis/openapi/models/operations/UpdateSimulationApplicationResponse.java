@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSimulationApplicationResponse {
     
     public String contentType;
+
     public UpdateSimulationApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSimulationApplicationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateSimulationApplicationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSimulationApplicationResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateSimulationApplicationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSimulationApplicationResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateSimulationApplicationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSimulationApplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateSimulationApplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateSimulationApplicationResponse {
     
     
     public Integer statusCode;
+
     public UpdateSimulationApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateSimulationApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSimulationApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSimulationApplicationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateSimulationApplicationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateSimulationApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSimulationApplicationResponse updateSimulationApplicationResponse;
+
     public UpdateSimulationApplicationResponse withUpdateSimulationApplicationResponse(org.openapis.openapi.models.shared.UpdateSimulationApplicationResponse updateSimulationApplicationResponse) {
         this.updateSimulationApplicationResponse = updateSimulationApplicationResponse;
         return this;
     }
     
+    public UpdateSimulationApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class AppsCreateForOrg201ApplicationJSONOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public AppsCreateForOrg201ApplicationJSONOwner withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -28,6 +29,7 @@ public class AppsCreateForOrg201ApplicationJSONOwner {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public AppsCreateForOrg201ApplicationJSONOwner withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -39,6 +41,7 @@ public class AppsCreateForOrg201ApplicationJSONOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AppsCreateForOrg201ApplicationJSONOwner withEmail(String email) {
         this.email = email;
         return this;
@@ -49,6 +52,7 @@ public class AppsCreateForOrg201ApplicationJSONOwner {
      */
     @JsonProperty("id")
     public String id;
+
     public AppsCreateForOrg201ApplicationJSONOwner withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class AppsCreateForOrg201ApplicationJSONOwner {
      */
     @JsonProperty("name")
     public String name;
+
     public AppsCreateForOrg201ApplicationJSONOwner withName(String name) {
         this.name = name;
         return this;
@@ -69,9 +74,16 @@ public class AppsCreateForOrg201ApplicationJSONOwner {
      */
     @JsonProperty("type")
     public AppsCreateForOrg201ApplicationJSONOwnerTypeEnum type;
+
     public AppsCreateForOrg201ApplicationJSONOwner withType(AppsCreateForOrg201ApplicationJSONOwnerTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AppsCreateForOrg201ApplicationJSONOwner(@JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("type") AppsCreateForOrg201ApplicationJSONOwnerTypeEnum type) {
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.type = type;
+  }
 }

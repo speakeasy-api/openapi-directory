@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCloudFormationStackResponse {
@@ -12,6 +13,7 @@ public class CreateCloudFormationStackResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateCloudFormationStackResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateCloudFormationStackResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public CreateCloudFormationStackResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class CreateCloudFormationStackResponse {
     
     
     public String contentType;
+
     public CreateCloudFormationStackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateCloudFormationStackResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCloudFormationStackResult createCloudFormationStackResult;
+
     public CreateCloudFormationStackResponse withCreateCloudFormationStackResult(org.openapis.openapi.models.shared.CreateCloudFormationStackResult createCloudFormationStackResult) {
         this.createCloudFormationStackResult = createCloudFormationStackResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateCloudFormationStackResponse {
      */
     
     public Object invalidInputException;
+
     public CreateCloudFormationStackResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CreateCloudFormationStackResponse {
      */
     
     public Object notFoundException;
+
     public CreateCloudFormationStackResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateCloudFormationStackResponse {
      */
     
     public Object operationFailureException;
+
     public CreateCloudFormationStackResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class CreateCloudFormationStackResponse {
      */
     
     public Object serviceException;
+
     public CreateCloudFormationStackResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class CreateCloudFormationStackResponse {
     
     
     public Integer statusCode;
+
     public CreateCloudFormationStackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateCloudFormationStackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCloudFormationStackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateCloudFormationStackResponse {
      */
     
     public Object unauthenticatedException;
+
     public CreateCloudFormationStackResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public CreateCloudFormationStackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

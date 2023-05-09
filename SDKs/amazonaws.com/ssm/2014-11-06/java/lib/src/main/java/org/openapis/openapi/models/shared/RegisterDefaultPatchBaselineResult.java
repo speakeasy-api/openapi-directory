@@ -15,9 +15,11 @@ public class RegisterDefaultPatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineId")
     public String baselineId;
+
     public RegisterDefaultPatchBaselineResult withBaselineId(String baselineId) {
         this.baselineId = baselineId;
         return this;
     }
     
+    public RegisterDefaultPatchBaselineResult(){}
 }

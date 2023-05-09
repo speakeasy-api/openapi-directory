@@ -18,6 +18,7 @@ public class StreamingSideInputLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateFamily")
     public String stateFamily;
+
     public StreamingSideInputLocation withStateFamily(String stateFamily) {
         this.stateFamily = stateFamily;
         return this;
@@ -29,9 +30,11 @@ public class StreamingSideInputLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public StreamingSideInputLocation withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public StreamingSideInputLocation(){}
 }

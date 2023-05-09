@@ -12,6 +12,7 @@ public class DeleteDeliveryStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowForceDelete")
     public Boolean allowForceDelete;
+
     public DeleteDeliveryStreamInput withAllowForceDelete(Boolean allowForceDelete) {
         this.allowForceDelete = allowForceDelete;
         return this;
@@ -19,9 +20,13 @@ public class DeleteDeliveryStreamInput {
     
     @JsonProperty("DeliveryStreamName")
     public String deliveryStreamName;
+
     public DeleteDeliveryStreamInput withDeliveryStreamName(String deliveryStreamName) {
         this.deliveryStreamName = deliveryStreamName;
         return this;
     }
     
+    public DeleteDeliveryStreamInput(@JsonProperty("DeliveryStreamName") String deliveryStreamName) {
+        this.deliveryStreamName = deliveryStreamName;
+  }
 }

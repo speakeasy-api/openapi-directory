@@ -15,6 +15,7 @@ public class DeliveryOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SendingPoolName")
     public String sendingPoolName;
+
     public DeliveryOptions withSendingPoolName(String sendingPoolName) {
         this.sendingPoolName = sendingPoolName;
         return this;
@@ -23,9 +24,11 @@ public class DeliveryOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TlsPolicy")
     public TlsPolicyEnum tlsPolicy;
+
     public DeliveryOptions withTlsPolicy(TlsPolicyEnum tlsPolicy) {
         this.tlsPolicy = tlsPolicy;
         return this;
     }
     
+    public DeliveryOptions(){}
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class EntitySummary {
     @JsonProperty("arn")
     public String arn;
+
     public EntitySummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class EntitySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public EntitySummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -36,6 +38,7 @@ public class EntitySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EntitySummary withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +46,7 @@ public class EntitySummary {
     
     @JsonProperty("entityId")
     public String entityId;
+
     public EntitySummary withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -50,6 +54,7 @@ public class EntitySummary {
     
     @JsonProperty("entityName")
     public String entityName;
+
     public EntitySummary withEntityName(String entityName) {
         this.entityName = entityName;
         return this;
@@ -58,6 +63,7 @@ public class EntitySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasChildEntities")
     public Boolean hasChildEntities;
+
     public EntitySummary withHasChildEntities(Boolean hasChildEntities) {
         this.hasChildEntities = hasChildEntities;
         return this;
@@ -66,6 +72,7 @@ public class EntitySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentEntityId")
     public String parentEntityId;
+
     public EntitySummary withParentEntityId(String parentEntityId) {
         this.parentEntityId = parentEntityId;
         return this;
@@ -73,6 +80,7 @@ public class EntitySummary {
     
     @JsonProperty("status")
     public Status status;
+
     public EntitySummary withStatus(Status status) {
         this.status = status;
         return this;
@@ -82,9 +90,18 @@ public class EntitySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateDateTime")
     public OffsetDateTime updateDateTime;
+
     public EntitySummary withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
     }
     
+    public EntitySummary(@JsonProperty("arn") String arn, @JsonProperty("creationDateTime") OffsetDateTime creationDateTime, @JsonProperty("entityId") String entityId, @JsonProperty("entityName") String entityName, @JsonProperty("status") Status status, @JsonProperty("updateDateTime") OffsetDateTime updateDateTime) {
+        this.arn = arn;
+        this.creationDateTime = creationDateTime;
+        this.entityId = entityId;
+        this.entityName = entityName;
+        this.status = status;
+        this.updateDateTime = updateDateTime;
+  }
 }

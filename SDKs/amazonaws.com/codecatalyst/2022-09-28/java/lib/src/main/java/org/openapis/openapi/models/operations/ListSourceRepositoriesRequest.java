@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSourceRepositoriesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ListSourceRepositoriesRequestBody requestBody;
+
     public ListSourceRepositoriesRequest withRequestBody(ListSourceRepositoriesRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ListSourceRepositoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public String maxResults;
+
     public ListSourceRepositoriesRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class ListSourceRepositoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListSourceRepositoriesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -39,6 +43,7 @@ public class ListSourceRepositoriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectName")
     public String projectName;
+
     public ListSourceRepositoriesRequest withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -49,9 +54,15 @@ public class ListSourceRepositoriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
     public String spaceName;
+
     public ListSourceRepositoriesRequest withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
     }
     
+    public ListSourceRepositoriesRequest(@JsonProperty("RequestBody") ListSourceRepositoriesRequestBody requestBody, @JsonProperty("projectName") String projectName, @JsonProperty("spaceName") String spaceName) {
+        this.requestBody = requestBody;
+        this.projectName = projectName;
+        this.spaceName = spaceName;
+  }
 }

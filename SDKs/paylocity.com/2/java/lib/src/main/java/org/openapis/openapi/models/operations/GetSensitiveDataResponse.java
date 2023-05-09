@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSensitiveDataResponse {
     
     public String contentType;
+
     public GetSensitiveDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSensitiveDataResponse {
     
     
     public Integer statusCode;
+
     public GetSensitiveDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetSensitiveDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSensitiveDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetSensitiveDataResponse {
      */
     
     public org.openapis.openapi.models.shared.Error[] errors;
+
     public GetSensitiveDataResponse withErrors(org.openapis.openapi.models.shared.Error[] errors) {
         this.errors = errors;
         return this;
@@ -43,9 +48,14 @@ public class GetSensitiveDataResponse {
      */
     
     public org.openapis.openapi.models.shared.SensitiveData[] sensitiveData;
+
     public GetSensitiveDataResponse withSensitiveData(org.openapis.openapi.models.shared.SensitiveData[] sensitiveData) {
         this.sensitiveData = sensitiveData;
         return this;
     }
     
+    public GetSensitiveDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

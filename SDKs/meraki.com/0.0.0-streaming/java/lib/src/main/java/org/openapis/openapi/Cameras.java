@@ -56,11 +56,9 @@ public class Cameras {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateNetworkCameraSnapshotResponse res = new org.openapis.openapi.models.operations.GenerateNetworkCameraSnapshotResponse() {{
+        org.openapis.openapi.models.operations.GenerateNetworkCameraSnapshotResponse res = new org.openapis.openapi.models.operations.GenerateNetworkCameraSnapshotResponse(contentType, httpRes.statusCode()) {{
             generateNetworkCameraSnapshot202ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -68,46 +66,6 @@ public class Cameras {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
                 res.generateNetworkCameraSnapshot202ApplicationJSONObject = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Returns quality and retention settings for the given camera
-     * Returns quality and retention settings for the given camera
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.GetDeviceCameraQualityAndRetentionSettingsResponse getDeviceCameraQualityAndRetentionSettings(org.openapis.openapi.models.operations.GetDeviceCameraQualityAndRetentionSettingsRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraQualityAndRetentionSettingsRequest.class, baseUrl, "/devices/{serial}/camera/qualityAndRetentionSettings", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.GetDeviceCameraQualityAndRetentionSettingsResponse res = new org.openapis.openapi.models.operations.GetDeviceCameraQualityAndRetentionSettingsResponse() {{
-            getDeviceCameraQualityAndRetentionSettings200ApplicationJSONObject = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.getDeviceCameraQualityAndRetentionSettings200ApplicationJSONObject = out;
             }
         }
 
@@ -136,11 +94,9 @@ public class Cameras {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeviceCameraVideoSettingsResponse res = new org.openapis.openapi.models.operations.GetDeviceCameraVideoSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetDeviceCameraVideoSettingsResponse res = new org.openapis.openapi.models.operations.GetDeviceCameraVideoSettingsResponse(contentType, httpRes.statusCode()) {{
             getDeviceCameraVideoSettings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,11 +132,9 @@ public class Cameras {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkCameraSchedulesResponse res = new org.openapis.openapi.models.operations.GetNetworkCameraSchedulesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkCameraSchedulesResponse res = new org.openapis.openapi.models.operations.GetNetworkCameraSchedulesResponse(contentType, httpRes.statusCode()) {{
             getNetworkCameraSchedules200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -222,11 +176,9 @@ public class Cameras {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkCameraVideoLinkResponse res = new org.openapis.openapi.models.operations.GetNetworkCameraVideoLinkResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkCameraVideoLinkResponse res = new org.openapis.openapi.models.operations.GetNetworkCameraVideoLinkResponse(contentType, httpRes.statusCode()) {{
             getNetworkCameraVideoLink200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,48 +186,6 @@ public class Cameras {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
                 res.getNetworkCameraVideoLink200ApplicationJSONObject = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Update quality and retention settings for the given camera
-     * Update quality and retention settings for the given camera
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.UpdateDeviceCameraQualityAndRetentionSettingsResponse updateDeviceCameraQualityAndRetentionSettings(org.openapis.openapi.models.operations.UpdateDeviceCameraQualityAndRetentionSettingsRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraQualityAndRetentionSettingsRequest.class, baseUrl, "/devices/{serial}/camera/qualityAndRetentionSettings", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PUT");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.UpdateDeviceCameraQualityAndRetentionSettingsResponse res = new org.openapis.openapi.models.operations.UpdateDeviceCameraQualityAndRetentionSettingsResponse() {{
-            updateDeviceCameraQualityAndRetentionSettings200ApplicationJSONObject = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.updateDeviceCameraQualityAndRetentionSettings200ApplicationJSONObject = out;
             }
         }
 
@@ -306,11 +216,9 @@ public class Cameras {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDeviceCameraVideoSettingsResponse res = new org.openapis.openapi.models.operations.UpdateDeviceCameraVideoSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateDeviceCameraVideoSettingsResponse res = new org.openapis.openapi.models.operations.UpdateDeviceCameraVideoSettingsResponse(contentType, httpRes.statusCode()) {{
             updateDeviceCameraVideoSettings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

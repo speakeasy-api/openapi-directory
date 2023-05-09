@@ -15,6 +15,7 @@ public class ListCustomRoutingEndpointGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointGroups")
     public CustomRoutingEndpointGroup[] endpointGroups;
+
     public ListCustomRoutingEndpointGroupsResponse withEndpointGroups(CustomRoutingEndpointGroup[] endpointGroups) {
         this.endpointGroups = endpointGroups;
         return this;
@@ -23,9 +24,11 @@ public class ListCustomRoutingEndpointGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCustomRoutingEndpointGroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomRoutingEndpointGroupsResponse(){}
 }

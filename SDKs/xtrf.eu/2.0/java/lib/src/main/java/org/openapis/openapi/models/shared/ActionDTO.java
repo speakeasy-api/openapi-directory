@@ -12,6 +12,7 @@ public class ActionDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public String header;
+
     public ActionDTO withHeader(String header) {
         this.header = header;
         return this;
@@ -20,9 +21,11 @@ public class ActionDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ActionDTO withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ActionDTO(){}
 }

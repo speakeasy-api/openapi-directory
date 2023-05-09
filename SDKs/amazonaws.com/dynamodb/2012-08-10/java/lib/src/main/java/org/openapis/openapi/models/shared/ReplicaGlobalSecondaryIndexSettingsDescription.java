@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReplicaGlobalSecondaryIndexSettingsDescription {
     @JsonProperty("IndexName")
     public String indexName;
+
     public ReplicaGlobalSecondaryIndexSettingsDescription withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -22,6 +23,7 @@ public class ReplicaGlobalSecondaryIndexSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexStatus")
     public IndexStatusEnum indexStatus;
+
     public ReplicaGlobalSecondaryIndexSettingsDescription withIndexStatus(IndexStatusEnum indexStatus) {
         this.indexStatus = indexStatus;
         return this;
@@ -30,6 +32,7 @@ public class ReplicaGlobalSecondaryIndexSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedReadCapacityAutoScalingSettings")
     public AutoScalingSettingsDescription provisionedReadCapacityAutoScalingSettings;
+
     public ReplicaGlobalSecondaryIndexSettingsDescription withProvisionedReadCapacityAutoScalingSettings(AutoScalingSettingsDescription provisionedReadCapacityAutoScalingSettings) {
         this.provisionedReadCapacityAutoScalingSettings = provisionedReadCapacityAutoScalingSettings;
         return this;
@@ -38,6 +41,7 @@ public class ReplicaGlobalSecondaryIndexSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedReadCapacityUnits")
     public Long provisionedReadCapacityUnits;
+
     public ReplicaGlobalSecondaryIndexSettingsDescription withProvisionedReadCapacityUnits(Long provisionedReadCapacityUnits) {
         this.provisionedReadCapacityUnits = provisionedReadCapacityUnits;
         return this;
@@ -46,6 +50,7 @@ public class ReplicaGlobalSecondaryIndexSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedWriteCapacityAutoScalingSettings")
     public AutoScalingSettingsDescription provisionedWriteCapacityAutoScalingSettings;
+
     public ReplicaGlobalSecondaryIndexSettingsDescription withProvisionedWriteCapacityAutoScalingSettings(AutoScalingSettingsDescription provisionedWriteCapacityAutoScalingSettings) {
         this.provisionedWriteCapacityAutoScalingSettings = provisionedWriteCapacityAutoScalingSettings;
         return this;
@@ -54,9 +59,13 @@ public class ReplicaGlobalSecondaryIndexSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedWriteCapacityUnits")
     public Long provisionedWriteCapacityUnits;
+
     public ReplicaGlobalSecondaryIndexSettingsDescription withProvisionedWriteCapacityUnits(Long provisionedWriteCapacityUnits) {
         this.provisionedWriteCapacityUnits = provisionedWriteCapacityUnits;
         return this;
     }
     
+    public ReplicaGlobalSecondaryIndexSettingsDescription(@JsonProperty("IndexName") String indexName) {
+        this.indexName = indexName;
+  }
 }

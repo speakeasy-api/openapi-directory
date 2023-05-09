@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostVCustomPricesSessionSchemaRequest {
@@ -12,6 +13,7 @@ public class PostVCustomPricesSessionSchemaRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PostVCustomPricesSessionSchemaRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PostVCustomPricesSessionSchemaRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PostVCustomPricesSessionSchemaRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,14 @@ public class PostVCustomPricesSessionSchemaRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostVCustomPricesSessionSchemaRequestBody requestBody;
+
     public PostVCustomPricesSessionSchemaRequest withRequestBody(PostVCustomPricesSessionSchemaRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public PostVCustomPricesSessionSchemaRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

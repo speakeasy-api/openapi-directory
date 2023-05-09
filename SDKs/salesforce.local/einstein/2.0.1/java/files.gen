@@ -47,6 +47,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GenerateTokenV2Response
 lib/src/main/java/org/openapis/openapi/models/operations/RevokeRefreshTokenV2Security.java
 lib/src/main/java/org/openapis/openapi/models/operations/RevokeRefreshTokenV2Request.java
 lib/src/main/java/org/openapis/openapi/models/operations/RevokeRefreshTokenV2Response.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetApiUsagePlansV2Security.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiUsagePlansV2Response.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteDatasetSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteDatasetRequest.java
@@ -223,4 +224,17 @@ lib/src/main/java/org/openapis/openapi/models/shared/CellLocation.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImageClassificationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImageClassificationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/V2VisionTrainParams.java
+docs/sdk/README.md
+docs/authorization/README.md
+docs/checkapiusage/README.md
+docs/languagedatasets/README.md
+docs/languageexamples/README.md
+docs/languagemodels/README.md
+docs/languageprediction/README.md
+docs/languagetraining/README.md
+docs/visiondatasets/README.md
+docs/visionexamples/README.md
+docs/visionmodels/README.md
+docs/visionprediction/README.md
+docs/visiontraining/README.md
 USAGE.md

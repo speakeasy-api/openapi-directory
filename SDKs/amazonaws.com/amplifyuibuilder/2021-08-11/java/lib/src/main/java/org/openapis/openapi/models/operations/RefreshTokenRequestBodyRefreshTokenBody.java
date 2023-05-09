@@ -13,11 +13,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class RefreshTokenRequestBodyRefreshTokenBody {
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientId")
+    public String clientId;
+
+    public RefreshTokenRequestBodyRefreshTokenBody withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public RefreshTokenRequestBodyRefreshTokenBody withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public RefreshTokenRequestBodyRefreshTokenBody(){}
 }

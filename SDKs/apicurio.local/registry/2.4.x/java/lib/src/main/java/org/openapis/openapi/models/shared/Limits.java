@@ -17,6 +17,7 @@ public class Limits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxArtifactDescriptionLengthChars")
     public Long maxArtifactDescriptionLengthChars;
+
     public Limits withMaxArtifactDescriptionLengthChars(Long maxArtifactDescriptionLengthChars) {
         this.maxArtifactDescriptionLengthChars = maxArtifactDescriptionLengthChars;
         return this;
@@ -25,6 +26,7 @@ public class Limits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxArtifactLabelsCount")
     public Long maxArtifactLabelsCount;
+
     public Limits withMaxArtifactLabelsCount(Long maxArtifactLabelsCount) {
         this.maxArtifactLabelsCount = maxArtifactLabelsCount;
         return this;
@@ -33,6 +35,7 @@ public class Limits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxArtifactNameLengthChars")
     public Long maxArtifactNameLengthChars;
+
     public Limits withMaxArtifactNameLengthChars(Long maxArtifactNameLengthChars) {
         this.maxArtifactNameLengthChars = maxArtifactNameLengthChars;
         return this;
@@ -41,6 +44,7 @@ public class Limits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxArtifactPropertiesCount")
     public Long maxArtifactPropertiesCount;
+
     public Limits withMaxArtifactPropertiesCount(Long maxArtifactPropertiesCount) {
         this.maxArtifactPropertiesCount = maxArtifactPropertiesCount;
         return this;
@@ -49,6 +53,7 @@ public class Limits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxArtifactsCount")
     public Long maxArtifactsCount;
+
     public Limits withMaxArtifactsCount(Long maxArtifactsCount) {
         this.maxArtifactsCount = maxArtifactsCount;
         return this;
@@ -57,6 +62,7 @@ public class Limits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxLabelSizeBytes")
     public Long maxLabelSizeBytes;
+
     public Limits withMaxLabelSizeBytes(Long maxLabelSizeBytes) {
         this.maxLabelSizeBytes = maxLabelSizeBytes;
         return this;
@@ -65,6 +71,7 @@ public class Limits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPropertyKeySizeBytes")
     public Long maxPropertyKeySizeBytes;
+
     public Limits withMaxPropertyKeySizeBytes(Long maxPropertyKeySizeBytes) {
         this.maxPropertyKeySizeBytes = maxPropertyKeySizeBytes;
         return this;
@@ -73,6 +80,7 @@ public class Limits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPropertyValueSizeBytes")
     public Long maxPropertyValueSizeBytes;
+
     public Limits withMaxPropertyValueSizeBytes(Long maxPropertyValueSizeBytes) {
         this.maxPropertyValueSizeBytes = maxPropertyValueSizeBytes;
         return this;
@@ -81,6 +89,7 @@ public class Limits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRequestsPerSecondCount")
     public Long maxRequestsPerSecondCount;
+
     public Limits withMaxRequestsPerSecondCount(Long maxRequestsPerSecondCount) {
         this.maxRequestsPerSecondCount = maxRequestsPerSecondCount;
         return this;
@@ -89,6 +98,7 @@ public class Limits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSchemaSizeBytes")
     public Long maxSchemaSizeBytes;
+
     public Limits withMaxSchemaSizeBytes(Long maxSchemaSizeBytes) {
         this.maxSchemaSizeBytes = maxSchemaSizeBytes;
         return this;
@@ -97,6 +107,7 @@ public class Limits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTotalSchemasCount")
     public Long maxTotalSchemasCount;
+
     public Limits withMaxTotalSchemasCount(Long maxTotalSchemasCount) {
         this.maxTotalSchemasCount = maxTotalSchemasCount;
         return this;
@@ -105,9 +116,11 @@ public class Limits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxVersionsPerArtifactCount")
     public Long maxVersionsPerArtifactCount;
+
     public Limits withMaxVersionsPerArtifactCount(Long maxVersionsPerArtifactCount) {
         this.maxVersionsPerArtifactCount = maxVersionsPerArtifactCount;
         return this;
     }
     
+    public Limits(){}
 }

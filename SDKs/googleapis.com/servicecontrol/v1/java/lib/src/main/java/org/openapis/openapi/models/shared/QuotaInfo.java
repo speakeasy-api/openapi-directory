@@ -18,6 +18,7 @@ public class QuotaInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limitExceeded")
     public String[] limitExceeded;
+
     public QuotaInfo withLimitExceeded(String[] limitExceeded) {
         this.limitExceeded = limitExceeded;
         return this;
@@ -29,6 +30,7 @@ public class QuotaInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotaConsumed")
     public java.util.Map<String, Integer> quotaConsumed;
+
     public QuotaInfo withQuotaConsumed(java.util.Map<String, Integer> quotaConsumed) {
         this.quotaConsumed = quotaConsumed;
         return this;
@@ -40,9 +42,11 @@ public class QuotaInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotaMetrics")
     public MetricValueSet[] quotaMetrics;
+
     public QuotaInfo withQuotaMetrics(MetricValueSet[] quotaMetrics) {
         this.quotaMetrics = quotaMetrics;
         return this;
     }
     
+    public QuotaInfo(){}
 }

@@ -12,6 +12,7 @@ public class CreateFlowTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibleNamespaceVersion")
     public Long compatibleNamespaceVersion;
+
     public CreateFlowTemplateRequest withCompatibleNamespaceVersion(Long compatibleNamespaceVersion) {
         this.compatibleNamespaceVersion = compatibleNamespaceVersion;
         return this;
@@ -19,9 +20,13 @@ public class CreateFlowTemplateRequest {
     
     @JsonProperty("definition")
     public DefinitionDocument definition;
+
     public CreateFlowTemplateRequest withDefinition(DefinitionDocument definition) {
         this.definition = definition;
         return this;
     }
     
+    public CreateFlowTemplateRequest(@JsonProperty("definition") DefinitionDocument definition) {
+        this.definition = definition;
+  }
 }

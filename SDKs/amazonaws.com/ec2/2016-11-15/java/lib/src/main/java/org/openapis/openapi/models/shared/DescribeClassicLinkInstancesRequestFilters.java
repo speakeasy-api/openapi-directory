@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClassicLinkInstancesRequestFilters {
     
     public String name;
+
     public DescribeClassicLinkInstancesRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeClassicLinkInstancesRequestFilters {
     
     
     public String[] values;
+
     public DescribeClassicLinkInstancesRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeClassicLinkInstancesRequestFilters(){}
 }

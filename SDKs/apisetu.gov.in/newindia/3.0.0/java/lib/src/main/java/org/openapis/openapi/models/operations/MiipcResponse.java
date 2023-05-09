@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MiipcResponse {
     
     public String contentType;
+
     public MiipcResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MiipcResponse {
     
     
     public Integer statusCode;
+
     public MiipcResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MiipcResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MiipcResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class MiipcResponse {
      */
     
     public Miipc400ApplicationJSON miipc400ApplicationJSONObject;
+
     public MiipcResponse withMiipc400ApplicationJSONObject(Miipc400ApplicationJSON miipc400ApplicationJSONObject) {
         this.miipc400ApplicationJSONObject = miipc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class MiipcResponse {
      */
     
     public Miipc401ApplicationJSON miipc401ApplicationJSONObject;
+
     public MiipcResponse withMiipc401ApplicationJSONObject(Miipc401ApplicationJSON miipc401ApplicationJSONObject) {
         this.miipc401ApplicationJSONObject = miipc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class MiipcResponse {
      */
     
     public Miipc404ApplicationJSON miipc404ApplicationJSONObject;
+
     public MiipcResponse withMiipc404ApplicationJSONObject(Miipc404ApplicationJSON miipc404ApplicationJSONObject) {
         this.miipc404ApplicationJSONObject = miipc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class MiipcResponse {
      */
     
     public Miipc500ApplicationJSON miipc500ApplicationJSONObject;
+
     public MiipcResponse withMiipc500ApplicationJSONObject(Miipc500ApplicationJSON miipc500ApplicationJSONObject) {
         this.miipc500ApplicationJSONObject = miipc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class MiipcResponse {
      */
     
     public Miipc502ApplicationJSON miipc502ApplicationJSONObject;
+
     public MiipcResponse withMiipc502ApplicationJSONObject(Miipc502ApplicationJSON miipc502ApplicationJSONObject) {
         this.miipc502ApplicationJSONObject = miipc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class MiipcResponse {
      */
     
     public Miipc503ApplicationJSON miipc503ApplicationJSONObject;
+
     public MiipcResponse withMiipc503ApplicationJSONObject(Miipc503ApplicationJSON miipc503ApplicationJSONObject) {
         this.miipc503ApplicationJSONObject = miipc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class MiipcResponse {
      */
     
     public Miipc504ApplicationJSON miipc504ApplicationJSONObject;
+
     public MiipcResponse withMiipc504ApplicationJSONObject(Miipc504ApplicationJSON miipc504ApplicationJSONObject) {
         this.miipc504ApplicationJSONObject = miipc504ApplicationJSONObject;
         return this;
     }
     
+    public MiipcResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

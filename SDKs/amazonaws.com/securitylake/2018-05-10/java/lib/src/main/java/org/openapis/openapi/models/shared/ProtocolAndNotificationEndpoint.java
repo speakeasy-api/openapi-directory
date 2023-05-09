@@ -15,6 +15,7 @@ public class ProtocolAndNotificationEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public ProtocolAndNotificationEndpoint withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -23,9 +24,11 @@ public class ProtocolAndNotificationEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public String protocol;
+
     public ProtocolAndNotificationEndpoint withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public ProtocolAndNotificationEndpoint(){}
 }

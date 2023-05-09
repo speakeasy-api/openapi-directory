@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRadiodnsSpi31SIXmlResponse {
     
     public String contentType;
+
     public GetRadiodnsSpi31SIXmlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRadiodnsSpi31SIXmlResponse {
     
     
     public Integer statusCode;
+
     public GetRadiodnsSpi31SIXmlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRadiodnsSpi31SIXmlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRadiodnsSpi31SIXmlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetRadiodnsSpi31SIXmlResponse {
      */
     
     public String getRadiodnsSpi31SIXML200ApplicationXMLRadioDNSServiceInformationSIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection6String;
+
     public GetRadiodnsSpi31SIXmlResponse withGetRadiodnsSpi31SIXML200ApplicationXMLRadioDNSServiceInformationSIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection6String(String getRadiodnsSpi31SIXML200ApplicationXMLRadioDNSServiceInformationSIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection6String) {
         this.getRadiodnsSpi31SIXML200ApplicationXMLRadioDNSServiceInformationSIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection6String = getRadiodnsSpi31SIXML200ApplicationXMLRadioDNSServiceInformationSIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection6String;
         return this;
     }
     
+    public GetRadiodnsSpi31SIXmlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class BusinessAppointmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alignment_time")
     public String alignmentTime;
+
     public BusinessAppointmentSettings withAlignmentTime(String alignmentTime) {
         this.alignmentTime = alignmentTime;
         return this;
@@ -30,6 +31,7 @@ public class BusinessAppointmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("any_team_member_booking_enabled")
     public Boolean anyTeamMemberBookingEnabled;
+
     public BusinessAppointmentSettings withAnyTeamMemberBookingEnabled(Boolean anyTeamMemberBookingEnabled) {
         this.anyTeamMemberBookingEnabled = anyTeamMemberBookingEnabled;
         return this;
@@ -46,6 +48,7 @@ public class BusinessAppointmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellation_fee_money")
     public Money cancellationFeeMoney;
+
     public BusinessAppointmentSettings withCancellationFeeMoney(Money cancellationFeeMoney) {
         this.cancellationFeeMoney = cancellationFeeMoney;
         return this;
@@ -57,6 +60,7 @@ public class BusinessAppointmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellation_policy")
     public String cancellationPolicy;
+
     public BusinessAppointmentSettings withCancellationPolicy(String cancellationPolicy) {
         this.cancellationPolicy = cancellationPolicy;
         return this;
@@ -68,6 +72,7 @@ public class BusinessAppointmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellation_policy_text")
     public String cancellationPolicyText;
+
     public BusinessAppointmentSettings withCancellationPolicyText(String cancellationPolicyText) {
         this.cancellationPolicyText = cancellationPolicyText;
         return this;
@@ -79,6 +84,7 @@ public class BusinessAppointmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellation_window_seconds")
     public Long cancellationWindowSeconds;
+
     public BusinessAppointmentSettings withCancellationWindowSeconds(Long cancellationWindowSeconds) {
         this.cancellationWindowSeconds = cancellationWindowSeconds;
         return this;
@@ -90,6 +96,7 @@ public class BusinessAppointmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_types")
     public String[] locationTypes;
+
     public BusinessAppointmentSettings withLocationTypes(String[] locationTypes) {
         this.locationTypes = locationTypes;
         return this;
@@ -101,6 +108,7 @@ public class BusinessAppointmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_appointments_per_day_limit")
     public Long maxAppointmentsPerDayLimit;
+
     public BusinessAppointmentSettings withMaxAppointmentsPerDayLimit(Long maxAppointmentsPerDayLimit) {
         this.maxAppointmentsPerDayLimit = maxAppointmentsPerDayLimit;
         return this;
@@ -113,6 +121,7 @@ public class BusinessAppointmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_appointments_per_day_limit_type")
     public String maxAppointmentsPerDayLimitType;
+
     public BusinessAppointmentSettings withMaxAppointmentsPerDayLimitType(String maxAppointmentsPerDayLimitType) {
         this.maxAppointmentsPerDayLimitType = maxAppointmentsPerDayLimitType;
         return this;
@@ -124,6 +133,7 @@ public class BusinessAppointmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_booking_lead_time_seconds")
     public Long maxBookingLeadTimeSeconds;
+
     public BusinessAppointmentSettings withMaxBookingLeadTimeSeconds(Long maxBookingLeadTimeSeconds) {
         this.maxBookingLeadTimeSeconds = maxBookingLeadTimeSeconds;
         return this;
@@ -135,6 +145,7 @@ public class BusinessAppointmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min_booking_lead_time_seconds")
     public Long minBookingLeadTimeSeconds;
+
     public BusinessAppointmentSettings withMinBookingLeadTimeSeconds(Long minBookingLeadTimeSeconds) {
         this.minBookingLeadTimeSeconds = minBookingLeadTimeSeconds;
         return this;
@@ -146,6 +157,7 @@ public class BusinessAppointmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiple_service_booking_enabled")
     public Boolean multipleServiceBookingEnabled;
+
     public BusinessAppointmentSettings withMultipleServiceBookingEnabled(Boolean multipleServiceBookingEnabled) {
         this.multipleServiceBookingEnabled = multipleServiceBookingEnabled;
         return this;
@@ -157,9 +169,11 @@ public class BusinessAppointmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skip_booking_flow_staff_selection")
     public Boolean skipBookingFlowStaffSelection;
+
     public BusinessAppointmentSettings withSkipBookingFlowStaffSelection(Boolean skipBookingFlowStaffSelection) {
         this.skipBookingFlowStaffSelection = skipBookingFlowStaffSelection;
         return this;
     }
     
+    public BusinessAppointmentSettings(){}
 }

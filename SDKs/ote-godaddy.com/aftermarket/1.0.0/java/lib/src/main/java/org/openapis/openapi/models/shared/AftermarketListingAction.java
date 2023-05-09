@@ -15,9 +15,13 @@ public class AftermarketListingAction {
      */
     @JsonProperty("listingActionId")
     public Long listingActionId;
+
     public AftermarketListingAction withListingActionId(Long listingActionId) {
         this.listingActionId = listingActionId;
         return this;
     }
     
+    public AftermarketListingAction(@JsonProperty("listingActionId") Long listingActionId) {
+        this.listingActionId = listingActionId;
+  }
 }

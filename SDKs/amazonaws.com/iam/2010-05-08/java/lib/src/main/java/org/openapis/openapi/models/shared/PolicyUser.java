@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PolicyUser {
     
     public String userId;
+
     public PolicyUser withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -19,9 +20,11 @@ public class PolicyUser {
     
     
     public String userName;
+
     public PolicyUser withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public PolicyUser(){}
 }

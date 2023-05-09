@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DeleteApplicationSnapshotRequest {
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public DeleteApplicationSnapshotRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -23,6 +24,7 @@ public class DeleteApplicationSnapshotRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SnapshotCreationTimestamp")
     public OffsetDateTime snapshotCreationTimestamp;
+
     public DeleteApplicationSnapshotRequest withSnapshotCreationTimestamp(OffsetDateTime snapshotCreationTimestamp) {
         this.snapshotCreationTimestamp = snapshotCreationTimestamp;
         return this;
@@ -30,9 +32,15 @@ public class DeleteApplicationSnapshotRequest {
     
     @JsonProperty("SnapshotName")
     public String snapshotName;
+
     public DeleteApplicationSnapshotRequest withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
     }
     
+    public DeleteApplicationSnapshotRequest(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("SnapshotCreationTimestamp") OffsetDateTime snapshotCreationTimestamp, @JsonProperty("SnapshotName") String snapshotName) {
+        this.applicationName = applicationName;
+        this.snapshotCreationTimestamp = snapshotCreationTimestamp;
+        this.snapshotName = snapshotName;
+  }
 }

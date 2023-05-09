@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PutGroupPolicyRequest {
     
     public String groupName;
+
     public PutGroupPolicyRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -16,6 +17,7 @@ public class PutGroupPolicyRequest {
     
     
     public String policyDocument;
+
     public PutGroupPolicyRequest withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -23,9 +25,15 @@ public class PutGroupPolicyRequest {
     
     
     public String policyName;
+
     public PutGroupPolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public PutGroupPolicyRequest(@JsonProperty("GroupName") String groupName, @JsonProperty("PolicyDocument") String policyDocument, @JsonProperty("PolicyName") String policyName) {
+        this.groupName = groupName;
+        this.policyDocument = policyDocument;
+        this.policyName = policyName;
+  }
 }

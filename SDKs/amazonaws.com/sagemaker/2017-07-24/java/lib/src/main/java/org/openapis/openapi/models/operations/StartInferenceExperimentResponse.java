@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartInferenceExperimentResponse {
@@ -12,6 +13,7 @@ public class StartInferenceExperimentResponse {
      */
     
     public Object conflictException;
+
     public StartInferenceExperimentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StartInferenceExperimentResponse {
     
     
     public String contentType;
+
     public StartInferenceExperimentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartInferenceExperimentResponse {
      */
     
     public Object resourceNotFound;
+
     public StartInferenceExperimentResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -39,6 +43,7 @@ public class StartInferenceExperimentResponse {
      */
     
     public org.openapis.openapi.models.shared.StartInferenceExperimentResponse startInferenceExperimentResponse;
+
     public StartInferenceExperimentResponse withStartInferenceExperimentResponse(org.openapis.openapi.models.shared.StartInferenceExperimentResponse startInferenceExperimentResponse) {
         this.startInferenceExperimentResponse = startInferenceExperimentResponse;
         return this;
@@ -46,6 +51,7 @@ public class StartInferenceExperimentResponse {
     
     
     public Integer statusCode;
+
     public StartInferenceExperimentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class StartInferenceExperimentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartInferenceExperimentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartInferenceExperimentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

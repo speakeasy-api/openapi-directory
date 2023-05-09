@@ -15,6 +15,7 @@ public class ListInferenceExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceExecutionSummaries")
     public InferenceExecutionSummary[] inferenceExecutionSummaries;
+
     public ListInferenceExecutionsResponse withInferenceExecutionSummaries(InferenceExecutionSummary[] inferenceExecutionSummaries) {
         this.inferenceExecutionSummaries = inferenceExecutionSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListInferenceExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListInferenceExecutionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListInferenceExecutionsResponse(){}
 }

@@ -18,9 +18,11 @@ public class ListPeeredDnsDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peeredDnsDomains")
     public PeeredDnsDomain[] peeredDnsDomains;
+
     public ListPeeredDnsDomainsResponse withPeeredDnsDomains(PeeredDnsDomain[] peeredDnsDomains) {
         this.peeredDnsDomains = peeredDnsDomains;
         return this;
     }
     
+    public ListPeeredDnsDomainsResponse(){}
 }

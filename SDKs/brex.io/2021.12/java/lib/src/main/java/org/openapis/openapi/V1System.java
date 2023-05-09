@@ -35,10 +35,11 @@ public class V1System {
     /**
      * Returns the health information for the official business registers based on usage.
      * Returns the health information for the official business registers based on usage.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HealthCheckResponse healthCheck() throws Exception {
+    public org.openapis.openapi.models.operations.HealthCheckResponse healthCheck(org.openapis.openapi.models.operations.HealthCheckSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/system/health");
         
@@ -47,17 +48,16 @@ public class V1System {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HealthCheckResponse res = new org.openapis.openapi.models.operations.HealthCheckResponse() {{
+        org.openapis.openapi.models.operations.HealthCheckResponse res = new org.openapis.openapi.models.operations.HealthCheckResponse(contentType, httpRes.statusCode()) {{
             healthCheck200ApplicationJSONObjects = null;
             healthCheckDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -81,10 +81,11 @@ public class V1System {
     /**
      * Returns a list of countries
      * Retrieve the list of all currently enabled countries
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SystemCountriesResponse systemCountries() throws Exception {
+    public org.openapis.openapi.models.operations.SystemCountriesResponse systemCountries(org.openapis.openapi.models.operations.SystemCountriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/system/countries");
         
@@ -93,17 +94,16 @@ public class V1System {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SystemCountriesResponse res = new org.openapis.openapi.models.operations.SystemCountriesResponse() {{
+        org.openapis.openapi.models.operations.SystemCountriesResponse res = new org.openapis.openapi.models.operations.SystemCountriesResponse(contentType, httpRes.statusCode()) {{
             systemCountries200ApplicationJSONObjects = null;
             systemCountriesDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -127,10 +127,11 @@ public class V1System {
     /**
      * Returns a list of products with prices
      * Retrieve pricing rules for your subscription plan
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SystemPricelistResponse systemPricelist() throws Exception {
+    public org.openapis.openapi.models.operations.SystemPricelistResponse systemPricelist(org.openapis.openapi.models.operations.SystemPricelistSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/system/pricelist");
         
@@ -139,17 +140,16 @@ public class V1System {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SystemPricelistResponse res = new org.openapis.openapi.models.operations.SystemPricelistResponse() {{
+        org.openapis.openapi.models.operations.SystemPricelistResponse res = new org.openapis.openapi.models.operations.SystemPricelistResponse(contentType, httpRes.statusCode()) {{
             systemPricelist200ApplicationJSONObjects = null;
             systemPricelistDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

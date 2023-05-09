@@ -15,6 +15,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public GroupNameEnum name;
+
     public Group withName(GroupNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Group withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Group(){}
 }

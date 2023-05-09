@@ -18,6 +18,7 @@ public class ApigatewayOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("done")
     public Boolean done;
+
     public ApigatewayOperation withDone(Boolean done) {
         this.done = done;
         return this;
@@ -29,6 +30,7 @@ public class ApigatewayOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public ApigatewayStatus error;
+
     public ApigatewayOperation withError(ApigatewayStatus error) {
         this.error = error;
         return this;
@@ -40,6 +42,7 @@ public class ApigatewayOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public ApigatewayOperation withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -51,6 +54,7 @@ public class ApigatewayOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ApigatewayOperation withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class ApigatewayOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public java.util.Map<String, Object> response;
+
     public ApigatewayOperation withResponse(java.util.Map<String, Object> response) {
         this.response = response;
         return this;
     }
     
+    public ApigatewayOperation(){}
 }

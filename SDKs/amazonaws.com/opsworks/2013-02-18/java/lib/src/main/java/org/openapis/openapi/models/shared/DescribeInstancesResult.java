@@ -15,9 +15,11 @@ public class DescribeInstancesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Instances")
     public Instance[] instances;
+
     public DescribeInstancesResult withInstances(Instance[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public DescribeInstancesResult(){}
 }

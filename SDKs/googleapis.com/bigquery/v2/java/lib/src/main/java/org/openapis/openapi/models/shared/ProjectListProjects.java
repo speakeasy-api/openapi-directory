@@ -15,6 +15,7 @@ public class ProjectListProjects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyName")
     public String friendlyName;
+
     public ProjectListProjects withFriendlyName(String friendlyName) {
         this.friendlyName = friendlyName;
         return this;
@@ -26,6 +27,7 @@ public class ProjectListProjects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ProjectListProjects withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class ProjectListProjects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ProjectListProjects withKind(String kind) {
         this.kind = kind;
         return this;
@@ -48,6 +51,7 @@ public class ProjectListProjects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numericId")
     public String numericId;
+
     public ProjectListProjects withNumericId(String numericId) {
         this.numericId = numericId;
         return this;
@@ -56,9 +60,11 @@ public class ProjectListProjects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectReference")
     public ProjectReference projectReference;
+
     public ProjectListProjects withProjectReference(ProjectReference projectReference) {
         this.projectReference = projectReference;
         return this;
     }
     
+    public ProjectListProjects(){}
 }

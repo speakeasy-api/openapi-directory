@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMaintenanceWindowExecutionTasksResponse {
     
     public String contentType;
+
     public DescribeMaintenanceWindowExecutionTasksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMaintenanceWindowExecutionTasksResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMaintenanceWindowExecutionTasksResult describeMaintenanceWindowExecutionTasksResult;
+
     public DescribeMaintenanceWindowExecutionTasksResponse withDescribeMaintenanceWindowExecutionTasksResult(org.openapis.openapi.models.shared.DescribeMaintenanceWindowExecutionTasksResult describeMaintenanceWindowExecutionTasksResult) {
         this.describeMaintenanceWindowExecutionTasksResult = describeMaintenanceWindowExecutionTasksResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMaintenanceWindowExecutionTasksResponse {
      */
     
     public Object doesNotExistException;
+
     public DescribeMaintenanceWindowExecutionTasksResponse withDoesNotExistException(Object doesNotExistException) {
         this.doesNotExistException = doesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMaintenanceWindowExecutionTasksResponse {
      */
     
     public Object internalServerError;
+
     public DescribeMaintenanceWindowExecutionTasksResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class DescribeMaintenanceWindowExecutionTasksResponse {
     
     
     public Integer statusCode;
+
     public DescribeMaintenanceWindowExecutionTasksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeMaintenanceWindowExecutionTasksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMaintenanceWindowExecutionTasksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeMaintenanceWindowExecutionTasksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

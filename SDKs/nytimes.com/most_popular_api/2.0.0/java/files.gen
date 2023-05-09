@@ -45,13 +45,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/GETMostviewedSectionTim
 lib/src/main/java/org/openapis/openapi/models/operations/GETMostviewedSectionTimePeriodJSON200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETMostviewedSectionTimePeriodJsonResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ArticleWithCountTypeGeoFacet2Enum.java
-lib/src/main/java/org/openapis/openapi/models/shared/ArticleWithCountTypeGeoFacet1Enum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ArticleWithCountTypeMediaMediaMetadata.java
 lib/src/main/java/org/openapis/openapi/models/shared/ArticleWithCountTypeMedia.java
 lib/src/main/java/org/openapis/openapi/models/shared/ArticleWithCountType.java
 lib/src/main/java/org/openapis/openapi/models/shared/TimePeriodEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SectionEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ArticleGeoFacet2Enum.java
-lib/src/main/java/org/openapis/openapi/models/shared/ArticleGeoFacet1Enum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Article.java
+docs/sdk/README.md
 USAGE.md

@@ -12,6 +12,7 @@ public class UpdateDevEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddArguments")
     public java.util.Map<String, String> addArguments;
+
     public UpdateDevEndpointRequest withAddArguments(java.util.Map<String, String> addArguments) {
         this.addArguments = addArguments;
         return this;
@@ -20,6 +21,7 @@ public class UpdateDevEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddPublicKeys")
     public String[] addPublicKeys;
+
     public UpdateDevEndpointRequest withAddPublicKeys(String[] addPublicKeys) {
         this.addPublicKeys = addPublicKeys;
         return this;
@@ -28,6 +30,7 @@ public class UpdateDevEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomLibraries")
     public DevEndpointCustomLibraries customLibraries;
+
     public UpdateDevEndpointRequest withCustomLibraries(DevEndpointCustomLibraries customLibraries) {
         this.customLibraries = customLibraries;
         return this;
@@ -36,6 +39,7 @@ public class UpdateDevEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteArguments")
     public String[] deleteArguments;
+
     public UpdateDevEndpointRequest withDeleteArguments(String[] deleteArguments) {
         this.deleteArguments = deleteArguments;
         return this;
@@ -44,6 +48,7 @@ public class UpdateDevEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletePublicKeys")
     public String[] deletePublicKeys;
+
     public UpdateDevEndpointRequest withDeletePublicKeys(String[] deletePublicKeys) {
         this.deletePublicKeys = deletePublicKeys;
         return this;
@@ -51,6 +56,7 @@ public class UpdateDevEndpointRequest {
     
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public UpdateDevEndpointRequest withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -59,6 +65,7 @@ public class UpdateDevEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicKey")
     public String publicKey;
+
     public UpdateDevEndpointRequest withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -67,9 +74,13 @@ public class UpdateDevEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateEtlLibraries")
     public Boolean updateEtlLibraries;
+
     public UpdateDevEndpointRequest withUpdateEtlLibraries(Boolean updateEtlLibraries) {
         this.updateEtlLibraries = updateEtlLibraries;
         return this;
     }
     
+    public UpdateDevEndpointRequest(@JsonProperty("EndpointName") String endpointName) {
+        this.endpointName = endpointName;
+  }
 }

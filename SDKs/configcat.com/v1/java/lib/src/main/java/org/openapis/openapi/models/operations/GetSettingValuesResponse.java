@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSettingValuesResponse {
@@ -12,6 +13,7 @@ public class GetSettingValuesResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfigSettingValuesModel configSettingValuesModel;
+
     public GetSettingValuesResponse withConfigSettingValuesModel(org.openapis.openapi.models.shared.ConfigSettingValuesModel configSettingValuesModel) {
         this.configSettingValuesModel = configSettingValuesModel;
         return this;
@@ -19,6 +21,7 @@ public class GetSettingValuesResponse {
     
     
     public String contentType;
+
     public GetSettingValuesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetSettingValuesResponse {
     
     
     public Integer statusCode;
+
     public GetSettingValuesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSettingValuesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSettingValuesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSettingValuesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

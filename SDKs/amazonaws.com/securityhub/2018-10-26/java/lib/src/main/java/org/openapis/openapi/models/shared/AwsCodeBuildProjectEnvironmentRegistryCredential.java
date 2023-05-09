@@ -15,6 +15,7 @@ public class AwsCodeBuildProjectEnvironmentRegistryCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credential")
     public String credential;
+
     public AwsCodeBuildProjectEnvironmentRegistryCredential withCredential(String credential) {
         this.credential = credential;
         return this;
@@ -23,9 +24,11 @@ public class AwsCodeBuildProjectEnvironmentRegistryCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CredentialProvider")
     public String credentialProvider;
+
     public AwsCodeBuildProjectEnvironmentRegistryCredential withCredentialProvider(String credentialProvider) {
         this.credentialProvider = credentialProvider;
         return this;
     }
     
+    public AwsCodeBuildProjectEnvironmentRegistryCredential(){}
 }

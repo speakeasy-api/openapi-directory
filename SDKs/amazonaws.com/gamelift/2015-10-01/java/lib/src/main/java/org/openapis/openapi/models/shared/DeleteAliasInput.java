@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAliasInput {
     @JsonProperty("AliasId")
     public String aliasId;
+
     public DeleteAliasInput withAliasId(String aliasId) {
         this.aliasId = aliasId;
         return this;
     }
     
+    public DeleteAliasInput(@JsonProperty("AliasId") String aliasId) {
+        this.aliasId = aliasId;
+  }
 }

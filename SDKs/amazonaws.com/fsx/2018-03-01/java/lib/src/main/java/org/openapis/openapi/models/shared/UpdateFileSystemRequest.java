@@ -15,6 +15,7 @@ public class UpdateFileSystemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public UpdateFileSystemRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -22,6 +23,7 @@ public class UpdateFileSystemRequest {
     
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public UpdateFileSystemRequest withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -33,6 +35,7 @@ public class UpdateFileSystemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LustreConfiguration")
     public UpdateFileSystemLustreConfiguration lustreConfiguration;
+
     public UpdateFileSystemRequest withLustreConfiguration(UpdateFileSystemLustreConfiguration lustreConfiguration) {
         this.lustreConfiguration = lustreConfiguration;
         return this;
@@ -44,6 +47,7 @@ public class UpdateFileSystemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OntapConfiguration")
     public UpdateFileSystemOntapConfiguration ontapConfiguration;
+
     public UpdateFileSystemRequest withOntapConfiguration(UpdateFileSystemOntapConfiguration ontapConfiguration) {
         this.ontapConfiguration = ontapConfiguration;
         return this;
@@ -52,6 +56,7 @@ public class UpdateFileSystemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenZFSConfiguration")
     public UpdateFileSystemOpenZFSConfiguration openZFSConfiguration;
+
     public UpdateFileSystemRequest withOpenZFSConfiguration(UpdateFileSystemOpenZFSConfiguration openZFSConfiguration) {
         this.openZFSConfiguration = openZFSConfiguration;
         return this;
@@ -60,6 +65,7 @@ public class UpdateFileSystemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageCapacity")
     public Long storageCapacity;
+
     public UpdateFileSystemRequest withStorageCapacity(Long storageCapacity) {
         this.storageCapacity = storageCapacity;
         return this;
@@ -68,9 +74,13 @@ public class UpdateFileSystemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowsConfiguration")
     public UpdateFileSystemWindowsConfiguration windowsConfiguration;
+
     public UpdateFileSystemRequest withWindowsConfiguration(UpdateFileSystemWindowsConfiguration windowsConfiguration) {
         this.windowsConfiguration = windowsConfiguration;
         return this;
     }
     
+    public UpdateFileSystemRequest(@JsonProperty("FileSystemId") String fileSystemId) {
+        this.fileSystemId = fileSystemId;
+  }
 }

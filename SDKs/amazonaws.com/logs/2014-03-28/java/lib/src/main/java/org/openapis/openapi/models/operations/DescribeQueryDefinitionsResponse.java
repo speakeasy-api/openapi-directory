@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeQueryDefinitionsResponse {
     
     public String contentType;
+
     public DescribeQueryDefinitionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeQueryDefinitionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeQueryDefinitionsResponse describeQueryDefinitionsResponse;
+
     public DescribeQueryDefinitionsResponse withDescribeQueryDefinitionsResponse(org.openapis.openapi.models.shared.DescribeQueryDefinitionsResponse describeQueryDefinitionsResponse) {
         this.describeQueryDefinitionsResponse = describeQueryDefinitionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeQueryDefinitionsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeQueryDefinitionsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeQueryDefinitionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeQueryDefinitionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeQueryDefinitionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeQueryDefinitionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeQueryDefinitionsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeQueryDefinitionsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public DescribeQueryDefinitionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

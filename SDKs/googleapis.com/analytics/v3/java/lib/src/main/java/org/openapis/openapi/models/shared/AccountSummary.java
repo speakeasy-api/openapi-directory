@@ -18,6 +18,7 @@ public class AccountSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AccountSummary withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class AccountSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountSummary withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class AccountSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccountSummary withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class AccountSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starred")
     public Boolean starred;
+
     public AccountSummary withStarred(Boolean starred) {
         this.starred = starred;
         return this;
@@ -62,9 +66,11 @@ public class AccountSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webProperties")
     public WebPropertySummary[] webProperties;
+
     public AccountSummary withWebProperties(WebPropertySummary[] webProperties) {
         this.webProperties = webProperties;
         return this;
     }
     
+    public AccountSummary(){}
 }

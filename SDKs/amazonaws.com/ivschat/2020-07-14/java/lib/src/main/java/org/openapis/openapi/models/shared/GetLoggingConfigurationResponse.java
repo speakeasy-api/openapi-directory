@@ -20,6 +20,7 @@ public class GetLoggingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public GetLoggingConfigurationResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class GetLoggingConfigurationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public GetLoggingConfigurationResponse withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -38,6 +40,7 @@ public class GetLoggingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationConfiguration")
     public DestinationConfiguration destinationConfiguration;
+
     public GetLoggingConfigurationResponse withDestinationConfiguration(DestinationConfiguration destinationConfiguration) {
         this.destinationConfiguration = destinationConfiguration;
         return this;
@@ -46,6 +49,7 @@ public class GetLoggingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetLoggingConfigurationResponse withId(String id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class GetLoggingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetLoggingConfigurationResponse withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class GetLoggingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public LoggingConfigurationStateEnum state;
+
     public GetLoggingConfigurationResponse withState(LoggingConfigurationStateEnum state) {
         this.state = state;
         return this;
@@ -70,6 +76,7 @@ public class GetLoggingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetLoggingConfigurationResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -80,9 +87,11 @@ public class GetLoggingConfigurationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public GetLoggingConfigurationResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GetLoggingConfigurationResponse(){}
 }

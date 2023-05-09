@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWorkspaceApiKeyResponse {
@@ -12,6 +13,7 @@ public class CreateWorkspaceApiKeyResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateWorkspaceApiKeyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateWorkspaceApiKeyResponse {
      */
     
     public Object conflictException;
+
     public CreateWorkspaceApiKeyResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateWorkspaceApiKeyResponse {
     
     
     public String contentType;
+
     public CreateWorkspaceApiKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateWorkspaceApiKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWorkspaceApiKeyResponse createWorkspaceApiKeyResponse;
+
     public CreateWorkspaceApiKeyResponse withCreateWorkspaceApiKeyResponse(org.openapis.openapi.models.shared.CreateWorkspaceApiKeyResponse createWorkspaceApiKeyResponse) {
         this.createWorkspaceApiKeyResponse = createWorkspaceApiKeyResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateWorkspaceApiKeyResponse {
      */
     
     public Object internalServerException;
+
     public CreateWorkspaceApiKeyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateWorkspaceApiKeyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateWorkspaceApiKeyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateWorkspaceApiKeyResponse {
     
     
     public Integer statusCode;
+
     public CreateWorkspaceApiKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateWorkspaceApiKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWorkspaceApiKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateWorkspaceApiKeyResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateWorkspaceApiKeyResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateWorkspaceApiKeyResponse {
      */
     
     public Object throttlingException;
+
     public CreateWorkspaceApiKeyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateWorkspaceApiKeyResponse {
      */
     
     public Object validationException;
+
     public CreateWorkspaceApiKeyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateWorkspaceApiKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

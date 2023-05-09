@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateNotebookInstanceResponse {
     
     public String contentType;
+
     public CreateNotebookInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateNotebookInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateNotebookInstanceOutput createNotebookInstanceOutput;
+
     public CreateNotebookInstanceResponse withCreateNotebookInstanceOutput(org.openapis.openapi.models.shared.CreateNotebookInstanceOutput createNotebookInstanceOutput) {
         this.createNotebookInstanceOutput = createNotebookInstanceOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateNotebookInstanceResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateNotebookInstanceResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -36,6 +40,7 @@ public class CreateNotebookInstanceResponse {
     
     
     public Integer statusCode;
+
     public CreateNotebookInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateNotebookInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateNotebookInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateNotebookInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

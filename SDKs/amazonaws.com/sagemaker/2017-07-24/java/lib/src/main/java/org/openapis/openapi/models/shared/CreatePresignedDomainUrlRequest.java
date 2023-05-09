@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePresignedDomainUrlRequest {
     @JsonProperty("DomainId")
     public String domainId;
+
     public CreatePresignedDomainUrlRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -19,6 +20,7 @@ public class CreatePresignedDomainUrlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpiresInSeconds")
     public Long expiresInSeconds;
+
     public CreatePresignedDomainUrlRequest withExpiresInSeconds(Long expiresInSeconds) {
         this.expiresInSeconds = expiresInSeconds;
         return this;
@@ -27,6 +29,7 @@ public class CreatePresignedDomainUrlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionExpirationDurationInSeconds")
     public Long sessionExpirationDurationInSeconds;
+
     public CreatePresignedDomainUrlRequest withSessionExpirationDurationInSeconds(Long sessionExpirationDurationInSeconds) {
         this.sessionExpirationDurationInSeconds = sessionExpirationDurationInSeconds;
         return this;
@@ -35,6 +38,7 @@ public class CreatePresignedDomainUrlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpaceName")
     public String spaceName;
+
     public CreatePresignedDomainUrlRequest withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
@@ -42,9 +46,14 @@ public class CreatePresignedDomainUrlRequest {
     
     @JsonProperty("UserProfileName")
     public String userProfileName;
+
     public CreatePresignedDomainUrlRequest withUserProfileName(String userProfileName) {
         this.userProfileName = userProfileName;
         return this;
     }
     
+    public CreatePresignedDomainUrlRequest(@JsonProperty("DomainId") String domainId, @JsonProperty("UserProfileName") String userProfileName) {
+        this.domainId = domainId;
+        this.userProfileName = userProfileName;
+  }
 }

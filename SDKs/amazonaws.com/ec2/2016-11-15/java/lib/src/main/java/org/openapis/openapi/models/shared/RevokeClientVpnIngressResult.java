@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RevokeClientVpnIngressResult {
     
     public RevokeClientVpnIngressResultStatus status;
+
     public RevokeClientVpnIngressResult withStatus(RevokeClientVpnIngressResultStatus status) {
         this.status = status;
         return this;
     }
     
+    public RevokeClientVpnIngressResult(){}
 }

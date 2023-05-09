@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1ProductSearchResultsGroupedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingPoly")
     public GoogleCloudVisionV1p1beta1BoundingPoly boundingPoly;
+
     public GoogleCloudVisionV1p1beta1ProductSearchResultsGroupedResult withBoundingPoly(GoogleCloudVisionV1p1beta1BoundingPoly boundingPoly) {
         this.boundingPoly = boundingPoly;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p1beta1ProductSearchResultsGroupedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectAnnotations")
     public GoogleCloudVisionV1p1beta1ProductSearchResultsObjectAnnotation[] objectAnnotations;
+
     public GoogleCloudVisionV1p1beta1ProductSearchResultsGroupedResult withObjectAnnotations(GoogleCloudVisionV1p1beta1ProductSearchResultsObjectAnnotation[] objectAnnotations) {
         this.objectAnnotations = objectAnnotations;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudVisionV1p1beta1ProductSearchResultsGroupedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GoogleCloudVisionV1p1beta1ProductSearchResultsResult[] results;
+
     public GoogleCloudVisionV1p1beta1ProductSearchResultsGroupedResult withResults(GoogleCloudVisionV1p1beta1ProductSearchResultsResult[] results) {
         this.results = results;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1ProductSearchResultsGroupedResult(){}
 }

@@ -16,33 +16,32 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetWindowToChangeSellerRequest;
 import org.openapis.openapi.models.operations.GetWindowToChangeSellerResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     appKey = "YOUR_API_KEY_HERE";
                     appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetWindowToChangeSellerRequest req = new GetWindowToChangeSellerRequest() {{
-                accept = "corrupti";
-                contentType = "provident";
-            }}            
+            GetWindowToChangeSellerRequest req = new GetWindowToChangeSellerRequest("distinctio", "quibusdam");            
 
             GetWindowToChangeSellerResponse res = sdk.changeSeller.getWindowToChangeSeller(req);
 
-            if (res.getWindowToChangeSeller200TextPlainInteger.isPresent()) {
+            if (res.getWindowToChangeSeller200TextPlainInteger != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -50,66 +49,66 @@ public class Application {
 ## Available Resources and Operations
 
 
-### changeSeller
+### [changeSeller](docs/changeseller/README.md)
 
-* `getWindowToChangeSeller` - Get window to change seller
-* `updateWindowToChangeSeller` - Update window to change seller
+* [getWindowToChangeSeller](docs/changeseller/README.md#getwindowtochangeseller) - Get window to change seller
+* [updateWindowToChangeSeller](docs/changeseller/README.md#updatewindowtochangeseller) - Update window to change seller
 
-### conversation
+### [conversation](docs/conversation/README.md)
 
-* `getConversation` - Retrieve order conversation
+* [getConversation](docs/conversation/README.md#getconversation) - Retrieve order conversation
 
-### exportOrderReport
+### [exportOrderReport](docs/exportorderreport/README.md)
 
-* `statusCompleted` - Export order report with status 'Completed'
-* `statusInProgress` - Export order report with status 'In Progress'
+* [statusCompleted](docs/exportorderreport/README.md#statuscompleted) - Export order report with status 'Completed'
+* [statusInProgress](docs/exportorderreport/README.md#statusinprogress) - Export order report with status 'In Progress'
 
-### feedV2Deprecated
+### [feedV2Deprecated](docs/feedv2deprecated/README.md)
 
-* `getfeedorderstatus` - Get feed order status
+* [getfeedorderstatus](docs/feedv2deprecated/README.md#getfeedorderstatus) - Get feed order status
 
-### feedV3
+### [feedV3](docs/feedv3/README.md)
 
-* `commititemfeedorderstatus` - Commit feed items
-* `feedConfiguration` - Create or update feed configuration
-* `feedConfigurationDelete` - Delete feed configuration
-* `getFeedConfiguration` - Get feed configuration
-* `getfeedorderstatus1` - Retrieve feed items
-* `testJSONataExpression` - Test JSONata expression
+* [commititemfeedorderstatus](docs/feedv3/README.md#commititemfeedorderstatus) - Commit feed items
+* [feedConfiguration](docs/feedv3/README.md#feedconfiguration) - Create or update feed configuration
+* [feedConfigurationDelete](docs/feedv3/README.md#feedconfigurationdelete) - Delete feed configuration
+* [getFeedConfiguration](docs/feedv3/README.md#getfeedconfiguration) - Get feed configuration
+* [getfeedorderstatus1](docs/feedv3/README.md#getfeedorderstatus1) - Retrieve feed items
+* [testJSONataExpression](docs/feedv3/README.md#testjsonataexpression) - Test JSONata expression
 
-### invoice
+### [invoice](docs/invoice/README.md)
 
-* `invoiceNotification` - Order invoice notification
-* `updatepartialinvoiceSendTrackingNumber` - Update order's partial invoice (send tracking number)
+* [invoiceNotification](docs/invoice/README.md#invoicenotification) - Order invoice notification
+* [updatepartialinvoiceSendTrackingNumber](docs/invoice/README.md#updatepartialinvoicesendtrackingnumber) - Update order's partial invoice (send tracking number)
 
-### orderHook
+### [orderHook](docs/orderhook/README.md)
 
-* `deleteHookConfiguration` - Delete hook configuration
-* `getHookConfiguration` - Get hook configuration
-* `hookConfiguration` - Create or update hook configuration
+* [deleteHookConfiguration](docs/orderhook/README.md#deletehookconfiguration) - Delete hook configuration
+* [getHookConfiguration](docs/orderhook/README.md#gethookconfiguration) - Get hook configuration
+* [hookConfiguration](docs/orderhook/README.md#hookconfiguration) - Create or update hook configuration
 
-### orders
+### [orders](docs/orders/README.md)
 
-* `addLog` - Add log in orders
-* `cancelOrder` - Cancel order
-* `getOrder` - Get order
-* `listOrders` - List orders
-* `registerChange` - Register change on order
-* `startHandling` - Start handling order
+* [addLog](docs/orders/README.md#addlog) - Add log in orders
+* [cancelOrder](docs/orders/README.md#cancelorder) - Cancel order
+* [getOrder](docs/orders/README.md#getorder) - Get order
+* [listOrders](docs/orders/README.md#listorders) - List orders
+* [registerChange](docs/orders/README.md#registerchange) - Register change on order
+* [startHandling](docs/orders/README.md#starthandling) - Start handling order
 
-### payment
+### [payment](docs/payment/README.md)
 
-* `getPaymenttransaction` - Retrieve payment transaction
-* `sendPaymentNotification` - Send payment notification
+* [getPaymenttransaction](docs/payment/README.md#getpaymenttransaction) - Retrieve payment transaction
+* [sendPaymentNotification](docs/payment/README.md#sendpaymentnotification) - Send payment notification
 
-### tracking
+### [tracking](docs/tracking/README.md)
 
-* `updateTrackingStatus` - Update order tracking status
+* [updateTrackingStatus](docs/tracking/README.md#updatetrackingstatus) - Update order tracking status
 
-### userOrders
+### [userOrders](docs/userorders/README.md)
 
-* `userorderdetails` - Retrieve user order details
-* `userorderslist` - Retrieve user's orders
+* [userorderdetails](docs/userorders/README.md#userorderdetails) - Retrieve user order details
+* [userorderslist](docs/userorders/README.md#userorderslist) - Retrieve user's orders
 <!-- End SDK Available Operations -->
 
 ### Maturity

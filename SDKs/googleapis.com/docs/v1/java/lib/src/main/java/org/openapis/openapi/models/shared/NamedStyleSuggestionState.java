@@ -18,6 +18,7 @@ public class NamedStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedStyleType")
     public NamedStyleSuggestionStateNamedStyleTypeEnum namedStyleType;
+
     public NamedStyleSuggestionState withNamedStyleType(NamedStyleSuggestionStateNamedStyleTypeEnum namedStyleType) {
         this.namedStyleType = namedStyleType;
         return this;
@@ -29,6 +30,7 @@ public class NamedStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paragraphStyleSuggestionState")
     public ParagraphStyleSuggestionState paragraphStyleSuggestionState;
+
     public NamedStyleSuggestionState withParagraphStyleSuggestionState(ParagraphStyleSuggestionState paragraphStyleSuggestionState) {
         this.paragraphStyleSuggestionState = paragraphStyleSuggestionState;
         return this;
@@ -40,9 +42,11 @@ public class NamedStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStyleSuggestionState")
     public TextStyleSuggestionState textStyleSuggestionState;
+
     public NamedStyleSuggestionState withTextStyleSuggestionState(TextStyleSuggestionState textStyleSuggestionState) {
         this.textStyleSuggestionState = textStyleSuggestionState;
         return this;
     }
     
+    public NamedStyleSuggestionState(){}
 }

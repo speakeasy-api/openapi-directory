@@ -18,6 +18,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Namespace withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -29,6 +30,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Namespace withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public Namespace withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public Namespace(){}
 }

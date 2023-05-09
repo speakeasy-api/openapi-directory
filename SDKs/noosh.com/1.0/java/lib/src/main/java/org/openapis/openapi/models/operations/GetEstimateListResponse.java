@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEstimateListResponse {
     
     public byte[] body;
+
     public GetEstimateListResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetEstimateListResponse {
     
     
     public String contentType;
+
     public GetEstimateListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetEstimateListResponse {
      */
     
     public org.openapis.openapi.models.shared.EstimateListExpandVO estimateListExpandVO;
+
     public GetEstimateListResponse withEstimateListExpandVO(org.openapis.openapi.models.shared.EstimateListExpandVO estimateListExpandVO) {
         this.estimateListExpandVO = estimateListExpandVO;
         return this;
@@ -36,6 +40,7 @@ public class GetEstimateListResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetEstimateListResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -43,6 +48,7 @@ public class GetEstimateListResponse {
     
     
     public Integer statusCode;
+
     public GetEstimateListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetEstimateListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEstimateListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetEstimateListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

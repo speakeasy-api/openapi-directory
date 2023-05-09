@@ -18,6 +18,7 @@ public class IstioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth")
     public IstioConfigAuthEnum auth;
+
     public IstioConfig withAuth(IstioConfigAuthEnum auth) {
         this.auth = auth;
         return this;
@@ -29,9 +30,11 @@ public class IstioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public IstioConfig withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
     }
     
+    public IstioConfig(){}
 }

@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesDoubleClickCampaignManagerSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public GoogleAdsSearchads360V0ResourcesDoubleClickCampaignManagerSetting withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ResourcesDoubleClickCampaignManagerSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkId")
     public String networkId;
+
     public GoogleAdsSearchads360V0ResourcesDoubleClickCampaignManagerSetting withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAdsSearchads360V0ResourcesDoubleClickCampaignManagerSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public GoogleAdsSearchads360V0ResourcesDoubleClickCampaignManagerSetting withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesDoubleClickCampaignManagerSetting(){}
 }

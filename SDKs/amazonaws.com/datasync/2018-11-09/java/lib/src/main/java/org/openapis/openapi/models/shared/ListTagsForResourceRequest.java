@@ -15,6 +15,7 @@ public class ListTagsForResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTagsForResourceRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,6 +24,7 @@ public class ListTagsForResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTagsForResourceRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +32,13 @@ public class ListTagsForResourceRequest {
     
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public ListTagsForResourceRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public ListTagsForResourceRequest(@JsonProperty("ResourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

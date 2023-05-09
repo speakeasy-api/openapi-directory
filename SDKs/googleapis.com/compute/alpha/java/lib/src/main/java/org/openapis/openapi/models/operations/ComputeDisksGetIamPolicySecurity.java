@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeDisksGetIamPolicySecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeDisksGetIamPolicySecurityOption1 option1;
+
     public ComputeDisksGetIamPolicySecurity withOption1(ComputeDisksGetIamPolicySecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeDisksGetIamPolicySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeDisksGetIamPolicySecurityOption2 option2;
+
     public ComputeDisksGetIamPolicySecurity withOption2(ComputeDisksGetIamPolicySecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeDisksGetIamPolicySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeDisksGetIamPolicySecurityOption3 option3;
+
     public ComputeDisksGetIamPolicySecurity withOption3(ComputeDisksGetIamPolicySecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeDisksGetIamPolicySecurity(){}
 }

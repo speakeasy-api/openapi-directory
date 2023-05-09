@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ModifyInstanceEventStartTimeResultEvent {
     
     public ModifyInstanceEventStartTimeResultEventCodeEnum code;
+
     public ModifyInstanceEventStartTimeResultEvent withCode(ModifyInstanceEventStartTimeResultEventCodeEnum code) {
         this.code = code;
         return this;
@@ -19,6 +20,7 @@ public class ModifyInstanceEventStartTimeResultEvent {
     
     
     public String description;
+
     public ModifyInstanceEventStartTimeResultEvent withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class ModifyInstanceEventStartTimeResultEvent {
     
     
     public String instanceEventId;
+
     public ModifyInstanceEventStartTimeResultEvent withInstanceEventId(String instanceEventId) {
         this.instanceEventId = instanceEventId;
         return this;
@@ -33,6 +36,7 @@ public class ModifyInstanceEventStartTimeResultEvent {
     
     
     public OffsetDateTime notAfter;
+
     public ModifyInstanceEventStartTimeResultEvent withNotAfter(OffsetDateTime notAfter) {
         this.notAfter = notAfter;
         return this;
@@ -40,6 +44,7 @@ public class ModifyInstanceEventStartTimeResultEvent {
     
     
     public OffsetDateTime notBefore;
+
     public ModifyInstanceEventStartTimeResultEvent withNotBefore(OffsetDateTime notBefore) {
         this.notBefore = notBefore;
         return this;
@@ -47,9 +52,11 @@ public class ModifyInstanceEventStartTimeResultEvent {
     
     
     public OffsetDateTime notBeforeDeadline;
+
     public ModifyInstanceEventStartTimeResultEvent withNotBeforeDeadline(OffsetDateTime notBeforeDeadline) {
         this.notBeforeDeadline = notBeforeDeadline;
         return this;
     }
     
+    public ModifyInstanceEventStartTimeResultEvent(){}
 }

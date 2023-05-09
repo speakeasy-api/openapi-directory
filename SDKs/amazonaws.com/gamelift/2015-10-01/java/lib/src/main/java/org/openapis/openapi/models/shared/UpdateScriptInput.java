@@ -12,6 +12,7 @@ public class UpdateScriptInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateScriptInput withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class UpdateScriptInput {
     
     @JsonProperty("ScriptId")
     public String scriptId;
+
     public UpdateScriptInput withScriptId(String scriptId) {
         this.scriptId = scriptId;
         return this;
@@ -27,6 +29,7 @@ public class UpdateScriptInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageLocation")
     public S3Location storageLocation;
+
     public UpdateScriptInput withStorageLocation(S3Location storageLocation) {
         this.storageLocation = storageLocation;
         return this;
@@ -35,6 +38,7 @@ public class UpdateScriptInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public UpdateScriptInput withVersion(String version) {
         this.version = version;
         return this;
@@ -43,9 +47,13 @@ public class UpdateScriptInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZipFile")
     public String zipFile;
+
     public UpdateScriptInput withZipFile(String zipFile) {
         this.zipFile = zipFile;
         return this;
     }
     
+    public UpdateScriptInput(@JsonProperty("ScriptId") String scriptId) {
+        this.scriptId = scriptId;
+  }
 }

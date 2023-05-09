@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateReceiptFilterRequest - Represents a request to create a new IP address filter. You use IP address filters when you receive email with Amazon SES. For more information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-concepts.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class CreateReceiptFilterRequest {
     
     public ReceiptFilter filter;
+
     public CreateReceiptFilterRequest withFilter(ReceiptFilter filter) {
         this.filter = filter;
         return this;
     }
     
+    public CreateReceiptFilterRequest(@JsonProperty("Filter") ReceiptFilter filter) {
+        this.filter = filter;
+  }
 }

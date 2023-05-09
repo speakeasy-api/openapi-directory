@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetPaymentInitiationStatusSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
     public String bearerAuthOAuth;
+
     public GetPaymentInitiationStatusSecurity withBearerAuthOAuth(String bearerAuthOAuth) {
         this.bearerAuthOAuth = bearerAuthOAuth;
         return this;
     }
     
+    public GetPaymentInitiationStatusSecurity(){}
 }

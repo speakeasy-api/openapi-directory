@@ -4,6 +4,8 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -15,8 +17,23 @@ public class CALocalAccountIdentification {
      */
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public CALocalAccountIdentification withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
+        return this;
+    }
+    
+    /**
+     * The bank account type.
+     * 
+     * Possible values: **checking** or **savings**. Defaults to **checking**.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("accountType")
+    public CALocalAccountIdentificationAccountTypeEnum accountType;
+
+    public CALocalAccountIdentification withAccountType(CALocalAccountIdentificationAccountTypeEnum accountType) {
+        this.accountType = accountType;
         return this;
     }
     
@@ -25,6 +42,7 @@ public class CALocalAccountIdentification {
      */
     @JsonProperty("institutionNumber")
     public String institutionNumber;
+
     public CALocalAccountIdentification withInstitutionNumber(String institutionNumber) {
         this.institutionNumber = institutionNumber;
         return this;
@@ -35,6 +53,7 @@ public class CALocalAccountIdentification {
      */
     @JsonProperty("transitNumber")
     public String transitNumber;
+
     public CALocalAccountIdentification withTransitNumber(String transitNumber) {
         this.transitNumber = transitNumber;
         return this;
@@ -45,9 +64,16 @@ public class CALocalAccountIdentification {
      */
     @JsonProperty("type")
     public CALocalAccountIdentificationTypeEnum type;
+
     public CALocalAccountIdentification withType(CALocalAccountIdentificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CALocalAccountIdentification(@JsonProperty("accountNumber") String accountNumber, @JsonProperty("institutionNumber") String institutionNumber, @JsonProperty("transitNumber") String transitNumber, @JsonProperty("type") CALocalAccountIdentificationTypeEnum type) {
+        this.accountNumber = accountNumber;
+        this.institutionNumber = institutionNumber;
+        this.transitNumber = transitNumber;
+        this.type = type;
+  }
 }

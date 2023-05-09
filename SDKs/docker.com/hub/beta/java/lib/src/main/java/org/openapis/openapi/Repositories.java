@@ -61,12 +61,10 @@ public class Repositories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse res = new org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse() {{
+        org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse res = new org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse(contentType, httpRes.statusCode()) {{
             paginatedTags = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,12 +105,10 @@ public class Repositories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagResponse res = new org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagResponse() {{
+        org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagResponse res = new org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagResponse(contentType, httpRes.statusCode()) {{
             tag = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Repositories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsResponse res = new org.openapis.openapi.models.operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsResponse() {{
+        org.openapis.openapi.models.operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsResponse res = new org.openapis.openapi.models.operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Repositories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagResponse res = new org.openapis.openapi.models.operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagResponse() {{
+        org.openapis.openapi.models.operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagResponse res = new org.openapis.openapi.models.operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

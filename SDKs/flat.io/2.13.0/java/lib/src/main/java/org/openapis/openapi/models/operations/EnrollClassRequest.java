@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnrollClassRequest {
@@ -13,9 +14,13 @@ public class EnrollClassRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enrollmentCode")
     public String enrollmentCode;
+
     public EnrollClassRequest withEnrollmentCode(String enrollmentCode) {
         this.enrollmentCode = enrollmentCode;
         return this;
     }
     
+    public EnrollClassRequest(@JsonProperty("enrollmentCode") String enrollmentCode) {
+        this.enrollmentCode = enrollmentCode;
+  }
 }

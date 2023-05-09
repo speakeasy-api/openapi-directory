@@ -18,6 +18,7 @@ public class UrlMapTestHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UrlMapTestHeader withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class UrlMapTestHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public UrlMapTestHeader withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UrlMapTestHeader(){}
 }

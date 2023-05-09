@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ArticleVersionConfidentialityResponse {
@@ -12,6 +13,7 @@ public class ArticleVersionConfidentialityResponse {
      */
     
     public org.openapis.openapi.models.shared.ArticleConfidentiality articleConfidentiality;
+
     public ArticleVersionConfidentialityResponse withArticleConfidentiality(org.openapis.openapi.models.shared.ArticleConfidentiality articleConfidentiality) {
         this.articleConfidentiality = articleConfidentiality;
         return this;
@@ -19,6 +21,7 @@ public class ArticleVersionConfidentialityResponse {
     
     
     public String contentType;
+
     public ArticleVersionConfidentialityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ArticleVersionConfidentialityResponse {
     
     
     public Integer statusCode;
+
     public ArticleVersionConfidentialityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ArticleVersionConfidentialityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ArticleVersionConfidentialityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ArticleVersionConfidentialityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

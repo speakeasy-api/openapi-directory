@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class QuantmetricsTier1Request {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public QuantmetricsTier1Request withDate(String date) {
         this.date = date;
         return this;
@@ -16,6 +17,7 @@ public class QuantmetricsTier1Request {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public QuantmetricsTier1Request withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -23,9 +25,11 @@ public class QuantmetricsTier1Request {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tokens")
     public String tokens;
+
     public QuantmetricsTier1Request withTokens(String tokens) {
         this.tokens = tokens;
         return this;
     }
     
+    public QuantmetricsTier1Request(){}
 }

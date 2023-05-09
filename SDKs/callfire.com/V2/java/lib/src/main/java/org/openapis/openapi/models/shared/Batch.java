@@ -18,6 +18,7 @@ public class Batch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("broadcastId")
     public Long broadcastId;
+
     public Batch withBroadcastId(Long broadcastId) {
         this.broadcastId = broadcastId;
         return this;
@@ -29,6 +30,7 @@ public class Batch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public Long created;
+
     public Batch withCreated(Long created) {
         this.created = created;
         return this;
@@ -40,6 +42,7 @@ public class Batch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public Batch withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -51,6 +54,7 @@ public class Batch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Batch withId(Long id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class Batch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Batch withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Batch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remaining")
     public Integer remaining;
+
     public Batch withRemaining(Integer remaining) {
         this.remaining = remaining;
         return this;
@@ -84,6 +90,7 @@ public class Batch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Integer size;
+
     public Batch withSize(Integer size) {
         this.size = size;
         return this;
@@ -95,9 +102,11 @@ public class Batch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public BatchStatusEnum status;
+
     public Batch withStatus(BatchStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Batch(){}
 }

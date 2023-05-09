@@ -20,6 +20,7 @@ public class UpdatedMedia {
      */
     @JsonProperty("id")
     public String id;
+
     public UpdatedMedia withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +33,7 @@ public class UpdatedMedia {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_time")
     public OffsetDateTime updatedTime;
+
     public UpdatedMedia withUpdatedTime(OffsetDateTime updatedTime) {
         this.updatedTime = updatedTime;
         return this;
@@ -42,9 +44,15 @@ public class UpdatedMedia {
      */
     @JsonProperty("updates")
     public String[] updates;
+
     public UpdatedMedia withUpdates(String[] updates) {
         this.updates = updates;
         return this;
     }
     
+    public UpdatedMedia(@JsonProperty("id") String id, @JsonProperty("updated_time") OffsetDateTime updatedTime, @JsonProperty("updates") String[] updates) {
+        this.id = id;
+        this.updatedTime = updatedTime;
+        this.updates = updates;
+  }
 }

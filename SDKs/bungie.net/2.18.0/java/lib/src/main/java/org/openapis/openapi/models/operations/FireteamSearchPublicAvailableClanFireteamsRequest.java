@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FireteamSearchPublicAvailableClanFireteamsRequest {
@@ -12,6 +13,7 @@ public class FireteamSearchPublicAvailableClanFireteamsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=activityType")
     public Integer activityType;
+
     public FireteamSearchPublicAvailableClanFireteamsRequest withActivityType(Integer activityType) {
         this.activityType = activityType;
         return this;
@@ -22,6 +24,7 @@ public class FireteamSearchPublicAvailableClanFireteamsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateRange")
     public Long dateRange;
+
     public FireteamSearchPublicAvailableClanFireteamsRequest withDateRange(Long dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -32,6 +35,7 @@ public class FireteamSearchPublicAvailableClanFireteamsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeImmediate")
     public Boolean excludeImmediate;
+
     public FireteamSearchPublicAvailableClanFireteamsRequest withExcludeImmediate(Boolean excludeImmediate) {
         this.excludeImmediate = excludeImmediate;
         return this;
@@ -42,6 +46,7 @@ public class FireteamSearchPublicAvailableClanFireteamsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=langFilter")
     public String langFilter;
+
     public FireteamSearchPublicAvailableClanFireteamsRequest withLangFilter(String langFilter) {
         this.langFilter = langFilter;
         return this;
@@ -52,6 +57,7 @@ public class FireteamSearchPublicAvailableClanFireteamsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
     public Integer page;
+
     public FireteamSearchPublicAvailableClanFireteamsRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -62,6 +68,7 @@ public class FireteamSearchPublicAvailableClanFireteamsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
     public Long platform;
+
     public FireteamSearchPublicAvailableClanFireteamsRequest withPlatform(Long platform) {
         this.platform = platform;
         return this;
@@ -72,9 +79,17 @@ public class FireteamSearchPublicAvailableClanFireteamsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slotFilter")
     public Long slotFilter;
+
     public FireteamSearchPublicAvailableClanFireteamsRequest withSlotFilter(Long slotFilter) {
         this.slotFilter = slotFilter;
         return this;
     }
     
+    public FireteamSearchPublicAvailableClanFireteamsRequest(@JsonProperty("activityType") Integer activityType, @JsonProperty("dateRange") Long dateRange, @JsonProperty("page") Integer page, @JsonProperty("platform") Long platform, @JsonProperty("slotFilter") Long slotFilter) {
+        this.activityType = activityType;
+        this.dateRange = dateRange;
+        this.page = page;
+        this.platform = platform;
+        this.slotFilter = slotFilter;
+  }
 }

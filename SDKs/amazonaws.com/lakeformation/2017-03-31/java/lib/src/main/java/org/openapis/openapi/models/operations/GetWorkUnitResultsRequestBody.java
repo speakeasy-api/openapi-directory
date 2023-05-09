@@ -12,6 +12,7 @@ public class GetWorkUnitResultsRequestBody {
      */
     @JsonProperty("QueryId")
     public String queryId;
+
     public GetWorkUnitResultsRequestBody withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
@@ -22,6 +23,7 @@ public class GetWorkUnitResultsRequestBody {
      */
     @JsonProperty("WorkUnitId")
     public Long workUnitId;
+
     public GetWorkUnitResultsRequestBody withWorkUnitId(Long workUnitId) {
         this.workUnitId = workUnitId;
         return this;
@@ -32,9 +34,15 @@ public class GetWorkUnitResultsRequestBody {
      */
     @JsonProperty("WorkUnitToken")
     public String workUnitToken;
+
     public GetWorkUnitResultsRequestBody withWorkUnitToken(String workUnitToken) {
         this.workUnitToken = workUnitToken;
         return this;
     }
     
+    public GetWorkUnitResultsRequestBody(@JsonProperty("QueryId") String queryId, @JsonProperty("WorkUnitId") Long workUnitId, @JsonProperty("WorkUnitToken") String workUnitToken) {
+        this.queryId = queryId;
+        this.workUnitId = workUnitId;
+        this.workUnitToken = workUnitToken;
+  }
 }

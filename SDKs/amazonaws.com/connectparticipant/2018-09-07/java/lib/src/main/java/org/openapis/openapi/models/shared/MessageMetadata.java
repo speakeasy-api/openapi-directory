@@ -15,6 +15,7 @@ public class MessageMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageId")
     public String messageId;
+
     public MessageMetadata withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -23,9 +24,11 @@ public class MessageMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Receipts")
     public Receipt[] receipts;
+
     public MessageMetadata withReceipts(Receipt[] receipts) {
         this.receipts = receipts;
         return this;
     }
     
+    public MessageMetadata(){}
 }

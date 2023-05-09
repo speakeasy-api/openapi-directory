@@ -15,6 +15,7 @@ public class GetAggregateConfigRuleComplianceSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AggregateComplianceCounts")
     public AggregateComplianceCount[] aggregateComplianceCounts;
+
     public GetAggregateConfigRuleComplianceSummaryResponse withAggregateComplianceCounts(AggregateComplianceCount[] aggregateComplianceCounts) {
         this.aggregateComplianceCounts = aggregateComplianceCounts;
         return this;
@@ -23,6 +24,7 @@ public class GetAggregateConfigRuleComplianceSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupByKey")
     public String groupByKey;
+
     public GetAggregateConfigRuleComplianceSummaryResponse withGroupByKey(String groupByKey) {
         this.groupByKey = groupByKey;
         return this;
@@ -31,9 +33,11 @@ public class GetAggregateConfigRuleComplianceSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetAggregateConfigRuleComplianceSummaryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetAggregateConfigRuleComplianceSummaryResponse(){}
 }

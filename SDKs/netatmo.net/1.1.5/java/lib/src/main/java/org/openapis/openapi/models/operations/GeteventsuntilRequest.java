@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GeteventsuntilRequest {
@@ -12,6 +13,7 @@ public class GeteventsuntilRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event_id")
     public String eventId;
+
     public GeteventsuntilRequest withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -22,9 +24,14 @@ public class GeteventsuntilRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=home_id")
     public String homeId;
+
     public GeteventsuntilRequest withHomeId(String homeId) {
         this.homeId = homeId;
         return this;
     }
     
+    public GeteventsuntilRequest(@JsonProperty("event_id") String eventId, @JsonProperty("home_id") String homeId) {
+        this.eventId = eventId;
+        this.homeId = homeId;
+  }
 }

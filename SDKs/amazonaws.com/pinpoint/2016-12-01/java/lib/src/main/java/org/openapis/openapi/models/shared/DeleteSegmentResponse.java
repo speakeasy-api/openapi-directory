@@ -15,9 +15,13 @@ public class DeleteSegmentResponse {
      */
     @JsonProperty("SegmentResponse")
     public SegmentResponse segmentResponse;
+
     public DeleteSegmentResponse withSegmentResponse(SegmentResponse segmentResponse) {
         this.segmentResponse = segmentResponse;
         return this;
     }
     
+    public DeleteSegmentResponse(@JsonProperty("SegmentResponse") SegmentResponse segmentResponse) {
+        this.segmentResponse = segmentResponse;
+  }
 }

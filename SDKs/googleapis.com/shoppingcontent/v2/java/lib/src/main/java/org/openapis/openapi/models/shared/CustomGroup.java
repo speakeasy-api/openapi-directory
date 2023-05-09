@@ -15,6 +15,7 @@ public class CustomGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public CustomAttribute[] attributes;
+
     public CustomGroup withAttributes(CustomAttribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -26,9 +27,11 @@ public class CustomGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CustomGroup(){}
 }

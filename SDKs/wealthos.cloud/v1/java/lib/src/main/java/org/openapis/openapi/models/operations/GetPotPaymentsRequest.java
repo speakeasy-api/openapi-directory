@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPotPaymentsRequest {
@@ -12,6 +13,7 @@ public class GetPotPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
     public String pageNumber;
+
     public GetPotPaymentsRequest withPageNumber(String pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -22,6 +24,7 @@ public class GetPotPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public String pageSize;
+
     public GetPotPaymentsRequest withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -32,6 +35,7 @@ public class GetPotPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payment_type")
     public String paymentType;
+
     public GetPotPaymentsRequest withPaymentType(String paymentType) {
         this.paymentType = paymentType;
         return this;
@@ -42,6 +46,7 @@ public class GetPotPaymentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pot_id")
     public String potId;
+
     public GetPotPaymentsRequest withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -52,6 +57,7 @@ public class GetPotPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=purpose")
     public String purpose;
+
     public GetPotPaymentsRequest withPurpose(String purpose) {
         this.purpose = purpose;
         return this;
@@ -62,6 +68,7 @@ public class GetPotPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service_provider")
     public String serviceProvider;
+
     public GetPotPaymentsRequest withServiceProvider(String serviceProvider) {
         this.serviceProvider = serviceProvider;
         return this;
@@ -72,9 +79,14 @@ public class GetPotPaymentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetPotPaymentsRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetPotPaymentsRequest(@JsonProperty("pot_id") String potId, @JsonProperty("x-api-key") String xApiKey) {
+        this.potId = potId;
+        this.xApiKey = xApiKey;
+  }
 }

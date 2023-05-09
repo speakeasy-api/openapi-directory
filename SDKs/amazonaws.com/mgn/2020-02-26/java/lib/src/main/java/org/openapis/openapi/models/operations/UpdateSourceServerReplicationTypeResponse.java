@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSourceServerReplicationTypeResponse {
@@ -12,6 +13,7 @@ public class UpdateSourceServerReplicationTypeResponse {
      */
     
     public Object conflictException;
+
     public UpdateSourceServerReplicationTypeResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSourceServerReplicationTypeResponse {
     
     
     public String contentType;
+
     public UpdateSourceServerReplicationTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSourceServerReplicationTypeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateSourceServerReplicationTypeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSourceServerReplicationTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.SourceServer sourceServer;
+
     public UpdateSourceServerReplicationTypeResponse withSourceServer(org.openapis.openapi.models.shared.SourceServer sourceServer) {
         this.sourceServer = sourceServer;
         return this;
@@ -46,6 +51,7 @@ public class UpdateSourceServerReplicationTypeResponse {
     
     
     public Integer statusCode;
+
     public UpdateSourceServerReplicationTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateSourceServerReplicationTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSourceServerReplicationTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateSourceServerReplicationTypeResponse {
      */
     
     public Object uninitializedAccountException;
+
     public UpdateSourceServerReplicationTypeResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateSourceServerReplicationTypeResponse {
      */
     
     public Object validationException;
+
     public UpdateSourceServerReplicationTypeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateSourceServerReplicationTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

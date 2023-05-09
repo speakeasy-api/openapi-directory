@@ -18,6 +18,7 @@ public class ReposUpdateBranchProtectionRequestBodyRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apps")
     public String[] apps;
+
     public ReposUpdateBranchProtectionRequestBodyRestrictions withApps(String[] apps) {
         this.apps = apps;
         return this;
@@ -28,6 +29,7 @@ public class ReposUpdateBranchProtectionRequestBodyRestrictions {
      */
     @JsonProperty("teams")
     public String[] teams;
+
     public ReposUpdateBranchProtectionRequestBodyRestrictions withTeams(String[] teams) {
         this.teams = teams;
         return this;
@@ -38,9 +40,14 @@ public class ReposUpdateBranchProtectionRequestBodyRestrictions {
      */
     @JsonProperty("users")
     public String[] users;
+
     public ReposUpdateBranchProtectionRequestBodyRestrictions withUsers(String[] users) {
         this.users = users;
         return this;
     }
     
+    public ReposUpdateBranchProtectionRequestBodyRestrictions(@JsonProperty("teams") String[] teams, @JsonProperty("users") String[] users) {
+        this.teams = teams;
+        this.users = users;
+  }
 }

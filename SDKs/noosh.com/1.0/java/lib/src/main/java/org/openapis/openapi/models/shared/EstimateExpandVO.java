@@ -18,6 +18,7 @@ public class EstimateExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public EstimateDetailsVO result;
+
     public EstimateExpandVO withResult(EstimateDetailsVO result) {
         this.result = result;
         return this;
@@ -26,6 +27,7 @@ public class EstimateExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public EstimateExpandVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -34,9 +36,11 @@ public class EstimateExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public EstimateExpandVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public EstimateExpandVO(){}
 }

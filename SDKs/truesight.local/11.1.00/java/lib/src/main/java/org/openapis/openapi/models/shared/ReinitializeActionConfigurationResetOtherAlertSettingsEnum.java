@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * ReinitializeActionConfigurationResetOtherAlertSettingsEnum - When set to &lt;em&gt;1&lt;/em&gt;, reverts any manually performed configuration changes to the default Hardware Sentry values.
  */
 public enum ReinitializeActionConfigurationResetOtherAlertSettingsEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0),
+    ONE(1);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private ReinitializeActionConfigurationResetOtherAlertSettingsEnum(String value) {
+    private ReinitializeActionConfigurationResetOtherAlertSettingsEnum(Integer value) {
         this.value = value;
     }
 }

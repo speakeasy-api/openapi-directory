@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateContactInMailinglistRequest {
@@ -12,6 +13,7 @@ public class CreateContactInMailinglistRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateContactInMailingList createContactInMailingList;
+
     public CreateContactInMailinglistRequest withCreateContactInMailingList(org.openapis.openapi.models.shared.CreateContactInMailingList createContactInMailingList) {
         this.createContactInMailingList = createContactInMailingList;
         return this;
@@ -22,6 +24,7 @@ public class CreateContactInMailinglistRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DirectoryId")
     public String directoryId;
+
     public CreateContactInMailinglistRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -32,9 +35,15 @@ public class CreateContactInMailinglistRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MailingListId")
     public String mailingListId;
+
     public CreateContactInMailinglistRequest withMailingListId(String mailingListId) {
         this.mailingListId = mailingListId;
         return this;
     }
     
+    public CreateContactInMailinglistRequest(@JsonProperty("CreateContactInMailingList") org.openapis.openapi.models.shared.CreateContactInMailingList createContactInMailingList, @JsonProperty("DirectoryId") String directoryId, @JsonProperty("MailingListId") String mailingListId) {
+        this.createContactInMailingList = createContactInMailingList;
+        this.directoryId = directoryId;
+        this.mailingListId = mailingListId;
+  }
 }

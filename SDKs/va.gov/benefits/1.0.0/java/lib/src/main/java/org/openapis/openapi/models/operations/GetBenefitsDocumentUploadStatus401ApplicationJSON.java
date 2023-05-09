@@ -18,9 +18,11 @@ public class GetBenefitsDocumentUploadStatus401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public GetBenefitsDocumentUploadStatus401ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetBenefitsDocumentUploadStatus401ApplicationJSON(){}
 }

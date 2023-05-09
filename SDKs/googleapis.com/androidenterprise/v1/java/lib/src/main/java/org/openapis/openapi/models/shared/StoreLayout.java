@@ -18,6 +18,7 @@ public class StoreLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homepageId")
     public String homepageId;
+
     public StoreLayout withHomepageId(String homepageId) {
         this.homepageId = homepageId;
         return this;
@@ -29,9 +30,11 @@ public class StoreLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeLayoutType")
     public StoreLayoutStoreLayoutTypeEnum storeLayoutType;
+
     public StoreLayout withStoreLayoutType(StoreLayoutStoreLayoutTypeEnum storeLayoutType) {
         this.storeLayoutType = storeLayoutType;
         return this;
     }
     
+    public StoreLayout(){}
 }

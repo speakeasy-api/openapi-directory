@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetItemWatchedStatusResponse {
     
     public String contentType;
+
     public SetItemWatchedStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SetItemWatchedStatusResponse {
     
     
     public Integer statusCode;
+
     public SetItemWatchedStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SetItemWatchedStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetItemWatchedStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SetItemWatchedStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public SetItemWatchedStatusResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -43,9 +48,14 @@ public class SetItemWatchedStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Watched watched;
+
     public SetItemWatchedStatusResponse withWatched(org.openapis.openapi.models.shared.Watched watched) {
         this.watched = watched;
         return this;
     }
     
+    public SetItemWatchedStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

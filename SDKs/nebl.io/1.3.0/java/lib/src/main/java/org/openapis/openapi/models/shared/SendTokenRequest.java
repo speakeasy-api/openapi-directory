@@ -17,6 +17,7 @@ public class SendTokenRequest {
      */
     @JsonProperty("fee")
     public Double fee;
+
     public SendTokenRequest withFee(Double fee) {
         this.fee = fee;
         return this;
@@ -28,6 +29,7 @@ public class SendTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flags")
     public SendTokenRequestFlags flags;
+
     public SendTokenRequest withFlags(SendTokenRequestFlags flags) {
         this.flags = flags;
         return this;
@@ -39,6 +41,7 @@ public class SendTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String[] from;
+
     public SendTokenRequest withFrom(String[] from) {
         this.from = from;
         return this;
@@ -50,6 +53,7 @@ public class SendTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public SendTokenRequestMetadata metadata;
+
     public SendTokenRequest withMetadata(SendTokenRequestMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -61,6 +65,7 @@ public class SendTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sendutxo")
     public String[] sendutxo;
+
     public SendTokenRequest withSendutxo(String[] sendutxo) {
         this.sendutxo = sendutxo;
         return this;
@@ -68,9 +73,14 @@ public class SendTokenRequest {
     
     @JsonProperty("to")
     public SendTokenRequestTo[] to;
+
     public SendTokenRequest withTo(SendTokenRequestTo[] to) {
         this.to = to;
         return this;
     }
     
+    public SendTokenRequest(@JsonProperty("fee") Double fee, @JsonProperty("to") SendTokenRequestTo[] to) {
+        this.fee = fee;
+        this.to = to;
+  }
 }

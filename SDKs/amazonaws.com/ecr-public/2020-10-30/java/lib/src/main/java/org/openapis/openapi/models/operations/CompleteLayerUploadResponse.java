@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompleteLayerUploadResponse {
@@ -12,6 +13,7 @@ public class CompleteLayerUploadResponse {
      */
     
     public org.openapis.openapi.models.shared.CompleteLayerUploadResponse completeLayerUploadResponse;
+
     public CompleteLayerUploadResponse withCompleteLayerUploadResponse(org.openapis.openapi.models.shared.CompleteLayerUploadResponse completeLayerUploadResponse) {
         this.completeLayerUploadResponse = completeLayerUploadResponse;
         return this;
@@ -19,6 +21,7 @@ public class CompleteLayerUploadResponse {
     
     
     public String contentType;
+
     public CompleteLayerUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CompleteLayerUploadResponse {
      */
     
     public Object emptyUploadException;
+
     public CompleteLayerUploadResponse withEmptyUploadException(Object emptyUploadException) {
         this.emptyUploadException = emptyUploadException;
         return this;
@@ -39,6 +43,7 @@ public class CompleteLayerUploadResponse {
      */
     
     public Object invalidLayerException;
+
     public CompleteLayerUploadResponse withInvalidLayerException(Object invalidLayerException) {
         this.invalidLayerException = invalidLayerException;
         return this;
@@ -49,6 +54,7 @@ public class CompleteLayerUploadResponse {
      */
     
     public Object invalidParameterException;
+
     public CompleteLayerUploadResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CompleteLayerUploadResponse {
      */
     
     public Object layerAlreadyExistsException;
+
     public CompleteLayerUploadResponse withLayerAlreadyExistsException(Object layerAlreadyExistsException) {
         this.layerAlreadyExistsException = layerAlreadyExistsException;
         return this;
@@ -69,6 +76,7 @@ public class CompleteLayerUploadResponse {
      */
     
     public Object layerPartTooSmallException;
+
     public CompleteLayerUploadResponse withLayerPartTooSmallException(Object layerPartTooSmallException) {
         this.layerPartTooSmallException = layerPartTooSmallException;
         return this;
@@ -79,6 +87,7 @@ public class CompleteLayerUploadResponse {
      */
     
     public Object registryNotFoundException;
+
     public CompleteLayerUploadResponse withRegistryNotFoundException(Object registryNotFoundException) {
         this.registryNotFoundException = registryNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class CompleteLayerUploadResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public CompleteLayerUploadResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -99,6 +109,7 @@ public class CompleteLayerUploadResponse {
      */
     
     public Object serverException;
+
     public CompleteLayerUploadResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -106,6 +117,7 @@ public class CompleteLayerUploadResponse {
     
     
     public Integer statusCode;
+
     public CompleteLayerUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class CompleteLayerUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompleteLayerUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class CompleteLayerUploadResponse {
      */
     
     public Object unsupportedCommandException;
+
     public CompleteLayerUploadResponse withUnsupportedCommandException(Object unsupportedCommandException) {
         this.unsupportedCommandException = unsupportedCommandException;
         return this;
@@ -133,9 +147,14 @@ public class CompleteLayerUploadResponse {
      */
     
     public Object uploadNotFoundException;
+
     public CompleteLayerUploadResponse withUploadNotFoundException(Object uploadNotFoundException) {
         this.uploadNotFoundException = uploadNotFoundException;
         return this;
     }
     
+    public CompleteLayerUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

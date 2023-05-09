@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ConformancePackStatusDetail {
     @JsonProperty("ConformancePackArn")
     public String conformancePackArn;
+
     public ConformancePackStatusDetail withConformancePackArn(String conformancePackArn) {
         this.conformancePackArn = conformancePackArn;
         return this;
@@ -26,6 +27,7 @@ public class ConformancePackStatusDetail {
     
     @JsonProperty("ConformancePackId")
     public String conformancePackId;
+
     public ConformancePackStatusDetail withConformancePackId(String conformancePackId) {
         this.conformancePackId = conformancePackId;
         return this;
@@ -33,6 +35,7 @@ public class ConformancePackStatusDetail {
     
     @JsonProperty("ConformancePackName")
     public String conformancePackName;
+
     public ConformancePackStatusDetail withConformancePackName(String conformancePackName) {
         this.conformancePackName = conformancePackName;
         return this;
@@ -40,6 +43,7 @@ public class ConformancePackStatusDetail {
     
     @JsonProperty("ConformancePackState")
     public ConformancePackStateEnum conformancePackState;
+
     public ConformancePackStatusDetail withConformancePackState(ConformancePackStateEnum conformancePackState) {
         this.conformancePackState = conformancePackState;
         return this;
@@ -48,6 +52,7 @@ public class ConformancePackStatusDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConformancePackStatusReason")
     public String conformancePackStatusReason;
+
     public ConformancePackStatusDetail withConformancePackStatusReason(String conformancePackStatusReason) {
         this.conformancePackStatusReason = conformancePackStatusReason;
         return this;
@@ -58,6 +63,7 @@ public class ConformancePackStatusDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateCompletedTime")
     public OffsetDateTime lastUpdateCompletedTime;
+
     public ConformancePackStatusDetail withLastUpdateCompletedTime(OffsetDateTime lastUpdateCompletedTime) {
         this.lastUpdateCompletedTime = lastUpdateCompletedTime;
         return this;
@@ -67,6 +73,7 @@ public class ConformancePackStatusDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateRequestedTime")
     public OffsetDateTime lastUpdateRequestedTime;
+
     public ConformancePackStatusDetail withLastUpdateRequestedTime(OffsetDateTime lastUpdateRequestedTime) {
         this.lastUpdateRequestedTime = lastUpdateRequestedTime;
         return this;
@@ -74,9 +81,18 @@ public class ConformancePackStatusDetail {
     
     @JsonProperty("StackArn")
     public String stackArn;
+
     public ConformancePackStatusDetail withStackArn(String stackArn) {
         this.stackArn = stackArn;
         return this;
     }
     
+    public ConformancePackStatusDetail(@JsonProperty("ConformancePackArn") String conformancePackArn, @JsonProperty("ConformancePackId") String conformancePackId, @JsonProperty("ConformancePackName") String conformancePackName, @JsonProperty("ConformancePackState") ConformancePackStateEnum conformancePackState, @JsonProperty("LastUpdateRequestedTime") OffsetDateTime lastUpdateRequestedTime, @JsonProperty("StackArn") String stackArn) {
+        this.conformancePackArn = conformancePackArn;
+        this.conformancePackId = conformancePackId;
+        this.conformancePackName = conformancePackName;
+        this.conformancePackState = conformancePackState;
+        this.lastUpdateRequestedTime = lastUpdateRequestedTime;
+        this.stackArn = stackArn;
+  }
 }

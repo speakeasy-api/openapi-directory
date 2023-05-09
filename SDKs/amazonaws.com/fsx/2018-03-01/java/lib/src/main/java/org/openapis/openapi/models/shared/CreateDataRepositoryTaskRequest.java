@@ -12,17 +12,19 @@ public class CreateDataRepositoryTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityToRelease")
     public Long capacityToRelease;
+
     public CreateDataRepositoryTaskRequest withCapacityToRelease(Long capacityToRelease) {
         this.capacityToRelease = capacityToRelease;
         return this;
     }
     
     /**
-     * (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateDataRepositoryTaskRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -33,6 +35,7 @@ public class CreateDataRepositoryTaskRequest {
      */
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public CreateDataRepositoryTaskRequest withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -41,6 +44,7 @@ public class CreateDataRepositoryTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Paths")
     public String[] paths;
+
     public CreateDataRepositoryTaskRequest withPaths(String[] paths) {
         this.paths = paths;
         return this;
@@ -48,6 +52,7 @@ public class CreateDataRepositoryTaskRequest {
     
     @JsonProperty("Report")
     public CompletionReport report;
+
     public CreateDataRepositoryTaskRequest withReport(CompletionReport report) {
         this.report = report;
         return this;
@@ -59,6 +64,7 @@ public class CreateDataRepositoryTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDataRepositoryTaskRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -66,9 +72,15 @@ public class CreateDataRepositoryTaskRequest {
     
     @JsonProperty("Type")
     public DataRepositoryTaskTypeEnum type;
+
     public CreateDataRepositoryTaskRequest withType(DataRepositoryTaskTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateDataRepositoryTaskRequest(@JsonProperty("FileSystemId") String fileSystemId, @JsonProperty("Report") CompletionReport report, @JsonProperty("Type") DataRepositoryTaskTypeEnum type) {
+        this.fileSystemId = fileSystemId;
+        this.report = report;
+        this.type = type;
+  }
 }

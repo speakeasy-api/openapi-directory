@@ -12,6 +12,7 @@ public class CalendarCalendarListListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CalendarCalendarListListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +23,7 @@ public class CalendarCalendarListListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CalendarCalendarListListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +34,7 @@ public class CalendarCalendarListListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CalendarCalendarListListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +45,7 @@ public class CalendarCalendarListListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public CalendarCalendarListListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -52,6 +56,7 @@ public class CalendarCalendarListListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minAccessRole")
     public CalendarCalendarListListMinAccessRoleEnum minAccessRole;
+
     public CalendarCalendarListListRequest withMinAccessRole(CalendarCalendarListListMinAccessRoleEnum minAccessRole) {
         this.minAccessRole = minAccessRole;
         return this;
@@ -62,6 +67,7 @@ public class CalendarCalendarListListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CalendarCalendarListListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +78,7 @@ public class CalendarCalendarListListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public CalendarCalendarListListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -82,6 +89,7 @@ public class CalendarCalendarListListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CalendarCalendarListListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +100,7 @@ public class CalendarCalendarListListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CalendarCalendarListListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -102,6 +111,7 @@ public class CalendarCalendarListListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showDeleted")
     public Boolean showDeleted;
+
     public CalendarCalendarListListRequest withShowDeleted(Boolean showDeleted) {
         this.showDeleted = showDeleted;
         return this;
@@ -112,6 +122,7 @@ public class CalendarCalendarListListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showHidden")
     public Boolean showHidden;
+
     public CalendarCalendarListListRequest withShowHidden(Boolean showHidden) {
         this.showHidden = showHidden;
         return this;
@@ -126,6 +137,7 @@ public class CalendarCalendarListListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=syncToken")
     public String syncToken;
+
     public CalendarCalendarListListRequest withSyncToken(String syncToken) {
         this.syncToken = syncToken;
         return this;
@@ -136,9 +148,11 @@ public class CalendarCalendarListListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public CalendarCalendarListListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public CalendarCalendarListListRequest(){}
 }

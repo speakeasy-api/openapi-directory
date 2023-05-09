@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsEnvironmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsEcsTaskDefinitionContainerDefinitionsEnvironmentDetails withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsEnvironmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public AwsEcsTaskDefinitionContainerDefinitionsEnvironmentDetails withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsEnvironmentDetails(){}
 }

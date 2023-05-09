@@ -18,6 +18,7 @@ public class CloudJobListPreparationAndReleaseTaskStatusResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("odata.nextLink")
     public String odataNextLink;
+
     public CloudJobListPreparationAndReleaseTaskStatusResult withOdataNextLink(String odataNextLink) {
         this.odataNextLink = odataNextLink;
         return this;
@@ -29,9 +30,11 @@ public class CloudJobListPreparationAndReleaseTaskStatusResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public JobPreparationAndReleaseTaskExecutionInformation[] value;
+
     public CloudJobListPreparationAndReleaseTaskStatusResult withValue(JobPreparationAndReleaseTaskExecutionInformation[] value) {
         this.value = value;
         return this;
     }
     
+    public CloudJobListPreparationAndReleaseTaskStatusResult(){}
 }

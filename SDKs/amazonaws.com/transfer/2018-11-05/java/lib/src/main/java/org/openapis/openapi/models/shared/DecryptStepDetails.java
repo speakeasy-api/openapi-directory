@@ -17,6 +17,7 @@ public class DecryptStepDetails {
      */
     @JsonProperty("DestinationFileLocation")
     public InputFileLocation destinationFileLocation;
+
     public DecryptStepDetails withDestinationFileLocation(InputFileLocation destinationFileLocation) {
         this.destinationFileLocation = destinationFileLocation;
         return this;
@@ -25,6 +26,7 @@ public class DecryptStepDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DecryptStepDetails withName(String name) {
         this.name = name;
         return this;
@@ -33,6 +35,7 @@ public class DecryptStepDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverwriteExisting")
     public OverwriteExistingEnum overwriteExisting;
+
     public DecryptStepDetails withOverwriteExisting(OverwriteExistingEnum overwriteExisting) {
         this.overwriteExisting = overwriteExisting;
         return this;
@@ -41,6 +44,7 @@ public class DecryptStepDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceFileLocation")
     public String sourceFileLocation;
+
     public DecryptStepDetails withSourceFileLocation(String sourceFileLocation) {
         this.sourceFileLocation = sourceFileLocation;
         return this;
@@ -48,9 +52,14 @@ public class DecryptStepDetails {
     
     @JsonProperty("Type")
     public EncryptionTypeEnum type;
+
     public DecryptStepDetails withType(EncryptionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DecryptStepDetails(@JsonProperty("DestinationFileLocation") InputFileLocation destinationFileLocation, @JsonProperty("Type") EncryptionTypeEnum type) {
+        this.destinationFileLocation = destinationFileLocation;
+        this.type = type;
+  }
 }

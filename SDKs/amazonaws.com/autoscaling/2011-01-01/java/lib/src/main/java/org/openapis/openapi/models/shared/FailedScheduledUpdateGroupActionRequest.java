@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * FailedScheduledUpdateGroupActionRequest - Describes a scheduled action that could not be created, updated, or deleted.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class FailedScheduledUpdateGroupActionRequest {
     
     public String errorCode;
+
     public FailedScheduledUpdateGroupActionRequest withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -19,6 +20,7 @@ public class FailedScheduledUpdateGroupActionRequest {
     
     
     public String errorMessage;
+
     public FailedScheduledUpdateGroupActionRequest withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -26,9 +28,13 @@ public class FailedScheduledUpdateGroupActionRequest {
     
     
     public String scheduledActionName;
+
     public FailedScheduledUpdateGroupActionRequest withScheduledActionName(String scheduledActionName) {
         this.scheduledActionName = scheduledActionName;
         return this;
     }
     
+    public FailedScheduledUpdateGroupActionRequest(@JsonProperty("ScheduledActionName") String scheduledActionName) {
+        this.scheduledActionName = scheduledActionName;
+  }
 }

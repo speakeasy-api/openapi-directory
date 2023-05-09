@@ -40,4 +40,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetUuidVersionVersionRe
 lib/src/main/java/org/openapis/openapi/models/operations/PostUuidSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostUuidRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostUuidResponse.java
+docs/sdk/README.md
+docs/uuidgeneration/README.md
+docs/uuidparsing/README.md
 USAGE.md

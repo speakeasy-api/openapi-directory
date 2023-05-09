@@ -12,6 +12,7 @@ public class DgmstRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public DgmstRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class DgmstRequestBodyCertificateParameters {
      */
     @JsonProperty("RROLL")
     public String rroll;
+
     public DgmstRequestBodyCertificateParameters withRroll(String rroll) {
         this.rroll = rroll;
         return this;
@@ -32,9 +34,15 @@ public class DgmstRequestBodyCertificateParameters {
      */
     @JsonProperty("SEM")
     public String sem;
+
     public DgmstRequestBodyCertificateParameters withSem(String sem) {
         this.sem = sem;
         return this;
     }
     
+    public DgmstRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("RROLL") String rroll, @JsonProperty("SEM") String sem) {
+        this.fullName = fullName;
+        this.rroll = rroll;
+        this.sem = sem;
+  }
 }

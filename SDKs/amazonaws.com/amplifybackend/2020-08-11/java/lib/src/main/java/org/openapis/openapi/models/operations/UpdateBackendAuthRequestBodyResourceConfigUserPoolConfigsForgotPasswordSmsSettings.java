@@ -15,9 +15,11 @@ public class UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPass
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmsMessage")
     public String smsMessage;
+
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordSmsSettings withSmsMessage(String smsMessage) {
         this.smsMessage = smsMessage;
         return this;
     }
     
+    public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordSmsSettings(){}
 }

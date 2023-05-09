@@ -15,6 +15,7 @@ public class ListCustomRoutingPortMappingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCustomRoutingPortMappingsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListCustomRoutingPortMappingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortMappings")
     public PortMapping[] portMappings;
+
     public ListCustomRoutingPortMappingsResponse withPortMappings(PortMapping[] portMappings) {
         this.portMappings = portMappings;
         return this;
     }
     
+    public ListCustomRoutingPortMappingsResponse(){}
 }

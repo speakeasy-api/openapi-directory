@@ -15,9 +15,11 @@ public class ListBillingGroupCostReportsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingGroupArns")
     public String[] billingGroupArns;
+
     public ListBillingGroupCostReportsRequestBodyFilters withBillingGroupArns(String[] billingGroupArns) {
         this.billingGroupArns = billingGroupArns;
         return this;
     }
     
+    public ListBillingGroupCostReportsRequestBodyFilters(){}
 }

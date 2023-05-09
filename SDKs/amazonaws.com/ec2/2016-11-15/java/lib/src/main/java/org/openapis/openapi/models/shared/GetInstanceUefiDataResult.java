@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetInstanceUefiDataResult {
     
     public String instanceId;
+
     public GetInstanceUefiDataResult withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -19,9 +20,11 @@ public class GetInstanceUefiDataResult {
     
     
     public String uefiData;
+
     public GetInstanceUefiDataResult withUefiData(String uefiData) {
         this.uefiData = uefiData;
         return this;
     }
     
+    public GetInstanceUefiDataResult(){}
 }

@@ -18,6 +18,7 @@ public class LDAPSSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate")
     public Certificate certificate;
+
     public LDAPSSettingsInput withCertificate(Certificate certificate) {
         this.certificate = certificate;
         return this;
@@ -29,6 +30,7 @@ public class LDAPSSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificatePassword")
     public String certificatePassword;
+
     public LDAPSSettingsInput withCertificatePassword(String certificatePassword) {
         this.certificatePassword = certificatePassword;
         return this;
@@ -40,6 +42,7 @@ public class LDAPSSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificatePfx")
     public String certificatePfx;
+
     public LDAPSSettingsInput withCertificatePfx(String certificatePfx) {
         this.certificatePfx = certificatePfx;
         return this;
@@ -51,9 +54,11 @@ public class LDAPSSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LDAPSSettingsInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LDAPSSettingsInput(){}
 }

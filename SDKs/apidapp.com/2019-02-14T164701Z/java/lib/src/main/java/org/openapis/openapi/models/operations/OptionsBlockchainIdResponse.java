@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OptionsBlockchainIdResponse {
     
     public String contentType;
+
     public OptionsBlockchainIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OptionsBlockchainIdResponse {
      */
     
     public java.util.Map<String, Object> empty;
+
     public OptionsBlockchainIdResponse withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
@@ -26,6 +29,7 @@ public class OptionsBlockchainIdResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public OptionsBlockchainIdResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class OptionsBlockchainIdResponse {
     
     
     public Integer statusCode;
+
     public OptionsBlockchainIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class OptionsBlockchainIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OptionsBlockchainIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OptionsBlockchainIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

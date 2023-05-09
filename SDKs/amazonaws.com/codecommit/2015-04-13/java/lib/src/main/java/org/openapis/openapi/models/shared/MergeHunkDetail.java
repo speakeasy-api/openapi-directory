@@ -15,6 +15,7 @@ public class MergeHunkDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endLine")
     public Long endLine;
+
     public MergeHunkDetail withEndLine(Long endLine) {
         this.endLine = endLine;
         return this;
@@ -23,6 +24,7 @@ public class MergeHunkDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hunkContent")
     public String hunkContent;
+
     public MergeHunkDetail withHunkContent(String hunkContent) {
         this.hunkContent = hunkContent;
         return this;
@@ -31,9 +33,11 @@ public class MergeHunkDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startLine")
     public Long startLine;
+
     public MergeHunkDetail withStartLine(Long startLine) {
         this.startLine = startLine;
         return this;
     }
     
+    public MergeHunkDetail(){}
 }

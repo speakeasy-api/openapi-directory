@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DiaryControllerGetAppointmentTypesResponse {
     
     public byte[] body;
+
     public DiaryControllerGetAppointmentTypesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DiaryControllerGetAppointmentTypesResponse {
     
     
     public String contentType;
+
     public DiaryControllerGetAppointmentTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DiaryControllerGetAppointmentTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.DiaryAppointmentTypeModelResults diaryAppointmentTypeModelResults;
+
     public DiaryControllerGetAppointmentTypesResponse withDiaryAppointmentTypeModelResults(org.openapis.openapi.models.shared.DiaryAppointmentTypeModelResults diaryAppointmentTypeModelResults) {
         this.diaryAppointmentTypeModelResults = diaryAppointmentTypeModelResults;
         return this;
@@ -33,6 +37,7 @@ public class DiaryControllerGetAppointmentTypesResponse {
     
     
     public Integer statusCode;
+
     public DiaryControllerGetAppointmentTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class DiaryControllerGetAppointmentTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DiaryControllerGetAppointmentTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DiaryControllerGetAppointmentTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

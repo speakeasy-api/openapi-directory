@@ -14,6 +14,7 @@ public class ItemsRequestBodyOrderItems {
      */
     @JsonProperty("id")
     public String id;
+
     public ItemsRequestBodyOrderItems withId(String id) {
         this.id = id;
         return this;
@@ -24,6 +25,7 @@ public class ItemsRequestBodyOrderItems {
      */
     @JsonProperty("index")
     public Long index;
+
     public ItemsRequestBodyOrderItems withIndex(Long index) {
         this.index = index;
         return this;
@@ -35,6 +37,7 @@ public class ItemsRequestBodyOrderItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public ItemsRequestBodyOrderItems withPrice(Long price) {
         this.price = price;
         return this;
@@ -45,6 +48,7 @@ public class ItemsRequestBodyOrderItems {
      */
     @JsonProperty("quantity")
     public Integer quantity;
+
     public ItemsRequestBodyOrderItems withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -55,9 +59,16 @@ public class ItemsRequestBodyOrderItems {
      */
     @JsonProperty("seller")
     public String seller;
+
     public ItemsRequestBodyOrderItems withSeller(String seller) {
         this.seller = seller;
         return this;
     }
     
+    public ItemsRequestBodyOrderItems(@JsonProperty("id") String id, @JsonProperty("index") Long index, @JsonProperty("quantity") Integer quantity, @JsonProperty("seller") String seller) {
+        this.id = id;
+        this.index = index;
+        this.quantity = quantity;
+        this.seller = seller;
+  }
 }

@@ -12,6 +12,7 @@ public class ListComponentsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentName")
     public String environmentName;
+
     public ListComponentsInput withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -20,6 +21,7 @@ public class ListComponentsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListComponentsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListComponentsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListComponentsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ListComponentsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceInstanceName")
     public String serviceInstanceName;
+
     public ListComponentsInput withServiceInstanceName(String serviceInstanceName) {
         this.serviceInstanceName = serviceInstanceName;
         return this;
@@ -44,9 +48,11 @@ public class ListComponentsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public ListComponentsInput withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public ListComponentsInput(){}
 }

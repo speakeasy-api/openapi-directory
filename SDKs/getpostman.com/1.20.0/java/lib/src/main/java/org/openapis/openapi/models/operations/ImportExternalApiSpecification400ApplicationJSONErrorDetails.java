@@ -12,9 +12,11 @@ public class ImportExternalApiSpecification400ApplicationJSONErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("param")
     public String param;
+
     public ImportExternalApiSpecification400ApplicationJSONErrorDetails withParam(String param) {
         this.param = param;
         return this;
     }
     
+    public ImportExternalApiSpecification400ApplicationJSONErrorDetails(){}
 }

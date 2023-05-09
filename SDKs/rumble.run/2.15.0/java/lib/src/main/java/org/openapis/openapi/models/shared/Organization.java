@@ -15,6 +15,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset_count")
     public Long assetCount;
+
     public Organization withAssetCount(Long assetCount) {
         this.assetCount = assetCount;
         return this;
@@ -23,6 +24,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_id")
     public String clientId;
+
     public Organization withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -31,6 +33,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public Long createdAt;
+
     public Organization withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -39,6 +42,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deactivated_at")
     public Long deactivatedAt;
+
     public Organization withDeactivatedAt(Long deactivatedAt) {
         this.deactivatedAt = deactivatedAt;
         return this;
@@ -47,6 +51,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Organization withDescription(String description) {
         this.description = description;
         return this;
@@ -55,6 +60,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_token")
     public String downloadToken;
+
     public Organization withDownloadToken(String downloadToken) {
         this.downloadToken = downloadToken;
         return this;
@@ -63,6 +69,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_token_created_at")
     public Long downloadTokenCreatedAt;
+
     public Organization withDownloadTokenCreatedAt(Long downloadTokenCreatedAt) {
         this.downloadTokenCreatedAt = downloadTokenCreatedAt;
         return this;
@@ -71,6 +78,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiration_assets_offline")
     public Long expirationAssetsOffline;
+
     public Organization withExpirationAssetsOffline(Long expirationAssetsOffline) {
         this.expirationAssetsOffline = expirationAssetsOffline;
         return this;
@@ -79,6 +87,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiration_assets_stale")
     public Long expirationAssetsStale;
+
     public Organization withExpirationAssetsStale(Long expirationAssetsStale) {
         this.expirationAssetsStale = expirationAssetsStale;
         return this;
@@ -87,6 +96,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiration_scans")
     public Long expirationScans;
+
     public Organization withExpirationScans(Long expirationScans) {
         this.expirationScans = expirationScans;
         return this;
@@ -95,6 +105,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_token")
     public String exportToken;
+
     public Organization withExportToken(String exportToken) {
         this.exportToken = exportToken;
         return this;
@@ -103,6 +114,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_token_counter")
     public Long exportTokenCounter;
+
     public Organization withExportTokenCounter(Long exportTokenCounter) {
         this.exportTokenCounter = exportTokenCounter;
         return this;
@@ -111,6 +123,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_token_created_at")
     public Long exportTokenCreatedAt;
+
     public Organization withExportTokenCreatedAt(Long exportTokenCreatedAt) {
         this.exportTokenCreatedAt = exportTokenCreatedAt;
         return this;
@@ -119,6 +132,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_token_last_used_at")
     public Long exportTokenLastUsedAt;
+
     public Organization withExportTokenLastUsedAt(Long exportTokenLastUsedAt) {
         this.exportTokenLastUsedAt = exportTokenLastUsedAt;
         return this;
@@ -127,6 +141,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_token_last_used_by")
     public String exportTokenLastUsedBy;
+
     public Organization withExportTokenLastUsedBy(String exportTokenLastUsedBy) {
         this.exportTokenLastUsedBy = exportTokenLastUsedBy;
         return this;
@@ -134,6 +149,7 @@ public class Organization {
     
     @JsonProperty("id")
     public String id;
+
     public Organization withId(String id) {
         this.id = id;
         return this;
@@ -142,6 +158,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inactive")
     public Boolean inactive;
+
     public Organization withInactive(Boolean inactive) {
         this.inactive = inactive;
         return this;
@@ -149,6 +166,7 @@ public class Organization {
     
     @JsonProperty("name")
     public String name;
+
     public Organization withName(String name) {
         this.name = name;
         return this;
@@ -157,6 +175,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     public String parentId;
+
     public Organization withParentId(String parentId) {
         this.parentId = parentId;
         return this;
@@ -165,6 +184,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permanent")
     public Boolean permanent;
+
     public Organization withPermanent(Boolean permanent) {
         this.permanent = permanent;
         return this;
@@ -173,6 +193,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public Boolean project;
+
     public Organization withProject(Boolean project) {
         this.project = project;
         return this;
@@ -181,6 +202,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_count")
     public Long serviceCount;
+
     public Organization withServiceCount(Long serviceCount) {
         this.serviceCount = serviceCount;
         return this;
@@ -189,6 +211,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_count_arp")
     public Long serviceCountArp;
+
     public Organization withServiceCountArp(Long serviceCountArp) {
         this.serviceCountArp = serviceCountArp;
         return this;
@@ -197,6 +220,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_count_icmp")
     public Long serviceCountIcmp;
+
     public Organization withServiceCountIcmp(Long serviceCountIcmp) {
         this.serviceCountIcmp = serviceCountIcmp;
         return this;
@@ -205,6 +229,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_count_tcp")
     public Long serviceCountTcp;
+
     public Organization withServiceCountTcp(Long serviceCountTcp) {
         this.serviceCountTcp = serviceCountTcp;
         return this;
@@ -213,6 +238,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_count_udp")
     public Long serviceCountUdp;
+
     public Organization withServiceCountUdp(Long serviceCountUdp) {
         this.serviceCountUdp = serviceCountUdp;
         return this;
@@ -221,9 +247,14 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public Long updatedAt;
+
     public Organization withUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Organization(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

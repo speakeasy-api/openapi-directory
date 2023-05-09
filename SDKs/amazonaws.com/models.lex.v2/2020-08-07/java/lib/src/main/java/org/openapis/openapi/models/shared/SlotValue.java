@@ -15,9 +15,11 @@ public class SlotValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interpretedValue")
     public String interpretedValue;
+
     public SlotValue withInterpretedValue(String interpretedValue) {
         this.interpretedValue = interpretedValue;
         return this;
     }
     
+    public SlotValue(){}
 }

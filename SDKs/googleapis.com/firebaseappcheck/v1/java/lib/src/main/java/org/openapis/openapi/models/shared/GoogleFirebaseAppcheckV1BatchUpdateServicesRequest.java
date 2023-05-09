@@ -18,6 +18,7 @@ public class GoogleFirebaseAppcheckV1BatchUpdateServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public GoogleFirebaseAppcheckV1UpdateServiceRequest[] requests;
+
     public GoogleFirebaseAppcheckV1BatchUpdateServicesRequest withRequests(GoogleFirebaseAppcheckV1UpdateServiceRequest[] requests) {
         this.requests = requests;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseAppcheckV1BatchUpdateServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleFirebaseAppcheckV1BatchUpdateServicesRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1BatchUpdateServicesRequest(){}
 }

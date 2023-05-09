@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse {
     
     public String contentType;
+
     public IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse {
      */
     
     public java.util.Map<String, Object> googleCloudIdentitytoolkitAdminV2InitializeIdentityPlatformResponse;
+
     public IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse withGoogleCloudIdentitytoolkitAdminV2InitializeIdentityPlatformResponse(java.util.Map<String, Object> googleCloudIdentitytoolkitAdminV2InitializeIdentityPlatformResponse) {
         this.googleCloudIdentitytoolkitAdminV2InitializeIdentityPlatformResponse = googleCloudIdentitytoolkitAdminV2InitializeIdentityPlatformResponse;
         return this;
@@ -26,6 +29,7 @@ public class IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse {
     
     
     public Integer statusCode;
+
     public IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

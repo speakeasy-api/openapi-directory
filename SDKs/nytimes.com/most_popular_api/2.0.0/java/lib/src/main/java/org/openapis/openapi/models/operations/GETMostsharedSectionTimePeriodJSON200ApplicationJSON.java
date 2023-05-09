@@ -15,6 +15,7 @@ public class GETMostsharedSectionTimePeriodJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright")
     public String copyright;
+
     public GETMostsharedSectionTimePeriodJSON200ApplicationJSON withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -23,6 +24,7 @@ public class GETMostsharedSectionTimePeriodJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_results")
     public Long numResults;
+
     public GETMostsharedSectionTimePeriodJSON200ApplicationJSON withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -31,6 +33,7 @@ public class GETMostsharedSectionTimePeriodJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public org.openapis.openapi.models.shared.Article[] results;
+
     public GETMostsharedSectionTimePeriodJSON200ApplicationJSON withResults(org.openapis.openapi.models.shared.Article[] results) {
         this.results = results;
         return this;
@@ -39,9 +42,11 @@ public class GETMostsharedSectionTimePeriodJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GETMostsharedSectionTimePeriodJSON200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GETMostsharedSectionTimePeriodJSON200ApplicationJSON(){}
 }

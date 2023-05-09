@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Tag - &lt;p&gt;A tag object that consists of a key and an optional value, used to manage metadata for SageMaker Amazon Web Services resources.&lt;/p&gt; &lt;p&gt;You can add tags to notebook instances, training jobs, hyperparameter tuning jobs, batch transform jobs, models, labeling jobs, work teams, endpoint configurations, and endpoints. For more information on adding tags to SageMaker resources, see &lt;a&gt;AddTags&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;For more information on adding metadata to your Amazon Web Services resources with tagging, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"&gt;Tagging Amazon Web Services resources&lt;/a&gt;. For advice on best practices for managing Amazon Web Services resources with tagging, see &lt;a href="https://d1.awsstatic.com/whitepapers/aws-tagging-best-practices.pdf"&gt;Tagging Best Practices: Implement an Effective Amazon Web Services Resource Tagging Strategy&lt;/a&gt;.&lt;/p&gt;
+ * Tag - &lt;p&gt;A tag object that consists of a key and an optional value, used to manage metadata for SageMaker Amazon Web Services resources.&lt;/p&gt; &lt;p&gt;You can add tags to notebook instances, training jobs, hyperparameter tuning jobs, batch transform jobs, models, labeling jobs, work teams, endpoint configurations, and endpoints. For more information on adding tags to SageMaker resources, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AddTags.html"&gt;AddTags&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;For more information on adding metadata to your Amazon Web Services resources with tagging, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"&gt;Tagging Amazon Web Services resources&lt;/a&gt;. For advice on best practices for managing Amazon Web Services resources with tagging, see &lt;a href="https://d1.awsstatic.com/whitepapers/aws-tagging-best-practices.pdf"&gt;Tagging Best Practices: Implement an Effective Amazon Web Services Resource Tagging Strategy&lt;/a&gt;.&lt;/p&gt;
  */
 public class Tag {
     @JsonProperty("Key")
     public String key;
+
     public Tag withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class Tag {
     
     @JsonProperty("Value")
     public String value;
+
     public Tag withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Tag(@JsonProperty("Key") String key, @JsonProperty("Value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

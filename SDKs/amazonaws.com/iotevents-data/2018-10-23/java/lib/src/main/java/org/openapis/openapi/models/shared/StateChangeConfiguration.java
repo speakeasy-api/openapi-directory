@@ -15,9 +15,11 @@ public class StateChangeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerType")
     public TriggerTypeEnum triggerType;
+
     public StateChangeConfiguration withTriggerType(TriggerTypeEnum triggerType) {
         this.triggerType = triggerType;
         return this;
     }
     
+    public StateChangeConfiguration(){}
 }

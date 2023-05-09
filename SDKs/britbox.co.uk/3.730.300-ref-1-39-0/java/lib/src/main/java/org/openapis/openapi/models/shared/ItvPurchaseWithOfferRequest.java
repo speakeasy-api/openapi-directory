@@ -17,6 +17,7 @@ public class ItvPurchaseWithOfferRequest {
      */
     @JsonProperty("couponId")
     public String couponId;
+
     public ItvPurchaseWithOfferRequest withCouponId(String couponId) {
         this.couponId = couponId;
         return this;
@@ -28,6 +29,7 @@ public class ItvPurchaseWithOfferRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethodFromToken")
     public String paymentMethodFromToken;
+
     public ItvPurchaseWithOfferRequest withPaymentMethodFromToken(String paymentMethodFromToken) {
         this.paymentMethodFromToken = paymentMethodFromToken;
         return this;
@@ -39,6 +41,7 @@ public class ItvPurchaseWithOfferRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethodId")
     public String paymentMethodId;
+
     public ItvPurchaseWithOfferRequest withPaymentMethodId(String paymentMethodId) {
         this.paymentMethodId = paymentMethodId;
         return this;
@@ -49,6 +52,7 @@ public class ItvPurchaseWithOfferRequest {
      */
     @JsonProperty("planId")
     public String planId;
+
     public ItvPurchaseWithOfferRequest withPlanId(String planId) {
         this.planId = planId;
         return this;
@@ -59,9 +63,15 @@ public class ItvPurchaseWithOfferRequest {
      */
     @JsonProperty("profileToken")
     public String profileToken;
+
     public ItvPurchaseWithOfferRequest withProfileToken(String profileToken) {
         this.profileToken = profileToken;
         return this;
     }
     
+    public ItvPurchaseWithOfferRequest(@JsonProperty("couponId") String couponId, @JsonProperty("planId") String planId, @JsonProperty("profileToken") String profileToken) {
+        this.couponId = couponId;
+        this.planId = planId;
+        this.profileToken = profileToken;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartSupportDataExportResponse {
     
     public String contentType;
+
     public StartSupportDataExportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartSupportDataExportResponse {
      */
     
     public Object marketplaceCommerceAnalyticsException;
+
     public StartSupportDataExportResponse withMarketplaceCommerceAnalyticsException(Object marketplaceCommerceAnalyticsException) {
         this.marketplaceCommerceAnalyticsException = marketplaceCommerceAnalyticsException;
         return this;
@@ -29,6 +32,7 @@ public class StartSupportDataExportResponse {
      */
     
     public org.openapis.openapi.models.shared.StartSupportDataExportResult startSupportDataExportResult;
+
     public StartSupportDataExportResponse withStartSupportDataExportResult(org.openapis.openapi.models.shared.StartSupportDataExportResult startSupportDataExportResult) {
         this.startSupportDataExportResult = startSupportDataExportResult;
         return this;
@@ -36,6 +40,7 @@ public class StartSupportDataExportResponse {
     
     
     public Integer statusCode;
+
     public StartSupportDataExportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class StartSupportDataExportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartSupportDataExportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartSupportDataExportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

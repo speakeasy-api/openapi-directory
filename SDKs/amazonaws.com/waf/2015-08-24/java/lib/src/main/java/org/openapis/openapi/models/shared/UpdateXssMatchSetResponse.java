@@ -15,9 +15,11 @@ public class UpdateXssMatchSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public UpdateXssMatchSetResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
     }
     
+    public UpdateXssMatchSetResponse(){}
 }

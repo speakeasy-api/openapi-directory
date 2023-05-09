@@ -15,6 +15,7 @@ public class DataModelS3Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketName")
     public String bucketName;
+
     public DataModelS3Configuration withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -23,9 +24,11 @@ public class DataModelS3Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectKey")
     public String objectKey;
+
     public DataModelS3Configuration withObjectKey(String objectKey) {
         this.objectKey = objectKey;
         return this;
     }
     
+    public DataModelS3Configuration(){}
 }

@@ -18,9 +18,11 @@ public class RemoveTenantProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public RemoveTenantProjectRequest withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public RemoveTenantProjectRequest(){}
 }

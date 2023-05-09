@@ -63,12 +63,10 @@ public class Authorization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateDeviceAuthorizationCodeResponse res = new org.openapis.openapi.models.operations.GenerateDeviceAuthorizationCodeResponse() {{
+        org.openapis.openapi.models.operations.GenerateDeviceAuthorizationCodeResponse res = new org.openapis.openapi.models.operations.GenerateDeviceAuthorizationCodeResponse(contentType, httpRes.statusCode()) {{
             deviceAuthorizationCode = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -120,12 +118,10 @@ public class Authorization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountTokenResponse res = new org.openapis.openapi.models.operations.GetAccountTokenResponse() {{
+        org.openapis.openapi.models.operations.GetAccountTokenResponse res = new org.openapis.openapi.models.operations.GetAccountTokenResponse(contentType, httpRes.statusCode()) {{
             accessTokens = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,12 +173,10 @@ public class Authorization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountTokenByCodeResponse res = new org.openapis.openapi.models.operations.GetAccountTokenByCodeResponse() {{
+        org.openapis.openapi.models.operations.GetAccountTokenByCodeResponse res = new org.openapis.openapi.models.operations.GetAccountTokenByCodeResponse(contentType, httpRes.statusCode()) {{
             accessTokens = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -236,12 +230,10 @@ public class Authorization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProfileTokenResponse res = new org.openapis.openapi.models.operations.GetProfileTokenResponse() {{
+        org.openapis.openapi.models.operations.GetProfileTokenResponse res = new org.openapis.openapi.models.operations.GetProfileTokenResponse(contentType, httpRes.statusCode()) {{
             accessTokens = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,12 +285,10 @@ public class Authorization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RefreshTokenResponse res = new org.openapis.openapi.models.operations.RefreshTokenResponse() {{
+        org.openapis.openapi.models.operations.RefreshTokenResponse res = new org.openapis.openapi.models.operations.RefreshTokenResponse(contentType, httpRes.statusCode()) {{
             accessToken = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,11 +335,9 @@ public class Authorization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SignOutResponse res = new org.openapis.openapi.models.operations.SignOutResponse() {{
+        org.openapis.openapi.models.operations.SignOutResponse res = new org.openapis.openapi.models.operations.SignOutResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -396,12 +384,10 @@ public class Authorization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SingleSignOnResponse res = new org.openapis.openapi.models.operations.SingleSignOnResponse() {{
+        org.openapis.openapi.models.operations.SingleSignOnResponse res = new org.openapis.openapi.models.operations.SingleSignOnResponse(contentType, httpRes.statusCode()) {{
             accessTokens = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

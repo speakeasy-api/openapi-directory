@@ -15,6 +15,7 @@ public class ThirdPartyJobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ThirdPartyJobData data;
+
     public ThirdPartyJobDetails withData(ThirdPartyJobData data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class ThirdPartyJobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ThirdPartyJobDetails withId(String id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class ThirdPartyJobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonce")
     public String nonce;
+
     public ThirdPartyJobDetails withNonce(String nonce) {
         this.nonce = nonce;
         return this;
     }
     
+    public ThirdPartyJobDetails(){}
 }

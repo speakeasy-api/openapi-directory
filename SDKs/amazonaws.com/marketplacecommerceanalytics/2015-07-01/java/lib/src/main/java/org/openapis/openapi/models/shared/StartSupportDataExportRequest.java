@@ -20,6 +20,7 @@ public class StartSupportDataExportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerDefinedValues")
     public java.util.Map<String, String> customerDefinedValues;
+
     public StartSupportDataExportRequest withCustomerDefinedValues(java.util.Map<String, String> customerDefinedValues) {
         this.customerDefinedValues = customerDefinedValues;
         return this;
@@ -27,6 +28,7 @@ public class StartSupportDataExportRequest {
     
     @JsonProperty("dataSetType")
     public SupportDataSetTypeEnum dataSetType;
+
     public StartSupportDataExportRequest withDataSetType(SupportDataSetTypeEnum dataSetType) {
         this.dataSetType = dataSetType;
         return this;
@@ -34,6 +36,7 @@ public class StartSupportDataExportRequest {
     
     @JsonProperty("destinationS3BucketName")
     public String destinationS3BucketName;
+
     public StartSupportDataExportRequest withDestinationS3BucketName(String destinationS3BucketName) {
         this.destinationS3BucketName = destinationS3BucketName;
         return this;
@@ -42,6 +45,7 @@ public class StartSupportDataExportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationS3Prefix")
     public String destinationS3Prefix;
+
     public StartSupportDataExportRequest withDestinationS3Prefix(String destinationS3Prefix) {
         this.destinationS3Prefix = destinationS3Prefix;
         return this;
@@ -51,6 +55,7 @@ public class StartSupportDataExportRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("fromDate")
     public OffsetDateTime fromDate;
+
     public StartSupportDataExportRequest withFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -58,6 +63,7 @@ public class StartSupportDataExportRequest {
     
     @JsonProperty("roleNameArn")
     public String roleNameArn;
+
     public StartSupportDataExportRequest withRoleNameArn(String roleNameArn) {
         this.roleNameArn = roleNameArn;
         return this;
@@ -65,9 +71,17 @@ public class StartSupportDataExportRequest {
     
     @JsonProperty("snsTopicArn")
     public String snsTopicArn;
+
     public StartSupportDataExportRequest withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
     }
     
+    public StartSupportDataExportRequest(@JsonProperty("dataSetType") SupportDataSetTypeEnum dataSetType, @JsonProperty("destinationS3BucketName") String destinationS3BucketName, @JsonProperty("fromDate") OffsetDateTime fromDate, @JsonProperty("roleNameArn") String roleNameArn, @JsonProperty("snsTopicArn") String snsTopicArn) {
+        this.dataSetType = dataSetType;
+        this.destinationS3BucketName = destinationS3BucketName;
+        this.fromDate = fromDate;
+        this.roleNameArn = roleNameArn;
+        this.snsTopicArn = snsTopicArn;
+  }
 }

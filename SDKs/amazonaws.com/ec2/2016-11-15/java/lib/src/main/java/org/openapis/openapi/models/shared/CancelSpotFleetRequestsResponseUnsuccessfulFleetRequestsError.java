@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsError {
     
     public CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsErrorCodeEnum code;
+
     public CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsError withCode(CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsError {
     
     
     public String message;
+
     public CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsError(){}
 }

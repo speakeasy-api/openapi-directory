@@ -15,6 +15,7 @@ public class CreateDeploymentRequestBodyDeploymentPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentUpdatePolicy")
     public org.openapis.openapi.models.shared.DeploymentComponentUpdatePolicy componentUpdatePolicy;
+
     public CreateDeploymentRequestBodyDeploymentPolicies withComponentUpdatePolicy(org.openapis.openapi.models.shared.DeploymentComponentUpdatePolicy componentUpdatePolicy) {
         this.componentUpdatePolicy = componentUpdatePolicy;
         return this;
@@ -23,6 +24,7 @@ public class CreateDeploymentRequestBodyDeploymentPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationValidationPolicy")
     public org.openapis.openapi.models.shared.DeploymentConfigurationValidationPolicy configurationValidationPolicy;
+
     public CreateDeploymentRequestBodyDeploymentPolicies withConfigurationValidationPolicy(org.openapis.openapi.models.shared.DeploymentConfigurationValidationPolicy configurationValidationPolicy) {
         this.configurationValidationPolicy = configurationValidationPolicy;
         return this;
@@ -31,9 +33,11 @@ public class CreateDeploymentRequestBodyDeploymentPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureHandlingPolicy")
     public org.openapis.openapi.models.shared.DeploymentFailureHandlingPolicyEnum failureHandlingPolicy;
+
     public CreateDeploymentRequestBodyDeploymentPolicies withFailureHandlingPolicy(org.openapis.openapi.models.shared.DeploymentFailureHandlingPolicyEnum failureHandlingPolicy) {
         this.failureHandlingPolicy = failureHandlingPolicy;
         return this;
     }
     
+    public CreateDeploymentRequestBodyDeploymentPolicies(){}
 }

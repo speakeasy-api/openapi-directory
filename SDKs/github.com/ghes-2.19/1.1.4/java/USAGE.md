@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.ActivityCheckRepoIsStarredByAuthenticatedUserRequest;
 import org.openapis.openapi.models.operations.ActivityCheckRepoIsStarredByAuthenticatedUserResponse;
 
@@ -13,10 +12,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ActivityCheckRepoIsStarredByAuthenticatedUserRequest req = new ActivityCheckRepoIsStarredByAuthenticatedUserRequest() {{
-                owner = "corrupti";
-                repo = "provident";
-            }}            
+            ActivityCheckRepoIsStarredByAuthenticatedUserRequest req = new ActivityCheckRepoIsStarredByAuthenticatedUserRequest("corrupti", "provident");            
 
             ActivityCheckRepoIsStarredByAuthenticatedUserResponse res = sdk.activity.activityCheckRepoIsStarredByAuthenticatedUser(req);
 
@@ -26,5 +22,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

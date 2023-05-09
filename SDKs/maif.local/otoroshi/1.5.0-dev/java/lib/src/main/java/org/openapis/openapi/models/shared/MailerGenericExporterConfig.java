@@ -18,6 +18,7 @@ public class MailerGenericExporterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, String> headers;
+
     public MailerGenericExporterConfig withHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
@@ -29,6 +30,7 @@ public class MailerGenericExporterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public String[] to;
+
     public MailerGenericExporterConfig withTo(String[] to) {
         this.to = to;
         return this;
@@ -39,6 +41,7 @@ public class MailerGenericExporterConfig {
      */
     @JsonProperty("type")
     public MailerGenericExporterConfigTypeEnum type;
+
     public MailerGenericExporterConfig withType(MailerGenericExporterConfigTypeEnum type) {
         this.type = type;
         return this;
@@ -50,9 +53,13 @@ public class MailerGenericExporterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public MailerGenericExporterConfig withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public MailerGenericExporterConfig(@JsonProperty("type") MailerGenericExporterConfigTypeEnum type) {
+        this.type = type;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportVolumeResultConversionTaskTags {
     
     public String key;
+
     public ImportVolumeResultConversionTaskTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class ImportVolumeResultConversionTaskTags {
     
     
     public String value;
+
     public ImportVolumeResultConversionTaskTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ImportVolumeResultConversionTaskTags(){}
 }

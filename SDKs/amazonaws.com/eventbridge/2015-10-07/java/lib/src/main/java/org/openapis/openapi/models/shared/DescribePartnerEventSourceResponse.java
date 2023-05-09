@@ -15,6 +15,7 @@ public class DescribePartnerEventSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DescribePartnerEventSourceResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class DescribePartnerEventSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribePartnerEventSourceResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DescribePartnerEventSourceResponse(){}
 }

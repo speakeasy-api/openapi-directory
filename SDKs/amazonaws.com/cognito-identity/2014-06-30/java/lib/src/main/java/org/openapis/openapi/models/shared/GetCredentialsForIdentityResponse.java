@@ -15,6 +15,7 @@ public class GetCredentialsForIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credentials")
     public Credentials credentials;
+
     public GetCredentialsForIdentityResponse withCredentials(Credentials credentials) {
         this.credentials = credentials;
         return this;
@@ -23,9 +24,11 @@ public class GetCredentialsForIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityId")
     public String identityId;
+
     public GetCredentialsForIdentityResponse withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
     }
     
+    public GetCredentialsForIdentityResponse(){}
 }

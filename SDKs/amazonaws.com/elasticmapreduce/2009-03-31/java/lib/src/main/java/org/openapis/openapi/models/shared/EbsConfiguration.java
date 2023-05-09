@@ -15,6 +15,7 @@ public class EbsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsBlockDeviceConfigs")
     public EbsBlockDeviceConfig[] ebsBlockDeviceConfigs;
+
     public EbsConfiguration withEbsBlockDeviceConfigs(EbsBlockDeviceConfig[] ebsBlockDeviceConfigs) {
         this.ebsBlockDeviceConfigs = ebsBlockDeviceConfigs;
         return this;
@@ -23,9 +24,11 @@ public class EbsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsOptimized")
     public Boolean ebsOptimized;
+
     public EbsConfiguration withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
     }
     
+    public EbsConfiguration(){}
 }

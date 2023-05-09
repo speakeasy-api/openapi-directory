@@ -12,6 +12,7 @@ public class PredictedPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedPoints")
     public Double predictedPoints;
+
     public PredictedPoints withPredictedPoints(Double predictedPoints) {
         this.predictedPoints = predictedPoints;
         return this;
@@ -20,9 +21,11 @@ public class PredictedPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yardLine")
     public Long yardLine;
+
     public PredictedPoints withYardLine(Long yardLine) {
         this.yardLine = yardLine;
         return this;
     }
     
+    public PredictedPoints(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class IssuesListForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee")
     public String assignee;
+
     public IssuesListForRepoRequest withAssignee(String assignee) {
         this.assignee = assignee;
         return this;
@@ -23,6 +25,7 @@ public class IssuesListForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=creator")
     public String creator;
+
     public IssuesListForRepoRequest withCreator(String creator) {
         this.creator = creator;
         return this;
@@ -33,6 +36,7 @@ public class IssuesListForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public org.openapis.openapi.models.shared.DirectionEnum direction;
+
     public IssuesListForRepoRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -43,6 +47,7 @@ public class IssuesListForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labels")
     public String labels;
+
     public IssuesListForRepoRequest withLabels(String labels) {
         this.labels = labels;
         return this;
@@ -53,6 +58,7 @@ public class IssuesListForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mentioned")
     public String mentioned;
+
     public IssuesListForRepoRequest withMentioned(String mentioned) {
         this.mentioned = mentioned;
         return this;
@@ -63,6 +69,7 @@ public class IssuesListForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=milestone")
     public String milestone;
+
     public IssuesListForRepoRequest withMilestone(String milestone) {
         this.milestone = milestone;
         return this;
@@ -70,6 +77,7 @@ public class IssuesListForRepoRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public IssuesListForRepoRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -80,6 +88,7 @@ public class IssuesListForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public IssuesListForRepoRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -90,6 +99,7 @@ public class IssuesListForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public IssuesListForRepoRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -97,6 +107,7 @@ public class IssuesListForRepoRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public IssuesListForRepoRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -107,6 +118,7 @@ public class IssuesListForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public OffsetDateTime since;
+
     public IssuesListForRepoRequest withSince(OffsetDateTime since) {
         this.since = since;
         return this;
@@ -117,6 +129,7 @@ public class IssuesListForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public IssuesListForRepoSortEnum sort;
+
     public IssuesListForRepoRequest withSort(IssuesListForRepoSortEnum sort) {
         this.sort = sort;
         return this;
@@ -127,9 +140,14 @@ public class IssuesListForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public IssuesListForRepoStateEnum state;
+
     public IssuesListForRepoRequest withState(IssuesListForRepoStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public IssuesListForRepoRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

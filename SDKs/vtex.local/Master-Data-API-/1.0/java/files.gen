@@ -105,4 +105,14 @@ lib/src/main/java/org/openapis/openapi/models/shared/Scores.java
 lib/src/main/java/org/openapis/openapi/models/shared/ArEVentilaO.java
 lib/src/main/java/org/openapis/openapi/models/shared/Listversion.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/addresses/README.md
+docs/clusters/README.md
+docs/customerprofiles/README.md
+docs/documents/README.md
+docs/indices/README.md
+docs/schemas/README.md
+docs/scroll/README.md
+docs/search/README.md
+docs/versions/README.md
 USAGE.md

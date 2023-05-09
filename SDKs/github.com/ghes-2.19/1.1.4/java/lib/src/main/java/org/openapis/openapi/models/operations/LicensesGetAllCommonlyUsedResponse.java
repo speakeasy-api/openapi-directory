@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LicensesGetAllCommonlyUsedResponse {
     
     public String contentType;
+
     public LicensesGetAllCommonlyUsedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class LicensesGetAllCommonlyUsedResponse {
     
     
     public Integer statusCode;
+
     public LicensesGetAllCommonlyUsedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class LicensesGetAllCommonlyUsedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LicensesGetAllCommonlyUsedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class LicensesGetAllCommonlyUsedResponse {
      */
     
     public org.openapis.openapi.models.shared.LicenseSimple[] licenseSimples;
+
     public LicensesGetAllCommonlyUsedResponse withLicenseSimples(org.openapis.openapi.models.shared.LicenseSimple[] licenseSimples) {
         this.licenseSimples = licenseSimples;
         return this;
     }
     
+    public LicensesGetAllCommonlyUsedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

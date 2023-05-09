@@ -3,12 +3,11 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListSecurityOption1;
-import org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListSecurityOption2;
-import org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListSecurity;
 import org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListRequest;
 import org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListResponse;
+import org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListSecurity;
+import org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListSecurityOption1;
+import org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -18,36 +17,37 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DialogflowProjectsLocationsAgentsChangelogsListRequest req = new DialogflowProjectsLocationsAgentsChangelogsListRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                filter = "nulla";
-                key = "corrupti";
-                oauthToken = "illum";
-                pageSize = 423655;
-                pageToken = "error";
-                parent = "deserunt";
+            DialogflowProjectsLocationsAgentsChangelogsListRequest req = new DialogflowProjectsLocationsAgentsChangelogsListRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                filter = "corrupti";
+                key = "illum";
+                oauthToken = "vel";
+                pageSize = 623564L;
+                pageToken = "deserunt";
                 prettyPrint = false;
                 quotaUser = "suscipit";
                 uploadType = "iure";
                 uploadProtocol = "magnam";
-            }}            
+            }};            
 
             DialogflowProjectsLocationsAgentsChangelogsListResponse res = sdk.projects.dialogflowProjectsLocationsAgentsChangelogsList(req, new DialogflowProjectsLocationsAgentsChangelogsListSecurity() {{
-                option1 = new DialogflowProjectsLocationsAgentsChangelogsListSecurityOption1() {{
+                option1 = new DialogflowProjectsLocationsAgentsChangelogsListSecurityOption1("debitis", "ipsa") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.googleCloudDialogflowCxV3ListChangelogsResponse.isPresent()) {
+            if (res.googleCloudDialogflowCxV3ListChangelogsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

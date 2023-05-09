@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTagsForVaultResponse {
     
     public String contentType;
+
     public ListTagsForVaultResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTagsForVaultResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListTagsForVaultResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class ListTagsForVaultResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTagsForVaultOutput listTagsForVaultOutput;
+
     public ListTagsForVaultResponse withListTagsForVaultOutput(org.openapis.openapi.models.shared.ListTagsForVaultOutput listTagsForVaultOutput) {
         this.listTagsForVaultOutput = listTagsForVaultOutput;
         return this;
@@ -39,6 +43,7 @@ public class ListTagsForVaultResponse {
      */
     
     public Object missingParameterValueException;
+
     public ListTagsForVaultResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -46,6 +51,7 @@ public class ListTagsForVaultResponse {
     
     
     public Integer statusCode;
+
     public ListTagsForVaultResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListTagsForVaultResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTagsForVaultResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListTagsForVaultResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTagsForVaultResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListTagsForVaultResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListTagsForVaultResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ListTagsForVaultResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

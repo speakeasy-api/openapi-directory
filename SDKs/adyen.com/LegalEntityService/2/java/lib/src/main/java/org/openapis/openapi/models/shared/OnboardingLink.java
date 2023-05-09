@@ -20,9 +20,11 @@ public class OnboardingLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public OnboardingLink withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public OnboardingLink(){}
 }

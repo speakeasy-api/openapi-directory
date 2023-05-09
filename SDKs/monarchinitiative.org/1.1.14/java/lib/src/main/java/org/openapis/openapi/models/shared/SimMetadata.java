@@ -15,9 +15,11 @@ public class SimMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_max_ic")
     public Double maxMaxIc;
+
     public SimMetadata withMaxMaxIc(Double maxMaxIc) {
         this.maxMaxIc = maxMaxIc;
         return this;
     }
     
+    public SimMetadata(){}
 }

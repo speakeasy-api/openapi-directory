@@ -24,6 +24,7 @@ public class Transaction {
      */
     @JsonProperty("active")
     public Boolean active;
+
     public Transaction withActive(Boolean active) {
         this.active = active;
         return this;
@@ -36,6 +37,7 @@ public class Transaction {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("application_date")
     public LocalDate applicationDate;
+
     public Transaction withApplicationDate(LocalDate applicationDate) {
         this.applicationDate = applicationDate;
         return this;
@@ -48,6 +50,7 @@ public class Transaction {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("bdate")
     public LocalDate bdate;
+
     public Transaction withBdate(LocalDate bdate) {
         this.bdate = bdate;
         return this;
@@ -61,6 +64,7 @@ public class Transaction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("bdatetime")
     public OffsetDateTime bdatetime;
+
     public Transaction withBdatetime(OffsetDateTime bdatetime) {
         this.bdatetime = bdatetime;
         return this;
@@ -72,6 +76,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public String card;
+
     public Transaction withCard(String card) {
         this.card = card;
         return this;
@@ -82,6 +87,7 @@ public class Transaction {
      */
     @JsonProperty("coming")
     public Boolean coming;
+
     public Transaction withComing(Boolean coming) {
         this.coming = coming;
         return this;
@@ -93,6 +99,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public Transaction withComment(String comment) {
         this.comment = comment;
         return this;
@@ -104,6 +111,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commission")
     public Float commission;
+
     public Transaction withCommission(Float commission) {
         this.commission = commission;
         return this;
@@ -115,6 +123,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commission_currency")
     public java.util.Map<String, Object> commissionCurrency;
+
     public Transaction withCommissionCurrency(java.util.Map<String, Object> commissionCurrency) {
         this.commissionCurrency = commissionCurrency;
         return this;
@@ -126,6 +135,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("counterparty")
     public String counterparty;
+
     public Transaction withCounterparty(String counterparty) {
         this.counterparty = counterparty;
         return this;
@@ -137,6 +147,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public Transaction withCountry(String country) {
         this.country = country;
         return this;
@@ -148,6 +159,7 @@ public class Transaction {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date")
     public LocalDate date;
+
     public Transaction withDate(LocalDate date) {
         this.date = date;
         return this;
@@ -160,6 +172,7 @@ public class Transaction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_scraped")
     public OffsetDateTime dateScraped;
+
     public Transaction withDateScraped(OffsetDateTime dateScraped) {
         this.dateScraped = dateScraped;
         return this;
@@ -173,6 +186,7 @@ public class Transaction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("datetime")
     public OffsetDateTime datetime;
+
     public Transaction withDatetime(OffsetDateTime datetime) {
         this.datetime = datetime;
         return this;
@@ -186,6 +200,7 @@ public class Transaction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deleted")
     public OffsetDateTime deleted;
+
     public Transaction withDeleted(OffsetDateTime deleted) {
         this.deleted = deleted;
         return this;
@@ -197,6 +212,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gross_value")
     public Float grossValue;
+
     public Transaction withGrossValue(Float grossValue) {
         this.grossValue = grossValue;
         return this;
@@ -207,6 +223,7 @@ public class Transaction {
      */
     @JsonProperty("id")
     public Long id;
+
     public Transaction withId(Long id) {
         this.id = id;
         return this;
@@ -217,6 +234,7 @@ public class Transaction {
      */
     @JsonProperty("id_account")
     public Long idAccount;
+
     public Transaction withIdAccount(Long idAccount) {
         this.idAccount = idAccount;
         return this;
@@ -228,6 +246,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_category")
     public Long idCategory;
+
     public Transaction withIdCategory(Long idCategory) {
         this.idCategory = idCategory;
         return this;
@@ -239,6 +258,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_cluster")
     public Long idCluster;
+
     public Transaction withIdCluster(Long idCluster) {
         this.idCluster = idCluster;
         return this;
@@ -252,6 +272,7 @@ public class Transaction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_update")
     public OffsetDateTime lastUpdate;
+
     public Transaction withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -262,6 +283,7 @@ public class Transaction {
      */
     @JsonProperty("nature")
     public String nature;
+
     public Transaction withNature(String nature) {
         this.nature = nature;
         return this;
@@ -273,6 +295,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_currency")
     public java.util.Map<String, Object> originalCurrency;
+
     public Transaction withOriginalCurrency(java.util.Map<String, Object> originalCurrency) {
         this.originalCurrency = originalCurrency;
         return this;
@@ -284,6 +307,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_gross_value")
     public Float originalGrossValue;
+
     public Transaction withOriginalGrossValue(Float originalGrossValue) {
         this.originalGrossValue = originalGrossValue;
         return this;
@@ -295,6 +319,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_value")
     public Float originalValue;
+
     public Transaction withOriginalValue(Float originalValue) {
         this.originalValue = originalValue;
         return this;
@@ -305,6 +330,7 @@ public class Transaction {
      */
     @JsonProperty("original_wording")
     public String originalWording;
+
     public Transaction withOriginalWording(String originalWording) {
         this.originalWording = originalWording;
         return this;
@@ -316,6 +342,7 @@ public class Transaction {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("rdate")
     public LocalDate rdate;
+
     public Transaction withRdate(LocalDate rdate) {
         this.rdate = rdate;
         return this;
@@ -329,6 +356,7 @@ public class Transaction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("rdatetime")
     public OffsetDateTime rdatetime;
+
     public Transaction withRdatetime(OffsetDateTime rdatetime) {
         this.rdatetime = rdatetime;
         return this;
@@ -339,6 +367,7 @@ public class Transaction {
      */
     @JsonProperty("simplified_wording")
     public String simplifiedWording;
+
     public Transaction withSimplifiedWording(String simplifiedWording) {
         this.simplifiedWording = simplifiedWording;
         return this;
@@ -349,6 +378,7 @@ public class Transaction {
      */
     @JsonProperty("state")
     public String state;
+
     public Transaction withState(String state) {
         this.state = state;
         return this;
@@ -359,6 +389,7 @@ public class Transaction {
      */
     @JsonProperty("stemmed_wording")
     public String stemmedWording;
+
     public Transaction withStemmedWording(String stemmedWording) {
         this.stemmedWording = stemmedWording;
         return this;
@@ -370,6 +401,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Float value;
+
     public Transaction withValue(Float value) {
         this.value = value;
         return this;
@@ -382,6 +414,7 @@ public class Transaction {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("vdate")
     public LocalDate vdate;
+
     public Transaction withVdate(LocalDate vdate) {
         this.vdate = vdate;
         return this;
@@ -395,6 +428,7 @@ public class Transaction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("vdatetime")
     public OffsetDateTime vdatetime;
+
     public Transaction withVdatetime(OffsetDateTime vdatetime) {
         this.vdatetime = vdatetime;
         return this;
@@ -406,6 +440,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webid")
     public String webid;
+
     public Transaction withWebid(String webid) {
         this.webid = webid;
         return this;
@@ -417,9 +452,24 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wording")
     public String wording;
+
     public Transaction withWording(String wording) {
         this.wording = wording;
         return this;
     }
     
+    public Transaction(@JsonProperty("active") Boolean active, @JsonProperty("coming") Boolean coming, @JsonProperty("date") LocalDate date, @JsonProperty("date_scraped") OffsetDateTime dateScraped, @JsonProperty("id") Long id, @JsonProperty("id_account") Long idAccount, @JsonProperty("nature") String nature, @JsonProperty("original_wording") String originalWording, @JsonProperty("rdate") LocalDate rdate, @JsonProperty("simplified_wording") String simplifiedWording, @JsonProperty("state") String state, @JsonProperty("stemmed_wording") String stemmedWording) {
+        this.active = active;
+        this.coming = coming;
+        this.date = date;
+        this.dateScraped = dateScraped;
+        this.id = id;
+        this.idAccount = idAccount;
+        this.nature = nature;
+        this.originalWording = originalWording;
+        this.rdate = rdate;
+        this.simplifiedWording = simplifiedWording;
+        this.state = state;
+        this.stemmedWording = stemmedWording;
+  }
 }

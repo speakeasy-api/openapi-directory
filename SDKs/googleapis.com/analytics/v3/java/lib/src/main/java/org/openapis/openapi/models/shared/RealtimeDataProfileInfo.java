@@ -18,6 +18,7 @@ public class RealtimeDataProfileInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public RealtimeDataProfileInfo withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class RealtimeDataProfileInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalWebPropertyId")
     public String internalWebPropertyId;
+
     public RealtimeDataProfileInfo withInternalWebPropertyId(String internalWebPropertyId) {
         this.internalWebPropertyId = internalWebPropertyId;
         return this;
@@ -40,6 +42,7 @@ public class RealtimeDataProfileInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileId")
     public String profileId;
+
     public RealtimeDataProfileInfo withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -51,6 +54,7 @@ public class RealtimeDataProfileInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileName")
     public String profileName;
+
     public RealtimeDataProfileInfo withProfileName(String profileName) {
         this.profileName = profileName;
         return this;
@@ -62,6 +66,7 @@ public class RealtimeDataProfileInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableId")
     public String tableId;
+
     public RealtimeDataProfileInfo withTableId(String tableId) {
         this.tableId = tableId;
         return this;
@@ -73,9 +78,11 @@ public class RealtimeDataProfileInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webPropertyId")
     public String webPropertyId;
+
     public RealtimeDataProfileInfo withWebPropertyId(String webPropertyId) {
         this.webPropertyId = webPropertyId;
         return this;
     }
     
+    public RealtimeDataProfileInfo(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AllDocksResponse {
@@ -12,6 +13,7 @@ public class AllDocksResponse {
      */
     
     public AllDocks200ApplicationJSON[] allDocks200ApplicationJSONObjects;
+
     public AllDocksResponse withAllDocks200ApplicationJSONObjects(AllDocks200ApplicationJSON[] allDocks200ApplicationJSONObjects) {
         this.allDocks200ApplicationJSONObjects = allDocks200ApplicationJSONObjects;
         return this;
@@ -19,6 +21,7 @@ public class AllDocksResponse {
     
     
     public String contentType;
+
     public AllDocksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AllDocksResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public AllDocksResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class AllDocksResponse {
     
     
     public Integer statusCode;
+
     public AllDocksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class AllDocksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AllDocksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AllDocksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

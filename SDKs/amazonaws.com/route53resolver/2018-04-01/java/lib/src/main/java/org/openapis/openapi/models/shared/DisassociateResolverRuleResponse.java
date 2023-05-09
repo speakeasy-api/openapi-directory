@@ -15,9 +15,11 @@ public class DisassociateResolverRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverRuleAssociation")
     public ResolverRuleAssociation resolverRuleAssociation;
+
     public DisassociateResolverRuleResponse withResolverRuleAssociation(ResolverRuleAssociation resolverRuleAssociation) {
         this.resolverRuleAssociation = resolverRuleAssociation;
         return this;
     }
     
+    public DisassociateResolverRuleResponse(){}
 }

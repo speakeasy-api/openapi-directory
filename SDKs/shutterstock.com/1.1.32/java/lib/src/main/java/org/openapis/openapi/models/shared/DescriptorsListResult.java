@@ -18,6 +18,7 @@ public class DescriptorsListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Descriptors[] data;
+
     public DescriptorsListResult withData(Descriptors[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class DescriptorsListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public DescriptorsListResult withPage(Long page) {
         this.page = page;
         return this;
@@ -40,9 +42,11 @@ public class DescriptorsListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public DescriptorsListResult withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public DescriptorsListResult(){}
 }

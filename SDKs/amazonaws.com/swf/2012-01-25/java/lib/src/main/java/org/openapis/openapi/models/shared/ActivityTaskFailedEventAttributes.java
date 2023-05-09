@@ -15,6 +15,7 @@ public class ActivityTaskFailedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public ActivityTaskFailedEventAttributes withDetails(String details) {
         this.details = details;
         return this;
@@ -23,6 +24,7 @@ public class ActivityTaskFailedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ActivityTaskFailedEventAttributes withReason(String reason) {
         this.reason = reason;
         return this;
@@ -30,6 +32,7 @@ public class ActivityTaskFailedEventAttributes {
     
     @JsonProperty("scheduledEventId")
     public Long scheduledEventId;
+
     public ActivityTaskFailedEventAttributes withScheduledEventId(Long scheduledEventId) {
         this.scheduledEventId = scheduledEventId;
         return this;
@@ -37,9 +40,14 @@ public class ActivityTaskFailedEventAttributes {
     
     @JsonProperty("startedEventId")
     public Long startedEventId;
+
     public ActivityTaskFailedEventAttributes withStartedEventId(Long startedEventId) {
         this.startedEventId = startedEventId;
         return this;
     }
     
+    public ActivityTaskFailedEventAttributes(@JsonProperty("scheduledEventId") Long scheduledEventId, @JsonProperty("startedEventId") Long startedEventId) {
+        this.scheduledEventId = scheduledEventId;
+        this.startedEventId = startedEventId;
+  }
 }

@@ -20,6 +20,7 @@ public class WorkflowExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelRequested")
     public Boolean cancelRequested;
+
     public WorkflowExecutionInfo withCancelRequested(Boolean cancelRequested) {
         this.cancelRequested = cancelRequested;
         return this;
@@ -28,6 +29,7 @@ public class WorkflowExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closeStatus")
     public CloseStatusEnum closeStatus;
+
     public WorkflowExecutionInfo withCloseStatus(CloseStatusEnum closeStatus) {
         this.closeStatus = closeStatus;
         return this;
@@ -38,6 +40,7 @@ public class WorkflowExecutionInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("closeTimestamp")
     public OffsetDateTime closeTimestamp;
+
     public WorkflowExecutionInfo withCloseTimestamp(OffsetDateTime closeTimestamp) {
         this.closeTimestamp = closeTimestamp;
         return this;
@@ -45,6 +48,7 @@ public class WorkflowExecutionInfo {
     
     @JsonProperty("execution")
     public WorkflowExecution execution;
+
     public WorkflowExecutionInfo withExecution(WorkflowExecution execution) {
         this.execution = execution;
         return this;
@@ -52,6 +56,7 @@ public class WorkflowExecutionInfo {
     
     @JsonProperty("executionStatus")
     public ExecutionStatusEnum executionStatus;
+
     public WorkflowExecutionInfo withExecutionStatus(ExecutionStatusEnum executionStatus) {
         this.executionStatus = executionStatus;
         return this;
@@ -60,6 +65,7 @@ public class WorkflowExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public WorkflowExecution parent;
+
     public WorkflowExecutionInfo withParent(WorkflowExecution parent) {
         this.parent = parent;
         return this;
@@ -69,6 +75,7 @@ public class WorkflowExecutionInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTimestamp")
     public OffsetDateTime startTimestamp;
+
     public WorkflowExecutionInfo withStartTimestamp(OffsetDateTime startTimestamp) {
         this.startTimestamp = startTimestamp;
         return this;
@@ -77,6 +84,7 @@ public class WorkflowExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagList")
     public String[] tagList;
+
     public WorkflowExecutionInfo withTagList(String[] tagList) {
         this.tagList = tagList;
         return this;
@@ -84,9 +92,16 @@ public class WorkflowExecutionInfo {
     
     @JsonProperty("workflowType")
     public WorkflowType workflowType;
+
     public WorkflowExecutionInfo withWorkflowType(WorkflowType workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public WorkflowExecutionInfo(@JsonProperty("execution") WorkflowExecution execution, @JsonProperty("executionStatus") ExecutionStatusEnum executionStatus, @JsonProperty("startTimestamp") OffsetDateTime startTimestamp, @JsonProperty("workflowType") WorkflowType workflowType) {
+        this.execution = execution;
+        this.executionStatus = executionStatus;
+        this.startTimestamp = startTimestamp;
+        this.workflowType = workflowType;
+  }
 }

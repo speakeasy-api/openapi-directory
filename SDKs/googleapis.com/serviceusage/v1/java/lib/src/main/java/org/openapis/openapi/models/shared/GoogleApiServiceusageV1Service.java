@@ -18,6 +18,7 @@ public class GoogleApiServiceusageV1Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public GoogleApiServiceusageV1ServiceConfig config;
+
     public GoogleApiServiceusageV1Service withConfig(GoogleApiServiceusageV1ServiceConfig config) {
         this.config = config;
         return this;
@@ -29,6 +30,7 @@ public class GoogleApiServiceusageV1Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleApiServiceusageV1Service withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GoogleApiServiceusageV1Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleApiServiceusageV1Service withParent(String parent) {
         this.parent = parent;
         return this;
@@ -51,9 +54,11 @@ public class GoogleApiServiceusageV1Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleApiServiceusageV1ServiceStateEnum state;
+
     public GoogleApiServiceusageV1Service withState(GoogleApiServiceusageV1ServiceStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleApiServiceusageV1Service(){}
 }

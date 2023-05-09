@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification {
     
     public String addressingType;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification withAddressingType(String addressingType) {
         this.addressingType = addressingType;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecifi
     
     
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappings[] blockDeviceMappings;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification withBlockDeviceMappings(DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappings[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecifi
     
     
     public Boolean ebsOptimized;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecifi
     
     
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationIamInstanceProfile iamInstanceProfile;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification withIamInstanceProfile(DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationIamInstanceProfile iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -40,6 +44,7 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecifi
     
     
     public String imageId;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecifi
     
     
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum instanceType;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification withInstanceType(DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -54,6 +60,7 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecifi
     
     
     public String kernelId;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification withKernelId(String kernelId) {
         this.kernelId = kernelId;
         return this;
@@ -61,6 +68,7 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecifi
     
     
     public String keyName;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -68,6 +76,7 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecifi
     
     
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationMonitoring monitoring;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification withMonitoring(DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationMonitoring monitoring) {
         this.monitoring = monitoring;
         return this;
@@ -75,6 +84,7 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecifi
     
     
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces[] networkInterfaces;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification withNetworkInterfaces(DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -82,6 +92,7 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecifi
     
     
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationPlacement placement;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification withPlacement(DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationPlacement placement) {
         this.placement = placement;
         return this;
@@ -89,6 +100,7 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecifi
     
     
     public String ramdiskId;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification withRamdiskId(String ramdiskId) {
         this.ramdiskId = ramdiskId;
         return this;
@@ -96,6 +108,7 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecifi
     
     
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationSecurityGroups[] securityGroups;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification withSecurityGroups(DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationSecurityGroups[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -103,6 +116,7 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecifi
     
     
     public String subnetId;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -110,9 +124,11 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecifi
     
     
     public String userData;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification withUserData(String userData) {
         this.userData = userData;
         return this;
     }
     
+    public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecification(){}
 }

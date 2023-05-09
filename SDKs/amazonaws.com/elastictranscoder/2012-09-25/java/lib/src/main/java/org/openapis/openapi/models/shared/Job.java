@@ -15,6 +15,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Job withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Job withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Input")
     public JobInput input;
+
     public Job withInput(JobInput input) {
         this.input = input;
         return this;
@@ -39,6 +42,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Inputs")
     public JobInput[] inputs;
+
     public Job withInputs(JobInput[] inputs) {
         this.inputs = inputs;
         return this;
@@ -47,6 +51,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Output")
     public JobOutput output;
+
     public Job withOutput(JobOutput output) {
         this.output = output;
         return this;
@@ -55,6 +60,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputKeyPrefix")
     public String outputKeyPrefix;
+
     public Job withOutputKeyPrefix(String outputKeyPrefix) {
         this.outputKeyPrefix = outputKeyPrefix;
         return this;
@@ -63,6 +69,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Outputs")
     public JobOutput[] outputs;
+
     public Job withOutputs(JobOutput[] outputs) {
         this.outputs = outputs;
         return this;
@@ -71,6 +78,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineId")
     public String pipelineId;
+
     public Job withPipelineId(String pipelineId) {
         this.pipelineId = pipelineId;
         return this;
@@ -79,6 +87,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Playlists")
     public Playlist[] playlists;
+
     public Job withPlaylists(Playlist[] playlists) {
         this.playlists = playlists;
         return this;
@@ -87,6 +96,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Job withStatus(String status) {
         this.status = status;
         return this;
@@ -95,6 +105,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timing")
     public Timing timing;
+
     public Job withTiming(Timing timing) {
         this.timing = timing;
         return this;
@@ -103,9 +114,11 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserMetadata")
     public java.util.Map<String, String> userMetadata;
+
     public Job withUserMetadata(java.util.Map<String, String> userMetadata) {
         this.userMetadata = userMetadata;
         return this;
     }
     
+    public Job(){}
 }

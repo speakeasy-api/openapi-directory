@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminDeletePersonalAccessTokenRequest {
@@ -12,9 +13,13 @@ public class EnterpriseAdminDeletePersonalAccessTokenRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token_id")
     public Long tokenId;
+
     public EnterpriseAdminDeletePersonalAccessTokenRequest withTokenId(Long tokenId) {
         this.tokenId = tokenId;
         return this;
     }
     
+    public EnterpriseAdminDeletePersonalAccessTokenRequest(@JsonProperty("token_id") Long tokenId) {
+        this.tokenId = tokenId;
+  }
 }

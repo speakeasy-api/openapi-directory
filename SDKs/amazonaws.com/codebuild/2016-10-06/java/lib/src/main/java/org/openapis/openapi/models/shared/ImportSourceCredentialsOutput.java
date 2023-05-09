@@ -15,9 +15,11 @@ public class ImportSourceCredentialsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ImportSourceCredentialsOutput withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public ImportSourceCredentialsOutput(){}
 }

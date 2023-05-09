@@ -18,9 +18,11 @@ public class ForecastOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forecastHorizon")
     public String forecastHorizon;
+
     public ForecastOptions withForecastHorizon(String forecastHorizon) {
         this.forecastHorizon = forecastHorizon;
         return this;
     }
     
+    public ForecastOptions(){}
 }

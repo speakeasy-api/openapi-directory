@@ -15,6 +15,7 @@ public class SchemaResponseActionReadSchemaResponseActionsRelationships {
      */
     
     public String creator;
+
     public SchemaResponseActionReadSchemaResponseActionsRelationships withCreator(String creator) {
         this.creator = creator;
         return this;
@@ -25,9 +26,11 @@ public class SchemaResponseActionReadSchemaResponseActionsRelationships {
      */
     
     public String target;
+
     public SchemaResponseActionReadSchemaResponseActionsRelationships withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public SchemaResponseActionReadSchemaResponseActionsRelationships(){}
 }

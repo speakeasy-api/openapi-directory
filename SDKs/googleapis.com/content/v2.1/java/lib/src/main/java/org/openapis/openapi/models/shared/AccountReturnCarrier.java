@@ -18,6 +18,7 @@ public class AccountReturnCarrier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierAccountId")
     public String carrierAccountId;
+
     public AccountReturnCarrier withCarrierAccountId(String carrierAccountId) {
         this.carrierAccountId = carrierAccountId;
         return this;
@@ -29,6 +30,7 @@ public class AccountReturnCarrier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierAccountName")
     public String carrierAccountName;
+
     public AccountReturnCarrier withCarrierAccountName(String carrierAccountName) {
         this.carrierAccountName = carrierAccountName;
         return this;
@@ -40,6 +42,7 @@ public class AccountReturnCarrier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierAccountNumber")
     public String carrierAccountNumber;
+
     public AccountReturnCarrier withCarrierAccountNumber(String carrierAccountNumber) {
         this.carrierAccountNumber = carrierAccountNumber;
         return this;
@@ -51,9 +54,11 @@ public class AccountReturnCarrier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierCode")
     public AccountReturnCarrierCarrierCodeEnum carrierCode;
+
     public AccountReturnCarrier withCarrierCode(AccountReturnCarrierCarrierCodeEnum carrierCode) {
         this.carrierCode = carrierCode;
         return this;
     }
     
+    public AccountReturnCarrier(){}
 }

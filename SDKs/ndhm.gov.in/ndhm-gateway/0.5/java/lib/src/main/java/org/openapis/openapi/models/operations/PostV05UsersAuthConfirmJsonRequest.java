@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05UsersAuthConfirmJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05UsersAuthConfirmJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05UsersAuthConfirmJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05UsersAuthConfirmJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatientAuthConfirmRequest patientAuthConfirmRequest;
+
     public PostV05UsersAuthConfirmJsonRequest withPatientAuthConfirmRequest(org.openapis.openapi.models.shared.PatientAuthConfirmRequest patientAuthConfirmRequest) {
         this.patientAuthConfirmRequest = patientAuthConfirmRequest;
         return this;
@@ -29,9 +32,15 @@ public class PostV05UsersAuthConfirmJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
     public String xCmId;
+
     public PostV05UsersAuthConfirmJsonRequest withXCmId(String xCmId) {
         this.xCmId = xCmId;
         return this;
     }
     
+    public PostV05UsersAuthConfirmJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("PatientAuthConfirmRequest") org.openapis.openapi.models.shared.PatientAuthConfirmRequest patientAuthConfirmRequest, @JsonProperty("X-CM-ID") String xCmId) {
+        this.authorization = authorization;
+        this.patientAuthConfirmRequest = patientAuthConfirmRequest;
+        this.xCmId = xCmId;
+  }
 }

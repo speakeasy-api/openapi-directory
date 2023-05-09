@@ -15,6 +15,7 @@ public class FourHundredAndOne {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public FourHundredAndOne withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class FourHundredAndOne {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public FourHundredAndOne withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class FourHundredAndOne {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Long result;
+
     public FourHundredAndOne withResult(Long result) {
         this.result = result;
         return this;
     }
     
+    public FourHundredAndOne(){}
 }

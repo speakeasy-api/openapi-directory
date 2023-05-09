@@ -15,6 +15,7 @@ public class DestinyMilestonesDestinyMilestoneActivityVariantCompletionStatus {
      */
     
     public Boolean completed;
+
     public DestinyMilestonesDestinyMilestoneActivityVariantCompletionStatus withCompleted(Boolean completed) {
         this.completed = completed;
         return this;
@@ -25,9 +26,11 @@ public class DestinyMilestonesDestinyMilestoneActivityVariantCompletionStatus {
      */
     
     public DestinyMilestonesDestinyMilestoneActivityPhase[] phases;
+
     public DestinyMilestonesDestinyMilestoneActivityVariantCompletionStatus withPhases(DestinyMilestonesDestinyMilestoneActivityPhase[] phases) {
         this.phases = phases;
         return this;
     }
     
+    public DestinyMilestonesDestinyMilestoneActivityVariantCompletionStatus(){}
 }

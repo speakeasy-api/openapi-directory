@@ -15,6 +15,7 @@ public class CloudWatchMetricsDataSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusCode")
     public CloudWatchMetricDataStatusCodeEnum statusCode;
+
     public CloudWatchMetricsDataSummary withStatusCode(CloudWatchMetricDataStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +24,11 @@ public class CloudWatchMetricsDataSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimestampMetricValuePairList")
     public TimestampMetricValuePair[] timestampMetricValuePairList;
+
     public CloudWatchMetricsDataSummary withTimestampMetricValuePairList(TimestampMetricValuePair[] timestampMetricValuePairList) {
         this.timestampMetricValuePairList = timestampMetricValuePairList;
         return this;
     }
     
+    public CloudWatchMetricsDataSummary(){}
 }

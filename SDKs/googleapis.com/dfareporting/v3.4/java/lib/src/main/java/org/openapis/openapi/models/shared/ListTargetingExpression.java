@@ -18,9 +18,11 @@ public class ListTargetingExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public ListTargetingExpression withExpression(String expression) {
         this.expression = expression;
         return this;
     }
     
+    public ListTargetingExpression(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportResourcesToDraftAppVersionResponse {
@@ -12,6 +13,7 @@ public class ImportResourcesToDraftAppVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public ImportResourcesToDraftAppVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ImportResourcesToDraftAppVersionResponse {
      */
     
     public Object conflictException;
+
     public ImportResourcesToDraftAppVersionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ImportResourcesToDraftAppVersionResponse {
     
     
     public String contentType;
+
     public ImportResourcesToDraftAppVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ImportResourcesToDraftAppVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportResourcesToDraftAppVersionResponse importResourcesToDraftAppVersionResponse;
+
     public ImportResourcesToDraftAppVersionResponse withImportResourcesToDraftAppVersionResponse(org.openapis.openapi.models.shared.ImportResourcesToDraftAppVersionResponse importResourcesToDraftAppVersionResponse) {
         this.importResourcesToDraftAppVersionResponse = importResourcesToDraftAppVersionResponse;
         return this;
@@ -49,6 +54,7 @@ public class ImportResourcesToDraftAppVersionResponse {
      */
     
     public Object internalServerException;
+
     public ImportResourcesToDraftAppVersionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class ImportResourcesToDraftAppVersionResponse {
     
     
     public Integer statusCode;
+
     public ImportResourcesToDraftAppVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ImportResourcesToDraftAppVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportResourcesToDraftAppVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ImportResourcesToDraftAppVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ImportResourcesToDraftAppVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class ImportResourcesToDraftAppVersionResponse {
      */
     
     public Object throttlingException;
+
     public ImportResourcesToDraftAppVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ImportResourcesToDraftAppVersionResponse {
      */
     
     public Object validationException;
+
     public ImportResourcesToDraftAppVersionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ImportResourcesToDraftAppVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

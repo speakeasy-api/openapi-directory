@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesLineGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineIdentifier")
     public String[] lineIdentifier;
+
     public TflApiPresentationEntitiesLineGroup withLineIdentifier(String[] lineIdentifier) {
         this.lineIdentifier = lineIdentifier;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesLineGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("naptanIdReference")
     public String naptanIdReference;
+
     public TflApiPresentationEntitiesLineGroup withNaptanIdReference(String naptanIdReference) {
         this.naptanIdReference = naptanIdReference;
         return this;
@@ -28,9 +30,11 @@ public class TflApiPresentationEntitiesLineGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stationAtcoCode")
     public String stationAtcoCode;
+
     public TflApiPresentationEntitiesLineGroup withStationAtcoCode(String stationAtcoCode) {
         this.stationAtcoCode = stationAtcoCode;
         return this;
     }
     
+    public TflApiPresentationEntitiesLineGroup(){}
 }

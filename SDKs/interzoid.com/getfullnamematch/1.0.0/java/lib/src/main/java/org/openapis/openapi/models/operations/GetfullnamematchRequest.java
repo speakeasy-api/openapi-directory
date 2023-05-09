@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetfullnamematchRequest {
@@ -12,6 +13,7 @@ public class GetfullnamematchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fullname")
     public String fullname;
+
     public GetfullnamematchRequest withFullname(String fullname) {
         this.fullname = fullname;
         return this;
@@ -22,9 +24,14 @@ public class GetfullnamematchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public String license;
+
     public GetfullnamematchRequest withLicense(String license) {
         this.license = license;
         return this;
     }
     
+    public GetfullnamematchRequest(@JsonProperty("fullname") String fullname, @JsonProperty("license") String license) {
+        this.fullname = fullname;
+        this.license = license;
+  }
 }

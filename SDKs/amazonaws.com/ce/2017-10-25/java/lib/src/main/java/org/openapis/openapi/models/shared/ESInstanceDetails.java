@@ -15,6 +15,7 @@ public class ESInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentGeneration")
     public Boolean currentGeneration;
+
     public ESInstanceDetails withCurrentGeneration(Boolean currentGeneration) {
         this.currentGeneration = currentGeneration;
         return this;
@@ -23,6 +24,7 @@ public class ESInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceClass")
     public String instanceClass;
+
     public ESInstanceDetails withInstanceClass(String instanceClass) {
         this.instanceClass = instanceClass;
         return this;
@@ -31,6 +33,7 @@ public class ESInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceSize")
     public String instanceSize;
+
     public ESInstanceDetails withInstanceSize(String instanceSize) {
         this.instanceSize = instanceSize;
         return this;
@@ -39,6 +42,7 @@ public class ESInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public ESInstanceDetails withRegion(String region) {
         this.region = region;
         return this;
@@ -47,9 +51,11 @@ public class ESInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeFlexEligible")
     public Boolean sizeFlexEligible;
+
     public ESInstanceDetails withSizeFlexEligible(Boolean sizeFlexEligible) {
         this.sizeFlexEligible = sizeFlexEligible;
         return this;
     }
     
+    public ESInstanceDetails(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -16,6 +18,7 @@ public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsc
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
     public Long idAccount;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withIdAccount(Long idAccount) {
         this.idAccount = idAccount;
         return this;
@@ -23,6 +26,7 @@ public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsc
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
     public Long idConnection;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -30,6 +34,7 @@ public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsc
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_transactionscluster")
     public Long idTransactionscluster;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withIdTransactionscluster(Long idTransactionscluster) {
         this.idTransactionscluster = idTransactionscluster;
         return this;
@@ -40,9 +45,16 @@ public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsc
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
     }
     
+    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest(@JsonProperty("id_account") Long idAccount, @JsonProperty("id_connection") Long idConnection, @JsonProperty("id_transactionscluster") Long idTransactionscluster, @JsonProperty("id_user") String idUser) {
+        this.idAccount = idAccount;
+        this.idConnection = idConnection;
+        this.idTransactionscluster = idTransactionscluster;
+        this.idUser = idUser;
+  }
 }

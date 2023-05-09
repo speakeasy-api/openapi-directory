@@ -18,6 +18,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceResourceMetadata withAuthor(String author) {
         this.author = author;
         return this;
@@ -29,6 +30,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isbn")
     public String isbn;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceResourceMetadata withIsbn(String isbn) {
         this.isbn = isbn;
         return this;
@@ -40,6 +42,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issn")
     public String issn;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceResourceMetadata withIssn(String issn) {
         this.issn = issn;
         return this;
@@ -51,6 +54,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mms_id")
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceResourceMetadataMmsId mmsId;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceResourceMetadata withMmsId(GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceResourceMetadataMmsId mmsId) {
         this.mmsId = mmsId;
         return this;
@@ -62,6 +66,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publication_place")
     public String publicationPlace;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceResourceMetadata withPublicationPlace(String publicationPlace) {
         this.publicationPlace = publicationPlace;
         return this;
@@ -73,6 +78,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publication_year")
     public String publicationYear;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceResourceMetadata withPublicationYear(String publicationYear) {
         this.publicationYear = publicationYear;
         return this;
@@ -84,6 +90,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher")
     public String publisher;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceResourceMetadata withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
@@ -95,9 +102,11 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceResourceMetadata withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceResourceMetadata(){}
 }

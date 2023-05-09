@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateWebACLResponse {
     
     public String contentType;
+
     public DisassociateWebACLResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateWebACLResponse {
      */
     
     public java.util.Map<String, Object> disassociateWebACLResponse;
+
     public DisassociateWebACLResponse withDisassociateWebACLResponse(java.util.Map<String, Object> disassociateWebACLResponse) {
         this.disassociateWebACLResponse = disassociateWebACLResponse;
         return this;
@@ -26,6 +29,7 @@ public class DisassociateWebACLResponse {
     
     
     public Integer statusCode;
+
     public DisassociateWebACLResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DisassociateWebACLResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateWebACLResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DisassociateWebACLResponse {
      */
     
     public Object wafInternalErrorException;
+
     public DisassociateWebACLResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateWebACLResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public DisassociateWebACLResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateWebACLResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public DisassociateWebACLResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -73,9 +81,14 @@ public class DisassociateWebACLResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public DisassociateWebACLResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public DisassociateWebACLResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

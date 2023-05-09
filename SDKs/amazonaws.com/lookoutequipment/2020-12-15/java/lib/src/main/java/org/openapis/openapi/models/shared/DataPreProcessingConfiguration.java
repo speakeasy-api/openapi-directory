@@ -15,9 +15,11 @@ public class DataPreProcessingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetSamplingRate")
     public TargetSamplingRateEnum targetSamplingRate;
+
     public DataPreProcessingConfiguration withTargetSamplingRate(TargetSamplingRateEnum targetSamplingRate) {
         this.targetSamplingRate = targetSamplingRate;
         return this;
     }
     
+    public DataPreProcessingConfiguration(){}
 }

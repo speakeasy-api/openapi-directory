@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetJobRunRequest {
     @JsonProperty("JobName")
     public String jobName;
+
     public GetJobRunRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -19,6 +20,7 @@ public class GetJobRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredecessorsIncluded")
     public Boolean predecessorsIncluded;
+
     public GetJobRunRequest withPredecessorsIncluded(Boolean predecessorsIncluded) {
         this.predecessorsIncluded = predecessorsIncluded;
         return this;
@@ -26,9 +28,14 @@ public class GetJobRunRequest {
     
     @JsonProperty("RunId")
     public String runId;
+
     public GetJobRunRequest withRunId(String runId) {
         this.runId = runId;
         return this;
     }
     
+    public GetJobRunRequest(@JsonProperty("JobName") String jobName, @JsonProperty("RunId") String runId) {
+        this.jobName = jobName;
+        this.runId = runId;
+  }
 }

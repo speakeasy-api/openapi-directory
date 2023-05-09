@@ -22,6 +22,7 @@ public class AnomalousLogGroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ImpactEndTime")
     public OffsetDateTime impactEndTime;
+
     public AnomalousLogGroup withImpactEndTime(OffsetDateTime impactEndTime) {
         this.impactEndTime = impactEndTime;
         return this;
@@ -32,6 +33,7 @@ public class AnomalousLogGroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ImpactStartTime")
     public OffsetDateTime impactStartTime;
+
     public AnomalousLogGroup withImpactStartTime(OffsetDateTime impactStartTime) {
         this.impactStartTime = impactStartTime;
         return this;
@@ -40,6 +42,7 @@ public class AnomalousLogGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogAnomalyShowcases")
     public LogAnomalyShowcase[] logAnomalyShowcases;
+
     public AnomalousLogGroup withLogAnomalyShowcases(LogAnomalyShowcase[] logAnomalyShowcases) {
         this.logAnomalyShowcases = logAnomalyShowcases;
         return this;
@@ -48,6 +51,7 @@ public class AnomalousLogGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogGroupName")
     public String logGroupName;
+
     public AnomalousLogGroup withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -56,9 +60,11 @@ public class AnomalousLogGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfLogLinesScanned")
     public Long numberOfLogLinesScanned;
+
     public AnomalousLogGroup withNumberOfLogLinesScanned(Long numberOfLogLinesScanned) {
         this.numberOfLogLinesScanned = numberOfLogLinesScanned;
         return this;
     }
     
+    public AnomalousLogGroup(){}
 }

@@ -12,6 +12,7 @@ public class SyncDeploymentJobRequestBody {
      */
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public SyncDeploymentJobRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -22,9 +23,14 @@ public class SyncDeploymentJobRequestBody {
      */
     @JsonProperty("fleet")
     public String fleet;
+
     public SyncDeploymentJobRequestBody withFleet(String fleet) {
         this.fleet = fleet;
         return this;
     }
     
+    public SyncDeploymentJobRequestBody(@JsonProperty("clientRequestToken") String clientRequestToken, @JsonProperty("fleet") String fleet) {
+        this.clientRequestToken = clientRequestToken;
+        this.fleet = fleet;
+  }
 }

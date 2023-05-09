@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPaymentsResponse {
     
     public String contentType;
+
     public ListPaymentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPaymentsResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedPaymentReadList paginatedPaymentReadList;
+
     public ListPaymentsResponse withPaginatedPaymentReadList(org.openapis.openapi.models.shared.PaginatedPaymentReadList paginatedPaymentReadList) {
         this.paginatedPaymentReadList = paginatedPaymentReadList;
         return this;
@@ -26,6 +29,7 @@ public class ListPaymentsResponse {
     
     
     public Integer statusCode;
+
     public ListPaymentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListPaymentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPaymentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ListPaymentsResponse {
      */
     
     public java.util.Map<String, Object> listPayments400ApplicationJSONObject;
+
     public ListPaymentsResponse withListPayments400ApplicationJSONObject(java.util.Map<String, Object> listPayments400ApplicationJSONObject) {
         this.listPayments400ApplicationJSONObject = listPayments400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ListPaymentsResponse {
      */
     
     public java.util.Map<String, Object> listPayments401ApplicationJSONObject;
+
     public ListPaymentsResponse withListPayments401ApplicationJSONObject(java.util.Map<String, Object> listPayments401ApplicationJSONObject) {
         this.listPayments401ApplicationJSONObject = listPayments401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class ListPaymentsResponse {
      */
     
     public java.util.Map<String, Object> listPayments403ApplicationJSONObject;
+
     public ListPaymentsResponse withListPayments403ApplicationJSONObject(java.util.Map<String, Object> listPayments403ApplicationJSONObject) {
         this.listPayments403ApplicationJSONObject = listPayments403ApplicationJSONObject;
         return this;
     }
     
+    public ListPaymentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

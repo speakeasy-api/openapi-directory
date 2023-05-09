@@ -18,6 +18,7 @@ public class ItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerName")
     public String containerName;
+
     public ItemMetadata withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
@@ -29,6 +30,7 @@ public class ItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentLanguage")
     public String contentLanguage;
+
     public ItemMetadata withContentLanguage(String contentLanguage) {
         this.contentLanguage = contentLanguage;
         return this;
@@ -40,6 +42,7 @@ public class ItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextAttributes")
     public ContextAttribute[] contextAttributes;
+
     public ItemMetadata withContextAttributes(ContextAttribute[] contextAttributes) {
         this.contextAttributes = contextAttributes;
         return this;
@@ -51,6 +54,7 @@ public class ItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public ItemMetadata withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -62,6 +66,7 @@ public class ItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash")
     public String hash;
+
     public ItemMetadata withHash(String hash) {
         this.hash = hash;
         return this;
@@ -73,6 +78,7 @@ public class ItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interactions")
     public Interaction[] interactions;
+
     public ItemMetadata withInteractions(Interaction[] interactions) {
         this.interactions = interactions;
         return this;
@@ -84,6 +90,7 @@ public class ItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public String[] keywords;
+
     public ItemMetadata withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
@@ -95,6 +102,7 @@ public class ItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public ItemMetadata withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -106,6 +114,7 @@ public class ItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectType")
     public String objectType;
+
     public ItemMetadata withObjectType(String objectType) {
         this.objectType = objectType;
         return this;
@@ -117,6 +126,7 @@ public class ItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchQualityMetadata")
     public SearchQualityMetadata searchQualityMetadata;
+
     public ItemMetadata withSearchQualityMetadata(SearchQualityMetadata searchQualityMetadata) {
         this.searchQualityMetadata = searchQualityMetadata;
         return this;
@@ -128,6 +138,7 @@ public class ItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceRepositoryUrl")
     public String sourceRepositoryUrl;
+
     public ItemMetadata withSourceRepositoryUrl(String sourceRepositoryUrl) {
         this.sourceRepositoryUrl = sourceRepositoryUrl;
         return this;
@@ -139,6 +150,7 @@ public class ItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ItemMetadata withTitle(String title) {
         this.title = title;
         return this;
@@ -150,9 +162,11 @@ public class ItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public ItemMetadata withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ItemMetadata(){}
 }

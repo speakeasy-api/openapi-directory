@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeBundleTasksResultBundleTasks {
     
     public String bundleId;
+
     public DescribeBundleTasksResultBundleTasks withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeBundleTasksResultBundleTasks {
     
     
     public DescribeBundleTasksResultBundleTasksBundleTaskError bundleTaskError;
+
     public DescribeBundleTasksResultBundleTasks withBundleTaskError(DescribeBundleTasksResultBundleTasksBundleTaskError bundleTaskError) {
         this.bundleTaskError = bundleTaskError;
         return this;
@@ -26,6 +28,7 @@ public class DescribeBundleTasksResultBundleTasks {
     
     
     public String instanceId;
+
     public DescribeBundleTasksResultBundleTasks withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeBundleTasksResultBundleTasks {
     
     
     public String progress;
+
     public DescribeBundleTasksResultBundleTasks withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -40,6 +44,7 @@ public class DescribeBundleTasksResultBundleTasks {
     
     
     public OffsetDateTime startTime;
+
     public DescribeBundleTasksResultBundleTasks withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -47,6 +52,7 @@ public class DescribeBundleTasksResultBundleTasks {
     
     
     public DescribeBundleTasksResultBundleTasksStateEnum state;
+
     public DescribeBundleTasksResultBundleTasks withState(DescribeBundleTasksResultBundleTasksStateEnum state) {
         this.state = state;
         return this;
@@ -54,6 +60,7 @@ public class DescribeBundleTasksResultBundleTasks {
     
     
     public DescribeBundleTasksResultBundleTasksStorage storage;
+
     public DescribeBundleTasksResultBundleTasks withStorage(DescribeBundleTasksResultBundleTasksStorage storage) {
         this.storage = storage;
         return this;
@@ -61,9 +68,11 @@ public class DescribeBundleTasksResultBundleTasks {
     
     
     public OffsetDateTime updateTime;
+
     public DescribeBundleTasksResultBundleTasks withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public DescribeBundleTasksResultBundleTasks(){}
 }

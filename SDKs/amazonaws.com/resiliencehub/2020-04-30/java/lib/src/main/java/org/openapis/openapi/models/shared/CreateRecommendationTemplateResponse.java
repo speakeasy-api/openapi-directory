@@ -15,9 +15,11 @@ public class CreateRecommendationTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationTemplate")
     public RecommendationTemplate recommendationTemplate;
+
     public CreateRecommendationTemplateResponse withRecommendationTemplate(RecommendationTemplate recommendationTemplate) {
         this.recommendationTemplate = recommendationTemplate;
         return this;
     }
     
+    public CreateRecommendationTemplateResponse(){}
 }

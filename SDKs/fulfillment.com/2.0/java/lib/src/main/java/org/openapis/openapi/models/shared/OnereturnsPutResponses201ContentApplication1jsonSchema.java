@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OnereturnsPutResponses201ContentApplication1jsonSchema {
     @JsonProperty("items")
     public OnereturnsPutResponses201ContentApplication1jsonSchemaItems[] items;
+
     public OnereturnsPutResponses201ContentApplication1jsonSchema withItems(OnereturnsPutResponses201ContentApplication1jsonSchemaItems[] items) {
         this.items = items;
         return this;
@@ -22,6 +23,7 @@ public class OnereturnsPutResponses201ContentApplication1jsonSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantOrderId")
     public String merchantOrderId;
+
     public OnereturnsPutResponses201ContentApplication1jsonSchema withMerchantOrderId(String merchantOrderId) {
         this.merchantOrderId = merchantOrderId;
         return this;
@@ -29,6 +31,7 @@ public class OnereturnsPutResponses201ContentApplication1jsonSchema {
     
     @JsonProperty("recipient")
     public OnereturnsPutResponses201ContentApplication1jsonSchemaConsigneeV2 recipient;
+
     public OnereturnsPutResponses201ContentApplication1jsonSchema withRecipient(OnereturnsPutResponses201ContentApplication1jsonSchemaConsigneeV2 recipient) {
         this.recipient = recipient;
         return this;
@@ -36,9 +39,15 @@ public class OnereturnsPutResponses201ContentApplication1jsonSchema {
     
     @JsonProperty("rmaNumber")
     public String rmaNumber;
+
     public OnereturnsPutResponses201ContentApplication1jsonSchema withRmaNumber(String rmaNumber) {
         this.rmaNumber = rmaNumber;
         return this;
     }
     
+    public OnereturnsPutResponses201ContentApplication1jsonSchema(@JsonProperty("items") OnereturnsPutResponses201ContentApplication1jsonSchemaItems[] items, @JsonProperty("recipient") OnereturnsPutResponses201ContentApplication1jsonSchemaConsigneeV2 recipient, @JsonProperty("rmaNumber") String rmaNumber) {
+        this.items = items;
+        this.recipient = recipient;
+        this.rmaNumber = rmaNumber;
+  }
 }

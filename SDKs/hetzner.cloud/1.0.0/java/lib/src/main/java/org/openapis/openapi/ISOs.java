@@ -65,11 +65,9 @@ public class ISOs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIsosResponse res = new org.openapis.openapi.models.operations.GetIsosResponse() {{
+        org.openapis.openapi.models.operations.GetIsosResponse res = new org.openapis.openapi.models.operations.GetIsosResponse(contentType, httpRes.statusCode()) {{
             getIsos200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class ISOs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIsosIdResponse res = new org.openapis.openapi.models.operations.GetIsosIdResponse() {{
+        org.openapis.openapi.models.operations.GetIsosIdResponse res = new org.openapis.openapi.models.operations.GetIsosIdResponse(contentType, httpRes.statusCode()) {{
             getIsosId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

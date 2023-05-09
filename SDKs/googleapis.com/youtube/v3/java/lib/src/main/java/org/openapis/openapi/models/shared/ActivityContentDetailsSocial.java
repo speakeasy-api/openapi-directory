@@ -18,6 +18,7 @@ public class ActivityContentDetailsSocial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public ActivityContentDetailsSocial withAuthor(String author) {
         this.author = author;
         return this;
@@ -29,6 +30,7 @@ public class ActivityContentDetailsSocial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public ActivityContentDetailsSocial withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -40,6 +42,7 @@ public class ActivityContentDetailsSocial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceUrl")
     public String referenceUrl;
+
     public ActivityContentDetailsSocial withReferenceUrl(String referenceUrl) {
         this.referenceUrl = referenceUrl;
         return this;
@@ -51,6 +54,7 @@ public class ActivityContentDetailsSocial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public ResourceId resourceId;
+
     public ActivityContentDetailsSocial withResourceId(ResourceId resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -62,9 +66,11 @@ public class ActivityContentDetailsSocial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ActivityContentDetailsSocialTypeEnum type;
+
     public ActivityContentDetailsSocial withType(ActivityContentDetailsSocialTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ActivityContentDetailsSocial(){}
 }

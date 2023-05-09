@@ -18,6 +18,7 @@ public class RestorePlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupPlan")
     public String backupPlan;
+
     public RestorePlan withBackupPlan(String backupPlan) {
         this.backupPlan = backupPlan;
         return this;
@@ -29,6 +30,7 @@ public class RestorePlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public RestorePlan withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -40,6 +42,7 @@ public class RestorePlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public RestorePlan withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class RestorePlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RestorePlan withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class RestorePlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public RestorePlan withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -73,6 +78,7 @@ public class RestorePlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public RestorePlan withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,6 +90,7 @@ public class RestorePlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RestorePlan withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class RestorePlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restoreConfig")
     public RestoreConfig restoreConfig;
+
     public RestorePlan withRestoreConfig(RestoreConfig restoreConfig) {
         this.restoreConfig = restoreConfig;
         return this;
@@ -106,6 +114,7 @@ public class RestorePlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public RestorePlan withUid(String uid) {
         this.uid = uid;
         return this;
@@ -117,9 +126,11 @@ public class RestorePlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public RestorePlan withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public RestorePlan(){}
 }

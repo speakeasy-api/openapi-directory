@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EgcerResponse {
     
     public String contentType;
+
     public EgcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EgcerResponse {
     
     
     public Integer statusCode;
+
     public EgcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EgcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EgcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class EgcerResponse {
      */
     
     public Egcer400ApplicationJSON egcer400ApplicationJSONObject;
+
     public EgcerResponse withEgcer400ApplicationJSONObject(Egcer400ApplicationJSON egcer400ApplicationJSONObject) {
         this.egcer400ApplicationJSONObject = egcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class EgcerResponse {
      */
     
     public Egcer401ApplicationJSON egcer401ApplicationJSONObject;
+
     public EgcerResponse withEgcer401ApplicationJSONObject(Egcer401ApplicationJSON egcer401ApplicationJSONObject) {
         this.egcer401ApplicationJSONObject = egcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class EgcerResponse {
      */
     
     public Egcer404ApplicationJSON egcer404ApplicationJSONObject;
+
     public EgcerResponse withEgcer404ApplicationJSONObject(Egcer404ApplicationJSON egcer404ApplicationJSONObject) {
         this.egcer404ApplicationJSONObject = egcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class EgcerResponse {
      */
     
     public Egcer500ApplicationJSON egcer500ApplicationJSONObject;
+
     public EgcerResponse withEgcer500ApplicationJSONObject(Egcer500ApplicationJSON egcer500ApplicationJSONObject) {
         this.egcer500ApplicationJSONObject = egcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class EgcerResponse {
      */
     
     public Egcer502ApplicationJSON egcer502ApplicationJSONObject;
+
     public EgcerResponse withEgcer502ApplicationJSONObject(Egcer502ApplicationJSON egcer502ApplicationJSONObject) {
         this.egcer502ApplicationJSONObject = egcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class EgcerResponse {
      */
     
     public Egcer503ApplicationJSON egcer503ApplicationJSONObject;
+
     public EgcerResponse withEgcer503ApplicationJSONObject(Egcer503ApplicationJSON egcer503ApplicationJSONObject) {
         this.egcer503ApplicationJSONObject = egcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class EgcerResponse {
      */
     
     public Egcer504ApplicationJSON egcer504ApplicationJSONObject;
+
     public EgcerResponse withEgcer504ApplicationJSONObject(Egcer504ApplicationJSON egcer504ApplicationJSONObject) {
         this.egcer504ApplicationJSONObject = egcer504ApplicationJSONObject;
         return this;
     }
     
+    public EgcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

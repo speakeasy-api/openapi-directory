@@ -15,6 +15,7 @@ public class VolumeseriesinfoVolumeSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issue")
     public VolumeseriesinfoVolumeSeriesIssue[] issue;
+
     public VolumeseriesinfoVolumeSeries withIssue(VolumeseriesinfoVolumeSeriesIssue[] issue) {
         this.issue = issue;
         return this;
@@ -26,6 +27,7 @@ public class VolumeseriesinfoVolumeSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderNumber")
     public Integer orderNumber;
+
     public VolumeseriesinfoVolumeSeries withOrderNumber(Integer orderNumber) {
         this.orderNumber = orderNumber;
         return this;
@@ -37,6 +39,7 @@ public class VolumeseriesinfoVolumeSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seriesBookType")
     public String seriesBookType;
+
     public VolumeseriesinfoVolumeSeries withSeriesBookType(String seriesBookType) {
         this.seriesBookType = seriesBookType;
         return this;
@@ -48,9 +51,11 @@ public class VolumeseriesinfoVolumeSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seriesId")
     public String seriesId;
+
     public VolumeseriesinfoVolumeSeries withSeriesId(String seriesId) {
         this.seriesId = seriesId;
         return this;
     }
     
+    public VolumeseriesinfoVolumeSeries(){}
 }

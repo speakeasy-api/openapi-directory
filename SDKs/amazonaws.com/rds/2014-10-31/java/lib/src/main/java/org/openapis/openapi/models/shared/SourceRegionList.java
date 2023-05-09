@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SourceRegionList {
     
     public String endpoint;
+
     public SourceRegionList withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -19,6 +20,7 @@ public class SourceRegionList {
     
     
     public String regionName;
+
     public SourceRegionList withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -26,6 +28,7 @@ public class SourceRegionList {
     
     
     public String status;
+
     public SourceRegionList withStatus(String status) {
         this.status = status;
         return this;
@@ -33,9 +36,11 @@ public class SourceRegionList {
     
     
     public Boolean supportsDBInstanceAutomatedBackupsReplication;
+
     public SourceRegionList withSupportsDBInstanceAutomatedBackupsReplication(Boolean supportsDBInstanceAutomatedBackupsReplication) {
         this.supportsDBInstanceAutomatedBackupsReplication = supportsDBInstanceAutomatedBackupsReplication;
         return this;
     }
     
+    public SourceRegionList(){}
 }

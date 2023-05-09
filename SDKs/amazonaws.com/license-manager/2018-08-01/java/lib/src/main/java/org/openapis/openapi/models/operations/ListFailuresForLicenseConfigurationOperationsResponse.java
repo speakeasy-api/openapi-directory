@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFailuresForLicenseConfigurationOperationsResponse {
@@ -12,6 +13,7 @@ public class ListFailuresForLicenseConfigurationOperationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListFailuresForLicenseConfigurationOperationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListFailuresForLicenseConfigurationOperationsResponse {
      */
     
     public Object authorizationException;
+
     public ListFailuresForLicenseConfigurationOperationsResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class ListFailuresForLicenseConfigurationOperationsResponse {
     
     
     public String contentType;
+
     public ListFailuresForLicenseConfigurationOperationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListFailuresForLicenseConfigurationOperationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListFailuresForLicenseConfigurationOperationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class ListFailuresForLicenseConfigurationOperationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFailuresForLicenseConfigurationOperationsResponse listFailuresForLicenseConfigurationOperationsResponse;
+
     public ListFailuresForLicenseConfigurationOperationsResponse withListFailuresForLicenseConfigurationOperationsResponse(org.openapis.openapi.models.shared.ListFailuresForLicenseConfigurationOperationsResponse listFailuresForLicenseConfigurationOperationsResponse) {
         this.listFailuresForLicenseConfigurationOperationsResponse = listFailuresForLicenseConfigurationOperationsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListFailuresForLicenseConfigurationOperationsResponse {
      */
     
     public Object rateLimitExceededException;
+
     public ListFailuresForLicenseConfigurationOperationsResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class ListFailuresForLicenseConfigurationOperationsResponse {
     
     
     public Integer statusCode;
+
     public ListFailuresForLicenseConfigurationOperationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListFailuresForLicenseConfigurationOperationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFailuresForLicenseConfigurationOperationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListFailuresForLicenseConfigurationOperationsResponse {
      */
     
     public Object serverInternalException;
+
     public ListFailuresForLicenseConfigurationOperationsResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
     }
     
+    public ListFailuresForLicenseConfigurationOperationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

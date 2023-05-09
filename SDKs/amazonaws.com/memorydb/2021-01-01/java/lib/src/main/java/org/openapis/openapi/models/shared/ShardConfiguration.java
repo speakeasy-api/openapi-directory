@@ -15,6 +15,7 @@ public class ShardConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaCount")
     public Long replicaCount;
+
     public ShardConfiguration withReplicaCount(Long replicaCount) {
         this.replicaCount = replicaCount;
         return this;
@@ -23,9 +24,11 @@ public class ShardConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Slots")
     public String slots;
+
     public ShardConfiguration withSlots(String slots) {
         this.slots = slots;
         return this;
     }
     
+    public ShardConfiguration(){}
 }

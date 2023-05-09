@@ -20,6 +20,7 @@ public class GenerateNetworkCameraSnapshotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullframe")
     public Boolean fullframe;
+
     public GenerateNetworkCameraSnapshotRequestBody withFullframe(Boolean fullframe) {
         this.fullframe = fullframe;
         return this;
@@ -33,9 +34,11 @@ public class GenerateNetworkCameraSnapshotRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public GenerateNetworkCameraSnapshotRequestBody withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public GenerateNetworkCameraSnapshotRequestBody(){}
 }

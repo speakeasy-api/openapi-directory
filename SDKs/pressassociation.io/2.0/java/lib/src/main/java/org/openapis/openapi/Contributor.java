@@ -60,11 +60,9 @@ public class Contributor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContributorResponse res = new org.openapis.openapi.models.operations.GetContributorResponse() {{
+        org.openapis.openapi.models.operations.GetContributorResponse res = new org.openapis.openapi.models.operations.GetContributorResponse(contentType, httpRes.statusCode()) {{
             getContributor200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Contributor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListContributorResponse res = new org.openapis.openapi.models.operations.ListContributorResponse() {{
+        org.openapis.openapi.models.operations.ListContributorResponse res = new org.openapis.openapi.models.operations.ListContributorResponse(contentType, httpRes.statusCode()) {{
             listContributor200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

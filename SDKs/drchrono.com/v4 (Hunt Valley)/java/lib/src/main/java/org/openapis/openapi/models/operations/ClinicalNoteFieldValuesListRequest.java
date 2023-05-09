@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ClinicalNoteFieldValuesListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
     public Long appointment;
+
     public ClinicalNoteFieldValuesListRequest withAppointment(Long appointment) {
         this.appointment = appointment;
         return this;
@@ -16,6 +17,7 @@ public class ClinicalNoteFieldValuesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clinical_note_field")
     public Long clinicalNoteField;
+
     public ClinicalNoteFieldValuesListRequest withClinicalNoteField(Long clinicalNoteField) {
         this.clinicalNoteField = clinicalNoteField;
         return this;
@@ -23,6 +25,7 @@ public class ClinicalNoteFieldValuesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clinical_note_template")
     public Long clinicalNoteTemplate;
+
     public ClinicalNoteFieldValuesListRequest withClinicalNoteTemplate(Long clinicalNoteTemplate) {
         this.clinicalNoteTemplate = clinicalNoteTemplate;
         return this;
@@ -30,6 +33,7 @@ public class ClinicalNoteFieldValuesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ClinicalNoteFieldValuesListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -37,6 +41,7 @@ public class ClinicalNoteFieldValuesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public ClinicalNoteFieldValuesListRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -44,6 +49,7 @@ public class ClinicalNoteFieldValuesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public ClinicalNoteFieldValuesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -51,9 +57,11 @@ public class ClinicalNoteFieldValuesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public ClinicalNoteFieldValuesListRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public ClinicalNoteFieldValuesListRequest(){}
 }

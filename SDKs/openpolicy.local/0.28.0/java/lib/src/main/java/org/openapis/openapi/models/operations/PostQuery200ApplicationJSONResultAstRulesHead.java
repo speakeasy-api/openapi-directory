@@ -15,6 +15,7 @@ public class PostQuery200ApplicationJSONResultAstRulesHead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public PostQuery200ApplicationJSONResultAstRulesHeadKey key;
+
     public PostQuery200ApplicationJSONResultAstRulesHead withKey(PostQuery200ApplicationJSONResultAstRulesHeadKey key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class PostQuery200ApplicationJSONResultAstRulesHead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PostQuery200ApplicationJSONResultAstRulesHead withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PostQuery200ApplicationJSONResultAstRulesHead(){}
 }

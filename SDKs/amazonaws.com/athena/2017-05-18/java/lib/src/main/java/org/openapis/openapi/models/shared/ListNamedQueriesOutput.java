@@ -15,6 +15,7 @@ public class ListNamedQueriesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NamedQueryIds")
     public String[] namedQueryIds;
+
     public ListNamedQueriesOutput withNamedQueryIds(String[] namedQueryIds) {
         this.namedQueryIds = namedQueryIds;
         return this;
@@ -23,9 +24,11 @@ public class ListNamedQueriesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListNamedQueriesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListNamedQueriesOutput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CustomFieldsUploadResponse {
     
     public String contentType;
+
     public CustomFieldsUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CustomFieldsUploadResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorMessage errorMessage;
+
     public CustomFieldsUploadResponse withErrorMessage(org.openapis.openapi.models.shared.ErrorMessage errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -26,6 +29,7 @@ public class CustomFieldsUploadResponse {
     
     
     public Integer statusCode;
+
     public CustomFieldsUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CustomFieldsUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CustomFieldsUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class CustomFieldsUploadResponse {
      */
     
     public java.util.Map<String, Object> customFieldsUpload200ApplicationJSONObject;
+
     public CustomFieldsUploadResponse withCustomFieldsUpload200ApplicationJSONObject(java.util.Map<String, Object> customFieldsUpload200ApplicationJSONObject) {
         this.customFieldsUpload200ApplicationJSONObject = customFieldsUpload200ApplicationJSONObject;
         return this;
     }
     
+    public CustomFieldsUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

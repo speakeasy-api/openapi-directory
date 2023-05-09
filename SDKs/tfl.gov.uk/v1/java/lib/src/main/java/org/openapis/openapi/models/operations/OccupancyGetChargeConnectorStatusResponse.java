@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OccupancyGetChargeConnectorStatusResponse {
     
     public byte[] body;
+
     public OccupancyGetChargeConnectorStatusResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class OccupancyGetChargeConnectorStatusResponse {
     
     
     public String contentType;
+
     public OccupancyGetChargeConnectorStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class OccupancyGetChargeConnectorStatusResponse {
     
     
     public Integer statusCode;
+
     public OccupancyGetChargeConnectorStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class OccupancyGetChargeConnectorStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OccupancyGetChargeConnectorStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class OccupancyGetChargeConnectorStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesChargeConnectorOccupancy[] tflApiPresentationEntitiesChargeConnectorOccupancies;
+
     public OccupancyGetChargeConnectorStatusResponse withTflApiPresentationEntitiesChargeConnectorOccupancies(org.openapis.openapi.models.shared.TflApiPresentationEntitiesChargeConnectorOccupancy[] tflApiPresentationEntitiesChargeConnectorOccupancies) {
         this.tflApiPresentationEntitiesChargeConnectorOccupancies = tflApiPresentationEntitiesChargeConnectorOccupancies;
         return this;
     }
     
+    public OccupancyGetChargeConnectorStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

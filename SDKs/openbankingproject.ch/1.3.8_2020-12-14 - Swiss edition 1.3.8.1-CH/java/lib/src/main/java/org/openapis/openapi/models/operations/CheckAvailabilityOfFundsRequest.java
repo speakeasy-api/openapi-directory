@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckAvailabilityOfFundsRequest {
@@ -14,6 +15,7 @@ public class CheckAvailabilityOfFundsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public CheckAvailabilityOfFundsRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -24,6 +26,7 @@ public class CheckAvailabilityOfFundsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
     public String digest;
+
     public CheckAvailabilityOfFundsRequest withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -35,6 +38,7 @@ public class CheckAvailabilityOfFundsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
     public String signature;
+
     public CheckAvailabilityOfFundsRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -47,6 +51,7 @@ public class CheckAvailabilityOfFundsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
     public String tppSignatureCertificate;
+
     public CheckAvailabilityOfFundsRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
         this.tppSignatureCertificate = tppSignatureCertificate;
         return this;
@@ -57,6 +62,7 @@ public class CheckAvailabilityOfFundsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
     public String xRequestID;
+
     public CheckAvailabilityOfFundsRequest withXRequestID(String xRequestID) {
         this.xRequestID = xRequestID;
         return this;
@@ -68,9 +74,14 @@ public class CheckAvailabilityOfFundsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ConfirmationOfFunds confirmationOfFunds;
+
     public CheckAvailabilityOfFundsRequest withConfirmationOfFunds(org.openapis.openapi.models.shared.ConfirmationOfFunds confirmationOfFunds) {
         this.confirmationOfFunds = confirmationOfFunds;
         return this;
     }
     
+    public CheckAvailabilityOfFundsRequest(@JsonProperty("X-Request-ID") String xRequestID, @JsonProperty("confirmationOfFunds") org.openapis.openapi.models.shared.ConfirmationOfFunds confirmationOfFunds) {
+        this.xRequestID = xRequestID;
+        this.confirmationOfFunds = confirmationOfFunds;
+  }
 }

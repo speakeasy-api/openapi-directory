@@ -18,6 +18,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public ClearorderFormMessages200ApplicationJSONShippingDataAddress address;
+
     public ClearorderFormMessages200ApplicationJSONShippingData withAddress(ClearorderFormMessages200ApplicationJSONShippingDataAddress address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableAddresses")
     public ClearorderFormMessages200ApplicationJSONShippingDataAvailableAddresses[] availableAddresses;
+
     public ClearorderFormMessages200ApplicationJSONShippingData withAvailableAddresses(ClearorderFormMessages200ApplicationJSONShippingDataAvailableAddresses[] availableAddresses) {
         this.availableAddresses = availableAddresses;
         return this;
@@ -40,6 +42,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logisticsInfo")
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo[] logisticsInfo;
+
     public ClearorderFormMessages200ApplicationJSONShippingData withLogisticsInfo(ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo[] logisticsInfo) {
         this.logisticsInfo = logisticsInfo;
         return this;
@@ -51,9 +54,11 @@ public class ClearorderFormMessages200ApplicationJSONShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedAddresses")
     public ClearorderFormMessages200ApplicationJSONShippingDataSelectedAddresses[] selectedAddresses;
+
     public ClearorderFormMessages200ApplicationJSONShippingData withSelectedAddresses(ClearorderFormMessages200ApplicationJSONShippingDataSelectedAddresses[] selectedAddresses) {
         this.selectedAddresses = selectedAddresses;
         return this;
     }
     
+    public ClearorderFormMessages200ApplicationJSONShippingData(){}
 }

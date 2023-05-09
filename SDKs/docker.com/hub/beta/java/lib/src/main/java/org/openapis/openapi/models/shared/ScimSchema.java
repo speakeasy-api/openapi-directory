@@ -12,6 +12,7 @@ public class ScimSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public ScimSchemaParentAttribute[] attributes;
+
     public ScimSchema withAttributes(ScimSchemaParentAttribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -20,6 +21,7 @@ public class ScimSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ScimSchema withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class ScimSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ScimSchema withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class ScimSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ScimSchema withName(String name) {
         this.name = name;
         return this;
@@ -44,9 +48,11 @@ public class ScimSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemas")
     public String[] schemas;
+
     public ScimSchema withSchemas(String[] schemas) {
         this.schemas = schemas;
         return this;
     }
     
+    public ScimSchema(){}
 }

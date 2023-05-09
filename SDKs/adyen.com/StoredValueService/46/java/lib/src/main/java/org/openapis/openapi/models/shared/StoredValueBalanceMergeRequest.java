@@ -12,6 +12,7 @@ public class StoredValueBalanceMergeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Amount amount;
+
     public StoredValueBalanceMergeRequest withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -22,6 +23,7 @@ public class StoredValueBalanceMergeRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public StoredValueBalanceMergeRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -32,6 +34,7 @@ public class StoredValueBalanceMergeRequest {
      */
     @JsonProperty("paymentMethod")
     public java.util.Map<String, String> paymentMethod;
+
     public StoredValueBalanceMergeRequest withPaymentMethod(java.util.Map<String, String> paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -40,6 +43,7 @@ public class StoredValueBalanceMergeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringDetailReference")
     public String recurringDetailReference;
+
     public StoredValueBalanceMergeRequest withRecurringDetailReference(String recurringDetailReference) {
         this.recurringDetailReference = recurringDetailReference;
         return this;
@@ -52,6 +56,7 @@ public class StoredValueBalanceMergeRequest {
      */
     @JsonProperty("reference")
     public String reference;
+
     public StoredValueBalanceMergeRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -70,6 +75,7 @@ public class StoredValueBalanceMergeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperInteraction")
     public StoredValueBalanceMergeRequestShopperInteractionEnum shopperInteraction;
+
     public StoredValueBalanceMergeRequest withShopperInteraction(StoredValueBalanceMergeRequestShopperInteractionEnum shopperInteraction) {
         this.shopperInteraction = shopperInteraction;
         return this;
@@ -78,6 +84,7 @@ public class StoredValueBalanceMergeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public StoredValueBalanceMergeRequest withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
@@ -88,6 +95,7 @@ public class StoredValueBalanceMergeRequest {
      */
     @JsonProperty("sourcePaymentMethod")
     public java.util.Map<String, String> sourcePaymentMethod;
+
     public StoredValueBalanceMergeRequest withSourcePaymentMethod(java.util.Map<String, String> sourcePaymentMethod) {
         this.sourcePaymentMethod = sourcePaymentMethod;
         return this;
@@ -99,9 +107,16 @@ public class StoredValueBalanceMergeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("store")
     public String store;
+
     public StoredValueBalanceMergeRequest withStore(String store) {
         this.store = store;
         return this;
     }
     
+    public StoredValueBalanceMergeRequest(@JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("paymentMethod") java.util.Map<String, String> paymentMethod, @JsonProperty("reference") String reference, @JsonProperty("sourcePaymentMethod") java.util.Map<String, String> sourcePaymentMethod) {
+        this.merchantAccount = merchantAccount;
+        this.paymentMethod = paymentMethod;
+        this.reference = reference;
+        this.sourcePaymentMethod = sourcePaymentMethod;
+  }
 }

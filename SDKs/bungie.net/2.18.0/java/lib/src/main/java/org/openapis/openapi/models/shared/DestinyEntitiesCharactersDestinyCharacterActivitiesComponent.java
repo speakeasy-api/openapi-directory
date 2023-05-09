@@ -15,6 +15,7 @@ public class DestinyEntitiesCharactersDestinyCharacterActivitiesComponent {
      */
     
     public DestinyDestinyActivity[] availableActivities;
+
     public DestinyEntitiesCharactersDestinyCharacterActivitiesComponent withAvailableActivities(DestinyDestinyActivity[] availableActivities) {
         this.availableActivities = availableActivities;
         return this;
@@ -25,6 +26,7 @@ public class DestinyEntitiesCharactersDestinyCharacterActivitiesComponent {
      */
     
     public Long currentActivityHash;
+
     public DestinyEntitiesCharactersDestinyCharacterActivitiesComponent withCurrentActivityHash(Long currentActivityHash) {
         this.currentActivityHash = currentActivityHash;
         return this;
@@ -35,6 +37,7 @@ public class DestinyEntitiesCharactersDestinyCharacterActivitiesComponent {
      */
     
     public Long currentActivityModeHash;
+
     public DestinyEntitiesCharactersDestinyCharacterActivitiesComponent withCurrentActivityModeHash(Long currentActivityModeHash) {
         this.currentActivityModeHash = currentActivityModeHash;
         return this;
@@ -45,6 +48,7 @@ public class DestinyEntitiesCharactersDestinyCharacterActivitiesComponent {
      */
     
     public Long[] currentActivityModeHashes;
+
     public DestinyEntitiesCharactersDestinyCharacterActivitiesComponent withCurrentActivityModeHashes(Long[] currentActivityModeHashes) {
         this.currentActivityModeHashes = currentActivityModeHashes;
         return this;
@@ -55,6 +59,7 @@ public class DestinyEntitiesCharactersDestinyCharacterActivitiesComponent {
      */
     
     public DestinyEntitiesCharactersDestinyCharacterActivitiesComponentCurrentActivityModeTypeEnum currentActivityModeType;
+
     public DestinyEntitiesCharactersDestinyCharacterActivitiesComponent withCurrentActivityModeType(DestinyEntitiesCharactersDestinyCharacterActivitiesComponentCurrentActivityModeTypeEnum currentActivityModeType) {
         this.currentActivityModeType = currentActivityModeType;
         return this;
@@ -65,6 +70,7 @@ public class DestinyEntitiesCharactersDestinyCharacterActivitiesComponent {
      */
     
     public Integer[] currentActivityModeTypes;
+
     public DestinyEntitiesCharactersDestinyCharacterActivitiesComponent withCurrentActivityModeTypes(Integer[] currentActivityModeTypes) {
         this.currentActivityModeTypes = currentActivityModeTypes;
         return this;
@@ -75,6 +81,7 @@ public class DestinyEntitiesCharactersDestinyCharacterActivitiesComponent {
      */
     
     public Long currentPlaylistActivityHash;
+
     public DestinyEntitiesCharactersDestinyCharacterActivitiesComponent withCurrentPlaylistActivityHash(Long currentPlaylistActivityHash) {
         this.currentPlaylistActivityHash = currentPlaylistActivityHash;
         return this;
@@ -85,6 +92,7 @@ public class DestinyEntitiesCharactersDestinyCharacterActivitiesComponent {
      */
     
     public OffsetDateTime dateActivityStarted;
+
     public DestinyEntitiesCharactersDestinyCharacterActivitiesComponent withDateActivityStarted(OffsetDateTime dateActivityStarted) {
         this.dateActivityStarted = dateActivityStarted;
         return this;
@@ -95,9 +103,11 @@ public class DestinyEntitiesCharactersDestinyCharacterActivitiesComponent {
      */
     
     public Long lastCompletedStoryHash;
+
     public DestinyEntitiesCharactersDestinyCharacterActivitiesComponent withLastCompletedStoryHash(Long lastCompletedStoryHash) {
         this.lastCompletedStoryHash = lastCompletedStoryHash;
         return this;
     }
     
+    public DestinyEntitiesCharactersDestinyCharacterActivitiesComponent(){}
 }

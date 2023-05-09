@@ -15,6 +15,7 @@ public class ListSpeechSynthesisTasksOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSpeechSynthesisTasksOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSpeechSynthesisTasksOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SynthesisTasks")
     public SynthesisTask[] synthesisTasks;
+
     public ListSpeechSynthesisTasksOutput withSynthesisTasks(SynthesisTask[] synthesisTasks) {
         this.synthesisTasks = synthesisTasks;
         return this;
     }
     
+    public ListSpeechSynthesisTasksOutput(){}
 }

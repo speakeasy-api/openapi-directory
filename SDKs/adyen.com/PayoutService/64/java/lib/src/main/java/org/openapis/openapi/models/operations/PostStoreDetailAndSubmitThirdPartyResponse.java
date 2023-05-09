@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostStoreDetailAndSubmitThirdPartyResponse {
     
     public String contentType;
+
     public PostStoreDetailAndSubmitThirdPartyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostStoreDetailAndSubmitThirdPartyResponse {
     
     
     public Integer statusCode;
+
     public PostStoreDetailAndSubmitThirdPartyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostStoreDetailAndSubmitThirdPartyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostStoreDetailAndSubmitThirdPartyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostStoreDetailAndSubmitThirdPartyResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostStoreDetailAndSubmitThirdPartyResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -43,9 +48,14 @@ public class PostStoreDetailAndSubmitThirdPartyResponse {
      */
     
     public org.openapis.openapi.models.shared.StoreDetailAndSubmitResponse storeDetailAndSubmitResponse;
+
     public PostStoreDetailAndSubmitThirdPartyResponse withStoreDetailAndSubmitResponse(org.openapis.openapi.models.shared.StoreDetailAndSubmitResponse storeDetailAndSubmitResponse) {
         this.storeDetailAndSubmitResponse = storeDetailAndSubmitResponse;
         return this;
     }
     
+    public PostStoreDetailAndSubmitThirdPartyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

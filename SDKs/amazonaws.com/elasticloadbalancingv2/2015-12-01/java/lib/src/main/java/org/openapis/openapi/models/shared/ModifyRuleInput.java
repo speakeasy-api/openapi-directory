@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyRuleInput {
     
     public Action[] actions;
+
     public ModifyRuleInput withActions(Action[] actions) {
         this.actions = actions;
         return this;
@@ -16,6 +17,7 @@ public class ModifyRuleInput {
     
     
     public RuleCondition[] conditions;
+
     public ModifyRuleInput withConditions(RuleCondition[] conditions) {
         this.conditions = conditions;
         return this;
@@ -23,9 +25,13 @@ public class ModifyRuleInput {
     
     
     public String ruleArn;
+
     public ModifyRuleInput withRuleArn(String ruleArn) {
         this.ruleArn = ruleArn;
         return this;
     }
     
+    public ModifyRuleInput(@JsonProperty("RuleArn") String ruleArn) {
+        this.ruleArn = ruleArn;
+  }
 }

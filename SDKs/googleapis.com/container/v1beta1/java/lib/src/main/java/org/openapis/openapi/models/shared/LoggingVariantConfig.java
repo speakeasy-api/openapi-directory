@@ -18,9 +18,11 @@ public class LoggingVariantConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variant")
     public LoggingVariantConfigVariantEnum variant;
+
     public LoggingVariantConfig withVariant(LoggingVariantConfigVariantEnum variant) {
         this.variant = variant;
         return this;
     }
     
+    public LoggingVariantConfig(){}
 }

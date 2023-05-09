@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDomainAssociationResponse {
@@ -12,6 +13,7 @@ public class CreateDomainAssociationResponse {
      */
     
     public Object badRequestException;
+
     public CreateDomainAssociationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateDomainAssociationResponse {
     
     
     public String contentType;
+
     public CreateDomainAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateDomainAssociationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDomainAssociationResult createDomainAssociationResult;
+
     public CreateDomainAssociationResponse withCreateDomainAssociationResult(org.openapis.openapi.models.shared.CreateDomainAssociationResult createDomainAssociationResult) {
         this.createDomainAssociationResult = createDomainAssociationResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateDomainAssociationResponse {
      */
     
     public Object dependentServiceFailureException;
+
     public CreateDomainAssociationResponse withDependentServiceFailureException(Object dependentServiceFailureException) {
         this.dependentServiceFailureException = dependentServiceFailureException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDomainAssociationResponse {
      */
     
     public Object internalFailureException;
+
     public CreateDomainAssociationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDomainAssociationResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDomainAssociationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDomainAssociationResponse {
      */
     
     public Object notFoundException;
+
     public CreateDomainAssociationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreateDomainAssociationResponse {
     
     
     public Integer statusCode;
+
     public CreateDomainAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateDomainAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDomainAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateDomainAssociationResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateDomainAssociationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateDomainAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

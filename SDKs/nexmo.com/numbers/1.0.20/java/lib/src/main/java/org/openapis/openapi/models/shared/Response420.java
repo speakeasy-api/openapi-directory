@@ -18,6 +18,7 @@ public class Response420 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error-code")
     public String errorCode;
+
     public Response420 withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -29,9 +30,11 @@ public class Response420 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error-code-label")
     public String errorCodeLabel;
+
     public Response420 withErrorCodeLabel(String errorCodeLabel) {
         this.errorCodeLabel = errorCodeLabel;
         return this;
     }
     
+    public Response420(){}
 }

@@ -22,6 +22,7 @@ public class WorkspaceImage {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public WorkspaceImage withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -30,6 +31,7 @@ public class WorkspaceImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public WorkspaceImage withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class WorkspaceImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public WorkspaceImage withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -46,6 +49,7 @@ public class WorkspaceImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public WorkspaceImage withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -54,6 +58,7 @@ public class WorkspaceImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageId")
     public String imageId;
+
     public WorkspaceImage withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -62,6 +67,7 @@ public class WorkspaceImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public WorkspaceImage withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +76,7 @@ public class WorkspaceImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingSystem")
     public OperatingSystem operatingSystem;
+
     public WorkspaceImage withOperatingSystem(OperatingSystem operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -78,6 +85,7 @@ public class WorkspaceImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerAccountId")
     public String ownerAccountId;
+
     public WorkspaceImage withOwnerAccountId(String ownerAccountId) {
         this.ownerAccountId = ownerAccountId;
         return this;
@@ -86,6 +94,7 @@ public class WorkspaceImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequiredTenancy")
     public WorkspaceImageRequiredTenancyEnum requiredTenancy;
+
     public WorkspaceImage withRequiredTenancy(WorkspaceImageRequiredTenancyEnum requiredTenancy) {
         this.requiredTenancy = requiredTenancy;
         return this;
@@ -94,6 +103,7 @@ public class WorkspaceImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public WorkspaceImageStateEnum state;
+
     public WorkspaceImage withState(WorkspaceImageStateEnum state) {
         this.state = state;
         return this;
@@ -102,9 +112,11 @@ public class WorkspaceImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updates")
     public UpdateResult updates;
+
     public WorkspaceImage withUpdates(UpdateResult updates) {
         this.updates = updates;
         return this;
     }
     
+    public WorkspaceImage(){}
 }

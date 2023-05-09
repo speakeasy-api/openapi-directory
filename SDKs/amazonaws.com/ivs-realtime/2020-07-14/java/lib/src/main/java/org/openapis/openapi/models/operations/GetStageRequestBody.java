@@ -12,9 +12,13 @@ public class GetStageRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public GetStageRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public GetStageRequestBody(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

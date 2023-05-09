@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutImageScanningConfigurationRequest {
     @JsonProperty("imageScanningConfiguration")
     public ImageScanningConfiguration imageScanningConfiguration;
+
     public PutImageScanningConfigurationRequest withImageScanningConfiguration(ImageScanningConfiguration imageScanningConfiguration) {
         this.imageScanningConfiguration = imageScanningConfiguration;
         return this;
@@ -19,6 +20,7 @@ public class PutImageScanningConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public PutImageScanningConfigurationRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -26,9 +28,14 @@ public class PutImageScanningConfigurationRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public PutImageScanningConfigurationRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public PutImageScanningConfigurationRequest(@JsonProperty("imageScanningConfiguration") ImageScanningConfiguration imageScanningConfiguration, @JsonProperty("repositoryName") String repositoryName) {
+        this.imageScanningConfiguration = imageScanningConfiguration;
+        this.repositoryName = repositoryName;
+  }
 }

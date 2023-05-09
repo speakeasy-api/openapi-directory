@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ProceduresListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
     public Long appointment;
+
     public ProceduresListRequest withAppointment(Long appointment) {
         this.appointment = appointment;
         return this;
@@ -16,6 +17,7 @@ public class ProceduresListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ProceduresListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -23,6 +25,7 @@ public class ProceduresListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public ProceduresListRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -30,6 +33,7 @@ public class ProceduresListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mu_date")
     public String muDate;
+
     public ProceduresListRequest withMuDate(String muDate) {
         this.muDate = muDate;
         return this;
@@ -37,6 +41,7 @@ public class ProceduresListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mu_date_range")
     public String muDateRange;
+
     public ProceduresListRequest withMuDateRange(String muDateRange) {
         this.muDateRange = muDateRange;
         return this;
@@ -44,6 +49,7 @@ public class ProceduresListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public ProceduresListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -51,6 +57,7 @@ public class ProceduresListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public ProceduresListRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -58,9 +65,11 @@ public class ProceduresListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service_date")
     public String serviceDate;
+
     public ProceduresListRequest withServiceDate(String serviceDate) {
         this.serviceDate = serviceDate;
         return this;
     }
     
+    public ProceduresListRequest(){}
 }

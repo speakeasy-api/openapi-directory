@@ -60,10 +60,8 @@ public class Replies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveRepliesDeleteResponse res = new org.openapis.openapi.models.operations.DriveRepliesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DriveRepliesDeleteResponse res = new org.openapis.openapi.models.operations.DriveRepliesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Replies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveRepliesGetResponse res = new org.openapis.openapi.models.operations.DriveRepliesGetResponse() {{
+        org.openapis.openapi.models.operations.DriveRepliesGetResponse res = new org.openapis.openapi.models.operations.DriveRepliesGetResponse(contentType, httpRes.statusCode()) {{
             commentReply = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Replies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveRepliesInsertResponse res = new org.openapis.openapi.models.operations.DriveRepliesInsertResponse() {{
+        org.openapis.openapi.models.operations.DriveRepliesInsertResponse res = new org.openapis.openapi.models.operations.DriveRepliesInsertResponse(contentType, httpRes.statusCode()) {{
             commentReply = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,11 +188,9 @@ public class Replies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveRepliesListResponse res = new org.openapis.openapi.models.operations.DriveRepliesListResponse() {{
+        org.openapis.openapi.models.operations.DriveRepliesListResponse res = new org.openapis.openapi.models.operations.DriveRepliesListResponse(contentType, httpRes.statusCode()) {{
             commentReplyList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +234,9 @@ public class Replies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveRepliesPatchResponse res = new org.openapis.openapi.models.operations.DriveRepliesPatchResponse() {{
+        org.openapis.openapi.models.operations.DriveRepliesPatchResponse res = new org.openapis.openapi.models.operations.DriveRepliesPatchResponse(contentType, httpRes.statusCode()) {{
             commentReply = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -290,11 +280,9 @@ public class Replies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveRepliesUpdateResponse res = new org.openapis.openapi.models.operations.DriveRepliesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DriveRepliesUpdateResponse res = new org.openapis.openapi.models.operations.DriveRepliesUpdateResponse(contentType, httpRes.statusCode()) {{
             commentReply = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

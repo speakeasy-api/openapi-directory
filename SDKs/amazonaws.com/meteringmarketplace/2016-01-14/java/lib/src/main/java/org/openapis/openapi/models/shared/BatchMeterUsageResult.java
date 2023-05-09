@@ -15,6 +15,7 @@ public class BatchMeterUsageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Results")
     public UsageRecordResult[] results;
+
     public BatchMeterUsageResult withResults(UsageRecordResult[] results) {
         this.results = results;
         return this;
@@ -23,9 +24,11 @@ public class BatchMeterUsageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedRecords")
     public UsageRecord[] unprocessedRecords;
+
     public BatchMeterUsageResult withUnprocessedRecords(UsageRecord[] unprocessedRecords) {
         this.unprocessedRecords = unprocessedRecords;
         return this;
     }
     
+    public BatchMeterUsageResult(){}
 }

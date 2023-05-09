@@ -15,6 +15,7 @@ public class ListDetectorModelVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorModelVersionSummaries")
     public DetectorModelVersionSummary[] detectorModelVersionSummaries;
+
     public ListDetectorModelVersionsResponse withDetectorModelVersionSummaries(DetectorModelVersionSummary[] detectorModelVersionSummaries) {
         this.detectorModelVersionSummaries = detectorModelVersionSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListDetectorModelVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDetectorModelVersionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDetectorModelVersionsResponse(){}
 }

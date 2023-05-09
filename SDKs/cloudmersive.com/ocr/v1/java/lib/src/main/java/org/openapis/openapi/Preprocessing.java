@@ -58,14 +58,12 @@ public class Preprocessing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreprocessingBinarizeResponse res = new org.openapis.openapi.models.operations.PreprocessingBinarizeResponse() {{
+        org.openapis.openapi.models.operations.PreprocessingBinarizeResponse res = new org.openapis.openapi.models.operations.PreprocessingBinarizeResponse(contentType, httpRes.statusCode()) {{
             preprocessingBinarize200ApplicationJSONByteString = null;
             preprocessingBinarize200ApplicationXMLByteString = null;
             preprocessingBinarize200TextJSONByteString = null;
             preprocessingBinarize200TextXMLByteString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,14 +116,12 @@ public class Preprocessing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreprocessingBinarizeAdvancedResponse res = new org.openapis.openapi.models.operations.PreprocessingBinarizeAdvancedResponse() {{
+        org.openapis.openapi.models.operations.PreprocessingBinarizeAdvancedResponse res = new org.openapis.openapi.models.operations.PreprocessingBinarizeAdvancedResponse(contentType, httpRes.statusCode()) {{
             preprocessingBinarizeAdvanced200ApplicationJSONByteString = null;
             preprocessingBinarizeAdvanced200ApplicationXMLByteString = null;
             preprocessingBinarizeAdvanced200TextJSONByteString = null;
             preprocessingBinarizeAdvanced200TextXMLByteString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,14 +174,12 @@ public class Preprocessing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreprocessingGetPageAngleResponse res = new org.openapis.openapi.models.operations.PreprocessingGetPageAngleResponse() {{
+        org.openapis.openapi.models.operations.PreprocessingGetPageAngleResponse res = new org.openapis.openapi.models.operations.PreprocessingGetPageAngleResponse(contentType, httpRes.statusCode()) {{
             getPageAngleResult = null;
             getPageAngleResult = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,14 +234,12 @@ public class Preprocessing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreprocessingUnrotateResponse res = new org.openapis.openapi.models.operations.PreprocessingUnrotateResponse() {{
+        org.openapis.openapi.models.operations.PreprocessingUnrotateResponse res = new org.openapis.openapi.models.operations.PreprocessingUnrotateResponse(contentType, httpRes.statusCode()) {{
             preprocessingUnrotate200ApplicationJSONByteString = null;
             preprocessingUnrotate200ApplicationXMLByteString = null;
             preprocessingUnrotate200TextJSONByteString = null;
             preprocessingUnrotate200TextXMLByteString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,14 +292,12 @@ public class Preprocessing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreprocessingUnrotateAdvancedResponse res = new org.openapis.openapi.models.operations.PreprocessingUnrotateAdvancedResponse() {{
+        org.openapis.openapi.models.operations.PreprocessingUnrotateAdvancedResponse res = new org.openapis.openapi.models.operations.PreprocessingUnrotateAdvancedResponse(contentType, httpRes.statusCode()) {{
             preprocessingUnrotateAdvanced200ApplicationJSONByteString = null;
             preprocessingUnrotateAdvanced200ApplicationXMLByteString = null;
             preprocessingUnrotateAdvanced200TextJSONByteString = null;
             preprocessingUnrotateAdvanced200TextXMLByteString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -360,14 +350,12 @@ public class Preprocessing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreprocessingUnskewResponse res = new org.openapis.openapi.models.operations.PreprocessingUnskewResponse() {{
+        org.openapis.openapi.models.operations.PreprocessingUnskewResponse res = new org.openapis.openapi.models.operations.PreprocessingUnskewResponse(contentType, httpRes.statusCode()) {{
             preprocessingUnskew200ApplicationJSONByteString = null;
             preprocessingUnskew200ApplicationXMLByteString = null;
             preprocessingUnskew200TextJSONByteString = null;
             preprocessingUnskew200TextXMLByteString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

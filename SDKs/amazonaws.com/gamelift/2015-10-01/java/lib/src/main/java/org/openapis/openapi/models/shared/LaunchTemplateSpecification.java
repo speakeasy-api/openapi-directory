@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * LaunchTemplateSpecification - &lt;p&gt; &lt;b&gt;This data type is used with the GameLift FleetIQ and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;An Amazon Elastic Compute Cloud launch template that contains configuration settings and game server code to be deployed to all instances in a game server group. The launch template is specified when creating a new game server group. &lt;/p&gt;
+ * LaunchTemplateSpecification - &lt;p&gt; &lt;b&gt;This data type is used with the Amazon GameLift FleetIQ and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;An Amazon Elastic Compute Cloud launch template that contains configuration settings and game server code to be deployed to all instances in a game server group. The launch template is specified when creating a new game server group. &lt;/p&gt;
  */
 public class LaunchTemplateSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchTemplateId")
     public String launchTemplateId;
+
     public LaunchTemplateSpecification withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -23,6 +24,7 @@ public class LaunchTemplateSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchTemplateName")
     public String launchTemplateName;
+
     public LaunchTemplateSpecification withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -31,9 +33,11 @@ public class LaunchTemplateSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public LaunchTemplateSpecification withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public LaunchTemplateSpecification(){}
 }

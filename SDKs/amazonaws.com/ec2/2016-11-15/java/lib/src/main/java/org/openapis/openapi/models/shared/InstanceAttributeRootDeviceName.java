@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class InstanceAttributeRootDeviceName {
     
     public String value;
+
     public InstanceAttributeRootDeviceName withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InstanceAttributeRootDeviceName(){}
 }

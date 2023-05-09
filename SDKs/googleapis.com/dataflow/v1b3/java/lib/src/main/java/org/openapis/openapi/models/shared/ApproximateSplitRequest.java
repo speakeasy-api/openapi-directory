@@ -18,6 +18,7 @@ public class ApproximateSplitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fractionConsumed")
     public Double fractionConsumed;
+
     public ApproximateSplitRequest withFractionConsumed(Double fractionConsumed) {
         this.fractionConsumed = fractionConsumed;
         return this;
@@ -29,6 +30,7 @@ public class ApproximateSplitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fractionOfRemainder")
     public Double fractionOfRemainder;
+
     public ApproximateSplitRequest withFractionOfRemainder(Double fractionOfRemainder) {
         this.fractionOfRemainder = fractionOfRemainder;
         return this;
@@ -40,9 +42,11 @@ public class ApproximateSplitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Position position;
+
     public ApproximateSplitRequest withPosition(Position position) {
         this.position = position;
         return this;
     }
     
+    public ApproximateSplitRequest(){}
 }

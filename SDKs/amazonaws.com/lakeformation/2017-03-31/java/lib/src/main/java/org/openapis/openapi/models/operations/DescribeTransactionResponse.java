@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTransactionResponse {
     
     public String contentType;
+
     public DescribeTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTransactionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTransactionResponse describeTransactionResponse;
+
     public DescribeTransactionResponse withDescribeTransactionResponse(org.openapis.openapi.models.shared.DescribeTransactionResponse describeTransactionResponse) {
         this.describeTransactionResponse = describeTransactionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTransactionResponse {
      */
     
     public Object entityNotFoundException;
+
     public DescribeTransactionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeTransactionResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeTransactionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeTransactionResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeTransactionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeTransactionResponse {
      */
     
     public Object operationTimeoutException;
+
     public DescribeTransactionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeTransactionResponse {
     
     
     public Integer statusCode;
+
     public DescribeTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeTransactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class DataCaptureConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CaptureContentTypeHeader")
     public CaptureContentTypeHeader captureContentTypeHeader;
+
     public DataCaptureConfig withCaptureContentTypeHeader(CaptureContentTypeHeader captureContentTypeHeader) {
         this.captureContentTypeHeader = captureContentTypeHeader;
         return this;
@@ -22,6 +23,7 @@ public class DataCaptureConfig {
     
     @JsonProperty("CaptureOptions")
     public CaptureOption[] captureOptions;
+
     public DataCaptureConfig withCaptureOptions(CaptureOption[] captureOptions) {
         this.captureOptions = captureOptions;
         return this;
@@ -29,6 +31,7 @@ public class DataCaptureConfig {
     
     @JsonProperty("DestinationS3Uri")
     public String destinationS3Uri;
+
     public DataCaptureConfig withDestinationS3Uri(String destinationS3Uri) {
         this.destinationS3Uri = destinationS3Uri;
         return this;
@@ -37,6 +40,7 @@ public class DataCaptureConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableCapture")
     public Boolean enableCapture;
+
     public DataCaptureConfig withEnableCapture(Boolean enableCapture) {
         this.enableCapture = enableCapture;
         return this;
@@ -44,6 +48,7 @@ public class DataCaptureConfig {
     
     @JsonProperty("InitialSamplingPercentage")
     public Long initialSamplingPercentage;
+
     public DataCaptureConfig withInitialSamplingPercentage(Long initialSamplingPercentage) {
         this.initialSamplingPercentage = initialSamplingPercentage;
         return this;
@@ -52,9 +57,15 @@ public class DataCaptureConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public DataCaptureConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public DataCaptureConfig(@JsonProperty("CaptureOptions") CaptureOption[] captureOptions, @JsonProperty("DestinationS3Uri") String destinationS3Uri, @JsonProperty("InitialSamplingPercentage") Long initialSamplingPercentage) {
+        this.captureOptions = captureOptions;
+        this.destinationS3Uri = destinationS3Uri;
+        this.initialSamplingPercentage = initialSamplingPercentage;
+  }
 }

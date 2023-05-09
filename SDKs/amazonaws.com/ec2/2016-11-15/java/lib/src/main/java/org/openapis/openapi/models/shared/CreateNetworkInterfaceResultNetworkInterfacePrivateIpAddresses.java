@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddresses {
     
     public CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssociation association;
+
     public CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddresses withAssociation(CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssociation association) {
         this.association = association;
         return this;
@@ -19,6 +20,7 @@ public class CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddresses {
     
     
     public Boolean primary;
+
     public CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddresses withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -26,6 +28,7 @@ public class CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddresses {
     
     
     public String privateDnsName;
+
     public CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddresses withPrivateDnsName(String privateDnsName) {
         this.privateDnsName = privateDnsName;
         return this;
@@ -33,9 +36,11 @@ public class CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddresses {
     
     
     public String privateIpAddress;
+
     public CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddresses withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
     }
     
+    public CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddresses(){}
 }

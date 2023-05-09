@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteGroupMembershipRequest {
     @JsonProperty("IdentityStoreId")
     public String identityStoreId;
+
     public DeleteGroupMembershipRequest withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
@@ -16,9 +17,14 @@ public class DeleteGroupMembershipRequest {
     
     @JsonProperty("MembershipId")
     public String membershipId;
+
     public DeleteGroupMembershipRequest withMembershipId(String membershipId) {
         this.membershipId = membershipId;
         return this;
     }
     
+    public DeleteGroupMembershipRequest(@JsonProperty("IdentityStoreId") String identityStoreId, @JsonProperty("MembershipId") String membershipId) {
+        this.identityStoreId = identityStoreId;
+        this.membershipId = membershipId;
+  }
 }

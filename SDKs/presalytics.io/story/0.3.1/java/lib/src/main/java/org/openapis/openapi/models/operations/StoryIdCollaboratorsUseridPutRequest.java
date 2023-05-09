@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdCollaboratorsUseridPutRequest {
@@ -12,6 +13,7 @@ public class StoryIdCollaboratorsUseridPutRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public StoryIdCollaboratorsUseridPutRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class StoryIdCollaboratorsUseridPutRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.StoryCollaborator storyCollaborator;
+
     public StoryIdCollaboratorsUseridPutRequest withStoryCollaborator(org.openapis.openapi.models.shared.StoryCollaborator storyCollaborator) {
         this.storyCollaborator = storyCollaborator;
         return this;
@@ -32,9 +35,15 @@ public class StoryIdCollaboratorsUseridPutRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=story_collaborator_userid")
     public String storyCollaboratorUserid;
+
     public StoryIdCollaboratorsUseridPutRequest withStoryCollaboratorUserid(String storyCollaboratorUserid) {
         this.storyCollaboratorUserid = storyCollaboratorUserid;
         return this;
     }
     
+    public StoryIdCollaboratorsUseridPutRequest(@JsonProperty("id") String id, @JsonProperty("story_collaborator") org.openapis.openapi.models.shared.StoryCollaborator storyCollaborator, @JsonProperty("story_collaborator_userid") String storyCollaboratorUserid) {
+        this.id = id;
+        this.storyCollaborator = storyCollaborator;
+        this.storyCollaboratorUserid = storyCollaboratorUserid;
+  }
 }

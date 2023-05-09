@@ -15,6 +15,7 @@ public class DeleteAccount400ApplicationJSONErrorsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public java.util.Map<String, String> header;
+
     public DeleteAccount400ApplicationJSONErrorsParameters withHeader(java.util.Map<String, String> header) {
         this.header = header;
         return this;
@@ -23,6 +24,7 @@ public class DeleteAccount400ApplicationJSONErrorsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public java.util.Map<String, String> path;
+
     public DeleteAccount400ApplicationJSONErrorsParameters withPath(java.util.Map<String, String> path) {
         this.path = path;
         return this;
@@ -31,9 +33,11 @@ public class DeleteAccount400ApplicationJSONErrorsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public java.util.Map<String, String> query;
+
     public DeleteAccount400ApplicationJSONErrorsParameters withQuery(java.util.Map<String, String> query) {
         this.query = query;
         return this;
     }
     
+    public DeleteAccount400ApplicationJSONErrorsParameters(){}
 }

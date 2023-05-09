@@ -18,6 +18,7 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerMessage")
     public String developerMessage;
+
     public ErrorResponse withDeveloperMessage(String developerMessage) {
         this.developerMessage = developerMessage;
         return this;
@@ -29,6 +30,7 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("helpLink")
     public String helpLink;
+
     public ErrorResponse withHelpLink(String helpLink) {
         this.helpLink = helpLink;
         return this;
@@ -40,6 +42,7 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpStatusCode")
     public Integer httpStatusCode;
+
     public ErrorResponse withHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
@@ -51,6 +54,7 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalCode")
     public String internalCode;
+
     public ErrorResponse withInternalCode(String internalCode) {
         this.internalCode = internalCode;
         return this;
@@ -62,9 +66,11 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ErrorResponse withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ErrorResponse(){}
 }

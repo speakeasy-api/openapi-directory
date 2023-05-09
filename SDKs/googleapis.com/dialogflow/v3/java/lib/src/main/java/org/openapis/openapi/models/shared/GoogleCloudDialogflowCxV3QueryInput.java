@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDialogflowCxV3QueryInput - Represents the query input. It can contain one of: 1. A conversational query in the form of text. 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be processed. 4. An event to be triggered. 
+ * GoogleCloudDialogflowCxV3QueryInput - Represents the query input. It can contain one of: 1. A conversational query in the form of text. 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be processed. 4. An event to be triggered. 5. DTMF digits to invoke an intent and fill in parameter value.
  */
 public class GoogleCloudDialogflowCxV3QueryInput {
     /**
@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audio")
     public GoogleCloudDialogflowCxV3AudioInput audio;
+
     public GoogleCloudDialogflowCxV3QueryInput withAudio(GoogleCloudDialogflowCxV3AudioInput audio) {
         this.audio = audio;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dtmf")
     public GoogleCloudDialogflowCxV3DtmfInput dtmf;
+
     public GoogleCloudDialogflowCxV3QueryInput withDtmf(GoogleCloudDialogflowCxV3DtmfInput dtmf) {
         this.dtmf = dtmf;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public GoogleCloudDialogflowCxV3EventInput event;
+
     public GoogleCloudDialogflowCxV3QueryInput withEvent(GoogleCloudDialogflowCxV3EventInput event) {
         this.event = event;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intent")
     public GoogleCloudDialogflowCxV3IntentInput intent;
+
     public GoogleCloudDialogflowCxV3QueryInput withIntent(GoogleCloudDialogflowCxV3IntentInput intent) {
         this.intent = intent;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowCxV3QueryInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowCxV3QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public GoogleCloudDialogflowCxV3TextInput text;
+
     public GoogleCloudDialogflowCxV3QueryInput withText(GoogleCloudDialogflowCxV3TextInput text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3QueryInput(){}
 }

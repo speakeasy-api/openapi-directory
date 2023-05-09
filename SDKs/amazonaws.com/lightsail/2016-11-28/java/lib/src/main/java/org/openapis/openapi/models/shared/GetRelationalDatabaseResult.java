@@ -15,9 +15,11 @@ public class GetRelationalDatabaseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationalDatabase")
     public RelationalDatabase relationalDatabase;
+
     public GetRelationalDatabaseResult withRelationalDatabase(RelationalDatabase relationalDatabase) {
         this.relationalDatabase = relationalDatabase;
         return this;
     }
     
+    public GetRelationalDatabaseResult(){}
 }

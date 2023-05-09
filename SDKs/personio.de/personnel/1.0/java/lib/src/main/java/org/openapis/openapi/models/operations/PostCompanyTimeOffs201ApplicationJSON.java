@@ -15,9 +15,11 @@ public class PostCompanyTimeOffs201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.CreateTimeOffPeriodResponse data;
+
     public PostCompanyTimeOffs201ApplicationJSON withData(org.openapis.openapi.models.shared.CreateTimeOffPeriodResponse data) {
         this.data = data;
         return this;
     }
     
+    public PostCompanyTimeOffs201ApplicationJSON(){}
 }

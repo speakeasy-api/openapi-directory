@@ -12,6 +12,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsKitItems {
      */
     @JsonProperty("amount")
     public Long amount;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsKitItems withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -22,9 +23,14 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsKitItems {
      */
     @JsonProperty("itemId")
     public String itemId;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsKitItems withItemId(String itemId) {
         this.itemId = itemId;
         return this;
     }
     
+    public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsKitItems(@JsonProperty("amount") Long amount, @JsonProperty("itemId") String itemId) {
+        this.amount = amount;
+        this.itemId = itemId;
+  }
 }

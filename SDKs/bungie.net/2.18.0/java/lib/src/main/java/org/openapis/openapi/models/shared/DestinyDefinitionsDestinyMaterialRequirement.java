@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyMaterialRequirement {
      */
     
     public Integer count;
+
     public DestinyDefinitionsDestinyMaterialRequirement withCount(Integer count) {
         this.count = count;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDefinitionsDestinyMaterialRequirement {
      */
     
     public Boolean countIsConstant;
+
     public DestinyDefinitionsDestinyMaterialRequirement withCountIsConstant(Boolean countIsConstant) {
         this.countIsConstant = countIsConstant;
         return this;
@@ -35,6 +37,7 @@ public class DestinyDefinitionsDestinyMaterialRequirement {
      */
     
     public Boolean deleteOnAction;
+
     public DestinyDefinitionsDestinyMaterialRequirement withDeleteOnAction(Boolean deleteOnAction) {
         this.deleteOnAction = deleteOnAction;
         return this;
@@ -45,6 +48,7 @@ public class DestinyDefinitionsDestinyMaterialRequirement {
      */
     
     public Long itemHash;
+
     public DestinyDefinitionsDestinyMaterialRequirement withItemHash(Long itemHash) {
         this.itemHash = itemHash;
         return this;
@@ -55,9 +59,11 @@ public class DestinyDefinitionsDestinyMaterialRequirement {
      */
     
     public Boolean omitFromRequirements;
+
     public DestinyDefinitionsDestinyMaterialRequirement withOmitFromRequirements(Boolean omitFromRequirements) {
         this.omitFromRequirements = omitFromRequirements;
         return this;
     }
     
+    public DestinyDefinitionsDestinyMaterialRequirement(){}
 }

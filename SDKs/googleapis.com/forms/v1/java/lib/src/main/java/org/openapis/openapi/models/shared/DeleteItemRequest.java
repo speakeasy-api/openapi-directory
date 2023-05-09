@@ -18,9 +18,11 @@ public class DeleteItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public DeleteItemRequest withLocation(Location location) {
         this.location = location;
         return this;
     }
     
+    public DeleteItemRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyAadharOTPOnlyUsingPOSTRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public VerifyAadharOTPOnlyUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class VerifyAadharOTPOnlyUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.VerifyAadhaarOtp verifyAadhaarOtp;
+
     public VerifyAadharOTPOnlyUsingPOSTRequest withVerifyAadhaarOtp(org.openapis.openapi.models.shared.VerifyAadhaarOtp verifyAadhaarOtp) {
         this.verifyAadhaarOtp = verifyAadhaarOtp;
         return this;
     }
     
+    public VerifyAadharOTPOnlyUsingPOSTRequest(@JsonProperty("VerifyAadhaarOtp") org.openapis.openapi.models.shared.VerifyAadhaarOtp verifyAadhaarOtp) {
+        this.verifyAadhaarOtp = verifyAadhaarOtp;
+  }
 }

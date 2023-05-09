@@ -15,6 +15,7 @@ public class DisableRegionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public DisableRegionRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -25,9 +26,13 @@ public class DisableRegionRequestBody {
      */
     @JsonProperty("RegionName")
     public String regionName;
+
     public DisableRegionRequestBody withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
     }
     
+    public DisableRegionRequestBody(@JsonProperty("RegionName") String regionName) {
+        this.regionName = regionName;
+  }
 }

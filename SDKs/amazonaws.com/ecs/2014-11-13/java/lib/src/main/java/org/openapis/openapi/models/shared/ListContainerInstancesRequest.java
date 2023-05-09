@@ -12,6 +12,7 @@ public class ListContainerInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public ListContainerInstancesRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -20,6 +21,7 @@ public class ListContainerInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public ListContainerInstancesRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -28,6 +30,7 @@ public class ListContainerInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListContainerInstancesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +39,7 @@ public class ListContainerInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListContainerInstancesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,9 +48,11 @@ public class ListContainerInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ContainerInstanceStatusEnum status;
+
     public ListContainerInstancesRequest withStatus(ContainerInstanceStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListContainerInstancesRequest(){}
 }

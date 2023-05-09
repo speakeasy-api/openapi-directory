@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFastSnapshotRestoresRequest {
     
     public Boolean dryRun;
+
     public DescribeFastSnapshotRestoresRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeFastSnapshotRestoresRequest {
     
     
     public DescribeFastSnapshotRestoresRequestFilters[] filters;
+
     public DescribeFastSnapshotRestoresRequest withFilters(DescribeFastSnapshotRestoresRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeFastSnapshotRestoresRequest {
     
     
     public Long maxResults;
+
     public DescribeFastSnapshotRestoresRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,9 +33,11 @@ public class DescribeFastSnapshotRestoresRequest {
     
     
     public String nextToken;
+
     public DescribeFastSnapshotRestoresRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFastSnapshotRestoresRequest(){}
 }

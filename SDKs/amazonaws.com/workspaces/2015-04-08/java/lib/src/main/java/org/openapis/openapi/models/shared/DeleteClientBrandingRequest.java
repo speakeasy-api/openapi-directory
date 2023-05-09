@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteClientBrandingRequest {
     @JsonProperty("Platforms")
     public ClientDeviceTypeEnum[] platforms;
+
     public DeleteClientBrandingRequest withPlatforms(ClientDeviceTypeEnum[] platforms) {
         this.platforms = platforms;
         return this;
@@ -16,9 +17,14 @@ public class DeleteClientBrandingRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public DeleteClientBrandingRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public DeleteClientBrandingRequest(@JsonProperty("Platforms") ClientDeviceTypeEnum[] platforms, @JsonProperty("ResourceId") String resourceId) {
+        this.platforms = platforms;
+        this.resourceId = resourceId;
+  }
 }

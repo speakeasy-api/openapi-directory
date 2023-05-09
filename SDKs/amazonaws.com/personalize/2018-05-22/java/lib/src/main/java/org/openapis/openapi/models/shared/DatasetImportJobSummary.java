@@ -22,6 +22,7 @@ public class DatasetImportJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public DatasetImportJobSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class DatasetImportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetImportJobArn")
     public String datasetImportJobArn;
+
     public DatasetImportJobSummary withDatasetImportJobArn(String datasetImportJobArn) {
         this.datasetImportJobArn = datasetImportJobArn;
         return this;
@@ -38,6 +40,7 @@ public class DatasetImportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public DatasetImportJobSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -46,6 +49,7 @@ public class DatasetImportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importMode")
     public ImportModeEnum importMode;
+
     public DatasetImportJobSummary withImportMode(ImportModeEnum importMode) {
         this.importMode = importMode;
         return this;
@@ -54,6 +58,7 @@ public class DatasetImportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobName")
     public String jobName;
+
     public DatasetImportJobSummary withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -64,6 +69,7 @@ public class DatasetImportJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public DatasetImportJobSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -72,9 +78,11 @@ public class DatasetImportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public DatasetImportJobSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DatasetImportJobSummary(){}
 }

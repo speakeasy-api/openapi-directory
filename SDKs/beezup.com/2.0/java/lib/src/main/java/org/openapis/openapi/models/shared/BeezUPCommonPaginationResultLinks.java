@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BeezUPCommonPaginationResultLinks {
     @JsonProperty("first")
     public BeezUPCommonLink3 first;
+
     public BeezUPCommonPaginationResultLinks withFirst(BeezUPCommonLink3 first) {
         this.first = first;
         return this;
@@ -21,6 +22,7 @@ public class BeezUPCommonPaginationResultLinks {
     
     @JsonProperty("last")
     public BeezUPCommonLink3 last;
+
     public BeezUPCommonPaginationResultLinks withLast(BeezUPCommonLink3 last) {
         this.last = last;
         return this;
@@ -29,6 +31,7 @@ public class BeezUPCommonPaginationResultLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public BeezUPCommonLink3 next;
+
     public BeezUPCommonPaginationResultLinks withNext(BeezUPCommonLink3 next) {
         this.next = next;
         return this;
@@ -37,9 +40,14 @@ public class BeezUPCommonPaginationResultLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public BeezUPCommonLink3 previous;
+
     public BeezUPCommonPaginationResultLinks withPrevious(BeezUPCommonLink3 previous) {
         this.previous = previous;
         return this;
     }
     
+    public BeezUPCommonPaginationResultLinks(@JsonProperty("first") BeezUPCommonLink3 first, @JsonProperty("last") BeezUPCommonLink3 last) {
+        this.first = first;
+        this.last = last;
+  }
 }

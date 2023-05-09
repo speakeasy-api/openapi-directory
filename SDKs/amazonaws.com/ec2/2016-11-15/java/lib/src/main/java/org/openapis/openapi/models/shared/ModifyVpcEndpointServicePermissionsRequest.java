@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVpcEndpointServicePermissionsRequest {
     
     public String[] addAllowedPrincipals;
+
     public ModifyVpcEndpointServicePermissionsRequest withAddAllowedPrincipals(String[] addAllowedPrincipals) {
         this.addAllowedPrincipals = addAllowedPrincipals;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVpcEndpointServicePermissionsRequest {
     
     
     public Boolean dryRun;
+
     public ModifyVpcEndpointServicePermissionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class ModifyVpcEndpointServicePermissionsRequest {
     
     
     public String[] removeAllowedPrincipals;
+
     public ModifyVpcEndpointServicePermissionsRequest withRemoveAllowedPrincipals(String[] removeAllowedPrincipals) {
         this.removeAllowedPrincipals = removeAllowedPrincipals;
         return this;
@@ -30,9 +33,13 @@ public class ModifyVpcEndpointServicePermissionsRequest {
     
     
     public String serviceId;
+
     public ModifyVpcEndpointServicePermissionsRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public ModifyVpcEndpointServicePermissionsRequest(@JsonProperty("ServiceId") String serviceId) {
+        this.serviceId = serviceId;
+  }
 }

@@ -18,6 +18,7 @@ public class AccountsListLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountsListLinksResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class AccountsListLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public LinkedAccount[] links;
+
     public AccountsListLinksResponse withLinks(LinkedAccount[] links) {
         this.links = links;
         return this;
@@ -40,9 +42,11 @@ public class AccountsListLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public AccountsListLinksResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public AccountsListLinksResponse(){}
 }

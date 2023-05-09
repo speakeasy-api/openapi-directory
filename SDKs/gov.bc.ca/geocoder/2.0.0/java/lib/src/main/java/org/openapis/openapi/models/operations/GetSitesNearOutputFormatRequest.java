@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSitesNearOutputFormatRequest {
@@ -12,6 +13,7 @@ public class GetSitesNearOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brief")
     public Boolean brief;
+
     public GetSitesNearOutputFormatRequest withBrief(Boolean brief) {
         this.brief = brief;
         return this;
@@ -22,6 +24,7 @@ public class GetSitesNearOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeUnits")
     public Boolean excludeUnits;
+
     public GetSitesNearOutputFormatRequest withExcludeUnits(Boolean excludeUnits) {
         this.excludeUnits = excludeUnits;
         return this;
@@ -32,6 +35,7 @@ public class GetSitesNearOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationDescriptor")
     public GetSitesNearOutputFormatLocationDescriptorEnum locationDescriptor;
+
     public GetSitesNearOutputFormatRequest withLocationDescriptor(GetSitesNearOutputFormatLocationDescriptorEnum locationDescriptor) {
         this.locationDescriptor = locationDescriptor;
         return this;
@@ -42,6 +46,7 @@ public class GetSitesNearOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDistance")
     public Long maxDistance;
+
     public GetSitesNearOutputFormatRequest withMaxDistance(Long maxDistance) {
         this.maxDistance = maxDistance;
         return this;
@@ -52,6 +57,7 @@ public class GetSitesNearOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public GetSitesNearOutputFormatRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -62,6 +68,7 @@ public class GetSitesNearOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyCivic")
     public Boolean onlyCivic;
+
     public GetSitesNearOutputFormatRequest withOnlyCivic(Boolean onlyCivic) {
         this.onlyCivic = onlyCivic;
         return this;
@@ -74,6 +81,7 @@ public class GetSitesNearOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
     public GetSitesNearOutputFormatOutputFormatEnum outputFormat;
+
     public GetSitesNearOutputFormatRequest withOutputFormat(GetSitesNearOutputFormatOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -84,6 +92,7 @@ public class GetSitesNearOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetSitesNearOutputFormatOutputSrsEnum outputSRS;
+
     public GetSitesNearOutputFormatRequest withOutputSRS(GetSitesNearOutputFormatOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -94,6 +103,7 @@ public class GetSitesNearOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=point")
     public String point;
+
     public GetSitesNearOutputFormatRequest withPoint(String point) {
         this.point = point;
         return this;
@@ -104,9 +114,14 @@ public class GetSitesNearOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setBack")
     public Long setBack;
+
     public GetSitesNearOutputFormatRequest withSetBack(Long setBack) {
         this.setBack = setBack;
         return this;
     }
     
+    public GetSitesNearOutputFormatRequest(@JsonProperty("outputFormat") GetSitesNearOutputFormatOutputFormatEnum outputFormat, @JsonProperty("point") String point) {
+        this.outputFormat = outputFormat;
+        this.point = point;
+  }
 }

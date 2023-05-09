@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class Route {
     
     public String controller;
+
     public Route withController(String controller) {
         this.controller = controller;
         return this;
@@ -16,6 +17,7 @@ public class Route {
     
     
     public OffsetDateTime created;
+
     public Route withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -23,6 +25,7 @@ public class Route {
     
     
     public Integer displayOrder;
+
     public Route withDisplayOrder(Integer displayOrder) {
         this.displayOrder = displayOrder;
         return this;
@@ -30,6 +33,7 @@ public class Route {
     
     
     public Long id;
+
     public Route withId(Long id) {
         this.id = id;
         return this;
@@ -37,6 +41,7 @@ public class Route {
     
     
     public Lookup lookup;
+
     public Route withLookup(Lookup lookup) {
         this.lookup = lookup;
         return this;
@@ -44,6 +49,7 @@ public class Route {
     
     
     public String templateUrl;
+
     public Route withTemplateUrl(String templateUrl) {
         this.templateUrl = templateUrl;
         return this;
@@ -51,6 +57,7 @@ public class Route {
     
     
     public String title;
+
     public Route withTitle(String title) {
         this.title = title;
         return this;
@@ -58,9 +65,11 @@ public class Route {
     
     
     public String url;
+
     public Route withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Route(){}
 }

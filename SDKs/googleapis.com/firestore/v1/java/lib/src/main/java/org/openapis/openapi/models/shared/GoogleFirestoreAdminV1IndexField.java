@@ -18,6 +18,7 @@ public class GoogleFirestoreAdminV1IndexField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrayConfig")
     public GoogleFirestoreAdminV1IndexFieldArrayConfigEnum arrayConfig;
+
     public GoogleFirestoreAdminV1IndexField withArrayConfig(GoogleFirestoreAdminV1IndexFieldArrayConfigEnum arrayConfig) {
         this.arrayConfig = arrayConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirestoreAdminV1IndexField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldPath")
     public String fieldPath;
+
     public GoogleFirestoreAdminV1IndexField withFieldPath(String fieldPath) {
         this.fieldPath = fieldPath;
         return this;
@@ -40,9 +42,11 @@ public class GoogleFirestoreAdminV1IndexField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public GoogleFirestoreAdminV1IndexFieldOrderEnum order;
+
     public GoogleFirestoreAdminV1IndexField withOrder(GoogleFirestoreAdminV1IndexFieldOrderEnum order) {
         this.order = order;
         return this;
     }
     
+    public GoogleFirestoreAdminV1IndexField(){}
 }

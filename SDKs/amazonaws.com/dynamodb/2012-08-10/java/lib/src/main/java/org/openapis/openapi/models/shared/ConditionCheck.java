@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConditionCheck {
     @JsonProperty("ConditionExpression")
     public String conditionExpression;
+
     public ConditionCheck withConditionExpression(String conditionExpression) {
         this.conditionExpression = conditionExpression;
         return this;
@@ -22,6 +23,7 @@ public class ConditionCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeNames")
     public java.util.Map<String, String> expressionAttributeNames;
+
     public ConditionCheck withExpressionAttributeNames(java.util.Map<String, String> expressionAttributeNames) {
         this.expressionAttributeNames = expressionAttributeNames;
         return this;
@@ -30,6 +32,7 @@ public class ConditionCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeValues")
     public java.util.Map<String, AttributeValue> expressionAttributeValues;
+
     public ConditionCheck withExpressionAttributeValues(java.util.Map<String, AttributeValue> expressionAttributeValues) {
         this.expressionAttributeValues = expressionAttributeValues;
         return this;
@@ -37,6 +40,7 @@ public class ConditionCheck {
     
     @JsonProperty("Key")
     public java.util.Map<String, AttributeValue> key;
+
     public ConditionCheck withKey(java.util.Map<String, AttributeValue> key) {
         this.key = key;
         return this;
@@ -45,6 +49,7 @@ public class ConditionCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnValuesOnConditionCheckFailure")
     public ReturnValuesOnConditionCheckFailureEnum returnValuesOnConditionCheckFailure;
+
     public ConditionCheck withReturnValuesOnConditionCheckFailure(ReturnValuesOnConditionCheckFailureEnum returnValuesOnConditionCheckFailure) {
         this.returnValuesOnConditionCheckFailure = returnValuesOnConditionCheckFailure;
         return this;
@@ -52,9 +57,15 @@ public class ConditionCheck {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public ConditionCheck withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public ConditionCheck(@JsonProperty("ConditionExpression") String conditionExpression, @JsonProperty("Key") java.util.Map<String, AttributeValue> key, @JsonProperty("TableName") String tableName) {
+        this.conditionExpression = conditionExpression;
+        this.key = key;
+        this.tableName = tableName;
+  }
 }

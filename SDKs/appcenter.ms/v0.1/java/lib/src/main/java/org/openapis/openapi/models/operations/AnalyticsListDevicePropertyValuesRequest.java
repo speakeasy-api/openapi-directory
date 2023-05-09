@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsListDevicePropertyValuesRequest {
@@ -12,6 +13,7 @@ public class AnalyticsListDevicePropertyValuesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public AnalyticsListDevicePropertyValuesRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsListDevicePropertyValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contains")
     public String contains;
+
     public AnalyticsListDevicePropertyValuesRequest withContains(String contains) {
         this.contains = contains;
         return this;
@@ -32,6 +35,7 @@ public class AnalyticsListDevicePropertyValuesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public AnalyticsListDevicePropertyValuesRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -42,9 +46,15 @@ public class AnalyticsListDevicePropertyValuesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property_name")
     public String propertyName;
+
     public AnalyticsListDevicePropertyValuesRequest withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
     }
     
+    public AnalyticsListDevicePropertyValuesRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("property_name") String propertyName) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.propertyName = propertyName;
+  }
 }

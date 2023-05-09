@@ -18,6 +18,7 @@ public class SubscriptionDeferralInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredExpiryTimeMillis")
     public String desiredExpiryTimeMillis;
+
     public SubscriptionDeferralInfo withDesiredExpiryTimeMillis(String desiredExpiryTimeMillis) {
         this.desiredExpiryTimeMillis = desiredExpiryTimeMillis;
         return this;
@@ -29,9 +30,11 @@ public class SubscriptionDeferralInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedExpiryTimeMillis")
     public String expectedExpiryTimeMillis;
+
     public SubscriptionDeferralInfo withExpectedExpiryTimeMillis(String expectedExpiryTimeMillis) {
         this.expectedExpiryTimeMillis = expectedExpiryTimeMillis;
         return this;
     }
     
+    public SubscriptionDeferralInfo(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TokensGetBungieRewardsForPlatformUserRequest {
@@ -12,6 +13,7 @@ public class TokensGetBungieRewardsForPlatformUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
     public Long membershipId;
+
     public TokensGetBungieRewardsForPlatformUserRequest withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -22,9 +24,14 @@ public class TokensGetBungieRewardsForPlatformUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public TokensGetBungieRewardsForPlatformUserRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
     }
     
+    public TokensGetBungieRewardsForPlatformUserRequest(@JsonProperty("membershipId") Long membershipId, @JsonProperty("membershipType") Integer membershipType) {
+        this.membershipId = membershipId;
+        this.membershipType = membershipType;
+  }
 }

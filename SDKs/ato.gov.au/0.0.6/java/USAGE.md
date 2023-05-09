@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetClassificationsAddressTypesRequest;
 import org.openapis.openapi.models.operations.GetClassificationsAddressTypesResponse;
 
@@ -13,17 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetClassificationsAddressTypesRequest req = new GetClassificationsAddressTypesRequest() {{
-                apiKey = "corrupti";
-            }}            
+            GetClassificationsAddressTypesRequest req = new GetClassificationsAddressTypesRequest("corrupti");            
 
             GetClassificationsAddressTypesResponse res = sdk.addressTypes.getClassificationsAddressTypes(req);
 
-            if (res.addressTypes.isPresent()) {
+            if (res.addressTypes != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

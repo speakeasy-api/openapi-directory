@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMembershipResponse {
@@ -12,6 +13,7 @@ public class UpdateMembershipResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateMembershipResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateMembershipResponse {
      */
     
     public Object conflictException;
+
     public UpdateMembershipResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMembershipResponse {
     
     
     public String contentType;
+
     public UpdateMembershipResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateMembershipResponse {
      */
     
     public Object internalServerException;
+
     public UpdateMembershipResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateMembershipResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateMembershipResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateMembershipResponse {
     
     
     public Integer statusCode;
+
     public UpdateMembershipResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateMembershipResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMembershipResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateMembershipResponse {
      */
     
     public Object throttlingException;
+
     public UpdateMembershipResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateMembershipResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateMembershipOutput updateMembershipOutput;
+
     public UpdateMembershipResponse withUpdateMembershipOutput(org.openapis.openapi.models.shared.UpdateMembershipOutput updateMembershipOutput) {
         this.updateMembershipOutput = updateMembershipOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateMembershipResponse {
      */
     
     public Object validationException;
+
     public UpdateMembershipResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateMembershipResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

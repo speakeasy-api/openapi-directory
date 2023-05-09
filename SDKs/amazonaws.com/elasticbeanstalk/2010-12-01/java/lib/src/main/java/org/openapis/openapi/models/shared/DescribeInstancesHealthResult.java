@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeInstancesHealthResult {
     
     public SingleInstanceHealth[] instanceHealthList;
+
     public DescribeInstancesHealthResult withInstanceHealthList(SingleInstanceHealth[] instanceHealthList) {
         this.instanceHealthList = instanceHealthList;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstancesHealthResult {
     
     
     public String nextToken;
+
     public DescribeInstancesHealthResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +28,11 @@ public class DescribeInstancesHealthResult {
     
     
     public OffsetDateTime refreshedAt;
+
     public DescribeInstancesHealthResult withRefreshedAt(OffsetDateTime refreshedAt) {
         this.refreshedAt = refreshedAt;
         return this;
     }
     
+    public DescribeInstancesHealthResult(){}
 }

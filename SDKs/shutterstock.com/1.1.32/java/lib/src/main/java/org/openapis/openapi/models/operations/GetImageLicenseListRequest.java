@@ -13,6 +13,7 @@ public class GetImageLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=download_availability")
     public GetImageLicenseListDownloadAvailabilityEnum downloadAvailability;
+
     public GetImageLicenseListRequest withDownloadAvailability(GetImageLicenseListDownloadAvailabilityEnum downloadAvailability) {
         this.downloadAvailability = downloadAvailability;
         return this;
@@ -23,6 +24,7 @@ public class GetImageLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public OffsetDateTime endDate;
+
     public GetImageLicenseListRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -33,6 +35,7 @@ public class GetImageLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=image_id")
     public String imageId;
+
     public GetImageLicenseListRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -43,6 +46,7 @@ public class GetImageLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public String license;
+
     public GetImageLicenseListRequest withLicense(String license) {
         this.license = license;
         return this;
@@ -53,6 +57,7 @@ public class GetImageLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetImageLicenseListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -63,6 +68,7 @@ public class GetImageLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetImageLicenseListRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -73,6 +79,7 @@ public class GetImageLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetImageLicenseListSortEnum sort;
+
     public GetImageLicenseListRequest withSort(GetImageLicenseListSortEnum sort) {
         this.sort = sort;
         return this;
@@ -83,6 +90,7 @@ public class GetImageLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public OffsetDateTime startDate;
+
     public GetImageLicenseListRequest withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -93,6 +101,7 @@ public class GetImageLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team_history")
     public Boolean teamHistory;
+
     public GetImageLicenseListRequest withTeamHistory(Boolean teamHistory) {
         this.teamHistory = teamHistory;
         return this;
@@ -103,9 +112,11 @@ public class GetImageLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public GetImageLicenseListRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetImageLicenseListRequest(){}
 }

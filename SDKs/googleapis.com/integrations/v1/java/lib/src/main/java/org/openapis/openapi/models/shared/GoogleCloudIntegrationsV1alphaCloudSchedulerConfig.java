@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaCloudSchedulerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cronTab")
     public String cronTab;
+
     public GoogleCloudIntegrationsV1alphaCloudSchedulerConfig withCronTab(String cronTab) {
         this.cronTab = cronTab;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaCloudSchedulerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public GoogleCloudIntegrationsV1alphaCloudSchedulerConfig withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaCloudSchedulerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GoogleCloudIntegrationsV1alphaCloudSchedulerConfig withLocation(String location) {
         this.location = location;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudIntegrationsV1alphaCloudSchedulerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountEmail")
     public String serviceAccountEmail;
+
     public GoogleCloudIntegrationsV1alphaCloudSchedulerConfig withServiceAccountEmail(String serviceAccountEmail) {
         this.serviceAccountEmail = serviceAccountEmail;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaCloudSchedulerConfig(){}
 }

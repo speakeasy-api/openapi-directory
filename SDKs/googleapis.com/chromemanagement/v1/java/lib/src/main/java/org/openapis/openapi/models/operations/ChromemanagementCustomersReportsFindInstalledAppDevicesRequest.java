@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
@@ -12,6 +13,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appId")
     public String appId;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -52,6 +57,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appType")
     public ChromemanagementCustomersReportsFindInstalledAppDevicesAppTypeEnum appType;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withAppType(ChromemanagementCustomersReportsFindInstalledAppDevicesAppTypeEnum appType) {
         this.appType = appType;
         return this;
@@ -62,6 +68,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -72,6 +79,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer")
     public String customer;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withCustomer(String customer) {
         this.customer = customer;
         return this;
@@ -82,6 +90,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -92,6 +101,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -102,6 +112,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withKey(String key) {
         this.key = key;
         return this;
@@ -112,6 +123,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -122,6 +134,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -132,6 +145,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orgUnitId")
     public String orgUnitId;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withOrgUnitId(String orgUnitId) {
         this.orgUnitId = orgUnitId;
         return this;
@@ -142,6 +156,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -152,6 +167,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -162,6 +178,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -172,6 +189,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -182,6 +200,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -192,9 +211,13 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ChromemanagementCustomersReportsFindInstalledAppDevicesRequest(@JsonProperty("customer") String customer) {
+        this.customer = customer;
+  }
 }

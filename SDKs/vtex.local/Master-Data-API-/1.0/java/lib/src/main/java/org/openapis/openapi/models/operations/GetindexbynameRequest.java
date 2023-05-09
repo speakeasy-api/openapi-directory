@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetindexbynameRequest {
@@ -12,6 +13,7 @@ public class GetindexbynameRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetindexbynameRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -22,6 +24,7 @@ public class GetindexbynameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
     public String dataEntityName;
+
     public GetindexbynameRequest withDataEntityName(String dataEntityName) {
         this.dataEntityName = dataEntityName;
         return this;
@@ -32,9 +35,15 @@ public class GetindexbynameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index_name")
     public String indexName;
+
     public GetindexbynameRequest withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
     }
     
+    public GetindexbynameRequest(@JsonProperty("Content-Type") String contentType, @JsonProperty("dataEntityName") String dataEntityName, @JsonProperty("index_name") String indexName) {
+        this.contentType = contentType;
+        this.dataEntityName = dataEntityName;
+        this.indexName = indexName;
+  }
 }

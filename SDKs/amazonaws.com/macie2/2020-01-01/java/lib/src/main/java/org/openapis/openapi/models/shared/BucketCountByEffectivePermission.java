@@ -15,6 +15,7 @@ public class BucketCountByEffectivePermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publiclyAccessible")
     public Long publiclyAccessible;
+
     public BucketCountByEffectivePermission withPubliclyAccessible(Long publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -23,6 +24,7 @@ public class BucketCountByEffectivePermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publiclyReadable")
     public Long publiclyReadable;
+
     public BucketCountByEffectivePermission withPubliclyReadable(Long publiclyReadable) {
         this.publiclyReadable = publiclyReadable;
         return this;
@@ -31,6 +33,7 @@ public class BucketCountByEffectivePermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publiclyWritable")
     public Long publiclyWritable;
+
     public BucketCountByEffectivePermission withPubliclyWritable(Long publiclyWritable) {
         this.publiclyWritable = publiclyWritable;
         return this;
@@ -39,9 +42,11 @@ public class BucketCountByEffectivePermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unknown")
     public Long unknown;
+
     public BucketCountByEffectivePermission withUnknown(Long unknown) {
         this.unknown = unknown;
         return this;
     }
     
+    public BucketCountByEffectivePermission(){}
 }

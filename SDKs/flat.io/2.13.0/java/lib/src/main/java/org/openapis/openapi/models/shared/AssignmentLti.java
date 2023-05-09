@@ -18,9 +18,11 @@ public class AssignmentLti {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssignmentLti withId(String id) {
         this.id = id;
         return this;
     }
     
+    public AssignmentLti(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAcceleratorsResponse {
@@ -12,6 +13,7 @@ public class DescribeAcceleratorsResponse {
      */
     
     public Object badRequestException;
+
     public DescribeAcceleratorsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAcceleratorsResponse {
     
     
     public String contentType;
+
     public DescribeAcceleratorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAcceleratorsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAcceleratorsResponse describeAcceleratorsResponse;
+
     public DescribeAcceleratorsResponse withDescribeAcceleratorsResponse(org.openapis.openapi.models.shared.DescribeAcceleratorsResponse describeAcceleratorsResponse) {
         this.describeAcceleratorsResponse = describeAcceleratorsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAcceleratorsResponse {
      */
     
     public Object internalServerException;
+
     public DescribeAcceleratorsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeAcceleratorsResponse {
     
     
     public Integer statusCode;
+
     public DescribeAcceleratorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeAcceleratorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAcceleratorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeAcceleratorsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAcceleratorsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeAcceleratorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

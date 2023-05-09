@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersListResponse {
     
     public String contentType;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersListRespons
      */
     
     public org.openapis.openapi.models.shared.ListSubscriptionOffersResponse listSubscriptionOffersResponse;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersListResponse withListSubscriptionOffersResponse(org.openapis.openapi.models.shared.ListSubscriptionOffersResponse listSubscriptionOffersResponse) {
         this.listSubscriptionOffersResponse = listSubscriptionOffersResponse;
         return this;
@@ -26,6 +29,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersListRespons
     
     
     public Integer statusCode;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersListRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

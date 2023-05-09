@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminEnableOrDisableMaintenanceModeRequestBody {
@@ -16,9 +17,13 @@ public class EnterpriseAdminEnableOrDisableMaintenanceModeRequestBody {
      */
     @SpeakeasyMetadata("form:name=maintenance")
     public String maintenance;
+
     public EnterpriseAdminEnableOrDisableMaintenanceModeRequestBody withMaintenance(String maintenance) {
         this.maintenance = maintenance;
         return this;
     }
     
+    public EnterpriseAdminEnableOrDisableMaintenanceModeRequestBody(@JsonProperty("maintenance") String maintenance) {
+        this.maintenance = maintenance;
+  }
 }

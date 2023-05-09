@@ -18,6 +18,7 @@ public class ReplaceServicePerimetersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ReplaceServicePerimetersRequest withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,9 +30,11 @@ public class ReplaceServicePerimetersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicePerimeters")
     public ServicePerimeter[] servicePerimeters;
+
     public ReplaceServicePerimetersRequest withServicePerimeters(ServicePerimeter[] servicePerimeters) {
         this.servicePerimeters = servicePerimeters;
         return this;
     }
     
+    public ReplaceServicePerimetersRequest(){}
 }

@@ -18,6 +18,7 @@ public class EntityMention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public TextSpan text;
+
     public EntityMention withText(TextSpan text) {
         this.text = text;
         return this;
@@ -29,9 +30,11 @@ public class EntityMention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public EntityMentionTypeEnum type;
+
     public EntityMention withType(EntityMentionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public EntityMention(){}
 }

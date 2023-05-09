@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdexchangebuyerBudgetGetRequest {
@@ -12,6 +13,7 @@ public class AdexchangebuyerBudgetGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AdexchangebuyerBudgetGetRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class AdexchangebuyerBudgetGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdexchangebuyerBudgetGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -32,6 +35,7 @@ public class AdexchangebuyerBudgetGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=billingId")
     public String billingId;
+
     public AdexchangebuyerBudgetGetRequest withBillingId(String billingId) {
         this.billingId = billingId;
         return this;
@@ -42,6 +46,7 @@ public class AdexchangebuyerBudgetGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdexchangebuyerBudgetGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +57,7 @@ public class AdexchangebuyerBudgetGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdexchangebuyerBudgetGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +68,7 @@ public class AdexchangebuyerBudgetGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdexchangebuyerBudgetGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class AdexchangebuyerBudgetGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdexchangebuyerBudgetGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class AdexchangebuyerBudgetGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdexchangebuyerBudgetGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,9 +101,14 @@ public class AdexchangebuyerBudgetGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdexchangebuyerBudgetGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdexchangebuyerBudgetGetRequest(@JsonProperty("accountId") String accountId, @JsonProperty("billingId") String billingId) {
+        this.accountId = accountId;
+        this.billingId = billingId;
+  }
 }

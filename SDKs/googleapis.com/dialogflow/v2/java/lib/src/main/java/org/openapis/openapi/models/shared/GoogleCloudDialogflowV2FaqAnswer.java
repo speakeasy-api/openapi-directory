@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2FaqAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answer")
     public String answer;
+
     public GoogleCloudDialogflowV2FaqAnswer withAnswer(String answer) {
         this.answer = answer;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2FaqAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answerRecord")
     public String answerRecord;
+
     public GoogleCloudDialogflowV2FaqAnswer withAnswerRecord(String answerRecord) {
         this.answerRecord = answerRecord;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2FaqAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public GoogleCloudDialogflowV2FaqAnswer withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2FaqAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public GoogleCloudDialogflowV2FaqAnswer withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2FaqAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("question")
     public String question;
+
     public GoogleCloudDialogflowV2FaqAnswer withQuestion(String question) {
         this.question = question;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowV2FaqAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public GoogleCloudDialogflowV2FaqAnswer withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public GoogleCloudDialogflowV2FaqAnswer(){}
 }

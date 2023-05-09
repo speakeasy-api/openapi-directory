@@ -18,6 +18,7 @@ public class GdataDiffUploadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checksumsInfo")
     public GdataCompositeMedia checksumsInfo;
+
     public GdataDiffUploadRequest withChecksumsInfo(GdataCompositeMedia checksumsInfo) {
         this.checksumsInfo = checksumsInfo;
         return this;
@@ -29,6 +30,7 @@ public class GdataDiffUploadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectInfo")
     public GdataCompositeMedia objectInfo;
+
     public GdataDiffUploadRequest withObjectInfo(GdataCompositeMedia objectInfo) {
         this.objectInfo = objectInfo;
         return this;
@@ -40,9 +42,11 @@ public class GdataDiffUploadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectVersion")
     public String objectVersion;
+
     public GdataDiffUploadRequest withObjectVersion(String objectVersion) {
         this.objectVersion = objectVersion;
         return this;
     }
     
+    public GdataDiffUploadRequest(){}
 }

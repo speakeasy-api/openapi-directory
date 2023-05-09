@@ -15,6 +15,7 @@ public class AwsLambdaFunctionLayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public AwsLambdaFunctionLayer withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class AwsLambdaFunctionLayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeSize")
     public Long codeSize;
+
     public AwsLambdaFunctionLayer withCodeSize(Long codeSize) {
         this.codeSize = codeSize;
         return this;
     }
     
+    public AwsLambdaFunctionLayer(){}
 }

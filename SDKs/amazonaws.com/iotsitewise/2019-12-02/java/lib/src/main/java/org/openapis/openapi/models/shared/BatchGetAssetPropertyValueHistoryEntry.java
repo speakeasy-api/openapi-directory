@@ -20,6 +20,7 @@ public class BatchGetAssetPropertyValueHistoryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetId")
     public String assetId;
+
     public BatchGetAssetPropertyValueHistoryEntry withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -30,6 +31,7 @@ public class BatchGetAssetPropertyValueHistoryEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDate")
     public OffsetDateTime endDate;
+
     public BatchGetAssetPropertyValueHistoryEntry withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -37,6 +39,7 @@ public class BatchGetAssetPropertyValueHistoryEntry {
     
     @JsonProperty("entryId")
     public String entryId;
+
     public BatchGetAssetPropertyValueHistoryEntry withEntryId(String entryId) {
         this.entryId = entryId;
         return this;
@@ -45,6 +48,7 @@ public class BatchGetAssetPropertyValueHistoryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyAlias")
     public String propertyAlias;
+
     public BatchGetAssetPropertyValueHistoryEntry withPropertyAlias(String propertyAlias) {
         this.propertyAlias = propertyAlias;
         return this;
@@ -53,6 +57,7 @@ public class BatchGetAssetPropertyValueHistoryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyId")
     public String propertyId;
+
     public BatchGetAssetPropertyValueHistoryEntry withPropertyId(String propertyId) {
         this.propertyId = propertyId;
         return this;
@@ -61,6 +66,7 @@ public class BatchGetAssetPropertyValueHistoryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qualities")
     public QualityEnum[] qualities;
+
     public BatchGetAssetPropertyValueHistoryEntry withQualities(QualityEnum[] qualities) {
         this.qualities = qualities;
         return this;
@@ -71,6 +77,7 @@ public class BatchGetAssetPropertyValueHistoryEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDate")
     public OffsetDateTime startDate;
+
     public BatchGetAssetPropertyValueHistoryEntry withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -79,9 +86,13 @@ public class BatchGetAssetPropertyValueHistoryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeOrdering")
     public TimeOrderingEnum timeOrdering;
+
     public BatchGetAssetPropertyValueHistoryEntry withTimeOrdering(TimeOrderingEnum timeOrdering) {
         this.timeOrdering = timeOrdering;
         return this;
     }
     
+    public BatchGetAssetPropertyValueHistoryEntry(@JsonProperty("entryId") String entryId) {
+        this.entryId = entryId;
+  }
 }

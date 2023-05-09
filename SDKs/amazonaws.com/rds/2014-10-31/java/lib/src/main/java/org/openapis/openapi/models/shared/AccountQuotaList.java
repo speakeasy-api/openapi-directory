@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AccountQuotaList {
     
     public String accountQuotaName;
+
     public AccountQuotaList withAccountQuotaName(String accountQuotaName) {
         this.accountQuotaName = accountQuotaName;
         return this;
@@ -19,6 +20,7 @@ public class AccountQuotaList {
     
     
     public Long max;
+
     public AccountQuotaList withMax(Long max) {
         this.max = max;
         return this;
@@ -26,9 +28,11 @@ public class AccountQuotaList {
     
     
     public Long used;
+
     public AccountQuotaList withUsed(Long used) {
         this.used = used;
         return this;
     }
     
+    public AccountQuotaList(){}
 }

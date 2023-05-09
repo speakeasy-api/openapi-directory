@@ -18,6 +18,7 @@ public class SourceCrowdingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numResults")
     public Integer numResults;
+
     public SourceCrowdingConfig withNumResults(Integer numResults) {
         this.numResults = numResults;
         return this;
@@ -29,9 +30,11 @@ public class SourceCrowdingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numSuggestions")
     public Integer numSuggestions;
+
     public SourceCrowdingConfig withNumSuggestions(Integer numSuggestions) {
         this.numSuggestions = numSuggestions;
         return this;
     }
     
+    public SourceCrowdingConfig(){}
 }

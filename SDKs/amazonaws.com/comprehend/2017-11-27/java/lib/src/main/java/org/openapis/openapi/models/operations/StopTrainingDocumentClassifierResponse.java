@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopTrainingDocumentClassifierResponse {
     
     public String contentType;
+
     public StopTrainingDocumentClassifierResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopTrainingDocumentClassifierResponse {
      */
     
     public Object internalServerException;
+
     public StopTrainingDocumentClassifierResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StopTrainingDocumentClassifierResponse {
      */
     
     public Object invalidRequestException;
+
     public StopTrainingDocumentClassifierResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class StopTrainingDocumentClassifierResponse {
     
     
     public Integer statusCode;
+
     public StopTrainingDocumentClassifierResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopTrainingDocumentClassifierResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopTrainingDocumentClassifierResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StopTrainingDocumentClassifierResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopTrainingDocumentClassifierResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class StopTrainingDocumentClassifierResponse {
      */
     
     public java.util.Map<String, Object> stopTrainingDocumentClassifierResponse;
+
     public StopTrainingDocumentClassifierResponse withStopTrainingDocumentClassifierResponse(java.util.Map<String, Object> stopTrainingDocumentClassifierResponse) {
         this.stopTrainingDocumentClassifierResponse = stopTrainingDocumentClassifierResponse;
         return this;
@@ -73,9 +81,14 @@ public class StopTrainingDocumentClassifierResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StopTrainingDocumentClassifierResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public StopTrainingDocumentClassifierResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

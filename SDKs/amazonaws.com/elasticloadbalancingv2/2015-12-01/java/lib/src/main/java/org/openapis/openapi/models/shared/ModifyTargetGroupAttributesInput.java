@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyTargetGroupAttributesInput {
     
     public TargetGroupAttribute[] attributes;
+
     public ModifyTargetGroupAttributesInput withAttributes(TargetGroupAttribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -16,9 +17,14 @@ public class ModifyTargetGroupAttributesInput {
     
     
     public String targetGroupArn;
+
     public ModifyTargetGroupAttributesInput withTargetGroupArn(String targetGroupArn) {
         this.targetGroupArn = targetGroupArn;
         return this;
     }
     
+    public ModifyTargetGroupAttributesInput(@JsonProperty("Attributes") TargetGroupAttribute[] attributes, @JsonProperty("TargetGroupArn") String targetGroupArn) {
+        this.attributes = attributes;
+        this.targetGroupArn = targetGroupArn;
+  }
 }

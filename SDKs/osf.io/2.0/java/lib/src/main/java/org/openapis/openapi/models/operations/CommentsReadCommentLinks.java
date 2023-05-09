@@ -15,9 +15,11 @@ public class CommentsReadCommentLinks {
      */
     
     public String self;
+
     public CommentsReadCommentLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public CommentsReadCommentLinks(){}
 }

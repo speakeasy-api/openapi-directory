@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeDBClusterBacktracksMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBClusterBacktracksMessage {
     
     public String backtrackIdentifier;
+
     public DescribeDBClusterBacktracksMessage withBacktrackIdentifier(String backtrackIdentifier) {
         this.backtrackIdentifier = backtrackIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class DescribeDBClusterBacktracksMessage {
     
     
     public String dbClusterIdentifier;
+
     public DescribeDBClusterBacktracksMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class DescribeDBClusterBacktracksMessage {
     
     
     public FilterList[] filters;
+
     public DescribeDBClusterBacktracksMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -33,6 +36,7 @@ public class DescribeDBClusterBacktracksMessage {
     
     
     public String marker;
+
     public DescribeDBClusterBacktracksMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -40,9 +44,13 @@ public class DescribeDBClusterBacktracksMessage {
     
     
     public Long maxRecords;
+
     public DescribeDBClusterBacktracksMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeDBClusterBacktracksMessage(@JsonProperty("DBClusterIdentifier") String dbClusterIdentifier) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+  }
 }

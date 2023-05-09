@@ -15,9 +15,11 @@ public class LicensesReadLicenseLinks {
      */
     
     public String self;
+
     public LicensesReadLicenseLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public LicensesReadLicenseLinks(){}
 }

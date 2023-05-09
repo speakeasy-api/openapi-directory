@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartBotRecommendationResponse {
@@ -12,6 +13,7 @@ public class StartBotRecommendationResponse {
      */
     
     public Object conflictException;
+
     public StartBotRecommendationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StartBotRecommendationResponse {
     
     
     public String contentType;
+
     public StartBotRecommendationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartBotRecommendationResponse {
      */
     
     public Object internalServerException;
+
     public StartBotRecommendationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartBotRecommendationResponse {
      */
     
     public Object preconditionFailedException;
+
     public StartBotRecommendationResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -49,6 +54,7 @@ public class StartBotRecommendationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartBotRecommendationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartBotRecommendationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartBotRecommendationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -69,6 +76,7 @@ public class StartBotRecommendationResponse {
      */
     
     public org.openapis.openapi.models.shared.StartBotRecommendationResponse startBotRecommendationResponse;
+
     public StartBotRecommendationResponse withStartBotRecommendationResponse(org.openapis.openapi.models.shared.StartBotRecommendationResponse startBotRecommendationResponse) {
         this.startBotRecommendationResponse = startBotRecommendationResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartBotRecommendationResponse {
     
     
     public Integer statusCode;
+
     public StartBotRecommendationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StartBotRecommendationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartBotRecommendationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class StartBotRecommendationResponse {
      */
     
     public Object throttlingException;
+
     public StartBotRecommendationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class StartBotRecommendationResponse {
      */
     
     public Object validationException;
+
     public StartBotRecommendationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartBotRecommendationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

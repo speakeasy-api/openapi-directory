@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeScalingPoliciesResponse {
     
     public String contentType;
+
     public DescribeScalingPoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeScalingPoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeScalingPoliciesOutput describeScalingPoliciesOutput;
+
     public DescribeScalingPoliciesResponse withDescribeScalingPoliciesOutput(org.openapis.openapi.models.shared.DescribeScalingPoliciesOutput describeScalingPoliciesOutput) {
         this.describeScalingPoliciesOutput = describeScalingPoliciesOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeScalingPoliciesResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeScalingPoliciesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeScalingPoliciesResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeScalingPoliciesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeScalingPoliciesResponse {
      */
     
     public Object notFoundException;
+
     public DescribeScalingPoliciesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeScalingPoliciesResponse {
     
     
     public Integer statusCode;
+
     public DescribeScalingPoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeScalingPoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeScalingPoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeScalingPoliciesResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeScalingPoliciesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeScalingPoliciesResponse {
      */
     
     public Object unsupportedRegionException;
+
     public DescribeScalingPoliciesResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public DescribeScalingPoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

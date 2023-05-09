@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetStatisticsChargingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=chargingLocationId")
     public String chargingLocationId;
+
     public GetStatisticsChargingRequest withChargingLocationId(String chargingLocationId) {
         this.chargingLocationId = chargingLocationId;
         return this;
@@ -23,6 +25,7 @@ public class GetStatisticsChargingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public LocalDate endDate;
+
     public GetStatisticsChargingRequest withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -33,6 +36,7 @@ public class GetStatisticsChargingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
     public GetStatisticsChargingResolutionEnum resolution;
+
     public GetStatisticsChargingRequest withResolution(GetStatisticsChargingResolutionEnum resolution) {
         this.resolution = resolution;
         return this;
@@ -43,6 +47,7 @@ public class GetStatisticsChargingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public LocalDate startDate;
+
     public GetStatisticsChargingRequest withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -53,9 +58,13 @@ public class GetStatisticsChargingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleId")
     public String vehicleId;
+
     public GetStatisticsChargingRequest withVehicleId(String vehicleId) {
         this.vehicleId = vehicleId;
         return this;
     }
     
+    public GetStatisticsChargingRequest(@JsonProperty("startDate") LocalDate startDate) {
+        this.startDate = startDate;
+  }
 }

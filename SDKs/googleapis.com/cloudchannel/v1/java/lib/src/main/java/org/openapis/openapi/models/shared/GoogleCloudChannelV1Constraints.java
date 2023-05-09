@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1Constraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerConstraints")
     public GoogleCloudChannelV1CustomerConstraints customerConstraints;
+
     public GoogleCloudChannelV1Constraints withCustomerConstraints(GoogleCloudChannelV1CustomerConstraints customerConstraints) {
         this.customerConstraints = customerConstraints;
         return this;
     }
     
+    public GoogleCloudChannelV1Constraints(){}
 }

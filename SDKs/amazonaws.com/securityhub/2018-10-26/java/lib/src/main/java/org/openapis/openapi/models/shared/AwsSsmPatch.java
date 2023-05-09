@@ -15,9 +15,11 @@ public class AwsSsmPatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceSummary")
     public AwsSsmComplianceSummary complianceSummary;
+
     public AwsSsmPatch withComplianceSummary(AwsSsmComplianceSummary complianceSummary) {
         this.complianceSummary = complianceSummary;
         return this;
     }
     
+    public AwsSsmPatch(){}
 }

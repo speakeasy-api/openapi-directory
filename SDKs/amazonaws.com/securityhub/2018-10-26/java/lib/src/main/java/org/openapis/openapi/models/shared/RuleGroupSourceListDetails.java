@@ -15,6 +15,7 @@ public class RuleGroupSourceListDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeneratedRulesType")
     public String generatedRulesType;
+
     public RuleGroupSourceListDetails withGeneratedRulesType(String generatedRulesType) {
         this.generatedRulesType = generatedRulesType;
         return this;
@@ -23,6 +24,7 @@ public class RuleGroupSourceListDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetTypes")
     public String[] targetTypes;
+
     public RuleGroupSourceListDetails withTargetTypes(String[] targetTypes) {
         this.targetTypes = targetTypes;
         return this;
@@ -31,9 +33,11 @@ public class RuleGroupSourceListDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public String[] targets;
+
     public RuleGroupSourceListDetails withTargets(String[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public RuleGroupSourceListDetails(){}
 }

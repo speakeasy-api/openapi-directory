@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class Email {
     
     public EmbeddedResource action;
+
     public Email withAction(EmbeddedResource action) {
         this.action = action;
         return this;
@@ -22,6 +23,7 @@ public class Email {
      */
     
     public Boolean bounced;
+
     public Email withBounced(Boolean bounced) {
         this.bounced = bounced;
         return this;
@@ -29,6 +31,7 @@ public class Email {
     
     
     public EmbeddedResource cadence;
+
     public Email withCadence(EmbeddedResource cadence) {
         this.cadence = cadence;
         return this;
@@ -39,6 +42,7 @@ public class Email {
      */
     
     public Boolean clickTracking;
+
     public Email withClickTracking(Boolean clickTracking) {
         this.clickTracking = clickTracking;
         return this;
@@ -46,6 +50,7 @@ public class Email {
     
     
     public EmailCounts counts;
+
     public Email withCounts(EmailCounts counts) {
         this.counts = counts;
         return this;
@@ -56,6 +61,7 @@ public class Email {
      */
     
     public OffsetDateTime createdAt;
+
     public Email withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -63,6 +69,7 @@ public class Email {
     
     
     public EmbeddedResource crmActivity;
+
     public Email withCrmActivity(EmbeddedResource crmActivity) {
         this.crmActivity = crmActivity;
         return this;
@@ -70,6 +77,7 @@ public class Email {
     
     
     public EmbeddedResource emailTemplate;
+
     public Email withEmailTemplate(EmbeddedResource emailTemplate) {
         this.emailTemplate = emailTemplate;
         return this;
@@ -80,6 +88,7 @@ public class Email {
      */
     
     public String errorMessage;
+
     public Email withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -90,6 +99,7 @@ public class Email {
      */
     
     public java.util.Map<String, Object> headers;
+
     public Email withHeaders(java.util.Map<String, Object> headers) {
         this.headers = headers;
         return this;
@@ -100,6 +110,7 @@ public class Email {
      */
     
     public Long id;
+
     public Email withId(Long id) {
         this.id = id;
         return this;
@@ -107,6 +118,7 @@ public class Email {
     
     
     public EmbeddedResource mailing;
+
     public Email withMailing(EmbeddedResource mailing) {
         this.mailing = mailing;
         return this;
@@ -117,6 +129,7 @@ public class Email {
      */
     
     public String personalization;
+
     public Email withPersonalization(String personalization) {
         this.personalization = personalization;
         return this;
@@ -124,6 +137,7 @@ public class Email {
     
     
     public EmbeddedResource recipient;
+
     public Email withRecipient(EmbeddedResource recipient) {
         this.recipient = recipient;
         return this;
@@ -134,6 +148,7 @@ public class Email {
      */
     
     public String recipientEmailAddress;
+
     public Email withRecipientEmailAddress(String recipientEmailAddress) {
         this.recipientEmailAddress = recipientEmailAddress;
         return this;
@@ -144,6 +159,7 @@ public class Email {
      */
     
     public OffsetDateTime sendAfter;
+
     public Email withSendAfter(OffsetDateTime sendAfter) {
         this.sendAfter = sendAfter;
         return this;
@@ -154,6 +170,7 @@ public class Email {
      */
     
     public OffsetDateTime sentAt;
+
     public Email withSentAt(OffsetDateTime sentAt) {
         this.sentAt = sentAt;
         return this;
@@ -164,6 +181,7 @@ public class Email {
      */
     
     public String status;
+
     public Email withStatus(String status) {
         this.status = status;
         return this;
@@ -171,6 +189,7 @@ public class Email {
     
     
     public EmbeddedResource step;
+
     public Email withStep(EmbeddedResource step) {
         this.step = step;
         return this;
@@ -181,6 +200,7 @@ public class Email {
      */
     
     public String subject;
+
     public Email withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -188,6 +208,7 @@ public class Email {
     
     
     public EmbeddedResource task;
+
     public Email withTask(EmbeddedResource task) {
         this.task = task;
         return this;
@@ -198,6 +219,7 @@ public class Email {
      */
     
     public OffsetDateTime updatedAt;
+
     public Email withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -205,6 +227,7 @@ public class Email {
     
     
     public EmbeddedResource user;
+
     public Email withUser(EmbeddedResource user) {
         this.user = user;
         return this;
@@ -215,9 +238,11 @@ public class Email {
      */
     
     public Boolean viewTracking;
+
     public Email withViewTracking(Boolean viewTracking) {
         this.viewTracking = viewTracking;
         return this;
     }
     
+    public Email(){}
 }

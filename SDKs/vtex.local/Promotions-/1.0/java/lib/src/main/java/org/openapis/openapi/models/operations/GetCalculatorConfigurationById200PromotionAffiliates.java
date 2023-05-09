@@ -15,6 +15,7 @@ public class GetCalculatorConfigurationById200PromotionAffiliates {
      */
     
     public String id;
+
     public GetCalculatorConfigurationById200PromotionAffiliates withId(String id) {
         this.id = id;
         return this;
@@ -25,9 +26,11 @@ public class GetCalculatorConfigurationById200PromotionAffiliates {
      */
     
     public String name;
+
     public GetCalculatorConfigurationById200PromotionAffiliates withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetCalculatorConfigurationById200PromotionAffiliates(){}
 }

@@ -12,9 +12,11 @@ public class GetApiV2ListFederationsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-RapidApi-Key")
     public String xRapidApiKey;
+
     public GetApiV2ListFederationsRequest withXRapidApiKey(String xRapidApiKey) {
         this.xRapidApiKey = xRapidApiKey;
         return this;
     }
     
+    public GetApiV2ListFederationsRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteByteMatchSetResponse {
     
     public String contentType;
+
     public DeleteByteMatchSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteByteMatchSetResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteByteMatchSetResponse deleteByteMatchSetResponse;
+
     public DeleteByteMatchSetResponse withDeleteByteMatchSetResponse(org.openapis.openapi.models.shared.DeleteByteMatchSetResponse deleteByteMatchSetResponse) {
         this.deleteByteMatchSetResponse = deleteByteMatchSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class DeleteByteMatchSetResponse {
     
     
     public Integer statusCode;
+
     public DeleteByteMatchSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteByteMatchSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteByteMatchSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DeleteByteMatchSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public DeleteByteMatchSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class DeleteByteMatchSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public DeleteByteMatchSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class DeleteByteMatchSetResponse {
      */
     
     public Object wafNonEmptyEntityException;
+
     public DeleteByteMatchSetResponse withWAFNonEmptyEntityException(Object wafNonEmptyEntityException) {
         this.wafNonEmptyEntityException = wafNonEmptyEntityException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteByteMatchSetResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public DeleteByteMatchSetResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteByteMatchSetResponse {
      */
     
     public Object wafReferencedItemException;
+
     public DeleteByteMatchSetResponse withWAFReferencedItemException(Object wafReferencedItemException) {
         this.wafReferencedItemException = wafReferencedItemException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteByteMatchSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public DeleteByteMatchSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public DeleteByteMatchSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

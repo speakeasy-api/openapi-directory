@@ -117,6 +117,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -147,12 +152,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReisezentrenResponse res = new org.openapis.openapi.models.operations.GetReisezentrenResponse() {{
+        org.openapis.openapi.models.operations.GetReisezentrenResponse res = new org.openapis.openapi.models.operations.GetReisezentrenResponse(contentType, httpRes.statusCode()) {{
             travelCenterList = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,11 +197,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReisezentrenLocLatLonResponse res = new org.openapis.openapi.models.operations.GetReisezentrenLocLatLonResponse() {{
+        org.openapis.openapi.models.operations.GetReisezentrenLocLatLonResponse res = new org.openapis.openapi.models.operations.GetReisezentrenLocLatLonResponse(contentType, httpRes.statusCode()) {{
             travelCenter = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -233,11 +234,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReisezentrenLocLatLonDistResponse res = new org.openapis.openapi.models.operations.GetReisezentrenLocLatLonDistResponse() {{
+        org.openapis.openapi.models.operations.GetReisezentrenLocLatLonDistResponse res = new org.openapis.openapi.models.operations.GetReisezentrenLocLatLonDistResponse(contentType, httpRes.statusCode()) {{
             travelCenter = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -272,11 +271,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReisezentrenIdResponse res = new org.openapis.openapi.models.operations.GetReisezentrenIdResponse() {{
+        org.openapis.openapi.models.operations.GetReisezentrenIdResponse res = new org.openapis.openapi.models.operations.GetReisezentrenIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {

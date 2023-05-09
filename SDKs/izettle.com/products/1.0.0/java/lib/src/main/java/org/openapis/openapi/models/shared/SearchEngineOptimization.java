@@ -12,6 +12,7 @@ public class SearchEngineOptimization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metaDescription")
     public String metaDescription;
+
     public SearchEngineOptimization withMetaDescription(String metaDescription) {
         this.metaDescription = metaDescription;
         return this;
@@ -20,6 +21,7 @@ public class SearchEngineOptimization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public SearchEngineOptimization withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -28,9 +30,11 @@ public class SearchEngineOptimization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public SearchEngineOptimization withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public SearchEngineOptimization(){}
 }

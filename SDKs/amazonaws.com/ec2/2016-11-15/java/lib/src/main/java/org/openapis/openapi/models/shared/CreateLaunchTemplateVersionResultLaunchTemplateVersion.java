@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersion {
     
     public OffsetDateTime createTime;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersion withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -19,6 +20,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersion {
     
     
     public String createdBy;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersion withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -26,6 +28,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersion {
     
     
     public Boolean defaultVersion;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersion withDefaultVersion(Boolean defaultVersion) {
         this.defaultVersion = defaultVersion;
         return this;
@@ -33,6 +36,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersion {
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData launchTemplateData;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersion withLaunchTemplateData(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateData launchTemplateData) {
         this.launchTemplateData = launchTemplateData;
         return this;
@@ -40,6 +44,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersion {
     
     
     public String launchTemplateId;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersion withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -47,6 +52,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersion {
     
     
     public String launchTemplateName;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersion withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -54,6 +60,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersion {
     
     
     public String versionDescription;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersion withVersionDescription(String versionDescription) {
         this.versionDescription = versionDescription;
         return this;
@@ -61,9 +68,11 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersion {
     
     
     public Long versionNumber;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersion withVersionNumber(Long versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersion(){}
 }

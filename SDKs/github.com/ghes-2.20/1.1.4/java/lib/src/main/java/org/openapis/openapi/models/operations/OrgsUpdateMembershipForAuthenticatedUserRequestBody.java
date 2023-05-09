@@ -12,9 +12,13 @@ public class OrgsUpdateMembershipForAuthenticatedUserRequestBody {
      */
     @JsonProperty("state")
     public OrgsUpdateMembershipForAuthenticatedUserRequestBodyStateEnum state;
+
     public OrgsUpdateMembershipForAuthenticatedUserRequestBody withState(OrgsUpdateMembershipForAuthenticatedUserRequestBodyStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public OrgsUpdateMembershipForAuthenticatedUserRequestBody(@JsonProperty("state") OrgsUpdateMembershipForAuthenticatedUserRequestBodyStateEnum state) {
+        this.state = state;
+  }
 }

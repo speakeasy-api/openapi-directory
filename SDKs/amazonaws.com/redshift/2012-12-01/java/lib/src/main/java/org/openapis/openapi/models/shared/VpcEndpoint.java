@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class VpcEndpoint {
     
     public NetworkInterfaceList[] networkInterfaces;
+
     public VpcEndpoint withNetworkInterfaces(NetworkInterfaceList[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -19,6 +20,7 @@ public class VpcEndpoint {
     
     
     public String vpcEndpointId;
+
     public VpcEndpoint withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
@@ -26,9 +28,11 @@ public class VpcEndpoint {
     
     
     public String vpcId;
+
     public VpcEndpoint withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public VpcEndpoint(){}
 }

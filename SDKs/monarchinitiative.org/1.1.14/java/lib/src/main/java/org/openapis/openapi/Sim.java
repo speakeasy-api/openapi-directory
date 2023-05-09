@@ -60,11 +60,9 @@ public class Sim {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAnnotationScoreResponse res = new org.openapis.openapi.models.operations.GetAnnotationScoreResponse() {{
+        org.openapis.openapi.models.operations.GetAnnotationScoreResponse res = new org.openapis.openapi.models.operations.GetAnnotationScoreResponse(contentType, httpRes.statusCode()) {{
             sufficiencyOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Sim {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSimCompareResponse res = new org.openapis.openapi.models.operations.GetSimCompareResponse() {{
+        org.openapis.openapi.models.operations.GetSimCompareResponse res = new org.openapis.openapi.models.operations.GetSimCompareResponse(contentType, httpRes.statusCode()) {{
             simResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Sim {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSimSearchResponse res = new org.openapis.openapi.models.operations.GetSimSearchResponse() {{
+        org.openapis.openapi.models.operations.GetSimSearchResponse res = new org.openapis.openapi.models.operations.GetSimSearchResponse(contentType, httpRes.statusCode()) {{
             simResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -191,11 +185,9 @@ public class Sim {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAnnotationScoreResponse res = new org.openapis.openapi.models.operations.PostAnnotationScoreResponse() {{
+        org.openapis.openapi.models.operations.PostAnnotationScoreResponse res = new org.openapis.openapi.models.operations.PostAnnotationScoreResponse(contentType, httpRes.statusCode()) {{
             sufficiencyOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,11 +226,9 @@ public class Sim {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSimCompareResponse res = new org.openapis.openapi.models.operations.PostSimCompareResponse() {{
+        org.openapis.openapi.models.operations.PostSimCompareResponse res = new org.openapis.openapi.models.operations.PostSimCompareResponse(contentType, httpRes.statusCode()) {{
             simResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

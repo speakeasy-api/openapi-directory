@@ -19,6 +19,7 @@ public class GetProtectionStatusRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public GetProtectionStatusRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -27,6 +28,7 @@ public class GetProtectionStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetProtectionStatusRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +37,7 @@ public class GetProtectionStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemberAccountId")
     public String memberAccountId;
+
     public GetProtectionStatusRequest withMemberAccountId(String memberAccountId) {
         this.memberAccountId = memberAccountId;
         return this;
@@ -43,6 +46,7 @@ public class GetProtectionStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetProtectionStatusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -50,6 +54,7 @@ public class GetProtectionStatusRequest {
     
     @JsonProperty("PolicyId")
     public String policyId;
+
     public GetProtectionStatusRequest withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
@@ -60,9 +65,13 @@ public class GetProtectionStatusRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public GetProtectionStatusRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetProtectionStatusRequest(@JsonProperty("PolicyId") String policyId) {
+        this.policyId = policyId;
+  }
 }

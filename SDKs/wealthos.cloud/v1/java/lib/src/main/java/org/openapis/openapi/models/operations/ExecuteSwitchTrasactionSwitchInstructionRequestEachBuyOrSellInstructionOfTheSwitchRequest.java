@@ -15,6 +15,7 @@ public class ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstruc
      */
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstructionOfTheSwitchRequest withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -25,6 +26,7 @@ public class ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstruc
      */
     @JsonProperty("mode")
     public ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnum mode;
+
     public ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstructionOfTheSwitchRequest withMode(ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnum mode) {
         this.mode = mode;
         return this;
@@ -35,9 +37,15 @@ public class ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstruc
      */
     @JsonProperty("value")
     public String value;
+
     public ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstructionOfTheSwitchRequest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstructionOfTheSwitchRequest(@JsonProperty("investment_product_id") String investmentProductId, @JsonProperty("mode") ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnum mode, @JsonProperty("value") String value) {
+        this.investmentProductId = investmentProductId;
+        this.mode = mode;
+        this.value = value;
+  }
 }

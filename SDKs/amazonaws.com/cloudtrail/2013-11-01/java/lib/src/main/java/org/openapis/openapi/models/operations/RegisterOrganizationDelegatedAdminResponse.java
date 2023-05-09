@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterOrganizationDelegatedAdminResponse {
@@ -12,6 +13,7 @@ public class RegisterOrganizationDelegatedAdminResponse {
      */
     
     public Object accountNotFoundException;
+
     public RegisterOrganizationDelegatedAdminResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -22,6 +24,7 @@ public class RegisterOrganizationDelegatedAdminResponse {
      */
     
     public Object accountRegisteredException;
+
     public RegisterOrganizationDelegatedAdminResponse withAccountRegisteredException(Object accountRegisteredException) {
         this.accountRegisteredException = accountRegisteredException;
         return this;
@@ -32,6 +35,7 @@ public class RegisterOrganizationDelegatedAdminResponse {
      */
     
     public Object cannotDelegateManagementAccountException;
+
     public RegisterOrganizationDelegatedAdminResponse withCannotDelegateManagementAccountException(Object cannotDelegateManagementAccountException) {
         this.cannotDelegateManagementAccountException = cannotDelegateManagementAccountException;
         return this;
@@ -42,6 +46,7 @@ public class RegisterOrganizationDelegatedAdminResponse {
      */
     
     public Object cloudTrailAccessNotEnabledException;
+
     public RegisterOrganizationDelegatedAdminResponse withCloudTrailAccessNotEnabledException(Object cloudTrailAccessNotEnabledException) {
         this.cloudTrailAccessNotEnabledException = cloudTrailAccessNotEnabledException;
         return this;
@@ -52,6 +57,7 @@ public class RegisterOrganizationDelegatedAdminResponse {
      */
     
     public Object conflictException;
+
     public RegisterOrganizationDelegatedAdminResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -59,6 +65,7 @@ public class RegisterOrganizationDelegatedAdminResponse {
     
     
     public String contentType;
+
     public RegisterOrganizationDelegatedAdminResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class RegisterOrganizationDelegatedAdminResponse {
      */
     
     public Object delegatedAdminAccountLimitExceededException;
+
     public RegisterOrganizationDelegatedAdminResponse withDelegatedAdminAccountLimitExceededException(Object delegatedAdminAccountLimitExceededException) {
         this.delegatedAdminAccountLimitExceededException = delegatedAdminAccountLimitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class RegisterOrganizationDelegatedAdminResponse {
      */
     
     public Object insufficientDependencyServiceAccessPermissionException;
+
     public RegisterOrganizationDelegatedAdminResponse withInsufficientDependencyServiceAccessPermissionException(Object insufficientDependencyServiceAccessPermissionException) {
         this.insufficientDependencyServiceAccessPermissionException = insufficientDependencyServiceAccessPermissionException;
         return this;
@@ -89,6 +98,7 @@ public class RegisterOrganizationDelegatedAdminResponse {
      */
     
     public Object invalidParameterException;
+
     public RegisterOrganizationDelegatedAdminResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -99,6 +109,7 @@ public class RegisterOrganizationDelegatedAdminResponse {
      */
     
     public Object notOrganizationManagementAccountException;
+
     public RegisterOrganizationDelegatedAdminResponse withNotOrganizationManagementAccountException(Object notOrganizationManagementAccountException) {
         this.notOrganizationManagementAccountException = notOrganizationManagementAccountException;
         return this;
@@ -109,6 +120,7 @@ public class RegisterOrganizationDelegatedAdminResponse {
      */
     
     public Object operationNotPermittedException;
+
     public RegisterOrganizationDelegatedAdminResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -119,6 +131,7 @@ public class RegisterOrganizationDelegatedAdminResponse {
      */
     
     public Object organizationNotInAllFeaturesModeException;
+
     public RegisterOrganizationDelegatedAdminResponse withOrganizationNotInAllFeaturesModeException(Object organizationNotInAllFeaturesModeException) {
         this.organizationNotInAllFeaturesModeException = organizationNotInAllFeaturesModeException;
         return this;
@@ -129,6 +142,7 @@ public class RegisterOrganizationDelegatedAdminResponse {
      */
     
     public Object organizationsNotInUseException;
+
     public RegisterOrganizationDelegatedAdminResponse withOrganizationsNotInUseException(Object organizationsNotInUseException) {
         this.organizationsNotInUseException = organizationsNotInUseException;
         return this;
@@ -139,6 +153,7 @@ public class RegisterOrganizationDelegatedAdminResponse {
      */
     
     public java.util.Map<String, Object> registerOrganizationDelegatedAdminResponse;
+
     public RegisterOrganizationDelegatedAdminResponse withRegisterOrganizationDelegatedAdminResponse(java.util.Map<String, Object> registerOrganizationDelegatedAdminResponse) {
         this.registerOrganizationDelegatedAdminResponse = registerOrganizationDelegatedAdminResponse;
         return this;
@@ -146,6 +161,7 @@ public class RegisterOrganizationDelegatedAdminResponse {
     
     
     public Integer statusCode;
+
     public RegisterOrganizationDelegatedAdminResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -153,6 +169,7 @@ public class RegisterOrganizationDelegatedAdminResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterOrganizationDelegatedAdminResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -163,9 +180,14 @@ public class RegisterOrganizationDelegatedAdminResponse {
      */
     
     public Object unsupportedOperationException;
+
     public RegisterOrganizationDelegatedAdminResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public RegisterOrganizationDelegatedAdminResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

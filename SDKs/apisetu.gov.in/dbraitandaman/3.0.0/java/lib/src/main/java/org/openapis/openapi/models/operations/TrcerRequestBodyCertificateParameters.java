@@ -12,6 +12,7 @@ public class TrcerRequestBodyCertificateParameters {
      */
     @JsonProperty("CERT_NO")
     public String certNo;
+
     public TrcerRequestBodyCertificateParameters withCertNo(String certNo) {
         this.certNo = certNo;
         return this;
@@ -22,6 +23,7 @@ public class TrcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public TrcerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -32,6 +34,7 @@ public class TrcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public TrcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -42,9 +45,16 @@ public class TrcerRequestBodyCertificateParameters {
      */
     @JsonProperty("Session")
     public String session;
+
     public TrcerRequestBodyCertificateParameters withSession(String session) {
         this.session = session;
         return this;
     }
     
+    public TrcerRequestBodyCertificateParameters(@JsonProperty("CERT_NO") String certNo, @JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("Session") String session) {
+        this.certNo = certNo;
+        this.dob = dob;
+        this.fullName = fullName;
+        this.session = session;
+  }
 }

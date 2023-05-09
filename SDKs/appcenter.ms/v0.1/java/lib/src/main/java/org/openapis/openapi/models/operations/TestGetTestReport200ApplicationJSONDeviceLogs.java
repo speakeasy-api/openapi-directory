@@ -12,6 +12,7 @@ public class TestGetTestReport200ApplicationJSONDeviceLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appium_log")
     public String appiumLog;
+
     public TestGetTestReport200ApplicationJSONDeviceLogs withAppiumLog(String appiumLog) {
         this.appiumLog = appiumLog;
         return this;
@@ -20,6 +21,7 @@ public class TestGetTestReport200ApplicationJSONDeviceLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_log")
     public String deviceLog;
+
     public TestGetTestReport200ApplicationJSONDeviceLogs withDeviceLog(String deviceLog) {
         this.deviceLog = deviceLog;
         return this;
@@ -28,6 +30,7 @@ public class TestGetTestReport200ApplicationJSONDeviceLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_snapshot_id")
     public String deviceSnapshotId;
+
     public TestGetTestReport200ApplicationJSONDeviceLogs withDeviceSnapshotId(String deviceSnapshotId) {
         this.deviceSnapshotId = deviceSnapshotId;
         return this;
@@ -36,9 +39,11 @@ public class TestGetTestReport200ApplicationJSONDeviceLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("test_log")
     public String testLog;
+
     public TestGetTestReport200ApplicationJSONDeviceLogs withTestLog(String testLog) {
         this.testLog = testLog;
         return this;
     }
     
+    public TestGetTestReport200ApplicationJSONDeviceLogs(){}
 }

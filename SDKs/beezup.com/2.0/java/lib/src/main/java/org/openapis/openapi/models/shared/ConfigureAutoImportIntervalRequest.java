@@ -15,9 +15,13 @@ public class ConfigureAutoImportIntervalRequest {
      */
     @JsonProperty("interval")
     public String interval;
+
     public ConfigureAutoImportIntervalRequest withInterval(String interval) {
         this.interval = interval;
         return this;
     }
     
+    public ConfigureAutoImportIntervalRequest(@JsonProperty("interval") String interval) {
+        this.interval = interval;
+  }
 }

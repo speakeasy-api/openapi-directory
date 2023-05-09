@@ -63,12 +63,10 @@ public class Environments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEnvironmentResponse res = new org.openapis.openapi.models.operations.CreateEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.CreateEnvironmentResponse res = new org.openapis.openapi.models.operations.CreateEnvironmentResponse(contentType, httpRes.statusCode()) {{
             environmentModelHaljson = null;
             environmentModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -111,10 +109,8 @@ public class Environments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteEnvironmentResponse res = new org.openapis.openapi.models.operations.DeleteEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.DeleteEnvironmentResponse res = new org.openapis.openapi.models.operations.DeleteEnvironmentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -146,12 +142,10 @@ public class Environments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEnvironmentResponse res = new org.openapis.openapi.models.operations.GetEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.GetEnvironmentResponse res = new org.openapis.openapi.models.operations.GetEnvironmentResponse(contentType, httpRes.statusCode()) {{
             environmentModelHaljson = null;
             environmentModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,12 +189,10 @@ public class Environments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEnvironmentsResponse res = new org.openapis.openapi.models.operations.GetEnvironmentsResponse() {{
+        org.openapis.openapi.models.operations.GetEnvironmentsResponse res = new org.openapis.openapi.models.operations.GetEnvironmentsResponse(contentType, httpRes.statusCode()) {{
             environmentModelHaljsons = null;
             environmentModels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,12 +240,10 @@ public class Environments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateEnvironmentResponse res = new org.openapis.openapi.models.operations.UpdateEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.UpdateEnvironmentResponse res = new org.openapis.openapi.models.operations.UpdateEnvironmentResponse(contentType, httpRes.statusCode()) {{
             environmentModelHaljson = null;
             environmentModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateServiceTemplateVersionResponse {
@@ -12,6 +13,7 @@ public class UpdateServiceTemplateVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateServiceTemplateVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateServiceTemplateVersionResponse {
      */
     
     public Object conflictException;
+
     public UpdateServiceTemplateVersionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateServiceTemplateVersionResponse {
     
     
     public String contentType;
+
     public UpdateServiceTemplateVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateServiceTemplateVersionResponse {
      */
     
     public Object internalServerException;
+
     public UpdateServiceTemplateVersionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateServiceTemplateVersionResponse {
     
     
     public Integer statusCode;
+
     public UpdateServiceTemplateVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateServiceTemplateVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateServiceTemplateVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateServiceTemplateVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateServiceTemplateVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateServiceTemplateVersionResponse {
      */
     
     public Object throttlingException;
+
     public UpdateServiceTemplateVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateServiceTemplateVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateServiceTemplateVersionOutput updateServiceTemplateVersionOutput;
+
     public UpdateServiceTemplateVersionResponse withUpdateServiceTemplateVersionOutput(org.openapis.openapi.models.shared.UpdateServiceTemplateVersionOutput updateServiceTemplateVersionOutput) {
         this.updateServiceTemplateVersionOutput = updateServiceTemplateVersionOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateServiceTemplateVersionResponse {
      */
     
     public Object validationException;
+
     public UpdateServiceTemplateVersionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateServiceTemplateVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

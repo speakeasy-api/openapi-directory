@@ -18,6 +18,7 @@ public class RunPipelineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public RunPipelineRequest withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -29,6 +30,7 @@ public class RunPipelineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipeline")
     public Pipeline pipeline;
+
     public RunPipelineRequest withPipeline(Pipeline pipeline) {
         this.pipeline = pipeline;
         return this;
@@ -40,9 +42,11 @@ public class RunPipelineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubSubTopic")
     public String pubSubTopic;
+
     public RunPipelineRequest withPubSubTopic(String pubSubTopic) {
         this.pubSubTopic = pubSubTopic;
         return this;
     }
     
+    public RunPipelineRequest(){}
 }

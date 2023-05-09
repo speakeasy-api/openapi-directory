@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeResourcePolicyResponse {
     
     public String contentType;
+
     public DescribeResourcePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeResourcePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeResourcePolicyResponse describeResourcePolicyResponse;
+
     public DescribeResourcePolicyResponse withDescribeResourcePolicyResponse(org.openapis.openapi.models.shared.DescribeResourcePolicyResponse describeResourcePolicyResponse) {
         this.describeResourcePolicyResponse = describeResourcePolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeResourcePolicyResponse {
      */
     
     public Object internalServerError;
+
     public DescribeResourcePolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeResourcePolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeResourcePolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeResourcePolicyResponse {
     
     
     public Integer statusCode;
+
     public DescribeResourcePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeResourcePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeResourcePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeResourcePolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeResourcePolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeResourcePolicyResponse {
      */
     
     public Object throttlingException;
+
     public DescribeResourcePolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeResourcePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

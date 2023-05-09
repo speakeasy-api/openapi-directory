@@ -15,6 +15,7 @@ public class ConversionProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataTimestamp")
     public String dataTimestamp;
+
     public ConversionProperties withDataTimestamp(String dataTimestamp) {
         this.dataTimestamp = dataTimestamp;
         return this;
@@ -23,6 +24,7 @@ public class ConversionProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceUefi")
     public Boolean forceUefi;
+
     public ConversionProperties withForceUefi(Boolean forceUefi) {
         this.forceUefi = forceUefi;
         return this;
@@ -31,6 +33,7 @@ public class ConversionProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootVolumeName")
     public String rootVolumeName;
+
     public ConversionProperties withRootVolumeName(String rootVolumeName) {
         this.rootVolumeName = rootVolumeName;
         return this;
@@ -39,6 +42,7 @@ public class ConversionProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeToConversionMap")
     public java.util.Map<String, java.util.Map<String, String>> volumeToConversionMap;
+
     public ConversionProperties withVolumeToConversionMap(java.util.Map<String, java.util.Map<String, String>> volumeToConversionMap) {
         this.volumeToConversionMap = volumeToConversionMap;
         return this;
@@ -47,9 +51,11 @@ public class ConversionProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeToVolumeSize")
     public java.util.Map<String, Long> volumeToVolumeSize;
+
     public ConversionProperties withVolumeToVolumeSize(java.util.Map<String, Long> volumeToVolumeSize) {
         this.volumeToVolumeSize = volumeToVolumeSize;
         return this;
     }
     
+    public ConversionProperties(){}
 }

@@ -15,9 +15,11 @@ public class CreateContactMethodResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public CreateContactMethodResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public CreateContactMethodResult(){}
 }

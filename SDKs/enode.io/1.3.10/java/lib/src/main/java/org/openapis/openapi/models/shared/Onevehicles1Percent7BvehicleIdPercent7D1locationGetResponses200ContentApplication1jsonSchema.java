@@ -21,6 +21,7 @@ public class Onevehicles1Percent7BvehicleIdPercent7D1locationGetResponses200Cont
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("lastUpdated")
     public LocalDate lastUpdated;
+
     public Onevehicles1Percent7BvehicleIdPercent7D1locationGetResponses200ContentApplication1jsonSchema withLastUpdated(LocalDate lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -32,6 +33,7 @@ public class Onevehicles1Percent7BvehicleIdPercent7D1locationGetResponses200Cont
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public Onevehicles1Percent7BvehicleIdPercent7D1locationGetResponses200ContentApplication1jsonSchema withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -43,9 +45,11 @@ public class Onevehicles1Percent7BvehicleIdPercent7D1locationGetResponses200Cont
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public Onevehicles1Percent7BvehicleIdPercent7D1locationGetResponses200ContentApplication1jsonSchema withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public Onevehicles1Percent7BvehicleIdPercent7D1locationGetResponses200ContentApplication1jsonSchema(){}
 }

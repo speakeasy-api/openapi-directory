@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeSynonymOptionsResponse - A response message that contains the synonym options for a search domain.
@@ -15,9 +15,13 @@ public class DescribeSynonymOptionsResponse {
      */
     
     public SynonymOptionsStatus synonyms;
+
     public DescribeSynonymOptionsResponse withSynonyms(SynonymOptionsStatus synonyms) {
         this.synonyms = synonyms;
         return this;
     }
     
+    public DescribeSynonymOptionsResponse(@JsonProperty("Synonyms") SynonymOptionsStatus synonyms) {
+        this.synonyms = synonyms;
+  }
 }

@@ -15,9 +15,11 @@ public class GetActionTypeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionType")
     public ActionTypeDeclaration actionType;
+
     public GetActionTypeOutput withActionType(ActionTypeDeclaration actionType) {
         this.actionType = actionType;
         return this;
     }
     
+    public GetActionTypeOutput(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePresignedNotebookUrlResponse {
     @JsonProperty("AuthToken")
     public String authToken;
+
     public CreatePresignedNotebookUrlResponse withAuthToken(String authToken) {
         this.authToken = authToken;
         return this;
@@ -19,6 +20,7 @@ public class CreatePresignedNotebookUrlResponse {
     
     @JsonProperty("AuthTokenExpirationTime")
     public Long authTokenExpirationTime;
+
     public CreatePresignedNotebookUrlResponse withAuthTokenExpirationTime(Long authTokenExpirationTime) {
         this.authTokenExpirationTime = authTokenExpirationTime;
         return this;
@@ -26,9 +28,15 @@ public class CreatePresignedNotebookUrlResponse {
     
     @JsonProperty("NotebookUrl")
     public String notebookUrl;
+
     public CreatePresignedNotebookUrlResponse withNotebookUrl(String notebookUrl) {
         this.notebookUrl = notebookUrl;
         return this;
     }
     
+    public CreatePresignedNotebookUrlResponse(@JsonProperty("AuthToken") String authToken, @JsonProperty("AuthTokenExpirationTime") Long authTokenExpirationTime, @JsonProperty("NotebookUrl") String notebookUrl) {
+        this.authToken = authToken;
+        this.authTokenExpirationTime = authTokenExpirationTime;
+        this.notebookUrl = notebookUrl;
+  }
 }

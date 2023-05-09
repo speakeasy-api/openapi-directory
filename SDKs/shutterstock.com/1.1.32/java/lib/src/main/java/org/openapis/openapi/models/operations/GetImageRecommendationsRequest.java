@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImageRecommendationsRequest {
@@ -12,6 +13,7 @@ public class GetImageRecommendationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String[] id;
+
     public GetImageRecommendationsRequest withId(String[] id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetImageRecommendationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_items")
     public Long maxItems;
+
     public GetImageRecommendationsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -32,9 +35,13 @@ public class GetImageRecommendationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe")
     public Boolean safe;
+
     public GetImageRecommendationsRequest withSafe(Boolean safe) {
         this.safe = safe;
         return this;
     }
     
+    public GetImageRecommendationsRequest(@JsonProperty("id") String[] id) {
+        this.id = id;
+  }
 }

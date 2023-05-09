@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerPostAppointmentRawRequest {
@@ -12,6 +13,7 @@ public class DiaryControllerPostAppointmentRawRequest {
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public DiaryControllerPostAppointmentRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class DiaryControllerPostAppointmentRawRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lettings")
     public Boolean lettings;
+
     public DiaryControllerPostAppointmentRawRequest withLettings(Boolean lettings) {
         this.lettings = lettings;
         return this;
@@ -32,6 +35,7 @@ public class DiaryControllerPostAppointmentRawRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyIdentifier")
     public String[] propertyIdentifier;
+
     public DiaryControllerPostAppointmentRawRequest withPropertyIdentifier(String[] propertyIdentifier) {
         this.propertyIdentifier = propertyIdentifier;
         return this;
@@ -42,9 +46,15 @@ public class DiaryControllerPostAppointmentRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public DiaryControllerPostAppointmentRawRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public DiaryControllerPostAppointmentRawRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("propertyIdentifier") String[] propertyIdentifier, @JsonProperty("shortName") String shortName) {
+        this.requestBody = requestBody;
+        this.propertyIdentifier = propertyIdentifier;
+        this.shortName = shortName;
+  }
 }

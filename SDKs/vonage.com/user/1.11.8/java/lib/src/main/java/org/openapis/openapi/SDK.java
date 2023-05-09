@@ -117,6 +117,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -142,12 +147,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserCtrlGetUserByIDResponse res = new org.openapis.openapi.models.operations.UserCtrlGetUserByIDResponse() {{
+        org.openapis.openapi.models.operations.UserCtrlGetUserByIDResponse res = new org.openapis.openapi.models.operations.UserCtrlGetUserByIDResponse(contentType, httpRes.statusCode()) {{
             userHalResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,12 +199,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserCtrlGetUsersResponse res = new org.openapis.openapi.models.operations.UserCtrlGetUsersResponse() {{
+        org.openapis.openapi.models.operations.UserCtrlGetUsersResponse res = new org.openapis.openapi.models.operations.UserCtrlGetUsersResponse(contentType, httpRes.statusCode()) {{
             usersHalResponse = null;
             validationErrorsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

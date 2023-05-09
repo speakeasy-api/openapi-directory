@@ -18,6 +18,7 @@ public class Precondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exists")
     public Boolean exists;
+
     public Precondition withExists(Boolean exists) {
         this.exists = exists;
         return this;
@@ -29,9 +30,11 @@ public class Precondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Precondition withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Precondition(){}
 }

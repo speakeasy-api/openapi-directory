@@ -15,6 +15,7 @@ public class CalculateRouteRequestBodyTruckModeOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvoidFerries")
     public Boolean avoidFerries;
+
     public CalculateRouteRequestBodyTruckModeOptions withAvoidFerries(Boolean avoidFerries) {
         this.avoidFerries = avoidFerries;
         return this;
@@ -23,6 +24,7 @@ public class CalculateRouteRequestBodyTruckModeOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvoidTolls")
     public Boolean avoidTolls;
+
     public CalculateRouteRequestBodyTruckModeOptions withAvoidTolls(Boolean avoidTolls) {
         this.avoidTolls = avoidTolls;
         return this;
@@ -31,6 +33,7 @@ public class CalculateRouteRequestBodyTruckModeOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public org.openapis.openapi.models.shared.TruckDimensions dimensions;
+
     public CalculateRouteRequestBodyTruckModeOptions withDimensions(org.openapis.openapi.models.shared.TruckDimensions dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -39,9 +42,11 @@ public class CalculateRouteRequestBodyTruckModeOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Weight")
     public org.openapis.openapi.models.shared.TruckWeight weight;
+
     public CalculateRouteRequestBodyTruckModeOptions withWeight(org.openapis.openapi.models.shared.TruckWeight weight) {
         this.weight = weight;
         return this;
     }
     
+    public CalculateRouteRequestBodyTruckModeOptions(){}
 }

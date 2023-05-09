@@ -12,6 +12,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BirthCity")
     public String birthCity;
+
     public Player withBirthCity(String birthCity) {
         this.birthCity = birthCity;
         return this;
@@ -20,6 +21,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BirthState")
     public String birthState;
+
     public Player withBirthState(String birthState) {
         this.birthState = birthState;
         return this;
@@ -28,6 +30,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Class")
     public String class_;
+
     public Player withClass(String class_) {
         this.class_ = class_;
         return this;
@@ -36,6 +39,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Created")
     public String created;
+
     public Player withCreated(String created) {
         this.created = created;
         return this;
@@ -44,6 +48,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstName")
     public String firstName;
+
     public Player withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -52,6 +57,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTeamID")
     public Long globalTeamID;
+
     public Player withGlobalTeamID(Long globalTeamID) {
         this.globalTeamID = globalTeamID;
         return this;
@@ -60,6 +66,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Height")
     public Long height;
+
     public Player withHeight(Long height) {
         this.height = height;
         return this;
@@ -68,6 +75,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InjuryBodyPart")
     public String injuryBodyPart;
+
     public Player withInjuryBodyPart(String injuryBodyPart) {
         this.injuryBodyPart = injuryBodyPart;
         return this;
@@ -76,6 +84,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InjuryNotes")
     public String injuryNotes;
+
     public Player withInjuryNotes(String injuryNotes) {
         this.injuryNotes = injuryNotes;
         return this;
@@ -84,6 +93,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InjuryStartDate")
     public String injuryStartDate;
+
     public Player withInjuryStartDate(String injuryStartDate) {
         this.injuryStartDate = injuryStartDate;
         return this;
@@ -92,6 +102,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InjuryStatus")
     public String injuryStatus;
+
     public Player withInjuryStatus(String injuryStatus) {
         this.injuryStatus = injuryStatus;
         return this;
@@ -100,6 +111,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Jersey")
     public Long jersey;
+
     public Player withJersey(Long jersey) {
         this.jersey = jersey;
         return this;
@@ -108,6 +120,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastName")
     public String lastName;
+
     public Player withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -116,6 +129,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public Player withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -124,6 +138,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public Player withPosition(String position) {
         this.position = position;
         return this;
@@ -132,6 +147,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionCategory")
     public String positionCategory;
+
     public Player withPositionCategory(String positionCategory) {
         this.positionCategory = positionCategory;
         return this;
@@ -140,6 +156,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public Player withTeam(String team) {
         this.team = team;
         return this;
@@ -148,6 +165,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public Player withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
@@ -156,6 +174,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public Player withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -164,9 +183,11 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Weight")
     public Long weight;
+
     public Player withWeight(Long weight) {
         this.weight = weight;
         return this;
     }
     
+    public Player(){}
 }

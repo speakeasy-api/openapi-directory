@@ -18,6 +18,7 @@ public class Format {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatComplexity")
     public FormatComplexity formatComplexity;
+
     public Format withFormatComplexity(FormatComplexity formatComplexity) {
         this.formatComplexity = formatComplexity;
         return this;
@@ -29,6 +30,7 @@ public class Format {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatType")
     public String formatType;
+
     public Format withFormatType(String formatType) {
         this.formatType = formatType;
         return this;
@@ -40,6 +42,7 @@ public class Format {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public File[] resources;
+
     public Format withResources(File[] resources) {
         this.resources = resources;
         return this;
@@ -51,9 +54,11 @@ public class Format {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("root")
     public File root;
+
     public Format withRoot(File root) {
         this.root = root;
         return this;
     }
     
+    public Format(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateReservedInstancesListingResult {
     
     public CreateReservedInstancesListingResultReservedInstancesListings[] reservedInstancesListings;
+
     public CreateReservedInstancesListingResult withReservedInstancesListings(CreateReservedInstancesListingResultReservedInstancesListings[] reservedInstancesListings) {
         this.reservedInstancesListings = reservedInstancesListings;
         return this;
     }
     
+    public CreateReservedInstancesListingResult(){}
 }

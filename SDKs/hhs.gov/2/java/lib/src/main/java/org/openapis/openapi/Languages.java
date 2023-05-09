@@ -60,11 +60,9 @@ public class Languages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesLanguagesJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesLanguagesJsonResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesLanguagesJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesLanguagesJsonResponse(contentType, httpRes.statusCode()) {{
             languageWrappeds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Languages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesLanguagesIdJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesLanguagesIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesLanguagesIdJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesLanguagesIdJsonResponse(contentType, httpRes.statusCode()) {{
             languageWrappeds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

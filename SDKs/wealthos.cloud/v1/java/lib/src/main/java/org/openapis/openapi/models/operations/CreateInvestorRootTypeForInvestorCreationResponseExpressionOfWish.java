@@ -12,6 +12,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWish {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sipp_beneficiaries")
     public CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSippBeneficiaries[] sippBeneficiaries;
+
     public CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWish withSippBeneficiaries(CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSippBeneficiaries[] sippBeneficiaries) {
         this.sippBeneficiaries = sippBeneficiaries;
         return this;
@@ -20,9 +21,11 @@ public class CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWish {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sipp_nominees")
     public CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSippNominees[] sippNominees;
+
     public CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWish withSippNominees(CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSippNominees[] sippNominees) {
         this.sippNominees = sippNominees;
         return this;
     }
     
+    public CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWish(){}
 }

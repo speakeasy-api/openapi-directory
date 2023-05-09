@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DynamoDBv2Action {
     @JsonProperty("putItem")
     public PutItemInput putItem;
+
     public DynamoDBv2Action withPutItem(PutItemInput putItem) {
         this.putItem = putItem;
         return this;
@@ -19,9 +20,14 @@ public class DynamoDBv2Action {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DynamoDBv2Action withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public DynamoDBv2Action(@JsonProperty("putItem") PutItemInput putItem, @JsonProperty("roleArn") String roleArn) {
+        this.putItem = putItem;
+        this.roleArn = roleArn;
+  }
 }

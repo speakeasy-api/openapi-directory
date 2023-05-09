@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MoveAddressToVpcResult {
     
     public String allocationId;
+
     public MoveAddressToVpcResult withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -19,9 +20,11 @@ public class MoveAddressToVpcResult {
     
     
     public MoveAddressToVpcResultStatusEnum status;
+
     public MoveAddressToVpcResult withStatus(MoveAddressToVpcResultStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public MoveAddressToVpcResult(){}
 }

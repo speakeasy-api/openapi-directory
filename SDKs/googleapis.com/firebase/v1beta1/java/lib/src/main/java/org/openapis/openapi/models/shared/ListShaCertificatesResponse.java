@@ -18,9 +18,11 @@ public class ListShaCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificates")
     public ShaCertificate[] certificates;
+
     public ListShaCertificatesResponse withCertificates(ShaCertificate[] certificates) {
         this.certificates = certificates;
         return this;
     }
     
+    public ListShaCertificatesResponse(){}
 }

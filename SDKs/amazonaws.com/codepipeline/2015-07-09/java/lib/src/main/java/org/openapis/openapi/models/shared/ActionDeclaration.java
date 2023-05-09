@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActionDeclaration {
     @JsonProperty("actionTypeId")
     public ActionTypeId actionTypeId;
+
     public ActionDeclaration withActionTypeId(ActionTypeId actionTypeId) {
         this.actionTypeId = actionTypeId;
         return this;
@@ -22,6 +23,7 @@ public class ActionDeclaration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public java.util.Map<String, String> configuration;
+
     public ActionDeclaration withConfiguration(java.util.Map<String, String> configuration) {
         this.configuration = configuration;
         return this;
@@ -30,6 +32,7 @@ public class ActionDeclaration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputArtifacts")
     public InputArtifact[] inputArtifacts;
+
     public ActionDeclaration withInputArtifacts(InputArtifact[] inputArtifacts) {
         this.inputArtifacts = inputArtifacts;
         return this;
@@ -37,6 +40,7 @@ public class ActionDeclaration {
     
     @JsonProperty("name")
     public String name;
+
     public ActionDeclaration withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +49,7 @@ public class ActionDeclaration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public String namespace;
+
     public ActionDeclaration withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -53,6 +58,7 @@ public class ActionDeclaration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputArtifacts")
     public OutputArtifact[] outputArtifacts;
+
     public ActionDeclaration withOutputArtifacts(OutputArtifact[] outputArtifacts) {
         this.outputArtifacts = outputArtifacts;
         return this;
@@ -61,6 +67,7 @@ public class ActionDeclaration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public ActionDeclaration withRegion(String region) {
         this.region = region;
         return this;
@@ -69,6 +76,7 @@ public class ActionDeclaration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public ActionDeclaration withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -77,9 +85,14 @@ public class ActionDeclaration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runOrder")
     public Long runOrder;
+
     public ActionDeclaration withRunOrder(Long runOrder) {
         this.runOrder = runOrder;
         return this;
     }
     
+    public ActionDeclaration(@JsonProperty("actionTypeId") ActionTypeId actionTypeId, @JsonProperty("name") String name) {
+        this.actionTypeId = actionTypeId;
+        this.name = name;
+  }
 }

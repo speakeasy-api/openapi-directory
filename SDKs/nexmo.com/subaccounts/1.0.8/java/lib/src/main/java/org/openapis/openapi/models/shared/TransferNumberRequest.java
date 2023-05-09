@@ -12,6 +12,7 @@ public class TransferNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public TransferNumberRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -20,6 +21,7 @@ public class TransferNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String from;
+
     public TransferNumberRequest withFrom(String from) {
         this.from = from;
         return this;
@@ -28,6 +30,7 @@ public class TransferNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Double number;
+
     public TransferNumberRequest withNumber(Double number) {
         this.number = number;
         return this;
@@ -36,9 +39,11 @@ public class TransferNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public String to;
+
     public TransferNumberRequest withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public TransferNumberRequest(){}
 }

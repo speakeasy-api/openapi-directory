@@ -12,6 +12,7 @@ public class UpdateWorkGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationUpdates")
     public WorkGroupConfigurationUpdates configurationUpdates;
+
     public UpdateWorkGroupInput withConfigurationUpdates(WorkGroupConfigurationUpdates configurationUpdates) {
         this.configurationUpdates = configurationUpdates;
         return this;
@@ -20,6 +21,7 @@ public class UpdateWorkGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateWorkGroupInput withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class UpdateWorkGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public WorkGroupStateEnum state;
+
     public UpdateWorkGroupInput withState(WorkGroupStateEnum state) {
         this.state = state;
         return this;
@@ -35,9 +38,13 @@ public class UpdateWorkGroupInput {
     
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public UpdateWorkGroupInput withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public UpdateWorkGroupInput(@JsonProperty("WorkGroup") String workGroup) {
+        this.workGroup = workGroup;
+  }
 }

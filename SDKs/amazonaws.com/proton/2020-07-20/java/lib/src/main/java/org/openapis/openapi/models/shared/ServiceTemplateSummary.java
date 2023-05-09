@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ServiceTemplateSummary {
     @JsonProperty("arn")
     public String arn;
+
     public ServiceTemplateSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ServiceTemplateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ServiceTemplateSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -36,6 +38,7 @@ public class ServiceTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ServiceTemplateSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class ServiceTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ServiceTemplateSummary withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -53,6 +57,7 @@ public class ServiceTemplateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public ServiceTemplateSummary withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -60,6 +65,7 @@ public class ServiceTemplateSummary {
     
     @JsonProperty("name")
     public String name;
+
     public ServiceTemplateSummary withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +74,7 @@ public class ServiceTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineProvisioning")
     public ProvisioningEnum pipelineProvisioning;
+
     public ServiceTemplateSummary withPipelineProvisioning(ProvisioningEnum pipelineProvisioning) {
         this.pipelineProvisioning = pipelineProvisioning;
         return this;
@@ -76,9 +83,16 @@ public class ServiceTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedVersion")
     public String recommendedVersion;
+
     public ServiceTemplateSummary withRecommendedVersion(String recommendedVersion) {
         this.recommendedVersion = recommendedVersion;
         return this;
     }
     
+    public ServiceTemplateSummary(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("lastModifiedAt") OffsetDateTime lastModifiedAt, @JsonProperty("name") String name) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.lastModifiedAt = lastModifiedAt;
+        this.name = name;
+  }
 }

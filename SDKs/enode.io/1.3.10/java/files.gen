@@ -55,6 +55,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetChargersResponse.jav
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteCharginglocationsCharginglocationidSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteCharginglocationsCharginglocationidRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteCharginglocationsCharginglocationidResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetCharginglocationsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCharginglocationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCharginglocationsCharginglocationidSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCharginglocationsCharginglocationidRequest.java
@@ -69,6 +70,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DisconnectVendorSecurit
 lib/src/main/java/org/openapis/openapi/models/operations/DisconnectVendorVendorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DisconnectVendorRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DisconnectVendorResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetMeSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMe200ApplicationJSONLinkedVendors.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMe200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMeResponse.java
@@ -135,6 +137,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/PutVehiclesVehicleidSma
 lib/src/main/java/org/openapis/openapi/models/operations/PutVehiclesVehicleidSmartchargingpolicyRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutVehiclesVehicleidSmartchargingpolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutVehiclesVehicleidSmartchargingpolicyResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PostWebhooksFirehoseTestSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostWebhooksFirehoseTestResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutWebhooksFirehoseSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutWebhooksFirehoseRequestBody.java
@@ -155,4 +158,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/Onevehicles1Percent7Bvehicl
 lib/src/main/java/org/openapis/openapi/models/shared/Onevehicles1Percent7BvehicleIdPercent7D1chargeStateGetResponses200ContentApplication1jsonSchema.java
 lib/src/main/java/org/openapis/openapi/models/shared/Onevehicles1Percent7BvehicleIdPercent7D1watchPostRequestBodyContentApplication1jsonSchemaPropertiesEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Onevehicles1Percent7BvehicleIdPercent7D1watchPostRequestBodyContentApplication1jsonSchema.java
+docs/sdk/README.md
+docs/chargers/README.md
+docs/charginglocations/README.md
+docs/me/README.md
+docs/servicehealth/README.md
+docs/statistics/README.md
+docs/usermanagement/README.md
+docs/vehicles/README.md
+docs/webhooks/README.md
 USAGE.md

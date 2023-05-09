@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsensehostAccountsAdunitsPatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AdUnit adUnit;
+
     public AdsensehostAccountsAdunitsPatchRequest withAdUnit(org.openapis.openapi.models.shared.AdUnit adUnit) {
         this.adUnit = adUnit;
         return this;
@@ -19,6 +21,7 @@ public class AdsensehostAccountsAdunitsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AdsensehostAccountsAdunitsPatchRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +32,7 @@ public class AdsensehostAccountsAdunitsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adClientId")
     public String adClientId;
+
     public AdsensehostAccountsAdunitsPatchRequest withAdClientId(String adClientId) {
         this.adClientId = adClientId;
         return this;
@@ -39,6 +43,7 @@ public class AdsensehostAccountsAdunitsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=adUnitId")
     public String adUnitId;
+
     public AdsensehostAccountsAdunitsPatchRequest withAdUnitId(String adUnitId) {
         this.adUnitId = adUnitId;
         return this;
@@ -49,6 +54,7 @@ public class AdsensehostAccountsAdunitsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdsensehostAccountsAdunitsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -59,6 +65,7 @@ public class AdsensehostAccountsAdunitsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdsensehostAccountsAdunitsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class AdsensehostAccountsAdunitsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdsensehostAccountsAdunitsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class AdsensehostAccountsAdunitsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdsensehostAccountsAdunitsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class AdsensehostAccountsAdunitsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdsensehostAccountsAdunitsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class AdsensehostAccountsAdunitsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdsensehostAccountsAdunitsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -109,9 +120,15 @@ public class AdsensehostAccountsAdunitsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdsensehostAccountsAdunitsPatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdsensehostAccountsAdunitsPatchRequest(@JsonProperty("accountId") String accountId, @JsonProperty("adClientId") String adClientId, @JsonProperty("adUnitId") String adUnitId) {
+        this.accountId = accountId;
+        this.adClientId = adClientId;
+        this.adUnitId = adUnitId;
+  }
 }

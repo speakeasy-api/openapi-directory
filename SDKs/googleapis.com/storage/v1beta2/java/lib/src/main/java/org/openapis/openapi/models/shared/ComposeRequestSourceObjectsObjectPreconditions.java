@@ -18,9 +18,11 @@ public class ComposeRequestSourceObjectsObjectPreconditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ifGenerationMatch")
     public String ifGenerationMatch;
+
     public ComposeRequestSourceObjectsObjectPreconditions withIfGenerationMatch(String ifGenerationMatch) {
         this.ifGenerationMatch = ifGenerationMatch;
         return this;
     }
     
+    public ComposeRequestSourceObjectsObjectPreconditions(){}
 }

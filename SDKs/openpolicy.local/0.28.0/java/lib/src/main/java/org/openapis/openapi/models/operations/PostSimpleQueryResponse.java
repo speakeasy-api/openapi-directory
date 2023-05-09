@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostSimpleQueryResponse {
@@ -12,6 +13,7 @@ public class PostSimpleQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundred fourHundred;
+
     public PostSimpleQueryResponse withFourHundred(org.openapis.openapi.models.shared.FourHundred fourHundred) {
         this.fourHundred = fourHundred;
         return this;
@@ -22,6 +24,7 @@ public class PostSimpleQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndFour fourHundredAndFour;
+
     public PostSimpleQueryResponse withFourHundredAndFour(org.openapis.openapi.models.shared.FourHundredAndFour fourHundredAndFour) {
         this.fourHundredAndFour = fourHundredAndFour;
         return this;
@@ -29,6 +32,7 @@ public class PostSimpleQueryResponse {
     
     
     public String contentType;
+
     public PostSimpleQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class PostSimpleQueryResponse {
     
     
     public Integer statusCode;
+
     public PostSimpleQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostSimpleQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostSimpleQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostSimpleQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

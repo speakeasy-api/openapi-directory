@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTagJsonRequest {
@@ -12,6 +13,7 @@ public class UpdateTagJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TagInput tagInput;
+
     public UpdateTagJsonRequest withTagInput(org.openapis.openapi.models.shared.TagInput tagInput) {
         this.tagInput = tagInput;
         return this;
@@ -22,6 +24,7 @@ public class UpdateTagJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public UpdateTagJsonRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -32,6 +35,7 @@ public class UpdateTagJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public UpdateTagJsonRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -42,9 +46,16 @@ public class UpdateTagJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
     public String tagId;
+
     public UpdateTagJsonRequest withTagId(String tagId) {
         this.tagId = tagId;
         return this;
     }
     
+    public UpdateTagJsonRequest(@JsonProperty("TagInput") org.openapis.openapi.models.shared.TagInput tagInput, @JsonProperty("Training-Key") String trainingKey, @JsonProperty("projectId") String projectId, @JsonProperty("tagId") String tagId) {
+        this.tagInput = tagInput;
+        this.trainingKey = trainingKey;
+        this.projectId = projectId;
+        this.tagId = tagId;
+  }
 }

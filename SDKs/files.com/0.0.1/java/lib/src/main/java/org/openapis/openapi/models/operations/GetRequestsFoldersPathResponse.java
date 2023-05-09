@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRequestsFoldersPathResponse {
     
     public String contentType;
+
     public GetRequestsFoldersPathResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRequestsFoldersPathResponse {
      */
     
     public org.openapis.openapi.models.shared.RequestEntity[] requestEntities;
+
     public GetRequestsFoldersPathResponse withRequestEntities(org.openapis.openapi.models.shared.RequestEntity[] requestEntities) {
         this.requestEntities = requestEntities;
         return this;
@@ -26,6 +29,7 @@ public class GetRequestsFoldersPathResponse {
     
     
     public Integer statusCode;
+
     public GetRequestsFoldersPathResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetRequestsFoldersPathResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRequestsFoldersPathResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRequestsFoldersPathResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

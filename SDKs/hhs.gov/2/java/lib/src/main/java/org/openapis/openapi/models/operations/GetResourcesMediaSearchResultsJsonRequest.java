@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesMediaSearchResultsJsonRequest {
@@ -12,6 +13,7 @@ public class GetResourcesMediaSearchResultsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=max")
     public Integer max;
+
     public GetResourcesMediaSearchResultsJsonRequest withMax(Integer max) {
         this.max = max;
         return this;
@@ -22,6 +24,7 @@ public class GetResourcesMediaSearchResultsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=offset")
     public Integer offset;
+
     public GetResourcesMediaSearchResultsJsonRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -32,9 +35,13 @@ public class GetResourcesMediaSearchResultsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=q")
     public String q;
+
     public GetResourcesMediaSearchResultsJsonRequest withQ(String q) {
         this.q = q;
         return this;
     }
     
+    public GetResourcesMediaSearchResultsJsonRequest(@JsonProperty("q") String q) {
+        this.q = q;
+  }
 }

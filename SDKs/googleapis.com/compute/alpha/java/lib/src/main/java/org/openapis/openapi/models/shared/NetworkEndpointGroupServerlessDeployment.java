@@ -18,6 +18,7 @@ public class NetworkEndpointGroupServerlessDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public String platform;
+
     public NetworkEndpointGroupServerlessDeployment withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -29,6 +30,7 @@ public class NetworkEndpointGroupServerlessDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public NetworkEndpointGroupServerlessDeployment withResource(String resource) {
         this.resource = resource;
         return this;
@@ -40,6 +42,7 @@ public class NetworkEndpointGroupServerlessDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlMask")
     public String urlMask;
+
     public NetworkEndpointGroupServerlessDeployment withUrlMask(String urlMask) {
         this.urlMask = urlMask;
         return this;
@@ -51,9 +54,11 @@ public class NetworkEndpointGroupServerlessDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public NetworkEndpointGroupServerlessDeployment withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public NetworkEndpointGroupServerlessDeployment(){}
 }

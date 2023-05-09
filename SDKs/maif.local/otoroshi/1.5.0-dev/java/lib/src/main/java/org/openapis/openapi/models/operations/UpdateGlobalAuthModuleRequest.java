@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateGlobalAuthModuleRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public Object requestBody;
+
     public UpdateGlobalAuthModuleRequest withRequestBody(Object requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class UpdateGlobalAuthModuleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdateGlobalAuthModuleRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateGlobalAuthModuleRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

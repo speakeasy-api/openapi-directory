@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelSchemaExtensionResponse {
@@ -12,6 +13,7 @@ public class CancelSchemaExtensionResponse {
      */
     
     public java.util.Map<String, Object> cancelSchemaExtensionResult;
+
     public CancelSchemaExtensionResponse withCancelSchemaExtensionResult(java.util.Map<String, Object> cancelSchemaExtensionResult) {
         this.cancelSchemaExtensionResult = cancelSchemaExtensionResult;
         return this;
@@ -22,6 +24,7 @@ public class CancelSchemaExtensionResponse {
      */
     
     public Object clientException;
+
     public CancelSchemaExtensionResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class CancelSchemaExtensionResponse {
     
     
     public String contentType;
+
     public CancelSchemaExtensionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CancelSchemaExtensionResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public CancelSchemaExtensionResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -46,6 +51,7 @@ public class CancelSchemaExtensionResponse {
     
     
     public Integer statusCode;
+
     public CancelSchemaExtensionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CancelSchemaExtensionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelSchemaExtensionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CancelSchemaExtensionResponse {
      */
     
     public Object serviceException;
+
     public CancelSchemaExtensionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
     }
     
+    public CancelSchemaExtensionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

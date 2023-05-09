@@ -15,6 +15,7 @@ public class ApkListingsListResponse {
      */
     
     public String kind;
+
     public ApkListingsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -22,9 +23,11 @@ public class ApkListingsListResponse {
     
     
     public ApkListing[] listings;
+
     public ApkListingsListResponse withListings(ApkListing[] listings) {
         this.listings = listings;
         return this;
     }
     
+    public ApkListingsListResponse(){}
 }

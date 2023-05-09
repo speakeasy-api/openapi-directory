@@ -15,6 +15,7 @@ public class NodesIdentifiersListIdentifierAttributes {
      */
     
     public NodesIdentifiersListIdentifierAttributesCategoryEnum category;
+
     public NodesIdentifiersListIdentifierAttributes withCategory(NodesIdentifiersListIdentifierAttributesCategoryEnum category) {
         this.category = category;
         return this;
@@ -25,9 +26,11 @@ public class NodesIdentifiersListIdentifierAttributes {
      */
     
     public String value;
+
     public NodesIdentifiersListIdentifierAttributes withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public NodesIdentifiersListIdentifierAttributes(){}
 }

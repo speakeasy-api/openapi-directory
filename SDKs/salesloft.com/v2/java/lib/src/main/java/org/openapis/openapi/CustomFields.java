@@ -53,10 +53,8 @@ public class CustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteV2CustomFieldsIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteV2CustomFieldsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeleteV2CustomFieldsIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteV2CustomFieldsIdJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -94,11 +92,9 @@ public class CustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2CustomFieldsJsonResponse res = new org.openapis.openapi.models.operations.GetV2CustomFieldsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2CustomFieldsJsonResponse res = new org.openapis.openapi.models.operations.GetV2CustomFieldsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -133,11 +129,9 @@ public class CustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2CustomFieldsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2CustomFieldsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2CustomFieldsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2CustomFieldsIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,11 +171,9 @@ public class CustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV2CustomFieldsJsonResponse res = new org.openapis.openapi.models.operations.PostV2CustomFieldsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV2CustomFieldsJsonResponse res = new org.openapis.openapi.models.operations.PostV2CustomFieldsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -218,11 +210,9 @@ public class CustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutV2CustomFieldsIdJsonResponse res = new org.openapis.openapi.models.operations.PutV2CustomFieldsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutV2CustomFieldsIdJsonResponse res = new org.openapis.openapi.models.operations.PutV2CustomFieldsIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

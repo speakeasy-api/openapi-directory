@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductsApiFindRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public Object requestBody;
+
     public ProductsApiFindRequest withRequestBody(Object requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,13 @@ public class ProductsApiFindRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public ProductsApiFindRequest withPage(Integer page) {
         this.page = page;
         return this;
     }
     
+    public ProductsApiFindRequest(@JsonProperty("RequestBody") Object requestBody) {
+        this.requestBody = requestBody;
+  }
 }

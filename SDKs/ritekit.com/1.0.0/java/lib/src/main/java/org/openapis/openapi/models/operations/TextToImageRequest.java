@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TextToImageRequest {
@@ -12,6 +13,7 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=animation")
     public String animation;
+
     public TextToImageRequest withAnimation(String animation) {
         this.animation = animation;
         return this;
@@ -22,6 +24,7 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=author")
     public String author;
+
     public TextToImageRequest withAuthor(String author) {
         this.author = author;
         return this;
@@ -32,6 +35,7 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authorFont")
     public String authorFont;
+
     public TextToImageRequest withAuthorFont(String authorFont) {
         this.authorFont = authorFont;
         return this;
@@ -42,6 +46,7 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authorFontColor")
     public String authorFontColor;
+
     public TextToImageRequest withAuthorFontColor(String authorFontColor) {
         this.authorFontColor = authorFontColor;
         return this;
@@ -52,6 +57,7 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=backgroundColor")
     public String backgroundColor;
+
     public TextToImageRequest withBackgroundColor(String backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
@@ -62,6 +68,7 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bgType")
     public String bgType;
+
     public TextToImageRequest withBgType(String bgType) {
         this.bgType = bgType;
         return this;
@@ -72,6 +79,7 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brandLogo")
     public String brandLogo;
+
     public TextToImageRequest withBrandLogo(String brandLogo) {
         this.brandLogo = brandLogo;
         return this;
@@ -82,6 +90,7 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enableHighlight")
     public Long enableHighlight;
+
     public TextToImageRequest withEnableHighlight(Long enableHighlight) {
         this.enableHighlight = enableHighlight;
         return this;
@@ -92,6 +101,7 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fontSize")
     public Long fontSize;
+
     public TextToImageRequest withFontSize(Long fontSize) {
         this.fontSize = fontSize;
         return this;
@@ -102,6 +112,7 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gradientColor1")
     public String gradientColor1;
+
     public TextToImageRequest withGradientColor1(String gradientColor1) {
         this.gradientColor1 = gradientColor1;
         return this;
@@ -112,6 +123,7 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gradientColor2")
     public String gradientColor2;
+
     public TextToImageRequest withGradientColor2(String gradientColor2) {
         this.gradientColor2 = gradientColor2;
         return this;
@@ -122,6 +134,7 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gradientType")
     public String gradientType;
+
     public TextToImageRequest withGradientType(String gradientType) {
         this.gradientType = gradientType;
         return this;
@@ -132,6 +145,7 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=highlightColor")
     public String highlightColor;
+
     public TextToImageRequest withHighlightColor(String highlightColor) {
         this.highlightColor = highlightColor;
         return this;
@@ -142,6 +156,7 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quote")
     public String quote;
+
     public TextToImageRequest withQuote(String quote) {
         this.quote = quote;
         return this;
@@ -152,6 +167,7 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quoteFont")
     public String quoteFont;
+
     public TextToImageRequest withQuoteFont(String quoteFont) {
         this.quoteFont = quoteFont;
         return this;
@@ -162,6 +178,7 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quoteFontColor")
     public String quoteFontColor;
+
     public TextToImageRequest withQuoteFontColor(String quoteFontColor) {
         this.quoteFontColor = quoteFontColor;
         return this;
@@ -172,9 +189,28 @@ public class TextToImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showQuoteMark")
     public Long showQuoteMark;
+
     public TextToImageRequest withShowQuoteMark(Long showQuoteMark) {
         this.showQuoteMark = showQuoteMark;
         return this;
     }
     
+    public TextToImageRequest(@JsonProperty("animation") String animation, @JsonProperty("author") String author, @JsonProperty("authorFont") String authorFont, @JsonProperty("authorFontColor") String authorFontColor, @JsonProperty("backgroundColor") String backgroundColor, @JsonProperty("bgType") String bgType, @JsonProperty("brandLogo") String brandLogo, @JsonProperty("enableHighlight") Long enableHighlight, @JsonProperty("fontSize") Long fontSize, @JsonProperty("gradientColor1") String gradientColor1, @JsonProperty("gradientColor2") String gradientColor2, @JsonProperty("gradientType") String gradientType, @JsonProperty("highlightColor") String highlightColor, @JsonProperty("quote") String quote, @JsonProperty("quoteFont") String quoteFont, @JsonProperty("quoteFontColor") String quoteFontColor) {
+        this.animation = animation;
+        this.author = author;
+        this.authorFont = authorFont;
+        this.authorFontColor = authorFontColor;
+        this.backgroundColor = backgroundColor;
+        this.bgType = bgType;
+        this.brandLogo = brandLogo;
+        this.enableHighlight = enableHighlight;
+        this.fontSize = fontSize;
+        this.gradientColor1 = gradientColor1;
+        this.gradientColor2 = gradientColor2;
+        this.gradientType = gradientType;
+        this.highlightColor = highlightColor;
+        this.quote = quote;
+        this.quoteFont = quoteFont;
+        this.quoteFontColor = quoteFontColor;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateHostInput {
     @JsonProperty("Name")
     public String name;
+
     public CreateHostInput withName(String name) {
         this.name = name;
         return this;
@@ -18,6 +19,7 @@ public class CreateHostInput {
     
     @JsonProperty("ProviderEndpoint")
     public String providerEndpoint;
+
     public CreateHostInput withProviderEndpoint(String providerEndpoint) {
         this.providerEndpoint = providerEndpoint;
         return this;
@@ -25,6 +27,7 @@ public class CreateHostInput {
     
     @JsonProperty("ProviderType")
     public ProviderTypeEnum providerType;
+
     public CreateHostInput withProviderType(ProviderTypeEnum providerType) {
         this.providerType = providerType;
         return this;
@@ -33,6 +36,7 @@ public class CreateHostInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateHostInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -41,9 +45,15 @@ public class CreateHostInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfiguration")
     public VpcConfiguration vpcConfiguration;
+
     public CreateHostInput withVpcConfiguration(VpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public CreateHostInput(@JsonProperty("Name") String name, @JsonProperty("ProviderEndpoint") String providerEndpoint, @JsonProperty("ProviderType") ProviderTypeEnum providerType) {
+        this.name = name;
+        this.providerEndpoint = providerEndpoint;
+        this.providerType = providerType;
+  }
 }

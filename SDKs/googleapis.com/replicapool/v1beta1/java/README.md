@@ -16,13 +16,12 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
+import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteRequest;
+import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteResponse;
+import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurity;
 import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurityOption1;
 import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurityOption2;
 import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurityOption3;
-import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurity;
-import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteRequest;
-import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.PoolsDeleteRequest;
 
@@ -32,28 +31,26 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ReplicapoolPoolsDeleteRequest req = new ReplicapoolPoolsDeleteRequest() {{
+            ReplicapoolPoolsDeleteRequest req = new ReplicapoolPoolsDeleteRequest("corrupti", "provident", "distinctio") {{
                 poolsDeleteRequest = new PoolsDeleteRequest() {{
                     abandonInstances = new String[]{{
-                        add("provident"),
-                        add("distinctio"),
-                        add("quibusdam"),
+                        add("unde"),
+                        add("nulla"),
+                        add("corrupti"),
+                        add("illum"),
                     }};
-                }};
-                alt = "json";
-                fields = "unde";
-                key = "nulla";
-                oauthToken = "corrupti";
-                poolName = "illum";
+                }};;
+                alt = AltEnum.JSON;
+                fields = "vel";
+                key = "error";
+                oauthToken = "deserunt";
                 prettyPrint = false;
-                projectName = "vel";
-                quotaUser = "error";
-                userIp = "deserunt";
-                zone = "suscipit";
-            }}            
+                quotaUser = "suscipit";
+                userIp = "iure";
+            }};            
 
             ReplicapoolPoolsDeleteResponse res = sdk.pools.replicapoolPoolsDelete(req, new ReplicapoolPoolsDeleteSecurity() {{
-                option1 = new ReplicapoolPoolsDeleteSecurityOption1() {{
+                option1 = new ReplicapoolPoolsDeleteSecurityOption1("magnam", "debitis") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
@@ -65,6 +62,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -72,21 +71,21 @@ public class Application {
 ## Available Resources and Operations
 
 
-### pools
+### [pools](docs/pools/README.md)
 
-* `replicapoolPoolsDelete` - Deletes a replica pool.
-* `replicapoolPoolsGet` - Gets information about a single replica pool.
-* `replicapoolPoolsInsert` - Inserts a new replica pool.
-* `replicapoolPoolsList` - List all replica pools.
-* `replicapoolPoolsResize` - Resize a pool. This is an asynchronous operation, and multiple overlapping resize requests can be made. Replica Pools will use the information from the last resize request.
-* `replicapoolPoolsUpdatetemplate` - Update the template used by the pool.
+* [replicapoolPoolsDelete](docs/pools/README.md#replicapoolpoolsdelete) - Deletes a replica pool.
+* [replicapoolPoolsGet](docs/pools/README.md#replicapoolpoolsget) - Gets information about a single replica pool.
+* [replicapoolPoolsInsert](docs/pools/README.md#replicapoolpoolsinsert) - Inserts a new replica pool.
+* [replicapoolPoolsList](docs/pools/README.md#replicapoolpoolslist) - List all replica pools.
+* [replicapoolPoolsResize](docs/pools/README.md#replicapoolpoolsresize) - Resize a pool. This is an asynchronous operation, and multiple overlapping resize requests can be made. Replica Pools will use the information from the last resize request.
+* [replicapoolPoolsUpdatetemplate](docs/pools/README.md#replicapoolpoolsupdatetemplate) - Update the template used by the pool.
 
-### replicas
+### [replicas](docs/replicas/README.md)
 
-* `replicapoolReplicasDelete` - Deletes a replica from the pool.
-* `replicapoolReplicasGet` - Gets information about a specific replica.
-* `replicapoolReplicasList` - Lists all replicas in a pool.
-* `replicapoolReplicasRestart` - Restarts a replica in a pool.
+* [replicapoolReplicasDelete](docs/replicas/README.md#replicapoolreplicasdelete) - Deletes a replica from the pool.
+* [replicapoolReplicasGet](docs/replicas/README.md#replicapoolreplicasget) - Gets information about a specific replica.
+* [replicapoolReplicasList](docs/replicas/README.md#replicapoolreplicaslist) - Lists all replicas in a pool.
+* [replicapoolReplicasRestart](docs/replicas/README.md#replicapoolreplicasrestart) - Restarts a replica in a pool.
 <!-- End SDK Available Operations -->
 
 ### Maturity

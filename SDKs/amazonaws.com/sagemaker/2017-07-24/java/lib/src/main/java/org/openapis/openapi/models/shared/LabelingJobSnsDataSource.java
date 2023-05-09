@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LabelingJobSnsDataSource {
     @JsonProperty("SnsTopicArn")
     public String snsTopicArn;
+
     public LabelingJobSnsDataSource withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
     }
     
+    public LabelingJobSnsDataSource(@JsonProperty("SnsTopicArn") String snsTopicArn) {
+        this.snsTopicArn = snsTopicArn;
+  }
 }

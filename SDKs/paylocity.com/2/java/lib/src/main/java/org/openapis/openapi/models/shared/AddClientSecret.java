@@ -15,9 +15,13 @@ public class AddClientSecret {
      */
     @JsonProperty("code")
     public String code;
+
     public AddClientSecret withCode(String code) {
         this.code = code;
         return this;
     }
     
+    public AddClientSecret(@JsonProperty("code") String code) {
+        this.code = code;
+  }
 }

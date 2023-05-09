@@ -18,6 +18,7 @@ public class ObjectAccessControls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ObjectAccessControl[] items;
+
     public ObjectAccessControls withItems(ObjectAccessControl[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class ObjectAccessControls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ObjectAccessControls withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ObjectAccessControls(){}
 }

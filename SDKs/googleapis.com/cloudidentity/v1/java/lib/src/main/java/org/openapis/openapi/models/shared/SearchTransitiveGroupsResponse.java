@@ -18,6 +18,7 @@ public class SearchTransitiveGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberships")
     public GroupRelation[] memberships;
+
     public SearchTransitiveGroupsResponse withMemberships(GroupRelation[] memberships) {
         this.memberships = memberships;
         return this;
@@ -29,9 +30,11 @@ public class SearchTransitiveGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SearchTransitiveGroupsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public SearchTransitiveGroupsResponse(){}
 }

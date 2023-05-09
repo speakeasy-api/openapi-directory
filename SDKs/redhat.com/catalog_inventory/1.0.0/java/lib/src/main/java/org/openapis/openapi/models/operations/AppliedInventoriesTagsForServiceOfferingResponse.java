@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppliedInventoriesTagsForServiceOfferingResponse {
     
     public String contentType;
+
     public AppliedInventoriesTagsForServiceOfferingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppliedInventoriesTagsForServiceOfferingResponse {
     
     
     public Integer statusCode;
+
     public AppliedInventoriesTagsForServiceOfferingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppliedInventoriesTagsForServiceOfferingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppliedInventoriesTagsForServiceOfferingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class AppliedInventoriesTagsForServiceOfferingResponse {
      */
     
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public AppliedInventoriesTagsForServiceOfferingResponse withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public AppliedInventoriesTagsForServiceOfferingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -49,10 +49,8 @@ public class Pdf {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePDFResponse res = new org.openapis.openapi.models.operations.CreatePDFResponse() {{
+        org.openapis.openapi.models.operations.CreatePDFResponse res = new org.openapis.openapi.models.operations.CreatePDFResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -89,10 +87,8 @@ public class Pdf {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPDFResponse res = new org.openapis.openapi.models.operations.GetPDFResponse() {{
+        org.openapis.openapi.models.operations.GetPDFResponse res = new org.openapis.openapi.models.operations.GetPDFResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {

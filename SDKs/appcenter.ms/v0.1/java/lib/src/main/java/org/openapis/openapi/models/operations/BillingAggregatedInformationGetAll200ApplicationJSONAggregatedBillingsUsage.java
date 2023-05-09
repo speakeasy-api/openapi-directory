@@ -18,6 +18,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildService")
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsUsageBuildService buildService;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsUsage withBuildService(BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsUsageBuildService buildService) {
         this.buildService = buildService;
         return this;
@@ -29,9 +30,11 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testService")
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsUsageTestService testService;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsUsage withTestService(BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsUsageTestService testService) {
         this.testService = testService;
         return this;
     }
     
+    public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsUsage(){}
 }

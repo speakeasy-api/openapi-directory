@@ -15,6 +15,7 @@ public class UpdateLaunchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateLaunchRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateLaunchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public org.openapis.openapi.models.shared.LaunchGroupConfig[] groups;
+
     public UpdateLaunchRequestBody withGroups(org.openapis.openapi.models.shared.LaunchGroupConfig[] groups) {
         this.groups = groups;
         return this;
@@ -37,6 +39,7 @@ public class UpdateLaunchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricMonitors")
     public org.openapis.openapi.models.shared.MetricMonitorConfig[] metricMonitors;
+
     public UpdateLaunchRequestBody withMetricMonitors(org.openapis.openapi.models.shared.MetricMonitorConfig[] metricMonitors) {
         this.metricMonitors = metricMonitors;
         return this;
@@ -48,6 +51,7 @@ public class UpdateLaunchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("randomizationSalt")
     public String randomizationSalt;
+
     public UpdateLaunchRequestBody withRandomizationSalt(String randomizationSalt) {
         this.randomizationSalt = randomizationSalt;
         return this;
@@ -59,9 +63,11 @@ public class UpdateLaunchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledSplitsConfig")
     public UpdateLaunchRequestBodyScheduledSplitsConfig scheduledSplitsConfig;
+
     public UpdateLaunchRequestBody withScheduledSplitsConfig(UpdateLaunchRequestBodyScheduledSplitsConfig scheduledSplitsConfig) {
         this.scheduledSplitsConfig = scheduledSplitsConfig;
         return this;
     }
     
+    public UpdateLaunchRequestBody(){}
 }

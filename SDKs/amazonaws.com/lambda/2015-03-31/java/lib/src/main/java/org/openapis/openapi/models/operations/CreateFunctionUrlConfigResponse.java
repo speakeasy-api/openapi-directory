@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFunctionUrlConfigResponse {
     
     public String contentType;
+
     public CreateFunctionUrlConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateFunctionUrlConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFunctionUrlConfigResponse createFunctionUrlConfigResponse;
+
     public CreateFunctionUrlConfigResponse withCreateFunctionUrlConfigResponse(org.openapis.openapi.models.shared.CreateFunctionUrlConfigResponse createFunctionUrlConfigResponse) {
         this.createFunctionUrlConfigResponse = createFunctionUrlConfigResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateFunctionUrlConfigResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CreateFunctionUrlConfigResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class CreateFunctionUrlConfigResponse {
      */
     
     public Object resourceConflictException;
+
     public CreateFunctionUrlConfigResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -46,6 +51,7 @@ public class CreateFunctionUrlConfigResponse {
     
     
     public Integer statusCode;
+
     public CreateFunctionUrlConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateFunctionUrlConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFunctionUrlConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateFunctionUrlConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateFunctionUrlConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class CreateFunctionUrlConfigResponse {
      */
     
     public Object serviceException;
+
     public CreateFunctionUrlConfigResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -83,9 +92,14 @@ public class CreateFunctionUrlConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateFunctionUrlConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateFunctionUrlConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

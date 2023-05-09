@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=AnswerUrl")
     public String answerUrl;
+
     public CallParameters withAnswerUrl(String answerUrl) {
         this.answerUrl = answerUrl;
         return this;
@@ -25,6 +27,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=AsyncAMD")
     public Boolean asyncAMD;
+
     public CallParameters withAsyncAMD(Boolean asyncAMD) {
         this.asyncAMD = asyncAMD;
         return this;
@@ -35,6 +38,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=AsyncAmdStatusCallback")
     public String asyncAmdStatusCallback;
+
     public CallParameters withAsyncAmdStatusCallback(String asyncAmdStatusCallback) {
         this.asyncAmdStatusCallback = asyncAmdStatusCallback;
         return this;
@@ -45,6 +49,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=AsyncAmdStatusCallbackMethod")
     public CallParametersAsyncAmdStatusCallbackMethodEnum asyncAmdStatusCallbackMethod;
+
     public CallParameters withAsyncAmdStatusCallbackMethod(CallParametersAsyncAmdStatusCallbackMethodEnum asyncAmdStatusCallbackMethod) {
         this.asyncAmdStatusCallbackMethod = asyncAmdStatusCallbackMethod;
         return this;
@@ -55,6 +60,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=CallerName")
     public String callerName;
+
     public CallParameters withCallerName(String callerName) {
         this.callerName = callerName;
         return this;
@@ -65,6 +71,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=CoreUUID")
     public String coreUUID;
+
     public CallParameters withCoreUUID(String coreUUID) {
         this.coreUUID = coreUUID;
         return this;
@@ -75,6 +82,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=ExtraDialString")
     public String extraDialString;
+
     public CallParameters withExtraDialString(String extraDialString) {
         this.extraDialString = extraDialString;
         return this;
@@ -85,6 +93,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=From")
     public String from;
+
     public CallParameters withFrom(String from) {
         this.from = from;
         return this;
@@ -95,6 +104,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=GatewayCodecs")
     public String gatewayCodecs;
+
     public CallParameters withGatewayCodecs(String gatewayCodecs) {
         this.gatewayCodecs = gatewayCodecs;
         return this;
@@ -105,6 +115,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=GatewayRetries")
     public String gatewayRetries;
+
     public CallParameters withGatewayRetries(String gatewayRetries) {
         this.gatewayRetries = gatewayRetries;
         return this;
@@ -115,6 +126,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=GatewayTimeouts")
     public String gatewayTimeouts;
+
     public CallParameters withGatewayTimeouts(String gatewayTimeouts) {
         this.gatewayTimeouts = gatewayTimeouts;
         return this;
@@ -125,6 +137,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=Gateways")
     public String gateways;
+
     public CallParameters withGateways(String gateways) {
         this.gateways = gateways;
         return this;
@@ -135,6 +148,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=HangupOnRing")
     public Long hangupOnRing;
+
     public CallParameters withHangupOnRing(Long hangupOnRing) {
         this.hangupOnRing = hangupOnRing;
         return this;
@@ -145,6 +159,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=HangupUrl")
     public String hangupUrl;
+
     public CallParameters withHangupUrl(String hangupUrl) {
         this.hangupUrl = hangupUrl;
         return this;
@@ -155,6 +170,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=MachineDetection")
     public CallParametersMachineDetectionEnum machineDetection;
+
     public CallParameters withMachineDetection(CallParametersMachineDetectionEnum machineDetection) {
         this.machineDetection = machineDetection;
         return this;
@@ -165,6 +181,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=MachineDetectionSilenceTimeout")
     public Long machineDetectionSilenceTimeout;
+
     public CallParameters withMachineDetectionSilenceTimeout(Long machineDetectionSilenceTimeout) {
         this.machineDetectionSilenceTimeout = machineDetectionSilenceTimeout;
         return this;
@@ -175,6 +192,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=MachineDetectionSpeechEndThreshold")
     public Long machineDetectionSpeechEndThreshold;
+
     public CallParameters withMachineDetectionSpeechEndThreshold(Long machineDetectionSpeechEndThreshold) {
         this.machineDetectionSpeechEndThreshold = machineDetectionSpeechEndThreshold;
         return this;
@@ -185,6 +203,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=MachineDetectionSpeechThreshold")
     public Long machineDetectionSpeechThreshold;
+
     public CallParameters withMachineDetectionSpeechThreshold(Long machineDetectionSpeechThreshold) {
         this.machineDetectionSpeechThreshold = machineDetectionSpeechThreshold;
         return this;
@@ -195,6 +214,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=MachineDetectionTimeout")
     public Long machineDetectionTimeout;
+
     public CallParameters withMachineDetectionTimeout(Long machineDetectionTimeout) {
         this.machineDetectionTimeout = machineDetectionTimeout;
         return this;
@@ -205,6 +225,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=RingUrl")
     public String ringUrl;
+
     public CallParameters withRingUrl(String ringUrl) {
         this.ringUrl = ringUrl;
         return this;
@@ -215,6 +236,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=SendDigits")
     public String sendDigits;
+
     public CallParameters withSendDigits(String sendDigits) {
         this.sendDigits = sendDigits;
         return this;
@@ -225,6 +247,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=SendOnPreanswer")
     public Boolean sendOnPreanswer;
+
     public CallParameters withSendOnPreanswer(Boolean sendOnPreanswer) {
         this.sendOnPreanswer = sendOnPreanswer;
         return this;
@@ -235,6 +258,7 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=TimeLimit")
     public Long timeLimit;
+
     public CallParameters withTimeLimit(Long timeLimit) {
         this.timeLimit = timeLimit;
         return this;
@@ -245,9 +269,16 @@ public class CallParameters {
      */
     @SpeakeasyMetadata("form:name=To")
     public String to;
+
     public CallParameters withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public CallParameters(@JsonProperty("AnswerUrl") String answerUrl, @JsonProperty("From") String from, @JsonProperty("Gateways") String gateways, @JsonProperty("To") String to) {
+        this.answerUrl = answerUrl;
+        this.from = from;
+        this.gateways = gateways;
+        this.to = to;
+  }
 }

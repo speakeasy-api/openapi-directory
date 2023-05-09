@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Total - The total number of events for a particular field
@@ -15,6 +15,7 @@ public class Total {
      */
     
     public AppTotal apps;
+
     public Total withApps(AppTotal apps) {
         this.apps = apps;
         return this;
@@ -25,6 +26,7 @@ public class Total {
      */
     
     public Long end;
+
     public Total withEnd(Long end) {
         this.end = end;
         return this;
@@ -35,6 +37,7 @@ public class Total {
      */
     
     public Long start;
+
     public Total withStart(Long start) {
         this.start = start;
         return this;
@@ -45,9 +48,14 @@ public class Total {
      */
     
     public DataTotal totals;
+
     public Total withTotals(DataTotal totals) {
         this.totals = totals;
         return this;
     }
     
+    public Total(@JsonProperty("apps") AppTotal apps, @JsonProperty("totals") DataTotal totals) {
+        this.apps = apps;
+        this.totals = totals;
+  }
 }

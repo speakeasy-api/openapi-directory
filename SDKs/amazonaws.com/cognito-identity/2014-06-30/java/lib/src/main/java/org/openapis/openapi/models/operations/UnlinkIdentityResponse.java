@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UnlinkIdentityResponse {
     
     public String contentType;
+
     public UnlinkIdentityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UnlinkIdentityResponse {
      */
     
     public Object externalServiceException;
+
     public UnlinkIdentityResponse withExternalServiceException(Object externalServiceException) {
         this.externalServiceException = externalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class UnlinkIdentityResponse {
      */
     
     public Object internalErrorException;
+
     public UnlinkIdentityResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class UnlinkIdentityResponse {
      */
     
     public Object invalidParameterException;
+
     public UnlinkIdentityResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class UnlinkIdentityResponse {
      */
     
     public Object notAuthorizedException;
+
     public UnlinkIdentityResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class UnlinkIdentityResponse {
      */
     
     public Object resourceConflictException;
+
     public UnlinkIdentityResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -69,6 +76,7 @@ public class UnlinkIdentityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UnlinkIdentityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UnlinkIdentityResponse {
     
     
     public Integer statusCode;
+
     public UnlinkIdentityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UnlinkIdentityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UnlinkIdentityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class UnlinkIdentityResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UnlinkIdentityResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public UnlinkIdentityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

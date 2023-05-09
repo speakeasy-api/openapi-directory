@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Event {
     @JsonProperty("city")
     public String city;
+
     public Event withCity(String city) {
         this.city = city;
         return this;
@@ -16,6 +17,7 @@ public class Event {
     
     @JsonProperty("date")
     public String date;
+
     public Event withDate(String date) {
         this.date = date;
         return this;
@@ -23,6 +25,7 @@ public class Event {
     
     @JsonProperty("description")
     public String description;
+
     public Event withDescription(String description) {
         this.description = description;
         return this;
@@ -30,9 +33,16 @@ public class Event {
     
     @JsonProperty("state")
     public String state;
+
     public Event withState(String state) {
         this.state = state;
         return this;
     }
     
+    public Event(@JsonProperty("city") String city, @JsonProperty("date") String date, @JsonProperty("description") String description, @JsonProperty("state") String state) {
+        this.city = city;
+        this.date = date;
+        this.description = description;
+        this.state = state;
+  }
 }

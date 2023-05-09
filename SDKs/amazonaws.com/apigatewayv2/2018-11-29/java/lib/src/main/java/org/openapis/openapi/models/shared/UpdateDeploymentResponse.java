@@ -20,6 +20,7 @@ public class UpdateDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoDeployed")
     public Boolean autoDeployed;
+
     public UpdateDeploymentResponse withAutoDeployed(Boolean autoDeployed) {
         this.autoDeployed = autoDeployed;
         return this;
@@ -30,6 +31,7 @@ public class UpdateDeploymentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public UpdateDeploymentResponse withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -38,6 +40,7 @@ public class UpdateDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentId")
     public String deploymentId;
+
     public UpdateDeploymentResponse withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -46,6 +49,7 @@ public class UpdateDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentStatus")
     public UpdateDeploymentResponseDeploymentStatusEnum deploymentStatus;
+
     public UpdateDeploymentResponse withDeploymentStatus(UpdateDeploymentResponseDeploymentStatusEnum deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -54,6 +58,7 @@ public class UpdateDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentStatusMessage")
     public String deploymentStatusMessage;
+
     public UpdateDeploymentResponse withDeploymentStatusMessage(String deploymentStatusMessage) {
         this.deploymentStatusMessage = deploymentStatusMessage;
         return this;
@@ -62,9 +67,11 @@ public class UpdateDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateDeploymentResponse withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public UpdateDeploymentResponse(){}
 }

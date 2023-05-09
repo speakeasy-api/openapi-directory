@@ -15,9 +15,11 @@ public class Hardware {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayMaximumBackLight")
     public Integer displayMaximumBackLight;
+
     public Hardware withDisplayMaximumBackLight(Integer displayMaximumBackLight) {
         this.displayMaximumBackLight = displayMaximumBackLight;
         return this;
     }
     
+    public Hardware(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AsyncVRPResponse {
@@ -12,6 +13,7 @@ public class AsyncVRPResponse {
      */
     
     public org.openapis.openapi.models.shared.BadRequest badRequest;
+
     public AsyncVRPResponse withBadRequest(org.openapis.openapi.models.shared.BadRequest badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class AsyncVRPResponse {
     
     
     public String contentType;
+
     public AsyncVRPResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AsyncVRPResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public AsyncVRPResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -36,6 +40,7 @@ public class AsyncVRPResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalErrorMessage internalErrorMessage;
+
     public AsyncVRPResponse withInternalErrorMessage(org.openapis.openapi.models.shared.InternalErrorMessage internalErrorMessage) {
         this.internalErrorMessage = internalErrorMessage;
         return this;
@@ -46,6 +51,7 @@ public class AsyncVRPResponse {
      */
     
     public org.openapis.openapi.models.shared.JobId jobId;
+
     public AsyncVRPResponse withJobId(org.openapis.openapi.models.shared.JobId jobId) {
         this.jobId = jobId;
         return this;
@@ -53,6 +59,7 @@ public class AsyncVRPResponse {
     
     
     public Integer statusCode;
+
     public AsyncVRPResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,9 +67,14 @@ public class AsyncVRPResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AsyncVRPResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AsyncVRPResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ListEventsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public ListEventsRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class ListEventsRequestBody {
      */
     @JsonProperty("Filters")
     public ListEventsRequestBodyFilters filters;
+
     public ListEventsRequestBody withFilters(ListEventsRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -36,6 +38,7 @@ public class ListEventsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListEventsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -47,9 +50,13 @@ public class ListEventsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEventsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEventsRequestBody(@JsonProperty("Filters") ListEventsRequestBodyFilters filters) {
+        this.filters = filters;
+  }
 }

@@ -18,6 +18,7 @@ public class ScheduledSnapshotsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ScheduledSnapshotsConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,6 +30,7 @@ public class ScheduledSnapshotsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotCreationSchedule")
     public String snapshotCreationSchedule;
+
     public ScheduledSnapshotsConfig withSnapshotCreationSchedule(String snapshotCreationSchedule) {
         this.snapshotCreationSchedule = snapshotCreationSchedule;
         return this;
@@ -40,6 +42,7 @@ public class ScheduledSnapshotsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotLocation")
     public String snapshotLocation;
+
     public ScheduledSnapshotsConfig withSnapshotLocation(String snapshotLocation) {
         this.snapshotLocation = snapshotLocation;
         return this;
@@ -51,9 +54,11 @@ public class ScheduledSnapshotsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public ScheduledSnapshotsConfig withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public ScheduledSnapshotsConfig(){}
 }

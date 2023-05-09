@@ -15,6 +15,7 @@ public class TransformConfigParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsOptional")
     public Boolean isOptional;
+
     public TransformConfigParameter withIsOptional(Boolean isOptional) {
         this.isOptional = isOptional;
         return this;
@@ -23,6 +24,7 @@ public class TransformConfigParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListType")
     public ParamTypeEnum listType;
+
     public TransformConfigParameter withListType(ParamTypeEnum listType) {
         this.listType = listType;
         return this;
@@ -30,6 +32,7 @@ public class TransformConfigParameter {
     
     @JsonProperty("Name")
     public String name;
+
     public TransformConfigParameter withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +40,7 @@ public class TransformConfigParameter {
     
     @JsonProperty("Type")
     public ParamTypeEnum type;
+
     public TransformConfigParameter withType(ParamTypeEnum type) {
         this.type = type;
         return this;
@@ -45,6 +49,7 @@ public class TransformConfigParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationMessage")
     public String validationMessage;
+
     public TransformConfigParameter withValidationMessage(String validationMessage) {
         this.validationMessage = validationMessage;
         return this;
@@ -53,6 +58,7 @@ public class TransformConfigParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationRule")
     public String validationRule;
+
     public TransformConfigParameter withValidationRule(String validationRule) {
         this.validationRule = validationRule;
         return this;
@@ -61,9 +67,14 @@ public class TransformConfigParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String[] value;
+
     public TransformConfigParameter withValue(String[] value) {
         this.value = value;
         return this;
     }
     
+    public TransformConfigParameter(@JsonProperty("Name") String name, @JsonProperty("Type") ParamTypeEnum type) {
+        this.name = name;
+        this.type = type;
+  }
 }

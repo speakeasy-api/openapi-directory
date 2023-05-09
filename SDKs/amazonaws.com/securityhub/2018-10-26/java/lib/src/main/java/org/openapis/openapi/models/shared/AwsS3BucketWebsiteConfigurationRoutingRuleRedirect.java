@@ -15,6 +15,7 @@ public class AwsS3BucketWebsiteConfigurationRoutingRuleRedirect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hostname")
     public String hostname;
+
     public AwsS3BucketWebsiteConfigurationRoutingRuleRedirect withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -23,6 +24,7 @@ public class AwsS3BucketWebsiteConfigurationRoutingRuleRedirect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpRedirectCode")
     public String httpRedirectCode;
+
     public AwsS3BucketWebsiteConfigurationRoutingRuleRedirect withHttpRedirectCode(String httpRedirectCode) {
         this.httpRedirectCode = httpRedirectCode;
         return this;
@@ -31,6 +33,7 @@ public class AwsS3BucketWebsiteConfigurationRoutingRuleRedirect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocol")
     public String protocol;
+
     public AwsS3BucketWebsiteConfigurationRoutingRuleRedirect withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -39,6 +42,7 @@ public class AwsS3BucketWebsiteConfigurationRoutingRuleRedirect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplaceKeyPrefixWith")
     public String replaceKeyPrefixWith;
+
     public AwsS3BucketWebsiteConfigurationRoutingRuleRedirect withReplaceKeyPrefixWith(String replaceKeyPrefixWith) {
         this.replaceKeyPrefixWith = replaceKeyPrefixWith;
         return this;
@@ -47,9 +51,11 @@ public class AwsS3BucketWebsiteConfigurationRoutingRuleRedirect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplaceKeyWith")
     public String replaceKeyWith;
+
     public AwsS3BucketWebsiteConfigurationRoutingRuleRedirect withReplaceKeyWith(String replaceKeyWith) {
         this.replaceKeyWith = replaceKeyWith;
         return this;
     }
     
+    public AwsS3BucketWebsiteConfigurationRoutingRuleRedirect(){}
 }

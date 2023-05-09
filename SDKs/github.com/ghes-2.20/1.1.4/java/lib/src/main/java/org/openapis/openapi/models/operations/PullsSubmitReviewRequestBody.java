@@ -15,6 +15,7 @@ public class PullsSubmitReviewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public PullsSubmitReviewRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -25,9 +26,13 @@ public class PullsSubmitReviewRequestBody {
      */
     @JsonProperty("event")
     public PullsSubmitReviewRequestBodyEventEnum event;
+
     public PullsSubmitReviewRequestBody withEvent(PullsSubmitReviewRequestBodyEventEnum event) {
         this.event = event;
         return this;
     }
     
+    public PullsSubmitReviewRequestBody(@JsonProperty("event") PullsSubmitReviewRequestBodyEventEnum event) {
+        this.event = event;
+  }
 }

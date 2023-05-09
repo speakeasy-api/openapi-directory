@@ -15,6 +15,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrayProperties")
     public ArrayPropertiesDetail arrayProperties;
+
     public JobDetail withArrayProperties(ArrayPropertiesDetail arrayProperties) {
         this.arrayProperties = arrayProperties;
         return this;
@@ -23,6 +24,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attempts")
     public AttemptDetail[] attempts;
+
     public JobDetail withAttempts(AttemptDetail[] attempts) {
         this.attempts = attempts;
         return this;
@@ -31,6 +33,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("container")
     public ContainerDetail container;
+
     public JobDetail withContainer(ContainerDetail container) {
         this.container = container;
         return this;
@@ -39,6 +42,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdAt")
     public Long createdAt;
+
     public JobDetail withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -47,6 +51,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dependsOn")
     public JobDependency[] dependsOn;
+
     public JobDetail withDependsOn(JobDependency[] dependsOn) {
         this.dependsOn = dependsOn;
         return this;
@@ -55,6 +60,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksAttempts")
     public EksAttemptDetail[] eksAttempts;
+
     public JobDetail withEksAttempts(EksAttemptDetail[] eksAttempts) {
         this.eksAttempts = eksAttempts;
         return this;
@@ -63,6 +69,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksProperties")
     public EksPropertiesDetail eksProperties;
+
     public JobDetail withEksProperties(EksPropertiesDetail eksProperties) {
         this.eksProperties = eksProperties;
         return this;
@@ -71,6 +78,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCancelled")
     public Boolean isCancelled;
+
     public JobDetail withIsCancelled(Boolean isCancelled) {
         this.isCancelled = isCancelled;
         return this;
@@ -79,6 +87,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTerminated")
     public Boolean isTerminated;
+
     public JobDetail withIsTerminated(Boolean isTerminated) {
         this.isTerminated = isTerminated;
         return this;
@@ -87,6 +96,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobArn")
     public String jobArn;
+
     public JobDetail withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -94,6 +104,7 @@ public class JobDetail {
     
     @JsonProperty("jobDefinition")
     public String jobDefinition;
+
     public JobDetail withJobDefinition(String jobDefinition) {
         this.jobDefinition = jobDefinition;
         return this;
@@ -101,6 +112,7 @@ public class JobDetail {
     
     @JsonProperty("jobId")
     public String jobId;
+
     public JobDetail withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -108,6 +120,7 @@ public class JobDetail {
     
     @JsonProperty("jobName")
     public String jobName;
+
     public JobDetail withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -115,6 +128,7 @@ public class JobDetail {
     
     @JsonProperty("jobQueue")
     public String jobQueue;
+
     public JobDetail withJobQueue(String jobQueue) {
         this.jobQueue = jobQueue;
         return this;
@@ -123,6 +137,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeDetails")
     public NodeDetails nodeDetails;
+
     public JobDetail withNodeDetails(NodeDetails nodeDetails) {
         this.nodeDetails = nodeDetails;
         return this;
@@ -131,6 +146,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeProperties")
     public NodeProperties nodeProperties;
+
     public JobDetail withNodeProperties(NodeProperties nodeProperties) {
         this.nodeProperties = nodeProperties;
         return this;
@@ -139,6 +155,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, String> parameters;
+
     public JobDetail withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -147,6 +164,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformCapabilities")
     public PlatformCapabilityEnum[] platformCapabilities;
+
     public JobDetail withPlatformCapabilities(PlatformCapabilityEnum[] platformCapabilities) {
         this.platformCapabilities = platformCapabilities;
         return this;
@@ -155,6 +173,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propagateTags")
     public Boolean propagateTags;
+
     public JobDetail withPropagateTags(Boolean propagateTags) {
         this.propagateTags = propagateTags;
         return this;
@@ -163,6 +182,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryStrategy")
     public RetryStrategy retryStrategy;
+
     public JobDetail withRetryStrategy(RetryStrategy retryStrategy) {
         this.retryStrategy = retryStrategy;
         return this;
@@ -171,6 +191,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingPriority")
     public Long schedulingPriority;
+
     public JobDetail withSchedulingPriority(Long schedulingPriority) {
         this.schedulingPriority = schedulingPriority;
         return this;
@@ -179,6 +200,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareIdentifier")
     public String shareIdentifier;
+
     public JobDetail withShareIdentifier(String shareIdentifier) {
         this.shareIdentifier = shareIdentifier;
         return this;
@@ -186,6 +208,7 @@ public class JobDetail {
     
     @JsonProperty("startedAt")
     public Long startedAt;
+
     public JobDetail withStartedAt(Long startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -193,6 +216,7 @@ public class JobDetail {
     
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public JobDetail withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
@@ -201,6 +225,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public JobDetail withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -209,6 +234,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stoppedAt")
     public Long stoppedAt;
+
     public JobDetail withStoppedAt(Long stoppedAt) {
         this.stoppedAt = stoppedAt;
         return this;
@@ -217,6 +243,7 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public JobDetail withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -225,9 +252,18 @@ public class JobDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public JobTimeout timeout;
+
     public JobDetail withTimeout(JobTimeout timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public JobDetail(@JsonProperty("jobDefinition") String jobDefinition, @JsonProperty("jobId") String jobId, @JsonProperty("jobName") String jobName, @JsonProperty("jobQueue") String jobQueue, @JsonProperty("startedAt") Long startedAt, @JsonProperty("status") JobStatusEnum status) {
+        this.jobDefinition = jobDefinition;
+        this.jobId = jobId;
+        this.jobName = jobName;
+        this.jobQueue = jobQueue;
+        this.startedAt = startedAt;
+        this.status = status;
+  }
 }

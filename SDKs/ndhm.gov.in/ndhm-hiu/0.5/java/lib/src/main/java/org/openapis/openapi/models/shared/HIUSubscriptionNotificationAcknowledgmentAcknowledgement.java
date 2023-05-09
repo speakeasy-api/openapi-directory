@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HIUSubscriptionNotificationAcknowledgmentAcknowledgement {
     @JsonProperty("eventId")
     public String eventId;
+
     public HIUSubscriptionNotificationAcknowledgmentAcknowledgement withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -16,9 +17,14 @@ public class HIUSubscriptionNotificationAcknowledgmentAcknowledgement {
     
     @JsonProperty("status")
     public HIUSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnum status;
+
     public HIUSubscriptionNotificationAcknowledgmentAcknowledgement withStatus(HIUSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public HIUSubscriptionNotificationAcknowledgmentAcknowledgement(@JsonProperty("eventId") String eventId, @JsonProperty("status") HIUSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnum status) {
+        this.eventId = eventId;
+        this.status = status;
+  }
 }

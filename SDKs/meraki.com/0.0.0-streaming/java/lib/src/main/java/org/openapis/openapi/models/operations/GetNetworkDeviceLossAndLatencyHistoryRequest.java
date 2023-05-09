@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkDeviceLossAndLatencyHistoryRequest {
@@ -12,6 +13,7 @@ public class GetNetworkDeviceLossAndLatencyHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
     public String ip;
+
     public GetNetworkDeviceLossAndLatencyHistoryRequest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -19,6 +21,7 @@ public class GetNetworkDeviceLossAndLatencyHistoryRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public GetNetworkDeviceLossAndLatencyHistoryRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -29,6 +32,7 @@ public class GetNetworkDeviceLossAndLatencyHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
     public Long resolution;
+
     public GetNetworkDeviceLossAndLatencyHistoryRequest withResolution(Long resolution) {
         this.resolution = resolution;
         return this;
@@ -36,6 +40,7 @@ public class GetNetworkDeviceLossAndLatencyHistoryRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
     public String serial;
+
     public GetNetworkDeviceLossAndLatencyHistoryRequest withSerial(String serial) {
         this.serial = serial;
         return this;
@@ -46,6 +51,7 @@ public class GetNetworkDeviceLossAndLatencyHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
     public String t0;
+
     public GetNetworkDeviceLossAndLatencyHistoryRequest withT0(String t0) {
         this.t0 = t0;
         return this;
@@ -56,6 +62,7 @@ public class GetNetworkDeviceLossAndLatencyHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
     public String t1;
+
     public GetNetworkDeviceLossAndLatencyHistoryRequest withT1(String t1) {
         this.t1 = t1;
         return this;
@@ -66,6 +73,7 @@ public class GetNetworkDeviceLossAndLatencyHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
     public Float timespan;
+
     public GetNetworkDeviceLossAndLatencyHistoryRequest withTimespan(Float timespan) {
         this.timespan = timespan;
         return this;
@@ -76,9 +84,15 @@ public class GetNetworkDeviceLossAndLatencyHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uplink")
     public GetNetworkDeviceLossAndLatencyHistoryUplinkEnum uplink;
+
     public GetNetworkDeviceLossAndLatencyHistoryRequest withUplink(GetNetworkDeviceLossAndLatencyHistoryUplinkEnum uplink) {
         this.uplink = uplink;
         return this;
     }
     
+    public GetNetworkDeviceLossAndLatencyHistoryRequest(@JsonProperty("ip") String ip, @JsonProperty("networkId") String networkId, @JsonProperty("serial") String serial) {
+        this.ip = ip;
+        this.networkId = networkId;
+        this.serial = serial;
+  }
 }

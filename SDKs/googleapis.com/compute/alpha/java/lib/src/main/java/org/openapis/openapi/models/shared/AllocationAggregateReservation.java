@@ -18,6 +18,7 @@ public class AllocationAggregateReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inUseResources")
     public AllocationAggregateReservationReservedResourceInfo[] inUseResources;
+
     public AllocationAggregateReservation withInUseResources(AllocationAggregateReservationReservedResourceInfo[] inUseResources) {
         this.inUseResources = inUseResources;
         return this;
@@ -29,6 +30,7 @@ public class AllocationAggregateReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedResources")
     public AllocationAggregateReservationReservedResourceInfo[] reservedResources;
+
     public AllocationAggregateReservation withReservedResources(AllocationAggregateReservationReservedResourceInfo[] reservedResources) {
         this.reservedResources = reservedResources;
         return this;
@@ -40,9 +42,11 @@ public class AllocationAggregateReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmFamily")
     public AllocationAggregateReservationVmFamilyEnum vmFamily;
+
     public AllocationAggregateReservation withVmFamily(AllocationAggregateReservationVmFamilyEnum vmFamily) {
         this.vmFamily = vmFamily;
         return this;
     }
     
+    public AllocationAggregateReservation(){}
 }

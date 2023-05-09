@@ -20,6 +20,7 @@ public class QualificationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnswerKey")
     public String answerKey;
+
     public QualificationType withAnswerKey(String answerKey) {
         this.answerKey = answerKey;
         return this;
@@ -28,6 +29,7 @@ public class QualificationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoGranted")
     public Boolean autoGranted;
+
     public QualificationType withAutoGranted(Boolean autoGranted) {
         this.autoGranted = autoGranted;
         return this;
@@ -36,6 +38,7 @@ public class QualificationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoGrantedValue")
     public Long autoGrantedValue;
+
     public QualificationType withAutoGrantedValue(Long autoGrantedValue) {
         this.autoGrantedValue = autoGrantedValue;
         return this;
@@ -46,6 +49,7 @@ public class QualificationType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public QualificationType withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -54,6 +58,7 @@ public class QualificationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public QualificationType withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class QualificationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsRequestable")
     public Boolean isRequestable;
+
     public QualificationType withIsRequestable(Boolean isRequestable) {
         this.isRequestable = isRequestable;
         return this;
@@ -70,6 +76,7 @@ public class QualificationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keywords")
     public String keywords;
+
     public QualificationType withKeywords(String keywords) {
         this.keywords = keywords;
         return this;
@@ -78,6 +85,7 @@ public class QualificationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public QualificationType withName(String name) {
         this.name = name;
         return this;
@@ -86,6 +94,7 @@ public class QualificationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QualificationTypeId")
     public String qualificationTypeId;
+
     public QualificationType withQualificationTypeId(String qualificationTypeId) {
         this.qualificationTypeId = qualificationTypeId;
         return this;
@@ -94,6 +103,7 @@ public class QualificationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QualificationTypeStatus")
     public QualificationTypeStatusEnum qualificationTypeStatus;
+
     public QualificationType withQualificationTypeStatus(QualificationTypeStatusEnum qualificationTypeStatus) {
         this.qualificationTypeStatus = qualificationTypeStatus;
         return this;
@@ -102,6 +112,7 @@ public class QualificationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryDelayInSeconds")
     public Long retryDelayInSeconds;
+
     public QualificationType withRetryDelayInSeconds(Long retryDelayInSeconds) {
         this.retryDelayInSeconds = retryDelayInSeconds;
         return this;
@@ -110,6 +121,7 @@ public class QualificationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Test")
     public String test;
+
     public QualificationType withTest(String test) {
         this.test = test;
         return this;
@@ -118,9 +130,11 @@ public class QualificationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TestDurationInSeconds")
     public Long testDurationInSeconds;
+
     public QualificationType withTestDurationInSeconds(Long testDurationInSeconds) {
         this.testDurationInSeconds = testDurationInSeconds;
         return this;
     }
     
+    public QualificationType(){}
 }

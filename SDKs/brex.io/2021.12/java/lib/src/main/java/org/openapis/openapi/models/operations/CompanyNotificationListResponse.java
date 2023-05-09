@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompanyNotificationListResponse {
@@ -12,6 +13,7 @@ public class CompanyNotificationListResponse {
      */
     
     public CompanyNotificationList200ApplicationJSON[] companyNotificationList200ApplicationJSONObjects;
+
     public CompanyNotificationListResponse withCompanyNotificationList200ApplicationJSONObjects(CompanyNotificationList200ApplicationJSON[] companyNotificationList200ApplicationJSONObjects) {
         this.companyNotificationList200ApplicationJSONObjects = companyNotificationList200ApplicationJSONObjects;
         return this;
@@ -22,6 +24,7 @@ public class CompanyNotificationListResponse {
      */
     
     public CompanyNotificationListDefaultApplicationJSON companyNotificationListDefaultApplicationJSONObject;
+
     public CompanyNotificationListResponse withCompanyNotificationListDefaultApplicationJSONObject(CompanyNotificationListDefaultApplicationJSON companyNotificationListDefaultApplicationJSONObject) {
         this.companyNotificationListDefaultApplicationJSONObject = companyNotificationListDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class CompanyNotificationListResponse {
     
     
     public String contentType;
+
     public CompanyNotificationListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class CompanyNotificationListResponse {
     
     
     public Integer statusCode;
+
     public CompanyNotificationListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CompanyNotificationListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompanyNotificationListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CompanyNotificationListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

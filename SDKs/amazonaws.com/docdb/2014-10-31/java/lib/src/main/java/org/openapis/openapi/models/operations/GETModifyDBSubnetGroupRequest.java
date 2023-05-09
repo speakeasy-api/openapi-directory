@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBSubnetGroupRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyDBSubnetGroupActionEnum action;
+
     public GETModifyDBSubnetGroupRequest withAction(GETModifyDBSubnetGroupActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyDBSubnetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBSubnetGroupDescription")
     public String dbSubnetGroupDescription;
+
     public GETModifyDBSubnetGroupRequest withDBSubnetGroupDescription(String dbSubnetGroupDescription) {
         this.dbSubnetGroupDescription = dbSubnetGroupDescription;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyDBSubnetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBSubnetGroupName")
     public String dbSubnetGroupName;
+
     public GETModifyDBSubnetGroupRequest withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyDBSubnetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SubnetIds")
     public String[] subnetIds;
+
     public GETModifyDBSubnetGroupRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -46,6 +51,7 @@ public class GETModifyDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyDBSubnetGroupVersionEnum version;
+
     public GETModifyDBSubnetGroupRequest withVersion(GETModifyDBSubnetGroupVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETModifyDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyDBSubnetGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETModifyDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyDBSubnetGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETModifyDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyDBSubnetGroupRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETModifyDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyDBSubnetGroupRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETModifyDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyDBSubnetGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETModifyDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyDBSubnetGroupRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETModifyDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyDBSubnetGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyDBSubnetGroupRequest(@JsonProperty("Action") GETModifyDBSubnetGroupActionEnum action, @JsonProperty("DBSubnetGroupName") String dbSubnetGroupName, @JsonProperty("SubnetIds") String[] subnetIds, @JsonProperty("Version") GETModifyDBSubnetGroupVersionEnum version) {
+        this.action = action;
+        this.dbSubnetGroupName = dbSubnetGroupName;
+        this.subnetIds = subnetIds;
+        this.version = version;
+  }
 }

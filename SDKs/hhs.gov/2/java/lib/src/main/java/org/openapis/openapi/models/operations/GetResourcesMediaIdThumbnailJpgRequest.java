@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesMediaIdThumbnailJpgRequest {
@@ -12,9 +13,13 @@ public class GetResourcesMediaIdThumbnailJpgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetResourcesMediaIdThumbnailJpgRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetResourcesMediaIdThumbnailJpgRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

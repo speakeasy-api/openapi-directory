@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContributorCollectionItemsRequest {
@@ -12,6 +13,7 @@ public class GetContributorCollectionItemsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contributor_id")
     public String contributorId;
+
     public GetContributorCollectionItemsRequest withContributorId(String contributorId) {
         this.contributorId = contributorId;
         return this;
@@ -22,6 +24,7 @@ public class GetContributorCollectionItemsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetContributorCollectionItemsRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class GetContributorCollectionItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetContributorCollectionItemsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class GetContributorCollectionItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetContributorCollectionItemsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,9 +57,14 @@ public class GetContributorCollectionItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetContributorCollectionItemsSortEnum sort;
+
     public GetContributorCollectionItemsRequest withSort(GetContributorCollectionItemsSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetContributorCollectionItemsRequest(@JsonProperty("contributor_id") String contributorId, @JsonProperty("id") String id) {
+        this.contributorId = contributorId;
+        this.id = id;
+  }
 }

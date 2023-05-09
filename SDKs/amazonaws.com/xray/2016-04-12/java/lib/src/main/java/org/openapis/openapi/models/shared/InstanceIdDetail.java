@@ -15,9 +15,11 @@ public class InstanceIdDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public InstanceIdDetail withId(String id) {
         this.id = id;
         return this;
     }
     
+    public InstanceIdDetail(){}
 }

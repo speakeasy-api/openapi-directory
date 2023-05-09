@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreateANewQuestionRequestBody;
 import org.openapis.openapi.models.operations.CreateANewQuestionResponse;
 
@@ -20,7 +19,7 @@ public class Application {
                     add("quibusdam"),
                 }};
                 question = "unde";
-            }}            
+            }};            
 
             CreateANewQuestionResponse res = sdk.createANewQuestion(req);
 
@@ -30,5 +29,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

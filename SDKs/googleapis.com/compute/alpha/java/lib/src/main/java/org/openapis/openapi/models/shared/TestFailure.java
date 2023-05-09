@@ -15,6 +15,7 @@ public class TestFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actualOutputUrl")
     public String actualOutputUrl;
+
     public TestFailure withActualOutputUrl(String actualOutputUrl) {
         this.actualOutputUrl = actualOutputUrl;
         return this;
@@ -26,6 +27,7 @@ public class TestFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actualRedirectResponseCode")
     public Integer actualRedirectResponseCode;
+
     public TestFailure withActualRedirectResponseCode(Integer actualRedirectResponseCode) {
         this.actualRedirectResponseCode = actualRedirectResponseCode;
         return this;
@@ -37,6 +39,7 @@ public class TestFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actualService")
     public String actualService;
+
     public TestFailure withActualService(String actualService) {
         this.actualService = actualService;
         return this;
@@ -48,6 +51,7 @@ public class TestFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedOutputUrl")
     public String expectedOutputUrl;
+
     public TestFailure withExpectedOutputUrl(String expectedOutputUrl) {
         this.expectedOutputUrl = expectedOutputUrl;
         return this;
@@ -59,6 +63,7 @@ public class TestFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedRedirectResponseCode")
     public Integer expectedRedirectResponseCode;
+
     public TestFailure withExpectedRedirectResponseCode(Integer expectedRedirectResponseCode) {
         this.expectedRedirectResponseCode = expectedRedirectResponseCode;
         return this;
@@ -70,6 +75,7 @@ public class TestFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedService")
     public String expectedService;
+
     public TestFailure withExpectedService(String expectedService) {
         this.expectedService = expectedService;
         return this;
@@ -81,6 +87,7 @@ public class TestFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public UrlMapTestHeader[] headers;
+
     public TestFailure withHeaders(UrlMapTestHeader[] headers) {
         this.headers = headers;
         return this;
@@ -92,6 +99,7 @@ public class TestFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public TestFailure withHost(String host) {
         this.host = host;
         return this;
@@ -103,9 +111,11 @@ public class TestFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public TestFailure withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public TestFailure(){}
 }

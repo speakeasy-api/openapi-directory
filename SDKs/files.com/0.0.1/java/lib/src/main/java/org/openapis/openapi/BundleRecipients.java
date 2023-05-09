@@ -62,11 +62,9 @@ public class BundleRecipients {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBundleRecipientsResponse res = new org.openapis.openapi.models.operations.GetBundleRecipientsResponse() {{
+        org.openapis.openapi.models.operations.GetBundleRecipientsResponse res = new org.openapis.openapi.models.operations.GetBundleRecipientsResponse(contentType, httpRes.statusCode()) {{
             bundleRecipientEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class BundleRecipients {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostBundleRecipientsResponse res = new org.openapis.openapi.models.operations.PostBundleRecipientsResponse() {{
+        org.openapis.openapi.models.operations.PostBundleRecipientsResponse res = new org.openapis.openapi.models.operations.PostBundleRecipientsResponse(contentType, httpRes.statusCode()) {{
             bundleRecipientEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataAttributeBindingPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public String[] attributes;
+
     public GoogleCloudDataplexV1DataAttributeBindingPath withAttributes(String[] attributes) {
         this.attributes = attributes;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1DataAttributeBindingPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1DataAttributeBindingPath withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataAttributeBindingPath(){}
 }

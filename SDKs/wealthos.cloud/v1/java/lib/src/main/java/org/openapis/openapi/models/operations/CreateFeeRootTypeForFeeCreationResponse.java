@@ -17,6 +17,7 @@ public class CreateFeeRootTypeForFeeCreationResponse {
      */
     @JsonProperty("created_at")
     public String createdAt;
+
     public CreateFeeRootTypeForFeeCreationResponse withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -27,6 +28,7 @@ public class CreateFeeRootTypeForFeeCreationResponse {
      */
     @JsonProperty("currency")
     public String currency;
+
     public CreateFeeRootTypeForFeeCreationResponse withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -37,6 +39,7 @@ public class CreateFeeRootTypeForFeeCreationResponse {
      */
     @JsonProperty("direction")
     public CreateFeeRootTypeForFeeCreationResponseDirectionEnum direction;
+
     public CreateFeeRootTypeForFeeCreationResponse withDirection(CreateFeeRootTypeForFeeCreationResponseDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -48,6 +51,7 @@ public class CreateFeeRootTypeForFeeCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_transaction_reference")
     public String externalTransactionReference;
+
     public CreateFeeRootTypeForFeeCreationResponse withExternalTransactionReference(String externalTransactionReference) {
         this.externalTransactionReference = externalTransactionReference;
         return this;
@@ -58,6 +62,7 @@ public class CreateFeeRootTypeForFeeCreationResponse {
      */
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public CreateFeeRootTypeForFeeCreationResponse withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -68,6 +73,7 @@ public class CreateFeeRootTypeForFeeCreationResponse {
      */
     @JsonProperty("origin")
     public CreateFeeRootTypeForFeeCreationResponseOriginEnum origin;
+
     public CreateFeeRootTypeForFeeCreationResponse withOrigin(CreateFeeRootTypeForFeeCreationResponseOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -78,6 +84,7 @@ public class CreateFeeRootTypeForFeeCreationResponse {
      */
     @JsonProperty("pot_id")
     public String potId;
+
     public CreateFeeRootTypeForFeeCreationResponse withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -85,6 +92,7 @@ public class CreateFeeRootTypeForFeeCreationResponse {
     
     @JsonProperty("primary_transaction_type")
     public CreateFeeRootTypeForFeeCreationResponsePrimaryTransactionTypeEnum primaryTransactionType;
+
     public CreateFeeRootTypeForFeeCreationResponse withPrimaryTransactionType(CreateFeeRootTypeForFeeCreationResponsePrimaryTransactionTypeEnum primaryTransactionType) {
         this.primaryTransactionType = primaryTransactionType;
         return this;
@@ -96,6 +104,7 @@ public class CreateFeeRootTypeForFeeCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settlement_date")
     public String settlementDate;
+
     public CreateFeeRootTypeForFeeCreationResponse withSettlementDate(String settlementDate) {
         this.settlementDate = settlementDate;
         return this;
@@ -106,6 +115,7 @@ public class CreateFeeRootTypeForFeeCreationResponse {
      */
     @JsonProperty("sub_transaction_type")
     public CreateFeeRootTypeForFeeCreationResponseSubTransactionTypeEnum subTransactionType;
+
     public CreateFeeRootTypeForFeeCreationResponse withSubTransactionType(CreateFeeRootTypeForFeeCreationResponseSubTransactionTypeEnum subTransactionType) {
         this.subTransactionType = subTransactionType;
         return this;
@@ -116,6 +126,7 @@ public class CreateFeeRootTypeForFeeCreationResponse {
      */
     @JsonProperty("sub_type")
     public CreateFeeRootTypeForFeeCreationResponseSubTypeEnum subType;
+
     public CreateFeeRootTypeForFeeCreationResponse withSubType(CreateFeeRootTypeForFeeCreationResponseSubTypeEnum subType) {
         this.subType = subType;
         return this;
@@ -127,6 +138,7 @@ public class CreateFeeRootTypeForFeeCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trade_date")
     public String tradeDate;
+
     public CreateFeeRootTypeForFeeCreationResponse withTradeDate(String tradeDate) {
         this.tradeDate = tradeDate;
         return this;
@@ -137,6 +149,7 @@ public class CreateFeeRootTypeForFeeCreationResponse {
      */
     @JsonProperty("transaction_id")
     public String transactionId;
+
     public CreateFeeRootTypeForFeeCreationResponse withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -147,6 +160,7 @@ public class CreateFeeRootTypeForFeeCreationResponse {
      */
     @JsonProperty("transaction_value")
     public String transactionValue;
+
     public CreateFeeRootTypeForFeeCreationResponse withTransactionValue(String transactionValue) {
         this.transactionValue = transactionValue;
         return this;
@@ -157,6 +171,7 @@ public class CreateFeeRootTypeForFeeCreationResponse {
      */
     @JsonProperty("type")
     public CreateFeeRootTypeForFeeCreationResponseTypeEnum type;
+
     public CreateFeeRootTypeForFeeCreationResponse withType(CreateFeeRootTypeForFeeCreationResponseTypeEnum type) {
         this.type = type;
         return this;
@@ -167,9 +182,25 @@ public class CreateFeeRootTypeForFeeCreationResponse {
      */
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public CreateFeeRootTypeForFeeCreationResponse withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public CreateFeeRootTypeForFeeCreationResponse(@JsonProperty("created_at") String createdAt, @JsonProperty("currency") String currency, @JsonProperty("direction") CreateFeeRootTypeForFeeCreationResponseDirectionEnum direction, @JsonProperty("investment_product_id") String investmentProductId, @JsonProperty("origin") CreateFeeRootTypeForFeeCreationResponseOriginEnum origin, @JsonProperty("pot_id") String potId, @JsonProperty("primary_transaction_type") CreateFeeRootTypeForFeeCreationResponsePrimaryTransactionTypeEnum primaryTransactionType, @JsonProperty("sub_transaction_type") CreateFeeRootTypeForFeeCreationResponseSubTransactionTypeEnum subTransactionType, @JsonProperty("sub_type") CreateFeeRootTypeForFeeCreationResponseSubTypeEnum subType, @JsonProperty("transaction_id") String transactionId, @JsonProperty("transaction_value") String transactionValue, @JsonProperty("type") CreateFeeRootTypeForFeeCreationResponseTypeEnum type, @JsonProperty("updated_at") String updatedAt) {
+        this.createdAt = createdAt;
+        this.currency = currency;
+        this.direction = direction;
+        this.investmentProductId = investmentProductId;
+        this.origin = origin;
+        this.potId = potId;
+        this.primaryTransactionType = primaryTransactionType;
+        this.subTransactionType = subTransactionType;
+        this.subType = subType;
+        this.transactionId = transactionId;
+        this.transactionValue = transactionValue;
+        this.type = type;
+        this.updatedAt = updatedAt;
+  }
 }

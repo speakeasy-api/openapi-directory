@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Follower {
     @JsonProperty("email")
     public String email;
+
     public Follower withEmail(String email) {
         this.email = email;
         return this;
@@ -16,6 +17,7 @@ public class Follower {
     
     @JsonProperty("id")
     public String id;
+
     public Follower withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +25,15 @@ public class Follower {
     
     @JsonProperty("name")
     public String name;
+
     public Follower withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Follower(@JsonProperty("email") String email, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.email = email;
+        this.id = id;
+        this.name = name;
+  }
 }

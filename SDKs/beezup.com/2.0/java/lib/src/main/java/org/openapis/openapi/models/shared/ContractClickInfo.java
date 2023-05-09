@@ -18,6 +18,7 @@ public class ContractClickInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalClickPrice")
     public Double additionalClickPrice;
+
     public ContractClickInfo withAdditionalClickPrice(Double additionalClickPrice) {
         this.additionalClickPrice = additionalClickPrice;
         return this;
@@ -29,6 +30,7 @@ public class ContractClickInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickIncluded")
     public Integer clickIncluded;
+
     public ContractClickInfo withClickIncluded(Integer clickIncluded) {
         this.clickIncluded = clickIncluded;
         return this;
@@ -40,9 +42,11 @@ public class ContractClickInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialOfferClickIncluded")
     public Integer initialOfferClickIncluded;
+
     public ContractClickInfo withInitialOfferClickIncluded(Integer initialOfferClickIncluded) {
         this.initialOfferClickIncluded = initialOfferClickIncluded;
         return this;
     }
     
+    public ContractClickInfo(){}
 }

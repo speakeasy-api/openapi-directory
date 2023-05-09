@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSubscriptionEventsRequest {
@@ -15,6 +16,7 @@ public class ListSubscriptionEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListSubscriptionEventsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -28,6 +30,7 @@ public class ListSubscriptionEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListSubscriptionEventsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -38,9 +41,13 @@ public class ListSubscriptionEventsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscription_id")
     public String subscriptionId;
+
     public ListSubscriptionEventsRequest withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public ListSubscriptionEventsRequest(@JsonProperty("subscription_id") String subscriptionId) {
+        this.subscriptionId = subscriptionId;
+  }
 }

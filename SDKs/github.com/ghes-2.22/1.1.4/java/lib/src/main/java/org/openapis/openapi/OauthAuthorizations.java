@@ -54,7 +54,9 @@ public class OauthAuthorizations {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.OauthAuthorizationsCreateAuthorizationResponse oauthAuthorizationsCreateAuthorization(org.openapis.openapi.models.operations.OauthAuthorizationsCreateAuthorizationRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/authorizations");
@@ -71,13 +73,11 @@ public class OauthAuthorizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OauthAuthorizationsCreateAuthorizationResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsCreateAuthorizationResponse() {{
+        org.openapis.openapi.models.operations.OauthAuthorizationsCreateAuthorizationResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsCreateAuthorizationResponse(contentType, httpRes.statusCode()) {{
             authorization = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -116,7 +116,9 @@ public class OauthAuthorizations {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.OauthAuthorizationsDeleteAuthorizationResponse oauthAuthorizationsDeleteAuthorization(org.openapis.openapi.models.operations.OauthAuthorizationsDeleteAuthorizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsDeleteAuthorizationRequest.class, baseUrl, "/authorizations/{authorization_id}", request, null);
@@ -131,11 +133,9 @@ public class OauthAuthorizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OauthAuthorizationsDeleteAuthorizationResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsDeleteAuthorizationResponse() {{
+        org.openapis.openapi.models.operations.OauthAuthorizationsDeleteAuthorizationResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsDeleteAuthorizationResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304) {
@@ -160,7 +160,9 @@ public class OauthAuthorizations {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.OauthAuthorizationsDeleteGrantResponse oauthAuthorizationsDeleteGrant(org.openapis.openapi.models.operations.OauthAuthorizationsDeleteGrantRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsDeleteGrantRequest.class, baseUrl, "/applications/grants/{grant_id}", request, null);
@@ -175,11 +177,9 @@ public class OauthAuthorizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OauthAuthorizationsDeleteGrantResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsDeleteGrantResponse() {{
+        org.openapis.openapi.models.operations.OauthAuthorizationsDeleteGrantResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsDeleteGrantResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304) {
@@ -202,7 +202,9 @@ public class OauthAuthorizations {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.OauthAuthorizationsGetAuthorizationResponse oauthAuthorizationsGetAuthorization(org.openapis.openapi.models.operations.OauthAuthorizationsGetAuthorizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsGetAuthorizationRequest.class, baseUrl, "/authorizations/{authorization_id}", request, null);
@@ -217,12 +219,10 @@ public class OauthAuthorizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OauthAuthorizationsGetAuthorizationResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsGetAuthorizationResponse() {{
+        org.openapis.openapi.models.operations.OauthAuthorizationsGetAuthorizationResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsGetAuthorizationResponse(contentType, httpRes.statusCode()) {{
             authorization = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,7 +252,9 @@ public class OauthAuthorizations {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.OauthAuthorizationsGetGrantResponse oauthAuthorizationsGetGrant(org.openapis.openapi.models.operations.OauthAuthorizationsGetGrantRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsGetGrantRequest.class, baseUrl, "/applications/grants/{grant_id}", request, null);
@@ -267,12 +269,10 @@ public class OauthAuthorizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OauthAuthorizationsGetGrantResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsGetGrantResponse() {{
+        org.openapis.openapi.models.operations.OauthAuthorizationsGetGrantResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsGetGrantResponse(contentType, httpRes.statusCode()) {{
             applicationGrant = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -310,7 +310,9 @@ public class OauthAuthorizations {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppResponse oauthAuthorizationsGetOrCreateAuthorizationForApp(org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppRequest.class, baseUrl, "/authorizations/clients/{client_id}", request, null);
@@ -330,13 +332,11 @@ public class OauthAuthorizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppResponse() {{
+        org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppResponse(contentType, httpRes.statusCode()) {{
             authorization = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201) {
@@ -381,7 +381,9 @@ public class OauthAuthorizations {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse oauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprint(org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest.class, baseUrl, "/authorizations/clients/{client_id}/{fingerprint}", request, null);
@@ -401,12 +403,10 @@ public class OauthAuthorizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse() {{
+        org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse(contentType, httpRes.statusCode()) {{
             authorization = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201) {
@@ -436,7 +436,9 @@ public class OauthAuthorizations {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.OauthAuthorizationsListAuthorizationsResponse oauthAuthorizationsListAuthorizations(org.openapis.openapi.models.operations.OauthAuthorizationsListAuthorizationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/authorizations");
@@ -457,12 +459,10 @@ public class OauthAuthorizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OauthAuthorizationsListAuthorizationsResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsListAuthorizationsResponse() {{
+        org.openapis.openapi.models.operations.OauthAuthorizationsListAuthorizationsResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsListAuthorizationsResponse(contentType, httpRes.statusCode()) {{
             authorizations = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -496,7 +496,9 @@ public class OauthAuthorizations {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.OauthAuthorizationsListGrantsResponse oauthAuthorizationsListGrants(org.openapis.openapi.models.operations.OauthAuthorizationsListGrantsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/applications/grants");
@@ -517,12 +519,10 @@ public class OauthAuthorizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OauthAuthorizationsListGrantsResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsListGrantsResponse() {{
+        org.openapis.openapi.models.operations.OauthAuthorizationsListGrantsResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsListGrantsResponse(contentType, httpRes.statusCode()) {{
             applicationGrants = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -558,7 +558,9 @@ public class OauthAuthorizations {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.OauthAuthorizationsUpdateAuthorizationResponse oauthAuthorizationsUpdateAuthorization(org.openapis.openapi.models.operations.OauthAuthorizationsUpdateAuthorizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsUpdateAuthorizationRequest.class, baseUrl, "/authorizations/{authorization_id}", request, null);
@@ -575,12 +577,10 @@ public class OauthAuthorizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OauthAuthorizationsUpdateAuthorizationResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsUpdateAuthorizationResponse() {{
+        org.openapis.openapi.models.operations.OauthAuthorizationsUpdateAuthorizationResponse res = new org.openapis.openapi.models.operations.OauthAuthorizationsUpdateAuthorizationResponse(contentType, httpRes.statusCode()) {{
             authorization = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

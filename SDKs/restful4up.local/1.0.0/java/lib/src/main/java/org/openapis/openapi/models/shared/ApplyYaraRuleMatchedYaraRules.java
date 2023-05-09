@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ApplyYaraRuleMatchedYaraRules - Yara rule meta data section
@@ -15,6 +15,7 @@ public class ApplyYaraRuleMatchedYaraRules {
      */
     
     public String rule;
+
     public ApplyYaraRuleMatchedYaraRules withRule(String rule) {
         this.rule = rule;
         return this;
@@ -25,9 +26,14 @@ public class ApplyYaraRuleMatchedYaraRules {
      */
     
     public String[] stringInformation;
+
     public ApplyYaraRuleMatchedYaraRules withStringInformation(String[] stringInformation) {
         this.stringInformation = stringInformation;
         return this;
     }
     
+    public ApplyYaraRuleMatchedYaraRules(@JsonProperty("rule") String rule, @JsonProperty("string_information") String[] stringInformation) {
+        this.rule = rule;
+        this.stringInformation = stringInformation;
+  }
 }

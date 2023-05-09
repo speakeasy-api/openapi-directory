@@ -14,9 +14,11 @@ public class GetChargersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=field[]")
     public GetChargersFieldEnum[] field;
+
     public GetChargersRequest withField(GetChargersFieldEnum[] field) {
         this.field = field;
         return this;
     }
     
+    public GetChargersRequest(){}
 }

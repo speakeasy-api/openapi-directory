@@ -34,7 +34,7 @@ public class BusinessLines {
      * Delete a business line
      * Deletes a business line.
      * 
-     *  &gt;"If you delete a business line linked to a [payment method](https://docs.adyen.com/development-resources/paymentmethodvariant#management-api), it can affect your merchant account's ability to use the [payment method](https://docs.adyen.com/api-explorer/Management/latest/post/merchants/_merchantId_/paymentMethodSettings). The business line is removed from all linked merchant accounts.
+     *  &gt;If you delete a business line linked to a [payment method](https://docs.adyen.com/development-resources/paymentmethodvariant#management-api), it can affect your merchant account's ability to use the [payment method](https://docs.adyen.com/api-explorer/Management/latest/post/merchants/_merchantId_/paymentMethodSettings). The business line is removed from all linked merchant accounts.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -55,11 +55,9 @@ public class BusinessLines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteBusinessLinesIdResponse res = new org.openapis.openapi.models.operations.DeleteBusinessLinesIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteBusinessLinesIdResponse res = new org.openapis.openapi.models.operations.DeleteBusinessLinesIdResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -98,12 +96,10 @@ public class BusinessLines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBusinessLinesIdResponse res = new org.openapis.openapi.models.operations.GetBusinessLinesIdResponse() {{
+        org.openapis.openapi.models.operations.GetBusinessLinesIdResponse res = new org.openapis.openapi.models.operations.GetBusinessLinesIdResponse(contentType, httpRes.statusCode()) {{
             businessLine = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -149,12 +145,10 @@ public class BusinessLines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchBusinessLinesIdResponse res = new org.openapis.openapi.models.operations.PatchBusinessLinesIdResponse() {{
+        org.openapis.openapi.models.operations.PatchBusinessLinesIdResponse res = new org.openapis.openapi.models.operations.PatchBusinessLinesIdResponse(contentType, httpRes.statusCode()) {{
             businessLine = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,7 +173,9 @@ public class BusinessLines {
      * Create a business line
      * Creates a business line. 
      * 
-     * This resource contains information about your user's line of business, including their industry and their source of funds. Adyen uses this information to verify your users as required by payment industry regulations. Adyen informs you of the verification results through webhooks or API responses.
+     * This resource contains information about your user's line of business, including their industry and their source of funds. Adyen uses this information to verify your users as required by payment industry regulations. Adyen informs you of the verification results through webhooks or API responses.&gt;If you are using hosted onboarding, [only use v2](https://docs.adyen.com/release-notes/platforms-and-financial-products#releaseNote=2023-05-01-legal-entity-management-api-3) for your API requests.
+     * 
+     * 
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -202,12 +198,10 @@ public class BusinessLines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostBusinessLinesResponse res = new org.openapis.openapi.models.operations.PostBusinessLinesResponse() {{
+        org.openapis.openapi.models.operations.PostBusinessLinesResponse res = new org.openapis.openapi.models.operations.PostBusinessLinesResponse(contentType, httpRes.statusCode()) {{
             businessLine = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

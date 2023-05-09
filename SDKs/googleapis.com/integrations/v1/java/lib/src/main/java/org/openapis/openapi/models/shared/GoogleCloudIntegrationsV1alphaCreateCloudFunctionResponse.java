@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaCreateCloudFunctionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerUrl")
     public String triggerUrl;
+
     public GoogleCloudIntegrationsV1alphaCreateCloudFunctionResponse withTriggerUrl(String triggerUrl) {
         this.triggerUrl = triggerUrl;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaCreateCloudFunctionResponse(){}
 }

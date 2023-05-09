@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateStudioRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateStudioRequestBody requestBody;
+
     public UpdateStudioRequest withRequestBody(UpdateStudioRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateStudioRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateStudioRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -26,6 +29,7 @@ public class UpdateStudioRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Client-Token")
     public String xAmzClientToken;
+
     public UpdateStudioRequest withXAmzClientToken(String xAmzClientToken) {
         this.xAmzClientToken = xAmzClientToken;
         return this;
@@ -33,6 +37,7 @@ public class UpdateStudioRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateStudioRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class UpdateStudioRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateStudioRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class UpdateStudioRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateStudioRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class UpdateStudioRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateStudioRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class UpdateStudioRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateStudioRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,6 +77,7 @@ public class UpdateStudioRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateStudioRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -78,9 +88,14 @@ public class UpdateStudioRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioId")
     public String studioId;
+
     public UpdateStudioRequest withStudioId(String studioId) {
         this.studioId = studioId;
         return this;
     }
     
+    public UpdateStudioRequest(@JsonProperty("RequestBody") UpdateStudioRequestBody requestBody, @JsonProperty("studioId") String studioId) {
+        this.requestBody = requestBody;
+        this.studioId = studioId;
+  }
 }

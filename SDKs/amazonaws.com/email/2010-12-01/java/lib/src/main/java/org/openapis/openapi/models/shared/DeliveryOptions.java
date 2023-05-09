@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeliveryOptions {
     
     public TlsPolicyEnum tlsPolicy;
+
     public DeliveryOptions withTlsPolicy(TlsPolicyEnum tlsPolicy) {
         this.tlsPolicy = tlsPolicy;
         return this;
     }
     
+    public DeliveryOptions(){}
 }

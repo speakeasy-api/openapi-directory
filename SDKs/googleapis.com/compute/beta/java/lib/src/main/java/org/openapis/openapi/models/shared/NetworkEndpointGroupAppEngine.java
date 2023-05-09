@@ -18,6 +18,7 @@ public class NetworkEndpointGroupAppEngine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public NetworkEndpointGroupAppEngine withService(String service) {
         this.service = service;
         return this;
@@ -29,6 +30,7 @@ public class NetworkEndpointGroupAppEngine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlMask")
     public String urlMask;
+
     public NetworkEndpointGroupAppEngine withUrlMask(String urlMask) {
         this.urlMask = urlMask;
         return this;
@@ -40,9 +42,11 @@ public class NetworkEndpointGroupAppEngine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public NetworkEndpointGroupAppEngine withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public NetworkEndpointGroupAppEngine(){}
 }

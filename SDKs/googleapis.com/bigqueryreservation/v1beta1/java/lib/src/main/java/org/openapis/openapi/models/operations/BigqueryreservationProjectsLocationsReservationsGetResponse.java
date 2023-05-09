@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BigqueryreservationProjectsLocationsReservationsGetResponse {
     
     public String contentType;
+
     public BigqueryreservationProjectsLocationsReservationsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BigqueryreservationProjectsLocationsReservationsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Reservation reservation;
+
     public BigqueryreservationProjectsLocationsReservationsGetResponse withReservation(org.openapis.openapi.models.shared.Reservation reservation) {
         this.reservation = reservation;
         return this;
@@ -26,6 +29,7 @@ public class BigqueryreservationProjectsLocationsReservationsGetResponse {
     
     
     public Integer statusCode;
+
     public BigqueryreservationProjectsLocationsReservationsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BigqueryreservationProjectsLocationsReservationsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BigqueryreservationProjectsLocationsReservationsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BigqueryreservationProjectsLocationsReservationsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class WorkerTypeSpecificationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageConfiguration")
     public ImageConfigurationInput imageConfiguration;
+
     public WorkerTypeSpecificationInput withImageConfiguration(ImageConfigurationInput imageConfiguration) {
         this.imageConfiguration = imageConfiguration;
         return this;
     }
     
+    public WorkerTypeSpecificationInput(){}
 }

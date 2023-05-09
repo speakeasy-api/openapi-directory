@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutDocumentRequest {
@@ -12,6 +13,7 @@ public class PutDocumentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public PutDocumentRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -22,6 +24,7 @@ public class PutDocumentRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public Object requestBody;
+
     public PutDocumentRequest withRequestBody(Object requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -32,9 +35,14 @@ public class PutDocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public PutDocumentRequest withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public PutDocumentRequest(@JsonProperty("RequestBody") Object requestBody, @JsonProperty("path") String path) {
+        this.requestBody = requestBody;
+        this.path = path;
+  }
 }

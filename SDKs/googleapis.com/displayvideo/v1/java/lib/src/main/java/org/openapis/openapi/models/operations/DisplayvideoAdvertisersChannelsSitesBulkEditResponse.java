@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoAdvertisersChannelsSitesBulkEditResponse {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersChannelsSitesBulkEditResponse {
      */
     
     public org.openapis.openapi.models.shared.BulkEditSitesResponse bulkEditSitesResponse;
+
     public DisplayvideoAdvertisersChannelsSitesBulkEditResponse withBulkEditSitesResponse(org.openapis.openapi.models.shared.BulkEditSitesResponse bulkEditSitesResponse) {
         this.bulkEditSitesResponse = bulkEditSitesResponse;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersChannelsSitesBulkEditResponse {
     
     
     public String contentType;
+
     public DisplayvideoAdvertisersChannelsSitesBulkEditResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoAdvertisersChannelsSitesBulkEditResponse {
     
     
     public Integer statusCode;
+
     public DisplayvideoAdvertisersChannelsSitesBulkEditResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoAdvertisersChannelsSitesBulkEditResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoAdvertisersChannelsSitesBulkEditResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoAdvertisersChannelsSitesBulkEditResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

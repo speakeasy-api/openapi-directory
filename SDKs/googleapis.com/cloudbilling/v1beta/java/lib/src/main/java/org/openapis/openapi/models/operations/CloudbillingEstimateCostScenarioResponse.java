@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudbillingEstimateCostScenarioResponse {
     
     public String contentType;
+
     public CloudbillingEstimateCostScenarioResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudbillingEstimateCostScenarioResponse {
      */
     
     public org.openapis.openapi.models.shared.EstimateCostScenarioWithListPriceResponse estimateCostScenarioWithListPriceResponse;
+
     public CloudbillingEstimateCostScenarioResponse withEstimateCostScenarioWithListPriceResponse(org.openapis.openapi.models.shared.EstimateCostScenarioWithListPriceResponse estimateCostScenarioWithListPriceResponse) {
         this.estimateCostScenarioWithListPriceResponse = estimateCostScenarioWithListPriceResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudbillingEstimateCostScenarioResponse {
     
     
     public Integer statusCode;
+
     public CloudbillingEstimateCostScenarioResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudbillingEstimateCostScenarioResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudbillingEstimateCostScenarioResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudbillingEstimateCostScenarioResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

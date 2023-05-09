@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3DestinationProperties {
     @JsonProperty("bucketName")
     public String bucketName;
+
     public S3DestinationProperties withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -22,6 +23,7 @@ public class S3DestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketPrefix")
     public String bucketPrefix;
+
     public S3DestinationProperties withBucketPrefix(String bucketPrefix) {
         this.bucketPrefix = bucketPrefix;
         return this;
@@ -33,9 +35,13 @@ public class S3DestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3OutputFormatConfig")
     public S3OutputFormatConfig s3OutputFormatConfig;
+
     public S3DestinationProperties withS3OutputFormatConfig(S3OutputFormatConfig s3OutputFormatConfig) {
         this.s3OutputFormatConfig = s3OutputFormatConfig;
         return this;
     }
     
+    public S3DestinationProperties(@JsonProperty("bucketName") String bucketName) {
+        this.bucketName = bucketName;
+  }
 }

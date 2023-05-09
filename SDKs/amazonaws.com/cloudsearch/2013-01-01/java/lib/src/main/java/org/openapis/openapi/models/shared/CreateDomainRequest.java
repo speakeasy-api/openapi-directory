@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateDomainRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;CreateDomain&lt;/a&gt;&lt;/code&gt; operation. Specifies a name for the new search domain.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class CreateDomainRequest {
     
     public String domainName;
+
     public CreateDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public CreateDomainRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

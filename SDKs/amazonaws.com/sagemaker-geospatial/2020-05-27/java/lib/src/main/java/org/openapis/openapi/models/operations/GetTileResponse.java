@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTileResponse {
@@ -12,6 +13,7 @@ public class GetTileResponse {
      */
     
     public Object accessDeniedException;
+
     public GetTileResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetTileResponse {
     
     
     public String contentType;
+
     public GetTileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTileResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTileOutput getTileOutput;
+
     public GetTileResponse withGetTileOutput(org.openapis.openapi.models.shared.GetTileOutput getTileOutput) {
         this.getTileOutput = getTileOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetTileResponse {
      */
     
     public Object internalServerException;
+
     public GetTileResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetTileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetTileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetTileResponse {
     
     
     public Integer statusCode;
+
     public GetTileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetTileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetTileResponse {
      */
     
     public Object throttlingException;
+
     public GetTileResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetTileResponse {
      */
     
     public Object validationException;
+
     public GetTileResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetTileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

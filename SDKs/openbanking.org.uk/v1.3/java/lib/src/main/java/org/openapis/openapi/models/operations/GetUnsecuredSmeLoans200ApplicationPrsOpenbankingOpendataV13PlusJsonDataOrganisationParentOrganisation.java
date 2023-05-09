@@ -18,6 +18,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BIC")
     public String bic;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation withBic(String bic) {
         this.bic = bic;
         return this;
@@ -29,6 +30,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LEI")
     public String lei;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation withLei(String lei) {
         this.lei = lei;
         return this;
@@ -39,9 +41,13 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("OrganisationName")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName organisationName;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation withOrganisationName(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName organisationName) {
         this.organisationName = organisationName;
         return this;
     }
     
+    public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation(@JsonProperty("OrganisationName") GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName organisationName) {
+        this.organisationName = organisationName;
+  }
 }

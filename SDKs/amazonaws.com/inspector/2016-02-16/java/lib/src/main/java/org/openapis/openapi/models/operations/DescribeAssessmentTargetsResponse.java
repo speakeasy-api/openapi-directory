@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAssessmentTargetsResponse {
     
     public String contentType;
+
     public DescribeAssessmentTargetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAssessmentTargetsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAssessmentTargetsResponse describeAssessmentTargetsResponse;
+
     public DescribeAssessmentTargetsResponse withDescribeAssessmentTargetsResponse(org.openapis.openapi.models.shared.DescribeAssessmentTargetsResponse describeAssessmentTargetsResponse) {
         this.describeAssessmentTargetsResponse = describeAssessmentTargetsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAssessmentTargetsResponse {
      */
     
     public Object internalException;
+
     public DescribeAssessmentTargetsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAssessmentTargetsResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeAssessmentTargetsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeAssessmentTargetsResponse {
     
     
     public Integer statusCode;
+
     public DescribeAssessmentTargetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeAssessmentTargetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAssessmentTargetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAssessmentTargetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

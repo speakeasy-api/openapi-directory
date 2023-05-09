@@ -15,6 +15,7 @@ public class GeneralSettings {
      */
     @JsonProperty("acceptToPublishInfo")
     public Boolean acceptToPublishInfo;
+
     public GeneralSettings withAcceptToPublishInfo(Boolean acceptToPublishInfo) {
         this.acceptToPublishInfo = acceptToPublishInfo;
         return this;
@@ -25,6 +26,7 @@ public class GeneralSettings {
      */
     @JsonProperty("activeBeezUPTracking")
     public Boolean activeBeezUPTracking;
+
     public GeneralSettings withActiveBeezUPTracking(Boolean activeBeezUPTracking) {
         this.activeBeezUPTracking = activeBeezUPTracking;
         return this;
@@ -36,9 +38,15 @@ public class GeneralSettings {
      */
     @JsonProperty("doNotExportOutOfStockProducts")
     public Boolean doNotExportOutOfStockProducts;
+
     public GeneralSettings withDoNotExportOutOfStockProducts(Boolean doNotExportOutOfStockProducts) {
         this.doNotExportOutOfStockProducts = doNotExportOutOfStockProducts;
         return this;
     }
     
+    public GeneralSettings(@JsonProperty("acceptToPublishInfo") Boolean acceptToPublishInfo, @JsonProperty("activeBeezUPTracking") Boolean activeBeezUPTracking, @JsonProperty("doNotExportOutOfStockProducts") Boolean doNotExportOutOfStockProducts) {
+        this.acceptToPublishInfo = acceptToPublishInfo;
+        this.activeBeezUPTracking = activeBeezUPTracking;
+        this.doNotExportOutOfStockProducts = doNotExportOutOfStockProducts;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFundsConfirmationConsentsRequest {
@@ -12,6 +13,7 @@ public class CreateFundsConfirmationConsentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public CreateFundsConfirmationConsentsRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -22,6 +24,7 @@ public class CreateFundsConfirmationConsentsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OBFundsConfirmationConsent1 obFundsConfirmationConsent1;
+
     public CreateFundsConfirmationConsentsRequest withOBFundsConfirmationConsent1(org.openapis.openapi.models.shared.OBFundsConfirmationConsent1 obFundsConfirmationConsent1) {
         this.obFundsConfirmationConsent1 = obFundsConfirmationConsent1;
         return this;
@@ -32,6 +35,7 @@ public class CreateFundsConfirmationConsentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
     public String xCustomerUserAgent;
+
     public CreateFundsConfirmationConsentsRequest withXCustomerUserAgent(String xCustomerUserAgent) {
         this.xCustomerUserAgent = xCustomerUserAgent;
         return this;
@@ -44,6 +48,7 @@ public class CreateFundsConfirmationConsentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
     public String xFapiAuthDate;
+
     public CreateFundsConfirmationConsentsRequest withXFapiAuthDate(String xFapiAuthDate) {
         this.xFapiAuthDate = xFapiAuthDate;
         return this;
@@ -54,6 +59,7 @@ public class CreateFundsConfirmationConsentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
     public String xFapiCustomerIpAddress;
+
     public CreateFundsConfirmationConsentsRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
         this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
         return this;
@@ -64,9 +70,14 @@ public class CreateFundsConfirmationConsentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public CreateFundsConfirmationConsentsRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
     }
     
+    public CreateFundsConfirmationConsentsRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("OBFundsConfirmationConsent1") org.openapis.openapi.models.shared.OBFundsConfirmationConsent1 obFundsConfirmationConsent1) {
+        this.authorization = authorization;
+        this.obFundsConfirmationConsent1 = obFundsConfirmationConsent1;
+  }
 }

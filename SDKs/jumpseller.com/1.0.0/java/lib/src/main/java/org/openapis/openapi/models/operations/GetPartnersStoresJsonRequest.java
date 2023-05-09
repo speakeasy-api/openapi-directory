@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPartnersStoresJsonRequest {
@@ -12,6 +13,7 @@ public class GetPartnersStoresJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth_token")
     public String authToken;
+
     public GetPartnersStoresJsonRequest withAuthToken(String authToken) {
         this.authToken = authToken;
         return this;
@@ -22,6 +24,7 @@ public class GetPartnersStoresJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public String from;
+
     public GetPartnersStoresJsonRequest withFrom(String from) {
         this.from = from;
         return this;
@@ -32,6 +35,7 @@ public class GetPartnersStoresJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetPartnersStoresJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class GetPartnersStoresJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partner_code")
     public String partnerCode;
+
     public GetPartnersStoresJsonRequest withPartnerCode(String partnerCode) {
         this.partnerCode = partnerCode;
         return this;
@@ -52,9 +57,16 @@ public class GetPartnersStoresJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
     public String to;
+
     public GetPartnersStoresJsonRequest withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public GetPartnersStoresJsonRequest(@JsonProperty("auth_token") String authToken, @JsonProperty("from") String from, @JsonProperty("partner_code") String partnerCode, @JsonProperty("to") String to) {
+        this.authToken = authToken;
+        this.from = from;
+        this.partnerCode = partnerCode;
+        this.to = to;
+  }
 }

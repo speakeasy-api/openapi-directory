@@ -15,6 +15,7 @@ public class Shard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdjacentParentShardId")
     public String adjacentParentShardId;
+
     public Shard withAdjacentParentShardId(String adjacentParentShardId) {
         this.adjacentParentShardId = adjacentParentShardId;
         return this;
@@ -22,6 +23,7 @@ public class Shard {
     
     @JsonProperty("HashKeyRange")
     public HashKeyRange hashKeyRange;
+
     public Shard withHashKeyRange(HashKeyRange hashKeyRange) {
         this.hashKeyRange = hashKeyRange;
         return this;
@@ -30,6 +32,7 @@ public class Shard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParentShardId")
     public String parentShardId;
+
     public Shard withParentShardId(String parentShardId) {
         this.parentShardId = parentShardId;
         return this;
@@ -37,6 +40,7 @@ public class Shard {
     
     @JsonProperty("SequenceNumberRange")
     public SequenceNumberRange sequenceNumberRange;
+
     public Shard withSequenceNumberRange(SequenceNumberRange sequenceNumberRange) {
         this.sequenceNumberRange = sequenceNumberRange;
         return this;
@@ -44,9 +48,15 @@ public class Shard {
     
     @JsonProperty("ShardId")
     public String shardId;
+
     public Shard withShardId(String shardId) {
         this.shardId = shardId;
         return this;
     }
     
+    public Shard(@JsonProperty("HashKeyRange") HashKeyRange hashKeyRange, @JsonProperty("SequenceNumberRange") SequenceNumberRange sequenceNumberRange, @JsonProperty("ShardId") String shardId) {
+        this.hashKeyRange = hashKeyRange;
+        this.sequenceNumberRange = sequenceNumberRange;
+        this.shardId = shardId;
+  }
 }

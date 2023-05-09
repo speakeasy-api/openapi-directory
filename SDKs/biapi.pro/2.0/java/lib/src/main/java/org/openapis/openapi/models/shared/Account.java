@@ -24,6 +24,7 @@ public class Account {
      */
     @JsonProperty("balance")
     public Float balance;
+
     public Account withBalance(Float balance) {
         this.balance = balance;
         return this;
@@ -34,6 +35,7 @@ public class Account {
      */
     @JsonProperty("bookmarked")
     public Long bookmarked;
+
     public Account withBookmarked(Long bookmarked) {
         this.bookmarked = bookmarked;
         return this;
@@ -45,6 +47,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coming")
     public Float coming;
+
     public Account withComing(Float coming) {
         this.coming = coming;
         return this;
@@ -56,6 +59,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     public String companyName;
+
     public Account withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -67,6 +71,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public java.util.Map<String, Object> currency;
+
     public Account withCurrency(java.util.Map<String, Object> currency) {
         this.currency = currency;
         return this;
@@ -80,6 +85,7 @@ public class Account {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deleted")
     public OffsetDateTime deleted;
+
     public Account withDeleted(OffsetDateTime deleted) {
         this.deleted = deleted;
         return this;
@@ -93,6 +99,7 @@ public class Account {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("disabled")
     public OffsetDateTime disabled;
+
     public Account withDisabled(OffsetDateTime disabled) {
         this.disabled = disabled;
         return this;
@@ -103,6 +110,7 @@ public class Account {
      */
     @JsonProperty("display")
     public Boolean display;
+
     public Account withDisplay(Boolean display) {
         this.display = display;
         return this;
@@ -114,6 +122,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public Account withError(String error) {
         this.error = error;
         return this;
@@ -125,6 +134,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iban")
     public String iban;
+
     public Account withIban(String iban) {
         this.iban = iban;
         return this;
@@ -135,6 +145,7 @@ public class Account {
      */
     @JsonProperty("id")
     public Long id;
+
     public Account withId(Long id) {
         this.id = id;
         return this;
@@ -146,6 +157,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_connection")
     public Long idConnection;
+
     public Account withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -157,6 +169,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_parent")
     public Long idParent;
+
     public Account withIdParent(Long idParent) {
         this.idParent = idParent;
         return this;
@@ -168,6 +181,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_source")
     public Long idSource;
+
     public Account withIdSource(Long idSource) {
         this.idSource = idSource;
         return this;
@@ -179,6 +193,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_type")
     public Long idType;
+
     public Account withIdType(Long idType) {
         this.idType = idType;
         return this;
@@ -190,6 +205,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_user")
     public Long idUser;
+
     public Account withIdUser(Long idUser) {
         this.idUser = idUser;
         return this;
@@ -203,6 +219,7 @@ public class Account {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_update")
     public OffsetDateTime lastUpdate;
+
     public Account withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -214,6 +231,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Account withName(String name) {
         this.name = name;
         return this;
@@ -225,6 +243,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public Account withNumber(String number) {
         this.number = number;
         return this;
@@ -237,6 +256,7 @@ public class Account {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("opening_date")
     public LocalDate openingDate;
+
     public Account withOpeningDate(LocalDate openingDate) {
         this.openingDate = openingDate;
         return this;
@@ -247,6 +267,7 @@ public class Account {
      */
     @JsonProperty("original_name")
     public String originalName;
+
     public Account withOriginalName(String originalName) {
         this.originalName = originalName;
         return this;
@@ -258,6 +279,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownership")
     public String ownership;
+
     public Account withOwnership(String ownership) {
         this.ownership = ownership;
         return this;
@@ -269,6 +291,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public String usage;
+
     public Account withUsage(String usage) {
         this.usage = usage;
         return this;
@@ -280,9 +303,17 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webid")
     public String webid;
+
     public Account withWebid(String webid) {
         this.webid = webid;
         return this;
     }
     
+    public Account(@JsonProperty("balance") Float balance, @JsonProperty("bookmarked") Long bookmarked, @JsonProperty("display") Boolean display, @JsonProperty("id") Long id, @JsonProperty("original_name") String originalName) {
+        this.balance = balance;
+        this.bookmarked = bookmarked;
+        this.display = display;
+        this.id = id;
+        this.originalName = originalName;
+  }
 }

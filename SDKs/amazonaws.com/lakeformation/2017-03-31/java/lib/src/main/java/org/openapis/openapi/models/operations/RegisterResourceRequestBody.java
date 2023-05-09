@@ -14,6 +14,7 @@ public class RegisterResourceRequestBody {
      */
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public RegisterResourceRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -25,6 +26,7 @@ public class RegisterResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public RegisterResourceRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -36,9 +38,25 @@ public class RegisterResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseServiceLinkedRole")
     public Boolean useServiceLinkedRole;
+
     public RegisterResourceRequestBody withUseServiceLinkedRole(Boolean useServiceLinkedRole) {
         this.useServiceLinkedRole = useServiceLinkedRole;
         return this;
     }
     
+    /**
+     * Whether or not the resource is a federated resource.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("WithFederation")
+    public Boolean withFederation;
+
+    public RegisterResourceRequestBody withWithFederation(Boolean withFederation) {
+        this.withFederation = withFederation;
+        return this;
+    }
+    
+    public RegisterResourceRequestBody(@JsonProperty("ResourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

@@ -18,6 +18,7 @@ public class PathReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelGroupings")
     public Dimension[] channelGroupings;
+
     public PathReportCompatibleFields withChannelGroupings(Dimension[] channelGroupings) {
         this.channelGroupings = channelGroupings;
         return this;
@@ -29,6 +30,7 @@ public class PathReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public Dimension[] dimensions;
+
     public PathReportCompatibleFields withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -40,6 +42,7 @@ public class PathReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PathReportCompatibleFields withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class PathReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public Metric[] metrics;
+
     public PathReportCompatibleFields withMetrics(Metric[] metrics) {
         this.metrics = metrics;
         return this;
@@ -62,9 +66,11 @@ public class PathReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathFilters")
     public Dimension[] pathFilters;
+
     public PathReportCompatibleFields withPathFilters(Dimension[] pathFilters) {
         this.pathFilters = pathFilters;
         return this;
     }
     
+    public PathReportCompatibleFields(){}
 }

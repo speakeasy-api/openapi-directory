@@ -26,6 +26,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canceled_date")
     public String canceledDate;
+
     public Subscription withCanceledDate(String canceledDate) {
         this.canceledDate = canceledDate;
         return this;
@@ -38,6 +39,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_id")
     public String cardId;
+
     public Subscription withCardId(String cardId) {
         this.cardId = cardId;
         return this;
@@ -57,6 +59,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("charged_through_date")
     public String chargedThroughDate;
+
     public Subscription withChargedThroughDate(String chargedThroughDate) {
         this.chargedThroughDate = chargedThroughDate;
         return this;
@@ -68,6 +71,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Subscription withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -79,6 +83,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public String customerId;
+
     public Subscription withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -90,6 +95,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Subscription withId(String id) {
         this.id = id;
         return this;
@@ -103,6 +109,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_ids")
     public String[] invoiceIds;
+
     public Subscription withInvoiceIds(String[] invoiceIds) {
         this.invoiceIds = invoiceIds;
         return this;
@@ -114,6 +121,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public Subscription withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -125,6 +133,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan_id")
     public String planId;
+
     public Subscription withPlanId(String planId) {
         this.planId = planId;
         return this;
@@ -141,6 +150,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_override_money")
     public Money priceOverrideMoney;
+
     public Subscription withPriceOverrideMoney(Money priceOverrideMoney) {
         this.priceOverrideMoney = priceOverrideMoney;
         return this;
@@ -153,6 +163,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_date")
     public String startDate;
+
     public Subscription withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -164,6 +175,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Subscription withStatus(String status) {
         this.status = status;
         return this;
@@ -178,6 +190,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_percentage")
     public String taxPercentage;
+
     public Subscription withTaxPercentage(String taxPercentage) {
         this.taxPercentage = taxPercentage;
         return this;
@@ -191,6 +204,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public Subscription withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -204,9 +218,11 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public Subscription withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public Subscription(){}
 }

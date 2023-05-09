@@ -18,6 +18,7 @@ public class ClientInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientInfoDetails")
     public ClientInfoDetail[] clientInfoDetails;
+
     public ClientInfo withClientInfoDetails(ClientInfoDetail[] clientInfoDetails) {
         this.clientInfoDetails = clientInfoDetails;
         return this;
@@ -29,9 +30,11 @@ public class ClientInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ClientInfo withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ClientInfo(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeSettingsRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public DescribeSettingsRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeSettingsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class DescribeSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DirectoryConfigurationStatusEnum status;
+
     public DescribeSettingsRequest withStatus(DirectoryConfigurationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeSettingsRequest(@JsonProperty("DirectoryId") String directoryId) {
+        this.directoryId = directoryId;
+  }
 }

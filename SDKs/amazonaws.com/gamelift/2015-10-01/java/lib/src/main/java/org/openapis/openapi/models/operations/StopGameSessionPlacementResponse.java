@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopGameSessionPlacementResponse {
     
     public String contentType;
+
     public StopGameSessionPlacementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopGameSessionPlacementResponse {
      */
     
     public Object internalServiceException;
+
     public StopGameSessionPlacementResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class StopGameSessionPlacementResponse {
      */
     
     public Object invalidRequestException;
+
     public StopGameSessionPlacementResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StopGameSessionPlacementResponse {
      */
     
     public Object notFoundException;
+
     public StopGameSessionPlacementResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopGameSessionPlacementResponse {
     
     
     public Integer statusCode;
+
     public StopGameSessionPlacementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopGameSessionPlacementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopGameSessionPlacementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopGameSessionPlacementResponse {
      */
     
     public org.openapis.openapi.models.shared.StopGameSessionPlacementOutput stopGameSessionPlacementOutput;
+
     public StopGameSessionPlacementResponse withStopGameSessionPlacementOutput(org.openapis.openapi.models.shared.StopGameSessionPlacementOutput stopGameSessionPlacementOutput) {
         this.stopGameSessionPlacementOutput = stopGameSessionPlacementOutput;
         return this;
@@ -73,9 +81,14 @@ public class StopGameSessionPlacementResponse {
      */
     
     public Object unauthorizedException;
+
     public StopGameSessionPlacementResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public StopGameSessionPlacementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateOpsItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItemArn")
     public String opsItemArn;
+
     public CreateOpsItemResponse withOpsItemArn(String opsItemArn) {
         this.opsItemArn = opsItemArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateOpsItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItemId")
     public String opsItemId;
+
     public CreateOpsItemResponse withOpsItemId(String opsItemId) {
         this.opsItemId = opsItemId;
         return this;
     }
     
+    public CreateOpsItemResponse(){}
 }

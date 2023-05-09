@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDataQualityResultRequest {
     @JsonProperty("ResultId")
     public String resultId;
+
     public GetDataQualityResultRequest withResultId(String resultId) {
         this.resultId = resultId;
         return this;
     }
     
+    public GetDataQualityResultRequest(@JsonProperty("ResultId") String resultId) {
+        this.resultId = resultId;
+  }
 }

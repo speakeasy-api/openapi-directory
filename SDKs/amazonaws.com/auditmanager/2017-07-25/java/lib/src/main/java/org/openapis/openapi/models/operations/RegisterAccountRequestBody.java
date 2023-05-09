@@ -15,6 +15,7 @@ public class RegisterAccountRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegatedAdminAccount")
     public String delegatedAdminAccount;
+
     public RegisterAccountRequestBody withDelegatedAdminAccount(String delegatedAdminAccount) {
         this.delegatedAdminAccount = delegatedAdminAccount;
         return this;
@@ -26,9 +27,11 @@ public class RegisterAccountRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKey")
     public String kmsKey;
+
     public RegisterAccountRequestBody withKmsKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
     }
     
+    public RegisterAccountRequestBody(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationExportRequest {
@@ -14,6 +15,7 @@ public class GetOrganizationExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetOrganizationExportRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -25,6 +27,7 @@ public class GetOrganizationExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetOrganizationExportRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -35,9 +38,13 @@ public class GetOrganizationExportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organization_export_gid")
     public String organizationExportGid;
+
     public GetOrganizationExportRequest withOrganizationExportGid(String organizationExportGid) {
         this.organizationExportGid = organizationExportGid;
         return this;
     }
     
+    public GetOrganizationExportRequest(@JsonProperty("organization_export_gid") String organizationExportGid) {
+        this.organizationExportGid = organizationExportGid;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetachPolicyResponse {
@@ -12,6 +13,7 @@ public class DetachPolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public DetachPolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DetachPolicyResponse {
     
     
     public String contentType;
+
     public DetachPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DetachPolicyResponse {
      */
     
     public java.util.Map<String, Object> detachPolicyResponse;
+
     public DetachPolicyResponse withDetachPolicyResponse(java.util.Map<String, Object> detachPolicyResponse) {
         this.detachPolicyResponse = detachPolicyResponse;
         return this;
@@ -39,6 +43,7 @@ public class DetachPolicyResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public DetachPolicyResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -49,6 +54,7 @@ public class DetachPolicyResponse {
      */
     
     public Object internalServiceException;
+
     public DetachPolicyResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DetachPolicyResponse {
      */
     
     public Object invalidArnException;
+
     public DetachPolicyResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class DetachPolicyResponse {
      */
     
     public Object limitExceededException;
+
     public DetachPolicyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class DetachPolicyResponse {
      */
     
     public Object notPolicyException;
+
     public DetachPolicyResponse withNotPolicyException(Object notPolicyException) {
         this.notPolicyException = notPolicyException;
         return this;
@@ -86,6 +95,7 @@ public class DetachPolicyResponse {
     
     
     public Integer statusCode;
+
     public DetachPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DetachPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetachPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class DetachPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DetachPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class DetachPolicyResponse {
      */
     
     public Object retryableConflictException;
+
     public DetachPolicyResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -123,9 +136,14 @@ public class DetachPolicyResponse {
      */
     
     public Object validationException;
+
     public DetachPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DetachPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -53,11 +53,9 @@ public class Gitignore {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GitignoreGetAllTemplatesResponse res = new org.openapis.openapi.models.operations.GitignoreGetAllTemplatesResponse() {{
+        org.openapis.openapi.models.operations.GitignoreGetAllTemplatesResponse res = new org.openapis.openapi.models.operations.GitignoreGetAllTemplatesResponse(contentType, httpRes.statusCode()) {{
             gitignoreGetAllTemplates200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class Gitignore {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GitignoreGetTemplateResponse res = new org.openapis.openapi.models.operations.GitignoreGetTemplateResponse() {{
+        org.openapis.openapi.models.operations.GitignoreGetTemplateResponse res = new org.openapis.openapi.models.operations.GitignoreGetTemplateResponse(contentType, httpRes.statusCode()) {{
             gitignoreTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

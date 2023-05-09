@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DownloadGlobalGlossaryResponse {
     
     public String contentType;
+
     public DownloadGlobalGlossaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DownloadGlobalGlossaryResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public DownloadGlobalGlossaryResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class DownloadGlobalGlossaryResponse {
     
     
     public Integer statusCode;
+
     public DownloadGlobalGlossaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DownloadGlobalGlossaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DownloadGlobalGlossaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DownloadGlobalGlossaryResponse {
      */
     
     public String downloadGlobalGlossary200ApplicationJSONString;
+
     public DownloadGlobalGlossaryResponse withDownloadGlobalGlossary200ApplicationJSONString(String downloadGlobalGlossary200ApplicationJSONString) {
         this.downloadGlobalGlossary200ApplicationJSONString = downloadGlobalGlossary200ApplicationJSONString;
         return this;
     }
     
+    public DownloadGlobalGlossaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

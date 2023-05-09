@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifySnapshotTierRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifySnapshotTierActionEnum action;
+
     public GETModifySnapshotTierRequest withAction(GETModifySnapshotTierActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifySnapshotTierRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifySnapshotTierRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETModifySnapshotTierRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotId")
     public String snapshotId;
+
     public GETModifySnapshotTierRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -39,6 +43,7 @@ public class GETModifySnapshotTierRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StorageTier")
     public GETModifySnapshotTierStorageTierEnum storageTier;
+
     public GETModifySnapshotTierRequest withStorageTier(GETModifySnapshotTierStorageTierEnum storageTier) {
         this.storageTier = storageTier;
         return this;
@@ -46,6 +51,7 @@ public class GETModifySnapshotTierRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifySnapshotTierVersionEnum version;
+
     public GETModifySnapshotTierRequest withVersion(GETModifySnapshotTierVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETModifySnapshotTierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifySnapshotTierRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETModifySnapshotTierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifySnapshotTierRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETModifySnapshotTierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifySnapshotTierRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETModifySnapshotTierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifySnapshotTierRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETModifySnapshotTierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifySnapshotTierRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETModifySnapshotTierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifySnapshotTierRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETModifySnapshotTierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifySnapshotTierRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifySnapshotTierRequest(@JsonProperty("Action") GETModifySnapshotTierActionEnum action, @JsonProperty("SnapshotId") String snapshotId, @JsonProperty("Version") GETModifySnapshotTierVersionEnum version) {
+        this.action = action;
+        this.snapshotId = snapshotId;
+        this.version = version;
+  }
 }

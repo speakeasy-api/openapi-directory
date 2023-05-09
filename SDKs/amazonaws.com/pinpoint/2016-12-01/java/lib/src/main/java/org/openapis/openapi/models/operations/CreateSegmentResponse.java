@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSegmentResponse {
@@ -12,6 +13,7 @@ public class CreateSegmentResponse {
      */
     
     public Object badRequestException;
+
     public CreateSegmentResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateSegmentResponse {
     
     
     public String contentType;
+
     public CreateSegmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateSegmentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSegmentResponse createSegmentResponse;
+
     public CreateSegmentResponse withCreateSegmentResponse(org.openapis.openapi.models.shared.CreateSegmentResponse createSegmentResponse) {
         this.createSegmentResponse = createSegmentResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateSegmentResponse {
      */
     
     public Object forbiddenException;
+
     public CreateSegmentResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class CreateSegmentResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateSegmentResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class CreateSegmentResponse {
      */
     
     public Object methodNotAllowedException;
+
     public CreateSegmentResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class CreateSegmentResponse {
      */
     
     public Object notFoundException;
+
     public CreateSegmentResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class CreateSegmentResponse {
      */
     
     public Object payloadTooLargeException;
+
     public CreateSegmentResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class CreateSegmentResponse {
     
     
     public Integer statusCode;
+
     public CreateSegmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateSegmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSegmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateSegmentResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateSegmentResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateSegmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

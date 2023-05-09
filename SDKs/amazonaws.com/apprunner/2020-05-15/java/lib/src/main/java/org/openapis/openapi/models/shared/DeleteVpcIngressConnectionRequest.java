@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteVpcIngressConnectionRequest {
     @JsonProperty("VpcIngressConnectionArn")
     public String vpcIngressConnectionArn;
+
     public DeleteVpcIngressConnectionRequest withVpcIngressConnectionArn(String vpcIngressConnectionArn) {
         this.vpcIngressConnectionArn = vpcIngressConnectionArn;
         return this;
     }
     
+    public DeleteVpcIngressConnectionRequest(@JsonProperty("VpcIngressConnectionArn") String vpcIngressConnectionArn) {
+        this.vpcIngressConnectionArn = vpcIngressConnectionArn;
+  }
 }

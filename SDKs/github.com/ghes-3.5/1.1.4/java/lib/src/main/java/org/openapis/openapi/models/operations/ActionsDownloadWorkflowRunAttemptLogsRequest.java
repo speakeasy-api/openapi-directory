@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDownloadWorkflowRunAttemptLogsRequest {
@@ -12,6 +13,7 @@ public class ActionsDownloadWorkflowRunAttemptLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attempt_number")
     public Long attemptNumber;
+
     public ActionsDownloadWorkflowRunAttemptLogsRequest withAttemptNumber(Long attemptNumber) {
         this.attemptNumber = attemptNumber;
         return this;
@@ -22,6 +24,7 @@ public class ActionsDownloadWorkflowRunAttemptLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsDownloadWorkflowRunAttemptLogsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,6 +35,7 @@ public class ActionsDownloadWorkflowRunAttemptLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsDownloadWorkflowRunAttemptLogsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -42,9 +46,16 @@ public class ActionsDownloadWorkflowRunAttemptLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_id")
     public Long runId;
+
     public ActionsDownloadWorkflowRunAttemptLogsRequest withRunId(Long runId) {
         this.runId = runId;
         return this;
     }
     
+    public ActionsDownloadWorkflowRunAttemptLogsRequest(@JsonProperty("attempt_number") Long attemptNumber, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("run_id") Long runId) {
+        this.attemptNumber = attemptNumber;
+        this.owner = owner;
+        this.repo = repo;
+        this.runId = runId;
+  }
 }

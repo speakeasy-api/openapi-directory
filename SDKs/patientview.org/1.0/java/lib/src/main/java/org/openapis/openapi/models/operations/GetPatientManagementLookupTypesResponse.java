@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPatientManagementLookupTypesResponse {
     
     public String contentType;
+
     public GetPatientManagementLookupTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPatientManagementLookupTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.LookupType[] lookupTypes;
+
     public GetPatientManagementLookupTypesResponse withLookupTypes(org.openapis.openapi.models.shared.LookupType[] lookupTypes) {
         this.lookupTypes = lookupTypes;
         return this;
@@ -26,6 +29,7 @@ public class GetPatientManagementLookupTypesResponse {
     
     
     public Integer statusCode;
+
     public GetPatientManagementLookupTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetPatientManagementLookupTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPatientManagementLookupTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPatientManagementLookupTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

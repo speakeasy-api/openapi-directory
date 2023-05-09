@@ -15,6 +15,7 @@ public class DescribeFileSystemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystems")
     public FileSystem[] fileSystems;
+
     public DescribeFileSystemsResponse withFileSystems(FileSystem[] fileSystems) {
         this.fileSystems = fileSystems;
         return this;
@@ -23,9 +24,11 @@ public class DescribeFileSystemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFileSystemsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFileSystemsResponse(){}
 }

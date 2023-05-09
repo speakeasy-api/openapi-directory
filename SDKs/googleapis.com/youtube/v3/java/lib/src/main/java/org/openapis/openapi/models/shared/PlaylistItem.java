@@ -15,6 +15,7 @@ public class PlaylistItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentDetails")
     public PlaylistItemContentDetails contentDetails;
+
     public PlaylistItem withContentDetails(PlaylistItemContentDetails contentDetails) {
         this.contentDetails = contentDetails;
         return this;
@@ -26,6 +27,7 @@ public class PlaylistItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public PlaylistItem withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -37,6 +39,7 @@ public class PlaylistItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PlaylistItem withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class PlaylistItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PlaylistItem withKind(String kind) {
         this.kind = kind;
         return this;
@@ -59,6 +63,7 @@ public class PlaylistItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public PlaylistItemSnippet snippet;
+
     public PlaylistItem withSnippet(PlaylistItemSnippet snippet) {
         this.snippet = snippet;
         return this;
@@ -70,9 +75,11 @@ public class PlaylistItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PlaylistItemStatus status;
+
     public PlaylistItem withStatus(PlaylistItemStatus status) {
         this.status = status;
         return this;
     }
     
+    public PlaylistItem(){}
 }

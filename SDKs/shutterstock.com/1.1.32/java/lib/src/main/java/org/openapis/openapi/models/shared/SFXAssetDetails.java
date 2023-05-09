@@ -18,6 +18,7 @@ public class SFXAssetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_size")
     public Long fileSize;
+
     public SFXAssetDetails withFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
@@ -29,9 +30,11 @@ public class SFXAssetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public SFXAssetDetails withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SFXAssetDetails(){}
 }

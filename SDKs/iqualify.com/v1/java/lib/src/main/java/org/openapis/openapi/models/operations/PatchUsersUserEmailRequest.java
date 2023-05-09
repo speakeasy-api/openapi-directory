@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchUsersUserEmailRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.User user;
+
     public PatchUsersUserEmailRequest withUser(org.openapis.openapi.models.shared.User user) {
         this.user = user;
         return this;
@@ -19,9 +21,13 @@ public class PatchUsersUserEmailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
     public String userEmail;
+
     public PatchUsersUserEmailRequest withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public PatchUsersUserEmailRequest(@JsonProperty("userEmail") String userEmail) {
+        this.userEmail = userEmail;
+  }
 }

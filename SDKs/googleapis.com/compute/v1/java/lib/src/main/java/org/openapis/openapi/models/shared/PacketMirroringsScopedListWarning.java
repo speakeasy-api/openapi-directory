@@ -18,6 +18,7 @@ public class PacketMirroringsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public PacketMirroringsScopedListWarningCodeEnum code;
+
     public PacketMirroringsScopedListWarning withCode(PacketMirroringsScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class PacketMirroringsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public PacketMirroringsScopedListWarningData[] data;
+
     public PacketMirroringsScopedListWarning withData(PacketMirroringsScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class PacketMirroringsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PacketMirroringsScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PacketMirroringsScopedListWarning(){}
 }

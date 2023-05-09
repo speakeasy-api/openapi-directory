@@ -18,6 +18,7 @@ public class GetServersId200ApplicationJSONServerPublicNet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewalls")
     public GetServersId200ApplicationJSONServerPublicNetServerPublicNetFirewall[] firewalls;
+
     public GetServersId200ApplicationJSONServerPublicNet withFirewalls(GetServersId200ApplicationJSONServerPublicNetServerPublicNetFirewall[] firewalls) {
         this.firewalls = firewalls;
         return this;
@@ -28,6 +29,7 @@ public class GetServersId200ApplicationJSONServerPublicNet {
      */
     @JsonProperty("floating_ips")
     public Long[] floatingIps;
+
     public GetServersId200ApplicationJSONServerPublicNet withFloatingIps(Long[] floatingIps) {
         this.floatingIps = floatingIps;
         return this;
@@ -38,6 +40,7 @@ public class GetServersId200ApplicationJSONServerPublicNet {
      */
     @JsonProperty("ipv4")
     public GetServersId200ApplicationJSONServerPublicNetIpv4 ipv4;
+
     public GetServersId200ApplicationJSONServerPublicNet withIpv4(GetServersId200ApplicationJSONServerPublicNetIpv4 ipv4) {
         this.ipv4 = ipv4;
         return this;
@@ -48,9 +51,15 @@ public class GetServersId200ApplicationJSONServerPublicNet {
      */
     @JsonProperty("ipv6")
     public GetServersId200ApplicationJSONServerPublicNetIpv6 ipv6;
+
     public GetServersId200ApplicationJSONServerPublicNet withIpv6(GetServersId200ApplicationJSONServerPublicNetIpv6 ipv6) {
         this.ipv6 = ipv6;
         return this;
     }
     
+    public GetServersId200ApplicationJSONServerPublicNet(@JsonProperty("floating_ips") Long[] floatingIps, @JsonProperty("ipv4") GetServersId200ApplicationJSONServerPublicNetIpv4 ipv4, @JsonProperty("ipv6") GetServersId200ApplicationJSONServerPublicNetIpv6 ipv6) {
+        this.floatingIps = floatingIps;
+        this.ipv4 = ipv4;
+        this.ipv6 = ipv6;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFunctionCodeResponse {
@@ -12,6 +13,7 @@ public class UpdateFunctionCodeResponse {
      */
     
     public Object codeSigningConfigNotFoundException;
+
     public UpdateFunctionCodeResponse withCodeSigningConfigNotFoundException(Object codeSigningConfigNotFoundException) {
         this.codeSigningConfigNotFoundException = codeSigningConfigNotFoundException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateFunctionCodeResponse {
      */
     
     public Object codeStorageExceededException;
+
     public UpdateFunctionCodeResponse withCodeStorageExceededException(Object codeStorageExceededException) {
         this.codeStorageExceededException = codeStorageExceededException;
         return this;
@@ -32,6 +35,7 @@ public class UpdateFunctionCodeResponse {
      */
     
     public Object codeVerificationFailedException;
+
     public UpdateFunctionCodeResponse withCodeVerificationFailedException(Object codeVerificationFailedException) {
         this.codeVerificationFailedException = codeVerificationFailedException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFunctionCodeResponse {
     
     
     public String contentType;
+
     public UpdateFunctionCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFunctionCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.FunctionConfiguration functionConfiguration;
+
     public UpdateFunctionCodeResponse withFunctionConfiguration(org.openapis.openapi.models.shared.FunctionConfiguration functionConfiguration) {
         this.functionConfiguration = functionConfiguration;
         return this;
@@ -59,6 +65,7 @@ public class UpdateFunctionCodeResponse {
      */
     
     public Object invalidCodeSignatureException;
+
     public UpdateFunctionCodeResponse withInvalidCodeSignatureException(Object invalidCodeSignatureException) {
         this.invalidCodeSignatureException = invalidCodeSignatureException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateFunctionCodeResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UpdateFunctionCodeResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateFunctionCodeResponse {
      */
     
     public Object preconditionFailedException;
+
     public UpdateFunctionCodeResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -89,6 +98,7 @@ public class UpdateFunctionCodeResponse {
      */
     
     public Object resourceConflictException;
+
     public UpdateFunctionCodeResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -99,6 +109,7 @@ public class UpdateFunctionCodeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFunctionCodeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -109,6 +120,7 @@ public class UpdateFunctionCodeResponse {
      */
     
     public Object serviceException;
+
     public UpdateFunctionCodeResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -116,6 +128,7 @@ public class UpdateFunctionCodeResponse {
     
     
     public Integer statusCode;
+
     public UpdateFunctionCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class UpdateFunctionCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFunctionCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,9 +147,14 @@ public class UpdateFunctionCodeResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateFunctionCodeResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public UpdateFunctionCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

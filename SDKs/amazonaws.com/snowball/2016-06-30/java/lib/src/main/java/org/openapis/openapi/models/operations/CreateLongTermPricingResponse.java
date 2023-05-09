@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLongTermPricingResponse {
     
     public String contentType;
+
     public CreateLongTermPricingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateLongTermPricingResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLongTermPricingResult createLongTermPricingResult;
+
     public CreateLongTermPricingResponse withCreateLongTermPricingResult(org.openapis.openapi.models.shared.CreateLongTermPricingResult createLongTermPricingResult) {
         this.createLongTermPricingResult = createLongTermPricingResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateLongTermPricingResponse {
      */
     
     public Object invalidResourceException;
+
     public CreateLongTermPricingResponse withInvalidResourceException(Object invalidResourceException) {
         this.invalidResourceException = invalidResourceException;
         return this;
@@ -36,6 +40,7 @@ public class CreateLongTermPricingResponse {
     
     
     public Integer statusCode;
+
     public CreateLongTermPricingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateLongTermPricingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLongTermPricingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateLongTermPricingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

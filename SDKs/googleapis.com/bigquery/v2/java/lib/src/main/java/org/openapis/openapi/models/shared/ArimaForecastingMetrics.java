@@ -18,6 +18,7 @@ public class ArimaForecastingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arimaFittingMetrics")
     public ArimaFittingMetrics[] arimaFittingMetrics;
+
     public ArimaForecastingMetrics withArimaFittingMetrics(ArimaFittingMetrics[] arimaFittingMetrics) {
         this.arimaFittingMetrics = arimaFittingMetrics;
         return this;
@@ -29,6 +30,7 @@ public class ArimaForecastingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arimaSingleModelForecastingMetrics")
     public ArimaSingleModelForecastingMetrics[] arimaSingleModelForecastingMetrics;
+
     public ArimaForecastingMetrics withArimaSingleModelForecastingMetrics(ArimaSingleModelForecastingMetrics[] arimaSingleModelForecastingMetrics) {
         this.arimaSingleModelForecastingMetrics = arimaSingleModelForecastingMetrics;
         return this;
@@ -40,6 +42,7 @@ public class ArimaForecastingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasDrift")
     public Boolean[] hasDrift;
+
     public ArimaForecastingMetrics withHasDrift(Boolean[] hasDrift) {
         this.hasDrift = hasDrift;
         return this;
@@ -51,6 +54,7 @@ public class ArimaForecastingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonSeasonalOrder")
     public ArimaOrder[] nonSeasonalOrder;
+
     public ArimaForecastingMetrics withNonSeasonalOrder(ArimaOrder[] nonSeasonalOrder) {
         this.nonSeasonalOrder = nonSeasonalOrder;
         return this;
@@ -62,6 +66,7 @@ public class ArimaForecastingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seasonalPeriods")
     public ArimaForecastingMetricsSeasonalPeriodsEnum[] seasonalPeriods;
+
     public ArimaForecastingMetrics withSeasonalPeriods(ArimaForecastingMetricsSeasonalPeriodsEnum[] seasonalPeriods) {
         this.seasonalPeriods = seasonalPeriods;
         return this;
@@ -73,9 +78,11 @@ public class ArimaForecastingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeriesId")
     public String[] timeSeriesId;
+
     public ArimaForecastingMetrics withTimeSeriesId(String[] timeSeriesId) {
         this.timeSeriesId = timeSeriesId;
         return this;
     }
     
+    public ArimaForecastingMetrics(){}
 }

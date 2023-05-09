@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartDocumentClassificationJobResponse {
     
     public String contentType;
+
     public StartDocumentClassificationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartDocumentClassificationJobResponse {
      */
     
     public Object internalServerException;
+
     public StartDocumentClassificationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartDocumentClassificationJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StartDocumentClassificationJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,8 +43,20 @@ public class StartDocumentClassificationJobResponse {
      */
     
     public Object kmsKeyValidationException;
+
     public StartDocumentClassificationJobResponse withKmsKeyValidationException(Object kmsKeyValidationException) {
         this.kmsKeyValidationException = kmsKeyValidationException;
+        return this;
+    }
+    
+    /**
+     * ResourceInUseException
+     */
+    
+    public Object resourceInUseException;
+
+    public StartDocumentClassificationJobResponse withResourceInUseException(Object resourceInUseException) {
+        this.resourceInUseException = resourceInUseException;
         return this;
     }
     
@@ -49,6 +65,7 @@ public class StartDocumentClassificationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartDocumentClassificationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +76,7 @@ public class StartDocumentClassificationJobResponse {
      */
     
     public Object resourceUnavailableException;
+
     public StartDocumentClassificationJobResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -69,6 +87,7 @@ public class StartDocumentClassificationJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartDocumentClassificationJobResponse startDocumentClassificationJobResponse;
+
     public StartDocumentClassificationJobResponse withStartDocumentClassificationJobResponse(org.openapis.openapi.models.shared.StartDocumentClassificationJobResponse startDocumentClassificationJobResponse) {
         this.startDocumentClassificationJobResponse = startDocumentClassificationJobResponse;
         return this;
@@ -76,6 +95,7 @@ public class StartDocumentClassificationJobResponse {
     
     
     public Integer statusCode;
+
     public StartDocumentClassificationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +103,7 @@ public class StartDocumentClassificationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartDocumentClassificationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +114,7 @@ public class StartDocumentClassificationJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StartDocumentClassificationJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +125,14 @@ public class StartDocumentClassificationJobResponse {
      */
     
     public Object tooManyTagsException;
+
     public StartDocumentClassificationJobResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public StartDocumentClassificationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

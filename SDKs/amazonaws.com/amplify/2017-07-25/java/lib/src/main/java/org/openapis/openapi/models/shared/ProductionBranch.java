@@ -20,6 +20,7 @@ public class ProductionBranch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchName")
     public String branchName;
+
     public ProductionBranch withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -30,6 +31,7 @@ public class ProductionBranch {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeployTime")
     public OffsetDateTime lastDeployTime;
+
     public ProductionBranch withLastDeployTime(OffsetDateTime lastDeployTime) {
         this.lastDeployTime = lastDeployTime;
         return this;
@@ -38,6 +40,7 @@ public class ProductionBranch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ProductionBranch withStatus(String status) {
         this.status = status;
         return this;
@@ -46,9 +49,11 @@ public class ProductionBranch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailUrl")
     public String thumbnailUrl;
+
     public ProductionBranch withThumbnailUrl(String thumbnailUrl) {
         this.thumbnailUrl = thumbnailUrl;
         return this;
     }
     
+    public ProductionBranch(){}
 }

@@ -55,10 +55,8 @@ public class RemoteServers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRemoteServersIdResponse res = new org.openapis.openapi.models.operations.DeleteRemoteServersIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteRemoteServersIdResponse res = new org.openapis.openapi.models.operations.DeleteRemoteServersIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {
@@ -94,11 +92,9 @@ public class RemoteServers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRemoteServersResponse res = new org.openapis.openapi.models.operations.GetRemoteServersResponse() {{
+        org.openapis.openapi.models.operations.GetRemoteServersResponse res = new org.openapis.openapi.models.operations.GetRemoteServersResponse(contentType, httpRes.statusCode()) {{
             remoteServerEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +131,9 @@ public class RemoteServers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRemoteServersIdResponse res = new org.openapis.openapi.models.operations.GetRemoteServersIdResponse() {{
+        org.openapis.openapi.models.operations.GetRemoteServersIdResponse res = new org.openapis.openapi.models.operations.GetRemoteServersIdResponse(contentType, httpRes.statusCode()) {{
             remoteServerEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,11 +170,9 @@ public class RemoteServers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRemoteServersIdConfigurationFileResponse res = new org.openapis.openapi.models.operations.GetRemoteServersIdConfigurationFileResponse() {{
+        org.openapis.openapi.models.operations.GetRemoteServersIdConfigurationFileResponse res = new org.openapis.openapi.models.operations.GetRemoteServersIdConfigurationFileResponse(contentType, httpRes.statusCode()) {{
             remoteServerConfigurationFileEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,11 +211,9 @@ public class RemoteServers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchRemoteServersIdResponse res = new org.openapis.openapi.models.operations.PatchRemoteServersIdResponse() {{
+        org.openapis.openapi.models.operations.PatchRemoteServersIdResponse res = new org.openapis.openapi.models.operations.PatchRemoteServersIdResponse(contentType, httpRes.statusCode()) {{
             remoteServerEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -262,11 +252,9 @@ public class RemoteServers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRemoteServersResponse res = new org.openapis.openapi.models.operations.PostRemoteServersResponse() {{
+        org.openapis.openapi.models.operations.PostRemoteServersResponse res = new org.openapis.openapi.models.operations.PostRemoteServersResponse(contentType, httpRes.statusCode()) {{
             remoteServerEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -305,11 +293,9 @@ public class RemoteServers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRemoteServersIdConfigurationFileResponse res = new org.openapis.openapi.models.operations.PostRemoteServersIdConfigurationFileResponse() {{
+        org.openapis.openapi.models.operations.PostRemoteServersIdConfigurationFileResponse res = new org.openapis.openapi.models.operations.PostRemoteServersIdConfigurationFileResponse(contentType, httpRes.statusCode()) {{
             remoteServerConfigurationFileEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

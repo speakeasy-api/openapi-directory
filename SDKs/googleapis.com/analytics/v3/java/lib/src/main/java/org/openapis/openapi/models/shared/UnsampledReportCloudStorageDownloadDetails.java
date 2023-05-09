@@ -18,6 +18,7 @@ public class UnsampledReportCloudStorageDownloadDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketId")
     public String bucketId;
+
     public UnsampledReportCloudStorageDownloadDetails withBucketId(String bucketId) {
         this.bucketId = bucketId;
         return this;
@@ -29,9 +30,11 @@ public class UnsampledReportCloudStorageDownloadDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public UnsampledReportCloudStorageDownloadDetails withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public UnsampledReportCloudStorageDownloadDetails(){}
 }

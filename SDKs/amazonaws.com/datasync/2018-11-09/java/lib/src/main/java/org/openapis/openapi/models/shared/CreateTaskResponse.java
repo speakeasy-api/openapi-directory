@@ -15,9 +15,11 @@ public class CreateTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskArn")
     public String taskArn;
+
     public CreateTaskResponse withTaskArn(String taskArn) {
         this.taskArn = taskArn;
         return this;
     }
     
+    public CreateTaskResponse(){}
 }

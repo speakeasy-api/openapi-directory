@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsListRequest {
@@ -12,6 +13,7 @@ public class PullsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base")
     public String base;
+
     public PullsListRequest withBase(String base) {
         this.base = base;
         return this;
@@ -22,6 +24,7 @@ public class PullsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public PullsListDirectionEnum direction;
+
     public PullsListRequest withDirection(PullsListDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -32,6 +35,7 @@ public class PullsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=head")
     public String head;
+
     public PullsListRequest withHead(String head) {
         this.head = head;
         return this;
@@ -39,6 +43,7 @@ public class PullsListRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public PullsListRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -49,6 +54,7 @@ public class PullsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public PullsListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -59,6 +65,7 @@ public class PullsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public PullsListRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -66,6 +73,7 @@ public class PullsListRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public PullsListRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -76,6 +84,7 @@ public class PullsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public PullsListSortEnum sort;
+
     public PullsListRequest withSort(PullsListSortEnum sort) {
         this.sort = sort;
         return this;
@@ -86,9 +95,14 @@ public class PullsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public PullsListStateEnum state;
+
     public PullsListRequest withState(PullsListStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public PullsListRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

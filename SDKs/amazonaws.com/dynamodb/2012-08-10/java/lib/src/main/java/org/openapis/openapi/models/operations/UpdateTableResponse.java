@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTableResponse {
     
     public String contentType;
+
     public UpdateTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTableResponse {
      */
     
     public Object internalServerError;
+
     public UpdateTableResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTableResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateTableResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateTableResponse {
     
     
     public Integer statusCode;
+
     public UpdateTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateTableResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateTableResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateTableResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateTableResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateTableResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateTableOutput updateTableOutput;
+
     public UpdateTableResponse withUpdateTableOutput(org.openapis.openapi.models.shared.UpdateTableOutput updateTableOutput) {
         this.updateTableOutput = updateTableOutput;
         return this;
     }
     
+    public UpdateTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

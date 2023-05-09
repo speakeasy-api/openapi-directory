@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateModelCardRequest {
     @JsonProperty("Content")
     public String content;
+
     public CreateModelCardRequest withContent(String content) {
         this.content = content;
         return this;
@@ -18,6 +19,7 @@ public class CreateModelCardRequest {
     
     @JsonProperty("ModelCardName")
     public String modelCardName;
+
     public CreateModelCardRequest withModelCardName(String modelCardName) {
         this.modelCardName = modelCardName;
         return this;
@@ -25,6 +27,7 @@ public class CreateModelCardRequest {
     
     @JsonProperty("ModelCardStatus")
     public ModelCardStatusEnum modelCardStatus;
+
     public CreateModelCardRequest withModelCardStatus(ModelCardStatusEnum modelCardStatus) {
         this.modelCardStatus = modelCardStatus;
         return this;
@@ -33,6 +36,7 @@ public class CreateModelCardRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfig")
     public ModelCardSecurityConfig securityConfig;
+
     public CreateModelCardRequest withSecurityConfig(ModelCardSecurityConfig securityConfig) {
         this.securityConfig = securityConfig;
         return this;
@@ -41,9 +45,15 @@ public class CreateModelCardRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateModelCardRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateModelCardRequest(@JsonProperty("Content") String content, @JsonProperty("ModelCardName") String modelCardName, @JsonProperty("ModelCardStatus") ModelCardStatusEnum modelCardStatus) {
+        this.content = content;
+        this.modelCardName = modelCardName;
+        this.modelCardStatus = modelCardStatus;
+  }
 }

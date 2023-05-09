@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetLayoutResponse {
     @JsonProperty("content")
     public LayoutContent content;
+
     public GetLayoutResponse withContent(LayoutContent content) {
         this.content = content;
         return this;
@@ -21,6 +22,7 @@ public class GetLayoutResponse {
     
     @JsonProperty("layoutArn")
     public String layoutArn;
+
     public GetLayoutResponse withLayoutArn(String layoutArn) {
         this.layoutArn = layoutArn;
         return this;
@@ -28,6 +30,7 @@ public class GetLayoutResponse {
     
     @JsonProperty("layoutId")
     public String layoutId;
+
     public GetLayoutResponse withLayoutId(String layoutId) {
         this.layoutId = layoutId;
         return this;
@@ -35,6 +38,7 @@ public class GetLayoutResponse {
     
     @JsonProperty("name")
     public String name;
+
     public GetLayoutResponse withName(String name) {
         this.name = name;
         return this;
@@ -43,9 +47,16 @@ public class GetLayoutResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetLayoutResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetLayoutResponse(@JsonProperty("content") LayoutContent content, @JsonProperty("layoutArn") String layoutArn, @JsonProperty("layoutId") String layoutId, @JsonProperty("name") String name) {
+        this.content = content;
+        this.layoutArn = layoutArn;
+        this.layoutId = layoutId;
+        this.name = name;
+  }
 }

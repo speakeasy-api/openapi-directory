@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TagResourceRelationships {
     @JsonProperty("transactions")
     public TagResourceRelationshipsTransactions transactions;
+
     public TagResourceRelationships withTransactions(TagResourceRelationshipsTransactions transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public TagResourceRelationships(@JsonProperty("transactions") TagResourceRelationshipsTransactions transactions) {
+        this.transactions = transactions;
+  }
 }

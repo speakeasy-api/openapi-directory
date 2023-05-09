@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportationGetDetectedCatalogColumnsResponse {
@@ -12,6 +13,7 @@ public class ImportationGetDetectedCatalogColumnsResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public ImportationGetDetectedCatalogColumnsResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class ImportationGetDetectedCatalogColumnsResponse {
     
     
     public String contentType;
+
     public ImportationGetDetectedCatalogColumnsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ImportationGetDetectedCatalogColumnsResponse {
     
     
     public Integer statusCode;
+
     public ImportationGetDetectedCatalogColumnsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ImportationGetDetectedCatalogColumnsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportationGetDetectedCatalogColumnsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class ImportationGetDetectedCatalogColumnsResponse {
      */
     
     public org.openapis.openapi.models.shared.DetectedCatalogColumnList detectedCatalogColumnList;
+
     public ImportationGetDetectedCatalogColumnsResponse withDetectedCatalogColumnList(org.openapis.openapi.models.shared.DetectedCatalogColumnList detectedCatalogColumnList) {
         this.detectedCatalogColumnList = detectedCatalogColumnList;
         return this;
     }
     
+    public ImportationGetDetectedCatalogColumnsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

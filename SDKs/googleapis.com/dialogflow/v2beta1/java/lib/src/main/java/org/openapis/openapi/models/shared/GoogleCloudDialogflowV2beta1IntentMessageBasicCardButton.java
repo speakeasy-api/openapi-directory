@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openUriAction")
     public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriAction openUriAction;
+
     public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton withOpenUriAction(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriAction openUriAction) {
         this.openUriAction = openUriAction;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton(){}
 }

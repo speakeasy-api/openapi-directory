@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VrwmiResponse {
     
     public String contentType;
+
     public VrwmiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class VrwmiResponse {
     
     
     public Integer statusCode;
+
     public VrwmiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class VrwmiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VrwmiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class VrwmiResponse {
      */
     
     public Vrwmi400ApplicationJSON vrwmi400ApplicationJSONObject;
+
     public VrwmiResponse withVrwmi400ApplicationJSONObject(Vrwmi400ApplicationJSON vrwmi400ApplicationJSONObject) {
         this.vrwmi400ApplicationJSONObject = vrwmi400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class VrwmiResponse {
      */
     
     public Vrwmi401ApplicationJSON vrwmi401ApplicationJSONObject;
+
     public VrwmiResponse withVrwmi401ApplicationJSONObject(Vrwmi401ApplicationJSON vrwmi401ApplicationJSONObject) {
         this.vrwmi401ApplicationJSONObject = vrwmi401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class VrwmiResponse {
      */
     
     public Vrwmi404ApplicationJSON vrwmi404ApplicationJSONObject;
+
     public VrwmiResponse withVrwmi404ApplicationJSONObject(Vrwmi404ApplicationJSON vrwmi404ApplicationJSONObject) {
         this.vrwmi404ApplicationJSONObject = vrwmi404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class VrwmiResponse {
      */
     
     public Vrwmi500ApplicationJSON vrwmi500ApplicationJSONObject;
+
     public VrwmiResponse withVrwmi500ApplicationJSONObject(Vrwmi500ApplicationJSON vrwmi500ApplicationJSONObject) {
         this.vrwmi500ApplicationJSONObject = vrwmi500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class VrwmiResponse {
      */
     
     public Vrwmi502ApplicationJSON vrwmi502ApplicationJSONObject;
+
     public VrwmiResponse withVrwmi502ApplicationJSONObject(Vrwmi502ApplicationJSON vrwmi502ApplicationJSONObject) {
         this.vrwmi502ApplicationJSONObject = vrwmi502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class VrwmiResponse {
      */
     
     public Vrwmi503ApplicationJSON vrwmi503ApplicationJSONObject;
+
     public VrwmiResponse withVrwmi503ApplicationJSONObject(Vrwmi503ApplicationJSON vrwmi503ApplicationJSONObject) {
         this.vrwmi503ApplicationJSONObject = vrwmi503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class VrwmiResponse {
      */
     
     public Vrwmi504ApplicationJSON vrwmi504ApplicationJSONObject;
+
     public VrwmiResponse withVrwmi504ApplicationJSONObject(Vrwmi504ApplicationJSON vrwmi504ApplicationJSONObject) {
         this.vrwmi504ApplicationJSONObject = vrwmi504ApplicationJSONObject;
         return this;
     }
     
+    public VrwmiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class CreativeAssetSelection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultAssetId")
     public String defaultAssetId;
+
     public CreativeAssetSelection withDefaultAssetId(String defaultAssetId) {
         this.defaultAssetId = defaultAssetId;
         return this;
@@ -29,9 +30,11 @@ public class CreativeAssetSelection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public Rule[] rules;
+
     public CreativeAssetSelection withRules(Rule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public CreativeAssetSelection(){}
 }

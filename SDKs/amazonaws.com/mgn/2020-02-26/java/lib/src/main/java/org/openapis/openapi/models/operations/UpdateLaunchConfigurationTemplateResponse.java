@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLaunchConfigurationTemplateResponse {
@@ -12,6 +13,7 @@ public class UpdateLaunchConfigurationTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateLaunchConfigurationTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateLaunchConfigurationTemplateResponse {
     
     
     public String contentType;
+
     public UpdateLaunchConfigurationTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateLaunchConfigurationTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.LaunchConfigurationTemplate launchConfigurationTemplate;
+
     public UpdateLaunchConfigurationTemplateResponse withLaunchConfigurationTemplate(org.openapis.openapi.models.shared.LaunchConfigurationTemplate launchConfigurationTemplate) {
         this.launchConfigurationTemplate = launchConfigurationTemplate;
         return this;
@@ -39,6 +43,7 @@ public class UpdateLaunchConfigurationTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateLaunchConfigurationTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateLaunchConfigurationTemplateResponse {
     
     
     public Integer statusCode;
+
     public UpdateLaunchConfigurationTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateLaunchConfigurationTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLaunchConfigurationTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateLaunchConfigurationTemplateResponse {
      */
     
     public Object uninitializedAccountException;
+
     public UpdateLaunchConfigurationTemplateResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateLaunchConfigurationTemplateResponse {
      */
     
     public Object validationException;
+
     public UpdateLaunchConfigurationTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateLaunchConfigurationTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

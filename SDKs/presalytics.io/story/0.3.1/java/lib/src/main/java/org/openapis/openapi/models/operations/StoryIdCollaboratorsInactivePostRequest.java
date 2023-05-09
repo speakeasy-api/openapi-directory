@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdCollaboratorsInactivePostRequest {
@@ -12,6 +13,7 @@ public class StoryIdCollaboratorsInactivePostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public StoryIdCollaboratorsInactivePostRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,14 @@ public class StoryIdCollaboratorsInactivePostRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ModifyInactiveCollaborator modifyInactiveCollaborator;
+
     public StoryIdCollaboratorsInactivePostRequest withModifyInactiveCollaborator(org.openapis.openapi.models.shared.ModifyInactiveCollaborator modifyInactiveCollaborator) {
         this.modifyInactiveCollaborator = modifyInactiveCollaborator;
         return this;
     }
     
+    public StoryIdCollaboratorsInactivePostRequest(@JsonProperty("id") String id, @JsonProperty("modify_inactive_collaborator") org.openapis.openapi.models.shared.ModifyInactiveCollaborator modifyInactiveCollaborator) {
+        this.id = id;
+        this.modifyInactiveCollaborator = modifyInactiveCollaborator;
+  }
 }

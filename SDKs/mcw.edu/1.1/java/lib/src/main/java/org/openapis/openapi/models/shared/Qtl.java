@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Qtl {
     
     public String chromosome;
+
     public Qtl withChromosome(String chromosome) {
         this.chromosome = chromosome;
         return this;
@@ -19,6 +20,7 @@ public class Qtl {
     
     
     public Integer flank1RgdId;
+
     public Qtl withFlank1RgdId(Integer flank1RgdId) {
         this.flank1RgdId = flank1RgdId;
         return this;
@@ -26,6 +28,7 @@ public class Qtl {
     
     
     public Integer flank2RgdId;
+
     public Qtl withFlank2RgdId(Integer flank2RgdId) {
         this.flank2RgdId = flank2RgdId;
         return this;
@@ -33,6 +36,7 @@ public class Qtl {
     
     
     public String inheritanceType;
+
     public Qtl withInheritanceType(String inheritanceType) {
         this.inheritanceType = inheritanceType;
         return this;
@@ -40,6 +44,7 @@ public class Qtl {
     
     
     public Integer key;
+
     public Qtl withKey(Integer key) {
         this.key = key;
         return this;
@@ -47,6 +52,7 @@ public class Qtl {
     
     
     public String linkageImage;
+
     public Qtl withLinkageImage(String linkageImage) {
         this.linkageImage = linkageImage;
         return this;
@@ -54,6 +60,7 @@ public class Qtl {
     
     
     public Double lod;
+
     public Qtl withLod(Double lod) {
         this.lod = lod;
         return this;
@@ -61,6 +68,7 @@ public class Qtl {
     
     
     public String lodImage;
+
     public Qtl withLodImage(String lodImage) {
         this.lodImage = lodImage;
         return this;
@@ -68,6 +76,7 @@ public class Qtl {
     
     
     public String mostSignificantCmoTerm;
+
     public Qtl withMostSignificantCmoTerm(String mostSignificantCmoTerm) {
         this.mostSignificantCmoTerm = mostSignificantCmoTerm;
         return this;
@@ -75,6 +84,7 @@ public class Qtl {
     
     
     public String name;
+
     public Qtl withName(String name) {
         this.name = name;
         return this;
@@ -82,6 +92,7 @@ public class Qtl {
     
     
     public String notes;
+
     public Qtl withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -89,6 +100,7 @@ public class Qtl {
     
     
     public Integer peakOffset;
+
     public Qtl withPeakOffset(Integer peakOffset) {
         this.peakOffset = peakOffset;
         return this;
@@ -96,6 +108,7 @@ public class Qtl {
     
     
     public Integer peakRgdId;
+
     public Qtl withPeakRgdId(Integer peakRgdId) {
         this.peakRgdId = peakRgdId;
         return this;
@@ -103,6 +116,7 @@ public class Qtl {
     
     
     public Double pvalue;
+
     public Qtl withPvalue(Double pvalue) {
         this.pvalue = pvalue;
         return this;
@@ -110,6 +124,7 @@ public class Qtl {
     
     
     public Integer rgdId;
+
     public Qtl withRgdId(Integer rgdId) {
         this.rgdId = rgdId;
         return this;
@@ -117,6 +132,7 @@ public class Qtl {
     
     
     public String sourceUrl;
+
     public Qtl withSourceUrl(String sourceUrl) {
         this.sourceUrl = sourceUrl;
         return this;
@@ -124,6 +140,7 @@ public class Qtl {
     
     
     public Integer speciesTypeKey;
+
     public Qtl withSpeciesTypeKey(Integer speciesTypeKey) {
         this.speciesTypeKey = speciesTypeKey;
         return this;
@@ -131,6 +148,7 @@ public class Qtl {
     
     
     public String symbol;
+
     public Qtl withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
@@ -138,9 +156,11 @@ public class Qtl {
     
     
     public Double variance;
+
     public Qtl withVariance(Double variance) {
         this.variance = variance;
         return this;
     }
     
+    public Qtl(){}
 }

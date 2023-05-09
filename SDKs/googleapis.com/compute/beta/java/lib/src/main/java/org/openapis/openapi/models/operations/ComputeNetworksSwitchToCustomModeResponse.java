@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeNetworksSwitchToCustomModeResponse {
     
     public String contentType;
+
     public ComputeNetworksSwitchToCustomModeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeNetworksSwitchToCustomModeResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public ComputeNetworksSwitchToCustomModeResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class ComputeNetworksSwitchToCustomModeResponse {
     
     
     public Integer statusCode;
+
     public ComputeNetworksSwitchToCustomModeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeNetworksSwitchToCustomModeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeNetworksSwitchToCustomModeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeNetworksSwitchToCustomModeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

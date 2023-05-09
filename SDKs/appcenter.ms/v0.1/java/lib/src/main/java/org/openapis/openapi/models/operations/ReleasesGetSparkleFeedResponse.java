@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReleasesGetSparkleFeedResponse {
     
     public String contentType;
+
     public ReleasesGetSparkleFeedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReleasesGetSparkleFeedResponse {
     
     
     public Integer statusCode;
+
     public ReleasesGetSparkleFeedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReleasesGetSparkleFeedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReleasesGetSparkleFeedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ReleasesGetSparkleFeedResponse {
      */
     
     public ReleasesGetSparkleFeedDefaultApplicationJSON releasesGetSparkleFeedDefaultApplicationJSONObject;
+
     public ReleasesGetSparkleFeedResponse withReleasesGetSparkleFeedDefaultApplicationJSONObject(ReleasesGetSparkleFeedDefaultApplicationJSON releasesGetSparkleFeedDefaultApplicationJSONObject) {
         this.releasesGetSparkleFeedDefaultApplicationJSONObject = releasesGetSparkleFeedDefaultApplicationJSONObject;
         return this;
     }
     
+    public ReleasesGetSparkleFeedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

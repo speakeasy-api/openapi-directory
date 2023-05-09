@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScalingPlanResource {
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ScalingPlanResource withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -21,6 +22,7 @@ public class ScalingPlanResource {
     
     @JsonProperty("ScalableDimension")
     public ScalableDimensionEnum scalableDimension;
+
     public ScalingPlanResource withScalableDimension(ScalableDimensionEnum scalableDimension) {
         this.scalableDimension = scalableDimension;
         return this;
@@ -28,6 +30,7 @@ public class ScalingPlanResource {
     
     @JsonProperty("ScalingPlanName")
     public String scalingPlanName;
+
     public ScalingPlanResource withScalingPlanName(String scalingPlanName) {
         this.scalingPlanName = scalingPlanName;
         return this;
@@ -35,6 +38,7 @@ public class ScalingPlanResource {
     
     @JsonProperty("ScalingPlanVersion")
     public Long scalingPlanVersion;
+
     public ScalingPlanResource withScalingPlanVersion(Long scalingPlanVersion) {
         this.scalingPlanVersion = scalingPlanVersion;
         return this;
@@ -43,6 +47,7 @@ public class ScalingPlanResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalingPolicies")
     public ScalingPolicy[] scalingPolicies;
+
     public ScalingPlanResource withScalingPolicies(ScalingPolicy[] scalingPolicies) {
         this.scalingPolicies = scalingPolicies;
         return this;
@@ -50,6 +55,7 @@ public class ScalingPlanResource {
     
     @JsonProperty("ScalingStatusCode")
     public ScalingStatusCodeEnum scalingStatusCode;
+
     public ScalingPlanResource withScalingStatusCode(ScalingStatusCodeEnum scalingStatusCode) {
         this.scalingStatusCode = scalingStatusCode;
         return this;
@@ -58,6 +64,7 @@ public class ScalingPlanResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalingStatusMessage")
     public String scalingStatusMessage;
+
     public ScalingPlanResource withScalingStatusMessage(String scalingStatusMessage) {
         this.scalingStatusMessage = scalingStatusMessage;
         return this;
@@ -65,9 +72,18 @@ public class ScalingPlanResource {
     
     @JsonProperty("ServiceNamespace")
     public ServiceNamespaceEnum serviceNamespace;
+
     public ScalingPlanResource withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
     }
     
+    public ScalingPlanResource(@JsonProperty("ResourceId") String resourceId, @JsonProperty("ScalableDimension") ScalableDimensionEnum scalableDimension, @JsonProperty("ScalingPlanName") String scalingPlanName, @JsonProperty("ScalingPlanVersion") Long scalingPlanVersion, @JsonProperty("ScalingStatusCode") ScalingStatusCodeEnum scalingStatusCode, @JsonProperty("ServiceNamespace") ServiceNamespaceEnum serviceNamespace) {
+        this.resourceId = resourceId;
+        this.scalableDimension = scalableDimension;
+        this.scalingPlanName = scalingPlanName;
+        this.scalingPlanVersion = scalingPlanVersion;
+        this.scalingStatusCode = scalingStatusCode;
+        this.serviceNamespace = serviceNamespace;
+  }
 }

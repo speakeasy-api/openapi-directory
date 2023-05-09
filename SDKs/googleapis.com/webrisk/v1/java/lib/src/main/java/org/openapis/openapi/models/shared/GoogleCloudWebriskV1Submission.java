@@ -18,9 +18,11 @@ public class GoogleCloudWebriskV1Submission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudWebriskV1Submission withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudWebriskV1Submission(){}
 }

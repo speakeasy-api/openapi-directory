@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReplicaSettingsDescription {
     @JsonProperty("RegionName")
     public String regionName;
+
     public ReplicaSettingsDescription withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -22,6 +23,7 @@ public class ReplicaSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaBillingModeSummary")
     public BillingModeSummary replicaBillingModeSummary;
+
     public ReplicaSettingsDescription withReplicaBillingModeSummary(BillingModeSummary replicaBillingModeSummary) {
         this.replicaBillingModeSummary = replicaBillingModeSummary;
         return this;
@@ -30,6 +32,7 @@ public class ReplicaSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaGlobalSecondaryIndexSettings")
     public ReplicaGlobalSecondaryIndexSettingsDescription[] replicaGlobalSecondaryIndexSettings;
+
     public ReplicaSettingsDescription withReplicaGlobalSecondaryIndexSettings(ReplicaGlobalSecondaryIndexSettingsDescription[] replicaGlobalSecondaryIndexSettings) {
         this.replicaGlobalSecondaryIndexSettings = replicaGlobalSecondaryIndexSettings;
         return this;
@@ -38,6 +41,7 @@ public class ReplicaSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaProvisionedReadCapacityAutoScalingSettings")
     public AutoScalingSettingsDescription replicaProvisionedReadCapacityAutoScalingSettings;
+
     public ReplicaSettingsDescription withReplicaProvisionedReadCapacityAutoScalingSettings(AutoScalingSettingsDescription replicaProvisionedReadCapacityAutoScalingSettings) {
         this.replicaProvisionedReadCapacityAutoScalingSettings = replicaProvisionedReadCapacityAutoScalingSettings;
         return this;
@@ -46,6 +50,7 @@ public class ReplicaSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaProvisionedReadCapacityUnits")
     public Long replicaProvisionedReadCapacityUnits;
+
     public ReplicaSettingsDescription withReplicaProvisionedReadCapacityUnits(Long replicaProvisionedReadCapacityUnits) {
         this.replicaProvisionedReadCapacityUnits = replicaProvisionedReadCapacityUnits;
         return this;
@@ -54,6 +59,7 @@ public class ReplicaSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaProvisionedWriteCapacityAutoScalingSettings")
     public AutoScalingSettingsDescription replicaProvisionedWriteCapacityAutoScalingSettings;
+
     public ReplicaSettingsDescription withReplicaProvisionedWriteCapacityAutoScalingSettings(AutoScalingSettingsDescription replicaProvisionedWriteCapacityAutoScalingSettings) {
         this.replicaProvisionedWriteCapacityAutoScalingSettings = replicaProvisionedWriteCapacityAutoScalingSettings;
         return this;
@@ -62,6 +68,7 @@ public class ReplicaSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaProvisionedWriteCapacityUnits")
     public Long replicaProvisionedWriteCapacityUnits;
+
     public ReplicaSettingsDescription withReplicaProvisionedWriteCapacityUnits(Long replicaProvisionedWriteCapacityUnits) {
         this.replicaProvisionedWriteCapacityUnits = replicaProvisionedWriteCapacityUnits;
         return this;
@@ -70,6 +77,7 @@ public class ReplicaSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaStatus")
     public ReplicaStatusEnum replicaStatus;
+
     public ReplicaSettingsDescription withReplicaStatus(ReplicaStatusEnum replicaStatus) {
         this.replicaStatus = replicaStatus;
         return this;
@@ -81,9 +89,13 @@ public class ReplicaSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaTableClassSummary")
     public TableClassSummary replicaTableClassSummary;
+
     public ReplicaSettingsDescription withReplicaTableClassSummary(TableClassSummary replicaTableClassSummary) {
         this.replicaTableClassSummary = replicaTableClassSummary;
         return this;
     }
     
+    public ReplicaSettingsDescription(@JsonProperty("RegionName") String regionName) {
+        this.regionName = regionName;
+  }
 }

@@ -15,6 +15,7 @@ public class UpdateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public UpdateStatus withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class UpdateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public UpdateStatus withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public UpdateStatus(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopVectorEnrichmentJobResponse {
@@ -12,6 +13,7 @@ public class StopVectorEnrichmentJobResponse {
      */
     
     public Object accessDeniedException;
+
     public StopVectorEnrichmentJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StopVectorEnrichmentJobResponse {
      */
     
     public Object conflictException;
+
     public StopVectorEnrichmentJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StopVectorEnrichmentJobResponse {
     
     
     public String contentType;
+
     public StopVectorEnrichmentJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StopVectorEnrichmentJobResponse {
      */
     
     public Object internalServerException;
+
     public StopVectorEnrichmentJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class StopVectorEnrichmentJobResponse {
     
     
     public Integer statusCode;
+
     public StopVectorEnrichmentJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopVectorEnrichmentJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopVectorEnrichmentJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopVectorEnrichmentJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopVectorEnrichmentJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class StopVectorEnrichmentJobResponse {
      */
     
     public java.util.Map<String, Object> stopVectorEnrichmentJobOutput;
+
     public StopVectorEnrichmentJobResponse withStopVectorEnrichmentJobOutput(java.util.Map<String, Object> stopVectorEnrichmentJobOutput) {
         this.stopVectorEnrichmentJobOutput = stopVectorEnrichmentJobOutput;
         return this;
@@ -83,6 +92,7 @@ public class StopVectorEnrichmentJobResponse {
      */
     
     public Object throttlingException;
+
     public StopVectorEnrichmentJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class StopVectorEnrichmentJobResponse {
      */
     
     public Object validationException;
+
     public StopVectorEnrichmentJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopVectorEnrichmentJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

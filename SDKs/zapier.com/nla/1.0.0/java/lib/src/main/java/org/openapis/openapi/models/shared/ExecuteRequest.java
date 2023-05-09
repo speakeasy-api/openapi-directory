@@ -15,10 +15,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ExecuteRequest {
     /**
-     * Plain english instructions. Provide as much detail as possible.
+     * Plain english instructions. Provide as much detail as possible, even if other fields are present.
      */
     @JsonProperty("instructions")
     public String instructions;
+
     public ExecuteRequest withInstructions(String instructions) {
         this.instructions = instructions;
         return this;
@@ -30,9 +31,13 @@ public class ExecuteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_only")
     public Boolean previewOnly;
+
     public ExecuteRequest withPreviewOnly(Boolean previewOnly) {
         this.previewOnly = previewOnly;
         return this;
     }
     
+    public ExecuteRequest(@JsonProperty("instructions") String instructions) {
+        this.instructions = instructions;
+  }
 }

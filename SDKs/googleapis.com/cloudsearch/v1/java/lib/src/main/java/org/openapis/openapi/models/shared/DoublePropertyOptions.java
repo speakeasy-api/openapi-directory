@@ -18,9 +18,11 @@ public class DoublePropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorOptions")
     public DoubleOperatorOptions operatorOptions;
+
     public DoublePropertyOptions withOperatorOptions(DoubleOperatorOptions operatorOptions) {
         this.operatorOptions = operatorOptions;
         return this;
     }
     
+    public DoublePropertyOptions(){}
 }

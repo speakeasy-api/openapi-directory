@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalendarEventsMoveRequest {
@@ -12,6 +13,7 @@ public class CalendarEventsMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CalendarEventsMoveRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class CalendarEventsMoveRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=calendarId")
     public String calendarId;
+
     public CalendarEventsMoveRequest withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -32,6 +35,7 @@ public class CalendarEventsMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination")
     public String destination;
+
     public CalendarEventsMoveRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -42,6 +46,7 @@ public class CalendarEventsMoveRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=eventId")
     public String eventId;
+
     public CalendarEventsMoveRequest withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -52,6 +57,7 @@ public class CalendarEventsMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CalendarEventsMoveRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class CalendarEventsMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CalendarEventsMoveRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class CalendarEventsMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CalendarEventsMoveRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class CalendarEventsMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CalendarEventsMoveRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +101,7 @@ public class CalendarEventsMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CalendarEventsMoveRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -104,6 +114,7 @@ public class CalendarEventsMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendNotifications")
     public Boolean sendNotifications;
+
     public CalendarEventsMoveRequest withSendNotifications(Boolean sendNotifications) {
         this.sendNotifications = sendNotifications;
         return this;
@@ -114,6 +125,7 @@ public class CalendarEventsMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendUpdates")
     public CalendarEventsMoveSendUpdatesEnum sendUpdates;
+
     public CalendarEventsMoveRequest withSendUpdates(CalendarEventsMoveSendUpdatesEnum sendUpdates) {
         this.sendUpdates = sendUpdates;
         return this;
@@ -124,9 +136,15 @@ public class CalendarEventsMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public CalendarEventsMoveRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public CalendarEventsMoveRequest(@JsonProperty("calendarId") String calendarId, @JsonProperty("destination") String destination, @JsonProperty("eventId") String eventId) {
+        this.calendarId = calendarId;
+        this.destination = destination;
+        this.eventId = eventId;
+  }
 }

@@ -18,6 +18,7 @@ public class GroupEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admin_ids")
     public String adminIds;
+
     public GroupEntity withAdminIds(String adminIds) {
         this.adminIds = adminIds;
         return this;
@@ -29,6 +30,7 @@ public class GroupEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public GroupEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class GroupEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GroupEntity withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GroupEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public GroupEntity withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -62,6 +66,7 @@ public class GroupEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_ids")
     public String userIds;
+
     public GroupEntity withUserIds(String userIds) {
         this.userIds = userIds;
         return this;
@@ -73,9 +78,11 @@ public class GroupEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usernames")
     public String usernames;
+
     public GroupEntity withUsernames(String usernames) {
         this.usernames = usernames;
         return this;
     }
     
+    public GroupEntity(){}
 }

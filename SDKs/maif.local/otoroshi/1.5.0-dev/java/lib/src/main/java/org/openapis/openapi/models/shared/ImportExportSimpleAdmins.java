@@ -15,6 +15,7 @@ public class ImportExportSimpleAdmins {
      */
     @JsonProperty("createdAt")
     public Long createdAt;
+
     public ImportExportSimpleAdmins withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -25,6 +26,7 @@ public class ImportExportSimpleAdmins {
      */
     @JsonProperty("label")
     public String label;
+
     public ImportExportSimpleAdmins withLabel(String label) {
         this.label = label;
         return this;
@@ -35,6 +37,7 @@ public class ImportExportSimpleAdmins {
      */
     @JsonProperty("password")
     public String password;
+
     public ImportExportSimpleAdmins withPassword(String password) {
         this.password = password;
         return this;
@@ -45,9 +48,16 @@ public class ImportExportSimpleAdmins {
      */
     @JsonProperty("username")
     public String username;
+
     public ImportExportSimpleAdmins withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ImportExportSimpleAdmins(@JsonProperty("username") String username, @JsonProperty("password") String password, @JsonProperty("createdAt") Long createdAt, @JsonProperty("label") String label) {
+        this.username = username;
+        this.password = password;
+        this.createdAt = createdAt;
+        this.label = label;
+  }
 }

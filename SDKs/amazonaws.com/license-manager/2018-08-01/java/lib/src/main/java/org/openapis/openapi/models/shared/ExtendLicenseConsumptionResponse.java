@@ -15,6 +15,7 @@ public class ExtendLicenseConsumptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expiration")
     public String expiration;
+
     public ExtendLicenseConsumptionResponse withExpiration(String expiration) {
         this.expiration = expiration;
         return this;
@@ -23,9 +24,11 @@ public class ExtendLicenseConsumptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseConsumptionToken")
     public String licenseConsumptionToken;
+
     public ExtendLicenseConsumptionResponse withLicenseConsumptionToken(String licenseConsumptionToken) {
         this.licenseConsumptionToken = licenseConsumptionToken;
         return this;
     }
     
+    public ExtendLicenseConsumptionResponse(){}
 }

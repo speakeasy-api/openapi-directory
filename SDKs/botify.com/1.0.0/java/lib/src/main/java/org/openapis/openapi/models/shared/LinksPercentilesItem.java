@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LinksPercentilesItem {
     @JsonProperty("avg")
     public Long avg;
+
     public LinksPercentilesItem withAvg(Long avg) {
         this.avg = avg;
         return this;
@@ -16,6 +17,7 @@ public class LinksPercentilesItem {
     
     @JsonProperty("id")
     public Long id;
+
     public LinksPercentilesItem withId(Long id) {
         this.id = id;
         return this;
@@ -23,6 +25,7 @@ public class LinksPercentilesItem {
     
     @JsonProperty("max")
     public Long max;
+
     public LinksPercentilesItem withMax(Long max) {
         this.max = max;
         return this;
@@ -30,6 +33,7 @@ public class LinksPercentilesItem {
     
     @JsonProperty("metric_total")
     public Long metricTotal;
+
     public LinksPercentilesItem withMetricTotal(Long metricTotal) {
         this.metricTotal = metricTotal;
         return this;
@@ -37,6 +41,7 @@ public class LinksPercentilesItem {
     
     @JsonProperty("min")
     public Long min;
+
     public LinksPercentilesItem withMin(Long min) {
         this.min = min;
         return this;
@@ -44,9 +49,18 @@ public class LinksPercentilesItem {
     
     @JsonProperty("url_total")
     public Long urlTotal;
+
     public LinksPercentilesItem withUrlTotal(Long urlTotal) {
         this.urlTotal = urlTotal;
         return this;
     }
     
+    public LinksPercentilesItem(@JsonProperty("avg") Long avg, @JsonProperty("id") Long id, @JsonProperty("max") Long max, @JsonProperty("metric_total") Long metricTotal, @JsonProperty("min") Long min, @JsonProperty("url_total") Long urlTotal) {
+        this.avg = avg;
+        this.id = id;
+        this.max = max;
+        this.metricTotal = metricTotal;
+        this.min = min;
+        this.urlTotal = urlTotal;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartReportCreationResponse {
@@ -12,6 +13,7 @@ public class StartReportCreationResponse {
      */
     
     public Object concurrentModificationException;
+
     public StartReportCreationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -22,6 +24,7 @@ public class StartReportCreationResponse {
      */
     
     public Object constraintViolationException;
+
     public StartReportCreationResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -29,6 +32,7 @@ public class StartReportCreationResponse {
     
     
     public String contentType;
+
     public StartReportCreationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartReportCreationResponse {
      */
     
     public Object internalServiceException;
+
     public StartReportCreationResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class StartReportCreationResponse {
      */
     
     public Object invalidParameterException;
+
     public StartReportCreationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class StartReportCreationResponse {
      */
     
     public java.util.Map<String, Object> startReportCreationOutput;
+
     public StartReportCreationResponse withStartReportCreationOutput(java.util.Map<String, Object> startReportCreationOutput) {
         this.startReportCreationOutput = startReportCreationOutput;
         return this;
@@ -66,6 +73,7 @@ public class StartReportCreationResponse {
     
     
     public Integer statusCode;
+
     public StartReportCreationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartReportCreationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartReportCreationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class StartReportCreationResponse {
      */
     
     public Object throttledException;
+
     public StartReportCreationResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
     }
     
+    public StartReportCreationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

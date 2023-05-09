@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IPSetDescriptor {
     @JsonProperty("Type")
     public IPSetDescriptorTypeEnum type;
+
     public IPSetDescriptor withType(IPSetDescriptorTypeEnum type) {
         this.type = type;
         return this;
@@ -19,9 +20,14 @@ public class IPSetDescriptor {
     
     @JsonProperty("Value")
     public String value;
+
     public IPSetDescriptor withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public IPSetDescriptor(@JsonProperty("Type") IPSetDescriptorTypeEnum type, @JsonProperty("Value") String value) {
+        this.type = type;
+        this.value = value;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateCustomRoutingListenerRequest {
     @JsonProperty("ListenerArn")
     public String listenerArn;
+
     public UpdateCustomRoutingListenerRequest withListenerArn(String listenerArn) {
         this.listenerArn = listenerArn;
         return this;
@@ -16,9 +17,14 @@ public class UpdateCustomRoutingListenerRequest {
     
     @JsonProperty("PortRanges")
     public PortRange[] portRanges;
+
     public UpdateCustomRoutingListenerRequest withPortRanges(PortRange[] portRanges) {
         this.portRanges = portRanges;
         return this;
     }
     
+    public UpdateCustomRoutingListenerRequest(@JsonProperty("ListenerArn") String listenerArn, @JsonProperty("PortRanges") PortRange[] portRanges) {
+        this.listenerArn = listenerArn;
+        this.portRanges = portRanges;
+  }
 }

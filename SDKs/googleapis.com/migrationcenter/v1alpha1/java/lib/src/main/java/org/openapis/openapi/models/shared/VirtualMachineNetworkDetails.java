@@ -18,6 +18,7 @@ public class VirtualMachineNetworkDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultGw")
     public String defaultGw;
+
     public VirtualMachineNetworkDetails withDefaultGw(String defaultGw) {
         this.defaultGw = defaultGw;
         return this;
@@ -29,6 +30,7 @@ public class VirtualMachineNetworkDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkAdapters")
     public NetworkAdapterList networkAdapters;
+
     public VirtualMachineNetworkDetails withNetworkAdapters(NetworkAdapterList networkAdapters) {
         this.networkAdapters = networkAdapters;
         return this;
@@ -40,6 +42,7 @@ public class VirtualMachineNetworkDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryIpAddress")
     public String primaryIpAddress;
+
     public VirtualMachineNetworkDetails withPrimaryIpAddress(String primaryIpAddress) {
         this.primaryIpAddress = primaryIpAddress;
         return this;
@@ -51,6 +54,7 @@ public class VirtualMachineNetworkDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryMacAddress")
     public String primaryMacAddress;
+
     public VirtualMachineNetworkDetails withPrimaryMacAddress(String primaryMacAddress) {
         this.primaryMacAddress = primaryMacAddress;
         return this;
@@ -62,9 +66,11 @@ public class VirtualMachineNetworkDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicIpAddress")
     public String publicIpAddress;
+
     public VirtualMachineNetworkDetails withPublicIpAddress(String publicIpAddress) {
         this.publicIpAddress = publicIpAddress;
         return this;
     }
     
+    public VirtualMachineNetworkDetails(){}
 }

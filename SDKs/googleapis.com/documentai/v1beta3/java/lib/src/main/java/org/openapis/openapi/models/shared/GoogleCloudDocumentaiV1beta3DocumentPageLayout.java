@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingPoly")
     public GoogleCloudDocumentaiV1beta3BoundingPoly boundingPoly;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageLayout withBoundingPoly(GoogleCloudDocumentaiV1beta3BoundingPoly boundingPoly) {
         this.boundingPoly = boundingPoly;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageLayout withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orientation")
     public GoogleCloudDocumentaiV1beta3DocumentPageLayoutOrientationEnum orientation;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageLayout withOrientation(GoogleCloudDocumentaiV1beta3DocumentPageLayoutOrientationEnum orientation) {
         this.orientation = orientation;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textAnchor")
     public GoogleCloudDocumentaiV1beta3DocumentTextAnchor textAnchor;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageLayout withTextAnchor(GoogleCloudDocumentaiV1beta3DocumentTextAnchor textAnchor) {
         this.textAnchor = textAnchor;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3DocumentPageLayout(){}
 }

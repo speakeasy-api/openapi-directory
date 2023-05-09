@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatefulRuleDestinationPorts {
     
     public Long from;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatefulRuleDestinationPorts withFrom(Long from) {
         this.from = from;
         return this;
@@ -19,9 +20,11 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPat
     
     
     public Long to;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatefulRuleDestinationPorts withTo(Long to) {
         this.to = to;
         return this;
     }
     
+    public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatefulRuleDestinationPorts(){}
 }

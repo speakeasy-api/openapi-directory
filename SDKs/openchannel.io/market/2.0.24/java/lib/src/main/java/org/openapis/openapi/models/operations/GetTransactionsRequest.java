@@ -12,6 +12,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetTransactionsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Long pageNumber;
+
     public GetTransactionsRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -32,6 +34,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetTransactionsRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -42,9 +45,11 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetTransactionsRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetTransactionsRequest(){}
 }

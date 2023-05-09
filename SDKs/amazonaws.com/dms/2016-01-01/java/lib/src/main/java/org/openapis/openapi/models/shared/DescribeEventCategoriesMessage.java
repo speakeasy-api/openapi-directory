@@ -15,6 +15,7 @@ public class DescribeEventCategoriesMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public DescribeEventCategoriesMessage withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -23,9 +24,11 @@ public class DescribeEventCategoriesMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public String sourceType;
+
     public DescribeEventCategoriesMessage withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public DescribeEventCategoriesMessage(){}
 }

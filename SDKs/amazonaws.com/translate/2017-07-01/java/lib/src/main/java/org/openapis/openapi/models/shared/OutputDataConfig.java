@@ -18,6 +18,7 @@ public class OutputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionKey")
     public EncryptionKey encryptionKey;
+
     public OutputDataConfig withEncryptionKey(EncryptionKey encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -25,9 +26,13 @@ public class OutputDataConfig {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public OutputDataConfig withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public OutputDataConfig(@JsonProperty("S3Uri") String s3Uri) {
+        this.s3Uri = s3Uri;
+  }
 }

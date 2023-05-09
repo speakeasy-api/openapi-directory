@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Getfeedorderstatus1Request {
@@ -12,6 +13,7 @@ public class Getfeedorderstatus1Request {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public Getfeedorderstatus1Request withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class Getfeedorderstatus1Request {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public Getfeedorderstatus1Request withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class Getfeedorderstatus1Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlot")
     public String maxlot;
+
     public Getfeedorderstatus1Request withMaxlot(String maxlot) {
         this.maxlot = maxlot;
         return this;
     }
     
+    public Getfeedorderstatus1Request(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("maxlot") String maxlot) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.maxlot = maxlot;
+  }
 }

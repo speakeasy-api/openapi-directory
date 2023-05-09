@@ -15,6 +15,7 @@ public class EntityId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public EntityId withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -23,9 +24,11 @@ public class EntityId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public EntityTypeEnum entityType;
+
     public EntityId withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
     }
     
+    public EntityId(){}
 }

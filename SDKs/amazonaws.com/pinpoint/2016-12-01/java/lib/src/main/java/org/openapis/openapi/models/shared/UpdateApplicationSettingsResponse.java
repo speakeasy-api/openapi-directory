@@ -15,9 +15,13 @@ public class UpdateApplicationSettingsResponse {
      */
     @JsonProperty("ApplicationSettingsResource")
     public ApplicationSettingsResource applicationSettingsResource;
+
     public UpdateApplicationSettingsResponse withApplicationSettingsResource(ApplicationSettingsResource applicationSettingsResource) {
         this.applicationSettingsResource = applicationSettingsResource;
         return this;
     }
     
+    public UpdateApplicationSettingsResponse(@JsonProperty("ApplicationSettingsResource") ApplicationSettingsResource applicationSettingsResource) {
+        this.applicationSettingsResource = applicationSettingsResource;
+  }
 }

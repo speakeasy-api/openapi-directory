@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDetectEntitiesRequest {
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public BatchDetectEntitiesRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -16,9 +17,14 @@ public class BatchDetectEntitiesRequest {
     
     @JsonProperty("TextList")
     public String[] textList;
+
     public BatchDetectEntitiesRequest withTextList(String[] textList) {
         this.textList = textList;
         return this;
     }
     
+    public BatchDetectEntitiesRequest(@JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("TextList") String[] textList) {
+        this.languageCode = languageCode;
+        this.textList = textList;
+  }
 }

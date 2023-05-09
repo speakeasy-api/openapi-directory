@@ -15,6 +15,7 @@ public class NifBasic200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyName")
     public String companyName;
+
     public NifBasic200ApplicationJSON withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -22,6 +23,7 @@ public class NifBasic200ApplicationJSON {
     
     @JsonProperty("confidenceScore")
     public Double confidenceScore;
+
     public NifBasic200ApplicationJSON withConfidenceScore(Double confidenceScore) {
         this.confidenceScore = confidenceScore;
         return this;
@@ -29,6 +31,7 @@ public class NifBasic200ApplicationJSON {
     
     @JsonProperty("nifNumber")
     public Double nifNumber;
+
     public NifBasic200ApplicationJSON withNifNumber(Double nifNumber) {
         this.nifNumber = nifNumber;
         return this;
@@ -36,9 +39,15 @@ public class NifBasic200ApplicationJSON {
     
     @JsonProperty("validationStatus")
     public Boolean validationStatus;
+
     public NifBasic200ApplicationJSON withValidationStatus(Boolean validationStatus) {
         this.validationStatus = validationStatus;
         return this;
     }
     
+    public NifBasic200ApplicationJSON(@JsonProperty("confidenceScore") Double confidenceScore, @JsonProperty("nifNumber") Double nifNumber, @JsonProperty("validationStatus") Boolean validationStatus) {
+        this.confidenceScore = confidenceScore;
+        this.nifNumber = nifNumber;
+        this.validationStatus = validationStatus;
+  }
 }

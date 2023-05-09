@@ -16,6 +16,7 @@ public class RegisterDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_name")
     public String domainName;
+
     public RegisterDomain withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -27,6 +28,7 @@ public class RegisterDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name_servers")
     public String[] nameServers;
+
     public RegisterDomain withNameServers(String[] nameServers) {
         this.nameServers = nameServers;
         return this;
@@ -35,9 +37,11 @@ public class RegisterDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrant")
     public RegistrantInput registrant;
+
     public RegisterDomain withRegistrant(RegistrantInput registrant) {
         this.registrant = registrant;
         return this;
     }
     
+    public RegisterDomain(){}
 }

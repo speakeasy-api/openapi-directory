@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Header {
     @JsonProperty("Destination")
     public String destination;
+
     public Header withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -19,6 +20,7 @@ public class Header {
     
     @JsonProperty("DestinationPort")
     public String destinationPort;
+
     public Header withDestinationPort(String destinationPort) {
         this.destinationPort = destinationPort;
         return this;
@@ -26,6 +28,7 @@ public class Header {
     
     @JsonProperty("Direction")
     public StatefulRuleDirectionEnum direction;
+
     public Header withDirection(StatefulRuleDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -33,6 +36,7 @@ public class Header {
     
     @JsonProperty("Protocol")
     public StatefulRuleProtocolEnum protocol;
+
     public Header withProtocol(StatefulRuleProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -40,6 +44,7 @@ public class Header {
     
     @JsonProperty("Source")
     public String source;
+
     public Header withSource(String source) {
         this.source = source;
         return this;
@@ -47,9 +52,18 @@ public class Header {
     
     @JsonProperty("SourcePort")
     public String sourcePort;
+
     public Header withSourcePort(String sourcePort) {
         this.sourcePort = sourcePort;
         return this;
     }
     
+    public Header(@JsonProperty("Destination") String destination, @JsonProperty("DestinationPort") String destinationPort, @JsonProperty("Direction") StatefulRuleDirectionEnum direction, @JsonProperty("Protocol") StatefulRuleProtocolEnum protocol, @JsonProperty("Source") String source, @JsonProperty("SourcePort") String sourcePort) {
+        this.destination = destination;
+        this.destinationPort = destinationPort;
+        this.direction = direction;
+        this.protocol = protocol;
+        this.source = source;
+        this.sourcePort = sourcePort;
+  }
 }

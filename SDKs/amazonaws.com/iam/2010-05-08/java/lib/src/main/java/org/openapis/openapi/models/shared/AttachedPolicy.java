@@ -15,6 +15,7 @@ public class AttachedPolicy {
      */
     
     public String policyArn;
+
     public AttachedPolicy withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -22,9 +23,11 @@ public class AttachedPolicy {
     
     
     public String policyName;
+
     public AttachedPolicy withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public AttachedPolicy(){}
 }

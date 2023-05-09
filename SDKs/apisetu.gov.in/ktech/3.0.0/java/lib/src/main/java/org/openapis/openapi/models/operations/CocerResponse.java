@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CocerResponse {
     
     public String contentType;
+
     public CocerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CocerResponse {
     
     
     public Integer statusCode;
+
     public CocerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CocerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CocerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CocerResponse {
      */
     
     public Cocer400ApplicationJSON cocer400ApplicationJSONObject;
+
     public CocerResponse withCocer400ApplicationJSONObject(Cocer400ApplicationJSON cocer400ApplicationJSONObject) {
         this.cocer400ApplicationJSONObject = cocer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CocerResponse {
      */
     
     public Cocer401ApplicationJSON cocer401ApplicationJSONObject;
+
     public CocerResponse withCocer401ApplicationJSONObject(Cocer401ApplicationJSON cocer401ApplicationJSONObject) {
         this.cocer401ApplicationJSONObject = cocer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CocerResponse {
      */
     
     public Cocer404ApplicationJSON cocer404ApplicationJSONObject;
+
     public CocerResponse withCocer404ApplicationJSONObject(Cocer404ApplicationJSON cocer404ApplicationJSONObject) {
         this.cocer404ApplicationJSONObject = cocer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CocerResponse {
      */
     
     public Cocer500ApplicationJSON cocer500ApplicationJSONObject;
+
     public CocerResponse withCocer500ApplicationJSONObject(Cocer500ApplicationJSON cocer500ApplicationJSONObject) {
         this.cocer500ApplicationJSONObject = cocer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class CocerResponse {
      */
     
     public Cocer502ApplicationJSON cocer502ApplicationJSONObject;
+
     public CocerResponse withCocer502ApplicationJSONObject(Cocer502ApplicationJSON cocer502ApplicationJSONObject) {
         this.cocer502ApplicationJSONObject = cocer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class CocerResponse {
      */
     
     public Cocer503ApplicationJSON cocer503ApplicationJSONObject;
+
     public CocerResponse withCocer503ApplicationJSONObject(Cocer503ApplicationJSON cocer503ApplicationJSONObject) {
         this.cocer503ApplicationJSONObject = cocer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class CocerResponse {
      */
     
     public Cocer504ApplicationJSON cocer504ApplicationJSONObject;
+
     public CocerResponse withCocer504ApplicationJSONObject(Cocer504ApplicationJSON cocer504ApplicationJSONObject) {
         this.cocer504ApplicationJSONObject = cocer504ApplicationJSONObject;
         return this;
     }
     
+    public CocerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

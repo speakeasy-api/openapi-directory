@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourceResponse {
@@ -12,6 +13,7 @@ public class GetResourceResponse {
      */
     
     public Object alreadyExistsException;
+
     public GetResourceResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -19,6 +21,7 @@ public class GetResourceResponse {
     
     
     public String contentType;
+
     public GetResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetResourceResponse {
      */
     
     public Object generalServiceException;
+
     public GetResourceResponse withGeneralServiceException(Object generalServiceException) {
         this.generalServiceException = generalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class GetResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResourceOutput getResourceOutput;
+
     public GetResourceResponse withGetResourceOutput(org.openapis.openapi.models.shared.GetResourceOutput getResourceOutput) {
         this.getResourceOutput = getResourceOutput;
         return this;
@@ -49,6 +54,7 @@ public class GetResourceResponse {
      */
     
     public Object handlerFailureException;
+
     public GetResourceResponse withHandlerFailureException(Object handlerFailureException) {
         this.handlerFailureException = handlerFailureException;
         return this;
@@ -59,6 +65,7 @@ public class GetResourceResponse {
      */
     
     public Object handlerInternalFailureException;
+
     public GetResourceResponse withHandlerInternalFailureException(Object handlerInternalFailureException) {
         this.handlerInternalFailureException = handlerInternalFailureException;
         return this;
@@ -69,6 +76,7 @@ public class GetResourceResponse {
      */
     
     public Object invalidCredentialsException;
+
     public GetResourceResponse withInvalidCredentialsException(Object invalidCredentialsException) {
         this.invalidCredentialsException = invalidCredentialsException;
         return this;
@@ -79,6 +87,7 @@ public class GetResourceResponse {
      */
     
     public Object invalidRequestException;
+
     public GetResourceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -89,6 +98,7 @@ public class GetResourceResponse {
      */
     
     public Object networkFailureException;
+
     public GetResourceResponse withNetworkFailureException(Object networkFailureException) {
         this.networkFailureException = networkFailureException;
         return this;
@@ -99,6 +109,7 @@ public class GetResourceResponse {
      */
     
     public Object notStabilizedException;
+
     public GetResourceResponse withNotStabilizedException(Object notStabilizedException) {
         this.notStabilizedException = notStabilizedException;
         return this;
@@ -109,6 +120,7 @@ public class GetResourceResponse {
      */
     
     public Object notUpdatableException;
+
     public GetResourceResponse withNotUpdatableException(Object notUpdatableException) {
         this.notUpdatableException = notUpdatableException;
         return this;
@@ -119,6 +131,7 @@ public class GetResourceResponse {
      */
     
     public Object privateTypeException;
+
     public GetResourceResponse withPrivateTypeException(Object privateTypeException) {
         this.privateTypeException = privateTypeException;
         return this;
@@ -129,6 +142,7 @@ public class GetResourceResponse {
      */
     
     public Object resourceConflictException;
+
     public GetResourceResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -139,6 +153,7 @@ public class GetResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -149,6 +164,7 @@ public class GetResourceResponse {
      */
     
     public Object serviceInternalErrorException;
+
     public GetResourceResponse withServiceInternalErrorException(Object serviceInternalErrorException) {
         this.serviceInternalErrorException = serviceInternalErrorException;
         return this;
@@ -159,6 +175,7 @@ public class GetResourceResponse {
      */
     
     public Object serviceLimitExceededException;
+
     public GetResourceResponse withServiceLimitExceededException(Object serviceLimitExceededException) {
         this.serviceLimitExceededException = serviceLimitExceededException;
         return this;
@@ -166,6 +183,7 @@ public class GetResourceResponse {
     
     
     public Integer statusCode;
+
     public GetResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -173,6 +191,7 @@ public class GetResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -183,6 +202,7 @@ public class GetResourceResponse {
      */
     
     public Object throttlingException;
+
     public GetResourceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -193,6 +213,7 @@ public class GetResourceResponse {
      */
     
     public Object typeNotFoundException;
+
     public GetResourceResponse withTypeNotFoundException(Object typeNotFoundException) {
         this.typeNotFoundException = typeNotFoundException;
         return this;
@@ -203,9 +224,14 @@ public class GetResourceResponse {
      */
     
     public Object unsupportedActionException;
+
     public GetResourceResponse withUnsupportedActionException(Object unsupportedActionException) {
         this.unsupportedActionException = unsupportedActionException;
         return this;
     }
     
+    public GetResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

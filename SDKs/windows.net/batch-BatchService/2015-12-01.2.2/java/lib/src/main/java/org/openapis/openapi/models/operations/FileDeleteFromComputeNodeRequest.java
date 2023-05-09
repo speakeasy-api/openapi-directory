@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileDeleteFromComputeNodeRequest {
@@ -12,6 +13,7 @@ public class FileDeleteFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public FileDeleteFromComputeNodeRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -22,6 +24,7 @@ public class FileDeleteFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public FileDeleteFromComputeNodeRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -32,6 +35,7 @@ public class FileDeleteFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileName")
     public String fileName;
+
     public FileDeleteFromComputeNodeRequest withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -42,6 +46,7 @@ public class FileDeleteFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nodeId")
     public String nodeId;
+
     public FileDeleteFromComputeNodeRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -52,6 +57,7 @@ public class FileDeleteFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public FileDeleteFromComputeNodeRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -62,6 +68,7 @@ public class FileDeleteFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
     public String poolId;
+
     public FileDeleteFromComputeNodeRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -72,6 +79,7 @@ public class FileDeleteFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
     public Boolean recursive;
+
     public FileDeleteFromComputeNodeRequest withRecursive(Boolean recursive) {
         this.recursive = recursive;
         return this;
@@ -82,6 +90,7 @@ public class FileDeleteFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public FileDeleteFromComputeNodeRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -92,9 +101,16 @@ public class FileDeleteFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public FileDeleteFromComputeNodeRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public FileDeleteFromComputeNodeRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("fileName") String fileName, @JsonProperty("nodeId") String nodeId, @JsonProperty("poolId") String poolId) {
+        this.apiVersion = apiVersion;
+        this.fileName = fileName;
+        this.nodeId = nodeId;
+        this.poolId = poolId;
+  }
 }

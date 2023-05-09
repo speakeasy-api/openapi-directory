@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetVSMAccountSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
     public org.openapis.openapi.models.shared.SchemeBasicAuth basicAuth;
+
     public GetVSMAccountSecurity withBasicAuth(org.openapis.openapi.models.shared.SchemeBasicAuth basicAuth) {
         this.basicAuth = basicAuth;
         return this;
@@ -16,9 +17,11 @@ public class GetVSMAccountSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
     public String bearerAuth;
+
     public GetVSMAccountSecurity withBearerAuth(String bearerAuth) {
         this.bearerAuth = bearerAuth;
         return this;
     }
     
+    public GetVSMAccountSecurity(){}
 }

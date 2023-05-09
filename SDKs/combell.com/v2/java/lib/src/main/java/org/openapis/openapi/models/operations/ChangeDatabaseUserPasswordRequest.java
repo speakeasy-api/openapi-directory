@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeDatabaseUserPasswordRequest {
@@ -12,6 +13,7 @@ public class ChangeDatabaseUserPasswordRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateUserPasswordRequest updateUserPasswordRequest;
+
     public ChangeDatabaseUserPasswordRequest withUpdateUserPasswordRequest(org.openapis.openapi.models.shared.UpdateUserPasswordRequest updateUserPasswordRequest) {
         this.updateUserPasswordRequest = updateUserPasswordRequest;
         return this;
@@ -22,6 +24,7 @@ public class ChangeDatabaseUserPasswordRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=databaseName")
     public String databaseNamePathParameter;
+
     public ChangeDatabaseUserPasswordRequest withDatabaseNamePathParameter(String databaseNamePathParameter) {
         this.databaseNamePathParameter = databaseNamePathParameter;
         return this;
@@ -32,6 +35,7 @@ public class ChangeDatabaseUserPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=database_name")
     public String databaseNameQueryParameter;
+
     public ChangeDatabaseUserPasswordRequest withDatabaseNameQueryParameter(String databaseNameQueryParameter) {
         this.databaseNameQueryParameter = databaseNameQueryParameter;
         return this;
@@ -42,6 +46,7 @@ public class ChangeDatabaseUserPasswordRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userName")
     public String userNamePathParameter;
+
     public ChangeDatabaseUserPasswordRequest withUserNamePathParameter(String userNamePathParameter) {
         this.userNamePathParameter = userNamePathParameter;
         return this;
@@ -52,9 +57,16 @@ public class ChangeDatabaseUserPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_name")
     public String userNameQueryParameter;
+
     public ChangeDatabaseUserPasswordRequest withUserNameQueryParameter(String userNameQueryParameter) {
         this.userNameQueryParameter = userNameQueryParameter;
         return this;
     }
     
+    public ChangeDatabaseUserPasswordRequest(@JsonProperty("databaseNamePathParameter") String databaseNamePathParameter, @JsonProperty("database_nameQueryParameter") String databaseNameQueryParameter, @JsonProperty("userNamePathParameter") String userNamePathParameter, @JsonProperty("user_nameQueryParameter") String userNameQueryParameter) {
+        this.databaseNamePathParameter = databaseNamePathParameter;
+        this.databaseNameQueryParameter = databaseNameQueryParameter;
+        this.userNamePathParameter = userNamePathParameter;
+        this.userNameQueryParameter = userNameQueryParameter;
+  }
 }

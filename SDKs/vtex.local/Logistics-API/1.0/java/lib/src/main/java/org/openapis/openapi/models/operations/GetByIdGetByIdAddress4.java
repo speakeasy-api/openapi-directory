@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetByIdGetByIdAddress4 {
     @JsonProperty("city")
     public String city;
+
     public GetByIdGetByIdAddress4 withCity(String city) {
         this.city = city;
         return this;
@@ -16,6 +17,7 @@ public class GetByIdGetByIdAddress4 {
     
     @JsonProperty("complement")
     public String complement;
+
     public GetByIdGetByIdAddress4 withComplement(String complement) {
         this.complement = complement;
         return this;
@@ -23,6 +25,7 @@ public class GetByIdGetByIdAddress4 {
     
     @JsonProperty("country")
     public GetByIdGetByIdAddress4Country country;
+
     public GetByIdGetByIdAddress4 withCountry(GetByIdGetByIdAddress4Country country) {
         this.country = country;
         return this;
@@ -30,6 +33,7 @@ public class GetByIdGetByIdAddress4 {
     
     @JsonProperty("location")
     public GetByIdGetByIdAddress4Location5 location;
+
     public GetByIdGetByIdAddress4 withLocation(GetByIdGetByIdAddress4Location5 location) {
         this.location = location;
         return this;
@@ -37,6 +41,7 @@ public class GetByIdGetByIdAddress4 {
     
     @JsonProperty("neighborhood")
     public String neighborhood;
+
     public GetByIdGetByIdAddress4 withNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
         return this;
@@ -44,6 +49,7 @@ public class GetByIdGetByIdAddress4 {
     
     @JsonProperty("number")
     public String number;
+
     public GetByIdGetByIdAddress4 withNumber(String number) {
         this.number = number;
         return this;
@@ -51,6 +57,7 @@ public class GetByIdGetByIdAddress4 {
     
     @JsonProperty("postalCode")
     public String postalCode;
+
     public GetByIdGetByIdAddress4 withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -58,6 +65,7 @@ public class GetByIdGetByIdAddress4 {
     
     @JsonProperty("state")
     public String state;
+
     public GetByIdGetByIdAddress4 withState(String state) {
         this.state = state;
         return this;
@@ -65,9 +73,21 @@ public class GetByIdGetByIdAddress4 {
     
     @JsonProperty("street")
     public String street;
+
     public GetByIdGetByIdAddress4 withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public GetByIdGetByIdAddress4(@JsonProperty("city") String city, @JsonProperty("complement") String complement, @JsonProperty("country") GetByIdGetByIdAddress4Country country, @JsonProperty("location") GetByIdGetByIdAddress4Location5 location, @JsonProperty("neighborhood") String neighborhood, @JsonProperty("number") String number, @JsonProperty("postalCode") String postalCode, @JsonProperty("state") String state, @JsonProperty("street") String street) {
+        this.city = city;
+        this.complement = complement;
+        this.country = country;
+        this.location = location;
+        this.neighborhood = neighborhood;
+        this.number = number;
+        this.postalCode = postalCode;
+        this.state = state;
+        this.street = street;
+  }
 }

@@ -9,8 +9,18 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateComponentInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientToken")
+    public String clientToken;
+
+    public UpdateComponentInput withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    
     @JsonProperty("deploymentType")
     public ComponentDeploymentUpdateTypeEnum deploymentType;
+
     public UpdateComponentInput withDeploymentType(ComponentDeploymentUpdateTypeEnum deploymentType) {
         this.deploymentType = deploymentType;
         return this;
@@ -19,6 +29,7 @@ public class UpdateComponentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateComponentInput withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +37,7 @@ public class UpdateComponentInput {
     
     @JsonProperty("name")
     public String name;
+
     public UpdateComponentInput withName(String name) {
         this.name = name;
         return this;
@@ -34,6 +46,7 @@ public class UpdateComponentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceInstanceName")
     public String serviceInstanceName;
+
     public UpdateComponentInput withServiceInstanceName(String serviceInstanceName) {
         this.serviceInstanceName = serviceInstanceName;
         return this;
@@ -42,6 +55,7 @@ public class UpdateComponentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public UpdateComponentInput withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -50,6 +64,7 @@ public class UpdateComponentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceSpec")
     public String serviceSpec;
+
     public UpdateComponentInput withServiceSpec(String serviceSpec) {
         this.serviceSpec = serviceSpec;
         return this;
@@ -58,9 +73,14 @@ public class UpdateComponentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateFile")
     public String templateFile;
+
     public UpdateComponentInput withTemplateFile(String templateFile) {
         this.templateFile = templateFile;
         return this;
     }
     
+    public UpdateComponentInput(@JsonProperty("deploymentType") ComponentDeploymentUpdateTypeEnum deploymentType, @JsonProperty("name") String name) {
+        this.deploymentType = deploymentType;
+        this.name = name;
+  }
 }

@@ -12,6 +12,7 @@ public class PostClientsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=config")
     public String config;
+
     public PostClientsRequestBody withConfig(String config) {
         this.config = config;
         return this;
@@ -22,6 +23,7 @@ public class PostClientsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=generate_keys")
     public Boolean generateKeys;
+
     public PostClientsRequestBody withGenerateKeys(Boolean generateKeys) {
         this.generateKeys = generateKeys;
         return this;
@@ -32,6 +34,7 @@ public class PostClientsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PostClientsRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +45,11 @@ public class PostClientsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=redirect_uris")
     public String redirectUris;
+
     public PostClientsRequestBody withRedirectUris(String redirectUris) {
         this.redirectUris = redirectUris;
         return this;
     }
     
+    public PostClientsRequestBody(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnumApiGetOrderStatesResponse {
     
     public String contentType;
+
     public EnumApiGetOrderStatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EnumApiGetOrderStatesResponse {
      */
     
     public java.util.Map<String, Object> enumApiGetOrderStates200ApplicationJSONObject;
+
     public EnumApiGetOrderStatesResponse withEnumApiGetOrderStates200ApplicationJSONObject(java.util.Map<String, Object> enumApiGetOrderStates200ApplicationJSONObject) {
         this.enumApiGetOrderStates200ApplicationJSONObject = enumApiGetOrderStates200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class EnumApiGetOrderStatesResponse {
      */
     
     public java.util.Map<String, Object> enumApiGetOrderStates200TextJSONObject;
+
     public EnumApiGetOrderStatesResponse withEnumApiGetOrderStates200TextJSONObject(java.util.Map<String, Object> enumApiGetOrderStates200TextJSONObject) {
         this.enumApiGetOrderStates200TextJSONObject = enumApiGetOrderStates200TextJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class EnumApiGetOrderStatesResponse {
     
     
     public Integer statusCode;
+
     public EnumApiGetOrderStatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class EnumApiGetOrderStatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnumApiGetOrderStatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EnumApiGetOrderStatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

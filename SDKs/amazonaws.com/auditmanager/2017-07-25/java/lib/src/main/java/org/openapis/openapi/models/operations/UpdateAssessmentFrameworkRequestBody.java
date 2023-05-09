@@ -15,6 +15,7 @@ public class UpdateAssessmentFrameworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceType")
     public String complianceType;
+
     public UpdateAssessmentFrameworkRequestBody withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -25,6 +26,7 @@ public class UpdateAssessmentFrameworkRequestBody {
      */
     @JsonProperty("controlSets")
     public org.openapis.openapi.models.shared.UpdateAssessmentFrameworkControlSet[] controlSets;
+
     public UpdateAssessmentFrameworkRequestBody withControlSets(org.openapis.openapi.models.shared.UpdateAssessmentFrameworkControlSet[] controlSets) {
         this.controlSets = controlSets;
         return this;
@@ -36,6 +38,7 @@ public class UpdateAssessmentFrameworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateAssessmentFrameworkRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -46,9 +49,14 @@ public class UpdateAssessmentFrameworkRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public UpdateAssessmentFrameworkRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateAssessmentFrameworkRequestBody(@JsonProperty("controlSets") org.openapis.openapi.models.shared.UpdateAssessmentFrameworkControlSet[] controlSets, @JsonProperty("name") String name) {
+        this.controlSets = controlSets;
+        this.name = name;
+  }
 }

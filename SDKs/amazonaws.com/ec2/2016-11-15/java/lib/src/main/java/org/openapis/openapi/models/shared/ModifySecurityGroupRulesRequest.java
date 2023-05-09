@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifySecurityGroupRulesRequest {
     
     public Boolean dryRun;
+
     public ModifySecurityGroupRulesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class ModifySecurityGroupRulesRequest {
     
     
     public String groupId;
+
     public ModifySecurityGroupRulesRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -23,9 +25,14 @@ public class ModifySecurityGroupRulesRequest {
     
     
     public ModifySecurityGroupRulesRequestSecurityGroupRules[] securityGroupRules;
+
     public ModifySecurityGroupRulesRequest withSecurityGroupRules(ModifySecurityGroupRulesRequestSecurityGroupRules[] securityGroupRules) {
         this.securityGroupRules = securityGroupRules;
         return this;
     }
     
+    public ModifySecurityGroupRulesRequest(@JsonProperty("GroupId") String groupId, @JsonProperty("SecurityGroupRules") ModifySecurityGroupRulesRequestSecurityGroupRules[] securityGroupRules) {
+        this.groupId = groupId;
+        this.securityGroupRules = securityGroupRules;
+  }
 }

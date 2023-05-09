@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2RemoveCatalogAttributeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleCloudRetailV2RemoveCatalogAttributeRequest withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public GoogleCloudRetailV2RemoveCatalogAttributeRequest(){}
 }

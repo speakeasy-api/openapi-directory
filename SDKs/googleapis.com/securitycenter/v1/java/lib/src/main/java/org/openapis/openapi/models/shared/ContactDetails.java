@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ContactDetails - The details pertaining to specific contacts
+ * ContactDetails - Details about specific contacts
  */
 public class ContactDetails {
     /**
@@ -18,9 +18,11 @@ public class ContactDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     public Contact[] contacts;
+
     public ContactDetails withContacts(Contact[] contacts) {
         this.contacts = contacts;
         return this;
     }
     
+    public ContactDetails(){}
 }

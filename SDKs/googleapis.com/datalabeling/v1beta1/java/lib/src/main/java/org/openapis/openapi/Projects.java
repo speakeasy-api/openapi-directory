@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatalabelingV1beta1AnnotationSpecSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsListResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatalabelingV1beta1ListAnnotationSpecSetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatalabelingV1beta1ListExamplesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatalabelingV1beta1ListFeedbackMessagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatalabelingV1beta1ListFeedbackThreadsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -340,11 +328,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatalabelingV1beta1ListAnnotatedDatasetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsCreateResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsCreateResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsCreateResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatalabelingV1beta1Dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -434,11 +418,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsDataItemsListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsDataItemsListResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsDataItemsListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsDataItemsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatalabelingV1beta1ListDataItemsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,11 +464,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatalabelingV1beta1SearchExampleComparisonsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -530,11 +510,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsExportDataResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsExportDataResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsExportDataResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsExportDataResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImageLabelResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImageLabelResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImageLabelResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImageLabelResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImportDataResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImportDataResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImportDataResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImportDataResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,11 +646,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsListResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatalabelingV1beta1ListDatasetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -720,11 +692,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsTextLabelResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsTextLabelResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsTextLabelResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsTextLabelResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -768,11 +738,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsVideoLabelResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsVideoLabelResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsVideoLabelResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsVideoLabelResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -816,11 +784,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsCreateResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsCreateResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsCreateResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatalabelingV1beta1EvaluationJob = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -862,11 +828,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsListResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatalabelingV1beta1ListEvaluationJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -910,11 +874,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPatchResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPatchResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPatchResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatalabelingV1beta1EvaluationJob = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -958,11 +920,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPauseResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPauseResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPauseResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPauseResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1006,11 +966,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsResumeResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsResumeResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsResumeResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsResumeResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1052,11 +1010,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationsSearchResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationsSearchResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationsSearchResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationsSearchResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatalabelingV1beta1SearchEvaluationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1100,11 +1056,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsCreateResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsCreateResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsCreateResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1146,11 +1100,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsListResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatalabelingV1beta1ListInstructionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1192,11 +1144,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1238,11 +1188,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1284,11 +1232,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1303,7 +1249,7 @@ public class Projects {
     }
 
     /**
-     * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/* /operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+     * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -1330,11 +1276,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatalabelingProjectsOperationsListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.DatalabelingProjectsOperationsListResponse res = new org.openapis.openapi.models.operations.DatalabelingProjectsOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

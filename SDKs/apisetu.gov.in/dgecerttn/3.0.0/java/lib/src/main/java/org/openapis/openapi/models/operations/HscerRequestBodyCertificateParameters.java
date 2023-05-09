@@ -12,6 +12,7 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("CertificateType")
     public String certificateType;
+
     public HscerRequestBodyCertificateParameters withCertificateType(String certificateType) {
         this.certificateType = certificateType;
         return this;
@@ -22,6 +23,7 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public HscerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -32,6 +34,7 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public HscerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -42,6 +45,7 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("RROLL")
     public String rroll;
+
     public HscerRequestBodyCertificateParameters withRroll(String rroll) {
         this.rroll = rroll;
         return this;
@@ -52,6 +56,7 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("month")
     public String month;
+
     public HscerRequestBodyCertificateParameters withMonth(String month) {
         this.month = month;
         return this;
@@ -62,9 +67,18 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("year")
     public String year;
+
     public HscerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public HscerRequestBodyCertificateParameters(@JsonProperty("CertificateType") String certificateType, @JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("RROLL") String rroll, @JsonProperty("month") String month, @JsonProperty("year") String year) {
+        this.certificateType = certificateType;
+        this.dob = dob;
+        this.fullName = fullName;
+        this.rroll = rroll;
+        this.month = month;
+        this.year = year;
+  }
 }

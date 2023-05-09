@@ -18,6 +18,7 @@ public class InputFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GcsInputSource gcsSource;
+
     public InputFile withGcsSource(GcsInputSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
@@ -29,9 +30,11 @@ public class InputFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public String usage;
+
     public InputFile withUsage(String usage) {
         this.usage = usage;
         return this;
     }
     
+    public InputFile(){}
 }

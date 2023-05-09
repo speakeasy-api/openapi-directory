@@ -14,6 +14,7 @@ public class UpdateDetectorModelRequestBody {
      */
     @JsonProperty("detectorModelDefinition")
     public UpdateDetectorModelRequestBodyDetectorModelDefinition detectorModelDefinition;
+
     public UpdateDetectorModelRequestBody withDetectorModelDefinition(UpdateDetectorModelRequestBodyDetectorModelDefinition detectorModelDefinition) {
         this.detectorModelDefinition = detectorModelDefinition;
         return this;
@@ -25,6 +26,7 @@ public class UpdateDetectorModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorModelDescription")
     public String detectorModelDescription;
+
     public UpdateDetectorModelRequestBody withDetectorModelDescription(String detectorModelDescription) {
         this.detectorModelDescription = detectorModelDescription;
         return this;
@@ -36,6 +38,7 @@ public class UpdateDetectorModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationMethod")
     public UpdateDetectorModelRequestBodyEvaluationMethodEnum evaluationMethod;
+
     public UpdateDetectorModelRequestBody withEvaluationMethod(UpdateDetectorModelRequestBodyEvaluationMethodEnum evaluationMethod) {
         this.evaluationMethod = evaluationMethod;
         return this;
@@ -46,9 +49,14 @@ public class UpdateDetectorModelRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public UpdateDetectorModelRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public UpdateDetectorModelRequestBody(@JsonProperty("detectorModelDefinition") UpdateDetectorModelRequestBodyDetectorModelDefinition detectorModelDefinition, @JsonProperty("roleArn") String roleArn) {
+        this.detectorModelDefinition = detectorModelDefinition;
+        this.roleArn = roleArn;
+  }
 }

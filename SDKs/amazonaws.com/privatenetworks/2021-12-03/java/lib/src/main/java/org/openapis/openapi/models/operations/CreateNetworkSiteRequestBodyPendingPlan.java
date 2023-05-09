@@ -15,6 +15,7 @@ public class CreateNetworkSiteRequestBodyPendingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public org.openapis.openapi.models.shared.NameValuePair[] options;
+
     public CreateNetworkSiteRequestBodyPendingPlan withOptions(org.openapis.openapi.models.shared.NameValuePair[] options) {
         this.options = options;
         return this;
@@ -23,9 +24,11 @@ public class CreateNetworkSiteRequestBodyPendingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceDefinitions")
     public org.openapis.openapi.models.shared.NetworkResourceDefinition[] resourceDefinitions;
+
     public CreateNetworkSiteRequestBodyPendingPlan withResourceDefinitions(org.openapis.openapi.models.shared.NetworkResourceDefinition[] resourceDefinitions) {
         this.resourceDefinitions = resourceDefinitions;
         return this;
     }
     
+    public CreateNetworkSiteRequestBodyPendingPlan(){}
 }

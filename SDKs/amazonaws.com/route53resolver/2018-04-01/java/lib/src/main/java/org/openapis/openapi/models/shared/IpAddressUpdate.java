@@ -15,6 +15,7 @@ public class IpAddressUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ip")
     public String ip;
+
     public IpAddressUpdate withIp(String ip) {
         this.ip = ip;
         return this;
@@ -23,6 +24,7 @@ public class IpAddressUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpId")
     public String ipId;
+
     public IpAddressUpdate withIpId(String ipId) {
         this.ipId = ipId;
         return this;
@@ -31,6 +33,7 @@ public class IpAddressUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv6")
     public String ipv6;
+
     public IpAddressUpdate withIpv6(String ipv6) {
         this.ipv6 = ipv6;
         return this;
@@ -39,9 +42,11 @@ public class IpAddressUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public IpAddressUpdate withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public IpAddressUpdate(){}
 }

@@ -18,6 +18,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alertConfigs")
     public EnterpriseCrmEventbusProtoTaskAlertConfig[] alertConfigs;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withAlertConfigs(EnterpriseCrmEventbusProtoTaskAlertConfig[] alertConfigs) {
         this.alertConfigs = alertConfigs;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorEmail")
     public String creatorEmail;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withCreatorEmail(String creatorEmail) {
         this.creatorEmail = creatorEmail;
         return this;
@@ -51,6 +54,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableStrictTypeValidation")
     public Boolean disableStrictTypeValidation;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withDisableStrictTypeValidation(Boolean disableStrictTypeValidation) {
         this.disableStrictTypeValidation = disableStrictTypeValidation;
         return this;
@@ -73,6 +78,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCatcherId")
     public String errorCatcherId;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withErrorCatcherId(String errorCatcherId) {
         this.errorCatcherId = errorCatcherId;
         return this;
@@ -81,6 +87,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalTaskType")
     public EnterpriseCrmFrontendsEventbusProtoTaskConfigExternalTaskTypeEnum externalTaskType;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withExternalTaskType(EnterpriseCrmFrontendsEventbusProtoTaskConfigExternalTaskTypeEnum externalTaskType) {
         this.externalTaskType = externalTaskType;
         return this;
@@ -92,6 +99,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failurePolicy")
     public EnterpriseCrmEventbusProtoFailurePolicy failurePolicy;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withFailurePolicy(EnterpriseCrmEventbusProtoFailurePolicy failurePolicy) {
         this.failurePolicy = failurePolicy;
         return this;
@@ -103,6 +111,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incomingEdgeCount")
     public Integer incomingEdgeCount;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withIncomingEdgeCount(Integer incomingEdgeCount) {
         this.incomingEdgeCount = incomingEdgeCount;
         return this;
@@ -114,6 +123,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonValidationOption")
     public EnterpriseCrmFrontendsEventbusProtoTaskConfigJsonValidationOptionEnum jsonValidationOption;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withJsonValidationOption(EnterpriseCrmFrontendsEventbusProtoTaskConfigJsonValidationOptionEnum jsonValidationOption) {
         this.jsonValidationOption = jsonValidationOption;
         return this;
@@ -125,6 +135,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withLabel(String label) {
         this.label = label;
         return this;
@@ -136,6 +147,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedTime")
     public String lastModifiedTime;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withLastModifiedTime(String lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -147,6 +159,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextTasks")
     public EnterpriseCrmEventbusProtoNextTask[] nextTasks;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withNextTasks(EnterpriseCrmEventbusProtoNextTask[] nextTasks) {
         this.nextTasks = nextTasks;
         return this;
@@ -158,6 +171,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextTasksExecutionPolicy")
     public EnterpriseCrmFrontendsEventbusProtoTaskConfigNextTasksExecutionPolicyEnum nextTasksExecutionPolicy;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withNextTasksExecutionPolicy(EnterpriseCrmFrontendsEventbusProtoTaskConfigNextTasksExecutionPolicyEnum nextTasksExecutionPolicy) {
         this.nextTasksExecutionPolicy = nextTasksExecutionPolicy;
         return this;
@@ -169,6 +183,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, EnterpriseCrmFrontendsEventbusProtoParameterEntry> parameters;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withParameters(java.util.Map<String, EnterpriseCrmFrontendsEventbusProtoParameterEntry> parameters) {
         this.parameters = parameters;
         return this;
@@ -180,6 +195,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public EnterpriseCrmEventbusProtoCoordinate position;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withPosition(EnterpriseCrmEventbusProtoCoordinate position) {
         this.position = position;
         return this;
@@ -191,6 +207,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precondition")
     public String precondition;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withPrecondition(String precondition) {
         this.precondition = precondition;
         return this;
@@ -202,6 +219,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preconditionLabel")
     public String preconditionLabel;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withPreconditionLabel(String preconditionLabel) {
         this.preconditionLabel = preconditionLabel;
         return this;
@@ -213,6 +231,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollbackStrategy")
     public EnterpriseCrmFrontendsEventbusProtoRollbackStrategy rollbackStrategy;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withRollbackStrategy(EnterpriseCrmFrontendsEventbusProtoRollbackStrategy rollbackStrategy) {
         this.rollbackStrategy = rollbackStrategy;
         return this;
@@ -224,6 +243,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successPolicy")
     public EnterpriseCrmEventbusProtoSuccessPolicy successPolicy;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withSuccessPolicy(EnterpriseCrmEventbusProtoSuccessPolicy successPolicy) {
         this.successPolicy = successPolicy;
         return this;
@@ -235,6 +255,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synchronousCallFailurePolicy")
     public EnterpriseCrmEventbusProtoFailurePolicy synchronousCallFailurePolicy;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withSynchronousCallFailurePolicy(EnterpriseCrmEventbusProtoFailurePolicy synchronousCallFailurePolicy) {
         this.synchronousCallFailurePolicy = synchronousCallFailurePolicy;
         return this;
@@ -246,6 +267,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskEntity")
     public EnterpriseCrmFrontendsEventbusProtoTaskEntity taskEntity;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withTaskEntity(EnterpriseCrmFrontendsEventbusProtoTaskEntity taskEntity) {
         this.taskEntity = taskEntity;
         return this;
@@ -257,6 +279,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskExecutionStrategy")
     public EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskExecutionStrategyEnum taskExecutionStrategy;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withTaskExecutionStrategy(EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskExecutionStrategyEnum taskExecutionStrategy) {
         this.taskExecutionStrategy = taskExecutionStrategy;
         return this;
@@ -268,6 +291,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskName")
     public String taskName;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withTaskName(String taskName) {
         this.taskName = taskName;
         return this;
@@ -279,6 +303,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskNumber")
     public String taskNumber;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withTaskNumber(String taskNumber) {
         this.taskNumber = taskNumber;
         return this;
@@ -290,6 +315,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskSpec")
     public String taskSpec;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withTaskSpec(String taskSpec) {
         this.taskSpec = taskSpec;
         return this;
@@ -301,6 +327,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskTemplateName")
     public String taskTemplateName;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withTaskTemplateName(String taskTemplateName) {
         this.taskTemplateName = taskTemplateName;
         return this;
@@ -312,9 +339,11 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskType")
     public EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskTypeEnum taskType;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig withTaskType(EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskTypeEnum taskType) {
         this.taskType = taskType;
         return this;
     }
     
+    public EnterpriseCrmFrontendsEventbusProtoTaskConfig(){}
 }

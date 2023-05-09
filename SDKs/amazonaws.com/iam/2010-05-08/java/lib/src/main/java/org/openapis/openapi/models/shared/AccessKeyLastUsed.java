@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class AccessKeyLastUsed {
     
     public OffsetDateTime lastUsedDate;
+
     public AccessKeyLastUsed withLastUsedDate(OffsetDateTime lastUsedDate) {
         this.lastUsedDate = lastUsedDate;
         return this;
@@ -19,6 +21,7 @@ public class AccessKeyLastUsed {
     
     
     public String region;
+
     public AccessKeyLastUsed withRegion(String region) {
         this.region = region;
         return this;
@@ -26,9 +29,15 @@ public class AccessKeyLastUsed {
     
     
     public String serviceName;
+
     public AccessKeyLastUsed withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public AccessKeyLastUsed(@JsonProperty("LastUsedDate") OffsetDateTime lastUsedDate, @JsonProperty("Region") String region, @JsonProperty("ServiceName") String serviceName) {
+        this.lastUsedDate = lastUsedDate;
+        this.region = region;
+        this.serviceName = serviceName;
+  }
 }

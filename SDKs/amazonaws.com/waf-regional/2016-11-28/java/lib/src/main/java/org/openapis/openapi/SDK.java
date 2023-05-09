@@ -225,6 +225,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -262,7 +267,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateWebACLResponse res = new org.openapis.openapi.models.operations.AssociateWebACLResponse() {{
+        org.openapis.openapi.models.operations.AssociateWebACLResponse res = new org.openapis.openapi.models.operations.AssociateWebACLResponse(contentType, httpRes.statusCode()) {{
             associateWebACLResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
@@ -270,8 +275,6 @@ public class SDK {
             wafNonexistentItemException = null;
             wafUnavailableEntityException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -354,7 +357,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateByteMatchSetResponse res = new org.openapis.openapi.models.operations.CreateByteMatchSetResponse() {{
+        org.openapis.openapi.models.operations.CreateByteMatchSetResponse res = new org.openapis.openapi.models.operations.CreateByteMatchSetResponse(contentType, httpRes.statusCode()) {{
             createByteMatchSetResponse = null;
             wafDisallowedNameException = null;
             wafInternalErrorException = null;
@@ -363,8 +366,6 @@ public class SDK {
             wafStaleDataException = null;
             wafLimitsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -454,7 +455,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGeoMatchSetResponse res = new org.openapis.openapi.models.operations.CreateGeoMatchSetResponse() {{
+        org.openapis.openapi.models.operations.CreateGeoMatchSetResponse res = new org.openapis.openapi.models.operations.CreateGeoMatchSetResponse(contentType, httpRes.statusCode()) {{
             createGeoMatchSetResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -463,8 +464,6 @@ public class SDK {
             wafInvalidParameterException = null;
             wafLimitsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -554,7 +553,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateIPSetResponse res = new org.openapis.openapi.models.operations.CreateIPSetResponse() {{
+        org.openapis.openapi.models.operations.CreateIPSetResponse res = new org.openapis.openapi.models.operations.CreateIPSetResponse(contentType, httpRes.statusCode()) {{
             createIPSetResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -563,8 +562,6 @@ public class SDK {
             wafInvalidParameterException = null;
             wafLimitsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -654,7 +651,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRateBasedRuleResponse res = new org.openapis.openapi.models.operations.CreateRateBasedRuleResponse() {{
+        org.openapis.openapi.models.operations.CreateRateBasedRuleResponse res = new org.openapis.openapi.models.operations.CreateRateBasedRuleResponse(contentType, httpRes.statusCode()) {{
             createRateBasedRuleResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -665,8 +662,6 @@ public class SDK {
             wafTagOperationInternalErrorException = null;
             wafBadRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -770,15 +765,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRegexMatchSetResponse res = new org.openapis.openapi.models.operations.CreateRegexMatchSetResponse() {{
+        org.openapis.openapi.models.operations.CreateRegexMatchSetResponse res = new org.openapis.openapi.models.operations.CreateRegexMatchSetResponse(contentType, httpRes.statusCode()) {{
             createRegexMatchSetResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
             wafDisallowedNameException = null;
             wafLimitsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -854,15 +847,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRegexPatternSetResponse res = new org.openapis.openapi.models.operations.CreateRegexPatternSetResponse() {{
+        org.openapis.openapi.models.operations.CreateRegexPatternSetResponse res = new org.openapis.openapi.models.operations.CreateRegexPatternSetResponse(contentType, httpRes.statusCode()) {{
             createRegexPatternSetResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
             wafDisallowedNameException = null;
             wafLimitsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -938,7 +929,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRuleResponse res = new org.openapis.openapi.models.operations.CreateRuleResponse() {{
+        org.openapis.openapi.models.operations.CreateRuleResponse res = new org.openapis.openapi.models.operations.CreateRuleResponse(contentType, httpRes.statusCode()) {{
             createRuleResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -949,8 +940,6 @@ public class SDK {
             wafTagOperationInternalErrorException = null;
             wafBadRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1054,7 +1043,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRuleGroupResponse res = new org.openapis.openapi.models.operations.CreateRuleGroupResponse() {{
+        org.openapis.openapi.models.operations.CreateRuleGroupResponse res = new org.openapis.openapi.models.operations.CreateRuleGroupResponse(contentType, httpRes.statusCode()) {{
             createRuleGroupResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -1064,8 +1053,6 @@ public class SDK {
             wafTagOperationInternalErrorException = null;
             wafBadRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1162,7 +1149,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSizeConstraintSetResponse res = new org.openapis.openapi.models.operations.CreateSizeConstraintSetResponse() {{
+        org.openapis.openapi.models.operations.CreateSizeConstraintSetResponse res = new org.openapis.openapi.models.operations.CreateSizeConstraintSetResponse(contentType, httpRes.statusCode()) {{
             createSizeConstraintSetResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -1171,8 +1158,6 @@ public class SDK {
             wafInvalidParameterException = null;
             wafLimitsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1262,7 +1247,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSqlInjectionMatchSetResponse res = new org.openapis.openapi.models.operations.CreateSqlInjectionMatchSetResponse() {{
+        org.openapis.openapi.models.operations.CreateSqlInjectionMatchSetResponse res = new org.openapis.openapi.models.operations.CreateSqlInjectionMatchSetResponse(contentType, httpRes.statusCode()) {{
             createSqlInjectionMatchSetResponse = null;
             wafDisallowedNameException = null;
             wafInternalErrorException = null;
@@ -1271,8 +1256,6 @@ public class SDK {
             wafStaleDataException = null;
             wafLimitsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1362,7 +1345,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateWebACLResponse res = new org.openapis.openapi.models.operations.CreateWebACLResponse() {{
+        org.openapis.openapi.models.operations.CreateWebACLResponse res = new org.openapis.openapi.models.operations.CreateWebACLResponse(contentType, httpRes.statusCode()) {{
             createWebACLResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -1374,8 +1357,6 @@ public class SDK {
             wafTagOperationInternalErrorException = null;
             wafBadRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1486,7 +1467,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateWebACLMigrationStackResponse res = new org.openapis.openapi.models.operations.CreateWebACLMigrationStackResponse() {{
+        org.openapis.openapi.models.operations.CreateWebACLMigrationStackResponse res = new org.openapis.openapi.models.operations.CreateWebACLMigrationStackResponse(contentType, httpRes.statusCode()) {{
             createWebACLMigrationStackResponse = null;
             wafInternalErrorException = null;
             wafInvalidParameterException = null;
@@ -1494,8 +1475,6 @@ public class SDK {
             wafNonexistentItemException = null;
             wafEntityMigrationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1578,7 +1557,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateXssMatchSetResponse res = new org.openapis.openapi.models.operations.CreateXssMatchSetResponse() {{
+        org.openapis.openapi.models.operations.CreateXssMatchSetResponse res = new org.openapis.openapi.models.operations.CreateXssMatchSetResponse(contentType, httpRes.statusCode()) {{
             createXssMatchSetResponse = null;
             wafDisallowedNameException = null;
             wafInternalErrorException = null;
@@ -1587,8 +1566,6 @@ public class SDK {
             wafStaleDataException = null;
             wafLimitsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1678,7 +1655,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteByteMatchSetResponse res = new org.openapis.openapi.models.operations.DeleteByteMatchSetResponse() {{
+        org.openapis.openapi.models.operations.DeleteByteMatchSetResponse res = new org.openapis.openapi.models.operations.DeleteByteMatchSetResponse(contentType, httpRes.statusCode()) {{
             deleteByteMatchSetResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
@@ -1687,8 +1664,6 @@ public class SDK {
             wafStaleDataException = null;
             wafNonEmptyEntityException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1778,7 +1753,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteGeoMatchSetResponse res = new org.openapis.openapi.models.operations.DeleteGeoMatchSetResponse() {{
+        org.openapis.openapi.models.operations.DeleteGeoMatchSetResponse res = new org.openapis.openapi.models.operations.DeleteGeoMatchSetResponse(contentType, httpRes.statusCode()) {{
             deleteGeoMatchSetResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -1787,8 +1762,6 @@ public class SDK {
             wafReferencedItemException = null;
             wafNonEmptyEntityException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1878,7 +1851,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteIPSetResponse res = new org.openapis.openapi.models.operations.DeleteIPSetResponse() {{
+        org.openapis.openapi.models.operations.DeleteIPSetResponse res = new org.openapis.openapi.models.operations.DeleteIPSetResponse(contentType, httpRes.statusCode()) {{
             deleteIPSetResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -1887,8 +1860,6 @@ public class SDK {
             wafReferencedItemException = null;
             wafNonEmptyEntityException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1978,14 +1949,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLoggingConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteLoggingConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DeleteLoggingConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteLoggingConfigurationResponse(contentType, httpRes.statusCode()) {{
             deleteLoggingConfigurationResponse = null;
             wafInternalErrorException = null;
             wafNonexistentItemException = null;
             wafStaleDataException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2054,14 +2023,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePermissionPolicyResponse res = new org.openapis.openapi.models.operations.DeletePermissionPolicyResponse() {{
+        org.openapis.openapi.models.operations.DeletePermissionPolicyResponse res = new org.openapis.openapi.models.operations.DeletePermissionPolicyResponse(contentType, httpRes.statusCode()) {{
             deletePermissionPolicyResponse = null;
             wafInternalErrorException = null;
             wafStaleDataException = null;
             wafNonexistentItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2130,7 +2097,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRateBasedRuleResponse res = new org.openapis.openapi.models.operations.DeleteRateBasedRuleResponse() {{
+        org.openapis.openapi.models.operations.DeleteRateBasedRuleResponse res = new org.openapis.openapi.models.operations.DeleteRateBasedRuleResponse(contentType, httpRes.statusCode()) {{
             deleteRateBasedRuleResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -2141,8 +2108,6 @@ public class SDK {
             wafTagOperationException = null;
             wafTagOperationInternalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2246,7 +2211,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRegexMatchSetResponse res = new org.openapis.openapi.models.operations.DeleteRegexMatchSetResponse() {{
+        org.openapis.openapi.models.operations.DeleteRegexMatchSetResponse res = new org.openapis.openapi.models.operations.DeleteRegexMatchSetResponse(contentType, httpRes.statusCode()) {{
             deleteRegexMatchSetResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
@@ -2255,8 +2220,6 @@ public class SDK {
             wafStaleDataException = null;
             wafNonEmptyEntityException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2346,7 +2309,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRegexPatternSetResponse res = new org.openapis.openapi.models.operations.DeleteRegexPatternSetResponse() {{
+        org.openapis.openapi.models.operations.DeleteRegexPatternSetResponse res = new org.openapis.openapi.models.operations.DeleteRegexPatternSetResponse(contentType, httpRes.statusCode()) {{
             deleteRegexPatternSetResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
@@ -2355,8 +2318,6 @@ public class SDK {
             wafStaleDataException = null;
             wafNonEmptyEntityException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2446,7 +2407,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRuleResponse res = new org.openapis.openapi.models.operations.DeleteRuleResponse() {{
+        org.openapis.openapi.models.operations.DeleteRuleResponse res = new org.openapis.openapi.models.operations.DeleteRuleResponse(contentType, httpRes.statusCode()) {{
             deleteRuleResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -2457,8 +2418,6 @@ public class SDK {
             wafTagOperationException = null;
             wafTagOperationInternalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2562,7 +2521,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRuleGroupResponse res = new org.openapis.openapi.models.operations.DeleteRuleGroupResponse() {{
+        org.openapis.openapi.models.operations.DeleteRuleGroupResponse res = new org.openapis.openapi.models.operations.DeleteRuleGroupResponse(contentType, httpRes.statusCode()) {{
             deleteRuleGroupResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -2573,8 +2532,6 @@ public class SDK {
             wafTagOperationException = null;
             wafTagOperationInternalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2678,7 +2635,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSizeConstraintSetResponse res = new org.openapis.openapi.models.operations.DeleteSizeConstraintSetResponse() {{
+        org.openapis.openapi.models.operations.DeleteSizeConstraintSetResponse res = new org.openapis.openapi.models.operations.DeleteSizeConstraintSetResponse(contentType, httpRes.statusCode()) {{
             deleteSizeConstraintSetResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -2687,8 +2644,6 @@ public class SDK {
             wafReferencedItemException = null;
             wafNonEmptyEntityException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2778,7 +2733,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSqlInjectionMatchSetResponse res = new org.openapis.openapi.models.operations.DeleteSqlInjectionMatchSetResponse() {{
+        org.openapis.openapi.models.operations.DeleteSqlInjectionMatchSetResponse res = new org.openapis.openapi.models.operations.DeleteSqlInjectionMatchSetResponse(contentType, httpRes.statusCode()) {{
             deleteSqlInjectionMatchSetResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
@@ -2787,8 +2742,6 @@ public class SDK {
             wafStaleDataException = null;
             wafNonEmptyEntityException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2878,7 +2831,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWebACLResponse res = new org.openapis.openapi.models.operations.DeleteWebACLResponse() {{
+        org.openapis.openapi.models.operations.DeleteWebACLResponse res = new org.openapis.openapi.models.operations.DeleteWebACLResponse(contentType, httpRes.statusCode()) {{
             deleteWebACLResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -2889,8 +2842,6 @@ public class SDK {
             wafTagOperationException = null;
             wafTagOperationInternalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2994,7 +2945,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteXssMatchSetResponse res = new org.openapis.openapi.models.operations.DeleteXssMatchSetResponse() {{
+        org.openapis.openapi.models.operations.DeleteXssMatchSetResponse res = new org.openapis.openapi.models.operations.DeleteXssMatchSetResponse(contentType, httpRes.statusCode()) {{
             deleteXssMatchSetResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
@@ -3003,8 +2954,6 @@ public class SDK {
             wafStaleDataException = null;
             wafNonEmptyEntityException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3094,15 +3043,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateWebACLResponse res = new org.openapis.openapi.models.operations.DisassociateWebACLResponse() {{
+        org.openapis.openapi.models.operations.DisassociateWebACLResponse res = new org.openapis.openapi.models.operations.DisassociateWebACLResponse(contentType, httpRes.statusCode()) {{
             disassociateWebACLResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
             wafInvalidParameterException = null;
             wafNonexistentItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3178,14 +3125,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetByteMatchSetResponse res = new org.openapis.openapi.models.operations.GetByteMatchSetResponse() {{
+        org.openapis.openapi.models.operations.GetByteMatchSetResponse res = new org.openapis.openapi.models.operations.GetByteMatchSetResponse(contentType, httpRes.statusCode()) {{
             getByteMatchSetResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
             wafNonexistentItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3254,12 +3199,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChangeTokenResponse res = new org.openapis.openapi.models.operations.GetChangeTokenResponse() {{
+        org.openapis.openapi.models.operations.GetChangeTokenResponse res = new org.openapis.openapi.models.operations.GetChangeTokenResponse(contentType, httpRes.statusCode()) {{
             getChangeTokenResponse = null;
             wafInternalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3314,13 +3257,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChangeTokenStatusResponse res = new org.openapis.openapi.models.operations.GetChangeTokenStatusResponse() {{
+        org.openapis.openapi.models.operations.GetChangeTokenStatusResponse res = new org.openapis.openapi.models.operations.GetChangeTokenStatusResponse(contentType, httpRes.statusCode()) {{
             getChangeTokenStatusResponse = null;
             wafNonexistentItemException = null;
             wafInternalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3382,14 +3323,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGeoMatchSetResponse res = new org.openapis.openapi.models.operations.GetGeoMatchSetResponse() {{
+        org.openapis.openapi.models.operations.GetGeoMatchSetResponse res = new org.openapis.openapi.models.operations.GetGeoMatchSetResponse(contentType, httpRes.statusCode()) {{
             getGeoMatchSetResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
             wafNonexistentItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3458,14 +3397,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIPSetResponse res = new org.openapis.openapi.models.operations.GetIPSetResponse() {{
+        org.openapis.openapi.models.operations.GetIPSetResponse res = new org.openapis.openapi.models.operations.GetIPSetResponse(contentType, httpRes.statusCode()) {{
             getIPSetResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
             wafNonexistentItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3534,13 +3471,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLoggingConfigurationResponse res = new org.openapis.openapi.models.operations.GetLoggingConfigurationResponse() {{
+        org.openapis.openapi.models.operations.GetLoggingConfigurationResponse res = new org.openapis.openapi.models.operations.GetLoggingConfigurationResponse(contentType, httpRes.statusCode()) {{
             getLoggingConfigurationResponse = null;
             wafInternalErrorException = null;
             wafNonexistentItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3602,13 +3537,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPermissionPolicyResponse res = new org.openapis.openapi.models.operations.GetPermissionPolicyResponse() {{
+        org.openapis.openapi.models.operations.GetPermissionPolicyResponse res = new org.openapis.openapi.models.operations.GetPermissionPolicyResponse(contentType, httpRes.statusCode()) {{
             getPermissionPolicyResponse = null;
             wafInternalErrorException = null;
             wafNonexistentItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3670,14 +3603,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRateBasedRuleResponse res = new org.openapis.openapi.models.operations.GetRateBasedRuleResponse() {{
+        org.openapis.openapi.models.operations.GetRateBasedRuleResponse res = new org.openapis.openapi.models.operations.GetRateBasedRuleResponse(contentType, httpRes.statusCode()) {{
             getRateBasedRuleResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
             wafNonexistentItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3746,15 +3677,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRateBasedRuleManagedKeysResponse res = new org.openapis.openapi.models.operations.GetRateBasedRuleManagedKeysResponse() {{
+        org.openapis.openapi.models.operations.GetRateBasedRuleManagedKeysResponse res = new org.openapis.openapi.models.operations.GetRateBasedRuleManagedKeysResponse(contentType, httpRes.statusCode()) {{
             getRateBasedRuleManagedKeysResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
             wafNonexistentItemException = null;
             wafInvalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3830,14 +3759,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRegexMatchSetResponse res = new org.openapis.openapi.models.operations.GetRegexMatchSetResponse() {{
+        org.openapis.openapi.models.operations.GetRegexMatchSetResponse res = new org.openapis.openapi.models.operations.GetRegexMatchSetResponse(contentType, httpRes.statusCode()) {{
             getRegexMatchSetResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
             wafNonexistentItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3906,14 +3833,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRegexPatternSetResponse res = new org.openapis.openapi.models.operations.GetRegexPatternSetResponse() {{
+        org.openapis.openapi.models.operations.GetRegexPatternSetResponse res = new org.openapis.openapi.models.operations.GetRegexPatternSetResponse(contentType, httpRes.statusCode()) {{
             getRegexPatternSetResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
             wafNonexistentItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3982,14 +3907,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRuleResponse res = new org.openapis.openapi.models.operations.GetRuleResponse() {{
+        org.openapis.openapi.models.operations.GetRuleResponse res = new org.openapis.openapi.models.operations.GetRuleResponse(contentType, httpRes.statusCode()) {{
             getRuleResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
             wafNonexistentItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4058,13 +3981,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRuleGroupResponse res = new org.openapis.openapi.models.operations.GetRuleGroupResponse() {{
+        org.openapis.openapi.models.operations.GetRuleGroupResponse res = new org.openapis.openapi.models.operations.GetRuleGroupResponse(contentType, httpRes.statusCode()) {{
             getRuleGroupResponse = null;
             wafInternalErrorException = null;
             wafNonexistentItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4126,13 +4047,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSampledRequestsResponse res = new org.openapis.openapi.models.operations.GetSampledRequestsResponse() {{
+        org.openapis.openapi.models.operations.GetSampledRequestsResponse res = new org.openapis.openapi.models.operations.GetSampledRequestsResponse(contentType, httpRes.statusCode()) {{
             getSampledRequestsResponse = null;
             wafNonexistentItemException = null;
             wafInternalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4194,14 +4113,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSizeConstraintSetResponse res = new org.openapis.openapi.models.operations.GetSizeConstraintSetResponse() {{
+        org.openapis.openapi.models.operations.GetSizeConstraintSetResponse res = new org.openapis.openapi.models.operations.GetSizeConstraintSetResponse(contentType, httpRes.statusCode()) {{
             getSizeConstraintSetResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
             wafNonexistentItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4270,14 +4187,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSqlInjectionMatchSetResponse res = new org.openapis.openapi.models.operations.GetSqlInjectionMatchSetResponse() {{
+        org.openapis.openapi.models.operations.GetSqlInjectionMatchSetResponse res = new org.openapis.openapi.models.operations.GetSqlInjectionMatchSetResponse(contentType, httpRes.statusCode()) {{
             getSqlInjectionMatchSetResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
             wafNonexistentItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4346,14 +4261,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWebACLResponse res = new org.openapis.openapi.models.operations.GetWebACLResponse() {{
+        org.openapis.openapi.models.operations.GetWebACLResponse res = new org.openapis.openapi.models.operations.GetWebACLResponse(contentType, httpRes.statusCode()) {{
             getWebACLResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
             wafNonexistentItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4422,7 +4335,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWebACLForResourceResponse res = new org.openapis.openapi.models.operations.GetWebACLForResourceResponse() {{
+        org.openapis.openapi.models.operations.GetWebACLForResourceResponse res = new org.openapis.openapi.models.operations.GetWebACLForResourceResponse(contentType, httpRes.statusCode()) {{
             getWebACLForResourceResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
@@ -4430,8 +4343,6 @@ public class SDK {
             wafInvalidParameterException = null;
             wafUnavailableEntityException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4514,14 +4425,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetXssMatchSetResponse res = new org.openapis.openapi.models.operations.GetXssMatchSetResponse() {{
+        org.openapis.openapi.models.operations.GetXssMatchSetResponse res = new org.openapis.openapi.models.operations.GetXssMatchSetResponse(contentType, httpRes.statusCode()) {{
             getXssMatchSetResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
             wafNonexistentItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4590,14 +4499,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListActivatedRulesInRuleGroupResponse res = new org.openapis.openapi.models.operations.ListActivatedRulesInRuleGroupResponse() {{
+        org.openapis.openapi.models.operations.ListActivatedRulesInRuleGroupResponse res = new org.openapis.openapi.models.operations.ListActivatedRulesInRuleGroupResponse(contentType, httpRes.statusCode()) {{
             listActivatedRulesInRuleGroupResponse = null;
             wafInternalErrorException = null;
             wafNonexistentItemException = null;
             wafInvalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4666,13 +4573,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListByteMatchSetsResponse res = new org.openapis.openapi.models.operations.ListByteMatchSetsResponse() {{
+        org.openapis.openapi.models.operations.ListByteMatchSetsResponse res = new org.openapis.openapi.models.operations.ListByteMatchSetsResponse(contentType, httpRes.statusCode()) {{
             listByteMatchSetsResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4734,13 +4639,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGeoMatchSetsResponse res = new org.openapis.openapi.models.operations.ListGeoMatchSetsResponse() {{
+        org.openapis.openapi.models.operations.ListGeoMatchSetsResponse res = new org.openapis.openapi.models.operations.ListGeoMatchSetsResponse(contentType, httpRes.statusCode()) {{
             listGeoMatchSetsResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4802,13 +4705,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListIPSetsResponse res = new org.openapis.openapi.models.operations.ListIPSetsResponse() {{
+        org.openapis.openapi.models.operations.ListIPSetsResponse res = new org.openapis.openapi.models.operations.ListIPSetsResponse(contentType, httpRes.statusCode()) {{
             listIPSetsResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4870,14 +4771,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLoggingConfigurationsResponse res = new org.openapis.openapi.models.operations.ListLoggingConfigurationsResponse() {{
+        org.openapis.openapi.models.operations.ListLoggingConfigurationsResponse res = new org.openapis.openapi.models.operations.ListLoggingConfigurationsResponse(contentType, httpRes.statusCode()) {{
             listLoggingConfigurationsResponse = null;
             wafInternalErrorException = null;
             wafNonexistentItemException = null;
             wafInvalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4946,13 +4845,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRateBasedRulesResponse res = new org.openapis.openapi.models.operations.ListRateBasedRulesResponse() {{
+        org.openapis.openapi.models.operations.ListRateBasedRulesResponse res = new org.openapis.openapi.models.operations.ListRateBasedRulesResponse(contentType, httpRes.statusCode()) {{
             listRateBasedRulesResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5014,13 +4911,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRegexMatchSetsResponse res = new org.openapis.openapi.models.operations.ListRegexMatchSetsResponse() {{
+        org.openapis.openapi.models.operations.ListRegexMatchSetsResponse res = new org.openapis.openapi.models.operations.ListRegexMatchSetsResponse(contentType, httpRes.statusCode()) {{
             listRegexMatchSetsResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5082,13 +4977,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRegexPatternSetsResponse res = new org.openapis.openapi.models.operations.ListRegexPatternSetsResponse() {{
+        org.openapis.openapi.models.operations.ListRegexPatternSetsResponse res = new org.openapis.openapi.models.operations.ListRegexPatternSetsResponse(contentType, httpRes.statusCode()) {{
             listRegexPatternSetsResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5150,15 +5043,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListResourcesForWebACLResponse res = new org.openapis.openapi.models.operations.ListResourcesForWebACLResponse() {{
+        org.openapis.openapi.models.operations.ListResourcesForWebACLResponse res = new org.openapis.openapi.models.operations.ListResourcesForWebACLResponse(contentType, httpRes.statusCode()) {{
             listResourcesForWebACLResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
             wafNonexistentItemException = null;
             wafInvalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5234,12 +5125,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRuleGroupsResponse res = new org.openapis.openapi.models.operations.ListRuleGroupsResponse() {{
+        org.openapis.openapi.models.operations.ListRuleGroupsResponse res = new org.openapis.openapi.models.operations.ListRuleGroupsResponse(contentType, httpRes.statusCode()) {{
             listRuleGroupsResponse = null;
             wafInternalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5294,13 +5183,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRulesResponse res = new org.openapis.openapi.models.operations.ListRulesResponse() {{
+        org.openapis.openapi.models.operations.ListRulesResponse res = new org.openapis.openapi.models.operations.ListRulesResponse(contentType, httpRes.statusCode()) {{
             listRulesResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5362,13 +5249,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSizeConstraintSetsResponse res = new org.openapis.openapi.models.operations.ListSizeConstraintSetsResponse() {{
+        org.openapis.openapi.models.operations.ListSizeConstraintSetsResponse res = new org.openapis.openapi.models.operations.ListSizeConstraintSetsResponse(contentType, httpRes.statusCode()) {{
             listSizeConstraintSetsResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5430,13 +5315,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSqlInjectionMatchSetsResponse res = new org.openapis.openapi.models.operations.ListSqlInjectionMatchSetsResponse() {{
+        org.openapis.openapi.models.operations.ListSqlInjectionMatchSetsResponse res = new org.openapis.openapi.models.operations.ListSqlInjectionMatchSetsResponse(contentType, httpRes.statusCode()) {{
             listSqlInjectionMatchSetsResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5498,13 +5381,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSubscribedRuleGroupsResponse res = new org.openapis.openapi.models.operations.ListSubscribedRuleGroupsResponse() {{
+        org.openapis.openapi.models.operations.ListSubscribedRuleGroupsResponse res = new org.openapis.openapi.models.operations.ListSubscribedRuleGroupsResponse(contentType, httpRes.statusCode()) {{
             listSubscribedRuleGroupsResponse = null;
             wafNonexistentItemException = null;
             wafInternalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5566,7 +5447,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             wafInternalErrorException = null;
             wafInvalidParameterException = null;
@@ -5575,8 +5456,6 @@ public class SDK {
             wafTagOperationException = null;
             wafTagOperationInternalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5666,13 +5545,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListWebACLsResponse res = new org.openapis.openapi.models.operations.ListWebACLsResponse() {{
+        org.openapis.openapi.models.operations.ListWebACLsResponse res = new org.openapis.openapi.models.operations.ListWebACLsResponse(contentType, httpRes.statusCode()) {{
             listWebACLsResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5734,13 +5611,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListXssMatchSetsResponse res = new org.openapis.openapi.models.operations.ListXssMatchSetsResponse() {{
+        org.openapis.openapi.models.operations.ListXssMatchSetsResponse res = new org.openapis.openapi.models.operations.ListXssMatchSetsResponse(contentType, httpRes.statusCode()) {{
             listXssMatchSetsResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5802,15 +5677,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutLoggingConfigurationResponse res = new org.openapis.openapi.models.operations.PutLoggingConfigurationResponse() {{
+        org.openapis.openapi.models.operations.PutLoggingConfigurationResponse res = new org.openapis.openapi.models.operations.PutLoggingConfigurationResponse(contentType, httpRes.statusCode()) {{
             putLoggingConfigurationResponse = null;
             wafInternalErrorException = null;
             wafNonexistentItemException = null;
             wafStaleDataException = null;
             wafServiceLinkedRoleErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5886,15 +5759,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutPermissionPolicyResponse res = new org.openapis.openapi.models.operations.PutPermissionPolicyResponse() {{
+        org.openapis.openapi.models.operations.PutPermissionPolicyResponse res = new org.openapis.openapi.models.operations.PutPermissionPolicyResponse(contentType, httpRes.statusCode()) {{
             putPermissionPolicyResponse = null;
             wafInternalErrorException = null;
             wafStaleDataException = null;
             wafNonexistentItemException = null;
             wafInvalidPermissionPolicyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5970,7 +5841,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             wafInternalErrorException = null;
             wafInvalidParameterException = null;
@@ -5980,8 +5851,6 @@ public class SDK {
             wafTagOperationException = null;
             wafTagOperationInternalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6078,7 +5947,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             wafInternalErrorException = null;
             wafInvalidParameterException = null;
@@ -6087,8 +5956,6 @@ public class SDK {
             wafTagOperationException = null;
             wafTagOperationInternalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6178,7 +6045,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateByteMatchSetResponse res = new org.openapis.openapi.models.operations.UpdateByteMatchSetResponse() {{
+        org.openapis.openapi.models.operations.UpdateByteMatchSetResponse res = new org.openapis.openapi.models.operations.UpdateByteMatchSetResponse(contentType, httpRes.statusCode()) {{
             updateByteMatchSetResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
@@ -6189,8 +6056,6 @@ public class SDK {
             wafStaleDataException = null;
             wafLimitsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6294,7 +6159,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGeoMatchSetResponse res = new org.openapis.openapi.models.operations.UpdateGeoMatchSetResponse() {{
+        org.openapis.openapi.models.operations.UpdateGeoMatchSetResponse res = new org.openapis.openapi.models.operations.UpdateGeoMatchSetResponse(contentType, httpRes.statusCode()) {{
             updateGeoMatchSetResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -6306,8 +6171,6 @@ public class SDK {
             wafReferencedItemException = null;
             wafLimitsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6418,7 +6281,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateIPSetResponse res = new org.openapis.openapi.models.operations.UpdateIPSetResponse() {{
+        org.openapis.openapi.models.operations.UpdateIPSetResponse res = new org.openapis.openapi.models.operations.UpdateIPSetResponse(contentType, httpRes.statusCode()) {{
             updateIPSetResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -6430,8 +6293,6 @@ public class SDK {
             wafReferencedItemException = null;
             wafLimitsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6542,7 +6403,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRateBasedRuleResponse res = new org.openapis.openapi.models.operations.UpdateRateBasedRuleResponse() {{
+        org.openapis.openapi.models.operations.UpdateRateBasedRuleResponse res = new org.openapis.openapi.models.operations.UpdateRateBasedRuleResponse(contentType, httpRes.statusCode()) {{
             updateRateBasedRuleResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -6554,8 +6415,6 @@ public class SDK {
             wafReferencedItemException = null;
             wafLimitsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6666,7 +6525,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRegexMatchSetResponse res = new org.openapis.openapi.models.operations.UpdateRegexMatchSetResponse() {{
+        org.openapis.openapi.models.operations.UpdateRegexMatchSetResponse res = new org.openapis.openapi.models.operations.UpdateRegexMatchSetResponse(contentType, httpRes.statusCode()) {{
             updateRegexMatchSetResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -6677,8 +6536,6 @@ public class SDK {
             wafInvalidOperationException = null;
             wafInvalidAccountException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6782,7 +6639,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRegexPatternSetResponse res = new org.openapis.openapi.models.operations.UpdateRegexPatternSetResponse() {{
+        org.openapis.openapi.models.operations.UpdateRegexPatternSetResponse res = new org.openapis.openapi.models.operations.UpdateRegexPatternSetResponse(contentType, httpRes.statusCode()) {{
             updateRegexPatternSetResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -6793,8 +6650,6 @@ public class SDK {
             wafInvalidAccountException = null;
             wafInvalidRegexPatternException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6898,7 +6753,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRuleResponse res = new org.openapis.openapi.models.operations.UpdateRuleResponse() {{
+        org.openapis.openapi.models.operations.UpdateRuleResponse res = new org.openapis.openapi.models.operations.UpdateRuleResponse(contentType, httpRes.statusCode()) {{
             updateRuleResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -6910,8 +6765,6 @@ public class SDK {
             wafReferencedItemException = null;
             wafLimitsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7022,7 +6875,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRuleGroupResponse res = new org.openapis.openapi.models.operations.UpdateRuleGroupResponse() {{
+        org.openapis.openapi.models.operations.UpdateRuleGroupResponse res = new org.openapis.openapi.models.operations.UpdateRuleGroupResponse(contentType, httpRes.statusCode()) {{
             updateRuleGroupResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -7032,8 +6885,6 @@ public class SDK {
             wafLimitsExceededException = null;
             wafInvalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7130,7 +6981,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSizeConstraintSetResponse res = new org.openapis.openapi.models.operations.UpdateSizeConstraintSetResponse() {{
+        org.openapis.openapi.models.operations.UpdateSizeConstraintSetResponse res = new org.openapis.openapi.models.operations.UpdateSizeConstraintSetResponse(contentType, httpRes.statusCode()) {{
             updateSizeConstraintSetResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -7142,8 +6993,6 @@ public class SDK {
             wafReferencedItemException = null;
             wafLimitsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7254,7 +7103,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSqlInjectionMatchSetResponse res = new org.openapis.openapi.models.operations.UpdateSqlInjectionMatchSetResponse() {{
+        org.openapis.openapi.models.operations.UpdateSqlInjectionMatchSetResponse res = new org.openapis.openapi.models.operations.UpdateSqlInjectionMatchSetResponse(contentType, httpRes.statusCode()) {{
             updateSqlInjectionMatchSetResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
@@ -7265,8 +7114,6 @@ public class SDK {
             wafStaleDataException = null;
             wafLimitsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7370,7 +7217,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateWebACLResponse res = new org.openapis.openapi.models.operations.UpdateWebACLResponse() {{
+        org.openapis.openapi.models.operations.UpdateWebACLResponse res = new org.openapis.openapi.models.operations.UpdateWebACLResponse(contentType, httpRes.statusCode()) {{
             updateWebACLResponse = null;
             wafStaleDataException = null;
             wafInternalErrorException = null;
@@ -7383,8 +7230,6 @@ public class SDK {
             wafLimitsExceededException = null;
             wafSubscriptionNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7502,7 +7347,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateXssMatchSetResponse res = new org.openapis.openapi.models.operations.UpdateXssMatchSetResponse() {{
+        org.openapis.openapi.models.operations.UpdateXssMatchSetResponse res = new org.openapis.openapi.models.operations.UpdateXssMatchSetResponse(contentType, httpRes.statusCode()) {{
             updateXssMatchSetResponse = null;
             wafInternalErrorException = null;
             wafInvalidAccountException = null;
@@ -7513,8 +7358,6 @@ public class SDK {
             wafStaleDataException = null;
             wafLimitsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

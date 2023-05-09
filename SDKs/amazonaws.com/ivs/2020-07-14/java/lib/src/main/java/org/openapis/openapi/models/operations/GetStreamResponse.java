@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStreamResponse {
@@ -12,6 +13,7 @@ public class GetStreamResponse {
      */
     
     public Object accessDeniedException;
+
     public GetStreamResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetStreamResponse {
      */
     
     public Object channelNotBroadcasting;
+
     public GetStreamResponse withChannelNotBroadcasting(Object channelNotBroadcasting) {
         this.channelNotBroadcasting = channelNotBroadcasting;
         return this;
@@ -29,6 +32,7 @@ public class GetStreamResponse {
     
     
     public String contentType;
+
     public GetStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetStreamResponse {
      */
     
     public org.openapis.openapi.models.shared.GetStreamResponse getStreamResponse;
+
     public GetStreamResponse withGetStreamResponse(org.openapis.openapi.models.shared.GetStreamResponse getStreamResponse) {
         this.getStreamResponse = getStreamResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetStreamResponse {
     
     
     public Integer statusCode;
+
     public GetStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetStreamResponse {
      */
     
     public Object validationException;
+
     public GetStreamResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

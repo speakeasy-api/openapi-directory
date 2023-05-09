@@ -18,6 +18,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrayValue")
     public ArrayValue arrayValue;
+
     public Value withArrayValue(ArrayValue arrayValue) {
         this.arrayValue = arrayValue;
         return this;
@@ -29,6 +30,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blobValue")
     public String blobValue;
+
     public Value withBlobValue(String blobValue) {
         this.blobValue = blobValue;
         return this;
@@ -40,6 +42,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanValue")
     public Boolean booleanValue;
+
     public Value withBooleanValue(Boolean booleanValue) {
         this.booleanValue = booleanValue;
         return this;
@@ -51,6 +54,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public Value withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -62,6 +66,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityValue")
     public Entity entityValue;
+
     public Value withEntityValue(Entity entityValue) {
         this.entityValue = entityValue;
         return this;
@@ -73,6 +78,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeFromIndexes")
     public Boolean excludeFromIndexes;
+
     public Value withExcludeFromIndexes(Boolean excludeFromIndexes) {
         this.excludeFromIndexes = excludeFromIndexes;
         return this;
@@ -84,6 +90,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoPointValue")
     public LatLng geoPointValue;
+
     public Value withGeoPointValue(LatLng geoPointValue) {
         this.geoPointValue = geoPointValue;
         return this;
@@ -95,6 +102,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerValue")
     public String integerValue;
+
     public Value withIntegerValue(String integerValue) {
         this.integerValue = integerValue;
         return this;
@@ -106,6 +114,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyValue")
     public Key keyValue;
+
     public Value withKeyValue(Key keyValue) {
         this.keyValue = keyValue;
         return this;
@@ -117,6 +126,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meaning")
     public Integer meaning;
+
     public Value withMeaning(Integer meaning) {
         this.meaning = meaning;
         return this;
@@ -128,6 +138,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nullValue")
     public ValueNullValueEnum nullValue;
+
     public Value withNullValue(ValueNullValueEnum nullValue) {
         this.nullValue = nullValue;
         return this;
@@ -139,6 +150,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public Value withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
@@ -150,9 +162,11 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestampValue")
     public String timestampValue;
+
     public Value withTimestampValue(String timestampValue) {
         this.timestampValue = timestampValue;
         return this;
     }
     
+    public Value(){}
 }

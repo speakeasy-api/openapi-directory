@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RepositoryAuthConfig {
     @JsonProperty("RepositoryCredentialsProviderArn")
     public String repositoryCredentialsProviderArn;
+
     public RepositoryAuthConfig withRepositoryCredentialsProviderArn(String repositoryCredentialsProviderArn) {
         this.repositoryCredentialsProviderArn = repositoryCredentialsProviderArn;
         return this;
     }
     
+    public RepositoryAuthConfig(@JsonProperty("RepositoryCredentialsProviderArn") String repositoryCredentialsProviderArn) {
+        this.repositoryCredentialsProviderArn = repositoryCredentialsProviderArn;
+  }
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class GetReservedInstancesExchangeQuoteResult {
     
     public String currencyCode;
+
     public GetReservedInstancesExchangeQuoteResult withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -19,6 +20,7 @@ public class GetReservedInstancesExchangeQuoteResult {
     
     
     public Boolean isValidExchange;
+
     public GetReservedInstancesExchangeQuoteResult withIsValidExchange(Boolean isValidExchange) {
         this.isValidExchange = isValidExchange;
         return this;
@@ -26,6 +28,7 @@ public class GetReservedInstancesExchangeQuoteResult {
     
     
     public OffsetDateTime outputReservedInstancesWillExpireAt;
+
     public GetReservedInstancesExchangeQuoteResult withOutputReservedInstancesWillExpireAt(OffsetDateTime outputReservedInstancesWillExpireAt) {
         this.outputReservedInstancesWillExpireAt = outputReservedInstancesWillExpireAt;
         return this;
@@ -33,6 +36,7 @@ public class GetReservedInstancesExchangeQuoteResult {
     
     
     public String paymentDue;
+
     public GetReservedInstancesExchangeQuoteResult withPaymentDue(String paymentDue) {
         this.paymentDue = paymentDue;
         return this;
@@ -40,6 +44,7 @@ public class GetReservedInstancesExchangeQuoteResult {
     
     
     public GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup reservedInstanceValueRollup;
+
     public GetReservedInstancesExchangeQuoteResult withReservedInstanceValueRollup(GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup reservedInstanceValueRollup) {
         this.reservedInstanceValueRollup = reservedInstanceValueRollup;
         return this;
@@ -47,6 +52,7 @@ public class GetReservedInstancesExchangeQuoteResult {
     
     
     public GetReservedInstancesExchangeQuoteResultReservedInstanceValueSet[] reservedInstanceValueSet;
+
     public GetReservedInstancesExchangeQuoteResult withReservedInstanceValueSet(GetReservedInstancesExchangeQuoteResultReservedInstanceValueSet[] reservedInstanceValueSet) {
         this.reservedInstanceValueSet = reservedInstanceValueSet;
         return this;
@@ -54,6 +60,7 @@ public class GetReservedInstancesExchangeQuoteResult {
     
     
     public GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup targetConfigurationValueRollup;
+
     public GetReservedInstancesExchangeQuoteResult withTargetConfigurationValueRollup(GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup targetConfigurationValueRollup) {
         this.targetConfigurationValueRollup = targetConfigurationValueRollup;
         return this;
@@ -61,6 +68,7 @@ public class GetReservedInstancesExchangeQuoteResult {
     
     
     public GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSet[] targetConfigurationValueSet;
+
     public GetReservedInstancesExchangeQuoteResult withTargetConfigurationValueSet(GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSet[] targetConfigurationValueSet) {
         this.targetConfigurationValueSet = targetConfigurationValueSet;
         return this;
@@ -68,9 +76,11 @@ public class GetReservedInstancesExchangeQuoteResult {
     
     
     public String validationFailureReason;
+
     public GetReservedInstancesExchangeQuoteResult withValidationFailureReason(String validationFailureReason) {
         this.validationFailureReason = validationFailureReason;
         return this;
     }
     
+    public GetReservedInstancesExchangeQuoteResult(){}
 }

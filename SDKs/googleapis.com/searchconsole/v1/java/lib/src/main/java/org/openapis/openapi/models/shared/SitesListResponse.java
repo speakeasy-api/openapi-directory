@@ -18,9 +18,11 @@ public class SitesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("siteEntry")
     public WmxSite[] siteEntry;
+
     public SitesListResponse withSiteEntry(WmxSite[] siteEntry) {
         this.siteEntry = siteEntry;
         return this;
     }
     
+    public SitesListResponse(){}
 }

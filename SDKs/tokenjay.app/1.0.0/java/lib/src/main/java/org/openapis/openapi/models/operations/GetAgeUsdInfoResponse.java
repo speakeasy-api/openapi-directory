@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAgeUsdInfoResponse {
     
     public byte[] body;
+
     public GetAgeUsdInfoResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetAgeUsdInfoResponse {
     
     
     public String contentType;
+
     public GetAgeUsdInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetAgeUsdInfoResponse {
     
     
     public Integer statusCode;
+
     public GetAgeUsdInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetAgeUsdInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAgeUsdInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetAgeUsdInfoResponse {
      */
     
     public String getAgeUsdInfo400WildcardString;
+
     public GetAgeUsdInfoResponse withGetAgeUsdInfo400WildcardString(String getAgeUsdInfo400WildcardString) {
         this.getAgeUsdInfo400WildcardString = getAgeUsdInfo400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class GetAgeUsdInfoResponse {
      */
     
     public String getAgeUsdInfo401WildcardString;
+
     public GetAgeUsdInfoResponse withGetAgeUsdInfo401WildcardString(String getAgeUsdInfo401WildcardString) {
         this.getAgeUsdInfo401WildcardString = getAgeUsdInfo401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class GetAgeUsdInfoResponse {
      */
     
     public String getAgeUsdInfo404WildcardString;
+
     public GetAgeUsdInfoResponse withGetAgeUsdInfo404WildcardString(String getAgeUsdInfo404WildcardString) {
         this.getAgeUsdInfo404WildcardString = getAgeUsdInfo404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class GetAgeUsdInfoResponse {
      */
     
     public String getAgeUsdInfo409WildcardString;
+
     public GetAgeUsdInfoResponse withGetAgeUsdInfo409WildcardString(String getAgeUsdInfo409WildcardString) {
         this.getAgeUsdInfo409WildcardString = getAgeUsdInfo409WildcardString;
         return this;
     }
     
+    public GetAgeUsdInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -22,6 +22,7 @@ public class AnomalyTimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public AnomalyTimeRange withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -31,9 +32,13 @@ public class AnomalyTimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public AnomalyTimeRange withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public AnomalyTimeRange(@JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.startTime = startTime;
+  }
 }

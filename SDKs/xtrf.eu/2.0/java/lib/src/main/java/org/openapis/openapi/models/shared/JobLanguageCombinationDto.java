@@ -12,6 +12,7 @@ public class JobLanguageCombinationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLanguageId")
     public Long sourceLanguageId;
+
     public JobLanguageCombinationDto withSourceLanguageId(Long sourceLanguageId) {
         this.sourceLanguageId = sourceLanguageId;
         return this;
@@ -20,6 +21,7 @@ public class JobLanguageCombinationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specializationId")
     public Long specializationId;
+
     public JobLanguageCombinationDto withSpecializationId(Long specializationId) {
         this.specializationId = specializationId;
         return this;
@@ -28,9 +30,11 @@ public class JobLanguageCombinationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLanguageId")
     public Long targetLanguageId;
+
     public JobLanguageCombinationDto withTargetLanguageId(Long targetLanguageId) {
         this.targetLanguageId = targetLanguageId;
         return this;
     }
     
+    public JobLanguageCombinationDto(){}
 }

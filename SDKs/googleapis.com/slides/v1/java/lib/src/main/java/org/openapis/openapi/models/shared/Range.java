@@ -18,6 +18,7 @@ public class Range {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endIndex")
     public Integer endIndex;
+
     public Range withEndIndex(Integer endIndex) {
         this.endIndex = endIndex;
         return this;
@@ -29,6 +30,7 @@ public class Range {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startIndex")
     public Integer startIndex;
+
     public Range withStartIndex(Integer startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -40,9 +42,11 @@ public class Range {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public RangeTypeEnum type;
+
     public Range withType(RangeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Range(){}
 }

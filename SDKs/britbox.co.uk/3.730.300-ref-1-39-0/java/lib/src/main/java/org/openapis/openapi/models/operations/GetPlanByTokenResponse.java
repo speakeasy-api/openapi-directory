@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPlanByTokenResponse {
@@ -12,6 +13,7 @@ public class GetPlanByTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.BtPlanListItem btPlanListItem;
+
     public GetPlanByTokenResponse withBtPlanListItem(org.openapis.openapi.models.shared.BtPlanListItem btPlanListItem) {
         this.btPlanListItem = btPlanListItem;
         return this;
@@ -19,6 +21,7 @@ public class GetPlanByTokenResponse {
     
     
     public String contentType;
+
     public GetPlanByTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPlanByTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetPlanByTokenResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GetPlanByTokenResponse {
     
     
     public Integer statusCode;
+
     public GetPlanByTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetPlanByTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPlanByTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPlanByTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

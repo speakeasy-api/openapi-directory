@@ -18,6 +18,7 @@ public class PayStatementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public PayStatementDetails withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -29,6 +30,7 @@ public class PayStatementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkDate")
     public String checkDate;
+
     public PayStatementDetails withCheckDate(String checkDate) {
         this.checkDate = checkDate;
         return this;
@@ -40,6 +42,7 @@ public class PayStatementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("det")
     public String det;
+
     public PayStatementDetails withDet(String det) {
         this.det = det;
         return this;
@@ -51,6 +54,7 @@ public class PayStatementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detCode")
     public String detCode;
+
     public PayStatementDetails withDetCode(String detCode) {
         this.detCode = detCode;
         return this;
@@ -62,6 +66,7 @@ public class PayStatementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detType")
     public String detType;
+
     public PayStatementDetails withDetType(String detType) {
         this.detType = detType;
         return this;
@@ -73,6 +78,7 @@ public class PayStatementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eligibleCompensation")
     public Double eligibleCompensation;
+
     public PayStatementDetails withEligibleCompensation(Double eligibleCompensation) {
         this.eligibleCompensation = eligibleCompensation;
         return this;
@@ -84,6 +90,7 @@ public class PayStatementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hours")
     public Double hours;
+
     public PayStatementDetails withHours(Double hours) {
         this.hours = hours;
         return this;
@@ -95,6 +102,7 @@ public class PayStatementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     public Double rate;
+
     public PayStatementDetails withRate(Double rate) {
         this.rate = rate;
         return this;
@@ -106,6 +114,7 @@ public class PayStatementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionNumber")
     public Long transactionNumber;
+
     public PayStatementDetails withTransactionNumber(Long transactionNumber) {
         this.transactionNumber = transactionNumber;
         return this;
@@ -117,6 +126,7 @@ public class PayStatementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionType")
     public String transactionType;
+
     public PayStatementDetails withTransactionType(String transactionType) {
         this.transactionType = transactionType;
         return this;
@@ -128,9 +138,11 @@ public class PayStatementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public Long year;
+
     public PayStatementDetails withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public PayStatementDetails(){}
 }

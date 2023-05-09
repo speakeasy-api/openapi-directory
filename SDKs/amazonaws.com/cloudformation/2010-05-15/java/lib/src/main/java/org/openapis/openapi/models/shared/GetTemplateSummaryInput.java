@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTemplateSummaryInput {
     
     public CallAsEnum callAs;
+
     public GetTemplateSummaryInput withCallAs(CallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -19,6 +20,7 @@ public class GetTemplateSummaryInput {
     
     
     public String stackName;
+
     public GetTemplateSummaryInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -26,6 +28,7 @@ public class GetTemplateSummaryInput {
     
     
     public String stackSetName;
+
     public GetTemplateSummaryInput withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
@@ -33,6 +36,7 @@ public class GetTemplateSummaryInput {
     
     
     public String templateBody;
+
     public GetTemplateSummaryInput withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
@@ -40,9 +44,11 @@ public class GetTemplateSummaryInput {
     
     
     public String templateURL;
+
     public GetTemplateSummaryInput withTemplateURL(String templateURL) {
         this.templateURL = templateURL;
         return this;
     }
     
+    public GetTemplateSummaryInput(){}
 }

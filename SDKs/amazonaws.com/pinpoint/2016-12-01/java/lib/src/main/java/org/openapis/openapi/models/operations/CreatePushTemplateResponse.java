@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePushTemplateResponse {
@@ -12,6 +13,7 @@ public class CreatePushTemplateResponse {
      */
     
     public Object badRequestException;
+
     public CreatePushTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreatePushTemplateResponse {
     
     
     public String contentType;
+
     public CreatePushTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreatePushTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePushTemplateResponse createPushTemplateResponse;
+
     public CreatePushTemplateResponse withCreatePushTemplateResponse(org.openapis.openapi.models.shared.CreatePushTemplateResponse createPushTemplateResponse) {
         this.createPushTemplateResponse = createPushTemplateResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreatePushTemplateResponse {
      */
     
     public Object forbiddenException;
+
     public CreatePushTemplateResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class CreatePushTemplateResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreatePushTemplateResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePushTemplateResponse {
      */
     
     public Object methodNotAllowedException;
+
     public CreatePushTemplateResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -66,6 +73,7 @@ public class CreatePushTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreatePushTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreatePushTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePushTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreatePushTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreatePushTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreatePushTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

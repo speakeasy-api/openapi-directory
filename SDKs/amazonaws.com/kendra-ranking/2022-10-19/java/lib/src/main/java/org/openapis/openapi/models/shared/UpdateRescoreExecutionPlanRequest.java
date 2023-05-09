@@ -12,6 +12,7 @@ public class UpdateRescoreExecutionPlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityUnits")
     public CapacityUnitsConfiguration capacityUnits;
+
     public UpdateRescoreExecutionPlanRequest withCapacityUnits(CapacityUnitsConfiguration capacityUnits) {
         this.capacityUnits = capacityUnits;
         return this;
@@ -20,6 +21,7 @@ public class UpdateRescoreExecutionPlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateRescoreExecutionPlanRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class UpdateRescoreExecutionPlanRequest {
     
     @JsonProperty("Id")
     public String id;
+
     public UpdateRescoreExecutionPlanRequest withId(String id) {
         this.id = id;
         return this;
@@ -35,9 +38,13 @@ public class UpdateRescoreExecutionPlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateRescoreExecutionPlanRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateRescoreExecutionPlanRequest(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

@@ -18,6 +18,7 @@ public class MergeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public MergeRequest withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -26,6 +27,7 @@ public class MergeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlinePdf")
     public Boolean inlinePdf;
+
     public MergeRequest withInlinePdf(Boolean inlinePdf) {
         this.inlinePdf = inlinePdf;
         return this;
@@ -33,9 +35,13 @@ public class MergeRequest {
     
     @JsonProperty("urls")
     public String[] urls;
+
     public MergeRequest withUrls(String[] urls) {
         this.urls = urls;
         return this;
     }
     
+    public MergeRequest(@JsonProperty("urls") String[] urls) {
+        this.urls = urls;
+  }
 }

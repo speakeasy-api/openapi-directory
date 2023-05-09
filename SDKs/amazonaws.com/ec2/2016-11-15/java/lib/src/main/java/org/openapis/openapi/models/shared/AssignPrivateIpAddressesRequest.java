@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AssignPrivateIpAddressesRequest - Contains the parameters for AssignPrivateIpAddresses.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssignPrivateIpAddressesRequest {
     
     public Boolean allowReassignment;
+
     public AssignPrivateIpAddressesRequest withAllowReassignment(Boolean allowReassignment) {
         this.allowReassignment = allowReassignment;
         return this;
@@ -19,6 +20,7 @@ public class AssignPrivateIpAddressesRequest {
     
     
     public Long ipv4PrefixCount;
+
     public AssignPrivateIpAddressesRequest withIpv4PrefixCount(Long ipv4PrefixCount) {
         this.ipv4PrefixCount = ipv4PrefixCount;
         return this;
@@ -26,6 +28,7 @@ public class AssignPrivateIpAddressesRequest {
     
     
     public String[] ipv4Prefixes;
+
     public AssignPrivateIpAddressesRequest withIpv4Prefixes(String[] ipv4Prefixes) {
         this.ipv4Prefixes = ipv4Prefixes;
         return this;
@@ -33,6 +36,7 @@ public class AssignPrivateIpAddressesRequest {
     
     
     public String networkInterfaceId;
+
     public AssignPrivateIpAddressesRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -40,6 +44,7 @@ public class AssignPrivateIpAddressesRequest {
     
     
     public String[] privateIpAddresses;
+
     public AssignPrivateIpAddressesRequest withPrivateIpAddresses(String[] privateIpAddresses) {
         this.privateIpAddresses = privateIpAddresses;
         return this;
@@ -47,9 +52,13 @@ public class AssignPrivateIpAddressesRequest {
     
     
     public Long secondaryPrivateIpAddressCount;
+
     public AssignPrivateIpAddressesRequest withSecondaryPrivateIpAddressCount(Long secondaryPrivateIpAddressCount) {
         this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
         return this;
     }
     
+    public AssignPrivateIpAddressesRequest(@JsonProperty("NetworkInterfaceId") String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+  }
 }

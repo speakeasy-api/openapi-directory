@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisconnectVendorRequest {
@@ -12,9 +13,13 @@ public class DisconnectVendorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vendor")
     public DisconnectVendorVendorEnum vendor;
+
     public DisconnectVendorRequest withVendor(DisconnectVendorVendorEnum vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public DisconnectVendorRequest(@JsonProperty("vendor") DisconnectVendorVendorEnum vendor) {
+        this.vendor = vendor;
+  }
 }

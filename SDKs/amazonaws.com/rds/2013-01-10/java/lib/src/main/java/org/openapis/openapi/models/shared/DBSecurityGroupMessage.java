@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBSecurityGroupMessage {
     
     public DBSecurityGroups[] dbSecurityGroups;
+
     public DBSecurityGroupMessage withDBSecurityGroups(DBSecurityGroups[] dbSecurityGroups) {
         this.dbSecurityGroups = dbSecurityGroups;
         return this;
@@ -19,9 +20,11 @@ public class DBSecurityGroupMessage {
     
     
     public String marker;
+
     public DBSecurityGroupMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DBSecurityGroupMessage(){}
 }

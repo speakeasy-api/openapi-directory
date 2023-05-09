@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddCheckpointFirewallResponse {
@@ -12,6 +13,7 @@ public class AddCheckpointFirewallResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public AddCheckpointFirewallResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -19,6 +21,7 @@ public class AddCheckpointFirewallResponse {
     
     
     public String contentType;
+
     public AddCheckpointFirewallResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AddCheckpointFirewallResponse {
     
     
     public Integer statusCode;
+
     public AddCheckpointFirewallResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class AddCheckpointFirewallResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddCheckpointFirewallResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class AddCheckpointFirewallResponse {
      */
     
     public org.openapis.openapi.models.shared.SwitchDataSource switchDataSource;
+
     public AddCheckpointFirewallResponse withSwitchDataSource(org.openapis.openapi.models.shared.SwitchDataSource switchDataSource) {
         this.switchDataSource = switchDataSource;
         return this;
     }
     
+    public AddCheckpointFirewallResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

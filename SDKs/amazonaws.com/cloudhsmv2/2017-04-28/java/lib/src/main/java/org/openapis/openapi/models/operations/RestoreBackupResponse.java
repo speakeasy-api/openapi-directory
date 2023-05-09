@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RestoreBackupResponse {
@@ -12,6 +13,7 @@ public class RestoreBackupResponse {
      */
     
     public Object cloudHsmAccessDeniedException;
+
     public RestoreBackupResponse withCloudHsmAccessDeniedException(Object cloudHsmAccessDeniedException) {
         this.cloudHsmAccessDeniedException = cloudHsmAccessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RestoreBackupResponse {
      */
     
     public Object cloudHsmInternalFailureException;
+
     public RestoreBackupResponse withCloudHsmInternalFailureException(Object cloudHsmInternalFailureException) {
         this.cloudHsmInternalFailureException = cloudHsmInternalFailureException;
         return this;
@@ -32,6 +35,7 @@ public class RestoreBackupResponse {
      */
     
     public Object cloudHsmInvalidRequestException;
+
     public RestoreBackupResponse withCloudHsmInvalidRequestException(Object cloudHsmInvalidRequestException) {
         this.cloudHsmInvalidRequestException = cloudHsmInvalidRequestException;
         return this;
@@ -42,6 +46,7 @@ public class RestoreBackupResponse {
      */
     
     public Object cloudHsmResourceNotFoundException;
+
     public RestoreBackupResponse withCloudHsmResourceNotFoundException(Object cloudHsmResourceNotFoundException) {
         this.cloudHsmResourceNotFoundException = cloudHsmResourceNotFoundException;
         return this;
@@ -52,6 +57,7 @@ public class RestoreBackupResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public RestoreBackupResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -59,6 +65,7 @@ public class RestoreBackupResponse {
     
     
     public String contentType;
+
     public RestoreBackupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class RestoreBackupResponse {
      */
     
     public org.openapis.openapi.models.shared.RestoreBackupResponse restoreBackupResponse;
+
     public RestoreBackupResponse withRestoreBackupResponse(org.openapis.openapi.models.shared.RestoreBackupResponse restoreBackupResponse) {
         this.restoreBackupResponse = restoreBackupResponse;
         return this;
@@ -76,6 +84,7 @@ public class RestoreBackupResponse {
     
     
     public Integer statusCode;
+
     public RestoreBackupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class RestoreBackupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RestoreBackupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RestoreBackupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

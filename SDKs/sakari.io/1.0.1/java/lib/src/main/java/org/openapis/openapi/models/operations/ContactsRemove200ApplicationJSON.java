@@ -15,9 +15,11 @@ public class ContactsRemove200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public ContactsRemove200ApplicationJSON withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ContactsRemove200ApplicationJSON(){}
 }

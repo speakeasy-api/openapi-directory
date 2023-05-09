@@ -17,6 +17,7 @@ public class PatientDiscoveryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public PatientDiscoveryResult withError(Error error) {
         this.error = error;
         return this;
@@ -25,6 +26,7 @@ public class PatientDiscoveryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient")
     public PatientRepresentation patient;
+
     public PatientDiscoveryResult withPatient(PatientRepresentation patient) {
         this.patient = patient;
         return this;
@@ -35,6 +37,7 @@ public class PatientDiscoveryResult {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public PatientDiscoveryResult withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -42,6 +45,7 @@ public class PatientDiscoveryResult {
     
     @JsonProperty("resp")
     public RequestReference resp;
+
     public PatientDiscoveryResult withResp(RequestReference resp) {
         this.resp = resp;
         return this;
@@ -54,6 +58,7 @@ public class PatientDiscoveryResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public PatientDiscoveryResult withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -61,9 +66,16 @@ public class PatientDiscoveryResult {
     
     @JsonProperty("transactionId")
     public String transactionId;
+
     public PatientDiscoveryResult withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public PatientDiscoveryResult(@JsonProperty("requestId") String requestId, @JsonProperty("resp") RequestReference resp, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("transactionId") String transactionId) {
+        this.requestId = requestId;
+        this.resp = resp;
+        this.timestamp = timestamp;
+        this.transactionId = transactionId;
+  }
 }

@@ -20,6 +20,7 @@ public class Insights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeAssessmentsCount")
     public Long activeAssessmentsCount;
+
     public Insights withActiveAssessmentsCount(Long activeAssessmentsCount) {
         this.activeAssessmentsCount = activeAssessmentsCount;
         return this;
@@ -28,6 +29,7 @@ public class Insights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentControlsCountByNoncompliantEvidence")
     public Long assessmentControlsCountByNoncompliantEvidence;
+
     public Insights withAssessmentControlsCountByNoncompliantEvidence(Long assessmentControlsCountByNoncompliantEvidence) {
         this.assessmentControlsCountByNoncompliantEvidence = assessmentControlsCountByNoncompliantEvidence;
         return this;
@@ -36,6 +38,7 @@ public class Insights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compliantEvidenceCount")
     public Long compliantEvidenceCount;
+
     public Insights withCompliantEvidenceCount(Long compliantEvidenceCount) {
         this.compliantEvidenceCount = compliantEvidenceCount;
         return this;
@@ -44,6 +47,7 @@ public class Insights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inconclusiveEvidenceCount")
     public Long inconclusiveEvidenceCount;
+
     public Insights withInconclusiveEvidenceCount(Long inconclusiveEvidenceCount) {
         this.inconclusiveEvidenceCount = inconclusiveEvidenceCount;
         return this;
@@ -54,6 +58,7 @@ public class Insights {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public Insights withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -62,6 +67,7 @@ public class Insights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noncompliantEvidenceCount")
     public Long noncompliantEvidenceCount;
+
     public Insights withNoncompliantEvidenceCount(Long noncompliantEvidenceCount) {
         this.noncompliantEvidenceCount = noncompliantEvidenceCount;
         return this;
@@ -70,9 +76,11 @@ public class Insights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalAssessmentControlsCount")
     public Long totalAssessmentControlsCount;
+
     public Insights withTotalAssessmentControlsCount(Long totalAssessmentControlsCount) {
         this.totalAssessmentControlsCount = totalAssessmentControlsCount;
         return this;
     }
     
+    public Insights(){}
 }

@@ -3,23 +3,22 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateSecurity;
 import org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateRequest;
 import org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateResponse;
+import org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.JobStateEnum;
-import org.openapis.openapi.models.shared.Job;
-import org.openapis.openapi.models.shared.Status;
-import org.openapis.openapi.models.shared.RetryConfig;
-import org.openapis.openapi.models.shared.PubsubTarget;
-import org.openapis.openapi.models.shared.HttpTargetHttpMethodEnum;
-import org.openapis.openapi.models.shared.HttpTarget;
-import org.openapis.openapi.models.shared.OidcToken;
-import org.openapis.openapi.models.shared.OAuthToken;
-import org.openapis.openapi.models.shared.AppEngineHttpTargetHttpMethodEnum;
 import org.openapis.openapi.models.shared.AppEngineHttpTarget;
+import org.openapis.openapi.models.shared.AppEngineHttpTargetHttpMethodEnum;
 import org.openapis.openapi.models.shared.AppEngineRouting;
+import org.openapis.openapi.models.shared.HttpTarget;
+import org.openapis.openapi.models.shared.HttpTargetHttpMethodEnum;
+import org.openapis.openapi.models.shared.Job;
+import org.openapis.openapi.models.shared.JobStateEnum;
+import org.openapis.openapi.models.shared.OAuthToken;
+import org.openapis.openapi.models.shared.OidcToken;
+import org.openapis.openapi.models.shared.PubsubTarget;
+import org.openapis.openapi.models.shared.RetryConfig;
+import org.openapis.openapi.models.shared.Status;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -28,76 +27,72 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CloudschedulerProjectsLocationsJobsCreateRequest req = new CloudschedulerProjectsLocationsJobsCreateRequest() {{
-                dollarXgafv = "2";
+            CloudschedulerProjectsLocationsJobsCreateRequest req = new CloudschedulerProjectsLocationsJobsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 job = new Job() {{
                     appEngineHttpTarget = new AppEngineHttpTarget() {{
                         appEngineRouting = new AppEngineRouting() {{
-                            host = "provident";
-                            instance = "distinctio";
-                            service = "quibusdam";
-                            version = "unde";
-                        }};
-                        body = "nulla";
+                            host = "distinctio";
+                            instance = "quibusdam";
+                            service = "unde";
+                            version = "nulla";
+                        }};;
+                        body = "corrupti";
                         headers = new java.util.HashMap<String, String>() {{
-                            put("illum", "vel");
-                            put("error", "deserunt");
-                            put("suscipit", "iure");
+                            put("vel", "error");
+                            put("deserunt", "suscipit");
+                            put("iure", "magnam");
+                            put("debitis", "ipsa");
                         }};
-                        httpMethod = "GET";
-                        relativeUri = "debitis";
-                    }};
-                    attemptDeadline = "ipsa";
-                    description = "delectus";
+                        httpMethod = AppEngineHttpTargetHttpMethodEnum.OPTIONS;
+                        relativeUri = "tempora";
+                    }};;
+                    attemptDeadline = "suscipit";
+                    description = "molestiae";
                     httpTarget = new HttpTarget() {{
-                        body = "tempora";
+                        body = "minus";
                         headers = new java.util.HashMap<String, String>() {{
-                            put("molestiae", "minus");
-                            put("placeat", "voluptatum");
+                            put("voluptatum", "iusto");
+                            put("excepturi", "nisi");
+                            put("recusandae", "temporibus");
+                            put("ab", "quis");
                         }};
-                        httpMethod = "HEAD";
+                        httpMethod = HttpTargetHttpMethodEnum.HTTP_METHOD_UNSPECIFIED;
                         oauthToken = new OAuthToken() {{
-                            scope = "excepturi";
-                            serviceAccountEmail = "nisi";
-                        }};
+                            scope = "deserunt";
+                            serviceAccountEmail = "perferendis";
+                        }};;
                         oidcToken = new OidcToken() {{
-                            audience = "recusandae";
-                            serviceAccountEmail = "temporibus";
-                        }};
-                        uri = "http://gloomy-blanket.name";
-                    }};
-                    lastAttemptTime = "perferendis";
+                            audience = "ipsam";
+                            serviceAccountEmail = "repellendus";
+                        }};;
+                        uri = "https://spherical-caviar.org";
+                    }};;
+                    lastAttemptTime = "at";
                     legacyAppEngineCron = false;
-                    name = "ipsam";
+                    name = "Javier Schmidt";
                     pubsubTarget = new PubsubTarget() {{
                         attributes = new java.util.HashMap<String, String>() {{
-                            put("sapiente", "quo");
-                            put("odit", "at");
-                            put("at", "maiores");
-                            put("molestiae", "quod");
+                            put("porro", "dolorum");
+                            put("dicta", "nam");
+                            put("officia", "occaecati");
                         }};
-                        data = "quod";
-                        topicName = "esse";
-                    }};
+                        data = "fugit";
+                        topicName = "deleniti";
+                    }};;
                     retryConfig = new RetryConfig() {{
-                        maxBackoffDuration = "totam";
-                        maxDoublings = 780529;
-                        maxRetryDuration = "dolorum";
-                        minBackoffDuration = "dicta";
-                        retryCount = 720633;
-                    }};
-                    schedule = "officia";
-                    scheduleTime = "occaecati";
-                    state = "STATE_UNSPECIFIED";
+                        maxBackoffDuration = "hic";
+                        maxDoublings = 758616;
+                        maxRetryDuration = "totam";
+                        minBackoffDuration = "beatae";
+                        retryCount = 414662;
+                    }};;
+                    schedule = "molestiae";
+                    scheduleTime = "modi";
+                    state = JobStateEnum.STATE_UNSPECIFIED;
                     status = new Status() {{
-                        code = 537373;
+                        code = 774234;
                         details = new java.util.HashMap<String, Object>[]{{
-                            add(new java.util.HashMap<String, Object>() {{
-                                put("totam", "beatae");
-                                put("commodi", "molestiae");
-                                put("modi", "qui");
-                                put("impedit", "cum");
-                            }}),
                             add(new java.util.HashMap<String, Object>() {{
                                 put("ipsum", "excepturi");
                                 put("aspernatur", "perferendis");
@@ -113,33 +108,34 @@ public class Application {
                             }}),
                         }};
                         message = "iste";
-                    }};
+                    }};;
                     timeZone = "iure";
                     userUpdateTime = "saepe";
-                }};
+                }};;
                 accessToken = "quidem";
-                alt = "json";
+                alt = AltEnum.JSON;
                 callback = "ipsa";
                 fields = "reiciendis";
                 key = "est";
                 oauthToken = "mollitia";
-                parent = "laborum";
                 prettyPrint = false;
-                quotaUser = "dolores";
-                uploadType = "dolorem";
-                uploadProtocol = "corporis";
-            }}            
+                quotaUser = "laborum";
+                uploadType = "dolores";
+                uploadProtocol = "dolorem";
+            }};            
 
-            CloudschedulerProjectsLocationsJobsCreateResponse res = sdk.projects.cloudschedulerProjectsLocationsJobsCreate(req, new CloudschedulerProjectsLocationsJobsCreateSecurity() {{
+            CloudschedulerProjectsLocationsJobsCreateResponse res = sdk.projects.cloudschedulerProjectsLocationsJobsCreate(req, new CloudschedulerProjectsLocationsJobsCreateSecurity("corporis", "explicabo") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.job.isPresent()) {
+            if (res.job != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

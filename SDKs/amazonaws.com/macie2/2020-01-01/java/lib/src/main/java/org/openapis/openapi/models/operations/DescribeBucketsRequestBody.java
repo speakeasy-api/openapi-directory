@@ -15,6 +15,7 @@ public class DescribeBucketsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criteria")
     public java.util.Map<String, org.openapis.openapi.models.shared.BucketCriteriaAdditionalProperties> criteria;
+
     public DescribeBucketsRequestBody withCriteria(java.util.Map<String, org.openapis.openapi.models.shared.BucketCriteriaAdditionalProperties> criteria) {
         this.criteria = criteria;
         return this;
@@ -26,6 +27,7 @@ public class DescribeBucketsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeBucketsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class DescribeBucketsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeBucketsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,9 +51,11 @@ public class DescribeBucketsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortCriteria")
     public DescribeBucketsRequestBodySortCriteria sortCriteria;
+
     public DescribeBucketsRequestBody withSortCriteria(DescribeBucketsRequestBodySortCriteria sortCriteria) {
         this.sortCriteria = sortCriteria;
         return this;
     }
     
+    public DescribeBucketsRequestBody(){}
 }

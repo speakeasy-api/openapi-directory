@@ -14,6 +14,7 @@ public class SaveTransactionWithId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     public String accountId;
+
     public SaveTransactionWithId withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class SaveTransactionWithId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Long amount;
+
     public SaveTransactionWithId withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -36,6 +38,7 @@ public class SaveTransactionWithId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approved")
     public Boolean approved;
+
     public SaveTransactionWithId withApproved(Boolean approved) {
         this.approved = approved;
         return this;
@@ -47,6 +50,7 @@ public class SaveTransactionWithId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_id")
     public String categoryId;
+
     public SaveTransactionWithId withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -58,6 +62,7 @@ public class SaveTransactionWithId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cleared")
     public SaveTransactionWithIdClearedEnum cleared;
+
     public SaveTransactionWithId withCleared(SaveTransactionWithIdClearedEnum cleared) {
         this.cleared = cleared;
         return this;
@@ -70,6 +75,7 @@ public class SaveTransactionWithId {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date")
     public LocalDate date;
+
     public SaveTransactionWithId withDate(LocalDate date) {
         this.date = date;
         return this;
@@ -81,6 +87,7 @@ public class SaveTransactionWithId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flag_color")
     public SaveTransactionWithIdFlagColorEnum flagColor;
+
     public SaveTransactionWithId withFlagColor(SaveTransactionWithIdFlagColorEnum flagColor) {
         this.flagColor = flagColor;
         return this;
@@ -89,6 +96,7 @@ public class SaveTransactionWithId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SaveTransactionWithId withId(String id) {
         this.id = id;
         return this;
@@ -100,6 +108,7 @@ public class SaveTransactionWithId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("import_id")
     public String importId;
+
     public SaveTransactionWithId withImportId(String importId) {
         this.importId = importId;
         return this;
@@ -108,6 +117,7 @@ public class SaveTransactionWithId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo")
     public String memo;
+
     public SaveTransactionWithId withMemo(String memo) {
         this.memo = memo;
         return this;
@@ -119,6 +129,7 @@ public class SaveTransactionWithId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_id")
     public String payeeId;
+
     public SaveTransactionWithId withPayeeId(String payeeId) {
         this.payeeId = payeeId;
         return this;
@@ -130,6 +141,7 @@ public class SaveTransactionWithId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_name")
     public String payeeName;
+
     public SaveTransactionWithId withPayeeName(String payeeName) {
         this.payeeName = payeeName;
         return this;
@@ -141,9 +153,11 @@ public class SaveTransactionWithId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtransactions")
     public SaveSubTransaction[] subtransactions;
+
     public SaveTransactionWithId withSubtransactions(SaveSubTransaction[] subtransactions) {
         this.subtransactions = subtransactions;
         return this;
     }
     
+    public SaveTransactionWithId(){}
 }

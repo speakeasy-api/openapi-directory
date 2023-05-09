@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrieveAllRequisitionsResponse {
     
     public String contentType;
+
     public RetrieveAllRequisitionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -18,14 +20,16 @@ public class RetrieveAllRequisitionsResponse {
      * Retrieve all requisitions
      */
     
-    public org.openapis.openapi.models.shared.PaginatedRequisitionV2List paginatedRequisitionV2List;
-    public RetrieveAllRequisitionsResponse withPaginatedRequisitionV2List(org.openapis.openapi.models.shared.PaginatedRequisitionV2List paginatedRequisitionV2List) {
-        this.paginatedRequisitionV2List = paginatedRequisitionV2List;
+    public org.openapis.openapi.models.shared.PaginatedRequisitionList paginatedRequisitionList;
+
+    public RetrieveAllRequisitionsResponse withPaginatedRequisitionList(org.openapis.openapi.models.shared.PaginatedRequisitionList paginatedRequisitionList) {
+        this.paginatedRequisitionList = paginatedRequisitionList;
         return this;
     }
     
     
     public Integer statusCode;
+
     public RetrieveAllRequisitionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RetrieveAllRequisitionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrieveAllRequisitionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class RetrieveAllRequisitionsResponse {
      */
     
     public java.util.Map<String, Object> retrieveAllRequisitions400ApplicationJSONObject;
+
     public RetrieveAllRequisitionsResponse withRetrieveAllRequisitions400ApplicationJSONObject(java.util.Map<String, Object> retrieveAllRequisitions400ApplicationJSONObject) {
         this.retrieveAllRequisitions400ApplicationJSONObject = retrieveAllRequisitions400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RetrieveAllRequisitionsResponse {
      */
     
     public java.util.Map<String, Object> retrieveAllRequisitions401ApplicationJSONObject;
+
     public RetrieveAllRequisitionsResponse withRetrieveAllRequisitions401ApplicationJSONObject(java.util.Map<String, Object> retrieveAllRequisitions401ApplicationJSONObject) {
         this.retrieveAllRequisitions401ApplicationJSONObject = retrieveAllRequisitions401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class RetrieveAllRequisitionsResponse {
      */
     
     public java.util.Map<String, Object> retrieveAllRequisitions403ApplicationJSONObject;
+
     public RetrieveAllRequisitionsResponse withRetrieveAllRequisitions403ApplicationJSONObject(java.util.Map<String, Object> retrieveAllRequisitions403ApplicationJSONObject) {
         this.retrieveAllRequisitions403ApplicationJSONObject = retrieveAllRequisitions403ApplicationJSONObject;
         return this;
@@ -73,9 +81,25 @@ public class RetrieveAllRequisitionsResponse {
      */
     
     public java.util.Map<String, Object> retrieveAllRequisitions404ApplicationJSONObject;
+
     public RetrieveAllRequisitionsResponse withRetrieveAllRequisitions404ApplicationJSONObject(java.util.Map<String, Object> retrieveAllRequisitions404ApplicationJSONObject) {
         this.retrieveAllRequisitions404ApplicationJSONObject = retrieveAllRequisitions404ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Nordigen rate limit exceeded
+     */
+    
+    public java.util.Map<String, Object> retrieveAllRequisitions429ApplicationJSONObject;
+
+    public RetrieveAllRequisitionsResponse withRetrieveAllRequisitions429ApplicationJSONObject(java.util.Map<String, Object> retrieveAllRequisitions429ApplicationJSONObject) {
+        this.retrieveAllRequisitions429ApplicationJSONObject = retrieveAllRequisitions429ApplicationJSONObject;
+        return this;
+    }
+    
+    public RetrieveAllRequisitionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

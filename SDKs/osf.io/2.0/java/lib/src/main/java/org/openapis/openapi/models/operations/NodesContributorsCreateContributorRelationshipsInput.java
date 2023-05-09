@@ -15,9 +15,13 @@ public class NodesContributorsCreateContributorRelationshipsInput {
      */
     @JsonProperty("user")
     public String user;
+
     public NodesContributorsCreateContributorRelationshipsInput withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public NodesContributorsCreateContributorRelationshipsInput(@JsonProperty("user") String user) {
+        this.user = user;
+  }
 }

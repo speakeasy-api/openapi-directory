@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetComplianceDetailRequest {
     @JsonProperty("MemberAccount")
     public String memberAccount;
+
     public GetComplianceDetailRequest withMemberAccount(String memberAccount) {
         this.memberAccount = memberAccount;
         return this;
@@ -16,9 +17,14 @@ public class GetComplianceDetailRequest {
     
     @JsonProperty("PolicyId")
     public String policyId;
+
     public GetComplianceDetailRequest withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
     }
     
+    public GetComplianceDetailRequest(@JsonProperty("MemberAccount") String memberAccount, @JsonProperty("PolicyId") String policyId) {
+        this.memberAccount = memberAccount;
+        this.policyId = policyId;
+  }
 }

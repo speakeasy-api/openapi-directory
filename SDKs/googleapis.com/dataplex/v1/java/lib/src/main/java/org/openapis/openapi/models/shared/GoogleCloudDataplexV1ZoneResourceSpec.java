@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1ZoneResourceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationType")
     public GoogleCloudDataplexV1ZoneResourceSpecLocationTypeEnum locationType;
+
     public GoogleCloudDataplexV1ZoneResourceSpec withLocationType(GoogleCloudDataplexV1ZoneResourceSpecLocationTypeEnum locationType) {
         this.locationType = locationType;
         return this;
     }
     
+    public GoogleCloudDataplexV1ZoneResourceSpec(){}
 }

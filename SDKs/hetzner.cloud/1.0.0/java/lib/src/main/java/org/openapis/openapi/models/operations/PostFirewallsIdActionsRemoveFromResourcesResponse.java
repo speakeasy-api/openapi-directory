@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostFirewallsIdActionsRemoveFromResourcesResponse {
@@ -12,6 +13,7 @@ public class PostFirewallsIdActionsRemoveFromResourcesResponse {
      */
     
     public PostFirewallsIdActionsRemoveFromResourcesActionsResponse actionsResponse;
+
     public PostFirewallsIdActionsRemoveFromResourcesResponse withActionsResponse(PostFirewallsIdActionsRemoveFromResourcesActionsResponse actionsResponse) {
         this.actionsResponse = actionsResponse;
         return this;
@@ -19,6 +21,7 @@ public class PostFirewallsIdActionsRemoveFromResourcesResponse {
     
     
     public String contentType;
+
     public PostFirewallsIdActionsRemoveFromResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostFirewallsIdActionsRemoveFromResourcesResponse {
     
     
     public Integer statusCode;
+
     public PostFirewallsIdActionsRemoveFromResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostFirewallsIdActionsRemoveFromResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostFirewallsIdActionsRemoveFromResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostFirewallsIdActionsRemoveFromResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

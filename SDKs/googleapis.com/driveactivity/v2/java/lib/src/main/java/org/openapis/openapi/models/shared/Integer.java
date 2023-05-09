@@ -18,9 +18,11 @@ public class Integer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Integer withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Integer(){}
 }

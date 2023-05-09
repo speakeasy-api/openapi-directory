@@ -18,6 +18,7 @@ public class CatalogQueryRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute_max_value")
     public Long attributeMaxValue;
+
     public CatalogQueryRange withAttributeMaxValue(Long attributeMaxValue) {
         this.attributeMaxValue = attributeMaxValue;
         return this;
@@ -29,6 +30,7 @@ public class CatalogQueryRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute_min_value")
     public Long attributeMinValue;
+
     public CatalogQueryRange withAttributeMinValue(Long attributeMinValue) {
         this.attributeMinValue = attributeMinValue;
         return this;
@@ -39,9 +41,13 @@ public class CatalogQueryRange {
      */
     @JsonProperty("attribute_name")
     public String attributeName;
+
     public CatalogQueryRange withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
     
+    public CatalogQueryRange(@JsonProperty("attribute_name") String attributeName) {
+        this.attributeName = attributeName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AutomlProjectsLocationsOperationsCancelResponse {
     
     public String contentType;
+
     public AutomlProjectsLocationsOperationsCancelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AutomlProjectsLocationsOperationsCancelResponse {
      */
     
     public java.util.Map<String, Object> empty;
+
     public AutomlProjectsLocationsOperationsCancelResponse withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
@@ -26,6 +29,7 @@ public class AutomlProjectsLocationsOperationsCancelResponse {
     
     
     public Integer statusCode;
+
     public AutomlProjectsLocationsOperationsCancelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AutomlProjectsLocationsOperationsCancelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AutomlProjectsLocationsOperationsCancelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AutomlProjectsLocationsOperationsCancelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

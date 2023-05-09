@@ -14,6 +14,7 @@ public class UsersCreateRequestBody {
      */
     @JsonProperty("email")
     public String email;
+
     public UsersCreateRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -25,6 +26,7 @@ public class UsersCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UsersCreateRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +37,14 @@ public class UsersCreateRequestBody {
      */
     @JsonProperty("password")
     public String password;
+
     public UsersCreateRequestBody withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public UsersCreateRequestBody(@JsonProperty("email") String email, @JsonProperty("password") String password) {
+        this.email = email;
+        this.password = password;
+  }
 }

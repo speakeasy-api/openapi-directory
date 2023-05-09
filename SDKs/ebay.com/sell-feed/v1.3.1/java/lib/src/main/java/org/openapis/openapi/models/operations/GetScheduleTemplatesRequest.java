@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScheduleTemplatesRequest {
@@ -12,6 +13,7 @@ public class GetScheduleTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=feed_type")
     public String feedType;
+
     public GetScheduleTemplatesRequest withFeedType(String feedType) {
         this.feedType = feedType;
         return this;
@@ -22,6 +24,7 @@ public class GetScheduleTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetScheduleTemplatesRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -32,9 +35,13 @@ public class GetScheduleTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetScheduleTemplatesRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetScheduleTemplatesRequest(@JsonProperty("feed_type") String feedType) {
+        this.feedType = feedType;
+  }
 }

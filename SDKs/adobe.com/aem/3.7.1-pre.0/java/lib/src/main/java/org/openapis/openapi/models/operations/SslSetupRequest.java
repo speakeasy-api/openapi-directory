@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SslSetupRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public SslSetupRequestBody requestBody;
+
     public SslSetupRequest withRequestBody(SslSetupRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class SslSetupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=httpsHostname")
     public String httpsHostname;
+
     public SslSetupRequest withHttpsHostname(String httpsHostname) {
         this.httpsHostname = httpsHostname;
         return this;
@@ -23,6 +26,7 @@ public class SslSetupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=httpsPort")
     public String httpsPort;
+
     public SslSetupRequest withHttpsPort(String httpsPort) {
         this.httpsPort = httpsPort;
         return this;
@@ -30,6 +34,7 @@ public class SslSetupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keystorePassword")
     public String keystorePassword;
+
     public SslSetupRequest withKeystorePassword(String keystorePassword) {
         this.keystorePassword = keystorePassword;
         return this;
@@ -37,6 +42,7 @@ public class SslSetupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keystorePasswordConfirm")
     public String keystorePasswordConfirm;
+
     public SslSetupRequest withKeystorePasswordConfirm(String keystorePasswordConfirm) {
         this.keystorePasswordConfirm = keystorePasswordConfirm;
         return this;
@@ -44,6 +50,7 @@ public class SslSetupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=truststorePassword")
     public String truststorePassword;
+
     public SslSetupRequest withTruststorePassword(String truststorePassword) {
         this.truststorePassword = truststorePassword;
         return this;
@@ -51,9 +58,18 @@ public class SslSetupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=truststorePasswordConfirm")
     public String truststorePasswordConfirm;
+
     public SslSetupRequest withTruststorePasswordConfirm(String truststorePasswordConfirm) {
         this.truststorePasswordConfirm = truststorePasswordConfirm;
         return this;
     }
     
+    public SslSetupRequest(@JsonProperty("httpsHostname") String httpsHostname, @JsonProperty("httpsPort") String httpsPort, @JsonProperty("keystorePassword") String keystorePassword, @JsonProperty("keystorePasswordConfirm") String keystorePasswordConfirm, @JsonProperty("truststorePassword") String truststorePassword, @JsonProperty("truststorePasswordConfirm") String truststorePasswordConfirm) {
+        this.httpsHostname = httpsHostname;
+        this.httpsPort = httpsPort;
+        this.keystorePassword = keystorePassword;
+        this.keystorePasswordConfirm = keystorePasswordConfirm;
+        this.truststorePassword = truststorePassword;
+        this.truststorePasswordConfirm = truststorePasswordConfirm;
+  }
 }

@@ -15,6 +15,7 @@ public class RegistrationsListRegistrationLinks {
      */
     
     public String html;
+
     public RegistrationsListRegistrationLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -25,9 +26,11 @@ public class RegistrationsListRegistrationLinks {
      */
     
     public String self;
+
     public RegistrationsListRegistrationLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public RegistrationsListRegistrationLinks(){}
 }

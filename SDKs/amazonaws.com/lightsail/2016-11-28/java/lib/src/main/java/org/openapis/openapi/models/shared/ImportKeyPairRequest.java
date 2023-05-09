@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportKeyPairRequest {
     @JsonProperty("keyPairName")
     public String keyPairName;
+
     public ImportKeyPairRequest withKeyPairName(String keyPairName) {
         this.keyPairName = keyPairName;
         return this;
@@ -16,9 +17,14 @@ public class ImportKeyPairRequest {
     
     @JsonProperty("publicKeyBase64")
     public String publicKeyBase64;
+
     public ImportKeyPairRequest withPublicKeyBase64(String publicKeyBase64) {
         this.publicKeyBase64 = publicKeyBase64;
         return this;
     }
     
+    public ImportKeyPairRequest(@JsonProperty("keyPairName") String keyPairName, @JsonProperty("publicKeyBase64") String publicKeyBase64) {
+        this.keyPairName = keyPairName;
+        this.publicKeyBase64 = publicKeyBase64;
+  }
 }

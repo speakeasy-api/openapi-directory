@@ -18,9 +18,11 @@ public class PrivateServiceConnectConnectivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAttachment")
     public String serviceAttachment;
+
     public PrivateServiceConnectConnectivity withServiceAttachment(String serviceAttachment) {
         this.serviceAttachment = serviceAttachment;
         return this;
     }
     
+    public PrivateServiceConnectConnectivity(){}
 }

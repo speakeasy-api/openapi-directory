@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcceptEulasResponse {
@@ -12,6 +13,7 @@ public class AcceptEulasResponse {
      */
     
     public org.openapis.openapi.models.shared.AcceptEulasResponse acceptEulasResponse;
+
     public AcceptEulasResponse withAcceptEulasResponse(org.openapis.openapi.models.shared.AcceptEulasResponse acceptEulasResponse) {
         this.acceptEulasResponse = acceptEulasResponse;
         return this;
@@ -22,6 +24,7 @@ public class AcceptEulasResponse {
      */
     
     public Object accessDeniedException;
+
     public AcceptEulasResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class AcceptEulasResponse {
      */
     
     public Object conflictException;
+
     public AcceptEulasResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AcceptEulasResponse {
     
     
     public String contentType;
+
     public AcceptEulasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AcceptEulasResponse {
      */
     
     public Object internalServerErrorException;
+
     public AcceptEulasResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class AcceptEulasResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AcceptEulasResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AcceptEulasResponse {
     
     
     public Integer statusCode;
+
     public AcceptEulasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AcceptEulasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcceptEulasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AcceptEulasResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public AcceptEulasResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class AcceptEulasResponse {
      */
     
     public Object throttlingException;
+
     public AcceptEulasResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class AcceptEulasResponse {
      */
     
     public Object validationException;
+
     public AcceptEulasResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AcceptEulasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

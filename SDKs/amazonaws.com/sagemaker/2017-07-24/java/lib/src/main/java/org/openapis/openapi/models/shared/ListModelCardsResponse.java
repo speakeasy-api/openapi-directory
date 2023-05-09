@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListModelCardsResponse {
     @JsonProperty("ModelCardSummaries")
     public ModelCardSummary[] modelCardSummaries;
+
     public ListModelCardsResponse withModelCardSummaries(ModelCardSummary[] modelCardSummaries) {
         this.modelCardSummaries = modelCardSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListModelCardsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListModelCardsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListModelCardsResponse(@JsonProperty("ModelCardSummaries") ModelCardSummary[] modelCardSummaries) {
+        this.modelCardSummaries = modelCardSummaries;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Response3 {
     @JsonProperty("_self")
     public Self self;
+
     public Response3 withSelf(Self self) {
         this.self = self;
         return this;
@@ -16,9 +17,14 @@ public class Response3 {
     
     @JsonProperty("id")
     public String id;
+
     public Response3 withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Response3(@JsonProperty("_self") Self self, @JsonProperty("id") String id) {
+        this.self = self;
+        this.id = id;
+  }
 }

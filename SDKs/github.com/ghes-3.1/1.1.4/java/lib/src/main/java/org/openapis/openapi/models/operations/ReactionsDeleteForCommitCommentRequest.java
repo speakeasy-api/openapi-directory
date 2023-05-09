@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsDeleteForCommitCommentRequest {
@@ -12,6 +13,7 @@ public class ReactionsDeleteForCommitCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
     public Long commentId;
+
     public ReactionsDeleteForCommitCommentRequest withCommentId(Long commentId) {
         this.commentId = commentId;
         return this;
@@ -22,6 +24,7 @@ public class ReactionsDeleteForCommitCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReactionsDeleteForCommitCommentRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,6 +35,7 @@ public class ReactionsDeleteForCommitCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reaction_id")
     public Long reactionId;
+
     public ReactionsDeleteForCommitCommentRequest withReactionId(Long reactionId) {
         this.reactionId = reactionId;
         return this;
@@ -42,9 +46,16 @@ public class ReactionsDeleteForCommitCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReactionsDeleteForCommitCommentRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReactionsDeleteForCommitCommentRequest(@JsonProperty("comment_id") Long commentId, @JsonProperty("owner") String owner, @JsonProperty("reaction_id") Long reactionId, @JsonProperty("repo") String repo) {
+        this.commentId = commentId;
+        this.owner = owner;
+        this.reactionId = reactionId;
+        this.repo = repo;
+  }
 }

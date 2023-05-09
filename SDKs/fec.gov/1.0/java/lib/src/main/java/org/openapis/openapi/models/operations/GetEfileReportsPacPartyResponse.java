@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEfileReportsPacPartyResponse {
     
     public org.openapis.openapi.models.shared.BaseF3XFilingPage baseF3XFilingPage;
+
     public GetEfileReportsPacPartyResponse withBaseF3XFilingPage(org.openapis.openapi.models.shared.BaseF3XFilingPage baseF3XFilingPage) {
         this.baseF3XFilingPage = baseF3XFilingPage;
         return this;
@@ -16,6 +18,7 @@ public class GetEfileReportsPacPartyResponse {
     
     
     public String contentType;
+
     public GetEfileReportsPacPartyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetEfileReportsPacPartyResponse {
     
     
     public Integer statusCode;
+
     public GetEfileReportsPacPartyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetEfileReportsPacPartyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEfileReportsPacPartyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetEfileReportsPacPartyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class GetSectionsForProject200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.SectionCompact[] data;
+
     public GetSectionsForProject200ApplicationJSON withData(org.openapis.openapi.models.shared.SectionCompact[] data) {
         this.data = data;
         return this;
     }
     
+    public GetSectionsForProject200ApplicationJSON(){}
 }

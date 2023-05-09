@@ -18,6 +18,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averages")
     public String[] averages;
+
     public Report withAverages(String[] averages) {
         this.averages = averages;
         return this;
@@ -29,6 +30,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public ReportHeaders[] headers;
+
     public Report withHeaders(ReportHeaders[] headers) {
         this.headers = headers;
         return this;
@@ -40,6 +42,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Report withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public String[][] rows;
+
     public Report withRows(String[][] rows) {
         this.rows = rows;
         return this;
@@ -62,6 +66,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalMatchedRows")
     public String totalMatchedRows;
+
     public Report withTotalMatchedRows(String totalMatchedRows) {
         this.totalMatchedRows = totalMatchedRows;
         return this;
@@ -73,6 +78,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totals")
     public String[] totals;
+
     public Report withTotals(String[] totals) {
         this.totals = totals;
         return this;
@@ -84,9 +90,11 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public String[] warnings;
+
     public Report withWarnings(String[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public Report(){}
 }

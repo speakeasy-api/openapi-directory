@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataNetworkInterfacesPrivateIpAddresses {
     
     public Boolean primary;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataNetworkInterfacesPrivateIpAddresses withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -19,9 +20,11 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String privateIpAddress;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataNetworkInterfacesPrivateIpAddresses withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataNetworkInterfacesPrivateIpAddresses(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationResponse {
     
     public String contentType;
+
     public ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationResp
     
     
     public Integer statusCode;
+
     public ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationResp
      */
     
     public ActionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSON actionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSONObject;
+
     public ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationResponse withActionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSONObject(ActionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSON actionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSONObject) {
         this.actionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSONObject = actionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSONObject;
         return this;
     }
     
+    public ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

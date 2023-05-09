@@ -15,9 +15,11 @@ public class CreateGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Group")
     public GroupType group;
+
     public CreateGroupResponse withGroup(GroupType group) {
         this.group = group;
         return this;
     }
     
+    public CreateGroupResponse(){}
 }

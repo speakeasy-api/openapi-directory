@@ -18,6 +18,7 @@ public class TableBorderCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public TableCellLocation location;
+
     public TableBorderCell withLocation(TableCellLocation location) {
         this.location = location;
         return this;
@@ -29,9 +30,11 @@ public class TableBorderCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableBorderProperties")
     public TableBorderProperties tableBorderProperties;
+
     public TableBorderCell withTableBorderProperties(TableBorderProperties tableBorderProperties) {
         this.tableBorderProperties = tableBorderProperties;
         return this;
     }
     
+    public TableBorderCell(){}
 }

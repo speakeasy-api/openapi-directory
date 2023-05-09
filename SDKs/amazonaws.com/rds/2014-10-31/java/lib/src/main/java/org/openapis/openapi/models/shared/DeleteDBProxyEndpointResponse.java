@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteDBProxyEndpointResponse {
     
     public DBProxyEndpoint dbProxyEndpoint;
+
     public DeleteDBProxyEndpointResponse withDBProxyEndpoint(DBProxyEndpoint dbProxyEndpoint) {
         this.dbProxyEndpoint = dbProxyEndpoint;
         return this;
     }
     
+    public DeleteDBProxyEndpointResponse(){}
 }

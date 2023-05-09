@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClientProfileForPamRequest {
@@ -12,9 +13,13 @@ public class GetClientProfileForPamRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
     public Long clientId;
+
     public GetClientProfileForPamRequest withClientId(Long clientId) {
         this.clientId = clientId;
         return this;
     }
     
+    public GetClientProfileForPamRequest(@JsonProperty("clientId") Long clientId) {
+        this.clientId = clientId;
+  }
 }

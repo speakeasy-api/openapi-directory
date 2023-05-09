@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest {
@@ -12,6 +13,7 @@ public class GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_from")
     public String from;
+
     public GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest withFrom(String from) {
         this.from = from;
         return this;
@@ -42,6 +46,7 @@ public class GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_to")
     public String to;
+
     public GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest withTo(String to) {
         this.to = to;
         return this;
@@ -52,9 +57,15 @@ public class GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=categoryId")
     public String categoryId;
+
     public GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
     }
     
+    public GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("categoryId") String categoryId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.categoryId = categoryId;
+  }
 }

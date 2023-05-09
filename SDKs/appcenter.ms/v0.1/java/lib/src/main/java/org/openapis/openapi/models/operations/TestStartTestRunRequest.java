@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestStartTestRunRequest {
@@ -12,6 +13,7 @@ public class TestStartTestRunRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public TestStartTestRunTestCloudStartTestRunOptions requestBody;
+
     public TestStartTestRunRequest withRequestBody(TestStartTestRunTestCloudStartTestRunOptions requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class TestStartTestRunRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public TestStartTestRunRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,6 +35,7 @@ public class TestStartTestRunRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public TestStartTestRunRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -42,9 +46,16 @@ public class TestStartTestRunRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=test_run_id")
     public String testRunId;
+
     public TestStartTestRunRequest withTestRunId(String testRunId) {
         this.testRunId = testRunId;
         return this;
     }
     
+    public TestStartTestRunRequest(@JsonProperty("RequestBody") TestStartTestRunTestCloudStartTestRunOptions requestBody, @JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("test_run_id") String testRunId) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.testRunId = testRunId;
+  }
 }

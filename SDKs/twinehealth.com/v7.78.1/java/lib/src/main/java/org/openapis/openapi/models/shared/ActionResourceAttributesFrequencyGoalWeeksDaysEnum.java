@@ -10,18 +10,18 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * ActionResourceAttributesFrequencyGoalWeeksDaysEnum - Days of week that the action is scheduled for. Zero-indexed, ex 0 represents Sunday, etc.
  */
 public enum ActionResourceAttributesFrequencyGoalWeeksDaysEnum {
-    ZERO("0"),
-    ONE("1"),
-    TWO("2"),
-    THREE("3"),
-    FOUR("4"),
-    FIVE("5"),
-    SIX("6");
+    ZERO(0L),
+    ONE(1L),
+    TWO(2L),
+    THREE(3L),
+    FOUR(4L),
+    FIVE(5L),
+    SIX(6L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private ActionResourceAttributesFrequencyGoalWeeksDaysEnum(String value) {
+    private ActionResourceAttributesFrequencyGoalWeeksDaysEnum(Long value) {
         this.value = value;
     }
 }

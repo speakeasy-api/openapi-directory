@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveEventSourceResponse {
     
     public String contentType;
+
     public RemoveEventSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemoveEventSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidParameterValueException invalidParameterValueException;
+
     public RemoveEventSourceResponse withInvalidParameterValueException(org.openapis.openapi.models.shared.InvalidParameterValueException invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class RemoveEventSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public RemoveEventSourceResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class RemoveEventSourceResponse {
     
     
     public Integer statusCode;
+
     public RemoveEventSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class RemoveEventSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveEventSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class RemoveEventSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceException serviceException;
+
     public RemoveEventSourceResponse withServiceException(org.openapis.openapi.models.shared.ServiceException serviceException) {
         this.serviceException = serviceException;
         return this;
     }
     
+    public RemoveEventSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

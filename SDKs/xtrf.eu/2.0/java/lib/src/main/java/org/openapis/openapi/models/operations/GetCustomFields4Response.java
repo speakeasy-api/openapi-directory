@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCustomFields4Response {
     
     public String contentType;
+
     public GetCustomFields4Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCustomFields4Response {
      */
     
     public org.openapis.openapi.models.shared.CustomFieldDTO[] customFieldsDTO;
+
     public GetCustomFields4Response withCustomFieldsDTO(org.openapis.openapi.models.shared.CustomFieldDTO[] customFieldsDTO) {
         this.customFieldsDTO = customFieldsDTO;
         return this;
@@ -26,6 +29,7 @@ public class GetCustomFields4Response {
     
     
     public Integer statusCode;
+
     public GetCustomFields4Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetCustomFields4Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCustomFields4Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCustomFields4Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

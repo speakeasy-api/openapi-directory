@@ -15,6 +15,7 @@ public class ProxyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credentials")
     public String credentials;
+
     public ProxyConfiguration withCredentials(String credentials) {
         this.credentials = credentials;
         return this;
@@ -22,6 +23,7 @@ public class ProxyConfiguration {
     
     @JsonProperty("Host")
     public String host;
+
     public ProxyConfiguration withHost(String host) {
         this.host = host;
         return this;
@@ -29,9 +31,14 @@ public class ProxyConfiguration {
     
     @JsonProperty("Port")
     public Long port;
+
     public ProxyConfiguration withPort(Long port) {
         this.port = port;
         return this;
     }
     
+    public ProxyConfiguration(@JsonProperty("Host") String host, @JsonProperty("Port") Long port) {
+        this.host = host;
+        this.port = port;
+  }
 }

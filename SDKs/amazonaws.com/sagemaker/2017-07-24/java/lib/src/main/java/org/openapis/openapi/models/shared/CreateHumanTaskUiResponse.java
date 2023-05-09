@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateHumanTaskUiResponse {
     @JsonProperty("HumanTaskUiArn")
     public String humanTaskUiArn;
+
     public CreateHumanTaskUiResponse withHumanTaskUiArn(String humanTaskUiArn) {
         this.humanTaskUiArn = humanTaskUiArn;
         return this;
     }
     
+    public CreateHumanTaskUiResponse(@JsonProperty("HumanTaskUiArn") String humanTaskUiArn) {
+        this.humanTaskUiArn = humanTaskUiArn;
+  }
 }

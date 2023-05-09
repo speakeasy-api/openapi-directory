@@ -42,6 +42,7 @@ public class Transition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in")
     public TransitionInEnum in;
+
     public Transition withIn(TransitionInEnum in) {
         this.in = in;
         return this;
@@ -77,9 +78,11 @@ public class Transition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("out")
     public TransitionOutEnum out;
+
     public Transition withOut(TransitionOutEnum out) {
         this.out = out;
         return this;
     }
     
+    public Transition(){}
 }

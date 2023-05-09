@@ -18,6 +18,7 @@ public class ConversionSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionSourceId")
     public String conversionSourceId;
+
     public ConversionSource withConversionSourceId(String conversionSourceId) {
         this.conversionSourceId = conversionSourceId;
         return this;
@@ -29,6 +30,7 @@ public class ConversionSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public ConversionSource withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -40,6 +42,7 @@ public class ConversionSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAnalyticsLink")
     public GoogleAnalyticsLink googleAnalyticsLink;
+
     public ConversionSource withGoogleAnalyticsLink(GoogleAnalyticsLink googleAnalyticsLink) {
         this.googleAnalyticsLink = googleAnalyticsLink;
         return this;
@@ -51,6 +54,7 @@ public class ConversionSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantCenterDestination")
     public MerchantCenterDestination merchantCenterDestination;
+
     public ConversionSource withMerchantCenterDestination(MerchantCenterDestination merchantCenterDestination) {
         this.merchantCenterDestination = merchantCenterDestination;
         return this;
@@ -62,9 +66,11 @@ public class ConversionSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ConversionSourceStateEnum state;
+
     public ConversionSource withState(ConversionSourceStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ConversionSource(){}
 }

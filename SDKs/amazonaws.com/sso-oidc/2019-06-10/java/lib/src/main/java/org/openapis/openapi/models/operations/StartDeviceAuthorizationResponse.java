@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartDeviceAuthorizationResponse {
     
     public String contentType;
+
     public StartDeviceAuthorizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartDeviceAuthorizationResponse {
      */
     
     public Object internalServerException;
+
     public StartDeviceAuthorizationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartDeviceAuthorizationResponse {
      */
     
     public Object invalidClientException;
+
     public StartDeviceAuthorizationResponse withInvalidClientException(Object invalidClientException) {
         this.invalidClientException = invalidClientException;
         return this;
@@ -39,6 +43,7 @@ public class StartDeviceAuthorizationResponse {
      */
     
     public Object invalidRequestException;
+
     public StartDeviceAuthorizationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class StartDeviceAuthorizationResponse {
      */
     
     public Object slowDownException;
+
     public StartDeviceAuthorizationResponse withSlowDownException(Object slowDownException) {
         this.slowDownException = slowDownException;
         return this;
@@ -59,6 +65,7 @@ public class StartDeviceAuthorizationResponse {
      */
     
     public org.openapis.openapi.models.shared.StartDeviceAuthorizationResponse startDeviceAuthorizationResponse;
+
     public StartDeviceAuthorizationResponse withStartDeviceAuthorizationResponse(org.openapis.openapi.models.shared.StartDeviceAuthorizationResponse startDeviceAuthorizationResponse) {
         this.startDeviceAuthorizationResponse = startDeviceAuthorizationResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartDeviceAuthorizationResponse {
     
     
     public Integer statusCode;
+
     public StartDeviceAuthorizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartDeviceAuthorizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartDeviceAuthorizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class StartDeviceAuthorizationResponse {
      */
     
     public Object unauthorizedClientException;
+
     public StartDeviceAuthorizationResponse withUnauthorizedClientException(Object unauthorizedClientException) {
         this.unauthorizedClientException = unauthorizedClientException;
         return this;
     }
     
+    public StartDeviceAuthorizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

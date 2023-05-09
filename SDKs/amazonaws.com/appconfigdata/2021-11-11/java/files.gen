@@ -37,4 +37,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/StartConfigurationSessi
 lib/src/main/java/org/openapis/openapi/models/shared/GetLatestConfigurationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartConfigurationSessionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

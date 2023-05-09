@@ -18,6 +18,7 @@ public class DriveItemReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driveFile")
     public java.util.Map<String, Object> driveFile;
+
     public DriveItemReference withDriveFile(java.util.Map<String, Object> driveFile) {
         this.driveFile = driveFile;
         return this;
@@ -29,6 +30,7 @@ public class DriveItemReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driveFolder")
     public DriveFolder driveFolder;
+
     public DriveItemReference withDriveFolder(DriveFolder driveFolder) {
         this.driveFolder = driveFolder;
         return this;
@@ -40,6 +42,7 @@ public class DriveItemReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public java.util.Map<String, Object> file;
+
     public DriveItemReference withFile(java.util.Map<String, Object> file) {
         this.file = file;
         return this;
@@ -51,6 +54,7 @@ public class DriveItemReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folder")
     public Folder folder;
+
     public DriveItemReference withFolder(Folder folder) {
         this.folder = folder;
         return this;
@@ -62,6 +66,7 @@ public class DriveItemReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DriveItemReference withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class DriveItemReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public DriveItemReference withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public DriveItemReference(){}
 }

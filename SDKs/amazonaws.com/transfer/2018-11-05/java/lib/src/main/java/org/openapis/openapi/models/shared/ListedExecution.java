@@ -15,6 +15,7 @@ public class ListedExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionId")
     public String executionId;
+
     public ListedExecution withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -23,6 +24,7 @@ public class ListedExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InitialFileLocation")
     public FileLocation initialFileLocation;
+
     public ListedExecution withInitialFileLocation(FileLocation initialFileLocation) {
         this.initialFileLocation = initialFileLocation;
         return this;
@@ -31,6 +33,7 @@ public class ListedExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceMetadata")
     public ServiceMetadata serviceMetadata;
+
     public ListedExecution withServiceMetadata(ServiceMetadata serviceMetadata) {
         this.serviceMetadata = serviceMetadata;
         return this;
@@ -39,9 +42,11 @@ public class ListedExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ExecutionStatusEnum status;
+
     public ListedExecution withStatus(ExecutionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListedExecution(){}
 }

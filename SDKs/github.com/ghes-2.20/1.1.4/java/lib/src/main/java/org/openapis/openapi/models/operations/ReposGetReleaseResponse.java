@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposGetReleaseResponse {
     
     public String contentType;
+
     public ReposGetReleaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposGetReleaseResponse {
     
     
     public Integer statusCode;
+
     public ReposGetReleaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposGetReleaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposGetReleaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposGetReleaseResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposGetReleaseResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ReposGetReleaseResponse {
      */
     
     public org.openapis.openapi.models.shared.Release release;
+
     public ReposGetReleaseResponse withRelease(org.openapis.openapi.models.shared.Release release) {
         this.release = release;
         return this;
     }
     
+    public ReposGetReleaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

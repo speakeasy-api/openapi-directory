@@ -12,6 +12,7 @@ public class QueryLineageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Direction")
     public DirectionEnum direction;
+
     public QueryLineageRequest withDirection(DirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -20,6 +21,7 @@ public class QueryLineageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public QueryFilters filters;
+
     public QueryLineageRequest withFilters(QueryFilters filters) {
         this.filters = filters;
         return this;
@@ -28,6 +30,7 @@ public class QueryLineageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeEdges")
     public Boolean includeEdges;
+
     public QueryLineageRequest withIncludeEdges(Boolean includeEdges) {
         this.includeEdges = includeEdges;
         return this;
@@ -36,6 +39,7 @@ public class QueryLineageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxDepth")
     public Long maxDepth;
+
     public QueryLineageRequest withMaxDepth(Long maxDepth) {
         this.maxDepth = maxDepth;
         return this;
@@ -44,6 +48,7 @@ public class QueryLineageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public QueryLineageRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -52,6 +57,7 @@ public class QueryLineageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public QueryLineageRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -60,9 +66,11 @@ public class QueryLineageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartArns")
     public String[] startArns;
+
     public QueryLineageRequest withStartArns(String[] startArns) {
         this.startArns = startArns;
         return this;
     }
     
+    public QueryLineageRequest(){}
 }

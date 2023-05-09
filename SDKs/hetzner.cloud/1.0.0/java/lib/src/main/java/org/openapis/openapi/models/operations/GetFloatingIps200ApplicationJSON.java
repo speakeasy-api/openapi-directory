@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetFloatingIps200ApplicationJSON {
     @JsonProperty("floating_ips")
     public GetFloatingIps200ApplicationJSONFloatingIps[] floatingIps;
+
     public GetFloatingIps200ApplicationJSON withFloatingIps(GetFloatingIps200ApplicationJSONFloatingIps[] floatingIps) {
         this.floatingIps = floatingIps;
         return this;
@@ -22,9 +23,13 @@ public class GetFloatingIps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetFloatingIps200ApplicationJSONMeta meta;
+
     public GetFloatingIps200ApplicationJSON withMeta(GetFloatingIps200ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetFloatingIps200ApplicationJSON(@JsonProperty("floating_ips") GetFloatingIps200ApplicationJSONFloatingIps[] floatingIps) {
+        this.floatingIps = floatingIps;
+  }
 }

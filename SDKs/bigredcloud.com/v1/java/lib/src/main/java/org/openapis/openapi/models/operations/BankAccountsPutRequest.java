@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BankAccountsPutRequest {
@@ -12,6 +13,7 @@ public class BankAccountsPutRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BankAccountDto bankAccountDto;
+
     public BankAccountsPutRequest withBankAccountDto(org.openapis.openapi.models.shared.BankAccountDto bankAccountDto) {
         this.bankAccountDto = bankAccountDto;
         return this;
@@ -22,9 +24,14 @@ public class BankAccountsPutRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public BankAccountsPutRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public BankAccountsPutRequest(@JsonProperty("BankAccountDto") org.openapis.openapi.models.shared.BankAccountDto bankAccountDto, @JsonProperty("id") Long id) {
+        this.bankAccountDto = bankAccountDto;
+        this.id = id;
+  }
 }

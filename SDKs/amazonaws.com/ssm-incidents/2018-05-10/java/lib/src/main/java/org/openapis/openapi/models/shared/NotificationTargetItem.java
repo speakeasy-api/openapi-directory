@@ -15,9 +15,11 @@ public class NotificationTargetItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snsTopicArn")
     public String snsTopicArn;
+
     public NotificationTargetItem withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
     }
     
+    public NotificationTargetItem(){}
 }

@@ -15,6 +15,7 @@ public class ProjectsCreateCard503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ProjectsCreateCard503ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class ProjectsCreateCard503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation_url")
     public String documentationUrl;
+
     public ProjectsCreateCard503ApplicationJSON withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -31,6 +33,7 @@ public class ProjectsCreateCard503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ProjectsCreateCard503ApplicationJSONErrors[] errors;
+
     public ProjectsCreateCard503ApplicationJSON withErrors(ProjectsCreateCard503ApplicationJSONErrors[] errors) {
         this.errors = errors;
         return this;
@@ -39,9 +42,11 @@ public class ProjectsCreateCard503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ProjectsCreateCard503ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ProjectsCreateCard503ApplicationJSON(){}
 }

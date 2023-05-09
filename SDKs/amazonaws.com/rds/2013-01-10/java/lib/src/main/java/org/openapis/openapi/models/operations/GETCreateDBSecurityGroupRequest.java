@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateDBSecurityGroupRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCreateDBSecurityGroupActionEnum action;
+
     public GETCreateDBSecurityGroupRequest withAction(GETCreateDBSecurityGroupActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class GETCreateDBSecurityGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBSecurityGroupDescription")
     public String dbSecurityGroupDescription;
+
     public GETCreateDBSecurityGroupRequest withDBSecurityGroupDescription(String dbSecurityGroupDescription) {
         this.dbSecurityGroupDescription = dbSecurityGroupDescription;
         return this;
@@ -23,6 +26,7 @@ public class GETCreateDBSecurityGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBSecurityGroupName")
     public String dbSecurityGroupName;
+
     public GETCreateDBSecurityGroupRequest withDBSecurityGroupName(String dbSecurityGroupName) {
         this.dbSecurityGroupName = dbSecurityGroupName;
         return this;
@@ -30,6 +34,7 @@ public class GETCreateDBSecurityGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCreateDBSecurityGroupVersionEnum version;
+
     public GETCreateDBSecurityGroupRequest withVersion(GETCreateDBSecurityGroupVersionEnum version) {
         this.version = version;
         return this;
@@ -37,6 +42,7 @@ public class GETCreateDBSecurityGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCreateDBSecurityGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -44,6 +50,7 @@ public class GETCreateDBSecurityGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCreateDBSecurityGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -51,6 +58,7 @@ public class GETCreateDBSecurityGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCreateDBSecurityGroupRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -58,6 +66,7 @@ public class GETCreateDBSecurityGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCreateDBSecurityGroupRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -65,6 +74,7 @@ public class GETCreateDBSecurityGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCreateDBSecurityGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -72,6 +82,7 @@ public class GETCreateDBSecurityGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCreateDBSecurityGroupRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -79,9 +90,16 @@ public class GETCreateDBSecurityGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCreateDBSecurityGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCreateDBSecurityGroupRequest(@JsonProperty("Action") GETCreateDBSecurityGroupActionEnum action, @JsonProperty("DBSecurityGroupDescription") String dbSecurityGroupDescription, @JsonProperty("DBSecurityGroupName") String dbSecurityGroupName, @JsonProperty("Version") GETCreateDBSecurityGroupVersionEnum version) {
+        this.action = action;
+        this.dbSecurityGroupDescription = dbSecurityGroupDescription;
+        this.dbSecurityGroupName = dbSecurityGroupName;
+        this.version = version;
+  }
 }

@@ -15,6 +15,7 @@ public class ListComplianceItemsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceItems")
     public ComplianceItem[] complianceItems;
+
     public ListComplianceItemsResult withComplianceItems(ComplianceItem[] complianceItems) {
         this.complianceItems = complianceItems;
         return this;
@@ -23,9 +24,11 @@ public class ListComplianceItemsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListComplianceItemsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListComplianceItemsResult(){}
 }

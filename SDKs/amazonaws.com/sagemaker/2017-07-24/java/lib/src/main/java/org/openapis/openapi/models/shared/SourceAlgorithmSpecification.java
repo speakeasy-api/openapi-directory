@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SourceAlgorithmSpecification {
     @JsonProperty("SourceAlgorithms")
     public SourceAlgorithm[] sourceAlgorithms;
+
     public SourceAlgorithmSpecification withSourceAlgorithms(SourceAlgorithm[] sourceAlgorithms) {
         this.sourceAlgorithms = sourceAlgorithms;
         return this;
     }
     
+    public SourceAlgorithmSpecification(@JsonProperty("SourceAlgorithms") SourceAlgorithm[] sourceAlgorithms) {
+        this.sourceAlgorithms = sourceAlgorithms;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiChangeShippingDetailsRawRequest {
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public OrderApiChangeShippingDetailsRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class OrderApiChangeShippingDetailsRawRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderId")
     public Integer orderId;
+
     public OrderApiChangeShippingDetailsRawRequest withOrderId(Integer orderId) {
         this.orderId = orderId;
         return this;
@@ -23,6 +26,7 @@ public class OrderApiChangeShippingDetailsRawRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public OrderApiChangeShippingDetailsRawRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -30,9 +34,16 @@ public class OrderApiChangeShippingDetailsRawRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public OrderApiChangeShippingDetailsRawRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public OrderApiChangeShippingDetailsRawRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("orderId") Integer orderId, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.requestBody = requestBody;
+        this.orderId = orderId;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

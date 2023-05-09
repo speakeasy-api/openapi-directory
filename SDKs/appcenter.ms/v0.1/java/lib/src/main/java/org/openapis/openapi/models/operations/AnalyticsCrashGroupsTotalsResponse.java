@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsCrashGroupsTotalsResponse {
@@ -12,6 +13,7 @@ public class AnalyticsCrashGroupsTotalsResponse {
      */
     
     public AnalyticsCrashGroupsTotals200ApplicationJSON[] analyticsCrashGroupsTotals200ApplicationJSONObjects;
+
     public AnalyticsCrashGroupsTotalsResponse withAnalyticsCrashGroupsTotals200ApplicationJSONObjects(AnalyticsCrashGroupsTotals200ApplicationJSON[] analyticsCrashGroupsTotals200ApplicationJSONObjects) {
         this.analyticsCrashGroupsTotals200ApplicationJSONObjects = analyticsCrashGroupsTotals200ApplicationJSONObjects;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsCrashGroupsTotalsResponse {
      */
     
     public AnalyticsCrashGroupsTotalsDefaultApplicationJSON analyticsCrashGroupsTotalsDefaultApplicationJSONObject;
+
     public AnalyticsCrashGroupsTotalsResponse withAnalyticsCrashGroupsTotalsDefaultApplicationJSONObject(AnalyticsCrashGroupsTotalsDefaultApplicationJSON analyticsCrashGroupsTotalsDefaultApplicationJSONObject) {
         this.analyticsCrashGroupsTotalsDefaultApplicationJSONObject = analyticsCrashGroupsTotalsDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsCrashGroupsTotalsResponse {
     
     
     public String contentType;
+
     public AnalyticsCrashGroupsTotalsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class AnalyticsCrashGroupsTotalsResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsCrashGroupsTotalsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AnalyticsCrashGroupsTotalsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsCrashGroupsTotalsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsCrashGroupsTotalsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

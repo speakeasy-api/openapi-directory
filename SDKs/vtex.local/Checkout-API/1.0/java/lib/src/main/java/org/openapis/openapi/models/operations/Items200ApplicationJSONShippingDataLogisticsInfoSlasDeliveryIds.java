@@ -15,6 +15,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courierId")
     public String courierId;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds withCourierId(String courierId) {
         this.courierId = courierId;
         return this;
@@ -26,6 +27,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courierName")
     public String courierName;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds withCourierName(String courierName) {
         this.courierName = courierName;
         return this;
@@ -37,6 +39,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockId")
     public String dockId;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -48,6 +51,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -59,9 +63,11 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warehouseId")
     public String warehouseId;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds withWarehouseId(String warehouseId) {
         this.warehouseId = warehouseId;
         return this;
     }
     
+    public Items200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds(){}
 }

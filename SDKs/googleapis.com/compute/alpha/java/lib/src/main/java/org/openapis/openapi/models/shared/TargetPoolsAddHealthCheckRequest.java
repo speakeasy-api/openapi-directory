@@ -15,9 +15,11 @@ public class TargetPoolsAddHealthCheckRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthChecks")
     public HealthCheckReference[] healthChecks;
+
     public TargetPoolsAddHealthCheckRequest withHealthChecks(HealthCheckReference[] healthChecks) {
         this.healthChecks = healthChecks;
         return this;
     }
     
+    public TargetPoolsAddHealthCheckRequest(){}
 }

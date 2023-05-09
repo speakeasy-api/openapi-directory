@@ -15,6 +15,7 @@ public class ListApplicationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public ListApplicationsRequestBodyFilters filters;
+
     public ListApplicationsRequestBody withFilters(ListApplicationsRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class ListApplicationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListApplicationsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class ListApplicationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListApplicationsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListApplicationsRequestBody(){}
 }

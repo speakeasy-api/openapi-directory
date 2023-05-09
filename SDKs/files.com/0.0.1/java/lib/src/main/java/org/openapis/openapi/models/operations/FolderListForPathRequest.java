@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FolderListForPathRequest {
@@ -12,6 +13,7 @@ public class FolderListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public FolderListForPathRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +24,7 @@ public class FolderListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public FolderListForPathRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -32,6 +35,7 @@ public class FolderListForPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public FolderListForPathRequest withPath(String path) {
         this.path = path;
         return this;
@@ -42,6 +46,7 @@ public class FolderListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public FolderListForPathRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -52,6 +57,7 @@ public class FolderListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preview_size")
     public String previewSize;
+
     public FolderListForPathRequest withPreviewSize(String previewSize) {
         this.previewSize = previewSize;
         return this;
@@ -62,6 +68,7 @@ public class FolderListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public FolderListForPathRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -72,8 +79,20 @@ public class FolderListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_all")
     public Boolean searchAll;
+
     public FolderListForPathRequest withSearchAll(Boolean searchAll) {
         this.searchAll = searchAll;
+        return this;
+    }
+    
+    /**
+     * Search by field and direction. Valid fields are `path`, `size`, `modified_at_datetime`, `provided_modified_at`.  Valid directions are `asc` and `desc`.  Defaults to `{"path":"asc"}`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public java.util.Map<String, Object> sortBy;
+
+    public FolderListForPathRequest withSortBy(java.util.Map<String, Object> sortBy) {
+        this.sortBy = sortBy;
         return this;
     }
     
@@ -82,6 +101,7 @@ public class FolderListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_previews")
     public Boolean withPreviews;
+
     public FolderListForPathRequest withWithPreviews(Boolean withPreviews) {
         this.withPreviews = withPreviews;
         return this;
@@ -92,9 +112,13 @@ public class FolderListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_priority_color")
     public Boolean withPriorityColor;
+
     public FolderListForPathRequest withWithPriorityColor(Boolean withPriorityColor) {
         this.withPriorityColor = withPriorityColor;
         return this;
     }
     
+    public FolderListForPathRequest(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

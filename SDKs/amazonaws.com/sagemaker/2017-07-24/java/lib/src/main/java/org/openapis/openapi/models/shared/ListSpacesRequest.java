@@ -12,6 +12,7 @@ public class ListSpacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainIdEquals")
     public String domainIdEquals;
+
     public ListSpacesRequest withDomainIdEquals(String domainIdEquals) {
         this.domainIdEquals = domainIdEquals;
         return this;
@@ -20,6 +21,7 @@ public class ListSpacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListSpacesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListSpacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSpacesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ListSpacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SpaceSortKeyEnum sortBy;
+
     public ListSpacesRequest withSortBy(SpaceSortKeyEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -44,6 +48,7 @@ public class ListSpacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListSpacesRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -52,9 +57,11 @@ public class ListSpacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpaceNameContains")
     public String spaceNameContains;
+
     public ListSpacesRequest withSpaceNameContains(String spaceNameContains) {
         this.spaceNameContains = spaceNameContains;
         return this;
     }
     
+    public ListSpacesRequest(){}
 }

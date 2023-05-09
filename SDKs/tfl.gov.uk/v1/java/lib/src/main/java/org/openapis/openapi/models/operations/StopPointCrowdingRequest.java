@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointCrowdingRequest {
@@ -12,6 +13,7 @@ public class StopPointCrowdingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public StopPointCrowdingDirectionEnum direction;
+
     public StopPointCrowdingRequest withDirection(StopPointCrowdingDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -22,6 +24,7 @@ public class StopPointCrowdingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public StopPointCrowdingRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +35,15 @@ public class StopPointCrowdingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=line")
     public String line;
+
     public StopPointCrowdingRequest withLine(String line) {
         this.line = line;
         return this;
     }
     
+    public StopPointCrowdingRequest(@JsonProperty("direction") StopPointCrowdingDirectionEnum direction, @JsonProperty("id") String id, @JsonProperty("line") String line) {
+        this.direction = direction;
+        this.id = id;
+        this.line = line;
+  }
 }

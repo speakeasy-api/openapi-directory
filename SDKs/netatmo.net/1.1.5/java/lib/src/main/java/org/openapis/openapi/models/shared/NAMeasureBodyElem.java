@@ -12,6 +12,7 @@ public class NAMeasureBodyElem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beg_time")
     public Integer begTime;
+
     public NAMeasureBodyElem withBegTime(Integer begTime) {
         this.begTime = begTime;
         return this;
@@ -20,6 +21,7 @@ public class NAMeasureBodyElem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("step_time")
     public Integer stepTime;
+
     public NAMeasureBodyElem withStepTime(Integer stepTime) {
         this.stepTime = stepTime;
         return this;
@@ -28,9 +30,11 @@ public class NAMeasureBodyElem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Float[][] value;
+
     public NAMeasureBodyElem withValue(Float[][] value) {
         this.value = value;
         return this;
     }
     
+    public NAMeasureBodyElem(){}
 }

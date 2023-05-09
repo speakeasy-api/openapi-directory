@@ -12,6 +12,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public BranchRestrictionPolicyAppsOwner withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -20,6 +21,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BranchRestrictionPolicyAppsOwner withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public BranchRestrictionPolicyAppsOwner withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -36,6 +39,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("followers_url")
     public String followersUrl;
+
     public BranchRestrictionPolicyAppsOwner withFollowersUrl(String followersUrl) {
         this.followersUrl = followersUrl;
         return this;
@@ -44,6 +48,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("following_url")
     public String followingUrl;
+
     public BranchRestrictionPolicyAppsOwner withFollowingUrl(String followingUrl) {
         this.followingUrl = followingUrl;
         return this;
@@ -52,6 +57,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gists_url")
     public String gistsUrl;
+
     public BranchRestrictionPolicyAppsOwner withGistsUrl(String gistsUrl) {
         this.gistsUrl = gistsUrl;
         return this;
@@ -60,6 +66,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gravatar_id")
     public String gravatarId;
+
     public BranchRestrictionPolicyAppsOwner withGravatarId(String gravatarId) {
         this.gravatarId = gravatarId;
         return this;
@@ -68,6 +75,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hooks_url")
     public String hooksUrl;
+
     public BranchRestrictionPolicyAppsOwner withHooksUrl(String hooksUrl) {
         this.hooksUrl = hooksUrl;
         return this;
@@ -76,6 +84,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public BranchRestrictionPolicyAppsOwner withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -84,6 +93,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public BranchRestrictionPolicyAppsOwner withId(Long id) {
         this.id = id;
         return this;
@@ -92,6 +102,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues_url")
     public String issuesUrl;
+
     public BranchRestrictionPolicyAppsOwner withIssuesUrl(String issuesUrl) {
         this.issuesUrl = issuesUrl;
         return this;
@@ -100,6 +111,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login")
     public String login;
+
     public BranchRestrictionPolicyAppsOwner withLogin(String login) {
         this.login = login;
         return this;
@@ -108,6 +120,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members_url")
     public String membersUrl;
+
     public BranchRestrictionPolicyAppsOwner withMembersUrl(String membersUrl) {
         this.membersUrl = membersUrl;
         return this;
@@ -116,6 +129,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_id")
     public String nodeId;
+
     public BranchRestrictionPolicyAppsOwner withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -124,6 +138,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizations_url")
     public String organizationsUrl;
+
     public BranchRestrictionPolicyAppsOwner withOrganizationsUrl(String organizationsUrl) {
         this.organizationsUrl = organizationsUrl;
         return this;
@@ -132,6 +147,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_members_url")
     public String publicMembersUrl;
+
     public BranchRestrictionPolicyAppsOwner withPublicMembersUrl(String publicMembersUrl) {
         this.publicMembersUrl = publicMembersUrl;
         return this;
@@ -140,6 +156,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("received_events_url")
     public String receivedEventsUrl;
+
     public BranchRestrictionPolicyAppsOwner withReceivedEventsUrl(String receivedEventsUrl) {
         this.receivedEventsUrl = receivedEventsUrl;
         return this;
@@ -148,6 +165,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repos_url")
     public String reposUrl;
+
     public BranchRestrictionPolicyAppsOwner withReposUrl(String reposUrl) {
         this.reposUrl = reposUrl;
         return this;
@@ -156,6 +174,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("site_admin")
     public Boolean siteAdmin;
+
     public BranchRestrictionPolicyAppsOwner withSiteAdmin(Boolean siteAdmin) {
         this.siteAdmin = siteAdmin;
         return this;
@@ -164,6 +183,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starred_url")
     public String starredUrl;
+
     public BranchRestrictionPolicyAppsOwner withStarredUrl(String starredUrl) {
         this.starredUrl = starredUrl;
         return this;
@@ -172,6 +192,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptions_url")
     public String subscriptionsUrl;
+
     public BranchRestrictionPolicyAppsOwner withSubscriptionsUrl(String subscriptionsUrl) {
         this.subscriptionsUrl = subscriptionsUrl;
         return this;
@@ -180,6 +201,7 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public BranchRestrictionPolicyAppsOwner withType(String type) {
         this.type = type;
         return this;
@@ -188,9 +210,11 @@ public class BranchRestrictionPolicyAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public BranchRestrictionPolicyAppsOwner withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public BranchRestrictionPolicyAppsOwner(){}
 }

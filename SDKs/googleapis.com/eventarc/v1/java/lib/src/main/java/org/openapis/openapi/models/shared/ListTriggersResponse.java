@@ -18,6 +18,7 @@ public class ListTriggersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTriggersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListTriggersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggers")
     public Trigger[] triggers;
+
     public ListTriggersResponse withTriggers(Trigger[] triggers) {
         this.triggers = triggers;
         return this;
@@ -40,9 +42,11 @@ public class ListTriggersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListTriggersResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListTriggersResponse(){}
 }

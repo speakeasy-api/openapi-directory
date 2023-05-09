@@ -15,6 +15,7 @@ public class UncrdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public UncrdRequestBodyCertificateParameters certificateParameters;
+
     public UncrdRequestBody withCertificateParameters(UncrdRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class UncrdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public UncrdRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class UncrdRequestBody {
      */
     @JsonProperty("format")
     public UncrdRequestBodyFormatEnum format;
+
     public UncrdRequestBody withFormat(UncrdRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class UncrdRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public UncrdRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public UncrdRequestBody(@JsonProperty("format") UncrdRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

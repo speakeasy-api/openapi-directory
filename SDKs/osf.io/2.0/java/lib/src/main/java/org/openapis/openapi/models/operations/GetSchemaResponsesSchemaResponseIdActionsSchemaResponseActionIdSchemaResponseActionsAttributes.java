@@ -12,6 +12,7 @@ public class GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSche
      */
     
     public Boolean auto;
+
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsAttributes withAuto(Boolean auto) {
         this.auto = auto;
         return this;
@@ -22,6 +23,7 @@ public class GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSche
      */
     
     public String comment;
+
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsAttributes withComment(String comment) {
         this.comment = comment;
         return this;
@@ -32,6 +34,7 @@ public class GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSche
      */
     
     public String dateCreated;
+
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsAttributes withDateCreated(String dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -42,6 +45,7 @@ public class GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSche
      */
     
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsAttributesFromStateEnum fromState;
+
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsAttributes withFromState(GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsAttributesFromStateEnum fromState) {
         this.fromState = fromState;
         return this;
@@ -52,6 +56,7 @@ public class GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSche
      */
     
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsAttributesToStateEnum toState;
+
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsAttributes withToState(GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsAttributesToStateEnum toState) {
         this.toState = toState;
         return this;
@@ -62,6 +67,7 @@ public class GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSche
      */
     
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsAttributesTriggerEnum trigger;
+
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsAttributes withTrigger(GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsAttributesTriggerEnum trigger) {
         this.trigger = trigger;
         return this;
@@ -72,9 +78,11 @@ public class GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSche
      */
     
     public Boolean visible;
+
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsAttributes withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsAttributes(){}
 }

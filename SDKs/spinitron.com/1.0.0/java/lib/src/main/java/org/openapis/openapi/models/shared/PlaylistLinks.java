@@ -12,6 +12,7 @@ public class PlaylistLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persona")
     public Link persona;
+
     public PlaylistLinks withPersona(Link persona) {
         this.persona = persona;
         return this;
@@ -20,6 +21,7 @@ public class PlaylistLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Link self;
+
     public PlaylistLinks withSelf(Link self) {
         this.self = self;
         return this;
@@ -28,6 +30,7 @@ public class PlaylistLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show")
     public Link show;
+
     public PlaylistLinks withShow(Link show) {
         this.show = show;
         return this;
@@ -36,9 +39,11 @@ public class PlaylistLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spins")
     public Link spins;
+
     public PlaylistLinks withSpins(Link spins) {
         this.spins = spins;
         return this;
     }
     
+    public PlaylistLinks(){}
 }

@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2VersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GooglePrivacyDlpV2VersionDescription withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2VersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public GooglePrivacyDlpV2VersionDescription withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GooglePrivacyDlpV2VersionDescription(){}
 }

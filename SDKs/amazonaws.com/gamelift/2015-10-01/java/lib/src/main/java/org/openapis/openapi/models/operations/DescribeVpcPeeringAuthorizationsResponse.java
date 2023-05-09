@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeVpcPeeringAuthorizationsResponse {
     
     public String contentType;
+
     public DescribeVpcPeeringAuthorizationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeVpcPeeringAuthorizationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeVpcPeeringAuthorizationsOutput describeVpcPeeringAuthorizationsOutput;
+
     public DescribeVpcPeeringAuthorizationsResponse withDescribeVpcPeeringAuthorizationsOutput(org.openapis.openapi.models.shared.DescribeVpcPeeringAuthorizationsOutput describeVpcPeeringAuthorizationsOutput) {
         this.describeVpcPeeringAuthorizationsOutput = describeVpcPeeringAuthorizationsOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeVpcPeeringAuthorizationsResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeVpcPeeringAuthorizationsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeVpcPeeringAuthorizationsResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeVpcPeeringAuthorizationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeVpcPeeringAuthorizationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeVpcPeeringAuthorizationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeVpcPeeringAuthorizationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeVpcPeeringAuthorizationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeVpcPeeringAuthorizationsResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeVpcPeeringAuthorizationsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeVpcPeeringAuthorizationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ListApprovalRequestsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvalRequests")
     public ApprovalRequest[] approvalRequests;
+
     public ListApprovalRequestsResponse withApprovalRequests(ApprovalRequest[] approvalRequests) {
         this.approvalRequests = approvalRequests;
         return this;
@@ -29,9 +30,11 @@ public class ListApprovalRequestsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListApprovalRequestsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListApprovalRequestsResponse(){}
 }

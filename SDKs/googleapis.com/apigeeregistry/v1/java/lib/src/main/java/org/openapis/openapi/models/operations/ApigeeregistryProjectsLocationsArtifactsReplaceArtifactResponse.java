@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse {
@@ -12,6 +13,7 @@ public class ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse {
      */
     
     public org.openapis.openapi.models.shared.Artifact artifact;
+
     public ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse withArtifact(org.openapis.openapi.models.shared.Artifact artifact) {
         this.artifact = artifact;
         return this;
@@ -19,6 +21,7 @@ public class ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse {
     
     
     public String contentType;
+
     public ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse {
     
     
     public Integer statusCode;
+
     public ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class GameRegionOptionsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locked")
     public Boolean locked;
+
     public GameRegionOptionsDTO withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -23,9 +24,11 @@ public class GameRegionOptionsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public GameRegionOptionDTO[] options;
+
     public GameRegionOptionsDTO withOptions(GameRegionOptionDTO[] options) {
         this.options = options;
         return this;
     }
     
+    public GameRegionOptionsDTO(){}
 }

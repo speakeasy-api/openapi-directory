@@ -12,6 +12,7 @@ public class MicerRequestBodyCertificateParameters {
      */
     @JsonProperty("APPNO")
     public String appno;
+
     public MicerRequestBodyCertificateParameters withAppno(String appno) {
         this.appno = appno;
         return this;
@@ -22,6 +23,7 @@ public class MicerRequestBodyCertificateParameters {
      */
     @JsonProperty("Date_Of_Birth")
     public String dateOfBirth;
+
     public MicerRequestBodyCertificateParameters withDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -32,6 +34,7 @@ public class MicerRequestBodyCertificateParameters {
      */
     @JsonProperty("ENROLNO")
     public String enrolno;
+
     public MicerRequestBodyCertificateParameters withEnrolno(String enrolno) {
         this.enrolno = enrolno;
         return this;
@@ -42,9 +45,16 @@ public class MicerRequestBodyCertificateParameters {
      */
     @JsonProperty("ROLLNO")
     public String rollno;
+
     public MicerRequestBodyCertificateParameters withRollno(String rollno) {
         this.rollno = rollno;
         return this;
     }
     
+    public MicerRequestBodyCertificateParameters(@JsonProperty("APPNO") String appno, @JsonProperty("Date_Of_Birth") String dateOfBirth, @JsonProperty("ENROLNO") String enrolno, @JsonProperty("ROLLNO") String rollno) {
+        this.appno = appno;
+        this.dateOfBirth = dateOfBirth;
+        this.enrolno = enrolno;
+        this.rollno = rollno;
+  }
 }

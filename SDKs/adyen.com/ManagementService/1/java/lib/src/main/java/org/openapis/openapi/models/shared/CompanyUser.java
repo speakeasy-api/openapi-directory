@@ -15,6 +15,7 @@ public class CompanyUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public Links links;
+
     public CompanyUser withLinks(Links links) {
         this.links = links;
         return this;
@@ -26,6 +27,7 @@ public class CompanyUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountGroups")
     public String[] accountGroups;
+
     public CompanyUser withAccountGroups(String[] accountGroups) {
         this.accountGroups = accountGroups;
         return this;
@@ -37,6 +39,7 @@ public class CompanyUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public CompanyUser withActive(Boolean active) {
         this.active = active;
         return this;
@@ -48,8 +51,21 @@ public class CompanyUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedMerchantAccounts")
     public String[] associatedMerchantAccounts;
+
     public CompanyUser withAssociatedMerchantAccounts(String[] associatedMerchantAccounts) {
         this.associatedMerchantAccounts = associatedMerchantAccounts;
+        return this;
+    }
+    
+    /**
+     * Set of authn apps available to this user
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("authnApps")
+    public String[] authnApps;
+
+    public CompanyUser withAuthnApps(String[] authnApps) {
+        this.authnApps = authnApps;
         return this;
     }
     
@@ -58,6 +74,7 @@ public class CompanyUser {
      */
     @JsonProperty("email")
     public String email;
+
     public CompanyUser withEmail(String email) {
         this.email = email;
         return this;
@@ -68,6 +85,7 @@ public class CompanyUser {
      */
     @JsonProperty("id")
     public String id;
+
     public CompanyUser withId(String id) {
         this.id = id;
         return this;
@@ -76,6 +94,7 @@ public class CompanyUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public Name name;
+
     public CompanyUser withName(Name name) {
         this.name = name;
         return this;
@@ -86,6 +105,7 @@ public class CompanyUser {
      */
     @JsonProperty("roles")
     public String[] roles;
+
     public CompanyUser withRoles(String[] roles) {
         this.roles = roles;
         return this;
@@ -96,6 +116,7 @@ public class CompanyUser {
      */
     @JsonProperty("timeZoneCode")
     public String timeZoneCode;
+
     public CompanyUser withTimeZoneCode(String timeZoneCode) {
         this.timeZoneCode = timeZoneCode;
         return this;
@@ -106,9 +127,17 @@ public class CompanyUser {
      */
     @JsonProperty("username")
     public String username;
+
     public CompanyUser withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public CompanyUser(@JsonProperty("email") String email, @JsonProperty("id") String id, @JsonProperty("roles") String[] roles, @JsonProperty("timeZoneCode") String timeZoneCode, @JsonProperty("username") String username) {
+        this.email = email;
+        this.id = id;
+        this.roles = roles;
+        this.timeZoneCode = timeZoneCode;
+        this.username = username;
+  }
 }

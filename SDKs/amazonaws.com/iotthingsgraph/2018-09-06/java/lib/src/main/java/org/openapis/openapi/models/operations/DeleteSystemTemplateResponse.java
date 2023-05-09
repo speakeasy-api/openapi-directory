@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSystemTemplateResponse {
     
     public String contentType;
+
     public DeleteSystemTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSystemTemplateResponse {
      */
     
     public java.util.Map<String, Object> deleteSystemTemplateResponse;
+
     public DeleteSystemTemplateResponse withDeleteSystemTemplateResponse(java.util.Map<String, Object> deleteSystemTemplateResponse) {
         this.deleteSystemTemplateResponse = deleteSystemTemplateResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSystemTemplateResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteSystemTemplateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSystemTemplateResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteSystemTemplateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteSystemTemplateResponse {
     
     
     public Integer statusCode;
+
     public DeleteSystemTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteSystemTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSystemTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteSystemTemplateResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteSystemTemplateResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteSystemTemplateResponse {
      */
     
     public Object throttlingException;
+
     public DeleteSystemTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteSystemTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

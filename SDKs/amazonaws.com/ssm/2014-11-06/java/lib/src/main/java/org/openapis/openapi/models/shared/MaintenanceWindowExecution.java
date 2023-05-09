@@ -22,6 +22,7 @@ public class MaintenanceWindowExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public MaintenanceWindowExecution withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -32,6 +33,7 @@ public class MaintenanceWindowExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public MaintenanceWindowExecution withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -40,6 +42,7 @@ public class MaintenanceWindowExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public MaintenanceWindowExecutionStatusEnum status;
+
     public MaintenanceWindowExecution withStatus(MaintenanceWindowExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -48,6 +51,7 @@ public class MaintenanceWindowExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDetails")
     public String statusDetails;
+
     public MaintenanceWindowExecution withStatusDetails(String statusDetails) {
         this.statusDetails = statusDetails;
         return this;
@@ -56,6 +60,7 @@ public class MaintenanceWindowExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowExecutionId")
     public String windowExecutionId;
+
     public MaintenanceWindowExecution withWindowExecutionId(String windowExecutionId) {
         this.windowExecutionId = windowExecutionId;
         return this;
@@ -64,9 +69,11 @@ public class MaintenanceWindowExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowId")
     public String windowId;
+
     public MaintenanceWindowExecution withWindowId(String windowId) {
         this.windowId = windowId;
         return this;
     }
     
+    public MaintenanceWindowExecution(){}
 }

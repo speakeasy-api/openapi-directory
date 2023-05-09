@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AccountPutIpBlacklistRawResponse {
     
     public org.openapis.openapi.models.shared.ApiCoreDtoAccountingIpBlacklistEntry apiCoreDtoAccountingIpBlacklistEntry;
+
     public AccountPutIpBlacklistRawResponse withApiCoreDtoAccountingIpBlacklistEntry(org.openapis.openapi.models.shared.ApiCoreDtoAccountingIpBlacklistEntry apiCoreDtoAccountingIpBlacklistEntry) {
         this.apiCoreDtoAccountingIpBlacklistEntry = apiCoreDtoAccountingIpBlacklistEntry;
         return this;
@@ -16,6 +18,7 @@ public class AccountPutIpBlacklistRawResponse {
     
     
     public byte[] body;
+
     public AccountPutIpBlacklistRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -23,6 +26,7 @@ public class AccountPutIpBlacklistRawResponse {
     
     
     public String contentType;
+
     public AccountPutIpBlacklistRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -30,6 +34,7 @@ public class AccountPutIpBlacklistRawResponse {
     
     
     public Integer statusCode;
+
     public AccountPutIpBlacklistRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class AccountPutIpBlacklistRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AccountPutIpBlacklistRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AccountPutIpBlacklistRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

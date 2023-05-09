@@ -18,6 +18,7 @@ public class CreateImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elementProperties")
     public PageElementProperties elementProperties;
+
     public CreateImageRequest withElementProperties(PageElementProperties elementProperties) {
         this.elementProperties = elementProperties;
         return this;
@@ -29,6 +30,7 @@ public class CreateImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public CreateImageRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -40,9 +42,11 @@ public class CreateImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CreateImageRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CreateImageRequest(){}
 }

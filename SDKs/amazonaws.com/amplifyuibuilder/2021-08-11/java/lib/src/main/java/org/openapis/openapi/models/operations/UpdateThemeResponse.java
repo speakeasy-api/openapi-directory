@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateThemeResponse {
     
     public String contentType;
+
     public UpdateThemeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateThemeResponse {
      */
     
     public Object internalServerException;
+
     public UpdateThemeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateThemeResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateThemeResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateThemeResponse {
     
     
     public Integer statusCode;
+
     public UpdateThemeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateThemeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateThemeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateThemeResponse {
      */
     
     public Object resourceConflictException;
+
     public UpdateThemeResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateThemeResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateThemeResponse updateThemeResponse;
+
     public UpdateThemeResponse withUpdateThemeResponse(org.openapis.openapi.models.shared.UpdateThemeResponse updateThemeResponse) {
         this.updateThemeResponse = updateThemeResponse;
         return this;
     }
     
+    public UpdateThemeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

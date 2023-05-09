@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelInfoRequest {
@@ -12,9 +13,13 @@ public class GetChannelInfoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
     public String channelId;
+
     public GetChannelInfoRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
     }
     
+    public GetChannelInfoRequest(@JsonProperty("channelId") String channelId) {
+        this.channelId = channelId;
+  }
 }

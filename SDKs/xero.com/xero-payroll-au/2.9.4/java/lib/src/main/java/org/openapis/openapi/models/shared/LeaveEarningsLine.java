@@ -15,6 +15,7 @@ public class LeaveEarningsLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EarningsRateID")
     public String earningsRateID;
+
     public LeaveEarningsLine withEarningsRateID(String earningsRateID) {
         this.earningsRateID = earningsRateID;
         return this;
@@ -26,6 +27,7 @@ public class LeaveEarningsLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfUnits")
     public Double numberOfUnits;
+
     public LeaveEarningsLine withNumberOfUnits(Double numberOfUnits) {
         this.numberOfUnits = numberOfUnits;
         return this;
@@ -37,9 +39,11 @@ public class LeaveEarningsLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RatePerUnit")
     public Double ratePerUnit;
+
     public LeaveEarningsLine withRatePerUnit(Double ratePerUnit) {
         this.ratePerUnit = ratePerUnit;
         return this;
     }
     
+    public LeaveEarningsLine(){}
 }

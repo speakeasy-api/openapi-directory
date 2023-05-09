@@ -18,6 +18,7 @@ public class ComplianceSummaryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceType")
     public String complianceType;
+
     public ComplianceSummaryInfo withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -29,6 +30,7 @@ public class ComplianceSummaryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listingCount")
     public Integer listingCount;
+
     public ComplianceSummaryInfo withListingCount(Integer listingCount) {
         this.listingCount = listingCount;
         return this;
@@ -40,9 +42,11 @@ public class ComplianceSummaryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceId")
     public String marketplaceId;
+
     public ComplianceSummaryInfo withMarketplaceId(String marketplaceId) {
         this.marketplaceId = marketplaceId;
         return this;
     }
     
+    public ComplianceSummaryInfo(){}
 }

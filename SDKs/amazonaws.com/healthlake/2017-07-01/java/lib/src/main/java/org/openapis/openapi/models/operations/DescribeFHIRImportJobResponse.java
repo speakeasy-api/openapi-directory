@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFHIRImportJobResponse {
     
     public String contentType;
+
     public DescribeFHIRImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFHIRImportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFHIRImportJobResponse describeFHIRImportJobResponse;
+
     public DescribeFHIRImportJobResponse withDescribeFHIRImportJobResponse(org.openapis.openapi.models.shared.DescribeFHIRImportJobResponse describeFHIRImportJobResponse) {
         this.describeFHIRImportJobResponse = describeFHIRImportJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFHIRImportJobResponse {
      */
     
     public Object internalServerException;
+
     public DescribeFHIRImportJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFHIRImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeFHIRImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeFHIRImportJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeFHIRImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeFHIRImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFHIRImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeFHIRImportJobResponse {
      */
     
     public Object throttlingException;
+
     public DescribeFHIRImportJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeFHIRImportJobResponse {
      */
     
     public Object validationException;
+
     public DescribeFHIRImportJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeFHIRImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

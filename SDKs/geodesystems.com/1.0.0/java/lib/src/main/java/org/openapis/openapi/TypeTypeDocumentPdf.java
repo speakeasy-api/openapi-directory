@@ -57,10 +57,8 @@ public class TypeTypeDocumentPdf {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypeDocumentPdfResponse res = new org.openapis.openapi.models.operations.SearchTypeDocumentPdfResponse() {{
+        org.openapis.openapi.models.operations.SearchTypeDocumentPdfResponse res = new org.openapis.openapi.models.operations.SearchTypeDocumentPdfResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

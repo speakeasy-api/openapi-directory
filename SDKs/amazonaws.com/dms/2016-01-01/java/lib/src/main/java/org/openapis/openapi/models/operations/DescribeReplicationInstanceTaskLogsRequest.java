@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeReplicationInstanceTaskLogsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeReplicationInstanceTaskLogsMessage describeReplicationInstanceTaskLogsMessage;
+
     public DescribeReplicationInstanceTaskLogsRequest withDescribeReplicationInstanceTaskLogsMessage(org.openapis.openapi.models.shared.DescribeReplicationInstanceTaskLogsMessage describeReplicationInstanceTaskLogsMessage) {
         this.describeReplicationInstanceTaskLogsMessage = describeReplicationInstanceTaskLogsMessage;
         return this;
@@ -19,6 +21,7 @@ public class DescribeReplicationInstanceTaskLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public DescribeReplicationInstanceTaskLogsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -29,6 +32,7 @@ public class DescribeReplicationInstanceTaskLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public String maxRecords;
+
     public DescribeReplicationInstanceTaskLogsRequest withMaxRecords(String maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -36,6 +40,7 @@ public class DescribeReplicationInstanceTaskLogsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeReplicationInstanceTaskLogsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class DescribeReplicationInstanceTaskLogsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeReplicationInstanceTaskLogsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class DescribeReplicationInstanceTaskLogsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeReplicationInstanceTaskLogsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class DescribeReplicationInstanceTaskLogsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeReplicationInstanceTaskLogsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class DescribeReplicationInstanceTaskLogsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeReplicationInstanceTaskLogsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class DescribeReplicationInstanceTaskLogsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeReplicationInstanceTaskLogsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class DescribeReplicationInstanceTaskLogsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeReplicationInstanceTaskLogsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class DescribeReplicationInstanceTaskLogsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeReplicationInstanceTaskLogsXAmzTargetEnum xAmzTarget;
+
     public DescribeReplicationInstanceTaskLogsRequest withXAmzTarget(DescribeReplicationInstanceTaskLogsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeReplicationInstanceTaskLogsRequest(@JsonProperty("DescribeReplicationInstanceTaskLogsMessage") org.openapis.openapi.models.shared.DescribeReplicationInstanceTaskLogsMessage describeReplicationInstanceTaskLogsMessage, @JsonProperty("X-Amz-Target") DescribeReplicationInstanceTaskLogsXAmzTargetEnum xAmzTarget) {
+        this.describeReplicationInstanceTaskLogsMessage = describeReplicationInstanceTaskLogsMessage;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

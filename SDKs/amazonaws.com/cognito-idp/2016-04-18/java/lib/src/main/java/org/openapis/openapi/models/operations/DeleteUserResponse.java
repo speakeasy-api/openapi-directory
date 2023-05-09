@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteUserResponse {
     
     public String contentType;
+
     public DeleteUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteUserResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteUserResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteUserResponse {
      */
     
     public Object internalErrorException;
+
     public DeleteUserResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteUserResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteUserResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteUserResponse {
      */
     
     public Object notAuthorizedException;
+
     public DeleteUserResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteUserResponse {
      */
     
     public Object passwordResetRequiredException;
+
     public DeleteUserResponse withPasswordResetRequiredException(Object passwordResetRequiredException) {
         this.passwordResetRequiredException = passwordResetRequiredException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteUserResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteUserResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteUserResponse {
     
     
     public Integer statusCode;
+
     public DeleteUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteUserResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteUserResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,6 +114,7 @@ public class DeleteUserResponse {
      */
     
     public Object userNotConfirmedException;
+
     public DeleteUserResponse withUserNotConfirmedException(Object userNotConfirmedException) {
         this.userNotConfirmedException = userNotConfirmedException;
         return this;
@@ -113,9 +125,14 @@ public class DeleteUserResponse {
      */
     
     public Object userNotFoundException;
+
     public DeleteUserResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public DeleteUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

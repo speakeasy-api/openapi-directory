@@ -15,6 +15,7 @@ public class ListFeaturesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public FeatureSummary[] features;
+
     public ListFeaturesResponse withFeatures(FeatureSummary[] features) {
         this.features = features;
         return this;
@@ -23,9 +24,11 @@ public class ListFeaturesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFeaturesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFeaturesResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateVirtualClusterResponse {
     
     public String contentType;
+
     public CreateVirtualClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateVirtualClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateVirtualClusterResponse createVirtualClusterResponse;
+
     public CreateVirtualClusterResponse withCreateVirtualClusterResponse(org.openapis.openapi.models.shared.CreateVirtualClusterResponse createVirtualClusterResponse) {
         this.createVirtualClusterResponse = createVirtualClusterResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateVirtualClusterResponse {
      */
     
     public Object internalServerException;
+
     public CreateVirtualClusterResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateVirtualClusterResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateVirtualClusterResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class CreateVirtualClusterResponse {
     
     
     public Integer statusCode;
+
     public CreateVirtualClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateVirtualClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateVirtualClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateVirtualClusterResponse {
      */
     
     public Object validationException;
+
     public CreateVirtualClusterResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateVirtualClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

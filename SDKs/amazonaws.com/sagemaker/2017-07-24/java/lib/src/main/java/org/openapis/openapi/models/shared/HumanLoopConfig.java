@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HumanLoopConfig {
     @JsonProperty("HumanTaskUiArn")
     public String humanTaskUiArn;
+
     public HumanLoopConfig withHumanTaskUiArn(String humanTaskUiArn) {
         this.humanTaskUiArn = humanTaskUiArn;
         return this;
@@ -25,6 +26,7 @@ public class HumanLoopConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicWorkforceTaskPrice")
     public PublicWorkforceTaskPrice publicWorkforceTaskPrice;
+
     public HumanLoopConfig withPublicWorkforceTaskPrice(PublicWorkforceTaskPrice publicWorkforceTaskPrice) {
         this.publicWorkforceTaskPrice = publicWorkforceTaskPrice;
         return this;
@@ -33,6 +35,7 @@ public class HumanLoopConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskAvailabilityLifetimeInSeconds")
     public Long taskAvailabilityLifetimeInSeconds;
+
     public HumanLoopConfig withTaskAvailabilityLifetimeInSeconds(Long taskAvailabilityLifetimeInSeconds) {
         this.taskAvailabilityLifetimeInSeconds = taskAvailabilityLifetimeInSeconds;
         return this;
@@ -40,6 +43,7 @@ public class HumanLoopConfig {
     
     @JsonProperty("TaskCount")
     public Long taskCount;
+
     public HumanLoopConfig withTaskCount(Long taskCount) {
         this.taskCount = taskCount;
         return this;
@@ -47,6 +51,7 @@ public class HumanLoopConfig {
     
     @JsonProperty("TaskDescription")
     public String taskDescription;
+
     public HumanLoopConfig withTaskDescription(String taskDescription) {
         this.taskDescription = taskDescription;
         return this;
@@ -55,6 +60,7 @@ public class HumanLoopConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskKeywords")
     public String[] taskKeywords;
+
     public HumanLoopConfig withTaskKeywords(String[] taskKeywords) {
         this.taskKeywords = taskKeywords;
         return this;
@@ -63,6 +69,7 @@ public class HumanLoopConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskTimeLimitInSeconds")
     public Long taskTimeLimitInSeconds;
+
     public HumanLoopConfig withTaskTimeLimitInSeconds(Long taskTimeLimitInSeconds) {
         this.taskTimeLimitInSeconds = taskTimeLimitInSeconds;
         return this;
@@ -70,6 +77,7 @@ public class HumanLoopConfig {
     
     @JsonProperty("TaskTitle")
     public String taskTitle;
+
     public HumanLoopConfig withTaskTitle(String taskTitle) {
         this.taskTitle = taskTitle;
         return this;
@@ -77,9 +85,17 @@ public class HumanLoopConfig {
     
     @JsonProperty("WorkteamArn")
     public String workteamArn;
+
     public HumanLoopConfig withWorkteamArn(String workteamArn) {
         this.workteamArn = workteamArn;
         return this;
     }
     
+    public HumanLoopConfig(@JsonProperty("HumanTaskUiArn") String humanTaskUiArn, @JsonProperty("TaskCount") Long taskCount, @JsonProperty("TaskDescription") String taskDescription, @JsonProperty("TaskTitle") String taskTitle, @JsonProperty("WorkteamArn") String workteamArn) {
+        this.humanTaskUiArn = humanTaskUiArn;
+        this.taskCount = taskCount;
+        this.taskDescription = taskDescription;
+        this.taskTitle = taskTitle;
+        this.workteamArn = workteamArn;
+  }
 }

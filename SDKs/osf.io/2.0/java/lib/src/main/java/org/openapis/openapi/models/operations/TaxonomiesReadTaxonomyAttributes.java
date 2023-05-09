@@ -15,6 +15,7 @@ public class TaxonomiesReadTaxonomyAttributes {
      */
     
     public Long childCount;
+
     public TaxonomiesReadTaxonomyAttributes withChildCount(Long childCount) {
         this.childCount = childCount;
         return this;
@@ -25,6 +26,7 @@ public class TaxonomiesReadTaxonomyAttributes {
      */
     
     public String[] parents;
+
     public TaxonomiesReadTaxonomyAttributes withParents(String[] parents) {
         this.parents = parents;
         return this;
@@ -35,9 +37,11 @@ public class TaxonomiesReadTaxonomyAttributes {
      */
     
     public String text;
+
     public TaxonomiesReadTaxonomyAttributes withText(String text) {
         this.text = text;
         return this;
     }
     
+    public TaxonomiesReadTaxonomyAttributes(){}
 }

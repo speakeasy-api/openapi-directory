@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Comment {
     @JsonProperty("message")
     public String message;
+
     public Comment withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public Comment(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

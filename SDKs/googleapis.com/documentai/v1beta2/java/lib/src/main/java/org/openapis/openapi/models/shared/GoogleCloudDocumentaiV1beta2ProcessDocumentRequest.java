@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2ProcessDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automlParams")
     public GoogleCloudDocumentaiV1beta2AutoMlParams automlParams;
+
     public GoogleCloudDocumentaiV1beta2ProcessDocumentRequest withAutomlParams(GoogleCloudDocumentaiV1beta2AutoMlParams automlParams) {
         this.automlParams = automlParams;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta2ProcessDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentType")
     public String documentType;
+
     public GoogleCloudDocumentaiV1beta2ProcessDocumentRequest withDocumentType(String documentType) {
         this.documentType = documentType;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta2ProcessDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityExtractionParams")
     public GoogleCloudDocumentaiV1beta2EntityExtractionParams entityExtractionParams;
+
     public GoogleCloudDocumentaiV1beta2ProcessDocumentRequest withEntityExtractionParams(GoogleCloudDocumentaiV1beta2EntityExtractionParams entityExtractionParams) {
         this.entityExtractionParams = entityExtractionParams;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1beta2ProcessDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formExtractionParams")
     public GoogleCloudDocumentaiV1beta2FormExtractionParams formExtractionParams;
+
     public GoogleCloudDocumentaiV1beta2ProcessDocumentRequest withFormExtractionParams(GoogleCloudDocumentaiV1beta2FormExtractionParams formExtractionParams) {
         this.formExtractionParams = formExtractionParams;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDocumentaiV1beta2ProcessDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfig")
     public GoogleCloudDocumentaiV1beta2InputConfig inputConfig;
+
     public GoogleCloudDocumentaiV1beta2ProcessDocumentRequest withInputConfig(GoogleCloudDocumentaiV1beta2InputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDocumentaiV1beta2ProcessDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ocrParams")
     public GoogleCloudDocumentaiV1beta2OcrParams ocrParams;
+
     public GoogleCloudDocumentaiV1beta2ProcessDocumentRequest withOcrParams(GoogleCloudDocumentaiV1beta2OcrParams ocrParams) {
         this.ocrParams = ocrParams;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDocumentaiV1beta2ProcessDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputConfig")
     public GoogleCloudDocumentaiV1beta2OutputConfig outputConfig;
+
     public GoogleCloudDocumentaiV1beta2ProcessDocumentRequest withOutputConfig(GoogleCloudDocumentaiV1beta2OutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDocumentaiV1beta2ProcessDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleCloudDocumentaiV1beta2ProcessDocumentRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudDocumentaiV1beta2ProcessDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableExtractionParams")
     public GoogleCloudDocumentaiV1beta2TableExtractionParams tableExtractionParams;
+
     public GoogleCloudDocumentaiV1beta2ProcessDocumentRequest withTableExtractionParams(GoogleCloudDocumentaiV1beta2TableExtractionParams tableExtractionParams) {
         this.tableExtractionParams = tableExtractionParams;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2ProcessDocumentRequest(){}
 }

@@ -12,9 +12,11 @@ public class DeleteResourcePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyName")
     public String policyName;
+
     public DeleteResourcePolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public DeleteResourcePolicyRequest(){}
 }

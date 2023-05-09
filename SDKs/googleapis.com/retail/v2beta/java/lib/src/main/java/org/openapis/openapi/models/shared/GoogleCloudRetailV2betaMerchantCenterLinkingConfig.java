@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2betaMerchantCenterLinkingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public GoogleCloudRetailV2betaMerchantCenterLink[] links;
+
     public GoogleCloudRetailV2betaMerchantCenterLinkingConfig withLinks(GoogleCloudRetailV2betaMerchantCenterLink[] links) {
         this.links = links;
         return this;
     }
     
+    public GoogleCloudRetailV2betaMerchantCenterLinkingConfig(){}
 }

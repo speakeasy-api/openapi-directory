@@ -18,6 +18,7 @@ public class ProjectsGetXpnResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ProjectsGetXpnResources withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class ProjectsGetXpnResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ProjectsGetXpnResources withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ProjectsGetXpnResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public XpnResourceId[] resources;
+
     public ProjectsGetXpnResources withResources(XpnResourceId[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public ProjectsGetXpnResources(){}
 }

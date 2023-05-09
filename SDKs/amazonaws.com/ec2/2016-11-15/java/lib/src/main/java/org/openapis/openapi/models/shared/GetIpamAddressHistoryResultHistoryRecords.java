@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class GetIpamAddressHistoryResultHistoryRecords {
     
     public String resourceCidr;
+
     public GetIpamAddressHistoryResultHistoryRecords withResourceCidr(String resourceCidr) {
         this.resourceCidr = resourceCidr;
         return this;
@@ -19,6 +20,7 @@ public class GetIpamAddressHistoryResultHistoryRecords {
     
     
     public GetIpamAddressHistoryResultHistoryRecordsResourceComplianceStatusEnum resourceComplianceStatus;
+
     public GetIpamAddressHistoryResultHistoryRecords withResourceComplianceStatus(GetIpamAddressHistoryResultHistoryRecordsResourceComplianceStatusEnum resourceComplianceStatus) {
         this.resourceComplianceStatus = resourceComplianceStatus;
         return this;
@@ -26,6 +28,7 @@ public class GetIpamAddressHistoryResultHistoryRecords {
     
     
     public String resourceId;
+
     public GetIpamAddressHistoryResultHistoryRecords withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -33,6 +36,7 @@ public class GetIpamAddressHistoryResultHistoryRecords {
     
     
     public String resourceName;
+
     public GetIpamAddressHistoryResultHistoryRecords withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -40,6 +44,7 @@ public class GetIpamAddressHistoryResultHistoryRecords {
     
     
     public GetIpamAddressHistoryResultHistoryRecordsResourceOverlapStatusEnum resourceOverlapStatus;
+
     public GetIpamAddressHistoryResultHistoryRecords withResourceOverlapStatus(GetIpamAddressHistoryResultHistoryRecordsResourceOverlapStatusEnum resourceOverlapStatus) {
         this.resourceOverlapStatus = resourceOverlapStatus;
         return this;
@@ -47,6 +52,7 @@ public class GetIpamAddressHistoryResultHistoryRecords {
     
     
     public String resourceOwnerId;
+
     public GetIpamAddressHistoryResultHistoryRecords withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
@@ -54,6 +60,7 @@ public class GetIpamAddressHistoryResultHistoryRecords {
     
     
     public String resourceRegion;
+
     public GetIpamAddressHistoryResultHistoryRecords withResourceRegion(String resourceRegion) {
         this.resourceRegion = resourceRegion;
         return this;
@@ -61,6 +68,7 @@ public class GetIpamAddressHistoryResultHistoryRecords {
     
     
     public GetIpamAddressHistoryResultHistoryRecordsResourceTypeEnum resourceType;
+
     public GetIpamAddressHistoryResultHistoryRecords withResourceType(GetIpamAddressHistoryResultHistoryRecordsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -68,6 +76,7 @@ public class GetIpamAddressHistoryResultHistoryRecords {
     
     
     public OffsetDateTime sampledEndTime;
+
     public GetIpamAddressHistoryResultHistoryRecords withSampledEndTime(OffsetDateTime sampledEndTime) {
         this.sampledEndTime = sampledEndTime;
         return this;
@@ -75,6 +84,7 @@ public class GetIpamAddressHistoryResultHistoryRecords {
     
     
     public OffsetDateTime sampledStartTime;
+
     public GetIpamAddressHistoryResultHistoryRecords withSampledStartTime(OffsetDateTime sampledStartTime) {
         this.sampledStartTime = sampledStartTime;
         return this;
@@ -82,9 +92,11 @@ public class GetIpamAddressHistoryResultHistoryRecords {
     
     
     public String vpcId;
+
     public GetIpamAddressHistoryResultHistoryRecords withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public GetIpamAddressHistoryResultHistoryRecords(){}
 }

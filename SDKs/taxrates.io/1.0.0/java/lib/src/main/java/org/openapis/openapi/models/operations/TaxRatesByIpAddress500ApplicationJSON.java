@@ -15,6 +15,7 @@ public class TaxRatesByIpAddress500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public TaxRatesByIpAddress500ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class TaxRatesByIpAddress500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public TaxRatesByIpAddress500ApplicationJSON withFields(String fields) {
         this.fields = fields;
         return this;
@@ -31,9 +33,11 @@ public class TaxRatesByIpAddress500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TaxRatesByIpAddress500ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public TaxRatesByIpAddress500ApplicationJSON(){}
 }

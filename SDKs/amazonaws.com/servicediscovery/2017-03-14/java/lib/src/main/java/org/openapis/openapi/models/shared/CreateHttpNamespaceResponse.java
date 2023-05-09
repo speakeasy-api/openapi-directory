@@ -15,9 +15,11 @@ public class CreateHttpNamespaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public CreateHttpNamespaceResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public CreateHttpNamespaceResponse(){}
 }

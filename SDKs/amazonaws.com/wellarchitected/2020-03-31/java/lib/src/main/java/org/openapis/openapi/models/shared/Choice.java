@@ -15,6 +15,7 @@ public class Choice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalResources")
     public AdditionalResources[] additionalResources;
+
     public Choice withAdditionalResources(AdditionalResources[] additionalResources) {
         this.additionalResources = additionalResources;
         return this;
@@ -26,6 +27,7 @@ public class Choice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChoiceId")
     public String choiceId;
+
     public Choice withChoiceId(String choiceId) {
         this.choiceId = choiceId;
         return this;
@@ -37,6 +39,7 @@ public class Choice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Choice withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class Choice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HelpfulResource")
     public ChoiceContent helpfulResource;
+
     public Choice withHelpfulResource(ChoiceContent helpfulResource) {
         this.helpfulResource = helpfulResource;
         return this;
@@ -53,6 +57,7 @@ public class Choice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImprovementPlan")
     public ChoiceContent improvementPlan;
+
     public Choice withImprovementPlan(ChoiceContent improvementPlan) {
         this.improvementPlan = improvementPlan;
         return this;
@@ -64,9 +69,11 @@ public class Choice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public Choice withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Choice(){}
 }

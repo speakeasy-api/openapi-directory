@@ -15,6 +15,7 @@ public class ProductOptionValueFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public ProductOptionValueFields withId(Integer id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class ProductOptionValueFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProductOptionValueFields withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class ProductOptionValueFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Integer position;
+
     public ProductOptionValueFields withPosition(Integer position) {
         this.position = position;
         return this;
@@ -45,6 +48,7 @@ public class ProductOptionValueFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_option")
     public ProductOption productOption;
+
     public ProductOptionValueFields withProductOption(ProductOption productOption) {
         this.productOption = productOption;
         return this;
@@ -53,9 +57,11 @@ public class ProductOptionValueFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variants")
     public Variant[] variants;
+
     public ProductOptionValueFields withVariants(Variant[] variants) {
         this.variants = variants;
         return this;
     }
     
+    public ProductOptionValueFields(){}
 }

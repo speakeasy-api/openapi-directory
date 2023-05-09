@@ -17,6 +17,7 @@ public class GitTag {
      */
     @JsonProperty("message")
     public String message;
+
     public GitTag withMessage(String message) {
         this.message = message;
         return this;
@@ -24,6 +25,7 @@ public class GitTag {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public GitTag withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -31,6 +33,7 @@ public class GitTag {
     
     @JsonProperty("object")
     public GitTagObject object;
+
     public GitTag withObject(GitTagObject object) {
         this.object = object;
         return this;
@@ -38,6 +41,7 @@ public class GitTag {
     
     @JsonProperty("sha")
     public String sha;
+
     public GitTag withSha(String sha) {
         this.sha = sha;
         return this;
@@ -48,6 +52,7 @@ public class GitTag {
      */
     @JsonProperty("tag")
     public String tag;
+
     public GitTag withTag(String tag) {
         this.tag = tag;
         return this;
@@ -55,6 +60,7 @@ public class GitTag {
     
     @JsonProperty("tagger")
     public GitTagTagger tagger;
+
     public GitTag withTagger(GitTagTagger tagger) {
         this.tagger = tagger;
         return this;
@@ -65,6 +71,7 @@ public class GitTag {
      */
     @JsonProperty("url")
     public String url;
+
     public GitTag withUrl(String url) {
         this.url = url;
         return this;
@@ -73,9 +80,19 @@ public class GitTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification")
     public Verification verification;
+
     public GitTag withVerification(Verification verification) {
         this.verification = verification;
         return this;
     }
     
+    public GitTag(@JsonProperty("message") String message, @JsonProperty("node_id") String nodeId, @JsonProperty("object") GitTagObject object, @JsonProperty("sha") String sha, @JsonProperty("tag") String tag, @JsonProperty("tagger") GitTagTagger tagger, @JsonProperty("url") String url) {
+        this.message = message;
+        this.nodeId = nodeId;
+        this.object = object;
+        this.sha = sha;
+        this.tag = tag;
+        this.tagger = tagger;
+        this.url = url;
+  }
 }

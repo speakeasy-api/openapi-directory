@@ -18,9 +18,11 @@ public class CreateTenancyUnitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenancyUnitId")
     public String tenancyUnitId;
+
     public CreateTenancyUnitRequest withTenancyUnitId(String tenancyUnitId) {
         this.tenancyUnitId = tenancyUnitId;
         return this;
     }
     
+    public CreateTenancyUnitRequest(){}
 }

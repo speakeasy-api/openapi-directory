@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTeamRequest {
@@ -12,6 +13,7 @@ public class UpdateTeamRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateTeamRequestBodyInput requestBody;
+
     public UpdateTeamRequest withRequestBody(UpdateTeamRequestBodyInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +25,7 @@ public class UpdateTeamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public UpdateTeamRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -35,6 +38,7 @@ public class UpdateTeamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public UpdateTeamRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -47,6 +51,7 @@ public class UpdateTeamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public UpdateTeamRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -58,9 +63,13 @@ public class UpdateTeamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public UpdateTeamRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public UpdateTeamRequest(@JsonProperty("RequestBody") UpdateTeamRequestBodyInput requestBody) {
+        this.requestBody = requestBody;
+  }
 }

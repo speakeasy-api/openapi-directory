@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkCameraVideoLinkRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public GetNetworkCameraVideoLinkRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkCameraVideoLinkRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
     public String serial;
+
     public GetNetworkCameraVideoLinkRequest withSerial(String serial) {
         this.serial = serial;
         return this;
@@ -26,9 +29,14 @@ public class GetNetworkCameraVideoLinkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
     public String timestamp;
+
     public GetNetworkCameraVideoLinkRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public GetNetworkCameraVideoLinkRequest(@JsonProperty("networkId") String networkId, @JsonProperty("serial") String serial) {
+        this.networkId = networkId;
+        this.serial = serial;
+  }
 }

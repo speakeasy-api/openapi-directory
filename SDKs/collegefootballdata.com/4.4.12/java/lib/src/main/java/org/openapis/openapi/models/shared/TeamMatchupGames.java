@@ -12,6 +12,7 @@ public class TeamMatchupGames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awayScore")
     public Long awayScore;
+
     public TeamMatchupGames withAwayScore(Long awayScore) {
         this.awayScore = awayScore;
         return this;
@@ -20,6 +21,7 @@ public class TeamMatchupGames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awayTeam")
     public String awayTeam;
+
     public TeamMatchupGames withAwayTeam(String awayTeam) {
         this.awayTeam = awayTeam;
         return this;
@@ -28,6 +30,7 @@ public class TeamMatchupGames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public TeamMatchupGames withDate(String date) {
         this.date = date;
         return this;
@@ -36,6 +39,7 @@ public class TeamMatchupGames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homeScore")
     public Long homeScore;
+
     public TeamMatchupGames withHomeScore(Long homeScore) {
         this.homeScore = homeScore;
         return this;
@@ -44,6 +48,7 @@ public class TeamMatchupGames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homeTeam")
     public String homeTeam;
+
     public TeamMatchupGames withHomeTeam(String homeTeam) {
         this.homeTeam = homeTeam;
         return this;
@@ -52,6 +57,7 @@ public class TeamMatchupGames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("neutralSite")
     public Boolean neutralSite;
+
     public TeamMatchupGames withNeutralSite(Boolean neutralSite) {
         this.neutralSite = neutralSite;
         return this;
@@ -60,6 +66,7 @@ public class TeamMatchupGames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("season")
     public Long season;
+
     public TeamMatchupGames withSeason(Long season) {
         this.season = season;
         return this;
@@ -68,6 +75,7 @@ public class TeamMatchupGames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("season_type")
     public String seasonType;
+
     public TeamMatchupGames withSeasonType(String seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -76,6 +84,7 @@ public class TeamMatchupGames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("venue")
     public String venue;
+
     public TeamMatchupGames withVenue(String venue) {
         this.venue = venue;
         return this;
@@ -84,6 +93,7 @@ public class TeamMatchupGames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("week")
     public Long week;
+
     public TeamMatchupGames withWeek(Long week) {
         this.week = week;
         return this;
@@ -92,9 +102,11 @@ public class TeamMatchupGames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("winner")
     public String winner;
+
     public TeamMatchupGames withWinner(String winner) {
         this.winner = winner;
         return this;
     }
     
+    public TeamMatchupGames(){}
 }

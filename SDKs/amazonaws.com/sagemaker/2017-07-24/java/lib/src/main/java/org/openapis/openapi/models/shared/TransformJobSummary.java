@@ -14,13 +14,14 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * TransformJobSummary - Provides a summary of a transform job. Multiple &lt;code&gt;TransformJobSummary&lt;/code&gt; objects are returned as a list after in response to a &lt;a&gt;ListTransformJobs&lt;/a&gt; call.
+ * TransformJobSummary - Provides a summary of a transform job. Multiple &lt;code&gt;TransformJobSummary&lt;/code&gt; objects are returned as a list after in response to a &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListTransformJobs.html"&gt;ListTransformJobs&lt;/a&gt; call.
  */
 public class TransformJobSummary {
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public TransformJobSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class TransformJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public TransformJobSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -39,6 +41,7 @@ public class TransformJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public TransformJobSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -49,6 +52,7 @@ public class TransformJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TransformEndTime")
     public OffsetDateTime transformEndTime;
+
     public TransformJobSummary withTransformEndTime(OffsetDateTime transformEndTime) {
         this.transformEndTime = transformEndTime;
         return this;
@@ -56,6 +60,7 @@ public class TransformJobSummary {
     
     @JsonProperty("TransformJobArn")
     public String transformJobArn;
+
     public TransformJobSummary withTransformJobArn(String transformJobArn) {
         this.transformJobArn = transformJobArn;
         return this;
@@ -63,6 +68,7 @@ public class TransformJobSummary {
     
     @JsonProperty("TransformJobName")
     public String transformJobName;
+
     public TransformJobSummary withTransformJobName(String transformJobName) {
         this.transformJobName = transformJobName;
         return this;
@@ -70,9 +76,16 @@ public class TransformJobSummary {
     
     @JsonProperty("TransformJobStatus")
     public TransformJobStatusEnum transformJobStatus;
+
     public TransformJobSummary withTransformJobStatus(TransformJobStatusEnum transformJobStatus) {
         this.transformJobStatus = transformJobStatus;
         return this;
     }
     
+    public TransformJobSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("TransformJobArn") String transformJobArn, @JsonProperty("TransformJobName") String transformJobName, @JsonProperty("TransformJobStatus") TransformJobStatusEnum transformJobStatus) {
+        this.creationTime = creationTime;
+        this.transformJobArn = transformJobArn;
+        this.transformJobName = transformJobName;
+        this.transformJobStatus = transformJobStatus;
+  }
 }

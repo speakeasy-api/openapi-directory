@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Anomaly {
     @JsonProperty("instances")
     public AnomalyInstance[] instances;
+
     public Anomaly withInstances(AnomalyInstance[] instances) {
         this.instances = instances;
         return this;
@@ -19,6 +20,7 @@ public class Anomaly {
     
     @JsonProperty("metric")
     public Metric metric;
+
     public Anomaly withMetric(Metric metric) {
         this.metric = metric;
         return this;
@@ -26,9 +28,15 @@ public class Anomaly {
     
     @JsonProperty("reason")
     public String reason;
+
     public Anomaly withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public Anomaly(@JsonProperty("instances") AnomalyInstance[] instances, @JsonProperty("metric") Metric metric, @JsonProperty("reason") String reason) {
+        this.instances = instances;
+        this.metric = metric;
+        this.reason = reason;
+  }
 }

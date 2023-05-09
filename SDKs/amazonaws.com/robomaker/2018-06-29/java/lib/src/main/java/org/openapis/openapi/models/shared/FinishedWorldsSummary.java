@@ -15,6 +15,7 @@ public class FinishedWorldsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureSummary")
     public FailureSummary failureSummary;
+
     public FinishedWorldsSummary withFailureSummary(FailureSummary failureSummary) {
         this.failureSummary = failureSummary;
         return this;
@@ -23,6 +24,7 @@ public class FinishedWorldsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finishedCount")
     public Long finishedCount;
+
     public FinishedWorldsSummary withFinishedCount(Long finishedCount) {
         this.finishedCount = finishedCount;
         return this;
@@ -31,9 +33,11 @@ public class FinishedWorldsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("succeededWorlds")
     public String[] succeededWorlds;
+
     public FinishedWorldsSummary withSucceededWorlds(String[] succeededWorlds) {
         this.succeededWorlds = succeededWorlds;
         return this;
     }
     
+    public FinishedWorldsSummary(){}
 }

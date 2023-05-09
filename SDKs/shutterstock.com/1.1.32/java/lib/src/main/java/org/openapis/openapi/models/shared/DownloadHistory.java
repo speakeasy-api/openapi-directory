@@ -23,6 +23,7 @@ public class DownloadHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audio")
     public DownloadHistoryMediaDetails audio;
+
     public DownloadHistory withAudio(DownloadHistoryMediaDetails audio) {
         this.audio = audio;
         return this;
@@ -35,6 +36,7 @@ public class DownloadHistory {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("download_time")
     public OffsetDateTime downloadTime;
+
     public DownloadHistory withDownloadTime(OffsetDateTime downloadTime) {
         this.downloadTime = downloadTime;
         return this;
@@ -45,6 +47,7 @@ public class DownloadHistory {
      */
     @JsonProperty("id")
     public String id;
+
     public DownloadHistory withId(String id) {
         this.id = id;
         return this;
@@ -56,6 +59,7 @@ public class DownloadHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public DownloadHistoryMediaDetails image;
+
     public DownloadHistory withImage(DownloadHistoryMediaDetails image) {
         this.image = image;
         return this;
@@ -67,6 +71,7 @@ public class DownloadHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_downloadable")
     public Boolean isDownloadable;
+
     public DownloadHistory withIsDownloadable(Boolean isDownloadable) {
         this.isDownloadable = isDownloadable;
         return this;
@@ -77,6 +82,7 @@ public class DownloadHistory {
      */
     @JsonProperty("license")
     public String license;
+
     public DownloadHistory withLicense(String license) {
         this.license = license;
         return this;
@@ -88,6 +94,7 @@ public class DownloadHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public DownloadHistory withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -99,6 +106,7 @@ public class DownloadHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revshare")
     public DownloadHistoryRevshareDetails revshare;
+
     public DownloadHistory withRevshare(DownloadHistoryRevshareDetails revshare) {
         this.revshare = revshare;
         return this;
@@ -110,6 +118,7 @@ public class DownloadHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription_id")
     public String subscriptionId;
+
     public DownloadHistory withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -121,6 +130,7 @@ public class DownloadHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public DownloadHistoryUserDetails user;
+
     public DownloadHistory withUser(DownloadHistoryUserDetails user) {
         this.user = user;
         return this;
@@ -132,9 +142,15 @@ public class DownloadHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("video")
     public DownloadHistoryMediaDetails video;
+
     public DownloadHistory withVideo(DownloadHistoryMediaDetails video) {
         this.video = video;
         return this;
     }
     
+    public DownloadHistory(@JsonProperty("download_time") OffsetDateTime downloadTime, @JsonProperty("id") String id, @JsonProperty("license") String license) {
+        this.downloadTime = downloadTime;
+        this.id = id;
+        this.license = license;
+  }
 }

@@ -15,6 +15,7 @@ public class CampaignSummary {
      */
     @JsonProperty("arn")
     public String arn;
+
     public CampaignSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -25,6 +26,7 @@ public class CampaignSummary {
      */
     @JsonProperty("connectInstanceId")
     public String connectInstanceId;
+
     public CampaignSummary withConnectInstanceId(String connectInstanceId) {
         this.connectInstanceId = connectInstanceId;
         return this;
@@ -35,6 +37,7 @@ public class CampaignSummary {
      */
     @JsonProperty("id")
     public String id;
+
     public CampaignSummary withId(String id) {
         this.id = id;
         return this;
@@ -45,9 +48,16 @@ public class CampaignSummary {
      */
     @JsonProperty("name")
     public String name;
+
     public CampaignSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CampaignSummary(@JsonProperty("arn") String arn, @JsonProperty("connectInstanceId") String connectInstanceId, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.arn = arn;
+        this.connectInstanceId = connectInstanceId;
+        this.id = id;
+        this.name = name;
+  }
 }

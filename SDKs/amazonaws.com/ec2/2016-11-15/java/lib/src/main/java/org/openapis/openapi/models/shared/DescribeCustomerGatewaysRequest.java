@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCustomerGatewaysRequest {
     
     public String[] customerGatewayIds;
+
     public DescribeCustomerGatewaysRequest withCustomerGatewayIds(String[] customerGatewayIds) {
         this.customerGatewayIds = customerGatewayIds;
         return this;
@@ -19,6 +20,7 @@ public class DescribeCustomerGatewaysRequest {
     
     
     public Boolean dryRun;
+
     public DescribeCustomerGatewaysRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,9 +28,11 @@ public class DescribeCustomerGatewaysRequest {
     
     
     public DescribeCustomerGatewaysRequestFilters[] filters;
+
     public DescribeCustomerGatewaysRequest withFilters(DescribeCustomerGatewaysRequestFilters[] filters) {
         this.filters = filters;
         return this;
     }
     
+    public DescribeCustomerGatewaysRequest(){}
 }

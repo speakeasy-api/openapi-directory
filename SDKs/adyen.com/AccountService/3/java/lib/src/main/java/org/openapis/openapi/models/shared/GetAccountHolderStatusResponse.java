@@ -18,6 +18,7 @@ public class GetAccountHolderStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public GetAccountHolderStatusResponse withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -26,6 +27,7 @@ public class GetAccountHolderStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderStatus")
     public AccountHolderStatus accountHolderStatus;
+
     public GetAccountHolderStatusResponse withAccountHolderStatus(AccountHolderStatus accountHolderStatus) {
         this.accountHolderStatus = accountHolderStatus;
         return this;
@@ -37,6 +39,7 @@ public class GetAccountHolderStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public GetAccountHolderStatusResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -48,6 +51,7 @@ public class GetAccountHolderStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public GetAccountHolderStatusResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -61,9 +65,11 @@ public class GetAccountHolderStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedAsync")
     public Boolean submittedAsync;
+
     public GetAccountHolderStatusResponse withSubmittedAsync(Boolean submittedAsync) {
         this.submittedAsync = submittedAsync;
         return this;
     }
     
+    public GetAccountHolderStatusResponse(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GlobalReplicationGroupMemberList {
     
     public AutomaticFailoverStatusEnum automaticFailover;
+
     public GlobalReplicationGroupMemberList withAutomaticFailover(AutomaticFailoverStatusEnum automaticFailover) {
         this.automaticFailover = automaticFailover;
         return this;
@@ -19,6 +20,7 @@ public class GlobalReplicationGroupMemberList {
     
     
     public String replicationGroupId;
+
     public GlobalReplicationGroupMemberList withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -26,6 +28,7 @@ public class GlobalReplicationGroupMemberList {
     
     
     public String replicationGroupRegion;
+
     public GlobalReplicationGroupMemberList withReplicationGroupRegion(String replicationGroupRegion) {
         this.replicationGroupRegion = replicationGroupRegion;
         return this;
@@ -33,6 +36,7 @@ public class GlobalReplicationGroupMemberList {
     
     
     public String role;
+
     public GlobalReplicationGroupMemberList withRole(String role) {
         this.role = role;
         return this;
@@ -40,9 +44,11 @@ public class GlobalReplicationGroupMemberList {
     
     
     public String status;
+
     public GlobalReplicationGroupMemberList withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GlobalReplicationGroupMemberList(){}
 }

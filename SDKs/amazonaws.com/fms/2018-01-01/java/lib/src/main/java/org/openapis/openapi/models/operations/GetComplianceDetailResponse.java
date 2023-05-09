@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetComplianceDetailResponse {
     
     public String contentType;
+
     public GetComplianceDetailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetComplianceDetailResponse {
      */
     
     public org.openapis.openapi.models.shared.GetComplianceDetailResponse getComplianceDetailResponse;
+
     public GetComplianceDetailResponse withGetComplianceDetailResponse(org.openapis.openapi.models.shared.GetComplianceDetailResponse getComplianceDetailResponse) {
         this.getComplianceDetailResponse = getComplianceDetailResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetComplianceDetailResponse {
      */
     
     public Object internalErrorException;
+
     public GetComplianceDetailResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class GetComplianceDetailResponse {
      */
     
     public Object invalidInputException;
+
     public GetComplianceDetailResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetComplianceDetailResponse {
      */
     
     public Object invalidOperationException;
+
     public GetComplianceDetailResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -59,6 +65,7 @@ public class GetComplianceDetailResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetComplianceDetailResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetComplianceDetailResponse {
     
     
     public Integer statusCode;
+
     public GetComplianceDetailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetComplianceDetailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetComplianceDetailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetComplianceDetailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

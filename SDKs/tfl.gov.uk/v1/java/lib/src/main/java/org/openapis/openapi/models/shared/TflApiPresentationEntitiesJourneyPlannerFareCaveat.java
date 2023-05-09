@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesJourneyPlannerFareCaveat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public TflApiPresentationEntitiesJourneyPlannerFareCaveat withText(String text) {
         this.text = text;
         return this;
@@ -20,9 +21,11 @@ public class TflApiPresentationEntitiesJourneyPlannerFareCaveat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TflApiPresentationEntitiesJourneyPlannerFareCaveat withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerFareCaveat(){}
 }

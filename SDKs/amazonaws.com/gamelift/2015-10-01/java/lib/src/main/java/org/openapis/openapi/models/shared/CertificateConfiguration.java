@@ -7,14 +7,18 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * CertificateConfiguration - Determines whether a TLS/SSL certificate is generated for a fleet. This feature must be enabled when creating the fleet. All instances in a fleet share the same certificate. The certificate can be retrieved by calling the &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk.html"&gt;GameLift Server SDK&lt;/a&gt; operation &lt;code&gt;GetInstanceCertificate&lt;/code&gt;. 
+ * CertificateConfiguration - Determines whether a TLS/SSL certificate is generated for a fleet. This feature must be enabled when creating the fleet. All instances in a fleet share the same certificate. The certificate can be retrieved by calling the &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk.html"&gt;Amazon GameLift Server SDK&lt;/a&gt; operation &lt;code&gt;GetInstanceCertificate&lt;/code&gt;. 
  */
 public class CertificateConfiguration {
     @JsonProperty("CertificateType")
     public CertificateTypeEnum certificateType;
+
     public CertificateConfiguration withCertificateType(CertificateTypeEnum certificateType) {
         this.certificateType = certificateType;
         return this;
     }
     
+    public CertificateConfiguration(@JsonProperty("CertificateType") CertificateTypeEnum certificateType) {
+        this.certificateType = certificateType;
+  }
 }

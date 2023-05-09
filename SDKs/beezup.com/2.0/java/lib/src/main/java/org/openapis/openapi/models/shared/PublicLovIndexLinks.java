@@ -15,6 +15,7 @@ public class PublicLovIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lists")
     public java.util.Map<String, LinksGetPublicListOfValuesLink> lists;
+
     public PublicLovIndexLinks withLists(java.util.Map<String, LinksGetPublicListOfValuesLink> lists) {
         this.lists = lists;
         return this;
@@ -23,9 +24,11 @@ public class PublicLovIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public LinksGetPublicLovIndexLink self;
+
     public PublicLovIndexLinks withSelf(LinksGetPublicLovIndexLink self) {
         this.self = self;
         return this;
     }
     
+    public PublicLovIndexLinks(){}
 }

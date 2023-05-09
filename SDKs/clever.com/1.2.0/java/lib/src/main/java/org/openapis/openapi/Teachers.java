@@ -51,12 +51,10 @@ public class Teachers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistrictForTeacherResponse res = new org.openapis.openapi.models.operations.GetDistrictForTeacherResponse() {{
+        org.openapis.openapi.models.operations.GetDistrictForTeacherResponse res = new org.openapis.openapi.models.operations.GetDistrictForTeacherResponse(contentType, httpRes.statusCode()) {{
             districtResponse = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,12 +96,10 @@ public class Teachers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGradeLevelsForTeacherResponse res = new org.openapis.openapi.models.operations.GetGradeLevelsForTeacherResponse() {{
+        org.openapis.openapi.models.operations.GetGradeLevelsForTeacherResponse res = new org.openapis.openapi.models.operations.GetGradeLevelsForTeacherResponse(contentType, httpRes.statusCode()) {{
             gradeLevelsResponse = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,12 +141,10 @@ public class Teachers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchoolForTeacherResponse res = new org.openapis.openapi.models.operations.GetSchoolForTeacherResponse() {{
+        org.openapis.openapi.models.operations.GetSchoolForTeacherResponse res = new org.openapis.openapi.models.operations.GetSchoolForTeacherResponse(contentType, httpRes.statusCode()) {{
             schoolResponse = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -198,12 +192,10 @@ public class Teachers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSectionsForTeacherResponse res = new org.openapis.openapi.models.operations.GetSectionsForTeacherResponse() {{
+        org.openapis.openapi.models.operations.GetSectionsForTeacherResponse res = new org.openapis.openapi.models.operations.GetSectionsForTeacherResponse(contentType, httpRes.statusCode()) {{
             sectionsResponse = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,12 +243,10 @@ public class Teachers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStudentsForTeacherResponse res = new org.openapis.openapi.models.operations.GetStudentsForTeacherResponse() {{
+        org.openapis.openapi.models.operations.GetStudentsForTeacherResponse res = new org.openapis.openapi.models.operations.GetStudentsForTeacherResponse(contentType, httpRes.statusCode()) {{
             studentsResponse = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -304,12 +294,10 @@ public class Teachers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeacherResponse res = new org.openapis.openapi.models.operations.GetTeacherResponse() {{
+        org.openapis.openapi.models.operations.GetTeacherResponse res = new org.openapis.openapi.models.operations.GetTeacherResponse(contentType, httpRes.statusCode()) {{
             teacherResponse = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -357,11 +345,9 @@ public class Teachers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeachersResponse res = new org.openapis.openapi.models.operations.GetTeachersResponse() {{
+        org.openapis.openapi.models.operations.GetTeachersResponse res = new org.openapis.openapi.models.operations.GetTeachersResponse(contentType, httpRes.statusCode()) {{
             teachersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

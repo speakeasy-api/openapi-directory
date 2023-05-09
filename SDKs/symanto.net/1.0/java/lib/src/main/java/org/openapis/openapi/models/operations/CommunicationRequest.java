@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CommunicationRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Post[] requestBody;
+
     public CommunicationRequest withRequestBody(org.openapis.openapi.models.shared.Post[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +17,11 @@ public class CommunicationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
     public Boolean all;
+
     public CommunicationRequest withAll(Boolean all) {
         this.all = all;
         return this;
     }
     
+    public CommunicationRequest(){}
 }

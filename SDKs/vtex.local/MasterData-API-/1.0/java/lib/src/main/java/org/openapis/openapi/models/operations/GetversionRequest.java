@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetversionRequest {
@@ -12,6 +13,7 @@ public class GetversionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetversionRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetversionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetversionRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetversionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
     public String acronym;
+
     public GetversionRequest withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
@@ -42,6 +46,7 @@ public class GetversionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetversionRequest withId(String id) {
         this.id = id;
         return this;
@@ -52,9 +57,17 @@ public class GetversionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionId")
     public String versionId;
+
     public GetversionRequest withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public GetversionRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("acronym") String acronym, @JsonProperty("id") String id, @JsonProperty("versionId") String versionId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.acronym = acronym;
+        this.id = id;
+        this.versionId = versionId;
+  }
 }

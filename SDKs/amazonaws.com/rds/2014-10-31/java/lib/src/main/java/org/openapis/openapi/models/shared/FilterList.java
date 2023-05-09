@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * FilterList - &lt;p&gt;A filter name and value pair that is used to return a more specific list of results from a describe operation. Filters can be used to match a set of resources by specific criteria, such as IDs. The filters supported by a describe operation are documented with the describe operation.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Currently, wildcards are not supported in filters.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;The following actions can be filtered:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DescribeDBClusterBacktracks&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DescribeDBClusterEndpoints&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DescribeDBClusters&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DescribeDBInstances&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DescribePendingMaintenanceActions&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class FilterList {
     
     public String name;
+
     public FilterList withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class FilterList {
     
     
     public String[] values;
+
     public FilterList withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public FilterList(@JsonProperty("Name") String name, @JsonProperty("Values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

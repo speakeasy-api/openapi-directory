@@ -18,6 +18,7 @@ public class CreativeAssetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetIdentifier")
     public CreativeAssetId assetIdentifier;
+
     public CreativeAssetMetadata withAssetIdentifier(CreativeAssetId assetIdentifier) {
         this.assetIdentifier = assetIdentifier;
         return this;
@@ -29,6 +30,7 @@ public class CreativeAssetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickTags")
     public ClickTag[] clickTags;
+
     public CreativeAssetMetadata withClickTags(ClickTag[] clickTags) {
         this.clickTags = clickTags;
         return this;
@@ -40,6 +42,7 @@ public class CreativeAssetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedFeatures")
     public CreativeAssetMetadataDetectedFeaturesEnum[] detectedFeatures;
+
     public CreativeAssetMetadata withDetectedFeatures(CreativeAssetMetadataDetectedFeaturesEnum[] detectedFeatures) {
         this.detectedFeatures = detectedFeatures;
         return this;
@@ -51,6 +54,7 @@ public class CreativeAssetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreativeAssetMetadata withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class CreativeAssetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idDimensionValue")
     public DimensionValue idDimensionValue;
+
     public CreativeAssetMetadata withIdDimensionValue(DimensionValue idDimensionValue) {
         this.idDimensionValue = idDimensionValue;
         return this;
@@ -73,6 +78,7 @@ public class CreativeAssetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CreativeAssetMetadata withKind(String kind) {
         this.kind = kind;
         return this;
@@ -84,9 +90,11 @@ public class CreativeAssetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnedValidationRules")
     public CreativeAssetMetadataWarnedValidationRulesEnum[] warnedValidationRules;
+
     public CreativeAssetMetadata withWarnedValidationRules(CreativeAssetMetadataWarnedValidationRulesEnum[] warnedValidationRules) {
         this.warnedValidationRules = warnedValidationRules;
         return this;
     }
     
+    public CreativeAssetMetadata(){}
 }

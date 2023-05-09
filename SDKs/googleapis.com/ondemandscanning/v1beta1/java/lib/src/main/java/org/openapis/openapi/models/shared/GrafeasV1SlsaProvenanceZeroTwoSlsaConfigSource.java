@@ -15,6 +15,7 @@ public class GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public java.util.Map<String, String> digest;
+
     public GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource withDigest(java.util.Map<String, String> digest) {
         this.digest = digest;
         return this;
@@ -23,6 +24,7 @@ public class GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryPoint")
     public String entryPoint;
+
     public GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource withEntryPoint(String entryPoint) {
         this.entryPoint = entryPoint;
         return this;
@@ -31,9 +33,11 @@ public class GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource(){}
 }

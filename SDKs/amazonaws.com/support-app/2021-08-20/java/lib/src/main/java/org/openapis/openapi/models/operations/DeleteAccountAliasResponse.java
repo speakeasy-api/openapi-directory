@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAccountAliasResponse {
@@ -12,6 +13,7 @@ public class DeleteAccountAliasResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteAccountAliasResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAccountAliasResponse {
     
     
     public String contentType;
+
     public DeleteAccountAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAccountAliasResponse {
      */
     
     public java.util.Map<String, Object> deleteAccountAliasResult;
+
     public DeleteAccountAliasResponse withDeleteAccountAliasResult(java.util.Map<String, Object> deleteAccountAliasResult) {
         this.deleteAccountAliasResult = deleteAccountAliasResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAccountAliasResponse {
      */
     
     public Object internalServerException;
+
     public DeleteAccountAliasResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAccountAliasResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAccountAliasResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteAccountAliasResponse {
     
     
     public Integer statusCode;
+
     public DeleteAccountAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteAccountAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAccountAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteAccountAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

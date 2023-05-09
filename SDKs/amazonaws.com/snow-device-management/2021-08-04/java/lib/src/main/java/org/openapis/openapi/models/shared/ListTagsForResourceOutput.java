@@ -15,9 +15,11 @@ public class ListTagsForResourceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ListTagsForResourceOutput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListTagsForResourceOutput(){}
 }

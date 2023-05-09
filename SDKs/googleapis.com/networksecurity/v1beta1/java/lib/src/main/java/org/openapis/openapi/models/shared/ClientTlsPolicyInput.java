@@ -18,6 +18,7 @@ public class ClientTlsPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientCertificate")
     public GoogleCloudNetworksecurityV1beta1CertificateProvider clientCertificate;
+
     public ClientTlsPolicyInput withClientCertificate(GoogleCloudNetworksecurityV1beta1CertificateProvider clientCertificate) {
         this.clientCertificate = clientCertificate;
         return this;
@@ -29,6 +30,7 @@ public class ClientTlsPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ClientTlsPolicyInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class ClientTlsPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ClientTlsPolicyInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class ClientTlsPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ClientTlsPolicyInput withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class ClientTlsPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverValidationCa")
     public ValidationCA[] serverValidationCa;
+
     public ClientTlsPolicyInput withServerValidationCa(ValidationCA[] serverValidationCa) {
         this.serverValidationCa = serverValidationCa;
         return this;
@@ -73,9 +78,11 @@ public class ClientTlsPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sni")
     public String sni;
+
     public ClientTlsPolicyInput withSni(String sni) {
         this.sni = sni;
         return this;
     }
     
+    public ClientTlsPolicyInput(){}
 }

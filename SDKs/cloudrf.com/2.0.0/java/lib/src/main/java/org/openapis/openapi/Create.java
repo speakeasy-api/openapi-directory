@@ -55,10 +55,8 @@ public class Create {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AreaResponse res = new org.openapis.openapi.models.operations.AreaResponse() {{
+        org.openapis.openapi.models.operations.AreaResponse res = new org.openapis.openapi.models.operations.AreaResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,10 +93,8 @@ public class Create {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PathResponse res = new org.openapis.openapi.models.operations.PathResponse() {{
+        org.openapis.openapi.models.operations.PathResponse res = new org.openapis.openapi.models.operations.PathResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,10 +131,8 @@ public class Create {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PointsResponse res = new org.openapis.openapi.models.operations.PointsResponse() {{
+        org.openapis.openapi.models.operations.PointsResponse res = new org.openapis.openapi.models.operations.PointsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

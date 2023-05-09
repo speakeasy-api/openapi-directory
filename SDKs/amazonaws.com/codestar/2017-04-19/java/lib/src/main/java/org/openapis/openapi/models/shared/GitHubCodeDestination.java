@@ -15,6 +15,7 @@ public class GitHubCodeDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GitHubCodeDestination withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class GitHubCodeDestination {
     
     @JsonProperty("issuesEnabled")
     public Boolean issuesEnabled;
+
     public GitHubCodeDestination withIssuesEnabled(Boolean issuesEnabled) {
         this.issuesEnabled = issuesEnabled;
         return this;
@@ -29,6 +31,7 @@ public class GitHubCodeDestination {
     
     @JsonProperty("name")
     public String name;
+
     public GitHubCodeDestination withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class GitHubCodeDestination {
     
     @JsonProperty("owner")
     public String owner;
+
     public GitHubCodeDestination withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -43,6 +47,7 @@ public class GitHubCodeDestination {
     
     @JsonProperty("privateRepository")
     public Boolean privateRepository;
+
     public GitHubCodeDestination withPrivateRepository(Boolean privateRepository) {
         this.privateRepository = privateRepository;
         return this;
@@ -50,6 +55,7 @@ public class GitHubCodeDestination {
     
     @JsonProperty("token")
     public String token;
+
     public GitHubCodeDestination withToken(String token) {
         this.token = token;
         return this;
@@ -57,9 +63,18 @@ public class GitHubCodeDestination {
     
     @JsonProperty("type")
     public String type;
+
     public GitHubCodeDestination withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GitHubCodeDestination(@JsonProperty("issuesEnabled") Boolean issuesEnabled, @JsonProperty("name") String name, @JsonProperty("owner") String owner, @JsonProperty("privateRepository") Boolean privateRepository, @JsonProperty("token") String token, @JsonProperty("type") String type) {
+        this.issuesEnabled = issuesEnabled;
+        this.name = name;
+        this.owner = owner;
+        this.privateRepository = privateRepository;
+        this.token = token;
+        this.type = type;
+  }
 }

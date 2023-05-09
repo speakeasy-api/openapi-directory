@@ -15,6 +15,7 @@ public class InstanceWithNamedPorts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public InstanceWithNamedPorts withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -26,6 +27,7 @@ public class InstanceWithNamedPorts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedPorts")
     public NamedPort[] namedPorts;
+
     public InstanceWithNamedPorts withNamedPorts(NamedPort[] namedPorts) {
         this.namedPorts = namedPorts;
         return this;
@@ -37,9 +39,11 @@ public class InstanceWithNamedPorts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public InstanceWithNamedPortsStatusEnum status;
+
     public InstanceWithNamedPorts withStatus(InstanceWithNamedPortsStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public InstanceWithNamedPorts(){}
 }

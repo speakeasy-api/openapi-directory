@@ -12,6 +12,7 @@ public class PutVCustomPricesRulesPriceAssociationIdRequestBody {
      */
     @JsonProperty("orderType")
     public String orderType;
+
     public PutVCustomPricesRulesPriceAssociationIdRequestBody withOrderType(String orderType) {
         this.orderType = orderType;
         return this;
@@ -22,6 +23,7 @@ public class PutVCustomPricesRulesPriceAssociationIdRequestBody {
      */
     @JsonProperty("pricetable")
     public String pricetable;
+
     public PutVCustomPricesRulesPriceAssociationIdRequestBody withPricetable(String pricetable) {
         this.pricetable = pricetable;
         return this;
@@ -32,9 +34,15 @@ public class PutVCustomPricesRulesPriceAssociationIdRequestBody {
      */
     @JsonProperty("state")
     public String state;
+
     public PutVCustomPricesRulesPriceAssociationIdRequestBody withState(String state) {
         this.state = state;
         return this;
     }
     
+    public PutVCustomPricesRulesPriceAssociationIdRequestBody(@JsonProperty("orderType") String orderType, @JsonProperty("pricetable") String pricetable, @JsonProperty("state") String state) {
+        this.orderType = orderType;
+        this.pricetable = pricetable;
+        this.state = state;
+  }
 }

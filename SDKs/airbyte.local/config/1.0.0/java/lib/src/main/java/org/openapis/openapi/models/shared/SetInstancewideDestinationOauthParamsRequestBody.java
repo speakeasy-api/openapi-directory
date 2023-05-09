@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetInstancewideDestinationOauthParamsRequestBody {
     @JsonProperty("destinationDefinitionId")
     public String destinationDefinitionId;
+
     public SetInstancewideDestinationOauthParamsRequestBody withDestinationDefinitionId(String destinationDefinitionId) {
         this.destinationDefinitionId = destinationDefinitionId;
         return this;
@@ -16,9 +17,14 @@ public class SetInstancewideDestinationOauthParamsRequestBody {
     
     @JsonProperty("params")
     public java.util.Map<String, Object> params;
+
     public SetInstancewideDestinationOauthParamsRequestBody withParams(java.util.Map<String, Object> params) {
         this.params = params;
         return this;
     }
     
+    public SetInstancewideDestinationOauthParamsRequestBody(@JsonProperty("destinationDefinitionId") String destinationDefinitionId, @JsonProperty("params") java.util.Map<String, Object> params) {
+        this.destinationDefinitionId = destinationDefinitionId;
+        this.params = params;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyLaunchTemplateResult {
     
     public ModifyLaunchTemplateResultLaunchTemplate launchTemplate;
+
     public ModifyLaunchTemplateResult withLaunchTemplate(ModifyLaunchTemplateResultLaunchTemplate launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
     }
     
+    public ModifyLaunchTemplateResult(){}
 }

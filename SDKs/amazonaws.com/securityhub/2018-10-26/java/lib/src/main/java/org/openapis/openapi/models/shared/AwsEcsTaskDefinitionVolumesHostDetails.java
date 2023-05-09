@@ -15,9 +15,11 @@ public class AwsEcsTaskDefinitionVolumesHostDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourcePath")
     public String sourcePath;
+
     public AwsEcsTaskDefinitionVolumesHostDetails withSourcePath(String sourcePath) {
         this.sourcePath = sourcePath;
         return this;
     }
     
+    public AwsEcsTaskDefinitionVolumesHostDetails(){}
 }

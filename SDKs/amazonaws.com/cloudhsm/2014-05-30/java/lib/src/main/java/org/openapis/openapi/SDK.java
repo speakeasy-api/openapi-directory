@@ -163,6 +163,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -200,14 +205,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddTagsToResourceResponse res = new org.openapis.openapi.models.operations.AddTagsToResourceResponse() {{
+        org.openapis.openapi.models.operations.AddTagsToResourceResponse res = new org.openapis.openapi.models.operations.AddTagsToResourceResponse(contentType, httpRes.statusCode()) {{
             addTagsToResourceResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -276,14 +279,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateHapgResponse res = new org.openapis.openapi.models.operations.CreateHapgResponse() {{
+        org.openapis.openapi.models.operations.CreateHapgResponse res = new org.openapis.openapi.models.operations.CreateHapgResponse(contentType, httpRes.statusCode()) {{
             createHapgResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -352,14 +353,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateHsmResponse res = new org.openapis.openapi.models.operations.CreateHsmResponse() {{
+        org.openapis.openapi.models.operations.CreateHsmResponse res = new org.openapis.openapi.models.operations.CreateHsmResponse(contentType, httpRes.statusCode()) {{
             createHsmResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -428,14 +427,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLunaClientResponse res = new org.openapis.openapi.models.operations.CreateLunaClientResponse() {{
+        org.openapis.openapi.models.operations.CreateLunaClientResponse res = new org.openapis.openapi.models.operations.CreateLunaClientResponse(contentType, httpRes.statusCode()) {{
             createLunaClientResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -504,14 +501,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteHapgResponse res = new org.openapis.openapi.models.operations.DeleteHapgResponse() {{
+        org.openapis.openapi.models.operations.DeleteHapgResponse res = new org.openapis.openapi.models.operations.DeleteHapgResponse(contentType, httpRes.statusCode()) {{
             deleteHapgResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,14 +575,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteHsmResponse res = new org.openapis.openapi.models.operations.DeleteHsmResponse() {{
+        org.openapis.openapi.models.operations.DeleteHsmResponse res = new org.openapis.openapi.models.operations.DeleteHsmResponse(contentType, httpRes.statusCode()) {{
             deleteHsmResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -656,14 +649,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLunaClientResponse res = new org.openapis.openapi.models.operations.DeleteLunaClientResponse() {{
+        org.openapis.openapi.models.operations.DeleteLunaClientResponse res = new org.openapis.openapi.models.operations.DeleteLunaClientResponse(contentType, httpRes.statusCode()) {{
             deleteLunaClientResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -732,14 +723,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeHapgResponse res = new org.openapis.openapi.models.operations.DescribeHapgResponse() {{
+        org.openapis.openapi.models.operations.DescribeHapgResponse res = new org.openapis.openapi.models.operations.DescribeHapgResponse(contentType, httpRes.statusCode()) {{
             describeHapgResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -808,14 +797,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeHsmResponse res = new org.openapis.openapi.models.operations.DescribeHsmResponse() {{
+        org.openapis.openapi.models.operations.DescribeHsmResponse res = new org.openapis.openapi.models.operations.DescribeHsmResponse(contentType, httpRes.statusCode()) {{
             describeHsmResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -884,14 +871,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLunaClientResponse res = new org.openapis.openapi.models.operations.DescribeLunaClientResponse() {{
+        org.openapis.openapi.models.operations.DescribeLunaClientResponse res = new org.openapis.openapi.models.operations.DescribeLunaClientResponse(contentType, httpRes.statusCode()) {{
             describeLunaClientResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -960,14 +945,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConfigResponse res = new org.openapis.openapi.models.operations.GetConfigResponse() {{
+        org.openapis.openapi.models.operations.GetConfigResponse res = new org.openapis.openapi.models.operations.GetConfigResponse(contentType, httpRes.statusCode()) {{
             getConfigResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1036,14 +1019,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAvailableZonesResponse res = new org.openapis.openapi.models.operations.ListAvailableZonesResponse() {{
+        org.openapis.openapi.models.operations.ListAvailableZonesResponse res = new org.openapis.openapi.models.operations.ListAvailableZonesResponse(contentType, httpRes.statusCode()) {{
             listAvailableZonesResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1112,14 +1093,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHapgsResponse res = new org.openapis.openapi.models.operations.ListHapgsResponse() {{
+        org.openapis.openapi.models.operations.ListHapgsResponse res = new org.openapis.openapi.models.operations.ListHapgsResponse(contentType, httpRes.statusCode()) {{
             listHapgsResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1188,14 +1167,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHsmsResponse res = new org.openapis.openapi.models.operations.ListHsmsResponse() {{
+        org.openapis.openapi.models.operations.ListHsmsResponse res = new org.openapis.openapi.models.operations.ListHsmsResponse(contentType, httpRes.statusCode()) {{
             listHsmsResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1264,14 +1241,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLunaClientsResponse res = new org.openapis.openapi.models.operations.ListLunaClientsResponse() {{
+        org.openapis.openapi.models.operations.ListLunaClientsResponse res = new org.openapis.openapi.models.operations.ListLunaClientsResponse(contentType, httpRes.statusCode()) {{
             listLunaClientsResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1340,14 +1315,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1416,14 +1389,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ModifyHapgResponse res = new org.openapis.openapi.models.operations.ModifyHapgResponse() {{
+        org.openapis.openapi.models.operations.ModifyHapgResponse res = new org.openapis.openapi.models.operations.ModifyHapgResponse(contentType, httpRes.statusCode()) {{
             modifyHapgResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1492,14 +1463,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ModifyHsmResponse res = new org.openapis.openapi.models.operations.ModifyHsmResponse() {{
+        org.openapis.openapi.models.operations.ModifyHsmResponse res = new org.openapis.openapi.models.operations.ModifyHsmResponse(contentType, httpRes.statusCode()) {{
             modifyHsmResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1568,12 +1537,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ModifyLunaClientResponse res = new org.openapis.openapi.models.operations.ModifyLunaClientResponse() {{
+        org.openapis.openapi.models.operations.ModifyLunaClientResponse res = new org.openapis.openapi.models.operations.ModifyLunaClientResponse(contentType, httpRes.statusCode()) {{
             modifyLunaClientResponse = null;
             cloudHsmServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1628,14 +1595,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveTagsFromResourceResponse res = new org.openapis.openapi.models.operations.RemoveTagsFromResourceResponse() {{
+        org.openapis.openapi.models.operations.RemoveTagsFromResourceResponse res = new org.openapis.openapi.models.operations.RemoveTagsFromResourceResponse(contentType, httpRes.statusCode()) {{
             removeTagsFromResourceResponse = null;
             cloudHsmServiceException = null;
             cloudHsmInternalException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

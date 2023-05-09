@@ -15,6 +15,7 @@ public class DisassociateIdentityProviderConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public DisassociateIdentityProviderConfigRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -25,9 +26,13 @@ public class DisassociateIdentityProviderConfigRequestBody {
      */
     @JsonProperty("identityProviderConfig")
     public DisassociateIdentityProviderConfigRequestBodyIdentityProviderConfig identityProviderConfig;
+
     public DisassociateIdentityProviderConfigRequestBody withIdentityProviderConfig(DisassociateIdentityProviderConfigRequestBodyIdentityProviderConfig identityProviderConfig) {
         this.identityProviderConfig = identityProviderConfig;
         return this;
     }
     
+    public DisassociateIdentityProviderConfigRequestBody(@JsonProperty("identityProviderConfig") DisassociateIdentityProviderConfigRequestBodyIdentityProviderConfig identityProviderConfig) {
+        this.identityProviderConfig = identityProviderConfig;
+  }
 }

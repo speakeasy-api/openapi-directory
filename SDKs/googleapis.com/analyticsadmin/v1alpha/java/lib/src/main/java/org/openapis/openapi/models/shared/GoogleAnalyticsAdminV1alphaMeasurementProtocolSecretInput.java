@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaMeasurementProtocolSecretInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAnalyticsAdminV1alphaMeasurementProtocolSecretInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaMeasurementProtocolSecretInput(){}
 }

@@ -15,6 +15,7 @@ public class DeleteResourcePermissionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionType")
     public DeleteResourcePermissionRequestBodyActionTypeEnum actionType;
+
     public DeleteResourcePermissionRequestBody withActionType(DeleteResourcePermissionRequestBodyActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -25,6 +26,7 @@ public class DeleteResourcePermissionRequestBody {
      */
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public DeleteResourcePermissionRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -36,9 +38,13 @@ public class DeleteResourcePermissionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceResourceArn")
     public String sourceResourceArn;
+
     public DeleteResourcePermissionRequestBody withSourceResourceArn(String sourceResourceArn) {
         this.sourceResourceArn = sourceResourceArn;
         return this;
     }
     
+    public DeleteResourcePermissionRequestBody(@JsonProperty("ResourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

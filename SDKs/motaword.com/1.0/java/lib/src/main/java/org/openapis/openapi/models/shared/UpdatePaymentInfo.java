@@ -12,6 +12,7 @@ public class UpdatePaymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bin")
     public String bin;
+
     public UpdatePaymentInfo withBin(String bin) {
         this.bin = bin;
         return this;
@@ -20,6 +21,7 @@ public class UpdatePaymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public UpdatePaymentInfo withCity(String city) {
         this.city = city;
         return this;
@@ -28,6 +30,7 @@ public class UpdatePaymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public UpdatePaymentInfo withCountry(String country) {
         this.country = country;
         return this;
@@ -36,6 +39,7 @@ public class UpdatePaymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public UpdatePaymentInfo withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -44,6 +48,7 @@ public class UpdatePaymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("save_as_corporate_primary")
     public Boolean saveAsCorporatePrimary;
+
     public UpdatePaymentInfo withSaveAsCorporatePrimary(Boolean saveAsCorporatePrimary) {
         this.saveAsCorporatePrimary = saveAsCorporatePrimary;
         return this;
@@ -52,6 +57,7 @@ public class UpdatePaymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("share_with_corporate_users")
     public Boolean shareWithCorporateUsers;
+
     public UpdatePaymentInfo withShareWithCorporateUsers(Boolean shareWithCorporateUsers) {
         this.shareWithCorporateUsers = shareWithCorporateUsers;
         return this;
@@ -60,6 +66,7 @@ public class UpdatePaymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public UpdatePaymentInfo withState(String state) {
         this.state = state;
         return this;
@@ -68,6 +75,7 @@ public class UpdatePaymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street")
     public String street;
+
     public UpdatePaymentInfo withStreet(String street) {
         this.street = street;
         return this;
@@ -76,6 +84,7 @@ public class UpdatePaymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stripeToken")
     public String stripeToken;
+
     public UpdatePaymentInfo withStripeToken(String stripeToken) {
         this.stripeToken = stripeToken;
         return this;
@@ -84,9 +93,11 @@ public class UpdatePaymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zip")
     public String zip;
+
     public UpdatePaymentInfo withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public UpdatePaymentInfo(){}
 }

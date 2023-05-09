@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutFunctionEventInvokeConfigResponse {
     
     public String contentType;
+
     public PutFunctionEventInvokeConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutFunctionEventInvokeConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.FunctionEventInvokeConfig functionEventInvokeConfig;
+
     public PutFunctionEventInvokeConfigResponse withFunctionEventInvokeConfig(org.openapis.openapi.models.shared.FunctionEventInvokeConfig functionEventInvokeConfig) {
         this.functionEventInvokeConfig = functionEventInvokeConfig;
         return this;
@@ -29,6 +32,7 @@ public class PutFunctionEventInvokeConfigResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutFunctionEventInvokeConfigResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class PutFunctionEventInvokeConfigResponse {
      */
     
     public Object resourceConflictException;
+
     public PutFunctionEventInvokeConfigResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -49,6 +54,7 @@ public class PutFunctionEventInvokeConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutFunctionEventInvokeConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PutFunctionEventInvokeConfigResponse {
      */
     
     public Object serviceException;
+
     public PutFunctionEventInvokeConfigResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class PutFunctionEventInvokeConfigResponse {
     
     
     public Integer statusCode;
+
     public PutFunctionEventInvokeConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutFunctionEventInvokeConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutFunctionEventInvokeConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class PutFunctionEventInvokeConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutFunctionEventInvokeConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutFunctionEventInvokeConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

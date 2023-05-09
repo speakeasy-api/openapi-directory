@@ -15,6 +15,7 @@ public class BatchGetNamedQueryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NamedQueries")
     public NamedQuery[] namedQueries;
+
     public BatchGetNamedQueryOutput withNamedQueries(NamedQuery[] namedQueries) {
         this.namedQueries = namedQueries;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetNamedQueryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedNamedQueryIds")
     public UnprocessedNamedQueryId[] unprocessedNamedQueryIds;
+
     public BatchGetNamedQueryOutput withUnprocessedNamedQueryIds(UnprocessedNamedQueryId[] unprocessedNamedQueryIds) {
         this.unprocessedNamedQueryIds = unprocessedNamedQueryIds;
         return this;
     }
     
+    public BatchGetNamedQueryOutput(){}
 }

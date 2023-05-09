@@ -15,6 +15,7 @@ public class ListSuiteRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSuiteRunsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSuiteRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteRunsList")
     public SuiteRunInformation[] suiteRunsList;
+
     public ListSuiteRunsResponse withSuiteRunsList(SuiteRunInformation[] suiteRunsList) {
         this.suiteRunsList = suiteRunsList;
         return this;
     }
     
+    public ListSuiteRunsResponse(){}
 }

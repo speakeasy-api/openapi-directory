@@ -15,9 +15,11 @@ public class ChannelContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedPlaylists")
     public ChannelContentDetailsRelatedPlaylists relatedPlaylists;
+
     public ChannelContentDetails withRelatedPlaylists(ChannelContentDetailsRelatedPlaylists relatedPlaylists) {
         this.relatedPlaylists = relatedPlaylists;
         return this;
     }
     
+    public ChannelContentDetails(){}
 }

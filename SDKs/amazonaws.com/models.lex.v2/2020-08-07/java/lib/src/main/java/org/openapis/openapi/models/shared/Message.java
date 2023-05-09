@@ -15,6 +15,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customPayload")
     public CustomPayload customPayload;
+
     public Message withCustomPayload(CustomPayload customPayload) {
         this.customPayload = customPayload;
         return this;
@@ -23,6 +24,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageResponseCard")
     public ImageResponseCard imageResponseCard;
+
     public Message withImageResponseCard(ImageResponseCard imageResponseCard) {
         this.imageResponseCard = imageResponseCard;
         return this;
@@ -31,6 +33,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plainTextMessage")
     public PlainTextMessage plainTextMessage;
+
     public Message withPlainTextMessage(PlainTextMessage plainTextMessage) {
         this.plainTextMessage = plainTextMessage;
         return this;
@@ -39,9 +42,11 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssmlMessage")
     public SSMLMessage ssmlMessage;
+
     public Message withSsmlMessage(SSMLMessage ssmlMessage) {
         this.ssmlMessage = ssmlMessage;
         return this;
     }
     
+    public Message(){}
 }

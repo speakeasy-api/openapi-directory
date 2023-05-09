@@ -12,6 +12,7 @@ public class Paging {
      */
     @JsonProperty("currentPage")
     public Integer currentPage;
+
     public Paging withCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
@@ -22,6 +23,7 @@ public class Paging {
      */
     @JsonProperty("pages")
     public Integer pages;
+
     public Paging withPages(Integer pages) {
         this.pages = pages;
         return this;
@@ -32,6 +34,7 @@ public class Paging {
      */
     @JsonProperty("perPage")
     public Integer perPage;
+
     public Paging withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +45,16 @@ public class Paging {
      */
     @JsonProperty("total")
     public Integer total;
+
     public Paging withTotal(Integer total) {
         this.total = total;
         return this;
     }
     
+    public Paging(@JsonProperty("currentPage") Integer currentPage, @JsonProperty("pages") Integer pages, @JsonProperty("perPage") Integer perPage, @JsonProperty("total") Integer total) {
+        this.currentPage = currentPage;
+        this.pages = pages;
+        this.perPage = perPage;
+        this.total = total;
+  }
 }

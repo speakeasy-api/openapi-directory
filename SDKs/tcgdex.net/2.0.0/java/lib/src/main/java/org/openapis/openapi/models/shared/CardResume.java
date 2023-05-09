@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CardResume {
     @JsonProperty("id")
     public String id;
+
     public CardResume withId(String id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class CardResume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public CardResume withImage(String image) {
         this.image = image;
         return this;
@@ -26,6 +28,7 @@ public class CardResume {
     
     @JsonProperty("localId")
     public String localId;
+
     public CardResume withLocalId(String localId) {
         this.localId = localId;
         return this;
@@ -33,9 +36,15 @@ public class CardResume {
     
     @JsonProperty("name")
     public String name;
+
     public CardResume withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CardResume(@JsonProperty("id") String id, @JsonProperty("localId") String localId, @JsonProperty("name") String name) {
+        this.id = id;
+        this.localId = localId;
+        this.name = name;
+  }
 }

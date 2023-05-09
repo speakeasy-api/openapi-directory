@@ -12,6 +12,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first")
     public String first;
+
     public Name withFirst(String first) {
         this.first = first;
         return this;
@@ -20,6 +21,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last")
     public String last;
+
     public Name withLast(String last) {
         this.last = last;
         return this;
@@ -28,9 +30,11 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middle")
     public String middle;
+
     public Name withMiddle(String middle) {
         this.middle = middle;
         return this;
     }
     
+    public Name(){}
 }

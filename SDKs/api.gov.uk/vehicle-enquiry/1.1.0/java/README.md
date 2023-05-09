@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetVehicleDetailsByRegistrationNumberRequest;
 import org.openapis.openapi.models.operations.GetVehicleDetailsByRegistrationNumberResponse;
 import org.openapis.openapi.models.shared.VehicleRequest;
@@ -27,22 +26,22 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetVehicleDetailsByRegistrationNumberRequest req = new GetVehicleDetailsByRegistrationNumberRequest() {{
-                vehicleRequest = new VehicleRequest() {{
-                    registrationNumber = "corrupti";
-                }};
-                xCorrelationId = "provident";
-                xApiKey = "distinctio";
-            }}            
+            GetVehicleDetailsByRegistrationNumberRequest req = new GetVehicleDetailsByRegistrationNumberRequest(                new VehicleRequest() {{
+                                registrationNumber = "corrupti";
+                            }};, "provident") {{
+                xCorrelationId = "distinctio";
+            }};            
 
             GetVehicleDetailsByRegistrationNumberResponse res = sdk.vehicle.getVehicleDetailsByRegistrationNumber(req);
 
-            if (res.vehicle.isPresent()) {
+            if (res.vehicle != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -50,9 +49,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### vehicle
+### [vehicle](docs/vehicle/README.md)
 
-* `getVehicleDetailsByRegistrationNumber` - Get vehicle details by registration number
+* [getVehicleDetailsByRegistrationNumber](docs/vehicle/README.md#getvehicledetailsbyregistrationnumber) - Get vehicle details by registration number
 <!-- End SDK Available Operations -->
 
 ### Maturity

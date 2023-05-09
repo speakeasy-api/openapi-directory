@@ -51,14 +51,12 @@ public class VirtualBillingMeterActive {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VirtualBillingMeterActiveGetResponse res = new org.openapis.openapi.models.operations.VirtualBillingMeterActiveGetResponse() {{
+        org.openapis.openapi.models.operations.VirtualBillingMeterActiveGetResponse res = new org.openapis.openapi.models.operations.VirtualBillingMeterActiveGetResponse(contentType, httpRes.statusCode()) {{
             devices = null;
             devices = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,14 +109,12 @@ public class VirtualBillingMeterActive {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VirtualBillingMeterActivePostFormResponse res = new org.openapis.openapi.models.operations.VirtualBillingMeterActivePostFormResponse() {{
+        org.openapis.openapi.models.operations.VirtualBillingMeterActivePostFormResponse res = new org.openapis.openapi.models.operations.VirtualBillingMeterActivePostFormResponse(contentType, httpRes.statusCode()) {{
             device = null;
             device = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -173,14 +169,12 @@ public class VirtualBillingMeterActive {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VirtualBillingMeterActivePostJsonResponse res = new org.openapis.openapi.models.operations.VirtualBillingMeterActivePostJsonResponse() {{
+        org.openapis.openapi.models.operations.VirtualBillingMeterActivePostJsonResponse res = new org.openapis.openapi.models.operations.VirtualBillingMeterActivePostJsonResponse(contentType, httpRes.statusCode()) {{
             device = null;
             device = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -235,14 +229,12 @@ public class VirtualBillingMeterActive {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VirtualBillingMeterActivePostRawResponse res = new org.openapis.openapi.models.operations.VirtualBillingMeterActivePostRawResponse() {{
+        org.openapis.openapi.models.operations.VirtualBillingMeterActivePostRawResponse res = new org.openapis.openapi.models.operations.VirtualBillingMeterActivePostRawResponse(contentType, httpRes.statusCode()) {{
             device = null;
             device = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

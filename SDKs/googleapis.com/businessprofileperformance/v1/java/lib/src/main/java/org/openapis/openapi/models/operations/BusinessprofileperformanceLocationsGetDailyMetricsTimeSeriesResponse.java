@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesResponse {
     
     public String contentType;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRespons
      */
     
     public org.openapis.openapi.models.shared.GetDailyMetricsTimeSeriesResponse getDailyMetricsTimeSeriesResponse;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesResponse withGetDailyMetricsTimeSeriesResponse(org.openapis.openapi.models.shared.GetDailyMetricsTimeSeriesResponse getDailyMetricsTimeSeriesResponse) {
         this.getDailyMetricsTimeSeriesResponse = getDailyMetricsTimeSeriesResponse;
         return this;
@@ -26,6 +29,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRespons
     
     
     public Integer statusCode;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

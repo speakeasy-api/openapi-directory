@@ -15,6 +15,7 @@ public class TranslateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String from;
+
     public TranslateRequest withFrom(String from) {
         this.from = from;
         return this;
@@ -26,6 +27,7 @@ public class TranslateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String[] text;
+
     public TranslateRequest withText(String[] text) {
         this.text = text;
         return this;
@@ -37,6 +39,7 @@ public class TranslateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public String to;
+
     public TranslateRequest withTo(String to) {
         this.to = to;
         return this;
@@ -48,9 +51,11 @@ public class TranslateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translationContext")
     public String translationContext;
+
     public TranslateRequest withTranslationContext(String translationContext) {
         this.translationContext = translationContext;
         return this;
     }
     
+    public TranslateRequest(){}
 }

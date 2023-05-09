@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class MonitoringProjectsTimeSeriesListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public MonitoringProjectsTimeSeriesListSecurityOption1 option1;
+
     public MonitoringProjectsTimeSeriesListSecurity withOption1(MonitoringProjectsTimeSeriesListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class MonitoringProjectsTimeSeriesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public MonitoringProjectsTimeSeriesListSecurityOption2 option2;
+
     public MonitoringProjectsTimeSeriesListSecurity withOption2(MonitoringProjectsTimeSeriesListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class MonitoringProjectsTimeSeriesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public MonitoringProjectsTimeSeriesListSecurityOption3 option3;
+
     public MonitoringProjectsTimeSeriesListSecurity withOption3(MonitoringProjectsTimeSeriesListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public MonitoringProjectsTimeSeriesListSecurity(){}
 }

@@ -20,6 +20,7 @@ public class ConfigurationAggregator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountAggregationSources")
     public AccountAggregationSource[] accountAggregationSources;
+
     public ConfigurationAggregator withAccountAggregationSources(AccountAggregationSource[] accountAggregationSources) {
         this.accountAggregationSources = accountAggregationSources;
         return this;
@@ -28,6 +29,7 @@ public class ConfigurationAggregator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationAggregatorArn")
     public String configurationAggregatorArn;
+
     public ConfigurationAggregator withConfigurationAggregatorArn(String configurationAggregatorArn) {
         this.configurationAggregatorArn = configurationAggregatorArn;
         return this;
@@ -36,6 +38,7 @@ public class ConfigurationAggregator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationAggregatorName")
     public String configurationAggregatorName;
+
     public ConfigurationAggregator withConfigurationAggregatorName(String configurationAggregatorName) {
         this.configurationAggregatorName = configurationAggregatorName;
         return this;
@@ -44,6 +47,7 @@ public class ConfigurationAggregator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public String createdBy;
+
     public ConfigurationAggregator withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -54,6 +58,7 @@ public class ConfigurationAggregator {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ConfigurationAggregator withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -64,6 +69,7 @@ public class ConfigurationAggregator {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public ConfigurationAggregator withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -72,9 +78,11 @@ public class ConfigurationAggregator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationAggregationSource")
     public OrganizationAggregationSource organizationAggregationSource;
+
     public ConfigurationAggregator withOrganizationAggregationSource(OrganizationAggregationSource organizationAggregationSource) {
         this.organizationAggregationSource = organizationAggregationSource;
         return this;
     }
     
+    public ConfigurationAggregator(){}
 }

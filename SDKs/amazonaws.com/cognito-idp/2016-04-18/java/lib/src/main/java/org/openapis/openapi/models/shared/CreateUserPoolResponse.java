@@ -15,9 +15,11 @@ public class CreateUserPoolResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserPool")
     public UserPoolType userPool;
+
     public CreateUserPoolResponse withUserPool(UserPoolType userPool) {
         this.userPool = userPool;
         return this;
     }
     
+    public CreateUserPoolResponse(){}
 }

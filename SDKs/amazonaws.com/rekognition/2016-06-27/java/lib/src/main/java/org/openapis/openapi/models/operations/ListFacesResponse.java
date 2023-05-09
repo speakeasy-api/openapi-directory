@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFacesResponse {
@@ -12,6 +13,7 @@ public class ListFacesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListFacesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListFacesResponse {
     
     
     public String contentType;
+
     public ListFacesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListFacesResponse {
      */
     
     public Object internalServerError;
+
     public ListFacesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class ListFacesResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListFacesResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListFacesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListFacesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class ListFacesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFacesResponse listFacesResponse;
+
     public ListFacesResponse withListFacesResponse(org.openapis.openapi.models.shared.ListFacesResponse listFacesResponse) {
         this.listFacesResponse = listFacesResponse;
         return this;
@@ -69,6 +76,7 @@ public class ListFacesResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public ListFacesResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListFacesResponse {
     
     
     public Integer statusCode;
+
     public ListFacesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListFacesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFacesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListFacesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListFacesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class ListFacesResponse {
      */
     
     public Object throttlingException;
+
     public ListFacesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListFacesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

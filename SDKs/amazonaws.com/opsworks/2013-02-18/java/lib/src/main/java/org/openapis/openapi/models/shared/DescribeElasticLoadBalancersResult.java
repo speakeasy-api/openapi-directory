@@ -15,9 +15,11 @@ public class DescribeElasticLoadBalancersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElasticLoadBalancers")
     public ElasticLoadBalancer[] elasticLoadBalancers;
+
     public DescribeElasticLoadBalancersResult withElasticLoadBalancers(ElasticLoadBalancer[] elasticLoadBalancers) {
         this.elasticLoadBalancers = elasticLoadBalancers;
         return this;
     }
     
+    public DescribeElasticLoadBalancersResult(){}
 }

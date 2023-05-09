@@ -15,9 +15,11 @@ public class DescribeAddressResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public Address address;
+
     public DescribeAddressResult withAddress(Address address) {
         this.address = address;
         return this;
     }
     
+    public DescribeAddressResult(){}
 }

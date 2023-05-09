@@ -15,6 +15,7 @@ public class CreativeCorrectionsContexts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auctionType")
     public String[] auctionType;
+
     public CreativeCorrectionsContexts withAuctionType(String[] auctionType) {
         this.auctionType = auctionType;
         return this;
@@ -26,6 +27,7 @@ public class CreativeCorrectionsContexts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextType")
     public String contextType;
+
     public CreativeCorrectionsContexts withContextType(String contextType) {
         this.contextType = contextType;
         return this;
@@ -37,6 +39,7 @@ public class CreativeCorrectionsContexts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoCriteriaId")
     public Integer[] geoCriteriaId;
+
     public CreativeCorrectionsContexts withGeoCriteriaId(Integer[] geoCriteriaId) {
         this.geoCriteriaId = geoCriteriaId;
         return this;
@@ -48,9 +51,11 @@ public class CreativeCorrectionsContexts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public String[] platform;
+
     public CreativeCorrectionsContexts withPlatform(String[] platform) {
         this.platform = platform;
         return this;
     }
     
+    public CreativeCorrectionsContexts(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpsertSnippetRequest {
@@ -14,6 +15,7 @@ public class UpsertSnippetRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpsertSnippetRequest upsertSnippetRequest;
+
     public UpsertSnippetRequest withUpsertSnippetRequest(org.openapis.openapi.models.shared.UpsertSnippetRequest upsertSnippetRequest) {
         this.upsertSnippetRequest = upsertSnippetRequest;
         return this;
@@ -24,9 +26,14 @@ public class UpsertSnippetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=site_id")
     public String siteId;
+
     public UpsertSnippetRequest withSiteId(String siteId) {
         this.siteId = siteId;
         return this;
     }
     
+    public UpsertSnippetRequest(@JsonProperty("UpsertSnippetRequest") org.openapis.openapi.models.shared.UpsertSnippetRequest upsertSnippetRequest, @JsonProperty("site_id") String siteId) {
+        this.upsertSnippetRequest = upsertSnippetRequest;
+        this.siteId = siteId;
+  }
 }

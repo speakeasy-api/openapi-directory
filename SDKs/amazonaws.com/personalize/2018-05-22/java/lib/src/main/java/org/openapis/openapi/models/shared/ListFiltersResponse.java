@@ -15,6 +15,7 @@ public class ListFiltersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public FilterSummary[] filters;
+
     public ListFiltersResponse withFilters(FilterSummary[] filters) {
         this.filters = filters;
         return this;
@@ -23,9 +24,11 @@ public class ListFiltersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFiltersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFiltersResponse(){}
 }

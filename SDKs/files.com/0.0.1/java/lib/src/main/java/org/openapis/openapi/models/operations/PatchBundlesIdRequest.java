@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchBundlesIdRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PatchBundlesIdRequestBody requestBody;
+
     public PatchBundlesIdRequest withRequestBody(PatchBundlesIdRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class PatchBundlesIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PatchBundlesIdRequest withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public PatchBundlesIdRequest(@JsonProperty("id") Integer id) {
+        this.id = id;
+  }
 }

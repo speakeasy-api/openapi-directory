@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGroupResponse {
     
     public String contentType;
+
     public CreateGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGroupResponse createGroupResponse;
+
     public CreateGroupResponse withCreateGroupResponse(org.openapis.openapi.models.shared.CreateGroupResponse createGroupResponse) {
         this.createGroupResponse = createGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateGroupResponse {
      */
     
     public Object directoryServiceAuthenticationFailedException;
+
     public CreateGroupResponse withDirectoryServiceAuthenticationFailedException(Object directoryServiceAuthenticationFailedException) {
         this.directoryServiceAuthenticationFailedException = directoryServiceAuthenticationFailedException;
         return this;
@@ -39,6 +43,7 @@ public class CreateGroupResponse {
      */
     
     public Object directoryUnavailableException;
+
     public CreateGroupResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -49,6 +54,7 @@ public class CreateGroupResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateGroupResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateGroupResponse {
      */
     
     public Object nameAvailabilityException;
+
     public CreateGroupResponse withNameAvailabilityException(Object nameAvailabilityException) {
         this.nameAvailabilityException = nameAvailabilityException;
         return this;
@@ -69,6 +76,7 @@ public class CreateGroupResponse {
      */
     
     public Object organizationNotFoundException;
+
     public CreateGroupResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class CreateGroupResponse {
      */
     
     public Object organizationStateException;
+
     public CreateGroupResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -89,6 +98,7 @@ public class CreateGroupResponse {
      */
     
     public Object reservedNameException;
+
     public CreateGroupResponse withReservedNameException(Object reservedNameException) {
         this.reservedNameException = reservedNameException;
         return this;
@@ -96,6 +106,7 @@ public class CreateGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class CreateGroupResponse {
      */
     
     public Object unsupportedOperationException;
+
     public CreateGroupResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public CreateGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

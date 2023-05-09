@@ -15,6 +15,7 @@ public class GetRepositoryTriggersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationId")
     public String configurationId;
+
     public GetRepositoryTriggersOutput withConfigurationId(String configurationId) {
         this.configurationId = configurationId;
         return this;
@@ -23,9 +24,11 @@ public class GetRepositoryTriggersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggers")
     public RepositoryTrigger[] triggers;
+
     public GetRepositoryTriggersOutput withTriggers(RepositoryTrigger[] triggers) {
         this.triggers = triggers;
         return this;
     }
     
+    public GetRepositoryTriggersOutput(){}
 }

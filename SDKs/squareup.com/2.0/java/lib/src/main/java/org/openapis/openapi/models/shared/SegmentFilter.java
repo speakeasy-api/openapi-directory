@@ -17,6 +17,7 @@ public class SegmentFilter {
      */
     @JsonProperty("service_variation_id")
     public String serviceVariationId;
+
     public SegmentFilter withServiceVariationId(String serviceVariationId) {
         this.serviceVariationId = serviceVariationId;
         return this;
@@ -32,9 +33,13 @@ public class SegmentFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_member_id_filter")
     public FilterValue teamMemberIdFilter;
+
     public SegmentFilter withTeamMemberIdFilter(FilterValue teamMemberIdFilter) {
         this.teamMemberIdFilter = teamMemberIdFilter;
         return this;
     }
     
+    public SegmentFilter(@JsonProperty("service_variation_id") String serviceVariationId) {
+        this.serviceVariationId = serviceVariationId;
+  }
 }

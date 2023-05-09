@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class SearchEditorialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public String category;
+
     public SearchEditorialRequest withCategory(String category) {
         this.category = category;
         return this;
@@ -23,6 +25,7 @@ public class SearchEditorialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public SearchEditorialRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -33,6 +36,7 @@ public class SearchEditorialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public SearchEditorialRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -43,6 +47,7 @@ public class SearchEditorialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_end")
     public LocalDate dateEnd;
+
     public SearchEditorialRequest withDateEnd(LocalDate dateEnd) {
         this.dateEnd = dateEnd;
         return this;
@@ -53,6 +58,7 @@ public class SearchEditorialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_start")
     public LocalDate dateStart;
+
     public SearchEditorialRequest withDateStart(LocalDate dateStart) {
         this.dateStart = dateStart;
         return this;
@@ -63,6 +69,7 @@ public class SearchEditorialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public SearchEditorialRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -73,6 +80,7 @@ public class SearchEditorialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public SearchEditorialRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -83,6 +91,7 @@ public class SearchEditorialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public SearchEditorialSortEnum sort;
+
     public SearchEditorialRequest withSort(SearchEditorialSortEnum sort) {
         this.sort = sort;
         return this;
@@ -93,9 +102,13 @@ public class SearchEditorialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supplier_code")
     public String[] supplierCode;
+
     public SearchEditorialRequest withSupplierCode(String[] supplierCode) {
         this.supplierCode = supplierCode;
         return this;
     }
     
+    public SearchEditorialRequest(@JsonProperty("country") String country) {
+        this.country = country;
+  }
 }

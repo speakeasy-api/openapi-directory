@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateMapRunInput {
     @JsonProperty("mapRunArn")
     public String mapRunArn;
+
     public UpdateMapRunInput withMapRunArn(String mapRunArn) {
         this.mapRunArn = mapRunArn;
         return this;
@@ -19,6 +20,7 @@ public class UpdateMapRunInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxConcurrency")
     public Long maxConcurrency;
+
     public UpdateMapRunInput withMaxConcurrency(Long maxConcurrency) {
         this.maxConcurrency = maxConcurrency;
         return this;
@@ -27,6 +29,7 @@ public class UpdateMapRunInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toleratedFailureCount")
     public Long toleratedFailureCount;
+
     public UpdateMapRunInput withToleratedFailureCount(Long toleratedFailureCount) {
         this.toleratedFailureCount = toleratedFailureCount;
         return this;
@@ -35,9 +38,13 @@ public class UpdateMapRunInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toleratedFailurePercentage")
     public Float toleratedFailurePercentage;
+
     public UpdateMapRunInput withToleratedFailurePercentage(Float toleratedFailurePercentage) {
         this.toleratedFailurePercentage = toleratedFailurePercentage;
         return this;
     }
     
+    public UpdateMapRunInput(@JsonProperty("mapRunArn") String mapRunArn) {
+        this.mapRunArn = mapRunArn;
+  }
 }

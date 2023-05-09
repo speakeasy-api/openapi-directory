@@ -18,6 +18,7 @@ public class InlinePayloadInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public InlinePayloadInfoFormatEnum format;
+
     public InlinePayloadInfo withFormat(InlinePayloadInfoFormatEnum format) {
         this.format = format;
         return this;
@@ -29,9 +30,11 @@ public class InlinePayloadInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public PayloadFile[] payload;
+
     public InlinePayloadInfo withPayload(PayloadFile[] payload) {
         this.payload = payload;
         return this;
     }
     
+    public InlinePayloadInfo(){}
 }

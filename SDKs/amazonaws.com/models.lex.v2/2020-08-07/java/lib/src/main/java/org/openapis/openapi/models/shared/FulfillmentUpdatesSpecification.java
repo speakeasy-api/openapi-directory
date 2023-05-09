@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FulfillmentUpdatesSpecification {
     @JsonProperty("active")
     public Boolean active;
+
     public FulfillmentUpdatesSpecification withActive(Boolean active) {
         this.active = active;
         return this;
@@ -22,6 +23,7 @@ public class FulfillmentUpdatesSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startResponse")
     public FulfillmentStartResponseSpecification startResponse;
+
     public FulfillmentUpdatesSpecification withStartResponse(FulfillmentStartResponseSpecification startResponse) {
         this.startResponse = startResponse;
         return this;
@@ -30,6 +32,7 @@ public class FulfillmentUpdatesSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutInSeconds")
     public Long timeoutInSeconds;
+
     public FulfillmentUpdatesSpecification withTimeoutInSeconds(Long timeoutInSeconds) {
         this.timeoutInSeconds = timeoutInSeconds;
         return this;
@@ -38,9 +41,13 @@ public class FulfillmentUpdatesSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateResponse")
     public FulfillmentUpdateResponseSpecification updateResponse;
+
     public FulfillmentUpdatesSpecification withUpdateResponse(FulfillmentUpdateResponseSpecification updateResponse) {
         this.updateResponse = updateResponse;
         return this;
     }
     
+    public FulfillmentUpdatesSpecification(@JsonProperty("active") Boolean active) {
+        this.active = active;
+  }
 }

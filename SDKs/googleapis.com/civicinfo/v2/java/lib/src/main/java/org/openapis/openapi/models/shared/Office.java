@@ -18,6 +18,7 @@ public class Office {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("divisionId")
     public String divisionId;
+
     public Office withDivisionId(String divisionId) {
         this.divisionId = divisionId;
         return this;
@@ -29,6 +30,7 @@ public class Office {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("levels")
     public OfficeLevelsEnum[] levels;
+
     public Office withLevels(OfficeLevelsEnum[] levels) {
         this.levels = levels;
         return this;
@@ -40,6 +42,7 @@ public class Office {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Office withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Office {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("officialIndices")
     public Long[] officialIndices;
+
     public Office withOfficialIndices(Long[] officialIndices) {
         this.officialIndices = officialIndices;
         return this;
@@ -62,6 +66,7 @@ public class Office {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public OfficeRolesEnum[] roles;
+
     public Office withRoles(OfficeRolesEnum[] roles) {
         this.roles = roles;
         return this;
@@ -73,9 +78,11 @@ public class Office {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public Source[] sources;
+
     public Office withSources(Source[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public Office(){}
 }

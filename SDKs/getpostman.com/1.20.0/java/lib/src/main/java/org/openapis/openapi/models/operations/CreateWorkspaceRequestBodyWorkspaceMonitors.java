@@ -12,9 +12,11 @@ public class CreateWorkspaceRequestBodyWorkspaceMonitors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateWorkspaceRequestBodyWorkspaceMonitors withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CreateWorkspaceRequestBodyWorkspaceMonitors(){}
 }

@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetcurrencyrateRequest;
 import org.openapis.openapi.models.operations.GetcurrencyrateResponse;
 
@@ -13,18 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetcurrencyrateRequest req = new GetcurrencyrateRequest() {{
-                license = "corrupti";
-                symbol = "provident";
-            }}            
+            GetcurrencyrateRequest req = new GetcurrencyrateRequest("corrupti", "provident");            
 
             GetcurrencyrateResponse res = sdk.currencyRates.getcurrencyrate(req);
 
-            if (res.getcurrencyrate200ApplicationJSONObject.isPresent()) {
+            if (res.getcurrencyrate200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

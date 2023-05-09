@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedInstancesModificationsRequestFilters {
     
     public String name;
+
     public DescribeReservedInstancesModificationsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeReservedInstancesModificationsRequestFilters {
     
     
     public String[] values;
+
     public DescribeReservedInstancesModificationsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeReservedInstancesModificationsRequestFilters(){}
 }

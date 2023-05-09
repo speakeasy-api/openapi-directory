@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSiteRackPhysicalPropertiesResponse {
@@ -12,6 +13,7 @@ public class UpdateSiteRackPhysicalPropertiesResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateSiteRackPhysicalPropertiesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateSiteRackPhysicalPropertiesResponse {
      */
     
     public Object conflictException;
+
     public UpdateSiteRackPhysicalPropertiesResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSiteRackPhysicalPropertiesResponse {
     
     
     public String contentType;
+
     public UpdateSiteRackPhysicalPropertiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSiteRackPhysicalPropertiesResponse {
      */
     
     public Object internalServerException;
+
     public UpdateSiteRackPhysicalPropertiesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSiteRackPhysicalPropertiesResponse {
      */
     
     public Object notFoundException;
+
     public UpdateSiteRackPhysicalPropertiesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateSiteRackPhysicalPropertiesResponse {
     
     
     public Integer statusCode;
+
     public UpdateSiteRackPhysicalPropertiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateSiteRackPhysicalPropertiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSiteRackPhysicalPropertiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSiteRackPhysicalPropertiesResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSiteRackPhysicalPropertiesOutput updateSiteRackPhysicalPropertiesOutput;
+
     public UpdateSiteRackPhysicalPropertiesResponse withUpdateSiteRackPhysicalPropertiesOutput(org.openapis.openapi.models.shared.UpdateSiteRackPhysicalPropertiesOutput updateSiteRackPhysicalPropertiesOutput) {
         this.updateSiteRackPhysicalPropertiesOutput = updateSiteRackPhysicalPropertiesOutput;
         return this;
@@ -83,9 +92,14 @@ public class UpdateSiteRackPhysicalPropertiesResponse {
      */
     
     public Object validationException;
+
     public UpdateSiteRackPhysicalPropertiesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateSiteRackPhysicalPropertiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

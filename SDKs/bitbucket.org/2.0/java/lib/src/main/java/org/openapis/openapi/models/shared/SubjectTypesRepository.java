@@ -15,9 +15,11 @@ public class SubjectTypesRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public SubjectTypesRepositoryLink events;
+
     public SubjectTypesRepository withEvents(SubjectTypesRepositoryLink events) {
         this.events = events;
         return this;
     }
     
+    public SubjectTypesRepository(){}
 }

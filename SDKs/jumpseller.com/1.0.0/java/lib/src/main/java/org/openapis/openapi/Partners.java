@@ -57,12 +57,10 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPartnersStoresJsonResponse res = new org.openapis.openapi.models.operations.GetPartnersStoresJsonResponse() {{
+        org.openapis.openapi.models.operations.GetPartnersStoresJsonResponse res = new org.openapis.openapi.models.operations.GetPartnersStoresJsonResponse(contentType, httpRes.statusCode()) {{
             types = null;
             partnerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,12 +107,10 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoreCheckStatusJsonResponse res = new org.openapis.openapi.models.operations.GetStoreCheckStatusJsonResponse() {{
+        org.openapis.openapi.models.operations.GetStoreCheckStatusJsonResponse res = new org.openapis.openapi.models.operations.GetStoreCheckStatusJsonResponse(contentType, httpRes.statusCode()) {{
             getStoreCheckStatusJSON200ApplicationJSONOneOf = null;
             partnerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -166,12 +162,10 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostStoreCreateJsonResponse res = new org.openapis.openapi.models.operations.PostStoreCreateJsonResponse() {{
+        org.openapis.openapi.models.operations.PostStoreCreateJsonResponse res = new org.openapis.openapi.models.operations.PostStoreCreateJsonResponse(contentType, httpRes.statusCode()) {{
             partnerStoreCode = null;
             partnerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

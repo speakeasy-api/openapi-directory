@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCustomRoutingListenersResponse {
@@ -12,6 +13,7 @@ public class ListCustomRoutingListenersResponse {
      */
     
     public Object acceleratorNotFoundException;
+
     public ListCustomRoutingListenersResponse withAcceleratorNotFoundException(Object acceleratorNotFoundException) {
         this.acceleratorNotFoundException = acceleratorNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class ListCustomRoutingListenersResponse {
     
     
     public String contentType;
+
     public ListCustomRoutingListenersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCustomRoutingListenersResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListCustomRoutingListenersResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class ListCustomRoutingListenersResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListCustomRoutingListenersResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class ListCustomRoutingListenersResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListCustomRoutingListenersResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListCustomRoutingListenersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCustomRoutingListenersResponse listCustomRoutingListenersResponse;
+
     public ListCustomRoutingListenersResponse withListCustomRoutingListenersResponse(org.openapis.openapi.models.shared.ListCustomRoutingListenersResponse listCustomRoutingListenersResponse) {
         this.listCustomRoutingListenersResponse = listCustomRoutingListenersResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListCustomRoutingListenersResponse {
     
     
     public Integer statusCode;
+
     public ListCustomRoutingListenersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListCustomRoutingListenersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCustomRoutingListenersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCustomRoutingListenersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

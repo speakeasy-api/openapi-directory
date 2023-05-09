@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurityOption1 option1;
+
     public BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurity withOption1(BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurit
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurityOption2 option2;
+
     public BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurity withOption2(BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurit
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurityOption3 option3;
+
     public BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurity withOption3(BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurit
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurityOption4 option4;
+
     public BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurity withOption4(BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,9 +41,11 @@ public class BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurit
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurityOption5 option5;
+
     public BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurity withOption5(BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurityOption5 option5) {
         this.option5 = option5;
         return this;
     }
     
+    public BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurity(){}
 }

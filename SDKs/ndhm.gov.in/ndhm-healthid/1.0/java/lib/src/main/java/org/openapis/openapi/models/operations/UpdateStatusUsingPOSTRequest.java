@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateStatusUsingPOSTRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public UpdateStatusUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class UpdateStatusUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HidStatusRequestPayload hidStatusRequestPayload;
+
     public UpdateStatusUsingPOSTRequest withHidStatusRequestPayload(org.openapis.openapi.models.shared.HidStatusRequestPayload hidStatusRequestPayload) {
         this.hidStatusRequestPayload = hidStatusRequestPayload;
         return this;
     }
     
+    public UpdateStatusUsingPOSTRequest(@JsonProperty("HidStatusRequestPayload") org.openapis.openapi.models.shared.HidStatusRequestPayload hidStatusRequestPayload) {
+        this.hidStatusRequestPayload = hidStatusRequestPayload;
+  }
 }

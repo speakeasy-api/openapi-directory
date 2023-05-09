@@ -14,6 +14,7 @@ public class SendMessageRequestBody2VCard {
      */
     @JsonProperty("channel")
     public SendMessageRequestBody2VCardChannelEnum channel;
+
     public SendMessageRequestBody2VCard withChannel(SendMessageRequestBody2VCardChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -25,6 +26,7 @@ public class SendMessageRequestBody2VCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public SendMessageRequestBody2VCard withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -36,6 +38,7 @@ public class SendMessageRequestBody2VCard {
      */
     @JsonProperty("from")
     public String from;
+
     public SendMessageRequestBody2VCard withFrom(String from) {
         this.from = from;
         return this;
@@ -46,6 +49,7 @@ public class SendMessageRequestBody2VCard {
      */
     @JsonProperty("message_type")
     public SendMessageRequestBody2VCardMessageTypeEnum messageType;
+
     public SendMessageRequestBody2VCard withMessageType(SendMessageRequestBody2VCardMessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -57,6 +61,7 @@ public class SendMessageRequestBody2VCard {
      */
     @JsonProperty("to")
     public String to;
+
     public SendMessageRequestBody2VCard withTo(String to) {
         this.to = to;
         return this;
@@ -64,9 +69,17 @@ public class SendMessageRequestBody2VCard {
     
     @JsonProperty("vcard")
     public SendMessageRequestBody2VCardVcard vcard;
+
     public SendMessageRequestBody2VCard withVcard(SendMessageRequestBody2VCardVcard vcard) {
         this.vcard = vcard;
         return this;
     }
     
+    public SendMessageRequestBody2VCard(@JsonProperty("channel") SendMessageRequestBody2VCardChannelEnum channel, @JsonProperty("from") String from, @JsonProperty("message_type") SendMessageRequestBody2VCardMessageTypeEnum messageType, @JsonProperty("to") String to, @JsonProperty("vcard") SendMessageRequestBody2VCardVcard vcard) {
+        this.channel = channel;
+        this.from = from;
+        this.messageType = messageType;
+        this.to = to;
+        this.vcard = vcard;
+  }
 }

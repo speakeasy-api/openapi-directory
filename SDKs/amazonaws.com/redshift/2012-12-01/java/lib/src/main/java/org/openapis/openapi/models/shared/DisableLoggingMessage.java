@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DisableLoggingMessage - &lt;p/&gt;
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DisableLoggingMessage {
     
     public String clusterIdentifier;
+
     public DisableLoggingMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
     }
     
+    public DisableLoggingMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+  }
 }

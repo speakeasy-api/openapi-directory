@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSource {
     
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatement packetHeaderStatement;
+
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSource withPacketHeaderStatement(GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatement packetHeaderStatement) {
         this.packetHeaderStatement = packetHeaderStatement;
         return this;
@@ -19,9 +20,11 @@ public class GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScop
     
     
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSourceResourceStatement resourceStatement;
+
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSource withResourceStatement(GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSourceResourceStatement resourceStatement) {
         this.resourceStatement = resourceStatement;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSource(){}
 }

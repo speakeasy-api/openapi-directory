@@ -15,6 +15,7 @@ public class KYCShareholderCheckResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checks")
     public KYCCheckStatusData[] checks;
+
     public KYCShareholderCheckResult withChecks(KYCCheckStatusData[] checks) {
         this.checks = checks;
         return this;
@@ -26,9 +27,11 @@ public class KYCShareholderCheckResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareholderCode")
     public String shareholderCode;
+
     public KYCShareholderCheckResult withShareholderCode(String shareholderCode) {
         this.shareholderCode = shareholderCode;
         return this;
     }
     
+    public KYCShareholderCheckResult(){}
 }

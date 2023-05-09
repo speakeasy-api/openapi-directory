@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteIndividualsPartyIdLicensesProductIdResponse {
     
     public String contentType;
+
     public DeleteIndividualsPartyIdLicensesProductIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteIndividualsPartyIdLicensesProductIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteIndividualsPartyIdLicensesProductIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteIndividualsPartyIdLicensesProductIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteIndividualsPartyIdLicensesProductIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeleteIndividualsPartyIdLicensesProductIdResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public DeleteIndividualsPartyIdLicensesProductIdResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -43,9 +48,14 @@ public class DeleteIndividualsPartyIdLicensesProductIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public DeleteIndividualsPartyIdLicensesProductIdResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public DeleteIndividualsPartyIdLicensesProductIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

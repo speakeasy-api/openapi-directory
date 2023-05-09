@@ -15,9 +15,11 @@ public class RegionUrlMapsValidateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public UrlMap resource;
+
     public RegionUrlMapsValidateRequest withResource(UrlMap resource) {
         this.resource = resource;
         return this;
     }
     
+    public RegionUrlMapsValidateRequest(){}
 }

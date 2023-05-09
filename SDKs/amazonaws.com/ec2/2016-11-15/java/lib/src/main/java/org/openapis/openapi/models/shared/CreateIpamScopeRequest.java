@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateIpamScopeRequest {
     
     public String clientToken;
+
     public CreateIpamScopeRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateIpamScopeRequest {
     
     
     public String description;
+
     public CreateIpamScopeRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CreateIpamScopeRequest {
     
     
     public Boolean dryRun;
+
     public CreateIpamScopeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateIpamScopeRequest {
     
     
     public String ipamId;
+
     public CreateIpamScopeRequest withIpamId(String ipamId) {
         this.ipamId = ipamId;
         return this;
@@ -37,9 +41,13 @@ public class CreateIpamScopeRequest {
     
     
     public CreateIpamScopeRequestTagSpecifications[] tagSpecifications;
+
     public CreateIpamScopeRequest withTagSpecifications(CreateIpamScopeRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateIpamScopeRequest(@JsonProperty("IpamId") String ipamId) {
+        this.ipamId = ipamId;
+  }
 }

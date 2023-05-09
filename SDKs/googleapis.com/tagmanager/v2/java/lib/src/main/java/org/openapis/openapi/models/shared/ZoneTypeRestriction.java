@@ -18,6 +18,7 @@ public class ZoneTypeRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable")
     public Boolean enable;
+
     public ZoneTypeRestriction withEnable(Boolean enable) {
         this.enable = enable;
         return this;
@@ -29,9 +30,11 @@ public class ZoneTypeRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("whitelistedTypeId")
     public String[] whitelistedTypeId;
+
     public ZoneTypeRestriction withWhitelistedTypeId(String[] whitelistedTypeId) {
         this.whitelistedTypeId = whitelistedTypeId;
         return this;
     }
     
+    public ZoneTypeRestriction(){}
 }

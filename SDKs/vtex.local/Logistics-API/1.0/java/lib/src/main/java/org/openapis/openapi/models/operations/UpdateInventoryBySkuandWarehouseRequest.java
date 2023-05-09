@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInventoryBySkuandWarehouseRequest {
@@ -12,6 +13,7 @@ public class UpdateInventoryBySkuandWarehouseRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpdateInventoryBySkuandWarehouseRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpdateInventoryBySkuandWarehouseRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpdateInventoryBySkuandWarehouseRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateInventoryBySkuandWarehouseRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseRequest requestBody;
+
     public UpdateInventoryBySkuandWarehouseRequest withRequestBody(UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseRequest requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -36,6 +40,7 @@ public class UpdateInventoryBySkuandWarehouseRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
     public String skuId;
+
     public UpdateInventoryBySkuandWarehouseRequest withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
@@ -43,9 +48,17 @@ public class UpdateInventoryBySkuandWarehouseRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=warehouseId")
     public String warehouseId;
+
     public UpdateInventoryBySkuandWarehouseRequest withWarehouseId(String warehouseId) {
         this.warehouseId = warehouseId;
         return this;
     }
     
+    public UpdateInventoryBySkuandWarehouseRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseRequest requestBody, @JsonProperty("skuId") String skuId, @JsonProperty("warehouseId") String warehouseId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.skuId = skuId;
+        this.warehouseId = warehouseId;
+  }
 }

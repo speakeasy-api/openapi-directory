@@ -18,6 +18,7 @@ public class ApplicationPlayerId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationId")
     public String applicationId;
+
     public ApplicationPlayerId withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -29,9 +30,11 @@ public class ApplicationPlayerId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playerId")
     public String playerId;
+
     public ApplicationPlayerId withPlayerId(String playerId) {
         this.playerId = playerId;
         return this;
     }
     
+    public ApplicationPlayerId(){}
 }

@@ -18,6 +18,7 @@ public class ConfigSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public ConfigFile[] files;
+
     public ConfigSource withFiles(ConfigFile[] files) {
         this.files = files;
         return this;
@@ -29,9 +30,11 @@ public class ConfigSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ConfigSource withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ConfigSource(){}
 }

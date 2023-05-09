@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoryPipelineScheduleResponse {
     
     public String contentType;
+
     public GetRepositoryPipelineScheduleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoryPipelineScheduleResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoryPipelineScheduleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoryPipelineScheduleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoryPipelineScheduleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRepositoryPipelineScheduleResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoryPipelineScheduleResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetRepositoryPipelineScheduleResponse {
      */
     
     public java.util.Map<String, Object> pipelineSchedule;
+
     public GetRepositoryPipelineScheduleResponse withPipelineSchedule(java.util.Map<String, Object> pipelineSchedule) {
         this.pipelineSchedule = pipelineSchedule;
         return this;
     }
     
+    public GetRepositoryPipelineScheduleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class CreateFooterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sectionBreakLocation")
     public Location sectionBreakLocation;
+
     public CreateFooterRequest withSectionBreakLocation(Location sectionBreakLocation) {
         this.sectionBreakLocation = sectionBreakLocation;
         return this;
@@ -29,9 +30,11 @@ public class CreateFooterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CreateFooterRequestTypeEnum type;
+
     public CreateFooterRequest withType(CreateFooterRequestTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateFooterRequest(){}
 }

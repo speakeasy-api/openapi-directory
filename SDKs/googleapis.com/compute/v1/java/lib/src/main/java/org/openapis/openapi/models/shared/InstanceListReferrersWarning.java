@@ -18,6 +18,7 @@ public class InstanceListReferrersWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public InstanceListReferrersWarningCodeEnum code;
+
     public InstanceListReferrersWarning withCode(InstanceListReferrersWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class InstanceListReferrersWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public InstanceListReferrersWarningData[] data;
+
     public InstanceListReferrersWarning withData(InstanceListReferrersWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class InstanceListReferrersWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InstanceListReferrersWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InstanceListReferrersWarning(){}
 }

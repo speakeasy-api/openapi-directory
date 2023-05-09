@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeProfileResponse {
     @JsonProperty("Profile")
     public DescribedProfile profile;
+
     public DescribeProfileResponse withProfile(DescribedProfile profile) {
         this.profile = profile;
         return this;
     }
     
+    public DescribeProfileResponse(@JsonProperty("Profile") DescribedProfile profile) {
+        this.profile = profile;
+  }
 }

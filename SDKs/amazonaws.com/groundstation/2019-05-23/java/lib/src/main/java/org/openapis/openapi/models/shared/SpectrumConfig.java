@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SpectrumConfig {
     @JsonProperty("bandwidth")
     public FrequencyBandwidth bandwidth;
+
     public SpectrumConfig withBandwidth(FrequencyBandwidth bandwidth) {
         this.bandwidth = bandwidth;
         return this;
@@ -21,6 +22,7 @@ public class SpectrumConfig {
     
     @JsonProperty("centerFrequency")
     public Frequency centerFrequency;
+
     public SpectrumConfig withCenterFrequency(Frequency centerFrequency) {
         this.centerFrequency = centerFrequency;
         return this;
@@ -29,9 +31,14 @@ public class SpectrumConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("polarization")
     public PolarizationEnum polarization;
+
     public SpectrumConfig withPolarization(PolarizationEnum polarization) {
         this.polarization = polarization;
         return this;
     }
     
+    public SpectrumConfig(@JsonProperty("bandwidth") FrequencyBandwidth bandwidth, @JsonProperty("centerFrequency") Frequency centerFrequency) {
+        this.bandwidth = bandwidth;
+        this.centerFrequency = centerFrequency;
+  }
 }

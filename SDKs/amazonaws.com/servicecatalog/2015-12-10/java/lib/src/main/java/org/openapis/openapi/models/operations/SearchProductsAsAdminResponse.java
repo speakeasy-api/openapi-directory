@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchProductsAsAdminResponse {
     
     public String contentType;
+
     public SearchProductsAsAdminResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SearchProductsAsAdminResponse {
      */
     
     public Object invalidParametersException;
+
     public SearchProductsAsAdminResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class SearchProductsAsAdminResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SearchProductsAsAdminResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class SearchProductsAsAdminResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchProductsAsAdminOutput searchProductsAsAdminOutput;
+
     public SearchProductsAsAdminResponse withSearchProductsAsAdminOutput(org.openapis.openapi.models.shared.SearchProductsAsAdminOutput searchProductsAsAdminOutput) {
         this.searchProductsAsAdminOutput = searchProductsAsAdminOutput;
         return this;
@@ -46,6 +51,7 @@ public class SearchProductsAsAdminResponse {
     
     
     public Integer statusCode;
+
     public SearchProductsAsAdminResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class SearchProductsAsAdminResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchProductsAsAdminResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SearchProductsAsAdminResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

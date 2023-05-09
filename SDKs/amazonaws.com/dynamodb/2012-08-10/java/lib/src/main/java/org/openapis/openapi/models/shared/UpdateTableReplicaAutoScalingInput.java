@@ -12,6 +12,7 @@ public class UpdateTableReplicaAutoScalingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalSecondaryIndexUpdates")
     public GlobalSecondaryIndexAutoScalingUpdate[] globalSecondaryIndexUpdates;
+
     public UpdateTableReplicaAutoScalingInput withGlobalSecondaryIndexUpdates(GlobalSecondaryIndexAutoScalingUpdate[] globalSecondaryIndexUpdates) {
         this.globalSecondaryIndexUpdates = globalSecondaryIndexUpdates;
         return this;
@@ -23,6 +24,7 @@ public class UpdateTableReplicaAutoScalingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedWriteCapacityAutoScalingUpdate")
     public AutoScalingSettingsUpdate provisionedWriteCapacityAutoScalingUpdate;
+
     public UpdateTableReplicaAutoScalingInput withProvisionedWriteCapacityAutoScalingUpdate(AutoScalingSettingsUpdate provisionedWriteCapacityAutoScalingUpdate) {
         this.provisionedWriteCapacityAutoScalingUpdate = provisionedWriteCapacityAutoScalingUpdate;
         return this;
@@ -31,6 +33,7 @@ public class UpdateTableReplicaAutoScalingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaUpdates")
     public ReplicaAutoScalingUpdate[] replicaUpdates;
+
     public UpdateTableReplicaAutoScalingInput withReplicaUpdates(ReplicaAutoScalingUpdate[] replicaUpdates) {
         this.replicaUpdates = replicaUpdates;
         return this;
@@ -38,9 +41,13 @@ public class UpdateTableReplicaAutoScalingInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public UpdateTableReplicaAutoScalingInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public UpdateTableReplicaAutoScalingInput(@JsonProperty("TableName") String tableName) {
+        this.tableName = tableName;
+  }
 }

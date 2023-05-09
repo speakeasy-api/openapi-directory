@@ -206,4 +206,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdatePricingRuleOutput.jav
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateTieringInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateFreeTierConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

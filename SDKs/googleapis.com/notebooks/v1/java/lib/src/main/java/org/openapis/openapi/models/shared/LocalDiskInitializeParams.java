@@ -18,6 +18,7 @@ public class LocalDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LocalDiskInitializeParams withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class LocalDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskName")
     public String diskName;
+
     public LocalDiskInitializeParams withDiskName(String diskName) {
         this.diskName = diskName;
         return this;
@@ -40,6 +42,7 @@ public class LocalDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public String diskSizeGb;
+
     public LocalDiskInitializeParams withDiskSizeGb(String diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -51,6 +54,7 @@ public class LocalDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskType")
     public LocalDiskInitializeParamsDiskTypeEnum diskType;
+
     public LocalDiskInitializeParams withDiskType(LocalDiskInitializeParamsDiskTypeEnum diskType) {
         this.diskType = diskType;
         return this;
@@ -62,9 +66,11 @@ public class LocalDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public LocalDiskInitializeParams withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public LocalDiskInitializeParams(){}
 }

@@ -15,6 +15,7 @@ public class DescribeReleaseLabelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Applications")
     public SimplifiedApplication[] applications;
+
     public DescribeReleaseLabelOutput withApplications(SimplifiedApplication[] applications) {
         this.applications = applications;
         return this;
@@ -23,6 +24,7 @@ public class DescribeReleaseLabelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailableOSReleases")
     public OSRelease[] availableOSReleases;
+
     public DescribeReleaseLabelOutput withAvailableOSReleases(OSRelease[] availableOSReleases) {
         this.availableOSReleases = availableOSReleases;
         return this;
@@ -31,6 +33,7 @@ public class DescribeReleaseLabelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeReleaseLabelOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -39,9 +42,11 @@ public class DescribeReleaseLabelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReleaseLabel")
     public String releaseLabel;
+
     public DescribeReleaseLabelOutput withReleaseLabel(String releaseLabel) {
         this.releaseLabel = releaseLabel;
         return this;
     }
     
+    public DescribeReleaseLabelOutput(){}
 }

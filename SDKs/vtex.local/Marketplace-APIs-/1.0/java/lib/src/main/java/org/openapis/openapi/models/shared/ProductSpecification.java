@@ -15,6 +15,7 @@ public class ProductSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public String fieldName;
+
     public ProductSpecification withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -26,9 +27,11 @@ public class ProductSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldValues")
     public String[] fieldValues;
+
     public ProductSpecification withFieldValues(String[] fieldValues) {
         this.fieldValues = fieldValues;
         return this;
     }
     
+    public ProductSpecification(){}
 }

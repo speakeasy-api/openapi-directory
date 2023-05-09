@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manual")
     public java.util.Map<String, Object> manual;
+
     public GooglePrivacyDlpV2Trigger withManual(java.util.Map<String, Object> manual) {
         this.manual = manual;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public GooglePrivacyDlpV2Schedule schedule;
+
     public GooglePrivacyDlpV2Trigger withSchedule(GooglePrivacyDlpV2Schedule schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public GooglePrivacyDlpV2Trigger(){}
 }

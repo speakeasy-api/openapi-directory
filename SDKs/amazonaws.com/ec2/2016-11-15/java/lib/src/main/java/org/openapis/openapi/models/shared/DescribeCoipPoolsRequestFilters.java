@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCoipPoolsRequestFilters {
     
     public String name;
+
     public DescribeCoipPoolsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeCoipPoolsRequestFilters {
     
     
     public String[] values;
+
     public DescribeCoipPoolsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeCoipPoolsRequestFilters(){}
 }

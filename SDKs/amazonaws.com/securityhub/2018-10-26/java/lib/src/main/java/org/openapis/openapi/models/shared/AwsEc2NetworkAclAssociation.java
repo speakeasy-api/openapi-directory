@@ -15,6 +15,7 @@ public class AwsEc2NetworkAclAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkAclAssociationId")
     public String networkAclAssociationId;
+
     public AwsEc2NetworkAclAssociation withNetworkAclAssociationId(String networkAclAssociationId) {
         this.networkAclAssociationId = networkAclAssociationId;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2NetworkAclAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkAclId")
     public String networkAclId;
+
     public AwsEc2NetworkAclAssociation withNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
@@ -31,9 +33,11 @@ public class AwsEc2NetworkAclAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public AwsEc2NetworkAclAssociation withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public AwsEc2NetworkAclAssociation(){}
 }

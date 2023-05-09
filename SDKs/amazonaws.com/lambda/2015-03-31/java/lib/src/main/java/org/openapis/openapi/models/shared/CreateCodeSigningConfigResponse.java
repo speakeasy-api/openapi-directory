@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCodeSigningConfigResponse {
     @JsonProperty("CodeSigningConfig")
     public CodeSigningConfig codeSigningConfig;
+
     public CreateCodeSigningConfigResponse withCodeSigningConfig(CodeSigningConfig codeSigningConfig) {
         this.codeSigningConfig = codeSigningConfig;
         return this;
     }
     
+    public CreateCodeSigningConfigResponse(@JsonProperty("CodeSigningConfig") CodeSigningConfig codeSigningConfig) {
+        this.codeSigningConfig = codeSigningConfig;
+  }
 }

@@ -18,6 +18,7 @@ public class BackupRetentionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retainedBackups")
     public Integer retainedBackups;
+
     public BackupRetentionSettings withRetainedBackups(Integer retainedBackups) {
         this.retainedBackups = retainedBackups;
         return this;
@@ -29,9 +30,11 @@ public class BackupRetentionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionUnit")
     public BackupRetentionSettingsRetentionUnitEnum retentionUnit;
+
     public BackupRetentionSettings withRetentionUnit(BackupRetentionSettingsRetentionUnitEnum retentionUnit) {
         this.retentionUnit = retentionUnit;
         return this;
     }
     
+    public BackupRetentionSettings(){}
 }

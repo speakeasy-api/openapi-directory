@@ -15,6 +15,7 @@ public class PLLocalAccountIdentification {
      */
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public PLLocalAccountIdentification withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -25,9 +26,14 @@ public class PLLocalAccountIdentification {
      */
     @JsonProperty("type")
     public PLLocalAccountIdentificationTypeEnum type;
+
     public PLLocalAccountIdentification withType(PLLocalAccountIdentificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PLLocalAccountIdentification(@JsonProperty("accountNumber") String accountNumber, @JsonProperty("type") PLLocalAccountIdentificationTypeEnum type) {
+        this.accountNumber = accountNumber;
+        this.type = type;
+  }
 }

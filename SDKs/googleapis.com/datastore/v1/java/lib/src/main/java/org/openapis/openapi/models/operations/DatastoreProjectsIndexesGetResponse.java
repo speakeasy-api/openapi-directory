@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatastoreProjectsIndexesGetResponse {
     
     public String contentType;
+
     public DatastoreProjectsIndexesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatastoreProjectsIndexesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleDatastoreAdminV1Index googleDatastoreAdminV1Index;
+
     public DatastoreProjectsIndexesGetResponse withGoogleDatastoreAdminV1Index(org.openapis.openapi.models.shared.GoogleDatastoreAdminV1Index googleDatastoreAdminV1Index) {
         this.googleDatastoreAdminV1Index = googleDatastoreAdminV1Index;
         return this;
@@ -26,6 +29,7 @@ public class DatastoreProjectsIndexesGetResponse {
     
     
     public Integer statusCode;
+
     public DatastoreProjectsIndexesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatastoreProjectsIndexesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatastoreProjectsIndexesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatastoreProjectsIndexesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

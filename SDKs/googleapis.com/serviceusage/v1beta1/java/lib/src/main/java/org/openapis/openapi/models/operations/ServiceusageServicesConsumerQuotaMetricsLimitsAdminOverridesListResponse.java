@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListResponse {
     
     public String contentType;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListRes
      */
     
     public org.openapis.openapi.models.shared.ListAdminOverridesResponse listAdminOverridesResponse;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListResponse withListAdminOverridesResponse(org.openapis.openapi.models.shared.ListAdminOverridesResponse listAdminOverridesResponse) {
         this.listAdminOverridesResponse = listAdminOverridesResponse;
         return this;
@@ -26,6 +29,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListRes
     
     
     public Integer statusCode;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListRes
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

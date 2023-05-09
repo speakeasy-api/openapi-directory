@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTagsRequest {
     @JsonProperty("configurationIds")
     public String[] configurationIds;
+
     public CreateTagsRequest withConfigurationIds(String[] configurationIds) {
         this.configurationIds = configurationIds;
         return this;
@@ -16,9 +17,14 @@ public class CreateTagsRequest {
     
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateTagsRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateTagsRequest(@JsonProperty("configurationIds") String[] configurationIds, @JsonProperty("tags") Tag[] tags) {
+        this.configurationIds = configurationIds;
+        this.tags = tags;
+  }
 }

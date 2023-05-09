@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAttributesResponse {
@@ -12,6 +13,7 @@ public class ListAttributesResponse {
      */
     
     public Object clusterNotFoundException;
+
     public ListAttributesResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class ListAttributesResponse {
     
     
     public String contentType;
+
     public ListAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAttributesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListAttributesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAttributesResponse listAttributesResponse;
+
     public ListAttributesResponse withListAttributesResponse(org.openapis.openapi.models.shared.ListAttributesResponse listAttributesResponse) {
         this.listAttributesResponse = listAttributesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAttributesResponse {
     
     
     public Integer statusCode;
+
     public ListAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

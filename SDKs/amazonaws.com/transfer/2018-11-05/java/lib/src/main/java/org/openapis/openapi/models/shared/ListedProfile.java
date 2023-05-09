@@ -15,6 +15,7 @@ public class ListedProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ListedProfile withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ListedProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("As2Id")
     public String as2Id;
+
     public ListedProfile withAs2Id(String as2Id) {
         this.as2Id = as2Id;
         return this;
@@ -31,6 +33,7 @@ public class ListedProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProfileId")
     public String profileId;
+
     public ListedProfile withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -39,9 +42,11 @@ public class ListedProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProfileType")
     public ProfileTypeEnum profileType;
+
     public ListedProfile withProfileType(ProfileTypeEnum profileType) {
         this.profileType = profileType;
         return this;
     }
     
+    public ListedProfile(){}
 }

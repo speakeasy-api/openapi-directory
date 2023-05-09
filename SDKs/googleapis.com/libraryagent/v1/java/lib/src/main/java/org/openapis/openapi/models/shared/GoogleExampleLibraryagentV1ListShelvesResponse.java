@@ -18,6 +18,7 @@ public class GoogleExampleLibraryagentV1ListShelvesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleExampleLibraryagentV1ListShelvesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleExampleLibraryagentV1ListShelvesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shelves")
     public GoogleExampleLibraryagentV1Shelf[] shelves;
+
     public GoogleExampleLibraryagentV1ListShelvesResponse withShelves(GoogleExampleLibraryagentV1Shelf[] shelves) {
         this.shelves = shelves;
         return this;
     }
     
+    public GoogleExampleLibraryagentV1ListShelvesResponse(){}
 }

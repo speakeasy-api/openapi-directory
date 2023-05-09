@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,9 +16,13 @@ public class IbanBasicRequestBody {
      */
     @SpeakeasyMetadata("form:name=ibanNumber")
     public String ibanNumber;
+
     public IbanBasicRequestBody withIbanNumber(String ibanNumber) {
         this.ibanNumber = ibanNumber;
         return this;
     }
     
+    public IbanBasicRequestBody(@JsonProperty("ibanNumber") String ibanNumber) {
+        this.ibanNumber = ibanNumber;
+  }
 }

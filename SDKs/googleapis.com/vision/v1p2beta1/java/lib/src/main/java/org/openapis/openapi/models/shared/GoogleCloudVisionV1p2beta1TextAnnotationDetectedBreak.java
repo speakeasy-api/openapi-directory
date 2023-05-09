@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p2beta1TextAnnotationDetectedBreak {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPrefix")
     public Boolean isPrefix;
+
     public GoogleCloudVisionV1p2beta1TextAnnotationDetectedBreak withIsPrefix(Boolean isPrefix) {
         this.isPrefix = isPrefix;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVisionV1p2beta1TextAnnotationDetectedBreak {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudVisionV1p2beta1TextAnnotationDetectedBreakTypeEnum type;
+
     public GoogleCloudVisionV1p2beta1TextAnnotationDetectedBreak withType(GoogleCloudVisionV1p2beta1TextAnnotationDetectedBreakTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1TextAnnotationDetectedBreak(){}
 }

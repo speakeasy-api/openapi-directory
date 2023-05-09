@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddTagsToVaultResponse {
     
     public String contentType;
+
     public AddTagsToVaultResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AddTagsToVaultResponse {
      */
     
     public Object invalidParameterValueException;
+
     public AddTagsToVaultResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class AddTagsToVaultResponse {
      */
     
     public Object limitExceededException;
+
     public AddTagsToVaultResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class AddTagsToVaultResponse {
      */
     
     public Object missingParameterValueException;
+
     public AddTagsToVaultResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -46,6 +51,7 @@ public class AddTagsToVaultResponse {
     
     
     public Integer statusCode;
+
     public AddTagsToVaultResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AddTagsToVaultResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddTagsToVaultResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class AddTagsToVaultResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddTagsToVaultResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class AddTagsToVaultResponse {
      */
     
     public Object serviceUnavailableException;
+
     public AddTagsToVaultResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public AddTagsToVaultResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

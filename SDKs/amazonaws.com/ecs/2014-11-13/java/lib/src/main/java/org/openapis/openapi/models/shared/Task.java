@@ -20,6 +20,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     public Attachment[] attachments;
+
     public Task withAttachments(Attachment[] attachments) {
         this.attachments = attachments;
         return this;
@@ -28,6 +29,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Attribute[] attributes;
+
     public Task withAttributes(Attribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -36,6 +38,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityZone")
     public String availabilityZone;
+
     public Task withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -44,6 +47,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityProviderName")
     public String capacityProviderName;
+
     public Task withCapacityProviderName(String capacityProviderName) {
         this.capacityProviderName = capacityProviderName;
         return this;
@@ -52,6 +56,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterArn")
     public String clusterArn;
+
     public Task withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -60,6 +65,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectivity")
     public ConnectivityEnum connectivity;
+
     public Task withConnectivity(ConnectivityEnum connectivity) {
         this.connectivity = connectivity;
         return this;
@@ -70,6 +76,7 @@ public class Task {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("connectivityAt")
     public OffsetDateTime connectivityAt;
+
     public Task withConnectivityAt(OffsetDateTime connectivityAt) {
         this.connectivityAt = connectivityAt;
         return this;
@@ -78,6 +85,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerInstanceArn")
     public String containerInstanceArn;
+
     public Task withContainerInstanceArn(String containerInstanceArn) {
         this.containerInstanceArn = containerInstanceArn;
         return this;
@@ -86,6 +94,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public Container[] containers;
+
     public Task withContainers(Container[] containers) {
         this.containers = containers;
         return this;
@@ -94,6 +103,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu")
     public String cpu;
+
     public Task withCpu(String cpu) {
         this.cpu = cpu;
         return this;
@@ -104,6 +114,7 @@ public class Task {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Task withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -112,6 +123,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredStatus")
     public String desiredStatus;
+
     public Task withDesiredStatus(String desiredStatus) {
         this.desiredStatus = desiredStatus;
         return this;
@@ -120,6 +132,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableExecuteCommand")
     public Boolean enableExecuteCommand;
+
     public Task withEnableExecuteCommand(Boolean enableExecuteCommand) {
         this.enableExecuteCommand = enableExecuteCommand;
         return this;
@@ -128,6 +141,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ephemeralStorage")
     public EphemeralStorage ephemeralStorage;
+
     public Task withEphemeralStorage(EphemeralStorage ephemeralStorage) {
         this.ephemeralStorage = ephemeralStorage;
         return this;
@@ -138,6 +152,7 @@ public class Task {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("executionStoppedAt")
     public OffsetDateTime executionStoppedAt;
+
     public Task withExecutionStoppedAt(OffsetDateTime executionStoppedAt) {
         this.executionStoppedAt = executionStoppedAt;
         return this;
@@ -146,6 +161,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
+
     public Task withGroup(String group) {
         this.group = group;
         return this;
@@ -154,6 +170,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthStatus")
     public HealthStatusEnum healthStatus;
+
     public Task withHealthStatus(HealthStatusEnum healthStatus) {
         this.healthStatus = healthStatus;
         return this;
@@ -162,6 +179,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inferenceAccelerators")
     public InferenceAccelerator[] inferenceAccelerators;
+
     public Task withInferenceAccelerators(InferenceAccelerator[] inferenceAccelerators) {
         this.inferenceAccelerators = inferenceAccelerators;
         return this;
@@ -170,6 +188,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastStatus")
     public String lastStatus;
+
     public Task withLastStatus(String lastStatus) {
         this.lastStatus = lastStatus;
         return this;
@@ -178,6 +197,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchType")
     public LaunchTypeEnum launchType;
+
     public Task withLaunchType(LaunchTypeEnum launchType) {
         this.launchType = launchType;
         return this;
@@ -186,6 +206,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public String memory;
+
     public Task withMemory(String memory) {
         this.memory = memory;
         return this;
@@ -194,6 +215,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrides")
     public TaskOverride overrides;
+
     public Task withOverrides(TaskOverride overrides) {
         this.overrides = overrides;
         return this;
@@ -202,6 +224,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformFamily")
     public String platformFamily;
+
     public Task withPlatformFamily(String platformFamily) {
         this.platformFamily = platformFamily;
         return this;
@@ -210,6 +233,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformVersion")
     public String platformVersion;
+
     public Task withPlatformVersion(String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
@@ -220,6 +244,7 @@ public class Task {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("pullStartedAt")
     public OffsetDateTime pullStartedAt;
+
     public Task withPullStartedAt(OffsetDateTime pullStartedAt) {
         this.pullStartedAt = pullStartedAt;
         return this;
@@ -230,6 +255,7 @@ public class Task {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("pullStoppedAt")
     public OffsetDateTime pullStoppedAt;
+
     public Task withPullStoppedAt(OffsetDateTime pullStoppedAt) {
         this.pullStoppedAt = pullStoppedAt;
         return this;
@@ -240,6 +266,7 @@ public class Task {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedAt")
     public OffsetDateTime startedAt;
+
     public Task withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -248,6 +275,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startedBy")
     public String startedBy;
+
     public Task withStartedBy(String startedBy) {
         this.startedBy = startedBy;
         return this;
@@ -256,6 +284,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopCode")
     public TaskStopCodeEnum stopCode;
+
     public Task withStopCode(TaskStopCodeEnum stopCode) {
         this.stopCode = stopCode;
         return this;
@@ -266,6 +295,7 @@ public class Task {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stoppedAt")
     public OffsetDateTime stoppedAt;
+
     public Task withStoppedAt(OffsetDateTime stoppedAt) {
         this.stoppedAt = stoppedAt;
         return this;
@@ -274,6 +304,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stoppedReason")
     public String stoppedReason;
+
     public Task withStoppedReason(String stoppedReason) {
         this.stoppedReason = stoppedReason;
         return this;
@@ -284,6 +315,7 @@ public class Task {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stoppingAt")
     public OffsetDateTime stoppingAt;
+
     public Task withStoppingAt(OffsetDateTime stoppingAt) {
         this.stoppingAt = stoppingAt;
         return this;
@@ -292,6 +324,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public Task withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -300,6 +333,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskArn")
     public String taskArn;
+
     public Task withTaskArn(String taskArn) {
         this.taskArn = taskArn;
         return this;
@@ -308,6 +342,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskDefinitionArn")
     public String taskDefinitionArn;
+
     public Task withTaskDefinitionArn(String taskDefinitionArn) {
         this.taskDefinitionArn = taskDefinitionArn;
         return this;
@@ -316,9 +351,11 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public Task withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public Task(){}
 }

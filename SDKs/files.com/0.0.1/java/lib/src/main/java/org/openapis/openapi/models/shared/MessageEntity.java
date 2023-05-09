@@ -18,6 +18,7 @@ public class MessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public MessageEntity withBody(String body) {
         this.body = body;
         return this;
@@ -29,6 +30,7 @@ public class MessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public MessageCommentEntity[] comments;
+
     public MessageEntity withComments(MessageCommentEntity[] comments) {
         this.comments = comments;
         return this;
@@ -40,6 +42,7 @@ public class MessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public MessageEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -51,9 +54,11 @@ public class MessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public String subject;
+
     public MessageEntity withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public MessageEntity(){}
 }

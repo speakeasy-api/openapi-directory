@@ -15,6 +15,7 @@ public class ScheduleHangupResponse {
      */
     @JsonProperty("Message")
     public ScheduleHangupResponseMessageEnum message;
+
     public ScheduleHangupResponse withMessage(ScheduleHangupResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -25,6 +26,7 @@ public class ScheduleHangupResponse {
      */
     @JsonProperty("SchedHangupId")
     public String schedHangupId;
+
     public ScheduleHangupResponse withSchedHangupId(String schedHangupId) {
         this.schedHangupId = schedHangupId;
         return this;
@@ -35,9 +37,15 @@ public class ScheduleHangupResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public ScheduleHangupResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ScheduleHangupResponse(@JsonProperty("Message") ScheduleHangupResponseMessageEnum message, @JsonProperty("SchedHangupId") String schedHangupId, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.schedHangupId = schedHangupId;
+        this.success = success;
+  }
 }

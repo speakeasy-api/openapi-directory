@@ -18,6 +18,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alignmentSuggested")
     public Boolean alignmentSuggested;
+
     public ParagraphStyleSuggestionState withAlignmentSuggested(Boolean alignmentSuggested) {
         this.alignmentSuggested = alignmentSuggested;
         return this;
@@ -29,6 +30,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avoidWidowAndOrphanSuggested")
     public Boolean avoidWidowAndOrphanSuggested;
+
     public ParagraphStyleSuggestionState withAvoidWidowAndOrphanSuggested(Boolean avoidWidowAndOrphanSuggested) {
         this.avoidWidowAndOrphanSuggested = avoidWidowAndOrphanSuggested;
         return this;
@@ -40,6 +42,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borderBetweenSuggested")
     public Boolean borderBetweenSuggested;
+
     public ParagraphStyleSuggestionState withBorderBetweenSuggested(Boolean borderBetweenSuggested) {
         this.borderBetweenSuggested = borderBetweenSuggested;
         return this;
@@ -51,6 +54,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borderBottomSuggested")
     public Boolean borderBottomSuggested;
+
     public ParagraphStyleSuggestionState withBorderBottomSuggested(Boolean borderBottomSuggested) {
         this.borderBottomSuggested = borderBottomSuggested;
         return this;
@@ -62,6 +66,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borderLeftSuggested")
     public Boolean borderLeftSuggested;
+
     public ParagraphStyleSuggestionState withBorderLeftSuggested(Boolean borderLeftSuggested) {
         this.borderLeftSuggested = borderLeftSuggested;
         return this;
@@ -73,6 +78,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borderRightSuggested")
     public Boolean borderRightSuggested;
+
     public ParagraphStyleSuggestionState withBorderRightSuggested(Boolean borderRightSuggested) {
         this.borderRightSuggested = borderRightSuggested;
         return this;
@@ -84,6 +90,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borderTopSuggested")
     public Boolean borderTopSuggested;
+
     public ParagraphStyleSuggestionState withBorderTopSuggested(Boolean borderTopSuggested) {
         this.borderTopSuggested = borderTopSuggested;
         return this;
@@ -95,6 +102,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directionSuggested")
     public Boolean directionSuggested;
+
     public ParagraphStyleSuggestionState withDirectionSuggested(Boolean directionSuggested) {
         this.directionSuggested = directionSuggested;
         return this;
@@ -106,6 +114,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headingIdSuggested")
     public Boolean headingIdSuggested;
+
     public ParagraphStyleSuggestionState withHeadingIdSuggested(Boolean headingIdSuggested) {
         this.headingIdSuggested = headingIdSuggested;
         return this;
@@ -117,6 +126,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indentEndSuggested")
     public Boolean indentEndSuggested;
+
     public ParagraphStyleSuggestionState withIndentEndSuggested(Boolean indentEndSuggested) {
         this.indentEndSuggested = indentEndSuggested;
         return this;
@@ -128,6 +138,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indentFirstLineSuggested")
     public Boolean indentFirstLineSuggested;
+
     public ParagraphStyleSuggestionState withIndentFirstLineSuggested(Boolean indentFirstLineSuggested) {
         this.indentFirstLineSuggested = indentFirstLineSuggested;
         return this;
@@ -139,6 +150,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indentStartSuggested")
     public Boolean indentStartSuggested;
+
     public ParagraphStyleSuggestionState withIndentStartSuggested(Boolean indentStartSuggested) {
         this.indentStartSuggested = indentStartSuggested;
         return this;
@@ -150,6 +162,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keepLinesTogetherSuggested")
     public Boolean keepLinesTogetherSuggested;
+
     public ParagraphStyleSuggestionState withKeepLinesTogetherSuggested(Boolean keepLinesTogetherSuggested) {
         this.keepLinesTogetherSuggested = keepLinesTogetherSuggested;
         return this;
@@ -161,6 +174,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keepWithNextSuggested")
     public Boolean keepWithNextSuggested;
+
     public ParagraphStyleSuggestionState withKeepWithNextSuggested(Boolean keepWithNextSuggested) {
         this.keepWithNextSuggested = keepWithNextSuggested;
         return this;
@@ -172,6 +186,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineSpacingSuggested")
     public Boolean lineSpacingSuggested;
+
     public ParagraphStyleSuggestionState withLineSpacingSuggested(Boolean lineSpacingSuggested) {
         this.lineSpacingSuggested = lineSpacingSuggested;
         return this;
@@ -183,6 +198,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedStyleTypeSuggested")
     public Boolean namedStyleTypeSuggested;
+
     public ParagraphStyleSuggestionState withNamedStyleTypeSuggested(Boolean namedStyleTypeSuggested) {
         this.namedStyleTypeSuggested = namedStyleTypeSuggested;
         return this;
@@ -194,6 +210,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageBreakBeforeSuggested")
     public Boolean pageBreakBeforeSuggested;
+
     public ParagraphStyleSuggestionState withPageBreakBeforeSuggested(Boolean pageBreakBeforeSuggested) {
         this.pageBreakBeforeSuggested = pageBreakBeforeSuggested;
         return this;
@@ -205,6 +222,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shadingSuggestionState")
     public ShadingSuggestionState shadingSuggestionState;
+
     public ParagraphStyleSuggestionState withShadingSuggestionState(ShadingSuggestionState shadingSuggestionState) {
         this.shadingSuggestionState = shadingSuggestionState;
         return this;
@@ -216,6 +234,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spaceAboveSuggested")
     public Boolean spaceAboveSuggested;
+
     public ParagraphStyleSuggestionState withSpaceAboveSuggested(Boolean spaceAboveSuggested) {
         this.spaceAboveSuggested = spaceAboveSuggested;
         return this;
@@ -227,6 +246,7 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spaceBelowSuggested")
     public Boolean spaceBelowSuggested;
+
     public ParagraphStyleSuggestionState withSpaceBelowSuggested(Boolean spaceBelowSuggested) {
         this.spaceBelowSuggested = spaceBelowSuggested;
         return this;
@@ -238,9 +258,11 @@ public class ParagraphStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spacingModeSuggested")
     public Boolean spacingModeSuggested;
+
     public ParagraphStyleSuggestionState withSpacingModeSuggested(Boolean spacingModeSuggested) {
         this.spacingModeSuggested = spacingModeSuggested;
         return this;
     }
     
+    public ParagraphStyleSuggestionState(){}
 }

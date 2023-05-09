@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ReservedNode {
     
     public String currencyCode;
+
     public ReservedNode withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -19,6 +20,7 @@ public class ReservedNode {
     
     
     public Long duration;
+
     public ReservedNode withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -26,6 +28,7 @@ public class ReservedNode {
     
     
     public Double fixedPrice;
+
     public ReservedNode withFixedPrice(Double fixedPrice) {
         this.fixedPrice = fixedPrice;
         return this;
@@ -33,6 +36,7 @@ public class ReservedNode {
     
     
     public Long nodeCount;
+
     public ReservedNode withNodeCount(Long nodeCount) {
         this.nodeCount = nodeCount;
         return this;
@@ -40,6 +44,7 @@ public class ReservedNode {
     
     
     public String nodeType;
+
     public ReservedNode withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -47,6 +52,7 @@ public class ReservedNode {
     
     
     public String offeringType;
+
     public ReservedNode withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -54,6 +60,7 @@ public class ReservedNode {
     
     
     public RecurringChargeList[] recurringCharges;
+
     public ReservedNode withRecurringCharges(RecurringChargeList[] recurringCharges) {
         this.recurringCharges = recurringCharges;
         return this;
@@ -61,6 +68,7 @@ public class ReservedNode {
     
     
     public String reservedNodeId;
+
     public ReservedNode withReservedNodeId(String reservedNodeId) {
         this.reservedNodeId = reservedNodeId;
         return this;
@@ -68,6 +76,7 @@ public class ReservedNode {
     
     
     public String reservedNodeOfferingId;
+
     public ReservedNode withReservedNodeOfferingId(String reservedNodeOfferingId) {
         this.reservedNodeOfferingId = reservedNodeOfferingId;
         return this;
@@ -75,6 +84,7 @@ public class ReservedNode {
     
     
     public ReservedNodeOfferingTypeEnum reservedNodeOfferingType;
+
     public ReservedNode withReservedNodeOfferingType(ReservedNodeOfferingTypeEnum reservedNodeOfferingType) {
         this.reservedNodeOfferingType = reservedNodeOfferingType;
         return this;
@@ -82,6 +92,7 @@ public class ReservedNode {
     
     
     public OffsetDateTime startTime;
+
     public ReservedNode withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -89,6 +100,7 @@ public class ReservedNode {
     
     
     public String state;
+
     public ReservedNode withState(String state) {
         this.state = state;
         return this;
@@ -96,9 +108,11 @@ public class ReservedNode {
     
     
     public Double usagePrice;
+
     public ReservedNode withUsagePrice(Double usagePrice) {
         this.usagePrice = usagePrice;
         return this;
     }
     
+    public ReservedNode(){}
 }

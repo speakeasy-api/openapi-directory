@@ -15,6 +15,7 @@ public class Getaddressmatch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Getaddressmatch200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class Getaddressmatch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credits")
     public String credits;
+
     public Getaddressmatch200ApplicationJSON withCredits(String credits) {
         this.credits = credits;
         return this;
@@ -31,9 +33,11 @@ public class Getaddressmatch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Simkey")
     public String simkey;
+
     public Getaddressmatch200ApplicationJSON withSimkey(String simkey) {
         this.simkey = simkey;
         return this;
     }
     
+    public Getaddressmatch200ApplicationJSON(){}
 }

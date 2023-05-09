@@ -12,6 +12,7 @@ public class ProjectsListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Cursor")
     public String xCursor;
+
     public ProjectsListRequest withXCursor(String xCursor) {
         this.xCursor = xCursor;
         return this;
@@ -22,6 +23,7 @@ public class ProjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public Long group;
+
     public ProjectsListRequest withGroup(Long group) {
         this.group = group;
         return this;
@@ -32,6 +34,7 @@ public class ProjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=institution")
     public Long institution;
+
     public ProjectsListRequest withInstitution(Long institution) {
         this.institution = institution;
         return this;
@@ -42,6 +45,7 @@ public class ProjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ProjectsListRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -52,6 +56,7 @@ public class ProjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public ProjectsListRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -62,6 +67,7 @@ public class ProjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public ProjectsListOrderEnum order;
+
     public ProjectsListRequest withOrder(ProjectsListOrderEnum order) {
         this.order = order;
         return this;
@@ -69,6 +75,7 @@ public class ProjectsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_direction")
     public ProjectsListOrderDirectionEnum orderDirection;
+
     public ProjectsListRequest withOrderDirection(ProjectsListOrderDirectionEnum orderDirection) {
         this.orderDirection = orderDirection;
         return this;
@@ -79,6 +86,7 @@ public class ProjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ProjectsListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -89,6 +97,7 @@ public class ProjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public ProjectsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -99,9 +108,11 @@ public class ProjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published_since")
     public String publishedSince;
+
     public ProjectsListRequest withPublishedSince(String publishedSince) {
         this.publishedSince = publishedSince;
         return this;
     }
     
+    public ProjectsListRequest(){}
 }

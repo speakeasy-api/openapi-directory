@@ -15,6 +15,7 @@ public class UnavailableTimeListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public UnavailableTimeListViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -23,6 +24,7 @@ public class UnavailableTimeListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unavailableTimes")
     public UnavailableTimeViewModel[] unavailableTimes;
+
     public UnavailableTimeListViewModel withUnavailableTimes(UnavailableTimeViewModel[] unavailableTimes) {
         this.unavailableTimes = unavailableTimes;
         return this;
@@ -31,9 +33,11 @@ public class UnavailableTimeListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public UnavailableTimeListViewModel withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public UnavailableTimeListViewModel(){}
 }

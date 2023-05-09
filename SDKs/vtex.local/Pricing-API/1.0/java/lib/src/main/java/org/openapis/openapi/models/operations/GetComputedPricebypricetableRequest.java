@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetComputedPricebypricetableRequest {
@@ -12,6 +13,7 @@ public class GetComputedPricebypricetableRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetComputedPricebypricetableRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetComputedPricebypricetableRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetComputedPricebypricetableRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetComputedPricebypricetableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brandId")
     public Long brandId;
+
     public GetComputedPricebypricetableRequest withBrandId(Long brandId) {
         this.brandId = brandId;
         return this;
@@ -42,6 +46,7 @@ public class GetComputedPricebypricetableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categoryIds")
     public Long categoryIds;
+
     public GetComputedPricebypricetableRequest withCategoryIds(Long categoryIds) {
         this.categoryIds = categoryIds;
         return this;
@@ -52,6 +57,7 @@ public class GetComputedPricebypricetableRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
     public Long itemId;
+
     public GetComputedPricebypricetableRequest withItemId(Long itemId) {
         this.itemId = itemId;
         return this;
@@ -62,6 +68,7 @@ public class GetComputedPricebypricetableRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=priceTableId")
     public String priceTableId;
+
     public GetComputedPricebypricetableRequest withPriceTableId(String priceTableId) {
         this.priceTableId = priceTableId;
         return this;
@@ -72,9 +79,19 @@ public class GetComputedPricebypricetableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quantity")
     public Long quantity;
+
     public GetComputedPricebypricetableRequest withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public GetComputedPricebypricetableRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("brandId") Long brandId, @JsonProperty("categoryIds") Long categoryIds, @JsonProperty("itemId") Long itemId, @JsonProperty("priceTableId") String priceTableId, @JsonProperty("quantity") Long quantity) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.brandId = brandId;
+        this.categoryIds = categoryIds;
+        this.itemId = itemId;
+        this.priceTableId = priceTableId;
+        this.quantity = quantity;
+  }
 }

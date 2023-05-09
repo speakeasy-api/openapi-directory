@@ -15,6 +15,7 @@ public class GetDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public GetDataIntegrationResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class GetDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GetDataIntegrationResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class GetDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileConfiguration")
     public FileConfiguration fileConfiguration;
+
     public GetDataIntegrationResponse withFileConfiguration(FileConfiguration fileConfiguration) {
         this.fileConfiguration = fileConfiguration;
         return this;
@@ -39,6 +42,7 @@ public class GetDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public GetDataIntegrationResponse withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class GetDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKey")
     public String kmsKey;
+
     public GetDataIntegrationResponse withKmsKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
@@ -55,6 +60,7 @@ public class GetDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetDataIntegrationResponse withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class GetDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectConfiguration")
     public java.util.Map<String, java.util.Map<String, String[]>> objectConfiguration;
+
     public GetDataIntegrationResponse withObjectConfiguration(java.util.Map<String, java.util.Map<String, String[]>> objectConfiguration) {
         this.objectConfiguration = objectConfiguration;
         return this;
@@ -71,6 +78,7 @@ public class GetDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleConfiguration")
     public ScheduleConfiguration scheduleConfiguration;
+
     public GetDataIntegrationResponse withScheduleConfiguration(ScheduleConfiguration scheduleConfiguration) {
         this.scheduleConfiguration = scheduleConfiguration;
         return this;
@@ -79,6 +87,7 @@ public class GetDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceURI")
     public String sourceURI;
+
     public GetDataIntegrationResponse withSourceURI(String sourceURI) {
         this.sourceURI = sourceURI;
         return this;
@@ -87,9 +96,11 @@ public class GetDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public GetDataIntegrationResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetDataIntegrationResponse(){}
 }

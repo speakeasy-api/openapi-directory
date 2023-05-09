@@ -12,6 +12,7 @@ public class DisassociatePricingRulesRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public DisassociatePricingRulesRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,9 +23,14 @@ public class DisassociatePricingRulesRequestBody {
      */
     @JsonProperty("PricingRuleArns")
     public String[] pricingRuleArns;
+
     public DisassociatePricingRulesRequestBody withPricingRuleArns(String[] pricingRuleArns) {
         this.pricingRuleArns = pricingRuleArns;
         return this;
     }
     
+    public DisassociatePricingRulesRequestBody(@JsonProperty("Arn") String arn, @JsonProperty("PricingRuleArns") String[] pricingRuleArns) {
+        this.arn = arn;
+        this.pricingRuleArns = pricingRuleArns;
+  }
 }

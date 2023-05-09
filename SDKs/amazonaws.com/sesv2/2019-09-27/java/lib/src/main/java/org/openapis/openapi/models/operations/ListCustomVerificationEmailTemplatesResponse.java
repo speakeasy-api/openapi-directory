@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCustomVerificationEmailTemplatesResponse {
@@ -12,6 +13,7 @@ public class ListCustomVerificationEmailTemplatesResponse {
      */
     
     public Object badRequestException;
+
     public ListCustomVerificationEmailTemplatesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListCustomVerificationEmailTemplatesResponse {
     
     
     public String contentType;
+
     public ListCustomVerificationEmailTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCustomVerificationEmailTemplatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCustomVerificationEmailTemplatesResponse listCustomVerificationEmailTemplatesResponse;
+
     public ListCustomVerificationEmailTemplatesResponse withListCustomVerificationEmailTemplatesResponse(org.openapis.openapi.models.shared.ListCustomVerificationEmailTemplatesResponse listCustomVerificationEmailTemplatesResponse) {
         this.listCustomVerificationEmailTemplatesResponse = listCustomVerificationEmailTemplatesResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListCustomVerificationEmailTemplatesResponse {
     
     
     public Integer statusCode;
+
     public ListCustomVerificationEmailTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListCustomVerificationEmailTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCustomVerificationEmailTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListCustomVerificationEmailTemplatesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListCustomVerificationEmailTemplatesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListCustomVerificationEmailTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

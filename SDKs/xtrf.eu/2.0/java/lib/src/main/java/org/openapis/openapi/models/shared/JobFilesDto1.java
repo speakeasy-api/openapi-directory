@@ -15,6 +15,7 @@ public class JobFilesDto1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputFiles")
     public FileDTO[] inputFiles;
+
     public JobFilesDto1 withInputFiles(FileDTO[] inputFiles) {
         this.inputFiles = inputFiles;
         return this;
@@ -23,9 +24,11 @@ public class JobFilesDto1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputFiles")
     public FileDTO[] outputFiles;
+
     public JobFilesDto1 withOutputFiles(FileDTO[] outputFiles) {
         this.outputFiles = outputFiles;
         return this;
     }
     
+    public JobFilesDto1(){}
 }

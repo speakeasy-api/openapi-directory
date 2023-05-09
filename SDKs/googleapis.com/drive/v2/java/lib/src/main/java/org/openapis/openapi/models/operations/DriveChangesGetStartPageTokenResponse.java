@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DriveChangesGetStartPageTokenResponse {
     
     public String contentType;
+
     public DriveChangesGetStartPageTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DriveChangesGetStartPageTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.StartPageToken startPageToken;
+
     public DriveChangesGetStartPageTokenResponse withStartPageToken(org.openapis.openapi.models.shared.StartPageToken startPageToken) {
         this.startPageToken = startPageToken;
         return this;
@@ -26,6 +29,7 @@ public class DriveChangesGetStartPageTokenResponse {
     
     
     public Integer statusCode;
+
     public DriveChangesGetStartPageTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DriveChangesGetStartPageTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DriveChangesGetStartPageTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DriveChangesGetStartPageTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

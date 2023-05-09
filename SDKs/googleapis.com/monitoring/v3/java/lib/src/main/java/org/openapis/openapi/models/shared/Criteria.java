@@ -18,9 +18,11 @@ public class Criteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policies")
     public String[] policies;
+
     public Criteria withPolicies(String[] policies) {
         this.policies = policies;
         return this;
     }
     
+    public Criteria(){}
 }

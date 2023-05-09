@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2SpCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiresAt")
     public String expiresAt;
+
     public GoogleCloudIdentitytoolkitAdminV2SpCertificate withExpiresAt(String expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIdentitytoolkitAdminV2SpCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x509Certificate")
     public String x509Certificate;
+
     public GoogleCloudIdentitytoolkitAdminV2SpCertificate withX509Certificate(String x509Certificate) {
         this.x509Certificate = x509Certificate;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2SpCertificate(){}
 }

@@ -166,4 +166,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/UploadStatuses.java
 lib/src/main/java/org/openapis/openapi/models/shared/UploadStatusQuery.java
 lib/src/main/java/org/openapis/openapi/models/shared/UploadContentTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Upload.java
+docs/sdk/README.md
+docs/boundaries/README.md
+docs/exports/README.md
+docs/farmorganizations/README.md
+docs/fields/README.md
+docs/layers/README.md
+docs/operations/README.md
+docs/resourceowners/README.md
+docs/uploads/README.md
 USAGE.md

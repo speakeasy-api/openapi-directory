@@ -15,6 +15,7 @@ public class SchemaConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public SchemaConfiguration withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -23,6 +24,7 @@ public class SchemaConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public SchemaConfiguration withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -31,6 +33,7 @@ public class SchemaConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public SchemaConfiguration withRegion(String region) {
         this.region = region;
         return this;
@@ -39,6 +42,7 @@ public class SchemaConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public SchemaConfiguration withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -47,6 +51,7 @@ public class SchemaConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public SchemaConfiguration withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -55,9 +60,11 @@ public class SchemaConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public SchemaConfiguration withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public SchemaConfiguration(){}
 }

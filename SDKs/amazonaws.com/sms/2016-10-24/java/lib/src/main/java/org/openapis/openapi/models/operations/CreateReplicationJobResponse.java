@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateReplicationJobResponse {
     
     public String contentType;
+
     public CreateReplicationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateReplicationJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateReplicationJobResponse createReplicationJobResponse;
+
     public CreateReplicationJobResponse withCreateReplicationJobResponse(org.openapis.openapi.models.shared.CreateReplicationJobResponse createReplicationJobResponse) {
         this.createReplicationJobResponse = createReplicationJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateReplicationJobResponse {
      */
     
     public Object internalError;
+
     public CreateReplicationJobResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -39,6 +43,7 @@ public class CreateReplicationJobResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateReplicationJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateReplicationJobResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public CreateReplicationJobResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateReplicationJobResponse {
      */
     
     public Object noConnectorsAvailableException;
+
     public CreateReplicationJobResponse withNoConnectorsAvailableException(Object noConnectorsAvailableException) {
         this.noConnectorsAvailableException = noConnectorsAvailableException;
         return this;
@@ -69,6 +76,7 @@ public class CreateReplicationJobResponse {
      */
     
     public Object operationNotPermittedException;
+
     public CreateReplicationJobResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -76,6 +84,7 @@ public class CreateReplicationJobResponse {
     
     
     public Integer statusCode;
+
     public CreateReplicationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateReplicationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateReplicationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateReplicationJobResponse {
      */
     
     public Object replicationJobAlreadyExistsException;
+
     public CreateReplicationJobResponse withReplicationJobAlreadyExistsException(Object replicationJobAlreadyExistsException) {
         this.replicationJobAlreadyExistsException = replicationJobAlreadyExistsException;
         return this;
@@ -103,6 +114,7 @@ public class CreateReplicationJobResponse {
      */
     
     public Object serverCannotBeReplicatedException;
+
     public CreateReplicationJobResponse withServerCannotBeReplicatedException(Object serverCannotBeReplicatedException) {
         this.serverCannotBeReplicatedException = serverCannotBeReplicatedException;
         return this;
@@ -113,6 +125,7 @@ public class CreateReplicationJobResponse {
      */
     
     public Object temporarilyUnavailableException;
+
     public CreateReplicationJobResponse withTemporarilyUnavailableException(Object temporarilyUnavailableException) {
         this.temporarilyUnavailableException = temporarilyUnavailableException;
         return this;
@@ -123,9 +136,14 @@ public class CreateReplicationJobResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public CreateReplicationJobResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public CreateReplicationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

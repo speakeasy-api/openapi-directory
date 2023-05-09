@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SimpleUser {
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public SimpleUser withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -22,6 +23,7 @@ public class SimpleUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public SimpleUser withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +31,7 @@ public class SimpleUser {
     
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public SimpleUser withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -36,6 +39,7 @@ public class SimpleUser {
     
     @JsonProperty("followers_url")
     public String followersUrl;
+
     public SimpleUser withFollowersUrl(String followersUrl) {
         this.followersUrl = followersUrl;
         return this;
@@ -43,6 +47,7 @@ public class SimpleUser {
     
     @JsonProperty("following_url")
     public String followingUrl;
+
     public SimpleUser withFollowingUrl(String followingUrl) {
         this.followingUrl = followingUrl;
         return this;
@@ -50,6 +55,7 @@ public class SimpleUser {
     
     @JsonProperty("gists_url")
     public String gistsUrl;
+
     public SimpleUser withGistsUrl(String gistsUrl) {
         this.gistsUrl = gistsUrl;
         return this;
@@ -57,6 +63,7 @@ public class SimpleUser {
     
     @JsonProperty("gravatar_id")
     public String gravatarId;
+
     public SimpleUser withGravatarId(String gravatarId) {
         this.gravatarId = gravatarId;
         return this;
@@ -64,6 +71,7 @@ public class SimpleUser {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public SimpleUser withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -71,6 +79,7 @@ public class SimpleUser {
     
     @JsonProperty("id")
     public Long id;
+
     public SimpleUser withId(Long id) {
         this.id = id;
         return this;
@@ -78,6 +87,7 @@ public class SimpleUser {
     
     @JsonProperty("login")
     public String login;
+
     public SimpleUser withLogin(String login) {
         this.login = login;
         return this;
@@ -86,6 +96,7 @@ public class SimpleUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SimpleUser withName(String name) {
         this.name = name;
         return this;
@@ -93,6 +104,7 @@ public class SimpleUser {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public SimpleUser withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -100,6 +112,7 @@ public class SimpleUser {
     
     @JsonProperty("organizations_url")
     public String organizationsUrl;
+
     public SimpleUser withOrganizationsUrl(String organizationsUrl) {
         this.organizationsUrl = organizationsUrl;
         return this;
@@ -107,6 +120,7 @@ public class SimpleUser {
     
     @JsonProperty("received_events_url")
     public String receivedEventsUrl;
+
     public SimpleUser withReceivedEventsUrl(String receivedEventsUrl) {
         this.receivedEventsUrl = receivedEventsUrl;
         return this;
@@ -114,6 +128,7 @@ public class SimpleUser {
     
     @JsonProperty("repos_url")
     public String reposUrl;
+
     public SimpleUser withReposUrl(String reposUrl) {
         this.reposUrl = reposUrl;
         return this;
@@ -121,6 +136,7 @@ public class SimpleUser {
     
     @JsonProperty("site_admin")
     public Boolean siteAdmin;
+
     public SimpleUser withSiteAdmin(Boolean siteAdmin) {
         this.siteAdmin = siteAdmin;
         return this;
@@ -129,6 +145,7 @@ public class SimpleUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starred_at")
     public String starredAt;
+
     public SimpleUser withStarredAt(String starredAt) {
         this.starredAt = starredAt;
         return this;
@@ -136,6 +153,7 @@ public class SimpleUser {
     
     @JsonProperty("starred_url")
     public String starredUrl;
+
     public SimpleUser withStarredUrl(String starredUrl) {
         this.starredUrl = starredUrl;
         return this;
@@ -143,6 +161,7 @@ public class SimpleUser {
     
     @JsonProperty("subscriptions_url")
     public String subscriptionsUrl;
+
     public SimpleUser withSubscriptionsUrl(String subscriptionsUrl) {
         this.subscriptionsUrl = subscriptionsUrl;
         return this;
@@ -150,6 +169,7 @@ public class SimpleUser {
     
     @JsonProperty("type")
     public String type;
+
     public SimpleUser withType(String type) {
         this.type = type;
         return this;
@@ -157,9 +177,30 @@ public class SimpleUser {
     
     @JsonProperty("url")
     public String url;
+
     public SimpleUser withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SimpleUser(@JsonProperty("avatar_url") String avatarUrl, @JsonProperty("events_url") String eventsUrl, @JsonProperty("followers_url") String followersUrl, @JsonProperty("following_url") String followingUrl, @JsonProperty("gists_url") String gistsUrl, @JsonProperty("gravatar_id") String gravatarId, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("login") String login, @JsonProperty("node_id") String nodeId, @JsonProperty("organizations_url") String organizationsUrl, @JsonProperty("received_events_url") String receivedEventsUrl, @JsonProperty("repos_url") String reposUrl, @JsonProperty("site_admin") Boolean siteAdmin, @JsonProperty("starred_url") String starredUrl, @JsonProperty("subscriptions_url") String subscriptionsUrl, @JsonProperty("type") String type, @JsonProperty("url") String url) {
+        this.avatarUrl = avatarUrl;
+        this.eventsUrl = eventsUrl;
+        this.followersUrl = followersUrl;
+        this.followingUrl = followingUrl;
+        this.gistsUrl = gistsUrl;
+        this.gravatarId = gravatarId;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.login = login;
+        this.nodeId = nodeId;
+        this.organizationsUrl = organizationsUrl;
+        this.receivedEventsUrl = receivedEventsUrl;
+        this.reposUrl = reposUrl;
+        this.siteAdmin = siteAdmin;
+        this.starredUrl = starredUrl;
+        this.subscriptionsUrl = subscriptionsUrl;
+        this.type = type;
+        this.url = url;
+  }
 }

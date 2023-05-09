@@ -15,6 +15,7 @@ public class ServiceInsightHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenProactiveInsights")
     public Long openProactiveInsights;
+
     public ServiceInsightHealth withOpenProactiveInsights(Long openProactiveInsights) {
         this.openProactiveInsights = openProactiveInsights;
         return this;
@@ -23,9 +24,11 @@ public class ServiceInsightHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenReactiveInsights")
     public Long openReactiveInsights;
+
     public ServiceInsightHealth withOpenReactiveInsights(Long openReactiveInsights) {
         this.openReactiveInsights = openReactiveInsights;
         return this;
     }
     
+    public ServiceInsightHealth(){}
 }

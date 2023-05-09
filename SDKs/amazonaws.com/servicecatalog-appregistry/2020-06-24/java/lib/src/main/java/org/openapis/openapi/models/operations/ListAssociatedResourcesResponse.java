@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAssociatedResourcesResponse {
     
     public String contentType;
+
     public ListAssociatedResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAssociatedResourcesResponse {
      */
     
     public Object internalServerException;
+
     public ListAssociatedResourcesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListAssociatedResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAssociatedResourcesResponse listAssociatedResourcesResponse;
+
     public ListAssociatedResourcesResponse withListAssociatedResourcesResponse(org.openapis.openapi.models.shared.ListAssociatedResourcesResponse listAssociatedResourcesResponse) {
         this.listAssociatedResourcesResponse = listAssociatedResourcesResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListAssociatedResourcesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAssociatedResourcesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListAssociatedResourcesResponse {
     
     
     public Integer statusCode;
+
     public ListAssociatedResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAssociatedResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAssociatedResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListAssociatedResourcesResponse {
      */
     
     public Object validationException;
+
     public ListAssociatedResourcesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAssociatedResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

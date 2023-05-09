@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutParameterResponse {
     
     public String contentType;
+
     public PutParameterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutParameterResponse {
      */
     
     public Object hierarchyLevelLimitExceededException;
+
     public PutParameterResponse withHierarchyLevelLimitExceededException(Object hierarchyLevelLimitExceededException) {
         this.hierarchyLevelLimitExceededException = hierarchyLevelLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class PutParameterResponse {
      */
     
     public Object hierarchyTypeMismatchException;
+
     public PutParameterResponse withHierarchyTypeMismatchException(Object hierarchyTypeMismatchException) {
         this.hierarchyTypeMismatchException = hierarchyTypeMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class PutParameterResponse {
      */
     
     public Object incompatiblePolicyException;
+
     public PutParameterResponse withIncompatiblePolicyException(Object incompatiblePolicyException) {
         this.incompatiblePolicyException = incompatiblePolicyException;
         return this;
@@ -49,6 +54,7 @@ public class PutParameterResponse {
      */
     
     public Object internalServerError;
+
     public PutParameterResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class PutParameterResponse {
      */
     
     public Object invalidAllowedPatternException;
+
     public PutParameterResponse withInvalidAllowedPatternException(Object invalidAllowedPatternException) {
         this.invalidAllowedPatternException = invalidAllowedPatternException;
         return this;
@@ -69,6 +76,7 @@ public class PutParameterResponse {
      */
     
     public Object invalidKeyId;
+
     public PutParameterResponse withInvalidKeyId(Object invalidKeyId) {
         this.invalidKeyId = invalidKeyId;
         return this;
@@ -79,6 +87,7 @@ public class PutParameterResponse {
      */
     
     public Object invalidPolicyAttributeException;
+
     public PutParameterResponse withInvalidPolicyAttributeException(Object invalidPolicyAttributeException) {
         this.invalidPolicyAttributeException = invalidPolicyAttributeException;
         return this;
@@ -89,6 +98,7 @@ public class PutParameterResponse {
      */
     
     public Object invalidPolicyTypeException;
+
     public PutParameterResponse withInvalidPolicyTypeException(Object invalidPolicyTypeException) {
         this.invalidPolicyTypeException = invalidPolicyTypeException;
         return this;
@@ -99,6 +109,7 @@ public class PutParameterResponse {
      */
     
     public Object parameterAlreadyExists;
+
     public PutParameterResponse withParameterAlreadyExists(Object parameterAlreadyExists) {
         this.parameterAlreadyExists = parameterAlreadyExists;
         return this;
@@ -109,6 +120,7 @@ public class PutParameterResponse {
      */
     
     public Object parameterLimitExceeded;
+
     public PutParameterResponse withParameterLimitExceeded(Object parameterLimitExceeded) {
         this.parameterLimitExceeded = parameterLimitExceeded;
         return this;
@@ -119,6 +131,7 @@ public class PutParameterResponse {
      */
     
     public Object parameterMaxVersionLimitExceeded;
+
     public PutParameterResponse withParameterMaxVersionLimitExceeded(Object parameterMaxVersionLimitExceeded) {
         this.parameterMaxVersionLimitExceeded = parameterMaxVersionLimitExceeded;
         return this;
@@ -129,6 +142,7 @@ public class PutParameterResponse {
      */
     
     public Object parameterPatternMismatchException;
+
     public PutParameterResponse withParameterPatternMismatchException(Object parameterPatternMismatchException) {
         this.parameterPatternMismatchException = parameterPatternMismatchException;
         return this;
@@ -139,6 +153,7 @@ public class PutParameterResponse {
      */
     
     public Object policiesLimitExceededException;
+
     public PutParameterResponse withPoliciesLimitExceededException(Object policiesLimitExceededException) {
         this.policiesLimitExceededException = policiesLimitExceededException;
         return this;
@@ -149,6 +164,7 @@ public class PutParameterResponse {
      */
     
     public org.openapis.openapi.models.shared.PutParameterResult putParameterResult;
+
     public PutParameterResponse withPutParameterResult(org.openapis.openapi.models.shared.PutParameterResult putParameterResult) {
         this.putParameterResult = putParameterResult;
         return this;
@@ -156,6 +172,7 @@ public class PutParameterResponse {
     
     
     public Integer statusCode;
+
     public PutParameterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -163,6 +180,7 @@ public class PutParameterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutParameterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -173,6 +191,7 @@ public class PutParameterResponse {
      */
     
     public Object tooManyUpdates;
+
     public PutParameterResponse withTooManyUpdates(Object tooManyUpdates) {
         this.tooManyUpdates = tooManyUpdates;
         return this;
@@ -183,9 +202,14 @@ public class PutParameterResponse {
      */
     
     public Object unsupportedParameterType;
+
     public PutParameterResponse withUnsupportedParameterType(Object unsupportedParameterType) {
         this.unsupportedParameterType = unsupportedParameterType;
         return this;
     }
     
+    public PutParameterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

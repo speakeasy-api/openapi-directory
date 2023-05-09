@@ -18,6 +18,7 @@ public class ListLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public Location[] locations;
+
     public ListLocationsResponse withLocations(Location[] locations) {
         this.locations = locations;
         return this;
@@ -29,6 +30,7 @@ public class ListLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListLocationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public ListLocationsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public ListLocationsResponse(){}
 }

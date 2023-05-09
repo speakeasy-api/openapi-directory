@@ -12,6 +12,7 @@ public class PayslipLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeductionLines")
     public DeductionLine[] deductionLines;
+
     public PayslipLines withDeductionLines(DeductionLine[] deductionLines) {
         this.deductionLines = deductionLines;
         return this;
@@ -20,6 +21,7 @@ public class PayslipLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EarningsLines")
     public EarningsLine[] earningsLines;
+
     public PayslipLines withEarningsLines(EarningsLine[] earningsLines) {
         this.earningsLines = earningsLines;
         return this;
@@ -28,6 +30,7 @@ public class PayslipLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeaveAccrualLines")
     public LeaveAccrualLine[] leaveAccrualLines;
+
     public PayslipLines withLeaveAccrualLines(LeaveAccrualLine[] leaveAccrualLines) {
         this.leaveAccrualLines = leaveAccrualLines;
         return this;
@@ -36,6 +39,7 @@ public class PayslipLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeaveEarningsLines")
     public LeaveEarningsLine[] leaveEarningsLines;
+
     public PayslipLines withLeaveEarningsLines(LeaveEarningsLine[] leaveEarningsLines) {
         this.leaveEarningsLines = leaveEarningsLines;
         return this;
@@ -44,6 +48,7 @@ public class PayslipLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReimbursementLines")
     public ReimbursementLine[] reimbursementLines;
+
     public PayslipLines withReimbursementLines(ReimbursementLine[] reimbursementLines) {
         this.reimbursementLines = reimbursementLines;
         return this;
@@ -52,6 +57,7 @@ public class PayslipLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuperannuationLines")
     public SuperannuationLine[] superannuationLines;
+
     public PayslipLines withSuperannuationLines(SuperannuationLine[] superannuationLines) {
         this.superannuationLines = superannuationLines;
         return this;
@@ -60,6 +66,7 @@ public class PayslipLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxLines")
     public TaxLine[] taxLines;
+
     public PayslipLines withTaxLines(TaxLine[] taxLines) {
         this.taxLines = taxLines;
         return this;
@@ -68,9 +75,11 @@ public class PayslipLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimesheetEarningsLines")
     public EarningsLine[] timesheetEarningsLines;
+
     public PayslipLines withTimesheetEarningsLines(EarningsLine[] timesheetEarningsLines) {
         this.timesheetEarningsLines = timesheetEarningsLines;
         return this;
     }
     
+    public PayslipLines(){}
 }

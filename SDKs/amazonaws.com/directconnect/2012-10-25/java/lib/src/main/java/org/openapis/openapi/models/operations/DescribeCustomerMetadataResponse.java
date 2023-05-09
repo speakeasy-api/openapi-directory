@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCustomerMetadataResponse {
     
     public String contentType;
+
     public DescribeCustomerMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCustomerMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCustomerMetadataResponse describeCustomerMetadataResponse;
+
     public DescribeCustomerMetadataResponse withDescribeCustomerMetadataResponse(org.openapis.openapi.models.shared.DescribeCustomerMetadataResponse describeCustomerMetadataResponse) {
         this.describeCustomerMetadataResponse = describeCustomerMetadataResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCustomerMetadataResponse {
      */
     
     public Object directConnectClientException;
+
     public DescribeCustomerMetadataResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCustomerMetadataResponse {
      */
     
     public Object directConnectServerException;
+
     public DescribeCustomerMetadataResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeCustomerMetadataResponse {
     
     
     public Integer statusCode;
+
     public DescribeCustomerMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeCustomerMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCustomerMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeCustomerMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

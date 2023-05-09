@@ -15,6 +15,7 @@ public class RowFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllRowsWildcard")
     public java.util.Map<String, Object> allRowsWildcard;
+
     public RowFilter withAllRowsWildcard(java.util.Map<String, Object> allRowsWildcard) {
         this.allRowsWildcard = allRowsWildcard;
         return this;
@@ -23,9 +24,11 @@ public class RowFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterExpression")
     public String filterExpression;
+
     public RowFilter withFilterExpression(String filterExpression) {
         this.filterExpression = filterExpression;
         return this;
     }
     
+    public RowFilter(){}
 }

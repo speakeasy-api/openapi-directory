@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoTargetingTypesTargetingOptionsSearchResponse {
     
     public String contentType;
+
     public DisplayvideoTargetingTypesTargetingOptionsSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoTargetingTypesTargetingOptionsSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchTargetingOptionsResponse searchTargetingOptionsResponse;
+
     public DisplayvideoTargetingTypesTargetingOptionsSearchResponse withSearchTargetingOptionsResponse(org.openapis.openapi.models.shared.SearchTargetingOptionsResponse searchTargetingOptionsResponse) {
         this.searchTargetingOptionsResponse = searchTargetingOptionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoTargetingTypesTargetingOptionsSearchResponse {
     
     
     public Integer statusCode;
+
     public DisplayvideoTargetingTypesTargetingOptionsSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoTargetingTypesTargetingOptionsSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoTargetingTypesTargetingOptionsSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoTargetingTypesTargetingOptionsSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
     public String tokenAuthentication;
+
     public Security withTokenAuthentication(String tokenAuthentication) {
         this.tokenAuthentication = tokenAuthentication;
         return this;
     }
     
+    public Security(@JsonProperty("TokenAuthentication") String tokenAuthentication) {
+        this.tokenAuthentication = tokenAuthentication;
+  }
 }

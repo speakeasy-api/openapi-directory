@@ -18,6 +18,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canIpForward")
     public Boolean canIpForward;
+
     public NetworkConfig withCanIpForward(Boolean canIpForward) {
         this.canIpForward = canIpForward;
         return this;
@@ -29,6 +30,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableExternalIps")
     public Boolean enableExternalIps;
+
     public NetworkConfig withEnableExternalIps(Boolean enableExternalIps) {
         this.enableExternalIps = enableExternalIps;
         return this;
@@ -40,6 +42,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public NetworkConfig withNetwork(String network) {
         this.network = network;
         return this;
@@ -51,9 +54,11 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public NetworkConfig withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
     }
     
+    public NetworkConfig(){}
 }

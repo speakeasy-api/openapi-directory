@@ -15,6 +15,7 @@ public class CreateProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateProjectResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class CreateProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CreateProjectResponse withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -30,6 +32,7 @@ public class CreateProjectResponse {
     
     @JsonProperty("name")
     public String name;
+
     public CreateProjectResponse withName(String name) {
         this.name = name;
         return this;
@@ -38,9 +41,13 @@ public class CreateProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spaceName")
     public String spaceName;
+
     public CreateProjectResponse withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
     }
     
+    public CreateProjectResponse(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

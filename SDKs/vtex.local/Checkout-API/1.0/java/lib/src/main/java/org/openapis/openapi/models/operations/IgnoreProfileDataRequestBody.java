@@ -15,9 +15,11 @@ public class IgnoreProfileDataRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreProfileData")
     public Boolean ignoreProfileData;
+
     public IgnoreProfileDataRequestBody withIgnoreProfileData(Boolean ignoreProfileData) {
         this.ignoreProfileData = ignoreProfileData;
         return this;
     }
     
+    public IgnoreProfileDataRequestBody(){}
 }

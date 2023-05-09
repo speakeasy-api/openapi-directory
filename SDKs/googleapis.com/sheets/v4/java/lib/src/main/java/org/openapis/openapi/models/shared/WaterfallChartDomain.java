@@ -18,6 +18,7 @@ public class WaterfallChartDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ChartData data;
+
     public WaterfallChartDomain withData(ChartData data) {
         this.data = data;
         return this;
@@ -29,9 +30,11 @@ public class WaterfallChartDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reversed")
     public Boolean reversed;
+
     public WaterfallChartDomain withReversed(Boolean reversed) {
         this.reversed = reversed;
         return this;
     }
     
+    public WaterfallChartDomain(){}
 }

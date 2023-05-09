@@ -15,6 +15,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desc")
     public String desc;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestFund withDesc(String desc) {
         this.desc = desc;
         return this;
@@ -23,9 +24,11 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestFund withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestFund(){}
 }

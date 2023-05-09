@@ -15,9 +15,11 @@ public class GameSessionQueueDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationArn")
     public String destinationArn;
+
     public GameSessionQueueDestination withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
     }
     
+    public GameSessionQueueDestination(){}
 }

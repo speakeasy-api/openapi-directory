@@ -15,6 +15,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorTypes")
     public String[] acceleratorTypes;
+
     public AwsSageMakerNotebookInstanceDetails withAcceleratorTypes(String[] acceleratorTypes) {
         this.acceleratorTypes = acceleratorTypes;
         return this;
@@ -23,6 +24,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalCodeRepositories")
     public String[] additionalCodeRepositories;
+
     public AwsSageMakerNotebookInstanceDetails withAdditionalCodeRepositories(String[] additionalCodeRepositories) {
         this.additionalCodeRepositories = additionalCodeRepositories;
         return this;
@@ -31,6 +33,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultCodeRepository")
     public String defaultCodeRepository;
+
     public AwsSageMakerNotebookInstanceDetails withDefaultCodeRepository(String defaultCodeRepository) {
         this.defaultCodeRepository = defaultCodeRepository;
         return this;
@@ -39,6 +42,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectInternetAccess")
     public String directInternetAccess;
+
     public AwsSageMakerNotebookInstanceDetails withDirectInternetAccess(String directInternetAccess) {
         this.directInternetAccess = directInternetAccess;
         return this;
@@ -47,6 +51,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public AwsSageMakerNotebookInstanceDetails withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -55,6 +60,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceMetadataServiceConfiguration")
     public AwsSageMakerNotebookInstanceMetadataServiceConfigurationDetails instanceMetadataServiceConfiguration;
+
     public AwsSageMakerNotebookInstanceDetails withInstanceMetadataServiceConfiguration(AwsSageMakerNotebookInstanceMetadataServiceConfigurationDetails instanceMetadataServiceConfiguration) {
         this.instanceMetadataServiceConfiguration = instanceMetadataServiceConfiguration;
         return this;
@@ -63,6 +69,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public AwsSageMakerNotebookInstanceDetails withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -71,6 +78,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public AwsSageMakerNotebookInstanceDetails withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -79,6 +87,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkInterfaceId")
     public String networkInterfaceId;
+
     public AwsSageMakerNotebookInstanceDetails withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -87,6 +96,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceArn")
     public String notebookInstanceArn;
+
     public AwsSageMakerNotebookInstanceDetails withNotebookInstanceArn(String notebookInstanceArn) {
         this.notebookInstanceArn = notebookInstanceArn;
         return this;
@@ -95,6 +105,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceLifecycleConfigName")
     public String notebookInstanceLifecycleConfigName;
+
     public AwsSageMakerNotebookInstanceDetails withNotebookInstanceLifecycleConfigName(String notebookInstanceLifecycleConfigName) {
         this.notebookInstanceLifecycleConfigName = notebookInstanceLifecycleConfigName;
         return this;
@@ -103,6 +114,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceName")
     public String notebookInstanceName;
+
     public AwsSageMakerNotebookInstanceDetails withNotebookInstanceName(String notebookInstanceName) {
         this.notebookInstanceName = notebookInstanceName;
         return this;
@@ -111,6 +123,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceStatus")
     public String notebookInstanceStatus;
+
     public AwsSageMakerNotebookInstanceDetails withNotebookInstanceStatus(String notebookInstanceStatus) {
         this.notebookInstanceStatus = notebookInstanceStatus;
         return this;
@@ -119,6 +132,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlatformIdentifier")
     public String platformIdentifier;
+
     public AwsSageMakerNotebookInstanceDetails withPlatformIdentifier(String platformIdentifier) {
         this.platformIdentifier = platformIdentifier;
         return this;
@@ -127,6 +141,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public AwsSageMakerNotebookInstanceDetails withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -135,6 +150,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootAccess")
     public String rootAccess;
+
     public AwsSageMakerNotebookInstanceDetails withRootAccess(String rootAccess) {
         this.rootAccess = rootAccess;
         return this;
@@ -143,6 +159,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroups")
     public String[] securityGroups;
+
     public AwsSageMakerNotebookInstanceDetails withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -151,6 +168,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public AwsSageMakerNotebookInstanceDetails withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -159,6 +177,7 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public AwsSageMakerNotebookInstanceDetails withUrl(String url) {
         this.url = url;
         return this;
@@ -167,9 +186,11 @@ public class AwsSageMakerNotebookInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeSizeInGB")
     public Long volumeSizeInGB;
+
     public AwsSageMakerNotebookInstanceDetails withVolumeSizeInGB(Long volumeSizeInGB) {
         this.volumeSizeInGB = volumeSizeInGB;
         return this;
     }
     
+    public AwsSageMakerNotebookInstanceDetails(){}
 }

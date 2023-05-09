@@ -15,6 +15,7 @@ public class ClassifierMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationMetrics")
     public ClassifierEvaluationMetrics evaluationMetrics;
+
     public ClassifierMetadata withEvaluationMetrics(ClassifierEvaluationMetrics evaluationMetrics) {
         this.evaluationMetrics = evaluationMetrics;
         return this;
@@ -23,6 +24,7 @@ public class ClassifierMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfLabels")
     public Long numberOfLabels;
+
     public ClassifierMetadata withNumberOfLabels(Long numberOfLabels) {
         this.numberOfLabels = numberOfLabels;
         return this;
@@ -31,6 +33,7 @@ public class ClassifierMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfTestDocuments")
     public Long numberOfTestDocuments;
+
     public ClassifierMetadata withNumberOfTestDocuments(Long numberOfTestDocuments) {
         this.numberOfTestDocuments = numberOfTestDocuments;
         return this;
@@ -39,9 +42,11 @@ public class ClassifierMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfTrainedDocuments")
     public Long numberOfTrainedDocuments;
+
     public ClassifierMetadata withNumberOfTrainedDocuments(Long numberOfTrainedDocuments) {
         this.numberOfTrainedDocuments = numberOfTrainedDocuments;
         return this;
     }
     
+    public ClassifierMetadata(){}
 }

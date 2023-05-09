@@ -15,9 +15,11 @@ public class OnSuccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destination")
     public String destination;
+
     public OnSuccess withDestination(String destination) {
         this.destination = destination;
         return this;
     }
     
+    public OnSuccess(){}
 }

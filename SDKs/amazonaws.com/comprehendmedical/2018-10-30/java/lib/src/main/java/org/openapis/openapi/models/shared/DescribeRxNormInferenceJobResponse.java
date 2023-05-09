@@ -15,9 +15,11 @@ public class DescribeRxNormInferenceJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComprehendMedicalAsyncJobProperties")
     public ComprehendMedicalAsyncJobProperties comprehendMedicalAsyncJobProperties;
+
     public DescribeRxNormInferenceJobResponse withComprehendMedicalAsyncJobProperties(ComprehendMedicalAsyncJobProperties comprehendMedicalAsyncJobProperties) {
         this.comprehendMedicalAsyncJobProperties = comprehendMedicalAsyncJobProperties;
         return this;
     }
     
+    public DescribeRxNormInferenceJobResponse(){}
 }

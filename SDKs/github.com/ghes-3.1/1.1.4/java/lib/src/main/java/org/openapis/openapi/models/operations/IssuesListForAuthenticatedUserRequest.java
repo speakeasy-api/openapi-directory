@@ -13,6 +13,7 @@ public class IssuesListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public org.openapis.openapi.models.shared.DirectionEnum direction;
+
     public IssuesListForAuthenticatedUserRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -23,6 +24,7 @@ public class IssuesListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public IssuesListForAuthenticatedUserFilterEnum filter;
+
     public IssuesListForAuthenticatedUserRequest withFilter(IssuesListForAuthenticatedUserFilterEnum filter) {
         this.filter = filter;
         return this;
@@ -33,6 +35,7 @@ public class IssuesListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labels")
     public String labels;
+
     public IssuesListForAuthenticatedUserRequest withLabels(String labels) {
         this.labels = labels;
         return this;
@@ -43,6 +46,7 @@ public class IssuesListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public IssuesListForAuthenticatedUserRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -53,6 +57,7 @@ public class IssuesListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public IssuesListForAuthenticatedUserRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -63,6 +68,7 @@ public class IssuesListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public OffsetDateTime since;
+
     public IssuesListForAuthenticatedUserRequest withSince(OffsetDateTime since) {
         this.since = since;
         return this;
@@ -73,6 +79,7 @@ public class IssuesListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public IssuesListForAuthenticatedUserSortEnum sort;
+
     public IssuesListForAuthenticatedUserRequest withSort(IssuesListForAuthenticatedUserSortEnum sort) {
         this.sort = sort;
         return this;
@@ -83,9 +90,11 @@ public class IssuesListForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public IssuesListForAuthenticatedUserStateEnum state;
+
     public IssuesListForAuthenticatedUserRequest withState(IssuesListForAuthenticatedUserStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public IssuesListForAuthenticatedUserRequest(){}
 }

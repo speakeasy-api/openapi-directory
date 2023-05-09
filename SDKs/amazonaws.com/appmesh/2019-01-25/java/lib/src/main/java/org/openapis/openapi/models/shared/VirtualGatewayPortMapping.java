@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VirtualGatewayPortMapping {
     @JsonProperty("port")
     public Long port;
+
     public VirtualGatewayPortMapping withPort(Long port) {
         this.port = port;
         return this;
@@ -19,9 +20,14 @@ public class VirtualGatewayPortMapping {
     
     @JsonProperty("protocol")
     public VirtualGatewayPortProtocolEnum protocol;
+
     public VirtualGatewayPortMapping withProtocol(VirtualGatewayPortProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public VirtualGatewayPortMapping(@JsonProperty("port") Long port, @JsonProperty("protocol") VirtualGatewayPortProtocolEnum protocol) {
+        this.port = port;
+        this.protocol = protocol;
+  }
 }

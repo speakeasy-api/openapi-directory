@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PartitionKey {
     @JsonProperty("name")
     public String name;
+
     public PartitionKey withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PartitionKey(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -18,6 +18,7 @@ public class AppProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AppProfile withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class AppProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public AppProfile withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class AppProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiClusterRoutingUseAny")
     public MultiClusterRoutingUseAny multiClusterRoutingUseAny;
+
     public AppProfile withMultiClusterRoutingUseAny(MultiClusterRoutingUseAny multiClusterRoutingUseAny) {
         this.multiClusterRoutingUseAny = multiClusterRoutingUseAny;
         return this;
@@ -51,6 +54,7 @@ public class AppProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AppProfile withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class AppProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("singleClusterRouting")
     public SingleClusterRouting singleClusterRouting;
+
     public AppProfile withSingleClusterRouting(SingleClusterRouting singleClusterRouting) {
         this.singleClusterRouting = singleClusterRouting;
         return this;
     }
     
+    public AppProfile(){}
 }

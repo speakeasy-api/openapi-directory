@@ -47,4 +47,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/DescribeHomeRegionControlsR
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeHomeRegionControlsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetHomeRegionResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

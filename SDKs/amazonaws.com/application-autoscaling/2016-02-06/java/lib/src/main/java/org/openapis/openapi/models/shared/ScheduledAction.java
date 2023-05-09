@@ -21,6 +21,7 @@ public class ScheduledAction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ScheduledAction withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -31,6 +32,7 @@ public class ScheduledAction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public ScheduledAction withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class ScheduledAction {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ScheduledAction withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -46,6 +49,7 @@ public class ScheduledAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalableDimension")
     public ScalableDimensionEnum scalableDimension;
+
     public ScheduledAction withScalableDimension(ScalableDimensionEnum scalableDimension) {
         this.scalableDimension = scalableDimension;
         return this;
@@ -54,6 +58,7 @@ public class ScheduledAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalableTargetAction")
     public ScalableTargetAction scalableTargetAction;
+
     public ScheduledAction withScalableTargetAction(ScalableTargetAction scalableTargetAction) {
         this.scalableTargetAction = scalableTargetAction;
         return this;
@@ -61,6 +66,7 @@ public class ScheduledAction {
     
     @JsonProperty("Schedule")
     public String schedule;
+
     public ScheduledAction withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -68,6 +74,7 @@ public class ScheduledAction {
     
     @JsonProperty("ScheduledActionARN")
     public String scheduledActionARN;
+
     public ScheduledAction withScheduledActionARN(String scheduledActionARN) {
         this.scheduledActionARN = scheduledActionARN;
         return this;
@@ -75,6 +82,7 @@ public class ScheduledAction {
     
     @JsonProperty("ScheduledActionName")
     public String scheduledActionName;
+
     public ScheduledAction withScheduledActionName(String scheduledActionName) {
         this.scheduledActionName = scheduledActionName;
         return this;
@@ -82,6 +90,7 @@ public class ScheduledAction {
     
     @JsonProperty("ServiceNamespace")
     public ServiceNamespaceEnum serviceNamespace;
+
     public ScheduledAction withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
@@ -92,6 +101,7 @@ public class ScheduledAction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public ScheduledAction withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -100,9 +110,18 @@ public class ScheduledAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timezone")
     public String timezone;
+
     public ScheduledAction withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public ScheduledAction(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ResourceId") String resourceId, @JsonProperty("Schedule") String schedule, @JsonProperty("ScheduledActionARN") String scheduledActionARN, @JsonProperty("ScheduledActionName") String scheduledActionName, @JsonProperty("ServiceNamespace") ServiceNamespaceEnum serviceNamespace) {
+        this.creationTime = creationTime;
+        this.resourceId = resourceId;
+        this.schedule = schedule;
+        this.scheduledActionARN = scheduledActionARN;
+        this.scheduledActionName = scheduledActionName;
+        this.serviceNamespace = serviceNamespace;
+  }
 }

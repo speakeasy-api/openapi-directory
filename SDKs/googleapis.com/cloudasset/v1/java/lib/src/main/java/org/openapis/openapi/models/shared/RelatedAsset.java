@@ -18,6 +18,7 @@ public class RelatedAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ancestors")
     public String[] ancestors;
+
     public RelatedAsset withAncestors(String[] ancestors) {
         this.ancestors = ancestors;
         return this;
@@ -29,6 +30,7 @@ public class RelatedAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset")
     public String asset;
+
     public RelatedAsset withAsset(String asset) {
         this.asset = asset;
         return this;
@@ -40,6 +42,7 @@ public class RelatedAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetType")
     public String assetType;
+
     public RelatedAsset withAssetType(String assetType) {
         this.assetType = assetType;
         return this;
@@ -51,9 +54,11 @@ public class RelatedAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationshipType")
     public String relationshipType;
+
     public RelatedAsset withRelationshipType(String relationshipType) {
         this.relationshipType = relationshipType;
         return this;
     }
     
+    public RelatedAsset(){}
 }

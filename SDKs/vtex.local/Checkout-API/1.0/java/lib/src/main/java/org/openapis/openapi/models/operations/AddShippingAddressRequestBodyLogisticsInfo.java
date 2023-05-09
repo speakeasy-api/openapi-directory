@@ -15,6 +15,7 @@ public class AddShippingAddressRequestBodyLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemIndex")
     public Long itemIndex;
+
     public AddShippingAddressRequestBodyLogisticsInfo withItemIndex(Long itemIndex) {
         this.itemIndex = itemIndex;
         return this;
@@ -26,6 +27,7 @@ public class AddShippingAddressRequestBodyLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedDeliveryChannel")
     public String selectedDeliveryChannel;
+
     public AddShippingAddressRequestBodyLogisticsInfo withSelectedDeliveryChannel(String selectedDeliveryChannel) {
         this.selectedDeliveryChannel = selectedDeliveryChannel;
         return this;
@@ -37,9 +39,11 @@ public class AddShippingAddressRequestBodyLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedSla")
     public String selectedSla;
+
     public AddShippingAddressRequestBodyLogisticsInfo withSelectedSla(String selectedSla) {
         this.selectedSla = selectedSla;
         return this;
     }
     
+    public AddShippingAddressRequestBodyLogisticsInfo(){}
 }

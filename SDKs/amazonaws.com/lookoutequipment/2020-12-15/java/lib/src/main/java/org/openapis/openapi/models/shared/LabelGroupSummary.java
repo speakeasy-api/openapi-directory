@@ -22,6 +22,7 @@ public class LabelGroupSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public LabelGroupSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class LabelGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelGroupArn")
     public String labelGroupArn;
+
     public LabelGroupSummary withLabelGroupArn(String labelGroupArn) {
         this.labelGroupArn = labelGroupArn;
         return this;
@@ -38,6 +40,7 @@ public class LabelGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelGroupName")
     public String labelGroupName;
+
     public LabelGroupSummary withLabelGroupName(String labelGroupName) {
         this.labelGroupName = labelGroupName;
         return this;
@@ -48,9 +51,11 @@ public class LabelGroupSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public LabelGroupSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public LabelGroupSummary(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLFTagResponse {
@@ -12,6 +13,7 @@ public class CreateLFTagResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateLFTagResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateLFTagResponse {
     
     
     public String contentType;
+
     public CreateLFTagResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateLFTagResponse {
      */
     
     public java.util.Map<String, Object> createLFTagResponse;
+
     public CreateLFTagResponse withCreateLFTagResponse(java.util.Map<String, Object> createLFTagResponse) {
         this.createLFTagResponse = createLFTagResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateLFTagResponse {
      */
     
     public Object entityNotFoundException;
+
     public CreateLFTagResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class CreateLFTagResponse {
      */
     
     public Object internalServiceException;
+
     public CreateLFTagResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class CreateLFTagResponse {
      */
     
     public Object invalidInputException;
+
     public CreateLFTagResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class CreateLFTagResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateLFTagResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class CreateLFTagResponse {
     
     
     public Integer statusCode;
+
     public CreateLFTagResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateLFTagResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLFTagResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateLFTagResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateLFTagResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
     }
     
+    public CreateLFTagResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

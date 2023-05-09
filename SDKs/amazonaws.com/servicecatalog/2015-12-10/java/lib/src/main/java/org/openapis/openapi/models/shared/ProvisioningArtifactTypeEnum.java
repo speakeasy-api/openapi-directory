@@ -9,7 +9,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public enum ProvisioningArtifactTypeEnum {
     CLOUD_FORMATION_TEMPLATE("CLOUD_FORMATION_TEMPLATE"),
     MARKETPLACE_AMI("MARKETPLACE_AMI"),
-    MARKETPLACE_CAR("MARKETPLACE_CAR");
+    MARKETPLACE_CAR("MARKETPLACE_CAR"),
+    TERRAFORM_OPEN_SOURCE("TERRAFORM_OPEN_SOURCE");
 
     @JsonValue
     public final String value;

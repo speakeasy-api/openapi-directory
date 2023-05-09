@@ -18,6 +18,7 @@ public class FilterLowercaseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public FilterLowercaseDetails withField(String field) {
         this.field = field;
         return this;
@@ -29,9 +30,11 @@ public class FilterLowercaseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldIndex")
     public Integer fieldIndex;
+
     public FilterLowercaseDetails withFieldIndex(Integer fieldIndex) {
         this.fieldIndex = fieldIndex;
         return this;
     }
     
+    public FilterLowercaseDetails(){}
 }

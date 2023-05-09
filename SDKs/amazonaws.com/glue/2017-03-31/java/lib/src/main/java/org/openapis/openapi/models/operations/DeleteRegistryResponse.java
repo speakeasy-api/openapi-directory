@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRegistryResponse {
@@ -12,6 +13,7 @@ public class DeleteRegistryResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteRegistryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteRegistryResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteRegistryResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRegistryResponse {
     
     
     public String contentType;
+
     public DeleteRegistryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRegistryResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteRegistryResponse deleteRegistryResponse;
+
     public DeleteRegistryResponse withDeleteRegistryResponse(org.openapis.openapi.models.shared.DeleteRegistryResponse deleteRegistryResponse) {
         this.deleteRegistryResponse = deleteRegistryResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRegistryResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteRegistryResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteRegistryResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteRegistryResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteRegistryResponse {
     
     
     public Integer statusCode;
+
     public DeleteRegistryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteRegistryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRegistryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteRegistryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

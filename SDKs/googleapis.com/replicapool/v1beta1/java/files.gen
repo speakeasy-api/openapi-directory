@@ -127,4 +127,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/Replica.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReplicaStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReplicasDeleteRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReplicasListResponse.java
+docs/sdk/README.md
+docs/pools/README.md
+docs/replicas/README.md
 USAGE.md

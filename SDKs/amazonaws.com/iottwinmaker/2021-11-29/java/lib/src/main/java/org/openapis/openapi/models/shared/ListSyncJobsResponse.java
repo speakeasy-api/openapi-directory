@@ -15,6 +15,7 @@ public class ListSyncJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSyncJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSyncJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncJobSummaries")
     public SyncJobSummary[] syncJobSummaries;
+
     public ListSyncJobsResponse withSyncJobSummaries(SyncJobSummary[] syncJobSummaries) {
         this.syncJobSummaries = syncJobSummaries;
         return this;
     }
     
+    public ListSyncJobsResponse(){}
 }

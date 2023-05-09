@@ -15,6 +15,7 @@ public class DescribeComplianceByConfigRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceTypes")
     public ComplianceTypeEnum[] complianceTypes;
+
     public DescribeComplianceByConfigRuleRequest withComplianceTypes(ComplianceTypeEnum[] complianceTypes) {
         this.complianceTypes = complianceTypes;
         return this;
@@ -23,6 +24,7 @@ public class DescribeComplianceByConfigRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleNames")
     public String[] configRuleNames;
+
     public DescribeComplianceByConfigRuleRequest withConfigRuleNames(String[] configRuleNames) {
         this.configRuleNames = configRuleNames;
         return this;
@@ -31,9 +33,11 @@ public class DescribeComplianceByConfigRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeComplianceByConfigRuleRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeComplianceByConfigRuleRequest(){}
 }

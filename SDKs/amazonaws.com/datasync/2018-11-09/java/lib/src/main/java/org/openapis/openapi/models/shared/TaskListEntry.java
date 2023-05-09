@@ -15,6 +15,7 @@ public class TaskListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public TaskListEntry withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class TaskListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TaskStatusEnum status;
+
     public TaskListEntry withStatus(TaskStatusEnum status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class TaskListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskArn")
     public String taskArn;
+
     public TaskListEntry withTaskArn(String taskArn) {
         this.taskArn = taskArn;
         return this;
     }
     
+    public TaskListEntry(){}
 }

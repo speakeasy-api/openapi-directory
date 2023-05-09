@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetQuerySuggestionsResponse {
@@ -12,6 +13,7 @@ public class GetQuerySuggestionsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetQuerySuggestionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetQuerySuggestionsResponse {
      */
     
     public Object conflictException;
+
     public GetQuerySuggestionsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetQuerySuggestionsResponse {
     
     
     public String contentType;
+
     public GetQuerySuggestionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetQuerySuggestionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetQuerySuggestionsResponse getQuerySuggestionsResponse;
+
     public GetQuerySuggestionsResponse withGetQuerySuggestionsResponse(org.openapis.openapi.models.shared.GetQuerySuggestionsResponse getQuerySuggestionsResponse) {
         this.getQuerySuggestionsResponse = getQuerySuggestionsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetQuerySuggestionsResponse {
      */
     
     public Object internalServerException;
+
     public GetQuerySuggestionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class GetQuerySuggestionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetQuerySuggestionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetQuerySuggestionsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetQuerySuggestionsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class GetQuerySuggestionsResponse {
     
     
     public Integer statusCode;
+
     public GetQuerySuggestionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetQuerySuggestionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetQuerySuggestionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetQuerySuggestionsResponse {
      */
     
     public Object throttlingException;
+
     public GetQuerySuggestionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetQuerySuggestionsResponse {
      */
     
     public Object validationException;
+
     public GetQuerySuggestionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetQuerySuggestionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

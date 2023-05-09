@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveAccountScanTemplateRequest {
@@ -12,9 +13,13 @@ public class RemoveAccountScanTemplateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scan_template_id")
     public String scanTemplateId;
+
     public RemoveAccountScanTemplateRequest withScanTemplateId(String scanTemplateId) {
         this.scanTemplateId = scanTemplateId;
         return this;
     }
     
+    public RemoveAccountScanTemplateRequest(@JsonProperty("scan_template_id") String scanTemplateId) {
+        this.scanTemplateId = scanTemplateId;
+  }
 }

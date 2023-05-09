@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListJobExecutionsForThingRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListJobExecutionsForThingRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class ListJobExecutionsForThingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListJobExecutionsForThingRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class ListJobExecutionsForThingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListJobExecutionsForThingRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class ListJobExecutionsForThingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListJobExecutionsForThingRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class ListJobExecutionsForThingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListJobExecutionsForThingRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class ListJobExecutionsForThingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListJobExecutionsForThingRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class ListJobExecutionsForThingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListJobExecutionsForThingRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class ListJobExecutionsForThingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jobId")
     public String jobId;
+
     public ListJobExecutionsForThingRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -71,6 +80,7 @@ public class ListJobExecutionsForThingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ListJobExecutionsForThingRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -81,6 +91,7 @@ public class ListJobExecutionsForThingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=namespaceId")
     public String namespaceId;
+
     public ListJobExecutionsForThingRequest withNamespaceId(String namespaceId) {
         this.namespaceId = namespaceId;
         return this;
@@ -91,6 +102,7 @@ public class ListJobExecutionsForThingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListJobExecutionsForThingRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -101,6 +113,7 @@ public class ListJobExecutionsForThingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public ListJobExecutionsForThingStatusEnum status;
+
     public ListJobExecutionsForThingRequest withStatus(ListJobExecutionsForThingStatusEnum status) {
         this.status = status;
         return this;
@@ -111,9 +124,13 @@ public class ListJobExecutionsForThingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thingName")
     public String thingName;
+
     public ListJobExecutionsForThingRequest withThingName(String thingName) {
         this.thingName = thingName;
         return this;
     }
     
+    public ListJobExecutionsForThingRequest(@JsonProperty("thingName") String thingName) {
+        this.thingName = thingName;
+  }
 }

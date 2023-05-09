@@ -12,6 +12,7 @@ public class ApiKeyOwner200ApplicationJSONOperations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Double limit;
+
     public ApiKeyOwner200ApplicationJSONOperations withLimit(Double limit) {
         this.limit = limit;
         return this;
@@ -20,6 +21,7 @@ public class ApiKeyOwner200ApplicationJSONOperations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ApiKeyOwner200ApplicationJSONOperations withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class ApiKeyOwner200ApplicationJSONOperations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overage")
     public Double overage;
+
     public ApiKeyOwner200ApplicationJSONOperations withOverage(Double overage) {
         this.overage = overage;
         return this;
@@ -36,9 +39,11 @@ public class ApiKeyOwner200ApplicationJSONOperations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public Double usage;
+
     public ApiKeyOwner200ApplicationJSONOperations withUsage(Double usage) {
         this.usage = usage;
         return this;
     }
     
+    public ApiKeyOwner200ApplicationJSONOperations(){}
 }

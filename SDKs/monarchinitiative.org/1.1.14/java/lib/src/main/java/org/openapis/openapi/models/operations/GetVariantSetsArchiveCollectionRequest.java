@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVariantSetsArchiveCollectionRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=day")
     public Long day;
+
     public GetVariantSetsArchiveCollectionRequest withDay(Long day) {
         this.day = day;
         return this;
@@ -16,6 +18,7 @@ public class GetVariantSetsArchiveCollectionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=month")
     public Long month;
+
     public GetVariantSetsArchiveCollectionRequest withMonth(Long month) {
         this.month = month;
         return this;
@@ -26,6 +29,7 @@ public class GetVariantSetsArchiveCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetVariantSetsArchiveCollectionRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -36,6 +40,7 @@ public class GetVariantSetsArchiveCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public GetVariantSetsArchiveCollectionPerPageEnum perPage;
+
     public GetVariantSetsArchiveCollectionRequest withPerPage(GetVariantSetsArchiveCollectionPerPageEnum perPage) {
         this.perPage = perPage;
         return this;
@@ -43,9 +48,15 @@ public class GetVariantSetsArchiveCollectionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
     public Long year;
+
     public GetVariantSetsArchiveCollectionRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetVariantSetsArchiveCollectionRequest(@JsonProperty("day") Long day, @JsonProperty("month") Long month, @JsonProperty("year") Long year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class OptionGroups {
     
     public String marker;
+
     public OptionGroups withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class OptionGroups {
     
     
     public OptionGroupsList[] optionGroupsList;
+
     public OptionGroups withOptionGroupsList(OptionGroupsList[] optionGroupsList) {
         this.optionGroupsList = optionGroupsList;
         return this;
     }
     
+    public OptionGroups(){}
 }

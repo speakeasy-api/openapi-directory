@@ -12,6 +12,7 @@ public class SetV2LoggingLevelRequestBody {
      */
     @JsonProperty("logLevel")
     public SetV2LoggingLevelRequestBodyLogLevelEnum logLevel;
+
     public SetV2LoggingLevelRequestBody withLogLevel(SetV2LoggingLevelRequestBodyLogLevelEnum logLevel) {
         this.logLevel = logLevel;
         return this;
@@ -22,9 +23,14 @@ public class SetV2LoggingLevelRequestBody {
      */
     @JsonProperty("logTarget")
     public SetV2LoggingLevelRequestBodyLogTarget logTarget;
+
     public SetV2LoggingLevelRequestBody withLogTarget(SetV2LoggingLevelRequestBodyLogTarget logTarget) {
         this.logTarget = logTarget;
         return this;
     }
     
+    public SetV2LoggingLevelRequestBody(@JsonProperty("logLevel") SetV2LoggingLevelRequestBodyLogLevelEnum logLevel, @JsonProperty("logTarget") SetV2LoggingLevelRequestBodyLogTarget logTarget) {
+        this.logLevel = logLevel;
+        this.logTarget = logTarget;
+  }
 }

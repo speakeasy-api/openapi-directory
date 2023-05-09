@@ -20,6 +20,7 @@ public class ForecastSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedUsingAutoPredictor")
     public Boolean createdUsingAutoPredictor;
+
     public ForecastSummary withCreatedUsingAutoPredictor(Boolean createdUsingAutoPredictor) {
         this.createdUsingAutoPredictor = createdUsingAutoPredictor;
         return this;
@@ -30,6 +31,7 @@ public class ForecastSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ForecastSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class ForecastSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetGroupArn")
     public String datasetGroupArn;
+
     public ForecastSummary withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -46,6 +49,7 @@ public class ForecastSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastArn")
     public String forecastArn;
+
     public ForecastSummary withForecastArn(String forecastArn) {
         this.forecastArn = forecastArn;
         return this;
@@ -54,6 +58,7 @@ public class ForecastSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastName")
     public String forecastName;
+
     public ForecastSummary withForecastName(String forecastName) {
         this.forecastName = forecastName;
         return this;
@@ -64,6 +69,7 @@ public class ForecastSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public ForecastSummary withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -72,6 +78,7 @@ public class ForecastSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ForecastSummary withMessage(String message) {
         this.message = message;
         return this;
@@ -80,6 +87,7 @@ public class ForecastSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorArn")
     public String predictorArn;
+
     public ForecastSummary withPredictorArn(String predictorArn) {
         this.predictorArn = predictorArn;
         return this;
@@ -88,9 +96,11 @@ public class ForecastSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public ForecastSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ForecastSummary(){}
 }

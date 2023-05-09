@@ -15,6 +15,7 @@ public class InstancesResumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disks")
     public CustomerEncryptionKeyProtectedDisk[] disks;
+
     public InstancesResumeRequest withDisks(CustomerEncryptionKeyProtectedDisk[] disks) {
         this.disks = disks;
         return this;
@@ -23,9 +24,11 @@ public class InstancesResumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceEncryptionKey")
     public CustomerEncryptionKey instanceEncryptionKey;
+
     public InstancesResumeRequest withInstanceEncryptionKey(CustomerEncryptionKey instanceEncryptionKey) {
         this.instanceEncryptionKey = instanceEncryptionKey;
         return this;
     }
     
+    public InstancesResumeRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOnlineSzamlaStatusResponse {
@@ -12,6 +13,7 @@ public class GetOnlineSzamlaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse;
+
     public GetOnlineSzamlaStatusResponse withClientErrorResponse(org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse) {
         this.clientErrorResponse = clientErrorResponse;
         return this;
@@ -19,6 +21,7 @@ public class GetOnlineSzamlaStatusResponse {
     
     
     public String contentType;
+
     public GetOnlineSzamlaStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetOnlineSzamlaStatusResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetOnlineSzamlaStatusResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -36,6 +40,7 @@ public class GetOnlineSzamlaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.OnlineSzamlaStatus onlineSzamlaStatus;
+
     public GetOnlineSzamlaStatusResponse withOnlineSzamlaStatus(org.openapis.openapi.models.shared.OnlineSzamlaStatus onlineSzamlaStatus) {
         this.onlineSzamlaStatus = onlineSzamlaStatus;
         return this;
@@ -46,6 +51,7 @@ public class GetOnlineSzamlaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse;
+
     public GetOnlineSzamlaStatusResponse withServerErrorResponse(org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse) {
         this.serverErrorResponse = serverErrorResponse;
         return this;
@@ -53,6 +59,7 @@ public class GetOnlineSzamlaStatusResponse {
     
     
     public Integer statusCode;
+
     public GetOnlineSzamlaStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,6 +67,7 @@ public class GetOnlineSzamlaStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOnlineSzamlaStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -70,9 +78,14 @@ public class GetOnlineSzamlaStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse;
+
     public GetOnlineSzamlaStatusResponse withValidationErrorResponse(org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse) {
         this.validationErrorResponse = validationErrorResponse;
         return this;
     }
     
+    public GetOnlineSzamlaStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

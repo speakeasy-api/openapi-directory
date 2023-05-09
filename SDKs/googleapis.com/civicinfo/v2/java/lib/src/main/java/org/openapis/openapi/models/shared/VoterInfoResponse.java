@@ -18,6 +18,7 @@ public class VoterInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contests")
     public Contest[] contests;
+
     public VoterInfoResponse withContests(Contest[] contests) {
         this.contests = contests;
         return this;
@@ -29,6 +30,7 @@ public class VoterInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dropOffLocations")
     public PollingLocation[] dropOffLocations;
+
     public VoterInfoResponse withDropOffLocations(PollingLocation[] dropOffLocations) {
         this.dropOffLocations = dropOffLocations;
         return this;
@@ -40,6 +42,7 @@ public class VoterInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earlyVoteSites")
     public PollingLocation[] earlyVoteSites;
+
     public VoterInfoResponse withEarlyVoteSites(PollingLocation[] earlyVoteSites) {
         this.earlyVoteSites = earlyVoteSites;
         return this;
@@ -51,6 +54,7 @@ public class VoterInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("election")
     public Election election;
+
     public VoterInfoResponse withElection(Election election) {
         this.election = election;
         return this;
@@ -62,6 +66,7 @@ public class VoterInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public VoterInfoResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class VoterInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mailOnly")
     public Boolean mailOnly;
+
     public VoterInfoResponse withMailOnly(Boolean mailOnly) {
         this.mailOnly = mailOnly;
         return this;
@@ -84,6 +90,7 @@ public class VoterInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalizedInput")
     public SimpleAddressType normalizedInput;
+
     public VoterInfoResponse withNormalizedInput(SimpleAddressType normalizedInput) {
         this.normalizedInput = normalizedInput;
         return this;
@@ -95,6 +102,7 @@ public class VoterInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otherElections")
     public Election[] otherElections;
+
     public VoterInfoResponse withOtherElections(Election[] otherElections) {
         this.otherElections = otherElections;
         return this;
@@ -106,6 +114,7 @@ public class VoterInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pollingLocations")
     public PollingLocation[] pollingLocations;
+
     public VoterInfoResponse withPollingLocations(PollingLocation[] pollingLocations) {
         this.pollingLocations = pollingLocations;
         return this;
@@ -114,6 +123,7 @@ public class VoterInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precinctId")
     public String precinctId;
+
     public VoterInfoResponse withPrecinctId(String precinctId) {
         this.precinctId = precinctId;
         return this;
@@ -125,6 +135,7 @@ public class VoterInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precincts")
     public Precinct[] precincts;
+
     public VoterInfoResponse withPrecincts(Precinct[] precincts) {
         this.precincts = precincts;
         return this;
@@ -136,9 +147,11 @@ public class VoterInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public AdministrationRegion[] state;
+
     public VoterInfoResponse withState(AdministrationRegion[] state) {
         this.state = state;
         return this;
     }
     
+    public VoterInfoResponse(){}
 }

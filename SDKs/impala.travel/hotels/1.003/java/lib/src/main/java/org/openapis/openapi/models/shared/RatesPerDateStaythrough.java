@@ -15,9 +15,13 @@ public class RatesPerDateStaythrough {
      */
     @JsonProperty("min")
     public Double min;
+
     public RatesPerDateStaythrough withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public RatesPerDateStaythrough(@JsonProperty("min") Double min) {
+        this.min = min;
+  }
 }

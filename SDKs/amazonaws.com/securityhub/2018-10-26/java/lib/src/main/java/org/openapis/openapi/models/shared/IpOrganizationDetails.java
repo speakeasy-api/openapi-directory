@@ -15,6 +15,7 @@ public class IpOrganizationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Asn")
     public Long asn;
+
     public IpOrganizationDetails withAsn(Long asn) {
         this.asn = asn;
         return this;
@@ -23,6 +24,7 @@ public class IpOrganizationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AsnOrg")
     public String asnOrg;
+
     public IpOrganizationDetails withAsnOrg(String asnOrg) {
         this.asnOrg = asnOrg;
         return this;
@@ -31,6 +33,7 @@ public class IpOrganizationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Isp")
     public String isp;
+
     public IpOrganizationDetails withIsp(String isp) {
         this.isp = isp;
         return this;
@@ -39,9 +42,11 @@ public class IpOrganizationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Org")
     public String org;
+
     public IpOrganizationDetails withOrg(String org) {
         this.org = org;
         return this;
     }
     
+    public IpOrganizationDetails(){}
 }

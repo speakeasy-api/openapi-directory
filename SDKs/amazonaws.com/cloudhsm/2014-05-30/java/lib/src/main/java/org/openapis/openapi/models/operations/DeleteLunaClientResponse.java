@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLunaClientResponse {
@@ -12,6 +13,7 @@ public class DeleteLunaClientResponse {
      */
     
     public Object cloudHsmInternalException;
+
     public DeleteLunaClientResponse withCloudHsmInternalException(Object cloudHsmInternalException) {
         this.cloudHsmInternalException = cloudHsmInternalException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteLunaClientResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public DeleteLunaClientResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLunaClientResponse {
     
     
     public String contentType;
+
     public DeleteLunaClientResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLunaClientResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteLunaClientResponse deleteLunaClientResponse;
+
     public DeleteLunaClientResponse withDeleteLunaClientResponse(org.openapis.openapi.models.shared.DeleteLunaClientResponse deleteLunaClientResponse) {
         this.deleteLunaClientResponse = deleteLunaClientResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteLunaClientResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteLunaClientResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteLunaClientResponse {
     
     
     public Integer statusCode;
+
     public DeleteLunaClientResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteLunaClientResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLunaClientResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteLunaClientResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

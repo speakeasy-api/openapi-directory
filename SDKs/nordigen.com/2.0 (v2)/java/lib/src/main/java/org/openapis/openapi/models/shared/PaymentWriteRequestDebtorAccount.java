@@ -18,6 +18,7 @@ public class PaymentWriteRequestDebtorAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public String account;
+
     public PaymentWriteRequestDebtorAccount withAccount(String account) {
         this.account = account;
         return this;
@@ -29,6 +30,7 @@ public class PaymentWriteRequestDebtorAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_country")
     public String addressCountry;
+
     public PaymentWriteRequestDebtorAccount withAddressCountry(String addressCountry) {
         this.addressCountry = addressCountry;
         return this;
@@ -40,6 +42,7 @@ public class PaymentWriteRequestDebtorAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_street")
     public String addressStreet;
+
     public PaymentWriteRequestDebtorAccount withAddressStreet(String addressStreet) {
         this.addressStreet = addressStreet;
         return this;
@@ -51,6 +54,7 @@ public class PaymentWriteRequestDebtorAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public PaymentWriteRequestDebtorAccount withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -61,6 +65,7 @@ public class PaymentWriteRequestDebtorAccount {
      */
     @JsonProperty("name")
     public String name;
+
     public PaymentWriteRequestDebtorAccount withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +77,7 @@ public class PaymentWriteRequestDebtorAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("post_code")
     public String postCode;
+
     public PaymentWriteRequestDebtorAccount withPostCode(String postCode) {
         this.postCode = postCode;
         return this;
@@ -79,10 +85,14 @@ public class PaymentWriteRequestDebtorAccount {
     
     /**
      * Debtor account type
+     * 
+     * * `IBAN` - IBAN
+     * * `SCAN` - SortCodeAccountNumber
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PaymentWriteRequestDebtorAccountTypeEnum type;
+
     public PaymentWriteRequestDebtorAccount withType(PaymentWriteRequestDebtorAccountTypeEnum type) {
         this.type = type;
         return this;
@@ -94,9 +104,13 @@ public class PaymentWriteRequestDebtorAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type_number")
     public String typeNumber;
+
     public PaymentWriteRequestDebtorAccount withTypeNumber(String typeNumber) {
         this.typeNumber = typeNumber;
         return this;
     }
     
+    public PaymentWriteRequestDebtorAccount(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

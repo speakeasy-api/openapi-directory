@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogLineageV1Process {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, Object> attributes;
+
     public GoogleCloudDatacatalogLineageV1Process withAttributes(java.util.Map<String, Object> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogLineageV1Process {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatacatalogLineageV1Process withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogLineageV1Process {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDatacatalogLineageV1Process withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDatacatalogLineageV1Process {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public GoogleCloudDatacatalogLineageV1Origin origin;
+
     public GoogleCloudDatacatalogLineageV1Process withOrigin(GoogleCloudDatacatalogLineageV1Origin origin) {
         this.origin = origin;
         return this;
     }
     
+    public GoogleCloudDatacatalogLineageV1Process(){}
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1LocationsIdEmailTemplatesRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetSetupV1LocationsIdEmailTemplatesRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetSetupV1LocationsIdEmailTemplatesRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

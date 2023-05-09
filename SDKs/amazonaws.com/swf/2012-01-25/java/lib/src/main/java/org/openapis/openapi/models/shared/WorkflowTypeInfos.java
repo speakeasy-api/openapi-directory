@@ -15,6 +15,7 @@ public class WorkflowTypeInfos {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public WorkflowTypeInfos withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -22,9 +23,13 @@ public class WorkflowTypeInfos {
     
     @JsonProperty("typeInfos")
     public WorkflowTypeInfo[] typeInfos;
+
     public WorkflowTypeInfos withTypeInfos(WorkflowTypeInfo[] typeInfos) {
         this.typeInfos = typeInfos;
         return this;
     }
     
+    public WorkflowTypeInfos(@JsonProperty("typeInfos") WorkflowTypeInfo[] typeInfos) {
+        this.typeInfos = typeInfos;
+  }
 }

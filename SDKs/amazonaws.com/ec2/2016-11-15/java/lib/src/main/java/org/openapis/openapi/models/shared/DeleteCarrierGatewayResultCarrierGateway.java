@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteCarrierGatewayResultCarrierGateway {
     
     public String carrierGatewayId;
+
     public DeleteCarrierGatewayResultCarrierGateway withCarrierGatewayId(String carrierGatewayId) {
         this.carrierGatewayId = carrierGatewayId;
         return this;
@@ -19,6 +20,7 @@ public class DeleteCarrierGatewayResultCarrierGateway {
     
     
     public String ownerId;
+
     public DeleteCarrierGatewayResultCarrierGateway withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -26,6 +28,7 @@ public class DeleteCarrierGatewayResultCarrierGateway {
     
     
     public DeleteCarrierGatewayResultCarrierGatewayStateEnum state;
+
     public DeleteCarrierGatewayResultCarrierGateway withState(DeleteCarrierGatewayResultCarrierGatewayStateEnum state) {
         this.state = state;
         return this;
@@ -33,6 +36,7 @@ public class DeleteCarrierGatewayResultCarrierGateway {
     
     
     public DeleteCarrierGatewayResultCarrierGatewayTags[] tags;
+
     public DeleteCarrierGatewayResultCarrierGateway withTags(DeleteCarrierGatewayResultCarrierGatewayTags[] tags) {
         this.tags = tags;
         return this;
@@ -40,9 +44,11 @@ public class DeleteCarrierGatewayResultCarrierGateway {
     
     
     public String vpcId;
+
     public DeleteCarrierGatewayResultCarrierGateway withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DeleteCarrierGatewayResultCarrierGateway(){}
 }

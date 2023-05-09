@@ -18,6 +18,7 @@ public class GoogleCloudMlV1Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public GoogleCloudMlV1Trial withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudMlV1Trial withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalMeasurement")
     public GoogleCloudMlV1Measurement finalMeasurement;
+
     public GoogleCloudMlV1Trial withFinalMeasurement(GoogleCloudMlV1Measurement finalMeasurement) {
         this.finalMeasurement = finalMeasurement;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudMlV1Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infeasibleReason")
     public String infeasibleReason;
+
     public GoogleCloudMlV1Trial withInfeasibleReason(String infeasibleReason) {
         this.infeasibleReason = infeasibleReason;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudMlV1Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurements")
     public GoogleCloudMlV1Measurement[] measurements;
+
     public GoogleCloudMlV1Trial withMeasurements(GoogleCloudMlV1Measurement[] measurements) {
         this.measurements = measurements;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudMlV1Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudMlV1Trial withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudMlV1Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public GoogleCloudMlV1TrialParameter[] parameters;
+
     public GoogleCloudMlV1Trial withParameters(GoogleCloudMlV1TrialParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudMlV1Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudMlV1Trial withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudMlV1Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudMlV1TrialStateEnum state;
+
     public GoogleCloudMlV1Trial withState(GoogleCloudMlV1TrialStateEnum state) {
         this.state = state;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudMlV1Trial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trialInfeasible")
     public Boolean trialInfeasible;
+
     public GoogleCloudMlV1Trial withTrialInfeasible(Boolean trialInfeasible) {
         this.trialInfeasible = trialInfeasible;
         return this;
     }
     
+    public GoogleCloudMlV1Trial(){}
 }

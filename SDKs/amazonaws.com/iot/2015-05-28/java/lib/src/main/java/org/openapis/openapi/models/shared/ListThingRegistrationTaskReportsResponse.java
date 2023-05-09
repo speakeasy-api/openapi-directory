@@ -15,6 +15,7 @@ public class ListThingRegistrationTaskReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListThingRegistrationTaskReportsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class ListThingRegistrationTaskReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportType")
     public ReportTypeEnum reportType;
+
     public ListThingRegistrationTaskReportsResponse withReportType(ReportTypeEnum reportType) {
         this.reportType = reportType;
         return this;
@@ -31,9 +33,11 @@ public class ListThingRegistrationTaskReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLinks")
     public String[] resourceLinks;
+
     public ListThingRegistrationTaskReportsResponse withResourceLinks(String[] resourceLinks) {
         this.resourceLinks = resourceLinks;
         return this;
     }
     
+    public ListThingRegistrationTaskReportsResponse(){}
 }

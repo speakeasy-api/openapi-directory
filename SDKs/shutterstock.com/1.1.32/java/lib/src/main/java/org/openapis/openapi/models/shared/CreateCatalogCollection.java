@@ -15,6 +15,7 @@ public class CreateCatalogCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public CreateCatalogCollectionItem[] items;
+
     public CreateCatalogCollection withItems(CreateCatalogCollectionItem[] items) {
         this.items = items;
         return this;
@@ -22,6 +23,7 @@ public class CreateCatalogCollection {
     
     @JsonProperty("name")
     public String name;
+
     public CreateCatalogCollection withName(String name) {
         this.name = name;
         return this;
@@ -30,9 +32,13 @@ public class CreateCatalogCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public CreateCatalogCollectionVisibilityEnum visibility;
+
     public CreateCatalogCollection withVisibility(CreateCatalogCollectionVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public CreateCatalogCollection(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

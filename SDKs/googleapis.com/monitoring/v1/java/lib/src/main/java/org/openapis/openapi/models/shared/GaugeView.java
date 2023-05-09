@@ -18,6 +18,7 @@ public class GaugeView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowerBound")
     public Double lowerBound;
+
     public GaugeView withLowerBound(Double lowerBound) {
         this.lowerBound = lowerBound;
         return this;
@@ -29,9 +30,11 @@ public class GaugeView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upperBound")
     public Double upperBound;
+
     public GaugeView withUpperBound(Double upperBound) {
         this.upperBound = upperBound;
         return this;
     }
     
+    public GaugeView(){}
 }

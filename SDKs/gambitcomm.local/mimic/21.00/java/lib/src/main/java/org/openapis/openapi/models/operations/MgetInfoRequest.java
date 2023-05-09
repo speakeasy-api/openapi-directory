@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MgetInfoRequest {
@@ -12,9 +13,13 @@ public class MgetInfoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=infoArray")
     public String[] infoArray;
+
     public MgetInfoRequest withInfoArray(String[] infoArray) {
         this.infoArray = infoArray;
         return this;
     }
     
+    public MgetInfoRequest(@JsonProperty("infoArray") String[] infoArray) {
+        this.infoArray = infoArray;
+  }
 }

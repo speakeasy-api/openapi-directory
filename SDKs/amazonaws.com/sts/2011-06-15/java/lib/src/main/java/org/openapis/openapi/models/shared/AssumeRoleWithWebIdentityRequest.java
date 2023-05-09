@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AssumeRoleWithWebIdentityRequest {
     
     public Long durationSeconds;
+
     public AssumeRoleWithWebIdentityRequest withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -16,6 +17,7 @@ public class AssumeRoleWithWebIdentityRequest {
     
     
     public String policy;
+
     public AssumeRoleWithWebIdentityRequest withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -23,6 +25,7 @@ public class AssumeRoleWithWebIdentityRequest {
     
     
     public PolicyDescriptorType[] policyArns;
+
     public AssumeRoleWithWebIdentityRequest withPolicyArns(PolicyDescriptorType[] policyArns) {
         this.policyArns = policyArns;
         return this;
@@ -30,6 +33,7 @@ public class AssumeRoleWithWebIdentityRequest {
     
     
     public String providerId;
+
     public AssumeRoleWithWebIdentityRequest withProviderId(String providerId) {
         this.providerId = providerId;
         return this;
@@ -37,6 +41,7 @@ public class AssumeRoleWithWebIdentityRequest {
     
     
     public String roleArn;
+
     public AssumeRoleWithWebIdentityRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -44,6 +49,7 @@ public class AssumeRoleWithWebIdentityRequest {
     
     
     public String roleSessionName;
+
     public AssumeRoleWithWebIdentityRequest withRoleSessionName(String roleSessionName) {
         this.roleSessionName = roleSessionName;
         return this;
@@ -51,9 +57,15 @@ public class AssumeRoleWithWebIdentityRequest {
     
     
     public String webIdentityToken;
+
     public AssumeRoleWithWebIdentityRequest withWebIdentityToken(String webIdentityToken) {
         this.webIdentityToken = webIdentityToken;
         return this;
     }
     
+    public AssumeRoleWithWebIdentityRequest(@JsonProperty("RoleArn") String roleArn, @JsonProperty("RoleSessionName") String roleSessionName, @JsonProperty("WebIdentityToken") String webIdentityToken) {
+        this.roleArn = roleArn;
+        this.roleSessionName = roleSessionName;
+        this.webIdentityToken = webIdentityToken;
+  }
 }

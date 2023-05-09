@@ -15,9 +15,11 @@ public class ServiceEndpoint {
      */
     
     public String endpoint;
+
     public ServiceEndpoint withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
+    public ServiceEndpoint(){}
 }

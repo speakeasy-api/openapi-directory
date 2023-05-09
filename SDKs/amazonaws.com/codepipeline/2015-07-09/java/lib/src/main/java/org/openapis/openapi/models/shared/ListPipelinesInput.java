@@ -15,6 +15,7 @@ public class ListPipelinesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListPipelinesInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,9 +24,11 @@ public class ListPipelinesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListPipelinesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListPipelinesInput(){}
 }

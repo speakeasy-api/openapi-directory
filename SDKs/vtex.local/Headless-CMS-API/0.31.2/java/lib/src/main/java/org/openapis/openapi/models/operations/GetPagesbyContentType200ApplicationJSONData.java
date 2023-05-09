@@ -18,6 +18,7 @@ public class GetPagesbyContentType200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetPagesbyContentType200ApplicationJSONData withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class GetPagesbyContentType200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetPagesbyContentType200ApplicationJSONData withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GetPagesbyContentType200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, Object> parameters;
+
     public GetPagesbyContentType200ApplicationJSONData withParameters(java.util.Map<String, Object> parameters) {
         this.parameters = parameters;
         return this;
@@ -51,6 +54,7 @@ public class GetPagesbyContentType200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sections")
     public GetPagesbyContentType200ApplicationJSONDataSections[] sections;
+
     public GetPagesbyContentType200ApplicationJSONData withSections(GetPagesbyContentType200ApplicationJSONDataSections[] sections) {
         this.sections = sections;
         return this;
@@ -62,6 +66,7 @@ public class GetPagesbyContentType200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GetPagesbyContentType200ApplicationJSONData withStatus(String status) {
         this.status = status;
         return this;
@@ -73,6 +78,7 @@ public class GetPagesbyContentType200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetPagesbyContentType200ApplicationJSONData withType(String type) {
         this.type = type;
         return this;
@@ -84,6 +90,7 @@ public class GetPagesbyContentType200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionId")
     public String versionId;
+
     public GetPagesbyContentType200ApplicationJSONData withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
@@ -95,9 +102,11 @@ public class GetPagesbyContentType200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionStatus")
     public String versionStatus;
+
     public GetPagesbyContentType200ApplicationJSONData withVersionStatus(String versionStatus) {
         this.versionStatus = versionStatus;
         return this;
     }
     
+    public GetPagesbyContentType200ApplicationJSONData(){}
 }

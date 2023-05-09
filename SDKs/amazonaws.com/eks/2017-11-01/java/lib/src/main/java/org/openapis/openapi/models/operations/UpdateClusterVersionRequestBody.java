@@ -15,6 +15,7 @@ public class UpdateClusterVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public UpdateClusterVersionRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -25,9 +26,13 @@ public class UpdateClusterVersionRequestBody {
      */
     @JsonProperty("version")
     public String version;
+
     public UpdateClusterVersionRequestBody withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public UpdateClusterVersionRequestBody(@JsonProperty("version") String version) {
+        this.version = version;
+  }
 }

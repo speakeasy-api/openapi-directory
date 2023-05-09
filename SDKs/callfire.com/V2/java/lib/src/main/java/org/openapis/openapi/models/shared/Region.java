@@ -18,6 +18,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public Region withCity(String city) {
         this.city = city;
         return this;
@@ -29,6 +30,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public Region withCountry(String country) {
         this.country = country;
         return this;
@@ -40,6 +42,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Float latitude;
+
     public Region withLatitude(Float latitude) {
         this.latitude = latitude;
         return this;
@@ -51,6 +54,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Float longitude;
+
     public Region withLongitude(Float longitude) {
         this.longitude = longitude;
         return this;
@@ -62,6 +66,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public Region withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -73,6 +78,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public Region withState(String state) {
         this.state = state;
         return this;
@@ -84,6 +90,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public Region withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -95,9 +102,11 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zipcode")
     public String zipcode;
+
     public Region withZipcode(String zipcode) {
         this.zipcode = zipcode;
         return this;
     }
     
+    public Region(){}
 }

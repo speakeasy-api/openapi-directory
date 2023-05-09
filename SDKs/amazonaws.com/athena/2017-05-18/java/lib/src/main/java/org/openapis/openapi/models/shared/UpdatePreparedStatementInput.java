@@ -12,6 +12,7 @@ public class UpdatePreparedStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdatePreparedStatementInput withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class UpdatePreparedStatementInput {
     
     @JsonProperty("QueryStatement")
     public String queryStatement;
+
     public UpdatePreparedStatementInput withQueryStatement(String queryStatement) {
         this.queryStatement = queryStatement;
         return this;
@@ -26,6 +28,7 @@ public class UpdatePreparedStatementInput {
     
     @JsonProperty("StatementName")
     public String statementName;
+
     public UpdatePreparedStatementInput withStatementName(String statementName) {
         this.statementName = statementName;
         return this;
@@ -33,9 +36,15 @@ public class UpdatePreparedStatementInput {
     
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public UpdatePreparedStatementInput withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public UpdatePreparedStatementInput(@JsonProperty("QueryStatement") String queryStatement, @JsonProperty("StatementName") String statementName, @JsonProperty("WorkGroup") String workGroup) {
+        this.queryStatement = queryStatement;
+        this.statementName = statementName;
+        this.workGroup = workGroup;
+  }
 }

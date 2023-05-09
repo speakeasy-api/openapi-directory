@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFleetAdvisorCollectorResponse {
@@ -12,6 +13,7 @@ public class DeleteFleetAdvisorCollectorResponse {
      */
     
     public Object collectorNotFoundFault;
+
     public DeleteFleetAdvisorCollectorResponse withCollectorNotFoundFault(Object collectorNotFoundFault) {
         this.collectorNotFoundFault = collectorNotFoundFault;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFleetAdvisorCollectorResponse {
     
     
     public String contentType;
+
     public DeleteFleetAdvisorCollectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFleetAdvisorCollectorResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public DeleteFleetAdvisorCollectorResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -36,6 +40,7 @@ public class DeleteFleetAdvisorCollectorResponse {
     
     
     public Integer statusCode;
+
     public DeleteFleetAdvisorCollectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeleteFleetAdvisorCollectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFleetAdvisorCollectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteFleetAdvisorCollectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

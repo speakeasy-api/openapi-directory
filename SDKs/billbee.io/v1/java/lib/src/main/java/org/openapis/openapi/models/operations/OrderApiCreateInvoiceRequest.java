@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiCreateInvoiceRequest {
@@ -12,6 +13,7 @@ public class OrderApiCreateInvoiceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public OrderApiCreateInvoiceRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class OrderApiCreateInvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeInvoicePdf")
     public Boolean includeInvoicePdf;
+
     public OrderApiCreateInvoiceRequest withIncludeInvoicePdf(Boolean includeInvoicePdf) {
         this.includeInvoicePdf = includeInvoicePdf;
         return this;
@@ -32,6 +35,7 @@ public class OrderApiCreateInvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendToCloudId")
     public Long sendToCloudId;
+
     public OrderApiCreateInvoiceRequest withSendToCloudId(Long sendToCloudId) {
         this.sendToCloudId = sendToCloudId;
         return this;
@@ -42,9 +46,13 @@ public class OrderApiCreateInvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=templateId")
     public Long templateId;
+
     public OrderApiCreateInvoiceRequest withTemplateId(Long templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public OrderApiCreateInvoiceRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

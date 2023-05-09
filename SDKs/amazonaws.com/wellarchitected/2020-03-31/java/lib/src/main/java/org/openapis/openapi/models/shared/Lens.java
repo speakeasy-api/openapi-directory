@@ -18,6 +18,7 @@ public class Lens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Lens withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class Lens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensArn")
     public String lensArn;
+
     public Lens withLensArn(String lensArn) {
         this.lensArn = lensArn;
         return this;
@@ -34,6 +36,7 @@ public class Lens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensVersion")
     public String lensVersion;
+
     public Lens withLensVersion(String lensVersion) {
         this.lensVersion = lensVersion;
         return this;
@@ -45,6 +48,7 @@ public class Lens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Lens withName(String name) {
         this.name = name;
         return this;
@@ -53,6 +57,7 @@ public class Lens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public Lens withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -61,6 +66,7 @@ public class Lens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareInvitationId")
     public String shareInvitationId;
+
     public Lens withShareInvitationId(String shareInvitationId) {
         this.shareInvitationId = shareInvitationId;
         return this;
@@ -69,9 +75,11 @@ public class Lens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public Lens withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public Lens(){}
 }

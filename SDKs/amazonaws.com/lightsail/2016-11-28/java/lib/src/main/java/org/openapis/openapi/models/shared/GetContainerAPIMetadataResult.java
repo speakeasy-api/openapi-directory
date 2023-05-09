@@ -15,9 +15,11 @@ public class GetContainerAPIMetadataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String>[] metadata;
+
     public GetContainerAPIMetadataResult withMetadata(java.util.Map<String, String>[] metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public GetContainerAPIMetadataResult(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateManagedInstanceRoleRequest {
     @JsonProperty("IamRole")
     public String iamRole;
+
     public UpdateManagedInstanceRoleRequest withIamRole(String iamRole) {
         this.iamRole = iamRole;
         return this;
@@ -16,9 +17,14 @@ public class UpdateManagedInstanceRoleRequest {
     
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public UpdateManagedInstanceRoleRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public UpdateManagedInstanceRoleRequest(@JsonProperty("IamRole") String iamRole, @JsonProperty("InstanceId") String instanceId) {
+        this.iamRole = iamRole;
+        this.instanceId = instanceId;
+  }
 }

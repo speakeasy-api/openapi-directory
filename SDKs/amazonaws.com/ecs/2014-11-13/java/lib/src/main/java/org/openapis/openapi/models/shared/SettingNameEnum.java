@@ -11,7 +11,9 @@ public enum SettingNameEnum {
     TASK_LONG_ARN_FORMAT("taskLongArnFormat"),
     CONTAINER_INSTANCE_LONG_ARN_FORMAT("containerInstanceLongArnFormat"),
     AWSVPC_TRUNKING("awsvpcTrunking"),
-    CONTAINER_INSIGHTS("containerInsights");
+    CONTAINER_INSIGHTS("containerInsights"),
+    FARGATE_FIPS_MODE("fargateFIPSMode"),
+    TAG_RESOURCE_AUTHORIZATION("tagResourceAuthorization");
 
     @JsonValue
     public final String value;

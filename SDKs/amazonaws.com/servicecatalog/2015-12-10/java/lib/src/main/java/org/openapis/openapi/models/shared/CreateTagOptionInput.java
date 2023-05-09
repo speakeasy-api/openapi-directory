@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTagOptionInput {
     @JsonProperty("Key")
     public String key;
+
     public CreateTagOptionInput withKey(String key) {
         this.key = key;
         return this;
@@ -16,9 +17,14 @@ public class CreateTagOptionInput {
     
     @JsonProperty("Value")
     public String value;
+
     public CreateTagOptionInput withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateTagOptionInput(@JsonProperty("Key") String key, @JsonProperty("Value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

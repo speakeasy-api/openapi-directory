@@ -18,6 +18,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Alert withMessage(String message) {
         this.message = message;
         return this;
@@ -29,6 +30,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Alert withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public AlertSeverityEnum severity;
+
     public Alert withSeverity(AlertSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -51,9 +54,11 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Alert withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Alert(){}
 }

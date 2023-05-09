@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGroupCertificateConfigurationResponse {
@@ -12,6 +13,7 @@ public class GetGroupCertificateConfigurationResponse {
      */
     
     public Object badRequestException;
+
     public GetGroupCertificateConfigurationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetGroupCertificateConfigurationResponse {
     
     
     public String contentType;
+
     public GetGroupCertificateConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetGroupCertificateConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetGroupCertificateConfigurationResponse getGroupCertificateConfigurationResponse;
+
     public GetGroupCertificateConfigurationResponse withGetGroupCertificateConfigurationResponse(org.openapis.openapi.models.shared.GetGroupCertificateConfigurationResponse getGroupCertificateConfigurationResponse) {
         this.getGroupCertificateConfigurationResponse = getGroupCertificateConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetGroupCertificateConfigurationResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetGroupCertificateConfigurationResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -46,6 +51,7 @@ public class GetGroupCertificateConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetGroupCertificateConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetGroupCertificateConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGroupCertificateConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetGroupCertificateConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

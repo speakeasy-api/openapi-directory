@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse {
      */
     
     public java.util.Map<String, Object> effectiveRepoBranchingModel;
+
     public GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse withEffectiveRepoBranchingModel(java.util.Map<String, Object> effectiveRepoBranchingModel) {
         this.effectiveRepoBranchingModel = effectiveRepoBranchingModel;
         return this;
@@ -43,9 +48,14 @@ public class GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

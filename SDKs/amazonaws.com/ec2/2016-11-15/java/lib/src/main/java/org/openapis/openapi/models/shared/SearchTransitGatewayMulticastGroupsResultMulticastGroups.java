@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SearchTransitGatewayMulticastGroupsResultMulticastGroups {
     
     public String groupIpAddress;
+
     public SearchTransitGatewayMulticastGroupsResultMulticastGroups withGroupIpAddress(String groupIpAddress) {
         this.groupIpAddress = groupIpAddress;
         return this;
@@ -19,6 +20,7 @@ public class SearchTransitGatewayMulticastGroupsResultMulticastGroups {
     
     
     public Boolean groupMember;
+
     public SearchTransitGatewayMulticastGroupsResultMulticastGroups withGroupMember(Boolean groupMember) {
         this.groupMember = groupMember;
         return this;
@@ -26,6 +28,7 @@ public class SearchTransitGatewayMulticastGroupsResultMulticastGroups {
     
     
     public Boolean groupSource;
+
     public SearchTransitGatewayMulticastGroupsResultMulticastGroups withGroupSource(Boolean groupSource) {
         this.groupSource = groupSource;
         return this;
@@ -33,6 +36,7 @@ public class SearchTransitGatewayMulticastGroupsResultMulticastGroups {
     
     
     public SearchTransitGatewayMulticastGroupsResultMulticastGroupsMemberTypeEnum memberType;
+
     public SearchTransitGatewayMulticastGroupsResultMulticastGroups withMemberType(SearchTransitGatewayMulticastGroupsResultMulticastGroupsMemberTypeEnum memberType) {
         this.memberType = memberType;
         return this;
@@ -40,6 +44,7 @@ public class SearchTransitGatewayMulticastGroupsResultMulticastGroups {
     
     
     public String networkInterfaceId;
+
     public SearchTransitGatewayMulticastGroupsResultMulticastGroups withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -47,6 +52,7 @@ public class SearchTransitGatewayMulticastGroupsResultMulticastGroups {
     
     
     public String resourceId;
+
     public SearchTransitGatewayMulticastGroupsResultMulticastGroups withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -54,6 +60,7 @@ public class SearchTransitGatewayMulticastGroupsResultMulticastGroups {
     
     
     public String resourceOwnerId;
+
     public SearchTransitGatewayMulticastGroupsResultMulticastGroups withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
@@ -61,6 +68,7 @@ public class SearchTransitGatewayMulticastGroupsResultMulticastGroups {
     
     
     public SearchTransitGatewayMulticastGroupsResultMulticastGroupsResourceTypeEnum resourceType;
+
     public SearchTransitGatewayMulticastGroupsResultMulticastGroups withResourceType(SearchTransitGatewayMulticastGroupsResultMulticastGroupsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -68,6 +76,7 @@ public class SearchTransitGatewayMulticastGroupsResultMulticastGroups {
     
     
     public SearchTransitGatewayMulticastGroupsResultMulticastGroupsSourceTypeEnum sourceType;
+
     public SearchTransitGatewayMulticastGroupsResultMulticastGroups withSourceType(SearchTransitGatewayMulticastGroupsResultMulticastGroupsSourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -75,6 +84,7 @@ public class SearchTransitGatewayMulticastGroupsResultMulticastGroups {
     
     
     public String subnetId;
+
     public SearchTransitGatewayMulticastGroupsResultMulticastGroups withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -82,9 +92,11 @@ public class SearchTransitGatewayMulticastGroupsResultMulticastGroups {
     
     
     public String transitGatewayAttachmentId;
+
     public SearchTransitGatewayMulticastGroupsResultMulticastGroups withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
     }
     
+    public SearchTransitGatewayMulticastGroupsResultMulticastGroups(){}
 }

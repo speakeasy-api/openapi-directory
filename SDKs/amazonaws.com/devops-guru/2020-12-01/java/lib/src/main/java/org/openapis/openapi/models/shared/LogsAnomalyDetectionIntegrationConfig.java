@@ -15,9 +15,11 @@ public class LogsAnomalyDetectionIntegrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptInStatus")
     public OptInStatusEnum optInStatus;
+
     public LogsAnomalyDetectionIntegrationConfig withOptInStatus(OptInStatusEnum optInStatus) {
         this.optInStatus = optInStatus;
         return this;
     }
     
+    public LogsAnomalyDetectionIntegrationConfig(){}
 }

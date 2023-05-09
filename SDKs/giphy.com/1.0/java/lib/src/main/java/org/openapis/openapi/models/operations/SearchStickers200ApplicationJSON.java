@@ -15,6 +15,7 @@ public class SearchStickers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.Gif[] data;
+
     public SearchStickers200ApplicationJSON withData(org.openapis.openapi.models.shared.Gif[] data) {
         this.data = data;
         return this;
@@ -27,6 +28,7 @@ public class SearchStickers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public org.openapis.openapi.models.shared.Meta meta;
+
     public SearchStickers200ApplicationJSON withMeta(org.openapis.openapi.models.shared.Meta meta) {
         this.meta = meta;
         return this;
@@ -39,9 +41,11 @@ public class SearchStickers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public org.openapis.openapi.models.shared.Pagination pagination;
+
     public SearchStickers200ApplicationJSON withPagination(org.openapis.openapi.models.shared.Pagination pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public SearchStickers200ApplicationJSON(){}
 }

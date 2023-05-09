@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTableResponse {
     
     public String contentType;
+
     public GetTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,8 +21,31 @@ public class GetTableResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetTableResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
+        return this;
+    }
+    
+    /**
+     * FederationSourceException
+     */
+    
+    public Object federationSourceException;
+
+    public GetTableResponse withFederationSourceException(Object federationSourceException) {
+        this.federationSourceException = federationSourceException;
+        return this;
+    }
+    
+    /**
+     * FederationSourceRetryableException
+     */
+    
+    public Object federationSourceRetryableException;
+
+    public GetTableResponse withFederationSourceRetryableException(Object federationSourceRetryableException) {
+        this.federationSourceRetryableException = federationSourceRetryableException;
         return this;
     }
     
@@ -29,6 +54,7 @@ public class GetTableResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTableResponse getTableResponse;
+
     public GetTableResponse withGetTableResponse(org.openapis.openapi.models.shared.GetTableResponse getTableResponse) {
         this.getTableResponse = getTableResponse;
         return this;
@@ -39,6 +65,7 @@ public class GetTableResponse {
      */
     
     public Object glueEncryptionException;
+
     public GetTableResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +76,7 @@ public class GetTableResponse {
      */
     
     public Object internalServiceException;
+
     public GetTableResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +87,7 @@ public class GetTableResponse {
      */
     
     public Object invalidInputException;
+
     public GetTableResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +98,7 @@ public class GetTableResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetTableResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -79,6 +109,7 @@ public class GetTableResponse {
      */
     
     public Object resourceNotReadyException;
+
     public GetTableResponse withResourceNotReadyException(Object resourceNotReadyException) {
         this.resourceNotReadyException = resourceNotReadyException;
         return this;
@@ -86,6 +117,7 @@ public class GetTableResponse {
     
     
     public Integer statusCode;
+
     public GetTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +125,14 @@ public class GetTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

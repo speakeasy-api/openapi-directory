@@ -15,6 +15,7 @@ public class KeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CRLSign")
     public Boolean crlSign;
+
     public KeyUsage withCRLSign(Boolean crlSign) {
         this.crlSign = crlSign;
         return this;
@@ -23,6 +24,7 @@ public class KeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataEncipherment")
     public Boolean dataEncipherment;
+
     public KeyUsage withDataEncipherment(Boolean dataEncipherment) {
         this.dataEncipherment = dataEncipherment;
         return this;
@@ -31,6 +33,7 @@ public class KeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DecipherOnly")
     public Boolean decipherOnly;
+
     public KeyUsage withDecipherOnly(Boolean decipherOnly) {
         this.decipherOnly = decipherOnly;
         return this;
@@ -39,6 +42,7 @@ public class KeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DigitalSignature")
     public Boolean digitalSignature;
+
     public KeyUsage withDigitalSignature(Boolean digitalSignature) {
         this.digitalSignature = digitalSignature;
         return this;
@@ -47,6 +51,7 @@ public class KeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncipherOnly")
     public Boolean encipherOnly;
+
     public KeyUsage withEncipherOnly(Boolean encipherOnly) {
         this.encipherOnly = encipherOnly;
         return this;
@@ -55,6 +60,7 @@ public class KeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyAgreement")
     public Boolean keyAgreement;
+
     public KeyUsage withKeyAgreement(Boolean keyAgreement) {
         this.keyAgreement = keyAgreement;
         return this;
@@ -63,6 +69,7 @@ public class KeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyCertSign")
     public Boolean keyCertSign;
+
     public KeyUsage withKeyCertSign(Boolean keyCertSign) {
         this.keyCertSign = keyCertSign;
         return this;
@@ -71,6 +78,7 @@ public class KeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyEncipherment")
     public Boolean keyEncipherment;
+
     public KeyUsage withKeyEncipherment(Boolean keyEncipherment) {
         this.keyEncipherment = keyEncipherment;
         return this;
@@ -79,9 +87,11 @@ public class KeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonRepudiation")
     public Boolean nonRepudiation;
+
     public KeyUsage withNonRepudiation(Boolean nonRepudiation) {
         this.nonRepudiation = nonRepudiation;
         return this;
     }
     
+    public KeyUsage(){}
 }

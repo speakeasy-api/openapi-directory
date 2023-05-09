@@ -18,6 +18,7 @@ public class WorkerMessageCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public WorkerMessageCode withCode(String code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class WorkerMessageCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, Object> parameters;
+
     public WorkerMessageCode withParameters(java.util.Map<String, Object> parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public WorkerMessageCode(){}
 }

@@ -18,6 +18,7 @@ public class ListCreativesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatives")
     public Creative[] creatives;
+
     public ListCreativesResponse withCreatives(Creative[] creatives) {
         this.creatives = creatives;
         return this;
@@ -29,9 +30,11 @@ public class ListCreativesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCreativesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCreativesResponse(){}
 }

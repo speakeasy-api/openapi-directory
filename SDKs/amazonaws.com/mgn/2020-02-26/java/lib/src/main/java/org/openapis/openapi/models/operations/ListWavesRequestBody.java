@@ -15,6 +15,7 @@ public class ListWavesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public ListWavesRequestBodyFilters filters;
+
     public ListWavesRequestBody withFilters(ListWavesRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class ListWavesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListWavesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class ListWavesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListWavesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListWavesRequestBody(){}
 }

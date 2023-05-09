@@ -12,9 +12,13 @@ public class AnalyzeExpenseRequest {
      */
     @JsonProperty("Document")
     public Document document;
+
     public AnalyzeExpenseRequest withDocument(Document document) {
         this.document = document;
         return this;
     }
     
+    public AnalyzeExpenseRequest(@JsonProperty("Document") Document document) {
+        this.document = document;
+  }
 }

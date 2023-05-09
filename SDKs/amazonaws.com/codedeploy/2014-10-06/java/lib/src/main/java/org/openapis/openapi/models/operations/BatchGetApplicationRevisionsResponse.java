@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetApplicationRevisionsResponse {
@@ -12,6 +13,7 @@ public class BatchGetApplicationRevisionsResponse {
      */
     
     public Object applicationDoesNotExistException;
+
     public BatchGetApplicationRevisionsResponse withApplicationDoesNotExistException(Object applicationDoesNotExistException) {
         this.applicationDoesNotExistException = applicationDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetApplicationRevisionsResponse {
      */
     
     public Object applicationNameRequiredException;
+
     public BatchGetApplicationRevisionsResponse withApplicationNameRequiredException(Object applicationNameRequiredException) {
         this.applicationNameRequiredException = applicationNameRequiredException;
         return this;
@@ -32,6 +35,7 @@ public class BatchGetApplicationRevisionsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetApplicationRevisionsOutput batchGetApplicationRevisionsOutput;
+
     public BatchGetApplicationRevisionsResponse withBatchGetApplicationRevisionsOutput(org.openapis.openapi.models.shared.BatchGetApplicationRevisionsOutput batchGetApplicationRevisionsOutput) {
         this.batchGetApplicationRevisionsOutput = batchGetApplicationRevisionsOutput;
         return this;
@@ -42,6 +46,7 @@ public class BatchGetApplicationRevisionsResponse {
      */
     
     public Object batchLimitExceededException;
+
     public BatchGetApplicationRevisionsResponse withBatchLimitExceededException(Object batchLimitExceededException) {
         this.batchLimitExceededException = batchLimitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetApplicationRevisionsResponse {
     
     
     public String contentType;
+
     public BatchGetApplicationRevisionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class BatchGetApplicationRevisionsResponse {
      */
     
     public Object invalidApplicationNameException;
+
     public BatchGetApplicationRevisionsResponse withInvalidApplicationNameException(Object invalidApplicationNameException) {
         this.invalidApplicationNameException = invalidApplicationNameException;
         return this;
@@ -69,6 +76,7 @@ public class BatchGetApplicationRevisionsResponse {
      */
     
     public Object invalidRevisionException;
+
     public BatchGetApplicationRevisionsResponse withInvalidRevisionException(Object invalidRevisionException) {
         this.invalidRevisionException = invalidRevisionException;
         return this;
@@ -79,6 +87,7 @@ public class BatchGetApplicationRevisionsResponse {
      */
     
     public Object revisionRequiredException;
+
     public BatchGetApplicationRevisionsResponse withRevisionRequiredException(Object revisionRequiredException) {
         this.revisionRequiredException = revisionRequiredException;
         return this;
@@ -86,6 +95,7 @@ public class BatchGetApplicationRevisionsResponse {
     
     
     public Integer statusCode;
+
     public BatchGetApplicationRevisionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class BatchGetApplicationRevisionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetApplicationRevisionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetApplicationRevisionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

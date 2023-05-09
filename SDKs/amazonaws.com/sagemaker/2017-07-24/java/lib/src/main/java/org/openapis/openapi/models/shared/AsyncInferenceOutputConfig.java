@@ -15,6 +15,7 @@ public class AsyncInferenceOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public AsyncInferenceOutputConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -23,16 +24,29 @@ public class AsyncInferenceOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationConfig")
     public AsyncInferenceNotificationConfig notificationConfig;
+
     public AsyncInferenceOutputConfig withNotificationConfig(AsyncInferenceNotificationConfig notificationConfig) {
         this.notificationConfig = notificationConfig;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("S3FailurePath")
+    public String s3FailurePath;
+
+    public AsyncInferenceOutputConfig withS3FailurePath(String s3FailurePath) {
+        this.s3FailurePath = s3FailurePath;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3OutputPath")
     public String s3OutputPath;
+
     public AsyncInferenceOutputConfig withS3OutputPath(String s3OutputPath) {
         this.s3OutputPath = s3OutputPath;
         return this;
     }
     
+    public AsyncInferenceOutputConfig(){}
 }

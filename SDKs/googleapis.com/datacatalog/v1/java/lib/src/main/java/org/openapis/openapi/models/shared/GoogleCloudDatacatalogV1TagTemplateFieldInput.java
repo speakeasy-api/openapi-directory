@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1TagTemplateFieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDatacatalogV1TagTemplateFieldInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1TagTemplateFieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatacatalogV1TagTemplateFieldInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1TagTemplateFieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRequired")
     public Boolean isRequired;
+
     public GoogleCloudDatacatalogV1TagTemplateFieldInput withIsRequired(Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogV1TagTemplateFieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Integer order;
+
     public GoogleCloudDatacatalogV1TagTemplateFieldInput withOrder(Integer order) {
         this.order = order;
         return this;
@@ -59,9 +63,11 @@ public class GoogleCloudDatacatalogV1TagTemplateFieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDatacatalogV1FieldType type;
+
     public GoogleCloudDatacatalogV1TagTemplateFieldInput withType(GoogleCloudDatacatalogV1FieldType type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1TagTemplateFieldInput(){}
 }

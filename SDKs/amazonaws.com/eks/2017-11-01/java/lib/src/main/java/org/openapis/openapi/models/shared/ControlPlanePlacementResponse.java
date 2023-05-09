@@ -15,9 +15,11 @@ public class ControlPlanePlacementResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupName")
     public String groupName;
+
     public ControlPlanePlacementResponse withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public ControlPlanePlacementResponse(){}
 }

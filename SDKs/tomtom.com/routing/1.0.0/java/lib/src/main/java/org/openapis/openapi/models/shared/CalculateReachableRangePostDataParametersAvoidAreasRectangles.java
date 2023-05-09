@@ -12,6 +12,7 @@ public class CalculateReachableRangePostDataParametersAvoidAreasRectangles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("northEastCorner")
     public CalculateReachableRangePostDataParametersAvoidAreasRectanglesNorthEastCorner northEastCorner;
+
     public CalculateReachableRangePostDataParametersAvoidAreasRectangles withNorthEastCorner(CalculateReachableRangePostDataParametersAvoidAreasRectanglesNorthEastCorner northEastCorner) {
         this.northEastCorner = northEastCorner;
         return this;
@@ -20,9 +21,11 @@ public class CalculateReachableRangePostDataParametersAvoidAreasRectangles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("southWestCorner")
     public CalculateReachableRangePostDataParametersAvoidAreasRectanglesSouthWestCorner southWestCorner;
+
     public CalculateReachableRangePostDataParametersAvoidAreasRectangles withSouthWestCorner(CalculateReachableRangePostDataParametersAvoidAreasRectanglesSouthWestCorner southWestCorner) {
         this.southWestCorner = southWestCorner;
         return this;
     }
     
+    public CalculateReachableRangePostDataParametersAvoidAreasRectangles(){}
 }

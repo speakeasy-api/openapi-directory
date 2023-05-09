@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleGetReservedAmountRequest {
@@ -12,6 +13,7 @@ public class ArticleGetReservedAmountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public ArticleGetReservedAmountRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class ArticleGetReservedAmountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lookupBy")
     public String lookupBy;
+
     public ArticleGetReservedAmountRequest withLookupBy(String lookupBy) {
         this.lookupBy = lookupBy;
         return this;
@@ -32,9 +35,13 @@ public class ArticleGetReservedAmountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stockId")
     public Long stockId;
+
     public ArticleGetReservedAmountRequest withStockId(Long stockId) {
         this.stockId = stockId;
         return this;
     }
     
+    public ArticleGetReservedAmountRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

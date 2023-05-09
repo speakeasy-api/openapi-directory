@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWebACLForResourceResponse {
     
     public String contentType;
+
     public GetWebACLForResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetWebACLForResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetWebACLForResourceResponse getWebACLForResourceResponse;
+
     public GetWebACLForResourceResponse withGetWebACLForResourceResponse(org.openapis.openapi.models.shared.GetWebACLForResourceResponse getWebACLForResourceResponse) {
         this.getWebACLForResourceResponse = getWebACLForResourceResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetWebACLForResourceResponse {
     
     
     public Integer statusCode;
+
     public GetWebACLForResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetWebACLForResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWebACLForResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetWebACLForResourceResponse {
      */
     
     public Object wafInternalErrorException;
+
     public GetWebACLForResourceResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class GetWebACLForResourceResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public GetWebACLForResourceResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class GetWebACLForResourceResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public GetWebACLForResourceResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -73,6 +81,7 @@ public class GetWebACLForResourceResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public GetWebACLForResourceResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -83,9 +92,14 @@ public class GetWebACLForResourceResponse {
      */
     
     public Object wafUnavailableEntityException;
+
     public GetWebACLForResourceResponse withWAFUnavailableEntityException(Object wafUnavailableEntityException) {
         this.wafUnavailableEntityException = wafUnavailableEntityException;
         return this;
     }
     
+    public GetWebACLForResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

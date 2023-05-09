@@ -15,6 +15,7 @@ public class NetworkResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkInBytesPerSecond")
     public String networkInBytesPerSecond;
+
     public NetworkResourceUtilization withNetworkInBytesPerSecond(String networkInBytesPerSecond) {
         this.networkInBytesPerSecond = networkInBytesPerSecond;
         return this;
@@ -23,6 +24,7 @@ public class NetworkResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkOutBytesPerSecond")
     public String networkOutBytesPerSecond;
+
     public NetworkResourceUtilization withNetworkOutBytesPerSecond(String networkOutBytesPerSecond) {
         this.networkOutBytesPerSecond = networkOutBytesPerSecond;
         return this;
@@ -31,6 +33,7 @@ public class NetworkResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkPacketsInPerSecond")
     public String networkPacketsInPerSecond;
+
     public NetworkResourceUtilization withNetworkPacketsInPerSecond(String networkPacketsInPerSecond) {
         this.networkPacketsInPerSecond = networkPacketsInPerSecond;
         return this;
@@ -39,9 +42,11 @@ public class NetworkResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkPacketsOutPerSecond")
     public String networkPacketsOutPerSecond;
+
     public NetworkResourceUtilization withNetworkPacketsOutPerSecond(String networkPacketsOutPerSecond) {
         this.networkPacketsOutPerSecond = networkPacketsOutPerSecond;
         return this;
     }
     
+    public NetworkResourceUtilization(){}
 }

@@ -12,6 +12,7 @@ public class ListConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionName")
     public String connectionName;
+
     public ListConnectionsRequest withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -20,6 +21,7 @@ public class ListConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListConnectionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListConnectionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListConnectionsRequest(){}
 }

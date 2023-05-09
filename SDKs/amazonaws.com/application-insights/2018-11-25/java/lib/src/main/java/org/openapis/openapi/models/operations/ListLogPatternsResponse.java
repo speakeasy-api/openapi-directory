@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLogPatternsResponse {
     
     public String contentType;
+
     public ListLogPatternsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListLogPatternsResponse {
      */
     
     public Object internalServerException;
+
     public ListLogPatternsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListLogPatternsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLogPatternsResponse listLogPatternsResponse;
+
     public ListLogPatternsResponse withListLogPatternsResponse(org.openapis.openapi.models.shared.ListLogPatternsResponse listLogPatternsResponse) {
         this.listLogPatternsResponse = listLogPatternsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListLogPatternsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListLogPatternsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListLogPatternsResponse {
     
     
     public Integer statusCode;
+
     public ListLogPatternsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListLogPatternsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLogPatternsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListLogPatternsResponse {
      */
     
     public Object validationException;
+
     public ListLogPatternsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListLogPatternsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

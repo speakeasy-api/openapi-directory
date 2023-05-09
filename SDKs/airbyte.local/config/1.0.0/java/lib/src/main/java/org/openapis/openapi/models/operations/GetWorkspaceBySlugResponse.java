@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkspaceBySlugResponse {
     
     public String contentType;
+
     public GetWorkspaceBySlugResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkspaceBySlugResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public GetWorkspaceBySlugResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -29,6 +32,7 @@ public class GetWorkspaceBySlugResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public GetWorkspaceBySlugResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -36,6 +40,7 @@ public class GetWorkspaceBySlugResponse {
     
     
     public Integer statusCode;
+
     public GetWorkspaceBySlugResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetWorkspaceBySlugResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkspaceBySlugResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetWorkspaceBySlugResponse {
      */
     
     public org.openapis.openapi.models.shared.WorkspaceRead workspaceRead;
+
     public GetWorkspaceBySlugResponse withWorkspaceRead(org.openapis.openapi.models.shared.WorkspaceRead workspaceRead) {
         this.workspaceRead = workspaceRead;
         return this;
     }
     
+    public GetWorkspaceBySlugResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

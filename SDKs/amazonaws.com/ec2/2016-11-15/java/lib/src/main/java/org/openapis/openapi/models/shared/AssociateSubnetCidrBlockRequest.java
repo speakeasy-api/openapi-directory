@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AssociateSubnetCidrBlockRequest {
     
     public String ipv6CidrBlock;
+
     public AssociateSubnetCidrBlockRequest withIpv6CidrBlock(String ipv6CidrBlock) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         return this;
@@ -16,9 +17,14 @@ public class AssociateSubnetCidrBlockRequest {
     
     
     public String subnetId;
+
     public AssociateSubnetCidrBlockRequest withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public AssociateSubnetCidrBlockRequest(@JsonProperty("Ipv6CidrBlock") String ipv6CidrBlock, @JsonProperty("SubnetId") String subnetId) {
+        this.ipv6CidrBlock = ipv6CidrBlock;
+        this.subnetId = subnetId;
+  }
 }

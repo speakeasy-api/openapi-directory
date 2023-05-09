@@ -9,15 +9,17 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * IPSetReference - &lt;p&gt;Configures one or more IP set references for a Suricata-compatible rule group. This is used in &lt;a&gt;CreateRuleGroup&lt;/a&gt; or &lt;a&gt;UpdateRuleGroup&lt;/a&gt;. An IP set reference is a rule variable that references a resource that you create and manage in another Amazon Web Services service, such as an Amazon VPC prefix list. Network Firewall IP set references enable you to dynamically update the contents of your rules. When you create, update, or delete the IP set you are referencing in your rule, Network Firewall automatically updates the rule's content with the changes. For more information about IP set references in Network Firewall, see &lt;a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/rule-groups-ip-set-references"&gt;Using IP set references&lt;/a&gt; in the &lt;i&gt;Network Firewall Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt; Network Firewall currently supports only &lt;a href="https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html"&gt;Amazon VPC prefix lists&lt;/a&gt; as IP set references. &lt;/p&gt;
+ * IPSetReference - &lt;p&gt;Configures one or more IP set references for a Suricata-compatible rule group. This is used in &lt;a&gt;CreateRuleGroup&lt;/a&gt; or &lt;a&gt;UpdateRuleGroup&lt;/a&gt;. An IP set reference is a rule variable that references resources that you create and manage in another Amazon Web Services service, such as an Amazon VPC prefix list. Network Firewall IP set references enable you to dynamically update the contents of your rules. When you create, update, or delete the resource you are referencing in your rule, Network Firewall automatically updates the rule's content with the changes. For more information about IP set references in Network Firewall, see &lt;a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/rule-groups-ip-set-references"&gt;Using IP set references&lt;/a&gt; in the &lt;i&gt;Network Firewall Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt; Network Firewall currently supports &lt;a href="https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html"&gt;Amazon VPC prefix lists&lt;/a&gt; and &lt;a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/rule-groups-ip-set-references.html#rule-groups-referencing-resource-groups"&gt;resource groups&lt;/a&gt; in IP set references. &lt;/p&gt;
  */
 public class IPSetReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceArn")
     public String referenceArn;
+
     public IPSetReference withReferenceArn(String referenceArn) {
         this.referenceArn = referenceArn;
         return this;
     }
     
+    public IPSetReference(){}
 }

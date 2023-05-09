@@ -18,6 +18,7 @@ public class GoogleCloudMlV1Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultVersion")
     public GoogleCloudMlV1Version defaultVersion;
+
     public GoogleCloudMlV1Model withDefaultVersion(GoogleCloudMlV1Version defaultVersion) {
         this.defaultVersion = defaultVersion;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudMlV1Model withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudMlV1Model withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudMlV1Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudMlV1Model withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudMlV1Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudMlV1Model withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudMlV1Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlinePredictionConsoleLogging")
     public Boolean onlinePredictionConsoleLogging;
+
     public GoogleCloudMlV1Model withOnlinePredictionConsoleLogging(Boolean onlinePredictionConsoleLogging) {
         this.onlinePredictionConsoleLogging = onlinePredictionConsoleLogging;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudMlV1Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlinePredictionLogging")
     public Boolean onlinePredictionLogging;
+
     public GoogleCloudMlV1Model withOnlinePredictionLogging(Boolean onlinePredictionLogging) {
         this.onlinePredictionLogging = onlinePredictionLogging;
         return this;
@@ -95,9 +102,11 @@ public class GoogleCloudMlV1Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public String[] regions;
+
     public GoogleCloudMlV1Model withRegions(String[] regions) {
         this.regions = regions;
         return this;
     }
     
+    public GoogleCloudMlV1Model(){}
 }

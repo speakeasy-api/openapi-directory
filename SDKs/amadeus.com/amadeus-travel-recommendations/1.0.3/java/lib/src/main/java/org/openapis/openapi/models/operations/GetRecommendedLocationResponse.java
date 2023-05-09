@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRecommendedLocationResponse {
     
     public String contentType;
+
     public GetRecommendedLocationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +25,7 @@ public class GetRecommendedLocationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400 error400;
+
     public GetRecommendedLocationResponse withError400(org.openapis.openapi.models.shared.Error400 error400) {
         this.error400 = error400;
         return this;
@@ -33,6 +36,7 @@ public class GetRecommendedLocationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error500 error500;
+
     public GetRecommendedLocationResponse withError500(org.openapis.openapi.models.shared.Error500 error500) {
         this.error500 = error500;
         return this;
@@ -40,6 +44,7 @@ public class GetRecommendedLocationResponse {
     
     
     public Integer statusCode;
+
     public GetRecommendedLocationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,6 +52,7 @@ public class GetRecommendedLocationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRecommendedLocationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -57,9 +63,14 @@ public class GetRecommendedLocationResponse {
      */
     
     public GetRecommendedLocation200ApplicationVndAmadeusPlusJson getRecommendedLocation200ApplicationVndAmadeusPlusJsonObject;
+
     public GetRecommendedLocationResponse withGetRecommendedLocation200ApplicationVndAmadeusPlusJsonObject(GetRecommendedLocation200ApplicationVndAmadeusPlusJson getRecommendedLocation200ApplicationVndAmadeusPlusJsonObject) {
         this.getRecommendedLocation200ApplicationVndAmadeusPlusJsonObject = getRecommendedLocation200ApplicationVndAmadeusPlusJsonObject;
         return this;
     }
     
+    public GetRecommendedLocationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

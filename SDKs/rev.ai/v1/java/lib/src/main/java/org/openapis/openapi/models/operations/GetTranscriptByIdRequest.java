@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTranscriptByIdRequest {
@@ -12,6 +13,7 @@ public class GetTranscriptByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public org.openapis.openapi.models.shared.AcceptTranscriptEnum accept;
+
     public GetTranscriptByIdRequest withAccept(org.openapis.openapi.models.shared.AcceptTranscriptEnum accept) {
         this.accept = accept;
         return this;
@@ -22,9 +24,13 @@ public class GetTranscriptByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetTranscriptByIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetTranscriptByIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

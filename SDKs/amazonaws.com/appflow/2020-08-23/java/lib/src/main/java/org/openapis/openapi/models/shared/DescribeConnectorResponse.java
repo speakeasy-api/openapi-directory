@@ -15,9 +15,11 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorConfiguration")
     public ConnectorConfiguration connectorConfiguration;
+
     public DescribeConnectorResponse withConnectorConfiguration(ConnectorConfiguration connectorConfiguration) {
         this.connectorConfiguration = connectorConfiguration;
         return this;
     }
     
+    public DescribeConnectorResponse(){}
 }

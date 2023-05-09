@@ -18,6 +18,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeeAmount")
     public String feeAmount;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails withFeeAmount(String feeAmount) {
         this.feeAmount = feeAmount;
         return this;
@@ -28,6 +29,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("FeeFrequency")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum feeFrequency;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails withFeeFrequency(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum feeFrequency) {
         this.feeFrequency = feeFrequency;
         return this;
@@ -39,6 +41,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeeHigherTier")
     public Long feeHigherTier;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails withFeeHigherTier(Long feeHigherTier) {
         this.feeHigherTier = feeHigherTier;
         return this;
@@ -50,6 +53,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeeLowerTier")
     public Long feeLowerTier;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails withFeeLowerTier(Long feeLowerTier) {
         this.feeLowerTier = feeLowerTier;
         return this;
@@ -61,6 +65,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeeMax")
     public String feeMax;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails withFeeMax(String feeMax) {
         this.feeMax = feeMax;
         return this;
@@ -72,6 +77,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeeMin")
     public String feeMin;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails withFeeMin(String feeMin) {
         this.feeMin = feeMin;
         return this;
@@ -83,6 +89,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeeRate")
     public String feeRate;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails withFeeRate(String feeRate) {
         this.feeRate = feeRate;
         return this;
@@ -94,6 +101,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeesAndChargesNotes")
     public String feesAndChargesNotes;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails withFeesAndChargesNotes(String feesAndChargesNotes) {
         this.feesAndChargesNotes = feesAndChargesNotes;
         return this;
@@ -104,6 +112,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("Negotiable")
     public Boolean negotiable;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails withNegotiable(Boolean negotiable) {
         this.negotiable = negotiable;
         return this;
@@ -115,9 +124,14 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepresentativeRate")
     public String representativeRate;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails withRepresentativeRate(String representativeRate) {
         this.representativeRate = representativeRate;
         return this;
     }
     
+    public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetails(@JsonProperty("FeeFrequency") GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum feeFrequency, @JsonProperty("Negotiable") Boolean negotiable) {
+        this.feeFrequency = feeFrequency;
+        this.negotiable = negotiable;
+  }
 }

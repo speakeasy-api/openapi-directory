@@ -12,9 +12,11 @@ public class ComptageReponseEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etat")
     public ComptageReponseEtatEtat[] etat;
+
     public ComptageReponseEtat withEtat(ComptageReponseEtatEtat[] etat) {
         this.etat = etat;
         return this;
     }
     
+    public ComptageReponseEtat(){}
 }

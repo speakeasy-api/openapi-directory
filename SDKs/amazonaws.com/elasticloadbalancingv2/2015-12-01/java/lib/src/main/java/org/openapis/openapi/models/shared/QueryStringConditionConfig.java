@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class QueryStringConditionConfig {
     
     public QueryStringKeyValuePair[] values;
+
     public QueryStringConditionConfig withValues(QueryStringKeyValuePair[] values) {
         this.values = values;
         return this;
     }
     
+    public QueryStringConditionConfig(){}
 }

@@ -15,6 +15,7 @@ public class ScheduleAccountUpdaterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalData")
     public java.util.Map<String, String> additionalData;
+
     public ScheduleAccountUpdaterRequest withAdditionalData(java.util.Map<String, String> additionalData) {
         this.additionalData = additionalData;
         return this;
@@ -23,6 +24,7 @@ public class ScheduleAccountUpdaterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public Card card;
+
     public ScheduleAccountUpdaterRequest withCard(Card card) {
         this.card = card;
         return this;
@@ -33,6 +35,7 @@ public class ScheduleAccountUpdaterRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public ScheduleAccountUpdaterRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -43,6 +46,7 @@ public class ScheduleAccountUpdaterRequest {
      */
     @JsonProperty("reference")
     public String reference;
+
     public ScheduleAccountUpdaterRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -56,6 +60,7 @@ public class ScheduleAccountUpdaterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedRecurringDetailReference")
     public String selectedRecurringDetailReference;
+
     public ScheduleAccountUpdaterRequest withSelectedRecurringDetailReference(String selectedRecurringDetailReference) {
         this.selectedRecurringDetailReference = selectedRecurringDetailReference;
         return this;
@@ -69,9 +74,14 @@ public class ScheduleAccountUpdaterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public ScheduleAccountUpdaterRequest withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
     }
     
+    public ScheduleAccountUpdaterRequest(@JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("reference") String reference) {
+        this.merchantAccount = merchantAccount;
+        this.reference = reference;
+  }
 }

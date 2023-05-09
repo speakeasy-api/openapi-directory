@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ResetDBClusterParameterGroupMessage {
     
     public String dbClusterParameterGroupName;
+
     public ResetDBClusterParameterGroupMessage withDBClusterParameterGroupName(String dbClusterParameterGroupName) {
         this.dbClusterParameterGroupName = dbClusterParameterGroupName;
         return this;
@@ -16,6 +17,7 @@ public class ResetDBClusterParameterGroupMessage {
     
     
     public ParametersList[] parameters;
+
     public ResetDBClusterParameterGroupMessage withParameters(ParametersList[] parameters) {
         this.parameters = parameters;
         return this;
@@ -23,9 +25,13 @@ public class ResetDBClusterParameterGroupMessage {
     
     
     public Boolean resetAllParameters;
+
     public ResetDBClusterParameterGroupMessage withResetAllParameters(Boolean resetAllParameters) {
         this.resetAllParameters = resetAllParameters;
         return this;
     }
     
+    public ResetDBClusterParameterGroupMessage(@JsonProperty("DBClusterParameterGroupName") String dbClusterParameterGroupName) {
+        this.dbClusterParameterGroupName = dbClusterParameterGroupName;
+  }
 }

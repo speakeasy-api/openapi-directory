@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ArmtwResponse {
     
     public String contentType;
+
     public ArmtwResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ArmtwResponse {
     
     
     public Integer statusCode;
+
     public ArmtwResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ArmtwResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ArmtwResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ArmtwResponse {
      */
     
     public Armtw400ApplicationJSON armtw400ApplicationJSONObject;
+
     public ArmtwResponse withArmtw400ApplicationJSONObject(Armtw400ApplicationJSON armtw400ApplicationJSONObject) {
         this.armtw400ApplicationJSONObject = armtw400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ArmtwResponse {
      */
     
     public Armtw401ApplicationJSON armtw401ApplicationJSONObject;
+
     public ArmtwResponse withArmtw401ApplicationJSONObject(Armtw401ApplicationJSON armtw401ApplicationJSONObject) {
         this.armtw401ApplicationJSONObject = armtw401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ArmtwResponse {
      */
     
     public Armtw404ApplicationJSON armtw404ApplicationJSONObject;
+
     public ArmtwResponse withArmtw404ApplicationJSONObject(Armtw404ApplicationJSON armtw404ApplicationJSONObject) {
         this.armtw404ApplicationJSONObject = armtw404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class ArmtwResponse {
      */
     
     public Armtw500ApplicationJSON armtw500ApplicationJSONObject;
+
     public ArmtwResponse withArmtw500ApplicationJSONObject(Armtw500ApplicationJSON armtw500ApplicationJSONObject) {
         this.armtw500ApplicationJSONObject = armtw500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class ArmtwResponse {
      */
     
     public Armtw502ApplicationJSON armtw502ApplicationJSONObject;
+
     public ArmtwResponse withArmtw502ApplicationJSONObject(Armtw502ApplicationJSON armtw502ApplicationJSONObject) {
         this.armtw502ApplicationJSONObject = armtw502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class ArmtwResponse {
      */
     
     public Armtw503ApplicationJSON armtw503ApplicationJSONObject;
+
     public ArmtwResponse withArmtw503ApplicationJSONObject(Armtw503ApplicationJSON armtw503ApplicationJSONObject) {
         this.armtw503ApplicationJSONObject = armtw503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class ArmtwResponse {
      */
     
     public Armtw504ApplicationJSON armtw504ApplicationJSONObject;
+
     public ArmtwResponse withArmtw504ApplicationJSONObject(Armtw504ApplicationJSON armtw504ApplicationJSONObject) {
         this.armtw504ApplicationJSONObject = armtw504ApplicationJSONObject;
         return this;
     }
     
+    public ArmtwResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

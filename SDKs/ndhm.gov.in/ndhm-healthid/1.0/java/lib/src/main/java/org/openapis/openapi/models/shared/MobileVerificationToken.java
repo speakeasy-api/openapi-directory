@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class MobileVerificationToken {
     
     public String token;
+
     public MobileVerificationToken withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public MobileVerificationToken(){}
 }

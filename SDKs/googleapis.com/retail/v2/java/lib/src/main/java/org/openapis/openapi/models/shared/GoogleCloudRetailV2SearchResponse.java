@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appliedControls")
     public String[] appliedControls;
+
     public GoogleCloudRetailV2SearchResponse withAppliedControls(String[] appliedControls) {
         this.appliedControls = appliedControls;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributionToken")
     public String attributionToken;
+
     public GoogleCloudRetailV2SearchResponse withAttributionToken(String attributionToken) {
         this.attributionToken = attributionToken;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correctedQuery")
     public String correctedQuery;
+
     public GoogleCloudRetailV2SearchResponse withCorrectedQuery(String correctedQuery) {
         this.correctedQuery = correctedQuery;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experimentInfo")
     public GoogleCloudRetailV2ExperimentInfo[] experimentInfo;
+
     public GoogleCloudRetailV2SearchResponse withExperimentInfo(GoogleCloudRetailV2ExperimentInfo[] experimentInfo) {
         this.experimentInfo = experimentInfo;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRetailV2SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facets")
     public GoogleCloudRetailV2SearchResponseFacet[] facets;
+
     public GoogleCloudRetailV2SearchResponse withFacets(GoogleCloudRetailV2SearchResponseFacet[] facets) {
         this.facets = facets;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRetailV2SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidConditionBoostSpecs")
     public GoogleCloudRetailV2SearchRequestBoostSpecConditionBoostSpec[] invalidConditionBoostSpecs;
+
     public GoogleCloudRetailV2SearchResponse withInvalidConditionBoostSpecs(GoogleCloudRetailV2SearchRequestBoostSpecConditionBoostSpec[] invalidConditionBoostSpecs) {
         this.invalidConditionBoostSpecs = invalidConditionBoostSpecs;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudRetailV2SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudRetailV2SearchResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudRetailV2SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryExpansionInfo")
     public GoogleCloudRetailV2SearchResponseQueryExpansionInfo queryExpansionInfo;
+
     public GoogleCloudRetailV2SearchResponse withQueryExpansionInfo(GoogleCloudRetailV2SearchResponseQueryExpansionInfo queryExpansionInfo) {
         this.queryExpansionInfo = queryExpansionInfo;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudRetailV2SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectUri")
     public String redirectUri;
+
     public GoogleCloudRetailV2SearchResponse withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudRetailV2SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GoogleCloudRetailV2SearchResponseSearchResult[] results;
+
     public GoogleCloudRetailV2SearchResponse withResults(GoogleCloudRetailV2SearchResponseSearchResult[] results) {
         this.results = results;
         return this;
@@ -128,9 +138,11 @@ public class GoogleCloudRetailV2SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public GoogleCloudRetailV2SearchResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public GoogleCloudRetailV2SearchResponse(){}
 }

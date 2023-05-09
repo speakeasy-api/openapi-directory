@@ -18,9 +18,11 @@ public class EndpointMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataLabelMatcher")
     public EndpointMatcherMetadataLabelMatcher metadataLabelMatcher;
+
     public EndpointMatcher withMetadataLabelMatcher(EndpointMatcherMetadataLabelMatcher metadataLabelMatcher) {
         this.metadataLabelMatcher = metadataLabelMatcher;
         return this;
     }
     
+    public EndpointMatcher(){}
 }

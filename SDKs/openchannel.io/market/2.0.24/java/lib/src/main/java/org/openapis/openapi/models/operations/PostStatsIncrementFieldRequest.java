@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostStatsIncrementFieldRequest {
@@ -12,6 +13,7 @@ public class PostStatsIncrementFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appId")
     public String appId;
+
     public PostStatsIncrementFieldRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -22,6 +24,7 @@ public class PostStatsIncrementFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public Long date;
+
     public PostStatsIncrementFieldRequest withDate(Long date) {
         this.date = date;
         return this;
@@ -32,6 +35,7 @@ public class PostStatsIncrementFieldRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=field")
     public String field;
+
     public PostStatsIncrementFieldRequest withField(String field) {
         this.field = field;
         return this;
@@ -42,6 +46,7 @@ public class PostStatsIncrementFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public String userId;
+
     public PostStatsIncrementFieldRequest withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -52,9 +57,14 @@ public class PostStatsIncrementFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=value")
     public Long value;
+
     public PostStatsIncrementFieldRequest withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public PostStatsIncrementFieldRequest(@JsonProperty("appId") String appId, @JsonProperty("field") String field) {
+        this.appId = appId;
+        this.field = field;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CalculateRouteResponse {
     @JsonProperty("Legs")
     public Leg[] legs;
+
     public CalculateRouteResponse withLegs(Leg[] legs) {
         this.legs = legs;
         return this;
@@ -19,9 +20,14 @@ public class CalculateRouteResponse {
     
     @JsonProperty("Summary")
     public CalculateRouteSummary summary;
+
     public CalculateRouteResponse withSummary(CalculateRouteSummary summary) {
         this.summary = summary;
         return this;
     }
     
+    public CalculateRouteResponse(@JsonProperty("Legs") Leg[] legs, @JsonProperty("Summary") CalculateRouteSummary summary) {
+        this.legs = legs;
+        this.summary = summary;
+  }
 }

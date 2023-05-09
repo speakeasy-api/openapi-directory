@@ -15,9 +15,11 @@ public class UpdateUserAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeDeliveryDetailsList")
     public CodeDeliveryDetailsType[] codeDeliveryDetailsList;
+
     public UpdateUserAttributesResponse withCodeDeliveryDetailsList(CodeDeliveryDetailsType[] codeDeliveryDetailsList) {
         this.codeDeliveryDetailsList = codeDeliveryDetailsList;
         return this;
     }
     
+    public UpdateUserAttributesResponse(){}
 }

@@ -22,6 +22,7 @@ public class ExecutionTimeFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("latestDate")
     public OffsetDateTime latestDate;
+
     public ExecutionTimeFilter withLatestDate(OffsetDateTime latestDate) {
         this.latestDate = latestDate;
         return this;
@@ -31,9 +32,13 @@ public class ExecutionTimeFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("oldestDate")
     public OffsetDateTime oldestDate;
+
     public ExecutionTimeFilter withOldestDate(OffsetDateTime oldestDate) {
         this.oldestDate = oldestDate;
         return this;
     }
     
+    public ExecutionTimeFilter(@JsonProperty("oldestDate") OffsetDateTime oldestDate) {
+        this.oldestDate = oldestDate;
+  }
 }

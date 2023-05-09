@@ -12,6 +12,7 @@ public class ControllersLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first")
     public String first;
+
     public ControllersLinks withFirst(String first) {
         this.first = first;
         return this;
@@ -20,6 +21,7 @@ public class ControllersLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last")
     public String last;
+
     public ControllersLinks withLast(String last) {
         this.last = last;
         return this;
@@ -28,6 +30,7 @@ public class ControllersLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public ControllersLinks withNext(String next) {
         this.next = next;
         return this;
@@ -36,9 +39,11 @@ public class ControllersLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public ControllersLinks withPrevious(String previous) {
         this.previous = previous;
         return this;
     }
     
+    public ControllersLinks(){}
 }

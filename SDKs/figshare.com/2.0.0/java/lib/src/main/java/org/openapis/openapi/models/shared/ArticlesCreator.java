@@ -15,9 +15,13 @@ public class ArticlesCreator {
      */
     @JsonProperty("articles")
     public Long[] articles;
+
     public ArticlesCreator withArticles(Long[] articles) {
         this.articles = articles;
         return this;
     }
     
+    public ArticlesCreator(@JsonProperty("articles") Long[] articles) {
+        this.articles = articles;
+  }
 }

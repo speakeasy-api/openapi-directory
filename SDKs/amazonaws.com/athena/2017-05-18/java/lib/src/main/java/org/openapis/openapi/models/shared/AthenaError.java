@@ -15,6 +15,7 @@ public class AthenaError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCategory")
     public Long errorCategory;
+
     public AthenaError withErrorCategory(Long errorCategory) {
         this.errorCategory = errorCategory;
         return this;
@@ -23,6 +24,7 @@ public class AthenaError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public AthenaError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,6 +33,7 @@ public class AthenaError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorType")
     public Long errorType;
+
     public AthenaError withErrorType(Long errorType) {
         this.errorType = errorType;
         return this;
@@ -39,9 +42,11 @@ public class AthenaError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Retryable")
     public Boolean retryable;
+
     public AthenaError withRetryable(Boolean retryable) {
         this.retryable = retryable;
         return this;
     }
     
+    public AthenaError(){}
 }

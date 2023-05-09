@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteScheduledAuditResponse {
     
     public String contentType;
+
     public DeleteScheduledAuditResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteScheduledAuditResponse {
      */
     
     public java.util.Map<String, Object> deleteScheduledAuditResponse;
+
     public DeleteScheduledAuditResponse withDeleteScheduledAuditResponse(java.util.Map<String, Object> deleteScheduledAuditResponse) {
         this.deleteScheduledAuditResponse = deleteScheduledAuditResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteScheduledAuditResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteScheduledAuditResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteScheduledAuditResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteScheduledAuditResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteScheduledAuditResponse {
     
     
     public Integer statusCode;
+
     public DeleteScheduledAuditResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteScheduledAuditResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteScheduledAuditResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteScheduledAuditResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteScheduledAuditResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteScheduledAuditResponse {
      */
     
     public Object throttlingException;
+
     public DeleteScheduledAuditResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteScheduledAuditResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

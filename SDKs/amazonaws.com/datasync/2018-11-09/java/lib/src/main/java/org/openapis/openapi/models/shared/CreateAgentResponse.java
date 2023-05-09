@@ -15,9 +15,11 @@ public class CreateAgentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentArn")
     public String agentArn;
+
     public CreateAgentResponse withAgentArn(String agentArn) {
         this.agentArn = agentArn;
         return this;
     }
     
+    public CreateAgentResponse(){}
 }

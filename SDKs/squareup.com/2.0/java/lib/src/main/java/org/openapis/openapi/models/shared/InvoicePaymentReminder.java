@@ -20,6 +20,7 @@ public class InvoicePaymentReminder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InvoicePaymentReminder withMessage(String message) {
         this.message = message;
         return this;
@@ -33,6 +34,7 @@ public class InvoicePaymentReminder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relative_scheduled_days")
     public Long relativeScheduledDays;
+
     public InvoicePaymentReminder withRelativeScheduledDays(Long relativeScheduledDays) {
         this.relativeScheduledDays = relativeScheduledDays;
         return this;
@@ -44,6 +46,7 @@ public class InvoicePaymentReminder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sent_at")
     public String sentAt;
+
     public InvoicePaymentReminder withSentAt(String sentAt) {
         this.sentAt = sentAt;
         return this;
@@ -55,6 +58,7 @@ public class InvoicePaymentReminder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public InvoicePaymentReminder withStatus(String status) {
         this.status = status;
         return this;
@@ -67,9 +71,11 @@ public class InvoicePaymentReminder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public InvoicePaymentReminder withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public InvoicePaymentReminder(){}
 }

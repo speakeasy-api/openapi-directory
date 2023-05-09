@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1RemoveCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkId")
     public String networkId;
+
     public GoogleChromePolicyVersionsV1RemoveCertificateRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromePolicyVersionsV1RemoveCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetResource")
     public String targetResource;
+
     public GoogleChromePolicyVersionsV1RemoveCertificateRequest withTargetResource(String targetResource) {
         this.targetResource = targetResource;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1RemoveCertificateRequest(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateSecurityGroupResult {
     
     public String groupId;
+
     public CreateSecurityGroupResult withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -19,9 +20,11 @@ public class CreateSecurityGroupResult {
     
     
     public CreateSecurityGroupResultTags[] tags;
+
     public CreateSecurityGroupResult withTags(CreateSecurityGroupResultTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSecurityGroupResult(){}
 }

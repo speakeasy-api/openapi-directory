@@ -146,8 +146,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetArtifactOwnerRequest
 lib/src/main/java/org/openapis/openapi/models/operations/GetArtifactOwnerResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetArtifactVersionMetaDataRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetArtifactVersionMetaDataResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetArtifactVersionMetaDataByContentRequest.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetArtifactVersionMetaDataByContentResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetArtifactVersionMetaDataByContentJsonRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetArtifactVersionMetaDataByContentJsonResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetArtifactVersionMetaDataByContentRawRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetArtifactVersionMetaDataByContentRawResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateArtifactMetaDataRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateArtifactMetaDataResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateArtifactOwnerRequest.java
@@ -161,6 +163,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateArtifactVersionJs
 lib/src/main/java/org/openapis/openapi/models/operations/CreateArtifactVersionJsonResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateArtifactVersionRawRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateArtifactVersionRawResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/DeleteArtifactVersionRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/DeleteArtifactVersionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetArtifactVersionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetArtifactVersionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetArtifactVersionReferencesRequest.java
@@ -188,7 +192,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ArtifactMetaData.java
 lib/src/main/java/org/openapis/openapi/models/shared/ArtifactStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ArtifactReference.java
 lib/src/main/java/org/openapis/openapi/models/shared/IfExistsEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/ContentCreateRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/ArtifactContent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ArtifactSearchResults.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchedArtifact.java
 lib/src/main/java/org/openapis/openapi/models/shared/SortByEnum.java
@@ -206,4 +210,16 @@ lib/src/main/java/org/openapis/openapi/models/shared/SystemInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/VersionSearchResults.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchedVersion.java
+docs/sdk/README.md
+docs/admin/README.md
+docs/artifacttype/README.md
+docs/artifactrules/README.md
+docs/artifacts/README.md
+docs/globalrules/README.md
+docs/groups/README.md
+docs/metadata/README.md
+docs/search/README.md
+docs/system/README.md
+docs/users/README.md
+docs/versions/README.md
 USAGE.md

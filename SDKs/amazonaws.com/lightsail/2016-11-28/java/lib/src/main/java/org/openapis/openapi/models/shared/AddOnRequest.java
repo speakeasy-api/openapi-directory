@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddOnRequest {
     @JsonProperty("addOnType")
     public AddOnTypeEnum addOnType;
+
     public AddOnRequest withAddOnType(AddOnTypeEnum addOnType) {
         this.addOnType = addOnType;
         return this;
@@ -22,6 +23,7 @@ public class AddOnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoSnapshotAddOnRequest")
     public AutoSnapshotAddOnRequest autoSnapshotAddOnRequest;
+
     public AddOnRequest withAutoSnapshotAddOnRequest(AutoSnapshotAddOnRequest autoSnapshotAddOnRequest) {
         this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
         return this;
@@ -30,9 +32,13 @@ public class AddOnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopInstanceOnIdleRequest")
     public StopInstanceOnIdleRequest stopInstanceOnIdleRequest;
+
     public AddOnRequest withStopInstanceOnIdleRequest(StopInstanceOnIdleRequest stopInstanceOnIdleRequest) {
         this.stopInstanceOnIdleRequest = stopInstanceOnIdleRequest;
         return this;
     }
     
+    public AddOnRequest(@JsonProperty("addOnType") AddOnTypeEnum addOnType) {
+        this.addOnType = addOnType;
+  }
 }

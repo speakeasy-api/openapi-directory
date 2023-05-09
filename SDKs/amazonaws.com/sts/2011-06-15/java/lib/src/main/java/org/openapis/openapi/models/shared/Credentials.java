@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class Credentials {
     
     public String accessKeyId;
+
     public Credentials withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -19,6 +21,7 @@ public class Credentials {
     
     
     public OffsetDateTime expiration;
+
     public Credentials withExpiration(OffsetDateTime expiration) {
         this.expiration = expiration;
         return this;
@@ -26,6 +29,7 @@ public class Credentials {
     
     
     public String secretAccessKey;
+
     public Credentials withSecretAccessKey(String secretAccessKey) {
         this.secretAccessKey = secretAccessKey;
         return this;
@@ -33,9 +37,16 @@ public class Credentials {
     
     
     public String sessionToken;
+
     public Credentials withSessionToken(String sessionToken) {
         this.sessionToken = sessionToken;
         return this;
     }
     
+    public Credentials(@JsonProperty("AccessKeyId") String accessKeyId, @JsonProperty("Expiration") OffsetDateTime expiration, @JsonProperty("SecretAccessKey") String secretAccessKey, @JsonProperty("SessionToken") String sessionToken) {
+        this.accessKeyId = accessKeyId;
+        this.expiration = expiration;
+        this.secretAccessKey = secretAccessKey;
+        this.sessionToken = sessionToken;
+  }
 }

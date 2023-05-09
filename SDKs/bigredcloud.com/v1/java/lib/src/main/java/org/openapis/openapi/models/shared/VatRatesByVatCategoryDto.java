@@ -12,6 +12,7 @@ public class VatRatesByVatCategoryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatCategoryId")
     public Long vatCategoryId;
+
     public VatRatesByVatCategoryDto withVatCategoryId(Long vatCategoryId) {
         this.vatCategoryId = vatCategoryId;
         return this;
@@ -20,9 +21,11 @@ public class VatRatesByVatCategoryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatRates")
     public VatRateDto[] vatRates;
+
     public VatRatesByVatCategoryDto withVatRates(VatRateDto[] vatRates) {
         this.vatRates = vatRates;
         return this;
     }
     
+    public VatRatesByVatCategoryDto(){}
 }

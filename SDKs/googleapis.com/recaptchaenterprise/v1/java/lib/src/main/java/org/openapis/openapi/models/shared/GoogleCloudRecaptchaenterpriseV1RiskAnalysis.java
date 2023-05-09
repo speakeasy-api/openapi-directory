@@ -13,11 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudRecaptchaenterpriseV1RiskAnalysis {
     /**
+     * Extended verdict reasons to be used for experimentation only. The set of possible reasons is subject to change.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("extendedVerdictReasons")
+    public String[] extendedVerdictReasons;
+
+    public GoogleCloudRecaptchaenterpriseV1RiskAnalysis withExtendedVerdictReasons(String[] extendedVerdictReasons) {
+        this.extendedVerdictReasons = extendedVerdictReasons;
+        return this;
+    }
+    
+    /**
      * Reasons contributing to the risk analysis verdict.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasons")
     public GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum[] reasons;
+
     public GoogleCloudRecaptchaenterpriseV1RiskAnalysis withReasons(GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum[] reasons) {
         this.reasons = reasons;
         return this;
@@ -29,9 +42,11 @@ public class GoogleCloudRecaptchaenterpriseV1RiskAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public GoogleCloudRecaptchaenterpriseV1RiskAnalysis withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1RiskAnalysis(){}
 }

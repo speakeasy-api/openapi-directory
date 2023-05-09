@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWorkspaceBundleResponse {
@@ -12,6 +13,7 @@ public class CreateWorkspaceBundleResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateWorkspaceBundleResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateWorkspaceBundleResponse {
     
     
     public String contentType;
+
     public CreateWorkspaceBundleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateWorkspaceBundleResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWorkspaceBundleResult createWorkspaceBundleResult;
+
     public CreateWorkspaceBundleResponse withCreateWorkspaceBundleResult(org.openapis.openapi.models.shared.CreateWorkspaceBundleResult createWorkspaceBundleResult) {
         this.createWorkspaceBundleResult = createWorkspaceBundleResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateWorkspaceBundleResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public CreateWorkspaceBundleResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class CreateWorkspaceBundleResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateWorkspaceBundleResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -59,6 +65,7 @@ public class CreateWorkspaceBundleResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateWorkspaceBundleResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateWorkspaceBundleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateWorkspaceBundleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class CreateWorkspaceBundleResponse {
      */
     
     public Object resourceUnavailableException;
+
     public CreateWorkspaceBundleResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -86,6 +95,7 @@ public class CreateWorkspaceBundleResponse {
     
     
     public Integer statusCode;
+
     public CreateWorkspaceBundleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class CreateWorkspaceBundleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWorkspaceBundleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateWorkspaceBundleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

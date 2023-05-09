@@ -15,9 +15,11 @@ public class CreateListenerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Listener")
     public Listener listener;
+
     public CreateListenerResponse withListener(Listener listener) {
         this.listener = listener;
         return this;
     }
     
+    public CreateListenerResponse(){}
 }

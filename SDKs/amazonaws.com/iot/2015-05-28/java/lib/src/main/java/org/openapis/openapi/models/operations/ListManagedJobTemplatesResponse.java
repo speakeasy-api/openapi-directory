@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListManagedJobTemplatesResponse {
     
     public String contentType;
+
     public ListManagedJobTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListManagedJobTemplatesResponse {
      */
     
     public Object internalServerException;
+
     public ListManagedJobTemplatesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListManagedJobTemplatesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListManagedJobTemplatesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListManagedJobTemplatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListManagedJobTemplatesResponse listManagedJobTemplatesResponse;
+
     public ListManagedJobTemplatesResponse withListManagedJobTemplatesResponse(org.openapis.openapi.models.shared.ListManagedJobTemplatesResponse listManagedJobTemplatesResponse) {
         this.listManagedJobTemplatesResponse = listManagedJobTemplatesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListManagedJobTemplatesResponse {
     
     
     public Integer statusCode;
+
     public ListManagedJobTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListManagedJobTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListManagedJobTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListManagedJobTemplatesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListManagedJobTemplatesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListManagedJobTemplatesResponse {
      */
     
     public Object throttlingException;
+
     public ListManagedJobTemplatesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListManagedJobTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

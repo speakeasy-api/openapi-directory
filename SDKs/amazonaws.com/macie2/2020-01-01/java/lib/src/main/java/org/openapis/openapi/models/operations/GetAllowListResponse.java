@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAllowListResponse {
@@ -12,6 +13,7 @@ public class GetAllowListResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAllowListResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetAllowListResponse {
     
     
     public String contentType;
+
     public GetAllowListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAllowListResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAllowListResponse getAllowListResponse;
+
     public GetAllowListResponse withGetAllowListResponse(org.openapis.openapi.models.shared.GetAllowListResponse getAllowListResponse) {
         this.getAllowListResponse = getAllowListResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAllowListResponse {
      */
     
     public Object internalServerException;
+
     public GetAllowListResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetAllowListResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAllowListResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetAllowListResponse {
     
     
     public Integer statusCode;
+
     public GetAllowListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetAllowListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAllowListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetAllowListResponse {
      */
     
     public Object throttlingException;
+
     public GetAllowListResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetAllowListResponse {
      */
     
     public Object validationException;
+
     public GetAllowListResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAllowListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

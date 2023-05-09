@@ -14,6 +14,7 @@ public class ListAvailableEmailTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public ListAvailableEmailTemplatesRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -26,6 +27,7 @@ public class ListAvailableEmailTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_after")
     public String modifiedAfter;
+
     public ListAvailableEmailTemplatesRequest withModifiedAfter(String modifiedAfter) {
         this.modifiedAfter = modifiedAfter;
         return this;
@@ -38,6 +40,7 @@ public class ListAvailableEmailTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_before")
     public String modifiedBefore;
+
     public ListAvailableEmailTemplatesRequest withModifiedBefore(String modifiedBefore) {
         this.modifiedBefore = modifiedBefore;
         return this;
@@ -50,9 +53,11 @@ public class ListAvailableEmailTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public ListAvailableEmailTemplatesRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public ListAvailableEmailTemplatesRequest(){}
 }

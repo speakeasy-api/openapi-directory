@@ -15,6 +15,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bytes")
     public String bytes;
+
     public Document withBytes(String bytes) {
         this.bytes = bytes;
         return this;
@@ -23,9 +24,11 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Object")
     public S3Object s3Object;
+
     public Document withS3Object(S3Object s3Object) {
         this.s3Object = s3Object;
         return this;
     }
     
+    public Document(){}
 }

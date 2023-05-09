@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBuyOrderResponse {
     
     public byte[] body;
+
     public GetBuyOrderResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetBuyOrderResponse {
     
     
     public String contentType;
+
     public GetBuyOrderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetBuyOrderResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetBuyOrderResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -36,6 +40,7 @@ public class GetBuyOrderResponse {
      */
     
     public org.openapis.openapi.models.shared.OrderDetailVO orderDetailVO;
+
     public GetBuyOrderResponse withOrderDetailVO(org.openapis.openapi.models.shared.OrderDetailVO orderDetailVO) {
         this.orderDetailVO = orderDetailVO;
         return this;
@@ -43,6 +48,7 @@ public class GetBuyOrderResponse {
     
     
     public Integer statusCode;
+
     public GetBuyOrderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetBuyOrderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBuyOrderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBuyOrderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

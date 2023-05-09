@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CloudtasksApiQueueUpdateSecurity;
 import org.openapis.openapi.models.operations.CloudtasksApiQueueUpdateRequest;
 import org.openapis.openapi.models.operations.CloudtasksApiQueueUpdateResponse;
+import org.openapis.openapi.models.operations.CloudtasksApiQueueUpdateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.HttpBody;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -18,7 +17,7 @@ public class Application {
                 .build();
 
             CloudtasksApiQueueUpdateRequest req = new CloudtasksApiQueueUpdateRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 httpBody = new HttpBody() {{
                     contentType = "provident";
                     data = "distinctio";
@@ -43,9 +42,9 @@ public class Application {
                             put("ab", "quis");
                         }}),
                     }};
-                }};
+                }};;
                 accessToken = "veritatis";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 appId = "perferendis";
                 callback = "ipsam";
                 fields = "repellendus";
@@ -55,18 +54,20 @@ public class Application {
                 quotaUser = "odit";
                 uploadType = "at";
                 uploadProtocol = "at";
-            }}            
+            }};            
 
-            CloudtasksApiQueueUpdateResponse res = sdk.api.cloudtasksApiQueueUpdate(req, new CloudtasksApiQueueUpdateSecurity() {{
+            CloudtasksApiQueueUpdateResponse res = sdk.api.cloudtasksApiQueueUpdate(req, new CloudtasksApiQueueUpdateSecurity("maiores", "molestiae") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.empty.isPresent()) {
+            if (res.empty != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

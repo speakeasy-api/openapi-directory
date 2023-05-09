@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeGlobalOrganizationOperationsGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeGlobalOrganizationOperationsGetSecurityOption1 option1;
+
     public ComputeGlobalOrganizationOperationsGetSecurity withOption1(ComputeGlobalOrganizationOperationsGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeGlobalOrganizationOperationsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeGlobalOrganizationOperationsGetSecurityOption2 option2;
+
     public ComputeGlobalOrganizationOperationsGetSecurity withOption2(ComputeGlobalOrganizationOperationsGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeGlobalOrganizationOperationsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeGlobalOrganizationOperationsGetSecurityOption3 option3;
+
     public ComputeGlobalOrganizationOperationsGetSecurity withOption3(ComputeGlobalOrganizationOperationsGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeGlobalOrganizationOperationsGetSecurity(){}
 }

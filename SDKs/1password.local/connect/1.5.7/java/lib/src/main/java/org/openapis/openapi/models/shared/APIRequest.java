@@ -20,6 +20,7 @@ public class APIRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public APIRequestActionEnum action;
+
     public APIRequest withAction(APIRequestActionEnum action) {
         this.action = action;
         return this;
@@ -28,6 +29,7 @@ public class APIRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actor")
     public APIRequestActor actor;
+
     public APIRequest withActor(APIRequestActor actor) {
         this.actor = actor;
         return this;
@@ -39,6 +41,7 @@ public class APIRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public APIRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -47,6 +50,7 @@ public class APIRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public APIRequestResource resource;
+
     public APIRequest withResource(APIRequestResource resource) {
         this.resource = resource;
         return this;
@@ -55,6 +59,7 @@ public class APIRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public APIRequestResultEnum result;
+
     public APIRequest withResult(APIRequestResultEnum result) {
         this.result = result;
         return this;
@@ -68,9 +73,11 @@ public class APIRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public APIRequest withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public APIRequest(){}
 }

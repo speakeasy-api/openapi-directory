@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NullableCollaborator {
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public NullableCollaborator withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -22,6 +23,7 @@ public class NullableCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public NullableCollaborator withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +31,7 @@ public class NullableCollaborator {
     
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public NullableCollaborator withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -36,6 +39,7 @@ public class NullableCollaborator {
     
     @JsonProperty("followers_url")
     public String followersUrl;
+
     public NullableCollaborator withFollowersUrl(String followersUrl) {
         this.followersUrl = followersUrl;
         return this;
@@ -43,6 +47,7 @@ public class NullableCollaborator {
     
     @JsonProperty("following_url")
     public String followingUrl;
+
     public NullableCollaborator withFollowingUrl(String followingUrl) {
         this.followingUrl = followingUrl;
         return this;
@@ -50,6 +55,7 @@ public class NullableCollaborator {
     
     @JsonProperty("gists_url")
     public String gistsUrl;
+
     public NullableCollaborator withGistsUrl(String gistsUrl) {
         this.gistsUrl = gistsUrl;
         return this;
@@ -57,6 +63,7 @@ public class NullableCollaborator {
     
     @JsonProperty("gravatar_id")
     public String gravatarId;
+
     public NullableCollaborator withGravatarId(String gravatarId) {
         this.gravatarId = gravatarId;
         return this;
@@ -64,6 +71,7 @@ public class NullableCollaborator {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public NullableCollaborator withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -71,6 +79,7 @@ public class NullableCollaborator {
     
     @JsonProperty("id")
     public Long id;
+
     public NullableCollaborator withId(Long id) {
         this.id = id;
         return this;
@@ -78,6 +87,7 @@ public class NullableCollaborator {
     
     @JsonProperty("login")
     public String login;
+
     public NullableCollaborator withLogin(String login) {
         this.login = login;
         return this;
@@ -86,6 +96,7 @@ public class NullableCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NullableCollaborator withName(String name) {
         this.name = name;
         return this;
@@ -93,6 +104,7 @@ public class NullableCollaborator {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public NullableCollaborator withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -100,6 +112,7 @@ public class NullableCollaborator {
     
     @JsonProperty("organizations_url")
     public String organizationsUrl;
+
     public NullableCollaborator withOrganizationsUrl(String organizationsUrl) {
         this.organizationsUrl = organizationsUrl;
         return this;
@@ -108,6 +121,7 @@ public class NullableCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public NullableCollaboratorPermissions permissions;
+
     public NullableCollaborator withPermissions(NullableCollaboratorPermissions permissions) {
         this.permissions = permissions;
         return this;
@@ -115,6 +129,7 @@ public class NullableCollaborator {
     
     @JsonProperty("received_events_url")
     public String receivedEventsUrl;
+
     public NullableCollaborator withReceivedEventsUrl(String receivedEventsUrl) {
         this.receivedEventsUrl = receivedEventsUrl;
         return this;
@@ -122,6 +137,7 @@ public class NullableCollaborator {
     
     @JsonProperty("repos_url")
     public String reposUrl;
+
     public NullableCollaborator withReposUrl(String reposUrl) {
         this.reposUrl = reposUrl;
         return this;
@@ -130,6 +146,7 @@ public class NullableCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role_name")
     public String roleName;
+
     public NullableCollaborator withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -137,6 +154,7 @@ public class NullableCollaborator {
     
     @JsonProperty("site_admin")
     public Boolean siteAdmin;
+
     public NullableCollaborator withSiteAdmin(Boolean siteAdmin) {
         this.siteAdmin = siteAdmin;
         return this;
@@ -144,6 +162,7 @@ public class NullableCollaborator {
     
     @JsonProperty("starred_url")
     public String starredUrl;
+
     public NullableCollaborator withStarredUrl(String starredUrl) {
         this.starredUrl = starredUrl;
         return this;
@@ -151,6 +170,7 @@ public class NullableCollaborator {
     
     @JsonProperty("subscriptions_url")
     public String subscriptionsUrl;
+
     public NullableCollaborator withSubscriptionsUrl(String subscriptionsUrl) {
         this.subscriptionsUrl = subscriptionsUrl;
         return this;
@@ -158,6 +178,7 @@ public class NullableCollaborator {
     
     @JsonProperty("type")
     public String type;
+
     public NullableCollaborator withType(String type) {
         this.type = type;
         return this;
@@ -165,9 +186,30 @@ public class NullableCollaborator {
     
     @JsonProperty("url")
     public String url;
+
     public NullableCollaborator withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public NullableCollaborator(@JsonProperty("avatar_url") String avatarUrl, @JsonProperty("events_url") String eventsUrl, @JsonProperty("followers_url") String followersUrl, @JsonProperty("following_url") String followingUrl, @JsonProperty("gists_url") String gistsUrl, @JsonProperty("gravatar_id") String gravatarId, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("login") String login, @JsonProperty("node_id") String nodeId, @JsonProperty("organizations_url") String organizationsUrl, @JsonProperty("received_events_url") String receivedEventsUrl, @JsonProperty("repos_url") String reposUrl, @JsonProperty("site_admin") Boolean siteAdmin, @JsonProperty("starred_url") String starredUrl, @JsonProperty("subscriptions_url") String subscriptionsUrl, @JsonProperty("type") String type, @JsonProperty("url") String url) {
+        this.avatarUrl = avatarUrl;
+        this.eventsUrl = eventsUrl;
+        this.followersUrl = followersUrl;
+        this.followingUrl = followingUrl;
+        this.gistsUrl = gistsUrl;
+        this.gravatarId = gravatarId;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.login = login;
+        this.nodeId = nodeId;
+        this.organizationsUrl = organizationsUrl;
+        this.receivedEventsUrl = receivedEventsUrl;
+        this.reposUrl = reposUrl;
+        this.siteAdmin = siteAdmin;
+        this.starredUrl = starredUrl;
+        this.subscriptionsUrl = subscriptionsUrl;
+        this.type = type;
+        this.url = url;
+  }
 }

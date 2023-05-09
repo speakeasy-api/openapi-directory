@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePolicyResponse {
@@ -12,6 +13,7 @@ public class DescribePolicyResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public DescribePolicyResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DescribePolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribePolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class DescribePolicyResponse {
     
     
     public String contentType;
+
     public DescribePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePolicyResponse describePolicyResponse;
+
     public DescribePolicyResponse withDescribePolicyResponse(org.openapis.openapi.models.shared.DescribePolicyResponse describePolicyResponse) {
         this.describePolicyResponse = describePolicyResponse;
         return this;
@@ -49,6 +54,7 @@ public class DescribePolicyResponse {
      */
     
     public Object invalidInputException;
+
     public DescribePolicyResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DescribePolicyResponse {
      */
     
     public Object policyNotFoundException;
+
     public DescribePolicyResponse withPolicyNotFoundException(Object policyNotFoundException) {
         this.policyNotFoundException = policyNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DescribePolicyResponse {
      */
     
     public Object serviceException;
+
     public DescribePolicyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DescribePolicyResponse {
     
     
     public Integer statusCode;
+
     public DescribePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DescribePolicyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribePolicyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class DescribePolicyResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public DescribePolicyResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public DescribePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

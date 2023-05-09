@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePresetResponse {
@@ -12,6 +13,7 @@ public class CreatePresetResponse {
      */
     
     public Object accessDeniedException;
+
     public CreatePresetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreatePresetResponse {
     
     
     public String contentType;
+
     public CreatePresetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreatePresetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePresetResponse createPresetResponse;
+
     public CreatePresetResponse withCreatePresetResponse(org.openapis.openapi.models.shared.CreatePresetResponse createPresetResponse) {
         this.createPresetResponse = createPresetResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreatePresetResponse {
      */
     
     public Object incompatibleVersionException;
+
     public CreatePresetResponse withIncompatibleVersionException(Object incompatibleVersionException) {
         this.incompatibleVersionException = incompatibleVersionException;
         return this;
@@ -49,6 +54,7 @@ public class CreatePresetResponse {
      */
     
     public Object internalServiceException;
+
     public CreatePresetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePresetResponse {
      */
     
     public Object limitExceededException;
+
     public CreatePresetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreatePresetResponse {
     
     
     public Integer statusCode;
+
     public CreatePresetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreatePresetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePresetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreatePresetResponse {
      */
     
     public Object validationException;
+
     public CreatePresetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreatePresetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

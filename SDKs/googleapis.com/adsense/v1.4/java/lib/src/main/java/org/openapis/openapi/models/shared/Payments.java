@@ -18,6 +18,7 @@ public class Payments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Payment[] items;
+
     public Payments withItems(Payment[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class Payments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Payments withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Payments(){}
 }

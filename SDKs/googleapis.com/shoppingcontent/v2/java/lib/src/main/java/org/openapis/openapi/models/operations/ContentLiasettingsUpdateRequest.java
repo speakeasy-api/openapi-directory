@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentLiasettingsUpdateRequest {
@@ -12,6 +13,7 @@ public class ContentLiasettingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ContentLiasettingsUpdateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ContentLiasettingsUpdateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.LiaSettings liaSettings;
+
     public ContentLiasettingsUpdateRequest withLiaSettings(org.openapis.openapi.models.shared.LiaSettings liaSettings) {
         this.liaSettings = liaSettings;
         return this;
@@ -29,6 +32,7 @@ public class ContentLiasettingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ContentLiasettingsUpdateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ContentLiasettingsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public ContentLiasettingsUpdateRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -49,6 +54,7 @@ public class ContentLiasettingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ContentLiasettingsUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -59,6 +65,7 @@ public class ContentLiasettingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ContentLiasettingsUpdateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class ContentLiasettingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dryRun")
     public Boolean dryRun;
+
     public ContentLiasettingsUpdateRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -79,6 +87,7 @@ public class ContentLiasettingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ContentLiasettingsUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -89,6 +98,7 @@ public class ContentLiasettingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ContentLiasettingsUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class ContentLiasettingsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public ContentLiasettingsUpdateRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -109,6 +120,7 @@ public class ContentLiasettingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ContentLiasettingsUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -119,6 +131,7 @@ public class ContentLiasettingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ContentLiasettingsUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -129,6 +142,7 @@ public class ContentLiasettingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ContentLiasettingsUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class ContentLiasettingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ContentLiasettingsUpdateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,14 @@ public class ContentLiasettingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ContentLiasettingsUpdateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ContentLiasettingsUpdateRequest(@JsonProperty("accountId") String accountId, @JsonProperty("merchantId") String merchantId) {
+        this.accountId = accountId;
+        this.merchantId = merchantId;
+  }
 }

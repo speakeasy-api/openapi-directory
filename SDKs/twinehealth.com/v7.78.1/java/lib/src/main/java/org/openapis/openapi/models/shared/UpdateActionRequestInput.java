@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateActionRequestInput {
     @JsonProperty("data")
     public ActionResourceInput data;
+
     public UpdateActionRequestInput withData(ActionResourceInput data) {
         this.data = data;
         return this;
     }
     
+    public UpdateActionRequestInput(@JsonProperty("data") ActionResourceInput data) {
+        this.data = data;
+  }
 }

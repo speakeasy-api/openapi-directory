@@ -15,6 +15,7 @@ public class ConversationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Conversation data;
+
     public ConversationResponse withData(Conversation data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class ConversationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public ConversationResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ConversationResponse(){}
 }

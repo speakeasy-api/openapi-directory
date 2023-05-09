@@ -18,9 +18,11 @@ public class FindSellerStandardsProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardsProfiles")
     public StandardsProfile[] standardsProfiles;
+
     public FindSellerStandardsProfilesResponse withStandardsProfiles(StandardsProfile[] standardsProfiles) {
         this.standardsProfiles = standardsProfiles;
         return this;
     }
     
+    public FindSellerStandardsProfilesResponse(){}
 }

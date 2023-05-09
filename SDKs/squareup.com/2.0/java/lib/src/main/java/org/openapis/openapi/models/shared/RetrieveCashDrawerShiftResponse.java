@@ -21,6 +21,7 @@ public class RetrieveCashDrawerShiftResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_drawer_shift")
     public CashDrawerShift cashDrawerShift;
+
     public RetrieveCashDrawerShiftResponse withCashDrawerShift(CashDrawerShift cashDrawerShift) {
         this.cashDrawerShift = cashDrawerShift;
         return this;
@@ -32,9 +33,11 @@ public class RetrieveCashDrawerShiftResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveCashDrawerShiftResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public RetrieveCashDrawerShiftResponse(){}
 }

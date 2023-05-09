@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AirbyteCatalog {
     @JsonProperty("streams")
     public AirbyteStreamAndConfiguration[] streams;
+
     public AirbyteCatalog withStreams(AirbyteStreamAndConfiguration[] streams) {
         this.streams = streams;
         return this;
     }
     
+    public AirbyteCatalog(@JsonProperty("streams") AirbyteStreamAndConfiguration[] streams) {
+        this.streams = streams;
+  }
 }

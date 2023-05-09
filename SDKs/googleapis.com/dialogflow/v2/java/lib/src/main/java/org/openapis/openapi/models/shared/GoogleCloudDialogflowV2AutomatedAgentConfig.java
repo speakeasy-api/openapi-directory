@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2AutomatedAgentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agent")
     public String agent;
+
     public GoogleCloudDialogflowV2AutomatedAgentConfig withAgent(String agent) {
         this.agent = agent;
         return this;
     }
     
+    public GoogleCloudDialogflowV2AutomatedAgentConfig(){}
 }

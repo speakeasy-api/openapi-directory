@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateEndpointAccessRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCreateEndpointAccessActionEnum action;
+
     public GETCreateEndpointAccessRequest withAction(GETCreateEndpointAccessActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETCreateEndpointAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
     public String clusterIdentifier;
+
     public GETCreateEndpointAccessRequest withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -29,6 +32,7 @@ public class GETCreateEndpointAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndpointName")
     public String endpointName;
+
     public GETCreateEndpointAccessRequest withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -39,6 +43,7 @@ public class GETCreateEndpointAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceOwner")
     public String resourceOwner;
+
     public GETCreateEndpointAccessRequest withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -49,6 +54,7 @@ public class GETCreateEndpointAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SubnetGroupName")
     public String subnetGroupName;
+
     public GETCreateEndpointAccessRequest withSubnetGroupName(String subnetGroupName) {
         this.subnetGroupName = subnetGroupName;
         return this;
@@ -56,6 +62,7 @@ public class GETCreateEndpointAccessRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCreateEndpointAccessVersionEnum version;
+
     public GETCreateEndpointAccessRequest withVersion(GETCreateEndpointAccessVersionEnum version) {
         this.version = version;
         return this;
@@ -66,6 +73,7 @@ public class GETCreateEndpointAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcSecurityGroupIds")
     public String[] vpcSecurityGroupIds;
+
     public GETCreateEndpointAccessRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
@@ -73,6 +81,7 @@ public class GETCreateEndpointAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCreateEndpointAccessRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETCreateEndpointAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCreateEndpointAccessRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETCreateEndpointAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCreateEndpointAccessRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETCreateEndpointAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCreateEndpointAccessRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETCreateEndpointAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCreateEndpointAccessRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETCreateEndpointAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCreateEndpointAccessRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,16 @@ public class GETCreateEndpointAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCreateEndpointAccessRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCreateEndpointAccessRequest(@JsonProperty("Action") GETCreateEndpointAccessActionEnum action, @JsonProperty("EndpointName") String endpointName, @JsonProperty("SubnetGroupName") String subnetGroupName, @JsonProperty("Version") GETCreateEndpointAccessVersionEnum version) {
+        this.action = action;
+        this.endpointName = endpointName;
+        this.subnetGroupName = subnetGroupName;
+        this.version = version;
+  }
 }

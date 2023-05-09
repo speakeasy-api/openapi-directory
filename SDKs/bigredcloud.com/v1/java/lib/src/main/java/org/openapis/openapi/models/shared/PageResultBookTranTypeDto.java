@@ -15,6 +15,7 @@ public class PageResultBookTranTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public PageResultBookTranTypeDto withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class PageResultBookTranTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public BookTranTypeDto[] items;
+
     public PageResultBookTranTypeDto withItems(BookTranTypeDto[] items) {
         this.items = items;
         return this;
@@ -31,9 +33,11 @@ public class PageResultBookTranTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageLink")
     public String nextPageLink;
+
     public PageResultBookTranTypeDto withNextPageLink(String nextPageLink) {
         this.nextPageLink = nextPageLink;
         return this;
     }
     
+    public PageResultBookTranTypeDto(){}
 }

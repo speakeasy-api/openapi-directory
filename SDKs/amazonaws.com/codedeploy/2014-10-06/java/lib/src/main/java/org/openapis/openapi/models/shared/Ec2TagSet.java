@@ -15,9 +15,11 @@ public class Ec2TagSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2TagSetList")
     public Ec2TagFilter[][] ec2TagSetList;
+
     public Ec2TagSet withEc2TagSetList(Ec2TagFilter[][] ec2TagSetList) {
         this.ec2TagSetList = ec2TagSetList;
         return this;
     }
     
+    public Ec2TagSet(){}
 }

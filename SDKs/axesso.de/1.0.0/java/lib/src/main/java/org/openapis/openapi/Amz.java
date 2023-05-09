@@ -60,11 +60,9 @@ public class Amz {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeywordSearchResponse res = new org.openapis.openapi.models.operations.KeywordSearchResponse() {{
+        org.openapis.openapi.models.operations.KeywordSearchResponse res = new org.openapis.openapi.models.operations.KeywordSearchResponse(contentType, httpRes.statusCode()) {{
             keywordSearchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class Amz {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RequestBuyRecommendationResponse res = new org.openapis.openapi.models.operations.RequestBuyRecommendationResponse() {{
+        org.openapis.openapi.models.operations.RequestBuyRecommendationResponse res = new org.openapis.openapi.models.operations.RequestBuyRecommendationResponse(contentType, httpRes.statusCode()) {{
             buyRecommendationResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,11 +148,9 @@ public class Amz {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RequestProductResponse res = new org.openapis.openapi.models.operations.RequestProductResponse() {{
+        org.openapis.openapi.models.operations.RequestProductResponse res = new org.openapis.openapi.models.operations.RequestProductResponse(contentType, httpRes.statusCode()) {{
             productDetailsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -191,11 +185,9 @@ public class Amz {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SortOptionsResponse res = new org.openapis.openapi.models.operations.SortOptionsResponse() {{
+        org.openapis.openapi.models.operations.SortOptionsResponse res = new org.openapis.openapi.models.operations.SortOptionsResponse(contentType, httpRes.statusCode()) {{
             sortOptionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

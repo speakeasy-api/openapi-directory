@@ -15,6 +15,7 @@ public class Operation {
      */
     @JsonProperty("id")
     public String id;
+
     public Operation withId(String id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class Operation {
      */
     @JsonProperty("name")
     public String name;
+
     public Operation withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +37,15 @@ public class Operation {
      */
     @JsonProperty("resourceOwnerId")
     public String resourceOwnerId;
+
     public Operation withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     
+    public Operation(@JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("resourceOwnerId") String resourceOwnerId) {
+        this.id = id;
+        this.name = name;
+        this.resourceOwnerId = resourceOwnerId;
+  }
 }

@@ -94,4 +94,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/ArEVentilaO.java
 lib/src/main/java/org/openapis/openapi/models/shared/Listversion.java
 lib/src/main/java/org/openapis/openapi/models/shared/Putversion.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/attachments/README.md
+docs/clusters/README.md
+docs/dataentities/README.md
+docs/documents/README.md
+docs/score/README.md
+docs/scroll/README.md
+docs/search/README.md
+docs/versions/README.md
 USAGE.md

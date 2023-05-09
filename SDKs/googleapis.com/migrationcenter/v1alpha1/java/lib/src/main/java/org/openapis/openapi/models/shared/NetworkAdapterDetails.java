@@ -18,6 +18,7 @@ public class NetworkAdapterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adapterType")
     public String adapterType;
+
     public NetworkAdapterDetails withAdapterType(String adapterType) {
         this.adapterType = adapterType;
         return this;
@@ -29,6 +30,7 @@ public class NetworkAdapterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses")
     public NetworkAddressList addresses;
+
     public NetworkAdapterDetails withAddresses(NetworkAddressList addresses) {
         this.addresses = addresses;
         return this;
@@ -40,9 +42,11 @@ public class NetworkAdapterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macAddress")
     public String macAddress;
+
     public NetworkAdapterDetails withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
     }
     
+    public NetworkAdapterDetails(){}
 }

@@ -15,6 +15,7 @@ public class ResultByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Estimated")
     public Boolean estimated;
+
     public ResultByTime withEstimated(Boolean estimated) {
         this.estimated = estimated;
         return this;
@@ -23,6 +24,7 @@ public class ResultByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Groups")
     public Group[] groups;
+
     public ResultByTime withGroups(Group[] groups) {
         this.groups = groups;
         return this;
@@ -31,6 +33,7 @@ public class ResultByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public ResultByTime withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
@@ -39,9 +42,11 @@ public class ResultByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Total")
     public java.util.Map<String, MetricValue> total;
+
     public ResultByTime withTotal(java.util.Map<String, MetricValue> total) {
         this.total = total;
         return this;
     }
     
+    public ResultByTime(){}
 }

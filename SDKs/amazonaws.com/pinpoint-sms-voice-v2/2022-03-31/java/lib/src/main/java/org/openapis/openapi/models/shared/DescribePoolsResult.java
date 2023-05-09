@@ -15,6 +15,7 @@ public class DescribePoolsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribePoolsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribePoolsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pools")
     public PoolInformation[] pools;
+
     public DescribePoolsResult withPools(PoolInformation[] pools) {
         this.pools = pools;
         return this;
     }
     
+    public DescribePoolsResult(){}
 }

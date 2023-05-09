@@ -15,6 +15,7 @@ public class CreateTrustRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConditionalForwarderIpAddrs")
     public String[] conditionalForwarderIpAddrs;
+
     public CreateTrustRequest withConditionalForwarderIpAddrs(String[] conditionalForwarderIpAddrs) {
         this.conditionalForwarderIpAddrs = conditionalForwarderIpAddrs;
         return this;
@@ -22,6 +23,7 @@ public class CreateTrustRequest {
     
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public CreateTrustRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -29,6 +31,7 @@ public class CreateTrustRequest {
     
     @JsonProperty("RemoteDomainName")
     public String remoteDomainName;
+
     public CreateTrustRequest withRemoteDomainName(String remoteDomainName) {
         this.remoteDomainName = remoteDomainName;
         return this;
@@ -37,6 +40,7 @@ public class CreateTrustRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelectiveAuth")
     public SelectiveAuthEnum selectiveAuth;
+
     public CreateTrustRequest withSelectiveAuth(SelectiveAuthEnum selectiveAuth) {
         this.selectiveAuth = selectiveAuth;
         return this;
@@ -44,6 +48,7 @@ public class CreateTrustRequest {
     
     @JsonProperty("TrustDirection")
     public TrustDirectionEnum trustDirection;
+
     public CreateTrustRequest withTrustDirection(TrustDirectionEnum trustDirection) {
         this.trustDirection = trustDirection;
         return this;
@@ -51,6 +56,7 @@ public class CreateTrustRequest {
     
     @JsonProperty("TrustPassword")
     public String trustPassword;
+
     public CreateTrustRequest withTrustPassword(String trustPassword) {
         this.trustPassword = trustPassword;
         return this;
@@ -59,9 +65,16 @@ public class CreateTrustRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrustType")
     public TrustTypeEnum trustType;
+
     public CreateTrustRequest withTrustType(TrustTypeEnum trustType) {
         this.trustType = trustType;
         return this;
     }
     
+    public CreateTrustRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("RemoteDomainName") String remoteDomainName, @JsonProperty("TrustDirection") TrustDirectionEnum trustDirection, @JsonProperty("TrustPassword") String trustPassword) {
+        this.directoryId = directoryId;
+        this.remoteDomainName = remoteDomainName;
+        this.trustDirection = trustDirection;
+        this.trustPassword = trustPassword;
+  }
 }

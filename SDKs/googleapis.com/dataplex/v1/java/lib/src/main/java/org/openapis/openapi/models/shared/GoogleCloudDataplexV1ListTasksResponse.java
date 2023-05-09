@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ListTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDataplexV1ListTasksResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1ListTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasks")
     public GoogleCloudDataplexV1Task[] tasks;
+
     public GoogleCloudDataplexV1ListTasksResponse withTasks(GoogleCloudDataplexV1Task[] tasks) {
         this.tasks = tasks;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDataplexV1ListTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachableLocations")
     public String[] unreachableLocations;
+
     public GoogleCloudDataplexV1ListTasksResponse withUnreachableLocations(String[] unreachableLocations) {
         this.unreachableLocations = unreachableLocations;
         return this;
     }
     
+    public GoogleCloudDataplexV1ListTasksResponse(){}
 }

@@ -15,6 +15,7 @@ public class ServerValidationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServerValidationConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +27,7 @@ public class ServerValidationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public Server server;
+
     public ServerValidationConfiguration withServer(Server server) {
         this.server = server;
         return this;
@@ -34,6 +36,7 @@ public class ServerValidationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverValidationStrategy")
     public ServerValidationStrategyEnum serverValidationStrategy;
+
     public ServerValidationConfiguration withServerValidationStrategy(ServerValidationStrategyEnum serverValidationStrategy) {
         this.serverValidationStrategy = serverValidationStrategy;
         return this;
@@ -42,6 +45,7 @@ public class ServerValidationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userDataValidationParameters")
     public UserDataValidationParameters userDataValidationParameters;
+
     public ServerValidationConfiguration withUserDataValidationParameters(UserDataValidationParameters userDataValidationParameters) {
         this.userDataValidationParameters = userDataValidationParameters;
         return this;
@@ -50,9 +54,11 @@ public class ServerValidationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationId")
     public String validationId;
+
     public ServerValidationConfiguration withValidationId(String validationId) {
         this.validationId = validationId;
         return this;
     }
     
+    public ServerValidationConfiguration(){}
 }

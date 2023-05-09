@@ -15,6 +15,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachmentDataRef")
     public AttachmentDataRef attachmentDataRef;
+
     public Attachment withAttachmentDataRef(AttachmentDataRef attachmentDataRef) {
         this.attachmentDataRef = attachmentDataRef;
         return this;
@@ -26,6 +27,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentName")
     public String contentName;
+
     public Attachment withContentName(String contentName) {
         this.contentName = contentName;
         return this;
@@ -37,6 +39,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public Attachment withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -48,6 +51,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadUri")
     public String downloadUri;
+
     public Attachment withDownloadUri(String downloadUri) {
         this.downloadUri = downloadUri;
         return this;
@@ -59,6 +63,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driveDataRef")
     public DriveDataRef driveDataRef;
+
     public Attachment withDriveDataRef(DriveDataRef driveDataRef) {
         this.driveDataRef = driveDataRef;
         return this;
@@ -70,6 +75,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Attachment withName(String name) {
         this.name = name;
         return this;
@@ -81,6 +87,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public AttachmentSourceEnum source;
+
     public Attachment withSource(AttachmentSourceEnum source) {
         this.source = source;
         return this;
@@ -92,9 +99,11 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailUri")
     public String thumbnailUri;
+
     public Attachment withThumbnailUri(String thumbnailUri) {
         this.thumbnailUri = thumbnailUri;
         return this;
     }
     
+    public Attachment(){}
 }

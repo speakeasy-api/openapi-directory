@@ -15,6 +15,7 @@ public class MonitoringAppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerArguments")
     public String[] containerArguments;
+
     public MonitoringAppSpecification withContainerArguments(String[] containerArguments) {
         this.containerArguments = containerArguments;
         return this;
@@ -23,6 +24,7 @@ public class MonitoringAppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerEntrypoint")
     public String[] containerEntrypoint;
+
     public MonitoringAppSpecification withContainerEntrypoint(String[] containerEntrypoint) {
         this.containerEntrypoint = containerEntrypoint;
         return this;
@@ -30,6 +32,7 @@ public class MonitoringAppSpecification {
     
     @JsonProperty("ImageUri")
     public String imageUri;
+
     public MonitoringAppSpecification withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
@@ -38,6 +41,7 @@ public class MonitoringAppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostAnalyticsProcessorSourceUri")
     public String postAnalyticsProcessorSourceUri;
+
     public MonitoringAppSpecification withPostAnalyticsProcessorSourceUri(String postAnalyticsProcessorSourceUri) {
         this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
         return this;
@@ -46,9 +50,13 @@ public class MonitoringAppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordPreprocessorSourceUri")
     public String recordPreprocessorSourceUri;
+
     public MonitoringAppSpecification withRecordPreprocessorSourceUri(String recordPreprocessorSourceUri) {
         this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
         return this;
     }
     
+    public MonitoringAppSpecification(@JsonProperty("ImageUri") String imageUri) {
+        this.imageUri = imageUri;
+  }
 }

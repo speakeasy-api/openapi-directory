@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMeActivitiesSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
     public String authHeader;
+
     public GetMeActivitiesSecurity withAuthHeader(String authHeader) {
         this.authHeader = authHeader;
         return this;
     }
     
+    public GetMeActivitiesSecurity(@JsonProperty("AuthHeader") String authHeader) {
+        this.authHeader = authHeader;
+  }
 }

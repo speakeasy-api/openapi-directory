@@ -18,6 +18,7 @@ public class MessageStatusWhatsAppError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public MessageStatusWhatsAppError withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -29,6 +30,7 @@ public class MessageStatusWhatsAppError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public MessageStatusWhatsAppError withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -40,6 +42,7 @@ public class MessageStatusWhatsAppError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public MessageStatusWhatsAppError withTitle(String title) {
         this.title = title;
         return this;
@@ -51,9 +54,11 @@ public class MessageStatusWhatsAppError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public MessageStatusWhatsAppError withType(String type) {
         this.type = type;
         return this;
     }
     
+    public MessageStatusWhatsAppError(){}
 }

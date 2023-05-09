@@ -12,6 +12,7 @@ public class BoundingBox {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Float height;
+
     public BoundingBox withHeight(Float height) {
         this.height = height;
         return this;
@@ -20,6 +21,7 @@ public class BoundingBox {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("left")
     public Float left;
+
     public BoundingBox withLeft(Float left) {
         this.left = left;
         return this;
@@ -28,6 +30,7 @@ public class BoundingBox {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("top")
     public Float top;
+
     public BoundingBox withTop(Float top) {
         this.top = top;
         return this;
@@ -36,9 +39,11 @@ public class BoundingBox {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Float width;
+
     public BoundingBox withWidth(Float width) {
         this.width = width;
         return this;
     }
     
+    public BoundingBox(){}
 }

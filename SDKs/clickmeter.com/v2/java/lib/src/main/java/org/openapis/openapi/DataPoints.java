@@ -57,12 +57,10 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsBatchDeleteResponse res = new org.openapis.openapi.models.operations.DataPointsBatchDeleteResponse() {{
+        org.openapis.openapi.models.operations.DataPointsBatchDeleteResponse res = new org.openapis.openapi.models.operations.DataPointsBatchDeleteResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesModifyBatchItemResponceApiCoreDtoDatapointsDatapointSystemInt64 = null;
             apiCoreResponsesModifyBatchItemResponceApiCoreDtoDatapointsDatapointSystemInt64 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,12 +107,10 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsBatchPostResponse res = new org.openapis.openapi.models.operations.DataPointsBatchPostResponse() {{
+        org.openapis.openapi.models.operations.DataPointsBatchPostResponse res = new org.openapis.openapi.models.operations.DataPointsBatchPostResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesModifyBatchItemResponceApiCoreDtoDatapointsDatapointSystemInt64 = null;
             apiCoreResponsesModifyBatchItemResponceApiCoreDtoDatapointsDatapointSystemInt64 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -161,12 +157,10 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsBatchPutResponse res = new org.openapis.openapi.models.operations.DataPointsBatchPutResponse() {{
+        org.openapis.openapi.models.operations.DataPointsBatchPutResponse res = new org.openapis.openapi.models.operations.DataPointsBatchPutResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesModifyBatchItemResponceApiCoreDtoDatapointsDatapointSystemInt64 = null;
             apiCoreResponsesModifyBatchItemResponceApiCoreDtoDatapointsDatapointSystemInt64 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -214,14 +208,12 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsCountResponse res = new org.openapis.openapi.models.operations.DataPointsCountResponse() {{
+        org.openapis.openapi.models.operations.DataPointsCountResponse res = new org.openapis.openapi.models.operations.DataPointsCountResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesCountResponce = null;
             apiCoreResponsesCountResponce = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -271,14 +263,12 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsDeleteResponse res = new org.openapis.openapi.models.operations.DataPointsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DataPointsDeleteResponse res = new org.openapis.openapi.models.operations.DataPointsDeleteResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,12 +324,10 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsGetResponse res = new org.openapis.openapi.models.operations.DataPointsGetResponse() {{
+        org.openapis.openapi.models.operations.DataPointsGetResponse res = new org.openapis.openapi.models.operations.DataPointsGetResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt64 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,12 +375,10 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsGetHitsResponse res = new org.openapis.openapi.models.operations.DataPointsGetHitsResponse() {{
+        org.openapis.openapi.models.operations.DataPointsGetHitsResponse res = new org.openapis.openapi.models.operations.DataPointsGetHitsResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoClickStreamHitListPage = null;
             apiCoreDtoClickStreamHitListPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,12 +426,10 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsGetStatisticsAggregatedSingleResponse res = new org.openapis.openapi.models.operations.DataPointsGetStatisticsAggregatedSingleResponse() {{
+        org.openapis.openapi.models.operations.DataPointsGetStatisticsAggregatedSingleResponse res = new org.openapis.openapi.models.operations.DataPointsGetStatisticsAggregatedSingleResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAggregatedAggregatedResult = null;
             apiCoreDtoAggregatedAggregatedResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -493,12 +477,10 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsGetStatisticsAllListResponse res = new org.openapis.openapi.models.operations.DataPointsGetStatisticsAllListResponse() {{
+        org.openapis.openapi.models.operations.DataPointsGetStatisticsAllListResponse res = new org.openapis.openapi.models.operations.DataPointsGetStatisticsAllListResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult = null;
             apiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -546,12 +528,10 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsGetStatisticsListResponse res = new org.openapis.openapi.models.operations.DataPointsGetStatisticsListResponse() {{
+        org.openapis.openapi.models.operations.DataPointsGetStatisticsListResponse res = new org.openapis.openapi.models.operations.DataPointsGetStatisticsListResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult = null;
             apiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -599,12 +579,10 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsGetStatisticsSingleResponse res = new org.openapis.openapi.models.operations.DataPointsGetStatisticsSingleResponse() {{
+        org.openapis.openapi.models.operations.DataPointsGetStatisticsSingleResponse res = new org.openapis.openapi.models.operations.DataPointsGetStatisticsSingleResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAggregatedAggregatedResult = null;
             apiCoreDtoAggregatedAggregatedResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -646,14 +624,12 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsPatchFavouriteResponse res = new org.openapis.openapi.models.operations.DataPointsPatchFavouriteResponse() {{
+        org.openapis.openapi.models.operations.DataPointsPatchFavouriteResponse res = new org.openapis.openapi.models.operations.DataPointsPatchFavouriteResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -708,14 +684,12 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsPatchNotesFormResponse res = new org.openapis.openapi.models.operations.DataPointsPatchNotesFormResponse() {{
+        org.openapis.openapi.models.operations.DataPointsPatchNotesFormResponse res = new org.openapis.openapi.models.operations.DataPointsPatchNotesFormResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -770,14 +744,12 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsPatchNotesJsonResponse res = new org.openapis.openapi.models.operations.DataPointsPatchNotesJsonResponse() {{
+        org.openapis.openapi.models.operations.DataPointsPatchNotesJsonResponse res = new org.openapis.openapi.models.operations.DataPointsPatchNotesJsonResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -832,14 +804,12 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsPatchNotesRawResponse res = new org.openapis.openapi.models.operations.DataPointsPatchNotesRawResponse() {{
+        org.openapis.openapi.models.operations.DataPointsPatchNotesRawResponse res = new org.openapis.openapi.models.operations.DataPointsPatchNotesRawResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -894,14 +864,12 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsPostResponse res = new org.openapis.openapi.models.operations.DataPointsPostResponse() {{
+        org.openapis.openapi.models.operations.DataPointsPostResponse res = new org.openapis.openapi.models.operations.DataPointsPostResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -956,14 +924,12 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataPointsPutResponse res = new org.openapis.openapi.models.operations.DataPointsPutResponse() {{
+        org.openapis.openapi.models.operations.DataPointsPutResponse res = new org.openapis.openapi.models.operations.DataPointsPutResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1013,12 +979,10 @@ public class DataPoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDatapointsIdResponse res = new org.openapis.openapi.models.operations.GetDatapointsIdResponse() {{
+        org.openapis.openapi.models.operations.GetDatapointsIdResponse res = new org.openapis.openapi.models.operations.GetDatapointsIdResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoDatapointsDatapoint = null;
             apiCoreDtoDatapointsDatapoint = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

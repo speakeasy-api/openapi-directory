@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedCacheNodesOfferingsMessage {
     
     public String cacheNodeType;
+
     public DescribeReservedCacheNodesOfferingsMessage withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -19,6 +20,7 @@ public class DescribeReservedCacheNodesOfferingsMessage {
     
     
     public String duration;
+
     public DescribeReservedCacheNodesOfferingsMessage withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -26,6 +28,7 @@ public class DescribeReservedCacheNodesOfferingsMessage {
     
     
     public String marker;
+
     public DescribeReservedCacheNodesOfferingsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -33,6 +36,7 @@ public class DescribeReservedCacheNodesOfferingsMessage {
     
     
     public Long maxRecords;
+
     public DescribeReservedCacheNodesOfferingsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -40,6 +44,7 @@ public class DescribeReservedCacheNodesOfferingsMessage {
     
     
     public String offeringType;
+
     public DescribeReservedCacheNodesOfferingsMessage withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -47,6 +52,7 @@ public class DescribeReservedCacheNodesOfferingsMessage {
     
     
     public String productDescription;
+
     public DescribeReservedCacheNodesOfferingsMessage withProductDescription(String productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -54,9 +60,11 @@ public class DescribeReservedCacheNodesOfferingsMessage {
     
     
     public String reservedCacheNodesOfferingId;
+
     public DescribeReservedCacheNodesOfferingsMessage withReservedCacheNodesOfferingId(String reservedCacheNodesOfferingId) {
         this.reservedCacheNodesOfferingId = reservedCacheNodesOfferingId;
         return this;
     }
     
+    public DescribeReservedCacheNodesOfferingsMessage(){}
 }

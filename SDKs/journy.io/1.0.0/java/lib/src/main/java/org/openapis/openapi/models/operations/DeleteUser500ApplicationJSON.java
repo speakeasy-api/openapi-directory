@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteUser500ApplicationJSON {
     @JsonProperty("message")
     public String message;
+
     public DeleteUser500ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -19,9 +20,14 @@ public class DeleteUser500ApplicationJSON {
     
     @JsonProperty("meta")
     public DeleteUser500ApplicationJSONMeta meta;
+
     public DeleteUser500ApplicationJSON withMeta(DeleteUser500ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public DeleteUser500ApplicationJSON(@JsonProperty("message") String message, @JsonProperty("meta") DeleteUser500ApplicationJSONMeta meta) {
+        this.message = message;
+        this.meta = meta;
+  }
 }

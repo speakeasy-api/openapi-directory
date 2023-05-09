@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkflowExecutionHistoryResponse {
     
     public String contentType;
+
     public GetWorkflowExecutionHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkflowExecutionHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.History history;
+
     public GetWorkflowExecutionHistoryResponse withHistory(org.openapis.openapi.models.shared.History history) {
         this.history = history;
         return this;
@@ -29,6 +32,7 @@ public class GetWorkflowExecutionHistoryResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public GetWorkflowExecutionHistoryResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -36,6 +40,7 @@ public class GetWorkflowExecutionHistoryResponse {
     
     
     public Integer statusCode;
+
     public GetWorkflowExecutionHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetWorkflowExecutionHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkflowExecutionHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetWorkflowExecutionHistoryResponse {
      */
     
     public Object unknownResourceFault;
+
     public GetWorkflowExecutionHistoryResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
     }
     
+    public GetWorkflowExecutionHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

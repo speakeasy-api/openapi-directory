@@ -15,6 +15,7 @@ public class PmjayRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public PmjayRequestBodyCertificateParameters certificateParameters;
+
     public PmjayRequestBody withCertificateParameters(PmjayRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class PmjayRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public PmjayRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class PmjayRequestBody {
      */
     @JsonProperty("format")
     public PmjayRequestBodyFormatEnum format;
+
     public PmjayRequestBody withFormat(PmjayRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class PmjayRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public PmjayRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public PmjayRequestBody(@JsonProperty("format") PmjayRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

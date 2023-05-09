@@ -18,9 +18,11 @@ public class CreateAddonResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addon")
     public Addon addon;
+
     public CreateAddonResponse withAddon(Addon addon) {
         this.addon = addon;
         return this;
     }
     
+    public CreateAddonResponse(){}
 }

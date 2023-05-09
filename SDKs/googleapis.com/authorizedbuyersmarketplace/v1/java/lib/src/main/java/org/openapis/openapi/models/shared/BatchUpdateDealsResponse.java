@@ -18,9 +18,11 @@ public class BatchUpdateDealsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deals")
     public Deal[] deals;
+
     public BatchUpdateDealsResponse withDeals(Deal[] deals) {
         this.deals = deals;
         return this;
     }
     
+    public BatchUpdateDealsResponse(){}
 }

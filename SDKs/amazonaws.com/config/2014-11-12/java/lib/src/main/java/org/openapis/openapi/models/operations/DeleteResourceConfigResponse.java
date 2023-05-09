@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteResourceConfigResponse {
     
     public String contentType;
+
     public DeleteResourceConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteResourceConfigResponse {
      */
     
     public Object noRunningConfigurationRecorderException;
+
     public DeleteResourceConfigResponse withNoRunningConfigurationRecorderException(Object noRunningConfigurationRecorderException) {
         this.noRunningConfigurationRecorderException = noRunningConfigurationRecorderException;
         return this;
@@ -26,6 +29,7 @@ public class DeleteResourceConfigResponse {
     
     
     public Integer statusCode;
+
     public DeleteResourceConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteResourceConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteResourceConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteResourceConfigResponse {
      */
     
     public Object validationException;
+
     public DeleteResourceConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteResourceConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class TextButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onClick")
     public OnClick onClick;
+
     public TextButton withOnClick(OnClick onClick) {
         this.onClick = onClick;
         return this;
@@ -29,9 +30,11 @@ public class TextButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public TextButton withText(String text) {
         this.text = text;
         return this;
     }
     
+    public TextButton(){}
 }

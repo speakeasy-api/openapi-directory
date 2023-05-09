@@ -86,6 +86,19 @@ public class SDK {
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
   		
 
 	private HTTPClient _defaultClient;
@@ -190,8 +203,79 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
+
+    /**
+     * Creates an Amazon Web Services resource for an on-premises storage system that you want DataSync Discovery to collect information about.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AddStorageSystemResponse addStorageSystem(org.openapis.openapi.models.operations.AddStorageSystemRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=FmrsService.AddStorageSystem");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addStorageSystemRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AddStorageSystemResponse res = new org.openapis.openapi.models.operations.AddStorageSystemResponse(contentType, httpRes.statusCode()) {{
+            addStorageSystemResponse = null;
+            invalidRequestException = null;
+            internalException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.AddStorageSystemResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.AddStorageSystemResponse.class);
+                res.addStorageSystemResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalException = out;
+            }
+        }
+
+        return res;
+    }
 
     /**
      * &lt;p&gt;Stops an DataSync task execution that's in progress. The transfer of some files are abruptly interrupted. File contents that're transferred to the destination might be incomplete or inconsistent with the source files.&lt;/p&gt; &lt;p&gt;However, if you start a new task execution using the same task and allow it to finish, file content on the destination will be complete and consistent. This applies to other unexpected failures that interrupt a task execution. In all of these cases, DataSync successfully completes the transfer when you start the next task execution.&lt;/p&gt;
@@ -227,13 +311,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelTaskExecutionResponse res = new org.openapis.openapi.models.operations.CancelTaskExecutionResponse() {{
+        org.openapis.openapi.models.operations.CancelTaskExecutionResponse res = new org.openapis.openapi.models.operations.CancelTaskExecutionResponse(contentType, httpRes.statusCode()) {{
             cancelTaskExecutionResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,13 +377,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAgentResponse res = new org.openapis.openapi.models.operations.CreateAgentResponse() {{
+        org.openapis.openapi.models.operations.CreateAgentResponse res = new org.openapis.openapi.models.operations.CreateAgentResponse(contentType, httpRes.statusCode()) {{
             createAgentResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -363,13 +443,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLocationEfsResponse res = new org.openapis.openapi.models.operations.CreateLocationEfsResponse() {{
+        org.openapis.openapi.models.operations.CreateLocationEfsResponse res = new org.openapis.openapi.models.operations.CreateLocationEfsResponse(contentType, httpRes.statusCode()) {{
             createLocationEfsResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -431,13 +509,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLocationFsxLustreResponse res = new org.openapis.openapi.models.operations.CreateLocationFsxLustreResponse() {{
+        org.openapis.openapi.models.operations.CreateLocationFsxLustreResponse res = new org.openapis.openapi.models.operations.CreateLocationFsxLustreResponse(contentType, httpRes.statusCode()) {{
             createLocationFsxLustreResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -499,13 +575,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLocationFsxOntapResponse res = new org.openapis.openapi.models.operations.CreateLocationFsxOntapResponse() {{
+        org.openapis.openapi.models.operations.CreateLocationFsxOntapResponse res = new org.openapis.openapi.models.operations.CreateLocationFsxOntapResponse(contentType, httpRes.statusCode()) {{
             createLocationFsxOntapResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -567,13 +641,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLocationFsxOpenZfsResponse res = new org.openapis.openapi.models.operations.CreateLocationFsxOpenZfsResponse() {{
+        org.openapis.openapi.models.operations.CreateLocationFsxOpenZfsResponse res = new org.openapis.openapi.models.operations.CreateLocationFsxOpenZfsResponse(contentType, httpRes.statusCode()) {{
             createLocationFsxOpenZfsResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -635,13 +707,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLocationFsxWindowsResponse res = new org.openapis.openapi.models.operations.CreateLocationFsxWindowsResponse() {{
+        org.openapis.openapi.models.operations.CreateLocationFsxWindowsResponse res = new org.openapis.openapi.models.operations.CreateLocationFsxWindowsResponse(contentType, httpRes.statusCode()) {{
             createLocationFsxWindowsResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -703,13 +773,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLocationHdfsResponse res = new org.openapis.openapi.models.operations.CreateLocationHdfsResponse() {{
+        org.openapis.openapi.models.operations.CreateLocationHdfsResponse res = new org.openapis.openapi.models.operations.CreateLocationHdfsResponse(contentType, httpRes.statusCode()) {{
             createLocationHdfsResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -771,13 +839,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLocationNfsResponse res = new org.openapis.openapi.models.operations.CreateLocationNfsResponse() {{
+        org.openapis.openapi.models.operations.CreateLocationNfsResponse res = new org.openapis.openapi.models.operations.CreateLocationNfsResponse(contentType, httpRes.statusCode()) {{
             createLocationNfsResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -839,13 +905,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLocationObjectStorageResponse res = new org.openapis.openapi.models.operations.CreateLocationObjectStorageResponse() {{
+        org.openapis.openapi.models.operations.CreateLocationObjectStorageResponse res = new org.openapis.openapi.models.operations.CreateLocationObjectStorageResponse(contentType, httpRes.statusCode()) {{
             createLocationObjectStorageResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -874,7 +938,7 @@ public class SDK {
     }
 
     /**
-     * Creates an endpoint for an Amazon S3 bucket that DataSync can access for a transfer. For more information, see &lt;a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-locations-cli.html#create-location-s3-cli"&gt;Create an Amazon S3 location&lt;/a&gt;.
+     * &lt;p&gt;A &lt;i&gt;location&lt;/i&gt; is an endpoint for an Amazon S3 bucket. DataSync can use the location as a source or destination for copying data.&lt;/p&gt; &lt;important&gt; &lt;p&gt;Before you create your location, make sure that you read the following sections:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"&gt;Storage class considerations with Amazon S3 locations&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#create-s3-location-s3-requests"&gt;Evaluating S3 request costs when using DataSync&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/important&gt; &lt;p&gt; For more information, see &lt;a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-locations-cli.html#create-location-s3-cli"&gt;Creating an Amazon S3 location&lt;/a&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -907,13 +971,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLocationS3Response res = new org.openapis.openapi.models.operations.CreateLocationS3Response() {{
+        org.openapis.openapi.models.operations.CreateLocationS3Response res = new org.openapis.openapi.models.operations.CreateLocationS3Response(contentType, httpRes.statusCode()) {{
             createLocationS3Response = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -975,13 +1037,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLocationSmbResponse res = new org.openapis.openapi.models.operations.CreateLocationSmbResponse() {{
+        org.openapis.openapi.models.operations.CreateLocationSmbResponse res = new org.openapis.openapi.models.operations.CreateLocationSmbResponse(contentType, httpRes.statusCode()) {{
             createLocationSmbResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1010,7 +1070,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Configures a task, which defines where and how DataSync transfers your data.&lt;/p&gt; &lt;p&gt;A task includes a source location, a destination location, and the preferences for how and when you want to transfer your data (such as bandwidth limits, scheduling, among other options).&lt;/p&gt;
+     * &lt;p&gt;Configures a task, which defines where and how DataSync transfers your data.&lt;/p&gt; &lt;p&gt;A task includes a source location, a destination location, and the preferences for how and when you want to transfer your data (such as bandwidth limits, scheduling, among other options).&lt;/p&gt; &lt;important&gt; &lt;p&gt;If you're planning to transfer data to or from an Amazon S3 location, review &lt;a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#create-s3-location-s3-requests"&gt;how DataSync can affect your S3 request charges&lt;/a&gt; and the &lt;a href="http://aws.amazon.com/datasync/pricing/"&gt;DataSync pricing page&lt;/a&gt; before you begin.&lt;/p&gt; &lt;/important&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1043,13 +1103,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTaskResponse res = new org.openapis.openapi.models.operations.CreateTaskResponse() {{
+        org.openapis.openapi.models.operations.CreateTaskResponse res = new org.openapis.openapi.models.operations.CreateTaskResponse(contentType, httpRes.statusCode()) {{
             createTaskResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1111,13 +1169,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAgentResponse res = new org.openapis.openapi.models.operations.DeleteAgentResponse() {{
+        org.openapis.openapi.models.operations.DeleteAgentResponse res = new org.openapis.openapi.models.operations.DeleteAgentResponse(contentType, httpRes.statusCode()) {{
             deleteAgentResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1179,13 +1235,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLocationResponse res = new org.openapis.openapi.models.operations.DeleteLocationResponse() {{
+        org.openapis.openapi.models.operations.DeleteLocationResponse res = new org.openapis.openapi.models.operations.DeleteLocationResponse(contentType, httpRes.statusCode()) {{
             deleteLocationResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1247,13 +1301,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTaskResponse res = new org.openapis.openapi.models.operations.DeleteTaskResponse() {{
+        org.openapis.openapi.models.operations.DeleteTaskResponse res = new org.openapis.openapi.models.operations.DeleteTaskResponse(contentType, httpRes.statusCode()) {{
             deleteTaskResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1315,13 +1367,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeAgentResponse res = new org.openapis.openapi.models.operations.DescribeAgentResponse() {{
+        org.openapis.openapi.models.operations.DescribeAgentResponse res = new org.openapis.openapi.models.operations.DescribeAgentResponse(contentType, httpRes.statusCode()) {{
             describeAgentResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1329,6 +1379,72 @@ public class SDK {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.DescribeAgentResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.DescribeAgentResponse.class);
                 res.describeAgentResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Returns information about a DataSync discovery job.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DescribeDiscoveryJobResponse describeDiscoveryJob(org.openapis.openapi.models.operations.DescribeDiscoveryJobRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=FmrsService.DescribeDiscoveryJob");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "describeDiscoveryJobRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.DescribeDiscoveryJobResponse res = new org.openapis.openapi.models.operations.DescribeDiscoveryJobResponse(contentType, httpRes.statusCode()) {{
+            describeDiscoveryJobResponse = null;
+            invalidRequestException = null;
+            internalException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.DescribeDiscoveryJobResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.DescribeDiscoveryJobResponse.class);
+                res.describeDiscoveryJobResponse = out;
             }
         }
         else if (httpRes.statusCode() == 480) {
@@ -1383,13 +1499,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLocationEfsResponse res = new org.openapis.openapi.models.operations.DescribeLocationEfsResponse() {{
+        org.openapis.openapi.models.operations.DescribeLocationEfsResponse res = new org.openapis.openapi.models.operations.DescribeLocationEfsResponse(contentType, httpRes.statusCode()) {{
             describeLocationEfsResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1451,13 +1565,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLocationFsxLustreResponse res = new org.openapis.openapi.models.operations.DescribeLocationFsxLustreResponse() {{
+        org.openapis.openapi.models.operations.DescribeLocationFsxLustreResponse res = new org.openapis.openapi.models.operations.DescribeLocationFsxLustreResponse(contentType, httpRes.statusCode()) {{
             describeLocationFsxLustreResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1519,13 +1631,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLocationFsxOntapResponse res = new org.openapis.openapi.models.operations.DescribeLocationFsxOntapResponse() {{
+        org.openapis.openapi.models.operations.DescribeLocationFsxOntapResponse res = new org.openapis.openapi.models.operations.DescribeLocationFsxOntapResponse(contentType, httpRes.statusCode()) {{
             describeLocationFsxOntapResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1587,13 +1697,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLocationFsxOpenZfsResponse res = new org.openapis.openapi.models.operations.DescribeLocationFsxOpenZfsResponse() {{
+        org.openapis.openapi.models.operations.DescribeLocationFsxOpenZfsResponse res = new org.openapis.openapi.models.operations.DescribeLocationFsxOpenZfsResponse(contentType, httpRes.statusCode()) {{
             describeLocationFsxOpenZfsResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1655,13 +1763,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLocationFsxWindowsResponse res = new org.openapis.openapi.models.operations.DescribeLocationFsxWindowsResponse() {{
+        org.openapis.openapi.models.operations.DescribeLocationFsxWindowsResponse res = new org.openapis.openapi.models.operations.DescribeLocationFsxWindowsResponse(contentType, httpRes.statusCode()) {{
             describeLocationFsxWindowsResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1723,13 +1829,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLocationHdfsResponse res = new org.openapis.openapi.models.operations.DescribeLocationHdfsResponse() {{
+        org.openapis.openapi.models.operations.DescribeLocationHdfsResponse res = new org.openapis.openapi.models.operations.DescribeLocationHdfsResponse(contentType, httpRes.statusCode()) {{
             describeLocationHdfsResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1791,13 +1895,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLocationNfsResponse res = new org.openapis.openapi.models.operations.DescribeLocationNfsResponse() {{
+        org.openapis.openapi.models.operations.DescribeLocationNfsResponse res = new org.openapis.openapi.models.operations.DescribeLocationNfsResponse(contentType, httpRes.statusCode()) {{
             describeLocationNfsResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1859,13 +1961,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLocationObjectStorageResponse res = new org.openapis.openapi.models.operations.DescribeLocationObjectStorageResponse() {{
+        org.openapis.openapi.models.operations.DescribeLocationObjectStorageResponse res = new org.openapis.openapi.models.operations.DescribeLocationObjectStorageResponse(contentType, httpRes.statusCode()) {{
             describeLocationObjectStorageResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1927,13 +2027,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLocationS3Response res = new org.openapis.openapi.models.operations.DescribeLocationS3Response() {{
+        org.openapis.openapi.models.operations.DescribeLocationS3Response res = new org.openapis.openapi.models.operations.DescribeLocationS3Response(contentType, httpRes.statusCode()) {{
             describeLocationS3Response = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1995,13 +2093,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLocationSmbResponse res = new org.openapis.openapi.models.operations.DescribeLocationSmbResponse() {{
+        org.openapis.openapi.models.operations.DescribeLocationSmbResponse res = new org.openapis.openapi.models.operations.DescribeLocationSmbResponse(contentType, httpRes.statusCode()) {{
             describeLocationSmbResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2009,6 +2105,216 @@ public class SDK {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.DescribeLocationSmbResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.DescribeLocationSmbResponse.class);
                 res.describeLocationSmbResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Returns information about an on-premises storage system that you're using with DataSync Discovery.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DescribeStorageSystemResponse describeStorageSystem(org.openapis.openapi.models.operations.DescribeStorageSystemRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=FmrsService.DescribeStorageSystem");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "describeStorageSystemRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.DescribeStorageSystemResponse res = new org.openapis.openapi.models.operations.DescribeStorageSystemResponse(contentType, httpRes.statusCode()) {{
+            describeStorageSystemResponse = null;
+            invalidRequestException = null;
+            internalException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.DescribeStorageSystemResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.DescribeStorageSystemResponse.class);
+                res.describeStorageSystemResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Returns information, including performance data and capacity usage, which DataSync Discovery collects about a specific resource in your-premises storage system.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DescribeStorageSystemResourceMetricsResponse describeStorageSystemResourceMetrics(org.openapis.openapi.models.operations.DescribeStorageSystemResourceMetricsRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=FmrsService.DescribeStorageSystemResourceMetrics");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "describeStorageSystemResourceMetricsRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DescribeStorageSystemResourceMetricsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.DescribeStorageSystemResourceMetricsResponse res = new org.openapis.openapi.models.operations.DescribeStorageSystemResourceMetricsResponse(contentType, httpRes.statusCode()) {{
+            describeStorageSystemResourceMetricsResponse = null;
+            invalidRequestException = null;
+            internalException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.DescribeStorageSystemResourceMetricsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.DescribeStorageSystemResourceMetricsResponse.class);
+                res.describeStorageSystemResourceMetricsResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Returns information that DataSync Discovery collects about resources in your on-premises storage system.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DescribeStorageSystemResourcesResponse describeStorageSystemResources(org.openapis.openapi.models.operations.DescribeStorageSystemResourcesRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=FmrsService.DescribeStorageSystemResources");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "describeStorageSystemResourcesRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DescribeStorageSystemResourcesRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.DescribeStorageSystemResourcesResponse res = new org.openapis.openapi.models.operations.DescribeStorageSystemResourcesResponse(contentType, httpRes.statusCode()) {{
+            describeStorageSystemResourcesResponse = null;
+            invalidRequestException = null;
+            internalException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.DescribeStorageSystemResourcesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.DescribeStorageSystemResourcesResponse.class);
+                res.describeStorageSystemResourcesResponse = out;
             }
         }
         else if (httpRes.statusCode() == 480) {
@@ -2063,13 +2369,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeTaskResponse res = new org.openapis.openapi.models.operations.DescribeTaskResponse() {{
+        org.openapis.openapi.models.operations.DescribeTaskResponse res = new org.openapis.openapi.models.operations.DescribeTaskResponse(contentType, httpRes.statusCode()) {{
             describeTaskResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2131,13 +2435,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeTaskExecutionResponse res = new org.openapis.openapi.models.operations.DescribeTaskExecutionResponse() {{
+        org.openapis.openapi.models.operations.DescribeTaskExecutionResponse res = new org.openapis.openapi.models.operations.DescribeTaskExecutionResponse(contentType, httpRes.statusCode()) {{
             describeTaskExecutionResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2145,6 +2447,72 @@ public class SDK {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.DescribeTaskExecutionResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.DescribeTaskExecutionResponse.class);
                 res.describeTaskExecutionResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * &lt;p&gt;Creates recommendations about where to migrate your data to in Amazon Web Services. Recommendations are generated based on information that DataSync Discovery collects about your on-premises storage system's resources. For more information, see &lt;a href="https://docs.aws.amazon.com/datasync/latest/userguide/discovery-understand-recommendations.html"&gt;Recommendations provided by DataSync Discovery&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Once generated, you can view your recommendations by using the &lt;a href="https://docs.aws.amazon.com/datasync/latest/userguide/API_DescribeStorageSystemResources.html"&gt;DescribeStorageSystemResources&lt;/a&gt; operation.&lt;/p&gt; &lt;note&gt; &lt;p&gt;If your &lt;a href="https://docs.aws.amazon.com/datasync/latest/userguide/discovery-job-statuses.html#discovery-job-statuses-table"&gt;discovery job completes successfully&lt;/a&gt;, you don't need to use this operation. DataSync Discovery generates the recommendations for you automatically.&lt;/p&gt; &lt;/note&gt;
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GenerateRecommendationsResponse generateRecommendations(org.openapis.openapi.models.operations.GenerateRecommendationsRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=FmrsService.GenerateRecommendations");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "generateRecommendationsRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GenerateRecommendationsResponse res = new org.openapis.openapi.models.operations.GenerateRecommendationsResponse(contentType, httpRes.statusCode()) {{
+            generateRecommendationsResponse = null;
+            invalidRequestException = null;
+            internalException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.generateRecommendationsResponse = out;
             }
         }
         else if (httpRes.statusCode() == 480) {
@@ -2205,13 +2573,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAgentsResponse res = new org.openapis.openapi.models.operations.ListAgentsResponse() {{
+        org.openapis.openapi.models.operations.ListAgentsResponse res = new org.openapis.openapi.models.operations.ListAgentsResponse(contentType, httpRes.statusCode()) {{
             listAgentsResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2219,6 +2585,78 @@ public class SDK {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListAgentsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListAgentsResponse.class);
                 res.listAgentsResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Provides a list of the existing discovery jobs in the Amazon Web Services Region and Amazon Web Services account where you're using DataSync Discovery.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListDiscoveryJobsResponse listDiscoveryJobs(org.openapis.openapi.models.operations.ListDiscoveryJobsRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=FmrsService.ListDiscoveryJobs");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "listDiscoveryJobsRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDiscoveryJobsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ListDiscoveryJobsResponse res = new org.openapis.openapi.models.operations.ListDiscoveryJobsResponse(contentType, httpRes.statusCode()) {{
+            listDiscoveryJobsResponse = null;
+            invalidRequestException = null;
+            internalException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListDiscoveryJobsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListDiscoveryJobsResponse.class);
+                res.listDiscoveryJobsResponse = out;
             }
         }
         else if (httpRes.statusCode() == 480) {
@@ -2279,13 +2717,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLocationsResponse res = new org.openapis.openapi.models.operations.ListLocationsResponse() {{
+        org.openapis.openapi.models.operations.ListLocationsResponse res = new org.openapis.openapi.models.operations.ListLocationsResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2293,6 +2729,78 @@ public class SDK {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListLocationsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListLocationsResponse.class);
                 res.listLocationsResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Lists the on-premises storage systems that you're using with DataSync Discovery.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListStorageSystemsResponse listStorageSystems(org.openapis.openapi.models.operations.ListStorageSystemsRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=FmrsService.ListStorageSystems");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "listStorageSystemsRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListStorageSystemsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ListStorageSystemsResponse res = new org.openapis.openapi.models.operations.ListStorageSystemsResponse(contentType, httpRes.statusCode()) {{
+            listStorageSystemsResponse = null;
+            invalidRequestException = null;
+            internalException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListStorageSystemsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListStorageSystemsResponse.class);
+                res.listStorageSystemsResponse = out;
             }
         }
         else if (httpRes.statusCode() == 480) {
@@ -2353,13 +2861,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2427,13 +2933,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTaskExecutionsResponse res = new org.openapis.openapi.models.operations.ListTaskExecutionsResponse() {{
+        org.openapis.openapi.models.operations.ListTaskExecutionsResponse res = new org.openapis.openapi.models.operations.ListTaskExecutionsResponse(contentType, httpRes.statusCode()) {{
             listTaskExecutionsResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2501,13 +3005,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTasksResponse res = new org.openapis.openapi.models.operations.ListTasksResponse() {{
+        org.openapis.openapi.models.operations.ListTasksResponse res = new org.openapis.openapi.models.operations.ListTasksResponse(contentType, httpRes.statusCode()) {{
             listTasksResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2536,7 +3038,139 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Starts an DataSync task. For each task, you can only run one task execution at a time.&lt;/p&gt; &lt;p&gt;There are several phases to a task execution. For more information, see &lt;a href="https://docs.aws.amazon.com/datasync/latest/userguide/working-with-task-executions.html#understand-task-execution-statuses"&gt;Task execution statuses&lt;/a&gt;.&lt;/p&gt;
+     * Permanently removes a storage system resource from DataSync Discovery, including the associated discovery jobs, collected data, and recommendations.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.RemoveStorageSystemResponse removeStorageSystem(org.openapis.openapi.models.operations.RemoveStorageSystemRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=FmrsService.RemoveStorageSystem");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "removeStorageSystemRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.RemoveStorageSystemResponse res = new org.openapis.openapi.models.operations.RemoveStorageSystemResponse(contentType, httpRes.statusCode()) {{
+            removeStorageSystemResponse = null;
+            invalidRequestException = null;
+            internalException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.removeStorageSystemResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Runs a DataSync discovery job on your on-premises storage system. If you haven't added the storage system to DataSync Discovery yet, do this first by using the &lt;a href="https://docs.aws.amazon.com/datasync/latest/userguide/API_AddStorageSystem.html"&gt;AddStorageSystem&lt;/a&gt; operation.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.StartDiscoveryJobResponse startDiscoveryJob(org.openapis.openapi.models.operations.StartDiscoveryJobRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=FmrsService.StartDiscoveryJob");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "startDiscoveryJobRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.StartDiscoveryJobResponse res = new org.openapis.openapi.models.operations.StartDiscoveryJobResponse(contentType, httpRes.statusCode()) {{
+            startDiscoveryJobResponse = null;
+            invalidRequestException = null;
+            internalException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.StartDiscoveryJobResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.StartDiscoveryJobResponse.class);
+                res.startDiscoveryJobResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * &lt;p&gt;Starts an DataSync task. For each task, you can only run one task execution at a time.&lt;/p&gt; &lt;p&gt;There are several phases to a task execution. For more information, see &lt;a href="https://docs.aws.amazon.com/datasync/latest/userguide/working-with-task-executions.html#understand-task-execution-statuses"&gt;Task execution statuses&lt;/a&gt;.&lt;/p&gt; &lt;important&gt; &lt;p&gt;If you're planning to transfer data to or from an Amazon S3 location, review &lt;a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#create-s3-location-s3-requests"&gt;how DataSync can affect your S3 request charges&lt;/a&gt; and the &lt;a href="http://aws.amazon.com/datasync/pricing/"&gt;DataSync pricing page&lt;/a&gt; before you begin.&lt;/p&gt; &lt;/important&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2569,13 +3203,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartTaskExecutionResponse res = new org.openapis.openapi.models.operations.StartTaskExecutionResponse() {{
+        org.openapis.openapi.models.operations.StartTaskExecutionResponse res = new org.openapis.openapi.models.operations.StartTaskExecutionResponse(contentType, httpRes.statusCode()) {{
             startTaskExecutionResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2583,6 +3215,72 @@ public class SDK {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.StartTaskExecutionResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.StartTaskExecutionResponse.class);
                 res.startTaskExecutionResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * &lt;p&gt;Stops a running DataSync discovery job.&lt;/p&gt; &lt;p&gt;You can stop a discovery job anytime. A job that's stopped before it's scheduled to end likely will provide you some information about your on-premises storage system resources. To get recommendations for a stopped job, you must use the &lt;a href="https://docs.aws.amazon.com/datasync/latest/userguide/API_GenerateRecommendations.html"&gt;GenerateRecommendations&lt;/a&gt; operation.&lt;/p&gt;
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.StopDiscoveryJobResponse stopDiscoveryJob(org.openapis.openapi.models.operations.StopDiscoveryJobRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=FmrsService.StopDiscoveryJob");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "stopDiscoveryJobRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.StopDiscoveryJobResponse res = new org.openapis.openapi.models.operations.StopDiscoveryJobResponse(contentType, httpRes.statusCode()) {{
+            stopDiscoveryJobResponse = null;
+            invalidRequestException = null;
+            internalException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.stopDiscoveryJobResponse = out;
             }
         }
         else if (httpRes.statusCode() == 480) {
@@ -2637,13 +3335,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2705,13 +3401,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2773,13 +3467,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAgentResponse res = new org.openapis.openapi.models.operations.UpdateAgentResponse() {{
+        org.openapis.openapi.models.operations.UpdateAgentResponse res = new org.openapis.openapi.models.operations.UpdateAgentResponse(contentType, httpRes.statusCode()) {{
             updateAgentResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2787,6 +3479,72 @@ public class SDK {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
                 res.updateAgentResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Edits a DataSync discovery job configuration.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateDiscoveryJobResponse updateDiscoveryJob(org.openapis.openapi.models.operations.UpdateDiscoveryJobRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=FmrsService.UpdateDiscoveryJob");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateDiscoveryJobRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.UpdateDiscoveryJobResponse res = new org.openapis.openapi.models.operations.UpdateDiscoveryJobResponse(contentType, httpRes.statusCode()) {{
+            updateDiscoveryJobResponse = null;
+            invalidRequestException = null;
+            internalException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.updateDiscoveryJobResponse = out;
             }
         }
         else if (httpRes.statusCode() == 480) {
@@ -2841,13 +3599,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateLocationHdfsResponse res = new org.openapis.openapi.models.operations.UpdateLocationHdfsResponse() {{
+        org.openapis.openapi.models.operations.UpdateLocationHdfsResponse res = new org.openapis.openapi.models.operations.UpdateLocationHdfsResponse(contentType, httpRes.statusCode()) {{
             updateLocationHdfsResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2909,13 +3665,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateLocationNfsResponse res = new org.openapis.openapi.models.operations.UpdateLocationNfsResponse() {{
+        org.openapis.openapi.models.operations.UpdateLocationNfsResponse res = new org.openapis.openapi.models.operations.UpdateLocationNfsResponse(contentType, httpRes.statusCode()) {{
             updateLocationNfsResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2977,13 +3731,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateLocationObjectStorageResponse res = new org.openapis.openapi.models.operations.UpdateLocationObjectStorageResponse() {{
+        org.openapis.openapi.models.operations.UpdateLocationObjectStorageResponse res = new org.openapis.openapi.models.operations.UpdateLocationObjectStorageResponse(contentType, httpRes.statusCode()) {{
             updateLocationObjectStorageResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3045,13 +3797,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateLocationSmbResponse res = new org.openapis.openapi.models.operations.UpdateLocationSmbResponse() {{
+        org.openapis.openapi.models.operations.UpdateLocationSmbResponse res = new org.openapis.openapi.models.operations.UpdateLocationSmbResponse(contentType, httpRes.statusCode()) {{
             updateLocationSmbResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3059,6 +3809,72 @@ public class SDK {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
                 res.updateLocationSmbResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Modifies some configurations of an on-premises storage system resource that you're using with DataSync Discovery.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateStorageSystemResponse updateStorageSystem(org.openapis.openapi.models.operations.UpdateStorageSystemRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=FmrsService.UpdateStorageSystem");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateStorageSystemRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.UpdateStorageSystemResponse res = new org.openapis.openapi.models.operations.UpdateStorageSystemResponse(contentType, httpRes.statusCode()) {{
+            updateStorageSystemResponse = null;
+            invalidRequestException = null;
+            internalException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.updateStorageSystemResponse = out;
             }
         }
         else if (httpRes.statusCode() == 480) {
@@ -3113,13 +3929,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTaskResponse res = new org.openapis.openapi.models.operations.UpdateTaskResponse() {{
+        org.openapis.openapi.models.operations.UpdateTaskResponse res = new org.openapis.openapi.models.operations.UpdateTaskResponse(contentType, httpRes.statusCode()) {{
             updateTaskResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3148,7 +3962,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Updates execution of a task.&lt;/p&gt; &lt;p&gt;You can modify bandwidth throttling for a task execution that is running or queued. For more information, see &lt;a href="https://docs.aws.amazon.com/datasync/latest/userguide/working-with-task-executions.html#adjust-bandwidth-throttling"&gt;Adjusting Bandwidth Throttling for a Task Execution&lt;/a&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;The only &lt;code&gt;Option&lt;/code&gt; that can be modified by &lt;code&gt;UpdateTaskExecution&lt;/code&gt; is &lt;code&gt; &lt;a href="https://docs.aws.amazon.com/datasync/latest/userguide/API_Options.html#DataSync-Type-Options-BytesPerSecond"&gt;BytesPerSecond&lt;/a&gt; &lt;/code&gt;.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Modifies a running DataSync task.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Currently, the only &lt;code&gt;Option&lt;/code&gt; that you can modify with &lt;code&gt;UpdateTaskExecution&lt;/code&gt; is &lt;code&gt; &lt;a href="https://docs.aws.amazon.com/datasync/latest/userguide/API_Options.html#DataSync-Type-Options-BytesPerSecond"&gt;BytesPerSecond&lt;/a&gt; &lt;/code&gt;, which throttles bandwidth for a running or queued task.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3181,13 +3995,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTaskExecutionResponse res = new org.openapis.openapi.models.operations.UpdateTaskExecutionResponse() {{
+        org.openapis.openapi.models.operations.UpdateTaskExecutionResponse res = new org.openapis.openapi.models.operations.UpdateTaskExecutionResponse(contentType, httpRes.statusCode()) {{
             updateTaskExecutionResponse = null;
             invalidRequestException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

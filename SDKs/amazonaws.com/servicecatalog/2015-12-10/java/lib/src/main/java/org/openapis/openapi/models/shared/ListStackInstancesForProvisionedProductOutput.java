@@ -15,6 +15,7 @@ public class ListStackInstancesForProvisionedProductOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListStackInstancesForProvisionedProductOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class ListStackInstancesForProvisionedProductOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackInstances")
     public StackInstance[] stackInstances;
+
     public ListStackInstancesForProvisionedProductOutput withStackInstances(StackInstance[] stackInstances) {
         this.stackInstances = stackInstances;
         return this;
     }
     
+    public ListStackInstancesForProvisionedProductOutput(){}
 }

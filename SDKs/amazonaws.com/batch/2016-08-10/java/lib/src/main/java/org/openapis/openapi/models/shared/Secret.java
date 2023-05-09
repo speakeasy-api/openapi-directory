@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Secret {
     @JsonProperty("name")
     public String name;
+
     public Secret withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class Secret {
     
     @JsonProperty("valueFrom")
     public String valueFrom;
+
     public Secret withValueFrom(String valueFrom) {
         this.valueFrom = valueFrom;
         return this;
     }
     
+    public Secret(@JsonProperty("name") String name, @JsonProperty("valueFrom") String valueFrom) {
+        this.name = name;
+        this.valueFrom = valueFrom;
+  }
 }

@@ -15,6 +15,7 @@ public class ResourcePolicyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ResourcePolicyList withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -26,6 +27,7 @@ public class ResourcePolicyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ResourcePolicyList withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class ResourcePolicyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ResourcePolicy[] items;
+
     public ResourcePolicyList withItems(ResourcePolicy[] items) {
         this.items = items;
         return this;
@@ -48,6 +51,7 @@ public class ResourcePolicyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ResourcePolicyList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -59,6 +63,7 @@ public class ResourcePolicyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ResourcePolicyList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -70,6 +75,7 @@ public class ResourcePolicyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public ResourcePolicyList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -81,9 +87,11 @@ public class ResourcePolicyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public ResourcePolicyListWarning warning;
+
     public ResourcePolicyList withWarning(ResourcePolicyListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public ResourcePolicyList(){}
 }

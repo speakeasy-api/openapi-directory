@@ -12,6 +12,7 @@ public class CreateContainerServiceDeploymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public java.util.Map<String, Container> containers;
+
     public CreateContainerServiceDeploymentRequest withContainers(java.util.Map<String, Container> containers) {
         this.containers = containers;
         return this;
@@ -20,6 +21,7 @@ public class CreateContainerServiceDeploymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicEndpoint")
     public EndpointRequest publicEndpoint;
+
     public CreateContainerServiceDeploymentRequest withPublicEndpoint(EndpointRequest publicEndpoint) {
         this.publicEndpoint = publicEndpoint;
         return this;
@@ -27,9 +29,13 @@ public class CreateContainerServiceDeploymentRequest {
     
     @JsonProperty("serviceName")
     public String serviceName;
+
     public CreateContainerServiceDeploymentRequest withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public CreateContainerServiceDeploymentRequest(@JsonProperty("serviceName") String serviceName) {
+        this.serviceName = serviceName;
+  }
 }

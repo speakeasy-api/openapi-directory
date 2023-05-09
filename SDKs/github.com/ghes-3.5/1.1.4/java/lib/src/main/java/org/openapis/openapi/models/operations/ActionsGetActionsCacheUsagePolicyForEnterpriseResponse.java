@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsGetActionsCacheUsagePolicyForEnterpriseResponse {
     
     public String contentType;
+
     public ActionsGetActionsCacheUsagePolicyForEnterpriseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsGetActionsCacheUsagePolicyForEnterpriseResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ActionsGetActionsCacheUsagePolicyForEnterpriseResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ActionsGetActionsCacheUsagePolicyForEnterpriseResponse {
     
     
     public Integer statusCode;
+
     public ActionsGetActionsCacheUsagePolicyForEnterpriseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ActionsGetActionsCacheUsagePolicyForEnterpriseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsGetActionsCacheUsagePolicyForEnterpriseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ActionsGetActionsCacheUsagePolicyForEnterpriseResponse {
      */
     
     public org.openapis.openapi.models.shared.ActionsCacheUsagePolicyEnterprise actionsCacheUsagePolicyEnterprise;
+
     public ActionsGetActionsCacheUsagePolicyForEnterpriseResponse withActionsCacheUsagePolicyEnterprise(org.openapis.openapi.models.shared.ActionsCacheUsagePolicyEnterprise actionsCacheUsagePolicyEnterprise) {
         this.actionsCacheUsagePolicyEnterprise = actionsCacheUsagePolicyEnterprise;
         return this;
     }
     
+    public ActionsGetActionsCacheUsagePolicyForEnterpriseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

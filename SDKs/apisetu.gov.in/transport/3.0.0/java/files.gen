@@ -206,4 +206,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/VehicleRegistrationSchemaIs
 lib/src/main/java/org/openapis/openapi/models/shared/VehicleRegistrationSchemaIssuedToPerson.java
 lib/src/main/java/org/openapis/openapi/models/shared/VehicleRegistrationSchemaIssuedTo.java
 lib/src/main/java/org/openapis/openapi/models/shared/VehicleRegistrationSchema.java
+docs/sdk/README.md
+docs/apis/README.md
 USAGE.md

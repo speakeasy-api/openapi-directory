@@ -47,4 +47,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1SetIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1TestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1TestIamPermissionsRequest.java
+docs/sdk/README.md
+docs/v1/README.md
 USAGE.md

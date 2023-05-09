@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class EnableInsightRulesInput {
     
     public String[] ruleNames;
+
     public EnableInsightRulesInput withRuleNames(String[] ruleNames) {
         this.ruleNames = ruleNames;
         return this;
     }
     
+    public EnableInsightRulesInput(@JsonProperty("RuleNames") String[] ruleNames) {
+        this.ruleNames = ruleNames;
+  }
 }

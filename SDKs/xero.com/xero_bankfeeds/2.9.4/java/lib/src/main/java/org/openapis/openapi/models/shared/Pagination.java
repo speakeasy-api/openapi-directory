@@ -15,6 +15,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemCount")
     public Long itemCount;
+
     public Pagination withItemCount(Long itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -26,6 +27,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public Pagination withPage(Long page) {
         this.page = page;
         return this;
@@ -37,6 +39,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageCount")
     public Long pageCount;
+
     public Pagination withPageCount(Long pageCount) {
         this.pageCount = pageCount;
         return this;
@@ -48,9 +51,11 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Long pageSize;
+
     public Pagination withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public Pagination(){}
 }

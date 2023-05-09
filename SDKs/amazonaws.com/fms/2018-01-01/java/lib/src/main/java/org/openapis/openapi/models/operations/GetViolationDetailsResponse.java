@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetViolationDetailsResponse {
     
     public String contentType;
+
     public GetViolationDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetViolationDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetViolationDetailsResponse getViolationDetailsResponse;
+
     public GetViolationDetailsResponse withGetViolationDetailsResponse(org.openapis.openapi.models.shared.GetViolationDetailsResponse getViolationDetailsResponse) {
         this.getViolationDetailsResponse = getViolationDetailsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetViolationDetailsResponse {
      */
     
     public Object internalErrorException;
+
     public GetViolationDetailsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class GetViolationDetailsResponse {
      */
     
     public Object invalidInputException;
+
     public GetViolationDetailsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetViolationDetailsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetViolationDetailsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetViolationDetailsResponse {
     
     
     public Integer statusCode;
+
     public GetViolationDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetViolationDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetViolationDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetViolationDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

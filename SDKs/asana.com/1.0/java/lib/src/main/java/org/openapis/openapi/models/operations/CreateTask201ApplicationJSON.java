@@ -15,9 +15,11 @@ public class CreateTask201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TaskResponse data;
+
     public CreateTask201ApplicationJSON withData(org.openapis.openapi.models.shared.TaskResponse data) {
         this.data = data;
         return this;
     }
     
+    public CreateTask201ApplicationJSON(){}
 }

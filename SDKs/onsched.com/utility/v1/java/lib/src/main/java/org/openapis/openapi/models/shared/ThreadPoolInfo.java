@@ -15,6 +15,7 @@ public class ThreadPoolInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableCompletionThreads")
     public Integer availableCompletionThreads;
+
     public ThreadPoolInfo withAvailableCompletionThreads(Integer availableCompletionThreads) {
         this.availableCompletionThreads = availableCompletionThreads;
         return this;
@@ -23,6 +24,7 @@ public class ThreadPoolInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableWorkerThreads")
     public Integer availableWorkerThreads;
+
     public ThreadPoolInfo withAvailableWorkerThreads(Integer availableWorkerThreads) {
         this.availableWorkerThreads = availableWorkerThreads;
         return this;
@@ -31,6 +33,7 @@ public class ThreadPoolInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxCompletionThreads")
     public Integer maxCompletionThreads;
+
     public ThreadPoolInfo withMaxCompletionThreads(Integer maxCompletionThreads) {
         this.maxCompletionThreads = maxCompletionThreads;
         return this;
@@ -39,6 +42,7 @@ public class ThreadPoolInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxWorkerThreads")
     public Integer maxWorkerThreads;
+
     public ThreadPoolInfo withMaxWorkerThreads(Integer maxWorkerThreads) {
         this.maxWorkerThreads = maxWorkerThreads;
         return this;
@@ -47,6 +51,7 @@ public class ThreadPoolInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minCompletionThreads")
     public Integer minCompletionThreads;
+
     public ThreadPoolInfo withMinCompletionThreads(Integer minCompletionThreads) {
         this.minCompletionThreads = minCompletionThreads;
         return this;
@@ -55,6 +60,7 @@ public class ThreadPoolInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minWorkerThreads")
     public Integer minWorkerThreads;
+
     public ThreadPoolInfo withMinWorkerThreads(Integer minWorkerThreads) {
         this.minWorkerThreads = minWorkerThreads;
         return this;
@@ -63,6 +69,7 @@ public class ThreadPoolInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occupiedCompletionThreads")
     public Integer occupiedCompletionThreads;
+
     public ThreadPoolInfo withOccupiedCompletionThreads(Integer occupiedCompletionThreads) {
         this.occupiedCompletionThreads = occupiedCompletionThreads;
         return this;
@@ -71,9 +78,11 @@ public class ThreadPoolInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occupiedWorkerThreads")
     public Integer occupiedWorkerThreads;
+
     public ThreadPoolInfo withOccupiedWorkerThreads(Integer occupiedWorkerThreads) {
         this.occupiedWorkerThreads = occupiedWorkerThreads;
         return this;
     }
     
+    public ThreadPoolInfo(){}
 }

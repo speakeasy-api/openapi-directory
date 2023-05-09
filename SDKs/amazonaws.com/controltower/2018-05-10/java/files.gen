@@ -50,4 +50,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ControlOperationTypeEnum.ja
 lib/src/main/java/org/openapis/openapi/models/shared/ListEnabledControlsOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/EnabledControlSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

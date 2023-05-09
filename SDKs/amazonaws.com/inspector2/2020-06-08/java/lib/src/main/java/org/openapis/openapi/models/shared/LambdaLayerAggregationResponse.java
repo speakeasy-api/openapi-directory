@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LambdaLayerAggregationResponse {
     @JsonProperty("accountId")
     public String accountId;
+
     public LambdaLayerAggregationResponse withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -21,6 +22,7 @@ public class LambdaLayerAggregationResponse {
     
     @JsonProperty("functionName")
     public String functionName;
+
     public LambdaLayerAggregationResponse withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -28,6 +30,7 @@ public class LambdaLayerAggregationResponse {
     
     @JsonProperty("layerArn")
     public String layerArn;
+
     public LambdaLayerAggregationResponse withLayerArn(String layerArn) {
         this.layerArn = layerArn;
         return this;
@@ -35,6 +38,7 @@ public class LambdaLayerAggregationResponse {
     
     @JsonProperty("resourceId")
     public String resourceId;
+
     public LambdaLayerAggregationResponse withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -46,9 +50,16 @@ public class LambdaLayerAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityCounts")
     public SeverityCounts severityCounts;
+
     public LambdaLayerAggregationResponse withSeverityCounts(SeverityCounts severityCounts) {
         this.severityCounts = severityCounts;
         return this;
     }
     
+    public LambdaLayerAggregationResponse(@JsonProperty("accountId") String accountId, @JsonProperty("functionName") String functionName, @JsonProperty("layerArn") String layerArn, @JsonProperty("resourceId") String resourceId) {
+        this.accountId = accountId;
+        this.functionName = functionName;
+        this.layerArn = layerArn;
+        this.resourceId = resourceId;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateIntentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateIntentRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class CreateIntentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialogCodeHook")
     public CreateIntentRequestBodyDialogCodeHook dialogCodeHook;
+
     public CreateIntentRequestBody withDialogCodeHook(CreateIntentRequestBodyDialogCodeHook dialogCodeHook) {
         this.dialogCodeHook = dialogCodeHook;
         return this;
@@ -37,6 +39,7 @@ public class CreateIntentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillmentCodeHook")
     public CreateIntentRequestBodyFulfillmentCodeHook fulfillmentCodeHook;
+
     public CreateIntentRequestBody withFulfillmentCodeHook(CreateIntentRequestBodyFulfillmentCodeHook fulfillmentCodeHook) {
         this.fulfillmentCodeHook = fulfillmentCodeHook;
         return this;
@@ -48,6 +51,7 @@ public class CreateIntentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialResponseSetting")
     public CreateIntentRequestBodyInitialResponseSetting initialResponseSetting;
+
     public CreateIntentRequestBody withInitialResponseSetting(CreateIntentRequestBodyInitialResponseSetting initialResponseSetting) {
         this.initialResponseSetting = initialResponseSetting;
         return this;
@@ -59,6 +63,7 @@ public class CreateIntentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputContexts")
     public org.openapis.openapi.models.shared.InputContext[] inputContexts;
+
     public CreateIntentRequestBody withInputContexts(org.openapis.openapi.models.shared.InputContext[] inputContexts) {
         this.inputContexts = inputContexts;
         return this;
@@ -70,6 +75,7 @@ public class CreateIntentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentClosingSetting")
     public CreateIntentRequestBodyIntentClosingSetting intentClosingSetting;
+
     public CreateIntentRequestBody withIntentClosingSetting(CreateIntentRequestBodyIntentClosingSetting intentClosingSetting) {
         this.intentClosingSetting = intentClosingSetting;
         return this;
@@ -81,6 +87,7 @@ public class CreateIntentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentConfirmationSetting")
     public CreateIntentRequestBodyIntentConfirmationSetting intentConfirmationSetting;
+
     public CreateIntentRequestBody withIntentConfirmationSetting(CreateIntentRequestBodyIntentConfirmationSetting intentConfirmationSetting) {
         this.intentConfirmationSetting = intentConfirmationSetting;
         return this;
@@ -91,6 +98,7 @@ public class CreateIntentRequestBody {
      */
     @JsonProperty("intentName")
     public String intentName;
+
     public CreateIntentRequestBody withIntentName(String intentName) {
         this.intentName = intentName;
         return this;
@@ -102,6 +110,7 @@ public class CreateIntentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kendraConfiguration")
     public CreateIntentRequestBodyKendraConfiguration kendraConfiguration;
+
     public CreateIntentRequestBody withKendraConfiguration(CreateIntentRequestBodyKendraConfiguration kendraConfiguration) {
         this.kendraConfiguration = kendraConfiguration;
         return this;
@@ -113,6 +122,7 @@ public class CreateIntentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputContexts")
     public org.openapis.openapi.models.shared.OutputContext[] outputContexts;
+
     public CreateIntentRequestBody withOutputContexts(org.openapis.openapi.models.shared.OutputContext[] outputContexts) {
         this.outputContexts = outputContexts;
         return this;
@@ -124,6 +134,7 @@ public class CreateIntentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentIntentSignature")
     public String parentIntentSignature;
+
     public CreateIntentRequestBody withParentIntentSignature(String parentIntentSignature) {
         this.parentIntentSignature = parentIntentSignature;
         return this;
@@ -135,9 +146,13 @@ public class CreateIntentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleUtterances")
     public org.openapis.openapi.models.shared.SampleUtterance[] sampleUtterances;
+
     public CreateIntentRequestBody withSampleUtterances(org.openapis.openapi.models.shared.SampleUtterance[] sampleUtterances) {
         this.sampleUtterances = sampleUtterances;
         return this;
     }
     
+    public CreateIntentRequestBody(@JsonProperty("intentName") String intentName) {
+        this.intentName = intentName;
+  }
 }

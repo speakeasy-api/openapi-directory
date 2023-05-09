@@ -12,6 +12,7 @@ public class HlipcRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public HlipcRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class HlipcRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public HlipcRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class HlipcRequestBodyCertificateParameters {
      */
     @JsonProperty("GENDER")
     public String gender;
+
     public HlipcRequestBodyCertificateParameters withGender(String gender) {
         this.gender = gender;
         return this;
@@ -42,6 +45,7 @@ public class HlipcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyNo")
     public String policyNo;
+
     public HlipcRequestBodyCertificateParameters withPolicyNo(String policyNo) {
         this.policyNo = policyNo;
         return this;
@@ -52,9 +56,17 @@ public class HlipcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyType")
     public String policyType;
+
     public HlipcRequestBodyCertificateParameters withPolicyType(String policyType) {
         this.policyType = policyType;
         return this;
     }
     
+    public HlipcRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("GENDER") String gender, @JsonProperty("PolicyNo") String policyNo, @JsonProperty("PolicyType") String policyType) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.gender = gender;
+        this.policyNo = policyNo;
+        this.policyType = policyType;
+  }
 }

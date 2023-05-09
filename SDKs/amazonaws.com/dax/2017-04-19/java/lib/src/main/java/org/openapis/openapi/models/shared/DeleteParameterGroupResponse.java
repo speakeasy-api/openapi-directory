@@ -15,9 +15,11 @@ public class DeleteParameterGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionMessage")
     public String deletionMessage;
+
     public DeleteParameterGroupResponse withDeletionMessage(String deletionMessage) {
         this.deletionMessage = deletionMessage;
         return this;
     }
     
+    public DeleteParameterGroupResponse(){}
 }

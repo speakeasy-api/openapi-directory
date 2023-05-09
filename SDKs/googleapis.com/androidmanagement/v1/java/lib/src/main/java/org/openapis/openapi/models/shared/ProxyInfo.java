@@ -18,6 +18,7 @@ public class ProxyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedHosts")
     public String[] excludedHosts;
+
     public ProxyInfo withExcludedHosts(String[] excludedHosts) {
         this.excludedHosts = excludedHosts;
         return this;
@@ -29,6 +30,7 @@ public class ProxyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public ProxyInfo withHost(String host) {
         this.host = host;
         return this;
@@ -40,6 +42,7 @@ public class ProxyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pacUri")
     public String pacUri;
+
     public ProxyInfo withPacUri(String pacUri) {
         this.pacUri = pacUri;
         return this;
@@ -51,9 +54,11 @@ public class ProxyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public ProxyInfo withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public ProxyInfo(){}
 }

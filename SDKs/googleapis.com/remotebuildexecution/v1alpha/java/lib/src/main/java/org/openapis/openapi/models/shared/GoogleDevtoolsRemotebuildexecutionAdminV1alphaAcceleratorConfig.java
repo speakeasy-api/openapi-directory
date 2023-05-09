@@ -18,6 +18,7 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorCount")
     public String acceleratorCount;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig withAcceleratorCount(String acceleratorCount) {
         this.acceleratorCount = acceleratorCount;
         return this;
@@ -29,9 +30,11 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorType")
     public String acceleratorType;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig withAcceleratorType(String acceleratorType) {
         this.acceleratorType = acceleratorType;
         return this;
     }
     
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig(){}
 }

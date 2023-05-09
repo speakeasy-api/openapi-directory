@@ -18,6 +18,7 @@ public class EventFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilter")
     public PathReportDimensionValue dimensionFilter;
+
     public EventFilter withDimensionFilter(PathReportDimensionValue dimensionFilter) {
         this.dimensionFilter = dimensionFilter;
         return this;
@@ -29,9 +30,11 @@ public class EventFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public EventFilter withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public EventFilter(){}
 }

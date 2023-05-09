@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FlushApiCacheResponse {
@@ -12,6 +13,7 @@ public class FlushApiCacheResponse {
      */
     
     public Object badRequestException;
+
     public FlushApiCacheResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class FlushApiCacheResponse {
      */
     
     public Object concurrentModificationException;
+
     public FlushApiCacheResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class FlushApiCacheResponse {
     
     
     public String contentType;
+
     public FlushApiCacheResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class FlushApiCacheResponse {
      */
     
     public java.util.Map<String, Object> flushApiCacheResponse;
+
     public FlushApiCacheResponse withFlushApiCacheResponse(java.util.Map<String, Object> flushApiCacheResponse) {
         this.flushApiCacheResponse = flushApiCacheResponse;
         return this;
@@ -49,6 +54,7 @@ public class FlushApiCacheResponse {
      */
     
     public Object internalFailureException;
+
     public FlushApiCacheResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class FlushApiCacheResponse {
      */
     
     public Object notFoundException;
+
     public FlushApiCacheResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class FlushApiCacheResponse {
     
     
     public Integer statusCode;
+
     public FlushApiCacheResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class FlushApiCacheResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FlushApiCacheResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class FlushApiCacheResponse {
      */
     
     public Object unauthorizedException;
+
     public FlushApiCacheResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public FlushApiCacheResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

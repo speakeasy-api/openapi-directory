@@ -15,6 +15,7 @@ public class StepAutomationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public PlatformCommand command;
+
     public StepAutomationConfiguration withCommand(PlatformCommand command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class StepAutomationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runEnvironment")
     public RunEnvironmentEnum runEnvironment;
+
     public StepAutomationConfiguration withRunEnvironment(RunEnvironmentEnum runEnvironment) {
         this.runEnvironment = runEnvironment;
         return this;
@@ -31,6 +33,7 @@ public class StepAutomationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptLocationS3Bucket")
     public String scriptLocationS3Bucket;
+
     public StepAutomationConfiguration withScriptLocationS3Bucket(String scriptLocationS3Bucket) {
         this.scriptLocationS3Bucket = scriptLocationS3Bucket;
         return this;
@@ -39,6 +42,7 @@ public class StepAutomationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptLocationS3Key")
     public PlatformScriptKey scriptLocationS3Key;
+
     public StepAutomationConfiguration withScriptLocationS3Key(PlatformScriptKey scriptLocationS3Key) {
         this.scriptLocationS3Key = scriptLocationS3Key;
         return this;
@@ -47,9 +51,11 @@ public class StepAutomationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetType")
     public TargetTypeEnum targetType;
+
     public StepAutomationConfiguration withTargetType(TargetTypeEnum targetType) {
         this.targetType = targetType;
         return this;
     }
     
+    public StepAutomationConfiguration(){}
 }

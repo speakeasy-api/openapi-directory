@@ -18,6 +18,7 @@ public class ListClientUserInvitationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invitations")
     public ClientUserInvitation[] invitations;
+
     public ListClientUserInvitationsResponse withInvitations(ClientUserInvitation[] invitations) {
         this.invitations = invitations;
         return this;
@@ -29,9 +30,11 @@ public class ListClientUserInvitationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListClientUserInvitationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListClientUserInvitationsResponse(){}
 }

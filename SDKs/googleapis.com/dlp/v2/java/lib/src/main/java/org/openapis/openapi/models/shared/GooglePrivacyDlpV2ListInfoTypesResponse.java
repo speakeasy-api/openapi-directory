@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2ListInfoTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infoTypes")
     public GooglePrivacyDlpV2InfoTypeDescription[] infoTypes;
+
     public GooglePrivacyDlpV2ListInfoTypesResponse withInfoTypes(GooglePrivacyDlpV2InfoTypeDescription[] infoTypes) {
         this.infoTypes = infoTypes;
         return this;
     }
     
+    public GooglePrivacyDlpV2ListInfoTypesResponse(){}
 }

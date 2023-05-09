@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Status {
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public Status withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -19,6 +20,7 @@ public class Status {
     
     @JsonProperty("context")
     public String context;
+
     public Status withContext(String context) {
         this.context = context;
         return this;
@@ -26,6 +28,7 @@ public class Status {
     
     @JsonProperty("created_at")
     public String createdAt;
+
     public Status withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -36,6 +39,7 @@ public class Status {
      */
     @JsonProperty("creator")
     public NullableSimpleUser creator;
+
     public Status withCreator(NullableSimpleUser creator) {
         this.creator = creator;
         return this;
@@ -43,6 +47,7 @@ public class Status {
     
     @JsonProperty("description")
     public String description;
+
     public Status withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +55,7 @@ public class Status {
     
     @JsonProperty("id")
     public Long id;
+
     public Status withId(Long id) {
         this.id = id;
         return this;
@@ -57,6 +63,7 @@ public class Status {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public Status withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -64,6 +71,7 @@ public class Status {
     
     @JsonProperty("state")
     public String state;
+
     public Status withState(String state) {
         this.state = state;
         return this;
@@ -71,6 +79,7 @@ public class Status {
     
     @JsonProperty("target_url")
     public String targetUrl;
+
     public Status withTargetUrl(String targetUrl) {
         this.targetUrl = targetUrl;
         return this;
@@ -78,6 +87,7 @@ public class Status {
     
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Status withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -85,9 +95,23 @@ public class Status {
     
     @JsonProperty("url")
     public String url;
+
     public Status withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Status(@JsonProperty("avatar_url") String avatarUrl, @JsonProperty("context") String context, @JsonProperty("created_at") String createdAt, @JsonProperty("creator") NullableSimpleUser creator, @JsonProperty("description") String description, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("state") String state, @JsonProperty("target_url") String targetUrl, @JsonProperty("updated_at") String updatedAt, @JsonProperty("url") String url) {
+        this.avatarUrl = avatarUrl;
+        this.context = context;
+        this.createdAt = createdAt;
+        this.creator = creator;
+        this.description = description;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.state = state;
+        this.targetUrl = targetUrl;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

@@ -15,6 +15,7 @@ public class LambdaOutputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public LambdaOutputDescription withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -23,9 +24,11 @@ public class LambdaOutputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public LambdaOutputDescription withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
     }
     
+    public LambdaOutputDescription(){}
 }

@@ -15,6 +15,7 @@ public class GetLexiconOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lexicon")
     public Lexicon lexicon;
+
     public GetLexiconOutput withLexicon(Lexicon lexicon) {
         this.lexicon = lexicon;
         return this;
@@ -23,9 +24,11 @@ public class GetLexiconOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LexiconAttributes")
     public LexiconAttributes lexiconAttributes;
+
     public GetLexiconOutput withLexiconAttributes(LexiconAttributes lexiconAttributes) {
         this.lexiconAttributes = lexiconAttributes;
         return this;
     }
     
+    public GetLexiconOutput(){}
 }

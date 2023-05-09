@@ -17,6 +17,7 @@ public class HealthCheck {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public HealthCheck withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -28,9 +29,13 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public HealthCheck withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public HealthCheck(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

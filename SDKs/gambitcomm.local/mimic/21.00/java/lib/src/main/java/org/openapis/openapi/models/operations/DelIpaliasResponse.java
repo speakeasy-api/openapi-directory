@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DelIpaliasResponse {
     
     public String contentType;
+
     public DelIpaliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DelIpaliasResponse {
     
     
     public Integer statusCode;
+
     public DelIpaliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DelIpaliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DelIpaliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DelIpaliasResponse {
      */
     
     public String delIpalias200ApplicationJSONString;
+
     public DelIpaliasResponse withDelIpalias200ApplicationJSONString(String delIpalias200ApplicationJSONString) {
         this.delIpalias200ApplicationJSONString = delIpalias200ApplicationJSONString;
         return this;
     }
     
+    public DelIpaliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

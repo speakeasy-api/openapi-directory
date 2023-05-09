@@ -12,6 +12,7 @@ public class TrafficType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public TrafficType withCount(Long count) {
         this.count = count;
         return this;
@@ -20,9 +21,11 @@ public class TrafficType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TrafficType withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TrafficType(){}
 }

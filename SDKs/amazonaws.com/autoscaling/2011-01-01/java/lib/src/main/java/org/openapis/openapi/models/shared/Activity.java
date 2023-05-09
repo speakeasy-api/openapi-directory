@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class Activity {
     
     public String activityId;
+
     public Activity withActivityId(String activityId) {
         this.activityId = activityId;
         return this;
@@ -19,6 +21,7 @@ public class Activity {
     
     
     public String autoScalingGroupARN;
+
     public Activity withAutoScalingGroupARN(String autoScalingGroupARN) {
         this.autoScalingGroupARN = autoScalingGroupARN;
         return this;
@@ -26,6 +29,7 @@ public class Activity {
     
     
     public String autoScalingGroupName;
+
     public Activity withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -33,6 +37,7 @@ public class Activity {
     
     
     public String autoScalingGroupState;
+
     public Activity withAutoScalingGroupState(String autoScalingGroupState) {
         this.autoScalingGroupState = autoScalingGroupState;
         return this;
@@ -40,6 +45,7 @@ public class Activity {
     
     
     public String cause;
+
     public Activity withCause(String cause) {
         this.cause = cause;
         return this;
@@ -47,6 +53,7 @@ public class Activity {
     
     
     public String description;
+
     public Activity withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +61,7 @@ public class Activity {
     
     
     public String details;
+
     public Activity withDetails(String details) {
         this.details = details;
         return this;
@@ -61,6 +69,7 @@ public class Activity {
     
     
     public OffsetDateTime endTime;
+
     public Activity withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -68,6 +77,7 @@ public class Activity {
     
     
     public Long progress;
+
     public Activity withProgress(Long progress) {
         this.progress = progress;
         return this;
@@ -75,6 +85,7 @@ public class Activity {
     
     
     public OffsetDateTime startTime;
+
     public Activity withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -82,6 +93,7 @@ public class Activity {
     
     
     public ScalingActivityStatusCodeEnum statusCode;
+
     public Activity withStatusCode(ScalingActivityStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -89,9 +101,17 @@ public class Activity {
     
     
     public String statusMessage;
+
     public Activity withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public Activity(@JsonProperty("ActivityId") String activityId, @JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("Cause") String cause, @JsonProperty("StartTime") OffsetDateTime startTime, @JsonProperty("StatusCode") ScalingActivityStatusCodeEnum statusCode) {
+        this.activityId = activityId;
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.cause = cause;
+        this.startTime = startTime;
+        this.statusCode = statusCode;
+  }
 }

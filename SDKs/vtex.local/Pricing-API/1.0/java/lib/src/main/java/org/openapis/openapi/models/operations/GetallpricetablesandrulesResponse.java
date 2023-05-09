@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetallpricetablesandrulesResponse {
     
     public String contentType;
+
     public GetallpricetablesandrulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetallpricetablesandrulesResponse {
     
     
     public Integer statusCode;
+
     public GetallpricetablesandrulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetallpricetablesandrulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetallpricetablesandrulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetallpricetablesandrulesResponse {
      */
     
     public Getallpricetablesandrules200ApplicationJSON[] getallpricetablesandrules200ApplicationJSONObjects;
+
     public GetallpricetablesandrulesResponse withGetallpricetablesandrules200ApplicationJSONObjects(Getallpricetablesandrules200ApplicationJSON[] getallpricetablesandrules200ApplicationJSONObjects) {
         this.getallpricetablesandrules200ApplicationJSONObjects = getallpricetablesandrules200ApplicationJSONObjects;
         return this;
     }
     
+    public GetallpricetablesandrulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

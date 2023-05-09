@@ -12,6 +12,7 @@ public class GetReservationPurchaseRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public GetReservationPurchaseRecommendationRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -20,6 +21,7 @@ public class GetReservationPurchaseRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountScope")
     public AccountScopeEnum accountScope;
+
     public GetReservationPurchaseRecommendationRequest withAccountScope(AccountScopeEnum accountScope) {
         this.accountScope = accountScope;
         return this;
@@ -31,6 +33,7 @@ public class GetReservationPurchaseRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public Expression filter;
+
     public GetReservationPurchaseRecommendationRequest withFilter(Expression filter) {
         this.filter = filter;
         return this;
@@ -39,6 +42,7 @@ public class GetReservationPurchaseRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LookbackPeriodInDays")
     public LookbackPeriodInDaysEnum lookbackPeriodInDays;
+
     public GetReservationPurchaseRecommendationRequest withLookbackPeriodInDays(LookbackPeriodInDaysEnum lookbackPeriodInDays) {
         this.lookbackPeriodInDays = lookbackPeriodInDays;
         return this;
@@ -47,6 +51,7 @@ public class GetReservationPurchaseRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetReservationPurchaseRecommendationRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -55,6 +60,7 @@ public class GetReservationPurchaseRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public GetReservationPurchaseRecommendationRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -63,6 +69,7 @@ public class GetReservationPurchaseRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentOption")
     public PaymentOptionEnum paymentOption;
+
     public GetReservationPurchaseRecommendationRequest withPaymentOption(PaymentOptionEnum paymentOption) {
         this.paymentOption = paymentOption;
         return this;
@@ -70,6 +77,7 @@ public class GetReservationPurchaseRecommendationRequest {
     
     @JsonProperty("Service")
     public String service;
+
     public GetReservationPurchaseRecommendationRequest withService(String service) {
         this.service = service;
         return this;
@@ -78,6 +86,7 @@ public class GetReservationPurchaseRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceSpecification")
     public ServiceSpecification serviceSpecification;
+
     public GetReservationPurchaseRecommendationRequest withServiceSpecification(ServiceSpecification serviceSpecification) {
         this.serviceSpecification = serviceSpecification;
         return this;
@@ -86,9 +95,13 @@ public class GetReservationPurchaseRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TermInYears")
     public TermInYearsEnum termInYears;
+
     public GetReservationPurchaseRecommendationRequest withTermInYears(TermInYearsEnum termInYears) {
         this.termInYears = termInYears;
         return this;
     }
     
+    public GetReservationPurchaseRecommendationRequest(@JsonProperty("Service") String service) {
+        this.service = service;
+  }
 }

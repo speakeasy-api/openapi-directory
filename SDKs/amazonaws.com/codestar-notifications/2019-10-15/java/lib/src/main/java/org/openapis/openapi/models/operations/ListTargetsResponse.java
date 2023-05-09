@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTargetsResponse {
     
     public String contentType;
+
     public ListTargetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTargetsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListTargetsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListTargetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTargetsResult listTargetsResult;
+
     public ListTargetsResponse withListTargetsResult(org.openapis.openapi.models.shared.ListTargetsResult listTargetsResult) {
         this.listTargetsResult = listTargetsResult;
         return this;
@@ -36,6 +40,7 @@ public class ListTargetsResponse {
     
     
     public Integer statusCode;
+
     public ListTargetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListTargetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTargetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListTargetsResponse {
      */
     
     public Object validationException;
+
     public ListTargetsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTargetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

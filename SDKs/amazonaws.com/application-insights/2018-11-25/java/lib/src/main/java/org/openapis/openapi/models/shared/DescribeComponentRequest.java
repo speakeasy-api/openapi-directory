@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeComponentRequest {
     @JsonProperty("ComponentName")
     public String componentName;
+
     public DescribeComponentRequest withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -16,9 +17,14 @@ public class DescribeComponentRequest {
     
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public DescribeComponentRequest withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
     }
     
+    public DescribeComponentRequest(@JsonProperty("ComponentName") String componentName, @JsonProperty("ResourceGroupName") String resourceGroupName) {
+        this.componentName = componentName;
+        this.resourceGroupName = resourceGroupName;
+  }
 }

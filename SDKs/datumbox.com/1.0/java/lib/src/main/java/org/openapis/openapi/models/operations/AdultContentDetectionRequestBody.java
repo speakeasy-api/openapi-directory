@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdultContentDetectionRequestBody {
@@ -12,6 +13,7 @@ public class AdultContentDetectionRequestBody {
      */
     @SpeakeasyMetadata("form:name=api_key")
     public String apiKey;
+
     public AdultContentDetectionRequestBody withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,9 +24,13 @@ public class AdultContentDetectionRequestBody {
      */
     @SpeakeasyMetadata("form:name=text")
     public String text;
+
     public AdultContentDetectionRequestBody withText(String text) {
         this.text = text;
         return this;
     }
     
+    public AdultContentDetectionRequestBody(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyIpamResult {
     
     public ModifyIpamResultIpam ipam;
+
     public ModifyIpamResult withIpam(ModifyIpamResultIpam ipam) {
         this.ipam = ipam;
         return this;
     }
     
+    public ModifyIpamResult(){}
 }

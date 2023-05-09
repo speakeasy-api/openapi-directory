@@ -18,9 +18,11 @@ public class SecurityContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securities")
     public SecurityContextSecuritiesEnum[] securities;
+
     public SecurityContext withSecurities(SecurityContextSecuritiesEnum[] securities) {
         this.securities = securities;
         return this;
     }
     
+    public SecurityContext(){}
 }

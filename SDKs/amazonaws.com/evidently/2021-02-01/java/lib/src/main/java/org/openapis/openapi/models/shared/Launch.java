@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Launch {
     @JsonProperty("arn")
     public String arn;
+
     public Launch withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class Launch {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdTime")
     public OffsetDateTime createdTime;
+
     public Launch withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -36,6 +38,7 @@ public class Launch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Launch withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class Launch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("execution")
     public LaunchExecution execution;
+
     public Launch withExecution(LaunchExecution execution) {
         this.execution = execution;
         return this;
@@ -52,6 +56,7 @@ public class Launch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public LaunchGroup[] groups;
+
     public Launch withGroups(LaunchGroup[] groups) {
         this.groups = groups;
         return this;
@@ -61,6 +66,7 @@ public class Launch {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public Launch withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -69,6 +75,7 @@ public class Launch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricMonitors")
     public MetricMonitor[] metricMonitors;
+
     public Launch withMetricMonitors(MetricMonitor[] metricMonitors) {
         this.metricMonitors = metricMonitors;
         return this;
@@ -76,6 +83,7 @@ public class Launch {
     
     @JsonProperty("name")
     public String name;
+
     public Launch withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +92,7 @@ public class Launch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public Launch withProject(String project) {
         this.project = project;
         return this;
@@ -92,6 +101,7 @@ public class Launch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("randomizationSalt")
     public String randomizationSalt;
+
     public Launch withRandomizationSalt(String randomizationSalt) {
         this.randomizationSalt = randomizationSalt;
         return this;
@@ -100,6 +110,7 @@ public class Launch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledSplitsDefinition")
     public ScheduledSplitsLaunchDefinition scheduledSplitsDefinition;
+
     public Launch withScheduledSplitsDefinition(ScheduledSplitsLaunchDefinition scheduledSplitsDefinition) {
         this.scheduledSplitsDefinition = scheduledSplitsDefinition;
         return this;
@@ -107,6 +118,7 @@ public class Launch {
     
     @JsonProperty("status")
     public LaunchStatusEnum status;
+
     public Launch withStatus(LaunchStatusEnum status) {
         this.status = status;
         return this;
@@ -115,6 +127,7 @@ public class Launch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public Launch withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -123,6 +136,7 @@ public class Launch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Launch withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -130,9 +144,18 @@ public class Launch {
     
     @JsonProperty("type")
     public LaunchTypeEnum type;
+
     public Launch withType(LaunchTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Launch(@JsonProperty("arn") String arn, @JsonProperty("createdTime") OffsetDateTime createdTime, @JsonProperty("lastUpdatedTime") OffsetDateTime lastUpdatedTime, @JsonProperty("name") String name, @JsonProperty("status") LaunchStatusEnum status, @JsonProperty("type") LaunchTypeEnum type) {
+        this.arn = arn;
+        this.createdTime = createdTime;
+        this.lastUpdatedTime = lastUpdatedTime;
+        this.name = name;
+        this.status = status;
+        this.type = type;
+  }
 }

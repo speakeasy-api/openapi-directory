@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTokenRequest {
@@ -12,6 +13,7 @@ public class GetTokenRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public GetTokenRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class GetTokenRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetTokenRequest getTokenRequest;
+
     public GetTokenRequest withGetTokenRequest(org.openapis.openapi.models.shared.GetTokenRequest getTokenRequest) {
         this.getTokenRequest = getTokenRequest;
         return this;
     }
     
+    public GetTokenRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("getTokenRequest") org.openapis.openapi.models.shared.GetTokenRequest getTokenRequest) {
+        this.authorization = authorization;
+        this.getTokenRequest = getTokenRequest;
+  }
 }

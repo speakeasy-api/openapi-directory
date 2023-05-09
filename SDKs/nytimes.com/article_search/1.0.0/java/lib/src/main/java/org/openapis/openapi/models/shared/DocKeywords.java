@@ -12,6 +12,7 @@ public class DocKeywords {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DocKeywords withName(String name) {
         this.name = name;
         return this;
@@ -20,6 +21,7 @@ public class DocKeywords {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rank")
     public String rank;
+
     public DocKeywords withRank(String rank) {
         this.rank = rank;
         return this;
@@ -28,9 +30,11 @@ public class DocKeywords {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public DocKeywords withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DocKeywords(){}
 }

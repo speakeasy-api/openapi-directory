@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CapacityUnitsConfiguration {
     @JsonProperty("RescoreCapacityUnits")
     public Long rescoreCapacityUnits;
+
     public CapacityUnitsConfiguration withRescoreCapacityUnits(Long rescoreCapacityUnits) {
         this.rescoreCapacityUnits = rescoreCapacityUnits;
         return this;
     }
     
+    public CapacityUnitsConfiguration(@JsonProperty("RescoreCapacityUnits") Long rescoreCapacityUnits) {
+        this.rescoreCapacityUnits = rescoreCapacityUnits;
+  }
 }

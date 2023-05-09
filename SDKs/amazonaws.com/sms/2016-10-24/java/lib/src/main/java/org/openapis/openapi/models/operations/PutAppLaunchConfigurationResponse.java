@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAppLaunchConfigurationResponse {
     
     public String contentType;
+
     public PutAppLaunchConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutAppLaunchConfigurationResponse {
      */
     
     public Object internalError;
+
     public PutAppLaunchConfigurationResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -29,6 +32,7 @@ public class PutAppLaunchConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public PutAppLaunchConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class PutAppLaunchConfigurationResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public PutAppLaunchConfigurationResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -49,6 +54,7 @@ public class PutAppLaunchConfigurationResponse {
      */
     
     public Object operationNotPermittedException;
+
     public PutAppLaunchConfigurationResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -59,6 +65,7 @@ public class PutAppLaunchConfigurationResponse {
      */
     
     public java.util.Map<String, Object> putAppLaunchConfigurationResponse;
+
     public PutAppLaunchConfigurationResponse withPutAppLaunchConfigurationResponse(java.util.Map<String, Object> putAppLaunchConfigurationResponse) {
         this.putAppLaunchConfigurationResponse = putAppLaunchConfigurationResponse;
         return this;
@@ -66,6 +73,7 @@ public class PutAppLaunchConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PutAppLaunchConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutAppLaunchConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAppLaunchConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class PutAppLaunchConfigurationResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public PutAppLaunchConfigurationResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public PutAppLaunchConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

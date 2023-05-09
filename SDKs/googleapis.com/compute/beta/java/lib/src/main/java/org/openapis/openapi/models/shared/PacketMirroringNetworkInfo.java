@@ -15,6 +15,7 @@ public class PacketMirroringNetworkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canonicalUrl")
     public String canonicalUrl;
+
     public PacketMirroringNetworkInfo withCanonicalUrl(String canonicalUrl) {
         this.canonicalUrl = canonicalUrl;
         return this;
@@ -26,9 +27,11 @@ public class PacketMirroringNetworkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PacketMirroringNetworkInfo withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PacketMirroringNetworkInfo(){}
 }

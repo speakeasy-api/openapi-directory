@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDetectDominantLanguageResponse {
@@ -12,6 +13,7 @@ public class BatchDetectDominantLanguageResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDetectDominantLanguageResponse batchDetectDominantLanguageResponse;
+
     public BatchDetectDominantLanguageResponse withBatchDetectDominantLanguageResponse(org.openapis.openapi.models.shared.BatchDetectDominantLanguageResponse batchDetectDominantLanguageResponse) {
         this.batchDetectDominantLanguageResponse = batchDetectDominantLanguageResponse;
         return this;
@@ -22,6 +24,7 @@ public class BatchDetectDominantLanguageResponse {
      */
     
     public Object batchSizeLimitExceededException;
+
     public BatchDetectDominantLanguageResponse withBatchSizeLimitExceededException(Object batchSizeLimitExceededException) {
         this.batchSizeLimitExceededException = batchSizeLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class BatchDetectDominantLanguageResponse {
     
     
     public String contentType;
+
     public BatchDetectDominantLanguageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchDetectDominantLanguageResponse {
      */
     
     public Object internalServerException;
+
     public BatchDetectDominantLanguageResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class BatchDetectDominantLanguageResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchDetectDominantLanguageResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class BatchDetectDominantLanguageResponse {
     
     
     public Integer statusCode;
+
     public BatchDetectDominantLanguageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchDetectDominantLanguageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDetectDominantLanguageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class BatchDetectDominantLanguageResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public BatchDetectDominantLanguageResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
     }
     
+    public BatchDetectDominantLanguageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

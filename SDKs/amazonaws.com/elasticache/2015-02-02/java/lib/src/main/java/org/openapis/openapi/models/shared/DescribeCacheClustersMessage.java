@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCacheClustersMessage {
     
     public String cacheClusterId;
+
     public DescribeCacheClustersMessage withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeCacheClustersMessage {
     
     
     public String marker;
+
     public DescribeCacheClustersMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,6 +28,7 @@ public class DescribeCacheClustersMessage {
     
     
     public Long maxRecords;
+
     public DescribeCacheClustersMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -33,6 +36,7 @@ public class DescribeCacheClustersMessage {
     
     
     public Boolean showCacheClustersNotInReplicationGroups;
+
     public DescribeCacheClustersMessage withShowCacheClustersNotInReplicationGroups(Boolean showCacheClustersNotInReplicationGroups) {
         this.showCacheClustersNotInReplicationGroups = showCacheClustersNotInReplicationGroups;
         return this;
@@ -40,9 +44,11 @@ public class DescribeCacheClustersMessage {
     
     
     public Boolean showCacheNodeInfo;
+
     public DescribeCacheClustersMessage withShowCacheNodeInfo(Boolean showCacheNodeInfo) {
         this.showCacheNodeInfo = showCacheNodeInfo;
         return this;
     }
     
+    public DescribeCacheClustersMessage(){}
 }

@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class Creative {
     /**
-     * Additional dimensions. Applicable when creative_type is one of: * `CREATIVE_TYPE_STANDARD` * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_TEMPLATED_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_LIGHTBOX` * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified, width_pixels and height_pixels are both required and must be greater than or equal to 0.
+     * Additional dimensions. Applicable when creative_type is one of: * `CREATIVE_TYPE_STANDARD` * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_LIGHTBOX` * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified, width_pixels and height_pixels are both required and must be greater than or equal to 0.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalDimensions")
     public Dimensions[] additionalDimensions;
+
     public Creative withAdditionalDimensions(Dimensions[] additionalDimensions) {
         this.additionalDimensions = additionalDimensions;
         return this;
@@ -29,6 +30,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public Creative withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -40,17 +42,19 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appendedTag")
     public String appendedTag;
+
     public Creative withAppendedTag(String appendedTag) {
         this.appendedTag = appendedTag;
         return this;
     }
     
     /**
-     * Required. Assets associated to this creative. Assets can be associated to the creative in one of following roles: * `ASSET_ROLE_UNSPECIFIED` * `ASSET_ROLE_MAIN` * `ASSET_ROLE_BACKUP` * `ASSET_ROLE_POLITE_LOAD`
+     * Required. Assets associated to this creative.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
     public AssetAssociation[] assets;
+
     public Creative withAssets(AssetAssociation[] assets) {
         this.assets = assets;
         return this;
@@ -62,6 +66,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cmPlacementId")
     public String cmPlacementId;
+
     public Creative withCmPlacementId(String cmPlacementId) {
         this.cmPlacementId = cmPlacementId;
         return this;
@@ -73,6 +78,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cmTrackingAd")
     public CmTrackingAd cmTrackingAd;
+
     public Creative withCmTrackingAd(CmTrackingAd cmTrackingAd) {
         this.cmTrackingAd = cmTrackingAd;
         return this;
@@ -84,6 +90,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companionCreativeIds")
     public String[] companionCreativeIds;
+
     public Creative withCompanionCreativeIds(String[] companionCreativeIds) {
         this.companionCreativeIds = companionCreativeIds;
         return this;
@@ -95,6 +102,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("counterEvents")
     public CounterEvent[] counterEvents;
+
     public Creative withCounterEvents(CounterEvent[] counterEvents) {
         this.counterEvents = counterEvents;
         return this;
@@ -106,6 +114,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Creative withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -117,6 +126,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeAttributes")
     public CreativeCreativeAttributesEnum[] creativeAttributes;
+
     public Creative withCreativeAttributes(CreativeCreativeAttributesEnum[] creativeAttributes) {
         this.creativeAttributes = creativeAttributes;
         return this;
@@ -128,6 +138,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeId")
     public String creativeId;
+
     public Creative withCreativeId(String creativeId) {
         this.creativeId = creativeId;
         return this;
@@ -139,6 +150,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeType")
     public CreativeCreativeTypeEnum creativeType;
+
     public Creative withCreativeType(CreativeCreativeTypeEnum creativeType) {
         this.creativeType = creativeType;
         return this;
@@ -150,6 +162,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public Dimensions dimensions;
+
     public Creative withDimensions(Dimensions dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -161,6 +174,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Creative withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -172,6 +186,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamic")
     public Boolean dynamic;
+
     public Creative withDynamic(Boolean dynamic) {
         this.dynamic = dynamic;
         return this;
@@ -183,6 +198,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityStatus")
     public CreativeEntityStatusEnum entityStatus;
+
     public Creative withEntityStatus(CreativeEntityStatusEnum entityStatus) {
         this.entityStatus = entityStatus;
         return this;
@@ -194,6 +210,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitEvents")
     public ExitEvent[] exitEvents;
+
     public Creative withExitEvents(ExitEvent[] exitEvents) {
         this.exitEvents = exitEvents;
         return this;
@@ -205,6 +222,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expandOnHover")
     public Boolean expandOnHover;
+
     public Creative withExpandOnHover(Boolean expandOnHover) {
         this.expandOnHover = expandOnHover;
         return this;
@@ -216,6 +234,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expandingDirection")
     public CreativeExpandingDirectionEnum expandingDirection;
+
     public Creative withExpandingDirection(CreativeExpandingDirectionEnum expandingDirection) {
         this.expandingDirection = expandingDirection;
         return this;
@@ -227,6 +246,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostingSource")
     public CreativeHostingSourceEnum hostingSource;
+
     public Creative withHostingSource(CreativeHostingSourceEnum hostingSource) {
         this.hostingSource = hostingSource;
         return this;
@@ -238,6 +258,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html5Video")
     public Boolean html5Video;
+
     public Creative withHtml5Video(Boolean html5Video) {
         this.html5Video = html5Video;
         return this;
@@ -249,6 +270,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iasCampaignMonitoring")
     public Boolean iasCampaignMonitoring;
+
     public Creative withIasCampaignMonitoring(Boolean iasCampaignMonitoring) {
         this.iasCampaignMonitoring = iasCampaignMonitoring;
         return this;
@@ -260,17 +282,19 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationCode")
     public String integrationCode;
+
     public Creative withIntegrationCode(String integrationCode) {
         this.integrationCode = integrationCode;
         return this;
     }
     
     /**
-     * JavaScript measurement URL from supported third-party verification providers (ComScore, DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only supported in following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
+     * JavaScript measurement URL from supported third-party verification providers (ComScore, DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only writeable in following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsTrackerUrl")
     public String jsTrackerUrl;
+
     public Creative withJsTrackerUrl(String jsTrackerUrl) {
         this.jsTrackerUrl = jsTrackerUrl;
         return this;
@@ -282,6 +306,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemIds")
     public String[] lineItemIds;
+
     public Creative withLineItemIds(String[] lineItemIds) {
         this.lineItemIds = lineItemIds;
         return this;
@@ -293,6 +318,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaDuration")
     public String mediaDuration;
+
     public Creative withMediaDuration(String mediaDuration) {
         this.mediaDuration = mediaDuration;
         return this;
@@ -304,6 +330,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mp3Audio")
     public Boolean mp3Audio;
+
     public Creative withMp3Audio(Boolean mp3Audio) {
         this.mp3Audio = mp3Audio;
         return this;
@@ -315,6 +342,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Creative withName(String name) {
         this.name = name;
         return this;
@@ -326,6 +354,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public Creative withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -337,6 +366,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obaIcon")
     public ObaIcon obaIcon;
+
     public Creative withObaIcon(ObaIcon obaIcon) {
         this.obaIcon = obaIcon;
         return this;
@@ -348,6 +378,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oggAudio")
     public Boolean oggAudio;
+
     public Creative withOggAudio(Boolean oggAudio) {
         this.oggAudio = oggAudio;
         return this;
@@ -359,6 +390,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progressOffset")
     public AudioVideoOffset progressOffset;
+
     public Creative withProgressOffset(AudioVideoOffset progressOffset) {
         this.progressOffset = progressOffset;
         return this;
@@ -370,6 +402,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireHtml5")
     public Boolean requireHtml5;
+
     public Creative withRequireHtml5(Boolean requireHtml5) {
         this.requireHtml5 = requireHtml5;
         return this;
@@ -381,6 +414,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireMraid")
     public Boolean requireMraid;
+
     public Creative withRequireMraid(Boolean requireMraid) {
         this.requireMraid = requireMraid;
         return this;
@@ -392,6 +426,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requirePingForAttribution")
     public Boolean requirePingForAttribution;
+
     public Creative withRequirePingForAttribution(Boolean requirePingForAttribution) {
         this.requirePingForAttribution = requirePingForAttribution;
         return this;
@@ -403,6 +438,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewStatus")
     public ReviewStatusInfo reviewStatus;
+
     public Creative withReviewStatus(ReviewStatusInfo reviewStatus) {
         this.reviewStatus = reviewStatus;
         return this;
@@ -414,6 +450,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipOffset")
     public AudioVideoOffset skipOffset;
+
     public Creative withSkipOffset(AudioVideoOffset skipOffset) {
         this.skipOffset = skipOffset;
         return this;
@@ -425,6 +462,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skippable")
     public Boolean skippable;
+
     public Creative withSkippable(Boolean skippable) {
         this.skippable = skippable;
         return this;
@@ -436,6 +474,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thirdPartyTag")
     public String thirdPartyTag;
+
     public Creative withThirdPartyTag(String thirdPartyTag) {
         this.thirdPartyTag = thirdPartyTag;
         return this;
@@ -447,6 +486,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thirdPartyUrls")
     public ThirdPartyUrl[] thirdPartyUrls;
+
     public Creative withThirdPartyUrls(ThirdPartyUrl[] thirdPartyUrls) {
         this.thirdPartyUrls = thirdPartyUrls;
         return this;
@@ -458,17 +498,19 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timerEvents")
     public TimerEvent[] timerEvents;
+
     public Creative withTimerEvents(TimerEvent[] timerEvents) {
         this.timerEvents = timerEvents;
         return this;
     }
     
     /**
-     * Tracking URLs for analytics providers or third-party ad technology vendors. The URLs must start with https (except on inventory that doesn't require SSL compliance). If using macros in your URL, use only macros supported by Display &amp; Video 360. Standard URLs only, no IMG or SCRIPT tags. This field is only supported in following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
+     * Tracking URLs for analytics providers or third-party ad technology vendors. The URLs must start with https (except on inventory that doesn't require SSL compliance). If using macros in your URL, use only macros supported by Display &amp; Video 360. Standard URLs only, no IMG or SCRIPT tags. This field is only writeable in following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackerUrls")
     public String[] trackerUrls;
+
     public Creative withTrackerUrls(String[] trackerUrls) {
         this.trackerUrls = trackerUrls;
         return this;
@@ -480,6 +522,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcodes")
     public Transcode[] transcodes;
+
     public Creative withTranscodes(Transcode[] transcodes) {
         this.transcodes = transcodes;
         return this;
@@ -491,6 +534,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("universalAdId")
     public UniversalAdId universalAdId;
+
     public Creative withUniversalAdId(UniversalAdId universalAdId) {
         this.universalAdId = universalAdId;
         return this;
@@ -502,6 +546,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Creative withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -513,6 +558,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vastTagUrl")
     public String vastTagUrl;
+
     public Creative withVastTagUrl(String vastTagUrl) {
         this.vastTagUrl = vastTagUrl;
         return this;
@@ -524,9 +570,11 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpaid")
     public Boolean vpaid;
+
     public Creative withVpaid(Boolean vpaid) {
         this.vpaid = vpaid;
         return this;
     }
     
+    public Creative(){}
 }

@@ -15,6 +15,7 @@ public class SchemaResponseBlocksReadRegistrationSchemaBlockAttributes {
      */
     
     public SchemaResponseBlocksReadRegistrationSchemaBlockAttributesBlockTypeEnum blockType;
+
     public SchemaResponseBlocksReadRegistrationSchemaBlockAttributes withBlockType(SchemaResponseBlocksReadRegistrationSchemaBlockAttributesBlockTypeEnum blockType) {
         this.blockType = blockType;
         return this;
@@ -25,6 +26,7 @@ public class SchemaResponseBlocksReadRegistrationSchemaBlockAttributes {
      */
     
     public String displayText;
+
     public SchemaResponseBlocksReadRegistrationSchemaBlockAttributes withDisplayText(String displayText) {
         this.displayText = displayText;
         return this;
@@ -35,6 +37,7 @@ public class SchemaResponseBlocksReadRegistrationSchemaBlockAttributes {
      */
     
     public String exampleText;
+
     public SchemaResponseBlocksReadRegistrationSchemaBlockAttributes withExampleText(String exampleText) {
         this.exampleText = exampleText;
         return this;
@@ -45,6 +48,7 @@ public class SchemaResponseBlocksReadRegistrationSchemaBlockAttributes {
      */
     
     public Long index;
+
     public SchemaResponseBlocksReadRegistrationSchemaBlockAttributes withIndex(Long index) {
         this.index = index;
         return this;
@@ -55,6 +59,7 @@ public class SchemaResponseBlocksReadRegistrationSchemaBlockAttributes {
      */
     
     public String registrationResponseKey;
+
     public SchemaResponseBlocksReadRegistrationSchemaBlockAttributes withRegistrationResponseKey(String registrationResponseKey) {
         this.registrationResponseKey = registrationResponseKey;
         return this;
@@ -65,6 +70,7 @@ public class SchemaResponseBlocksReadRegistrationSchemaBlockAttributes {
      */
     
     public Boolean required;
+
     public SchemaResponseBlocksReadRegistrationSchemaBlockAttributes withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -75,9 +81,11 @@ public class SchemaResponseBlocksReadRegistrationSchemaBlockAttributes {
      */
     
     public String schemaBlockGroupKey;
+
     public SchemaResponseBlocksReadRegistrationSchemaBlockAttributes withSchemaBlockGroupKey(String schemaBlockGroupKey) {
         this.schemaBlockGroupKey = schemaBlockGroupKey;
         return this;
     }
     
+    public SchemaResponseBlocksReadRegistrationSchemaBlockAttributes(){}
 }

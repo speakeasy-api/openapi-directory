@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DeploymentmanagerTypeProvidersGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DeploymentmanagerTypeProvidersGetSecurityOption1 option1;
+
     public DeploymentmanagerTypeProvidersGetSecurity withOption1(DeploymentmanagerTypeProvidersGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DeploymentmanagerTypeProvidersGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DeploymentmanagerTypeProvidersGetSecurityOption2 option2;
+
     public DeploymentmanagerTypeProvidersGetSecurity withOption2(DeploymentmanagerTypeProvidersGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DeploymentmanagerTypeProvidersGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DeploymentmanagerTypeProvidersGetSecurityOption3 option3;
+
     public DeploymentmanagerTypeProvidersGetSecurity withOption3(DeploymentmanagerTypeProvidersGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class DeploymentmanagerTypeProvidersGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DeploymentmanagerTypeProvidersGetSecurityOption4 option4;
+
     public DeploymentmanagerTypeProvidersGetSecurity withOption4(DeploymentmanagerTypeProvidersGetSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public DeploymentmanagerTypeProvidersGetSecurity(){}
 }

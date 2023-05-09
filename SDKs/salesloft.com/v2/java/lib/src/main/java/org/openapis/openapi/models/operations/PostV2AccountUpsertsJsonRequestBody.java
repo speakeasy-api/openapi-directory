@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2AccountUpsertsJsonRequestBody {
@@ -12,6 +13,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=account_tier_id")
     public Long accountTierId;
+
     public PostV2AccountUpsertsJsonRequestBody withAccountTierId(Long accountTierId) {
         this.accountTierId = accountTierId;
         return this;
@@ -22,6 +24,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=city")
     public String city;
+
     public PostV2AccountUpsertsJsonRequestBody withCity(String city) {
         this.city = city;
         return this;
@@ -32,6 +35,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=company_stage_id")
     public Long companyStageId;
+
     public PostV2AccountUpsertsJsonRequestBody withCompanyStageId(Long companyStageId) {
         this.companyStageId = companyStageId;
         return this;
@@ -42,6 +46,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=company_type")
     public String companyType;
+
     public PostV2AccountUpsertsJsonRequestBody withCompanyType(String companyType) {
         this.companyType = companyType;
         return this;
@@ -52,6 +57,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=conversational_name")
     public String conversationalName;
+
     public PostV2AccountUpsertsJsonRequestBody withConversationalName(String conversationalName) {
         this.conversationalName = conversationalName;
         return this;
@@ -62,6 +68,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=country")
     public String country;
+
     public PostV2AccountUpsertsJsonRequestBody withCountry(String country) {
         this.country = country;
         return this;
@@ -80,6 +87,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=crm_id")
     public String crmId;
+
     public PostV2AccountUpsertsJsonRequestBody withCrmId(String crmId) {
         this.crmId = crmId;
         return this;
@@ -90,6 +98,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=crm_id_type")
     public String crmIdType;
+
     public PostV2AccountUpsertsJsonRequestBody withCrmIdType(String crmIdType) {
         this.crmIdType = crmIdType;
         return this;
@@ -100,6 +109,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=custom_fields,json")
     public java.util.Map<String, Object>[] customFields;
+
     public PostV2AccountUpsertsJsonRequestBody withCustomFields(java.util.Map<String, Object>[] customFields) {
         this.customFields = customFields;
         return this;
@@ -110,6 +120,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=description")
     public String description;
+
     public PostV2AccountUpsertsJsonRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -120,6 +131,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=do_not_contact")
     public Boolean doNotContact;
+
     public PostV2AccountUpsertsJsonRequestBody withDoNotContact(Boolean doNotContact) {
         this.doNotContact = doNotContact;
         return this;
@@ -130,6 +142,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=domain")
     public String domain;
+
     public PostV2AccountUpsertsJsonRequestBody withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -140,6 +153,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=founded")
     public String founded;
+
     public PostV2AccountUpsertsJsonRequestBody withFounded(String founded) {
         this.founded = founded;
         return this;
@@ -152,6 +166,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=id")
     public Long id;
+
     public PostV2AccountUpsertsJsonRequestBody withId(Long id) {
         this.id = id;
         return this;
@@ -162,6 +177,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=industry")
     public String industry;
+
     public PostV2AccountUpsertsJsonRequestBody withIndustry(String industry) {
         this.industry = industry;
         return this;
@@ -172,6 +188,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=linkedin_url")
     public String linkedinUrl;
+
     public PostV2AccountUpsertsJsonRequestBody withLinkedinUrl(String linkedinUrl) {
         this.linkedinUrl = linkedinUrl;
         return this;
@@ -182,6 +199,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=locale")
     public String locale;
+
     public PostV2AccountUpsertsJsonRequestBody withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -192,6 +210,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public PostV2AccountUpsertsJsonRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -202,6 +221,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=owner_id")
     public Long ownerId;
+
     public PostV2AccountUpsertsJsonRequestBody withOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -212,6 +232,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=phone")
     public String phone;
+
     public PostV2AccountUpsertsJsonRequestBody withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -222,6 +243,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=postal_code")
     public String postalCode;
+
     public PostV2AccountUpsertsJsonRequestBody withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -232,6 +254,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=revenue_range")
     public String revenueRange;
+
     public PostV2AccountUpsertsJsonRequestBody withRevenueRange(String revenueRange) {
         this.revenueRange = revenueRange;
         return this;
@@ -242,6 +265,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=size")
     public String size;
+
     public PostV2AccountUpsertsJsonRequestBody withSize(String size) {
         this.size = size;
         return this;
@@ -252,6 +276,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=state")
     public String state;
+
     public PostV2AccountUpsertsJsonRequestBody withState(String state) {
         this.state = state;
         return this;
@@ -262,6 +287,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=street")
     public String street;
+
     public PostV2AccountUpsertsJsonRequestBody withStreet(String street) {
         this.street = street;
         return this;
@@ -272,6 +298,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=tags")
     public String[] tags;
+
     public PostV2AccountUpsertsJsonRequestBody withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -282,6 +309,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=twitter_handle")
     public String twitterHandle;
+
     public PostV2AccountUpsertsJsonRequestBody withTwitterHandle(String twitterHandle) {
         this.twitterHandle = twitterHandle;
         return this;
@@ -299,6 +327,7 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=upsert_key")
     public String upsertKey;
+
     public PostV2AccountUpsertsJsonRequestBody withUpsertKey(String upsertKey) {
         this.upsertKey = upsertKey;
         return this;
@@ -309,9 +338,14 @@ public class PostV2AccountUpsertsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=website")
     public String website;
+
     public PostV2AccountUpsertsJsonRequestBody withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public PostV2AccountUpsertsJsonRequestBody(@JsonProperty("domain") String domain, @JsonProperty("name") String name) {
+        this.domain = domain;
+        this.name = name;
+  }
 }

@@ -53,12 +53,10 @@ public class PaymentInstruments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPaymentInstrumentsIdResponse res = new org.openapis.openapi.models.operations.GetPaymentInstrumentsIdResponse() {{
+        org.openapis.openapi.models.operations.GetPaymentInstrumentsIdResponse res = new org.openapis.openapi.models.operations.GetPaymentInstrumentsIdResponse(contentType, httpRes.statusCode()) {{
             paymentInstrument = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -80,8 +78,12 @@ public class PaymentInstruments {
     }
 
     /**
-     * Get the reveal information of a payment instrument
-     * Returns the reveal information of a payment instrument.
+     * Get the PAN of a payment instrument
+     * Returns the primary account number (PAN) of a payment instrument.
+     * 
+     * To make this request, your API credential must have the following [role](https://docs.adyen.com/issuing/manage-access/api-credentials-web-service#api-permissions):
+     * 
+     * * Balance Platform BCL PCI role
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -102,12 +104,10 @@ public class PaymentInstruments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPaymentInstrumentsIdRevealResponse res = new org.openapis.openapi.models.operations.GetPaymentInstrumentsIdRevealResponse() {{
+        org.openapis.openapi.models.operations.GetPaymentInstrumentsIdRevealResponse res = new org.openapis.openapi.models.operations.GetPaymentInstrumentsIdRevealResponse(contentType, httpRes.statusCode()) {{
             paymentInstrumentRevealInfo = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,12 +151,10 @@ public class PaymentInstruments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPaymentInstrumentsIdTransactionRulesResponse res = new org.openapis.openapi.models.operations.GetPaymentInstrumentsIdTransactionRulesResponse() {{
+        org.openapis.openapi.models.operations.GetPaymentInstrumentsIdTransactionRulesResponse res = new org.openapis.openapi.models.operations.GetPaymentInstrumentsIdTransactionRulesResponse(contentType, httpRes.statusCode()) {{
             transactionRulesResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,12 +200,10 @@ public class PaymentInstruments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchPaymentInstrumentsIdResponse res = new org.openapis.openapi.models.operations.PatchPaymentInstrumentsIdResponse() {{
+        org.openapis.openapi.models.operations.PatchPaymentInstrumentsIdResponse res = new org.openapis.openapi.models.operations.PatchPaymentInstrumentsIdResponse(contentType, httpRes.statusCode()) {{
             updatePaymentInstrument = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -255,12 +251,10 @@ public class PaymentInstruments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPaymentInstrumentsResponse res = new org.openapis.openapi.models.operations.PostPaymentInstrumentsResponse() {{
+        org.openapis.openapi.models.operations.PostPaymentInstrumentsResponse res = new org.openapis.openapi.models.operations.PostPaymentInstrumentsResponse(contentType, httpRes.statusCode()) {{
             paymentInstrument = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

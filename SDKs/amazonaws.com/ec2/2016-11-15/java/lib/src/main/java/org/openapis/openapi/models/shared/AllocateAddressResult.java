@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AllocateAddressResult {
     
     public String allocationId;
+
     public AllocateAddressResult withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -19,6 +20,7 @@ public class AllocateAddressResult {
     
     
     public String carrierIp;
+
     public AllocateAddressResult withCarrierIp(String carrierIp) {
         this.carrierIp = carrierIp;
         return this;
@@ -26,6 +28,7 @@ public class AllocateAddressResult {
     
     
     public String customerOwnedIp;
+
     public AllocateAddressResult withCustomerOwnedIp(String customerOwnedIp) {
         this.customerOwnedIp = customerOwnedIp;
         return this;
@@ -33,6 +36,7 @@ public class AllocateAddressResult {
     
     
     public String customerOwnedIpv4Pool;
+
     public AllocateAddressResult withCustomerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
         this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
         return this;
@@ -40,6 +44,7 @@ public class AllocateAddressResult {
     
     
     public AllocateAddressResultDomainEnum domain;
+
     public AllocateAddressResult withDomain(AllocateAddressResultDomainEnum domain) {
         this.domain = domain;
         return this;
@@ -47,6 +52,7 @@ public class AllocateAddressResult {
     
     
     public String networkBorderGroup;
+
     public AllocateAddressResult withNetworkBorderGroup(String networkBorderGroup) {
         this.networkBorderGroup = networkBorderGroup;
         return this;
@@ -54,6 +60,7 @@ public class AllocateAddressResult {
     
     
     public String publicIp;
+
     public AllocateAddressResult withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -61,9 +68,11 @@ public class AllocateAddressResult {
     
     
     public String publicIpv4Pool;
+
     public AllocateAddressResult withPublicIpv4Pool(String publicIpv4Pool) {
         this.publicIpv4Pool = publicIpv4Pool;
         return this;
     }
     
+    public AllocateAddressResult(){}
 }

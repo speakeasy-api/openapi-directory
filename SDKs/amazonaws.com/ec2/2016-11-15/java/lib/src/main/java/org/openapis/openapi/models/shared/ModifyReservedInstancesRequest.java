@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyReservedInstancesRequest - Contains the parameters for ModifyReservedInstances.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyReservedInstancesRequest {
     
     public String clientToken;
+
     public ModifyReservedInstancesRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class ModifyReservedInstancesRequest {
     
     
     public String[] reservedInstancesIds;
+
     public ModifyReservedInstancesRequest withReservedInstancesIds(String[] reservedInstancesIds) {
         this.reservedInstancesIds = reservedInstancesIds;
         return this;
@@ -26,9 +28,14 @@ public class ModifyReservedInstancesRequest {
     
     
     public ModifyReservedInstancesRequestTargetConfigurations[] targetConfigurations;
+
     public ModifyReservedInstancesRequest withTargetConfigurations(ModifyReservedInstancesRequestTargetConfigurations[] targetConfigurations) {
         this.targetConfigurations = targetConfigurations;
         return this;
     }
     
+    public ModifyReservedInstancesRequest(@JsonProperty("ReservedInstancesIds") String[] reservedInstancesIds, @JsonProperty("TargetConfigurations") ModifyReservedInstancesRequestTargetConfigurations[] targetConfigurations) {
+        this.reservedInstancesIds = reservedInstancesIds;
+        this.targetConfigurations = targetConfigurations;
+  }
 }

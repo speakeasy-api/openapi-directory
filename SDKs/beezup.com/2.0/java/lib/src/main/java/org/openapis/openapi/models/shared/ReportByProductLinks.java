@@ -15,6 +15,7 @@ public class ReportByProductLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allChannelsLinks")
     public ReportByProductAllChannelsLinks allChannelsLinks;
+
     public ReportByProductLinks withAllChannelsLinks(ReportByProductAllChannelsLinks allChannelsLinks) {
         this.allChannelsLinks = allChannelsLinks;
         return this;
@@ -26,9 +27,11 @@ public class ReportByProductLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneChannelLinks")
     public ReportByProductOneChannelLinks oneChannelLinks;
+
     public ReportByProductLinks withOneChannelLinks(ReportByProductOneChannelLinks oneChannelLinks) {
         this.oneChannelLinks = oneChannelLinks;
         return this;
     }
     
+    public ReportByProductLinks(){}
 }

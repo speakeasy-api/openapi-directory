@@ -18,9 +18,11 @@ public class WriteControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredRevisionId")
     public String requiredRevisionId;
+
     public WriteControl withRequiredRevisionId(String requiredRevisionId) {
         this.requiredRevisionId = requiredRevisionId;
         return this;
     }
     
+    public WriteControl(){}
 }

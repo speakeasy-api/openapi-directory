@@ -18,6 +18,7 @@ public class FormShowAttributesVersions {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("revision_on")
     public LocalDate revisionOn;
+
     public FormShowAttributesVersions withRevisionOn(LocalDate revisionOn) {
         this.revisionOn = revisionOn;
         return this;
@@ -29,9 +30,11 @@ public class FormShowAttributesVersions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha256")
     public String sha256;
+
     public FormShowAttributesVersions withSha256(String sha256) {
         this.sha256 = sha256;
         return this;
     }
     
+    public FormShowAttributesVersions(){}
 }

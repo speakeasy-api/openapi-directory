@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminSetSettingsRequestBody {
@@ -12,9 +13,13 @@ public class EnterpriseAdminSetSettingsRequestBody {
      */
     @SpeakeasyMetadata("form:name=settings")
     public String settings;
+
     public EnterpriseAdminSetSettingsRequestBody withSettings(String settings) {
         this.settings = settings;
         return this;
     }
     
+    public EnterpriseAdminSetSettingsRequestBody(@JsonProperty("settings") String settings) {
+        this.settings = settings;
+  }
 }

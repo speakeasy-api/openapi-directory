@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostPortfolioOptimizationMinimumUlcerIndexRequestBody {
     @JsonProperty("assets")
     public PostPortfolioOptimizationMinimumUlcerIndexRequestBodyAssets[] assets;
+
     public PostPortfolioOptimizationMinimumUlcerIndexRequestBody withAssets(PostPortfolioOptimizationMinimumUlcerIndexRequestBodyAssets[] assets) {
         this.assets = assets;
         return this;
@@ -19,9 +20,13 @@ public class PostPortfolioOptimizationMinimumUlcerIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public PostPortfolioOptimizationMinimumUlcerIndexRequestBodyConstraints constraints;
+
     public PostPortfolioOptimizationMinimumUlcerIndexRequestBody withConstraints(PostPortfolioOptimizationMinimumUlcerIndexRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
     }
     
+    public PostPortfolioOptimizationMinimumUlcerIndexRequestBody(@JsonProperty("assets") PostPortfolioOptimizationMinimumUlcerIndexRequestBodyAssets[] assets) {
+        this.assets = assets;
+  }
 }

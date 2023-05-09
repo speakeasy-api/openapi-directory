@@ -18,6 +18,7 @@ public class AccountDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addons")
     public Addon[] addons;
+
     public AccountDetail withAddons(Addon[] addons) {
         this.addons = addons;
         return this;
@@ -29,6 +30,7 @@ public class AccountDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public AccountDetail withId(Integer id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class AccountDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public AccountDetail withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -51,9 +54,11 @@ public class AccountDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicepack")
     public Servicepack servicepack;
+
     public AccountDetail withServicepack(Servicepack servicepack) {
         this.servicepack = servicepack;
         return this;
     }
     
+    public AccountDetail(){}
 }

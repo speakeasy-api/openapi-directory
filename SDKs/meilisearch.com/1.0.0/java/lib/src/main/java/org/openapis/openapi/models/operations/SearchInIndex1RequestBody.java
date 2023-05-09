@@ -12,6 +12,7 @@ public class SearchInIndex1RequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributesToHighlight")
     public String[] attributesToHighlight;
+
     public SearchInIndex1RequestBody withAttributesToHighlight(String[] attributesToHighlight) {
         this.attributesToHighlight = attributesToHighlight;
         return this;
@@ -20,9 +21,11 @@ public class SearchInIndex1RequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("q")
     public String q;
+
     public SearchInIndex1RequestBody withQ(String q) {
         this.q = q;
         return this;
     }
     
+    public SearchInIndex1RequestBody(){}
 }

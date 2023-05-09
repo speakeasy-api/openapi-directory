@@ -15,6 +15,7 @@ public class UpdateNetworkAlertSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alerts")
     public UpdateNetworkAlertSettingsRequestBodyAlerts[] alerts;
+
     public UpdateNetworkAlertSettingsRequestBody withAlerts(UpdateNetworkAlertSettingsRequestBodyAlerts[] alerts) {
         this.alerts = alerts;
         return this;
@@ -26,9 +27,11 @@ public class UpdateNetworkAlertSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultDestinations")
     public UpdateNetworkAlertSettingsRequestBodyDefaultDestinations defaultDestinations;
+
     public UpdateNetworkAlertSettingsRequestBody withDefaultDestinations(UpdateNetworkAlertSettingsRequestBodyDefaultDestinations defaultDestinations) {
         this.defaultDestinations = defaultDestinations;
         return this;
     }
     
+    public UpdateNetworkAlertSettingsRequestBody(){}
 }

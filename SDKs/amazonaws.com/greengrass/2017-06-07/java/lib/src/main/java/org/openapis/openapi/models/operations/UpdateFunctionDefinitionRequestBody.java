@@ -15,9 +15,11 @@ public class UpdateFunctionDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateFunctionDefinitionRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateFunctionDefinitionRequestBody(){}
 }

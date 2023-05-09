@@ -58,11 +58,9 @@ public class DnsKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsDnsKeysGetResponse res = new org.openapis.openapi.models.operations.DnsDnsKeysGetResponse() {{
+        org.openapis.openapi.models.operations.DnsDnsKeysGetResponse res = new org.openapis.openapi.models.operations.DnsDnsKeysGetResponse(contentType, httpRes.statusCode()) {{
             dnsKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class DnsKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsDnsKeysListResponse res = new org.openapis.openapi.models.operations.DnsDnsKeysListResponse() {{
+        org.openapis.openapi.models.operations.DnsDnsKeysListResponse res = new org.openapis.openapi.models.operations.DnsDnsKeysListResponse(contentType, httpRes.statusCode()) {{
             dnsKeysListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

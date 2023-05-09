@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWorkspaceConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateWorkspaceConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateWorkspaceConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateWorkspaceConfigurationResponse {
      */
     
     public Object conflictException;
+
     public UpdateWorkspaceConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateWorkspaceConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateWorkspaceConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateWorkspaceConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateWorkspaceConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateWorkspaceConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateWorkspaceConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateWorkspaceConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWorkspaceConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateWorkspaceConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateWorkspaceConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateWorkspaceConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateWorkspaceConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateWorkspaceConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateWorkspaceConfigurationResponse;
+
     public UpdateWorkspaceConfigurationResponse withUpdateWorkspaceConfigurationResponse(java.util.Map<String, Object> updateWorkspaceConfigurationResponse) {
         this.updateWorkspaceConfigurationResponse = updateWorkspaceConfigurationResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateWorkspaceConfigurationResponse {
      */
     
     public Object validationException;
+
     public UpdateWorkspaceConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateWorkspaceConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

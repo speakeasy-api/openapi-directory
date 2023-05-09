@@ -18,6 +18,7 @@ public class AccountstatusesCustomBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public AccountstatusesCustomBatchResponseEntry[] entries;
+
     public AccountstatusesCustomBatchResponse withEntries(AccountstatusesCustomBatchResponseEntry[] entries) {
         this.entries = entries;
         return this;
@@ -29,9 +30,11 @@ public class AccountstatusesCustomBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountstatusesCustomBatchResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public AccountstatusesCustomBatchResponse(){}
 }

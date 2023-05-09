@@ -15,6 +15,7 @@ public class ListCustomLineItemsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingPeriod")
     public String billingPeriod;
+
     public ListCustomLineItemsRequestBody withBillingPeriod(String billingPeriod) {
         this.billingPeriod = billingPeriod;
         return this;
@@ -26,6 +27,7 @@ public class ListCustomLineItemsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ListCustomLineItemsRequestBodyFilters filters;
+
     public ListCustomLineItemsRequestBody withFilters(ListCustomLineItemsRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -37,6 +39,7 @@ public class ListCustomLineItemsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListCustomLineItemsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -48,9 +51,11 @@ public class ListCustomLineItemsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCustomLineItemsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomLineItemsRequestBody(){}
 }

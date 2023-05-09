@@ -15,9 +15,11 @@ public class PutRegistryScanningConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryScanningConfiguration")
     public RegistryScanningConfiguration registryScanningConfiguration;
+
     public PutRegistryScanningConfigurationResponse withRegistryScanningConfiguration(RegistryScanningConfiguration registryScanningConfiguration) {
         this.registryScanningConfiguration = registryScanningConfiguration;
         return this;
     }
     
+    public PutRegistryScanningConfigurationResponse(){}
 }

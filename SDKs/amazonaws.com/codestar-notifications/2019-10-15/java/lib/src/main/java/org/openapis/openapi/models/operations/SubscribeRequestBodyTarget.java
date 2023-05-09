@@ -15,6 +15,7 @@ public class SubscribeRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetAddress")
     public String targetAddress;
+
     public SubscribeRequestBodyTarget withTargetAddress(String targetAddress) {
         this.targetAddress = targetAddress;
         return this;
@@ -23,9 +24,11 @@ public class SubscribeRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetType")
     public String targetType;
+
     public SubscribeRequestBodyTarget withTargetType(String targetType) {
         this.targetType = targetType;
         return this;
     }
     
+    public SubscribeRequestBodyTarget(){}
 }

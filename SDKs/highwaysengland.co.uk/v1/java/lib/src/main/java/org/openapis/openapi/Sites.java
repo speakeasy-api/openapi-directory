@@ -49,11 +49,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SitesIndexResponse res = new org.openapis.openapi.models.operations.SitesIndexResponse() {{
+        org.openapis.openapi.models.operations.SitesIndexResponse res = new org.openapis.openapi.models.operations.SitesIndexResponse(contentType, httpRes.statusCode()) {{
             siteResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -89,11 +87,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVVersionSitesSiteIdsResponse res = new org.openapis.openapi.models.operations.GetVVersionSitesSiteIdsResponse() {{
+        org.openapis.openapi.models.operations.GetVVersionSitesSiteIdsResponse res = new org.openapis.openapi.models.operations.GetVVersionSitesSiteIdsResponse(contentType, httpRes.statusCode()) {{
             siteResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

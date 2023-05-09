@@ -18,6 +18,7 @@ public class GooglePlayDeveloperReportingV1alpha1Anomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public GooglePlayDeveloperReportingV1alpha1DimensionValue[] dimensions;
+
     public GooglePlayDeveloperReportingV1alpha1Anomaly withDimensions(GooglePlayDeveloperReportingV1alpha1DimensionValue[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -29,6 +30,7 @@ public class GooglePlayDeveloperReportingV1alpha1Anomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public GooglePlayDeveloperReportingV1alpha1MetricValue metric;
+
     public GooglePlayDeveloperReportingV1alpha1Anomaly withMetric(GooglePlayDeveloperReportingV1alpha1MetricValue metric) {
         this.metric = metric;
         return this;
@@ -40,6 +42,7 @@ public class GooglePlayDeveloperReportingV1alpha1Anomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricSet")
     public String metricSet;
+
     public GooglePlayDeveloperReportingV1alpha1Anomaly withMetricSet(String metricSet) {
         this.metricSet = metricSet;
         return this;
@@ -51,6 +54,7 @@ public class GooglePlayDeveloperReportingV1alpha1Anomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GooglePlayDeveloperReportingV1alpha1Anomaly withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class GooglePlayDeveloperReportingV1alpha1Anomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timelineSpec")
     public GooglePlayDeveloperReportingV1alpha1TimelineSpec timelineSpec;
+
     public GooglePlayDeveloperReportingV1alpha1Anomaly withTimelineSpec(GooglePlayDeveloperReportingV1alpha1TimelineSpec timelineSpec) {
         this.timelineSpec = timelineSpec;
         return this;
     }
     
+    public GooglePlayDeveloperReportingV1alpha1Anomaly(){}
 }

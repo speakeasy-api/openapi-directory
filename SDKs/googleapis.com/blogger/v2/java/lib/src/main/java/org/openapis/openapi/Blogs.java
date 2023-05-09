@@ -58,11 +58,9 @@ public class Blogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerBlogsGetResponse res = new org.openapis.openapi.models.operations.BloggerBlogsGetResponse() {{
+        org.openapis.openapi.models.operations.BloggerBlogsGetResponse res = new org.openapis.openapi.models.operations.BloggerBlogsGetResponse(contentType, httpRes.statusCode()) {{
             blog = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Blogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerBlogsListResponse res = new org.openapis.openapi.models.operations.BloggerBlogsListResponse() {{
+        org.openapis.openapi.models.operations.BloggerBlogsListResponse res = new org.openapis.openapi.models.operations.BloggerBlogsListResponse(contentType, httpRes.statusCode()) {{
             blogList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

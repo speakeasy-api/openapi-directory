@@ -15,9 +15,11 @@ public class DescribeConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurations")
     public java.util.Map<String, String>[] configurations;
+
     public DescribeConfigurationsResponse withConfigurations(java.util.Map<String, String>[] configurations) {
         this.configurations = configurations;
         return this;
     }
     
+    public DescribeConfigurationsResponse(){}
 }

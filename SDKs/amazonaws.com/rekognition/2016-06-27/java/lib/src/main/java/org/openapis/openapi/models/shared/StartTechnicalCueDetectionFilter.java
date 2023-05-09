@@ -15,6 +15,7 @@ public class StartTechnicalCueDetectionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlackFrame")
     public BlackFrame blackFrame;
+
     public StartTechnicalCueDetectionFilter withBlackFrame(BlackFrame blackFrame) {
         this.blackFrame = blackFrame;
         return this;
@@ -23,9 +24,11 @@ public class StartTechnicalCueDetectionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinSegmentConfidence")
     public Float minSegmentConfidence;
+
     public StartTechnicalCueDetectionFilter withMinSegmentConfidence(Float minSegmentConfidence) {
         this.minSegmentConfidence = minSegmentConfidence;
         return this;
     }
     
+    public StartTechnicalCueDetectionFilter(){}
 }

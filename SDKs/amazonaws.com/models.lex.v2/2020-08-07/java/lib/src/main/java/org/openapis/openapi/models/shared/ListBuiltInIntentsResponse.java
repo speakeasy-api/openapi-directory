@@ -15,6 +15,7 @@ public class ListBuiltInIntentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("builtInIntentSummaries")
     public BuiltInIntentSummary[] builtInIntentSummaries;
+
     public ListBuiltInIntentsResponse withBuiltInIntentSummaries(BuiltInIntentSummary[] builtInIntentSummaries) {
         this.builtInIntentSummaries = builtInIntentSummaries;
         return this;
@@ -23,6 +24,7 @@ public class ListBuiltInIntentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public ListBuiltInIntentsResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -31,9 +33,11 @@ public class ListBuiltInIntentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBuiltInIntentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBuiltInIntentsResponse(){}
 }

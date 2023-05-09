@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2TableExtractionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public GoogleCloudDocumentaiV1beta2TableExtractionParams withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta2TableExtractionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerHints")
     public String[] headerHints;
+
     public GoogleCloudDocumentaiV1beta2TableExtractionParams withHeaderHints(String[] headerHints) {
         this.headerHints = headerHints;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta2TableExtractionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelVersion")
     public String modelVersion;
+
     public GoogleCloudDocumentaiV1beta2TableExtractionParams withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDocumentaiV1beta2TableExtractionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableBoundHints")
     public GoogleCloudDocumentaiV1beta2TableBoundHint[] tableBoundHints;
+
     public GoogleCloudDocumentaiV1beta2TableExtractionParams withTableBoundHints(GoogleCloudDocumentaiV1beta2TableBoundHint[] tableBoundHints) {
         this.tableBoundHints = tableBoundHints;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2TableExtractionParams(){}
 }

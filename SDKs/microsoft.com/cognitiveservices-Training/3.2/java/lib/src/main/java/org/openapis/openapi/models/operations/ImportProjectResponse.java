@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportProjectResponse {
     
     public byte[] body;
+
     public ImportProjectResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ImportProjectResponse {
     
     
     public String contentType;
+
     public ImportProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ImportProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomVisionError customVisionError;
+
     public ImportProjectResponse withCustomVisionError(org.openapis.openapi.models.shared.CustomVisionError customVisionError) {
         this.customVisionError = customVisionError;
         return this;
@@ -36,6 +40,7 @@ public class ImportProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.Project project;
+
     public ImportProjectResponse withProject(org.openapis.openapi.models.shared.Project project) {
         this.project = project;
         return this;
@@ -43,6 +48,7 @@ public class ImportProjectResponse {
     
     
     public Integer statusCode;
+
     public ImportProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class ImportProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ImportProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

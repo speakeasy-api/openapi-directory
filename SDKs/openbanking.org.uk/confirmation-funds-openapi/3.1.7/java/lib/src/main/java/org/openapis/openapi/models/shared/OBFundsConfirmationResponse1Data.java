@@ -17,6 +17,7 @@ public class OBFundsConfirmationResponse1Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBFundsConfirmationResponse1Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -31,6 +32,7 @@ public class OBFundsConfirmationResponse1Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public OBFundsConfirmationResponse1Data withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -41,6 +43,7 @@ public class OBFundsConfirmationResponse1Data {
      */
     @JsonProperty("FundsAvailable")
     public Boolean fundsAvailable;
+
     public OBFundsConfirmationResponse1Data withFundsAvailable(Boolean fundsAvailable) {
         this.fundsAvailable = fundsAvailable;
         return this;
@@ -51,6 +54,7 @@ public class OBFundsConfirmationResponse1Data {
      */
     @JsonProperty("FundsConfirmationId")
     public String fundsConfirmationId;
+
     public OBFundsConfirmationResponse1Data withFundsConfirmationId(String fundsConfirmationId) {
         this.fundsConfirmationId = fundsConfirmationId;
         return this;
@@ -61,6 +65,7 @@ public class OBFundsConfirmationResponse1Data {
      */
     @JsonProperty("InstructedAmount")
     public OBFundsConfirmationResponse1DataInstructedAmount instructedAmount;
+
     public OBFundsConfirmationResponse1Data withInstructedAmount(OBFundsConfirmationResponse1DataInstructedAmount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -71,9 +76,18 @@ public class OBFundsConfirmationResponse1Data {
      */
     @JsonProperty("Reference")
     public String reference;
+
     public OBFundsConfirmationResponse1Data withReference(String reference) {
         this.reference = reference;
         return this;
     }
     
+    public OBFundsConfirmationResponse1Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("FundsAvailable") Boolean fundsAvailable, @JsonProperty("FundsConfirmationId") String fundsConfirmationId, @JsonProperty("InstructedAmount") OBFundsConfirmationResponse1DataInstructedAmount instructedAmount, @JsonProperty("Reference") String reference) {
+        this.consentId = consentId;
+        this.creationDateTime = creationDateTime;
+        this.fundsAvailable = fundsAvailable;
+        this.fundsConfirmationId = fundsConfirmationId;
+        this.instructedAmount = instructedAmount;
+        this.reference = reference;
+  }
 }

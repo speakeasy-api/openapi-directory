@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveSupplyLotRequest {
@@ -12,6 +13,7 @@ public class SaveSupplyLotRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public SaveSupplyLotRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class SaveSupplyLotRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public SaveSupplyLotRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SaveSupplyLotRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public SaveSupplyLotSaveSupplyLot requestBody;
+
     public SaveSupplyLotRequest withRequestBody(SaveSupplyLotSaveSupplyLot requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,6 +43,7 @@ public class SaveSupplyLotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
     public String skuId;
+
     public SaveSupplyLotRequest withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
@@ -49,6 +54,7 @@ public class SaveSupplyLotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=supplyLotId")
     public String supplyLotId;
+
     public SaveSupplyLotRequest withSupplyLotId(String supplyLotId) {
         this.supplyLotId = supplyLotId;
         return this;
@@ -59,9 +65,18 @@ public class SaveSupplyLotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=warehouseId")
     public String warehouseId;
+
     public SaveSupplyLotRequest withWarehouseId(String warehouseId) {
         this.warehouseId = warehouseId;
         return this;
     }
     
+    public SaveSupplyLotRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") SaveSupplyLotSaveSupplyLot requestBody, @JsonProperty("skuId") String skuId, @JsonProperty("supplyLotId") String supplyLotId, @JsonProperty("warehouseId") String warehouseId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.skuId = skuId;
+        this.supplyLotId = supplyLotId;
+        this.warehouseId = warehouseId;
+  }
 }

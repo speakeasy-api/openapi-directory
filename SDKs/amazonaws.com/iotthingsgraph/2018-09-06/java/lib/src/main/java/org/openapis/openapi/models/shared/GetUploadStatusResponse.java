@@ -21,6 +21,7 @@ public class GetUploadStatusResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public GetUploadStatusResponse withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -29,6 +30,7 @@ public class GetUploadStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String[] failureReason;
+
     public GetUploadStatusResponse withFailureReason(String[] failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -37,6 +39,7 @@ public class GetUploadStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceArn")
     public String namespaceArn;
+
     public GetUploadStatusResponse withNamespaceArn(String namespaceArn) {
         this.namespaceArn = namespaceArn;
         return this;
@@ -45,6 +48,7 @@ public class GetUploadStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public GetUploadStatusResponse withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -53,6 +57,7 @@ public class GetUploadStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceVersion")
     public Long namespaceVersion;
+
     public GetUploadStatusResponse withNamespaceVersion(Long namespaceVersion) {
         this.namespaceVersion = namespaceVersion;
         return this;
@@ -60,6 +65,7 @@ public class GetUploadStatusResponse {
     
     @JsonProperty("uploadId")
     public String uploadId;
+
     public GetUploadStatusResponse withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
@@ -67,9 +73,15 @@ public class GetUploadStatusResponse {
     
     @JsonProperty("uploadStatus")
     public UploadStatusEnum uploadStatus;
+
     public GetUploadStatusResponse withUploadStatus(UploadStatusEnum uploadStatus) {
         this.uploadStatus = uploadStatus;
         return this;
     }
     
+    public GetUploadStatusResponse(@JsonProperty("createdDate") OffsetDateTime createdDate, @JsonProperty("uploadId") String uploadId, @JsonProperty("uploadStatus") UploadStatusEnum uploadStatus) {
+        this.createdDate = createdDate;
+        this.uploadId = uploadId;
+        this.uploadStatus = uploadStatus;
+  }
 }

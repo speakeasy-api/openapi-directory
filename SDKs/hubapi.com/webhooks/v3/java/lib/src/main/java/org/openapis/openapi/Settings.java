@@ -49,11 +49,9 @@ public class Settings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearResponse res = new org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearResponse() {{
+        org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearResponse res = new org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -83,12 +81,10 @@ public class Settings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWebhooksV3AppIdSettingsGetAllResponse res = new org.openapis.openapi.models.operations.GetWebhooksV3AppIdSettingsGetAllResponse() {{
+        org.openapis.openapi.models.operations.GetWebhooksV3AppIdSettingsGetAllResponse res = new org.openapis.openapi.models.operations.GetWebhooksV3AppIdSettingsGetAllResponse(contentType, httpRes.statusCode()) {{
             settingsResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -128,12 +124,10 @@ public class Settings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutWebhooksV3AppIdSettingsConfigureResponse res = new org.openapis.openapi.models.operations.PutWebhooksV3AppIdSettingsConfigureResponse() {{
+        org.openapis.openapi.models.operations.PutWebhooksV3AppIdSettingsConfigureResponse res = new org.openapis.openapi.models.operations.PutWebhooksV3AppIdSettingsConfigureResponse(contentType, httpRes.statusCode()) {{
             settingsResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

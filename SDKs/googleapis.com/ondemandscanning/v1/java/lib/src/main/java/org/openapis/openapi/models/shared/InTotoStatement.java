@@ -18,6 +18,7 @@ public class InTotoStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_type")
     public String type;
+
     public InTotoStatement withType(String type) {
         this.type = type;
         return this;
@@ -29,6 +30,7 @@ public class InTotoStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predicateType")
     public String predicateType;
+
     public InTotoStatement withPredicateType(String predicateType) {
         this.predicateType = predicateType;
         return this;
@@ -37,6 +39,7 @@ public class InTotoStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provenance")
     public InTotoProvenance provenance;
+
     public InTotoStatement withProvenance(InTotoProvenance provenance) {
         this.provenance = provenance;
         return this;
@@ -45,6 +48,7 @@ public class InTotoStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slsaProvenance")
     public SlsaProvenance slsaProvenance;
+
     public InTotoStatement withSlsaProvenance(SlsaProvenance slsaProvenance) {
         this.slsaProvenance = slsaProvenance;
         return this;
@@ -56,6 +60,7 @@ public class InTotoStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slsaProvenanceZeroTwo")
     public SlsaProvenanceZeroTwo slsaProvenanceZeroTwo;
+
     public InTotoStatement withSlsaProvenanceZeroTwo(SlsaProvenanceZeroTwo slsaProvenanceZeroTwo) {
         this.slsaProvenanceZeroTwo = slsaProvenanceZeroTwo;
         return this;
@@ -64,9 +69,11 @@ public class InTotoStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public Subject[] subject;
+
     public InTotoStatement withSubject(Subject[] subject) {
         this.subject = subject;
         return this;
     }
     
+    public InTotoStatement(){}
 }

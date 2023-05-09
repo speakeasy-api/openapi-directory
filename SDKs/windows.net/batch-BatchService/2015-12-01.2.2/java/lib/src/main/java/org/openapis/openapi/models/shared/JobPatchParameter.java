@@ -18,6 +18,7 @@ public class JobPatchParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public JobConstraints constraints;
+
     public JobPatchParameter withConstraints(JobConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -29,6 +30,7 @@ public class JobPatchParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public MetadataItem[] metadata;
+
     public JobPatchParameter withMetadata(MetadataItem[] metadata) {
         this.metadata = metadata;
         return this;
@@ -40,6 +42,7 @@ public class JobPatchParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poolInfo")
     public PoolInformation poolInfo;
+
     public JobPatchParameter withPoolInfo(PoolInformation poolInfo) {
         this.poolInfo = poolInfo;
         return this;
@@ -51,9 +54,11 @@ public class JobPatchParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public JobPatchParameter withPriority(Integer priority) {
         this.priority = priority;
         return this;
     }
     
+    public JobPatchParameter(){}
 }

@@ -15,6 +15,7 @@ public class LiveChatFanFundingEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountDisplayString")
     public String amountDisplayString;
+
     public LiveChatFanFundingEventDetails withAmountDisplayString(String amountDisplayString) {
         this.amountDisplayString = amountDisplayString;
         return this;
@@ -26,6 +27,7 @@ public class LiveChatFanFundingEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountMicros")
     public String amountMicros;
+
     public LiveChatFanFundingEventDetails withAmountMicros(String amountMicros) {
         this.amountMicros = amountMicros;
         return this;
@@ -37,6 +39,7 @@ public class LiveChatFanFundingEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public LiveChatFanFundingEventDetails withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -48,9 +51,11 @@ public class LiveChatFanFundingEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userComment")
     public String userComment;
+
     public LiveChatFanFundingEventDetails withUserComment(String userComment) {
         this.userComment = userComment;
         return this;
     }
     
+    public LiveChatFanFundingEventDetails(){}
 }

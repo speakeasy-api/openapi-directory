@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePermissionPolicyResponse {
     
     public String contentType;
+
     public DeletePermissionPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeletePermissionPolicyResponse {
      */
     
     public java.util.Map<String, Object> deletePermissionPolicyResponse;
+
     public DeletePermissionPolicyResponse withDeletePermissionPolicyResponse(java.util.Map<String, Object> deletePermissionPolicyResponse) {
         this.deletePermissionPolicyResponse = deletePermissionPolicyResponse;
         return this;
@@ -26,6 +29,7 @@ public class DeletePermissionPolicyResponse {
     
     
     public Integer statusCode;
+
     public DeletePermissionPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeletePermissionPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePermissionPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DeletePermissionPolicyResponse {
      */
     
     public Object wafInternalErrorException;
+
     public DeletePermissionPolicyResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class DeletePermissionPolicyResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public DeletePermissionPolicyResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -63,9 +70,14 @@ public class DeletePermissionPolicyResponse {
      */
     
     public Object wafStaleDataException;
+
     public DeletePermissionPolicyResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public DeletePermissionPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

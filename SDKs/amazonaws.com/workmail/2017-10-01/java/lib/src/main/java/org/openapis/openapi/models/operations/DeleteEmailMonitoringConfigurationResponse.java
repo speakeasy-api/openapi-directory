@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEmailMonitoringConfigurationResponse {
     
     public String contentType;
+
     public DeleteEmailMonitoringConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteEmailMonitoringConfigurationResponse {
      */
     
     public java.util.Map<String, Object> deleteEmailMonitoringConfigurationResponse;
+
     public DeleteEmailMonitoringConfigurationResponse withDeleteEmailMonitoringConfigurationResponse(java.util.Map<String, Object> deleteEmailMonitoringConfigurationResponse) {
         this.deleteEmailMonitoringConfigurationResponse = deleteEmailMonitoringConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEmailMonitoringConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteEmailMonitoringConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEmailMonitoringConfigurationResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DeleteEmailMonitoringConfigurationResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteEmailMonitoringConfigurationResponse {
      */
     
     public Object organizationStateException;
+
     public DeleteEmailMonitoringConfigurationResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteEmailMonitoringConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteEmailMonitoringConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteEmailMonitoringConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEmailMonitoringConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteEmailMonitoringConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

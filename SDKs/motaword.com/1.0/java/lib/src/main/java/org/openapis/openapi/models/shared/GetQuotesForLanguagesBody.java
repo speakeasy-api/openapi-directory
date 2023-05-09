@@ -12,9 +12,11 @@ public class GetQuotesForLanguagesBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public String[] languages;
+
     public GetQuotesForLanguagesBody withLanguages(String[] languages) {
         this.languages = languages;
         return this;
     }
     
+    public GetQuotesForLanguagesBody(){}
 }

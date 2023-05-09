@@ -22,9 +22,11 @@ public class Snapshot {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SnapshotTime")
     public OffsetDateTime snapshotTime;
+
     public Snapshot withSnapshotTime(OffsetDateTime snapshotTime) {
         this.snapshotTime = snapshotTime;
         return this;
     }
     
+    public Snapshot(){}
 }

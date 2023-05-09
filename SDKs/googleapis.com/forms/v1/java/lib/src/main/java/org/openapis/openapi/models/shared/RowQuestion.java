@@ -18,9 +18,11 @@ public class RowQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public RowQuestion withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public RowQuestion(){}
 }

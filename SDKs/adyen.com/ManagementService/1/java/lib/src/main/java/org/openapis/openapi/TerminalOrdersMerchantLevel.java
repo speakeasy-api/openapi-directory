@@ -65,12 +65,10 @@ public class TerminalOrdersMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdBillingEntitiesResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdBillingEntitiesResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdBillingEntitiesResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdBillingEntitiesResponse(contentType, httpRes.statusCode()) {{
             billingEntitiesResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -127,12 +125,10 @@ public class TerminalOrdersMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdShippingLocationsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdShippingLocationsResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdShippingLocationsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdShippingLocationsResponse(contentType, httpRes.statusCode()) {{
             shippingLocationsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,12 +178,10 @@ public class TerminalOrdersMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalModelsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalModelsResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalModelsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalModelsResponse(contentType, httpRes.statusCode()) {{
             terminalModelsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,12 +237,10 @@ public class TerminalOrdersMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalOrdersResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalOrdersResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalOrdersResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalOrdersResponse(contentType, httpRes.statusCode()) {{
             terminalOrdersResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,12 +290,10 @@ public class TerminalOrdersMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalOrdersOrderIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalOrdersOrderIdResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalOrdersOrderIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalOrdersOrderIdResponse(contentType, httpRes.statusCode()) {{
             terminalOrder = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -359,12 +349,10 @@ public class TerminalOrdersMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalProductsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalProductsResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalProductsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalProductsResponse(contentType, httpRes.statusCode()) {{
             terminalProductsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -420,12 +408,10 @@ public class TerminalOrdersMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalOrdersOrderIdResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalOrdersOrderIdResponse() {{
+        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalOrdersOrderIdResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalOrdersOrderIdResponse(contentType, httpRes.statusCode()) {{
             terminalOrder = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -476,12 +462,10 @@ public class TerminalOrdersMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMerchantsMerchantIdShippingLocationsResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdShippingLocationsResponse() {{
+        org.openapis.openapi.models.operations.PostMerchantsMerchantIdShippingLocationsResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdShippingLocationsResponse(contentType, httpRes.statusCode()) {{
             shippingLocation = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,12 +516,10 @@ public class TerminalOrdersMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMerchantsMerchantIdTerminalOrdersResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdTerminalOrdersResponse() {{
+        org.openapis.openapi.models.operations.PostMerchantsMerchantIdTerminalOrdersResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdTerminalOrdersResponse(contentType, httpRes.statusCode()) {{
             terminalOrder = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -588,12 +570,10 @@ public class TerminalOrdersMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMerchantsMerchantIdTerminalOrdersOrderIdCancelResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdTerminalOrdersOrderIdCancelResponse() {{
+        org.openapis.openapi.models.operations.PostMerchantsMerchantIdTerminalOrdersOrderIdCancelResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdTerminalOrdersOrderIdCancelResponse(contentType, httpRes.statusCode()) {{
             terminalOrder = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

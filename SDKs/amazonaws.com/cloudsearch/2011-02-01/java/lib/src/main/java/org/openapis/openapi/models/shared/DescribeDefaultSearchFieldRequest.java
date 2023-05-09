@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeDefaultSearchFieldRequest {
     /**
@@ -12,9 +12,13 @@ public class DescribeDefaultSearchFieldRequest {
      */
     
     public String domainName;
+
     public DescribeDefaultSearchFieldRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public DescribeDefaultSearchFieldRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

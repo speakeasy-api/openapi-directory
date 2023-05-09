@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAliasesResponse {
     
     public String contentType;
+
     public ListAliasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAliasesResponse {
      */
     
     public Object internalServiceException;
+
     public ListAliasesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ListAliasesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListAliasesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListAliasesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAliasesOutput listAliasesOutput;
+
     public ListAliasesResponse withListAliasesOutput(org.openapis.openapi.models.shared.ListAliasesOutput listAliasesOutput) {
         this.listAliasesOutput = listAliasesOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListAliasesResponse {
     
     
     public Integer statusCode;
+
     public ListAliasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAliasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAliasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListAliasesResponse {
      */
     
     public Object unauthorizedException;
+
     public ListAliasesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListAliasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

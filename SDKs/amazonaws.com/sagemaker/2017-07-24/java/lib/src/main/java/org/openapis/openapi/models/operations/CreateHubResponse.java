@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateHubResponse {
     
     public String contentType;
+
     public CreateHubResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateHubResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateHubResponse createHubResponse;
+
     public CreateHubResponse withCreateHubResponse(org.openapis.openapi.models.shared.CreateHubResponse createHubResponse) {
         this.createHubResponse = createHubResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateHubResponse {
      */
     
     public Object resourceInUse;
+
     public CreateHubResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -36,6 +40,7 @@ public class CreateHubResponse {
     
     
     public Integer statusCode;
+
     public CreateHubResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateHubResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateHubResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CreateHubResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateHubResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
     }
     
+    public CreateHubResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

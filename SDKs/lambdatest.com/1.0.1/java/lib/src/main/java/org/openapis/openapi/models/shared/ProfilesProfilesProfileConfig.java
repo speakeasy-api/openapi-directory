@@ -12,6 +12,7 @@ public class ProfilesProfilesProfileConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentials")
     public ProfilesProfilesProfileConfigCredentials credentials;
+
     public ProfilesProfilesProfileConfig withCredentials(ProfilesProfilesProfileConfigCredentials credentials) {
         this.credentials = credentials;
         return this;
@@ -20,6 +21,7 @@ public class ProfilesProfilesProfileConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locators")
     public ProfilesProfilesProfileConfigLocators locators;
+
     public ProfilesProfilesProfileConfig withLocators(ProfilesProfilesProfileConfigLocators locators) {
         this.locators = locators;
         return this;
@@ -28,6 +30,7 @@ public class ProfilesProfilesProfileConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login_url")
     public String loginUrl;
+
     public ProfilesProfilesProfileConfig withLoginUrl(String loginUrl) {
         this.loginUrl = loginUrl;
         return this;
@@ -36,9 +39,11 @@ public class ProfilesProfilesProfileConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_name")
     public String profileName;
+
     public ProfilesProfilesProfileConfig withProfileName(String profileName) {
         this.profileName = profileName;
         return this;
     }
     
+    public ProfilesProfilesProfileConfig(){}
 }

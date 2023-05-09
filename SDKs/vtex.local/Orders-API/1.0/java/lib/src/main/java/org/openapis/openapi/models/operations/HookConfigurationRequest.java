@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HookConfigurationRequest {
@@ -12,6 +13,7 @@ public class HookConfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public HookConfigurationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class HookConfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public HookConfigurationRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class HookConfigurationRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HookConfigurationRequest hookConfigurationRequest;
+
     public HookConfigurationRequest withHookConfigurationRequest(org.openapis.openapi.models.shared.HookConfigurationRequest hookConfigurationRequest) {
         this.hookConfigurationRequest = hookConfigurationRequest;
         return this;
     }
     
+    public HookConfigurationRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("HookConfigurationRequest") org.openapis.openapi.models.shared.HookConfigurationRequest hookConfigurationRequest) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.hookConfigurationRequest = hookConfigurationRequest;
+  }
 }

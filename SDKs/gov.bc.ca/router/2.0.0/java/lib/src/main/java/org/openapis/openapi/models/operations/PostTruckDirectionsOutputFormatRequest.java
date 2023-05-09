@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class PostTruckDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=correctSide")
     public Boolean correctSide;
+
     public PostTruckDirectionsOutputFormatRequest withCorrectSide(Boolean correctSide) {
         this.correctSide = correctSide;
         return this;
@@ -23,6 +25,7 @@ public class PostTruckDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=criteria")
     public PostTruckDirectionsOutputFormatCriteriaEnum criteria;
+
     public PostTruckDirectionsOutputFormatRequest withCriteria(PostTruckDirectionsOutputFormatCriteriaEnum criteria) {
         this.criteria = criteria;
         return this;
@@ -33,6 +36,7 @@ public class PostTruckDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=departure")
     public OffsetDateTime departure;
+
     public PostTruckDirectionsOutputFormatRequest withDeparture(OffsetDateTime departure) {
         this.departure = departure;
         return this;
@@ -43,6 +47,7 @@ public class PostTruckDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disable")
     public String disable;
+
     public PostTruckDirectionsOutputFormatRequest withDisable(String disable) {
         this.disable = disable;
         return this;
@@ -53,6 +58,7 @@ public class PostTruckDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distanceUnit")
     public PostTruckDirectionsOutputFormatDistanceUnitEnum distanceUnit;
+
     public PostTruckDirectionsOutputFormatRequest withDistanceUnit(PostTruckDirectionsOutputFormatDistanceUnitEnum distanceUnit) {
         this.distanceUnit = distanceUnit;
         return this;
@@ -63,6 +69,7 @@ public class PostTruckDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
     public PostTruckDirectionsOutputFormatOutputFormatEnum outputFormat;
+
     public PostTruckDirectionsOutputFormatRequest withOutputFormat(PostTruckDirectionsOutputFormatOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -73,6 +80,7 @@ public class PostTruckDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public PostTruckDirectionsOutputFormatOutputSrsEnum outputSRS;
+
     public PostTruckDirectionsOutputFormatRequest withOutputSRS(PostTruckDirectionsOutputFormatOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -83,6 +91,7 @@ public class PostTruckDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partition")
     public String partition;
+
     public PostTruckDirectionsOutputFormatRequest withPartition(String partition) {
         this.partition = partition;
         return this;
@@ -93,6 +102,7 @@ public class PostTruckDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=points")
     public String points;
+
     public PostTruckDirectionsOutputFormatRequest withPoints(String points) {
         this.points = points;
         return this;
@@ -103,6 +113,7 @@ public class PostTruckDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roundTrip")
     public Boolean roundTrip;
+
     public PostTruckDirectionsOutputFormatRequest withRoundTrip(Boolean roundTrip) {
         this.roundTrip = roundTrip;
         return this;
@@ -113,6 +124,7 @@ public class PostTruckDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeDescription")
     public String routeDescription;
+
     public PostTruckDirectionsOutputFormatRequest withRouteDescription(String routeDescription) {
         this.routeDescription = routeDescription;
         return this;
@@ -123,9 +135,14 @@ public class PostTruckDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=truckRouteMultiplier")
     public Long truckRouteMultiplier;
+
     public PostTruckDirectionsOutputFormatRequest withTruckRouteMultiplier(Long truckRouteMultiplier) {
         this.truckRouteMultiplier = truckRouteMultiplier;
         return this;
     }
     
+    public PostTruckDirectionsOutputFormatRequest(@JsonProperty("outputFormat") PostTruckDirectionsOutputFormatOutputFormatEnum outputFormat, @JsonProperty("points") String points) {
+        this.outputFormat = outputFormat;
+        this.points = points;
+  }
 }

@@ -18,6 +18,7 @@ public class InstanceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public InstanceSettings withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +30,7 @@ public class InstanceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public InstanceSettings withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class InstanceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public InstanceSettings withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
@@ -51,9 +54,11 @@ public class InstanceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public InstanceSettings withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public InstanceSettings(){}
 }

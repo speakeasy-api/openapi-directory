@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InvoiceApiUriResponse {
     
     public byte[] body;
+
     public InvoiceApiUriResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class InvoiceApiUriResponse {
     
     
     public String contentType;
+
     public InvoiceApiUriResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class InvoiceApiUriResponse {
      */
     
     public org.openapis.openapi.models.shared.InvoiceUriApiModel invoiceUriApiModel;
+
     public InvoiceApiUriResponse withInvoiceUriApiModel(org.openapis.openapi.models.shared.InvoiceUriApiModel invoiceUriApiModel) {
         this.invoiceUriApiModel = invoiceUriApiModel;
         return this;
@@ -33,6 +37,7 @@ public class InvoiceApiUriResponse {
     
     
     public Integer statusCode;
+
     public InvoiceApiUriResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class InvoiceApiUriResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InvoiceApiUriResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public InvoiceApiUriResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

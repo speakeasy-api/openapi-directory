@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteHapgResponse {
@@ -12,6 +13,7 @@ public class DeleteHapgResponse {
      */
     
     public Object cloudHsmInternalException;
+
     public DeleteHapgResponse withCloudHsmInternalException(Object cloudHsmInternalException) {
         this.cloudHsmInternalException = cloudHsmInternalException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteHapgResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public DeleteHapgResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteHapgResponse {
     
     
     public String contentType;
+
     public DeleteHapgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteHapgResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteHapgResponse deleteHapgResponse;
+
     public DeleteHapgResponse withDeleteHapgResponse(org.openapis.openapi.models.shared.DeleteHapgResponse deleteHapgResponse) {
         this.deleteHapgResponse = deleteHapgResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteHapgResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteHapgResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteHapgResponse {
     
     
     public Integer statusCode;
+
     public DeleteHapgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteHapgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteHapgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteHapgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

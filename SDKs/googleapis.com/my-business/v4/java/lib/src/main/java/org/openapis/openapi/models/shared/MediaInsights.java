@@ -18,9 +18,11 @@ public class MediaInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewCount")
     public String viewCount;
+
     public MediaInsights withViewCount(String viewCount) {
         this.viewCount = viewCount;
         return this;
     }
     
+    public MediaInsights(){}
 }

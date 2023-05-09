@@ -15,6 +15,7 @@ public class SyncConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictDetection")
     public ConflictDetectionTypeEnum conflictDetection;
+
     public SyncConfig withConflictDetection(ConflictDetectionTypeEnum conflictDetection) {
         this.conflictDetection = conflictDetection;
         return this;
@@ -23,6 +24,7 @@ public class SyncConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictHandler")
     public ConflictHandlerTypeEnum conflictHandler;
+
     public SyncConfig withConflictHandler(ConflictHandlerTypeEnum conflictHandler) {
         this.conflictHandler = conflictHandler;
         return this;
@@ -31,9 +33,11 @@ public class SyncConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaConflictHandlerConfig")
     public LambdaConflictHandlerConfig lambdaConflictHandlerConfig;
+
     public SyncConfig withLambdaConflictHandlerConfig(LambdaConflictHandlerConfig lambdaConflictHandlerConfig) {
         this.lambdaConflictHandlerConfig = lambdaConflictHandlerConfig;
         return this;
     }
     
+    public SyncConfig(){}
 }

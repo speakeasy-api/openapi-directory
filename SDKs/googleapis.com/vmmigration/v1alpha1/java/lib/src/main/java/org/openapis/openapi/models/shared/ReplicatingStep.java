@@ -18,6 +18,7 @@ public class ReplicatingStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastThirtyMinutesAverageBytesPerSecond")
     public String lastThirtyMinutesAverageBytesPerSecond;
+
     public ReplicatingStep withLastThirtyMinutesAverageBytesPerSecond(String lastThirtyMinutesAverageBytesPerSecond) {
         this.lastThirtyMinutesAverageBytesPerSecond = lastThirtyMinutesAverageBytesPerSecond;
         return this;
@@ -29,6 +30,7 @@ public class ReplicatingStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastTwoMinutesAverageBytesPerSecond")
     public String lastTwoMinutesAverageBytesPerSecond;
+
     public ReplicatingStep withLastTwoMinutesAverageBytesPerSecond(String lastTwoMinutesAverageBytesPerSecond) {
         this.lastTwoMinutesAverageBytesPerSecond = lastTwoMinutesAverageBytesPerSecond;
         return this;
@@ -40,6 +42,7 @@ public class ReplicatingStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicatedBytes")
     public String replicatedBytes;
+
     public ReplicatingStep withReplicatedBytes(String replicatedBytes) {
         this.replicatedBytes = replicatedBytes;
         return this;
@@ -51,9 +54,11 @@ public class ReplicatingStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalBytes")
     public String totalBytes;
+
     public ReplicatingStep withTotalBytes(String totalBytes) {
         this.totalBytes = totalBytes;
         return this;
     }
     
+    public ReplicatingStep(){}
 }

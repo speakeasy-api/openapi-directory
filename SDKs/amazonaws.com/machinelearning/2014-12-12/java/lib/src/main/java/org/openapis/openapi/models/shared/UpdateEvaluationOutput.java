@@ -15,9 +15,11 @@ public class UpdateEvaluationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationId")
     public String evaluationId;
+
     public UpdateEvaluationOutput withEvaluationId(String evaluationId) {
         this.evaluationId = evaluationId;
         return this;
     }
     
+    public UpdateEvaluationOutput(){}
 }

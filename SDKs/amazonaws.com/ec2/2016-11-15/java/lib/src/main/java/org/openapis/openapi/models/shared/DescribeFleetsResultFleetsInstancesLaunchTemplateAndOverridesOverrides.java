@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverrides {
     
     public String availabilityZone;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverrides withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public String imageId;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverrides withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements instanceRequirements;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverrides withInstanceRequirements(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirements instanceRequirements) {
         this.instanceRequirements = instanceRequirements;
         return this;
@@ -33,6 +36,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum instanceType;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverrides withInstanceType(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -40,6 +44,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public String maxPrice;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverrides withMaxPrice(String maxPrice) {
         this.maxPrice = maxPrice;
         return this;
@@ -47,6 +52,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesPlacement placement;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverrides withPlacement(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesPlacement placement) {
         this.placement = placement;
         return this;
@@ -54,6 +60,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public Double priority;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverrides withPriority(Double priority) {
         this.priority = priority;
         return this;
@@ -61,6 +68,7 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public String subnetId;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverrides withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -68,9 +76,11 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public Double weightedCapacity;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverrides withWeightedCapacity(Double weightedCapacity) {
         this.weightedCapacity = weightedCapacity;
         return this;
     }
     
+    public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverrides(){}
 }

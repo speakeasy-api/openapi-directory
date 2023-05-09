@@ -20,6 +20,7 @@ public class GetAutomatedDiscoveryConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classificationScopeId")
     public String classificationScopeId;
+
     public GetAutomatedDiscoveryConfigurationResponse withClassificationScopeId(String classificationScopeId) {
         this.classificationScopeId = classificationScopeId;
         return this;
@@ -30,6 +31,7 @@ public class GetAutomatedDiscoveryConfigurationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("disabledAt")
     public OffsetDateTime disabledAt;
+
     public GetAutomatedDiscoveryConfigurationResponse withDisabledAt(OffsetDateTime disabledAt) {
         this.disabledAt = disabledAt;
         return this;
@@ -40,6 +42,7 @@ public class GetAutomatedDiscoveryConfigurationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstEnabledAt")
     public OffsetDateTime firstEnabledAt;
+
     public GetAutomatedDiscoveryConfigurationResponse withFirstEnabledAt(OffsetDateTime firstEnabledAt) {
         this.firstEnabledAt = firstEnabledAt;
         return this;
@@ -50,6 +53,7 @@ public class GetAutomatedDiscoveryConfigurationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public GetAutomatedDiscoveryConfigurationResponse withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -58,6 +62,7 @@ public class GetAutomatedDiscoveryConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitivityInspectionTemplateId")
     public String sensitivityInspectionTemplateId;
+
     public GetAutomatedDiscoveryConfigurationResponse withSensitivityInspectionTemplateId(String sensitivityInspectionTemplateId) {
         this.sensitivityInspectionTemplateId = sensitivityInspectionTemplateId;
         return this;
@@ -66,9 +71,11 @@ public class GetAutomatedDiscoveryConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AutomatedDiscoveryStatusEnum status;
+
     public GetAutomatedDiscoveryConfigurationResponse withStatus(AutomatedDiscoveryStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetAutomatedDiscoveryConfigurationResponse(){}
 }

@@ -12,6 +12,7 @@ public class PlayType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abbreviation")
     public String abbreviation;
+
     public PlayType withAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
         return this;
@@ -20,6 +21,7 @@ public class PlayType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PlayType withId(Long id) {
         this.id = id;
         return this;
@@ -28,9 +30,11 @@ public class PlayType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public PlayType withText(String text) {
         this.text = text;
         return this;
     }
     
+    public PlayType(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AuthorizationConfig {
     @JsonProperty("authorizationType")
     public AuthorizationTypeEnum authorizationType;
+
     public AuthorizationConfig withAuthorizationType(AuthorizationTypeEnum authorizationType) {
         this.authorizationType = authorizationType;
         return this;
@@ -22,9 +23,13 @@ public class AuthorizationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsIamConfig")
     public AwsIamConfig awsIamConfig;
+
     public AuthorizationConfig withAwsIamConfig(AwsIamConfig awsIamConfig) {
         this.awsIamConfig = awsIamConfig;
         return this;
     }
     
+    public AuthorizationConfig(@JsonProperty("authorizationType") AuthorizationTypeEnum authorizationType) {
+        this.authorizationType = authorizationType;
+  }
 }

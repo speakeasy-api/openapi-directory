@@ -18,6 +18,7 @@ public class CheckError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public CheckErrorCodeEnum code;
+
     public CheckError withCode(CheckErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class CheckError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public CheckError withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -40,6 +42,7 @@ public class CheckError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Status status;
+
     public CheckError withStatus(Status status) {
         this.status = status;
         return this;
@@ -51,9 +54,11 @@ public class CheckError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public String subject;
+
     public CheckError withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public CheckError(){}
 }

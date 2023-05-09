@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LaunchPermissionModifications {
     
     public LaunchPermissionList[] add;
+
     public LaunchPermissionModifications withAdd(LaunchPermissionList[] add) {
         this.add = add;
         return this;
@@ -19,9 +20,11 @@ public class LaunchPermissionModifications {
     
     
     public LaunchPermissionList[] remove;
+
     public LaunchPermissionModifications withRemove(LaunchPermissionList[] remove) {
         this.remove = remove;
         return this;
     }
     
+    public LaunchPermissionModifications(){}
 }

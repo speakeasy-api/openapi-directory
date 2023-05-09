@@ -16,56 +16,55 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
+import org.openapis.openapi.models.operations.FormsFormsBatchUpdateRequest;
+import org.openapis.openapi.models.operations.FormsFormsBatchUpdateResponse;
+import org.openapis.openapi.models.operations.FormsFormsBatchUpdateSecurity;
 import org.openapis.openapi.models.operations.FormsFormsBatchUpdateSecurityOption1;
 import org.openapis.openapi.models.operations.FormsFormsBatchUpdateSecurityOption2;
 import org.openapis.openapi.models.operations.FormsFormsBatchUpdateSecurityOption3;
-import org.openapis.openapi.models.operations.FormsFormsBatchUpdateSecurity;
-import org.openapis.openapi.models.operations.FormsFormsBatchUpdateRequest;
-import org.openapis.openapi.models.operations.FormsFormsBatchUpdateResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.BatchUpdateFormRequestInput;
-import org.openapis.openapi.models.shared.WriteControl;
-import org.openapis.openapi.models.shared.RequestInput;
-import org.openapis.openapi.models.shared.UpdateSettingsRequest;
-import org.openapis.openapi.models.shared.FormSettings;
-import org.openapis.openapi.models.shared.QuizSettings;
-import org.openapis.openapi.models.shared.UpdateItemRequestInput;
-import org.openapis.openapi.models.shared.Location;
-import org.openapis.openapi.models.shared.ItemInput;
-import org.openapis.openapi.models.shared.VideoItem;
-import org.openapis.openapi.models.shared.Video;
-import org.openapis.openapi.models.shared.MediaPropertiesAlignmentEnum;
-import org.openapis.openapi.models.shared.MediaProperties;
-import org.openapis.openapi.models.shared.QuestionItemInput;
-import org.openapis.openapi.models.shared.QuestionInput;
-import org.openapis.openapi.models.shared.TimeQuestion;
-import org.openapis.openapi.models.shared.TextQuestion;
-import org.openapis.openapi.models.shared.ScaleQuestion;
-import org.openapis.openapi.models.shared.RowQuestion;
-import org.openapis.openapi.models.shared.Grading;
-import org.openapis.openapi.models.shared.Feedback;
-import org.openapis.openapi.models.shared.ExtraMaterial;
-import org.openapis.openapi.models.shared.VideoLink;
-import org.openapis.openapi.models.shared.TextLink;
-import org.openapis.openapi.models.shared.CorrectAnswers;
-import org.openapis.openapi.models.shared.CorrectAnswer;
-import org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum;
-import org.openapis.openapi.models.shared.FileUploadQuestion;
-import org.openapis.openapi.models.shared.DateQuestion;
-import org.openapis.openapi.models.shared.ChoiceQuestionTypeEnum;
 import org.openapis.openapi.models.shared.ChoiceQuestionInput;
+import org.openapis.openapi.models.shared.ChoiceQuestionTypeEnum;
+import org.openapis.openapi.models.shared.CorrectAnswer;
+import org.openapis.openapi.models.shared.CorrectAnswers;
+import org.openapis.openapi.models.shared.CreateItemRequestInput;
+import org.openapis.openapi.models.shared.DateQuestion;
+import org.openapis.openapi.models.shared.DeleteItemRequest;
+import org.openapis.openapi.models.shared.ExtraMaterial;
+import org.openapis.openapi.models.shared.Feedback;
+import org.openapis.openapi.models.shared.FileUploadQuestion;
+import org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum;
+import org.openapis.openapi.models.shared.FormSettings;
+import org.openapis.openapi.models.shared.Grading;
+import org.openapis.openapi.models.shared.GridInput;
+import org.openapis.openapi.models.shared.ImageInput;
+import org.openapis.openapi.models.shared.ImageItemInput;
+import org.openapis.openapi.models.shared.InfoInput;
+import org.openapis.openapi.models.shared.ItemInput;
+import org.openapis.openapi.models.shared.Location;
+import org.openapis.openapi.models.shared.MediaProperties;
+import org.openapis.openapi.models.shared.MediaPropertiesAlignmentEnum;
+import org.openapis.openapi.models.shared.MoveItemRequest;
 import org.openapis.openapi.models.shared.OptionGoToActionEnum;
 import org.openapis.openapi.models.shared.OptionInput;
-import org.openapis.openapi.models.shared.ImageInput;
 import org.openapis.openapi.models.shared.QuestionGroupItemInput;
-import org.openapis.openapi.models.shared.GridInput;
-import org.openapis.openapi.models.shared.ImageItemInput;
+import org.openapis.openapi.models.shared.QuestionInput;
+import org.openapis.openapi.models.shared.QuestionItemInput;
+import org.openapis.openapi.models.shared.QuizSettings;
+import org.openapis.openapi.models.shared.RequestInput;
+import org.openapis.openapi.models.shared.RowQuestion;
+import org.openapis.openapi.models.shared.ScaleQuestion;
+import org.openapis.openapi.models.shared.TextLink;
+import org.openapis.openapi.models.shared.TextQuestion;
+import org.openapis.openapi.models.shared.TimeQuestion;
 import org.openapis.openapi.models.shared.UpdateFormInfoRequestInput;
-import org.openapis.openapi.models.shared.InfoInput;
-import org.openapis.openapi.models.shared.MoveItemRequest;
-import org.openapis.openapi.models.shared.DeleteItemRequest;
-import org.openapis.openapi.models.shared.CreateItemRequestInput;
+import org.openapis.openapi.models.shared.UpdateItemRequestInput;
+import org.openapis.openapi.models.shared.UpdateSettingsRequest;
+import org.openapis.openapi.models.shared.Video;
+import org.openapis.openapi.models.shared.VideoItem;
+import org.openapis.openapi.models.shared.VideoLink;
+import org.openapis.openapi.models.shared.WriteControl;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -74,160 +73,178 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            FormsFormsBatchUpdateRequest req = new FormsFormsBatchUpdateRequest() {{
-                dollarXgafv = "2";
+            FormsFormsBatchUpdateRequest req = new FormsFormsBatchUpdateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 batchUpdateFormRequestInput = new BatchUpdateFormRequestInput() {{
                     includeFormInResponse = false;
                     requests = new org.openapis.openapi.models.shared.RequestInput[]{{
                         add(new RequestInput() {{
                             createItem = new CreateItemRequestInput() {{
                                 item = new ItemInput() {{
-                                    description = "distinctio";
+                                    description = "quibusdam";
                                     imageItem = new ImageItemInput() {{
                                         image = new ImageInput() {{
-                                            altText = "quibusdam";
+                                            altText = "unde";
                                             properties = new MediaProperties() {{
-                                                alignment = "RIGHT";
-                                                width = 857946;
+                                                alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                width = 544883;
                                             }};
-                                            sourceUri = "corrupti";
+                                            sourceUri = "illum";
                                         }};
                                     }};
-                                    itemId = "illum";
+                                    itemId = "vel";
                                     pageBreakItem = new java.util.HashMap<String, Object>() {{
-                                        put("error", "deserunt");
-                                        put("suscipit", "iure");
+                                        put("deserunt", "suscipit");
+                                        put("iure", "magnam");
+                                        put("debitis", "ipsa");
                                     }};
                                     questionGroupItem = new QuestionGroupItemInput() {{
                                         grid = new GridInput() {{
                                             columns = new ChoiceQuestionInput() {{
                                                 options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                     add(new OptionInput() {{
-                                                        goToAction = "SUBMIT_FORM";
-                                                        goToSectionId = "ipsa";
+                                                        goToAction = OptionGoToActionEnum.NEXT_SECTION;
+                                                        goToSectionId = "suscipit";
                                                         image = new ImageInput() {{
-                                                            altText = "delectus";
+                                                            altText = "molestiae";
                                                             properties = new MediaProperties() {{
-                                                                alignment = "LEFT";
-                                                                width = 383441;
+                                                                alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                width = 812169;
                                                             }};
-                                                            sourceUri = "molestiae";
+                                                            sourceUri = "voluptatum";
                                                         }};
                                                         isOther = false;
-                                                        value = "minus";
+                                                        value = "iusto";
                                                     }}),
                                                     add(new OptionInput() {{
-                                                        goToAction = "SUBMIT_FORM";
-                                                        goToSectionId = "voluptatum";
+                                                        goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                        goToSectionId = "nisi";
                                                         image = new ImageInput() {{
-                                                            altText = "iusto";
+                                                            altText = "recusandae";
                                                             properties = new MediaProperties() {{
-                                                                alignment = "RIGHT";
-                                                                width = 392785;
+                                                                alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                width = 71036;
                                                             }};
-                                                            sourceUri = "recusandae";
+                                                            sourceUri = "quis";
                                                         }};
                                                         isOther = false;
-                                                        value = "temporibus";
+                                                        value = "veritatis";
+                                                    }}),
+                                                    add(new OptionInput() {{
+                                                        goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                        goToSectionId = "perferendis";
+                                                        image = new ImageInput() {{
+                                                            altText = "ipsam";
+                                                            properties = new MediaProperties() {{
+                                                                alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                width = 957156;
+                                                            }};
+                                                            sourceUri = "quo";
+                                                        }};
+                                                        isOther = false;
+                                                        value = "odit";
+                                                    }}),
+                                                    add(new OptionInput() {{
+                                                        goToAction = OptionGoToActionEnum.SUBMIT_FORM;
+                                                        goToSectionId = "at";
+                                                        image = new ImageInput() {{
+                                                            altText = "maiores";
+                                                            properties = new MediaProperties() {{
+                                                                alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                                width = 799159;
+                                                            }};
+                                                            sourceUri = "quod";
+                                                        }};
+                                                        isOther = false;
+                                                        value = "esse";
                                                     }}),
                                                 }};
                                                 shuffle = false;
-                                                type = "CHOICE_TYPE_UNSPECIFIED";
+                                                type = ChoiceQuestionTypeEnum.CHECKBOX;
                                             }};
                                             shuffleQuestions = false;
                                         }};
                                         image = new ImageInput() {{
-                                            altText = "quis";
+                                            altText = "porro";
                                             properties = new MediaProperties() {{
-                                                alignment = "ALIGNMENT_UNSPECIFIED";
-                                                width = 648172;
+                                                alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                width = 118274;
                                             }};
-                                            sourceUri = "perferendis";
+                                            sourceUri = "nam";
                                         }};
                                         questions = new org.openapis.openapi.models.shared.QuestionInput[]{{
                                             add(new QuestionInput() {{
                                                 choiceQuestion = new ChoiceQuestionInput() {{
                                                     options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                         add(new OptionInput() {{
-                                                            goToAction = "SUBMIT_FORM";
-                                                            goToSectionId = "quo";
+                                                            goToAction = OptionGoToActionEnum.GO_TO_ACTION_UNSPECIFIED;
+                                                            goToSectionId = "deleniti";
                                                             image = new ImageInput() {{
-                                                                altText = "odit";
+                                                                altText = "hic";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "CENTER";
-                                                                    width = 870088;
+                                                                    alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                    width = 521848;
                                                                 }};
-                                                                sourceUri = "maiores";
+                                                                sourceUri = "beatae";
                                                             }};
                                                             isOther = false;
-                                                            value = "molestiae";
+                                                            value = "commodi";
                                                         }}),
                                                         add(new OptionInput() {{
-                                                            goToAction = "SUBMIT_FORM";
-                                                            goToSectionId = "quod";
+                                                            goToAction = OptionGoToActionEnum.NEXT_SECTION;
+                                                            goToSectionId = "modi";
                                                             image = new ImageInput() {{
-                                                                altText = "esse";
+                                                                altText = "qui";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "RIGHT";
-                                                                    width = 780529;
+                                                                    alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                    width = 736918;
                                                                 }};
-                                                                sourceUri = "dolorum";
+                                                                sourceUri = "esse";
                                                             }};
                                                             isOther = false;
-                                                            value = "dicta";
+                                                            value = "ipsum";
                                                         }}),
                                                         add(new OptionInput() {{
-                                                            goToAction = "RESTART_FORM";
-                                                            goToSectionId = "officia";
+                                                            goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                            goToSectionId = "aspernatur";
                                                             image = new ImageInput() {{
-                                                                altText = "occaecati";
+                                                                altText = "perferendis";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "ALIGNMENT_UNSPECIFIED";
-                                                                    width = 537373;
+                                                                    alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                                    width = 617636;
                                                                 }};
-                                                                sourceUri = "hic";
+                                                                sourceUri = "sed";
                                                             }};
                                                             isOther = false;
-                                                            value = "optio";
-                                                        }}),
-                                                        add(new OptionInput() {{
-                                                            goToAction = "RESTART_FORM";
-                                                            goToSectionId = "beatae";
-                                                            image = new ImageInput() {{
-                                                                altText = "commodi";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "LEFT";
-                                                                    width = 264555;
-                                                                }};
-                                                                sourceUri = "qui";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "impedit";
+                                                            value = "iste";
                                                         }}),
                                                     }};
                                                     shuffle = false;
-                                                    type = "CHECKBOX";
+                                                    type = ChoiceQuestionTypeEnum.CHOICE_TYPE_UNSPECIFIED;
                                                 }};
                                                 dateQuestion = new DateQuestion() {{
                                                     includeTime = false;
                                                     includeYear = false;
                                                 }};
                                                 fileUploadQuestion = new FileUploadQuestion() {{
-                                                    folderId = "esse";
-                                                    maxFileSize = "ipsum";
-                                                    maxFiles = 568434;
+                                                    folderId = "natus";
+                                                    maxFileSize = "laboriosam";
+                                                    maxFiles = 943749;
                                                     types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                        add("FILE_TYPE_UNSPECIFIED"),
+                                                        add(FileUploadQuestionTypesEnum.PDF),
+                                                        add(FileUploadQuestionTypesEnum.SPREADSHEET),
+                                                        add(FileUploadQuestionTypesEnum.PRESENTATION),
+                                                        add(FileUploadQuestionTypesEnum.PDF),
                                                     }};
                                                 }};
                                                 grading = new Grading() {{
                                                     correctAnswers = new CorrectAnswers() {{
                                                         answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
                                                             add(new CorrectAnswer() {{
-                                                                value = "natus";
+                                                                value = "saepe";
                                                             }}),
                                                             add(new CorrectAnswer() {{
-                                                                value = "sed";
+                                                                value = "quidem";
                                                             }}),
                                                         }};
                                                     }};
@@ -235,109 +252,99 @@ public class Application {
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "dolor";
-                                                                    uri = "https://hoarse-upper.org";
+                                                                    displayText = "ipsa";
+                                                                    uri = "https://qualified-pew.net";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "fuga";
-                                                                    youtubeUri = "in";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "corporis";
-                                                                    uri = "https://innocent-thinking.net";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "architecto";
-                                                                    youtubeUri = "ipsa";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "reiciendis";
-                                                                    uri = "https://prize-plier.biz";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "dolorem";
-                                                                    youtubeUri = "corporis";
+                                                                    displayText = "dolores";
+                                                                    youtubeUri = "dolorem";
                                                                 }};
                                                             }}),
                                                         }};
-                                                        text = "explicabo";
+                                                        text = "corporis";
                                                     }};
-                                                    pointValue = 750686;
+                                                    pointValue = 128926;
                                                     whenRight = new Feedback() {{
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "omnis";
-                                                                    uri = "http://general-mobster.com";
+                                                                    displayText = "enim";
+                                                                    uri = "https://gummy-expedition.name";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "iure";
+                                                                    displayText = "accusantium";
+                                                                    youtubeUri = "iure";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "culpa";
+                                                                    uri = "https://well-off-brace.name";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "dolorem";
                                                                     youtubeUri = "culpa";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "doloribus";
-                                                                    uri = "https://buttery-petitioner.biz";
+                                                                    displayText = "consequuntur";
+                                                                    uri = "https://prize-mud.biz";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "culpa";
-                                                                    youtubeUri = "consequuntur";
+                                                                    displayText = "commodi";
+                                                                    youtubeUri = "quam";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "molestiae";
+                                                                    uri = "http://physical-chord.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "vitae";
+                                                                    youtubeUri = "laborum";
                                                                 }};
                                                             }}),
                                                         }};
-                                                        text = "repellat";
+                                                        text = "animi";
                                                     }};
                                                     whenWrong = new Feedback() {{
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "occaecati";
-                                                                    uri = "http://immediate-instructor.info";
+                                                                    displayText = "odit";
+                                                                    uri = "https://dimwitted-vaulting.info";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "velit";
-                                                                    youtubeUri = "error";
+                                                                    displayText = "id";
+                                                                    youtubeUri = "possimus";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "quia";
-                                                                    uri = "http://cautious-poker.name";
+                                                                    displayText = "aut";
+                                                                    uri = "http://phony-split.net";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "enim";
-                                                                    youtubeUri = "odit";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "quo";
-                                                                    uri = "http://weary-fright.name";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "possimus";
-                                                                    youtubeUri = "aut";
+                                                                    displayText = "quasi";
+                                                                    youtubeUri = "reiciendis";
                                                                 }};
                                                             }}),
                                                         }};
-                                                        text = "quasi";
+                                                        text = "voluptatibus";
                                                     }};
                                                 }};
-                                                questionId = "error";
+                                                questionId = "vero";
                                                 required = false;
                                                 rowQuestion = new RowQuestion() {{
-                                                    title = "Dr.";
+                                                    title = "Ms.";
                                                 }};
                                                 scaleQuestion = new ScaleQuestion() {{
-                                                    high = 673660;
-                                                    highLabel = "quasi";
-                                                    low = 971945;
-                                                    lowLabel = "voluptatibus";
+                                                    high = 509624;
+                                                    highLabel = "voluptatibus";
+                                                    low = 55714;
+                                                    lowLabel = "omnis";
                                                 }};
                                                 textQuestion = new TextQuestion() {{
                                                     paragraph = false;
@@ -350,93 +357,74 @@ public class Application {
                                                 choiceQuestion = new ChoiceQuestionInput() {{
                                                     options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                         add(new OptionInput() {{
-                                                            goToAction = "NEXT_SECTION";
-                                                            goToSectionId = "praesentium";
+                                                            goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                            goToSectionId = "perferendis";
                                                             image = new ImageInput() {{
-                                                                altText = "voluptatibus";
+                                                                altText = "doloremque";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "ALIGNMENT_UNSPECIFIED";
-                                                                    width = 604846;
+                                                                    alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                                    width = 282807;
                                                                 }};
-                                                                sourceUri = "voluptate";
+                                                                sourceUri = "maiores";
                                                             }};
                                                             isOther = false;
-                                                            value = "cum";
+                                                            value = "dicta";
                                                         }}),
                                                         add(new OptionInput() {{
-                                                            goToAction = "GO_TO_ACTION_UNSPECIFIED";
-                                                            goToSectionId = "doloremque";
+                                                            goToAction = OptionGoToActionEnum.NEXT_SECTION;
+                                                            goToSectionId = "dolore";
                                                             image = new ImageInput() {{
-                                                                altText = "reprehenderit";
+                                                                altText = "iusto";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "LEFT";
-                                                                    width = 979587;
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 688661;
                                                                 }};
-                                                                sourceUri = "dicta";
+                                                                sourceUri = "enim";
                                                             }};
                                                             isOther = false;
-                                                            value = "corporis";
-                                                        }}),
-                                                        add(new OptionInput() {{
-                                                            goToAction = "NEXT_SECTION";
-                                                            goToSectionId = "iusto";
-                                                            image = new ImageInput() {{
-                                                                altText = "dicta";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "RIGHT";
-                                                                    width = 317983;
-                                                                }};
-                                                                sourceUri = "accusamus";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "commodi";
-                                                        }}),
-                                                        add(new OptionInput() {{
-                                                            goToAction = "SUBMIT_FORM";
-                                                            goToSectionId = "quae";
-                                                            image = new ImageInput() {{
-                                                                altText = "ipsum";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "RIGHT";
-                                                                    width = 565189;
-                                                                }};
-                                                                sourceUri = "excepturi";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "pariatur";
+                                                            value = "accusamus";
                                                         }}),
                                                     }};
                                                     shuffle = false;
-                                                    type = "RADIO";
+                                                    type = ChoiceQuestionTypeEnum.RADIO;
                                                 }};
                                                 dateQuestion = new DateQuestion() {{
                                                     includeTime = false;
                                                     includeYear = false;
                                                 }};
                                                 fileUploadQuestion = new FileUploadQuestion() {{
-                                                    folderId = "praesentium";
-                                                    maxFileSize = "rem";
-                                                    maxFiles = 916723;
+                                                    folderId = "repudiandae";
+                                                    maxFileSize = "quae";
+                                                    maxFiles = 216822;
                                                     types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                        add("AUDIO"),
+                                                        add(FileUploadQuestionTypesEnum.DRAWING),
+                                                        add(FileUploadQuestionTypesEnum.DRAWING),
+                                                        add(FileUploadQuestionTypesEnum.VIDEO),
                                                     }};
                                                 }};
                                                 grading = new Grading() {{
                                                     correctAnswers = new CorrectAnswers() {{
                                                         answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
                                                             add(new CorrectAnswer() {{
-                                                                value = "veritatis";
+                                                                value = "praesentium";
                                                             }}),
                                                             add(new CorrectAnswer() {{
-                                                                value = "itaque";
-                                                            }}),
-                                                            add(new CorrectAnswer() {{
-                                                                value = "incidunt";
+                                                                value = "rem";
                                                             }}),
                                                         }};
                                                     }};
                                                     generalFeedback = new Feedback() {{
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "quasi";
+                                                                    uri = "https://novel-binoculars.org";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "incidunt";
+                                                                    youtubeUri = "enim";
+                                                                }};
+                                                            }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
                                                                     displayText = "consequatur";
@@ -457,22 +445,22 @@ public class Application {
                                                                     youtubeUri = "perferendis";
                                                                 }};
                                                             }}),
-                                                        }};
-                                                        text = "magni";
-                                                    }};
-                                                    pointValue = 828940;
-                                                    whenRight = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "alias";
-                                                                    uri = "http://rapid-moat.biz";
+                                                                    displayText = "magni";
+                                                                    uri = "https://hard-accordion.com";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "facilis";
-                                                                    youtubeUri = "tempore";
+                                                                    displayText = "dolorum";
+                                                                    youtubeUri = "excepturi";
                                                                 }};
                                                             }}),
+                                                        }};
+                                                        text = "tempora";
+                                                    }};
+                                                    pointValue = 703737;
+                                                    whenRight = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
                                                                     displayText = "labore";
@@ -483,31 +471,31 @@ public class Application {
                                                                     youtubeUri = "aliquid";
                                                                 }};
                                                             }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "provident";
+                                                                    uri = "https://nonstop-pate.biz";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "debitis";
+                                                                    youtubeUri = "a";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "dolorum";
+                                                                    uri = "http://irritating-standardisation.org";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "rerum";
+                                                                    youtubeUri = "dicta";
+                                                                }};
+                                                            }}),
                                                         }};
-                                                        text = "provident";
+                                                        text = "magnam";
                                                     }};
                                                     whenWrong = new Feedback() {{
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "sint";
-                                                                    uri = "https://edible-tectonics.org";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "dolorum";
-                                                                    youtubeUri = "in";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "in";
-                                                                    uri = "https://wonderful-proof-reader.com";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "magnam";
-                                                                    youtubeUri = "cumque";
-                                                                }};
-                                                            }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
                                                                     displayText = "facere";
@@ -528,8 +516,238 @@ public class Application {
                                                                     youtubeUri = "id";
                                                                 }};
                                                             }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "blanditiis";
+                                                                    uri = "https://well-groomed-cupboard.name";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "nisi";
+                                                                    youtubeUri = "vel";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "natus";
+                                                                    uri = "https://lame-alcohol.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "magnam";
+                                                                    youtubeUri = "distinctio";
+                                                                }};
+                                                            }}),
                                                         }};
-                                                        text = "blanditiis";
+                                                        text = "id";
+                                                    }};
+                                                }};
+                                                questionId = "labore";
+                                                required = false;
+                                                rowQuestion = new RowQuestion() {{
+                                                    title = "Mrs.";
+                                                }};
+                                                scaleQuestion = new ScaleQuestion() {{
+                                                    high = 383462;
+                                                    highLabel = "natus";
+                                                    low = 749170;
+                                                    lowLabel = "eum";
+                                                }};
+                                                textQuestion = new TextQuestion() {{
+                                                    paragraph = false;
+                                                }};
+                                                timeQuestion = new TimeQuestion() {{
+                                                    duration = false;
+                                                }};
+                                            }}),
+                                            add(new QuestionInput() {{
+                                                choiceQuestion = new ChoiceQuestionInput() {{
+                                                    options = new org.openapis.openapi.models.shared.OptionInput[]{{
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.GO_TO_ACTION_UNSPECIFIED;
+                                                            goToSectionId = "architecto";
+                                                            image = new ImageInput() {{
+                                                                altText = "magnam";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 569965;
+                                                                }};
+                                                                sourceUri = "ullam";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "provident";
+                                                        }}),
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                            goToSectionId = "sint";
+                                                            image = new ImageInput() {{
+                                                                altText = "accusantium";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                                    width = 968962;
+                                                                }};
+                                                                sourceUri = "mollitia";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "ad";
+                                                        }}),
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.NEXT_SECTION;
+                                                            goToSectionId = "dolor";
+                                                            image = new ImageInput() {{
+                                                                altText = "necessitatibus";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 367562;
+                                                                }};
+                                                                sourceUri = "quasi";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "iure";
+                                                        }}),
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.SUBMIT_FORM;
+                                                            goToSectionId = "debitis";
+                                                            image = new ImageInput() {{
+                                                                altText = "eius";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                    width = 537023;
+                                                                }};
+                                                                sourceUri = "facilis";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "in";
+                                                        }}),
+                                                    }};
+                                                    shuffle = false;
+                                                    type = ChoiceQuestionTypeEnum.CHOICE_TYPE_UNSPECIFIED;
+                                                }};
+                                                dateQuestion = new DateQuestion() {{
+                                                    includeTime = false;
+                                                    includeYear = false;
+                                                }};
+                                                fileUploadQuestion = new FileUploadQuestion() {{
+                                                    folderId = "architecto";
+                                                    maxFileSize = "repudiandae";
+                                                    maxFiles = 352312;
+                                                    types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
+                                                        add(FileUploadQuestionTypesEnum.SPREADSHEET),
+                                                        add(FileUploadQuestionTypesEnum.AUDIO),
+                                                        add(FileUploadQuestionTypesEnum.VIDEO),
+                                                    }};
+                                                }};
+                                                grading = new Grading() {{
+                                                    correctAnswers = new CorrectAnswers() {{
+                                                        answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
+                                                            add(new CorrectAnswer() {{
+                                                                value = "saepe";
+                                                            }}),
+                                                        }};
+                                                    }};
+                                                    generalFeedback = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "accusantium";
+                                                                    uri = "http://luminous-oregano.biz";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "sunt";
+                                                                    youtubeUri = "quo";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "illum";
+                                                                    uri = "https://steel-handicap.name";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "odit";
+                                                                    youtubeUri = "ea";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "accusantium";
+                                                                    uri = "http://worn-programme.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "voluptate";
+                                                                    youtubeUri = "autem";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "nam";
+                                                                    uri = "http://tragic-framework.org";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "perferendis";
+                                                                    youtubeUri = "fugiat";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "amet";
+                                                    }};
+                                                    pointValue = 11714;
+                                                    whenRight = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "corporis";
+                                                                    uri = "https://secret-rhinoceros.biz";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "quis";
+                                                                    youtubeUri = "totam";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "dignissimos";
+                                                                    uri = "http://glossy-consulate.biz";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "perferendis";
+                                                                    youtubeUri = "dolores";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "minus";
+                                                                    uri = "http://educated-surprise.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "hic";
+                                                                    youtubeUri = "recusandae";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "omnis";
+                                                                    uri = "https://ornery-antechamber.net";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "consequuntur";
+                                                                    youtubeUri = "blanditiis";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "error";
+                                                    }};
+                                                    whenWrong = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "occaecati";
+                                                                    uri = "https://enraged-wrench.org";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "modi";
+                                                                    youtubeUri = "iste";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "dolorum";
                                                     }};
                                                 }};
                                                 questionId = "deleniti";
@@ -538,10 +756,10 @@ public class Application {
                                                     title = "Dr.";
                                                 }};
                                                 scaleQuestion = new ScaleQuestion() {{
-                                                    high = 230533;
-                                                    highLabel = "deserunt";
-                                                    low = 394869;
-                                                    lowLabel = "vel";
+                                                    high = 589910;
+                                                    highLabel = "nobis";
+                                                    low = 730122;
+                                                    lowLabel = "delectus";
                                                 }};
                                                 textQuestion = new TextQuestion() {{
                                                     paragraph = false;
@@ -554,73 +772,52 @@ public class Application {
                                     }};
                                     questionItem = new QuestionItemInput() {{
                                         image = new ImageInput() {{
-                                            altText = "natus";
+                                            altText = "quaerat";
                                             properties = new MediaProperties() {{
-                                                alignment = "RIGHT";
-                                                width = 474867;
+                                                alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                width = 398221;
                                             }};
-                                            sourceUri = "perferendis";
+                                            sourceUri = "dolorem";
                                         }};
                                         question = new QuestionInput() {{
                                             choiceQuestion = new ChoiceQuestionInput() {{
                                                 options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                     add(new OptionInput() {{
-                                                        goToAction = "NEXT_SECTION";
-                                                        goToSectionId = "distinctio";
+                                                        goToAction = OptionGoToActionEnum.GO_TO_ACTION_UNSPECIFIED;
+                                                        goToSectionId = "qui";
                                                         image = new ImageInput() {{
-                                                            altText = "id";
+                                                            altText = "ipsum";
                                                             properties = new MediaProperties() {{
-                                                                alignment = "LEFT";
-                                                                width = 290077;
+                                                                alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                width = 569574;
                                                             }};
-                                                            sourceUri = "suscipit";
+                                                            sourceUri = "cum";
                                                         }};
                                                         isOther = false;
-                                                        value = "natus";
-                                                    }}),
-                                                    add(new OptionInput() {{
-                                                        goToAction = "RESTART_FORM";
-                                                        goToSectionId = "eum";
-                                                        image = new ImageInput() {{
-                                                            altText = "vero";
-                                                            properties = new MediaProperties() {{
-                                                                alignment = "ALIGNMENT_UNSPECIFIED";
-                                                                width = 102863;
-                                                            }};
-                                                            sourceUri = "magnam";
-                                                        }};
-                                                        isOther = false;
-                                                        value = "et";
+                                                        value = "voluptate";
                                                     }}),
                                                 }};
                                                 shuffle = false;
-                                                type = "CHECKBOX";
+                                                type = ChoiceQuestionTypeEnum.RADIO;
                                             }};
                                             dateQuestion = new DateQuestion() {{
                                                 includeTime = false;
                                                 includeYear = false;
                                             }};
                                             fileUploadQuestion = new FileUploadQuestion() {{
-                                                folderId = "ullam";
-                                                maxFileSize = "provident";
-                                                maxFiles = 551816;
+                                                folderId = "reiciendis";
+                                                maxFileSize = "amet";
+                                                maxFiles = 680545;
                                                 types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                    add("FILE_TYPE_UNSPECIFIED"),
-                                                    add("PDF"),
-                                                    add("AUDIO"),
+                                                    add(FileUploadQuestionTypesEnum.FILE_TYPE_UNSPECIFIED),
+                                                    add(FileUploadQuestionTypesEnum.FILE_TYPE_UNSPECIFIED),
                                                 }};
                                             }};
                                             grading = new Grading() {{
                                                 correctAnswers = new CorrectAnswers() {{
                                                     answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
                                                         add(new CorrectAnswer() {{
-                                                            value = "ad";
-                                                        }}),
-                                                        add(new CorrectAnswer() {{
-                                                            value = "eum";
-                                                        }}),
-                                                        add(new CorrectAnswer() {{
-                                                            value = "dolor";
+                                                            value = "iure";
                                                         }}),
                                                     }};
                                                 }};
@@ -628,129 +825,109 @@ public class Application {
                                                     material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "odit";
-                                                                uri = "http://bumpy-hosiery.org";
+                                                                displayText = "quaerat";
+                                                                uri = "https://revolving-weekender.info";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "debitis";
-                                                                youtubeUri = "eius";
+                                                                displayText = "natus";
+                                                                youtubeUri = "eos";
                                                             }};
                                                         }}),
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "maxime";
-                                                                uri = "https://rotating-identification.com";
+                                                                displayText = "atque";
+                                                                uri = "http://thoughtful-barracks.net";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "architecto";
-                                                                youtubeUri = "repudiandae";
-                                                            }};
-                                                        }}),
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "ullam";
-                                                                uri = "https://knobby-zither.org";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "sed";
-                                                                youtubeUri = "saepe";
-                                                            }};
-                                                        }}),
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "pariatur";
-                                                                uri = "http://cute-lens.name";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "magni";
-                                                                youtubeUri = "sunt";
+                                                                displayText = "dolorum";
+                                                                youtubeUri = "iusto";
                                                             }};
                                                         }}),
                                                     }};
-                                                    text = "quo";
+                                                    text = "voluptate";
                                                 }};
-                                                pointValue = 848009;
+                                                pointValue = 677082;
                                                 whenRight = new Feedback() {{
                                                     material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "maxime";
-                                                                uri = "http://nimble-caution.info";
+                                                                displayText = "omnis";
+                                                                uri = "https://safe-world.info";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "accusantium";
-                                                                youtubeUri = "ab";
+                                                                displayText = "ipsum";
+                                                                youtubeUri = "voluptate";
                                                             }};
                                                         }}),
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "maiores";
-                                                                uri = "https://harmonious-in-joke.info";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "nam";
-                                                                youtubeUri = "eaque";
-                                                            }};
-                                                        }}),
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "pariatur";
-                                                                uri = "http://wise-airbag.org";
+                                                                displayText = "id";
+                                                                uri = "https://fake-cat.com";
                                                             }};
                                                             video = new VideoLink() {{
                                                                 displayText = "amet";
-                                                                youtubeUri = "aut";
+                                                                youtubeUri = "optio";
                                                             }};
                                                         }}),
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "cumque";
-                                                                uri = "http://wasteful-rectangle.net";
+                                                                displayText = "accusamus";
+                                                                uri = "http://untimely-gherkin.name";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "dolores";
-                                                                youtubeUri = "quis";
+                                                                displayText = "provident";
+                                                                youtubeUri = "minima";
                                                             }};
                                                         }}),
                                                     }};
-                                                    text = "totam";
+                                                    text = "repellendus";
                                                 }};
                                                 whenWrong = new Feedback() {{
                                                     material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "eaque";
-                                                                uri = "http://disfigured-collapse.com";
+                                                                displayText = "similique";
+                                                                uri = "http://true-epee.biz";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "dolores";
-                                                                youtubeUri = "minus";
+                                                                displayText = "vel";
+                                                                youtubeUri = "quod";
                                                             }};
                                                         }}),
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "quam";
-                                                                uri = "http://trusty-filter.org";
+                                                                displayText = "officiis";
+                                                                uri = "http://raw-venue.info";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "recusandae";
-                                                                youtubeUri = "omnis";
+                                                                displayText = "harum";
+                                                                youtubeUri = "iusto";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "ipsum";
+                                                                uri = "https://wavy-cuisine.net";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "accusamus";
+                                                                youtubeUri = "numquam";
                                                             }};
                                                         }}),
                                                     }};
-                                                    text = "facilis";
+                                                    text = "enim";
                                                 }};
                                             }};
-                                            questionId = "perspiciatis";
+                                            questionId = "dolorem";
                                             required = false;
                                             rowQuestion = new RowQuestion() {{
-                                                title = "Mr.";
+                                                title = "Dr.";
                                             }};
                                             scaleQuestion = new ScaleQuestion() {{
-                                                high = 783645;
-                                                highLabel = "consequuntur";
-                                                low = 500026;
-                                                lowLabel = "error";
+                                                high = 518201;
+                                                highLabel = "nihil";
+                                                low = 25662;
+                                                lowLabel = "expedita";
                                             }};
                                             textQuestion = new TextQuestion() {{
                                                 paragraph = false;
@@ -761,191 +938,134 @@ public class Application {
                                         }};
                                     }};
                                     textItem = new java.util.HashMap<String, Object>() {{
-                                        put("occaecati", "rerum");
+                                        put("sed", "vel");
                                     }};
-                                    title = "Mrs.";
+                                    title = "Miss";
                                     videoItem = new VideoItem() {{
-                                        caption = "asperiores";
+                                        caption = "voluptas";
                                         video = new Video() {{
                                             properties = new MediaProperties() {{
-                                                alignment = "CENTER";
-                                                width = 267262;
+                                                alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                width = 463575;
                                             }};
-                                            youtubeUri = "iste";
+                                            youtubeUri = "ipsum";
                                         }};
                                     }};
                                 }};
                                 location = new Location() {{
-                                    index = 679091;
+                                    index = 277628;
                                 }};
                             }};
                             deleteItem = new DeleteItemRequest() {{
                                 location = new Location() {{
-                                    index = 535633;
+                                    index = 186458;
                                 }};
                             }};
                             moveItem = new MoveItemRequest() {{
                                 newLocation = new Location() {{
-                                    index = 864282;
+                                    index = 586784;
                                 }};
                                 originalLocation = new Location() {{
-                                    index = 589910;
+                                    index = 807581;
                                 }};
                             }};
                             updateFormInfo = new UpdateFormInfoRequestInput() {{
                                 info = new InfoInput() {{
-                                    description = "nobis";
+                                    description = "pariatur";
                                     title = "Miss";
                                 }};
-                                updateMask = "delectus";
+                                updateMask = "dicta";
                             }};
                             updateItem = new UpdateItemRequestInput() {{
                                 item = new ItemInput() {{
-                                    description = "quaerat";
+                                    description = "laborum";
                                     imageItem = new ImageItemInput() {{
                                         image = new ImageInput() {{
-                                            altText = "quos";
+                                            altText = "totam";
                                             properties = new MediaProperties() {{
-                                                alignment = "LEFT";
-                                                width = 212390;
+                                                alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                width = 132068;
                                             }};
-                                            sourceUri = "dolorem";
+                                            sourceUri = "dolores";
                                         }};
                                     }};
-                                    itemId = "dolor";
+                                    itemId = "distinctio";
                                     pageBreakItem = new java.util.HashMap<String, Object>() {{
-                                        put("ipsum", "hic");
+                                        put("aliquid", "quam");
+                                        put("molestias", "temporibus");
+                                        put("qui", "neque");
                                     }};
                                     questionGroupItem = new QuestionGroupItemInput() {{
                                         grid = new GridInput() {{
                                             columns = new ChoiceQuestionInput() {{
                                                 options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                     add(new OptionInput() {{
-                                                        goToAction = "RESTART_FORM";
-                                                        goToSectionId = "voluptate";
+                                                        goToAction = OptionGoToActionEnum.GO_TO_ACTION_UNSPECIFIED;
+                                                        goToSectionId = "odio";
                                                         image = new ImageInput() {{
-                                                            altText = "dignissimos";
+                                                            altText = "sunt";
                                                             properties = new MediaProperties() {{
-                                                                alignment = "CENTER";
-                                                                width = 227414;
+                                                                alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                                width = 722081;
                                                             }};
-                                                            sourceUri = "dolorum";
+                                                            sourceUri = "hic";
                                                         }};
                                                         isOther = false;
-                                                        value = "numquam";
-                                                    }}),
-                                                    add(new OptionInput() {{
-                                                        goToAction = "GO_TO_ACTION_UNSPECIFIED";
-                                                        goToSectionId = "ipsa";
-                                                        image = new ImageInput() {{
-                                                            altText = "ipsa";
-                                                            properties = new MediaProperties() {{
-                                                                alignment = "LEFT";
-                                                                width = 487838;
-                                                            }};
-                                                            sourceUri = "quaerat";
-                                                        }};
-                                                        isOther = false;
-                                                        value = "accusamus";
-                                                    }}),
-                                                    add(new OptionInput() {{
-                                                        goToAction = "RESTART_FORM";
-                                                        goToSectionId = "voluptatibus";
-                                                        image = new ImageInput() {{
-                                                            altText = "voluptas";
-                                                            properties = new MediaProperties() {{
-                                                                alignment = "RIGHT";
-                                                                width = 179603;
-                                                            }};
-                                                            sourceUri = "atque";
-                                                        }};
-                                                        isOther = false;
-                                                        value = "sit";
+                                                        value = "voluptatem";
                                                     }}),
                                                 }};
                                                 shuffle = false;
-                                                type = "DROP_DOWN";
+                                                type = ChoiceQuestionTypeEnum.DROP_DOWN;
                                             }};
                                             shuffleQuestions = false;
                                         }};
                                         image = new ImageInput() {{
-                                            altText = "ab";
+                                            altText = "soluta";
                                             properties = new MediaProperties() {{
-                                                alignment = "RIGHT";
-                                                width = 679393;
+                                                alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                width = 92596;
                                             }};
-                                            sourceUri = "iusto";
+                                            sourceUri = "saepe";
                                         }};
                                         questions = new org.openapis.openapi.models.shared.QuestionInput[]{{
                                             add(new QuestionInput() {{
                                                 choiceQuestion = new ChoiceQuestionInput() {{
                                                     options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                         add(new OptionInput() {{
-                                                            goToAction = "RESTART_FORM";
-                                                            goToSectionId = "omnis";
+                                                            goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                            goToSectionId = "quos";
                                                             image = new ImageInput() {{
-                                                                altText = "necessitatibus";
+                                                                altText = "tempore";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "RIGHT";
-                                                                    width = 990339;
+                                                                    alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                                    width = 45614;
                                                                 }};
-                                                                sourceUri = "nihil";
+                                                                sourceUri = "delectus";
                                                             }};
                                                             isOther = false;
-                                                            value = "ipsum";
-                                                        }}),
-                                                        add(new OptionInput() {{
-                                                            goToAction = "NEXT_SECTION";
-                                                            goToSectionId = "id";
-                                                            image = new ImageInput() {{
-                                                                altText = "saepe";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "LEFT";
-                                                                    width = 137220;
-                                                                }};
-                                                                sourceUri = "perferendis";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "amet";
-                                                        }}),
-                                                        add(new OptionInput() {{
-                                                            goToAction = "SUBMIT_FORM";
-                                                            goToSectionId = "accusamus";
-                                                            image = new ImageInput() {{
-                                                                altText = "ad";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "CENTER";
-                                                                    width = 383464;
-                                                                }};
-                                                                sourceUri = "deserunt";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "provident";
+                                                            value = "dolorem";
                                                         }}),
                                                     }};
                                                     shuffle = false;
-                                                    type = "RADIO";
+                                                    type = ChoiceQuestionTypeEnum.RADIO;
                                                 }};
                                                 dateQuestion = new DateQuestion() {{
                                                     includeTime = false;
                                                     includeYear = false;
                                                 }};
                                                 fileUploadQuestion = new FileUploadQuestion() {{
-                                                    folderId = "repellendus";
-                                                    maxFileSize = "totam";
-                                                    maxFiles = 628982;
+                                                    folderId = "labore";
+                                                    maxFileSize = "adipisci";
+                                                    maxFiles = 677263;
                                                     types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                        add("VIDEO"),
+                                                        add(FileUploadQuestionTypesEnum.FILE_TYPE_UNSPECIFIED),
                                                     }};
                                                 }};
                                                 grading = new Grading() {{
                                                     correctAnswers = new CorrectAnswers() {{
                                                         answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
                                                             add(new CorrectAnswer() {{
-                                                                value = "tempora";
-                                                            }}),
-                                                            add(new CorrectAnswer() {{
-                                                                value = "vel";
+                                                                value = "quas";
                                                             }}),
                                                         }};
                                                     }};
@@ -953,302 +1073,119 @@ public class Application {
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "officiis";
-                                                                    uri = "http://raw-venue.info";
+                                                                    displayText = "consequatur";
+                                                                    uri = "https://tall-self-control.org";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "harum";
-                                                                    youtubeUri = "iusto";
+                                                                    displayText = "ut";
+                                                                    youtubeUri = "facilis";
                                                                 }};
                                                             }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "ipsum";
-                                                                    uri = "https://wavy-cuisine.net";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "accusamus";
-                                                                    youtubeUri = "numquam";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "enim";
-                                                                    uri = "http://well-lit-literature.info";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "sit";
-                                                                    youtubeUri = "expedita";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "neque";
-                                                                    uri = "http://improbable-redhead.info";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "deserunt";
-                                                                    youtubeUri = "quam";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "ipsum";
-                                                    }};
-                                                    pointValue = 277628;
-                                                    whenRight = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
                                                                     displayText = "cupiditate";
-                                                                    uri = "https://tough-reunion.com";
+                                                                    uri = "http://beautiful-lifetime.info";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "laborum";
-                                                                    youtubeUri = "totam";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "incidunt";
-                                                    }};
-                                                    whenWrong = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "dolores";
-                                                                    uri = "https://rotten-grandfather.info";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "molestias";
-                                                                    youtubeUri = "temporibus";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "qui";
-                                                    }};
-                                                }};
-                                                questionId = "neque";
-                                                required = false;
-                                                rowQuestion = new RowQuestion() {{
-                                                    title = "Mr.";
-                                                }};
-                                                scaleQuestion = new ScaleQuestion() {{
-                                                    high = 164959;
-                                                    highLabel = "odio";
-                                                    low = 124833;
-                                                    lowLabel = "ullam";
-                                                }};
-                                                textQuestion = new TextQuestion() {{
-                                                    paragraph = false;
-                                                }};
-                                                timeQuestion = new TimeQuestion() {{
-                                                    duration = false;
-                                                }};
-                                            }}),
-                                            add(new QuestionInput() {{
-                                                choiceQuestion = new ChoiceQuestionInput() {{
-                                                    options = new org.openapis.openapi.models.shared.OptionInput[]{{
-                                                        add(new OptionInput() {{
-                                                            goToAction = "SUBMIT_FORM";
-                                                            goToSectionId = "voluptatem";
-                                                            image = new ImageInput() {{
-                                                                altText = "cumque";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "RIGHT";
-                                                                    width = 748664;
-                                                                }};
-                                                                sourceUri = "et";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "saepe";
-                                                        }}),
-                                                        add(new OptionInput() {{
-                                                            goToAction = "GO_TO_ACTION_UNSPECIFIED";
-                                                            goToSectionId = "veritatis";
-                                                            image = new ImageInput() {{
-                                                                altText = "nobis";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "RIGHT";
-                                                                    width = 731694;
-                                                                }};
-                                                                sourceUri = "cupiditate";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "aperiam";
-                                                        }}),
-                                                        add(new OptionInput() {{
-                                                            goToAction = "SUBMIT_FORM";
-                                                            goToSectionId = "dolorem";
-                                                            image = new ImageInput() {{
-                                                                altText = "dolore";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "LEFT";
-                                                                    width = 240829;
-                                                                }};
-                                                                sourceUri = "dolorum";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "architecto";
-                                                        }}),
-                                                    }};
-                                                    shuffle = false;
-                                                    type = "CHOICE_TYPE_UNSPECIFIED";
-                                                }};
-                                                dateQuestion = new DateQuestion() {{
-                                                    includeTime = false;
-                                                    includeYear = false;
-                                                }};
-                                                fileUploadQuestion = new FileUploadQuestion() {{
-                                                    folderId = "aut";
-                                                    maxFileSize = "quas";
-                                                    maxFiles = 929530;
-                                                    types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                        add("PDF"),
-                                                    }};
-                                                }};
-                                                grading = new Grading() {{
-                                                    correctAnswers = new CorrectAnswers() {{
-                                                        answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
-                                                            add(new CorrectAnswer() {{
-                                                                value = "porro";
-                                                            }}),
-                                                            add(new CorrectAnswer() {{
-                                                                value = "doloribus";
-                                                            }}),
-                                                            add(new CorrectAnswer() {{
-                                                                value = "ut";
-                                                            }}),
-                                                            add(new CorrectAnswer() {{
-                                                                value = "facilis";
-                                                            }}),
-                                                        }};
-                                                    }};
-                                                    generalFeedback = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "qui";
-                                                                    uri = "http://magnificent-kangaroo.name";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "voluptatibus";
-                                                                    youtubeUri = "quisquam";
+                                                                    displayText = "occaecati";
+                                                                    youtubeUri = "voluptatibus";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "vero";
-                                                                    uri = "https://glorious-crash.org";
+                                                                    displayText = "quisquam";
+                                                                    uri = "https://overlooked-feature.biz";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "voluptate";
-                                                                    youtubeUri = "consectetur";
+                                                                    displayText = "delectus";
+                                                                    youtubeUri = "voluptate";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "vero";
-                                                                    uri = "https://liquid-underweight.net";
+                                                                    displayText = "consectetur";
+                                                                    uri = "https://weary-kneejerk.org";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "quod";
-                                                                    youtubeUri = "odio";
+                                                                    displayText = "distinctio";
+                                                                    youtubeUri = "quod";
                                                                 }};
                                                             }}),
                                                         }};
-                                                        text = "similique";
+                                                        text = "odio";
                                                     }};
-                                                    pointValue = 708548;
+                                                    pointValue = 630448;
                                                     whenRight = new Feedback() {{
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "ducimus";
-                                                                    uri = "http://terrible-status.biz";
+                                                                    displayText = "vero";
+                                                                    uri = "http://flippant-stain.org";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "natus";
-                                                                    youtubeUri = "impedit";
+                                                                    displayText = "sequi";
+                                                                    youtubeUri = "natus";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "aut";
-                                                                    uri = "https://grateful-stumbling.com";
+                                                                    displayText = "impedit";
+                                                                    uri = "http://winged-finisher.org";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "porro";
-                                                                    youtubeUri = "maiores";
+                                                                    displayText = "fugit";
+                                                                    youtubeUri = "porro";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "doloribus";
-                                                                    uri = "http://silver-lanai.com";
+                                                                    displayText = "maiores";
+                                                                    uri = "https://late-river.info";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "officia";
-                                                                    youtubeUri = "tempora";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "ipsam";
-                                                                    uri = "http://concrete-hill.net";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "magnam";
-                                                                    youtubeUri = "ratione";
+                                                                    displayText = "alias";
+                                                                    youtubeUri = "officia";
                                                                 }};
                                                             }}),
                                                         }};
-                                                        text = "ex";
+                                                        text = "tempora";
                                                     }};
                                                     whenWrong = new Feedback() {{
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "dicta";
-                                                                    uri = "http://wordy-bother.info";
+                                                                    displayText = "ea";
+                                                                    uri = "http://incomplete-socks.biz";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "nulla";
-                                                                    youtubeUri = "excepturi";
+                                                                    displayText = "ratione";
+                                                                    youtubeUri = "ex";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "voluptatibus";
-                                                                    uri = "http://well-worn-sequence.org";
+                                                                    displayText = "laudantium";
+                                                                    uri = "http://elaborate-wholesaler.com";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "ea";
-                                                                    youtubeUri = "impedit";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "corporis";
-                                                                    uri = "http://husky-bid.biz";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "ea";
-                                                                    youtubeUri = "quo";
+                                                                    displayText = "ex";
+                                                                    youtubeUri = "nulla";
                                                                 }};
                                                             }}),
                                                         }};
-                                                        text = "consectetur";
+                                                        text = "excepturi";
                                                     }};
                                                 }};
-                                                questionId = "recusandae";
+                                                questionId = "voluptatibus";
                                                 required = false;
                                                 rowQuestion = new RowQuestion() {{
-                                                    title = "Mr.";
+                                                    title = "Mrs.";
                                                 }};
                                                 scaleQuestion = new ScaleQuestion() {{
-                                                    high = 325310;
-                                                    highLabel = "eaque";
-                                                    low = 952871;
-                                                    lowLabel = "libero";
+                                                    high = 960835;
+                                                    highLabel = "quisquam";
+                                                    low = 906556;
+                                                    lowLabel = "ea";
                                                 }};
                                                 textQuestion = new TextQuestion() {{
                                                     paragraph = false;
@@ -1261,72 +1198,60 @@ public class Application {
                                     }};
                                     questionItem = new QuestionItemInput() {{
                                         image = new ImageInput() {{
-                                            altText = "aut";
+                                            altText = "impedit";
                                             properties = new MediaProperties() {{
-                                                alignment = "ALIGNMENT_UNSPECIFIED";
-                                                width = 533466;
+                                                alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                width = 333145;
                                             }};
-                                            sourceUri = "impedit";
+                                            sourceUri = "aliquid";
                                         }};
                                         question = new QuestionInput() {{
                                             choiceQuestion = new ChoiceQuestionInput() {{
                                                 options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                     add(new OptionInput() {{
-                                                        goToAction = "GO_TO_ACTION_UNSPECIFIED";
-                                                        goToSectionId = "accusamus";
+                                                        goToAction = OptionGoToActionEnum.NEXT_SECTION;
+                                                        goToSectionId = "ea";
                                                         image = new ImageInput() {{
-                                                            altText = "inventore";
+                                                            altText = "quo";
                                                             properties = new MediaProperties() {{
-                                                                alignment = "LEFT";
-                                                                width = 89603;
+                                                                alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                width = 926213;
                                                             }};
-                                                            sourceUri = "dolorum";
+                                                            sourceUri = "aspernatur";
                                                         }};
                                                         isOther = false;
-                                                        value = "laborum";
-                                                    }}),
-                                                    add(new OptionInput() {{
-                                                        goToAction = "SUBMIT_FORM";
-                                                        goToSectionId = "velit";
-                                                        image = new ImageInput() {{
-                                                            altText = "eum";
-                                                            properties = new MediaProperties() {{
-                                                                alignment = "LEFT";
-                                                                width = 752135;
-                                                            }};
-                                                            sourceUri = "quas";
-                                                        }};
-                                                        isOther = false;
-                                                        value = "assumenda";
+                                                        value = "minima";
                                                     }}),
                                                 }};
                                                 shuffle = false;
-                                                type = "DROP_DOWN";
+                                                type = ChoiceQuestionTypeEnum.CHOICE_TYPE_UNSPECIFIED;
                                             }};
                                             dateQuestion = new DateQuestion() {{
                                                 includeTime = false;
                                                 includeYear = false;
                                             }};
                                             fileUploadQuestion = new FileUploadQuestion() {{
-                                                folderId = "voluptas";
+                                                folderId = "a";
                                                 maxFileSize = "libero";
-                                                maxFiles = 96549;
+                                                maxFiles = 13948;
                                                 types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                    add("DOCUMENT"),
-                                                    add("ANY"),
+                                                    add(FileUploadQuestionTypesEnum.DRAWING),
                                                 }};
                                             }};
                                             grading = new Grading() {{
                                                 correctAnswers = new CorrectAnswers() {{
                                                     answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
                                                         add(new CorrectAnswer() {{
-                                                            value = "ipsa";
+                                                            value = "aliquam";
                                                         }}),
                                                         add(new CorrectAnswer() {{
-                                                            value = "molestiae";
+                                                            value = "fugit";
                                                         }}),
                                                         add(new CorrectAnswer() {{
-                                                            value = "magnam";
+                                                            value = "accusamus";
+                                                        }}),
+                                                        add(new CorrectAnswer() {{
+                                                            value = "inventore";
                                                         }}),
                                                     }};
                                                 }};
@@ -1334,69 +1259,89 @@ public class Application {
                                                     material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "eius";
-                                                                uri = "http://jolly-lord.net";
+                                                                displayText = "et";
+                                                                uri = "https://quick-witted-skeleton.biz";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "reprehenderit";
-                                                                youtubeUri = "quidem";
+                                                                displayText = "eum";
+                                                                youtubeUri = "autem";
                                                             }};
                                                         }}),
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "fugiat";
-                                                                uri = "http://infantile-geek.net";
+                                                                displayText = "nobis";
+                                                                uri = "https://sweaty-stripe.info";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "eos";
-                                                                youtubeUri = "praesentium";
+                                                                displayText = "libero";
+                                                                youtubeUri = "quasi";
                                                             }};
                                                         }}),
                                                     }};
-                                                    text = "quisquam";
+                                                    text = "tempora";
                                                 }};
-                                                pointValue = 86377;
+                                                pointValue = 256139;
                                                 whenRight = new Feedback() {{
                                                     material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "id";
-                                                                uri = "https://dishonest-screw.org";
+                                                                displayText = "provident";
+                                                                uri = "http://last-eligibility.info";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "quo";
-                                                                youtubeUri = "fuga";
+                                                                displayText = "eius";
+                                                                youtubeUri = "esse";
                                                             }};
                                                         }}),
                                                     }};
-                                                    text = "eius";
+                                                    text = "esse";
                                                 }};
                                                 whenWrong = new Feedback() {{
                                                     material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "voluptas";
-                                                                uri = "http://official-admin.biz";
+                                                                displayText = "fuga";
+                                                                uri = "http://repulsive-stepping-stone.biz";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "debitis";
-                                                                youtubeUri = "ipsam";
+                                                                displayText = "eum";
+                                                                youtubeUri = "suscipit";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "assumenda";
+                                                                uri = "http://lustrous-separation.com";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "ipsa";
+                                                                youtubeUri = "id";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "quidem";
+                                                                uri = "http://sophisticated-starboard.net";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "fuga";
+                                                                youtubeUri = "eius";
                                                             }};
                                                         }}),
                                                     }};
-                                                    text = "aspernatur";
+                                                    text = "eos";
                                                 }};
                                             }};
-                                            questionId = "sequi";
+                                            questionId = "voluptas";
                                             required = false;
                                             rowQuestion = new RowQuestion() {{
-                                                title = "Miss";
+                                                title = "Mr.";
                                             }};
                                             scaleQuestion = new ScaleQuestion() {{
-                                                high = 459856;
-                                                highLabel = "recusandae";
-                                                low = 44612;
-                                                lowLabel = "distinctio";
+                                                high = 587600;
+                                                highLabel = "consequatur";
+                                                low = 272822;
+                                                lowLabel = "debitis";
                                             }};
                                             textQuestion = new TextQuestion() {{
                                                 paragraph = false;
@@ -1407,27 +1352,25 @@ public class Application {
                                         }};
                                     }};
                                     textItem = new java.util.HashMap<String, Object>() {{
-                                        put("dignissimos", "inventore");
-                                        put("nihil", "totam");
-                                        put("accusamus", "aliquam");
-                                        put("odio", "occaecati");
+                                        put("aspernatur", "sequi");
+                                        put("quo", "esse");
                                     }};
-                                    title = "Ms.";
+                                    title = "Dr.";
                                     videoItem = new VideoItem() {{
-                                        caption = "sapiente";
+                                        caption = "aperiam";
                                         video = new Video() {{
                                             properties = new MediaProperties() {{
-                                                alignment = "ALIGNMENT_UNSPECIFIED";
-                                                width = 645570;
+                                                alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                width = 799796;
                                             }};
-                                            youtubeUri = "molestiae";
+                                            youtubeUri = "dignissimos";
                                         }};
                                     }};
                                 }};
                                 location = new Location() {{
-                                    index = 35362;
+                                    index = 76956;
                                 }};
-                                updateMask = "porro";
+                                updateMask = "nihil";
                             }};
                             updateSettings = new UpdateSettingsRequest() {{
                                 settings = new FormSettings() {{
@@ -1435,405 +1378,235 @@ public class Application {
                                         isQuiz = false;
                                     }};
                                 }};
-                                updateMask = "eum";
+                                updateMask = "totam";
                             }};
                         }}),
                         add(new RequestInput() {{
                             createItem = new CreateItemRequestInput() {{
                                 item = new ItemInput() {{
-                                    description = "quas";
+                                    description = "accusamus";
                                     imageItem = new ImageItemInput() {{
                                         image = new ImageInput() {{
-                                            altText = "praesentium";
+                                            altText = "aliquam";
                                             properties = new MediaProperties() {{
-                                                alignment = "ALIGNMENT_UNSPECIFIED";
-                                                width = 536178;
+                                                alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                width = 577543;
                                             }};
-                                            sourceUri = "fugit";
+                                            sourceUri = "commodi";
                                         }};
                                     }};
-                                    itemId = "fuga";
+                                    itemId = "sapiente";
                                     pageBreakItem = new java.util.HashMap<String, Object>() {{
-                                        put("incidunt", "atque");
-                                        put("explicabo", "minima");
-                                        put("nisi", "fugit");
+                                        put("deserunt", "molestiae");
                                     }};
                                     questionGroupItem = new QuestionGroupItemInput() {{
                                         grid = new GridInput() {{
                                             columns = new ChoiceQuestionInput() {{
                                                 options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                     add(new OptionInput() {{
-                                                        goToAction = "GO_TO_ACTION_UNSPECIFIED";
-                                                        goToSectionId = "ratione";
+                                                        goToAction = OptionGoToActionEnum.SUBMIT_FORM;
+                                                        goToSectionId = "eum";
                                                         image = new ImageInput() {{
-                                                            altText = "explicabo";
+                                                            altText = "quas";
                                                             properties = new MediaProperties() {{
-                                                                alignment = "CENTER";
-                                                                width = 578922;
+                                                                alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                                width = 159867;
                                                             }};
-                                                            sourceUri = "atque";
+                                                            sourceUri = "deleniti";
                                                         }};
                                                         isOther = false;
-                                                        value = "et";
-                                                    }}),
-                                                    add(new OptionInput() {{
-                                                        goToAction = "NEXT_SECTION";
-                                                        goToSectionId = "eveniet";
-                                                        image = new ImageInput() {{
-                                                            altText = "accusamus";
-                                                            properties = new MediaProperties() {{
-                                                                alignment = "ALIGNMENT_UNSPECIFIED";
-                                                                width = 458604;
-                                                            }};
-                                                            sourceUri = "quod";
-                                                        }};
-                                                        isOther = false;
-                                                        value = "nam";
-                                                    }}),
-                                                    add(new OptionInput() {{
-                                                        goToAction = "SUBMIT_FORM";
-                                                        goToSectionId = "aliquid";
-                                                        image = new ImageInput() {{
-                                                            altText = "quasi";
-                                                            properties = new MediaProperties() {{
-                                                                alignment = "CENTER";
-                                                                width = 426306;
-                                                            }};
-                                                            sourceUri = "harum";
-                                                        }};
-                                                        isOther = false;
-                                                        value = "molestiae";
-                                                    }}),
-                                                    add(new OptionInput() {{
-                                                        goToAction = "RESTART_FORM";
-                                                        goToSectionId = "occaecati";
-                                                        image = new ImageInput() {{
-                                                            altText = "minima";
-                                                            properties = new MediaProperties() {{
-                                                                alignment = "RIGHT";
-                                                                width = 756779;
-                                                            }};
-                                                            sourceUri = "sit";
-                                                        }};
-                                                        isOther = false;
-                                                        value = "culpa";
+                                                        value = "fugit";
                                                     }}),
                                                 }};
                                                 shuffle = false;
-                                                type = "CHECKBOX";
+                                                type = ChoiceQuestionTypeEnum.CHECKBOX;
                                             }};
                                             shuffleQuestions = false;
                                         }};
                                         image = new ImageInput() {{
-                                            altText = "adipisci";
+                                            altText = "mollitia";
                                             properties = new MediaProperties() {{
-                                                alignment = "CENTER";
-                                                width = 160538;
+                                                alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                width = 539224;
                                             }};
-                                            sourceUri = "consequatur";
+                                            sourceUri = "explicabo";
                                         }};
                                         questions = new org.openapis.openapi.models.shared.QuestionInput[]{{
                                             add(new QuestionInput() {{
                                                 choiceQuestion = new ChoiceQuestionInput() {{
                                                     options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                         add(new OptionInput() {{
-                                                            goToAction = "SUBMIT_FORM";
-                                                            goToSectionId = "consectetur";
+                                                            goToAction = OptionGoToActionEnum.GO_TO_ACTION_UNSPECIFIED;
+                                                            goToSectionId = "sapiente";
+                                                            image = new ImageInput() {{
+                                                                altText = "consequuntur";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 129412;
+                                                                }};
+                                                                sourceUri = "saepe";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "occaecati";
+                                                        }}),
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                            goToSectionId = "et";
                                                             image = new ImageInput() {{
                                                                 altText = "esse";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "RIGHT";
-                                                                    width = 590984;
+                                                                    alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                    width = 882042;
                                                                 }};
-                                                                sourceUri = "a";
+                                                                sourceUri = "veritatis";
                                                             }};
                                                             isOther = false;
-                                                            value = "nulla";
-                                                        }}),
-                                                        add(new OptionInput() {{
-                                                            goToAction = "RESTART_FORM";
-                                                            goToSectionId = "esse";
-                                                            image = new ImageInput() {{
-                                                                altText = "quasi";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "CENTER";
-                                                                    width = 621679;
-                                                                }};
-                                                                sourceUri = "sint";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "pariatur";
+                                                            value = "esse";
                                                         }}),
                                                     }};
                                                     shuffle = false;
-                                                    type = "DROP_DOWN";
+                                                    type = ChoiceQuestionTypeEnum.DROP_DOWN;
                                                 }};
                                                 dateQuestion = new DateQuestion() {{
                                                     includeTime = false;
                                                     includeYear = false;
                                                 }};
                                                 fileUploadQuestion = new FileUploadQuestion() {{
-                                                    folderId = "quia";
-                                                    maxFileSize = "eveniet";
-                                                    maxFiles = 992430;
+                                                    folderId = "nam";
+                                                    maxFileSize = "vero";
+                                                    maxFiles = 399025;
                                                     types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                        add("FILE_TYPE_UNSPECIFIED"),
-                                                        add("ANY"),
-                                                        add("FILE_TYPE_UNSPECIFIED"),
-                                                        add("PDF"),
+                                                        add(FileUploadQuestionTypesEnum.AUDIO),
                                                     }};
                                                 }};
                                                 grading = new Grading() {{
                                                     correctAnswers = new CorrectAnswers() {{
                                                         answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
                                                             add(new CorrectAnswer() {{
-                                                                value = "aliquid";
+                                                                value = "harum";
                                                             }}),
                                                             add(new CorrectAnswer() {{
-                                                                value = "tenetur";
-                                                            }}),
-                                                            add(new CorrectAnswer() {{
-                                                                value = "quae";
+                                                                value = "molestiae";
                                                             }}),
                                                         }};
                                                     }};
                                                     generalFeedback = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "vel";
-                                                                    uri = "http://extra-small-recession.org";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "soluta";
-                                                                    youtubeUri = "accusantium";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "aliquam";
-                                                                    uri = "https://clear-fly.info";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "ullam";
-                                                                    youtubeUri = "nisi";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "aut";
-                                                                    uri = "https://dense-stallion.info";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "deleniti";
-                                                                    youtubeUri = "itaque";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "dolorum";
-                                                                    uri = "http://paltry-utensil.com";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "at";
-                                                                    youtubeUri = "et";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "voluptate";
-                                                    }};
-                                                    pointValue = 55965;
-                                                    whenRight = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "veritatis";
-                                                                    uri = "http://enormous-orator.org";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "accusantium";
-                                                                    youtubeUri = "rem";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "aut";
-                                                                    uri = "https://inconsequential-performance.com";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "corrupti";
-                                                                    youtubeUri = "non";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "voluptatem";
-                                                    }};
-                                                    whenWrong = new Feedback() {{
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
                                                                     displayText = "occaecati";
-                                                                    uri = "http://sneaky-cardigan.info";
+                                                                    uri = "http://sandy-room.com";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "aut";
-                                                                    youtubeUri = "dignissimos";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "dicta";
-                                                    }};
-                                                }};
-                                                questionId = "maiores";
-                                                required = false;
-                                                rowQuestion = new RowQuestion() {{
-                                                    title = "Miss";
-                                                }};
-                                                scaleQuestion = new ScaleQuestion() {{
-                                                    high = 244651;
-                                                    highLabel = "voluptatibus";
-                                                    low = 374323;
-                                                    lowLabel = "asperiores";
-                                                }};
-                                                textQuestion = new TextQuestion() {{
-                                                    paragraph = false;
-                                                }};
-                                                timeQuestion = new TimeQuestion() {{
-                                                    duration = false;
-                                                }};
-                                            }}),
-                                            add(new QuestionInput() {{
-                                                choiceQuestion = new ChoiceQuestionInput() {{
-                                                    options = new org.openapis.openapi.models.shared.OptionInput[]{{
-                                                        add(new OptionInput() {{
-                                                            goToAction = "NEXT_SECTION";
-                                                            goToSectionId = "quaerat";
-                                                            image = new ImageInput() {{
-                                                                altText = "consequuntur";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "CENTER";
-                                                                    width = 638762;
-                                                                }};
-                                                                sourceUri = "maxime";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "dignissimos";
-                                                        }}),
-                                                    }};
-                                                    shuffle = false;
-                                                    type = "CHECKBOX";
-                                                }};
-                                                dateQuestion = new DateQuestion() {{
-                                                    includeTime = false;
-                                                    includeYear = false;
-                                                }};
-                                                fileUploadQuestion = new FileUploadQuestion() {{
-                                                    folderId = "asperiores";
-                                                    maxFileSize = "nemo";
-                                                    maxFiles = 65304;
-                                                    types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                        add("IMAGE"),
-                                                        add("VIDEO"),
-                                                    }};
-                                                }};
-                                                grading = new Grading() {{
-                                                    correctAnswers = new CorrectAnswers() {{
-                                                        answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
-                                                            add(new CorrectAnswer() {{
-                                                                value = "ab";
-                                                            }}),
-                                                            add(new CorrectAnswer() {{
-                                                                value = "adipisci";
-                                                            }}),
-                                                        }};
-                                                    }};
-                                                    generalFeedback = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "id";
-                                                                    uri = "http://everlasting-parking.name";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "recusandae";
-                                                                    youtubeUri = "totam";
+                                                                    displayText = "culpa";
+                                                                    youtubeUri = "tempore";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "fugiat";
-                                                                    uri = "http://lonely-mentor.info";
+                                                                    displayText = "adipisci";
+                                                                    uri = "https://cumbersome-administration.net";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "labore";
-                                                                    youtubeUri = "possimus";
+                                                                    displayText = "quaerat";
+                                                                    youtubeUri = "sapiente";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "facilis";
-                                                                    uri = "https://immense-icing.info";
+                                                                    displayText = "consectetur";
+                                                                    uri = "http://lovely-nestling.org";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "reiciendis";
-                                                                    youtubeUri = "assumenda";
+                                                                    displayText = "nulla";
+                                                                    youtubeUri = "quas";
                                                                 }};
                                                             }}),
                                                         }};
-                                                        text = "nemo";
+                                                        text = "esse";
                                                     }};
-                                                    pointValue = 924967;
+                                                    pointValue = 97468;
                                                     whenRight = new Feedback() {{
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "aperiam";
-                                                                    uri = "https://emotional-ignorant.info";
+                                                                    displayText = "error";
+                                                                    uri = "https://total-snuck.com";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "earum";
-                                                                    youtubeUri = "facere";
+                                                                    displayText = "eveniet";
+                                                                    youtubeUri = "asperiores";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "numquam";
-                                                                    uri = "https://helpless-warming.net";
+                                                                    displayText = "facere";
+                                                                    uri = "http://cultured-boogeyman.name";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "saepe";
-                                                                    youtubeUri = "necessitatibus";
+                                                                    displayText = "culpa";
+                                                                    youtubeUri = "aliquid";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "tenetur";
+                                                                    uri = "http://vital-helmet.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "eius";
+                                                                    youtubeUri = "libero";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "illum";
+                                                                    uri = "https://ancient-encouragement.org";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "dicta";
+                                                                    youtubeUri = "ullam";
                                                                 }};
                                                             }}),
                                                         }};
-                                                        text = "dolore";
+                                                        text = "reprehenderit";
                                                     }};
                                                     whenWrong = new Feedback() {{
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "asperiores";
-                                                                    uri = "http://excellent-crystal.com";
+                                                                    displayText = "nisi";
+                                                                    uri = "http://mild-commerce.org";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "dignissimos";
-                                                                    youtubeUri = "a";
+                                                                    displayText = "ex";
+                                                                    youtubeUri = "deleniti";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "itaque";
+                                                                    uri = "https://burly-official.org";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "quasi";
+                                                                    youtubeUri = "at";
                                                                 }};
                                                             }}),
                                                         }};
-                                                        text = "debitis";
+                                                        text = "et";
                                                     }};
                                                 }};
-                                                questionId = "consectetur";
+                                                questionId = "voluptate";
                                                 required = false;
                                                 rowQuestion = new RowQuestion() {{
-                                                    title = "Mrs.";
+                                                    title = "Mr.";
                                                 }};
                                                 scaleQuestion = new ScaleQuestion() {{
-                                                    high = 689768;
-                                                    highLabel = "laboriosam";
-                                                    low = 58356;
-                                                    lowLabel = "voluptates";
+                                                    high = 326701;
+                                                    highLabel = "veritatis";
+                                                    low = 232744;
+                                                    lowLabel = "adipisci";
                                                 }};
                                                 textQuestion = new TextQuestion() {{
                                                     paragraph = false;
@@ -1846,226 +1619,64 @@ public class Application {
                                                 choiceQuestion = new ChoiceQuestionInput() {{
                                                     options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                         add(new OptionInput() {{
-                                                            goToAction = "GO_TO_ACTION_UNSPECIFIED";
-                                                            goToSectionId = "accusamus";
+                                                            goToAction = OptionGoToActionEnum.SUBMIT_FORM;
+                                                            goToSectionId = "accusantium";
                                                             image = new ImageInput() {{
-                                                                altText = "similique";
+                                                                altText = "rem";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "LEFT";
-                                                                    width = 132815;
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 513075;
                                                                 }};
-                                                                sourceUri = "voluptas";
+                                                                sourceUri = "eum";
                                                             }};
                                                             isOther = false;
-                                                            value = "voluptas";
+                                                            value = "mollitia";
                                                         }}),
                                                         add(new OptionInput() {{
-                                                            goToAction = "NEXT_SECTION";
-                                                            goToSectionId = "minima";
+                                                            goToAction = OptionGoToActionEnum.GO_TO_ACTION_UNSPECIFIED;
+                                                            goToSectionId = "corrupti";
                                                             image = new ImageInput() {{
-                                                                altText = "nobis";
+                                                                altText = "non";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "RIGHT";
-                                                                    width = 237807;
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 221161;
                                                                 }};
-                                                                sourceUri = "minus";
+                                                                sourceUri = "occaecati";
                                                             }};
                                                             isOther = false;
-                                                            value = "dolores";
+                                                            value = "numquam";
                                                         }}),
                                                         add(new OptionInput() {{
-                                                            goToAction = "RESTART_FORM";
-                                                            goToSectionId = "in";
+                                                            goToAction = OptionGoToActionEnum.SUBMIT_FORM;
+                                                            goToSectionId = "explicabo";
                                                             image = new ImageInput() {{
-                                                                altText = "dolore";
+                                                                altText = "voluptas";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "LEFT";
-                                                                    width = 885963;
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 491025;
                                                                 }};
-                                                                sourceUri = "temporibus";
+                                                                sourceUri = "dicta";
                                                             }};
                                                             isOther = false;
-                                                            value = "ullam";
+                                                            value = "maiores";
                                                         }}),
                                                     }};
                                                     shuffle = false;
-                                                    type = "CHOICE_TYPE_UNSPECIFIED";
+                                                    type = ChoiceQuestionTypeEnum.CHECKBOX;
                                                 }};
                                                 dateQuestion = new DateQuestion() {{
                                                     includeTime = false;
                                                     includeYear = false;
                                                 }};
                                                 fileUploadQuestion = new FileUploadQuestion() {{
-                                                    folderId = "cum";
-                                                    maxFileSize = "blanditiis";
-                                                    maxFiles = 555361;
+                                                    folderId = "velit";
+                                                    maxFileSize = "voluptatibus";
+                                                    maxFiles = 374323;
                                                     types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                        add("DOCUMENT"),
-                                                        add("PDF"),
-                                                        add("DRAWING"),
-                                                        add("VIDEO"),
-                                                    }};
-                                                }};
-                                                grading = new Grading() {{
-                                                    correctAnswers = new CorrectAnswers() {{
-                                                        answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
-                                                            add(new CorrectAnswer() {{
-                                                                value = "hic";
-                                                            }}),
-                                                            add(new CorrectAnswer() {{
-                                                                value = "exercitationem";
-                                                            }}),
-                                                            add(new CorrectAnswer() {{
-                                                                value = "nobis";
-                                                            }}),
-                                                        }};
-                                                    }};
-                                                    generalFeedback = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "rerum";
-                                                                    uri = "http://wide-carnation.org";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "facilis";
-                                                                    youtubeUri = "voluptate";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "expedita";
-                                                    }};
-                                                    pointValue = 70869;
-                                                    whenRight = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "dolore";
-                                                                    uri = "https://criminal-id.info";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "quidem";
-                                                                    youtubeUri = "explicabo";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "voluptas";
-                                                                    uri = "https://burly-geometry.org";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "debitis";
-                                                                    youtubeUri = "illo";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "reiciendis";
-                                                                    uri = "http://motionless-whisker.biz";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "sed";
-                                                                    youtubeUri = "provident";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "eius";
-                                                    }};
-                                                    whenWrong = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "ipsum";
-                                                                    uri = "http://obedient-medicine.org";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "tempora";
-                                                                    youtubeUri = "tempora";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "voluptate";
-                                                                    uri = "https://ideal-amendment.biz";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "officiis";
-                                                                    youtubeUri = "praesentium";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "facilis";
-                                                                    uri = "http://feline-futon.org";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "rem";
-                                                                    youtubeUri = "sit";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "nobis";
-                                                                    uri = "https://glass-eyelid.org";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "reiciendis";
-                                                                    youtubeUri = "nulla";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "magni";
-                                                    }};
-                                                }};
-                                                questionId = "aperiam";
-                                                required = false;
-                                                rowQuestion = new RowQuestion() {{
-                                                    title = "Dr.";
-                                                }};
-                                                scaleQuestion = new ScaleQuestion() {{
-                                                    high = 253642;
-                                                    highLabel = "veniam";
-                                                    low = 446135;
-                                                    lowLabel = "officiis";
-                                                }};
-                                                textQuestion = new TextQuestion() {{
-                                                    paragraph = false;
-                                                }};
-                                                timeQuestion = new TimeQuestion() {{
-                                                    duration = false;
-                                                }};
-                                            }}),
-                                            add(new QuestionInput() {{
-                                                choiceQuestion = new ChoiceQuestionInput() {{
-                                                    options = new org.openapis.openapi.models.shared.OptionInput[]{{
-                                                        add(new OptionInput() {{
-                                                            goToAction = "RESTART_FORM";
-                                                            goToSectionId = "exercitationem";
-                                                            image = new ImageInput() {{
-                                                                altText = "praesentium";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "RIGHT";
-                                                                    width = 386827;
-                                                                }};
-                                                                sourceUri = "dolorum";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "voluptatum";
-                                                        }}),
-                                                    }};
-                                                    shuffle = false;
-                                                    type = "CHECKBOX";
-                                                }};
-                                                dateQuestion = new DateQuestion() {{
-                                                    includeTime = false;
-                                                    includeYear = false;
-                                                }};
-                                                fileUploadQuestion = new FileUploadQuestion() {{
-                                                    folderId = "hic";
-                                                    maxFileSize = "expedita";
-                                                    maxFiles = 892863;
-                                                    types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                        add("PDF"),
+                                                        add(FileUploadQuestionTypesEnum.FILE_TYPE_UNSPECIFIED),
+                                                        add(FileUploadQuestionTypesEnum.SPREADSHEET),
+                                                        add(FileUploadQuestionTypesEnum.PRESENTATION),
+                                                        add(FileUploadQuestionTypesEnum.ANY),
                                                     }};
                                                 }};
                                                 grading = new Grading() {{
@@ -2075,7 +1686,13 @@ public class Application {
                                                                 value = "officia";
                                                             }}),
                                                             add(new CorrectAnswer() {{
-                                                                value = "dolorum";
+                                                                value = "maxime";
+                                                            }}),
+                                                            add(new CorrectAnswer() {{
+                                                                value = "dignissimos";
+                                                            }}),
+                                                            add(new CorrectAnswer() {{
+                                                                value = "officia";
                                                             }}),
                                                         }};
                                                     }};
@@ -2083,58 +1700,920 @@ public class Application {
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "accusamus";
-                                                                    uri = "http://monthly-chapter.biz";
+                                                                    displayText = "nemo";
+                                                                    uri = "http://frigid-sectional.net";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "fugiat";
-                                                                    youtubeUri = "voluptatem";
+                                                                    displayText = "labore";
+                                                                    youtubeUri = "ab";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
+                                                                    displayText = "adipisci";
+                                                                    uri = "https://pushy-gender.biz";
+                                                                }};
+                                                                video = new VideoLink() {{
                                                                     displayText = "culpa";
-                                                                    uri = "https://forceful-activity.info";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "ipsam";
-                                                                    youtubeUri = "sit";
+                                                                    youtubeUri = "est";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "voluptatum";
-                                                                    uri = "https://valid-forestry.com";
+                                                                    displayText = "recusandae";
+                                                                    uri = "https://those-helo.info";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "blanditiis";
-                                                                    youtubeUri = "ex";
+                                                                    displayText = "quos";
+                                                                    youtubeUri = "vel";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "labore";
+                                                                    uri = "https://rowdy-repair.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "in";
+                                                                    youtubeUri = "corporis";
                                                                 }};
                                                             }}),
                                                         }};
-                                                        text = "sed";
+                                                        text = "reiciendis";
                                                     }};
-                                                    pointValue = 24313;
+                                                    pointValue = 828657;
                                                     whenRight = new Feedback() {{
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "nostrum";
-                                                                    uri = "https://phony-ad.biz";
+                                                                    displayText = "recusandae";
+                                                                    uri = "http://ashamed-replacement.biz";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "reiciendis";
-                                                                    youtubeUri = "dolorem";
+                                                                    displayText = "in";
+                                                                    youtubeUri = "exercitationem";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
+                                                                    displayText = "earum";
+                                                                    uri = "https://extroverted-wisdom.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "reiciendis";
+                                                                    youtubeUri = "quidem";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "saepe";
+                                                    }};
+                                                    whenWrong = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "dolore";
+                                                                    uri = "http://yawning-deal.biz";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "amet";
+                                                                    youtubeUri = "beatae";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "dignissimos";
+                                                                    uri = "https://unimportant-custard.info";
+                                                                }};
+                                                                video = new VideoLink() {{
                                                                     displayText = "harum";
-                                                                    uri = "http://burly-morsel.biz";
+                                                                    youtubeUri = "laboriosam";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "ipsa";
+                                                                    uri = "https://self-assured-bull.org";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "similique";
+                                                                    youtubeUri = "tempora";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "aspernatur";
+                                                                    uri = "http://hasty-gall-bladder.biz";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "nobis";
+                                                                    youtubeUri = "dolorum";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "adipisci";
+                                                    }};
+                                                }};
+                                                questionId = "minus";
+                                                required = false;
+                                                rowQuestion = new RowQuestion() {{
+                                                    title = "Mr.";
+                                                }};
+                                                scaleQuestion = new ScaleQuestion() {{
+                                                    high = 503934;
+                                                    highLabel = "in";
+                                                    low = 296242;
+                                                    lowLabel = "aliquam";
+                                                }};
+                                                textQuestion = new TextQuestion() {{
+                                                    paragraph = false;
+                                                }};
+                                                timeQuestion = new TimeQuestion() {{
+                                                    duration = false;
+                                                }};
+                                            }}),
+                                        }};
+                                    }};
+                                    questionItem = new QuestionItemInput() {{
+                                        image = new ImageInput() {{
+                                            altText = "officiis";
+                                            properties = new MediaProperties() {{
+                                                alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                width = 351870;
+                                            }};
+                                            sourceUri = "adipisci";
+                                        }};
+                                        question = new QuestionInput() {{
+                                            choiceQuestion = new ChoiceQuestionInput() {{
+                                                options = new org.openapis.openapi.models.shared.OptionInput[]{{
+                                                    add(new OptionInput() {{
+                                                        goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                        goToSectionId = "quas";
+                                                        image = new ImageInput() {{
+                                                            altText = "hic";
+                                                            properties = new MediaProperties() {{
+                                                                alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                width = 633998;
+                                                            }};
+                                                            sourceUri = "corrupti";
+                                                        }};
+                                                        isOther = false;
+                                                        value = "pariatur";
+                                                    }}),
+                                                    add(new OptionInput() {{
+                                                        goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                        goToSectionId = "hic";
+                                                        image = new ImageInput() {{
+                                                            altText = "exercitationem";
+                                                            properties = new MediaProperties() {{
+                                                                alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                width = 24619;
+                                                            }};
+                                                            sourceUri = "rerum";
+                                                        }};
+                                                        isOther = false;
+                                                        value = "sed";
+                                                    }}),
+                                                    add(new OptionInput() {{
+                                                        goToAction = OptionGoToActionEnum.SUBMIT_FORM;
+                                                        goToSectionId = "explicabo";
+                                                        image = new ImageInput() {{
+                                                            altText = "asperiores";
+                                                            properties = new MediaProperties() {{
+                                                                alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                                width = 451822;
+                                                            }};
+                                                            sourceUri = "expedita";
+                                                        }};
+                                                        isOther = false;
+                                                        value = "ab";
+                                                    }}),
+                                                }};
+                                                shuffle = false;
+                                                type = ChoiceQuestionTypeEnum.CHECKBOX;
+                                            }};
+                                            dateQuestion = new DateQuestion() {{
+                                                includeTime = false;
+                                                includeYear = false;
+                                            }};
+                                            fileUploadQuestion = new FileUploadQuestion() {{
+                                                folderId = "dolore";
+                                                maxFileSize = "laborum";
+                                                maxFiles = 152354;
+                                                types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
+                                                    add(FileUploadQuestionTypesEnum.SPREADSHEET),
+                                                    add(FileUploadQuestionTypesEnum.PDF),
+                                                }};
+                                            }};
+                                            grading = new Grading() {{
+                                                correctAnswers = new CorrectAnswers() {{
+                                                    answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
+                                                        add(new CorrectAnswer() {{
+                                                            value = "voluptas";
+                                                        }}),
+                                                    }};
+                                                }};
+                                                generalFeedback = new Feedback() {{
+                                                    material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "architecto";
+                                                                uri = "http://well-to-do-tension.com";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "reiciendis";
+                                                                youtubeUri = "perferendis";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "corrupti";
+                                                                uri = "https://favorite-characteristic.name";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "eius";
+                                                                youtubeUri = "necessitatibus";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "ipsum";
+                                                                uri = "http://obedient-medicine.org";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "tempora";
+                                                                youtubeUri = "tempora";
+                                                            }};
+                                                        }}),
+                                                    }};
+                                                    text = "voluptate";
+                                                }};
+                                                pointValue = 970076;
+                                                whenRight = new Feedback() {{
+                                                    material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "sit";
+                                                                uri = "http://unfortunate-leg.net";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "quaerat";
+                                                                youtubeUri = "incidunt";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "ipsam";
+                                                                uri = "https://mediocre-analgesia.net";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "error";
+                                                                youtubeUri = "veniam";
+                                                            }};
+                                                        }}),
+                                                    }};
+                                                    text = "minima";
+                                                }};
+                                                whenWrong = new Feedback() {{
+                                                    material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "reiciendis";
+                                                                uri = "https://dark-asterisk.org";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "numquam";
+                                                                youtubeUri = "veniam";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "in";
+                                                                uri = "https://candid-lifetime.info";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "praesentium";
+                                                                youtubeUri = "cum";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "laboriosam";
+                                                                uri = "https://merry-overnighter.org";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "expedita";
+                                                                youtubeUri = "debitis";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "neque";
+                                                                uri = "https://good-natured-pate.net";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "corrupti";
+                                                                youtubeUri = "accusamus";
+                                                            }};
+                                                        }}),
+                                                    }};
+                                                    text = "tempora";
+                                                }};
+                                            }};
+                                            questionId = "atque";
+                                            required = false;
+                                            rowQuestion = new RowQuestion() {{
+                                                title = "Mr.";
+                                            }};
+                                            scaleQuestion = new ScaleQuestion() {{
+                                                high = 282699;
+                                                highLabel = "fugiat";
+                                                low = 30235;
+                                                lowLabel = "culpa";
+                                            }};
+                                            textQuestion = new TextQuestion() {{
+                                                paragraph = false;
+                                            }};
+                                            timeQuestion = new TimeQuestion() {{
+                                                duration = false;
+                                            }};
+                                        }};
+                                    }};
+                                    textItem = new java.util.HashMap<String, Object>() {{
+                                        put("magnam", "consequatur");
+                                        put("esse", "ipsam");
+                                        put("sit", "voluptatum");
+                                    }};
+                                    title = "Ms.";
+                                    videoItem = new VideoItem() {{
+                                        caption = "repudiandae";
+                                        video = new Video() {{
+                                            properties = new MediaProperties() {{
+                                                alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                width = 89494;
+                                            }};
+                                            youtubeUri = "blanditiis";
+                                        }};
+                                    }};
+                                }};
+                                location = new Location() {{
+                                    index = 405942;
+                                }};
+                            }};
+                            deleteItem = new DeleteItemRequest() {{
+                                location = new Location() {{
+                                    index = 153627;
+                                }};
+                            }};
+                            moveItem = new MoveItemRequest() {{
+                                newLocation = new Location() {{
+                                    index = 24313;
+                                }};
+                                originalLocation = new Location() {{
+                                    index = 425508;
+                                }};
+                            }};
+                            updateFormInfo = new UpdateFormInfoRequestInput() {{
+                                info = new InfoInput() {{
+                                    description = "nostrum";
+                                    title = "Dr.";
+                                }};
+                                updateMask = "error";
+                            }};
+                            updateItem = new UpdateItemRequestInput() {{
+                                item = new ItemInput() {{
+                                    description = "consequatur";
+                                    imageItem = new ImageItemInput() {{
+                                        image = new ImageInput() {{
+                                            altText = "incidunt";
+                                            properties = new MediaProperties() {{
+                                                alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                width = 209750;
+                                            }};
+                                            sourceUri = "harum";
+                                        }};
+                                    }};
+                                    itemId = "dicta";
+                                    pageBreakItem = new java.util.HashMap<String, Object>() {{
+                                        put("occaecati", "labore");
+                                    }};
+                                    questionGroupItem = new QuestionGroupItemInput() {{
+                                        grid = new GridInput() {{
+                                            columns = new ChoiceQuestionInput() {{
+                                                options = new org.openapis.openapi.models.shared.OptionInput[]{{
+                                                    add(new OptionInput() {{
+                                                        goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                        goToSectionId = "laborum";
+                                                        image = new ImageInput() {{
+                                                            altText = "nam";
+                                                            properties = new MediaProperties() {{
+                                                                alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                width = 388867;
+                                                            }};
+                                                            sourceUri = "alias";
+                                                        }};
+                                                        isOther = false;
+                                                        value = "amet";
+                                                    }}),
+                                                    add(new OptionInput() {{
+                                                        goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                        goToSectionId = "voluptate";
+                                                        image = new ImageInput() {{
+                                                            altText = "unde";
+                                                            properties = new MediaProperties() {{
+                                                                alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                width = 588740;
+                                                            }};
+                                                            sourceUri = "repellendus";
+                                                        }};
+                                                        isOther = false;
+                                                        value = "delectus";
+                                                    }}),
+                                                    add(new OptionInput() {{
+                                                        goToAction = OptionGoToActionEnum.SUBMIT_FORM;
+                                                        goToSectionId = "perferendis";
+                                                        image = new ImageInput() {{
+                                                            altText = "est";
+                                                            properties = new MediaProperties() {{
+                                                                alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                                width = 440666;
+                                                            }};
+                                                            sourceUri = "facere";
+                                                        }};
+                                                        isOther = false;
+                                                        value = "fuga";
+                                                    }}),
+                                                }};
+                                                shuffle = false;
+                                                type = ChoiceQuestionTypeEnum.CHECKBOX;
+                                            }};
+                                            shuffleQuestions = false;
+                                        }};
+                                        image = new ImageInput() {{
+                                            altText = "mollitia";
+                                            properties = new MediaProperties() {{
+                                                alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                width = 29100;
+                                            }};
+                                            sourceUri = "quisquam";
+                                        }};
+                                        questions = new org.openapis.openapi.models.shared.QuestionInput[]{{
+                                            add(new QuestionInput() {{
+                                                choiceQuestion = new ChoiceQuestionInput() {{
+                                                    options = new org.openapis.openapi.models.shared.OptionInput[]{{
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                            goToSectionId = "reprehenderit";
+                                                            image = new ImageInput() {{
+                                                                altText = "asperiores";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                                    width = 383103;
+                                                                }};
+                                                                sourceUri = "quidem";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "maxime";
+                                                        }}),
+                                                    }};
+                                                    shuffle = false;
+                                                    type = ChoiceQuestionTypeEnum.CHOICE_TYPE_UNSPECIFIED;
+                                                }};
+                                                dateQuestion = new DateQuestion() {{
+                                                    includeTime = false;
+                                                    includeYear = false;
+                                                }};
+                                                fileUploadQuestion = new FileUploadQuestion() {{
+                                                    folderId = "esse";
+                                                    maxFileSize = "amet";
+                                                    maxFiles = 826825;
+                                                    types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
+                                                        add(FileUploadQuestionTypesEnum.DRAWING),
+                                                        add(FileUploadQuestionTypesEnum.PDF),
+                                                    }};
+                                                }};
+                                                grading = new Grading() {{
+                                                    correctAnswers = new CorrectAnswers() {{
+                                                        answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
+                                                            add(new CorrectAnswer() {{
+                                                                value = "officiis";
+                                                            }}),
+                                                            add(new CorrectAnswer() {{
+                                                                value = "accusamus";
+                                                            }}),
+                                                            add(new CorrectAnswer() {{
+                                                                value = "natus";
+                                                            }}),
+                                                            add(new CorrectAnswer() {{
+                                                                value = "minima";
+                                                            }}),
+                                                        }};
+                                                    }};
+                                                    generalFeedback = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "ex";
+                                                                    uri = "https://moral-supermarket.name";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "blanditiis";
+                                                                    youtubeUri = "suscipit";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "repudiandae";
+                                                    }};
+                                                    pointValue = 542129;
+                                                    whenRight = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "sunt";
+                                                                    uri = "https://recent-soy.biz";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "reiciendis";
+                                                                    youtubeUri = "doloremque";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "repudiandae";
+                                                                    uri = "http://animated-brief.biz";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "enim";
+                                                                    youtubeUri = "laboriosam";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "velit";
+                                                                    uri = "https://negative-election.org";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "consequuntur";
+                                                                    youtubeUri = "occaecati";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "officiis";
+                                                    }};
+                                                    whenWrong = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "in";
+                                                                    uri = "http://unusual-mouth.com";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "fugit";
+                                                                    youtubeUri = "id";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "quis";
+                                                                    uri = "http://pitiful-beginner.info";
                                                                 }};
                                                                 video = new VideoLink() {{
                                                                     displayText = "quidem";
-                                                                    youtubeUri = "atque";
+                                                                    youtubeUri = "eveniet";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "non";
+                                                                    uri = "https://any-hope.com";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "totam";
+                                                                    youtubeUri = "quae";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "molestiae";
+                                                    }};
+                                                }};
+                                                questionId = "eveniet";
+                                                required = false;
+                                                rowQuestion = new RowQuestion() {{
+                                                    title = "Mr.";
+                                                }};
+                                                scaleQuestion = new ScaleQuestion() {{
+                                                    high = 739884;
+                                                    highLabel = "iure";
+                                                    low = 898063;
+                                                    lowLabel = "ratione";
+                                                }};
+                                                textQuestion = new TextQuestion() {{
+                                                    paragraph = false;
+                                                }};
+                                                timeQuestion = new TimeQuestion() {{
+                                                    duration = false;
+                                                }};
+                                            }}),
+                                            add(new QuestionInput() {{
+                                                choiceQuestion = new ChoiceQuestionInput() {{
+                                                    options = new org.openapis.openapi.models.shared.OptionInput[]{{
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                            goToSectionId = "voluptatum";
+                                                            image = new ImageInput() {{
+                                                                altText = "rem";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                                    width = 320565;
+                                                                }};
+                                                                sourceUri = "repellat";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "alias";
+                                                        }}),
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.NEXT_SECTION;
+                                                            goToSectionId = "perspiciatis";
+                                                            image = new ImageInput() {{
+                                                                altText = "nihil";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                                    width = 378245;
+                                                                }};
+                                                                sourceUri = "alias";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "maiores";
+                                                        }}),
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.SUBMIT_FORM;
+                                                            goToSectionId = "dolores";
+                                                            image = new ImageInput() {{
+                                                                altText = "id";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                                    width = 293144;
+                                                                }};
+                                                                sourceUri = "dolorum";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "nesciunt";
+                                                        }}),
+                                                    }};
+                                                    shuffle = false;
+                                                    type = ChoiceQuestionTypeEnum.CHOICE_TYPE_UNSPECIFIED;
+                                                }};
+                                                dateQuestion = new DateQuestion() {{
+                                                    includeTime = false;
+                                                    includeYear = false;
+                                                }};
+                                                fileUploadQuestion = new FileUploadQuestion() {{
+                                                    folderId = "recusandae";
+                                                    maxFileSize = "omnis";
+                                                    maxFiles = 309251;
+                                                    types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
+                                                        add(FileUploadQuestionTypesEnum.SPREADSHEET),
+                                                        add(FileUploadQuestionTypesEnum.DOCUMENT),
+                                                    }};
+                                                }};
+                                                grading = new Grading() {{
+                                                    correctAnswers = new CorrectAnswers() {{
+                                                        answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
+                                                            add(new CorrectAnswer() {{
+                                                                value = "adipisci";
+                                                            }}),
+                                                            add(new CorrectAnswer() {{
+                                                                value = "debitis";
+                                                            }}),
+                                                            add(new CorrectAnswer() {{
+                                                                value = "laudantium";
+                                                            }}),
+                                                        }};
+                                                    }};
+                                                    generalFeedback = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "nemo";
+                                                                    uri = "https://jovial-networking.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "eum";
+                                                                    youtubeUri = "reiciendis";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "provident";
+                                                                    uri = "http://grizzled-border.name";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "nostrum";
+                                                                    youtubeUri = "mollitia";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "provident";
+                                                    }};
+                                                    pointValue = 821719;
+                                                    whenRight = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "ex";
+                                                                    uri = "http://another-zoo.org";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "ullam";
+                                                                    youtubeUri = "in";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "nam";
+                                                                    uri = "https://poor-plum.net";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "modi";
+                                                                    youtubeUri = "voluptatibus";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "molestias";
+                                                                    uri = "https://well-informed-sage.com";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "rerum";
+                                                                    youtubeUri = "tempora";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "quis";
+                                                    }};
+                                                    whenWrong = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "fugit";
+                                                                    uri = "https://barren-allowance.biz";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "aspernatur";
+                                                                    youtubeUri = "eum";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "eius";
+                                                    }};
+                                                }};
+                                                questionId = "rem";
+                                                required = false;
+                                                rowQuestion = new RowQuestion() {{
+                                                    title = "Dr.";
+                                                }};
+                                                scaleQuestion = new ScaleQuestion() {{
+                                                    high = 773084;
+                                                    highLabel = "eos";
+                                                    low = 958741;
+                                                    lowLabel = "eum";
+                                                }};
+                                                textQuestion = new TextQuestion() {{
+                                                    paragraph = false;
+                                                }};
+                                                timeQuestion = new TimeQuestion() {{
+                                                    duration = false;
+                                                }};
+                                            }}),
+                                            add(new QuestionInput() {{
+                                                choiceQuestion = new ChoiceQuestionInput() {{
+                                                    options = new org.openapis.openapi.models.shared.OptionInput[]{{
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.NEXT_SECTION;
+                                                            goToSectionId = "beatae";
+                                                            image = new ImageInput() {{
+                                                                altText = "cupiditate";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                                    width = 936469;
+                                                                }};
+                                                                sourceUri = "soluta";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "hic";
+                                                        }}),
+                                                    }};
+                                                    shuffle = false;
+                                                    type = ChoiceQuestionTypeEnum.DROP_DOWN;
+                                                }};
+                                                dateQuestion = new DateQuestion() {{
+                                                    includeTime = false;
+                                                    includeYear = false;
+                                                }};
+                                                fileUploadQuestion = new FileUploadQuestion() {{
+                                                    folderId = "eaque";
+                                                    maxFileSize = "earum";
+                                                    maxFiles = 596211;
+                                                    types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
+                                                        add(FileUploadQuestionTypesEnum.VIDEO),
+                                                        add(FileUploadQuestionTypesEnum.PRESENTATION),
+                                                        add(FileUploadQuestionTypesEnum.IMAGE),
+                                                        add(FileUploadQuestionTypesEnum.PRESENTATION),
+                                                    }};
+                                                }};
+                                                grading = new Grading() {{
+                                                    correctAnswers = new CorrectAnswers() {{
+                                                        answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
+                                                            add(new CorrectAnswer() {{
+                                                                value = "fugit";
+                                                            }}),
+                                                        }};
+                                                    }};
+                                                    generalFeedback = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "fuga";
+                                                                    uri = "http://proper-testimonial.org";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "consequatur";
+                                                                    youtubeUri = "quasi";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "et";
+                                                                    uri = "http://pertinent-movement.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "adipisci";
+                                                                    youtubeUri = "quasi";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "magni";
+                                                                    uri = "https://timely-terminal.com";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "tempora";
+                                                                    youtubeUri = "nihil";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "molestiae";
+                                                                    uri = "http://lawful-indigence.name";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "maiores";
+                                                                    youtubeUri = "reiciendis";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "vel";
+                                                    }};
+                                                    pointValue = 99958;
+                                                    whenRight = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "doloremque";
+                                                                    uri = "http://left-dissonance.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "ex";
+                                                                    youtubeUri = "consectetur";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "aliquid";
+                                                                    uri = "http://quick-camel.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "fugiat";
+                                                                    youtubeUri = "expedita";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "aliquid";
+                                                                    uri = "https://helpful-gravity.com";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "eum";
+                                                                    youtubeUri = "voluptas";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "iste";
+                                                                    uri = "https://big-hearted-paddle.net";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "voluptates";
+                                                                    youtubeUri = "mollitia";
                                                                 }};
                                                             }}),
                                                         }};
@@ -2144,48 +2623,48 @@ public class Application {
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "tenetur";
-                                                                    uri = "http://adorable-cruelty.name";
+                                                                    displayText = "ad";
+                                                                    uri = "https://frosty-browsing.net";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "voluptate";
-                                                                    youtubeUri = "unde";
+                                                                    displayText = "ex";
+                                                                    youtubeUri = "quo";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "reiciendis";
-                                                                    uri = "https://talkative-volcano.org";
+                                                                    displayText = "ex";
+                                                                    uri = "http://functional-quilt.com";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "perferendis";
+                                                                    displayText = "molestias";
+                                                                    youtubeUri = "cum";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "aliquid";
+                                                                    uri = "http://messy-occupation.com";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "rerum";
                                                                     youtubeUri = "est";
                                                                 }};
                                                             }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "quidem";
-                                                                    uri = "http://stupendous-pray.name";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "mollitia";
-                                                                    youtubeUri = "veniam";
-                                                                }};
-                                                            }}),
                                                         }};
-                                                        text = "voluptatem";
+                                                        text = "culpa";
                                                     }};
                                                 }};
-                                                questionId = "quisquam";
+                                                questionId = "voluptatem";
                                                 required = false;
                                                 rowQuestion = new RowQuestion() {{
                                                     title = "Dr.";
                                                 }};
                                                 scaleQuestion = new ScaleQuestion() {{
-                                                    high = 97243;
-                                                    highLabel = "atque";
-                                                    low = 442036;
-                                                    lowLabel = "asperiores";
+                                                    high = 889288;
+                                                    highLabel = "architecto";
+                                                    low = 682119;
+                                                    lowLabel = "pariatur";
                                                 }};
                                                 textQuestion = new TextQuestion() {{
                                                     paragraph = false;
@@ -2194,358 +2673,86 @@ public class Application {
                                                     duration = false;
                                                 }};
                                             }}),
-                                        }};
-                                    }};
-                                    questionItem = new QuestionItemInput() {{
-                                        image = new ImageInput() {{
-                                            altText = "totam";
-                                            properties = new MediaProperties() {{
-                                                alignment = "LEFT";
-                                                width = 693957;
-                                            }};
-                                            sourceUri = "maxime";
-                                        }};
-                                        question = new QuestionInput() {{
-                                            choiceQuestion = new ChoiceQuestionInput() {{
-                                                options = new org.openapis.openapi.models.shared.OptionInput[]{{
-                                                    add(new OptionInput() {{
-                                                        goToAction = "NEXT_SECTION";
-                                                        goToSectionId = "amet";
-                                                        image = new ImageInput() {{
-                                                            altText = "assumenda";
-                                                            properties = new MediaProperties() {{
-                                                                alignment = "LEFT";
-                                                                width = 539118;
-                                                            }};
-                                                            sourceUri = "error";
-                                                        }};
-                                                        isOther = false;
-                                                        value = "officiis";
-                                                    }}),
-                                                }};
-                                                shuffle = false;
-                                                type = "DROP_DOWN";
-                                            }};
-                                            dateQuestion = new DateQuestion() {{
-                                                includeTime = false;
-                                                includeYear = false;
-                                            }};
-                                            fileUploadQuestion = new FileUploadQuestion() {{
-                                                folderId = "accusamus";
-                                                maxFileSize = "natus";
-                                                maxFiles = 328303;
-                                                types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                    add("SPREADSHEET"),
-                                                }};
-                                            }};
-                                            grading = new Grading() {{
-                                                correctAnswers = new CorrectAnswers() {{
-                                                    answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
-                                                        add(new CorrectAnswer() {{
-                                                            value = "corrupti";
-                                                        }}),
-                                                        add(new CorrectAnswer() {{
-                                                            value = "at";
-                                                        }}),
-                                                        add(new CorrectAnswer() {{
-                                                            value = "error";
-                                                        }}),
-                                                        add(new CorrectAnswer() {{
-                                                            value = "blanditiis";
-                                                        }}),
-                                                    }};
-                                                }};
-                                                generalFeedback = new Feedback() {{
-                                                    material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "repudiandae";
-                                                                uri = "https://modest-cactus.org";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "dolorum";
-                                                                youtubeUri = "repellendus";
-                                                            }};
-                                                        }}),
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "labore";
-                                                                uri = "https://arctic-tracking.com";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "accusantium";
-                                                                youtubeUri = "beatae";
-                                                            }};
-                                                        }}),
-                                                    }};
-                                                    text = "dolores";
-                                                }};
-                                                pointValue = 316488;
-                                                whenRight = new Feedback() {{
-                                                    material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "velit";
-                                                                uri = "https://negative-election.org";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "consequuntur";
-                                                                youtubeUri = "occaecati";
-                                                            }};
-                                                        }}),
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "officiis";
-                                                                uri = "https://international-dame.org";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "occaecati";
-                                                                youtubeUri = "consequuntur";
-                                                            }};
-                                                        }}),
-                                                    }};
-                                                    text = "fugit";
-                                                }};
-                                                whenWrong = new Feedback() {{
-                                                    material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "quis";
-                                                                uri = "http://pitiful-beginner.info";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "quidem";
-                                                                youtubeUri = "eveniet";
-                                                            }};
-                                                        }}),
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "non";
-                                                                uri = "https://any-hope.com";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "totam";
-                                                                youtubeUri = "quae";
-                                                            }};
-                                                        }}),
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "molestiae";
-                                                                uri = "https://delirious-representation.info";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "necessitatibus";
-                                                                youtubeUri = "ratione";
-                                                            }};
-                                                        }}),
-                                                    }};
-                                                    text = "laborum";
-                                                }};
-                                            }};
-                                            questionId = "distinctio";
-                                            required = false;
-                                            rowQuestion = new RowQuestion() {{
-                                                title = "Ms.";
-                                            }};
-                                            scaleQuestion = new ScaleQuestion() {{
-                                                high = 523006;
-                                                highLabel = "aliquam";
-                                                low = 320565;
-                                                lowLabel = "repellat";
-                                            }};
-                                            textQuestion = new TextQuestion() {{
-                                                paragraph = false;
-                                            }};
-                                            timeQuestion = new TimeQuestion() {{
-                                                duration = false;
-                                            }};
-                                        }};
-                                    }};
-                                    textItem = new java.util.HashMap<String, Object>() {{
-                                        put("corporis", "perspiciatis");
-                                    }};
-                                    title = "Ms.";
-                                    videoItem = new VideoItem() {{
-                                        caption = "mollitia";
-                                        video = new Video() {{
-                                            properties = new MediaProperties() {{
-                                                alignment = "LEFT";
-                                                width = 5189;
-                                            }};
-                                            youtubeUri = "maiores";
-                                        }};
-                                    }};
-                                }};
-                                location = new Location() {{
-                                    index = 970222;
-                                }};
-                            }};
-                            deleteItem = new DeleteItemRequest() {{
-                                location = new Location() {{
-                                    index = 174658;
-                                }};
-                            }};
-                            moveItem = new MoveItemRequest() {{
-                                newLocation = new Location() {{
-                                    index = 663866;
-                                }};
-                                originalLocation = new Location() {{
-                                    index = 327988;
-                                }};
-                            }};
-                            updateFormInfo = new UpdateFormInfoRequestInput() {{
-                                info = new InfoInput() {{
-                                    description = "dolore";
-                                    title = "Miss";
-                                }};
-                                updateMask = "nesciunt";
-                            }};
-                            updateItem = new UpdateItemRequestInput() {{
-                                item = new ItemInput() {{
-                                    description = "quae";
-                                    imageItem = new ImageItemInput() {{
-                                        image = new ImageInput() {{
-                                            altText = "recusandae";
-                                            properties = new MediaProperties() {{
-                                                alignment = "RIGHT";
-                                                width = 309251;
-                                            }};
-                                            sourceUri = "molestiae";
-                                        }};
-                                    }};
-                                    itemId = "ex";
-                                    pageBreakItem = new java.util.HashMap<String, Object>() {{
-                                        put("culpa", "adipisci");
-                                        put("debitis", "laudantium");
-                                    }};
-                                    questionGroupItem = new QuestionGroupItemInput() {{
-                                        grid = new GridInput() {{
-                                            columns = new ChoiceQuestionInput() {{
-                                                options = new org.openapis.openapi.models.shared.OptionInput[]{{
-                                                    add(new OptionInput() {{
-                                                        goToAction = "NEXT_SECTION";
-                                                        goToSectionId = "recusandae";
-                                                        image = new ImageInput() {{
-                                                            altText = "esse";
-                                                            properties = new MediaProperties() {{
-                                                                alignment = "RIGHT";
-                                                                width = 337477;
-                                                            }};
-                                                            sourceUri = "eum";
-                                                        }};
-                                                        isOther = false;
-                                                        value = "reiciendis";
-                                                    }}),
-                                                    add(new OptionInput() {{
-                                                        goToAction = "RESTART_FORM";
-                                                        goToSectionId = "aspernatur";
-                                                        image = new ImageInput() {{
-                                                            altText = "ullam";
-                                                            properties = new MediaProperties() {{
-                                                                alignment = "ALIGNMENT_UNSPECIFIED";
-                                                                width = 657020;
-                                                            }};
-                                                            sourceUri = "nostrum";
-                                                        }};
-                                                        isOther = false;
-                                                        value = "mollitia";
-                                                    }}),
-                                                }};
-                                                shuffle = false;
-                                                type = "CHECKBOX";
-                                            }};
-                                            shuffleQuestions = false;
-                                        }};
-                                        image = new ImageInput() {{
-                                            altText = "possimus";
-                                            properties = new MediaProperties() {{
-                                                alignment = "RIGHT";
-                                                width = 402767;
-                                            }};
-                                            sourceUri = "aliquid";
-                                        }};
-                                        questions = new org.openapis.openapi.models.shared.QuestionInput[]{{
                                             add(new QuestionInput() {{
                                                 choiceQuestion = new ChoiceQuestionInput() {{
                                                     options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                         add(new OptionInput() {{
-                                                            goToAction = "SUBMIT_FORM";
-                                                            goToSectionId = "ullam";
+                                                            goToAction = OptionGoToActionEnum.GO_TO_ACTION_UNSPECIFIED;
+                                                            goToSectionId = "alias";
                                                             image = new ImageInput() {{
-                                                                altText = "in";
+                                                                altText = "deleniti";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "RIGHT";
-                                                                    width = 937636;
-                                                                }};
-                                                                sourceUri = "officia";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "laborum";
-                                                        }}),
-                                                        add(new OptionInput() {{
-                                                            goToAction = "SUBMIT_FORM";
-                                                            goToSectionId = "modi";
-                                                            image = new ImageInput() {{
-                                                                altText = "voluptatibus";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "RIGHT";
-                                                                    width = 889794;
+                                                                    alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                    width = 404244;
                                                                 }};
                                                                 sourceUri = "sapiente";
                                                             }};
                                                             isOther = false;
-                                                            value = "cumque";
-                                                        }}),
-                                                        add(new OptionInput() {{
-                                                            goToAction = "GO_TO_ACTION_UNSPECIFIED";
-                                                            goToSectionId = "rerum";
-                                                            image = new ImageInput() {{
-                                                                altText = "tempora";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "LEFT";
-                                                                    width = 82057;
-                                                                }};
-                                                                sourceUri = "fugit";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "cumque";
-                                                        }}),
-                                                        add(new OptionInput() {{
-                                                            goToAction = "GO_TO_ACTION_UNSPECIFIED";
-                                                            goToSectionId = "perferendis";
-                                                            image = new ImageInput() {{
-                                                                altText = "velit";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "ALIGNMENT_UNSPECIFIED";
-                                                                    width = 432281;
-                                                                }};
-                                                                sourceUri = "eius";
-                                                            }};
-                                                            isOther = false;
                                                             value = "rem";
+                                                        }}),
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.SUBMIT_FORM;
+                                                            goToSectionId = "nemo";
+                                                            image = new ImageInput() {{
+                                                                altText = "asperiores";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 355225;
+                                                                }};
+                                                                sourceUri = "perferendis";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "illum";
+                                                        }}),
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                            goToSectionId = "impedit";
+                                                            image = new ImageInput() {{
+                                                                altText = "quibusdam";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                                    width = 373216;
+                                                                }};
+                                                                sourceUri = "culpa";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "dolor";
+                                                        }}),
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.NEXT_SECTION;
+                                                            goToSectionId = "inventore";
+                                                            image = new ImageInput() {{
+                                                                altText = "deleniti";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 274575;
+                                                                }};
+                                                                sourceUri = "dolor";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "consequatur";
                                                         }}),
                                                     }};
                                                     shuffle = false;
-                                                    type = "DROP_DOWN";
+                                                    type = ChoiceQuestionTypeEnum.CHOICE_TYPE_UNSPECIFIED;
                                                 }};
                                                 dateQuestion = new DateQuestion() {{
                                                     includeTime = false;
                                                     includeYear = false;
                                                 }};
                                                 fileUploadQuestion = new FileUploadQuestion() {{
-                                                    folderId = "impedit";
-                                                    maxFileSize = "eos";
-                                                    maxFiles = 958741;
+                                                    folderId = "sit";
+                                                    maxFileSize = "modi";
+                                                    maxFiles = 144286;
                                                     types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                        add("ANY"),
-                                                        add("PRESENTATION"),
+                                                        add(FileUploadQuestionTypesEnum.DRAWING),
                                                     }};
                                                 }};
                                                 grading = new Grading() {{
                                                     correctAnswers = new CorrectAnswers() {{
                                                         answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
                                                             add(new CorrectAnswer() {{
-                                                                value = "cupiditate";
+                                                                value = "dolor";
                                                             }}),
                                                         }};
                                                     }};
@@ -2553,99 +2760,119 @@ public class Application {
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "earum";
-                                                                    uri = "https://warlike-station.com";
+                                                                    displayText = "ipsam";
+                                                                    uri = "http://average-middleman.org";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "earum";
-                                                                    youtubeUri = "perspiciatis";
+                                                                    displayText = "impedit";
+                                                                    youtubeUri = "officiis";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "maiores";
-                                                                    uri = "https://icky-seal.info";
+                                                                    displayText = "esse";
+                                                                    uri = "https://crisp-fairness.biz";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "dolorem";
-                                                                    youtubeUri = "fugit";
+                                                                    displayText = "expedita";
+                                                                    youtubeUri = "eum";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "cumque";
-                                                                    uri = "https://deserted-piano.org";
+                                                                    displayText = "vel";
+                                                                    uri = "https://formal-fisting.com";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "nulla";
-                                                                    youtubeUri = "consequatur";
+                                                                    displayText = "porro";
+                                                                    youtubeUri = "autem";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "nobis";
+                                                                    uri = "http://vengeful-chub.com";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "exercitationem";
+                                                                    youtubeUri = "necessitatibus";
                                                                 }};
                                                             }}),
                                                         }};
                                                         text = "quasi";
                                                     }};
-                                                    pointValue = 90233;
+                                                    pointValue = 392569;
                                                     whenRight = new Feedback() {{
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "natus";
-                                                                    uri = "https://hidden-deal.com";
+                                                                    displayText = "vero";
+                                                                    uri = "https://remarkable-concern.org";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "magni";
-                                                                    youtubeUri = "doloribus";
+                                                                    displayText = "repudiandae";
+                                                                    youtubeUri = "optio";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "nulla";
-                                                                    uri = "https://babyish-dissemination.info";
+                                                                    displayText = "occaecati";
+                                                                    uri = "http://jolly-latitude.name";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "molestiae";
-                                                                    youtubeUri = "dicta";
+                                                                    displayText = "voluptas";
+                                                                    youtubeUri = "numquam";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "nemo";
+                                                                    uri = "https://faint-carnation.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "nesciunt";
+                                                                    youtubeUri = "fuga";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "laudantium";
+                                                                    uri = "http://bumpy-loophole.org";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "dicta";
+                                                                    youtubeUri = "nisi";
                                                                 }};
                                                             }}),
                                                         }};
-                                                        text = "iusto";
+                                                        text = "consequuntur";
                                                     }};
                                                     whenWrong = new Feedback() {{
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "praesentium";
-                                                                    uri = "https://wicked-hellcat.com";
+                                                                    displayText = "aperiam";
+                                                                    uri = "https://wild-retrospectivity.com";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "fugiat";
-                                                                    youtubeUri = "doloremque";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "dicta";
-                                                                    uri = "http://fat-infant.info";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "consectetur";
-                                                                    youtubeUri = "aliquid";
+                                                                    displayText = "omnis";
+                                                                    youtubeUri = "eos";
                                                                 }};
                                                             }}),
                                                         }};
-                                                        text = "ipsa";
+                                                        text = "occaecati";
                                                     }};
                                                 }};
-                                                questionId = "laborum";
+                                                questionId = "iste";
                                                 required = false;
                                                 rowQuestion = new RowQuestion() {{
                                                     title = "Mr.";
                                                 }};
                                                 scaleQuestion = new ScaleQuestion() {{
-                                                    high = 344718;
-                                                    highLabel = "fugiat";
-                                                    low = 713767;
-                                                    lowLabel = "aliquid";
+                                                    high = 81369;
+                                                    highLabel = "fuga";
+                                                    low = 881897;
+                                                    lowLabel = "voluptatibus";
                                                 }};
                                                 textQuestion = new TextQuestion() {{
                                                     paragraph = false;
@@ -2658,66 +2885,86 @@ public class Application {
                                     }};
                                     questionItem = new QuestionItemInput() {{
                                         image = new ImageInput() {{
-                                            altText = "officia";
+                                            altText = "distinctio";
                                             properties = new MediaProperties() {{
-                                                alignment = "LEFT";
-                                                width = 399161;
+                                                alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                width = 966390;
                                             }};
-                                            sourceUri = "perferendis";
+                                            sourceUri = "minima";
                                         }};
                                         question = new QuestionInput() {{
                                             choiceQuestion = new ChoiceQuestionInput() {{
                                                 options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                     add(new OptionInput() {{
-                                                        goToAction = "NEXT_SECTION";
-                                                        goToSectionId = "iste";
+                                                        goToAction = OptionGoToActionEnum.SUBMIT_FORM;
+                                                        goToSectionId = "magnam";
                                                         image = new ImageInput() {{
-                                                            altText = "id";
+                                                            altText = "temporibus";
                                                             properties = new MediaProperties() {{
-                                                                alignment = "ALIGNMENT_UNSPECIFIED";
-                                                                width = 625358;
+                                                                alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                                width = 415280;
                                                             }};
-                                                            sourceUri = "possimus";
+                                                            sourceUri = "itaque";
                                                         }};
                                                         isOther = false;
-                                                        value = "voluptates";
+                                                        value = "commodi";
                                                     }}),
                                                     add(new OptionInput() {{
-                                                        goToAction = "RESTART_FORM";
-                                                        goToSectionId = "laborum";
+                                                        goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                        goToSectionId = "earum";
                                                         image = new ImageInput() {{
-                                                            altText = "libero";
+                                                            altText = "modi";
                                                             properties = new MediaProperties() {{
-                                                                alignment = "LEFT";
-                                                                width = 536923;
+                                                                alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                                width = 877399;
+                                                            }};
+                                                            sourceUri = "voluptatem";
+                                                        }};
+                                                        isOther = false;
+                                                        value = "ipsam";
+                                                    }}),
+                                                    add(new OptionInput() {{
+                                                        goToAction = OptionGoToActionEnum.NEXT_SECTION;
+                                                        goToSectionId = "alias";
+                                                        image = new ImageInput() {{
+                                                            altText = "quasi";
+                                                            properties = new MediaProperties() {{
+                                                                alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                width = 978548;
                                                             }};
                                                             sourceUri = "enim";
                                                         }};
                                                         isOther = false;
-                                                        value = "vitae";
+                                                        value = "sint";
                                                     }}),
                                                 }};
                                                 shuffle = false;
-                                                type = "DROP_DOWN";
+                                                type = ChoiceQuestionTypeEnum.DROP_DOWN;
                                             }};
                                             dateQuestion = new DateQuestion() {{
                                                 includeTime = false;
                                                 includeYear = false;
                                             }};
                                             fileUploadQuestion = new FileUploadQuestion() {{
-                                                folderId = "ex";
-                                                maxFileSize = "quo";
-                                                maxFiles = 405373;
+                                                folderId = "deserunt";
+                                                maxFileSize = "esse";
+                                                maxFiles = 364463;
                                                 types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                    add("PRESENTATION"),
-                                                    add("IMAGE"),
+                                                    add(FileUploadQuestionTypesEnum.PDF),
+                                                    add(FileUploadQuestionTypesEnum.PRESENTATION),
                                                 }};
                                             }};
                                             grading = new Grading() {{
                                                 correctAnswers = new CorrectAnswers() {{
                                                     answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
                                                         add(new CorrectAnswer() {{
-                                                            value = "molestias";
+                                                            value = "accusamus";
+                                                        }}),
+                                                        add(new CorrectAnswer() {{
+                                                            value = "impedit";
+                                                        }}),
+                                                        add(new CorrectAnswer() {{
+                                                            value = "hic";
                                                         }}),
                                                     }};
                                                 }};
@@ -2725,89 +2972,99 @@ public class Application {
                                                     material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "aliquid";
-                                                                uri = "http://messy-occupation.com";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "rerum";
-                                                                youtubeUri = "est";
-                                                            }};
-                                                        }}),
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "culpa";
-                                                                uri = "http://well-off-tax.com";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "fuga";
-                                                                youtubeUri = "pariatur";
-                                                            }};
-                                                        }}),
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "debitis";
-                                                                uri = "http://able-makeup.org";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "ex";
-                                                                youtubeUri = "sapiente";
-                                                            }};
-                                                        }}),
-                                                    }};
-                                                    text = "rem";
-                                                }};
-                                                pointValue = 796320;
-                                                whenRight = new Feedback() {{
-                                                    material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
                                                                 displayText = "asperiores";
-                                                                uri = "http://gross-album.org";
+                                                                uri = "http://healthy-tenor.org";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "totam";
+                                                                displayText = "quae";
+                                                                youtubeUri = "minus";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "fuga";
+                                                                uri = "https://embellished-decrease.name";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "ipsum";
                                                                 youtubeUri = "impedit";
                                                             }};
                                                         }}),
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "quibusdam";
-                                                                uri = "https://harmonious-parenthesis.biz";
+                                                                displayText = "magni";
+                                                                uri = "https://valuable-ranger.biz";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "aliquam";
-                                                                youtubeUri = "inventore";
+                                                                displayText = "iusto";
+                                                                youtubeUri = "voluptate";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "sequi";
+                                                                uri = "http://disguised-screamer.name";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "quibusdam";
+                                                                youtubeUri = "iure";
                                                             }};
                                                         }}),
                                                     }};
-                                                    text = "deleniti";
+                                                    text = "odit";
+                                                }};
+                                                pointValue = 974990;
+                                                whenRight = new Feedback() {{
+                                                    material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "magnam";
+                                                                uri = "https://blond-snake.net";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "architecto";
+                                                                youtubeUri = "voluptatibus";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "quia";
+                                                                uri = "https://fragrant-definition.com";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "accusantium";
+                                                                youtubeUri = "vel";
+                                                            }};
+                                                        }}),
+                                                    }};
+                                                    text = "ea";
                                                 }};
                                                 whenWrong = new Feedback() {{
                                                     material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "tempora";
-                                                                uri = "http://acidic-bower.com";
+                                                                displayText = "vero";
+                                                                uri = "https://indolent-defender.biz";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "modi";
-                                                                youtubeUri = "fugit";
+                                                                displayText = "perspiciatis";
+                                                                youtubeUri = "earum";
                                                             }};
                                                         }}),
                                                     }};
-                                                    text = "ab";
+                                                    text = "dicta";
                                                 }};
                                             }};
-                                            questionId = "laudantium";
+                                            questionId = "impedit";
                                             required = false;
                                             rowQuestion = new RowQuestion() {{
-                                                title = "Mr.";
+                                                title = "Dr.";
                                             }};
                                             scaleQuestion = new ScaleQuestion() {{
-                                                high = 222658;
-                                                highLabel = "fugiat";
-                                                low = 369490;
-                                                lowLabel = "consequuntur";
+                                                high = 610987;
+                                                highLabel = "itaque";
+                                                low = 2677;
+                                                lowLabel = "nisi";
                                             }};
                                             textQuestion = new TextQuestion() {{
                                                 paragraph = false;
@@ -2818,24 +3075,27 @@ public class Application {
                                         }};
                                     }};
                                     textItem = new java.util.HashMap<String, Object>() {{
-                                        put("quas", "eveniet");
+                                        put("velit", "laborum");
+                                        put("non", "dolor");
+                                        put("iusto", "sit");
+                                        put("doloremque", "consequatur");
                                     }};
                                     title = "Miss";
                                     videoItem = new VideoItem() {{
-                                        caption = "officiis";
+                                        caption = "recusandae";
                                         video = new Video() {{
                                             properties = new MediaProperties() {{
-                                                alignment = "LEFT";
-                                                width = 897277;
+                                                alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                width = 693153;
                                             }};
-                                            youtubeUri = "sed";
+                                            youtubeUri = "voluptas";
                                         }};
                                     }};
                                 }};
                                 location = new Location() {{
-                                    index = 332191;
+                                    index = 705148;
                                 }};
-                                updateMask = "nesciunt";
+                                updateMask = "placeat";
                             }};
                             updateSettings = new UpdateSettingsRequest() {{
                                 settings = new FormSettings() {{
@@ -2843,466 +3103,133 @@ public class Application {
                                         isQuiz = false;
                                     }};
                                 }};
-                                updateMask = "expedita";
+                                updateMask = "perspiciatis";
                             }};
                         }}),
                         add(new RequestInput() {{
                             createItem = new CreateItemRequestInput() {{
                                 item = new ItemInput() {{
-                                    description = "eum";
+                                    description = "expedita";
                                     imageItem = new ImageItemInput() {{
                                         image = new ImageInput() {{
-                                            altText = "vel";
+                                            altText = "deleniti";
                                             properties = new MediaProperties() {{
-                                                alignment = "RIGHT";
-                                                width = 301692;
+                                                alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                width = 455579;
                                             }};
-                                            sourceUri = "exercitationem";
+                                            sourceUri = "ullam";
                                         }};
                                     }};
-                                    itemId = "ab";
+                                    itemId = "unde";
                                     pageBreakItem = new java.util.HashMap<String, Object>() {{
-                                        put("autem", "nobis");
-                                        put("laboriosam", "recusandae");
-                                        put("consequuntur", "voluptatem");
-                                        put("exercitationem", "necessitatibus");
+                                        put("animi", "impedit");
+                                        put("ipsam", "corporis");
+                                        put("est", "error");
+                                        put("esse", "labore");
                                     }};
                                     questionGroupItem = new QuestionGroupItemInput() {{
                                         grid = new GridInput() {{
                                             columns = new ChoiceQuestionInput() {{
                                                 options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                     add(new OptionInput() {{
-                                                        goToAction = "NEXT_SECTION";
-                                                        goToSectionId = "at";
+                                                        goToAction = OptionGoToActionEnum.SUBMIT_FORM;
+                                                        goToSectionId = "consectetur";
                                                         image = new ImageInput() {{
-                                                            altText = "vero";
+                                                            altText = "vitae";
                                                             properties = new MediaProperties() {{
-                                                                alignment = "RIGHT";
-                                                                width = 690785;
+                                                                alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                width = 212434;
                                                             }};
-                                                            sourceUri = "sequi";
+                                                            sourceUri = "ad";
                                                         }};
                                                         isOther = false;
-                                                        value = "doloribus";
+                                                        value = "qui";
                                                     }}),
                                                 }};
                                                 shuffle = false;
-                                                type = "DROP_DOWN";
+                                                type = ChoiceQuestionTypeEnum.CHECKBOX;
                                             }};
                                             shuffleQuestions = false;
                                         }};
                                         image = new ImageInput() {{
-                                            altText = "optio";
+                                            altText = "ex";
                                             properties = new MediaProperties() {{
-                                                alignment = "RIGHT";
-                                                width = 364544;
+                                                alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                width = 745233;
                                             }};
-                                            sourceUri = "voluptate";
+                                            sourceUri = "libero";
                                         }};
                                         questions = new org.openapis.openapi.models.shared.QuestionInput[]{{
                                             add(new QuestionInput() {{
                                                 choiceQuestion = new ChoiceQuestionInput() {{
                                                     options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                         add(new OptionInput() {{
-                                                            goToAction = "NEXT_SECTION";
-                                                            goToSectionId = "numquam";
+                                                            goToAction = OptionGoToActionEnum.NEXT_SECTION;
+                                                            goToSectionId = "fugit";
                                                             image = new ImageInput() {{
-                                                                altText = "nemo";
+                                                                altText = "alias";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "RIGHT";
-                                                                    width = 260904;
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 425402;
                                                                 }};
-                                                                sourceUri = "aspernatur";
+                                                                sourceUri = "quae";
                                                             }};
                                                             isOther = false;
-                                                            value = "ducimus";
+                                                            value = "quae";
                                                         }}),
                                                         add(new OptionInput() {{
-                                                            goToAction = "GO_TO_ACTION_UNSPECIFIED";
-                                                            goToSectionId = "fuga";
+                                                            goToAction = OptionGoToActionEnum.NEXT_SECTION;
+                                                            goToSectionId = "neque";
                                                             image = new ImageInput() {{
-                                                                altText = "laudantium";
+                                                                altText = "exercitationem";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "LEFT";
-                                                                    width = 97493;
+                                                                    alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                    width = 88248;
                                                                 }};
-                                                                sourceUri = "rem";
+                                                                sourceUri = "ipsum";
                                                             }};
                                                             isOther = false;
-                                                            value = "fugiat";
+                                                            value = "unde";
                                                         }}),
                                                         add(new OptionInput() {{
-                                                            goToAction = "GO_TO_ACTION_UNSPECIFIED";
-                                                            goToSectionId = "nisi";
+                                                            goToAction = OptionGoToActionEnum.SUBMIT_FORM;
+                                                            goToSectionId = "distinctio";
                                                             image = new ImageInput() {{
-                                                                altText = "consequuntur";
+                                                                altText = "maxime";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "ALIGNMENT_UNSPECIFIED";
-                                                                    width = 46806;
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 159146;
                                                                 }};
-                                                                sourceUri = "cupiditate";
+                                                                sourceUri = "nostrum";
                                                             }};
                                                             isOther = false;
-                                                            value = "reiciendis";
+                                                            value = "omnis";
                                                         }}),
                                                     }};
                                                     shuffle = false;
-                                                    type = "CHECKBOX";
+                                                    type = ChoiceQuestionTypeEnum.CHECKBOX;
                                                 }};
                                                 dateQuestion = new DateQuestion() {{
                                                     includeTime = false;
                                                     includeYear = false;
                                                 }};
                                                 fileUploadQuestion = new FileUploadQuestion() {{
-                                                    folderId = "alias";
-                                                    maxFileSize = "omnis";
-                                                    maxFiles = 178580;
+                                                    folderId = "dicta";
+                                                    maxFileSize = "id";
+                                                    maxFiles = 727888;
                                                     types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                        add("PDF"),
-                                                        add("ANY"),
-                                                        add("FILE_TYPE_UNSPECIFIED"),
+                                                        add(FileUploadQuestionTypesEnum.PDF),
+                                                        add(FileUploadQuestionTypesEnum.DRAWING),
+                                                        add(FileUploadQuestionTypesEnum.VIDEO),
+                                                        add(FileUploadQuestionTypesEnum.FILE_TYPE_UNSPECIFIED),
                                                     }};
                                                 }};
                                                 grading = new Grading() {{
                                                     correctAnswers = new CorrectAnswers() {{
                                                         answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
                                                             add(new CorrectAnswer() {{
-                                                                value = "accusamus";
+                                                                value = "ipsa";
                                                             }}),
-                                                            add(new CorrectAnswer() {{
-                                                                value = "voluptatibus";
-                                                            }}),
-                                                            add(new CorrectAnswer() {{
-                                                                value = "distinctio";
-                                                            }}),
-                                                        }};
-                                                    }};
-                                                    generalFeedback = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "delectus";
-                                                                    uri = "http://lumbering-sibling.biz";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "temporibus";
-                                                                    youtubeUri = "quos";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "commodi";
-                                                                    uri = "https://impassioned-local.org";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "modi";
-                                                                    youtubeUri = "nam";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "vero";
-                                                                    uri = "http://harmful-heron.com";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "quasi";
-                                                                    youtubeUri = "non";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "maiores";
-                                                    }};
-                                                    pointValue = 318233;
-                                                    whenRight = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "nulla";
-                                                                    uri = "https://joyous-fourths.info";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "est";
-                                                                    youtubeUri = "quis";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "sint";
-                                                                    uri = "https://soggy-usher.org";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "asperiores";
-                                                                    youtubeUri = "ex";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "voluptas";
-                                                                    uri = "https://whole-banyan.net";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "fuga";
-                                                                    youtubeUri = "laborum";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "consectetur";
-                                                    }};
-                                                    whenWrong = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "atque";
-                                                                    uri = "http://sociable-class.net";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "repudiandae";
-                                                                    youtubeUri = "nam";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "dolore";
-                                                    }};
-                                                }};
-                                                questionId = "iusto";
-                                                required = false;
-                                                rowQuestion = new RowQuestion() {{
-                                                    title = "Ms.";
-                                                }};
-                                                scaleQuestion = new ScaleQuestion() {{
-                                                    high = 194023;
-                                                    highLabel = "dignissimos";
-                                                    low = 205566;
-                                                    lowLabel = "quo";
-                                                }};
-                                                textQuestion = new TextQuestion() {{
-                                                    paragraph = false;
-                                                }};
-                                                timeQuestion = new TimeQuestion() {{
-                                                    duration = false;
-                                                }};
-                                            }}),
-                                            add(new QuestionInput() {{
-                                                choiceQuestion = new ChoiceQuestionInput() {{
-                                                    options = new org.openapis.openapi.models.shared.OptionInput[]{{
-                                                        add(new OptionInput() {{
-                                                            goToAction = "SUBMIT_FORM";
-                                                            goToSectionId = "iure";
-                                                            image = new ImageInput() {{
-                                                                altText = "odit";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "CENTER";
-                                                                    width = 426904;
-                                                                }};
-                                                                sourceUri = "magnam";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "quibusdam";
-                                                        }}),
-                                                        add(new OptionInput() {{
-                                                            goToAction = "GO_TO_ACTION_UNSPECIFIED";
-                                                            goToSectionId = "facere";
-                                                            image = new ImageInput() {{
-                                                                altText = "libero";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "ALIGNMENT_UNSPECIFIED";
-                                                                    width = 975425;
-                                                                }};
-                                                                sourceUri = "quia";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "porro";
-                                                        }}),
-                                                        add(new OptionInput() {{
-                                                            goToAction = "NEXT_SECTION";
-                                                            goToSectionId = "velit";
-                                                            image = new ImageInput() {{
-                                                                altText = "illo";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "ALIGNMENT_UNSPECIFIED";
-                                                                    width = 424663;
-                                                                }};
-                                                                sourceUri = "ea";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "beatae";
-                                                        }}),
-                                                    }};
-                                                    shuffle = false;
-                                                    type = "DROP_DOWN";
-                                                }};
-                                                dateQuestion = new DateQuestion() {{
-                                                    includeTime = false;
-                                                    includeYear = false;
-                                                }};
-                                                fileUploadQuestion = new FileUploadQuestion() {{
-                                                    folderId = "excepturi";
-                                                    maxFileSize = "eum";
-                                                    maxFiles = 246557;
-                                                    types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                        add("DRAWING"),
-                                                        add("AUDIO"),
-                                                    }};
-                                                }};
-                                                grading = new Grading() {{
-                                                    correctAnswers = new CorrectAnswers() {{
-                                                        answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
-                                                            add(new CorrectAnswer() {{
-                                                                value = "impedit";
-                                                            }}),
-                                                        }};
-                                                    }};
-                                                    generalFeedback = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "iste";
-                                                                    uri = "https://adorable-goodbye.org";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "velit";
-                                                                    youtubeUri = "laborum";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "non";
-                                                                    uri = "http://left-amber.com";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "consequatur";
-                                                                    youtubeUri = "officia";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "recusandae";
-                                                                    uri = "http://required-gasket.net";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "placeat";
-                                                                    youtubeUri = "perspiciatis";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "expedita";
-                                                                    uri = "https://weird-income.info";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "unde";
-                                                                    youtubeUri = "necessitatibus";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "animi";
-                                                    }};
-                                                    pointValue = 769967;
-                                                    whenRight = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "corporis";
-                                                                    uri = "https://petty-indication.biz";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "veritatis";
-                                                                    youtubeUri = "vero";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "consectetur";
-                                                                    uri = "http://bogus-counsel.biz";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "qui";
-                                                                    youtubeUri = "iste";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "ex";
-                                                    }};
-                                                    whenWrong = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "soluta";
-                                                                    uri = "https://mellow-pony.info";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "fugit";
-                                                                    youtubeUri = "alias";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "magni";
-                                                                    uri = "http://belated-bandolier.biz";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "neque";
-                                                                    youtubeUri = "exercitationem";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "itaque";
-                                                    }};
-                                                }};
-                                                questionId = "et";
-                                                required = false;
-                                                rowQuestion = new RowQuestion() {{
-                                                    title = "Mrs.";
-                                                }};
-                                                scaleQuestion = new ScaleQuestion() {{
-                                                    high = 602229;
-                                                    highLabel = "nulla";
-                                                    low = 714376;
-                                                    lowLabel = "maxime";
-                                                }};
-                                                textQuestion = new TextQuestion() {{
-                                                    paragraph = false;
-                                                }};
-                                                timeQuestion = new TimeQuestion() {{
-                                                    duration = false;
-                                                }};
-                                            }}),
-                                            add(new QuestionInput() {{
-                                                choiceQuestion = new ChoiceQuestionInput() {{
-                                                    options = new org.openapis.openapi.models.shared.OptionInput[]{{
-                                                        add(new OptionInput() {{
-                                                            goToAction = "GO_TO_ACTION_UNSPECIFIED";
-                                                            goToSectionId = "nostrum";
-                                                            image = new ImageInput() {{
-                                                                altText = "omnis";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "RIGHT";
-                                                                    width = 115661;
-                                                                }};
-                                                                sourceUri = "id";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "libero";
-                                                        }}),
-                                                    }};
-                                                    shuffle = false;
-                                                    type = "DROP_DOWN";
-                                                }};
-                                                dateQuestion = new DateQuestion() {{
-                                                    includeTime = false;
-                                                    includeYear = false;
-                                                }};
-                                                fileUploadQuestion = new FileUploadQuestion() {{
-                                                    folderId = "officia";
-                                                    maxFileSize = "quos";
-                                                    maxFiles = 811939;
-                                                    types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                        add("SPREADSHEET"),
-                                                    }};
-                                                }};
-                                                grading = new Grading() {{
-                                                    correctAnswers = new CorrectAnswers() {{
-                                                        answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
                                                             add(new CorrectAnswer() {{
                                                                 value = "voluptates";
                                                             }}),
@@ -3433,81 +3360,399 @@ public class Application {
                                                     duration = false;
                                                 }};
                                             }}),
+                                            add(new QuestionInput() {{
+                                                choiceQuestion = new ChoiceQuestionInput() {{
+                                                    options = new org.openapis.openapi.models.shared.OptionInput[]{{
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.NEXT_SECTION;
+                                                            goToSectionId = "minus";
+                                                            image = new ImageInput() {{
+                                                                altText = "eum";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                                    width = 357347;
+                                                                }};
+                                                                sourceUri = "magnam";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "voluptates";
+                                                        }}),
+                                                    }};
+                                                    shuffle = false;
+                                                    type = ChoiceQuestionTypeEnum.DROP_DOWN;
+                                                }};
+                                                dateQuestion = new DateQuestion() {{
+                                                    includeTime = false;
+                                                    includeYear = false;
+                                                }};
+                                                fileUploadQuestion = new FileUploadQuestion() {{
+                                                    folderId = "tempore";
+                                                    maxFileSize = "aperiam";
+                                                    maxFiles = 727547;
+                                                    types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
+                                                        add(FileUploadQuestionTypesEnum.DOCUMENT),
+                                                    }};
+                                                }};
+                                                grading = new Grading() {{
+                                                    correctAnswers = new CorrectAnswers() {{
+                                                        answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
+                                                            add(new CorrectAnswer() {{
+                                                                value = "occaecati";
+                                                            }}),
+                                                            add(new CorrectAnswer() {{
+                                                                value = "voluptas";
+                                                            }}),
+                                                            add(new CorrectAnswer() {{
+                                                                value = "quo";
+                                                            }}),
+                                                        }};
+                                                    }};
+                                                    generalFeedback = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "minus";
+                                                                    uri = "https://grand-player.net";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "delectus";
+                                                                    youtubeUri = "tempore";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "vero";
+                                                    }};
+                                                    pointValue = 141506;
+                                                    whenRight = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "pariatur";
+                                                                    uri = "http://instructive-ash.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "minima";
+                                                                    youtubeUri = "in";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "ducimus";
+                                                                    uri = "https://dear-overcharge.com";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "ducimus";
+                                                                    youtubeUri = "voluptate";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "pariatur";
+                                                                    uri = "https://plastic-sac.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "quaerat";
+                                                                    youtubeUri = "commodi";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "officiis";
+                                                                    uri = "https://rewarding-first.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "dolorem";
+                                                                    youtubeUri = "modi";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "ipsa";
+                                                    }};
+                                                    whenWrong = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "vero";
+                                                                    uri = "http://utilized-rescue.com";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "earum";
+                                                                    youtubeUri = "veniam";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "animi";
+                                                                    uri = "http://scientific-burial.com";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "necessitatibus";
+                                                                    youtubeUri = "nobis";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "ipsa";
+                                                                    uri = "http://woozy-blast.com";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "laboriosam";
+                                                                    youtubeUri = "pariatur";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "libero";
+                                                    }};
+                                                }};
+                                                questionId = "excepturi";
+                                                required = false;
+                                                rowQuestion = new RowQuestion() {{
+                                                    title = "Ms.";
+                                                }};
+                                                scaleQuestion = new ScaleQuestion() {{
+                                                    high = 367917;
+                                                    highLabel = "aliquam";
+                                                    low = 342342;
+                                                    lowLabel = "doloribus";
+                                                }};
+                                                textQuestion = new TextQuestion() {{
+                                                    paragraph = false;
+                                                }};
+                                                timeQuestion = new TimeQuestion() {{
+                                                    duration = false;
+                                                }};
+                                            }}),
+                                            add(new QuestionInput() {{
+                                                choiceQuestion = new ChoiceQuestionInput() {{
+                                                    options = new org.openapis.openapi.models.shared.OptionInput[]{{
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                            goToSectionId = "enim";
+                                                            image = new ImageInput() {{
+                                                                altText = "hic";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                                    width = 559774;
+                                                                }};
+                                                                sourceUri = "totam";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "molestias";
+                                                        }}),
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.NEXT_SECTION;
+                                                            goToSectionId = "eaque";
+                                                            image = new ImageInput() {{
+                                                                altText = "saepe";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 554645;
+                                                                }};
+                                                                sourceUri = "iste";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "assumenda";
+                                                        }}),
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                            goToSectionId = "libero";
+                                                            image = new ImageInput() {{
+                                                                altText = "velit";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 963976;
+                                                                }};
+                                                                sourceUri = "impedit";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "cum";
+                                                        }}),
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.GO_TO_ACTION_UNSPECIFIED;
+                                                            goToSectionId = "adipisci";
+                                                            image = new ImageInput() {{
+                                                                altText = "saepe";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                                    width = 42924;
+                                                                }};
+                                                                sourceUri = "quis";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "veniam";
+                                                        }}),
+                                                    }};
+                                                    shuffle = false;
+                                                    type = ChoiceQuestionTypeEnum.CHECKBOX;
+                                                }};
+                                                dateQuestion = new DateQuestion() {{
+                                                    includeTime = false;
+                                                    includeYear = false;
+                                                }};
+                                                fileUploadQuestion = new FileUploadQuestion() {{
+                                                    folderId = "architecto";
+                                                    maxFileSize = "cupiditate";
+                                                    maxFiles = 475589;
+                                                    types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
+                                                        add(FileUploadQuestionTypesEnum.VIDEO),
+                                                        add(FileUploadQuestionTypesEnum.DOCUMENT),
+                                                        add(FileUploadQuestionTypesEnum.DOCUMENT),
+                                                        add(FileUploadQuestionTypesEnum.AUDIO),
+                                                    }};
+                                                }};
+                                                grading = new Grading() {{
+                                                    correctAnswers = new CorrectAnswers() {{
+                                                        answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
+                                                            add(new CorrectAnswer() {{
+                                                                value = "asperiores";
+                                                            }}),
+                                                        }};
+                                                    }};
+                                                    generalFeedback = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "consequuntur";
+                                                                    uri = "https://magnificent-cayenne.org";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "amet";
+                                                                    youtubeUri = "exercitationem";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "ab";
+                                                                    uri = "http://rough-reef.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "voluptatibus";
+                                                                    youtubeUri = "quaerat";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "blanditiis";
+                                                    }};
+                                                    pointValue = 718627;
+                                                    whenRight = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "quis";
+                                                                    uri = "http://second-shawl.net";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "facilis";
+                                                                    youtubeUri = "ipsum";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "ad";
+                                                                    uri = "https://winged-circle.org";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "labore";
+                                                                    youtubeUri = "rerum";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "eos";
+                                                    }};
+                                                    whenWrong = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "nostrum";
+                                                                    uri = "http://lawful-pitcher.name";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "eligendi";
+                                                                    youtubeUri = "fugiat";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "unde";
+                                                                    uri = "https://livid-creationist.com";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "error";
+                                                                    youtubeUri = "porro";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "vitae";
+                                                    }};
+                                                }};
+                                                questionId = "dignissimos";
+                                                required = false;
+                                                rowQuestion = new RowQuestion() {{
+                                                    title = "Ms.";
+                                                }};
+                                                scaleQuestion = new ScaleQuestion() {{
+                                                    high = 854115;
+                                                    highLabel = "ad";
+                                                    low = 134818;
+                                                    lowLabel = "enim";
+                                                }};
+                                                textQuestion = new TextQuestion() {{
+                                                    paragraph = false;
+                                                }};
+                                                timeQuestion = new TimeQuestion() {{
+                                                    duration = false;
+                                                }};
+                                            }}),
                                         }};
                                     }};
                                     questionItem = new QuestionItemInput() {{
                                         image = new ImageInput() {{
-                                            altText = "neque";
+                                            altText = "delectus";
                                             properties = new MediaProperties() {{
-                                                alignment = "LEFT";
-                                                width = 796397;
+                                                alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                width = 491201;
                                             }};
-                                            sourceUri = "eum";
+                                            sourceUri = "libero";
                                         }};
                                         question = new QuestionInput() {{
                                             choiceQuestion = new ChoiceQuestionInput() {{
                                                 options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                     add(new OptionInput() {{
-                                                        goToAction = "NEXT_SECTION";
-                                                        goToSectionId = "magnam";
+                                                        goToAction = OptionGoToActionEnum.GO_TO_ACTION_UNSPECIFIED;
+                                                        goToSectionId = "incidunt";
                                                         image = new ImageInput() {{
-                                                            altText = "voluptates";
+                                                            altText = "accusamus";
                                                             properties = new MediaProperties() {{
-                                                                alignment = "CENTER";
-                                                                width = 731744;
+                                                                alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                width = 734814;
                                                             }};
-                                                            sourceUri = "aperiam";
+                                                            sourceUri = "veniam";
                                                         }};
                                                         isOther = false;
-                                                        value = "libero";
-                                                    }}),
-                                                    add(new OptionInput() {{
-                                                        goToAction = "GO_TO_ACTION_UNSPECIFIED";
-                                                        goToSectionId = "labore";
-                                                        image = new ImageInput() {{
-                                                            altText = "totam";
-                                                            properties = new MediaProperties() {{
-                                                                alignment = "RIGHT";
-                                                                width = 375994;
-                                                            }};
-                                                            sourceUri = "quo";
-                                                        }};
-                                                        isOther = false;
-                                                        value = "velit";
+                                                        value = "eos";
                                                     }}),
                                                 }};
                                                 shuffle = false;
-                                                type = "DROP_DOWN";
+                                                type = ChoiceQuestionTypeEnum.DROP_DOWN;
                                             }};
                                             dateQuestion = new DateQuestion() {{
                                                 includeTime = false;
                                                 includeYear = false;
                                             }};
                                             fileUploadQuestion = new FileUploadQuestion() {{
-                                                folderId = "fuga";
-                                                maxFileSize = "nostrum";
-                                                maxFiles = 669237;
+                                                folderId = "earum";
+                                                maxFileSize = "reprehenderit";
+                                                maxFiles = 506312;
                                                 types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                    add("AUDIO"),
-                                                    add("IMAGE"),
-                                                    add("VIDEO"),
-                                                    add("ANY"),
+                                                    add(FileUploadQuestionTypesEnum.AUDIO),
+                                                    add(FileUploadQuestionTypesEnum.IMAGE),
                                                 }};
                                             }};
                                             grading = new Grading() {{
                                                 correctAnswers = new CorrectAnswers() {{
                                                     answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
                                                         add(new CorrectAnswer() {{
-                                                            value = "pariatur";
-                                                        }}),
-                                                        add(new CorrectAnswer() {{
-                                                            value = "nemo";
-                                                        }}),
-                                                        add(new CorrectAnswer() {{
-                                                            value = "reprehenderit";
-                                                        }}),
-                                                        add(new CorrectAnswer() {{
-                                                            value = "aperiam";
+                                                            value = "nihil";
                                                         }}),
                                                     }};
                                                 }};
@@ -3515,119 +3760,109 @@ public class Application {
                                                     material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "minima";
-                                                                uri = "http://lone-mission.biz";
+                                                                displayText = "illo";
+                                                                uri = "http://svelte-emergency.net";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "error";
-                                                                youtubeUri = "veritatis";
+                                                                displayText = "provident";
+                                                                youtubeUri = "laudantium";
                                                             }};
                                                         }}),
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "ducimus";
-                                                                uri = "http://tragic-tuba.name";
+                                                                displayText = "repudiandae";
+                                                                uri = "http://stormy-casserole.net";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "optio";
-                                                                youtubeUri = "ex";
+                                                                displayText = "expedita";
+                                                                youtubeUri = "quas";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "provident";
+                                                                uri = "https://ringed-knickers.info";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "vero";
+                                                                youtubeUri = "similique";
                                                             }};
                                                         }}),
                                                     }};
-                                                    text = "quaerat";
+                                                    text = "repellendus";
                                                 }};
-                                                pointValue = 416692;
+                                                pointValue = 434827;
                                                 whenRight = new Feedback() {{
                                                     material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "placeat";
-                                                                uri = "https://gray-innovation.biz";
+                                                                displayText = "commodi";
+                                                                uri = "https://immense-advertising.com";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "modi";
-                                                                youtubeUri = "ipsa";
-                                                            }};
-                                                        }}),
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "sint";
-                                                                uri = "https://diligent-tower.net";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "dicta";
-                                                                youtubeUri = "earum";
-                                                            }};
-                                                        }}),
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "veniam";
-                                                                uri = "https://decisive-real.com";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "consequuntur";
-                                                                youtubeUri = "necessitatibus";
-                                                            }};
-                                                        }}),
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "nobis";
-                                                                uri = "http://lone-wholesale.com";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "quasi";
-                                                                youtubeUri = "laboriosam";
+                                                                displayText = "ad";
+                                                                youtubeUri = "quae";
                                                             }};
                                                         }}),
                                                     }};
-                                                    text = "pariatur";
+                                                    text = "amet";
                                                 }};
                                                 whenWrong = new Feedback() {{
                                                     material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "excepturi";
-                                                                uri = "https://handy-encirclement.info";
+                                                                displayText = "praesentium";
+                                                                uri = "https://several-cup.com";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "doloribus";
-                                                                youtubeUri = "eligendi";
+                                                                displayText = "dicta";
+                                                                youtubeUri = "laudantium";
                                                             }};
                                                         }}),
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "sint";
-                                                                uri = "http://watchful-pickaxe.name";
+                                                                displayText = "doloremque";
+                                                                uri = "https://lawful-cub.name";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "dolorum";
+                                                                youtubeUri = "necessitatibus";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "provident";
+                                                                uri = "https://active-freckle.info";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "itaque";
+                                                                youtubeUri = "facilis";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "corrupti";
+                                                                uri = "http://notable-sword.biz";
                                                             }};
                                                             video = new VideoLink() {{
                                                                 displayText = "totam";
-                                                                youtubeUri = "molestias";
-                                                            }};
-                                                        }}),
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "odio";
-                                                                uri = "http://unselfish-breadfruit.name";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "iste";
-                                                                youtubeUri = "assumenda";
+                                                                youtubeUri = "dicta";
                                                             }};
                                                         }}),
                                                     }};
-                                                    text = "tempore";
+                                                    text = "voluptatem";
                                                 }};
                                             }};
-                                            questionId = "libero";
+                                            questionId = "velit";
                                             required = false;
                                             rowQuestion = new RowQuestion() {{
                                                 title = "Mrs.";
                                             }};
                                             scaleQuestion = new ScaleQuestion() {{
-                                                high = 38557;
-                                                highLabel = "delectus";
-                                                low = 773110;
-                                                lowLabel = "cum";
+                                                high = 124289;
+                                                highLabel = "a";
+                                                low = 223291;
+                                                lowLabel = "occaecati";
                                             }};
                                             textQuestion = new TextQuestion() {{
                                                 paragraph = false;
@@ -3638,201 +3873,154 @@ public class Application {
                                         }};
                                     }};
                                     textItem = new java.util.HashMap<String, Object>() {{
-                                        put("adipisci", "saepe");
+                                        put("beatae", "at");
+                                        put("labore", "minus");
+                                        put("esse", "voluptatem");
                                     }};
-                                    title = "Miss";
+                                    title = "Mr.";
                                     videoItem = new VideoItem() {{
-                                        caption = "doloremque";
+                                        caption = "rerum";
                                         video = new Video() {{
                                             properties = new MediaProperties() {{
-                                                alignment = "LEFT";
-                                                width = 333072;
+                                                alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                width = 46791;
                                             }};
-                                            youtubeUri = "libero";
+                                            youtubeUri = "dignissimos";
                                         }};
                                     }};
                                 }};
                                 location = new Location() {{
-                                    index = 99733;
+                                    index = 998026;
                                 }};
                             }};
                             deleteItem = new DeleteItemRequest() {{
                                 location = new Location() {{
-                                    index = 584593;
+                                    index = 243678;
                                 }};
                             }};
                             moveItem = new MoveItemRequest() {{
                                 newLocation = new Location() {{
-                                    index = 475589;
+                                    index = 784115;
                                 }};
                                 originalLocation = new Location() {{
-                                    index = 756654;
+                                    index = 588639;
                                 }};
                             }};
                             updateFormInfo = new UpdateFormInfoRequestInput() {{
                                 info = new InfoInput() {{
-                                    description = "possimus";
-                                    title = "Mrs.";
+                                    description = "consectetur";
+                                    title = "Miss";
                                 }};
-                                updateMask = "magnam";
+                                updateMask = "dignissimos";
                             }};
                             updateItem = new UpdateItemRequestInput() {{
                                 item = new ItemInput() {{
-                                    description = "itaque";
+                                    description = "consectetur";
                                     imageItem = new ImageItemInput() {{
                                         image = new ImageInput() {{
-                                            altText = "sed";
+                                            altText = "soluta";
                                             properties = new MediaProperties() {{
-                                                alignment = "CENTER";
-                                                width = 330267;
+                                                alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                width = 839807;
                                             }};
-                                            sourceUri = "consequuntur";
+                                            sourceUri = "officia";
                                         }};
                                     }};
-                                    itemId = "facere";
+                                    itemId = "amet";
                                     pageBreakItem = new java.util.HashMap<String, Object>() {{
-                                        put("odit", "pariatur");
-                                        put("amet", "exercitationem");
-                                        put("ab", "velit");
+                                        put("aspernatur", "quo");
+                                        put("itaque", "illum");
+                                        put("laborum", "dignissimos");
+                                        put("vero", "qui");
                                     }};
                                     questionGroupItem = new QuestionGroupItemInput() {{
                                         grid = new GridInput() {{
                                             columns = new ChoiceQuestionInput() {{
                                                 options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                     add(new OptionInput() {{
-                                                        goToAction = "RESTART_FORM";
-                                                        goToSectionId = "nisi";
+                                                        goToAction = OptionGoToActionEnum.SUBMIT_FORM;
+                                                        goToSectionId = "explicabo";
                                                         image = new ImageInput() {{
-                                                            altText = "voluptatibus";
+                                                            altText = "explicabo";
                                                             properties = new MediaProperties() {{
-                                                                alignment = "LEFT";
-                                                                width = 503748;
+                                                                alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                                width = 471457;
                                                             }};
-                                                            sourceUri = "distinctio";
+                                                            sourceUri = "non";
                                                         }};
                                                         isOther = false;
-                                                        value = "nisi";
-                                                    }}),
-                                                    add(new OptionInput() {{
-                                                        goToAction = "NEXT_SECTION";
-                                                        goToSectionId = "nisi";
-                                                        image = new ImageInput() {{
-                                                            altText = "libero";
-                                                            properties = new MediaProperties() {{
-                                                                alignment = "CENTER";
-                                                                width = 815200;
-                                                            }};
-                                                            sourceUri = "facilis";
-                                                        }};
-                                                        isOther = false;
-                                                        value = "ipsum";
-                                                    }}),
-                                                    add(new OptionInput() {{
-                                                        goToAction = "NEXT_SECTION";
-                                                        goToSectionId = "voluptatibus";
-                                                        image = new ImageInput() {{
-                                                            altText = "voluptatibus";
-                                                            properties = new MediaProperties() {{
-                                                                alignment = "ALIGNMENT_UNSPECIFIED";
-                                                                width = 891581;
-                                                            }};
-                                                            sourceUri = "labore";
-                                                        }};
-                                                        isOther = false;
-                                                        value = "rerum";
+                                                        value = "ab";
                                                     }}),
                                                 }};
                                                 shuffle = false;
-                                                type = "CHOICE_TYPE_UNSPECIFIED";
+                                                type = ChoiceQuestionTypeEnum.CHOICE_TYPE_UNSPECIFIED;
                                             }};
                                             shuffleQuestions = false;
                                         }};
                                         image = new ImageInput() {{
-                                            altText = "reprehenderit";
+                                            altText = "hic";
                                             properties = new MediaProperties() {{
-                                                alignment = "LEFT";
-                                                width = 207296;
+                                                alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                width = 964925;
                                             }};
-                                            sourceUri = "iusto";
+                                            sourceUri = "non";
                                         }};
                                         questions = new org.openapis.openapi.models.shared.QuestionInput[]{{
                                             add(new QuestionInput() {{
                                                 choiceQuestion = new ChoiceQuestionInput() {{
                                                     options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                         add(new OptionInput() {{
-                                                            goToAction = "SUBMIT_FORM";
-                                                            goToSectionId = "fugiat";
+                                                            goToAction = OptionGoToActionEnum.NEXT_SECTION;
+                                                            goToSectionId = "labore";
                                                             image = new ImageInput() {{
-                                                                altText = "unde";
+                                                                altText = "numquam";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "CENTER";
-                                                                    width = 495617;
+                                                                    alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                    width = 265303;
                                                                 }};
-                                                                sourceUri = "dolor";
+                                                                sourceUri = "in";
                                                             }};
                                                             isOther = false;
-                                                            value = "dicta";
+                                                            value = "explicabo";
                                                         }}),
                                                         add(new OptionInput() {{
-                                                            goToAction = "RESTART_FORM";
-                                                            goToSectionId = "porro";
+                                                            goToAction = OptionGoToActionEnum.SUBMIT_FORM;
+                                                            goToSectionId = "rem";
                                                             image = new ImageInput() {{
-                                                                altText = "vitae";
+                                                                altText = "aperiam";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "LEFT";
-                                                                    width = 458970;
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 535802;
                                                                 }};
-                                                                sourceUri = "fugiat";
+                                                                sourceUri = "enim";
                                                             }};
                                                             isOther = false;
-                                                            value = "ad";
-                                                        }}),
-                                                        add(new OptionInput() {{
-                                                            goToAction = "GO_TO_ACTION_UNSPECIFIED";
-                                                            goToSectionId = "enim";
-                                                            image = new ImageInput() {{
-                                                                altText = "delectus";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "LEFT";
-                                                                    width = 491201;
-                                                                }};
-                                                                sourceUri = "libero";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "illo";
+                                                            value = "voluptate";
                                                         }}),
                                                     }};
                                                     shuffle = false;
-                                                    type = "CHOICE_TYPE_UNSPECIFIED";
+                                                    type = ChoiceQuestionTypeEnum.CHECKBOX;
                                                 }};
                                                 dateQuestion = new DateQuestion() {{
                                                     includeTime = false;
                                                     includeYear = false;
                                                 }};
                                                 fileUploadQuestion = new FileUploadQuestion() {{
-                                                    folderId = "incidunt";
-                                                    maxFileSize = "accusamus";
-                                                    maxFiles = 902581;
+                                                    folderId = "minima";
+                                                    maxFileSize = "libero";
+                                                    maxFiles = 300189;
                                                     types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                        add("PRESENTATION"),
-                                                        add("ANY"),
-                                                        add("AUDIO"),
+                                                        add(FileUploadQuestionTypesEnum.DOCUMENT),
                                                     }};
                                                 }};
                                                 grading = new Grading() {{
                                                     correctAnswers = new CorrectAnswers() {{
                                                         answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
                                                             add(new CorrectAnswer() {{
-                                                                value = "reprehenderit";
+                                                                value = "nesciunt";
                                                             }}),
                                                             add(new CorrectAnswer() {{
-                                                                value = "praesentium";
-                                                            }}),
-                                                            add(new CorrectAnswer() {{
-                                                                value = "nemo";
-                                                            }}),
-                                                            add(new CorrectAnswer() {{
-                                                                value = "repellat";
+                                                                value = "mollitia";
                                                             }}),
                                                         }};
                                                     }};
@@ -3840,89 +4028,69 @@ public class Application {
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "sequi";
-                                                                    uri = "http://minor-beech.biz";
+                                                                    displayText = "fugiat";
+                                                                    uri = "http://lanky-facelift.org";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "assumenda";
-                                                                    youtubeUri = "aliquam";
+                                                                    displayText = "ab";
+                                                                    youtubeUri = "modi";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "quisquam";
-                                                                    uri = "https://male-trailpatrol.com";
+                                                                    displayText = "aut";
+                                                                    uri = "http://unwritten-jumper.info";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "maxime";
-                                                                    youtubeUri = "aspernatur";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "nam";
-                                                                    uri = "https://nautical-nest.org";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "rerum";
-                                                                    youtubeUri = "dignissimos";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "corporis";
-                                                                    uri = "https://pleasant-spectrograph.info";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "dolorem";
-                                                                    youtubeUri = "commodi";
+                                                                    displayText = "numquam";
+                                                                    youtubeUri = "dolorum";
                                                                 }};
                                                             }}),
                                                         }};
-                                                        text = "impedit";
+                                                        text = "possimus";
                                                     }};
-                                                    pointValue = 415033;
+                                                    pointValue = 452399;
                                                     whenRight = new Feedback() {{
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "voluptatem";
-                                                                    uri = "http://baggy-cultivar.org";
+                                                                    displayText = "nesciunt";
+                                                                    uri = "http://vicious-settler.com";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "praesentium";
-                                                                    youtubeUri = "quidem";
+                                                                    displayText = "distinctio";
+                                                                    youtubeUri = "iusto";
                                                                 }};
                                                             }}),
                                                         }};
-                                                        text = "cum";
+                                                        text = "quas";
                                                     }};
                                                     whenWrong = new Feedback() {{
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "quasi";
-                                                                    uri = "http://male-argument.org";
+                                                                    displayText = "facilis";
+                                                                    uri = "http://imperturbable-precedent.com";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "iusto";
-                                                                    youtubeUri = "amet";
+                                                                    displayText = "rem";
+                                                                    youtubeUri = "aut";
                                                                 }};
                                                             }}),
                                                         }};
-                                                        text = "provident";
+                                                        text = "quos";
                                                     }};
                                                 }};
-                                                questionId = "dolorum";
+                                                questionId = "laudantium";
                                                 required = false;
                                                 rowQuestion = new RowQuestion() {{
                                                     title = "Dr.";
                                                 }};
                                                 scaleQuestion = new ScaleQuestion() {{
-                                                    high = 592880;
-                                                    highLabel = "repudiandae";
-                                                    low = 10063;
-                                                    lowLabel = "nemo";
+                                                    high = 83291;
+                                                    highLabel = "quae";
+                                                    low = 51075;
+                                                    lowLabel = "saepe";
                                                 }};
                                                 textQuestion = new TextQuestion() {{
                                                     paragraph = false;
@@ -3935,57 +4103,85 @@ public class Application {
                                                 choiceQuestion = new ChoiceQuestionInput() {{
                                                     options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                         add(new OptionInput() {{
-                                                            goToAction = "SUBMIT_FORM";
-                                                            goToSectionId = "facilis";
+                                                            goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                            goToSectionId = "nulla";
                                                             image = new ImageInput() {{
-                                                                altText = "corrupti";
+                                                                altText = "officia";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "ALIGNMENT_UNSPECIFIED";
-                                                                    width = 574092;
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 30208;
                                                                 }};
-                                                                sourceUri = "accusamus";
+                                                                sourceUri = "alias";
                                                             }};
                                                             isOther = false;
-                                                            value = "eos";
+                                                            value = "eveniet";
                                                         }}),
                                                         add(new OptionInput() {{
-                                                            goToAction = "RESTART_FORM";
-                                                            goToSectionId = "dicta";
+                                                            goToAction = OptionGoToActionEnum.SUBMIT_FORM;
+                                                            goToSectionId = "voluptatem";
                                                             image = new ImageInput() {{
-                                                                altText = "voluptatem";
+                                                                altText = "incidunt";
                                                                 properties = new MediaProperties() {{
-                                                                    alignment = "ALIGNMENT_UNSPECIFIED";
-                                                                    width = 224413;
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 185897;
                                                                 }};
-                                                                sourceUri = "sunt";
+                                                                sourceUri = "necessitatibus";
                                                             }};
                                                             isOther = false;
-                                                            value = "a";
+                                                            value = "harum";
+                                                        }}),
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.GO_TO_ACTION_UNSPECIFIED;
+                                                            goToSectionId = "beatae";
+                                                            image = new ImageInput() {{
+                                                                altText = "aliquid";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                                    width = 760049;
+                                                                }};
+                                                                sourceUri = "voluptatibus";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "molestias";
+                                                        }}),
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                            goToSectionId = "libero";
+                                                            image = new ImageInput() {{
+                                                                altText = "totam";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                    width = 397919;
+                                                                }};
+                                                                sourceUri = "ea";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "impedit";
                                                         }}),
                                                     }};
                                                     shuffle = false;
-                                                    type = "CHOICE_TYPE_UNSPECIFIED";
+                                                    type = ChoiceQuestionTypeEnum.RADIO;
                                                 }};
                                                 dateQuestion = new DateQuestion() {{
                                                     includeTime = false;
                                                     includeYear = false;
                                                 }};
                                                 fileUploadQuestion = new FileUploadQuestion() {{
-                                                    folderId = "occaecati";
-                                                    maxFileSize = "atque";
-                                                    maxFiles = 107472;
+                                                    folderId = "odit";
+                                                    maxFileSize = "velit";
+                                                    maxFiles = 967338;
                                                     types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                        add("DOCUMENT"),
-                                                        add("IMAGE"),
-                                                        add("SPREADSHEET"),
-                                                        add("FILE_TYPE_UNSPECIFIED"),
+                                                        add(FileUploadQuestionTypesEnum.VIDEO),
+                                                        add(FileUploadQuestionTypesEnum.PDF),
+                                                        add(FileUploadQuestionTypesEnum.PDF),
+                                                        add(FileUploadQuestionTypesEnum.VIDEO),
                                                     }};
                                                 }};
                                                 grading = new Grading() {{
                                                     correctAnswers = new CorrectAnswers() {{
                                                         answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
                                                             add(new CorrectAnswer() {{
-                                                                value = "rerum";
+                                                                value = "nisi";
                                                             }}),
                                                         }};
                                                     }};
@@ -3993,278 +4189,290 @@ public class Application {
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "aperiam";
-                                                                    uri = "http://zealous-decision-making.net";
+                                                                    displayText = "recusandae";
+                                                                    uri = "https://excitable-lord.com";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "provident";
-                                                                    youtubeUri = "consectetur";
+                                                                    displayText = "ullam";
+                                                                    youtubeUri = "quisquam";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "eligendi";
-                                                                    uri = "http://energetic-response.name";
+                                                                    displayText = "dicta";
+                                                                    uri = "https://similar-balloon.org";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "temporibus";
-                                                                    youtubeUri = "officia";
+                                                                    displayText = "architecto";
+                                                                    youtubeUri = "architecto";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "enim";
+                                                                    uri = "https://meek-aircraft.net";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "reiciendis";
+                                                                    youtubeUri = "a";
                                                                 }};
                                                             }}),
                                                         }};
-                                                        text = "amet";
+                                                        text = "iste";
                                                     }};
-                                                    pointValue = 948541;
+                                                    pointValue = 117819;
                                                     whenRight = new Feedback() {{
                                                         material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "quo";
-                                                                    uri = "https://these-pliers.info";
+                                                                    displayText = "ullam";
+                                                                    uri = "http://fancy-trip.net";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "vero";
-                                                                    youtubeUri = "qui";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "consectetur";
-                                                    }};
-                                                    whenWrong = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "explicabo";
-                                                                    uri = "http://green-interviewer.biz";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "ab";
-                                                                    youtubeUri = "illo";
+                                                                    displayText = "modi";
+                                                                    youtubeUri = "consequuntur";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "hic";
-                                                                    uri = "https://white-depth.net";
+                                                                    displayText = "assumenda";
+                                                                    uri = "https://worst-scene.net";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "in";
-                                                                    youtubeUri = "exercitationem";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "labore";
-                                                                    uri = "http://vain-dirt.info";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "explicabo";
-                                                                    youtubeUri = "accusamus";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "rem";
-                                                                    uri = "http://conventional-mallet.biz";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "voluptate";
-                                                                    youtubeUri = "similique";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "minima";
-                                                    }};
-                                                }};
-                                                questionId = "libero";
-                                                required = false;
-                                                rowQuestion = new RowQuestion() {{
-                                                    title = "Mrs.";
-                                                }};
-                                                scaleQuestion = new ScaleQuestion() {{
-                                                    high = 24272;
-                                                    highLabel = "modi";
-                                                    low = 430116;
-                                                    lowLabel = "nesciunt";
-                                                }};
-                                                textQuestion = new TextQuestion() {{
-                                                    paragraph = false;
-                                                }};
-                                                timeQuestion = new TimeQuestion() {{
-                                                    duration = false;
-                                                }};
-                                            }}),
-                                            add(new QuestionInput() {{
-                                                choiceQuestion = new ChoiceQuestionInput() {{
-                                                    options = new org.openapis.openapi.models.shared.OptionInput[]{{
-                                                        add(new OptionInput() {{
-                                                            goToAction = "NEXT_SECTION";
-                                                            goToSectionId = "fugiat";
-                                                            image = new ImageInput() {{
-                                                                altText = "nostrum";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "LEFT";
-                                                                    width = 330600;
-                                                                }};
-                                                                sourceUri = "reiciendis";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "ab";
-                                                        }}),
-                                                        add(new OptionInput() {{
-                                                            goToAction = "NEXT_SECTION";
-                                                            goToSectionId = "aut";
-                                                            image = new ImageInput() {{
-                                                                altText = "aut";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "CENTER";
-                                                                    width = 483753;
-                                                                }};
-                                                                sourceUri = "commodi";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "numquam";
-                                                        }}),
-                                                        add(new OptionInput() {{
-                                                            goToAction = "RESTART_FORM";
-                                                            goToSectionId = "possimus";
-                                                            image = new ImageInput() {{
-                                                                altText = "voluptate";
-                                                                properties = new MediaProperties() {{
-                                                                    alignment = "ALIGNMENT_UNSPECIFIED";
-                                                                    width = 200637;
-                                                                }};
-                                                                sourceUri = "quaerat";
-                                                            }};
-                                                            isOther = false;
-                                                            value = "itaque";
-                                                        }}),
-                                                    }};
-                                                    shuffle = false;
-                                                    type = "DROP_DOWN";
-                                                }};
-                                                dateQuestion = new DateQuestion() {{
-                                                    includeTime = false;
-                                                    includeYear = false;
-                                                }};
-                                                fileUploadQuestion = new FileUploadQuestion() {{
-                                                    folderId = "sunt";
-                                                    maxFileSize = "distinctio";
-                                                    maxFiles = 481375;
-                                                    types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                        add("FILE_TYPE_UNSPECIFIED"),
-                                                        add("IMAGE"),
-                                                        add("DOCUMENT"),
-                                                    }};
-                                                }};
-                                                grading = new Grading() {{
-                                                    correctAnswers = new CorrectAnswers() {{
-                                                        answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
-                                                            add(new CorrectAnswer() {{
-                                                                value = "fuga";
-                                                            }}),
-                                                            add(new CorrectAnswer() {{
-                                                                value = "alias";
-                                                            }}),
-                                                        }};
-                                                    }};
-                                                    generalFeedback = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "aut";
-                                                                    uri = "https://mad-speaker.com";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "quae";
-                                                                    youtubeUri = "eaque";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "saepe";
-                                                                    uri = "https://prime-strawman.name";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "sed";
-                                                                    youtubeUri = "voluptatem";
-                                                                }};
-                                                            }}),
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "alias";
-                                                                    uri = "https://warm-ancestor.biz";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "qui";
-                                                                    youtubeUri = "qui";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "necessitatibus";
-                                                    }};
-                                                    pointValue = 691508;
-                                                    whenRight = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "beatae";
-                                                                    uri = "http://familiar-ruckus.org";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "molestias";
-                                                                    youtubeUri = "officia";
-                                                                }};
-                                                            }}),
-                                                        }};
-                                                        text = "libero";
-                                                    }};
-                                                    whenWrong = new Feedback() {{
-                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
-                                                            add(new ExtraMaterial() {{
-                                                                link = new TextLink() {{
-                                                                    displayText = "sequi";
-                                                                    uri = "http://imaginative-schema.info";
-                                                                }};
-                                                                video = new VideoLink() {{
-                                                                    displayText = "odit";
-                                                                    youtubeUri = "velit";
+                                                                    displayText = "accusamus";
+                                                                    youtubeUri = "totam";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
                                                                     displayText = "reiciendis";
-                                                                    uri = "https://tired-plot.name";
+                                                                    uri = "http://normal-invention.info";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "accusamus";
-                                                                    youtubeUri = "doloremque";
+                                                                    displayText = "iure";
+                                                                    youtubeUri = "odio";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "nesciunt";
+                                                    }};
+                                                    whenWrong = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "vel";
+                                                                    uri = "http://growing-gamebird.com";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "officia";
+                                                                    youtubeUri = "reprehenderit";
                                                                 }};
                                                             }}),
                                                             add(new ExtraMaterial() {{
                                                                 link = new TextLink() {{
-                                                                    displayText = "nisi";
-                                                                    uri = "https://vast-tomorrow.biz";
+                                                                    displayText = "distinctio";
+                                                                    uri = "http://awesome-lode.org";
                                                                 }};
                                                                 video = new VideoLink() {{
-                                                                    displayText = "rem";
-                                                                    youtubeUri = "quia";
+                                                                    displayText = "accusantium";
+                                                                    youtubeUri = "veniam";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "saepe";
+                                                                    uri = "http://subdued-encyclopedia.name";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "doloribus";
+                                                                    youtubeUri = "fugiat";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "est";
+                                                                    uri = "https://evergreen-brunch.biz";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "similique";
+                                                                    youtubeUri = "illo";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "repellat";
+                                                    }};
+                                                }};
+                                                questionId = "nemo";
+                                                required = false;
+                                                rowQuestion = new RowQuestion() {{
+                                                    title = "Dr.";
+                                                }};
+                                                scaleQuestion = new ScaleQuestion() {{
+                                                    high = 823753;
+                                                    highLabel = "unde";
+                                                    low = 275425;
+                                                    lowLabel = "explicabo";
+                                                }};
+                                                textQuestion = new TextQuestion() {{
+                                                    paragraph = false;
+                                                }};
+                                                timeQuestion = new TimeQuestion() {{
+                                                    duration = false;
+                                                }};
+                                            }}),
+                                            add(new QuestionInput() {{
+                                                choiceQuestion = new ChoiceQuestionInput() {{
+                                                    options = new org.openapis.openapi.models.shared.OptionInput[]{{
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                            goToSectionId = "optio";
+                                                            image = new ImageInput() {{
+                                                                altText = "alias";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                                    width = 198911;
+                                                                }};
+                                                                sourceUri = "commodi";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "sapiente";
+                                                        }}),
+                                                        add(new OptionInput() {{
+                                                            goToAction = OptionGoToActionEnum.GO_TO_ACTION_UNSPECIFIED;
+                                                            goToSectionId = "veniam";
+                                                            image = new ImageInput() {{
+                                                                altText = "debitis";
+                                                                properties = new MediaProperties() {{
+                                                                    alignment = MediaPropertiesAlignmentEnum.RIGHT;
+                                                                    width = 575062;
+                                                                }};
+                                                                sourceUri = "ut";
+                                                            }};
+                                                            isOther = false;
+                                                            value = "numquam";
+                                                        }}),
+                                                    }};
+                                                    shuffle = false;
+                                                    type = ChoiceQuestionTypeEnum.DROP_DOWN;
+                                                }};
+                                                dateQuestion = new DateQuestion() {{
+                                                    includeTime = false;
+                                                    includeYear = false;
+                                                }};
+                                                fileUploadQuestion = new FileUploadQuestion() {{
+                                                    folderId = "adipisci";
+                                                    maxFileSize = "libero";
+                                                    maxFiles = 448386;
+                                                    types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
+                                                        add(FileUploadQuestionTypesEnum.SPREADSHEET),
+                                                        add(FileUploadQuestionTypesEnum.IMAGE),
+                                                    }};
+                                                }};
+                                                grading = new Grading() {{
+                                                    correctAnswers = new CorrectAnswers() {{
+                                                        answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
+                                                            add(new CorrectAnswer() {{
+                                                                value = "beatae";
+                                                            }}),
+                                                        }};
+                                                    }};
+                                                    generalFeedback = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "nisi";
+                                                                    uri = "https://easy-going-lag.net";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "minima";
+                                                                    youtubeUri = "architecto";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "qui";
+                                                                    uri = "http://dapper-dolphin.biz";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "praesentium";
+                                                                    youtubeUri = "dolor";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "exercitationem";
+                                                                    uri = "https://round-satellite.com";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "nemo";
+                                                                    youtubeUri = "culpa";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "consequuntur";
+                                                                    uri = "http://precious-disengagement.biz";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "quod";
+                                                                    youtubeUri = "itaque";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "a";
+                                                    }};
+                                                    pointValue = 788661;
+                                                    whenRight = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "doloribus";
+                                                                    uri = "https://unfolded-breadcrumb.com";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "culpa";
+                                                                    youtubeUri = "ipsa";
+                                                                }};
+                                                            }}),
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "nobis";
+                                                                    uri = "https://crowded-buy.info";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "perspiciatis";
+                                                                    youtubeUri = "debitis";
                                                                 }};
                                                             }}),
                                                         }};
                                                         text = "ullam";
                                                     }};
+                                                    whenWrong = new Feedback() {{
+                                                        material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
+                                                            add(new ExtraMaterial() {{
+                                                                link = new TextLink() {{
+                                                                    displayText = "accusantium";
+                                                                    uri = "http://bold-nephew.net";
+                                                                }};
+                                                                video = new VideoLink() {{
+                                                                    displayText = "iure";
+                                                                    youtubeUri = "quibusdam";
+                                                                }};
+                                                            }}),
+                                                        }};
+                                                        text = "quod";
+                                                    }};
                                                 }};
-                                                questionId = "quisquam";
+                                                questionId = "nemo";
                                                 required = false;
                                                 rowQuestion = new RowQuestion() {{
-                                                    title = "Mr.";
+                                                    title = "Dr.";
                                                 }};
                                                 scaleQuestion = new ScaleQuestion() {{
-                                                    high = 973017;
-                                                    highLabel = "eligendi";
-                                                    low = 62035;
-                                                    lowLabel = "officiis";
+                                                    high = 246772;
+                                                    highLabel = "magnam";
+                                                    low = 493591;
+                                                    lowLabel = "laboriosam";
                                                 }};
                                                 textQuestion = new TextQuestion() {{
                                                     paragraph = false;
@@ -4277,80 +4485,88 @@ public class Application {
                                     }};
                                     questionItem = new QuestionItemInput() {{
                                         image = new ImageInput() {{
-                                            altText = "architecto";
+                                            altText = "sed";
                                             properties = new MediaProperties() {{
-                                                alignment = "ALIGNMENT_UNSPECIFIED";
-                                                width = 317898;
+                                                alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                width = 616941;
                                             }};
-                                            sourceUri = "optio";
+                                            sourceUri = "provident";
                                         }};
                                         question = new QuestionInput() {{
                                             choiceQuestion = new ChoiceQuestionInput() {{
                                                 options = new org.openapis.openapi.models.shared.OptionInput[]{{
                                                     add(new OptionInput() {{
-                                                        goToAction = "GO_TO_ACTION_UNSPECIFIED";
+                                                        goToAction = OptionGoToActionEnum.SUBMIT_FORM;
                                                         goToSectionId = "facilis";
                                                         image = new ImageInput() {{
-                                                            altText = "reiciendis";
+                                                            altText = "quidem";
                                                             properties = new MediaProperties() {{
-                                                                alignment = "CENTER";
-                                                                width = 615058;
+                                                                alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                width = 389548;
                                                             }};
-                                                            sourceUri = "dicta";
+                                                            sourceUri = "unde";
                                                         }};
                                                         isOther = false;
-                                                        value = "quos";
+                                                        value = "modi";
                                                     }}),
                                                     add(new OptionInput() {{
-                                                        goToAction = "NEXT_SECTION";
-                                                        goToSectionId = "dolore";
+                                                        goToAction = OptionGoToActionEnum.RESTART_FORM;
+                                                        goToSectionId = "hic";
                                                         image = new ImageInput() {{
-                                                            altText = "modi";
+                                                            altText = "cum";
                                                             properties = new MediaProperties() {{
-                                                                alignment = "CENTER";
-                                                                width = 807419;
+                                                                alignment = MediaPropertiesAlignmentEnum.ALIGNMENT_UNSPECIFIED;
+                                                                width = 725784;
                                                             }};
-                                                            sourceUri = "modi";
+                                                            sourceUri = "nam";
                                                         }};
                                                         isOther = false;
-                                                        value = "consequuntur";
+                                                        value = "incidunt";
                                                     }}),
                                                     add(new OptionInput() {{
-                                                        goToAction = "SUBMIT_FORM";
-                                                        goToSectionId = "vero";
+                                                        goToAction = OptionGoToActionEnum.SUBMIT_FORM;
+                                                        goToSectionId = "quod";
                                                         image = new ImageInput() {{
-                                                            altText = "doloribus";
+                                                            altText = "id";
                                                             properties = new MediaProperties() {{
-                                                                alignment = "CENTER";
-                                                                width = 783397;
+                                                                alignment = MediaPropertiesAlignmentEnum.CENTER;
+                                                                width = 423054;
                                                             }};
-                                                            sourceUri = "accusamus";
+                                                            sourceUri = "quo";
                                                         }};
                                                         isOther = false;
-                                                        value = "totam";
+                                                        value = "nesciunt";
                                                     }}),
                                                 }};
                                                 shuffle = false;
-                                                type = "DROP_DOWN";
+                                                type = ChoiceQuestionTypeEnum.DROP_DOWN;
                                             }};
                                             dateQuestion = new DateQuestion() {{
                                                 includeTime = false;
                                                 includeYear = false;
                                             }};
                                             fileUploadQuestion = new FileUploadQuestion() {{
-                                                folderId = "ab";
-                                                maxFileSize = "sint";
-                                                maxFiles = 472414;
+                                                folderId = "nemo";
+                                                maxFileSize = "illum";
+                                                maxFiles = 706872;
                                                 types = new org.openapis.openapi.models.shared.FileUploadQuestionTypesEnum[]{{
-                                                    add("SPREADSHEET"),
-                                                    add("SPREADSHEET"),
+                                                    add(FileUploadQuestionTypesEnum.PDF),
                                                 }};
                                             }};
                                             grading = new Grading() {{
                                                 correctAnswers = new CorrectAnswers() {{
                                                     answers = new org.openapis.openapi.models.shared.CorrectAnswer[]{{
                                                         add(new CorrectAnswer() {{
-                                                            value = "debitis";
+                                                            value = "recusandae";
+                                                        }}),
+                                                        add(new CorrectAnswer() {{
+                                                            value = "distinctio";
+                                                        }}),
+                                                        add(new CorrectAnswer() {{
+                                                            value = "pariatur";
+                                                        }}),
+                                                        add(new CorrectAnswer() {{
+                                                            value = "ad";
                                                         }}),
                                                     }};
                                                 }};
@@ -4358,89 +4574,99 @@ public class Application {
                                                     material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "neque";
-                                                                uri = "http://hateful-citron.name";
+                                                                displayText = "laborum";
+                                                                uri = "https://quintessential-dollop.net";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "reprehenderit";
-                                                                youtubeUri = "distinctio";
+                                                                displayText = "ipsam";
+                                                                youtubeUri = "alias";
                                                             }};
                                                         }}),
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "eius";
-                                                                uri = "http://measly-whack.com";
+                                                                displayText = "suscipit";
+                                                                uri = "https://neat-pneumonia.net";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "veniam";
-                                                                youtubeUri = "saepe";
+                                                                displayText = "occaecati";
+                                                                youtubeUri = "labore";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "quo";
+                                                                uri = "http://cooperative-gravy.biz";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "quaerat";
+                                                                youtubeUri = "eligendi";
+                                                            }};
+                                                        }}),
+                                                        add(new ExtraMaterial() {{
+                                                            link = new TextLink() {{
+                                                                displayText = "hic";
+                                                                uri = "http://unfortunate-oasis.org";
+                                                            }};
+                                                            video = new VideoLink() {{
+                                                                displayText = "error";
+                                                                youtubeUri = "mollitia";
                                                             }};
                                                         }}),
                                                     }};
-                                                    text = "neque";
+                                                    text = "magnam";
                                                 }};
-                                                pointValue = 816365;
+                                                pointValue = 344289;
                                                 whenRight = new Feedback() {{
                                                     material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "quos";
-                                                                uri = "https://this-platform.org";
+                                                                displayText = "corrupti";
+                                                                uri = "https://sturdy-scenario.com";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "velit";
-                                                                youtubeUri = "vitae";
+                                                                displayText = "deserunt";
+                                                                youtubeUri = "quod";
                                                             }};
                                                         }}),
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "nesciunt";
-                                                                uri = "https://blank-zen.info";
+                                                                displayText = "laboriosam";
+                                                                uri = "http://amusing-smelting.org";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "doloribus";
-                                                                youtubeUri = "possimus";
+                                                                displayText = "maxime";
+                                                                youtubeUri = "consequatur";
                                                             }};
                                                         }}),
                                                     }};
-                                                    text = "unde";
+                                                    text = "eaque";
                                                 }};
                                                 whenWrong = new Feedback() {{
                                                     material = new org.openapis.openapi.models.shared.ExtraMaterial[]{{
                                                         add(new ExtraMaterial() {{
                                                             link = new TextLink() {{
-                                                                displayText = "explicabo";
-                                                                uri = "http://obvious-rum.com";
+                                                                displayText = "similique";
+                                                                uri = "https://loud-bakery.biz";
                                                             }};
                                                             video = new VideoLink() {{
-                                                                displayText = "quidem";
-                                                                youtubeUri = "nesciunt";
-                                                            }};
-                                                        }}),
-                                                        add(new ExtraMaterial() {{
-                                                            link = new TextLink() {{
-                                                                displayText = "commodi";
-                                                                uri = "https://damp-face.org";
-                                                            }};
-                                                            video = new VideoLink() {{
-                                                                displayText = "officia";
-                                                                youtubeUri = "sint";
+                                                                displayText = "officiis";
+                                                                youtubeUri = "sed";
                                                             }};
                                                         }}),
                                                     }};
-                                                    text = "ut";
+                                                    text = "necessitatibus";
                                                 }};
                                             }};
-                                            questionId = "numquam";
+                                            questionId = "impedit";
                                             required = false;
                                             rowQuestion = new RowQuestion() {{
-                                                title = "Dr.";
+                                                title = "Mr.";
                                             }};
                                             scaleQuestion = new ScaleQuestion() {{
-                                                high = 236790;
-                                                highLabel = "libero";
-                                                low = 448386;
-                                                lowLabel = "minima";
+                                                high = 567693;
+                                                highLabel = "a";
+                                                low = 983000;
+                                                lowLabel = "laudantium";
                                             }};
                                             textQuestion = new TextQuestion() {{
                                                 paragraph = false;
@@ -4451,25 +4677,27 @@ public class Application {
                                         }};
                                     }};
                                     textItem = new java.util.HashMap<String, Object>() {{
-                                        put("minus", "ab");
-                                        put("beatae", "hic");
+                                        put("alias", "asperiores");
+                                        put("rem", "dicta");
+                                        put("suscipit", "earum");
+                                        put("doloribus", "velit");
                                     }};
                                     title = "Mrs.";
                                     videoItem = new VideoItem() {{
-                                        caption = "quisquam";
+                                        caption = "esse";
                                         video = new Video() {{
                                             properties = new MediaProperties() {{
-                                                alignment = "ALIGNMENT_UNSPECIFIED";
-                                                width = 496548;
+                                                alignment = MediaPropertiesAlignmentEnum.LEFT;
+                                                width = 757407;
                                             }};
-                                            youtubeUri = "fuga";
+                                            youtubeUri = "quasi";
                                         }};
                                     }};
                                 }};
                                 location = new Location() {{
-                                    index = 326903;
+                                    index = 203621;
                                 }};
-                                updateMask = "architecto";
+                                updateMask = "vero";
                             }};
                             updateSettings = new UpdateSettingsRequest() {{
                                 settings = new FormSettings() {{
@@ -4477,41 +4705,42 @@ public class Application {
                                         isQuiz = false;
                                     }};
                                 }};
-                                updateMask = "qui";
+                                updateMask = "excepturi";
                             }};
                         }}),
                     }};
                     writeControl = new WriteControl() {{
-                        requiredRevisionId = "aliquid";
-                        targetRevisionId = "magni";
-                    }};
-                }};
-                accessToken = "incidunt";
-                alt = "json";
-                callback = "praesentium";
-                fields = "dolor";
-                formId = "exercitationem";
-                key = "expedita";
-                oauthToken = "facilis";
+                        requiredRevisionId = "accusantium";
+                        targetRevisionId = "qui";
+                    }};;
+                }};;
+                accessToken = "impedit";
+                alt = AltEnum.JSON;
+                callback = "incidunt";
+                fields = "dicta";
+                key = "odit";
+                oauthToken = "corporis";
                 prettyPrint = false;
-                quotaUser = "impedit";
-                uploadType = "sit";
-                uploadProtocol = "nemo";
-            }}            
+                quotaUser = "rerum";
+                uploadType = "alias";
+                uploadProtocol = "error";
+            }};            
 
             FormsFormsBatchUpdateResponse res = sdk.forms.formsFormsBatchUpdate(req, new FormsFormsBatchUpdateSecurity() {{
-                option1 = new FormsFormsBatchUpdateSecurityOption1() {{
+                option1 = new FormsFormsBatchUpdateSecurityOption1("vel", "accusantium") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.batchUpdateFormResponse.isPresent()) {
+            if (res.batchUpdateFormResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -4519,17 +4748,17 @@ public class Application {
 ## Available Resources and Operations
 
 
-### forms
+### [forms](docs/forms/README.md)
 
-* `formsFormsBatchUpdate` - Change the form with a batch of updates.
-* `formsFormsCreate` - Create a new form using the title given in the provided form message in the request. *Important:* Only the form.info.title and form.info.document_title fields are copied to the new form. All other fields including the form description, items and settings are disallowed. To create a new form and add items, you must first call forms.create to create an empty form with a title and (optional) document title, and then call forms.update to add the items.
-* `formsFormsGet` - Get a form.
-* `formsFormsResponsesGet` - Get one response from the form.
-* `formsFormsResponsesList` - List a form's responses.
-* `formsFormsWatchesCreate` - Create a new watch. If a watch ID is provided, it must be unused. For each invoking project, the per form limit is one watch per Watch.EventType. A watch expires seven days after it is created (see Watch.expire_time).
-* `formsFormsWatchesDelete` - Delete a watch.
-* `formsFormsWatchesList` - Return a list of the watches owned by the invoking project. The maximum number of watches is two: For each invoker, the limit is one for each event type per form.
-* `formsFormsWatchesRenew` - Renew an existing watch for seven days. The state of the watch after renewal is `ACTIVE`, and the `expire_time` is seven days from the renewal. Renewing a watch in an error state (e.g. `SUSPENDED`) succeeds if the error is no longer present, but fail otherwise. After a watch has expired, RenewWatch returns `NOT_FOUND`.
+* [formsFormsBatchUpdate](docs/forms/README.md#formsformsbatchupdate) - Change the form with a batch of updates.
+* [formsFormsCreate](docs/forms/README.md#formsformscreate) - Create a new form using the title given in the provided form message in the request. *Important:* Only the form.info.title and form.info.document_title fields are copied to the new form. All other fields including the form description, items and settings are disallowed. To create a new form and add items, you must first call forms.create to create an empty form with a title and (optional) document title, and then call forms.update to add the items.
+* [formsFormsGet](docs/forms/README.md#formsformsget) - Get a form.
+* [formsFormsResponsesGet](docs/forms/README.md#formsformsresponsesget) - Get one response from the form.
+* [formsFormsResponsesList](docs/forms/README.md#formsformsresponseslist) - List a form's responses.
+* [formsFormsWatchesCreate](docs/forms/README.md#formsformswatchescreate) - Create a new watch. If a watch ID is provided, it must be unused. For each invoking project, the per form limit is one watch per Watch.EventType. A watch expires seven days after it is created (see Watch.expire_time).
+* [formsFormsWatchesDelete](docs/forms/README.md#formsformswatchesdelete) - Delete a watch.
+* [formsFormsWatchesList](docs/forms/README.md#formsformswatcheslist) - Return a list of the watches owned by the invoking project. The maximum number of watches is two: For each invoker, the limit is one for each event type per form.
+* [formsFormsWatchesRenew](docs/forms/README.md#formsformswatchesrenew) - Renew an existing watch for seven days. The state of the watch after renewal is `ACTIVE`, and the `expire_time` is seven days from the renewal. Renewing a watch in an error state (e.g. `SUSPENDED`) succeeds if the error is no longer present, but fail otherwise. After a watch has expired, RenewWatch returns `NOT_FOUND`.
 <!-- End SDK Available Operations -->
 
 ### Maturity

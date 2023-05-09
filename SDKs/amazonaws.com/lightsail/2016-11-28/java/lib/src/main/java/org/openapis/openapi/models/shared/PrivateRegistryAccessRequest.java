@@ -15,9 +15,11 @@ public class PrivateRegistryAccessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecrImagePullerRole")
     public ContainerServiceECRImagePullerRoleRequest ecrImagePullerRole;
+
     public PrivateRegistryAccessRequest withEcrImagePullerRole(ContainerServiceECRImagePullerRoleRequest ecrImagePullerRole) {
         this.ecrImagePullerRole = ecrImagePullerRole;
         return this;
     }
     
+    public PrivateRegistryAccessRequest(){}
 }

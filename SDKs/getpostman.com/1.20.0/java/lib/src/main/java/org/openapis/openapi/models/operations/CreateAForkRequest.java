@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAForkRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateAForkRequestBody requestBody;
+
     public CreateAForkRequest withRequestBody(CreateAForkRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class CreateAForkRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_uid")
     public String collectionUid;
+
     public CreateAForkRequest withCollectionUid(String collectionUid) {
         this.collectionUid = collectionUid;
         return this;
@@ -26,9 +29,13 @@ public class CreateAForkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
     public String workspace;
+
     public CreateAForkRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public CreateAForkRequest(@JsonProperty("collection_uid") String collectionUid) {
+        this.collectionUid = collectionUid;
+  }
 }

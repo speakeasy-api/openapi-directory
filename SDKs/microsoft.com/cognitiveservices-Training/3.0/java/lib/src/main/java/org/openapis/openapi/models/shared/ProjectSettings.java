@@ -18,6 +18,7 @@ public class ProjectSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classificationType")
     public ProjectSettingsClassificationTypeEnum classificationType;
+
     public ProjectSettings withClassificationType(ProjectSettingsClassificationTypeEnum classificationType) {
         this.classificationType = classificationType;
         return this;
@@ -29,6 +30,7 @@ public class ProjectSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainId")
     public String domainId;
+
     public ProjectSettings withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -40,9 +42,11 @@ public class ProjectSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetExportPlatforms")
     public ProjectSettingsTargetExportPlatformsEnum[] targetExportPlatforms;
+
     public ProjectSettings withTargetExportPlatforms(ProjectSettingsTargetExportPlatformsEnum[] targetExportPlatforms) {
         this.targetExportPlatforms = targetExportPlatforms;
         return this;
     }
     
+    public ProjectSettings(){}
 }

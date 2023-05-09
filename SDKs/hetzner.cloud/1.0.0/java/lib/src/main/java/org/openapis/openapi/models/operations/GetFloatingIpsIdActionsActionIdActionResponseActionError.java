@@ -15,6 +15,7 @@ public class GetFloatingIpsIdActionsActionIdActionResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public GetFloatingIpsIdActionsActionIdActionResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class GetFloatingIpsIdActionsActionIdActionResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public GetFloatingIpsIdActionsActionIdActionResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetFloatingIpsIdActionsActionIdActionResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

@@ -15,6 +15,7 @@ public class CartSimulation200ApplicationJSONPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availablePayments")
     public String availablePayments;
+
     public CartSimulation200ApplicationJSONPaymentDataPaymentSystems withAvailablePayments(String availablePayments) {
         this.availablePayments = availablePayments;
         return this;
@@ -26,6 +27,7 @@ public class CartSimulation200ApplicationJSONPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CartSimulation200ApplicationJSONPaymentDataPaymentSystems withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class CartSimulation200ApplicationJSONPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayDocument")
     public Boolean displayDocument;
+
     public CartSimulation200ApplicationJSONPaymentDataPaymentSystems withDisplayDocument(Boolean displayDocument) {
         this.displayDocument = displayDocument;
         return this;
@@ -48,6 +51,7 @@ public class CartSimulation200ApplicationJSONPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dueDate")
     public String dueDate;
+
     public CartSimulation200ApplicationJSONPaymentDataPaymentSystems withDueDate(String dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -59,6 +63,7 @@ public class CartSimulation200ApplicationJSONPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupName")
     public String groupName;
+
     public CartSimulation200ApplicationJSONPaymentDataPaymentSystems withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -70,6 +75,7 @@ public class CartSimulation200ApplicationJSONPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CartSimulation200ApplicationJSONPaymentDataPaymentSystems withId(Long id) {
         this.id = id;
         return this;
@@ -81,6 +87,7 @@ public class CartSimulation200ApplicationJSONPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCustom")
     public Boolean isCustom;
+
     public CartSimulation200ApplicationJSONPaymentDataPaymentSystems withIsCustom(Boolean isCustom) {
         this.isCustom = isCustom;
         return this;
@@ -92,6 +99,7 @@ public class CartSimulation200ApplicationJSONPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CartSimulation200ApplicationJSONPaymentDataPaymentSystems withName(String name) {
         this.name = name;
         return this;
@@ -103,6 +111,7 @@ public class CartSimulation200ApplicationJSONPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiresAuthentication")
     public Boolean requiresAuthentication;
+
     public CartSimulation200ApplicationJSONPaymentDataPaymentSystems withRequiresAuthentication(Boolean requiresAuthentication) {
         this.requiresAuthentication = requiresAuthentication;
         return this;
@@ -114,6 +123,7 @@ public class CartSimulation200ApplicationJSONPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiresDocument")
     public Boolean requiresDocument;
+
     public CartSimulation200ApplicationJSONPaymentDataPaymentSystems withRequiresDocument(Boolean requiresDocument) {
         this.requiresDocument = requiresDocument;
         return this;
@@ -125,6 +135,7 @@ public class CartSimulation200ApplicationJSONPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringId")
     public String stringId;
+
     public CartSimulation200ApplicationJSONPaymentDataPaymentSystems withStringId(String stringId) {
         this.stringId = stringId;
         return this;
@@ -136,6 +147,7 @@ public class CartSimulation200ApplicationJSONPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public CartSimulation200ApplicationJSONPaymentDataPaymentSystems withTemplate(String template) {
         this.template = template;
         return this;
@@ -147,9 +159,11 @@ public class CartSimulation200ApplicationJSONPaymentDataPaymentSystems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validator")
     public java.util.Map<String, Object> validator;
+
     public CartSimulation200ApplicationJSONPaymentDataPaymentSystems withValidator(java.util.Map<String, Object> validator) {
         this.validator = validator;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONPaymentDataPaymentSystems(){}
 }

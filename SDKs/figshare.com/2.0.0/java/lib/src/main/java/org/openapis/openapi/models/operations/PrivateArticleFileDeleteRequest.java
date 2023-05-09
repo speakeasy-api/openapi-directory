@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticleFileDeleteRequest {
@@ -12,6 +13,7 @@ public class PrivateArticleFileDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
     public Long articleId;
+
     public PrivateArticleFileDeleteRequest withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
@@ -22,9 +24,14 @@ public class PrivateArticleFileDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file_id")
     public Long fileId;
+
     public PrivateArticleFileDeleteRequest withFileId(Long fileId) {
         this.fileId = fileId;
         return this;
     }
     
+    public PrivateArticleFileDeleteRequest(@JsonProperty("article_id") Long articleId, @JsonProperty("file_id") Long fileId) {
+        this.articleId = articleId;
+        this.fileId = fileId;
+  }
 }

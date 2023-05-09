@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Tag {
     @JsonProperty("TagKey")
     public String tagKey;
+
     public Tag withTagKey(String tagKey) {
         this.tagKey = tagKey;
         return this;
@@ -19,9 +20,14 @@ public class Tag {
     
     @JsonProperty("TagValue")
     public String tagValue;
+
     public Tag withTagValue(String tagValue) {
         this.tagValue = tagValue;
         return this;
     }
     
+    public Tag(@JsonProperty("TagKey") String tagKey, @JsonProperty("TagValue") String tagValue) {
+        this.tagKey = tagKey;
+        this.tagValue = tagValue;
+  }
 }

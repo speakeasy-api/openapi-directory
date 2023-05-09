@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RepertoireResponse {
     
     public String contentType;
+
     public RepertoireResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RepertoireResponse {
      */
     
     public org.openapis.openapi.models.shared.Erreur erreur;
+
     public RepertoireResponse withErreur(org.openapis.openapi.models.shared.Erreur erreur) {
         this.erreur = erreur;
         return this;
@@ -29,6 +32,7 @@ public class RepertoireResponse {
      */
     
     public org.openapis.openapi.models.shared.REPERTOIREmodifreponse repertoirEmodifreponse;
+
     public RepertoireResponse withREPERTOIREmodifreponse(org.openapis.openapi.models.shared.REPERTOIREmodifreponse repertoirEmodifreponse) {
         this.repertoirEmodifreponse = repertoirEmodifreponse;
         return this;
@@ -36,6 +40,7 @@ public class RepertoireResponse {
     
     
     public Integer statusCode;
+
     public RepertoireResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class RepertoireResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RepertoireResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RepertoireResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

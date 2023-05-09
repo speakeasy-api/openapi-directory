@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDevicePoolResponse {
@@ -12,6 +13,7 @@ public class UpdateDevicePoolResponse {
      */
     
     public Object argumentException;
+
     public UpdateDevicePoolResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDevicePoolResponse {
     
     
     public String contentType;
+
     public UpdateDevicePoolResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDevicePoolResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateDevicePoolResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDevicePoolResponse {
      */
     
     public Object notFoundException;
+
     public UpdateDevicePoolResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDevicePoolResponse {
     
     
     public Integer statusCode;
+
     public UpdateDevicePoolResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDevicePoolResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDevicePoolResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDevicePoolResponse {
      */
     
     public Object serviceAccountException;
+
     public UpdateDevicePoolResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateDevicePoolResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDevicePoolResult updateDevicePoolResult;
+
     public UpdateDevicePoolResponse withUpdateDevicePoolResult(org.openapis.openapi.models.shared.UpdateDevicePoolResult updateDevicePoolResult) {
         this.updateDevicePoolResult = updateDevicePoolResult;
         return this;
     }
     
+    public UpdateDevicePoolResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

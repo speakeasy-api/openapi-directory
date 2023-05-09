@@ -12,9 +12,11 @@ public class PeopleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectManagerId")
     public Long projectManagerId;
+
     public PeopleDTO withProjectManagerId(Long projectManagerId) {
         this.projectManagerId = projectManagerId;
         return this;
     }
     
+    public PeopleDTO(){}
 }

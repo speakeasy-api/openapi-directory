@@ -18,6 +18,7 @@ public class GetIosReopenAttributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleId")
     public String bundleId;
+
     public GetIosReopenAttributionRequest withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -29,6 +30,7 @@ public class GetIosReopenAttributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedLink")
     public String requestedLink;
+
     public GetIosReopenAttributionRequest withRequestedLink(String requestedLink) {
         this.requestedLink = requestedLink;
         return this;
@@ -40,9 +42,11 @@ public class GetIosReopenAttributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdkVersion")
     public String sdkVersion;
+
     public GetIosReopenAttributionRequest withSDKVersion(String sdkVersion) {
         this.sdkVersion = sdkVersion;
         return this;
     }
     
+    public GetIosReopenAttributionRequest(){}
 }

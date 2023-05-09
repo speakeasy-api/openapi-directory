@@ -12,6 +12,7 @@ public class AppointmentAuditViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appointmentId")
     public String appointmentId;
+
     public AppointmentAuditViewModel withAppointmentId(String appointmentId) {
         this.appointmentId = appointmentId;
         return this;
@@ -20,6 +21,7 @@ public class AppointmentAuditViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AppointmentAuditViewModel withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class AppointmentAuditViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modificationType")
     public String modificationType;
+
     public AppointmentAuditViewModel withModificationType(String modificationType) {
         this.modificationType = modificationType;
         return this;
@@ -36,6 +39,7 @@ public class AppointmentAuditViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiedBy")
     public String modifiedBy;
+
     public AppointmentAuditViewModel withModifiedBy(String modifiedBy) {
         this.modifiedBy = modifiedBy;
         return this;
@@ -44,6 +48,7 @@ public class AppointmentAuditViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiedOn")
     public String modifiedOn;
+
     public AppointmentAuditViewModel withModifiedOn(String modifiedOn) {
         this.modifiedOn = modifiedOn;
         return this;
@@ -52,6 +57,7 @@ public class AppointmentAuditViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notesAfter")
     public String notesAfter;
+
     public AppointmentAuditViewModel withNotesAfter(String notesAfter) {
         this.notesAfter = notesAfter;
         return this;
@@ -60,6 +66,7 @@ public class AppointmentAuditViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notesBefore")
     public String notesBefore;
+
     public AppointmentAuditViewModel withNotesBefore(String notesBefore) {
         this.notesBefore = notesBefore;
         return this;
@@ -68,6 +75,7 @@ public class AppointmentAuditViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusAfter")
     public String statusAfter;
+
     public AppointmentAuditViewModel withStatusAfter(String statusAfter) {
         this.statusAfter = statusAfter;
         return this;
@@ -76,9 +84,11 @@ public class AppointmentAuditViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusBefore")
     public String statusBefore;
+
     public AppointmentAuditViewModel withStatusBefore(String statusBefore) {
         this.statusBefore = statusBefore;
         return this;
     }
     
+    public AppointmentAuditViewModel(){}
 }

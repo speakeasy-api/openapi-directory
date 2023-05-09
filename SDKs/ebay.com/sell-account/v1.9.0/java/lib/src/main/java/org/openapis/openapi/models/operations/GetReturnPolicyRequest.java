@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReturnPolicyRequest {
@@ -12,9 +13,13 @@ public class GetReturnPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=return_policy_id")
     public String returnPolicyId;
+
     public GetReturnPolicyRequest withReturnPolicyId(String returnPolicyId) {
         this.returnPolicyId = returnPolicyId;
         return this;
     }
     
+    public GetReturnPolicyRequest(@JsonProperty("return_policy_id") String returnPolicyId) {
+        this.returnPolicyId = returnPolicyId;
+  }
 }

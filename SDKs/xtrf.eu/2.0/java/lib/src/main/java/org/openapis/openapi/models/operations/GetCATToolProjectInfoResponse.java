@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCATToolProjectInfoResponse {
@@ -12,6 +13,7 @@ public class GetCATToolProjectInfoResponse {
      */
     
     public org.openapis.openapi.models.shared.CATToolProjectDTO catToolProjectDTO;
+
     public GetCATToolProjectInfoResponse withCATToolProjectDTO(org.openapis.openapi.models.shared.CATToolProjectDTO catToolProjectDTO) {
         this.catToolProjectDTO = catToolProjectDTO;
         return this;
@@ -19,6 +21,7 @@ public class GetCATToolProjectInfoResponse {
     
     
     public String contentType;
+
     public GetCATToolProjectInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetCATToolProjectInfoResponse {
     
     
     public Integer statusCode;
+
     public GetCATToolProjectInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetCATToolProjectInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCATToolProjectInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCATToolProjectInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

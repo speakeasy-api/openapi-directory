@@ -12,6 +12,7 @@ public class ProductRetrieve200ApplicationJSON1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childOrders")
     public String[] childOrders;
+
     public ProductRetrieve200ApplicationJSON1 withChildOrders(String[] childOrders) {
         this.childOrders = childOrders;
         return this;
@@ -20,6 +21,7 @@ public class ProductRetrieve200ApplicationJSON1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public ProductRetrieve200ApplicationJSON1 withData(String data) {
         this.data = data;
         return this;
@@ -27,6 +29,7 @@ public class ProductRetrieve200ApplicationJSON1 {
     
     @JsonProperty("mimeType")
     public String mimeType;
+
     public ProductRetrieve200ApplicationJSON1 withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -34,6 +37,7 @@ public class ProductRetrieve200ApplicationJSON1 {
     
     @JsonProperty("productOrderId")
     public String productOrderId;
+
     public ProductRetrieve200ApplicationJSON1 withProductOrderId(String productOrderId) {
         this.productOrderId = productOrderId;
         return this;
@@ -41,9 +45,15 @@ public class ProductRetrieve200ApplicationJSON1 {
     
     @JsonProperty("uri")
     public String uri;
+
     public ProductRetrieve200ApplicationJSON1 withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public ProductRetrieve200ApplicationJSON1(@JsonProperty("mimeType") String mimeType, @JsonProperty("productOrderId") String productOrderId, @JsonProperty("uri") String uri) {
+        this.mimeType = mimeType;
+        this.productOrderId = productOrderId;
+        this.uri = uri;
+  }
 }

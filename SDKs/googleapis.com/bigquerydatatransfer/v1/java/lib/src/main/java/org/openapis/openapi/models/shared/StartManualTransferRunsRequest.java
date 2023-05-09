@@ -18,6 +18,7 @@ public class StartManualTransferRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedRunTime")
     public String requestedRunTime;
+
     public StartManualTransferRunsRequest withRequestedRunTime(String requestedRunTime) {
         this.requestedRunTime = requestedRunTime;
         return this;
@@ -29,9 +30,11 @@ public class StartManualTransferRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedTimeRange")
     public TimeRange requestedTimeRange;
+
     public StartManualTransferRunsRequest withRequestedTimeRange(TimeRange requestedTimeRange) {
         this.requestedTimeRange = requestedTimeRange;
         return this;
     }
     
+    public StartManualTransferRunsRequest(){}
 }

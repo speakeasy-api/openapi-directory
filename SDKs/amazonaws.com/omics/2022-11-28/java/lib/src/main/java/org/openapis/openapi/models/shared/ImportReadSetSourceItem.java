@@ -15,6 +15,7 @@ public class ImportReadSetSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ImportReadSetSourceItem withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class ImportReadSetSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generatedFrom")
     public String generatedFrom;
+
     public ImportReadSetSourceItem withGeneratedFrom(String generatedFrom) {
         this.generatedFrom = generatedFrom;
         return this;
@@ -31,6 +33,7 @@ public class ImportReadSetSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ImportReadSetSourceItem withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class ImportReadSetSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceArn")
     public String referenceArn;
+
     public ImportReadSetSourceItem withReferenceArn(String referenceArn) {
         this.referenceArn = referenceArn;
         return this;
@@ -46,6 +50,7 @@ public class ImportReadSetSourceItem {
     
     @JsonProperty("sampleId")
     public String sampleId;
+
     public ImportReadSetSourceItem withSampleId(String sampleId) {
         this.sampleId = sampleId;
         return this;
@@ -53,6 +58,7 @@ public class ImportReadSetSourceItem {
     
     @JsonProperty("sourceFileType")
     public FileTypeEnum sourceFileType;
+
     public ImportReadSetSourceItem withSourceFileType(FileTypeEnum sourceFileType) {
         this.sourceFileType = sourceFileType;
         return this;
@@ -60,6 +66,7 @@ public class ImportReadSetSourceItem {
     
     @JsonProperty("sourceFiles")
     public SourceFiles sourceFiles;
+
     public ImportReadSetSourceItem withSourceFiles(SourceFiles sourceFiles) {
         this.sourceFiles = sourceFiles;
         return this;
@@ -67,6 +74,7 @@ public class ImportReadSetSourceItem {
     
     @JsonProperty("status")
     public ReadSetImportJobItemStatusEnum status;
+
     public ImportReadSetSourceItem withStatus(ReadSetImportJobItemStatusEnum status) {
         this.status = status;
         return this;
@@ -75,6 +83,7 @@ public class ImportReadSetSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public ImportReadSetSourceItem withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -82,6 +91,7 @@ public class ImportReadSetSourceItem {
     
     @JsonProperty("subjectId")
     public String subjectId;
+
     public ImportReadSetSourceItem withSubjectId(String subjectId) {
         this.subjectId = subjectId;
         return this;
@@ -90,9 +100,17 @@ public class ImportReadSetSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ImportReadSetSourceItem withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ImportReadSetSourceItem(@JsonProperty("sampleId") String sampleId, @JsonProperty("sourceFileType") FileTypeEnum sourceFileType, @JsonProperty("sourceFiles") SourceFiles sourceFiles, @JsonProperty("status") ReadSetImportJobItemStatusEnum status, @JsonProperty("subjectId") String subjectId) {
+        this.sampleId = sampleId;
+        this.sourceFileType = sourceFileType;
+        this.sourceFiles = sourceFiles;
+        this.status = status;
+        this.subjectId = subjectId;
+  }
 }

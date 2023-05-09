@@ -15,6 +15,7 @@ public class AwsElbLoadBalancerSourceSecurityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public AwsElbLoadBalancerSourceSecurityGroup withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -23,9 +24,11 @@ public class AwsElbLoadBalancerSourceSecurityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerAlias")
     public String ownerAlias;
+
     public AwsElbLoadBalancerSourceSecurityGroup withOwnerAlias(String ownerAlias) {
         this.ownerAlias = ownerAlias;
         return this;
     }
     
+    public AwsElbLoadBalancerSourceSecurityGroup(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RequestUploadCredentialsInput {
     @JsonProperty("BuildId")
     public String buildId;
+
     public RequestUploadCredentialsInput withBuildId(String buildId) {
         this.buildId = buildId;
         return this;
     }
     
+    public RequestUploadCredentialsInput(@JsonProperty("BuildId") String buildId) {
+        this.buildId = buildId;
+  }
 }

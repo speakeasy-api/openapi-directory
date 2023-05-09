@@ -18,6 +18,7 @@ public class CustomDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Integer index;
+
     public CustomDimension withIndex(Integer index) {
         this.index = index;
         return this;
@@ -29,9 +30,11 @@ public class CustomDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CustomDimension withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CustomDimension(){}
 }

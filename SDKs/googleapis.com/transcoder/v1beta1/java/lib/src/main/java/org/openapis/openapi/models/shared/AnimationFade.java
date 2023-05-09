@@ -18,6 +18,7 @@ public class AnimationFade {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTimeOffset")
     public String endTimeOffset;
+
     public AnimationFade withEndTimeOffset(String endTimeOffset) {
         this.endTimeOffset = endTimeOffset;
         return this;
@@ -29,6 +30,7 @@ public class AnimationFade {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fadeType")
     public AnimationFadeFadeTypeEnum fadeType;
+
     public AnimationFade withFadeType(AnimationFadeFadeTypeEnum fadeType) {
         this.fadeType = fadeType;
         return this;
@@ -40,6 +42,7 @@ public class AnimationFade {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeOffset")
     public String startTimeOffset;
+
     public AnimationFade withStartTimeOffset(String startTimeOffset) {
         this.startTimeOffset = startTimeOffset;
         return this;
@@ -51,9 +54,11 @@ public class AnimationFade {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xy")
     public NormalizedCoordinate xy;
+
     public AnimationFade withXy(NormalizedCoordinate xy) {
         this.xy = xy;
         return this;
     }
     
+    public AnimationFade(){}
 }

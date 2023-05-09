@@ -18,6 +18,7 @@ public class ClassificationEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceThreshold")
     public Float confidenceThreshold;
+
     public ClassificationEvaluationMetricsConfidenceMetricsEntry withConfidenceThreshold(Float confidenceThreshold) {
         this.confidenceThreshold = confidenceThreshold;
         return this;
@@ -29,6 +30,7 @@ public class ClassificationEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("f1Score")
     public Float f1Score;
+
     public ClassificationEvaluationMetricsConfidenceMetricsEntry withF1Score(Float f1Score) {
         this.f1Score = f1Score;
         return this;
@@ -40,6 +42,7 @@ public class ClassificationEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("f1ScoreAt1")
     public Float f1ScoreAt1;
+
     public ClassificationEvaluationMetricsConfidenceMetricsEntry withF1ScoreAt1(Float f1ScoreAt1) {
         this.f1ScoreAt1 = f1ScoreAt1;
         return this;
@@ -51,6 +54,7 @@ public class ClassificationEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("falseNegativeCount")
     public String falseNegativeCount;
+
     public ClassificationEvaluationMetricsConfidenceMetricsEntry withFalseNegativeCount(String falseNegativeCount) {
         this.falseNegativeCount = falseNegativeCount;
         return this;
@@ -62,6 +66,7 @@ public class ClassificationEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("falsePositiveCount")
     public String falsePositiveCount;
+
     public ClassificationEvaluationMetricsConfidenceMetricsEntry withFalsePositiveCount(String falsePositiveCount) {
         this.falsePositiveCount = falsePositiveCount;
         return this;
@@ -73,6 +78,7 @@ public class ClassificationEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("falsePositiveRate")
     public Float falsePositiveRate;
+
     public ClassificationEvaluationMetricsConfidenceMetricsEntry withFalsePositiveRate(Float falsePositiveRate) {
         this.falsePositiveRate = falsePositiveRate;
         return this;
@@ -84,6 +90,7 @@ public class ClassificationEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("falsePositiveRateAt1")
     public Float falsePositiveRateAt1;
+
     public ClassificationEvaluationMetricsConfidenceMetricsEntry withFalsePositiveRateAt1(Float falsePositiveRateAt1) {
         this.falsePositiveRateAt1 = falsePositiveRateAt1;
         return this;
@@ -95,6 +102,7 @@ public class ClassificationEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positionThreshold")
     public Integer positionThreshold;
+
     public ClassificationEvaluationMetricsConfidenceMetricsEntry withPositionThreshold(Integer positionThreshold) {
         this.positionThreshold = positionThreshold;
         return this;
@@ -106,6 +114,7 @@ public class ClassificationEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Float precision;
+
     public ClassificationEvaluationMetricsConfidenceMetricsEntry withPrecision(Float precision) {
         this.precision = precision;
         return this;
@@ -117,6 +126,7 @@ public class ClassificationEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precisionAt1")
     public Float precisionAt1;
+
     public ClassificationEvaluationMetricsConfidenceMetricsEntry withPrecisionAt1(Float precisionAt1) {
         this.precisionAt1 = precisionAt1;
         return this;
@@ -128,6 +138,7 @@ public class ClassificationEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recall")
     public Float recall;
+
     public ClassificationEvaluationMetricsConfidenceMetricsEntry withRecall(Float recall) {
         this.recall = recall;
         return this;
@@ -139,6 +150,7 @@ public class ClassificationEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recallAt1")
     public Float recallAt1;
+
     public ClassificationEvaluationMetricsConfidenceMetricsEntry withRecallAt1(Float recallAt1) {
         this.recallAt1 = recallAt1;
         return this;
@@ -150,6 +162,7 @@ public class ClassificationEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trueNegativeCount")
     public String trueNegativeCount;
+
     public ClassificationEvaluationMetricsConfidenceMetricsEntry withTrueNegativeCount(String trueNegativeCount) {
         this.trueNegativeCount = trueNegativeCount;
         return this;
@@ -161,9 +174,11 @@ public class ClassificationEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("truePositiveCount")
     public String truePositiveCount;
+
     public ClassificationEvaluationMetricsConfidenceMetricsEntry withTruePositiveCount(String truePositiveCount) {
         this.truePositiveCount = truePositiveCount;
         return this;
     }
     
+    public ClassificationEvaluationMetricsConfidenceMetricsEntry(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetIdentityProviderByIdentifierResponse {
     @JsonProperty("IdentityProvider")
     public IdentityProviderType identityProvider;
+
     public GetIdentityProviderByIdentifierResponse withIdentityProvider(IdentityProviderType identityProvider) {
         this.identityProvider = identityProvider;
         return this;
     }
     
+    public GetIdentityProviderByIdentifierResponse(@JsonProperty("IdentityProvider") IdentityProviderType identityProvider) {
+        this.identityProvider = identityProvider;
+  }
 }

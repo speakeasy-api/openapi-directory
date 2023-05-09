@@ -15,9 +15,11 @@ public class ClusterHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public ClusterIssue[] issues;
+
     public ClusterHealth withIssues(ClusterIssue[] issues) {
         this.issues = issues;
         return this;
     }
     
+    public ClusterHealth(){}
 }

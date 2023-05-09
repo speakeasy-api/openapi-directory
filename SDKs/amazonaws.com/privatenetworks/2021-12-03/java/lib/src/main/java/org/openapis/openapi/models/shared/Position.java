@@ -15,6 +15,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elevation")
     public Double elevation;
+
     public Position withElevation(Double elevation) {
         this.elevation = elevation;
         return this;
@@ -23,6 +24,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elevationReference")
     public ElevationReferenceEnum elevationReference;
+
     public Position withElevationReference(ElevationReferenceEnum elevationReference) {
         this.elevationReference = elevationReference;
         return this;
@@ -31,6 +33,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elevationUnit")
     public ElevationUnitEnum elevationUnit;
+
     public Position withElevationUnit(ElevationUnitEnum elevationUnit) {
         this.elevationUnit = elevationUnit;
         return this;
@@ -39,6 +42,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public Position withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -47,9 +51,11 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public Position withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public Position(){}
 }

@@ -15,6 +15,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public String availability;
+
     public CartSimulation200ApplicationJSONItems withAvailability(String availability) {
         this.availability = availability;
         return this;
@@ -26,6 +27,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CartSimulation200ApplicationJSONItems withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listPrice")
     public Long listPrice;
+
     public CartSimulation200ApplicationJSONItems withListPrice(Long listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -48,6 +51,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurementUnit")
     public String measurementUnit;
+
     public CartSimulation200ApplicationJSONItems withMeasurementUnit(String measurementUnit) {
         this.measurementUnit = measurementUnit;
         return this;
@@ -59,6 +63,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerings")
     public Object[] offerings;
+
     public CartSimulation200ApplicationJSONItems withOfferings(Object[] offerings) {
         this.offerings = offerings;
         return this;
@@ -70,6 +75,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentAssemblyBinding")
     public String parentAssemblyBinding;
+
     public CartSimulation200ApplicationJSONItems withParentAssemblyBinding(String parentAssemblyBinding) {
         this.parentAssemblyBinding = parentAssemblyBinding;
         return this;
@@ -81,6 +87,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentItemIndex")
     public Long parentItemIndex;
+
     public CartSimulation200ApplicationJSONItems withParentItemIndex(Long parentItemIndex) {
         this.parentItemIndex = parentItemIndex;
         return this;
@@ -92,6 +99,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public CartSimulation200ApplicationJSONItems withPrice(Long price) {
         this.price = price;
         return this;
@@ -103,6 +111,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceDefinition")
     public CartSimulation200ApplicationJSONItemsPriceDefinition priceDefinition;
+
     public CartSimulation200ApplicationJSONItems withPriceDefinition(CartSimulation200ApplicationJSONItemsPriceDefinition priceDefinition) {
         this.priceDefinition = priceDefinition;
         return this;
@@ -114,6 +123,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceTags")
     public CartSimulation200ApplicationJSONItemsPriceTags[] priceTags;
+
     public CartSimulation200ApplicationJSONItems withPriceTags(CartSimulation200ApplicationJSONItemsPriceTags[] priceTags) {
         this.priceTags = priceTags;
         return this;
@@ -125,6 +135,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceValidUntil")
     public String priceValidUntil;
+
     public CartSimulation200ApplicationJSONItems withPriceValidUntil(String priceValidUntil) {
         this.priceValidUntil = priceValidUntil;
         return this;
@@ -136,6 +147,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public CartSimulation200ApplicationJSONItems withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -147,6 +159,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestIndex")
     public Long requestIndex;
+
     public CartSimulation200ApplicationJSONItems withRequestIndex(Long requestIndex) {
         this.requestIndex = requestIndex;
         return this;
@@ -158,6 +171,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rewardValue")
     public Long rewardValue;
+
     public CartSimulation200ApplicationJSONItems withRewardValue(Long rewardValue) {
         this.rewardValue = rewardValue;
         return this;
@@ -169,6 +183,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seller")
     public String seller;
+
     public CartSimulation200ApplicationJSONItems withSeller(String seller) {
         this.seller = seller;
         return this;
@@ -180,6 +195,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerChain")
     public String[] sellerChain;
+
     public CartSimulation200ApplicationJSONItems withSellerChain(String[] sellerChain) {
         this.sellerChain = sellerChain;
         return this;
@@ -191,6 +207,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellingPrice")
     public Long sellingPrice;
+
     public CartSimulation200ApplicationJSONItems withSellingPrice(Long sellingPrice) {
         this.sellingPrice = sellingPrice;
         return this;
@@ -202,6 +219,7 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Long tax;
+
     public CartSimulation200ApplicationJSONItems withTax(Long tax) {
         this.tax = tax;
         return this;
@@ -213,9 +231,11 @@ public class CartSimulation200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitMultiplier")
     public Long unitMultiplier;
+
     public CartSimulation200ApplicationJSONItems withUnitMultiplier(Long unitMultiplier) {
         this.unitMultiplier = unitMultiplier;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONItems(){}
 }

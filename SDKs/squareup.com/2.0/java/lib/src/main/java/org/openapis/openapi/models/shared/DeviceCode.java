@@ -15,6 +15,7 @@ public class DeviceCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public DeviceCode withCode(String code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class DeviceCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public DeviceCode withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -37,6 +39,7 @@ public class DeviceCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_id")
     public String deviceId;
+
     public DeviceCode withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -48,6 +51,7 @@ public class DeviceCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeviceCode withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class DeviceCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public DeviceCode withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -70,6 +75,7 @@ public class DeviceCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DeviceCode withName(String name) {
         this.name = name;
         return this;
@@ -81,6 +87,7 @@ public class DeviceCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pair_by")
     public String pairBy;
+
     public DeviceCode withPairBy(String pairBy) {
         this.pairBy = pairBy;
         return this;
@@ -92,6 +99,7 @@ public class DeviceCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paired_at")
     public String pairedAt;
+
     public DeviceCode withPairedAt(String pairedAt) {
         this.pairedAt = pairedAt;
         return this;
@@ -102,6 +110,7 @@ public class DeviceCode {
      */
     @JsonProperty("product_type")
     public String productType;
+
     public DeviceCode withProductType(String productType) {
         this.productType = productType;
         return this;
@@ -113,6 +122,7 @@ public class DeviceCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public DeviceCode withStatus(String status) {
         this.status = status;
         return this;
@@ -124,9 +134,13 @@ public class DeviceCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_changed_at")
     public String statusChangedAt;
+
     public DeviceCode withStatusChangedAt(String statusChangedAt) {
         this.statusChangedAt = statusChangedAt;
         return this;
     }
     
+    public DeviceCode(@JsonProperty("product_type") String productType) {
+        this.productType = productType;
+  }
 }

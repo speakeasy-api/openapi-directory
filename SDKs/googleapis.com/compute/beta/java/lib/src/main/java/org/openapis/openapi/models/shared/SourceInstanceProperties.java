@@ -18,6 +18,7 @@ public class SourceInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canIpForward")
     public Boolean canIpForward;
+
     public SourceInstanceProperties withCanIpForward(Boolean canIpForward) {
         this.canIpForward = canIpForward;
         return this;
@@ -29,6 +30,7 @@ public class SourceInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletionProtection")
     public Boolean deletionProtection;
+
     public SourceInstanceProperties withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -40,6 +42,7 @@ public class SourceInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SourceInstanceProperties withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class SourceInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disks")
     public SavedAttachedDisk[] disks;
+
     public SourceInstanceProperties withDisks(SavedAttachedDisk[] disks) {
         this.disks = disks;
         return this;
@@ -62,6 +66,7 @@ public class SourceInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestAccelerators")
     public AcceleratorConfig[] guestAccelerators;
+
     public SourceInstanceProperties withGuestAccelerators(AcceleratorConfig[] guestAccelerators) {
         this.guestAccelerators = guestAccelerators;
         return this;
@@ -73,6 +78,7 @@ public class SourceInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyRevocationActionType")
     public SourceInstancePropertiesKeyRevocationActionTypeEnum keyRevocationActionType;
+
     public SourceInstanceProperties withKeyRevocationActionType(SourceInstancePropertiesKeyRevocationActionTypeEnum keyRevocationActionType) {
         this.keyRevocationActionType = keyRevocationActionType;
         return this;
@@ -84,6 +90,7 @@ public class SourceInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public SourceInstanceProperties withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -95,6 +102,7 @@ public class SourceInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public SourceInstanceProperties withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
@@ -106,6 +114,7 @@ public class SourceInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public Metadata metadata;
+
     public SourceInstanceProperties withMetadata(Metadata metadata) {
         this.metadata = metadata;
         return this;
@@ -117,6 +126,7 @@ public class SourceInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minCpuPlatform")
     public String minCpuPlatform;
+
     public SourceInstanceProperties withMinCpuPlatform(String minCpuPlatform) {
         this.minCpuPlatform = minCpuPlatform;
         return this;
@@ -128,6 +138,7 @@ public class SourceInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkInterfaces")
     public NetworkInterface[] networkInterfaces;
+
     public SourceInstanceProperties withNetworkInterfaces(NetworkInterface[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -139,6 +150,7 @@ public class SourceInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postKeyRevocationActionType")
     public SourceInstancePropertiesPostKeyRevocationActionTypeEnum postKeyRevocationActionType;
+
     public SourceInstanceProperties withPostKeyRevocationActionType(SourceInstancePropertiesPostKeyRevocationActionTypeEnum postKeyRevocationActionType) {
         this.postKeyRevocationActionType = postKeyRevocationActionType;
         return this;
@@ -150,6 +162,7 @@ public class SourceInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduling")
     public Scheduling scheduling;
+
     public SourceInstanceProperties withScheduling(Scheduling scheduling) {
         this.scheduling = scheduling;
         return this;
@@ -161,6 +174,7 @@ public class SourceInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccounts")
     public ServiceAccount[] serviceAccounts;
+
     public SourceInstanceProperties withServiceAccounts(ServiceAccount[] serviceAccounts) {
         this.serviceAccounts = serviceAccounts;
         return this;
@@ -172,9 +186,11 @@ public class SourceInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tags tags;
+
     public SourceInstanceProperties withTags(Tags tags) {
         this.tags = tags;
         return this;
     }
     
+    public SourceInstanceProperties(){}
 }

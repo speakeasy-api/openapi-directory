@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ModifyVolumeResultVolumeModification {
     
     public OffsetDateTime endTime;
+
     public ModifyVolumeResultVolumeModification withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -19,6 +20,7 @@ public class ModifyVolumeResultVolumeModification {
     
     
     public ModifyVolumeResultVolumeModificationModificationStateEnum modificationState;
+
     public ModifyVolumeResultVolumeModification withModificationState(ModifyVolumeResultVolumeModificationModificationStateEnum modificationState) {
         this.modificationState = modificationState;
         return this;
@@ -26,6 +28,7 @@ public class ModifyVolumeResultVolumeModification {
     
     
     public Long originalIops;
+
     public ModifyVolumeResultVolumeModification withOriginalIops(Long originalIops) {
         this.originalIops = originalIops;
         return this;
@@ -33,6 +36,7 @@ public class ModifyVolumeResultVolumeModification {
     
     
     public Boolean originalMultiAttachEnabled;
+
     public ModifyVolumeResultVolumeModification withOriginalMultiAttachEnabled(Boolean originalMultiAttachEnabled) {
         this.originalMultiAttachEnabled = originalMultiAttachEnabled;
         return this;
@@ -40,6 +44,7 @@ public class ModifyVolumeResultVolumeModification {
     
     
     public Long originalSize;
+
     public ModifyVolumeResultVolumeModification withOriginalSize(Long originalSize) {
         this.originalSize = originalSize;
         return this;
@@ -47,6 +52,7 @@ public class ModifyVolumeResultVolumeModification {
     
     
     public Long originalThroughput;
+
     public ModifyVolumeResultVolumeModification withOriginalThroughput(Long originalThroughput) {
         this.originalThroughput = originalThroughput;
         return this;
@@ -54,6 +60,7 @@ public class ModifyVolumeResultVolumeModification {
     
     
     public ModifyVolumeResultVolumeModificationOriginalVolumeTypeEnum originalVolumeType;
+
     public ModifyVolumeResultVolumeModification withOriginalVolumeType(ModifyVolumeResultVolumeModificationOriginalVolumeTypeEnum originalVolumeType) {
         this.originalVolumeType = originalVolumeType;
         return this;
@@ -61,6 +68,7 @@ public class ModifyVolumeResultVolumeModification {
     
     
     public Long progress;
+
     public ModifyVolumeResultVolumeModification withProgress(Long progress) {
         this.progress = progress;
         return this;
@@ -68,6 +76,7 @@ public class ModifyVolumeResultVolumeModification {
     
     
     public OffsetDateTime startTime;
+
     public ModifyVolumeResultVolumeModification withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -75,6 +84,7 @@ public class ModifyVolumeResultVolumeModification {
     
     
     public String statusMessage;
+
     public ModifyVolumeResultVolumeModification withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -82,6 +92,7 @@ public class ModifyVolumeResultVolumeModification {
     
     
     public Long targetIops;
+
     public ModifyVolumeResultVolumeModification withTargetIops(Long targetIops) {
         this.targetIops = targetIops;
         return this;
@@ -89,6 +100,7 @@ public class ModifyVolumeResultVolumeModification {
     
     
     public Boolean targetMultiAttachEnabled;
+
     public ModifyVolumeResultVolumeModification withTargetMultiAttachEnabled(Boolean targetMultiAttachEnabled) {
         this.targetMultiAttachEnabled = targetMultiAttachEnabled;
         return this;
@@ -96,6 +108,7 @@ public class ModifyVolumeResultVolumeModification {
     
     
     public Long targetSize;
+
     public ModifyVolumeResultVolumeModification withTargetSize(Long targetSize) {
         this.targetSize = targetSize;
         return this;
@@ -103,6 +116,7 @@ public class ModifyVolumeResultVolumeModification {
     
     
     public Long targetThroughput;
+
     public ModifyVolumeResultVolumeModification withTargetThroughput(Long targetThroughput) {
         this.targetThroughput = targetThroughput;
         return this;
@@ -110,6 +124,7 @@ public class ModifyVolumeResultVolumeModification {
     
     
     public ModifyVolumeResultVolumeModificationTargetVolumeTypeEnum targetVolumeType;
+
     public ModifyVolumeResultVolumeModification withTargetVolumeType(ModifyVolumeResultVolumeModificationTargetVolumeTypeEnum targetVolumeType) {
         this.targetVolumeType = targetVolumeType;
         return this;
@@ -117,9 +132,11 @@ public class ModifyVolumeResultVolumeModification {
     
     
     public String volumeId;
+
     public ModifyVolumeResultVolumeModification withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public ModifyVolumeResultVolumeModification(){}
 }

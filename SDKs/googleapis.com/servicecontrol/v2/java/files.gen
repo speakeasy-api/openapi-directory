@@ -54,4 +54,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Auth.java
 lib/src/main/java/org/openapis/openapi/models/shared/Api.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportRequest.java
+docs/sdk/README.md
+docs/services/README.md
 USAGE.md

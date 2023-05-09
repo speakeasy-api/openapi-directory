@@ -12,9 +12,11 @@ public class SwapIndexesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexes")
     public String[] indexes;
+
     public SwapIndexesRequestBody withIndexes(String[] indexes) {
         this.indexes = indexes;
         return this;
     }
     
+    public SwapIndexesRequestBody(){}
 }

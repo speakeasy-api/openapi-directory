@@ -15,6 +15,7 @@ public class ListS3ResourcesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListS3ResourcesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListS3ResourcesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Resources")
     public S3ResourceClassification[] s3Resources;
+
     public ListS3ResourcesResult withS3Resources(S3ResourceClassification[] s3Resources) {
         this.s3Resources = s3Resources;
         return this;
     }
     
+    public ListS3ResourcesResult(){}
 }

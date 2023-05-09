@@ -62,10 +62,8 @@ public class Mobiledevices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryMobiledevicesActionResponse res = new org.openapis.openapi.models.operations.DirectoryMobiledevicesActionResponse() {{
+        org.openapis.openapi.models.operations.DirectoryMobiledevicesActionResponse res = new org.openapis.openapi.models.operations.DirectoryMobiledevicesActionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,10 +100,8 @@ public class Mobiledevices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryMobiledevicesDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryMobiledevicesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DirectoryMobiledevicesDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryMobiledevicesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -142,11 +138,9 @@ public class Mobiledevices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryMobiledevicesGetResponse res = new org.openapis.openapi.models.operations.DirectoryMobiledevicesGetResponse() {{
+        org.openapis.openapi.models.operations.DirectoryMobiledevicesGetResponse res = new org.openapis.openapi.models.operations.DirectoryMobiledevicesGetResponse(contentType, httpRes.statusCode()) {{
             mobileDevice = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,11 +182,9 @@ public class Mobiledevices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryMobiledevicesListResponse res = new org.openapis.openapi.models.operations.DirectoryMobiledevicesListResponse() {{
+        org.openapis.openapi.models.operations.DirectoryMobiledevicesListResponse res = new org.openapis.openapi.models.operations.DirectoryMobiledevicesListResponse(contentType, httpRes.statusCode()) {{
             mobileDevices = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

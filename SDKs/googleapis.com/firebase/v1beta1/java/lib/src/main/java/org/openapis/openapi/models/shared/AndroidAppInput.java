@@ -18,6 +18,7 @@ public class AndroidAppInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKeyId")
     public String apiKeyId;
+
     public AndroidAppInput withApiKeyId(String apiKeyId) {
         this.apiKeyId = apiKeyId;
         return this;
@@ -29,6 +30,7 @@ public class AndroidAppInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public AndroidAppInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class AndroidAppInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public AndroidAppInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class AndroidAppInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AndroidAppInput withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class AndroidAppInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public AndroidAppInput withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -73,6 +78,7 @@ public class AndroidAppInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha1Hashes")
     public String[] sha1Hashes;
+
     public AndroidAppInput withSha1Hashes(String[] sha1Hashes) {
         this.sha1Hashes = sha1Hashes;
         return this;
@@ -84,9 +90,11 @@ public class AndroidAppInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha256Hashes")
     public String[] sha256Hashes;
+
     public AndroidAppInput withSha256Hashes(String[] sha256Hashes) {
         this.sha256Hashes = sha256Hashes;
         return this;
     }
     
+    public AndroidAppInput(){}
 }

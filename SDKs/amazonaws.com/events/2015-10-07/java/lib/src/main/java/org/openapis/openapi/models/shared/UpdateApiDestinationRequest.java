@@ -12,6 +12,7 @@ public class UpdateApiDestinationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionArn")
     public String connectionArn;
+
     public UpdateApiDestinationRequest withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
@@ -20,6 +21,7 @@ public class UpdateApiDestinationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateApiDestinationRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class UpdateApiDestinationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpMethod")
     public ApiDestinationHttpMethodEnum httpMethod;
+
     public UpdateApiDestinationRequest withHttpMethod(ApiDestinationHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
@@ -36,6 +39,7 @@ public class UpdateApiDestinationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvocationEndpoint")
     public String invocationEndpoint;
+
     public UpdateApiDestinationRequest withInvocationEndpoint(String invocationEndpoint) {
         this.invocationEndpoint = invocationEndpoint;
         return this;
@@ -44,6 +48,7 @@ public class UpdateApiDestinationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvocationRateLimitPerSecond")
     public Long invocationRateLimitPerSecond;
+
     public UpdateApiDestinationRequest withInvocationRateLimitPerSecond(Long invocationRateLimitPerSecond) {
         this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
         return this;
@@ -51,9 +56,13 @@ public class UpdateApiDestinationRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateApiDestinationRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateApiDestinationRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -18,6 +18,7 @@ public class PubSub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public PubSub withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,6 +30,7 @@ public class PubSub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public Filter filter;
+
     public PubSub withFilter(Filter filter) {
         this.filter = filter;
         return this;
@@ -40,9 +42,11 @@ public class PubSub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public String topic;
+
     public PubSub withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public PubSub(){}
 }

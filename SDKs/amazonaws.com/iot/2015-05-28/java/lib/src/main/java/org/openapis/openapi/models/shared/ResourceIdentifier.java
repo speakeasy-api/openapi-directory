@@ -15,6 +15,7 @@ public class ResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public String account;
+
     public ResourceIdentifier withAccount(String account) {
         this.account = account;
         return this;
@@ -23,6 +24,7 @@ public class ResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caCertificateId")
     public String caCertificateId;
+
     public ResourceIdentifier withCaCertificateId(String caCertificateId) {
         this.caCertificateId = caCertificateId;
         return this;
@@ -31,6 +33,7 @@ public class ResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public ResourceIdentifier withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -39,6 +42,7 @@ public class ResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cognitoIdentityPoolId")
     public String cognitoIdentityPoolId;
+
     public ResourceIdentifier withCognitoIdentityPoolId(String cognitoIdentityPoolId) {
         this.cognitoIdentityPoolId = cognitoIdentityPoolId;
         return this;
@@ -47,6 +51,7 @@ public class ResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceCertificateArn")
     public String deviceCertificateArn;
+
     public ResourceIdentifier withDeviceCertificateArn(String deviceCertificateArn) {
         this.deviceCertificateArn = deviceCertificateArn;
         return this;
@@ -55,6 +60,7 @@ public class ResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceCertificateId")
     public String deviceCertificateId;
+
     public ResourceIdentifier withDeviceCertificateId(String deviceCertificateId) {
         this.deviceCertificateId = deviceCertificateId;
         return this;
@@ -63,6 +69,7 @@ public class ResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamRoleArn")
     public String iamRoleArn;
+
     public ResourceIdentifier withIamRoleArn(String iamRoleArn) {
         this.iamRoleArn = iamRoleArn;
         return this;
@@ -71,6 +78,7 @@ public class ResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerCertificateIdentifier")
     public IssuerCertificateIdentifier issuerCertificateIdentifier;
+
     public ResourceIdentifier withIssuerCertificateIdentifier(IssuerCertificateIdentifier issuerCertificateIdentifier) {
         this.issuerCertificateIdentifier = issuerCertificateIdentifier;
         return this;
@@ -79,6 +87,7 @@ public class ResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyVersionIdentifier")
     public PolicyVersionIdentifier policyVersionIdentifier;
+
     public ResourceIdentifier withPolicyVersionIdentifier(PolicyVersionIdentifier policyVersionIdentifier) {
         this.policyVersionIdentifier = policyVersionIdentifier;
         return this;
@@ -87,9 +96,11 @@ public class ResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleAliasArn")
     public String roleAliasArn;
+
     public ResourceIdentifier withRoleAliasArn(String roleAliasArn) {
         this.roleAliasArn = roleAliasArn;
         return this;
     }
     
+    public ResourceIdentifier(){}
 }

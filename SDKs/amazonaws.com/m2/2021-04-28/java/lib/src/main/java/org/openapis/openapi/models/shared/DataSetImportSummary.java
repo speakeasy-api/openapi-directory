@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataSetImportSummary {
     @JsonProperty("failed")
     public Long failed;
+
     public DataSetImportSummary withFailed(Long failed) {
         this.failed = failed;
         return this;
@@ -19,6 +20,7 @@ public class DataSetImportSummary {
     
     @JsonProperty("inProgress")
     public Long inProgress;
+
     public DataSetImportSummary withInProgress(Long inProgress) {
         this.inProgress = inProgress;
         return this;
@@ -26,6 +28,7 @@ public class DataSetImportSummary {
     
     @JsonProperty("pending")
     public Long pending;
+
     public DataSetImportSummary withPending(Long pending) {
         this.pending = pending;
         return this;
@@ -33,6 +36,7 @@ public class DataSetImportSummary {
     
     @JsonProperty("succeeded")
     public Long succeeded;
+
     public DataSetImportSummary withSucceeded(Long succeeded) {
         this.succeeded = succeeded;
         return this;
@@ -40,9 +44,17 @@ public class DataSetImportSummary {
     
     @JsonProperty("total")
     public Long total;
+
     public DataSetImportSummary withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public DataSetImportSummary(@JsonProperty("failed") Long failed, @JsonProperty("inProgress") Long inProgress, @JsonProperty("pending") Long pending, @JsonProperty("succeeded") Long succeeded, @JsonProperty("total") Long total) {
+        this.failed = failed;
+        this.inProgress = inProgress;
+        this.pending = pending;
+        this.succeeded = succeeded;
+        this.total = total;
+  }
 }

@@ -15,6 +15,7 @@ public class ServerGroupValidationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverGroupId")
     public String serverGroupId;
+
     public ServerGroupValidationConfiguration withServerGroupId(String serverGroupId) {
         this.serverGroupId = serverGroupId;
         return this;
@@ -23,9 +24,11 @@ public class ServerGroupValidationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverValidationConfigurations")
     public ServerValidationConfiguration[] serverValidationConfigurations;
+
     public ServerGroupValidationConfiguration withServerValidationConfigurations(ServerValidationConfiguration[] serverValidationConfigurations) {
         this.serverValidationConfigurations = serverValidationConfigurations;
         return this;
     }
     
+    public ServerGroupValidationConfiguration(){}
 }

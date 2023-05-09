@@ -15,6 +15,7 @@ public class S3RecordingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketArn")
     public String bucketArn;
+
     public S3RecordingDetails withBucketArn(String bucketArn) {
         this.bucketArn = bucketArn;
         return this;
@@ -23,9 +24,11 @@ public class S3RecordingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyTemplate")
     public String keyTemplate;
+
     public S3RecordingDetails withKeyTemplate(String keyTemplate) {
         this.keyTemplate = keyTemplate;
         return this;
     }
     
+    public S3RecordingDetails(){}
 }

@@ -15,6 +15,7 @@ public class ProfilerRuleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public ProcessingInstanceTypeEnum instanceType;
+
     public ProfilerRuleConfiguration withInstanceType(ProcessingInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -23,6 +24,7 @@ public class ProfilerRuleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalPath")
     public String localPath;
+
     public ProfilerRuleConfiguration withLocalPath(String localPath) {
         this.localPath = localPath;
         return this;
@@ -30,6 +32,7 @@ public class ProfilerRuleConfiguration {
     
     @JsonProperty("RuleConfigurationName")
     public String ruleConfigurationName;
+
     public ProfilerRuleConfiguration withRuleConfigurationName(String ruleConfigurationName) {
         this.ruleConfigurationName = ruleConfigurationName;
         return this;
@@ -37,6 +40,7 @@ public class ProfilerRuleConfiguration {
     
     @JsonProperty("RuleEvaluatorImage")
     public String ruleEvaluatorImage;
+
     public ProfilerRuleConfiguration withRuleEvaluatorImage(String ruleEvaluatorImage) {
         this.ruleEvaluatorImage = ruleEvaluatorImage;
         return this;
@@ -45,6 +49,7 @@ public class ProfilerRuleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleParameters")
     public java.util.Map<String, String> ruleParameters;
+
     public ProfilerRuleConfiguration withRuleParameters(java.util.Map<String, String> ruleParameters) {
         this.ruleParameters = ruleParameters;
         return this;
@@ -53,6 +58,7 @@ public class ProfilerRuleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3OutputPath")
     public String s3OutputPath;
+
     public ProfilerRuleConfiguration withS3OutputPath(String s3OutputPath) {
         this.s3OutputPath = s3OutputPath;
         return this;
@@ -61,9 +67,14 @@ public class ProfilerRuleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeSizeInGB")
     public Long volumeSizeInGB;
+
     public ProfilerRuleConfiguration withVolumeSizeInGB(Long volumeSizeInGB) {
         this.volumeSizeInGB = volumeSizeInGB;
         return this;
     }
     
+    public ProfilerRuleConfiguration(@JsonProperty("RuleConfigurationName") String ruleConfigurationName, @JsonProperty("RuleEvaluatorImage") String ruleEvaluatorImage) {
+        this.ruleConfigurationName = ruleConfigurationName;
+        this.ruleEvaluatorImage = ruleEvaluatorImage;
+  }
 }

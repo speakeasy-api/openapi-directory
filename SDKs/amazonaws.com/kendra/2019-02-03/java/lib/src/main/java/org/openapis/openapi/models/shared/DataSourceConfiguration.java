@@ -15,6 +15,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlfrescoConfiguration")
     public AlfrescoConfiguration alfrescoConfiguration;
+
     public DataSourceConfiguration withAlfrescoConfiguration(AlfrescoConfiguration alfrescoConfiguration) {
         this.alfrescoConfiguration = alfrescoConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoxConfiguration")
     public BoxConfiguration boxConfiguration;
+
     public DataSourceConfiguration withBoxConfiguration(BoxConfiguration boxConfiguration) {
         this.boxConfiguration = boxConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfluenceConfiguration")
     public ConfluenceConfiguration confluenceConfiguration;
+
     public DataSourceConfiguration withConfluenceConfiguration(ConfluenceConfiguration confluenceConfiguration) {
         this.confluenceConfiguration = confluenceConfiguration;
         return this;
@@ -39,6 +42,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseConfiguration")
     public DatabaseConfiguration databaseConfiguration;
+
     public DataSourceConfiguration withDatabaseConfiguration(DatabaseConfiguration databaseConfiguration) {
         this.databaseConfiguration = databaseConfiguration;
         return this;
@@ -47,6 +51,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FsxConfiguration")
     public FsxConfiguration fsxConfiguration;
+
     public DataSourceConfiguration withFsxConfiguration(FsxConfiguration fsxConfiguration) {
         this.fsxConfiguration = fsxConfiguration;
         return this;
@@ -55,6 +60,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GitHubConfiguration")
     public GitHubConfiguration gitHubConfiguration;
+
     public DataSourceConfiguration withGitHubConfiguration(GitHubConfiguration gitHubConfiguration) {
         this.gitHubConfiguration = gitHubConfiguration;
         return this;
@@ -63,6 +69,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoogleDriveConfiguration")
     public GoogleDriveConfiguration googleDriveConfiguration;
+
     public DataSourceConfiguration withGoogleDriveConfiguration(GoogleDriveConfiguration googleDriveConfiguration) {
         this.googleDriveConfiguration = googleDriveConfiguration;
         return this;
@@ -71,6 +78,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JiraConfiguration")
     public JiraConfiguration jiraConfiguration;
+
     public DataSourceConfiguration withJiraConfiguration(JiraConfiguration jiraConfiguration) {
         this.jiraConfiguration = jiraConfiguration;
         return this;
@@ -79,6 +87,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OneDriveConfiguration")
     public OneDriveConfiguration oneDriveConfiguration;
+
     public DataSourceConfiguration withOneDriveConfiguration(OneDriveConfiguration oneDriveConfiguration) {
         this.oneDriveConfiguration = oneDriveConfiguration;
         return this;
@@ -87,6 +96,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuipConfiguration")
     public QuipConfiguration quipConfiguration;
+
     public DataSourceConfiguration withQuipConfiguration(QuipConfiguration quipConfiguration) {
         this.quipConfiguration = quipConfiguration;
         return this;
@@ -95,6 +105,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Configuration")
     public S3DataSourceConfiguration s3Configuration;
+
     public DataSourceConfiguration withS3Configuration(S3DataSourceConfiguration s3Configuration) {
         this.s3Configuration = s3Configuration;
         return this;
@@ -103,6 +114,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SalesforceConfiguration")
     public SalesforceConfiguration salesforceConfiguration;
+
     public DataSourceConfiguration withSalesforceConfiguration(SalesforceConfiguration salesforceConfiguration) {
         this.salesforceConfiguration = salesforceConfiguration;
         return this;
@@ -111,6 +123,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceNowConfiguration")
     public ServiceNowConfiguration serviceNowConfiguration;
+
     public DataSourceConfiguration withServiceNowConfiguration(ServiceNowConfiguration serviceNowConfiguration) {
         this.serviceNowConfiguration = serviceNowConfiguration;
         return this;
@@ -119,6 +132,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharePointConfiguration")
     public SharePointConfiguration sharePointConfiguration;
+
     public DataSourceConfiguration withSharePointConfiguration(SharePointConfiguration sharePointConfiguration) {
         this.sharePointConfiguration = sharePointConfiguration;
         return this;
@@ -127,6 +141,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlackConfiguration")
     public SlackConfiguration slackConfiguration;
+
     public DataSourceConfiguration withSlackConfiguration(SlackConfiguration slackConfiguration) {
         this.slackConfiguration = slackConfiguration;
         return this;
@@ -135,6 +150,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateConfiguration")
     public TemplateConfiguration templateConfiguration;
+
     public DataSourceConfiguration withTemplateConfiguration(TemplateConfiguration templateConfiguration) {
         this.templateConfiguration = templateConfiguration;
         return this;
@@ -146,6 +162,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebCrawlerConfiguration")
     public WebCrawlerConfiguration webCrawlerConfiguration;
+
     public DataSourceConfiguration withWebCrawlerConfiguration(WebCrawlerConfiguration webCrawlerConfiguration) {
         this.webCrawlerConfiguration = webCrawlerConfiguration;
         return this;
@@ -154,9 +171,11 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkDocsConfiguration")
     public WorkDocsConfiguration workDocsConfiguration;
+
     public DataSourceConfiguration withWorkDocsConfiguration(WorkDocsConfiguration workDocsConfiguration) {
         this.workDocsConfiguration = workDocsConfiguration;
         return this;
     }
     
+    public DataSourceConfiguration(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCaseDiseaseAssociationsRequest {
@@ -12,6 +13,7 @@ public class GetCaseDiseaseAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direct")
     public Boolean direct;
+
     public GetCaseDiseaseAssociationsRequest withDirect(Boolean direct) {
         this.direct = direct;
         return this;
@@ -22,6 +24,7 @@ public class GetCaseDiseaseAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
     public String evidence;
+
     public GetCaseDiseaseAssociationsRequest withEvidence(String evidence) {
         this.evidence = evidence;
         return this;
@@ -32,6 +35,7 @@ public class GetCaseDiseaseAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
     public Boolean excludeAutomaticAssertions;
+
     public GetCaseDiseaseAssociationsRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
         this.excludeAutomaticAssertions = excludeAutomaticAssertions;
         return this;
@@ -42,6 +46,7 @@ public class GetCaseDiseaseAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet")
     public Boolean facet;
+
     public GetCaseDiseaseAssociationsRequest withFacet(Boolean facet) {
         this.facet = facet;
         return this;
@@ -52,6 +57,7 @@ public class GetCaseDiseaseAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet_fields")
     public String[] facetFields;
+
     public GetCaseDiseaseAssociationsRequest withFacetFields(String[] facetFields) {
         this.facetFields = facetFields;
         return this;
@@ -62,6 +68,7 @@ public class GetCaseDiseaseAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fetch_objects")
     public Boolean fetchObjects;
+
     public GetCaseDiseaseAssociationsRequest withFetchObjects(Boolean fetchObjects) {
         this.fetchObjects = fetchObjects;
         return this;
@@ -72,6 +79,7 @@ public class GetCaseDiseaseAssociationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetCaseDiseaseAssociationsRequest withId(String id) {
         this.id = id;
         return this;
@@ -82,6 +90,7 @@ public class GetCaseDiseaseAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
     public Long rows;
+
     public GetCaseDiseaseAssociationsRequest withRows(Long rows) {
         this.rows = rows;
         return this;
@@ -92,6 +101,7 @@ public class GetCaseDiseaseAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slim")
     public String[] slim;
+
     public GetCaseDiseaseAssociationsRequest withSlim(String[] slim) {
         this.slim = slim;
         return this;
@@ -102,6 +112,7 @@ public class GetCaseDiseaseAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Long start;
+
     public GetCaseDiseaseAssociationsRequest withStart(Long start) {
         this.start = start;
         return this;
@@ -112,6 +123,7 @@ public class GetCaseDiseaseAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unselect_evidence")
     public Boolean unselectEvidence;
+
     public GetCaseDiseaseAssociationsRequest withUnselectEvidence(Boolean unselectEvidence) {
         this.unselectEvidence = unselectEvidence;
         return this;
@@ -122,9 +134,13 @@ public class GetCaseDiseaseAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_compact_associations")
     public Boolean useCompactAssociations;
+
     public GetCaseDiseaseAssociationsRequest withUseCompactAssociations(Boolean useCompactAssociations) {
         this.useCompactAssociations = useCompactAssociations;
         return this;
     }
     
+    public GetCaseDiseaseAssociationsRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

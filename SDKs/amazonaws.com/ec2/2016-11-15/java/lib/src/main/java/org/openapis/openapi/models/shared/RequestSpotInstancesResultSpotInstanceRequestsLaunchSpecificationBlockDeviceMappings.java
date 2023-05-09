@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappings {
     
     public String deviceName;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappings withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -19,6 +20,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationBl
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappingsEbs ebs;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappings withEbs(RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappingsEbs ebs) {
         this.ebs = ebs;
         return this;
@@ -26,6 +28,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationBl
     
     
     public String noDevice;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappings withNoDevice(String noDevice) {
         this.noDevice = noDevice;
         return this;
@@ -33,9 +36,11 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationBl
     
     
     public String virtualName;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappings withVirtualName(String virtualName) {
         this.virtualName = virtualName;
         return this;
     }
     
+    public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappings(){}
 }

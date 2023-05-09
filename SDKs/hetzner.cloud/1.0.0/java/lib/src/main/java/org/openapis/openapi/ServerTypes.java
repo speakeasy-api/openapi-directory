@@ -63,11 +63,9 @@ public class ServerTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetServerTypesResponse res = new org.openapis.openapi.models.operations.GetServerTypesResponse() {{
+        org.openapis.openapi.models.operations.GetServerTypesResponse res = new org.openapis.openapi.models.operations.GetServerTypesResponse(contentType, httpRes.statusCode()) {{
             getServerTypes200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class ServerTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetServerTypesIdResponse res = new org.openapis.openapi.models.operations.GetServerTypesIdResponse() {{
+        org.openapis.openapi.models.operations.GetServerTypesIdResponse res = new org.openapis.openapi.models.operations.GetServerTypesIdResponse(contentType, httpRes.statusCode()) {{
             getServerTypesId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

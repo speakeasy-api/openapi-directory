@@ -15,6 +15,7 @@ public class PackageFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public StringFilter architecture;
+
     public PackageFilter withArchitecture(StringFilter architecture) {
         this.architecture = architecture;
         return this;
@@ -23,6 +24,7 @@ public class PackageFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("epoch")
     public NumberFilter epoch;
+
     public PackageFilter withEpoch(NumberFilter epoch) {
         this.epoch = epoch;
         return this;
@@ -31,6 +33,7 @@ public class PackageFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public StringFilter name;
+
     public PackageFilter withName(StringFilter name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class PackageFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release")
     public StringFilter release;
+
     public PackageFilter withRelease(StringFilter release) {
         this.release = release;
         return this;
@@ -50,6 +54,7 @@ public class PackageFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLambdaLayerArn")
     public StringFilter sourceLambdaLayerArn;
+
     public PackageFilter withSourceLambdaLayerArn(StringFilter sourceLambdaLayerArn) {
         this.sourceLambdaLayerArn = sourceLambdaLayerArn;
         return this;
@@ -58,6 +63,7 @@ public class PackageFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLayerHash")
     public StringFilter sourceLayerHash;
+
     public PackageFilter withSourceLayerHash(StringFilter sourceLayerHash) {
         this.sourceLayerHash = sourceLayerHash;
         return this;
@@ -66,9 +72,11 @@ public class PackageFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public StringFilter version;
+
     public PackageFilter withVersion(StringFilter version) {
         this.version = version;
         return this;
     }
     
+    public PackageFilter(){}
 }

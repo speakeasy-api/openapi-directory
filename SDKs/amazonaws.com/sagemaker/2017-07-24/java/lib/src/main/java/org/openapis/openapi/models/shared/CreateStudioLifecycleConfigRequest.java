@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateStudioLifecycleConfigRequest {
     @JsonProperty("StudioLifecycleConfigAppType")
     public StudioLifecycleConfigAppTypeEnum studioLifecycleConfigAppType;
+
     public CreateStudioLifecycleConfigRequest withStudioLifecycleConfigAppType(StudioLifecycleConfigAppTypeEnum studioLifecycleConfigAppType) {
         this.studioLifecycleConfigAppType = studioLifecycleConfigAppType;
         return this;
@@ -18,6 +19,7 @@ public class CreateStudioLifecycleConfigRequest {
     
     @JsonProperty("StudioLifecycleConfigContent")
     public String studioLifecycleConfigContent;
+
     public CreateStudioLifecycleConfigRequest withStudioLifecycleConfigContent(String studioLifecycleConfigContent) {
         this.studioLifecycleConfigContent = studioLifecycleConfigContent;
         return this;
@@ -25,6 +27,7 @@ public class CreateStudioLifecycleConfigRequest {
     
     @JsonProperty("StudioLifecycleConfigName")
     public String studioLifecycleConfigName;
+
     public CreateStudioLifecycleConfigRequest withStudioLifecycleConfigName(String studioLifecycleConfigName) {
         this.studioLifecycleConfigName = studioLifecycleConfigName;
         return this;
@@ -33,9 +36,15 @@ public class CreateStudioLifecycleConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateStudioLifecycleConfigRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateStudioLifecycleConfigRequest(@JsonProperty("StudioLifecycleConfigAppType") StudioLifecycleConfigAppTypeEnum studioLifecycleConfigAppType, @JsonProperty("StudioLifecycleConfigContent") String studioLifecycleConfigContent, @JsonProperty("StudioLifecycleConfigName") String studioLifecycleConfigName) {
+        this.studioLifecycleConfigAppType = studioLifecycleConfigAppType;
+        this.studioLifecycleConfigContent = studioLifecycleConfigContent;
+        this.studioLifecycleConfigName = studioLifecycleConfigName;
+  }
 }

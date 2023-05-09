@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagmanagerAccountsContainersTriggersCreateRequest {
@@ -12,6 +13,7 @@ public class TagmanagerAccountsContainersTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public TagmanagerAccountsContainersTriggersCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class TagmanagerAccountsContainersTriggersCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Trigger trigger;
+
     public TagmanagerAccountsContainersTriggersCreateRequest withTrigger(org.openapis.openapi.models.shared.Trigger trigger) {
         this.trigger = trigger;
         return this;
@@ -29,6 +32,7 @@ public class TagmanagerAccountsContainersTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public TagmanagerAccountsContainersTriggersCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class TagmanagerAccountsContainersTriggersCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public TagmanagerAccountsContainersTriggersCreateRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -49,6 +54,7 @@ public class TagmanagerAccountsContainersTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public TagmanagerAccountsContainersTriggersCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -59,6 +65,7 @@ public class TagmanagerAccountsContainersTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public TagmanagerAccountsContainersTriggersCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class TagmanagerAccountsContainersTriggersCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=containerId")
     public String containerId;
+
     public TagmanagerAccountsContainersTriggersCreateRequest withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -79,6 +87,7 @@ public class TagmanagerAccountsContainersTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public TagmanagerAccountsContainersTriggersCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -89,6 +98,7 @@ public class TagmanagerAccountsContainersTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public TagmanagerAccountsContainersTriggersCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class TagmanagerAccountsContainersTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public TagmanagerAccountsContainersTriggersCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class TagmanagerAccountsContainersTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public TagmanagerAccountsContainersTriggersCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class TagmanagerAccountsContainersTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public TagmanagerAccountsContainersTriggersCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class TagmanagerAccountsContainersTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public TagmanagerAccountsContainersTriggersCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,14 @@ public class TagmanagerAccountsContainersTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public TagmanagerAccountsContainersTriggersCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public TagmanagerAccountsContainersTriggersCreateRequest(@JsonProperty("accountId") String accountId, @JsonProperty("containerId") String containerId) {
+        this.accountId = accountId;
+        this.containerId = containerId;
+  }
 }

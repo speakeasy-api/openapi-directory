@@ -12,6 +12,7 @@ public class ImageIdCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ImageIdCreateEntry withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class ImageIdCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagIds")
     public String[] tagIds;
+
     public ImageIdCreateEntry withTagIds(String[] tagIds) {
         this.tagIds = tagIds;
         return this;
     }
     
+    public ImageIdCreateEntry(){}
 }

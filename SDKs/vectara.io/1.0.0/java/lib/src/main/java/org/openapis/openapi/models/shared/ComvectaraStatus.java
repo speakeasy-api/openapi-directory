@@ -12,6 +12,7 @@ public class ComvectaraStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public VectaraStatusCodeEnum code;
+
     public ComvectaraStatus withCode(VectaraStatusCodeEnum code) {
         this.code = code;
         return this;
@@ -20,9 +21,11 @@ public class ComvectaraStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusDetail")
     public String statusDetail;
+
     public ComvectaraStatus withStatusDetail(String statusDetail) {
         this.statusDetail = statusDetail;
         return this;
     }
     
+    public ComvectaraStatus(){}
 }

@@ -17,6 +17,7 @@ public class TagInputResourceIdentifier {
      */
     @JsonProperty("id")
     public String id;
+
     public TagInputResourceIdentifier withId(String id) {
         this.id = id;
         return this;
@@ -27,9 +28,14 @@ public class TagInputResourceIdentifier {
      */
     @JsonProperty("type")
     public String type;
+
     public TagInputResourceIdentifier withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TagInputResourceIdentifier(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

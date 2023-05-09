@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAnswersResponse {
@@ -12,6 +13,7 @@ public class ListAnswersResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAnswersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAnswersResponse {
     
     
     public String contentType;
+
     public ListAnswersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAnswersResponse {
      */
     
     public Object internalServerException;
+
     public ListAnswersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListAnswersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAnswersOutput listAnswersOutput;
+
     public ListAnswersResponse withListAnswersOutput(org.openapis.openapi.models.shared.ListAnswersOutput listAnswersOutput) {
         this.listAnswersOutput = listAnswersOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListAnswersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAnswersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListAnswersResponse {
     
     
     public Integer statusCode;
+
     public ListAnswersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListAnswersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAnswersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListAnswersResponse {
      */
     
     public Object throttlingException;
+
     public ListAnswersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListAnswersResponse {
      */
     
     public Object validationException;
+
     public ListAnswersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAnswersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

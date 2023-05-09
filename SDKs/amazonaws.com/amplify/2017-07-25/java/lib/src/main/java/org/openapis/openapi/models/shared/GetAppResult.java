@@ -15,9 +15,13 @@ public class GetAppResult {
      */
     @JsonProperty("app")
     public App app;
+
     public GetAppResult withApp(App app) {
         this.app = app;
         return this;
     }
     
+    public GetAppResult(@JsonProperty("app") App app) {
+        this.app = app;
+  }
 }

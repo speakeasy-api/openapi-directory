@@ -22,6 +22,7 @@ public class ResourceIdentifier {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("resourceDeletionTime")
     public OffsetDateTime resourceDeletionTime;
+
     public ResourceIdentifier withResourceDeletionTime(OffsetDateTime resourceDeletionTime) {
         this.resourceDeletionTime = resourceDeletionTime;
         return this;
@@ -30,6 +31,7 @@ public class ResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public ResourceIdentifier withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -38,6 +40,7 @@ public class ResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public ResourceIdentifier withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -46,9 +49,11 @@ public class ResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public ResourceIdentifier withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ResourceIdentifier(){}
 }

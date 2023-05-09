@@ -23,6 +23,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportLinks")
     public java.util.Map<String, String> exportLinks;
+
     public Revision withExportLinks(java.util.Map<String, String> exportLinks) {
         this.exportLinks = exportLinks;
         return this;
@@ -34,6 +35,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Revision withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +48,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keepForever")
     public Boolean keepForever;
+
     public Revision withKeepForever(Boolean keepForever) {
         this.keepForever = keepForever;
         return this;
@@ -57,6 +60,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Revision withKind(String kind) {
         this.kind = kind;
         return this;
@@ -68,6 +72,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifyingUser")
     public User lastModifyingUser;
+
     public Revision withLastModifyingUser(User lastModifyingUser) {
         this.lastModifyingUser = lastModifyingUser;
         return this;
@@ -79,6 +84,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("md5Checksum")
     public String md5Checksum;
+
     public Revision withMd5Checksum(String md5Checksum) {
         this.md5Checksum = md5Checksum;
         return this;
@@ -90,6 +96,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public Revision withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -103,6 +110,7 @@ public class Revision {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedTime")
     public OffsetDateTime modifiedTime;
+
     public Revision withModifiedTime(OffsetDateTime modifiedTime) {
         this.modifiedTime = modifiedTime;
         return this;
@@ -114,6 +122,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalFilename")
     public String originalFilename;
+
     public Revision withOriginalFilename(String originalFilename) {
         this.originalFilename = originalFilename;
         return this;
@@ -125,6 +134,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishAuto")
     public Boolean publishAuto;
+
     public Revision withPublishAuto(Boolean publishAuto) {
         this.publishAuto = publishAuto;
         return this;
@@ -136,6 +146,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published")
     public Boolean published;
+
     public Revision withPublished(Boolean published) {
         this.published = published;
         return this;
@@ -147,6 +158,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishedLink")
     public String publishedLink;
+
     public Revision withPublishedLink(String publishedLink) {
         this.publishedLink = publishedLink;
         return this;
@@ -158,6 +170,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishedOutsideDomain")
     public Boolean publishedOutsideDomain;
+
     public Revision withPublishedOutsideDomain(Boolean publishedOutsideDomain) {
         this.publishedOutsideDomain = publishedOutsideDomain;
         return this;
@@ -169,9 +182,11 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public String size;
+
     public Revision withSize(String size) {
         this.size = size;
         return this;
     }
     
+    public Revision(){}
 }

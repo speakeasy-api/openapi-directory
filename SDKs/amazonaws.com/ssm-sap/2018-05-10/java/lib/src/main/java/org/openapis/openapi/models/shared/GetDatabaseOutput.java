@@ -15,6 +15,7 @@ public class GetDatabaseOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Database")
     public Database database;
+
     public GetDatabaseOutput withDatabase(Database database) {
         this.database = database;
         return this;
@@ -23,9 +24,11 @@ public class GetDatabaseOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public GetDatabaseOutput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetDatabaseOutput(){}
 }

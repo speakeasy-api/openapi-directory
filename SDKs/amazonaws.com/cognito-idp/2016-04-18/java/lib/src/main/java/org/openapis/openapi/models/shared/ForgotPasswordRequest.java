@@ -15,6 +15,7 @@ public class ForgotPasswordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyticsMetadata")
     public AnalyticsMetadataType analyticsMetadata;
+
     public ForgotPasswordRequest withAnalyticsMetadata(AnalyticsMetadataType analyticsMetadata) {
         this.analyticsMetadata = analyticsMetadata;
         return this;
@@ -22,6 +23,7 @@ public class ForgotPasswordRequest {
     
     @JsonProperty("ClientId")
     public String clientId;
+
     public ForgotPasswordRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -30,6 +32,7 @@ public class ForgotPasswordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientMetadata")
     public java.util.Map<String, String> clientMetadata;
+
     public ForgotPasswordRequest withClientMetadata(java.util.Map<String, String> clientMetadata) {
         this.clientMetadata = clientMetadata;
         return this;
@@ -38,6 +41,7 @@ public class ForgotPasswordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretHash")
     public String secretHash;
+
     public ForgotPasswordRequest withSecretHash(String secretHash) {
         this.secretHash = secretHash;
         return this;
@@ -46,6 +50,7 @@ public class ForgotPasswordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserContextData")
     public UserContextDataType userContextData;
+
     public ForgotPasswordRequest withUserContextData(UserContextDataType userContextData) {
         this.userContextData = userContextData;
         return this;
@@ -53,9 +58,14 @@ public class ForgotPasswordRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public ForgotPasswordRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ForgotPasswordRequest(@JsonProperty("ClientId") String clientId, @JsonProperty("Username") String username) {
+        this.clientId = clientId;
+        this.username = username;
+  }
 }

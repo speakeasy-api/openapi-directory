@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNetworkSiteToSiteVpnResponse {
     
     public String contentType;
+
     public UpdateNetworkSiteToSiteVpnResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateNetworkSiteToSiteVpnResponse {
     
     
     public Integer statusCode;
+
     public UpdateNetworkSiteToSiteVpnResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateNetworkSiteToSiteVpnResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNetworkSiteToSiteVpnResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class UpdateNetworkSiteToSiteVpnResponse {
      */
     
     public java.util.Map<String, Object> updateNetworkSiteToSiteVpn200ApplicationJSONObject;
+
     public UpdateNetworkSiteToSiteVpnResponse withUpdateNetworkSiteToSiteVpn200ApplicationJSONObject(java.util.Map<String, Object> updateNetworkSiteToSiteVpn200ApplicationJSONObject) {
         this.updateNetworkSiteToSiteVpn200ApplicationJSONObject = updateNetworkSiteToSiteVpn200ApplicationJSONObject;
         return this;
     }
     
+    public UpdateNetworkSiteToSiteVpnResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

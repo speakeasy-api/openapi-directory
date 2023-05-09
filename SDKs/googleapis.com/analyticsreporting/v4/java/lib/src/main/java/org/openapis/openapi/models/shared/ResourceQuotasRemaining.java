@@ -18,6 +18,7 @@ public class ResourceQuotasRemaining {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailyQuotaTokensRemaining")
     public Integer dailyQuotaTokensRemaining;
+
     public ResourceQuotasRemaining withDailyQuotaTokensRemaining(Integer dailyQuotaTokensRemaining) {
         this.dailyQuotaTokensRemaining = dailyQuotaTokensRemaining;
         return this;
@@ -29,9 +30,11 @@ public class ResourceQuotasRemaining {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hourlyQuotaTokensRemaining")
     public Integer hourlyQuotaTokensRemaining;
+
     public ResourceQuotasRemaining withHourlyQuotaTokensRemaining(Integer hourlyQuotaTokensRemaining) {
         this.hourlyQuotaTokensRemaining = hourlyQuotaTokensRemaining;
         return this;
     }
     
+    public ResourceQuotasRemaining(){}
 }

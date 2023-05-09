@@ -18,6 +18,7 @@ public class HiveMetastoreConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auxiliaryVersions")
     public java.util.Map<String, AuxiliaryVersionConfigInput> auxiliaryVersions;
+
     public HiveMetastoreConfigInput withAuxiliaryVersions(java.util.Map<String, AuxiliaryVersionConfigInput> auxiliaryVersions) {
         this.auxiliaryVersions = auxiliaryVersions;
         return this;
@@ -29,6 +30,7 @@ public class HiveMetastoreConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configOverrides")
     public java.util.Map<String, String> configOverrides;
+
     public HiveMetastoreConfigInput withConfigOverrides(java.util.Map<String, String> configOverrides) {
         this.configOverrides = configOverrides;
         return this;
@@ -40,6 +42,7 @@ public class HiveMetastoreConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kerberosConfig")
     public KerberosConfig kerberosConfig;
+
     public HiveMetastoreConfigInput withKerberosConfig(KerberosConfig kerberosConfig) {
         this.kerberosConfig = kerberosConfig;
         return this;
@@ -51,9 +54,11 @@ public class HiveMetastoreConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public HiveMetastoreConfigInput withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public HiveMetastoreConfigInput(){}
 }

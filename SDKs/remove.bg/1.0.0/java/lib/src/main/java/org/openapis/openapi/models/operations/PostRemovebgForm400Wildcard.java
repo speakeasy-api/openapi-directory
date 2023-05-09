@@ -12,9 +12,11 @@ package org.openapis.openapi.models.operations;
 public class PostRemovebgForm400Wildcard {
     
     public PostRemovebgForm400WildcardErrors[] errors;
+
     public PostRemovebgForm400Wildcard withErrors(PostRemovebgForm400WildcardErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public PostRemovebgForm400Wildcard(){}
 }

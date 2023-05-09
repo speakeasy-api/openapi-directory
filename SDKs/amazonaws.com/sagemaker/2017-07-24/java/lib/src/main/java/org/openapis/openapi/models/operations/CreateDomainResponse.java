@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDomainResponse {
     
     public String contentType;
+
     public CreateDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDomainResponse createDomainResponse;
+
     public CreateDomainResponse withCreateDomainResponse(org.openapis.openapi.models.shared.CreateDomainResponse createDomainResponse) {
         this.createDomainResponse = createDomainResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateDomainResponse {
      */
     
     public Object resourceInUse;
+
     public CreateDomainResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -39,6 +43,7 @@ public class CreateDomainResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateDomainResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -46,6 +51,7 @@ public class CreateDomainResponse {
     
     
     public Integer statusCode;
+
     public CreateDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

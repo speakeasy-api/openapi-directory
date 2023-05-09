@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DiscoverCatalogResult {
     @JsonProperty("catalogId")
     public String catalogId;
+
     public DiscoverCatalogResult withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
     }
     
+    public DiscoverCatalogResult(@JsonProperty("catalogId") String catalogId) {
+        this.catalogId = catalogId;
+  }
 }

@@ -12,6 +12,7 @@ public class Prediction {
      */
     @JsonProperty("prediction")
     public String prediction;
+
     public Prediction withPrediction(String prediction) {
         this.prediction = prediction;
         return this;
@@ -22,9 +23,14 @@ public class Prediction {
      */
     @JsonProperty("probability")
     public Double probability;
+
     public Prediction withProbability(Double probability) {
         this.probability = probability;
         return this;
     }
     
+    public Prediction(@JsonProperty("prediction") String prediction, @JsonProperty("probability") Double probability) {
+        this.prediction = prediction;
+        this.probability = probability;
+  }
 }

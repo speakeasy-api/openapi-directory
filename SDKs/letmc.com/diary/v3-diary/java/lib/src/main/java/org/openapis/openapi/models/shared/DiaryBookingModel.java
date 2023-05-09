@@ -25,6 +25,7 @@ public class DiaryBookingModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("End")
     public OffsetDateTime end;
+
     public DiaryBookingModel withEnd(OffsetDateTime end) {
         this.end = end;
         return this;
@@ -36,6 +37,7 @@ public class DiaryBookingModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StaffID")
     public String staffID;
+
     public DiaryBookingModel withStaffID(String staffID) {
         this.staffID = staffID;
         return this;
@@ -47,6 +49,7 @@ public class DiaryBookingModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StaffName")
     public String staffName;
+
     public DiaryBookingModel withStaffName(String staffName) {
         this.staffName = staffName;
         return this;
@@ -60,9 +63,11 @@ public class DiaryBookingModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Start")
     public OffsetDateTime start;
+
     public DiaryBookingModel withStart(OffsetDateTime start) {
         this.start = start;
         return this;
     }
     
+    public DiaryBookingModel(){}
 }

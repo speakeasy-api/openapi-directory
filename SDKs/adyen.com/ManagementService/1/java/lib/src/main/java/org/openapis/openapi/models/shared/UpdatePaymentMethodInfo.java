@@ -15,6 +15,7 @@ public class UpdatePaymentMethodInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countries")
     public String[] countries;
+
     public UpdatePaymentMethodInfo withCountries(String[] countries) {
         this.countries = countries;
         return this;
@@ -26,6 +27,7 @@ public class UpdatePaymentMethodInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencies")
     public String[] currencies;
+
     public UpdatePaymentMethodInfo withCurrencies(String[] currencies) {
         this.currencies = currencies;
         return this;
@@ -37,6 +39,7 @@ public class UpdatePaymentMethodInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customRoutingFlags")
     public String[] customRoutingFlags;
+
     public UpdatePaymentMethodInfo withCustomRoutingFlags(String[] customRoutingFlags) {
         this.customRoutingFlags = customRoutingFlags;
         return this;
@@ -48,6 +51,7 @@ public class UpdatePaymentMethodInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public UpdatePaymentMethodInfo withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -56,6 +60,7 @@ public class UpdatePaymentMethodInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperStatement")
     public ShopperStatement shopperStatement;
+
     public UpdatePaymentMethodInfo withShopperStatement(ShopperStatement shopperStatement) {
         this.shopperStatement = shopperStatement;
         return this;
@@ -67,9 +72,11 @@ public class UpdatePaymentMethodInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeIds")
     public String[] storeIds;
+
     public UpdatePaymentMethodInfo withStoreIds(String[] storeIds) {
         this.storeIds = storeIds;
         return this;
     }
     
+    public UpdatePaymentMethodInfo(){}
 }

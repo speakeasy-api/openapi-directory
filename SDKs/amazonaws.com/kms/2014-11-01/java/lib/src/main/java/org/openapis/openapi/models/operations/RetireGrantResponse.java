@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetireGrantResponse {
     
     public String contentType;
+
     public RetireGrantResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetireGrantResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public RetireGrantResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class RetireGrantResponse {
      */
     
     public Object invalidArnException;
+
     public RetireGrantResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class RetireGrantResponse {
      */
     
     public Object invalidGrantIdException;
+
     public RetireGrantResponse withInvalidGrantIdException(Object invalidGrantIdException) {
         this.invalidGrantIdException = invalidGrantIdException;
         return this;
@@ -49,6 +54,7 @@ public class RetireGrantResponse {
      */
     
     public Object invalidGrantTokenException;
+
     public RetireGrantResponse withInvalidGrantTokenException(Object invalidGrantTokenException) {
         this.invalidGrantTokenException = invalidGrantTokenException;
         return this;
@@ -59,6 +65,7 @@ public class RetireGrantResponse {
      */
     
     public Object kmsInternalException;
+
     public RetireGrantResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -69,6 +76,7 @@ public class RetireGrantResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public RetireGrantResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -79,6 +87,7 @@ public class RetireGrantResponse {
      */
     
     public Object notFoundException;
+
     public RetireGrantResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class RetireGrantResponse {
     
     
     public Integer statusCode;
+
     public RetireGrantResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class RetireGrantResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetireGrantResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RetireGrantResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

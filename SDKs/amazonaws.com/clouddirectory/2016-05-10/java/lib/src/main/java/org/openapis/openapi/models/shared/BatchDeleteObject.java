@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDeleteObject {
     @JsonProperty("ObjectReference")
     public ObjectReference objectReference;
+
     public BatchDeleteObject withObjectReference(ObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
     }
     
+    public BatchDeleteObject(@JsonProperty("ObjectReference") ObjectReference objectReference) {
+        this.objectReference = objectReference;
+  }
 }

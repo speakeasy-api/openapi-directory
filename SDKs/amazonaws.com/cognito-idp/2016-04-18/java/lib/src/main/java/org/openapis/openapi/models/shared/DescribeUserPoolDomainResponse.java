@@ -15,9 +15,11 @@ public class DescribeUserPoolDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainDescription")
     public DomainDescriptionType domainDescription;
+
     public DescribeUserPoolDomainResponse withDomainDescription(DomainDescriptionType domainDescription) {
         this.domainDescription = domainDescription;
         return this;
     }
     
+    public DescribeUserPoolDomainResponse(){}
 }

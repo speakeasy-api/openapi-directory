@@ -18,6 +18,7 @@ public class PicoLoadmanagementGroupDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public PicoLoadmanagementGroupDto withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class PicoLoadmanagementGroupDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCurrent")
     public Double maxCurrent;
+
     public PicoLoadmanagementGroupDto withMaxCurrent(Double maxCurrent) {
         this.maxCurrent = maxCurrent;
         return this;
@@ -40,6 +42,7 @@ public class PicoLoadmanagementGroupDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PicoLoadmanagementGroupDto withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class PicoLoadmanagementGroupDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfStations")
     public Integer numberOfStations;
+
     public PicoLoadmanagementGroupDto withNumberOfStations(Integer numberOfStations) {
         this.numberOfStations = numberOfStations;
         return this;
     }
     
+    public PicoLoadmanagementGroupDto(){}
 }

@@ -15,9 +15,11 @@ public class JobOptionalRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public JobRead job;
+
     public JobOptionalRead withJob(JobRead job) {
         this.job = job;
         return this;
     }
     
+    public JobOptionalRead(){}
 }

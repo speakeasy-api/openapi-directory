@@ -15,6 +15,7 @@ public class OBParty2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public OBParty2 withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,13 @@ public class OBParty2 {
      */
     @JsonProperty("PartyId")
     public String partyId;
+
     public OBParty2 withPartyId(String partyId) {
         this.partyId = partyId;
         return this;
     }
     
+    public OBParty2(@JsonProperty("PartyId") String partyId) {
+        this.partyId = partyId;
+  }
 }

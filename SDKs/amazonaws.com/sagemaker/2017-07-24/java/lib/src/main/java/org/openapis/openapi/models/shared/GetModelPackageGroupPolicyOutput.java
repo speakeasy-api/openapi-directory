@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetModelPackageGroupPolicyOutput {
     @JsonProperty("ResourcePolicy")
     public String resourcePolicy;
+
     public GetModelPackageGroupPolicyOutput withResourcePolicy(String resourcePolicy) {
         this.resourcePolicy = resourcePolicy;
         return this;
     }
     
+    public GetModelPackageGroupPolicyOutput(@JsonProperty("ResourcePolicy") String resourcePolicy) {
+        this.resourcePolicy = resourcePolicy;
+  }
 }

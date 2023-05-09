@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttendancePeriodsResponse {
     @JsonProperty("data")
     public AttendancePeriodsResponseData[] data;
+
     public AttendancePeriodsResponse withData(AttendancePeriodsResponseData[] data) {
         this.data = data;
         return this;
@@ -19,6 +20,7 @@ public class AttendancePeriodsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public AttendancePeriodsResponse withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -27,6 +29,7 @@ public class AttendancePeriodsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Long offset;
+
     public AttendancePeriodsResponse withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -34,9 +37,14 @@ public class AttendancePeriodsResponse {
     
     @JsonProperty("success")
     public Boolean success;
+
     public AttendancePeriodsResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public AttendancePeriodsResponse(@JsonProperty("data") AttendancePeriodsResponseData[] data, @JsonProperty("success") Boolean success) {
+        this.data = data;
+        this.success = success;
+  }
 }

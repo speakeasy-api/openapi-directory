@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteCoipPoolResultCoipPool {
     
     public String localGatewayRouteTableId;
+
     public DeleteCoipPoolResultCoipPool withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
@@ -19,6 +20,7 @@ public class DeleteCoipPoolResultCoipPool {
     
     
     public String poolArn;
+
     public DeleteCoipPoolResultCoipPool withPoolArn(String poolArn) {
         this.poolArn = poolArn;
         return this;
@@ -26,6 +28,7 @@ public class DeleteCoipPoolResultCoipPool {
     
     
     public String[] poolCidrs;
+
     public DeleteCoipPoolResultCoipPool withPoolCidrs(String[] poolCidrs) {
         this.poolCidrs = poolCidrs;
         return this;
@@ -33,6 +36,7 @@ public class DeleteCoipPoolResultCoipPool {
     
     
     public String poolId;
+
     public DeleteCoipPoolResultCoipPool withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -40,9 +44,11 @@ public class DeleteCoipPoolResultCoipPool {
     
     
     public DeleteCoipPoolResultCoipPoolTags[] tags;
+
     public DeleteCoipPoolResultCoipPool withTags(DeleteCoipPoolResultCoipPoolTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DeleteCoipPoolResultCoipPool(){}
 }

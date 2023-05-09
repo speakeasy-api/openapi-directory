@@ -15,9 +15,11 @@ public class AvroOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useAvroLogicalTypes")
     public Boolean useAvroLogicalTypes;
+
     public AvroOptions withUseAvroLogicalTypes(Boolean useAvroLogicalTypes) {
         this.useAvroLogicalTypes = useAvroLogicalTypes;
         return this;
     }
     
+    public AvroOptions(){}
 }

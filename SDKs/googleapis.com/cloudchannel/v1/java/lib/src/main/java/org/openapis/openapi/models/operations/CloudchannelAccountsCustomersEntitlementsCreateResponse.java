@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudchannelAccountsCustomersEntitlementsCreateResponse {
     
     public String contentType;
+
     public CloudchannelAccountsCustomersEntitlementsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudchannelAccountsCustomersEntitlementsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleLongrunningOperation googleLongrunningOperation;
+
     public CloudchannelAccountsCustomersEntitlementsCreateResponse withGoogleLongrunningOperation(org.openapis.openapi.models.shared.GoogleLongrunningOperation googleLongrunningOperation) {
         this.googleLongrunningOperation = googleLongrunningOperation;
         return this;
@@ -26,6 +29,7 @@ public class CloudchannelAccountsCustomersEntitlementsCreateResponse {
     
     
     public Integer statusCode;
+
     public CloudchannelAccountsCustomersEntitlementsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudchannelAccountsCustomersEntitlementsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudchannelAccountsCustomersEntitlementsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudchannelAccountsCustomersEntitlementsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

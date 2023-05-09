@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteManagedPrefixListRequest {
     
     public Boolean dryRun;
+
     public DeleteManagedPrefixListRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DeleteManagedPrefixListRequest {
     
     
     public String prefixListId;
+
     public DeleteManagedPrefixListRequest withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
     }
     
+    public DeleteManagedPrefixListRequest(@JsonProperty("PrefixListId") String prefixListId) {
+        this.prefixListId = prefixListId;
+  }
 }

@@ -15,6 +15,7 @@ public class WaitActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextActivity")
     public String nextActivity;
+
     public WaitActivity withNextActivity(String nextActivity) {
         this.nextActivity = nextActivity;
         return this;
@@ -23,9 +24,11 @@ public class WaitActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WaitTime")
     public WaitTime waitTime;
+
     public WaitActivity withWaitTime(WaitTime waitTime) {
         this.waitTime = waitTime;
         return this;
     }
     
+    public WaitActivity(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCallAnalyticsJobsResponse {
@@ -12,6 +13,7 @@ public class ListCallAnalyticsJobsResponse {
      */
     
     public Object badRequestException;
+
     public ListCallAnalyticsJobsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListCallAnalyticsJobsResponse {
     
     
     public String contentType;
+
     public ListCallAnalyticsJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCallAnalyticsJobsResponse {
      */
     
     public Object internalFailureException;
+
     public ListCallAnalyticsJobsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class ListCallAnalyticsJobsResponse {
      */
     
     public Object limitExceededException;
+
     public ListCallAnalyticsJobsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ListCallAnalyticsJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCallAnalyticsJobsResponse listCallAnalyticsJobsResponse;
+
     public ListCallAnalyticsJobsResponse withListCallAnalyticsJobsResponse(org.openapis.openapi.models.shared.ListCallAnalyticsJobsResponse listCallAnalyticsJobsResponse) {
         this.listCallAnalyticsJobsResponse = listCallAnalyticsJobsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListCallAnalyticsJobsResponse {
     
     
     public Integer statusCode;
+
     public ListCallAnalyticsJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListCallAnalyticsJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCallAnalyticsJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCallAnalyticsJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class AllowListCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regex")
     public String regex;
+
     public AllowListCriteria withRegex(String regex) {
         this.regex = regex;
         return this;
@@ -23,9 +24,11 @@ public class AllowListCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3WordsList")
     public S3WordsList s3WordsList;
+
     public AllowListCriteria withS3WordsList(S3WordsList s3WordsList) {
         this.s3WordsList = s3WordsList;
         return this;
     }
     
+    public AllowListCriteria(){}
 }

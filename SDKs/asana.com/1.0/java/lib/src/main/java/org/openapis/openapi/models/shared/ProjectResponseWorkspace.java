@@ -18,6 +18,7 @@ public class ProjectResponseWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public ProjectResponseWorkspace withGid(String gid) {
         this.gid = gid;
         return this;
@@ -29,6 +30,7 @@ public class ProjectResponseWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProjectResponseWorkspace withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class ProjectResponseWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public ProjectResponseWorkspace withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ProjectResponseWorkspace(){}
 }

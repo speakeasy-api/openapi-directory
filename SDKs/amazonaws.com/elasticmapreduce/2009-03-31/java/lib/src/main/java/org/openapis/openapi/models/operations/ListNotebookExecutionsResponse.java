@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListNotebookExecutionsResponse {
     
     public String contentType;
+
     public ListNotebookExecutionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListNotebookExecutionsResponse {
      */
     
     public Object internalServerError;
+
     public ListNotebookExecutionsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ListNotebookExecutionsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListNotebookExecutionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListNotebookExecutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListNotebookExecutionsOutput listNotebookExecutionsOutput;
+
     public ListNotebookExecutionsResponse withListNotebookExecutionsOutput(org.openapis.openapi.models.shared.ListNotebookExecutionsOutput listNotebookExecutionsOutput) {
         this.listNotebookExecutionsOutput = listNotebookExecutionsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListNotebookExecutionsResponse {
     
     
     public Integer statusCode;
+
     public ListNotebookExecutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListNotebookExecutionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListNotebookExecutionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListNotebookExecutionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

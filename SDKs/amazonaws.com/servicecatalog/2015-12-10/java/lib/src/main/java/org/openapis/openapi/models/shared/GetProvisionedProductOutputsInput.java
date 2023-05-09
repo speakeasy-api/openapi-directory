@@ -12,6 +12,7 @@ public class GetProvisionedProductOutputsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public GetProvisionedProductOutputsInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class GetProvisionedProductOutputsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputKeys")
     public String[] outputKeys;
+
     public GetProvisionedProductOutputsInput withOutputKeys(String[] outputKeys) {
         this.outputKeys = outputKeys;
         return this;
@@ -28,6 +30,7 @@ public class GetProvisionedProductOutputsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public GetProvisionedProductOutputsInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -36,6 +39,7 @@ public class GetProvisionedProductOutputsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public GetProvisionedProductOutputsInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -44,6 +48,7 @@ public class GetProvisionedProductOutputsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProductId")
     public String provisionedProductId;
+
     public GetProvisionedProductOutputsInput withProvisionedProductId(String provisionedProductId) {
         this.provisionedProductId = provisionedProductId;
         return this;
@@ -52,9 +57,11 @@ public class GetProvisionedProductOutputsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProductName")
     public String provisionedProductName;
+
     public GetProvisionedProductOutputsInput withProvisionedProductName(String provisionedProductName) {
         this.provisionedProductName = provisionedProductName;
         return this;
     }
     
+    public GetProvisionedProductOutputsInput(){}
 }

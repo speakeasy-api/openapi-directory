@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetTemplateSyncStatusInput {
     @JsonProperty("templateName")
     public String templateName;
+
     public GetTemplateSyncStatusInput withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -16,6 +17,7 @@ public class GetTemplateSyncStatusInput {
     
     @JsonProperty("templateType")
     public TemplateTypeEnum templateType;
+
     public GetTemplateSyncStatusInput withTemplateType(TemplateTypeEnum templateType) {
         this.templateType = templateType;
         return this;
@@ -23,9 +25,15 @@ public class GetTemplateSyncStatusInput {
     
     @JsonProperty("templateVersion")
     public String templateVersion;
+
     public GetTemplateSyncStatusInput withTemplateVersion(String templateVersion) {
         this.templateVersion = templateVersion;
         return this;
     }
     
+    public GetTemplateSyncStatusInput(@JsonProperty("templateName") String templateName, @JsonProperty("templateType") TemplateTypeEnum templateType, @JsonProperty("templateVersion") String templateVersion) {
+        this.templateName = templateName;
+        this.templateType = templateType;
+        this.templateVersion = templateVersion;
+  }
 }

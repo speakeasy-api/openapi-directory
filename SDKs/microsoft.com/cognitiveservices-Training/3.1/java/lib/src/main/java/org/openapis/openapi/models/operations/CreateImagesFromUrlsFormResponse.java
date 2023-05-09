@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateImagesFromUrlsFormResponse {
     
     public byte[] body;
+
     public CreateImagesFromUrlsFormResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CreateImagesFromUrlsFormResponse {
     
     
     public String contentType;
+
     public CreateImagesFromUrlsFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CreateImagesFromUrlsFormResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomVisionError customVisionError;
+
     public CreateImagesFromUrlsFormResponse withCustomVisionError(org.openapis.openapi.models.shared.CustomVisionError customVisionError) {
         this.customVisionError = customVisionError;
         return this;
@@ -36,6 +40,7 @@ public class CreateImagesFromUrlsFormResponse {
      */
     
     public org.openapis.openapi.models.shared.ImageCreateSummary imageCreateSummary;
+
     public CreateImagesFromUrlsFormResponse withImageCreateSummary(org.openapis.openapi.models.shared.ImageCreateSummary imageCreateSummary) {
         this.imageCreateSummary = imageCreateSummary;
         return this;
@@ -43,6 +48,7 @@ public class CreateImagesFromUrlsFormResponse {
     
     
     public Integer statusCode;
+
     public CreateImagesFromUrlsFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class CreateImagesFromUrlsFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateImagesFromUrlsFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateImagesFromUrlsFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

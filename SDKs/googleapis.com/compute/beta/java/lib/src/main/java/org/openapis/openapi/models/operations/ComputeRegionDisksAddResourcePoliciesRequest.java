@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeRegionDisksAddResourcePoliciesRequest {
@@ -12,6 +13,7 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RegionDisksAddResourcePoliciesRequest regionDisksAddResourcePoliciesRequest;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withRegionDisksAddResourcePoliciesRequest(org.openapis.openapi.models.shared.RegionDisksAddResourcePoliciesRequest regionDisksAddResourcePoliciesRequest) {
         this.regionDisksAddResourcePoliciesRequest = regionDisksAddResourcePoliciesRequest;
         return this;
@@ -29,6 +32,7 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=disk")
     public String disk;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withDisk(String disk) {
         this.disk = disk;
         return this;
@@ -69,6 +76,7 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withProject(String project) {
         this.project = project;
         return this;
@@ -119,6 +131,7 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
     public String region;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -139,6 +153,7 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -149,6 +164,7 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,6 +175,7 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -169,9 +186,15 @@ public class ComputeRegionDisksAddResourcePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeRegionDisksAddResourcePoliciesRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeRegionDisksAddResourcePoliciesRequest(@JsonProperty("disk") String disk, @JsonProperty("project") String project, @JsonProperty("region") String region) {
+        this.disk = disk;
+        this.project = project;
+        this.region = region;
+  }
 }

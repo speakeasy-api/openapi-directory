@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetLatestByPublicDistributionGroupRequest {
@@ -12,6 +13,7 @@ public class ReleasesGetLatestByPublicDistributionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_secret")
     public String appSecret;
+
     public ReleasesGetLatestByPublicDistributionGroupRequest withAppSecret(String appSecret) {
         this.appSecret = appSecret;
         return this;
@@ -22,6 +24,7 @@ public class ReleasesGetLatestByPublicDistributionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_id")
     public String distributionGroupId;
+
     public ReleasesGetLatestByPublicDistributionGroupRequest withDistributionGroupId(String distributionGroupId) {
         this.distributionGroupId = distributionGroupId;
         return this;
@@ -32,9 +35,14 @@ public class ReleasesGetLatestByPublicDistributionGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_install_page")
     public Boolean isInstallPage;
+
     public ReleasesGetLatestByPublicDistributionGroupRequest withIsInstallPage(Boolean isInstallPage) {
         this.isInstallPage = isInstallPage;
         return this;
     }
     
+    public ReleasesGetLatestByPublicDistributionGroupRequest(@JsonProperty("app_secret") String appSecret, @JsonProperty("distribution_group_id") String distributionGroupId) {
+        this.appSecret = appSecret;
+        this.distributionGroupId = distributionGroupId;
+  }
 }

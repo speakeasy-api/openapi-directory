@@ -22,6 +22,7 @@ public class ActivateReadSetJobItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completionTime")
     public OffsetDateTime completionTime;
+
     public ActivateReadSetJobItem withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -31,6 +32,7 @@ public class ActivateReadSetJobItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ActivateReadSetJobItem withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class ActivateReadSetJobItem {
     
     @JsonProperty("id")
     public String id;
+
     public ActivateReadSetJobItem withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class ActivateReadSetJobItem {
     
     @JsonProperty("sequenceStoreId")
     public String sequenceStoreId;
+
     public ActivateReadSetJobItem withSequenceStoreId(String sequenceStoreId) {
         this.sequenceStoreId = sequenceStoreId;
         return this;
@@ -52,9 +56,16 @@ public class ActivateReadSetJobItem {
     
     @JsonProperty("status")
     public ReadSetActivationJobStatusEnum status;
+
     public ActivateReadSetJobItem withStatus(ReadSetActivationJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ActivateReadSetJobItem(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") String id, @JsonProperty("sequenceStoreId") String sequenceStoreId, @JsonProperty("status") ReadSetActivationJobStatusEnum status) {
+        this.creationTime = creationTime;
+        this.id = id;
+        this.sequenceStoreId = sequenceStoreId;
+        this.status = status;
+  }
 }

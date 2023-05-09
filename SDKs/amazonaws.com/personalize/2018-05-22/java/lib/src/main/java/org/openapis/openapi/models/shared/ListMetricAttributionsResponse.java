@@ -15,6 +15,7 @@ public class ListMetricAttributionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricAttributions")
     public MetricAttributionSummary[] metricAttributions;
+
     public ListMetricAttributionsResponse withMetricAttributions(MetricAttributionSummary[] metricAttributions) {
         this.metricAttributions = metricAttributions;
         return this;
@@ -23,9 +24,11 @@ public class ListMetricAttributionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListMetricAttributionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMetricAttributionsResponse(){}
 }

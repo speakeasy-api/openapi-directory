@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NetworkservicesProjectsLocationsTlsRoutesDeleteResponse {
     
     public String contentType;
+
     public NetworkservicesProjectsLocationsTlsRoutesDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class NetworkservicesProjectsLocationsTlsRoutesDeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public NetworkservicesProjectsLocationsTlsRoutesDeleteResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class NetworkservicesProjectsLocationsTlsRoutesDeleteResponse {
     
     
     public Integer statusCode;
+
     public NetworkservicesProjectsLocationsTlsRoutesDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class NetworkservicesProjectsLocationsTlsRoutesDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NetworkservicesProjectsLocationsTlsRoutesDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public NetworkservicesProjectsLocationsTlsRoutesDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

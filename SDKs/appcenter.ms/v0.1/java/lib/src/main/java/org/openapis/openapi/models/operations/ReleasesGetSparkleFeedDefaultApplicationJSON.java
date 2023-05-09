@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReleasesGetSparkleFeedDefaultApplicationJSON {
     @JsonProperty("code")
     public ReleasesGetSparkleFeedDefaultApplicationJSONCodeEnum code;
+
     public ReleasesGetSparkleFeedDefaultApplicationJSON withCode(ReleasesGetSparkleFeedDefaultApplicationJSONCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,14 @@ public class ReleasesGetSparkleFeedDefaultApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public ReleasesGetSparkleFeedDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ReleasesGetSparkleFeedDefaultApplicationJSON(@JsonProperty("code") ReleasesGetSparkleFeedDefaultApplicationJSONCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

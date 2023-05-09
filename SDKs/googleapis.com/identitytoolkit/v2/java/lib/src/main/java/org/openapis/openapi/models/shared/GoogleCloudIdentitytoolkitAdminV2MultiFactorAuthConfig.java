@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabledProviders")
     public GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigEnabledProvidersEnum[] enabledProviders;
+
     public GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig withEnabledProviders(GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigEnabledProvidersEnum[] enabledProviders) {
         this.enabledProviders = enabledProviders;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providerConfigs")
     public GoogleCloudIdentitytoolkitAdminV2ProviderConfig[] providerConfigs;
+
     public GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig withProviderConfigs(GoogleCloudIdentitytoolkitAdminV2ProviderConfig[] providerConfigs) {
         this.providerConfigs = providerConfigs;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigStateEnum state;
+
     public GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig withState(GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig(){}
 }

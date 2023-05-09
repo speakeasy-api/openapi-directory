@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCodeRepositoryInput {
     @JsonProperty("CodeRepositoryName")
     public String codeRepositoryName;
+
     public CreateCodeRepositoryInput withCodeRepositoryName(String codeRepositoryName) {
         this.codeRepositoryName = codeRepositoryName;
         return this;
@@ -18,6 +19,7 @@ public class CreateCodeRepositoryInput {
     
     @JsonProperty("GitConfig")
     public GitConfig gitConfig;
+
     public CreateCodeRepositoryInput withGitConfig(GitConfig gitConfig) {
         this.gitConfig = gitConfig;
         return this;
@@ -26,9 +28,14 @@ public class CreateCodeRepositoryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateCodeRepositoryInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCodeRepositoryInput(@JsonProperty("CodeRepositoryName") String codeRepositoryName, @JsonProperty("GitConfig") GitConfig gitConfig) {
+        this.codeRepositoryName = codeRepositoryName;
+        this.gitConfig = gitConfig;
+  }
 }

@@ -12,7 +12,6 @@ import org.apache.http.NameValuePair;
 import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.HTTPRequest;
 import org.openapis.openapi.utils.JSON;
-import org.openapis.openapi.utils.SerializedBody;
 
 /**
  * Retrieve and update posts.
@@ -34,107 +33,6 @@ public class Posts {
 		this._sdkVersion = sdkVersion;
 		this._genVersion = genVersion;
 	}
-
-    /**
-     * Bookmark a post
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.BookmarkPostResponse bookmarkPost(org.openapis.openapi.models.operations.BookmarkPostRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BookmarkPostRequest.class, baseUrl, "/posts/{post_id}/bookmark", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PUT");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.BookmarkPostResponse res = new org.openapis.openapi.models.operations.BookmarkPostResponse() {{
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
-        }
-
-        return res;
-    }
-
-    /**
-     * Delete a post bookmark
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.DeleteBookmarkResponse deleteBookmark(org.openapis.openapi.models.operations.DeleteBookmarkRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBookmarkRequest.class, baseUrl, "/posts/{post_id}/bookmark", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.DeleteBookmarkResponse res = new org.openapis.openapi.models.operations.DeleteBookmarkResponse() {{
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
-        }
-
-        return res;
-    }
-
-    /**
-     * Delete a post
-     * Users can delete posts they have made that have been satisfied or withdrawn or that have expired. Deleting posts isn't intended to be a normal part of the posting process since it makes reposting and viewing old posts harder.
-     * 
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.DeletePostResponse deletePost(org.openapis.openapi.models.operations.DeletePostRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePostRequest.class, baseUrl, "/posts/{post_id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.DeletePostResponse res = new org.openapis.openapi.models.operations.DeletePostResponse() {{
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
-        }
-
-        return res;
-    }
 
     /**
      * List all posts
@@ -166,11 +64,9 @@ public class Posts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllPostsResponse res = new org.openapis.openapi.models.operations.GetAllPostsResponse() {{
+        org.openapis.openapi.models.operations.GetAllPostsResponse res = new org.openapis.openapi.models.operations.GetAllPostsResponse(contentType, httpRes.statusCode()) {{
             getAllPosts200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -216,11 +112,9 @@ public class Posts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllPostsChangesResponse res = new org.openapis.openapi.models.operations.GetAllPostsChangesResponse() {{
+        org.openapis.openapi.models.operations.GetAllPostsChangesResponse res = new org.openapis.openapi.models.operations.GetAllPostsChangesResponse(contentType, httpRes.statusCode()) {{
             getAllPostsChanges200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -258,11 +152,9 @@ public class Posts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPostResponse res = new org.openapis.openapi.models.operations.GetPostResponse() {{
+        org.openapis.openapi.models.operations.GetPostResponse res = new org.openapis.openapi.models.operations.GetPostResponse(contentType, httpRes.statusCode()) {{
             post = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +194,9 @@ public class Posts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPostAndRelatedDataResponse res = new org.openapis.openapi.models.operations.GetPostAndRelatedDataResponse() {{
+        org.openapis.openapi.models.operations.GetPostAndRelatedDataResponse res = new org.openapis.openapi.models.operations.GetPostAndRelatedDataResponse(contentType, httpRes.statusCode()) {{
             getPostAndRelatedData200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -353,11 +243,9 @@ public class Posts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPostsResponse res = new org.openapis.openapi.models.operations.GetPostsResponse() {{
+        org.openapis.openapi.models.operations.GetPostsResponse res = new org.openapis.openapi.models.operations.GetPostsResponse(contentType, httpRes.statusCode()) {{
             getPosts200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -401,11 +289,9 @@ public class Posts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPostsByIdsResponse res = new org.openapis.openapi.models.operations.GetPostsByIdsResponse() {{
+        org.openapis.openapi.models.operations.GetPostsByIdsResponse res = new org.openapis.openapi.models.operations.GetPostsByIdsResponse(contentType, httpRes.statusCode()) {{
             getPostsByIds200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -414,169 +300,6 @@ public class Posts {
                 org.openapis.openapi.models.operations.GetPostsByIds200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.GetPostsByIds200ApplicationJSON.class);
                 res.getPostsByIds200ApplicationJSONObject = out;
             }
-        }
-
-        return res;
-    }
-
-    /**
-     * Promise an offer post
-     * Mark an offer by the current user as promised to someone. This helps people viewing the post know that the items being offered may soon be given away as long as the person who was promised the items picks them up.
-     * 
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.PromisePostResponse promisePost(org.openapis.openapi.models.operations.PromisePostRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PromisePostRequest.class, baseUrl, "/posts/{post_id}/promise", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PUT");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.PromisePostResponse res = new org.openapis.openapi.models.operations.PromisePostResponse() {{
-            post = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.Post out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Post.class);
-                res.post = out;
-            }
-        }
-        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
-        }
-
-        return res;
-    }
-
-    /**
-     * Reply to a post
-     * Send a reply to a post from the current user to the post author.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.ReplyToPostResponse replyToPost(org.openapis.openapi.models.operations.ReplyToPostRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplyToPostRequest.class, baseUrl, "/posts/{post_id}/reply", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
-        if (serializedRequestBody == null) {
-            throw new Exception("Request body is required");
-        }
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.ReplyToPostResponse res = new org.openapis.openapi.models.operations.ReplyToPostResponse() {{
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
-        }
-
-        return res;
-    }
-
-    /**
-     * Report a post
-     * Reports a post to be reviewed by the moderators.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.ReportPostResponse reportPost(org.openapis.openapi.models.operations.ReportPostRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportPostRequest.class, baseUrl, "/posts/{post_id}/report", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
-        if (serializedRequestBody == null) {
-            throw new Exception("Request body is required");
-        }
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.ReportPostResponse res = new org.openapis.openapi.models.operations.ReportPostResponse() {{
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
-        }
-
-        return res;
-    }
-
-    /**
-     * Satisfy a post
-     * Mark an offer or wanted post by the current user as satisfied (eg. an offer has been taken or a wanted has been received).
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.SatisfyPostResponse satisfyPost(org.openapis.openapi.models.operations.SatisfyPostRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SatisfyPostRequest.class, baseUrl, "/posts/{post_id}/satisfy", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PUT");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.SatisfyPostResponse res = new org.openapis.openapi.models.operations.SatisfyPostResponse() {{
-            post = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.Post out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Post.class);
-                res.post = out;
-            }
-        }
-        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
         }
 
         return res;
@@ -613,11 +336,9 @@ public class Posts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchPostsResponse res = new org.openapis.openapi.models.operations.SearchPostsResponse() {{
+        org.openapis.openapi.models.operations.SearchPostsResponse res = new org.openapis.openapi.models.operations.SearchPostsResponse(contentType, httpRes.statusCode()) {{
             searchPosts200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -628,217 +349,6 @@ public class Posts {
             }
         }
         else if (httpRes.statusCode() == 400) {
-        }
-
-        return res;
-    }
-
-    /**
-     * Share a post
-     * Forwards a copy of the post to the current user so that they can forward it to friends.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.SharePostResponse sharePost(org.openapis.openapi.models.operations.SharePostRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SharePostRequest.class, baseUrl, "/posts/{post_id}/share", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.SharePostResponse res = new org.openapis.openapi.models.operations.SharePostResponse() {{
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
-        }
-
-        return res;
-    }
-
-    /**
-     * Submit a post
-     * Submits a new post.
-     * 
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.SubmitPostResponse submitPost(org.openapis.openapi.models.operations.SubmitPostRequestBody request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/posts");
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.SubmitPostResponse res = new org.openapis.openapi.models.operations.SubmitPostResponse() {{
-            submitPost200ApplicationJSONObject = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.operations.SubmitPost200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.SubmitPost200ApplicationJSON.class);
-                res.submitPost200ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 400) {
-        }
-
-        return res;
-    }
-
-    /**
-     * Unpromise an offer post
-     * Mark an offer by the current user as unpromised.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.UnpromisePostResponse unpromisePost(org.openapis.openapi.models.operations.UnpromisePostRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnpromisePostRequest.class, baseUrl, "/posts/{post_id}/unpromise", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PUT");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.UnpromisePostResponse res = new org.openapis.openapi.models.operations.UnpromisePostResponse() {{
-            post = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.Post out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Post.class);
-                res.post = out;
-            }
-        }
-        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
-        }
-
-        return res;
-    }
-
-    /**
-     * Update a post
-     * Users can update posts to fix mistakes with their post, add photos, or add more details about the items. Updates should not be used to say that items in a post have been taken or received since the post satisfy endpoint is designed to do that.
-     * 
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.UpdatePostResponse updatePost(org.openapis.openapi.models.operations.UpdatePostRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePostRequest.class, baseUrl, "/posts/{post_id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PUT");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
-        if (serializedRequestBody == null) {
-            throw new Exception("Request body is required");
-        }
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.UpdatePostResponse res = new org.openapis.openapi.models.operations.UpdatePostResponse() {{
-            updatePost200ApplicationJSONObject = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.operations.UpdatePost200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.UpdatePost200ApplicationJSON.class);
-                res.updatePost200ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
-        }
-
-        return res;
-    }
-
-    /**
-     * Withdraw a post
-     * Mark an offer or wanted post by the current user as withdrawn.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.WithdrawPostResponse withdrawPost(org.openapis.openapi.models.operations.WithdrawPostRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WithdrawPostRequest.class, baseUrl, "/posts/{post_id}/withdraw", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PUT");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.WithdrawPostResponse res = new org.openapis.openapi.models.operations.WithdrawPostResponse() {{
-            post = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.Post out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Post.class);
-                res.post = out;
-            }
-        }
-        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
         }
 
         return res;

@@ -15,6 +15,7 @@ public class BatchGetCustomEntityTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomEntityTypes")
     public CustomEntityType[] customEntityTypes;
+
     public BatchGetCustomEntityTypesResponse withCustomEntityTypes(CustomEntityType[] customEntityTypes) {
         this.customEntityTypes = customEntityTypes;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetCustomEntityTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomEntityTypesNotFound")
     public String[] customEntityTypesNotFound;
+
     public BatchGetCustomEntityTypesResponse withCustomEntityTypesNotFound(String[] customEntityTypesNotFound) {
         this.customEntityTypesNotFound = customEntityTypesNotFound;
         return this;
     }
     
+    public BatchGetCustomEntityTypesResponse(){}
 }

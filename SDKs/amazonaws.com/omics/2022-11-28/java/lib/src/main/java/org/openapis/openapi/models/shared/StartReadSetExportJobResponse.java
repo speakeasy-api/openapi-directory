@@ -19,6 +19,7 @@ public class StartReadSetExportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public StartReadSetExportJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +27,7 @@ public class StartReadSetExportJobResponse {
     
     @JsonProperty("destination")
     public String destination;
+
     public StartReadSetExportJobResponse withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -33,6 +35,7 @@ public class StartReadSetExportJobResponse {
     
     @JsonProperty("id")
     public String id;
+
     public StartReadSetExportJobResponse withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +43,7 @@ public class StartReadSetExportJobResponse {
     
     @JsonProperty("sequenceStoreId")
     public String sequenceStoreId;
+
     public StartReadSetExportJobResponse withSequenceStoreId(String sequenceStoreId) {
         this.sequenceStoreId = sequenceStoreId;
         return this;
@@ -47,9 +51,17 @@ public class StartReadSetExportJobResponse {
     
     @JsonProperty("status")
     public ReadSetExportJobStatusEnum status;
+
     public StartReadSetExportJobResponse withStatus(ReadSetExportJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public StartReadSetExportJobResponse(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("destination") String destination, @JsonProperty("id") String id, @JsonProperty("sequenceStoreId") String sequenceStoreId, @JsonProperty("status") ReadSetExportJobStatusEnum status) {
+        this.creationTime = creationTime;
+        this.destination = destination;
+        this.id = id;
+        this.sequenceStoreId = sequenceStoreId;
+        this.status = status;
+  }
 }

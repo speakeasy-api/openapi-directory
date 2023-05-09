@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IsVpcPeeredResponse {
@@ -12,6 +13,7 @@ public class IsVpcPeeredResponse {
      */
     
     public Object accessDeniedException;
+
     public IsVpcPeeredResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class IsVpcPeeredResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public IsVpcPeeredResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class IsVpcPeeredResponse {
     
     
     public String contentType;
+
     public IsVpcPeeredResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class IsVpcPeeredResponse {
      */
     
     public Object invalidInputException;
+
     public IsVpcPeeredResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class IsVpcPeeredResponse {
      */
     
     public org.openapis.openapi.models.shared.IsVpcPeeredResult isVpcPeeredResult;
+
     public IsVpcPeeredResponse withIsVpcPeeredResult(org.openapis.openapi.models.shared.IsVpcPeeredResult isVpcPeeredResult) {
         this.isVpcPeeredResult = isVpcPeeredResult;
         return this;
@@ -59,6 +65,7 @@ public class IsVpcPeeredResponse {
      */
     
     public Object notFoundException;
+
     public IsVpcPeeredResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class IsVpcPeeredResponse {
      */
     
     public Object operationFailureException;
+
     public IsVpcPeeredResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class IsVpcPeeredResponse {
      */
     
     public Object serviceException;
+
     public IsVpcPeeredResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class IsVpcPeeredResponse {
     
     
     public Integer statusCode;
+
     public IsVpcPeeredResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class IsVpcPeeredResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IsVpcPeeredResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class IsVpcPeeredResponse {
      */
     
     public Object unauthenticatedException;
+
     public IsVpcPeeredResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public IsVpcPeeredResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsDeleteSnapshotsResponse res = new org.openapis.openapi.models.operations.DataflowProjectsDeleteSnapshotsResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsDeleteSnapshotsResponse res = new org.openapis.openapi.models.operations.DataflowProjectsDeleteSnapshotsResponse(contentType, httpRes.statusCode()) {{
             deleteSnapshotResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsJobsAggregatedResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsAggregatedResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsJobsAggregatedResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsAggregatedResponse(contentType, httpRes.statusCode()) {{
             listJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsJobsCreateResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsCreateResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsJobsCreateResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsCreateResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsJobsDebugGetConfigResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsDebugGetConfigResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsJobsDebugGetConfigResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsDebugGetConfigResponse(contentType, httpRes.statusCode()) {{
             getDebugConfigResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsJobsDebugSendCaptureResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsDebugSendCaptureResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsJobsDebugSendCaptureResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsDebugSendCaptureResponse(contentType, httpRes.statusCode()) {{
             sendDebugCaptureResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsJobsGetResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsGetResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsJobsGetResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsGetResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsJobsGetMetricsResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsGetMetricsResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsJobsGetMetricsResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsGetMetricsResponse(contentType, httpRes.statusCode()) {{
             jobMetrics = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsJobsListResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsListResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsJobsListResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsListResponse(contentType, httpRes.statusCode()) {{
             listJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -434,11 +418,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsJobsMessagesListResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsMessagesListResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsJobsMessagesListResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsMessagesListResponse(contentType, httpRes.statusCode()) {{
             listJobMessagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,11 +464,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsJobsSnapshotResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsSnapshotResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsJobsSnapshotResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsSnapshotResponse(contentType, httpRes.statusCode()) {{
             snapshot = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -530,11 +510,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsJobsUpdateResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsJobsUpdateResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsUpdateResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsJobsWorkItemsLeaseResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsWorkItemsLeaseResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsJobsWorkItemsLeaseResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsWorkItemsLeaseResponse(contentType, httpRes.statusCode()) {{
             leaseWorkItemResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsJobsWorkItemsReportStatusResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsWorkItemsReportStatusResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsJobsWorkItemsReportStatusResponse res = new org.openapis.openapi.models.operations.DataflowProjectsJobsWorkItemsReportStatusResponse(contentType, httpRes.statusCode()) {{
             reportWorkItemStatusResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -674,11 +648,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsFlexTemplatesLaunchResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsFlexTemplatesLaunchResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsFlexTemplatesLaunchResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsFlexTemplatesLaunchResponse(contentType, httpRes.statusCode()) {{
             launchFlexTemplateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -722,11 +694,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsCreateResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsCreateResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsCreateResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsCreateResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -770,11 +740,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsDebugGetConfigResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsDebugGetConfigResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsDebugGetConfigResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsDebugGetConfigResponse(contentType, httpRes.statusCode()) {{
             getDebugConfigResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -818,11 +786,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsDebugSendCaptureResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsDebugSendCaptureResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsDebugSendCaptureResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsDebugSendCaptureResponse(contentType, httpRes.statusCode()) {{
             sendDebugCaptureResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -864,11 +830,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsGetResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsGetResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsGetResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsGetResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -910,11 +874,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsGetExecutionDetailsResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsGetExecutionDetailsResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsGetExecutionDetailsResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsGetExecutionDetailsResponse(contentType, httpRes.statusCode()) {{
             jobExecutionDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -956,11 +918,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsGetMetricsResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsGetMetricsResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsGetMetricsResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsGetMetricsResponse(contentType, httpRes.statusCode()) {{
             jobMetrics = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1002,11 +962,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsListResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsListResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsListResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsListResponse(contentType, httpRes.statusCode()) {{
             listJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1048,11 +1006,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsMessagesListResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsMessagesListResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsMessagesListResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsMessagesListResponse(contentType, httpRes.statusCode()) {{
             listJobMessagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1096,11 +1052,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsSnapshotResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsSnapshotResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsSnapshotResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsSnapshotResponse(contentType, httpRes.statusCode()) {{
             snapshot = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1142,11 +1096,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsSnapshotsListResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsSnapshotsListResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsSnapshotsListResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsSnapshotsListResponse(contentType, httpRes.statusCode()) {{
             listSnapshotsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1188,11 +1140,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsStagesGetExecutionDetailsResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsStagesGetExecutionDetailsResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsStagesGetExecutionDetailsResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsStagesGetExecutionDetailsResponse(contentType, httpRes.statusCode()) {{
             stageExecutionDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1236,11 +1186,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsUpdateResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsUpdateResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsUpdateResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1284,11 +1232,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsWorkItemsLeaseResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsWorkItemsLeaseResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsWorkItemsLeaseResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsWorkItemsLeaseResponse(contentType, httpRes.statusCode()) {{
             leaseWorkItemResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1332,11 +1278,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsWorkItemsReportStatusResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsWorkItemsReportStatusResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsWorkItemsReportStatusResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsJobsWorkItemsReportStatusResponse(contentType, httpRes.statusCode()) {{
             reportWorkItemStatusResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1378,11 +1322,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsSnapshotsDeleteResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsSnapshotsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsSnapshotsDeleteResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsSnapshotsDeleteResponse(contentType, httpRes.statusCode()) {{
             deleteSnapshotResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1424,11 +1366,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsSnapshotsGetResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsSnapshotsGetResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsSnapshotsGetResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsSnapshotsGetResponse(contentType, httpRes.statusCode()) {{
             snapshot = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1470,11 +1410,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsSnapshotsListResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsSnapshotsListResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsSnapshotsListResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsSnapshotsListResponse(contentType, httpRes.statusCode()) {{
             listSnapshotsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1518,11 +1456,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsTemplatesCreateResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsTemplatesCreateResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsTemplatesCreateResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsTemplatesCreateResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1564,11 +1500,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsTemplatesGetResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsTemplatesGetResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsTemplatesGetResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsTemplatesGetResponse(contentType, httpRes.statusCode()) {{
             getTemplateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1612,11 +1546,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsTemplatesLaunchResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsTemplatesLaunchResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsTemplatesLaunchResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsTemplatesLaunchResponse(contentType, httpRes.statusCode()) {{
             launchTemplateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1660,11 +1592,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsLocationsWorkerMessagesResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsWorkerMessagesResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsLocationsWorkerMessagesResponse res = new org.openapis.openapi.models.operations.DataflowProjectsLocationsWorkerMessagesResponse(contentType, httpRes.statusCode()) {{
             sendWorkerMessagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1706,11 +1636,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsSnapshotsGetResponse res = new org.openapis.openapi.models.operations.DataflowProjectsSnapshotsGetResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsSnapshotsGetResponse res = new org.openapis.openapi.models.operations.DataflowProjectsSnapshotsGetResponse(contentType, httpRes.statusCode()) {{
             snapshot = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1752,11 +1680,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsSnapshotsListResponse res = new org.openapis.openapi.models.operations.DataflowProjectsSnapshotsListResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsSnapshotsListResponse res = new org.openapis.openapi.models.operations.DataflowProjectsSnapshotsListResponse(contentType, httpRes.statusCode()) {{
             listSnapshotsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1800,11 +1726,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsTemplatesCreateResponse res = new org.openapis.openapi.models.operations.DataflowProjectsTemplatesCreateResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsTemplatesCreateResponse res = new org.openapis.openapi.models.operations.DataflowProjectsTemplatesCreateResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1846,11 +1770,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsTemplatesGetResponse res = new org.openapis.openapi.models.operations.DataflowProjectsTemplatesGetResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsTemplatesGetResponse res = new org.openapis.openapi.models.operations.DataflowProjectsTemplatesGetResponse(contentType, httpRes.statusCode()) {{
             getTemplateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1894,11 +1816,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsTemplatesLaunchResponse res = new org.openapis.openapi.models.operations.DataflowProjectsTemplatesLaunchResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsTemplatesLaunchResponse res = new org.openapis.openapi.models.operations.DataflowProjectsTemplatesLaunchResponse(contentType, httpRes.statusCode()) {{
             launchTemplateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1942,11 +1862,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataflowProjectsWorkerMessagesResponse res = new org.openapis.openapi.models.operations.DataflowProjectsWorkerMessagesResponse() {{
+        org.openapis.openapi.models.operations.DataflowProjectsWorkerMessagesResponse res = new org.openapis.openapi.models.operations.DataflowProjectsWorkerMessagesResponse(contentType, httpRes.statusCode()) {{
             sendWorkerMessagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

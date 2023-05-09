@@ -15,9 +15,11 @@ public class InstancesSetMachineResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestAccelerators")
     public AcceleratorConfig[] guestAccelerators;
+
     public InstancesSetMachineResourcesRequest withGuestAccelerators(AcceleratorConfig[] guestAccelerators) {
         this.guestAccelerators = guestAccelerators;
         return this;
     }
     
+    public InstancesSetMachineResourcesRequest(){}
 }

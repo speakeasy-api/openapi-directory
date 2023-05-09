@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeImportInput {
     @JsonProperty("ImportArn")
     public String importArn;
+
     public DescribeImportInput withImportArn(String importArn) {
         this.importArn = importArn;
         return this;
     }
     
+    public DescribeImportInput(@JsonProperty("ImportArn") String importArn) {
+        this.importArn = importArn;
+  }
 }

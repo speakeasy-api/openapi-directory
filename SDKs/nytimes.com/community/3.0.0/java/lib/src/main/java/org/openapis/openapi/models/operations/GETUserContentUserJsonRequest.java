@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETUserContentUserJsonRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userID")
     public Long userID;
+
     public GETUserContentUserJsonRequest withUserID(Long userID) {
         this.userID = userID;
         return this;
     }
     
+    public GETUserContentUserJsonRequest(){}
 }

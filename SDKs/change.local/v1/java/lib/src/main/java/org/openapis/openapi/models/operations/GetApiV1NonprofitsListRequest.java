@@ -12,6 +12,7 @@ public class GetApiV1NonprofitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetApiV1NonprofitsListRequest withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,11 @@ public class GetApiV1NonprofitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Double page;
+
     public GetApiV1NonprofitsListRequest withPage(Double page) {
         this.page = page;
         return this;
     }
     
+    public GetApiV1NonprofitsListRequest(){}
 }

@@ -483,4 +483,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/RestoreDBClusterToPointInTi
 lib/src/main/java/org/openapis/openapi/models/shared/StartDBClusterMessage.java
 lib/src/main/java/org/openapis/openapi/models/shared/StopDBClusterMessage.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -17,6 +17,7 @@ public class ApiCoreDtoTagsTag {
     @JsonProperty("datapoints")
     @SpeakeasyMetadata("form:name=datapoints")
     public Long[] datapoints;
+
     public ApiCoreDtoTagsTag withDatapoints(Long[] datapoints) {
         this.datapoints = datapoints;
         return this;
@@ -26,6 +27,7 @@ public class ApiCoreDtoTagsTag {
     @JsonProperty("groups")
     @SpeakeasyMetadata("form:name=groups")
     public Long[] groups;
+
     public ApiCoreDtoTagsTag withGroups(Long[] groups) {
         this.groups = groups;
         return this;
@@ -35,6 +37,7 @@ public class ApiCoreDtoTagsTag {
     @JsonProperty("id")
     @SpeakeasyMetadata("form:name=id")
     public Long id;
+
     public ApiCoreDtoTagsTag withId(Long id) {
         this.id = id;
         return this;
@@ -44,9 +47,11 @@ public class ApiCoreDtoTagsTag {
     @JsonProperty("name")
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public ApiCoreDtoTagsTag withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ApiCoreDtoTagsTag(){}
 }

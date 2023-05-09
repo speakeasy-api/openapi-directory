@@ -18,9 +18,11 @@ public class GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceAueCountReports")
     public GoogleChromeManagementV1DeviceAueCountReport[] deviceAueCountReports;
+
     public GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse withDeviceAueCountReports(GoogleChromeManagementV1DeviceAueCountReport[] deviceAueCountReports) {
         this.deviceAueCountReports = deviceAueCountReports;
         return this;
     }
     
+    public GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse(){}
 }

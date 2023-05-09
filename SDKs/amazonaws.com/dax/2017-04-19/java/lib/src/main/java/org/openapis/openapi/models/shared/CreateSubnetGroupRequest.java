@@ -12,6 +12,7 @@ public class CreateSubnetGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateSubnetGroupRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateSubnetGroupRequest {
     
     @JsonProperty("SubnetGroupName")
     public String subnetGroupName;
+
     public CreateSubnetGroupRequest withSubnetGroupName(String subnetGroupName) {
         this.subnetGroupName = subnetGroupName;
         return this;
@@ -26,9 +28,14 @@ public class CreateSubnetGroupRequest {
     
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public CreateSubnetGroupRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public CreateSubnetGroupRequest(@JsonProperty("SubnetGroupName") String subnetGroupName, @JsonProperty("SubnetIds") String[] subnetIds) {
+        this.subnetGroupName = subnetGroupName;
+        this.subnetIds = subnetIds;
+  }
 }

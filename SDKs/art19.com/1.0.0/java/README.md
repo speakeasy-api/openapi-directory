@@ -16,12 +16,12 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetClassificationsRequest;
+import org.openapis.openapi.models.operations.GetClassificationsResponse;
 import org.openapis.openapi.models.operations.GetClassificationsSecurity;
 import org.openapis.openapi.models.operations.GetClassificationsSortEnum;
 import org.openapis.openapi.models.operations.GetClassificationsTypeEnum;
-import org.openapis.openapi.models.operations.GetClassificationsRequest;
-import org.openapis.openapi.models.operations.GetClassificationsResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -36,26 +36,28 @@ public class Application {
                     add("b7392059-2939-46fe-a759-6eb10faaa235"),
                 }};
                 isCountry = "explicabo";
-                pageNumber = 750686;
-                pageSize = 315428;
+                pageNumber = 750686L;
+                pageSize = 315428L;
                 q = "omnis";
                 sort = new org.openapis.openapi.models.operations.GetClassificationsSortEnum[]{{
-                    add("created_at"),
-                    add("updated_at"),
+                    add(GetClassificationsSortEnum.CREATED_AT),
+                    add(GetClassificationsSortEnum.UPDATED_AT),
                 }};
-                type = "AlternateFeedType";
-            }}            
+                type = GetClassificationsTypeEnum.ALTERNATE_FEED_TYPE;
+            }};            
 
-            GetClassificationsResponse res = sdk.classification.getClassifications(req, new GetClassificationsSecurity() {{
+            GetClassificationsResponse res = sdk.classification.getClassifications(req, new GetClassificationsSecurity("iure") {{
                 apiKey = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.getClassifications200ApplicationVndApiPlusJsonObject.isPresent()) {
+            if (res.getClassifications200ApplicationVndApiPlusJsonObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -63,57 +65,57 @@ public class Application {
 ## Available Resources and Operations
 
 
-### classification
+### [classification](docs/classification/README.md)
 
-* `getClassifications` - Get a list of classifications
-* `getClassificationsId` - Get a specific classification
+* [getClassifications](docs/classification/README.md#getclassifications) - Get a list of classifications
+* [getClassificationsId](docs/classification/README.md#getclassificationsid) - Get a specific classification
 
-### classificationInclusion
+### [classificationInclusion](docs/classificationinclusion/README.md)
 
-* `getClassificationInclusions` - Get ClassificationInclusion records
-* `getClassificationInclusionsId` - Get a specific classification inclusion
+* [getClassificationInclusions](docs/classificationinclusion/README.md#getclassificationinclusions) - Get ClassificationInclusion records
+* [getClassificationInclusionsId](docs/classificationinclusion/README.md#getclassificationinclusionsid) - Get a specific classification inclusion
 
-### credit
+### [credit](docs/credit/README.md)
 
-* `getCredits` - Get a list of credits
-* `getCreditsId` - Get a specific credit
+* [getCredits](docs/credit/README.md#getcredits) - Get a list of credits
+* [getCreditsId](docs/credit/README.md#getcreditsid) - Get a specific credit
 
-### episode
+### [episode](docs/episode/README.md)
 
-* `getEpisodes` - Get a list of episodes
-* `getEpisodesId` - Get a specific episode
-* `getEpisodesIdNextSibling` - Get the episode released right after the specified one
-* `getEpisodesIdPreviousSibling` - Get the episode released right before the specified one
+* [getEpisodes](docs/episode/README.md#getepisodes) - Get a list of episodes
+* [getEpisodesId](docs/episode/README.md#getepisodesid) - Get a specific episode
+* [getEpisodesIdNextSibling](docs/episode/README.md#getepisodesidnextsibling) - Get the episode released right after the specified one
+* [getEpisodesIdPreviousSibling](docs/episode/README.md#getepisodesidprevioussibling) - Get the episode released right before the specified one
 
-### image
+### [image](docs/image/README.md)
 
-* `getImages` - Get a list of images
-* `getImagesId` - Get a specific image
+* [getImages](docs/image/README.md#getimages) - Get a list of images
+* [getImagesId](docs/image/README.md#getimagesid) - Get a specific image
 
-### mediaAsset
+### [mediaAsset](docs/mediaasset/README.md)
 
-* `getMediaAssets` - Get a list of media assets
-* `getMediaAssetsId` - Get a specific media asset
+* [getMediaAssets](docs/mediaasset/README.md#getmediaassets) - Get a list of media assets
+* [getMediaAssetsId](docs/mediaasset/README.md#getmediaassetsid) - Get a specific media asset
 
-### network
+### [network](docs/network/README.md)
 
-* `getNetworks` - Get a list of networks
-* `getNetworksId` - Get a specific network
+* [getNetworks](docs/network/README.md#getnetworks) - Get a list of networks
+* [getNetworksId](docs/network/README.md#getnetworksid) - Get a specific network
 
-### person
+### [person](docs/person/README.md)
 
-* `getPeople` - Get a list of people
-* `getPeopleId` - Get a specific person
+* [getPeople](docs/person/README.md#getpeople) - Get a list of people
+* [getPeopleId](docs/person/README.md#getpeopleid) - Get a specific person
 
-### season
+### [season](docs/season/README.md)
 
-* `getSeasons` - Get a list of seasons
-* `getSeasonsId` - Get a specific season
+* [getSeasons](docs/season/README.md#getseasons) - Get a list of seasons
+* [getSeasonsId](docs/season/README.md#getseasonsid) - Get a specific season
 
-### series
+### [series](docs/series/README.md)
 
-* `getSeries` - Get a list of series
-* `getSeriesId` - Get a specific series
+* [getSeries](docs/series/README.md#getseries) - Get a list of series
+* [getSeriesId](docs/series/README.md#getseriesid) - Get a specific series
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpConfigsResp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultSupportedIdpConfigs")
     public GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig[] defaultSupportedIdpConfigs;
+
     public GoogleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpConfigsResponse withDefaultSupportedIdpConfigs(GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig[] defaultSupportedIdpConfigs) {
         this.defaultSupportedIdpConfigs = defaultSupportedIdpConfigs;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpConfigsResp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpConfigsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpConfigsResponse(){}
 }

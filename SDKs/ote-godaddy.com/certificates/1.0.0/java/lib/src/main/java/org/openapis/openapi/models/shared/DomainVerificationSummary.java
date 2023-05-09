@@ -14,6 +14,7 @@ public class DomainVerificationSummary {
      */
     @JsonProperty("createdAt")
     public String createdAt;
+
     public DomainVerificationSummary withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -25,6 +26,7 @@ public class DomainVerificationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dceToken")
     public String dceToken;
+
     public DomainVerificationSummary withDceToken(String dceToken) {
         this.dceToken = dceToken;
         return this;
@@ -35,6 +37,7 @@ public class DomainVerificationSummary {
      */
     @JsonProperty("domain")
     public String domain;
+
     public DomainVerificationSummary withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -45,6 +48,7 @@ public class DomainVerificationSummary {
      */
     @JsonProperty("domainEntityId")
     public Long domainEntityId;
+
     public DomainVerificationSummary withDomainEntityId(Long domainEntityId) {
         this.domainEntityId = domainEntityId;
         return this;
@@ -55,6 +59,7 @@ public class DomainVerificationSummary {
      */
     @JsonProperty("modifiedAt")
     public String modifiedAt;
+
     public DomainVerificationSummary withModifiedAt(String modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
@@ -76,6 +81,7 @@ public class DomainVerificationSummary {
      */
     @JsonProperty("status")
     public DomainVerificationSummaryStatusEnum status;
+
     public DomainVerificationSummary withStatus(DomainVerificationSummaryStatusEnum status) {
         this.status = status;
         return this;
@@ -104,6 +110,7 @@ public class DomainVerificationSummary {
      */
     @JsonProperty("type")
     public DomainVerificationSummaryTypeEnum type;
+
     public DomainVerificationSummary withType(DomainVerificationSummaryTypeEnum type) {
         this.type = type;
         return this;
@@ -114,9 +121,19 @@ public class DomainVerificationSummary {
      */
     @JsonProperty("usage")
     public DomainVerificationSummaryUsageEnum usage;
+
     public DomainVerificationSummary withUsage(DomainVerificationSummaryUsageEnum usage) {
         this.usage = usage;
         return this;
     }
     
+    public DomainVerificationSummary(@JsonProperty("createdAt") String createdAt, @JsonProperty("domain") String domain, @JsonProperty("domainEntityId") Long domainEntityId, @JsonProperty("modifiedAt") String modifiedAt, @JsonProperty("status") DomainVerificationSummaryStatusEnum status, @JsonProperty("type") DomainVerificationSummaryTypeEnum type, @JsonProperty("usage") DomainVerificationSummaryUsageEnum usage) {
+        this.createdAt = createdAt;
+        this.domain = domain;
+        this.domainEntityId = domainEntityId;
+        this.modifiedAt = modifiedAt;
+        this.status = status;
+        this.type = type;
+        this.usage = usage;
+  }
 }

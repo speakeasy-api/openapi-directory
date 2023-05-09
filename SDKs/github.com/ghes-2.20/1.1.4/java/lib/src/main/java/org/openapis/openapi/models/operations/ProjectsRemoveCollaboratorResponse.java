@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProjectsRemoveCollaboratorResponse {
     
     public String contentType;
+
     public ProjectsRemoveCollaboratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProjectsRemoveCollaboratorResponse {
     
     
     public Integer statusCode;
+
     public ProjectsRemoveCollaboratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProjectsRemoveCollaboratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProjectsRemoveCollaboratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ProjectsRemoveCollaboratorResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ProjectsRemoveCollaboratorResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ProjectsRemoveCollaboratorResponse {
      */
     
     public ProjectsRemoveCollaborator415ApplicationJSON projectsRemoveCollaborator415ApplicationJSONObject;
+
     public ProjectsRemoveCollaboratorResponse withProjectsRemoveCollaborator415ApplicationJSONObject(ProjectsRemoveCollaborator415ApplicationJSON projectsRemoveCollaborator415ApplicationJSONObject) {
         this.projectsRemoveCollaborator415ApplicationJSONObject = projectsRemoveCollaborator415ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class ProjectsRemoveCollaboratorResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ProjectsRemoveCollaboratorResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ProjectsRemoveCollaboratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingDynamicTargetingKeysListRequest {
@@ -12,6 +13,7 @@ public class DfareportingDynamicTargetingKeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DfareportingDynamicTargetingKeysListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DfareportingDynamicTargetingKeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DfareportingDynamicTargetingKeysListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DfareportingDynamicTargetingKeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserId")
     public String advertiserId;
+
     public DfareportingDynamicTargetingKeysListRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -42,6 +46,7 @@ public class DfareportingDynamicTargetingKeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DfareportingDynamicTargetingKeysListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class DfareportingDynamicTargetingKeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DfareportingDynamicTargetingKeysListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class DfareportingDynamicTargetingKeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DfareportingDynamicTargetingKeysListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class DfareportingDynamicTargetingKeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DfareportingDynamicTargetingKeysListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class DfareportingDynamicTargetingKeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=names")
     public String[] names;
+
     public DfareportingDynamicTargetingKeysListRequest withNames(String[] names) {
         this.names = names;
         return this;
@@ -92,6 +101,7 @@ public class DfareportingDynamicTargetingKeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DfareportingDynamicTargetingKeysListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class DfareportingDynamicTargetingKeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=objectId")
     public String objectId;
+
     public DfareportingDynamicTargetingKeysListRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -112,6 +123,7 @@ public class DfareportingDynamicTargetingKeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=objectType")
     public DfareportingDynamicTargetingKeysListObjectTypeEnum objectType;
+
     public DfareportingDynamicTargetingKeysListRequest withObjectType(DfareportingDynamicTargetingKeysListObjectTypeEnum objectType) {
         this.objectType = objectType;
         return this;
@@ -122,6 +134,7 @@ public class DfareportingDynamicTargetingKeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DfareportingDynamicTargetingKeysListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class DfareportingDynamicTargetingKeysListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public DfareportingDynamicTargetingKeysListRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -142,6 +156,7 @@ public class DfareportingDynamicTargetingKeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DfareportingDynamicTargetingKeysListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class DfareportingDynamicTargetingKeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DfareportingDynamicTargetingKeysListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,9 +178,13 @@ public class DfareportingDynamicTargetingKeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DfareportingDynamicTargetingKeysListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DfareportingDynamicTargetingKeysListRequest(@JsonProperty("profileId") String profileId) {
+        this.profileId = profileId;
+  }
 }

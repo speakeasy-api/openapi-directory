@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateSpotDatafeedSubscriptionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCreateSpotDatafeedSubscriptionActionEnum action;
+
     public GETCreateSpotDatafeedSubscriptionRequest withAction(GETCreateSpotDatafeedSubscriptionActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETCreateSpotDatafeedSubscriptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Bucket")
     public String bucket;
+
     public GETCreateSpotDatafeedSubscriptionRequest withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -29,6 +32,7 @@ public class GETCreateSpotDatafeedSubscriptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETCreateSpotDatafeedSubscriptionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETCreateSpotDatafeedSubscriptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Prefix")
     public String prefix;
+
     public GETCreateSpotDatafeedSubscriptionRequest withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -46,6 +51,7 @@ public class GETCreateSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCreateSpotDatafeedSubscriptionVersionEnum version;
+
     public GETCreateSpotDatafeedSubscriptionRequest withVersion(GETCreateSpotDatafeedSubscriptionVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETCreateSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCreateSpotDatafeedSubscriptionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETCreateSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCreateSpotDatafeedSubscriptionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETCreateSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCreateSpotDatafeedSubscriptionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETCreateSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCreateSpotDatafeedSubscriptionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETCreateSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCreateSpotDatafeedSubscriptionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETCreateSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCreateSpotDatafeedSubscriptionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETCreateSpotDatafeedSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCreateSpotDatafeedSubscriptionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCreateSpotDatafeedSubscriptionRequest(@JsonProperty("Action") GETCreateSpotDatafeedSubscriptionActionEnum action, @JsonProperty("Bucket") String bucket, @JsonProperty("Version") GETCreateSpotDatafeedSubscriptionVersionEnum version) {
+        this.action = action;
+        this.bucket = bucket;
+        this.version = version;
+  }
 }

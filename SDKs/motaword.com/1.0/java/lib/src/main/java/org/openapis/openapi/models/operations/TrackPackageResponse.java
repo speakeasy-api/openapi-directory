@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TrackPackageResponse {
     
     public String contentType;
+
     public TrackPackageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TrackPackageResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public TrackPackageResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class TrackPackageResponse {
      */
     
     public org.openapis.openapi.models.shared.PackageStatus packageStatus;
+
     public TrackPackageResponse withPackageStatus(org.openapis.openapi.models.shared.PackageStatus packageStatus) {
         this.packageStatus = packageStatus;
         return this;
@@ -36,6 +40,7 @@ public class TrackPackageResponse {
     
     
     public Integer statusCode;
+
     public TrackPackageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class TrackPackageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TrackPackageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TrackPackageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

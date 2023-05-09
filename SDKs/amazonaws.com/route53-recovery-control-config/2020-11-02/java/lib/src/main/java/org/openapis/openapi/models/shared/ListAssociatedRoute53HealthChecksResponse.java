@@ -15,6 +15,7 @@ public class ListAssociatedRoute53HealthChecksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheckIds")
     public String[] healthCheckIds;
+
     public ListAssociatedRoute53HealthChecksResponse withHealthCheckIds(String[] healthCheckIds) {
         this.healthCheckIds = healthCheckIds;
         return this;
@@ -23,9 +24,11 @@ public class ListAssociatedRoute53HealthChecksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAssociatedRoute53HealthChecksResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssociatedRoute53HealthChecksResponse(){}
 }

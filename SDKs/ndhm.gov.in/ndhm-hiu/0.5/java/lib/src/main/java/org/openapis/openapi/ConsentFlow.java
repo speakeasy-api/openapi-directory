@@ -135,12 +135,10 @@ public class ConsentFlow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -216,12 +214,10 @@ public class ConsentFlow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -293,12 +289,10 @@ public class ConsentFlow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -370,12 +364,10 @@ public class ConsentFlow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -455,12 +447,10 @@ public class ConsentFlow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentsHiuNotifyResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsHiuNotifyResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentsHiuNotifyResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsHiuNotifyResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -534,12 +524,10 @@ public class ConsentFlow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentsOnFetchJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsOnFetchJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentsOnFetchJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsOnFetchJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -613,12 +601,10 @@ public class ConsentFlow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentsOnFetchRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsOnFetchRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentsOnFetchRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsOnFetchRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

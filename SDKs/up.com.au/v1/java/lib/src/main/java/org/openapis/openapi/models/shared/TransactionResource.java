@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransactionResource {
     @JsonProperty("attributes")
     public TransactionResourceAttributes attributes;
+
     public TransactionResource withAttributes(TransactionResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class TransactionResource {
      */
     @JsonProperty("id")
     public String id;
+
     public TransactionResource withId(String id) {
         this.id = id;
         return this;
@@ -30,6 +32,7 @@ public class TransactionResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public TransactionResourceLinks links;
+
     public TransactionResource withLinks(TransactionResourceLinks links) {
         this.links = links;
         return this;
@@ -37,6 +40,7 @@ public class TransactionResource {
     
     @JsonProperty("relationships")
     public TransactionResourceRelationships relationships;
+
     public TransactionResource withRelationships(TransactionResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -47,9 +51,16 @@ public class TransactionResource {
      */
     @JsonProperty("type")
     public String type;
+
     public TransactionResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TransactionResource(@JsonProperty("attributes") TransactionResourceAttributes attributes, @JsonProperty("id") String id, @JsonProperty("relationships") TransactionResourceRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

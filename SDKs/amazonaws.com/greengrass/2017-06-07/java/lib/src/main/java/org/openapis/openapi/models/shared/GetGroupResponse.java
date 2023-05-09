@@ -15,6 +15,7 @@ public class GetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public GetGroupResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class GetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTimestamp")
     public String creationTimestamp;
+
     public GetGroupResponse withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -31,6 +33,7 @@ public class GetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public GetGroupResponse withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class GetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdatedTimestamp")
     public String lastUpdatedTimestamp;
+
     public GetGroupResponse withLastUpdatedTimestamp(String lastUpdatedTimestamp) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         return this;
@@ -47,6 +51,7 @@ public class GetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestVersion")
     public String latestVersion;
+
     public GetGroupResponse withLatestVersion(String latestVersion) {
         this.latestVersion = latestVersion;
         return this;
@@ -55,6 +60,7 @@ public class GetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestVersionArn")
     public String latestVersionArn;
+
     public GetGroupResponse withLatestVersionArn(String latestVersionArn) {
         this.latestVersionArn = latestVersionArn;
         return this;
@@ -63,6 +69,7 @@ public class GetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetGroupResponse withName(String name) {
         this.name = name;
         return this;
@@ -71,9 +78,11 @@ public class GetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetGroupResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetGroupResponse(){}
 }

@@ -17,6 +17,7 @@ public class ProvisionNetworkClientsRequestBodyPoliciesBySsid3 {
      */
     @JsonProperty("devicePolicy")
     public ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum devicePolicy;
+
     public ProvisionNetworkClientsRequestBodyPoliciesBySsid3 withDevicePolicy(ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum devicePolicy) {
         this.devicePolicy = devicePolicy;
         return this;
@@ -28,9 +29,13 @@ public class ProvisionNetworkClientsRequestBodyPoliciesBySsid3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupPolicyId")
     public String groupPolicyId;
+
     public ProvisionNetworkClientsRequestBodyPoliciesBySsid3 withGroupPolicyId(String groupPolicyId) {
         this.groupPolicyId = groupPolicyId;
         return this;
     }
     
+    public ProvisionNetworkClientsRequestBodyPoliciesBySsid3(@JsonProperty("devicePolicy") ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum devicePolicy) {
+        this.devicePolicy = devicePolicy;
+  }
 }

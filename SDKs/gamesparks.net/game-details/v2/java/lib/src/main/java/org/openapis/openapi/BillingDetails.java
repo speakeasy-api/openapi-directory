@@ -54,12 +54,10 @@ public class BillingDetails {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBillingDetailsResponse res = new org.openapis.openapi.models.operations.GetBillingDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetBillingDetailsResponse res = new org.openapis.openapi.models.operations.GetBillingDetailsResponse(contentType, httpRes.statusCode()) {{
             billingDetailsModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,12 +106,10 @@ public class BillingDetails {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutBillingDetailsResponse res = new org.openapis.openapi.models.operations.PutBillingDetailsResponse() {{
+        org.openapis.openapi.models.operations.PutBillingDetailsResponse res = new org.openapis.openapi.models.operations.PutBillingDetailsResponse(contentType, httpRes.statusCode()) {{
             billingDetailsModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

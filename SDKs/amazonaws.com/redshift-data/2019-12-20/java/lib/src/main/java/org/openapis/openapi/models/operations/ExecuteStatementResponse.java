@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExecuteStatementResponse {
@@ -12,6 +13,7 @@ public class ExecuteStatementResponse {
      */
     
     public Object activeStatementsExceededException;
+
     public ExecuteStatementResponse withActiveStatementsExceededException(Object activeStatementsExceededException) {
         this.activeStatementsExceededException = activeStatementsExceededException;
         return this;
@@ -19,6 +21,7 @@ public class ExecuteStatementResponse {
     
     
     public String contentType;
+
     public ExecuteStatementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ExecuteStatementResponse {
      */
     
     public Object executeStatementException;
+
     public ExecuteStatementResponse withExecuteStatementException(Object executeStatementException) {
         this.executeStatementException = executeStatementException;
         return this;
@@ -39,6 +43,7 @@ public class ExecuteStatementResponse {
      */
     
     public org.openapis.openapi.models.shared.ExecuteStatementOutput executeStatementOutput;
+
     public ExecuteStatementResponse withExecuteStatementOutput(org.openapis.openapi.models.shared.ExecuteStatementOutput executeStatementOutput) {
         this.executeStatementOutput = executeStatementOutput;
         return this;
@@ -46,6 +51,7 @@ public class ExecuteStatementResponse {
     
     
     public Integer statusCode;
+
     public ExecuteStatementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ExecuteStatementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExecuteStatementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ExecuteStatementResponse {
      */
     
     public Object validationException;
+
     public ExecuteStatementResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ExecuteStatementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class SendVoiceMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public SendVoiceMessageRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -20,6 +21,7 @@ public class SendVoiceMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Context")
     public java.util.Map<String, String> context;
+
     public SendVoiceMessageRequest withContext(java.util.Map<String, String> context) {
         this.context = context;
         return this;
@@ -27,6 +29,7 @@ public class SendVoiceMessageRequest {
     
     @JsonProperty("DestinationPhoneNumber")
     public String destinationPhoneNumber;
+
     public SendVoiceMessageRequest withDestinationPhoneNumber(String destinationPhoneNumber) {
         this.destinationPhoneNumber = destinationPhoneNumber;
         return this;
@@ -35,6 +38,7 @@ public class SendVoiceMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DryRun")
     public Boolean dryRun;
+
     public SendVoiceMessageRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -43,6 +47,7 @@ public class SendVoiceMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxPricePerMinute")
     public String maxPricePerMinute;
+
     public SendVoiceMessageRequest withMaxPricePerMinute(String maxPricePerMinute) {
         this.maxPricePerMinute = maxPricePerMinute;
         return this;
@@ -51,6 +56,7 @@ public class SendVoiceMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageBody")
     public String messageBody;
+
     public SendVoiceMessageRequest withMessageBody(String messageBody) {
         this.messageBody = messageBody;
         return this;
@@ -59,6 +65,7 @@ public class SendVoiceMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageBodyTextType")
     public VoiceMessageBodyTextTypeEnum messageBodyTextType;
+
     public SendVoiceMessageRequest withMessageBodyTextType(VoiceMessageBodyTextTypeEnum messageBodyTextType) {
         this.messageBodyTextType = messageBodyTextType;
         return this;
@@ -66,6 +73,7 @@ public class SendVoiceMessageRequest {
     
     @JsonProperty("OriginationIdentity")
     public String originationIdentity;
+
     public SendVoiceMessageRequest withOriginationIdentity(String originationIdentity) {
         this.originationIdentity = originationIdentity;
         return this;
@@ -74,6 +82,7 @@ public class SendVoiceMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeToLive")
     public Long timeToLive;
+
     public SendVoiceMessageRequest withTimeToLive(Long timeToLive) {
         this.timeToLive = timeToLive;
         return this;
@@ -82,9 +91,14 @@ public class SendVoiceMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VoiceId")
     public VoiceIdEnum voiceId;
+
     public SendVoiceMessageRequest withVoiceId(VoiceIdEnum voiceId) {
         this.voiceId = voiceId;
         return this;
     }
     
+    public SendVoiceMessageRequest(@JsonProperty("DestinationPhoneNumber") String destinationPhoneNumber, @JsonProperty("OriginationIdentity") String originationIdentity) {
+        this.destinationPhoneNumber = destinationPhoneNumber;
+        this.originationIdentity = originationIdentity;
+  }
 }

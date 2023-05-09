@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePermissionSetResponse {
@@ -12,6 +13,7 @@ public class DescribePermissionSetResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribePermissionSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribePermissionSetResponse {
     
     
     public String contentType;
+
     public DescribePermissionSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribePermissionSetResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePermissionSetResponse describePermissionSetResponse;
+
     public DescribePermissionSetResponse withDescribePermissionSetResponse(org.openapis.openapi.models.shared.DescribePermissionSetResponse describePermissionSetResponse) {
         this.describePermissionSetResponse = describePermissionSetResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribePermissionSetResponse {
      */
     
     public Object internalServerException;
+
     public DescribePermissionSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribePermissionSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribePermissionSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribePermissionSetResponse {
     
     
     public Integer statusCode;
+
     public DescribePermissionSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribePermissionSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePermissionSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribePermissionSetResponse {
      */
     
     public Object throttlingException;
+
     public DescribePermissionSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribePermissionSetResponse {
      */
     
     public Object validationException;
+
     public DescribePermissionSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribePermissionSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

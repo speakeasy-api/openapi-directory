@@ -18,9 +18,11 @@ public class ShieldedInstanceIntegrityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateAutoLearnPolicy")
     public Boolean updateAutoLearnPolicy;
+
     public ShieldedInstanceIntegrityPolicy withUpdateAutoLearnPolicy(Boolean updateAutoLearnPolicy) {
         this.updateAutoLearnPolicy = updateAutoLearnPolicy;
         return this;
     }
     
+    public ShieldedInstanceIntegrityPolicy(){}
 }

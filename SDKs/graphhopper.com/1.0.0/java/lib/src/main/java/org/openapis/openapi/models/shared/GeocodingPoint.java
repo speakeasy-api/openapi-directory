@@ -15,6 +15,7 @@ public class GeocodingPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Double lat;
+
     public GeocodingPoint withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -26,9 +27,11 @@ public class GeocodingPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lng")
     public Double lng;
+
     public GeocodingPoint withLng(Double lng) {
         this.lng = lng;
         return this;
     }
     
+    public GeocodingPoint(){}
 }

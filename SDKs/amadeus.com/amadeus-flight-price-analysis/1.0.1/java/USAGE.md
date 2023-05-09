@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetItineraryPriceMetricsRequest;
 import org.openapis.openapi.models.operations.GetItineraryPriceMetricsResponse;
 
@@ -13,21 +12,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetItineraryPriceMetricsRequest req = new GetItineraryPriceMetricsRequest() {{
-                currencyCode = "corrupti";
-                departureDate = "provident";
-                destinationIataCode = "distinctio";
+            GetItineraryPriceMetricsRequest req = new GetItineraryPriceMetricsRequest("corrupti", "provident", "distinctio") {{
+                currencyCode = "quibusdam";
                 oneWay = false;
-                originIataCode = "quibusdam";
-            }}            
+            }};            
 
             GetItineraryPriceMetricsResponse res = sdk.priceMetrics.getItineraryPriceMetrics(req);
 
-            if (res.getItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonObject.isPresent()) {
+            if (res.getItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

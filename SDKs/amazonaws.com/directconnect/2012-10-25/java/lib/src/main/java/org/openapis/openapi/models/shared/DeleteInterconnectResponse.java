@@ -15,9 +15,11 @@ public class DeleteInterconnectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interconnectState")
     public InterconnectStateEnum interconnectState;
+
     public DeleteInterconnectResponse withInterconnectState(InterconnectStateEnum interconnectState) {
         this.interconnectState = interconnectState;
         return this;
     }
     
+    public DeleteInterconnectResponse(){}
 }

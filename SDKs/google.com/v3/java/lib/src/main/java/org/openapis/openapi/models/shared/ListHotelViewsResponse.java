@@ -18,6 +18,7 @@ public class ListHotelViewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotelViews")
     public HotelView[] hotelViews;
+
     public ListHotelViewsResponse withHotelViews(HotelView[] hotelViews) {
         this.hotelViews = hotelViews;
         return this;
@@ -29,9 +30,11 @@ public class ListHotelViewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListHotelViewsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListHotelViewsResponse(){}
 }

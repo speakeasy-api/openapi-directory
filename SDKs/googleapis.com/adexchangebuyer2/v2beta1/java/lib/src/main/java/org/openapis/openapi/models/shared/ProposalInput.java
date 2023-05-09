@@ -18,6 +18,7 @@ public class ProposalInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billedBuyer")
     public Buyer billedBuyer;
+
     public ProposalInput withBilledBuyer(Buyer billedBuyer) {
         this.billedBuyer = billedBuyer;
         return this;
@@ -29,6 +30,7 @@ public class ProposalInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer")
     public Buyer buyer;
+
     public ProposalInput withBuyer(Buyer buyer) {
         this.buyer = buyer;
         return this;
@@ -40,6 +42,7 @@ public class ProposalInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyerContacts")
     public ContactInformation[] buyerContacts;
+
     public ProposalInput withBuyerContacts(ContactInformation[] buyerContacts) {
         this.buyerContacts = buyerContacts;
         return this;
@@ -51,6 +54,7 @@ public class ProposalInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyerPrivateData")
     public PrivateData buyerPrivateData;
+
     public ProposalInput withBuyerPrivateData(PrivateData buyerPrivateData) {
         this.buyerPrivateData = buyerPrivateData;
         return this;
@@ -62,6 +66,7 @@ public class ProposalInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deals")
     public DealInput[] deals;
+
     public ProposalInput withDeals(DealInput[] deals) {
         this.deals = deals;
         return this;
@@ -73,6 +78,7 @@ public class ProposalInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ProposalInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -84,9 +90,11 @@ public class ProposalInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seller")
     public SellerInput seller;
+
     public ProposalInput withSeller(SellerInput seller) {
         this.seller = seller;
         return this;
     }
     
+    public ProposalInput(){}
 }

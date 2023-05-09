@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteWorkgroupRequest {
     @JsonProperty("workgroupName")
     public String workgroupName;
+
     public DeleteWorkgroupRequest withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public DeleteWorkgroupRequest(@JsonProperty("workgroupName") String workgroupName) {
+        this.workgroupName = workgroupName;
+  }
 }

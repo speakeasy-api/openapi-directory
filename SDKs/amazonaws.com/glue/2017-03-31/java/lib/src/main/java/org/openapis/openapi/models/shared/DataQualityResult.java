@@ -22,6 +22,7 @@ public class DataQualityResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletedOn")
     public OffsetDateTime completedOn;
+
     public DataQualityResult withCompletedOn(OffsetDateTime completedOn) {
         this.completedOn = completedOn;
         return this;
@@ -30,6 +31,7 @@ public class DataQualityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSource")
     public DataSource dataSource;
+
     public DataQualityResult withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -38,6 +40,7 @@ public class DataQualityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationContext")
     public String evaluationContext;
+
     public DataQualityResult withEvaluationContext(String evaluationContext) {
         this.evaluationContext = evaluationContext;
         return this;
@@ -46,6 +49,7 @@ public class DataQualityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public DataQualityResult withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -54,6 +58,7 @@ public class DataQualityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobRunId")
     public String jobRunId;
+
     public DataQualityResult withJobRunId(String jobRunId) {
         this.jobRunId = jobRunId;
         return this;
@@ -62,6 +67,7 @@ public class DataQualityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultId")
     public String resultId;
+
     public DataQualityResult withResultId(String resultId) {
         this.resultId = resultId;
         return this;
@@ -70,6 +76,7 @@ public class DataQualityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleResults")
     public DataQualityRuleResult[] ruleResults;
+
     public DataQualityResult withRuleResults(DataQualityRuleResult[] ruleResults) {
         this.ruleResults = ruleResults;
         return this;
@@ -78,6 +85,7 @@ public class DataQualityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RulesetEvaluationRunId")
     public String rulesetEvaluationRunId;
+
     public DataQualityResult withRulesetEvaluationRunId(String rulesetEvaluationRunId) {
         this.rulesetEvaluationRunId = rulesetEvaluationRunId;
         return this;
@@ -86,6 +94,7 @@ public class DataQualityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RulesetName")
     public String rulesetName;
+
     public DataQualityResult withRulesetName(String rulesetName) {
         this.rulesetName = rulesetName;
         return this;
@@ -94,6 +103,7 @@ public class DataQualityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Double score;
+
     public DataQualityResult withScore(Double score) {
         this.score = score;
         return this;
@@ -104,9 +114,11 @@ public class DataQualityResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedOn")
     public OffsetDateTime startedOn;
+
     public DataQualityResult withStartedOn(OffsetDateTime startedOn) {
         this.startedOn = startedOn;
         return this;
     }
     
+    public DataQualityResult(){}
 }

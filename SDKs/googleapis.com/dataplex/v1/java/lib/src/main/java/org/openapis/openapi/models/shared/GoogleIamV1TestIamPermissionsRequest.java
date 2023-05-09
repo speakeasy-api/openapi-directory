@@ -18,9 +18,11 @@ public class GoogleIamV1TestIamPermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public String[] permissions;
+
     public GoogleIamV1TestIamPermissionsRequest withPermissions(String[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public GoogleIamV1TestIamPermissionsRequest(){}
 }

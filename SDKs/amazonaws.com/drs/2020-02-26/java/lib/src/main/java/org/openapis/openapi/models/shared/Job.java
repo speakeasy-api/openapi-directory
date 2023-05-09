@@ -15,6 +15,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Job withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDateTime")
     public String creationDateTime;
+
     public Job withCreationDateTime(String creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -31,6 +33,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDateTime")
     public String endDateTime;
+
     public Job withEndDateTime(String endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -39,6 +42,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initiatedBy")
     public InitiatedByEnum initiatedBy;
+
     public Job withInitiatedBy(InitiatedByEnum initiatedBy) {
         this.initiatedBy = initiatedBy;
         return this;
@@ -46,6 +50,7 @@ public class Job {
     
     @JsonProperty("jobID")
     public String jobID;
+
     public Job withJobID(String jobID) {
         this.jobID = jobID;
         return this;
@@ -54,6 +59,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("participatingServers")
     public ParticipatingServer[] participatingServers;
+
     public Job withParticipatingServers(ParticipatingServer[] participatingServers) {
         this.participatingServers = participatingServers;
         return this;
@@ -62,6 +68,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public Job withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
@@ -70,6 +77,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Job withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -78,9 +86,13 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public JobTypeEnum type;
+
     public Job withType(JobTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Job(@JsonProperty("jobID") String jobID) {
+        this.jobID = jobID;
+  }
 }

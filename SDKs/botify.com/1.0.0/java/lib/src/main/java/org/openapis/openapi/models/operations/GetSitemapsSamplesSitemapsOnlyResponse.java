@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSitemapsSamplesSitemapsOnlyResponse {
     
     public String contentType;
+
     public GetSitemapsSamplesSitemapsOnlyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSitemapsSamplesSitemapsOnlyResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultPayload defaultPayload;
+
     public GetSitemapsSamplesSitemapsOnlyResponse withDefaultPayload(org.openapis.openapi.models.shared.DefaultPayload defaultPayload) {
         this.defaultPayload = defaultPayload;
         return this;
@@ -26,6 +29,7 @@ public class GetSitemapsSamplesSitemapsOnlyResponse {
     
     
     public Integer statusCode;
+
     public GetSitemapsSamplesSitemapsOnlyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetSitemapsSamplesSitemapsOnlyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSitemapsSamplesSitemapsOnlyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetSitemapsSamplesSitemapsOnlyResponse {
      */
     
     public GetSitemapsSamplesSitemapsOnly200ApplicationJSON getSitemapsSamplesSitemapsOnly200ApplicationJSONObject;
+
     public GetSitemapsSamplesSitemapsOnlyResponse withGetSitemapsSamplesSitemapsOnly200ApplicationJSONObject(GetSitemapsSamplesSitemapsOnly200ApplicationJSON getSitemapsSamplesSitemapsOnly200ApplicationJSONObject) {
         this.getSitemapsSamplesSitemapsOnly200ApplicationJSONObject = getSitemapsSamplesSitemapsOnly200ApplicationJSONObject;
         return this;
     }
     
+    public GetSitemapsSamplesSitemapsOnlyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

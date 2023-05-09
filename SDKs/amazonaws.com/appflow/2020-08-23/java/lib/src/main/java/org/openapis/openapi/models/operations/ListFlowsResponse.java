@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFlowsResponse {
     
     public String contentType;
+
     public ListFlowsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListFlowsResponse {
      */
     
     public Object internalServerException;
+
     public ListFlowsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListFlowsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFlowsResponse listFlowsResponse;
+
     public ListFlowsResponse withListFlowsResponse(org.openapis.openapi.models.shared.ListFlowsResponse listFlowsResponse) {
         this.listFlowsResponse = listFlowsResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListFlowsResponse {
     
     
     public Integer statusCode;
+
     public ListFlowsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListFlowsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFlowsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListFlowsResponse {
      */
     
     public Object validationException;
+
     public ListFlowsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListFlowsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

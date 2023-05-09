@@ -12,9 +12,11 @@ public class AnalyticsDataSwaggerModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_id")
     public String id;
+
     public AnalyticsDataSwaggerModel withId(String id) {
         this.id = id;
         return this;
     }
     
+    public AnalyticsDataSwaggerModel(){}
 }

@@ -15,9 +15,11 @@ public class OnPremisesTagSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onPremisesTagSetList")
     public TagFilter[][] onPremisesTagSetList;
+
     public OnPremisesTagSet withOnPremisesTagSetList(TagFilter[][] onPremisesTagSetList) {
         this.onPremisesTagSetList = onPremisesTagSetList;
         return this;
     }
     
+    public OnPremisesTagSet(){}
 }

@@ -61,12 +61,10 @@ public class V1VatVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VatBasicResponse res = new org.openapis.openapi.models.operations.VatBasicResponse() {{
+        org.openapis.openapi.models.operations.VatBasicResponse res = new org.openapis.openapi.models.operations.VatBasicResponse(contentType, httpRes.statusCode()) {{
             vatBasic200ApplicationJSONObject = null;
             vatBasicDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,12 +113,10 @@ public class V1VatVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VatComprehensiveResponse res = new org.openapis.openapi.models.operations.VatComprehensiveResponse() {{
+        org.openapis.openapi.models.operations.VatComprehensiveResponse res = new org.openapis.openapi.models.operations.VatComprehensiveResponse(contentType, httpRes.statusCode()) {{
             vatComprehensive200ApplicationJSONObject = null;
             vatComprehensiveDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,12 +165,10 @@ public class V1VatVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VatLevelTwoResponse res = new org.openapis.openapi.models.operations.VatLevelTwoResponse() {{
+        org.openapis.openapi.models.operations.VatLevelTwoResponse res = new org.openapis.openapi.models.operations.VatLevelTwoResponse(contentType, httpRes.statusCode()) {{
             vatLevelTwo200ApplicationJSONObject = null;
             vatLevelTwoDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -223,12 +217,10 @@ public class V1VatVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VatLookupResponse res = new org.openapis.openapi.models.operations.VatLookupResponse() {{
+        org.openapis.openapi.models.operations.VatLookupResponse res = new org.openapis.openapi.models.operations.VatLookupResponse(contentType, httpRes.statusCode()) {{
             vatLookup200ApplicationJSONObject = null;
             vatLookupDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

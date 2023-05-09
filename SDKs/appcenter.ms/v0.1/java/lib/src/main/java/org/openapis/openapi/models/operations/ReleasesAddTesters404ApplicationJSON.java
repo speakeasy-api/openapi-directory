@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReleasesAddTesters404ApplicationJSON {
     @JsonProperty("code")
     public ReleasesAddTesters404ApplicationJSONCodeEnum code;
+
     public ReleasesAddTesters404ApplicationJSON withCode(ReleasesAddTesters404ApplicationJSONCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,14 @@ public class ReleasesAddTesters404ApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public ReleasesAddTesters404ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ReleasesAddTesters404ApplicationJSON(@JsonProperty("code") ReleasesAddTesters404ApplicationJSONCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

@@ -15,6 +15,7 @@ public class UpdateApplicationRequestBodyMaximumCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu")
     public String cpu;
+
     public UpdateApplicationRequestBodyMaximumCapacity withCpu(String cpu) {
         this.cpu = cpu;
         return this;
@@ -23,6 +24,7 @@ public class UpdateApplicationRequestBodyMaximumCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disk")
     public String disk;
+
     public UpdateApplicationRequestBodyMaximumCapacity withDisk(String disk) {
         this.disk = disk;
         return this;
@@ -31,9 +33,11 @@ public class UpdateApplicationRequestBodyMaximumCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public String memory;
+
     public UpdateApplicationRequestBodyMaximumCapacity withMemory(String memory) {
         this.memory = memory;
         return this;
     }
     
+    public UpdateApplicationRequestBodyMaximumCapacity(){}
 }

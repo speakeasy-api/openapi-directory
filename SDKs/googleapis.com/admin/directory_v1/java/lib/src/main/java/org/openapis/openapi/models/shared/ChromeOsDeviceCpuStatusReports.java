@@ -20,6 +20,7 @@ public class ChromeOsDeviceCpuStatusReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuTemperatureInfo")
     public ChromeOsDeviceCpuStatusReportsCpuTemperatureInfo[] cpuTemperatureInfo;
+
     public ChromeOsDeviceCpuStatusReports withCpuTemperatureInfo(ChromeOsDeviceCpuStatusReportsCpuTemperatureInfo[] cpuTemperatureInfo) {
         this.cpuTemperatureInfo = cpuTemperatureInfo;
         return this;
@@ -28,6 +29,7 @@ public class ChromeOsDeviceCpuStatusReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuUtilizationPercentageInfo")
     public Integer[] cpuUtilizationPercentageInfo;
+
     public ChromeOsDeviceCpuStatusReports withCpuUtilizationPercentageInfo(Integer[] cpuUtilizationPercentageInfo) {
         this.cpuUtilizationPercentageInfo = cpuUtilizationPercentageInfo;
         return this;
@@ -41,9 +43,11 @@ public class ChromeOsDeviceCpuStatusReports {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("reportTime")
     public OffsetDateTime reportTime;
+
     public ChromeOsDeviceCpuStatusReports withReportTime(OffsetDateTime reportTime) {
         this.reportTime = reportTime;
         return this;
     }
     
+    public ChromeOsDeviceCpuStatusReports(){}
 }

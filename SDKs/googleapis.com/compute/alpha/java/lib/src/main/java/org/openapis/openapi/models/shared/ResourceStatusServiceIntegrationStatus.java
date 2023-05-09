@@ -18,9 +18,11 @@ public class ResourceStatusServiceIntegrationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupDr")
     public ResourceStatusServiceIntegrationStatusBackupDRStatus backupDr;
+
     public ResourceStatusServiceIntegrationStatus withBackupDr(ResourceStatusServiceIntegrationStatusBackupDRStatus backupDr) {
         this.backupDr = backupDr;
         return this;
     }
     
+    public ResourceStatusServiceIntegrationStatus(){}
 }

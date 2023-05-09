@@ -15,6 +15,7 @@ public class AwsEcsServiceServiceRegistriesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerName")
     public String containerName;
+
     public AwsEcsServiceServiceRegistriesDetails withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsServiceServiceRegistriesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerPort")
     public Long containerPort;
+
     public AwsEcsServiceServiceRegistriesDetails withContainerPort(Long containerPort) {
         this.containerPort = containerPort;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcsServiceServiceRegistriesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public AwsEcsServiceServiceRegistriesDetails withPort(Long port) {
         this.port = port;
         return this;
@@ -39,9 +42,11 @@ public class AwsEcsServiceServiceRegistriesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryArn")
     public String registryArn;
+
     public AwsEcsServiceServiceRegistriesDetails withRegistryArn(String registryArn) {
         this.registryArn = registryArn;
         return this;
     }
     
+    public AwsEcsServiceServiceRegistriesDetails(){}
 }

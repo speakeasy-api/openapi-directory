@@ -18,6 +18,7 @@ public class RevisionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RevisionList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class RevisionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public RevisionList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class RevisionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisions")
     public Revision[] revisions;
+
     public RevisionList withRevisions(Revision[] revisions) {
         this.revisions = revisions;
         return this;
     }
     
+    public RevisionList(){}
 }

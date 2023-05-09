@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IssuesListLabelsForMilestoneResponse {
     
     public String contentType;
+
     public IssuesListLabelsForMilestoneResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IssuesListLabelsForMilestoneResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public IssuesListLabelsForMilestoneResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class IssuesListLabelsForMilestoneResponse {
     
     
     public Integer statusCode;
+
     public IssuesListLabelsForMilestoneResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class IssuesListLabelsForMilestoneResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IssuesListLabelsForMilestoneResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class IssuesListLabelsForMilestoneResponse {
      */
     
     public org.openapis.openapi.models.shared.Label[] labels;
+
     public IssuesListLabelsForMilestoneResponse withLabels(org.openapis.openapi.models.shared.Label[] labels) {
         this.labels = labels;
         return this;
     }
     
+    public IssuesListLabelsForMilestoneResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

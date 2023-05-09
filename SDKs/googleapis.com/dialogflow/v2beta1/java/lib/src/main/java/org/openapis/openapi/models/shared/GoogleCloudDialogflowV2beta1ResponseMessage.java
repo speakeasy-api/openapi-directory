@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1ResponseMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endInteraction")
     public java.util.Map<String, Object> endInteraction;
+
     public GoogleCloudDialogflowV2beta1ResponseMessage withEndInteraction(java.util.Map<String, Object> endInteraction) {
         this.endInteraction = endInteraction;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1ResponseMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveAgentHandoff")
     public GoogleCloudDialogflowV2beta1ResponseMessageLiveAgentHandoff liveAgentHandoff;
+
     public GoogleCloudDialogflowV2beta1ResponseMessage withLiveAgentHandoff(GoogleCloudDialogflowV2beta1ResponseMessageLiveAgentHandoff liveAgentHandoff) {
         this.liveAgentHandoff = liveAgentHandoff;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1ResponseMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mixedAudio")
     public GoogleCloudDialogflowV2beta1ResponseMessageMixedAudio mixedAudio;
+
     public GoogleCloudDialogflowV2beta1ResponseMessage withMixedAudio(GoogleCloudDialogflowV2beta1ResponseMessageMixedAudio mixedAudio) {
         this.mixedAudio = mixedAudio;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1ResponseMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public java.util.Map<String, Object> payload;
+
     public GoogleCloudDialogflowV2beta1ResponseMessage withPayload(java.util.Map<String, Object> payload) {
         this.payload = payload;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2beta1ResponseMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephonyTransferCall")
     public GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall telephonyTransferCall;
+
     public GoogleCloudDialogflowV2beta1ResponseMessage withTelephonyTransferCall(GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall telephonyTransferCall) {
         this.telephonyTransferCall = telephonyTransferCall;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowV2beta1ResponseMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public GoogleCloudDialogflowV2beta1ResponseMessageText text;
+
     public GoogleCloudDialogflowV2beta1ResponseMessage withText(GoogleCloudDialogflowV2beta1ResponseMessageText text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1ResponseMessage(){}
 }

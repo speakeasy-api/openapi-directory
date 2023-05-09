@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClusterSnapshotResponse {
@@ -12,6 +13,7 @@ public class GetClusterSnapshotResponse {
      */
     
     public Object accessDeniedException;
+
     public GetClusterSnapshotResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetClusterSnapshotResponse {
     
     
     public String contentType;
+
     public GetClusterSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetClusterSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.GetClusterSnapshotOutput getClusterSnapshotOutput;
+
     public GetClusterSnapshotResponse withGetClusterSnapshotOutput(org.openapis.openapi.models.shared.GetClusterSnapshotOutput getClusterSnapshotOutput) {
         this.getClusterSnapshotOutput = getClusterSnapshotOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetClusterSnapshotResponse {
      */
     
     public Object internalServerException;
+
     public GetClusterSnapshotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetClusterSnapshotResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetClusterSnapshotResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetClusterSnapshotResponse {
     
     
     public Integer statusCode;
+
     public GetClusterSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetClusterSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClusterSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetClusterSnapshotResponse {
      */
     
     public Object throttlingException;
+
     public GetClusterSnapshotResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetClusterSnapshotResponse {
      */
     
     public Object validationException;
+
     public GetClusterSnapshotResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetClusterSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAdminRecordingsSnapshotResponse {
     
     public String contentType;
+
     public PostAdminRecordingsSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostAdminRecordingsSnapshotResponse {
     
     
     public Integer statusCode;
+
     public PostAdminRecordingsSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostAdminRecordingsSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAdminRecordingsSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostAdminRecordingsSnapshotResponse {
      */
     
     public PostAdminRecordingsSnapshot200ApplicationJSON postAdminRecordingsSnapshot200ApplicationJSONObject;
+
     public PostAdminRecordingsSnapshotResponse withPostAdminRecordingsSnapshot200ApplicationJSONObject(PostAdminRecordingsSnapshot200ApplicationJSON postAdminRecordingsSnapshot200ApplicationJSONObject) {
         this.postAdminRecordingsSnapshot200ApplicationJSONObject = postAdminRecordingsSnapshot200ApplicationJSONObject;
         return this;
     }
     
+    public PostAdminRecordingsSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

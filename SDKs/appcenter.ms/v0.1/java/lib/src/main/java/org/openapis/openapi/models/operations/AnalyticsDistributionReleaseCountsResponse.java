@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsDistributionReleaseCountsResponse {
@@ -12,6 +13,7 @@ public class AnalyticsDistributionReleaseCountsResponse {
      */
     
     public AnalyticsDistributionReleaseCounts200ApplicationJSON analyticsDistributionReleaseCounts200ApplicationJSONObject;
+
     public AnalyticsDistributionReleaseCountsResponse withAnalyticsDistributionReleaseCounts200ApplicationJSONObject(AnalyticsDistributionReleaseCounts200ApplicationJSON analyticsDistributionReleaseCounts200ApplicationJSONObject) {
         this.analyticsDistributionReleaseCounts200ApplicationJSONObject = analyticsDistributionReleaseCounts200ApplicationJSONObject;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsDistributionReleaseCountsResponse {
      */
     
     public AnalyticsDistributionReleaseCountsDefaultApplicationJSON analyticsDistributionReleaseCountsDefaultApplicationJSONObject;
+
     public AnalyticsDistributionReleaseCountsResponse withAnalyticsDistributionReleaseCountsDefaultApplicationJSONObject(AnalyticsDistributionReleaseCountsDefaultApplicationJSON analyticsDistributionReleaseCountsDefaultApplicationJSONObject) {
         this.analyticsDistributionReleaseCountsDefaultApplicationJSONObject = analyticsDistributionReleaseCountsDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsDistributionReleaseCountsResponse {
     
     
     public String contentType;
+
     public AnalyticsDistributionReleaseCountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class AnalyticsDistributionReleaseCountsResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsDistributionReleaseCountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AnalyticsDistributionReleaseCountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsDistributionReleaseCountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsDistributionReleaseCountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

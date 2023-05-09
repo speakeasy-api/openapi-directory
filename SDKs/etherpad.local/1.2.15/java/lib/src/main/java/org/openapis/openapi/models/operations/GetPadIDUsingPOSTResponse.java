@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPadIDUsingPOSTResponse {
     
     public String contentType;
+
     public GetPadIDUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPadIDUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public GetPadIDUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetPadIDUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPadIDUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetPadIDUsingPOSTResponse {
      */
     
     public GetPadIDUsingPOST200ApplicationJSON getPadIDUsingPOST200ApplicationJSONObject;
+
     public GetPadIDUsingPOSTResponse withGetPadIDUsingPOST200ApplicationJSONObject(GetPadIDUsingPOST200ApplicationJSON getPadIDUsingPOST200ApplicationJSONObject) {
         this.getPadIDUsingPOST200ApplicationJSONObject = getPadIDUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetPadIDUsingPOSTResponse {
      */
     
     public GetPadIDUsingPOST400ApplicationJSON getPadIDUsingPOST400ApplicationJSONObject;
+
     public GetPadIDUsingPOSTResponse withGetPadIDUsingPOST400ApplicationJSONObject(GetPadIDUsingPOST400ApplicationJSON getPadIDUsingPOST400ApplicationJSONObject) {
         this.getPadIDUsingPOST400ApplicationJSONObject = getPadIDUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetPadIDUsingPOSTResponse {
      */
     
     public GetPadIDUsingPOST401ApplicationJSON getPadIDUsingPOST401ApplicationJSONObject;
+
     public GetPadIDUsingPOSTResponse withGetPadIDUsingPOST401ApplicationJSONObject(GetPadIDUsingPOST401ApplicationJSON getPadIDUsingPOST401ApplicationJSONObject) {
         this.getPadIDUsingPOST401ApplicationJSONObject = getPadIDUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GetPadIDUsingPOSTResponse {
      */
     
     public GetPadIDUsingPOST500ApplicationJSON getPadIDUsingPOST500ApplicationJSONObject;
+
     public GetPadIDUsingPOSTResponse withGetPadIDUsingPOST500ApplicationJSONObject(GetPadIDUsingPOST500ApplicationJSON getPadIDUsingPOST500ApplicationJSONObject) {
         this.getPadIDUsingPOST500ApplicationJSONObject = getPadIDUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public GetPadIDUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

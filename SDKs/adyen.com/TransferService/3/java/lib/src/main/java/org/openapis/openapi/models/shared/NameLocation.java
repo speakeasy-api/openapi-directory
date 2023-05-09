@@ -15,6 +15,7 @@ public class NameLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public NameLocation withCity(String city) {
         this.city = city;
         return this;
@@ -26,6 +27,7 @@ public class NameLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public NameLocation withCountry(String country) {
         this.country = country;
         return this;
@@ -37,6 +39,7 @@ public class NameLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryOfOrigin")
     public String countryOfOrigin;
+
     public NameLocation withCountryOfOrigin(String countryOfOrigin) {
         this.countryOfOrigin = countryOfOrigin;
         return this;
@@ -48,6 +51,7 @@ public class NameLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NameLocation withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class NameLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawData")
     public String rawData;
+
     public NameLocation withRawData(String rawData) {
         this.rawData = rawData;
         return this;
@@ -70,9 +75,11 @@ public class NameLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public NameLocation withState(String state) {
         this.state = state;
         return this;
     }
     
+    public NameLocation(){}
 }

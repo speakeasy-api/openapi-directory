@@ -3,9 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetWellKnownMercureRequest;
 import org.openapis.openapi.models.operations.GetWellKnownMercureResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -16,15 +16,14 @@ public class Application {
                 }})
                 .build();
 
-            GetWellKnownMercureRequest req = new GetWellKnownMercureRequest() {{
-                lastEventID = "corrupti";
-                lastEventIDQueryParameter = "provident";
-                topic = new String[]{{
-                    add("quibusdam"),
-                    add("unde"),
-                    add("nulla"),
-                }};
-            }}            
+            GetWellKnownMercureRequest req = new GetWellKnownMercureRequest(                new String[]{{
+                                add("provident"),
+                                add("distinctio"),
+                                add("quibusdam"),
+                            }}) {{
+                lastEventID = "unde";
+                lastEventIDQueryParameter = "nulla";
+            }};            
 
             GetWellKnownMercureResponse res = sdk.getWellKnownMercure(req);
 
@@ -34,5 +33,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

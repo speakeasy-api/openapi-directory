@@ -12,6 +12,7 @@ public class CustomInsertResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distinct_relations")
     public Long distinctRelations;
+
     public CustomInsertResponse withDistinctRelations(Long distinctRelations) {
         this.distinctRelations = distinctRelations;
         return this;
@@ -20,9 +21,11 @@ public class CustomInsertResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_relations")
     public Long totalRelations;
+
     public CustomInsertResponse withTotalRelations(Long totalRelations) {
         this.totalRelations = totalRelations;
         return this;
     }
     
+    public CustomInsertResponse(){}
 }

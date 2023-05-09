@@ -12,6 +12,7 @@ public class CardInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authentication")
     public Authentication authentication;
+
     public CardInfo withAuthentication(Authentication authentication) {
         this.authentication = authentication;
         return this;
@@ -23,6 +24,7 @@ public class CardInfo {
      */
     @JsonProperty("brand")
     public String brand;
+
     public CardInfo withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -34,6 +36,7 @@ public class CardInfo {
      */
     @JsonProperty("brandVariant")
     public String brandVariant;
+
     public CardInfo withBrandVariant(String brandVariant) {
         this.brandVariant = brandVariant;
         return this;
@@ -45,6 +48,7 @@ public class CardInfo {
      */
     @JsonProperty("cardholderName")
     public String cardholderName;
+
     public CardInfo withCardholderName(String cardholderName) {
         this.cardholderName = cardholderName;
         return this;
@@ -53,6 +57,7 @@ public class CardInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public CardConfiguration configuration;
+
     public CardInfo withConfiguration(CardConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -61,6 +66,7 @@ public class CardInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryContact")
     public Contact deliveryContact;
+
     public CardInfo withDeliveryContact(Contact deliveryContact) {
         this.deliveryContact = deliveryContact;
         return this;
@@ -72,9 +78,16 @@ public class CardInfo {
      */
     @JsonProperty("formFactor")
     public CardInfoFormFactorEnum formFactor;
+
     public CardInfo withFormFactor(CardInfoFormFactorEnum formFactor) {
         this.formFactor = formFactor;
         return this;
     }
     
+    public CardInfo(@JsonProperty("brand") String brand, @JsonProperty("brandVariant") String brandVariant, @JsonProperty("cardholderName") String cardholderName, @JsonProperty("formFactor") CardInfoFormFactorEnum formFactor) {
+        this.brand = brand;
+        this.brandVariant = brandVariant;
+        this.cardholderName = cardholderName;
+        this.formFactor = formFactor;
+  }
 }

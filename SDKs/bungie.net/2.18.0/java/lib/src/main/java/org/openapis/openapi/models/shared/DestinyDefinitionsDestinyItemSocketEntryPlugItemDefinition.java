@@ -15,9 +15,11 @@ public class DestinyDefinitionsDestinyItemSocketEntryPlugItemDefinition {
      */
     
     public Long plugItemHash;
+
     public DestinyDefinitionsDestinyItemSocketEntryPlugItemDefinition withPlugItemHash(Long plugItemHash) {
         this.plugItemHash = plugItemHash;
         return this;
     }
     
+    public DestinyDefinitionsDestinyItemSocketEntryPlugItemDefinition(){}
 }

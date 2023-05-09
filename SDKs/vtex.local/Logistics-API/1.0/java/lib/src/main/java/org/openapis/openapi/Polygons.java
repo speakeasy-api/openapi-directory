@@ -63,10 +63,8 @@ public class Polygons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateUpdatePolygonResponse res = new org.openapis.openapi.models.operations.CreateUpdatePolygonResponse() {{
+        org.openapis.openapi.models.operations.CreateUpdatePolygonResponse res = new org.openapis.openapi.models.operations.CreateUpdatePolygonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,10 +103,8 @@ public class Polygons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePolygonResponse res = new org.openapis.openapi.models.operations.DeletePolygonResponse() {{
+        org.openapis.openapi.models.operations.DeletePolygonResponse res = new org.openapis.openapi.models.operations.DeletePolygonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,10 +149,8 @@ public class Polygons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PagedPolygonsResponse res = new org.openapis.openapi.models.operations.PagedPolygonsResponse() {{
+        org.openapis.openapi.models.operations.PagedPolygonsResponse res = new org.openapis.openapi.models.operations.PagedPolygonsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,10 +189,8 @@ public class Polygons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PolygonbyIdResponse res = new org.openapis.openapi.models.operations.PolygonbyIdResponse() {{
+        org.openapis.openapi.models.operations.PolygonbyIdResponse res = new org.openapis.openapi.models.operations.PolygonbyIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

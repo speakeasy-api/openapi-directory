@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteIpamPoolResultIpamPoolAllocationResourceTags {
     
     public String key;
+
     public DeleteIpamPoolResultIpamPoolAllocationResourceTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DeleteIpamPoolResultIpamPoolAllocationResourceTags {
     
     
     public String value;
+
     public DeleteIpamPoolResultIpamPoolAllocationResourceTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DeleteIpamPoolResultIpamPoolAllocationResourceTags(){}
 }

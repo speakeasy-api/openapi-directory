@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClientApiCanDeleteResponse {
     
     public byte[] body;
+
     public ClientApiCanDeleteResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -19,6 +21,7 @@ public class ClientApiCanDeleteResponse {
      */
     
     public Boolean clientApiCanDelete200ApplicationJSONBoolean;
+
     public ClientApiCanDeleteResponse withClientApiCanDelete200ApplicationJSONBoolean(Boolean clientApiCanDelete200ApplicationJSONBoolean) {
         this.clientApiCanDelete200ApplicationJSONBoolean = clientApiCanDelete200ApplicationJSONBoolean;
         return this;
@@ -29,6 +32,7 @@ public class ClientApiCanDeleteResponse {
      */
     
     public Boolean clientApiCanDelete200TextJSONBoolean;
+
     public ClientApiCanDeleteResponse withClientApiCanDelete200TextJSONBoolean(Boolean clientApiCanDelete200TextJSONBoolean) {
         this.clientApiCanDelete200TextJSONBoolean = clientApiCanDelete200TextJSONBoolean;
         return this;
@@ -36,6 +40,7 @@ public class ClientApiCanDeleteResponse {
     
     
     public String contentType;
+
     public ClientApiCanDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -43,6 +48,7 @@ public class ClientApiCanDeleteResponse {
     
     
     public Integer statusCode;
+
     public ClientApiCanDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class ClientApiCanDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClientApiCanDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClientApiCanDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -56,11 +56,9 @@ public class Forum {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ForumGetCoreTopicsPagedResponse res = new org.openapis.openapi.models.operations.ForumGetCoreTopicsPagedResponse() {{
+        org.openapis.openapi.models.operations.ForumGetCoreTopicsPagedResponse res = new org.openapis.openapi.models.operations.ForumGetCoreTopicsPagedResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Forum {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ForumGetForumTagSuggestionsResponse res = new org.openapis.openapi.models.operations.ForumGetForumTagSuggestionsResponse() {{
+        org.openapis.openapi.models.operations.ForumGetForumTagSuggestionsResponse res = new org.openapis.openapi.models.operations.ForumGetForumTagSuggestionsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class Forum {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ForumGetPollResponse res = new org.openapis.openapi.models.operations.ForumGetPollResponse() {{
+        org.openapis.openapi.models.operations.ForumGetPollResponse res = new org.openapis.openapi.models.operations.ForumGetPollResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,11 +173,9 @@ public class Forum {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ForumGetPostAndParentResponse res = new org.openapis.openapi.models.operations.ForumGetPostAndParentResponse() {{
+        org.openapis.openapi.models.operations.ForumGetPostAndParentResponse res = new org.openapis.openapi.models.operations.ForumGetPostAndParentResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -222,11 +214,9 @@ public class Forum {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ForumGetPostAndParentAwaitingApprovalResponse res = new org.openapis.openapi.models.operations.ForumGetPostAndParentAwaitingApprovalResponse() {{
+        org.openapis.openapi.models.operations.ForumGetPostAndParentAwaitingApprovalResponse res = new org.openapis.openapi.models.operations.ForumGetPostAndParentAwaitingApprovalResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -265,11 +255,9 @@ public class Forum {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedResponse res = new org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedResponse() {{
+        org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedResponse res = new org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -308,11 +296,9 @@ public class Forum {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedFromChildResponse res = new org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedFromChildResponse() {{
+        org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedFromChildResponse res = new org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedFromChildResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +330,9 @@ public class Forum {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ForumGetRecruitmentThreadSummariesResponse res = new org.openapis.openapi.models.operations.ForumGetRecruitmentThreadSummariesResponse() {{
+        org.openapis.openapi.models.operations.ForumGetRecruitmentThreadSummariesResponse res = new org.openapis.openapi.models.operations.ForumGetRecruitmentThreadSummariesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -381,11 +365,9 @@ public class Forum {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ForumGetTopicForContentResponse res = new org.openapis.openapi.models.operations.ForumGetTopicForContentResponse() {{
+        org.openapis.openapi.models.operations.ForumGetTopicForContentResponse res = new org.openapis.openapi.models.operations.ForumGetTopicForContentResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -424,11 +406,9 @@ public class Forum {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ForumGetTopicsPagedResponse res = new org.openapis.openapi.models.operations.ForumGetTopicsPagedResponse() {{
+        org.openapis.openapi.models.operations.ForumGetTopicsPagedResponse res = new org.openapis.openapi.models.operations.ForumGetTopicsPagedResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

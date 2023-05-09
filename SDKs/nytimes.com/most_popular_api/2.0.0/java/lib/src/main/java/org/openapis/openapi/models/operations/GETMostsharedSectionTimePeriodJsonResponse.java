@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETMostsharedSectionTimePeriodJsonResponse {
     
     public String contentType;
+
     public GETMostsharedSectionTimePeriodJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GETMostsharedSectionTimePeriodJsonResponse {
      */
     
     public GETMostsharedSectionTimePeriodJSON200ApplicationJSON getMostsharedSectionTimePeriodJSON200ApplicationJSONObject;
+
     public GETMostsharedSectionTimePeriodJsonResponse withGETMostsharedSectionTimePeriodJSON200ApplicationJSONObject(GETMostsharedSectionTimePeriodJSON200ApplicationJSON getMostsharedSectionTimePeriodJSON200ApplicationJSONObject) {
         this.getMostsharedSectionTimePeriodJSON200ApplicationJSONObject = getMostsharedSectionTimePeriodJSON200ApplicationJSONObject;
         return this;
@@ -26,6 +29,7 @@ public class GETMostsharedSectionTimePeriodJsonResponse {
     
     
     public GETMostsharedSectionTimePeriodJSON400ApplicationJSON getMostsharedSectionTimePeriodJSON400ApplicationJSONObject;
+
     public GETMostsharedSectionTimePeriodJsonResponse withGETMostsharedSectionTimePeriodJSON400ApplicationJSONObject(GETMostsharedSectionTimePeriodJSON400ApplicationJSON getMostsharedSectionTimePeriodJSON400ApplicationJSONObject) {
         this.getMostsharedSectionTimePeriodJSON400ApplicationJSONObject = getMostsharedSectionTimePeriodJSON400ApplicationJSONObject;
         return this;
@@ -33,6 +37,7 @@ public class GETMostsharedSectionTimePeriodJsonResponse {
     
     
     public Integer statusCode;
+
     public GETMostsharedSectionTimePeriodJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GETMostsharedSectionTimePeriodJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETMostsharedSectionTimePeriodJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETMostsharedSectionTimePeriodJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

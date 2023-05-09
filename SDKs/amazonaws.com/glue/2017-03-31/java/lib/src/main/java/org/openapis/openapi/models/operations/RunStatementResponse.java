@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RunStatementResponse {
@@ -12,6 +13,7 @@ public class RunStatementResponse {
      */
     
     public Object accessDeniedException;
+
     public RunStatementResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class RunStatementResponse {
     
     
     public String contentType;
+
     public RunStatementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RunStatementResponse {
      */
     
     public Object entityNotFoundException;
+
     public RunStatementResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class RunStatementResponse {
      */
     
     public Object illegalSessionStateException;
+
     public RunStatementResponse withIllegalSessionStateException(Object illegalSessionStateException) {
         this.illegalSessionStateException = illegalSessionStateException;
         return this;
@@ -49,6 +54,7 @@ public class RunStatementResponse {
      */
     
     public Object internalServiceException;
+
     public RunStatementResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class RunStatementResponse {
      */
     
     public Object invalidInputException;
+
     public RunStatementResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class RunStatementResponse {
      */
     
     public Object operationTimeoutException;
+
     public RunStatementResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -79,6 +87,7 @@ public class RunStatementResponse {
      */
     
     public org.openapis.openapi.models.shared.RunStatementResponse runStatementResponse;
+
     public RunStatementResponse withRunStatementResponse(org.openapis.openapi.models.shared.RunStatementResponse runStatementResponse) {
         this.runStatementResponse = runStatementResponse;
         return this;
@@ -86,6 +95,7 @@ public class RunStatementResponse {
     
     
     public Integer statusCode;
+
     public RunStatementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class RunStatementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RunStatementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class RunStatementResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public RunStatementResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -113,9 +125,14 @@ public class RunStatementResponse {
      */
     
     public Object validationException;
+
     public RunStatementResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RunStatementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

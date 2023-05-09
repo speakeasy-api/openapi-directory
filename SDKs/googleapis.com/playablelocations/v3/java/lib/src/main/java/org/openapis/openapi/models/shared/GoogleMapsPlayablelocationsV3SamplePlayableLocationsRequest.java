@@ -18,6 +18,7 @@ public class GoogleMapsPlayablelocationsV3SamplePlayableLocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("areaFilter")
     public GoogleMapsPlayablelocationsV3SampleAreaFilter areaFilter;
+
     public GoogleMapsPlayablelocationsV3SamplePlayableLocationsRequest withAreaFilter(GoogleMapsPlayablelocationsV3SampleAreaFilter areaFilter) {
         this.areaFilter = areaFilter;
         return this;
@@ -29,9 +30,11 @@ public class GoogleMapsPlayablelocationsV3SamplePlayableLocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criteria")
     public GoogleMapsPlayablelocationsV3SampleCriterion[] criteria;
+
     public GoogleMapsPlayablelocationsV3SamplePlayableLocationsRequest withCriteria(GoogleMapsPlayablelocationsV3SampleCriterion[] criteria) {
         this.criteria = criteria;
         return this;
     }
     
+    public GoogleMapsPlayablelocationsV3SamplePlayableLocationsRequest(){}
 }

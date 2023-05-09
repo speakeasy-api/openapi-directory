@@ -30,6 +30,7 @@ public class TensorflowTensorShapeProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dim")
     public TensorShapeProtoDim[] dim;
+
     public TensorflowTensorShapeProto withDim(TensorShapeProtoDim[] dim) {
         this.dim = dim;
         return this;
@@ -43,9 +44,11 @@ public class TensorflowTensorShapeProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unknown_rank")
     public Boolean unknownRank;
+
     public TensorflowTensorShapeProto withUnknownRank(Boolean unknownRank) {
         this.unknownRank = unknownRank;
         return this;
     }
     
+    public TensorflowTensorShapeProto(){}
 }

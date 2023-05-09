@@ -12,6 +12,7 @@ public class BioObjectCore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String[] category;
+
     public BioObjectCore withCategory(String[] category) {
         this.category = category;
         return this;
@@ -22,6 +23,7 @@ public class BioObjectCore {
      */
     @JsonProperty("id")
     public String id;
+
     public BioObjectCore withId(String id) {
         this.id = id;
         return this;
@@ -33,6 +35,7 @@ public class BioObjectCore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iri")
     public String iri;
+
     public BioObjectCore withIri(String iri) {
         this.iri = iri;
         return this;
@@ -44,6 +47,7 @@ public class BioObjectCore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public BioObjectCore withLabel(String label) {
         this.label = label;
         return this;
@@ -55,9 +59,13 @@ public class BioObjectCore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxon")
     public Taxon taxon;
+
     public BioObjectCore withTaxon(Taxon taxon) {
         this.taxon = taxon;
         return this;
     }
     
+    public BioObjectCore(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

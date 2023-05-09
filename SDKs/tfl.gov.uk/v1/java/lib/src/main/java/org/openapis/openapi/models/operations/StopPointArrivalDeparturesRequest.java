@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointArrivalDeparturesRequest {
@@ -12,6 +13,7 @@ public class StopPointArrivalDeparturesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public StopPointArrivalDeparturesRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,14 @@ public class StopPointArrivalDeparturesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lineIds")
     public String[] lineIds;
+
     public StopPointArrivalDeparturesRequest withLineIds(String[] lineIds) {
         this.lineIds = lineIds;
         return this;
     }
     
+    public StopPointArrivalDeparturesRequest(@JsonProperty("id") String id, @JsonProperty("lineIds") String[] lineIds) {
+        this.id = id;
+        this.lineIds = lineIds;
+  }
 }

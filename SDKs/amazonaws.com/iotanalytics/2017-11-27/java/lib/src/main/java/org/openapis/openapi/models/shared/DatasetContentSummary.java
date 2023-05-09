@@ -22,6 +22,7 @@ public class DatasetContentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completionTime")
     public OffsetDateTime completionTime;
+
     public DatasetContentSummary withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -32,6 +33,7 @@ public class DatasetContentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public DatasetContentSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -42,6 +44,7 @@ public class DatasetContentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("scheduleTime")
     public OffsetDateTime scheduleTime;
+
     public DatasetContentSummary withScheduleTime(OffsetDateTime scheduleTime) {
         this.scheduleTime = scheduleTime;
         return this;
@@ -50,6 +53,7 @@ public class DatasetContentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DatasetContentStatus status;
+
     public DatasetContentSummary withStatus(DatasetContentStatus status) {
         this.status = status;
         return this;
@@ -58,9 +62,11 @@ public class DatasetContentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public DatasetContentSummary withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DatasetContentSummary(){}
 }

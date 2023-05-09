@@ -18,6 +18,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudBuildOptions")
     public CloudBuildOptions cloudBuildOptions;
+
     public Deployment withCloudBuildOptions(CloudBuildOptions cloudBuildOptions) {
         this.cloudBuildOptions = cloudBuildOptions;
         return this;
@@ -29,6 +30,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("container")
     public ContainerInfo container;
+
     public Deployment withContainer(ContainerInfo container) {
         this.container = container;
         return this;
@@ -40,6 +42,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public java.util.Map<String, FileInfo> files;
+
     public Deployment withFiles(java.util.Map<String, FileInfo> files) {
         this.files = files;
         return this;
@@ -51,9 +54,11 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zip")
     public ZipInfo zip;
+
     public Deployment withZip(ZipInfo zip) {
         this.zip = zip;
         return this;
     }
     
+    public Deployment(){}
 }

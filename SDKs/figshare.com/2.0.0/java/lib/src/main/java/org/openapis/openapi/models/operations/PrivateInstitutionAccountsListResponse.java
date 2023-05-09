@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrivateInstitutionAccountsListResponse {
     
     public String contentType;
+
     public PrivateInstitutionAccountsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PrivateInstitutionAccountsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorMessage errorMessage;
+
     public PrivateInstitutionAccountsListResponse withErrorMessage(org.openapis.openapi.models.shared.ErrorMessage errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -29,6 +32,7 @@ public class PrivateInstitutionAccountsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ShortAccount[] shortAccounts;
+
     public PrivateInstitutionAccountsListResponse withShortAccounts(org.openapis.openapi.models.shared.ShortAccount[] shortAccounts) {
         this.shortAccounts = shortAccounts;
         return this;
@@ -36,6 +40,7 @@ public class PrivateInstitutionAccountsListResponse {
     
     
     public Integer statusCode;
+
     public PrivateInstitutionAccountsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PrivateInstitutionAccountsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrivateInstitutionAccountsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PrivateInstitutionAccountsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

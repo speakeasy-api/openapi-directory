@@ -15,6 +15,7 @@ public class SourceCloneConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionConfiguration")
     public Object connectionConfiguration;
+
     public SourceCloneConfiguration withConnectionConfiguration(Object connectionConfiguration) {
         this.connectionConfiguration = connectionConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class SourceCloneConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SourceCloneConfiguration withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SourceCloneConfiguration(){}
 }

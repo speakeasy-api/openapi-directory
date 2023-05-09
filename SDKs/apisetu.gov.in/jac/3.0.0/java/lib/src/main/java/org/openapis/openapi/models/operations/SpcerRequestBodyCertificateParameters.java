@@ -12,6 +12,7 @@ public class SpcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public SpcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class SpcerRequestBodyCertificateParameters {
      */
     @JsonProperty("rollcode")
     public String rollcode;
+
     public SpcerRequestBodyCertificateParameters withRollcode(String rollcode) {
         this.rollcode = rollcode;
         return this;
@@ -32,6 +34,7 @@ public class SpcerRequestBodyCertificateParameters {
      */
     @JsonProperty("rollno")
     public String rollno;
+
     public SpcerRequestBodyCertificateParameters withRollno(String rollno) {
         this.rollno = rollno;
         return this;
@@ -42,9 +45,16 @@ public class SpcerRequestBodyCertificateParameters {
      */
     @JsonProperty("year")
     public String year;
+
     public SpcerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public SpcerRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("rollcode") String rollcode, @JsonProperty("rollno") String rollno, @JsonProperty("year") String year) {
+        this.fullName = fullName;
+        this.rollcode = rollcode;
+        this.rollno = rollno;
+        this.year = year;
+  }
 }

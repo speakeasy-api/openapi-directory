@@ -18,6 +18,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public Service withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoints")
     public Endpoint[] endpoints;
+
     public Service withEndpoints(Endpoint[] endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -40,6 +42,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Service withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public Service withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public Service(){}
 }

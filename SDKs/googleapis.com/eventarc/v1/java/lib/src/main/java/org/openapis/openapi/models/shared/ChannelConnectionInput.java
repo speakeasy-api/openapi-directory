@@ -18,6 +18,7 @@ public class ChannelConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activationToken")
     public String activationToken;
+
     public ChannelConnectionInput withActivationToken(String activationToken) {
         this.activationToken = activationToken;
         return this;
@@ -29,6 +30,7 @@ public class ChannelConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public String channel;
+
     public ChannelConnectionInput withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -40,9 +42,11 @@ public class ChannelConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ChannelConnectionInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ChannelConnectionInput(){}
 }

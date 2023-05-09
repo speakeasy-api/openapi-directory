@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TexttospeechVoicesListResponse {
     
     public String contentType;
+
     public TexttospeechVoicesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TexttospeechVoicesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListVoicesResponse listVoicesResponse;
+
     public TexttospeechVoicesListResponse withListVoicesResponse(org.openapis.openapi.models.shared.ListVoicesResponse listVoicesResponse) {
         this.listVoicesResponse = listVoicesResponse;
         return this;
@@ -26,6 +29,7 @@ public class TexttospeechVoicesListResponse {
     
     
     public Integer statusCode;
+
     public TexttospeechVoicesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TexttospeechVoicesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TexttospeechVoicesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TexttospeechVoicesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

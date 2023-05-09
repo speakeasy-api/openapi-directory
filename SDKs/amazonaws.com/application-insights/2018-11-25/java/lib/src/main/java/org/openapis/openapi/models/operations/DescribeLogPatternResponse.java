@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLogPatternResponse {
     
     public String contentType;
+
     public DescribeLogPatternResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeLogPatternResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeLogPatternResponse describeLogPatternResponse;
+
     public DescribeLogPatternResponse withDescribeLogPatternResponse(org.openapis.openapi.models.shared.DescribeLogPatternResponse describeLogPatternResponse) {
         this.describeLogPatternResponse = describeLogPatternResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLogPatternResponse {
      */
     
     public Object internalServerException;
+
     public DescribeLogPatternResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeLogPatternResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeLogPatternResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeLogPatternResponse {
     
     
     public Integer statusCode;
+
     public DescribeLogPatternResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeLogPatternResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLogPatternResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeLogPatternResponse {
      */
     
     public Object validationException;
+
     public DescribeLogPatternResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeLogPatternResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

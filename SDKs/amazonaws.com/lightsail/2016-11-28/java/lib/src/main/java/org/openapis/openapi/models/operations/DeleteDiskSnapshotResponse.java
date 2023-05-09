@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDiskSnapshotResponse {
@@ -12,6 +13,7 @@ public class DeleteDiskSnapshotResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteDiskSnapshotResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteDiskSnapshotResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public DeleteDiskSnapshotResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDiskSnapshotResponse {
     
     
     public String contentType;
+
     public DeleteDiskSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDiskSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDiskSnapshotResult deleteDiskSnapshotResult;
+
     public DeleteDiskSnapshotResponse withDeleteDiskSnapshotResult(org.openapis.openapi.models.shared.DeleteDiskSnapshotResult deleteDiskSnapshotResult) {
         this.deleteDiskSnapshotResult = deleteDiskSnapshotResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDiskSnapshotResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteDiskSnapshotResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDiskSnapshotResponse {
      */
     
     public Object notFoundException;
+
     public DeleteDiskSnapshotResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteDiskSnapshotResponse {
      */
     
     public Object operationFailureException;
+
     public DeleteDiskSnapshotResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteDiskSnapshotResponse {
      */
     
     public Object serviceException;
+
     public DeleteDiskSnapshotResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteDiskSnapshotResponse {
     
     
     public Integer statusCode;
+
     public DeleteDiskSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteDiskSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDiskSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteDiskSnapshotResponse {
      */
     
     public Object unauthenticatedException;
+
     public DeleteDiskSnapshotResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public DeleteDiskSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

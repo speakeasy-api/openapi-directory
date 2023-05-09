@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSignalingChannelResponse {
@@ -12,6 +13,7 @@ public class DeleteSignalingChannelResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteSignalingChannelResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteSignalingChannelResponse {
      */
     
     public Object clientLimitExceededException;
+
     public DeleteSignalingChannelResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSignalingChannelResponse {
     
     
     public String contentType;
+
     public DeleteSignalingChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSignalingChannelResponse {
      */
     
     public java.util.Map<String, Object> deleteSignalingChannelOutput;
+
     public DeleteSignalingChannelResponse withDeleteSignalingChannelOutput(java.util.Map<String, Object> deleteSignalingChannelOutput) {
         this.deleteSignalingChannelOutput = deleteSignalingChannelOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSignalingChannelResponse {
      */
     
     public Object invalidArgumentException;
+
     public DeleteSignalingChannelResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteSignalingChannelResponse {
     
     
     public Integer statusCode;
+
     public DeleteSignalingChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteSignalingChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSignalingChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteSignalingChannelResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteSignalingChannelResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteSignalingChannelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSignalingChannelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteSignalingChannelResponse {
      */
     
     public Object versionMismatchException;
+
     public DeleteSignalingChannelResponse withVersionMismatchException(Object versionMismatchException) {
         this.versionMismatchException = versionMismatchException;
         return this;
     }
     
+    public DeleteSignalingChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

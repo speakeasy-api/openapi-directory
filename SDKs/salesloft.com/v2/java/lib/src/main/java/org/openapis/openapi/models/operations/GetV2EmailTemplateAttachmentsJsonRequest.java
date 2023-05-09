@@ -12,6 +12,7 @@ public class GetV2EmailTemplateAttachmentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=email_template_id")
     public Long[] emailTemplateId;
+
     public GetV2EmailTemplateAttachmentsJsonRequest withEmailTemplateId(Long[] emailTemplateId) {
         this.emailTemplateId = emailTemplateId;
         return this;
@@ -22,6 +23,7 @@ public class GetV2EmailTemplateAttachmentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Long[] ids;
+
     public GetV2EmailTemplateAttachmentsJsonRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -32,6 +34,7 @@ public class GetV2EmailTemplateAttachmentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2EmailTemplateAttachmentsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -42,6 +45,7 @@ public class GetV2EmailTemplateAttachmentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2EmailTemplateAttachmentsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -52,6 +56,7 @@ public class GetV2EmailTemplateAttachmentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2EmailTemplateAttachmentsJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -62,9 +67,11 @@ public class GetV2EmailTemplateAttachmentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2EmailTemplateAttachmentsJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetV2EmailTemplateAttachmentsJsonRequest(){}
 }

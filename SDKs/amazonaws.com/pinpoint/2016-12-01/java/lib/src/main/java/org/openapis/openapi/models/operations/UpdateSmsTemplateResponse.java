@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSmsTemplateResponse {
@@ -12,6 +13,7 @@ public class UpdateSmsTemplateResponse {
      */
     
     public Object badRequestException;
+
     public UpdateSmsTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSmsTemplateResponse {
     
     
     public String contentType;
+
     public UpdateSmsTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSmsTemplateResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateSmsTemplateResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSmsTemplateResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateSmsTemplateResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSmsTemplateResponse {
      */
     
     public Object methodNotAllowedException;
+
     public UpdateSmsTemplateResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateSmsTemplateResponse {
      */
     
     public Object notFoundException;
+
     public UpdateSmsTemplateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateSmsTemplateResponse {
      */
     
     public Object payloadTooLargeException;
+
     public UpdateSmsTemplateResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateSmsTemplateResponse {
     
     
     public Integer statusCode;
+
     public UpdateSmsTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateSmsTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSmsTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateSmsTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateSmsTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateSmsTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSmsTemplateResponse updateSmsTemplateResponse;
+
     public UpdateSmsTemplateResponse withUpdateSmsTemplateResponse(org.openapis.openapi.models.shared.UpdateSmsTemplateResponse updateSmsTemplateResponse) {
         this.updateSmsTemplateResponse = updateSmsTemplateResponse;
         return this;
     }
     
+    public UpdateSmsTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

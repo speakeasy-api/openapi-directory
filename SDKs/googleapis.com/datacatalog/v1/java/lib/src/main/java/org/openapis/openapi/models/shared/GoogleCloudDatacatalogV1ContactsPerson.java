@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1ContactsPerson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("designation")
     public String designation;
+
     public GoogleCloudDatacatalogV1ContactsPerson withDesignation(String designation) {
         this.designation = designation;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogV1ContactsPerson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public GoogleCloudDatacatalogV1ContactsPerson withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1ContactsPerson(){}
 }

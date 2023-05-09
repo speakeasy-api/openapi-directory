@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommitHostedPropertyValueRequest {
@@ -12,6 +13,7 @@ public class GetCommitHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_key")
     public String appKey;
+
     public GetCommitHostedPropertyValueRequest withAppKey(String appKey) {
         this.appKey = appKey;
         return this;
@@ -22,6 +24,7 @@ public class GetCommitHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
     public String commit;
+
     public GetCommitHostedPropertyValueRequest withCommit(String commit) {
         this.commit = commit;
         return this;
@@ -32,6 +35,7 @@ public class GetCommitHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property_name")
     public String propertyName;
+
     public GetCommitHostedPropertyValueRequest withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
@@ -42,6 +46,7 @@ public class GetCommitHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetCommitHostedPropertyValueRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -52,9 +57,17 @@ public class GetCommitHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetCommitHostedPropertyValueRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetCommitHostedPropertyValueRequest(@JsonProperty("app_key") String appKey, @JsonProperty("commit") String commit, @JsonProperty("property_name") String propertyName, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.appKey = appKey;
+        this.commit = commit;
+        this.propertyName = propertyName;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

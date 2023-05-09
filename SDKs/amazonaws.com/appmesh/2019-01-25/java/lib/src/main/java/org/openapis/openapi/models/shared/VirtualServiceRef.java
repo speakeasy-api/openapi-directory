@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class VirtualServiceRef {
     @JsonProperty("arn")
     public String arn;
+
     public VirtualServiceRef withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class VirtualServiceRef {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public VirtualServiceRef withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class VirtualServiceRef {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public VirtualServiceRef withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -42,6 +45,7 @@ public class VirtualServiceRef {
     
     @JsonProperty("meshName")
     public String meshName;
+
     public VirtualServiceRef withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -49,6 +53,7 @@ public class VirtualServiceRef {
     
     @JsonProperty("meshOwner")
     public String meshOwner;
+
     public VirtualServiceRef withMeshOwner(String meshOwner) {
         this.meshOwner = meshOwner;
         return this;
@@ -56,6 +61,7 @@ public class VirtualServiceRef {
     
     @JsonProperty("resourceOwner")
     public String resourceOwner;
+
     public VirtualServiceRef withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -63,6 +69,7 @@ public class VirtualServiceRef {
     
     @JsonProperty("version")
     public Long version;
+
     public VirtualServiceRef withVersion(Long version) {
         this.version = version;
         return this;
@@ -70,9 +77,20 @@ public class VirtualServiceRef {
     
     @JsonProperty("virtualServiceName")
     public String virtualServiceName;
+
     public VirtualServiceRef withVirtualServiceName(String virtualServiceName) {
         this.virtualServiceName = virtualServiceName;
         return this;
     }
     
+    public VirtualServiceRef(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("lastUpdatedAt") OffsetDateTime lastUpdatedAt, @JsonProperty("meshName") String meshName, @JsonProperty("meshOwner") String meshOwner, @JsonProperty("resourceOwner") String resourceOwner, @JsonProperty("version") Long version, @JsonProperty("virtualServiceName") String virtualServiceName) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.lastUpdatedAt = lastUpdatedAt;
+        this.meshName = meshName;
+        this.meshOwner = meshOwner;
+        this.resourceOwner = resourceOwner;
+        this.version = version;
+        this.virtualServiceName = virtualServiceName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAnnotationImportJobResponse {
@@ -12,6 +13,7 @@ public class GetAnnotationImportJobResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAnnotationImportJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetAnnotationImportJobResponse {
     
     
     public String contentType;
+
     public GetAnnotationImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAnnotationImportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAnnotationImportResponse getAnnotationImportResponse;
+
     public GetAnnotationImportJobResponse withGetAnnotationImportResponse(org.openapis.openapi.models.shared.GetAnnotationImportResponse getAnnotationImportResponse) {
         this.getAnnotationImportResponse = getAnnotationImportResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAnnotationImportJobResponse {
      */
     
     public Object internalServerException;
+
     public GetAnnotationImportJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetAnnotationImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAnnotationImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetAnnotationImportJobResponse {
     
     
     public Integer statusCode;
+
     public GetAnnotationImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetAnnotationImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAnnotationImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetAnnotationImportJobResponse {
      */
     
     public Object throttlingException;
+
     public GetAnnotationImportJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetAnnotationImportJobResponse {
      */
     
     public Object validationException;
+
     public GetAnnotationImportJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAnnotationImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

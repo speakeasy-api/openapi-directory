@@ -15,6 +15,7 @@ public class ProvisionedCapacityDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mcuCount")
     public Long mcuCount;
+
     public ProvisionedCapacityDescription withMcuCount(Long mcuCount) {
         this.mcuCount = mcuCount;
         return this;
@@ -23,9 +24,11 @@ public class ProvisionedCapacityDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerCount")
     public Long workerCount;
+
     public ProvisionedCapacityDescription withWorkerCount(Long workerCount) {
         this.workerCount = workerCount;
         return this;
     }
     
+    public ProvisionedCapacityDescription(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLensShareResponse {
@@ -12,6 +13,7 @@ public class DeleteLensShareResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteLensShareResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteLensShareResponse {
      */
     
     public Object conflictException;
+
     public DeleteLensShareResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLensShareResponse {
     
     
     public String contentType;
+
     public DeleteLensShareResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLensShareResponse {
      */
     
     public Object internalServerException;
+
     public DeleteLensShareResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteLensShareResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteLensShareResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteLensShareResponse {
     
     
     public Integer statusCode;
+
     public DeleteLensShareResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteLensShareResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLensShareResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteLensShareResponse {
      */
     
     public Object throttlingException;
+
     public DeleteLensShareResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteLensShareResponse {
      */
     
     public Object validationException;
+
     public DeleteLensShareResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteLensShareResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

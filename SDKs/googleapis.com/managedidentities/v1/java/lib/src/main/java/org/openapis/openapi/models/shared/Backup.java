@@ -18,6 +18,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Backup withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Backup withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Backup withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public BackupStateEnum state;
+
     public Backup withState(BackupStateEnum state) {
         this.state = state;
         return this;
@@ -62,6 +66,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public Backup withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -73,6 +78,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public BackupTypeEnum type;
+
     public Backup withType(BackupTypeEnum type) {
         this.type = type;
         return this;
@@ -84,9 +90,11 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Backup withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Backup(){}
 }

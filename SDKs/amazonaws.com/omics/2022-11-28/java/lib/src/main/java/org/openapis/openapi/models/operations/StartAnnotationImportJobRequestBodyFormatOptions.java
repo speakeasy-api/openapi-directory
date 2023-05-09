@@ -15,6 +15,7 @@ public class StartAnnotationImportJobRequestBodyFormatOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tsvOptions")
     public org.openapis.openapi.models.shared.TsvOptions tsvOptions;
+
     public StartAnnotationImportJobRequestBodyFormatOptions withTsvOptions(org.openapis.openapi.models.shared.TsvOptions tsvOptions) {
         this.tsvOptions = tsvOptions;
         return this;
@@ -23,9 +24,11 @@ public class StartAnnotationImportJobRequestBodyFormatOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcfOptions")
     public org.openapis.openapi.models.shared.VcfOptions vcfOptions;
+
     public StartAnnotationImportJobRequestBodyFormatOptions withVcfOptions(org.openapis.openapi.models.shared.VcfOptions vcfOptions) {
         this.vcfOptions = vcfOptions;
         return this;
     }
     
+    public StartAnnotationImportJobRequestBodyFormatOptions(){}
 }

@@ -18,6 +18,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccount withCount(Long count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan")
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan plan;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccount withPlan(BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan plan) {
         this.plan = plan;
         return this;
     }
     
+    public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccount(){}
 }

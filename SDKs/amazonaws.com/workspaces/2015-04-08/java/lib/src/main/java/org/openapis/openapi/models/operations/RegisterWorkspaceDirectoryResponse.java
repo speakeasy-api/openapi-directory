@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterWorkspaceDirectoryResponse {
@@ -12,6 +13,7 @@ public class RegisterWorkspaceDirectoryResponse {
      */
     
     public Object accessDeniedException;
+
     public RegisterWorkspaceDirectoryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class RegisterWorkspaceDirectoryResponse {
     
     
     public String contentType;
+
     public RegisterWorkspaceDirectoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RegisterWorkspaceDirectoryResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public RegisterWorkspaceDirectoryResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterWorkspaceDirectoryResponse {
      */
     
     public Object invalidResourceStateException;
+
     public RegisterWorkspaceDirectoryResponse withInvalidResourceStateException(Object invalidResourceStateException) {
         this.invalidResourceStateException = invalidResourceStateException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterWorkspaceDirectoryResponse {
      */
     
     public Object operationNotSupportedException;
+
     public RegisterWorkspaceDirectoryResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -59,6 +65,7 @@ public class RegisterWorkspaceDirectoryResponse {
      */
     
     public java.util.Map<String, Object> registerWorkspaceDirectoryResult;
+
     public RegisterWorkspaceDirectoryResponse withRegisterWorkspaceDirectoryResult(java.util.Map<String, Object> registerWorkspaceDirectoryResult) {
         this.registerWorkspaceDirectoryResult = registerWorkspaceDirectoryResult;
         return this;
@@ -69,6 +76,7 @@ public class RegisterWorkspaceDirectoryResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public RegisterWorkspaceDirectoryResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class RegisterWorkspaceDirectoryResponse {
     
     
     public Integer statusCode;
+
     public RegisterWorkspaceDirectoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class RegisterWorkspaceDirectoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterWorkspaceDirectoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class RegisterWorkspaceDirectoryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RegisterWorkspaceDirectoryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class RegisterWorkspaceDirectoryResponse {
      */
     
     public Object unsupportedNetworkConfigurationException;
+
     public RegisterWorkspaceDirectoryResponse withUnsupportedNetworkConfigurationException(Object unsupportedNetworkConfigurationException) {
         this.unsupportedNetworkConfigurationException = unsupportedNetworkConfigurationException;
         return this;
@@ -113,9 +125,14 @@ public class RegisterWorkspaceDirectoryResponse {
      */
     
     public Object workspacesDefaultRoleNotFoundException;
+
     public RegisterWorkspaceDirectoryResponse withWorkspacesDefaultRoleNotFoundException(Object workspacesDefaultRoleNotFoundException) {
         this.workspacesDefaultRoleNotFoundException = workspacesDefaultRoleNotFoundException;
         return this;
     }
     
+    public RegisterWorkspaceDirectoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

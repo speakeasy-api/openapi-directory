@@ -15,9 +15,11 @@ public class DescribeTagsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagList")
     public Tag[] tagList;
+
     public DescribeTagsResult withTagList(Tag[] tagList) {
         this.tagList = tagList;
         return this;
     }
     
+    public DescribeTagsResult(){}
 }

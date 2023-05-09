@@ -20,6 +20,7 @@ public class PendingDeployment {
      */
     @JsonProperty("current_user_can_approve")
     public Boolean currentUserCanApprove;
+
     public PendingDeployment withCurrentUserCanApprove(Boolean currentUserCanApprove) {
         this.currentUserCanApprove = currentUserCanApprove;
         return this;
@@ -27,6 +28,7 @@ public class PendingDeployment {
     
     @JsonProperty("environment")
     public PendingDeploymentEnvironment environment;
+
     public PendingDeployment withEnvironment(PendingDeploymentEnvironment environment) {
         this.environment = environment;
         return this;
@@ -37,6 +39,7 @@ public class PendingDeployment {
      */
     @JsonProperty("reviewers")
     public PendingDeploymentReviewers[] reviewers;
+
     public PendingDeployment withReviewers(PendingDeploymentReviewers[] reviewers) {
         this.reviewers = reviewers;
         return this;
@@ -47,6 +50,7 @@ public class PendingDeployment {
      */
     @JsonProperty("wait_timer")
     public Long waitTimer;
+
     public PendingDeployment withWaitTimer(Long waitTimer) {
         this.waitTimer = waitTimer;
         return this;
@@ -59,9 +63,17 @@ public class PendingDeployment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("wait_timer_started_at")
     public OffsetDateTime waitTimerStartedAt;
+
     public PendingDeployment withWaitTimerStartedAt(OffsetDateTime waitTimerStartedAt) {
         this.waitTimerStartedAt = waitTimerStartedAt;
         return this;
     }
     
+    public PendingDeployment(@JsonProperty("current_user_can_approve") Boolean currentUserCanApprove, @JsonProperty("environment") PendingDeploymentEnvironment environment, @JsonProperty("reviewers") PendingDeploymentReviewers[] reviewers, @JsonProperty("wait_timer") Long waitTimer, @JsonProperty("wait_timer_started_at") OffsetDateTime waitTimerStartedAt) {
+        this.currentUserCanApprove = currentUserCanApprove;
+        this.environment = environment;
+        this.reviewers = reviewers;
+        this.waitTimer = waitTimer;
+        this.waitTimerStartedAt = waitTimerStartedAt;
+  }
 }

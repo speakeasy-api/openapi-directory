@@ -16,6 +16,7 @@ public class Invoice {
      */
     @JsonProperty("amount")
     public Double amount;
+
     public Invoice withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -26,6 +27,7 @@ public class Invoice {
      */
     @JsonProperty("amountToBePaid")
     public Double amountToBePaid;
+
     public Invoice withAmountToBePaid(Double amountToBePaid) {
         this.amountToBePaid = amountToBePaid;
         return this;
@@ -36,6 +38,7 @@ public class Invoice {
      */
     @JsonProperty("contractId")
     public String contractId;
+
     public Invoice withContractId(String contractId) {
         this.contractId = contractId;
         return this;
@@ -47,6 +50,7 @@ public class Invoice {
      */
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public Invoice withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -55,6 +59,7 @@ public class Invoice {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("dueDate")
     public LocalDate dueDate;
+
     public Invoice withDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -66,6 +71,7 @@ public class Invoice {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("invoiceDate")
     public LocalDate invoiceDate;
+
     public Invoice withInvoiceDate(LocalDate invoiceDate) {
         this.invoiceDate = invoiceDate;
         return this;
@@ -76,6 +82,7 @@ public class Invoice {
      */
     @JsonProperty("invoiceNumber")
     public String invoiceNumber;
+
     public Invoice withInvoiceNumber(String invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
         return this;
@@ -87,6 +94,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceUrl")
     public String invoiceUrl;
+
     public Invoice withInvoiceUrl(String invoiceUrl) {
         this.invoiceUrl = invoiceUrl;
         return this;
@@ -97,9 +105,20 @@ public class Invoice {
      */
     @JsonProperty("paymentStatus")
     public InvoicePaymentStatusEnum paymentStatus;
+
     public Invoice withPaymentStatus(InvoicePaymentStatusEnum paymentStatus) {
         this.paymentStatus = paymentStatus;
         return this;
     }
     
+    public Invoice(@JsonProperty("amount") Double amount, @JsonProperty("amountToBePaid") Double amountToBePaid, @JsonProperty("contractId") String contractId, @JsonProperty("currencyCode") String currencyCode, @JsonProperty("dueDate") LocalDate dueDate, @JsonProperty("invoiceDate") LocalDate invoiceDate, @JsonProperty("invoiceNumber") String invoiceNumber, @JsonProperty("paymentStatus") InvoicePaymentStatusEnum paymentStatus) {
+        this.amount = amount;
+        this.amountToBePaid = amountToBePaid;
+        this.contractId = contractId;
+        this.currencyCode = currencyCode;
+        this.dueDate = dueDate;
+        this.invoiceDate = invoiceDate;
+        this.invoiceNumber = invoiceNumber;
+        this.paymentStatus = paymentStatus;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteLensShareRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientRequestToken")
     public String clientRequestToken;
+
     public DeleteLensShareRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -16,6 +18,7 @@ public class DeleteLensShareRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LensAlias")
     public String lensAlias;
+
     public DeleteLensShareRequest withLensAlias(String lensAlias) {
         this.lensAlias = lensAlias;
         return this;
@@ -23,6 +26,7 @@ public class DeleteLensShareRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ShareId")
     public String shareId;
+
     public DeleteLensShareRequest withShareId(String shareId) {
         this.shareId = shareId;
         return this;
@@ -30,6 +34,7 @@ public class DeleteLensShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteLensShareRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class DeleteLensShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteLensShareRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class DeleteLensShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteLensShareRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class DeleteLensShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteLensShareRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class DeleteLensShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteLensShareRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class DeleteLensShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteLensShareRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,15 @@ public class DeleteLensShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteLensShareRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public DeleteLensShareRequest(@JsonProperty("ClientRequestToken") String clientRequestToken, @JsonProperty("LensAlias") String lensAlias, @JsonProperty("ShareId") String shareId) {
+        this.clientRequestToken = clientRequestToken;
+        this.lensAlias = lensAlias;
+        this.shareId = shareId;
+  }
 }

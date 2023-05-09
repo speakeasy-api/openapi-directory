@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAcceleratorAttributesRequest {
     @JsonProperty("AcceleratorArn")
     public String acceleratorArn;
+
     public DescribeAcceleratorAttributesRequest withAcceleratorArn(String acceleratorArn) {
         this.acceleratorArn = acceleratorArn;
         return this;
     }
     
+    public DescribeAcceleratorAttributesRequest(@JsonProperty("AcceleratorArn") String acceleratorArn) {
+        this.acceleratorArn = acceleratorArn;
+  }
 }

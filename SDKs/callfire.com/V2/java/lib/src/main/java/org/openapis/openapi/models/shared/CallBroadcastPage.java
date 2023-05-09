@@ -15,6 +15,7 @@ public class CallBroadcastPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public CallBroadcast[] items;
+
     public CallBroadcastPage withItems(CallBroadcast[] items) {
         this.items = items;
         return this;
@@ -26,6 +27,7 @@ public class CallBroadcastPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public CallBroadcastPage withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -37,6 +39,7 @@ public class CallBroadcastPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public CallBroadcastPage withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -48,9 +51,11 @@ public class CallBroadcastPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public CallBroadcastPage withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public CallBroadcastPage(){}
 }

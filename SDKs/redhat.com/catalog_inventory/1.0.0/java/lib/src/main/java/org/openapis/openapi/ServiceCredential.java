@@ -59,11 +59,9 @@ public class ServiceCredential {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListServiceCredentialsResponse res = new org.openapis.openapi.models.operations.ListServiceCredentialsResponse() {{
+        org.openapis.openapi.models.operations.ListServiceCredentialsResponse res = new org.openapis.openapi.models.operations.ListServiceCredentialsResponse(contentType, httpRes.statusCode()) {{
             serviceCredentialsCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class ServiceCredential {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShowServiceCredentialResponse res = new org.openapis.openapi.models.operations.ShowServiceCredentialResponse() {{
+        org.openapis.openapi.models.operations.ShowServiceCredentialResponse res = new org.openapis.openapi.models.operations.ShowServiceCredentialResponse(contentType, httpRes.statusCode()) {{
             serviceCredential = null;
             errorNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

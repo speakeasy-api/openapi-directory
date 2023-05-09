@@ -15,6 +15,7 @@ public class GetRecommendationSummariesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetRecommendationSummariesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetRecommendationSummariesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationSummaries")
     public RecommendationSummary[] recommendationSummaries;
+
     public GetRecommendationSummariesResponse withRecommendationSummaries(RecommendationSummary[] recommendationSummaries) {
         this.recommendationSummaries = recommendationSummaries;
         return this;
     }
     
+    public GetRecommendationSummariesResponse(){}
 }

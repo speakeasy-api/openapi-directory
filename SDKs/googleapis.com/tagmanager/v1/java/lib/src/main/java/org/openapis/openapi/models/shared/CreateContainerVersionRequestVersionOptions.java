@@ -18,6 +18,7 @@ public class CreateContainerVersionRequestVersionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateContainerVersionRequestVersionOptions withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class CreateContainerVersionRequestVersionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public CreateContainerVersionRequestVersionOptions withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -40,9 +42,11 @@ public class CreateContainerVersionRequestVersionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quickPreview")
     public Boolean quickPreview;
+
     public CreateContainerVersionRequestVersionOptions withQuickPreview(Boolean quickPreview) {
         this.quickPreview = quickPreview;
         return this;
     }
     
+    public CreateContainerVersionRequestVersionOptions(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CopyTemplateRequest {
@@ -12,6 +13,7 @@ public class CopyTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public CopyTemplateRequest withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +24,13 @@ public class CopyTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=templateId")
     public Long templateId;
+
     public CopyTemplateRequest withTemplateId(Long templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public CopyTemplateRequest(@JsonProperty("templateId") Long templateId) {
+        this.templateId = templateId;
+  }
 }

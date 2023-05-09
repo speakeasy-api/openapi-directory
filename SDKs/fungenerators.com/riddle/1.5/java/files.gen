@@ -49,4 +49,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetRiddleRandomResponse
 lib/src/main/java/org/openapis/openapi/models/operations/GetRiddleSearchSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRiddleSearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRiddleSearchResponse.java
+docs/sdk/README.md
+docs/privateriddles/README.md
+docs/randomriddle/README.md
 USAGE.md

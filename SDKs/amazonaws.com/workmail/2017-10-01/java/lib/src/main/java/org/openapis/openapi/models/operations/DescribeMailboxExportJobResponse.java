@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMailboxExportJobResponse {
     
     public String contentType;
+
     public DescribeMailboxExportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMailboxExportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMailboxExportJobResponse describeMailboxExportJobResponse;
+
     public DescribeMailboxExportJobResponse withDescribeMailboxExportJobResponse(org.openapis.openapi.models.shared.DescribeMailboxExportJobResponse describeMailboxExportJobResponse) {
         this.describeMailboxExportJobResponse = describeMailboxExportJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMailboxExportJobResponse {
      */
     
     public Object entityNotFoundException;
+
     public DescribeMailboxExportJobResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMailboxExportJobResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeMailboxExportJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeMailboxExportJobResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DescribeMailboxExportJobResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeMailboxExportJobResponse {
      */
     
     public Object organizationStateException;
+
     public DescribeMailboxExportJobResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeMailboxExportJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeMailboxExportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeMailboxExportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMailboxExportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeMailboxExportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

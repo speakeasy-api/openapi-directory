@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectsForWorkspaceRequest {
@@ -12,6 +13,7 @@ public class GetProjectsForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=archived")
     public Boolean archived;
+
     public GetProjectsForWorkspaceRequest withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -23,6 +25,7 @@ public class GetProjectsForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetProjectsForWorkspaceRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -35,6 +38,7 @@ public class GetProjectsForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetProjectsForWorkspaceRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -47,6 +51,7 @@ public class GetProjectsForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetProjectsForWorkspaceRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -58,6 +63,7 @@ public class GetProjectsForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetProjectsForWorkspaceRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -68,9 +74,13 @@ public class GetProjectsForWorkspaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_gid")
     public String workspaceGid;
+
     public GetProjectsForWorkspaceRequest withWorkspaceGid(String workspaceGid) {
         this.workspaceGid = workspaceGid;
         return this;
     }
     
+    public GetProjectsForWorkspaceRequest(@JsonProperty("workspace_gid") String workspaceGid) {
+        this.workspaceGid = workspaceGid;
+  }
 }

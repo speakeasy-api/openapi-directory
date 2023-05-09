@@ -15,9 +15,11 @@ public class RebootDBInstanceResult {
      */
     
     public DBInstance dbInstance;
+
     public RebootDBInstanceResult withDBInstance(DBInstance dbInstance) {
         this.dbInstance = dbInstance;
         return this;
     }
     
+    public RebootDBInstanceResult(){}
 }

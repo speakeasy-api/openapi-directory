@@ -12,6 +12,7 @@ public class DescribeOptOutListsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeOptOutListsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class DescribeOptOutListsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeOptOutListsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class DescribeOptOutListsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOutListNames")
     public String[] optOutListNames;
+
     public DescribeOptOutListsRequest withOptOutListNames(String[] optOutListNames) {
         this.optOutListNames = optOutListNames;
         return this;
     }
     
+    public DescribeOptOutListsRequest(){}
 }

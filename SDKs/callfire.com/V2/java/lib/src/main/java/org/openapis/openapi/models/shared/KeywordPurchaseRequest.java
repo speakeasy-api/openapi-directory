@@ -18,9 +18,11 @@ public class KeywordPurchaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public String[] keywords;
+
     public KeywordPurchaseRequest withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
     }
     
+    public KeywordPurchaseRequest(){}
 }

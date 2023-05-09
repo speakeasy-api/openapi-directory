@@ -25,6 +25,7 @@ public class PaymentInitiationStatusResponse200Json {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fundsAvailable")
     public Boolean fundsAvailable;
+
     public PaymentInitiationStatusResponse200Json withFundsAvailable(Boolean fundsAvailable) {
         this.fundsAvailable = fundsAvailable;
         return this;
@@ -36,6 +37,7 @@ public class PaymentInitiationStatusResponse200Json {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("psuMessage")
     public String psuMessage;
+
     public PaymentInitiationStatusResponse200Json withPsuMessage(String psuMessage) {
         this.psuMessage = psuMessage;
         return this;
@@ -86,9 +88,13 @@ public class PaymentInitiationStatusResponse200Json {
      */
     @JsonProperty("transactionStatus")
     public TransactionStatusEnum transactionStatus;
+
     public PaymentInitiationStatusResponse200Json withTransactionStatus(TransactionStatusEnum transactionStatus) {
         this.transactionStatus = transactionStatus;
         return this;
     }
     
+    public PaymentInitiationStatusResponse200Json(@JsonProperty("transactionStatus") TransactionStatusEnum transactionStatus) {
+        this.transactionStatus = transactionStatus;
+  }
 }

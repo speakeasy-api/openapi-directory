@@ -12,6 +12,7 @@ public class CreateDatasetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateDatasetRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateDatasetRequest {
     
     @JsonProperty("DatasetName")
     public String datasetName;
+
     public CreateDatasetRequest withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -27,6 +29,7 @@ public class CreateDatasetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetType")
     public DatasetTypeEnum datasetType;
+
     public CreateDatasetRequest withDatasetType(DatasetTypeEnum datasetType) {
         this.datasetType = datasetType;
         return this;
@@ -35,6 +38,7 @@ public class CreateDatasetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateDatasetRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -42,6 +46,7 @@ public class CreateDatasetRequest {
     
     @JsonProperty("FlywheelArn")
     public String flywheelArn;
+
     public CreateDatasetRequest withFlywheelArn(String flywheelArn) {
         this.flywheelArn = flywheelArn;
         return this;
@@ -49,6 +54,7 @@ public class CreateDatasetRequest {
     
     @JsonProperty("InputDataConfig")
     public DatasetInputDataConfig inputDataConfig;
+
     public CreateDatasetRequest withInputDataConfig(DatasetInputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -57,9 +63,15 @@ public class CreateDatasetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDatasetRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDatasetRequest(@JsonProperty("DatasetName") String datasetName, @JsonProperty("FlywheelArn") String flywheelArn, @JsonProperty("InputDataConfig") DatasetInputDataConfig inputDataConfig) {
+        this.datasetName = datasetName;
+        this.flywheelArn = flywheelArn;
+        this.inputDataConfig = inputDataConfig;
+  }
 }

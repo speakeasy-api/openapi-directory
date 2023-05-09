@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResultSet {
     @JsonProperty("headers")
     public ColumnMetadata[] headers;
+
     public ResultSet withHeaders(ColumnMetadata[] headers) {
         this.headers = headers;
         return this;
@@ -19,9 +20,14 @@ public class ResultSet {
     
     @JsonProperty("rows")
     public ResultRow[] rows;
+
     public ResultSet withRows(ResultRow[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public ResultSet(@JsonProperty("headers") ColumnMetadata[] headers, @JsonProperty("rows") ResultRow[] rows) {
+        this.headers = headers;
+        this.rows = rows;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteLoadBalancerListenerInput - Contains the parameters for DeleteLoadBalancerListeners.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteLoadBalancerListenerInput {
     
     public String loadBalancerName;
+
     public DeleteLoadBalancerListenerInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -19,9 +20,14 @@ public class DeleteLoadBalancerListenerInput {
     
     
     public Long[] loadBalancerPorts;
+
     public DeleteLoadBalancerListenerInput withLoadBalancerPorts(Long[] loadBalancerPorts) {
         this.loadBalancerPorts = loadBalancerPorts;
         return this;
     }
     
+    public DeleteLoadBalancerListenerInput(@JsonProperty("LoadBalancerName") String loadBalancerName, @JsonProperty("LoadBalancerPorts") Long[] loadBalancerPorts) {
+        this.loadBalancerName = loadBalancerName;
+        this.loadBalancerPorts = loadBalancerPorts;
+  }
 }

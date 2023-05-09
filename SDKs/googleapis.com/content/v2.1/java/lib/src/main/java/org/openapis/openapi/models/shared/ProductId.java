@@ -18,9 +18,11 @@ public class ProductId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public ProductId withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public ProductId(){}
 }

@@ -18,6 +18,7 @@ public class HookEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public HookEvent withCategory(String category) {
         this.category = category;
         return this;
@@ -29,6 +30,7 @@ public class HookEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public HookEvent withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class HookEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public HookEventEventEnum event;
+
     public HookEvent withEvent(HookEventEventEnum event) {
         this.event = event;
         return this;
@@ -51,9 +54,11 @@ public class HookEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public HookEvent withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public HookEvent(){}
 }

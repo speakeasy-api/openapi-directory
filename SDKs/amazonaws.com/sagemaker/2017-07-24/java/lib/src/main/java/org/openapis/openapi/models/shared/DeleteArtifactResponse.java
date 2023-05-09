@@ -15,9 +15,11 @@ public class DeleteArtifactResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactArn")
     public String artifactArn;
+
     public DeleteArtifactResponse withArtifactArn(String artifactArn) {
         this.artifactArn = artifactArn;
         return this;
     }
     
+    public DeleteArtifactResponse(){}
 }

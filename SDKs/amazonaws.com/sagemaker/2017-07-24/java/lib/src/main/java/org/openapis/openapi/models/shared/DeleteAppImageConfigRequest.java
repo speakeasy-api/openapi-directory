@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAppImageConfigRequest {
     @JsonProperty("AppImageConfigName")
     public String appImageConfigName;
+
     public DeleteAppImageConfigRequest withAppImageConfigName(String appImageConfigName) {
         this.appImageConfigName = appImageConfigName;
         return this;
     }
     
+    public DeleteAppImageConfigRequest(@JsonProperty("AppImageConfigName") String appImageConfigName) {
+        this.appImageConfigName = appImageConfigName;
+  }
 }

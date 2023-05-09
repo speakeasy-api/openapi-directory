@@ -18,9 +18,11 @@ public class SasPortalMoveNodeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public SasPortalMoveNodeRequest withDestination(String destination) {
         this.destination = destination;
         return this;
     }
     
+    public SasPortalMoveNodeRequest(){}
 }

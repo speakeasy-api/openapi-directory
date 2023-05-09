@@ -20,6 +20,7 @@ public class FeedbackSubmissionModel {
     @JsonProperty("AppointmentID")
     @SpeakeasyMetadata("form:name=AppointmentID")
     public String appointmentID;
+
     public FeedbackSubmissionModel withAppointmentID(String appointmentID) {
         this.appointmentID = appointmentID;
         return this;
@@ -32,6 +33,7 @@ public class FeedbackSubmissionModel {
     @JsonProperty("Feedback")
     @SpeakeasyMetadata("form:name=Feedback")
     public String feedback;
+
     public FeedbackSubmissionModel withFeedback(String feedback) {
         this.feedback = feedback;
         return this;
@@ -44,9 +46,11 @@ public class FeedbackSubmissionModel {
     @JsonProperty("PropertyID")
     @SpeakeasyMetadata("form:name=PropertyID")
     public String propertyID;
+
     public FeedbackSubmissionModel withPropertyID(String propertyID) {
         this.propertyID = propertyID;
         return this;
     }
     
+    public FeedbackSubmissionModel(){}
 }

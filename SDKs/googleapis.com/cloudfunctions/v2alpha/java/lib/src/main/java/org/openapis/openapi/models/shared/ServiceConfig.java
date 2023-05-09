@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ServiceConfig - Describes the Service being deployed. Currently Supported : Cloud Run (fully managed). Next tag: 23
+ * ServiceConfig - Describes the Service being deployed. Currently Supported : Cloud Run (fully managed).
  */
 public class ServiceConfig {
     /**
@@ -18,17 +18,19 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allTrafficOnLatestRevision")
     public Boolean allTrafficOnLatestRevision;
+
     public ServiceConfig withAllTrafficOnLatestRevision(Boolean allTrafficOnLatestRevision) {
         this.allTrafficOnLatestRevision = allTrafficOnLatestRevision;
         return this;
     }
     
     /**
-     * The number of CPUs used in a single container instance. Default value is calculated from available memory. Supports the same values as Cloud Run, see https://cloud.google.com/run/docs/reference/rest/v1/Container#resourcerequirements Example: "1" indicates 1 vCPU
+     * [Preview] The number of CPUs used in a single container instance. Default value is calculated from available memory. Supports the same values as Cloud Run, see https://cloud.google.com/run/docs/reference/rest/v1/Container#resourcerequirements Example: "1" indicates 1 vCPU
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableCpu")
     public String availableCpu;
+
     public ServiceConfig withAvailableCpu(String availableCpu) {
         this.availableCpu = availableCpu;
         return this;
@@ -40,6 +42,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableMemory")
     public String availableMemory;
+
     public ServiceConfig withAvailableMemory(String availableMemory) {
         this.availableMemory = availableMemory;
         return this;
@@ -51,6 +54,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
+
     public ServiceConfig withEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
         this.environmentVariables = environmentVariables;
         return this;
@@ -62,6 +66,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingressSettings")
     public ServiceConfigIngressSettingsEnum ingressSettings;
+
     public ServiceConfig withIngressSettings(ServiceConfigIngressSettingsEnum ingressSettings) {
         this.ingressSettings = ingressSettings;
         return this;
@@ -73,17 +78,19 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxInstanceCount")
     public Integer maxInstanceCount;
+
     public ServiceConfig withMaxInstanceCount(Integer maxInstanceCount) {
         this.maxInstanceCount = maxInstanceCount;
         return this;
     }
     
     /**
-     * Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
+     * [Preview] Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxInstanceRequestConcurrency")
     public Integer maxInstanceRequestConcurrency;
+
     public ServiceConfig withMaxInstanceRequestConcurrency(Integer maxInstanceRequestConcurrency) {
         this.maxInstanceRequestConcurrency = maxInstanceRequestConcurrency;
         return this;
@@ -95,6 +102,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minInstanceCount")
     public Integer minInstanceCount;
+
     public ServiceConfig withMinInstanceCount(Integer minInstanceCount) {
         this.minInstanceCount = minInstanceCount;
         return this;
@@ -106,6 +114,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public String revision;
+
     public ServiceConfig withRevision(String revision) {
         this.revision = revision;
         return this;
@@ -117,6 +126,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretEnvironmentVariables")
     public SecretEnvVar[] secretEnvironmentVariables;
+
     public ServiceConfig withSecretEnvironmentVariables(SecretEnvVar[] secretEnvironmentVariables) {
         this.secretEnvironmentVariables = secretEnvironmentVariables;
         return this;
@@ -128,6 +138,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretVolumes")
     public SecretVolume[] secretVolumes;
+
     public ServiceConfig withSecretVolumes(SecretVolume[] secretVolumes) {
         this.secretVolumes = secretVolumes;
         return this;
@@ -139,6 +150,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityLevel")
     public ServiceConfigSecurityLevelEnum securityLevel;
+
     public ServiceConfig withSecurityLevel(ServiceConfigSecurityLevelEnum securityLevel) {
         this.securityLevel = securityLevel;
         return this;
@@ -150,6 +162,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public ServiceConfig withService(String service) {
         this.service = service;
         return this;
@@ -161,6 +174,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountEmail")
     public String serviceAccountEmail;
+
     public ServiceConfig withServiceAccountEmail(String serviceAccountEmail) {
         this.serviceAccountEmail = serviceAccountEmail;
         return this;
@@ -172,6 +186,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutSeconds")
     public Integer timeoutSeconds;
+
     public ServiceConfig withTimeoutSeconds(Integer timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
@@ -183,6 +198,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public ServiceConfig withUri(String uri) {
         this.uri = uri;
         return this;
@@ -194,6 +210,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConnector")
     public String vpcConnector;
+
     public ServiceConfig withVpcConnector(String vpcConnector) {
         this.vpcConnector = vpcConnector;
         return this;
@@ -205,9 +222,11 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConnectorEgressSettings")
     public ServiceConfigVpcConnectorEgressSettingsEnum vpcConnectorEgressSettings;
+
     public ServiceConfig withVpcConnectorEgressSettings(ServiceConfigVpcConnectorEgressSettingsEnum vpcConnectorEgressSettings) {
         this.vpcConnectorEgressSettings = vpcConnectorEgressSettings;
         return this;
     }
     
+    public ServiceConfig(){}
 }

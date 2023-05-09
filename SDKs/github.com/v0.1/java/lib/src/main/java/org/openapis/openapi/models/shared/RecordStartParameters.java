@@ -15,6 +15,7 @@ public class RecordStartParameters {
      */
     @SpeakeasyMetadata("form:name=CallUUID")
     public String callUUID;
+
     public RecordStartParameters withCallUUID(String callUUID) {
         this.callUUID = callUUID;
         return this;
@@ -25,6 +26,7 @@ public class RecordStartParameters {
      */
     @SpeakeasyMetadata("form:name=FileFormat")
     public RecordStartParametersFileFormatEnum fileFormat;
+
     public RecordStartParameters withFileFormat(RecordStartParametersFileFormatEnum fileFormat) {
         this.fileFormat = fileFormat;
         return this;
@@ -35,6 +37,7 @@ public class RecordStartParameters {
      */
     @SpeakeasyMetadata("form:name=FileName")
     public String fileName;
+
     public RecordStartParameters withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -45,6 +48,7 @@ public class RecordStartParameters {
      */
     @SpeakeasyMetadata("form:name=FilePath")
     public String filePath;
+
     public RecordStartParameters withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -55,9 +59,11 @@ public class RecordStartParameters {
      */
     @SpeakeasyMetadata("form:name=TimeLimit")
     public Long timeLimit;
+
     public RecordStartParameters withTimeLimit(Long timeLimit) {
         this.timeLimit = timeLimit;
         return this;
     }
     
+    public RecordStartParameters(){}
 }

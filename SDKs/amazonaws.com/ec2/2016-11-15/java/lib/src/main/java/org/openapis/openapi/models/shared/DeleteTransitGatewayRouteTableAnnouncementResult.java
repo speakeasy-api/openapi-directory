@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteTransitGatewayRouteTableAnnouncementResult {
     
     public DeleteTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement transitGatewayRouteTableAnnouncement;
+
     public DeleteTransitGatewayRouteTableAnnouncementResult withTransitGatewayRouteTableAnnouncement(DeleteTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement transitGatewayRouteTableAnnouncement) {
         this.transitGatewayRouteTableAnnouncement = transitGatewayRouteTableAnnouncement;
         return this;
     }
     
+    public DeleteTransitGatewayRouteTableAnnouncementResult(){}
 }

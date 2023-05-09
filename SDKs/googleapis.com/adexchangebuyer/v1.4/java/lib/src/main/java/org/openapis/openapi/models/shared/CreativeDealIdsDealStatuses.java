@@ -15,6 +15,7 @@ public class CreativeDealIdsDealStatuses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arcStatus")
     public String arcStatus;
+
     public CreativeDealIdsDealStatuses withArcStatus(String arcStatus) {
         this.arcStatus = arcStatus;
         return this;
@@ -26,6 +27,7 @@ public class CreativeDealIdsDealStatuses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealId")
     public String dealId;
+
     public CreativeDealIdsDealStatuses withDealId(String dealId) {
         this.dealId = dealId;
         return this;
@@ -37,9 +39,11 @@ public class CreativeDealIdsDealStatuses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webPropertyId")
     public Integer webPropertyId;
+
     public CreativeDealIdsDealStatuses withWebPropertyId(Integer webPropertyId) {
         this.webPropertyId = webPropertyId;
         return this;
     }
     
+    public CreativeDealIdsDealStatuses(){}
 }

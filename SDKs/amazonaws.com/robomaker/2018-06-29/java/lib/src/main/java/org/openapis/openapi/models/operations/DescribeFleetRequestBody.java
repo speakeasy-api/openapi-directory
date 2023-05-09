@@ -12,9 +12,13 @@ public class DescribeFleetRequestBody {
      */
     @JsonProperty("fleet")
     public String fleet;
+
     public DescribeFleetRequestBody withFleet(String fleet) {
         this.fleet = fleet;
         return this;
     }
     
+    public DescribeFleetRequestBody(@JsonProperty("fleet") String fleet) {
+        this.fleet = fleet;
+  }
 }

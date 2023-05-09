@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse {
     
     public String contentType;
+
     public GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse {
     
     
     public org.openapis.openapi.models.shared.Game[] games;
+
     public GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse withGames(org.openapis.openapi.models.shared.Game[] games) {
         this.games = games;
         return this;
@@ -23,6 +26,7 @@ public class GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse {
     
     
     public Integer statusCode;
+
     public GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

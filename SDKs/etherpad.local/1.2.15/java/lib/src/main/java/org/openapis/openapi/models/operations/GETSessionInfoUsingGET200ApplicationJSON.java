@@ -15,6 +15,7 @@ public class GETSessionInfoUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public GETSessionInfoUsingGET200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class GETSessionInfoUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GETSessionInfoUsingGET200ApplicationJSONData data;
+
     public GETSessionInfoUsingGET200ApplicationJSON withData(GETSessionInfoUsingGET200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class GETSessionInfoUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GETSessionInfoUsingGET200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GETSessionInfoUsingGET200ApplicationJSON(){}
 }

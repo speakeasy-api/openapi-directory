@@ -15,6 +15,7 @@ public class ErrorRecipient {
      */
     @JsonProperty("detail")
     public String detail;
+
     public ErrorRecipient withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -25,6 +26,7 @@ public class ErrorRecipient {
      */
     @JsonProperty("instance")
     public String instance;
+
     public ErrorRecipient withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -35,6 +37,7 @@ public class ErrorRecipient {
      */
     @JsonProperty("title")
     public String title;
+
     public ErrorRecipient withTitle(String title) {
         this.title = title;
         return this;
@@ -45,9 +48,16 @@ public class ErrorRecipient {
      */
     @JsonProperty("type")
     public String type;
+
     public ErrorRecipient withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ErrorRecipient(@JsonProperty("detail") String detail, @JsonProperty("instance") String instance, @JsonProperty("title") String title, @JsonProperty("type") String type) {
+        this.detail = detail;
+        this.instance = instance;
+        this.title = title;
+        this.type = type;
+  }
 }

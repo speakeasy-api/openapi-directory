@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CopyBackupToRegionRequest {
     @JsonProperty("BackupId")
     public String backupId;
+
     public CopyBackupToRegionRequest withBackupId(String backupId) {
         this.backupId = backupId;
         return this;
@@ -18,6 +19,7 @@ public class CopyBackupToRegionRequest {
     
     @JsonProperty("DestinationRegion")
     public String destinationRegion;
+
     public CopyBackupToRegionRequest withDestinationRegion(String destinationRegion) {
         this.destinationRegion = destinationRegion;
         return this;
@@ -26,9 +28,14 @@ public class CopyBackupToRegionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagList")
     public Tag[] tagList;
+
     public CopyBackupToRegionRequest withTagList(Tag[] tagList) {
         this.tagList = tagList;
         return this;
     }
     
+    public CopyBackupToRegionRequest(@JsonProperty("BackupId") String backupId, @JsonProperty("DestinationRegion") String destinationRegion) {
+        this.backupId = backupId;
+        this.destinationRegion = destinationRegion;
+  }
 }

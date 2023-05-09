@@ -15,6 +15,7 @@ public class TimeCardListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public TimeCardSimpleVO[] results;
+
     public TimeCardListVO withResults(TimeCardSimpleVO[] results) {
         this.results = results;
         return this;
@@ -23,6 +24,7 @@ public class TimeCardListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public TimeCardListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class TimeCardListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public TimeCardListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public TimeCardListVO(){}
 }

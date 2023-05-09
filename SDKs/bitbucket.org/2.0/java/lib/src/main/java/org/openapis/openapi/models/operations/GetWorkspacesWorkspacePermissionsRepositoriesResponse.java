@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkspacesWorkspacePermissionsRepositoriesResponse {
     
     public String contentType;
+
     public GetWorkspacesWorkspacePermissionsRepositoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetWorkspacesWorkspacePermissionsRepositoriesResponse {
     
     
     public Integer statusCode;
+
     public GetWorkspacesWorkspacePermissionsRepositoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetWorkspacesWorkspacePermissionsRepositoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkspacesWorkspacePermissionsRepositoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetWorkspacesWorkspacePermissionsRepositoriesResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetWorkspacesWorkspacePermissionsRepositoriesResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetWorkspacesWorkspacePermissionsRepositoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedRepositoryPermissions paginatedRepositoryPermissions;
+
     public GetWorkspacesWorkspacePermissionsRepositoriesResponse withPaginatedRepositoryPermissions(org.openapis.openapi.models.shared.PaginatedRepositoryPermissions paginatedRepositoryPermissions) {
         this.paginatedRepositoryPermissions = paginatedRepositoryPermissions;
         return this;
     }
     
+    public GetWorkspacesWorkspacePermissionsRepositoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

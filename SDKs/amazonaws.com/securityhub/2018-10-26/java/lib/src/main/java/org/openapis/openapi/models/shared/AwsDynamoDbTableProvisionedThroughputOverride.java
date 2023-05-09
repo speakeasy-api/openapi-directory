@@ -15,9 +15,11 @@ public class AwsDynamoDbTableProvisionedThroughputOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadCapacityUnits")
     public Long readCapacityUnits;
+
     public AwsDynamoDbTableProvisionedThroughputOverride withReadCapacityUnits(Long readCapacityUnits) {
         this.readCapacityUnits = readCapacityUnits;
         return this;
     }
     
+    public AwsDynamoDbTableProvisionedThroughputOverride(){}
 }

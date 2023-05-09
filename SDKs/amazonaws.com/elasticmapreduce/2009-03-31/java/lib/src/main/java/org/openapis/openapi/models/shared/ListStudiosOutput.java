@@ -15,6 +15,7 @@ public class ListStudiosOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListStudiosOutput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +24,11 @@ public class ListStudiosOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Studios")
     public StudioSummary[] studios;
+
     public ListStudiosOutput withStudios(StudioSummary[] studios) {
         this.studios = studios;
         return this;
     }
     
+    public ListStudiosOutput(){}
 }

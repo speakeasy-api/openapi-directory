@@ -18,6 +18,7 @@ public class GoogleIdentityAccesscontextmanagerV1AccessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleIdentityAccesscontextmanagerV1AccessPolicy withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class GoogleIdentityAccesscontextmanagerV1AccessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleIdentityAccesscontextmanagerV1AccessPolicy withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GoogleIdentityAccesscontextmanagerV1AccessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleIdentityAccesscontextmanagerV1AccessPolicy withParent(String parent) {
         this.parent = parent;
         return this;
@@ -51,6 +54,7 @@ public class GoogleIdentityAccesscontextmanagerV1AccessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public String[] scopes;
+
     public GoogleIdentityAccesscontextmanagerV1AccessPolicy withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
@@ -62,9 +66,11 @@ public class GoogleIdentityAccesscontextmanagerV1AccessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleIdentityAccesscontextmanagerV1AccessPolicy withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleIdentityAccesscontextmanagerV1AccessPolicy(){}
 }

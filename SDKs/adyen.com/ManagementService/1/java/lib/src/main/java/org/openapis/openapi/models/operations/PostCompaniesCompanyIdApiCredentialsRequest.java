@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCompaniesCompanyIdApiCredentialsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateCompanyApiCredentialRequest createCompanyApiCredentialRequest;
+
     public PostCompaniesCompanyIdApiCredentialsRequest withCreateCompanyApiCredentialRequest(org.openapis.openapi.models.shared.CreateCompanyApiCredentialRequest createCompanyApiCredentialRequest) {
         this.createCompanyApiCredentialRequest = createCompanyApiCredentialRequest;
         return this;
@@ -19,9 +21,13 @@ public class PostCompaniesCompanyIdApiCredentialsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public PostCompaniesCompanyIdApiCredentialsRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
     }
     
+    public PostCompaniesCompanyIdApiCredentialsRequest(@JsonProperty("companyId") String companyId) {
+        this.companyId = companyId;
+  }
 }

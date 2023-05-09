@@ -12,9 +12,13 @@ public class BatchDeleteDevicePositionHistoryRequestBody {
      */
     @JsonProperty("DeviceIds")
     public String[] deviceIds;
+
     public BatchDeleteDevicePositionHistoryRequestBody withDeviceIds(String[] deviceIds) {
         this.deviceIds = deviceIds;
         return this;
     }
     
+    public BatchDeleteDevicePositionHistoryRequestBody(@JsonProperty("DeviceIds") String[] deviceIds) {
+        this.deviceIds = deviceIds;
+  }
 }

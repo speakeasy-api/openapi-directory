@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlusActivitiesListRequest {
@@ -12,6 +13,7 @@ public class PlusActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public PlusActivitiesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class PlusActivitiesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
     public PlusActivitiesListCollectionEnum collection;
+
     public PlusActivitiesListRequest withCollection(PlusActivitiesListCollectionEnum collection) {
         this.collection = collection;
         return this;
@@ -32,6 +35,7 @@ public class PlusActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public PlusActivitiesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class PlusActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public PlusActivitiesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class PlusActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public PlusActivitiesListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -62,6 +68,7 @@ public class PlusActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public PlusActivitiesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class PlusActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public PlusActivitiesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -82,6 +90,7 @@ public class PlusActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public PlusActivitiesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +101,7 @@ public class PlusActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public PlusActivitiesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -102,6 +112,7 @@ public class PlusActivitiesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public PlusActivitiesListRequest withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -112,9 +123,14 @@ public class PlusActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public PlusActivitiesListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public PlusActivitiesListRequest(@JsonProperty("collection") PlusActivitiesListCollectionEnum collection, @JsonProperty("userId") String userId) {
+        this.collection = collection;
+        this.userId = userId;
+  }
 }

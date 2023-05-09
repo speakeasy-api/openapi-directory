@@ -18,6 +18,7 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featurePolicy")
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicy featurePolicy;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance withFeaturePolicy(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicy featurePolicy) {
         this.featurePolicy = featurePolicy;
         return this;
@@ -29,6 +30,7 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance withLocation(String location) {
         this.location = location;
         return this;
@@ -40,6 +42,7 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingEnabled")
     public Boolean loggingEnabled;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance withLoggingEnabled(Boolean loggingEnabled) {
         this.loggingEnabled = loggingEnabled;
         return this;
@@ -51,6 +54,7 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulerNotificationConfig")
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaSchedulerNotificationConfig schedulerNotificationConfig;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance withSchedulerNotificationConfig(GoogleDevtoolsRemotebuildexecutionAdminV1alphaSchedulerNotificationConfig schedulerNotificationConfig) {
         this.schedulerNotificationConfig = schedulerNotificationConfig;
         return this;
@@ -73,9 +78,11 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceStateEnum state;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance withState(GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance(){}
 }

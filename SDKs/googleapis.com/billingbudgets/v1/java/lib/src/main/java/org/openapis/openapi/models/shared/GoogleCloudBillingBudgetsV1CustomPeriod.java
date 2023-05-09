@@ -18,6 +18,7 @@ public class GoogleCloudBillingBudgetsV1CustomPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public GoogleTypeDate endDate;
+
     public GoogleCloudBillingBudgetsV1CustomPeriod withEndDate(GoogleTypeDate endDate) {
         this.endDate = endDate;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudBillingBudgetsV1CustomPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public GoogleTypeDate startDate;
+
     public GoogleCloudBillingBudgetsV1CustomPeriod withStartDate(GoogleTypeDate startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public GoogleCloudBillingBudgetsV1CustomPeriod(){}
 }

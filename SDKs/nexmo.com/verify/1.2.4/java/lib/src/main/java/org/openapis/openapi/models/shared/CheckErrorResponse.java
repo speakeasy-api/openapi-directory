@@ -18,6 +18,7 @@ public class CheckErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_text")
     public String errorText;
+
     public CheckErrorResponse withErrorText(String errorText) {
         this.errorText = errorText;
         return this;
@@ -29,6 +30,7 @@ public class CheckErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_id")
     public String requestId;
+
     public CheckErrorResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -51,9 +53,11 @@ public class CheckErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CheckErrorResponseStatusEnum status;
+
     public CheckErrorResponse withStatus(CheckErrorResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CheckErrorResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RuleByIdRequest {
@@ -12,6 +13,7 @@ public class RuleByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public RuleByIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class RuleByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public RuleByIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class RuleByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
     public String xPROVIDERAPIAppKey;
+
     public RuleByIdRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
         this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
         return this;
@@ -42,6 +46,7 @@ public class RuleByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
     public String xPROVIDERAPIAppToken;
+
     public RuleByIdRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
         this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
         return this;
@@ -49,9 +54,17 @@ public class RuleByIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ruleId")
     public String ruleId;
+
     public RuleByIdRequest withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
     }
     
+    public RuleByIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("X-PROVIDER-API-AppKey") String xPROVIDERAPIAppKey, @JsonProperty("X-PROVIDER-API-AppToken") String xPROVIDERAPIAppToken, @JsonProperty("ruleId") String ruleId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
+        this.ruleId = ruleId;
+  }
 }

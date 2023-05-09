@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1UnregisterSubscriberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public String topic;
+
     public GoogleCloudChannelV1UnregisterSubscriberResponse withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public GoogleCloudChannelV1UnregisterSubscriberResponse(){}
 }

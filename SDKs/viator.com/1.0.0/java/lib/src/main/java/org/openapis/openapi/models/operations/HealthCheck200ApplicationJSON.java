@@ -18,6 +18,7 @@ public class HealthCheck200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allGood")
     public Boolean allGood;
+
     public HealthCheck200ApplicationJSON withAllGood(Boolean allGood) {
         this.allGood = allGood;
         return this;
@@ -29,6 +30,7 @@ public class HealthCheck200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capiOk")
     public Boolean capiOk;
+
     public HealthCheck200ApplicationJSON withCapiOk(Boolean capiOk) {
         this.capiOk = capiOk;
         return this;
@@ -40,6 +42,7 @@ public class HealthCheck200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dbOk")
     public Boolean dbOk;
+
     public HealthCheck200ApplicationJSON withDbOk(Boolean dbOk) {
         this.dbOk = dbOk;
         return this;
@@ -51,6 +54,7 @@ public class HealthCheck200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memcachedOk")
     public Boolean memcachedOk;
+
     public HealthCheck200ApplicationJSON withMemcachedOk(Boolean memcachedOk) {
         this.memcachedOk = memcachedOk;
         return this;
@@ -62,9 +66,11 @@ public class HealthCheck200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public HealthCheck200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public HealthCheck200ApplicationJSON(){}
 }

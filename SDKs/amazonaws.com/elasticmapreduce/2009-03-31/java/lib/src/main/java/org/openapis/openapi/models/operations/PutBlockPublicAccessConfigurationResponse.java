@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutBlockPublicAccessConfigurationResponse {
     
     public String contentType;
+
     public PutBlockPublicAccessConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutBlockPublicAccessConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public PutBlockPublicAccessConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class PutBlockPublicAccessConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public PutBlockPublicAccessConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class PutBlockPublicAccessConfigurationResponse {
      */
     
     public java.util.Map<String, Object> putBlockPublicAccessConfigurationOutput;
+
     public PutBlockPublicAccessConfigurationResponse withPutBlockPublicAccessConfigurationOutput(java.util.Map<String, Object> putBlockPublicAccessConfigurationOutput) {
         this.putBlockPublicAccessConfigurationOutput = putBlockPublicAccessConfigurationOutput;
         return this;
@@ -46,6 +51,7 @@ public class PutBlockPublicAccessConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PutBlockPublicAccessConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class PutBlockPublicAccessConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutBlockPublicAccessConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutBlockPublicAccessConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

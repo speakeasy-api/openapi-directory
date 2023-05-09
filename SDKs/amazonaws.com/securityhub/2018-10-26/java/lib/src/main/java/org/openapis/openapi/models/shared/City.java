@@ -15,9 +15,11 @@ public class City {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CityName")
     public String cityName;
+
     public City withCityName(String cityName) {
         this.cityName = cityName;
         return this;
     }
     
+    public City(){}
 }

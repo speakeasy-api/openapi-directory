@@ -62,11 +62,9 @@ public class Filings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCandidateCandidateIdFilingsResponse res = new org.openapis.openapi.models.operations.GetCandidateCandidateIdFilingsResponse() {{
+        org.openapis.openapi.models.operations.GetCandidateCandidateIdFilingsResponse res = new org.openapis.openapi.models.operations.GetCandidateCandidateIdFilingsResponse(contentType, httpRes.statusCode()) {{
             filingsPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -107,11 +105,9 @@ public class Filings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdFilingsResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdFilingsResponse() {{
+        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdFilingsResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdFilingsResponse(contentType, httpRes.statusCode()) {{
             filingsPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -152,11 +148,9 @@ public class Filings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFilingsResponse res = new org.openapis.openapi.models.operations.GetFilingsResponse() {{
+        org.openapis.openapi.models.operations.GetFilingsResponse res = new org.openapis.openapi.models.operations.GetFilingsResponse(contentType, httpRes.statusCode()) {{
             filingsPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -197,11 +191,9 @@ public class Filings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOperationsLogResponse res = new org.openapis.openapi.models.operations.GetOperationsLogResponse() {{
+        org.openapis.openapi.models.operations.GetOperationsLogResponse res = new org.openapis.openapi.models.operations.GetOperationsLogResponse(contentType, httpRes.statusCode()) {{
             operationsLogPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

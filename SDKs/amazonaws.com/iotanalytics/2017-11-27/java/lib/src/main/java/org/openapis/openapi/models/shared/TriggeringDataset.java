@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TriggeringDataset {
     @JsonProperty("name")
     public String name;
+
     public TriggeringDataset withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TriggeringDataset(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

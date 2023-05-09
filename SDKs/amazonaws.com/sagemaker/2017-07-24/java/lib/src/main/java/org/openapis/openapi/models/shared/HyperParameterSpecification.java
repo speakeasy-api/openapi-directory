@@ -15,6 +15,7 @@ public class HyperParameterSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultValue")
     public String defaultValue;
+
     public HyperParameterSpecification withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -23,6 +24,7 @@ public class HyperParameterSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public HyperParameterSpecification withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class HyperParameterSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsRequired")
     public Boolean isRequired;
+
     public HyperParameterSpecification withIsRequired(Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
@@ -39,6 +42,7 @@ public class HyperParameterSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsTunable")
     public Boolean isTunable;
+
     public HyperParameterSpecification withIsTunable(Boolean isTunable) {
         this.isTunable = isTunable;
         return this;
@@ -46,6 +50,7 @@ public class HyperParameterSpecification {
     
     @JsonProperty("Name")
     public String name;
+
     public HyperParameterSpecification withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +59,7 @@ public class HyperParameterSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Range")
     public ParameterRange range;
+
     public HyperParameterSpecification withRange(ParameterRange range) {
         this.range = range;
         return this;
@@ -61,9 +67,14 @@ public class HyperParameterSpecification {
     
     @JsonProperty("Type")
     public ParameterTypeEnum type;
+
     public HyperParameterSpecification withType(ParameterTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public HyperParameterSpecification(@JsonProperty("Name") String name, @JsonProperty("Type") ParameterTypeEnum type) {
+        this.name = name;
+        this.type = type;
+  }
 }

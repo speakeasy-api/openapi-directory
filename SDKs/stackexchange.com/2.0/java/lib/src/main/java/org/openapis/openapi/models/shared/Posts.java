@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class Posts {
     
     public String body;
+
     public Posts withBody(String body) {
         this.body = body;
         return this;
@@ -16,6 +17,7 @@ public class Posts {
     
     
     public String bodyMarkdown;
+
     public Posts withBodyMarkdown(String bodyMarkdown) {
         this.bodyMarkdown = bodyMarkdown;
         return this;
@@ -23,6 +25,7 @@ public class Posts {
     
     
     public Long commentCount;
+
     public Posts withCommentCount(Long commentCount) {
         this.commentCount = commentCount;
         return this;
@@ -30,6 +33,7 @@ public class Posts {
     
     
     public Object[] comments;
+
     public Posts withComments(Object[] comments) {
         this.comments = comments;
         return this;
@@ -37,6 +41,7 @@ public class Posts {
     
     
     public Long creationDate;
+
     public Posts withCreationDate(Long creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -44,6 +49,7 @@ public class Posts {
     
     
     public Long downVoteCount;
+
     public Posts withDownVoteCount(Long downVoteCount) {
         this.downVoteCount = downVoteCount;
         return this;
@@ -51,6 +57,7 @@ public class Posts {
     
     
     public Boolean downvoted;
+
     public Posts withDownvoted(Boolean downvoted) {
         this.downvoted = downvoted;
         return this;
@@ -58,6 +65,7 @@ public class Posts {
     
     
     public Long lastActivityDate;
+
     public Posts withLastActivityDate(Long lastActivityDate) {
         this.lastActivityDate = lastActivityDate;
         return this;
@@ -65,6 +73,7 @@ public class Posts {
     
     
     public Long lastEditDate;
+
     public Posts withLastEditDate(Long lastEditDate) {
         this.lastEditDate = lastEditDate;
         return this;
@@ -72,6 +81,7 @@ public class Posts {
     
     
     public PostsLastEditor lastEditor;
+
     public Posts withLastEditor(PostsLastEditor lastEditor) {
         this.lastEditor = lastEditor;
         return this;
@@ -79,6 +89,7 @@ public class Posts {
     
     
     public String link;
+
     public Posts withLink(String link) {
         this.link = link;
         return this;
@@ -86,6 +97,7 @@ public class Posts {
     
     
     public PostsOwner owner;
+
     public Posts withOwner(PostsOwner owner) {
         this.owner = owner;
         return this;
@@ -93,6 +105,7 @@ public class Posts {
     
     
     public Long postId;
+
     public Posts withPostId(Long postId) {
         this.postId = postId;
         return this;
@@ -100,6 +113,7 @@ public class Posts {
     
     
     public String postType;
+
     public Posts withPostType(String postType) {
         this.postType = postType;
         return this;
@@ -107,6 +121,7 @@ public class Posts {
     
     
     public Long score;
+
     public Posts withScore(Long score) {
         this.score = score;
         return this;
@@ -114,6 +129,7 @@ public class Posts {
     
     
     public String shareLink;
+
     public Posts withShareLink(String shareLink) {
         this.shareLink = shareLink;
         return this;
@@ -121,6 +137,7 @@ public class Posts {
     
     
     public String title;
+
     public Posts withTitle(String title) {
         this.title = title;
         return this;
@@ -128,6 +145,7 @@ public class Posts {
     
     
     public Long upVoteCount;
+
     public Posts withUpVoteCount(Long upVoteCount) {
         this.upVoteCount = upVoteCount;
         return this;
@@ -135,9 +153,11 @@ public class Posts {
     
     
     public Boolean upvoted;
+
     public Posts withUpvoted(Boolean upvoted) {
         this.upvoted = upvoted;
         return this;
     }
     
+    public Posts(){}
 }

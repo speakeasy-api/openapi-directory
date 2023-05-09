@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CharacterOffsets {
     @JsonProperty("BeginOffsetChar")
     public Long beginOffsetChar;
+
     public CharacterOffsets withBeginOffsetChar(Long beginOffsetChar) {
         this.beginOffsetChar = beginOffsetChar;
         return this;
@@ -19,9 +20,14 @@ public class CharacterOffsets {
     
     @JsonProperty("EndOffsetChar")
     public Long endOffsetChar;
+
     public CharacterOffsets withEndOffsetChar(Long endOffsetChar) {
         this.endOffsetChar = endOffsetChar;
         return this;
     }
     
+    public CharacterOffsets(@JsonProperty("BeginOffsetChar") Long beginOffsetChar, @JsonProperty("EndOffsetChar") Long endOffsetChar) {
+        this.beginOffsetChar = beginOffsetChar;
+        this.endOffsetChar = endOffsetChar;
+  }
 }

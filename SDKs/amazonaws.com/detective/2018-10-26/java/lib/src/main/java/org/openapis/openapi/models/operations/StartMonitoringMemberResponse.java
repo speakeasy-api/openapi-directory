@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartMonitoringMemberResponse {
@@ -12,6 +13,7 @@ public class StartMonitoringMemberResponse {
      */
     
     public Object accessDeniedException;
+
     public StartMonitoringMemberResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartMonitoringMemberResponse {
      */
     
     public Object conflictException;
+
     public StartMonitoringMemberResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartMonitoringMemberResponse {
     
     
     public String contentType;
+
     public StartMonitoringMemberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartMonitoringMemberResponse {
      */
     
     public Object internalServerException;
+
     public StartMonitoringMemberResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class StartMonitoringMemberResponse {
     
     
     public Integer statusCode;
+
     public StartMonitoringMemberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StartMonitoringMemberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartMonitoringMemberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class StartMonitoringMemberResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartMonitoringMemberResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class StartMonitoringMemberResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartMonitoringMemberResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,9 +92,14 @@ public class StartMonitoringMemberResponse {
      */
     
     public Object validationException;
+
     public StartMonitoringMemberResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartMonitoringMemberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddApplicationReferenceDataSourceResponse {
@@ -12,6 +13,7 @@ public class AddApplicationReferenceDataSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.AddApplicationReferenceDataSourceResponse addApplicationReferenceDataSourceResponse;
+
     public AddApplicationReferenceDataSourceResponse withAddApplicationReferenceDataSourceResponse(org.openapis.openapi.models.shared.AddApplicationReferenceDataSourceResponse addApplicationReferenceDataSourceResponse) {
         this.addApplicationReferenceDataSourceResponse = addApplicationReferenceDataSourceResponse;
         return this;
@@ -22,6 +24,7 @@ public class AddApplicationReferenceDataSourceResponse {
      */
     
     public Object concurrentModificationException;
+
     public AddApplicationReferenceDataSourceResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class AddApplicationReferenceDataSourceResponse {
     
     
     public String contentType;
+
     public AddApplicationReferenceDataSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AddApplicationReferenceDataSourceResponse {
      */
     
     public Object invalidArgumentException;
+
     public AddApplicationReferenceDataSourceResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class AddApplicationReferenceDataSourceResponse {
      */
     
     public Object invalidRequestException;
+
     public AddApplicationReferenceDataSourceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class AddApplicationReferenceDataSourceResponse {
      */
     
     public Object resourceInUseException;
+
     public AddApplicationReferenceDataSourceResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -69,6 +76,7 @@ public class AddApplicationReferenceDataSourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddApplicationReferenceDataSourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class AddApplicationReferenceDataSourceResponse {
     
     
     public Integer statusCode;
+
     public AddApplicationReferenceDataSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class AddApplicationReferenceDataSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddApplicationReferenceDataSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddApplicationReferenceDataSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateManagedEndpointResponse {
     
     public String contentType;
+
     public CreateManagedEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateManagedEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateManagedEndpointResponse createManagedEndpointResponse;
+
     public CreateManagedEndpointResponse withCreateManagedEndpointResponse(org.openapis.openapi.models.shared.CreateManagedEndpointResponse createManagedEndpointResponse) {
         this.createManagedEndpointResponse = createManagedEndpointResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateManagedEndpointResponse {
      */
     
     public Object internalServerException;
+
     public CreateManagedEndpointResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateManagedEndpointResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateManagedEndpointResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class CreateManagedEndpointResponse {
     
     
     public Integer statusCode;
+
     public CreateManagedEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateManagedEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateManagedEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateManagedEndpointResponse {
      */
     
     public Object validationException;
+
     public CreateManagedEndpointResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateManagedEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

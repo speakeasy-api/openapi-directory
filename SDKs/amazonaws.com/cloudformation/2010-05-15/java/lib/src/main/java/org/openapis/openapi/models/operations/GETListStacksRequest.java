@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListStacksRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETListStacksActionEnum action;
+
     public GETListStacksRequest withAction(GETListStacksActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETListStacksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public GETListStacksRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,6 +32,7 @@ public class GETListStacksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackStatusFilter")
     public org.openapis.openapi.models.shared.StackStatusEnum[] stackStatusFilter;
+
     public GETListStacksRequest withStackStatusFilter(org.openapis.openapi.models.shared.StackStatusEnum[] stackStatusFilter) {
         this.stackStatusFilter = stackStatusFilter;
         return this;
@@ -36,6 +40,7 @@ public class GETListStacksRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETListStacksVersionEnum version;
+
     public GETListStacksRequest withVersion(GETListStacksVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETListStacksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETListStacksRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETListStacksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETListStacksRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETListStacksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETListStacksRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETListStacksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETListStacksRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETListStacksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETListStacksRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETListStacksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETListStacksRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,14 @@ public class GETListStacksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETListStacksRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETListStacksRequest(@JsonProperty("Action") GETListStacksActionEnum action, @JsonProperty("Version") GETListStacksVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

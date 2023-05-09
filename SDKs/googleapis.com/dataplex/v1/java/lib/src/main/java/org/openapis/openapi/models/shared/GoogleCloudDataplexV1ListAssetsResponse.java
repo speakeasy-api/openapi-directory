@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ListAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
     public GoogleCloudDataplexV1Asset[] assets;
+
     public GoogleCloudDataplexV1ListAssetsResponse withAssets(GoogleCloudDataplexV1Asset[] assets) {
         this.assets = assets;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1ListAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDataplexV1ListAssetsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDataplexV1ListAssetsResponse(){}
 }

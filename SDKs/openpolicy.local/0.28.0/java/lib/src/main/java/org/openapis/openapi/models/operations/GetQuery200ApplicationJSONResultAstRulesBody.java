@@ -15,6 +15,7 @@ public class GetQuery200ApplicationJSONResultAstRulesBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Double index;
+
     public GetQuery200ApplicationJSONResultAstRulesBody withIndex(Double index) {
         this.index = index;
         return this;
@@ -26,9 +27,11 @@ public class GetQuery200ApplicationJSONResultAstRulesBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terms")
     public GetQuery200ApplicationJSONResultAstRulesBodyTerms[] terms;
+
     public GetQuery200ApplicationJSONResultAstRulesBody withTerms(GetQuery200ApplicationJSONResultAstRulesBodyTerms[] terms) {
         this.terms = terms;
         return this;
     }
     
+    public GetQuery200ApplicationJSONResultAstRulesBody(){}
 }

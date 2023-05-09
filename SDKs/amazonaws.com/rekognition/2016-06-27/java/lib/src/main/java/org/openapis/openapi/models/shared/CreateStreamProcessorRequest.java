@@ -12,6 +12,7 @@ public class CreateStreamProcessorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSharingPreference")
     public StreamProcessorDataSharingPreference dataSharingPreference;
+
     public CreateStreamProcessorRequest withDataSharingPreference(StreamProcessorDataSharingPreference dataSharingPreference) {
         this.dataSharingPreference = dataSharingPreference;
         return this;
@@ -19,6 +20,7 @@ public class CreateStreamProcessorRequest {
     
     @JsonProperty("Input")
     public StreamProcessorInput input;
+
     public CreateStreamProcessorRequest withInput(StreamProcessorInput input) {
         this.input = input;
         return this;
@@ -27,6 +29,7 @@ public class CreateStreamProcessorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CreateStreamProcessorRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -34,6 +37,7 @@ public class CreateStreamProcessorRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateStreamProcessorRequest withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +49,7 @@ public class CreateStreamProcessorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationChannel")
     public StreamProcessorNotificationChannel notificationChannel;
+
     public CreateStreamProcessorRequest withNotificationChannel(StreamProcessorNotificationChannel notificationChannel) {
         this.notificationChannel = notificationChannel;
         return this;
@@ -52,6 +57,7 @@ public class CreateStreamProcessorRequest {
     
     @JsonProperty("Output")
     public StreamProcessorOutput output;
+
     public CreateStreamProcessorRequest withOutput(StreamProcessorOutput output) {
         this.output = output;
         return this;
@@ -60,6 +66,7 @@ public class CreateStreamProcessorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionsOfInterest")
     public RegionOfInterest[] regionsOfInterest;
+
     public CreateStreamProcessorRequest withRegionsOfInterest(RegionOfInterest[] regionsOfInterest) {
         this.regionsOfInterest = regionsOfInterest;
         return this;
@@ -67,6 +74,7 @@ public class CreateStreamProcessorRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateStreamProcessorRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -74,6 +82,7 @@ public class CreateStreamProcessorRequest {
     
     @JsonProperty("Settings")
     public StreamProcessorSettings settings;
+
     public CreateStreamProcessorRequest withSettings(StreamProcessorSettings settings) {
         this.settings = settings;
         return this;
@@ -82,9 +91,17 @@ public class CreateStreamProcessorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateStreamProcessorRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateStreamProcessorRequest(@JsonProperty("Input") StreamProcessorInput input, @JsonProperty("Name") String name, @JsonProperty("Output") StreamProcessorOutput output, @JsonProperty("RoleArn") String roleArn, @JsonProperty("Settings") StreamProcessorSettings settings) {
+        this.input = input;
+        this.name = name;
+        this.output = output;
+        this.roleArn = roleArn;
+        this.settings = settings;
+  }
 }

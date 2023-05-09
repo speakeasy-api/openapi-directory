@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyPayoutRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public VerifyPayoutRequestBody requestBody;
+
     public VerifyPayoutRequest withRequestBody(VerifyPayoutRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class VerifyPayoutRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=withdrawals-id")
     public String withdrawalsId;
+
     public VerifyPayoutRequest withWithdrawalsId(String withdrawalsId) {
         this.withdrawalsId = withdrawalsId;
         return this;
@@ -23,9 +26,13 @@ public class VerifyPayoutRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public VerifyPayoutRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public VerifyPayoutRequest(@JsonProperty("withdrawals-id") String withdrawalsId) {
+        this.withdrawalsId = withdrawalsId;
+  }
 }

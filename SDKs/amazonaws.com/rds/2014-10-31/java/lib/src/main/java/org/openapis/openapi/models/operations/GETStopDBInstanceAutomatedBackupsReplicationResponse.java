@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETStopDBInstanceAutomatedBackupsReplicationResponse {
     
     public byte[] body;
+
     public GETStopDBInstanceAutomatedBackupsReplicationResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETStopDBInstanceAutomatedBackupsReplicationResponse {
     
     
     public String contentType;
+
     public GETStopDBInstanceAutomatedBackupsReplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETStopDBInstanceAutomatedBackupsReplicationResponse {
     
     
     public Integer statusCode;
+
     public GETStopDBInstanceAutomatedBackupsReplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETStopDBInstanceAutomatedBackupsReplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETStopDBInstanceAutomatedBackupsReplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETStopDBInstanceAutomatedBackupsReplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

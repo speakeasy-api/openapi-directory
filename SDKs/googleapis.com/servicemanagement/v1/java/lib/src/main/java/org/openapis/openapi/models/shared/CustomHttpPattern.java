@@ -18,6 +18,7 @@ public class CustomHttpPattern {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CustomHttpPattern withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class CustomHttpPattern {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public CustomHttpPattern withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public CustomHttpPattern(){}
 }

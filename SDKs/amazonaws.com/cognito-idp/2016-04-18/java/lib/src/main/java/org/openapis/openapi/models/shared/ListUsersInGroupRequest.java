@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListUsersInGroupRequest {
     @JsonProperty("GroupName")
     public String groupName;
+
     public ListUsersInGroupRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -19,6 +20,7 @@ public class ListUsersInGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListUsersInGroupRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -27,6 +29,7 @@ public class ListUsersInGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListUsersInGroupRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -34,9 +37,14 @@ public class ListUsersInGroupRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public ListUsersInGroupRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public ListUsersInGroupRequest(@JsonProperty("GroupName") String groupName, @JsonProperty("UserPoolId") String userPoolId) {
+        this.groupName = groupName;
+        this.userPoolId = userPoolId;
+  }
 }

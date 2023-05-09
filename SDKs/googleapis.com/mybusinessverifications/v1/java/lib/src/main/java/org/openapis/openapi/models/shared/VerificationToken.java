@@ -18,9 +18,11 @@ public class VerificationToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenString")
     public String tokenString;
+
     public VerificationToken withTokenString(String tokenString) {
         this.tokenString = tokenString;
         return this;
     }
     
+    public VerificationToken(){}
 }

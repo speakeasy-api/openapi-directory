@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataModel {
     @JsonProperty("DimensionMappings")
     public DimensionMapping[] dimensionMappings;
+
     public DataModel withDimensionMappings(DimensionMapping[] dimensionMappings) {
         this.dimensionMappings = dimensionMappings;
         return this;
@@ -22,6 +23,7 @@ public class DataModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeasureNameColumn")
     public String measureNameColumn;
+
     public DataModel withMeasureNameColumn(String measureNameColumn) {
         this.measureNameColumn = measureNameColumn;
         return this;
@@ -30,6 +32,7 @@ public class DataModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MixedMeasureMappings")
     public MixedMeasureMapping[] mixedMeasureMappings;
+
     public DataModel withMixedMeasureMappings(MixedMeasureMapping[] mixedMeasureMappings) {
         this.mixedMeasureMappings = mixedMeasureMappings;
         return this;
@@ -38,6 +41,7 @@ public class DataModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiMeasureMappings")
     public MultiMeasureMappings multiMeasureMappings;
+
     public DataModel withMultiMeasureMappings(MultiMeasureMappings multiMeasureMappings) {
         this.multiMeasureMappings = multiMeasureMappings;
         return this;
@@ -46,6 +50,7 @@ public class DataModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeColumn")
     public String timeColumn;
+
     public DataModel withTimeColumn(String timeColumn) {
         this.timeColumn = timeColumn;
         return this;
@@ -54,9 +59,13 @@ public class DataModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeUnit")
     public TimeUnitEnum timeUnit;
+
     public DataModel withTimeUnit(TimeUnitEnum timeUnit) {
         this.timeUnit = timeUnit;
         return this;
     }
     
+    public DataModel(@JsonProperty("DimensionMappings") DimensionMapping[] dimensionMappings) {
+        this.dimensionMappings = dimensionMappings;
+  }
 }

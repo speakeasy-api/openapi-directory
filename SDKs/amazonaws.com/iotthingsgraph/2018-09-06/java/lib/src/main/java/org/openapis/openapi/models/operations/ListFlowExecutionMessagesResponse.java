@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFlowExecutionMessagesResponse {
     
     public String contentType;
+
     public ListFlowExecutionMessagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListFlowExecutionMessagesResponse {
      */
     
     public Object internalFailureException;
+
     public ListFlowExecutionMessagesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListFlowExecutionMessagesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListFlowExecutionMessagesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListFlowExecutionMessagesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFlowExecutionMessagesResponse listFlowExecutionMessagesResponse;
+
     public ListFlowExecutionMessagesResponse withListFlowExecutionMessagesResponse(org.openapis.openapi.models.shared.ListFlowExecutionMessagesResponse listFlowExecutionMessagesResponse) {
         this.listFlowExecutionMessagesResponse = listFlowExecutionMessagesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListFlowExecutionMessagesResponse {
     
     
     public Integer statusCode;
+
     public ListFlowExecutionMessagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListFlowExecutionMessagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFlowExecutionMessagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListFlowExecutionMessagesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListFlowExecutionMessagesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListFlowExecutionMessagesResponse {
      */
     
     public Object throttlingException;
+
     public ListFlowExecutionMessagesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListFlowExecutionMessagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

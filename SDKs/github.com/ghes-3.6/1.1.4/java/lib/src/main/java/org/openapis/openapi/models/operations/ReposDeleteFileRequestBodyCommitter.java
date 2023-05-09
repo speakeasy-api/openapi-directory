@@ -18,6 +18,7 @@ public class ReposDeleteFileRequestBodyCommitter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ReposDeleteFileRequestBodyCommitter withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class ReposDeleteFileRequestBodyCommitter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReposDeleteFileRequestBodyCommitter withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ReposDeleteFileRequestBodyCommitter(){}
 }

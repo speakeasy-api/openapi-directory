@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeWorkspacesResponse {
     
     public String contentType;
+
     public DescribeWorkspacesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeWorkspacesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeWorkspacesResult describeWorkspacesResult;
+
     public DescribeWorkspacesResponse withDescribeWorkspacesResult(org.openapis.openapi.models.shared.DescribeWorkspacesResult describeWorkspacesResult) {
         this.describeWorkspacesResult = describeWorkspacesResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeWorkspacesResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public DescribeWorkspacesResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeWorkspacesResponse {
     
     
     public Integer statusCode;
+
     public DescribeWorkspacesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeWorkspacesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeWorkspacesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeWorkspacesResponse {
      */
     
     public Object resourceUnavailableException;
+
     public DescribeWorkspacesResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
     }
     
+    public DescribeWorkspacesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

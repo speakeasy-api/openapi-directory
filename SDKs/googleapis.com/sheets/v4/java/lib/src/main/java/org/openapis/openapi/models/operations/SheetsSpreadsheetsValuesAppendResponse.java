@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SheetsSpreadsheetsValuesAppendResponse {
@@ -12,6 +13,7 @@ public class SheetsSpreadsheetsValuesAppendResponse {
      */
     
     public org.openapis.openapi.models.shared.AppendValuesResponse appendValuesResponse;
+
     public SheetsSpreadsheetsValuesAppendResponse withAppendValuesResponse(org.openapis.openapi.models.shared.AppendValuesResponse appendValuesResponse) {
         this.appendValuesResponse = appendValuesResponse;
         return this;
@@ -19,6 +21,7 @@ public class SheetsSpreadsheetsValuesAppendResponse {
     
     
     public String contentType;
+
     public SheetsSpreadsheetsValuesAppendResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SheetsSpreadsheetsValuesAppendResponse {
     
     
     public Integer statusCode;
+
     public SheetsSpreadsheetsValuesAppendResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SheetsSpreadsheetsValuesAppendResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SheetsSpreadsheetsValuesAppendResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SheetsSpreadsheetsValuesAppendResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

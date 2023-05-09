@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DetachCustomerManagedPolicyReferenceFromPermissionSetRequest {
     @JsonProperty("CustomerManagedPolicyReference")
     public CustomerManagedPolicyReference customerManagedPolicyReference;
+
     public DetachCustomerManagedPolicyReferenceFromPermissionSetRequest withCustomerManagedPolicyReference(CustomerManagedPolicyReference customerManagedPolicyReference) {
         this.customerManagedPolicyReference = customerManagedPolicyReference;
         return this;
@@ -16,6 +17,7 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetRequest {
     
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public DetachCustomerManagedPolicyReferenceFromPermissionSetRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -23,9 +25,15 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetRequest {
     
     @JsonProperty("PermissionSetArn")
     public String permissionSetArn;
+
     public DetachCustomerManagedPolicyReferenceFromPermissionSetRequest withPermissionSetArn(String permissionSetArn) {
         this.permissionSetArn = permissionSetArn;
         return this;
     }
     
+    public DetachCustomerManagedPolicyReferenceFromPermissionSetRequest(@JsonProperty("CustomerManagedPolicyReference") CustomerManagedPolicyReference customerManagedPolicyReference, @JsonProperty("InstanceArn") String instanceArn, @JsonProperty("PermissionSetArn") String permissionSetArn) {
+        this.customerManagedPolicyReference = customerManagedPolicyReference;
+        this.instanceArn = instanceArn;
+        this.permissionSetArn = permissionSetArn;
+  }
 }

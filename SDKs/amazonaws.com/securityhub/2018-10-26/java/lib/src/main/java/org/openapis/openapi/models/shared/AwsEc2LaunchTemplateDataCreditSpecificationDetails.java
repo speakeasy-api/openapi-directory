@@ -15,9 +15,11 @@ public class AwsEc2LaunchTemplateDataCreditSpecificationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CpuCredits")
     public String cpuCredits;
+
     public AwsEc2LaunchTemplateDataCreditSpecificationDetails withCpuCredits(String cpuCredits) {
         this.cpuCredits = cpuCredits;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataCreditSpecificationDetails(){}
 }

@@ -18,6 +18,7 @@ public class FirebaseProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public FirebaseProject withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class FirebaseProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public FirebaseProject withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class FirebaseProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public FirebaseProject withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class FirebaseProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FirebaseProject withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class FirebaseProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public FirebaseProject withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -73,6 +78,7 @@ public class FirebaseProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectNumber")
     public String projectNumber;
+
     public FirebaseProject withProjectNumber(String projectNumber) {
         this.projectNumber = projectNumber;
         return this;
@@ -84,6 +90,7 @@ public class FirebaseProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public DefaultResources resources;
+
     public FirebaseProject withResources(DefaultResources resources) {
         this.resources = resources;
         return this;
@@ -95,9 +102,11 @@ public class FirebaseProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public FirebaseProjectStateEnum state;
+
     public FirebaseProject withState(FirebaseProjectStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public FirebaseProject(){}
 }

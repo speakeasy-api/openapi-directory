@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamesRequest {
@@ -12,6 +13,7 @@ public class GetNamesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=list")
     public org.openapis.openapi.models.shared.PossibleListsEnum list;
+
     public GetNamesRequest withList(org.openapis.openapi.models.shared.PossibleListsEnum list) {
         this.list = list;
         return this;
@@ -22,9 +24,13 @@ public class GetNamesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=name")
     public String name;
+
     public GetNamesRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetNamesRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

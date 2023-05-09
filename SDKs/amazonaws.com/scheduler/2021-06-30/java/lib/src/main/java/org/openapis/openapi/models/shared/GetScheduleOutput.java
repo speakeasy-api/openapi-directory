@@ -20,6 +20,7 @@ public class GetScheduleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public GetScheduleOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class GetScheduleOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public GetScheduleOutput withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -38,6 +40,7 @@ public class GetScheduleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GetScheduleOutput withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class GetScheduleOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndDate")
     public OffsetDateTime endDate;
+
     public GetScheduleOutput withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -56,6 +60,7 @@ public class GetScheduleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlexibleTimeWindow")
     public FlexibleTimeWindow flexibleTimeWindow;
+
     public GetScheduleOutput withFlexibleTimeWindow(FlexibleTimeWindow flexibleTimeWindow) {
         this.flexibleTimeWindow = flexibleTimeWindow;
         return this;
@@ -64,6 +69,7 @@ public class GetScheduleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public GetScheduleOutput withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -72,6 +78,7 @@ public class GetScheduleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyArn")
     public String kmsKeyArn;
+
     public GetScheduleOutput withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -82,6 +89,7 @@ public class GetScheduleOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationDate")
     public OffsetDateTime lastModificationDate;
+
     public GetScheduleOutput withLastModificationDate(OffsetDateTime lastModificationDate) {
         this.lastModificationDate = lastModificationDate;
         return this;
@@ -90,6 +98,7 @@ public class GetScheduleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetScheduleOutput withName(String name) {
         this.name = name;
         return this;
@@ -98,6 +107,7 @@ public class GetScheduleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public GetScheduleOutput withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
@@ -106,6 +116,7 @@ public class GetScheduleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleExpressionTimezone")
     public String scheduleExpressionTimezone;
+
     public GetScheduleOutput withScheduleExpressionTimezone(String scheduleExpressionTimezone) {
         this.scheduleExpressionTimezone = scheduleExpressionTimezone;
         return this;
@@ -116,6 +127,7 @@ public class GetScheduleOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartDate")
     public OffsetDateTime startDate;
+
     public GetScheduleOutput withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -124,6 +136,7 @@ public class GetScheduleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ScheduleStateEnum state;
+
     public GetScheduleOutput withState(ScheduleStateEnum state) {
         this.state = state;
         return this;
@@ -132,9 +145,11 @@ public class GetScheduleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public Target target;
+
     public GetScheduleOutput withTarget(Target target) {
         this.target = target;
         return this;
     }
     
+    public GetScheduleOutput(){}
 }

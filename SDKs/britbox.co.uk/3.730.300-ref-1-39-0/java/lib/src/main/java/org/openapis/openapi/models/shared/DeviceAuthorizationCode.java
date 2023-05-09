@@ -15,9 +15,13 @@ public class DeviceAuthorizationCode {
      */
     @JsonProperty("code")
     public String code;
+
     public DeviceAuthorizationCode withCode(String code) {
         this.code = code;
         return this;
     }
     
+    public DeviceAuthorizationCode(@JsonProperty("code") String code) {
+        this.code = code;
+  }
 }

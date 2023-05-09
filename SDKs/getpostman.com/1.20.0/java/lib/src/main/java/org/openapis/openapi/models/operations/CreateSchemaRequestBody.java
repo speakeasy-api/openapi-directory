@@ -12,9 +12,11 @@ public class CreateSchemaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public CreateSchemaRequestBodySchema schema;
+
     public CreateSchemaRequestBody withSchema(CreateSchemaRequestBodySchema schema) {
         this.schema = schema;
         return this;
     }
     
+    public CreateSchemaRequestBody(){}
 }

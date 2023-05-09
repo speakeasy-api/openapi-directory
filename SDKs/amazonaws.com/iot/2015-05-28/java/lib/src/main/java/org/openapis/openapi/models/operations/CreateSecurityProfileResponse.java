@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSecurityProfileResponse {
     
     public String contentType;
+
     public CreateSecurityProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateSecurityProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSecurityProfileResponse createSecurityProfileResponse;
+
     public CreateSecurityProfileResponse withCreateSecurityProfileResponse(org.openapis.openapi.models.shared.CreateSecurityProfileResponse createSecurityProfileResponse) {
         this.createSecurityProfileResponse = createSecurityProfileResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateSecurityProfileResponse {
      */
     
     public Object internalFailureException;
+
     public CreateSecurityProfileResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateSecurityProfileResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateSecurityProfileResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreateSecurityProfileResponse {
     
     
     public Integer statusCode;
+
     public CreateSecurityProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateSecurityProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSecurityProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateSecurityProfileResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateSecurityProfileResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -73,9 +81,14 @@ public class CreateSecurityProfileResponse {
      */
     
     public Object throttlingException;
+
     public CreateSecurityProfileResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateSecurityProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

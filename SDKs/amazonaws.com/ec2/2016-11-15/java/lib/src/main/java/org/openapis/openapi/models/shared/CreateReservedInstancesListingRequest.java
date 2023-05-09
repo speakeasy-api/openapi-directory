@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateReservedInstancesListingRequest - Contains the parameters for CreateReservedInstancesListing.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateReservedInstancesListingRequest {
     
     public String clientToken;
+
     public CreateReservedInstancesListingRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateReservedInstancesListingRequest {
     
     
     public Long instanceCount;
+
     public CreateReservedInstancesListingRequest withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -26,6 +28,7 @@ public class CreateReservedInstancesListingRequest {
     
     
     public CreateReservedInstancesListingRequestPriceSchedules[] priceSchedules;
+
     public CreateReservedInstancesListingRequest withPriceSchedules(CreateReservedInstancesListingRequestPriceSchedules[] priceSchedules) {
         this.priceSchedules = priceSchedules;
         return this;
@@ -33,9 +36,16 @@ public class CreateReservedInstancesListingRequest {
     
     
     public String reservedInstancesId;
+
     public CreateReservedInstancesListingRequest withReservedInstancesId(String reservedInstancesId) {
         this.reservedInstancesId = reservedInstancesId;
         return this;
     }
     
+    public CreateReservedInstancesListingRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("InstanceCount") Long instanceCount, @JsonProperty("PriceSchedules") CreateReservedInstancesListingRequestPriceSchedules[] priceSchedules, @JsonProperty("ReservedInstancesId") String reservedInstancesId) {
+        this.clientToken = clientToken;
+        this.instanceCount = instanceCount;
+        this.priceSchedules = priceSchedules;
+        this.reservedInstancesId = reservedInstancesId;
+  }
 }

@@ -18,6 +18,7 @@ public class ExecuteBuyTrasaction500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public ExecuteBuyTrasaction500ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class ExecuteBuyTrasaction500ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public ExecuteBuyTrasaction500ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ExecuteBuyTrasaction500ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

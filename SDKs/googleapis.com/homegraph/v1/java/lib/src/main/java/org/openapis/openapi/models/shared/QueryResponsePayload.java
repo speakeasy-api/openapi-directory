@@ -18,9 +18,11 @@ public class QueryResponsePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public java.util.Map<String, java.util.Map<String, Object>> devices;
+
     public QueryResponsePayload withDevices(java.util.Map<String, java.util.Map<String, Object>> devices) {
         this.devices = devices;
         return this;
     }
     
+    public QueryResponsePayload(){}
 }

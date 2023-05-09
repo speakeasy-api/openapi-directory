@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GitRef {
     @JsonProperty("node_id")
     public String nodeId;
+
     public GitRef withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -19,6 +20,7 @@ public class GitRef {
     
     @JsonProperty("object")
     public GitRefObject object;
+
     public GitRef withObject(GitRefObject object) {
         this.object = object;
         return this;
@@ -26,6 +28,7 @@ public class GitRef {
     
     @JsonProperty("ref")
     public String ref;
+
     public GitRef withRef(String ref) {
         this.ref = ref;
         return this;
@@ -33,9 +36,16 @@ public class GitRef {
     
     @JsonProperty("url")
     public String url;
+
     public GitRef withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GitRef(@JsonProperty("node_id") String nodeId, @JsonProperty("object") GitRefObject object, @JsonProperty("ref") String ref, @JsonProperty("url") String url) {
+        this.nodeId = nodeId;
+        this.object = object;
+        this.ref = ref;
+        this.url = url;
+  }
 }

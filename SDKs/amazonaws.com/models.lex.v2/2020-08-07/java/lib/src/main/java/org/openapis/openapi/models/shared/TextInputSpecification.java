@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TextInputSpecification {
     @JsonProperty("startTimeoutMs")
     public Long startTimeoutMs;
+
     public TextInputSpecification withStartTimeoutMs(Long startTimeoutMs) {
         this.startTimeoutMs = startTimeoutMs;
         return this;
     }
     
+    public TextInputSpecification(@JsonProperty("startTimeoutMs") Long startTimeoutMs) {
+        this.startTimeoutMs = startTimeoutMs;
+  }
 }

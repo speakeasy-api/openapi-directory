@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAdminMappingsRemoveByMetadataRequestBodyJSONEquals {
     @JsonProperty("equalToJson")
     public String equalToJson;
+
     public PostAdminMappingsRemoveByMetadataRequestBodyJSONEquals withEqualToJson(String equalToJson) {
         this.equalToJson = equalToJson;
         return this;
     }
     
+    public PostAdminMappingsRemoveByMetadataRequestBodyJSONEquals(@JsonProperty("equalToJson") String equalToJson) {
+        this.equalToJson = equalToJson;
+  }
 }

@@ -15,9 +15,11 @@ public class PutOrganizationConformancePackResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationConformancePackArn")
     public String organizationConformancePackArn;
+
     public PutOrganizationConformancePackResponse withOrganizationConformancePackArn(String organizationConformancePackArn) {
         this.organizationConformancePackArn = organizationConformancePackArn;
         return this;
     }
     
+    public PutOrganizationConformancePackResponse(){}
 }

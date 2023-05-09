@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceCreditSpecificationResult {
     
     public ModifyInstanceCreditSpecificationResultSuccessfulInstanceCreditSpecifications[] successfulInstanceCreditSpecifications;
+
     public ModifyInstanceCreditSpecificationResult withSuccessfulInstanceCreditSpecifications(ModifyInstanceCreditSpecificationResultSuccessfulInstanceCreditSpecifications[] successfulInstanceCreditSpecifications) {
         this.successfulInstanceCreditSpecifications = successfulInstanceCreditSpecifications;
         return this;
@@ -19,9 +20,11 @@ public class ModifyInstanceCreditSpecificationResult {
     
     
     public ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecifications[] unsuccessfulInstanceCreditSpecifications;
+
     public ModifyInstanceCreditSpecificationResult withUnsuccessfulInstanceCreditSpecifications(ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecifications[] unsuccessfulInstanceCreditSpecifications) {
         this.unsuccessfulInstanceCreditSpecifications = unsuccessfulInstanceCreditSpecifications;
         return this;
     }
     
+    public ModifyInstanceCreditSpecificationResult(){}
 }

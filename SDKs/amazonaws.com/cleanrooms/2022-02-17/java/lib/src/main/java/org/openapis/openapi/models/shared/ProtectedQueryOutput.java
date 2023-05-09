@@ -15,9 +15,11 @@ public class ProtectedQueryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3")
     public ProtectedQueryS3Output s3;
+
     public ProtectedQueryOutput withS3(ProtectedQueryS3Output s3) {
         this.s3 = s3;
         return this;
     }
     
+    public ProtectedQueryOutput(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RecoveryOptionType {
     @JsonProperty("Name")
     public RecoveryOptionNameTypeEnum name;
+
     public RecoveryOptionType withName(RecoveryOptionNameTypeEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class RecoveryOptionType {
     
     @JsonProperty("Priority")
     public Long priority;
+
     public RecoveryOptionType withPriority(Long priority) {
         this.priority = priority;
         return this;
     }
     
+    public RecoveryOptionType(@JsonProperty("Name") RecoveryOptionNameTypeEnum name, @JsonProperty("Priority") Long priority) {
+        this.name = name;
+        this.priority = priority;
+  }
 }

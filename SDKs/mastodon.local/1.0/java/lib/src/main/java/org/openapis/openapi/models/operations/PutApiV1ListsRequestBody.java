@@ -15,6 +15,7 @@ public class PutApiV1ListsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replies_policy")
     public PutApiV1ListsRequestBodyRepliesPolicyEnum repliesPolicy;
+
     public PutApiV1ListsRequestBody withRepliesPolicy(PutApiV1ListsRequestBodyRepliesPolicyEnum repliesPolicy) {
         this.repliesPolicy = repliesPolicy;
         return this;
@@ -26,9 +27,11 @@ public class PutApiV1ListsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PutApiV1ListsRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PutApiV1ListsRequestBody(){}
 }

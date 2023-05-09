@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RemoveListenerCertificatesInput {
     
     public Certificate[] certificates;
+
     public RemoveListenerCertificatesInput withCertificates(Certificate[] certificates) {
         this.certificates = certificates;
         return this;
@@ -16,9 +17,14 @@ public class RemoveListenerCertificatesInput {
     
     
     public String listenerArn;
+
     public RemoveListenerCertificatesInput withListenerArn(String listenerArn) {
         this.listenerArn = listenerArn;
         return this;
     }
     
+    public RemoveListenerCertificatesInput(@JsonProperty("Certificates") Certificate[] certificates, @JsonProperty("ListenerArn") String listenerArn) {
+        this.certificates = certificates;
+        this.listenerArn = listenerArn;
+  }
 }

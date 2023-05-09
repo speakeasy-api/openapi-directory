@@ -15,6 +15,7 @@ public class BandwidthRateLimitInterval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageUploadRateLimitInBitsPerSec")
     public Long averageUploadRateLimitInBitsPerSec;
+
     public BandwidthRateLimitInterval withAverageUploadRateLimitInBitsPerSec(Long averageUploadRateLimitInBitsPerSec) {
         this.averageUploadRateLimitInBitsPerSec = averageUploadRateLimitInBitsPerSec;
         return this;
@@ -22,6 +23,7 @@ public class BandwidthRateLimitInterval {
     
     @JsonProperty("DaysOfWeek")
     public Long[] daysOfWeek;
+
     public BandwidthRateLimitInterval withDaysOfWeek(Long[] daysOfWeek) {
         this.daysOfWeek = daysOfWeek;
         return this;
@@ -29,6 +31,7 @@ public class BandwidthRateLimitInterval {
     
     @JsonProperty("EndHourOfDay")
     public Long endHourOfDay;
+
     public BandwidthRateLimitInterval withEndHourOfDay(Long endHourOfDay) {
         this.endHourOfDay = endHourOfDay;
         return this;
@@ -36,6 +39,7 @@ public class BandwidthRateLimitInterval {
     
     @JsonProperty("EndMinuteOfHour")
     public Long endMinuteOfHour;
+
     public BandwidthRateLimitInterval withEndMinuteOfHour(Long endMinuteOfHour) {
         this.endMinuteOfHour = endMinuteOfHour;
         return this;
@@ -43,6 +47,7 @@ public class BandwidthRateLimitInterval {
     
     @JsonProperty("StartHourOfDay")
     public Long startHourOfDay;
+
     public BandwidthRateLimitInterval withStartHourOfDay(Long startHourOfDay) {
         this.startHourOfDay = startHourOfDay;
         return this;
@@ -50,9 +55,17 @@ public class BandwidthRateLimitInterval {
     
     @JsonProperty("StartMinuteOfHour")
     public Long startMinuteOfHour;
+
     public BandwidthRateLimitInterval withStartMinuteOfHour(Long startMinuteOfHour) {
         this.startMinuteOfHour = startMinuteOfHour;
         return this;
     }
     
+    public BandwidthRateLimitInterval(@JsonProperty("DaysOfWeek") Long[] daysOfWeek, @JsonProperty("EndHourOfDay") Long endHourOfDay, @JsonProperty("EndMinuteOfHour") Long endMinuteOfHour, @JsonProperty("StartHourOfDay") Long startHourOfDay, @JsonProperty("StartMinuteOfHour") Long startMinuteOfHour) {
+        this.daysOfWeek = daysOfWeek;
+        this.endHourOfDay = endHourOfDay;
+        this.endMinuteOfHour = endMinuteOfHour;
+        this.startHourOfDay = startHourOfDay;
+        this.startMinuteOfHour = startMinuteOfHour;
+  }
 }

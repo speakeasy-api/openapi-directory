@@ -22,6 +22,7 @@ public class SubmitTranscriptionJobJson413ApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public SubmitTranscriptionJobJson413ApplicationProblemPlusJson withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -33,6 +34,7 @@ public class SubmitTranscriptionJobJson413ApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public SubmitTranscriptionJobJson413ApplicationProblemPlusJson withStatus(Long status) {
         this.status = status;
         return this;
@@ -44,9 +46,11 @@ public class SubmitTranscriptionJobJson413ApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public SubmitTranscriptionJobJson413ApplicationProblemPlusJson withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public SubmitTranscriptionJobJson413ApplicationProblemPlusJson(){}
 }

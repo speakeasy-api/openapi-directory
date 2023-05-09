@@ -12,6 +12,7 @@ public class SingleCollection200ApplicationJSONCollectionItemEventScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exec")
     public String exec;
+
     public SingleCollection200ApplicationJSONCollectionItemEventScript withExec(String exec) {
         this.exec = exec;
         return this;
@@ -20,9 +21,11 @@ public class SingleCollection200ApplicationJSONCollectionItemEventScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SingleCollection200ApplicationJSONCollectionItemEventScript withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SingleCollection200ApplicationJSONCollectionItemEventScript(){}
 }

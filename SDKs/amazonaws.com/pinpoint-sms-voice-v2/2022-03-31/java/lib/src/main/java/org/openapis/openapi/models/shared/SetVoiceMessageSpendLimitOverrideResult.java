@@ -15,9 +15,11 @@ public class SetVoiceMessageSpendLimitOverrideResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonthlyLimit")
     public Long monthlyLimit;
+
     public SetVoiceMessageSpendLimitOverrideResult withMonthlyLimit(Long monthlyLimit) {
         this.monthlyLimit = monthlyLimit;
         return this;
     }
     
+    public SetVoiceMessageSpendLimitOverrideResult(){}
 }

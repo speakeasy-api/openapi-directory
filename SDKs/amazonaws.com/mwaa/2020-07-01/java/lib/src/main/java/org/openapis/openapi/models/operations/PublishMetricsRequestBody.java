@@ -12,9 +12,13 @@ public class PublishMetricsRequestBody {
      */
     @JsonProperty("MetricData")
     public org.openapis.openapi.models.shared.MetricDatum[] metricData;
+
     public PublishMetricsRequestBody withMetricData(org.openapis.openapi.models.shared.MetricDatum[] metricData) {
         this.metricData = metricData;
         return this;
     }
     
+    public PublishMetricsRequestBody(@JsonProperty("MetricData") org.openapis.openapi.models.shared.MetricDatum[] metricData) {
+        this.metricData = metricData;
+  }
 }

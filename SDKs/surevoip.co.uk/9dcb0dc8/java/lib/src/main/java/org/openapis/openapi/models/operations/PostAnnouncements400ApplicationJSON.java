@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAnnouncements400ApplicationJSON {
     @JsonProperty("errors")
     public PostAnnouncements400ApplicationJSONErrors[] errors;
+
     public PostAnnouncements400ApplicationJSON withErrors(PostAnnouncements400ApplicationJSONErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public PostAnnouncements400ApplicationJSON(@JsonProperty("errors") PostAnnouncements400ApplicationJSONErrors[] errors) {
+        this.errors = errors;
+  }
 }

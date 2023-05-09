@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTrustStoreResponse {
@@ -12,6 +13,7 @@ public class DeleteTrustStoreResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteTrustStoreResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteTrustStoreResponse {
      */
     
     public Object conflictException;
+
     public DeleteTrustStoreResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTrustStoreResponse {
     
     
     public String contentType;
+
     public DeleteTrustStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTrustStoreResponse {
      */
     
     public java.util.Map<String, Object> deleteTrustStoreResponse;
+
     public DeleteTrustStoreResponse withDeleteTrustStoreResponse(java.util.Map<String, Object> deleteTrustStoreResponse) {
         this.deleteTrustStoreResponse = deleteTrustStoreResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTrustStoreResponse {
      */
     
     public Object internalServerException;
+
     public DeleteTrustStoreResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteTrustStoreResponse {
     
     
     public Integer statusCode;
+
     public DeleteTrustStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteTrustStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTrustStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteTrustStoreResponse {
      */
     
     public Object throttlingException;
+
     public DeleteTrustStoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteTrustStoreResponse {
      */
     
     public Object validationException;
+
     public DeleteTrustStoreResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteTrustStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

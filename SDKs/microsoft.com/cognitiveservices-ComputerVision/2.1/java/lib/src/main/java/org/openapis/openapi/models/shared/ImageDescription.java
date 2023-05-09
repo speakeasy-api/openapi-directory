@@ -18,6 +18,7 @@ public class ImageDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public ImageDescriptionDetails description;
+
     public ImageDescription withDescription(ImageDescriptionDetails description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class ImageDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ImageMetadata metadata;
+
     public ImageDescription withMetadata(ImageMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -40,9 +42,11 @@ public class ImageDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public ImageDescription withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public ImageDescription(){}
 }

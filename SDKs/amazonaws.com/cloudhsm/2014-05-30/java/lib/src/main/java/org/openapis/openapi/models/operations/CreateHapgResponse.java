@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateHapgResponse {
@@ -12,6 +13,7 @@ public class CreateHapgResponse {
      */
     
     public Object cloudHsmInternalException;
+
     public CreateHapgResponse withCloudHsmInternalException(Object cloudHsmInternalException) {
         this.cloudHsmInternalException = cloudHsmInternalException;
         return this;
@@ -22,6 +24,7 @@ public class CreateHapgResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public CreateHapgResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -29,6 +32,7 @@ public class CreateHapgResponse {
     
     
     public String contentType;
+
     public CreateHapgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateHapgResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateHapgResponse createHapgResponse;
+
     public CreateHapgResponse withCreateHapgResponse(org.openapis.openapi.models.shared.CreateHapgResponse createHapgResponse) {
         this.createHapgResponse = createHapgResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateHapgResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateHapgResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class CreateHapgResponse {
     
     
     public Integer statusCode;
+
     public CreateHapgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateHapgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateHapgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateHapgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

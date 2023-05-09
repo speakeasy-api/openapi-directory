@@ -12,6 +12,7 @@ public class AppointmentCustomVitalValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public AppointmentCustomVitalValue withValue(String value) {
         this.value = value;
         return this;
@@ -20,9 +21,11 @@ public class AppointmentCustomVitalValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vital_type")
     public Long vitalType;
+
     public AppointmentCustomVitalValue withVitalType(Long vitalType) {
         this.vitalType = vitalType;
         return this;
     }
     
+    public AppointmentCustomVitalValue(){}
 }

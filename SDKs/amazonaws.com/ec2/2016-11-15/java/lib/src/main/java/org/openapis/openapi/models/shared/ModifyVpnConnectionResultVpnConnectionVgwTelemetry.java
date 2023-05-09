@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ModifyVpnConnectionResultVpnConnectionVgwTelemetry {
     
     public Long acceptedRouteCount;
+
     public ModifyVpnConnectionResultVpnConnectionVgwTelemetry withAcceptedRouteCount(Long acceptedRouteCount) {
         this.acceptedRouteCount = acceptedRouteCount;
         return this;
@@ -19,6 +20,7 @@ public class ModifyVpnConnectionResultVpnConnectionVgwTelemetry {
     
     
     public String certificateArn;
+
     public ModifyVpnConnectionResultVpnConnectionVgwTelemetry withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -26,6 +28,7 @@ public class ModifyVpnConnectionResultVpnConnectionVgwTelemetry {
     
     
     public OffsetDateTime lastStatusChange;
+
     public ModifyVpnConnectionResultVpnConnectionVgwTelemetry withLastStatusChange(OffsetDateTime lastStatusChange) {
         this.lastStatusChange = lastStatusChange;
         return this;
@@ -33,6 +36,7 @@ public class ModifyVpnConnectionResultVpnConnectionVgwTelemetry {
     
     
     public String outsideIpAddress;
+
     public ModifyVpnConnectionResultVpnConnectionVgwTelemetry withOutsideIpAddress(String outsideIpAddress) {
         this.outsideIpAddress = outsideIpAddress;
         return this;
@@ -40,6 +44,7 @@ public class ModifyVpnConnectionResultVpnConnectionVgwTelemetry {
     
     
     public ModifyVpnConnectionResultVpnConnectionVgwTelemetryStatusEnum status;
+
     public ModifyVpnConnectionResultVpnConnectionVgwTelemetry withStatus(ModifyVpnConnectionResultVpnConnectionVgwTelemetryStatusEnum status) {
         this.status = status;
         return this;
@@ -47,9 +52,11 @@ public class ModifyVpnConnectionResultVpnConnectionVgwTelemetry {
     
     
     public String statusMessage;
+
     public ModifyVpnConnectionResultVpnConnectionVgwTelemetry withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public ModifyVpnConnectionResultVpnConnectionVgwTelemetry(){}
 }

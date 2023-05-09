@@ -15,6 +15,7 @@ public class DataQualityMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricDescription")
     public String metricDescription;
+
     public DataQualityMetric withMetricDescription(String metricDescription) {
         this.metricDescription = metricDescription;
         return this;
@@ -23,6 +24,7 @@ public class DataQualityMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricType")
     public DataQualityMetricTypeEnum metricType;
+
     public DataQualityMetric withMetricType(DataQualityMetricTypeEnum metricType) {
         this.metricType = metricType;
         return this;
@@ -31,6 +33,7 @@ public class DataQualityMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricValue")
     public Double metricValue;
+
     public DataQualityMetric withMetricValue(Double metricValue) {
         this.metricValue = metricValue;
         return this;
@@ -39,9 +42,11 @@ public class DataQualityMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelatedColumnName")
     public String relatedColumnName;
+
     public DataQualityMetric withRelatedColumnName(String relatedColumnName) {
         this.relatedColumnName = relatedColumnName;
         return this;
     }
     
+    public DataQualityMetric(){}
 }

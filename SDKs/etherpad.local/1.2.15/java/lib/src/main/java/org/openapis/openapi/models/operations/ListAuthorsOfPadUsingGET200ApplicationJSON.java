@@ -15,6 +15,7 @@ public class ListAuthorsOfPadUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public ListAuthorsOfPadUsingGET200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class ListAuthorsOfPadUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ListAuthorsOfPadUsingGET200ApplicationJSONData data;
+
     public ListAuthorsOfPadUsingGET200ApplicationJSON withData(ListAuthorsOfPadUsingGET200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class ListAuthorsOfPadUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ListAuthorsOfPadUsingGET200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ListAuthorsOfPadUsingGET200ApplicationJSON(){}
 }

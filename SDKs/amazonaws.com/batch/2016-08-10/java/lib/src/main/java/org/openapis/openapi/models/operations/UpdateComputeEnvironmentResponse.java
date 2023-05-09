@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateComputeEnvironmentResponse {
@@ -12,6 +13,7 @@ public class UpdateComputeEnvironmentResponse {
      */
     
     public Object clientException;
+
     public UpdateComputeEnvironmentResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateComputeEnvironmentResponse {
     
     
     public String contentType;
+
     public UpdateComputeEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateComputeEnvironmentResponse {
      */
     
     public Object serverException;
+
     public UpdateComputeEnvironmentResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateComputeEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public UpdateComputeEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateComputeEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateComputeEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UpdateComputeEnvironmentResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateComputeEnvironmentResponse updateComputeEnvironmentResponse;
+
     public UpdateComputeEnvironmentResponse withUpdateComputeEnvironmentResponse(org.openapis.openapi.models.shared.UpdateComputeEnvironmentResponse updateComputeEnvironmentResponse) {
         this.updateComputeEnvironmentResponse = updateComputeEnvironmentResponse;
         return this;
     }
     
+    public UpdateComputeEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

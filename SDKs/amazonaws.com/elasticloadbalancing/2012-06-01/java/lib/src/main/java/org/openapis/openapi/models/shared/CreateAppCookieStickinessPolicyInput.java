@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateAppCookieStickinessPolicyInput - Contains the parameters for CreateAppCookieStickinessPolicy.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateAppCookieStickinessPolicyInput {
     
     public String cookieName;
+
     public CreateAppCookieStickinessPolicyInput withCookieName(String cookieName) {
         this.cookieName = cookieName;
         return this;
@@ -19,6 +20,7 @@ public class CreateAppCookieStickinessPolicyInput {
     
     
     public String loadBalancerName;
+
     public CreateAppCookieStickinessPolicyInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -26,9 +28,15 @@ public class CreateAppCookieStickinessPolicyInput {
     
     
     public String policyName;
+
     public CreateAppCookieStickinessPolicyInput withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public CreateAppCookieStickinessPolicyInput(@JsonProperty("CookieName") String cookieName, @JsonProperty("LoadBalancerName") String loadBalancerName, @JsonProperty("PolicyName") String policyName) {
+        this.cookieName = cookieName;
+        this.loadBalancerName = loadBalancerName;
+        this.policyName = policyName;
+  }
 }

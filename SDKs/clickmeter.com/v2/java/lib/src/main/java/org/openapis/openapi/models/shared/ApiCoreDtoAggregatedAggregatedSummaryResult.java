@@ -12,6 +12,7 @@ public class ApiCoreDtoAggregatedAggregatedSummaryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public ApiCoreDtoAggregatedAggregatedSummaryResult withCount(Long count) {
         this.count = count;
         return this;
@@ -20,6 +21,7 @@ public class ApiCoreDtoAggregatedAggregatedSummaryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public ApiCoreDtoAggregatedAggregatedSummaryResult withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -28,6 +30,7 @@ public class ApiCoreDtoAggregatedAggregatedSummaryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Long offset;
+
     public ApiCoreDtoAggregatedAggregatedSummaryResult withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -36,9 +39,11 @@ public class ApiCoreDtoAggregatedAggregatedSummaryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public ApiCoreDtoAggregatedAggregatedResult[] result;
+
     public ApiCoreDtoAggregatedAggregatedSummaryResult withResult(ApiCoreDtoAggregatedAggregatedResult[] result) {
         this.result = result;
         return this;
     }
     
+    public ApiCoreDtoAggregatedAggregatedSummaryResult(){}
 }

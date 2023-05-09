@@ -15,6 +15,7 @@ public class GenerateMobileOTPForTxnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile")
     public String mobile;
+
     public GenerateMobileOTPForTxnRequest withMobile(String mobile) {
         this.mobile = mobile;
         return this;
@@ -23,9 +24,11 @@ public class GenerateMobileOTPForTxnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txnId")
     public String txnId;
+
     public GenerateMobileOTPForTxnRequest withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public GenerateMobileOTPForTxnRequest(){}
 }

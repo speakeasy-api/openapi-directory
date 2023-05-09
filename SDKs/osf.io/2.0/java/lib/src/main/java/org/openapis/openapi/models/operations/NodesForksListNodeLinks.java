@@ -15,6 +15,7 @@ public class NodesForksListNodeLinks {
      */
     
     public String html;
+
     public NodesForksListNodeLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -25,9 +26,11 @@ public class NodesForksListNodeLinks {
      */
     
     public String self;
+
     public NodesForksListNodeLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public NodesForksListNodeLinks(){}
 }

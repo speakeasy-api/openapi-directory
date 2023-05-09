@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UnlabeledIssueEventLabel {
     @JsonProperty("color")
     public String color;
+
     public UnlabeledIssueEventLabel withColor(String color) {
         this.color = color;
         return this;
@@ -16,9 +17,14 @@ public class UnlabeledIssueEventLabel {
     
     @JsonProperty("name")
     public String name;
+
     public UnlabeledIssueEventLabel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UnlabeledIssueEventLabel(@JsonProperty("color") String color, @JsonProperty("name") String name) {
+        this.color = color;
+        this.name = name;
+  }
 }

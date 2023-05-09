@@ -15,6 +15,7 @@ public class SequenceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alignment")
     public String alignment;
+
     public SequenceInformation withAlignment(String alignment) {
         this.alignment = alignment;
         return this;
@@ -23,6 +24,7 @@ public class SequenceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generatedFrom")
     public String generatedFrom;
+
     public SequenceInformation withGeneratedFrom(String generatedFrom) {
         this.generatedFrom = generatedFrom;
         return this;
@@ -31,6 +33,7 @@ public class SequenceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalBaseCount")
     public Long totalBaseCount;
+
     public SequenceInformation withTotalBaseCount(Long totalBaseCount) {
         this.totalBaseCount = totalBaseCount;
         return this;
@@ -39,9 +42,11 @@ public class SequenceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalReadCount")
     public Long totalReadCount;
+
     public SequenceInformation withTotalReadCount(Long totalReadCount) {
         this.totalReadCount = totalReadCount;
         return this;
     }
     
+    public SequenceInformation(){}
 }

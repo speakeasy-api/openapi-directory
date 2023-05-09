@@ -15,6 +15,7 @@ public class CreateRepositoryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryDescription")
     public String repositoryDescription;
+
     public CreateRepositoryInput withRepositoryDescription(String repositoryDescription) {
         this.repositoryDescription = repositoryDescription;
         return this;
@@ -22,6 +23,7 @@ public class CreateRepositoryInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public CreateRepositoryInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -30,9 +32,13 @@ public class CreateRepositoryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateRepositoryInput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRepositoryInput(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

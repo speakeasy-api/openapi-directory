@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class ValuesInPastGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public OffsetDateTime date;
+
     public ValuesInPastGetRequest withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -23,9 +25,14 @@ public class ValuesInPastGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ValuesInPastGetRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ValuesInPastGetRequest(@JsonProperty("date") OffsetDateTime date, @JsonProperty("id") String id) {
+        this.date = date;
+        this.id = id;
+  }
 }

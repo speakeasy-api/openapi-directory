@@ -15,9 +15,11 @@ public class NetworkEndpointGroupsListEndpointsRequestNetworkEndpointFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkEndpoint")
     public NetworkEndpoint networkEndpoint;
+
     public NetworkEndpointGroupsListEndpointsRequestNetworkEndpointFilter withNetworkEndpoint(NetworkEndpoint networkEndpoint) {
         this.networkEndpoint = networkEndpoint;
         return this;
     }
     
+    public NetworkEndpointGroupsListEndpointsRequestNetworkEndpointFilter(){}
 }

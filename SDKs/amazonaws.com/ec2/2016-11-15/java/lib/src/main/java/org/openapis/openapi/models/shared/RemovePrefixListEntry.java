@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RemovePrefixListEntry - An entry for a prefix list.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class RemovePrefixListEntry {
     
     public String cidr;
+
     public RemovePrefixListEntry withCidr(String cidr) {
         this.cidr = cidr;
         return this;
     }
     
+    public RemovePrefixListEntry(@JsonProperty("Cidr") String cidr) {
+        this.cidr = cidr;
+  }
 }

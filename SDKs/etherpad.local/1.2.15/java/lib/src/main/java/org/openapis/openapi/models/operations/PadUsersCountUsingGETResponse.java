@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PadUsersCountUsingGETResponse {
     
     public String contentType;
+
     public PadUsersCountUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PadUsersCountUsingGETResponse {
     
     
     public Integer statusCode;
+
     public PadUsersCountUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PadUsersCountUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PadUsersCountUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PadUsersCountUsingGETResponse {
      */
     
     public PadUsersCountUsingGET200ApplicationJSON padUsersCountUsingGET200ApplicationJSONObject;
+
     public PadUsersCountUsingGETResponse withPadUsersCountUsingGET200ApplicationJSONObject(PadUsersCountUsingGET200ApplicationJSON padUsersCountUsingGET200ApplicationJSONObject) {
         this.padUsersCountUsingGET200ApplicationJSONObject = padUsersCountUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PadUsersCountUsingGETResponse {
      */
     
     public PadUsersCountUsingGET400ApplicationJSON padUsersCountUsingGET400ApplicationJSONObject;
+
     public PadUsersCountUsingGETResponse withPadUsersCountUsingGET400ApplicationJSONObject(PadUsersCountUsingGET400ApplicationJSON padUsersCountUsingGET400ApplicationJSONObject) {
         this.padUsersCountUsingGET400ApplicationJSONObject = padUsersCountUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PadUsersCountUsingGETResponse {
      */
     
     public PadUsersCountUsingGET401ApplicationJSON padUsersCountUsingGET401ApplicationJSONObject;
+
     public PadUsersCountUsingGETResponse withPadUsersCountUsingGET401ApplicationJSONObject(PadUsersCountUsingGET401ApplicationJSON padUsersCountUsingGET401ApplicationJSONObject) {
         this.padUsersCountUsingGET401ApplicationJSONObject = padUsersCountUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class PadUsersCountUsingGETResponse {
      */
     
     public PadUsersCountUsingGET500ApplicationJSON padUsersCountUsingGET500ApplicationJSONObject;
+
     public PadUsersCountUsingGETResponse withPadUsersCountUsingGET500ApplicationJSONObject(PadUsersCountUsingGET500ApplicationJSON padUsersCountUsingGET500ApplicationJSONObject) {
         this.padUsersCountUsingGET500ApplicationJSONObject = padUsersCountUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public PadUsersCountUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

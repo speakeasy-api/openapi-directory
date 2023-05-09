@@ -19,9 +19,11 @@ public class IssuesLockRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lock_reason")
     public IssuesLockRequestBodyLockReasonEnum lockReason;
+
     public IssuesLockRequestBody withLockReason(IssuesLockRequestBodyLockReasonEnum lockReason) {
         this.lockReason = lockReason;
         return this;
     }
     
+    public IssuesLockRequestBody(){}
 }

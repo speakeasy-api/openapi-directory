@@ -18,6 +18,7 @@ public class NodeGroupListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public NodeGroupListWarningCodeEnum code;
+
     public NodeGroupListWarning withCode(NodeGroupListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class NodeGroupListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public NodeGroupListWarningData[] data;
+
     public NodeGroupListWarning withData(NodeGroupListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class NodeGroupListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NodeGroupListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public NodeGroupListWarning(){}
 }

@@ -15,6 +15,7 @@ public class AuthorizedCompanyListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public AuthorizedCompanyListViewModel withCount(Integer count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class AuthorizedCompanyListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public AuthorizedCompanyViewModel[] data;
+
     public AuthorizedCompanyListViewModel withData(AuthorizedCompanyViewModel[] data) {
         this.data = data;
         return this;
@@ -31,6 +33,7 @@ public class AuthorizedCompanyListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AuthorizedCompanyListViewModel withEmail(String email) {
         this.email = email;
         return this;
@@ -39,6 +42,7 @@ public class AuthorizedCompanyListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasMore")
     public Boolean hasMore;
+
     public AuthorizedCompanyListViewModel withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
@@ -47,6 +51,7 @@ public class AuthorizedCompanyListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public AuthorizedCompanyListViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -55,6 +60,7 @@ public class AuthorizedCompanyListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Integer total;
+
     public AuthorizedCompanyListViewModel withTotal(Integer total) {
         this.total = total;
         return this;
@@ -63,9 +69,11 @@ public class AuthorizedCompanyListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public AuthorizedCompanyListViewModel withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AuthorizedCompanyListViewModel(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindPlacesFindPlacesGetResponse {
     
     public String contentType;
+
     public FindPlacesFindPlacesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FindPlacesFindPlacesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.FindPlacesModel[] findPlacesModels;
+
     public FindPlacesFindPlacesGetResponse withFindPlacesModels(org.openapis.openapi.models.shared.FindPlacesModel[] findPlacesModels) {
         this.findPlacesModels = findPlacesModels;
         return this;
@@ -29,6 +32,7 @@ public class FindPlacesFindPlacesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GeneralRequestError generalRequestError;
+
     public FindPlacesFindPlacesGetResponse withGeneralRequestError(org.openapis.openapi.models.shared.GeneralRequestError generalRequestError) {
         this.generalRequestError = generalRequestError;
         return this;
@@ -39,6 +43,7 @@ public class FindPlacesFindPlacesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public FindPlacesFindPlacesGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -46,6 +51,7 @@ public class FindPlacesFindPlacesGetResponse {
     
     
     public Integer statusCode;
+
     public FindPlacesFindPlacesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class FindPlacesFindPlacesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindPlacesFindPlacesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FindPlacesFindPlacesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class ReverseReplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reversedDirectionSourceServerArn")
     public String reversedDirectionSourceServerArn;
+
     public ReverseReplicationResponse withReversedDirectionSourceServerArn(String reversedDirectionSourceServerArn) {
         this.reversedDirectionSourceServerArn = reversedDirectionSourceServerArn;
         return this;
     }
     
+    public ReverseReplicationResponse(){}
 }

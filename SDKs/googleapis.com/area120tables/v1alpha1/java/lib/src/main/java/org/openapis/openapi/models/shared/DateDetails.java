@@ -18,9 +18,11 @@ public class DateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasTime")
     public Boolean hasTime;
+
     public DateDetails withHasTime(Boolean hasTime) {
         this.hasTime = hasTime;
         return this;
     }
     
+    public DateDetails(){}
 }

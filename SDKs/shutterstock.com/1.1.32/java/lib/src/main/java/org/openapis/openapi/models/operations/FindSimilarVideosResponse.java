@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindSimilarVideosResponse {
     
     public String contentType;
+
     public FindSimilarVideosResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class FindSimilarVideosResponse {
     
     
     public Integer statusCode;
+
     public FindSimilarVideosResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class FindSimilarVideosResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindSimilarVideosResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class FindSimilarVideosResponse {
      */
     
     public org.openapis.openapi.models.shared.VideoSearchResults videoSearchResults;
+
     public FindSimilarVideosResponse withVideoSearchResults(org.openapis.openapi.models.shared.VideoSearchResults videoSearchResults) {
         this.videoSearchResults = videoSearchResults;
         return this;
     }
     
+    public FindSimilarVideosResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

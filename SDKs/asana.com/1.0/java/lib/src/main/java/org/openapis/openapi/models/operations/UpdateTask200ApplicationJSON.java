@@ -15,9 +15,11 @@ public class UpdateTask200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TaskResponse data;
+
     public UpdateTask200ApplicationJSON withData(org.openapis.openapi.models.shared.TaskResponse data) {
         this.data = data;
         return this;
     }
     
+    public UpdateTask200ApplicationJSON(){}
 }

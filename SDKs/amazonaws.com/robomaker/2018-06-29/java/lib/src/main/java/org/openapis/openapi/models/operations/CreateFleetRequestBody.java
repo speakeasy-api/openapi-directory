@@ -14,6 +14,7 @@ public class CreateFleetRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateFleetRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,13 @@ public class CreateFleetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateFleetRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFleetRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

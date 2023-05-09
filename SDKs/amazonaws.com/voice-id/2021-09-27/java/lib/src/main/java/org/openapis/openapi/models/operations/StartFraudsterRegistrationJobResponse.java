@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartFraudsterRegistrationJobResponse {
@@ -12,6 +13,7 @@ public class StartFraudsterRegistrationJobResponse {
      */
     
     public Object accessDeniedException;
+
     public StartFraudsterRegistrationJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartFraudsterRegistrationJobResponse {
      */
     
     public Object conflictException;
+
     public StartFraudsterRegistrationJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartFraudsterRegistrationJobResponse {
     
     
     public String contentType;
+
     public StartFraudsterRegistrationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartFraudsterRegistrationJobResponse {
      */
     
     public Object internalServerException;
+
     public StartFraudsterRegistrationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class StartFraudsterRegistrationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartFraudsterRegistrationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartFraudsterRegistrationJobResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartFraudsterRegistrationJobResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -69,6 +76,7 @@ public class StartFraudsterRegistrationJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartFraudsterRegistrationJobResponse startFraudsterRegistrationJobResponse;
+
     public StartFraudsterRegistrationJobResponse withStartFraudsterRegistrationJobResponse(org.openapis.openapi.models.shared.StartFraudsterRegistrationJobResponse startFraudsterRegistrationJobResponse) {
         this.startFraudsterRegistrationJobResponse = startFraudsterRegistrationJobResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartFraudsterRegistrationJobResponse {
     
     
     public Integer statusCode;
+
     public StartFraudsterRegistrationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StartFraudsterRegistrationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartFraudsterRegistrationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class StartFraudsterRegistrationJobResponse {
      */
     
     public Object throttlingException;
+
     public StartFraudsterRegistrationJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class StartFraudsterRegistrationJobResponse {
      */
     
     public Object validationException;
+
     public StartFraudsterRegistrationJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartFraudsterRegistrationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

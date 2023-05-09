@@ -15,6 +15,7 @@ public class BlackFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxPixelThreshold")
     public Float maxPixelThreshold;
+
     public BlackFrame withMaxPixelThreshold(Float maxPixelThreshold) {
         this.maxPixelThreshold = maxPixelThreshold;
         return this;
@@ -23,9 +24,11 @@ public class BlackFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinCoveragePercentage")
     public Float minCoveragePercentage;
+
     public BlackFrame withMinCoveragePercentage(Float minCoveragePercentage) {
         this.minCoveragePercentage = minCoveragePercentage;
         return this;
     }
     
+    public BlackFrame(){}
 }

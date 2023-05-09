@@ -18,6 +18,7 @@ public class UpdateNamedRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateNamedRangeRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,9 +30,11 @@ public class UpdateNamedRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedRange")
     public NamedRange namedRange;
+
     public UpdateNamedRangeRequest withNamedRange(NamedRange namedRange) {
         this.namedRange = namedRange;
         return this;
     }
     
+    public UpdateNamedRangeRequest(){}
 }

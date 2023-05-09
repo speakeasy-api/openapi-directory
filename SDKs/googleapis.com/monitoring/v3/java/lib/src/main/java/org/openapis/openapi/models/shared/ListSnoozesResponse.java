@@ -18,6 +18,7 @@ public class ListSnoozesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListSnoozesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListSnoozesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snoozes")
     public Snooze[] snoozes;
+
     public ListSnoozesResponse withSnoozes(Snooze[] snoozes) {
         this.snoozes = snoozes;
         return this;
     }
     
+    public ListSnoozesResponse(){}
 }

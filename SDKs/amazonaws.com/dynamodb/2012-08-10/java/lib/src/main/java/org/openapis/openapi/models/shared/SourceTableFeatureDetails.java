@@ -15,6 +15,7 @@ public class SourceTableFeatureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalSecondaryIndexes")
     public GlobalSecondaryIndexInfo[] globalSecondaryIndexes;
+
     public SourceTableFeatureDetails withGlobalSecondaryIndexes(GlobalSecondaryIndexInfo[] globalSecondaryIndexes) {
         this.globalSecondaryIndexes = globalSecondaryIndexes;
         return this;
@@ -23,6 +24,7 @@ public class SourceTableFeatureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalSecondaryIndexes")
     public LocalSecondaryIndexInfo[] localSecondaryIndexes;
+
     public SourceTableFeatureDetails withLocalSecondaryIndexes(LocalSecondaryIndexInfo[] localSecondaryIndexes) {
         this.localSecondaryIndexes = localSecondaryIndexes;
         return this;
@@ -31,6 +33,7 @@ public class SourceTableFeatureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SSEDescription")
     public SSEDescription sseDescription;
+
     public SourceTableFeatureDetails withSSEDescription(SSEDescription sseDescription) {
         this.sseDescription = sseDescription;
         return this;
@@ -39,6 +42,7 @@ public class SourceTableFeatureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamDescription")
     public StreamSpecification streamDescription;
+
     public SourceTableFeatureDetails withStreamDescription(StreamSpecification streamDescription) {
         this.streamDescription = streamDescription;
         return this;
@@ -47,9 +51,11 @@ public class SourceTableFeatureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeToLiveDescription")
     public TimeToLiveDescription timeToLiveDescription;
+
     public SourceTableFeatureDetails withTimeToLiveDescription(TimeToLiveDescription timeToLiveDescription) {
         this.timeToLiveDescription = timeToLiveDescription;
         return this;
     }
     
+    public SourceTableFeatureDetails(){}
 }

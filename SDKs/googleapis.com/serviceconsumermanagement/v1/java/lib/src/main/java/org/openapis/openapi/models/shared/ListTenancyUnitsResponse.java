@@ -18,6 +18,7 @@ public class ListTenancyUnitsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTenancyUnitsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListTenancyUnitsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenancyUnits")
     public TenancyUnit[] tenancyUnits;
+
     public ListTenancyUnitsResponse withTenancyUnits(TenancyUnit[] tenancyUnits) {
         this.tenancyUnits = tenancyUnits;
         return this;
     }
     
+    public ListTenancyUnitsResponse(){}
 }

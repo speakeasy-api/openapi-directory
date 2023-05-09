@@ -66,11 +66,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistrictEventsResponse res = new org.openapis.openapi.models.operations.GetDistrictEventsResponse() {{
+        org.openapis.openapi.models.operations.GetDistrictEventsResponse res = new org.openapis.openapi.models.operations.GetDistrictEventsResponse(contentType, httpRes.statusCode()) {{
             events = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,11 +116,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistrictEventsKeysResponse res = new org.openapis.openapi.models.operations.GetDistrictEventsKeysResponse() {{
+        org.openapis.openapi.models.operations.GetDistrictEventsKeysResponse res = new org.openapis.openapi.models.operations.GetDistrictEventsKeysResponse(contentType, httpRes.statusCode()) {{
             getDistrictEventsKeys200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,11 +166,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistrictEventsSimpleResponse res = new org.openapis.openapi.models.operations.GetDistrictEventsSimpleResponse() {{
+        org.openapis.openapi.models.operations.GetDistrictEventsSimpleResponse res = new org.openapis.openapi.models.operations.GetDistrictEventsSimpleResponse(contentType, httpRes.statusCode()) {{
             eventSimples = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -222,11 +216,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventResponse res = new org.openapis.openapi.models.operations.GetEventResponse() {{
+        org.openapis.openapi.models.operations.GetEventResponse res = new org.openapis.openapi.models.operations.GetEventResponse(contentType, httpRes.statusCode()) {{
             event = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -274,11 +266,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventAlliancesResponse res = new org.openapis.openapi.models.operations.GetEventAlliancesResponse() {{
+        org.openapis.openapi.models.operations.GetEventAlliancesResponse res = new org.openapis.openapi.models.operations.GetEventAlliancesResponse(contentType, httpRes.statusCode()) {{
             eliminationAlliances = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -326,11 +316,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventAwardsResponse res = new org.openapis.openapi.models.operations.GetEventAwardsResponse() {{
+        org.openapis.openapi.models.operations.GetEventAwardsResponse res = new org.openapis.openapi.models.operations.GetEventAwardsResponse(contentType, httpRes.statusCode()) {{
             awards = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -378,11 +366,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventDistrictPointsResponse res = new org.openapis.openapi.models.operations.GetEventDistrictPointsResponse() {{
+        org.openapis.openapi.models.operations.GetEventDistrictPointsResponse res = new org.openapis.openapi.models.operations.GetEventDistrictPointsResponse(contentType, httpRes.statusCode()) {{
             eventDistrictPoints = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -430,11 +416,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventInsightsResponse res = new org.openapis.openapi.models.operations.GetEventInsightsResponse() {{
+        org.openapis.openapi.models.operations.GetEventInsightsResponse res = new org.openapis.openapi.models.operations.GetEventInsightsResponse(contentType, httpRes.statusCode()) {{
             eventInsights = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,11 +466,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventMatchTimeseriesResponse res = new org.openapis.openapi.models.operations.GetEventMatchTimeseriesResponse() {{
+        org.openapis.openapi.models.operations.GetEventMatchTimeseriesResponse res = new org.openapis.openapi.models.operations.GetEventMatchTimeseriesResponse(contentType, httpRes.statusCode()) {{
             getEventMatchTimeseries200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,11 +516,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventMatchesResponse res = new org.openapis.openapi.models.operations.GetEventMatchesResponse() {{
+        org.openapis.openapi.models.operations.GetEventMatchesResponse res = new org.openapis.openapi.models.operations.GetEventMatchesResponse(contentType, httpRes.statusCode()) {{
             matches = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -586,11 +566,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventMatchesKeysResponse res = new org.openapis.openapi.models.operations.GetEventMatchesKeysResponse() {{
+        org.openapis.openapi.models.operations.GetEventMatchesKeysResponse res = new org.openapis.openapi.models.operations.GetEventMatchesKeysResponse(contentType, httpRes.statusCode()) {{
             getEventMatchesKeys200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -638,11 +616,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventMatchesSimpleResponse res = new org.openapis.openapi.models.operations.GetEventMatchesSimpleResponse() {{
+        org.openapis.openapi.models.operations.GetEventMatchesSimpleResponse res = new org.openapis.openapi.models.operations.GetEventMatchesSimpleResponse(contentType, httpRes.statusCode()) {{
             matchSimples = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -690,11 +666,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventOPRsResponse res = new org.openapis.openapi.models.operations.GetEventOPRsResponse() {{
+        org.openapis.openapi.models.operations.GetEventOPRsResponse res = new org.openapis.openapi.models.operations.GetEventOPRsResponse(contentType, httpRes.statusCode()) {{
             eventOPRs = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -742,11 +716,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventPredictionsResponse res = new org.openapis.openapi.models.operations.GetEventPredictionsResponse() {{
+        org.openapis.openapi.models.operations.GetEventPredictionsResponse res = new org.openapis.openapi.models.operations.GetEventPredictionsResponse(contentType, httpRes.statusCode()) {{
             eventPredictions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -794,11 +766,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventRankingsResponse res = new org.openapis.openapi.models.operations.GetEventRankingsResponse() {{
+        org.openapis.openapi.models.operations.GetEventRankingsResponse res = new org.openapis.openapi.models.operations.GetEventRankingsResponse(contentType, httpRes.statusCode()) {{
             eventRanking = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -846,11 +816,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventSimpleResponse res = new org.openapis.openapi.models.operations.GetEventSimpleResponse() {{
+        org.openapis.openapi.models.operations.GetEventSimpleResponse res = new org.openapis.openapi.models.operations.GetEventSimpleResponse(contentType, httpRes.statusCode()) {{
             eventSimple = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -898,11 +866,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventTeamsResponse res = new org.openapis.openapi.models.operations.GetEventTeamsResponse() {{
+        org.openapis.openapi.models.operations.GetEventTeamsResponse res = new org.openapis.openapi.models.operations.GetEventTeamsResponse(contentType, httpRes.statusCode()) {{
             teams = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -950,11 +916,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventTeamsKeysResponse res = new org.openapis.openapi.models.operations.GetEventTeamsKeysResponse() {{
+        org.openapis.openapi.models.operations.GetEventTeamsKeysResponse res = new org.openapis.openapi.models.operations.GetEventTeamsKeysResponse(contentType, httpRes.statusCode()) {{
             getEventTeamsKeys200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1002,11 +966,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventTeamsSimpleResponse res = new org.openapis.openapi.models.operations.GetEventTeamsSimpleResponse() {{
+        org.openapis.openapi.models.operations.GetEventTeamsSimpleResponse res = new org.openapis.openapi.models.operations.GetEventTeamsSimpleResponse(contentType, httpRes.statusCode()) {{
             teamSimples = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1054,11 +1016,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventTeamsStatusesResponse res = new org.openapis.openapi.models.operations.GetEventTeamsStatusesResponse() {{
+        org.openapis.openapi.models.operations.GetEventTeamsStatusesResponse res = new org.openapis.openapi.models.operations.GetEventTeamsStatusesResponse(contentType, httpRes.statusCode()) {{
             getEventTeamsStatuses200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1106,11 +1066,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventsByYearResponse res = new org.openapis.openapi.models.operations.GetEventsByYearResponse() {{
+        org.openapis.openapi.models.operations.GetEventsByYearResponse res = new org.openapis.openapi.models.operations.GetEventsByYearResponse(contentType, httpRes.statusCode()) {{
             events = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1158,11 +1116,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventsByYearKeysResponse res = new org.openapis.openapi.models.operations.GetEventsByYearKeysResponse() {{
+        org.openapis.openapi.models.operations.GetEventsByYearKeysResponse res = new org.openapis.openapi.models.operations.GetEventsByYearKeysResponse(contentType, httpRes.statusCode()) {{
             getEventsByYearKeys200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1210,11 +1166,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventsByYearSimpleResponse res = new org.openapis.openapi.models.operations.GetEventsByYearSimpleResponse() {{
+        org.openapis.openapi.models.operations.GetEventsByYearSimpleResponse res = new org.openapis.openapi.models.operations.GetEventsByYearSimpleResponse(contentType, httpRes.statusCode()) {{
             eventSimples = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1262,11 +1216,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamEventAwardsResponse res = new org.openapis.openapi.models.operations.GetTeamEventAwardsResponse() {{
+        org.openapis.openapi.models.operations.GetTeamEventAwardsResponse res = new org.openapis.openapi.models.operations.GetTeamEventAwardsResponse(contentType, httpRes.statusCode()) {{
             awards = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1314,11 +1266,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamEventMatchesResponse res = new org.openapis.openapi.models.operations.GetTeamEventMatchesResponse() {{
+        org.openapis.openapi.models.operations.GetTeamEventMatchesResponse res = new org.openapis.openapi.models.operations.GetTeamEventMatchesResponse(contentType, httpRes.statusCode()) {{
             matches = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1366,11 +1316,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamEventMatchesKeysResponse res = new org.openapis.openapi.models.operations.GetTeamEventMatchesKeysResponse() {{
+        org.openapis.openapi.models.operations.GetTeamEventMatchesKeysResponse res = new org.openapis.openapi.models.operations.GetTeamEventMatchesKeysResponse(contentType, httpRes.statusCode()) {{
             getTeamEventMatchesKeys200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1418,11 +1366,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamEventMatchesSimpleResponse res = new org.openapis.openapi.models.operations.GetTeamEventMatchesSimpleResponse() {{
+        org.openapis.openapi.models.operations.GetTeamEventMatchesSimpleResponse res = new org.openapis.openapi.models.operations.GetTeamEventMatchesSimpleResponse(contentType, httpRes.statusCode()) {{
             matches = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1470,11 +1416,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamEventStatusResponse res = new org.openapis.openapi.models.operations.GetTeamEventStatusResponse() {{
+        org.openapis.openapi.models.operations.GetTeamEventStatusResponse res = new org.openapis.openapi.models.operations.GetTeamEventStatusResponse(contentType, httpRes.statusCode()) {{
             teamEventStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1522,11 +1466,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamEventsResponse res = new org.openapis.openapi.models.operations.GetTeamEventsResponse() {{
+        org.openapis.openapi.models.operations.GetTeamEventsResponse res = new org.openapis.openapi.models.operations.GetTeamEventsResponse(contentType, httpRes.statusCode()) {{
             events = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1574,11 +1516,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamEventsByYearResponse res = new org.openapis.openapi.models.operations.GetTeamEventsByYearResponse() {{
+        org.openapis.openapi.models.operations.GetTeamEventsByYearResponse res = new org.openapis.openapi.models.operations.GetTeamEventsByYearResponse(contentType, httpRes.statusCode()) {{
             events = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1626,11 +1566,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamEventsByYearKeysResponse res = new org.openapis.openapi.models.operations.GetTeamEventsByYearKeysResponse() {{
+        org.openapis.openapi.models.operations.GetTeamEventsByYearKeysResponse res = new org.openapis.openapi.models.operations.GetTeamEventsByYearKeysResponse(contentType, httpRes.statusCode()) {{
             getTeamEventsByYearKeys200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1678,11 +1616,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamEventsByYearSimpleResponse res = new org.openapis.openapi.models.operations.GetTeamEventsByYearSimpleResponse() {{
+        org.openapis.openapi.models.operations.GetTeamEventsByYearSimpleResponse res = new org.openapis.openapi.models.operations.GetTeamEventsByYearSimpleResponse(contentType, httpRes.statusCode()) {{
             eventSimples = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1730,11 +1666,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamEventsKeysResponse res = new org.openapis.openapi.models.operations.GetTeamEventsKeysResponse() {{
+        org.openapis.openapi.models.operations.GetTeamEventsKeysResponse res = new org.openapis.openapi.models.operations.GetTeamEventsKeysResponse(contentType, httpRes.statusCode()) {{
             getTeamEventsKeys200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1782,11 +1716,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamEventsSimpleResponse res = new org.openapis.openapi.models.operations.GetTeamEventsSimpleResponse() {{
+        org.openapis.openapi.models.operations.GetTeamEventsSimpleResponse res = new org.openapis.openapi.models.operations.GetTeamEventsSimpleResponse(contentType, httpRes.statusCode()) {{
             eventSimples = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1834,11 +1766,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamEventsStatusesByYearResponse res = new org.openapis.openapi.models.operations.GetTeamEventsStatusesByYearResponse() {{
+        org.openapis.openapi.models.operations.GetTeamEventsStatusesByYearResponse res = new org.openapis.openapi.models.operations.GetTeamEventsStatusesByYearResponse(contentType, httpRes.statusCode()) {{
             getTeamEventsStatusesByYear200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class VochseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public VochseRequestBodyCertificateParameters certificateParameters;
+
     public VochseRequestBody withCertificateParameters(VochseRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class VochseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public VochseRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class VochseRequestBody {
      */
     @JsonProperty("format")
     public VochseRequestBodyFormatEnum format;
+
     public VochseRequestBody withFormat(VochseRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class VochseRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public VochseRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public VochseRequestBody(@JsonProperty("format") VochseRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

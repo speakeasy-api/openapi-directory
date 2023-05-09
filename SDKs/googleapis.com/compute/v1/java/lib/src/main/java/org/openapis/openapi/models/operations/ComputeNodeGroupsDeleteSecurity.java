@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeNodeGroupsDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeNodeGroupsDeleteSecurityOption1 option1;
+
     public ComputeNodeGroupsDeleteSecurity withOption1(ComputeNodeGroupsDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeNodeGroupsDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeNodeGroupsDeleteSecurityOption2 option2;
+
     public ComputeNodeGroupsDeleteSecurity withOption2(ComputeNodeGroupsDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeNodeGroupsDeleteSecurity(){}
 }

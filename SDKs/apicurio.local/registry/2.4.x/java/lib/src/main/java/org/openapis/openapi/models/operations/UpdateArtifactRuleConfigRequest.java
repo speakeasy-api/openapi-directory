@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateArtifactRuleConfigRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Rule rule1;
+
     public UpdateArtifactRuleConfigRequest withRule1(org.openapis.openapi.models.shared.Rule rule1) {
         this.rule1 = rule1;
         return this;
@@ -19,6 +21,7 @@ public class UpdateArtifactRuleConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
     public String artifactId;
+
     public UpdateArtifactRuleConfigRequest withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -29,6 +32,7 @@ public class UpdateArtifactRuleConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public UpdateArtifactRuleConfigRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -39,9 +43,16 @@ public class UpdateArtifactRuleConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rule")
     public UpdateArtifactRuleConfigRuleEnum rulePathParameter;
+
     public UpdateArtifactRuleConfigRequest withRulePathParameter(UpdateArtifactRuleConfigRuleEnum rulePathParameter) {
         this.rulePathParameter = rulePathParameter;
         return this;
     }
     
+    public UpdateArtifactRuleConfigRequest(@JsonProperty("Rule1") org.openapis.openapi.models.shared.Rule rule1, @JsonProperty("artifactId") String artifactId, @JsonProperty("groupId") String groupId, @JsonProperty("rulePathParameter") UpdateArtifactRuleConfigRuleEnum rulePathParameter) {
+        this.rule1 = rule1;
+        this.artifactId = artifactId;
+        this.groupId = groupId;
+        this.rulePathParameter = rulePathParameter;
+  }
 }

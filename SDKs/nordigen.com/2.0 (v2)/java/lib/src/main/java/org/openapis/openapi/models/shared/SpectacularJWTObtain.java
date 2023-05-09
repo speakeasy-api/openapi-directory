@@ -18,6 +18,7 @@ public class SpectacularJWTObtain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access")
     public String access;
+
     public SpectacularJWTObtain withAccess(String access) {
         this.access = access;
         return this;
@@ -29,6 +30,7 @@ public class SpectacularJWTObtain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access_expires")
     public Long accessExpires;
+
     public SpectacularJWTObtain withAccessExpires(Long accessExpires) {
         this.accessExpires = accessExpires;
         return this;
@@ -40,6 +42,7 @@ public class SpectacularJWTObtain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh")
     public String refresh;
+
     public SpectacularJWTObtain withRefresh(String refresh) {
         this.refresh = refresh;
         return this;
@@ -51,9 +54,11 @@ public class SpectacularJWTObtain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh_expires")
     public Long refreshExpires;
+
     public SpectacularJWTObtain withRefreshExpires(Long refreshExpires) {
         this.refreshExpires = refreshExpires;
         return this;
     }
     
+    public SpectacularJWTObtain(){}
 }

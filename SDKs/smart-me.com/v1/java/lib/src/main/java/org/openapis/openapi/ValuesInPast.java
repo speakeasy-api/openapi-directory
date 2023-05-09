@@ -58,12 +58,10 @@ public class ValuesInPast {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ValuesInPastGetResponse res = new org.openapis.openapi.models.operations.ValuesInPastGetResponse() {{
+        org.openapis.openapi.models.operations.ValuesInPastGetResponse res = new org.openapis.openapi.models.operations.ValuesInPastGetResponse(contentType, httpRes.statusCode()) {{
             valuesData = null;
             valuesData = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

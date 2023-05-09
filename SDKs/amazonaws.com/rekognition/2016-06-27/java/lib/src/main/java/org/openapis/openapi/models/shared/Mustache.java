@@ -15,6 +15,7 @@ public class Mustache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public Mustache withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -23,9 +24,11 @@ public class Mustache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Boolean value;
+
     public Mustache withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public Mustache(){}
 }

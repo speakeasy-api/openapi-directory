@@ -18,9 +18,11 @@ public class WatchTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public CloudPubsubTopic topic;
+
     public WatchTarget withTopic(CloudPubsubTopic topic) {
         this.topic = topic;
         return this;
     }
     
+    public WatchTarget(){}
 }

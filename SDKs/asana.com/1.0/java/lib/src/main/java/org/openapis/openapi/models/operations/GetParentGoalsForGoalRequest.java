@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetParentGoalsForGoalRequest {
@@ -12,6 +13,7 @@ public class GetParentGoalsForGoalRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=goal_gid")
     public String goalGid;
+
     public GetParentGoalsForGoalRequest withGoalGid(String goalGid) {
         this.goalGid = goalGid;
         return this;
@@ -24,6 +26,7 @@ public class GetParentGoalsForGoalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetParentGoalsForGoalRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,9 +38,13 @@ public class GetParentGoalsForGoalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetParentGoalsForGoalRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public GetParentGoalsForGoalRequest(@JsonProperty("goal_gid") String goalGid) {
+        this.goalGid = goalGid;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTeamEventMatchesKeysResponse {
     
     public String contentType;
+
     public GetTeamEventMatchesKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTeamEventMatchesKeysResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetTeamEventMatchesKeysResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetTeamEventMatchesKeysResponse {
     
     
     public Integer statusCode;
+
     public GetTeamEventMatchesKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetTeamEventMatchesKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTeamEventMatchesKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetTeamEventMatchesKeysResponse {
      */
     
     public String[] getTeamEventMatchesKeys200ApplicationJSONStrings;
+
     public GetTeamEventMatchesKeysResponse withGetTeamEventMatchesKeys200ApplicationJSONStrings(String[] getTeamEventMatchesKeys200ApplicationJSONStrings) {
         this.getTeamEventMatchesKeys200ApplicationJSONStrings = getTeamEventMatchesKeys200ApplicationJSONStrings;
         return this;
     }
     
+    public GetTeamEventMatchesKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

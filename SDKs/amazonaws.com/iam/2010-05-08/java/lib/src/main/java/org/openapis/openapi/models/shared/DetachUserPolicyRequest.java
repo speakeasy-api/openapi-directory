@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DetachUserPolicyRequest {
     
     public String policyArn;
+
     public DetachUserPolicyRequest withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -16,9 +17,14 @@ public class DetachUserPolicyRequest {
     
     
     public String userName;
+
     public DetachUserPolicyRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public DetachUserPolicyRequest(@JsonProperty("PolicyArn") String policyArn, @JsonProperty("UserName") String userName) {
+        this.policyArn = policyArn;
+        this.userName = userName;
+  }
 }

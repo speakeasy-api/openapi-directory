@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GenerateAccessTokenResponse {
     /**
-     * The generated bearer access token. To use this token, include it in an Authorization header of an HTTP request sent to the associated workstation's hostname, for example, `Authorization: Bearer `.
+     * The generated bearer access token. To use this token, include it in an Authorization header of an HTTP request sent to the associated workstation's hostname\u2014for example, `Authorization: Bearer `.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public GenerateAccessTokenResponse withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -29,9 +30,11 @@ public class GenerateAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public GenerateAccessTokenResponse withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
     }
     
+    public GenerateAccessTokenResponse(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExportFormsResponse {
     @JsonProperty("entities")
     public Form[] entities;
+
     public ExportFormsResponse withEntities(Form[] entities) {
         this.entities = entities;
         return this;
@@ -22,9 +23,13 @@ public class ExportFormsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ExportFormsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ExportFormsResponse(@JsonProperty("entities") Form[] entities) {
+        this.entities = entities;
+  }
 }

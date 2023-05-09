@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListImagePipelinesResponse {
@@ -12,6 +13,7 @@ public class ListImagePipelinesResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public ListImagePipelinesResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class ListImagePipelinesResponse {
      */
     
     public Object clientException;
+
     public ListImagePipelinesResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class ListImagePipelinesResponse {
     
     
     public String contentType;
+
     public ListImagePipelinesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListImagePipelinesResponse {
      */
     
     public Object forbiddenException;
+
     public ListImagePipelinesResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class ListImagePipelinesResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListImagePipelinesResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListImagePipelinesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListImagePipelinesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class ListImagePipelinesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListImagePipelinesResponse listImagePipelinesResponse;
+
     public ListImagePipelinesResponse withListImagePipelinesResponse(org.openapis.openapi.models.shared.ListImagePipelinesResponse listImagePipelinesResponse) {
         this.listImagePipelinesResponse = listImagePipelinesResponse;
         return this;
@@ -79,6 +87,7 @@ public class ListImagePipelinesResponse {
      */
     
     public Object serviceException;
+
     public ListImagePipelinesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class ListImagePipelinesResponse {
     
     
     public Integer statusCode;
+
     public ListImagePipelinesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListImagePipelinesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListImagePipelinesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class ListImagePipelinesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListImagePipelinesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ListImagePipelinesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

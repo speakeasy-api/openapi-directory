@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImageLayerAggregationResponse {
     @JsonProperty("accountId")
     public String accountId;
+
     public ImageLayerAggregationResponse withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -21,6 +22,7 @@ public class ImageLayerAggregationResponse {
     
     @JsonProperty("layerHash")
     public String layerHash;
+
     public ImageLayerAggregationResponse withLayerHash(String layerHash) {
         this.layerHash = layerHash;
         return this;
@@ -28,6 +30,7 @@ public class ImageLayerAggregationResponse {
     
     @JsonProperty("repository")
     public String repository;
+
     public ImageLayerAggregationResponse withRepository(String repository) {
         this.repository = repository;
         return this;
@@ -35,6 +38,7 @@ public class ImageLayerAggregationResponse {
     
     @JsonProperty("resourceId")
     public String resourceId;
+
     public ImageLayerAggregationResponse withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -43,9 +47,16 @@ public class ImageLayerAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityCounts")
     public SeverityCounts severityCounts;
+
     public ImageLayerAggregationResponse withSeverityCounts(SeverityCounts severityCounts) {
         this.severityCounts = severityCounts;
         return this;
     }
     
+    public ImageLayerAggregationResponse(@JsonProperty("accountId") String accountId, @JsonProperty("layerHash") String layerHash, @JsonProperty("repository") String repository, @JsonProperty("resourceId") String resourceId) {
+        this.accountId = accountId;
+        this.layerHash = layerHash;
+        this.repository = repository;
+        this.resourceId = resourceId;
+  }
 }

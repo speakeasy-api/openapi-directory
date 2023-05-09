@@ -15,6 +15,7 @@ public class SpecPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonBody")
     public Boolean jsonBody;
+
     public SpecPersistVO withJsonBody(Boolean jsonBody) {
         this.jsonBody = jsonBody;
         return this;
@@ -23,6 +24,7 @@ public class SpecPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_type_id")
     public Long productTypeId;
+
     public SpecPersistVO withProductTypeId(Long productTypeId) {
         this.productTypeId = productTypeId;
         return this;
@@ -31,6 +33,7 @@ public class SpecPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_1")
     public Long quantity1;
+
     public SpecPersistVO withQuantity1(Long quantity1) {
         this.quantity1 = quantity1;
         return this;
@@ -39,6 +42,7 @@ public class SpecPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_2")
     public Long quantity2;
+
     public SpecPersistVO withQuantity2(Long quantity2) {
         this.quantity2 = quantity2;
         return this;
@@ -47,6 +51,7 @@ public class SpecPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_3")
     public Long quantity3;
+
     public SpecPersistVO withQuantity3(Long quantity3) {
         this.quantity3 = quantity3;
         return this;
@@ -55,6 +60,7 @@ public class SpecPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_4")
     public Long quantity4;
+
     public SpecPersistVO withQuantity4(Long quantity4) {
         this.quantity4 = quantity4;
         return this;
@@ -63,6 +69,7 @@ public class SpecPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_5")
     public Long quantity5;
+
     public SpecPersistVO withQuantity5(Long quantity5) {
         this.quantity5 = quantity5;
         return this;
@@ -71,6 +78,7 @@ public class SpecPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public SpecPersistVO withSku(String sku) {
         this.sku = sku;
         return this;
@@ -79,6 +87,7 @@ public class SpecPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_name")
     public String specName;
+
     public SpecPersistVO withSpecName(String specName) {
         this.specName = specName;
         return this;
@@ -87,6 +96,7 @@ public class SpecPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_template_id")
     public Long specTemplateId;
+
     public SpecPersistVO withSpecTemplateId(Long specTemplateId) {
         this.specTemplateId = specTemplateId;
         return this;
@@ -95,6 +105,7 @@ public class SpecPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_type_id")
     public Long specTypeId;
+
     public SpecPersistVO withSpecTypeId(Long specTypeId) {
         this.specTypeId = specTypeId;
         return this;
@@ -103,9 +114,11 @@ public class SpecPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versions")
     public SpecVersionPersistVO[] versions;
+
     public SpecPersistVO withVersions(SpecVersionPersistVO[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public SpecPersistVO(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnterpriseHookOverview {
     @JsonProperty("active_hooks")
     public Long activeHooks;
+
     public EnterpriseHookOverview withActiveHooks(Long activeHooks) {
         this.activeHooks = activeHooks;
         return this;
@@ -19,6 +20,7 @@ public class EnterpriseHookOverview {
     
     @JsonProperty("inactive_hooks")
     public Long inactiveHooks;
+
     public EnterpriseHookOverview withInactiveHooks(Long inactiveHooks) {
         this.inactiveHooks = inactiveHooks;
         return this;
@@ -26,9 +28,15 @@ public class EnterpriseHookOverview {
     
     @JsonProperty("total_hooks")
     public Long totalHooks;
+
     public EnterpriseHookOverview withTotalHooks(Long totalHooks) {
         this.totalHooks = totalHooks;
         return this;
     }
     
+    public EnterpriseHookOverview(@JsonProperty("active_hooks") Long activeHooks, @JsonProperty("inactive_hooks") Long inactiveHooks, @JsonProperty("total_hooks") Long totalHooks) {
+        this.activeHooks = activeHooks;
+        this.inactiveHooks = inactiveHooks;
+        this.totalHooks = totalHooks;
+  }
 }

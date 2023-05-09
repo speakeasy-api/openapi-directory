@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsUnsuspendInstallationRequest {
@@ -12,9 +13,13 @@ public class AppsUnsuspendInstallationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=installation_id")
     public Long installationId;
+
     public AppsUnsuspendInstallationRequest withInstallationId(Long installationId) {
         this.installationId = installationId;
         return this;
     }
     
+    public AppsUnsuspendInstallationRequest(@JsonProperty("installation_id") Long installationId) {
+        this.installationId = installationId;
+  }
 }

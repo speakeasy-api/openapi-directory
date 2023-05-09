@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersIdUserTokenRequestBody {
@@ -12,9 +13,13 @@ public class PostUsersIdUserTokenRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=application")
     public String application;
+
     public PostUsersIdUserTokenRequestBody withApplication(String application) {
         this.application = application;
         return this;
     }
     
+    public PostUsersIdUserTokenRequestBody(@JsonProperty("application") String application) {
+        this.application = application;
+  }
 }

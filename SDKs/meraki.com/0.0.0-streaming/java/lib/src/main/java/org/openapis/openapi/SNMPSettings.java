@@ -52,11 +52,9 @@ public class SNMPSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSnmpSettingsResponse res = new org.openapis.openapi.models.operations.GetNetworkSnmpSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSnmpSettingsResponse res = new org.openapis.openapi.models.operations.GetNetworkSnmpSettingsResponse(contentType, httpRes.statusCode()) {{
             getNetworkSnmpSettings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,11 +90,9 @@ public class SNMPSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationSnmpResponse res = new org.openapis.openapi.models.operations.GetOrganizationSnmpResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationSnmpResponse res = new org.openapis.openapi.models.operations.GetOrganizationSnmpResponse(contentType, httpRes.statusCode()) {{
             getOrganizationSnmp200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

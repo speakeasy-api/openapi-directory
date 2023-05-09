@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLanguageModelResponse {
@@ -12,6 +13,7 @@ public class DescribeLanguageModelResponse {
      */
     
     public Object badRequestException;
+
     public DescribeLanguageModelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeLanguageModelResponse {
     
     
     public String contentType;
+
     public DescribeLanguageModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLanguageModelResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeLanguageModelResponse describeLanguageModelResponse;
+
     public DescribeLanguageModelResponse withDescribeLanguageModelResponse(org.openapis.openapi.models.shared.DescribeLanguageModelResponse describeLanguageModelResponse) {
         this.describeLanguageModelResponse = describeLanguageModelResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeLanguageModelResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeLanguageModelResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeLanguageModelResponse {
      */
     
     public Object limitExceededException;
+
     public DescribeLanguageModelResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeLanguageModelResponse {
      */
     
     public Object notFoundException;
+
     public DescribeLanguageModelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeLanguageModelResponse {
     
     
     public Integer statusCode;
+
     public DescribeLanguageModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeLanguageModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLanguageModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeLanguageModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

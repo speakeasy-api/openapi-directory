@@ -15,6 +15,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public Resource withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,9 +23,13 @@ public class Resource {
     
     @JsonProperty("URI")
     public String uri;
+
     public Resource withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public Resource(@JsonProperty("URI") String uri) {
+        this.uri = uri;
+  }
 }

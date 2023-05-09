@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchCommitsRequest {
@@ -12,6 +13,7 @@ public class SearchCommitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.OrderEnum order;
+
     public SearchCommitsRequest withOrder(org.openapis.openapi.models.shared.OrderEnum order) {
         this.order = order;
         return this;
@@ -22,6 +24,7 @@ public class SearchCommitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public SearchCommitsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class SearchCommitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public SearchCommitsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,6 +46,7 @@ public class SearchCommitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public SearchCommitsRequest withQ(String q) {
         this.q = q;
         return this;
@@ -52,9 +57,13 @@ public class SearchCommitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public SearchCommitsSortEnum sort;
+
     public SearchCommitsRequest withSort(SearchCommitsSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public SearchCommitsRequest(@JsonProperty("q") String q) {
+        this.q = q;
+  }
 }

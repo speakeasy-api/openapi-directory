@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCiscoSwitchResponse {
@@ -12,6 +13,7 @@ public class GetCiscoSwitchResponse {
      */
     
     public org.openapis.openapi.models.shared.CiscoSwitchDataSource ciscoSwitchDataSource;
+
     public GetCiscoSwitchResponse withCiscoSwitchDataSource(org.openapis.openapi.models.shared.CiscoSwitchDataSource ciscoSwitchDataSource) {
         this.ciscoSwitchDataSource = ciscoSwitchDataSource;
         return this;
@@ -19,6 +21,7 @@ public class GetCiscoSwitchResponse {
     
     
     public String contentType;
+
     public GetCiscoSwitchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetCiscoSwitchResponse {
     
     
     public Integer statusCode;
+
     public GetCiscoSwitchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetCiscoSwitchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCiscoSwitchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCiscoSwitchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

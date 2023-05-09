@@ -12,9 +12,11 @@ public class BranchProtectionBlockCreations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public BranchProtectionBlockCreations withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public BranchProtectionBlockCreations(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsLogOptions {
     
     public CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsLogOptionsCloudWatchLogOptions cloudWatchLogOptions;
+
     public CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsLogOptions withCloudWatchLogOptions(CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsLogOptionsCloudWatchLogOptions cloudWatchLogOptions) {
         this.cloudWatchLogOptions = cloudWatchLogOptions;
         return this;
     }
     
+    public CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsLogOptions(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetItemWatchedStatusRequest {
@@ -32,6 +33,7 @@ public class SetItemWatchedStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public SetItemWatchedStatusRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -42,6 +44,7 @@ public class SetItemWatchedStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
     public String itemId;
+
     public SetItemWatchedStatusRequest withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -62,6 +65,7 @@ public class SetItemWatchedStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public SetItemWatchedStatusRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -72,9 +76,14 @@ public class SetItemWatchedStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=position")
     public Integer position;
+
     public SetItemWatchedStatusRequest withPosition(Integer position) {
         this.position = position;
         return this;
     }
     
+    public SetItemWatchedStatusRequest(@JsonProperty("itemId") String itemId, @JsonProperty("position") Integer position) {
+        this.itemId = itemId;
+        this.position = position;
+  }
 }

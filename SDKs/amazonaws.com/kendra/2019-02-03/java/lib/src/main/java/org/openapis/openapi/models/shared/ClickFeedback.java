@@ -19,6 +19,7 @@ public class ClickFeedback {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ClickTime")
     public OffsetDateTime clickTime;
+
     public ClickFeedback withClickTime(OffsetDateTime clickTime) {
         this.clickTime = clickTime;
         return this;
@@ -26,9 +27,14 @@ public class ClickFeedback {
     
     @JsonProperty("ResultId")
     public String resultId;
+
     public ClickFeedback withResultId(String resultId) {
         this.resultId = resultId;
         return this;
     }
     
+    public ClickFeedback(@JsonProperty("ClickTime") OffsetDateTime clickTime, @JsonProperty("ResultId") String resultId) {
+        this.clickTime = clickTime;
+        this.resultId = resultId;
+  }
 }

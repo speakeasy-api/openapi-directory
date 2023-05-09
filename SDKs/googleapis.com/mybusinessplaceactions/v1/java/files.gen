@@ -53,4 +53,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListPlaceActionLinksRespons
 lib/src/main/java/org/openapis/openapi/models/shared/ListPlaceActionTypeMetadataResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlaceActionTypeMetadataPlaceActionTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlaceActionTypeMetadata.java
+docs/sdk/README.md
+docs/locations/README.md
+docs/placeactiontypemetadata/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class FindMatchingLocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public FindMatchingLocationsRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -29,6 +30,7 @@ public class FindMatchingLocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxCacheDuration")
     public String maxCacheDuration;
+
     public FindMatchingLocationsRequest withMaxCacheDuration(String maxCacheDuration) {
         this.maxCacheDuration = maxCacheDuration;
         return this;
@@ -40,9 +42,11 @@ public class FindMatchingLocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numResults")
     public Integer numResults;
+
     public FindMatchingLocationsRequest withNumResults(Integer numResults) {
         this.numResults = numResults;
         return this;
     }
     
+    public FindMatchingLocationsRequest(){}
 }

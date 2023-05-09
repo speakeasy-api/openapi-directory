@@ -18,6 +18,7 @@ public class OperatingSystemVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OperatingSystemVersion withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class OperatingSystemVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OperatingSystemVersion withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class OperatingSystemVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("majorVersion")
     public String majorVersion;
+
     public OperatingSystemVersion withMajorVersion(String majorVersion) {
         this.majorVersion = majorVersion;
         return this;
@@ -51,6 +54,7 @@ public class OperatingSystemVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minorVersion")
     public String minorVersion;
+
     public OperatingSystemVersion withMinorVersion(String minorVersion) {
         this.minorVersion = minorVersion;
         return this;
@@ -62,6 +66,7 @@ public class OperatingSystemVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OperatingSystemVersion withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class OperatingSystemVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystem")
     public OperatingSystem operatingSystem;
+
     public OperatingSystemVersion withOperatingSystem(OperatingSystem operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
     }
     
+    public OperatingSystemVersion(){}
 }

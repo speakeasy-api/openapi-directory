@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PodcastEpisodeList {
     
     public PodcastEpisode[] items;
+
     public PodcastEpisodeList withItems(PodcastEpisode[] items) {
         this.items = items;
         return this;
@@ -19,9 +20,11 @@ public class PodcastEpisodeList {
     
     
     public Long total;
+
     public PodcastEpisodeList withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public PodcastEpisodeList(){}
 }

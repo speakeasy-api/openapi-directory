@@ -18,6 +18,7 @@ public class GoalRelationshipCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contribution_weight")
     public Double contributionWeight;
+
     public GoalRelationshipCompact withContributionWeight(Double contributionWeight) {
         this.contributionWeight = contributionWeight;
         return this;
@@ -29,6 +30,7 @@ public class GoalRelationshipCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public GoalRelationshipCompact withGid(String gid) {
         this.gid = gid;
         return this;
@@ -40,6 +42,7 @@ public class GoalRelationshipCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_subtype")
     public GoalRelationshipCompactResourceSubtypeEnum resourceSubtype;
+
     public GoalRelationshipCompact withResourceSubtype(GoalRelationshipCompactResourceSubtypeEnum resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -51,6 +54,7 @@ public class GoalRelationshipCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public GoalRelationshipCompact withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -59,9 +63,11 @@ public class GoalRelationshipCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supporting_resource")
     public GoalRelationshipCompactSupportingResource supportingResource;
+
     public GoalRelationshipCompact withSupportingResource(GoalRelationshipCompactSupportingResource supportingResource) {
         this.supportingResource = supportingResource;
         return this;
     }
     
+    public GoalRelationshipCompact(){}
 }

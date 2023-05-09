@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MissingSymbolGroupsListRequest {
@@ -12,6 +13,7 @@ public class MissingSymbolGroupsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public MissingSymbolGroupsListRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class MissingSymbolGroupsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public MissingSymbolGroupsListRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -32,9 +35,15 @@ public class MissingSymbolGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=top")
     public Long top;
+
     public MissingSymbolGroupsListRequest withTop(Long top) {
         this.top = top;
         return this;
     }
     
+    public MissingSymbolGroupsListRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("top") Long top) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.top = top;
+  }
 }

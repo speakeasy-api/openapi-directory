@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class GetMetricStreamOutput {
     
     public String arn;
+
     public GetMetricStreamOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class GetMetricStreamOutput {
     
     
     public OffsetDateTime creationDate;
+
     public GetMetricStreamOutput withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -26,6 +28,7 @@ public class GetMetricStreamOutput {
     
     
     public MetricStreamFilter[] excludeFilters;
+
     public GetMetricStreamOutput withExcludeFilters(MetricStreamFilter[] excludeFilters) {
         this.excludeFilters = excludeFilters;
         return this;
@@ -33,6 +36,7 @@ public class GetMetricStreamOutput {
     
     
     public String firehoseArn;
+
     public GetMetricStreamOutput withFirehoseArn(String firehoseArn) {
         this.firehoseArn = firehoseArn;
         return this;
@@ -40,6 +44,7 @@ public class GetMetricStreamOutput {
     
     
     public MetricStreamFilter[] includeFilters;
+
     public GetMetricStreamOutput withIncludeFilters(MetricStreamFilter[] includeFilters) {
         this.includeFilters = includeFilters;
         return this;
@@ -47,6 +52,7 @@ public class GetMetricStreamOutput {
     
     
     public Boolean includeLinkedAccountsMetrics;
+
     public GetMetricStreamOutput withIncludeLinkedAccountsMetrics(Boolean includeLinkedAccountsMetrics) {
         this.includeLinkedAccountsMetrics = includeLinkedAccountsMetrics;
         return this;
@@ -54,6 +60,7 @@ public class GetMetricStreamOutput {
     
     
     public OffsetDateTime lastUpdateDate;
+
     public GetMetricStreamOutput withLastUpdateDate(OffsetDateTime lastUpdateDate) {
         this.lastUpdateDate = lastUpdateDate;
         return this;
@@ -61,6 +68,7 @@ public class GetMetricStreamOutput {
     
     
     public String name;
+
     public GetMetricStreamOutput withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +76,7 @@ public class GetMetricStreamOutput {
     
     
     public MetricStreamOutputFormatEnum outputFormat;
+
     public GetMetricStreamOutput withOutputFormat(MetricStreamOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -75,6 +84,7 @@ public class GetMetricStreamOutput {
     
     
     public String roleArn;
+
     public GetMetricStreamOutput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -82,6 +92,7 @@ public class GetMetricStreamOutput {
     
     
     public String state;
+
     public GetMetricStreamOutput withState(String state) {
         this.state = state;
         return this;
@@ -89,9 +100,11 @@ public class GetMetricStreamOutput {
     
     
     public MetricStreamStatisticsConfiguration[] statisticsConfigurations;
+
     public GetMetricStreamOutput withStatisticsConfigurations(MetricStreamStatisticsConfiguration[] statisticsConfigurations) {
         this.statisticsConfigurations = statisticsConfigurations;
         return this;
     }
     
+    public GetMetricStreamOutput(){}
 }

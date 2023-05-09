@@ -15,6 +15,7 @@ public class RfeSpecPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_1")
     public Long quantity1;
+
     public RfeSpecPO withQuantity1(Long quantity1) {
         this.quantity1 = quantity1;
         return this;
@@ -23,6 +24,7 @@ public class RfeSpecPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_2")
     public Long quantity2;
+
     public RfeSpecPO withQuantity2(Long quantity2) {
         this.quantity2 = quantity2;
         return this;
@@ -31,6 +33,7 @@ public class RfeSpecPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_3")
     public Long quantity3;
+
     public RfeSpecPO withQuantity3(Long quantity3) {
         this.quantity3 = quantity3;
         return this;
@@ -39,6 +42,7 @@ public class RfeSpecPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_4")
     public Long quantity4;
+
     public RfeSpecPO withQuantity4(Long quantity4) {
         this.quantity4 = quantity4;
         return this;
@@ -47,6 +51,7 @@ public class RfeSpecPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_5")
     public Long quantity5;
+
     public RfeSpecPO withQuantity5(Long quantity5) {
         this.quantity5 = quantity5;
         return this;
@@ -55,9 +60,11 @@ public class RfeSpecPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_id")
     public Long specId;
+
     public RfeSpecPO withSpecId(Long specId) {
         this.specId = specId;
         return this;
     }
     
+    public RfeSpecPO(){}
 }

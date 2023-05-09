@@ -14,6 +14,7 @@ public class RegisterApplicationRequestBody {
      */
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public RegisterApplicationRequestBody withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -24,6 +25,7 @@ public class RegisterApplicationRequestBody {
      */
     @JsonProperty("ApplicationType")
     public RegisterApplicationRequestBodyApplicationTypeEnum applicationType;
+
     public RegisterApplicationRequestBody withApplicationType(RegisterApplicationRequestBodyApplicationTypeEnum applicationType) {
         this.applicationType = applicationType;
         return this;
@@ -34,6 +36,7 @@ public class RegisterApplicationRequestBody {
      */
     @JsonProperty("Credentials")
     public org.openapis.openapi.models.shared.ApplicationCredential[] credentials;
+
     public RegisterApplicationRequestBody withCredentials(org.openapis.openapi.models.shared.ApplicationCredential[] credentials) {
         this.credentials = credentials;
         return this;
@@ -44,6 +47,7 @@ public class RegisterApplicationRequestBody {
      */
     @JsonProperty("Instances")
     public String[] instances;
+
     public RegisterApplicationRequestBody withInstances(String[] instances) {
         this.instances = instances;
         return this;
@@ -55,6 +59,7 @@ public class RegisterApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SapInstanceNumber")
     public String sapInstanceNumber;
+
     public RegisterApplicationRequestBody withSapInstanceNumber(String sapInstanceNumber) {
         this.sapInstanceNumber = sapInstanceNumber;
         return this;
@@ -66,6 +71,7 @@ public class RegisterApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sid")
     public String sid;
+
     public RegisterApplicationRequestBody withSid(String sid) {
         this.sid = sid;
         return this;
@@ -77,9 +83,16 @@ public class RegisterApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public RegisterApplicationRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public RegisterApplicationRequestBody(@JsonProperty("ApplicationId") String applicationId, @JsonProperty("ApplicationType") RegisterApplicationRequestBodyApplicationTypeEnum applicationType, @JsonProperty("Credentials") org.openapis.openapi.models.shared.ApplicationCredential[] credentials, @JsonProperty("Instances") String[] instances) {
+        this.applicationId = applicationId;
+        this.applicationType = applicationType;
+        this.credentials = credentials;
+        this.instances = instances;
+  }
 }

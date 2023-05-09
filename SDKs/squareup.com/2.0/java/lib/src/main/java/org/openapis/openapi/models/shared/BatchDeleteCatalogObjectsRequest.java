@@ -22,9 +22,11 @@ public class BatchDeleteCatalogObjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object_ids")
     public String[] objectIds;
+
     public BatchDeleteCatalogObjectsRequest withObjectIds(String[] objectIds) {
         this.objectIds = objectIds;
         return this;
     }
     
+    public BatchDeleteCatalogObjectsRequest(){}
 }

@@ -18,9 +18,11 @@ public class CreateSiteOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Site")
     public Site site;
+
     public CreateSiteOutput withSite(Site site) {
         this.site = site;
         return this;
     }
     
+    public CreateSiteOutput(){}
 }

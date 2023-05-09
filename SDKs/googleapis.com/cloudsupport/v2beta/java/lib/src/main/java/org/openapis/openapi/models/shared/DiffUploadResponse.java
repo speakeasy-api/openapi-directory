@@ -18,6 +18,7 @@ public class DiffUploadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectVersion")
     public String objectVersion;
+
     public DiffUploadResponse withObjectVersion(String objectVersion) {
         this.objectVersion = objectVersion;
         return this;
@@ -29,9 +30,11 @@ public class DiffUploadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalObject")
     public CompositeMedia originalObject;
+
     public DiffUploadResponse withOriginalObject(CompositeMedia originalObject) {
         this.originalObject = originalObject;
         return this;
     }
     
+    public DiffUploadResponse(){}
 }

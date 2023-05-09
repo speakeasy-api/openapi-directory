@@ -15,6 +15,7 @@ public class ListRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRulesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public Rule[] rules;
+
     public ListRulesResponse withRules(Rule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public ListRulesResponse(){}
 }

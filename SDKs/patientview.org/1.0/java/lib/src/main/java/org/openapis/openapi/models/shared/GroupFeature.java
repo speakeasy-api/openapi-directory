@@ -19,6 +19,7 @@ public class GroupFeature {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public GroupFeature withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -27,6 +28,7 @@ public class GroupFeature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature")
     public Feature feature;
+
     public GroupFeature withFeature(Feature feature) {
         this.feature = feature;
         return this;
@@ -35,6 +37,7 @@ public class GroupFeature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GroupFeature withId(Long id) {
         this.id = id;
         return this;
@@ -45,9 +48,11 @@ public class GroupFeature {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdate")
     public OffsetDateTime lastUpdate;
+
     public GroupFeature withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
     }
     
+    public GroupFeature(){}
 }

@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsPersonalizationEnabled")
     public Boolean adsPersonalizationEnabled;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink withAdsPersonalizationEnabled(Boolean adsPersonalizationEnabled) {
         this.adsPersonalizationEnabled = adsPersonalizationEnabled;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserDisplayName")
     public String advertiserDisplayName;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink withAdvertiserDisplayName(String advertiserDisplayName) {
         this.advertiserDisplayName = advertiserDisplayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignDataSharingEnabled")
     public Boolean campaignDataSharingEnabled;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink withCampaignDataSharingEnabled(Boolean campaignDataSharingEnabled) {
         this.campaignDataSharingEnabled = campaignDataSharingEnabled;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costDataSharingEnabled")
     public Boolean costDataSharingEnabled;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink withCostDataSharingEnabled(Boolean costDataSharingEnabled) {
         this.costDataSharingEnabled = costDataSharingEnabled;
         return this;
@@ -73,9 +78,11 @@ public class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink(){}
 }

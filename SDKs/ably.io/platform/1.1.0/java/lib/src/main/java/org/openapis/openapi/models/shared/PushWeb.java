@@ -15,9 +15,11 @@ public class PushWeb {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notification")
     public Notification notification;
+
     public PushWeb withNotification(Notification notification) {
         this.notification = notification;
         return this;
     }
     
+    public PushWeb(){}
 }

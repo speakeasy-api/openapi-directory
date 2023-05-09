@@ -15,6 +15,7 @@ public class Arcmw503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Arcmw503ApplicationJSONErrorEnum error;
+
     public Arcmw503ApplicationJSON withError(Arcmw503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Arcmw503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Arcmw503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Arcmw503ApplicationJSON withErrorDescription(Arcmw503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Arcmw503ApplicationJSON(){}
 }

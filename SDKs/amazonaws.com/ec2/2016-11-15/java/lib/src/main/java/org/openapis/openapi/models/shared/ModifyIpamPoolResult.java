@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyIpamPoolResult {
     
     public ModifyIpamPoolResultIpamPool ipamPool;
+
     public ModifyIpamPoolResult withIpamPool(ModifyIpamPoolResultIpamPool ipamPool) {
         this.ipamPool = ipamPool;
         return this;
     }
     
+    public ModifyIpamPoolResult(){}
 }

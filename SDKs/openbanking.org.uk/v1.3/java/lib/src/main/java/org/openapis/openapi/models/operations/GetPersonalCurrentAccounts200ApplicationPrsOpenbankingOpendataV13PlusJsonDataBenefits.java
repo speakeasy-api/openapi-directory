@@ -17,6 +17,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("Benefit")
     public Boolean benefit;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits withBenefit(Boolean benefit) {
         this.benefit = benefit;
         return this;
@@ -25,9 +26,13 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BenefitGroup")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup[] benefitGroup;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits withBenefitGroup(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup[] benefitGroup) {
         this.benefitGroup = benefitGroup;
         return this;
     }
     
+    public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits(@JsonProperty("Benefit") Boolean benefit) {
+        this.benefit = benefit;
+  }
 }

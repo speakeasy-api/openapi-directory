@@ -15,6 +15,7 @@ public class InferenceRecommendationsJobStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceBenchmark")
     public RecommendationJobInferenceBenchmark inferenceBenchmark;
+
     public InferenceRecommendationsJobStep withInferenceBenchmark(RecommendationJobInferenceBenchmark inferenceBenchmark) {
         this.inferenceBenchmark = inferenceBenchmark;
         return this;
@@ -22,6 +23,7 @@ public class InferenceRecommendationsJobStep {
     
     @JsonProperty("JobName")
     public String jobName;
+
     public InferenceRecommendationsJobStep withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -29,6 +31,7 @@ public class InferenceRecommendationsJobStep {
     
     @JsonProperty("Status")
     public RecommendationJobStatusEnum status;
+
     public InferenceRecommendationsJobStep withStatus(RecommendationJobStatusEnum status) {
         this.status = status;
         return this;
@@ -36,9 +39,15 @@ public class InferenceRecommendationsJobStep {
     
     @JsonProperty("StepType")
     public RecommendationStepTypeEnum stepType;
+
     public InferenceRecommendationsJobStep withStepType(RecommendationStepTypeEnum stepType) {
         this.stepType = stepType;
         return this;
     }
     
+    public InferenceRecommendationsJobStep(@JsonProperty("JobName") String jobName, @JsonProperty("Status") RecommendationJobStatusEnum status, @JsonProperty("StepType") RecommendationStepTypeEnum stepType) {
+        this.jobName = jobName;
+        this.status = status;
+        this.stepType = stepType;
+  }
 }

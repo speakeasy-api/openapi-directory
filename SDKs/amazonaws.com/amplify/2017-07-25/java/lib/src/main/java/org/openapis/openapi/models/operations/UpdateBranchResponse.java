@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBranchResponse {
@@ -12,6 +13,7 @@ public class UpdateBranchResponse {
      */
     
     public Object badRequestException;
+
     public UpdateBranchResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateBranchResponse {
     
     
     public String contentType;
+
     public UpdateBranchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateBranchResponse {
      */
     
     public Object dependentServiceFailureException;
+
     public UpdateBranchResponse withDependentServiceFailureException(Object dependentServiceFailureException) {
         this.dependentServiceFailureException = dependentServiceFailureException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateBranchResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateBranchResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateBranchResponse {
      */
     
     public Object notFoundException;
+
     public UpdateBranchResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateBranchResponse {
     
     
     public Integer statusCode;
+
     public UpdateBranchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateBranchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBranchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateBranchResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateBranchResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateBranchResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateBranchResult updateBranchResult;
+
     public UpdateBranchResponse withUpdateBranchResult(org.openapis.openapi.models.shared.UpdateBranchResult updateBranchResult) {
         this.updateBranchResult = updateBranchResult;
         return this;
     }
     
+    public UpdateBranchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

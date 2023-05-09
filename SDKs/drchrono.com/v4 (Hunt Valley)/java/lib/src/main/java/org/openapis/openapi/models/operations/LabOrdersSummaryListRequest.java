@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class LabOrdersSummaryListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public LabOrdersSummaryListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -16,6 +17,7 @@ public class LabOrdersSummaryListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public LabOrdersSummaryListRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -23,6 +25,7 @@ public class LabOrdersSummaryListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public LabOrdersSummaryListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -30,6 +33,7 @@ public class LabOrdersSummaryListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public LabOrdersSummaryListRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -37,9 +41,11 @@ public class LabOrdersSummaryListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public LabOrdersSummaryListRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public LabOrdersSummaryListRequest(){}
 }

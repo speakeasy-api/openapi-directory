@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaCompleteQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeResults")
     public java.util.Map<String, GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult> attributeResults;
+
     public GoogleCloudRetailV2alphaCompleteQueryResponse withAttributeResults(java.util.Map<String, GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult> attributeResults) {
         this.attributeResults = attributeResults;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaCompleteQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributionToken")
     public String attributionToken;
+
     public GoogleCloudRetailV2alphaCompleteQueryResponse withAttributionToken(String attributionToken) {
         this.attributionToken = attributionToken;
         return this;
@@ -40,20 +42,23 @@ public class GoogleCloudRetailV2alphaCompleteQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completionResults")
     public GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult[] completionResults;
+
     public GoogleCloudRetailV2alphaCompleteQueryResponse withCompletionResults(GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult[] completionResults) {
         this.completionResults = completionResults;
         return this;
     }
     
     /**
-     * Matched recent searches of this user. The maximum number of recent searches is 10. This field is a restricted feature. Contact Retail Search support team if you are interested in enabling it. This feature is only available when CompleteQueryRequest.visitor_id field is set and UserEvent is imported. The recent searches satisfy the follow rules: * They are ordered from latest to oldest. * They are matched with CompleteQueryRequest.query case insensitively. * They are transformed to lower case. * They are UTF-8 safe. Recent searches are deduplicated. More recent searches will be reserved when duplication happens.
+     * Matched recent searches of this user. The maximum number of recent searches is 10. This field is a restricted feature. If you want to enable it, contact Retail Search support. This feature is only available when CompleteQueryRequest.visitor_id field is set and UserEvent is imported. The recent searches satisfy the follow rules: * They are ordered from latest to oldest. * They are matched with CompleteQueryRequest.query case insensitively. * They are transformed to lower case. * They are UTF-8 safe. Recent searches are deduplicated. More recent searches will be reserved when duplication happens.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentSearchResults")
     public GoogleCloudRetailV2alphaCompleteQueryResponseRecentSearchResult[] recentSearchResults;
+
     public GoogleCloudRetailV2alphaCompleteQueryResponse withRecentSearchResults(GoogleCloudRetailV2alphaCompleteQueryResponseRecentSearchResult[] recentSearchResults) {
         this.recentSearchResults = recentSearchResults;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaCompleteQueryResponse(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Runbook {
     @JsonProperty("DocumentName")
     public String documentName;
+
     public Runbook withDocumentName(String documentName) {
         this.documentName = documentName;
         return this;
@@ -22,6 +23,7 @@ public class Runbook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public Runbook withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -30,6 +32,7 @@ public class Runbook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrency")
     public String maxConcurrency;
+
     public Runbook withMaxConcurrency(String maxConcurrency) {
         this.maxConcurrency = maxConcurrency;
         return this;
@@ -38,6 +41,7 @@ public class Runbook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxErrors")
     public String maxErrors;
+
     public Runbook withMaxErrors(String maxErrors) {
         this.maxErrors = maxErrors;
         return this;
@@ -46,6 +50,7 @@ public class Runbook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String[]> parameters;
+
     public Runbook withParameters(java.util.Map<String, String[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -54,6 +59,7 @@ public class Runbook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetLocations")
     public TargetLocation[] targetLocations;
+
     public Runbook withTargetLocations(TargetLocation[] targetLocations) {
         this.targetLocations = targetLocations;
         return this;
@@ -62,6 +68,7 @@ public class Runbook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetMaps")
     public java.util.Map<String, String[]>[] targetMaps;
+
     public Runbook withTargetMaps(java.util.Map<String, String[]>[] targetMaps) {
         this.targetMaps = targetMaps;
         return this;
@@ -70,6 +77,7 @@ public class Runbook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetParameterName")
     public String targetParameterName;
+
     public Runbook withTargetParameterName(String targetParameterName) {
         this.targetParameterName = targetParameterName;
         return this;
@@ -78,9 +86,13 @@ public class Runbook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public Target[] targets;
+
     public Runbook withTargets(Target[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public Runbook(@JsonProperty("DocumentName") String documentName) {
+        this.documentName = documentName;
+  }
 }

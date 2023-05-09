@@ -18,6 +18,7 @@ public class ListAuthorizationPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationPolicies")
     public AuthorizationPolicy[] authorizationPolicies;
+
     public ListAuthorizationPoliciesResponse withAuthorizationPolicies(AuthorizationPolicy[] authorizationPolicies) {
         this.authorizationPolicies = authorizationPolicies;
         return this;
@@ -29,9 +30,11 @@ public class ListAuthorizationPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAuthorizationPoliciesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAuthorizationPoliciesResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRoleAliasResponse {
     
     public String contentType;
+
     public UpdateRoleAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateRoleAliasResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateRoleAliasResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRoleAliasResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateRoleAliasResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateRoleAliasResponse {
     
     
     public Integer statusCode;
+
     public UpdateRoleAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateRoleAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRoleAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateRoleAliasResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateRoleAliasResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateRoleAliasResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateRoleAliasResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateRoleAliasResponse {
      */
     
     public Object throttlingException;
+
     public UpdateRoleAliasResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateRoleAliasResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateRoleAliasResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateRoleAliasResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRoleAliasResponse updateRoleAliasResponse;
+
     public UpdateRoleAliasResponse withUpdateRoleAliasResponse(org.openapis.openapi.models.shared.UpdateRoleAliasResponse updateRoleAliasResponse) {
         this.updateRoleAliasResponse = updateRoleAliasResponse;
         return this;
     }
     
+    public UpdateRoleAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

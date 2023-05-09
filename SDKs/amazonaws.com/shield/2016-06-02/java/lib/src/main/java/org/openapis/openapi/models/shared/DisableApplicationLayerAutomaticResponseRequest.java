@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisableApplicationLayerAutomaticResponseRequest {
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public DisableApplicationLayerAutomaticResponseRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public DisableApplicationLayerAutomaticResponseRequest(@JsonProperty("ResourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

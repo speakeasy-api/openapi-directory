@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActivityTaskStatus {
     @JsonProperty("cancelRequested")
     public Boolean cancelRequested;
+
     public ActivityTaskStatus withCancelRequested(Boolean cancelRequested) {
         this.cancelRequested = cancelRequested;
         return this;
     }
     
+    public ActivityTaskStatus(@JsonProperty("cancelRequested") Boolean cancelRequested) {
+        this.cancelRequested = cancelRequested;
+  }
 }

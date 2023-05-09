@@ -12,6 +12,7 @@ public class DeleteLifecyclePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public DeleteLifecyclePolicyRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -19,9 +20,13 @@ public class DeleteLifecyclePolicyRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public DeleteLifecyclePolicyRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public DeleteLifecyclePolicyRequest(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

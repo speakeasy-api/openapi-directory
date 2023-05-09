@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBlockPublicAccessConfigurationOutput {
     @JsonProperty("BlockPublicAccessConfiguration")
     public BlockPublicAccessConfiguration blockPublicAccessConfiguration;
+
     public GetBlockPublicAccessConfigurationOutput withBlockPublicAccessConfiguration(BlockPublicAccessConfiguration blockPublicAccessConfiguration) {
         this.blockPublicAccessConfiguration = blockPublicAccessConfiguration;
         return this;
@@ -19,9 +20,14 @@ public class GetBlockPublicAccessConfigurationOutput {
     
     @JsonProperty("BlockPublicAccessConfigurationMetadata")
     public BlockPublicAccessConfigurationMetadata blockPublicAccessConfigurationMetadata;
+
     public GetBlockPublicAccessConfigurationOutput withBlockPublicAccessConfigurationMetadata(BlockPublicAccessConfigurationMetadata blockPublicAccessConfigurationMetadata) {
         this.blockPublicAccessConfigurationMetadata = blockPublicAccessConfigurationMetadata;
         return this;
     }
     
+    public GetBlockPublicAccessConfigurationOutput(@JsonProperty("BlockPublicAccessConfiguration") BlockPublicAccessConfiguration blockPublicAccessConfiguration, @JsonProperty("BlockPublicAccessConfigurationMetadata") BlockPublicAccessConfigurationMetadata blockPublicAccessConfigurationMetadata) {
+        this.blockPublicAccessConfiguration = blockPublicAccessConfiguration;
+        this.blockPublicAccessConfigurationMetadata = blockPublicAccessConfigurationMetadata;
+  }
 }

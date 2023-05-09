@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeResourcePoliciesPatchRequest {
@@ -12,6 +13,7 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeResourcePoliciesPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeResourcePoliciesPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ResourcePolicy resourcePolicy1;
+
     public ComputeResourcePoliciesPatchRequest withResourcePolicy1(org.openapis.openapi.models.shared.ResourcePolicy resourcePolicy1) {
         this.resourcePolicy1 = resourcePolicy1;
         return this;
@@ -29,6 +32,7 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeResourcePoliciesPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeResourcePoliciesPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeResourcePoliciesPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeResourcePoliciesPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeResourcePoliciesPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeResourcePoliciesPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeResourcePoliciesPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeResourcePoliciesPatchRequest withProject(String project) {
         this.project = project;
         return this;
@@ -109,6 +120,7 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeResourcePoliciesPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
     public String region;
+
     public ComputeResourcePoliciesPatchRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -129,6 +142,7 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeResourcePoliciesPatchRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -139,6 +153,7 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resourcePolicy")
     public String resourcePolicyPathParameter;
+
     public ComputeResourcePoliciesPatchRequest withResourcePolicyPathParameter(String resourcePolicyPathParameter) {
         this.resourcePolicyPathParameter = resourcePolicyPathParameter;
         return this;
@@ -149,6 +164,7 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
     public String updateMask;
+
     public ComputeResourcePoliciesPatchRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -159,6 +175,7 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeResourcePoliciesPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -169,6 +186,7 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeResourcePoliciesPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -179,9 +197,15 @@ public class ComputeResourcePoliciesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeResourcePoliciesPatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeResourcePoliciesPatchRequest(@JsonProperty("project") String project, @JsonProperty("region") String region, @JsonProperty("resourcePolicyPathParameter") String resourcePolicyPathParameter) {
+        this.project = project;
+        this.region = region;
+        this.resourcePolicyPathParameter = resourcePolicyPathParameter;
+  }
 }

@@ -59,11 +59,9 @@ public class Indexing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesDeleteSchemaResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesDeleteSchemaResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesDeleteSchemaResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesDeleteSchemaResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Indexing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesGetSchemaResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesGetSchemaResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesGetSchemaResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesGetSchemaResponse(contentType, httpRes.statusCode()) {{
             schema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Indexing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Indexing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteQueueItemsResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteQueueItemsResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteQueueItemsResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteQueueItemsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class Indexing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsGetResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsGetResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsGetResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsGetResponse(contentType, httpRes.statusCode()) {{
             item = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class Indexing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsIndexResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsIndexResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsIndexResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsIndexResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class Indexing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsListResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsListResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsListResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsListResponse(contentType, httpRes.statusCode()) {{
             listItemsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +373,9 @@ public class Indexing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPollResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPollResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPollResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPollResponse(contentType, httpRes.statusCode()) {{
             pollItemsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -435,11 +419,9 @@ public class Indexing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPushResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPushResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPushResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPushResponse(contentType, httpRes.statusCode()) {{
             item = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -483,11 +465,9 @@ public class Indexing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUnreserveResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUnreserveResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUnreserveResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUnreserveResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -531,11 +511,9 @@ public class Indexing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUploadResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUploadResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUploadResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUploadResponse(contentType, httpRes.statusCode()) {{
             uploadItemRef = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -579,11 +557,9 @@ public class Indexing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesUpdateSchemaResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesUpdateSchemaResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesUpdateSchemaResponse res = new org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesUpdateSchemaResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

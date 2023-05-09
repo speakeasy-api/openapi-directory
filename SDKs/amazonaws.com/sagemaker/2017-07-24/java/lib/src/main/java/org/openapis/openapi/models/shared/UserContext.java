@@ -15,6 +15,7 @@ public class UserContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public UserContext withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -23,6 +24,7 @@ public class UserContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamIdentity")
     public IamIdentity iamIdentity;
+
     public UserContext withIamIdentity(IamIdentity iamIdentity) {
         this.iamIdentity = iamIdentity;
         return this;
@@ -31,6 +33,7 @@ public class UserContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserProfileArn")
     public String userProfileArn;
+
     public UserContext withUserProfileArn(String userProfileArn) {
         this.userProfileArn = userProfileArn;
         return this;
@@ -39,9 +42,11 @@ public class UserContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserProfileName")
     public String userProfileName;
+
     public UserContext withUserProfileName(String userProfileName) {
         this.userProfileName = userProfileName;
         return this;
     }
     
+    public UserContext(){}
 }

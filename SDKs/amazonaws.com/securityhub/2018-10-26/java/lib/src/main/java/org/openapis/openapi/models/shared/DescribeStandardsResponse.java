@@ -15,6 +15,7 @@ public class DescribeStandardsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeStandardsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeStandardsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Standards")
     public Standard[] standards;
+
     public DescribeStandardsResponse withStandards(Standard[] standards) {
         this.standards = standards;
         return this;
     }
     
+    public DescribeStandardsResponse(){}
 }

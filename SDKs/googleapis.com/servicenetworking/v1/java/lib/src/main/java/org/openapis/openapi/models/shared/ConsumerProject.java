@@ -18,9 +18,11 @@ public class ConsumerProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectNum")
     public String projectNum;
+
     public ConsumerProject withProjectNum(String projectNum) {
         this.projectNum = projectNum;
         return this;
     }
     
+    public ConsumerProject(){}
 }

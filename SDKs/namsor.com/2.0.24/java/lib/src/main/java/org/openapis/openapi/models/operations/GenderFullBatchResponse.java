@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenderFullBatchResponse {
@@ -12,6 +13,7 @@ public class GenderFullBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchPersonalNameGenderedOut batchPersonalNameGenderedOut;
+
     public GenderFullBatchResponse withBatchPersonalNameGenderedOut(org.openapis.openapi.models.shared.BatchPersonalNameGenderedOut batchPersonalNameGenderedOut) {
         this.batchPersonalNameGenderedOut = batchPersonalNameGenderedOut;
         return this;
@@ -19,6 +21,7 @@ public class GenderFullBatchResponse {
     
     
     public String contentType;
+
     public GenderFullBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GenderFullBatchResponse {
     
     
     public Integer statusCode;
+
     public GenderFullBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GenderFullBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenderFullBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GenderFullBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class StartAssessmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentTargets")
     public org.openapis.openapi.models.shared.AssessmentTarget[] assessmentTargets;
+
     public StartAssessmentRequestBody withAssessmentTargets(org.openapis.openapi.models.shared.AssessmentTarget[] assessmentTargets) {
         this.assessmentTargets = assessmentTargets;
         return this;
@@ -26,6 +27,7 @@ public class StartAssessmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3bucketForAnalysisData")
     public String s3bucketForAnalysisData;
+
     public StartAssessmentRequestBody withS3bucketForAnalysisData(String s3bucketForAnalysisData) {
         this.s3bucketForAnalysisData = s3bucketForAnalysisData;
         return this;
@@ -37,9 +39,11 @@ public class StartAssessmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3bucketForReportData")
     public String s3bucketForReportData;
+
     public StartAssessmentRequestBody withS3bucketForReportData(String s3bucketForReportData) {
         this.s3bucketForReportData = s3bucketForReportData;
         return this;
     }
     
+    public StartAssessmentRequestBody(){}
 }

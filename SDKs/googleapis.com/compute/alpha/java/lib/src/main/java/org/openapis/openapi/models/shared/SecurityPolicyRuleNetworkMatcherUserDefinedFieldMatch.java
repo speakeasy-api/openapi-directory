@@ -15,6 +15,7 @@ public class SecurityPolicyRuleNetworkMatcherUserDefinedFieldMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SecurityPolicyRuleNetworkMatcherUserDefinedFieldMatch withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class SecurityPolicyRuleNetworkMatcherUserDefinedFieldMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public SecurityPolicyRuleNetworkMatcherUserDefinedFieldMatch withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SecurityPolicyRuleNetworkMatcherUserDefinedFieldMatch(){}
 }

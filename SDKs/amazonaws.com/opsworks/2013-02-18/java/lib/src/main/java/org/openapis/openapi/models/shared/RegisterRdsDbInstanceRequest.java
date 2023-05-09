@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterRdsDbInstanceRequest {
     @JsonProperty("DbPassword")
     public String dbPassword;
+
     public RegisterRdsDbInstanceRequest withDbPassword(String dbPassword) {
         this.dbPassword = dbPassword;
         return this;
@@ -16,6 +17,7 @@ public class RegisterRdsDbInstanceRequest {
     
     @JsonProperty("DbUser")
     public String dbUser;
+
     public RegisterRdsDbInstanceRequest withDbUser(String dbUser) {
         this.dbUser = dbUser;
         return this;
@@ -23,6 +25,7 @@ public class RegisterRdsDbInstanceRequest {
     
     @JsonProperty("RdsDbInstanceArn")
     public String rdsDbInstanceArn;
+
     public RegisterRdsDbInstanceRequest withRdsDbInstanceArn(String rdsDbInstanceArn) {
         this.rdsDbInstanceArn = rdsDbInstanceArn;
         return this;
@@ -30,9 +33,16 @@ public class RegisterRdsDbInstanceRequest {
     
     @JsonProperty("StackId")
     public String stackId;
+
     public RegisterRdsDbInstanceRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public RegisterRdsDbInstanceRequest(@JsonProperty("DbUser") String dbUser, @JsonProperty("DbPassword") String dbPassword, @JsonProperty("RdsDbInstanceArn") String rdsDbInstanceArn, @JsonProperty("StackId") String stackId) {
+        this.dbUser = dbUser;
+        this.dbPassword = dbPassword;
+        this.rdsDbInstanceArn = rdsDbInstanceArn;
+        this.stackId = stackId;
+  }
 }

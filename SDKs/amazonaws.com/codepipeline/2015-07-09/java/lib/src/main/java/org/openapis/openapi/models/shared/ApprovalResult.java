@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApprovalResult {
     @JsonProperty("status")
     public ApprovalStatusEnum status;
+
     public ApprovalResult withStatus(ApprovalStatusEnum status) {
         this.status = status;
         return this;
@@ -19,9 +20,14 @@ public class ApprovalResult {
     
     @JsonProperty("summary")
     public String summary;
+
     public ApprovalResult withSummary(String summary) {
         this.summary = summary;
         return this;
     }
     
+    public ApprovalResult(@JsonProperty("status") ApprovalStatusEnum status, @JsonProperty("summary") String summary) {
+        this.status = status;
+        this.summary = summary;
+  }
 }

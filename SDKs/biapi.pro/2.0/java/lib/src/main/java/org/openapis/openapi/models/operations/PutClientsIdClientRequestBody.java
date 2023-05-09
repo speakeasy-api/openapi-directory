@@ -12,6 +12,7 @@ public class PutClientsIdClientRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=config")
     public String config;
+
     public PutClientsIdClientRequestBody withConfig(String config) {
         this.config = config;
         return this;
@@ -22,6 +23,7 @@ public class PutClientsIdClientRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=description")
     public String description;
+
     public PutClientsIdClientRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +34,7 @@ public class PutClientsIdClientRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=description_banks")
     public String descriptionBanks;
+
     public PutClientsIdClientRequestBody withDescriptionBanks(String descriptionBanks) {
         this.descriptionBanks = descriptionBanks;
         return this;
@@ -42,6 +45,7 @@ public class PutClientsIdClientRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=description_providers")
     public String descriptionProviders;
+
     public PutClientsIdClientRequestBody withDescriptionProviders(String descriptionProviders) {
         this.descriptionProviders = descriptionProviders;
         return this;
@@ -52,6 +56,7 @@ public class PutClientsIdClientRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=generate_keys")
     public Boolean generateKeys;
+
     public PutClientsIdClientRequestBody withGenerateKeys(Boolean generateKeys) {
         this.generateKeys = generateKeys;
         return this;
@@ -62,6 +67,7 @@ public class PutClientsIdClientRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PutClientsIdClientRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +78,7 @@ public class PutClientsIdClientRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=primary_color")
     public String primaryColor;
+
     public PutClientsIdClientRequestBody withPrimaryColor(String primaryColor) {
         this.primaryColor = primaryColor;
         return this;
@@ -82,6 +89,7 @@ public class PutClientsIdClientRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=pro")
     public Boolean pro;
+
     public PutClientsIdClientRequestBody withPro(Boolean pro) {
         this.pro = pro;
         return this;
@@ -92,6 +100,7 @@ public class PutClientsIdClientRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=redirect_uris")
     public String redirectUris;
+
     public PutClientsIdClientRequestBody withRedirectUris(String redirectUris) {
         this.redirectUris = redirectUris;
         return this;
@@ -102,6 +111,7 @@ public class PutClientsIdClientRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=secondary_color")
     public String secondaryColor;
+
     public PutClientsIdClientRequestBody withSecondaryColor(String secondaryColor) {
         this.secondaryColor = secondaryColor;
         return this;
@@ -112,6 +122,7 @@ public class PutClientsIdClientRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=secret")
     public Boolean secret;
+
     public PutClientsIdClientRequestBody withSecret(Boolean secret) {
         this.secret = secret;
         return this;
@@ -122,9 +133,11 @@ public class PutClientsIdClientRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=update_config")
     public Boolean updateConfig;
+
     public PutClientsIdClientRequestBody withUpdateConfig(Boolean updateConfig) {
         this.updateConfig = updateConfig;
         return this;
     }
     
+    public PutClientsIdClientRequestBody(){}
 }

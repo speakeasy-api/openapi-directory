@@ -15,6 +15,7 @@ public class Getstateabbreviation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Abbreviation")
     public String abbreviation;
+
     public Getstateabbreviation200ApplicationJSON withAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
         return this;
@@ -23,6 +24,7 @@ public class Getstateabbreviation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Getstateabbreviation200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -31,6 +33,7 @@ public class Getstateabbreviation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credits")
     public String credits;
+
     public Getstateabbreviation200ApplicationJSON withCredits(String credits) {
         this.credits = credits;
         return this;
@@ -39,9 +42,11 @@ public class Getstateabbreviation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public Getstateabbreviation200ApplicationJSON withState(String state) {
         this.state = state;
         return this;
     }
     
+    public Getstateabbreviation200ApplicationJSON(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public String projectId;
+
     public GetQuoteRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -16,6 +18,7 @@ public class GetQuoteRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quote_id")
     public String quoteId;
+
     public GetQuoteRequest withQuoteId(String quoteId) {
         this.quoteId = quoteId;
         return this;
@@ -23,9 +26,15 @@ public class GetQuoteRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public GetQuoteRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public GetQuoteRequest(@JsonProperty("project_id") String projectId, @JsonProperty("quote_id") String quoteId, @JsonProperty("workgroup_id") String workgroupId) {
+        this.projectId = projectId;
+        this.quoteId = quoteId;
+        this.workgroupId = workgroupId;
+  }
 }

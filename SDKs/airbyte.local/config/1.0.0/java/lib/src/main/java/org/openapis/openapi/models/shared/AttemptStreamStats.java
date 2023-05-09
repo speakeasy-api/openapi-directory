@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttemptStreamStats {
     @JsonProperty("stats")
     public AttemptStats stats;
+
     public AttemptStreamStats withStats(AttemptStats stats) {
         this.stats = stats;
         return this;
@@ -18,6 +19,7 @@ public class AttemptStreamStats {
     
     @JsonProperty("streamName")
     public String streamName;
+
     public AttemptStreamStats withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -26,9 +28,14 @@ public class AttemptStreamStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamNamespace")
     public String streamNamespace;
+
     public AttemptStreamStats withStreamNamespace(String streamNamespace) {
         this.streamNamespace = streamNamespace;
         return this;
     }
     
+    public AttemptStreamStats(@JsonProperty("stats") AttemptStats stats, @JsonProperty("streamName") String streamName) {
+        this.stats = stats;
+        this.streamName = streamName;
+  }
 }

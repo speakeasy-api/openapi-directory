@@ -15,6 +15,7 @@ public class BatchListObjectParents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public BatchListObjectParents withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,6 +24,7 @@ public class BatchListObjectParents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public BatchListObjectParents withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -33,9 +35,13 @@ public class BatchListObjectParents {
      */
     @JsonProperty("ObjectReference")
     public ObjectReference objectReference;
+
     public BatchListObjectParents withObjectReference(ObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
     }
     
+    public BatchListObjectParents(@JsonProperty("ObjectReference") ObjectReference objectReference) {
+        this.objectReference = objectReference;
+  }
 }

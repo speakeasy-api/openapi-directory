@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataQualityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public GoogleCloudDataplexV1DataQualityDimensionResult[] dimensions;
+
     public GoogleCloudDataplexV1DataQualityResult withDimensions(GoogleCloudDataplexV1DataQualityDimensionResult[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1DataQualityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passed")
     public Boolean passed;
+
     public GoogleCloudDataplexV1DataQualityResult withPassed(Boolean passed) {
         this.passed = passed;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1DataQualityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowCount")
     public String rowCount;
+
     public GoogleCloudDataplexV1DataQualityResult withRowCount(String rowCount) {
         this.rowCount = rowCount;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1DataQualityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public GoogleCloudDataplexV1DataQualityRuleResult[] rules;
+
     public GoogleCloudDataplexV1DataQualityResult withRules(GoogleCloudDataplexV1DataQualityRuleResult[] rules) {
         this.rules = rules;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDataplexV1DataQualityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scannedData")
     public GoogleCloudDataplexV1ScannedData scannedData;
+
     public GoogleCloudDataplexV1DataQualityResult withScannedData(GoogleCloudDataplexV1ScannedData scannedData) {
         this.scannedData = scannedData;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataQualityResult(){}
 }

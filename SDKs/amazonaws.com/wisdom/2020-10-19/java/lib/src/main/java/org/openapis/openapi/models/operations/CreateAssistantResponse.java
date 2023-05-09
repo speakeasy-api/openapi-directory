@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAssistantResponse {
@@ -12,6 +13,7 @@ public class CreateAssistantResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAssistantResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateAssistantResponse {
      */
     
     public Object conflictException;
+
     public CreateAssistantResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateAssistantResponse {
     
     
     public String contentType;
+
     public CreateAssistantResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateAssistantResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAssistantResponse createAssistantResponse;
+
     public CreateAssistantResponse withCreateAssistantResponse(org.openapis.openapi.models.shared.CreateAssistantResponse createAssistantResponse) {
         this.createAssistantResponse = createAssistantResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateAssistantResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateAssistantResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateAssistantResponse {
     
     
     public Integer statusCode;
+
     public CreateAssistantResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateAssistantResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAssistantResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateAssistantResponse {
      */
     
     public Object validationException;
+
     public CreateAssistantResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateAssistantResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class RegionISO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryFIPS")
     public String countryFIPS;
+
     public RegionISO withCountryFIPS(String countryFIPS) {
         this.countryFIPS = countryFIPS;
         return this;
@@ -23,6 +24,7 @@ public class RegionISO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryISO2")
     public String countryIso2;
+
     public RegionISO withCountryIso2(String countryIso2) {
         this.countryIso2 = countryIso2;
         return this;
@@ -31,6 +33,7 @@ public class RegionISO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryISO3")
     public String countryIso3;
+
     public RegionISO withCountryIso3(String countryIso3) {
         this.countryIso3 = countryIso3;
         return this;
@@ -39,6 +42,7 @@ public class RegionISO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryName")
     public String countryName;
+
     public RegionISO withCountryName(String countryName) {
         this.countryName = countryName;
         return this;
@@ -47,6 +51,7 @@ public class RegionISO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryNumCode")
     public String countryNumCode;
+
     public RegionISO withCountryNumCode(String countryNumCode) {
         this.countryNumCode = countryNumCode;
         return this;
@@ -55,6 +60,7 @@ public class RegionISO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public RegionISO withRegion(String region) {
         this.region = region;
         return this;
@@ -63,6 +69,7 @@ public class RegionISO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subregion")
     public String subregion;
+
     public RegionISO withSubregion(String subregion) {
         this.subregion = subregion;
         return this;
@@ -71,9 +78,11 @@ public class RegionISO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topregion")
     public String topregion;
+
     public RegionISO withTopregion(String topregion) {
         this.topregion = topregion;
         return this;
     }
     
+    public RegionISO(){}
 }

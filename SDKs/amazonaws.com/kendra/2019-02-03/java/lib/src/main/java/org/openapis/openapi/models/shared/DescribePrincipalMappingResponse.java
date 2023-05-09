@@ -15,6 +15,7 @@ public class DescribePrincipalMappingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceId")
     public String dataSourceId;
+
     public DescribePrincipalMappingResponse withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -23,6 +24,7 @@ public class DescribePrincipalMappingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupId")
     public String groupId;
+
     public DescribePrincipalMappingResponse withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -31,6 +33,7 @@ public class DescribePrincipalMappingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupOrderingIdSummaries")
     public GroupOrderingIdSummary[] groupOrderingIdSummaries;
+
     public DescribePrincipalMappingResponse withGroupOrderingIdSummaries(GroupOrderingIdSummary[] groupOrderingIdSummaries) {
         this.groupOrderingIdSummaries = groupOrderingIdSummaries;
         return this;
@@ -39,9 +42,11 @@ public class DescribePrincipalMappingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexId")
     public String indexId;
+
     public DescribePrincipalMappingResponse withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
     }
     
+    public DescribePrincipalMappingResponse(){}
 }

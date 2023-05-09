@@ -15,9 +15,11 @@ public class GetFaucetResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txId")
     public String txId;
+
     public GetFaucetResponseData withTxId(String txId) {
         this.txId = txId;
         return this;
     }
     
+    public GetFaucetResponseData(){}
 }

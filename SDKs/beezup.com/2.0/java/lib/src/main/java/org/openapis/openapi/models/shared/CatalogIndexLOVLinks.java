@@ -12,6 +12,7 @@ public class CatalogIndexLOVLinks {
      */
     @JsonProperty("beezUPColumnDataTypeLov")
     public BeezUPCommonLOVLink3 beezUPColumnDataTypeLov;
+
     public CatalogIndexLOVLinks withBeezUPColumnDataTypeLov(BeezUPCommonLOVLink3 beezUPColumnDataTypeLov) {
         this.beezUPColumnDataTypeLov = beezUPColumnDataTypeLov;
         return this;
@@ -22,6 +23,7 @@ public class CatalogIndexLOVLinks {
      */
     @JsonProperty("beezUPColumnDisplayGroupLov")
     public BeezUPCommonLOVLink3 beezUPColumnDisplayGroupLov;
+
     public CatalogIndexLOVLinks withBeezUPColumnDisplayGroupLov(BeezUPCommonLOVLink3 beezUPColumnDisplayGroupLov) {
         this.beezUPColumnDisplayGroupLov = beezUPColumnDisplayGroupLov;
         return this;
@@ -32,6 +34,7 @@ public class CatalogIndexLOVLinks {
      */
     @JsonProperty("beezUPColumnImportanceLov")
     public BeezUPCommonLOVLink3 beezUPColumnImportanceLov;
+
     public CatalogIndexLOVLinks withBeezUPColumnImportanceLov(BeezUPCommonLOVLink3 beezUPColumnImportanceLov) {
         this.beezUPColumnImportanceLov = beezUPColumnImportanceLov;
         return this;
@@ -42,6 +45,7 @@ public class CatalogIndexLOVLinks {
      */
     @JsonProperty("beezUPColumnLov")
     public BeezUPCommonLOVLink3 beezUPColumnLov;
+
     public CatalogIndexLOVLinks withBeezUPColumnLov(BeezUPCommonLOVLink3 beezUPColumnLov) {
         this.beezUPColumnLov = beezUPColumnLov;
         return this;
@@ -52,6 +56,7 @@ public class CatalogIndexLOVLinks {
      */
     @JsonProperty("compareOptionLov")
     public BeezUPCommonLOVLink3 compareOptionLov;
+
     public CatalogIndexLOVLinks withCompareOptionLov(BeezUPCommonLOVLink3 compareOptionLov) {
         this.compareOptionLov = compareOptionLov;
         return this;
@@ -62,9 +67,18 @@ public class CatalogIndexLOVLinks {
      */
     @JsonProperty("duplicateProductValueStrategyLov")
     public BeezUPCommonLOVLink3 duplicateProductValueStrategyLov;
+
     public CatalogIndexLOVLinks withDuplicateProductValueStrategyLov(BeezUPCommonLOVLink3 duplicateProductValueStrategyLov) {
         this.duplicateProductValueStrategyLov = duplicateProductValueStrategyLov;
         return this;
     }
     
+    public CatalogIndexLOVLinks(@JsonProperty("beezUPColumnDataTypeLov") BeezUPCommonLOVLink3 beezUPColumnDataTypeLov, @JsonProperty("beezUPColumnDisplayGroupLov") BeezUPCommonLOVLink3 beezUPColumnDisplayGroupLov, @JsonProperty("beezUPColumnImportanceLov") BeezUPCommonLOVLink3 beezUPColumnImportanceLov, @JsonProperty("beezUPColumnLov") BeezUPCommonLOVLink3 beezUPColumnLov, @JsonProperty("compareOptionLov") BeezUPCommonLOVLink3 compareOptionLov, @JsonProperty("duplicateProductValueStrategyLov") BeezUPCommonLOVLink3 duplicateProductValueStrategyLov) {
+        this.beezUPColumnDataTypeLov = beezUPColumnDataTypeLov;
+        this.beezUPColumnDisplayGroupLov = beezUPColumnDisplayGroupLov;
+        this.beezUPColumnImportanceLov = beezUPColumnImportanceLov;
+        this.beezUPColumnLov = beezUPColumnLov;
+        this.compareOptionLov = compareOptionLov;
+        this.duplicateProductValueStrategyLov = duplicateProductValueStrategyLov;
+  }
 }

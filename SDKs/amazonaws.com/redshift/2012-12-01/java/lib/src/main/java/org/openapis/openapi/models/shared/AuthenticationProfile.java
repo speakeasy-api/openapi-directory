@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AuthenticationProfile {
     
     public String authenticationProfileContent;
+
     public AuthenticationProfile withAuthenticationProfileContent(String authenticationProfileContent) {
         this.authenticationProfileContent = authenticationProfileContent;
         return this;
@@ -19,9 +20,11 @@ public class AuthenticationProfile {
     
     
     public String authenticationProfileName;
+
     public AuthenticationProfile withAuthenticationProfileName(String authenticationProfileName) {
         this.authenticationProfileName = authenticationProfileName;
         return this;
     }
     
+    public AuthenticationProfile(){}
 }

@@ -67,4 +67,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/StatementLine.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreditDebitIndicatorEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartBalance.java
 lib/src/main/java/org/openapis/openapi/models/shared/EndBalance.java
+docs/sdk/README.md
+docs/bankfeeds/README.md
 USAGE.md

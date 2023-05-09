@@ -59,11 +59,9 @@ public class Routers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRoutersAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeRoutersAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRoutersAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeRoutersAggregatedListResponse(contentType, httpRes.statusCode()) {{
             routerAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Routers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRoutersDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRoutersDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeRoutersDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRoutersDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Routers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRoutersGetResponse res = new org.openapis.openapi.models.operations.ComputeRoutersGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRoutersGetResponse res = new org.openapis.openapi.models.operations.ComputeRoutersGetResponse(contentType, httpRes.statusCode()) {{
             router = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class Routers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRoutersGetNatMappingInfoResponse res = new org.openapis.openapi.models.operations.ComputeRoutersGetNatMappingInfoResponse() {{
+        org.openapis.openapi.models.operations.ComputeRoutersGetNatMappingInfoResponse res = new org.openapis.openapi.models.operations.ComputeRoutersGetNatMappingInfoResponse(contentType, httpRes.statusCode()) {{
             vmEndpointNatMappingsList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,11 +235,9 @@ public class Routers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRoutersGetRouterStatusResponse res = new org.openapis.openapi.models.operations.ComputeRoutersGetRouterStatusResponse() {{
+        org.openapis.openapi.models.operations.ComputeRoutersGetRouterStatusResponse res = new org.openapis.openapi.models.operations.ComputeRoutersGetRouterStatusResponse(contentType, httpRes.statusCode()) {{
             routerStatusResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class Routers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRoutersInsertResponse res = new org.openapis.openapi.models.operations.ComputeRoutersInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeRoutersInsertResponse res = new org.openapis.openapi.models.operations.ComputeRoutersInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,11 +325,9 @@ public class Routers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRoutersListResponse res = new org.openapis.openapi.models.operations.ComputeRoutersListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRoutersListResponse res = new org.openapis.openapi.models.operations.ComputeRoutersListResponse(contentType, httpRes.statusCode()) {{
             routerList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -385,11 +371,9 @@ public class Routers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRoutersPatchResponse res = new org.openapis.openapi.models.operations.ComputeRoutersPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeRoutersPatchResponse res = new org.openapis.openapi.models.operations.ComputeRoutersPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -433,11 +417,9 @@ public class Routers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRoutersPreviewResponse res = new org.openapis.openapi.models.operations.ComputeRoutersPreviewResponse() {{
+        org.openapis.openapi.models.operations.ComputeRoutersPreviewResponse res = new org.openapis.openapi.models.operations.ComputeRoutersPreviewResponse(contentType, httpRes.statusCode()) {{
             routersPreviewResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -481,11 +463,9 @@ public class Routers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRoutersUpdateResponse res = new org.openapis.openapi.models.operations.ComputeRoutersUpdateResponse() {{
+        org.openapis.openapi.models.operations.ComputeRoutersUpdateResponse res = new org.openapis.openapi.models.operations.ComputeRoutersUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

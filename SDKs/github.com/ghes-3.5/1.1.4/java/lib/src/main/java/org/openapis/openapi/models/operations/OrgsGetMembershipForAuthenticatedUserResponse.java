@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrgsGetMembershipForAuthenticatedUserResponse {
     
     public String contentType;
+
     public OrgsGetMembershipForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OrgsGetMembershipForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public OrgsGetMembershipForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class OrgsGetMembershipForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrgsGetMembershipForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class OrgsGetMembershipForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public OrgsGetMembershipForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class OrgsGetMembershipForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.OrgMembership orgMembership;
+
     public OrgsGetMembershipForAuthenticatedUserResponse withOrgMembership(org.openapis.openapi.models.shared.OrgMembership orgMembership) {
         this.orgMembership = orgMembership;
         return this;
     }
     
+    public OrgsGetMembershipForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

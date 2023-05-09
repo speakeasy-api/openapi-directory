@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateVPCEConfigurationResponse {
@@ -12,6 +13,7 @@ public class CreateVPCEConfigurationResponse {
      */
     
     public Object argumentException;
+
     public CreateVPCEConfigurationResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class CreateVPCEConfigurationResponse {
     
     
     public String contentType;
+
     public CreateVPCEConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateVPCEConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateVPCEConfigurationResult createVPCEConfigurationResult;
+
     public CreateVPCEConfigurationResponse withCreateVPCEConfigurationResult(org.openapis.openapi.models.shared.CreateVPCEConfigurationResult createVPCEConfigurationResult) {
         this.createVPCEConfigurationResult = createVPCEConfigurationResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateVPCEConfigurationResponse {
      */
     
     public Object limitExceededException;
+
     public CreateVPCEConfigurationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class CreateVPCEConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateVPCEConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateVPCEConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateVPCEConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateVPCEConfigurationResponse {
      */
     
     public Object serviceAccountException;
+
     public CreateVPCEConfigurationResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
     }
     
+    public CreateVPCEConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

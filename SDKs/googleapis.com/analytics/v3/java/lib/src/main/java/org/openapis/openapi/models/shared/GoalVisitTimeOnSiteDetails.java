@@ -18,6 +18,7 @@ public class GoalVisitTimeOnSiteDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonType")
     public String comparisonType;
+
     public GoalVisitTimeOnSiteDetails withComparisonType(String comparisonType) {
         this.comparisonType = comparisonType;
         return this;
@@ -29,9 +30,11 @@ public class GoalVisitTimeOnSiteDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonValue")
     public String comparisonValue;
+
     public GoalVisitTimeOnSiteDetails withComparisonValue(String comparisonValue) {
         this.comparisonValue = comparisonValue;
         return this;
     }
     
+    public GoalVisitTimeOnSiteDetails(){}
 }

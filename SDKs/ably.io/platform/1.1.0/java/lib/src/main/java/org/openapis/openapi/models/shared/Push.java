@@ -15,6 +15,7 @@ public class Push {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apns")
     public PushApns apns;
+
     public Push withApns(PushApns apns) {
         this.apns = apns;
         return this;
@@ -26,6 +27,7 @@ public class Push {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public Push withData(String data) {
         this.data = data;
         return this;
@@ -37,6 +39,7 @@ public class Push {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fcm")
     public PushFcm fcm;
+
     public Push withFcm(PushFcm fcm) {
         this.fcm = fcm;
         return this;
@@ -45,6 +48,7 @@ public class Push {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notification")
     public Notification notification;
+
     public Push withNotification(Notification notification) {
         this.notification = notification;
         return this;
@@ -56,9 +60,11 @@ public class Push {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web")
     public PushWeb web;
+
     public Push withWeb(PushWeb web) {
         this.web = web;
         return this;
     }
     
+    public Push(){}
 }

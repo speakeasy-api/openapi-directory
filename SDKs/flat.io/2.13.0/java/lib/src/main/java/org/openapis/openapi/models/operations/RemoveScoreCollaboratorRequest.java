@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveScoreCollaboratorRequest {
@@ -13,6 +14,7 @@ public class RemoveScoreCollaboratorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collaborator")
     public String collaborator;
+
     public RemoveScoreCollaboratorRequest withCollaborator(String collaborator) {
         this.collaborator = collaborator;
         return this;
@@ -24,9 +26,14 @@ public class RemoveScoreCollaboratorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
     public String score;
+
     public RemoveScoreCollaboratorRequest withScore(String score) {
         this.score = score;
         return this;
     }
     
+    public RemoveScoreCollaboratorRequest(@JsonProperty("collaborator") String collaborator, @JsonProperty("score") String score) {
+        this.collaborator = collaborator;
+        this.score = score;
+  }
 }

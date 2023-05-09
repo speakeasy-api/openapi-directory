@@ -15,6 +15,7 @@ public class DeploymentStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentConfig")
     public EdgeDeploymentConfig deploymentConfig;
+
     public DeploymentStage withDeploymentConfig(EdgeDeploymentConfig deploymentConfig) {
         this.deploymentConfig = deploymentConfig;
         return this;
@@ -22,6 +23,7 @@ public class DeploymentStage {
     
     @JsonProperty("DeviceSelectionConfig")
     public DeviceSelectionConfig deviceSelectionConfig;
+
     public DeploymentStage withDeviceSelectionConfig(DeviceSelectionConfig deviceSelectionConfig) {
         this.deviceSelectionConfig = deviceSelectionConfig;
         return this;
@@ -29,9 +31,14 @@ public class DeploymentStage {
     
     @JsonProperty("StageName")
     public String stageName;
+
     public DeploymentStage withStageName(String stageName) {
         this.stageName = stageName;
         return this;
     }
     
+    public DeploymentStage(@JsonProperty("DeviceSelectionConfig") DeviceSelectionConfig deviceSelectionConfig, @JsonProperty("StageName") String stageName) {
+        this.deviceSelectionConfig = deviceSelectionConfig;
+        this.stageName = stageName;
+  }
 }

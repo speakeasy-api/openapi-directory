@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssociateAddressRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAssociateAddressActionEnum action;
+
     public GETAssociateAddressRequest withAction(GETAssociateAddressActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETAssociateAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllocationId")
     public String allocationId;
+
     public GETAssociateAddressRequest withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -29,6 +32,7 @@ public class GETAssociateAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowReassociation")
     public Boolean allowReassociation;
+
     public GETAssociateAddressRequest withAllowReassociation(Boolean allowReassociation) {
         this.allowReassociation = allowReassociation;
         return this;
@@ -39,6 +43,7 @@ public class GETAssociateAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETAssociateAddressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -49,6 +54,7 @@ public class GETAssociateAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
     public String instanceId;
+
     public GETAssociateAddressRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -59,6 +65,7 @@ public class GETAssociateAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceId")
     public String networkInterfaceId;
+
     public GETAssociateAddressRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -69,6 +76,7 @@ public class GETAssociateAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrivateIpAddress")
     public String privateIpAddress;
+
     public GETAssociateAddressRequest withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -79,6 +87,7 @@ public class GETAssociateAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PublicIp")
     public String publicIp;
+
     public GETAssociateAddressRequest withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -86,6 +95,7 @@ public class GETAssociateAddressRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAssociateAddressVersionEnum version;
+
     public GETAssociateAddressRequest withVersion(GETAssociateAddressVersionEnum version) {
         this.version = version;
         return this;
@@ -93,6 +103,7 @@ public class GETAssociateAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAssociateAddressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -100,6 +111,7 @@ public class GETAssociateAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAssociateAddressRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -107,6 +119,7 @@ public class GETAssociateAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAssociateAddressRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -114,6 +127,7 @@ public class GETAssociateAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAssociateAddressRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -121,6 +135,7 @@ public class GETAssociateAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAssociateAddressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -128,6 +143,7 @@ public class GETAssociateAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAssociateAddressRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -135,9 +151,14 @@ public class GETAssociateAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAssociateAddressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAssociateAddressRequest(@JsonProperty("Action") GETAssociateAddressActionEnum action, @JsonProperty("Version") GETAssociateAddressVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

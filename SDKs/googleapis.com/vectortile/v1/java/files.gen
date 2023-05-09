@@ -41,4 +41,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Row.java
 lib/src/main/java/org/openapis/openapi/models/shared/TileCoordinates.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
+docs/sdk/README.md
+docs/terraintiles/README.md
 USAGE.md

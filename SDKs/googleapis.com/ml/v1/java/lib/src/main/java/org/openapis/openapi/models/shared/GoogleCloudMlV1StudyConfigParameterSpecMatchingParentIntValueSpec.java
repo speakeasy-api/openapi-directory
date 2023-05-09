@@ -18,9 +18,11 @@ public class GoogleCloudMlV1StudyConfigParameterSpecMatchingParentIntValueSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public GoogleCloudMlV1StudyConfigParameterSpecMatchingParentIntValueSpec withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public GoogleCloudMlV1StudyConfigParameterSpecMatchingParentIntValueSpec(){}
 }

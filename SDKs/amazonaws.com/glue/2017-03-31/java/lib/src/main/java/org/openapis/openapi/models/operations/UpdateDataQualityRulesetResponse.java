@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDataQualityRulesetResponse {
@@ -12,6 +13,7 @@ public class UpdateDataQualityRulesetResponse {
      */
     
     public Object alreadyExistsException;
+
     public UpdateDataQualityRulesetResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDataQualityRulesetResponse {
     
     
     public String contentType;
+
     public UpdateDataQualityRulesetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDataQualityRulesetResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateDataQualityRulesetResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDataQualityRulesetResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public UpdateDataQualityRulesetResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDataQualityRulesetResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateDataQualityRulesetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateDataQualityRulesetResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateDataQualityRulesetResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateDataQualityRulesetResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateDataQualityRulesetResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateDataQualityRulesetResponse {
     
     
     public Integer statusCode;
+
     public UpdateDataQualityRulesetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateDataQualityRulesetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDataQualityRulesetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateDataQualityRulesetResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public UpdateDataQualityRulesetResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateDataQualityRulesetResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDataQualityRulesetResponse updateDataQualityRulesetResponse;
+
     public UpdateDataQualityRulesetResponse withUpdateDataQualityRulesetResponse(org.openapis.openapi.models.shared.UpdateDataQualityRulesetResponse updateDataQualityRulesetResponse) {
         this.updateDataQualityRulesetResponse = updateDataQualityRulesetResponse;
         return this;
     }
     
+    public UpdateDataQualityRulesetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ public class ThemeColor {
      */
     @JsonProperty("name")
     public String name;
+
     public ThemeColor withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class ThemeColor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opacity")
     public Float opacity;
+
     public ThemeColor withOpacity(Float opacity) {
         this.opacity = opacity;
         return this;
@@ -39,9 +41,14 @@ public class ThemeColor {
      */
     @JsonProperty("value")
     public String value;
+
     public ThemeColor withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ThemeColor(@JsonProperty("name") String name, @JsonProperty("value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

@@ -12,6 +12,7 @@ public class CreateServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociatePublicIpAddress")
     public Boolean associatePublicIpAddress;
+
     public CreateServerRequest withAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         return this;
@@ -20,6 +21,7 @@ public class CreateServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupId")
     public String backupId;
+
     public CreateServerRequest withBackupId(String backupId) {
         this.backupId = backupId;
         return this;
@@ -28,6 +30,7 @@ public class CreateServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupRetentionCount")
     public Long backupRetentionCount;
+
     public CreateServerRequest withBackupRetentionCount(Long backupRetentionCount) {
         this.backupRetentionCount = backupRetentionCount;
         return this;
@@ -36,6 +39,7 @@ public class CreateServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomCertificate")
     public String customCertificate;
+
     public CreateServerRequest withCustomCertificate(String customCertificate) {
         this.customCertificate = customCertificate;
         return this;
@@ -44,6 +48,7 @@ public class CreateServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomDomain")
     public String customDomain;
+
     public CreateServerRequest withCustomDomain(String customDomain) {
         this.customDomain = customDomain;
         return this;
@@ -52,6 +57,7 @@ public class CreateServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomPrivateKey")
     public String customPrivateKey;
+
     public CreateServerRequest withCustomPrivateKey(String customPrivateKey) {
         this.customPrivateKey = customPrivateKey;
         return this;
@@ -60,6 +66,7 @@ public class CreateServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableAutomatedBackup")
     public Boolean disableAutomatedBackup;
+
     public CreateServerRequest withDisableAutomatedBackup(Boolean disableAutomatedBackup) {
         this.disableAutomatedBackup = disableAutomatedBackup;
         return this;
@@ -67,6 +74,7 @@ public class CreateServerRequest {
     
     @JsonProperty("Engine")
     public String engine;
+
     public CreateServerRequest withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -75,6 +83,7 @@ public class CreateServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineAttributes")
     public EngineAttribute[] engineAttributes;
+
     public CreateServerRequest withEngineAttributes(EngineAttribute[] engineAttributes) {
         this.engineAttributes = engineAttributes;
         return this;
@@ -83,6 +92,7 @@ public class CreateServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineModel")
     public String engineModel;
+
     public CreateServerRequest withEngineModel(String engineModel) {
         this.engineModel = engineModel;
         return this;
@@ -91,6 +101,7 @@ public class CreateServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersion")
     public String engineVersion;
+
     public CreateServerRequest withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -98,6 +109,7 @@ public class CreateServerRequest {
     
     @JsonProperty("InstanceProfileArn")
     public String instanceProfileArn;
+
     public CreateServerRequest withInstanceProfileArn(String instanceProfileArn) {
         this.instanceProfileArn = instanceProfileArn;
         return this;
@@ -105,6 +117,7 @@ public class CreateServerRequest {
     
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public CreateServerRequest withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -113,6 +126,7 @@ public class CreateServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyPair")
     public String keyPair;
+
     public CreateServerRequest withKeyPair(String keyPair) {
         this.keyPair = keyPair;
         return this;
@@ -121,6 +135,7 @@ public class CreateServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredBackupWindow")
     public String preferredBackupWindow;
+
     public CreateServerRequest withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -129,6 +144,7 @@ public class CreateServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public CreateServerRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -137,6 +153,7 @@ public class CreateServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public CreateServerRequest withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -144,6 +161,7 @@ public class CreateServerRequest {
     
     @JsonProperty("ServerName")
     public String serverName;
+
     public CreateServerRequest withServerName(String serverName) {
         this.serverName = serverName;
         return this;
@@ -151,6 +169,7 @@ public class CreateServerRequest {
     
     @JsonProperty("ServiceRoleArn")
     public String serviceRoleArn;
+
     public CreateServerRequest withServiceRoleArn(String serviceRoleArn) {
         this.serviceRoleArn = serviceRoleArn;
         return this;
@@ -159,6 +178,7 @@ public class CreateServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public CreateServerRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -167,9 +187,17 @@ public class CreateServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateServerRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateServerRequest(@JsonProperty("Engine") String engine, @JsonProperty("InstanceProfileArn") String instanceProfileArn, @JsonProperty("InstanceType") String instanceType, @JsonProperty("ServerName") String serverName, @JsonProperty("ServiceRoleArn") String serviceRoleArn) {
+        this.engine = engine;
+        this.instanceProfileArn = instanceProfileArn;
+        this.instanceType = instanceType;
+        this.serverName = serverName;
+        this.serviceRoleArn = serviceRoleArn;
+  }
 }

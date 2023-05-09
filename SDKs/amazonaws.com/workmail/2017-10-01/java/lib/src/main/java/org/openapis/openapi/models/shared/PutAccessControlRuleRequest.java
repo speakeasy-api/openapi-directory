@@ -12,6 +12,7 @@ public class PutAccessControlRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Actions")
     public String[] actions;
+
     public PutAccessControlRuleRequest withActions(String[] actions) {
         this.actions = actions;
         return this;
@@ -19,6 +20,7 @@ public class PutAccessControlRuleRequest {
     
     @JsonProperty("Description")
     public String description;
+
     public PutAccessControlRuleRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class PutAccessControlRuleRequest {
     
     @JsonProperty("Effect")
     public AccessControlRuleEffectEnum effect;
+
     public PutAccessControlRuleRequest withEffect(AccessControlRuleEffectEnum effect) {
         this.effect = effect;
         return this;
@@ -34,6 +37,7 @@ public class PutAccessControlRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImpersonationRoleIds")
     public String[] impersonationRoleIds;
+
     public PutAccessControlRuleRequest withImpersonationRoleIds(String[] impersonationRoleIds) {
         this.impersonationRoleIds = impersonationRoleIds;
         return this;
@@ -42,6 +46,7 @@ public class PutAccessControlRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpRanges")
     public String[] ipRanges;
+
     public PutAccessControlRuleRequest withIpRanges(String[] ipRanges) {
         this.ipRanges = ipRanges;
         return this;
@@ -49,6 +54,7 @@ public class PutAccessControlRuleRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public PutAccessControlRuleRequest withName(String name) {
         this.name = name;
         return this;
@@ -57,6 +63,7 @@ public class PutAccessControlRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotActions")
     public String[] notActions;
+
     public PutAccessControlRuleRequest withNotActions(String[] notActions) {
         this.notActions = notActions;
         return this;
@@ -65,6 +72,7 @@ public class PutAccessControlRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotImpersonationRoleIds")
     public String[] notImpersonationRoleIds;
+
     public PutAccessControlRuleRequest withNotImpersonationRoleIds(String[] notImpersonationRoleIds) {
         this.notImpersonationRoleIds = notImpersonationRoleIds;
         return this;
@@ -73,6 +81,7 @@ public class PutAccessControlRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotIpRanges")
     public String[] notIpRanges;
+
     public PutAccessControlRuleRequest withNotIpRanges(String[] notIpRanges) {
         this.notIpRanges = notIpRanges;
         return this;
@@ -81,6 +90,7 @@ public class PutAccessControlRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotUserIds")
     public String[] notUserIds;
+
     public PutAccessControlRuleRequest withNotUserIds(String[] notUserIds) {
         this.notUserIds = notUserIds;
         return this;
@@ -88,6 +98,7 @@ public class PutAccessControlRuleRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public PutAccessControlRuleRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -96,9 +107,16 @@ public class PutAccessControlRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserIds")
     public String[] userIds;
+
     public PutAccessControlRuleRequest withUserIds(String[] userIds) {
         this.userIds = userIds;
         return this;
     }
     
+    public PutAccessControlRuleRequest(@JsonProperty("Description") String description, @JsonProperty("Effect") AccessControlRuleEffectEnum effect, @JsonProperty("Name") String name, @JsonProperty("OrganizationId") String organizationId) {
+        this.description = description;
+        this.effect = effect;
+        this.name = name;
+        this.organizationId = organizationId;
+  }
 }

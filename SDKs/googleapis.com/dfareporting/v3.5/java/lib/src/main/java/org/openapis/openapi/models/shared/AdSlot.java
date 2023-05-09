@@ -18,6 +18,7 @@ public class AdSlot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public AdSlot withComment(String comment) {
         this.comment = comment;
         return this;
@@ -29,6 +30,7 @@ public class AdSlot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibility")
     public AdSlotCompatibilityEnum compatibility;
+
     public AdSlot withCompatibility(AdSlotCompatibilityEnum compatibility) {
         this.compatibility = compatibility;
         return this;
@@ -40,6 +42,7 @@ public class AdSlot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public String height;
+
     public AdSlot withHeight(String height) {
         this.height = height;
         return this;
@@ -51,6 +54,7 @@ public class AdSlot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedPlacementId")
     public String linkedPlacementId;
+
     public AdSlot withLinkedPlacementId(String linkedPlacementId) {
         this.linkedPlacementId = linkedPlacementId;
         return this;
@@ -62,6 +66,7 @@ public class AdSlot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AdSlot withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class AdSlot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentSourceType")
     public AdSlotPaymentSourceTypeEnum paymentSourceType;
+
     public AdSlot withPaymentSourceType(AdSlotPaymentSourceTypeEnum paymentSourceType) {
         this.paymentSourceType = paymentSourceType;
         return this;
@@ -84,6 +90,7 @@ public class AdSlot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     public Boolean primary;
+
     public AdSlot withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -95,9 +102,11 @@ public class AdSlot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public String width;
+
     public AdSlot withWidth(String width) {
         this.width = width;
         return this;
     }
     
+    public AdSlot(){}
 }

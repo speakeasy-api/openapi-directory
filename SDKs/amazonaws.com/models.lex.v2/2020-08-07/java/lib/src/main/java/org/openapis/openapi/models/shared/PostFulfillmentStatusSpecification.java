@@ -15,6 +15,7 @@ public class PostFulfillmentStatusSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureConditional")
     public ConditionalSpecification failureConditional;
+
     public PostFulfillmentStatusSpecification withFailureConditional(ConditionalSpecification failureConditional) {
         this.failureConditional = failureConditional;
         return this;
@@ -23,6 +24,7 @@ public class PostFulfillmentStatusSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureNextStep")
     public DialogState failureNextStep;
+
     public PostFulfillmentStatusSpecification withFailureNextStep(DialogState failureNextStep) {
         this.failureNextStep = failureNextStep;
         return this;
@@ -34,6 +36,7 @@ public class PostFulfillmentStatusSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureResponse")
     public ResponseSpecification failureResponse;
+
     public PostFulfillmentStatusSpecification withFailureResponse(ResponseSpecification failureResponse) {
         this.failureResponse = failureResponse;
         return this;
@@ -42,6 +45,7 @@ public class PostFulfillmentStatusSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successConditional")
     public ConditionalSpecification successConditional;
+
     public PostFulfillmentStatusSpecification withSuccessConditional(ConditionalSpecification successConditional) {
         this.successConditional = successConditional;
         return this;
@@ -50,6 +54,7 @@ public class PostFulfillmentStatusSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successNextStep")
     public DialogState successNextStep;
+
     public PostFulfillmentStatusSpecification withSuccessNextStep(DialogState successNextStep) {
         this.successNextStep = successNextStep;
         return this;
@@ -61,6 +66,7 @@ public class PostFulfillmentStatusSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successResponse")
     public ResponseSpecification successResponse;
+
     public PostFulfillmentStatusSpecification withSuccessResponse(ResponseSpecification successResponse) {
         this.successResponse = successResponse;
         return this;
@@ -69,6 +75,7 @@ public class PostFulfillmentStatusSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutConditional")
     public ConditionalSpecification timeoutConditional;
+
     public PostFulfillmentStatusSpecification withTimeoutConditional(ConditionalSpecification timeoutConditional) {
         this.timeoutConditional = timeoutConditional;
         return this;
@@ -77,6 +84,7 @@ public class PostFulfillmentStatusSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutNextStep")
     public DialogState timeoutNextStep;
+
     public PostFulfillmentStatusSpecification withTimeoutNextStep(DialogState timeoutNextStep) {
         this.timeoutNextStep = timeoutNextStep;
         return this;
@@ -88,9 +96,11 @@ public class PostFulfillmentStatusSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutResponse")
     public ResponseSpecification timeoutResponse;
+
     public PostFulfillmentStatusSpecification withTimeoutResponse(ResponseSpecification timeoutResponse) {
         this.timeoutResponse = timeoutResponse;
         return this;
     }
     
+    public PostFulfillmentStatusSpecification(){}
 }

@@ -15,6 +15,7 @@ public class TestOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public String merchantId;
+
     public TestOutput withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -30,6 +31,7 @@ public class TestOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("output")
     public String output;
+
     public TestOutput withOutput(String output) {
         this.output = output;
         return this;
@@ -41,6 +43,7 @@ public class TestOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestSent")
     public String requestSent;
+
     public TestOutput withRequestSent(String requestSent) {
         this.requestSent = requestSent;
         return this;
@@ -54,6 +57,7 @@ public class TestOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseCode")
     public String responseCode;
+
     public TestOutput withResponseCode(String responseCode) {
         this.responseCode = responseCode;
         return this;
@@ -65,6 +69,7 @@ public class TestOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseTime")
     public String responseTime;
+
     public TestOutput withResponseTime(String responseTime) {
         this.responseTime = responseTime;
         return this;
@@ -79,9 +84,13 @@ public class TestOutput {
      */
     @JsonProperty("status")
     public String status;
+
     public TestOutput withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public TestOutput(@JsonProperty("status") String status) {
+        this.status = status;
+  }
 }

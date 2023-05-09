@@ -18,6 +18,7 @@ public class AutoprovisioningNodePoolDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootDiskKmsKey")
     public String bootDiskKmsKey;
+
     public AutoprovisioningNodePoolDefaults withBootDiskKmsKey(String bootDiskKmsKey) {
         this.bootDiskKmsKey = bootDiskKmsKey;
         return this;
@@ -29,6 +30,7 @@ public class AutoprovisioningNodePoolDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public Integer diskSizeGb;
+
     public AutoprovisioningNodePoolDefaults withDiskSizeGb(Integer diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -40,6 +42,7 @@ public class AutoprovisioningNodePoolDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskType")
     public String diskType;
+
     public AutoprovisioningNodePoolDefaults withDiskType(String diskType) {
         this.diskType = diskType;
         return this;
@@ -51,6 +54,7 @@ public class AutoprovisioningNodePoolDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageType")
     public String imageType;
+
     public AutoprovisioningNodePoolDefaults withImageType(String imageType) {
         this.imageType = imageType;
         return this;
@@ -62,6 +66,7 @@ public class AutoprovisioningNodePoolDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("management")
     public NodeManagement management;
+
     public AutoprovisioningNodePoolDefaults withManagement(NodeManagement management) {
         this.management = management;
         return this;
@@ -73,6 +78,7 @@ public class AutoprovisioningNodePoolDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minCpuPlatform")
     public String minCpuPlatform;
+
     public AutoprovisioningNodePoolDefaults withMinCpuPlatform(String minCpuPlatform) {
         this.minCpuPlatform = minCpuPlatform;
         return this;
@@ -84,6 +90,7 @@ public class AutoprovisioningNodePoolDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauthScopes")
     public String[] oauthScopes;
+
     public AutoprovisioningNodePoolDefaults withOauthScopes(String[] oauthScopes) {
         this.oauthScopes = oauthScopes;
         return this;
@@ -95,6 +102,7 @@ public class AutoprovisioningNodePoolDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public AutoprovisioningNodePoolDefaults withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -106,6 +114,7 @@ public class AutoprovisioningNodePoolDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shieldedInstanceConfig")
     public ShieldedInstanceConfig shieldedInstanceConfig;
+
     public AutoprovisioningNodePoolDefaults withShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {
         this.shieldedInstanceConfig = shieldedInstanceConfig;
         return this;
@@ -117,9 +126,11 @@ public class AutoprovisioningNodePoolDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upgradeSettings")
     public UpgradeSettings upgradeSettings;
+
     public AutoprovisioningNodePoolDefaults withUpgradeSettings(UpgradeSettings upgradeSettings) {
         this.upgradeSettings = upgradeSettings;
         return this;
     }
     
+    public AutoprovisioningNodePoolDefaults(){}
 }

@@ -15,9 +15,13 @@ public class DeleteEndpointResponse {
      */
     @JsonProperty("EndpointResponse")
     public EndpointResponse endpointResponse;
+
     public DeleteEndpointResponse withEndpointResponse(EndpointResponse endpointResponse) {
         this.endpointResponse = endpointResponse;
         return this;
     }
     
+    public DeleteEndpointResponse(@JsonProperty("EndpointResponse") EndpointResponse endpointResponse) {
+        this.endpointResponse = endpointResponse;
+  }
 }

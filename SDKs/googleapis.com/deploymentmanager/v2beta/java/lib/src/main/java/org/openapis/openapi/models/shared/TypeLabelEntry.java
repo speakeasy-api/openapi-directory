@@ -18,6 +18,7 @@ public class TypeLabelEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public TypeLabelEntry withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class TypeLabelEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public TypeLabelEntry withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public TypeLabelEntry(){}
 }

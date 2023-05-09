@@ -15,6 +15,7 @@ public class CostCategoryProcessingStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Component")
     public CostCategoryStatusComponentEnum component;
+
     public CostCategoryProcessingStatus withComponent(CostCategoryStatusComponentEnum component) {
         this.component = component;
         return this;
@@ -23,9 +24,11 @@ public class CostCategoryProcessingStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CostCategoryStatusEnum status;
+
     public CostCategoryProcessingStatus withStatus(CostCategoryStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CostCategoryProcessingStatus(){}
 }

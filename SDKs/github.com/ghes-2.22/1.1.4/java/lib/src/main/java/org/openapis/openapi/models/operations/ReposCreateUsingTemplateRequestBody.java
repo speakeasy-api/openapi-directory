@@ -15,6 +15,7 @@ public class ReposCreateUsingTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ReposCreateUsingTemplateRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class ReposCreateUsingTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include_all_branches")
     public Boolean includeAllBranches;
+
     public ReposCreateUsingTemplateRequestBody withIncludeAllBranches(Boolean includeAllBranches) {
         this.includeAllBranches = includeAllBranches;
         return this;
@@ -36,6 +38,7 @@ public class ReposCreateUsingTemplateRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public ReposCreateUsingTemplateRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +50,7 @@ public class ReposCreateUsingTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public ReposCreateUsingTemplateRequestBody withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -58,9 +62,13 @@ public class ReposCreateUsingTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private")
     public Boolean private_;
+
     public ReposCreateUsingTemplateRequestBody withPrivate(Boolean private_) {
         this.private_ = private_;
         return this;
     }
     
+    public ReposCreateUsingTemplateRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

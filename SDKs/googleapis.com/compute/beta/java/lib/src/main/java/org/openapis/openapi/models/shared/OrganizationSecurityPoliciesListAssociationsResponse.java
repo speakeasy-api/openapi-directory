@@ -18,6 +18,7 @@ public class OrganizationSecurityPoliciesListAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associations")
     public SecurityPolicyAssociation[] associations;
+
     public OrganizationSecurityPoliciesListAssociationsResponse withAssociations(SecurityPolicyAssociation[] associations) {
         this.associations = associations;
         return this;
@@ -29,9 +30,11 @@ public class OrganizationSecurityPoliciesListAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OrganizationSecurityPoliciesListAssociationsResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public OrganizationSecurityPoliciesListAssociationsResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDataQualityRuleRecommendationRunRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetDataQualityRuleRecommendationRunRequest getDataQualityRuleRecommendationRunRequest;
+
     public GetDataQualityRuleRecommendationRunRequest withGetDataQualityRuleRecommendationRunRequest(org.openapis.openapi.models.shared.GetDataQualityRuleRecommendationRunRequest getDataQualityRuleRecommendationRunRequest) {
         this.getDataQualityRuleRecommendationRunRequest = getDataQualityRuleRecommendationRunRequest;
         return this;
@@ -16,6 +18,7 @@ public class GetDataQualityRuleRecommendationRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetDataQualityRuleRecommendationRunRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class GetDataQualityRuleRecommendationRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetDataQualityRuleRecommendationRunRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class GetDataQualityRuleRecommendationRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetDataQualityRuleRecommendationRunRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class GetDataQualityRuleRecommendationRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetDataQualityRuleRecommendationRunRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class GetDataQualityRuleRecommendationRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetDataQualityRuleRecommendationRunRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class GetDataQualityRuleRecommendationRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetDataQualityRuleRecommendationRunRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class GetDataQualityRuleRecommendationRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetDataQualityRuleRecommendationRunRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class GetDataQualityRuleRecommendationRunRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public GetDataQualityRuleRecommendationRunXAmzTargetEnum xAmzTarget;
+
     public GetDataQualityRuleRecommendationRunRequest withXAmzTarget(GetDataQualityRuleRecommendationRunXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public GetDataQualityRuleRecommendationRunRequest(@JsonProperty("GetDataQualityRuleRecommendationRunRequest") org.openapis.openapi.models.shared.GetDataQualityRuleRecommendationRunRequest getDataQualityRuleRecommendationRunRequest, @JsonProperty("X-Amz-Target") GetDataQualityRuleRecommendationRunXAmzTargetEnum xAmzTarget) {
+        this.getDataQualityRuleRecommendationRunRequest = getDataQualityRuleRecommendationRunRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

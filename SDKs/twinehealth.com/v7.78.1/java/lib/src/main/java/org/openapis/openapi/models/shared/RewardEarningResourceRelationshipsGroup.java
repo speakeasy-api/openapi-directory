@@ -12,9 +12,11 @@ public class RewardEarningResourceRelationshipsGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public RewardEarningResourceRelationshipsGroupData data;
+
     public RewardEarningResourceRelationshipsGroup withData(RewardEarningResourceRelationshipsGroupData data) {
         this.data = data;
         return this;
     }
     
+    public RewardEarningResourceRelationshipsGroup(){}
 }

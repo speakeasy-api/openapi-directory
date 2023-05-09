@@ -15,6 +15,7 @@ public class TagCriterionPairForJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public TagCriterionPairForJob withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class TagCriterionPairForJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public TagCriterionPairForJob withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public TagCriterionPairForJob(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesMediaIdRelatedMediaFormatRequest {
@@ -12,6 +13,7 @@ public class GetResourcesMediaIdRelatedMediaFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public String format;
+
     public GetResourcesMediaIdRelatedMediaFormatRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -22,6 +24,7 @@ public class GetResourcesMediaIdRelatedMediaFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetResourcesMediaIdRelatedMediaFormatRequest withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class GetResourcesMediaIdRelatedMediaFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=max")
     public Integer max;
+
     public GetResourcesMediaIdRelatedMediaFormatRequest withMax(Integer max) {
         this.max = max;
         return this;
@@ -42,6 +46,7 @@ public class GetResourcesMediaIdRelatedMediaFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=offset")
     public Integer offset;
+
     public GetResourcesMediaIdRelatedMediaFormatRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -52,9 +57,14 @@ public class GetResourcesMediaIdRelatedMediaFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
     public String sort;
+
     public GetResourcesMediaIdRelatedMediaFormatRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetResourcesMediaIdRelatedMediaFormatRequest(@JsonProperty("format") String format, @JsonProperty("id") Long id) {
+        this.format = format;
+        this.id = id;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAggregationAuthorizationRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DeleteAggregationAuthorizationRequest deleteAggregationAuthorizationRequest;
+
     public DeleteAggregationAuthorizationRequest withDeleteAggregationAuthorizationRequest(org.openapis.openapi.models.shared.DeleteAggregationAuthorizationRequest deleteAggregationAuthorizationRequest) {
         this.deleteAggregationAuthorizationRequest = deleteAggregationAuthorizationRequest;
         return this;
@@ -16,6 +18,7 @@ public class DeleteAggregationAuthorizationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteAggregationAuthorizationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DeleteAggregationAuthorizationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteAggregationAuthorizationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DeleteAggregationAuthorizationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteAggregationAuthorizationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DeleteAggregationAuthorizationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteAggregationAuthorizationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DeleteAggregationAuthorizationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteAggregationAuthorizationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DeleteAggregationAuthorizationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteAggregationAuthorizationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DeleteAggregationAuthorizationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteAggregationAuthorizationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class DeleteAggregationAuthorizationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DeleteAggregationAuthorizationXAmzTargetEnum xAmzTarget;
+
     public DeleteAggregationAuthorizationRequest withXAmzTarget(DeleteAggregationAuthorizationXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DeleteAggregationAuthorizationRequest(@JsonProperty("DeleteAggregationAuthorizationRequest") org.openapis.openapi.models.shared.DeleteAggregationAuthorizationRequest deleteAggregationAuthorizationRequest, @JsonProperty("X-Amz-Target") DeleteAggregationAuthorizationXAmzTargetEnum xAmzTarget) {
+        this.deleteAggregationAuthorizationRequest = deleteAggregationAuthorizationRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

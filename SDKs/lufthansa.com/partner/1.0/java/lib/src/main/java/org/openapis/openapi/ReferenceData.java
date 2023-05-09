@@ -65,11 +65,9 @@ public class ReferenceData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SeatDetailsResponse res = new org.openapis.openapi.models.operations.SeatDetailsResponse() {{
+        org.openapis.openapi.models.operations.SeatDetailsResponse res = new org.openapis.openapi.models.operations.SeatDetailsResponse(contentType, httpRes.statusCode()) {{
             seatDetails200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

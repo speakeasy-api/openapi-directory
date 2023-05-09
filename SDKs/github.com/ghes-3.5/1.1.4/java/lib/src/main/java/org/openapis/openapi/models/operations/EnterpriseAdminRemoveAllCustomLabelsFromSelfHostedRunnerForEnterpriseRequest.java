@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpriseRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpri
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpriseRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
@@ -22,9 +24,14 @@ public class EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpri
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
     public Long runnerId;
+
     public EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpriseRequest withRunnerId(Long runnerId) {
         this.runnerId = runnerId;
         return this;
     }
     
+    public EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpriseRequest(@JsonProperty("enterprise") String enterprise, @JsonProperty("runner_id") Long runnerId) {
+        this.enterprise = enterprise;
+        this.runnerId = runnerId;
+  }
 }

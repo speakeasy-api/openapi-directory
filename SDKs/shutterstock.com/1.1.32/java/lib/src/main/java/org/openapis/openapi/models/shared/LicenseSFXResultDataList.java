@@ -18,6 +18,7 @@ public class LicenseSFXResultDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public LicenseSFXResult[] data;
+
     public LicenseSFXResultDataList withData(LicenseSFXResult[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class LicenseSFXResultDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public LicenseSFXResultDataList withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -40,9 +42,11 @@ public class LicenseSFXResultDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public LicenseSFXResultDataList withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public LicenseSFXResultDataList(){}
 }

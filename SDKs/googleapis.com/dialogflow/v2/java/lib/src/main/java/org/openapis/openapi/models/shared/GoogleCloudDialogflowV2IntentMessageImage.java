@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2IntentMessageImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessibilityText")
     public String accessibilityText;
+
     public GoogleCloudDialogflowV2IntentMessageImage withAccessibilityText(String accessibilityText) {
         this.accessibilityText = accessibilityText;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2IntentMessageImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUri")
     public String imageUri;
+
     public GoogleCloudDialogflowV2IntentMessageImage withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentMessageImage(){}
 }

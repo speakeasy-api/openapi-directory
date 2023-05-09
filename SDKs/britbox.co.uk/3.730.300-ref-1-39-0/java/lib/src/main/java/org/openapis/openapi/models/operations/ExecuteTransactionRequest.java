@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExecuteTransactionRequest {
@@ -12,6 +13,7 @@ public class ExecuteTransactionRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItvRokuTransactionRequest itvRokuTransactionRequest;
+
     public ExecuteTransactionRequest withItvRokuTransactionRequest(org.openapis.openapi.models.shared.ItvRokuTransactionRequest itvRokuTransactionRequest) {
         this.itvRokuTransactionRequest = itvRokuTransactionRequest;
         return this;
@@ -32,6 +34,7 @@ public class ExecuteTransactionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public ExecuteTransactionRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -42,9 +45,14 @@ public class ExecuteTransactionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionid")
     public String transactionid;
+
     public ExecuteTransactionRequest withTransactionid(String transactionid) {
         this.transactionid = transactionid;
         return this;
     }
     
+    public ExecuteTransactionRequest(@JsonProperty("ItvRokuTransactionRequest") org.openapis.openapi.models.shared.ItvRokuTransactionRequest itvRokuTransactionRequest, @JsonProperty("transactionid") String transactionid) {
+        this.itvRokuTransactionRequest = itvRokuTransactionRequest;
+        this.transactionid = transactionid;
+  }
 }

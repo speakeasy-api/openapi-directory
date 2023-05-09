@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteExpressionRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;DeleteExpression&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to update and the name of the expression you want to delete.
@@ -15,6 +15,7 @@ public class DeleteExpressionRequest {
      */
     
     public String domainName;
+
     public DeleteExpressionRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,9 +23,14 @@ public class DeleteExpressionRequest {
     
     
     public String expressionName;
+
     public DeleteExpressionRequest withExpressionName(String expressionName) {
         this.expressionName = expressionName;
         return this;
     }
     
+    public DeleteExpressionRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("ExpressionName") String expressionName) {
+        this.domainName = domainName;
+        this.expressionName = expressionName;
+  }
 }

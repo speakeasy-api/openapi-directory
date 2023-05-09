@@ -18,6 +18,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public BreakpointActionEnum action;
+
     public Breakpoint withAction(BreakpointActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canaryExpireTime")
     public String canaryExpireTime;
+
     public Breakpoint withCanaryExpireTime(String canaryExpireTime) {
         this.canaryExpireTime = canaryExpireTime;
         return this;
@@ -40,6 +42,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public Breakpoint withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -51,6 +54,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Breakpoint withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -62,6 +66,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluatedExpressions")
     public Variable[] evaluatedExpressions;
+
     public Breakpoint withEvaluatedExpressions(Variable[] evaluatedExpressions) {
         this.evaluatedExpressions = evaluatedExpressions;
         return this;
@@ -73,6 +78,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expressions")
     public String[] expressions;
+
     public Breakpoint withExpressions(String[] expressions) {
         this.expressions = expressions;
         return this;
@@ -84,6 +90,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalTime")
     public String finalTime;
+
     public Breakpoint withFinalTime(String finalTime) {
         this.finalTime = finalTime;
         return this;
@@ -95,6 +102,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Breakpoint withId(String id) {
         this.id = id;
         return this;
@@ -106,6 +114,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFinalState")
     public Boolean isFinalState;
+
     public Breakpoint withIsFinalState(Boolean isFinalState) {
         this.isFinalState = isFinalState;
         return this;
@@ -117,6 +126,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Breakpoint withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -128,6 +138,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public SourceLocation location;
+
     public Breakpoint withLocation(SourceLocation location) {
         this.location = location;
         return this;
@@ -139,6 +150,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logLevel")
     public BreakpointLogLevelEnum logLevel;
+
     public Breakpoint withLogLevel(BreakpointLogLevelEnum logLevel) {
         this.logLevel = logLevel;
         return this;
@@ -150,6 +162,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logMessageFormat")
     public String logMessageFormat;
+
     public Breakpoint withLogMessageFormat(String logMessageFormat) {
         this.logMessageFormat = logMessageFormat;
         return this;
@@ -161,6 +174,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackFrames")
     public StackFrame[] stackFrames;
+
     public Breakpoint withStackFrames(StackFrame[] stackFrames) {
         this.stackFrames = stackFrames;
         return this;
@@ -172,6 +186,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public BreakpointStateEnum state;
+
     public Breakpoint withState(BreakpointStateEnum state) {
         this.state = state;
         return this;
@@ -183,6 +198,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StatusMessage status;
+
     public Breakpoint withStatus(StatusMessage status) {
         this.status = status;
         return this;
@@ -194,6 +210,7 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEmail")
     public String userEmail;
+
     public Breakpoint withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
@@ -205,9 +222,11 @@ public class Breakpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variableTable")
     public Variable[] variableTable;
+
     public Breakpoint withVariableTable(Variable[] variableTable) {
         this.variableTable = variableTable;
         return this;
     }
     
+    public Breakpoint(){}
 }

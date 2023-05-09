@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ListFHIRExportJobsRequest {
     @JsonProperty("DatastoreId")
     public String datastoreId;
+
     public ListFHIRExportJobsRequest withDatastoreId(String datastoreId) {
         this.datastoreId = datastoreId;
         return this;
@@ -24,6 +25,7 @@ public class ListFHIRExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public ListFHIRExportJobsRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -32,6 +34,7 @@ public class ListFHIRExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public ListFHIRExportJobsRequest withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -40,6 +43,7 @@ public class ListFHIRExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListFHIRExportJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -48,6 +52,7 @@ public class ListFHIRExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFHIRExportJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -58,6 +63,7 @@ public class ListFHIRExportJobsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmittedAfter")
     public OffsetDateTime submittedAfter;
+
     public ListFHIRExportJobsRequest withSubmittedAfter(OffsetDateTime submittedAfter) {
         this.submittedAfter = submittedAfter;
         return this;
@@ -68,9 +74,13 @@ public class ListFHIRExportJobsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmittedBefore")
     public OffsetDateTime submittedBefore;
+
     public ListFHIRExportJobsRequest withSubmittedBefore(OffsetDateTime submittedBefore) {
         this.submittedBefore = submittedBefore;
         return this;
     }
     
+    public ListFHIRExportJobsRequest(@JsonProperty("DatastoreId") String datastoreId) {
+        this.datastoreId = datastoreId;
+  }
 }

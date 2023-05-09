@@ -18,6 +18,7 @@ public class DatafeedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public DatafeedStatus withCountry(String country) {
         this.country = country;
         return this;
@@ -29,6 +30,7 @@ public class DatafeedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datafeedId")
     public String datafeedId;
+
     public DatafeedStatus withDatafeedId(String datafeedId) {
         this.datafeedId = datafeedId;
         return this;
@@ -40,6 +42,7 @@ public class DatafeedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public DatafeedStatusError[] errors;
+
     public DatafeedStatus withErrors(DatafeedStatusError[] errors) {
         this.errors = errors;
         return this;
@@ -51,6 +54,7 @@ public class DatafeedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedLabel")
     public String feedLabel;
+
     public DatafeedStatus withFeedLabel(String feedLabel) {
         this.feedLabel = feedLabel;
         return this;
@@ -62,6 +66,7 @@ public class DatafeedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemsTotal")
     public String itemsTotal;
+
     public DatafeedStatus withItemsTotal(String itemsTotal) {
         this.itemsTotal = itemsTotal;
         return this;
@@ -73,6 +78,7 @@ public class DatafeedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemsValid")
     public String itemsValid;
+
     public DatafeedStatus withItemsValid(String itemsValid) {
         this.itemsValid = itemsValid;
         return this;
@@ -84,6 +90,7 @@ public class DatafeedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DatafeedStatus withKind(String kind) {
         this.kind = kind;
         return this;
@@ -95,6 +102,7 @@ public class DatafeedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public DatafeedStatus withLanguage(String language) {
         this.language = language;
         return this;
@@ -106,6 +114,7 @@ public class DatafeedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUploadDate")
     public String lastUploadDate;
+
     public DatafeedStatus withLastUploadDate(String lastUploadDate) {
         this.lastUploadDate = lastUploadDate;
         return this;
@@ -117,6 +126,7 @@ public class DatafeedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processingStatus")
     public String processingStatus;
+
     public DatafeedStatus withProcessingStatus(String processingStatus) {
         this.processingStatus = processingStatus;
         return this;
@@ -128,9 +138,11 @@ public class DatafeedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public DatafeedStatusError[] warnings;
+
     public DatafeedStatus withWarnings(DatafeedStatusError[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public DatafeedStatus(){}
 }

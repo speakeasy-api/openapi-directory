@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetryWorkflowStepResponse {
@@ -12,6 +13,7 @@ public class RetryWorkflowStepResponse {
      */
     
     public Object accessDeniedException;
+
     public RetryWorkflowStepResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class RetryWorkflowStepResponse {
     
     
     public String contentType;
+
     public RetryWorkflowStepResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RetryWorkflowStepResponse {
      */
     
     public Object internalServerException;
+
     public RetryWorkflowStepResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class RetryWorkflowStepResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RetryWorkflowStepResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RetryWorkflowStepResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryWorkflowStepResponse retryWorkflowStepResponse;
+
     public RetryWorkflowStepResponse withRetryWorkflowStepResponse(org.openapis.openapi.models.shared.RetryWorkflowStepResponse retryWorkflowStepResponse) {
         this.retryWorkflowStepResponse = retryWorkflowStepResponse;
         return this;
@@ -56,6 +62,7 @@ public class RetryWorkflowStepResponse {
     
     
     public Integer statusCode;
+
     public RetryWorkflowStepResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RetryWorkflowStepResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetryWorkflowStepResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class RetryWorkflowStepResponse {
      */
     
     public Object throttlingException;
+
     public RetryWorkflowStepResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public RetryWorkflowStepResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

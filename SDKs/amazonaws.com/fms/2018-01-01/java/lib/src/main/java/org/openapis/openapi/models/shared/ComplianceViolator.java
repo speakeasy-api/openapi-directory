@@ -15,6 +15,7 @@ public class ComplianceViolator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metadata")
     public java.util.Map<String, String> metadata;
+
     public ComplianceViolator withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -23,6 +24,7 @@ public class ComplianceViolator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ComplianceViolator withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -31,6 +33,7 @@ public class ComplianceViolator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public ComplianceViolator withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -39,9 +42,11 @@ public class ComplianceViolator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolationReason")
     public ViolationReasonEnum violationReason;
+
     public ComplianceViolator withViolationReason(ViolationReasonEnum violationReason) {
         this.violationReason = violationReason;
         return this;
     }
     
+    public ComplianceViolator(){}
 }

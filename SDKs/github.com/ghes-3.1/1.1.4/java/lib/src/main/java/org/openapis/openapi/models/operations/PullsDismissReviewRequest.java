@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsDismissReviewRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PullsDismissReviewRequestBody requestBody;
+
     public PullsDismissReviewRequest withRequestBody(PullsDismissReviewRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PullsDismissReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public PullsDismissReviewRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -29,6 +32,7 @@ public class PullsDismissReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
     public Long pullNumber;
+
     public PullsDismissReviewRequest withPullNumber(Long pullNumber) {
         this.pullNumber = pullNumber;
         return this;
@@ -39,6 +43,7 @@ public class PullsDismissReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public PullsDismissReviewRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -49,9 +54,17 @@ public class PullsDismissReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=review_id")
     public Long reviewId;
+
     public PullsDismissReviewRequest withReviewId(Long reviewId) {
         this.reviewId = reviewId;
         return this;
     }
     
+    public PullsDismissReviewRequest(@JsonProperty("RequestBody") PullsDismissReviewRequestBody requestBody, @JsonProperty("owner") String owner, @JsonProperty("pull_number") Long pullNumber, @JsonProperty("repo") String repo, @JsonProperty("review_id") Long reviewId) {
+        this.requestBody = requestBody;
+        this.owner = owner;
+        this.pullNumber = pullNumber;
+        this.repo = repo;
+        this.reviewId = reviewId;
+  }
 }

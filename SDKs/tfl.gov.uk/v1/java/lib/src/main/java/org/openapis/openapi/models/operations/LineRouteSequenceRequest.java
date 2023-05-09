@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineRouteSequenceRequest {
@@ -12,6 +13,7 @@ public class LineRouteSequenceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=direction")
     public LineRouteSequenceDirectionEnum direction;
+
     public LineRouteSequenceRequest withDirection(LineRouteSequenceDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -22,6 +24,7 @@ public class LineRouteSequenceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeCrowding")
     public Boolean excludeCrowding;
+
     public LineRouteSequenceRequest withExcludeCrowding(Boolean excludeCrowding) {
         this.excludeCrowding = excludeCrowding;
         return this;
@@ -32,6 +35,7 @@ public class LineRouteSequenceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public LineRouteSequenceRequest withId(String id) {
         this.id = id;
         return this;
@@ -42,9 +46,14 @@ public class LineRouteSequenceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceTypes")
     public LineRouteSequenceServiceTypesEnum[] serviceTypes;
+
     public LineRouteSequenceRequest withServiceTypes(LineRouteSequenceServiceTypesEnum[] serviceTypes) {
         this.serviceTypes = serviceTypes;
         return this;
     }
     
+    public LineRouteSequenceRequest(@JsonProperty("direction") LineRouteSequenceDirectionEnum direction, @JsonProperty("id") String id) {
+        this.direction = direction;
+        this.id = id;
+  }
 }

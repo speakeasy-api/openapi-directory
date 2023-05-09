@@ -12,9 +12,11 @@ public class PatientHealthMetricResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient")
     public PatientHealthMetricResourceRelationshipsPatient patient;
+
     public PatientHealthMetricResourceRelationships withPatient(PatientHealthMetricResourceRelationshipsPatient patient) {
         this.patient = patient;
         return this;
     }
     
+    public PatientHealthMetricResourceRelationships(){}
 }

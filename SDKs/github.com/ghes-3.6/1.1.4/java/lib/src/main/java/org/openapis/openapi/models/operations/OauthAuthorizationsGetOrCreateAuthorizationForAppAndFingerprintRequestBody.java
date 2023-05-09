@@ -14,6 +14,7 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequ
      */
     @JsonProperty("client_secret")
     public String clientSecret;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequestBody withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -25,6 +26,7 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequ
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequestBody withNote(String note) {
         this.note = note;
         return this;
@@ -36,6 +38,7 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequ
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note_url")
     public String noteUrl;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequestBody withNoteUrl(String noteUrl) {
         this.noteUrl = noteUrl;
         return this;
@@ -47,9 +50,13 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequ
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public String[] scopes;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequestBody withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
     }
     
+    public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequestBody(@JsonProperty("client_secret") String clientSecret) {
+        this.clientSecret = clientSecret;
+  }
 }

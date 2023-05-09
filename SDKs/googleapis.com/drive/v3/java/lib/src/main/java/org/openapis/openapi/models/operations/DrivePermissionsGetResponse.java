@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DrivePermissionsGetResponse {
     
     public String contentType;
+
     public DrivePermissionsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DrivePermissionsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Permission permission;
+
     public DrivePermissionsGetResponse withPermission(org.openapis.openapi.models.shared.Permission permission) {
         this.permission = permission;
         return this;
@@ -26,6 +29,7 @@ public class DrivePermissionsGetResponse {
     
     
     public Integer statusCode;
+
     public DrivePermissionsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DrivePermissionsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DrivePermissionsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DrivePermissionsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

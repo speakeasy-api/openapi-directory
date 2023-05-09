@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateImageRequestBlockDeviceMappingsEbs {
     
     public Boolean deleteOnTermination;
+
     public CreateImageRequestBlockDeviceMappingsEbs withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -19,6 +20,7 @@ public class CreateImageRequestBlockDeviceMappingsEbs {
     
     
     public Boolean encrypted;
+
     public CreateImageRequestBlockDeviceMappingsEbs withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -26,6 +28,7 @@ public class CreateImageRequestBlockDeviceMappingsEbs {
     
     
     public Long iops;
+
     public CreateImageRequestBlockDeviceMappingsEbs withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -33,6 +36,7 @@ public class CreateImageRequestBlockDeviceMappingsEbs {
     
     
     public String kmsKeyId;
+
     public CreateImageRequestBlockDeviceMappingsEbs withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -40,6 +44,7 @@ public class CreateImageRequestBlockDeviceMappingsEbs {
     
     
     public String outpostArn;
+
     public CreateImageRequestBlockDeviceMappingsEbs withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -47,6 +52,7 @@ public class CreateImageRequestBlockDeviceMappingsEbs {
     
     
     public String snapshotId;
+
     public CreateImageRequestBlockDeviceMappingsEbs withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -54,6 +60,7 @@ public class CreateImageRequestBlockDeviceMappingsEbs {
     
     
     public Long throughput;
+
     public CreateImageRequestBlockDeviceMappingsEbs withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -61,6 +68,7 @@ public class CreateImageRequestBlockDeviceMappingsEbs {
     
     
     public Long volumeSize;
+
     public CreateImageRequestBlockDeviceMappingsEbs withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
@@ -68,9 +76,11 @@ public class CreateImageRequestBlockDeviceMappingsEbs {
     
     
     public CreateImageRequestBlockDeviceMappingsEbsVolumeTypeEnum volumeType;
+
     public CreateImageRequestBlockDeviceMappingsEbs withVolumeType(CreateImageRequestBlockDeviceMappingsEbsVolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public CreateImageRequestBlockDeviceMappingsEbs(){}
 }

@@ -15,6 +15,7 @@ public class GetDraftRegistrationsDraftIdDraftRegistrationAttributes {
      */
     
     public String category;
+
     public GetDraftRegistrationsDraftIdDraftRegistrationAttributes withCategory(String category) {
         this.category = category;
         return this;
@@ -25,6 +26,7 @@ public class GetDraftRegistrationsDraftIdDraftRegistrationAttributes {
      */
     
     public String[] currentUserPermissions;
+
     public GetDraftRegistrationsDraftIdDraftRegistrationAttributes withCurrentUserPermissions(String[] currentUserPermissions) {
         this.currentUserPermissions = currentUserPermissions;
         return this;
@@ -35,6 +37,7 @@ public class GetDraftRegistrationsDraftIdDraftRegistrationAttributes {
      */
     
     public OffsetDateTime datetimeInitiated;
+
     public GetDraftRegistrationsDraftIdDraftRegistrationAttributes withDatetimeInitiated(OffsetDateTime datetimeInitiated) {
         this.datetimeInitiated = datetimeInitiated;
         return this;
@@ -45,6 +48,7 @@ public class GetDraftRegistrationsDraftIdDraftRegistrationAttributes {
      */
     
     public OffsetDateTime datetimeUpdated;
+
     public GetDraftRegistrationsDraftIdDraftRegistrationAttributes withDatetimeUpdated(OffsetDateTime datetimeUpdated) {
         this.datetimeUpdated = datetimeUpdated;
         return this;
@@ -55,6 +59,7 @@ public class GetDraftRegistrationsDraftIdDraftRegistrationAttributes {
      */
     
     public String description;
+
     public GetDraftRegistrationsDraftIdDraftRegistrationAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -65,6 +70,7 @@ public class GetDraftRegistrationsDraftIdDraftRegistrationAttributes {
      */
     
     public Boolean hasProject;
+
     public GetDraftRegistrationsDraftIdDraftRegistrationAttributes withHasProject(Boolean hasProject) {
         this.hasProject = hasProject;
         return this;
@@ -72,6 +78,7 @@ public class GetDraftRegistrationsDraftIdDraftRegistrationAttributes {
     
     
     public GetDraftRegistrationsDraftIdDraftRegistrationAttributesNodeLicense nodeLicense;
+
     public GetDraftRegistrationsDraftIdDraftRegistrationAttributes withNodeLicense(GetDraftRegistrationsDraftIdDraftRegistrationAttributesNodeLicense nodeLicense) {
         this.nodeLicense = nodeLicense;
         return this;
@@ -82,6 +89,7 @@ public class GetDraftRegistrationsDraftIdDraftRegistrationAttributes {
      */
     
     public java.util.Map<String, Object> registrationMetadata;
+
     public GetDraftRegistrationsDraftIdDraftRegistrationAttributes withRegistrationMetadata(java.util.Map<String, Object> registrationMetadata) {
         this.registrationMetadata = registrationMetadata;
         return this;
@@ -92,6 +100,7 @@ public class GetDraftRegistrationsDraftIdDraftRegistrationAttributes {
      */
     
     public java.util.Map<String, Object> registrationResponses;
+
     public GetDraftRegistrationsDraftIdDraftRegistrationAttributes withRegistrationResponses(java.util.Map<String, Object> registrationResponses) {
         this.registrationResponses = registrationResponses;
         return this;
@@ -102,6 +111,7 @@ public class GetDraftRegistrationsDraftIdDraftRegistrationAttributes {
      */
     
     public String[] tags;
+
     public GetDraftRegistrationsDraftIdDraftRegistrationAttributes withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -112,9 +122,11 @@ public class GetDraftRegistrationsDraftIdDraftRegistrationAttributes {
      */
     
     public String title;
+
     public GetDraftRegistrationsDraftIdDraftRegistrationAttributes withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GetDraftRegistrationsDraftIdDraftRegistrationAttributes(){}
 }

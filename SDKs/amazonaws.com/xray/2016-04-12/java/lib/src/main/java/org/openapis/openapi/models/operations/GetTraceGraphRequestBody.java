@@ -15,6 +15,7 @@ public class GetTraceGraphRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetTraceGraphRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -25,9 +26,13 @@ public class GetTraceGraphRequestBody {
      */
     @JsonProperty("TraceIds")
     public String[] traceIds;
+
     public GetTraceGraphRequestBody withTraceIds(String[] traceIds) {
         this.traceIds = traceIds;
         return this;
     }
     
+    public GetTraceGraphRequestBody(@JsonProperty("TraceIds") String[] traceIds) {
+        this.traceIds = traceIds;
+  }
 }

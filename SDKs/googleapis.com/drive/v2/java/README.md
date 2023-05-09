@@ -16,7 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
+import org.openapis.openapi.models.operations.DriveAboutGetRequest;
+import org.openapis.openapi.models.operations.DriveAboutGetResponse;
+import org.openapis.openapi.models.operations.DriveAboutGetSecurity;
 import org.openapis.openapi.models.operations.DriveAboutGetSecurityOption1;
 import org.openapis.openapi.models.operations.DriveAboutGetSecurityOption2;
 import org.openapis.openapi.models.operations.DriveAboutGetSecurityOption3;
@@ -24,9 +26,6 @@ import org.openapis.openapi.models.operations.DriveAboutGetSecurityOption4;
 import org.openapis.openapi.models.operations.DriveAboutGetSecurityOption5;
 import org.openapis.openapi.models.operations.DriveAboutGetSecurityOption6;
 import org.openapis.openapi.models.operations.DriveAboutGetSecurityOption7;
-import org.openapis.openapi.models.operations.DriveAboutGetSecurity;
-import org.openapis.openapi.models.operations.DriveAboutGetRequest;
-import org.openapis.openapi.models.operations.DriveAboutGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
@@ -36,7 +35,7 @@ public class Application {
                 .build();
 
             DriveAboutGetRequest req = new DriveAboutGetRequest() {{
-                alt = "json";
+                alt = AltEnum.JSON;
                 fields = "corrupti";
                 includeSubscribed = false;
                 key = "provident";
@@ -46,21 +45,23 @@ public class Application {
                 quotaUser = "unde";
                 startChangeId = "nulla";
                 userIp = "corrupti";
-            }}            
+            }};            
 
             DriveAboutGetResponse res = sdk.about.driveAboutGet(req, new DriveAboutGetSecurity() {{
-                option1 = new DriveAboutGetSecurityOption1() {{
+                option1 = new DriveAboutGetSecurityOption1("illum", "vel") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.about.isPresent()) {
+            if (res.about != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -68,121 +69,121 @@ public class Application {
 ## Available Resources and Operations
 
 
-### about
+### [about](docs/about/README.md)
 
-* `driveAboutGet` - Gets the information about the current user along with Drive API settings
+* [driveAboutGet](docs/about/README.md#driveaboutget) - Gets the information about the current user along with Drive API settings
 
-### apps
+### [apps](docs/apps/README.md)
 
-* `driveAppsGet` - Gets a specific app.
-* `driveAppsList` - Lists a user's installed apps.
+* [driveAppsGet](docs/apps/README.md#driveappsget) - Gets a specific app.
+* [driveAppsList](docs/apps/README.md#driveappslist) - Lists a user's installed apps.
 
-### changes
+### [changes](docs/changes/README.md)
 
-* `driveChangesGet` - Deprecated - Use changes.getStartPageToken and changes.list to retrieve recent changes.
-* `driveChangesGetStartPageToken` - Gets the starting pageToken for listing future changes.
-* `driveChangesList` - Lists the changes for a user or shared drive.
-* `driveChangesWatch` - Subscribe to changes for a user.
+* [driveChangesGet](docs/changes/README.md#drivechangesget) - Deprecated - Use changes.getStartPageToken and changes.list to retrieve recent changes.
+* [driveChangesGetStartPageToken](docs/changes/README.md#drivechangesgetstartpagetoken) - Gets the starting pageToken for listing future changes.
+* [driveChangesList](docs/changes/README.md#drivechangeslist) - Lists the changes for a user or shared drive.
+* [driveChangesWatch](docs/changes/README.md#drivechangeswatch) - Subscribe to changes for a user.
 
-### channels
+### [channels](docs/channels/README.md)
 
-* `driveChannelsStop` - Stop watching resources through this channel
+* [driveChannelsStop](docs/channels/README.md#drivechannelsstop) - Stop watching resources through this channel
 
-### children
+### [children](docs/children/README.md)
 
-* `driveChildrenDelete` - Removes a child from a folder.
-* `driveChildrenGet` - Gets a specific child reference.
-* `driveChildrenInsert` - Inserts a file into a folder.
-* `driveChildrenList` - Lists a folder's children.
+* [driveChildrenDelete](docs/children/README.md#drivechildrendelete) - Removes a child from a folder.
+* [driveChildrenGet](docs/children/README.md#drivechildrenget) - Gets a specific child reference.
+* [driveChildrenInsert](docs/children/README.md#drivechildreninsert) - Inserts a file into a folder.
+* [driveChildrenList](docs/children/README.md#drivechildrenlist) - Lists a folder's children.
 
-### comments
+### [comments](docs/comments/README.md)
 
-* `driveCommentsDelete` - Deletes a comment.
-* `driveCommentsGet` - Gets a comment by ID.
-* `driveCommentsInsert` - Creates a new comment on the given file.
-* `driveCommentsList` - Lists a file's comments.
-* `driveCommentsPatch` - Updates an existing comment.
-* `driveCommentsUpdate` - Updates an existing comment.
+* [driveCommentsDelete](docs/comments/README.md#drivecommentsdelete) - Deletes a comment.
+* [driveCommentsGet](docs/comments/README.md#drivecommentsget) - Gets a comment by ID.
+* [driveCommentsInsert](docs/comments/README.md#drivecommentsinsert) - Creates a new comment on the given file.
+* [driveCommentsList](docs/comments/README.md#drivecommentslist) - Lists a file's comments.
+* [driveCommentsPatch](docs/comments/README.md#drivecommentspatch) - Updates an existing comment.
+* [driveCommentsUpdate](docs/comments/README.md#drivecommentsupdate) - Updates an existing comment.
 
-### drives
+### [drives](docs/drives/README.md)
 
-* `driveDrivesDelete` - Permanently deletes a shared drive for which the user is an organizer. The shared drive cannot contain any untrashed items.
-* `driveDrivesGet` - Gets a shared drive's metadata by ID.
-* `driveDrivesHide` - Hides a shared drive from the default view.
-* `driveDrivesInsert` - Creates a new shared drive.
-* `driveDrivesList` - Lists the user's shared drives.
-* `driveDrivesUnhide` - Restores a shared drive to the default view.
-* `driveDrivesUpdate` - Updates the metadata for a shared drive.
+* [driveDrivesDelete](docs/drives/README.md#drivedrivesdelete) - Permanently deletes a shared drive for which the user is an organizer. The shared drive cannot contain any untrashed items.
+* [driveDrivesGet](docs/drives/README.md#drivedrivesget) - Gets a shared drive's metadata by ID.
+* [driveDrivesHide](docs/drives/README.md#drivedriveshide) - Hides a shared drive from the default view.
+* [driveDrivesInsert](docs/drives/README.md#drivedrivesinsert) - Creates a new shared drive.
+* [driveDrivesList](docs/drives/README.md#drivedriveslist) - Lists the user's shared drives.
+* [driveDrivesUnhide](docs/drives/README.md#drivedrivesunhide) - Restores a shared drive to the default view.
+* [driveDrivesUpdate](docs/drives/README.md#drivedrivesupdate) - Updates the metadata for a shared drive.
 
-### files
+### [files](docs/files/README.md)
 
-* `driveFilesCopy` - Creates a copy of the specified file. Folders cannot be copied.
-* `driveFilesDelete` - Permanently deletes a file by ID. Skips the trash. The currently authenticated user must own the file or be an organizer on the parent for shared drive files.
-* `driveFilesEmptyTrash` - Permanently deletes all of the user's trashed files.
-* `driveFilesExport` - Exports a Google Workspace document to the requested MIME type and returns exported byte content. Note that the exported content is limited to 10MB.
-* `driveFilesGenerateIds` - Generates a set of file IDs which can be provided in insert or copy requests.
-* `driveFilesGet` - Gets a file's metadata or content by ID.
-* `driveFilesInsert` - Insert a new file.
-* `driveFilesList` - Lists the user's files.
-* `driveFilesListLabels` - Lists the labels on a file.
-* `driveFilesModifyLabels` - Modifies the set of labels on a file.
-* `driveFilesPatch` - Updates a file's metadata and/or content. When calling this method, only populate fields in the request that you want to modify. When updating fields, some fields might change automatically, such as modifiedDate. This method supports patch semantics.
-* `driveFilesTouch` - Set the file's updated time to the current server time.
-* `driveFilesTrash` - Moves a file to the trash. The currently authenticated user must own the file or be at least a fileOrganizer on the parent for shared drive files. Only the owner may trash a file. The trashed item is excluded from all files.list responses returned for any user who does not own the file. However, all users with access to the file can see the trashed item metadata in an API response. All users with access can copy, download, export, and share the file.
-* `driveFilesUntrash` - Restores a file from the trash. The currently authenticated user must own the file or be at least a fileOrganizer on the parent for shared drive files. Only the owner may untrash a file.
-* `driveFilesUpdate` - Updates a file's metadata and/or content. When calling this method, only populate fields in the request that you want to modify. When updating fields, some fields might be changed automatically, such as modifiedDate. This method supports patch semantics.
-* `driveFilesWatch` - Subscribes to changes to a file. While you can establish a channel for changes to a file on a shared drive, a change to a shared drive file won't create a notification.
+* [driveFilesCopy](docs/files/README.md#drivefilescopy) - Creates a copy of the specified file. Folders cannot be copied.
+* [driveFilesDelete](docs/files/README.md#drivefilesdelete) - Permanently deletes a file by ID. Skips the trash. The currently authenticated user must own the file or be an organizer on the parent for shared drive files.
+* [driveFilesEmptyTrash](docs/files/README.md#drivefilesemptytrash) - Permanently deletes all trashed files of a user or shared drive.
+* [driveFilesExport](docs/files/README.md#drivefilesexport) - Exports a Google Workspace document to the requested MIME type and returns exported byte content. Note that the exported content is limited to 10MB.
+* [driveFilesGenerateIds](docs/files/README.md#drivefilesgenerateids) - Generates a set of file IDs which can be provided in insert or copy requests.
+* [driveFilesGet](docs/files/README.md#drivefilesget) - Gets a file's metadata or content by ID.
+* [driveFilesInsert](docs/files/README.md#drivefilesinsert) - Insert a new file.
+* [driveFilesList](docs/files/README.md#drivefileslist) - Lists the user's files.
+* [driveFilesListLabels](docs/files/README.md#drivefileslistlabels) - Lists the labels on a file.
+* [driveFilesModifyLabels](docs/files/README.md#drivefilesmodifylabels) - Modifies the set of labels on a file.
+* [driveFilesPatch](docs/files/README.md#drivefilespatch) - Updates a file's metadata and/or content. When calling this method, only populate fields in the request that you want to modify. When updating fields, some fields might change automatically, such as modifiedDate. This method supports patch semantics.
+* [driveFilesTouch](docs/files/README.md#drivefilestouch) - Set the file's updated time to the current server time.
+* [driveFilesTrash](docs/files/README.md#drivefilestrash) - Moves a file to the trash. The currently authenticated user must own the file or be at least a fileOrganizer on the parent for shared drive files. Only the owner may trash a file. The trashed item is excluded from all files.list responses returned for any user who does not own the file. However, all users with access to the file can see the trashed item metadata in an API response. All users with access can copy, download, export, and share the file.
+* [driveFilesUntrash](docs/files/README.md#drivefilesuntrash) - Restores a file from the trash. The currently authenticated user must own the file or be at least a fileOrganizer on the parent for shared drive files. Only the owner may untrash a file.
+* [driveFilesUpdate](docs/files/README.md#drivefilesupdate) - Updates a file's metadata and/or content. When calling this method, only populate fields in the request that you want to modify. When updating fields, some fields might be changed automatically, such as modifiedDate. This method supports patch semantics.
+* [driveFilesWatch](docs/files/README.md#drivefileswatch) - Subscribe to changes on a file.
 
-### parents
+### [parents](docs/parents/README.md)
 
-* `driveParentsDelete` - Removes a parent from a file.
-* `driveParentsGet` - Gets a specific parent reference.
-* `driveParentsInsert` - Adds a parent folder for a file.
-* `driveParentsList` - Lists a file's parents.
+* [driveParentsDelete](docs/parents/README.md#driveparentsdelete) - Removes a parent from a file.
+* [driveParentsGet](docs/parents/README.md#driveparentsget) - Gets a specific parent reference.
+* [driveParentsInsert](docs/parents/README.md#driveparentsinsert) - Adds a parent folder for a file.
+* [driveParentsList](docs/parents/README.md#driveparentslist) - Lists a file's parents.
 
-### permissions
+### [permissions](docs/permissions/README.md)
 
-* `drivePermissionsDelete` - Deletes a permission from a file or shared drive.
-* `drivePermissionsGet` - Gets a permission by ID.
-* `drivePermissionsGetIdForEmail` - Returns the permission ID for an email address.
-* `drivePermissionsInsert` - Inserts a permission for a file or shared drive.
-* `drivePermissionsList` - Lists a file's or shared drive's permissions.
-* `drivePermissionsPatch` - Updates a permission using patch semantics.
-* `drivePermissionsUpdate` - Updates a permission.
+* [drivePermissionsDelete](docs/permissions/README.md#drivepermissionsdelete) - Deletes a permission from a file or shared drive.
+* [drivePermissionsGet](docs/permissions/README.md#drivepermissionsget) - Gets a permission by ID.
+* [drivePermissionsGetIdForEmail](docs/permissions/README.md#drivepermissionsgetidforemail) - Returns the permission ID for an email address.
+* [drivePermissionsInsert](docs/permissions/README.md#drivepermissionsinsert) - Inserts a permission for a file or shared drive.
+* [drivePermissionsList](docs/permissions/README.md#drivepermissionslist) - Lists a file's or shared drive's permissions.
+* [drivePermissionsPatch](docs/permissions/README.md#drivepermissionspatch) - Updates a permission using patch semantics.
+* [drivePermissionsUpdate](docs/permissions/README.md#drivepermissionsupdate) - Updates a permission.
 
-### properties
+### [properties](docs/properties/README.md)
 
-* `drivePropertiesDelete` - Deletes a property.
-* `drivePropertiesGet` - Gets a property by its key.
-* `drivePropertiesInsert` - Adds a property to a file, or updates it if it already exists.
-* `drivePropertiesList` - Lists a file's properties.
-* `drivePropertiesPatch` - Updates a property.
-* `drivePropertiesUpdate` - Updates a property.
+* [drivePropertiesDelete](docs/properties/README.md#drivepropertiesdelete) - Deletes a property.
+* [drivePropertiesGet](docs/properties/README.md#drivepropertiesget) - Gets a property by its key.
+* [drivePropertiesInsert](docs/properties/README.md#drivepropertiesinsert) - Adds a property to a file, or updates it if it already exists.
+* [drivePropertiesList](docs/properties/README.md#drivepropertieslist) - Lists a file's properties.
+* [drivePropertiesPatch](docs/properties/README.md#drivepropertiespatch) - Updates a property.
+* [drivePropertiesUpdate](docs/properties/README.md#drivepropertiesupdate) - Updates a property.
 
-### replies
+### [replies](docs/replies/README.md)
 
-* `driveRepliesDelete` - Deletes a reply.
-* `driveRepliesGet` - Gets a reply.
-* `driveRepliesInsert` - Creates a new reply to the given comment.
-* `driveRepliesList` - Lists all of the replies to a comment.
-* `driveRepliesPatch` - Updates an existing reply.
-* `driveRepliesUpdate` - Updates an existing reply.
+* [driveRepliesDelete](docs/replies/README.md#driverepliesdelete) - Deletes a reply.
+* [driveRepliesGet](docs/replies/README.md#driverepliesget) - Gets a reply.
+* [driveRepliesInsert](docs/replies/README.md#driverepliesinsert) - Creates a new reply to the given comment.
+* [driveRepliesList](docs/replies/README.md#drivereplieslist) - Lists all of the replies to a comment.
+* [driveRepliesPatch](docs/replies/README.md#driverepliespatch) - Updates an existing reply.
+* [driveRepliesUpdate](docs/replies/README.md#driverepliesupdate) - Updates an existing reply.
 
-### revisions
+### [revisions](docs/revisions/README.md)
 
-* `driveRevisionsDelete` - Permanently deletes a file version. You can only delete revisions for files with binary content, like images or videos. Revisions for other files, like Google Docs or Sheets, and the last remaining file version can't be deleted.
-* `driveRevisionsGet` - Gets a specific revision.
-* `driveRevisionsList` - Lists a file's revisions.
-* `driveRevisionsPatch` - Updates a revision.
-* `driveRevisionsUpdate` - Updates a revision.
+* [driveRevisionsDelete](docs/revisions/README.md#driverevisionsdelete) - Permanently deletes a file version. You can only delete revisions for files with binary content, like images or videos. Revisions for other files, like Google Docs or Sheets, and the last remaining file version can't be deleted.
+* [driveRevisionsGet](docs/revisions/README.md#driverevisionsget) - Gets a specific revision.
+* [driveRevisionsList](docs/revisions/README.md#driverevisionslist) - Lists a file's revisions.
+* [driveRevisionsPatch](docs/revisions/README.md#driverevisionspatch) - Updates a revision.
+* [driveRevisionsUpdate](docs/revisions/README.md#driverevisionsupdate) - Updates a revision.
 
-### teamdrives
+### [teamdrives](docs/teamdrives/README.md)
 
-* `driveTeamdrivesDelete` - Deprecated use drives.delete instead.
-* `driveTeamdrivesGet` - Deprecated use drives.get instead.
-* `driveTeamdrivesInsert` - Deprecated use drives.insert instead.
-* `driveTeamdrivesList` - Deprecated use drives.list instead.
-* `driveTeamdrivesUpdate` - Deprecated use drives.update instead.
+* [driveTeamdrivesDelete](docs/teamdrives/README.md#driveteamdrivesdelete) - Deprecated use drives.delete instead.
+* [driveTeamdrivesGet](docs/teamdrives/README.md#driveteamdrivesget) - Deprecated use drives.get instead.
+* [driveTeamdrivesInsert](docs/teamdrives/README.md#driveteamdrivesinsert) - Deprecated use drives.insert instead.
+* [driveTeamdrivesList](docs/teamdrives/README.md#driveteamdriveslist) - Deprecated use drives.list instead.
+* [driveTeamdrivesUpdate](docs/teamdrives/README.md#driveteamdrivesupdate) - Deprecated use drives.update instead.
 <!-- End SDK Available Operations -->
 
 ### Maturity

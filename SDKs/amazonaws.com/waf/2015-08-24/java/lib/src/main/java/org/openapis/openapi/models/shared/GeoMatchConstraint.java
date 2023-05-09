@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GeoMatchConstraint {
     @JsonProperty("Type")
     public GeoMatchConstraintTypeEnum type;
+
     public GeoMatchConstraint withType(GeoMatchConstraintTypeEnum type) {
         this.type = type;
         return this;
@@ -19,9 +20,14 @@ public class GeoMatchConstraint {
     
     @JsonProperty("Value")
     public GeoMatchConstraintValueEnum value;
+
     public GeoMatchConstraint withValue(GeoMatchConstraintValueEnum value) {
         this.value = value;
         return this;
     }
     
+    public GeoMatchConstraint(@JsonProperty("Type") GeoMatchConstraintTypeEnum type, @JsonProperty("Value") GeoMatchConstraintValueEnum value) {
+        this.type = type;
+        this.value = value;
+  }
 }

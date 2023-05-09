@@ -15,6 +15,7 @@ public class ListServicesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListServicesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListServicesOutput {
     
     @JsonProperty("services")
     public ServiceSummary[] services;
+
     public ListServicesOutput withServices(ServiceSummary[] services) {
         this.services = services;
         return this;
     }
     
+    public ListServicesOutput(@JsonProperty("services") ServiceSummary[] services) {
+        this.services = services;
+  }
 }

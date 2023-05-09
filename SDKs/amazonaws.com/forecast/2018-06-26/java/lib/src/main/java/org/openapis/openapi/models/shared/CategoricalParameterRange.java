@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CategoricalParameterRange {
     @JsonProperty("Name")
     public String name;
+
     public CategoricalParameterRange withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class CategoricalParameterRange {
     
     @JsonProperty("Values")
     public String[] values;
+
     public CategoricalParameterRange withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public CategoricalParameterRange(@JsonProperty("Name") String name, @JsonProperty("Values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

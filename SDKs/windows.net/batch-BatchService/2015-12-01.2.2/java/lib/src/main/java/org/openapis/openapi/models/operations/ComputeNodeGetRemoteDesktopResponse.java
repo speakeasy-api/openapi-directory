@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeNodeGetRemoteDesktopResponse {
@@ -12,6 +13,7 @@ public class ComputeNodeGetRemoteDesktopResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public ComputeNodeGetRemoteDesktopResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class ComputeNodeGetRemoteDesktopResponse {
     
     
     public byte[] computeNodeGetRemoteDesktop200ApplicationJSONBinaryString;
+
     public ComputeNodeGetRemoteDesktopResponse withComputeNodeGetRemoteDesktop200ApplicationJSONBinaryString(byte[] computeNodeGetRemoteDesktop200ApplicationJSONBinaryString) {
         this.computeNodeGetRemoteDesktop200ApplicationJSONBinaryString = computeNodeGetRemoteDesktop200ApplicationJSONBinaryString;
         return this;
@@ -26,6 +29,7 @@ public class ComputeNodeGetRemoteDesktopResponse {
     
     
     public String contentType;
+
     public ComputeNodeGetRemoteDesktopResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class ComputeNodeGetRemoteDesktopResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ComputeNodeGetRemoteDesktopResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -40,6 +45,7 @@ public class ComputeNodeGetRemoteDesktopResponse {
     
     
     public Integer statusCode;
+
     public ComputeNodeGetRemoteDesktopResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class ComputeNodeGetRemoteDesktopResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeNodeGetRemoteDesktopResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeNodeGetRemoteDesktopResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

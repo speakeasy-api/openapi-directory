@@ -20,6 +20,7 @@ public class CreateDeploymentJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CreateDeploymentJobResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class CreateDeploymentJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CreateDeploymentJobResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class CreateDeploymentJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentApplicationConfigs")
     public DeploymentApplicationConfig[] deploymentApplicationConfigs;
+
     public CreateDeploymentJobResponse withDeploymentApplicationConfigs(DeploymentApplicationConfig[] deploymentApplicationConfigs) {
         this.deploymentApplicationConfigs = deploymentApplicationConfigs;
         return this;
@@ -46,6 +49,7 @@ public class CreateDeploymentJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentConfig")
     public DeploymentConfig deploymentConfig;
+
     public CreateDeploymentJobResponse withDeploymentConfig(DeploymentConfig deploymentConfig) {
         this.deploymentConfig = deploymentConfig;
         return this;
@@ -54,6 +58,7 @@ public class CreateDeploymentJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCode")
     public DeploymentJobErrorCodeEnum failureCode;
+
     public CreateDeploymentJobResponse withFailureCode(DeploymentJobErrorCodeEnum failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -62,6 +67,7 @@ public class CreateDeploymentJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public CreateDeploymentJobResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -70,6 +76,7 @@ public class CreateDeploymentJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleet")
     public String fleet;
+
     public CreateDeploymentJobResponse withFleet(String fleet) {
         this.fleet = fleet;
         return this;
@@ -78,6 +85,7 @@ public class CreateDeploymentJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DeploymentStatusEnum status;
+
     public CreateDeploymentJobResponse withStatus(DeploymentStatusEnum status) {
         this.status = status;
         return this;
@@ -86,9 +94,11 @@ public class CreateDeploymentJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateDeploymentJobResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDeploymentJobResponse(){}
 }

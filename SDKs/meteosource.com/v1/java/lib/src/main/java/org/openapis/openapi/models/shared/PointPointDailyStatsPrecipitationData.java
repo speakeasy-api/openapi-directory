@@ -16,6 +16,7 @@ public class PointPointDailyStatsPrecipitationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avg")
     public Double avg;
+
     public PointPointDailyStatsPrecipitationData withAvg(Double avg) {
         this.avg = avg;
         return this;
@@ -28,9 +29,11 @@ public class PointPointDailyStatsPrecipitationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probability")
     public Long probability;
+
     public PointPointDailyStatsPrecipitationData withProbability(Long probability) {
         this.probability = probability;
         return this;
     }
     
+    public PointPointDailyStatsPrecipitationData(){}
 }

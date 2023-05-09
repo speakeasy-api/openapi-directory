@@ -15,6 +15,7 @@ public class NetworkPathComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComponentId")
     public String componentId;
+
     public NetworkPathComponent withComponentId(String componentId) {
         this.componentId = componentId;
         return this;
@@ -23,6 +24,7 @@ public class NetworkPathComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComponentType")
     public String componentType;
+
     public NetworkPathComponent withComponentType(String componentType) {
         this.componentType = componentType;
         return this;
@@ -31,6 +33,7 @@ public class NetworkPathComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Egress")
     public NetworkHeader egress;
+
     public NetworkPathComponent withEgress(NetworkHeader egress) {
         this.egress = egress;
         return this;
@@ -39,9 +42,11 @@ public class NetworkPathComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ingress")
     public NetworkHeader ingress;
+
     public NetworkPathComponent withIngress(NetworkHeader ingress) {
         this.ingress = ingress;
         return this;
     }
     
+    public NetworkPathComponent(){}
 }

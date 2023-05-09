@@ -15,6 +15,7 @@ public class BigtableColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoding")
     public String encoding;
+
     public BigtableColumn withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
@@ -26,6 +27,7 @@ public class BigtableColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public String fieldName;
+
     public BigtableColumn withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -37,6 +39,7 @@ public class BigtableColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlyReadLatest")
     public Boolean onlyReadLatest;
+
     public BigtableColumn withOnlyReadLatest(Boolean onlyReadLatest) {
         this.onlyReadLatest = onlyReadLatest;
         return this;
@@ -48,6 +51,7 @@ public class BigtableColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qualifierEncoded")
     public String qualifierEncoded;
+
     public BigtableColumn withQualifierEncoded(String qualifierEncoded) {
         this.qualifierEncoded = qualifierEncoded;
         return this;
@@ -56,6 +60,7 @@ public class BigtableColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qualifierString")
     public String qualifierString;
+
     public BigtableColumn withQualifierString(String qualifierString) {
         this.qualifierString = qualifierString;
         return this;
@@ -67,9 +72,11 @@ public class BigtableColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public BigtableColumn withType(String type) {
         this.type = type;
         return this;
     }
     
+    public BigtableColumn(){}
 }

@@ -13,6 +13,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignment")
     public String assignment;
+
     public GetUsersRequest withAssignment(String assignment) {
         this.assignment = assignment;
         return this;
@@ -23,6 +24,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public GetUsersRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -33,6 +35,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linkedProfile")
     public String linkedProfile;
+
     public GetUsersRequest withLinkedProfile(String linkedProfile) {
         this.linkedProfile = linkedProfile;
         return this;
@@ -43,6 +46,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minimumContributions")
     public Double minimumContributions;
+
     public GetUsersRequest withMinimumContributions(Double minimumContributions) {
         this.minimumContributions = minimumContributions;
         return this;
@@ -53,6 +57,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ownedBy")
     public String ownedBy;
+
     public GetUsersRequest withOwnedBy(String ownedBy) {
         this.ownedBy = ownedBy;
         return this;
@@ -63,6 +68,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=submittedAfter")
     public OffsetDateTime submittedAfter;
+
     public GetUsersRequest withSubmittedAfter(OffsetDateTime submittedAfter) {
         this.submittedAfter = submittedAfter;
         return this;
@@ -73,6 +79,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=submittedBefore")
     public OffsetDateTime submittedBefore;
+
     public GetUsersRequest withSubmittedBefore(OffsetDateTime submittedBefore) {
         this.submittedBefore = submittedBefore;
         return this;
@@ -83,9 +90,11 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public GetUsersRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetUsersRequest(){}
 }

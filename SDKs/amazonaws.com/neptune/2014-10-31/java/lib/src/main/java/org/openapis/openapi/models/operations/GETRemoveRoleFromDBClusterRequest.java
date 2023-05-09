@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRemoveRoleFromDBClusterRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRemoveRoleFromDBClusterActionEnum action;
+
     public GETRemoveRoleFromDBClusterRequest withAction(GETRemoveRoleFromDBClusterActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRemoveRoleFromDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterIdentifier")
     public String dbClusterIdentifier;
+
     public GETRemoveRoleFromDBClusterRequest withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -29,6 +32,7 @@ public class GETRemoveRoleFromDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FeatureName")
     public String featureName;
+
     public GETRemoveRoleFromDBClusterRequest withFeatureName(String featureName) {
         this.featureName = featureName;
         return this;
@@ -39,6 +43,7 @@ public class GETRemoveRoleFromDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleArn")
     public String roleArn;
+
     public GETRemoveRoleFromDBClusterRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -46,6 +51,7 @@ public class GETRemoveRoleFromDBClusterRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRemoveRoleFromDBClusterVersionEnum version;
+
     public GETRemoveRoleFromDBClusterRequest withVersion(GETRemoveRoleFromDBClusterVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETRemoveRoleFromDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRemoveRoleFromDBClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETRemoveRoleFromDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRemoveRoleFromDBClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETRemoveRoleFromDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRemoveRoleFromDBClusterRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETRemoveRoleFromDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRemoveRoleFromDBClusterRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETRemoveRoleFromDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRemoveRoleFromDBClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETRemoveRoleFromDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRemoveRoleFromDBClusterRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETRemoveRoleFromDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRemoveRoleFromDBClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRemoveRoleFromDBClusterRequest(@JsonProperty("Action") GETRemoveRoleFromDBClusterActionEnum action, @JsonProperty("DBClusterIdentifier") String dbClusterIdentifier, @JsonProperty("RoleArn") String roleArn, @JsonProperty("Version") GETRemoveRoleFromDBClusterVersionEnum version) {
+        this.action = action;
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        this.roleArn = roleArn;
+        this.version = version;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RepositoryConfigurationsCreateOrUpdate200ApplicationJSON {
     @JsonProperty("message")
     public String message;
+
     public RepositoryConfigurationsCreateOrUpdate200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public RepositoryConfigurationsCreateOrUpdate200ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

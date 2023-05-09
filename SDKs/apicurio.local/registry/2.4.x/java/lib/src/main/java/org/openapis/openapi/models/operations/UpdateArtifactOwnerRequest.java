@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateArtifactOwnerRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ArtifactOwner artifactOwner;
+
     public UpdateArtifactOwnerRequest withArtifactOwner(org.openapis.openapi.models.shared.ArtifactOwner artifactOwner) {
         this.artifactOwner = artifactOwner;
         return this;
@@ -19,6 +21,7 @@ public class UpdateArtifactOwnerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
     public String artifactId;
+
     public UpdateArtifactOwnerRequest withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -29,9 +32,15 @@ public class UpdateArtifactOwnerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public UpdateArtifactOwnerRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public UpdateArtifactOwnerRequest(@JsonProperty("ArtifactOwner") org.openapis.openapi.models.shared.ArtifactOwner artifactOwner, @JsonProperty("artifactId") String artifactId, @JsonProperty("groupId") String groupId) {
+        this.artifactOwner = artifactOwner;
+        this.artifactId = artifactId;
+        this.groupId = groupId;
+  }
 }

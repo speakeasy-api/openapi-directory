@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudRunV2RevisionTemplate {
     /**
-     * KRM-style annotations for the resource. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 RevisionTemplate.
+     * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 RevisionTemplate. This field follows Kubernetes annotations' namespacing, limits, and rules.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public GoogleCloudRunV2RevisionTemplate withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRunV2RevisionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public GoogleCloudRunV2Container[] containers;
+
     public GoogleCloudRunV2RevisionTemplate withContainers(GoogleCloudRunV2Container[] containers) {
         this.containers = containers;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRunV2RevisionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public String encryptionKey;
+
     public GoogleCloudRunV2RevisionTemplate withEncryptionKey(String encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -51,17 +54,19 @@ public class GoogleCloudRunV2RevisionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionEnvironment")
     public GoogleCloudRunV2RevisionTemplateExecutionEnvironmentEnum executionEnvironment;
+
     public GoogleCloudRunV2RevisionTemplate withExecutionEnvironment(GoogleCloudRunV2RevisionTemplateExecutionEnvironmentEnum executionEnvironment) {
         this.executionEnvironment = executionEnvironment;
         return this;
     }
     
     /**
-     * KRM-style labels for the resource. Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 RevisionTemplate.
+     * Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 RevisionTemplate.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudRunV2RevisionTemplate withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRunV2RevisionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxInstanceRequestConcurrency")
     public Integer maxInstanceRequestConcurrency;
+
     public GoogleCloudRunV2RevisionTemplate withMaxInstanceRequestConcurrency(Integer maxInstanceRequestConcurrency) {
         this.maxInstanceRequestConcurrency = maxInstanceRequestConcurrency;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudRunV2RevisionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public String revision;
+
     public GoogleCloudRunV2RevisionTemplate withRevision(String revision) {
         this.revision = revision;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudRunV2RevisionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaling")
     public GoogleCloudRunV2RevisionScaling scaling;
+
     public GoogleCloudRunV2RevisionTemplate withScaling(GoogleCloudRunV2RevisionScaling scaling) {
         this.scaling = scaling;
         return this;
@@ -106,8 +114,21 @@ public class GoogleCloudRunV2RevisionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public GoogleCloudRunV2RevisionTemplate withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
+        return this;
+    }
+    
+    /**
+     * Enable session affinity.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sessionAffinity")
+    public Boolean sessionAffinity;
+
+    public GoogleCloudRunV2RevisionTemplate withSessionAffinity(Boolean sessionAffinity) {
+        this.sessionAffinity = sessionAffinity;
         return this;
     }
     
@@ -117,6 +138,7 @@ public class GoogleCloudRunV2RevisionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public String timeout;
+
     public GoogleCloudRunV2RevisionTemplate withTimeout(String timeout) {
         this.timeout = timeout;
         return this;
@@ -128,6 +150,7 @@ public class GoogleCloudRunV2RevisionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumes")
     public GoogleCloudRunV2Volume[] volumes;
+
     public GoogleCloudRunV2RevisionTemplate withVolumes(GoogleCloudRunV2Volume[] volumes) {
         this.volumes = volumes;
         return this;
@@ -139,9 +162,11 @@ public class GoogleCloudRunV2RevisionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcAccess")
     public GoogleCloudRunV2VpcAccess vpcAccess;
+
     public GoogleCloudRunV2RevisionTemplate withVpcAccess(GoogleCloudRunV2VpcAccess vpcAccess) {
         this.vpcAccess = vpcAccess;
         return this;
     }
     
+    public GoogleCloudRunV2RevisionTemplate(){}
 }

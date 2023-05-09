@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public GoogleCloudRetailV2alphaProduct product;
+
     public GoogleCloudRetailV2alphaProductDetail withProduct(GoogleCloudRetailV2alphaProduct product) {
         this.product = product;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2alphaProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Integer quantity;
+
     public GoogleCloudRetailV2alphaProductDetail withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaProductDetail(){}
 }

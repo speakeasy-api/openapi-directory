@@ -15,6 +15,7 @@ public class EngineConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalConfigs")
     public java.util.Map<String, String> additionalConfigs;
+
     public EngineConfiguration withAdditionalConfigs(java.util.Map<String, String> additionalConfigs) {
         this.additionalConfigs = additionalConfigs;
         return this;
@@ -23,6 +24,7 @@ public class EngineConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CoordinatorDpuSize")
     public Long coordinatorDpuSize;
+
     public EngineConfiguration withCoordinatorDpuSize(Long coordinatorDpuSize) {
         this.coordinatorDpuSize = coordinatorDpuSize;
         return this;
@@ -31,6 +33,7 @@ public class EngineConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultExecutorDpuSize")
     public Long defaultExecutorDpuSize;
+
     public EngineConfiguration withDefaultExecutorDpuSize(Long defaultExecutorDpuSize) {
         this.defaultExecutorDpuSize = defaultExecutorDpuSize;
         return this;
@@ -38,9 +41,13 @@ public class EngineConfiguration {
     
     @JsonProperty("MaxConcurrentDpus")
     public Long maxConcurrentDpus;
+
     public EngineConfiguration withMaxConcurrentDpus(Long maxConcurrentDpus) {
         this.maxConcurrentDpus = maxConcurrentDpus;
         return this;
     }
     
+    public EngineConfiguration(@JsonProperty("MaxConcurrentDpus") Long maxConcurrentDpus) {
+        this.maxConcurrentDpus = maxConcurrentDpus;
+  }
 }

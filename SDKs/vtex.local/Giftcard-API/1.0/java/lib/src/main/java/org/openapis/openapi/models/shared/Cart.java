@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Cart {
     @JsonProperty("discounts")
     public Integer discounts;
+
     public Cart withDiscounts(Integer discounts) {
         this.discounts = discounts;
         return this;
@@ -16,6 +17,7 @@ public class Cart {
     
     @JsonProperty("grandTotal")
     public Double grandTotal;
+
     public Cart withGrandTotal(Double grandTotal) {
         this.grandTotal = grandTotal;
         return this;
@@ -23,6 +25,7 @@ public class Cart {
     
     @JsonProperty("items")
     public Item[] items;
+
     public Cart withItems(Item[] items) {
         this.items = items;
         return this;
@@ -30,6 +33,7 @@ public class Cart {
     
     @JsonProperty("itemsTotal")
     public Integer itemsTotal;
+
     public Cart withItemsTotal(Integer itemsTotal) {
         this.itemsTotal = itemsTotal;
         return this;
@@ -37,6 +41,7 @@ public class Cart {
     
     @JsonProperty("redemptionCode")
     public String redemptionCode;
+
     public Cart withRedemptionCode(String redemptionCode) {
         this.redemptionCode = redemptionCode;
         return this;
@@ -44,6 +49,7 @@ public class Cart {
     
     @JsonProperty("relationName")
     public String relationName;
+
     public Cart withRelationName(String relationName) {
         this.relationName = relationName;
         return this;
@@ -51,6 +57,7 @@ public class Cart {
     
     @JsonProperty("shipping")
     public Integer shipping;
+
     public Cart withShipping(Integer shipping) {
         this.shipping = shipping;
         return this;
@@ -58,9 +65,20 @@ public class Cart {
     
     @JsonProperty("taxes")
     public Integer taxes;
+
     public Cart withTaxes(Integer taxes) {
         this.taxes = taxes;
         return this;
     }
     
+    public Cart(@JsonProperty("discounts") Integer discounts, @JsonProperty("grandTotal") Double grandTotal, @JsonProperty("items") Item[] items, @JsonProperty("itemsTotal") Integer itemsTotal, @JsonProperty("redemptionCode") String redemptionCode, @JsonProperty("relationName") String relationName, @JsonProperty("shipping") Integer shipping, @JsonProperty("taxes") Integer taxes) {
+        this.discounts = discounts;
+        this.grandTotal = grandTotal;
+        this.items = items;
+        this.itemsTotal = itemsTotal;
+        this.redemptionCode = redemptionCode;
+        this.relationName = relationName;
+        this.shipping = shipping;
+        this.taxes = taxes;
+  }
 }

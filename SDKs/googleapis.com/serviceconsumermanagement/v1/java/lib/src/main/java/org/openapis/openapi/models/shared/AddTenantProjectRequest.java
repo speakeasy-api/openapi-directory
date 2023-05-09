@@ -18,6 +18,7 @@ public class AddTenantProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectConfig")
     public TenantProjectConfig projectConfig;
+
     public AddTenantProjectRequest withProjectConfig(TenantProjectConfig projectConfig) {
         this.projectConfig = projectConfig;
         return this;
@@ -29,9 +30,11 @@ public class AddTenantProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public AddTenantProjectRequest withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public AddTenantProjectRequest(){}
 }

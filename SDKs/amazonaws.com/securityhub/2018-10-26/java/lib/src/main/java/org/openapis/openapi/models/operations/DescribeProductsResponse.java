@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeProductsResponse {
     
     public String contentType;
+
     public DescribeProductsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeProductsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeProductsResponse describeProductsResponse;
+
     public DescribeProductsResponse withDescribeProductsResponse(org.openapis.openapi.models.shared.DescribeProductsResponse describeProductsResponse) {
         this.describeProductsResponse = describeProductsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeProductsResponse {
      */
     
     public Object internalException;
+
     public DescribeProductsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeProductsResponse {
      */
     
     public Object invalidAccessException;
+
     public DescribeProductsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeProductsResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeProductsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeProductsResponse {
      */
     
     public Object limitExceededException;
+
     public DescribeProductsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeProductsResponse {
     
     
     public Integer statusCode;
+
     public DescribeProductsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeProductsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeProductsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeProductsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

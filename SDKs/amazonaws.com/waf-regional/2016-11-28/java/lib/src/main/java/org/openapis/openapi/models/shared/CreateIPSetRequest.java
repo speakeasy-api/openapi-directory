@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateIPSetRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public CreateIPSetRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -16,9 +17,14 @@ public class CreateIPSetRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateIPSetRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateIPSetRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("Name") String name) {
+        this.changeToken = changeToken;
+        this.name = name;
+  }
 }

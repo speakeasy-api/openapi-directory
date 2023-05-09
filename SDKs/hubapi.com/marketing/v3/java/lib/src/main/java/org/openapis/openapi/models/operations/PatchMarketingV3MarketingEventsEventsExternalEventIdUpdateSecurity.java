@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2Legacy;
+
     public PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateSecurity withOauth2Legacy(String oauth2Legacy) {
         this.oauth2Legacy = oauth2Legacy;
         return this;
@@ -16,9 +17,11 @@ public class PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateSecurity 
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app-legacy")
     public String privateAppsLegacy;
+
     public PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateSecurity withPrivateAppsLegacy(String privateAppsLegacy) {
         this.privateAppsLegacy = privateAppsLegacy;
         return this;
     }
     
+    public PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateSecurity(){}
 }

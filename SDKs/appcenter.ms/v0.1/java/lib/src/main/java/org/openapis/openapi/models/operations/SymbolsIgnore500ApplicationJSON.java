@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SymbolsIgnore500ApplicationJSON {
     @JsonProperty("message")
     public String message;
+
     public SymbolsIgnore500ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public SymbolsIgnore500ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

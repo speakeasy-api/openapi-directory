@@ -62,11 +62,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingSitesChannelsCreateResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesChannelsCreateResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingSitesChannelsCreateResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesChannelsCreateResponse(contentType, httpRes.statusCode()) {{
             channel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingSitesChannelsListResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesChannelsListResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingSitesChannelsListResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesChannelsListResponse(contentType, httpRes.statusCode()) {{
             listChannelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingSitesDomainsCreateResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesDomainsCreateResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingSitesDomainsCreateResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesDomainsCreateResponse(contentType, httpRes.statusCode()) {{
             domain = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingSitesDomainsListResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesDomainsListResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingSitesDomainsListResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesDomainsListResponse(contentType, httpRes.statusCode()) {{
             listDomainsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingSitesDomainsUpdateResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesDomainsUpdateResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingSitesDomainsUpdateResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesDomainsUpdateResponse(contentType, httpRes.statusCode()) {{
             domain = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingSitesReleasesCreateResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesReleasesCreateResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingSitesReleasesCreateResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesReleasesCreateResponse(contentType, httpRes.statusCode()) {{
             release = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingSitesReleasesListResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesReleasesListResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingSitesReleasesListResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesReleasesListResponse(contentType, httpRes.statusCode()) {{
             listReleasesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCloneResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCloneResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCloneResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCloneResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,11 +424,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCreateResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCreateResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCreateResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCreateResponse(contentType, httpRes.statusCode()) {{
             version = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingSitesVersionsDeleteResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesVersionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingSitesVersionsDeleteResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesVersionsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +512,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingSitesVersionsFilesListResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesVersionsFilesListResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingSitesVersionsFilesListResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesVersionsFilesListResponse(contentType, httpRes.statusCode()) {{
             listVersionFilesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +556,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingSitesVersionsGetResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesVersionsGetResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingSitesVersionsGetResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesVersionsGetResponse(contentType, httpRes.statusCode()) {{
             version = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -624,11 +600,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingSitesVersionsListResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesVersionsListResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingSitesVersionsListResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesVersionsListResponse(contentType, httpRes.statusCode()) {{
             listVersionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,11 +646,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPatchResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPatchResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPatchResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPatchResponse(contentType, httpRes.statusCode()) {{
             version = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -720,11 +692,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPopulateFilesResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPopulateFilesResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPopulateFilesResponse res = new org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPopulateFilesResponse(contentType, httpRes.statusCode()) {{
             populateVersionFilesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

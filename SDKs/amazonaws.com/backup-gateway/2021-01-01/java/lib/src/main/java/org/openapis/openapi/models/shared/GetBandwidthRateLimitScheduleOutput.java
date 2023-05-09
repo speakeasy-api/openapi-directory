@@ -15,6 +15,7 @@ public class GetBandwidthRateLimitScheduleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BandwidthRateLimitIntervals")
     public BandwidthRateLimitInterval[] bandwidthRateLimitIntervals;
+
     public GetBandwidthRateLimitScheduleOutput withBandwidthRateLimitIntervals(BandwidthRateLimitInterval[] bandwidthRateLimitIntervals) {
         this.bandwidthRateLimitIntervals = bandwidthRateLimitIntervals;
         return this;
@@ -23,9 +24,11 @@ public class GetBandwidthRateLimitScheduleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public GetBandwidthRateLimitScheduleOutput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
     }
     
+    public GetBandwidthRateLimitScheduleOutput(){}
 }

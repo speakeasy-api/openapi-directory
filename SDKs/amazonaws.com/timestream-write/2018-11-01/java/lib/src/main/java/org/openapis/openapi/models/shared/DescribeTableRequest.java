@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeTableRequest {
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DescribeTableRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -16,9 +17,14 @@ public class DescribeTableRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public DescribeTableRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DescribeTableRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+  }
 }

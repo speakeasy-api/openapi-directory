@@ -15,6 +15,7 @@ public class Counterparty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balanceAccountId")
     public String balanceAccountId;
+
     public Counterparty withBalanceAccountId(String balanceAccountId) {
         this.balanceAccountId = balanceAccountId;
         return this;
@@ -23,6 +24,7 @@ public class Counterparty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccount")
     public BankAccountInfo bankAccount;
+
     public Counterparty withBankAccount(BankAccountInfo bankAccount) {
         this.bankAccount = bankAccount;
         return this;
@@ -31,6 +33,7 @@ public class Counterparty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant")
     public MerchantData merchant;
+
     public Counterparty withMerchant(MerchantData merchant) {
         this.merchant = merchant;
         return this;
@@ -42,9 +45,11 @@ public class Counterparty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferInstrumentId")
     public String transferInstrumentId;
+
     public Counterparty withTransferInstrumentId(String transferInstrumentId) {
         this.transferInstrumentId = transferInstrumentId;
         return this;
     }
     
+    public Counterparty(){}
 }

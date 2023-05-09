@@ -15,6 +15,7 @@ public class InstanceProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public InstanceProfile withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class InstanceProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InstanceProfile withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class InstanceProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeAppPackagesFromCleanup")
     public String[] excludeAppPackagesFromCleanup;
+
     public InstanceProfile withExcludeAppPackagesFromCleanup(String[] excludeAppPackagesFromCleanup) {
         this.excludeAppPackagesFromCleanup = excludeAppPackagesFromCleanup;
         return this;
@@ -39,6 +42,7 @@ public class InstanceProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InstanceProfile withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class InstanceProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageCleanup")
     public Boolean packageCleanup;
+
     public InstanceProfile withPackageCleanup(Boolean packageCleanup) {
         this.packageCleanup = packageCleanup;
         return this;
@@ -55,9 +60,11 @@ public class InstanceProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rebootAfterUse")
     public Boolean rebootAfterUse;
+
     public InstanceProfile withRebootAfterUse(Boolean rebootAfterUse) {
         this.rebootAfterUse = rebootAfterUse;
         return this;
     }
     
+    public InstanceProfile(){}
 }

@@ -18,6 +18,7 @@ public class InstructionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codec")
     public java.util.Map<String, Object> codec;
+
     public InstructionOutput withCodec(java.util.Map<String, Object> codec) {
         this.codec = codec;
         return this;
@@ -29,6 +30,7 @@ public class InstructionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InstructionOutput withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class InstructionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlyCountKeyBytes")
     public Boolean onlyCountKeyBytes;
+
     public InstructionOutput withOnlyCountKeyBytes(Boolean onlyCountKeyBytes) {
         this.onlyCountKeyBytes = onlyCountKeyBytes;
         return this;
@@ -51,6 +54,7 @@ public class InstructionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlyCountValueBytes")
     public Boolean onlyCountValueBytes;
+
     public InstructionOutput withOnlyCountValueBytes(Boolean onlyCountValueBytes) {
         this.onlyCountValueBytes = onlyCountValueBytes;
         return this;
@@ -62,6 +66,7 @@ public class InstructionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalName")
     public String originalName;
+
     public InstructionOutput withOriginalName(String originalName) {
         this.originalName = originalName;
         return this;
@@ -73,9 +78,11 @@ public class InstructionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemName")
     public String systemName;
+
     public InstructionOutput withSystemName(String systemName) {
         this.systemName = systemName;
         return this;
     }
     
+    public InstructionOutput(){}
 }

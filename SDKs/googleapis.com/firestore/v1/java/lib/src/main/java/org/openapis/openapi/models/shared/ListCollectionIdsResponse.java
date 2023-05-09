@@ -18,6 +18,7 @@ public class ListCollectionIdsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionIds")
     public String[] collectionIds;
+
     public ListCollectionIdsResponse withCollectionIds(String[] collectionIds) {
         this.collectionIds = collectionIds;
         return this;
@@ -29,9 +30,11 @@ public class ListCollectionIdsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCollectionIdsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCollectionIdsResponse(){}
 }

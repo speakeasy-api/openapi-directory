@@ -15,6 +15,7 @@ public class ListMitigationActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionIdentifiers")
     public MitigationActionIdentifier[] actionIdentifiers;
+
     public ListMitigationActionsResponse withActionIdentifiers(MitigationActionIdentifier[] actionIdentifiers) {
         this.actionIdentifiers = actionIdentifiers;
         return this;
@@ -23,9 +24,11 @@ public class ListMitigationActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListMitigationActionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMitigationActionsResponse(){}
 }

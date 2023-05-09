@@ -15,6 +15,7 @@ public class ListDelegatedAdminAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegatedAdminAccounts")
     public DelegatedAdminAccount[] delegatedAdminAccounts;
+
     public ListDelegatedAdminAccountsResponse withDelegatedAdminAccounts(DelegatedAdminAccount[] delegatedAdminAccounts) {
         this.delegatedAdminAccounts = delegatedAdminAccounts;
         return this;
@@ -23,9 +24,11 @@ public class ListDelegatedAdminAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDelegatedAdminAccountsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDelegatedAdminAccountsResponse(){}
 }

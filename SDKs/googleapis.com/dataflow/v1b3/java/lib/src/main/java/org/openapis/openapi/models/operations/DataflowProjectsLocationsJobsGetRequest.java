@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataflowProjectsLocationsJobsGetRequest {
@@ -12,6 +13,7 @@ public class DataflowProjectsLocationsJobsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DataflowProjectsLocationsJobsGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DataflowProjectsLocationsJobsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DataflowProjectsLocationsJobsGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DataflowProjectsLocationsJobsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DataflowProjectsLocationsJobsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DataflowProjectsLocationsJobsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DataflowProjectsLocationsJobsGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DataflowProjectsLocationsJobsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DataflowProjectsLocationsJobsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class DataflowProjectsLocationsJobsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public DataflowProjectsLocationsJobsGetRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -72,6 +79,7 @@ public class DataflowProjectsLocationsJobsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DataflowProjectsLocationsJobsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class DataflowProjectsLocationsJobsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public DataflowProjectsLocationsJobsGetRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -92,6 +101,7 @@ public class DataflowProjectsLocationsJobsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DataflowProjectsLocationsJobsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class DataflowProjectsLocationsJobsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DataflowProjectsLocationsJobsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class DataflowProjectsLocationsJobsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public DataflowProjectsLocationsJobsGetRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -122,6 +134,7 @@ public class DataflowProjectsLocationsJobsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DataflowProjectsLocationsJobsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class DataflowProjectsLocationsJobsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DataflowProjectsLocationsJobsGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,6 +156,7 @@ public class DataflowProjectsLocationsJobsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DataflowProjectsLocationsJobsGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -152,9 +167,15 @@ public class DataflowProjectsLocationsJobsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public DataflowProjectsLocationsJobsGetViewEnum view;
+
     public DataflowProjectsLocationsJobsGetRequest withView(DataflowProjectsLocationsJobsGetViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public DataflowProjectsLocationsJobsGetRequest(@JsonProperty("jobId") String jobId, @JsonProperty("location") String location, @JsonProperty("projectId") String projectId) {
+        this.jobId = jobId;
+        this.location = location;
+        this.projectId = projectId;
+  }
 }

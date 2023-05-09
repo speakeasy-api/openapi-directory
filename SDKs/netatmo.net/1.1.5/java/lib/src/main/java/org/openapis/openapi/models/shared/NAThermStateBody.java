@@ -15,6 +15,7 @@ public class NAThermStateBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("battery_percent")
     public Integer batteryPercent;
+
     public NAThermStateBody withBatteryPercent(Integer batteryPercent) {
         this.batteryPercent = batteryPercent;
         return this;
@@ -23,6 +24,7 @@ public class NAThermStateBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("battery_vp")
     public Integer batteryVp;
+
     public NAThermStateBody withBatteryVp(Integer batteryVp) {
         this.batteryVp = batteryVp;
         return this;
@@ -31,6 +33,7 @@ public class NAThermStateBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_plug_seen")
     public Integer lastPlugSeen;
+
     public NAThermStateBody withLastPlugSeen(Integer lastPlugSeen) {
         this.lastPlugSeen = lastPlugSeen;
         return this;
@@ -39,6 +42,7 @@ public class NAThermStateBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_therm_seen")
     public Integer lastThermSeen;
+
     public NAThermStateBody withLastThermSeen(Integer lastThermSeen) {
         this.lastThermSeen = lastThermSeen;
         return this;
@@ -47,6 +51,7 @@ public class NAThermStateBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measured")
     public NAThermMeasure measured;
+
     public NAThermStateBody withMeasured(NAThermMeasure measured) {
         this.measured = measured;
         return this;
@@ -55,6 +60,7 @@ public class NAThermStateBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plug_connected_boiler")
     public Integer plugConnectedBoiler;
+
     public NAThermStateBody withPlugConnectedBoiler(Integer plugConnectedBoiler) {
         this.plugConnectedBoiler = plugConnectedBoiler;
         return this;
@@ -63,6 +69,7 @@ public class NAThermStateBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rf_status")
     public Integer rfStatus;
+
     public NAThermStateBody withRfStatus(Integer rfStatus) {
         this.rfStatus = rfStatus;
         return this;
@@ -71,6 +78,7 @@ public class NAThermStateBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setpoint")
     public NASetpoint setpoint;
+
     public NAThermStateBody withSetpoint(NASetpoint setpoint) {
         this.setpoint = setpoint;
         return this;
@@ -79,6 +87,7 @@ public class NAThermStateBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setpoint_order")
     public NASetpoint setpointOrder;
+
     public NAThermStateBody withSetpointOrder(NASetpoint setpointOrder) {
         this.setpointOrder = setpointOrder;
         return this;
@@ -87,6 +96,7 @@ public class NAThermStateBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("therm_orientation")
     public Integer thermOrientation;
+
     public NAThermStateBody withThermOrientation(Integer thermOrientation) {
         this.thermOrientation = thermOrientation;
         return this;
@@ -95,6 +105,7 @@ public class NAThermStateBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("therm_program")
     public NAThermProgram thermProgram;
+
     public NAThermStateBody withThermProgram(NAThermProgram thermProgram) {
         this.thermProgram = thermProgram;
         return this;
@@ -103,6 +114,7 @@ public class NAThermStateBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("therm_program_backup")
     public NAThermProgram[] thermProgramBackup;
+
     public NAThermStateBody withThermProgramBackup(NAThermProgram[] thermProgramBackup) {
         this.thermProgramBackup = thermProgramBackup;
         return this;
@@ -111,6 +123,7 @@ public class NAThermStateBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("therm_program_order")
     public NAThermProgram thermProgramOrder;
+
     public NAThermStateBody withThermProgramOrder(NAThermProgram thermProgramOrder) {
         this.thermProgramOrder = thermProgramOrder;
         return this;
@@ -119,6 +132,7 @@ public class NAThermStateBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("therm_relay_cmd")
     public Integer thermRelayCmd;
+
     public NAThermStateBody withThermRelayCmd(Integer thermRelayCmd) {
         this.thermRelayCmd = thermRelayCmd;
         return this;
@@ -127,6 +141,7 @@ public class NAThermStateBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("udp_conn")
     public Boolean udpConn;
+
     public NAThermStateBody withUdpConn(Boolean udpConn) {
         this.udpConn = udpConn;
         return this;
@@ -135,9 +150,11 @@ public class NAThermStateBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifi_status")
     public Integer wifiStatus;
+
     public NAThermStateBody withWifiStatus(Integer wifiStatus) {
         this.wifiStatus = wifiStatus;
         return this;
     }
     
+    public NAThermStateBody(){}
 }

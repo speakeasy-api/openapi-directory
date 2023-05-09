@@ -15,6 +15,7 @@ public class ListUserAccessLoggingSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListUserAccessLoggingSettingsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListUserAccessLoggingSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAccessLoggingSettings")
     public UserAccessLoggingSettingsSummary[] userAccessLoggingSettings;
+
     public ListUserAccessLoggingSettingsResponse withUserAccessLoggingSettings(UserAccessLoggingSettingsSummary[] userAccessLoggingSettings) {
         this.userAccessLoggingSettings = userAccessLoggingSettings;
         return this;
     }
     
+    public ListUserAccessLoggingSettingsResponse(){}
 }

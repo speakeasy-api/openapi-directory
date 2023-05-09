@@ -22,6 +22,7 @@ public class GroupType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public GroupType withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +31,7 @@ public class GroupType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GroupType withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class GroupType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public GroupType withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -48,6 +51,7 @@ public class GroupType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public GroupType withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -56,6 +60,7 @@ public class GroupType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Precedence")
     public Long precedence;
+
     public GroupType withPrecedence(Long precedence) {
         this.precedence = precedence;
         return this;
@@ -64,6 +69,7 @@ public class GroupType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public GroupType withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -72,9 +78,11 @@ public class GroupType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public GroupType withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public GroupType(){}
 }

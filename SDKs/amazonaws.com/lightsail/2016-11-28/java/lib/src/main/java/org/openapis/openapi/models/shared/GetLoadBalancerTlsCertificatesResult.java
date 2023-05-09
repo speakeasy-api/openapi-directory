@@ -15,9 +15,11 @@ public class GetLoadBalancerTlsCertificatesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tlsCertificates")
     public LoadBalancerTlsCertificate[] tlsCertificates;
+
     public GetLoadBalancerTlsCertificatesResult withTlsCertificates(LoadBalancerTlsCertificate[] tlsCertificates) {
         this.tlsCertificates = tlsCertificates;
         return this;
     }
     
+    public GetLoadBalancerTlsCertificatesResult(){}
 }

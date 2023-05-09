@@ -16,7 +16,7 @@ import org.openapis.openapi.utils.SerializedBody;
 import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 
 /**
- * &lt;p&gt;This is the &lt;i&gt;Resource Access Manager API Reference&lt;/i&gt;. This documentation provides descriptions and syntax for each of the actions and data types in RAM. RAM is a service that helps you securely share your Amazon Web Services resources across Amazon Web Services accounts. If you have multiple Amazon Web Services accounts, you can use RAM to share those resources with other accounts. If you use Organizations to manage your accounts, then you share your resources with your organization or organizational units (OUs). For supported resource types, you can also share resources with individual Identity and Access Management (IAM) roles an users. &lt;/p&gt; &lt;p&gt;To learn more about RAM, see the following resources:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a href="http://aws.amazon.com/ram"&gt;Resource Access Manager product page&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/ram/latest/userguide/"&gt;Resource Access Manager User Guide&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+ * &lt;p&gt;This is the &lt;i&gt;Resource Access Manager API Reference&lt;/i&gt;. This documentation provides descriptions and syntax for each of the actions and data types in RAM. RAM is a service that helps you securely share your Amazon Web Services resources to other Amazon Web Services accounts. If you use Organizations to manage your accounts, then you can share your resources with your entire organization or to organizational units (OUs). For supported resource types, you can also share resources with individual Identity and Access Management (IAM) roles and users. &lt;/p&gt; &lt;p&gt;To learn more about RAM, see the following resources:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a href="http://aws.amazon.com/ram"&gt;Resource Access Manager product page&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/ram/latest/userguide/"&gt;Resource Access Manager User Guide&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
  * https://docs.aws.amazon.com/ram/ - Amazon Web Services documentation
  */
 public class SDK {
@@ -41,6 +41,15 @@ public class SDK {
          */
         "https://ram.{region}.amazonaws.com.cn",
 	};
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -170,6 +179,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -207,7 +221,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AcceptResourceShareInvitationResponse res = new org.openapis.openapi.models.operations.AcceptResourceShareInvitationResponse() {{
+        org.openapis.openapi.models.operations.AcceptResourceShareInvitationResponse res = new org.openapis.openapi.models.operations.AcceptResourceShareInvitationResponse(contentType, httpRes.statusCode()) {{
             acceptResourceShareInvitationResponse = null;
             malformedArnException = null;
             operationNotPermittedException = null;
@@ -220,8 +234,6 @@ public class SDK {
             invalidClientTokenException = null;
             idempotentParameterMismatchException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,7 +351,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateResourceShareResponse res = new org.openapis.openapi.models.operations.AssociateResourceShareResponse() {{
+        org.openapis.openapi.models.operations.AssociateResourceShareResponse res = new org.openapis.openapi.models.operations.AssociateResourceShareResponse(contentType, httpRes.statusCode()) {{
             associateResourceShareResponse = null;
             idempotentParameterMismatchException = null;
             unknownResourceException = null;
@@ -353,8 +365,6 @@ public class SDK {
             serviceUnavailableException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -479,7 +489,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateResourceSharePermissionResponse res = new org.openapis.openapi.models.operations.AssociateResourceSharePermissionResponse() {{
+        org.openapis.openapi.models.operations.AssociateResourceSharePermissionResponse res = new org.openapis.openapi.models.operations.AssociateResourceSharePermissionResponse(contentType, httpRes.statusCode()) {{
             associateResourceSharePermissionResponse = null;
             malformedArnException = null;
             unknownResourceException = null;
@@ -489,8 +499,6 @@ public class SDK {
             serviceUnavailableException = null;
             operationNotPermittedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -554,6 +562,266 @@ public class SDK {
     }
 
     /**
+     * Creates a customer managed permission for a specified resource type that you can attach to resource shares. It is created in the Amazon Web Services Region in which you call the operation.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreatePermissionResponse createPermission(org.openapis.openapi.models.operations.CreatePermissionRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/createpermission");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CreatePermissionResponse res = new org.openapis.openapi.models.operations.CreatePermissionResponse(contentType, httpRes.statusCode()) {{
+            createPermissionResponse = null;
+            invalidParameterException = null;
+            invalidPolicyException = null;
+            operationNotPermittedException = null;
+            serverInternalException = null;
+            serviceUnavailableException = null;
+            permissionAlreadyExistsException = null;
+            malformedPolicyTemplateException = null;
+            invalidClientTokenException = null;
+            permissionLimitExceededException = null;
+            idempotentParameterMismatchException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.CreatePermissionResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.CreatePermissionResponse.class);
+                res.createPermissionResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidParameterException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidPolicyException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.operationNotPermittedException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serverInternalException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceUnavailableException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 485) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.permissionAlreadyExistsException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 486) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.malformedPolicyTemplateException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 487) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidClientTokenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 488) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.permissionLimitExceededException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 489) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.idempotentParameterMismatchException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * &lt;p&gt;Creates a new version of the specified customer managed permission. The new version is automatically set as the default version of the customer managed permission. New resource shares automatically use the default permission. Existing resource shares continue to use their original permission versions, but you can use &lt;a&gt;ReplacePermissionAssociations&lt;/a&gt; to update them.&lt;/p&gt; &lt;p&gt;If the specified customer managed permission already has the maximum of 5 versions, then you must delete one of the existing versions before you can create a new one.&lt;/p&gt;
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreatePermissionVersionResponse createPermissionVersion(org.openapis.openapi.models.operations.CreatePermissionVersionRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/createpermissionversion");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CreatePermissionVersionResponse res = new org.openapis.openapi.models.operations.CreatePermissionVersionResponse(contentType, httpRes.statusCode()) {{
+            createPermissionVersionResponse = null;
+            invalidParameterException = null;
+            invalidPolicyException = null;
+            serverInternalException = null;
+            serviceUnavailableException = null;
+            unknownResourceException = null;
+            malformedPolicyTemplateException = null;
+            malformedArnException = null;
+            invalidClientTokenException = null;
+            idempotentParameterMismatchException = null;
+            permissionVersionsLimitExceededException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.CreatePermissionVersionResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.CreatePermissionVersionResponse.class);
+                res.createPermissionVersionResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidParameterException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidPolicyException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serverInternalException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceUnavailableException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.unknownResourceException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 485) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.malformedPolicyTemplateException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 486) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.malformedArnException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 487) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidClientTokenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 488) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.idempotentParameterMismatchException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 489) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.permissionVersionsLimitExceededException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * &lt;p&gt;Creates a resource share. You can provide a list of the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Names (ARNs)&lt;/a&gt; for the resources that you want to share, a list of principals you want to share the resources with, and the permissions to grant those principals.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Sharing a resource makes it available for use by principals outside of the Amazon Web Services account that created the resource. Sharing doesn't change any permissions or quotas that apply to the resource in the account that created it.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -587,7 +855,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateResourceShareResponse res = new org.openapis.openapi.models.operations.CreateResourceShareResponse() {{
+        org.openapis.openapi.models.operations.CreateResourceShareResponse res = new org.openapis.openapi.models.operations.CreateResourceShareResponse(contentType, httpRes.statusCode()) {{
             createResourceShareResponse = null;
             idempotentParameterMismatchException = null;
             invalidStateTransitionException = null;
@@ -601,8 +869,6 @@ public class SDK {
             serverInternalException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -694,7 +960,229 @@ public class SDK {
     }
 
     /**
-     * Deletes the specified resource share. This doesn't delete any of the resources that were associated with the resource share; it only stops the sharing of those resources outside of the Amazon Web Services account that created them.
+     * Deletes the specified customer managed permission in the Amazon Web Services Region in which you call this operation. You can delete a customer managed permission only if it isn't attached to any resource share. The operation deletes all versions associated with the customer managed permission.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeletePermissionResponse deletePermission(org.openapis.openapi.models.operations.DeletePermissionRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/deletepermission#permissionArn");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeletePermissionRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.DeletePermissionResponse res = new org.openapis.openapi.models.operations.DeletePermissionResponse(contentType, httpRes.statusCode()) {{
+            deletePermissionResponse = null;
+            malformedArnException = null;
+            serverInternalException = null;
+            serviceUnavailableException = null;
+            operationNotPermittedException = null;
+            unknownResourceException = null;
+            invalidClientTokenException = null;
+            idempotentParameterMismatchException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.DeletePermissionResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.DeletePermissionResponse.class);
+                res.deletePermissionResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.malformedArnException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serverInternalException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceUnavailableException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.operationNotPermittedException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.unknownResourceException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 485) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidClientTokenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 486) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.idempotentParameterMismatchException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * &lt;p&gt;Deletes one version of a customer managed permission. The version you specify must not be attached to any resource share and must not be the default version for the permission.&lt;/p&gt; &lt;p&gt;If a customer managed permission has the maximum of 5 versions, then you must delete at least one version before you can create another.&lt;/p&gt;
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeletePermissionVersionResponse deletePermissionVersion(org.openapis.openapi.models.operations.DeletePermissionVersionRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/deletepermissionversion#permissionArn&permissionVersion");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeletePermissionVersionRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.DeletePermissionVersionResponse res = new org.openapis.openapi.models.operations.DeletePermissionVersionResponse(contentType, httpRes.statusCode()) {{
+            deletePermissionVersionResponse = null;
+            malformedArnException = null;
+            invalidParameterException = null;
+            serverInternalException = null;
+            serviceUnavailableException = null;
+            operationNotPermittedException = null;
+            unknownResourceException = null;
+            invalidClientTokenException = null;
+            idempotentParameterMismatchException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.DeletePermissionVersionResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.DeletePermissionVersionResponse.class);
+                res.deletePermissionVersionResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.malformedArnException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidParameterException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serverInternalException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceUnavailableException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.operationNotPermittedException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 485) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.unknownResourceException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 486) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidClientTokenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 487) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.idempotentParameterMismatchException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * &lt;p&gt;Deletes the specified resource share.&lt;/p&gt; &lt;important&gt; &lt;p&gt;This doesn't delete any of the resources that were associated with the resource share; it only stops the sharing of those resources through this resource share.&lt;/p&gt; &lt;/important&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -728,7 +1216,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteResourceShareResponse res = new org.openapis.openapi.models.operations.DeleteResourceShareResponse() {{
+        org.openapis.openapi.models.operations.DeleteResourceShareResponse res = new org.openapis.openapi.models.operations.DeleteResourceShareResponse(contentType, httpRes.statusCode()) {{
             deleteResourceShareResponse = null;
             operationNotPermittedException = null;
             idempotentParameterMismatchException = null;
@@ -740,8 +1228,6 @@ public class SDK {
             serverInternalException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -819,7 +1305,7 @@ public class SDK {
     }
 
     /**
-     * Disassociates the specified principals or resources from the specified resource share.
+     * Removes the specified principals or resources from participating in the specified resource share.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -852,7 +1338,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateResourceShareResponse res = new org.openapis.openapi.models.operations.DisassociateResourceShareResponse() {{
+        org.openapis.openapi.models.operations.DisassociateResourceShareResponse res = new org.openapis.openapi.models.operations.DisassociateResourceShareResponse(contentType, httpRes.statusCode()) {{
             disassociateResourceShareResponse = null;
             idempotentParameterMismatchException = null;
             resourceShareLimitExceededException = null;
@@ -865,8 +1351,6 @@ public class SDK {
             serviceUnavailableException = null;
             unknownResourceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -951,7 +1435,7 @@ public class SDK {
     }
 
     /**
-     * Disassociates an RAM permission from a resource share. Permission changes take effect immediately. You can remove a RAM permission from a resource share only if there are currently no resources of the relevant resource type currently attached to the resource share.
+     * Removes a managed permission from a resource share. Permission changes take effect immediately. You can remove a managed permission from a resource share only if there are currently no resources of the relevant resource type currently attached to the resource share.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -984,7 +1468,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateResourceSharePermissionResponse res = new org.openapis.openapi.models.operations.DisassociateResourceSharePermissionResponse() {{
+        org.openapis.openapi.models.operations.DisassociateResourceSharePermissionResponse res = new org.openapis.openapi.models.operations.DisassociateResourceSharePermissionResponse(contentType, httpRes.statusCode()) {{
             disassociateResourceSharePermissionResponse = null;
             malformedArnException = null;
             unknownResourceException = null;
@@ -995,8 +1479,6 @@ public class SDK {
             operationNotPermittedException = null;
             invalidStateTransitionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1067,7 +1549,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Enables resource sharing within your organization in Organizations. Calling this operation enables RAM to retrieve information about the organization and its structure. This lets you share resources with all of the accounts in an organization by specifying the organization's ID, or all of the accounts in an organizational unit (OU) by specifying the OU's ID. Until you enable sharing within the organization, you can specify only individual Amazon Web Services accounts, or for supported resource types, IAM users and roles.&lt;/p&gt; &lt;p&gt;You must call this operation from an IAM user or role in the organization's management account.&lt;/p&gt;
+     * &lt;p&gt;Enables resource sharing within your organization in Organizations. This operation creates a service-linked role called &lt;code&gt;AWSServiceRoleForResourceAccessManager&lt;/code&gt; that has the IAM managed policy named AWSResourceAccessManagerServiceRolePolicy attached. This role permits RAM to retrieve information about the organization and its structure. This lets you share resources with all of the accounts in the calling account's organization by specifying the organization ID, or all of the accounts in an organizational unit (OU) by specifying the OU ID. Until you enable sharing within the organization, you can specify only individual Amazon Web Services accounts, or for supported resource types, IAM roles and users.&lt;/p&gt; &lt;p&gt;You must call this operation from an IAM role or user in the organization's management account.&lt;/p&gt; &lt;p/&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1095,14 +1577,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableSharingWithAwsOrganizationResponse res = new org.openapis.openapi.models.operations.EnableSharingWithAwsOrganizationResponse() {{
+        org.openapis.openapi.models.operations.EnableSharingWithAwsOrganizationResponse res = new org.openapis.openapi.models.operations.EnableSharingWithAwsOrganizationResponse(contentType, httpRes.statusCode()) {{
             enableSharingWithAwsOrganizationResponse = null;
             operationNotPermittedException = null;
             serverInternalException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1138,7 +1618,7 @@ public class SDK {
     }
 
     /**
-     * Gets the contents of an RAM permission in JSON format.
+     * Retrieves the contents of a managed permission in JSON format.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1171,7 +1651,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPermissionResponse res = new org.openapis.openapi.models.operations.GetPermissionResponse() {{
+        org.openapis.openapi.models.operations.GetPermissionResponse res = new org.openapis.openapi.models.operations.GetPermissionResponse(contentType, httpRes.statusCode()) {{
             getPermissionResponse = null;
             invalidParameterException = null;
             malformedArnException = null;
@@ -1180,8 +1660,6 @@ public class SDK {
             serviceUnavailableException = null;
             operationNotPermittedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1277,7 +1755,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcePoliciesResponse res = new org.openapis.openapi.models.operations.GetResourcePoliciesResponse() {{
+        org.openapis.openapi.models.operations.GetResourcePoliciesResponse res = new org.openapis.openapi.models.operations.GetResourcePoliciesResponse(contentType, httpRes.statusCode()) {{
             getResourcePoliciesResponse = null;
             malformedArnException = null;
             invalidNextTokenException = null;
@@ -1286,8 +1764,6 @@ public class SDK {
             serverInternalException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1344,7 +1820,7 @@ public class SDK {
     }
 
     /**
-     * Retrieves the resource and principal associations for resource shares that you own.
+     * Retrieves the lists of resources and principals that associated for resource shares that you own.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1383,7 +1859,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourceShareAssociationsResponse res = new org.openapis.openapi.models.operations.GetResourceShareAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetResourceShareAssociationsResponse res = new org.openapis.openapi.models.operations.GetResourceShareAssociationsResponse(contentType, httpRes.statusCode()) {{
             getResourceShareAssociationsResponse = null;
             unknownResourceException = null;
             malformedArnException = null;
@@ -1393,8 +1869,6 @@ public class SDK {
             serverInternalException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1497,7 +1971,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourceShareInvitationsResponse res = new org.openapis.openapi.models.operations.GetResourceShareInvitationsResponse() {{
+        org.openapis.openapi.models.operations.GetResourceShareInvitationsResponse res = new org.openapis.openapi.models.operations.GetResourceShareInvitationsResponse(contentType, httpRes.statusCode()) {{
             getResourceShareInvitationsResponse = null;
             resourceShareInvitationArnNotFoundException = null;
             invalidMaxResultsException = null;
@@ -1508,8 +1982,6 @@ public class SDK {
             serverInternalException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1619,7 +2091,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourceSharesResponse res = new org.openapis.openapi.models.operations.GetResourceSharesResponse() {{
+        org.openapis.openapi.models.operations.GetResourceSharesResponse res = new org.openapis.openapi.models.operations.GetResourceSharesResponse(contentType, httpRes.statusCode()) {{
             getResourceSharesResponse = null;
             unknownResourceException = null;
             malformedArnException = null;
@@ -1628,8 +2100,6 @@ public class SDK {
             serverInternalException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1725,7 +2195,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPendingInvitationResourcesResponse res = new org.openapis.openapi.models.operations.ListPendingInvitationResourcesResponse() {{
+        org.openapis.openapi.models.operations.ListPendingInvitationResourcesResponse res = new org.openapis.openapi.models.operations.ListPendingInvitationResourcesResponse(contentType, httpRes.statusCode()) {{
             listPendingInvitationResourcesResponse = null;
             malformedArnException = null;
             invalidNextTokenException = null;
@@ -1737,8 +2207,6 @@ public class SDK {
             resourceShareInvitationAlreadyRejectedException = null;
             resourceShareInvitationExpiredException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1816,6 +2284,102 @@ public class SDK {
     }
 
     /**
+     * Lists information about the managed permission and its associations to any resource shares that use this managed permission. This lets you see which resource shares use which versions of the specified managed permission.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListPermissionAssociationsResponse listPermissionAssociations(org.openapis.openapi.models.operations.ListPermissionAssociationsRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/listpermissionassociations");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPermissionAssociationsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ListPermissionAssociationsResponse res = new org.openapis.openapi.models.operations.ListPermissionAssociationsResponse(contentType, httpRes.statusCode()) {{
+            listPermissionAssociationsResponse = null;
+            invalidParameterException = null;
+            malformedArnException = null;
+            invalidNextTokenException = null;
+            serverInternalException = null;
+            serviceUnavailableException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListPermissionAssociationsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListPermissionAssociationsResponse.class);
+                res.listPermissionAssociationsResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidParameterException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.malformedArnException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidNextTokenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serverInternalException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceUnavailableException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Lists the available versions of the specified RAM permission.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -1855,7 +2419,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPermissionVersionsResponse res = new org.openapis.openapi.models.operations.ListPermissionVersionsResponse() {{
+        org.openapis.openapi.models.operations.ListPermissionVersionsResponse res = new org.openapis.openapi.models.operations.ListPermissionVersionsResponse(contentType, httpRes.statusCode()) {{
             listPermissionVersionsResponse = null;
             malformedArnException = null;
             unknownResourceException = null;
@@ -1865,8 +2429,6 @@ public class SDK {
             operationNotPermittedException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1969,7 +2531,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPermissionsResponse res = new org.openapis.openapi.models.operations.ListPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ListPermissionsResponse res = new org.openapis.openapi.models.operations.ListPermissionsResponse(contentType, httpRes.statusCode()) {{
             listPermissionsResponse = null;
             invalidParameterException = null;
             invalidNextTokenException = null;
@@ -1977,8 +2539,6 @@ public class SDK {
             serviceUnavailableException = null;
             operationNotPermittedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2067,7 +2627,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPrincipalsResponse res = new org.openapis.openapi.models.operations.ListPrincipalsResponse() {{
+        org.openapis.openapi.models.operations.ListPrincipalsResponse res = new org.openapis.openapi.models.operations.ListPrincipalsResponse(contentType, httpRes.statusCode()) {{
             listPrincipalsResponse = null;
             malformedArnException = null;
             unknownResourceException = null;
@@ -2076,8 +2636,6 @@ public class SDK {
             serverInternalException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2134,6 +2692,94 @@ public class SDK {
     }
 
     /**
+     * Retrieves the current status of the asynchronous tasks performed by RAM when you perform the &lt;a&gt;ReplacePermissionAssociationsWork&lt;/a&gt; operation.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListReplacePermissionAssociationsWorkResponse listReplacePermissionAssociationsWork(org.openapis.openapi.models.operations.ListReplacePermissionAssociationsWorkRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/listreplacepermissionassociationswork");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListReplacePermissionAssociationsWorkRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ListReplacePermissionAssociationsWorkResponse res = new org.openapis.openapi.models.operations.ListReplacePermissionAssociationsWorkResponse(contentType, httpRes.statusCode()) {{
+            listReplacePermissionAssociationsWorkResponse = null;
+            serverInternalException = null;
+            serviceUnavailableException = null;
+            invalidNextTokenException = null;
+            invalidParameterException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListReplacePermissionAssociationsWorkResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListReplacePermissionAssociationsWorkResponse.class);
+                res.listReplacePermissionAssociationsWorkResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serverInternalException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceUnavailableException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidNextTokenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidParameterException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Lists the RAM permissions that are associated with a resource share.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -2173,7 +2819,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListResourceSharePermissionsResponse res = new org.openapis.openapi.models.operations.ListResourceSharePermissionsResponse() {{
+        org.openapis.openapi.models.operations.ListResourceSharePermissionsResponse res = new org.openapis.openapi.models.operations.ListResourceSharePermissionsResponse(contentType, httpRes.statusCode()) {{
             listResourceSharePermissionsResponse = null;
             invalidParameterException = null;
             malformedArnException = null;
@@ -2183,8 +2829,6 @@ public class SDK {
             serviceUnavailableException = null;
             operationNotPermittedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2287,15 +2931,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListResourceTypesResponse res = new org.openapis.openapi.models.operations.ListResourceTypesResponse() {{
+        org.openapis.openapi.models.operations.ListResourceTypesResponse res = new org.openapis.openapi.models.operations.ListResourceTypesResponse(contentType, httpRes.statusCode()) {{
             listResourceTypesResponse = null;
             invalidNextTokenException = null;
             invalidParameterException = null;
             serverInternalException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2377,7 +3019,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListResourcesResponse res = new org.openapis.openapi.models.operations.ListResourcesResponse() {{
+        org.openapis.openapi.models.operations.ListResourcesResponse res = new org.openapis.openapi.models.operations.ListResourcesResponse(contentType, httpRes.statusCode()) {{
             listResourcesResponse = null;
             invalidResourceTypeException = null;
             unknownResourceException = null;
@@ -2387,8 +3029,6 @@ public class SDK {
             serverInternalException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2452,7 +3092,113 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;When you attach a resource-based permission policy to a resource, it automatically creates a resource share. However, resource shares created this way are visible only to the resource share owner, and the resource share can't be modified in RAM.&lt;/p&gt; &lt;p&gt;You can use this operation to promote the resource share to a full RAM resource share. When you promote a resource share, you can then manage the resource share in RAM and it becomes visible to all of the principals you shared it with.&lt;/p&gt;
+     * &lt;p&gt;When you attach a resource-based policy to a resource, RAM automatically creates a resource share of &lt;code&gt;featureSet&lt;/code&gt;=&lt;code&gt;CREATED_FROM_POLICY&lt;/code&gt; with a managed permission that has the same IAM permissions as the original resource-based policy. However, this type of managed permission is visible to only the resource share owner, and the associated resource share can't be modified by using RAM.&lt;/p&gt; &lt;p&gt;This operation creates a separate, fully manageable customer managed permission that has the same IAM permissions as the original resource-based policy. You can associate this customer managed permission to any resource shares.&lt;/p&gt; &lt;p&gt;Before you use &lt;a&gt;PromoteResourceShareCreatedFromPolicy&lt;/a&gt;, you should first run this operation to ensure that you have an appropriate customer managed permission that can be associated with the promoted resource share.&lt;/p&gt; &lt;note&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;The original &lt;code&gt;CREATED_FROM_POLICY&lt;/code&gt; policy isn't deleted, and resource shares using that original policy aren't automatically updated.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;You can't modify a &lt;code&gt;CREATED_FROM_POLICY&lt;/code&gt; resource share so you can't associate the new customer managed permission by using &lt;code&gt;ReplacePermsissionAssociations&lt;/code&gt;. However, if you use &lt;a&gt;PromoteResourceShareCreatedFromPolicy&lt;/a&gt;, that operation automatically associates the fully manageable customer managed permission to the newly promoted &lt;code&gt;STANDARD&lt;/code&gt; resource share.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;After you promote a resource share, if the original &lt;code&gt;CREATED_FROM_POLICY&lt;/code&gt; managed permission has no other associations to A resource share, then RAM automatically deletes it.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/note&gt;
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PromotePermissionCreatedFromPolicyResponse promotePermissionCreatedFromPolicy(org.openapis.openapi.models.operations.PromotePermissionCreatedFromPolicyRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/promotepermissioncreatedfrompolicy");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.PromotePermissionCreatedFromPolicyResponse res = new org.openapis.openapi.models.operations.PromotePermissionCreatedFromPolicyResponse(contentType, httpRes.statusCode()) {{
+            promotePermissionCreatedFromPolicyResponse = null;
+            malformedArnException = null;
+            operationNotPermittedException = null;
+            invalidParameterException = null;
+            missingRequiredParameterException = null;
+            serverInternalException = null;
+            serviceUnavailableException = null;
+            unknownResourceException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.PromotePermissionCreatedFromPolicyResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.PromotePermissionCreatedFromPolicyResponse.class);
+                res.promotePermissionCreatedFromPolicyResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.malformedArnException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.operationNotPermittedException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidParameterException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.missingRequiredParameterException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serverInternalException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 485) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceUnavailableException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 486) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.unknownResourceException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * &lt;p&gt;When you attach a resource-based policy to a resource, RAM automatically creates a resource share of &lt;code&gt;featureSet&lt;/code&gt;=&lt;code&gt;CREATED_FROM_POLICY&lt;/code&gt; with a managed permission that has the same IAM permissions as the original resource-based policy. However, this type of managed permission is visible to only the resource share owner, and the associated resource share can't be modified by using RAM.&lt;/p&gt; &lt;p&gt;This operation promotes the resource share to a &lt;code&gt;STANDARD&lt;/code&gt; resource share that is fully manageable in RAM. When you promote a resource share, you can then manage the resource share in RAM and it becomes visible to all of the principals you shared it with.&lt;/p&gt; &lt;important&gt; &lt;p&gt;Before you perform this operation, you should first run &lt;a&gt;PromotePermissionCreatedFromPolicy&lt;/a&gt;to ensure that you have an appropriate customer managed permission that can be associated with this resource share after its is promoted. If this operation can't find a managed permission that exactly matches the existing &lt;code&gt;CREATED_FROM_POLICY&lt;/code&gt; permission, then this operation fails.&lt;/p&gt; &lt;/important&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2486,7 +3232,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PromoteResourceShareCreatedFromPolicyResponse res = new org.openapis.openapi.models.operations.PromoteResourceShareCreatedFromPolicyResponse() {{
+        org.openapis.openapi.models.operations.PromoteResourceShareCreatedFromPolicyResponse res = new org.openapis.openapi.models.operations.PromoteResourceShareCreatedFromPolicyResponse(contentType, httpRes.statusCode()) {{
             promoteResourceShareCreatedFromPolicyResponse = null;
             malformedArnException = null;
             resourceShareLimitExceededException = null;
@@ -2496,9 +3242,9 @@ public class SDK {
             serverInternalException = null;
             serviceUnavailableException = null;
             unknownResourceException = null;
+            invalidStateTransitionException = null;
+            unmatchedPolicyPermissionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2564,6 +3310,20 @@ public class SDK {
                 res.unknownResourceException = out;
             }
         }
+        else if (httpRes.statusCode() == 488) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidStateTransitionException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 489) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.unmatchedPolicyPermissionException = out;
+            }
+        }
 
         return res;
     }
@@ -2602,7 +3362,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RejectResourceShareInvitationResponse res = new org.openapis.openapi.models.operations.RejectResourceShareInvitationResponse() {{
+        org.openapis.openapi.models.operations.RejectResourceShareInvitationResponse res = new org.openapis.openapi.models.operations.RejectResourceShareInvitationResponse(contentType, httpRes.statusCode()) {{
             rejectResourceShareInvitationResponse = null;
             malformedArnException = null;
             operationNotPermittedException = null;
@@ -2615,8 +3375,6 @@ public class SDK {
             invalidClientTokenException = null;
             idempotentParameterMismatchException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2701,7 +3459,227 @@ public class SDK {
     }
 
     /**
-     * Adds the specified tag keys and values to the specified resource share. The tags are attached only to the resource share, not to the resources that are in the resource share.
+     * &lt;p&gt;Updates all resource shares that use a managed permission to a different managed permission. This operation always applies the default version of the target managed permission. You can optionally specify that the update applies to only resource shares that currently use a specified version. This enables you to update to the latest version, without changing the which managed permission is used.&lt;/p&gt; &lt;p&gt;You can use this operation to update all of your resource shares to use the current default version of the permission by specifying the same value for the &lt;code&gt;fromPermissionArn&lt;/code&gt; and &lt;code&gt;toPermissionArn&lt;/code&gt; parameters.&lt;/p&gt; &lt;p&gt;You can use the optional &lt;code&gt;fromPermissionVersion&lt;/code&gt; parameter to update only those resources that use a specified version of the managed permission to the new managed permission.&lt;/p&gt; &lt;important&gt; &lt;p&gt;To successfully perform this operation, you must have permission to update the resource-based policy on all affected resource types.&lt;/p&gt; &lt;/important&gt;
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ReplacePermissionAssociationsResponse replacePermissionAssociations(org.openapis.openapi.models.operations.ReplacePermissionAssociationsRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/replacepermissionassociations");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ReplacePermissionAssociationsResponse res = new org.openapis.openapi.models.operations.ReplacePermissionAssociationsResponse(contentType, httpRes.statusCode()) {{
+            replacePermissionAssociationsResponse = null;
+            malformedArnException = null;
+            invalidParameterException = null;
+            serverInternalException = null;
+            serviceUnavailableException = null;
+            operationNotPermittedException = null;
+            unknownResourceException = null;
+            invalidClientTokenException = null;
+            idempotentParameterMismatchException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ReplacePermissionAssociationsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ReplacePermissionAssociationsResponse.class);
+                res.replacePermissionAssociationsResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.malformedArnException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidParameterException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serverInternalException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceUnavailableException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.operationNotPermittedException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 485) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.unknownResourceException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 486) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidClientTokenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 487) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.idempotentParameterMismatchException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Designates the specified version number as the default version for the specified customer managed permission. New resource shares automatically use this new default permission. Existing resource shares continue to use their original permission version, but you can use &lt;a&gt;ReplacePermissionAssociations&lt;/a&gt; to update them.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.SetDefaultPermissionVersionResponse setDefaultPermissionVersion(org.openapis.openapi.models.operations.SetDefaultPermissionVersionRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setdefaultpermissionversion");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.SetDefaultPermissionVersionResponse res = new org.openapis.openapi.models.operations.SetDefaultPermissionVersionResponse(contentType, httpRes.statusCode()) {{
+            setDefaultPermissionVersionResponse = null;
+            invalidParameterException = null;
+            malformedArnException = null;
+            serverInternalException = null;
+            serviceUnavailableException = null;
+            unknownResourceException = null;
+            invalidClientTokenException = null;
+            idempotentParameterMismatchException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.SetDefaultPermissionVersionResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.SetDefaultPermissionVersionResponse.class);
+                res.setDefaultPermissionVersionResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidParameterException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.malformedArnException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serverInternalException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serviceUnavailableException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.unknownResourceException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 485) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidClientTokenException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 486) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.idempotentParameterMismatchException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * &lt;p&gt;Adds the specified tag keys and values to a resource share or managed permission. If you choose a resource share, the tags are attached to only the resource share, not to the resources that are in the resource share.&lt;/p&gt; &lt;p&gt;The tags on a managed permission are the same for all versions of the managed permission.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2734,7 +3712,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             invalidParameterException = null;
             malformedArnException = null;
@@ -2745,8 +3723,6 @@ public class SDK {
             serverInternalException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2817,7 +3793,7 @@ public class SDK {
     }
 
     /**
-     * Removes the specified tag key and value pairs from the specified resource share.
+     * Removes the specified tag key and value pairs from the specified resource share or managed permission.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2850,14 +3826,14 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
+            unknownResourceException = null;
             invalidParameterException = null;
+            malformedArnException = null;
             serverInternalException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2871,17 +3847,31 @@ public class SDK {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
-                res.invalidParameterException = out;
+                res.unknownResourceException = out;
             }
         }
         else if (httpRes.statusCode() == 481) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
-                res.serverInternalException = out;
+                res.invalidParameterException = out;
             }
         }
         else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.malformedArnException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.serverInternalException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
@@ -2926,7 +3916,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateResourceShareResponse res = new org.openapis.openapi.models.operations.UpdateResourceShareResponse() {{
+        org.openapis.openapi.models.operations.UpdateResourceShareResponse res = new org.openapis.openapi.models.operations.UpdateResourceShareResponse(contentType, httpRes.statusCode()) {{
             updateResourceShareResponse = null;
             idempotentParameterMismatchException = null;
             missingRequiredParameterException = null;
@@ -2938,8 +3928,6 @@ public class SDK {
             serverInternalException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

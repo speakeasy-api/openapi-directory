@@ -15,6 +15,7 @@ public class CodeScanningAnalysisDeletion {
      */
     @JsonProperty("confirm_delete_url")
     public String confirmDeleteUrl;
+
     public CodeScanningAnalysisDeletion withConfirmDeleteUrl(String confirmDeleteUrl) {
         this.confirmDeleteUrl = confirmDeleteUrl;
         return this;
@@ -25,9 +26,14 @@ public class CodeScanningAnalysisDeletion {
      */
     @JsonProperty("next_analysis_url")
     public String nextAnalysisUrl;
+
     public CodeScanningAnalysisDeletion withNextAnalysisUrl(String nextAnalysisUrl) {
         this.nextAnalysisUrl = nextAnalysisUrl;
         return this;
     }
     
+    public CodeScanningAnalysisDeletion(@JsonProperty("confirm_delete_url") String confirmDeleteUrl, @JsonProperty("next_analysis_url") String nextAnalysisUrl) {
+        this.confirmDeleteUrl = confirmDeleteUrl;
+        this.nextAnalysisUrl = nextAnalysisUrl;
+  }
 }

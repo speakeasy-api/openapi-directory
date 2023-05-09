@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse {
     
     public String contentType;
+
     public WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFindingsResponse listFindingsResponse;
+
     public WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse withListFindingsResponse(org.openapis.openapi.models.shared.ListFindingsResponse listFindingsResponse) {
         this.listFindingsResponse = listFindingsResponse;
         return this;
@@ -26,6 +29,7 @@ public class WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse {
     
     
     public Integer statusCode;
+
     public WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

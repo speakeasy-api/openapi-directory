@@ -18,6 +18,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Membership withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliverySetting")
     public MembershipDeliverySettingEnum deliverySetting;
+
     public Membership withDeliverySetting(MembershipDeliverySettingEnum deliverySetting) {
         this.deliverySetting = deliverySetting;
         return this;
@@ -40,6 +42,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Membership withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredMemberKey")
     public EntityKey preferredMemberKey;
+
     public Membership withPreferredMemberKey(EntityKey preferredMemberKey) {
         this.preferredMemberKey = preferredMemberKey;
         return this;
@@ -62,6 +66,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public MembershipRole[] roles;
+
     public Membership withRoles(MembershipRole[] roles) {
         this.roles = roles;
         return this;
@@ -73,6 +78,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public MembershipTypeEnum type;
+
     public Membership withType(MembershipTypeEnum type) {
         this.type = type;
         return this;
@@ -84,9 +90,11 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Membership withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Membership(){}
 }

@@ -15,6 +15,7 @@ public class StatementGetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public Object[] actions;
+
     public StatementGetResponse withActions(Object[] actions) {
         this.actions = actions;
         return this;
@@ -26,6 +27,7 @@ public class StatementGetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public StatementGetResponseCondition condition;
+
     public StatementGetResponse withCondition(StatementGetResponseCondition condition) {
         this.condition = condition;
         return this;
@@ -36,6 +38,7 @@ public class StatementGetResponse {
      */
     @JsonProperty("effect")
     public String effect;
+
     public StatementGetResponse withEffect(String effect) {
         this.effect = effect;
         return this;
@@ -47,6 +50,7 @@ public class StatementGetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public String operation;
+
     public StatementGetResponse withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -58,9 +62,13 @@ public class StatementGetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public StatementGetResponse withResource(String resource) {
         this.resource = resource;
         return this;
     }
     
+    public StatementGetResponse(@JsonProperty("effect") String effect) {
+        this.effect = effect;
+  }
 }

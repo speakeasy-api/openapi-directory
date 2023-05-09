@@ -18,6 +18,7 @@ public class CopyOtherContactToMyContactsGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyMask")
     public String copyMask;
+
     public CopyOtherContactToMyContactsGroupRequest withCopyMask(String copyMask) {
         this.copyMask = copyMask;
         return this;
@@ -29,6 +30,7 @@ public class CopyOtherContactToMyContactsGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readMask")
     public String readMask;
+
     public CopyOtherContactToMyContactsGroupRequest withReadMask(String readMask) {
         this.readMask = readMask;
         return this;
@@ -40,9 +42,11 @@ public class CopyOtherContactToMyContactsGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public CopyOtherContactToMyContactsGroupRequestSourcesEnum[] sources;
+
     public CopyOtherContactToMyContactsGroupRequest withSources(CopyOtherContactToMyContactsGroupRequestSourcesEnum[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public CopyOtherContactToMyContactsGroupRequest(){}
 }

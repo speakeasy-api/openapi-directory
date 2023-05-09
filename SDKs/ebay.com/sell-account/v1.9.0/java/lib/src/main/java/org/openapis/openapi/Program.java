@@ -33,10 +33,11 @@ public class Program {
 
     /**
      * This method gets a list of the seller programs that the seller has opted-in to.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetOptedInProgramsResponse getOptedInPrograms() throws Exception {
+    public org.openapis.openapi.models.operations.GetOptedInProgramsResponse getOptedInPrograms(org.openapis.openapi.models.operations.GetOptedInProgramsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/program/get_opted_in_programs");
         
@@ -45,16 +46,15 @@ public class Program {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOptedInProgramsResponse res = new org.openapis.openapi.models.operations.GetOptedInProgramsResponse() {{
+        org.openapis.openapi.models.operations.GetOptedInProgramsResponse res = new org.openapis.openapi.models.operations.GetOptedInProgramsResponse(contentType, httpRes.statusCode()) {{
             programs = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,11 +97,9 @@ public class Program {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OptInToProgramResponse res = new org.openapis.openapi.models.operations.OptInToProgramResponse() {{
+        org.openapis.openapi.models.operations.OptInToProgramResponse res = new org.openapis.openapi.models.operations.OptInToProgramResponse(contentType, httpRes.statusCode()) {{
             optInToProgram200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +142,9 @@ public class Program {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OptOutOfProgramResponse res = new org.openapis.openapi.models.operations.OptOutOfProgramResponse() {{
+        org.openapis.openapi.models.operations.OptOutOfProgramResponse res = new org.openapis.openapi.models.operations.OptOutOfProgramResponse(contentType, httpRes.statusCode()) {{
             optOutOfProgram200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

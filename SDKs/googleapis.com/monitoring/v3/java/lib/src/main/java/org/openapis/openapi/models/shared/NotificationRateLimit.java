@@ -18,9 +18,11 @@ public class NotificationRateLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public String period;
+
     public NotificationRateLimit withPeriod(String period) {
         this.period = period;
         return this;
     }
     
+    public NotificationRateLimit(){}
 }

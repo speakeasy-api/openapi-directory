@@ -18,6 +18,7 @@ public class ZypperPatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public ZypperPatch withCategory(String category) {
         this.category = category;
         return this;
@@ -29,6 +30,7 @@ public class ZypperPatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patchName")
     public String patchName;
+
     public ZypperPatch withPatchName(String patchName) {
         this.patchName = patchName;
         return this;
@@ -40,6 +42,7 @@ public class ZypperPatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public String severity;
+
     public ZypperPatch withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -51,9 +54,11 @@ public class ZypperPatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public ZypperPatch withSummary(String summary) {
         this.summary = summary;
         return this;
     }
     
+    public ZypperPatch(){}
 }

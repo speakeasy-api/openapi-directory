@@ -15,6 +15,7 @@ public class HandshakeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public HandshakeResource[] resources;
+
     public HandshakeResource withResources(HandshakeResource[] resources) {
         this.resources = resources;
         return this;
@@ -23,6 +24,7 @@ public class HandshakeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public HandshakeResourceTypeEnum type;
+
     public HandshakeResource withType(HandshakeResourceTypeEnum type) {
         this.type = type;
         return this;
@@ -31,9 +33,11 @@ public class HandshakeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public HandshakeResource withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public HandshakeResource(){}
 }

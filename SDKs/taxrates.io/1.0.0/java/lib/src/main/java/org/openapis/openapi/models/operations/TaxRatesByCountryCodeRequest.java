@@ -12,6 +12,7 @@ public class TaxRatesByCountryCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country_code")
     public String countryCode;
+
     public TaxRatesByCountryCodeRequest withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -19,6 +20,7 @@ public class TaxRatesByCountryCodeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public TaxRatesByCountryCodeRequest withDate(String date) {
         this.date = date;
         return this;
@@ -29,6 +31,7 @@ public class TaxRatesByCountryCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
     public String domain;
+
     public TaxRatesByCountryCodeRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -39,6 +42,7 @@ public class TaxRatesByCountryCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public TaxRatesByCountryCodeRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -49,6 +53,7 @@ public class TaxRatesByCountryCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=product_codes[]")
     public String productCodes;
+
     public TaxRatesByCountryCodeRequest withProductCodes(String productCodes) {
         this.productCodes = productCodes;
         return this;
@@ -59,6 +64,7 @@ public class TaxRatesByCountryCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=province ")
     public String province;
+
     public TaxRatesByCountryCodeRequest withProvince(String province) {
         this.province = province;
         return this;
@@ -69,9 +75,11 @@ public class TaxRatesByCountryCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
     public String zip;
+
     public TaxRatesByCountryCodeRequest withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public TaxRatesByCountryCodeRequest(){}
 }

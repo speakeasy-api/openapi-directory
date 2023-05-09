@@ -18,6 +18,7 @@ public class BugtrackerGetSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_types")
     public BugtrackerGetSettings200ApplicationJSONEventTypesEnum[] eventTypes;
+
     public BugtrackerGetSettings200ApplicationJSON withEventTypes(BugtrackerGetSettings200ApplicationJSONEventTypesEnum[] eventTypes) {
         this.eventTypes = eventTypes;
         return this;
@@ -29,6 +30,7 @@ public class BugtrackerGetSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public BugtrackerGetSettings200ApplicationJSONSettings settings;
+
     public BugtrackerGetSettings200ApplicationJSON withSettings(BugtrackerGetSettings200ApplicationJSONSettings settings) {
         this.settings = settings;
         return this;
@@ -40,6 +42,7 @@ public class BugtrackerGetSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public BugtrackerGetSettings200ApplicationJSONStateEnum state;
+
     public BugtrackerGetSettings200ApplicationJSON withState(BugtrackerGetSettings200ApplicationJSONStateEnum state) {
         this.state = state;
         return this;
@@ -51,6 +54,7 @@ public class BugtrackerGetSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token_id")
     public String tokenId;
+
     public BugtrackerGetSettings200ApplicationJSON withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
@@ -62,9 +66,11 @@ public class BugtrackerGetSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public BugtrackerGetSettings200ApplicationJSONTypeEnum type;
+
     public BugtrackerGetSettings200ApplicationJSON withType(BugtrackerGetSettings200ApplicationJSONTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public BugtrackerGetSettings200ApplicationJSON(){}
 }

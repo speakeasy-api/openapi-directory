@@ -18,6 +18,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Folder withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public Folder withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -40,6 +42,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Folder withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -51,6 +54,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folderId")
     public String folderId;
+
     public Folder withFolderId(String folderId) {
         this.folderId = folderId;
         return this;
@@ -62,6 +66,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Folder withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public Folder withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -84,6 +90,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public Folder withPath(String path) {
         this.path = path;
         return this;
@@ -95,6 +102,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagManagerUrl")
     public String tagManagerUrl;
+
     public Folder withTagManagerUrl(String tagManagerUrl) {
         this.tagManagerUrl = tagManagerUrl;
         return this;
@@ -106,9 +114,11 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public Folder withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public Folder(){}
 }

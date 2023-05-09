@@ -12,6 +12,7 @@ public class RadAnalystPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public RadAnalystPage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class RadAnalystPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public RadAnalyst[] results;
+
     public RadAnalystPage withResults(RadAnalyst[] results) {
         this.results = results;
         return this;
     }
     
+    public RadAnalystPage(){}
 }

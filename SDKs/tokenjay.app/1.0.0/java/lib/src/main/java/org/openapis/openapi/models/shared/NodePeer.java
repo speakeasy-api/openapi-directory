@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class NodePeer {
     
     public Long blockHeight;
+
     public NodePeer withBlockHeight(Long blockHeight) {
         this.blockHeight = blockHeight;
         return this;
@@ -16,6 +17,7 @@ public class NodePeer {
     
     
     public Boolean blockchainApi;
+
     public NodePeer withBlockchainApi(Boolean blockchainApi) {
         this.blockchainApi = blockchainApi;
         return this;
@@ -23,6 +25,7 @@ public class NodePeer {
     
     
     public Long headerHeight;
+
     public NodePeer withHeaderHeight(Long headerHeight) {
         this.headerHeight = headerHeight;
         return this;
@@ -30,6 +33,7 @@ public class NodePeer {
     
     
     public Long lastSeen;
+
     public NodePeer withLastSeen(Long lastSeen) {
         this.lastSeen = lastSeen;
         return this;
@@ -37,6 +41,7 @@ public class NodePeer {
     
     
     public String name;
+
     public NodePeer withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +49,7 @@ public class NodePeer {
     
     
     public Boolean openRestApi;
+
     public NodePeer withOpenRestApi(Boolean openRestApi) {
         this.openRestApi = openRestApi;
         return this;
@@ -51,6 +57,7 @@ public class NodePeer {
     
     
     public Long responseTime;
+
     public NodePeer withResponseTime(Long responseTime) {
         this.responseTime = responseTime;
         return this;
@@ -58,9 +65,20 @@ public class NodePeer {
     
     
     public String url;
+
     public NodePeer withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public NodePeer(@JsonProperty("blockHeight") Long blockHeight, @JsonProperty("blockchainApi") Boolean blockchainApi, @JsonProperty("headerHeight") Long headerHeight, @JsonProperty("lastSeen") Long lastSeen, @JsonProperty("name") String name, @JsonProperty("openRestApi") Boolean openRestApi, @JsonProperty("responseTime") Long responseTime, @JsonProperty("url") String url) {
+        this.blockHeight = blockHeight;
+        this.blockchainApi = blockchainApi;
+        this.headerHeight = headerHeight;
+        this.lastSeen = lastSeen;
+        this.name = name;
+        this.openRestApi = openRestApi;
+        this.responseTime = responseTime;
+        this.url = url;
+  }
 }

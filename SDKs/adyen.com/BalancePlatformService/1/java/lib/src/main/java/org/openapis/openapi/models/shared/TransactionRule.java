@@ -15,6 +15,7 @@ public class TransactionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Amount amount;
+
     public TransactionRule withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -26,6 +27,7 @@ public class TransactionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balancePlatformId")
     public String balancePlatformId;
+
     public TransactionRule withBalancePlatformId(String balancePlatformId) {
         this.balancePlatformId = balancePlatformId;
         return this;
@@ -37,6 +39,7 @@ public class TransactionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countries")
     public String[] countries;
+
     public TransactionRule withCountries(String[] countries) {
         this.countries = countries;
         return this;
@@ -47,6 +50,7 @@ public class TransactionRule {
      */
     @JsonProperty("description")
     public String description;
+
     public TransactionRule withDescription(String description) {
         this.description = description;
         return this;
@@ -60,6 +64,7 @@ public class TransactionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public TransactionRule withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -73,6 +78,7 @@ public class TransactionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryModes")
     public TransactionRuleEntryModesEnum[] entryModes;
+
     public TransactionRule withEntryModes(TransactionRuleEntryModesEnum[] entryModes) {
         this.entryModes = entryModes;
         return this;
@@ -84,6 +90,7 @@ public class TransactionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TransactionRule withId(String id) {
         this.id = id;
         return this;
@@ -91,6 +98,7 @@ public class TransactionRule {
     
     @JsonProperty("interval")
     public TransactionRuleInterval interval;
+
     public TransactionRule withInterval(TransactionRuleInterval interval) {
         this.interval = interval;
         return this;
@@ -102,6 +110,7 @@ public class TransactionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTransactions")
     public Integer maxTransactions;
+
     public TransactionRule withMaxTransactions(Integer maxTransactions) {
         this.maxTransactions = maxTransactions;
         return this;
@@ -113,6 +122,7 @@ public class TransactionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mccs")
     public String[] mccs;
+
     public TransactionRule withMccs(String[] mccs) {
         this.mccs = mccs;
         return this;
@@ -124,6 +134,7 @@ public class TransactionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentInstrumentGroupId")
     public String paymentInstrumentGroupId;
+
     public TransactionRule withPaymentInstrumentGroupId(String paymentInstrumentGroupId) {
         this.paymentInstrumentGroupId = paymentInstrumentGroupId;
         return this;
@@ -135,6 +146,7 @@ public class TransactionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentInstrumentId")
     public String paymentInstrumentId;
+
     public TransactionRule withPaymentInstrumentId(String paymentInstrumentId) {
         this.paymentInstrumentId = paymentInstrumentId;
         return this;
@@ -148,6 +160,7 @@ public class TransactionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processingTypes")
     public TransactionRuleProcessingTypesEnum[] processingTypes;
+
     public TransactionRule withProcessingTypes(TransactionRuleProcessingTypesEnum[] processingTypes) {
         this.processingTypes = processingTypes;
         return this;
@@ -158,6 +171,7 @@ public class TransactionRule {
      */
     @JsonProperty("reference")
     public String reference;
+
     public TransactionRule withReference(String reference) {
         this.reference = reference;
         return this;
@@ -173,6 +187,7 @@ public class TransactionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public String startDate;
+
     public TransactionRule withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -187,6 +202,7 @@ public class TransactionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TransactionRuleStatusEnum status;
+
     public TransactionRule withStatus(TransactionRuleStatusEnum status) {
         this.status = status;
         return this;
@@ -204,9 +220,16 @@ public class TransactionRule {
      */
     @JsonProperty("type")
     public TransactionRuleTypeEnum type;
+
     public TransactionRule withType(TransactionRuleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TransactionRule(@JsonProperty("description") String description, @JsonProperty("interval") TransactionRuleInterval interval, @JsonProperty("reference") String reference, @JsonProperty("type") TransactionRuleTypeEnum type) {
+        this.description = description;
+        this.interval = interval;
+        this.reference = reference;
+        this.type = type;
+  }
 }

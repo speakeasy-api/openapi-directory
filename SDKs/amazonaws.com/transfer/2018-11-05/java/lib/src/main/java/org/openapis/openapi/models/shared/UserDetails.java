@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UserDetails {
     @JsonProperty("ServerId")
     public String serverId;
+
     public UserDetails withServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -22,6 +23,7 @@ public class UserDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionId")
     public String sessionId;
+
     public UserDetails withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -29,9 +31,14 @@ public class UserDetails {
     
     @JsonProperty("UserName")
     public String userName;
+
     public UserDetails withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public UserDetails(@JsonProperty("ServerId") String serverId, @JsonProperty("UserName") String userName) {
+        this.serverId = serverId;
+        this.userName = userName;
+  }
 }

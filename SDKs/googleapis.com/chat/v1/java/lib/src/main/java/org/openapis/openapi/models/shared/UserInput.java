@@ -18,6 +18,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainId")
     public String domainId;
+
     public UserInput withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -29,6 +30,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserInput withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UserTypeEnum type;
+
     public UserInput withType(UserTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UserInput(){}
 }

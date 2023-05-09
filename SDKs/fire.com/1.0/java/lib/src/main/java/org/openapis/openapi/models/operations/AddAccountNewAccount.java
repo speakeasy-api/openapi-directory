@@ -18,6 +18,7 @@ public class AddAccountNewAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptFeesAndCharges")
     public Boolean acceptFeesAndCharges;
+
     public AddAccountNewAccount withAcceptFeesAndCharges(Boolean acceptFeesAndCharges) {
         this.acceptFeesAndCharges = acceptFeesAndCharges;
         return this;
@@ -29,6 +30,7 @@ public class AddAccountNewAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountName")
     public String accountName;
+
     public AddAccountNewAccount withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -40,9 +42,11 @@ public class AddAccountNewAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public AddAccountNewAccountCurrencyEnum currency;
+
     public AddAccountNewAccount withCurrency(AddAccountNewAccountCurrencyEnum currency) {
         this.currency = currency;
         return this;
     }
     
+    public AddAccountNewAccount(){}
 }

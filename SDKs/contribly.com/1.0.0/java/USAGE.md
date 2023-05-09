@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DeleteAssignmentsIdRequest;
 import org.openapis.openapi.models.operations.DeleteAssignmentsIdResponse;
 
@@ -13,9 +12,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteAssignmentsIdRequest req = new DeleteAssignmentsIdRequest() {{
-                id = "corrupti";
-            }}            
+            DeleteAssignmentsIdRequest req = new DeleteAssignmentsIdRequest("corrupti");            
 
             DeleteAssignmentsIdResponse res = sdk.assignment.deleteAssignmentsId(req);
 
@@ -25,5 +22,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

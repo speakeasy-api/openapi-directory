@@ -15,9 +15,11 @@ public class DescribeTableOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Table")
     public TableDescription table;
+
     public DescribeTableOutput withTable(TableDescription table) {
         this.table = table;
         return this;
     }
     
+    public DescribeTableOutput(){}
 }

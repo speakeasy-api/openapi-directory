@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEventConfigurationsResponse {
     
     public String contentType;
+
     public DescribeEventConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEventConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEventConfigurationsResponse describeEventConfigurationsResponse;
+
     public DescribeEventConfigurationsResponse withDescribeEventConfigurationsResponse(org.openapis.openapi.models.shared.DescribeEventConfigurationsResponse describeEventConfigurationsResponse) {
         this.describeEventConfigurationsResponse = describeEventConfigurationsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEventConfigurationsResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeEventConfigurationsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeEventConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeEventConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeEventConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEventConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeEventConfigurationsResponse {
      */
     
     public Object throttlingException;
+
     public DescribeEventConfigurationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeEventConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

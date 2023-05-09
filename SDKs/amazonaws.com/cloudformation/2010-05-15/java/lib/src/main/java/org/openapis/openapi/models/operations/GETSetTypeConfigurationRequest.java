@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetTypeConfigurationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETSetTypeConfigurationActionEnum action;
+
     public GETSetTypeConfigurationRequest withAction(GETSetTypeConfigurationActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETSetTypeConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Configuration")
     public String configuration;
+
     public GETSetTypeConfigurationRequest withConfiguration(String configuration) {
         this.configuration = configuration;
         return this;
@@ -29,6 +32,7 @@ public class GETSetTypeConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConfigurationAlias")
     public String configurationAlias;
+
     public GETSetTypeConfigurationRequest withConfigurationAlias(String configurationAlias) {
         this.configurationAlias = configurationAlias;
         return this;
@@ -39,6 +43,7 @@ public class GETSetTypeConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
     public GETSetTypeConfigurationTypeEnum type;
+
     public GETSetTypeConfigurationRequest withType(GETSetTypeConfigurationTypeEnum type) {
         this.type = type;
         return this;
@@ -49,6 +54,7 @@ public class GETSetTypeConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeArn")
     public String typeArn;
+
     public GETSetTypeConfigurationRequest withTypeArn(String typeArn) {
         this.typeArn = typeArn;
         return this;
@@ -59,6 +65,7 @@ public class GETSetTypeConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeName")
     public String typeName;
+
     public GETSetTypeConfigurationRequest withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -66,6 +73,7 @@ public class GETSetTypeConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETSetTypeConfigurationVersionEnum version;
+
     public GETSetTypeConfigurationRequest withVersion(GETSetTypeConfigurationVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETSetTypeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETSetTypeConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETSetTypeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETSetTypeConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETSetTypeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETSetTypeConfigurationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETSetTypeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETSetTypeConfigurationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETSetTypeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETSetTypeConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETSetTypeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETSetTypeConfigurationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,15 @@ public class GETSetTypeConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETSetTypeConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETSetTypeConfigurationRequest(@JsonProperty("Action") GETSetTypeConfigurationActionEnum action, @JsonProperty("Configuration") String configuration, @JsonProperty("Version") GETSetTypeConfigurationVersionEnum version) {
+        this.action = action;
+        this.configuration = configuration;
+        this.version = version;
+  }
 }

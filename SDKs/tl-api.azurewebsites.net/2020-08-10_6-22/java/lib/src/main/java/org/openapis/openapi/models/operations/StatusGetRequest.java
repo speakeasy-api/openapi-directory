@@ -12,9 +12,11 @@ public class StatusGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=messageId")
     public String messageId;
+
     public StatusGetRequest withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
     }
     
+    public StatusGetRequest(){}
 }

@@ -12,6 +12,7 @@ public class ListCustomInstrumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String[] id;
+
     public ListCustomInstrumentsRequest withId(String[] id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class ListCustomInstrumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public ListCustomInstrumentsRequest withName(String name) {
         this.name = name;
         return this;
@@ -32,6 +34,7 @@ public class ListCustomInstrumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ListCustomInstrumentsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +45,7 @@ public class ListCustomInstrumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ListCustomInstrumentsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,9 +56,11 @@ public class ListCustomInstrumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
     public String tag;
+
     public ListCustomInstrumentsRequest withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public ListCustomInstrumentsRequest(){}
 }

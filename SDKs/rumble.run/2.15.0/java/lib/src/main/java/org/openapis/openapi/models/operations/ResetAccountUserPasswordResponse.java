@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResetAccountUserPasswordResponse {
     
     public byte[] body;
+
     public ResetAccountUserPasswordResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ResetAccountUserPasswordResponse {
     
     
     public String contentType;
+
     public ResetAccountUserPasswordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ResetAccountUserPasswordResponse {
     
     
     public Integer statusCode;
+
     public ResetAccountUserPasswordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ResetAccountUserPasswordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResetAccountUserPasswordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ResetAccountUserPasswordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

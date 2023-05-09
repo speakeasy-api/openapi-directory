@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse {
     
     public String contentType;
+
     public CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchTransitiveGroupsResponse searchTransitiveGroupsResponse;
+
     public CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse withSearchTransitiveGroupsResponse(org.openapis.openapi.models.shared.SearchTransitiveGroupsResponse searchTransitiveGroupsResponse) {
         this.searchTransitiveGroupsResponse = searchTransitiveGroupsResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse {
     
     
     public Integer statusCode;
+
     public CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

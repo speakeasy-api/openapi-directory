@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProvisionedThroughput {
     @JsonProperty("ReadCapacityUnits")
     public Long readCapacityUnits;
+
     public ProvisionedThroughput withReadCapacityUnits(Long readCapacityUnits) {
         this.readCapacityUnits = readCapacityUnits;
         return this;
@@ -19,9 +20,14 @@ public class ProvisionedThroughput {
     
     @JsonProperty("WriteCapacityUnits")
     public Long writeCapacityUnits;
+
     public ProvisionedThroughput withWriteCapacityUnits(Long writeCapacityUnits) {
         this.writeCapacityUnits = writeCapacityUnits;
         return this;
     }
     
+    public ProvisionedThroughput(@JsonProperty("ReadCapacityUnits") Long readCapacityUnits, @JsonProperty("WriteCapacityUnits") Long writeCapacityUnits) {
+        this.readCapacityUnits = readCapacityUnits;
+        this.writeCapacityUnits = writeCapacityUnits;
+  }
 }

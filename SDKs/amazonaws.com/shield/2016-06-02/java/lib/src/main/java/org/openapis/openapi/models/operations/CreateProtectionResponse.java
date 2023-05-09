@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateProtectionResponse {
     
     public String contentType;
+
     public CreateProtectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateProtectionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateProtectionResponse createProtectionResponse;
+
     public CreateProtectionResponse withCreateProtectionResponse(org.openapis.openapi.models.shared.CreateProtectionResponse createProtectionResponse) {
         this.createProtectionResponse = createProtectionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateProtectionResponse {
      */
     
     public Object internalErrorException;
+
     public CreateProtectionResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class CreateProtectionResponse {
      */
     
     public Object invalidOperationException;
+
     public CreateProtectionResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class CreateProtectionResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateProtectionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateProtectionResponse {
      */
     
     public Object invalidResourceException;
+
     public CreateProtectionResponse withInvalidResourceException(Object invalidResourceException) {
         this.invalidResourceException = invalidResourceException;
         return this;
@@ -69,6 +76,7 @@ public class CreateProtectionResponse {
      */
     
     public Object limitsExceededException;
+
     public CreateProtectionResponse withLimitsExceededException(Object limitsExceededException) {
         this.limitsExceededException = limitsExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CreateProtectionResponse {
      */
     
     public Object optimisticLockException;
+
     public CreateProtectionResponse withOptimisticLockException(Object optimisticLockException) {
         this.optimisticLockException = optimisticLockException;
         return this;
@@ -89,6 +98,7 @@ public class CreateProtectionResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateProtectionResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -99,6 +109,7 @@ public class CreateProtectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateProtectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -106,6 +117,7 @@ public class CreateProtectionResponse {
     
     
     public Integer statusCode;
+
     public CreateProtectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class CreateProtectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateProtectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateProtectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

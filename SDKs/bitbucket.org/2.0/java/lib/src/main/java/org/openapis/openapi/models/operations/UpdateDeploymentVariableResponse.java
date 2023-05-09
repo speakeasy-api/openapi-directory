@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDeploymentVariableResponse {
     
     public String contentType;
+
     public UpdateDeploymentVariableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateDeploymentVariableResponse {
     
     
     public Integer statusCode;
+
     public UpdateDeploymentVariableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateDeploymentVariableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDeploymentVariableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateDeploymentVariableResponse {
      */
     
     public java.util.Map<String, Object> deploymentVariable;
+
     public UpdateDeploymentVariableResponse withDeploymentVariable(java.util.Map<String, Object> deploymentVariable) {
         this.deploymentVariable = deploymentVariable;
         return this;
@@ -43,9 +48,14 @@ public class UpdateDeploymentVariableResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public UpdateDeploymentVariableResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
     }
     
+    public UpdateDeploymentVariableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

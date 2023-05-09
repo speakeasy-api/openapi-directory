@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoAdvertisersNegativeKeywordListsCreateResponse {
     
     public String contentType;
+
     public DisplayvideoAdvertisersNegativeKeywordListsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.NegativeKeywordList negativeKeywordList;
+
     public DisplayvideoAdvertisersNegativeKeywordListsCreateResponse withNegativeKeywordList(org.openapis.openapi.models.shared.NegativeKeywordList negativeKeywordList) {
         this.negativeKeywordList = negativeKeywordList;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsCreateResponse {
     
     
     public Integer statusCode;
+
     public DisplayvideoAdvertisersNegativeKeywordListsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoAdvertisersNegativeKeywordListsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoAdvertisersNegativeKeywordListsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoAdvertisersNegativeKeywordListsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

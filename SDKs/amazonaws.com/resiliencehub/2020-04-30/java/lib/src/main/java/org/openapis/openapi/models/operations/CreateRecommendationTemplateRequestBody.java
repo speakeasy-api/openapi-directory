@@ -14,6 +14,7 @@ public class CreateRecommendationTemplateRequestBody {
      */
     @JsonProperty("assessmentArn")
     public String assessmentArn;
+
     public CreateRecommendationTemplateRequestBody withAssessmentArn(String assessmentArn) {
         this.assessmentArn = assessmentArn;
         return this;
@@ -25,6 +26,7 @@ public class CreateRecommendationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketName")
     public String bucketName;
+
     public CreateRecommendationTemplateRequestBody withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -36,6 +38,7 @@ public class CreateRecommendationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateRecommendationTemplateRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -47,6 +50,7 @@ public class CreateRecommendationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public CreateRecommendationTemplateRequestBodyFormatEnum format;
+
     public CreateRecommendationTemplateRequestBody withFormat(CreateRecommendationTemplateRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -57,6 +61,7 @@ public class CreateRecommendationTemplateRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateRecommendationTemplateRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +73,7 @@ public class CreateRecommendationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationIds")
     public String[] recommendationIds;
+
     public CreateRecommendationTemplateRequestBody withRecommendationIds(String[] recommendationIds) {
         this.recommendationIds = recommendationIds;
         return this;
@@ -79,6 +85,7 @@ public class CreateRecommendationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationTypes")
     public org.openapis.openapi.models.shared.RenderRecommendationTypeEnum[] recommendationTypes;
+
     public CreateRecommendationTemplateRequestBody withRecommendationTypes(org.openapis.openapi.models.shared.RenderRecommendationTypeEnum[] recommendationTypes) {
         this.recommendationTypes = recommendationTypes;
         return this;
@@ -90,9 +97,14 @@ public class CreateRecommendationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateRecommendationTemplateRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRecommendationTemplateRequestBody(@JsonProperty("assessmentArn") String assessmentArn, @JsonProperty("name") String name) {
+        this.assessmentArn = assessmentArn;
+        this.name = name;
+  }
 }

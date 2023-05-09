@@ -14,6 +14,7 @@ public class TestAuthorizationRequestBody {
      */
     @JsonProperty("authInfos")
     public org.openapis.openapi.models.shared.AuthInfo[] authInfos;
+
     public TestAuthorizationRequestBody withAuthInfos(org.openapis.openapi.models.shared.AuthInfo[] authInfos) {
         this.authInfos = authInfos;
         return this;
@@ -25,6 +26,7 @@ public class TestAuthorizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cognitoIdentityPoolId")
     public String cognitoIdentityPoolId;
+
     public TestAuthorizationRequestBody withCognitoIdentityPoolId(String cognitoIdentityPoolId) {
         this.cognitoIdentityPoolId = cognitoIdentityPoolId;
         return this;
@@ -36,6 +38,7 @@ public class TestAuthorizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyNamesToAdd")
     public String[] policyNamesToAdd;
+
     public TestAuthorizationRequestBody withPolicyNamesToAdd(String[] policyNamesToAdd) {
         this.policyNamesToAdd = policyNamesToAdd;
         return this;
@@ -47,6 +50,7 @@ public class TestAuthorizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyNamesToSkip")
     public String[] policyNamesToSkip;
+
     public TestAuthorizationRequestBody withPolicyNamesToSkip(String[] policyNamesToSkip) {
         this.policyNamesToSkip = policyNamesToSkip;
         return this;
@@ -58,9 +62,13 @@ public class TestAuthorizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principal")
     public String principal;
+
     public TestAuthorizationRequestBody withPrincipal(String principal) {
         this.principal = principal;
         return this;
     }
     
+    public TestAuthorizationRequestBody(@JsonProperty("authInfos") org.openapis.openapi.models.shared.AuthInfo[] authInfos) {
+        this.authInfos = authInfos;
+  }
 }

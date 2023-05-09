@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateGatewayFromServerInput {
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public DisassociateGatewayFromServerInput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
     }
     
+    public DisassociateGatewayFromServerInput(@JsonProperty("GatewayArn") String gatewayArn) {
+        this.gatewayArn = gatewayArn;
+  }
 }

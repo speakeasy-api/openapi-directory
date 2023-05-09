@@ -18,6 +18,7 @@ public class DoubleVerifyBrandSafetyCategories {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avoidUnknownBrandSafetyCategory")
     public Boolean avoidUnknownBrandSafetyCategory;
+
     public DoubleVerifyBrandSafetyCategories withAvoidUnknownBrandSafetyCategory(Boolean avoidUnknownBrandSafetyCategory) {
         this.avoidUnknownBrandSafetyCategory = avoidUnknownBrandSafetyCategory;
         return this;
@@ -29,6 +30,7 @@ public class DoubleVerifyBrandSafetyCategories {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avoidedHighSeverityCategories")
     public DoubleVerifyBrandSafetyCategoriesAvoidedHighSeverityCategoriesEnum[] avoidedHighSeverityCategories;
+
     public DoubleVerifyBrandSafetyCategories withAvoidedHighSeverityCategories(DoubleVerifyBrandSafetyCategoriesAvoidedHighSeverityCategoriesEnum[] avoidedHighSeverityCategories) {
         this.avoidedHighSeverityCategories = avoidedHighSeverityCategories;
         return this;
@@ -40,9 +42,11 @@ public class DoubleVerifyBrandSafetyCategories {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avoidedMediumSeverityCategories")
     public DoubleVerifyBrandSafetyCategoriesAvoidedMediumSeverityCategoriesEnum[] avoidedMediumSeverityCategories;
+
     public DoubleVerifyBrandSafetyCategories withAvoidedMediumSeverityCategories(DoubleVerifyBrandSafetyCategoriesAvoidedMediumSeverityCategoriesEnum[] avoidedMediumSeverityCategories) {
         this.avoidedMediumSeverityCategories = avoidedMediumSeverityCategories;
         return this;
     }
     
+    public DoubleVerifyBrandSafetyCategories(){}
 }

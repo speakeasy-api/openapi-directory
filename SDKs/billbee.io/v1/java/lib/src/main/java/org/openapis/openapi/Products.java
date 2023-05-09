@@ -57,12 +57,10 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleCreateArticleResponse res = new org.openapis.openapi.models.operations.ArticleCreateArticleResponse() {{
+        org.openapis.openapi.models.operations.ArticleCreateArticleResponse res = new org.openapis.openapi.models.operations.ArticleCreateArticleResponse(contentType, httpRes.statusCode()) {{
             articleCreateArticle200ApplicationJSONObject = null;
             articleCreateArticle200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,12 +99,10 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleDeleteArticleResponse res = new org.openapis.openapi.models.operations.ArticleDeleteArticleResponse() {{
+        org.openapis.openapi.models.operations.ArticleDeleteArticleResponse res = new org.openapis.openapi.models.operations.ArticleDeleteArticleResponse(contentType, httpRes.statusCode()) {{
             articleDeleteArticle200ApplicationJSONObject = null;
             articleDeleteArticle200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,12 +141,10 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleDeleteImageResponse res = new org.openapis.openapi.models.operations.ArticleDeleteImageResponse() {{
+        org.openapis.openapi.models.operations.ArticleDeleteImageResponse res = new org.openapis.openapi.models.operations.ArticleDeleteImageResponse(contentType, httpRes.statusCode()) {{
             articleDeleteImage200ApplicationJSONObject = null;
             articleDeleteImage200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -189,12 +183,10 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleDeleteImageFromProductResponse res = new org.openapis.openapi.models.operations.ArticleDeleteImageFromProductResponse() {{
+        org.openapis.openapi.models.operations.ArticleDeleteImageFromProductResponse res = new org.openapis.openapi.models.operations.ArticleDeleteImageFromProductResponse(contentType, httpRes.statusCode()) {{
             articleDeleteImageFromProduct200ApplicationJSONObject = null;
             articleDeleteImageFromProduct200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -239,12 +231,10 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleGetArticleResponse res = new org.openapis.openapi.models.operations.ArticleGetArticleResponse() {{
+        org.openapis.openapi.models.operations.ArticleGetArticleResponse res = new org.openapis.openapi.models.operations.ArticleGetArticleResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelArticleAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelArticleAPIModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -282,12 +272,10 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleGetCategoryResponse res = new org.openapis.openapi.models.operations.ArticleGetCategoryResponse() {{
+        org.openapis.openapi.models.operations.ArticleGetCategoryResponse res = new org.openapis.openapi.models.operations.ArticleGetCategoryResponse(contentType, httpRes.statusCode()) {{
             articleGetCategory200ApplicationJSONObject = null;
             articleGetCategory200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -326,14 +314,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleGetCustomFieldResponse res = new org.openapis.openapi.models.operations.ArticleGetCustomFieldResponse() {{
+        org.openapis.openapi.models.operations.ArticleGetCustomFieldResponse res = new org.openapis.openapi.models.operations.ArticleGetCustomFieldResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -386,14 +372,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleGetCustomFieldsResponse res = new org.openapis.openapi.models.operations.ArticleGetCustomFieldsResponse() {{
+        org.openapis.openapi.models.operations.ArticleGetCustomFieldsResponse res = new org.openapis.openapi.models.operations.ArticleGetCustomFieldsResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel = null;
             rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,14 +424,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleGetImageResponse res = new org.openapis.openapi.models.operations.ArticleGetImageResponse() {{
+        org.openapis.openapi.models.operations.ArticleGetImageResponse res = new org.openapis.openapi.models.operations.ArticleGetImageResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -494,14 +476,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleGetImageFromProductResponse res = new org.openapis.openapi.models.operations.ArticleGetImageFromProductResponse() {{
+        org.openapis.openapi.models.operations.ArticleGetImageFromProductResponse res = new org.openapis.openapi.models.operations.ArticleGetImageFromProductResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -548,14 +528,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleGetImagesResponse res = new org.openapis.openapi.models.operations.ArticleGetImagesResponse() {{
+        org.openapis.openapi.models.operations.ArticleGetImagesResponse res = new org.openapis.openapi.models.operations.ArticleGetImagesResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -608,12 +586,10 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleGetListResponse res = new org.openapis.openapi.models.operations.ArticleGetListResponse() {{
+        org.openapis.openapi.models.operations.ArticleGetListResponse res = new org.openapis.openapi.models.operations.ArticleGetListResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleAPIModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -651,12 +627,10 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleGetPatchableFieldsResponse res = new org.openapis.openapi.models.operations.ArticleGetPatchableFieldsResponse() {{
+        org.openapis.openapi.models.operations.ArticleGetPatchableFieldsResponse res = new org.openapis.openapi.models.operations.ArticleGetPatchableFieldsResponse(contentType, httpRes.statusCode()) {{
             articleGetPatchableFields200ApplicationJSONObject = null;
             articleGetPatchableFields200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -701,14 +675,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleGetReservedAmountResponse res = new org.openapis.openapi.models.operations.ArticleGetReservedAmountResponse() {{
+        org.openapis.openapi.models.operations.ArticleGetReservedAmountResponse res = new org.openapis.openapi.models.operations.ArticleGetReservedAmountResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelGetReservedAmountResponseData = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelGetReservedAmountResponseData = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -754,14 +726,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleGetStocksResponse res = new org.openapis.openapi.models.operations.ArticleGetStocksResponse() {{
+        org.openapis.openapi.models.operations.ArticleGetStocksResponse res = new org.openapis.openapi.models.operations.ArticleGetStocksResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelStockResponseData = null;
             rechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelStockResponseData = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -813,12 +783,10 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticlePatchArticleResponse res = new org.openapis.openapi.models.operations.ArticlePatchArticleResponse() {{
+        org.openapis.openapi.models.operations.ArticlePatchArticleResponse res = new org.openapis.openapi.models.operations.ArticlePatchArticleResponse(contentType, httpRes.statusCode()) {{
             articlePatchArticle200ApplicationJSONObject = null;
             articlePatchArticle200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -862,14 +830,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticlePutImageFormResponse res = new org.openapis.openapi.models.operations.ArticlePutImageFormResponse() {{
+        org.openapis.openapi.models.operations.ArticlePutImageFormResponse res = new org.openapis.openapi.models.operations.ArticlePutImageFormResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -921,14 +887,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticlePutImageJsonResponse res = new org.openapis.openapi.models.operations.ArticlePutImageJsonResponse() {{
+        org.openapis.openapi.models.operations.ArticlePutImageJsonResponse res = new org.openapis.openapi.models.operations.ArticlePutImageJsonResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -980,14 +944,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticlePutImageRawResponse res = new org.openapis.openapi.models.operations.ArticlePutImageRawResponse() {{
+        org.openapis.openapi.models.operations.ArticlePutImageRawResponse res = new org.openapis.openapi.models.operations.ArticlePutImageRawResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1039,14 +1001,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleUpdateStockCodeFormResponse res = new org.openapis.openapi.models.operations.ArticleUpdateStockCodeFormResponse() {{
+        org.openapis.openapi.models.operations.ArticleUpdateStockCodeFormResponse res = new org.openapis.openapi.models.operations.ArticleUpdateStockCodeFormResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockCodeResponseData = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockCodeResponseData = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1098,14 +1058,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleUpdateStockCodeJsonResponse res = new org.openapis.openapi.models.operations.ArticleUpdateStockCodeJsonResponse() {{
+        org.openapis.openapi.models.operations.ArticleUpdateStockCodeJsonResponse res = new org.openapis.openapi.models.operations.ArticleUpdateStockCodeJsonResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockCodeResponseData = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockCodeResponseData = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1157,14 +1115,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleUpdateStockCodeRawResponse res = new org.openapis.openapi.models.operations.ArticleUpdateStockCodeRawResponse() {{
+        org.openapis.openapi.models.operations.ArticleUpdateStockCodeRawResponse res = new org.openapis.openapi.models.operations.ArticleUpdateStockCodeRawResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockCodeResponseData = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockCodeResponseData = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1217,14 +1173,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleUpdateStockFormResponse res = new org.openapis.openapi.models.operations.ArticleUpdateStockFormResponse() {{
+        org.openapis.openapi.models.operations.ArticleUpdateStockFormResponse res = new org.openapis.openapi.models.operations.ArticleUpdateStockFormResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockResponseData = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockResponseData = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1277,14 +1231,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleUpdateStockJsonResponse res = new org.openapis.openapi.models.operations.ArticleUpdateStockJsonResponse() {{
+        org.openapis.openapi.models.operations.ArticleUpdateStockJsonResponse res = new org.openapis.openapi.models.operations.ArticleUpdateStockJsonResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockResponseData = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockResponseData = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1337,14 +1289,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleUpdateStockRawResponse res = new org.openapis.openapi.models.operations.ArticleUpdateStockRawResponse() {{
+        org.openapis.openapi.models.operations.ArticleUpdateStockRawResponse res = new org.openapis.openapi.models.operations.ArticleUpdateStockRawResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockResponseData = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelUpdateStockResponseData = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1396,14 +1346,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchSearchFormResponse res = new org.openapis.openapi.models.operations.SearchSearchFormResponse() {{
+        org.openapis.openapi.models.operations.SearchSearchFormResponse res = new org.openapis.openapi.models.operations.SearchSearchFormResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel = null;
             rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1455,14 +1403,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchSearchJsonResponse res = new org.openapis.openapi.models.operations.SearchSearchJsonResponse() {{
+        org.openapis.openapi.models.operations.SearchSearchJsonResponse res = new org.openapis.openapi.models.operations.SearchSearchJsonResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel = null;
             rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1514,14 +1460,12 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchSearchRawResponse res = new org.openapis.openapi.models.operations.SearchSearchRawResponse() {{
+        org.openapis.openapi.models.operations.SearchSearchRawResponse res = new org.openapis.openapi.models.operations.SearchSearchRawResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel = null;
             rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiSearchControllerSearchResultsModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

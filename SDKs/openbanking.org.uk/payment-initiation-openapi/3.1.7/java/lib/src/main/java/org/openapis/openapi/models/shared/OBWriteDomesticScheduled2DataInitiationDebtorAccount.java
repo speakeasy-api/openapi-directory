@@ -17,6 +17,7 @@ public class OBWriteDomesticScheduled2DataInitiationDebtorAccount {
      */
     @JsonProperty("Identification")
     public String identification;
+
     public OBWriteDomesticScheduled2DataInitiationDebtorAccount withIdentification(String identification) {
         this.identification = identification;
         return this;
@@ -29,6 +30,7 @@ public class OBWriteDomesticScheduled2DataInitiationDebtorAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public OBWriteDomesticScheduled2DataInitiationDebtorAccount withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +41,7 @@ public class OBWriteDomesticScheduled2DataInitiationDebtorAccount {
      */
     @JsonProperty("SchemeName")
     public String schemeName;
+
     public OBWriteDomesticScheduled2DataInitiationDebtorAccount withSchemeName(String schemeName) {
         this.schemeName = schemeName;
         return this;
@@ -51,9 +54,14 @@ public class OBWriteDomesticScheduled2DataInitiationDebtorAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryIdentification")
     public String secondaryIdentification;
+
     public OBWriteDomesticScheduled2DataInitiationDebtorAccount withSecondaryIdentification(String secondaryIdentification) {
         this.secondaryIdentification = secondaryIdentification;
         return this;
     }
     
+    public OBWriteDomesticScheduled2DataInitiationDebtorAccount(@JsonProperty("Identification") String identification, @JsonProperty("SchemeName") String schemeName) {
+        this.identification = identification;
+        this.schemeName = schemeName;
+  }
 }

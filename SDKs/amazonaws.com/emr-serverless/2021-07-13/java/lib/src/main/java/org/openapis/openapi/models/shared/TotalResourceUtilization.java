@@ -15,6 +15,7 @@ public class TotalResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryGBHour")
     public Double memoryGBHour;
+
     public TotalResourceUtilization withMemoryGBHour(Double memoryGBHour) {
         this.memoryGBHour = memoryGBHour;
         return this;
@@ -23,6 +24,7 @@ public class TotalResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageGBHour")
     public Double storageGBHour;
+
     public TotalResourceUtilization withStorageGBHour(Double storageGBHour) {
         this.storageGBHour = storageGBHour;
         return this;
@@ -31,9 +33,11 @@ public class TotalResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vCPUHour")
     public Double vCPUHour;
+
     public TotalResourceUtilization withVCPUHour(Double vCPUHour) {
         this.vCPUHour = vCPUHour;
         return this;
     }
     
+    public TotalResourceUtilization(){}
 }

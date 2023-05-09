@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportConfigurationsListResponse {
     
     public String contentType;
+
     public ExportConfigurationsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ExportConfigurationsListResponse {
      */
     
     public ExportConfigurationsList200ApplicationJSON exportConfigurationsList200ApplicationJSONObject;
+
     public ExportConfigurationsListResponse withExportConfigurationsList200ApplicationJSONObject(ExportConfigurationsList200ApplicationJSON exportConfigurationsList200ApplicationJSONObject) {
         this.exportConfigurationsList200ApplicationJSONObject = exportConfigurationsList200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class ExportConfigurationsListResponse {
      */
     
     public ExportConfigurationsListDefaultApplicationJSON exportConfigurationsListDefaultApplicationJSONObject;
+
     public ExportConfigurationsListResponse withExportConfigurationsListDefaultApplicationJSONObject(ExportConfigurationsListDefaultApplicationJSON exportConfigurationsListDefaultApplicationJSONObject) {
         this.exportConfigurationsListDefaultApplicationJSONObject = exportConfigurationsListDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class ExportConfigurationsListResponse {
     
     
     public Integer statusCode;
+
     public ExportConfigurationsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ExportConfigurationsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportConfigurationsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ExportConfigurationsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSubscribedWorkteamsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListSubscribedWorkteamsRequest listSubscribedWorkteamsRequest;
+
     public ListSubscribedWorkteamsRequest withListSubscribedWorkteamsRequest(org.openapis.openapi.models.shared.ListSubscribedWorkteamsRequest listSubscribedWorkteamsRequest) {
         this.listSubscribedWorkteamsRequest = listSubscribedWorkteamsRequest;
         return this;
@@ -19,6 +21,7 @@ public class ListSubscribedWorkteamsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public ListSubscribedWorkteamsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class ListSubscribedWorkteamsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListSubscribedWorkteamsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class ListSubscribedWorkteamsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListSubscribedWorkteamsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class ListSubscribedWorkteamsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListSubscribedWorkteamsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class ListSubscribedWorkteamsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListSubscribedWorkteamsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class ListSubscribedWorkteamsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListSubscribedWorkteamsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class ListSubscribedWorkteamsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListSubscribedWorkteamsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class ListSubscribedWorkteamsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListSubscribedWorkteamsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class ListSubscribedWorkteamsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListSubscribedWorkteamsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class ListSubscribedWorkteamsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListSubscribedWorkteamsXAmzTargetEnum xAmzTarget;
+
     public ListSubscribedWorkteamsRequest withXAmzTarget(ListSubscribedWorkteamsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public ListSubscribedWorkteamsRequest(@JsonProperty("ListSubscribedWorkteamsRequest") org.openapis.openapi.models.shared.ListSubscribedWorkteamsRequest listSubscribedWorkteamsRequest, @JsonProperty("X-Amz-Target") ListSubscribedWorkteamsXAmzTargetEnum xAmzTarget) {
+        this.listSubscribedWorkteamsRequest = listSubscribedWorkteamsRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

@@ -9,15 +9,17 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * PutMetadataFlagRequestBodyBody - Stores the metadata information about a feature on a form or view.
+ * PutMetadataFlagRequestBodyBody - Stores the metadata information about a feature on a form.
  */
 public class PutMetadataFlagRequestBodyBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newValue")
     public String newValue;
+
     public PutMetadataFlagRequestBodyBody withNewValue(String newValue) {
         this.newValue = newValue;
         return this;
     }
     
+    public PutMetadataFlagRequestBodyBody(){}
 }

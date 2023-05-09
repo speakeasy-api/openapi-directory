@@ -15,6 +15,7 @@ public class ListTrialsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTrialsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTrialsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialSummaries")
     public TrialSummary[] trialSummaries;
+
     public ListTrialsResponse withTrialSummaries(TrialSummary[] trialSummaries) {
         this.trialSummaries = trialSummaries;
         return this;
     }
     
+    public ListTrialsResponse(){}
 }

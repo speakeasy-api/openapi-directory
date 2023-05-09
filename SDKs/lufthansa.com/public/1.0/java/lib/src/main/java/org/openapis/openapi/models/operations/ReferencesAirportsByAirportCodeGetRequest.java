@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReferencesAirportsByAirportCodeGetRequest {
@@ -12,6 +13,7 @@ public class ReferencesAirportsByAirportCodeGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ReferencesAirportsByAirportCodeGetRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ReferencesAirportsByAirportCodeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LHoperated")
     public Boolean lHoperated;
+
     public ReferencesAirportsByAirportCodeGetRequest withLHoperated(Boolean lHoperated) {
         this.lHoperated = lHoperated;
         return this;
@@ -32,6 +35,7 @@ public class ReferencesAirportsByAirportCodeGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=airportCode")
     public String airportCode;
+
     public ReferencesAirportsByAirportCodeGetRequest withAirportCode(String airportCode) {
         this.airportCode = airportCode;
         return this;
@@ -42,6 +46,7 @@ public class ReferencesAirportsByAirportCodeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public ReferencesAirportsByAirportCodeGetRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -52,6 +57,7 @@ public class ReferencesAirportsByAirportCodeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public ReferencesAirportsByAirportCodeGetRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -62,9 +68,14 @@ public class ReferencesAirportsByAirportCodeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public ReferencesAirportsByAirportCodeGetRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public ReferencesAirportsByAirportCodeGetRequest(@JsonProperty("Accept") String accept, @JsonProperty("airportCode") String airportCode) {
+        this.accept = accept;
+        this.airportCode = airportCode;
+  }
 }

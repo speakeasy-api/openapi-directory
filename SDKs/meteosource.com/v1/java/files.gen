@@ -117,4 +117,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/TimeMachineTimeMachineHourl
 lib/src/main/java/org/openapis/openapi/models/shared/TimeMachineTimeMachineWindData.java
 lib/src/main/java/org/openapis/openapi/models/shared/TimeMachineTimeMachinePrecipitationData.java
 lib/src/main/java/org/openapis/openapi/models/shared/TimeMachineTimeMachineCloudCoverData.java
+docs/sdk/README.md
+docs/locationendpoints/README.md
+docs/pointweather/README.md
+docs/timemachinehistoricalweather/README.md
+docs/weathermaps/README.md
 USAGE.md

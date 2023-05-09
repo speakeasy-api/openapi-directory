@@ -15,6 +15,7 @@ public class RemoveBgJsonResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("foreground_height")
     public Long foregroundHeight;
+
     public RemoveBgJsonResponseData withForegroundHeight(Long foregroundHeight) {
         this.foregroundHeight = foregroundHeight;
         return this;
@@ -26,6 +27,7 @@ public class RemoveBgJsonResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("foreground_left")
     public Long foregroundLeft;
+
     public RemoveBgJsonResponseData withForegroundLeft(Long foregroundLeft) {
         this.foregroundLeft = foregroundLeft;
         return this;
@@ -37,6 +39,7 @@ public class RemoveBgJsonResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("foreground_top")
     public Long foregroundTop;
+
     public RemoveBgJsonResponseData withForegroundTop(Long foregroundTop) {
         this.foregroundTop = foregroundTop;
         return this;
@@ -48,6 +51,7 @@ public class RemoveBgJsonResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("foreground_width")
     public Long foregroundWidth;
+
     public RemoveBgJsonResponseData withForegroundWidth(Long foregroundWidth) {
         this.foregroundWidth = foregroundWidth;
         return this;
@@ -59,9 +63,11 @@ public class RemoveBgJsonResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result_b64")
     public String resultB64;
+
     public RemoveBgJsonResponseData withResultB64(String resultB64) {
         this.resultB64 = resultB64;
         return this;
     }
     
+    public RemoveBgJsonResponseData(){}
 }

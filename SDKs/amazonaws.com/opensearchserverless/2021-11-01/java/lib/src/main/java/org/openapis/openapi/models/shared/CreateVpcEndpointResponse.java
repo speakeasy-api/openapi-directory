@@ -15,9 +15,11 @@ public class CreateVpcEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createVpcEndpointDetail")
     public CreateVpcEndpointDetail createVpcEndpointDetail;
+
     public CreateVpcEndpointResponse withCreateVpcEndpointDetail(CreateVpcEndpointDetail createVpcEndpointDetail) {
         this.createVpcEndpointDetail = createVpcEndpointDetail;
         return this;
     }
     
+    public CreateVpcEndpointResponse(){}
 }

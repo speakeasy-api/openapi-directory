@@ -15,9 +15,11 @@ public class ExportRequestDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public Long[] ids;
+
     public ExportRequestDTO withIds(Long[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public ExportRequestDTO(){}
 }

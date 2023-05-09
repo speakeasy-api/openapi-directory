@@ -12,9 +12,13 @@ public class PostContentRequestBody {
      */
     @JsonProperty("inputStream")
     public String inputStream;
+
     public PostContentRequestBody withInputStream(String inputStream) {
         this.inputStream = inputStream;
         return this;
     }
     
+    public PostContentRequestBody(@JsonProperty("inputStream") String inputStream) {
+        this.inputStream = inputStream;
+  }
 }

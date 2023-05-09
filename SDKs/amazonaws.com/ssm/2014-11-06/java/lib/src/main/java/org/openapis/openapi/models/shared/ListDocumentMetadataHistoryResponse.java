@@ -15,6 +15,7 @@ public class ListDocumentMetadataHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Author")
     public String author;
+
     public ListDocumentMetadataHistoryResponse withAuthor(String author) {
         this.author = author;
         return this;
@@ -23,6 +24,7 @@ public class ListDocumentMetadataHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public ListDocumentMetadataHistoryResponse withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -31,6 +33,7 @@ public class ListDocumentMetadataHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metadata")
     public DocumentMetadataResponseInfo metadata;
+
     public ListDocumentMetadataHistoryResponse withMetadata(DocumentMetadataResponseInfo metadata) {
         this.metadata = metadata;
         return this;
@@ -39,6 +42,7 @@ public class ListDocumentMetadataHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ListDocumentMetadataHistoryResponse withName(String name) {
         this.name = name;
         return this;
@@ -47,9 +51,11 @@ public class ListDocumentMetadataHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDocumentMetadataHistoryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDocumentMetadataHistoryResponse(){}
 }

@@ -12,6 +12,7 @@ public class BusinessDefaultsUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoUpdateCustomer")
     public Boolean autoUpdateCustomer;
+
     public BusinessDefaultsUpdateModel withAutoUpdateCustomer(Boolean autoUpdateCustomer) {
         this.autoUpdateCustomer = autoUpdateCustomer;
         return this;
@@ -20,6 +21,7 @@ public class BusinessDefaultsUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessNotification")
     public Boolean businessNotification;
+
     public BusinessDefaultsUpdateModel withBusinessNotification(Boolean businessNotification) {
         this.businessNotification = businessNotification;
         return this;
@@ -28,6 +30,7 @@ public class BusinessDefaultsUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerCity")
     public Boolean customerCity;
+
     public BusinessDefaultsUpdateModel withCustomerCity(Boolean customerCity) {
         this.customerCity = customerCity;
         return this;
@@ -36,6 +39,7 @@ public class BusinessDefaultsUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerState")
     public Boolean customerState;
+
     public BusinessDefaultsUpdateModel withCustomerState(Boolean customerState) {
         this.customerState = customerState;
         return this;
@@ -44,6 +48,7 @@ public class BusinessDefaultsUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailInfo")
     public Boolean emailInfo;
+
     public BusinessDefaultsUpdateModel withEmailInfo(Boolean emailInfo) {
         this.emailInfo = emailInfo;
         return this;
@@ -52,9 +57,11 @@ public class BusinessDefaultsUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableUtcTimezone")
     public Boolean enableUtcTimezone;
+
     public BusinessDefaultsUpdateModel withEnableUtcTimezone(Boolean enableUtcTimezone) {
         this.enableUtcTimezone = enableUtcTimezone;
         return this;
     }
     
+    public BusinessDefaultsUpdateModel(){}
 }

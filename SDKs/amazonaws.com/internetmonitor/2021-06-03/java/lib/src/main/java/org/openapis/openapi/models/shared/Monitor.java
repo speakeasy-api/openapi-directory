@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Monitor {
     @JsonProperty("MonitorArn")
     public String monitorArn;
+
     public Monitor withMonitorArn(String monitorArn) {
         this.monitorArn = monitorArn;
         return this;
@@ -21,6 +22,7 @@ public class Monitor {
     
     @JsonProperty("MonitorName")
     public String monitorName;
+
     public Monitor withMonitorName(String monitorName) {
         this.monitorName = monitorName;
         return this;
@@ -29,6 +31,7 @@ public class Monitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingStatus")
     public MonitorProcessingStatusCodeEnum processingStatus;
+
     public Monitor withProcessingStatus(MonitorProcessingStatusCodeEnum processingStatus) {
         this.processingStatus = processingStatus;
         return this;
@@ -36,9 +39,15 @@ public class Monitor {
     
     @JsonProperty("Status")
     public MonitorConfigStateEnum status;
+
     public Monitor withStatus(MonitorConfigStateEnum status) {
         this.status = status;
         return this;
     }
     
+    public Monitor(@JsonProperty("MonitorArn") String monitorArn, @JsonProperty("MonitorName") String monitorName, @JsonProperty("Status") MonitorConfigStateEnum status) {
+        this.monitorArn = monitorArn;
+        this.monitorName = monitorName;
+        this.status = status;
+  }
 }

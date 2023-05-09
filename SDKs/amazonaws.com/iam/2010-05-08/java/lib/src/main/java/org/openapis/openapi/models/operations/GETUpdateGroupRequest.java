@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateGroupRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUpdateGroupActionEnum action;
+
     public GETUpdateGroupRequest withAction(GETUpdateGroupActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETUpdateGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GroupName")
     public String groupName;
+
     public GETUpdateGroupRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -29,6 +32,7 @@ public class GETUpdateGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewGroupName")
     public String newGroupName;
+
     public GETUpdateGroupRequest withNewGroupName(String newGroupName) {
         this.newGroupName = newGroupName;
         return this;
@@ -39,6 +43,7 @@ public class GETUpdateGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewPath")
     public String newPath;
+
     public GETUpdateGroupRequest withNewPath(String newPath) {
         this.newPath = newPath;
         return this;
@@ -46,6 +51,7 @@ public class GETUpdateGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUpdateGroupVersionEnum version;
+
     public GETUpdateGroupRequest withVersion(GETUpdateGroupVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETUpdateGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUpdateGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETUpdateGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUpdateGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETUpdateGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUpdateGroupRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETUpdateGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUpdateGroupRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETUpdateGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUpdateGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETUpdateGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUpdateGroupRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETUpdateGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUpdateGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUpdateGroupRequest(@JsonProperty("Action") GETUpdateGroupActionEnum action, @JsonProperty("GroupName") String groupName, @JsonProperty("Version") GETUpdateGroupVersionEnum version) {
+        this.action = action;
+        this.groupName = groupName;
+        this.version = version;
+  }
 }

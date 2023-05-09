@@ -20,6 +20,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityTaskCancelRequestedEventAttributes")
     public ActivityTaskCancelRequestedEventAttributes activityTaskCancelRequestedEventAttributes;
+
     public HistoryEvent withActivityTaskCancelRequestedEventAttributes(ActivityTaskCancelRequestedEventAttributes activityTaskCancelRequestedEventAttributes) {
         this.activityTaskCancelRequestedEventAttributes = activityTaskCancelRequestedEventAttributes;
         return this;
@@ -28,6 +29,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityTaskCanceledEventAttributes")
     public ActivityTaskCanceledEventAttributes activityTaskCanceledEventAttributes;
+
     public HistoryEvent withActivityTaskCanceledEventAttributes(ActivityTaskCanceledEventAttributes activityTaskCanceledEventAttributes) {
         this.activityTaskCanceledEventAttributes = activityTaskCanceledEventAttributes;
         return this;
@@ -36,6 +38,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityTaskCompletedEventAttributes")
     public ActivityTaskCompletedEventAttributes activityTaskCompletedEventAttributes;
+
     public HistoryEvent withActivityTaskCompletedEventAttributes(ActivityTaskCompletedEventAttributes activityTaskCompletedEventAttributes) {
         this.activityTaskCompletedEventAttributes = activityTaskCompletedEventAttributes;
         return this;
@@ -44,6 +47,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityTaskFailedEventAttributes")
     public ActivityTaskFailedEventAttributes activityTaskFailedEventAttributes;
+
     public HistoryEvent withActivityTaskFailedEventAttributes(ActivityTaskFailedEventAttributes activityTaskFailedEventAttributes) {
         this.activityTaskFailedEventAttributes = activityTaskFailedEventAttributes;
         return this;
@@ -52,6 +56,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityTaskScheduledEventAttributes")
     public ActivityTaskScheduledEventAttributes activityTaskScheduledEventAttributes;
+
     public HistoryEvent withActivityTaskScheduledEventAttributes(ActivityTaskScheduledEventAttributes activityTaskScheduledEventAttributes) {
         this.activityTaskScheduledEventAttributes = activityTaskScheduledEventAttributes;
         return this;
@@ -60,6 +65,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityTaskStartedEventAttributes")
     public ActivityTaskStartedEventAttributes activityTaskStartedEventAttributes;
+
     public HistoryEvent withActivityTaskStartedEventAttributes(ActivityTaskStartedEventAttributes activityTaskStartedEventAttributes) {
         this.activityTaskStartedEventAttributes = activityTaskStartedEventAttributes;
         return this;
@@ -68,6 +74,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityTaskTimedOutEventAttributes")
     public ActivityTaskTimedOutEventAttributes activityTaskTimedOutEventAttributes;
+
     public HistoryEvent withActivityTaskTimedOutEventAttributes(ActivityTaskTimedOutEventAttributes activityTaskTimedOutEventAttributes) {
         this.activityTaskTimedOutEventAttributes = activityTaskTimedOutEventAttributes;
         return this;
@@ -76,6 +83,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelTimerFailedEventAttributes")
     public CancelTimerFailedEventAttributes cancelTimerFailedEventAttributes;
+
     public HistoryEvent withCancelTimerFailedEventAttributes(CancelTimerFailedEventAttributes cancelTimerFailedEventAttributes) {
         this.cancelTimerFailedEventAttributes = cancelTimerFailedEventAttributes;
         return this;
@@ -84,6 +92,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelWorkflowExecutionFailedEventAttributes")
     public CancelWorkflowExecutionFailedEventAttributes cancelWorkflowExecutionFailedEventAttributes;
+
     public HistoryEvent withCancelWorkflowExecutionFailedEventAttributes(CancelWorkflowExecutionFailedEventAttributes cancelWorkflowExecutionFailedEventAttributes) {
         this.cancelWorkflowExecutionFailedEventAttributes = cancelWorkflowExecutionFailedEventAttributes;
         return this;
@@ -92,6 +101,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childWorkflowExecutionCanceledEventAttributes")
     public ChildWorkflowExecutionCanceledEventAttributes childWorkflowExecutionCanceledEventAttributes;
+
     public HistoryEvent withChildWorkflowExecutionCanceledEventAttributes(ChildWorkflowExecutionCanceledEventAttributes childWorkflowExecutionCanceledEventAttributes) {
         this.childWorkflowExecutionCanceledEventAttributes = childWorkflowExecutionCanceledEventAttributes;
         return this;
@@ -100,6 +110,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childWorkflowExecutionCompletedEventAttributes")
     public ChildWorkflowExecutionCompletedEventAttributes childWorkflowExecutionCompletedEventAttributes;
+
     public HistoryEvent withChildWorkflowExecutionCompletedEventAttributes(ChildWorkflowExecutionCompletedEventAttributes childWorkflowExecutionCompletedEventAttributes) {
         this.childWorkflowExecutionCompletedEventAttributes = childWorkflowExecutionCompletedEventAttributes;
         return this;
@@ -108,6 +119,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childWorkflowExecutionFailedEventAttributes")
     public ChildWorkflowExecutionFailedEventAttributes childWorkflowExecutionFailedEventAttributes;
+
     public HistoryEvent withChildWorkflowExecutionFailedEventAttributes(ChildWorkflowExecutionFailedEventAttributes childWorkflowExecutionFailedEventAttributes) {
         this.childWorkflowExecutionFailedEventAttributes = childWorkflowExecutionFailedEventAttributes;
         return this;
@@ -116,6 +128,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childWorkflowExecutionStartedEventAttributes")
     public ChildWorkflowExecutionStartedEventAttributes childWorkflowExecutionStartedEventAttributes;
+
     public HistoryEvent withChildWorkflowExecutionStartedEventAttributes(ChildWorkflowExecutionStartedEventAttributes childWorkflowExecutionStartedEventAttributes) {
         this.childWorkflowExecutionStartedEventAttributes = childWorkflowExecutionStartedEventAttributes;
         return this;
@@ -124,6 +137,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childWorkflowExecutionTerminatedEventAttributes")
     public ChildWorkflowExecutionTerminatedEventAttributes childWorkflowExecutionTerminatedEventAttributes;
+
     public HistoryEvent withChildWorkflowExecutionTerminatedEventAttributes(ChildWorkflowExecutionTerminatedEventAttributes childWorkflowExecutionTerminatedEventAttributes) {
         this.childWorkflowExecutionTerminatedEventAttributes = childWorkflowExecutionTerminatedEventAttributes;
         return this;
@@ -132,6 +146,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childWorkflowExecutionTimedOutEventAttributes")
     public ChildWorkflowExecutionTimedOutEventAttributes childWorkflowExecutionTimedOutEventAttributes;
+
     public HistoryEvent withChildWorkflowExecutionTimedOutEventAttributes(ChildWorkflowExecutionTimedOutEventAttributes childWorkflowExecutionTimedOutEventAttributes) {
         this.childWorkflowExecutionTimedOutEventAttributes = childWorkflowExecutionTimedOutEventAttributes;
         return this;
@@ -140,6 +155,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completeWorkflowExecutionFailedEventAttributes")
     public CompleteWorkflowExecutionFailedEventAttributes completeWorkflowExecutionFailedEventAttributes;
+
     public HistoryEvent withCompleteWorkflowExecutionFailedEventAttributes(CompleteWorkflowExecutionFailedEventAttributes completeWorkflowExecutionFailedEventAttributes) {
         this.completeWorkflowExecutionFailedEventAttributes = completeWorkflowExecutionFailedEventAttributes;
         return this;
@@ -148,6 +164,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continueAsNewWorkflowExecutionFailedEventAttributes")
     public ContinueAsNewWorkflowExecutionFailedEventAttributes continueAsNewWorkflowExecutionFailedEventAttributes;
+
     public HistoryEvent withContinueAsNewWorkflowExecutionFailedEventAttributes(ContinueAsNewWorkflowExecutionFailedEventAttributes continueAsNewWorkflowExecutionFailedEventAttributes) {
         this.continueAsNewWorkflowExecutionFailedEventAttributes = continueAsNewWorkflowExecutionFailedEventAttributes;
         return this;
@@ -156,6 +173,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decisionTaskCompletedEventAttributes")
     public DecisionTaskCompletedEventAttributes decisionTaskCompletedEventAttributes;
+
     public HistoryEvent withDecisionTaskCompletedEventAttributes(DecisionTaskCompletedEventAttributes decisionTaskCompletedEventAttributes) {
         this.decisionTaskCompletedEventAttributes = decisionTaskCompletedEventAttributes;
         return this;
@@ -164,6 +182,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decisionTaskScheduledEventAttributes")
     public DecisionTaskScheduledEventAttributes decisionTaskScheduledEventAttributes;
+
     public HistoryEvent withDecisionTaskScheduledEventAttributes(DecisionTaskScheduledEventAttributes decisionTaskScheduledEventAttributes) {
         this.decisionTaskScheduledEventAttributes = decisionTaskScheduledEventAttributes;
         return this;
@@ -172,6 +191,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decisionTaskStartedEventAttributes")
     public DecisionTaskStartedEventAttributes decisionTaskStartedEventAttributes;
+
     public HistoryEvent withDecisionTaskStartedEventAttributes(DecisionTaskStartedEventAttributes decisionTaskStartedEventAttributes) {
         this.decisionTaskStartedEventAttributes = decisionTaskStartedEventAttributes;
         return this;
@@ -180,6 +200,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decisionTaskTimedOutEventAttributes")
     public DecisionTaskTimedOutEventAttributes decisionTaskTimedOutEventAttributes;
+
     public HistoryEvent withDecisionTaskTimedOutEventAttributes(DecisionTaskTimedOutEventAttributes decisionTaskTimedOutEventAttributes) {
         this.decisionTaskTimedOutEventAttributes = decisionTaskTimedOutEventAttributes;
         return this;
@@ -187,6 +208,7 @@ public class HistoryEvent {
     
     @JsonProperty("eventId")
     public Long eventId;
+
     public HistoryEvent withEventId(Long eventId) {
         this.eventId = eventId;
         return this;
@@ -196,6 +218,7 @@ public class HistoryEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("eventTimestamp")
     public OffsetDateTime eventTimestamp;
+
     public HistoryEvent withEventTimestamp(OffsetDateTime eventTimestamp) {
         this.eventTimestamp = eventTimestamp;
         return this;
@@ -203,6 +226,7 @@ public class HistoryEvent {
     
     @JsonProperty("eventType")
     public EventTypeEnum eventType;
+
     public HistoryEvent withEventType(EventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -211,6 +235,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalWorkflowExecutionCancelRequestedEventAttributes")
     public ExternalWorkflowExecutionCancelRequestedEventAttributes externalWorkflowExecutionCancelRequestedEventAttributes;
+
     public HistoryEvent withExternalWorkflowExecutionCancelRequestedEventAttributes(ExternalWorkflowExecutionCancelRequestedEventAttributes externalWorkflowExecutionCancelRequestedEventAttributes) {
         this.externalWorkflowExecutionCancelRequestedEventAttributes = externalWorkflowExecutionCancelRequestedEventAttributes;
         return this;
@@ -219,6 +244,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalWorkflowExecutionSignaledEventAttributes")
     public ExternalWorkflowExecutionSignaledEventAttributes externalWorkflowExecutionSignaledEventAttributes;
+
     public HistoryEvent withExternalWorkflowExecutionSignaledEventAttributes(ExternalWorkflowExecutionSignaledEventAttributes externalWorkflowExecutionSignaledEventAttributes) {
         this.externalWorkflowExecutionSignaledEventAttributes = externalWorkflowExecutionSignaledEventAttributes;
         return this;
@@ -227,6 +253,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failWorkflowExecutionFailedEventAttributes")
     public FailWorkflowExecutionFailedEventAttributes failWorkflowExecutionFailedEventAttributes;
+
     public HistoryEvent withFailWorkflowExecutionFailedEventAttributes(FailWorkflowExecutionFailedEventAttributes failWorkflowExecutionFailedEventAttributes) {
         this.failWorkflowExecutionFailedEventAttributes = failWorkflowExecutionFailedEventAttributes;
         return this;
@@ -235,6 +262,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionCompletedEventAttributes")
     public LambdaFunctionCompletedEventAttributes lambdaFunctionCompletedEventAttributes;
+
     public HistoryEvent withLambdaFunctionCompletedEventAttributes(LambdaFunctionCompletedEventAttributes lambdaFunctionCompletedEventAttributes) {
         this.lambdaFunctionCompletedEventAttributes = lambdaFunctionCompletedEventAttributes;
         return this;
@@ -243,6 +271,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionFailedEventAttributes")
     public LambdaFunctionFailedEventAttributes lambdaFunctionFailedEventAttributes;
+
     public HistoryEvent withLambdaFunctionFailedEventAttributes(LambdaFunctionFailedEventAttributes lambdaFunctionFailedEventAttributes) {
         this.lambdaFunctionFailedEventAttributes = lambdaFunctionFailedEventAttributes;
         return this;
@@ -251,6 +280,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionScheduledEventAttributes")
     public LambdaFunctionScheduledEventAttributes lambdaFunctionScheduledEventAttributes;
+
     public HistoryEvent withLambdaFunctionScheduledEventAttributes(LambdaFunctionScheduledEventAttributes lambdaFunctionScheduledEventAttributes) {
         this.lambdaFunctionScheduledEventAttributes = lambdaFunctionScheduledEventAttributes;
         return this;
@@ -259,6 +289,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionStartedEventAttributes")
     public LambdaFunctionStartedEventAttributes lambdaFunctionStartedEventAttributes;
+
     public HistoryEvent withLambdaFunctionStartedEventAttributes(LambdaFunctionStartedEventAttributes lambdaFunctionStartedEventAttributes) {
         this.lambdaFunctionStartedEventAttributes = lambdaFunctionStartedEventAttributes;
         return this;
@@ -267,6 +298,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionTimedOutEventAttributes")
     public LambdaFunctionTimedOutEventAttributes lambdaFunctionTimedOutEventAttributes;
+
     public HistoryEvent withLambdaFunctionTimedOutEventAttributes(LambdaFunctionTimedOutEventAttributes lambdaFunctionTimedOutEventAttributes) {
         this.lambdaFunctionTimedOutEventAttributes = lambdaFunctionTimedOutEventAttributes;
         return this;
@@ -275,6 +307,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markerRecordedEventAttributes")
     public MarkerRecordedEventAttributes markerRecordedEventAttributes;
+
     public HistoryEvent withMarkerRecordedEventAttributes(MarkerRecordedEventAttributes markerRecordedEventAttributes) {
         this.markerRecordedEventAttributes = markerRecordedEventAttributes;
         return this;
@@ -283,6 +316,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordMarkerFailedEventAttributes")
     public RecordMarkerFailedEventAttributes recordMarkerFailedEventAttributes;
+
     public HistoryEvent withRecordMarkerFailedEventAttributes(RecordMarkerFailedEventAttributes recordMarkerFailedEventAttributes) {
         this.recordMarkerFailedEventAttributes = recordMarkerFailedEventAttributes;
         return this;
@@ -291,6 +325,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestCancelActivityTaskFailedEventAttributes")
     public RequestCancelActivityTaskFailedEventAttributes requestCancelActivityTaskFailedEventAttributes;
+
     public HistoryEvent withRequestCancelActivityTaskFailedEventAttributes(RequestCancelActivityTaskFailedEventAttributes requestCancelActivityTaskFailedEventAttributes) {
         this.requestCancelActivityTaskFailedEventAttributes = requestCancelActivityTaskFailedEventAttributes;
         return this;
@@ -299,6 +334,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestCancelExternalWorkflowExecutionFailedEventAttributes")
     public RequestCancelExternalWorkflowExecutionFailedEventAttributes requestCancelExternalWorkflowExecutionFailedEventAttributes;
+
     public HistoryEvent withRequestCancelExternalWorkflowExecutionFailedEventAttributes(RequestCancelExternalWorkflowExecutionFailedEventAttributes requestCancelExternalWorkflowExecutionFailedEventAttributes) {
         this.requestCancelExternalWorkflowExecutionFailedEventAttributes = requestCancelExternalWorkflowExecutionFailedEventAttributes;
         return this;
@@ -307,6 +343,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestCancelExternalWorkflowExecutionInitiatedEventAttributes")
     public RequestCancelExternalWorkflowExecutionInitiatedEventAttributes requestCancelExternalWorkflowExecutionInitiatedEventAttributes;
+
     public HistoryEvent withRequestCancelExternalWorkflowExecutionInitiatedEventAttributes(RequestCancelExternalWorkflowExecutionInitiatedEventAttributes requestCancelExternalWorkflowExecutionInitiatedEventAttributes) {
         this.requestCancelExternalWorkflowExecutionInitiatedEventAttributes = requestCancelExternalWorkflowExecutionInitiatedEventAttributes;
         return this;
@@ -315,6 +352,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleActivityTaskFailedEventAttributes")
     public ScheduleActivityTaskFailedEventAttributes scheduleActivityTaskFailedEventAttributes;
+
     public HistoryEvent withScheduleActivityTaskFailedEventAttributes(ScheduleActivityTaskFailedEventAttributes scheduleActivityTaskFailedEventAttributes) {
         this.scheduleActivityTaskFailedEventAttributes = scheduleActivityTaskFailedEventAttributes;
         return this;
@@ -323,6 +361,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleLambdaFunctionFailedEventAttributes")
     public ScheduleLambdaFunctionFailedEventAttributes scheduleLambdaFunctionFailedEventAttributes;
+
     public HistoryEvent withScheduleLambdaFunctionFailedEventAttributes(ScheduleLambdaFunctionFailedEventAttributes scheduleLambdaFunctionFailedEventAttributes) {
         this.scheduleLambdaFunctionFailedEventAttributes = scheduleLambdaFunctionFailedEventAttributes;
         return this;
@@ -331,6 +370,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signalExternalWorkflowExecutionFailedEventAttributes")
     public SignalExternalWorkflowExecutionFailedEventAttributes signalExternalWorkflowExecutionFailedEventAttributes;
+
     public HistoryEvent withSignalExternalWorkflowExecutionFailedEventAttributes(SignalExternalWorkflowExecutionFailedEventAttributes signalExternalWorkflowExecutionFailedEventAttributes) {
         this.signalExternalWorkflowExecutionFailedEventAttributes = signalExternalWorkflowExecutionFailedEventAttributes;
         return this;
@@ -339,6 +379,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signalExternalWorkflowExecutionInitiatedEventAttributes")
     public SignalExternalWorkflowExecutionInitiatedEventAttributes signalExternalWorkflowExecutionInitiatedEventAttributes;
+
     public HistoryEvent withSignalExternalWorkflowExecutionInitiatedEventAttributes(SignalExternalWorkflowExecutionInitiatedEventAttributes signalExternalWorkflowExecutionInitiatedEventAttributes) {
         this.signalExternalWorkflowExecutionInitiatedEventAttributes = signalExternalWorkflowExecutionInitiatedEventAttributes;
         return this;
@@ -347,6 +388,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startChildWorkflowExecutionFailedEventAttributes")
     public StartChildWorkflowExecutionFailedEventAttributes startChildWorkflowExecutionFailedEventAttributes;
+
     public HistoryEvent withStartChildWorkflowExecutionFailedEventAttributes(StartChildWorkflowExecutionFailedEventAttributes startChildWorkflowExecutionFailedEventAttributes) {
         this.startChildWorkflowExecutionFailedEventAttributes = startChildWorkflowExecutionFailedEventAttributes;
         return this;
@@ -355,6 +397,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startChildWorkflowExecutionInitiatedEventAttributes")
     public StartChildWorkflowExecutionInitiatedEventAttributes startChildWorkflowExecutionInitiatedEventAttributes;
+
     public HistoryEvent withStartChildWorkflowExecutionInitiatedEventAttributes(StartChildWorkflowExecutionInitiatedEventAttributes startChildWorkflowExecutionInitiatedEventAttributes) {
         this.startChildWorkflowExecutionInitiatedEventAttributes = startChildWorkflowExecutionInitiatedEventAttributes;
         return this;
@@ -363,6 +406,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startLambdaFunctionFailedEventAttributes")
     public StartLambdaFunctionFailedEventAttributes startLambdaFunctionFailedEventAttributes;
+
     public HistoryEvent withStartLambdaFunctionFailedEventAttributes(StartLambdaFunctionFailedEventAttributes startLambdaFunctionFailedEventAttributes) {
         this.startLambdaFunctionFailedEventAttributes = startLambdaFunctionFailedEventAttributes;
         return this;
@@ -371,6 +415,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimerFailedEventAttributes")
     public StartTimerFailedEventAttributes startTimerFailedEventAttributes;
+
     public HistoryEvent withStartTimerFailedEventAttributes(StartTimerFailedEventAttributes startTimerFailedEventAttributes) {
         this.startTimerFailedEventAttributes = startTimerFailedEventAttributes;
         return this;
@@ -379,6 +424,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timerCanceledEventAttributes")
     public TimerCanceledEventAttributes timerCanceledEventAttributes;
+
     public HistoryEvent withTimerCanceledEventAttributes(TimerCanceledEventAttributes timerCanceledEventAttributes) {
         this.timerCanceledEventAttributes = timerCanceledEventAttributes;
         return this;
@@ -387,6 +433,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timerFiredEventAttributes")
     public TimerFiredEventAttributes timerFiredEventAttributes;
+
     public HistoryEvent withTimerFiredEventAttributes(TimerFiredEventAttributes timerFiredEventAttributes) {
         this.timerFiredEventAttributes = timerFiredEventAttributes;
         return this;
@@ -395,6 +442,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timerStartedEventAttributes")
     public TimerStartedEventAttributes timerStartedEventAttributes;
+
     public HistoryEvent withTimerStartedEventAttributes(TimerStartedEventAttributes timerStartedEventAttributes) {
         this.timerStartedEventAttributes = timerStartedEventAttributes;
         return this;
@@ -403,6 +451,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowExecutionCancelRequestedEventAttributes")
     public WorkflowExecutionCancelRequestedEventAttributes workflowExecutionCancelRequestedEventAttributes;
+
     public HistoryEvent withWorkflowExecutionCancelRequestedEventAttributes(WorkflowExecutionCancelRequestedEventAttributes workflowExecutionCancelRequestedEventAttributes) {
         this.workflowExecutionCancelRequestedEventAttributes = workflowExecutionCancelRequestedEventAttributes;
         return this;
@@ -411,6 +460,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowExecutionCanceledEventAttributes")
     public WorkflowExecutionCanceledEventAttributes workflowExecutionCanceledEventAttributes;
+
     public HistoryEvent withWorkflowExecutionCanceledEventAttributes(WorkflowExecutionCanceledEventAttributes workflowExecutionCanceledEventAttributes) {
         this.workflowExecutionCanceledEventAttributes = workflowExecutionCanceledEventAttributes;
         return this;
@@ -419,6 +469,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowExecutionCompletedEventAttributes")
     public WorkflowExecutionCompletedEventAttributes workflowExecutionCompletedEventAttributes;
+
     public HistoryEvent withWorkflowExecutionCompletedEventAttributes(WorkflowExecutionCompletedEventAttributes workflowExecutionCompletedEventAttributes) {
         this.workflowExecutionCompletedEventAttributes = workflowExecutionCompletedEventAttributes;
         return this;
@@ -427,6 +478,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowExecutionContinuedAsNewEventAttributes")
     public WorkflowExecutionContinuedAsNewEventAttributes workflowExecutionContinuedAsNewEventAttributes;
+
     public HistoryEvent withWorkflowExecutionContinuedAsNewEventAttributes(WorkflowExecutionContinuedAsNewEventAttributes workflowExecutionContinuedAsNewEventAttributes) {
         this.workflowExecutionContinuedAsNewEventAttributes = workflowExecutionContinuedAsNewEventAttributes;
         return this;
@@ -435,6 +487,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowExecutionFailedEventAttributes")
     public WorkflowExecutionFailedEventAttributes workflowExecutionFailedEventAttributes;
+
     public HistoryEvent withWorkflowExecutionFailedEventAttributes(WorkflowExecutionFailedEventAttributes workflowExecutionFailedEventAttributes) {
         this.workflowExecutionFailedEventAttributes = workflowExecutionFailedEventAttributes;
         return this;
@@ -443,6 +496,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowExecutionSignaledEventAttributes")
     public WorkflowExecutionSignaledEventAttributes workflowExecutionSignaledEventAttributes;
+
     public HistoryEvent withWorkflowExecutionSignaledEventAttributes(WorkflowExecutionSignaledEventAttributes workflowExecutionSignaledEventAttributes) {
         this.workflowExecutionSignaledEventAttributes = workflowExecutionSignaledEventAttributes;
         return this;
@@ -451,6 +505,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowExecutionStartedEventAttributes")
     public WorkflowExecutionStartedEventAttributes workflowExecutionStartedEventAttributes;
+
     public HistoryEvent withWorkflowExecutionStartedEventAttributes(WorkflowExecutionStartedEventAttributes workflowExecutionStartedEventAttributes) {
         this.workflowExecutionStartedEventAttributes = workflowExecutionStartedEventAttributes;
         return this;
@@ -459,6 +514,7 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowExecutionTerminatedEventAttributes")
     public WorkflowExecutionTerminatedEventAttributes workflowExecutionTerminatedEventAttributes;
+
     public HistoryEvent withWorkflowExecutionTerminatedEventAttributes(WorkflowExecutionTerminatedEventAttributes workflowExecutionTerminatedEventAttributes) {
         this.workflowExecutionTerminatedEventAttributes = workflowExecutionTerminatedEventAttributes;
         return this;
@@ -467,9 +523,15 @@ public class HistoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowExecutionTimedOutEventAttributes")
     public WorkflowExecutionTimedOutEventAttributes workflowExecutionTimedOutEventAttributes;
+
     public HistoryEvent withWorkflowExecutionTimedOutEventAttributes(WorkflowExecutionTimedOutEventAttributes workflowExecutionTimedOutEventAttributes) {
         this.workflowExecutionTimedOutEventAttributes = workflowExecutionTimedOutEventAttributes;
         return this;
     }
     
+    public HistoryEvent(@JsonProperty("eventId") Long eventId, @JsonProperty("eventTimestamp") OffsetDateTime eventTimestamp, @JsonProperty("eventType") EventTypeEnum eventType) {
+        this.eventId = eventId;
+        this.eventTimestamp = eventTimestamp;
+        this.eventType = eventType;
+  }
 }

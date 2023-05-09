@@ -18,6 +18,7 @@ public class ImportAdminOverridesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public ImportAdminOverridesRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -29,6 +30,7 @@ public class ImportAdminOverridesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceOnly")
     public ImportAdminOverridesRequestForceOnlyEnum[] forceOnly;
+
     public ImportAdminOverridesRequest withForceOnly(ImportAdminOverridesRequestForceOnlyEnum[] forceOnly) {
         this.forceOnly = forceOnly;
         return this;
@@ -40,9 +42,11 @@ public class ImportAdminOverridesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineSource")
     public OverrideInlineSource inlineSource;
+
     public ImportAdminOverridesRequest withInlineSource(OverrideInlineSource inlineSource) {
         this.inlineSource = inlineSource;
         return this;
     }
     
+    public ImportAdminOverridesRequest(){}
 }

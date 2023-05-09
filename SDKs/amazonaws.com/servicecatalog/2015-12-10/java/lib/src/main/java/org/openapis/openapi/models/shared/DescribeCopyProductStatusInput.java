@@ -12,6 +12,7 @@ public class DescribeCopyProductStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DescribeCopyProductStatusInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +20,13 @@ public class DescribeCopyProductStatusInput {
     
     @JsonProperty("CopyProductToken")
     public String copyProductToken;
+
     public DescribeCopyProductStatusInput withCopyProductToken(String copyProductToken) {
         this.copyProductToken = copyProductToken;
         return this;
     }
     
+    public DescribeCopyProductStatusInput(@JsonProperty("CopyProductToken") String copyProductToken) {
+        this.copyProductToken = copyProductToken;
+  }
 }

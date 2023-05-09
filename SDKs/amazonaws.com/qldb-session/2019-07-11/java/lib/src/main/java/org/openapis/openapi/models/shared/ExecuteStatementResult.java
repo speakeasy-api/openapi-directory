@@ -15,6 +15,7 @@ public class ExecuteStatementResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedIOs")
     public IOUsage consumedIOs;
+
     public ExecuteStatementResult withConsumedIOs(IOUsage consumedIOs) {
         this.consumedIOs = consumedIOs;
         return this;
@@ -23,6 +24,7 @@ public class ExecuteStatementResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstPage")
     public Page firstPage;
+
     public ExecuteStatementResult withFirstPage(Page firstPage) {
         this.firstPage = firstPage;
         return this;
@@ -31,9 +33,11 @@ public class ExecuteStatementResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimingInformation")
     public TimingInformation timingInformation;
+
     public ExecuteStatementResult withTimingInformation(TimingInformation timingInformation) {
         this.timingInformation = timingInformation;
         return this;
     }
     
+    public ExecuteStatementResult(){}
 }

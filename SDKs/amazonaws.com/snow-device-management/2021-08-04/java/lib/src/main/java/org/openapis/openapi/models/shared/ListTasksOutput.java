@@ -15,6 +15,7 @@ public class ListTasksOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTasksOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTasksOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasks")
     public TaskSummary[] tasks;
+
     public ListTasksOutput withTasks(TaskSummary[] tasks) {
         this.tasks = tasks;
         return this;
     }
     
+    public ListTasksOutput(){}
 }

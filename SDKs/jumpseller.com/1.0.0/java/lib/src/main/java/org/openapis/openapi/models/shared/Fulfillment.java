@@ -15,9 +15,11 @@ public class Fulfillment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public FulfillmentFields category;
+
     public Fulfillment withCategory(FulfillmentFields category) {
         this.category = category;
         return this;
     }
     
+    public Fulfillment(){}
 }

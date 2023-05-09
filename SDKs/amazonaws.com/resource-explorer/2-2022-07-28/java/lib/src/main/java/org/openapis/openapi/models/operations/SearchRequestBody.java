@@ -15,6 +15,7 @@ public class SearchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public SearchRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class SearchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public SearchRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +38,7 @@ public class SearchRequestBody {
      */
     @JsonProperty("QueryString")
     public String queryString;
+
     public SearchRequestBody withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
@@ -47,9 +50,13 @@ public class SearchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewArn")
     public String viewArn;
+
     public SearchRequestBody withViewArn(String viewArn) {
         this.viewArn = viewArn;
         return this;
     }
     
+    public SearchRequestBody(@JsonProperty("QueryString") String queryString) {
+        this.queryString = queryString;
+  }
 }

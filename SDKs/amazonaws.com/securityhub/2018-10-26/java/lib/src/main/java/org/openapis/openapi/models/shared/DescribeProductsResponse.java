@@ -15,6 +15,7 @@ public class DescribeProductsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeProductsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class DescribeProductsResponse {
     
     @JsonProperty("Products")
     public Product[] products;
+
     public DescribeProductsResponse withProducts(Product[] products) {
         this.products = products;
         return this;
     }
     
+    public DescribeProductsResponse(@JsonProperty("Products") Product[] products) {
+        this.products = products;
+  }
 }

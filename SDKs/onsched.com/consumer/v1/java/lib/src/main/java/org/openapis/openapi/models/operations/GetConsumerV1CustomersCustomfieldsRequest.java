@@ -12,6 +12,7 @@ public class GetConsumerV1CustomersCustomfieldsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=leadQuestions")
     public Boolean leadQuestions;
+
     public GetConsumerV1CustomersCustomfieldsRequest withLeadQuestions(Boolean leadQuestions) {
         this.leadQuestions = leadQuestions;
         return this;
@@ -22,9 +23,11 @@ public class GetConsumerV1CustomersCustomfieldsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
     public String locationId;
+
     public GetConsumerV1CustomersCustomfieldsRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public GetConsumerV1CustomersCustomfieldsRequest(){}
 }

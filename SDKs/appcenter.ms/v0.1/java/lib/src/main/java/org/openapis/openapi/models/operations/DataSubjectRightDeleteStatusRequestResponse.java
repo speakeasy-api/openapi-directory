@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DataSubjectRightDeleteStatusRequestResponse {
     
     public String contentType;
+
     public DataSubjectRightDeleteStatusRequestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DataSubjectRightDeleteStatusRequestResponse {
      */
     
     public DataSubjectRightDeleteStatusRequest200ApplicationJSON dataSubjectRightDeleteStatusRequest200ApplicationJSONObject;
+
     public DataSubjectRightDeleteStatusRequestResponse withDataSubjectRightDeleteStatusRequest200ApplicationJSONObject(DataSubjectRightDeleteStatusRequest200ApplicationJSON dataSubjectRightDeleteStatusRequest200ApplicationJSONObject) {
         this.dataSubjectRightDeleteStatusRequest200ApplicationJSONObject = dataSubjectRightDeleteStatusRequest200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class DataSubjectRightDeleteStatusRequestResponse {
      */
     
     public DataSubjectRightDeleteStatusRequestDefaultApplicationJSON dataSubjectRightDeleteStatusRequestDefaultApplicationJSONObject;
+
     public DataSubjectRightDeleteStatusRequestResponse withDataSubjectRightDeleteStatusRequestDefaultApplicationJSONObject(DataSubjectRightDeleteStatusRequestDefaultApplicationJSON dataSubjectRightDeleteStatusRequestDefaultApplicationJSONObject) {
         this.dataSubjectRightDeleteStatusRequestDefaultApplicationJSONObject = dataSubjectRightDeleteStatusRequestDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class DataSubjectRightDeleteStatusRequestResponse {
     
     
     public Integer statusCode;
+
     public DataSubjectRightDeleteStatusRequestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DataSubjectRightDeleteStatusRequestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DataSubjectRightDeleteStatusRequestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DataSubjectRightDeleteStatusRequestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

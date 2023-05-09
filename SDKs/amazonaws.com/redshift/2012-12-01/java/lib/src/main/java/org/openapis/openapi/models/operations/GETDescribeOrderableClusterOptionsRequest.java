@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeOrderableClusterOptionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeOrderableClusterOptionsActionEnum action;
+
     public GETDescribeOrderableClusterOptionsRequest withAction(GETDescribeOrderableClusterOptionsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeOrderableClusterOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterVersion")
     public String clusterVersion;
+
     public GETDescribeOrderableClusterOptionsRequest withClusterVersion(String clusterVersion) {
         this.clusterVersion = clusterVersion;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeOrderableClusterOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeOrderableClusterOptionsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeOrderableClusterOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeOrderableClusterOptionsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeOrderableClusterOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NodeType")
     public String nodeType;
+
     public GETDescribeOrderableClusterOptionsRequest withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -56,6 +62,7 @@ public class GETDescribeOrderableClusterOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeOrderableClusterOptionsVersionEnum version;
+
     public GETDescribeOrderableClusterOptionsRequest withVersion(GETDescribeOrderableClusterOptionsVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETDescribeOrderableClusterOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeOrderableClusterOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDescribeOrderableClusterOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeOrderableClusterOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDescribeOrderableClusterOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeOrderableClusterOptionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDescribeOrderableClusterOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeOrderableClusterOptionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDescribeOrderableClusterOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeOrderableClusterOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDescribeOrderableClusterOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeOrderableClusterOptionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,14 @@ public class GETDescribeOrderableClusterOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeOrderableClusterOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeOrderableClusterOptionsRequest(@JsonProperty("Action") GETDescribeOrderableClusterOptionsActionEnum action, @JsonProperty("Version") GETDescribeOrderableClusterOptionsVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

@@ -18,9 +18,11 @@ public class ReadWrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousTransaction")
     public String previousTransaction;
+
     public ReadWrite withPreviousTransaction(String previousTransaction) {
         this.previousTransaction = previousTransaction;
         return this;
     }
     
+    public ReadWrite(){}
 }

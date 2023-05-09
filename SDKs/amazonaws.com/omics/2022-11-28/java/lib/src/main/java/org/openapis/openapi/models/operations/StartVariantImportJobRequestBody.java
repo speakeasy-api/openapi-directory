@@ -14,6 +14,7 @@ public class StartVariantImportJobRequestBody {
      */
     @JsonProperty("destinationName")
     public String destinationName;
+
     public StartVariantImportJobRequestBody withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -24,6 +25,7 @@ public class StartVariantImportJobRequestBody {
      */
     @JsonProperty("items")
     public org.openapis.openapi.models.shared.VariantImportItemSource[] items;
+
     public StartVariantImportJobRequestBody withItems(org.openapis.openapi.models.shared.VariantImportItemSource[] items) {
         this.items = items;
         return this;
@@ -34,6 +36,7 @@ public class StartVariantImportJobRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public StartVariantImportJobRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -45,9 +48,15 @@ public class StartVariantImportJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runLeftNormalization")
     public Boolean runLeftNormalization;
+
     public StartVariantImportJobRequestBody withRunLeftNormalization(Boolean runLeftNormalization) {
         this.runLeftNormalization = runLeftNormalization;
         return this;
     }
     
+    public StartVariantImportJobRequestBody(@JsonProperty("destinationName") String destinationName, @JsonProperty("items") org.openapis.openapi.models.shared.VariantImportItemSource[] items, @JsonProperty("roleArn") String roleArn) {
+        this.destinationName = destinationName;
+        this.items = items;
+        this.roleArn = roleArn;
+  }
 }

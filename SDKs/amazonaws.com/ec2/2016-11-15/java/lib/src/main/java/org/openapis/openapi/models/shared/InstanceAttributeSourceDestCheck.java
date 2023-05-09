@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class InstanceAttributeSourceDestCheck {
     
     public Boolean value;
+
     public InstanceAttributeSourceDestCheck withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public InstanceAttributeSourceDestCheck(){}
 }

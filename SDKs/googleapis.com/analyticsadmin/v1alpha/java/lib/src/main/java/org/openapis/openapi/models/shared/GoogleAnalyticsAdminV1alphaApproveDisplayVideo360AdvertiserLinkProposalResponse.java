@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaApproveDisplayVideo360AdvertiserLinkProp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayVideo360AdvertiserLink")
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink displayVideo360AdvertiserLink;
+
     public GoogleAnalyticsAdminV1alphaApproveDisplayVideo360AdvertiserLinkProposalResponse withDisplayVideo360AdvertiserLink(GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink displayVideo360AdvertiserLink) {
         this.displayVideo360AdvertiserLink = displayVideo360AdvertiserLink;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaApproveDisplayVideo360AdvertiserLinkProposalResponse(){}
 }

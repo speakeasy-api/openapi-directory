@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1TransferEntitlementsToGoogleRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entitlements")
     public GoogleCloudChannelV1EntitlementInput[] entitlements;
+
     public GoogleCloudChannelV1TransferEntitlementsToGoogleRequestInput withEntitlements(GoogleCloudChannelV1EntitlementInput[] entitlements) {
         this.entitlements = entitlements;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudChannelV1TransferEntitlementsToGoogleRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleCloudChannelV1TransferEntitlementsToGoogleRequestInput withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GoogleCloudChannelV1TransferEntitlementsToGoogleRequestInput(){}
 }

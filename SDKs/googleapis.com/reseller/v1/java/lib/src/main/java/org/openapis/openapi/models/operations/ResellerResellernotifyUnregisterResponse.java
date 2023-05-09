@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResellerResellernotifyUnregisterResponse {
     
     public String contentType;
+
     public ResellerResellernotifyUnregisterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ResellerResellernotifyUnregisterResponse {
      */
     
     public org.openapis.openapi.models.shared.ResellernotifyResource resellernotifyResource;
+
     public ResellerResellernotifyUnregisterResponse withResellernotifyResource(org.openapis.openapi.models.shared.ResellernotifyResource resellernotifyResource) {
         this.resellernotifyResource = resellernotifyResource;
         return this;
@@ -26,6 +29,7 @@ public class ResellerResellernotifyUnregisterResponse {
     
     
     public Integer statusCode;
+
     public ResellerResellernotifyUnregisterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ResellerResellernotifyUnregisterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResellerResellernotifyUnregisterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ResellerResellernotifyUnregisterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

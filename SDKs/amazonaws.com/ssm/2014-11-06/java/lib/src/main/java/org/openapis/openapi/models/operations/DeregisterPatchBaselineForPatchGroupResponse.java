@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterPatchBaselineForPatchGroupResponse {
     
     public String contentType;
+
     public DeregisterPatchBaselineForPatchGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterPatchBaselineForPatchGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DeregisterPatchBaselineForPatchGroupResult deregisterPatchBaselineForPatchGroupResult;
+
     public DeregisterPatchBaselineForPatchGroupResponse withDeregisterPatchBaselineForPatchGroupResult(org.openapis.openapi.models.shared.DeregisterPatchBaselineForPatchGroupResult deregisterPatchBaselineForPatchGroupResult) {
         this.deregisterPatchBaselineForPatchGroupResult = deregisterPatchBaselineForPatchGroupResult;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterPatchBaselineForPatchGroupResponse {
      */
     
     public Object internalServerError;
+
     public DeregisterPatchBaselineForPatchGroupResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterPatchBaselineForPatchGroupResponse {
      */
     
     public Object invalidResourceId;
+
     public DeregisterPatchBaselineForPatchGroupResponse withInvalidResourceId(Object invalidResourceId) {
         this.invalidResourceId = invalidResourceId;
         return this;
@@ -46,6 +51,7 @@ public class DeregisterPatchBaselineForPatchGroupResponse {
     
     
     public Integer statusCode;
+
     public DeregisterPatchBaselineForPatchGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeregisterPatchBaselineForPatchGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterPatchBaselineForPatchGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeregisterPatchBaselineForPatchGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

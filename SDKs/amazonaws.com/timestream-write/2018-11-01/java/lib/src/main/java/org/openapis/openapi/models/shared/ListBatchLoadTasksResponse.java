@@ -15,6 +15,7 @@ public class ListBatchLoadTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchLoadTasks")
     public BatchLoadTask[] batchLoadTasks;
+
     public ListBatchLoadTasksResponse withBatchLoadTasks(BatchLoadTask[] batchLoadTasks) {
         this.batchLoadTasks = batchLoadTasks;
         return this;
@@ -23,9 +24,11 @@ public class ListBatchLoadTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListBatchLoadTasksResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBatchLoadTasksResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetUvRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public Double alt;
+
     public GetUvRequest withAlt(Double alt) {
         this.alt = alt;
         return this;
@@ -23,6 +25,7 @@ public class GetUvRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dt")
     public OffsetDateTime dt;
+
     public GetUvRequest withDt(OffsetDateTime dt) {
         this.dt = dt;
         return this;
@@ -33,6 +36,7 @@ public class GetUvRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
     public Double lat;
+
     public GetUvRequest withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -43,6 +47,7 @@ public class GetUvRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lng")
     public Double lng;
+
     public GetUvRequest withLng(Double lng) {
         this.lng = lng;
         return this;
@@ -53,6 +58,7 @@ public class GetUvRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ozone")
     public Double ozone;
+
     public GetUvRequest withOzone(Double ozone) {
         this.ozone = ozone;
         return this;
@@ -63,9 +69,15 @@ public class GetUvRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-access-token")
     public String xAccessToken;
+
     public GetUvRequest withXAccessToken(String xAccessToken) {
         this.xAccessToken = xAccessToken;
         return this;
     }
     
+    public GetUvRequest(@JsonProperty("lat") Double lat, @JsonProperty("lng") Double lng, @JsonProperty("x-access-token") String xAccessToken) {
+        this.lat = lat;
+        this.lng = lng;
+        this.xAccessToken = xAccessToken;
+  }
 }

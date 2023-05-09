@@ -110,6 +110,7 @@ public class SDK {
     public AssetsCorrelationMatrix assetsCorrelationMatrix;
     public AssetsCovarianceMatrix assetsCovarianceMatrix;
     public AssetsKurtosis assetsKurtosis;
+    public AssetsMonteCarloReturnsSimulation assetsMonteCarloReturnsSimulation;
     public AssetsPrices assetsPrices;
     public AssetsReturns assetsReturns;
     public AssetsReturnsSimulation assetsReturnsSimulation;
@@ -118,7 +119,9 @@ public class SDK {
     public AssetsVolatility assetsVolatility;
     public Factors factors;
     public PortfolioAnalysis portfolioAnalysis;
+    public PortfolioAnalysisConditionalValueAtRisk portfolioAnalysisConditionalValueAtRisk;
     public PortfolioAnalysisSharpeRatio portfolioAnalysisSharpeRatio;
+    public PortfolioAnalysisValueAtRisk portfolioAnalysisValueAtRisk;
     public PortfolioConstruction portfolioConstruction;
     public PortfolioOptimization portfolioOptimization;
     public PortfolioOptimizationMeanVariance portfolioOptimizationMeanVariance;
@@ -226,6 +229,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.assetsAnalysis = new AssetsAnalysis(
@@ -256,6 +264,15 @@ public class SDK {
 		);
 		
 		this.assetsKurtosis = new AssetsKurtosis(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.assetsMonteCarloReturnsSimulation = new AssetsMonteCarloReturnsSimulation(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,
@@ -336,7 +353,25 @@ public class SDK {
 			this._genVersion
 		);
 		
+		this.portfolioAnalysisConditionalValueAtRisk = new PortfolioAnalysisConditionalValueAtRisk(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
 		this.portfolioAnalysisSharpeRatio = new PortfolioAnalysisSharpeRatio(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.portfolioAnalysisValueAtRisk = new PortfolioAnalysisValueAtRisk(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,

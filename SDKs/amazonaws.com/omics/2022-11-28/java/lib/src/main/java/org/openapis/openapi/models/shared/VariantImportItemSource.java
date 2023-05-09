@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VariantImportItemSource {
     @JsonProperty("source")
     public String source;
+
     public VariantImportItemSource withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public VariantImportItemSource(@JsonProperty("source") String source) {
+        this.source = source;
+  }
 }

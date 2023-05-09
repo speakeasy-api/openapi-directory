@@ -18,6 +18,7 @@ public class EnterpriseCrmEventbusProtoNextTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combinedConditions")
     public EnterpriseCrmEventbusProtoCombinedCondition[] combinedConditions;
+
     public EnterpriseCrmEventbusProtoNextTask withCombinedConditions(EnterpriseCrmEventbusProtoCombinedCondition[] combinedConditions) {
         this.combinedConditions = combinedConditions;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmEventbusProtoNextTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public EnterpriseCrmEventbusProtoNextTask withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -40,6 +42,7 @@ public class EnterpriseCrmEventbusProtoNextTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EnterpriseCrmEventbusProtoNextTask withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class EnterpriseCrmEventbusProtoNextTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public EnterpriseCrmEventbusProtoNextTask withLabel(String label) {
         this.label = label;
         return this;
@@ -62,6 +66,7 @@ public class EnterpriseCrmEventbusProtoNextTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskConfigId")
     public String taskConfigId;
+
     public EnterpriseCrmEventbusProtoNextTask withTaskConfigId(String taskConfigId) {
         this.taskConfigId = taskConfigId;
         return this;
@@ -73,9 +78,11 @@ public class EnterpriseCrmEventbusProtoNextTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskNumber")
     public String taskNumber;
+
     public EnterpriseCrmEventbusProtoNextTask withTaskNumber(String taskNumber) {
         this.taskNumber = taskNumber;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoNextTask(){}
 }

@@ -12,6 +12,7 @@ public class GamePPADefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstDown")
     public Double firstDown;
+
     public GamePPADefense withFirstDown(Double firstDown) {
         this.firstDown = firstDown;
         return this;
@@ -20,6 +21,7 @@ public class GamePPADefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overall")
     public Double overall;
+
     public GamePPADefense withOverall(Double overall) {
         this.overall = overall;
         return this;
@@ -28,6 +30,7 @@ public class GamePPADefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passing")
     public Double passing;
+
     public GamePPADefense withPassing(Double passing) {
         this.passing = passing;
         return this;
@@ -36,6 +39,7 @@ public class GamePPADefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rushing")
     public Double rushing;
+
     public GamePPADefense withRushing(Double rushing) {
         this.rushing = rushing;
         return this;
@@ -44,6 +48,7 @@ public class GamePPADefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondDown")
     public Double secondDown;
+
     public GamePPADefense withSecondDown(Double secondDown) {
         this.secondDown = secondDown;
         return this;
@@ -52,9 +57,11 @@ public class GamePPADefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thirdDown")
     public Double thirdDown;
+
     public GamePPADefense withThirdDown(Double thirdDown) {
         this.thirdDown = thirdDown;
         return this;
     }
     
+    public GamePPADefense(){}
 }

@@ -15,6 +15,7 @@ public class GlobalTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTableName")
     public String globalTableName;
+
     public GlobalTable withGlobalTableName(String globalTableName) {
         this.globalTableName = globalTableName;
         return this;
@@ -23,9 +24,11 @@ public class GlobalTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationGroup")
     public Replica[] replicationGroup;
+
     public GlobalTable withReplicationGroup(Replica[] replicationGroup) {
         this.replicationGroup = replicationGroup;
         return this;
     }
     
+    public GlobalTable(){}
 }

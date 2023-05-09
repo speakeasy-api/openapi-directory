@@ -15,6 +15,7 @@ public class UpdateConfigurationSetEventDestinationRequestBodyEventDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchDestination")
     public org.openapis.openapi.models.shared.CloudWatchDestination cloudWatchDestination;
+
     public UpdateConfigurationSetEventDestinationRequestBodyEventDestination withCloudWatchDestination(org.openapis.openapi.models.shared.CloudWatchDestination cloudWatchDestination) {
         this.cloudWatchDestination = cloudWatchDestination;
         return this;
@@ -23,6 +24,7 @@ public class UpdateConfigurationSetEventDestinationRequestBodyEventDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public UpdateConfigurationSetEventDestinationRequestBodyEventDestination withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -31,6 +33,7 @@ public class UpdateConfigurationSetEventDestinationRequestBodyEventDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisFirehoseDestination")
     public org.openapis.openapi.models.shared.KinesisFirehoseDestination kinesisFirehoseDestination;
+
     public UpdateConfigurationSetEventDestinationRequestBodyEventDestination withKinesisFirehoseDestination(org.openapis.openapi.models.shared.KinesisFirehoseDestination kinesisFirehoseDestination) {
         this.kinesisFirehoseDestination = kinesisFirehoseDestination;
         return this;
@@ -39,6 +42,7 @@ public class UpdateConfigurationSetEventDestinationRequestBodyEventDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchingEventTypes")
     public org.openapis.openapi.models.shared.EventTypeEnum[] matchingEventTypes;
+
     public UpdateConfigurationSetEventDestinationRequestBodyEventDestination withMatchingEventTypes(org.openapis.openapi.models.shared.EventTypeEnum[] matchingEventTypes) {
         this.matchingEventTypes = matchingEventTypes;
         return this;
@@ -47,6 +51,7 @@ public class UpdateConfigurationSetEventDestinationRequestBodyEventDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PinpointDestination")
     public org.openapis.openapi.models.shared.PinpointDestination pinpointDestination;
+
     public UpdateConfigurationSetEventDestinationRequestBodyEventDestination withPinpointDestination(org.openapis.openapi.models.shared.PinpointDestination pinpointDestination) {
         this.pinpointDestination = pinpointDestination;
         return this;
@@ -55,9 +60,11 @@ public class UpdateConfigurationSetEventDestinationRequestBodyEventDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsDestination")
     public org.openapis.openapi.models.shared.SnsDestination snsDestination;
+
     public UpdateConfigurationSetEventDestinationRequestBodyEventDestination withSnsDestination(org.openapis.openapi.models.shared.SnsDestination snsDestination) {
         this.snsDestination = snsDestination;
         return this;
     }
     
+    public UpdateConfigurationSetEventDestinationRequestBodyEventDestination(){}
 }

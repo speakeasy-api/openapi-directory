@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopDevEnvironmentSessionResponse {
     @JsonProperty("id")
     public String id;
+
     public StopDevEnvironmentSessionResponse withId(String id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class StopDevEnvironmentSessionResponse {
     
     @JsonProperty("projectName")
     public String projectName;
+
     public StopDevEnvironmentSessionResponse withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -26,6 +28,7 @@ public class StopDevEnvironmentSessionResponse {
     
     @JsonProperty("sessionId")
     public String sessionId;
+
     public StopDevEnvironmentSessionResponse withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -33,9 +36,16 @@ public class StopDevEnvironmentSessionResponse {
     
     @JsonProperty("spaceName")
     public String spaceName;
+
     public StopDevEnvironmentSessionResponse withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
     }
     
+    public StopDevEnvironmentSessionResponse(@JsonProperty("id") String id, @JsonProperty("projectName") String projectName, @JsonProperty("sessionId") String sessionId, @JsonProperty("spaceName") String spaceName) {
+        this.id = id;
+        this.projectName = projectName;
+        this.sessionId = sessionId;
+        this.spaceName = spaceName;
+  }
 }

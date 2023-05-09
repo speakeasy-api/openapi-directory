@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagsCountResponse {
     
     public String contentType;
+
     public TagsCountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TagsCountResponse {
     
     
     public Integer statusCode;
+
     public TagsCountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TagsCountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagsCountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class TagsCountResponse {
     
     
     public java.util.Map<String, Object> systemObject;
+
     public TagsCountResponse withSystemObject(java.util.Map<String, Object> systemObject) {
         this.systemObject = systemObject;
         return this;
     }
     
+    public TagsCountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

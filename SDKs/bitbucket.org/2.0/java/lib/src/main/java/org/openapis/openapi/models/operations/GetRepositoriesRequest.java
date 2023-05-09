@@ -14,6 +14,7 @@ public class GetRepositoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
     public String after;
+
     public GetRepositoriesRequest withAfter(String after) {
         this.after = after;
         return this;
@@ -26,6 +27,7 @@ public class GetRepositoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetRepositoriesRequest withQ(String q) {
         this.q = q;
         return this;
@@ -42,6 +44,7 @@ public class GetRepositoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
     public GetRepositoriesRoleEnum role;
+
     public GetRepositoriesRequest withRole(GetRepositoriesRoleEnum role) {
         this.role = role;
         return this;
@@ -53,9 +56,11 @@ public class GetRepositoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetRepositoriesRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetRepositoriesRequest(){}
 }

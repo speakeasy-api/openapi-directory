@@ -72,11 +72,9 @@ public class PurchaseInformation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePurchaseInformationResponse res = new org.openapis.openapi.models.operations.CreatePurchaseInformationResponse() {{
+        org.openapis.openapi.models.operations.CreatePurchaseInformationResponse res = new org.openapis.openapi.models.operations.CreatePurchaseInformationResponse(contentType, httpRes.statusCode()) {{
             createPurchaseInformation201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -128,10 +126,8 @@ public class PurchaseInformation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePurchaseInformationResponse res = new org.openapis.openapi.models.operations.DeletePurchaseInformationResponse() {{
+        org.openapis.openapi.models.operations.DeletePurchaseInformationResponse res = new org.openapis.openapi.models.operations.DeletePurchaseInformationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -180,11 +176,9 @@ public class PurchaseInformation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPurchaseInformationResponse res = new org.openapis.openapi.models.operations.GetPurchaseInformationResponse() {{
+        org.openapis.openapi.models.operations.GetPurchaseInformationResponse res = new org.openapis.openapi.models.operations.GetPurchaseInformationResponse(contentType, httpRes.statusCode()) {{
             getPurchaseInformation200ApplicationJSONAnies = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -230,11 +224,9 @@ public class PurchaseInformation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUnmaskedPurchaseInformationResponse res = new org.openapis.openapi.models.operations.GetUnmaskedPurchaseInformationResponse() {{
+        org.openapis.openapi.models.operations.GetUnmaskedPurchaseInformationResponse res = new org.openapis.openapi.models.operations.GetUnmaskedPurchaseInformationResponse(contentType, httpRes.statusCode()) {{
             getUnmaskedPurchaseInformation200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,11 +280,9 @@ public class PurchaseInformation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePurchaseInformationResponse res = new org.openapis.openapi.models.operations.UpdatePurchaseInformationResponse() {{
+        org.openapis.openapi.models.operations.UpdatePurchaseInformationResponse res = new org.openapis.openapi.models.operations.UpdatePurchaseInformationResponse(contentType, httpRes.statusCode()) {{
             updatePurchaseInformation200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

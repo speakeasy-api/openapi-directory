@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2QuasiIdentifierField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customTag")
     public String customTag;
+
     public GooglePrivacyDlpV2QuasiIdentifierField withCustomTag(String customTag) {
         this.customTag = customTag;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2QuasiIdentifierField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public GooglePrivacyDlpV2FieldId field;
+
     public GooglePrivacyDlpV2QuasiIdentifierField withField(GooglePrivacyDlpV2FieldId field) {
         this.field = field;
         return this;
     }
     
+    public GooglePrivacyDlpV2QuasiIdentifierField(){}
 }

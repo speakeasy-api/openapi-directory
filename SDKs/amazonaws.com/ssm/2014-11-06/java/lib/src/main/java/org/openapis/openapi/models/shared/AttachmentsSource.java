@@ -15,6 +15,7 @@ public class AttachmentsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public AttachmentsSourceKeyEnum key;
+
     public AttachmentsSource withKey(AttachmentsSourceKeyEnum key) {
         this.key = key;
         return this;
@@ -23,6 +24,7 @@ public class AttachmentsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AttachmentsSource withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class AttachmentsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public AttachmentsSource withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public AttachmentsSource(){}
 }

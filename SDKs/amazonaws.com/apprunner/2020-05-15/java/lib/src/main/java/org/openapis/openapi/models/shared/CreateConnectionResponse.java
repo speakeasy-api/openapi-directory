@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateConnectionResponse {
     @JsonProperty("Connection")
     public Connection connection;
+
     public CreateConnectionResponse withConnection(Connection connection) {
         this.connection = connection;
         return this;
     }
     
+    public CreateConnectionResponse(@JsonProperty("Connection") Connection connection) {
+        this.connection = connection;
+  }
 }

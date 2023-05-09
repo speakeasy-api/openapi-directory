@@ -15,6 +15,7 @@ public class ContainersGroupsNameOrIdGetDetailsNumberInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentSize")
     public Integer currentSize;
+
     public ContainersGroupsNameOrIdGetDetailsNumberInstances withCurrentSize(Integer currentSize) {
         this.currentSize = currentSize;
         return this;
@@ -26,6 +27,7 @@ public class ContainersGroupsNameOrIdGetDetailsNumberInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Desired")
     public Integer desired;
+
     public ContainersGroupsNameOrIdGetDetailsNumberInstances withDesired(Integer desired) {
         this.desired = desired;
         return this;
@@ -37,6 +39,7 @@ public class ContainersGroupsNameOrIdGetDetailsNumberInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Max")
     public Integer max;
+
     public ContainersGroupsNameOrIdGetDetailsNumberInstances withMax(Integer max) {
         this.max = max;
         return this;
@@ -48,9 +51,11 @@ public class ContainersGroupsNameOrIdGetDetailsNumberInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Min")
     public Integer min;
+
     public ContainersGroupsNameOrIdGetDetailsNumberInstances withMin(Integer min) {
         this.min = min;
         return this;
     }
     
+    public ContainersGroupsNameOrIdGetDetailsNumberInstances(){}
 }

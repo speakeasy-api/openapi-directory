@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Job {
     @JsonProperty("steps")
     public Step[] steps;
+
     public Job withSteps(Step[] steps) {
         this.steps = steps;
         return this;
@@ -19,9 +20,14 @@ public class Job {
     
     @JsonProperty("summary")
     public JobSummary summary;
+
     public Job withSummary(JobSummary summary) {
         this.summary = summary;
         return this;
     }
     
+    public Job(@JsonProperty("steps") Step[] steps, @JsonProperty("summary") JobSummary summary) {
+        this.steps = steps;
+        this.summary = summary;
+  }
 }

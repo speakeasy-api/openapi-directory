@@ -55,12 +55,10 @@ public class Scheduler {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExecuteDestinationCheckConnectionResponse res = new org.openapis.openapi.models.operations.ExecuteDestinationCheckConnectionResponse() {{
+        org.openapis.openapi.models.operations.ExecuteDestinationCheckConnectionResponse res = new org.openapis.openapi.models.operations.ExecuteDestinationCheckConnectionResponse(contentType, httpRes.statusCode()) {{
             checkConnectionRead = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,12 +104,10 @@ public class Scheduler {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExecuteSourceCheckConnectionResponse res = new org.openapis.openapi.models.operations.ExecuteSourceCheckConnectionResponse() {{
+        org.openapis.openapi.models.operations.ExecuteSourceCheckConnectionResponse res = new org.openapis.openapi.models.operations.ExecuteSourceCheckConnectionResponse(contentType, httpRes.statusCode()) {{
             checkConnectionRead = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,12 +153,10 @@ public class Scheduler {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExecuteSourceDiscoverSchemaResponse res = new org.openapis.openapi.models.operations.ExecuteSourceDiscoverSchemaResponse() {{
+        org.openapis.openapi.models.operations.ExecuteSourceDiscoverSchemaResponse res = new org.openapis.openapi.models.operations.ExecuteSourceDiscoverSchemaResponse(contentType, httpRes.statusCode()) {{
             sourceDiscoverSchemaRead = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

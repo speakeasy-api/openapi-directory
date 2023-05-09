@@ -15,9 +15,11 @@ public class CreateBGPPeerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterface")
     public VirtualInterface virtualInterface;
+
     public CreateBGPPeerResponse withVirtualInterface(VirtualInterface virtualInterface) {
         this.virtualInterface = virtualInterface;
         return this;
     }
     
+    public CreateBGPPeerResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApiDestinationResponse {
@@ -12,6 +13,7 @@ public class DeleteApiDestinationResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteApiDestinationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApiDestinationResponse {
     
     
     public String contentType;
+
     public DeleteApiDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteApiDestinationResponse {
      */
     
     public java.util.Map<String, Object> deleteApiDestinationResponse;
+
     public DeleteApiDestinationResponse withDeleteApiDestinationResponse(java.util.Map<String, Object> deleteApiDestinationResponse) {
         this.deleteApiDestinationResponse = deleteApiDestinationResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteApiDestinationResponse {
      */
     
     public Object internalException;
+
     public DeleteApiDestinationResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteApiDestinationResponse {
     
     
     public Integer statusCode;
+
     public DeleteApiDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteApiDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApiDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteApiDestinationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteApiDestinationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteApiDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

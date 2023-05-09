@@ -22,6 +22,7 @@ public class TrustAnchorDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public TrustAnchorDetail withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class TrustAnchorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public TrustAnchorDetail withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -38,6 +40,7 @@ public class TrustAnchorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TrustAnchorDetail withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +49,7 @@ public class TrustAnchorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public TrustAnchorDetail withSource(Source source) {
         this.source = source;
         return this;
@@ -54,6 +58,7 @@ public class TrustAnchorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustAnchorArn")
     public String trustAnchorArn;
+
     public TrustAnchorDetail withTrustAnchorArn(String trustAnchorArn) {
         this.trustAnchorArn = trustAnchorArn;
         return this;
@@ -62,6 +67,7 @@ public class TrustAnchorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustAnchorId")
     public String trustAnchorId;
+
     public TrustAnchorDetail withTrustAnchorId(String trustAnchorId) {
         this.trustAnchorId = trustAnchorId;
         return this;
@@ -72,9 +78,11 @@ public class TrustAnchorDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public TrustAnchorDetail withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public TrustAnchorDetail(){}
 }

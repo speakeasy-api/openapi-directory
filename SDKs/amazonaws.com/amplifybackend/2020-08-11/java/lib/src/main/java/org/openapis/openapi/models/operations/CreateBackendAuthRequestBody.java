@@ -12,6 +12,7 @@ public class CreateBackendAuthRequestBody {
      */
     @JsonProperty("backendEnvironmentName")
     public String backendEnvironmentName;
+
     public CreateBackendAuthRequestBody withBackendEnvironmentName(String backendEnvironmentName) {
         this.backendEnvironmentName = backendEnvironmentName;
         return this;
@@ -22,6 +23,7 @@ public class CreateBackendAuthRequestBody {
      */
     @JsonProperty("resourceConfig")
     public CreateBackendAuthRequestBodyResourceConfig resourceConfig;
+
     public CreateBackendAuthRequestBody withResourceConfig(CreateBackendAuthRequestBodyResourceConfig resourceConfig) {
         this.resourceConfig = resourceConfig;
         return this;
@@ -32,9 +34,15 @@ public class CreateBackendAuthRequestBody {
      */
     @JsonProperty("resourceName")
     public String resourceName;
+
     public CreateBackendAuthRequestBody withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public CreateBackendAuthRequestBody(@JsonProperty("backendEnvironmentName") String backendEnvironmentName, @JsonProperty("resourceConfig") CreateBackendAuthRequestBodyResourceConfig resourceConfig, @JsonProperty("resourceName") String resourceName) {
+        this.backendEnvironmentName = backendEnvironmentName;
+        this.resourceConfig = resourceConfig;
+        this.resourceName = resourceName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDirectConnectGatewayAssociationResponse {
     
     public String contentType;
+
     public CreateDirectConnectGatewayAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDirectConnectGatewayAssociationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDirectConnectGatewayAssociationResult createDirectConnectGatewayAssociationResult;
+
     public CreateDirectConnectGatewayAssociationResponse withCreateDirectConnectGatewayAssociationResult(org.openapis.openapi.models.shared.CreateDirectConnectGatewayAssociationResult createDirectConnectGatewayAssociationResult) {
         this.createDirectConnectGatewayAssociationResult = createDirectConnectGatewayAssociationResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateDirectConnectGatewayAssociationResponse {
      */
     
     public Object directConnectClientException;
+
     public CreateDirectConnectGatewayAssociationResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDirectConnectGatewayAssociationResponse {
      */
     
     public Object directConnectServerException;
+
     public CreateDirectConnectGatewayAssociationResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class CreateDirectConnectGatewayAssociationResponse {
     
     
     public Integer statusCode;
+
     public CreateDirectConnectGatewayAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateDirectConnectGatewayAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDirectConnectGatewayAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDirectConnectGatewayAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

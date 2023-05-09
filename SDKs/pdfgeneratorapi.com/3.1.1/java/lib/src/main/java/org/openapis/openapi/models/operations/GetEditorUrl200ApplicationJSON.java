@@ -15,9 +15,11 @@ public class GetEditorUrl200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public String response;
+
     public GetEditorUrl200ApplicationJSON withResponse(String response) {
         this.response = response;
         return this;
     }
     
+    public GetEditorUrl200ApplicationJSON(){}
 }

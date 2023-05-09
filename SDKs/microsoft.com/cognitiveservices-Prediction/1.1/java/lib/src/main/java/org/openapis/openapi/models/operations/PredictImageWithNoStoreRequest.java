@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictImageWithNoStoreRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Prediction-Key")
     public String predictionKey;
+
     public PredictImageWithNoStoreRequest withPredictionKey(String predictionKey) {
         this.predictionKey = predictionKey;
         return this;
@@ -16,6 +18,7 @@ public class PredictImageWithNoStoreRequest {
     
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PredictImageWithNoStoreRequestBody requestBody;
+
     public PredictImageWithNoStoreRequest withRequestBody(PredictImageWithNoStoreRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class PredictImageWithNoStoreRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
     public String application;
+
     public PredictImageWithNoStoreRequest withApplication(String application) {
         this.application = application;
         return this;
@@ -37,6 +41,7 @@ public class PredictImageWithNoStoreRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public PredictImageWithNoStoreRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -47,9 +52,15 @@ public class PredictImageWithNoStoreRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public PredictImageWithNoStoreRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public PredictImageWithNoStoreRequest(@JsonProperty("Prediction-Key") String predictionKey, @JsonProperty("RequestBody") PredictImageWithNoStoreRequestBody requestBody, @JsonProperty("projectId") String projectId) {
+        this.predictionKey = predictionKey;
+        this.requestBody = requestBody;
+        this.projectId = projectId;
+  }
 }

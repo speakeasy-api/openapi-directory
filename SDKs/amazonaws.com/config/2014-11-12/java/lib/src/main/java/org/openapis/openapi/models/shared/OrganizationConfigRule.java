@@ -20,6 +20,7 @@ public class OrganizationConfigRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludedAccounts")
     public String[] excludedAccounts;
+
     public OrganizationConfigRule withExcludedAccounts(String[] excludedAccounts) {
         this.excludedAccounts = excludedAccounts;
         return this;
@@ -30,6 +31,7 @@ public class OrganizationConfigRule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public OrganizationConfigRule withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -37,6 +39,7 @@ public class OrganizationConfigRule {
     
     @JsonProperty("OrganizationConfigRuleArn")
     public String organizationConfigRuleArn;
+
     public OrganizationConfigRule withOrganizationConfigRuleArn(String organizationConfigRuleArn) {
         this.organizationConfigRuleArn = organizationConfigRuleArn;
         return this;
@@ -44,6 +47,7 @@ public class OrganizationConfigRule {
     
     @JsonProperty("OrganizationConfigRuleName")
     public String organizationConfigRuleName;
+
     public OrganizationConfigRule withOrganizationConfigRuleName(String organizationConfigRuleName) {
         this.organizationConfigRuleName = organizationConfigRuleName;
         return this;
@@ -52,6 +56,7 @@ public class OrganizationConfigRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationCustomPolicyRuleMetadata")
     public OrganizationCustomPolicyRuleMetadataNoPolicy organizationCustomPolicyRuleMetadata;
+
     public OrganizationConfigRule withOrganizationCustomPolicyRuleMetadata(OrganizationCustomPolicyRuleMetadataNoPolicy organizationCustomPolicyRuleMetadata) {
         this.organizationCustomPolicyRuleMetadata = organizationCustomPolicyRuleMetadata;
         return this;
@@ -60,6 +65,7 @@ public class OrganizationConfigRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationCustomRuleMetadata")
     public OrganizationCustomRuleMetadata organizationCustomRuleMetadata;
+
     public OrganizationConfigRule withOrganizationCustomRuleMetadata(OrganizationCustomRuleMetadata organizationCustomRuleMetadata) {
         this.organizationCustomRuleMetadata = organizationCustomRuleMetadata;
         return this;
@@ -68,9 +74,14 @@ public class OrganizationConfigRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationManagedRuleMetadata")
     public OrganizationManagedRuleMetadata organizationManagedRuleMetadata;
+
     public OrganizationConfigRule withOrganizationManagedRuleMetadata(OrganizationManagedRuleMetadata organizationManagedRuleMetadata) {
         this.organizationManagedRuleMetadata = organizationManagedRuleMetadata;
         return this;
     }
     
+    public OrganizationConfigRule(@JsonProperty("OrganizationConfigRuleArn") String organizationConfigRuleArn, @JsonProperty("OrganizationConfigRuleName") String organizationConfigRuleName) {
+        this.organizationConfigRuleArn = organizationConfigRuleArn;
+        this.organizationConfigRuleName = organizationConfigRuleName;
+  }
 }

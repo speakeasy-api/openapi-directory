@@ -12,6 +12,7 @@ public class EventSubscriptionsResponseMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpStatus")
     public String httpStatus;
+
     public EventSubscriptionsResponseMeta withHttpStatus(String httpStatus) {
         this.httpStatus = httpStatus;
         return this;
@@ -20,9 +21,11 @@ public class EventSubscriptionsResponseMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public EventSubscriptionsResponseMeta withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public EventSubscriptionsResponseMeta(){}
 }

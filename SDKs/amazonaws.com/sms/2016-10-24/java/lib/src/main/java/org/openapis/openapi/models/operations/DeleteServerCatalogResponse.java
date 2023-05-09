@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteServerCatalogResponse {
     
     public String contentType;
+
     public DeleteServerCatalogResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteServerCatalogResponse {
      */
     
     public java.util.Map<String, Object> deleteServerCatalogResponse;
+
     public DeleteServerCatalogResponse withDeleteServerCatalogResponse(java.util.Map<String, Object> deleteServerCatalogResponse) {
         this.deleteServerCatalogResponse = deleteServerCatalogResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteServerCatalogResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteServerCatalogResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteServerCatalogResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public DeleteServerCatalogResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteServerCatalogResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DeleteServerCatalogResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteServerCatalogResponse {
     
     
     public Integer statusCode;
+
     public DeleteServerCatalogResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteServerCatalogResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteServerCatalogResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteServerCatalogResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public DeleteServerCatalogResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public DeleteServerCatalogResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

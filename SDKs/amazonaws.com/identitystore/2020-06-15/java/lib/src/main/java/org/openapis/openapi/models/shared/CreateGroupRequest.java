@@ -12,6 +12,7 @@ public class CreateGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateGroupRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class CreateGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public CreateGroupRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -27,9 +29,13 @@ public class CreateGroupRequest {
     
     @JsonProperty("IdentityStoreId")
     public String identityStoreId;
+
     public CreateGroupRequest withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
     }
     
+    public CreateGroupRequest(@JsonProperty("IdentityStoreId") String identityStoreId) {
+        this.identityStoreId = identityStoreId;
+  }
 }

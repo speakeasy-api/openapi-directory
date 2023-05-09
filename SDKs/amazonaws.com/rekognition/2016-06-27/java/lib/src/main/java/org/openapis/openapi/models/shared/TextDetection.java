@@ -15,6 +15,7 @@ public class TextDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public TextDetection withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -23,6 +24,7 @@ public class TextDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetectedText")
     public String detectedText;
+
     public TextDetection withDetectedText(String detectedText) {
         this.detectedText = detectedText;
         return this;
@@ -31,6 +33,7 @@ public class TextDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Geometry")
     public Geometry geometry;
+
     public TextDetection withGeometry(Geometry geometry) {
         this.geometry = geometry;
         return this;
@@ -39,6 +42,7 @@ public class TextDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public TextDetection withId(Long id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class TextDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParentId")
     public Long parentId;
+
     public TextDetection withParentId(Long parentId) {
         this.parentId = parentId;
         return this;
@@ -55,9 +60,11 @@ public class TextDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public TextTypesEnum type;
+
     public TextDetection withType(TextTypesEnum type) {
         this.type = type;
         return this;
     }
     
+    public TextDetection(){}
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ListVectorEnrichmentJobOutputConfig {
     @JsonProperty("Arn")
     public String arn;
+
     public ListVectorEnrichmentJobOutputConfig withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ListVectorEnrichmentJobOutputConfig {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ListVectorEnrichmentJobOutputConfig withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -35,6 +37,7 @@ public class ListVectorEnrichmentJobOutputConfig {
     
     @JsonProperty("DurationInSeconds")
     public Long durationInSeconds;
+
     public ListVectorEnrichmentJobOutputConfig withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
@@ -42,6 +45,7 @@ public class ListVectorEnrichmentJobOutputConfig {
     
     @JsonProperty("Name")
     public String name;
+
     public ListVectorEnrichmentJobOutputConfig withName(String name) {
         this.name = name;
         return this;
@@ -49,6 +53,7 @@ public class ListVectorEnrichmentJobOutputConfig {
     
     @JsonProperty("Status")
     public VectorEnrichmentJobStatusEnum status;
+
     public ListVectorEnrichmentJobOutputConfig withStatus(VectorEnrichmentJobStatusEnum status) {
         this.status = status;
         return this;
@@ -57,6 +62,7 @@ public class ListVectorEnrichmentJobOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public ListVectorEnrichmentJobOutputConfig withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -64,9 +70,18 @@ public class ListVectorEnrichmentJobOutputConfig {
     
     @JsonProperty("Type")
     public VectorEnrichmentJobTypeEnum type;
+
     public ListVectorEnrichmentJobOutputConfig withType(VectorEnrichmentJobTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListVectorEnrichmentJobOutputConfig(@JsonProperty("Arn") String arn, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("DurationInSeconds") Long durationInSeconds, @JsonProperty("Name") String name, @JsonProperty("Status") VectorEnrichmentJobStatusEnum status, @JsonProperty("Type") VectorEnrichmentJobTypeEnum type) {
+        this.arn = arn;
+        this.creationTime = creationTime;
+        this.durationInSeconds = durationInSeconds;
+        this.name = name;
+        this.status = status;
+        this.type = type;
+  }
 }

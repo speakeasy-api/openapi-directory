@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResourceConfigForUpdate {
     @JsonProperty("KeepAlivePeriodInSeconds")
     public Long keepAlivePeriodInSeconds;
+
     public ResourceConfigForUpdate withKeepAlivePeriodInSeconds(Long keepAlivePeriodInSeconds) {
         this.keepAlivePeriodInSeconds = keepAlivePeriodInSeconds;
         return this;
     }
     
+    public ResourceConfigForUpdate(@JsonProperty("KeepAlivePeriodInSeconds") Long keepAlivePeriodInSeconds) {
+        this.keepAlivePeriodInSeconds = keepAlivePeriodInSeconds;
+  }
 }

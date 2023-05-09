@@ -15,9 +15,11 @@ public class LabelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public Label[] labels;
+
     public LabelSummary withLabels(Label[] labels) {
         this.labels = labels;
         return this;
     }
     
+    public LabelSummary(){}
 }

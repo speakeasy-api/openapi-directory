@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ScheduleBySeasonResponse {
     
     public String contentType;
+
     public ScheduleBySeasonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ScheduleBySeasonResponse {
     
     
     public Integer statusCode;
+
     public ScheduleBySeasonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ScheduleBySeasonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ScheduleBySeasonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class ScheduleBySeasonResponse {
     
     
     public org.openapis.openapi.models.shared.Tournament[] tournaments;
+
     public ScheduleBySeasonResponse withTournaments(org.openapis.openapi.models.shared.Tournament[] tournaments) {
         this.tournaments = tournaments;
         return this;
     }
     
+    public ScheduleBySeasonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ListLaunchProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchProfiles")
     public LaunchProfile[] launchProfiles;
+
     public ListLaunchProfilesResponse withLaunchProfiles(LaunchProfile[] launchProfiles) {
         this.launchProfiles = launchProfiles;
         return this;
@@ -23,9 +24,11 @@ public class ListLaunchProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListLaunchProfilesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLaunchProfilesResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVaultNotificationsResponse {
     
     public String contentType;
+
     public GetVaultNotificationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetVaultNotificationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetVaultNotificationsOutput getVaultNotificationsOutput;
+
     public GetVaultNotificationsResponse withGetVaultNotificationsOutput(org.openapis.openapi.models.shared.GetVaultNotificationsOutput getVaultNotificationsOutput) {
         this.getVaultNotificationsOutput = getVaultNotificationsOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetVaultNotificationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetVaultNotificationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class GetVaultNotificationsResponse {
      */
     
     public Object missingParameterValueException;
+
     public GetVaultNotificationsResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class GetVaultNotificationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetVaultNotificationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetVaultNotificationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetVaultNotificationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class GetVaultNotificationsResponse {
     
     
     public Integer statusCode;
+
     public GetVaultNotificationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetVaultNotificationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVaultNotificationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetVaultNotificationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

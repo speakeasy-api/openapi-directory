@@ -61,10 +61,8 @@ public class DirectDebits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActivateMandateResponse res = new org.openapis.openapi.models.operations.ActivateMandateResponse() {{
+        org.openapis.openapi.models.operations.ActivateMandateResponse res = new org.openapis.openapi.models.operations.ActivateMandateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -97,10 +95,8 @@ public class DirectDebits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelMandateByUuidResponse res = new org.openapis.openapi.models.operations.CancelMandateByUuidResponse() {{
+        org.openapis.openapi.models.operations.CancelMandateByUuidResponse res = new org.openapis.openapi.models.operations.CancelMandateByUuidResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -133,11 +129,9 @@ public class DirectDebits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDirectDebitByUuidResponse res = new org.openapis.openapi.models.operations.GetDirectDebitByUuidResponse() {{
+        org.openapis.openapi.models.operations.GetDirectDebitByUuidResponse res = new org.openapis.openapi.models.operations.GetDirectDebitByUuidResponse(contentType, httpRes.statusCode()) {{
             directDebit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -173,11 +167,9 @@ public class DirectDebits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDirectDebitMandatesResponse res = new org.openapis.openapi.models.operations.GetDirectDebitMandatesResponse() {{
+        org.openapis.openapi.models.operations.GetDirectDebitMandatesResponse res = new org.openapis.openapi.models.operations.GetDirectDebitMandatesResponse(contentType, httpRes.statusCode()) {{
             mandates = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -221,11 +213,9 @@ public class DirectDebits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDirectDebitsForMandateUuidResponse res = new org.openapis.openapi.models.operations.GetDirectDebitsForMandateUuidResponse() {{
+        org.openapis.openapi.models.operations.GetDirectDebitsForMandateUuidResponse res = new org.openapis.openapi.models.operations.GetDirectDebitsForMandateUuidResponse(contentType, httpRes.statusCode()) {{
             directDebits = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,11 +253,9 @@ public class DirectDebits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMandateResponse res = new org.openapis.openapi.models.operations.GetMandateResponse() {{
+        org.openapis.openapi.models.operations.GetMandateResponse res = new org.openapis.openapi.models.operations.GetMandateResponse(contentType, httpRes.statusCode()) {{
             mandate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -305,10 +293,8 @@ public class DirectDebits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RejectDirectDebitResponse res = new org.openapis.openapi.models.operations.RejectDirectDebitResponse() {{
+        org.openapis.openapi.models.operations.RejectDirectDebitResponse res = new org.openapis.openapi.models.operations.RejectDirectDebitResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -341,10 +327,8 @@ public class DirectDebits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateMandateAliasResponse res = new org.openapis.openapi.models.operations.UpdateMandateAliasResponse() {{
+        org.openapis.openapi.models.operations.UpdateMandateAliasResponse res = new org.openapis.openapi.models.operations.UpdateMandateAliasResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

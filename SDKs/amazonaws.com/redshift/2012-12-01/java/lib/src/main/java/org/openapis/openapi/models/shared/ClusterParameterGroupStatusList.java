@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClusterParameterGroupStatusList {
     
     public ClusterParameterStatus[] clusterParameterStatusList;
+
     public ClusterParameterGroupStatusList withClusterParameterStatusList(ClusterParameterStatus[] clusterParameterStatusList) {
         this.clusterParameterStatusList = clusterParameterStatusList;
         return this;
@@ -19,6 +20,7 @@ public class ClusterParameterGroupStatusList {
     
     
     public String parameterApplyStatus;
+
     public ClusterParameterGroupStatusList withParameterApplyStatus(String parameterApplyStatus) {
         this.parameterApplyStatus = parameterApplyStatus;
         return this;
@@ -26,9 +28,11 @@ public class ClusterParameterGroupStatusList {
     
     
     public String parameterGroupName;
+
     public ClusterParameterGroupStatusList withParameterGroupName(String parameterGroupName) {
         this.parameterGroupName = parameterGroupName;
         return this;
     }
     
+    public ClusterParameterGroupStatusList(){}
 }

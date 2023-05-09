@@ -12,6 +12,7 @@ public class VenueLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x")
     public Double x;
+
     public VenueLocation withX(Double x) {
         this.x = x;
         return this;
@@ -20,9 +21,11 @@ public class VenueLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public Double y;
+
     public VenueLocation withY(Double y) {
         this.y = y;
         return this;
     }
     
+    public VenueLocation(){}
 }

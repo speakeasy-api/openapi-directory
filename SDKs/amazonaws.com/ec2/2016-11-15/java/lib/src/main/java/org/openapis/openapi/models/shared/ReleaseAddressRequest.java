@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ReleaseAddressRequest {
     
     public String allocationId;
+
     public ReleaseAddressRequest withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -16,6 +17,7 @@ public class ReleaseAddressRequest {
     
     
     public Boolean dryRun;
+
     public ReleaseAddressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class ReleaseAddressRequest {
     
     
     public String networkBorderGroup;
+
     public ReleaseAddressRequest withNetworkBorderGroup(String networkBorderGroup) {
         this.networkBorderGroup = networkBorderGroup;
         return this;
@@ -30,9 +33,11 @@ public class ReleaseAddressRequest {
     
     
     public String publicIp;
+
     public ReleaseAddressRequest withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
     }
     
+    public ReleaseAddressRequest(){}
 }

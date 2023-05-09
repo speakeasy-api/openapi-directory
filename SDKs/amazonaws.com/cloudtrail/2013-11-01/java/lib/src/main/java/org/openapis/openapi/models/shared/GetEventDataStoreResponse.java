@@ -20,6 +20,7 @@ public class GetEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdvancedEventSelectors")
     public AdvancedEventSelector[] advancedEventSelectors;
+
     public GetEventDataStoreResponse withAdvancedEventSelectors(AdvancedEventSelector[] advancedEventSelectors) {
         this.advancedEventSelectors = advancedEventSelectors;
         return this;
@@ -30,6 +31,7 @@ public class GetEventDataStoreResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public GetEventDataStoreResponse withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -38,6 +40,7 @@ public class GetEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventDataStoreArn")
     public String eventDataStoreArn;
+
     public GetEventDataStoreResponse withEventDataStoreArn(String eventDataStoreArn) {
         this.eventDataStoreArn = eventDataStoreArn;
         return this;
@@ -46,6 +49,7 @@ public class GetEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public GetEventDataStoreResponse withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -54,6 +58,7 @@ public class GetEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiRegionEnabled")
     public Boolean multiRegionEnabled;
+
     public GetEventDataStoreResponse withMultiRegionEnabled(Boolean multiRegionEnabled) {
         this.multiRegionEnabled = multiRegionEnabled;
         return this;
@@ -62,6 +67,7 @@ public class GetEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetEventDataStoreResponse withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +76,7 @@ public class GetEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationEnabled")
     public Boolean organizationEnabled;
+
     public GetEventDataStoreResponse withOrganizationEnabled(Boolean organizationEnabled) {
         this.organizationEnabled = organizationEnabled;
         return this;
@@ -78,6 +85,7 @@ public class GetEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionPeriod")
     public Long retentionPeriod;
+
     public GetEventDataStoreResponse withRetentionPeriod(Long retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -86,6 +94,7 @@ public class GetEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public EventDataStoreStatusEnum status;
+
     public GetEventDataStoreResponse withStatus(EventDataStoreStatusEnum status) {
         this.status = status;
         return this;
@@ -94,6 +103,7 @@ public class GetEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TerminationProtectionEnabled")
     public Boolean terminationProtectionEnabled;
+
     public GetEventDataStoreResponse withTerminationProtectionEnabled(Boolean terminationProtectionEnabled) {
         this.terminationProtectionEnabled = terminationProtectionEnabled;
         return this;
@@ -104,9 +114,11 @@ public class GetEventDataStoreResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedTimestamp")
     public OffsetDateTime updatedTimestamp;
+
     public GetEventDataStoreResponse withUpdatedTimestamp(OffsetDateTime updatedTimestamp) {
         this.updatedTimestamp = updatedTimestamp;
         return this;
     }
     
+    public GetEventDataStoreResponse(){}
 }

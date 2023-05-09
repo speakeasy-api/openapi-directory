@@ -57,12 +57,10 @@ public class Taxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTaxRatesResponse res = new org.openapis.openapi.models.operations.CreateTaxRatesResponse() {{
+        org.openapis.openapi.models.operations.CreateTaxRatesResponse res = new org.openapis.openapi.models.operations.CreateTaxRatesResponse(contentType, httpRes.statusCode()) {{
             taxRatesResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -107,10 +105,8 @@ public class Taxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTaxRateResponse res = new org.openapis.openapi.models.operations.DeleteTaxRateResponse() {{
+        org.openapis.openapi.models.operations.DeleteTaxRateResponse res = new org.openapis.openapi.models.operations.DeleteTaxRateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -121,10 +117,11 @@ public class Taxes {
 
     /**
      * Get all tax rates and a count of products associated with each
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetProductCountForAllTaxesResponse getProductCountForAllTaxes() throws Exception {
+    public org.openapis.openapi.models.operations.GetProductCountForAllTaxesResponse getProductCountForAllTaxes(org.openapis.openapi.models.operations.GetProductCountForAllTaxesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/taxes/count");
         
@@ -133,16 +130,15 @@ public class Taxes {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProductCountForAllTaxesResponse res = new org.openapis.openapi.models.operations.GetProductCountForAllTaxesResponse() {{
+        org.openapis.openapi.models.operations.GetProductCountForAllTaxesResponse res = new org.openapis.openapi.models.operations.GetProductCountForAllTaxesResponse(contentType, httpRes.statusCode()) {{
             taxRateProductCountResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -180,11 +176,9 @@ public class Taxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTaxRateResponse res = new org.openapis.openapi.models.operations.GetTaxRateResponse() {{
+        org.openapis.openapi.models.operations.GetTaxRateResponse res = new org.openapis.openapi.models.operations.GetTaxRateResponse(contentType, httpRes.statusCode()) {{
             taxRate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,10 +196,11 @@ public class Taxes {
 
     /**
      * Get all available tax rates
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTaxRatesResponse getTaxRates() throws Exception {
+    public org.openapis.openapi.models.operations.GetTaxRatesResponse getTaxRates(org.openapis.openapi.models.operations.GetTaxRatesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/taxes");
         
@@ -214,16 +209,15 @@ public class Taxes {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTaxRatesResponse res = new org.openapis.openapi.models.operations.GetTaxRatesResponse() {{
+        org.openapis.openapi.models.operations.GetTaxRatesResponse res = new org.openapis.openapi.models.operations.GetTaxRatesResponse(contentType, httpRes.statusCode()) {{
             taxRatesResponses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,10 +235,11 @@ public class Taxes {
 
     /**
      * Get the organization tax settings 
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTaxSettingsResponse getTaxSettings() throws Exception {
+    public org.openapis.openapi.models.operations.GetTaxSettingsResponse getTaxSettings(org.openapis.openapi.models.operations.GetTaxSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/taxes/settings");
         
@@ -253,16 +248,15 @@ public class Taxes {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTaxSettingsResponse res = new org.openapis.openapi.models.operations.GetTaxSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetTaxSettingsResponse res = new org.openapis.openapi.models.operations.GetTaxSettingsResponse(contentType, httpRes.statusCode()) {{
             taxSettingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -305,12 +299,10 @@ public class Taxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetTaxationModeResponse res = new org.openapis.openapi.models.operations.SetTaxationModeResponse() {{
+        org.openapis.openapi.models.operations.SetTaxationModeResponse res = new org.openapis.openapi.models.operations.SetTaxationModeResponse(contentType, httpRes.statusCode()) {{
             taxSettingsResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -360,12 +352,10 @@ public class Taxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTaxRateResponse res = new org.openapis.openapi.models.operations.UpdateTaxRateResponse() {{
+        org.openapis.openapi.models.operations.UpdateTaxRateResponse res = new org.openapis.openapi.models.operations.UpdateTaxRateResponse(contentType, httpRes.statusCode()) {{
             taxRate = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

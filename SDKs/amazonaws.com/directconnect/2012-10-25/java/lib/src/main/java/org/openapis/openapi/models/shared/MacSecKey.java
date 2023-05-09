@@ -15,6 +15,7 @@ public class MacSecKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ckn")
     public String ckn;
+
     public MacSecKey withCkn(String ckn) {
         this.ckn = ckn;
         return this;
@@ -23,6 +24,7 @@ public class MacSecKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretARN")
     public String secretARN;
+
     public MacSecKey withSecretARN(String secretARN) {
         this.secretARN = secretARN;
         return this;
@@ -31,6 +33,7 @@ public class MacSecKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startOn")
     public String startOn;
+
     public MacSecKey withStartOn(String startOn) {
         this.startOn = startOn;
         return this;
@@ -39,9 +42,11 @@ public class MacSecKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public MacSecKey withState(String state) {
         this.state = state;
         return this;
     }
     
+    public MacSecKey(){}
 }

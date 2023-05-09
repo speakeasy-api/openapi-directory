@@ -18,6 +18,7 @@ public class PodcastMinimumRss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PodcastMinimumRss withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +33,7 @@ public class PodcastMinimumRss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public PodcastMinimumRss withImage(String image) {
         this.image = image;
         return this;
@@ -43,6 +45,7 @@ public class PodcastMinimumRss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listennotes_url")
     public String listennotesUrl;
+
     public PodcastMinimumRss withListennotesUrl(String listennotesUrl) {
         this.listennotesUrl = listennotesUrl;
         return this;
@@ -54,6 +57,7 @@ public class PodcastMinimumRss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher")
     public String publisher;
+
     public PodcastMinimumRss withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
@@ -65,6 +69,7 @@ public class PodcastMinimumRss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rss")
     public String rss;
+
     public PodcastMinimumRss withRss(String rss) {
         this.rss = rss;
         return this;
@@ -76,6 +81,7 @@ public class PodcastMinimumRss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnail")
     public String thumbnail;
+
     public PodcastMinimumRss withThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
         return this;
@@ -87,9 +93,11 @@ public class PodcastMinimumRss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PodcastMinimumRss withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PodcastMinimumRss(){}
 }

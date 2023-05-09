@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeWorkspaceSnapshotsRequest {
     @JsonProperty("WorkspaceId")
     public String workspaceId;
+
     public DescribeWorkspaceSnapshotsRequest withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public DescribeWorkspaceSnapshotsRequest(@JsonProperty("WorkspaceId") String workspaceId) {
+        this.workspaceId = workspaceId;
+  }
 }

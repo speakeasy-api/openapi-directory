@@ -61,11 +61,9 @@ public class Challenge {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifiedaccessChallengeCreateResponse res = new org.openapis.openapi.models.operations.VerifiedaccessChallengeCreateResponse() {{
+        org.openapis.openapi.models.operations.VerifiedaccessChallengeCreateResponse res = new org.openapis.openapi.models.operations.VerifiedaccessChallengeCreateResponse(contentType, httpRes.statusCode()) {{
             challenge = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Challenge {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifiedaccessChallengeVerifyResponse res = new org.openapis.openapi.models.operations.VerifiedaccessChallengeVerifyResponse() {{
+        org.openapis.openapi.models.operations.VerifiedaccessChallengeVerifyResponse res = new org.openapis.openapi.models.operations.VerifiedaccessChallengeVerifyResponse(contentType, httpRes.statusCode()) {{
             verifyChallengeResponseResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

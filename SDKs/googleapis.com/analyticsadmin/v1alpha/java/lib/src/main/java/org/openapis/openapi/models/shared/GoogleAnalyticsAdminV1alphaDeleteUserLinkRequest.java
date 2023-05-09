@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaDeleteUserLinkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1alphaDeleteUserLinkRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaDeleteUserLinkRequest(){}
 }

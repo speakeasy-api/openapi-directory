@@ -20,6 +20,7 @@ public class InferenceEventSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Diagnostics")
     public String diagnostics;
+
     public InferenceEventSummary withDiagnostics(String diagnostics) {
         this.diagnostics = diagnostics;
         return this;
@@ -28,6 +29,7 @@ public class InferenceEventSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventDurationInSeconds")
     public Long eventDurationInSeconds;
+
     public InferenceEventSummary withEventDurationInSeconds(Long eventDurationInSeconds) {
         this.eventDurationInSeconds = eventDurationInSeconds;
         return this;
@@ -38,6 +40,7 @@ public class InferenceEventSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EventEndTime")
     public OffsetDateTime eventEndTime;
+
     public InferenceEventSummary withEventEndTime(OffsetDateTime eventEndTime) {
         this.eventEndTime = eventEndTime;
         return this;
@@ -48,6 +51,7 @@ public class InferenceEventSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EventStartTime")
     public OffsetDateTime eventStartTime;
+
     public InferenceEventSummary withEventStartTime(OffsetDateTime eventStartTime) {
         this.eventStartTime = eventStartTime;
         return this;
@@ -56,6 +60,7 @@ public class InferenceEventSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSchedulerArn")
     public String inferenceSchedulerArn;
+
     public InferenceEventSummary withInferenceSchedulerArn(String inferenceSchedulerArn) {
         this.inferenceSchedulerArn = inferenceSchedulerArn;
         return this;
@@ -64,9 +69,11 @@ public class InferenceEventSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSchedulerName")
     public String inferenceSchedulerName;
+
     public InferenceEventSummary withInferenceSchedulerName(String inferenceSchedulerName) {
         this.inferenceSchedulerName = inferenceSchedulerName;
         return this;
     }
     
+    public InferenceEventSummary(){}
 }

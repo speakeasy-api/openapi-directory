@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListHubContentVersionsResponse {
     
     public String contentType;
+
     public ListHubContentVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListHubContentVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListHubContentVersionsResponse listHubContentVersionsResponse;
+
     public ListHubContentVersionsResponse withListHubContentVersionsResponse(org.openapis.openapi.models.shared.ListHubContentVersionsResponse listHubContentVersionsResponse) {
         this.listHubContentVersionsResponse = listHubContentVersionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListHubContentVersionsResponse {
      */
     
     public Object resourceNotFound;
+
     public ListHubContentVersionsResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class ListHubContentVersionsResponse {
     
     
     public Integer statusCode;
+
     public ListHubContentVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListHubContentVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListHubContentVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListHubContentVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -3,29 +3,28 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.VisionFilesAnnotateSecurityOption1;
-import org.openapis.openapi.models.operations.VisionFilesAnnotateSecurityOption2;
-import org.openapis.openapi.models.operations.VisionFilesAnnotateSecurity;
 import org.openapis.openapi.models.operations.VisionFilesAnnotateRequest;
 import org.openapis.openapi.models.operations.VisionFilesAnnotateResponse;
+import org.openapis.openapi.models.operations.VisionFilesAnnotateSecurity;
+import org.openapis.openapi.models.operations.VisionFilesAnnotateSecurityOption1;
+import org.openapis.openapi.models.operations.VisionFilesAnnotateSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest;
 import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1InputConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1BoundingPoly;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1CropHintsParams;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1Feature;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1FeatureTypeEnum;
 import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1GcsSource;
 import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1ImageContext;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1WebDetectionParams;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1TextDetectionParams;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1ProductSearchParams;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1BoundingPoly;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1Vertex;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1NormalizedVertex;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1InputConfig;
 import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1LatLongRect;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1NormalizedVertex;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1ProductSearchParams;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1TextDetectionParams;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1Vertex;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1WebDetectionParams;
 import org.openapis.openapi.models.shared.LatLng;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1CropHintsParams;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1FeatureTypeEnum;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1Feature;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -35,7 +34,7 @@ public class Application {
                 .build();
 
             VisionFilesAnnotateRequest req = new VisionFilesAnnotateRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 googleCloudVisionV1p2beta1BatchAnnotateFilesRequest = new GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest() {{
                     parent = "provident";
                     requests = new org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest[]{{
@@ -44,22 +43,22 @@ public class Application {
                                 add(new GoogleCloudVisionV1p2beta1Feature() {{
                                     maxResults = 602763;
                                     model = "nulla";
-                                    type = "SAFE_SEARCH_DETECTION";
+                                    type = GoogleCloudVisionV1p2beta1FeatureTypeEnum.SAFE_SEARCH_DETECTION;
                                 }}),
                                 add(new GoogleCloudVisionV1p2beta1Feature() {{
                                     maxResults = 847252;
                                     model = "vel";
-                                    type = "IMAGE_PROPERTIES";
+                                    type = GoogleCloudVisionV1p2beta1FeatureTypeEnum.IMAGE_PROPERTIES;
                                 }}),
                                 add(new GoogleCloudVisionV1p2beta1Feature() {{
                                     maxResults = 645894;
                                     model = "suscipit";
-                                    type = "TEXT_DETECTION";
+                                    type = GoogleCloudVisionV1p2beta1FeatureTypeEnum.TEXT_DETECTION;
                                 }}),
                                 add(new GoogleCloudVisionV1p2beta1Feature() {{
                                     maxResults = 297534;
                                     model = "debitis";
-                                    type = "TYPE_UNSPECIFIED";
+                                    type = GoogleCloudVisionV1p2beta1FeatureTypeEnum.TYPE_UNSPECIFIED;
                                 }}),
                             }};
                             imageContext = new GoogleCloudVisionV1p2beta1ImageContext() {{
@@ -146,12 +145,12 @@ public class Application {
                                 add(new GoogleCloudVisionV1p2beta1Feature() {{
                                     maxResults = 186332;
                                     model = "impedit";
-                                    type = "CROP_HINTS";
+                                    type = GoogleCloudVisionV1p2beta1FeatureTypeEnum.CROP_HINTS;
                                 }}),
                                 add(new GoogleCloudVisionV1p2beta1Feature() {{
                                     maxResults = 456150;
                                     model = "ipsum";
-                                    type = "SAFE_SEARCH_DETECTION";
+                                    type = GoogleCloudVisionV1p2beta1FeatureTypeEnum.SAFE_SEARCH_DETECTION;
                                 }}),
                             }};
                             imageContext = new GoogleCloudVisionV1p2beta1ImageContext() {{
@@ -236,22 +235,22 @@ public class Application {
                                 add(new GoogleCloudVisionV1p2beta1Feature() {{
                                     maxResults = 102044;
                                     model = "mollitia";
-                                    type = "LANDMARK_DETECTION";
+                                    type = GoogleCloudVisionV1p2beta1FeatureTypeEnum.LANDMARK_DETECTION;
                                 }}),
                                 add(new GoogleCloudVisionV1p2beta1Feature() {{
                                     maxResults = 635059;
                                     model = "consequuntur";
-                                    type = "OBJECT_LOCALIZATION";
+                                    type = GoogleCloudVisionV1p2beta1FeatureTypeEnum.OBJECT_LOCALIZATION;
                                 }}),
                                 add(new GoogleCloudVisionV1p2beta1Feature() {{
                                     maxResults = 653108;
                                     model = "occaecati";
-                                    type = "LOGO_DETECTION";
+                                    type = GoogleCloudVisionV1p2beta1FeatureTypeEnum.LOGO_DETECTION;
                                 }}),
                                 add(new GoogleCloudVisionV1p2beta1Feature() {{
                                     maxResults = 414369;
                                     model = "quam";
-                                    type = "DOCUMENT_TEXT_DETECTION";
+                                    type = GoogleCloudVisionV1p2beta1FeatureTypeEnum.DOCUMENT_TEXT_DETECTION;
                                 }}),
                             }};
                             imageContext = new GoogleCloudVisionV1p2beta1ImageContext() {{
@@ -334,9 +333,9 @@ public class Application {
                             }};
                         }}),
                     }};
-                }};
+                }};;
                 accessToken = "dicta";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "enim";
                 fields = "accusamus";
                 key = "commodi";
@@ -345,20 +344,22 @@ public class Application {
                 quotaUser = "quae";
                 uploadType = "ipsum";
                 uploadProtocol = "quidem";
-            }}            
+            }};            
 
             VisionFilesAnnotateResponse res = sdk.files.visionFilesAnnotate(req, new VisionFilesAnnotateSecurity() {{
-                option1 = new VisionFilesAnnotateSecurityOption1() {{
+                option1 = new VisionFilesAnnotateSecurityOption1("molestias", "excepturi") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.googleCloudVisionV1p2beta1BatchAnnotateFilesResponse.isPresent()) {
+            if (res.googleCloudVisionV1p2beta1BatchAnnotateFilesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -15,9 +15,11 @@ public class MessageModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public MessageModel withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public MessageModel(){}
 }

@@ -112,13 +112,11 @@ public class Discovery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonResponse res = new org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonResponse res = new org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -213,13 +211,11 @@ public class Discovery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05CareContextsDiscoverRawResponse res = new org.openapis.openapi.models.operations.PostV05CareContextsDiscoverRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05CareContextsDiscoverRawResponse res = new org.openapis.openapi.models.operations.PostV05CareContextsDiscoverRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

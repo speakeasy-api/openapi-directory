@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListConnectorsResponse {
@@ -12,6 +13,7 @@ public class ListConnectorsResponse {
      */
     
     public Object badRequestException;
+
     public ListConnectorsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListConnectorsResponse {
     
     
     public String contentType;
+
     public ListConnectorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListConnectorsResponse {
      */
     
     public Object forbiddenException;
+
     public ListConnectorsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class ListConnectorsResponse {
      */
     
     public Object internalServerErrorException;
+
     public ListConnectorsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ListConnectorsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListConnectorsResponse listConnectorsResponse;
+
     public ListConnectorsResponse withListConnectorsResponse(org.openapis.openapi.models.shared.ListConnectorsResponse listConnectorsResponse) {
         this.listConnectorsResponse = listConnectorsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListConnectorsResponse {
      */
     
     public Object notFoundException;
+
     public ListConnectorsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListConnectorsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListConnectorsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ListConnectorsResponse {
     
     
     public Integer statusCode;
+
     public ListConnectorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListConnectorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListConnectorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListConnectorsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListConnectorsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class ListConnectorsResponse {
      */
     
     public Object unauthorizedException;
+
     public ListConnectorsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListConnectorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

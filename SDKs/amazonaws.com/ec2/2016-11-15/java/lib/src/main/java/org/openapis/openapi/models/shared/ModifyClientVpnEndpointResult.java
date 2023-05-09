@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyClientVpnEndpointResult {
     
     public Boolean return_;
+
     public ModifyClientVpnEndpointResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
     }
     
+    public ModifyClientVpnEndpointResult(){}
 }

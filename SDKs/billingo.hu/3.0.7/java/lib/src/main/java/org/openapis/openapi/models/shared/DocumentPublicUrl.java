@@ -15,9 +15,11 @@ public class DocumentPublicUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_url")
     public String publicUrl;
+
     public DocumentPublicUrl withPublicUrl(String publicUrl) {
         this.publicUrl = publicUrl;
         return this;
     }
     
+    public DocumentPublicUrl(){}
 }

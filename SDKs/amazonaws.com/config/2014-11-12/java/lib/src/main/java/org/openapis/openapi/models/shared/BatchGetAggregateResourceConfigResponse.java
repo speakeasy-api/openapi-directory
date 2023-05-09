@@ -15,6 +15,7 @@ public class BatchGetAggregateResourceConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaseConfigurationItems")
     public BaseConfigurationItem[] baseConfigurationItems;
+
     public BatchGetAggregateResourceConfigResponse withBaseConfigurationItems(BaseConfigurationItem[] baseConfigurationItems) {
         this.baseConfigurationItems = baseConfigurationItems;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetAggregateResourceConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedResourceIdentifiers")
     public AggregateResourceIdentifier[] unprocessedResourceIdentifiers;
+
     public BatchGetAggregateResourceConfigResponse withUnprocessedResourceIdentifiers(AggregateResourceIdentifier[] unprocessedResourceIdentifiers) {
         this.unprocessedResourceIdentifiers = unprocessedResourceIdentifiers;
         return this;
     }
     
+    public BatchGetAggregateResourceConfigResponse(){}
 }

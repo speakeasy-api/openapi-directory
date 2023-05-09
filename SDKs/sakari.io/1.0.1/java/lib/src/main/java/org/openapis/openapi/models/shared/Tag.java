@@ -12,6 +12,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public Tag withTag(String tag) {
         this.tag = tag;
         return this;
@@ -20,9 +21,11 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visible")
     public Boolean visible;
+
     public Tag withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public Tag(){}
 }

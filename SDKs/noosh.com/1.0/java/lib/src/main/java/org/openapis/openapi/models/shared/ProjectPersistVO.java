@@ -17,6 +17,7 @@ public class ProjectPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_account")
     public String clientAccount;
+
     public ProjectPersistVO withClientAccount(String clientAccount) {
         this.clientAccount = clientAccount;
         return this;
@@ -25,6 +26,7 @@ public class ProjectPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_user_id")
     public Long clientUserId;
+
     public ProjectPersistVO withClientUserId(Long clientUserId) {
         this.clientUserId = clientUserId;
         return this;
@@ -33,6 +35,7 @@ public class ProjectPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_workgroup_id")
     public Long clientWorkgroupId;
+
     public ProjectPersistVO withClientWorkgroupId(Long clientWorkgroupId) {
         this.clientWorkgroupId = clientWorkgroupId;
         return this;
@@ -41,6 +44,7 @@ public class ProjectPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public ProjectPersistVO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -50,6 +54,7 @@ public class ProjectPersistVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("completion_date")
     public LocalDate completionDate;
+
     public ProjectPersistVO withCompletionDate(LocalDate completionDate) {
         this.completionDate = completionDate;
         return this;
@@ -58,6 +63,7 @@ public class ProjectPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public CustomFieldPersistVO[] customFields;
+
     public ProjectPersistVO withCustomFields(CustomFieldPersistVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -66,6 +72,7 @@ public class ProjectPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deactivation_reason_id")
     public Long deactivationReasonId;
+
     public ProjectPersistVO withDeactivationReasonId(Long deactivationReasonId) {
         this.deactivationReasonId = deactivationReasonId;
         return this;
@@ -74,6 +81,7 @@ public class ProjectPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public ProjectPersistVO withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -82,6 +90,7 @@ public class ProjectPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_hot")
     public Boolean isHot;
+
     public ProjectPersistVO withIsHot(Boolean isHot) {
         this.isHot = isHot;
         return this;
@@ -90,6 +99,7 @@ public class ProjectPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_paper_direct")
     public Boolean isPaperDirect;
+
     public ProjectPersistVO withIsPaperDirect(Boolean isPaperDirect) {
         this.isPaperDirect = isPaperDirect;
         return this;
@@ -98,6 +108,7 @@ public class ProjectPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_category_id")
     public Long projectCategoryId;
+
     public ProjectPersistVO withProjectCategoryId(Long projectCategoryId) {
         this.projectCategoryId = projectCategoryId;
         return this;
@@ -106,6 +117,7 @@ public class ProjectPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_description")
     public String projectDescription;
+
     public ProjectPersistVO withProjectDescription(String projectDescription) {
         this.projectDescription = projectDescription;
         return this;
@@ -114,6 +126,7 @@ public class ProjectPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_name")
     public String projectName;
+
     public ProjectPersistVO withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -122,6 +135,7 @@ public class ProjectPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_number")
     public String projectNumber;
+
     public ProjectPersistVO withProjectNumber(String projectNumber) {
         this.projectNumber = projectNumber;
         return this;
@@ -130,6 +144,7 @@ public class ProjectPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_owner_user_id")
     public Long projectOwnerUserId;
+
     public ProjectPersistVO withProjectOwnerUserId(Long projectOwnerUserId) {
         this.projectOwnerUserId = projectOwnerUserId;
         return this;
@@ -137,9 +152,13 @@ public class ProjectPersistVO {
     
     @JsonProperty("project_status_id")
     public Long projectStatusId;
+
     public ProjectPersistVO withProjectStatusId(Long projectStatusId) {
         this.projectStatusId = projectStatusId;
         return this;
     }
     
+    public ProjectPersistVO(@JsonProperty("project_status_id") Long projectStatusId) {
+        this.projectStatusId = projectStatusId;
+  }
 }

@@ -18,9 +18,11 @@ public class RiskValueReadV1ConditionalOn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("risk_parameter_id")
     public String[][] riskParameterId;
+
     public RiskValueReadV1ConditionalOn withRiskParameterId(String[][] riskParameterId) {
         this.riskParameterId = riskParameterId;
         return this;
     }
     
+    public RiskValueReadV1ConditionalOn(){}
 }

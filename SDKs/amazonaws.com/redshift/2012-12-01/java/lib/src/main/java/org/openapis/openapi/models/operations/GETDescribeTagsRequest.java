@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeTagsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeTagsActionEnum action;
+
     public GETDescribeTagsRequest withAction(GETDescribeTagsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeTagsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeTagsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceName")
     public String resourceName;
+
     public GETDescribeTagsRequest withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceType")
     public String resourceType;
+
     public GETDescribeTagsRequest withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -59,6 +65,7 @@ public class GETDescribeTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TagKeys")
     public String[] tagKeys;
+
     public GETDescribeTagsRequest withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -69,6 +76,7 @@ public class GETDescribeTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TagValues")
     public String[] tagValues;
+
     public GETDescribeTagsRequest withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
@@ -76,6 +84,7 @@ public class GETDescribeTagsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeTagsVersionEnum version;
+
     public GETDescribeTagsRequest withVersion(GETDescribeTagsVersionEnum version) {
         this.version = version;
         return this;
@@ -83,6 +92,7 @@ public class GETDescribeTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeTagsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -90,6 +100,7 @@ public class GETDescribeTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeTagsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -97,6 +108,7 @@ public class GETDescribeTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeTagsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -104,6 +116,7 @@ public class GETDescribeTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeTagsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -111,6 +124,7 @@ public class GETDescribeTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeTagsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -118,6 +132,7 @@ public class GETDescribeTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeTagsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -125,9 +140,14 @@ public class GETDescribeTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeTagsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeTagsRequest(@JsonProperty("Action") GETDescribeTagsActionEnum action, @JsonProperty("Version") GETDescribeTagsVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

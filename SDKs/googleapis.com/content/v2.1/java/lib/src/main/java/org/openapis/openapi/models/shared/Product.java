@@ -18,6 +18,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalImageLinks")
     public String[] additionalImageLinks;
+
     public Product withAdditionalImageLinks(String[] additionalImageLinks) {
         this.additionalImageLinks = additionalImageLinks;
         return this;
@@ -29,6 +30,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalSizeType")
     public String additionalSizeType;
+
     public Product withAdditionalSizeType(String additionalSizeType) {
         this.additionalSizeType = additionalSizeType;
         return this;
@@ -40,6 +42,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsGrouping")
     public String adsGrouping;
+
     public Product withAdsGrouping(String adsGrouping) {
         this.adsGrouping = adsGrouping;
         return this;
@@ -51,6 +54,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsLabels")
     public String[] adsLabels;
+
     public Product withAdsLabels(String[] adsLabels) {
         this.adsLabels = adsLabels;
         return this;
@@ -62,6 +66,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsRedirect")
     public String adsRedirect;
+
     public Product withAdsRedirect(String adsRedirect) {
         this.adsRedirect = adsRedirect;
         return this;
@@ -73,6 +78,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adult")
     public Boolean adult;
+
     public Product withAdult(Boolean adult) {
         this.adult = adult;
         return this;
@@ -84,6 +90,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageGroup")
     public String ageGroup;
+
     public Product withAgeGroup(String ageGroup) {
         this.ageGroup = ageGroup;
         return this;
@@ -95,6 +102,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public String availability;
+
     public Product withAvailability(String availability) {
         this.availability = availability;
         return this;
@@ -106,6 +114,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityDate")
     public String availabilityDate;
+
     public Product withAvailabilityDate(String availabilityDate) {
         this.availabilityDate = availabilityDate;
         return this;
@@ -117,6 +126,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public Product withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -128,6 +138,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canonicalLink")
     public String canonicalLink;
+
     public Product withCanonicalLink(String canonicalLink) {
         this.canonicalLink = canonicalLink;
         return this;
@@ -139,6 +150,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public String channel;
+
     public Product withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -150,6 +162,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public Product withColor(String color) {
         this.color = color;
         return this;
@@ -161,6 +174,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public Product withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -172,6 +186,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentLanguage")
     public String contentLanguage;
+
     public Product withContentLanguage(String contentLanguage) {
         this.contentLanguage = contentLanguage;
         return this;
@@ -180,6 +195,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costOfGoodsSold")
     public Price costOfGoodsSold;
+
     public Product withCostOfGoodsSold(Price costOfGoodsSold) {
         this.costOfGoodsSold = costOfGoodsSold;
         return this;
@@ -191,6 +207,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customAttributes")
     public CustomAttribute[] customAttributes;
+
     public Product withCustomAttributes(CustomAttribute[] customAttributes) {
         this.customAttributes = customAttributes;
         return this;
@@ -202,6 +219,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabel0")
     public String customLabel0;
+
     public Product withCustomLabel0(String customLabel0) {
         this.customLabel0 = customLabel0;
         return this;
@@ -213,6 +231,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabel1")
     public String customLabel1;
+
     public Product withCustomLabel1(String customLabel1) {
         this.customLabel1 = customLabel1;
         return this;
@@ -224,6 +243,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabel2")
     public String customLabel2;
+
     public Product withCustomLabel2(String customLabel2) {
         this.customLabel2 = customLabel2;
         return this;
@@ -235,6 +255,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabel3")
     public String customLabel3;
+
     public Product withCustomLabel3(String customLabel3) {
         this.customLabel3 = customLabel3;
         return this;
@@ -246,6 +267,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabel4")
     public String customLabel4;
+
     public Product withCustomLabel4(String customLabel4) {
         this.customLabel4 = customLabel4;
         return this;
@@ -257,8 +279,21 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Product withDescription(String description) {
         this.description = description;
+        return this;
+    }
+    
+    /**
+     * The date time when an offer becomes visible in search results across Google\u2019s YouTube surfaces, in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format. See [Disclosure date]( https://support.google.com/merchants/answer/13034208) for more information.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("disclosureDate")
+    public String disclosureDate;
+
+    public Product withDisclosureDate(String disclosureDate) {
+        this.disclosureDate = disclosureDate;
         return this;
     }
     
@@ -268,6 +303,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayAdsId")
     public String displayAdsId;
+
     public Product withDisplayAdsId(String displayAdsId) {
         this.displayAdsId = displayAdsId;
         return this;
@@ -279,6 +315,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayAdsLink")
     public String displayAdsLink;
+
     public Product withDisplayAdsLink(String displayAdsLink) {
         this.displayAdsLink = displayAdsLink;
         return this;
@@ -290,6 +327,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayAdsSimilarIds")
     public String[] displayAdsSimilarIds;
+
     public Product withDisplayAdsSimilarIds(String[] displayAdsSimilarIds) {
         this.displayAdsSimilarIds = displayAdsSimilarIds;
         return this;
@@ -301,6 +339,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayAdsTitle")
     public String displayAdsTitle;
+
     public Product withDisplayAdsTitle(String displayAdsTitle) {
         this.displayAdsTitle = displayAdsTitle;
         return this;
@@ -312,6 +351,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayAdsValue")
     public Double displayAdsValue;
+
     public Product withDisplayAdsValue(Double displayAdsValue) {
         this.displayAdsValue = displayAdsValue;
         return this;
@@ -323,6 +363,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("energyEfficiencyClass")
     public String energyEfficiencyClass;
+
     public Product withEnergyEfficiencyClass(String energyEfficiencyClass) {
         this.energyEfficiencyClass = energyEfficiencyClass;
         return this;
@@ -334,6 +375,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedDestinations")
     public String[] excludedDestinations;
+
     public Product withExcludedDestinations(String[] excludedDestinations) {
         this.excludedDestinations = excludedDestinations;
         return this;
@@ -345,6 +387,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationDate")
     public String expirationDate;
+
     public Product withExpirationDate(String expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -356,6 +399,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalSellerId")
     public String externalSellerId;
+
     public Product withExternalSellerId(String externalSellerId) {
         this.externalSellerId = externalSellerId;
         return this;
@@ -367,6 +411,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedLabel")
     public String feedLabel;
+
     public Product withFeedLabel(String feedLabel) {
         this.feedLabel = feedLabel;
         return this;
@@ -378,6 +423,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public Product withGender(String gender) {
         this.gender = gender;
         return this;
@@ -389,6 +435,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleProductCategory")
     public String googleProductCategory;
+
     public Product withGoogleProductCategory(String googleProductCategory) {
         this.googleProductCategory = googleProductCategory;
         return this;
@@ -400,6 +447,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gtin")
     public String gtin;
+
     public Product withGtin(String gtin) {
         this.gtin = gtin;
         return this;
@@ -411,6 +459,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Product withId(String id) {
         this.id = id;
         return this;
@@ -422,6 +471,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifierExists")
     public Boolean identifierExists;
+
     public Product withIdentifierExists(Boolean identifierExists) {
         this.identifierExists = identifierExists;
         return this;
@@ -433,6 +483,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageLink")
     public String imageLink;
+
     public Product withImageLink(String imageLink) {
         this.imageLink = imageLink;
         return this;
@@ -444,6 +495,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedDestinations")
     public String[] includedDestinations;
+
     public Product withIncludedDestinations(String[] includedDestinations) {
         this.includedDestinations = includedDestinations;
         return this;
@@ -452,6 +504,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installment")
     public Installment installment;
+
     public Product withInstallment(Installment installment) {
         this.installment = installment;
         return this;
@@ -463,6 +516,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isBundle")
     public Boolean isBundle;
+
     public Product withIsBundle(Boolean isBundle) {
         this.isBundle = isBundle;
         return this;
@@ -474,6 +528,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemGroupId")
     public String itemGroupId;
+
     public Product withItemGroupId(String itemGroupId) {
         this.itemGroupId = itemGroupId;
         return this;
@@ -485,6 +540,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Product withKind(String kind) {
         this.kind = kind;
         return this;
@@ -496,6 +552,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifestyleImageLinks")
     public String[] lifestyleImageLinks;
+
     public Product withLifestyleImageLinks(String[] lifestyleImageLinks) {
         this.lifestyleImageLinks = lifestyleImageLinks;
         return this;
@@ -507,6 +564,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public Product withLink(String link) {
         this.link = link;
         return this;
@@ -518,6 +576,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkTemplate")
     public String linkTemplate;
+
     public Product withLinkTemplate(String linkTemplate) {
         this.linkTemplate = linkTemplate;
         return this;
@@ -526,6 +585,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loyaltyPoints")
     public LoyaltyPoints loyaltyPoints;
+
     public Product withLoyaltyPoints(LoyaltyPoints loyaltyPoints) {
         this.loyaltyPoints = loyaltyPoints;
         return this;
@@ -537,6 +597,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("material")
     public String material;
+
     public Product withMaterial(String material) {
         this.material = material;
         return this;
@@ -548,6 +609,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxEnergyEfficiencyClass")
     public String maxEnergyEfficiencyClass;
+
     public Product withMaxEnergyEfficiencyClass(String maxEnergyEfficiencyClass) {
         this.maxEnergyEfficiencyClass = maxEnergyEfficiencyClass;
         return this;
@@ -559,6 +621,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxHandlingTime")
     public String maxHandlingTime;
+
     public Product withMaxHandlingTime(String maxHandlingTime) {
         this.maxHandlingTime = maxHandlingTime;
         return this;
@@ -570,6 +633,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minEnergyEfficiencyClass")
     public String minEnergyEfficiencyClass;
+
     public Product withMinEnergyEfficiencyClass(String minEnergyEfficiencyClass) {
         this.minEnergyEfficiencyClass = minEnergyEfficiencyClass;
         return this;
@@ -581,6 +645,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minHandlingTime")
     public String minHandlingTime;
+
     public Product withMinHandlingTime(String minHandlingTime) {
         this.minHandlingTime = minHandlingTime;
         return this;
@@ -592,6 +657,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileLink")
     public String mobileLink;
+
     public Product withMobileLink(String mobileLink) {
         this.mobileLink = mobileLink;
         return this;
@@ -603,6 +669,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileLinkTemplate")
     public String mobileLinkTemplate;
+
     public Product withMobileLinkTemplate(String mobileLinkTemplate) {
         this.mobileLinkTemplate = mobileLinkTemplate;
         return this;
@@ -614,6 +681,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mpn")
     public String mpn;
+
     public Product withMpn(String mpn) {
         this.mpn = mpn;
         return this;
@@ -625,6 +693,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multipack")
     public String multipack;
+
     public Product withMultipack(String multipack) {
         this.multipack = multipack;
         return this;
@@ -636,6 +705,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerId")
     public String offerId;
+
     public Product withOfferId(String offerId) {
         this.offerId = offerId;
         return this;
@@ -647,6 +717,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pattern")
     public String pattern;
+
     public Product withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -658,6 +729,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pause")
     public String pause;
+
     public Product withPause(String pause) {
         this.pause = pause;
         return this;
@@ -669,6 +741,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupMethod")
     public String pickupMethod;
+
     public Product withPickupMethod(String pickupMethod) {
         this.pickupMethod = pickupMethod;
         return this;
@@ -680,6 +753,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupSla")
     public String pickupSla;
+
     public Product withPickupSla(String pickupSla) {
         this.pickupSla = pickupSla;
         return this;
@@ -688,6 +762,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Price price;
+
     public Product withPrice(Price price) {
         this.price = price;
         return this;
@@ -699,6 +774,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productDetails")
     public ProductProductDetail[] productDetails;
+
     public Product withProductDetails(ProductProductDetail[] productDetails) {
         this.productDetails = productDetails;
         return this;
@@ -707,6 +783,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productHeight")
     public ProductDimension productHeight;
+
     public Product withProductHeight(ProductDimension productHeight) {
         this.productHeight = productHeight;
         return this;
@@ -718,6 +795,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productHighlights")
     public String[] productHighlights;
+
     public Product withProductHighlights(String[] productHighlights) {
         this.productHighlights = productHighlights;
         return this;
@@ -726,6 +804,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productLength")
     public ProductDimension productLength;
+
     public Product withProductLength(ProductDimension productLength) {
         this.productLength = productLength;
         return this;
@@ -737,6 +816,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTypes")
     public String[] productTypes;
+
     public Product withProductTypes(String[] productTypes) {
         this.productTypes = productTypes;
         return this;
@@ -745,6 +825,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productWeight")
     public ProductWeight productWeight;
+
     public Product withProductWeight(ProductWeight productWeight) {
         this.productWeight = productWeight;
         return this;
@@ -753,6 +834,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productWidth")
     public ProductDimension productWidth;
+
     public Product withProductWidth(ProductDimension productWidth) {
         this.productWidth = productWidth;
         return this;
@@ -764,6 +846,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionIds")
     public String[] promotionIds;
+
     public Product withPromotionIds(String[] promotionIds) {
         this.promotionIds = promotionIds;
         return this;
@@ -772,6 +855,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salePrice")
     public Price salePrice;
+
     public Product withSalePrice(Price salePrice) {
         this.salePrice = salePrice;
         return this;
@@ -783,6 +867,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salePriceEffectiveDate")
     public String salePriceEffectiveDate;
+
     public Product withSalePriceEffectiveDate(String salePriceEffectiveDate) {
         this.salePriceEffectiveDate = salePriceEffectiveDate;
         return this;
@@ -794,6 +879,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellOnGoogleQuantity")
     public String sellOnGoogleQuantity;
+
     public Product withSellOnGoogleQuantity(String sellOnGoogleQuantity) {
         this.sellOnGoogleQuantity = sellOnGoogleQuantity;
         return this;
@@ -805,6 +891,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping")
     public ProductShipping[] shipping;
+
     public Product withShipping(ProductShipping[] shipping) {
         this.shipping = shipping;
         return this;
@@ -813,6 +900,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingHeight")
     public ProductShippingDimension shippingHeight;
+
     public Product withShippingHeight(ProductShippingDimension shippingHeight) {
         this.shippingHeight = shippingHeight;
         return this;
@@ -824,6 +912,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingLabel")
     public String shippingLabel;
+
     public Product withShippingLabel(String shippingLabel) {
         this.shippingLabel = shippingLabel;
         return this;
@@ -832,6 +921,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingLength")
     public ProductShippingDimension shippingLength;
+
     public Product withShippingLength(ProductShippingDimension shippingLength) {
         this.shippingLength = shippingLength;
         return this;
@@ -840,6 +930,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingWeight")
     public ProductShippingWeight shippingWeight;
+
     public Product withShippingWeight(ProductShippingWeight shippingWeight) {
         this.shippingWeight = shippingWeight;
         return this;
@@ -848,6 +939,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingWidth")
     public ProductShippingDimension shippingWidth;
+
     public Product withShippingWidth(ProductShippingDimension shippingWidth) {
         this.shippingWidth = shippingWidth;
         return this;
@@ -859,6 +951,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shoppingAdsExcludedCountries")
     public String[] shoppingAdsExcludedCountries;
+
     public Product withShoppingAdsExcludedCountries(String[] shoppingAdsExcludedCountries) {
         this.shoppingAdsExcludedCountries = shoppingAdsExcludedCountries;
         return this;
@@ -870,6 +963,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeSystem")
     public String sizeSystem;
+
     public Product withSizeSystem(String sizeSystem) {
         this.sizeSystem = sizeSystem;
         return this;
@@ -881,6 +975,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeType")
     public String sizeType;
+
     public Product withSizeType(String sizeType) {
         this.sizeType = sizeType;
         return this;
@@ -892,6 +987,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizes")
     public String[] sizes;
+
     public Product withSizes(String[] sizes) {
         this.sizes = sizes;
         return this;
@@ -903,6 +999,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public Product withSource(String source) {
         this.source = source;
         return this;
@@ -911,6 +1008,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionCost")
     public ProductSubscriptionCost subscriptionCost;
+
     public Product withSubscriptionCost(ProductSubscriptionCost subscriptionCost) {
         this.subscriptionCost = subscriptionCost;
         return this;
@@ -922,6 +1020,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetCountry")
     public String targetCountry;
+
     public Product withTargetCountry(String targetCountry) {
         this.targetCountry = targetCountry;
         return this;
@@ -933,6 +1032,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxCategory")
     public String taxCategory;
+
     public Product withTaxCategory(String taxCategory) {
         this.taxCategory = taxCategory;
         return this;
@@ -944,6 +1044,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxes")
     public ProductTax[] taxes;
+
     public Product withTaxes(ProductTax[] taxes) {
         this.taxes = taxes;
         return this;
@@ -955,6 +1056,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Product withTitle(String title) {
         this.title = title;
         return this;
@@ -966,6 +1068,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitTimeLabel")
     public String transitTimeLabel;
+
     public Product withTransitTimeLabel(String transitTimeLabel) {
         this.transitTimeLabel = transitTimeLabel;
         return this;
@@ -974,6 +1077,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitPricingBaseMeasure")
     public ProductUnitPricingBaseMeasure unitPricingBaseMeasure;
+
     public Product withUnitPricingBaseMeasure(ProductUnitPricingBaseMeasure unitPricingBaseMeasure) {
         this.unitPricingBaseMeasure = unitPricingBaseMeasure;
         return this;
@@ -982,9 +1086,11 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitPricingMeasure")
     public ProductUnitPricingMeasure unitPricingMeasure;
+
     public Product withUnitPricingMeasure(ProductUnitPricingMeasure unitPricingMeasure) {
         this.unitPricingMeasure = unitPricingMeasure;
         return this;
     }
     
+    public Product(){}
 }

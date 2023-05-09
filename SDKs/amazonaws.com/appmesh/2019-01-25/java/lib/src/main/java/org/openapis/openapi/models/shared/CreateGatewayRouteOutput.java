@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateGatewayRouteOutput {
     @JsonProperty("gatewayRoute")
     public GatewayRouteData gatewayRoute;
+
     public CreateGatewayRouteOutput withGatewayRoute(GatewayRouteData gatewayRoute) {
         this.gatewayRoute = gatewayRoute;
         return this;
     }
     
+    public CreateGatewayRouteOutput(@JsonProperty("gatewayRoute") GatewayRouteData gatewayRoute) {
+        this.gatewayRoute = gatewayRoute;
+  }
 }

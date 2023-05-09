@@ -15,6 +15,7 @@ public class ListCrawlersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlerNames")
     public String[] crawlerNames;
+
     public ListCrawlersResponse withCrawlerNames(String[] crawlerNames) {
         this.crawlerNames = crawlerNames;
         return this;
@@ -23,9 +24,11 @@ public class ListCrawlersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCrawlersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCrawlersResponse(){}
 }

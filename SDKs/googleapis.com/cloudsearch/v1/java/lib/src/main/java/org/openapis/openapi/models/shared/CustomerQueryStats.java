@@ -15,6 +15,7 @@ public class CustomerQueryStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public CustomerQueryStats withDate(Date date) {
         this.date = date;
         return this;
@@ -23,9 +24,11 @@ public class CustomerQueryStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryCountByStatus")
     public QueryCountByStatus[] queryCountByStatus;
+
     public CustomerQueryStats withQueryCountByStatus(QueryCountByStatus[] queryCountByStatus) {
         this.queryCountByStatus = queryCountByStatus;
         return this;
     }
     
+    public CustomerQueryStats(){}
 }

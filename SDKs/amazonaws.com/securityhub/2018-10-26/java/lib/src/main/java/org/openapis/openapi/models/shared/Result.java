@@ -15,6 +15,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public Result withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,9 +24,11 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingResult")
     public String processingResult;
+
     public Result withProcessingResult(String processingResult) {
         this.processingResult = processingResult;
         return this;
     }
     
+    public Result(){}
 }

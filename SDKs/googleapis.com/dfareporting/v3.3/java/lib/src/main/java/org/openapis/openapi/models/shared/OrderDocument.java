@@ -25,6 +25,7 @@ public class OrderDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public OrderDocument withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -36,6 +37,7 @@ public class OrderDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public OrderDocument withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -47,6 +49,7 @@ public class OrderDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amendedOrderDocumentId")
     public String amendedOrderDocumentId;
+
     public OrderDocument withAmendedOrderDocumentId(String amendedOrderDocumentId) {
         this.amendedOrderDocumentId = amendedOrderDocumentId;
         return this;
@@ -58,6 +61,7 @@ public class OrderDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvedByUserProfileIds")
     public String[] approvedByUserProfileIds;
+
     public OrderDocument withApprovedByUserProfileIds(String[] approvedByUserProfileIds) {
         this.approvedByUserProfileIds = approvedByUserProfileIds;
         return this;
@@ -69,6 +73,7 @@ public class OrderDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelled")
     public Boolean cancelled;
+
     public OrderDocument withCancelled(Boolean cancelled) {
         this.cancelled = cancelled;
         return this;
@@ -80,6 +85,7 @@ public class OrderDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdInfo")
     public LastModifiedInfo createdInfo;
+
     public OrderDocument withCreatedInfo(LastModifiedInfo createdInfo) {
         this.createdInfo = createdInfo;
         return this;
@@ -89,6 +95,7 @@ public class OrderDocument {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("effectiveDate")
     public LocalDate effectiveDate;
+
     public OrderDocument withEffectiveDate(LocalDate effectiveDate) {
         this.effectiveDate = effectiveDate;
         return this;
@@ -100,6 +107,7 @@ public class OrderDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OrderDocument withId(String id) {
         this.id = id;
         return this;
@@ -111,6 +119,7 @@ public class OrderDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OrderDocument withKind(String kind) {
         this.kind = kind;
         return this;
@@ -122,6 +131,7 @@ public class OrderDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastSentRecipients")
     public String[] lastSentRecipients;
+
     public OrderDocument withLastSentRecipients(String[] lastSentRecipients) {
         this.lastSentRecipients = lastSentRecipients;
         return this;
@@ -132,6 +142,7 @@ public class OrderDocument {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastSentTime")
     public OffsetDateTime lastSentTime;
+
     public OrderDocument withLastSentTime(OffsetDateTime lastSentTime) {
         this.lastSentTime = lastSentTime;
         return this;
@@ -143,6 +154,7 @@ public class OrderDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderId")
     public String orderId;
+
     public OrderDocument withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -154,6 +166,7 @@ public class OrderDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public OrderDocument withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -165,6 +178,7 @@ public class OrderDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signed")
     public Boolean signed;
+
     public OrderDocument withSigned(Boolean signed) {
         this.signed = signed;
         return this;
@@ -176,6 +190,7 @@ public class OrderDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subaccountId")
     public String subaccountId;
+
     public OrderDocument withSubaccountId(String subaccountId) {
         this.subaccountId = subaccountId;
         return this;
@@ -187,6 +202,7 @@ public class OrderDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public OrderDocument withTitle(String title) {
         this.title = title;
         return this;
@@ -198,9 +214,11 @@ public class OrderDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public OrderDocumentTypeEnum type;
+
     public OrderDocument withType(OrderDocumentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public OrderDocument(){}
 }

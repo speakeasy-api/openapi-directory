@@ -12,9 +12,13 @@ public class PullsCreateReplyForReviewCommentRequestBody {
      */
     @JsonProperty("body")
     public String body;
+
     public PullsCreateReplyForReviewCommentRequestBody withBody(String body) {
         this.body = body;
         return this;
     }
     
+    public PullsCreateReplyForReviewCommentRequestBody(@JsonProperty("body") String body) {
+        this.body = body;
+  }
 }

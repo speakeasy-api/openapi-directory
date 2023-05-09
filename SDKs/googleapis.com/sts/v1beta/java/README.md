@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.StsTokenRequest;
 import org.openapis.openapi.models.operations.StsTokenResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -30,7 +29,7 @@ public class Application {
                 .build();
 
             StsTokenRequest req = new StsTokenRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 googleIdentityStsV1betaExchangeTokenRequest = new GoogleIdentityStsV1betaExchangeTokenRequest() {{
                     audience = "provident";
                     grantType = "distinctio";
@@ -39,9 +38,9 @@ public class Application {
                     scope = "nulla";
                     subjectToken = "corrupti";
                     subjectTokenType = "illum";
-                }};
+                }};;
                 accessToken = "vel";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 callback = "deserunt";
                 fields = "suscipit";
                 key = "iure";
@@ -50,16 +49,18 @@ public class Application {
                 quotaUser = "debitis";
                 uploadType = "ipsa";
                 uploadProtocol = "delectus";
-            }}            
+            }};            
 
             StsTokenResponse res = sdk.v1beta.stsToken(req);
 
-            if (res.googleIdentityStsV1betaExchangeTokenResponse.isPresent()) {
+            if (res.googleIdentityStsV1betaExchangeTokenResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -67,9 +68,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### v1beta
+### [v1beta](docs/v1beta/README.md)
 
-* `stsToken` - Exchanges a credential for a Google OAuth 2.0 access token. The token asserts an external identity within a workload identity pool, or it applies a Credential Access Boundary to a Google access token. When you call this method, do not send the `Authorization` HTTP header in the request. This method does not require the `Authorization` header, and using the header can cause the request to fail.
+* [stsToken](docs/v1beta/README.md#ststoken) - Exchanges a credential for a Google OAuth 2.0 access token. The token asserts an external identity within a workload identity pool, or it applies a Credential Access Boundary to a Google access token. When you call this method, do not send the `Authorization` HTTP header in the request. This method does not require the `Authorization` header, and using the header can cause the request to fail.
 <!-- End SDK Available Operations -->
 
 ### Maturity

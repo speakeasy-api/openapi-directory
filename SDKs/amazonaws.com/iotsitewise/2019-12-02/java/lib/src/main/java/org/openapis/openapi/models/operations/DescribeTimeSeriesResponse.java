@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTimeSeriesResponse {
     
     public String contentType;
+
     public DescribeTimeSeriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTimeSeriesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTimeSeriesResponse describeTimeSeriesResponse;
+
     public DescribeTimeSeriesResponse withDescribeTimeSeriesResponse(org.openapis.openapi.models.shared.DescribeTimeSeriesResponse describeTimeSeriesResponse) {
         this.describeTimeSeriesResponse = describeTimeSeriesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTimeSeriesResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeTimeSeriesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeTimeSeriesResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeTimeSeriesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeTimeSeriesResponse {
     
     
     public Integer statusCode;
+
     public DescribeTimeSeriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeTimeSeriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTimeSeriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeTimeSeriesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeTimeSeriesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeTimeSeriesResponse {
      */
     
     public Object throttlingException;
+
     public DescribeTimeSeriesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeTimeSeriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -17,6 +17,7 @@ public class MissingSymbolGroupsGet200ApplicationJSONGroupsMissingSymbols {
      */
     @JsonProperty("name")
     public String name;
+
     public MissingSymbolGroupsGet200ApplicationJSONGroupsMissingSymbols withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +29,7 @@ public class MissingSymbolGroupsGet200ApplicationJSONGroupsMissingSymbols {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public String platform;
+
     public MissingSymbolGroupsGet200ApplicationJSONGroupsMissingSymbols withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -38,6 +40,7 @@ public class MissingSymbolGroupsGet200ApplicationJSONGroupsMissingSymbols {
      */
     @JsonProperty("status")
     public MissingSymbolGroupsGet200ApplicationJSONGroupsMissingSymbolsStatusEnum status;
+
     public MissingSymbolGroupsGet200ApplicationJSONGroupsMissingSymbols withStatus(MissingSymbolGroupsGet200ApplicationJSONGroupsMissingSymbolsStatusEnum status) {
         this.status = status;
         return this;
@@ -48,9 +51,15 @@ public class MissingSymbolGroupsGet200ApplicationJSONGroupsMissingSymbols {
      */
     @JsonProperty("symbol_id")
     public String symbolId;
+
     public MissingSymbolGroupsGet200ApplicationJSONGroupsMissingSymbols withSymbolId(String symbolId) {
         this.symbolId = symbolId;
         return this;
     }
     
+    public MissingSymbolGroupsGet200ApplicationJSONGroupsMissingSymbols(@JsonProperty("name") String name, @JsonProperty("status") MissingSymbolGroupsGet200ApplicationJSONGroupsMissingSymbolsStatusEnum status, @JsonProperty("symbol_id") String symbolId) {
+        this.name = name;
+        this.status = status;
+        this.symbolId = symbolId;
+  }
 }

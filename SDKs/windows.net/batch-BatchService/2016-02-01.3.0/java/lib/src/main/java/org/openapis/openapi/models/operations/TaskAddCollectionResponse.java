@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TaskAddCollectionResponse {
@@ -12,6 +13,7 @@ public class TaskAddCollectionResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public TaskAddCollectionResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class TaskAddCollectionResponse {
     
     
     public String contentType;
+
     public TaskAddCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class TaskAddCollectionResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public TaskAddCollectionResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class TaskAddCollectionResponse {
     
     
     public Integer statusCode;
+
     public TaskAddCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class TaskAddCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TaskAddCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -47,9 +53,14 @@ public class TaskAddCollectionResponse {
     
     
     public org.openapis.openapi.models.shared.TaskAddCollectionResult taskAddCollectionResult;
+
     public TaskAddCollectionResponse withTaskAddCollectionResult(org.openapis.openapi.models.shared.TaskAddCollectionResult taskAddCollectionResult) {
         this.taskAddCollectionResult = taskAddCollectionResult;
         return this;
     }
     
+    public TaskAddCollectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

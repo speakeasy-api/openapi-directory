@@ -18,6 +18,7 @@ public class SystemParameterRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public SystemParameter[] parameters;
+
     public SystemParameterRule withParameters(SystemParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -29,9 +30,11 @@ public class SystemParameterRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selector")
     public String selector;
+
     public SystemParameterRule withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public SystemParameterRule(){}
 }

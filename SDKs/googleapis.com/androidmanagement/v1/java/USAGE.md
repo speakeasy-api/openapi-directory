@@ -3,19 +3,18 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AndroidmanagementEnterprisesCreateSecurity;
 import org.openapis.openapi.models.operations.AndroidmanagementEnterprisesCreateRequest;
 import org.openapis.openapi.models.operations.AndroidmanagementEnterprisesCreateResponse;
+import org.openapis.openapi.models.operations.AndroidmanagementEnterprisesCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.EnterpriseEnabledNotificationTypesEnum;
+import org.openapis.openapi.models.shared.ContactInfo;
 import org.openapis.openapi.models.shared.Enterprise;
+import org.openapis.openapi.models.shared.EnterpriseEnabledNotificationTypesEnum;
+import org.openapis.openapi.models.shared.ExternalData;
+import org.openapis.openapi.models.shared.SigninDetail;
+import org.openapis.openapi.models.shared.SigninDetailAllowPersonalUsageEnum;
 import org.openapis.openapi.models.shared.TermsAndConditions;
 import org.openapis.openapi.models.shared.UserFacingMessage;
-import org.openapis.openapi.models.shared.SigninDetailAllowPersonalUsageEnum;
-import org.openapis.openapi.models.shared.SigninDetail;
-import org.openapis.openapi.models.shared.ExternalData;
-import org.openapis.openapi.models.shared.ContactInfo;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -25,7 +24,7 @@ public class Application {
                 .build();
 
             AndroidmanagementEnterprisesCreateRequest req = new AndroidmanagementEnterprisesCreateRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 enterprise = new Enterprise() {{
                     appAutoApprovalEnabled = false;
                     contactInfo = new ContactInfo() {{
@@ -36,73 +35,69 @@ public class Application {
                         euRepresentativeEmail = "nulla";
                         euRepresentativeName = "corrupti";
                         euRepresentativePhone = "illum";
-                    }};
+                    }};;
                     enabledNotificationTypes = new org.openapis.openapi.models.shared.EnterpriseEnabledNotificationTypesEnum[]{{
-                        add("STATUS_REPORT"),
-                        add("STATUS_REPORT"),
+                        add(EnterpriseEnabledNotificationTypesEnum.STATUS_REPORT),
+                        add(EnterpriseEnabledNotificationTypesEnum.STATUS_REPORT),
                     }};
                     enterpriseDisplayName = "suscipit";
                     logo = new ExternalData() {{
                         sha256Hash = "iure";
                         url = "magnam";
-                    }};
-                    name = "debitis";
-                    primaryColor = 56713;
-                    pubsubTopic = "delectus";
+                    }};;
+                    name = "Larry Windler";
+                    primaryColor = 477665;
+                    pubsubTopic = "minus";
                     signinDetails = new org.openapis.openapi.models.shared.SigninDetail[]{{
                         add(new SigninDetail() {{
-                            allowPersonalUsage = "PERSONAL_USAGE_ALLOWED";
-                            qrCode = "molestiae";
-                            signinEnrollmentToken = "minus";
-                            signinUrl = "placeat";
-                        }}),
-                        add(new SigninDetail() {{
-                            allowPersonalUsage = "PERSONAL_USAGE_ALLOWED";
+                            allowPersonalUsage = SigninDetailAllowPersonalUsageEnum.PERSONAL_USAGE_ALLOWED;
                             qrCode = "iusto";
                             signinEnrollmentToken = "excepturi";
                             signinUrl = "nisi";
+                        }}),
+                        add(new SigninDetail() {{
+                            allowPersonalUsage = SigninDetailAllowPersonalUsageEnum.PERSONAL_USAGE_DISALLOWED;
+                            qrCode = "temporibus";
+                            signinEnrollmentToken = "ab";
+                            signinUrl = "quis";
+                        }}),
+                        add(new SigninDetail() {{
+                            allowPersonalUsage = SigninDetailAllowPersonalUsageEnum.ALLOW_PERSONAL_USAGE_UNSPECIFIED;
+                            qrCode = "deserunt";
+                            signinEnrollmentToken = "perferendis";
+                            signinUrl = "ipsam";
+                        }}),
+                        add(new SigninDetail() {{
+                            allowPersonalUsage = SigninDetailAllowPersonalUsageEnum.PERSONAL_USAGE_DISALLOWED;
+                            qrCode = "sapiente";
+                            signinEnrollmentToken = "quo";
+                            signinUrl = "odit";
                         }}),
                     }};
                     termsAndConditions = new org.openapis.openapi.models.shared.TermsAndConditions[]{{
                         add(new TermsAndConditions() {{
                             content = new UserFacingMessage() {{
-                                defaultMessage = "temporibus";
+                                defaultMessage = "at";
                                 localizedMessages = new java.util.HashMap<String, String>() {{
-                                    put("quis", "veritatis");
-                                }};
-                            }};
-                            header = new UserFacingMessage() {{
-                                defaultMessage = "deserunt";
-                                localizedMessages = new java.util.HashMap<String, String>() {{
-                                    put("ipsam", "repellendus");
-                                }};
-                            }};
-                        }}),
-                        add(new TermsAndConditions() {{
-                            content = new UserFacingMessage() {{
-                                defaultMessage = "sapiente";
-                                localizedMessages = new java.util.HashMap<String, String>() {{
-                                    put("odit", "at");
-                                    put("at", "maiores");
                                     put("molestiae", "quod");
                                     put("quod", "esse");
+                                    put("totam", "porro");
+                                    put("dolorum", "dicta");
                                 }};
                             }};
                             header = new UserFacingMessage() {{
-                                defaultMessage = "totam";
+                                defaultMessage = "nam";
                                 localizedMessages = new java.util.HashMap<String, String>() {{
-                                    put("dolorum", "dicta");
-                                    put("nam", "officia");
                                     put("occaecati", "fugit");
                                     put("deleniti", "hic");
+                                    put("optio", "totam");
                                 }};
                             }};
                         }}),
                         add(new TermsAndConditions() {{
                             content = new UserFacingMessage() {{
-                                defaultMessage = "optio";
+                                defaultMessage = "beatae";
                                 localizedMessages = new java.util.HashMap<String, String>() {{
-                                    put("beatae", "commodi");
                                     put("molestiae", "modi");
                                     put("qui", "impedit");
                                 }};
@@ -133,34 +128,52 @@ public class Application {
                                 }};
                             }};
                         }}),
+                        add(new TermsAndConditions() {{
+                            content = new UserFacingMessage() {{
+                                defaultMessage = "architecto";
+                                localizedMessages = new java.util.HashMap<String, String>() {{
+                                    put("reiciendis", "est");
+                                }};
+                            }};
+                            header = new UserFacingMessage() {{
+                                defaultMessage = "mollitia";
+                                localizedMessages = new java.util.HashMap<String, String>() {{
+                                    put("dolores", "dolorem");
+                                    put("corporis", "explicabo");
+                                    put("nobis", "enim");
+                                }};
+                            }};
+                        }}),
                     }};
-                }};
-                accessToken = "architecto";
+                }};;
+                accessToken = "omnis";
                 agreementAccepted = false;
-                alt = "json";
-                callback = "reiciendis";
-                enterpriseToken = "est";
-                fields = "mollitia";
-                key = "laborum";
-                oauthToken = "dolores";
+                alt = AltEnum.MEDIA;
+                callback = "minima";
+                enterpriseToken = "excepturi";
+                fields = "accusantium";
+                key = "iure";
+                oauthToken = "culpa";
                 prettyPrint = false;
-                projectId = "dolorem";
-                quotaUser = "corporis";
-                signupUrlName = "explicabo";
-                uploadType = "nobis";
-                uploadProtocol = "enim";
-            }}            
+                projectId = "doloribus";
+                quotaUser = "sapiente";
+                signupUrlName = "architecto";
+                uploadType = "mollitia";
+                uploadProtocol = "dolorem";
+            }};            
 
-            AndroidmanagementEnterprisesCreateResponse res = sdk.enterprises.androidmanagementEnterprisesCreate(req, new AndroidmanagementEnterprisesCreateSecurity() {{
+            AndroidmanagementEnterprisesCreateResponse res = sdk.enterprises.androidmanagementEnterprisesCreate(req, new AndroidmanagementEnterprisesCreateSecurity("culpa", "consequuntur") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.enterprise.isPresent()) {
+            if (res.enterprise != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

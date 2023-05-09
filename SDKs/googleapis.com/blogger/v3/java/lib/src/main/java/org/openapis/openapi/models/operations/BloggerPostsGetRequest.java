@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BloggerPostsGetRequest {
@@ -12,6 +13,7 @@ public class BloggerPostsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BloggerPostsGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class BloggerPostsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BloggerPostsGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class BloggerPostsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BloggerPostsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -39,6 +43,7 @@ public class BloggerPostsGetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=blogId")
     public String blogId;
+
     public BloggerPostsGetRequest withBlogId(String blogId) {
         this.blogId = blogId;
         return this;
@@ -49,6 +54,7 @@ public class BloggerPostsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BloggerPostsGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -56,6 +62,7 @@ public class BloggerPostsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fetchBody")
     public Boolean fetchBody;
+
     public BloggerPostsGetRequest withFetchBody(Boolean fetchBody) {
         this.fetchBody = fetchBody;
         return this;
@@ -63,6 +70,7 @@ public class BloggerPostsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fetchImages")
     public Boolean fetchImages;
+
     public BloggerPostsGetRequest withFetchImages(Boolean fetchImages) {
         this.fetchImages = fetchImages;
         return this;
@@ -73,6 +81,7 @@ public class BloggerPostsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BloggerPostsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -83,6 +92,7 @@ public class BloggerPostsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BloggerPostsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -90,6 +100,7 @@ public class BloggerPostsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxComments")
     public Long maxComments;
+
     public BloggerPostsGetRequest withMaxComments(Long maxComments) {
         this.maxComments = maxComments;
         return this;
@@ -100,6 +111,7 @@ public class BloggerPostsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BloggerPostsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -107,6 +119,7 @@ public class BloggerPostsGetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=postId")
     public String postId;
+
     public BloggerPostsGetRequest withPostId(String postId) {
         this.postId = postId;
         return this;
@@ -117,6 +130,7 @@ public class BloggerPostsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BloggerPostsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -127,6 +141,7 @@ public class BloggerPostsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BloggerPostsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -137,6 +152,7 @@ public class BloggerPostsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BloggerPostsGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -147,6 +163,7 @@ public class BloggerPostsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BloggerPostsGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -154,9 +171,14 @@ public class BloggerPostsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public BloggerPostsGetViewEnum view;
+
     public BloggerPostsGetRequest withView(BloggerPostsGetViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public BloggerPostsGetRequest(@JsonProperty("blogId") String blogId, @JsonProperty("postId") String postId) {
+        this.blogId = blogId;
+        this.postId = postId;
+  }
 }

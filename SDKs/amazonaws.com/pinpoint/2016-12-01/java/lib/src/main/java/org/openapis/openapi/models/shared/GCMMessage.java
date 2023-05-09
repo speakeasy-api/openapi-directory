@@ -15,6 +15,7 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public ActionEnum action;
+
     public GCMMessage withAction(ActionEnum action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public GCMMessage withBody(String body) {
         this.body = body;
         return this;
@@ -31,6 +33,7 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollapseKey")
     public String collapseKey;
+
     public GCMMessage withCollapseKey(String collapseKey) {
         this.collapseKey = collapseKey;
         return this;
@@ -39,6 +42,7 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public java.util.Map<String, String> data;
+
     public GCMMessage withData(java.util.Map<String, String> data) {
         this.data = data;
         return this;
@@ -47,6 +51,7 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IconReference")
     public String iconReference;
+
     public GCMMessage withIconReference(String iconReference) {
         this.iconReference = iconReference;
         return this;
@@ -55,6 +60,7 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageIconUrl")
     public String imageIconUrl;
+
     public GCMMessage withImageIconUrl(String imageIconUrl) {
         this.imageIconUrl = imageIconUrl;
         return this;
@@ -63,6 +69,7 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageUrl")
     public String imageUrl;
+
     public GCMMessage withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -71,6 +78,7 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public String priority;
+
     public GCMMessage withPriority(String priority) {
         this.priority = priority;
         return this;
@@ -79,6 +87,7 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RawContent")
     public String rawContent;
+
     public GCMMessage withRawContent(String rawContent) {
         this.rawContent = rawContent;
         return this;
@@ -87,6 +96,7 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RestrictedPackageName")
     public String restrictedPackageName;
+
     public GCMMessage withRestrictedPackageName(String restrictedPackageName) {
         this.restrictedPackageName = restrictedPackageName;
         return this;
@@ -95,6 +105,7 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SilentPush")
     public Boolean silentPush;
+
     public GCMMessage withSilentPush(Boolean silentPush) {
         this.silentPush = silentPush;
         return this;
@@ -103,6 +114,7 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmallImageIconUrl")
     public String smallImageIconUrl;
+
     public GCMMessage withSmallImageIconUrl(String smallImageIconUrl) {
         this.smallImageIconUrl = smallImageIconUrl;
         return this;
@@ -111,6 +123,7 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sound")
     public String sound;
+
     public GCMMessage withSound(String sound) {
         this.sound = sound;
         return this;
@@ -119,6 +132,7 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Substitutions")
     public java.util.Map<String, String[]> substitutions;
+
     public GCMMessage withSubstitutions(java.util.Map<String, String[]> substitutions) {
         this.substitutions = substitutions;
         return this;
@@ -127,6 +141,7 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeToLive")
     public Long timeToLive;
+
     public GCMMessage withTimeToLive(Long timeToLive) {
         this.timeToLive = timeToLive;
         return this;
@@ -135,6 +150,7 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public GCMMessage withTitle(String title) {
         this.title = title;
         return this;
@@ -143,9 +159,11 @@ public class GCMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public GCMMessage withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GCMMessage(){}
 }

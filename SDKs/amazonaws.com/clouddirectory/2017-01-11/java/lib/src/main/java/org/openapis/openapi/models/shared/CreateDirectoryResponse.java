@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDirectoryResponse {
     @JsonProperty("AppliedSchemaArn")
     public String appliedSchemaArn;
+
     public CreateDirectoryResponse withAppliedSchemaArn(String appliedSchemaArn) {
         this.appliedSchemaArn = appliedSchemaArn;
         return this;
@@ -19,6 +20,7 @@ public class CreateDirectoryResponse {
     
     @JsonProperty("DirectoryArn")
     public String directoryArn;
+
     public CreateDirectoryResponse withDirectoryArn(String directoryArn) {
         this.directoryArn = directoryArn;
         return this;
@@ -26,6 +28,7 @@ public class CreateDirectoryResponse {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateDirectoryResponse withName(String name) {
         this.name = name;
         return this;
@@ -33,9 +36,16 @@ public class CreateDirectoryResponse {
     
     @JsonProperty("ObjectIdentifier")
     public String objectIdentifier;
+
     public CreateDirectoryResponse withObjectIdentifier(String objectIdentifier) {
         this.objectIdentifier = objectIdentifier;
         return this;
     }
     
+    public CreateDirectoryResponse(@JsonProperty("AppliedSchemaArn") String appliedSchemaArn, @JsonProperty("DirectoryArn") String directoryArn, @JsonProperty("Name") String name, @JsonProperty("ObjectIdentifier") String objectIdentifier) {
+        this.appliedSchemaArn = appliedSchemaArn;
+        this.directoryArn = directoryArn;
+        this.name = name;
+        this.objectIdentifier = objectIdentifier;
+  }
 }

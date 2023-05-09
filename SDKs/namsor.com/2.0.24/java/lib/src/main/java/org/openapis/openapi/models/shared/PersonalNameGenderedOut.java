@@ -18,6 +18,7 @@ public class PersonalNameGenderedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genderScale")
     public Double genderScale;
+
     public PersonalNameGenderedOut withGenderScale(Double genderScale) {
         this.genderScale = genderScale;
         return this;
@@ -26,6 +27,7 @@ public class PersonalNameGenderedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PersonalNameGenderedOut withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class PersonalNameGenderedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("likelyGender")
     public PersonalNameGenderedOutLikelyGenderEnum likelyGender;
+
     public PersonalNameGenderedOut withLikelyGender(PersonalNameGenderedOutLikelyGenderEnum likelyGender) {
         this.likelyGender = likelyGender;
         return this;
@@ -48,6 +51,7 @@ public class PersonalNameGenderedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PersonalNameGenderedOut withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class PersonalNameGenderedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probabilityCalibrated")
     public Double probabilityCalibrated;
+
     public PersonalNameGenderedOut withProbabilityCalibrated(Double probabilityCalibrated) {
         this.probabilityCalibrated = probabilityCalibrated;
         return this;
@@ -70,6 +75,7 @@ public class PersonalNameGenderedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public PersonalNameGenderedOut withScore(Double score) {
         this.score = score;
         return this;
@@ -78,9 +84,11 @@ public class PersonalNameGenderedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public PersonalNameGenderedOut withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public PersonalNameGenderedOut(){}
 }

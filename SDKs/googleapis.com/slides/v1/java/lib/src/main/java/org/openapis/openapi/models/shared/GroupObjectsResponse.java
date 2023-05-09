@@ -18,9 +18,11 @@ public class GroupObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public GroupObjectsResponse withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public GroupObjectsResponse(){}
 }

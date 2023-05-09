@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStatusByUuidRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=importUuid")
     public String importUuid;
+
     public GetStatusByUuidRequest withImportUuid(String importUuid) {
         this.importUuid = importUuid;
         return this;
@@ -16,9 +18,14 @@ public class GetStatusByUuidRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
     public String organizationUuid;
+
     public GetStatusByUuidRequest withOrganizationUuid(String organizationUuid) {
         this.organizationUuid = organizationUuid;
         return this;
     }
     
+    public GetStatusByUuidRequest(@JsonProperty("importUuid") String importUuid, @JsonProperty("organizationUuid") String organizationUuid) {
+        this.importUuid = importUuid;
+        this.organizationUuid = organizationUuid;
+  }
 }

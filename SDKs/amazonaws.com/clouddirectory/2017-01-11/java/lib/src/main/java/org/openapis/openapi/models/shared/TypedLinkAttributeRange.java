@@ -15,6 +15,7 @@ public class TypedLinkAttributeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public TypedLinkAttributeRange withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -22,9 +23,13 @@ public class TypedLinkAttributeRange {
     
     @JsonProperty("Range")
     public TypedAttributeValueRange range;
+
     public TypedLinkAttributeRange withRange(TypedAttributeValueRange range) {
         this.range = range;
         return this;
     }
     
+    public TypedLinkAttributeRange(@JsonProperty("Range") TypedAttributeValueRange range) {
+        this.range = range;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2EditorialIdRequest {
@@ -12,6 +13,7 @@ public class GetV2EditorialIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public GetV2EditorialIdRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -22,6 +24,7 @@ public class GetV2EditorialIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetV2EditorialIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +35,14 @@ public class GetV2EditorialIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
     public String searchId;
+
     public GetV2EditorialIdRequest withSearchId(String searchId) {
         this.searchId = searchId;
         return this;
     }
     
+    public GetV2EditorialIdRequest(@JsonProperty("country") String country, @JsonProperty("id") String id) {
+        this.country = country;
+        this.id = id;
+  }
 }

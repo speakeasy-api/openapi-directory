@@ -18,9 +18,11 @@ public class ReplaceAllShapesWithImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurrencesChanged")
     public Integer occurrencesChanged;
+
     public ReplaceAllShapesWithImageResponse withOccurrencesChanged(Integer occurrencesChanged) {
         this.occurrencesChanged = occurrencesChanged;
         return this;
     }
     
+    public ReplaceAllShapesWithImageResponse(){}
 }

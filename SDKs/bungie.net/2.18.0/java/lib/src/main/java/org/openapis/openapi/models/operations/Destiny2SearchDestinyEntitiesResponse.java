@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class Destiny2SearchDestinyEntitiesResponse {
     
     public byte[] body;
+
     public Destiny2SearchDestinyEntitiesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class Destiny2SearchDestinyEntitiesResponse {
     
     
     public String contentType;
+
     public Destiny2SearchDestinyEntitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class Destiny2SearchDestinyEntitiesResponse {
     
     
     public Integer statusCode;
+
     public Destiny2SearchDestinyEntitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class Destiny2SearchDestinyEntitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public Destiny2SearchDestinyEntitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public Destiny2SearchDestinyEntitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

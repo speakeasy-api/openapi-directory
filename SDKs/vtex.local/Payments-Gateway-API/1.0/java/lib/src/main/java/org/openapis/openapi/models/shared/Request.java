@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Request {
     @JsonProperty("date")
     public String date;
+
     public Request withDate(String date) {
         this.date = date;
         return this;
@@ -16,6 +17,7 @@ public class Request {
     
     @JsonProperty("id")
     public String id;
+
     public Request withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +25,15 @@ public class Request {
     
     @JsonProperty("value")
     public Integer value;
+
     public Request withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public Request(@JsonProperty("date") String date, @JsonProperty("id") String id, @JsonProperty("value") Integer value) {
+        this.date = date;
+        this.id = id;
+        this.value = value;
+  }
 }

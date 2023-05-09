@@ -15,6 +15,7 @@ public class TargetResourceTypeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TargetResourceTypeSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class TargetResourceTypeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public TargetResourceTypeSummary withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public TargetResourceTypeSummary(){}
 }

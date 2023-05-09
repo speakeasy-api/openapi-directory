@@ -15,6 +15,7 @@ public class CancelJobExecutionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedVersion")
     public Long expectedVersion;
+
     public CancelJobExecutionRequestBody withExpectedVersion(Long expectedVersion) {
         this.expectedVersion = expectedVersion;
         return this;
@@ -26,9 +27,11 @@ public class CancelJobExecutionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusDetails")
     public java.util.Map<String, String> statusDetails;
+
     public CancelJobExecutionRequestBody withStatusDetails(java.util.Map<String, String> statusDetails) {
         this.statusDetails = statusDetails;
         return this;
     }
     
+    public CancelJobExecutionRequestBody(){}
 }

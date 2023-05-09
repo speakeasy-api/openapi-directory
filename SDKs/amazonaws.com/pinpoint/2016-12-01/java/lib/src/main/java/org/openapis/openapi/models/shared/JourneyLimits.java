@@ -15,6 +15,7 @@ public class JourneyLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DailyCap")
     public Long dailyCap;
+
     public JourneyLimits withDailyCap(Long dailyCap) {
         this.dailyCap = dailyCap;
         return this;
@@ -23,6 +24,7 @@ public class JourneyLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointReentryCap")
     public Long endpointReentryCap;
+
     public JourneyLimits withEndpointReentryCap(Long endpointReentryCap) {
         this.endpointReentryCap = endpointReentryCap;
         return this;
@@ -31,6 +33,7 @@ public class JourneyLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointReentryInterval")
     public String endpointReentryInterval;
+
     public JourneyLimits withEndpointReentryInterval(String endpointReentryInterval) {
         this.endpointReentryInterval = endpointReentryInterval;
         return this;
@@ -39,9 +42,11 @@ public class JourneyLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessagesPerSecond")
     public Long messagesPerSecond;
+
     public JourneyLimits withMessagesPerSecond(Long messagesPerSecond) {
         this.messagesPerSecond = messagesPerSecond;
         return this;
     }
     
+    public JourneyLimits(){}
 }

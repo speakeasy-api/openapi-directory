@@ -18,6 +18,7 @@ public class AuthorizationAttemptInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public AuthorizationAttemptInfo withDetails(String details) {
         this.details = details;
         return this;
@@ -29,6 +30,7 @@ public class AuthorizationAttemptInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public AuthorizationAttemptInfo withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -40,6 +42,7 @@ public class AuthorizationAttemptInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public AuthorizationAttemptInfoFailureReasonEnum failureReason;
+
     public AuthorizationAttemptInfo withFailureReason(AuthorizationAttemptInfoFailureReasonEnum failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -51,9 +54,11 @@ public class AuthorizationAttemptInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public AuthorizationAttemptInfoStateEnum state;
+
     public AuthorizationAttemptInfo withState(AuthorizationAttemptInfoStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public AuthorizationAttemptInfo(){}
 }

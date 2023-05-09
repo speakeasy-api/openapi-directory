@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSqlInjectionMatchSetsResponse {
     
     public String contentType;
+
     public ListSqlInjectionMatchSetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSqlInjectionMatchSetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSqlInjectionMatchSetsResponse listSqlInjectionMatchSetsResponse;
+
     public ListSqlInjectionMatchSetsResponse withListSqlInjectionMatchSetsResponse(org.openapis.openapi.models.shared.ListSqlInjectionMatchSetsResponse listSqlInjectionMatchSetsResponse) {
         this.listSqlInjectionMatchSetsResponse = listSqlInjectionMatchSetsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListSqlInjectionMatchSetsResponse {
     
     
     public Integer statusCode;
+
     public ListSqlInjectionMatchSetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListSqlInjectionMatchSetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSqlInjectionMatchSetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ListSqlInjectionMatchSetsResponse {
      */
     
     public Object wafInternalErrorException;
+
     public ListSqlInjectionMatchSetsResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,9 +59,14 @@ public class ListSqlInjectionMatchSetsResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public ListSqlInjectionMatchSetsResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
     }
     
+    public ListSqlInjectionMatchSetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

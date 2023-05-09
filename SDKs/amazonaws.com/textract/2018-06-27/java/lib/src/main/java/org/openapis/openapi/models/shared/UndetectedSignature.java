@@ -15,9 +15,11 @@ public class UndetectedSignature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Page")
     public Long page;
+
     public UndetectedSignature withPage(Long page) {
         this.page = page;
         return this;
     }
     
+    public UndetectedSignature(){}
 }

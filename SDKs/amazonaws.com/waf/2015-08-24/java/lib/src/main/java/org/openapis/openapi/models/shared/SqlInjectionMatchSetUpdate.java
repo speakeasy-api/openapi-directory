@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SqlInjectionMatchSetUpdate {
     @JsonProperty("Action")
     public ChangeActionEnum action;
+
     public SqlInjectionMatchSetUpdate withAction(ChangeActionEnum action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class SqlInjectionMatchSetUpdate {
     
     @JsonProperty("SqlInjectionMatchTuple")
     public SqlInjectionMatchTuple sqlInjectionMatchTuple;
+
     public SqlInjectionMatchSetUpdate withSqlInjectionMatchTuple(SqlInjectionMatchTuple sqlInjectionMatchTuple) {
         this.sqlInjectionMatchTuple = sqlInjectionMatchTuple;
         return this;
     }
     
+    public SqlInjectionMatchSetUpdate(@JsonProperty("Action") ChangeActionEnum action, @JsonProperty("SqlInjectionMatchTuple") SqlInjectionMatchTuple sqlInjectionMatchTuple) {
+        this.action = action;
+        this.sqlInjectionMatchTuple = sqlInjectionMatchTuple;
+  }
 }

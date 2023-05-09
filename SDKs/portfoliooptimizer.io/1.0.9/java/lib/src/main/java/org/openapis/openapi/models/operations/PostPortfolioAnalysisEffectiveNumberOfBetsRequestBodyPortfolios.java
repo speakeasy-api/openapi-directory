@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisEffectiveNumberOfBetsRequestBodyPortfolios {
      */
     @JsonProperty("assetsWeights")
     public Double[] assetsWeights;
+
     public PostPortfolioAnalysisEffectiveNumberOfBetsRequestBodyPortfolios withAssetsWeights(Double[] assetsWeights) {
         this.assetsWeights = assetsWeights;
         return this;
     }
     
+    public PostPortfolioAnalysisEffectiveNumberOfBetsRequestBodyPortfolios(@JsonProperty("assetsWeights") Double[] assetsWeights) {
+        this.assetsWeights = assetsWeights;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopAutomationExecutionResponse {
@@ -12,6 +13,7 @@ public class StopAutomationExecutionResponse {
      */
     
     public Object automationExecutionNotFoundException;
+
     public StopAutomationExecutionResponse withAutomationExecutionNotFoundException(Object automationExecutionNotFoundException) {
         this.automationExecutionNotFoundException = automationExecutionNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class StopAutomationExecutionResponse {
     
     
     public String contentType;
+
     public StopAutomationExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopAutomationExecutionResponse {
      */
     
     public Object internalServerError;
+
     public StopAutomationExecutionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class StopAutomationExecutionResponse {
      */
     
     public Object invalidAutomationStatusUpdateException;
+
     public StopAutomationExecutionResponse withInvalidAutomationStatusUpdateException(Object invalidAutomationStatusUpdateException) {
         this.invalidAutomationStatusUpdateException = invalidAutomationStatusUpdateException;
         return this;
@@ -46,6 +51,7 @@ public class StopAutomationExecutionResponse {
     
     
     public Integer statusCode;
+
     public StopAutomationExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopAutomationExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopAutomationExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StopAutomationExecutionResponse {
      */
     
     public java.util.Map<String, Object> stopAutomationExecutionResult;
+
     public StopAutomationExecutionResponse withStopAutomationExecutionResult(java.util.Map<String, Object> stopAutomationExecutionResult) {
         this.stopAutomationExecutionResult = stopAutomationExecutionResult;
         return this;
     }
     
+    public StopAutomationExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

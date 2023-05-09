@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateDBSnapshotMessage {
     
     public String dbInstanceIdentifier;
+
     public CreateDBSnapshotMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -16,9 +17,14 @@ public class CreateDBSnapshotMessage {
     
     
     public String dbSnapshotIdentifier;
+
     public CreateDBSnapshotMessage withDBSnapshotIdentifier(String dbSnapshotIdentifier) {
         this.dbSnapshotIdentifier = dbSnapshotIdentifier;
         return this;
     }
     
+    public CreateDBSnapshotMessage(@JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier, @JsonProperty("DBSnapshotIdentifier") String dbSnapshotIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        this.dbSnapshotIdentifier = dbSnapshotIdentifier;
+  }
 }

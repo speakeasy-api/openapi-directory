@@ -145,6 +145,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -182,7 +187,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendSSHPublicKeyResponse res = new org.openapis.openapi.models.operations.SendSSHPublicKeyResponse() {{
+        org.openapis.openapi.models.operations.SendSSHPublicKeyResponse res = new org.openapis.openapi.models.operations.SendSSHPublicKeyResponse(contentType, httpRes.statusCode()) {{
             sendSSHPublicKeyResponse = null;
             authException = null;
             invalidArgsException = null;
@@ -192,8 +197,6 @@ public class SDK {
             ec2InstanceStateInvalidException = null;
             ec2InstanceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -290,7 +293,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendSerialConsoleSSHPublicKeyResponse res = new org.openapis.openapi.models.operations.SendSerialConsoleSSHPublicKeyResponse() {{
+        org.openapis.openapi.models.operations.SendSerialConsoleSSHPublicKeyResponse res = new org.openapis.openapi.models.operations.SendSerialConsoleSSHPublicKeyResponse(contentType, httpRes.statusCode()) {{
             sendSerialConsoleSSHPublicKeyResponse = null;
             authException = null;
             serialConsoleAccessDisabledException = null;
@@ -304,8 +307,6 @@ public class SDK {
             ec2InstanceStateInvalidException = null;
             ec2InstanceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

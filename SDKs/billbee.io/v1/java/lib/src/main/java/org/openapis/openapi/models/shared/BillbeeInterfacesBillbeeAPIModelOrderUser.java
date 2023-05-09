@@ -15,6 +15,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillbeeShopId")
     public Long billbeeShopId;
+
     public BillbeeInterfacesBillbeeAPIModelOrderUser withBillbeeShopId(Long billbeeShopId) {
         this.billbeeShopId = billbeeShopId;
         return this;
@@ -26,6 +27,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillbeeShopName")
     public String billbeeShopName;
+
     public BillbeeInterfacesBillbeeAPIModelOrderUser withBillbeeShopName(String billbeeShopName) {
         this.billbeeShopName = billbeeShopName;
         return this;
@@ -37,6 +39,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public BillbeeInterfacesBillbeeAPIModelOrderUser withEmail(String email) {
         this.email = email;
         return this;
@@ -48,6 +51,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstName")
     public String firstName;
+
     public BillbeeInterfacesBillbeeAPIModelOrderUser withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -59,6 +63,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FullName")
     public String fullName;
+
     public BillbeeInterfacesBillbeeAPIModelOrderUser withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -70,6 +75,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public BillbeeInterfacesBillbeeAPIModelOrderUser withId(String id) {
         this.id = id;
         return this;
@@ -81,6 +87,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastName")
     public String lastName;
+
     public BillbeeInterfacesBillbeeAPIModelOrderUser withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -92,6 +99,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Nick")
     public String nick;
+
     public BillbeeInterfacesBillbeeAPIModelOrderUser withNick(String nick) {
         this.nick = nick;
         return this;
@@ -103,9 +111,11 @@ public class BillbeeInterfacesBillbeeAPIModelOrderUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Platform")
     public String platform;
+
     public BillbeeInterfacesBillbeeAPIModelOrderUser withPlatform(String platform) {
         this.platform = platform;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelOrderUser(){}
 }

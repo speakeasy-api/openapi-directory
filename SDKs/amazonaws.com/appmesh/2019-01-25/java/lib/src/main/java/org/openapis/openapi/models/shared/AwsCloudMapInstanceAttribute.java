@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AwsCloudMapInstanceAttribute {
     @JsonProperty("key")
     public String key;
+
     public AwsCloudMapInstanceAttribute withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class AwsCloudMapInstanceAttribute {
     
     @JsonProperty("value")
     public String value;
+
     public AwsCloudMapInstanceAttribute withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AwsCloudMapInstanceAttribute(@JsonProperty("key") String key, @JsonProperty("value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

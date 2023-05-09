@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePlaybackKeyPairResponse {
@@ -12,6 +13,7 @@ public class DeletePlaybackKeyPairResponse {
      */
     
     public Object accessDeniedException;
+
     public DeletePlaybackKeyPairResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeletePlaybackKeyPairResponse {
     
     
     public String contentType;
+
     public DeletePlaybackKeyPairResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeletePlaybackKeyPairResponse {
      */
     
     public java.util.Map<String, Object> deletePlaybackKeyPairResponse;
+
     public DeletePlaybackKeyPairResponse withDeletePlaybackKeyPairResponse(java.util.Map<String, Object> deletePlaybackKeyPairResponse) {
         this.deletePlaybackKeyPairResponse = deletePlaybackKeyPairResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeletePlaybackKeyPairResponse {
      */
     
     public Object pendingVerification;
+
     public DeletePlaybackKeyPairResponse withPendingVerification(Object pendingVerification) {
         this.pendingVerification = pendingVerification;
         return this;
@@ -49,6 +54,7 @@ public class DeletePlaybackKeyPairResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeletePlaybackKeyPairResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeletePlaybackKeyPairResponse {
     
     
     public Integer statusCode;
+
     public DeletePlaybackKeyPairResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeletePlaybackKeyPairResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePlaybackKeyPairResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeletePlaybackKeyPairResponse {
      */
     
     public Object validationException;
+
     public DeletePlaybackKeyPairResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeletePlaybackKeyPairResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

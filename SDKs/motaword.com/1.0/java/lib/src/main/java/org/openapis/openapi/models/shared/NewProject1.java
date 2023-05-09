@@ -12,6 +12,7 @@ public class NewProject1 {
      */
     @SpeakeasyMetadata("multipartForm:name=callback_url")
     public String callbackUrl;
+
     public NewProject1 withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -22,6 +23,7 @@ public class NewProject1 {
      */
     @SpeakeasyMetadata("multipartForm:name=coupon_code")
     public String couponCode;
+
     public NewProject1 withCouponCode(String couponCode) {
         this.couponCode = couponCode;
         return this;
@@ -32,6 +34,7 @@ public class NewProject1 {
      */
     @SpeakeasyMetadata("multipartForm:name=custom")
     public String[] custom;
+
     public NewProject1 withCustom(String[] custom) {
         this.custom = custom;
         return this;
@@ -42,6 +45,7 @@ public class NewProject1 {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public NewProjectDocuments documents;
+
     public NewProject1 withDocuments(NewProjectDocuments documents) {
         this.documents = documents;
         return this;
@@ -52,6 +56,7 @@ public class NewProject1 {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public NewProjectGlossaries glossaries;
+
     public NewProject1 withGlossaries(NewProjectGlossaries glossaries) {
         this.glossaries = glossaries;
         return this;
@@ -59,6 +64,7 @@ public class NewProject1 {
     
     @SpeakeasyMetadata("multipartForm:name=source_language")
     public String sourceLanguage;
+
     public NewProject1 withSourceLanguage(String sourceLanguage) {
         this.sourceLanguage = sourceLanguage;
         return this;
@@ -69,6 +75,7 @@ public class NewProject1 {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public NewProjectStyleguides styleguides;
+
     public NewProject1 withStyleguides(NewProjectStyleguides styleguides) {
         this.styleguides = styleguides;
         return this;
@@ -76,9 +83,11 @@ public class NewProject1 {
     
     @SpeakeasyMetadata("multipartForm:name=target_languages[]")
     public String[] targetLanguages;
+
     public NewProject1 withTargetLanguages(String[] targetLanguages) {
         this.targetLanguages = targetLanguages;
         return this;
     }
     
+    public NewProject1(){}
 }

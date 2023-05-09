@@ -15,6 +15,7 @@ public class CreateStageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateStageRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateStageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateStageRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class CreateStageRequestBody {
      */
     @JsonProperty("Role")
     public String role;
+
     public CreateStageRequestBody withRole(String role) {
         this.role = role;
         return this;
@@ -46,6 +49,7 @@ public class CreateStageRequestBody {
      */
     @JsonProperty("StageName")
     public String stageName;
+
     public CreateStageRequestBody withStageName(String stageName) {
         this.stageName = stageName;
         return this;
@@ -57,9 +61,14 @@ public class CreateStageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateStageRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateStageRequestBody(@JsonProperty("Role") String role, @JsonProperty("StageName") String stageName) {
+        this.role = role;
+        this.stageName = stageName;
+  }
 }

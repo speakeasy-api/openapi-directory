@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateReservation200ApplicationJSON {
     @JsonProperty("AuthorizedDateUtc")
     public String authorizedDateUtc;
+
     public CreateReservation200ApplicationJSON withAuthorizedDateUtc(String authorizedDateUtc) {
         this.authorizedDateUtc = authorizedDateUtc;
         return this;
@@ -19,6 +20,7 @@ public class CreateReservation200ApplicationJSON {
     
     @JsonProperty("CanceledDateUtc")
     public String canceledDateUtc;
+
     public CreateReservation200ApplicationJSON withCanceledDateUtc(String canceledDateUtc) {
         this.canceledDateUtc = canceledDateUtc;
         return this;
@@ -26,6 +28,7 @@ public class CreateReservation200ApplicationJSON {
     
     @JsonProperty("ConfirmedDateUtc")
     public String confirmedDateUtc;
+
     public CreateReservation200ApplicationJSON withConfirmedDateUtc(String confirmedDateUtc) {
         this.confirmedDateUtc = confirmedDateUtc;
         return this;
@@ -33,6 +36,7 @@ public class CreateReservation200ApplicationJSON {
     
     @JsonProperty("Errors")
     public String[] errors;
+
     public CreateReservation200ApplicationJSON withErrors(String[] errors) {
         this.errors = errors;
         return this;
@@ -40,6 +44,7 @@ public class CreateReservation200ApplicationJSON {
     
     @JsonProperty("IsSucess")
     public Boolean isSucess;
+
     public CreateReservation200ApplicationJSON withIsSucess(Boolean isSucess) {
         this.isSucess = isSucess;
         return this;
@@ -47,6 +52,7 @@ public class CreateReservation200ApplicationJSON {
     
     @JsonProperty("LastUpdateDateUtc")
     public String lastUpdateDateUtc;
+
     public CreateReservation200ApplicationJSON withLastUpdateDateUtc(String lastUpdateDateUtc) {
         this.lastUpdateDateUtc = lastUpdateDateUtc;
         return this;
@@ -54,6 +60,7 @@ public class CreateReservation200ApplicationJSON {
     
     @JsonProperty("LockId")
     public String lockId;
+
     public CreateReservation200ApplicationJSON withLockId(String lockId) {
         this.lockId = lockId;
         return this;
@@ -61,6 +68,7 @@ public class CreateReservation200ApplicationJSON {
     
     @JsonProperty("MaximumConfirmationDateUtc")
     public String maximumConfirmationDateUtc;
+
     public CreateReservation200ApplicationJSON withMaximumConfirmationDateUtc(String maximumConfirmationDateUtc) {
         this.maximumConfirmationDateUtc = maximumConfirmationDateUtc;
         return this;
@@ -68,6 +76,7 @@ public class CreateReservation200ApplicationJSON {
     
     @JsonProperty("PickupPointItemOptions")
     public String pickupPointItemOptions;
+
     public CreateReservation200ApplicationJSON withPickupPointItemOptions(String pickupPointItemOptions) {
         this.pickupPointItemOptions = pickupPointItemOptions;
         return this;
@@ -75,6 +84,7 @@ public class CreateReservation200ApplicationJSON {
     
     @JsonProperty("ReservationDateUtc")
     public String reservationDateUtc;
+
     public CreateReservation200ApplicationJSON withReservationDateUtc(String reservationDateUtc) {
         this.reservationDateUtc = reservationDateUtc;
         return this;
@@ -82,6 +92,7 @@ public class CreateReservation200ApplicationJSON {
     
     @JsonProperty("SalesChannel")
     public String salesChannel;
+
     public CreateReservation200ApplicationJSON withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -89,6 +100,7 @@ public class CreateReservation200ApplicationJSON {
     
     @JsonProperty("SlaRequest")
     public CreateReservation200ApplicationJSONSlaRequest[] slaRequest;
+
     public CreateReservation200ApplicationJSON withSlaRequest(CreateReservation200ApplicationJSONSlaRequest[] slaRequest) {
         this.slaRequest = slaRequest;
         return this;
@@ -96,9 +108,25 @@ public class CreateReservation200ApplicationJSON {
     
     @JsonProperty("Status")
     public Integer status;
+
     public CreateReservation200ApplicationJSON withStatus(Integer status) {
         this.status = status;
         return this;
     }
     
+    public CreateReservation200ApplicationJSON(@JsonProperty("AuthorizedDateUtc") String authorizedDateUtc, @JsonProperty("CanceledDateUtc") String canceledDateUtc, @JsonProperty("ConfirmedDateUtc") String confirmedDateUtc, @JsonProperty("Errors") String[] errors, @JsonProperty("IsSucess") Boolean isSucess, @JsonProperty("LastUpdateDateUtc") String lastUpdateDateUtc, @JsonProperty("LockId") String lockId, @JsonProperty("MaximumConfirmationDateUtc") String maximumConfirmationDateUtc, @JsonProperty("PickupPointItemOptions") String pickupPointItemOptions, @JsonProperty("ReservationDateUtc") String reservationDateUtc, @JsonProperty("SalesChannel") String salesChannel, @JsonProperty("SlaRequest") CreateReservation200ApplicationJSONSlaRequest[] slaRequest, @JsonProperty("Status") Integer status) {
+        this.authorizedDateUtc = authorizedDateUtc;
+        this.canceledDateUtc = canceledDateUtc;
+        this.confirmedDateUtc = confirmedDateUtc;
+        this.errors = errors;
+        this.isSucess = isSucess;
+        this.lastUpdateDateUtc = lastUpdateDateUtc;
+        this.lockId = lockId;
+        this.maximumConfirmationDateUtc = maximumConfirmationDateUtc;
+        this.pickupPointItemOptions = pickupPointItemOptions;
+        this.reservationDateUtc = reservationDateUtc;
+        this.salesChannel = salesChannel;
+        this.slaRequest = slaRequest;
+        this.status = status;
+  }
 }

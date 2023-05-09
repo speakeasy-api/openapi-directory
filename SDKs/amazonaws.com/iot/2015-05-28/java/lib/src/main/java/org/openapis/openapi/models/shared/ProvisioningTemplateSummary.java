@@ -22,6 +22,7 @@ public class ProvisioningTemplateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public ProvisioningTemplateSummary withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +31,7 @@ public class ProvisioningTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ProvisioningTemplateSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class ProvisioningTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ProvisioningTemplateSummary withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -48,6 +51,7 @@ public class ProvisioningTemplateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public ProvisioningTemplateSummary withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -56,6 +60,7 @@ public class ProvisioningTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateArn")
     public String templateArn;
+
     public ProvisioningTemplateSummary withTemplateArn(String templateArn) {
         this.templateArn = templateArn;
         return this;
@@ -64,6 +69,7 @@ public class ProvisioningTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateName")
     public String templateName;
+
     public ProvisioningTemplateSummary withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -72,9 +78,11 @@ public class ProvisioningTemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TemplateTypeEnum type;
+
     public ProvisioningTemplateSummary withType(TemplateTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ProvisioningTemplateSummary(){}
 }

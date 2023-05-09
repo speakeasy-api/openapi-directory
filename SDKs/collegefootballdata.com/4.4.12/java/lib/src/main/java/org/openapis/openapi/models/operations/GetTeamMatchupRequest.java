@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamMatchupRequest {
@@ -12,6 +13,7 @@ public class GetTeamMatchupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxYear")
     public Long maxYear;
+
     public GetTeamMatchupRequest withMaxYear(Long maxYear) {
         this.maxYear = maxYear;
         return this;
@@ -22,6 +24,7 @@ public class GetTeamMatchupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minYear")
     public Long minYear;
+
     public GetTeamMatchupRequest withMinYear(Long minYear) {
         this.minYear = minYear;
         return this;
@@ -32,6 +35,7 @@ public class GetTeamMatchupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team1")
     public String team1;
+
     public GetTeamMatchupRequest withTeam1(String team1) {
         this.team1 = team1;
         return this;
@@ -42,9 +46,14 @@ public class GetTeamMatchupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team2")
     public String team2;
+
     public GetTeamMatchupRequest withTeam2(String team2) {
         this.team2 = team2;
         return this;
     }
     
+    public GetTeamMatchupRequest(@JsonProperty("team1") String team1, @JsonProperty("team2") String team2) {
+        this.team1 = team1;
+        this.team2 = team2;
+  }
 }

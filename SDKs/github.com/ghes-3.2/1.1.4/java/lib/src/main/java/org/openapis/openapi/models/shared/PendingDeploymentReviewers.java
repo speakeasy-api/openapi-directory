@@ -12,6 +12,7 @@ public class PendingDeploymentReviewers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewer")
     public Object reviewer;
+
     public PendingDeploymentReviewers withReviewer(Object reviewer) {
         this.reviewer = reviewer;
         return this;
@@ -23,9 +24,11 @@ public class PendingDeploymentReviewers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DeploymentReviewerTypeEnum type;
+
     public PendingDeploymentReviewers withType(DeploymentReviewerTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PendingDeploymentReviewers(){}
 }

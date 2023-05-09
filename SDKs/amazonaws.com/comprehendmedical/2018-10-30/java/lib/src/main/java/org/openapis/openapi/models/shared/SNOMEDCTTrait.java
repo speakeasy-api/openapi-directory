@@ -15,6 +15,7 @@ public class SNOMEDCTTrait {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public SNOMEDCTTraitNameEnum name;
+
     public SNOMEDCTTrait withName(SNOMEDCTTraitNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class SNOMEDCTTrait {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public SNOMEDCTTrait withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public SNOMEDCTTrait(){}
 }

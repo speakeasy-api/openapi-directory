@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AwsJobExponentialRolloutRate {
     @JsonProperty("baseRatePerMinute")
     public Long baseRatePerMinute;
+
     public AwsJobExponentialRolloutRate withBaseRatePerMinute(Long baseRatePerMinute) {
         this.baseRatePerMinute = baseRatePerMinute;
         return this;
@@ -19,6 +20,7 @@ public class AwsJobExponentialRolloutRate {
     
     @JsonProperty("incrementFactor")
     public Double incrementFactor;
+
     public AwsJobExponentialRolloutRate withIncrementFactor(Double incrementFactor) {
         this.incrementFactor = incrementFactor;
         return this;
@@ -26,9 +28,15 @@ public class AwsJobExponentialRolloutRate {
     
     @JsonProperty("rateIncreaseCriteria")
     public AwsJobRateIncreaseCriteria rateIncreaseCriteria;
+
     public AwsJobExponentialRolloutRate withRateIncreaseCriteria(AwsJobRateIncreaseCriteria rateIncreaseCriteria) {
         this.rateIncreaseCriteria = rateIncreaseCriteria;
         return this;
     }
     
+    public AwsJobExponentialRolloutRate(@JsonProperty("baseRatePerMinute") Long baseRatePerMinute, @JsonProperty("incrementFactor") Double incrementFactor, @JsonProperty("rateIncreaseCriteria") AwsJobRateIncreaseCriteria rateIncreaseCriteria) {
+        this.baseRatePerMinute = baseRatePerMinute;
+        this.incrementFactor = incrementFactor;
+        this.rateIncreaseCriteria = rateIncreaseCriteria;
+  }
 }

@@ -14,6 +14,7 @@ public class CertificateContact {
      */
     @JsonProperty("email")
     public String email;
+
     public CertificateContact withEmail(String email) {
         this.email = email;
         return this;
@@ -25,6 +26,7 @@ public class CertificateContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTitle")
     public String jobTitle;
+
     public CertificateContact withJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
         return this;
@@ -35,6 +37,7 @@ public class CertificateContact {
      */
     @JsonProperty("nameFirst")
     public String nameFirst;
+
     public CertificateContact withNameFirst(String nameFirst) {
         this.nameFirst = nameFirst;
         return this;
@@ -45,6 +48,7 @@ public class CertificateContact {
      */
     @JsonProperty("nameLast")
     public String nameLast;
+
     public CertificateContact withNameLast(String nameLast) {
         this.nameLast = nameLast;
         return this;
@@ -56,6 +60,7 @@ public class CertificateContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameMiddle")
     public String nameMiddle;
+
     public CertificateContact withNameMiddle(String nameMiddle) {
         this.nameMiddle = nameMiddle;
         return this;
@@ -66,6 +71,7 @@ public class CertificateContact {
      */
     @JsonProperty("phone")
     public String phone;
+
     public CertificateContact withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -77,9 +83,16 @@ public class CertificateContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suffix")
     public String suffix;
+
     public CertificateContact withSuffix(String suffix) {
         this.suffix = suffix;
         return this;
     }
     
+    public CertificateContact(@JsonProperty("email") String email, @JsonProperty("nameFirst") String nameFirst, @JsonProperty("nameLast") String nameLast, @JsonProperty("phone") String phone) {
+        this.email = email;
+        this.nameFirst = nameFirst;
+        this.nameLast = nameLast;
+        this.phone = phone;
+  }
 }

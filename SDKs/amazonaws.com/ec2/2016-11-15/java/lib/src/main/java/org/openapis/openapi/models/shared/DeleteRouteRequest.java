@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteRouteRequest {
     
     public String destinationCidrBlock;
+
     public DeleteRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -16,6 +17,7 @@ public class DeleteRouteRequest {
     
     
     public String destinationIpv6CidrBlock;
+
     public DeleteRouteRequest withDestinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
         this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
         return this;
@@ -23,6 +25,7 @@ public class DeleteRouteRequest {
     
     
     public String destinationPrefixListId;
+
     public DeleteRouteRequest withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -30,6 +33,7 @@ public class DeleteRouteRequest {
     
     
     public Boolean dryRun;
+
     public DeleteRouteRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -37,9 +41,13 @@ public class DeleteRouteRequest {
     
     
     public String routeTableId;
+
     public DeleteRouteRequest withRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
         return this;
     }
     
+    public DeleteRouteRequest(@JsonProperty("RouteTableId") String routeTableId) {
+        this.routeTableId = routeTableId;
+  }
 }

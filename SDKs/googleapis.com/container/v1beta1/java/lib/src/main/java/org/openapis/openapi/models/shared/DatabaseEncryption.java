@@ -18,20 +18,23 @@ public class DatabaseEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyName")
     public String keyName;
+
     public DatabaseEncryption withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
     }
     
     /**
-     * Denotes the state of etcd encryption.
+     * The desired state of etcd encryption.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public DatabaseEncryptionStateEnum state;
+
     public DatabaseEncryption withState(DatabaseEncryptionStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public DatabaseEncryption(){}
 }

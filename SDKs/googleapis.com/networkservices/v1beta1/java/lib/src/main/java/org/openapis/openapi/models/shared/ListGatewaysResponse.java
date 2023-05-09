@@ -18,6 +18,7 @@ public class ListGatewaysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gateways")
     public Gateway[] gateways;
+
     public ListGatewaysResponse withGateways(Gateway[] gateways) {
         this.gateways = gateways;
         return this;
@@ -29,9 +30,11 @@ public class ListGatewaysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListGatewaysResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListGatewaysResponse(){}
 }

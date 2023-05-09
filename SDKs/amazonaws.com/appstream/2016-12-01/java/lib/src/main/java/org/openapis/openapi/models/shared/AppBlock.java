@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AppBlock {
     @JsonProperty("Arn")
     public String arn;
+
     public AppBlock withArn(String arn) {
         this.arn = arn;
         return this;
@@ -29,6 +30,7 @@ public class AppBlock {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public AppBlock withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -37,6 +39,7 @@ public class AppBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public AppBlock withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class AppBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public AppBlock withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -52,6 +56,7 @@ public class AppBlock {
     
     @JsonProperty("Name")
     public String name;
+
     public AppBlock withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +64,7 @@ public class AppBlock {
     
     @JsonProperty("SetupScriptDetails")
     public ScriptDetails setupScriptDetails;
+
     public AppBlock withSetupScriptDetails(ScriptDetails setupScriptDetails) {
         this.setupScriptDetails = setupScriptDetails;
         return this;
@@ -67,9 +73,15 @@ public class AppBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceS3Location")
     public S3Location sourceS3Location;
+
     public AppBlock withSourceS3Location(S3Location sourceS3Location) {
         this.sourceS3Location = sourceS3Location;
         return this;
     }
     
+    public AppBlock(@JsonProperty("Arn") String arn, @JsonProperty("Name") String name, @JsonProperty("SetupScriptDetails") ScriptDetails setupScriptDetails) {
+        this.arn = arn;
+        this.name = name;
+        this.setupScriptDetails = setupScriptDetails;
+  }
 }

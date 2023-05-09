@@ -15,6 +15,7 @@ public class GetParametersByPathResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetParametersByPathResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetParametersByPathResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public Parameter[] parameters;
+
     public GetParametersByPathResult withParameters(Parameter[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public GetParametersByPathResult(){}
 }

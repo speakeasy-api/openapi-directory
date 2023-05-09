@@ -15,9 +15,11 @@ public class BatchRevokePermissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Failures")
     public BatchPermissionsFailureEntry[] failures;
+
     public BatchRevokePermissionsResponse withFailures(BatchPermissionsFailureEntry[] failures) {
         this.failures = failures;
         return this;
     }
     
+    public BatchRevokePermissionsResponse(){}
 }

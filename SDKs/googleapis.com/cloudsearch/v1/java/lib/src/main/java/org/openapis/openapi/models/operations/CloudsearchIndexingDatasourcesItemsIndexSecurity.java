@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudsearchIndexingDatasourcesItemsIndexSecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchIndexingDatasourcesItemsIndexSecurityOption1 option1;
+
     public CloudsearchIndexingDatasourcesItemsIndexSecurity withOption1(CloudsearchIndexingDatasourcesItemsIndexSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class CloudsearchIndexingDatasourcesItemsIndexSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchIndexingDatasourcesItemsIndexSecurityOption2 option2;
+
     public CloudsearchIndexingDatasourcesItemsIndexSecurity withOption2(CloudsearchIndexingDatasourcesItemsIndexSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public CloudsearchIndexingDatasourcesItemsIndexSecurity(){}
 }

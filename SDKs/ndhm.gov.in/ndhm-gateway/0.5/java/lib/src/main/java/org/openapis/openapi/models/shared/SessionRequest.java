@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SessionRequest {
     @JsonProperty("clientId")
     public String clientId;
+
     public SessionRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -18,6 +19,7 @@ public class SessionRequest {
     
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public SessionRequest withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -25,6 +27,7 @@ public class SessionRequest {
     
     @JsonProperty("grantType")
     public SessionRequestGrantTypeEnum grantType;
+
     public SessionRequest withGrantType(SessionRequestGrantTypeEnum grantType) {
         this.grantType = grantType;
         return this;
@@ -33,9 +36,15 @@ public class SessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshToken")
     public String refreshToken;
+
     public SessionRequest withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
     }
     
+    public SessionRequest(@JsonProperty("clientId") String clientId, @JsonProperty("clientSecret") String clientSecret, @JsonProperty("grantType") SessionRequestGrantTypeEnum grantType) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.grantType = grantType;
+  }
 }

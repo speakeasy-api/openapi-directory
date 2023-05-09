@@ -12,6 +12,7 @@ public class PostApiRnbPvtMultipleCouponsRequestBody {
      */
     @JsonProperty("couponConfiguration")
     public PostApiRnbPvtMultipleCouponsRequestBodyCouponConfiguration couponConfiguration;
+
     public PostApiRnbPvtMultipleCouponsRequestBody withCouponConfiguration(PostApiRnbPvtMultipleCouponsRequestBodyCouponConfiguration couponConfiguration) {
         this.couponConfiguration = couponConfiguration;
         return this;
@@ -22,9 +23,14 @@ public class PostApiRnbPvtMultipleCouponsRequestBody {
      */
     @JsonProperty("quantity")
     public Long quantity;
+
     public PostApiRnbPvtMultipleCouponsRequestBody withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public PostApiRnbPvtMultipleCouponsRequestBody(@JsonProperty("couponConfiguration") PostApiRnbPvtMultipleCouponsRequestBodyCouponConfiguration couponConfiguration, @JsonProperty("quantity") Long quantity) {
+        this.couponConfiguration = couponConfiguration;
+        this.quantity = quantity;
+  }
 }

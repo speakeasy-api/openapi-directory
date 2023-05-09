@@ -22,6 +22,7 @@ public class IdentityDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public IdentityDescription withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +31,7 @@ public class IdentityDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityId")
     public String identityId;
+
     public IdentityDescription withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -40,6 +42,7 @@ public class IdentityDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public IdentityDescription withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -48,9 +51,11 @@ public class IdentityDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Logins")
     public String[] logins;
+
     public IdentityDescription withLogins(String[] logins) {
         this.logins = logins;
         return this;
     }
     
+    public IdentityDescription(){}
 }

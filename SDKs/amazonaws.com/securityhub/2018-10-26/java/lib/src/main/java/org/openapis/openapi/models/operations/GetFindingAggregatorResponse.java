@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFindingAggregatorResponse {
@@ -12,6 +13,7 @@ public class GetFindingAggregatorResponse {
      */
     
     public Object accessDeniedException;
+
     public GetFindingAggregatorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetFindingAggregatorResponse {
     
     
     public String contentType;
+
     public GetFindingAggregatorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetFindingAggregatorResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFindingAggregatorResponse getFindingAggregatorResponse;
+
     public GetFindingAggregatorResponse withGetFindingAggregatorResponse(org.openapis.openapi.models.shared.GetFindingAggregatorResponse getFindingAggregatorResponse) {
         this.getFindingAggregatorResponse = getFindingAggregatorResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetFindingAggregatorResponse {
      */
     
     public Object internalException;
+
     public GetFindingAggregatorResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -49,6 +54,7 @@ public class GetFindingAggregatorResponse {
      */
     
     public Object invalidAccessException;
+
     public GetFindingAggregatorResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -59,6 +65,7 @@ public class GetFindingAggregatorResponse {
      */
     
     public Object invalidInputException;
+
     public GetFindingAggregatorResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class GetFindingAggregatorResponse {
      */
     
     public Object limitExceededException;
+
     public GetFindingAggregatorResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class GetFindingAggregatorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFindingAggregatorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class GetFindingAggregatorResponse {
     
     
     public Integer statusCode;
+
     public GetFindingAggregatorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class GetFindingAggregatorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFindingAggregatorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFindingAggregatorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

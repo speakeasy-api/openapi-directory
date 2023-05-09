@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetectSentimentResponse {
     
     public String contentType;
+
     public DetectSentimentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DetectSentimentResponse {
      */
     
     public org.openapis.openapi.models.shared.DetectSentimentResponse detectSentimentResponse;
+
     public DetectSentimentResponse withDetectSentimentResponse(org.openapis.openapi.models.shared.DetectSentimentResponse detectSentimentResponse) {
         this.detectSentimentResponse = detectSentimentResponse;
         return this;
@@ -29,6 +32,7 @@ public class DetectSentimentResponse {
      */
     
     public Object internalServerException;
+
     public DetectSentimentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DetectSentimentResponse {
      */
     
     public Object invalidRequestException;
+
     public DetectSentimentResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DetectSentimentResponse {
     
     
     public Integer statusCode;
+
     public DetectSentimentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DetectSentimentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetectSentimentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DetectSentimentResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public DetectSentimentResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -73,9 +81,14 @@ public class DetectSentimentResponse {
      */
     
     public Object unsupportedLanguageException;
+
     public DetectSentimentResponse withUnsupportedLanguageException(Object unsupportedLanguageException) {
         this.unsupportedLanguageException = unsupportedLanguageException;
         return this;
     }
     
+    public DetectSentimentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

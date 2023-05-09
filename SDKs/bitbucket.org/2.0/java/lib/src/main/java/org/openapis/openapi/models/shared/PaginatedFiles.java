@@ -18,6 +18,7 @@ public class PaginatedFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public PaginatedFiles withNext(String next) {
         this.next = next;
         return this;
@@ -29,6 +30,7 @@ public class PaginatedFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public PaginatedFiles withPage(Long page) {
         this.page = page;
         return this;
@@ -40,6 +42,7 @@ public class PaginatedFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagelen")
     public Long pagelen;
+
     public PaginatedFiles withPagelen(Long pagelen) {
         this.pagelen = pagelen;
         return this;
@@ -51,6 +54,7 @@ public class PaginatedFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public PaginatedFiles withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -62,6 +66,7 @@ public class PaginatedFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public PaginatedFiles withSize(Long size) {
         this.size = size;
         return this;
@@ -70,9 +75,11 @@ public class PaginatedFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public java.util.Map<String, Object>[] values;
+
     public PaginatedFiles withValues(java.util.Map<String, Object>[] values) {
         this.values = values;
         return this;
     }
     
+    public PaginatedFiles(){}
 }

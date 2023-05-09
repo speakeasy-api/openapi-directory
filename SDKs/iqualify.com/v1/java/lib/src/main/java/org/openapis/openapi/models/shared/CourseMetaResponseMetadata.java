@@ -12,6 +12,7 @@ public class CourseMetaResponseMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public CourseMetaResponseMetadata withCategory(String category) {
         this.category = category;
         return this;
@@ -20,6 +21,7 @@ public class CourseMetaResponseMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learning_outcomes")
     public LearningOutcomes[] learningOutcomes;
+
     public CourseMetaResponseMetadata withLearningOutcomes(LearningOutcomes[] learningOutcomes) {
         this.learningOutcomes = learningOutcomes;
         return this;
@@ -28,6 +30,7 @@ public class CourseMetaResponseMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public String level;
+
     public CourseMetaResponseMetadata withLevel(String level) {
         this.level = level;
         return this;
@@ -36,6 +39,7 @@ public class CourseMetaResponseMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootContentId")
     public String rootContentId;
+
     public CourseMetaResponseMetadata withRootContentId(String rootContentId) {
         this.rootContentId = rootContentId;
         return this;
@@ -44,6 +48,7 @@ public class CourseMetaResponseMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public CourseMetaResponseMetadata withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -52,9 +57,11 @@ public class CourseMetaResponseMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public String topic;
+
     public CourseMetaResponseMetadata withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public CourseMetaResponseMetadata(){}
 }

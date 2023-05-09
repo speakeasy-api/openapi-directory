@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDeploymentResponse {
@@ -12,6 +13,7 @@ public class UpdateDeploymentResponse {
      */
     
     public Object badRequestException;
+
     public UpdateDeploymentResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateDeploymentResponse {
      */
     
     public Object conflictException;
+
     public UpdateDeploymentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDeploymentResponse {
     
     
     public String contentType;
+
     public UpdateDeploymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDeploymentResponse {
      */
     
     public Object notFoundException;
+
     public UpdateDeploymentResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDeploymentResponse {
     
     
     public Integer statusCode;
+
     public UpdateDeploymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDeploymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDeploymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDeploymentResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateDeploymentResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDeploymentResponse updateDeploymentResponse;
+
     public UpdateDeploymentResponse withUpdateDeploymentResponse(org.openapis.openapi.models.shared.UpdateDeploymentResponse updateDeploymentResponse) {
         this.updateDeploymentResponse = updateDeploymentResponse;
         return this;
     }
     
+    public UpdateDeploymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

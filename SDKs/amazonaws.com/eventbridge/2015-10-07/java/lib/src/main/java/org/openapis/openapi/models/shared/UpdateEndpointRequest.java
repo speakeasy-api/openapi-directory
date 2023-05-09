@@ -12,6 +12,7 @@ public class UpdateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateEndpointRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class UpdateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBuses")
     public EndpointEventBus[] eventBuses;
+
     public UpdateEndpointRequest withEventBuses(EndpointEventBus[] eventBuses) {
         this.eventBuses = eventBuses;
         return this;
@@ -27,6 +29,7 @@ public class UpdateEndpointRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateEndpointRequest withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +38,7 @@ public class UpdateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationConfig")
     public ReplicationConfig replicationConfig;
+
     public UpdateEndpointRequest withReplicationConfig(ReplicationConfig replicationConfig) {
         this.replicationConfig = replicationConfig;
         return this;
@@ -43,6 +47,7 @@ public class UpdateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public UpdateEndpointRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -51,9 +56,13 @@ public class UpdateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingConfig")
     public RoutingConfig routingConfig;
+
     public UpdateEndpointRequest withRoutingConfig(RoutingConfig routingConfig) {
         this.routingConfig = routingConfig;
         return this;
     }
     
+    public UpdateEndpointRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

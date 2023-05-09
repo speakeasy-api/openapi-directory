@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalizeEnrollmentTime")
     public String finalizeEnrollmentTime;
+
     public GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo withFinalizeEnrollmentTime(String finalizeEnrollmentTime) {
         this.finalizeEnrollmentTime = finalizeEnrollmentTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashingAlgorithm")
     public String hashingAlgorithm;
+
     public GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo withHashingAlgorithm(String hashingAlgorithm) {
         this.hashingAlgorithm = hashingAlgorithm;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodSec")
     public Integer periodSec;
+
     public GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo withPeriodSec(Integer periodSec) {
         this.periodSec = periodSec;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionInfo")
     public String sessionInfo;
+
     public GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo withSessionInfo(String sessionInfo) {
         this.sessionInfo = sessionInfo;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedSecretKey")
     public String sharedSecretKey;
+
     public GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo withSharedSecretKey(String sharedSecretKey) {
         this.sharedSecretKey = sharedSecretKey;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationCodeLength")
     public Integer verificationCodeLength;
+
     public GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo withVerificationCodeLength(Integer verificationCodeLength) {
         this.verificationCodeLength = verificationCodeLength;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo(){}
 }

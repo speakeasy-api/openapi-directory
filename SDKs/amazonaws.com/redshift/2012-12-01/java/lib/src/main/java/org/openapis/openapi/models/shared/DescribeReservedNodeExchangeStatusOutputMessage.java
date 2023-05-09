@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedNodeExchangeStatusOutputMessage {
     
     public String marker;
+
     public DescribeReservedNodeExchangeStatusOutputMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class DescribeReservedNodeExchangeStatusOutputMessage {
     
     
     public ReservedNodeExchangeStatusList[] reservedNodeExchangeStatusDetails;
+
     public DescribeReservedNodeExchangeStatusOutputMessage withReservedNodeExchangeStatusDetails(ReservedNodeExchangeStatusList[] reservedNodeExchangeStatusDetails) {
         this.reservedNodeExchangeStatusDetails = reservedNodeExchangeStatusDetails;
         return this;
     }
     
+    public DescribeReservedNodeExchangeStatusOutputMessage(){}
 }

@@ -17,6 +17,7 @@ public class AppsUpdateAvatar200ApplicationJSON {
      */
     @JsonProperty("app_secret")
     public String appSecret;
+
     public AppsUpdateAvatar200ApplicationJSON withAppSecret(String appSecret) {
         this.appSecret = appSecret;
         return this;
@@ -25,6 +26,7 @@ public class AppsUpdateAvatar200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azure_subscription")
     public AppsUpdateAvatar200ApplicationJSONAzureSubscription azureSubscription;
+
     public AppsUpdateAvatar200ApplicationJSON withAzureSubscription(AppsUpdateAvatar200ApplicationJSONAzureSubscription azureSubscription) {
         this.azureSubscription = azureSubscription;
         return this;
@@ -36,6 +38,7 @@ public class AppsUpdateAvatar200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public AppsUpdateAvatar200ApplicationJSON withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -47,6 +50,7 @@ public class AppsUpdateAvatar200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AppsUpdateAvatar200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -57,6 +61,7 @@ public class AppsUpdateAvatar200ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public AppsUpdateAvatar200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -68,6 +73,7 @@ public class AppsUpdateAvatar200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_source")
     public String iconSource;
+
     public AppsUpdateAvatar200ApplicationJSON withIconSource(String iconSource) {
         this.iconSource = iconSource;
         return this;
@@ -79,6 +85,7 @@ public class AppsUpdateAvatar200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_url")
     public String iconUrl;
+
     public AppsUpdateAvatar200ApplicationJSON withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -89,6 +96,7 @@ public class AppsUpdateAvatar200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public AppsUpdateAvatar200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -100,6 +108,7 @@ public class AppsUpdateAvatar200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_permissions")
     public AppsUpdateAvatar200ApplicationJSONMemberPermissionsEnum[] memberPermissions;
+
     public AppsUpdateAvatar200ApplicationJSON withMemberPermissions(AppsUpdateAvatar200ApplicationJSONMemberPermissionsEnum[] memberPermissions) {
         this.memberPermissions = memberPermissions;
         return this;
@@ -110,6 +119,7 @@ public class AppsUpdateAvatar200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public AppsUpdateAvatar200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -120,6 +130,7 @@ public class AppsUpdateAvatar200ApplicationJSON {
      */
     @JsonProperty("origin")
     public AppsUpdateAvatar200ApplicationJSONOriginEnum origin;
+
     public AppsUpdateAvatar200ApplicationJSON withOrigin(AppsUpdateAvatar200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -130,6 +141,7 @@ public class AppsUpdateAvatar200ApplicationJSON {
      */
     @JsonProperty("os")
     public AppsUpdateAvatar200ApplicationJSONOsEnum os;
+
     public AppsUpdateAvatar200ApplicationJSON withOs(AppsUpdateAvatar200ApplicationJSONOsEnum os) {
         this.os = os;
         return this;
@@ -140,6 +152,7 @@ public class AppsUpdateAvatar200ApplicationJSON {
      */
     @JsonProperty("owner")
     public AppsUpdateAvatar200ApplicationJSONOwner owner;
+
     public AppsUpdateAvatar200ApplicationJSON withOwner(AppsUpdateAvatar200ApplicationJSONOwner owner) {
         this.owner = owner;
         return this;
@@ -150,6 +163,7 @@ public class AppsUpdateAvatar200ApplicationJSON {
      */
     @JsonProperty("platform")
     public AppsUpdateAvatar200ApplicationJSONPlatformEnum platform;
+
     public AppsUpdateAvatar200ApplicationJSON withPlatform(AppsUpdateAvatar200ApplicationJSONPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -161,6 +175,7 @@ public class AppsUpdateAvatar200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_type")
     public String releaseType;
+
     public AppsUpdateAvatar200ApplicationJSON withReleaseType(String releaseType) {
         this.releaseType = releaseType;
         return this;
@@ -172,9 +187,20 @@ public class AppsUpdateAvatar200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public AppsUpdateAvatar200ApplicationJSON withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public AppsUpdateAvatar200ApplicationJSON(@JsonProperty("app_secret") String appSecret, @JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("origin") AppsUpdateAvatar200ApplicationJSONOriginEnum origin, @JsonProperty("os") AppsUpdateAvatar200ApplicationJSONOsEnum os, @JsonProperty("owner") AppsUpdateAvatar200ApplicationJSONOwner owner, @JsonProperty("platform") AppsUpdateAvatar200ApplicationJSONPlatformEnum platform) {
+        this.appSecret = appSecret;
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.origin = origin;
+        this.os = os;
+        this.owner = owner;
+        this.platform = platform;
+  }
 }

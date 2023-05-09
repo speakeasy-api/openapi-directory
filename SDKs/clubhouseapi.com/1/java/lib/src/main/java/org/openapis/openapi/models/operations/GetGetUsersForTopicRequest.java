@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetGetUsersForTopicRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetGetUsersForTopicRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -16,6 +17,7 @@ public class GetGetUsersForTopicRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public GetGetUsersForTopicRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -23,9 +25,11 @@ public class GetGetUsersForTopicRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topic_id")
     public Long topicId;
+
     public GetGetUsersForTopicRequest withTopicId(Long topicId) {
         this.topicId = topicId;
         return this;
     }
     
+    public GetGetUsersForTopicRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProtectionGroupResponse {
     
     public String contentType;
+
     public DeleteProtectionGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProtectionGroupResponse {
      */
     
     public java.util.Map<String, Object> deleteProtectionGroupResponse;
+
     public DeleteProtectionGroupResponse withDeleteProtectionGroupResponse(java.util.Map<String, Object> deleteProtectionGroupResponse) {
         this.deleteProtectionGroupResponse = deleteProtectionGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteProtectionGroupResponse {
      */
     
     public Object internalErrorException;
+
     public DeleteProtectionGroupResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteProtectionGroupResponse {
      */
     
     public Object optimisticLockException;
+
     public DeleteProtectionGroupResponse withOptimisticLockException(Object optimisticLockException) {
         this.optimisticLockException = optimisticLockException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteProtectionGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteProtectionGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteProtectionGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProtectionGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteProtectionGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteProtectionGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteProtectionGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

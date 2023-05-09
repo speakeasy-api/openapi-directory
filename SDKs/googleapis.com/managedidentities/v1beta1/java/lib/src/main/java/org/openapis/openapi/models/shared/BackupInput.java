@@ -18,6 +18,7 @@ public class BackupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BackupInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class BackupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public BackupInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public BackupInput(){}
 }

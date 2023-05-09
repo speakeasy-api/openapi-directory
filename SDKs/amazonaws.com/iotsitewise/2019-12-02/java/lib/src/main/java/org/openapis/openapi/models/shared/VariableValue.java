@@ -15,6 +15,7 @@ public class VariableValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hierarchyId")
     public String hierarchyId;
+
     public VariableValue withHierarchyId(String hierarchyId) {
         this.hierarchyId = hierarchyId;
         return this;
@@ -22,9 +23,13 @@ public class VariableValue {
     
     @JsonProperty("propertyId")
     public String propertyId;
+
     public VariableValue withPropertyId(String propertyId) {
         this.propertyId = propertyId;
         return this;
     }
     
+    public VariableValue(@JsonProperty("propertyId") String propertyId) {
+        this.propertyId = propertyId;
+  }
 }

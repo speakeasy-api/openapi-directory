@@ -23,6 +23,7 @@ public class LandlordAccountingEntryModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Amount")
     public Double amount;
+
     public LandlordAccountingEntryModel withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -36,6 +37,7 @@ public class LandlordAccountingEntryModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Date")
     public OffsetDateTime date;
+
     public LandlordAccountingEntryModel withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -47,6 +49,7 @@ public class LandlordAccountingEntryModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public LandlordAccountingEntryModel withDescription(String description) {
         this.description = description;
         return this;
@@ -58,9 +61,11 @@ public class LandlordAccountingEntryModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionNumber")
     public Integer transactionNumber;
+
     public LandlordAccountingEntryModel withTransactionNumber(Integer transactionNumber) {
         this.transactionNumber = transactionNumber;
         return this;
     }
     
+    public LandlordAccountingEntryModel(){}
 }

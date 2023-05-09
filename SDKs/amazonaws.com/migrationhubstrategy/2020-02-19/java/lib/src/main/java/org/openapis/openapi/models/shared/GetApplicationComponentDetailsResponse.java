@@ -15,6 +15,7 @@ public class GetApplicationComponentDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationComponentDetail")
     public ApplicationComponentDetail applicationComponentDetail;
+
     public GetApplicationComponentDetailsResponse withApplicationComponentDetail(ApplicationComponentDetail applicationComponentDetail) {
         this.applicationComponentDetail = applicationComponentDetail;
         return this;
@@ -23,6 +24,7 @@ public class GetApplicationComponentDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedApplications")
     public AssociatedApplication[] associatedApplications;
+
     public GetApplicationComponentDetailsResponse withAssociatedApplications(AssociatedApplication[] associatedApplications) {
         this.associatedApplications = associatedApplications;
         return this;
@@ -31,6 +33,7 @@ public class GetApplicationComponentDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedServerIds")
     public String[] associatedServerIds;
+
     public GetApplicationComponentDetailsResponse withAssociatedServerIds(String[] associatedServerIds) {
         this.associatedServerIds = associatedServerIds;
         return this;
@@ -39,9 +42,11 @@ public class GetApplicationComponentDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moreApplicationResource")
     public Boolean moreApplicationResource;
+
     public GetApplicationComponentDetailsResponse withMoreApplicationResource(Boolean moreApplicationResource) {
         this.moreApplicationResource = moreApplicationResource;
         return this;
     }
     
+    public GetApplicationComponentDetailsResponse(){}
 }

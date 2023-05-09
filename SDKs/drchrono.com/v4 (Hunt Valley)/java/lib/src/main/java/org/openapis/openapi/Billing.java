@@ -61,11 +61,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BillingProfilesListResponse res = new org.openapis.openapi.models.operations.BillingProfilesListResponse() {{
+        org.openapis.openapi.models.operations.BillingProfilesListResponse res = new org.openapis.openapi.models.operations.BillingProfilesListResponse(contentType, httpRes.statusCode()) {{
             billingProfilesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BillingProfilesReadResponse res = new org.openapis.openapi.models.operations.BillingProfilesReadResponse() {{
+        org.openapis.openapi.models.operations.BillingProfilesReadResponse res = new org.openapis.openapi.models.operations.BillingProfilesReadResponse(contentType, httpRes.statusCode()) {{
             billingProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CommLogsCreateResponse res = new org.openapis.openapi.models.operations.CommLogsCreateResponse() {{
+        org.openapis.openapi.models.operations.CommLogsCreateResponse res = new org.openapis.openapi.models.operations.CommLogsCreateResponse(contentType, httpRes.statusCode()) {{
             phoneCallLog = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -205,11 +199,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CommLogsListResponse res = new org.openapis.openapi.models.operations.CommLogsListResponse() {{
+        org.openapis.openapi.models.operations.CommLogsListResponse res = new org.openapis.openapi.models.operations.CommLogsListResponse(contentType, httpRes.statusCode()) {{
             commLogsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,10 +245,8 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CommLogsPartialUpdateResponse res = new org.openapis.openapi.models.operations.CommLogsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.CommLogsPartialUpdateResponse res = new org.openapis.openapi.models.operations.CommLogsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -293,11 +283,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CommLogsReadResponse res = new org.openapis.openapi.models.operations.CommLogsReadResponse() {{
+        org.openapis.openapi.models.operations.CommLogsReadResponse res = new org.openapis.openapi.models.operations.CommLogsReadResponse(contentType, httpRes.statusCode()) {{
             phoneCallLog = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,10 +329,8 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CommLogsUpdateResponse res = new org.openapis.openapi.models.operations.CommLogsUpdateResponse() {{
+        org.openapis.openapi.models.operations.CommLogsUpdateResponse res = new org.openapis.openapi.models.operations.CommLogsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -381,11 +367,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomInsurancePlanNamesListResponse res = new org.openapis.openapi.models.operations.CustomInsurancePlanNamesListResponse() {{
+        org.openapis.openapi.models.operations.CustomInsurancePlanNamesListResponse res = new org.openapis.openapi.models.operations.CustomInsurancePlanNamesListResponse(contentType, httpRes.statusCode()) {{
             customInsurancePlanNamesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -429,11 +413,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomInsurancePlanNamesReadResponse res = new org.openapis.openapi.models.operations.CustomInsurancePlanNamesReadResponse() {{
+        org.openapis.openapi.models.operations.CustomInsurancePlanNamesReadResponse res = new org.openapis.openapi.models.operations.CustomInsurancePlanNamesReadResponse(contentType, httpRes.statusCode()) {{
             customInsurancePlanName = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -477,11 +459,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EligibilityChecksListResponse res = new org.openapis.openapi.models.operations.EligibilityChecksListResponse() {{
+        org.openapis.openapi.models.operations.EligibilityChecksListResponse res = new org.openapis.openapi.models.operations.EligibilityChecksListResponse(contentType, httpRes.statusCode()) {{
             eligibilityChecksList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -525,11 +505,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EligibilityChecksReadResponse res = new org.openapis.openapi.models.operations.EligibilityChecksReadResponse() {{
+        org.openapis.openapi.models.operations.EligibilityChecksReadResponse res = new org.openapis.openapi.models.operations.EligibilityChecksReadResponse(contentType, httpRes.statusCode()) {{
             coverage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -573,11 +551,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineItemsCreateResponse res = new org.openapis.openapi.models.operations.LineItemsCreateResponse() {{
+        org.openapis.openapi.models.operations.LineItemsCreateResponse res = new org.openapis.openapi.models.operations.LineItemsCreateResponse(contentType, httpRes.statusCode()) {{
             billingLineItem = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -614,10 +590,8 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineItemsDeleteResponse res = new org.openapis.openapi.models.operations.LineItemsDeleteResponse() {{
+        org.openapis.openapi.models.operations.LineItemsDeleteResponse res = new org.openapis.openapi.models.operations.LineItemsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -654,11 +628,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineItemsListResponse res = new org.openapis.openapi.models.operations.LineItemsListResponse() {{
+        org.openapis.openapi.models.operations.LineItemsListResponse res = new org.openapis.openapi.models.operations.LineItemsListResponse(contentType, httpRes.statusCode()) {{
             lineItemsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -695,10 +667,8 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineItemsPartialUpdateResponse res = new org.openapis.openapi.models.operations.LineItemsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.LineItemsPartialUpdateResponse res = new org.openapis.openapi.models.operations.LineItemsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -735,11 +705,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineItemsReadResponse res = new org.openapis.openapi.models.operations.LineItemsReadResponse() {{
+        org.openapis.openapi.models.operations.LineItemsReadResponse res = new org.openapis.openapi.models.operations.LineItemsReadResponse(contentType, httpRes.statusCode()) {{
             billingLineItem = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -776,10 +744,8 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineItemsUpdateResponse res = new org.openapis.openapi.models.operations.LineItemsUpdateResponse() {{
+        org.openapis.openapi.models.operations.LineItemsUpdateResponse res = new org.openapis.openapi.models.operations.LineItemsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -816,11 +782,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientPaymentLogListResponse res = new org.openapis.openapi.models.operations.PatientPaymentLogListResponse() {{
+        org.openapis.openapi.models.operations.PatientPaymentLogListResponse res = new org.openapis.openapi.models.operations.PatientPaymentLogListResponse(contentType, httpRes.statusCode()) {{
             patientPaymentLogList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -864,11 +828,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientPaymentLogReadResponse res = new org.openapis.openapi.models.operations.PatientPaymentLogReadResponse() {{
+        org.openapis.openapi.models.operations.PatientPaymentLogReadResponse res = new org.openapis.openapi.models.operations.PatientPaymentLogReadResponse(contentType, httpRes.statusCode()) {{
             cashPaymentLog = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -912,11 +874,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientPaymentsCreateResponse res = new org.openapis.openapi.models.operations.PatientPaymentsCreateResponse() {{
+        org.openapis.openapi.models.operations.PatientPaymentsCreateResponse res = new org.openapis.openapi.models.operations.PatientPaymentsCreateResponse(contentType, httpRes.statusCode()) {{
             cashPayment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -960,11 +920,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientPaymentsListResponse res = new org.openapis.openapi.models.operations.PatientPaymentsListResponse() {{
+        org.openapis.openapi.models.operations.PatientPaymentsListResponse res = new org.openapis.openapi.models.operations.PatientPaymentsListResponse(contentType, httpRes.statusCode()) {{
             patientPaymentsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1008,11 +966,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientPaymentsReadResponse res = new org.openapis.openapi.models.operations.PatientPaymentsReadResponse() {{
+        org.openapis.openapi.models.operations.PatientPaymentsReadResponse res = new org.openapis.openapi.models.operations.PatientPaymentsReadResponse(contentType, httpRes.statusCode()) {{
             cashPayment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1049,11 +1005,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProceduresListResponse res = new org.openapis.openapi.models.operations.ProceduresListResponse() {{
+        org.openapis.openapi.models.operations.ProceduresListResponse res = new org.openapis.openapi.models.operations.ProceduresListResponse(contentType, httpRes.statusCode()) {{
             proceduresList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1090,11 +1044,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProceduresReadResponse res = new org.openapis.openapi.models.operations.ProceduresReadResponse() {{
+        org.openapis.openapi.models.operations.ProceduresReadResponse res = new org.openapis.openapi.models.operations.ProceduresReadResponse(contentType, httpRes.statusCode()) {{
             billingLineItem = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1138,11 +1090,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TransactionsListResponse res = new org.openapis.openapi.models.operations.TransactionsListResponse() {{
+        org.openapis.openapi.models.operations.TransactionsListResponse res = new org.openapis.openapi.models.operations.TransactionsListResponse(contentType, httpRes.statusCode()) {{
             transactionsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1186,11 +1136,9 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TransactionsReadResponse res = new org.openapis.openapi.models.operations.TransactionsReadResponse() {{
+        org.openapis.openapi.models.operations.TransactionsReadResponse res = new org.openapis.openapi.models.operations.TransactionsReadResponse(contentType, httpRes.statusCode()) {{
             lineItemTransaction = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

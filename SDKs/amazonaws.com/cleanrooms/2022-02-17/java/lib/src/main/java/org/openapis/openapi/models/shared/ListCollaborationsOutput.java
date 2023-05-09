@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListCollaborationsOutput {
     @JsonProperty("collaborationList")
     public CollaborationSummary[] collaborationList;
+
     public ListCollaborationsOutput withCollaborationList(CollaborationSummary[] collaborationList) {
         this.collaborationList = collaborationList;
         return this;
@@ -22,9 +23,13 @@ public class ListCollaborationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListCollaborationsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCollaborationsOutput(@JsonProperty("collaborationList") CollaborationSummary[] collaborationList) {
+        this.collaborationList = collaborationList;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostEstimateJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.EstimatePO estimatePO;
+
     public PostEstimateJsonRequest withEstimatePO(org.openapis.openapi.models.shared.EstimatePO estimatePO) {
         this.estimatePO = estimatePO;
         return this;
@@ -16,6 +18,7 @@ public class PostEstimateJsonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public String projectId;
+
     public PostEstimateJsonRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -23,9 +26,14 @@ public class PostEstimateJsonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public PostEstimateJsonRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public PostEstimateJsonRequest(@JsonProperty("project_id") String projectId, @JsonProperty("workgroup_id") String workgroupId) {
+        this.projectId = projectId;
+        this.workgroupId = workgroupId;
+  }
 }

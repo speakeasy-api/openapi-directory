@@ -18,6 +18,7 @@ public class RoleGrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("helperTextTemplate")
     public String helperTextTemplate;
+
     public RoleGrant withHelperTextTemplate(String helperTextTemplate) {
         this.helperTextTemplate = helperTextTemplate;
         return this;
@@ -29,6 +30,7 @@ public class RoleGrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principal")
     public RoleGrantPrincipalEnum principal;
+
     public RoleGrant withPrincipal(RoleGrantPrincipalEnum principal) {
         this.principal = principal;
         return this;
@@ -40,6 +42,7 @@ public class RoleGrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public Resource resource;
+
     public RoleGrant withResource(Resource resource) {
         this.resource = resource;
         return this;
@@ -51,9 +54,11 @@ public class RoleGrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public String[] roles;
+
     public RoleGrant withRoles(String[] roles) {
         this.roles = roles;
         return this;
     }
     
+    public RoleGrant(){}
 }

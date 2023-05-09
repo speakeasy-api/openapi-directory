@@ -61,11 +61,9 @@ public class StreamAudio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartStreamResponse res = new org.openapis.openapi.models.operations.StartStreamResponse() {{
+        org.openapis.openapi.models.operations.StartStreamResponse res = new org.openapis.openapi.models.operations.StartStreamResponse(contentType, httpRes.statusCode()) {{
             startStreamResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class StreamAudio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopStreamResponse res = new org.openapis.openapi.models.operations.StopStreamResponse() {{
+        org.openapis.openapi.models.operations.StopStreamResponse res = new org.openapis.openapi.models.operations.StopStreamResponse(contentType, httpRes.statusCode()) {{
             stopStreamResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

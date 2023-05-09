@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemsBatchInternalTrasnferRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batchUuid")
     public String batchUuid;
+
     public GetItemsBatchInternalTrasnferRequest withBatchUuid(String batchUuid) {
         this.batchUuid = batchUuid;
         return this;
@@ -16,6 +18,7 @@ public class GetItemsBatchInternalTrasnferRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetItemsBatchInternalTrasnferRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -23,9 +26,13 @@ public class GetItemsBatchInternalTrasnferRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetItemsBatchInternalTrasnferRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetItemsBatchInternalTrasnferRequest(@JsonProperty("batchUuid") String batchUuid) {
+        this.batchUuid = batchUuid;
+  }
 }

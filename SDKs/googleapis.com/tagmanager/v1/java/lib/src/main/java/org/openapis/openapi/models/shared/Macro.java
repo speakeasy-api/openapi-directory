@@ -18,6 +18,7 @@ public class Macro {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Macro withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Macro {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public Macro withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -40,6 +42,7 @@ public class Macro {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disablingRuleId")
     public String[] disablingRuleId;
+
     public Macro withDisablingRuleId(String[] disablingRuleId) {
         this.disablingRuleId = disablingRuleId;
         return this;
@@ -51,6 +54,7 @@ public class Macro {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablingRuleId")
     public String[] enablingRuleId;
+
     public Macro withEnablingRuleId(String[] enablingRuleId) {
         this.enablingRuleId = enablingRuleId;
         return this;
@@ -62,6 +66,7 @@ public class Macro {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Macro withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -73,6 +78,7 @@ public class Macro {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macroId")
     public String macroId;
+
     public Macro withMacroId(String macroId) {
         this.macroId = macroId;
         return this;
@@ -84,6 +90,7 @@ public class Macro {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Macro withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class Macro {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public Macro withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -106,6 +114,7 @@ public class Macro {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public Parameter[] parameter;
+
     public Macro withParameter(Parameter[] parameter) {
         this.parameter = parameter;
         return this;
@@ -117,6 +126,7 @@ public class Macro {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentFolderId")
     public String parentFolderId;
+
     public Macro withParentFolderId(String parentFolderId) {
         this.parentFolderId = parentFolderId;
         return this;
@@ -128,6 +138,7 @@ public class Macro {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleEndMs")
     public String scheduleEndMs;
+
     public Macro withScheduleEndMs(String scheduleEndMs) {
         this.scheduleEndMs = scheduleEndMs;
         return this;
@@ -139,6 +150,7 @@ public class Macro {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleStartMs")
     public String scheduleStartMs;
+
     public Macro withScheduleStartMs(String scheduleStartMs) {
         this.scheduleStartMs = scheduleStartMs;
         return this;
@@ -150,9 +162,11 @@ public class Macro {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Macro withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Macro(){}
 }

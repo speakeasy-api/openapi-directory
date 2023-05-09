@@ -18,6 +18,7 @@ public class InstancePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accelerators")
     public Accelerator[] accelerators;
+
     public InstancePolicy withAccelerators(Accelerator[] accelerators) {
         this.accelerators = accelerators;
         return this;
@@ -29,6 +30,7 @@ public class InstancePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootDisk")
     public Disk bootDisk;
+
     public InstancePolicy withBootDisk(Disk bootDisk) {
         this.bootDisk = bootDisk;
         return this;
@@ -40,6 +42,7 @@ public class InstancePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disks")
     public AttachedDisk[] disks;
+
     public InstancePolicy withDisks(AttachedDisk[] disks) {
         this.disks = disks;
         return this;
@@ -51,6 +54,7 @@ public class InstancePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public InstancePolicy withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
@@ -62,6 +66,7 @@ public class InstancePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minCpuPlatform")
     public String minCpuPlatform;
+
     public InstancePolicy withMinCpuPlatform(String minCpuPlatform) {
         this.minCpuPlatform = minCpuPlatform;
         return this;
@@ -73,9 +78,11 @@ public class InstancePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningModel")
     public InstancePolicyProvisioningModelEnum provisioningModel;
+
     public InstancePolicy withProvisioningModel(InstancePolicyProvisioningModelEnum provisioningModel) {
         this.provisioningModel = provisioningModel;
         return this;
     }
     
+    public InstancePolicy(){}
 }

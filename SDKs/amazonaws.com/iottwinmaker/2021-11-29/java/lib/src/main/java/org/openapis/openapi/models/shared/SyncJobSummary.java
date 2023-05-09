@@ -20,6 +20,7 @@ public class SyncJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public SyncJobSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class SyncJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public SyncJobSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -38,6 +40,7 @@ public class SyncJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SyncJobStatus status;
+
     public SyncJobSummary withStatus(SyncJobStatus status) {
         this.status = status;
         return this;
@@ -46,6 +49,7 @@ public class SyncJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncSource")
     public String syncSource;
+
     public SyncJobSummary withSyncSource(String syncSource) {
         this.syncSource = syncSource;
         return this;
@@ -56,6 +60,7 @@ public class SyncJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateDateTime")
     public OffsetDateTime updateDateTime;
+
     public SyncJobSummary withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
@@ -64,9 +69,11 @@ public class SyncJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public SyncJobSummary withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public SyncJobSummary(){}
 }

@@ -15,6 +15,7 @@ public class AwsAutoScalingLaunchConfigurationMetadataOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpEndpoint")
     public String httpEndpoint;
+
     public AwsAutoScalingLaunchConfigurationMetadataOptions withHttpEndpoint(String httpEndpoint) {
         this.httpEndpoint = httpEndpoint;
         return this;
@@ -23,6 +24,7 @@ public class AwsAutoScalingLaunchConfigurationMetadataOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpPutResponseHopLimit")
     public Long httpPutResponseHopLimit;
+
     public AwsAutoScalingLaunchConfigurationMetadataOptions withHttpPutResponseHopLimit(Long httpPutResponseHopLimit) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         return this;
@@ -31,9 +33,11 @@ public class AwsAutoScalingLaunchConfigurationMetadataOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpTokens")
     public String httpTokens;
+
     public AwsAutoScalingLaunchConfigurationMetadataOptions withHttpTokens(String httpTokens) {
         this.httpTokens = httpTokens;
         return this;
     }
     
+    public AwsAutoScalingLaunchConfigurationMetadataOptions(){}
 }

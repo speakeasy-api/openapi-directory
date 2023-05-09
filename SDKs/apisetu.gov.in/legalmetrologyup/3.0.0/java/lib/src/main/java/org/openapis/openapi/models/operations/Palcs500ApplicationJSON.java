@@ -15,6 +15,7 @@ public class Palcs500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Palcs500ApplicationJSONErrorEnum error;
+
     public Palcs500ApplicationJSON withError(Palcs500ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Palcs500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Palcs500ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Palcs500ApplicationJSON withErrorDescription(Palcs500ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Palcs500ApplicationJSON(){}
 }

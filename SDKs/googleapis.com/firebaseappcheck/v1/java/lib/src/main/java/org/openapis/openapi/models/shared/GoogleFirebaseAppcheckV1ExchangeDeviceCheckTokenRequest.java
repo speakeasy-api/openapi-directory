@@ -18,9 +18,11 @@ public class GoogleFirebaseAppcheckV1ExchangeDeviceCheckTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceToken")
     public String deviceToken;
+
     public GoogleFirebaseAppcheckV1ExchangeDeviceCheckTokenRequest withDeviceToken(String deviceToken) {
         this.deviceToken = deviceToken;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1ExchangeDeviceCheckTokenRequest(){}
 }

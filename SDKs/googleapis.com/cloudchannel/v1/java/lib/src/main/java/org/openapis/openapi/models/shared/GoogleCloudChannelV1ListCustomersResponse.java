@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1ListCustomersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customers")
     public GoogleCloudChannelV1Customer[] customers;
+
     public GoogleCloudChannelV1ListCustomersResponse withCustomers(GoogleCloudChannelV1Customer[] customers) {
         this.customers = customers;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudChannelV1ListCustomersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudChannelV1ListCustomersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudChannelV1ListCustomersResponse(){}
 }

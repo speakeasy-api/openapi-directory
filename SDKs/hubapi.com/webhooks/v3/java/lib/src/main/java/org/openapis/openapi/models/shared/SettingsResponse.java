@@ -24,6 +24,7 @@ public class SettingsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public SettingsResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -34,6 +35,7 @@ public class SettingsResponse {
      */
     @JsonProperty("targetUrl")
     public String targetUrl;
+
     public SettingsResponse withTargetUrl(String targetUrl) {
         this.targetUrl = targetUrl;
         return this;
@@ -44,6 +46,7 @@ public class SettingsResponse {
      */
     @JsonProperty("throttling")
     public ThrottlingSettings throttling;
+
     public SettingsResponse withThrottling(ThrottlingSettings throttling) {
         this.throttling = throttling;
         return this;
@@ -57,9 +60,15 @@ public class SettingsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public SettingsResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public SettingsResponse(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("targetUrl") String targetUrl, @JsonProperty("throttling") ThrottlingSettings throttling) {
+        this.createdAt = createdAt;
+        this.targetUrl = targetUrl;
+        this.throttling = throttling;
+  }
 }

@@ -18,6 +18,7 @@ public class AnthosObservabilityMembershipSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doNotOptimizeMetrics")
     public Boolean doNotOptimizeMetrics;
+
     public AnthosObservabilityMembershipSpec withDoNotOptimizeMetrics(Boolean doNotOptimizeMetrics) {
         this.doNotOptimizeMetrics = doNotOptimizeMetrics;
         return this;
@@ -29,6 +30,7 @@ public class AnthosObservabilityMembershipSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableStackdriverOnApplications")
     public Boolean enableStackdriverOnApplications;
+
     public AnthosObservabilityMembershipSpec withEnableStackdriverOnApplications(Boolean enableStackdriverOnApplications) {
         this.enableStackdriverOnApplications = enableStackdriverOnApplications;
         return this;
@@ -40,9 +42,11 @@ public class AnthosObservabilityMembershipSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public AnthosObservabilityMembershipSpec withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AnthosObservabilityMembershipSpec(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWorkspaceAuthenticationResponse {
@@ -12,6 +13,7 @@ public class UpdateWorkspaceAuthenticationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateWorkspaceAuthenticationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateWorkspaceAuthenticationResponse {
      */
     
     public Object conflictException;
+
     public UpdateWorkspaceAuthenticationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateWorkspaceAuthenticationResponse {
     
     
     public String contentType;
+
     public UpdateWorkspaceAuthenticationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateWorkspaceAuthenticationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateWorkspaceAuthenticationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateWorkspaceAuthenticationResponse {
     
     
     public Integer statusCode;
+
     public UpdateWorkspaceAuthenticationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateWorkspaceAuthenticationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWorkspaceAuthenticationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateWorkspaceAuthenticationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateWorkspaceAuthenticationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateWorkspaceAuthenticationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateWorkspaceAuthenticationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateWorkspaceAuthenticationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateWorkspaceAuthenticationResponse updateWorkspaceAuthenticationResponse;
+
     public UpdateWorkspaceAuthenticationResponse withUpdateWorkspaceAuthenticationResponse(org.openapis.openapi.models.shared.UpdateWorkspaceAuthenticationResponse updateWorkspaceAuthenticationResponse) {
         this.updateWorkspaceAuthenticationResponse = updateWorkspaceAuthenticationResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateWorkspaceAuthenticationResponse {
      */
     
     public Object validationException;
+
     public UpdateWorkspaceAuthenticationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateWorkspaceAuthenticationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

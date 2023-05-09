@@ -12,6 +12,7 @@ public class GetDeliveryReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignId")
     public Long campaignId;
+
     public GetDeliveryReportsRequest withCampaignId(Long campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -22,6 +23,7 @@ public class GetDeliveryReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=carrier")
     public String carrier;
+
     public GetDeliveryReportsRequest withCarrier(String carrier) {
         this.carrier = carrier;
         return this;
@@ -32,6 +34,7 @@ public class GetDeliveryReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deliveryCategory")
     public GetDeliveryReportsDeliveryCategoryEnum deliveryCategory;
+
     public GetDeliveryReportsRequest withDeliveryCategory(GetDeliveryReportsDeliveryCategoryEnum deliveryCategory) {
         this.deliveryCategory = deliveryCategory;
         return this;
@@ -42,6 +45,7 @@ public class GetDeliveryReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deliveryState")
     public GetDeliveryReportsDeliveryStateEnum deliveryState;
+
     public GetDeliveryReportsRequest withDeliveryState(GetDeliveryReportsDeliveryStateEnum deliveryState) {
         this.deliveryState = deliveryState;
         return this;
@@ -52,6 +56,7 @@ public class GetDeliveryReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public String endDate;
+
     public GetDeliveryReportsRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -62,6 +67,7 @@ public class GetDeliveryReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromNumber")
     public String fromNumber;
+
     public GetDeliveryReportsRequest withFromNumber(String fromNumber) {
         this.fromNumber = fromNumber;
         return this;
@@ -72,6 +78,7 @@ public class GetDeliveryReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetDeliveryReportsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -82,6 +89,7 @@ public class GetDeliveryReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=messageText")
     public String messageText;
+
     public GetDeliveryReportsRequest withMessageText(String messageText) {
         this.messageText = messageText;
         return this;
@@ -92,6 +100,7 @@ public class GetDeliveryReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetDeliveryReportsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -102,6 +111,7 @@ public class GetDeliveryReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public String startDate;
+
     public GetDeliveryReportsRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -112,9 +122,11 @@ public class GetDeliveryReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toNumber")
     public String toNumber;
+
     public GetDeliveryReportsRequest withToNumber(String toNumber) {
         this.toNumber = toNumber;
         return this;
     }
     
+    public GetDeliveryReportsRequest(){}
 }

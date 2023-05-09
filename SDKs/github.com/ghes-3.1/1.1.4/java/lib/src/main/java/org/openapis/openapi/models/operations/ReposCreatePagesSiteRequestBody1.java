@@ -15,9 +15,13 @@ public class ReposCreatePagesSiteRequestBody1 {
      */
     @JsonProperty("source")
     public ReposCreatePagesSiteRequestBody1Source source;
+
     public ReposCreatePagesSiteRequestBody1 withSource(ReposCreatePagesSiteRequestBody1Source source) {
         this.source = source;
         return this;
     }
     
+    public ReposCreatePagesSiteRequestBody1(@JsonProperty("source") ReposCreatePagesSiteRequestBody1Source source) {
+        this.source = source;
+  }
 }

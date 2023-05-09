@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsListForOrgRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ProjectsListForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -19,6 +21,7 @@ public class ProjectsListForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ProjectsListForOrgRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -29,6 +32,7 @@ public class ProjectsListForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ProjectsListForOrgRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -39,9 +43,13 @@ public class ProjectsListForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public ProjectsListForOrgStateEnum state;
+
     public ProjectsListForOrgRequest withState(ProjectsListForOrgStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ProjectsListForOrgRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

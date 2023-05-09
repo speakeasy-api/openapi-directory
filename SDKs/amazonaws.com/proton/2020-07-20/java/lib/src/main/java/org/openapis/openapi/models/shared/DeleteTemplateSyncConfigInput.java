@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteTemplateSyncConfigInput {
     @JsonProperty("templateName")
     public String templateName;
+
     public DeleteTemplateSyncConfigInput withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteTemplateSyncConfigInput {
     
     @JsonProperty("templateType")
     public TemplateTypeEnum templateType;
+
     public DeleteTemplateSyncConfigInput withTemplateType(TemplateTypeEnum templateType) {
         this.templateType = templateType;
         return this;
     }
     
+    public DeleteTemplateSyncConfigInput(@JsonProperty("templateName") String templateName, @JsonProperty("templateType") TemplateTypeEnum templateType) {
+        this.templateName = templateName;
+        this.templateType = templateType;
+  }
 }

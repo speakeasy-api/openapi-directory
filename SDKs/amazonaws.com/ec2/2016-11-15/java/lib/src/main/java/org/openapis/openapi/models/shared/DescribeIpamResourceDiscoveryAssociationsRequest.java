@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIpamResourceDiscoveryAssociationsRequest {
     
     public Boolean dryRun;
+
     public DescribeIpamResourceDiscoveryAssociationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeIpamResourceDiscoveryAssociationsRequest {
     
     
     public DescribeIpamResourceDiscoveryAssociationsRequestFilters[] filters;
+
     public DescribeIpamResourceDiscoveryAssociationsRequest withFilters(DescribeIpamResourceDiscoveryAssociationsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeIpamResourceDiscoveryAssociationsRequest {
     
     
     public String[] ipamResourceDiscoveryAssociationIds;
+
     public DescribeIpamResourceDiscoveryAssociationsRequest withIpamResourceDiscoveryAssociationIds(String[] ipamResourceDiscoveryAssociationIds) {
         this.ipamResourceDiscoveryAssociationIds = ipamResourceDiscoveryAssociationIds;
         return this;
@@ -30,6 +33,7 @@ public class DescribeIpamResourceDiscoveryAssociationsRequest {
     
     
     public Long maxResults;
+
     public DescribeIpamResourceDiscoveryAssociationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeIpamResourceDiscoveryAssociationsRequest {
     
     
     public String nextToken;
+
     public DescribeIpamResourceDiscoveryAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeIpamResourceDiscoveryAssociationsRequest(){}
 }

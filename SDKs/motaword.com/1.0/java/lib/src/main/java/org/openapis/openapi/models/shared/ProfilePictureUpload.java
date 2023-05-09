@@ -12,9 +12,13 @@ public class ProfilePictureUpload {
      */
     @JsonProperty("profile_picture")
     public byte[] profilePicture;
+
     public ProfilePictureUpload withProfilePicture(byte[] profilePicture) {
         this.profilePicture = profilePicture;
         return this;
     }
     
+    public ProfilePictureUpload(@JsonProperty("profile_picture") byte[] profilePicture) {
+        this.profilePicture = profilePicture;
+  }
 }

@@ -14,6 +14,7 @@ public class ListDisputesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListDisputesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -25,6 +26,7 @@ public class ListDisputesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     public String locationId;
+
     public ListDisputesRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -37,9 +39,11 @@ public class ListDisputesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=states")
     public String states;
+
     public ListDisputesRequest withStates(String states) {
         this.states = states;
         return this;
     }
     
+    public ListDisputesRequest(){}
 }

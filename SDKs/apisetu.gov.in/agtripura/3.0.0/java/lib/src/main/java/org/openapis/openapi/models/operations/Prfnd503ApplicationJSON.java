@@ -15,6 +15,7 @@ public class Prfnd503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Prfnd503ApplicationJSONErrorEnum error;
+
     public Prfnd503ApplicationJSON withError(Prfnd503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Prfnd503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Prfnd503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Prfnd503ApplicationJSON withErrorDescription(Prfnd503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Prfnd503ApplicationJSON(){}
 }

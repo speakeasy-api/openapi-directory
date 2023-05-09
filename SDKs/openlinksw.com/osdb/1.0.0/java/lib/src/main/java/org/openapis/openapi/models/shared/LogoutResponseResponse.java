@@ -12,9 +12,13 @@ public class LogoutResponseResponse {
      */
     @JsonProperty("user")
     public String user;
+
     public LogoutResponseResponse withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public LogoutResponseResponse(@JsonProperty("user") String user) {
+        this.user = user;
+  }
 }

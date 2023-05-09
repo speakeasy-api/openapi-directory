@@ -22,6 +22,7 @@ public class Image {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public Image withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -30,6 +31,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Height")
     public Integer height;
+
     public Image withHeight(Integer height) {
         this.height = height;
         return this;
@@ -38,6 +40,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Image withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageUri")
     public String imageUri;
+
     public Image withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
@@ -54,6 +58,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Predictions")
     public PredictionTag[] predictions;
+
     public Image withPredictions(PredictionTag[] predictions) {
         this.predictions = predictions;
         return this;
@@ -62,6 +67,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public ImageTag[] tags;
+
     public Image withTags(ImageTag[] tags) {
         this.tags = tags;
         return this;
@@ -70,6 +76,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThumbnailUri")
     public String thumbnailUri;
+
     public Image withThumbnailUri(String thumbnailUri) {
         this.thumbnailUri = thumbnailUri;
         return this;
@@ -78,9 +85,11 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Width")
     public Integer width;
+
     public Image withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public Image(){}
 }

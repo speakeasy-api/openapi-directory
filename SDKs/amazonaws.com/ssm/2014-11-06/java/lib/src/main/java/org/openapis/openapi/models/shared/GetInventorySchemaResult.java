@@ -15,6 +15,7 @@ public class GetInventorySchemaResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetInventorySchemaResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetInventorySchemaResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schemas")
     public InventoryItemSchema[] schemas;
+
     public GetInventorySchemaResult withSchemas(InventoryItemSchema[] schemas) {
         this.schemas = schemas;
         return this;
     }
     
+    public GetInventorySchemaResult(){}
 }

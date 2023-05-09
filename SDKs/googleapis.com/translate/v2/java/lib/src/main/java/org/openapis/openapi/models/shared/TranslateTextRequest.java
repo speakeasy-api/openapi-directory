@@ -19,6 +19,7 @@ public class TranslateTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public String format;
+
     public TranslateTextRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -31,6 +32,7 @@ public class TranslateTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public TranslateTextRequest withModel(String model) {
         this.model = model;
         return this;
@@ -43,6 +45,7 @@ public class TranslateTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("q")
     public String[] q;
+
     public TranslateTextRequest withQ(String[] q) {
         this.q = q;
         return this;
@@ -57,6 +60,7 @@ public class TranslateTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public TranslateTextRequest withSource(String source) {
         this.source = source;
         return this;
@@ -69,9 +73,11 @@ public class TranslateTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public TranslateTextRequest withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public TranslateTextRequest(){}
 }

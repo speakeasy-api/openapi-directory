@@ -15,9 +15,11 @@ public class FilesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public String[] files;
+
     public FilesDto withFiles(String[] files) {
         this.files = files;
         return this;
     }
     
+    public FilesDto(){}
 }

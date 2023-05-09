@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorCount {
     
     public Long max;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorCount withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsIn
     
     
     public Long min;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorCount withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorCount(){}
 }

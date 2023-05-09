@@ -15,6 +15,7 @@ public class ListPermissionSetProvisioningStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPermissionSetProvisioningStatusResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPermissionSetProvisioningStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionSetsProvisioningStatus")
     public PermissionSetProvisioningStatusMetadata[] permissionSetsProvisioningStatus;
+
     public ListPermissionSetProvisioningStatusResponse withPermissionSetsProvisioningStatus(PermissionSetProvisioningStatusMetadata[] permissionSetsProvisioningStatus) {
         this.permissionSetsProvisioningStatus = permissionSetsProvisioningStatus;
         return this;
     }
     
+    public ListPermissionSetProvisioningStatusResponse(){}
 }

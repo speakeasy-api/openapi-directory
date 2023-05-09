@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SetIdentityHeadersInNotificationsEnabledRequest - Represents a request to set whether Amazon SES includes the original email headers in the Amazon SNS notifications of a specified type. For information about notifications, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/notifications-via-sns.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SetIdentityHeadersInNotificationsEnabledRequest {
     
     public Boolean enabled;
+
     public SetIdentityHeadersInNotificationsEnabledRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -19,6 +20,7 @@ public class SetIdentityHeadersInNotificationsEnabledRequest {
     
     
     public String identity;
+
     public SetIdentityHeadersInNotificationsEnabledRequest withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -26,9 +28,15 @@ public class SetIdentityHeadersInNotificationsEnabledRequest {
     
     
     public NotificationTypeEnum notificationType;
+
     public SetIdentityHeadersInNotificationsEnabledRequest withNotificationType(NotificationTypeEnum notificationType) {
         this.notificationType = notificationType;
         return this;
     }
     
+    public SetIdentityHeadersInNotificationsEnabledRequest(@JsonProperty("Enabled") Boolean enabled, @JsonProperty("Identity") String identity, @JsonProperty("NotificationType") NotificationTypeEnum notificationType) {
+        this.enabled = enabled;
+        this.identity = identity;
+        this.notificationType = notificationType;
+  }
 }

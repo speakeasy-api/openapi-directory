@@ -18,9 +18,11 @@ public class GoogleCloudRecommenderV1beta1InsightRecommendationReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendation")
     public String recommendation;
+
     public GoogleCloudRecommenderV1beta1InsightRecommendationReference withRecommendation(String recommendation) {
         this.recommendation = recommendation;
         return this;
     }
     
+    public GoogleCloudRecommenderV1beta1InsightRecommendationReference(){}
 }

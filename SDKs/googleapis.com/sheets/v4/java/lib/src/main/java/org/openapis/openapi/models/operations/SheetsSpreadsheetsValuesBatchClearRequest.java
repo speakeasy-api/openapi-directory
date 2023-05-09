@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SheetsSpreadsheetsValuesBatchClearRequest {
@@ -12,6 +13,7 @@ public class SheetsSpreadsheetsValuesBatchClearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public SheetsSpreadsheetsValuesBatchClearRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class SheetsSpreadsheetsValuesBatchClearRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BatchClearValuesRequest batchClearValuesRequest;
+
     public SheetsSpreadsheetsValuesBatchClearRequest withBatchClearValuesRequest(org.openapis.openapi.models.shared.BatchClearValuesRequest batchClearValuesRequest) {
         this.batchClearValuesRequest = batchClearValuesRequest;
         return this;
@@ -29,6 +32,7 @@ public class SheetsSpreadsheetsValuesBatchClearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public SheetsSpreadsheetsValuesBatchClearRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class SheetsSpreadsheetsValuesBatchClearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public SheetsSpreadsheetsValuesBatchClearRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class SheetsSpreadsheetsValuesBatchClearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public SheetsSpreadsheetsValuesBatchClearRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class SheetsSpreadsheetsValuesBatchClearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public SheetsSpreadsheetsValuesBatchClearRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class SheetsSpreadsheetsValuesBatchClearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public SheetsSpreadsheetsValuesBatchClearRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class SheetsSpreadsheetsValuesBatchClearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public SheetsSpreadsheetsValuesBatchClearRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class SheetsSpreadsheetsValuesBatchClearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public SheetsSpreadsheetsValuesBatchClearRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class SheetsSpreadsheetsValuesBatchClearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public SheetsSpreadsheetsValuesBatchClearRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -109,6 +120,7 @@ public class SheetsSpreadsheetsValuesBatchClearRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spreadsheetId")
     public String spreadsheetId;
+
     public SheetsSpreadsheetsValuesBatchClearRequest withSpreadsheetId(String spreadsheetId) {
         this.spreadsheetId = spreadsheetId;
         return this;
@@ -119,6 +131,7 @@ public class SheetsSpreadsheetsValuesBatchClearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public SheetsSpreadsheetsValuesBatchClearRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class SheetsSpreadsheetsValuesBatchClearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public SheetsSpreadsheetsValuesBatchClearRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public SheetsSpreadsheetsValuesBatchClearRequest(@JsonProperty("spreadsheetId") String spreadsheetId) {
+        this.spreadsheetId = spreadsheetId;
+  }
 }

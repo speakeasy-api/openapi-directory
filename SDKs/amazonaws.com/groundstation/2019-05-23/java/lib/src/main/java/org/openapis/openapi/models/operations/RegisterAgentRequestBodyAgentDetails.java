@@ -13,8 +13,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class RegisterAgentRequestBodyAgentDetails {
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("agentCpuCores")
+    public Long[] agentCpuCores;
+
+    public RegisterAgentRequestBodyAgentDetails withAgentCpuCores(Long[] agentCpuCores) {
+        this.agentCpuCores = agentCpuCores;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentVersion")
     public String agentVersion;
+
     public RegisterAgentRequestBodyAgentDetails withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -23,6 +33,7 @@ public class RegisterAgentRequestBodyAgentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentVersions")
     public org.openapis.openapi.models.shared.ComponentVersion[] componentVersions;
+
     public RegisterAgentRequestBodyAgentDetails withComponentVersions(org.openapis.openapi.models.shared.ComponentVersion[] componentVersions) {
         this.componentVersions = componentVersions;
         return this;
@@ -31,6 +42,7 @@ public class RegisterAgentRequestBodyAgentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceId")
     public String instanceId;
+
     public RegisterAgentRequestBodyAgentDetails withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -39,6 +51,7 @@ public class RegisterAgentRequestBodyAgentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceType")
     public String instanceType;
+
     public RegisterAgentRequestBodyAgentDetails withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -47,9 +60,11 @@ public class RegisterAgentRequestBodyAgentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedCpuCores")
     public Long[] reservedCpuCores;
+
     public RegisterAgentRequestBodyAgentDetails withReservedCpuCores(Long[] reservedCpuCores) {
         this.reservedCpuCores = reservedCpuCores;
         return this;
     }
     
+    public RegisterAgentRequestBodyAgentDetails(){}
 }

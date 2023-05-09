@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * BlockDeviceMapping - Describes a block device mapping.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class BlockDeviceMapping {
     
     public String deviceName;
+
     public BlockDeviceMapping withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -19,6 +20,7 @@ public class BlockDeviceMapping {
     
     
     public Ebs ebs;
+
     public BlockDeviceMapping withEbs(Ebs ebs) {
         this.ebs = ebs;
         return this;
@@ -26,6 +28,7 @@ public class BlockDeviceMapping {
     
     
     public Boolean noDevice;
+
     public BlockDeviceMapping withNoDevice(Boolean noDevice) {
         this.noDevice = noDevice;
         return this;
@@ -33,9 +36,13 @@ public class BlockDeviceMapping {
     
     
     public String virtualName;
+
     public BlockDeviceMapping withVirtualName(String virtualName) {
         this.virtualName = virtualName;
         return this;
     }
     
+    public BlockDeviceMapping(@JsonProperty("DeviceName") String deviceName) {
+        this.deviceName = deviceName;
+  }
 }

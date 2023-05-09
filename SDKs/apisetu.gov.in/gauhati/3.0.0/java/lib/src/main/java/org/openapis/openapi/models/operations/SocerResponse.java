@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SocerResponse {
     
     public String contentType;
+
     public SocerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SocerResponse {
     
     
     public Integer statusCode;
+
     public SocerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SocerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SocerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SocerResponse {
      */
     
     public Socer400ApplicationJSON socer400ApplicationJSONObject;
+
     public SocerResponse withSocer400ApplicationJSONObject(Socer400ApplicationJSON socer400ApplicationJSONObject) {
         this.socer400ApplicationJSONObject = socer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SocerResponse {
      */
     
     public Socer401ApplicationJSON socer401ApplicationJSONObject;
+
     public SocerResponse withSocer401ApplicationJSONObject(Socer401ApplicationJSON socer401ApplicationJSONObject) {
         this.socer401ApplicationJSONObject = socer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SocerResponse {
      */
     
     public Socer404ApplicationJSON socer404ApplicationJSONObject;
+
     public SocerResponse withSocer404ApplicationJSONObject(Socer404ApplicationJSON socer404ApplicationJSONObject) {
         this.socer404ApplicationJSONObject = socer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class SocerResponse {
      */
     
     public Socer500ApplicationJSON socer500ApplicationJSONObject;
+
     public SocerResponse withSocer500ApplicationJSONObject(Socer500ApplicationJSON socer500ApplicationJSONObject) {
         this.socer500ApplicationJSONObject = socer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class SocerResponse {
      */
     
     public Socer502ApplicationJSON socer502ApplicationJSONObject;
+
     public SocerResponse withSocer502ApplicationJSONObject(Socer502ApplicationJSON socer502ApplicationJSONObject) {
         this.socer502ApplicationJSONObject = socer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class SocerResponse {
      */
     
     public Socer503ApplicationJSON socer503ApplicationJSONObject;
+
     public SocerResponse withSocer503ApplicationJSONObject(Socer503ApplicationJSON socer503ApplicationJSONObject) {
         this.socer503ApplicationJSONObject = socer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class SocerResponse {
      */
     
     public Socer504ApplicationJSON socer504ApplicationJSONObject;
+
     public SocerResponse withSocer504ApplicationJSONObject(Socer504ApplicationJSON socer504ApplicationJSONObject) {
         this.socer504ApplicationJSONObject = socer504ApplicationJSONObject;
         return this;
     }
     
+    public SocerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

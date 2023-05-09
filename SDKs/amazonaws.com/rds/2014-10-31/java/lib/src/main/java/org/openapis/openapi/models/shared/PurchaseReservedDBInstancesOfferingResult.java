@@ -15,9 +15,11 @@ public class PurchaseReservedDBInstancesOfferingResult {
      */
     
     public ReservedDBInstance reservedDBInstance;
+
     public PurchaseReservedDBInstancesOfferingResult withReservedDBInstance(ReservedDBInstance reservedDBInstance) {
         this.reservedDBInstance = reservedDBInstance;
         return this;
     }
     
+    public PurchaseReservedDBInstancesOfferingResult(){}
 }

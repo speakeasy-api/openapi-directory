@@ -15,6 +15,7 @@ public class TerminologyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Directionality")
     public DirectionalityEnum directionality;
+
     public TerminologyData withDirectionality(DirectionalityEnum directionality) {
         this.directionality = directionality;
         return this;
@@ -22,6 +23,7 @@ public class TerminologyData {
     
     @JsonProperty("File")
     public String file;
+
     public TerminologyData withFile(String file) {
         this.file = file;
         return this;
@@ -29,9 +31,14 @@ public class TerminologyData {
     
     @JsonProperty("Format")
     public TerminologyDataFormatEnum format;
+
     public TerminologyData withFormat(TerminologyDataFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public TerminologyData(@JsonProperty("File") String file, @JsonProperty("Format") TerminologyDataFormatEnum format) {
+        this.file = file;
+        this.format = format;
+  }
 }

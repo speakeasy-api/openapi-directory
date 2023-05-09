@@ -164,6 +164,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -201,7 +206,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateServiceQuotaTemplateResponse res = new org.openapis.openapi.models.operations.AssociateServiceQuotaTemplateResponse() {{
+        org.openapis.openapi.models.operations.AssociateServiceQuotaTemplateResponse res = new org.openapis.openapi.models.operations.AssociateServiceQuotaTemplateResponse(contentType, httpRes.statusCode()) {{
             associateServiceQuotaTemplateResponse = null;
             dependencyAccessDeniedException = null;
             accessDeniedException = null;
@@ -212,8 +217,6 @@ public class SDK {
             templatesNotAvailableInRegionException = null;
             noAvailableOrganizationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -317,7 +320,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteServiceQuotaIncreaseRequestFromTemplateResponse res = new org.openapis.openapi.models.operations.DeleteServiceQuotaIncreaseRequestFromTemplateResponse() {{
+        org.openapis.openapi.models.operations.DeleteServiceQuotaIncreaseRequestFromTemplateResponse res = new org.openapis.openapi.models.operations.DeleteServiceQuotaIncreaseRequestFromTemplateResponse(contentType, httpRes.statusCode()) {{
             deleteServiceQuotaIncreaseRequestFromTemplateResponse = null;
             accessDeniedException = null;
             serviceException = null;
@@ -329,8 +332,6 @@ public class SDK {
             templatesNotAvailableInRegionException = null;
             noAvailableOrganizationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -441,7 +442,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateServiceQuotaTemplateResponse res = new org.openapis.openapi.models.operations.DisassociateServiceQuotaTemplateResponse() {{
+        org.openapis.openapi.models.operations.DisassociateServiceQuotaTemplateResponse res = new org.openapis.openapi.models.operations.DisassociateServiceQuotaTemplateResponse(contentType, httpRes.statusCode()) {{
             disassociateServiceQuotaTemplateResponse = null;
             dependencyAccessDeniedException = null;
             serviceQuotaTemplateNotInUseException = null;
@@ -452,8 +453,6 @@ public class SDK {
             templatesNotAvailableInRegionException = null;
             noAvailableOrganizationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -557,7 +556,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAWSDefaultServiceQuotaResponse res = new org.openapis.openapi.models.operations.GetAWSDefaultServiceQuotaResponse() {{
+        org.openapis.openapi.models.operations.GetAWSDefaultServiceQuotaResponse res = new org.openapis.openapi.models.operations.GetAWSDefaultServiceQuotaResponse(contentType, httpRes.statusCode()) {{
             getAWSDefaultServiceQuotaResponse = null;
             accessDeniedException = null;
             noSuchResourceException = null;
@@ -565,8 +564,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -649,7 +646,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssociationForServiceQuotaTemplateResponse res = new org.openapis.openapi.models.operations.GetAssociationForServiceQuotaTemplateResponse() {{
+        org.openapis.openapi.models.operations.GetAssociationForServiceQuotaTemplateResponse res = new org.openapis.openapi.models.operations.GetAssociationForServiceQuotaTemplateResponse(contentType, httpRes.statusCode()) {{
             getAssociationForServiceQuotaTemplateResponse = null;
             dependencyAccessDeniedException = null;
             serviceQuotaTemplateNotInUseException = null;
@@ -660,8 +657,6 @@ public class SDK {
             templatesNotAvailableInRegionException = null;
             noAvailableOrganizationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -765,7 +760,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRequestedServiceQuotaChangeResponse res = new org.openapis.openapi.models.operations.GetRequestedServiceQuotaChangeResponse() {{
+        org.openapis.openapi.models.operations.GetRequestedServiceQuotaChangeResponse res = new org.openapis.openapi.models.operations.GetRequestedServiceQuotaChangeResponse(contentType, httpRes.statusCode()) {{
             getRequestedServiceQuotaChangeResponse = null;
             accessDeniedException = null;
             noSuchResourceException = null;
@@ -773,8 +768,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -857,7 +850,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetServiceQuotaResponse res = new org.openapis.openapi.models.operations.GetServiceQuotaResponse() {{
+        org.openapis.openapi.models.operations.GetServiceQuotaResponse res = new org.openapis.openapi.models.operations.GetServiceQuotaResponse(contentType, httpRes.statusCode()) {{
             getServiceQuotaResponse = null;
             accessDeniedException = null;
             noSuchResourceException = null;
@@ -865,8 +858,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -949,7 +940,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetServiceQuotaIncreaseRequestFromTemplateResponse res = new org.openapis.openapi.models.operations.GetServiceQuotaIncreaseRequestFromTemplateResponse() {{
+        org.openapis.openapi.models.operations.GetServiceQuotaIncreaseRequestFromTemplateResponse res = new org.openapis.openapi.models.operations.GetServiceQuotaIncreaseRequestFromTemplateResponse(contentType, httpRes.statusCode()) {{
             getServiceQuotaIncreaseRequestFromTemplateResponse = null;
             accessDeniedException = null;
             dependencyAccessDeniedException = null;
@@ -961,8 +952,6 @@ public class SDK {
             templatesNotAvailableInRegionException = null;
             noAvailableOrganizationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1079,7 +1068,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAWSDefaultServiceQuotasResponse res = new org.openapis.openapi.models.operations.ListAWSDefaultServiceQuotasResponse() {{
+        org.openapis.openapi.models.operations.ListAWSDefaultServiceQuotasResponse res = new org.openapis.openapi.models.operations.ListAWSDefaultServiceQuotasResponse(contentType, httpRes.statusCode()) {{
             listAWSDefaultServiceQuotasResponse = null;
             accessDeniedException = null;
             noSuchResourceException = null;
@@ -1088,8 +1077,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1185,7 +1172,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRequestedServiceQuotaChangeHistoryResponse res = new org.openapis.openapi.models.operations.ListRequestedServiceQuotaChangeHistoryResponse() {{
+        org.openapis.openapi.models.operations.ListRequestedServiceQuotaChangeHistoryResponse res = new org.openapis.openapi.models.operations.ListRequestedServiceQuotaChangeHistoryResponse(contentType, httpRes.statusCode()) {{
             listRequestedServiceQuotaChangeHistoryResponse = null;
             accessDeniedException = null;
             noSuchResourceException = null;
@@ -1194,8 +1181,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1291,7 +1276,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRequestedServiceQuotaChangeHistoryByQuotaResponse res = new org.openapis.openapi.models.operations.ListRequestedServiceQuotaChangeHistoryByQuotaResponse() {{
+        org.openapis.openapi.models.operations.ListRequestedServiceQuotaChangeHistoryByQuotaResponse res = new org.openapis.openapi.models.operations.ListRequestedServiceQuotaChangeHistoryByQuotaResponse(contentType, httpRes.statusCode()) {{
             listRequestedServiceQuotaChangeHistoryByQuotaResponse = null;
             accessDeniedException = null;
             noSuchResourceException = null;
@@ -1300,8 +1285,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1397,7 +1380,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListServiceQuotaIncreaseRequestsInTemplateResponse res = new org.openapis.openapi.models.operations.ListServiceQuotaIncreaseRequestsInTemplateResponse() {{
+        org.openapis.openapi.models.operations.ListServiceQuotaIncreaseRequestsInTemplateResponse res = new org.openapis.openapi.models.operations.ListServiceQuotaIncreaseRequestsInTemplateResponse(contentType, httpRes.statusCode()) {{
             listServiceQuotaIncreaseRequestsInTemplateResponse = null;
             accessDeniedException = null;
             dependencyAccessDeniedException = null;
@@ -1408,8 +1391,6 @@ public class SDK {
             templatesNotAvailableInRegionException = null;
             noAvailableOrganizationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1519,7 +1500,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListServiceQuotasResponse res = new org.openapis.openapi.models.operations.ListServiceQuotasResponse() {{
+        org.openapis.openapi.models.operations.ListServiceQuotasResponse res = new org.openapis.openapi.models.operations.ListServiceQuotasResponse(contentType, httpRes.statusCode()) {{
             listServiceQuotasResponse = null;
             accessDeniedException = null;
             noSuchResourceException = null;
@@ -1528,8 +1509,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1625,7 +1604,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListServicesResponse res = new org.openapis.openapi.models.operations.ListServicesResponse() {{
+        org.openapis.openapi.models.operations.ListServicesResponse res = new org.openapis.openapi.models.operations.ListServicesResponse(contentType, httpRes.statusCode()) {{
             listServicesResponse = null;
             accessDeniedException = null;
             illegalArgumentException = null;
@@ -1633,8 +1612,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1717,7 +1694,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             tooManyRequestsException = null;
             noSuchResourceException = null;
@@ -1725,8 +1702,6 @@ public class SDK {
             accessDeniedException = null;
             serviceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1809,7 +1784,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutServiceQuotaIncreaseRequestIntoTemplateResponse res = new org.openapis.openapi.models.operations.PutServiceQuotaIncreaseRequestIntoTemplateResponse() {{
+        org.openapis.openapi.models.operations.PutServiceQuotaIncreaseRequestIntoTemplateResponse res = new org.openapis.openapi.models.operations.PutServiceQuotaIncreaseRequestIntoTemplateResponse(contentType, httpRes.statusCode()) {{
             putServiceQuotaIncreaseRequestIntoTemplateResponse = null;
             accessDeniedException = null;
             dependencyAccessDeniedException = null;
@@ -1822,8 +1797,6 @@ public class SDK {
             templatesNotAvailableInRegionException = null;
             noAvailableOrganizationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1941,7 +1914,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RequestServiceQuotaIncreaseResponse res = new org.openapis.openapi.models.operations.RequestServiceQuotaIncreaseResponse() {{
+        org.openapis.openapi.models.operations.RequestServiceQuotaIncreaseResponse res = new org.openapis.openapi.models.operations.RequestServiceQuotaIncreaseResponse(contentType, httpRes.statusCode()) {{
             requestServiceQuotaIncreaseResponse = null;
             dependencyAccessDeniedException = null;
             quotaExceededException = null;
@@ -1953,8 +1926,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2065,7 +2036,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             tooManyRequestsException = null;
             noSuchResourceException = null;
@@ -2075,8 +2046,6 @@ public class SDK {
             accessDeniedException = null;
             serviceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2173,7 +2142,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             tooManyRequestsException = null;
             noSuchResourceException = null;
@@ -2181,8 +2150,6 @@ public class SDK {
             accessDeniedException = null;
             serviceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class SubstitutionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newValue")
     public String newValue;
+
     public SubstitutionRule withNewValue(String newValue) {
         this.newValue = newValue;
         return this;
@@ -29,6 +30,7 @@ public class SubstitutionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalValuePattern")
     public String originalValuePattern;
+
     public SubstitutionRule withOriginalValuePattern(String originalValuePattern) {
         this.originalValuePattern = originalValuePattern;
         return this;
@@ -40,6 +42,7 @@ public class SubstitutionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetGroupKinds")
     public GroupKind[] targetGroupKinds;
+
     public SubstitutionRule withTargetGroupKinds(GroupKind[] targetGroupKinds) {
         this.targetGroupKinds = targetGroupKinds;
         return this;
@@ -51,6 +54,7 @@ public class SubstitutionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetJsonPath")
     public String targetJsonPath;
+
     public SubstitutionRule withTargetJsonPath(String targetJsonPath) {
         this.targetJsonPath = targetJsonPath;
         return this;
@@ -62,9 +66,11 @@ public class SubstitutionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetNamespaces")
     public String[] targetNamespaces;
+
     public SubstitutionRule withTargetNamespaces(String[] targetNamespaces) {
         this.targetNamespaces = targetNamespaces;
         return this;
     }
     
+    public SubstitutionRule(){}
 }

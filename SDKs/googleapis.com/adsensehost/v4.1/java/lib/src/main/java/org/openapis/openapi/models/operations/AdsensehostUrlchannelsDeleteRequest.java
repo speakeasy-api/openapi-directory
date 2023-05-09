@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsensehostUrlchannelsDeleteRequest {
@@ -12,6 +13,7 @@ public class AdsensehostUrlchannelsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adClientId")
     public String adClientId;
+
     public AdsensehostUrlchannelsDeleteRequest withAdClientId(String adClientId) {
         this.adClientId = adClientId;
         return this;
@@ -22,6 +24,7 @@ public class AdsensehostUrlchannelsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdsensehostUrlchannelsDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -32,6 +35,7 @@ public class AdsensehostUrlchannelsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdsensehostUrlchannelsDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class AdsensehostUrlchannelsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdsensehostUrlchannelsDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class AdsensehostUrlchannelsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdsensehostUrlchannelsDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +68,7 @@ public class AdsensehostUrlchannelsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdsensehostUrlchannelsDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -72,6 +79,7 @@ public class AdsensehostUrlchannelsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdsensehostUrlchannelsDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -82,6 +90,7 @@ public class AdsensehostUrlchannelsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=urlChannelId")
     public String urlChannelId;
+
     public AdsensehostUrlchannelsDeleteRequest withUrlChannelId(String urlChannelId) {
         this.urlChannelId = urlChannelId;
         return this;
@@ -92,9 +101,14 @@ public class AdsensehostUrlchannelsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdsensehostUrlchannelsDeleteRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdsensehostUrlchannelsDeleteRequest(@JsonProperty("adClientId") String adClientId, @JsonProperty("urlChannelId") String urlChannelId) {
+        this.adClientId = adClientId;
+        this.urlChannelId = urlChannelId;
+  }
 }

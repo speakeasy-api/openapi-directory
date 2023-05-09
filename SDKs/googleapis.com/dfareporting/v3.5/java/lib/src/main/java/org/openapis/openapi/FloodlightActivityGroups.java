@@ -59,11 +59,9 @@ public class FloodlightActivityGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsGetResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsGetResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsGetResponse(contentType, httpRes.statusCode()) {{
             floodlightActivityGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class FloodlightActivityGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsInsertResponse(contentType, httpRes.statusCode()) {{
             floodlightActivityGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class FloodlightActivityGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsListResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsListResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsListResponse(contentType, httpRes.statusCode()) {{
             floodlightActivityGroupsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class FloodlightActivityGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsPatchResponse(contentType, httpRes.statusCode()) {{
             floodlightActivityGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class FloodlightActivityGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsUpdateResponse(contentType, httpRes.statusCode()) {{
             floodlightActivityGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

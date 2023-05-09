@@ -15,9 +15,11 @@ public class DisassociateResolverQueryLogConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverQueryLogConfigAssociation")
     public ResolverQueryLogConfigAssociation resolverQueryLogConfigAssociation;
+
     public DisassociateResolverQueryLogConfigResponse withResolverQueryLogConfigAssociation(ResolverQueryLogConfigAssociation resolverQueryLogConfigAssociation) {
         this.resolverQueryLogConfigAssociation = resolverQueryLogConfigAssociation;
         return this;
     }
     
+    public DisassociateResolverQueryLogConfigResponse(){}
 }

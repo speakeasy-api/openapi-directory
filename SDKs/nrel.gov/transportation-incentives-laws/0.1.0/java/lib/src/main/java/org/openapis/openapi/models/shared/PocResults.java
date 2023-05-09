@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PocResults - Successful request
@@ -15,6 +15,7 @@ public class PocResults {
      */
     
     public Object inputs;
+
     public PocResults withInputs(Object inputs) {
         this.inputs = inputs;
         return this;
@@ -25,6 +26,7 @@ public class PocResults {
      */
     
     public Metadata metadata;
+
     public PocResults withMetadata(Metadata metadata) {
         this.metadata = metadata;
         return this;
@@ -35,9 +37,15 @@ public class PocResults {
      */
     
     public Poc[] result;
+
     public PocResults withResult(Poc[] result) {
         this.result = result;
         return this;
     }
     
+    public PocResults(@JsonProperty("inputs") Object inputs, @JsonProperty("metadata") Metadata metadata, @JsonProperty("result") Poc[] result) {
+        this.inputs = inputs;
+        this.metadata = metadata;
+        this.result = result;
+  }
 }

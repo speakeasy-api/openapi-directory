@@ -52,11 +52,9 @@ public class Images {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllImageUrlsResponse res = new org.openapis.openapi.models.operations.GetAllImageUrlsResponse() {{
+        org.openapis.openapi.models.operations.GetAllImageUrlsResponse res = new org.openapis.openapi.models.operations.GetAllImageUrlsResponse(contentType, httpRes.statusCode()) {{
             libraryImagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

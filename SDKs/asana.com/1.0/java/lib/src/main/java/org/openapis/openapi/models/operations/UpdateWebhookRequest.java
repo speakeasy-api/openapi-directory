@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWebhookRequest {
@@ -12,6 +13,7 @@ public class UpdateWebhookRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateWebhookRequestBody requestBody;
+
     public UpdateWebhookRequest withRequestBody(UpdateWebhookRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class UpdateWebhookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public UpdateWebhookRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,6 +38,7 @@ public class UpdateWebhookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public UpdateWebhookRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -45,9 +49,14 @@ public class UpdateWebhookRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhook_gid")
     public String webhookGid;
+
     public UpdateWebhookRequest withWebhookGid(String webhookGid) {
         this.webhookGid = webhookGid;
         return this;
     }
     
+    public UpdateWebhookRequest(@JsonProperty("RequestBody") UpdateWebhookRequestBody requestBody, @JsonProperty("webhook_gid") String webhookGid) {
+        this.requestBody = requestBody;
+        this.webhookGid = webhookGid;
+  }
 }

@@ -12,9 +12,13 @@ public class DescribeSimulationJobRequestBody {
      */
     @JsonProperty("job")
     public String job;
+
     public DescribeSimulationJobRequestBody withJob(String job) {
         this.job = job;
         return this;
     }
     
+    public DescribeSimulationJobRequestBody(@JsonProperty("job") String job) {
+        this.job = job;
+  }
 }

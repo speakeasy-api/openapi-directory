@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CrashesGetCrashAttachmentLocationResponse {
     
     public String contentType;
+
     public CrashesGetCrashAttachmentLocationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CrashesGetCrashAttachmentLocationResponse {
     
     
     public Integer statusCode;
+
     public CrashesGetCrashAttachmentLocationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CrashesGetCrashAttachmentLocationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CrashesGetCrashAttachmentLocationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CrashesGetCrashAttachmentLocationResponse {
      */
     
     public CrashesGetCrashAttachmentLocation200ApplicationJSON crashesGetCrashAttachmentLocation200ApplicationJSONObject;
+
     public CrashesGetCrashAttachmentLocationResponse withCrashesGetCrashAttachmentLocation200ApplicationJSONObject(CrashesGetCrashAttachmentLocation200ApplicationJSON crashesGetCrashAttachmentLocation200ApplicationJSONObject) {
         this.crashesGetCrashAttachmentLocation200ApplicationJSONObject = crashesGetCrashAttachmentLocation200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class CrashesGetCrashAttachmentLocationResponse {
      */
     
     public CrashesGetCrashAttachmentLocationDefaultApplicationJSON crashesGetCrashAttachmentLocationDefaultApplicationJSONObject;
+
     public CrashesGetCrashAttachmentLocationResponse withCrashesGetCrashAttachmentLocationDefaultApplicationJSONObject(CrashesGetCrashAttachmentLocationDefaultApplicationJSON crashesGetCrashAttachmentLocationDefaultApplicationJSONObject) {
         this.crashesGetCrashAttachmentLocationDefaultApplicationJSONObject = crashesGetCrashAttachmentLocationDefaultApplicationJSONObject;
         return this;
     }
     
+    public CrashesGetCrashAttachmentLocationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

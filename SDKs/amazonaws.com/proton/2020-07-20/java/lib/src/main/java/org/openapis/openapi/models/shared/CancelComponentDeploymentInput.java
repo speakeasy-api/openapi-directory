@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelComponentDeploymentInput {
     @JsonProperty("componentName")
     public String componentName;
+
     public CancelComponentDeploymentInput withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
     }
     
+    public CancelComponentDeploymentInput(@JsonProperty("componentName") String componentName) {
+        this.componentName = componentName;
+  }
 }

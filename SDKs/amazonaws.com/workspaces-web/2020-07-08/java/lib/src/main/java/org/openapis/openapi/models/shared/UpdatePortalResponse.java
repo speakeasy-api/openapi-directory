@@ -15,9 +15,11 @@ public class UpdatePortalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portal")
     public Portal portal;
+
     public UpdatePortalResponse withPortal(Portal portal) {
         this.portal = portal;
         return this;
     }
     
+    public UpdatePortalResponse(){}
 }

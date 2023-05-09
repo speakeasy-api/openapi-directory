@@ -50,11 +50,9 @@ public class Schemas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryOutlineSchemaResponse res = new org.openapis.openapi.models.operations.StoryOutlineSchemaResponse() {{
+        org.openapis.openapi.models.operations.StoryOutlineSchemaResponse res = new org.openapis.openapi.models.operations.StoryOutlineSchemaResponse(contentType, httpRes.statusCode()) {{
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

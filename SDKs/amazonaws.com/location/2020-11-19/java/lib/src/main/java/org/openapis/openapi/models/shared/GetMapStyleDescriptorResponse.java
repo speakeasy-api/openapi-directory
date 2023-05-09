@@ -15,9 +15,11 @@ public class GetMapStyleDescriptorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blob")
     public String blob;
+
     public GetMapStyleDescriptorResponse withBlob(String blob) {
         this.blob = blob;
         return this;
     }
     
+    public GetMapStyleDescriptorResponse(){}
 }

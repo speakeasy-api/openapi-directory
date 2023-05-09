@@ -15,6 +15,7 @@ public class EffectiveRecommendationPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuVendorArchitectures")
     public CpuVendorArchitectureEnum[] cpuVendorArchitectures;
+
     public EffectiveRecommendationPreferences withCpuVendorArchitectures(CpuVendorArchitectureEnum[] cpuVendorArchitectures) {
         this.cpuVendorArchitectures = cpuVendorArchitectures;
         return this;
@@ -23,6 +24,7 @@ public class EffectiveRecommendationPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enhancedInfrastructureMetrics")
     public EnhancedInfrastructureMetricsEnum enhancedInfrastructureMetrics;
+
     public EffectiveRecommendationPreferences withEnhancedInfrastructureMetrics(EnhancedInfrastructureMetricsEnum enhancedInfrastructureMetrics) {
         this.enhancedInfrastructureMetrics = enhancedInfrastructureMetrics;
         return this;
@@ -31,6 +33,7 @@ public class EffectiveRecommendationPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalMetricsPreference")
     public ExternalMetricsPreference externalMetricsPreference;
+
     public EffectiveRecommendationPreferences withExternalMetricsPreference(ExternalMetricsPreference externalMetricsPreference) {
         this.externalMetricsPreference = externalMetricsPreference;
         return this;
@@ -39,9 +42,11 @@ public class EffectiveRecommendationPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inferredWorkloadTypes")
     public InferredWorkloadTypesPreferenceEnum inferredWorkloadTypes;
+
     public EffectiveRecommendationPreferences withInferredWorkloadTypes(InferredWorkloadTypesPreferenceEnum inferredWorkloadTypes) {
         this.inferredWorkloadTypes = inferredWorkloadTypes;
         return this;
     }
     
+    public EffectiveRecommendationPreferences(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListHsmsResponse {
@@ -12,6 +13,7 @@ public class ListHsmsResponse {
      */
     
     public Object cloudHsmInternalException;
+
     public ListHsmsResponse withCloudHsmInternalException(Object cloudHsmInternalException) {
         this.cloudHsmInternalException = cloudHsmInternalException;
         return this;
@@ -22,6 +24,7 @@ public class ListHsmsResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public ListHsmsResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ListHsmsResponse {
     
     
     public String contentType;
+
     public ListHsmsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListHsmsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListHsmsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListHsmsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListHsmsResponse listHsmsResponse;
+
     public ListHsmsResponse withListHsmsResponse(org.openapis.openapi.models.shared.ListHsmsResponse listHsmsResponse) {
         this.listHsmsResponse = listHsmsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListHsmsResponse {
     
     
     public Integer statusCode;
+
     public ListHsmsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListHsmsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListHsmsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListHsmsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

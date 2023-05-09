@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolProxyPortAddRequest {
@@ -12,6 +13,7 @@ public class ProtocolProxyPortAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolProxyPortAddRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -19,6 +21,7 @@ public class ProtocolProxyPortAddRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
     public Integer port;
+
     public ProtocolProxyPortAddRequest withPort(Integer port) {
         this.port = port;
         return this;
@@ -26,6 +29,7 @@ public class ProtocolProxyPortAddRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target")
     public String target;
+
     public ProtocolProxyPortAddRequest withTarget(String target) {
         this.target = target;
         return this;
@@ -33,9 +37,16 @@ public class ProtocolProxyPortAddRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetPort")
     public Integer targetPort;
+
     public ProtocolProxyPortAddRequest withTargetPort(Integer targetPort) {
         this.targetPort = targetPort;
         return this;
     }
     
+    public ProtocolProxyPortAddRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("port") Integer port, @JsonProperty("target") String target, @JsonProperty("targetPort") Integer targetPort) {
+        this.agentNum = agentNum;
+        this.port = port;
+        this.target = target;
+        this.targetPort = targetPort;
+  }
 }

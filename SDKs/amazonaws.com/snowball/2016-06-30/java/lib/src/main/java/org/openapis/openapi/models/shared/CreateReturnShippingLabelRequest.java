@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateReturnShippingLabelRequest {
     @JsonProperty("JobId")
     public String jobId;
+
     public CreateReturnShippingLabelRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -19,9 +20,13 @@ public class CreateReturnShippingLabelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingOption")
     public ShippingOptionEnum shippingOption;
+
     public CreateReturnShippingLabelRequest withShippingOption(ShippingOptionEnum shippingOption) {
         this.shippingOption = shippingOption;
         return this;
     }
     
+    public CreateReturnShippingLabelRequest(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

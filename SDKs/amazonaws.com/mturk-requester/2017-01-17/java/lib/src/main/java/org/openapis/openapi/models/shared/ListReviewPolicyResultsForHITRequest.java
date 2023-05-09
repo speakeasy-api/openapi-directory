@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListReviewPolicyResultsForHITRequest {
     @JsonProperty("HITId")
     public String hitId;
+
     public ListReviewPolicyResultsForHITRequest withHITId(String hitId) {
         this.hitId = hitId;
         return this;
@@ -19,6 +20,7 @@ public class ListReviewPolicyResultsForHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListReviewPolicyResultsForHITRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class ListReviewPolicyResultsForHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListReviewPolicyResultsForHITRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,6 +38,7 @@ public class ListReviewPolicyResultsForHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyLevels")
     public ReviewPolicyLevelEnum[] policyLevels;
+
     public ListReviewPolicyResultsForHITRequest withPolicyLevels(ReviewPolicyLevelEnum[] policyLevels) {
         this.policyLevels = policyLevels;
         return this;
@@ -43,6 +47,7 @@ public class ListReviewPolicyResultsForHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetrieveActions")
     public Boolean retrieveActions;
+
     public ListReviewPolicyResultsForHITRequest withRetrieveActions(Boolean retrieveActions) {
         this.retrieveActions = retrieveActions;
         return this;
@@ -51,9 +56,13 @@ public class ListReviewPolicyResultsForHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetrieveResults")
     public Boolean retrieveResults;
+
     public ListReviewPolicyResultsForHITRequest withRetrieveResults(Boolean retrieveResults) {
         this.retrieveResults = retrieveResults;
         return this;
     }
     
+    public ListReviewPolicyResultsForHITRequest(@JsonProperty("HITId") String hitId) {
+        this.hitId = hitId;
+  }
 }

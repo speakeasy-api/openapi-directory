@@ -15,9 +15,11 @@ public class StartQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryId")
     public String queryId;
+
     public StartQueryResponse withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
     }
     
+    public StartQueryResponse(){}
 }

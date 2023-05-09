@@ -304,4 +304,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/CurrencyEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateFilterResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateOrganizationConfigurationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

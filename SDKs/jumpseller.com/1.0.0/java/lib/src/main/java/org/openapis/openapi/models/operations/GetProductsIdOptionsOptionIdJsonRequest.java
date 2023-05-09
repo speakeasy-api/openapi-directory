@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductsIdOptionsOptionIdJsonRequest {
@@ -12,6 +13,7 @@ public class GetProductsIdOptionsOptionIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public GetProductsIdOptionsOptionIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class GetProductsIdOptionsOptionIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public GetProductsIdOptionsOptionIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class GetProductsIdOptionsOptionIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public GetProductsIdOptionsOptionIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
@@ -42,9 +46,16 @@ public class GetProductsIdOptionsOptionIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=option_id")
     public Integer optionId;
+
     public GetProductsIdOptionsOptionIdJsonRequest withOptionId(Integer optionId) {
         this.optionId = optionId;
         return this;
     }
     
+    public GetProductsIdOptionsOptionIdJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login, @JsonProperty("option_id") Integer optionId) {
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+        this.optionId = optionId;
+  }
 }

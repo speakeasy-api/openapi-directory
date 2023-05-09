@@ -15,6 +15,7 @@ public class BugTrackerGetRepoIssueFromCrash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bug_tracker_type")
     public BugTrackerGetRepoIssueFromCrash200ApplicationJSONBugTrackerTypeEnum bugTrackerType;
+
     public BugTrackerGetRepoIssueFromCrash200ApplicationJSON withBugTrackerType(BugTrackerGetRepoIssueFromCrash200ApplicationJSONBugTrackerTypeEnum bugTrackerType) {
         this.bugTrackerType = bugTrackerType;
         return this;
@@ -23,6 +24,7 @@ public class BugTrackerGetRepoIssueFromCrash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_type")
     public String eventType;
+
     public BugTrackerGetRepoIssueFromCrash200ApplicationJSON withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -31,6 +33,7 @@ public class BugTrackerGetRepoIssueFromCrash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BugTrackerGetRepoIssueFromCrash200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class BugTrackerGetRepoIssueFromCrash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile_center_id")
     public String mobileCenterId;
+
     public BugTrackerGetRepoIssueFromCrash200ApplicationJSON withMobileCenterId(String mobileCenterId) {
         this.mobileCenterId = mobileCenterId;
         return this;
@@ -47,6 +51,7 @@ public class BugTrackerGetRepoIssueFromCrash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repo_name")
     public String repoName;
+
     public BugTrackerGetRepoIssueFromCrash200ApplicationJSON withRepoName(String repoName) {
         this.repoName = repoName;
         return this;
@@ -55,6 +60,7 @@ public class BugTrackerGetRepoIssueFromCrash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public BugTrackerGetRepoIssueFromCrash200ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
@@ -63,9 +69,11 @@ public class BugTrackerGetRepoIssueFromCrash200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public BugTrackerGetRepoIssueFromCrash200ApplicationJSON withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public BugTrackerGetRepoIssueFromCrash200ApplicationJSON(){}
 }

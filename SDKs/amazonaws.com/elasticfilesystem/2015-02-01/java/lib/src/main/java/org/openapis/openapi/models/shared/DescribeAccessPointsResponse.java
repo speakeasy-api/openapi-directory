@@ -15,6 +15,7 @@ public class DescribeAccessPointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessPoints")
     public AccessPointDescription[] accessPoints;
+
     public DescribeAccessPointsResponse withAccessPoints(AccessPointDescription[] accessPoints) {
         this.accessPoints = accessPoints;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAccessPointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeAccessPointsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAccessPointsResponse(){}
 }

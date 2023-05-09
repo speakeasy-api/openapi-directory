@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CommitCommitTree {
     @JsonProperty("sha")
     public String sha;
+
     public CommitCommitTree withSha(String sha) {
         this.sha = sha;
         return this;
@@ -16,9 +17,14 @@ public class CommitCommitTree {
     
     @JsonProperty("url")
     public String url;
+
     public CommitCommitTree withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CommitCommitTree(@JsonProperty("sha") String sha, @JsonProperty("url") String url) {
+        this.sha = sha;
+        this.url = url;
+  }
 }

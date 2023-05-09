@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartExecutionResponse {
     
     public String contentType;
+
     public StartExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartExecutionResponse {
      */
     
     public Object executionAlreadyExists;
+
     public StartExecutionResponse withExecutionAlreadyExists(Object executionAlreadyExists) {
         this.executionAlreadyExists = executionAlreadyExists;
         return this;
@@ -29,6 +32,7 @@ public class StartExecutionResponse {
      */
     
     public Object executionLimitExceeded;
+
     public StartExecutionResponse withExecutionLimitExceeded(Object executionLimitExceeded) {
         this.executionLimitExceeded = executionLimitExceeded;
         return this;
@@ -39,6 +43,7 @@ public class StartExecutionResponse {
      */
     
     public Object invalidArn;
+
     public StartExecutionResponse withInvalidArn(Object invalidArn) {
         this.invalidArn = invalidArn;
         return this;
@@ -49,6 +54,7 @@ public class StartExecutionResponse {
      */
     
     public Object invalidExecutionInput;
+
     public StartExecutionResponse withInvalidExecutionInput(Object invalidExecutionInput) {
         this.invalidExecutionInput = invalidExecutionInput;
         return this;
@@ -59,6 +65,7 @@ public class StartExecutionResponse {
      */
     
     public Object invalidName;
+
     public StartExecutionResponse withInvalidName(Object invalidName) {
         this.invalidName = invalidName;
         return this;
@@ -69,6 +76,7 @@ public class StartExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartExecutionOutput startExecutionOutput;
+
     public StartExecutionResponse withStartExecutionOutput(org.openapis.openapi.models.shared.StartExecutionOutput startExecutionOutput) {
         this.startExecutionOutput = startExecutionOutput;
         return this;
@@ -79,6 +87,7 @@ public class StartExecutionResponse {
      */
     
     public Object stateMachineDeleting;
+
     public StartExecutionResponse withStateMachineDeleting(Object stateMachineDeleting) {
         this.stateMachineDeleting = stateMachineDeleting;
         return this;
@@ -89,6 +98,7 @@ public class StartExecutionResponse {
      */
     
     public Object stateMachineDoesNotExist;
+
     public StartExecutionResponse withStateMachineDoesNotExist(Object stateMachineDoesNotExist) {
         this.stateMachineDoesNotExist = stateMachineDoesNotExist;
         return this;
@@ -96,6 +106,7 @@ public class StartExecutionResponse {
     
     
     public Integer statusCode;
+
     public StartExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class StartExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class StartExecutionResponse {
      */
     
     public Object validationException;
+
     public StartExecutionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

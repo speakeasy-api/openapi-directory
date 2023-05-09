@@ -15,6 +15,7 @@ public class User {
      */
     @JsonProperty("$id")
     public String dollarId;
+
     public User withDollarId(String dollarId) {
         this.dollarId = dollarId;
         return this;
@@ -25,6 +26,7 @@ public class User {
      */
     @JsonProperty("email")
     public String email;
+
     public User withEmail(String email) {
         this.email = email;
         return this;
@@ -35,6 +37,7 @@ public class User {
      */
     @JsonProperty("emailVerification")
     public Boolean emailVerification;
+
     public User withEmailVerification(Boolean emailVerification) {
         this.emailVerification = emailVerification;
         return this;
@@ -45,6 +48,7 @@ public class User {
      */
     @JsonProperty("name")
     public String name;
+
     public User withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +59,7 @@ public class User {
      */
     @JsonProperty("passwordUpdate")
     public Integer passwordUpdate;
+
     public User withPasswordUpdate(Integer passwordUpdate) {
         this.passwordUpdate = passwordUpdate;
         return this;
@@ -65,6 +70,7 @@ public class User {
      */
     @JsonProperty("prefs")
     public java.util.Map<String, Object> prefs;
+
     public User withPrefs(java.util.Map<String, Object> prefs) {
         this.prefs = prefs;
         return this;
@@ -75,6 +81,7 @@ public class User {
      */
     @JsonProperty("registration")
     public Integer registration;
+
     public User withRegistration(Integer registration) {
         this.registration = registration;
         return this;
@@ -85,9 +92,20 @@ public class User {
      */
     @JsonProperty("status")
     public Integer status;
+
     public User withStatus(Integer status) {
         this.status = status;
         return this;
     }
     
+    public User(@JsonProperty("$id") String dollarId, @JsonProperty("email") String email, @JsonProperty("emailVerification") Boolean emailVerification, @JsonProperty("name") String name, @JsonProperty("passwordUpdate") Integer passwordUpdate, @JsonProperty("prefs") java.util.Map<String, Object> prefs, @JsonProperty("registration") Integer registration, @JsonProperty("status") Integer status) {
+        this.dollarId = dollarId;
+        this.email = email;
+        this.emailVerification = emailVerification;
+        this.name = name;
+        this.passwordUpdate = passwordUpdate;
+        this.prefs = prefs;
+        this.registration = registration;
+        this.status = status;
+  }
 }

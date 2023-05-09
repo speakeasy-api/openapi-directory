@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelDataRepositoryTaskResponse {
@@ -12,6 +13,7 @@ public class CancelDataRepositoryTaskResponse {
      */
     
     public Object badRequest;
+
     public CancelDataRepositoryTaskResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -22,6 +24,7 @@ public class CancelDataRepositoryTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelDataRepositoryTaskResponse cancelDataRepositoryTaskResponse;
+
     public CancelDataRepositoryTaskResponse withCancelDataRepositoryTaskResponse(org.openapis.openapi.models.shared.CancelDataRepositoryTaskResponse cancelDataRepositoryTaskResponse) {
         this.cancelDataRepositoryTaskResponse = cancelDataRepositoryTaskResponse;
         return this;
@@ -29,6 +32,7 @@ public class CancelDataRepositoryTaskResponse {
     
     
     public String contentType;
+
     public CancelDataRepositoryTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CancelDataRepositoryTaskResponse {
      */
     
     public Object dataRepositoryTaskEnded;
+
     public CancelDataRepositoryTaskResponse withDataRepositoryTaskEnded(Object dataRepositoryTaskEnded) {
         this.dataRepositoryTaskEnded = dataRepositoryTaskEnded;
         return this;
@@ -49,6 +54,7 @@ public class CancelDataRepositoryTaskResponse {
      */
     
     public Object dataRepositoryTaskNotFound;
+
     public CancelDataRepositoryTaskResponse withDataRepositoryTaskNotFound(Object dataRepositoryTaskNotFound) {
         this.dataRepositoryTaskNotFound = dataRepositoryTaskNotFound;
         return this;
@@ -59,6 +65,7 @@ public class CancelDataRepositoryTaskResponse {
      */
     
     public Object internalServerError;
+
     public CancelDataRepositoryTaskResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -66,6 +73,7 @@ public class CancelDataRepositoryTaskResponse {
     
     
     public Integer statusCode;
+
     public CancelDataRepositoryTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CancelDataRepositoryTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelDataRepositoryTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CancelDataRepositoryTaskResponse {
      */
     
     public Object unsupportedOperation;
+
     public CancelDataRepositoryTaskResponse withUnsupportedOperation(Object unsupportedOperation) {
         this.unsupportedOperation = unsupportedOperation;
         return this;
     }
     
+    public CancelDataRepositoryTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

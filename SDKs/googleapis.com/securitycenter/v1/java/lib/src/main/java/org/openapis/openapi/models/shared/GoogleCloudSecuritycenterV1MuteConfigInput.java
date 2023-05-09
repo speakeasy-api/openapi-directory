@@ -18,6 +18,7 @@ public class GoogleCloudSecuritycenterV1MuteConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudSecuritycenterV1MuteConfigInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudSecuritycenterV1MuteConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudSecuritycenterV1MuteConfigInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudSecuritycenterV1MuteConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudSecuritycenterV1MuteConfigInput withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudSecuritycenterV1MuteConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudSecuritycenterV1MuteConfigInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudSecuritycenterV1MuteConfigInput(){}
 }

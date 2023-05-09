@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoString
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageLength")
     public Double averageLength;
+
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo withAverageLength(Double averageLength) {
         this.averageLength = averageLength;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoString
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxLength")
     public String maxLength;
+
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo withMaxLength(String maxLength) {
         this.maxLength = maxLength;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoString
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minLength")
     public String minLength;
+
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo withMinLength(String minLength) {
         this.minLength = minLength;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo(){}
 }

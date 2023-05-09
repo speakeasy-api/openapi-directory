@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Getdataentityfields {
     @JsonProperty("acronym")
     public String acronym;
+
     public Getdataentityfields withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
@@ -16,6 +17,7 @@ public class Getdataentityfields {
     
     @JsonProperty("allowGetAll")
     public Boolean allowGetAll;
+
     public Getdataentityfields withAllowGetAll(Boolean allowGetAll) {
         this.allowGetAll = allowGetAll;
         return this;
@@ -23,6 +25,7 @@ public class Getdataentityfields {
     
     @JsonProperty("fields")
     public Field[] fields;
+
     public Getdataentityfields withFields(Field[] fields) {
         this.fields = fields;
         return this;
@@ -30,6 +33,7 @@ public class Getdataentityfields {
     
     @JsonProperty("name")
     public String name;
+
     public Getdataentityfields withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +41,17 @@ public class Getdataentityfields {
     
     @JsonProperty("primaryKeyType")
     public String primaryKeyType;
+
     public Getdataentityfields withPrimaryKeyType(String primaryKeyType) {
         this.primaryKeyType = primaryKeyType;
         return this;
     }
     
+    public Getdataentityfields(@JsonProperty("acronym") String acronym, @JsonProperty("allowGetAll") Boolean allowGetAll, @JsonProperty("fields") Field[] fields, @JsonProperty("name") String name, @JsonProperty("primaryKeyType") String primaryKeyType) {
+        this.acronym = acronym;
+        this.allowGetAll = allowGetAll;
+        this.fields = fields;
+        this.name = name;
+        this.primaryKeyType = primaryKeyType;
+  }
 }

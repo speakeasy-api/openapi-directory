@@ -15,6 +15,7 @@ public class TagProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public TagProtection withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -23,6 +24,7 @@ public class TagProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public TagProtection withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -31,6 +33,7 @@ public class TagProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TagProtection withId(Long id) {
         this.id = id;
         return this;
@@ -38,6 +41,7 @@ public class TagProtection {
     
     @JsonProperty("pattern")
     public String pattern;
+
     public TagProtection withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -46,9 +50,13 @@ public class TagProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public TagProtection withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public TagProtection(@JsonProperty("pattern") String pattern) {
+        this.pattern = pattern;
+  }
 }

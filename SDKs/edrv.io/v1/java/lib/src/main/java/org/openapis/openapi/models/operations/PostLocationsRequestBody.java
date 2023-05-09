@@ -15,6 +15,7 @@ public class PostLocationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public PostLocationsRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -22,6 +23,7 @@ public class PostLocationsRequestBody {
     
     @JsonProperty("address")
     public PostLocationsRequestBodyAddress address;
+
     public PostLocationsRequestBody withAddress(PostLocationsRequestBodyAddress address) {
         this.address = address;
         return this;
@@ -30,6 +32,7 @@ public class PostLocationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargestations")
     public Object[] chargestations;
+
     public PostLocationsRequestBody withChargestations(Object[] chargestations) {
         this.chargestations = chargestations;
         return this;
@@ -37,6 +40,7 @@ public class PostLocationsRequestBody {
     
     @JsonProperty("coordinates")
     public PostLocationsRequestBodyCoordinates coordinates;
+
     public PostLocationsRequestBody withCoordinates(PostLocationsRequestBodyCoordinates coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -44,9 +48,15 @@ public class PostLocationsRequestBody {
     
     @JsonProperty("operatorName")
     public String operatorName;
+
     public PostLocationsRequestBody withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
     }
     
+    public PostLocationsRequestBody(@JsonProperty("address") PostLocationsRequestBodyAddress address, @JsonProperty("coordinates") PostLocationsRequestBodyCoordinates coordinates, @JsonProperty("operatorName") String operatorName) {
+        this.address = address;
+        this.coordinates = coordinates;
+        this.operatorName = operatorName;
+  }
 }

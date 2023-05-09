@@ -12,6 +12,7 @@ public class GetMergeConflictsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictDetailLevel")
     public ConflictDetailLevelTypeEnumEnum conflictDetailLevel;
+
     public GetMergeConflictsInput withConflictDetailLevel(ConflictDetailLevelTypeEnumEnum conflictDetailLevel) {
         this.conflictDetailLevel = conflictDetailLevel;
         return this;
@@ -20,6 +21,7 @@ public class GetMergeConflictsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictResolutionStrategy")
     public ConflictResolutionStrategyTypeEnumEnum conflictResolutionStrategy;
+
     public GetMergeConflictsInput withConflictResolutionStrategy(ConflictResolutionStrategyTypeEnumEnum conflictResolutionStrategy) {
         this.conflictResolutionStrategy = conflictResolutionStrategy;
         return this;
@@ -27,6 +29,7 @@ public class GetMergeConflictsInput {
     
     @JsonProperty("destinationCommitSpecifier")
     public String destinationCommitSpecifier;
+
     public GetMergeConflictsInput withDestinationCommitSpecifier(String destinationCommitSpecifier) {
         this.destinationCommitSpecifier = destinationCommitSpecifier;
         return this;
@@ -35,6 +38,7 @@ public class GetMergeConflictsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxConflictFiles")
     public Long maxConflictFiles;
+
     public GetMergeConflictsInput withMaxConflictFiles(Long maxConflictFiles) {
         this.maxConflictFiles = maxConflictFiles;
         return this;
@@ -42,6 +46,7 @@ public class GetMergeConflictsInput {
     
     @JsonProperty("mergeOption")
     public MergeOptionTypeEnumEnum mergeOption;
+
     public GetMergeConflictsInput withMergeOption(MergeOptionTypeEnumEnum mergeOption) {
         this.mergeOption = mergeOption;
         return this;
@@ -50,6 +55,7 @@ public class GetMergeConflictsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetMergeConflictsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -57,6 +63,7 @@ public class GetMergeConflictsInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public GetMergeConflictsInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -64,9 +71,16 @@ public class GetMergeConflictsInput {
     
     @JsonProperty("sourceCommitSpecifier")
     public String sourceCommitSpecifier;
+
     public GetMergeConflictsInput withSourceCommitSpecifier(String sourceCommitSpecifier) {
         this.sourceCommitSpecifier = sourceCommitSpecifier;
         return this;
     }
     
+    public GetMergeConflictsInput(@JsonProperty("destinationCommitSpecifier") String destinationCommitSpecifier, @JsonProperty("mergeOption") MergeOptionTypeEnumEnum mergeOption, @JsonProperty("repositoryName") String repositoryName, @JsonProperty("sourceCommitSpecifier") String sourceCommitSpecifier) {
+        this.destinationCommitSpecifier = destinationCommitSpecifier;
+        this.mergeOption = mergeOption;
+        this.repositoryName = repositoryName;
+        this.sourceCommitSpecifier = sourceCommitSpecifier;
+  }
 }

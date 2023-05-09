@@ -15,9 +15,11 @@ public class PredictorExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorExecutions")
     public PredictorExecution[] predictorExecutions;
+
     public PredictorExecutionDetails withPredictorExecutions(PredictorExecution[] predictorExecutions) {
         this.predictorExecutions = predictorExecutions;
         return this;
     }
     
+    public PredictorExecutionDetails(){}
 }

@@ -15,6 +15,7 @@ public class ListFindingsRequestBodySortCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public org.openapis.openapi.models.shared.SortFieldEnum field;
+
     public ListFindingsRequestBodySortCriteria withField(org.openapis.openapi.models.shared.SortFieldEnum field) {
         this.field = field;
         return this;
@@ -23,9 +24,11 @@ public class ListFindingsRequestBodySortCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public org.openapis.openapi.models.shared.SortOrderEnum sortOrder;
+
     public ListFindingsRequestBodySortCriteria withSortOrder(org.openapis.openapi.models.shared.SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListFindingsRequestBodySortCriteria(){}
 }

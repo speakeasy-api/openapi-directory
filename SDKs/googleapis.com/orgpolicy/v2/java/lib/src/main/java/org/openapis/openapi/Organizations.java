@@ -61,11 +61,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OrgpolicyOrganizationsCustomConstraintsCreateResponse res = new org.openapis.openapi.models.operations.OrgpolicyOrganizationsCustomConstraintsCreateResponse() {{
+        org.openapis.openapi.models.operations.OrgpolicyOrganizationsCustomConstraintsCreateResponse res = new org.openapis.openapi.models.operations.OrgpolicyOrganizationsCustomConstraintsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudOrgpolicyV2CustomConstraint = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OrgpolicyOrganizationsCustomConstraintsListResponse res = new org.openapis.openapi.models.operations.OrgpolicyOrganizationsCustomConstraintsListResponse() {{
+        org.openapis.openapi.models.operations.OrgpolicyOrganizationsCustomConstraintsListResponse res = new org.openapis.openapi.models.operations.OrgpolicyOrganizationsCustomConstraintsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudOrgpolicyV2ListCustomConstraintsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

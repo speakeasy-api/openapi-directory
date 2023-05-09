@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteTokenRequest {
     @JsonProperty("TokenId")
     public String tokenId;
+
     public DeleteTokenRequest withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
     }
     
+    public DeleteTokenRequest(@JsonProperty("TokenId") String tokenId) {
+        this.tokenId = tokenId;
+  }
 }

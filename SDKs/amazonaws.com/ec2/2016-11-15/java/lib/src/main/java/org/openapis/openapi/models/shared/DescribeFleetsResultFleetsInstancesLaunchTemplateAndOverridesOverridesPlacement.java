@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesPlacement {
     
     public String groupName;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesPlacement withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesPlacement(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEventIntegrationResponse {
@@ -12,6 +13,7 @@ public class DeleteEventIntegrationResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteEventIntegrationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteEventIntegrationResponse {
     
     
     public String contentType;
+
     public DeleteEventIntegrationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEventIntegrationResponse {
      */
     
     public java.util.Map<String, Object> deleteEventIntegrationResponse;
+
     public DeleteEventIntegrationResponse withDeleteEventIntegrationResponse(java.util.Map<String, Object> deleteEventIntegrationResponse) {
         this.deleteEventIntegrationResponse = deleteEventIntegrationResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEventIntegrationResponse {
      */
     
     public Object internalServiceError;
+
     public DeleteEventIntegrationResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -49,6 +54,7 @@ public class DeleteEventIntegrationResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteEventIntegrationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteEventIntegrationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteEventIntegrationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteEventIntegrationResponse {
     
     
     public Integer statusCode;
+
     public DeleteEventIntegrationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteEventIntegrationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEventIntegrationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteEventIntegrationResponse {
      */
     
     public Object throttlingException;
+
     public DeleteEventIntegrationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteEventIntegrationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

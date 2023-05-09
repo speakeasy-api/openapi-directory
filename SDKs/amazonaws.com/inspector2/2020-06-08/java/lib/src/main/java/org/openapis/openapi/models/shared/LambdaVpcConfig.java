@@ -15,6 +15,7 @@ public class LambdaVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public LambdaVpcConfig withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -23,6 +24,7 @@ public class LambdaVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public LambdaVpcConfig withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -31,9 +33,11 @@ public class LambdaVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcId")
     public String vpcId;
+
     public LambdaVpcConfig withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public LambdaVpcConfig(){}
 }

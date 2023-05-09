@@ -18,9 +18,11 @@ public class DiskPartitionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public DiskPartition[] entries;
+
     public DiskPartitionList withEntries(DiskPartition[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public DiskPartitionList(){}
 }

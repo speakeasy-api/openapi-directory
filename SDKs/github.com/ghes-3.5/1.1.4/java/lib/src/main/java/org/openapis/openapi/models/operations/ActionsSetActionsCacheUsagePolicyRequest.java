@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetActionsCacheUsagePolicyRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ActionsCacheUsagePolicyForRepository actionsCacheUsagePolicyForRepository;
+
     public ActionsSetActionsCacheUsagePolicyRequest withActionsCacheUsagePolicyForRepository(org.openapis.openapi.models.shared.ActionsCacheUsagePolicyForRepository actionsCacheUsagePolicyForRepository) {
         this.actionsCacheUsagePolicyForRepository = actionsCacheUsagePolicyForRepository;
         return this;
@@ -19,6 +21,7 @@ public class ActionsSetActionsCacheUsagePolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsSetActionsCacheUsagePolicyRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -29,9 +32,15 @@ public class ActionsSetActionsCacheUsagePolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsSetActionsCacheUsagePolicyRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ActionsSetActionsCacheUsagePolicyRequest(@JsonProperty("actions-cache-usage-policy-for-repository") org.openapis.openapi.models.shared.ActionsCacheUsagePolicyForRepository actionsCacheUsagePolicyForRepository, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.actionsCacheUsagePolicyForRepository = actionsCacheUsagePolicyForRepository;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

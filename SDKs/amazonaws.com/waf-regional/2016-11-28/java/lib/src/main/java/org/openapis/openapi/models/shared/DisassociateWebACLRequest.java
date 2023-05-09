@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateWebACLRequest {
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public DisassociateWebACLRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public DisassociateWebACLRequest(@JsonProperty("ResourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

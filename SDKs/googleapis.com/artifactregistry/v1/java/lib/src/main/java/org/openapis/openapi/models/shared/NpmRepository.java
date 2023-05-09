@@ -18,9 +18,11 @@ public class NpmRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicRepository")
     public NpmRepositoryPublicRepositoryEnum publicRepository;
+
     public NpmRepository withPublicRepository(NpmRepositoryPublicRepositoryEnum publicRepository) {
         this.publicRepository = publicRepository;
         return this;
     }
     
+    public NpmRepository(){}
 }

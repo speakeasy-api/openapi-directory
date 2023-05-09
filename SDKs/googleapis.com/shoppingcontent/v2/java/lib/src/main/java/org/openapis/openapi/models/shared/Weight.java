@@ -15,6 +15,7 @@ public class Weight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public Weight withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -26,9 +27,11 @@ public class Weight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Weight withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Weight(){}
 }

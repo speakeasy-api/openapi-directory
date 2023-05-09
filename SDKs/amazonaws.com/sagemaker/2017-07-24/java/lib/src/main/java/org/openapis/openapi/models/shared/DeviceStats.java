@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeviceStats {
     @JsonProperty("ConnectedDeviceCount")
     public Long connectedDeviceCount;
+
     public DeviceStats withConnectedDeviceCount(Long connectedDeviceCount) {
         this.connectedDeviceCount = connectedDeviceCount;
         return this;
@@ -19,9 +20,14 @@ public class DeviceStats {
     
     @JsonProperty("RegisteredDeviceCount")
     public Long registeredDeviceCount;
+
     public DeviceStats withRegisteredDeviceCount(Long registeredDeviceCount) {
         this.registeredDeviceCount = registeredDeviceCount;
         return this;
     }
     
+    public DeviceStats(@JsonProperty("ConnectedDeviceCount") Long connectedDeviceCount, @JsonProperty("RegisteredDeviceCount") Long registeredDeviceCount) {
+        this.connectedDeviceCount = connectedDeviceCount;
+        this.registeredDeviceCount = registeredDeviceCount;
+  }
 }

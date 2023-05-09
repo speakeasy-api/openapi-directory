@@ -12,6 +12,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applePay")
     public ApplePayInfo applePay;
+
     public PaymentMethodSetupInfo withApplePay(ApplePayInfo applePay) {
         this.applePay = applePay;
         return this;
@@ -20,6 +21,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bcmc")
     public BcmcInfo bcmc;
+
     public PaymentMethodSetupInfo withBcmc(BcmcInfo bcmc) {
         this.bcmc = bcmc;
         return this;
@@ -31,6 +33,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessLineId")
     public String businessLineId;
+
     public PaymentMethodSetupInfo withBusinessLineId(String businessLineId) {
         this.businessLineId = businessLineId;
         return this;
@@ -39,6 +42,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cartesBancaires")
     public CartesBancairesInfo cartesBancaires;
+
     public PaymentMethodSetupInfo withCartesBancaires(CartesBancairesInfo cartesBancaires) {
         this.cartesBancaires = cartesBancaires;
         return this;
@@ -50,6 +54,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countries")
     public String[] countries;
+
     public PaymentMethodSetupInfo withCountries(String[] countries) {
         this.countries = countries;
         return this;
@@ -61,6 +66,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencies")
     public String[] currencies;
+
     public PaymentMethodSetupInfo withCurrencies(String[] currencies) {
         this.currencies = currencies;
         return this;
@@ -72,6 +78,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customRoutingFlags")
     public String[] customRoutingFlags;
+
     public PaymentMethodSetupInfo withCustomRoutingFlags(String[] customRoutingFlags) {
         this.customRoutingFlags = customRoutingFlags;
         return this;
@@ -80,6 +87,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giroPay")
     public GiroPayInfo giroPay;
+
     public PaymentMethodSetupInfo withGiroPay(GiroPayInfo giroPay) {
         this.giroPay = giroPay;
         return this;
@@ -88,6 +96,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googlePay")
     public GooglePayInfo googlePay;
+
     public PaymentMethodSetupInfo withGooglePay(GooglePayInfo googlePay) {
         this.googlePay = googlePay;
         return this;
@@ -96,6 +105,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("klarna")
     public KlarnaInfo klarna;
+
     public PaymentMethodSetupInfo withKlarna(KlarnaInfo klarna) {
         this.klarna = klarna;
         return this;
@@ -104,6 +114,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mealVoucher_FR")
     public MealVoucherFRInfo mealVoucherFR;
+
     public PaymentMethodSetupInfo withMealVoucherFR(MealVoucherFRInfo mealVoucherFR) {
         this.mealVoucherFR = mealVoucherFR;
         return this;
@@ -112,6 +123,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paypal")
     public PayPalInfo paypal;
+
     public PaymentMethodSetupInfo withPaypal(PayPalInfo paypal) {
         this.paypal = paypal;
         return this;
@@ -123,6 +135,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public PaymentMethodSetupInfo withReference(String reference) {
         this.reference = reference;
         return this;
@@ -136,6 +149,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperInteraction")
     public PaymentMethodSetupInfoShopperInteractionEnum shopperInteraction;
+
     public PaymentMethodSetupInfo withShopperInteraction(PaymentMethodSetupInfoShopperInteractionEnum shopperInteraction) {
         this.shopperInteraction = shopperInteraction;
         return this;
@@ -144,6 +158,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sofort")
     public SofortInfo sofort;
+
     public PaymentMethodSetupInfo withSofort(SofortInfo sofort) {
         this.sofort = sofort;
         return this;
@@ -155,6 +170,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeId")
     public String storeId;
+
     public PaymentMethodSetupInfo withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
@@ -163,6 +179,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("swish")
     public SwishInfo swish;
+
     public PaymentMethodSetupInfo withSwish(SwishInfo swish) {
         this.swish = swish;
         return this;
@@ -174,6 +191,7 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PaymentMethodSetupInfoTypeEnum type;
+
     public PaymentMethodSetupInfo withType(PaymentMethodSetupInfoTypeEnum type) {
         this.type = type;
         return this;
@@ -182,9 +200,11 @@ public class PaymentMethodSetupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vipps")
     public VippsInfo vipps;
+
     public PaymentMethodSetupInfo withVipps(VippsInfo vipps) {
         this.vipps = vipps;
         return this;
     }
     
+    public PaymentMethodSetupInfo(){}
 }

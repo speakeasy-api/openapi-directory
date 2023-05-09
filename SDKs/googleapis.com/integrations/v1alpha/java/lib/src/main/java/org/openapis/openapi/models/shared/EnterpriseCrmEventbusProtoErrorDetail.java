@@ -18,6 +18,7 @@ public class EnterpriseCrmEventbusProtoErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public CrmlogErrorCode errorCode;
+
     public EnterpriseCrmEventbusProtoErrorDetail withErrorCode(CrmlogErrorCode errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmEventbusProtoErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public EnterpriseCrmEventbusProtoErrorDetail withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -40,6 +42,7 @@ public class EnterpriseCrmEventbusProtoErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public EnterpriseCrmEventbusProtoErrorDetailSeverityEnum severity;
+
     public EnterpriseCrmEventbusProtoErrorDetail withSeverity(EnterpriseCrmEventbusProtoErrorDetailSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -51,9 +54,11 @@ public class EnterpriseCrmEventbusProtoErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskNumber")
     public Integer taskNumber;
+
     public EnterpriseCrmEventbusProtoErrorDetail withTaskNumber(Integer taskNumber) {
         this.taskNumber = taskNumber;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoErrorDetail(){}
 }

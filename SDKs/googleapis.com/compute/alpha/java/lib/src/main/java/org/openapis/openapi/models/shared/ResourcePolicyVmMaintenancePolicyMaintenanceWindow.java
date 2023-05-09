@@ -18,9 +18,11 @@ public class ResourcePolicyVmMaintenancePolicyMaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailyMaintenanceWindow")
     public ResourcePolicyDailyCycle dailyMaintenanceWindow;
+
     public ResourcePolicyVmMaintenancePolicyMaintenanceWindow withDailyMaintenanceWindow(ResourcePolicyDailyCycle dailyMaintenanceWindow) {
         this.dailyMaintenanceWindow = dailyMaintenanceWindow;
         return this;
     }
     
+    public ResourcePolicyVmMaintenancePolicyMaintenanceWindow(){}
 }

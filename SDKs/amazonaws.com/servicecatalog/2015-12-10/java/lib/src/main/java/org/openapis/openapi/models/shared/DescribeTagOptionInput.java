@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeTagOptionInput {
     @JsonProperty("Id")
     public String id;
+
     public DescribeTagOptionInput withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DescribeTagOptionInput(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

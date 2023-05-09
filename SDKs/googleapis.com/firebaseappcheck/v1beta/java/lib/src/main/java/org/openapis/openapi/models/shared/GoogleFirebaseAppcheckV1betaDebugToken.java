@@ -18,6 +18,7 @@ public class GoogleFirebaseAppcheckV1betaDebugToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleFirebaseAppcheckV1betaDebugToken withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirebaseAppcheckV1betaDebugToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleFirebaseAppcheckV1betaDebugToken withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GoogleFirebaseAppcheckV1betaDebugToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public GoogleFirebaseAppcheckV1betaDebugToken withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1betaDebugToken(){}
 }

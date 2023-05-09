@@ -15,6 +15,7 @@ public class GetAppLaunchConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public GetAppLaunchConfigurationResponse withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -23,6 +24,7 @@ public class GetAppLaunchConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoLaunch")
     public Boolean autoLaunch;
+
     public GetAppLaunchConfigurationResponse withAutoLaunch(Boolean autoLaunch) {
         this.autoLaunch = autoLaunch;
         return this;
@@ -31,6 +33,7 @@ public class GetAppLaunchConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleName")
     public String roleName;
+
     public GetAppLaunchConfigurationResponse withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -39,9 +42,11 @@ public class GetAppLaunchConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverGroupLaunchConfigurations")
     public ServerGroupLaunchConfiguration[] serverGroupLaunchConfigurations;
+
     public GetAppLaunchConfigurationResponse withServerGroupLaunchConfigurations(ServerGroupLaunchConfiguration[] serverGroupLaunchConfigurations) {
         this.serverGroupLaunchConfigurations = serverGroupLaunchConfigurations;
         return this;
     }
     
+    public GetAppLaunchConfigurationResponse(){}
 }

@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisVolatility200ApplicationJSONPortfolios {
      */
     @JsonProperty("portfolioVolatility")
     public Double portfolioVolatility;
+
     public PostPortfolioAnalysisVolatility200ApplicationJSONPortfolios withPortfolioVolatility(Double portfolioVolatility) {
         this.portfolioVolatility = portfolioVolatility;
         return this;
     }
     
+    public PostPortfolioAnalysisVolatility200ApplicationJSONPortfolios(@JsonProperty("portfolioVolatility") Double portfolioVolatility) {
+        this.portfolioVolatility = portfolioVolatility;
+  }
 }

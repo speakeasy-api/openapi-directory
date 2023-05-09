@@ -15,6 +15,7 @@ public class PutV2Scim20UsersIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public PutV2Scim20UsersIdRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,6 +24,7 @@ public class PutV2Scim20UsersIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public org.openapis.openapi.models.shared.ScimUserName name;
+
     public PutV2Scim20UsersIdRequestBody withName(org.openapis.openapi.models.shared.ScimUserName name) {
         this.name = name;
         return this;
@@ -30,9 +32,13 @@ public class PutV2Scim20UsersIdRequestBody {
     
     @JsonProperty("schemas")
     public String[] schemas;
+
     public PutV2Scim20UsersIdRequestBody withSchemas(String[] schemas) {
         this.schemas = schemas;
         return this;
     }
     
+    public PutV2Scim20UsersIdRequestBody(@JsonProperty("schemas") String[] schemas) {
+        this.schemas = schemas;
+  }
 }

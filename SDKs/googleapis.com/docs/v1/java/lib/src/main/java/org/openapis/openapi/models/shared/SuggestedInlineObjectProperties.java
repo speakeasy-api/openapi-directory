@@ -18,6 +18,7 @@ public class SuggestedInlineObjectProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineObjectProperties")
     public InlineObjectProperties inlineObjectProperties;
+
     public SuggestedInlineObjectProperties withInlineObjectProperties(InlineObjectProperties inlineObjectProperties) {
         this.inlineObjectProperties = inlineObjectProperties;
         return this;
@@ -29,9 +30,11 @@ public class SuggestedInlineObjectProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineObjectPropertiesSuggestionState")
     public InlineObjectPropertiesSuggestionState inlineObjectPropertiesSuggestionState;
+
     public SuggestedInlineObjectProperties withInlineObjectPropertiesSuggestionState(InlineObjectPropertiesSuggestionState inlineObjectPropertiesSuggestionState) {
         this.inlineObjectPropertiesSuggestionState = inlineObjectPropertiesSuggestionState;
         return this;
     }
     
+    public SuggestedInlineObjectProperties(){}
 }

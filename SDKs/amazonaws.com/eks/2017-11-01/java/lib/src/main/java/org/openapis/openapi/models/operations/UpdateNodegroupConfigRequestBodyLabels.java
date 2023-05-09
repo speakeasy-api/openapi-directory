@@ -15,6 +15,7 @@ public class UpdateNodegroupConfigRequestBodyLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addOrUpdateLabels")
     public java.util.Map<String, String> addOrUpdateLabels;
+
     public UpdateNodegroupConfigRequestBodyLabels withAddOrUpdateLabels(java.util.Map<String, String> addOrUpdateLabels) {
         this.addOrUpdateLabels = addOrUpdateLabels;
         return this;
@@ -23,9 +24,11 @@ public class UpdateNodegroupConfigRequestBodyLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeLabels")
     public String[] removeLabels;
+
     public UpdateNodegroupConfigRequestBodyLabels withRemoveLabels(String[] removeLabels) {
         this.removeLabels = removeLabels;
         return this;
     }
     
+    public UpdateNodegroupConfigRequestBodyLabels(){}
 }

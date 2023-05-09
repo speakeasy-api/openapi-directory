@@ -22,6 +22,7 @@ public class TimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FromInclusive")
     public OffsetDateTime fromInclusive;
+
     public TimeRange withFromInclusive(OffsetDateTime fromInclusive) {
         this.fromInclusive = fromInclusive;
         return this;
@@ -32,9 +33,11 @@ public class TimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ToExclusive")
     public OffsetDateTime toExclusive;
+
     public TimeRange withToExclusive(OffsetDateTime toExclusive) {
         this.toExclusive = toExclusive;
         return this;
     }
     
+    public TimeRange(){}
 }

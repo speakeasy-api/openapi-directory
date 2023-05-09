@@ -23,6 +23,7 @@ public class PlaylistSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelId")
     public String channelId;
+
     public PlaylistSnippet withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -34,6 +35,7 @@ public class PlaylistSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelTitle")
     public String channelTitle;
+
     public PlaylistSnippet withChannelTitle(String channelTitle) {
         this.channelTitle = channelTitle;
         return this;
@@ -45,6 +47,7 @@ public class PlaylistSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLanguage")
     public String defaultLanguage;
+
     public PlaylistSnippet withDefaultLanguage(String defaultLanguage) {
         this.defaultLanguage = defaultLanguage;
         return this;
@@ -56,6 +59,7 @@ public class PlaylistSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PlaylistSnippet withDescription(String description) {
         this.description = description;
         return this;
@@ -67,6 +71,7 @@ public class PlaylistSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localized")
     public PlaylistLocalization localized;
+
     public PlaylistSnippet withLocalized(PlaylistLocalization localized) {
         this.localized = localized;
         return this;
@@ -80,6 +85,7 @@ public class PlaylistSnippet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("publishedAt")
     public OffsetDateTime publishedAt;
+
     public PlaylistSnippet withPublishedAt(OffsetDateTime publishedAt) {
         this.publishedAt = publishedAt;
         return this;
@@ -91,6 +97,7 @@ public class PlaylistSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public PlaylistSnippet withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -102,6 +109,7 @@ public class PlaylistSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailVideoId")
     public String thumbnailVideoId;
+
     public PlaylistSnippet withThumbnailVideoId(String thumbnailVideoId) {
         this.thumbnailVideoId = thumbnailVideoId;
         return this;
@@ -113,6 +121,7 @@ public class PlaylistSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnails")
     public ThumbnailDetails thumbnails;
+
     public PlaylistSnippet withThumbnails(ThumbnailDetails thumbnails) {
         this.thumbnails = thumbnails;
         return this;
@@ -124,9 +133,11 @@ public class PlaylistSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PlaylistSnippet withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PlaylistSnippet(){}
 }

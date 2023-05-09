@@ -15,6 +15,7 @@ public class UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public UserInfo withDate(String date) {
         this.date = date;
         return this;
@@ -23,6 +24,7 @@ public class UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserInfo withEmail(String email) {
         this.email = email;
         return this;
@@ -31,9 +33,11 @@ public class UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserInfo withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UserInfo(){}
 }

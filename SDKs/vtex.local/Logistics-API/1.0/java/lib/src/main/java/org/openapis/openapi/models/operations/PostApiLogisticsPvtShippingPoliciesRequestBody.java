@@ -14,6 +14,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBody {
      */
     @JsonProperty("businessHourSettings")
     public PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettings businessHourSettings;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBody withBusinessHourSettings(PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettings businessHourSettings) {
         this.businessHourSettings = businessHourSettings;
         return this;
@@ -25,6 +26,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierSchedule")
     public PostApiLogisticsPvtShippingPoliciesRequestBodyCarrierSchedule[] carrierSchedule;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBody withCarrierSchedule(PostApiLogisticsPvtShippingPoliciesRequestBodyCarrierSchedule[] carrierSchedule) {
         this.carrierSchedule = carrierSchedule;
         return this;
@@ -35,6 +37,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBody {
      */
     @JsonProperty("cubicWeightSettings")
     public PostApiLogisticsPvtShippingPoliciesRequestBodyCubicWeightSettings cubicWeightSettings;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBody withCubicWeightSettings(PostApiLogisticsPvtShippingPoliciesRequestBodyCubicWeightSettings cubicWeightSettings) {
         this.cubicWeightSettings = cubicWeightSettings;
         return this;
@@ -45,6 +48,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBody {
      */
     @JsonProperty("deliveryScheduleSettings")
     public PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSettings deliveryScheduleSettings;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBody withDeliveryScheduleSettings(PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSettings deliveryScheduleSettings) {
         this.deliveryScheduleSettings = deliveryScheduleSettings;
         return this;
@@ -55,6 +59,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBody {
      */
     @JsonProperty("id")
     public String id;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBody withId(String id) {
         this.id = id;
         return this;
@@ -65,6 +70,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBody {
      */
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBody withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -75,6 +81,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBody {
      */
     @JsonProperty("maxDimension")
     public PostApiLogisticsPvtShippingPoliciesRequestBodyMaxDimension maxDimension;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBody withMaxDimension(PostApiLogisticsPvtShippingPoliciesRequestBodyMaxDimension maxDimension) {
         this.maxDimension = maxDimension;
         return this;
@@ -85,6 +92,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBody {
      */
     @JsonProperty("maximumValueAceptable")
     public Double maximumValueAceptable;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBody withMaximumValueAceptable(Double maximumValueAceptable) {
         this.maximumValueAceptable = maximumValueAceptable;
         return this;
@@ -95,6 +103,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBody {
      */
     @JsonProperty("minimumValueAceptable")
     public Double minimumValueAceptable;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBody withMinimumValueAceptable(Double minimumValueAceptable) {
         this.minimumValueAceptable = minimumValueAceptable;
         return this;
@@ -105,6 +114,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBody {
      */
     @JsonProperty("modalSettings")
     public PostApiLogisticsPvtShippingPoliciesRequestBodyModalSettings modalSettings;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBody withModalSettings(PostApiLogisticsPvtShippingPoliciesRequestBodyModalSettings modalSettings) {
         this.modalSettings = modalSettings;
         return this;
@@ -115,6 +125,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -125,6 +136,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBody {
      */
     @JsonProperty("numberOfItemsPerShipment")
     public Long numberOfItemsPerShipment;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBody withNumberOfItemsPerShipment(Long numberOfItemsPerShipment) {
         this.numberOfItemsPerShipment = numberOfItemsPerShipment;
         return this;
@@ -135,6 +147,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBody {
      */
     @JsonProperty("pickupPointsSettings")
     public PostApiLogisticsPvtShippingPoliciesRequestBodyPickupPointsSettings pickupPointsSettings;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBody withPickupPointsSettings(PostApiLogisticsPvtShippingPoliciesRequestBodyPickupPointsSettings pickupPointsSettings) {
         this.pickupPointsSettings = pickupPointsSettings;
         return this;
@@ -145,6 +158,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBody {
      */
     @JsonProperty("shippingMethod")
     public String shippingMethod;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBody withShippingMethod(String shippingMethod) {
         this.shippingMethod = shippingMethod;
         return this;
@@ -155,9 +169,26 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBody {
      */
     @JsonProperty("weekendAndHolidays")
     public PostApiLogisticsPvtShippingPoliciesRequestBodyWeekendAndHolidays weekendAndHolidays;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBody withWeekendAndHolidays(PostApiLogisticsPvtShippingPoliciesRequestBodyWeekendAndHolidays weekendAndHolidays) {
         this.weekendAndHolidays = weekendAndHolidays;
         return this;
     }
     
+    public PostApiLogisticsPvtShippingPoliciesRequestBody(@JsonProperty("businessHourSettings") PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettings businessHourSettings, @JsonProperty("cubicWeightSettings") PostApiLogisticsPvtShippingPoliciesRequestBodyCubicWeightSettings cubicWeightSettings, @JsonProperty("deliveryScheduleSettings") PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSettings deliveryScheduleSettings, @JsonProperty("id") String id, @JsonProperty("isActive") Boolean isActive, @JsonProperty("maxDimension") PostApiLogisticsPvtShippingPoliciesRequestBodyMaxDimension maxDimension, @JsonProperty("maximumValueAceptable") Double maximumValueAceptable, @JsonProperty("minimumValueAceptable") Double minimumValueAceptable, @JsonProperty("modalSettings") PostApiLogisticsPvtShippingPoliciesRequestBodyModalSettings modalSettings, @JsonProperty("name") String name, @JsonProperty("numberOfItemsPerShipment") Long numberOfItemsPerShipment, @JsonProperty("pickupPointsSettings") PostApiLogisticsPvtShippingPoliciesRequestBodyPickupPointsSettings pickupPointsSettings, @JsonProperty("shippingMethod") String shippingMethod, @JsonProperty("weekendAndHolidays") PostApiLogisticsPvtShippingPoliciesRequestBodyWeekendAndHolidays weekendAndHolidays) {
+        this.businessHourSettings = businessHourSettings;
+        this.cubicWeightSettings = cubicWeightSettings;
+        this.deliveryScheduleSettings = deliveryScheduleSettings;
+        this.id = id;
+        this.isActive = isActive;
+        this.maxDimension = maxDimension;
+        this.maximumValueAceptable = maximumValueAceptable;
+        this.minimumValueAceptable = minimumValueAceptable;
+        this.modalSettings = modalSettings;
+        this.name = name;
+        this.numberOfItemsPerShipment = numberOfItemsPerShipment;
+        this.pickupPointsSettings = pickupPointsSettings;
+        this.shippingMethod = shippingMethod;
+        this.weekendAndHolidays = weekendAndHolidays;
+  }
 }

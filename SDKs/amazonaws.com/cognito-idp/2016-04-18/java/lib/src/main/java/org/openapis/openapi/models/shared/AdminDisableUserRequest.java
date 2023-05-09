@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdminDisableUserRequest {
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AdminDisableUserRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
@@ -19,9 +20,14 @@ public class AdminDisableUserRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public AdminDisableUserRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AdminDisableUserRequest(@JsonProperty("UserPoolId") String userPoolId, @JsonProperty("Username") String username) {
+        this.userPoolId = userPoolId;
+        this.username = username;
+  }
 }

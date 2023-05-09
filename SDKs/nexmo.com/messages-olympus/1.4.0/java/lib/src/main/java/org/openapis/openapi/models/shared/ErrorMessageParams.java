@@ -17,6 +17,7 @@ public class ErrorMessageParams {
      */
     @JsonProperty("detail")
     public String detail;
+
     public ErrorMessageParams withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -27,6 +28,7 @@ public class ErrorMessageParams {
      */
     @JsonProperty("instance")
     public String instance;
+
     public ErrorMessageParams withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -35,6 +37,7 @@ public class ErrorMessageParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalid_parameters")
     public ErrorMessageParamsInvalidParameters[] invalidParameters;
+
     public ErrorMessageParams withInvalidParameters(ErrorMessageParamsInvalidParameters[] invalidParameters) {
         this.invalidParameters = invalidParameters;
         return this;
@@ -45,6 +48,7 @@ public class ErrorMessageParams {
      */
     @JsonProperty("title")
     public String title;
+
     public ErrorMessageParams withTitle(String title) {
         this.title = title;
         return this;
@@ -55,9 +59,16 @@ public class ErrorMessageParams {
      */
     @JsonProperty("type")
     public String type;
+
     public ErrorMessageParams withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ErrorMessageParams(@JsonProperty("detail") String detail, @JsonProperty("instance") String instance, @JsonProperty("title") String title, @JsonProperty("type") String type) {
+        this.detail = detail;
+        this.instance = instance;
+        this.title = title;
+        this.type = type;
+  }
 }

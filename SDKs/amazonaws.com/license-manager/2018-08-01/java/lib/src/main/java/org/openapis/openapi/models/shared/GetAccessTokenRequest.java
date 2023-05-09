@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAccessTokenRequest {
     @JsonProperty("Token")
     public String token;
+
     public GetAccessTokenRequest withToken(String token) {
         this.token = token;
         return this;
@@ -19,9 +20,13 @@ public class GetAccessTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenProperties")
     public String[] tokenProperties;
+
     public GetAccessTokenRequest withTokenProperties(String[] tokenProperties) {
         this.tokenProperties = tokenProperties;
         return this;
     }
     
+    public GetAccessTokenRequest(@JsonProperty("Token") String token) {
+        this.token = token;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeRegionBackendServicesGetResponse {
@@ -12,6 +13,7 @@ public class ComputeRegionBackendServicesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.BackendService backendService;
+
     public ComputeRegionBackendServicesGetResponse withBackendService(org.openapis.openapi.models.shared.BackendService backendService) {
         this.backendService = backendService;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRegionBackendServicesGetResponse {
     
     
     public String contentType;
+
     public ComputeRegionBackendServicesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ComputeRegionBackendServicesGetResponse {
     
     
     public Integer statusCode;
+
     public ComputeRegionBackendServicesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeRegionBackendServicesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeRegionBackendServicesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeRegionBackendServicesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

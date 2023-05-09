@@ -12,9 +12,11 @@ public class GetApiV2PredictionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-RapidApi-Key")
     public String xRapidApiKey;
+
     public GetApiV2PredictionsRequest withXRapidApiKey(String xRapidApiKey) {
         this.xRapidApiKey = xRapidApiKey;
         return this;
     }
     
+    public GetApiV2PredictionsRequest(){}
 }

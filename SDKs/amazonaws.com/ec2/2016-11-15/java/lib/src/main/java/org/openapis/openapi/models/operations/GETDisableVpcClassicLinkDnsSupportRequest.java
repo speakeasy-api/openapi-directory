@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisableVpcClassicLinkDnsSupportRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDisableVpcClassicLinkDnsSupportActionEnum action;
+
     public GETDisableVpcClassicLinkDnsSupportRequest withAction(GETDisableVpcClassicLinkDnsSupportActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class GETDisableVpcClassicLinkDnsSupportRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDisableVpcClassicLinkDnsSupportVersionEnum version;
+
     public GETDisableVpcClassicLinkDnsSupportRequest withVersion(GETDisableVpcClassicLinkDnsSupportVersionEnum version) {
         this.version = version;
         return this;
@@ -26,6 +29,7 @@ public class GETDisableVpcClassicLinkDnsSupportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcId")
     public String vpcId;
+
     public GETDisableVpcClassicLinkDnsSupportRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -33,6 +37,7 @@ public class GETDisableVpcClassicLinkDnsSupportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDisableVpcClassicLinkDnsSupportRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -40,6 +45,7 @@ public class GETDisableVpcClassicLinkDnsSupportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDisableVpcClassicLinkDnsSupportRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -47,6 +53,7 @@ public class GETDisableVpcClassicLinkDnsSupportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDisableVpcClassicLinkDnsSupportRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -54,6 +61,7 @@ public class GETDisableVpcClassicLinkDnsSupportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDisableVpcClassicLinkDnsSupportRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -61,6 +69,7 @@ public class GETDisableVpcClassicLinkDnsSupportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDisableVpcClassicLinkDnsSupportRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -68,6 +77,7 @@ public class GETDisableVpcClassicLinkDnsSupportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDisableVpcClassicLinkDnsSupportRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -75,9 +85,14 @@ public class GETDisableVpcClassicLinkDnsSupportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDisableVpcClassicLinkDnsSupportRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDisableVpcClassicLinkDnsSupportRequest(@JsonProperty("Action") GETDisableVpcClassicLinkDnsSupportActionEnum action, @JsonProperty("Version") GETDisableVpcClassicLinkDnsSupportVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

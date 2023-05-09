@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFaceDetectionResponse {
@@ -12,6 +13,7 @@ public class GetFaceDetectionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetFaceDetectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetFaceDetectionResponse {
     
     
     public String contentType;
+
     public GetFaceDetectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetFaceDetectionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFaceDetectionResponse getFaceDetectionResponse;
+
     public GetFaceDetectionResponse withGetFaceDetectionResponse(org.openapis.openapi.models.shared.GetFaceDetectionResponse getFaceDetectionResponse) {
         this.getFaceDetectionResponse = getFaceDetectionResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetFaceDetectionResponse {
      */
     
     public Object internalServerError;
+
     public GetFaceDetectionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class GetFaceDetectionResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public GetFaceDetectionResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class GetFaceDetectionResponse {
      */
     
     public Object invalidParameterException;
+
     public GetFaceDetectionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class GetFaceDetectionResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public GetFaceDetectionResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -79,6 +87,7 @@ public class GetFaceDetectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFaceDetectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class GetFaceDetectionResponse {
     
     
     public Integer statusCode;
+
     public GetFaceDetectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetFaceDetectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFaceDetectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetFaceDetectionResponse {
      */
     
     public Object throttlingException;
+
     public GetFaceDetectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetFaceDetectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBackendEnvironmentResponse {
@@ -12,6 +13,7 @@ public class CreateBackendEnvironmentResponse {
      */
     
     public Object badRequestException;
+
     public CreateBackendEnvironmentResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateBackendEnvironmentResponse {
     
     
     public String contentType;
+
     public CreateBackendEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateBackendEnvironmentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBackendEnvironmentResult createBackendEnvironmentResult;
+
     public CreateBackendEnvironmentResponse withCreateBackendEnvironmentResult(org.openapis.openapi.models.shared.CreateBackendEnvironmentResult createBackendEnvironmentResult) {
         this.createBackendEnvironmentResult = createBackendEnvironmentResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateBackendEnvironmentResponse {
      */
     
     public Object internalFailureException;
+
     public CreateBackendEnvironmentResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class CreateBackendEnvironmentResponse {
      */
     
     public Object limitExceededException;
+
     public CreateBackendEnvironmentResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateBackendEnvironmentResponse {
      */
     
     public Object notFoundException;
+
     public CreateBackendEnvironmentResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateBackendEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public CreateBackendEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateBackendEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBackendEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateBackendEnvironmentResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateBackendEnvironmentResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateBackendEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

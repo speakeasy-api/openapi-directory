@@ -15,6 +15,7 @@ public class AppflowIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Batches")
     public Batch[] batches;
+
     public AppflowIntegration withBatches(Batch[] batches) {
         this.batches = batches;
         return this;
@@ -25,9 +26,13 @@ public class AppflowIntegration {
      */
     @JsonProperty("FlowDefinition")
     public FlowDefinition flowDefinition;
+
     public AppflowIntegration withFlowDefinition(FlowDefinition flowDefinition) {
         this.flowDefinition = flowDefinition;
         return this;
     }
     
+    public AppflowIntegration(@JsonProperty("FlowDefinition") FlowDefinition flowDefinition) {
+        this.flowDefinition = flowDefinition;
+  }
 }

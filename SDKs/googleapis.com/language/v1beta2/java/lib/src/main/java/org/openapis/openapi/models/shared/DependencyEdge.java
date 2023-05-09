@@ -18,6 +18,7 @@ public class DependencyEdge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headTokenIndex")
     public Integer headTokenIndex;
+
     public DependencyEdge withHeadTokenIndex(Integer headTokenIndex) {
         this.headTokenIndex = headTokenIndex;
         return this;
@@ -29,9 +30,11 @@ public class DependencyEdge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public DependencyEdgeLabelEnum label;
+
     public DependencyEdge withLabel(DependencyEdgeLabelEnum label) {
         this.label = label;
         return this;
     }
     
+    public DependencyEdge(){}
 }

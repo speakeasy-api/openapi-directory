@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ServiceActionAssociation {
     @JsonProperty("ProductId")
     public String productId;
+
     public ServiceActionAssociation withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -19,6 +20,7 @@ public class ServiceActionAssociation {
     
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public ServiceActionAssociation withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
@@ -26,9 +28,15 @@ public class ServiceActionAssociation {
     
     @JsonProperty("ServiceActionId")
     public String serviceActionId;
+
     public ServiceActionAssociation withServiceActionId(String serviceActionId) {
         this.serviceActionId = serviceActionId;
         return this;
     }
     
+    public ServiceActionAssociation(@JsonProperty("ProductId") String productId, @JsonProperty("ProvisioningArtifactId") String provisioningArtifactId, @JsonProperty("ServiceActionId") String serviceActionId) {
+        this.productId = productId;
+        this.provisioningArtifactId = provisioningArtifactId;
+        this.serviceActionId = serviceActionId;
+  }
 }

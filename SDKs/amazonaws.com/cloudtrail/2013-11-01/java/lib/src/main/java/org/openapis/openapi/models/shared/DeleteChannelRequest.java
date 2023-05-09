@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteChannelRequest {
     @JsonProperty("Channel")
     public String channel;
+
     public DeleteChannelRequest withChannel(String channel) {
         this.channel = channel;
         return this;
     }
     
+    public DeleteChannelRequest(@JsonProperty("Channel") String channel) {
+        this.channel = channel;
+  }
 }

@@ -12,6 +12,7 @@ public class FundingInformation {
      */
     @JsonProperty("funder_name")
     public String funderName;
+
     public FundingInformation withFunderName(String funderName) {
         this.funderName = funderName;
         return this;
@@ -22,6 +23,7 @@ public class FundingInformation {
      */
     @JsonProperty("grant_code")
     public String grantCode;
+
     public FundingInformation withGrantCode(String grantCode) {
         this.grantCode = grantCode;
         return this;
@@ -32,6 +34,7 @@ public class FundingInformation {
      */
     @JsonProperty("id")
     public Long id;
+
     public FundingInformation withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class FundingInformation {
      */
     @JsonProperty("is_user_defined")
     public Boolean isUserDefined;
+
     public FundingInformation withIsUserDefined(Boolean isUserDefined) {
         this.isUserDefined = isUserDefined;
         return this;
@@ -52,6 +56,7 @@ public class FundingInformation {
      */
     @JsonProperty("title")
     public String title;
+
     public FundingInformation withTitle(String title) {
         this.title = title;
         return this;
@@ -62,9 +67,18 @@ public class FundingInformation {
      */
     @JsonProperty("url")
     public String url;
+
     public FundingInformation withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public FundingInformation(@JsonProperty("funder_name") String funderName, @JsonProperty("grant_code") String grantCode, @JsonProperty("id") Long id, @JsonProperty("is_user_defined") Boolean isUserDefined, @JsonProperty("title") String title, @JsonProperty("url") String url) {
+        this.funderName = funderName;
+        this.grantCode = grantCode;
+        this.id = id;
+        this.isUserDefined = isUserDefined;
+        this.title = title;
+        this.url = url;
+  }
 }

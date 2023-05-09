@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSimilarDocumentsRequest {
@@ -12,6 +13,7 @@ public class GetSimilarDocumentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
     public Long documentId;
+
     public GetSimilarDocumentsRequest withDocumentId(Long documentId) {
         this.documentId = documentId;
         return this;
@@ -22,6 +24,7 @@ public class GetSimilarDocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetSimilarDocumentsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -32,9 +35,13 @@ public class GetSimilarDocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with[]")
     public GetSimilarDocumentsWithEnum[] with;
+
     public GetSimilarDocumentsRequest withWith(GetSimilarDocumentsWithEnum[] with) {
         this.with = with;
         return this;
     }
     
+    public GetSimilarDocumentsRequest(@JsonProperty("documentId") Long documentId) {
+        this.documentId = documentId;
+  }
 }

@@ -18,6 +18,7 @@ public class DnsRecordSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String[] data;
+
     public DnsRecordSet withData(String[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class DnsRecordSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public DnsRecordSet withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -40,6 +42,7 @@ public class DnsRecordSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public String ttl;
+
     public DnsRecordSet withTtl(String ttl) {
         this.ttl = ttl;
         return this;
@@ -51,9 +54,11 @@ public class DnsRecordSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public DnsRecordSet withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DnsRecordSet(){}
 }

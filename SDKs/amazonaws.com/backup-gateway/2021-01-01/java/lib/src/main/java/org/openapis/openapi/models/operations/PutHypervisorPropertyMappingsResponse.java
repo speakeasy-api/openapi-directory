@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutHypervisorPropertyMappingsResponse {
@@ -12,6 +13,7 @@ public class PutHypervisorPropertyMappingsResponse {
      */
     
     public Object accessDeniedException;
+
     public PutHypervisorPropertyMappingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutHypervisorPropertyMappingsResponse {
      */
     
     public Object conflictException;
+
     public PutHypervisorPropertyMappingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class PutHypervisorPropertyMappingsResponse {
     
     
     public String contentType;
+
     public PutHypervisorPropertyMappingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutHypervisorPropertyMappingsResponse {
      */
     
     public Object internalServerException;
+
     public PutHypervisorPropertyMappingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PutHypervisorPropertyMappingsResponse {
      */
     
     public org.openapis.openapi.models.shared.PutHypervisorPropertyMappingsOutput putHypervisorPropertyMappingsOutput;
+
     public PutHypervisorPropertyMappingsResponse withPutHypervisorPropertyMappingsOutput(org.openapis.openapi.models.shared.PutHypervisorPropertyMappingsOutput putHypervisorPropertyMappingsOutput) {
         this.putHypervisorPropertyMappingsOutput = putHypervisorPropertyMappingsOutput;
         return this;
@@ -56,6 +62,7 @@ public class PutHypervisorPropertyMappingsResponse {
     
     
     public Integer statusCode;
+
     public PutHypervisorPropertyMappingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutHypervisorPropertyMappingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutHypervisorPropertyMappingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class PutHypervisorPropertyMappingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutHypervisorPropertyMappingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class PutHypervisorPropertyMappingsResponse {
      */
     
     public Object throttlingException;
+
     public PutHypervisorPropertyMappingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class PutHypervisorPropertyMappingsResponse {
      */
     
     public Object validationException;
+
     public PutHypervisorPropertyMappingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutHypervisorPropertyMappingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

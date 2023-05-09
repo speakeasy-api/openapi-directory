@@ -13,36 +13,40 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class Compliance {
     /**
-     * Policies within the standard/benchmark e.g. A.12.4.1
+     * Policies within the standard or benchmark, for example, A.12.4.1
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public String[] ids;
+
     public Compliance withIds(String[] ids) {
         this.ids = ids;
         return this;
     }
     
     /**
-     * Refers to industry wide standards or benchmarks e.g. "cis", "pci", "owasp", etc.
+     * Industry-wide compliance standards or benchmarks, such as CIS, PCI, and OWASP.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standard")
     public String standard;
+
     public Compliance withStandard(String standard) {
         this.standard = standard;
         return this;
     }
     
     /**
-     * Version of the standard/benchmark e.g. 1.1
+     * Version of the standard or benchmark, for example, 1.1
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public Compliance withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Compliance(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UntagStreamResponse {
@@ -12,6 +13,7 @@ public class UntagStreamResponse {
      */
     
     public Object clientLimitExceededException;
+
     public UntagStreamResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class UntagStreamResponse {
     
     
     public String contentType;
+
     public UntagStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UntagStreamResponse {
      */
     
     public Object invalidArgumentException;
+
     public UntagStreamResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class UntagStreamResponse {
      */
     
     public Object invalidResourceFormatException;
+
     public UntagStreamResponse withInvalidResourceFormatException(Object invalidResourceFormatException) {
         this.invalidResourceFormatException = invalidResourceFormatException;
         return this;
@@ -49,6 +54,7 @@ public class UntagStreamResponse {
      */
     
     public Object notAuthorizedException;
+
     public UntagStreamResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class UntagStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UntagStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UntagStreamResponse {
     
     
     public Integer statusCode;
+
     public UntagStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UntagStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UntagStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UntagStreamResponse {
      */
     
     public java.util.Map<String, Object> untagStreamOutput;
+
     public UntagStreamResponse withUntagStreamOutput(java.util.Map<String, Object> untagStreamOutput) {
         this.untagStreamOutput = untagStreamOutput;
         return this;
     }
     
+    public UntagStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

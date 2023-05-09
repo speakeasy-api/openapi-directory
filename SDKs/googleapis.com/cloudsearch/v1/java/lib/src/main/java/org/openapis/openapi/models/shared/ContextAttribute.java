@@ -18,6 +18,7 @@ public class ContextAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContextAttribute withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class ContextAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public ContextAttribute withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ContextAttribute(){}
 }

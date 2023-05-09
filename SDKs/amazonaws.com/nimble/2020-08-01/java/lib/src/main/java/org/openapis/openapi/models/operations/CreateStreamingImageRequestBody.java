@@ -15,6 +15,7 @@ public class CreateStreamingImageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateStreamingImageRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class CreateStreamingImageRequestBody {
      */
     @JsonProperty("ec2ImageId")
     public String ec2ImageId;
+
     public CreateStreamingImageRequestBody withEc2ImageId(String ec2ImageId) {
         this.ec2ImageId = ec2ImageId;
         return this;
@@ -35,6 +37,7 @@ public class CreateStreamingImageRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateStreamingImageRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -46,9 +49,14 @@ public class CreateStreamingImageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateStreamingImageRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateStreamingImageRequestBody(@JsonProperty("ec2ImageId") String ec2ImageId, @JsonProperty("name") String name) {
+        this.ec2ImageId = ec2ImageId;
+        this.name = name;
+  }
 }

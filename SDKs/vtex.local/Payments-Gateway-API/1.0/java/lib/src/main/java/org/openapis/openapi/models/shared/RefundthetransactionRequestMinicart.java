@@ -15,6 +15,7 @@ public class RefundthetransactionRequestMinicart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freight")
     public Integer freight;
+
     public RefundthetransactionRequestMinicart withFreight(Integer freight) {
         this.freight = freight;
         return this;
@@ -23,6 +24,7 @@ public class RefundthetransactionRequestMinicart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Object[] items;
+
     public RefundthetransactionRequestMinicart withItems(Object[] items) {
         this.items = items;
         return this;
@@ -31,9 +33,11 @@ public class RefundthetransactionRequestMinicart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Integer tax;
+
     public RefundthetransactionRequestMinicart withTax(Integer tax) {
         this.tax = tax;
         return this;
     }
     
+    public RefundthetransactionRequestMinicart(){}
 }

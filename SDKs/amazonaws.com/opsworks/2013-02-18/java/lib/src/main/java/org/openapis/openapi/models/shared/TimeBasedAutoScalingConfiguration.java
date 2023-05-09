@@ -15,6 +15,7 @@ public class TimeBasedAutoScalingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingSchedule")
     public WeeklyAutoScalingSchedule autoScalingSchedule;
+
     public TimeBasedAutoScalingConfiguration withAutoScalingSchedule(WeeklyAutoScalingSchedule autoScalingSchedule) {
         this.autoScalingSchedule = autoScalingSchedule;
         return this;
@@ -23,9 +24,11 @@ public class TimeBasedAutoScalingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public TimeBasedAutoScalingConfiguration withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public TimeBasedAutoScalingConfiguration(){}
 }

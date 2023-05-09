@@ -15,6 +15,7 @@ public class ConsumedCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityUnits")
     public Double capacityUnits;
+
     public ConsumedCapacity withCapacityUnits(Double capacityUnits) {
         this.capacityUnits = capacityUnits;
         return this;
@@ -23,6 +24,7 @@ public class ConsumedCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalSecondaryIndexes")
     public java.util.Map<String, Capacity> globalSecondaryIndexes;
+
     public ConsumedCapacity withGlobalSecondaryIndexes(java.util.Map<String, Capacity> globalSecondaryIndexes) {
         this.globalSecondaryIndexes = globalSecondaryIndexes;
         return this;
@@ -31,6 +33,7 @@ public class ConsumedCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalSecondaryIndexes")
     public java.util.Map<String, Capacity> localSecondaryIndexes;
+
     public ConsumedCapacity withLocalSecondaryIndexes(java.util.Map<String, Capacity> localSecondaryIndexes) {
         this.localSecondaryIndexes = localSecondaryIndexes;
         return this;
@@ -39,6 +42,7 @@ public class ConsumedCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadCapacityUnits")
     public Double readCapacityUnits;
+
     public ConsumedCapacity withReadCapacityUnits(Double readCapacityUnits) {
         this.readCapacityUnits = readCapacityUnits;
         return this;
@@ -47,6 +51,7 @@ public class ConsumedCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Table")
     public Capacity table;
+
     public ConsumedCapacity withTable(Capacity table) {
         this.table = table;
         return this;
@@ -55,6 +60,7 @@ public class ConsumedCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public ConsumedCapacity withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -63,9 +69,11 @@ public class ConsumedCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WriteCapacityUnits")
     public Double writeCapacityUnits;
+
     public ConsumedCapacity withWriteCapacityUnits(Double writeCapacityUnits) {
         this.writeCapacityUnits = writeCapacityUnits;
         return this;
     }
     
+    public ConsumedCapacity(){}
 }

@@ -12,6 +12,7 @@ public class AutoCompleteTheRootSchemaItemsReturned {
      */
     @JsonProperty("criteria")
     public String criteria;
+
     public AutoCompleteTheRootSchemaItemsReturned withCriteria(String criteria) {
         this.criteria = criteria;
         return this;
@@ -22,6 +23,7 @@ public class AutoCompleteTheRootSchemaItemsReturned {
      */
     @JsonProperty("href")
     public String href;
+
     public AutoCompleteTheRootSchemaItemsReturned withHref(String href) {
         this.href = href;
         return this;
@@ -32,6 +34,7 @@ public class AutoCompleteTheRootSchemaItemsReturned {
      */
     @JsonProperty("items")
     public Object[] items;
+
     public AutoCompleteTheRootSchemaItemsReturned withItems(Object[] items) {
         this.items = items;
         return this;
@@ -42,6 +45,7 @@ public class AutoCompleteTheRootSchemaItemsReturned {
      */
     @JsonProperty("name")
     public String name;
+
     public AutoCompleteTheRootSchemaItemsReturned withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +56,7 @@ public class AutoCompleteTheRootSchemaItemsReturned {
      */
     @JsonProperty("thumb")
     public String thumb;
+
     public AutoCompleteTheRootSchemaItemsReturned withThumb(String thumb) {
         this.thumb = thumb;
         return this;
@@ -62,9 +67,18 @@ public class AutoCompleteTheRootSchemaItemsReturned {
      */
     @JsonProperty("thumbUrl")
     public String thumbUrl;
+
     public AutoCompleteTheRootSchemaItemsReturned withThumbUrl(String thumbUrl) {
         this.thumbUrl = thumbUrl;
         return this;
     }
     
+    public AutoCompleteTheRootSchemaItemsReturned(@JsonProperty("criteria") String criteria, @JsonProperty("href") String href, @JsonProperty("items") Object[] items, @JsonProperty("name") String name, @JsonProperty("thumb") String thumb, @JsonProperty("thumbUrl") String thumbUrl) {
+        this.criteria = criteria;
+        this.href = href;
+        this.items = items;
+        this.name = name;
+        this.thumb = thumb;
+        this.thumbUrl = thumbUrl;
+  }
 }

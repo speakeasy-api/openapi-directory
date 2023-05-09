@@ -15,6 +15,7 @@ public class CampaignInAppMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public CampaignInAppMessage withBody(String body) {
         this.body = body;
         return this;
@@ -23,6 +24,7 @@ public class CampaignInAppMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public InAppMessageContent[] content;
+
     public CampaignInAppMessage withContent(InAppMessageContent[] content) {
         this.content = content;
         return this;
@@ -31,6 +33,7 @@ public class CampaignInAppMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomConfig")
     public java.util.Map<String, String> customConfig;
+
     public CampaignInAppMessage withCustomConfig(java.util.Map<String, String> customConfig) {
         this.customConfig = customConfig;
         return this;
@@ -39,9 +42,11 @@ public class CampaignInAppMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Layout")
     public LayoutEnum layout;
+
     public CampaignInAppMessage withLayout(LayoutEnum layout) {
         this.layout = layout;
         return this;
     }
     
+    public CampaignInAppMessage(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Highlight {
     @JsonProperty("BeginOffset")
     public Long beginOffset;
+
     public Highlight withBeginOffset(Long beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -21,6 +22,7 @@ public class Highlight {
     
     @JsonProperty("EndOffset")
     public Long endOffset;
+
     public Highlight withEndOffset(Long endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -29,6 +31,7 @@ public class Highlight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopAnswer")
     public Boolean topAnswer;
+
     public Highlight withTopAnswer(Boolean topAnswer) {
         this.topAnswer = topAnswer;
         return this;
@@ -37,9 +40,14 @@ public class Highlight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public HighlightTypeEnum type;
+
     public Highlight withType(HighlightTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Highlight(@JsonProperty("BeginOffset") Long beginOffset, @JsonProperty("EndOffset") Long endOffset) {
+        this.beginOffset = beginOffset;
+        this.endOffset = endOffset;
+  }
 }

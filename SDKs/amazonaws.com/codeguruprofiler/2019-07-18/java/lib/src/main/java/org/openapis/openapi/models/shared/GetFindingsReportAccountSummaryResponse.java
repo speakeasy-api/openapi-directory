@@ -15,6 +15,7 @@ public class GetFindingsReportAccountSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetFindingsReportAccountSummaryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class GetFindingsReportAccountSummaryResponse {
     
     @JsonProperty("reportSummaries")
     public FindingsReportSummary[] reportSummaries;
+
     public GetFindingsReportAccountSummaryResponse withReportSummaries(FindingsReportSummary[] reportSummaries) {
         this.reportSummaries = reportSummaries;
         return this;
     }
     
+    public GetFindingsReportAccountSummaryResponse(@JsonProperty("reportSummaries") FindingsReportSummary[] reportSummaries) {
+        this.reportSummaries = reportSummaries;
+  }
 }

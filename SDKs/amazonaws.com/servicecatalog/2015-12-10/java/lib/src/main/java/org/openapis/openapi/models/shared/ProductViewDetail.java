@@ -22,6 +22,7 @@ public class ProductViewDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public ProductViewDetail withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -30,6 +31,7 @@ public class ProductViewDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductARN")
     public String productARN;
+
     public ProductViewDetail withProductARN(String productARN) {
         this.productARN = productARN;
         return this;
@@ -38,6 +40,7 @@ public class ProductViewDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductViewSummary")
     public ProductViewSummary productViewSummary;
+
     public ProductViewDetail withProductViewSummary(ProductViewSummary productViewSummary) {
         this.productViewSummary = productViewSummary;
         return this;
@@ -46,6 +49,7 @@ public class ProductViewDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceConnection")
     public SourceConnectionDetail sourceConnection;
+
     public ProductViewDetail withSourceConnection(SourceConnectionDetail sourceConnection) {
         this.sourceConnection = sourceConnection;
         return this;
@@ -54,9 +58,11 @@ public class ProductViewDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusEnum status;
+
     public ProductViewDetail withStatus(StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ProductViewDetail(){}
 }

@@ -19,6 +19,7 @@ public class SearchTeamMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchTeamMembersResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -30,6 +31,7 @@ public class SearchTeamMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public SearchTeamMembersResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -41,9 +43,11 @@ public class SearchTeamMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_members")
     public TeamMember[] teamMembers;
+
     public SearchTeamMembersResponse withTeamMembers(TeamMember[] teamMembers) {
         this.teamMembers = teamMembers;
         return this;
     }
     
+    public SearchTeamMembersResponse(){}
 }

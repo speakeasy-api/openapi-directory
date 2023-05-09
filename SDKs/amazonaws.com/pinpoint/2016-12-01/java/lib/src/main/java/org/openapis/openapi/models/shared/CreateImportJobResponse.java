@@ -15,9 +15,13 @@ public class CreateImportJobResponse {
      */
     @JsonProperty("ImportJobResponse")
     public ImportJobResponse importJobResponse;
+
     public CreateImportJobResponse withImportJobResponse(ImportJobResponse importJobResponse) {
         this.importJobResponse = importJobResponse;
         return this;
     }
     
+    public CreateImportJobResponse(@JsonProperty("ImportJobResponse") ImportJobResponse importJobResponse) {
+        this.importJobResponse = importJobResponse;
+  }
 }

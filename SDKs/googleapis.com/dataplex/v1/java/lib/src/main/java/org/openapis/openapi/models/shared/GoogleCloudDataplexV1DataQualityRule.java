@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataQualityRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("column")
     public String column;
+
     public GoogleCloudDataplexV1DataQualityRule withColumn(String column) {
         this.column = column;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1DataQualityRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public String dimension;
+
     public GoogleCloudDataplexV1DataQualityRule withDimension(String dimension) {
         this.dimension = dimension;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1DataQualityRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreNull")
     public Boolean ignoreNull;
+
     public GoogleCloudDataplexV1DataQualityRule withIgnoreNull(Boolean ignoreNull) {
         this.ignoreNull = ignoreNull;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1DataQualityRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonNullExpectation")
     public java.util.Map<String, Object> nonNullExpectation;
+
     public GoogleCloudDataplexV1DataQualityRule withNonNullExpectation(java.util.Map<String, Object> nonNullExpectation) {
         this.nonNullExpectation = nonNullExpectation;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1DataQualityRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rangeExpectation")
     public GoogleCloudDataplexV1DataQualityRuleRangeExpectation rangeExpectation;
+
     public GoogleCloudDataplexV1DataQualityRule withRangeExpectation(GoogleCloudDataplexV1DataQualityRuleRangeExpectation rangeExpectation) {
         this.rangeExpectation = rangeExpectation;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1DataQualityRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regexExpectation")
     public GoogleCloudDataplexV1DataQualityRuleRegexExpectation regexExpectation;
+
     public GoogleCloudDataplexV1DataQualityRule withRegexExpectation(GoogleCloudDataplexV1DataQualityRuleRegexExpectation regexExpectation) {
         this.regexExpectation = regexExpectation;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDataplexV1DataQualityRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowConditionExpectation")
     public GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation rowConditionExpectation;
+
     public GoogleCloudDataplexV1DataQualityRule withRowConditionExpectation(GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation rowConditionExpectation) {
         this.rowConditionExpectation = rowConditionExpectation;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDataplexV1DataQualityRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setExpectation")
     public GoogleCloudDataplexV1DataQualityRuleSetExpectation setExpectation;
+
     public GoogleCloudDataplexV1DataQualityRule withSetExpectation(GoogleCloudDataplexV1DataQualityRuleSetExpectation setExpectation) {
         this.setExpectation = setExpectation;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDataplexV1DataQualityRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statisticRangeExpectation")
     public GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation statisticRangeExpectation;
+
     public GoogleCloudDataplexV1DataQualityRule withStatisticRangeExpectation(GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation statisticRangeExpectation) {
         this.statisticRangeExpectation = statisticRangeExpectation;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDataplexV1DataQualityRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableConditionExpectation")
     public GoogleCloudDataplexV1DataQualityRuleTableConditionExpectation tableConditionExpectation;
+
     public GoogleCloudDataplexV1DataQualityRule withTableConditionExpectation(GoogleCloudDataplexV1DataQualityRuleTableConditionExpectation tableConditionExpectation) {
         this.tableConditionExpectation = tableConditionExpectation;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDataplexV1DataQualityRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threshold")
     public Double threshold;
+
     public GoogleCloudDataplexV1DataQualityRule withThreshold(Double threshold) {
         this.threshold = threshold;
         return this;
@@ -139,9 +150,11 @@ public class GoogleCloudDataplexV1DataQualityRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniquenessExpectation")
     public java.util.Map<String, Object> uniquenessExpectation;
+
     public GoogleCloudDataplexV1DataQualityRule withUniquenessExpectation(java.util.Map<String, Object> uniquenessExpectation) {
         this.uniquenessExpectation = uniquenessExpectation;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataQualityRule(){}
 }

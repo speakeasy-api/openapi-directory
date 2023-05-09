@@ -14,6 +14,7 @@ public class ConnectorSourceField {
      */
     @JsonProperty("id_connector_source")
     public Long idConnectorSource;
+
     public ConnectorSourceField withIdConnectorSource(Long idConnectorSource) {
         this.idConnectorSource = idConnectorSource;
         return this;
@@ -24,6 +25,7 @@ public class ConnectorSourceField {
      */
     @JsonProperty("label")
     public String label;
+
     public ConnectorSourceField withLabel(String label) {
         this.label = label;
         return this;
@@ -34,6 +36,7 @@ public class ConnectorSourceField {
      */
     @JsonProperty("name")
     public String name;
+
     public ConnectorSourceField withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class ConnectorSourceField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regex")
     public String regex;
+
     public ConnectorSourceField withRegex(String regex) {
         this.regex = regex;
         return this;
@@ -56,6 +60,7 @@ public class ConnectorSourceField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public ConnectorSourceField withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -67,6 +72,7 @@ public class ConnectorSourceField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public Boolean secret;
+
     public ConnectorSourceField withSecret(Boolean secret) {
         this.secret = secret;
         return this;
@@ -78,9 +84,15 @@ public class ConnectorSourceField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ConnectorSourceField withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ConnectorSourceField(@JsonProperty("id_connector_source") Long idConnectorSource, @JsonProperty("label") String label, @JsonProperty("name") String name) {
+        this.idConnectorSource = idConnectorSource;
+        this.label = label;
+        this.name = name;
+  }
 }

@@ -18,6 +18,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiLevel")
     public Integer apiLevel;
+
     public Device withApiLevel(Integer apiLevel) {
         this.apiLevel = apiLevel;
         return this;
@@ -29,6 +30,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationReports")
     public ApplicationReport[] applicationReports;
+
     public Device withApplicationReports(ApplicationReport[] applicationReports) {
         this.applicationReports = applicationReports;
         return this;
@@ -40,6 +42,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appliedPasswordPolicies")
     public PasswordRequirements[] appliedPasswordPolicies;
+
     public Device withAppliedPasswordPolicies(PasswordRequirements[] appliedPasswordPolicies) {
         this.appliedPasswordPolicies = appliedPasswordPolicies;
         return this;
@@ -51,6 +54,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appliedPolicyName")
     public String appliedPolicyName;
+
     public Device withAppliedPolicyName(String appliedPolicyName) {
         this.appliedPolicyName = appliedPolicyName;
         return this;
@@ -62,6 +66,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appliedPolicyVersion")
     public String appliedPolicyVersion;
+
     public Device withAppliedPolicyVersion(String appliedPolicyVersion) {
         this.appliedPolicyVersion = appliedPolicyVersion;
         return this;
@@ -73,6 +78,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appliedState")
     public DeviceAppliedStateEnum appliedState;
+
     public Device withAppliedState(DeviceAppliedStateEnum appliedState) {
         this.appliedState = appliedState;
         return this;
@@ -84,6 +90,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonCriteriaModeInfo")
     public CommonCriteriaModeInfo commonCriteriaModeInfo;
+
     public Device withCommonCriteriaModeInfo(CommonCriteriaModeInfo commonCriteriaModeInfo) {
         this.commonCriteriaModeInfo = commonCriteriaModeInfo;
         return this;
@@ -95,6 +102,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceSettings")
     public DeviceSettings deviceSettings;
+
     public Device withDeviceSettings(DeviceSettings deviceSettings) {
         this.deviceSettings = deviceSettings;
         return this;
@@ -106,6 +114,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabledReason")
     public UserFacingMessage disabledReason;
+
     public Device withDisabledReason(UserFacingMessage disabledReason) {
         this.disabledReason = disabledReason;
         return this;
@@ -117,6 +126,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displays")
     public Display[] displays;
+
     public Device withDisplays(Display[] displays) {
         this.displays = displays;
         return this;
@@ -128,6 +138,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enrollmentTime")
     public String enrollmentTime;
+
     public Device withEnrollmentTime(String enrollmentTime) {
         this.enrollmentTime = enrollmentTime;
         return this;
@@ -139,6 +150,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enrollmentTokenData")
     public String enrollmentTokenData;
+
     public Device withEnrollmentTokenData(String enrollmentTokenData) {
         this.enrollmentTokenData = enrollmentTokenData;
         return this;
@@ -150,6 +162,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enrollmentTokenName")
     public String enrollmentTokenName;
+
     public Device withEnrollmentTokenName(String enrollmentTokenName) {
         this.enrollmentTokenName = enrollmentTokenName;
         return this;
@@ -161,6 +174,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hardwareInfo")
     public HardwareInfo hardwareInfo;
+
     public Device withHardwareInfo(HardwareInfo hardwareInfo) {
         this.hardwareInfo = hardwareInfo;
         return this;
@@ -172,6 +186,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hardwareStatusSamples")
     public HardwareStatus[] hardwareStatusSamples;
+
     public Device withHardwareStatusSamples(HardwareStatus[] hardwareStatusSamples) {
         this.hardwareStatusSamples = hardwareStatusSamples;
         return this;
@@ -183,6 +198,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastPolicyComplianceReportTime")
     public String lastPolicyComplianceReportTime;
+
     public Device withLastPolicyComplianceReportTime(String lastPolicyComplianceReportTime) {
         this.lastPolicyComplianceReportTime = lastPolicyComplianceReportTime;
         return this;
@@ -194,6 +210,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastPolicySyncTime")
     public String lastPolicySyncTime;
+
     public Device withLastPolicySyncTime(String lastPolicySyncTime) {
         this.lastPolicySyncTime = lastPolicySyncTime;
         return this;
@@ -205,6 +222,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastStatusReportTime")
     public String lastStatusReportTime;
+
     public Device withLastStatusReportTime(String lastStatusReportTime) {
         this.lastStatusReportTime = lastStatusReportTime;
         return this;
@@ -216,6 +234,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managementMode")
     public DeviceManagementModeEnum managementMode;
+
     public Device withManagementMode(DeviceManagementModeEnum managementMode) {
         this.managementMode = managementMode;
         return this;
@@ -227,6 +246,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryEvents")
     public MemoryEvent[] memoryEvents;
+
     public Device withMemoryEvents(MemoryEvent[] memoryEvents) {
         this.memoryEvents = memoryEvents;
         return this;
@@ -238,6 +258,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryInfo")
     public MemoryInfo memoryInfo;
+
     public Device withMemoryInfo(MemoryInfo memoryInfo) {
         this.memoryInfo = memoryInfo;
         return this;
@@ -249,6 +270,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Device withName(String name) {
         this.name = name;
         return this;
@@ -260,6 +282,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkInfo")
     public NetworkInfo networkInfo;
+
     public Device withNetworkInfo(NetworkInfo networkInfo) {
         this.networkInfo = networkInfo;
         return this;
@@ -271,6 +294,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonComplianceDetails")
     public NonComplianceDetail[] nonComplianceDetails;
+
     public Device withNonComplianceDetails(NonComplianceDetail[] nonComplianceDetails) {
         this.nonComplianceDetails = nonComplianceDetails;
         return this;
@@ -282,6 +306,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownership")
     public DeviceOwnershipEnum ownership;
+
     public Device withOwnership(DeviceOwnershipEnum ownership) {
         this.ownership = ownership;
         return this;
@@ -293,6 +318,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyCompliant")
     public Boolean policyCompliant;
+
     public Device withPolicyCompliant(Boolean policyCompliant) {
         this.policyCompliant = policyCompliant;
         return this;
@@ -304,6 +330,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyName")
     public String policyName;
+
     public Device withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -315,6 +342,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("powerManagementEvents")
     public PowerManagementEvent[] powerManagementEvents;
+
     public Device withPowerManagementEvents(PowerManagementEvent[] powerManagementEvents) {
         this.powerManagementEvents = powerManagementEvents;
         return this;
@@ -326,6 +354,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousDeviceNames")
     public String[] previousDeviceNames;
+
     public Device withPreviousDeviceNames(String[] previousDeviceNames) {
         this.previousDeviceNames = previousDeviceNames;
         return this;
@@ -337,6 +366,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityPosture")
     public SecurityPosture securityPosture;
+
     public Device withSecurityPosture(SecurityPosture securityPosture) {
         this.securityPosture = securityPosture;
         return this;
@@ -348,6 +378,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("softwareInfo")
     public SoftwareInfo softwareInfo;
+
     public Device withSoftwareInfo(SoftwareInfo softwareInfo) {
         this.softwareInfo = softwareInfo;
         return this;
@@ -359,6 +390,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public DeviceStateEnum state;
+
     public Device withState(DeviceStateEnum state) {
         this.state = state;
         return this;
@@ -370,6 +402,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemProperties")
     public java.util.Map<String, String> systemProperties;
+
     public Device withSystemProperties(java.util.Map<String, String> systemProperties) {
         this.systemProperties = systemProperties;
         return this;
@@ -381,6 +414,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public User user;
+
     public Device withUser(User user) {
         this.user = user;
         return this;
@@ -392,9 +426,11 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public Device withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public Device(){}
 }

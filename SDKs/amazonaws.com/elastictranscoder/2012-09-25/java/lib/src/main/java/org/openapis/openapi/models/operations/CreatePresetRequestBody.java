@@ -15,6 +15,7 @@ public class CreatePresetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Audio")
     public CreatePresetRequestBodyAudio audio;
+
     public CreatePresetRequestBody withAudio(CreatePresetRequestBodyAudio audio) {
         this.audio = audio;
         return this;
@@ -25,6 +26,7 @@ public class CreatePresetRequestBody {
      */
     @JsonProperty("Container")
     public String container;
+
     public CreatePresetRequestBody withContainer(String container) {
         this.container = container;
         return this;
@@ -36,6 +38,7 @@ public class CreatePresetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreatePresetRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class CreatePresetRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreatePresetRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -57,6 +61,7 @@ public class CreatePresetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Thumbnails")
     public CreatePresetRequestBodyThumbnails thumbnails;
+
     public CreatePresetRequestBody withThumbnails(CreatePresetRequestBodyThumbnails thumbnails) {
         this.thumbnails = thumbnails;
         return this;
@@ -68,9 +73,14 @@ public class CreatePresetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Video")
     public CreatePresetRequestBodyVideo video;
+
     public CreatePresetRequestBody withVideo(CreatePresetRequestBodyVideo video) {
         this.video = video;
         return this;
     }
     
+    public CreatePresetRequestBody(@JsonProperty("Container") String container, @JsonProperty("Name") String name) {
+        this.container = container;
+        this.name = name;
+  }
 }

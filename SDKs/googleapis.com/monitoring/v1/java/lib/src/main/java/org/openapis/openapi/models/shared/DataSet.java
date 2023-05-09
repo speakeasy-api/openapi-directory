@@ -18,6 +18,7 @@ public class DataSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legendTemplate")
     public String legendTemplate;
+
     public DataSet withLegendTemplate(String legendTemplate) {
         this.legendTemplate = legendTemplate;
         return this;
@@ -29,6 +30,7 @@ public class DataSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minAlignmentPeriod")
     public String minAlignmentPeriod;
+
     public DataSet withMinAlignmentPeriod(String minAlignmentPeriod) {
         this.minAlignmentPeriod = minAlignmentPeriod;
         return this;
@@ -40,6 +42,7 @@ public class DataSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plotType")
     public DataSetPlotTypeEnum plotType;
+
     public DataSet withPlotType(DataSetPlotTypeEnum plotType) {
         this.plotType = plotType;
         return this;
@@ -51,6 +54,7 @@ public class DataSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetAxis")
     public DataSetTargetAxisEnum targetAxis;
+
     public DataSet withTargetAxis(DataSetTargetAxisEnum targetAxis) {
         this.targetAxis = targetAxis;
         return this;
@@ -62,9 +66,11 @@ public class DataSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeriesQuery")
     public TimeSeriesQuery timeSeriesQuery;
+
     public DataSet withTimeSeriesQuery(TimeSeriesQuery timeSeriesQuery) {
         this.timeSeriesQuery = timeSeriesQuery;
         return this;
     }
     
+    public DataSet(){}
 }

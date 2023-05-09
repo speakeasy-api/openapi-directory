@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateSecurityConfigurationRequest {
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public CreateSecurityConfigurationRequest withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -16,9 +17,14 @@ public class CreateSecurityConfigurationRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateSecurityConfigurationRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateSecurityConfigurationRequest(@JsonProperty("EncryptionConfiguration") EncryptionConfiguration encryptionConfiguration, @JsonProperty("Name") String name) {
+        this.encryptionConfiguration = encryptionConfiguration;
+        this.name = name;
+  }
 }

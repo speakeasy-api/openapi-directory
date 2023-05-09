@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class NodeGroupUpdateStatusList {
     
     public String nodeGroupId;
+
     public NodeGroupUpdateStatusList withNodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
         return this;
@@ -19,9 +20,11 @@ public class NodeGroupUpdateStatusList {
     
     
     public NodeGroupMemberUpdateStatusList[] nodeGroupMemberUpdateStatus;
+
     public NodeGroupUpdateStatusList withNodeGroupMemberUpdateStatus(NodeGroupMemberUpdateStatusList[] nodeGroupMemberUpdateStatus) {
         this.nodeGroupMemberUpdateStatus = nodeGroupMemberUpdateStatus;
         return this;
     }
     
+    public NodeGroupUpdateStatusList(){}
 }

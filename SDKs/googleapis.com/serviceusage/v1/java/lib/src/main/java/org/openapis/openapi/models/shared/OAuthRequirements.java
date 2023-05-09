@@ -18,9 +18,11 @@ public class OAuthRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canonicalScopes")
     public String canonicalScopes;
+
     public OAuthRequirements withCanonicalScopes(String canonicalScopes) {
         this.canonicalScopes = canonicalScopes;
         return this;
     }
     
+    public OAuthRequirements(){}
 }

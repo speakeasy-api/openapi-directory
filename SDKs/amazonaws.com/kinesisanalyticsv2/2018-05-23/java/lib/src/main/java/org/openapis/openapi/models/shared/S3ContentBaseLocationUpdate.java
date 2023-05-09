@@ -15,6 +15,7 @@ public class S3ContentBaseLocationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BasePathUpdate")
     public String basePathUpdate;
+
     public S3ContentBaseLocationUpdate withBasePathUpdate(String basePathUpdate) {
         this.basePathUpdate = basePathUpdate;
         return this;
@@ -23,9 +24,11 @@ public class S3ContentBaseLocationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketARNUpdate")
     public String bucketARNUpdate;
+
     public S3ContentBaseLocationUpdate withBucketARNUpdate(String bucketARNUpdate) {
         this.bucketARNUpdate = bucketARNUpdate;
         return this;
     }
     
+    public S3ContentBaseLocationUpdate(){}
 }

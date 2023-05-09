@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ServiceConnectConfiguration {
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ServiceConnectConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -25,6 +26,7 @@ public class ServiceConnectConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfiguration")
     public LogConfiguration logConfiguration;
+
     public ServiceConnectConfiguration withLogConfiguration(LogConfiguration logConfiguration) {
         this.logConfiguration = logConfiguration;
         return this;
@@ -33,6 +35,7 @@ public class ServiceConnectConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public String namespace;
+
     public ServiceConnectConfiguration withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -41,9 +44,13 @@ public class ServiceConnectConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public ServiceConnectService[] services;
+
     public ServiceConnectConfiguration withServices(ServiceConnectService[] services) {
         this.services = services;
         return this;
     }
     
+    public ServiceConnectConfiguration(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

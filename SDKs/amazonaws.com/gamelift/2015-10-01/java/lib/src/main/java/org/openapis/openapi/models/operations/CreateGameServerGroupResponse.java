@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGameServerGroupResponse {
@@ -12,6 +13,7 @@ public class CreateGameServerGroupResponse {
      */
     
     public Object conflictException;
+
     public CreateGameServerGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateGameServerGroupResponse {
     
     
     public String contentType;
+
     public CreateGameServerGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateGameServerGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGameServerGroupOutput createGameServerGroupOutput;
+
     public CreateGameServerGroupResponse withCreateGameServerGroupOutput(org.openapis.openapi.models.shared.CreateGameServerGroupOutput createGameServerGroupOutput) {
         this.createGameServerGroupOutput = createGameServerGroupOutput;
         return this;
@@ -39,6 +43,7 @@ public class CreateGameServerGroupResponse {
      */
     
     public Object internalServiceException;
+
     public CreateGameServerGroupResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class CreateGameServerGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateGameServerGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class CreateGameServerGroupResponse {
      */
     
     public Object limitExceededException;
+
     public CreateGameServerGroupResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateGameServerGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateGameServerGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateGameServerGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGameServerGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateGameServerGroupResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateGameServerGroupResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateGameServerGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

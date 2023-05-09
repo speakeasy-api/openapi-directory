@@ -15,6 +15,7 @@ public class UpdateNetworkDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public UpdateNetworkDeviceRequestBody withAddress(String address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floorPlanId")
     public String floorPlanId;
+
     public UpdateNetworkDeviceRequestBody withFloorPlanId(String floorPlanId) {
         this.floorPlanId = floorPlanId;
         return this;
@@ -37,6 +39,7 @@ public class UpdateNetworkDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Float lat;
+
     public UpdateNetworkDeviceRequestBody withLat(Float lat) {
         this.lat = lat;
         return this;
@@ -48,6 +51,7 @@ public class UpdateNetworkDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lng")
     public Float lng;
+
     public UpdateNetworkDeviceRequestBody withLng(Float lng) {
         this.lng = lng;
         return this;
@@ -59,6 +63,7 @@ public class UpdateNetworkDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moveMapMarker")
     public Boolean moveMapMarker;
+
     public UpdateNetworkDeviceRequestBody withMoveMapMarker(Boolean moveMapMarker) {
         this.moveMapMarker = moveMapMarker;
         return this;
@@ -70,6 +75,7 @@ public class UpdateNetworkDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateNetworkDeviceRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -81,6 +87,7 @@ public class UpdateNetworkDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public UpdateNetworkDeviceRequestBody withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -92,6 +99,7 @@ public class UpdateNetworkDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("switchProfileId")
     public String switchProfileId;
+
     public UpdateNetworkDeviceRequestBody withSwitchProfileId(String switchProfileId) {
         this.switchProfileId = switchProfileId;
         return this;
@@ -103,9 +111,11 @@ public class UpdateNetworkDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String tags;
+
     public UpdateNetworkDeviceRequestBody withTags(String tags) {
         this.tags = tags;
         return this;
     }
     
+    public UpdateNetworkDeviceRequestBody(){}
 }

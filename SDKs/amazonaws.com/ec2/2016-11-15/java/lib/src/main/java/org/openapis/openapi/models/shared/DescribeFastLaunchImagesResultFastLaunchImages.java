@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeFastLaunchImagesResultFastLaunchImages {
     
     public String imageId;
+
     public DescribeFastLaunchImagesResultFastLaunchImages withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFastLaunchImagesResultFastLaunchImages {
     
     
     public DescribeFastLaunchImagesResultFastLaunchImagesLaunchTemplate launchTemplate;
+
     public DescribeFastLaunchImagesResultFastLaunchImages withLaunchTemplate(DescribeFastLaunchImagesResultFastLaunchImagesLaunchTemplate launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
@@ -26,6 +28,7 @@ public class DescribeFastLaunchImagesResultFastLaunchImages {
     
     
     public Long maxParallelLaunches;
+
     public DescribeFastLaunchImagesResultFastLaunchImages withMaxParallelLaunches(Long maxParallelLaunches) {
         this.maxParallelLaunches = maxParallelLaunches;
         return this;
@@ -33,6 +36,7 @@ public class DescribeFastLaunchImagesResultFastLaunchImages {
     
     
     public String ownerId;
+
     public DescribeFastLaunchImagesResultFastLaunchImages withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeFastLaunchImagesResultFastLaunchImages {
     
     
     public DescribeFastLaunchImagesResultFastLaunchImagesResourceTypeEnum resourceType;
+
     public DescribeFastLaunchImagesResultFastLaunchImages withResourceType(DescribeFastLaunchImagesResultFastLaunchImagesResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -47,6 +52,7 @@ public class DescribeFastLaunchImagesResultFastLaunchImages {
     
     
     public DescribeFastLaunchImagesResultFastLaunchImagesSnapshotConfiguration snapshotConfiguration;
+
     public DescribeFastLaunchImagesResultFastLaunchImages withSnapshotConfiguration(DescribeFastLaunchImagesResultFastLaunchImagesSnapshotConfiguration snapshotConfiguration) {
         this.snapshotConfiguration = snapshotConfiguration;
         return this;
@@ -54,6 +60,7 @@ public class DescribeFastLaunchImagesResultFastLaunchImages {
     
     
     public DescribeFastLaunchImagesResultFastLaunchImagesStateEnum state;
+
     public DescribeFastLaunchImagesResultFastLaunchImages withState(DescribeFastLaunchImagesResultFastLaunchImagesStateEnum state) {
         this.state = state;
         return this;
@@ -61,6 +68,7 @@ public class DescribeFastLaunchImagesResultFastLaunchImages {
     
     
     public String stateTransitionReason;
+
     public DescribeFastLaunchImagesResultFastLaunchImages withStateTransitionReason(String stateTransitionReason) {
         this.stateTransitionReason = stateTransitionReason;
         return this;
@@ -68,9 +76,11 @@ public class DescribeFastLaunchImagesResultFastLaunchImages {
     
     
     public OffsetDateTime stateTransitionTime;
+
     public DescribeFastLaunchImagesResultFastLaunchImages withStateTransitionTime(OffsetDateTime stateTransitionTime) {
         this.stateTransitionTime = stateTransitionTime;
         return this;
     }
     
+    public DescribeFastLaunchImagesResultFastLaunchImages(){}
 }

@@ -15,6 +15,7 @@ public class JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerOrchestrationType")
     public OrchestrationTypeEnum containerOrchestrationType;
+
     public JobDefinition withContainerOrchestrationType(OrchestrationTypeEnum containerOrchestrationType) {
         this.containerOrchestrationType = containerOrchestrationType;
         return this;
@@ -23,6 +24,7 @@ public class JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerProperties")
     public ContainerProperties containerProperties;
+
     public JobDefinition withContainerProperties(ContainerProperties containerProperties) {
         this.containerProperties = containerProperties;
         return this;
@@ -31,6 +33,7 @@ public class JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksProperties")
     public EksProperties eksProperties;
+
     public JobDefinition withEksProperties(EksProperties eksProperties) {
         this.eksProperties = eksProperties;
         return this;
@@ -38,6 +41,7 @@ public class JobDefinition {
     
     @JsonProperty("jobDefinitionArn")
     public String jobDefinitionArn;
+
     public JobDefinition withJobDefinitionArn(String jobDefinitionArn) {
         this.jobDefinitionArn = jobDefinitionArn;
         return this;
@@ -45,6 +49,7 @@ public class JobDefinition {
     
     @JsonProperty("jobDefinitionName")
     public String jobDefinitionName;
+
     public JobDefinition withJobDefinitionName(String jobDefinitionName) {
         this.jobDefinitionName = jobDefinitionName;
         return this;
@@ -53,6 +58,7 @@ public class JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeProperties")
     public NodeProperties nodeProperties;
+
     public JobDefinition withNodeProperties(NodeProperties nodeProperties) {
         this.nodeProperties = nodeProperties;
         return this;
@@ -61,6 +67,7 @@ public class JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, String> parameters;
+
     public JobDefinition withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -69,6 +76,7 @@ public class JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformCapabilities")
     public PlatformCapabilityEnum[] platformCapabilities;
+
     public JobDefinition withPlatformCapabilities(PlatformCapabilityEnum[] platformCapabilities) {
         this.platformCapabilities = platformCapabilities;
         return this;
@@ -77,6 +85,7 @@ public class JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propagateTags")
     public Boolean propagateTags;
+
     public JobDefinition withPropagateTags(Boolean propagateTags) {
         this.propagateTags = propagateTags;
         return this;
@@ -85,6 +94,7 @@ public class JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryStrategy")
     public RetryStrategy retryStrategy;
+
     public JobDefinition withRetryStrategy(RetryStrategy retryStrategy) {
         this.retryStrategy = retryStrategy;
         return this;
@@ -92,6 +102,7 @@ public class JobDefinition {
     
     @JsonProperty("revision")
     public Long revision;
+
     public JobDefinition withRevision(Long revision) {
         this.revision = revision;
         return this;
@@ -100,6 +111,7 @@ public class JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingPriority")
     public Long schedulingPriority;
+
     public JobDefinition withSchedulingPriority(Long schedulingPriority) {
         this.schedulingPriority = schedulingPriority;
         return this;
@@ -108,6 +120,7 @@ public class JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public JobDefinition withStatus(String status) {
         this.status = status;
         return this;
@@ -116,6 +129,7 @@ public class JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public JobDefinition withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -124,6 +138,7 @@ public class JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public JobTimeout timeout;
+
     public JobDefinition withTimeout(JobTimeout timeout) {
         this.timeout = timeout;
         return this;
@@ -131,9 +146,16 @@ public class JobDefinition {
     
     @JsonProperty("type")
     public String type;
+
     public JobDefinition withType(String type) {
         this.type = type;
         return this;
     }
     
+    public JobDefinition(@JsonProperty("jobDefinitionArn") String jobDefinitionArn, @JsonProperty("jobDefinitionName") String jobDefinitionName, @JsonProperty("revision") Long revision, @JsonProperty("type") String type) {
+        this.jobDefinitionArn = jobDefinitionArn;
+        this.jobDefinitionName = jobDefinitionName;
+        this.revision = revision;
+        this.type = type;
+  }
 }

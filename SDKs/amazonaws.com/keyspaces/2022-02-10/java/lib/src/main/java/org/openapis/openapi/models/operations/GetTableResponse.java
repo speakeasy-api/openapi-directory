@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTableResponse {
@@ -12,6 +13,7 @@ public class GetTableResponse {
      */
     
     public Object accessDeniedException;
+
     public GetTableResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetTableResponse {
     
     
     public String contentType;
+
     public GetTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTableResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTableResponse getTableResponse;
+
     public GetTableResponse withGetTableResponse(org.openapis.openapi.models.shared.GetTableResponse getTableResponse) {
         this.getTableResponse = getTableResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetTableResponse {
      */
     
     public Object internalServerException;
+
     public GetTableResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetTableResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetTableResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetTableResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetTableResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class GetTableResponse {
     
     
     public Integer statusCode;
+
     public GetTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetTableResponse {
      */
     
     public Object validationException;
+
     public GetTableResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

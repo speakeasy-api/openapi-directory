@@ -15,6 +15,7 @@ public class EnvironmentImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EnvironmentImage withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class EnvironmentImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnvironmentImage withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class EnvironmentImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versions")
     public String[] versions;
+
     public EnvironmentImage withVersions(String[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public EnvironmentImage(){}
 }

@@ -15,6 +15,7 @@ public class HttpPathMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exact")
     public String exact;
+
     public HttpPathMatch withExact(String exact) {
         this.exact = exact;
         return this;
@@ -23,9 +24,11 @@ public class HttpPathMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regex")
     public String regex;
+
     public HttpPathMatch withRegex(String regex) {
         this.regex = regex;
         return this;
     }
     
+    public HttpPathMatch(){}
 }

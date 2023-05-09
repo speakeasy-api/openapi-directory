@@ -17,6 +17,7 @@ public class UpsertAccountRequestBody {
      */
     @JsonProperty("identification")
     public UpsertAccountRequestBodyIdentification identification;
+
     public UpsertAccountRequestBody withIdentification(UpsertAccountRequestBodyIdentification identification) {
         this.identification = identification;
         return this;
@@ -28,9 +29,13 @@ public class UpsertAccountRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, Object> properties;
+
     public UpsertAccountRequestBody withProperties(java.util.Map<String, Object> properties) {
         this.properties = properties;
         return this;
     }
     
+    public UpsertAccountRequestBody(@JsonProperty("identification") UpsertAccountRequestBodyIdentification identification) {
+        this.identification = identification;
+  }
 }

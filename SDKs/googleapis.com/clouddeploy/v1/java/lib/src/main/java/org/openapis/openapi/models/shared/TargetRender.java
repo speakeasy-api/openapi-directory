@@ -18,6 +18,7 @@ public class TargetRender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCause")
     public TargetRenderFailureCauseEnum failureCause;
+
     public TargetRender withFailureCause(TargetRenderFailureCauseEnum failureCause) {
         this.failureCause = failureCause;
         return this;
@@ -29,6 +30,7 @@ public class TargetRender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureMessage")
     public String failureMessage;
+
     public TargetRender withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -40,6 +42,7 @@ public class TargetRender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public RenderMetadata metadata;
+
     public TargetRender withMetadata(RenderMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -51,6 +54,7 @@ public class TargetRender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renderingBuild")
     public String renderingBuild;
+
     public TargetRender withRenderingBuild(String renderingBuild) {
         this.renderingBuild = renderingBuild;
         return this;
@@ -62,9 +66,11 @@ public class TargetRender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renderingState")
     public TargetRenderRenderingStateEnum renderingState;
+
     public TargetRender withRenderingState(TargetRenderRenderingStateEnum renderingState) {
         this.renderingState = renderingState;
         return this;
     }
     
+    public TargetRender(){}
 }

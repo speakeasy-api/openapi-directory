@@ -15,6 +15,7 @@ public class Port {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IP")
     public String ip;
+
     public Port withIp(String ip) {
         this.ip = ip;
         return this;
@@ -26,6 +27,7 @@ public class Port {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivatePort")
     public String privatePort;
+
     public Port withPrivatePort(String privatePort) {
         this.privatePort = privatePort;
         return this;
@@ -37,6 +39,7 @@ public class Port {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicPort")
     public String publicPort;
+
     public Port withPublicPort(String publicPort) {
         this.publicPort = publicPort;
         return this;
@@ -48,9 +51,11 @@ public class Port {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public Port withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Port(){}
 }

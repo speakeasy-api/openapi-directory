@@ -20,6 +20,7 @@ public class CreateJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CreateJobTemplateResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class CreateJobTemplateResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CreateJobTemplateResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class CreateJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateJobTemplateResponse withId(String id) {
         this.id = id;
         return this;
@@ -46,9 +49,11 @@ public class CreateJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateJobTemplateResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateJobTemplateResponse(){}
 }

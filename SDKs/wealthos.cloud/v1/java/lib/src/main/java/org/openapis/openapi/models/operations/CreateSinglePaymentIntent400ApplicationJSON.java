@@ -18,6 +18,7 @@ public class CreateSinglePaymentIntent400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public CreateSinglePaymentIntent400ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class CreateSinglePaymentIntent400ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public CreateSinglePaymentIntent400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CreateSinglePaymentIntent400ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

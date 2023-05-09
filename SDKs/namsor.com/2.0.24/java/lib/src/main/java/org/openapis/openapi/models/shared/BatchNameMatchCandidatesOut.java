@@ -18,9 +18,11 @@ public class BatchNameMatchCandidatesOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namesAndMatchCandidates")
     public NameMatchCandidatesOut[] namesAndMatchCandidates;
+
     public BatchNameMatchCandidatesOut withNamesAndMatchCandidates(NameMatchCandidatesOut[] namesAndMatchCandidates) {
         this.namesAndMatchCandidates = namesAndMatchCandidates;
         return this;
     }
     
+    public BatchNameMatchCandidatesOut(){}
 }

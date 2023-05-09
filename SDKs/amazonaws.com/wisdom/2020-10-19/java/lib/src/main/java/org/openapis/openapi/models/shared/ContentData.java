@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ContentData {
     @JsonProperty("contentArn")
     public String contentArn;
+
     public ContentData withContentArn(String contentArn) {
         this.contentArn = contentArn;
         return this;
@@ -26,6 +27,7 @@ public class ContentData {
     
     @JsonProperty("contentId")
     public String contentId;
+
     public ContentData withContentId(String contentId) {
         this.contentId = contentId;
         return this;
@@ -33,6 +35,7 @@ public class ContentData {
     
     @JsonProperty("contentType")
     public String contentType;
+
     public ContentData withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -40,6 +43,7 @@ public class ContentData {
     
     @JsonProperty("knowledgeBaseArn")
     public String knowledgeBaseArn;
+
     public ContentData withKnowledgeBaseArn(String knowledgeBaseArn) {
         this.knowledgeBaseArn = knowledgeBaseArn;
         return this;
@@ -47,6 +51,7 @@ public class ContentData {
     
     @JsonProperty("knowledgeBaseId")
     public String knowledgeBaseId;
+
     public ContentData withKnowledgeBaseId(String knowledgeBaseId) {
         this.knowledgeBaseId = knowledgeBaseId;
         return this;
@@ -55,6 +60,7 @@ public class ContentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkOutUri")
     public String linkOutUri;
+
     public ContentData withLinkOutUri(String linkOutUri) {
         this.linkOutUri = linkOutUri;
         return this;
@@ -62,6 +68,7 @@ public class ContentData {
     
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public ContentData withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -69,6 +76,7 @@ public class ContentData {
     
     @JsonProperty("name")
     public String name;
+
     public ContentData withName(String name) {
         this.name = name;
         return this;
@@ -76,6 +84,7 @@ public class ContentData {
     
     @JsonProperty("revisionId")
     public String revisionId;
+
     public ContentData withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -83,6 +92,7 @@ public class ContentData {
     
     @JsonProperty("status")
     public ContentStatusEnum status;
+
     public ContentData withStatus(ContentStatusEnum status) {
         this.status = status;
         return this;
@@ -91,6 +101,7 @@ public class ContentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ContentData withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -98,6 +109,7 @@ public class ContentData {
     
     @JsonProperty("title")
     public String title;
+
     public ContentData withTitle(String title) {
         this.title = title;
         return this;
@@ -105,6 +117,7 @@ public class ContentData {
     
     @JsonProperty("url")
     public String url;
+
     public ContentData withUrl(String url) {
         this.url = url;
         return this;
@@ -114,9 +127,24 @@ public class ContentData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("urlExpiry")
     public OffsetDateTime urlExpiry;
+
     public ContentData withUrlExpiry(OffsetDateTime urlExpiry) {
         this.urlExpiry = urlExpiry;
         return this;
     }
     
+    public ContentData(@JsonProperty("contentArn") String contentArn, @JsonProperty("contentId") String contentId, @JsonProperty("contentType") String contentType, @JsonProperty("knowledgeBaseArn") String knowledgeBaseArn, @JsonProperty("knowledgeBaseId") String knowledgeBaseId, @JsonProperty("metadata") java.util.Map<String, String> metadata, @JsonProperty("name") String name, @JsonProperty("revisionId") String revisionId, @JsonProperty("status") ContentStatusEnum status, @JsonProperty("title") String title, @JsonProperty("url") String url, @JsonProperty("urlExpiry") OffsetDateTime urlExpiry) {
+        this.contentArn = contentArn;
+        this.contentId = contentId;
+        this.contentType = contentType;
+        this.knowledgeBaseArn = knowledgeBaseArn;
+        this.knowledgeBaseId = knowledgeBaseId;
+        this.metadata = metadata;
+        this.name = name;
+        this.revisionId = revisionId;
+        this.status = status;
+        this.title = title;
+        this.url = url;
+        this.urlExpiry = urlExpiry;
+  }
 }

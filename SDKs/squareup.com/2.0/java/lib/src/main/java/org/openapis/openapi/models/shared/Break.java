@@ -17,6 +17,7 @@ public class Break {
      */
     @JsonProperty("break_type_id")
     public String breakTypeId;
+
     public Break withBreakTypeId(String breakTypeId) {
         this.breakTypeId = breakTypeId;
         return this;
@@ -29,6 +30,7 @@ public class Break {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     public String endAt;
+
     public Break withEndAt(String endAt) {
         this.endAt = endAt;
         return this;
@@ -40,6 +42,7 @@ public class Break {
      */
     @JsonProperty("expected_duration")
     public String expectedDuration;
+
     public Break withExpectedDuration(String expectedDuration) {
         this.expectedDuration = expectedDuration;
         return this;
@@ -51,6 +54,7 @@ public class Break {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Break withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class Break {
      */
     @JsonProperty("is_paid")
     public Boolean isPaid;
+
     public Break withIsPaid(Boolean isPaid) {
         this.isPaid = isPaid;
         return this;
@@ -72,6 +77,7 @@ public class Break {
      */
     @JsonProperty("name")
     public String name;
+
     public Break withName(String name) {
         this.name = name;
         return this;
@@ -83,9 +89,17 @@ public class Break {
      */
     @JsonProperty("start_at")
     public String startAt;
+
     public Break withStartAt(String startAt) {
         this.startAt = startAt;
         return this;
     }
     
+    public Break(@JsonProperty("break_type_id") String breakTypeId, @JsonProperty("expected_duration") String expectedDuration, @JsonProperty("is_paid") Boolean isPaid, @JsonProperty("name") String name, @JsonProperty("start_at") String startAt) {
+        this.breakTypeId = breakTypeId;
+        this.expectedDuration = expectedDuration;
+        this.isPaid = isPaid;
+        this.name = name;
+        this.startAt = startAt;
+  }
 }

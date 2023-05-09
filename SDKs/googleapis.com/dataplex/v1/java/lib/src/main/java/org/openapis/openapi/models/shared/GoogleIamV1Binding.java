@@ -18,6 +18,7 @@ public class GoogleIamV1Binding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public GoogleTypeExpr condition;
+
     public GoogleIamV1Binding withCondition(GoogleTypeExpr condition) {
         this.condition = condition;
         return this;
@@ -29,6 +30,7 @@ public class GoogleIamV1Binding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public String[] members;
+
     public GoogleIamV1Binding withMembers(String[] members) {
         this.members = members;
         return this;
@@ -40,9 +42,11 @@ public class GoogleIamV1Binding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public GoogleIamV1Binding withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public GoogleIamV1Binding(){}
 }

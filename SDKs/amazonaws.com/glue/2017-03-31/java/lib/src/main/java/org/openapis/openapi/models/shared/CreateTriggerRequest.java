@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTriggerRequest {
     @JsonProperty("Actions")
     public Action[] actions;
+
     public CreateTriggerRequest withActions(Action[] actions) {
         this.actions = actions;
         return this;
@@ -19,6 +20,7 @@ public class CreateTriggerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateTriggerRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreateTriggerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBatchingCondition")
     public EventBatchingCondition eventBatchingCondition;
+
     public CreateTriggerRequest withEventBatchingCondition(EventBatchingCondition eventBatchingCondition) {
         this.eventBatchingCondition = eventBatchingCondition;
         return this;
@@ -34,6 +37,7 @@ public class CreateTriggerRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateTriggerRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +46,7 @@ public class CreateTriggerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Predicate")
     public Predicate predicate;
+
     public CreateTriggerRequest withPredicate(Predicate predicate) {
         this.predicate = predicate;
         return this;
@@ -50,6 +55,7 @@ public class CreateTriggerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public String schedule;
+
     public CreateTriggerRequest withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -58,6 +64,7 @@ public class CreateTriggerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartOnCreation")
     public Boolean startOnCreation;
+
     public CreateTriggerRequest withStartOnCreation(Boolean startOnCreation) {
         this.startOnCreation = startOnCreation;
         return this;
@@ -66,6 +73,7 @@ public class CreateTriggerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateTriggerRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -73,6 +81,7 @@ public class CreateTriggerRequest {
     
     @JsonProperty("Type")
     public TriggerTypeEnum type;
+
     public CreateTriggerRequest withType(TriggerTypeEnum type) {
         this.type = type;
         return this;
@@ -81,9 +90,15 @@ public class CreateTriggerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkflowName")
     public String workflowName;
+
     public CreateTriggerRequest withWorkflowName(String workflowName) {
         this.workflowName = workflowName;
         return this;
     }
     
+    public CreateTriggerRequest(@JsonProperty("Actions") Action[] actions, @JsonProperty("Name") String name, @JsonProperty("Type") TriggerTypeEnum type) {
+        this.actions = actions;
+        this.name = name;
+        this.type = type;
+  }
 }

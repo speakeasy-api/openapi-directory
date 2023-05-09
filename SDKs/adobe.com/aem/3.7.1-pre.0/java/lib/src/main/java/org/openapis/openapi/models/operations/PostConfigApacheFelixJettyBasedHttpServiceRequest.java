@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.clientcertificate")
     public String orgApacheFelixHttpsClientcertificate;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsClientcertificate(String orgApacheFelixHttpsClientcertificate) {
         this.orgApacheFelixHttpsClientcertificate = orgApacheFelixHttpsClientcertificate;
         return this;
@@ -16,6 +17,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.clientcertificate@TypeHint")
     public String orgApacheFelixHttpsClientcertificateAtTypeHint;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsClientcertificateAtTypeHint(String orgApacheFelixHttpsClientcertificateAtTypeHint) {
         this.orgApacheFelixHttpsClientcertificateAtTypeHint = orgApacheFelixHttpsClientcertificateAtTypeHint;
         return this;
@@ -23,6 +25,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.enable")
     public Boolean orgApacheFelixHttpsEnable;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsEnable(Boolean orgApacheFelixHttpsEnable) {
         this.orgApacheFelixHttpsEnable = orgApacheFelixHttpsEnable;
         return this;
@@ -30,6 +33,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.enable@TypeHint")
     public String orgApacheFelixHttpsEnableAtTypeHint;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsEnableAtTypeHint(String orgApacheFelixHttpsEnableAtTypeHint) {
         this.orgApacheFelixHttpsEnableAtTypeHint = orgApacheFelixHttpsEnableAtTypeHint;
         return this;
@@ -37,6 +41,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.keystore")
     public String orgApacheFelixHttpsKeystore;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsKeystore(String orgApacheFelixHttpsKeystore) {
         this.orgApacheFelixHttpsKeystore = orgApacheFelixHttpsKeystore;
         return this;
@@ -44,6 +49,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.keystore.key")
     public String orgApacheFelixHttpsKeystoreKey;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsKeystoreKey(String orgApacheFelixHttpsKeystoreKey) {
         this.orgApacheFelixHttpsKeystoreKey = orgApacheFelixHttpsKeystoreKey;
         return this;
@@ -51,6 +57,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.keystore.key.password")
     public String orgApacheFelixHttpsKeystoreKeyPassword;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsKeystoreKeyPassword(String orgApacheFelixHttpsKeystoreKeyPassword) {
         this.orgApacheFelixHttpsKeystoreKeyPassword = orgApacheFelixHttpsKeystoreKeyPassword;
         return this;
@@ -58,6 +65,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.keystore.key.password@TypeHint")
     public String orgApacheFelixHttpsKeystoreKeyPasswordAtTypeHint;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsKeystoreKeyPasswordAtTypeHint(String orgApacheFelixHttpsKeystoreKeyPasswordAtTypeHint) {
         this.orgApacheFelixHttpsKeystoreKeyPasswordAtTypeHint = orgApacheFelixHttpsKeystoreKeyPasswordAtTypeHint;
         return this;
@@ -65,6 +73,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.keystore.key@TypeHint")
     public String orgApacheFelixHttpsKeystoreKeyAtTypeHint;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsKeystoreKeyAtTypeHint(String orgApacheFelixHttpsKeystoreKeyAtTypeHint) {
         this.orgApacheFelixHttpsKeystoreKeyAtTypeHint = orgApacheFelixHttpsKeystoreKeyAtTypeHint;
         return this;
@@ -72,6 +81,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.keystore.password")
     public String orgApacheFelixHttpsKeystorePassword;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsKeystorePassword(String orgApacheFelixHttpsKeystorePassword) {
         this.orgApacheFelixHttpsKeystorePassword = orgApacheFelixHttpsKeystorePassword;
         return this;
@@ -79,6 +89,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.keystore.password@TypeHint")
     public String orgApacheFelixHttpsKeystorePasswordAtTypeHint;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsKeystorePasswordAtTypeHint(String orgApacheFelixHttpsKeystorePasswordAtTypeHint) {
         this.orgApacheFelixHttpsKeystorePasswordAtTypeHint = orgApacheFelixHttpsKeystorePasswordAtTypeHint;
         return this;
@@ -86,6 +97,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.keystore@TypeHint")
     public String orgApacheFelixHttpsKeystoreAtTypeHint;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsKeystoreAtTypeHint(String orgApacheFelixHttpsKeystoreAtTypeHint) {
         this.orgApacheFelixHttpsKeystoreAtTypeHint = orgApacheFelixHttpsKeystoreAtTypeHint;
         return this;
@@ -93,6 +105,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.nio")
     public Boolean orgApacheFelixHttpsNio;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsNio(Boolean orgApacheFelixHttpsNio) {
         this.orgApacheFelixHttpsNio = orgApacheFelixHttpsNio;
         return this;
@@ -100,6 +113,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.nio@TypeHint")
     public String orgApacheFelixHttpsNioAtTypeHint;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsNioAtTypeHint(String orgApacheFelixHttpsNioAtTypeHint) {
         this.orgApacheFelixHttpsNioAtTypeHint = orgApacheFelixHttpsNioAtTypeHint;
         return this;
@@ -107,6 +121,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.truststore")
     public String orgApacheFelixHttpsTruststore;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsTruststore(String orgApacheFelixHttpsTruststore) {
         this.orgApacheFelixHttpsTruststore = orgApacheFelixHttpsTruststore;
         return this;
@@ -114,6 +129,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.truststore.password")
     public String orgApacheFelixHttpsTruststorePassword;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsTruststorePassword(String orgApacheFelixHttpsTruststorePassword) {
         this.orgApacheFelixHttpsTruststorePassword = orgApacheFelixHttpsTruststorePassword;
         return this;
@@ -121,6 +137,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.truststore.password@TypeHint")
     public String orgApacheFelixHttpsTruststorePasswordAtTypeHint;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsTruststorePasswordAtTypeHint(String orgApacheFelixHttpsTruststorePasswordAtTypeHint) {
         this.orgApacheFelixHttpsTruststorePasswordAtTypeHint = orgApacheFelixHttpsTruststorePasswordAtTypeHint;
         return this;
@@ -128,6 +145,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.apache.felix.https.truststore@TypeHint")
     public String orgApacheFelixHttpsTruststoreAtTypeHint;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgApacheFelixHttpsTruststoreAtTypeHint(String orgApacheFelixHttpsTruststoreAtTypeHint) {
         this.orgApacheFelixHttpsTruststoreAtTypeHint = orgApacheFelixHttpsTruststoreAtTypeHint;
         return this;
@@ -135,6 +153,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.osgi.service.http.port.secure")
     public String orgOsgiServiceHttpPortSecure;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgOsgiServiceHttpPortSecure(String orgOsgiServiceHttpPortSecure) {
         this.orgOsgiServiceHttpPortSecure = orgOsgiServiceHttpPortSecure;
         return this;
@@ -142,9 +161,11 @@ public class PostConfigApacheFelixJettyBasedHttpServiceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org.osgi.service.http.port.secure@TypeHint")
     public String orgOsgiServiceHttpPortSecureAtTypeHint;
+
     public PostConfigApacheFelixJettyBasedHttpServiceRequest withOrgOsgiServiceHttpPortSecureAtTypeHint(String orgOsgiServiceHttpPortSecureAtTypeHint) {
         this.orgOsgiServiceHttpPortSecureAtTypeHint = orgOsgiServiceHttpPortSecureAtTypeHint;
         return this;
     }
     
+    public PostConfigApacheFelixJettyBasedHttpServiceRequest(){}
 }

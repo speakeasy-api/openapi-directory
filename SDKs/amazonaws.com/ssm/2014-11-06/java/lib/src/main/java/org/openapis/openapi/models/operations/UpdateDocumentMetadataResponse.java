@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDocumentMetadataResponse {
     
     public String contentType;
+
     public UpdateDocumentMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDocumentMetadataResponse {
      */
     
     public Object internalServerError;
+
     public UpdateDocumentMetadataResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDocumentMetadataResponse {
      */
     
     public Object invalidDocument;
+
     public UpdateDocumentMetadataResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDocumentMetadataResponse {
      */
     
     public Object invalidDocumentOperation;
+
     public UpdateDocumentMetadataResponse withInvalidDocumentOperation(Object invalidDocumentOperation) {
         this.invalidDocumentOperation = invalidDocumentOperation;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDocumentMetadataResponse {
      */
     
     public Object invalidDocumentVersion;
+
     public UpdateDocumentMetadataResponse withInvalidDocumentVersion(Object invalidDocumentVersion) {
         this.invalidDocumentVersion = invalidDocumentVersion;
         return this;
@@ -56,6 +62,7 @@ public class UpdateDocumentMetadataResponse {
     
     
     public Integer statusCode;
+
     public UpdateDocumentMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDocumentMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDocumentMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateDocumentMetadataResponse {
      */
     
     public java.util.Map<String, Object> updateDocumentMetadataResponse;
+
     public UpdateDocumentMetadataResponse withUpdateDocumentMetadataResponse(java.util.Map<String, Object> updateDocumentMetadataResponse) {
         this.updateDocumentMetadataResponse = updateDocumentMetadataResponse;
         return this;
     }
     
+    public UpdateDocumentMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

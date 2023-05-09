@@ -15,6 +15,7 @@ public class ListDevelopmentSchemaArnsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDevelopmentSchemaArnsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListDevelopmentSchemaArnsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaArns")
     public String[] schemaArns;
+
     public ListDevelopmentSchemaArnsResponse withSchemaArns(String[] schemaArns) {
         this.schemaArns = schemaArns;
         return this;
     }
     
+    public ListDevelopmentSchemaArnsResponse(){}
 }

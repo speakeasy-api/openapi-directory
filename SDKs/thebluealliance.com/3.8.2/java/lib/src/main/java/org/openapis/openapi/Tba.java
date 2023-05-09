@@ -64,11 +64,9 @@ public class Tba {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStatusResponse res = new org.openapis.openapi.models.operations.GetStatusResponse() {{
+        org.openapis.openapi.models.operations.GetStatusResponse res = new org.openapis.openapi.models.operations.GetStatusResponse(contentType, httpRes.statusCode()) {{
             apiStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

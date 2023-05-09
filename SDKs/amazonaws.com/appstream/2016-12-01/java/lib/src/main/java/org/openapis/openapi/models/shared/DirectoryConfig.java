@@ -20,6 +20,7 @@ public class DirectoryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateBasedAuthProperties")
     public CertificateBasedAuthProperties certificateBasedAuthProperties;
+
     public DirectoryConfig withCertificateBasedAuthProperties(CertificateBasedAuthProperties certificateBasedAuthProperties) {
         this.certificateBasedAuthProperties = certificateBasedAuthProperties;
         return this;
@@ -30,6 +31,7 @@ public class DirectoryConfig {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public DirectoryConfig withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -37,6 +39,7 @@ public class DirectoryConfig {
     
     @JsonProperty("DirectoryName")
     public String directoryName;
+
     public DirectoryConfig withDirectoryName(String directoryName) {
         this.directoryName = directoryName;
         return this;
@@ -45,6 +48,7 @@ public class DirectoryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationalUnitDistinguishedNames")
     public String[] organizationalUnitDistinguishedNames;
+
     public DirectoryConfig withOrganizationalUnitDistinguishedNames(String[] organizationalUnitDistinguishedNames) {
         this.organizationalUnitDistinguishedNames = organizationalUnitDistinguishedNames;
         return this;
@@ -53,9 +57,13 @@ public class DirectoryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceAccountCredentials")
     public ServiceAccountCredentials serviceAccountCredentials;
+
     public DirectoryConfig withServiceAccountCredentials(ServiceAccountCredentials serviceAccountCredentials) {
         this.serviceAccountCredentials = serviceAccountCredentials;
         return this;
     }
     
+    public DirectoryConfig(@JsonProperty("DirectoryName") String directoryName) {
+        this.directoryName = directoryName;
+  }
 }

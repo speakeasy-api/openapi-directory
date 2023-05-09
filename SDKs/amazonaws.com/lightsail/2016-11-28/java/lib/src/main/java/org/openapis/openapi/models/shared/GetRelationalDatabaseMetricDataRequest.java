@@ -16,6 +16,7 @@ public class GetRelationalDatabaseMetricDataRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetRelationalDatabaseMetricDataRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -23,6 +24,7 @@ public class GetRelationalDatabaseMetricDataRequest {
     
     @JsonProperty("metricName")
     public RelationalDatabaseMetricNameEnum metricName;
+
     public GetRelationalDatabaseMetricDataRequest withMetricName(RelationalDatabaseMetricNameEnum metricName) {
         this.metricName = metricName;
         return this;
@@ -30,6 +32,7 @@ public class GetRelationalDatabaseMetricDataRequest {
     
     @JsonProperty("period")
     public Long period;
+
     public GetRelationalDatabaseMetricDataRequest withPeriod(Long period) {
         this.period = period;
         return this;
@@ -37,6 +40,7 @@ public class GetRelationalDatabaseMetricDataRequest {
     
     @JsonProperty("relationalDatabaseName")
     public String relationalDatabaseName;
+
     public GetRelationalDatabaseMetricDataRequest withRelationalDatabaseName(String relationalDatabaseName) {
         this.relationalDatabaseName = relationalDatabaseName;
         return this;
@@ -46,6 +50,7 @@ public class GetRelationalDatabaseMetricDataRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GetRelationalDatabaseMetricDataRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -53,6 +58,7 @@ public class GetRelationalDatabaseMetricDataRequest {
     
     @JsonProperty("statistics")
     public MetricStatisticEnum[] statistics;
+
     public GetRelationalDatabaseMetricDataRequest withStatistics(MetricStatisticEnum[] statistics) {
         this.statistics = statistics;
         return this;
@@ -60,9 +66,19 @@ public class GetRelationalDatabaseMetricDataRequest {
     
     @JsonProperty("unit")
     public MetricUnitEnum unit;
+
     public GetRelationalDatabaseMetricDataRequest withUnit(MetricUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public GetRelationalDatabaseMetricDataRequest(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("metricName") RelationalDatabaseMetricNameEnum metricName, @JsonProperty("period") Long period, @JsonProperty("relationalDatabaseName") String relationalDatabaseName, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("statistics") MetricStatisticEnum[] statistics, @JsonProperty("unit") MetricUnitEnum unit) {
+        this.endTime = endTime;
+        this.metricName = metricName;
+        this.period = period;
+        this.relationalDatabaseName = relationalDatabaseName;
+        this.startTime = startTime;
+        this.statistics = statistics;
+        this.unit = unit;
+  }
 }

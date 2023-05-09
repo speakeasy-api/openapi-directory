@@ -64,11 +64,9 @@ public class Audit {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAuditCaseResponse res = new org.openapis.openapi.models.operations.GetAuditCaseResponse() {{
+        org.openapis.openapi.models.operations.GetAuditCaseResponse res = new org.openapis.openapi.models.operations.GetAuditCaseResponse(contentType, httpRes.statusCode()) {{
             auditCasePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -109,11 +107,9 @@ public class Audit {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAuditCategoryResponse res = new org.openapis.openapi.models.operations.GetAuditCategoryResponse() {{
+        org.openapis.openapi.models.operations.GetAuditCategoryResponse res = new org.openapis.openapi.models.operations.GetAuditCategoryResponse(contentType, httpRes.statusCode()) {{
             auditCategoryPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -154,11 +150,9 @@ public class Audit {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAuditPrimaryCategoryResponse res = new org.openapis.openapi.models.operations.GetAuditPrimaryCategoryResponse() {{
+        org.openapis.openapi.models.operations.GetAuditPrimaryCategoryResponse res = new org.openapis.openapi.models.operations.GetAuditPrimaryCategoryResponse(contentType, httpRes.statusCode()) {{
             auditPrimaryCategoryPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -199,11 +193,9 @@ public class Audit {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamesAuditCandidatesResponse res = new org.openapis.openapi.models.operations.GetNamesAuditCandidatesResponse() {{
+        org.openapis.openapi.models.operations.GetNamesAuditCandidatesResponse res = new org.openapis.openapi.models.operations.GetNamesAuditCandidatesResponse(contentType, httpRes.statusCode()) {{
             auditCandidateSearchList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -244,11 +236,9 @@ public class Audit {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamesAuditCommitteesResponse res = new org.openapis.openapi.models.operations.GetNamesAuditCommitteesResponse() {{
+        org.openapis.openapi.models.operations.GetNamesAuditCommitteesResponse res = new org.openapis.openapi.models.operations.GetNamesAuditCommitteesResponse(contentType, httpRes.statusCode()) {{
             auditCommitteeSearchList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

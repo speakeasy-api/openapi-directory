@@ -12,6 +12,7 @@ public class JobListJobs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public JobConfiguration configuration;
+
     public JobListJobs withConfiguration(JobConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -20,6 +21,7 @@ public class JobListJobs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorResult")
     public ErrorProto errorResult;
+
     public JobListJobs withErrorResult(ErrorProto errorResult) {
         this.errorResult = errorResult;
         return this;
@@ -31,6 +33,7 @@ public class JobListJobs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public JobListJobs withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class JobListJobs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobReference")
     public JobReference jobReference;
+
     public JobListJobs withJobReference(JobReference jobReference) {
         this.jobReference = jobReference;
         return this;
@@ -50,6 +54,7 @@ public class JobListJobs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public JobListJobs withKind(String kind) {
         this.kind = kind;
         return this;
@@ -61,6 +66,7 @@ public class JobListJobs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public JobListJobs withState(String state) {
         this.state = state;
         return this;
@@ -69,6 +75,7 @@ public class JobListJobs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistics")
     public JobStatistics statistics;
+
     public JobListJobs withStatistics(JobStatistics statistics) {
         this.statistics = statistics;
         return this;
@@ -77,6 +84,7 @@ public class JobListJobs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public JobStatus status;
+
     public JobListJobs withStatus(JobStatus status) {
         this.status = status;
         return this;
@@ -88,9 +96,11 @@ public class JobListJobs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_email")
     public String userEmail;
+
     public JobListJobs withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public JobListJobs(){}
 }

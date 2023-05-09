@@ -18,6 +18,7 @@ public class TimeDuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public TimeDuration withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -29,9 +30,11 @@ public class TimeDuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Integer value;
+
     public TimeDuration withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public TimeDuration(){}
 }

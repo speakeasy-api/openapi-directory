@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetJobRunResponse {
     
     public String contentType;
+
     public GetJobRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetJobRunResponse {
      */
     
     public org.openapis.openapi.models.shared.GetJobRunResponse getJobRunResponse;
+
     public GetJobRunResponse withGetJobRunResponse(org.openapis.openapi.models.shared.GetJobRunResponse getJobRunResponse) {
         this.getJobRunResponse = getJobRunResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetJobRunResponse {
      */
     
     public Object internalServerException;
+
     public GetJobRunResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetJobRunResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetJobRunResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetJobRunResponse {
     
     
     public Integer statusCode;
+
     public GetJobRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetJobRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetJobRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetJobRunResponse {
      */
     
     public Object validationException;
+
     public GetJobRunResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetJobRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

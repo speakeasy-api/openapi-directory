@@ -13,6 +13,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchTypeCensusAcsRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchTypeCensusAcsRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchTypeCensusAcsRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchTypeCensusAcsRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchTypeCensusAcsRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchTypeCensusAcsRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchTypeCensusAcsRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchTypeCensusAcsRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchTypeCensusAcsRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchTypeCensusAcsRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchTypeCensusAcsRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchTypeCensusAcsRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchTypeCensusAcsRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchTypeCensusAcsRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_census_acs.fields")
     public String searchTypeCensusAcsFields;
+
     public SearchTypeCensusAcsRequest withSearchTypeCensusAcsFields(String searchTypeCensusAcsFields) {
         this.searchTypeCensusAcsFields = searchTypeCensusAcsFields;
         return this;
@@ -163,6 +178,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_census_acs.for_type")
     public String searchTypeCensusAcsForType;
+
     public SearchTypeCensusAcsRequest withSearchTypeCensusAcsForType(String searchTypeCensusAcsForType) {
         this.searchTypeCensusAcsForType = searchTypeCensusAcsForType;
         return this;
@@ -173,6 +189,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_census_acs.in_type1")
     public String searchTypeCensusAcsInType1;
+
     public SearchTypeCensusAcsRequest withSearchTypeCensusAcsInType1(String searchTypeCensusAcsInType1) {
         this.searchTypeCensusAcsInType1 = searchTypeCensusAcsInType1;
         return this;
@@ -183,6 +200,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_census_acs.in_type2")
     public String searchTypeCensusAcsInType2;
+
     public SearchTypeCensusAcsRequest withSearchTypeCensusAcsInType2(String searchTypeCensusAcsInType2) {
         this.searchTypeCensusAcsInType2 = searchTypeCensusAcsInType2;
         return this;
@@ -193,6 +211,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchTypeCensusAcsRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -203,6 +222,7 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchTypeCensusAcsRequest withText(String text) {
         this.text = text;
         return this;
@@ -213,9 +233,11 @@ public class SearchTypeCensusAcsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchTypeCensusAcsRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchTypeCensusAcsRequest(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SetIdentityNotificationTopicRequest - Represents a request to specify the Amazon SNS topic to which Amazon SES will publish bounce, complaint, or delivery notifications for emails sent with that identity as the Source. For information about Amazon SES notifications, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/notifications-via-sns.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SetIdentityNotificationTopicRequest {
     
     public String identity;
+
     public SetIdentityNotificationTopicRequest withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -19,6 +20,7 @@ public class SetIdentityNotificationTopicRequest {
     
     
     public NotificationTypeEnum notificationType;
+
     public SetIdentityNotificationTopicRequest withNotificationType(NotificationTypeEnum notificationType) {
         this.notificationType = notificationType;
         return this;
@@ -26,9 +28,14 @@ public class SetIdentityNotificationTopicRequest {
     
     
     public String snsTopic;
+
     public SetIdentityNotificationTopicRequest withSnsTopic(String snsTopic) {
         this.snsTopic = snsTopic;
         return this;
     }
     
+    public SetIdentityNotificationTopicRequest(@JsonProperty("Identity") String identity, @JsonProperty("NotificationType") NotificationTypeEnum notificationType) {
+        this.identity = identity;
+        this.notificationType = notificationType;
+  }
 }

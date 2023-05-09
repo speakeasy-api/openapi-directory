@@ -17,6 +17,7 @@ public class ListDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public ListDevicesRequest withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -27,6 +28,7 @@ public class ListDevicesRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LatestHeartbeatAfter")
     public OffsetDateTime latestHeartbeatAfter;
+
     public ListDevicesRequest withLatestHeartbeatAfter(OffsetDateTime latestHeartbeatAfter) {
         this.latestHeartbeatAfter = latestHeartbeatAfter;
         return this;
@@ -35,6 +37,7 @@ public class ListDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDevicesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -43,6 +46,7 @@ public class ListDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelName")
     public String modelName;
+
     public ListDevicesRequest withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -51,9 +55,11 @@ public class ListDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDevicesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDevicesRequest(){}
 }

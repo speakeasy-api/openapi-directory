@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposDeleteInvitationRequest {
@@ -12,6 +13,7 @@ public class ReposDeleteInvitationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invitation_id")
     public Long invitationId;
+
     public ReposDeleteInvitationRequest withInvitationId(Long invitationId) {
         this.invitationId = invitationId;
         return this;
@@ -19,6 +21,7 @@ public class ReposDeleteInvitationRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposDeleteInvitationRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -26,9 +29,15 @@ public class ReposDeleteInvitationRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposDeleteInvitationRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposDeleteInvitationRequest(@JsonProperty("invitation_id") Long invitationId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.invitationId = invitationId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NifComprehensiveDefaultApplicationJSON {
     @JsonProperty("code")
     public Integer code;
+
     public NifComprehensiveDefaultApplicationJSON withCode(Integer code) {
         this.code = code;
         return this;
@@ -22,6 +23,7 @@ public class NifComprehensiveDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fault")
     public String fault;
+
     public NifComprehensiveDefaultApplicationJSON withFault(String fault) {
         this.fault = fault;
         return this;
@@ -29,6 +31,7 @@ public class NifComprehensiveDefaultApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public NifComprehensiveDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -36,9 +39,15 @@ public class NifComprehensiveDefaultApplicationJSON {
     
     @JsonProperty("tag")
     public String tag;
+
     public NifComprehensiveDefaultApplicationJSON withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public NifComprehensiveDefaultApplicationJSON(@JsonProperty("code") Integer code, @JsonProperty("message") String message, @JsonProperty("tag") String tag) {
+        this.code = code;
+        this.message = message;
+        this.tag = tag;
+  }
 }

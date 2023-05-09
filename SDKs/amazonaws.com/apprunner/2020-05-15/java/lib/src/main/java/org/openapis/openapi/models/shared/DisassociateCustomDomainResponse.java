@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateCustomDomainResponse {
     @JsonProperty("CustomDomain")
     public CustomDomain customDomain;
+
     public DisassociateCustomDomainResponse withCustomDomain(CustomDomain customDomain) {
         this.customDomain = customDomain;
         return this;
@@ -19,6 +20,7 @@ public class DisassociateCustomDomainResponse {
     
     @JsonProperty("DNSTarget")
     public String dnsTarget;
+
     public DisassociateCustomDomainResponse withDNSTarget(String dnsTarget) {
         this.dnsTarget = dnsTarget;
         return this;
@@ -26,6 +28,7 @@ public class DisassociateCustomDomainResponse {
     
     @JsonProperty("ServiceArn")
     public String serviceArn;
+
     public DisassociateCustomDomainResponse withServiceArn(String serviceArn) {
         this.serviceArn = serviceArn;
         return this;
@@ -33,9 +36,16 @@ public class DisassociateCustomDomainResponse {
     
     @JsonProperty("VpcDNSTargets")
     public VpcDNSTarget[] vpcDNSTargets;
+
     public DisassociateCustomDomainResponse withVpcDNSTargets(VpcDNSTarget[] vpcDNSTargets) {
         this.vpcDNSTargets = vpcDNSTargets;
         return this;
     }
     
+    public DisassociateCustomDomainResponse(@JsonProperty("CustomDomain") CustomDomain customDomain, @JsonProperty("DNSTarget") String dnsTarget, @JsonProperty("ServiceArn") String serviceArn, @JsonProperty("VpcDNSTargets") VpcDNSTarget[] vpcDNSTargets) {
+        this.customDomain = customDomain;
+        this.dnsTarget = dnsTarget;
+        this.serviceArn = serviceArn;
+        this.vpcDNSTargets = vpcDNSTargets;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateAnomalyMonitorResponse {
     @JsonProperty("MonitorArn")
     public String monitorArn;
+
     public UpdateAnomalyMonitorResponse withMonitorArn(String monitorArn) {
         this.monitorArn = monitorArn;
         return this;
     }
     
+    public UpdateAnomalyMonitorResponse(@JsonProperty("MonitorArn") String monitorArn) {
+        this.monitorArn = monitorArn;
+  }
 }

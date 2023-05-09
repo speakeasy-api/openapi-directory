@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdminLinkProviderForUserRequest {
     @JsonProperty("DestinationUser")
     public ProviderUserIdentifierType destinationUser;
+
     public AdminLinkProviderForUserRequest withDestinationUser(ProviderUserIdentifierType destinationUser) {
         this.destinationUser = destinationUser;
         return this;
@@ -16,6 +17,7 @@ public class AdminLinkProviderForUserRequest {
     
     @JsonProperty("SourceUser")
     public ProviderUserIdentifierType sourceUser;
+
     public AdminLinkProviderForUserRequest withSourceUser(ProviderUserIdentifierType sourceUser) {
         this.sourceUser = sourceUser;
         return this;
@@ -23,9 +25,15 @@ public class AdminLinkProviderForUserRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AdminLinkProviderForUserRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public AdminLinkProviderForUserRequest(@JsonProperty("DestinationUser") ProviderUserIdentifierType destinationUser, @JsonProperty("SourceUser") ProviderUserIdentifierType sourceUser, @JsonProperty("UserPoolId") String userPoolId) {
+        this.destinationUser = destinationUser;
+        this.sourceUser = sourceUser;
+        this.userPoolId = userPoolId;
+  }
 }

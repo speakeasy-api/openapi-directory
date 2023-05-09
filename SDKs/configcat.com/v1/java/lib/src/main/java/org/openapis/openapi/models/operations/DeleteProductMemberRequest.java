@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProductMemberRequest {
@@ -12,6 +13,7 @@ public class DeleteProductMemberRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
     public String productId;
+
     public DeleteProductMemberRequest withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -22,9 +24,14 @@ public class DeleteProductMemberRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public DeleteProductMemberRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public DeleteProductMemberRequest(@JsonProperty("productId") String productId, @JsonProperty("userId") String userId) {
+        this.productId = productId;
+        this.userId = userId;
+  }
 }

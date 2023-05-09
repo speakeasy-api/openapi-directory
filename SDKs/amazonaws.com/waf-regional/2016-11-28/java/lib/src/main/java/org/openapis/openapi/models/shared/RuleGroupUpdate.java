@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RuleGroupUpdate {
     @JsonProperty("Action")
     public ChangeActionEnum action;
+
     public RuleGroupUpdate withAction(ChangeActionEnum action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class RuleGroupUpdate {
     
     @JsonProperty("ActivatedRule")
     public ActivatedRule activatedRule;
+
     public RuleGroupUpdate withActivatedRule(ActivatedRule activatedRule) {
         this.activatedRule = activatedRule;
         return this;
     }
     
+    public RuleGroupUpdate(@JsonProperty("Action") ChangeActionEnum action, @JsonProperty("ActivatedRule") ActivatedRule activatedRule) {
+        this.action = action;
+        this.activatedRule = activatedRule;
+  }
 }

@@ -18,6 +18,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public String[] args;
+
     public Command withArgs(String[] args) {
         this.args = args;
         return this;
@@ -29,6 +30,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dir")
     public String dir;
+
     public Command withDir(String dir) {
         this.dir = dir;
         return this;
@@ -40,6 +42,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("env")
     public String[] env;
+
     public Command withEnv(String[] env) {
         this.env = env;
         return this;
@@ -51,6 +54,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Command withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Command withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waitFor")
     public String[] waitFor;
+
     public Command withWaitFor(String[] waitFor) {
         this.waitFor = waitFor;
         return this;
     }
     
+    public Command(){}
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class EventDescription {
     
     public String applicationName;
+
     public EventDescription withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class EventDescription {
     
     
     public String environmentName;
+
     public EventDescription withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -26,6 +28,7 @@ public class EventDescription {
     
     
     public OffsetDateTime eventDate;
+
     public EventDescription withEventDate(OffsetDateTime eventDate) {
         this.eventDate = eventDate;
         return this;
@@ -33,6 +36,7 @@ public class EventDescription {
     
     
     public String message;
+
     public EventDescription withMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +44,7 @@ public class EventDescription {
     
     
     public String platformArn;
+
     public EventDescription withPlatformArn(String platformArn) {
         this.platformArn = platformArn;
         return this;
@@ -47,6 +52,7 @@ public class EventDescription {
     
     
     public String requestId;
+
     public EventDescription withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -54,6 +60,7 @@ public class EventDescription {
     
     
     public EventSeverityEnum severity;
+
     public EventDescription withSeverity(EventSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -61,6 +68,7 @@ public class EventDescription {
     
     
     public String templateName;
+
     public EventDescription withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -68,9 +76,11 @@ public class EventDescription {
     
     
     public String versionLabel;
+
     public EventDescription withVersionLabel(String versionLabel) {
         this.versionLabel = versionLabel;
         return this;
     }
     
+    public EventDescription(){}
 }

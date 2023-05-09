@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProductSlugRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateSlugRequest createSlugRequest;
+
     public CreateProductSlugRequest withCreateSlugRequest(org.openapis.openapi.models.shared.CreateSlugRequest createSlugRequest) {
         this.createSlugRequest = createSlugRequest;
         return this;
@@ -16,9 +18,14 @@ public class CreateProductSlugRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
     public String organizationUuid;
+
     public CreateProductSlugRequest withOrganizationUuid(String organizationUuid) {
         this.organizationUuid = organizationUuid;
         return this;
     }
     
+    public CreateProductSlugRequest(@JsonProperty("CreateSlugRequest") org.openapis.openapi.models.shared.CreateSlugRequest createSlugRequest, @JsonProperty("organizationUuid") String organizationUuid) {
+        this.createSlugRequest = createSlugRequest;
+        this.organizationUuid = organizationUuid;
+  }
 }

@@ -15,6 +15,7 @@ public class ListResourceTypesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListResourceTypesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListResourceTypesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListResourceTypesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +39,11 @@ public class ListResourceTypesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRegionScope")
     public ListResourceTypesRequestBodyResourceRegionScopeEnum resourceRegionScope;
+
     public ListResourceTypesRequestBody withResourceRegionScope(ListResourceTypesRequestBodyResourceRegionScopeEnum resourceRegionScope) {
         this.resourceRegionScope = resourceRegionScope;
         return this;
     }
     
+    public ListResourceTypesRequestBody(){}
 }

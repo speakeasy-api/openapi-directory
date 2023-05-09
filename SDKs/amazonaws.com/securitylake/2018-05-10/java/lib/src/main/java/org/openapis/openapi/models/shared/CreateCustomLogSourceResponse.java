@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCustomLogSourceResponse {
     @JsonProperty("customDataLocation")
     public String customDataLocation;
+
     public CreateCustomLogSourceResponse withCustomDataLocation(String customDataLocation) {
         this.customDataLocation = customDataLocation;
         return this;
@@ -19,6 +20,7 @@ public class CreateCustomLogSourceResponse {
     
     @JsonProperty("glueCrawlerName")
     public String glueCrawlerName;
+
     public CreateCustomLogSourceResponse withGlueCrawlerName(String glueCrawlerName) {
         this.glueCrawlerName = glueCrawlerName;
         return this;
@@ -26,6 +28,7 @@ public class CreateCustomLogSourceResponse {
     
     @JsonProperty("glueDatabaseName")
     public String glueDatabaseName;
+
     public CreateCustomLogSourceResponse withGlueDatabaseName(String glueDatabaseName) {
         this.glueDatabaseName = glueDatabaseName;
         return this;
@@ -33,6 +36,7 @@ public class CreateCustomLogSourceResponse {
     
     @JsonProperty("glueTableName")
     public String glueTableName;
+
     public CreateCustomLogSourceResponse withGlueTableName(String glueTableName) {
         this.glueTableName = glueTableName;
         return this;
@@ -40,9 +44,17 @@ public class CreateCustomLogSourceResponse {
     
     @JsonProperty("logProviderAccessRoleArn")
     public String logProviderAccessRoleArn;
+
     public CreateCustomLogSourceResponse withLogProviderAccessRoleArn(String logProviderAccessRoleArn) {
         this.logProviderAccessRoleArn = logProviderAccessRoleArn;
         return this;
     }
     
+    public CreateCustomLogSourceResponse(@JsonProperty("customDataLocation") String customDataLocation, @JsonProperty("glueCrawlerName") String glueCrawlerName, @JsonProperty("glueDatabaseName") String glueDatabaseName, @JsonProperty("glueTableName") String glueTableName, @JsonProperty("logProviderAccessRoleArn") String logProviderAccessRoleArn) {
+        this.customDataLocation = customDataLocation;
+        this.glueCrawlerName = glueCrawlerName;
+        this.glueDatabaseName = glueDatabaseName;
+        this.glueTableName = glueTableName;
+        this.logProviderAccessRoleArn = logProviderAccessRoleArn;
+  }
 }

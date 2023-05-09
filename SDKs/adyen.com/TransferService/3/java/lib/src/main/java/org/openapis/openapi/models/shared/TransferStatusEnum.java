@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  *  For example, **authorised**, **refused**, or **error**.
  */
 public enum TransferStatusEnum {
+    APPROVAL_PENDING("approvalPending"),
     ATM_WITHDRAWAL("atmWithdrawal"),
     ATM_WITHDRAWAL_REVERSAL_PENDING("atmWithdrawalReversalPending"),
     ATM_WITHDRAWAL_REVERSED("atmWithdrawalReversed"),

@@ -15,6 +15,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ips")
     public String[] ips;
+
     public NetworkInterface withIps(String[] ips) {
         this.ips = ips;
         return this;
@@ -23,6 +24,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPrimary")
     public Boolean isPrimary;
+
     public NetworkInterface withIsPrimary(Boolean isPrimary) {
         this.isPrimary = isPrimary;
         return this;
@@ -31,9 +33,11 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macAddress")
     public String macAddress;
+
     public NetworkInterface withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
     }
     
+    public NetworkInterface(){}
 }

@@ -3,31 +3,22 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GETCreateDomainActionEnum;
-import org.openapis.openapi.models.operations.GETCreateDomainVersionEnum;
 import org.openapis.openapi.models.operations.GETCreateDomainRequest;
 import org.openapis.openapi.models.operations.GETCreateDomainResponse;
+import org.openapis.openapi.models.operations.GETCreateDomainVersionEnum;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GETCreateDomainRequest req = new GETCreateDomainRequest() {{
-                awsAccessKeyId = "corrupti";
-                action = "CreateDomain";
-                domainName = "provident";
-                signature = "distinctio";
-                signatureMethod = "quibusdam";
-                signatureVersion = "unde";
-                timestamp = "nulla";
-                version = "2009-04-15";
-            }}            
+            GETCreateDomainRequest req = new GETCreateDomainRequest("provident", GETCreateDomainActionEnum.CREATE_DOMAIN, "distinctio", "quibusdam", "unde", "nulla", "corrupti", GETCreateDomainVersionEnum.TWO_THOUSAND_AND_NINE0415);            
 
             GETCreateDomainResponse res = sdk.getCreateDomain(req);
 
@@ -37,5 +28,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

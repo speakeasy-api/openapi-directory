@@ -15,6 +15,7 @@ public class ContinentList {
      */
     @JsonProperty("continents")
     public Continent[] continents;
+
     public ContinentList withContinents(Continent[] continents) {
         this.continents = continents;
         return this;
@@ -25,9 +26,14 @@ public class ContinentList {
      */
     @JsonProperty("sum")
     public Integer sum;
+
     public ContinentList withSum(Integer sum) {
         this.sum = sum;
         return this;
     }
     
+    public ContinentList(@JsonProperty("continents") Continent[] continents, @JsonProperty("sum") Integer sum) {
+        this.continents = continents;
+        this.sum = sum;
+  }
 }

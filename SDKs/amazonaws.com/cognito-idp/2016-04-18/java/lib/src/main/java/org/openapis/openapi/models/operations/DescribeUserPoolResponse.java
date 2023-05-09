@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeUserPoolResponse {
     
     public String contentType;
+
     public DescribeUserPoolResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeUserPoolResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeUserPoolResponse describeUserPoolResponse;
+
     public DescribeUserPoolResponse withDescribeUserPoolResponse(org.openapis.openapi.models.shared.DescribeUserPoolResponse describeUserPoolResponse) {
         this.describeUserPoolResponse = describeUserPoolResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeUserPoolResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeUserPoolResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeUserPoolResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeUserPoolResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeUserPoolResponse {
      */
     
     public Object notAuthorizedException;
+
     public DescribeUserPoolResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeUserPoolResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeUserPoolResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeUserPoolResponse {
     
     
     public Integer statusCode;
+
     public DescribeUserPoolResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeUserPoolResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeUserPoolResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeUserPoolResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeUserPoolResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeUserPoolResponse {
      */
     
     public Object userPoolTaggingException;
+
     public DescribeUserPoolResponse withUserPoolTaggingException(Object userPoolTaggingException) {
         this.userPoolTaggingException = userPoolTaggingException;
         return this;
     }
     
+    public DescribeUserPoolResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

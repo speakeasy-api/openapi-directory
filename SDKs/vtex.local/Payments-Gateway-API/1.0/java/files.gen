@@ -127,4 +127,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/Request.java
 lib/src/main/java/org/openapis/openapi/models/shared/Action.java
 lib/src/main/java/org/openapis/openapi/models/shared/Payment1.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/configuration/README.md
+docs/installments/README.md
+docs/transactionflow/README.md
+docs/transactionprocess/README.md
 USAGE.md

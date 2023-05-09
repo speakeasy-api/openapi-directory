@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAccountProperties200ApplicationJSONDataGroup {
     @JsonProperty("id")
     public String id;
+
     public GetAccountProperties200ApplicationJSONDataGroup withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class GetAccountProperties200ApplicationJSONDataGroup {
     
     @JsonProperty("name")
     public String name;
+
     public GetAccountProperties200ApplicationJSONDataGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetAccountProperties200ApplicationJSONDataGroup(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

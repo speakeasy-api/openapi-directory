@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSubscriberResponse {
@@ -12,6 +13,7 @@ public class DeleteSubscriberResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteSubscriberResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteSubscriberResponse {
      */
     
     public Object accountNotFoundException;
+
     public DeleteSubscriberResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -32,6 +35,7 @@ public class DeleteSubscriberResponse {
      */
     
     public Object bucketNotFoundException;
+
     public DeleteSubscriberResponse withBucketNotFoundException(Object bucketNotFoundException) {
         this.bucketNotFoundException = bucketNotFoundException;
         return this;
@@ -42,6 +46,7 @@ public class DeleteSubscriberResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteSubscriberResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSubscriberResponse {
     
     
     public String contentType;
+
     public DeleteSubscriberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class DeleteSubscriberResponse {
      */
     
     public java.util.Map<String, Object> deleteSubscriberResponse;
+
     public DeleteSubscriberResponse withDeleteSubscriberResponse(java.util.Map<String, Object> deleteSubscriberResponse) {
         this.deleteSubscriberResponse = deleteSubscriberResponse;
         return this;
@@ -69,6 +76,7 @@ public class DeleteSubscriberResponse {
      */
     
     public Object internalServerException;
+
     public DeleteSubscriberResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteSubscriberResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteSubscriberResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteSubscriberResponse {
     
     
     public Integer statusCode;
+
     public DeleteSubscriberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteSubscriberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSubscriberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class DeleteSubscriberResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSubscriberResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,9 +125,14 @@ public class DeleteSubscriberResponse {
      */
     
     public Object validationException;
+
     public DeleteSubscriberResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteSubscriberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

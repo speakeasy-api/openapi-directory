@@ -15,6 +15,7 @@ public class ThingIndexingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public Field[] customFields;
+
     public ThingIndexingConfiguration withCustomFields(Field[] customFields) {
         this.customFields = customFields;
         return this;
@@ -23,6 +24,7 @@ public class ThingIndexingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceDefenderIndexingMode")
     public DeviceDefenderIndexingModeEnum deviceDefenderIndexingMode;
+
     public ThingIndexingConfiguration withDeviceDefenderIndexingMode(DeviceDefenderIndexingModeEnum deviceDefenderIndexingMode) {
         this.deviceDefenderIndexingMode = deviceDefenderIndexingMode;
         return this;
@@ -31,6 +33,7 @@ public class ThingIndexingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public IndexingFilter filter;
+
     public ThingIndexingConfiguration withFilter(IndexingFilter filter) {
         this.filter = filter;
         return this;
@@ -39,6 +42,7 @@ public class ThingIndexingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedFields")
     public Field[] managedFields;
+
     public ThingIndexingConfiguration withManagedFields(Field[] managedFields) {
         this.managedFields = managedFields;
         return this;
@@ -47,6 +51,7 @@ public class ThingIndexingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedShadowIndexingMode")
     public NamedShadowIndexingModeEnum namedShadowIndexingMode;
+
     public ThingIndexingConfiguration withNamedShadowIndexingMode(NamedShadowIndexingModeEnum namedShadowIndexingMode) {
         this.namedShadowIndexingMode = namedShadowIndexingMode;
         return this;
@@ -55,6 +60,7 @@ public class ThingIndexingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingConnectivityIndexingMode")
     public ThingConnectivityIndexingModeEnum thingConnectivityIndexingMode;
+
     public ThingIndexingConfiguration withThingConnectivityIndexingMode(ThingConnectivityIndexingModeEnum thingConnectivityIndexingMode) {
         this.thingConnectivityIndexingMode = thingConnectivityIndexingMode;
         return this;
@@ -62,9 +68,13 @@ public class ThingIndexingConfiguration {
     
     @JsonProperty("thingIndexingMode")
     public ThingIndexingModeEnum thingIndexingMode;
+
     public ThingIndexingConfiguration withThingIndexingMode(ThingIndexingModeEnum thingIndexingMode) {
         this.thingIndexingMode = thingIndexingMode;
         return this;
     }
     
+    public ThingIndexingConfiguration(@JsonProperty("thingIndexingMode") ThingIndexingModeEnum thingIndexingMode) {
+        this.thingIndexingMode = thingIndexingMode;
+  }
 }

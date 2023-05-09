@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DetectedDataDetails {
     @JsonProperty("value")
     public String value;
+
     public DetectedDataDetails withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DetectedDataDetails(@JsonProperty("value") String value) {
+        this.value = value;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1BatchCreateEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public GoogleCloudDialogflowV2beta1EntityTypeEntity[] entities;
+
     public GoogleCloudDialogflowV2beta1BatchCreateEntitiesRequest withEntities(GoogleCloudDialogflowV2beta1EntityTypeEntity[] entities) {
         this.entities = entities;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1BatchCreateEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2beta1BatchCreateEntitiesRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1BatchCreateEntitiesRequest(){}
 }

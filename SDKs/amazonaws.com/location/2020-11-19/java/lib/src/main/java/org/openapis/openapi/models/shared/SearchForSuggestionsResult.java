@@ -15,6 +15,7 @@ public class SearchForSuggestionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlaceId")
     public String placeId;
+
     public SearchForSuggestionsResult withPlaceId(String placeId) {
         this.placeId = placeId;
         return this;
@@ -22,9 +23,13 @@ public class SearchForSuggestionsResult {
     
     @JsonProperty("Text")
     public String text;
+
     public SearchForSuggestionsResult withText(String text) {
         this.text = text;
         return this;
     }
     
+    public SearchForSuggestionsResult(@JsonProperty("Text") String text) {
+        this.text = text;
+  }
 }

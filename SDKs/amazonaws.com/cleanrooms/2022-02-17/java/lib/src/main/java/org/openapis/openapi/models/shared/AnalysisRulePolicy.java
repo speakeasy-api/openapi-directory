@@ -15,9 +15,11 @@ public class AnalysisRulePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("v1")
     public AnalysisRulePolicyV1 v1;
+
     public AnalysisRulePolicy withV1(AnalysisRulePolicyV1 v1) {
         this.v1 = v1;
         return this;
     }
     
+    public AnalysisRulePolicy(){}
 }

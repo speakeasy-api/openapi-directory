@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeCapacityReservationFleetsResultCapacityReservationFleets {
     
     public String allocationStrategy;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleets withAllocationStrategy(String allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
         return this;
@@ -19,6 +20,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleets {
     
     
     public String capacityReservationFleetArn;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleets withCapacityReservationFleetArn(String capacityReservationFleetArn) {
         this.capacityReservationFleetArn = capacityReservationFleetArn;
         return this;
@@ -26,6 +28,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleets {
     
     
     public String capacityReservationFleetId;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleets withCapacityReservationFleetId(String capacityReservationFleetId) {
         this.capacityReservationFleetId = capacityReservationFleetId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleets {
     
     
     public OffsetDateTime createTime;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleets withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +44,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleets {
     
     
     public OffsetDateTime endDate;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleets withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -47,6 +52,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleets {
     
     
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceMatchCriteriaEnum instanceMatchCriteria;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleets withInstanceMatchCriteria(DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceMatchCriteriaEnum instanceMatchCriteria) {
         this.instanceMatchCriteria = instanceMatchCriteria;
         return this;
@@ -54,6 +60,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleets {
     
     
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecifications[] instanceTypeSpecifications;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleets withInstanceTypeSpecifications(DescribeCapacityReservationFleetsResultCapacityReservationFleetsInstanceTypeSpecifications[] instanceTypeSpecifications) {
         this.instanceTypeSpecifications = instanceTypeSpecifications;
         return this;
@@ -61,6 +68,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleets {
     
     
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsStateEnum state;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleets withState(DescribeCapacityReservationFleetsResultCapacityReservationFleetsStateEnum state) {
         this.state = state;
         return this;
@@ -68,6 +76,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleets {
     
     
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsTags[] tags;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleets withTags(DescribeCapacityReservationFleetsResultCapacityReservationFleetsTags[] tags) {
         this.tags = tags;
         return this;
@@ -75,6 +84,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleets {
     
     
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsTenancyEnum tenancy;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleets withTenancy(DescribeCapacityReservationFleetsResultCapacityReservationFleetsTenancyEnum tenancy) {
         this.tenancy = tenancy;
         return this;
@@ -82,6 +92,7 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleets {
     
     
     public Double totalFulfilledCapacity;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleets withTotalFulfilledCapacity(Double totalFulfilledCapacity) {
         this.totalFulfilledCapacity = totalFulfilledCapacity;
         return this;
@@ -89,9 +100,11 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleets {
     
     
     public Long totalTargetCapacity;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleets withTotalTargetCapacity(Long totalTargetCapacity) {
         this.totalTargetCapacity = totalTargetCapacity;
         return this;
     }
     
+    public DescribeCapacityReservationFleetsResultCapacityReservationFleets(){}
 }

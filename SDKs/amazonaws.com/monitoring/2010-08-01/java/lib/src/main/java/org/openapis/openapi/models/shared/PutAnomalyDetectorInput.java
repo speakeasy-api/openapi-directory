@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class PutAnomalyDetectorInput {
     
     public AnomalyDetectorConfiguration configuration;
+
     public PutAnomalyDetectorInput withConfiguration(AnomalyDetectorConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -16,6 +17,7 @@ public class PutAnomalyDetectorInput {
     
     
     public Dimension[] dimensions;
+
     public PutAnomalyDetectorInput withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -23,6 +25,7 @@ public class PutAnomalyDetectorInput {
     
     
     public MetricMathAnomalyDetector metricMathAnomalyDetector;
+
     public PutAnomalyDetectorInput withMetricMathAnomalyDetector(MetricMathAnomalyDetector metricMathAnomalyDetector) {
         this.metricMathAnomalyDetector = metricMathAnomalyDetector;
         return this;
@@ -30,6 +33,7 @@ public class PutAnomalyDetectorInput {
     
     
     public String metricName;
+
     public PutAnomalyDetectorInput withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -37,6 +41,7 @@ public class PutAnomalyDetectorInput {
     
     
     public String namespace;
+
     public PutAnomalyDetectorInput withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -44,6 +49,7 @@ public class PutAnomalyDetectorInput {
     
     
     public SingleMetricAnomalyDetector singleMetricAnomalyDetector;
+
     public PutAnomalyDetectorInput withSingleMetricAnomalyDetector(SingleMetricAnomalyDetector singleMetricAnomalyDetector) {
         this.singleMetricAnomalyDetector = singleMetricAnomalyDetector;
         return this;
@@ -51,9 +57,11 @@ public class PutAnomalyDetectorInput {
     
     
     public String stat;
+
     public PutAnomalyDetectorInput withStat(String stat) {
         this.stat = stat;
         return this;
     }
     
+    public PutAnomalyDetectorInput(){}
 }

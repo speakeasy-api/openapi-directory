@@ -19,6 +19,7 @@ public class ElectionDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active_election")
     public Boolean activeElection;
+
     public ElectionDate withActiveElection(Boolean activeElection) {
         this.activeElection = activeElection;
         return this;
@@ -32,6 +33,7 @@ public class ElectionDate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("create_date")
     public OffsetDateTime createDate;
+
     public ElectionDate withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -44,6 +46,7 @@ public class ElectionDate {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("election_date")
     public LocalDate electionDate;
+
     public ElectionDate withElectionDate(LocalDate electionDate) {
         this.electionDate = electionDate;
         return this;
@@ -55,6 +58,7 @@ public class ElectionDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("election_district")
     public Integer electionDistrict;
+
     public ElectionDate withElectionDistrict(Integer electionDistrict) {
         this.electionDistrict = electionDistrict;
         return this;
@@ -63,6 +67,7 @@ public class ElectionDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("election_notes")
     public String electionNotes;
+
     public ElectionDate withElectionNotes(String electionNotes) {
         this.electionNotes = electionNotes;
         return this;
@@ -74,6 +79,7 @@ public class ElectionDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("election_party")
     public String electionParty;
+
     public ElectionDate withElectionParty(String electionParty) {
         this.electionParty = electionParty;
         return this;
@@ -85,6 +91,7 @@ public class ElectionDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("election_state")
     public String electionState;
+
     public ElectionDate withElectionState(String electionState) {
         this.electionState = electionState;
         return this;
@@ -93,6 +100,7 @@ public class ElectionDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("election_type_full")
     public String electionTypeFull;
+
     public ElectionDate withElectionTypeFull(String electionTypeFull) {
         this.electionTypeFull = electionTypeFull;
         return this;
@@ -108,6 +116,7 @@ public class ElectionDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("election_type_id")
     public String electionTypeId;
+
     public ElectionDate withElectionTypeId(String electionTypeId) {
         this.electionTypeId = electionTypeId;
         return this;
@@ -119,6 +128,7 @@ public class ElectionDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("election_year")
     public Integer electionYear;
+
     public ElectionDate withElectionYear(Integer electionYear) {
         this.electionYear = electionYear;
         return this;
@@ -130,6 +140,7 @@ public class ElectionDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("office_sought")
     public String officeSought;
+
     public ElectionDate withOfficeSought(String officeSought) {
         this.officeSought = officeSought;
         return this;
@@ -139,6 +150,7 @@ public class ElectionDate {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("primary_general_date")
     public LocalDate primaryGeneralDate;
+
     public ElectionDate withPrimaryGeneralDate(LocalDate primaryGeneralDate) {
         this.primaryGeneralDate = primaryGeneralDate;
         return this;
@@ -152,9 +164,11 @@ public class ElectionDate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("update_date")
     public OffsetDateTime updateDate;
+
     public ElectionDate withUpdateDate(OffsetDateTime updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public ElectionDate(){}
 }

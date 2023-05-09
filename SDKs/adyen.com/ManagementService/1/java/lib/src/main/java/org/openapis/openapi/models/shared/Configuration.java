@@ -14,6 +14,7 @@ public class Configuration {
      */
     @JsonProperty("brand")
     public String brand;
+
     public Configuration withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -24,6 +25,7 @@ public class Configuration {
      */
     @JsonProperty("currencies")
     public Currency[] currencies;
+
     public Configuration withCurrencies(Currency[] currencies) {
         this.currencies = currencies;
         return this;
@@ -37,9 +39,14 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public String[] sources;
+
     public Configuration withSources(String[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public Configuration(@JsonProperty("brand") String brand, @JsonProperty("currencies") Currency[] currencies) {
+        this.brand = brand;
+        this.currencies = currencies;
+  }
 }

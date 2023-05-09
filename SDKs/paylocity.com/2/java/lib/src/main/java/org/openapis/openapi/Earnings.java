@@ -58,11 +58,9 @@ public class Earnings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddOrUpdateAnEmployeeEarningResponse res = new org.openapis.openapi.models.operations.AddOrUpdateAnEmployeeEarningResponse() {{
+        org.openapis.openapi.models.operations.AddOrUpdateAnEmployeeEarningResponse res = new org.openapis.openapi.models.operations.AddOrUpdateAnEmployeeEarningResponse(contentType, httpRes.statusCode()) {{
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 429) {
@@ -101,11 +99,9 @@ public class Earnings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteEarningByEarningCodeAndStartDateResponse res = new org.openapis.openapi.models.operations.DeleteEarningByEarningCodeAndStartDateResponse() {{
+        org.openapis.openapi.models.operations.DeleteEarningByEarningCodeAndStartDateResponse res = new org.openapis.openapi.models.operations.DeleteEarningByEarningCodeAndStartDateResponse(contentType, httpRes.statusCode()) {{
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -144,12 +140,10 @@ public class Earnings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllEarningsResponse res = new org.openapis.openapi.models.operations.GetAllEarningsResponse() {{
+        org.openapis.openapi.models.operations.GetAllEarningsResponse res = new org.openapis.openapi.models.operations.GetAllEarningsResponse(contentType, httpRes.statusCode()) {{
             earnings = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,12 +189,10 @@ public class Earnings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEarningByEarningCodeAndStartDateResponse res = new org.openapis.openapi.models.operations.GetEarningByEarningCodeAndStartDateResponse() {{
+        org.openapis.openapi.models.operations.GetEarningByEarningCodeAndStartDateResponse res = new org.openapis.openapi.models.operations.GetEarningByEarningCodeAndStartDateResponse(contentType, httpRes.statusCode()) {{
             earning = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,12 +238,10 @@ public class Earnings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEarningsByEarningCodeResponse res = new org.openapis.openapi.models.operations.GetEarningsByEarningCodeResponse() {{
+        org.openapis.openapi.models.operations.GetEarningsByEarningCodeResponse res = new org.openapis.openapi.models.operations.GetEarningsByEarningCodeResponse(contentType, httpRes.statusCode()) {{
             earnings = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

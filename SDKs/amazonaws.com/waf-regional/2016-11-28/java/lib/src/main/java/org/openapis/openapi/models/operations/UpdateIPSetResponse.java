@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateIPSetResponse {
     
     public String contentType;
+
     public UpdateIPSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateIPSetResponse {
     
     
     public Integer statusCode;
+
     public UpdateIPSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateIPSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateIPSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateIPSetResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateIPSetResponse updateIPSetResponse;
+
     public UpdateIPSetResponse withUpdateIPSetResponse(org.openapis.openapi.models.shared.UpdateIPSetResponse updateIPSetResponse) {
         this.updateIPSetResponse = updateIPSetResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateIPSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public UpdateIPSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateIPSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public UpdateIPSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateIPSetResponse {
      */
     
     public Object wafInvalidOperationException;
+
     public UpdateIPSetResponse withWAFInvalidOperationException(Object wafInvalidOperationException) {
         this.wafInvalidOperationException = wafInvalidOperationException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateIPSetResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public UpdateIPSetResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateIPSetResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public UpdateIPSetResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateIPSetResponse {
      */
     
     public Object wafNonexistentContainerException;
+
     public UpdateIPSetResponse withWAFNonexistentContainerException(Object wafNonexistentContainerException) {
         this.wafNonexistentContainerException = wafNonexistentContainerException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateIPSetResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public UpdateIPSetResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -113,6 +125,7 @@ public class UpdateIPSetResponse {
      */
     
     public Object wafReferencedItemException;
+
     public UpdateIPSetResponse withWAFReferencedItemException(Object wafReferencedItemException) {
         this.wafReferencedItemException = wafReferencedItemException;
         return this;
@@ -123,9 +136,14 @@ public class UpdateIPSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public UpdateIPSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public UpdateIPSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

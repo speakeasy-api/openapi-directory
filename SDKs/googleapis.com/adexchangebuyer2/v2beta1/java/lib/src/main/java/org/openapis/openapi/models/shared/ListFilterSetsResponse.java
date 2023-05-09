@@ -18,6 +18,7 @@ public class ListFilterSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterSets")
     public FilterSet[] filterSets;
+
     public ListFilterSetsResponse withFilterSets(FilterSet[] filterSets) {
         this.filterSets = filterSets;
         return this;
@@ -29,9 +30,11 @@ public class ListFilterSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListFilterSetsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListFilterSetsResponse(){}
 }

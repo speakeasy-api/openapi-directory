@@ -18,6 +18,7 @@ public class CreativeDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public String height;
+
     public CreativeDimensions withHeight(String height) {
         this.height = height;
         return this;
@@ -29,9 +30,11 @@ public class CreativeDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public String width;
+
     public CreativeDimensions withWidth(String width) {
         this.width = width;
         return this;
     }
     
+    public CreativeDimensions(){}
 }

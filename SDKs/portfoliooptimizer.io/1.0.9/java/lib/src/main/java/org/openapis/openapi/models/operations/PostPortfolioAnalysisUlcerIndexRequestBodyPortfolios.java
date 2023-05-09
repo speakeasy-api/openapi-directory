@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisUlcerIndexRequestBodyPortfolios {
      */
     @JsonProperty("portfolioValues")
     public Double[] portfolioValues;
+
     public PostPortfolioAnalysisUlcerIndexRequestBodyPortfolios withPortfolioValues(Double[] portfolioValues) {
         this.portfolioValues = portfolioValues;
         return this;
     }
     
+    public PostPortfolioAnalysisUlcerIndexRequestBodyPortfolios(@JsonProperty("portfolioValues") Double[] portfolioValues) {
+        this.portfolioValues = portfolioValues;
+  }
 }

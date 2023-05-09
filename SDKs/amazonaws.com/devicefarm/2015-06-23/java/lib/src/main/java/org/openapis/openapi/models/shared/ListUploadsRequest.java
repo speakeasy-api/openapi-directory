@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListUploadsRequest {
     @JsonProperty("arn")
     public String arn;
+
     public ListUploadsRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class ListUploadsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListUploadsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +32,13 @@ public class ListUploadsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UploadTypeEnum type;
+
     public ListUploadsRequest withType(UploadTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListUploadsRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

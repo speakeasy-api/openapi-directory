@@ -22,6 +22,7 @@ public class ExperimentExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endedTime")
     public OffsetDateTime endedTime;
+
     public ExperimentExecution withEndedTime(OffsetDateTime endedTime) {
         this.endedTime = endedTime;
         return this;
@@ -32,9 +33,11 @@ public class ExperimentExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedTime")
     public OffsetDateTime startedTime;
+
     public ExperimentExecution withStartedTime(OffsetDateTime startedTime) {
         this.startedTime = startedTime;
         return this;
     }
     
+    public ExperimentExecution(){}
 }

@@ -13,11 +13,36 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class WorkflowInput {
     /**
+     * Optional. Describes the level of platform logging to apply to calls and call responses during executions of this workflow. If both the workflow and the execution specify a logging level, the execution level takes precedence.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("callLogLevel")
+    public WorkflowCallLogLevelEnum callLogLevel;
+
+    public WorkflowInput withCallLogLevel(WorkflowCallLogLevelEnum callLogLevel) {
+        this.callLogLevel = callLogLevel;
+        return this;
+    }
+    
+    /**
+     * Optional. The resource name of a KMS crypto key used to encrypt or decrypt the data associated with the workflow. Format: projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey} Using `-` as a wildcard for the `{project}` or not providing one at all will infer the project from the account. If not provided, data associated with the workflow will not be CMEK-encrypted.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cryptoKeyName")
+    public String cryptoKeyName;
+
+    public WorkflowInput withCryptoKeyName(String cryptoKeyName) {
+        this.cryptoKeyName = cryptoKeyName;
+        return this;
+    }
+    
+    /**
      * Description of the workflow provided by the user. Must be at most 1000 unicode characters long.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public WorkflowInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +54,7 @@ public class WorkflowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public WorkflowInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +66,7 @@ public class WorkflowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WorkflowInput withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +78,7 @@ public class WorkflowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public WorkflowInput withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -62,9 +90,23 @@ public class WorkflowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceContents")
     public String sourceContents;
+
     public WorkflowInput withSourceContents(String sourceContents) {
         this.sourceContents = sourceContents;
         return this;
     }
     
+    /**
+     * Describes an error related to the current state of the workflow.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("stateError")
+    public StateError stateError;
+
+    public WorkflowInput withStateError(StateError stateError) {
+        this.stateError = stateError;
+        return this;
+    }
+    
+    public WorkflowInput(){}
 }

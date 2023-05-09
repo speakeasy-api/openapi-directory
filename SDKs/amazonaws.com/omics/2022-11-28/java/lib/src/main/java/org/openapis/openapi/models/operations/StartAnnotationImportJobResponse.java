@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartAnnotationImportJobResponse {
@@ -12,6 +13,7 @@ public class StartAnnotationImportJobResponse {
      */
     
     public Object accessDeniedException;
+
     public StartAnnotationImportJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartAnnotationImportJobResponse {
     
     
     public String contentType;
+
     public StartAnnotationImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartAnnotationImportJobResponse {
      */
     
     public Object internalServerException;
+
     public StartAnnotationImportJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartAnnotationImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartAnnotationImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartAnnotationImportJobResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartAnnotationImportJobResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -59,6 +65,7 @@ public class StartAnnotationImportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartAnnotationImportResponse startAnnotationImportResponse;
+
     public StartAnnotationImportJobResponse withStartAnnotationImportResponse(org.openapis.openapi.models.shared.StartAnnotationImportResponse startAnnotationImportResponse) {
         this.startAnnotationImportResponse = startAnnotationImportResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartAnnotationImportJobResponse {
     
     
     public Integer statusCode;
+
     public StartAnnotationImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartAnnotationImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartAnnotationImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class StartAnnotationImportJobResponse {
      */
     
     public Object throttlingException;
+
     public StartAnnotationImportJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class StartAnnotationImportJobResponse {
      */
     
     public Object validationException;
+
     public StartAnnotationImportJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartAnnotationImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

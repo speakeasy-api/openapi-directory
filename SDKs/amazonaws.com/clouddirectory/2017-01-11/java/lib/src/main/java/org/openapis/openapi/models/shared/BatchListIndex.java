@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchListIndex {
     @JsonProperty("IndexReference")
     public ObjectReference indexReference;
+
     public BatchListIndex withIndexReference(ObjectReference indexReference) {
         this.indexReference = indexReference;
         return this;
@@ -22,6 +23,7 @@ public class BatchListIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public BatchListIndex withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +32,7 @@ public class BatchListIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public BatchListIndex withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -38,9 +41,13 @@ public class BatchListIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RangesOnIndexedValues")
     public ObjectAttributeRange[] rangesOnIndexedValues;
+
     public BatchListIndex withRangesOnIndexedValues(ObjectAttributeRange[] rangesOnIndexedValues) {
         this.rangesOnIndexedValues = rangesOnIndexedValues;
         return this;
     }
     
+    public BatchListIndex(@JsonProperty("IndexReference") ObjectReference indexReference) {
+        this.indexReference = indexReference;
+  }
 }

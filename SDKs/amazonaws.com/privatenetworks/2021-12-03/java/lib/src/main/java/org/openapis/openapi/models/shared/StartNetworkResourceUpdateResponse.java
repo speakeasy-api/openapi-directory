@@ -15,9 +15,11 @@ public class StartNetworkResourceUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkResource")
     public NetworkResource networkResource;
+
     public StartNetworkResourceUpdateResponse withNetworkResource(NetworkResource networkResource) {
         this.networkResource = networkResource;
         return this;
     }
     
+    public StartNetworkResourceUpdateResponse(){}
 }

@@ -18,9 +18,11 @@ public class HttpLoadBalancing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public HttpLoadBalancing withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
     }
     
+    public HttpLoadBalancing(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CapabilityProblemEntity {
+    /**
+     * List of document IDs corresponding to the verification errors from capabilities.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public String[] documents;
+
     public CapabilityProblemEntity withDocuments(String[] documents) {
         this.documents = documents;
         return this;
@@ -20,6 +24,7 @@ public class CapabilityProblemEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CapabilityProblemEntity withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +33,7 @@ public class CapabilityProblemEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public CapabilityProblemEntityRecursive owner;
+
     public CapabilityProblemEntity withOwner(CapabilityProblemEntityRecursive owner) {
         this.owner = owner;
         return this;
@@ -36,9 +42,11 @@ public class CapabilityProblemEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CapabilityProblemEntityTypeEnum type;
+
     public CapabilityProblemEntity withType(CapabilityProblemEntityTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CapabilityProblemEntity(){}
 }

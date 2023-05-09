@@ -18,6 +18,7 @@ public class SetNodePoolManagementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public SetNodePoolManagementRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -29,6 +30,7 @@ public class SetNodePoolManagementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("management")
     public NodeManagement management;
+
     public SetNodePoolManagementRequest withManagement(NodeManagement management) {
         this.management = management;
         return this;
@@ -40,6 +42,7 @@ public class SetNodePoolManagementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SetNodePoolManagementRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class SetNodePoolManagementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodePoolId")
     public String nodePoolId;
+
     public SetNodePoolManagementRequest withNodePoolId(String nodePoolId) {
         this.nodePoolId = nodePoolId;
         return this;
@@ -62,6 +66,7 @@ public class SetNodePoolManagementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public SetNodePoolManagementRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -73,9 +78,11 @@ public class SetNodePoolManagementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public SetNodePoolManagementRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public SetNodePoolManagementRequest(){}
 }

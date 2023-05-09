@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCertificateAuthorityCertificateResponse {
     
     public String contentType;
+
     public GetCertificateAuthorityCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCertificateAuthorityCertificateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCertificateAuthorityCertificateResponse getCertificateAuthorityCertificateResponse;
+
     public GetCertificateAuthorityCertificateResponse withGetCertificateAuthorityCertificateResponse(org.openapis.openapi.models.shared.GetCertificateAuthorityCertificateResponse getCertificateAuthorityCertificateResponse) {
         this.getCertificateAuthorityCertificateResponse = getCertificateAuthorityCertificateResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetCertificateAuthorityCertificateResponse {
      */
     
     public Object invalidArnException;
+
     public GetCertificateAuthorityCertificateResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class GetCertificateAuthorityCertificateResponse {
      */
     
     public Object invalidStateException;
+
     public GetCertificateAuthorityCertificateResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class GetCertificateAuthorityCertificateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetCertificateAuthorityCertificateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetCertificateAuthorityCertificateResponse {
     
     
     public Integer statusCode;
+
     public GetCertificateAuthorityCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetCertificateAuthorityCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCertificateAuthorityCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCertificateAuthorityCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

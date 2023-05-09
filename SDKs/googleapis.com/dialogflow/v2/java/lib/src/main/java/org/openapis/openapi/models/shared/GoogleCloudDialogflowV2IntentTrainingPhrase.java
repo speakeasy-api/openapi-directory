@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2IntentTrainingPhrase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2IntentTrainingPhrase withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2IntentTrainingPhrase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parts")
     public GoogleCloudDialogflowV2IntentTrainingPhrasePart[] parts;
+
     public GoogleCloudDialogflowV2IntentTrainingPhrase withParts(GoogleCloudDialogflowV2IntentTrainingPhrasePart[] parts) {
         this.parts = parts;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2IntentTrainingPhrase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timesAddedCount")
     public Integer timesAddedCount;
+
     public GoogleCloudDialogflowV2IntentTrainingPhrase withTimesAddedCount(Integer timesAddedCount) {
         this.timesAddedCount = timesAddedCount;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2IntentTrainingPhrase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDialogflowV2IntentTrainingPhraseTypeEnum type;
+
     public GoogleCloudDialogflowV2IntentTrainingPhrase withType(GoogleCloudDialogflowV2IntentTrainingPhraseTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentTrainingPhrase(){}
 }

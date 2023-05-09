@@ -15,6 +15,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autodetect")
     public Boolean autodetect;
+
     public ExternalDataConfiguration withAutodetect(Boolean autodetect) {
         this.autodetect = autodetect;
         return this;
@@ -23,6 +24,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avroOptions")
     public AvroOptions avroOptions;
+
     public ExternalDataConfiguration withAvroOptions(AvroOptions avroOptions) {
         this.avroOptions = avroOptions;
         return this;
@@ -31,6 +33,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigtableOptions")
     public BigtableOptions bigtableOptions;
+
     public ExternalDataConfiguration withBigtableOptions(BigtableOptions bigtableOptions) {
         this.bigtableOptions = bigtableOptions;
         return this;
@@ -42,6 +45,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compression")
     public String compression;
+
     public ExternalDataConfiguration withCompression(String compression) {
         this.compression = compression;
         return this;
@@ -53,6 +57,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionId")
     public String connectionId;
+
     public ExternalDataConfiguration withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -61,6 +66,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("csvOptions")
     public CsvOptions csvOptions;
+
     public ExternalDataConfiguration withCsvOptions(CsvOptions csvOptions) {
         this.csvOptions = csvOptions;
         return this;
@@ -72,6 +78,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decimalTargetTypes")
     public String[] decimalTargetTypes;
+
     public ExternalDataConfiguration withDecimalTargetTypes(String[] decimalTargetTypes) {
         this.decimalTargetTypes = decimalTargetTypes;
         return this;
@@ -80,6 +87,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleSheetsOptions")
     public GoogleSheetsOptions googleSheetsOptions;
+
     public ExternalDataConfiguration withGoogleSheetsOptions(GoogleSheetsOptions googleSheetsOptions) {
         this.googleSheetsOptions = googleSheetsOptions;
         return this;
@@ -88,6 +96,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hivePartitioningOptions")
     public HivePartitioningOptions hivePartitioningOptions;
+
     public ExternalDataConfiguration withHivePartitioningOptions(HivePartitioningOptions hivePartitioningOptions) {
         this.hivePartitioningOptions = hivePartitioningOptions;
         return this;
@@ -99,6 +108,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreUnknownValues")
     public Boolean ignoreUnknownValues;
+
     public ExternalDataConfiguration withIgnoreUnknownValues(Boolean ignoreUnknownValues) {
         this.ignoreUnknownValues = ignoreUnknownValues;
         return this;
@@ -110,6 +120,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxBadRecords")
     public Integer maxBadRecords;
+
     public ExternalDataConfiguration withMaxBadRecords(Integer maxBadRecords) {
         this.maxBadRecords = maxBadRecords;
         return this;
@@ -121,6 +132,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataCacheMode")
     public String metadataCacheMode;
+
     public ExternalDataConfiguration withMetadataCacheMode(String metadataCacheMode) {
         this.metadataCacheMode = metadataCacheMode;
         return this;
@@ -132,6 +144,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectMetadata")
     public String objectMetadata;
+
     public ExternalDataConfiguration withObjectMetadata(String objectMetadata) {
         this.objectMetadata = objectMetadata;
         return this;
@@ -140,6 +153,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parquetOptions")
     public ParquetOptions parquetOptions;
+
     public ExternalDataConfiguration withParquetOptions(ParquetOptions parquetOptions) {
         this.parquetOptions = parquetOptions;
         return this;
@@ -151,6 +165,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceFileSchemaUri")
     public String referenceFileSchemaUri;
+
     public ExternalDataConfiguration withReferenceFileSchemaUri(String referenceFileSchemaUri) {
         this.referenceFileSchemaUri = referenceFileSchemaUri;
         return this;
@@ -159,6 +174,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public TableSchema schema;
+
     public ExternalDataConfiguration withSchema(TableSchema schema) {
         this.schema = schema;
         return this;
@@ -170,6 +186,7 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceFormat")
     public String sourceFormat;
+
     public ExternalDataConfiguration withSourceFormat(String sourceFormat) {
         this.sourceFormat = sourceFormat;
         return this;
@@ -181,9 +198,11 @@ public class ExternalDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceUris")
     public String[] sourceUris;
+
     public ExternalDataConfiguration withSourceUris(String[] sourceUris) {
         this.sourceUris = sourceUris;
         return this;
     }
     
+    public ExternalDataConfiguration(){}
 }

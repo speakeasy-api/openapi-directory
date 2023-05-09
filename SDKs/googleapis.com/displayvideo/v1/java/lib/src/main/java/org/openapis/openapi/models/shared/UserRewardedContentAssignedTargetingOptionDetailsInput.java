@@ -18,9 +18,11 @@ public class UserRewardedContentAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public UserRewardedContentAssignedTargetingOptionDetailsInput withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public UserRewardedContentAssignedTargetingOptionDetailsInput(){}
 }

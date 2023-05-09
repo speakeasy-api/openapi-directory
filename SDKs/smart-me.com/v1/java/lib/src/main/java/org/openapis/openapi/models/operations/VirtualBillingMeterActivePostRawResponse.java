@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VirtualBillingMeterActivePostRawResponse {
     
     public byte[] body;
+
     public VirtualBillingMeterActivePostRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class VirtualBillingMeterActivePostRawResponse {
     
     
     public String contentType;
+
     public VirtualBillingMeterActivePostRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class VirtualBillingMeterActivePostRawResponse {
      */
     
     public org.openapis.openapi.models.shared.Device device;
+
     public VirtualBillingMeterActivePostRawResponse withDevice(org.openapis.openapi.models.shared.Device device) {
         this.device = device;
         return this;
@@ -33,6 +37,7 @@ public class VirtualBillingMeterActivePostRawResponse {
     
     
     public Integer statusCode;
+
     public VirtualBillingMeterActivePostRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class VirtualBillingMeterActivePostRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VirtualBillingMeterActivePostRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VirtualBillingMeterActivePostRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

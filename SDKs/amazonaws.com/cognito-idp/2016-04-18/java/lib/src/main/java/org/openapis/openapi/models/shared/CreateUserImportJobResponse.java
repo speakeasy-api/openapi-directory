@@ -15,9 +15,11 @@ public class CreateUserImportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserImportJob")
     public UserImportJobType userImportJob;
+
     public CreateUserImportJobResponse withUserImportJob(UserImportJobType userImportJob) {
         this.userImportJob = userImportJob;
         return this;
     }
     
+    public CreateUserImportJobResponse(){}
 }

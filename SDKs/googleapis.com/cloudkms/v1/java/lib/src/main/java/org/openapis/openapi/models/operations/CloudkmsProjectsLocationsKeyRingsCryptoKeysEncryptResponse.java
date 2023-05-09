@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse {
     
     public String contentType;
+
     public CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse {
      */
     
     public org.openapis.openapi.models.shared.EncryptResponse encryptResponse;
+
     public CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse withEncryptResponse(org.openapis.openapi.models.shared.EncryptResponse encryptResponse) {
         this.encryptResponse = encryptResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse {
     
     
     public Integer statusCode;
+
     public CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

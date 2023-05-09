@@ -15,9 +15,11 @@ public class S3OutputUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputUrl")
     public String outputUrl;
+
     public S3OutputUrl withOutputUrl(String outputUrl) {
         this.outputUrl = outputUrl;
         return this;
     }
     
+    public S3OutputUrl(){}
 }

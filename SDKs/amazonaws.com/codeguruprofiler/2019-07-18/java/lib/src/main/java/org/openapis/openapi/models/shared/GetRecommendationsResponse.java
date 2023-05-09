@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetRecommendationsResponse {
     @JsonProperty("anomalies")
     public Anomaly[] anomalies;
+
     public GetRecommendationsResponse withAnomalies(Anomaly[] anomalies) {
         this.anomalies = anomalies;
         return this;
@@ -26,6 +27,7 @@ public class GetRecommendationsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("profileEndTime")
     public OffsetDateTime profileEndTime;
+
     public GetRecommendationsResponse withProfileEndTime(OffsetDateTime profileEndTime) {
         this.profileEndTime = profileEndTime;
         return this;
@@ -35,6 +37,7 @@ public class GetRecommendationsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("profileStartTime")
     public OffsetDateTime profileStartTime;
+
     public GetRecommendationsResponse withProfileStartTime(OffsetDateTime profileStartTime) {
         this.profileStartTime = profileStartTime;
         return this;
@@ -42,6 +45,7 @@ public class GetRecommendationsResponse {
     
     @JsonProperty("profilingGroupName")
     public String profilingGroupName;
+
     public GetRecommendationsResponse withProfilingGroupName(String profilingGroupName) {
         this.profilingGroupName = profilingGroupName;
         return this;
@@ -49,9 +53,17 @@ public class GetRecommendationsResponse {
     
     @JsonProperty("recommendations")
     public Recommendation[] recommendations;
+
     public GetRecommendationsResponse withRecommendations(Recommendation[] recommendations) {
         this.recommendations = recommendations;
         return this;
     }
     
+    public GetRecommendationsResponse(@JsonProperty("anomalies") Anomaly[] anomalies, @JsonProperty("profileEndTime") OffsetDateTime profileEndTime, @JsonProperty("profileStartTime") OffsetDateTime profileStartTime, @JsonProperty("profilingGroupName") String profilingGroupName, @JsonProperty("recommendations") Recommendation[] recommendations) {
+        this.anomalies = anomalies;
+        this.profileEndTime = profileEndTime;
+        this.profileStartTime = profileStartTime;
+        this.profilingGroupName = profilingGroupName;
+        this.recommendations = recommendations;
+  }
 }

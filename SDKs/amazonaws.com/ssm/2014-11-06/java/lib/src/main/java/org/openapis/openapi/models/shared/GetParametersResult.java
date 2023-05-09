@@ -15,6 +15,7 @@ public class GetParametersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvalidParameters")
     public String[] invalidParameters;
+
     public GetParametersResult withInvalidParameters(String[] invalidParameters) {
         this.invalidParameters = invalidParameters;
         return this;
@@ -23,9 +24,11 @@ public class GetParametersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public Parameter[] parameters;
+
     public GetParametersResult withParameters(Parameter[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public GetParametersResult(){}
 }

@@ -15,6 +15,7 @@ public class EntityPropertyReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentName")
     public String componentName;
+
     public EntityPropertyReference withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -23,6 +24,7 @@ public class EntityPropertyReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityId")
     public String entityId;
+
     public EntityPropertyReference withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -31,6 +33,7 @@ public class EntityPropertyReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIdProperty")
     public java.util.Map<String, String> externalIdProperty;
+
     public EntityPropertyReference withExternalIdProperty(java.util.Map<String, String> externalIdProperty) {
         this.externalIdProperty = externalIdProperty;
         return this;
@@ -38,9 +41,13 @@ public class EntityPropertyReference {
     
     @JsonProperty("propertyName")
     public String propertyName;
+
     public EntityPropertyReference withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
     }
     
+    public EntityPropertyReference(@JsonProperty("propertyName") String propertyName) {
+        this.propertyName = propertyName;
+  }
 }

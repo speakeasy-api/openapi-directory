@@ -18,9 +18,11 @@ public class GoogleCloudRecommendationengineV1beta1FeatureMapStringList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String[] value;
+
     public GoogleCloudRecommendationengineV1beta1FeatureMapStringList withValue(String[] value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1FeatureMapStringList(){}
 }

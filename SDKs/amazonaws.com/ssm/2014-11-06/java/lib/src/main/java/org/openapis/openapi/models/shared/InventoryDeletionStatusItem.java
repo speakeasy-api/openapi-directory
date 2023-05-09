@@ -20,6 +20,7 @@ public class InventoryDeletionStatusItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionId")
     public String deletionId;
+
     public InventoryDeletionStatusItem withDeletionId(String deletionId) {
         this.deletionId = deletionId;
         return this;
@@ -30,6 +31,7 @@ public class InventoryDeletionStatusItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeletionStartTime")
     public OffsetDateTime deletionStartTime;
+
     public InventoryDeletionStatusItem withDeletionStartTime(OffsetDateTime deletionStartTime) {
         this.deletionStartTime = deletionStartTime;
         return this;
@@ -38,6 +40,7 @@ public class InventoryDeletionStatusItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionSummary")
     public InventoryDeletionSummary deletionSummary;
+
     public InventoryDeletionStatusItem withDeletionSummary(InventoryDeletionSummary deletionSummary) {
         this.deletionSummary = deletionSummary;
         return this;
@@ -46,6 +49,7 @@ public class InventoryDeletionStatusItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastStatus")
     public InventoryDeletionStatusEnum lastStatus;
+
     public InventoryDeletionStatusItem withLastStatus(InventoryDeletionStatusEnum lastStatus) {
         this.lastStatus = lastStatus;
         return this;
@@ -54,6 +58,7 @@ public class InventoryDeletionStatusItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastStatusMessage")
     public String lastStatusMessage;
+
     public InventoryDeletionStatusItem withLastStatusMessage(String lastStatusMessage) {
         this.lastStatusMessage = lastStatusMessage;
         return this;
@@ -64,6 +69,7 @@ public class InventoryDeletionStatusItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastStatusUpdateTime")
     public OffsetDateTime lastStatusUpdateTime;
+
     public InventoryDeletionStatusItem withLastStatusUpdateTime(OffsetDateTime lastStatusUpdateTime) {
         this.lastStatusUpdateTime = lastStatusUpdateTime;
         return this;
@@ -72,9 +78,11 @@ public class InventoryDeletionStatusItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeName")
     public String typeName;
+
     public InventoryDeletionStatusItem withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public InventoryDeletionStatusItem(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLicenseConfigurationResponse {
@@ -12,6 +13,7 @@ public class DeleteLicenseConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteLicenseConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteLicenseConfigurationResponse {
      */
     
     public Object authorizationException;
+
     public DeleteLicenseConfigurationResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLicenseConfigurationResponse {
     
     
     public String contentType;
+
     public DeleteLicenseConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLicenseConfigurationResponse {
      */
     
     public java.util.Map<String, Object> deleteLicenseConfigurationResponse;
+
     public DeleteLicenseConfigurationResponse withDeleteLicenseConfigurationResponse(java.util.Map<String, Object> deleteLicenseConfigurationResponse) {
         this.deleteLicenseConfigurationResponse = deleteLicenseConfigurationResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteLicenseConfigurationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteLicenseConfigurationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteLicenseConfigurationResponse {
      */
     
     public Object rateLimitExceededException;
+
     public DeleteLicenseConfigurationResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteLicenseConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteLicenseConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteLicenseConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLicenseConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteLicenseConfigurationResponse {
      */
     
     public Object serverInternalException;
+
     public DeleteLicenseConfigurationResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
     }
     
+    public DeleteLicenseConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

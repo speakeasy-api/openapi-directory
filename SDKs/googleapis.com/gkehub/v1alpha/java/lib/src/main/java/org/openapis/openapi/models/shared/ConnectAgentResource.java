@@ -18,6 +18,7 @@ public class ConnectAgentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manifest")
     public String manifest;
+
     public ConnectAgentResource withManifest(String manifest) {
         this.manifest = manifest;
         return this;
@@ -29,9 +30,11 @@ public class ConnectAgentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TypeMeta type;
+
     public ConnectAgentResource withType(TypeMeta type) {
         this.type = type;
         return this;
     }
     
+    public ConnectAgentResource(){}
 }

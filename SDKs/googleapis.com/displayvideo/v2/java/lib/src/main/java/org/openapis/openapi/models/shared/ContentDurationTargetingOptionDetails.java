@@ -18,9 +18,11 @@ public class ContentDurationTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentDuration")
     public ContentDurationTargetingOptionDetailsContentDurationEnum contentDuration;
+
     public ContentDurationTargetingOptionDetails withContentDuration(ContentDurationTargetingOptionDetailsContentDurationEnum contentDuration) {
         this.contentDuration = contentDuration;
         return this;
     }
     
+    public ContentDurationTargetingOptionDetails(){}
 }

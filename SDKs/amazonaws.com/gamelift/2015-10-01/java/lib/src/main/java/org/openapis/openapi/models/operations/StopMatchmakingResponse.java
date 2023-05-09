@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopMatchmakingResponse {
     
     public String contentType;
+
     public StopMatchmakingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopMatchmakingResponse {
      */
     
     public Object internalServiceException;
+
     public StopMatchmakingResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class StopMatchmakingResponse {
      */
     
     public Object invalidRequestException;
+
     public StopMatchmakingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StopMatchmakingResponse {
      */
     
     public Object notFoundException;
+
     public StopMatchmakingResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopMatchmakingResponse {
     
     
     public Integer statusCode;
+
     public StopMatchmakingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopMatchmakingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopMatchmakingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopMatchmakingResponse {
      */
     
     public java.util.Map<String, Object> stopMatchmakingOutput;
+
     public StopMatchmakingResponse withStopMatchmakingOutput(java.util.Map<String, Object> stopMatchmakingOutput) {
         this.stopMatchmakingOutput = stopMatchmakingOutput;
         return this;
@@ -73,9 +81,14 @@ public class StopMatchmakingResponse {
      */
     
     public Object unsupportedRegionException;
+
     public StopMatchmakingResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public StopMatchmakingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

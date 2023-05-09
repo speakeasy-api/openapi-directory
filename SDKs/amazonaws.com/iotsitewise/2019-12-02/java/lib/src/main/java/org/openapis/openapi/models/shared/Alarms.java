@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Alarms {
     @JsonProperty("alarmRoleArn")
     public String alarmRoleArn;
+
     public Alarms withAlarmRoleArn(String alarmRoleArn) {
         this.alarmRoleArn = alarmRoleArn;
         return this;
@@ -22,9 +23,13 @@ public class Alarms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationLambdaArn")
     public String notificationLambdaArn;
+
     public Alarms withNotificationLambdaArn(String notificationLambdaArn) {
         this.notificationLambdaArn = notificationLambdaArn;
         return this;
     }
     
+    public Alarms(@JsonProperty("alarmRoleArn") String alarmRoleArn) {
+        this.alarmRoleArn = alarmRoleArn;
+  }
 }

@@ -15,9 +15,11 @@ public class StartBotRecommendationRequestBodyTranscriptSourceSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3BucketTranscriptSource")
     public org.openapis.openapi.models.shared.S3BucketTranscriptSource s3BucketTranscriptSource;
+
     public StartBotRecommendationRequestBodyTranscriptSourceSetting withS3BucketTranscriptSource(org.openapis.openapi.models.shared.S3BucketTranscriptSource s3BucketTranscriptSource) {
         this.s3BucketTranscriptSource = s3BucketTranscriptSource;
         return this;
     }
     
+    public StartBotRecommendationRequestBodyTranscriptSourceSetting(){}
 }

@@ -17,6 +17,7 @@ public class OauthAccessTokenResponse {
      */
     @JsonProperty("access_token")
     public String accessToken;
+
     public OauthAccessTokenResponse withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -28,6 +29,7 @@ public class OauthAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_in")
     public Long expiresIn;
+
     public OauthAccessTokenResponse withExpiresIn(Long expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -39,6 +41,7 @@ public class OauthAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh_token")
     public String refreshToken;
+
     public OauthAccessTokenResponse withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
@@ -49,6 +52,7 @@ public class OauthAccessTokenResponse {
      */
     @JsonProperty("token_type")
     public String tokenType;
+
     public OauthAccessTokenResponse withTokenType(String tokenType) {
         this.tokenType = tokenType;
         return this;
@@ -60,9 +64,14 @@ public class OauthAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_token")
     public String userToken;
+
     public OauthAccessTokenResponse withUserToken(String userToken) {
         this.userToken = userToken;
         return this;
     }
     
+    public OauthAccessTokenResponse(@JsonProperty("access_token") String accessToken, @JsonProperty("token_type") String tokenType) {
+        this.accessToken = accessToken;
+        this.tokenType = tokenType;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AWSCredentialFields {
     @JsonProperty("access_key")
     public String accessKey;
+
     public AWSCredentialFields withAccessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
@@ -19,6 +20,7 @@ public class AWSCredentialFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public String regions;
+
     public AWSCredentialFields withRegions(String regions) {
         this.regions = regions;
         return this;
@@ -27,6 +29,7 @@ public class AWSCredentialFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public AWSCredentialFields withRole(String role) {
         this.role = role;
         return this;
@@ -34,6 +37,7 @@ public class AWSCredentialFields {
     
     @JsonProperty("secret_access_key")
     public String secretAccessKey;
+
     public AWSCredentialFields withSecretAccessKey(String secretAccessKey) {
         this.secretAccessKey = secretAccessKey;
         return this;
@@ -42,9 +46,14 @@ public class AWSCredentialFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("use_cross_account_org")
     public String useCrossAccountOrg;
+
     public AWSCredentialFields withUseCrossAccountOrg(String useCrossAccountOrg) {
         this.useCrossAccountOrg = useCrossAccountOrg;
         return this;
     }
     
+    public AWSCredentialFields(@JsonProperty("access_key") String accessKey, @JsonProperty("secret_access_key") String secretAccessKey) {
+        this.accessKey = accessKey;
+        this.secretAccessKey = secretAccessKey;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest {
@@ -12,6 +13,7 @@ public class GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
     public String date;
+
     public GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest withDate(String date) {
         this.date = date;
         return this;
@@ -22,6 +24,7 @@ public class GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fqdn")
     public String fqdn;
+
     public GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest withFqdn(String fqdn) {
         this.fqdn = fqdn;
         return this;
@@ -32,6 +35,7 @@ public class GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sid")
     public String sid;
+
     public GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest withSid(String sid) {
         this.sid = sid;
         return this;
@@ -42,9 +46,15 @@ public class GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-radiodnsspi-api-key")
     public String xRadiodnsspiApiKey;
+
     public GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest withXRadiodnsspiApiKey(String xRadiodnsspiApiKey) {
         this.xRadiodnsspiApiKey = xRadiodnsspiApiKey;
         return this;
     }
     
+    public GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest(@JsonProperty("date") String date, @JsonProperty("fqdn") String fqdn, @JsonProperty("sid") String sid) {
+        this.date = date;
+        this.fqdn = fqdn;
+        this.sid = sid;
+  }
 }

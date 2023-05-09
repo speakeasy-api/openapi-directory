@@ -15,6 +15,7 @@ public class SetcampaignconfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beginDateUtc")
     public String beginDateUtc;
+
     public SetcampaignconfigurationRequestBody withBeginDateUtc(String beginDateUtc) {
         this.beginDateUtc = beginDateUtc;
         return this;
@@ -26,6 +27,7 @@ public class SetcampaignconfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDateUtc")
     public String endDateUtc;
+
     public SetcampaignconfigurationRequestBody withEndDateUtc(String endDateUtc) {
         this.endDateUtc = endDateUtc;
         return this;
@@ -37,6 +39,7 @@ public class SetcampaignconfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SetcampaignconfigurationRequestBody withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class SetcampaignconfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public SetcampaignconfigurationRequestBody withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -59,6 +63,7 @@ public class SetcampaignconfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAndOperator")
     public Boolean isAndOperator;
+
     public SetcampaignconfigurationRequestBody withIsAndOperator(Boolean isAndOperator) {
         this.isAndOperator = isAndOperator;
         return this;
@@ -70,6 +75,7 @@ public class SetcampaignconfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isArchived")
     public Boolean isArchived;
+
     public SetcampaignconfigurationRequestBody withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -81,6 +87,7 @@ public class SetcampaignconfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModified")
     public SetcampaignconfigurationRequestBodyLastModified lastModified;
+
     public SetcampaignconfigurationRequestBody withLastModified(SetcampaignconfigurationRequestBodyLastModified lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -92,6 +99,7 @@ public class SetcampaignconfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SetcampaignconfigurationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -103,9 +111,11 @@ public class SetcampaignconfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetConfigurations")
     public SetcampaignconfigurationRequestBodyTargetConfigurations[] targetConfigurations;
+
     public SetcampaignconfigurationRequestBody withTargetConfigurations(SetcampaignconfigurationRequestBodyTargetConfigurations[] targetConfigurations) {
         this.targetConfigurations = targetConfigurations;
         return this;
     }
     
+    public SetcampaignconfigurationRequestBody(){}
 }

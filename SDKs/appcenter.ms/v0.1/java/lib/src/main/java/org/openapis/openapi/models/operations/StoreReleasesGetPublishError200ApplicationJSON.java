@@ -18,6 +18,7 @@ public class StoreReleasesGetPublishError200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_log_available")
     public Boolean isLogAvailable;
+
     public StoreReleasesGetPublishError200ApplicationJSON withIsLogAvailable(Boolean isLogAvailable) {
         this.isLogAvailable = isLogAvailable;
         return this;
@@ -29,9 +30,11 @@ public class StoreReleasesGetPublishError200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public StoreReleasesGetPublishError200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public StoreReleasesGetPublishError200ApplicationJSON(){}
 }

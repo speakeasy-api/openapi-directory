@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListReadSetExportJobsResponse {
@@ -12,6 +13,7 @@ public class ListReadSetExportJobsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListReadSetExportJobsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListReadSetExportJobsResponse {
     
     
     public String contentType;
+
     public ListReadSetExportJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListReadSetExportJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListReadSetExportJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListReadSetExportJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListReadSetExportJobsResponse listReadSetExportJobsResponse;
+
     public ListReadSetExportJobsResponse withListReadSetExportJobsResponse(org.openapis.openapi.models.shared.ListReadSetExportJobsResponse listReadSetExportJobsResponse) {
         this.listReadSetExportJobsResponse = listReadSetExportJobsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListReadSetExportJobsResponse {
      */
     
     public Object requestTimeoutException;
+
     public ListReadSetExportJobsResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -59,6 +65,7 @@ public class ListReadSetExportJobsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListReadSetExportJobsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListReadSetExportJobsResponse {
     
     
     public Integer statusCode;
+
     public ListReadSetExportJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListReadSetExportJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListReadSetExportJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListReadSetExportJobsResponse {
      */
     
     public Object throttlingException;
+
     public ListReadSetExportJobsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListReadSetExportJobsResponse {
      */
     
     public Object validationException;
+
     public ListReadSetExportJobsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListReadSetExportJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

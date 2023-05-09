@@ -20,6 +20,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Details")
     public String details;
+
     public Session withDetails(String details) {
         this.details = details;
         return this;
@@ -28,6 +29,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentName")
     public String documentName;
+
     public Session withDocumentName(String documentName) {
         this.documentName = documentName;
         return this;
@@ -38,6 +40,7 @@ public class Session {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndDate")
     public OffsetDateTime endDate;
+
     public Session withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -46,6 +49,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxSessionDuration")
     public String maxSessionDuration;
+
     public Session withMaxSessionDuration(String maxSessionDuration) {
         this.maxSessionDuration = maxSessionDuration;
         return this;
@@ -54,6 +58,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputUrl")
     public SessionManagerOutputUrl outputUrl;
+
     public Session withOutputUrl(SessionManagerOutputUrl outputUrl) {
         this.outputUrl = outputUrl;
         return this;
@@ -62,6 +67,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public Session withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -70,6 +76,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public String reason;
+
     public Session withReason(String reason) {
         this.reason = reason;
         return this;
@@ -78,6 +85,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionId")
     public String sessionId;
+
     public Session withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -88,6 +96,7 @@ public class Session {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartDate")
     public OffsetDateTime startDate;
+
     public Session withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -96,6 +105,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SessionStatusEnum status;
+
     public Session withStatus(SessionStatusEnum status) {
         this.status = status;
         return this;
@@ -104,9 +114,11 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public String target;
+
     public Session withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public Session(){}
 }

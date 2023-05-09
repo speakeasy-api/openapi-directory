@@ -19,6 +19,7 @@ public class OBFundsConfirmationConsent1Data {
      */
     @JsonProperty("DebtorAccount")
     public OBFundsConfirmationConsent1DataDebtorAccount debtorAccount;
+
     public OBFundsConfirmationConsent1Data withDebtorAccount(OBFundsConfirmationConsent1DataDebtorAccount debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -35,9 +36,13 @@ public class OBFundsConfirmationConsent1Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationDateTime")
     public OffsetDateTime expirationDateTime;
+
     public OBFundsConfirmationConsent1Data withExpirationDateTime(OffsetDateTime expirationDateTime) {
         this.expirationDateTime = expirationDateTime;
         return this;
     }
     
+    public OBFundsConfirmationConsent1Data(@JsonProperty("DebtorAccount") OBFundsConfirmationConsent1DataDebtorAccount debtorAccount) {
+        this.debtorAccount = debtorAccount;
+  }
 }

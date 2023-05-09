@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSnapshotTierStatusRequest {
     
     public Boolean dryRun;
+
     public DescribeSnapshotTierStatusRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeSnapshotTierStatusRequest {
     
     
     public DescribeSnapshotTierStatusRequestFilters[] filters;
+
     public DescribeSnapshotTierStatusRequest withFilters(DescribeSnapshotTierStatusRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeSnapshotTierStatusRequest {
     
     
     public Long maxResults;
+
     public DescribeSnapshotTierStatusRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,9 +33,11 @@ public class DescribeSnapshotTierStatusRequest {
     
     
     public String nextToken;
+
     public DescribeSnapshotTierStatusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeSnapshotTierStatusRequest(){}
 }

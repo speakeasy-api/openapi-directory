@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class NifBasicRequestBody {
      */
     @SpeakeasyMetadata("form:name=companyAddress")
     public String companyAddress;
+
     public NifBasicRequestBody withCompanyAddress(String companyAddress) {
         this.companyAddress = companyAddress;
         return this;
@@ -25,6 +27,7 @@ public class NifBasicRequestBody {
      */
     @SpeakeasyMetadata("form:name=companyName")
     public String companyName;
+
     public NifBasicRequestBody withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -35,9 +38,13 @@ public class NifBasicRequestBody {
      */
     @SpeakeasyMetadata("form:name=nifNumber")
     public String nifNumber;
+
     public NifBasicRequestBody withNifNumber(String nifNumber) {
         this.nifNumber = nifNumber;
         return this;
     }
     
+    public NifBasicRequestBody(@JsonProperty("nifNumber") String nifNumber) {
+        this.nifNumber = nifNumber;
+  }
 }

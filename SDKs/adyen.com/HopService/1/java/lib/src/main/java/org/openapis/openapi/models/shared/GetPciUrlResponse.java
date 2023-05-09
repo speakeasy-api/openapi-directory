@@ -17,8 +17,9 @@ public class GetPciUrlResponse {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
-    public ErrorFieldType[] invalidFields;
-    public GetPciUrlResponse withInvalidFields(ErrorFieldType[] invalidFields) {
+    public ErrorFieldTypeWrapper[] invalidFields;
+
+    public GetPciUrlResponse withInvalidFields(ErrorFieldTypeWrapper[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
     }
@@ -29,6 +30,7 @@ public class GetPciUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public GetPciUrlResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -40,6 +42,7 @@ public class GetPciUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectUrl")
     public String redirectUrl;
+
     public GetPciUrlResponse withRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
         return this;
@@ -51,6 +54,7 @@ public class GetPciUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public GetPciUrlResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -64,9 +68,11 @@ public class GetPciUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedAsync")
     public Boolean submittedAsync;
+
     public GetPciUrlResponse withSubmittedAsync(Boolean submittedAsync) {
         this.submittedAsync = submittedAsync;
         return this;
     }
     
+    public GetPciUrlResponse(){}
 }

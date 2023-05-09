@@ -18,6 +18,7 @@ public class RBACRoleBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public RBACRoleBinding withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class RBACRoleBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTime")
     public String deleteTime;
+
     public RBACRoleBinding withDeleteTime(String deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -40,6 +42,7 @@ public class RBACRoleBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
+
     public RBACRoleBinding withGroup(String group) {
         this.group = group;
         return this;
@@ -51,6 +54,7 @@ public class RBACRoleBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RBACRoleBinding withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class RBACRoleBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public Role role;
+
     public RBACRoleBinding withRole(Role role) {
         this.role = role;
         return this;
@@ -73,6 +78,7 @@ public class RBACRoleBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public RBACRoleBindingLifecycleState state;
+
     public RBACRoleBinding withState(RBACRoleBindingLifecycleState state) {
         this.state = state;
         return this;
@@ -84,6 +90,7 @@ public class RBACRoleBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public RBACRoleBinding withUid(String uid) {
         this.uid = uid;
         return this;
@@ -95,6 +102,7 @@ public class RBACRoleBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public RBACRoleBinding withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -106,9 +114,11 @@ public class RBACRoleBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public RBACRoleBinding withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public RBACRoleBinding(){}
 }

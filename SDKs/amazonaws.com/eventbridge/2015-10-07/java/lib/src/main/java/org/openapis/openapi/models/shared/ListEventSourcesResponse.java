@@ -15,6 +15,7 @@ public class ListEventSourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSources")
     public EventSource[] eventSources;
+
     public ListEventSourcesResponse withEventSources(EventSource[] eventSources) {
         this.eventSources = eventSources;
         return this;
@@ -23,9 +24,11 @@ public class ListEventSourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEventSourcesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEventSourcesResponse(){}
 }

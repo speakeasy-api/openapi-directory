@@ -15,6 +15,7 @@ public class MarketChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clk")
     public String clk;
+
     public MarketChangeMessage withClk(String clk) {
         this.clk = clk;
         return this;
@@ -26,6 +27,7 @@ public class MarketChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflateMs")
     public Long conflateMs;
+
     public MarketChangeMessage withConflateMs(Long conflateMs) {
         this.conflateMs = conflateMs;
         return this;
@@ -37,6 +39,7 @@ public class MarketChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ct")
     public MarketChangeMessageCtEnum ct;
+
     public MarketChangeMessage withCt(MarketChangeMessageCtEnum ct) {
         this.ct = ct;
         return this;
@@ -48,6 +51,7 @@ public class MarketChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heartbeatMs")
     public Long heartbeatMs;
+
     public MarketChangeMessage withHeartbeatMs(Long heartbeatMs) {
         this.heartbeatMs = heartbeatMs;
         return this;
@@ -59,6 +63,7 @@ public class MarketChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public MarketChangeMessage withId(Integer id) {
         this.id = id;
         return this;
@@ -70,6 +75,7 @@ public class MarketChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialClk")
     public String initialClk;
+
     public MarketChangeMessage withInitialClk(String initialClk) {
         this.initialClk = initialClk;
         return this;
@@ -81,6 +87,7 @@ public class MarketChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mc")
     public MarketChange[] mc;
+
     public MarketChangeMessage withMc(MarketChange[] mc) {
         this.mc = mc;
         return this;
@@ -92,6 +99,7 @@ public class MarketChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public String op;
+
     public MarketChangeMessage withOp(String op) {
         this.op = op;
         return this;
@@ -103,6 +111,7 @@ public class MarketChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pt")
     public Long pt;
+
     public MarketChangeMessage withPt(Long pt) {
         this.pt = pt;
         return this;
@@ -114,6 +123,7 @@ public class MarketChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentType")
     public MarketChangeMessageSegmentTypeEnum segmentType;
+
     public MarketChangeMessage withSegmentType(MarketChangeMessageSegmentTypeEnum segmentType) {
         this.segmentType = segmentType;
         return this;
@@ -125,9 +135,11 @@ public class MarketChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Integer status;
+
     public MarketChangeMessage withStatus(Integer status) {
         this.status = status;
         return this;
     }
     
+    public MarketChangeMessage(){}
 }

@@ -15,6 +15,7 @@ public class HoldoutActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextActivity")
     public String nextActivity;
+
     public HoldoutActivity withNextActivity(String nextActivity) {
         this.nextActivity = nextActivity;
         return this;
@@ -22,9 +23,13 @@ public class HoldoutActivity {
     
     @JsonProperty("Percentage")
     public Long percentage;
+
     public HoldoutActivity withPercentage(Long percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public HoldoutActivity(@JsonProperty("Percentage") Long percentage) {
+        this.percentage = percentage;
+  }
 }

@@ -15,6 +15,7 @@ public class CaptureContentTypeHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CsvContentTypes")
     public String[] csvContentTypes;
+
     public CaptureContentTypeHeader withCsvContentTypes(String[] csvContentTypes) {
         this.csvContentTypes = csvContentTypes;
         return this;
@@ -23,9 +24,11 @@ public class CaptureContentTypeHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JsonContentTypes")
     public String[] jsonContentTypes;
+
     public CaptureContentTypeHeader withJsonContentTypes(String[] jsonContentTypes) {
         this.jsonContentTypes = jsonContentTypes;
         return this;
     }
     
+    public CaptureContentTypeHeader(){}
 }

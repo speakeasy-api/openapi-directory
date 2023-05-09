@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestions")
     public String[] suggestions;
+
     public GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult withSuggestions(String[] suggestions) {
         this.suggestions = suggestions;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult(){}
 }

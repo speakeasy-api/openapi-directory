@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeByoipCidrsResult {
     
     public DescribeByoipCidrsResultByoipCidrs[] byoipCidrs;
+
     public DescribeByoipCidrsResult withByoipCidrs(DescribeByoipCidrsResultByoipCidrs[] byoipCidrs) {
         this.byoipCidrs = byoipCidrs;
         return this;
@@ -19,9 +20,11 @@ public class DescribeByoipCidrsResult {
     
     
     public String nextToken;
+
     public DescribeByoipCidrsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeByoipCidrsResult(){}
 }

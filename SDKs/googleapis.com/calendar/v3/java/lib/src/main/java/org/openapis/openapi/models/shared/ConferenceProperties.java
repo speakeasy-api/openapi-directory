@@ -19,9 +19,11 @@ public class ConferenceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedConferenceSolutionTypes")
     public String[] allowedConferenceSolutionTypes;
+
     public ConferenceProperties withAllowedConferenceSolutionTypes(String[] allowedConferenceSolutionTypes) {
         this.allowedConferenceSolutionTypes = allowedConferenceSolutionTypes;
         return this;
     }
     
+    public ConferenceProperties(){}
 }

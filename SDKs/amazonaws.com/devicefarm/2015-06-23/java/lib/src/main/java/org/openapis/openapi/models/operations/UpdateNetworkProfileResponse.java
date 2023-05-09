@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNetworkProfileResponse {
@@ -12,6 +13,7 @@ public class UpdateNetworkProfileResponse {
      */
     
     public Object argumentException;
+
     public UpdateNetworkProfileResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateNetworkProfileResponse {
     
     
     public String contentType;
+
     public UpdateNetworkProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateNetworkProfileResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateNetworkProfileResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateNetworkProfileResponse {
      */
     
     public Object notFoundException;
+
     public UpdateNetworkProfileResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateNetworkProfileResponse {
     
     
     public Integer statusCode;
+
     public UpdateNetworkProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateNetworkProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNetworkProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateNetworkProfileResponse {
      */
     
     public Object serviceAccountException;
+
     public UpdateNetworkProfileResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateNetworkProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateNetworkProfileResult updateNetworkProfileResult;
+
     public UpdateNetworkProfileResponse withUpdateNetworkProfileResult(org.openapis.openapi.models.shared.UpdateNetworkProfileResult updateNetworkProfileResult) {
         this.updateNetworkProfileResult = updateNetworkProfileResult;
         return this;
     }
     
+    public UpdateNetworkProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

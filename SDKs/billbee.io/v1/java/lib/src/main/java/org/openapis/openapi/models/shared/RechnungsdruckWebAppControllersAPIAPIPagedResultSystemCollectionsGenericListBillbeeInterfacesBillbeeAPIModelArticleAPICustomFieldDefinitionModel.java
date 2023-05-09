@@ -15,6 +15,7 @@ public class RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel[] data;
+
     public RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel withData(BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelErrorCodeEnum errorCode;
+
     public RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel withErrorCode(RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -31,6 +33,7 @@ public class RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDescription")
     public RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelErrorDescriptionEnum errorDescription;
+
     public RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel withErrorDescription(RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
@@ -39,6 +42,7 @@ public class RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -47,9 +51,11 @@ public class RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Paging")
     public RechnungsdruckWebAppControllersAPIAPIPagedResultPagingInformationSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel paging;
+
     public RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel withPaging(RechnungsdruckWebAppControllersAPIAPIPagedResultPagingInformationSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel paging) {
         this.paging = paging;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel(){}
 }

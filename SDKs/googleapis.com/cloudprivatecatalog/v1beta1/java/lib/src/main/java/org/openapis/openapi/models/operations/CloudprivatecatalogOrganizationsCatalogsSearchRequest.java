@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudprivatecatalogOrganizationsCatalogsSearchRequest {
@@ -12,6 +13,7 @@ public class CloudprivatecatalogOrganizationsCatalogsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudprivatecatalogOrganizationsCatalogsSearchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class CloudprivatecatalogOrganizationsCatalogsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudprivatecatalogOrganizationsCatalogsSearchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class CloudprivatecatalogOrganizationsCatalogsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudprivatecatalogOrganizationsCatalogsSearchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class CloudprivatecatalogOrganizationsCatalogsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudprivatecatalogOrganizationsCatalogsSearchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class CloudprivatecatalogOrganizationsCatalogsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudprivatecatalogOrganizationsCatalogsSearchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class CloudprivatecatalogOrganizationsCatalogsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudprivatecatalogOrganizationsCatalogsSearchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class CloudprivatecatalogOrganizationsCatalogsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudprivatecatalogOrganizationsCatalogsSearchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class CloudprivatecatalogOrganizationsCatalogsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public CloudprivatecatalogOrganizationsCatalogsSearchRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -94,6 +103,7 @@ public class CloudprivatecatalogOrganizationsCatalogsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public CloudprivatecatalogOrganizationsCatalogsSearchRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -104,6 +114,7 @@ public class CloudprivatecatalogOrganizationsCatalogsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudprivatecatalogOrganizationsCatalogsSearchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -116,6 +127,7 @@ public class CloudprivatecatalogOrganizationsCatalogsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public CloudprivatecatalogOrganizationsCatalogsSearchRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -126,6 +138,7 @@ public class CloudprivatecatalogOrganizationsCatalogsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudprivatecatalogOrganizationsCatalogsSearchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -140,6 +153,7 @@ public class CloudprivatecatalogOrganizationsCatalogsSearchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource")
     public String resource;
+
     public CloudprivatecatalogOrganizationsCatalogsSearchRequest withResource(String resource) {
         this.resource = resource;
         return this;
@@ -150,6 +164,7 @@ public class CloudprivatecatalogOrganizationsCatalogsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudprivatecatalogOrganizationsCatalogsSearchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -160,9 +175,13 @@ public class CloudprivatecatalogOrganizationsCatalogsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudprivatecatalogOrganizationsCatalogsSearchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CloudprivatecatalogOrganizationsCatalogsSearchRequest(@JsonProperty("resource") String resource) {
+        this.resource = resource;
+  }
 }

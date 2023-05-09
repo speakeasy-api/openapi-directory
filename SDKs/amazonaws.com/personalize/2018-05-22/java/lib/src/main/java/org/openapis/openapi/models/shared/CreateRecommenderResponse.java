@@ -15,9 +15,11 @@ public class CreateRecommenderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommenderArn")
     public String recommenderArn;
+
     public CreateRecommenderResponse withRecommenderArn(String recommenderArn) {
         this.recommenderArn = recommenderArn;
         return this;
     }
     
+    public CreateRecommenderResponse(){}
 }

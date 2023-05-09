@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DocumentaiProjectsLocationsProcessorTypesListRequest {
@@ -12,6 +13,7 @@ public class DocumentaiProjectsLocationsProcessorTypesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DocumentaiProjectsLocationsProcessorTypesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DocumentaiProjectsLocationsProcessorTypesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DocumentaiProjectsLocationsProcessorTypesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DocumentaiProjectsLocationsProcessorTypesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DocumentaiProjectsLocationsProcessorTypesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DocumentaiProjectsLocationsProcessorTypesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DocumentaiProjectsLocationsProcessorTypesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DocumentaiProjectsLocationsProcessorTypesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DocumentaiProjectsLocationsProcessorTypesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class DocumentaiProjectsLocationsProcessorTypesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DocumentaiProjectsLocationsProcessorTypesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,16 +79,18 @@ public class DocumentaiProjectsLocationsProcessorTypesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DocumentaiProjectsLocationsProcessorTypesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
     }
     
     /**
-     * The maximum number of processor types to return. If unspecified, at most 100 processor types will be returned. The maximum value is 500; values above 500 will be coerced to 500.
+     * The maximum number of processor types to return. If unspecified, at most `100` processor types will be returned. The maximum value is `500`. Values above `500` will be coerced to `500`.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public DocumentaiProjectsLocationsProcessorTypesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -92,16 +101,18 @@ public class DocumentaiProjectsLocationsProcessorTypesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DocumentaiProjectsLocationsProcessorTypesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
     /**
-     * Required. The location of processor type to list. The available processor types may depend on the allow-listing on projects. Format: `projects/{project}/locations/{location}`
+     * Required. The location of processor types to list. Format: `projects/{project}/locations/{location}`.
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public DocumentaiProjectsLocationsProcessorTypesListRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -112,6 +123,7 @@ public class DocumentaiProjectsLocationsProcessorTypesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DocumentaiProjectsLocationsProcessorTypesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class DocumentaiProjectsLocationsProcessorTypesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DocumentaiProjectsLocationsProcessorTypesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class DocumentaiProjectsLocationsProcessorTypesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DocumentaiProjectsLocationsProcessorTypesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,13 @@ public class DocumentaiProjectsLocationsProcessorTypesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DocumentaiProjectsLocationsProcessorTypesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DocumentaiProjectsLocationsProcessorTypesListRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

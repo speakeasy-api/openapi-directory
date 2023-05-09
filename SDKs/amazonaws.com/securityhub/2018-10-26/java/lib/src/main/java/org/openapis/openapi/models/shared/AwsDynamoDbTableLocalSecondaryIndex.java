@@ -15,6 +15,7 @@ public class AwsDynamoDbTableLocalSecondaryIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexArn")
     public String indexArn;
+
     public AwsDynamoDbTableLocalSecondaryIndex withIndexArn(String indexArn) {
         this.indexArn = indexArn;
         return this;
@@ -23,6 +24,7 @@ public class AwsDynamoDbTableLocalSecondaryIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public AwsDynamoDbTableLocalSecondaryIndex withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -31,6 +33,7 @@ public class AwsDynamoDbTableLocalSecondaryIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeySchema")
     public AwsDynamoDbTableKeySchema[] keySchema;
+
     public AwsDynamoDbTableLocalSecondaryIndex withKeySchema(AwsDynamoDbTableKeySchema[] keySchema) {
         this.keySchema = keySchema;
         return this;
@@ -39,9 +42,11 @@ public class AwsDynamoDbTableLocalSecondaryIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Projection")
     public AwsDynamoDbTableProjection projection;
+
     public AwsDynamoDbTableLocalSecondaryIndex withProjection(AwsDynamoDbTableProjection projection) {
         this.projection = projection;
         return this;
     }
     
+    public AwsDynamoDbTableLocalSecondaryIndex(){}
 }

@@ -15,9 +15,11 @@ public class DescribeRecipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipe")
     public Recipe recipe;
+
     public DescribeRecipeResponse withRecipe(Recipe recipe) {
         this.recipe = recipe;
         return this;
     }
     
+    public DescribeRecipeResponse(){}
 }

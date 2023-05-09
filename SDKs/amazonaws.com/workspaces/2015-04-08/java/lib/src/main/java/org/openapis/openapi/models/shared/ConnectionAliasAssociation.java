@@ -15,6 +15,7 @@ public class ConnectionAliasAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociatedAccountId")
     public String associatedAccountId;
+
     public ConnectionAliasAssociation withAssociatedAccountId(String associatedAccountId) {
         this.associatedAccountId = associatedAccountId;
         return this;
@@ -23,6 +24,7 @@ public class ConnectionAliasAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationStatus")
     public AssociationStatusEnum associationStatus;
+
     public ConnectionAliasAssociation withAssociationStatus(AssociationStatusEnum associationStatus) {
         this.associationStatus = associationStatus;
         return this;
@@ -31,6 +33,7 @@ public class ConnectionAliasAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionIdentifier")
     public String connectionIdentifier;
+
     public ConnectionAliasAssociation withConnectionIdentifier(String connectionIdentifier) {
         this.connectionIdentifier = connectionIdentifier;
         return this;
@@ -39,9 +42,11 @@ public class ConnectionAliasAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ConnectionAliasAssociation withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public ConnectionAliasAssociation(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContainsPiiEntitiesResponse {
@@ -12,6 +13,7 @@ public class ContainsPiiEntitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.ContainsPiiEntitiesResponse containsPiiEntitiesResponse;
+
     public ContainsPiiEntitiesResponse withContainsPiiEntitiesResponse(org.openapis.openapi.models.shared.ContainsPiiEntitiesResponse containsPiiEntitiesResponse) {
         this.containsPiiEntitiesResponse = containsPiiEntitiesResponse;
         return this;
@@ -19,6 +21,7 @@ public class ContainsPiiEntitiesResponse {
     
     
     public String contentType;
+
     public ContainsPiiEntitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ContainsPiiEntitiesResponse {
      */
     
     public Object internalServerException;
+
     public ContainsPiiEntitiesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ContainsPiiEntitiesResponse {
      */
     
     public Object invalidRequestException;
+
     public ContainsPiiEntitiesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class ContainsPiiEntitiesResponse {
     
     
     public Integer statusCode;
+
     public ContainsPiiEntitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ContainsPiiEntitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContainsPiiEntitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ContainsPiiEntitiesResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public ContainsPiiEntitiesResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -73,9 +81,14 @@ public class ContainsPiiEntitiesResponse {
      */
     
     public Object unsupportedLanguageException;
+
     public ContainsPiiEntitiesResponse withUnsupportedLanguageException(Object unsupportedLanguageException) {
         this.unsupportedLanguageException = unsupportedLanguageException;
         return this;
     }
     
+    public ContainsPiiEntitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

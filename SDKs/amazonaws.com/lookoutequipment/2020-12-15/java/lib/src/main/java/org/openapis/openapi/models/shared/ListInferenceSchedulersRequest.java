@@ -12,6 +12,7 @@ public class ListInferenceSchedulersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSchedulerNameBeginsWith")
     public String inferenceSchedulerNameBeginsWith;
+
     public ListInferenceSchedulersRequest withInferenceSchedulerNameBeginsWith(String inferenceSchedulerNameBeginsWith) {
         this.inferenceSchedulerNameBeginsWith = inferenceSchedulerNameBeginsWith;
         return this;
@@ -20,6 +21,7 @@ public class ListInferenceSchedulersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListInferenceSchedulersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListInferenceSchedulersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelName")
     public String modelName;
+
     public ListInferenceSchedulersRequest withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -36,6 +39,7 @@ public class ListInferenceSchedulersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListInferenceSchedulersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,9 +48,11 @@ public class ListInferenceSchedulersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public InferenceSchedulerStatusEnum status;
+
     public ListInferenceSchedulersRequest withStatus(InferenceSchedulerStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListInferenceSchedulersRequest(){}
 }

@@ -18,6 +18,7 @@ public class IdentityAwareProxyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public IdentityAwareProxyInput withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,6 +30,7 @@ public class IdentityAwareProxyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth2ClientId")
     public String oauth2ClientId;
+
     public IdentityAwareProxyInput withOauth2ClientId(String oauth2ClientId) {
         this.oauth2ClientId = oauth2ClientId;
         return this;
@@ -40,9 +42,11 @@ public class IdentityAwareProxyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth2ClientSecret")
     public String oauth2ClientSecret;
+
     public IdentityAwareProxyInput withOauth2ClientSecret(String oauth2ClientSecret) {
         this.oauth2ClientSecret = oauth2ClientSecret;
         return this;
     }
     
+    public IdentityAwareProxyInput(){}
 }

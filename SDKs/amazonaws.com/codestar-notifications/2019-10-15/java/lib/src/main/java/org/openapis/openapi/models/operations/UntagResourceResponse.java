@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UntagResourceResponse {
@@ -12,6 +13,7 @@ public class UntagResourceResponse {
      */
     
     public Object concurrentModificationException;
+
     public UntagResourceResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UntagResourceResponse {
     
     
     public String contentType;
+
     public UntagResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UntagResourceResponse {
      */
     
     public Object limitExceededException;
+
     public UntagResourceResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -36,6 +40,7 @@ public class UntagResourceResponse {
     
     
     public Integer statusCode;
+
     public UntagResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UntagResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UntagResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UntagResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UntagResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UntagResourceResponse {
      */
     
     public java.util.Map<String, Object> untagResourceResult;
+
     public UntagResourceResponse withUntagResourceResult(java.util.Map<String, Object> untagResourceResult) {
         this.untagResourceResult = untagResourceResult;
         return this;
@@ -73,9 +81,14 @@ public class UntagResourceResponse {
      */
     
     public Object validationException;
+
     public UntagResourceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UntagResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

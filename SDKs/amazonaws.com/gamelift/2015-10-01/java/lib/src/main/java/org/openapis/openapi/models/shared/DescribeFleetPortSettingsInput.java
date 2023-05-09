@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeFleetPortSettingsInput {
     @JsonProperty("FleetId")
     public String fleetId;
+
     public DescribeFleetPortSettingsInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -19,9 +20,13 @@ public class DescribeFleetPortSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public DescribeFleetPortSettingsInput withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public DescribeFleetPortSettingsInput(@JsonProperty("FleetId") String fleetId) {
+        this.fleetId = fleetId;
+  }
 }

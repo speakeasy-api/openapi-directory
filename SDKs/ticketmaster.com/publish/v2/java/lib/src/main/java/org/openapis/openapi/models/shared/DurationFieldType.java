@@ -12,9 +12,11 @@ public class DurationFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DurationFieldType withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DurationFieldType(){}
 }

@@ -19,6 +19,7 @@ public class ScoreRevisionCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autosave")
     public Boolean autosave;
+
     public ScoreRevisionCreation withAutosave(Boolean autosave) {
         this.autosave = autosave;
         return this;
@@ -31,6 +32,7 @@ public class ScoreRevisionCreation {
      */
     @JsonProperty("data")
     public String data;
+
     public ScoreRevisionCreation withData(String data) {
         this.data = data;
         return this;
@@ -42,6 +44,7 @@ public class ScoreRevisionCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataEncoding")
     public ScoreRevisionCreationDataEncodingEnum dataEncoding;
+
     public ScoreRevisionCreation withDataEncoding(ScoreRevisionCreationDataEncodingEnum dataEncoding) {
         this.dataEncoding = dataEncoding;
         return this;
@@ -53,9 +56,13 @@ public class ScoreRevisionCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ScoreRevisionCreation withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public ScoreRevisionCreation(@JsonProperty("data") String data) {
+        this.data = data;
+  }
 }

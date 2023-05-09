@@ -12,6 +12,7 @@ public class ClickStreamGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conversion")
     public Long conversion;
+
     public ClickStreamGetRequest withConversion(Long conversion) {
         this.conversion = conversion;
         return this;
@@ -22,6 +23,7 @@ public class ClickStreamGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=datapoint")
     public Long datapoint;
+
     public ClickStreamGetRequest withDatapoint(Long datapoint) {
         this.datapoint = datapoint;
         return this;
@@ -32,6 +34,7 @@ public class ClickStreamGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public ClickStreamGetFilterEnum filter;
+
     public ClickStreamGetRequest withFilter(ClickStreamGetFilterEnum filter) {
         this.filter = filter;
         return this;
@@ -42,6 +45,7 @@ public class ClickStreamGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public Long group;
+
     public ClickStreamGetRequest withGroup(Long group) {
         this.group = group;
         return this;
@@ -52,9 +56,11 @@ public class ClickStreamGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public ClickStreamGetRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public ClickStreamGetRequest(){}
 }

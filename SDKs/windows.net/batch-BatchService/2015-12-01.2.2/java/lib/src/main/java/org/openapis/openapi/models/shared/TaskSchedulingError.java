@@ -17,6 +17,7 @@ public class TaskSchedulingError {
      */
     @JsonProperty("category")
     public TaskSchedulingErrorCategoryEnum category;
+
     public TaskSchedulingError withCategory(TaskSchedulingErrorCategoryEnum category) {
         this.category = category;
         return this;
@@ -28,6 +29,7 @@ public class TaskSchedulingError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public TaskSchedulingError withCode(String code) {
         this.code = code;
         return this;
@@ -39,6 +41,7 @@ public class TaskSchedulingError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public NameValuePair[] details;
+
     public TaskSchedulingError withDetails(NameValuePair[] details) {
         this.details = details;
         return this;
@@ -50,9 +53,13 @@ public class TaskSchedulingError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TaskSchedulingError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public TaskSchedulingError(@JsonProperty("category") TaskSchedulingErrorCategoryEnum category) {
+        this.category = category;
+  }
 }

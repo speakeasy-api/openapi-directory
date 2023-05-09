@@ -15,6 +15,7 @@ public class CfmstRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public CfmstRequestBodyCertificateParameters certificateParameters;
+
     public CfmstRequestBody withCertificateParameters(CfmstRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class CfmstRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public CfmstRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class CfmstRequestBody {
      */
     @JsonProperty("format")
     public CfmstRequestBodyFormatEnum format;
+
     public CfmstRequestBody withFormat(CfmstRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class CfmstRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public CfmstRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public CfmstRequestBody(@JsonProperty("format") CfmstRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

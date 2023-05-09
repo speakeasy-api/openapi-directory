@@ -18,6 +18,7 @@ public class ContainersQuotaList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floating_ips")
     public Integer floatingIps;
+
     public ContainersQuotaList withFloatingIps(Integer floatingIps) {
         this.floatingIps = floatingIps;
         return this;
@@ -29,9 +30,11 @@ public class ContainersQuotaList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ram")
     public Integer ram;
+
     public ContainersQuotaList withRam(Integer ram) {
         this.ram = ram;
         return this;
     }
     
+    public ContainersQuotaList(){}
 }

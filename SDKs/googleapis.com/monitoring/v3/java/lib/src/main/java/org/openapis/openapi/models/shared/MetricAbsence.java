@@ -18,6 +18,7 @@ public class MetricAbsence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregations")
     public Aggregation[] aggregations;
+
     public MetricAbsence withAggregations(Aggregation[] aggregations) {
         this.aggregations = aggregations;
         return this;
@@ -29,6 +30,7 @@ public class MetricAbsence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public MetricAbsence withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -40,6 +42,7 @@ public class MetricAbsence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public MetricAbsence withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -51,9 +54,11 @@ public class MetricAbsence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger")
     public Trigger trigger;
+
     public MetricAbsence withTrigger(Trigger trigger) {
         this.trigger = trigger;
         return this;
     }
     
+    public MetricAbsence(){}
 }

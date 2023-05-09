@@ -15,9 +15,11 @@ public class GlobalNetworkEndpointGroupsDetachEndpointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkEndpoints")
     public NetworkEndpoint[] networkEndpoints;
+
     public GlobalNetworkEndpointGroupsDetachEndpointsRequest withNetworkEndpoints(NetworkEndpoint[] networkEndpoints) {
         this.networkEndpoints = networkEndpoints;
         return this;
     }
     
+    public GlobalNetworkEndpointGroupsDetachEndpointsRequest(){}
 }

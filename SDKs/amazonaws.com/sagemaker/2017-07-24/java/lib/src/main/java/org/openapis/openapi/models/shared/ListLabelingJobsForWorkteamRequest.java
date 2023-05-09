@@ -19,6 +19,7 @@ public class ListLabelingJobsForWorkteamRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListLabelingJobsForWorkteamRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListLabelingJobsForWorkteamRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListLabelingJobsForWorkteamRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListLabelingJobsForWorkteamRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobReferenceCodeContains")
     public String jobReferenceCodeContains;
+
     public ListLabelingJobsForWorkteamRequest withJobReferenceCodeContains(String jobReferenceCodeContains) {
         this.jobReferenceCodeContains = jobReferenceCodeContains;
         return this;
@@ -45,6 +48,7 @@ public class ListLabelingJobsForWorkteamRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListLabelingJobsForWorkteamRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -53,6 +57,7 @@ public class ListLabelingJobsForWorkteamRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLabelingJobsForWorkteamRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -61,6 +66,7 @@ public class ListLabelingJobsForWorkteamRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public ListLabelingJobsForWorkteamSortByOptionsEnum sortBy;
+
     public ListLabelingJobsForWorkteamRequest withSortBy(ListLabelingJobsForWorkteamSortByOptionsEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -69,6 +75,7 @@ public class ListLabelingJobsForWorkteamRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListLabelingJobsForWorkteamRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -76,9 +83,13 @@ public class ListLabelingJobsForWorkteamRequest {
     
     @JsonProperty("WorkteamArn")
     public String workteamArn;
+
     public ListLabelingJobsForWorkteamRequest withWorkteamArn(String workteamArn) {
         this.workteamArn = workteamArn;
         return this;
     }
     
+    public ListLabelingJobsForWorkteamRequest(@JsonProperty("WorkteamArn") String workteamArn) {
+        this.workteamArn = workteamArn;
+  }
 }

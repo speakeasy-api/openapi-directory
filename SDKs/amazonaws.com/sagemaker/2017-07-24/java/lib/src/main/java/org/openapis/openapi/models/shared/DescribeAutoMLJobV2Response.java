@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeAutoMLJobV2Response {
     @JsonProperty("AutoMLJobArn")
     public String autoMLJobArn;
+
     public DescribeAutoMLJobV2Response withAutoMLJobArn(String autoMLJobArn) {
         this.autoMLJobArn = autoMLJobArn;
         return this;
@@ -26,6 +27,7 @@ public class DescribeAutoMLJobV2Response {
     
     @JsonProperty("AutoMLJobInputDataConfig")
     public AutoMLJobChannel[] autoMLJobInputDataConfig;
+
     public DescribeAutoMLJobV2Response withAutoMLJobInputDataConfig(AutoMLJobChannel[] autoMLJobInputDataConfig) {
         this.autoMLJobInputDataConfig = autoMLJobInputDataConfig;
         return this;
@@ -33,6 +35,7 @@ public class DescribeAutoMLJobV2Response {
     
     @JsonProperty("AutoMLJobName")
     public String autoMLJobName;
+
     public DescribeAutoMLJobV2Response withAutoMLJobName(String autoMLJobName) {
         this.autoMLJobName = autoMLJobName;
         return this;
@@ -41,6 +44,7 @@ public class DescribeAutoMLJobV2Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLJobObjective")
     public AutoMLJobObjective autoMLJobObjective;
+
     public DescribeAutoMLJobV2Response withAutoMLJobObjective(AutoMLJobObjective autoMLJobObjective) {
         this.autoMLJobObjective = autoMLJobObjective;
         return this;
@@ -48,6 +52,7 @@ public class DescribeAutoMLJobV2Response {
     
     @JsonProperty("AutoMLJobSecondaryStatus")
     public AutoMLJobSecondaryStatusEnum autoMLJobSecondaryStatus;
+
     public DescribeAutoMLJobV2Response withAutoMLJobSecondaryStatus(AutoMLJobSecondaryStatusEnum autoMLJobSecondaryStatus) {
         this.autoMLJobSecondaryStatus = autoMLJobSecondaryStatus;
         return this;
@@ -55,6 +60,7 @@ public class DescribeAutoMLJobV2Response {
     
     @JsonProperty("AutoMLJobStatus")
     public AutoMLJobStatusEnum autoMLJobStatus;
+
     public DescribeAutoMLJobV2Response withAutoMLJobStatus(AutoMLJobStatusEnum autoMLJobStatus) {
         this.autoMLJobStatus = autoMLJobStatus;
         return this;
@@ -63,6 +69,7 @@ public class DescribeAutoMLJobV2Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLProblemTypeConfig")
     public AutoMLProblemTypeConfig autoMLProblemTypeConfig;
+
     public DescribeAutoMLJobV2Response withAutoMLProblemTypeConfig(AutoMLProblemTypeConfig autoMLProblemTypeConfig) {
         this.autoMLProblemTypeConfig = autoMLProblemTypeConfig;
         return this;
@@ -71,6 +78,7 @@ public class DescribeAutoMLJobV2Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BestCandidate")
     public AutoMLCandidate bestCandidate;
+
     public DescribeAutoMLJobV2Response withBestCandidate(AutoMLCandidate bestCandidate) {
         this.bestCandidate = bestCandidate;
         return this;
@@ -80,6 +88,7 @@ public class DescribeAutoMLJobV2Response {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeAutoMLJobV2Response withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -88,6 +97,7 @@ public class DescribeAutoMLJobV2Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSplitConfig")
     public AutoMLDataSplitConfig dataSplitConfig;
+
     public DescribeAutoMLJobV2Response withDataSplitConfig(AutoMLDataSplitConfig dataSplitConfig) {
         this.dataSplitConfig = dataSplitConfig;
         return this;
@@ -98,6 +108,7 @@ public class DescribeAutoMLJobV2Response {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public DescribeAutoMLJobV2Response withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -106,6 +117,7 @@ public class DescribeAutoMLJobV2Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeAutoMLJobV2Response withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -115,6 +127,7 @@ public class DescribeAutoMLJobV2Response {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeAutoMLJobV2Response withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -123,6 +136,7 @@ public class DescribeAutoMLJobV2Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelDeployConfig")
     public ModelDeployConfig modelDeployConfig;
+
     public DescribeAutoMLJobV2Response withModelDeployConfig(ModelDeployConfig modelDeployConfig) {
         this.modelDeployConfig = modelDeployConfig;
         return this;
@@ -131,6 +145,7 @@ public class DescribeAutoMLJobV2Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelDeployResult")
     public ModelDeployResult modelDeployResult;
+
     public DescribeAutoMLJobV2Response withModelDeployResult(ModelDeployResult modelDeployResult) {
         this.modelDeployResult = modelDeployResult;
         return this;
@@ -138,6 +153,7 @@ public class DescribeAutoMLJobV2Response {
     
     @JsonProperty("OutputDataConfig")
     public AutoMLOutputDataConfig outputDataConfig;
+
     public DescribeAutoMLJobV2Response withOutputDataConfig(AutoMLOutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -146,6 +162,7 @@ public class DescribeAutoMLJobV2Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartialFailureReasons")
     public AutoMLPartialFailureReason[] partialFailureReasons;
+
     public DescribeAutoMLJobV2Response withPartialFailureReasons(AutoMLPartialFailureReason[] partialFailureReasons) {
         this.partialFailureReasons = partialFailureReasons;
         return this;
@@ -153,6 +170,7 @@ public class DescribeAutoMLJobV2Response {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeAutoMLJobV2Response withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -161,9 +179,21 @@ public class DescribeAutoMLJobV2Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfig")
     public AutoMLSecurityConfig securityConfig;
+
     public DescribeAutoMLJobV2Response withSecurityConfig(AutoMLSecurityConfig securityConfig) {
         this.securityConfig = securityConfig;
         return this;
     }
     
+    public DescribeAutoMLJobV2Response(@JsonProperty("AutoMLJobArn") String autoMLJobArn, @JsonProperty("AutoMLJobInputDataConfig") AutoMLJobChannel[] autoMLJobInputDataConfig, @JsonProperty("AutoMLJobName") String autoMLJobName, @JsonProperty("AutoMLJobSecondaryStatus") AutoMLJobSecondaryStatusEnum autoMLJobSecondaryStatus, @JsonProperty("AutoMLJobStatus") AutoMLJobStatusEnum autoMLJobStatus, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime, @JsonProperty("OutputDataConfig") AutoMLOutputDataConfig outputDataConfig, @JsonProperty("RoleArn") String roleArn) {
+        this.autoMLJobArn = autoMLJobArn;
+        this.autoMLJobInputDataConfig = autoMLJobInputDataConfig;
+        this.autoMLJobName = autoMLJobName;
+        this.autoMLJobSecondaryStatus = autoMLJobSecondaryStatus;
+        this.autoMLJobStatus = autoMLJobStatus;
+        this.creationTime = creationTime;
+        this.lastModifiedTime = lastModifiedTime;
+        this.outputDataConfig = outputDataConfig;
+        this.roleArn = roleArn;
+  }
 }

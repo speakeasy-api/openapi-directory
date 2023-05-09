@@ -18,6 +18,7 @@ public class MetadataImportInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseDump")
     public DatabaseDump databaseDump;
+
     public MetadataImportInput withDatabaseDump(DatabaseDump databaseDump) {
         this.databaseDump = databaseDump;
         return this;
@@ -29,6 +30,7 @@ public class MetadataImportInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public MetadataImportInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,9 +42,11 @@ public class MetadataImportInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MetadataImportInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MetadataImportInput(){}
 }

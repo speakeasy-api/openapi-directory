@@ -15,6 +15,7 @@ public class CommentsReadCommentAttributes {
      */
     
     public Boolean canEdit;
+
     public CommentsReadCommentAttributes withCanEdit(Boolean canEdit) {
         this.canEdit = canEdit;
         return this;
@@ -25,6 +26,7 @@ public class CommentsReadCommentAttributes {
      */
     
     public String content;
+
     public CommentsReadCommentAttributes withContent(String content) {
         this.content = content;
         return this;
@@ -35,6 +37,7 @@ public class CommentsReadCommentAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public CommentsReadCommentAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -45,6 +48,7 @@ public class CommentsReadCommentAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public CommentsReadCommentAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -55,6 +59,7 @@ public class CommentsReadCommentAttributes {
      */
     
     public Boolean deleted;
+
     public CommentsReadCommentAttributes withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -65,6 +70,7 @@ public class CommentsReadCommentAttributes {
      */
     
     public Boolean hasChildren;
+
     public CommentsReadCommentAttributes withHasChildren(Boolean hasChildren) {
         this.hasChildren = hasChildren;
         return this;
@@ -75,6 +81,7 @@ public class CommentsReadCommentAttributes {
      */
     
     public Boolean hasReport;
+
     public CommentsReadCommentAttributes withHasReport(Boolean hasReport) {
         this.hasReport = hasReport;
         return this;
@@ -85,6 +92,7 @@ public class CommentsReadCommentAttributes {
      */
     
     public Boolean isAbuse;
+
     public CommentsReadCommentAttributes withIsAbuse(Boolean isAbuse) {
         this.isAbuse = isAbuse;
         return this;
@@ -95,6 +103,7 @@ public class CommentsReadCommentAttributes {
      */
     
     public Boolean isHam;
+
     public CommentsReadCommentAttributes withIsHam(Boolean isHam) {
         this.isHam = isHam;
         return this;
@@ -105,6 +114,7 @@ public class CommentsReadCommentAttributes {
      */
     
     public Boolean modified;
+
     public CommentsReadCommentAttributes withModified(Boolean modified) {
         this.modified = modified;
         return this;
@@ -115,9 +125,11 @@ public class CommentsReadCommentAttributes {
      */
     
     public String page;
+
     public CommentsReadCommentAttributes withPage(String page) {
         this.page = page;
         return this;
     }
     
+    public CommentsReadCommentAttributes(){}
 }

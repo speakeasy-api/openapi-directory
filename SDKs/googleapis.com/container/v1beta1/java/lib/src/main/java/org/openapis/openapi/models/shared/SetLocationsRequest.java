@@ -18,6 +18,7 @@ public class SetLocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public SetLocationsRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -29,6 +30,7 @@ public class SetLocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public String[] locations;
+
     public SetLocationsRequest withLocations(String[] locations) {
         this.locations = locations;
         return this;
@@ -40,6 +42,7 @@ public class SetLocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SetLocationsRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class SetLocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public SetLocationsRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -62,9 +66,11 @@ public class SetLocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public SetLocationsRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public SetLocationsRequest(){}
 }

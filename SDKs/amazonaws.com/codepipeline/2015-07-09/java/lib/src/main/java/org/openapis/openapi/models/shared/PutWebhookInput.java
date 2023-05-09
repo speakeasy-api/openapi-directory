@@ -12,6 +12,7 @@ public class PutWebhookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public PutWebhookInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -19,9 +20,13 @@ public class PutWebhookInput {
     
     @JsonProperty("webhook")
     public WebhookDefinition webhook;
+
     public PutWebhookInput withWebhook(WebhookDefinition webhook) {
         this.webhook = webhook;
         return this;
     }
     
+    public PutWebhookInput(@JsonProperty("webhook") WebhookDefinition webhook) {
+        this.webhook = webhook;
+  }
 }

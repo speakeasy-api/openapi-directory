@@ -15,6 +15,7 @@ public class DataValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanValue")
     public Boolean booleanValue;
+
     public DataValue withBooleanValue(Boolean booleanValue) {
         this.booleanValue = booleanValue;
         return this;
@@ -23,6 +24,7 @@ public class DataValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public DataValue withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -31,6 +33,7 @@ public class DataValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public DataValue withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -39,6 +42,7 @@ public class DataValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerValue")
     public Long integerValue;
+
     public DataValue withIntegerValue(Long integerValue) {
         this.integerValue = integerValue;
         return this;
@@ -47,6 +51,7 @@ public class DataValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listValue")
     public DataValue[] listValue;
+
     public DataValue withListValue(DataValue[] listValue) {
         this.listValue = listValue;
         return this;
@@ -55,6 +60,7 @@ public class DataValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longValue")
     public Long longValue;
+
     public DataValue withLongValue(Long longValue) {
         this.longValue = longValue;
         return this;
@@ -63,6 +69,7 @@ public class DataValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapValue")
     public java.util.Map<String, DataValue> mapValue;
+
     public DataValue withMapValue(java.util.Map<String, DataValue> mapValue) {
         this.mapValue = mapValue;
         return this;
@@ -71,6 +78,7 @@ public class DataValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationshipValue")
     public RelationshipValue relationshipValue;
+
     public DataValue withRelationshipValue(RelationshipValue relationshipValue) {
         this.relationshipValue = relationshipValue;
         return this;
@@ -79,9 +87,11 @@ public class DataValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public DataValue withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public DataValue(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNatGatewayRequestTagSpecifications {
     
     public CreateNatGatewayRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateNatGatewayRequestTagSpecifications withResourceType(CreateNatGatewayRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateNatGatewayRequestTagSpecifications {
     
     
     public CreateNatGatewayRequestTagSpecificationsTags[] tags;
+
     public CreateNatGatewayRequestTagSpecifications withTags(CreateNatGatewayRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateNatGatewayRequestTagSpecifications(){}
 }

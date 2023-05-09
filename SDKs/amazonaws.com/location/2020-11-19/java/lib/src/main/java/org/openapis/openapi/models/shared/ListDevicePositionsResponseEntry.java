@@ -20,6 +20,7 @@ public class ListDevicePositionsResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Accuracy")
     public PositionalAccuracy accuracy;
+
     public ListDevicePositionsResponseEntry withAccuracy(PositionalAccuracy accuracy) {
         this.accuracy = accuracy;
         return this;
@@ -27,6 +28,7 @@ public class ListDevicePositionsResponseEntry {
     
     @JsonProperty("DeviceId")
     public String deviceId;
+
     public ListDevicePositionsResponseEntry withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -34,6 +36,7 @@ public class ListDevicePositionsResponseEntry {
     
     @JsonProperty("Position")
     public Double[] position;
+
     public ListDevicePositionsResponseEntry withPosition(Double[] position) {
         this.position = position;
         return this;
@@ -42,6 +45,7 @@ public class ListDevicePositionsResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionProperties")
     public java.util.Map<String, String> positionProperties;
+
     public ListDevicePositionsResponseEntry withPositionProperties(java.util.Map<String, String> positionProperties) {
         this.positionProperties = positionProperties;
         return this;
@@ -51,9 +55,15 @@ public class ListDevicePositionsResponseEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SampleTime")
     public OffsetDateTime sampleTime;
+
     public ListDevicePositionsResponseEntry withSampleTime(OffsetDateTime sampleTime) {
         this.sampleTime = sampleTime;
         return this;
     }
     
+    public ListDevicePositionsResponseEntry(@JsonProperty("DeviceId") String deviceId, @JsonProperty("Position") Double[] position, @JsonProperty("SampleTime") OffsetDateTime sampleTime) {
+        this.deviceId = deviceId;
+        this.position = position;
+        this.sampleTime = sampleTime;
+  }
 }

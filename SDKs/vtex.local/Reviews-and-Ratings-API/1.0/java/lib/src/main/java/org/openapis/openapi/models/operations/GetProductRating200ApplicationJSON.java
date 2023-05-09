@@ -18,6 +18,7 @@ public class GetProductRating200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average")
     public Double average;
+
     public GetProductRating200ApplicationJSON withAverage(Double average) {
         this.average = average;
         return this;
@@ -29,9 +30,11 @@ public class GetProductRating200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Double totalCount;
+
     public GetProductRating200ApplicationJSON withTotalCount(Double totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public GetProductRating200ApplicationJSON(){}
 }

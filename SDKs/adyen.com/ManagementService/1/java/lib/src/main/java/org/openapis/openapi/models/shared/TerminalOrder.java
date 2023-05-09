@@ -15,6 +15,7 @@ public class TerminalOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingEntity")
     public BillingEntity billingEntity;
+
     public TerminalOrder withBillingEntity(BillingEntity billingEntity) {
         this.billingEntity = billingEntity;
         return this;
@@ -26,6 +27,7 @@ public class TerminalOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerOrderReference")
     public String customerOrderReference;
+
     public TerminalOrder withCustomerOrderReference(String customerOrderReference) {
         this.customerOrderReference = customerOrderReference;
         return this;
@@ -37,6 +39,7 @@ public class TerminalOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TerminalOrder withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class TerminalOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public OrderItem[] items;
+
     public TerminalOrder withItems(OrderItem[] items) {
         this.items = items;
         return this;
@@ -59,6 +63,7 @@ public class TerminalOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderDate")
     public String orderDate;
+
     public TerminalOrder withOrderDate(String orderDate) {
         this.orderDate = orderDate;
         return this;
@@ -67,6 +72,7 @@ public class TerminalOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingLocation")
     public ShippingLocation shippingLocation;
+
     public TerminalOrder withShippingLocation(ShippingLocation shippingLocation) {
         this.shippingLocation = shippingLocation;
         return this;
@@ -78,6 +84,7 @@ public class TerminalOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public TerminalOrder withStatus(String status) {
         this.status = status;
         return this;
@@ -89,9 +96,11 @@ public class TerminalOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingUrl")
     public String trackingUrl;
+
     public TerminalOrder withTrackingUrl(String trackingUrl) {
         this.trackingUrl = trackingUrl;
         return this;
     }
     
+    public TerminalOrder(){}
 }

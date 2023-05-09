@@ -15,6 +15,7 @@ public class DeletePolicyModule200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locals")
     public DeletePolicyModule200ApplicationJSONExplanationLocals[] locals;
+
     public DeletePolicyModule200ApplicationJSONExplanation withLocals(DeletePolicyModule200ApplicationJSONExplanationLocals[] locals) {
         this.locals = locals;
         return this;
@@ -27,6 +28,7 @@ public class DeletePolicyModule200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node")
     public DeletePolicyModule200ApplicationJSONExplanationNode node;
+
     public DeletePolicyModule200ApplicationJSONExplanation withNode(DeletePolicyModule200ApplicationJSONExplanationNode node) {
         this.node = node;
         return this;
@@ -47,6 +49,7 @@ public class DeletePolicyModule200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public DeletePolicyModule200ApplicationJSONExplanationOpEnum op;
+
     public DeletePolicyModule200ApplicationJSONExplanation withOp(DeletePolicyModule200ApplicationJSONExplanationOpEnum op) {
         this.op = op;
         return this;
@@ -60,6 +63,7 @@ public class DeletePolicyModule200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     public Double parentId;
+
     public DeletePolicyModule200ApplicationJSONExplanation withParentId(Double parentId) {
         this.parentId = parentId;
         return this;
@@ -71,6 +75,7 @@ public class DeletePolicyModule200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query_id")
     public Double queryId;
+
     public DeletePolicyModule200ApplicationJSONExplanation withQueryId(Double queryId) {
         this.queryId = queryId;
         return this;
@@ -82,9 +87,11 @@ public class DeletePolicyModule200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DeletePolicyModule200ApplicationJSONExplanationTypeEnum type;
+
     public DeletePolicyModule200ApplicationJSONExplanation withType(DeletePolicyModule200ApplicationJSONExplanationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DeletePolicyModule200ApplicationJSONExplanation(){}
 }

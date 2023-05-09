@@ -15,6 +15,7 @@ public class FirewallPolicyRuleMatcherLayer4Config {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipProtocol")
     public String ipProtocol;
+
     public FirewallPolicyRuleMatcherLayer4Config withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -26,9 +27,11 @@ public class FirewallPolicyRuleMatcherLayer4Config {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ports")
     public String[] ports;
+
     public FirewallPolicyRuleMatcherLayer4Config withPorts(String[] ports) {
         this.ports = ports;
         return this;
     }
     
+    public FirewallPolicyRuleMatcherLayer4Config(){}
 }

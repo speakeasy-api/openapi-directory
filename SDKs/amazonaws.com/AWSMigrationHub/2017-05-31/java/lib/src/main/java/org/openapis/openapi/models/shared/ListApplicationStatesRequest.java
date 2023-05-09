@@ -12,6 +12,7 @@ public class ListApplicationStatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationIds")
     public String[] applicationIds;
+
     public ListApplicationStatesRequest withApplicationIds(String[] applicationIds) {
         this.applicationIds = applicationIds;
         return this;
@@ -20,6 +21,7 @@ public class ListApplicationStatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListApplicationStatesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListApplicationStatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListApplicationStatesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListApplicationStatesRequest(){}
 }

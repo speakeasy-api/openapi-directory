@@ -18,6 +18,7 @@ public class PriorityEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public PriorityEntity withColor(String color) {
         this.color = color;
         return this;
@@ -29,9 +30,11 @@ public class PriorityEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public PriorityEntity withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public PriorityEntity(){}
 }

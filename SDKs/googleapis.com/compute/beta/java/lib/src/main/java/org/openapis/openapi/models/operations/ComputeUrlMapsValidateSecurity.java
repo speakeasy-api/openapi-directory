@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeUrlMapsValidateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeUrlMapsValidateSecurityOption1 option1;
+
     public ComputeUrlMapsValidateSecurity withOption1(ComputeUrlMapsValidateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeUrlMapsValidateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeUrlMapsValidateSecurityOption2 option2;
+
     public ComputeUrlMapsValidateSecurity withOption2(ComputeUrlMapsValidateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeUrlMapsValidateSecurity(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddPaymentRequestResponse {
     
     public byte[] body;
+
     public AddPaymentRequestResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class AddPaymentRequestResponse {
     
     
     public String contentType;
+
     public AddPaymentRequestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class AddPaymentRequestResponse {
     
     
     public Integer statusCode;
+
     public AddPaymentRequestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class AddPaymentRequestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddPaymentRequestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class AddPaymentRequestResponse {
      */
     
     public String addPaymentRequest400WildcardString;
+
     public AddPaymentRequestResponse withAddPaymentRequest400WildcardString(String addPaymentRequest400WildcardString) {
         this.addPaymentRequest400WildcardString = addPaymentRequest400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class AddPaymentRequestResponse {
      */
     
     public String addPaymentRequest401WildcardString;
+
     public AddPaymentRequestResponse withAddPaymentRequest401WildcardString(String addPaymentRequest401WildcardString) {
         this.addPaymentRequest401WildcardString = addPaymentRequest401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class AddPaymentRequestResponse {
      */
     
     public String addPaymentRequest404WildcardString;
+
     public AddPaymentRequestResponse withAddPaymentRequest404WildcardString(String addPaymentRequest404WildcardString) {
         this.addPaymentRequest404WildcardString = addPaymentRequest404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class AddPaymentRequestResponse {
      */
     
     public String addPaymentRequest409WildcardString;
+
     public AddPaymentRequestResponse withAddPaymentRequest409WildcardString(String addPaymentRequest409WildcardString) {
         this.addPaymentRequest409WildcardString = addPaymentRequest409WildcardString;
         return this;
     }
     
+    public AddPaymentRequestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

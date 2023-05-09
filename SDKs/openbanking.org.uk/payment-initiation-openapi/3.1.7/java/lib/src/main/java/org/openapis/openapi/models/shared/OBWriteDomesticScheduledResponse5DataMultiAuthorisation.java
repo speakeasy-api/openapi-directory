@@ -27,6 +27,7 @@ public class OBWriteDomesticScheduledResponse5DataMultiAuthorisation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationDateTime")
     public OffsetDateTime expirationDateTime;
+
     public OBWriteDomesticScheduledResponse5DataMultiAuthorisation withExpirationDateTime(OffsetDateTime expirationDateTime) {
         this.expirationDateTime = expirationDateTime;
         return this;
@@ -42,6 +43,7 @@ public class OBWriteDomesticScheduledResponse5DataMultiAuthorisation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateDateTime")
     public OffsetDateTime lastUpdateDateTime;
+
     public OBWriteDomesticScheduledResponse5DataMultiAuthorisation withLastUpdateDateTime(OffsetDateTime lastUpdateDateTime) {
         this.lastUpdateDateTime = lastUpdateDateTime;
         return this;
@@ -53,6 +55,7 @@ public class OBWriteDomesticScheduledResponse5DataMultiAuthorisation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberReceived")
     public Long numberReceived;
+
     public OBWriteDomesticScheduledResponse5DataMultiAuthorisation withNumberReceived(Long numberReceived) {
         this.numberReceived = numberReceived;
         return this;
@@ -64,6 +67,7 @@ public class OBWriteDomesticScheduledResponse5DataMultiAuthorisation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberRequired")
     public Long numberRequired;
+
     public OBWriteDomesticScheduledResponse5DataMultiAuthorisation withNumberRequired(Long numberRequired) {
         this.numberRequired = numberRequired;
         return this;
@@ -74,9 +78,13 @@ public class OBWriteDomesticScheduledResponse5DataMultiAuthorisation {
      */
     @JsonProperty("Status")
     public OBWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum status;
+
     public OBWriteDomesticScheduledResponse5DataMultiAuthorisation withStatus(OBWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public OBWriteDomesticScheduledResponse5DataMultiAuthorisation(@JsonProperty("Status") OBWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum status) {
+        this.status = status;
+  }
 }

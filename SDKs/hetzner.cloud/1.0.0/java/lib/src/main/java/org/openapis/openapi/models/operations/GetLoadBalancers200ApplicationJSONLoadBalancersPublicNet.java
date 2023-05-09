@@ -15,6 +15,7 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersPublicNet {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersPublicNet withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -25,6 +26,7 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersPublicNet {
      */
     @JsonProperty("ipv4")
     public GetLoadBalancers200ApplicationJSONLoadBalancersPublicNetIpv4 ipv4;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersPublicNet withIpv4(GetLoadBalancers200ApplicationJSONLoadBalancersPublicNetIpv4 ipv4) {
         this.ipv4 = ipv4;
         return this;
@@ -35,9 +37,15 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersPublicNet {
      */
     @JsonProperty("ipv6")
     public GetLoadBalancers200ApplicationJSONLoadBalancersPublicNetIpv6 ipv6;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersPublicNet withIpv6(GetLoadBalancers200ApplicationJSONLoadBalancersPublicNetIpv6 ipv6) {
         this.ipv6 = ipv6;
         return this;
     }
     
+    public GetLoadBalancers200ApplicationJSONLoadBalancersPublicNet(@JsonProperty("enabled") Boolean enabled, @JsonProperty("ipv4") GetLoadBalancers200ApplicationJSONLoadBalancersPublicNetIpv4 ipv4, @JsonProperty("ipv6") GetLoadBalancers200ApplicationJSONLoadBalancersPublicNetIpv6 ipv6) {
+        this.enabled = enabled;
+        this.ipv4 = ipv4;
+        this.ipv6 = ipv6;
+  }
 }

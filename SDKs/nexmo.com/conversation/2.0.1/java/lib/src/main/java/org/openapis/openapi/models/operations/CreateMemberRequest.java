@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateMemberRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateMemberRequestBody requestBody;
+
     public CreateMemberRequest withRequestBody(CreateMemberRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class CreateMemberRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversation_id")
     public String conversationId;
+
     public CreateMemberRequest withConversationId(String conversationId) {
         this.conversationId = conversationId;
         return this;
     }
     
+    public CreateMemberRequest(@JsonProperty("conversation_id") String conversationId) {
+        this.conversationId = conversationId;
+  }
 }

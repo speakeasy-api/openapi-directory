@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogs {
     
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogs cloudWatchLogs;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogs withCloudWatchLogs(ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogs cloudWatchLogs) {
         this.cloudWatchLogs = cloudWatchLogs;
         return this;
@@ -19,6 +20,7 @@ public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfig
     
     
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehose kinesisDataFirehose;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogs withKinesisDataFirehose(ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehose kinesisDataFirehose) {
         this.kinesisDataFirehose = kinesisDataFirehose;
         return this;
@@ -26,9 +28,11 @@ public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfig
     
     
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3 s3;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogs withS3(ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3 s3) {
         this.s3 = s3;
         return this;
     }
     
+    public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogs(){}
 }

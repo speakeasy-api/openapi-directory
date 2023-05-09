@@ -55,11 +55,9 @@ public class MerchandisedProduct {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchandisedProductsResponse res = new org.openapis.openapi.models.operations.GetMerchandisedProductsResponse() {{
+        org.openapis.openapi.models.operations.GetMerchandisedProductsResponse res = new org.openapis.openapi.models.operations.GetMerchandisedProductsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -14,7 +14,7 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * ExperimentSummary - A summary of the properties of an experiment. To get the complete set of properties, call the &lt;a&gt;DescribeExperiment&lt;/a&gt; API and provide the &lt;code&gt;ExperimentName&lt;/code&gt;.
+ * ExperimentSummary - A summary of the properties of an experiment. To get the complete set of properties, call the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeExperiment.html"&gt;DescribeExperiment&lt;/a&gt; API and provide the &lt;code&gt;ExperimentName&lt;/code&gt;.
  */
 public class ExperimentSummary {
     @JsonInclude(Include.NON_ABSENT)
@@ -22,6 +22,7 @@ public class ExperimentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ExperimentSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class ExperimentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public ExperimentSummary withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -38,6 +40,7 @@ public class ExperimentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentArn")
     public String experimentArn;
+
     public ExperimentSummary withExperimentArn(String experimentArn) {
         this.experimentArn = experimentArn;
         return this;
@@ -46,6 +49,7 @@ public class ExperimentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentName")
     public String experimentName;
+
     public ExperimentSummary withExperimentName(String experimentName) {
         this.experimentName = experimentName;
         return this;
@@ -57,6 +61,7 @@ public class ExperimentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentSource")
     public ExperimentSource experimentSource;
+
     public ExperimentSummary withExperimentSource(ExperimentSource experimentSource) {
         this.experimentSource = experimentSource;
         return this;
@@ -67,9 +72,11 @@ public class ExperimentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public ExperimentSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
+    public ExperimentSummary(){}
 }

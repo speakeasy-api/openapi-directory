@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudkmsProjectsLocationsKeyRingsImportJobsListResponse {
     
     public String contentType;
+
     public CloudkmsProjectsLocationsKeyRingsImportJobsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudkmsProjectsLocationsKeyRingsImportJobsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListImportJobsResponse listImportJobsResponse;
+
     public CloudkmsProjectsLocationsKeyRingsImportJobsListResponse withListImportJobsResponse(org.openapis.openapi.models.shared.ListImportJobsResponse listImportJobsResponse) {
         this.listImportJobsResponse = listImportJobsResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudkmsProjectsLocationsKeyRingsImportJobsListResponse {
     
     
     public Integer statusCode;
+
     public CloudkmsProjectsLocationsKeyRingsImportJobsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudkmsProjectsLocationsKeyRingsImportJobsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudkmsProjectsLocationsKeyRingsImportJobsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudkmsProjectsLocationsKeyRingsImportJobsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

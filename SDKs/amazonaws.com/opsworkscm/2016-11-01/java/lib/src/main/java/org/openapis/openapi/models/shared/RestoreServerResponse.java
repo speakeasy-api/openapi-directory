@@ -18,9 +18,11 @@ public class RestoreServerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Server")
     public Server server;
+
     public RestoreServerResponse withServer(Server server) {
         this.server = server;
         return this;
     }
     
+    public RestoreServerResponse(){}
 }

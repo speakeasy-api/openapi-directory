@@ -18,9 +18,11 @@ public class CohortReportSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accumulate")
     public Boolean accumulate;
+
     public CohortReportSettings withAccumulate(Boolean accumulate) {
         this.accumulate = accumulate;
         return this;
     }
     
+    public CohortReportSettings(){}
 }

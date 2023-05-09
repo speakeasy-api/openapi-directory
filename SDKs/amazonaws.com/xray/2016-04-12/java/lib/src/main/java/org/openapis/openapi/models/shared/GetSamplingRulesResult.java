@@ -15,6 +15,7 @@ public class GetSamplingRulesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetSamplingRulesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetSamplingRulesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SamplingRuleRecords")
     public SamplingRuleRecord[] samplingRuleRecords;
+
     public GetSamplingRulesResult withSamplingRuleRecords(SamplingRuleRecord[] samplingRuleRecords) {
         this.samplingRuleRecords = samplingRuleRecords;
         return this;
     }
     
+    public GetSamplingRulesResult(){}
 }

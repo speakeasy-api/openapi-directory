@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SpellCorrectionConfiguration {
     @JsonProperty("IncludeQuerySpellCheckSuggestions")
     public Boolean includeQuerySpellCheckSuggestions;
+
     public SpellCorrectionConfiguration withIncludeQuerySpellCheckSuggestions(Boolean includeQuerySpellCheckSuggestions) {
         this.includeQuerySpellCheckSuggestions = includeQuerySpellCheckSuggestions;
         return this;
     }
     
+    public SpellCorrectionConfiguration(@JsonProperty("IncludeQuerySpellCheckSuggestions") Boolean includeQuerySpellCheckSuggestions) {
+        this.includeQuerySpellCheckSuggestions = includeQuerySpellCheckSuggestions;
+  }
 }

@@ -12,6 +12,7 @@ public class ListEntityRecognizersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public EntityRecognizerFilter filter;
+
     public ListEntityRecognizersRequest withFilter(EntityRecognizerFilter filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListEntityRecognizersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListEntityRecognizersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListEntityRecognizersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEntityRecognizersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEntityRecognizersRequest(){}
 }

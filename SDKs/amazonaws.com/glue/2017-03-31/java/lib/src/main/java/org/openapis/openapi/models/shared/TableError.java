@@ -15,6 +15,7 @@ public class TableError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDetail")
     public ErrorDetail errorDetail;
+
     public TableError withErrorDetail(ErrorDetail errorDetail) {
         this.errorDetail = errorDetail;
         return this;
@@ -23,9 +24,11 @@ public class TableError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public TableError withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public TableError(){}
 }

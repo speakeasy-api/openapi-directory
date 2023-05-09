@@ -15,6 +15,7 @@ public class ConnectionQueryStringParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsValueSecret")
     public Boolean isValueSecret;
+
     public ConnectionQueryStringParameter withIsValueSecret(Boolean isValueSecret) {
         this.isValueSecret = isValueSecret;
         return this;
@@ -23,6 +24,7 @@ public class ConnectionQueryStringParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public ConnectionQueryStringParameter withKey(String key) {
         this.key = key;
         return this;
@@ -31,9 +33,11 @@ public class ConnectionQueryStringParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public ConnectionQueryStringParameter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ConnectionQueryStringParameter(){}
 }

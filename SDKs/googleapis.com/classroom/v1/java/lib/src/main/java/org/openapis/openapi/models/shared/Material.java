@@ -18,6 +18,7 @@ public class Material {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driveFile")
     public SharedDriveFile driveFile;
+
     public Material withDriveFile(SharedDriveFile driveFile) {
         this.driveFile = driveFile;
         return this;
@@ -29,6 +30,7 @@ public class Material {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form")
     public Form form;
+
     public Material withForm(Form form) {
         this.form = form;
         return this;
@@ -40,6 +42,7 @@ public class Material {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public Link link;
+
     public Material withLink(Link link) {
         this.link = link;
         return this;
@@ -51,9 +54,11 @@ public class Material {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("youtubeVideo")
     public YouTubeVideo youtubeVideo;
+
     public Material withYoutubeVideo(YouTubeVideo youtubeVideo) {
         this.youtubeVideo = youtubeVideo;
         return this;
     }
     
+    public Material(){}
 }

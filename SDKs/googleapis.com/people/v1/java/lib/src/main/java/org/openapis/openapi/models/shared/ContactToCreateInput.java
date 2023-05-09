@@ -18,9 +18,11 @@ public class ContactToCreateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactPerson")
     public PersonInput contactPerson;
+
     public ContactToCreateInput withContactPerson(PersonInput contactPerson) {
         this.contactPerson = contactPerson;
         return this;
     }
     
+    public ContactToCreateInput(){}
 }

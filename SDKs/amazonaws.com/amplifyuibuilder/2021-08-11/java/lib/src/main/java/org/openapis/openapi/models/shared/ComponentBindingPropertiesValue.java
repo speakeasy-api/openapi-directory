@@ -15,6 +15,7 @@ public class ComponentBindingPropertiesValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bindingProperties")
     public ComponentBindingPropertiesValueProperties bindingProperties;
+
     public ComponentBindingPropertiesValue withBindingProperties(ComponentBindingPropertiesValueProperties bindingProperties) {
         this.bindingProperties = bindingProperties;
         return this;
@@ -23,6 +24,7 @@ public class ComponentBindingPropertiesValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public String defaultValue;
+
     public ComponentBindingPropertiesValue withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -31,9 +33,11 @@ public class ComponentBindingPropertiesValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ComponentBindingPropertiesValue withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ComponentBindingPropertiesValue(){}
 }

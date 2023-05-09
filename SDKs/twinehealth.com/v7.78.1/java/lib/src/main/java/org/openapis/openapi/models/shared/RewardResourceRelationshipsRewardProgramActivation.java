@@ -12,9 +12,11 @@ public class RewardResourceRelationshipsRewardProgramActivation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public RewardResourceRelationshipsRewardProgramActivationData data;
+
     public RewardResourceRelationshipsRewardProgramActivation withData(RewardResourceRelationshipsRewardProgramActivationData data) {
         this.data = data;
         return this;
     }
     
+    public RewardResourceRelationshipsRewardProgramActivation(){}
 }

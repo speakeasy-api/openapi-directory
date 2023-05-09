@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTCreateLoadBalancerListenersRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTCreateLoadBalancerListenersActionEnum action;
+
     public POSTCreateLoadBalancerListenersRequest withAction(POSTCreateLoadBalancerListenersActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTCreateLoadBalancerListenersRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTCreateLoadBalancerListenersRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTCreateLoadBalancerListenersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTCreateLoadBalancerListenersVersionEnum version;
+
     public POSTCreateLoadBalancerListenersRequest withVersion(POSTCreateLoadBalancerListenersVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTCreateLoadBalancerListenersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTCreateLoadBalancerListenersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTCreateLoadBalancerListenersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTCreateLoadBalancerListenersRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTCreateLoadBalancerListenersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTCreateLoadBalancerListenersRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTCreateLoadBalancerListenersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTCreateLoadBalancerListenersRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTCreateLoadBalancerListenersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTCreateLoadBalancerListenersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTCreateLoadBalancerListenersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTCreateLoadBalancerListenersRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTCreateLoadBalancerListenersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTCreateLoadBalancerListenersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTCreateLoadBalancerListenersRequest(@JsonProperty("Action") POSTCreateLoadBalancerListenersActionEnum action, @JsonProperty("Version") POSTCreateLoadBalancerListenersVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

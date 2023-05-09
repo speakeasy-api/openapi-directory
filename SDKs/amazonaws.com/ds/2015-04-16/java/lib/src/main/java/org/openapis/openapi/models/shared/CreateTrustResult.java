@@ -15,9 +15,11 @@ public class CreateTrustResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrustId")
     public String trustId;
+
     public CreateTrustResult withTrustId(String trustId) {
         this.trustId = trustId;
         return this;
     }
     
+    public CreateTrustResult(){}
 }

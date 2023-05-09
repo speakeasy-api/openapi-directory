@@ -18,6 +18,7 @@ public class Student {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courseId")
     public String courseId;
+
     public Student withCourseId(String courseId) {
         this.courseId = courseId;
         return this;
@@ -29,6 +30,7 @@ public class Student {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile")
     public UserProfile profile;
+
     public Student withProfile(UserProfile profile) {
         this.profile = profile;
         return this;
@@ -40,6 +42,7 @@ public class Student {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studentWorkFolder")
     public DriveFolder studentWorkFolder;
+
     public Student withStudentWorkFolder(DriveFolder studentWorkFolder) {
         this.studentWorkFolder = studentWorkFolder;
         return this;
@@ -51,9 +54,11 @@ public class Student {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public Student withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public Student(){}
 }

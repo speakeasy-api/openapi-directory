@@ -18,6 +18,7 @@ public class SpaceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JupyterServerAppSettings")
     public JupyterServerAppSettings jupyterServerAppSettings;
+
     public SpaceSettings withJupyterServerAppSettings(JupyterServerAppSettings jupyterServerAppSettings) {
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         return this;
@@ -29,9 +30,11 @@ public class SpaceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KernelGatewayAppSettings")
     public KernelGatewayAppSettings kernelGatewayAppSettings;
+
     public SpaceSettings withKernelGatewayAppSettings(KernelGatewayAppSettings kernelGatewayAppSettings) {
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;
         return this;
     }
     
+    public SpaceSettings(){}
 }

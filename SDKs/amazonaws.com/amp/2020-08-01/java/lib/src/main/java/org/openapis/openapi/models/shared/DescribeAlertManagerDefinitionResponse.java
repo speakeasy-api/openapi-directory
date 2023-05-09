@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAlertManagerDefinitionResponse {
     @JsonProperty("alertManagerDefinition")
     public AlertManagerDefinitionDescription alertManagerDefinition;
+
     public DescribeAlertManagerDefinitionResponse withAlertManagerDefinition(AlertManagerDefinitionDescription alertManagerDefinition) {
         this.alertManagerDefinition = alertManagerDefinition;
         return this;
     }
     
+    public DescribeAlertManagerDefinitionResponse(@JsonProperty("alertManagerDefinition") AlertManagerDefinitionDescription alertManagerDefinition) {
+        this.alertManagerDefinition = alertManagerDefinition;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTGetSSHPublicKeyResponse {
     
     public byte[] body;
+
     public POSTGetSSHPublicKeyResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTGetSSHPublicKeyResponse {
     
     
     public String contentType;
+
     public POSTGetSSHPublicKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTGetSSHPublicKeyResponse {
     
     
     public Integer statusCode;
+
     public POSTGetSSHPublicKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTGetSSHPublicKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTGetSSHPublicKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTGetSSHPublicKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

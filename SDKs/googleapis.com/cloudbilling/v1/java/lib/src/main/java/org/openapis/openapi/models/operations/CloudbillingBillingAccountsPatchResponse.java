@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudbillingBillingAccountsPatchResponse {
@@ -12,6 +13,7 @@ public class CloudbillingBillingAccountsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.BillingAccount billingAccount;
+
     public CloudbillingBillingAccountsPatchResponse withBillingAccount(org.openapis.openapi.models.shared.BillingAccount billingAccount) {
         this.billingAccount = billingAccount;
         return this;
@@ -19,6 +21,7 @@ public class CloudbillingBillingAccountsPatchResponse {
     
     
     public String contentType;
+
     public CloudbillingBillingAccountsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CloudbillingBillingAccountsPatchResponse {
     
     
     public Integer statusCode;
+
     public CloudbillingBillingAccountsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudbillingBillingAccountsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudbillingBillingAccountsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudbillingBillingAccountsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

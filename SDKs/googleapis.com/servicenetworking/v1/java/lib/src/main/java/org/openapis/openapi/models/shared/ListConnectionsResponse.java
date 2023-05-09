@@ -18,9 +18,11 @@ public class ListConnectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connections")
     public Connection[] connections;
+
     public ListConnectionsResponse withConnections(Connection[] connections) {
         this.connections = connections;
         return this;
     }
     
+    public ListConnectionsResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutInventoryResponse {
     
     public String contentType;
+
     public PutInventoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutInventoryResponse {
      */
     
     public Object customSchemaCountLimitExceededException;
+
     public PutInventoryResponse withCustomSchemaCountLimitExceededException(Object customSchemaCountLimitExceededException) {
         this.customSchemaCountLimitExceededException = customSchemaCountLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class PutInventoryResponse {
      */
     
     public Object internalServerError;
+
     public PutInventoryResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class PutInventoryResponse {
      */
     
     public Object invalidInstanceId;
+
     public PutInventoryResponse withInvalidInstanceId(Object invalidInstanceId) {
         this.invalidInstanceId = invalidInstanceId;
         return this;
@@ -49,6 +54,7 @@ public class PutInventoryResponse {
      */
     
     public Object invalidInventoryItemContextException;
+
     public PutInventoryResponse withInvalidInventoryItemContextException(Object invalidInventoryItemContextException) {
         this.invalidInventoryItemContextException = invalidInventoryItemContextException;
         return this;
@@ -59,6 +65,7 @@ public class PutInventoryResponse {
      */
     
     public Object invalidItemContentException;
+
     public PutInventoryResponse withInvalidItemContentException(Object invalidItemContentException) {
         this.invalidItemContentException = invalidItemContentException;
         return this;
@@ -69,6 +76,7 @@ public class PutInventoryResponse {
      */
     
     public Object invalidTypeNameException;
+
     public PutInventoryResponse withInvalidTypeNameException(Object invalidTypeNameException) {
         this.invalidTypeNameException = invalidTypeNameException;
         return this;
@@ -79,6 +87,7 @@ public class PutInventoryResponse {
      */
     
     public Object itemContentMismatchException;
+
     public PutInventoryResponse withItemContentMismatchException(Object itemContentMismatchException) {
         this.itemContentMismatchException = itemContentMismatchException;
         return this;
@@ -89,6 +98,7 @@ public class PutInventoryResponse {
      */
     
     public Object itemSizeLimitExceededException;
+
     public PutInventoryResponse withItemSizeLimitExceededException(Object itemSizeLimitExceededException) {
         this.itemSizeLimitExceededException = itemSizeLimitExceededException;
         return this;
@@ -99,6 +109,7 @@ public class PutInventoryResponse {
      */
     
     public org.openapis.openapi.models.shared.PutInventoryResult putInventoryResult;
+
     public PutInventoryResponse withPutInventoryResult(org.openapis.openapi.models.shared.PutInventoryResult putInventoryResult) {
         this.putInventoryResult = putInventoryResult;
         return this;
@@ -106,6 +117,7 @@ public class PutInventoryResponse {
     
     
     public Integer statusCode;
+
     public PutInventoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class PutInventoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutInventoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class PutInventoryResponse {
      */
     
     public Object subTypeCountLimitExceededException;
+
     public PutInventoryResponse withSubTypeCountLimitExceededException(Object subTypeCountLimitExceededException) {
         this.subTypeCountLimitExceededException = subTypeCountLimitExceededException;
         return this;
@@ -133,6 +147,7 @@ public class PutInventoryResponse {
      */
     
     public Object totalSizeLimitExceededException;
+
     public PutInventoryResponse withTotalSizeLimitExceededException(Object totalSizeLimitExceededException) {
         this.totalSizeLimitExceededException = totalSizeLimitExceededException;
         return this;
@@ -143,6 +158,7 @@ public class PutInventoryResponse {
      */
     
     public Object unsupportedInventoryItemContextException;
+
     public PutInventoryResponse withUnsupportedInventoryItemContextException(Object unsupportedInventoryItemContextException) {
         this.unsupportedInventoryItemContextException = unsupportedInventoryItemContextException;
         return this;
@@ -153,9 +169,14 @@ public class PutInventoryResponse {
      */
     
     public Object unsupportedInventorySchemaVersionException;
+
     public PutInventoryResponse withUnsupportedInventorySchemaVersionException(Object unsupportedInventorySchemaVersionException) {
         this.unsupportedInventorySchemaVersionException = unsupportedInventorySchemaVersionException;
         return this;
     }
     
+    public PutInventoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

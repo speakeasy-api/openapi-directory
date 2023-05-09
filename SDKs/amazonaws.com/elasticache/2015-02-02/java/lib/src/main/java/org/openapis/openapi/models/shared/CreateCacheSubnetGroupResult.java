@@ -15,9 +15,11 @@ public class CreateCacheSubnetGroupResult {
      */
     
     public CacheSubnetGroup cacheSubnetGroup;
+
     public CreateCacheSubnetGroupResult withCacheSubnetGroup(CacheSubnetGroup cacheSubnetGroup) {
         this.cacheSubnetGroup = cacheSubnetGroup;
         return this;
     }
     
+    public CreateCacheSubnetGroupResult(){}
 }

@@ -15,6 +15,7 @@ public class DeploymentPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentUpdatePolicy")
     public DeploymentComponentUpdatePolicy componentUpdatePolicy;
+
     public DeploymentPolicies withComponentUpdatePolicy(DeploymentComponentUpdatePolicy componentUpdatePolicy) {
         this.componentUpdatePolicy = componentUpdatePolicy;
         return this;
@@ -23,6 +24,7 @@ public class DeploymentPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationValidationPolicy")
     public DeploymentConfigurationValidationPolicy configurationValidationPolicy;
+
     public DeploymentPolicies withConfigurationValidationPolicy(DeploymentConfigurationValidationPolicy configurationValidationPolicy) {
         this.configurationValidationPolicy = configurationValidationPolicy;
         return this;
@@ -31,9 +33,11 @@ public class DeploymentPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureHandlingPolicy")
     public DeploymentFailureHandlingPolicyEnum failureHandlingPolicy;
+
     public DeploymentPolicies withFailureHandlingPolicy(DeploymentFailureHandlingPolicyEnum failureHandlingPolicy) {
         this.failureHandlingPolicy = failureHandlingPolicy;
         return this;
     }
     
+    public DeploymentPolicies(){}
 }

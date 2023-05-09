@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsenseAdunitsCustomchannelsListRequest {
@@ -12,6 +13,7 @@ public class AdsenseAdunitsCustomchannelsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adClientId")
     public String adClientId;
+
     public AdsenseAdunitsCustomchannelsListRequest withAdClientId(String adClientId) {
         this.adClientId = adClientId;
         return this;
@@ -22,6 +24,7 @@ public class AdsenseAdunitsCustomchannelsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adUnitId")
     public String adUnitId;
+
     public AdsenseAdunitsCustomchannelsListRequest withAdUnitId(String adUnitId) {
         this.adUnitId = adUnitId;
         return this;
@@ -32,6 +35,7 @@ public class AdsenseAdunitsCustomchannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdsenseAdunitsCustomchannelsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AdsenseAdunitsCustomchannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdsenseAdunitsCustomchannelsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +57,7 @@ public class AdsenseAdunitsCustomchannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdsenseAdunitsCustomchannelsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +68,7 @@ public class AdsenseAdunitsCustomchannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public AdsenseAdunitsCustomchannelsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -72,6 +79,7 @@ public class AdsenseAdunitsCustomchannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdsenseAdunitsCustomchannelsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class AdsenseAdunitsCustomchannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public AdsenseAdunitsCustomchannelsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -92,6 +101,7 @@ public class AdsenseAdunitsCustomchannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdsenseAdunitsCustomchannelsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class AdsenseAdunitsCustomchannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdsenseAdunitsCustomchannelsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,9 +123,14 @@ public class AdsenseAdunitsCustomchannelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdsenseAdunitsCustomchannelsListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdsenseAdunitsCustomchannelsListRequest(@JsonProperty("adClientId") String adClientId, @JsonProperty("adUnitId") String adUnitId) {
+        this.adClientId = adClientId;
+        this.adUnitId = adUnitId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProtocolProxyPortAddResponse {
     
     public String contentType;
+
     public ProtocolProxyPortAddResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProtocolProxyPortAddResponse {
     
     
     public Integer statusCode;
+
     public ProtocolProxyPortAddResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProtocolProxyPortAddResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProtocolProxyPortAddResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ProtocolProxyPortAddResponse {
      */
     
     public String protocolProxyPortAdd200ApplicationJSONString;
+
     public ProtocolProxyPortAddResponse withProtocolProxyPortAdd200ApplicationJSONString(String protocolProxyPortAdd200ApplicationJSONString) {
         this.protocolProxyPortAdd200ApplicationJSONString = protocolProxyPortAdd200ApplicationJSONString;
         return this;
     }
     
+    public ProtocolProxyPortAddResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

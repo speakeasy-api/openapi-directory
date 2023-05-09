@@ -18,6 +18,7 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Attributes attributes;
+
     public Span withAttributes(Attributes attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childSpanCount")
     public Integer childSpanCount;
+
     public Span withChildSpanCount(Integer childSpanCount) {
         this.childSpanCount = childSpanCount;
         return this;
@@ -40,6 +42,7 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public TruncatableString displayName;
+
     public Span withDisplayName(TruncatableString displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public Span withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -62,6 +66,7 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public Links links;
+
     public Span withLinks(Links links) {
         this.links = links;
         return this;
@@ -73,6 +78,7 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Span withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentSpanId")
     public String parentSpanId;
+
     public Span withParentSpanId(String parentSpanId) {
         this.parentSpanId = parentSpanId;
         return this;
@@ -95,6 +102,7 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sameProcessAsParentSpan")
     public Boolean sameProcessAsParentSpan;
+
     public Span withSameProcessAsParentSpan(Boolean sameProcessAsParentSpan) {
         this.sameProcessAsParentSpan = sameProcessAsParentSpan;
         return this;
@@ -106,6 +114,7 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spanId")
     public String spanId;
+
     public Span withSpanId(String spanId) {
         this.spanId = spanId;
         return this;
@@ -117,6 +126,7 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spanKind")
     public SpanSpanKindEnum spanKind;
+
     public Span withSpanKind(SpanSpanKindEnum spanKind) {
         this.spanKind = spanKind;
         return this;
@@ -128,6 +138,7 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackTrace")
     public StackTrace stackTrace;
+
     public Span withStackTrace(StackTrace stackTrace) {
         this.stackTrace = stackTrace;
         return this;
@@ -139,6 +150,7 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public Span withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -150,6 +162,7 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Status status;
+
     public Span withStatus(Status status) {
         this.status = status;
         return this;
@@ -161,9 +174,11 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeEvents")
     public TimeEvents timeEvents;
+
     public Span withTimeEvents(TimeEvents timeEvents) {
         this.timeEvents = timeEvents;
         return this;
     }
     
+    public Span(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AuthorizeIpRulesResponse {
@@ -12,6 +13,7 @@ public class AuthorizeIpRulesResponse {
      */
     
     public Object accessDeniedException;
+
     public AuthorizeIpRulesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AuthorizeIpRulesResponse {
      */
     
     public java.util.Map<String, Object> authorizeIpRulesResult;
+
     public AuthorizeIpRulesResponse withAuthorizeIpRulesResult(java.util.Map<String, Object> authorizeIpRulesResult) {
         this.authorizeIpRulesResult = authorizeIpRulesResult;
         return this;
@@ -29,6 +32,7 @@ public class AuthorizeIpRulesResponse {
     
     
     public String contentType;
+
     public AuthorizeIpRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AuthorizeIpRulesResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public AuthorizeIpRulesResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class AuthorizeIpRulesResponse {
      */
     
     public Object invalidResourceStateException;
+
     public AuthorizeIpRulesResponse withInvalidResourceStateException(Object invalidResourceStateException) {
         this.invalidResourceStateException = invalidResourceStateException;
         return this;
@@ -59,6 +65,7 @@ public class AuthorizeIpRulesResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public AuthorizeIpRulesResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class AuthorizeIpRulesResponse {
     
     
     public Integer statusCode;
+
     public AuthorizeIpRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AuthorizeIpRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AuthorizeIpRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class AuthorizeIpRulesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AuthorizeIpRulesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public AuthorizeIpRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

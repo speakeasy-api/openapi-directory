@@ -18,6 +18,7 @@ public class PaymentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowInstallmentsMerge")
     public Boolean allowInstallmentsMerge;
+
     public PaymentConfiguration withAllowInstallmentsMerge(Boolean allowInstallmentsMerge) {
         this.allowInstallmentsMerge = allowInstallmentsMerge;
         return this;
@@ -28,9 +29,13 @@ public class PaymentConfiguration {
      */
     @JsonProperty("requiresAuthenticationForPreAuthorizedPaymentOption")
     public Boolean requiresAuthenticationForPreAuthorizedPaymentOption;
+
     public PaymentConfiguration withRequiresAuthenticationForPreAuthorizedPaymentOption(Boolean requiresAuthenticationForPreAuthorizedPaymentOption) {
         this.requiresAuthenticationForPreAuthorizedPaymentOption = requiresAuthenticationForPreAuthorizedPaymentOption;
         return this;
     }
     
+    public PaymentConfiguration(@JsonProperty("requiresAuthenticationForPreAuthorizedPaymentOption") Boolean requiresAuthenticationForPreAuthorizedPaymentOption) {
+        this.requiresAuthenticationForPreAuthorizedPaymentOption = requiresAuthenticationForPreAuthorizedPaymentOption;
+  }
 }

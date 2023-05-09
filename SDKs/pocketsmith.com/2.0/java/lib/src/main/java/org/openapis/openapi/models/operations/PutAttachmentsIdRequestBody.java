@@ -15,9 +15,11 @@ public class PutAttachmentsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PutAttachmentsIdRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PutAttachmentsIdRequestBody(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodeScanningListAlertsForOrgRequest {
@@ -12,6 +13,7 @@ public class CodeScanningListAlertsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
     public String after;
+
     public CodeScanningListAlertsForOrgRequest withAfter(String after) {
         this.after = after;
         return this;
@@ -22,6 +24,7 @@ public class CodeScanningListAlertsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
     public String before;
+
     public CodeScanningListAlertsForOrgRequest withBefore(String before) {
         this.before = before;
         return this;
@@ -32,6 +35,7 @@ public class CodeScanningListAlertsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public org.openapis.openapi.models.shared.DirectionEnum direction;
+
     public CodeScanningListAlertsForOrgRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -42,6 +46,7 @@ public class CodeScanningListAlertsForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public CodeScanningListAlertsForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -52,6 +57,7 @@ public class CodeScanningListAlertsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public CodeScanningListAlertsForOrgRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -62,6 +68,7 @@ public class CodeScanningListAlertsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public CodeScanningListAlertsForOrgRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -72,6 +79,7 @@ public class CodeScanningListAlertsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public CodeScanningListAlertsForOrgSortEnum sort;
+
     public CodeScanningListAlertsForOrgRequest withSort(CodeScanningListAlertsForOrgSortEnum sort) {
         this.sort = sort;
         return this;
@@ -82,6 +90,7 @@ public class CodeScanningListAlertsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public org.openapis.openapi.models.shared.CodeScanningAlertStateEnum state;
+
     public CodeScanningListAlertsForOrgRequest withState(org.openapis.openapi.models.shared.CodeScanningAlertStateEnum state) {
         this.state = state;
         return this;
@@ -92,6 +101,7 @@ public class CodeScanningListAlertsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tool_guid")
     public String toolGuid;
+
     public CodeScanningListAlertsForOrgRequest withToolGuid(String toolGuid) {
         this.toolGuid = toolGuid;
         return this;
@@ -102,9 +112,13 @@ public class CodeScanningListAlertsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tool_name")
     public String toolName;
+
     public CodeScanningListAlertsForOrgRequest withToolName(String toolName) {
         this.toolName = toolName;
         return this;
     }
     
+    public CodeScanningListAlertsForOrgRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

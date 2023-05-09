@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPolicyAttachmentsResponse {
@@ -12,6 +13,7 @@ public class ListPolicyAttachmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public ListPolicyAttachmentsResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPolicyAttachmentsResponse {
     
     
     public String contentType;
+
     public ListPolicyAttachmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPolicyAttachmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.DirectoryNotEnabledException directoryNotEnabledException;
+
     public ListPolicyAttachmentsResponse withDirectoryNotEnabledException(org.openapis.openapi.models.shared.DirectoryNotEnabledException directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -39,6 +43,7 @@ public class ListPolicyAttachmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public ListPolicyAttachmentsResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ListPolicyAttachmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public ListPolicyAttachmentsResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class ListPolicyAttachmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidNextTokenException invalidNextTokenException;
+
     public ListPolicyAttachmentsResponse withInvalidNextTokenException(org.openapis.openapi.models.shared.InvalidNextTokenException invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -69,6 +76,7 @@ public class ListPolicyAttachmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public ListPolicyAttachmentsResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class ListPolicyAttachmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPolicyAttachmentsResponse listPolicyAttachmentsResponse;
+
     public ListPolicyAttachmentsResponse withListPolicyAttachmentsResponse(org.openapis.openapi.models.shared.ListPolicyAttachmentsResponse listPolicyAttachmentsResponse) {
         this.listPolicyAttachmentsResponse = listPolicyAttachmentsResponse;
         return this;
@@ -89,6 +98,7 @@ public class ListPolicyAttachmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.NotPolicyException notPolicyException;
+
     public ListPolicyAttachmentsResponse withNotPolicyException(org.openapis.openapi.models.shared.NotPolicyException notPolicyException) {
         this.notPolicyException = notPolicyException;
         return this;
@@ -96,6 +106,7 @@ public class ListPolicyAttachmentsResponse {
     
     
     public Integer statusCode;
+
     public ListPolicyAttachmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class ListPolicyAttachmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPolicyAttachmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class ListPolicyAttachmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public ListPolicyAttachmentsResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -123,6 +136,7 @@ public class ListPolicyAttachmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public ListPolicyAttachmentsResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -133,9 +147,14 @@ public class ListPolicyAttachmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public ListPolicyAttachmentsResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPolicyAttachmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

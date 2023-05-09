@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProBowlersRequest {
@@ -12,6 +13,7 @@ public class ProBowlersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public ProBowlersFormatEnum format;
+
     public ProBowlersRequest withFormat(ProBowlersFormatEnum format) {
         this.format = format;
         return this;
@@ -23,9 +25,14 @@ public class ProBowlersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
     public String season;
+
     public ProBowlersRequest withSeason(String season) {
         this.season = season;
         return this;
     }
     
+    public ProBowlersRequest(@JsonProperty("format") ProBowlersFormatEnum format, @JsonProperty("season") String season) {
+        this.format = format;
+        this.season = season;
+  }
 }

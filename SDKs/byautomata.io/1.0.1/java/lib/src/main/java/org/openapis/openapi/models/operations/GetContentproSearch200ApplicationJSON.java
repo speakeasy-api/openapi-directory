@@ -15,6 +15,7 @@ public class GetContentproSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calls_per_month")
     public String callsPerMonth;
+
     public GetContentproSearch200ApplicationJSON withCallsPerMonth(String callsPerMonth) {
         this.callsPerMonth = callsPerMonth;
         return this;
@@ -23,6 +24,7 @@ public class GetContentproSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count_remaining")
     public String countRemaining;
+
     public GetContentproSearch200ApplicationJSON withCountRemaining(String countRemaining) {
         this.countRemaining = countRemaining;
         return this;
@@ -31,6 +33,7 @@ public class GetContentproSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetContentproSearch200ApplicationJSONData[] data;
+
     public GetContentproSearch200ApplicationJSON withData(GetContentproSearch200ApplicationJSONData[] data) {
         this.data = data;
         return this;
@@ -39,9 +42,11 @@ public class GetContentproSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewal_date")
     public String renewalDate;
+
     public GetContentproSearch200ApplicationJSON withRenewalDate(String renewalDate) {
         this.renewalDate = renewalDate;
         return this;
     }
     
+    public GetContentproSearch200ApplicationJSON(){}
 }

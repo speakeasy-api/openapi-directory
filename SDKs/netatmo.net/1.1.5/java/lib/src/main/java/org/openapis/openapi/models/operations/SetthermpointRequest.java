@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetthermpointRequest {
@@ -12,6 +13,7 @@ public class SetthermpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
     public String deviceId;
+
     public SetthermpointRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -22,6 +24,7 @@ public class SetthermpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=module_id")
     public String moduleId;
+
     public SetthermpointRequest withModuleId(String moduleId) {
         this.moduleId = moduleId;
         return this;
@@ -32,6 +35,7 @@ public class SetthermpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setpoint_endtime")
     public Integer setpointEndtime;
+
     public SetthermpointRequest withSetpointEndtime(Integer setpointEndtime) {
         this.setpointEndtime = setpointEndtime;
         return this;
@@ -42,6 +46,7 @@ public class SetthermpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setpoint_mode")
     public SetthermpointSetpointModeEnum setpointMode;
+
     public SetthermpointRequest withSetpointMode(SetthermpointSetpointModeEnum setpointMode) {
         this.setpointMode = setpointMode;
         return this;
@@ -52,9 +57,15 @@ public class SetthermpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setpoint_temp")
     public Float setpointTemp;
+
     public SetthermpointRequest withSetpointTemp(Float setpointTemp) {
         this.setpointTemp = setpointTemp;
         return this;
     }
     
+    public SetthermpointRequest(@JsonProperty("device_id") String deviceId, @JsonProperty("module_id") String moduleId, @JsonProperty("setpoint_mode") SetthermpointSetpointModeEnum setpointMode) {
+        this.deviceId = deviceId;
+        this.moduleId = moduleId;
+        this.setpointMode = setpointMode;
+  }
 }

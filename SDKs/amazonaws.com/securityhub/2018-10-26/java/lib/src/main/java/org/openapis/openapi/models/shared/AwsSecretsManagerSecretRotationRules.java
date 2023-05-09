@@ -15,9 +15,11 @@ public class AwsSecretsManagerSecretRotationRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomaticallyAfterDays")
     public Long automaticallyAfterDays;
+
     public AwsSecretsManagerSecretRotationRules withAutomaticallyAfterDays(Long automaticallyAfterDays) {
         this.automaticallyAfterDays = automaticallyAfterDays;
         return this;
     }
     
+    public AwsSecretsManagerSecretRotationRules(){}
 }

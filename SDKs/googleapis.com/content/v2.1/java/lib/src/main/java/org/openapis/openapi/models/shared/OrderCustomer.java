@@ -15,6 +15,7 @@ public class OrderCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullName")
     public String fullName;
+
     public OrderCustomer withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -26,6 +27,7 @@ public class OrderCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceReceivingEmail")
     public String invoiceReceivingEmail;
+
     public OrderCustomer withInvoiceReceivingEmail(String invoiceReceivingEmail) {
         this.invoiceReceivingEmail = invoiceReceivingEmail;
         return this;
@@ -34,6 +36,7 @@ public class OrderCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loyaltyInfo")
     public OrderCustomerLoyaltyInfo loyaltyInfo;
+
     public OrderCustomer withLoyaltyInfo(OrderCustomerLoyaltyInfo loyaltyInfo) {
         this.loyaltyInfo = loyaltyInfo;
         return this;
@@ -42,9 +45,11 @@ public class OrderCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingRightsInfo")
     public OrderCustomerMarketingRightsInfo marketingRightsInfo;
+
     public OrderCustomer withMarketingRightsInfo(OrderCustomerMarketingRightsInfo marketingRightsInfo) {
         this.marketingRightsInfo = marketingRightsInfo;
         return this;
     }
     
+    public OrderCustomer(){}
 }

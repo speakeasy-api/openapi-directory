@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PodcastCategory {
     
     public String id;
+
     public PodcastCategory withId(String id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class PodcastCategory {
     
     
     public String parent;
+
     public PodcastCategory withParent(String parent) {
         this.parent = parent;
         return this;
@@ -26,9 +28,11 @@ public class PodcastCategory {
     
     
     public String text;
+
     public PodcastCategory withText(String text) {
         this.text = text;
         return this;
     }
     
+    public PodcastCategory(){}
 }

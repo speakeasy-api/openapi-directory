@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest;
 import org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -28,32 +27,33 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest req = new MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                filter = "nulla";
-                key = "corrupti";
-                oauthToken = "illum";
-                pageSize = 423655;
-                pageToken = "error";
-                parent = "deserunt";
+            MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest req = new MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                filter = "corrupti";
+                key = "illum";
+                oauthToken = "vel";
+                pageSize = 623564L;
+                pageToken = "deserunt";
                 prettyPrint = false;
                 quotaUser = "suscipit";
                 uploadType = "iure";
                 uploadProtocol = "magnam";
-            }}            
+            }};            
 
             MybusinessbusinesscallsLocationsBusinesscallsinsightsListResponse res = sdk.locations.mybusinessbusinesscallsLocationsBusinesscallsinsightsList(req);
 
-            if (res.listBusinessCallsInsightsResponse.isPresent()) {
+            if (res.listBusinessCallsInsightsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -61,11 +61,11 @@ public class Application {
 ## Available Resources and Operations
 
 
-### locations
+### [locations](docs/locations/README.md)
 
-* `mybusinessbusinesscallsLocationsBusinesscallsinsightsList` - Returns insights for Business calls for a location.
-* `mybusinessbusinesscallsLocationsGetBusinesscallssettings` - Returns the Business calls settings resource for the given location.
-* `mybusinessbusinesscallsLocationsUpdateBusinesscallssettings` - Updates the Business call settings for the specified location.
+* [mybusinessbusinesscallsLocationsBusinesscallsinsightsList](docs/locations/README.md#mybusinessbusinesscallslocationsbusinesscallsinsightslist) - Returns insights for Business calls for a location.
+* [mybusinessbusinesscallsLocationsGetBusinesscallssettings](docs/locations/README.md#mybusinessbusinesscallslocationsgetbusinesscallssettings) - Returns the Business calls settings resource for the given location.
+* [mybusinessbusinesscallsLocationsUpdateBusinesscallssettings](docs/locations/README.md#mybusinessbusinesscallslocationsupdatebusinesscallssettings) - Updates the Business call settings for the specified location.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RevokeSnapshotAccessMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RevokeSnapshotAccessMessage {
     
     public String accountWithRestoreAccess;
+
     public RevokeSnapshotAccessMessage withAccountWithRestoreAccess(String accountWithRestoreAccess) {
         this.accountWithRestoreAccess = accountWithRestoreAccess;
         return this;
@@ -19,6 +20,7 @@ public class RevokeSnapshotAccessMessage {
     
     
     public String snapshotArn;
+
     public RevokeSnapshotAccessMessage withSnapshotArn(String snapshotArn) {
         this.snapshotArn = snapshotArn;
         return this;
@@ -26,6 +28,7 @@ public class RevokeSnapshotAccessMessage {
     
     
     public String snapshotClusterIdentifier;
+
     public RevokeSnapshotAccessMessage withSnapshotClusterIdentifier(String snapshotClusterIdentifier) {
         this.snapshotClusterIdentifier = snapshotClusterIdentifier;
         return this;
@@ -33,9 +36,13 @@ public class RevokeSnapshotAccessMessage {
     
     
     public String snapshotIdentifier;
+
     public RevokeSnapshotAccessMessage withSnapshotIdentifier(String snapshotIdentifier) {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
     }
     
+    public RevokeSnapshotAccessMessage(@JsonProperty("AccountWithRestoreAccess") String accountWithRestoreAccess) {
+        this.accountWithRestoreAccess = accountWithRestoreAccess;
+  }
 }

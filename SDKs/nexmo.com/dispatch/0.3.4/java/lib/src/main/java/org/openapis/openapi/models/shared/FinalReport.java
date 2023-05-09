@@ -12,6 +12,7 @@ public class FinalReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public FinalReportLinks links;
+
     public FinalReport withLinks(FinalReportLinks links) {
         this.links = links;
         return this;
@@ -20,6 +21,7 @@ public class FinalReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dispatch_uuid")
     public String dispatchUuid;
+
     public FinalReport withDispatchUuid(String dispatchUuid) {
         this.dispatchUuid = dispatchUuid;
         return this;
@@ -28,6 +30,7 @@ public class FinalReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public FinalReportStatusEnum status;
+
     public FinalReport withStatus(FinalReportStatusEnum status) {
         this.status = status;
         return this;
@@ -36,6 +39,7 @@ public class FinalReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public FinalReportTemplateEnum template;
+
     public FinalReport withTemplate(FinalReportTemplateEnum template) {
         this.template = template;
         return this;
@@ -47,6 +51,7 @@ public class FinalReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public FinalReport withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -58,9 +63,11 @@ public class FinalReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public FinalReportUsage usage;
+
     public FinalReport withUsage(FinalReportUsage usage) {
         this.usage = usage;
         return this;
     }
     
+    public FinalReport(){}
 }

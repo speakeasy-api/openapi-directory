@@ -18,6 +18,7 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, LabelField> fields;
+
     public Label withFields(java.util.Map<String, LabelField> fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Label withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Label withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public Label withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public Label(){}
 }

@@ -21,6 +21,7 @@ public class DescribeStateMachineOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public DescribeStateMachineOutput withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -28,6 +29,7 @@ public class DescribeStateMachineOutput {
     
     @JsonProperty("definition")
     public String definition;
+
     public DescribeStateMachineOutput withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -36,6 +38,7 @@ public class DescribeStateMachineOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public DescribeStateMachineOutput withLabel(String label) {
         this.label = label;
         return this;
@@ -47,6 +50,7 @@ public class DescribeStateMachineOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfiguration")
     public LoggingConfiguration loggingConfiguration;
+
     public DescribeStateMachineOutput withLoggingConfiguration(LoggingConfiguration loggingConfiguration) {
         this.loggingConfiguration = loggingConfiguration;
         return this;
@@ -54,6 +58,7 @@ public class DescribeStateMachineOutput {
     
     @JsonProperty("name")
     public String name;
+
     public DescribeStateMachineOutput withName(String name) {
         this.name = name;
         return this;
@@ -61,6 +66,7 @@ public class DescribeStateMachineOutput {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DescribeStateMachineOutput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -68,6 +74,7 @@ public class DescribeStateMachineOutput {
     
     @JsonProperty("stateMachineArn")
     public String stateMachineArn;
+
     public DescribeStateMachineOutput withStateMachineArn(String stateMachineArn) {
         this.stateMachineArn = stateMachineArn;
         return this;
@@ -76,6 +83,7 @@ public class DescribeStateMachineOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StateMachineStatusEnum status;
+
     public DescribeStateMachineOutput withStatus(StateMachineStatusEnum status) {
         this.status = status;
         return this;
@@ -84,6 +92,7 @@ public class DescribeStateMachineOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracingConfiguration")
     public TracingConfiguration tracingConfiguration;
+
     public DescribeStateMachineOutput withTracingConfiguration(TracingConfiguration tracingConfiguration) {
         this.tracingConfiguration = tracingConfiguration;
         return this;
@@ -91,9 +100,18 @@ public class DescribeStateMachineOutput {
     
     @JsonProperty("type")
     public StateMachineTypeEnum type;
+
     public DescribeStateMachineOutput withType(StateMachineTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DescribeStateMachineOutput(@JsonProperty("creationDate") OffsetDateTime creationDate, @JsonProperty("definition") String definition, @JsonProperty("name") String name, @JsonProperty("roleArn") String roleArn, @JsonProperty("stateMachineArn") String stateMachineArn, @JsonProperty("type") StateMachineTypeEnum type) {
+        this.creationDate = creationDate;
+        this.definition = definition;
+        this.name = name;
+        this.roleArn = roleArn;
+        this.stateMachineArn = stateMachineArn;
+        this.type = type;
+  }
 }

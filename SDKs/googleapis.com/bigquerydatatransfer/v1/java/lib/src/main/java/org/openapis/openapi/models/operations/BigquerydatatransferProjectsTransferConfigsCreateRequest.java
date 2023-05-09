@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
@@ -12,6 +13,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BigquerydatatransferProjectsTransferConfigsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TransferConfigInput transferConfigInput;
+
     public BigquerydatatransferProjectsTransferConfigsCreateRequest withTransferConfigInput(org.openapis.openapi.models.shared.TransferConfigInput transferConfigInput) {
         this.transferConfigInput = transferConfigInput;
         return this;
@@ -29,6 +32,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BigquerydatatransferProjectsTransferConfigsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BigquerydatatransferProjectsTransferConfigsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authorizationCode")
     public String authorizationCode;
+
     public BigquerydatatransferProjectsTransferConfigsCreateRequest withAuthorizationCode(String authorizationCode) {
         this.authorizationCode = authorizationCode;
         return this;
@@ -59,6 +65,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BigquerydatatransferProjectsTransferConfigsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BigquerydatatransferProjectsTransferConfigsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BigquerydatatransferProjectsTransferConfigsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BigquerydatatransferProjectsTransferConfigsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public BigquerydatatransferProjectsTransferConfigsCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -109,6 +120,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BigquerydatatransferProjectsTransferConfigsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BigquerydatatransferProjectsTransferConfigsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceAccountName")
     public String serviceAccountName;
+
     public BigquerydatatransferProjectsTransferConfigsCreateRequest withServiceAccountName(String serviceAccountName) {
         this.serviceAccountName = serviceAccountName;
         return this;
@@ -139,6 +153,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BigquerydatatransferProjectsTransferConfigsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,6 +164,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BigquerydatatransferProjectsTransferConfigsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -159,9 +175,13 @@ public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=versionInfo")
     public String versionInfo;
+
     public BigquerydatatransferProjectsTransferConfigsCreateRequest withVersionInfo(String versionInfo) {
         this.versionInfo = versionInfo;
         return this;
     }
     
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

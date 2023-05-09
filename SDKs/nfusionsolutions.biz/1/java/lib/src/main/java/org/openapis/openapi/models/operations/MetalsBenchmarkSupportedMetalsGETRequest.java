@@ -12,9 +12,11 @@ public class MetalsBenchmarkSupportedMetalsGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public MetalsBenchmarkSupportedMetalsGETFormatEnum format;
+
     public MetalsBenchmarkSupportedMetalsGETRequest withFormat(MetalsBenchmarkSupportedMetalsGETFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public MetalsBenchmarkSupportedMetalsGETRequest(){}
 }

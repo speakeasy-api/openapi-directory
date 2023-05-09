@@ -12,6 +12,7 @@ public class PostSetupV1ResourcesBulkRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ResourcesInputModel resourcesInputModel;
+
     public PostSetupV1ResourcesBulkRequest withResourcesInputModel(org.openapis.openapi.models.shared.ResourcesInputModel resourcesInputModel) {
         this.resourcesInputModel = resourcesInputModel;
         return this;
@@ -22,6 +23,7 @@ public class PostSetupV1ResourcesBulkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=googleAuthReturnUrl")
     public String googleAuthReturnUrl;
+
     public PostSetupV1ResourcesBulkRequest withGoogleAuthReturnUrl(String googleAuthReturnUrl) {
         this.googleAuthReturnUrl = googleAuthReturnUrl;
         return this;
@@ -32,9 +34,11 @@ public class PostSetupV1ResourcesBulkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outlookAuthReturnUrl")
     public String outlookAuthReturnUrl;
+
     public PostSetupV1ResourcesBulkRequest withOutlookAuthReturnUrl(String outlookAuthReturnUrl) {
         this.outlookAuthReturnUrl = outlookAuthReturnUrl;
         return this;
     }
     
+    public PostSetupV1ResourcesBulkRequest(){}
 }

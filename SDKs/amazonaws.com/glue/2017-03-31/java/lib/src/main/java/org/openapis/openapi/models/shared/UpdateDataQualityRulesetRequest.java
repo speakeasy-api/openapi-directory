@@ -12,6 +12,7 @@ public class UpdateDataQualityRulesetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateDataQualityRulesetRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class UpdateDataQualityRulesetRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateDataQualityRulesetRequest withName(String name) {
         this.name = name;
         return this;
@@ -27,17 +29,13 @@ public class UpdateDataQualityRulesetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ruleset")
     public String ruleset;
+
     public UpdateDataQualityRulesetRequest withRuleset(String ruleset) {
         this.ruleset = ruleset;
         return this;
     }
     
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("UpdatedName")
-    public String updatedName;
-    public UpdateDataQualityRulesetRequest withUpdatedName(String updatedName) {
-        this.updatedName = updatedName;
-        return this;
-    }
-    
+    public UpdateDataQualityRulesetRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

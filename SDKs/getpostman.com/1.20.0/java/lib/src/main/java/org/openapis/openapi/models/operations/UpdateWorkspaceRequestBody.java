@@ -12,9 +12,11 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace")
     public UpdateWorkspaceRequestBodyWorkspace workspace;
+
     public UpdateWorkspaceRequestBody withWorkspace(UpdateWorkspaceRequestBodyWorkspace workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public UpdateWorkspaceRequestBody(){}
 }

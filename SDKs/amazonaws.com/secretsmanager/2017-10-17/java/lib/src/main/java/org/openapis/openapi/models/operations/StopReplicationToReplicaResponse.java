@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopReplicationToReplicaResponse {
     
     public String contentType;
+
     public StopReplicationToReplicaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopReplicationToReplicaResponse {
      */
     
     public Object internalServiceError;
+
     public StopReplicationToReplicaResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class StopReplicationToReplicaResponse {
      */
     
     public Object invalidParameterException;
+
     public StopReplicationToReplicaResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class StopReplicationToReplicaResponse {
      */
     
     public Object invalidRequestException;
+
     public StopReplicationToReplicaResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class StopReplicationToReplicaResponse {
     
     
     public Integer statusCode;
+
     public StopReplicationToReplicaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopReplicationToReplicaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopReplicationToReplicaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopReplicationToReplicaResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopReplicationToReplicaResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class StopReplicationToReplicaResponse {
      */
     
     public org.openapis.openapi.models.shared.StopReplicationToReplicaResponse stopReplicationToReplicaResponse;
+
     public StopReplicationToReplicaResponse withStopReplicationToReplicaResponse(org.openapis.openapi.models.shared.StopReplicationToReplicaResponse stopReplicationToReplicaResponse) {
         this.stopReplicationToReplicaResponse = stopReplicationToReplicaResponse;
         return this;
     }
     
+    public StopReplicationToReplicaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

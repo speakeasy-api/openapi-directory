@@ -15,6 +15,7 @@ public class FillMissingValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilledPath")
     public String filledPath;
+
     public FillMissingValues withFilledPath(String filledPath) {
         this.filledPath = filledPath;
         return this;
@@ -22,6 +23,7 @@ public class FillMissingValues {
     
     @JsonProperty("ImputedPath")
     public String imputedPath;
+
     public FillMissingValues withImputedPath(String imputedPath) {
         this.imputedPath = imputedPath;
         return this;
@@ -29,6 +31,7 @@ public class FillMissingValues {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public FillMissingValues withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -36,9 +39,15 @@ public class FillMissingValues {
     
     @JsonProperty("Name")
     public String name;
+
     public FillMissingValues withName(String name) {
         this.name = name;
         return this;
     }
     
+    public FillMissingValues(@JsonProperty("ImputedPath") String imputedPath, @JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name) {
+        this.imputedPath = imputedPath;
+        this.inputs = inputs;
+        this.name = name;
+  }
 }

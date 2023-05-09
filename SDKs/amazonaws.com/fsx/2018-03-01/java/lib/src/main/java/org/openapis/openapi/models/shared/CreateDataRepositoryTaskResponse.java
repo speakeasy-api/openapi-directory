@@ -15,9 +15,11 @@ public class CreateDataRepositoryTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataRepositoryTask")
     public DataRepositoryTask dataRepositoryTask;
+
     public CreateDataRepositoryTaskResponse withDataRepositoryTask(DataRepositoryTask dataRepositoryTask) {
         this.dataRepositoryTask = dataRepositoryTask;
         return this;
     }
     
+    public CreateDataRepositoryTaskResponse(){}
 }

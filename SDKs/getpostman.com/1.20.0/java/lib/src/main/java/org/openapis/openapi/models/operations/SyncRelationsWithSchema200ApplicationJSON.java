@@ -15,9 +15,11 @@ public class SyncRelationsWithSchema200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public SyncRelationsWithSchema200ApplicationJSON withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public SyncRelationsWithSchema200ApplicationJSON(){}
 }

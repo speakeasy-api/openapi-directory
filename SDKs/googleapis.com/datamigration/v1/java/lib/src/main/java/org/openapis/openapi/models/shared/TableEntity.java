@@ -18,6 +18,7 @@ public class TableEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public ColumnEntity[] columns;
+
     public TableEntity withColumns(ColumnEntity[] columns) {
         this.columns = columns;
         return this;
@@ -29,6 +30,7 @@ public class TableEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public TableEntity withComment(String comment) {
         this.comment = comment;
         return this;
@@ -40,6 +42,7 @@ public class TableEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public ConstraintEntity[] constraints;
+
     public TableEntity withConstraints(ConstraintEntity[] constraints) {
         this.constraints = constraints;
         return this;
@@ -51,6 +54,7 @@ public class TableEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFeatures")
     public java.util.Map<String, Object> customFeatures;
+
     public TableEntity withCustomFeatures(java.util.Map<String, Object> customFeatures) {
         this.customFeatures = customFeatures;
         return this;
@@ -62,6 +66,7 @@ public class TableEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indices")
     public IndexEntity[] indices;
+
     public TableEntity withIndices(IndexEntity[] indices) {
         this.indices = indices;
         return this;
@@ -73,9 +78,11 @@ public class TableEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggers")
     public TriggerEntity[] triggers;
+
     public TableEntity withTriggers(TriggerEntity[] triggers) {
         this.triggers = triggers;
         return this;
     }
     
+    public TableEntity(){}
 }

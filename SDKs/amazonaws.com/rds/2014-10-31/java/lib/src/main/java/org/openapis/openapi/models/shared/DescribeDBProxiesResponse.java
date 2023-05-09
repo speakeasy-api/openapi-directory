@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBProxiesResponse {
     
     public DBProxy[] dbProxies;
+
     public DescribeDBProxiesResponse withDBProxies(DBProxy[] dbProxies) {
         this.dbProxies = dbProxies;
         return this;
@@ -19,9 +20,11 @@ public class DescribeDBProxiesResponse {
     
     
     public String marker;
+
     public DescribeDBProxiesResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DescribeDBProxiesResponse(){}
 }

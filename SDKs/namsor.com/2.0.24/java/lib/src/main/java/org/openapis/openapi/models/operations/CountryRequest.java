@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CountryRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=personalNameFull")
     public String personalNameFull;
+
     public CountryRequest withPersonalNameFull(String personalNameFull) {
         this.personalNameFull = personalNameFull;
         return this;
     }
     
+    public CountryRequest(@JsonProperty("personalNameFull") String personalNameFull) {
+        this.personalNameFull = personalNameFull;
+  }
 }

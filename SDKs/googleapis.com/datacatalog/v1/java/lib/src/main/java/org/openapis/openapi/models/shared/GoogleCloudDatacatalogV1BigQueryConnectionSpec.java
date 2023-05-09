@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1BigQueryConnectionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudSql")
     public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpec cloudSql;
+
     public GoogleCloudDatacatalogV1BigQueryConnectionSpec withCloudSql(GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpec cloudSql) {
         this.cloudSql = cloudSql;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1BigQueryConnectionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionType")
     public GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionTypeEnum connectionType;
+
     public GoogleCloudDatacatalogV1BigQueryConnectionSpec withConnectionType(GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionTypeEnum connectionType) {
         this.connectionType = connectionType;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatacatalogV1BigQueryConnectionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasCredential")
     public Boolean hasCredential;
+
     public GoogleCloudDatacatalogV1BigQueryConnectionSpec withHasCredential(Boolean hasCredential) {
         this.hasCredential = hasCredential;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1BigQueryConnectionSpec(){}
 }

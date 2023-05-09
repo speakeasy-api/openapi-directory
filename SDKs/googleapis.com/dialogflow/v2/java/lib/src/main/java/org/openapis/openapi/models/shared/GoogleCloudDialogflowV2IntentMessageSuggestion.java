@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2IntentMessageSuggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleCloudDialogflowV2IntentMessageSuggestion withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentMessageSuggestion(){}
 }

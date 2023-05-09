@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateApplicationMessage - Request to create an application.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateApplicationMessage {
     
     public String applicationName;
+
     public CreateApplicationMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class CreateApplicationMessage {
     
     
     public String description;
+
     public CreateApplicationMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class CreateApplicationMessage {
     
     
     public ApplicationResourceLifecycleConfig resourceLifecycleConfig;
+
     public CreateApplicationMessage withResourceLifecycleConfig(ApplicationResourceLifecycleConfig resourceLifecycleConfig) {
         this.resourceLifecycleConfig = resourceLifecycleConfig;
         return this;
@@ -33,9 +36,13 @@ public class CreateApplicationMessage {
     
     
     public Tag[] tags;
+
     public CreateApplicationMessage withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateApplicationMessage(@JsonProperty("ApplicationName") String applicationName) {
+        this.applicationName = applicationName;
+  }
 }

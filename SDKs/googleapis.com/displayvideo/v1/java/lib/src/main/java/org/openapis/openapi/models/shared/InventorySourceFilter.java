@@ -18,9 +18,11 @@ public class InventorySourceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventorySourceIds")
     public String[] inventorySourceIds;
+
     public InventorySourceFilter withInventorySourceIds(String[] inventorySourceIds) {
         this.inventorySourceIds = inventorySourceIds;
         return this;
     }
     
+    public InventorySourceFilter(){}
 }

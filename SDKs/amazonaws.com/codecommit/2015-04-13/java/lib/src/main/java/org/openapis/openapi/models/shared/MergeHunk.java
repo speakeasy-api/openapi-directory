@@ -15,6 +15,7 @@ public class MergeHunk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base")
     public MergeHunkDetail base;
+
     public MergeHunk withBase(MergeHunkDetail base) {
         this.base = base;
         return this;
@@ -23,6 +24,7 @@ public class MergeHunk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public MergeHunkDetail destination;
+
     public MergeHunk withDestination(MergeHunkDetail destination) {
         this.destination = destination;
         return this;
@@ -31,6 +33,7 @@ public class MergeHunk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isConflict")
     public Boolean isConflict;
+
     public MergeHunk withIsConflict(Boolean isConflict) {
         this.isConflict = isConflict;
         return this;
@@ -39,9 +42,11 @@ public class MergeHunk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public MergeHunkDetail source;
+
     public MergeHunk withSource(MergeHunkDetail source) {
         this.source = source;
         return this;
     }
     
+    public MergeHunk(){}
 }

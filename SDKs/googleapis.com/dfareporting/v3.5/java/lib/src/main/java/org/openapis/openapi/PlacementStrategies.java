@@ -59,10 +59,8 @@ public class PlacementStrategies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementStrategiesDeleteResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementStrategiesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementStrategiesDeleteResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementStrategiesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class PlacementStrategies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementStrategiesGetResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementStrategiesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementStrategiesGetResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementStrategiesGetResponse(contentType, httpRes.statusCode()) {{
             placementStrategy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class PlacementStrategies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementStrategiesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementStrategiesInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementStrategiesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementStrategiesInsertResponse(contentType, httpRes.statusCode()) {{
             placementStrategy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class PlacementStrategies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementStrategiesListResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementStrategiesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementStrategiesListResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementStrategiesListResponse(contentType, httpRes.statusCode()) {{
             placementStrategiesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class PlacementStrategies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementStrategiesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementStrategiesPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementStrategiesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementStrategiesPatchResponse(contentType, httpRes.statusCode()) {{
             placementStrategy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class PlacementStrategies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementStrategiesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementStrategiesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementStrategiesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementStrategiesUpdateResponse(contentType, httpRes.statusCode()) {{
             placementStrategy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

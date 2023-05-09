@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SizeConstraintSetUpdate {
     @JsonProperty("Action")
     public ChangeActionEnum action;
+
     public SizeConstraintSetUpdate withAction(ChangeActionEnum action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class SizeConstraintSetUpdate {
     
     @JsonProperty("SizeConstraint")
     public SizeConstraint sizeConstraint;
+
     public SizeConstraintSetUpdate withSizeConstraint(SizeConstraint sizeConstraint) {
         this.sizeConstraint = sizeConstraint;
         return this;
     }
     
+    public SizeConstraintSetUpdate(@JsonProperty("Action") ChangeActionEnum action, @JsonProperty("SizeConstraint") SizeConstraint sizeConstraint) {
+        this.action = action;
+        this.sizeConstraint = sizeConstraint;
+  }
 }

@@ -18,6 +18,7 @@ public class ListWorkerBlocksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListWorkerBlocksResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,6 +27,7 @@ public class ListWorkerBlocksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumResults")
     public Long numResults;
+
     public ListWorkerBlocksResponse withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -34,9 +36,11 @@ public class ListWorkerBlocksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkerBlocks")
     public WorkerBlock[] workerBlocks;
+
     public ListWorkerBlocksResponse withWorkerBlocks(WorkerBlock[] workerBlocks) {
         this.workerBlocks = workerBlocks;
         return this;
     }
     
+    public ListWorkerBlocksResponse(){}
 }

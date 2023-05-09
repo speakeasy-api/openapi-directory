@@ -15,6 +15,7 @@ public class PutProvisionedConcurrencyConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllocatedProvisionedConcurrentExecutions")
     public Long allocatedProvisionedConcurrentExecutions;
+
     public PutProvisionedConcurrencyConfigResponse withAllocatedProvisionedConcurrentExecutions(Long allocatedProvisionedConcurrentExecutions) {
         this.allocatedProvisionedConcurrentExecutions = allocatedProvisionedConcurrentExecutions;
         return this;
@@ -23,6 +24,7 @@ public class PutProvisionedConcurrencyConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailableProvisionedConcurrentExecutions")
     public Long availableProvisionedConcurrentExecutions;
+
     public PutProvisionedConcurrencyConfigResponse withAvailableProvisionedConcurrentExecutions(Long availableProvisionedConcurrentExecutions) {
         this.availableProvisionedConcurrentExecutions = availableProvisionedConcurrentExecutions;
         return this;
@@ -31,6 +33,7 @@ public class PutProvisionedConcurrencyConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModified")
     public String lastModified;
+
     public PutProvisionedConcurrencyConfigResponse withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -39,6 +42,7 @@ public class PutProvisionedConcurrencyConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestedProvisionedConcurrentExecutions")
     public Long requestedProvisionedConcurrentExecutions;
+
     public PutProvisionedConcurrencyConfigResponse withRequestedProvisionedConcurrentExecutions(Long requestedProvisionedConcurrentExecutions) {
         this.requestedProvisionedConcurrentExecutions = requestedProvisionedConcurrentExecutions;
         return this;
@@ -47,6 +51,7 @@ public class PutProvisionedConcurrencyConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ProvisionedConcurrencyStatusEnumEnum status;
+
     public PutProvisionedConcurrencyConfigResponse withStatus(ProvisionedConcurrencyStatusEnumEnum status) {
         this.status = status;
         return this;
@@ -55,9 +60,11 @@ public class PutProvisionedConcurrencyConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusReason")
     public String statusReason;
+
     public PutProvisionedConcurrencyConfigResponse withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public PutProvisionedConcurrencyConfigResponse(){}
 }

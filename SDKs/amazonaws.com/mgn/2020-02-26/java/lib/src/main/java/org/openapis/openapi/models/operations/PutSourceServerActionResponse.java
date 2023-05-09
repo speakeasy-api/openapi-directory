@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutSourceServerActionResponse {
@@ -12,6 +13,7 @@ public class PutSourceServerActionResponse {
      */
     
     public Object conflictException;
+
     public PutSourceServerActionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class PutSourceServerActionResponse {
     
     
     public String contentType;
+
     public PutSourceServerActionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutSourceServerActionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutSourceServerActionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class PutSourceServerActionResponse {
      */
     
     public org.openapis.openapi.models.shared.SourceServerActionDocument sourceServerActionDocument;
+
     public PutSourceServerActionResponse withSourceServerActionDocument(org.openapis.openapi.models.shared.SourceServerActionDocument sourceServerActionDocument) {
         this.sourceServerActionDocument = sourceServerActionDocument;
         return this;
@@ -46,6 +51,7 @@ public class PutSourceServerActionResponse {
     
     
     public Integer statusCode;
+
     public PutSourceServerActionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutSourceServerActionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutSourceServerActionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class PutSourceServerActionResponse {
      */
     
     public Object uninitializedAccountException;
+
     public PutSourceServerActionResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -73,9 +81,14 @@ public class PutSourceServerActionResponse {
      */
     
     public Object validationException;
+
     public PutSourceServerActionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutSourceServerActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CreditCardInfo {
      */
     @JsonProperty("cardNumber")
     public String cardNumber;
+
     public CreditCardInfo withCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
         return this;
@@ -25,6 +26,7 @@ public class CreditCardInfo {
      */
     @JsonProperty("cardVerificationCode")
     public String cardVerificationCode;
+
     public CreditCardInfo withCardVerificationCode(String cardVerificationCode) {
         this.cardVerificationCode = cardVerificationCode;
         return this;
@@ -35,6 +37,7 @@ public class CreditCardInfo {
      */
     @JsonProperty("expirationMonth")
     public Integer expirationMonth;
+
     public CreditCardInfo withExpirationMonth(Integer expirationMonth) {
         this.expirationMonth = expirationMonth;
         return this;
@@ -45,9 +48,16 @@ public class CreditCardInfo {
      */
     @JsonProperty("expirationYear")
     public Integer expirationYear;
+
     public CreditCardInfo withExpirationYear(Integer expirationYear) {
         this.expirationYear = expirationYear;
         return this;
     }
     
+    public CreditCardInfo(@JsonProperty("cardNumber") String cardNumber, @JsonProperty("cardVerificationCode") String cardVerificationCode, @JsonProperty("expirationMonth") Integer expirationMonth, @JsonProperty("expirationYear") Integer expirationYear) {
+        this.cardNumber = cardNumber;
+        this.cardVerificationCode = cardVerificationCode;
+        this.expirationMonth = expirationMonth;
+        this.expirationYear = expirationYear;
+  }
 }

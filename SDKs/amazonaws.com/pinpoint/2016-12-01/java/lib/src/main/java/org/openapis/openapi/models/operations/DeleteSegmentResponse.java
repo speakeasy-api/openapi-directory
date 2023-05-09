@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSegmentResponse {
@@ -12,6 +13,7 @@ public class DeleteSegmentResponse {
      */
     
     public Object badRequestException;
+
     public DeleteSegmentResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSegmentResponse {
     
     
     public String contentType;
+
     public DeleteSegmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSegmentResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteSegmentResponse deleteSegmentResponse;
+
     public DeleteSegmentResponse withDeleteSegmentResponse(org.openapis.openapi.models.shared.DeleteSegmentResponse deleteSegmentResponse) {
         this.deleteSegmentResponse = deleteSegmentResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSegmentResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteSegmentResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSegmentResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteSegmentResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteSegmentResponse {
      */
     
     public Object methodNotAllowedException;
+
     public DeleteSegmentResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteSegmentResponse {
      */
     
     public Object notFoundException;
+
     public DeleteSegmentResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteSegmentResponse {
      */
     
     public Object payloadTooLargeException;
+
     public DeleteSegmentResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteSegmentResponse {
     
     
     public Integer statusCode;
+
     public DeleteSegmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteSegmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSegmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteSegmentResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteSegmentResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteSegmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public Snapshot withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Snapshot withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeBytes")
     public String diskSizeBytes;
+
     public Snapshot withDiskSizeBytes(String diskSizeBytes) {
         this.diskSizeBytes = diskSizeBytes;
         return this;
@@ -51,6 +54,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Snapshot withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public Snapshot withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -73,6 +78,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubMetadata")
     public PubsubSnapshotMetadata[] pubsubMetadata;
+
     public Snapshot withPubsubMetadata(PubsubSnapshotMetadata[] pubsubMetadata) {
         this.pubsubMetadata = pubsubMetadata;
         return this;
@@ -84,6 +90,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Snapshot withRegion(String region) {
         this.region = region;
         return this;
@@ -95,6 +102,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceJobId")
     public String sourceJobId;
+
     public Snapshot withSourceJobId(String sourceJobId) {
         this.sourceJobId = sourceJobId;
         return this;
@@ -106,6 +114,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public SnapshotStateEnum state;
+
     public Snapshot withState(SnapshotStateEnum state) {
         this.state = state;
         return this;
@@ -117,9 +126,11 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public String ttl;
+
     public Snapshot withTtl(String ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public Snapshot(){}
 }

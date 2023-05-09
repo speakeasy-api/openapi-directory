@@ -15,6 +15,7 @@ public class RecognizeTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interpretations")
     public Interpretation[] interpretations;
+
     public RecognizeTextResponse withInterpretations(Interpretation[] interpretations) {
         this.interpretations = interpretations;
         return this;
@@ -23,6 +24,7 @@ public class RecognizeTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public Message[] messages;
+
     public RecognizeTextResponse withMessages(Message[] messages) {
         this.messages = messages;
         return this;
@@ -31,6 +33,7 @@ public class RecognizeTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recognizedBotMember")
     public RecognizedBotMember recognizedBotMember;
+
     public RecognizeTextResponse withRecognizedBotMember(RecognizedBotMember recognizedBotMember) {
         this.recognizedBotMember = recognizedBotMember;
         return this;
@@ -39,6 +42,7 @@ public class RecognizeTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestAttributes")
     public java.util.Map<String, String> requestAttributes;
+
     public RecognizeTextResponse withRequestAttributes(java.util.Map<String, String> requestAttributes) {
         this.requestAttributes = requestAttributes;
         return this;
@@ -47,6 +51,7 @@ public class RecognizeTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionId")
     public String sessionId;
+
     public RecognizeTextResponse withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -55,9 +60,11 @@ public class RecognizeTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionState")
     public SessionState sessionState;
+
     public RecognizeTextResponse withSessionState(SessionState sessionState) {
         this.sessionState = sessionState;
         return this;
     }
     
+    public RecognizeTextResponse(){}
 }

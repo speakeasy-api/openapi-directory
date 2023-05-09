@@ -61,12 +61,10 @@ public class ProjectMemberships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectMembershipResponse res = new org.openapis.openapi.models.operations.GetProjectMembershipResponse() {{
+        org.openapis.openapi.models.operations.GetProjectMembershipResponse res = new org.openapis.openapi.models.operations.GetProjectMembershipResponse(contentType, httpRes.statusCode()) {{
             getProjectMembership200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,12 +113,10 @@ public class ProjectMemberships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectMembershipsForProjectResponse res = new org.openapis.openapi.models.operations.GetProjectMembershipsForProjectResponse() {{
+        org.openapis.openapi.models.operations.GetProjectMembershipsForProjectResponse res = new org.openapis.openapi.models.operations.GetProjectMembershipsForProjectResponse(contentType, httpRes.statusCode()) {{
             getProjectMembershipsForProject200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

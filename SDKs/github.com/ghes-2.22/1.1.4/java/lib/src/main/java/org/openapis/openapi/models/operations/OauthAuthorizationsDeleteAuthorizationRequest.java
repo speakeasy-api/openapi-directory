@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OauthAuthorizationsDeleteAuthorizationRequest {
@@ -12,9 +13,13 @@ public class OauthAuthorizationsDeleteAuthorizationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorization_id")
     public Long authorizationId;
+
     public OauthAuthorizationsDeleteAuthorizationRequest withAuthorizationId(Long authorizationId) {
         this.authorizationId = authorizationId;
         return this;
     }
     
+    public OauthAuthorizationsDeleteAuthorizationRequest(@JsonProperty("authorization_id") Long authorizationId) {
+        this.authorizationId = authorizationId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFirewallRuleGroupPolicyResponse {
@@ -12,6 +13,7 @@ public class GetFirewallRuleGroupPolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public GetFirewallRuleGroupPolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetFirewallRuleGroupPolicyResponse {
     
     
     public String contentType;
+
     public GetFirewallRuleGroupPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetFirewallRuleGroupPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFirewallRuleGroupPolicyResponse getFirewallRuleGroupPolicyResponse;
+
     public GetFirewallRuleGroupPolicyResponse withGetFirewallRuleGroupPolicyResponse(org.openapis.openapi.models.shared.GetFirewallRuleGroupPolicyResponse getFirewallRuleGroupPolicyResponse) {
         this.getFirewallRuleGroupPolicyResponse = getFirewallRuleGroupPolicyResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetFirewallRuleGroupPolicyResponse {
      */
     
     public Object internalServiceErrorException;
+
     public GetFirewallRuleGroupPolicyResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class GetFirewallRuleGroupPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFirewallRuleGroupPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetFirewallRuleGroupPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetFirewallRuleGroupPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetFirewallRuleGroupPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFirewallRuleGroupPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetFirewallRuleGroupPolicyResponse {
      */
     
     public Object throttlingException;
+
     public GetFirewallRuleGroupPolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetFirewallRuleGroupPolicyResponse {
      */
     
     public Object validationException;
+
     public GetFirewallRuleGroupPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetFirewallRuleGroupPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

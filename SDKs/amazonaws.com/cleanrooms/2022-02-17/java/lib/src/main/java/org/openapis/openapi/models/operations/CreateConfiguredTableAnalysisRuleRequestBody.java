@@ -12,6 +12,7 @@ public class CreateConfiguredTableAnalysisRuleRequestBody {
      */
     @JsonProperty("analysisRulePolicy")
     public CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy analysisRulePolicy;
+
     public CreateConfiguredTableAnalysisRuleRequestBody withAnalysisRulePolicy(CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy analysisRulePolicy) {
         this.analysisRulePolicy = analysisRulePolicy;
         return this;
@@ -22,9 +23,14 @@ public class CreateConfiguredTableAnalysisRuleRequestBody {
      */
     @JsonProperty("analysisRuleType")
     public CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRuleTypeEnum analysisRuleType;
+
     public CreateConfiguredTableAnalysisRuleRequestBody withAnalysisRuleType(CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRuleTypeEnum analysisRuleType) {
         this.analysisRuleType = analysisRuleType;
         return this;
     }
     
+    public CreateConfiguredTableAnalysisRuleRequestBody(@JsonProperty("analysisRulePolicy") CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy analysisRulePolicy, @JsonProperty("analysisRuleType") CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRuleTypeEnum analysisRuleType) {
+        this.analysisRulePolicy = analysisRulePolicy;
+        this.analysisRuleType = analysisRuleType;
+  }
 }

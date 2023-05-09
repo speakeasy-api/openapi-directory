@@ -18,6 +18,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public RuleActionEnum action;
+
     public Rule withAction(RuleActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public Condition[] conditions;
+
     public Rule withConditions(Condition[] conditions) {
         this.conditions = conditions;
         return this;
@@ -40,6 +42,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Rule withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in")
     public String[] in;
+
     public Rule withIn(String[] in) {
         this.in = in;
         return this;
@@ -62,6 +66,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfig")
     public LogConfig[] logConfig;
+
     public Rule withLogConfig(LogConfig[] logConfig) {
         this.logConfig = logConfig;
         return this;
@@ -73,6 +78,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notIn")
     public String[] notIn;
+
     public Rule withNotIn(String[] notIn) {
         this.notIn = notIn;
         return this;
@@ -84,9 +90,11 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public String[] permissions;
+
     public Rule withPermissions(String[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public Rule(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetNamespaceResponse {
     @JsonProperty("namespace")
     public Namespace namespace;
+
     public GetNamespaceResponse withNamespace(Namespace namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public GetNamespaceResponse(@JsonProperty("namespace") Namespace namespace) {
+        this.namespace = namespace;
+  }
 }

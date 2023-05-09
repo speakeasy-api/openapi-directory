@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateCostCategoryDefinitionRequest {
     @JsonProperty("CostCategoryArn")
     public String costCategoryArn;
+
     public UpdateCostCategoryDefinitionRequest withCostCategoryArn(String costCategoryArn) {
         this.costCategoryArn = costCategoryArn;
         return this;
@@ -22,6 +23,7 @@ public class UpdateCostCategoryDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultValue")
     public String defaultValue;
+
     public UpdateCostCategoryDefinitionRequest withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -30,6 +32,7 @@ public class UpdateCostCategoryDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EffectiveStart")
     public String effectiveStart;
+
     public UpdateCostCategoryDefinitionRequest withEffectiveStart(String effectiveStart) {
         this.effectiveStart = effectiveStart;
         return this;
@@ -40,6 +43,7 @@ public class UpdateCostCategoryDefinitionRequest {
      */
     @JsonProperty("RuleVersion")
     public CostCategoryRuleVersionEnum ruleVersion;
+
     public UpdateCostCategoryDefinitionRequest withRuleVersion(CostCategoryRuleVersionEnum ruleVersion) {
         this.ruleVersion = ruleVersion;
         return this;
@@ -47,6 +51,7 @@ public class UpdateCostCategoryDefinitionRequest {
     
     @JsonProperty("Rules")
     public CostCategoryRule[] rules;
+
     public UpdateCostCategoryDefinitionRequest withRules(CostCategoryRule[] rules) {
         this.rules = rules;
         return this;
@@ -55,9 +60,15 @@ public class UpdateCostCategoryDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SplitChargeRules")
     public CostCategorySplitChargeRule[] splitChargeRules;
+
     public UpdateCostCategoryDefinitionRequest withSplitChargeRules(CostCategorySplitChargeRule[] splitChargeRules) {
         this.splitChargeRules = splitChargeRules;
         return this;
     }
     
+    public UpdateCostCategoryDefinitionRequest(@JsonProperty("CostCategoryArn") String costCategoryArn, @JsonProperty("RuleVersion") CostCategoryRuleVersionEnum ruleVersion, @JsonProperty("Rules") CostCategoryRule[] rules) {
+        this.costCategoryArn = costCategoryArn;
+        this.ruleVersion = ruleVersion;
+        this.rules = rules;
+  }
 }

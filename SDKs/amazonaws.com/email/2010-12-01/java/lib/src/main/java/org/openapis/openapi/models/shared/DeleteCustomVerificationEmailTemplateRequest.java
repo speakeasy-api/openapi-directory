@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteCustomVerificationEmailTemplateRequest - Represents a request to delete an existing custom verification email template.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteCustomVerificationEmailTemplateRequest {
     
     public String templateName;
+
     public DeleteCustomVerificationEmailTemplateRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public DeleteCustomVerificationEmailTemplateRequest(@JsonProperty("TemplateName") String templateName) {
+        this.templateName = templateName;
+  }
 }

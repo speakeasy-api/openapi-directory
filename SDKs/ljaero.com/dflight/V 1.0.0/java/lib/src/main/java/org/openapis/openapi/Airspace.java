@@ -72,6 +72,8 @@ public class Airspace {
      *     - *ceiling*: upper limit of the airspace
      *     - *ceiling_uom*: unit of measure used for the numeric floor value: FT (feet) or FL (flight level)
      *     - *ceiling_ref*: reference level used for the numeric ceiling value: AGL, MSL, or STD (standard atmosphere, used for flight level values)
+     *     - *ceiling_ref*: reference level used for the numeric ceiling value: AGL, MSL, or STD (standard atmosphere, used for flight level values)
+     *     - *schedule*: default activation days/times (other times by NOTAM)
      * * MAA (Miscellaneous Activity Area)
      *     - *name*
      *     - *maa_type*: one of the following - ULTRALIGHT, PARACHUTE JUMP AREA, AEROBATIC PRACTICE, GLIDER, HANG GLIDER, SPACE LAUNCH ACTIVITY
@@ -112,12 +114,10 @@ public class Airspace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AspByDistanceUsV1AirspaceDistanceQueryPostResponse res = new org.openapis.openapi.models.operations.AspByDistanceUsV1AirspaceDistanceQueryPostResponse() {{
+        org.openapis.openapi.models.operations.AspByDistanceUsV1AirspaceDistanceQueryPostResponse res = new org.openapis.openapi.models.operations.AspByDistanceUsV1AirspaceDistanceQueryPostResponse(contentType, httpRes.statusCode()) {{
             airspaceDistanceResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,6 +160,7 @@ public class Airspace {
      *     - *ceiling*: upper limit of the airspace
      *     - *ceiling_uom*: unit of measure used for the numeric floor value: FT (feet) or FL (flight level)
      *     - *ceiling_ref*: reference level used for the numeric ceiling value: AGL, MSL, or STD (standard atmosphere, used for flight level values)
+     *     - *schedule*: default activation days/times (other times by NOTAM)
      * * MAA (Miscellaneous Activity Area)
      *     - *name*
      *     - *maa_type*: one of the following - ULTRALIGHT, PARACHUTE JUMP AREA, AEROBATIC PRACTICE, GLIDER, HANG GLIDER, SPACE LAUNCH ACTIVITY
@@ -200,12 +201,10 @@ public class Airspace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AspByPolyUsV1AirspacePolygonQueryPostResponse res = new org.openapis.openapi.models.operations.AspByPolyUsV1AirspacePolygonQueryPostResponse() {{
+        org.openapis.openapi.models.operations.AspByPolyUsV1AirspacePolygonQueryPostResponse res = new org.openapis.openapi.models.operations.AspByPolyUsV1AirspacePolygonQueryPostResponse(contentType, httpRes.statusCode()) {{
             airspacePolyResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,6 +247,7 @@ public class Airspace {
      *     - *ceiling*: upper limit of the airspace
      *     - *ceiling_uom*: unit of measure used for the numeric floor value: FT (feet) or FL (flight level)
      *     - *ceiling_ref*: reference level used for the numeric ceiling value: AGL, MSL, or STD (standard atmosphere, used for flight level values)
+     *     - *schedule*: default activation days/times (other times by NOTAM)
      * * MAA (Miscellaneous Activity Area)
      *     - *name*
      *     - *maa_type*: one of the following - ULTRALIGHT, PARACHUTE JUMP AREA, AEROBATIC PRACTICE, GLIDER, HANG GLIDER, SPACE LAUNCH ACTIVITY
@@ -288,12 +288,10 @@ public class Airspace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AspByRouteUsV1AirspaceRouteQueryPostResponse res = new org.openapis.openapi.models.operations.AspByRouteUsV1AirspaceRouteQueryPostResponse() {{
+        org.openapis.openapi.models.operations.AspByRouteUsV1AirspaceRouteQueryPostResponse res = new org.openapis.openapi.models.operations.AspByRouteUsV1AirspaceRouteQueryPostResponse(contentType, httpRes.statusCode()) {{
             airspaceRouteResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

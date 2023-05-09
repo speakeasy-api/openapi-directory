@@ -22,6 +22,7 @@ public class RecommendationExportJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTimestamp")
     public OffsetDateTime creationTimestamp;
+
     public RecommendationExportJob withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class RecommendationExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public ExportDestination destination;
+
     public RecommendationExportJob withDestination(ExportDestination destination) {
         this.destination = destination;
         return this;
@@ -38,6 +40,7 @@ public class RecommendationExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public RecommendationExportJob withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -46,6 +49,7 @@ public class RecommendationExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public RecommendationExportJob withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -56,6 +60,7 @@ public class RecommendationExportJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTimestamp")
     public OffsetDateTime lastUpdatedTimestamp;
+
     public RecommendationExportJob withLastUpdatedTimestamp(OffsetDateTime lastUpdatedTimestamp) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         return this;
@@ -64,6 +69,7 @@ public class RecommendationExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public RecommendationExportJob withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -72,9 +78,11 @@ public class RecommendationExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public RecommendationExportJob withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public RecommendationExportJob(){}
 }

@@ -12,6 +12,7 @@ public class EnterpriseSettingsEnterpriseLdapProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public EnterpriseSettingsEnterpriseLdapProfile withKey(String key) {
         this.key = key;
         return this;
@@ -20,6 +21,7 @@ public class EnterpriseSettingsEnterpriseLdapProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mail")
     public String mail;
+
     public EnterpriseSettingsEnterpriseLdapProfile withMail(String mail) {
         this.mail = mail;
         return this;
@@ -28,6 +30,7 @@ public class EnterpriseSettingsEnterpriseLdapProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnterpriseSettingsEnterpriseLdapProfile withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class EnterpriseSettingsEnterpriseLdapProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public EnterpriseSettingsEnterpriseLdapProfile withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public EnterpriseSettingsEnterpriseLdapProfile(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InputLambdaProcessor {
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public InputLambdaProcessor withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
     }
     
+    public InputLambdaProcessor(@JsonProperty("ResourceARN") String resourceARN) {
+        this.resourceARN = resourceARN;
+  }
 }

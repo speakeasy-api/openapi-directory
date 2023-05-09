@@ -15,9 +15,11 @@ public class GetBrowserSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browserSettings")
     public BrowserSettings browserSettings;
+
     public GetBrowserSettingsResponse withBrowserSettings(BrowserSettings browserSettings) {
         this.browserSettings = browserSettings;
         return this;
     }
     
+    public GetBrowserSettingsResponse(){}
 }

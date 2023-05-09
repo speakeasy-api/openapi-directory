@@ -15,6 +15,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloneDefinition")
     public CloneDefinition cloneDefinition;
+
     public Table withCloneDefinition(CloneDefinition cloneDefinition) {
         this.cloneDefinition = cloneDefinition;
         return this;
@@ -23,6 +24,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clustering")
     public Clustering clustering;
+
     public Table withClustering(Clustering clustering) {
         this.clustering = clustering;
         return this;
@@ -34,6 +36,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public Table withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -45,6 +48,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultCollation")
     public String defaultCollation;
+
     public Table withDefaultCollation(String defaultCollation) {
         this.defaultCollation = defaultCollation;
         return this;
@@ -56,6 +60,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultRoundingMode")
     public String defaultRoundingMode;
+
     public Table withDefaultRoundingMode(String defaultRoundingMode) {
         this.defaultRoundingMode = defaultRoundingMode;
         return this;
@@ -67,6 +72,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Table withDescription(String description) {
         this.description = description;
         return this;
@@ -75,6 +81,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public Table withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -86,6 +93,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Table withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -97,6 +105,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationTime")
     public String expirationTime;
+
     public Table withExpirationTime(String expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -105,6 +114,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalDataConfiguration")
     public ExternalDataConfiguration externalDataConfiguration;
+
     public Table withExternalDataConfiguration(ExternalDataConfiguration externalDataConfiguration) {
         this.externalDataConfiguration = externalDataConfiguration;
         return this;
@@ -116,6 +126,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyName")
     public String friendlyName;
+
     public Table withFriendlyName(String friendlyName) {
         this.friendlyName = friendlyName;
         return this;
@@ -127,6 +138,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Table withId(String id) {
         this.id = id;
         return this;
@@ -138,6 +150,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Table withKind(String kind) {
         this.kind = kind;
         return this;
@@ -149,6 +162,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Table withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -160,6 +174,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedTime")
     public String lastModifiedTime;
+
     public Table withLastModifiedTime(String lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -171,6 +186,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Table withLocation(String location) {
         this.location = location;
         return this;
@@ -179,6 +195,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("materializedView")
     public MaterializedViewDefinition materializedView;
+
     public Table withMaterializedView(MaterializedViewDefinition materializedView) {
         this.materializedView = materializedView;
         return this;
@@ -190,6 +207,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxStaleness")
     public String maxStaleness;
+
     public Table withMaxStaleness(String maxStaleness) {
         this.maxStaleness = maxStaleness;
         return this;
@@ -198,6 +216,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public ModelDefinition model;
+
     public Table withModel(ModelDefinition model) {
         this.model = model;
         return this;
@@ -209,6 +228,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numBytes")
     public String numBytes;
+
     public Table withNumBytes(String numBytes) {
         this.numBytes = numBytes;
         return this;
@@ -220,6 +240,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numLongTermBytes")
     public String numLongTermBytes;
+
     public Table withNumLongTermBytes(String numLongTermBytes) {
         this.numLongTermBytes = numLongTermBytes;
         return this;
@@ -231,6 +252,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numPhysicalBytes")
     public String numPhysicalBytes;
+
     public Table withNumPhysicalBytes(String numPhysicalBytes) {
         this.numPhysicalBytes = numPhysicalBytes;
         return this;
@@ -242,6 +264,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numRows")
     public String numRows;
+
     public Table withNumRows(String numRows) {
         this.numRows = numRows;
         return this;
@@ -253,6 +276,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_active_logical_bytes")
     public String numActiveLogicalBytes;
+
     public Table withNumActiveLogicalBytes(String numActiveLogicalBytes) {
         this.numActiveLogicalBytes = numActiveLogicalBytes;
         return this;
@@ -264,6 +288,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_active_physical_bytes")
     public String numActivePhysicalBytes;
+
     public Table withNumActivePhysicalBytes(String numActivePhysicalBytes) {
         this.numActivePhysicalBytes = numActivePhysicalBytes;
         return this;
@@ -275,6 +300,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_long_term_logical_bytes")
     public String numLongTermLogicalBytes;
+
     public Table withNumLongTermLogicalBytes(String numLongTermLogicalBytes) {
         this.numLongTermLogicalBytes = numLongTermLogicalBytes;
         return this;
@@ -286,6 +312,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_long_term_physical_bytes")
     public String numLongTermPhysicalBytes;
+
     public Table withNumLongTermPhysicalBytes(String numLongTermPhysicalBytes) {
         this.numLongTermPhysicalBytes = numLongTermPhysicalBytes;
         return this;
@@ -297,6 +324,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_partitions")
     public String numPartitions;
+
     public Table withNumPartitions(String numPartitions) {
         this.numPartitions = numPartitions;
         return this;
@@ -308,6 +336,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_time_travel_physical_bytes")
     public String numTimeTravelPhysicalBytes;
+
     public Table withNumTimeTravelPhysicalBytes(String numTimeTravelPhysicalBytes) {
         this.numTimeTravelPhysicalBytes = numTimeTravelPhysicalBytes;
         return this;
@@ -319,6 +348,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_total_logical_bytes")
     public String numTotalLogicalBytes;
+
     public Table withNumTotalLogicalBytes(String numTotalLogicalBytes) {
         this.numTotalLogicalBytes = numTotalLogicalBytes;
         return this;
@@ -330,6 +360,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_total_physical_bytes")
     public String numTotalPhysicalBytes;
+
     public Table withNumTotalPhysicalBytes(String numTotalPhysicalBytes) {
         this.numTotalPhysicalBytes = numTotalPhysicalBytes;
         return this;
@@ -338,6 +369,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rangePartitioning")
     public RangePartitioning rangePartitioning;
+
     public Table withRangePartitioning(RangePartitioning rangePartitioning) {
         this.rangePartitioning = rangePartitioning;
         return this;
@@ -349,6 +381,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requirePartitionFilter")
     public Boolean requirePartitionFilter;
+
     public Table withRequirePartitionFilter(Boolean requirePartitionFilter) {
         this.requirePartitionFilter = requirePartitionFilter;
         return this;
@@ -357,6 +390,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public TableSchema schema;
+
     public Table withSchema(TableSchema schema) {
         this.schema = schema;
         return this;
@@ -368,6 +402,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Table withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -376,6 +411,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotDefinition")
     public SnapshotDefinition snapshotDefinition;
+
     public Table withSnapshotDefinition(SnapshotDefinition snapshotDefinition) {
         this.snapshotDefinition = snapshotDefinition;
         return this;
@@ -384,6 +420,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingBuffer")
     public Streamingbuffer streamingBuffer;
+
     public Table withStreamingBuffer(Streamingbuffer streamingBuffer) {
         this.streamingBuffer = streamingBuffer;
         return this;
@@ -392,6 +429,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableReference")
     public TableReference tableReference;
+
     public Table withTableReference(TableReference tableReference) {
         this.tableReference = tableReference;
         return this;
@@ -400,6 +438,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timePartitioning")
     public TimePartitioning timePartitioning;
+
     public Table withTimePartitioning(TimePartitioning timePartitioning) {
         this.timePartitioning = timePartitioning;
         return this;
@@ -411,6 +450,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Table withType(String type) {
         this.type = type;
         return this;
@@ -419,9 +459,11 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view")
     public ViewDefinition view;
+
     public Table withView(ViewDefinition view) {
         this.view = view;
         return this;
     }
     
+    public Table(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteReplicationTaskResponse {
     
     public String contentType;
+
     public DeleteReplicationTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteReplicationTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteReplicationTaskResponse deleteReplicationTaskResponse;
+
     public DeleteReplicationTaskResponse withDeleteReplicationTaskResponse(org.openapis.openapi.models.shared.DeleteReplicationTaskResponse deleteReplicationTaskResponse) {
         this.deleteReplicationTaskResponse = deleteReplicationTaskResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteReplicationTaskResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public DeleteReplicationTaskResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -39,6 +43,7 @@ public class DeleteReplicationTaskResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public DeleteReplicationTaskResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -46,6 +51,7 @@ public class DeleteReplicationTaskResponse {
     
     
     public Integer statusCode;
+
     public DeleteReplicationTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteReplicationTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteReplicationTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteReplicationTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

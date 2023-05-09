@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountPatchPermissionsRawRequest {
@@ -12,6 +13,7 @@ public class AccountPatchPermissionsRawRequest {
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public AccountPatchPermissionsRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class AccountPatchPermissionsRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guestId")
     public Long guestId;
+
     public AccountPatchPermissionsRawRequest withGuestId(Long guestId) {
         this.guestId = guestId;
         return this;
@@ -32,9 +35,15 @@ public class AccountPatchPermissionsRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public AccountPatchPermissionsRawTypeEnum type;
+
     public AccountPatchPermissionsRawRequest withType(AccountPatchPermissionsRawTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AccountPatchPermissionsRawRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("guestId") Long guestId, @JsonProperty("type") AccountPatchPermissionsRawTypeEnum type) {
+        this.requestBody = requestBody;
+        this.guestId = guestId;
+        this.type = type;
+  }
 }

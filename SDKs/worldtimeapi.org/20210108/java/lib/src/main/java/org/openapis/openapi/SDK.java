@@ -123,6 +123,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -145,12 +150,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIpResponse res = new org.openapis.openapi.models.operations.GetIpResponse() {{
+        org.openapis.openapi.models.operations.GetIpResponse res = new org.openapis.openapi.models.operations.GetIpResponse(contentType, httpRes.statusCode()) {{
             dateTimeJsonResponse = null;
             errorJsonResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,12 +193,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIpTxtResponse res = new org.openapis.openapi.models.operations.GetIpTxtResponse() {{
+        org.openapis.openapi.models.operations.GetIpTxtResponse res = new org.openapis.openapi.models.operations.GetIpTxtResponse(contentType, httpRes.statusCode()) {{
             dateTimeTextResponse = null;
             errorTextResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,12 +235,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIpIpv4Response res = new org.openapis.openapi.models.operations.GetIpIpv4Response() {{
+        org.openapis.openapi.models.operations.GetIpIpv4Response res = new org.openapis.openapi.models.operations.GetIpIpv4Response(contentType, httpRes.statusCode()) {{
             dateTimeJsonResponse = null;
             errorJsonResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -280,12 +279,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIpIpv4TxtResponse res = new org.openapis.openapi.models.operations.GetIpIpv4TxtResponse() {{
+        org.openapis.openapi.models.operations.GetIpIpv4TxtResponse res = new org.openapis.openapi.models.operations.GetIpIpv4TxtResponse(contentType, httpRes.statusCode()) {{
             dateTimeTextResponse = null;
             errorTextResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -323,11 +320,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTimezoneResponse res = new org.openapis.openapi.models.operations.GetTimezoneResponse() {{
+        org.openapis.openapi.models.operations.GetTimezoneResponse res = new org.openapis.openapi.models.operations.GetTimezoneResponse(contentType, httpRes.statusCode()) {{
             listJsonResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -360,11 +355,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTimezoneTxtResponse res = new org.openapis.openapi.models.operations.GetTimezoneTxtResponse() {{
+        org.openapis.openapi.models.operations.GetTimezoneTxtResponse res = new org.openapis.openapi.models.operations.GetTimezoneTxtResponse(contentType, httpRes.statusCode()) {{
             listTextResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -397,12 +390,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTimezoneAreaResponse res = new org.openapis.openapi.models.operations.GetTimezoneAreaResponse() {{
+        org.openapis.openapi.models.operations.GetTimezoneAreaResponse res = new org.openapis.openapi.models.operations.GetTimezoneAreaResponse(contentType, httpRes.statusCode()) {{
             listJsonResponse = null;
             errorJsonResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -443,12 +434,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTimezoneAreaTxtResponse res = new org.openapis.openapi.models.operations.GetTimezoneAreaTxtResponse() {{
+        org.openapis.openapi.models.operations.GetTimezoneAreaTxtResponse res = new org.openapis.openapi.models.operations.GetTimezoneAreaTxtResponse(contentType, httpRes.statusCode()) {{
             listTextResponse = null;
             errorTextResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -487,12 +476,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTimezoneAreaLocationResponse res = new org.openapis.openapi.models.operations.GetTimezoneAreaLocationResponse() {{
+        org.openapis.openapi.models.operations.GetTimezoneAreaLocationResponse res = new org.openapis.openapi.models.operations.GetTimezoneAreaLocationResponse(contentType, httpRes.statusCode()) {{
             dateTimeJsonResponse = null;
             errorJsonResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -533,12 +520,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTimezoneAreaLocationTxtResponse res = new org.openapis.openapi.models.operations.GetTimezoneAreaLocationTxtResponse() {{
+        org.openapis.openapi.models.operations.GetTimezoneAreaLocationTxtResponse res = new org.openapis.openapi.models.operations.GetTimezoneAreaLocationTxtResponse(contentType, httpRes.statusCode()) {{
             dateTimeTextResponse = null;
             errorTextResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -577,12 +562,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTimezoneAreaLocationRegionResponse res = new org.openapis.openapi.models.operations.GetTimezoneAreaLocationRegionResponse() {{
+        org.openapis.openapi.models.operations.GetTimezoneAreaLocationRegionResponse res = new org.openapis.openapi.models.operations.GetTimezoneAreaLocationRegionResponse(contentType, httpRes.statusCode()) {{
             dateTimeJsonResponse = null;
             errorJsonResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -623,12 +606,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTimezoneAreaLocationRegionTxtResponse res = new org.openapis.openapi.models.operations.GetTimezoneAreaLocationRegionTxtResponse() {{
+        org.openapis.openapi.models.operations.GetTimezoneAreaLocationRegionTxtResponse res = new org.openapis.openapi.models.operations.GetTimezoneAreaLocationRegionTxtResponse(contentType, httpRes.statusCode()) {{
             dateTimeTextResponse = null;
             errorTextResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

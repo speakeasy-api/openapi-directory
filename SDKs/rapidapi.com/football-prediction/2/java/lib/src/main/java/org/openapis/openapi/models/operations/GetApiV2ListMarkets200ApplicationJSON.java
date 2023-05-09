@@ -15,9 +15,11 @@ public class GetApiV2ListMarkets200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetApiV2ListMarkets200ApplicationJSONData data;
+
     public GetApiV2ListMarkets200ApplicationJSON withData(GetApiV2ListMarkets200ApplicationJSONData data) {
         this.data = data;
         return this;
     }
     
+    public GetApiV2ListMarkets200ApplicationJSON(){}
 }

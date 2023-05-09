@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public GoogleCloudDialogflowCxV3beta1Webhook withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3beta1Webhook withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genericWebService")
     public GoogleCloudDialogflowCxV3beta1WebhookGenericWebService genericWebService;
+
     public GoogleCloudDialogflowCxV3beta1Webhook withGenericWebService(GoogleCloudDialogflowCxV3beta1WebhookGenericWebService genericWebService) {
         this.genericWebService = genericWebService;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3beta1Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3beta1Webhook withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3beta1Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceDirectory")
     public GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig serviceDirectory;
+
     public GoogleCloudDialogflowCxV3beta1Webhook withServiceDirectory(GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig serviceDirectory) {
         this.serviceDirectory = serviceDirectory;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowCxV3beta1Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public String timeout;
+
     public GoogleCloudDialogflowCxV3beta1Webhook withTimeout(String timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1Webhook(){}
 }

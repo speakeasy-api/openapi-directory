@@ -17,6 +17,7 @@ public class StartImportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destinations")
     public String[] destinations;
+
     public StartImportRequest withDestinations(String[] destinations) {
         this.destinations = destinations;
         return this;
@@ -27,6 +28,7 @@ public class StartImportRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndEventTime")
     public OffsetDateTime endEventTime;
+
     public StartImportRequest withEndEventTime(OffsetDateTime endEventTime) {
         this.endEventTime = endEventTime;
         return this;
@@ -35,6 +37,7 @@ public class StartImportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportId")
     public String importId;
+
     public StartImportRequest withImportId(String importId) {
         this.importId = importId;
         return this;
@@ -43,6 +46,7 @@ public class StartImportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportSource")
     public ImportSource importSource;
+
     public StartImportRequest withImportSource(ImportSource importSource) {
         this.importSource = importSource;
         return this;
@@ -53,9 +57,11 @@ public class StartImportRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartEventTime")
     public OffsetDateTime startEventTime;
+
     public StartImportRequest withStartEventTime(OffsetDateTime startEventTime) {
         this.startEventTime = startEventTime;
         return this;
     }
     
+    public StartImportRequest(){}
 }

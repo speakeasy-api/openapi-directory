@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateVocabularyFilterResponse {
@@ -12,6 +13,7 @@ public class CreateVocabularyFilterResponse {
      */
     
     public Object badRequestException;
+
     public CreateVocabularyFilterResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateVocabularyFilterResponse {
      */
     
     public Object conflictException;
+
     public CreateVocabularyFilterResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateVocabularyFilterResponse {
     
     
     public String contentType;
+
     public CreateVocabularyFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateVocabularyFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateVocabularyFilterResponse createVocabularyFilterResponse;
+
     public CreateVocabularyFilterResponse withCreateVocabularyFilterResponse(org.openapis.openapi.models.shared.CreateVocabularyFilterResponse createVocabularyFilterResponse) {
         this.createVocabularyFilterResponse = createVocabularyFilterResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateVocabularyFilterResponse {
      */
     
     public Object internalFailureException;
+
     public CreateVocabularyFilterResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class CreateVocabularyFilterResponse {
      */
     
     public Object limitExceededException;
+
     public CreateVocabularyFilterResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateVocabularyFilterResponse {
     
     
     public Integer statusCode;
+
     public CreateVocabularyFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateVocabularyFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateVocabularyFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateVocabularyFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

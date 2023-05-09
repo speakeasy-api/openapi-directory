@@ -20,6 +20,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Key withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -28,6 +29,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferred")
     public Boolean preferred;
+
     public Key withPreferred(Boolean preferred) {
         this.preferred = preferred;
         return this;
@@ -36,6 +38,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_key")
     public String publicKey;
+
     public Key withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -49,6 +52,7 @@ public class Key {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("time")
     public OffsetDateTime time;
+
     public Key withTime(OffsetDateTime time) {
         this.time = time;
         return this;
@@ -61,9 +65,11 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public KeyTypeEnum type;
+
     public Key withType(KeyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Key(){}
 }

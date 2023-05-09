@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimestreamDimension {
     @JsonProperty("name")
     public String name;
+
     public TimestreamDimension withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class TimestreamDimension {
     
     @JsonProperty("value")
     public String value;
+
     public TimestreamDimension withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public TimestreamDimension(@JsonProperty("name") String name, @JsonProperty("value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

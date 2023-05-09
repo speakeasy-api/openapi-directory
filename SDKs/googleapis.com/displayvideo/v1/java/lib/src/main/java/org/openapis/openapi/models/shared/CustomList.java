@@ -18,6 +18,7 @@ public class CustomList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customListId")
     public String customListId;
+
     public CustomList withCustomListId(String customListId) {
         this.customListId = customListId;
         return this;
@@ -29,6 +30,7 @@ public class CustomList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CustomList withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,9 +42,11 @@ public class CustomList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomList withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CustomList(){}
 }

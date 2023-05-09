@@ -15,6 +15,7 @@ public class GetRelationalDatabaseSnapshotsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetRelationalDatabaseSnapshotsResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class GetRelationalDatabaseSnapshotsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationalDatabaseSnapshots")
     public RelationalDatabaseSnapshot[] relationalDatabaseSnapshots;
+
     public GetRelationalDatabaseSnapshotsResult withRelationalDatabaseSnapshots(RelationalDatabaseSnapshot[] relationalDatabaseSnapshots) {
         this.relationalDatabaseSnapshots = relationalDatabaseSnapshots;
         return this;
     }
     
+    public GetRelationalDatabaseSnapshotsResult(){}
 }

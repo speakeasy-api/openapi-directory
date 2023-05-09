@@ -15,6 +15,7 @@ public class TimelineUnassignedIssueEvent {
      */
     @JsonProperty("actor")
     public SimpleUser actor;
+
     public TimelineUnassignedIssueEvent withActor(SimpleUser actor) {
         this.actor = actor;
         return this;
@@ -25,6 +26,7 @@ public class TimelineUnassignedIssueEvent {
      */
     @JsonProperty("assignee")
     public SimpleUser assignee;
+
     public TimelineUnassignedIssueEvent withAssignee(SimpleUser assignee) {
         this.assignee = assignee;
         return this;
@@ -32,6 +34,7 @@ public class TimelineUnassignedIssueEvent {
     
     @JsonProperty("commit_id")
     public String commitId;
+
     public TimelineUnassignedIssueEvent withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -39,6 +42,7 @@ public class TimelineUnassignedIssueEvent {
     
     @JsonProperty("commit_url")
     public String commitUrl;
+
     public TimelineUnassignedIssueEvent withCommitUrl(String commitUrl) {
         this.commitUrl = commitUrl;
         return this;
@@ -46,6 +50,7 @@ public class TimelineUnassignedIssueEvent {
     
     @JsonProperty("created_at")
     public String createdAt;
+
     public TimelineUnassignedIssueEvent withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -53,6 +58,7 @@ public class TimelineUnassignedIssueEvent {
     
     @JsonProperty("event")
     public String event;
+
     public TimelineUnassignedIssueEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -60,6 +66,7 @@ public class TimelineUnassignedIssueEvent {
     
     @JsonProperty("id")
     public Long id;
+
     public TimelineUnassignedIssueEvent withId(Long id) {
         this.id = id;
         return this;
@@ -67,6 +74,7 @@ public class TimelineUnassignedIssueEvent {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public TimelineUnassignedIssueEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -77,6 +85,7 @@ public class TimelineUnassignedIssueEvent {
      */
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public TimelineUnassignedIssueEvent withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -84,9 +93,22 @@ public class TimelineUnassignedIssueEvent {
     
     @JsonProperty("url")
     public String url;
+
     public TimelineUnassignedIssueEvent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TimelineUnassignedIssueEvent(@JsonProperty("actor") SimpleUser actor, @JsonProperty("assignee") SimpleUser assignee, @JsonProperty("commit_id") String commitId, @JsonProperty("commit_url") String commitUrl, @JsonProperty("created_at") String createdAt, @JsonProperty("event") String event, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("performed_via_github_app") NullableIntegration performedViaGithubApp, @JsonProperty("url") String url) {
+        this.actor = actor;
+        this.assignee = assignee;
+        this.commitId = commitId;
+        this.commitUrl = commitUrl;
+        this.createdAt = createdAt;
+        this.event = event;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.performedViaGithubApp = performedViaGithubApp;
+        this.url = url;
+  }
 }

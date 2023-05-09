@@ -16,6 +16,7 @@ public class TwoHundredResultResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ast")
     public TwoHundredResultResultAst ast;
+
     public TwoHundredResultResult withAst(TwoHundredResultResultAst ast) {
         this.ast = ast;
         return this;
@@ -27,6 +28,7 @@ public class TwoHundredResultResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TwoHundredResultResult withId(String id) {
         this.id = id;
         return this;
@@ -38,9 +40,11 @@ public class TwoHundredResultResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public String raw;
+
     public TwoHundredResultResult withRaw(String raw) {
         this.raw = raw;
         return this;
     }
     
+    public TwoHundredResultResult(){}
 }

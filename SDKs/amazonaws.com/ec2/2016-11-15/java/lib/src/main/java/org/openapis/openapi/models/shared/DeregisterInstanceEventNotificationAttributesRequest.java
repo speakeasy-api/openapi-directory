@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DeregisterInstanceEventNotificationAttributesRequest {
     
     public Boolean dryRun;
+
     public DeregisterInstanceEventNotificationAttributesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,11 @@ public class DeregisterInstanceEventNotificationAttributesRequest {
     
     
     public DeregisterInstanceTagAttributeRequest instanceTagAttribute;
+
     public DeregisterInstanceEventNotificationAttributesRequest withInstanceTagAttribute(DeregisterInstanceTagAttributeRequest instanceTagAttribute) {
         this.instanceTagAttribute = instanceTagAttribute;
         return this;
     }
     
+    public DeregisterInstanceEventNotificationAttributesRequest(){}
 }

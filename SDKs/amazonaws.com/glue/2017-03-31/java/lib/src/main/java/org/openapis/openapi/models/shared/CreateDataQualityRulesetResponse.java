@@ -15,9 +15,11 @@ public class CreateDataQualityRulesetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateDataQualityRulesetResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateDataQualityRulesetResponse(){}
 }

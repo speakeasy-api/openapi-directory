@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CacheParameterGroupDetails {
     
     public CacheNodeTypeSpecificParametersList[] cacheNodeTypeSpecificParameters;
+
     public CacheParameterGroupDetails withCacheNodeTypeSpecificParameters(CacheNodeTypeSpecificParametersList[] cacheNodeTypeSpecificParameters) {
         this.cacheNodeTypeSpecificParameters = cacheNodeTypeSpecificParameters;
         return this;
@@ -19,6 +20,7 @@ public class CacheParameterGroupDetails {
     
     
     public String marker;
+
     public CacheParameterGroupDetails withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,9 +28,11 @@ public class CacheParameterGroupDetails {
     
     
     public ParametersList[] parameters;
+
     public CacheParameterGroupDetails withParameters(ParametersList[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public CacheParameterGroupDetails(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AttributeValueList {
     
     public String attributeValue;
+
     public AttributeValueList withAttributeValue(String attributeValue) {
         this.attributeValue = attributeValue;
         return this;
     }
     
+    public AttributeValueList(){}
 }

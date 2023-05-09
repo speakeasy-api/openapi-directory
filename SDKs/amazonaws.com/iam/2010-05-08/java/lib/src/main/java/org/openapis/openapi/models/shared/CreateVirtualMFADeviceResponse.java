@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateVirtualMFADeviceResponse - Contains the response to a successful &lt;a&gt;CreateVirtualMFADevice&lt;/a&gt; request. 
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class CreateVirtualMFADeviceResponse {
     
     public VirtualMFADevice virtualMFADevice;
+
     public CreateVirtualMFADeviceResponse withVirtualMFADevice(VirtualMFADevice virtualMFADevice) {
         this.virtualMFADevice = virtualMFADevice;
         return this;
     }
     
+    public CreateVirtualMFADeviceResponse(@JsonProperty("VirtualMFADevice") VirtualMFADevice virtualMFADevice) {
+        this.virtualMFADevice = virtualMFADevice;
+  }
 }

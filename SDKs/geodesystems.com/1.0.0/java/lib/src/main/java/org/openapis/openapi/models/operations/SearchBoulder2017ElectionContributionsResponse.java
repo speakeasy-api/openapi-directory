@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchBoulder2017ElectionContributionsResponse {
     
     public String contentType;
+
     public SearchBoulder2017ElectionContributionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SearchBoulder2017ElectionContributionsResponse {
     
     
     public Integer statusCode;
+
     public SearchBoulder2017ElectionContributionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class SearchBoulder2017ElectionContributionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchBoulder2017ElectionContributionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SearchBoulder2017ElectionContributionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

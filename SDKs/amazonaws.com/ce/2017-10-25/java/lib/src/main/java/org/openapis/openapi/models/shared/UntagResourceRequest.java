@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UntagResourceRequest {
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public UntagResourceRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -16,9 +17,14 @@ public class UntagResourceRequest {
     
     @JsonProperty("ResourceTagKeys")
     public String[] resourceTagKeys;
+
     public UntagResourceRequest withResourceTagKeys(String[] resourceTagKeys) {
         this.resourceTagKeys = resourceTagKeys;
         return this;
     }
     
+    public UntagResourceRequest(@JsonProperty("ResourceArn") String resourceArn, @JsonProperty("ResourceTagKeys") String[] resourceTagKeys) {
+        this.resourceArn = resourceArn;
+        this.resourceTagKeys = resourceTagKeys;
+  }
 }

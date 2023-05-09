@@ -18,6 +18,7 @@ public class ImportYumArtifactsGcsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uris")
     public String[] uris;
+
     public ImportYumArtifactsGcsSource withUris(String[] uris) {
         this.uris = uris;
         return this;
@@ -29,9 +30,11 @@ public class ImportYumArtifactsGcsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useWildcards")
     public Boolean useWildcards;
+
     public ImportYumArtifactsGcsSource withUseWildcards(Boolean useWildcards) {
         this.useWildcards = useWildcards;
         return this;
     }
     
+    public ImportYumArtifactsGcsSource(){}
 }

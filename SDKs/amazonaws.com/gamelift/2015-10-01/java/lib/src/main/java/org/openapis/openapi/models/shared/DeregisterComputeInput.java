@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeregisterComputeInput {
     @JsonProperty("ComputeName")
     public String computeName;
+
     public DeregisterComputeInput withComputeName(String computeName) {
         this.computeName = computeName;
         return this;
@@ -16,9 +17,14 @@ public class DeregisterComputeInput {
     
     @JsonProperty("FleetId")
     public String fleetId;
+
     public DeregisterComputeInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
     }
     
+    public DeregisterComputeInput(@JsonProperty("ComputeName") String computeName, @JsonProperty("FleetId") String fleetId) {
+        this.computeName = computeName;
+        this.fleetId = fleetId;
+  }
 }

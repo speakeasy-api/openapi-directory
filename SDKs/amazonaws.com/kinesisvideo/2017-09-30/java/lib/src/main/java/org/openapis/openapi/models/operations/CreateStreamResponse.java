@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateStreamResponse {
@@ -12,6 +13,7 @@ public class CreateStreamResponse {
      */
     
     public Object accountStreamLimitExceededException;
+
     public CreateStreamResponse withAccountStreamLimitExceededException(Object accountStreamLimitExceededException) {
         this.accountStreamLimitExceededException = accountStreamLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class CreateStreamResponse {
      */
     
     public Object clientLimitExceededException;
+
     public CreateStreamResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class CreateStreamResponse {
     
     
     public String contentType;
+
     public CreateStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateStreamResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateStreamOutput createStreamOutput;
+
     public CreateStreamResponse withCreateStreamOutput(org.openapis.openapi.models.shared.CreateStreamOutput createStreamOutput) {
         this.createStreamOutput = createStreamOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateStreamResponse {
      */
     
     public Object deviceStreamLimitExceededException;
+
     public CreateStreamResponse withDeviceStreamLimitExceededException(Object deviceStreamLimitExceededException) {
         this.deviceStreamLimitExceededException = deviceStreamLimitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateStreamResponse {
      */
     
     public Object invalidArgumentException;
+
     public CreateStreamResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -69,6 +76,7 @@ public class CreateStreamResponse {
      */
     
     public Object invalidDeviceException;
+
     public CreateStreamResponse withInvalidDeviceException(Object invalidDeviceException) {
         this.invalidDeviceException = invalidDeviceException;
         return this;
@@ -76,6 +84,7 @@ public class CreateStreamResponse {
     
     
     public Integer statusCode;
+
     public CreateStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateStreamResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateStreamResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -103,9 +114,14 @@ public class CreateStreamResponse {
      */
     
     public Object tagsPerResourceExceededLimitException;
+
     public CreateStreamResponse withTagsPerResourceExceededLimitException(Object tagsPerResourceExceededLimitException) {
         this.tagsPerResourceExceededLimitException = tagsPerResourceExceededLimitException;
         return this;
     }
     
+    public CreateStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

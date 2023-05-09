@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResourceConfiguration {
     @JsonProperty("computeType")
     public ComputeTypeEnum computeType;
+
     public ResourceConfiguration withComputeType(ComputeTypeEnum computeType) {
         this.computeType = computeType;
         return this;
@@ -19,9 +20,14 @@ public class ResourceConfiguration {
     
     @JsonProperty("volumeSizeInGB")
     public Long volumeSizeInGB;
+
     public ResourceConfiguration withVolumeSizeInGB(Long volumeSizeInGB) {
         this.volumeSizeInGB = volumeSizeInGB;
         return this;
     }
     
+    public ResourceConfiguration(@JsonProperty("computeType") ComputeTypeEnum computeType, @JsonProperty("volumeSizeInGB") Long volumeSizeInGB) {
+        this.computeType = computeType;
+        this.volumeSizeInGB = volumeSizeInGB;
+  }
 }

@@ -55,11 +55,9 @@ public class FilesUploadFiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFilesResponse res = new org.openapis.openapi.models.operations.GetFilesResponse() {{
+        org.openapis.openapi.models.operations.GetFilesResponse res = new org.openapis.openapi.models.operations.GetFilesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -101,11 +99,9 @@ public class FilesUploadFiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFilesByIdOrUrlResponse res = new org.openapis.openapi.models.operations.GetFilesByIdOrUrlResponse() {{
+        org.openapis.openapi.models.operations.GetFilesByIdOrUrlResponse res = new org.openapis.openapi.models.operations.GetFilesByIdOrUrlResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -147,11 +143,9 @@ public class FilesUploadFiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFilesDownloadResponse res = new org.openapis.openapi.models.operations.GetFilesDownloadResponse() {{
+        org.openapis.openapi.models.operations.GetFilesDownloadResponse res = new org.openapis.openapi.models.operations.GetFilesDownloadResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -201,11 +195,9 @@ public class FilesUploadFiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFilesResponse res = new org.openapis.openapi.models.operations.PostFilesResponse() {{
+        org.openapis.openapi.models.operations.PostFilesResponse res = new org.openapis.openapi.models.operations.PostFilesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -250,11 +242,9 @@ public class FilesUploadFiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFilesUrlResponse res = new org.openapis.openapi.models.operations.PostFilesUrlResponse() {{
+        org.openapis.openapi.models.operations.PostFilesUrlResponse res = new org.openapis.openapi.models.operations.PostFilesUrlResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {

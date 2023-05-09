@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Field {
     @JsonProperty("displayName")
     public String displayName;
+
     public Field withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -16,6 +17,7 @@ public class Field {
     
     @JsonProperty("isFilter")
     public Boolean isFilter;
+
     public Field withIsFilter(Boolean isFilter) {
         this.isFilter = isFilter;
         return this;
@@ -23,6 +25,7 @@ public class Field {
     
     @JsonProperty("isInternal")
     public Boolean isInternal;
+
     public Field withIsInternal(Boolean isInternal) {
         this.isInternal = isInternal;
         return this;
@@ -30,6 +33,7 @@ public class Field {
     
     @JsonProperty("isNullable")
     public Boolean isNullable;
+
     public Field withIsNullable(Boolean isNullable) {
         this.isNullable = isNullable;
         return this;
@@ -37,6 +41,7 @@ public class Field {
     
     @JsonProperty("isSearchable")
     public Boolean isSearchable;
+
     public Field withIsSearchable(Boolean isSearchable) {
         this.isSearchable = isSearchable;
         return this;
@@ -44,6 +49,7 @@ public class Field {
     
     @JsonProperty("name")
     public String name;
+
     public Field withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +57,19 @@ public class Field {
     
     @JsonProperty("type")
     public String type;
+
     public Field withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Field(@JsonProperty("displayName") String displayName, @JsonProperty("isFilter") Boolean isFilter, @JsonProperty("isInternal") Boolean isInternal, @JsonProperty("isNullable") Boolean isNullable, @JsonProperty("isSearchable") Boolean isSearchable, @JsonProperty("name") String name, @JsonProperty("type") String type) {
+        this.displayName = displayName;
+        this.isFilter = isFilter;
+        this.isInternal = isInternal;
+        this.isNullable = isNullable;
+        this.isSearchable = isSearchable;
+        this.name = name;
+        this.type = type;
+  }
 }

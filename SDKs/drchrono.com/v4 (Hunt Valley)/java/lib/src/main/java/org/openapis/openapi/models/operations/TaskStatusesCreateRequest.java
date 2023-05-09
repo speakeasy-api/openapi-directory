@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class TaskStatusesCreateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public TaskStatusesCreateRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public TaskStatusesCreateRequest(){}
 }

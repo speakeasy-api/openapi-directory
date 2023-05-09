@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAllImageUrlsResponse {
     
     public String contentType;
+
     public GetAllImageUrlsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAllImageUrlsResponse {
      */
     
     public org.openapis.openapi.models.shared.LibraryImagesResponse libraryImagesResponse;
+
     public GetAllImageUrlsResponse withLibraryImagesResponse(org.openapis.openapi.models.shared.LibraryImagesResponse libraryImagesResponse) {
         this.libraryImagesResponse = libraryImagesResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetAllImageUrlsResponse {
     
     
     public Integer statusCode;
+
     public GetAllImageUrlsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetAllImageUrlsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAllImageUrlsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAllImageUrlsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

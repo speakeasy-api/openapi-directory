@@ -16,6 +16,7 @@ public class DestinyResponsesDestinyProfileResponseProfileTransitoryData {
      */
     
     public DestinyComponentsProfilesDestinyProfileTransitoryComponent data;
+
     public DestinyResponsesDestinyProfileResponseProfileTransitoryData withData(DestinyComponentsProfilesDestinyProfileTransitoryComponent data) {
         this.data = data;
         return this;
@@ -26,6 +27,7 @@ public class DestinyResponsesDestinyProfileResponseProfileTransitoryData {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyProfileResponseProfileTransitoryData withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -33,9 +35,11 @@ public class DestinyResponsesDestinyProfileResponseProfileTransitoryData {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyProfileResponseProfileTransitoryData withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyProfileResponseProfileTransitoryData(){}
 }

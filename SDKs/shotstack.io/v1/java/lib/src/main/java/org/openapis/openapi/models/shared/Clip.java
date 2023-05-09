@@ -17,6 +17,7 @@ public class Clip {
      */
     @JsonProperty("asset")
     public Object asset;
+
     public Clip withAsset(Object asset) {
         this.asset = asset;
         return this;
@@ -35,6 +36,7 @@ public class Clip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effect")
     public ClipEffectEnum effect;
+
     public Clip withEffect(ClipEffectEnum effect) {
         this.effect = effect;
         return this;
@@ -54,6 +56,7 @@ public class Clip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public ClipFilterEnum filter;
+
     public Clip withFilter(ClipFilterEnum filter) {
         this.filter = filter;
         return this;
@@ -71,6 +74,7 @@ public class Clip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fit")
     public ClipFitEnum fit;
+
     public Clip withFit(ClipFitEnum fit) {
         this.fit = fit;
         return this;
@@ -81,6 +85,7 @@ public class Clip {
      */
     @JsonProperty("length")
     public Double length;
+
     public Clip withLength(Double length) {
         this.length = length;
         return this;
@@ -92,6 +97,7 @@ public class Clip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Offset offset;
+
     public Clip withOffset(Offset offset) {
         this.offset = offset;
         return this;
@@ -103,6 +109,7 @@ public class Clip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opacity")
     public Double opacity;
+
     public Clip withOpacity(Double opacity) {
         this.opacity = opacity;
         return this;
@@ -124,6 +131,7 @@ public class Clip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public ClipPositionEnum position;
+
     public Clip withPosition(ClipPositionEnum position) {
         this.position = position;
         return this;
@@ -135,6 +143,7 @@ public class Clip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scale")
     public Double scale;
+
     public Clip withScale(Double scale) {
         this.scale = scale;
         return this;
@@ -145,6 +154,7 @@ public class Clip {
      */
     @JsonProperty("start")
     public Double start;
+
     public Clip withStart(Double start) {
         this.start = start;
         return this;
@@ -156,9 +166,15 @@ public class Clip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transition")
     public Transition transition;
+
     public Clip withTransition(Transition transition) {
         this.transition = transition;
         return this;
     }
     
+    public Clip(@JsonProperty("asset") Object asset, @JsonProperty("length") Double length, @JsonProperty("start") Double start) {
+        this.asset = asset;
+        this.length = length;
+        this.start = start;
+  }
 }

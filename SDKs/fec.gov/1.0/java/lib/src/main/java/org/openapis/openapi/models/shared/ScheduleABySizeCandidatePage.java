@@ -12,6 +12,7 @@ public class ScheduleABySizeCandidatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public ScheduleABySizeCandidatePage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class ScheduleABySizeCandidatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ScheduleABySizeCandidate[] results;
+
     public ScheduleABySizeCandidatePage withResults(ScheduleABySizeCandidate[] results) {
         this.results = results;
         return this;
     }
     
+    public ScheduleABySizeCandidatePage(){}
 }

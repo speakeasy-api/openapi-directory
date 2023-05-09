@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetBucketMetricDataRequest {
     @JsonProperty("bucketName")
     public String bucketName;
+
     public GetBucketMetricDataRequest withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -23,6 +24,7 @@ public class GetBucketMetricDataRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetBucketMetricDataRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -30,6 +32,7 @@ public class GetBucketMetricDataRequest {
     
     @JsonProperty("metricName")
     public BucketMetricNameEnum metricName;
+
     public GetBucketMetricDataRequest withMetricName(BucketMetricNameEnum metricName) {
         this.metricName = metricName;
         return this;
@@ -37,6 +40,7 @@ public class GetBucketMetricDataRequest {
     
     @JsonProperty("period")
     public Long period;
+
     public GetBucketMetricDataRequest withPeriod(Long period) {
         this.period = period;
         return this;
@@ -46,6 +50,7 @@ public class GetBucketMetricDataRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GetBucketMetricDataRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -53,6 +58,7 @@ public class GetBucketMetricDataRequest {
     
     @JsonProperty("statistics")
     public MetricStatisticEnum[] statistics;
+
     public GetBucketMetricDataRequest withStatistics(MetricStatisticEnum[] statistics) {
         this.statistics = statistics;
         return this;
@@ -60,9 +66,19 @@ public class GetBucketMetricDataRequest {
     
     @JsonProperty("unit")
     public MetricUnitEnum unit;
+
     public GetBucketMetricDataRequest withUnit(MetricUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public GetBucketMetricDataRequest(@JsonProperty("bucketName") String bucketName, @JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("metricName") BucketMetricNameEnum metricName, @JsonProperty("period") Long period, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("statistics") MetricStatisticEnum[] statistics, @JsonProperty("unit") MetricUnitEnum unit) {
+        this.bucketName = bucketName;
+        this.endTime = endTime;
+        this.metricName = metricName;
+        this.period = period;
+        this.startTime = startTime;
+        this.statistics = statistics;
+        this.unit = unit;
+  }
 }

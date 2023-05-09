@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetParentGoalsForGoalResponse {
     
     public String contentType;
+
     public GetParentGoalsForGoalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetParentGoalsForGoalResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetParentGoalsForGoalResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetParentGoalsForGoalResponse {
     
     
     public Integer statusCode;
+
     public GetParentGoalsForGoalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetParentGoalsForGoalResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetParentGoalsForGoalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetParentGoalsForGoalResponse {
      */
     
     public GetParentGoalsForGoal200ApplicationJSON getParentGoalsForGoal200ApplicationJSONObject;
+
     public GetParentGoalsForGoalResponse withGetParentGoalsForGoal200ApplicationJSONObject(GetParentGoalsForGoal200ApplicationJSON getParentGoalsForGoal200ApplicationJSONObject) {
         this.getParentGoalsForGoal200ApplicationJSONObject = getParentGoalsForGoal200ApplicationJSONObject;
         return this;
     }
     
+    public GetParentGoalsForGoalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

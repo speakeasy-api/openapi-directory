@@ -42,15 +42,13 @@ public class TokenBurnController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBurningTransactionResponse res = new org.openapis.openapi.models.operations.GetBurningTransactionResponse() {{
+        org.openapis.openapi.models.operations.GetBurningTransactionResponse res = new org.openapis.openapi.models.operations.GetBurningTransactionResponse(contentType, httpRes.statusCode()) {{
             body = null;
             getBurningTransaction400WildcardString = null;
             getBurningTransaction401WildcardString = null;
             getBurningTransaction404WildcardString = null;
             getBurningTransaction409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,15 +99,13 @@ public class TokenBurnController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MainAppResponse res = new org.openapis.openapi.models.operations.MainAppResponse() {{
+        org.openapis.openapi.models.operations.MainAppResponse res = new org.openapis.openapi.models.operations.MainAppResponse(contentType, httpRes.statusCode()) {{
             body = null;
             mainApp400WildcardString = null;
             mainApp401WildcardString = null;
             mainApp404WildcardString = null;
             mainApp409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -165,15 +161,13 @@ public class TokenBurnController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrepareTransactionResponse res = new org.openapis.openapi.models.operations.PrepareTransactionResponse() {{
+        org.openapis.openapi.models.operations.PrepareTransactionResponse res = new org.openapis.openapi.models.operations.PrepareTransactionResponse(contentType, httpRes.statusCode()) {{
             body = null;
             prepareTransaction400WildcardString = null;
             prepareTransaction401WildcardString = null;
             prepareTransaction404WildcardString = null;
             prepareTransaction409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

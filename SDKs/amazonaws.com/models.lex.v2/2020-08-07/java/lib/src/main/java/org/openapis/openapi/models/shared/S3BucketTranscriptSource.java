@@ -15,6 +15,7 @@ public class S3BucketTranscriptSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public S3BucketTranscriptSource withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -23,6 +24,7 @@ public class S3BucketTranscriptSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathFormat")
     public PathFormat pathFormat;
+
     public S3BucketTranscriptSource withPathFormat(PathFormat pathFormat) {
         this.pathFormat = pathFormat;
         return this;
@@ -30,6 +32,7 @@ public class S3BucketTranscriptSource {
     
     @JsonProperty("s3BucketName")
     public String s3BucketName;
+
     public S3BucketTranscriptSource withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -38,6 +41,7 @@ public class S3BucketTranscriptSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcriptFilter")
     public TranscriptFilter transcriptFilter;
+
     public S3BucketTranscriptSource withTranscriptFilter(TranscriptFilter transcriptFilter) {
         this.transcriptFilter = transcriptFilter;
         return this;
@@ -45,9 +49,14 @@ public class S3BucketTranscriptSource {
     
     @JsonProperty("transcriptFormat")
     public TranscriptFormatEnum transcriptFormat;
+
     public S3BucketTranscriptSource withTranscriptFormat(TranscriptFormatEnum transcriptFormat) {
         this.transcriptFormat = transcriptFormat;
         return this;
     }
     
+    public S3BucketTranscriptSource(@JsonProperty("s3BucketName") String s3BucketName, @JsonProperty("transcriptFormat") TranscriptFormatEnum transcriptFormat) {
+        this.s3BucketName = s3BucketName;
+        this.transcriptFormat = transcriptFormat;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPoolOriginationIdentitiesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListPoolOriginationIdentitiesRequest listPoolOriginationIdentitiesRequest;
+
     public ListPoolOriginationIdentitiesRequest withListPoolOriginationIdentitiesRequest(org.openapis.openapi.models.shared.ListPoolOriginationIdentitiesRequest listPoolOriginationIdentitiesRequest) {
         this.listPoolOriginationIdentitiesRequest = listPoolOriginationIdentitiesRequest;
         return this;
@@ -19,6 +21,7 @@ public class ListPoolOriginationIdentitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public ListPoolOriginationIdentitiesRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class ListPoolOriginationIdentitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListPoolOriginationIdentitiesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class ListPoolOriginationIdentitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListPoolOriginationIdentitiesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class ListPoolOriginationIdentitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListPoolOriginationIdentitiesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class ListPoolOriginationIdentitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListPoolOriginationIdentitiesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class ListPoolOriginationIdentitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListPoolOriginationIdentitiesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class ListPoolOriginationIdentitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListPoolOriginationIdentitiesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class ListPoolOriginationIdentitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListPoolOriginationIdentitiesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class ListPoolOriginationIdentitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListPoolOriginationIdentitiesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class ListPoolOriginationIdentitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListPoolOriginationIdentitiesXAmzTargetEnum xAmzTarget;
+
     public ListPoolOriginationIdentitiesRequest withXAmzTarget(ListPoolOriginationIdentitiesXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public ListPoolOriginationIdentitiesRequest(@JsonProperty("ListPoolOriginationIdentitiesRequest") org.openapis.openapi.models.shared.ListPoolOriginationIdentitiesRequest listPoolOriginationIdentitiesRequest, @JsonProperty("X-Amz-Target") ListPoolOriginationIdentitiesXAmzTargetEnum xAmzTarget) {
+        this.listPoolOriginationIdentitiesRequest = listPoolOriginationIdentitiesRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateDBSecurityGroupResult {
     
     public DBSecurityGroup dbSecurityGroup;
+
     public CreateDBSecurityGroupResult withDBSecurityGroup(DBSecurityGroup dbSecurityGroup) {
         this.dbSecurityGroup = dbSecurityGroup;
         return this;
     }
     
+    public CreateDBSecurityGroupResult(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SendEmailRequest - Represents a request to send a single formatted email using Amazon SES. For more information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-formatted.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SendEmailRequest {
     
     public String configurationSetName;
+
     public SendEmailRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -19,6 +20,7 @@ public class SendEmailRequest {
     
     
     public Destination destination;
+
     public SendEmailRequest withDestination(Destination destination) {
         this.destination = destination;
         return this;
@@ -26,6 +28,7 @@ public class SendEmailRequest {
     
     
     public Message message;
+
     public SendEmailRequest withMessage(Message message) {
         this.message = message;
         return this;
@@ -33,6 +36,7 @@ public class SendEmailRequest {
     
     
     public String[] replyToAddresses;
+
     public SendEmailRequest withReplyToAddresses(String[] replyToAddresses) {
         this.replyToAddresses = replyToAddresses;
         return this;
@@ -40,6 +44,7 @@ public class SendEmailRequest {
     
     
     public String returnPath;
+
     public SendEmailRequest withReturnPath(String returnPath) {
         this.returnPath = returnPath;
         return this;
@@ -47,6 +52,7 @@ public class SendEmailRequest {
     
     
     public String returnPathArn;
+
     public SendEmailRequest withReturnPathArn(String returnPathArn) {
         this.returnPathArn = returnPathArn;
         return this;
@@ -54,6 +60,7 @@ public class SendEmailRequest {
     
     
     public String source;
+
     public SendEmailRequest withSource(String source) {
         this.source = source;
         return this;
@@ -61,6 +68,7 @@ public class SendEmailRequest {
     
     
     public String sourceArn;
+
     public SendEmailRequest withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -68,9 +76,15 @@ public class SendEmailRequest {
     
     
     public MessageTag[] tags;
+
     public SendEmailRequest withTags(MessageTag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public SendEmailRequest(@JsonProperty("Destination") Destination destination, @JsonProperty("Message") Message message, @JsonProperty("Source") String source) {
+        this.destination = destination;
+        this.message = message;
+        this.source = source;
+  }
 }

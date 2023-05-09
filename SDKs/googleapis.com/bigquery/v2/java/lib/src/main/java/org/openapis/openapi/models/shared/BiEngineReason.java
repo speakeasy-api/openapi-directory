@@ -15,6 +15,7 @@ public class BiEngineReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public BiEngineReason withCode(String code) {
         this.code = code;
         return this;
@@ -26,9 +27,11 @@ public class BiEngineReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public BiEngineReason withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public BiEngineReason(){}
 }

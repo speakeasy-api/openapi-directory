@@ -15,6 +15,7 @@ public class PostCompile200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explanation")
     public PostCompile200ApplicationJSONExplanation[] explanation;
+
     public PostCompile200ApplicationJSON withExplanation(PostCompile200ApplicationJSONExplanation[] explanation) {
         this.explanation = explanation;
         return this;
@@ -23,6 +24,7 @@ public class PostCompile200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public PostCompile200ApplicationJSONMetrics metrics;
+
     public PostCompile200ApplicationJSON withMetrics(PostCompile200ApplicationJSONMetrics metrics) {
         this.metrics = metrics;
         return this;
@@ -31,9 +33,11 @@ public class PostCompile200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public PostCompile200ApplicationJSONResult[] result;
+
     public PostCompile200ApplicationJSON withResult(PostCompile200ApplicationJSONResult[] result) {
         this.result = result;
         return this;
     }
     
+    public PostCompile200ApplicationJSON(){}
 }

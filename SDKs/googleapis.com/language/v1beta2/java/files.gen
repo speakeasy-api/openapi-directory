@@ -110,4 +110,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/V2ModelContentCategoriesVer
 lib/src/main/java/org/openapis/openapi/models/shared/V2Model.java
 lib/src/main/java/org/openapis/openapi/models/shared/ClassifyTextResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ClassifyTextRequest.java
+docs/sdk/README.md
+docs/documents/README.md
 USAGE.md

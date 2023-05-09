@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BigqueryTabledataInsertAllRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TableDataInsertAllRequest tableDataInsertAllRequest;
+
     public BigqueryTabledataInsertAllRequest withTableDataInsertAllRequest(org.openapis.openapi.models.shared.TableDataInsertAllRequest tableDataInsertAllRequest) {
         this.tableDataInsertAllRequest = tableDataInsertAllRequest;
         return this;
@@ -19,6 +21,7 @@ public class BigqueryTabledataInsertAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BigqueryTabledataInsertAllRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class BigqueryTabledataInsertAllRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
     public String datasetId;
+
     public BigqueryTabledataInsertAllRequest withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -39,6 +43,7 @@ public class BigqueryTabledataInsertAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BigqueryTabledataInsertAllRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class BigqueryTabledataInsertAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BigqueryTabledataInsertAllRequest withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +65,7 @@ public class BigqueryTabledataInsertAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BigqueryTabledataInsertAllRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -69,6 +76,7 @@ public class BigqueryTabledataInsertAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BigqueryTabledataInsertAllRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -79,6 +87,7 @@ public class BigqueryTabledataInsertAllRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public BigqueryTabledataInsertAllRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -89,6 +98,7 @@ public class BigqueryTabledataInsertAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BigqueryTabledataInsertAllRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -99,6 +109,7 @@ public class BigqueryTabledataInsertAllRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tableId")
     public String tableId;
+
     public BigqueryTabledataInsertAllRequest withTableId(String tableId) {
         this.tableId = tableId;
         return this;
@@ -109,9 +120,15 @@ public class BigqueryTabledataInsertAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public BigqueryTabledataInsertAllRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public BigqueryTabledataInsertAllRequest(@JsonProperty("datasetId") String datasetId, @JsonProperty("projectId") String projectId, @JsonProperty("tableId") String tableId) {
+        this.datasetId = datasetId;
+        this.projectId = projectId;
+        this.tableId = tableId;
+  }
 }

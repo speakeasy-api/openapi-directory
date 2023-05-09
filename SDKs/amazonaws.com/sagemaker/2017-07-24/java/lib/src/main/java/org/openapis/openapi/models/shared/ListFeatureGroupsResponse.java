@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListFeatureGroupsResponse {
     @JsonProperty("FeatureGroupSummaries")
     public FeatureGroupSummary[] featureGroupSummaries;
+
     public ListFeatureGroupsResponse withFeatureGroupSummaries(FeatureGroupSummary[] featureGroupSummaries) {
         this.featureGroupSummaries = featureGroupSummaries;
         return this;
@@ -19,9 +20,14 @@ public class ListFeatureGroupsResponse {
     
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFeatureGroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFeatureGroupsResponse(@JsonProperty("FeatureGroupSummaries") FeatureGroupSummary[] featureGroupSummaries, @JsonProperty("NextToken") String nextToken) {
+        this.featureGroupSummaries = featureGroupSummaries;
+        this.nextToken = nextToken;
+  }
 }

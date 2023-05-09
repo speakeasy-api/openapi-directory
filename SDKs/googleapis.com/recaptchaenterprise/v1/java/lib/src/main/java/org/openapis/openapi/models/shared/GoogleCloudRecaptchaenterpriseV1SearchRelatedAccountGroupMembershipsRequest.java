@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembership
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashedAccountId")
     public String hashedAccountId;
+
     public GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest withHashedAccountId(String hashedAccountId) {
         this.hashedAccountId = hashedAccountId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembership
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembership
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest(){}
 }

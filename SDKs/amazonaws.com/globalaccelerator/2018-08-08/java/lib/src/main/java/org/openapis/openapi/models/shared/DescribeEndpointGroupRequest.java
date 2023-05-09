@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeEndpointGroupRequest {
     @JsonProperty("EndpointGroupArn")
     public String endpointGroupArn;
+
     public DescribeEndpointGroupRequest withEndpointGroupArn(String endpointGroupArn) {
         this.endpointGroupArn = endpointGroupArn;
         return this;
     }
     
+    public DescribeEndpointGroupRequest(@JsonProperty("EndpointGroupArn") String endpointGroupArn) {
+        this.endpointGroupArn = endpointGroupArn;
+  }
 }

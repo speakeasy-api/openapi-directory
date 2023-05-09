@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CloudStorageApiGetListResponse;
 
 public class Application {
@@ -27,12 +26,14 @@ public class Application {
 
             CloudStorageApiGetListResponse res = sdk.cloudStorage.cloudStorageApiGetList();
 
-            if (res.rechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel.isPresent()) {
+            if (res.rechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -40,183 +41,183 @@ public class Application {
 ## Available Resources and Operations
 
 
-### cloudStorage
+### [cloudStorage](docs/cloudstorage/README.md)
 
-* `cloudStorageApiGetList` - Gets a list of all connected cloud storage devices
+* [cloudStorageApiGetList](docs/cloudstorage/README.md#cloudstorageapigetlist) - Gets a list of all connected cloud storage devices
 
-### customerAddresses
+### [customerAddresses](docs/customeraddresses/README.md)
 
-* `customerAddressesCreateForm` - Creates a new customer address
-* `customerAddressesCreateJson` - Creates a new customer address
-* `customerAddressesCreateRaw` - Creates a new customer address
-* `customerAddressesGetAll` - Get a list of all customer addresses
-* `customerAddressesGetOne` - Queries a single customer address by id
-* `customerAddressesUpdateForm` - Updates a customer address by id
-* `customerAddressesUpdateJson` - Updates a customer address by id
-* `customerAddressesUpdateRaw` - Updates a customer address by id
+* [customerAddressesCreateForm](docs/customeraddresses/README.md#customeraddressescreateform) - Creates a new customer address
+* [customerAddressesCreateJson](docs/customeraddresses/README.md#customeraddressescreatejson) - Creates a new customer address
+* [customerAddressesCreateRaw](docs/customeraddresses/README.md#customeraddressescreateraw) - Creates a new customer address
+* [customerAddressesGetAll](docs/customeraddresses/README.md#customeraddressesgetall) - Get a list of all customer addresses
+* [customerAddressesGetOne](docs/customeraddresses/README.md#customeraddressesgetone) - Queries a single customer address by id
+* [customerAddressesUpdateForm](docs/customeraddresses/README.md#customeraddressesupdateform) - Updates a customer address by id
+* [customerAddressesUpdateJson](docs/customeraddresses/README.md#customeraddressesupdatejson) - Updates a customer address by id
+* [customerAddressesUpdateRaw](docs/customeraddresses/README.md#customeraddressesupdateraw) - Updates a customer address by id
 
-### customers
+### [customers](docs/customers/README.md)
 
-* `customerAddCustomerAddressForm` - Adds a new address to a customer
-* `customerAddCustomerAddressJson` - Adds a new address to a customer
-* `customerAddCustomerAddressRaw` - Adds a new address to a customer
-* `customerCreateForm` - Creates a new customer
-* `customerCreateJson` - Creates a new customer
-* `customerCreateRaw` - Creates a new customer
-* `customerGetAll` - Get a list of all customers
-* `customerGetCustomerAddress` - Queries a single address from a customer
-* `customerGetCustomerAddresses` - Queries a list of addresses from a customer
-* `customerGetCustomerOrders` - Queries a list of orders from a customer
-* `customerGetOne` - Queries a single customer by id
-* `customerPatchAddress` - Updates one or more fields of an address
-* `customerUpdateAddressForm` - Updates all fields of an address
-* `customerUpdateAddressJson` - Updates all fields of an address
-* `customerUpdateAddressRaw` - Updates all fields of an address
-* `customerUpdateForm` - Updates a customer by id
-* `customerUpdateJson` - Updates a customer by id
-* `customerUpdateRaw` - Updates a customer by id
-* `searchSearchForm` - Search for products, customers and orders.
+* [customerAddCustomerAddressForm](docs/customers/README.md#customeraddcustomeraddressform) - Adds a new address to a customer
+* [customerAddCustomerAddressJson](docs/customers/README.md#customeraddcustomeraddressjson) - Adds a new address to a customer
+* [customerAddCustomerAddressRaw](docs/customers/README.md#customeraddcustomeraddressraw) - Adds a new address to a customer
+* [customerCreateForm](docs/customers/README.md#customercreateform) - Creates a new customer
+* [customerCreateJson](docs/customers/README.md#customercreatejson) - Creates a new customer
+* [customerCreateRaw](docs/customers/README.md#customercreateraw) - Creates a new customer
+* [customerGetAll](docs/customers/README.md#customergetall) - Get a list of all customers
+* [customerGetCustomerAddress](docs/customers/README.md#customergetcustomeraddress) - Queries a single address from a customer
+* [customerGetCustomerAddresses](docs/customers/README.md#customergetcustomeraddresses) - Queries a list of addresses from a customer
+* [customerGetCustomerOrders](docs/customers/README.md#customergetcustomerorders) - Queries a list of orders from a customer
+* [customerGetOne](docs/customers/README.md#customergetone) - Queries a single customer by id
+* [customerPatchAddress](docs/customers/README.md#customerpatchaddress) - Updates one or more fields of an address
+* [customerUpdateAddressForm](docs/customers/README.md#customerupdateaddressform) - Updates all fields of an address
+* [customerUpdateAddressJson](docs/customers/README.md#customerupdateaddressjson) - Updates all fields of an address
+* [customerUpdateAddressRaw](docs/customers/README.md#customerupdateaddressraw) - Updates all fields of an address
+* [customerUpdateForm](docs/customers/README.md#customerupdateform) - Updates a customer by id
+* [customerUpdateJson](docs/customers/README.md#customerupdatejson) - Updates a customer by id
+* [customerUpdateRaw](docs/customers/README.md#customerupdateraw) - Updates a customer by id
+* [searchSearchForm](docs/customers/README.md#searchsearchform) - Search for products, customers and orders.
 Type can be "order", "product" and / or "customer"
 Term can contains lucene query syntax
-* `searchSearchJson` - Search for products, customers and orders.
+* [searchSearchJson](docs/customers/README.md#searchsearchjson) - Search for products, customers and orders.
 Type can be "order", "product" and / or "customer"
 Term can contains lucene query syntax
-* `searchSearchRaw` - Search for products, customers and orders.
-Type can be "order", "product" and / or "customer"
-Term can contains lucene query syntax
-
-### deliveryNote
-
-* `orderApiCreateDeliveryNote` - Create an delivery note for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
-
-### enumApi
-
-* `enumApiGetOrderStates` - Returns a list with all defined orderstates
-* `enumApiGetPaymentTypes` - Returns a list with all defined paymenttypes
-* `enumApiGetShipmentTypes` - Returns a list with all defined shipmenttypes
-* `enumApiGetShippingCarriers` - Returns a list with all defined shippingcarriers
-
-### events
-
-* `eventApiGetList` - Get a list of all events optionally filtered by date. This request is extra throttled to 2 calls per page per hour.
-
-### invoice
-
-* `orderApiCreateInvoice` - Create an invoice for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
-* `orderApiGetInvoiceList` - Get a list of all invoices optionally filtered by date. This request ist throttled to 1 per 1 minute for same page and minInvoiceDate
-
-### orders
-
-* `layoutApiGetList`
-* `orderApiAddShipmentForm` - Add a shipment to a given order
-* `orderApiAddShipmentJson` - Add a shipment to a given order
-* `orderApiAddShipmentRaw` - Add a shipment to a given order
-* `orderApiCreateDeliveryNote` - Create an delivery note for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
-* `orderApiCreateInvoice` - Create an invoice for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
-* `orderApiFind` - Find a single order by its external id (order number)
-* `orderApiGet` - Get a single order by its internal billbee id. This request is throttled to 6 calls per order in one minute
-* `orderApiGetByExtRef` - Get a single order by its external order number
-* `orderApiGetInvoiceList` - Get a list of all invoices optionally filtered by date. This request ist throttled to 1 per 1 minute for same page and minInvoiceDate
-* `orderApiGetList` - Get a list of all orders optionally filtered by date
-* `orderApiGetPatchableFields` - Returns a list of fields which can be updated with the orders/{id} patch call
-* `orderApiParsePlaceholdersForm` - Parses a text and replaces all placeholders
-* `orderApiParsePlaceholdersJson` - Parses a text and replaces all placeholders
-* `orderApiParsePlaceholdersRaw` - Parses a text and replaces all placeholders
-* `orderApiPatchOrder` - Updates one or more fields of an order
-* `orderApiPostNewOrderForm` - Creates a new order in the Billbee account
-* `orderApiPostNewOrderJson` - Creates a new order in the Billbee account
-* `orderApiPostNewOrderRaw` - Creates a new order in the Billbee account
-* `orderApiSendMessageForm` - Sends a message to the buyer
-* `orderApiSendMessageJson` - Sends a message to the buyer
-* `orderApiSendMessageRaw` - Sends a message to the buyer
-* `orderApiTagsCreateForm` - Attach one or more tags to an order
-* `orderApiTagsCreateJson` - Attach one or more tags to an order
-* `orderApiTagsCreateRaw` - Attach one or more tags to an order
-* `orderApiTagsUpdateForm` - Sets the tags attached to an order
-* `orderApiTagsUpdateJson` - Sets the tags attached to an order
-* `orderApiTagsUpdateRaw` - Sets the tags attached to an order
-* `orderApiTriggerEventForm` - Triggers a rule event
-* `orderApiTriggerEventJson` - Triggers a rule event
-* `orderApiTriggerEventRaw` - Triggers a rule event
-* `orderApiUpdateStateForm` - Changes the main state of a single order
-* `orderApiUpdateStateJson` - Changes the main state of a single order
-* `orderApiUpdateStateRaw` - Changes the main state of a single order
-* `searchSearchForm` - Search for products, customers and orders.
-Type can be "order", "product" and / or "customer"
-Term can contains lucene query syntax
-* `searchSearchJson` - Search for products, customers and orders.
-Type can be "order", "product" and / or "customer"
-Term can contains lucene query syntax
-* `searchSearchRaw` - Search for products, customers and orders.
+* [searchSearchRaw](docs/customers/README.md#searchsearchraw) - Search for products, customers and orders.
 Type can be "order", "product" and / or "customer"
 Term can contains lucene query syntax
 
-### products
+### [deliveryNote](docs/deliverynote/README.md)
 
-* `articleCreateArticle` - Creates a new product
-* `articleDeleteArticle` - Deletes a product
-* `articleDeleteImage` - Deletes a single image by id
-* `articleDeleteImageFromProduct` - Deletes a single image from a product
-* `articleGetArticle` - Queries a single article by id or by sku
-* `articleGetCategory` - GEts a list of all defined categories
-* `articleGetCustomField` - Queries a single custom field
-* `articleGetCustomFields` - Queries a list of all custom fields
-* `articleGetImage` - Returns a single image by id
-* `articleGetImageFromProduct` - Returns a single image by id
-* `articleGetImages` - Returns a list of all images of the product
-* `articleGetList` - Get a list of all products
-* `articleGetPatchableFields` - Returns a list of fields which can be updated with the patch call
-* `articleGetReservedAmount` - Queries the reserved amount for a single article by id or by sku
-* `articleGetStocks` - Query all defined stock locations
-* `articlePatchArticle` - Updates one or more fields of a product
-* `articlePutImageForm` - Add or update an existing image of a product
-* `articlePutImageJson` - Add or update an existing image of a product
-* `articlePutImageRaw` - Add or update an existing image of a product
-* `articleUpdateStockCodeForm` - Update the stock code of an article
-* `articleUpdateStockCodeJson` - Update the stock code of an article
-* `articleUpdateStockCodeRaw` - Update the stock code of an article
-* `articleUpdateStockForm` - Update the stock qty of an article
-* `articleUpdateStockJson` - Update the stock qty of an article
-* `articleUpdateStockRaw` - Update the stock qty of an article
-* `searchSearchForm` - Search for products, customers and orders.
+* [orderApiCreateDeliveryNote](docs/deliverynote/README.md#orderapicreatedeliverynote) - Create an delivery note for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
+
+### [enumApi](docs/enumapi/README.md)
+
+* [enumApiGetOrderStates](docs/enumapi/README.md#enumapigetorderstates) - Returns a list with all defined orderstates
+* [enumApiGetPaymentTypes](docs/enumapi/README.md#enumapigetpaymenttypes) - Returns a list with all defined paymenttypes
+* [enumApiGetShipmentTypes](docs/enumapi/README.md#enumapigetshipmenttypes) - Returns a list with all defined shipmenttypes
+* [enumApiGetShippingCarriers](docs/enumapi/README.md#enumapigetshippingcarriers) - Returns a list with all defined shippingcarriers
+
+### [events](docs/events/README.md)
+
+* [eventApiGetList](docs/events/README.md#eventapigetlist) - Get a list of all events optionally filtered by date. This request is extra throttled to 2 calls per page per hour.
+
+### [invoice](docs/invoice/README.md)
+
+* [orderApiCreateInvoice](docs/invoice/README.md#orderapicreateinvoice) - Create an invoice for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
+* [orderApiGetInvoiceList](docs/invoice/README.md#orderapigetinvoicelist) - Get a list of all invoices optionally filtered by date. This request ist throttled to 1 per 1 minute for same page and minInvoiceDate
+
+### [orders](docs/orders/README.md)
+
+* [layoutApiGetList](docs/orders/README.md#layoutapigetlist)
+* [orderApiAddShipmentForm](docs/orders/README.md#orderapiaddshipmentform) - Add a shipment to a given order
+* [orderApiAddShipmentJson](docs/orders/README.md#orderapiaddshipmentjson) - Add a shipment to a given order
+* [orderApiAddShipmentRaw](docs/orders/README.md#orderapiaddshipmentraw) - Add a shipment to a given order
+* [orderApiCreateDeliveryNote](docs/orders/README.md#orderapicreatedeliverynote) - Create an delivery note for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
+* [orderApiCreateInvoice](docs/orders/README.md#orderapicreateinvoice) - Create an invoice for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
+* [~~orderApiFind~~](docs/orders/README.md#orderapifind) - Find a single order by its external id (order number) :warning: **Deprecated**
+* [orderApiGet](docs/orders/README.md#orderapiget) - Get a single order by its internal billbee id. This request is throttled to 6 calls per order in one minute
+* [orderApiGetByExtRef](docs/orders/README.md#orderapigetbyextref) - Get a single order by its external order number
+* [orderApiGetInvoiceList](docs/orders/README.md#orderapigetinvoicelist) - Get a list of all invoices optionally filtered by date. This request ist throttled to 1 per 1 minute for same page and minInvoiceDate
+* [orderApiGetList](docs/orders/README.md#orderapigetlist) - Get a list of all orders optionally filtered by date
+* [orderApiGetPatchableFields](docs/orders/README.md#orderapigetpatchablefields) - Returns a list of fields which can be updated with the orders/{id} patch call
+* [orderApiParsePlaceholdersForm](docs/orders/README.md#orderapiparseplaceholdersform) - Parses a text and replaces all placeholders
+* [orderApiParsePlaceholdersJson](docs/orders/README.md#orderapiparseplaceholdersjson) - Parses a text and replaces all placeholders
+* [orderApiParsePlaceholdersRaw](docs/orders/README.md#orderapiparseplaceholdersraw) - Parses a text and replaces all placeholders
+* [orderApiPatchOrder](docs/orders/README.md#orderapipatchorder) - Updates one or more fields of an order
+* [orderApiPostNewOrderForm](docs/orders/README.md#orderapipostneworderform) - Creates a new order in the Billbee account
+* [orderApiPostNewOrderJson](docs/orders/README.md#orderapipostneworderjson) - Creates a new order in the Billbee account
+* [orderApiPostNewOrderRaw](docs/orders/README.md#orderapipostneworderraw) - Creates a new order in the Billbee account
+* [orderApiSendMessageForm](docs/orders/README.md#orderapisendmessageform) - Sends a message to the buyer
+* [orderApiSendMessageJson](docs/orders/README.md#orderapisendmessagejson) - Sends a message to the buyer
+* [orderApiSendMessageRaw](docs/orders/README.md#orderapisendmessageraw) - Sends a message to the buyer
+* [orderApiTagsCreateForm](docs/orders/README.md#orderapitagscreateform) - Attach one or more tags to an order
+* [orderApiTagsCreateJson](docs/orders/README.md#orderapitagscreatejson) - Attach one or more tags to an order
+* [orderApiTagsCreateRaw](docs/orders/README.md#orderapitagscreateraw) - Attach one or more tags to an order
+* [orderApiTagsUpdateForm](docs/orders/README.md#orderapitagsupdateform) - Sets the tags attached to an order
+* [orderApiTagsUpdateJson](docs/orders/README.md#orderapitagsupdatejson) - Sets the tags attached to an order
+* [orderApiTagsUpdateRaw](docs/orders/README.md#orderapitagsupdateraw) - Sets the tags attached to an order
+* [orderApiTriggerEventForm](docs/orders/README.md#orderapitriggereventform) - Triggers a rule event
+* [orderApiTriggerEventJson](docs/orders/README.md#orderapitriggereventjson) - Triggers a rule event
+* [orderApiTriggerEventRaw](docs/orders/README.md#orderapitriggereventraw) - Triggers a rule event
+* [orderApiUpdateStateForm](docs/orders/README.md#orderapiupdatestateform) - Changes the main state of a single order
+* [orderApiUpdateStateJson](docs/orders/README.md#orderapiupdatestatejson) - Changes the main state of a single order
+* [orderApiUpdateStateRaw](docs/orders/README.md#orderapiupdatestateraw) - Changes the main state of a single order
+* [searchSearchForm](docs/orders/README.md#searchsearchform) - Search for products, customers and orders.
 Type can be "order", "product" and / or "customer"
 Term can contains lucene query syntax
-* `searchSearchJson` - Search for products, customers and orders.
+* [searchSearchJson](docs/orders/README.md#searchsearchjson) - Search for products, customers and orders.
 Type can be "order", "product" and / or "customer"
 Term can contains lucene query syntax
-* `searchSearchRaw` - Search for products, customers and orders.
+* [searchSearchRaw](docs/orders/README.md#searchsearchraw) - Search for products, customers and orders.
 Type can be "order", "product" and / or "customer"
 Term can contains lucene query syntax
 
-### provisioning
+### [products](docs/products/README.md)
 
-* `automaticProvisioningCreateAccountForm` - Creates a new Billbee user account with the data passed
-* `automaticProvisioningCreateAccountJson` - Creates a new Billbee user account with the data passed
-* `automaticProvisioningCreateAccountRaw` - Creates a new Billbee user account with the data passed
-* `automaticProvisioningTermsInfo` - Returns infos about Billbee terms and conditions
+* [articleCreateArticle](docs/products/README.md#articlecreatearticle) - Creates a new product
+* [articleDeleteArticle](docs/products/README.md#articledeletearticle) - Deletes a product
+* [articleDeleteImage](docs/products/README.md#articledeleteimage) - Deletes a single image by id
+* [articleDeleteImageFromProduct](docs/products/README.md#articledeleteimagefromproduct) - Deletes a single image from a product
+* [articleGetArticle](docs/products/README.md#articlegetarticle) - Queries a single article by id or by sku
+* [articleGetCategory](docs/products/README.md#articlegetcategory) - GEts a list of all defined categories
+* [articleGetCustomField](docs/products/README.md#articlegetcustomfield) - Queries a single custom field
+* [articleGetCustomFields](docs/products/README.md#articlegetcustomfields) - Queries a list of all custom fields
+* [articleGetImage](docs/products/README.md#articlegetimage) - Returns a single image by id
+* [articleGetImageFromProduct](docs/products/README.md#articlegetimagefromproduct) - Returns a single image by id
+* [articleGetImages](docs/products/README.md#articlegetimages) - Returns a list of all images of the product
+* [articleGetList](docs/products/README.md#articlegetlist) - Get a list of all products
+* [articleGetPatchableFields](docs/products/README.md#articlegetpatchablefields) - Returns a list of fields which can be updated with the patch call
+* [articleGetReservedAmount](docs/products/README.md#articlegetreservedamount) - Queries the reserved amount for a single article by id or by sku
+* [articleGetStocks](docs/products/README.md#articlegetstocks) - Query all defined stock locations
+* [articlePatchArticle](docs/products/README.md#articlepatcharticle) - Updates one or more fields of a product
+* [articlePutImageForm](docs/products/README.md#articleputimageform) - Add or update an existing image of a product
+* [articlePutImageJson](docs/products/README.md#articleputimagejson) - Add or update an existing image of a product
+* [articlePutImageRaw](docs/products/README.md#articleputimageraw) - Add or update an existing image of a product
+* [articleUpdateStockCodeForm](docs/products/README.md#articleupdatestockcodeform) - Update the stock code of an article
+* [articleUpdateStockCodeJson](docs/products/README.md#articleupdatestockcodejson) - Update the stock code of an article
+* [articleUpdateStockCodeRaw](docs/products/README.md#articleupdatestockcoderaw) - Update the stock code of an article
+* [articleUpdateStockForm](docs/products/README.md#articleupdatestockform) - Update the stock qty of an article
+* [articleUpdateStockJson](docs/products/README.md#articleupdatestockjson) - Update the stock qty of an article
+* [articleUpdateStockRaw](docs/products/README.md#articleupdatestockraw) - Update the stock qty of an article
+* [searchSearchForm](docs/products/README.md#searchsearchform) - Search for products, customers and orders.
+Type can be "order", "product" and / or "customer"
+Term can contains lucene query syntax
+* [searchSearchJson](docs/products/README.md#searchsearchjson) - Search for products, customers and orders.
+Type can be "order", "product" and / or "customer"
+Term can contains lucene query syntax
+* [searchSearchRaw](docs/products/README.md#searchsearchraw) - Search for products, customers and orders.
+Type can be "order", "product" and / or "customer"
+Term can contains lucene query syntax
 
-### shipments
+### [provisioning](docs/provisioning/README.md)
 
-* `shipmentGetList` - Get a list of all shipments optionally filtered by date. All parameters are optional.
-* `shipmentGetPing`
-* `shipmentGetShippingCarrier` - Queries the currently available shipping carriers.
-* `shipmentGetShippingproviders` - Query all defined shipping providers
-* `shipmentPostShipmentForm` - Creates a new shipment with the selected Shippingprovider
-* `shipmentPostShipmentJson` - Creates a new shipment with the selected Shippingprovider
-* `shipmentPostShipmentRaw` - Creates a new shipment with the selected Shippingprovider
-* `shipmentShipWithLabelForm` - Creates a shipment for an order in billbee
-* `shipmentShipWithLabelJson` - Creates a shipment for an order in billbee
-* `shipmentShipWithLabelRaw` - Creates a shipment for an order in billbee
+* [automaticProvisioningCreateAccountForm](docs/provisioning/README.md#automaticprovisioningcreateaccountform) - Creates a new Billbee user account with the data passed
+* [automaticProvisioningCreateAccountJson](docs/provisioning/README.md#automaticprovisioningcreateaccountjson) - Creates a new Billbee user account with the data passed
+* [automaticProvisioningCreateAccountRaw](docs/provisioning/README.md#automaticprovisioningcreateaccountraw) - Creates a new Billbee user account with the data passed
+* [automaticProvisioningTermsInfo](docs/provisioning/README.md#automaticprovisioningtermsinfo) - Returns infos about Billbee terms and conditions
 
-### webhooks
+### [shipments](docs/shipments/README.md)
 
-* `webHookManagementDelete` - Deletes an existing WebHook registration.
-* `webHookManagementDeleteAll` - Deletes all existing WebHook registrations.
-* `webHookManagementGet` - Gets all registered WebHooks for a given user.
-* `webHookManagementGetFilters` - Returns a list of all known filters you can use to register webhooks
-* `webHookManagementLookup` - Looks up a registered WebHook with the given {id} for a given user.
-* `webHookManagementPost` - Registers a new WebHook for a given user.
-* `webHookManagementPut` - Updates an existing WebHook registration.
+* [shipmentGetList](docs/shipments/README.md#shipmentgetlist) - Get a list of all shipments optionally filtered by date. All parameters are optional.
+* [shipmentGetPing](docs/shipments/README.md#shipmentgetping)
+* [shipmentGetShippingCarrier](docs/shipments/README.md#shipmentgetshippingcarrier) - Queries the currently available shipping carriers.
+* [shipmentGetShippingproviders](docs/shipments/README.md#shipmentgetshippingproviders) - Query all defined shipping providers
+* [shipmentPostShipmentForm](docs/shipments/README.md#shipmentpostshipmentform) - Creates a new shipment with the selected Shippingprovider
+* [shipmentPostShipmentJson](docs/shipments/README.md#shipmentpostshipmentjson) - Creates a new shipment with the selected Shippingprovider
+* [shipmentPostShipmentRaw](docs/shipments/README.md#shipmentpostshipmentraw) - Creates a new shipment with the selected Shippingprovider
+* [shipmentShipWithLabelForm](docs/shipments/README.md#shipmentshipwithlabelform) - Creates a shipment for an order in billbee
+* [shipmentShipWithLabelJson](docs/shipments/README.md#shipmentshipwithlabeljson) - Creates a shipment for an order in billbee
+* [shipmentShipWithLabelRaw](docs/shipments/README.md#shipmentshipwithlabelraw) - Creates a shipment for an order in billbee
+
+### [webhooks](docs/webhooks/README.md)
+
+* [webHookManagementDelete](docs/webhooks/README.md#webhookmanagementdelete) - Deletes an existing WebHook registration.
+* [webHookManagementDeleteAll](docs/webhooks/README.md#webhookmanagementdeleteall) - Deletes all existing WebHook registrations.
+* [webHookManagementGet](docs/webhooks/README.md#webhookmanagementget) - Gets all registered WebHooks for a given user.
+* [webHookManagementGetFilters](docs/webhooks/README.md#webhookmanagementgetfilters) - Returns a list of all known filters you can use to register webhooks
+* [webHookManagementLookup](docs/webhooks/README.md#webhookmanagementlookup) - Looks up a registered WebHook with the given {id} for a given user.
+* [webHookManagementPost](docs/webhooks/README.md#webhookmanagementpost) - Registers a new WebHook for a given user.
+* [webHookManagementPut](docs/webhooks/README.md#webhookmanagementput) - Updates an existing WebHook registration.
 <!-- End SDK Available Operations -->
 
 ### Maturity

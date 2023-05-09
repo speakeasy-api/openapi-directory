@@ -15,6 +15,7 @@ public class ListClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterArns")
     public String[] clusterArns;
+
     public ListClustersResponse withClusterArns(String[] clusterArns) {
         this.clusterArns = clusterArns;
         return this;
@@ -23,9 +24,11 @@ public class ListClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListClustersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListClustersResponse(){}
 }

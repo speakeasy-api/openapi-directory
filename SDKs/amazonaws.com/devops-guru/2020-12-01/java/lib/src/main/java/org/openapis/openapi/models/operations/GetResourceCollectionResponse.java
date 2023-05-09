@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourceCollectionResponse {
@@ -12,6 +13,7 @@ public class GetResourceCollectionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetResourceCollectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetResourceCollectionResponse {
     
     
     public String contentType;
+
     public GetResourceCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetResourceCollectionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResourceCollectionResponse getResourceCollectionResponse;
+
     public GetResourceCollectionResponse withGetResourceCollectionResponse(org.openapis.openapi.models.shared.GetResourceCollectionResponse getResourceCollectionResponse) {
         this.getResourceCollectionResponse = getResourceCollectionResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetResourceCollectionResponse {
      */
     
     public Object internalServerException;
+
     public GetResourceCollectionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetResourceCollectionResponse {
     
     
     public Integer statusCode;
+
     public GetResourceCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetResourceCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourceCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetResourceCollectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetResourceCollectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetResourceCollectionResponse {
      */
     
     public Object throttlingException;
+
     public GetResourceCollectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetResourceCollectionResponse {
      */
     
     public Object validationException;
+
     public GetResourceCollectionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetResourceCollectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

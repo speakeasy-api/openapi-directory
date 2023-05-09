@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateHyperParameterTuningJobRequest {
     @JsonProperty("HyperParameterTuningJobConfig")
     public HyperParameterTuningJobConfig hyperParameterTuningJobConfig;
+
     public CreateHyperParameterTuningJobRequest withHyperParameterTuningJobConfig(HyperParameterTuningJobConfig hyperParameterTuningJobConfig) {
         this.hyperParameterTuningJobConfig = hyperParameterTuningJobConfig;
         return this;
@@ -18,6 +19,7 @@ public class CreateHyperParameterTuningJobRequest {
     
     @JsonProperty("HyperParameterTuningJobName")
     public String hyperParameterTuningJobName;
+
     public CreateHyperParameterTuningJobRequest withHyperParameterTuningJobName(String hyperParameterTuningJobName) {
         this.hyperParameterTuningJobName = hyperParameterTuningJobName;
         return this;
@@ -26,6 +28,7 @@ public class CreateHyperParameterTuningJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateHyperParameterTuningJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -34,6 +37,7 @@ public class CreateHyperParameterTuningJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingJobDefinition")
     public HyperParameterTrainingJobDefinition trainingJobDefinition;
+
     public CreateHyperParameterTuningJobRequest withTrainingJobDefinition(HyperParameterTrainingJobDefinition trainingJobDefinition) {
         this.trainingJobDefinition = trainingJobDefinition;
         return this;
@@ -42,6 +46,7 @@ public class CreateHyperParameterTuningJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingJobDefinitions")
     public HyperParameterTrainingJobDefinition[] trainingJobDefinitions;
+
     public CreateHyperParameterTuningJobRequest withTrainingJobDefinitions(HyperParameterTrainingJobDefinition[] trainingJobDefinitions) {
         this.trainingJobDefinitions = trainingJobDefinitions;
         return this;
@@ -50,9 +55,14 @@ public class CreateHyperParameterTuningJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WarmStartConfig")
     public HyperParameterTuningJobWarmStartConfig warmStartConfig;
+
     public CreateHyperParameterTuningJobRequest withWarmStartConfig(HyperParameterTuningJobWarmStartConfig warmStartConfig) {
         this.warmStartConfig = warmStartConfig;
         return this;
     }
     
+    public CreateHyperParameterTuningJobRequest(@JsonProperty("HyperParameterTuningJobConfig") HyperParameterTuningJobConfig hyperParameterTuningJobConfig, @JsonProperty("HyperParameterTuningJobName") String hyperParameterTuningJobName) {
+        this.hyperParameterTuningJobConfig = hyperParameterTuningJobConfig;
+        this.hyperParameterTuningJobName = hyperParameterTuningJobName;
+  }
 }

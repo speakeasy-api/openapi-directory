@@ -15,6 +15,7 @@ public class Listener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientAffinity")
     public ClientAffinityEnum clientAffinity;
+
     public Listener withClientAffinity(ClientAffinityEnum clientAffinity) {
         this.clientAffinity = clientAffinity;
         return this;
@@ -23,6 +24,7 @@ public class Listener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListenerArn")
     public String listenerArn;
+
     public Listener withListenerArn(String listenerArn) {
         this.listenerArn = listenerArn;
         return this;
@@ -31,6 +33,7 @@ public class Listener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortRanges")
     public PortRange[] portRanges;
+
     public Listener withPortRanges(PortRange[] portRanges) {
         this.portRanges = portRanges;
         return this;
@@ -39,9 +42,11 @@ public class Listener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocol")
     public ProtocolEnum protocol;
+
     public Listener withProtocol(ProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public Listener(){}
 }

@@ -12,6 +12,7 @@ public class DisableControlRequestBody {
      */
     @JsonProperty("controlIdentifier")
     public String controlIdentifier;
+
     public DisableControlRequestBody withControlIdentifier(String controlIdentifier) {
         this.controlIdentifier = controlIdentifier;
         return this;
@@ -22,9 +23,14 @@ public class DisableControlRequestBody {
      */
     @JsonProperty("targetIdentifier")
     public String targetIdentifier;
+
     public DisableControlRequestBody withTargetIdentifier(String targetIdentifier) {
         this.targetIdentifier = targetIdentifier;
         return this;
     }
     
+    public DisableControlRequestBody(@JsonProperty("controlIdentifier") String controlIdentifier, @JsonProperty("targetIdentifier") String targetIdentifier) {
+        this.controlIdentifier = controlIdentifier;
+        this.targetIdentifier = targetIdentifier;
+  }
 }

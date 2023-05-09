@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaProjectProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipEnablementState")
     public GoogleCloudIntegrationsV1alphaProjectPropertiesIpEnablementStateEnum ipEnablementState;
+
     public GoogleCloudIntegrationsV1alphaProjectProperties withIpEnablementState(GoogleCloudIntegrationsV1alphaProjectPropertiesIpEnablementStateEnum ipEnablementState) {
         this.ipEnablementState = ipEnablementState;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaProjectProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisionedRegions")
     public String[] provisionedRegions;
+
     public GoogleCloudIntegrationsV1alphaProjectProperties withProvisionedRegions(String[] provisionedRegions) {
         this.provisionedRegions = provisionedRegions;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaProjectProperties(){}
 }

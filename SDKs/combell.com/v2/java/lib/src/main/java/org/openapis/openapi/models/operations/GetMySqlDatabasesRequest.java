@@ -12,6 +12,7 @@ public class GetMySqlDatabasesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Integer skip;
+
     public GetMySqlDatabasesRequest withSkip(Integer skip) {
         this.skip = skip;
         return this;
@@ -22,9 +23,11 @@ public class GetMySqlDatabasesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=take")
     public Integer take;
+
     public GetMySqlDatabasesRequest withTake(Integer take) {
         this.take = take;
         return this;
     }
     
+    public GetMySqlDatabasesRequest(){}
 }

@@ -15,6 +15,7 @@ public class Remotestart201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public java.util.Map<String, Object> command;
+
     public Remotestart201ApplicationJSON withCommand(java.util.Map<String, Object> command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class Remotestart201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Remotestart201ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class Remotestart201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ok")
     public Boolean ok;
+
     public Remotestart201ApplicationJSON withOk(Boolean ok) {
         this.ok = ok;
         return this;
     }
     
+    public Remotestart201ApplicationJSON(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class JWTRefreshResponse {
     
     public String contentType;
+
     public JWTRefreshResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class JWTRefreshResponse {
      */
     
     public java.util.Map<String, Object> jwtRefresh401ApplicationJSONObject;
+
     public JWTRefreshResponse withJWTRefresh401ApplicationJSONObject(java.util.Map<String, Object> jwtRefresh401ApplicationJSONObject) {
         this.jwtRefresh401ApplicationJSONObject = jwtRefresh401ApplicationJSONObject;
         return this;
@@ -29,8 +32,20 @@ public class JWTRefreshResponse {
      */
     
     public java.util.Map<String, Object> jwtRefresh403ApplicationJSONObject;
+
     public JWTRefreshResponse withJWTRefresh403ApplicationJSONObject(java.util.Map<String, Object> jwtRefresh403ApplicationJSONObject) {
         this.jwtRefresh403ApplicationJSONObject = jwtRefresh403ApplicationJSONObject;
+        return this;
+    }
+    
+    /**
+     * Nordigen rate limit exceeded
+     */
+    
+    public java.util.Map<String, Object> jwtRefresh429ApplicationJSONObject;
+
+    public JWTRefreshResponse withJWTRefresh429ApplicationJSONObject(java.util.Map<String, Object> jwtRefresh429ApplicationJSONObject) {
+        this.jwtRefresh429ApplicationJSONObject = jwtRefresh429ApplicationJSONObject;
         return this;
     }
     
@@ -39,6 +54,7 @@ public class JWTRefreshResponse {
      */
     
     public org.openapis.openapi.models.shared.SpectacularJWTRefresh spectacularJWTRefresh;
+
     public JWTRefreshResponse withSpectacularJWTRefresh(org.openapis.openapi.models.shared.SpectacularJWTRefresh spectacularJWTRefresh) {
         this.spectacularJWTRefresh = spectacularJWTRefresh;
         return this;
@@ -46,6 +62,7 @@ public class JWTRefreshResponse {
     
     
     public Integer statusCode;
+
     public JWTRefreshResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +70,14 @@ public class JWTRefreshResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public JWTRefreshResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public JWTRefreshResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

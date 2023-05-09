@@ -18,6 +18,7 @@ public class BtPlanListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Float amount;
+
     public BtPlanListItem withAmount(Float amount) {
         this.amount = amount;
         return this;
@@ -28,6 +29,7 @@ public class BtPlanListItem {
      */
     @JsonProperty("ctaText")
     public String ctaText;
+
     public BtPlanListItem withCtaText(String ctaText) {
         this.ctaText = ctaText;
         return this;
@@ -38,6 +40,7 @@ public class BtPlanListItem {
      */
     @JsonProperty("currency")
     public String currency;
+
     public BtPlanListItem withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -48,6 +51,7 @@ public class BtPlanListItem {
      */
     @JsonProperty("description")
     public String description;
+
     public BtPlanListItem withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +60,7 @@ public class BtPlanListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ees07PlanDescription")
     public String ees07PlanDescription;
+
     public BtPlanListItem withEes07PlanDescription(String ees07PlanDescription) {
         this.ees07PlanDescription = ees07PlanDescription;
         return this;
@@ -64,6 +69,7 @@ public class BtPlanListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ees07PlanTitle")
     public String ees07PlanTitle;
+
     public BtPlanListItem withEes07PlanTitle(String ees07PlanTitle) {
         this.ees07PlanTitle = ees07PlanTitle;
         return this;
@@ -72,6 +78,7 @@ public class BtPlanListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ees07Title")
     public String ees07Title;
+
     public BtPlanListItem withEes07Title(String ees07Title) {
         this.ees07Title = ees07Title;
         return this;
@@ -82,6 +89,7 @@ public class BtPlanListItem {
      */
     @JsonProperty("headerText")
     public String headerText;
+
     public BtPlanListItem withHeaderText(String headerText) {
         this.headerText = headerText;
         return this;
@@ -92,6 +100,7 @@ public class BtPlanListItem {
      */
     @JsonProperty("heroText")
     public String heroText;
+
     public BtPlanListItem withHeroText(String heroText) {
         this.heroText = heroText;
         return this;
@@ -102,6 +111,7 @@ public class BtPlanListItem {
      */
     @JsonProperty("id")
     public String id;
+
     public BtPlanListItem withId(String id) {
         this.id = id;
         return this;
@@ -113,6 +123,7 @@ public class BtPlanListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public BtPlanListItemIntervalEnum interval;
+
     public BtPlanListItem withInterval(BtPlanListItemIntervalEnum interval) {
         this.interval = interval;
         return this;
@@ -124,6 +135,7 @@ public class BtPlanListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervalCount")
     public Integer intervalCount;
+
     public BtPlanListItem withIntervalCount(Integer intervalCount) {
         this.intervalCount = intervalCount;
         return this;
@@ -134,6 +146,7 @@ public class BtPlanListItem {
      */
     @JsonProperty("longText")
     public String longText;
+
     public BtPlanListItem withLongText(String longText) {
         this.longText = longText;
         return this;
@@ -144,6 +157,7 @@ public class BtPlanListItem {
      */
     @JsonProperty("nickname")
     public String nickname;
+
     public BtPlanListItem withNickname(String nickname) {
         this.nickname = nickname;
         return this;
@@ -152,6 +166,7 @@ public class BtPlanListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noThanksText")
     public String noThanksText;
+
     public BtPlanListItem withNoThanksText(String noThanksText) {
         this.noThanksText = noThanksText;
         return this;
@@ -162,6 +177,7 @@ public class BtPlanListItem {
      */
     @JsonProperty("product")
     public String product;
+
     public BtPlanListItem withProduct(String product) {
         this.product = product;
         return this;
@@ -170,6 +186,7 @@ public class BtPlanListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("switchingText")
     public String switchingText;
+
     public BtPlanListItem withSwitchingText(String switchingText) {
         this.switchingText = switchingText;
         return this;
@@ -178,6 +195,7 @@ public class BtPlanListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termsAndConditionsItunes")
     public String termsAndConditionsItunes;
+
     public BtPlanListItem withTermsAndConditionsItunes(String termsAndConditionsItunes) {
         this.termsAndConditionsItunes = termsAndConditionsItunes;
         return this;
@@ -186,6 +204,7 @@ public class BtPlanListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termsAndConditionsStripe")
     public String termsAndConditionsStripe;
+
     public BtPlanListItem withTermsAndConditionsStripe(String termsAndConditionsStripe) {
         this.termsAndConditionsStripe = termsAndConditionsStripe;
         return this;
@@ -196,9 +215,22 @@ public class BtPlanListItem {
      */
     @JsonProperty("trialPeriodDays")
     public Integer trialPeriodDays;
+
     public BtPlanListItem withTrialPeriodDays(Integer trialPeriodDays) {
         this.trialPeriodDays = trialPeriodDays;
         return this;
     }
     
+    public BtPlanListItem(@JsonProperty("ctaText") String ctaText, @JsonProperty("currency") String currency, @JsonProperty("description") String description, @JsonProperty("headerText") String headerText, @JsonProperty("heroText") String heroText, @JsonProperty("id") String id, @JsonProperty("longText") String longText, @JsonProperty("nickname") String nickname, @JsonProperty("product") String product, @JsonProperty("trialPeriodDays") Integer trialPeriodDays) {
+        this.ctaText = ctaText;
+        this.currency = currency;
+        this.description = description;
+        this.headerText = headerText;
+        this.heroText = heroText;
+        this.id = id;
+        this.longText = longText;
+        this.nickname = nickname;
+        this.product = product;
+        this.trialPeriodDays = trialPeriodDays;
+  }
 }

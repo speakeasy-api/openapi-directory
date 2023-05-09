@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUpdateDockCreateUpdateDockRequestAddress1 {
     @JsonProperty("city")
     public String city;
+
     public CreateUpdateDockCreateUpdateDockRequestAddress1 withCity(String city) {
         this.city = city;
         return this;
@@ -16,6 +17,7 @@ public class CreateUpdateDockCreateUpdateDockRequestAddress1 {
     
     @JsonProperty("complement")
     public String complement;
+
     public CreateUpdateDockCreateUpdateDockRequestAddress1 withComplement(String complement) {
         this.complement = complement;
         return this;
@@ -23,6 +25,7 @@ public class CreateUpdateDockCreateUpdateDockRequestAddress1 {
     
     @JsonProperty("coordinates")
     public Double[][] coordinates;
+
     public CreateUpdateDockCreateUpdateDockRequestAddress1 withCoordinates(Double[][] coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -30,6 +33,7 @@ public class CreateUpdateDockCreateUpdateDockRequestAddress1 {
     
     @JsonProperty("country")
     public CreateUpdateDockCreateUpdateDockRequestAddress1Country country;
+
     public CreateUpdateDockCreateUpdateDockRequestAddress1 withCountry(CreateUpdateDockCreateUpdateDockRequestAddress1Country country) {
         this.country = country;
         return this;
@@ -37,6 +41,7 @@ public class CreateUpdateDockCreateUpdateDockRequestAddress1 {
     
     @JsonProperty("neighborhood")
     public String neighborhood;
+
     public CreateUpdateDockCreateUpdateDockRequestAddress1 withNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
         return this;
@@ -44,6 +49,7 @@ public class CreateUpdateDockCreateUpdateDockRequestAddress1 {
     
     @JsonProperty("number")
     public String number;
+
     public CreateUpdateDockCreateUpdateDockRequestAddress1 withNumber(String number) {
         this.number = number;
         return this;
@@ -51,6 +57,7 @@ public class CreateUpdateDockCreateUpdateDockRequestAddress1 {
     
     @JsonProperty("postalCode")
     public String postalCode;
+
     public CreateUpdateDockCreateUpdateDockRequestAddress1 withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -58,6 +65,7 @@ public class CreateUpdateDockCreateUpdateDockRequestAddress1 {
     
     @JsonProperty("state")
     public String state;
+
     public CreateUpdateDockCreateUpdateDockRequestAddress1 withState(String state) {
         this.state = state;
         return this;
@@ -65,9 +73,21 @@ public class CreateUpdateDockCreateUpdateDockRequestAddress1 {
     
     @JsonProperty("street")
     public String street;
+
     public CreateUpdateDockCreateUpdateDockRequestAddress1 withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public CreateUpdateDockCreateUpdateDockRequestAddress1(@JsonProperty("city") String city, @JsonProperty("complement") String complement, @JsonProperty("coordinates") Double[][] coordinates, @JsonProperty("country") CreateUpdateDockCreateUpdateDockRequestAddress1Country country, @JsonProperty("neighborhood") String neighborhood, @JsonProperty("number") String number, @JsonProperty("postalCode") String postalCode, @JsonProperty("state") String state, @JsonProperty("street") String street) {
+        this.city = city;
+        this.complement = complement;
+        this.coordinates = coordinates;
+        this.country = country;
+        this.neighborhood = neighborhood;
+        this.number = number;
+        this.postalCode = postalCode;
+        this.state = state;
+        this.street = street;
+  }
 }

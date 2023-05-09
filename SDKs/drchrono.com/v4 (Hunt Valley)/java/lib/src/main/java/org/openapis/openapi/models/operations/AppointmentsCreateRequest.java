@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AppointmentsCreateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public AppointmentsCreateRequest withDate(String date) {
         this.date = date;
         return this;
@@ -16,6 +17,7 @@ public class AppointmentsCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_range")
     public String dateRange;
+
     public AppointmentsCreateRequest withDateRange(String dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -23,6 +25,7 @@ public class AppointmentsCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public AppointmentsCreateRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -30,6 +33,7 @@ public class AppointmentsCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
     public Long office;
+
     public AppointmentsCreateRequest withOffice(Long office) {
         this.office = office;
         return this;
@@ -37,6 +41,7 @@ public class AppointmentsCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public AppointmentsCreateRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -44,6 +49,7 @@ public class AppointmentsCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public AppointmentsCreateRequest withSince(String since) {
         this.since = since;
         return this;
@@ -51,9 +57,11 @@ public class AppointmentsCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public AppointmentsCreateRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AppointmentsCreateRequest(){}
 }

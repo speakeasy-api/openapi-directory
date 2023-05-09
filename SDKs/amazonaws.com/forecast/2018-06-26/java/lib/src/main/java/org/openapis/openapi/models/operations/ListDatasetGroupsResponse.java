@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDatasetGroupsResponse {
     
     public String contentType;
+
     public ListDatasetGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDatasetGroupsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListDatasetGroupsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListDatasetGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDatasetGroupsResponse listDatasetGroupsResponse;
+
     public ListDatasetGroupsResponse withListDatasetGroupsResponse(org.openapis.openapi.models.shared.ListDatasetGroupsResponse listDatasetGroupsResponse) {
         this.listDatasetGroupsResponse = listDatasetGroupsResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListDatasetGroupsResponse {
     
     
     public Integer statusCode;
+
     public ListDatasetGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListDatasetGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDatasetGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDatasetGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

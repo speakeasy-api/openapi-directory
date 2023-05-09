@@ -15,6 +15,7 @@ public class OrderReturn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actor")
     public String actor;
+
     public OrderReturn withActor(String actor) {
         this.actor = actor;
         return this;
@@ -26,6 +27,7 @@ public class OrderReturn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDate")
     public String creationDate;
+
     public OrderReturn withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -37,6 +39,7 @@ public class OrderReturn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public OrderReturn withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -48,6 +51,7 @@ public class OrderReturn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public OrderReturn withReason(String reason) {
         this.reason = reason;
         return this;
@@ -59,9 +63,11 @@ public class OrderReturn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonText")
     public String reasonText;
+
     public OrderReturn withReasonText(String reasonText) {
         this.reasonText = reasonText;
         return this;
     }
     
+    public OrderReturn(){}
 }

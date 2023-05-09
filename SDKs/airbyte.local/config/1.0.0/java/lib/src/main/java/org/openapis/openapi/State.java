@@ -58,13 +58,11 @@ public class State {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateOrUpdateStateResponse res = new org.openapis.openapi.models.operations.CreateOrUpdateStateResponse() {{
+        org.openapis.openapi.models.operations.CreateOrUpdateStateResponse res = new org.openapis.openapi.models.operations.CreateOrUpdateStateResponse(contentType, httpRes.statusCode()) {{
             connectionState = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,13 +115,11 @@ public class State {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStateResponse res = new org.openapis.openapi.models.operations.GetStateResponse() {{
+        org.openapis.openapi.models.operations.GetStateResponse res = new org.openapis.openapi.models.operations.GetStateResponse(contentType, httpRes.statusCode()) {{
             connectionState = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

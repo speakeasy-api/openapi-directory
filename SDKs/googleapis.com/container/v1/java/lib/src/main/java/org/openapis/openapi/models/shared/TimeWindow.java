@@ -18,6 +18,7 @@ public class TimeWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public TimeWindow withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class TimeWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenanceExclusionOptions")
     public MaintenanceExclusionOptions maintenanceExclusionOptions;
+
     public TimeWindow withMaintenanceExclusionOptions(MaintenanceExclusionOptions maintenanceExclusionOptions) {
         this.maintenanceExclusionOptions = maintenanceExclusionOptions;
         return this;
@@ -40,9 +42,11 @@ public class TimeWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public TimeWindow withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public TimeWindow(){}
 }

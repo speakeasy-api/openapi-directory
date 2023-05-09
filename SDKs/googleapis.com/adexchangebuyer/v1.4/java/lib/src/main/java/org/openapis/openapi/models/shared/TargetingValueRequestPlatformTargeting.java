@@ -12,9 +12,11 @@ public class TargetingValueRequestPlatformTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestPlatforms")
     public String[] requestPlatforms;
+
     public TargetingValueRequestPlatformTargeting withRequestPlatforms(String[] requestPlatforms) {
         this.requestPlatforms = requestPlatforms;
         return this;
     }
     
+    public TargetingValueRequestPlatformTargeting(){}
 }

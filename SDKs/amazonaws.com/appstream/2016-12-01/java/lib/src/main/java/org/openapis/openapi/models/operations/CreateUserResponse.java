@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUserResponse {
     
     public String contentType;
+
     public CreateUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateUserResponse {
      */
     
     public java.util.Map<String, Object> createUserResult;
+
     public CreateUserResponse withCreateUserResult(java.util.Map<String, Object> createUserResult) {
         this.createUserResult = createUserResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateUserResponse {
      */
     
     public Object invalidAccountStatusException;
+
     public CreateUserResponse withInvalidAccountStatusException(Object invalidAccountStatusException) {
         this.invalidAccountStatusException = invalidAccountStatusException;
         return this;
@@ -39,6 +43,7 @@ public class CreateUserResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public CreateUserResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -49,6 +54,7 @@ public class CreateUserResponse {
      */
     
     public Object limitExceededException;
+
     public CreateUserResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateUserResponse {
      */
     
     public Object operationNotPermittedException;
+
     public CreateUserResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -69,6 +76,7 @@ public class CreateUserResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateUserResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -76,6 +84,7 @@ public class CreateUserResponse {
     
     
     public Integer statusCode;
+
     public CreateUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class AbsenceEntitlementValueAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entitlement")
     public Double entitlement;
+
     public AbsenceEntitlementValueAttributes withEntitlement(Double entitlement) {
         this.entitlement = entitlement;
         return this;
@@ -20,6 +21,7 @@ public class AbsenceEntitlementValueAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public AbsenceEntitlementValueAttributes withId(Long id) {
         this.id = id;
         return this;
@@ -28,9 +30,11 @@ public class AbsenceEntitlementValueAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AbsenceEntitlementValueAttributes withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AbsenceEntitlementValueAttributes(){}
 }

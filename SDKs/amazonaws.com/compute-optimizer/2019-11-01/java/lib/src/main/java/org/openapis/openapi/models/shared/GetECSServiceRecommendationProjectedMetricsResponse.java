@@ -15,9 +15,11 @@ public class GetECSServiceRecommendationProjectedMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedOptionProjectedMetrics")
     public ECSServiceRecommendedOptionProjectedMetric[] recommendedOptionProjectedMetrics;
+
     public GetECSServiceRecommendationProjectedMetricsResponse withRecommendedOptionProjectedMetrics(ECSServiceRecommendedOptionProjectedMetric[] recommendedOptionProjectedMetrics) {
         this.recommendedOptionProjectedMetrics = recommendedOptionProjectedMetrics;
         return this;
     }
     
+    public GetECSServiceRecommendationProjectedMetricsResponse(){}
 }

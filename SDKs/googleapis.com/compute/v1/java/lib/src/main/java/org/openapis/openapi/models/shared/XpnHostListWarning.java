@@ -18,6 +18,7 @@ public class XpnHostListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public XpnHostListWarningCodeEnum code;
+
     public XpnHostListWarning withCode(XpnHostListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class XpnHostListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public XpnHostListWarningData[] data;
+
     public XpnHostListWarning withData(XpnHostListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class XpnHostListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public XpnHostListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public XpnHostListWarning(){}
 }

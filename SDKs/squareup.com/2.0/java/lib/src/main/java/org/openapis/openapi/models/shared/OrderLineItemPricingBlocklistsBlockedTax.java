@@ -21,6 +21,7 @@ public class OrderLineItemPricingBlocklistsBlockedTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_catalog_object_id")
     public String taxCatalogObjectId;
+
     public OrderLineItemPricingBlocklistsBlockedTax withTaxCatalogObjectId(String taxCatalogObjectId) {
         this.taxCatalogObjectId = taxCatalogObjectId;
         return this;
@@ -33,6 +34,7 @@ public class OrderLineItemPricingBlocklistsBlockedTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_uid")
     public String taxUid;
+
     public OrderLineItemPricingBlocklistsBlockedTax withTaxUid(String taxUid) {
         this.taxUid = taxUid;
         return this;
@@ -44,9 +46,11 @@ public class OrderLineItemPricingBlocklistsBlockedTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OrderLineItemPricingBlocklistsBlockedTax withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public OrderLineItemPricingBlocklistsBlockedTax(){}
 }

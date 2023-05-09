@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateScoreRevisionResponse {
     
     public String contentType;
+
     public CreateScoreRevisionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateScoreRevisionResponse {
      */
     
     public org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse;
+
     public CreateScoreRevisionResponse withFlatErrorResponse(org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse) {
         this.flatErrorResponse = flatErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateScoreRevisionResponse {
      */
     
     public org.openapis.openapi.models.shared.ScoreRevision scoreRevision;
+
     public CreateScoreRevisionResponse withScoreRevision(org.openapis.openapi.models.shared.ScoreRevision scoreRevision) {
         this.scoreRevision = scoreRevision;
         return this;
@@ -36,6 +40,7 @@ public class CreateScoreRevisionResponse {
     
     
     public Integer statusCode;
+
     public CreateScoreRevisionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateScoreRevisionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateScoreRevisionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateScoreRevisionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

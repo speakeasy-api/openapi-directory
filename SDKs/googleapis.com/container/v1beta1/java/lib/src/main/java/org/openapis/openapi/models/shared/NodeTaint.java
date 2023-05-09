@@ -18,6 +18,7 @@ public class NodeTaint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effect")
     public NodeTaintEffectEnum effect;
+
     public NodeTaint withEffect(NodeTaintEffectEnum effect) {
         this.effect = effect;
         return this;
@@ -29,6 +30,7 @@ public class NodeTaint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public NodeTaint withKey(String key) {
         this.key = key;
         return this;
@@ -40,9 +42,11 @@ public class NodeTaint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public NodeTaint withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public NodeTaint(){}
 }

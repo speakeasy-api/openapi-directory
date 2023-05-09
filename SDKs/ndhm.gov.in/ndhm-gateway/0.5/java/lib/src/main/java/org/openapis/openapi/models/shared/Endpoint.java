@@ -12,6 +12,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public Endpoint withAddress(String address) {
         this.address = address;
         return this;
@@ -20,6 +21,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionType")
     public String connectionType;
+
     public Endpoint withConnectionType(String connectionType) {
         this.connectionType = connectionType;
         return this;
@@ -28,9 +30,11 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("use")
     public String use;
+
     public Endpoint withUse(String use) {
         this.use = use;
         return this;
     }
     
+    public Endpoint(){}
 }

@@ -15,6 +15,7 @@ public class EvidenceFinderEnablement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backfillStatus")
     public EvidenceFinderBackfillStatusEnum backfillStatus;
+
     public EvidenceFinderEnablement withBackfillStatus(EvidenceFinderBackfillStatusEnum backfillStatus) {
         this.backfillStatus = backfillStatus;
         return this;
@@ -23,6 +24,7 @@ public class EvidenceFinderEnablement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablementStatus")
     public EvidenceFinderEnablementStatusEnum enablementStatus;
+
     public EvidenceFinderEnablement withEnablementStatus(EvidenceFinderEnablementStatusEnum enablementStatus) {
         this.enablementStatus = enablementStatus;
         return this;
@@ -31,6 +33,7 @@ public class EvidenceFinderEnablement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public EvidenceFinderEnablement withError(String error) {
         this.error = error;
         return this;
@@ -39,9 +42,11 @@ public class EvidenceFinderEnablement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventDataStoreArn")
     public String eventDataStoreArn;
+
     public EvidenceFinderEnablement withEventDataStoreArn(String eventDataStoreArn) {
         this.eventDataStoreArn = eventDataStoreArn;
         return this;
     }
     
+    public EvidenceFinderEnablement(){}
 }

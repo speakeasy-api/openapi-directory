@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CompanyDeepsearchNumberDefaultApplicationJSON {
     @JsonProperty("code")
     public Integer code;
+
     public CompanyDeepsearchNumberDefaultApplicationJSON withCode(Integer code) {
         this.code = code;
         return this;
@@ -22,6 +23,7 @@ public class CompanyDeepsearchNumberDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fault")
     public String fault;
+
     public CompanyDeepsearchNumberDefaultApplicationJSON withFault(String fault) {
         this.fault = fault;
         return this;
@@ -29,6 +31,7 @@ public class CompanyDeepsearchNumberDefaultApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public CompanyDeepsearchNumberDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -36,9 +39,15 @@ public class CompanyDeepsearchNumberDefaultApplicationJSON {
     
     @JsonProperty("tag")
     public String tag;
+
     public CompanyDeepsearchNumberDefaultApplicationJSON withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public CompanyDeepsearchNumberDefaultApplicationJSON(@JsonProperty("code") Integer code, @JsonProperty("message") String message, @JsonProperty("tag") String tag) {
+        this.code = code;
+        this.message = message;
+        this.tag = tag;
+  }
 }

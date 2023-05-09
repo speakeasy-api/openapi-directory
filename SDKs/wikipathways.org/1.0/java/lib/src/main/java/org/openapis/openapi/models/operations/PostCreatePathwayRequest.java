@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCreatePathwayRequest {
@@ -12,6 +13,7 @@ public class PostCreatePathwayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth")
     public String auth;
+
     public PostCreatePathwayRequest withAuth(String auth) {
         this.auth = auth;
         return this;
@@ -19,6 +21,7 @@ public class PostCreatePathwayRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public PostCreatePathwayFormatEnum format;
+
     public PostCreatePathwayRequest withFormat(PostCreatePathwayFormatEnum format) {
         this.format = format;
         return this;
@@ -29,6 +32,7 @@ public class PostCreatePathwayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gpml")
     public String gpml;
+
     public PostCreatePathwayRequest withGpml(String gpml) {
         this.gpml = gpml;
         return this;
@@ -39,9 +43,15 @@ public class PostCreatePathwayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public PostCreatePathwayRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public PostCreatePathwayRequest(@JsonProperty("auth") String auth, @JsonProperty("gpml") String gpml, @JsonProperty("username") String username) {
+        this.auth = auth;
+        this.gpml = gpml;
+        this.username = username;
+  }
 }

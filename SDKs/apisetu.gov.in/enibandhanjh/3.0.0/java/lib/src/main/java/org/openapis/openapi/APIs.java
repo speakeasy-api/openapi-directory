@@ -55,7 +55,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RdcerResponse res = new org.openapis.openapi.models.operations.RdcerResponse() {{
+        org.openapis.openapi.models.operations.RdcerResponse res = new org.openapis.openapi.models.operations.RdcerResponse(contentType, httpRes.statusCode()) {{
             rdcer400ApplicationJSONObject = null;
             rdcer401ApplicationJSONObject = null;
             rdcer404ApplicationJSONObject = null;
@@ -64,8 +64,6 @@ public class APIs {
             rdcer503ApplicationJSONObject = null;
             rdcer504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,7 +146,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegriiResponse res = new org.openapis.openapi.models.operations.RegriiResponse() {{
+        org.openapis.openapi.models.operations.RegriiResponse res = new org.openapis.openapi.models.operations.RegriiResponse(contentType, httpRes.statusCode()) {{
             regrii400ApplicationJSONObject = null;
             regrii401ApplicationJSONObject = null;
             regrii404ApplicationJSONObject = null;
@@ -157,8 +155,6 @@ public class APIs {
             regrii503ApplicationJSONObject = null;
             regrii504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,7 +237,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RmcerResponse res = new org.openapis.openapi.models.operations.RmcerResponse() {{
+        org.openapis.openapi.models.operations.RmcerResponse res = new org.openapis.openapi.models.operations.RmcerResponse(contentType, httpRes.statusCode()) {{
             rmcer400ApplicationJSONObject = null;
             rmcer401ApplicationJSONObject = null;
             rmcer404ApplicationJSONObject = null;
@@ -250,8 +246,6 @@ public class APIs {
             rmcer503ApplicationJSONObject = null;
             rmcer504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

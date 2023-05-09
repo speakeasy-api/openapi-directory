@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomVocabularyEntryId {
     @JsonProperty("itemId")
     public String itemId;
+
     public CustomVocabularyEntryId withItemId(String itemId) {
         this.itemId = itemId;
         return this;
     }
     
+    public CustomVocabularyEntryId(@JsonProperty("itemId") String itemId) {
+        this.itemId = itemId;
+  }
 }

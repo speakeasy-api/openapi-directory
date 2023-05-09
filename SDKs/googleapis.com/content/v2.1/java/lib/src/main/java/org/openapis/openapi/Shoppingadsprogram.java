@@ -59,11 +59,9 @@ public class Shoppingadsprogram {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentShoppingadsprogramGetResponse res = new org.openapis.openapi.models.operations.ContentShoppingadsprogramGetResponse() {{
+        org.openapis.openapi.models.operations.ContentShoppingadsprogramGetResponse res = new org.openapis.openapi.models.operations.ContentShoppingadsprogramGetResponse(contentType, httpRes.statusCode()) {{
             shoppingAdsProgramStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Shoppingadsprogram {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentShoppingadsprogramRequestreviewResponse res = new org.openapis.openapi.models.operations.ContentShoppingadsprogramRequestreviewResponse() {{
+        org.openapis.openapi.models.operations.ContentShoppingadsprogramRequestreviewResponse res = new org.openapis.openapi.models.operations.ContentShoppingadsprogramRequestreviewResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

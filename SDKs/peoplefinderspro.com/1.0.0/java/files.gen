@@ -46,4 +46,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostEmailEnrichResponse
 lib/src/main/java/org/openapis/openapi/models/operations/PostPhoneEnrichRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPhoneEnrichRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPhoneEnrichResponse.java
+docs/sdk/README.md
 USAGE.md

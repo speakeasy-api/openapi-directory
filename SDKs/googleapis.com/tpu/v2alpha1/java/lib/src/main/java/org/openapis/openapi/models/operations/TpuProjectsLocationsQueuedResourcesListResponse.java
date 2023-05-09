@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TpuProjectsLocationsQueuedResourcesListResponse {
     
     public String contentType;
+
     public TpuProjectsLocationsQueuedResourcesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TpuProjectsLocationsQueuedResourcesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListQueuedResourcesResponse listQueuedResourcesResponse;
+
     public TpuProjectsLocationsQueuedResourcesListResponse withListQueuedResourcesResponse(org.openapis.openapi.models.shared.ListQueuedResourcesResponse listQueuedResourcesResponse) {
         this.listQueuedResourcesResponse = listQueuedResourcesResponse;
         return this;
@@ -26,6 +29,7 @@ public class TpuProjectsLocationsQueuedResourcesListResponse {
     
     
     public Integer statusCode;
+
     public TpuProjectsLocationsQueuedResourcesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TpuProjectsLocationsQueuedResourcesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TpuProjectsLocationsQueuedResourcesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TpuProjectsLocationsQueuedResourcesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

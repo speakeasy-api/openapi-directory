@@ -242,6 +242,15 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListStackInstancesForPr
 lib/src/main/java/org/openapis/openapi/models/operations/ListTagOptionsXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTagOptionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTagOptionsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/NotifyProvisionProductEngineWorkflowResultXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/NotifyProvisionProductEngineWorkflowResultRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/NotifyProvisionProductEngineWorkflowResultResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/NotifyTerminateProvisionedProductEngineWorkflowResultXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/NotifyTerminateProvisionedProductEngineWorkflowResultRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/NotifyTerminateProvisionedProductEngineWorkflowResultResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/NotifyUpdateProvisionedProductEngineWorkflowResultXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/NotifyUpdateProvisionedProductEngineWorkflowResultRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/NotifyUpdateProvisionedProductEngineWorkflowResultResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ProvisionProductXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ProvisionProductRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ProvisionProductResponse.java
@@ -489,6 +498,12 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListStackInstancesForProvis
 lib/src/main/java/org/openapis/openapi/models/shared/ListTagOptionsOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTagOptionsInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTagOptionsFilters.java
+lib/src/main/java/org/openapis/openapi/models/shared/NotifyProvisionProductEngineWorkflowResultInput.java
+lib/src/main/java/org/openapis/openapi/models/shared/EngineWorkflowStatusEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/EngineWorkflowResourceIdentifier.java
+lib/src/main/java/org/openapis/openapi/models/shared/UniqueTagResourceIdentifier.java
+lib/src/main/java/org/openapis/openapi/models/shared/NotifyTerminateProvisionedProductEngineWorkflowResultInput.java
+lib/src/main/java/org/openapis/openapi/models/shared/NotifyUpdateProvisionedProductEngineWorkflowResultInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ProvisionProductOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ProvisionProductInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ProvisioningPreferences.java
@@ -530,4 +545,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateServiceActionInput.ja
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateTagOptionOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateTagOptionInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

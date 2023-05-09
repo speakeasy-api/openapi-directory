@@ -18,6 +18,7 @@ public class APIResponseSimilarityResponseSimilarityList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artist_name")
     public String artistName;
+
     public APIResponseSimilarityResponseSimilarityList withArtistName(String artistName) {
         this.artistName = artistName;
         return this;
@@ -29,6 +30,7 @@ public class APIResponseSimilarityResponseSimilarityList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artist_url")
     public String artistUrl;
+
     public APIResponseSimilarityResponseSimilarityList withArtistUrl(String artistUrl) {
         this.artistUrl = artistUrl;
         return this;
@@ -40,6 +42,7 @@ public class APIResponseSimilarityResponseSimilarityList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public APIResponseSimilarityResponseSimilarityList withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class APIResponseSimilarityResponseSimilarityList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index_id")
     public Long indexId;
+
     public APIResponseSimilarityResponseSimilarityList withIndexId(Long indexId) {
         this.indexId = indexId;
         return this;
@@ -62,6 +66,7 @@ public class APIResponseSimilarityResponseSimilarityList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lyrics")
     public String lyrics;
+
     public APIResponseSimilarityResponseSimilarityList withLyrics(String lyrics) {
         this.lyrics = lyrics;
         return this;
@@ -73,6 +78,7 @@ public class APIResponseSimilarityResponseSimilarityList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Float percentage;
+
     public APIResponseSimilarityResponseSimilarityList withPercentage(Float percentage) {
         this.percentage = percentage;
         return this;
@@ -84,6 +90,7 @@ public class APIResponseSimilarityResponseSimilarityList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("song_name")
     public String songName;
+
     public APIResponseSimilarityResponseSimilarityList withSongName(String songName) {
         this.songName = songName;
         return this;
@@ -95,9 +102,11 @@ public class APIResponseSimilarityResponseSimilarityList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("song_url")
     public String songUrl;
+
     public APIResponseSimilarityResponseSimilarityList withSongUrl(String songUrl) {
         this.songUrl = songUrl;
         return this;
     }
     
+    public APIResponseSimilarityResponseSimilarityList(){}
 }

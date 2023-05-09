@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDeleteAnalysisSchemeResponse {
     
     public byte[] body;
+
     public GETDeleteAnalysisSchemeResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDeleteAnalysisSchemeResponse {
     
     
     public String contentType;
+
     public GETDeleteAnalysisSchemeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDeleteAnalysisSchemeResponse {
     
     
     public Integer statusCode;
+
     public GETDeleteAnalysisSchemeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDeleteAnalysisSchemeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDeleteAnalysisSchemeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDeleteAnalysisSchemeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

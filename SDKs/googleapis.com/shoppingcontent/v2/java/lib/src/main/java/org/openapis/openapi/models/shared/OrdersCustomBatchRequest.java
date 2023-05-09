@@ -15,9 +15,11 @@ public class OrdersCustomBatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public OrdersCustomBatchRequestEntry[] entries;
+
     public OrdersCustomBatchRequest withEntries(OrdersCustomBatchRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public OrdersCustomBatchRequest(){}
 }

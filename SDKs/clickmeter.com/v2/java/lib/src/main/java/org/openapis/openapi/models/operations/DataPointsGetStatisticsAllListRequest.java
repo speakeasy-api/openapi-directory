@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataPointsGetStatisticsAllListRequest {
@@ -12,6 +13,7 @@ public class DataPointsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=favourite")
     public Boolean favourite;
+
     public DataPointsGetStatisticsAllListRequest withFavourite(Boolean favourite) {
         this.favourite = favourite;
         return this;
@@ -22,6 +24,7 @@ public class DataPointsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
     public String fromDay;
+
     public DataPointsGetStatisticsAllListRequest withFromDay(String fromDay) {
         this.fromDay = fromDay;
         return this;
@@ -32,6 +35,7 @@ public class DataPointsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupBy")
     public DataPointsGetStatisticsAllListGroupByEnum groupBy;
+
     public DataPointsGetStatisticsAllListRequest withGroupBy(DataPointsGetStatisticsAllListGroupByEnum groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -42,6 +46,7 @@ public class DataPointsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public DataPointsGetStatisticsAllListStatusEnum status;
+
     public DataPointsGetStatisticsAllListRequest withStatus(DataPointsGetStatisticsAllListStatusEnum status) {
         this.status = status;
         return this;
@@ -52,6 +57,7 @@ public class DataPointsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
     public String tag;
+
     public DataPointsGetStatisticsAllListRequest withTag(String tag) {
         this.tag = tag;
         return this;
@@ -62,6 +68,7 @@ public class DataPointsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
     public DataPointsGetStatisticsAllListTimeFrameEnum timeFrame;
+
     public DataPointsGetStatisticsAllListRequest withTimeFrame(DataPointsGetStatisticsAllListTimeFrameEnum timeFrame) {
         this.timeFrame = timeFrame;
         return this;
@@ -72,6 +79,7 @@ public class DataPointsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
     public String toDay;
+
     public DataPointsGetStatisticsAllListRequest withToDay(String toDay) {
         this.toDay = toDay;
         return this;
@@ -82,9 +90,14 @@ public class DataPointsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public DataPointsGetStatisticsAllListTypeEnum type;
+
     public DataPointsGetStatisticsAllListRequest withType(DataPointsGetStatisticsAllListTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DataPointsGetStatisticsAllListRequest(@JsonProperty("timeFrame") DataPointsGetStatisticsAllListTimeFrameEnum timeFrame, @JsonProperty("type") DataPointsGetStatisticsAllListTypeEnum type) {
+        this.timeFrame = timeFrame;
+        this.type = type;
+  }
 }

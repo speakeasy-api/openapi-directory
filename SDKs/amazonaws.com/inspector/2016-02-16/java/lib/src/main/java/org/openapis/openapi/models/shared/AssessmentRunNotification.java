@@ -21,6 +21,7 @@ public class AssessmentRunNotification {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public AssessmentRunNotification withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -28,6 +29,7 @@ public class AssessmentRunNotification {
     
     @JsonProperty("error")
     public Boolean error;
+
     public AssessmentRunNotification withError(Boolean error) {
         this.error = error;
         return this;
@@ -35,6 +37,7 @@ public class AssessmentRunNotification {
     
     @JsonProperty("event")
     public InspectorEventEnum event;
+
     public AssessmentRunNotification withEvent(InspectorEventEnum event) {
         this.event = event;
         return this;
@@ -43,6 +46,7 @@ public class AssessmentRunNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AssessmentRunNotification withMessage(String message) {
         this.message = message;
         return this;
@@ -51,6 +55,7 @@ public class AssessmentRunNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snsPublishStatusCode")
     public AssessmentRunNotificationSnsStatusCodeEnum snsPublishStatusCode;
+
     public AssessmentRunNotification withSnsPublishStatusCode(AssessmentRunNotificationSnsStatusCodeEnum snsPublishStatusCode) {
         this.snsPublishStatusCode = snsPublishStatusCode;
         return this;
@@ -59,9 +64,15 @@ public class AssessmentRunNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snsTopicArn")
     public String snsTopicArn;
+
     public AssessmentRunNotification withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
     }
     
+    public AssessmentRunNotification(@JsonProperty("date") OffsetDateTime date, @JsonProperty("error") Boolean error, @JsonProperty("event") InspectorEventEnum event) {
+        this.date = date;
+        this.error = error;
+        this.event = event;
+  }
 }

@@ -15,6 +15,7 @@ public class SoftwareInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installState")
     public String installState;
+
     public SoftwareInformation withInstallState(String installState) {
         this.installState = installState;
         return this;
@@ -23,6 +24,7 @@ public class SoftwareInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installedVersion")
     public String installedVersion;
+
     public SoftwareInformation withInstalledVersion(String installedVersion) {
         this.installedVersion = installedVersion;
         return this;
@@ -31,9 +33,11 @@ public class SoftwareInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installingVersion")
     public String installingVersion;
+
     public SoftwareInformation withInstallingVersion(String installingVersion) {
         this.installingVersion = installingVersion;
         return this;
     }
     
+    public SoftwareInformation(){}
 }

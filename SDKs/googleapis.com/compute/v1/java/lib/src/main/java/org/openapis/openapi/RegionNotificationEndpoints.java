@@ -59,11 +59,9 @@ public class RegionNotificationEndpoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class RegionNotificationEndpoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsGetResponse(contentType, httpRes.statusCode()) {{
             notificationEndpoint = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class RegionNotificationEndpoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class RegionNotificationEndpoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsListResponse res = new org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsListResponse res = new org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsListResponse(contentType, httpRes.statusCode()) {{
             notificationEndpointList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ImageAttributeSriovNetSupport {
     
     public String value;
+
     public ImageAttributeSriovNetSupport withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ImageAttributeSriovNetSupport(){}
 }

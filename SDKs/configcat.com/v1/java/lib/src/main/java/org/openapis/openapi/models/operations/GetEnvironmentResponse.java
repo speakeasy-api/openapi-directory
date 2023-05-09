@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEnvironmentResponse {
     
     public String contentType;
+
     public GetEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEnvironmentResponse {
      */
     
     public org.openapis.openapi.models.shared.EnvironmentModel environmentModel;
+
     public GetEnvironmentResponse withEnvironmentModel(org.openapis.openapi.models.shared.EnvironmentModel environmentModel) {
         this.environmentModel = environmentModel;
         return this;
@@ -29,6 +32,7 @@ public class GetEnvironmentResponse {
      */
     
     public org.openapis.openapi.models.shared.EnvironmentModelHaljson environmentModelHaljson;
+
     public GetEnvironmentResponse withEnvironmentModelHaljson(org.openapis.openapi.models.shared.EnvironmentModelHaljson environmentModelHaljson) {
         this.environmentModelHaljson = environmentModelHaljson;
         return this;
@@ -36,6 +40,7 @@ public class GetEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public GetEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

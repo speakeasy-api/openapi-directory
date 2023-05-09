@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteQueuedReservedInstancesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteQueuedReservedInstancesActionEnum action;
+
     public GETDeleteQueuedReservedInstancesRequest withAction(GETDeleteQueuedReservedInstancesActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteQueuedReservedInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDeleteQueuedReservedInstancesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteQueuedReservedInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReservedInstancesId")
     public String[] reservedInstancesId;
+
     public GETDeleteQueuedReservedInstancesRequest withReservedInstancesId(String[] reservedInstancesId) {
         this.reservedInstancesId = reservedInstancesId;
         return this;
@@ -36,6 +40,7 @@ public class GETDeleteQueuedReservedInstancesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteQueuedReservedInstancesVersionEnum version;
+
     public GETDeleteQueuedReservedInstancesRequest withVersion(GETDeleteQueuedReservedInstancesVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDeleteQueuedReservedInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteQueuedReservedInstancesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeleteQueuedReservedInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteQueuedReservedInstancesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeleteQueuedReservedInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteQueuedReservedInstancesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeleteQueuedReservedInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteQueuedReservedInstancesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeleteQueuedReservedInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteQueuedReservedInstancesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeleteQueuedReservedInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteQueuedReservedInstancesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDeleteQueuedReservedInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteQueuedReservedInstancesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteQueuedReservedInstancesRequest(@JsonProperty("Action") GETDeleteQueuedReservedInstancesActionEnum action, @JsonProperty("ReservedInstancesId") String[] reservedInstancesId, @JsonProperty("Version") GETDeleteQueuedReservedInstancesVersionEnum version) {
+        this.action = action;
+        this.reservedInstancesId = reservedInstancesId;
+        this.version = version;
+  }
 }

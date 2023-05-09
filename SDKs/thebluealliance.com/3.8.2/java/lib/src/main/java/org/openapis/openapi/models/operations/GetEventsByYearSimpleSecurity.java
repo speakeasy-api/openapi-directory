@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventsByYearSimpleSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-TBA-Auth-Key")
     public String apiKey;
+
     public GetEventsByYearSimpleSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public GetEventsByYearSimpleSecurity(@JsonProperty("apiKey") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

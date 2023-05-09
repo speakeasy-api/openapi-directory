@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FullRepositoryPermissions {
     @JsonProperty("admin")
     public Boolean admin;
+
     public FullRepositoryPermissions withAdmin(Boolean admin) {
         this.admin = admin;
         return this;
@@ -16,6 +17,7 @@ public class FullRepositoryPermissions {
     
     @JsonProperty("pull")
     public Boolean pull;
+
     public FullRepositoryPermissions withPull(Boolean pull) {
         this.pull = pull;
         return this;
@@ -23,9 +25,15 @@ public class FullRepositoryPermissions {
     
     @JsonProperty("push")
     public Boolean push;
+
     public FullRepositoryPermissions withPush(Boolean push) {
         this.push = push;
         return this;
     }
     
+    public FullRepositoryPermissions(@JsonProperty("admin") Boolean admin, @JsonProperty("pull") Boolean pull, @JsonProperty("push") Boolean push) {
+        this.admin = admin;
+        this.pull = pull;
+        this.push = push;
+  }
 }

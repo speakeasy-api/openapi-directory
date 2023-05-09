@@ -17,6 +17,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appointmentBookingFields")
     public BookingFieldItem[] appointmentBookingFields;
+
     public AppointmentInitialModel withAppointmentBookingFields(BookingFieldItem[] appointmentBookingFields) {
         this.appointmentBookingFields = appointmentBookingFields;
         return this;
@@ -25,6 +26,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookedBy")
     public String bookedBy;
+
     public AppointmentInitialModel withBookedBy(String bookedBy) {
         this.bookedBy = bookedBy;
         return this;
@@ -33,6 +35,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingWindowId")
     public String bookingWindowId;
+
     public AppointmentInitialModel withBookingWindowId(String bookingWindowId) {
         this.bookingWindowId = bookingWindowId;
         return this;
@@ -41,6 +44,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendarId")
     public String calendarId;
+
     public AppointmentInitialModel withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -49,6 +53,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public CustomFieldInputModel customFields;
+
     public AppointmentInitialModel withCustomFields(CustomFieldInputModel customFields) {
         this.customFields = customFields;
         return this;
@@ -57,6 +62,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerBookingFields")
     public BookingFieldItem[] customerBookingFields;
+
     public AppointmentInitialModel withCustomerBookingFields(BookingFieldItem[] customerBookingFields) {
         this.customerBookingFields = customerBookingFields;
         return this;
@@ -65,6 +71,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public AppointmentInitialModel withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -73,6 +80,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerMessage")
     public String customerMessage;
+
     public AppointmentInitialModel withCustomerMessage(String customerMessage) {
         this.customerMessage = customerMessage;
         return this;
@@ -81,6 +89,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AppointmentInitialModel withEmail(String email) {
         this.email = email;
         return this;
@@ -91,6 +100,7 @@ public class AppointmentInitialModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDateTime")
     public OffsetDateTime endDateTime;
+
     public AppointmentInitialModel withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -99,6 +109,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupSize")
     public Integer groupSize;
+
     public AppointmentInitialModel withGroupSize(Integer groupSize) {
         this.groupSize = groupSize;
         return this;
@@ -107,6 +118,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public AppointmentInitialModel withLocation(String location) {
         this.location = location;
         return this;
@@ -115,6 +127,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public AppointmentInitialModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -123,6 +136,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AppointmentInitialModel withName(String name) {
         this.name = name;
         return this;
@@ -131,6 +145,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public AppointmentInitialModel withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -139,6 +154,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public AppointmentInitialModel withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -147,6 +163,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneType")
     public String phoneType;
+
     public AppointmentInitialModel withPhoneType(String phoneType) {
         this.phoneType = phoneType;
         return this;
@@ -155,6 +172,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGroupId")
     public String resourceGroupId;
+
     public AppointmentInitialModel withResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -163,6 +181,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public AppointmentInitialModel withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -171,6 +190,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceIds")
     public String resourceIds;
+
     public AppointmentInitialModel withResourceIds(String resourceIds) {
         this.resourceIds = resourceIds;
         return this;
@@ -179,6 +199,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAllocationId")
     public String serviceAllocationId;
+
     public AppointmentInitialModel withServiceAllocationId(String serviceAllocationId) {
         this.serviceAllocationId = serviceAllocationId;
         return this;
@@ -187,6 +208,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public String serviceId;
+
     public AppointmentInitialModel withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -197,6 +219,7 @@ public class AppointmentInitialModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDateTime")
     public OffsetDateTime startDateTime;
+
     public AppointmentInitialModel withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -205,6 +228,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezoneName")
     public String timezoneName;
+
     public AppointmentInitialModel withTimezoneName(String timezoneName) {
         this.timezoneName = timezoneName;
         return this;
@@ -213,6 +237,7 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("travelAppointmentId")
     public String travelAppointmentId;
+
     public AppointmentInitialModel withTravelAppointmentId(String travelAppointmentId) {
         this.travelAppointmentId = travelAppointmentId;
         return this;
@@ -221,9 +246,11 @@ public class AppointmentInitialModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("travelTimeMins")
     public Integer travelTimeMins;
+
     public AppointmentInitialModel withTravelTimeMins(Integer travelTimeMins) {
         this.travelTimeMins = travelTimeMins;
         return this;
     }
     
+    public AppointmentInitialModel(){}
 }

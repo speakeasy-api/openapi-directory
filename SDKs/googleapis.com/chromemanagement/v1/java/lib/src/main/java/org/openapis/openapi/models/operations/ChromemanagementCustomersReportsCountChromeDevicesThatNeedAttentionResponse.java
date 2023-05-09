@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionResponse {
     
     public String contentType;
+
     public ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttention
      */
     
     public org.openapis.openapi.models.shared.GoogleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse googleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse;
+
     public ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionResponse withGoogleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse(org.openapis.openapi.models.shared.GoogleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse googleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse) {
         this.googleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse = googleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse;
         return this;
@@ -26,6 +29,7 @@ public class ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttention
     
     
     public Integer statusCode;
+
     public ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttention
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

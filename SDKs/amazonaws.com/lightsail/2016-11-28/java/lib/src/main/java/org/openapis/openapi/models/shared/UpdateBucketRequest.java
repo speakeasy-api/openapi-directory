@@ -12,6 +12,7 @@ public class UpdateBucketRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessLogConfig")
     public BucketAccessLogConfig accessLogConfig;
+
     public UpdateBucketRequest withAccessLogConfig(BucketAccessLogConfig accessLogConfig) {
         this.accessLogConfig = accessLogConfig;
         return this;
@@ -20,6 +21,7 @@ public class UpdateBucketRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessRules")
     public AccessRules accessRules;
+
     public UpdateBucketRequest withAccessRules(AccessRules accessRules) {
         this.accessRules = accessRules;
         return this;
@@ -27,6 +29,7 @@ public class UpdateBucketRequest {
     
     @JsonProperty("bucketName")
     public String bucketName;
+
     public UpdateBucketRequest withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -35,6 +38,7 @@ public class UpdateBucketRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readonlyAccessAccounts")
     public String[] readonlyAccessAccounts;
+
     public UpdateBucketRequest withReadonlyAccessAccounts(String[] readonlyAccessAccounts) {
         this.readonlyAccessAccounts = readonlyAccessAccounts;
         return this;
@@ -43,9 +47,13 @@ public class UpdateBucketRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versioning")
     public String versioning;
+
     public UpdateBucketRequest withVersioning(String versioning) {
         this.versioning = versioning;
         return this;
     }
     
+    public UpdateBucketRequest(@JsonProperty("bucketName") String bucketName) {
+        this.bucketName = bucketName;
+  }
 }

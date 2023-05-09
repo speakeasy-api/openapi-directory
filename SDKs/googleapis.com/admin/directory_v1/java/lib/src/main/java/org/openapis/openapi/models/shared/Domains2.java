@@ -18,6 +18,7 @@ public class Domains2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domains")
     public Domains[] domains;
+
     public Domains2 withDomains(Domains[] domains) {
         this.domains = domains;
         return this;
@@ -29,6 +30,7 @@ public class Domains2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Domains2 withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,9 +42,11 @@ public class Domains2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Domains2 withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Domains2(){}
 }

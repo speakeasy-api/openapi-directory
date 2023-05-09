@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWorkspaceResponse {
     
     public String contentType;
+
     public UpdateWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public UpdateWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateWorkspaceResponse {
      */
     
     public UpdateWorkspace200ApplicationJSON updateWorkspace200ApplicationJSONObject;
+
     public UpdateWorkspaceResponse withUpdateWorkspace200ApplicationJSONObject(UpdateWorkspace200ApplicationJSON updateWorkspace200ApplicationJSONObject) {
         this.updateWorkspace200ApplicationJSONObject = updateWorkspace200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class UpdateWorkspaceResponse {
      */
     
     public UpdateWorkspace403ApplicationJSON updateWorkspace403ApplicationJSONObject;
+
     public UpdateWorkspaceResponse withUpdateWorkspace403ApplicationJSONObject(UpdateWorkspace403ApplicationJSON updateWorkspace403ApplicationJSONObject) {
         this.updateWorkspace403ApplicationJSONObject = updateWorkspace403ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class UpdateWorkspaceResponse {
      */
     
     public UpdateWorkspace404ApplicationJSON updateWorkspace404ApplicationJSONObject;
+
     public UpdateWorkspaceResponse withUpdateWorkspace404ApplicationJSONObject(UpdateWorkspace404ApplicationJSON updateWorkspace404ApplicationJSONObject) {
         this.updateWorkspace404ApplicationJSONObject = updateWorkspace404ApplicationJSONObject;
         return this;
     }
     
+    public UpdateWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchCreateDelegationByAssessmentResponse {
@@ -12,6 +13,7 @@ public class BatchCreateDelegationByAssessmentResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchCreateDelegationByAssessmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchCreateDelegationByAssessmentResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchCreateDelegationByAssessmentResponse batchCreateDelegationByAssessmentResponse;
+
     public BatchCreateDelegationByAssessmentResponse withBatchCreateDelegationByAssessmentResponse(org.openapis.openapi.models.shared.BatchCreateDelegationByAssessmentResponse batchCreateDelegationByAssessmentResponse) {
         this.batchCreateDelegationByAssessmentResponse = batchCreateDelegationByAssessmentResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchCreateDelegationByAssessmentResponse {
     
     
     public String contentType;
+
     public BatchCreateDelegationByAssessmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchCreateDelegationByAssessmentResponse {
      */
     
     public Object internalServerException;
+
     public BatchCreateDelegationByAssessmentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class BatchCreateDelegationByAssessmentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchCreateDelegationByAssessmentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class BatchCreateDelegationByAssessmentResponse {
     
     
     public Integer statusCode;
+
     public BatchCreateDelegationByAssessmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchCreateDelegationByAssessmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchCreateDelegationByAssessmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class BatchCreateDelegationByAssessmentResponse {
      */
     
     public Object validationException;
+
     public BatchCreateDelegationByAssessmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchCreateDelegationByAssessmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public Error withCode(String code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeType")
     public Object codeType;
+
     public Error withCodeType(Object codeType) {
         this.codeType = codeType;
         return this;
@@ -39,9 +41,13 @@ public class Error {
      */
     @JsonProperty("error")
     public String error;
+
     public Error withError(String error) {
         this.error = error;
         return this;
     }
     
+    public Error(@JsonProperty("error") String error) {
+        this.error = error;
+  }
 }

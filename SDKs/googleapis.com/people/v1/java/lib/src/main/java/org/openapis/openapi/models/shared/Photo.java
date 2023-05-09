@@ -18,6 +18,7 @@ public class Photo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FieldMetadata metadata;
+
     public Photo withMetadata(FieldMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -29,9 +30,11 @@ public class Photo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Photo withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Photo(){}
 }

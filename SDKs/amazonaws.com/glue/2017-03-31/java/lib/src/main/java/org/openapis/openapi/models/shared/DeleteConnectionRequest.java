@@ -12,6 +12,7 @@ public class DeleteConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public DeleteConnectionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,9 +20,13 @@ public class DeleteConnectionRequest {
     
     @JsonProperty("ConnectionName")
     public String connectionName;
+
     public DeleteConnectionRequest withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
     }
     
+    public DeleteConnectionRequest(@JsonProperty("ConnectionName") String connectionName) {
+        this.connectionName = connectionName;
+  }
 }

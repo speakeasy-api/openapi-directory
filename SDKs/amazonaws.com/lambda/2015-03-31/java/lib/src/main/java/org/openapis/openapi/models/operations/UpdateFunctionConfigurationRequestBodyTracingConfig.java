@@ -15,9 +15,11 @@ public class UpdateFunctionConfigurationRequestBodyTracingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public org.openapis.openapi.models.shared.TracingModeEnum mode;
+
     public UpdateFunctionConfigurationRequestBodyTracingConfig withMode(org.openapis.openapi.models.shared.TracingModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public UpdateFunctionConfigurationRequestBodyTracingConfig(){}
 }

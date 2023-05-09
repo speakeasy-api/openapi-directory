@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRecommendationFeedbackResponse {
@@ -12,6 +13,7 @@ public class ListRecommendationFeedbackResponse {
      */
     
     public Object accessDeniedException;
+
     public ListRecommendationFeedbackResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListRecommendationFeedbackResponse {
     
     
     public String contentType;
+
     public ListRecommendationFeedbackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListRecommendationFeedbackResponse {
      */
     
     public Object internalServerException;
+
     public ListRecommendationFeedbackResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListRecommendationFeedbackResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRecommendationFeedbackResponse listRecommendationFeedbackResponse;
+
     public ListRecommendationFeedbackResponse withListRecommendationFeedbackResponse(org.openapis.openapi.models.shared.ListRecommendationFeedbackResponse listRecommendationFeedbackResponse) {
         this.listRecommendationFeedbackResponse = listRecommendationFeedbackResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListRecommendationFeedbackResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListRecommendationFeedbackResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListRecommendationFeedbackResponse {
     
     
     public Integer statusCode;
+
     public ListRecommendationFeedbackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListRecommendationFeedbackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRecommendationFeedbackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListRecommendationFeedbackResponse {
      */
     
     public Object throttlingException;
+
     public ListRecommendationFeedbackResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListRecommendationFeedbackResponse {
      */
     
     public Object validationException;
+
     public ListRecommendationFeedbackResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListRecommendationFeedbackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

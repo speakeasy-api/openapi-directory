@@ -15,6 +15,7 @@ public class GetTrackingSnippet200ApplicationJSON {
      */
     @JsonProperty("data")
     public GetTrackingSnippet200ApplicationJSONData data;
+
     public GetTrackingSnippet200ApplicationJSON withData(GetTrackingSnippet200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -22,9 +23,14 @@ public class GetTrackingSnippet200ApplicationJSON {
     
     @JsonProperty("meta")
     public GetTrackingSnippet200ApplicationJSONMeta meta;
+
     public GetTrackingSnippet200ApplicationJSON withMeta(GetTrackingSnippet200ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetTrackingSnippet200ApplicationJSON(@JsonProperty("data") GetTrackingSnippet200ApplicationJSONData data, @JsonProperty("meta") GetTrackingSnippet200ApplicationJSONMeta meta) {
+        this.data = data;
+        this.meta = meta;
+  }
 }

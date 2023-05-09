@@ -15,6 +15,7 @@ public class S3DataRepositoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoExportPolicy")
     public AutoExportPolicy autoExportPolicy;
+
     public S3DataRepositoryConfiguration withAutoExportPolicy(AutoExportPolicy autoExportPolicy) {
         this.autoExportPolicy = autoExportPolicy;
         return this;
@@ -23,9 +24,11 @@ public class S3DataRepositoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoImportPolicy")
     public AutoImportPolicy autoImportPolicy;
+
     public S3DataRepositoryConfiguration withAutoImportPolicy(AutoImportPolicy autoImportPolicy) {
         this.autoImportPolicy = autoImportPolicy;
         return this;
     }
     
+    public S3DataRepositoryConfiguration(){}
 }

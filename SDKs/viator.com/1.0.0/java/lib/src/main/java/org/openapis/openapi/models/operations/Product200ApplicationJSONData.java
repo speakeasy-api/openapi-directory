@@ -23,6 +23,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInfo")
     public String[] additionalInfo;
+
     public Product200ApplicationJSONData withAdditionalInfo(String[] additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -34,6 +35,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admission")
     public String admission;
+
     public Product200ApplicationJSONData withAdmission(String admission) {
         this.admission = admission;
         return this;
@@ -48,6 +50,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageBands")
     public Product200ApplicationJSONDataAgeBands[] ageBands;
+
     public Product200ApplicationJSONData withAgeBands(Product200ApplicationJSONDataAgeBands[] ageBands) {
         this.ageBands = ageBands;
         return this;
@@ -59,6 +62,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allTravellerNamesRequired")
     public Boolean allTravellerNamesRequired;
+
     public Product200ApplicationJSONData withAllTravellerNamesRequired(Boolean allTravellerNamesRequired) {
         this.allTravellerNamesRequired = allTravellerNamesRequired;
         return this;
@@ -70,6 +74,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applePassSupported")
     public Boolean applePassSupported;
+
     public Product200ApplicationJSONData withApplePassSupported(Boolean applePassSupported) {
         this.applePassSupported = applePassSupported;
         return this;
@@ -81,6 +86,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available")
     public Boolean available;
+
     public Product200ApplicationJSONData withAvailable(Boolean available) {
         this.available = available;
         return this;
@@ -101,6 +107,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingEngineId")
     public org.openapis.openapi.models.shared.BookingEngineIdEnum bookingEngineId;
+
     public Product200ApplicationJSONData withBookingEngineId(org.openapis.openapi.models.shared.BookingEngineIdEnum bookingEngineId) {
         this.bookingEngineId = bookingEngineId;
         return this;
@@ -109,6 +116,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingQuestions")
     public Product200ApplicationJSONDataBookingQuestions[] bookingQuestions;
+
     public Product200ApplicationJSONData withBookingQuestions(Product200ApplicationJSONDataBookingQuestions[] bookingQuestions) {
         this.bookingQuestions = bookingQuestions;
         return this;
@@ -122,6 +130,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catIds")
     public Long[] catIds;
+
     public Product200ApplicationJSONData withCatIds(Long[] catIds) {
         this.catIds = catIds;
         return this;
@@ -133,6 +142,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public Product200ApplicationJSONData withCity(String city) {
         this.city = city;
         return this;
@@ -144,6 +154,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public Product200ApplicationJSONData withCode(String code) {
         this.code = code;
         return this;
@@ -155,6 +166,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public Product200ApplicationJSONData withCountry(String country) {
         this.country = country;
         return this;
@@ -166,6 +178,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public Product200ApplicationJSONData withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -177,6 +190,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departurePoint")
     public String departurePoint;
+
     public Product200ApplicationJSONData withDeparturePoint(String departurePoint) {
         this.departurePoint = departurePoint;
         return this;
@@ -190,6 +204,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departureTime")
     public String departureTime;
+
     public Product200ApplicationJSONData withDepartureTime(String departureTime) {
         this.departureTime = departureTime;
         return this;
@@ -201,6 +216,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departureTimeComments")
     public String departureTimeComments;
+
     public Product200ApplicationJSONData withDepartureTimeComments(String departureTimeComments) {
         this.departureTimeComments = departureTimeComments;
         return this;
@@ -212,6 +228,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Product200ApplicationJSONData withDescription(String description) {
         this.description = description;
         return this;
@@ -225,6 +242,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationId")
     public Long destinationId;
+
     public Product200ApplicationJSONData withDestinationId(Long destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -236,6 +254,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public Product200ApplicationJSONData withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -247,6 +266,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("essential")
     public String essential;
+
     public Product200ApplicationJSONData withEssential(String essential) {
         this.essential = essential;
         return this;
@@ -260,6 +280,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusions")
     public String[] exclusions;
+
     public Product200ApplicationJSONData withExclusions(String[] exclusions) {
         this.exclusions = exclusions;
         return this;
@@ -271,6 +292,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highlights")
     public Long highlights;
+
     public Product200ApplicationJSONData withHighlights(Long highlights) {
         this.highlights = highlights;
         return this;
@@ -282,6 +304,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotelPickup")
     public Boolean hotelPickup;
+
     public Product200ApplicationJSONData withHotelPickup(Boolean hotelPickup) {
         this.hotelPickup = hotelPickup;
         return this;
@@ -295,6 +318,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inclusions")
     public String[] inclusions;
+
     public Product200ApplicationJSONData withInclusions(String[] inclusions) {
         this.inclusions = inclusions;
         return this;
@@ -308,6 +332,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itinerary")
     public String itinerary;
+
     public Product200ApplicationJSONData withItinerary(String itinerary) {
         this.itinerary = itinerary;
         return this;
@@ -321,6 +346,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Product200ApplicationJSONData withLocation(String location) {
         this.location = location;
         return this;
@@ -332,6 +358,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapURL")
     public String mapURL;
+
     public Product200ApplicationJSONData withMapURL(String mapURL) {
         this.mapURL = mapURL;
         return this;
@@ -343,6 +370,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTravellerCount")
     public Long maxTravellerCount;
+
     public Product200ApplicationJSONData withMaxTravellerCount(Long maxTravellerCount) {
         this.maxTravellerCount = maxTravellerCount;
         return this;
@@ -358,6 +386,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantCancellable")
     public Boolean merchantCancellable;
+
     public Product200ApplicationJSONData withMerchantCancellable(Boolean merchantCancellable) {
         this.merchantCancellable = merchantCancellable;
         return this;
@@ -372,6 +401,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantNetPriceFrom")
     public Double merchantNetPriceFrom;
+
     public Product200ApplicationJSONData withMerchantNetPriceFrom(Double merchantNetPriceFrom) {
         this.merchantNetPriceFrom = merchantNetPriceFrom;
         return this;
@@ -386,6 +416,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantNetPriceFromFormatted")
     public String merchantNetPriceFromFormatted;
+
     public Product200ApplicationJSONData withMerchantNetPriceFromFormatted(String merchantNetPriceFromFormatted) {
         this.merchantNetPriceFromFormatted = merchantNetPriceFromFormatted;
         return this;
@@ -394,6 +425,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantTermsAndConditions")
     public Product200ApplicationJSONDataMerchantTermsAndConditions merchantTermsAndConditions;
+
     public Product200ApplicationJSONData withMerchantTermsAndConditions(Product200ApplicationJSONDataMerchantTermsAndConditions merchantTermsAndConditions) {
         this.merchantTermsAndConditions = merchantTermsAndConditions;
         return this;
@@ -409,6 +441,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onRequestPeriod")
     public Long onRequestPeriod;
+
     public Product200ApplicationJSONData withOnRequestPeriod(Long onRequestPeriod) {
         this.onRequestPeriod = onRequestPeriod;
         return this;
@@ -421,6 +454,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onSale")
     public Boolean onSale;
+
     public Product200ApplicationJSONData withOnSale(Boolean onSale) {
         this.onSale = onSale;
         return this;
@@ -432,6 +466,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operates")
     public String operates;
+
     public Product200ApplicationJSONData withOperates(String operates) {
         this.operates = operates;
         return this;
@@ -443,6 +478,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("panoramaCount")
     public Long panoramaCount;
+
     public Product200ApplicationJSONData withPanoramaCount(Long panoramaCount) {
         this.panoramaCount = panoramaCount;
         return this;
@@ -454,6 +490,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pas")
     public java.util.Map<String, Object> pas;
+
     public Product200ApplicationJSONData withPas(java.util.Map<String, Object> pas) {
         this.pas = pas;
         return this;
@@ -465,6 +502,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passengerAttributes")
     public Product200ApplicationJSONDataPassengerAttributes[] passengerAttributes;
+
     public Product200ApplicationJSONData withPassengerAttributes(Product200ApplicationJSONDataPassengerAttributes[] passengerAttributes) {
         this.passengerAttributes = passengerAttributes;
         return this;
@@ -476,6 +514,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photoCount")
     public Long photoCount;
+
     public Product200ApplicationJSONData withPhotoCount(Long photoCount) {
         this.photoCount = photoCount;
         return this;
@@ -491,6 +530,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Double price;
+
     public Product200ApplicationJSONData withPrice(Double price) {
         this.price = price;
         return this;
@@ -505,6 +545,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceFormatted")
     public String priceFormatted;
+
     public Product200ApplicationJSONData withPriceFormatted(String priceFormatted) {
         this.priceFormatted = priceFormatted;
         return this;
@@ -516,6 +557,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryDestinationId")
     public Long primaryDestinationId;
+
     public Product200ApplicationJSONData withPrimaryDestinationId(Long primaryDestinationId) {
         this.primaryDestinationId = primaryDestinationId;
         return this;
@@ -527,6 +569,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryDestinationName")
     public String primaryDestinationName;
+
     public Product200ApplicationJSONData withPrimaryDestinationName(String primaryDestinationName) {
         this.primaryDestinationName = primaryDestinationName;
         return this;
@@ -538,6 +581,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryDestinationUrlName")
     public String primaryDestinationUrlName;
+
     public Product200ApplicationJSONData withPrimaryDestinationUrlName(String primaryDestinationUrlName) {
         this.primaryDestinationUrlName = primaryDestinationUrlName;
         return this;
@@ -549,6 +593,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryGroupId")
     public String primaryGroupId;
+
     public Product200ApplicationJSONData withPrimaryGroupId(String primaryGroupId) {
         this.primaryGroupId = primaryGroupId;
         return this;
@@ -560,6 +605,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productPhotos")
     public Product200ApplicationJSONDataProductPhotos[] productPhotos;
+
     public Product200ApplicationJSONData withProductPhotos(Product200ApplicationJSONDataProductPhotos[] productPhotos) {
         this.productPhotos = productPhotos;
         return this;
@@ -571,6 +617,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productUrlName")
     public String productUrlName;
+
     public Product200ApplicationJSONData withProductUrlName(String productUrlName) {
         this.productUrlName = productUrlName;
         return this;
@@ -587,6 +634,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     public Double rating;
+
     public Product200ApplicationJSONData withRating(Double rating) {
         this.rating = rating;
         return this;
@@ -603,6 +651,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ratingCounts")
     public org.openapis.openapi.models.shared.RatingCounts ratingCounts;
+
     public Product200ApplicationJSONData withRatingCounts(org.openapis.openapi.models.shared.RatingCounts ratingCounts) {
         this.ratingCounts = ratingCounts;
         return this;
@@ -614,6 +663,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Product200ApplicationJSONData withRegion(String region) {
         this.region = region;
         return this;
@@ -625,6 +675,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnDetails")
     public String returnDetails;
+
     public Product200ApplicationJSONData withReturnDetails(String returnDetails) {
         this.returnDetails = returnDetails;
         return this;
@@ -639,6 +690,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewCount")
     public Long reviewCount;
+
     public Product200ApplicationJSONData withReviewCount(Long reviewCount) {
         this.reviewCount = reviewCount;
         return this;
@@ -653,6 +705,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviews")
     public org.openapis.openapi.models.shared.ReviewObject[] reviews;
+
     public Product200ApplicationJSONData withReviews(org.openapis.openapi.models.shared.ReviewObject[] reviews) {
         this.reviews = reviews;
         return this;
@@ -664,6 +717,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rrp")
     public Long rrp;
+
     public Product200ApplicationJSONData withRrp(Long rrp) {
         this.rrp = rrp;
         return this;
@@ -675,6 +729,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rrpFormatted")
     public String rrpFormatted;
+
     public Product200ApplicationJSONData withRrpFormatted(String rrpFormatted) {
         this.rrpFormatted = rrpFormatted;
         return this;
@@ -689,6 +744,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesPoints")
     public String[] salesPoints;
+
     public Product200ApplicationJSONData withSalesPoints(String[] salesPoints) {
         this.salesPoints = salesPoints;
         return this;
@@ -701,6 +757,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingAmount")
     public String savingAmount;
+
     public Product200ApplicationJSONData withSavingAmount(String savingAmount) {
         this.savingAmount = savingAmount;
         return this;
@@ -713,6 +770,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingAmountFormated")
     public String savingAmountFormated;
+
     public Product200ApplicationJSONData withSavingAmountFormated(String savingAmountFormated) {
         this.savingAmountFormated = savingAmountFormated;
         return this;
@@ -724,6 +782,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortDescription")
     public String shortDescription;
+
     public Product200ApplicationJSONData withShortDescription(String shortDescription) {
         this.shortDescription = shortDescription;
         return this;
@@ -735,6 +794,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortTitle")
     public String shortTitle;
+
     public Product200ApplicationJSONData withShortTitle(String shortTitle) {
         this.shortTitle = shortTitle;
         return this;
@@ -749,6 +809,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specialOffer")
     public String specialOffer;
+
     public Product200ApplicationJSONData withSpecialOffer(String specialOffer) {
         this.specialOffer = specialOffer;
         return this;
@@ -760,6 +821,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specialOfferAvailable")
     public Boolean specialOfferAvailable;
+
     public Product200ApplicationJSONData withSpecialOfferAvailable(Boolean specialOfferAvailable) {
         this.specialOfferAvailable = specialOfferAvailable;
         return this;
@@ -771,6 +833,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specialReservation")
     public Boolean specialReservation;
+
     public Product200ApplicationJSONData withSpecialReservation(Boolean specialReservation) {
         this.specialReservation = specialReservation;
         return this;
@@ -782,6 +845,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specialReservationDetails")
     public String specialReservationDetails;
+
     public Product200ApplicationJSONData withSpecialReservationDetails(String specialReservationDetails) {
         this.specialReservationDetails = specialReservationDetails;
         return this;
@@ -793,6 +857,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslSupported")
     public Boolean sslSupported;
+
     public Product200ApplicationJSONData withSslSupported(Boolean sslSupported) {
         this.sslSupported = sslSupported;
         return this;
@@ -806,6 +871,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subCatIds")
     public Long[] subCatIds;
+
     public Product200ApplicationJSONData withSubCatIds(Long[] subCatIds) {
         this.subCatIds = subCatIds;
         return this;
@@ -817,6 +883,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplierCode")
     public String supplierCode;
+
     public Product200ApplicationJSONData withSupplierCode(String supplierCode) {
         this.supplierCode = supplierCode;
         return this;
@@ -828,6 +895,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplierName")
     public String supplierName;
+
     public Product200ApplicationJSONData withSupplierName(String supplierName) {
         this.supplierName = supplierName;
         return this;
@@ -839,6 +907,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailHiResURL")
     public String thumbnailHiResURL;
+
     public Product200ApplicationJSONData withThumbnailHiResURL(String thumbnailHiResURL) {
         this.thumbnailHiResURL = thumbnailHiResURL;
         return this;
@@ -850,6 +919,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailURL")
     public String thumbnailURL;
+
     public Product200ApplicationJSONData withThumbnailURL(String thumbnailURL) {
         this.thumbnailURL = thumbnailURL;
         return this;
@@ -861,6 +931,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Product200ApplicationJSONData withTitle(String title) {
         this.title = title;
         return this;
@@ -872,6 +943,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tourGrades")
     public Product200ApplicationJSONDataTourGrades[] tourGrades;
+
     public Product200ApplicationJSONData withTourGrades(Product200ApplicationJSONDataTourGrades[] tourGrades) {
         this.tourGrades = tourGrades;
         return this;
@@ -886,6 +958,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tourGradesAvailable")
     public Boolean tourGradesAvailable;
+
     public Product200ApplicationJSONData withTourGradesAvailable(Boolean tourGradesAvailable) {
         this.tourGradesAvailable = tourGradesAvailable;
         return this;
@@ -903,6 +976,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translationLevel")
     public org.openapis.openapi.models.shared.TranslationLevelEnum translationLevel;
+
     public Product200ApplicationJSONData withTranslationLevel(org.openapis.openapi.models.shared.TranslationLevelEnum translationLevel) {
         this.translationLevel = translationLevel;
         return this;
@@ -914,6 +988,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userPhotos")
     public org.openapis.openapi.models.shared.PhotoObject[] userPhotos;
+
     public Product200ApplicationJSONData withUserPhotos(org.openapis.openapi.models.shared.PhotoObject[] userPhotos) {
         this.userPhotos = userPhotos;
         return this;
@@ -925,6 +1000,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoCount")
     public Long videoCount;
+
     public Product200ApplicationJSONData withVideoCount(Long videoCount) {
         this.videoCount = videoCount;
         return this;
@@ -936,6 +1012,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videos")
     public String videos;
+
     public Product200ApplicationJSONData withVideos(String videos) {
         this.videos = videos;
         return this;
@@ -951,6 +1028,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voucherOption")
     public String voucherOption;
+
     public Product200ApplicationJSONData withVoucherOption(String voucherOption) {
         this.voucherOption = voucherOption;
         return this;
@@ -962,6 +1040,7 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voucherRequirements")
     public Object voucherRequirements;
+
     public Product200ApplicationJSONData withVoucherRequirements(Object voucherRequirements) {
         this.voucherRequirements = voucherRequirements;
         return this;
@@ -973,9 +1052,11 @@ public class Product200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webURL")
     public String webURL;
+
     public Product200ApplicationJSONData withWebURL(String webURL) {
         this.webURL = webURL;
         return this;
     }
     
+    public Product200ApplicationJSONData(){}
 }

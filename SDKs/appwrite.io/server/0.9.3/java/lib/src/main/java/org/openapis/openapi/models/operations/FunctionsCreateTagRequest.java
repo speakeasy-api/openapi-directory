@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FunctionsCreateTagRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public FunctionsCreateTagRequestBody requestBody;
+
     public FunctionsCreateTagRequest withRequestBody(FunctionsCreateTagRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class FunctionsCreateTagRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionId")
     public String functionId;
+
     public FunctionsCreateTagRequest withFunctionId(String functionId) {
         this.functionId = functionId;
         return this;
     }
     
+    public FunctionsCreateTagRequest(@JsonProperty("functionId") String functionId) {
+        this.functionId = functionId;
+  }
 }

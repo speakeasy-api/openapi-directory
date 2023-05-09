@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BlockPublicAccessConfiguration {
     @JsonProperty("BlockPublicSecurityGroupRules")
     public Boolean blockPublicSecurityGroupRules;
+
     public BlockPublicAccessConfiguration withBlockPublicSecurityGroupRules(Boolean blockPublicSecurityGroupRules) {
         this.blockPublicSecurityGroupRules = blockPublicSecurityGroupRules;
         return this;
@@ -22,9 +23,13 @@ public class BlockPublicAccessConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermittedPublicSecurityGroupRuleRanges")
     public PortRange[] permittedPublicSecurityGroupRuleRanges;
+
     public BlockPublicAccessConfiguration withPermittedPublicSecurityGroupRuleRanges(PortRange[] permittedPublicSecurityGroupRuleRanges) {
         this.permittedPublicSecurityGroupRuleRanges = permittedPublicSecurityGroupRuleRanges;
         return this;
     }
     
+    public BlockPublicAccessConfiguration(@JsonProperty("BlockPublicSecurityGroupRules") Boolean blockPublicSecurityGroupRules) {
+        this.blockPublicSecurityGroupRules = blockPublicSecurityGroupRules;
+  }
 }

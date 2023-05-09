@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportationReattendColumnResponse {
@@ -14,6 +15,7 @@ public class ImportationReattendColumnResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public ImportationReattendColumnResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -21,6 +23,7 @@ public class ImportationReattendColumnResponse {
     
     
     public String contentType;
+
     public ImportationReattendColumnResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -28,6 +31,7 @@ public class ImportationReattendColumnResponse {
     
     
     public Integer statusCode;
+
     public ImportationReattendColumnResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -35,9 +39,14 @@ public class ImportationReattendColumnResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportationReattendColumnResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ImportationReattendColumnResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

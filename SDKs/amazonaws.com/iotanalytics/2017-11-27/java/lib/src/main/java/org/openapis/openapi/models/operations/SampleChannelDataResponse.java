@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SampleChannelDataResponse {
     
     public String contentType;
+
     public SampleChannelDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SampleChannelDataResponse {
      */
     
     public Object internalFailureException;
+
     public SampleChannelDataResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class SampleChannelDataResponse {
      */
     
     public Object invalidRequestException;
+
     public SampleChannelDataResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class SampleChannelDataResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SampleChannelDataResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class SampleChannelDataResponse {
      */
     
     public org.openapis.openapi.models.shared.SampleChannelDataResponse sampleChannelDataResponse;
+
     public SampleChannelDataResponse withSampleChannelDataResponse(org.openapis.openapi.models.shared.SampleChannelDataResponse sampleChannelDataResponse) {
         this.sampleChannelDataResponse = sampleChannelDataResponse;
         return this;
@@ -59,6 +65,7 @@ public class SampleChannelDataResponse {
      */
     
     public Object serviceUnavailableException;
+
     public SampleChannelDataResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class SampleChannelDataResponse {
     
     
     public Integer statusCode;
+
     public SampleChannelDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class SampleChannelDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SampleChannelDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class SampleChannelDataResponse {
      */
     
     public Object throttlingException;
+
     public SampleChannelDataResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public SampleChannelDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -22,6 +22,7 @@ public class FraudDetectionResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AudioAggregationEndedAt")
     public OffsetDateTime audioAggregationEndedAt;
+
     public FraudDetectionResult withAudioAggregationEndedAt(OffsetDateTime audioAggregationEndedAt) {
         this.audioAggregationEndedAt = audioAggregationEndedAt;
         return this;
@@ -32,6 +33,7 @@ public class FraudDetectionResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AudioAggregationStartedAt")
     public OffsetDateTime audioAggregationStartedAt;
+
     public FraudDetectionResult withAudioAggregationStartedAt(OffsetDateTime audioAggregationStartedAt) {
         this.audioAggregationStartedAt = audioAggregationStartedAt;
         return this;
@@ -40,6 +42,7 @@ public class FraudDetectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public FraudDetectionConfiguration configuration;
+
     public FraudDetectionResult withConfiguration(FraudDetectionConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -48,6 +51,7 @@ public class FraudDetectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Decision")
     public FraudDetectionDecisionEnum decision;
+
     public FraudDetectionResult withDecision(FraudDetectionDecisionEnum decision) {
         this.decision = decision;
         return this;
@@ -56,6 +60,7 @@ public class FraudDetectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FraudDetectionResultId")
     public String fraudDetectionResultId;
+
     public FraudDetectionResult withFraudDetectionResultId(String fraudDetectionResultId) {
         this.fraudDetectionResultId = fraudDetectionResultId;
         return this;
@@ -64,6 +69,7 @@ public class FraudDetectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reasons")
     public FraudDetectionReasonEnum[] reasons;
+
     public FraudDetectionResult withReasons(FraudDetectionReasonEnum[] reasons) {
         this.reasons = reasons;
         return this;
@@ -72,9 +78,11 @@ public class FraudDetectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RiskDetails")
     public FraudRiskDetails riskDetails;
+
     public FraudDetectionResult withRiskDetails(FraudRiskDetails riskDetails) {
         this.riskDetails = riskDetails;
         return this;
     }
     
+    public FraudDetectionResult(){}
 }

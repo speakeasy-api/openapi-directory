@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetstateabbreviationRequest;
 import org.openapis.openapi.models.operations.GetstateabbreviationResponse;
 
@@ -13,18 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetstateabbreviationRequest req = new GetstateabbreviationRequest() {{
-                license = "corrupti";
-                state = "provident";
-            }}            
+            GetstateabbreviationRequest req = new GetstateabbreviationRequest("corrupti", "provident");            
 
             GetstateabbreviationResponse res = sdk.stateDataStandardization.getstateabbreviation(req);
 
-            if (res.getstateabbreviation200ApplicationJSONObject.isPresent()) {
+            if (res.getstateabbreviation200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateHealthCheckResponse {
@@ -12,6 +13,7 @@ public class AssociateHealthCheckResponse {
      */
     
     public java.util.Map<String, Object> associateHealthCheckResponse;
+
     public AssociateHealthCheckResponse withAssociateHealthCheckResponse(java.util.Map<String, Object> associateHealthCheckResponse) {
         this.associateHealthCheckResponse = associateHealthCheckResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateHealthCheckResponse {
     
     
     public String contentType;
+
     public AssociateHealthCheckResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateHealthCheckResponse {
      */
     
     public Object internalErrorException;
+
     public AssociateHealthCheckResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateHealthCheckResponse {
      */
     
     public Object invalidParameterException;
+
     public AssociateHealthCheckResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateHealthCheckResponse {
      */
     
     public Object invalidResourceException;
+
     public AssociateHealthCheckResponse withInvalidResourceException(Object invalidResourceException) {
         this.invalidResourceException = invalidResourceException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateHealthCheckResponse {
      */
     
     public Object limitsExceededException;
+
     public AssociateHealthCheckResponse withLimitsExceededException(Object limitsExceededException) {
         this.limitsExceededException = limitsExceededException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateHealthCheckResponse {
      */
     
     public Object optimisticLockException;
+
     public AssociateHealthCheckResponse withOptimisticLockException(Object optimisticLockException) {
         this.optimisticLockException = optimisticLockException;
         return this;
@@ -76,6 +84,7 @@ public class AssociateHealthCheckResponse {
     
     
     public Integer statusCode;
+
     public AssociateHealthCheckResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AssociateHealthCheckResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateHealthCheckResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class AssociateHealthCheckResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateHealthCheckResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public AssociateHealthCheckResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

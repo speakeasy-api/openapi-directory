@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWorkweekConfigRequest {
@@ -14,6 +15,7 @@ public class UpdateWorkweekConfigRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateWorkweekConfigRequest updateWorkweekConfigRequest;
+
     public UpdateWorkweekConfigRequest withUpdateWorkweekConfigRequest(org.openapis.openapi.models.shared.UpdateWorkweekConfigRequest updateWorkweekConfigRequest) {
         this.updateWorkweekConfigRequest = updateWorkweekConfigRequest;
         return this;
@@ -24,9 +26,14 @@ public class UpdateWorkweekConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdateWorkweekConfigRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateWorkweekConfigRequest(@JsonProperty("UpdateWorkweekConfigRequest") org.openapis.openapi.models.shared.UpdateWorkweekConfigRequest updateWorkweekConfigRequest, @JsonProperty("id") String id) {
+        this.updateWorkweekConfigRequest = updateWorkweekConfigRequest;
+        this.id = id;
+  }
 }

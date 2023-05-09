@@ -18,6 +18,7 @@ public class ContactGroupMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public ContactGroupMetadata withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -29,9 +30,11 @@ public class ContactGroupMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public ContactGroupMetadata withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ContactGroupMetadata(){}
 }

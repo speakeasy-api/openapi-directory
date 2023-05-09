@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportFindingsError {
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public ImportFindingsError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -19,6 +20,7 @@ public class ImportFindingsError {
     
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public ImportFindingsError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -26,9 +28,15 @@ public class ImportFindingsError {
     
     @JsonProperty("Id")
     public String id;
+
     public ImportFindingsError withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ImportFindingsError(@JsonProperty("ErrorCode") String errorCode, @JsonProperty("ErrorMessage") String errorMessage, @JsonProperty("Id") String id) {
+        this.errorCode = errorCode;
+        this.errorMessage = errorMessage;
+        this.id = id;
+  }
 }

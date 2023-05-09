@@ -51,7 +51,7 @@ public class File {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFileResponse res = new org.openapis.openapi.models.operations.GetFileResponse() {{
+        org.openapis.openapi.models.operations.GetFileResponse res = new org.openapis.openapi.models.operations.GetFileResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -69,8 +69,6 @@ public class File {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,7 +168,7 @@ public class File {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFileTagsResponse res = new org.openapis.openapi.models.operations.GetFileTagsResponse() {{
+        org.openapis.openapi.models.operations.GetFileTagsResponse res = new org.openapis.openapi.models.operations.GetFileTagsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -188,8 +186,6 @@ public class File {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,7 +285,7 @@ public class File {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFilesResponse res = new org.openapis.openapi.models.operations.GetFilesResponse() {{
+        org.openapis.openapi.models.operations.GetFilesResponse res = new org.openapis.openapi.models.operations.GetFilesResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -307,8 +303,6 @@ public class File {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -410,7 +404,7 @@ public class File {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UploadFileResponse res = new org.openapis.openapi.models.operations.UploadFileResponse() {{
+        org.openapis.openapi.models.operations.UploadFileResponse res = new org.openapis.openapi.models.operations.UploadFileResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -428,8 +422,6 @@ public class File {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

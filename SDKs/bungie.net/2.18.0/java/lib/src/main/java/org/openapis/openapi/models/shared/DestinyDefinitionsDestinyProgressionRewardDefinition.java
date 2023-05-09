@@ -16,6 +16,7 @@ public class DestinyDefinitionsDestinyProgressionRewardDefinition {
      */
     
     public Integer amount;
+
     public DestinyDefinitionsDestinyProgressionRewardDefinition withAmount(Integer amount) {
         this.amount = amount;
         return this;
@@ -26,6 +27,7 @@ public class DestinyDefinitionsDestinyProgressionRewardDefinition {
      */
     
     public Boolean applyThrottles;
+
     public DestinyDefinitionsDestinyProgressionRewardDefinition withApplyThrottles(Boolean applyThrottles) {
         this.applyThrottles = applyThrottles;
         return this;
@@ -36,9 +38,11 @@ public class DestinyDefinitionsDestinyProgressionRewardDefinition {
      */
     
     public Long progressionMappingHash;
+
     public DestinyDefinitionsDestinyProgressionRewardDefinition withProgressionMappingHash(Long progressionMappingHash) {
         this.progressionMappingHash = progressionMappingHash;
         return this;
     }
     
+    public DestinyDefinitionsDestinyProgressionRewardDefinition(){}
 }

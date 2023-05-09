@@ -12,6 +12,7 @@ public class ListSessionsOfAuthorUsingPOST200ApplicationJSONDataSessions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorID")
     public String authorID;
+
     public ListSessionsOfAuthorUsingPOST200ApplicationJSONDataSessions withAuthorID(String authorID) {
         this.authorID = authorID;
         return this;
@@ -20,6 +21,7 @@ public class ListSessionsOfAuthorUsingPOST200ApplicationJSONDataSessions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupID")
     public String groupID;
+
     public ListSessionsOfAuthorUsingPOST200ApplicationJSONDataSessions withGroupID(String groupID) {
         this.groupID = groupID;
         return this;
@@ -28,6 +30,7 @@ public class ListSessionsOfAuthorUsingPOST200ApplicationJSONDataSessions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ListSessionsOfAuthorUsingPOST200ApplicationJSONDataSessions withId(String id) {
         this.id = id;
         return this;
@@ -36,9 +39,11 @@ public class ListSessionsOfAuthorUsingPOST200ApplicationJSONDataSessions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validUntil")
     public Long validUntil;
+
     public ListSessionsOfAuthorUsingPOST200ApplicationJSONDataSessions withValidUntil(Long validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public ListSessionsOfAuthorUsingPOST200ApplicationJSONDataSessions(){}
 }

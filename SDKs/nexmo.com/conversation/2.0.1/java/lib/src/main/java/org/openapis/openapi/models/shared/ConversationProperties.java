@@ -18,9 +18,11 @@ public class ConversationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public Double ttl;
+
     public ConversationProperties withTtl(Double ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public ConversationProperties(){}
 }

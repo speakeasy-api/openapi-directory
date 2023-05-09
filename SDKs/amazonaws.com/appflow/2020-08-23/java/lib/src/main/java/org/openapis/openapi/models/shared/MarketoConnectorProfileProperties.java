@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MarketoConnectorProfileProperties {
     @JsonProperty("instanceUrl")
     public String instanceUrl;
+
     public MarketoConnectorProfileProperties withInstanceUrl(String instanceUrl) {
         this.instanceUrl = instanceUrl;
         return this;
     }
     
+    public MarketoConnectorProfileProperties(@JsonProperty("instanceUrl") String instanceUrl) {
+        this.instanceUrl = instanceUrl;
+  }
 }

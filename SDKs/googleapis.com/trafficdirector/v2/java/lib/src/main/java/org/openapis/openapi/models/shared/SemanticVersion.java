@@ -15,6 +15,7 @@ public class SemanticVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("majorNumber")
     public Long majorNumber;
+
     public SemanticVersion withMajorNumber(Long majorNumber) {
         this.majorNumber = majorNumber;
         return this;
@@ -23,6 +24,7 @@ public class SemanticVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minorNumber")
     public Long minorNumber;
+
     public SemanticVersion withMinorNumber(Long minorNumber) {
         this.minorNumber = minorNumber;
         return this;
@@ -31,9 +33,11 @@ public class SemanticVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patch")
     public Long patch;
+
     public SemanticVersion withPatch(Long patch) {
         this.patch = patch;
         return this;
     }
     
+    public SemanticVersion(){}
 }

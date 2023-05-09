@@ -18,9 +18,11 @@ public class DefaultSnatStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public DefaultSnatStatus withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
     }
     
+    public DefaultSnatStatus(){}
 }

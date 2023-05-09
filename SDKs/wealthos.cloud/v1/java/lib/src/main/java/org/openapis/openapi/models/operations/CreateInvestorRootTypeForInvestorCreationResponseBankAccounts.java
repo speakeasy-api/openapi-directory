@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CreateInvestorRootTypeForInvestorCreationResponseBankAccounts {
     @JsonProperty("account_name")
     public String accountName;
+
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccounts withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -27,6 +28,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_status")
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccountsAccountStatusEnum accountStatus;
+
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccounts withAccountStatus(CreateInvestorRootTypeForInvestorCreationResponseBankAccountsAccountStatusEnum accountStatus) {
         this.accountStatus = accountStatus;
         return this;
@@ -38,6 +40,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_account_id")
     public String bankAccountId;
+
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccounts withBankAccountId(String bankAccountId) {
         this.bankAccountId = bankAccountId;
         return this;
@@ -48,6 +51,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseBankAccounts {
      */
     @JsonProperty("bank_account_number")
     public String bankAccountNumber;
+
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccounts withBankAccountNumber(String bankAccountNumber) {
         this.bankAccountNumber = bankAccountNumber;
         return this;
@@ -56,6 +60,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("building_society_roll_number")
     public String buildingSocietyRollNumber;
+
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccounts withBuildingSocietyRollNumber(String buildingSocietyRollNumber) {
         this.buildingSocietyRollNumber = buildingSocietyRollNumber;
         return this;
@@ -66,6 +71,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseBankAccounts {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccounts withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -76,6 +82,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseBankAccounts {
      */
     @JsonProperty("default_account")
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccountsDefaultAccountEnum defaultAccount;
+
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccounts withDefaultAccount(CreateInvestorRootTypeForInvestorCreationResponseBankAccountsDefaultAccountEnum defaultAccount) {
         this.defaultAccount = defaultAccount;
         return this;
@@ -87,6 +94,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_message")
     public String errorMessage;
+
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccounts withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -94,6 +102,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseBankAccounts {
     
     @JsonProperty("investor_id")
     public String investorId;
+
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccounts withInvestorId(String investorId) {
         this.investorId = investorId;
         return this;
@@ -102,6 +111,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_version")
     public Long referenceVersion;
+
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccounts withReferenceVersion(Long referenceVersion) {
         this.referenceVersion = referenceVersion;
         return this;
@@ -110,6 +120,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort_code")
     public String sortCode;
+
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccounts withSortCode(String sortCode) {
         this.sortCode = sortCode;
         return this;
@@ -118,6 +129,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccountsStatusEnum status;
+
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccounts withStatus(CreateInvestorRootTypeForInvestorCreationResponseBankAccountsStatusEnum status) {
         this.status = status;
         return this;
@@ -128,9 +140,16 @@ public class CreateInvestorRootTypeForInvestorCreationResponseBankAccounts {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccounts withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public CreateInvestorRootTypeForInvestorCreationResponseBankAccounts(@JsonProperty("account_name") String accountName, @JsonProperty("bank_account_number") String bankAccountNumber, @JsonProperty("default_account") CreateInvestorRootTypeForInvestorCreationResponseBankAccountsDefaultAccountEnum defaultAccount, @JsonProperty("investor_id") String investorId) {
+        this.accountName = accountName;
+        this.bankAccountNumber = bankAccountNumber;
+        this.defaultAccount = defaultAccount;
+        this.investorId = investorId;
+  }
 }

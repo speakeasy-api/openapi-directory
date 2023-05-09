@@ -15,9 +15,11 @@ public class ExportingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Exporting")
     public S3ExportingConfig s3Exporting;
+
     public ExportingConfig withS3Exporting(S3ExportingConfig s3Exporting) {
         this.s3Exporting = s3Exporting;
         return this;
     }
     
+    public ExportingConfig(){}
 }

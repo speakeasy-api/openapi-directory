@@ -15,6 +15,7 @@ public class PostFirewallsCreateFirewallResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public PostFirewallsCreateFirewallResponseAction[] actions;
+
     public PostFirewallsCreateFirewallResponse withActions(PostFirewallsCreateFirewallResponseAction[] actions) {
         this.actions = actions;
         return this;
@@ -23,9 +24,11 @@ public class PostFirewallsCreateFirewallResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewall")
     public PostFirewallsCreateFirewallResponseFirewall firewall;
+
     public PostFirewallsCreateFirewallResponse withFirewall(PostFirewallsCreateFirewallResponseFirewall firewall) {
         this.firewall = firewall;
         return this;
     }
     
+    public PostFirewallsCreateFirewallResponse(){}
 }

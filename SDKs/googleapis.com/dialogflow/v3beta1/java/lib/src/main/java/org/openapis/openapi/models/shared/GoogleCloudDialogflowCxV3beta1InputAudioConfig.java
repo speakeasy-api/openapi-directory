@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioEncoding")
     public GoogleCloudDialogflowCxV3beta1InputAudioConfigAudioEncodingEnum audioEncoding;
+
     public GoogleCloudDialogflowCxV3beta1InputAudioConfig withAudioEncoding(GoogleCloudDialogflowCxV3beta1InputAudioConfigAudioEncodingEnum audioEncoding) {
         this.audioEncoding = audioEncoding;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableWordInfo")
     public Boolean enableWordInfo;
+
     public GoogleCloudDialogflowCxV3beta1InputAudioConfig withEnableWordInfo(Boolean enableWordInfo) {
         this.enableWordInfo = enableWordInfo;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public GoogleCloudDialogflowCxV3beta1InputAudioConfig withModel(String model) {
         this.model = model;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelVariant")
     public GoogleCloudDialogflowCxV3beta1InputAudioConfigModelVariantEnum modelVariant;
+
     public GoogleCloudDialogflowCxV3beta1InputAudioConfig withModelVariant(GoogleCloudDialogflowCxV3beta1InputAudioConfigModelVariantEnum modelVariant) {
         this.modelVariant = modelVariant;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phraseHints")
     public String[] phraseHints;
+
     public GoogleCloudDialogflowCxV3beta1InputAudioConfig withPhraseHints(String[] phraseHints) {
         this.phraseHints = phraseHints;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowCxV3beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleRateHertz")
     public Integer sampleRateHertz;
+
     public GoogleCloudDialogflowCxV3beta1InputAudioConfig withSampleRateHertz(Integer sampleRateHertz) {
         this.sampleRateHertz = sampleRateHertz;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDialogflowCxV3beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("singleUtterance")
     public Boolean singleUtterance;
+
     public GoogleCloudDialogflowCxV3beta1InputAudioConfig withSingleUtterance(Boolean singleUtterance) {
         this.singleUtterance = singleUtterance;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1InputAudioConfig(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTagsResponse {
@@ -12,6 +13,7 @@ public class ListTagsResponse {
      */
     
     public Object cloudHsmAccessDeniedException;
+
     public ListTagsResponse withCloudHsmAccessDeniedException(Object cloudHsmAccessDeniedException) {
         this.cloudHsmAccessDeniedException = cloudHsmAccessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListTagsResponse {
      */
     
     public Object cloudHsmInternalFailureException;
+
     public ListTagsResponse withCloudHsmInternalFailureException(Object cloudHsmInternalFailureException) {
         this.cloudHsmInternalFailureException = cloudHsmInternalFailureException;
         return this;
@@ -32,6 +35,7 @@ public class ListTagsResponse {
      */
     
     public Object cloudHsmInvalidRequestException;
+
     public ListTagsResponse withCloudHsmInvalidRequestException(Object cloudHsmInvalidRequestException) {
         this.cloudHsmInvalidRequestException = cloudHsmInvalidRequestException;
         return this;
@@ -42,6 +46,7 @@ public class ListTagsResponse {
      */
     
     public Object cloudHsmResourceNotFoundException;
+
     public ListTagsResponse withCloudHsmResourceNotFoundException(Object cloudHsmResourceNotFoundException) {
         this.cloudHsmResourceNotFoundException = cloudHsmResourceNotFoundException;
         return this;
@@ -52,6 +57,7 @@ public class ListTagsResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public ListTagsResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -62,6 +68,7 @@ public class ListTagsResponse {
      */
     
     public Object cloudHsmTagException;
+
     public ListTagsResponse withCloudHsmTagException(Object cloudHsmTagException) {
         this.cloudHsmTagException = cloudHsmTagException;
         return this;
@@ -69,6 +76,7 @@ public class ListTagsResponse {
     
     
     public String contentType;
+
     public ListTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -79,6 +87,7 @@ public class ListTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTagsResponse listTagsResponse;
+
     public ListTagsResponse withListTagsResponse(org.openapis.openapi.models.shared.ListTagsResponse listTagsResponse) {
         this.listTagsResponse = listTagsResponse;
         return this;
@@ -86,6 +95,7 @@ public class ListTagsResponse {
     
     
     public Integer statusCode;
+
     public ListTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class ListTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

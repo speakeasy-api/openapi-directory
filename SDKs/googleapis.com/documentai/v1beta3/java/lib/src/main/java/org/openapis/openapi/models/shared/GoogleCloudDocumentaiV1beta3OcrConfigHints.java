@@ -18,9 +18,11 @@ public class GoogleCloudDocumentaiV1beta3OcrConfigHints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageHints")
     public String[] languageHints;
+
     public GoogleCloudDocumentaiV1beta3OcrConfigHints withLanguageHints(String[] languageHints) {
         this.languageHints = languageHints;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3OcrConfigHints(){}
 }

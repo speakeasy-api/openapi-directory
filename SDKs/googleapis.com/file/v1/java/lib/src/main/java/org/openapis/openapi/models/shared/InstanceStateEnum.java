@@ -19,7 +19,8 @@ public enum InstanceStateEnum {
     RESTORING("RESTORING"),
     SUSPENDED("SUSPENDED"),
     SUSPENDING("SUSPENDING"),
-    RESUMING("RESUMING");
+    RESUMING("RESUMING"),
+    REVERTING("REVERTING");
 
     @JsonValue
     public final String value;

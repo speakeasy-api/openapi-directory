@@ -18,6 +18,7 @@ public class CropPropertiesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("angleSuggested")
     public Boolean angleSuggested;
+
     public CropPropertiesSuggestionState withAngleSuggested(Boolean angleSuggested) {
         this.angleSuggested = angleSuggested;
         return this;
@@ -29,6 +30,7 @@ public class CropPropertiesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetBottomSuggested")
     public Boolean offsetBottomSuggested;
+
     public CropPropertiesSuggestionState withOffsetBottomSuggested(Boolean offsetBottomSuggested) {
         this.offsetBottomSuggested = offsetBottomSuggested;
         return this;
@@ -40,6 +42,7 @@ public class CropPropertiesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetLeftSuggested")
     public Boolean offsetLeftSuggested;
+
     public CropPropertiesSuggestionState withOffsetLeftSuggested(Boolean offsetLeftSuggested) {
         this.offsetLeftSuggested = offsetLeftSuggested;
         return this;
@@ -51,6 +54,7 @@ public class CropPropertiesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetRightSuggested")
     public Boolean offsetRightSuggested;
+
     public CropPropertiesSuggestionState withOffsetRightSuggested(Boolean offsetRightSuggested) {
         this.offsetRightSuggested = offsetRightSuggested;
         return this;
@@ -62,9 +66,11 @@ public class CropPropertiesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetTopSuggested")
     public Boolean offsetTopSuggested;
+
     public CropPropertiesSuggestionState withOffsetTopSuggested(Boolean offsetTopSuggested) {
         this.offsetTopSuggested = offsetTopSuggested;
         return this;
     }
     
+    public CropPropertiesSuggestionState(){}
 }

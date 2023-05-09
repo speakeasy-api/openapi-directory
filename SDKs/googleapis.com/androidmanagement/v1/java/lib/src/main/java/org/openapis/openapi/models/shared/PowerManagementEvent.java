@@ -18,6 +18,7 @@ public class PowerManagementEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batteryLevel")
     public Float batteryLevel;
+
     public PowerManagementEvent withBatteryLevel(Float batteryLevel) {
         this.batteryLevel = batteryLevel;
         return this;
@@ -29,6 +30,7 @@ public class PowerManagementEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public PowerManagementEvent withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,9 +42,11 @@ public class PowerManagementEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public PowerManagementEventEventTypeEnum eventType;
+
     public PowerManagementEvent withEventType(PowerManagementEventEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
     }
     
+    public PowerManagementEvent(){}
 }

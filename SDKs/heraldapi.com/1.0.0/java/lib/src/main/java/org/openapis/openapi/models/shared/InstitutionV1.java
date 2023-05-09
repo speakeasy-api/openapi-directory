@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InstitutionV1 {
     @JsonProperty("id")
     public String id;
+
     public InstitutionV1 withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class InstitutionV1 {
     
     @JsonProperty("name")
     public String name;
+
     public InstitutionV1 withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InstitutionV1(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTCheckDNSAvailabilityResponse {
     
     public byte[] body;
+
     public POSTCheckDNSAvailabilityResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTCheckDNSAvailabilityResponse {
     
     
     public String contentType;
+
     public POSTCheckDNSAvailabilityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTCheckDNSAvailabilityResponse {
     
     
     public Integer statusCode;
+
     public POSTCheckDNSAvailabilityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTCheckDNSAvailabilityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTCheckDNSAvailabilityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTCheckDNSAvailabilityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

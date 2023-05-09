@@ -15,6 +15,7 @@ public class NewBGPPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressFamily")
     public AddressFamilyEnum addressFamily;
+
     public NewBGPPeer withAddressFamily(AddressFamilyEnum addressFamily) {
         this.addressFamily = addressFamily;
         return this;
@@ -23,6 +24,7 @@ public class NewBGPPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amazonAddress")
     public String amazonAddress;
+
     public NewBGPPeer withAmazonAddress(String amazonAddress) {
         this.amazonAddress = amazonAddress;
         return this;
@@ -31,6 +33,7 @@ public class NewBGPPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asn")
     public Long asn;
+
     public NewBGPPeer withAsn(Long asn) {
         this.asn = asn;
         return this;
@@ -39,6 +42,7 @@ public class NewBGPPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authKey")
     public String authKey;
+
     public NewBGPPeer withAuthKey(String authKey) {
         this.authKey = authKey;
         return this;
@@ -47,9 +51,11 @@ public class NewBGPPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerAddress")
     public String customerAddress;
+
     public NewBGPPeer withCustomerAddress(String customerAddress) {
         this.customerAddress = customerAddress;
         return this;
     }
     
+    public NewBGPPeer(){}
 }

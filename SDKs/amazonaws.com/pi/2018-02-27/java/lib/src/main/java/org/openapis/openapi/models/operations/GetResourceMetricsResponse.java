@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourceMetricsResponse {
     
     public String contentType;
+
     public GetResourceMetricsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetResourceMetricsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResourceMetricsResponse getResourceMetricsResponse;
+
     public GetResourceMetricsResponse withGetResourceMetricsResponse(org.openapis.openapi.models.shared.GetResourceMetricsResponse getResourceMetricsResponse) {
         this.getResourceMetricsResponse = getResourceMetricsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetResourceMetricsResponse {
      */
     
     public Object internalServiceError;
+
     public GetResourceMetricsResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class GetResourceMetricsResponse {
      */
     
     public Object invalidArgumentException;
+
     public GetResourceMetricsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class GetResourceMetricsResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetResourceMetricsResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class GetResourceMetricsResponse {
     
     
     public Integer statusCode;
+
     public GetResourceMetricsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetResourceMetricsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourceMetricsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetResourceMetricsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

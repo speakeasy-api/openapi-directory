@@ -20,6 +20,7 @@ public class CalculateRouteMatrixRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CarModeOptions")
     public CalculateRouteMatrixRequestBodyCarModeOptions carModeOptions;
+
     public CalculateRouteMatrixRequestBody withCarModeOptions(CalculateRouteMatrixRequestBodyCarModeOptions carModeOptions) {
         this.carModeOptions = carModeOptions;
         return this;
@@ -31,6 +32,7 @@ public class CalculateRouteMatrixRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DepartNow")
     public Boolean departNow;
+
     public CalculateRouteMatrixRequestBody withDepartNow(Boolean departNow) {
         this.departNow = departNow;
         return this;
@@ -41,6 +43,7 @@ public class CalculateRouteMatrixRequestBody {
      */
     @JsonProperty("DeparturePositions")
     public Double[][] departurePositions;
+
     public CalculateRouteMatrixRequestBody withDeparturePositions(Double[][] departurePositions) {
         this.departurePositions = departurePositions;
         return this;
@@ -54,6 +57,7 @@ public class CalculateRouteMatrixRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DepartureTime")
     public OffsetDateTime departureTime;
+
     public CalculateRouteMatrixRequestBody withDepartureTime(OffsetDateTime departureTime) {
         this.departureTime = departureTime;
         return this;
@@ -64,6 +68,7 @@ public class CalculateRouteMatrixRequestBody {
      */
     @JsonProperty("DestinationPositions")
     public Double[][] destinationPositions;
+
     public CalculateRouteMatrixRequestBody withDestinationPositions(Double[][] destinationPositions) {
         this.destinationPositions = destinationPositions;
         return this;
@@ -75,6 +80,7 @@ public class CalculateRouteMatrixRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DistanceUnit")
     public CalculateRouteMatrixRequestBodyDistanceUnitEnum distanceUnit;
+
     public CalculateRouteMatrixRequestBody withDistanceUnit(CalculateRouteMatrixRequestBodyDistanceUnitEnum distanceUnit) {
         this.distanceUnit = distanceUnit;
         return this;
@@ -86,6 +92,7 @@ public class CalculateRouteMatrixRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TravelMode")
     public CalculateRouteMatrixRequestBodyTravelModeEnum travelMode;
+
     public CalculateRouteMatrixRequestBody withTravelMode(CalculateRouteMatrixRequestBodyTravelModeEnum travelMode) {
         this.travelMode = travelMode;
         return this;
@@ -97,9 +104,14 @@ public class CalculateRouteMatrixRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TruckModeOptions")
     public CalculateRouteMatrixRequestBodyTruckModeOptions truckModeOptions;
+
     public CalculateRouteMatrixRequestBody withTruckModeOptions(CalculateRouteMatrixRequestBodyTruckModeOptions truckModeOptions) {
         this.truckModeOptions = truckModeOptions;
         return this;
     }
     
+    public CalculateRouteMatrixRequestBody(@JsonProperty("DeparturePositions") Double[][] departurePositions, @JsonProperty("DestinationPositions") Double[][] destinationPositions) {
+        this.departurePositions = departurePositions;
+        this.destinationPositions = destinationPositions;
+  }
 }

@@ -15,9 +15,11 @@ public class TransferDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public TransferDomainResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public TransferDomainResponse(){}
 }

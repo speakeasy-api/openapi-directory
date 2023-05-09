@@ -3,22 +3,20 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DeleteChargeStationRequest;
 import org.openapis.openapi.models.operations.DeleteChargeStationResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 
-            DeleteChargeStationRequest req = new DeleteChargeStationRequest() {{
-                id = "corrupti";
-            }}            
+            DeleteChargeStationRequest req = new DeleteChargeStationRequest("provident");            
 
             DeleteChargeStationResponse res = sdk.chargeStations.deleteChargeStation(req);
 
@@ -28,5 +26,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

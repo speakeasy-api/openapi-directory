@@ -18,6 +18,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availablePackage")
     public SoftwarePackage availablePackage;
+
     public Item withAvailablePackage(SoftwarePackage availablePackage) {
         this.availablePackage = availablePackage;
         return this;
@@ -29,6 +30,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Item withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Item withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installedPackage")
     public SoftwarePackage installedPackage;
+
     public Item withInstalledPackage(SoftwarePackage installedPackage) {
         this.installedPackage = installedPackage;
         return this;
@@ -62,6 +66,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originType")
     public ItemOriginTypeEnum originType;
+
     public Item withOriginType(ItemOriginTypeEnum originType) {
         this.originType = originType;
         return this;
@@ -73,6 +78,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ItemTypeEnum type;
+
     public Item withType(ItemTypeEnum type) {
         this.type = type;
         return this;
@@ -84,9 +90,11 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Item withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Item(){}
 }

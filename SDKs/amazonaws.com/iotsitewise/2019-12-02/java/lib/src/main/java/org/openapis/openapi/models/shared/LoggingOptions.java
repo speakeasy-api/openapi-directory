@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LoggingOptions {
     @JsonProperty("level")
     public LoggingLevelEnum level;
+
     public LoggingOptions withLevel(LoggingLevelEnum level) {
         this.level = level;
         return this;
     }
     
+    public LoggingOptions(@JsonProperty("level") LoggingLevelEnum level) {
+        this.level = level;
+  }
 }

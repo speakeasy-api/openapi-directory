@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyClusterMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyClusterMessage {
     
     public Boolean allowVersionUpgrade;
+
     public ModifyClusterMessage withAllowVersionUpgrade(Boolean allowVersionUpgrade) {
         this.allowVersionUpgrade = allowVersionUpgrade;
         return this;
@@ -19,6 +20,7 @@ public class ModifyClusterMessage {
     
     
     public Long automatedSnapshotRetentionPeriod;
+
     public ModifyClusterMessage withAutomatedSnapshotRetentionPeriod(Long automatedSnapshotRetentionPeriod) {
         this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
         return this;
@@ -26,6 +28,7 @@ public class ModifyClusterMessage {
     
     
     public String availabilityZone;
+
     public ModifyClusterMessage withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -33,6 +36,7 @@ public class ModifyClusterMessage {
     
     
     public Boolean availabilityZoneRelocation;
+
     public ModifyClusterMessage withAvailabilityZoneRelocation(Boolean availabilityZoneRelocation) {
         this.availabilityZoneRelocation = availabilityZoneRelocation;
         return this;
@@ -40,6 +44,7 @@ public class ModifyClusterMessage {
     
     
     public String clusterIdentifier;
+
     public ModifyClusterMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -47,6 +52,7 @@ public class ModifyClusterMessage {
     
     
     public String clusterParameterGroupName;
+
     public ModifyClusterMessage withClusterParameterGroupName(String clusterParameterGroupName) {
         this.clusterParameterGroupName = clusterParameterGroupName;
         return this;
@@ -54,6 +60,7 @@ public class ModifyClusterMessage {
     
     
     public String[] clusterSecurityGroups;
+
     public ModifyClusterMessage withClusterSecurityGroups(String[] clusterSecurityGroups) {
         this.clusterSecurityGroups = clusterSecurityGroups;
         return this;
@@ -61,6 +68,7 @@ public class ModifyClusterMessage {
     
     
     public String clusterType;
+
     public ModifyClusterMessage withClusterType(String clusterType) {
         this.clusterType = clusterType;
         return this;
@@ -68,6 +76,7 @@ public class ModifyClusterMessage {
     
     
     public String clusterVersion;
+
     public ModifyClusterMessage withClusterVersion(String clusterVersion) {
         this.clusterVersion = clusterVersion;
         return this;
@@ -75,6 +84,7 @@ public class ModifyClusterMessage {
     
     
     public String elasticIp;
+
     public ModifyClusterMessage withElasticIp(String elasticIp) {
         this.elasticIp = elasticIp;
         return this;
@@ -82,6 +92,7 @@ public class ModifyClusterMessage {
     
     
     public Boolean encrypted;
+
     public ModifyClusterMessage withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -89,6 +100,7 @@ public class ModifyClusterMessage {
     
     
     public Boolean enhancedVpcRouting;
+
     public ModifyClusterMessage withEnhancedVpcRouting(Boolean enhancedVpcRouting) {
         this.enhancedVpcRouting = enhancedVpcRouting;
         return this;
@@ -96,6 +108,7 @@ public class ModifyClusterMessage {
     
     
     public String hsmClientCertificateIdentifier;
+
     public ModifyClusterMessage withHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
         this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
         return this;
@@ -103,6 +116,7 @@ public class ModifyClusterMessage {
     
     
     public String hsmConfigurationIdentifier;
+
     public ModifyClusterMessage withHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
         this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
         return this;
@@ -110,6 +124,7 @@ public class ModifyClusterMessage {
     
     
     public String kmsKeyId;
+
     public ModifyClusterMessage withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -117,6 +132,7 @@ public class ModifyClusterMessage {
     
     
     public String maintenanceTrackName;
+
     public ModifyClusterMessage withMaintenanceTrackName(String maintenanceTrackName) {
         this.maintenanceTrackName = maintenanceTrackName;
         return this;
@@ -124,6 +140,7 @@ public class ModifyClusterMessage {
     
     
     public Long manualSnapshotRetentionPeriod;
+
     public ModifyClusterMessage withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
         this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
         return this;
@@ -131,6 +148,7 @@ public class ModifyClusterMessage {
     
     
     public String masterUserPassword;
+
     public ModifyClusterMessage withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -138,6 +156,7 @@ public class ModifyClusterMessage {
     
     
     public String newClusterIdentifier;
+
     public ModifyClusterMessage withNewClusterIdentifier(String newClusterIdentifier) {
         this.newClusterIdentifier = newClusterIdentifier;
         return this;
@@ -145,6 +164,7 @@ public class ModifyClusterMessage {
     
     
     public String nodeType;
+
     public ModifyClusterMessage withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -152,6 +172,7 @@ public class ModifyClusterMessage {
     
     
     public Long numberOfNodes;
+
     public ModifyClusterMessage withNumberOfNodes(Long numberOfNodes) {
         this.numberOfNodes = numberOfNodes;
         return this;
@@ -159,6 +180,7 @@ public class ModifyClusterMessage {
     
     
     public Long port;
+
     public ModifyClusterMessage withPort(Long port) {
         this.port = port;
         return this;
@@ -166,6 +188,7 @@ public class ModifyClusterMessage {
     
     
     public String preferredMaintenanceWindow;
+
     public ModifyClusterMessage withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -173,6 +196,7 @@ public class ModifyClusterMessage {
     
     
     public Boolean publiclyAccessible;
+
     public ModifyClusterMessage withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -180,9 +204,13 @@ public class ModifyClusterMessage {
     
     
     public String[] vpcSecurityGroupIds;
+
     public ModifyClusterMessage withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public ModifyClusterMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+  }
 }

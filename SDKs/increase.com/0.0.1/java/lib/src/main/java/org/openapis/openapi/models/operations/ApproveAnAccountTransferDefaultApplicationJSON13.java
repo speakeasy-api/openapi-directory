@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApproveAnAccountTransferDefaultApplicationJSON13 {
     @JsonProperty("detail")
     public String detail;
+
     public ApproveAnAccountTransferDefaultApplicationJSON13 withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -19,6 +20,7 @@ public class ApproveAnAccountTransferDefaultApplicationJSON13 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retry_after")
     public Long retryAfter;
+
     public ApproveAnAccountTransferDefaultApplicationJSON13 withRetryAfter(Long retryAfter) {
         this.retryAfter = retryAfter;
         return this;
@@ -26,6 +28,7 @@ public class ApproveAnAccountTransferDefaultApplicationJSON13 {
     
     @JsonProperty("status")
     public ApproveAnAccountTransferDefaultApplicationJSON13StatusEnum status;
+
     public ApproveAnAccountTransferDefaultApplicationJSON13 withStatus(ApproveAnAccountTransferDefaultApplicationJSON13StatusEnum status) {
         this.status = status;
         return this;
@@ -33,6 +36,7 @@ public class ApproveAnAccountTransferDefaultApplicationJSON13 {
     
     @JsonProperty("title")
     public String title;
+
     public ApproveAnAccountTransferDefaultApplicationJSON13 withTitle(String title) {
         this.title = title;
         return this;
@@ -40,9 +44,16 @@ public class ApproveAnAccountTransferDefaultApplicationJSON13 {
     
     @JsonProperty("type")
     public ApproveAnAccountTransferDefaultApplicationJSON13TypeEnum type;
+
     public ApproveAnAccountTransferDefaultApplicationJSON13 withType(ApproveAnAccountTransferDefaultApplicationJSON13TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ApproveAnAccountTransferDefaultApplicationJSON13(@JsonProperty("detail") String detail, @JsonProperty("status") ApproveAnAccountTransferDefaultApplicationJSON13StatusEnum status, @JsonProperty("title") String title, @JsonProperty("type") ApproveAnAccountTransferDefaultApplicationJSON13TypeEnum type) {
+        this.detail = detail;
+        this.status = status;
+        this.title = title;
+        this.type = type;
+  }
 }

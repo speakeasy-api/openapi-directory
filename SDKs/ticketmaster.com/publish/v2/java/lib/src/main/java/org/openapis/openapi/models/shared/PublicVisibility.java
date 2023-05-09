@@ -25,6 +25,7 @@ public class PublicVisibility {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDateTime")
     public OffsetDateTime endDateTime;
+
     public PublicVisibility withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -38,6 +39,7 @@ public class PublicVisibility {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDateTime")
     public OffsetDateTime startDateTime;
+
     public PublicVisibility withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -49,9 +51,11 @@ public class PublicVisibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visible")
     public Boolean visible;
+
     public PublicVisibility withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public PublicVisibility(){}
 }

@@ -20,6 +20,7 @@ public class ContextSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContextArn")
     public String contextArn;
+
     public ContextSummary withContextArn(String contextArn) {
         this.contextArn = contextArn;
         return this;
@@ -28,6 +29,7 @@ public class ContextSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContextName")
     public String contextName;
+
     public ContextSummary withContextName(String contextName) {
         this.contextName = contextName;
         return this;
@@ -36,6 +38,7 @@ public class ContextSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContextType")
     public String contextType;
+
     public ContextSummary withContextType(String contextType) {
         this.contextType = contextType;
         return this;
@@ -46,6 +49,7 @@ public class ContextSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ContextSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -56,6 +60,7 @@ public class ContextSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public ContextSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -64,9 +69,11 @@ public class ContextSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public ContextSource source;
+
     public ContextSummary withSource(ContextSource source) {
         this.source = source;
         return this;
     }
     
+    public ContextSummary(){}
 }

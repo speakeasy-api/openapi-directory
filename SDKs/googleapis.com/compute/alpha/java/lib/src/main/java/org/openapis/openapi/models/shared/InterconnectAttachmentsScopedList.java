@@ -15,6 +15,7 @@ public class InterconnectAttachmentsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interconnectAttachments")
     public InterconnectAttachment[] interconnectAttachments;
+
     public InterconnectAttachmentsScopedList withInterconnectAttachments(InterconnectAttachment[] interconnectAttachments) {
         this.interconnectAttachments = interconnectAttachments;
         return this;
@@ -26,9 +27,11 @@ public class InterconnectAttachmentsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public InterconnectAttachmentsScopedListWarning warning;
+
     public InterconnectAttachmentsScopedList withWarning(InterconnectAttachmentsScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public InterconnectAttachmentsScopedList(){}
 }

@@ -15,6 +15,7 @@ public class ListProvisioningArtifactsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListProvisioningArtifactsOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class ListProvisioningArtifactsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactDetails")
     public ProvisioningArtifactDetail[] provisioningArtifactDetails;
+
     public ListProvisioningArtifactsOutput withProvisioningArtifactDetails(ProvisioningArtifactDetail[] provisioningArtifactDetails) {
         this.provisioningArtifactDetails = provisioningArtifactDetails;
         return this;
     }
     
+    public ListProvisioningArtifactsOutput(){}
 }

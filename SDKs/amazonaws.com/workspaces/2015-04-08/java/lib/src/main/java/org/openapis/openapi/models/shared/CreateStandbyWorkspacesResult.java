@@ -15,6 +15,7 @@ public class CreateStandbyWorkspacesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedStandbyRequests")
     public FailedCreateStandbyWorkspacesRequest[] failedStandbyRequests;
+
     public CreateStandbyWorkspacesResult withFailedStandbyRequests(FailedCreateStandbyWorkspacesRequest[] failedStandbyRequests) {
         this.failedStandbyRequests = failedStandbyRequests;
         return this;
@@ -23,9 +24,11 @@ public class CreateStandbyWorkspacesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PendingStandbyRequests")
     public PendingCreateStandbyWorkspacesRequest[] pendingStandbyRequests;
+
     public CreateStandbyWorkspacesResult withPendingStandbyRequests(PendingCreateStandbyWorkspacesRequest[] pendingStandbyRequests) {
         this.pendingStandbyRequests = pendingStandbyRequests;
         return this;
     }
     
+    public CreateStandbyWorkspacesResult(){}
 }

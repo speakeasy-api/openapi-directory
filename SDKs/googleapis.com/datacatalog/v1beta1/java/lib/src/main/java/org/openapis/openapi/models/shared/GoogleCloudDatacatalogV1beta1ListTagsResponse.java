@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1beta1ListTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatacatalogV1beta1ListTagsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogV1beta1ListTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public GoogleCloudDatacatalogV1beta1Tag[] tags;
+
     public GoogleCloudDatacatalogV1beta1ListTagsResponse withTags(GoogleCloudDatacatalogV1beta1Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1ListTagsResponse(){}
 }

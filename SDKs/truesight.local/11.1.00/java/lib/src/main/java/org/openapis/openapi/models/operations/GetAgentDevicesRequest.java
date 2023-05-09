@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAgentDevicesRequest {
@@ -12,9 +13,13 @@ public class GetAgentDevicesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
     public Integer deviceId;
+
     public GetAgentDevicesRequest withDeviceId(Integer deviceId) {
         this.deviceId = deviceId;
         return this;
     }
     
+    public GetAgentDevicesRequest(@JsonProperty("deviceId") Integer deviceId) {
+        this.deviceId = deviceId;
+  }
 }

@@ -12,6 +12,7 @@ public class ListExecutionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapRunArn")
     public String mapRunArn;
+
     public ListExecutionsInput withMapRunArn(String mapRunArn) {
         this.mapRunArn = mapRunArn;
         return this;
@@ -20,6 +21,7 @@ public class ListExecutionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListExecutionsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListExecutionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListExecutionsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ListExecutionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateMachineArn")
     public String stateMachineArn;
+
     public ListExecutionsInput withStateMachineArn(String stateMachineArn) {
         this.stateMachineArn = stateMachineArn;
         return this;
@@ -44,9 +48,11 @@ public class ListExecutionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusFilter")
     public ExecutionStatusEnum statusFilter;
+
     public ListExecutionsInput withStatusFilter(ExecutionStatusEnum statusFilter) {
         this.statusFilter = statusFilter;
         return this;
     }
     
+    public ListExecutionsInput(){}
 }

@@ -12,6 +12,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interest_accrual_basis")
     public String interestAccrualBasis;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInterestPreferences withInterestAccrualBasis(String interestAccrualBasis) {
         this.interestAccrualBasis = interestAccrualBasis;
         return this;
@@ -20,6 +21,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interest_payment_frequency")
     public String interestPaymentFrequency;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInterestPreferences withInterestPaymentFrequency(String interestPaymentFrequency) {
         this.interestPaymentFrequency = interestPaymentFrequency;
         return this;
@@ -28,9 +30,11 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pay_interest")
     public String payInterest;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInterestPreferences withPayInterest(String payInterest) {
         this.payInterest = payInterest;
         return this;
     }
     
+    public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInterestPreferences(){}
 }

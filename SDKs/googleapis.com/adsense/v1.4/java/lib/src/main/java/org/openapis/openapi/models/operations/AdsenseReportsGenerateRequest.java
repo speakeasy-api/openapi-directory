@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsenseReportsGenerateRequest {
@@ -12,6 +13,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountId")
     public String[] accountId;
+
     public AdsenseReportsGenerateRequest withAccountId(String[] accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdsenseReportsGenerateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -32,6 +35,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
     public String currency;
+
     public AdsenseReportsGenerateRequest withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -42,6 +46,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dimension")
     public String[] dimension;
+
     public AdsenseReportsGenerateRequest withDimension(String[] dimension) {
         this.dimension = dimension;
         return this;
@@ -52,6 +57,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public String endDate;
+
     public AdsenseReportsGenerateRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -62,6 +68,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdsenseReportsGenerateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String[] filter;
+
     public AdsenseReportsGenerateRequest withFilter(String[] filter) {
         this.filter = filter;
         return this;
@@ -82,6 +90,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdsenseReportsGenerateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public AdsenseReportsGenerateRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -102,6 +112,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public AdsenseReportsGenerateRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -112,6 +123,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metric")
     public String[] metric;
+
     public AdsenseReportsGenerateRequest withMetric(String[] metric) {
         this.metric = metric;
         return this;
@@ -122,6 +134,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdsenseReportsGenerateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -132,6 +145,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdsenseReportsGenerateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +156,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdsenseReportsGenerateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String[] sort;
+
     public AdsenseReportsGenerateRequest withSort(String[] sort) {
         this.sort = sort;
         return this;
@@ -162,6 +178,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public String startDate;
+
     public AdsenseReportsGenerateRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -172,6 +189,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public Long startIndex;
+
     public AdsenseReportsGenerateRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -182,6 +200,7 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useTimezoneReporting")
     public Boolean useTimezoneReporting;
+
     public AdsenseReportsGenerateRequest withUseTimezoneReporting(Boolean useTimezoneReporting) {
         this.useTimezoneReporting = useTimezoneReporting;
         return this;
@@ -192,9 +211,14 @@ public class AdsenseReportsGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdsenseReportsGenerateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdsenseReportsGenerateRequest(@JsonProperty("endDate") String endDate, @JsonProperty("startDate") String startDate) {
+        this.endDate = endDate;
+        this.startDate = startDate;
+  }
 }

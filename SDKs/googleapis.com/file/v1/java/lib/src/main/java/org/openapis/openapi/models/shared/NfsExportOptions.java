@@ -18,6 +18,7 @@ public class NfsExportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessMode")
     public NfsExportOptionsAccessModeEnum accessMode;
+
     public NfsExportOptions withAccessMode(NfsExportOptionsAccessModeEnum accessMode) {
         this.accessMode = accessMode;
         return this;
@@ -29,6 +30,7 @@ public class NfsExportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("anonGid")
     public String anonGid;
+
     public NfsExportOptions withAnonGid(String anonGid) {
         this.anonGid = anonGid;
         return this;
@@ -40,6 +42,7 @@ public class NfsExportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("anonUid")
     public String anonUid;
+
     public NfsExportOptions withAnonUid(String anonUid) {
         this.anonUid = anonUid;
         return this;
@@ -51,6 +54,7 @@ public class NfsExportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipRanges")
     public String[] ipRanges;
+
     public NfsExportOptions withIpRanges(String[] ipRanges) {
         this.ipRanges = ipRanges;
         return this;
@@ -62,9 +66,11 @@ public class NfsExportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("squashMode")
     public NfsExportOptionsSquashModeEnum squashMode;
+
     public NfsExportOptions withSquashMode(NfsExportOptionsSquashModeEnum squashMode) {
         this.squashMode = squashMode;
         return this;
     }
     
+    public NfsExportOptions(){}
 }

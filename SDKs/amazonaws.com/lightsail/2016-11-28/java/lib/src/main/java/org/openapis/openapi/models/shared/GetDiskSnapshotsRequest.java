@@ -12,9 +12,11 @@ public class GetDiskSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetDiskSnapshotsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public GetDiskSnapshotsRequest(){}
 }

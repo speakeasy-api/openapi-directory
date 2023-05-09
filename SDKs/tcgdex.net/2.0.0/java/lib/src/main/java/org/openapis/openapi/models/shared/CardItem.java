@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CardItem {
     @JsonProperty("effect")
     public String effect;
+
     public CardItem withEffect(String effect) {
         this.effect = effect;
         return this;
@@ -16,9 +17,14 @@ public class CardItem {
     
     @JsonProperty("name")
     public String name;
+
     public CardItem withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CardItem(@JsonProperty("effect") String effect, @JsonProperty("name") String name) {
+        this.effect = effect;
+        this.name = name;
+  }
 }

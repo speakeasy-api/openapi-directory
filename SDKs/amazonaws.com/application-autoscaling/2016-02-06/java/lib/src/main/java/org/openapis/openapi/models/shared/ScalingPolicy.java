@@ -20,6 +20,7 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Alarms")
     public Alarm[] alarms;
+
     public ScalingPolicy withAlarms(Alarm[] alarms) {
         this.alarms = alarms;
         return this;
@@ -29,6 +30,7 @@ public class ScalingPolicy {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ScalingPolicy withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -36,6 +38,7 @@ public class ScalingPolicy {
     
     @JsonProperty("PolicyARN")
     public String policyARN;
+
     public ScalingPolicy withPolicyARN(String policyARN) {
         this.policyARN = policyARN;
         return this;
@@ -43,6 +46,7 @@ public class ScalingPolicy {
     
     @JsonProperty("PolicyName")
     public String policyName;
+
     public ScalingPolicy withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -50,6 +54,7 @@ public class ScalingPolicy {
     
     @JsonProperty("PolicyType")
     public PolicyTypeEnum policyType;
+
     public ScalingPolicy withPolicyType(PolicyTypeEnum policyType) {
         this.policyType = policyType;
         return this;
@@ -57,6 +62,7 @@ public class ScalingPolicy {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ScalingPolicy withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -64,6 +70,7 @@ public class ScalingPolicy {
     
     @JsonProperty("ScalableDimension")
     public ScalableDimensionEnum scalableDimension;
+
     public ScalingPolicy withScalableDimension(ScalableDimensionEnum scalableDimension) {
         this.scalableDimension = scalableDimension;
         return this;
@@ -71,6 +78,7 @@ public class ScalingPolicy {
     
     @JsonProperty("ServiceNamespace")
     public ServiceNamespaceEnum serviceNamespace;
+
     public ScalingPolicy withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
@@ -79,6 +87,7 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepScalingPolicyConfiguration")
     public StepScalingPolicyConfiguration stepScalingPolicyConfiguration;
+
     public ScalingPolicy withStepScalingPolicyConfiguration(StepScalingPolicyConfiguration stepScalingPolicyConfiguration) {
         this.stepScalingPolicyConfiguration = stepScalingPolicyConfiguration;
         return this;
@@ -87,9 +96,19 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetTrackingScalingPolicyConfiguration")
     public TargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration;
+
     public ScalingPolicy withTargetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration) {
         this.targetTrackingScalingPolicyConfiguration = targetTrackingScalingPolicyConfiguration;
         return this;
     }
     
+    public ScalingPolicy(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("PolicyARN") String policyARN, @JsonProperty("PolicyName") String policyName, @JsonProperty("PolicyType") PolicyTypeEnum policyType, @JsonProperty("ResourceId") String resourceId, @JsonProperty("ScalableDimension") ScalableDimensionEnum scalableDimension, @JsonProperty("ServiceNamespace") ServiceNamespaceEnum serviceNamespace) {
+        this.creationTime = creationTime;
+        this.policyARN = policyARN;
+        this.policyName = policyName;
+        this.policyType = policyType;
+        this.resourceId = resourceId;
+        this.scalableDimension = scalableDimension;
+        this.serviceNamespace = serviceNamespace;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlRequest {
@@ -12,6 +13,7 @@ public class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aspectId")
     public GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXmlAspectIDEnum aspectId;
+
     public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlRequest withAspectId(GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXmlAspectIDEnum aspectId) {
         this.aspectId = aspectId;
         return this;
@@ -22,6 +24,7 @@ public class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=civixDocumentId")
     public String civixDocumentId;
+
     public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlRequest withCivixDocumentId(String civixDocumentId) {
         this.civixDocumentId = civixDocumentId;
         return this;
@@ -32,9 +35,15 @@ public class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=civixIndexId")
     public String civixIndexId;
+
     public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlRequest withCivixIndexId(String civixIndexId) {
         this.civixIndexId = civixIndexId;
         return this;
     }
     
+    public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlRequest(@JsonProperty("aspectId") GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXmlAspectIDEnum aspectId, @JsonProperty("civixDocumentId") String civixDocumentId, @JsonProperty("civixIndexId") String civixIndexId) {
+        this.aspectId = aspectId;
+        this.civixDocumentId = civixDocumentId;
+        this.civixIndexId = civixIndexId;
+  }
 }

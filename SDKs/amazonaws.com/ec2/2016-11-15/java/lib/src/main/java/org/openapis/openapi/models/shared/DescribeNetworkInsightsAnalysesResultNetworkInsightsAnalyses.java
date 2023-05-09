@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses {
     
     public String[] additionalAccounts;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses withAdditionalAccounts(String[] additionalAccounts) {
         this.additionalAccounts = additionalAccounts;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses {
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesAlternatePathHints[] alternatePathHints;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses withAlternatePathHints(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesAlternatePathHints[] alternatePathHints) {
         this.alternatePathHints = alternatePathHints;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses {
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations[] explanations;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses withExplanations(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanations[] explanations) {
         this.explanations = explanations;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses {
     
     
     public String[] filterInArns;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses withFilterInArns(String[] filterInArns) {
         this.filterInArns = filterInArns;
         return this;
@@ -40,6 +44,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses {
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForwardPathComponents[] forwardPathComponents;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses withForwardPathComponents(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesForwardPathComponents[] forwardPathComponents) {
         this.forwardPathComponents = forwardPathComponents;
         return this;
@@ -47,6 +52,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses {
     
     
     public String networkInsightsAnalysisArn;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses withNetworkInsightsAnalysisArn(String networkInsightsAnalysisArn) {
         this.networkInsightsAnalysisArn = networkInsightsAnalysisArn;
         return this;
@@ -54,6 +60,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses {
     
     
     public String networkInsightsAnalysisId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses withNetworkInsightsAnalysisId(String networkInsightsAnalysisId) {
         this.networkInsightsAnalysisId = networkInsightsAnalysisId;
         return this;
@@ -61,6 +68,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses {
     
     
     public String networkInsightsPathId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses withNetworkInsightsPathId(String networkInsightsPathId) {
         this.networkInsightsPathId = networkInsightsPathId;
         return this;
@@ -68,6 +76,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses {
     
     
     public Boolean networkPathFound;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses withNetworkPathFound(Boolean networkPathFound) {
         this.networkPathFound = networkPathFound;
         return this;
@@ -75,6 +84,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses {
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponents[] returnPathComponents;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses withReturnPathComponents(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesReturnPathComponents[] returnPathComponents) {
         this.returnPathComponents = returnPathComponents;
         return this;
@@ -82,6 +92,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses {
     
     
     public OffsetDateTime startDate;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -89,6 +100,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses {
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesStatusEnum status;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses withStatus(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesStatusEnum status) {
         this.status = status;
         return this;
@@ -96,6 +108,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses {
     
     
     public String statusMessage;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -103,6 +116,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses {
     
     
     public String[] suggestedAccounts;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses withSuggestedAccounts(String[] suggestedAccounts) {
         this.suggestedAccounts = suggestedAccounts;
         return this;
@@ -110,6 +124,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses {
     
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesTags[] tags;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses withTags(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesTags[] tags) {
         this.tags = tags;
         return this;
@@ -117,9 +132,11 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses {
     
     
     public String warningMessage;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses withWarningMessage(String warningMessage) {
         this.warningMessage = warningMessage;
         return this;
     }
     
+    public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses(){}
 }

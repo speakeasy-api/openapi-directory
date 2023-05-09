@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateActionRequest {
     @JsonProperty("ActionName")
     public String actionName;
+
     public CreateActionRequest withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -18,6 +19,7 @@ public class CreateActionRequest {
     
     @JsonProperty("ActionType")
     public String actionType;
+
     public CreateActionRequest withActionType(String actionType) {
         this.actionType = actionType;
         return this;
@@ -26,6 +28,7 @@ public class CreateActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateActionRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +40,7 @@ public class CreateActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataProperties")
     public MetadataProperties metadataProperties;
+
     public CreateActionRequest withMetadataProperties(MetadataProperties metadataProperties) {
         this.metadataProperties = metadataProperties;
         return this;
@@ -45,6 +49,7 @@ public class CreateActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public java.util.Map<String, String> properties;
+
     public CreateActionRequest withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -52,6 +57,7 @@ public class CreateActionRequest {
     
     @JsonProperty("Source")
     public ActionSource source;
+
     public CreateActionRequest withSource(ActionSource source) {
         this.source = source;
         return this;
@@ -60,6 +66,7 @@ public class CreateActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ActionStatusEnum status;
+
     public CreateActionRequest withStatus(ActionStatusEnum status) {
         this.status = status;
         return this;
@@ -68,9 +75,15 @@ public class CreateActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateActionRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateActionRequest(@JsonProperty("ActionName") String actionName, @JsonProperty("ActionType") String actionType, @JsonProperty("Source") ActionSource source) {
+        this.actionName = actionName;
+        this.actionType = actionType;
+        this.source = source;
+  }
 }

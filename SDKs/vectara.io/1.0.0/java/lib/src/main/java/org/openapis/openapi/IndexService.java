@@ -70,12 +70,10 @@ public class IndexService {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteResponse res = new org.openapis.openapi.models.operations.DeleteResponse() {{
+        org.openapis.openapi.models.operations.DeleteResponse res = new org.openapis.openapi.models.operations.DeleteResponse(contentType, httpRes.statusCode()) {{
             vectaraDeleteDocumentResponse = null;
             googlerpcStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -126,12 +124,10 @@ public class IndexService {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FileUploadResponse res = new org.openapis.openapi.models.operations.FileUploadResponse() {{
+        org.openapis.openapi.models.operations.FileUploadResponse res = new org.openapis.openapi.models.operations.FileUploadResponse(contentType, httpRes.statusCode()) {{
             fileUpload200ApplicationJSONObject = null;
             fileUpload400ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -189,12 +185,10 @@ public class IndexService {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IndexResponse res = new org.openapis.openapi.models.operations.IndexResponse() {{
+        org.openapis.openapi.models.operations.IndexResponse res = new org.openapis.openapi.models.operations.IndexResponse(contentType, httpRes.statusCode()) {{
             vectaraIndexDocumentResponse = null;
             googlerpcStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

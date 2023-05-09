@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTagsTagsWikisRequest {
@@ -13,6 +14,7 @@ public class GetTagsTagsWikisRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetTagsTagsWikisRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetTagsTagsWikisRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetTagsTagsWikisRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -60,6 +63,7 @@ public class GetTagsTagsWikisRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetTagsTagsWikisRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -67,6 +71,7 @@ public class GetTagsTagsWikisRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetTagsTagsWikisRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -78,6 +83,7 @@ public class GetTagsTagsWikisRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetTagsTagsWikisRequest withSite(String site) {
         this.site = site;
         return this;
@@ -88,9 +94,14 @@ public class GetTagsTagsWikisRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tags")
     public String tags;
+
     public GetTagsTagsWikisRequest withTags(String tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetTagsTagsWikisRequest(@JsonProperty("site") String site, @JsonProperty("tags") String tags) {
+        this.site = site;
+        this.tags = tags;
+  }
 }

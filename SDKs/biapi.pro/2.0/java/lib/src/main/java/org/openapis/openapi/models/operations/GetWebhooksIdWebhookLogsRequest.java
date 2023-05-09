@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWebhooksIdWebhookLogsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public GetWebhooksIdWebhookLogsRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -20,6 +22,7 @@ public class GetWebhooksIdWebhookLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_user")
     public Long idUser;
+
     public GetWebhooksIdWebhookLogsRequest withIdUser(Long idUser) {
         this.idUser = idUser;
         return this;
@@ -27,6 +30,7 @@ public class GetWebhooksIdWebhookLogsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_webhook")
     public Long idWebhook;
+
     public GetWebhooksIdWebhookLogsRequest withIdWebhook(Long idWebhook) {
         this.idWebhook = idWebhook;
         return this;
@@ -37,6 +41,7 @@ public class GetWebhooksIdWebhookLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetWebhooksIdWebhookLogsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -47,6 +52,7 @@ public class GetWebhooksIdWebhookLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
     public LocalDate maxDate;
+
     public GetWebhooksIdWebhookLogsRequest withMaxDate(LocalDate maxDate) {
         this.maxDate = maxDate;
         return this;
@@ -57,6 +63,7 @@ public class GetWebhooksIdWebhookLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
     public LocalDate minDate;
+
     public GetWebhooksIdWebhookLogsRequest withMinDate(LocalDate minDate) {
         this.minDate = minDate;
         return this;
@@ -67,9 +74,13 @@ public class GetWebhooksIdWebhookLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetWebhooksIdWebhookLogsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetWebhooksIdWebhookLogsRequest(@JsonProperty("id_webhook") Long idWebhook) {
+        this.idWebhook = idWebhook;
+  }
 }

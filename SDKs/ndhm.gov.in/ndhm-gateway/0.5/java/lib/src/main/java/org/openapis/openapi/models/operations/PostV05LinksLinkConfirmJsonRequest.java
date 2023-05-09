@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05LinksLinkConfirmJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05LinksLinkConfirmJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05LinksLinkConfirmJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05LinksLinkConfirmJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.LinkConfirmationRequest linkConfirmationRequest;
+
     public PostV05LinksLinkConfirmJsonRequest withLinkConfirmationRequest(org.openapis.openapi.models.shared.LinkConfirmationRequest linkConfirmationRequest) {
         this.linkConfirmationRequest = linkConfirmationRequest;
         return this;
@@ -29,9 +32,15 @@ public class PostV05LinksLinkConfirmJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
     public String xHipId;
+
     public PostV05LinksLinkConfirmJsonRequest withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
     }
     
+    public PostV05LinksLinkConfirmJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("LinkConfirmationRequest") org.openapis.openapi.models.shared.LinkConfirmationRequest linkConfirmationRequest, @JsonProperty("X-HIP-ID") String xHipId) {
+        this.authorization = authorization;
+        this.linkConfirmationRequest = linkConfirmationRequest;
+        this.xHipId = xHipId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LatestV1GetV1LatestLocationIdGetResponse {
     
     public String contentType;
+
     public LatestV1GetV1LatestLocationIdGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class LatestV1GetV1LatestLocationIdGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public LatestV1GetV1LatestLocationIdGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -29,6 +32,7 @@ public class LatestV1GetV1LatestLocationIdGetResponse {
      */
     
     public org.openapis.openapi.models.shared.OpenAQResult openAQResult;
+
     public LatestV1GetV1LatestLocationIdGetResponse withOpenAQResult(org.openapis.openapi.models.shared.OpenAQResult openAQResult) {
         this.openAQResult = openAQResult;
         return this;
@@ -36,6 +40,7 @@ public class LatestV1GetV1LatestLocationIdGetResponse {
     
     
     public Integer statusCode;
+
     public LatestV1GetV1LatestLocationIdGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class LatestV1GetV1LatestLocationIdGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LatestV1GetV1LatestLocationIdGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LatestV1GetV1LatestLocationIdGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

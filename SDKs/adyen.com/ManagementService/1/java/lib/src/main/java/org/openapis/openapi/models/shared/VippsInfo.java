@@ -14,6 +14,7 @@ public class VippsInfo {
      */
     @JsonProperty("logo")
     public String logo;
+
     public VippsInfo withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -25,9 +26,13 @@ public class VippsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionCancelUrl")
     public String subscriptionCancelUrl;
+
     public VippsInfo withSubscriptionCancelUrl(String subscriptionCancelUrl) {
         this.subscriptionCancelUrl = subscriptionCancelUrl;
         return this;
     }
     
+    public VippsInfo(@JsonProperty("logo") String logo) {
+        this.logo = logo;
+  }
 }

@@ -1008,4 +1008,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateRelationalDatabaseReq
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateRelationalDatabaseParametersResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateRelationalDatabaseParametersRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

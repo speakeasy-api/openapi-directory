@@ -18,6 +18,7 @@ public class QueuedResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestEffort")
     public java.util.Map<String, Object> bestEffort;
+
     public QueuedResourceInput withBestEffort(java.util.Map<String, Object> bestEffort) {
         this.bestEffort = bestEffort;
         return this;
@@ -29,6 +30,7 @@ public class QueuedResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guaranteed")
     public Guaranteed guaranteed;
+
     public QueuedResourceInput withGuaranteed(Guaranteed guaranteed) {
         this.guaranteed = guaranteed;
         return this;
@@ -40,8 +42,21 @@ public class QueuedResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queueingPolicy")
     public QueueingPolicy queueingPolicy;
+
     public QueuedResourceInput withQueueingPolicy(QueueingPolicy queueingPolicy) {
         this.queueingPolicy = queueingPolicy;
+        return this;
+    }
+    
+    /**
+     * Name of the reservation in which the resource should be provisioned. Format: projects/{project}/locations/{zone}/reservations/{reservation}
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reservationName")
+    public String reservationName;
+
+    public QueuedResourceInput withReservationName(String reservationName) {
+        this.reservationName = reservationName;
         return this;
     }
     
@@ -51,6 +66,7 @@ public class QueuedResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public QueuedResourceState state;
+
     public QueuedResourceInput withState(QueuedResourceState state) {
         this.state = state;
         return this;
@@ -62,9 +78,11 @@ public class QueuedResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tpu")
     public TpuInput tpu;
+
     public QueuedResourceInput withTpu(TpuInput tpu) {
         this.tpu = tpu;
         return this;
     }
     
+    public QueuedResourceInput(){}
 }

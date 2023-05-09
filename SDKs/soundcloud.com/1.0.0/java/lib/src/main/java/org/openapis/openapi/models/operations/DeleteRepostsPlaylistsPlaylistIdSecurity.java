@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepostsPlaylistsPlaylistIdSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
     public String authHeader;
+
     public DeleteRepostsPlaylistsPlaylistIdSecurity withAuthHeader(String authHeader) {
         this.authHeader = authHeader;
         return this;
     }
     
+    public DeleteRepostsPlaylistsPlaylistIdSecurity(@JsonProperty("AuthHeader") String authHeader) {
+        this.authHeader = authHeader;
+  }
 }

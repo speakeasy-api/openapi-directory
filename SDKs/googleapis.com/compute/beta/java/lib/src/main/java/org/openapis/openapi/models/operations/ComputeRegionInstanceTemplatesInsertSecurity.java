@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRegionInstanceTemplatesInsertSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionInstanceTemplatesInsertSecurityOption1 option1;
+
     public ComputeRegionInstanceTemplatesInsertSecurity withOption1(ComputeRegionInstanceTemplatesInsertSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeRegionInstanceTemplatesInsertSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionInstanceTemplatesInsertSecurityOption2 option2;
+
     public ComputeRegionInstanceTemplatesInsertSecurity withOption2(ComputeRegionInstanceTemplatesInsertSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeRegionInstanceTemplatesInsertSecurity(){}
 }

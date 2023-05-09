@@ -12,6 +12,7 @@ public class ResponseDataFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public ResponseDataFile withSize(Long size) {
         this.size = size;
         return this;
@@ -20,9 +21,11 @@ public class ResponseDataFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ResponseDataFile withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ResponseDataFile(){}
 }

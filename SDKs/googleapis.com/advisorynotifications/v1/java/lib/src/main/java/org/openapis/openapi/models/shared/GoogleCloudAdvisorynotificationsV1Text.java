@@ -18,6 +18,7 @@ public class GoogleCloudAdvisorynotificationsV1Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enText")
     public String enText;
+
     public GoogleCloudAdvisorynotificationsV1Text withEnText(String enText) {
         this.enText = enText;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAdvisorynotificationsV1Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizationState")
     public GoogleCloudAdvisorynotificationsV1TextLocalizationStateEnum localizationState;
+
     public GoogleCloudAdvisorynotificationsV1Text withLocalizationState(GoogleCloudAdvisorynotificationsV1TextLocalizationStateEnum localizationState) {
         this.localizationState = localizationState;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudAdvisorynotificationsV1Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizedText")
     public String localizedText;
+
     public GoogleCloudAdvisorynotificationsV1Text withLocalizedText(String localizedText) {
         this.localizedText = localizedText;
         return this;
     }
     
+    public GoogleCloudAdvisorynotificationsV1Text(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddPasswordV1Response {
     
     public String contentType;
+
     public AddPasswordV1Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AddPasswordV1Response {
     
     
     public Integer statusCode;
+
     public AddPasswordV1Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AddPasswordV1Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddPasswordV1Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AddPasswordV1Response {
      */
     
     public byte[] addPasswordV1200ApplicationPdfBinaryString;
+
     public AddPasswordV1Response withAddPasswordV1200ApplicationPdfBinaryString(byte[] addPasswordV1200ApplicationPdfBinaryString) {
         this.addPasswordV1200ApplicationPdfBinaryString = addPasswordV1200ApplicationPdfBinaryString;
         return this;
@@ -43,9 +48,14 @@ public class AddPasswordV1Response {
      */
     
     public AddPasswordV14XXApplicationProblemPlusJson addPasswordV14XXApplicationProblemPlusJsonObject;
+
     public AddPasswordV1Response withAddPasswordV14XXApplicationProblemPlusJsonObject(AddPasswordV14XXApplicationProblemPlusJson addPasswordV14XXApplicationProblemPlusJsonObject) {
         this.addPasswordV14XXApplicationProblemPlusJsonObject = addPasswordV14XXApplicationProblemPlusJsonObject;
         return this;
     }
     
+    public AddPasswordV1Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

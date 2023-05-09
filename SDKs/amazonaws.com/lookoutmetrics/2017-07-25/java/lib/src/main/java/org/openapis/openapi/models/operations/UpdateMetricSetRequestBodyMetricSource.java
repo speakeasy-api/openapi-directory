@@ -15,6 +15,7 @@ public class UpdateMetricSetRequestBodyMetricSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppFlowConfig")
     public org.openapis.openapi.models.shared.AppFlowConfig appFlowConfig;
+
     public UpdateMetricSetRequestBodyMetricSource withAppFlowConfig(org.openapis.openapi.models.shared.AppFlowConfig appFlowConfig) {
         this.appFlowConfig = appFlowConfig;
         return this;
@@ -23,6 +24,7 @@ public class UpdateMetricSetRequestBodyMetricSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AthenaSourceConfig")
     public org.openapis.openapi.models.shared.AthenaSourceConfig athenaSourceConfig;
+
     public UpdateMetricSetRequestBodyMetricSource withAthenaSourceConfig(org.openapis.openapi.models.shared.AthenaSourceConfig athenaSourceConfig) {
         this.athenaSourceConfig = athenaSourceConfig;
         return this;
@@ -31,6 +33,7 @@ public class UpdateMetricSetRequestBodyMetricSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchConfig")
     public org.openapis.openapi.models.shared.CloudWatchConfig cloudWatchConfig;
+
     public UpdateMetricSetRequestBodyMetricSource withCloudWatchConfig(org.openapis.openapi.models.shared.CloudWatchConfig cloudWatchConfig) {
         this.cloudWatchConfig = cloudWatchConfig;
         return this;
@@ -39,6 +42,7 @@ public class UpdateMetricSetRequestBodyMetricSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RDSSourceConfig")
     public org.openapis.openapi.models.shared.RDSSourceConfig rdsSourceConfig;
+
     public UpdateMetricSetRequestBodyMetricSource withRDSSourceConfig(org.openapis.openapi.models.shared.RDSSourceConfig rdsSourceConfig) {
         this.rdsSourceConfig = rdsSourceConfig;
         return this;
@@ -47,6 +51,7 @@ public class UpdateMetricSetRequestBodyMetricSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedshiftSourceConfig")
     public org.openapis.openapi.models.shared.RedshiftSourceConfig redshiftSourceConfig;
+
     public UpdateMetricSetRequestBodyMetricSource withRedshiftSourceConfig(org.openapis.openapi.models.shared.RedshiftSourceConfig redshiftSourceConfig) {
         this.redshiftSourceConfig = redshiftSourceConfig;
         return this;
@@ -58,9 +63,11 @@ public class UpdateMetricSetRequestBodyMetricSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3SourceConfig")
     public org.openapis.openapi.models.shared.S3SourceConfig s3SourceConfig;
+
     public UpdateMetricSetRequestBodyMetricSource withS3SourceConfig(org.openapis.openapi.models.shared.S3SourceConfig s3SourceConfig) {
         this.s3SourceConfig = s3SourceConfig;
         return this;
     }
     
+    public UpdateMetricSetRequestBodyMetricSource(){}
 }

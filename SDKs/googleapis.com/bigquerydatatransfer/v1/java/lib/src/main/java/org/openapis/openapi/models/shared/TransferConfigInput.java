@@ -18,6 +18,7 @@ public class TransferConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataRefreshWindowDays")
     public Integer dataRefreshWindowDays;
+
     public TransferConfigInput withDataRefreshWindowDays(Integer dataRefreshWindowDays) {
         this.dataRefreshWindowDays = dataRefreshWindowDays;
         return this;
@@ -29,6 +30,7 @@ public class TransferConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceId")
     public String dataSourceId;
+
     public TransferConfigInput withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -40,6 +42,7 @@ public class TransferConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationDatasetId")
     public String destinationDatasetId;
+
     public TransferConfigInput withDestinationDatasetId(String destinationDatasetId) {
         this.destinationDatasetId = destinationDatasetId;
         return this;
@@ -51,6 +54,7 @@ public class TransferConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public TransferConfigInput withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -62,6 +66,7 @@ public class TransferConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public TransferConfigInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class TransferConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailPreferences")
     public EmailPreferences emailPreferences;
+
     public TransferConfigInput withEmailPreferences(EmailPreferences emailPreferences) {
         this.emailPreferences = emailPreferences;
         return this;
@@ -84,6 +90,7 @@ public class TransferConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TransferConfigInput withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class TransferConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationPubsubTopic")
     public String notificationPubsubTopic;
+
     public TransferConfigInput withNotificationPubsubTopic(String notificationPubsubTopic) {
         this.notificationPubsubTopic = notificationPubsubTopic;
         return this;
@@ -106,6 +114,7 @@ public class TransferConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerInfo")
     public UserInfo ownerInfo;
+
     public TransferConfigInput withOwnerInfo(UserInfo ownerInfo) {
         this.ownerInfo = ownerInfo;
         return this;
@@ -117,6 +126,7 @@ public class TransferConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public java.util.Map<String, Object> params;
+
     public TransferConfigInput withParams(java.util.Map<String, Object> params) {
         this.params = params;
         return this;
@@ -128,6 +138,7 @@ public class TransferConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public String schedule;
+
     public TransferConfigInput withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -139,6 +150,7 @@ public class TransferConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleOptions")
     public ScheduleOptions scheduleOptions;
+
     public TransferConfigInput withScheduleOptions(ScheduleOptions scheduleOptions) {
         this.scheduleOptions = scheduleOptions;
         return this;
@@ -150,9 +162,11 @@ public class TransferConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public TransferConfigInput withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public TransferConfigInput(){}
 }

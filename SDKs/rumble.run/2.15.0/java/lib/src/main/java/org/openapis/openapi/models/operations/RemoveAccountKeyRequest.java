@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveAccountKeyRequest {
@@ -12,9 +13,13 @@ public class RemoveAccountKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key_id")
     public String keyId;
+
     public RemoveAccountKeyRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public RemoveAccountKeyRequest(@JsonProperty("key_id") String keyId) {
+        this.keyId = keyId;
+  }
 }

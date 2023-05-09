@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptions {
     
     public String destination;
+
     public DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptions withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -19,6 +20,7 @@ public class DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptions
     
     
     public DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsMetricEnum metric;
+
     public DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptions withMetric(DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsMetricEnum metric) {
         this.metric = metric;
         return this;
@@ -26,6 +28,7 @@ public class DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptions
     
     
     public DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsPeriodEnum period;
+
     public DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptions withPeriod(DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsPeriodEnum period) {
         this.period = period;
         return this;
@@ -33,6 +36,7 @@ public class DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptions
     
     
     public String source;
+
     public DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptions withSource(String source) {
         this.source = source;
         return this;
@@ -40,9 +44,11 @@ public class DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptions
     
     
     public DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsStatisticEnum statistic;
+
     public DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptions withStatistic(DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsStatisticEnum statistic) {
         this.statistic = statistic;
         return this;
     }
     
+    public DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptions(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetHLSStreamingSessionURLResponse {
@@ -12,6 +13,7 @@ public class GetHLSStreamingSessionURLResponse {
      */
     
     public Object clientLimitExceededException;
+
     public GetHLSStreamingSessionURLResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class GetHLSStreamingSessionURLResponse {
     
     
     public String contentType;
+
     public GetHLSStreamingSessionURLResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetHLSStreamingSessionURLResponse {
      */
     
     public org.openapis.openapi.models.shared.GetHLSStreamingSessionURLOutput getHLSStreamingSessionURLOutput;
+
     public GetHLSStreamingSessionURLResponse withGetHLSStreamingSessionURLOutput(org.openapis.openapi.models.shared.GetHLSStreamingSessionURLOutput getHLSStreamingSessionURLOutput) {
         this.getHLSStreamingSessionURLOutput = getHLSStreamingSessionURLOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetHLSStreamingSessionURLResponse {
      */
     
     public Object invalidArgumentException;
+
     public GetHLSStreamingSessionURLResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class GetHLSStreamingSessionURLResponse {
      */
     
     public Object invalidCodecPrivateDataException;
+
     public GetHLSStreamingSessionURLResponse withInvalidCodecPrivateDataException(Object invalidCodecPrivateDataException) {
         this.invalidCodecPrivateDataException = invalidCodecPrivateDataException;
         return this;
@@ -59,6 +65,7 @@ public class GetHLSStreamingSessionURLResponse {
      */
     
     public Object missingCodecPrivateDataException;
+
     public GetHLSStreamingSessionURLResponse withMissingCodecPrivateDataException(Object missingCodecPrivateDataException) {
         this.missingCodecPrivateDataException = missingCodecPrivateDataException;
         return this;
@@ -69,6 +76,7 @@ public class GetHLSStreamingSessionURLResponse {
      */
     
     public Object noDataRetentionException;
+
     public GetHLSStreamingSessionURLResponse withNoDataRetentionException(Object noDataRetentionException) {
         this.noDataRetentionException = noDataRetentionException;
         return this;
@@ -79,6 +87,7 @@ public class GetHLSStreamingSessionURLResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetHLSStreamingSessionURLResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -89,6 +98,7 @@ public class GetHLSStreamingSessionURLResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetHLSStreamingSessionURLResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -96,6 +106,7 @@ public class GetHLSStreamingSessionURLResponse {
     
     
     public Integer statusCode;
+
     public GetHLSStreamingSessionURLResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class GetHLSStreamingSessionURLResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetHLSStreamingSessionURLResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class GetHLSStreamingSessionURLResponse {
      */
     
     public Object unsupportedStreamMediaTypeException;
+
     public GetHLSStreamingSessionURLResponse withUnsupportedStreamMediaTypeException(Object unsupportedStreamMediaTypeException) {
         this.unsupportedStreamMediaTypeException = unsupportedStreamMediaTypeException;
         return this;
     }
     
+    public GetHLSStreamingSessionURLResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

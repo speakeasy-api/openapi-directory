@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProtocolMqttClientSetUsernameResponse {
     
     public String contentType;
+
     public ProtocolMqttClientSetUsernameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProtocolMqttClientSetUsernameResponse {
     
     
     public Integer statusCode;
+
     public ProtocolMqttClientSetUsernameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProtocolMqttClientSetUsernameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProtocolMqttClientSetUsernameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ProtocolMqttClientSetUsernameResponse {
      */
     
     public Integer[] protocolMqttClientSetUsername200ApplicationJSONInt32Integers;
+
     public ProtocolMqttClientSetUsernameResponse withProtocolMqttClientSetUsername200ApplicationJSONInt32Integers(Integer[] protocolMqttClientSetUsername200ApplicationJSONInt32Integers) {
         this.protocolMqttClientSetUsername200ApplicationJSONInt32Integers = protocolMqttClientSetUsername200ApplicationJSONInt32Integers;
         return this;
     }
     
+    public ProtocolMqttClientSetUsernameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

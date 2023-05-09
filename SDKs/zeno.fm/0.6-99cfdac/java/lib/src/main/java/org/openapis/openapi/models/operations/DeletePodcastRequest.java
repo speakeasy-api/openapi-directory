@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePodcastRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=podcastKey")
     public String podcastKey;
+
     public DeletePodcastRequest withPodcastKey(String podcastKey) {
         this.podcastKey = podcastKey;
         return this;
     }
     
+    public DeletePodcastRequest(@JsonProperty("podcastKey") String podcastKey) {
+        this.podcastKey = podcastKey;
+  }
 }

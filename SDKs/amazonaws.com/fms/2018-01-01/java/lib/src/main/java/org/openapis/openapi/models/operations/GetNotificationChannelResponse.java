@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNotificationChannelResponse {
     
     public String contentType;
+
     public GetNotificationChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetNotificationChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.GetNotificationChannelResponse getNotificationChannelResponse;
+
     public GetNotificationChannelResponse withGetNotificationChannelResponse(org.openapis.openapi.models.shared.GetNotificationChannelResponse getNotificationChannelResponse) {
         this.getNotificationChannelResponse = getNotificationChannelResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetNotificationChannelResponse {
      */
     
     public Object internalErrorException;
+
     public GetNotificationChannelResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class GetNotificationChannelResponse {
      */
     
     public Object invalidOperationException;
+
     public GetNotificationChannelResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class GetNotificationChannelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetNotificationChannelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetNotificationChannelResponse {
     
     
     public Integer statusCode;
+
     public GetNotificationChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetNotificationChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNotificationChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetNotificationChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

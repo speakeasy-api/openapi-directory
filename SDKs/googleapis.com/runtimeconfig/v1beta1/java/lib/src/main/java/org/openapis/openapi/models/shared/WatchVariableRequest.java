@@ -18,9 +18,11 @@ public class WatchVariableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newerThan")
     public String newerThan;
+
     public WatchVariableRequest withNewerThan(String newerThan) {
         this.newerThan = newerThan;
         return this;
     }
     
+    public WatchVariableRequest(){}
 }

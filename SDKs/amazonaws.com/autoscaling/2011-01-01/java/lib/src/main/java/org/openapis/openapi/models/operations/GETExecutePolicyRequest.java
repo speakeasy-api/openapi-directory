@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETExecutePolicyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETExecutePolicyActionEnum action;
+
     public GETExecutePolicyRequest withAction(GETExecutePolicyActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETExecutePolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
     public String autoScalingGroupName;
+
     public GETExecutePolicyRequest withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -29,6 +32,7 @@ public class GETExecutePolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BreachThreshold")
     public Double breachThreshold;
+
     public GETExecutePolicyRequest withBreachThreshold(Double breachThreshold) {
         this.breachThreshold = breachThreshold;
         return this;
@@ -39,6 +43,7 @@ public class GETExecutePolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HonorCooldown")
     public Boolean honorCooldown;
+
     public GETExecutePolicyRequest withHonorCooldown(Boolean honorCooldown) {
         this.honorCooldown = honorCooldown;
         return this;
@@ -49,6 +54,7 @@ public class GETExecutePolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MetricValue")
     public Double metricValue;
+
     public GETExecutePolicyRequest withMetricValue(Double metricValue) {
         this.metricValue = metricValue;
         return this;
@@ -59,6 +65,7 @@ public class GETExecutePolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyName")
     public String policyName;
+
     public GETExecutePolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -66,6 +73,7 @@ public class GETExecutePolicyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETExecutePolicyVersionEnum version;
+
     public GETExecutePolicyRequest withVersion(GETExecutePolicyVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETExecutePolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETExecutePolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETExecutePolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETExecutePolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETExecutePolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETExecutePolicyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETExecutePolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETExecutePolicyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETExecutePolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETExecutePolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETExecutePolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETExecutePolicyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,15 @@ public class GETExecutePolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETExecutePolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETExecutePolicyRequest(@JsonProperty("Action") GETExecutePolicyActionEnum action, @JsonProperty("PolicyName") String policyName, @JsonProperty("Version") GETExecutePolicyVersionEnum version) {
+        this.action = action;
+        this.policyName = policyName;
+        this.version = version;
+  }
 }

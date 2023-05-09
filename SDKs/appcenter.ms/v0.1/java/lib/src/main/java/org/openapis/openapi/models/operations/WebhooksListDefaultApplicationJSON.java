@@ -17,6 +17,7 @@ public class WebhooksListDefaultApplicationJSON {
      */
     @JsonProperty("code")
     public WebhooksListDefaultApplicationJSONCodeEnum code;
+
     public WebhooksListDefaultApplicationJSON withCode(WebhooksListDefaultApplicationJSONCodeEnum code) {
         this.code = code;
         return this;
@@ -28,6 +29,7 @@ public class WebhooksListDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public WebhooksListDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -38,9 +40,14 @@ public class WebhooksListDefaultApplicationJSON {
      */
     @JsonProperty("request_id")
     public String requestId;
+
     public WebhooksListDefaultApplicationJSON withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public WebhooksListDefaultApplicationJSON(@JsonProperty("code") WebhooksListDefaultApplicationJSONCodeEnum code, @JsonProperty("request_id") String requestId) {
+        this.code = code;
+        this.requestId = requestId;
+  }
 }

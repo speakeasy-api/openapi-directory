@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SelectResult {
     
     public ItemList[] items;
+
     public SelectResult withItems(ItemList[] items) {
         this.items = items;
         return this;
@@ -19,9 +20,11 @@ public class SelectResult {
     
     
     public String nextToken;
+
     public SelectResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SelectResult(){}
 }

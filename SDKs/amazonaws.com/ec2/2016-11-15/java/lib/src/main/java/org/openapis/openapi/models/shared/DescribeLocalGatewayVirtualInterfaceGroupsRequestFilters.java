@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLocalGatewayVirtualInterfaceGroupsRequestFilters {
     
     public String name;
+
     public DescribeLocalGatewayVirtualInterfaceGroupsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeLocalGatewayVirtualInterfaceGroupsRequestFilters {
     
     
     public String[] values;
+
     public DescribeLocalGatewayVirtualInterfaceGroupsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeLocalGatewayVirtualInterfaceGroupsRequestFilters(){}
 }

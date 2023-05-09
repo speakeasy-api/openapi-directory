@@ -72,4 +72,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudBillingBudgetsV1
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudBillingBudgetsV1beta1ListBudgetsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequestInput.java
+docs/sdk/README.md
+docs/billingaccounts/README.md
 USAGE.md

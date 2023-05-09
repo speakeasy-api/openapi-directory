@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class PublishTypeOutput {
     
     public String publicTypeArn;
+
     public PublishTypeOutput withPublicTypeArn(String publicTypeArn) {
         this.publicTypeArn = publicTypeArn;
         return this;
     }
     
+    public PublishTypeOutput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostVisitorIdentificationV3TokensCreateGenerateTokenResponse {
     
     public byte[] body;
+
     public PostVisitorIdentificationV3TokensCreateGenerateTokenResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostVisitorIdentificationV3TokensCreateGenerateTokenResponse {
     
     
     public String contentType;
+
     public PostVisitorIdentificationV3TokensCreateGenerateTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostVisitorIdentificationV3TokensCreateGenerateTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.IdentificationTokenResponse identificationTokenResponse;
+
     public PostVisitorIdentificationV3TokensCreateGenerateTokenResponse withIdentificationTokenResponse(org.openapis.openapi.models.shared.IdentificationTokenResponse identificationTokenResponse) {
         this.identificationTokenResponse = identificationTokenResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostVisitorIdentificationV3TokensCreateGenerateTokenResponse {
     
     
     public Integer statusCode;
+
     public PostVisitorIdentificationV3TokensCreateGenerateTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PostVisitorIdentificationV3TokensCreateGenerateTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostVisitorIdentificationV3TokensCreateGenerateTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostVisitorIdentificationV3TokensCreateGenerateTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

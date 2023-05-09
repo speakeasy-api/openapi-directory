@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateArtifactMetaDataRequest {
@@ -12,6 +13,7 @@ public class UpdateArtifactMetaDataRequest {
      */
     @SpeakeasyMetadata("request:mediaType=*/*")
     public byte[] requestBody;
+
     public UpdateArtifactMetaDataRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class UpdateArtifactMetaDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
     public String artifactId;
+
     public UpdateArtifactMetaDataRequest withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
     }
     
+    public UpdateArtifactMetaDataRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("artifactId") String artifactId) {
+        this.requestBody = requestBody;
+        this.artifactId = artifactId;
+  }
 }

@@ -15,9 +15,11 @@ public class InstanceGroupManagersSetInstanceTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTemplate")
     public String instanceTemplate;
+
     public InstanceGroupManagersSetInstanceTemplateRequest withInstanceTemplate(String instanceTemplate) {
         this.instanceTemplate = instanceTemplate;
         return this;
     }
     
+    public InstanceGroupManagersSetInstanceTemplateRequest(){}
 }

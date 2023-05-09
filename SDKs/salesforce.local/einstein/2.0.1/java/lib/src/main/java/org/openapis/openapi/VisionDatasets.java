@@ -60,11 +60,9 @@ public class VisionDatasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDatasetResponse res = new org.openapis.openapi.models.operations.CreateDatasetResponse() {{
+        org.openapis.openapi.models.operations.CreateDatasetResponse res = new org.openapis.openapi.models.operations.CreateDatasetResponse(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class VisionDatasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDataset1Response res = new org.openapis.openapi.models.operations.DeleteDataset1Response() {{
+        org.openapis.openapi.models.operations.DeleteDataset1Response res = new org.openapis.openapi.models.operations.DeleteDataset1Response(contentType, httpRes.statusCode()) {{
             deletionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -142,11 +138,9 @@ public class VisionDatasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDataset1Response res = new org.openapis.openapi.models.operations.GetDataset1Response() {{
+        org.openapis.openapi.models.operations.GetDataset1Response res = new org.openapis.openapi.models.operations.GetDataset1Response(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,11 +177,9 @@ public class VisionDatasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Get1Response res = new org.openapis.openapi.models.operations.Get1Response() {{
+        org.openapis.openapi.models.operations.Get1Response res = new org.openapis.openapi.models.operations.Get1Response(contentType, httpRes.statusCode()) {{
             deletionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -230,11 +222,9 @@ public class VisionDatasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDatasets1Response res = new org.openapis.openapi.models.operations.ListDatasets1Response() {{
+        org.openapis.openapi.models.operations.ListDatasets1Response res = new org.openapis.openapi.models.operations.ListDatasets1Response(contentType, httpRes.statusCode()) {{
             datasetList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -273,11 +263,9 @@ public class VisionDatasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UploadDatasetAsync1Response res = new org.openapis.openapi.models.operations.UploadDatasetAsync1Response() {{
+        org.openapis.openapi.models.operations.UploadDatasetAsync1Response res = new org.openapis.openapi.models.operations.UploadDatasetAsync1Response(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -316,11 +304,9 @@ public class VisionDatasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UploadDatasetSync1Response res = new org.openapis.openapi.models.operations.UploadDatasetSync1Response() {{
+        org.openapis.openapi.models.operations.UploadDatasetSync1Response res = new org.openapis.openapi.models.operations.UploadDatasetSync1Response(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

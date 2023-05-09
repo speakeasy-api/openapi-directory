@@ -18,6 +18,7 @@ public class TextContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lists")
     public java.util.Map<String, List> lists;
+
     public TextContent withLists(java.util.Map<String, List> lists) {
         this.lists = lists;
         return this;
@@ -29,9 +30,11 @@ public class TextContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textElements")
     public TextElement[] textElements;
+
     public TextContent withTextElements(TextElement[] textElements) {
         this.textElements = textElements;
         return this;
     }
     
+    public TextContent(){}
 }

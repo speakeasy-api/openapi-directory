@@ -15,6 +15,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentId")
     public String documentId;
+
     public Status withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
@@ -23,6 +24,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentStatus")
     public DocumentStatusEnum documentStatus;
+
     public Status withDocumentStatus(DocumentStatusEnum documentStatus) {
         this.documentStatus = documentStatus;
         return this;
@@ -31,6 +33,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureCode")
     public String failureCode;
+
     public Status withFailureCode(String failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -39,9 +42,11 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public Status withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
     }
     
+    public Status(){}
 }

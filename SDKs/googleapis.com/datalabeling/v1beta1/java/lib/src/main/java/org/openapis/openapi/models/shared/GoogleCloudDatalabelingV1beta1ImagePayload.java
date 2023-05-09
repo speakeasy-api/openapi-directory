@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1ImagePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageThumbnail")
     public String imageThumbnail;
+
     public GoogleCloudDatalabelingV1beta1ImagePayload withImageThumbnail(String imageThumbnail) {
         this.imageThumbnail = imageThumbnail;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatalabelingV1beta1ImagePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUri")
     public String imageUri;
+
     public GoogleCloudDatalabelingV1beta1ImagePayload withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatalabelingV1beta1ImagePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public GoogleCloudDatalabelingV1beta1ImagePayload withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDatalabelingV1beta1ImagePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signedUri")
     public String signedUri;
+
     public GoogleCloudDatalabelingV1beta1ImagePayload withSignedUri(String signedUri) {
         this.signedUri = signedUri;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ImagePayload(){}
 }

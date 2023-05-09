@@ -12,6 +12,7 @@ public class DriveDrivesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveDrivesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +23,7 @@ public class DriveDrivesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveDrivesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +34,7 @@ public class DriveDrivesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveDrivesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +45,7 @@ public class DriveDrivesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DriveDrivesListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -52,6 +56,7 @@ public class DriveDrivesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveDrivesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +67,7 @@ public class DriveDrivesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DriveDrivesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -72,6 +78,7 @@ public class DriveDrivesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveDrivesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +89,7 @@ public class DriveDrivesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public DriveDrivesListRequest withQ(String q) {
         this.q = q;
         return this;
@@ -92,6 +100,7 @@ public class DriveDrivesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveDrivesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -102,6 +111,7 @@ public class DriveDrivesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useDomainAdminAccess")
     public Boolean useDomainAdminAccess;
+
     public DriveDrivesListRequest withUseDomainAdminAccess(Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
         return this;
@@ -112,9 +122,11 @@ public class DriveDrivesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveDrivesListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DriveDrivesListRequest(){}
 }

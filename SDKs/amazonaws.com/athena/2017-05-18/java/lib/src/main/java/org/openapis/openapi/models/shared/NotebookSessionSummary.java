@@ -22,6 +22,7 @@ public class NotebookSessionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public NotebookSessionSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,9 +31,11 @@ public class NotebookSessionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionId")
     public String sessionId;
+
     public NotebookSessionSummary withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public NotebookSessionSummary(){}
 }

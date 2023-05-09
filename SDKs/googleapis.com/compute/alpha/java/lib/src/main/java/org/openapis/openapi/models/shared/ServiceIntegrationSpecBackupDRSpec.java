@@ -18,9 +18,11 @@ public class ServiceIntegrationSpecBackupDRSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan")
     public String plan;
+
     public ServiceIntegrationSpecBackupDRSpec withPlan(String plan) {
         this.plan = plan;
         return this;
     }
     
+    public ServiceIntegrationSpecBackupDRSpec(){}
 }

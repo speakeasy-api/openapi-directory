@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2InfoTypeStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public GooglePrivacyDlpV2InfoTypeStats withCount(String count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2InfoTypeStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infoType")
     public GooglePrivacyDlpV2InfoType infoType;
+
     public GooglePrivacyDlpV2InfoTypeStats withInfoType(GooglePrivacyDlpV2InfoType infoType) {
         this.infoType = infoType;
         return this;
     }
     
+    public GooglePrivacyDlpV2InfoTypeStats(){}
 }

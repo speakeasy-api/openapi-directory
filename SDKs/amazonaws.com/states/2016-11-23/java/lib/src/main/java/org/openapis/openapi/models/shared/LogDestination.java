@@ -15,9 +15,11 @@ public class LogDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchLogsLogGroup")
     public CloudWatchLogsLogGroup cloudWatchLogsLogGroup;
+
     public LogDestination withCloudWatchLogsLogGroup(CloudWatchLogsLogGroup cloudWatchLogsLogGroup) {
         this.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
         return this;
     }
     
+    public LogDestination(){}
 }

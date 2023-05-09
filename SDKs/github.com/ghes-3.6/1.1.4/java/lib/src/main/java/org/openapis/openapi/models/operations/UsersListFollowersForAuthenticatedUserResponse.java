@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UsersListFollowersForAuthenticatedUserResponse {
     
     public String contentType;
+
     public UsersListFollowersForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UsersListFollowersForAuthenticatedUserResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public UsersListFollowersForAuthenticatedUserResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class UsersListFollowersForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public UsersListFollowersForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class UsersListFollowersForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UsersListFollowersForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class UsersListFollowersForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public UsersListFollowersForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class UsersListFollowersForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.SimpleUser[] simpleUsers;
+
     public UsersListFollowersForAuthenticatedUserResponse withSimpleUsers(org.openapis.openapi.models.shared.SimpleUser[] simpleUsers) {
         this.simpleUsers = simpleUsers;
         return this;
     }
     
+    public UsersListFollowersForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

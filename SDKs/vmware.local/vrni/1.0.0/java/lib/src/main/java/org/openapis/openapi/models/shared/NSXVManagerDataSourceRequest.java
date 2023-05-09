@@ -12,6 +12,7 @@ public class NSXVManagerDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("central_cli_enabled")
     public Boolean centralCliEnabled;
+
     public NSXVManagerDataSourceRequest withCentralCliEnabled(Boolean centralCliEnabled) {
         this.centralCliEnabled = centralCliEnabled;
         return this;
@@ -19,6 +20,7 @@ public class NSXVManagerDataSourceRequest {
     
     @JsonProperty("credentials")
     public PasswordCredentials credentials;
+
     public NSXVManagerDataSourceRequest withCredentials(PasswordCredentials credentials) {
         this.credentials = credentials;
         return this;
@@ -27,6 +29,7 @@ public class NSXVManagerDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public NSXVManagerDataSourceRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -35,6 +38,7 @@ public class NSXVManagerDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fqdn")
     public String fqdn;
+
     public NSXVManagerDataSourceRequest withFqdn(String fqdn) {
         this.fqdn = fqdn;
         return this;
@@ -43,6 +47,7 @@ public class NSXVManagerDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public NSXVManagerDataSourceRequest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -51,6 +56,7 @@ public class NSXVManagerDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipfix_enabled")
     public Boolean ipfixEnabled;
+
     public NSXVManagerDataSourceRequest withIpfixEnabled(Boolean ipfixEnabled) {
         this.ipfixEnabled = ipfixEnabled;
         return this;
@@ -58,6 +64,7 @@ public class NSXVManagerDataSourceRequest {
     
     @JsonProperty("nickname")
     public String nickname;
+
     public NSXVManagerDataSourceRequest withNickname(String nickname) {
         this.nickname = nickname;
         return this;
@@ -66,6 +73,7 @@ public class NSXVManagerDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public NSXVManagerDataSourceRequest withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -76,6 +84,7 @@ public class NSXVManagerDataSourceRequest {
      */
     @JsonProperty("proxy_id")
     public String proxyId;
+
     public NSXVManagerDataSourceRequest withProxyId(String proxyId) {
         this.proxyId = proxyId;
         return this;
@@ -86,9 +95,16 @@ public class NSXVManagerDataSourceRequest {
      */
     @JsonProperty("vcenter_id")
     public String vcenterId;
+
     public NSXVManagerDataSourceRequest withVcenterId(String vcenterId) {
         this.vcenterId = vcenterId;
         return this;
     }
     
+    public NSXVManagerDataSourceRequest(@JsonProperty("credentials") PasswordCredentials credentials, @JsonProperty("nickname") String nickname, @JsonProperty("proxy_id") String proxyId, @JsonProperty("vcenter_id") String vcenterId) {
+        this.credentials = credentials;
+        this.nickname = nickname;
+        this.proxyId = proxyId;
+        this.vcenterId = vcenterId;
+  }
 }

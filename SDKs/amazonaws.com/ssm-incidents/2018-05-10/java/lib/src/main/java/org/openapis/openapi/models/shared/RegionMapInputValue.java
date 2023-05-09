@@ -15,9 +15,11 @@ public class RegionMapInputValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sseKmsKeyId")
     public String sseKmsKeyId;
+
     public RegionMapInputValue withSseKmsKeyId(String sseKmsKeyId) {
         this.sseKmsKeyId = sseKmsKeyId;
         return this;
     }
     
+    public RegionMapInputValue(){}
 }

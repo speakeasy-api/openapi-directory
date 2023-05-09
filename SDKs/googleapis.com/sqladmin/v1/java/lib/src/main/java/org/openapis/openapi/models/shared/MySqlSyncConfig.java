@@ -18,9 +18,11 @@ public class MySqlSyncConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialSyncFlags")
     public SyncFlags[] initialSyncFlags;
+
     public MySqlSyncConfig withInitialSyncFlags(SyncFlags[] initialSyncFlags) {
         this.initialSyncFlags = initialSyncFlags;
         return this;
     }
     
+    public MySqlSyncConfig(){}
 }

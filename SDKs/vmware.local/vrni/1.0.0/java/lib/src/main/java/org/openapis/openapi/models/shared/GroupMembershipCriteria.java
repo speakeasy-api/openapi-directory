@@ -18,6 +18,7 @@ public class GroupMembershipCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_address_membership_criteria")
     public IpAddressMembershipCriteria ipAddressMembershipCriteria;
+
     public GroupMembershipCriteria withIpAddressMembershipCriteria(IpAddressMembershipCriteria ipAddressMembershipCriteria) {
         this.ipAddressMembershipCriteria = ipAddressMembershipCriteria;
         return this;
@@ -26,6 +27,7 @@ public class GroupMembershipCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membership_type")
     public GroupMembershipCriteriaMembershipTypeEnum membershipType;
+
     public GroupMembershipCriteria withMembershipType(GroupMembershipCriteriaMembershipTypeEnum membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -34,9 +36,11 @@ public class GroupMembershipCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_membership_criteria")
     public SearchMembershipCriteria searchMembershipCriteria;
+
     public GroupMembershipCriteria withSearchMembershipCriteria(SearchMembershipCriteria searchMembershipCriteria) {
         this.searchMembershipCriteria = searchMembershipCriteria;
         return this;
     }
     
+    public GroupMembershipCriteria(){}
 }

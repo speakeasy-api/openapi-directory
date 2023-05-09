@@ -18,6 +18,7 @@ public class LandmarksModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Double confidence;
+
     public LandmarksModel withConfidence(Double confidence) {
         this.confidence = confidence;
         return this;
@@ -29,9 +30,11 @@ public class LandmarksModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LandmarksModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LandmarksModel(){}
 }

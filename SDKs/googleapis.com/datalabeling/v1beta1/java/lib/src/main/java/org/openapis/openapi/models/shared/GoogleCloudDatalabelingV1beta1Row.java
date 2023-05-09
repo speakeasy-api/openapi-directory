@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpec")
     public GoogleCloudDatalabelingV1beta1AnnotationSpec annotationSpec;
+
     public GoogleCloudDatalabelingV1beta1Row withAnnotationSpec(GoogleCloudDatalabelingV1beta1AnnotationSpec annotationSpec) {
         this.annotationSpec = annotationSpec;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public GoogleCloudDatalabelingV1beta1ConfusionMatrixEntry[] entries;
+
     public GoogleCloudDatalabelingV1beta1Row withEntries(GoogleCloudDatalabelingV1beta1ConfusionMatrixEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1Row(){}
 }

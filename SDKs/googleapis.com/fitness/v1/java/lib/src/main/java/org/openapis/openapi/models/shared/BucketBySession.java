@@ -15,9 +15,11 @@ public class BucketBySession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minDurationMillis")
     public String minDurationMillis;
+
     public BucketBySession withMinDurationMillis(String minDurationMillis) {
         this.minDurationMillis = minDurationMillis;
         return this;
     }
     
+    public BucketBySession(){}
 }

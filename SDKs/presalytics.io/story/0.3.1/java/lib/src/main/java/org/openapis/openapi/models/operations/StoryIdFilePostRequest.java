@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdFilePostRequest {
@@ -12,6 +13,7 @@ public class StoryIdFilePostRequest {
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public StoryIdFilePostOpenOfficeXmlDocumentEGXlsxPptxFile requestBody;
+
     public StoryIdFilePostRequest withRequestBody(StoryIdFilePostOpenOfficeXmlDocumentEGXlsxPptxFile requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class StoryIdFilePostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public StoryIdFilePostRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class StoryIdFilePostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_outline")
     public Boolean includeOutline;
+
     public StoryIdFilePostRequest withIncludeOutline(Boolean includeOutline) {
         this.includeOutline = includeOutline;
         return this;
@@ -42,6 +46,7 @@ public class StoryIdFilePostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=obsolete_id")
     public String obsoleteId;
+
     public StoryIdFilePostRequest withObsoleteId(String obsoleteId) {
         this.obsoleteId = obsoleteId;
         return this;
@@ -52,9 +57,14 @@ public class StoryIdFilePostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=replace_existing")
     public Boolean replaceExisting;
+
     public StoryIdFilePostRequest withReplaceExisting(Boolean replaceExisting) {
         this.replaceExisting = replaceExisting;
         return this;
     }
     
+    public StoryIdFilePostRequest(@JsonProperty("RequestBody") StoryIdFilePostOpenOfficeXmlDocumentEGXlsxPptxFile requestBody, @JsonProperty("id") String id) {
+        this.requestBody = requestBody;
+        this.id = id;
+  }
 }

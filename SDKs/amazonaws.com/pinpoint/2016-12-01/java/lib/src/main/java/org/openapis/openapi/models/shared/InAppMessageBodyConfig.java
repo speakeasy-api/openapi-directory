@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InAppMessageBodyConfig {
     @JsonProperty("Alignment")
     public AlignmentEnum alignment;
+
     public InAppMessageBodyConfig withAlignment(AlignmentEnum alignment) {
         this.alignment = alignment;
         return this;
@@ -19,6 +20,7 @@ public class InAppMessageBodyConfig {
     
     @JsonProperty("Body")
     public String body;
+
     public InAppMessageBodyConfig withBody(String body) {
         this.body = body;
         return this;
@@ -26,9 +28,15 @@ public class InAppMessageBodyConfig {
     
     @JsonProperty("TextColor")
     public String textColor;
+
     public InAppMessageBodyConfig withTextColor(String textColor) {
         this.textColor = textColor;
         return this;
     }
     
+    public InAppMessageBodyConfig(@JsonProperty("Alignment") AlignmentEnum alignment, @JsonProperty("Body") String body, @JsonProperty("TextColor") String textColor) {
+        this.alignment = alignment;
+        this.body = body;
+        this.textColor = textColor;
+  }
 }

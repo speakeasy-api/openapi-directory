@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutEmailIdentityConfigurationSetAttributesResponse {
@@ -12,6 +13,7 @@ public class PutEmailIdentityConfigurationSetAttributesResponse {
      */
     
     public Object badRequestException;
+
     public PutEmailIdentityConfigurationSetAttributesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class PutEmailIdentityConfigurationSetAttributesResponse {
     
     
     public String contentType;
+
     public PutEmailIdentityConfigurationSetAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutEmailIdentityConfigurationSetAttributesResponse {
      */
     
     public Object notFoundException;
+
     public PutEmailIdentityConfigurationSetAttributesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -39,6 +43,7 @@ public class PutEmailIdentityConfigurationSetAttributesResponse {
      */
     
     public java.util.Map<String, Object> putEmailIdentityConfigurationSetAttributesResponse;
+
     public PutEmailIdentityConfigurationSetAttributesResponse withPutEmailIdentityConfigurationSetAttributesResponse(java.util.Map<String, Object> putEmailIdentityConfigurationSetAttributesResponse) {
         this.putEmailIdentityConfigurationSetAttributesResponse = putEmailIdentityConfigurationSetAttributesResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutEmailIdentityConfigurationSetAttributesResponse {
     
     
     public Integer statusCode;
+
     public PutEmailIdentityConfigurationSetAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutEmailIdentityConfigurationSetAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutEmailIdentityConfigurationSetAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutEmailIdentityConfigurationSetAttributesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutEmailIdentityConfigurationSetAttributesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutEmailIdentityConfigurationSetAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

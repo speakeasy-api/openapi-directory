@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * EnableLoggingMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class EnableLoggingMessage {
     
     public String bucketName;
+
     public EnableLoggingMessage withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -19,6 +20,7 @@ public class EnableLoggingMessage {
     
     
     public String clusterIdentifier;
+
     public EnableLoggingMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class EnableLoggingMessage {
     
     
     public LogDestinationTypeEnum logDestinationType;
+
     public EnableLoggingMessage withLogDestinationType(LogDestinationTypeEnum logDestinationType) {
         this.logDestinationType = logDestinationType;
         return this;
@@ -33,6 +36,7 @@ public class EnableLoggingMessage {
     
     
     public String[] logExports;
+
     public EnableLoggingMessage withLogExports(String[] logExports) {
         this.logExports = logExports;
         return this;
@@ -40,9 +44,13 @@ public class EnableLoggingMessage {
     
     
     public String s3KeyPrefix;
+
     public EnableLoggingMessage withS3KeyPrefix(String s3KeyPrefix) {
         this.s3KeyPrefix = s3KeyPrefix;
         return this;
     }
     
+    public EnableLoggingMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+  }
 }

@@ -20,6 +20,7 @@ public class Partition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public Partition withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -30,6 +31,7 @@ public class Partition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Partition withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class Partition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public Partition withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -48,6 +51,7 @@ public class Partition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAccessTime")
     public OffsetDateTime lastAccessTime;
+
     public Partition withLastAccessTime(OffsetDateTime lastAccessTime) {
         this.lastAccessTime = lastAccessTime;
         return this;
@@ -58,6 +62,7 @@ public class Partition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAnalyzedTime")
     public OffsetDateTime lastAnalyzedTime;
+
     public Partition withLastAnalyzedTime(OffsetDateTime lastAnalyzedTime) {
         this.lastAnalyzedTime = lastAnalyzedTime;
         return this;
@@ -66,6 +71,7 @@ public class Partition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public Partition withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -74,6 +80,7 @@ public class Partition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageDescriptor")
     public StorageDescriptor storageDescriptor;
+
     public Partition withStorageDescriptor(StorageDescriptor storageDescriptor) {
         this.storageDescriptor = storageDescriptor;
         return this;
@@ -82,6 +89,7 @@ public class Partition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public Partition withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -90,9 +98,11 @@ public class Partition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public Partition withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public Partition(){}
 }

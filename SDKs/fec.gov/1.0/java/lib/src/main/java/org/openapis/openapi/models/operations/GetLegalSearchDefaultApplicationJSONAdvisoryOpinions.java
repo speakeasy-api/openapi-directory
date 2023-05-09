@@ -14,6 +14,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ao_citations")
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsAoCitations[] aoCitations;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withAoCitations(GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsAoCitations[] aoCitations) {
         this.aoCitations = aoCitations;
         return this;
@@ -22,6 +23,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aos_cited_by")
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsAosCitedBy[] aosCitedBy;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withAosCitedBy(GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsAosCitedBy[] aosCitedBy) {
         this.aosCitedBy = aosCitedBy;
         return this;
@@ -30,6 +32,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commenter_names")
     public String[] commenterNames;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withCommenterNames(String[] commenterNames) {
         this.commenterNames = commenterNames;
         return this;
@@ -38,6 +41,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_highlights")
     public java.util.Map<String, Object> documentHighlights;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withDocumentHighlights(java.util.Map<String, Object> documentHighlights) {
         this.documentHighlights = documentHighlights;
         return this;
@@ -46,6 +50,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsDocuments[] documents;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withDocuments(GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsDocuments[] documents) {
         this.documents = documents;
         return this;
@@ -54,6 +59,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsEntities[] entities;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withEntities(GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsEntities[] entities) {
         this.entities = entities;
         return this;
@@ -62,6 +68,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highlights")
     public String[] highlights;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withHighlights(String[] highlights) {
         this.highlights = highlights;
         return this;
@@ -70,6 +77,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_pending")
     public Boolean isPending;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withIsPending(Boolean isPending) {
         this.isPending = isPending;
         return this;
@@ -79,6 +87,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("issue_date")
     public LocalDate issueDate;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withIssueDate(LocalDate issueDate) {
         this.issueDate = issueDate;
         return this;
@@ -87,6 +96,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +105,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("no")
     public String no;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withNo(String no) {
         this.no = no;
         return this;
@@ -103,6 +114,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regulatory_citations")
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsRegulatoryCitations[] regulatoryCitations;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withRegulatoryCitations(GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsRegulatoryCitations[] regulatoryCitations) {
         this.regulatoryCitations = regulatoryCitations;
         return this;
@@ -111,6 +123,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("representative_names")
     public String[] representativeNames;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withRepresentativeNames(String[] representativeNames) {
         this.representativeNames = representativeNames;
         return this;
@@ -120,6 +133,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("request_date")
     public LocalDate requestDate;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withRequestDate(LocalDate requestDate) {
         this.requestDate = requestDate;
         return this;
@@ -128,6 +142,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestor_names")
     public String[] requestorNames;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withRequestorNames(String[] requestorNames) {
         this.requestorNames = requestorNames;
         return this;
@@ -136,6 +151,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestor_types")
     public String[] requestorTypes;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withRequestorTypes(String[] requestorTypes) {
         this.requestorTypes = requestorTypes;
         return this;
@@ -144,6 +160,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withStatus(String status) {
         this.status = status;
         return this;
@@ -152,6 +169,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statutory_citations")
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsStatutoryCitations[] statutoryCitations;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withStatutoryCitations(GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsStatutoryCitations[] statutoryCitations) {
         this.statutoryCitations = statutoryCitations;
         return this;
@@ -160,9 +178,11 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions withSummary(String summary) {
         this.summary = summary;
         return this;
     }
     
+    public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions(){}
 }

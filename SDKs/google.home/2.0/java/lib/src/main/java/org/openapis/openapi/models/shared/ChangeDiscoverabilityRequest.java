@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ChangeDiscoverabilityRequest {
     @JsonProperty("enable_discovery")
     public Boolean enableDiscovery;
+
     public ChangeDiscoverabilityRequest withEnableDiscovery(Boolean enableDiscovery) {
         this.enableDiscovery = enableDiscovery;
         return this;
     }
     
+    public ChangeDiscoverabilityRequest(@JsonProperty("enable_discovery") Boolean enableDiscovery) {
+        this.enableDiscovery = enableDiscovery;
+  }
 }

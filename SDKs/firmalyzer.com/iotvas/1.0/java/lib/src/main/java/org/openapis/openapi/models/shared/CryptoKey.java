@@ -12,6 +12,7 @@ public class CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public String algorithm;
+
     public CryptoKey withAlgorithm(String algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -20,6 +21,7 @@ public class CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bits")
     public Long bits;
+
     public CryptoKey withBits(Long bits) {
         this.bits = bits;
         return this;
@@ -28,6 +30,7 @@ public class CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_hash")
     public String fileHash;
+
     public CryptoKey withFileHash(String fileHash) {
         this.fileHash = fileHash;
         return this;
@@ -36,6 +39,7 @@ public class CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_name")
     public String fileName;
+
     public CryptoKey withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -44,9 +48,11 @@ public class CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pem_type")
     public String pemType;
+
     public CryptoKey withPemType(String pemType) {
         this.pemType = pemType;
         return this;
     }
     
+    public CryptoKey(){}
 }

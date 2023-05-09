@@ -15,6 +15,7 @@ public class EksEmptyDir {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("medium")
     public String medium;
+
     public EksEmptyDir withMedium(String medium) {
         this.medium = medium;
         return this;
@@ -23,9 +24,11 @@ public class EksEmptyDir {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeLimit")
     public String sizeLimit;
+
     public EksEmptyDir withSizeLimit(String sizeLimit) {
         this.sizeLimit = sizeLimit;
         return this;
     }
     
+    public EksEmptyDir(){}
 }

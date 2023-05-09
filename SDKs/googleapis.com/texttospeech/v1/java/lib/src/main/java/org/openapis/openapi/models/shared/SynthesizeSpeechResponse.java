@@ -18,9 +18,11 @@ public class SynthesizeSpeechResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioContent")
     public String audioContent;
+
     public SynthesizeSpeechResponse withAudioContent(String audioContent) {
         this.audioContent = audioContent;
         return this;
     }
     
+    public SynthesizeSpeechResponse(){}
 }

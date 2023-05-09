@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMonitorsResponse {
@@ -12,6 +13,7 @@ public class ListMonitorsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListMonitorsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListMonitorsResponse {
     
     
     public String contentType;
+
     public ListMonitorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListMonitorsResponse {
      */
     
     public Object internalServerException;
+
     public ListMonitorsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListMonitorsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMonitorsOutput listMonitorsOutput;
+
     public ListMonitorsResponse withListMonitorsOutput(org.openapis.openapi.models.shared.ListMonitorsOutput listMonitorsOutput) {
         this.listMonitorsOutput = listMonitorsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListMonitorsResponse {
     
     
     public Integer statusCode;
+
     public ListMonitorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListMonitorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMonitorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListMonitorsResponse {
      */
     
     public Object throttlingException;
+
     public ListMonitorsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListMonitorsResponse {
      */
     
     public Object validationException;
+
     public ListMonitorsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListMonitorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

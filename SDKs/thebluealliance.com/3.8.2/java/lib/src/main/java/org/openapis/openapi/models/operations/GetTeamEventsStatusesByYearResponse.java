@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTeamEventsStatusesByYearResponse {
     
     public String contentType;
+
     public GetTeamEventsStatusesByYearResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTeamEventsStatusesByYearResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetTeamEventsStatusesByYearResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetTeamEventsStatusesByYearResponse {
     
     
     public Integer statusCode;
+
     public GetTeamEventsStatusesByYearResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetTeamEventsStatusesByYearResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTeamEventsStatusesByYearResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetTeamEventsStatusesByYearResponse {
      */
     
     public java.util.Map<String, org.openapis.openapi.models.shared.TeamEventStatus> getTeamEventsStatusesByYear200ApplicationJSONObject;
+
     public GetTeamEventsStatusesByYearResponse withGetTeamEventsStatusesByYear200ApplicationJSONObject(java.util.Map<String, org.openapis.openapi.models.shared.TeamEventStatus> getTeamEventsStatusesByYear200ApplicationJSONObject) {
         this.getTeamEventsStatusesByYear200ApplicationJSONObject = getTeamEventsStatusesByYear200ApplicationJSONObject;
         return this;
     }
     
+    public GetTeamEventsStatusesByYearResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

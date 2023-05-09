@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReportByChannelResponse {
     @JsonProperty("channels")
     public ReportByChannel[] channels;
+
     public ReportByChannelResponse withChannels(ReportByChannel[] channels) {
         this.channels = channels;
         return this;
@@ -23,6 +24,7 @@ public class ReportByChannelResponse {
      */
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public ReportByChannelResponse withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -30,6 +32,7 @@ public class ReportByChannelResponse {
     
     @JsonProperty("links")
     public ReportByCommonResponseLinks links;
+
     public ReportByChannelResponse withLinks(ReportByCommonResponseLinks links) {
         this.links = links;
         return this;
@@ -37,9 +40,16 @@ public class ReportByChannelResponse {
     
     @JsonProperty("paginationResult")
     public BeezUPCommonPaginationResult paginationResult;
+
     public ReportByChannelResponse withPaginationResult(BeezUPCommonPaginationResult paginationResult) {
         this.paginationResult = paginationResult;
         return this;
     }
     
+    public ReportByChannelResponse(@JsonProperty("channels") ReportByChannel[] channels, @JsonProperty("currencyCode") String currencyCode, @JsonProperty("links") ReportByCommonResponseLinks links, @JsonProperty("paginationResult") BeezUPCommonPaginationResult paginationResult) {
+        this.channels = channels;
+        this.currencyCode = currencyCode;
+        this.links = links;
+        this.paginationResult = paginationResult;
+  }
 }

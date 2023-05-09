@@ -3,20 +3,20 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AsyncClusteringProblemResponse;
-import org.openapis.openapi.models.shared.ClusterRequest;
+import org.openapis.openapi.models.shared.ClusterConfiguration;
+import org.openapis.openapi.models.shared.ClusterConfigurationClustering;
+import org.openapis.openapi.models.shared.ClusterConfigurationRouting;
 import org.openapis.openapi.models.shared.ClusterCustomer;
 import org.openapis.openapi.models.shared.ClusterCustomerAddress;
-import org.openapis.openapi.models.shared.ClusterConfiguration;
-import org.openapis.openapi.models.shared.ClusterConfigurationRouting;
-import org.openapis.openapi.models.shared.ClusterConfigurationClustering;
+import org.openapis.openapi.models.shared.ClusterRequest;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
@@ -27,14 +27,14 @@ public class Application {
                         maxQuantity = 50;
                         minQuantity = 30;
                         numClusters = 10;
-                    }};
+                    }};;
                     responseType = "json";
                     routing = new ClusterConfigurationRouting() {{
-                        costPerMeter = 5488.14;
+                        costPerMeter = 5928.45;
                         costPerSecond = 1;
                         profile = "car";
-                    }};
-                }};
+                    }};;
+                }};;
                 customers = new org.openapis.openapi.models.shared.ClusterCustomer[]{{
                     add(new ClusterCustomer() {{
                         address = new ClusterCustomerAddress() {{
@@ -64,15 +64,17 @@ public class Application {
                         quantity = 10;
                     }}),
                 }};
-            }}            
+            }};            
 
             AsyncClusteringProblemResponse res = sdk.clusterAPI.asyncClusteringProblem(req);
 
-            if (res.jobId.isPresent()) {
+            if (res.jobId != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

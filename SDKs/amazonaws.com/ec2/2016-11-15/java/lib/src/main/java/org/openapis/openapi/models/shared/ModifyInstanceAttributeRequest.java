@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyInstanceAttributeRequest {
     
     public ModifyInstanceAttributeRequestAttributeEnum attribute;
+
     public ModifyInstanceAttributeRequest withAttribute(ModifyInstanceAttributeRequestAttributeEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -16,6 +17,7 @@ public class ModifyInstanceAttributeRequest {
     
     
     public ModifyInstanceAttributeRequestBlockDeviceMappings[] blockDeviceMappings;
+
     public ModifyInstanceAttributeRequest withBlockDeviceMappings(ModifyInstanceAttributeRequestBlockDeviceMappings[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -23,6 +25,7 @@ public class ModifyInstanceAttributeRequest {
     
     
     public AttributeBooleanValue disableApiStop;
+
     public ModifyInstanceAttributeRequest withDisableApiStop(AttributeBooleanValue disableApiStop) {
         this.disableApiStop = disableApiStop;
         return this;
@@ -30,6 +33,7 @@ public class ModifyInstanceAttributeRequest {
     
     
     public ModifyInstanceAttributeRequestDisableApiTermination disableApiTermination;
+
     public ModifyInstanceAttributeRequest withDisableApiTermination(ModifyInstanceAttributeRequestDisableApiTermination disableApiTermination) {
         this.disableApiTermination = disableApiTermination;
         return this;
@@ -37,6 +41,7 @@ public class ModifyInstanceAttributeRequest {
     
     
     public Boolean dryRun;
+
     public ModifyInstanceAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -44,6 +49,7 @@ public class ModifyInstanceAttributeRequest {
     
     
     public ModifyInstanceAttributeRequestEbsOptimized ebsOptimized;
+
     public ModifyInstanceAttributeRequest withEbsOptimized(ModifyInstanceAttributeRequestEbsOptimized ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -51,6 +57,7 @@ public class ModifyInstanceAttributeRequest {
     
     
     public ModifyInstanceAttributeRequestEnaSupport enaSupport;
+
     public ModifyInstanceAttributeRequest withEnaSupport(ModifyInstanceAttributeRequestEnaSupport enaSupport) {
         this.enaSupport = enaSupport;
         return this;
@@ -58,6 +65,7 @@ public class ModifyInstanceAttributeRequest {
     
     
     public String[] groups;
+
     public ModifyInstanceAttributeRequest withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -65,6 +73,7 @@ public class ModifyInstanceAttributeRequest {
     
     
     public String instanceId;
+
     public ModifyInstanceAttributeRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -72,6 +81,7 @@ public class ModifyInstanceAttributeRequest {
     
     
     public ModifyInstanceAttributeRequestInstanceInitiatedShutdownBehavior instanceInitiatedShutdownBehavior;
+
     public ModifyInstanceAttributeRequest withInstanceInitiatedShutdownBehavior(ModifyInstanceAttributeRequestInstanceInitiatedShutdownBehavior instanceInitiatedShutdownBehavior) {
         this.instanceInitiatedShutdownBehavior = instanceInitiatedShutdownBehavior;
         return this;
@@ -79,6 +89,7 @@ public class ModifyInstanceAttributeRequest {
     
     
     public ModifyInstanceAttributeRequestInstanceType instanceType;
+
     public ModifyInstanceAttributeRequest withInstanceType(ModifyInstanceAttributeRequestInstanceType instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -86,6 +97,7 @@ public class ModifyInstanceAttributeRequest {
     
     
     public ModifyInstanceAttributeRequestKernel kernel;
+
     public ModifyInstanceAttributeRequest withKernel(ModifyInstanceAttributeRequestKernel kernel) {
         this.kernel = kernel;
         return this;
@@ -93,6 +105,7 @@ public class ModifyInstanceAttributeRequest {
     
     
     public ModifyInstanceAttributeRequestRamdisk ramdisk;
+
     public ModifyInstanceAttributeRequest withRamdisk(ModifyInstanceAttributeRequestRamdisk ramdisk) {
         this.ramdisk = ramdisk;
         return this;
@@ -100,6 +113,7 @@ public class ModifyInstanceAttributeRequest {
     
     
     public AttributeBooleanValue sourceDestCheck;
+
     public ModifyInstanceAttributeRequest withSourceDestCheck(AttributeBooleanValue sourceDestCheck) {
         this.sourceDestCheck = sourceDestCheck;
         return this;
@@ -107,6 +121,7 @@ public class ModifyInstanceAttributeRequest {
     
     
     public ModifyInstanceAttributeRequestSriovNetSupport sriovNetSupport;
+
     public ModifyInstanceAttributeRequest withSriovNetSupport(ModifyInstanceAttributeRequestSriovNetSupport sriovNetSupport) {
         this.sriovNetSupport = sriovNetSupport;
         return this;
@@ -114,6 +129,7 @@ public class ModifyInstanceAttributeRequest {
     
     
     public ModifyInstanceAttributeRequestUserData userData;
+
     public ModifyInstanceAttributeRequest withUserData(ModifyInstanceAttributeRequestUserData userData) {
         this.userData = userData;
         return this;
@@ -121,9 +137,13 @@ public class ModifyInstanceAttributeRequest {
     
     
     public String value;
+
     public ModifyInstanceAttributeRequest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ModifyInstanceAttributeRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

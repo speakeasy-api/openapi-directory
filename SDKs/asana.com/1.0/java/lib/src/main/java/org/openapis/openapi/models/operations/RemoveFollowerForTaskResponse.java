@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveFollowerForTaskResponse {
     
     public String contentType;
+
     public RemoveFollowerForTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemoveFollowerForTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public RemoveFollowerForTaskResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class RemoveFollowerForTaskResponse {
     
     
     public Integer statusCode;
+
     public RemoveFollowerForTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RemoveFollowerForTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveFollowerForTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class RemoveFollowerForTaskResponse {
      */
     
     public RemoveFollowerForTask200ApplicationJSON removeFollowerForTask200ApplicationJSONObject;
+
     public RemoveFollowerForTaskResponse withRemoveFollowerForTask200ApplicationJSONObject(RemoveFollowerForTask200ApplicationJSON removeFollowerForTask200ApplicationJSONObject) {
         this.removeFollowerForTask200ApplicationJSONObject = removeFollowerForTask200ApplicationJSONObject;
         return this;
     }
     
+    public RemoveFollowerForTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

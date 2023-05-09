@@ -61,11 +61,9 @@ public class Tracking {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrackResponse res = new org.openapis.openapi.models.operations.GetTrackResponse() {{
+        org.openapis.openapi.models.operations.GetTrackResponse res = new org.openapis.openapi.models.operations.GetTrackResponse(contentType, httpRes.statusCode()) {{
             trackingResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEpisodesInBatchForm {
@@ -12,9 +13,13 @@ public class GetEpisodesInBatchForm {
      */
     @SpeakeasyMetadata("form:name=ids")
     public String ids;
+
     public GetEpisodesInBatchForm withIds(String ids) {
         this.ids = ids;
         return this;
     }
     
+    public GetEpisodesInBatchForm(@JsonProperty("ids") String ids) {
+        this.ids = ids;
+  }
 }

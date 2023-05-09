@@ -18,9 +18,11 @@ public class CompanySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names_found")
     public NameFound[] namesFound;
+
     public CompanySummary withNamesFound(NameFound[] namesFound) {
         this.namesFound = namesFound;
         return this;
     }
     
+    public CompanySummary(){}
 }

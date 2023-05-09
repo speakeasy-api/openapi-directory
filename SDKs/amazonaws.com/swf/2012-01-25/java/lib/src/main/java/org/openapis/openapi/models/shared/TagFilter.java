@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TagFilter {
     @JsonProperty("tag")
     public String tag;
+
     public TagFilter withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public TagFilter(@JsonProperty("tag") String tag) {
+        this.tag = tag;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV1CustomersIdRequest {
@@ -12,6 +13,7 @@ public class GetV1CustomersIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetV1CustomersIdRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +24,13 @@ public class GetV1CustomersIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=needBalance")
     public Boolean needBalance;
+
     public GetV1CustomersIdRequest withNeedBalance(Boolean needBalance) {
         this.needBalance = needBalance;
         return this;
     }
     
+    public GetV1CustomersIdRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

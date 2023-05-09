@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSwitchSettingsStormControlRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public GetNetworkSwitchSettingsStormControlRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
     }
     
+    public GetNetworkSwitchSettingsStormControlRequest(@JsonProperty("networkId") String networkId) {
+        this.networkId = networkId;
+  }
 }

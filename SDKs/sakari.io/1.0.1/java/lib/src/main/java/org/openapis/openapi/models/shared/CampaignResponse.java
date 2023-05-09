@@ -15,6 +15,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Campaign data;
+
     public CampaignResponse withData(Campaign data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public CampaignResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public CampaignResponse(){}
 }

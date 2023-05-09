@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetails {
     
     public String additionalDetailType;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetails withAdditionalDetailType(String additionalDetailType) {
         this.additionalDetailType = additionalDetailType;
         return this;
@@ -19,6 +20,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPath
     
     
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsComponent component;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetails withComponent(StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsComponent component) {
         this.component = component;
         return this;
@@ -26,6 +28,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPath
     
     
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsLoadBalancers[] loadBalancers;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetails withLoadBalancers(StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsLoadBalancers[] loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
@@ -33,6 +36,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPath
     
     
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairs[] ruleGroupRuleOptionsPairs;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetails withRuleGroupRuleOptionsPairs(StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairs[] ruleGroupRuleOptionsPairs) {
         this.ruleGroupRuleOptionsPairs = ruleGroupRuleOptionsPairs;
         return this;
@@ -40,6 +44,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPath
     
     
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupTypePairs[] ruleGroupTypePairs;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetails withRuleGroupTypePairs(StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupTypePairs[] ruleGroupTypePairs) {
         this.ruleGroupTypePairs = ruleGroupTypePairs;
         return this;
@@ -47,6 +52,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPath
     
     
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleOptions[] ruleOptions;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetails withRuleOptions(StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleOptions[] ruleOptions) {
         this.ruleOptions = ruleOptions;
         return this;
@@ -54,6 +60,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPath
     
     
     public String serviceName;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetails withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -61,9 +68,11 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPath
     
     
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsVpcEndpointService vpcEndpointService;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetails withVpcEndpointService(StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsVpcEndpointService vpcEndpointService) {
         this.vpcEndpointService = vpcEndpointService;
         return this;
     }
     
+    public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetails(){}
 }

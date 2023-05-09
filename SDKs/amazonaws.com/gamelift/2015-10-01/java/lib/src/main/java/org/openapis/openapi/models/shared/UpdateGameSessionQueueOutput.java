@@ -15,9 +15,11 @@ public class UpdateGameSessionQueueOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionQueue")
     public GameSessionQueue gameSessionQueue;
+
     public UpdateGameSessionQueueOutput withGameSessionQueue(GameSessionQueue gameSessionQueue) {
         this.gameSessionQueue = gameSessionQueue;
         return this;
     }
     
+    public UpdateGameSessionQueueOutput(){}
 }

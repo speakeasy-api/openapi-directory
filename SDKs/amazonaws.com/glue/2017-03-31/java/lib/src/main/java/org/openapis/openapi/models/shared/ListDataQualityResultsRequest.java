@@ -12,6 +12,7 @@ public class ListDataQualityResultsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public DataQualityResultFilterCriteria filter;
+
     public ListDataQualityResultsRequest withFilter(DataQualityResultFilterCriteria filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListDataQualityResultsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDataQualityResultsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListDataQualityResultsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDataQualityResultsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDataQualityResultsRequest(){}
 }

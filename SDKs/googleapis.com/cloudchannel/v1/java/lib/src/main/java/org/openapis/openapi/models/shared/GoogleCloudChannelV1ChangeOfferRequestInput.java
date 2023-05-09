@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1ChangeOfferRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offer")
     public String offer;
+
     public GoogleCloudChannelV1ChangeOfferRequestInput withOffer(String offer) {
         this.offer = offer;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1ChangeOfferRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public GoogleCloudChannelV1ParameterInput[] parameters;
+
     public GoogleCloudChannelV1ChangeOfferRequestInput withParameters(GoogleCloudChannelV1ParameterInput[] parameters) {
         this.parameters = parameters;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudChannelV1ChangeOfferRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchaseOrderId")
     public String purchaseOrderId;
+
     public GoogleCloudChannelV1ChangeOfferRequestInput withPurchaseOrderId(String purchaseOrderId) {
         this.purchaseOrderId = purchaseOrderId;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudChannelV1ChangeOfferRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleCloudChannelV1ChangeOfferRequestInput withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GoogleCloudChannelV1ChangeOfferRequestInput(){}
 }

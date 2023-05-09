@@ -18,9 +18,11 @@ public class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableFieldReques
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableFieldRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableFieldRequest(){}
 }

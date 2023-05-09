@@ -12,6 +12,7 @@ public class CreateGameSessionQueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomEventData")
     public String customEventData;
+
     public CreateGameSessionQueueInput withCustomEventData(String customEventData) {
         this.customEventData = customEventData;
         return this;
@@ -20,6 +21,7 @@ public class CreateGameSessionQueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destinations")
     public GameSessionQueueDestination[] destinations;
+
     public CreateGameSessionQueueInput withDestinations(GameSessionQueueDestination[] destinations) {
         this.destinations = destinations;
         return this;
@@ -28,6 +30,7 @@ public class CreateGameSessionQueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterConfiguration")
     public FilterConfiguration filterConfiguration;
+
     public CreateGameSessionQueueInput withFilterConfiguration(FilterConfiguration filterConfiguration) {
         this.filterConfiguration = filterConfiguration;
         return this;
@@ -35,6 +38,7 @@ public class CreateGameSessionQueueInput {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateGameSessionQueueInput withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +47,7 @@ public class CreateGameSessionQueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationTarget")
     public String notificationTarget;
+
     public CreateGameSessionQueueInput withNotificationTarget(String notificationTarget) {
         this.notificationTarget = notificationTarget;
         return this;
@@ -51,6 +56,7 @@ public class CreateGameSessionQueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerLatencyPolicies")
     public PlayerLatencyPolicy[] playerLatencyPolicies;
+
     public CreateGameSessionQueueInput withPlayerLatencyPolicies(PlayerLatencyPolicy[] playerLatencyPolicies) {
         this.playerLatencyPolicies = playerLatencyPolicies;
         return this;
@@ -59,6 +65,7 @@ public class CreateGameSessionQueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PriorityConfiguration")
     public PriorityConfiguration priorityConfiguration;
+
     public CreateGameSessionQueueInput withPriorityConfiguration(PriorityConfiguration priorityConfiguration) {
         this.priorityConfiguration = priorityConfiguration;
         return this;
@@ -67,6 +74,7 @@ public class CreateGameSessionQueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateGameSessionQueueInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -75,9 +83,13 @@ public class CreateGameSessionQueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeoutInSeconds")
     public Long timeoutInSeconds;
+
     public CreateGameSessionQueueInput withTimeoutInSeconds(Long timeoutInSeconds) {
         this.timeoutInSeconds = timeoutInSeconds;
         return this;
     }
     
+    public CreateGameSessionQueueInput(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

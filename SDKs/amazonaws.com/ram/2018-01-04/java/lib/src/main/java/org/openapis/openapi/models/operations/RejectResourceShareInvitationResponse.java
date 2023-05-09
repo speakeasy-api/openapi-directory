@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RejectResourceShareInvitationResponse {
     
     public String contentType;
+
     public RejectResourceShareInvitationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RejectResourceShareInvitationResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public RejectResourceShareInvitationResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -29,6 +32,7 @@ public class RejectResourceShareInvitationResponse {
      */
     
     public Object invalidClientTokenException;
+
     public RejectResourceShareInvitationResponse withInvalidClientTokenException(Object invalidClientTokenException) {
         this.invalidClientTokenException = invalidClientTokenException;
         return this;
@@ -39,6 +43,7 @@ public class RejectResourceShareInvitationResponse {
      */
     
     public Object malformedArnException;
+
     public RejectResourceShareInvitationResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -49,6 +54,7 @@ public class RejectResourceShareInvitationResponse {
      */
     
     public Object operationNotPermittedException;
+
     public RejectResourceShareInvitationResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -59,6 +65,7 @@ public class RejectResourceShareInvitationResponse {
      */
     
     public org.openapis.openapi.models.shared.RejectResourceShareInvitationResponse rejectResourceShareInvitationResponse;
+
     public RejectResourceShareInvitationResponse withRejectResourceShareInvitationResponse(org.openapis.openapi.models.shared.RejectResourceShareInvitationResponse rejectResourceShareInvitationResponse) {
         this.rejectResourceShareInvitationResponse = rejectResourceShareInvitationResponse;
         return this;
@@ -69,6 +76,7 @@ public class RejectResourceShareInvitationResponse {
      */
     
     public Object resourceShareInvitationAlreadyRejectedException;
+
     public RejectResourceShareInvitationResponse withResourceShareInvitationAlreadyRejectedException(Object resourceShareInvitationAlreadyRejectedException) {
         this.resourceShareInvitationAlreadyRejectedException = resourceShareInvitationAlreadyRejectedException;
         return this;
@@ -79,6 +87,7 @@ public class RejectResourceShareInvitationResponse {
      */
     
     public Object serverInternalException;
+
     public RejectResourceShareInvitationResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -86,6 +95,7 @@ public class RejectResourceShareInvitationResponse {
     
     
     public Integer statusCode;
+
     public RejectResourceShareInvitationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class RejectResourceShareInvitationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RejectResourceShareInvitationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class RejectResourceShareInvitationResponse {
      */
     
     public Object resourceShareInvitationAlreadyAcceptedException;
+
     public RejectResourceShareInvitationResponse withResourceShareInvitationAlreadyAcceptedException(Object resourceShareInvitationAlreadyAcceptedException) {
         this.resourceShareInvitationAlreadyAcceptedException = resourceShareInvitationAlreadyAcceptedException;
         return this;
@@ -113,6 +125,7 @@ public class RejectResourceShareInvitationResponse {
      */
     
     public Object resourceShareInvitationArnNotFoundException;
+
     public RejectResourceShareInvitationResponse withResourceShareInvitationArnNotFoundException(Object resourceShareInvitationArnNotFoundException) {
         this.resourceShareInvitationArnNotFoundException = resourceShareInvitationArnNotFoundException;
         return this;
@@ -123,6 +136,7 @@ public class RejectResourceShareInvitationResponse {
      */
     
     public Object resourceShareInvitationExpiredException;
+
     public RejectResourceShareInvitationResponse withResourceShareInvitationExpiredException(Object resourceShareInvitationExpiredException) {
         this.resourceShareInvitationExpiredException = resourceShareInvitationExpiredException;
         return this;
@@ -133,9 +147,14 @@ public class RejectResourceShareInvitationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public RejectResourceShareInvitationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public RejectResourceShareInvitationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

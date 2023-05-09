@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RequisitionCreatedResponse {
     
     public String contentType;
+
     public RequisitionCreatedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -18,14 +20,16 @@ public class RequisitionCreatedResponse {
      * Requisition has been successfully created
      */
     
-    public org.openapis.openapi.models.shared.SpectacularRequisitionV2 spectacularRequisitionV2;
-    public RequisitionCreatedResponse withSpectacularRequisitionV2(org.openapis.openapi.models.shared.SpectacularRequisitionV2 spectacularRequisitionV2) {
-        this.spectacularRequisitionV2 = spectacularRequisitionV2;
+    public org.openapis.openapi.models.shared.SpectacularRequisition spectacularRequisition;
+
+    public RequisitionCreatedResponse withSpectacularRequisition(org.openapis.openapi.models.shared.SpectacularRequisition spectacularRequisition) {
+        this.spectacularRequisition = spectacularRequisition;
         return this;
     }
     
     
     public Integer statusCode;
+
     public RequisitionCreatedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RequisitionCreatedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RequisitionCreatedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class RequisitionCreatedResponse {
      */
     
     public java.util.Map<String, Object> requisitionCreated400ApplicationJSONObject;
+
     public RequisitionCreatedResponse withRequisitionCreated400ApplicationJSONObject(java.util.Map<String, Object> requisitionCreated400ApplicationJSONObject) {
         this.requisitionCreated400ApplicationJSONObject = requisitionCreated400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RequisitionCreatedResponse {
      */
     
     public java.util.Map<String, Object> requisitionCreated401ApplicationJSONObject;
+
     public RequisitionCreatedResponse withRequisitionCreated401ApplicationJSONObject(java.util.Map<String, Object> requisitionCreated401ApplicationJSONObject) {
         this.requisitionCreated401ApplicationJSONObject = requisitionCreated401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class RequisitionCreatedResponse {
      */
     
     public java.util.Map<String, Object> requisitionCreated403ApplicationJSONObject;
+
     public RequisitionCreatedResponse withRequisitionCreated403ApplicationJSONObject(java.util.Map<String, Object> requisitionCreated403ApplicationJSONObject) {
         this.requisitionCreated403ApplicationJSONObject = requisitionCreated403ApplicationJSONObject;
         return this;
@@ -73,9 +81,25 @@ public class RequisitionCreatedResponse {
      */
     
     public java.util.Map<String, Object> requisitionCreated404ApplicationJSONObject;
+
     public RequisitionCreatedResponse withRequisitionCreated404ApplicationJSONObject(java.util.Map<String, Object> requisitionCreated404ApplicationJSONObject) {
         this.requisitionCreated404ApplicationJSONObject = requisitionCreated404ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Nordigen rate limit exceeded
+     */
+    
+    public java.util.Map<String, Object> requisitionCreated429ApplicationJSONObject;
+
+    public RequisitionCreatedResponse withRequisitionCreated429ApplicationJSONObject(java.util.Map<String, Object> requisitionCreated429ApplicationJSONObject) {
+        this.requisitionCreated429ApplicationJSONObject = requisitionCreated429ApplicationJSONObject;
+        return this;
+    }
+    
+    public RequisitionCreatedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

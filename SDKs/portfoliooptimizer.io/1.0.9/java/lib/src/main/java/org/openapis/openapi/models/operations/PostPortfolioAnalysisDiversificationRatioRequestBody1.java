@@ -12,6 +12,7 @@ public class PostPortfolioAnalysisDiversificationRatioRequestBody1 {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioAnalysisDiversificationRatioRequestBody1 withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -22,6 +23,7 @@ public class PostPortfolioAnalysisDiversificationRatioRequestBody1 {
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioAnalysisDiversificationRatioRequestBody1 withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -29,9 +31,15 @@ public class PostPortfolioAnalysisDiversificationRatioRequestBody1 {
     
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisDiversificationRatioRequestBody1Portfolios[] portfolios;
+
     public PostPortfolioAnalysisDiversificationRatioRequestBody1 withPortfolios(PostPortfolioAnalysisDiversificationRatioRequestBody1Portfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
     }
     
+    public PostPortfolioAnalysisDiversificationRatioRequestBody1(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix, @JsonProperty("portfolios") PostPortfolioAnalysisDiversificationRatioRequestBody1Portfolios[] portfolios) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+        this.portfolios = portfolios;
+  }
 }

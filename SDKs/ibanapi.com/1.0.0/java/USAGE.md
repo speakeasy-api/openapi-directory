@@ -3,8 +3,8 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetBalanceResponse;
+import org.openapis.openapi.models.operations.GetBalanceSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -12,13 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetBalanceResponse res = sdk.ibanapi.getBalance();
+            GetBalanceResponse res = sdk.ibanapi.getBalance(new GetBalanceSecurity("corrupti") {{
+                apiKeySecurity = "YOUR_API_KEY_HERE";
+            }});
 
-            if (res.balanceResponse.isPresent()) {
+            if (res.balanceResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

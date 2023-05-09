@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TranslateProjectsLocationsGlossariesGlossaryEntriesListResponse {
     
     public String contentType;
+
     public TranslateProjectsLocationsGlossariesGlossaryEntriesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TranslateProjectsLocationsGlossariesGlossaryEntriesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGlossaryEntriesResponse listGlossaryEntriesResponse;
+
     public TranslateProjectsLocationsGlossariesGlossaryEntriesListResponse withListGlossaryEntriesResponse(org.openapis.openapi.models.shared.ListGlossaryEntriesResponse listGlossaryEntriesResponse) {
         this.listGlossaryEntriesResponse = listGlossaryEntriesResponse;
         return this;
@@ -26,6 +29,7 @@ public class TranslateProjectsLocationsGlossariesGlossaryEntriesListResponse {
     
     
     public Integer statusCode;
+
     public TranslateProjectsLocationsGlossariesGlossaryEntriesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TranslateProjectsLocationsGlossariesGlossaryEntriesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TranslateProjectsLocationsGlossariesGlossaryEntriesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TranslateProjectsLocationsGlossariesGlossaryEntriesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

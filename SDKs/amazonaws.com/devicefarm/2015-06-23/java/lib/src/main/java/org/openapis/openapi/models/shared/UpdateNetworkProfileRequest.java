@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateNetworkProfileRequest {
     @JsonProperty("arn")
     public String arn;
+
     public UpdateNetworkProfileRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class UpdateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateNetworkProfileRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class UpdateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downlinkBandwidthBits")
     public Long downlinkBandwidthBits;
+
     public UpdateNetworkProfileRequest withDownlinkBandwidthBits(Long downlinkBandwidthBits) {
         this.downlinkBandwidthBits = downlinkBandwidthBits;
         return this;
@@ -35,6 +38,7 @@ public class UpdateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downlinkDelayMs")
     public Long downlinkDelayMs;
+
     public UpdateNetworkProfileRequest withDownlinkDelayMs(Long downlinkDelayMs) {
         this.downlinkDelayMs = downlinkDelayMs;
         return this;
@@ -43,6 +47,7 @@ public class UpdateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downlinkJitterMs")
     public Long downlinkJitterMs;
+
     public UpdateNetworkProfileRequest withDownlinkJitterMs(Long downlinkJitterMs) {
         this.downlinkJitterMs = downlinkJitterMs;
         return this;
@@ -51,6 +56,7 @@ public class UpdateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downlinkLossPercent")
     public Long downlinkLossPercent;
+
     public UpdateNetworkProfileRequest withDownlinkLossPercent(Long downlinkLossPercent) {
         this.downlinkLossPercent = downlinkLossPercent;
         return this;
@@ -59,6 +65,7 @@ public class UpdateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateNetworkProfileRequest withName(String name) {
         this.name = name;
         return this;
@@ -67,6 +74,7 @@ public class UpdateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public NetworkProfileTypeEnum type;
+
     public UpdateNetworkProfileRequest withType(NetworkProfileTypeEnum type) {
         this.type = type;
         return this;
@@ -75,6 +83,7 @@ public class UpdateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uplinkBandwidthBits")
     public Long uplinkBandwidthBits;
+
     public UpdateNetworkProfileRequest withUplinkBandwidthBits(Long uplinkBandwidthBits) {
         this.uplinkBandwidthBits = uplinkBandwidthBits;
         return this;
@@ -83,6 +92,7 @@ public class UpdateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uplinkDelayMs")
     public Long uplinkDelayMs;
+
     public UpdateNetworkProfileRequest withUplinkDelayMs(Long uplinkDelayMs) {
         this.uplinkDelayMs = uplinkDelayMs;
         return this;
@@ -91,6 +101,7 @@ public class UpdateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uplinkJitterMs")
     public Long uplinkJitterMs;
+
     public UpdateNetworkProfileRequest withUplinkJitterMs(Long uplinkJitterMs) {
         this.uplinkJitterMs = uplinkJitterMs;
         return this;
@@ -99,9 +110,13 @@ public class UpdateNetworkProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uplinkLossPercent")
     public Long uplinkLossPercent;
+
     public UpdateNetworkProfileRequest withUplinkLossPercent(Long uplinkLossPercent) {
         this.uplinkLossPercent = uplinkLossPercent;
         return this;
     }
     
+    public UpdateNetworkProfileRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

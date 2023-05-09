@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CreateInstanceEventWindowRequest {
     
     public String cronExpression;
+
     public CreateInstanceEventWindowRequest withCronExpression(String cronExpression) {
         this.cronExpression = cronExpression;
         return this;
@@ -16,6 +17,7 @@ public class CreateInstanceEventWindowRequest {
     
     
     public Boolean dryRun;
+
     public CreateInstanceEventWindowRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class CreateInstanceEventWindowRequest {
     
     
     public String name;
+
     public CreateInstanceEventWindowRequest withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +33,7 @@ public class CreateInstanceEventWindowRequest {
     
     
     public CreateInstanceEventWindowRequestTagSpecifications[] tagSpecifications;
+
     public CreateInstanceEventWindowRequest withTagSpecifications(CreateInstanceEventWindowRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -37,9 +41,11 @@ public class CreateInstanceEventWindowRequest {
     
     
     public InstanceEventWindowTimeRangeRequest[] timeRanges;
+
     public CreateInstanceEventWindowRequest withTimeRanges(InstanceEventWindowTimeRangeRequest[] timeRanges) {
         this.timeRanges = timeRanges;
         return this;
     }
     
+    public CreateInstanceEventWindowRequest(){}
 }

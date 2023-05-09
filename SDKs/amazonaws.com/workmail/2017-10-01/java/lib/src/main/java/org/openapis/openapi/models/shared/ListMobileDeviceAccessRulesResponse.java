@@ -15,9 +15,11 @@ public class ListMobileDeviceAccessRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public MobileDeviceAccessRule[] rules;
+
     public ListMobileDeviceAccessRulesResponse withRules(MobileDeviceAccessRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public ListMobileDeviceAccessRulesResponse(){}
 }

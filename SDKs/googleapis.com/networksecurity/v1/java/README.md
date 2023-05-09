@@ -16,17 +16,16 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity;
 import org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest;
 import org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateResponse;
+import org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.AuthorizationPolicyActionEnum;
 import org.openapis.openapi.models.shared.AuthorizationPolicyInput;
-import org.openapis.openapi.models.shared.Rule;
-import org.openapis.openapi.models.shared.Source;
 import org.openapis.openapi.models.shared.Destination;
 import org.openapis.openapi.models.shared.HttpHeaderMatch;
+import org.openapis.openapi.models.shared.Rule;
+import org.openapis.openapi.models.shared.Source;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -35,126 +34,81 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest req = new NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest() {{
-                dollarXgafv = "2";
+            NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest req = new NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 authorizationPolicyInput = new AuthorizationPolicyInput() {{
-                    action = "ALLOW";
-                    description = "distinctio";
+                    action = AuthorizationPolicyActionEnum.DENY;
+                    description = "quibusdam";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("unde", "nulla");
-                        put("corrupti", "illum");
-                        put("vel", "error");
-                        put("deserunt", "suscipit");
+                        put("nulla", "corrupti");
+                        put("illum", "vel");
+                        put("error", "deserunt");
                     }};
-                    name = "iure";
+                    name = "Willie Gulgowski DVM";
                     rules = new org.openapis.openapi.models.shared.Rule[]{{
                         add(new Rule() {{
                             destinations = new org.openapis.openapi.models.shared.Destination[]{{
                                 add(new Destination() {{
                                     hosts = new String[]{{
-                                        add("delectus"),
-                                    }};
-                                    httpHeaderMatch = new HttpHeaderMatch() {{
-                                        headerName = "tempora";
-                                        regexMatch = "suscipit";
-                                    }};
-                                    methods = new String[]{{
                                         add("minus"),
                                         add("placeat"),
                                     }};
-                                    ports = new Long[]{{
-                                        add(479977),
-                                        add(568045),
-                                        add(392785),
+                                    httpHeaderMatch = new HttpHeaderMatch() {{
+                                        headerName = "voluptatum";
+                                        regexMatch = "iusto";
                                     }};
-                                }}),
-                                add(new Destination() {{
-                                    hosts = new String[]{{
+                                    methods = new String[]{{
+                                        add("nisi"),
+                                        add("recusandae"),
                                         add("temporibus"),
-                                        add("ab"),
-                                        add("quis"),
-                                        add("veritatis"),
+                                    }};
+                                    ports = new Long[]{{
+                                        add(337396L),
+                                    }};
+                                }}),
+                                add(new Destination() {{
+                                    hosts = new String[]{{
+                                        add("deserunt"),
                                     }};
                                     httpHeaderMatch = new HttpHeaderMatch() {{
-                                        headerName = "deserunt";
-                                        regexMatch = "perferendis";
+                                        headerName = "perferendis";
+                                        regexMatch = "ipsam";
                                     }};
                                     methods = new String[]{{
-                                        add("repellendus"),
                                         add("sapiente"),
+                                        add("quo"),
+                                        add("odit"),
+                                        add("at"),
                                     }};
                                     ports = new Long[]{{
-                                        add(140350),
-                                        add(870013),
-                                        add(870088),
-                                        add(978619),
-                                    }};
-                                }}),
-                                add(new Destination() {{
-                                    hosts = new String[]{{
-                                        add("quod"),
-                                        add("quod"),
-                                    }};
-                                    httpHeaderMatch = new HttpHeaderMatch() {{
-                                        headerName = "esse";
-                                        regexMatch = "totam";
-                                    }};
-                                    methods = new String[]{{
-                                        add("dolorum"),
-                                        add("dicta"),
-                                        add("nam"),
-                                        add("officia"),
-                                    }};
-                                    ports = new Long[]{{
-                                        add(143353),
-                                        add(537373),
-                                        add(944669),
-                                    }};
-                                }}),
-                                add(new Destination() {{
-                                    hosts = new String[]{{
-                                        add("totam"),
-                                        add("beatae"),
-                                        add("commodi"),
-                                        add("molestiae"),
-                                    }};
-                                    httpHeaderMatch = new HttpHeaderMatch() {{
-                                        headerName = "modi";
-                                        regexMatch = "qui";
-                                    }};
-                                    methods = new String[]{{
-                                        add("cum"),
-                                        add("esse"),
-                                        add("ipsum"),
-                                        add("excepturi"),
-                                    }};
-                                    ports = new Long[]{{
-                                        add(18789),
+                                        add(978619L),
+                                        add(473608L),
+                                        add(799159L),
+                                        add(800911L),
                                     }};
                                 }}),
                             }};
                             sources = new org.openapis.openapi.models.shared.Source[]{{
                                 add(new Source() {{
                                     ipBlocks = new String[]{{
-                                        add("sed"),
-                                        add("iste"),
-                                        add("dolor"),
+                                        add("porro"),
+                                        add("dolorum"),
+                                        add("dicta"),
                                     }};
                                     principals = new String[]{{
-                                        add("laboriosam"),
-                                        add("hic"),
-                                        add("saepe"),
+                                        add("officia"),
+                                        add("occaecati"),
+                                        add("fugit"),
                                     }};
                                 }}),
                                 add(new Source() {{
                                     ipBlocks = new String[]{{
-                                        add("in"),
-                                        add("corporis"),
-                                        add("iste"),
+                                        add("hic"),
+                                        add("optio"),
+                                        add("totam"),
                                     }};
                                     principals = new String[]{{
-                                        add("saepe"),
-                                        add("quidem"),
+                                        add("commodi"),
                                     }};
                                 }}),
                             }};
@@ -163,74 +117,93 @@ public class Application {
                             destinations = new org.openapis.openapi.models.shared.Destination[]{{
                                 add(new Destination() {{
                                     hosts = new String[]{{
-                                        add("reiciendis"),
+                                        add("qui"),
+                                        add("impedit"),
                                     }};
                                     httpHeaderMatch = new HttpHeaderMatch() {{
-                                        headerName = "est";
-                                        regexMatch = "mollitia";
+                                        headerName = "cum";
+                                        regexMatch = "esse";
                                     }};
                                     methods = new String[]{{
-                                        add("dolores"),
-                                        add("dolorem"),
-                                        add("corporis"),
+                                        add("excepturi"),
                                     }};
                                     ports = new Long[]{{
-                                        add(750686),
+                                        add(18789L),
+                                    }};
+                                }}),
+                                add(new Destination() {{
+                                    hosts = new String[]{{
+                                        add("natus"),
+                                        add("sed"),
+                                    }};
+                                    httpHeaderMatch = new HttpHeaderMatch() {{
+                                        headerName = "iste";
+                                        regexMatch = "dolor";
+                                    }};
+                                    methods = new String[]{{
+                                        add("laboriosam"),
+                                        add("hic"),
+                                        add("saepe"),
+                                    }};
+                                    ports = new Long[]{{
+                                        add(449950L),
+                                        add(359508L),
+                                        add(613064L),
                                     }};
                                 }}),
                             }};
                             sources = new org.openapis.openapi.models.shared.Source[]{{
                                 add(new Source() {{
                                     ipBlocks = new String[]{{
-                                        add("nemo"),
-                                        add("minima"),
-                                        add("excepturi"),
+                                        add("quidem"),
+                                        add("architecto"),
+                                        add("ipsa"),
+                                        add("reiciendis"),
                                     }};
                                     principals = new String[]{{
-                                        add("iure"),
+                                        add("mollitia"),
+                                        add("laborum"),
+                                        add("dolores"),
                                     }};
                                 }}),
                                 add(new Source() {{
                                     ipBlocks = new String[]{{
-                                        add("doloribus"),
-                                        add("sapiente"),
-                                        add("architecto"),
+                                        add("corporis"),
                                     }};
                                     principals = new String[]{{
-                                        add("dolorem"),
-                                        add("culpa"),
-                                        add("consequuntur"),
+                                        add("nobis"),
                                     }};
                                 }}),
                             }};
                         }}),
                     }};
-                }};
-                accessToken = "repellat";
-                alt = "media";
-                authorizationPolicyId = "occaecati";
-                callback = "numquam";
-                fields = "commodi";
-                key = "quam";
-                oauthToken = "molestiae";
-                parent = "velit";
+                }};;
+                accessToken = "enim";
+                alt = AltEnum.MEDIA;
+                authorizationPolicyId = "nemo";
+                callback = "minima";
+                fields = "excepturi";
+                key = "accusantium";
+                oauthToken = "iure";
                 prettyPrint = false;
-                quotaUser = "error";
-                uploadType = "quia";
-                uploadProtocol = "quis";
-            }}            
+                quotaUser = "culpa";
+                uploadType = "doloribus";
+                uploadProtocol = "sapiente";
+            }};            
 
-            NetworksecurityProjectsLocationsAuthorizationPoliciesCreateResponse res = sdk.projects.networksecurityProjectsLocationsAuthorizationPoliciesCreate(req, new NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity() {{
+            NetworksecurityProjectsLocationsAuthorizationPoliciesCreateResponse res = sdk.projects.networksecurityProjectsLocationsAuthorizationPoliciesCreate(req, new NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity("architecto", "mollitia") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -238,23 +211,31 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `networksecurityProjectsLocationsAuthorizationPoliciesCreate` - Creates a new AuthorizationPolicy in a given project and location.
-* `networksecurityProjectsLocationsAuthorizationPoliciesList` - Lists AuthorizationPolicies in a given project and location.
-* `networksecurityProjectsLocationsClientTlsPoliciesCreate` - Creates a new ClientTlsPolicy in a given project and location.
-* `networksecurityProjectsLocationsClientTlsPoliciesList` - Lists ClientTlsPolicies in a given project and location.
-* `networksecurityProjectsLocationsList` - Lists information about the supported locations for this service.
-* `networksecurityProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `networksecurityProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `networksecurityProjectsLocationsServerTlsPoliciesCreate` - Creates a new ServerTlsPolicy in a given project and location.
-* `networksecurityProjectsLocationsServerTlsPoliciesDelete` - Deletes a single ServerTlsPolicy.
-* `networksecurityProjectsLocationsServerTlsPoliciesGet` - Gets details of a single ServerTlsPolicy.
-* `networksecurityProjectsLocationsServerTlsPoliciesGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-* `networksecurityProjectsLocationsServerTlsPoliciesList` - Lists ServerTlsPolicies in a given project and location.
-* `networksecurityProjectsLocationsServerTlsPoliciesPatch` - Updates the parameters of a single ServerTlsPolicy.
-* `networksecurityProjectsLocationsServerTlsPoliciesSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-* `networksecurityProjectsLocationsServerTlsPoliciesTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+* [networksecurityProjectsLocationsAuthorizationPoliciesCreate](docs/projects/README.md#networksecurityprojectslocationsauthorizationpoliciescreate) - Creates a new AuthorizationPolicy in a given project and location.
+* [networksecurityProjectsLocationsAuthorizationPoliciesList](docs/projects/README.md#networksecurityprojectslocationsauthorizationpolicieslist) - Lists AuthorizationPolicies in a given project and location.
+* [networksecurityProjectsLocationsClientTlsPoliciesCreate](docs/projects/README.md#networksecurityprojectslocationsclienttlspoliciescreate) - Creates a new ClientTlsPolicy in a given project and location.
+* [networksecurityProjectsLocationsClientTlsPoliciesList](docs/projects/README.md#networksecurityprojectslocationsclienttlspolicieslist) - Lists ClientTlsPolicies in a given project and location.
+* [networksecurityProjectsLocationsGatewaySecurityPoliciesCreate](docs/projects/README.md#networksecurityprojectslocationsgatewaysecuritypoliciescreate) - Creates a new GatewaySecurityPolicy in a given project and location.
+* [networksecurityProjectsLocationsGatewaySecurityPoliciesList](docs/projects/README.md#networksecurityprojectslocationsgatewaysecuritypolicieslist) - Lists GatewaySecurityPolicies in a given project and location.
+* [networksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreate](docs/projects/README.md#networksecurityprojectslocationsgatewaysecuritypoliciesrulescreate) - Creates a new GatewaySecurityPolicy in a given project and location.
+* [networksecurityProjectsLocationsGatewaySecurityPoliciesRulesList](docs/projects/README.md#networksecurityprojectslocationsgatewaysecuritypoliciesruleslist) - Lists GatewaySecurityPolicyRules in a given project and location.
+* [networksecurityProjectsLocationsList](docs/projects/README.md#networksecurityprojectslocationslist) - Lists information about the supported locations for this service.
+* [networksecurityProjectsLocationsOperationsCancel](docs/projects/README.md#networksecurityprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [networksecurityProjectsLocationsOperationsList](docs/projects/README.md#networksecurityprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [networksecurityProjectsLocationsServerTlsPoliciesCreate](docs/projects/README.md#networksecurityprojectslocationsservertlspoliciescreate) - Creates a new ServerTlsPolicy in a given project and location.
+* [networksecurityProjectsLocationsServerTlsPoliciesGetIamPolicy](docs/projects/README.md#networksecurityprojectslocationsservertlspoliciesgetiampolicy) - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+* [networksecurityProjectsLocationsServerTlsPoliciesList](docs/projects/README.md#networksecurityprojectslocationsservertlspolicieslist) - Lists ServerTlsPolicies in a given project and location.
+* [networksecurityProjectsLocationsServerTlsPoliciesSetIamPolicy](docs/projects/README.md#networksecurityprojectslocationsservertlspoliciessetiampolicy) - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+* [networksecurityProjectsLocationsServerTlsPoliciesTestIamPermissions](docs/projects/README.md#networksecurityprojectslocationsservertlspoliciestestiampermissions) - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+* [networksecurityProjectsLocationsTlsInspectionPoliciesCreate](docs/projects/README.md#networksecurityprojectslocationstlsinspectionpoliciescreate) - Creates a new TlsInspectionPolicy in a given project and location.
+* [networksecurityProjectsLocationsTlsInspectionPoliciesList](docs/projects/README.md#networksecurityprojectslocationstlsinspectionpolicieslist) - Lists TlsInspectionPolicies in a given project and location.
+* [networksecurityProjectsLocationsUrlListsCreate](docs/projects/README.md#networksecurityprojectslocationsurllistscreate) - Creates a new UrlList in a given project and location.
+* [networksecurityProjectsLocationsUrlListsDelete](docs/projects/README.md#networksecurityprojectslocationsurllistsdelete) - Deletes a single UrlList.
+* [networksecurityProjectsLocationsUrlListsGet](docs/projects/README.md#networksecurityprojectslocationsurllistsget) - Gets details of a single UrlList.
+* [networksecurityProjectsLocationsUrlListsList](docs/projects/README.md#networksecurityprojectslocationsurllistslist) - Lists UrlLists in a given project and location.
+* [networksecurityProjectsLocationsUrlListsPatch](docs/projects/README.md#networksecurityprojectslocationsurllistspatch) - Updates the parameters of a single UrlList.
 <!-- End SDK Available Operations -->
 
 ### Maturity

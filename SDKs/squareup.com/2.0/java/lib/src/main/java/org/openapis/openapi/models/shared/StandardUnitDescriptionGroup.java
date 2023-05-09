@@ -18,6 +18,7 @@ public class StandardUnitDescriptionGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_code")
     public String languageCode;
+
     public StandardUnitDescriptionGroup withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -29,9 +30,11 @@ public class StandardUnitDescriptionGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standard_unit_descriptions")
     public StandardUnitDescription[] standardUnitDescriptions;
+
     public StandardUnitDescriptionGroup withStandardUnitDescriptions(StandardUnitDescription[] standardUnitDescriptions) {
         this.standardUnitDescriptions = standardUnitDescriptions;
         return this;
     }
     
+    public StandardUnitDescriptionGroup(){}
 }

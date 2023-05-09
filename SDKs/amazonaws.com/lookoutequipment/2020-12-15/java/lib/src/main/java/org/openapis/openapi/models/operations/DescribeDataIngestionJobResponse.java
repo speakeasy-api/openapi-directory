@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDataIngestionJobResponse {
@@ -12,6 +13,7 @@ public class DescribeDataIngestionJobResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeDataIngestionJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDataIngestionJobResponse {
     
     
     public String contentType;
+
     public DescribeDataIngestionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDataIngestionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDataIngestionJobResponse describeDataIngestionJobResponse;
+
     public DescribeDataIngestionJobResponse withDescribeDataIngestionJobResponse(org.openapis.openapi.models.shared.DescribeDataIngestionJobResponse describeDataIngestionJobResponse) {
         this.describeDataIngestionJobResponse = describeDataIngestionJobResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDataIngestionJobResponse {
      */
     
     public Object internalServerException;
+
     public DescribeDataIngestionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDataIngestionJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeDataIngestionJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeDataIngestionJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeDataIngestionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeDataIngestionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDataIngestionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeDataIngestionJobResponse {
      */
     
     public Object throttlingException;
+
     public DescribeDataIngestionJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeDataIngestionJobResponse {
      */
     
     public Object validationException;
+
     public DescribeDataIngestionJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeDataIngestionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

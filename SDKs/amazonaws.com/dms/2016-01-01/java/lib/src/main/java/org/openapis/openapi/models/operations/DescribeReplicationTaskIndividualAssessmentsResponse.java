@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeReplicationTaskIndividualAssessmentsResponse {
     
     public String contentType;
+
     public DescribeReplicationTaskIndividualAssessmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeReplicationTaskIndividualAssessmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeReplicationTaskIndividualAssessmentsResponse describeReplicationTaskIndividualAssessmentsResponse;
+
     public DescribeReplicationTaskIndividualAssessmentsResponse withDescribeReplicationTaskIndividualAssessmentsResponse(org.openapis.openapi.models.shared.DescribeReplicationTaskIndividualAssessmentsResponse describeReplicationTaskIndividualAssessmentsResponse) {
         this.describeReplicationTaskIndividualAssessmentsResponse = describeReplicationTaskIndividualAssessmentsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeReplicationTaskIndividualAssessmentsResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public DescribeReplicationTaskIndividualAssessmentsResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -36,6 +40,7 @@ public class DescribeReplicationTaskIndividualAssessmentsResponse {
     
     
     public Integer statusCode;
+
     public DescribeReplicationTaskIndividualAssessmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeReplicationTaskIndividualAssessmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeReplicationTaskIndividualAssessmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeReplicationTaskIndividualAssessmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

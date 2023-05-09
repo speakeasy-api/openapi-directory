@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetIPSetRequest {
     @JsonProperty("IPSetId")
     public String ipSetId;
+
     public GetIPSetRequest withIPSetId(String ipSetId) {
         this.ipSetId = ipSetId;
         return this;
     }
     
+    public GetIPSetRequest(@JsonProperty("IPSetId") String ipSetId) {
+        this.ipSetId = ipSetId;
+  }
 }

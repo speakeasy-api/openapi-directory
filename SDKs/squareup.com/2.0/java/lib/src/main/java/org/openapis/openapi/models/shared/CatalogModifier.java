@@ -18,6 +18,7 @@ public class CatalogModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifier_list_id")
     public String modifierListId;
+
     public CatalogModifier withModifierListId(String modifierListId) {
         this.modifierListId = modifierListId;
         return this;
@@ -29,6 +30,7 @@ public class CatalogModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CatalogModifier withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class CatalogModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ordinal")
     public Long ordinal;
+
     public CatalogModifier withOrdinal(Long ordinal) {
         this.ordinal = ordinal;
         return this;
@@ -56,9 +59,11 @@ public class CatalogModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_money")
     public Money priceMoney;
+
     public CatalogModifier withPriceMoney(Money priceMoney) {
         this.priceMoney = priceMoney;
         return this;
     }
     
+    public CatalogModifier(){}
 }

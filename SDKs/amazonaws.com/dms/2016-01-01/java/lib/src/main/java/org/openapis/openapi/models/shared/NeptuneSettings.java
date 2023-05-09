@@ -15,6 +15,7 @@ public class NeptuneSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorRetryDuration")
     public Long errorRetryDuration;
+
     public NeptuneSettings withErrorRetryDuration(Long errorRetryDuration) {
         this.errorRetryDuration = errorRetryDuration;
         return this;
@@ -23,6 +24,7 @@ public class NeptuneSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamAuthEnabled")
     public Boolean iamAuthEnabled;
+
     public NeptuneSettings withIamAuthEnabled(Boolean iamAuthEnabled) {
         this.iamAuthEnabled = iamAuthEnabled;
         return this;
@@ -31,6 +33,7 @@ public class NeptuneSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxFileSize")
     public Long maxFileSize;
+
     public NeptuneSettings withMaxFileSize(Long maxFileSize) {
         this.maxFileSize = maxFileSize;
         return this;
@@ -39,6 +42,7 @@ public class NeptuneSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRetryCount")
     public Long maxRetryCount;
+
     public NeptuneSettings withMaxRetryCount(Long maxRetryCount) {
         this.maxRetryCount = maxRetryCount;
         return this;
@@ -46,6 +50,7 @@ public class NeptuneSettings {
     
     @JsonProperty("S3BucketFolder")
     public String s3BucketFolder;
+
     public NeptuneSettings withS3BucketFolder(String s3BucketFolder) {
         this.s3BucketFolder = s3BucketFolder;
         return this;
@@ -53,6 +58,7 @@ public class NeptuneSettings {
     
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public NeptuneSettings withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -61,9 +67,14 @@ public class NeptuneSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceAccessRoleArn")
     public String serviceAccessRoleArn;
+
     public NeptuneSettings withServiceAccessRoleArn(String serviceAccessRoleArn) {
         this.serviceAccessRoleArn = serviceAccessRoleArn;
         return this;
     }
     
+    public NeptuneSettings(@JsonProperty("S3BucketFolder") String s3BucketFolder, @JsonProperty("S3BucketName") String s3BucketName) {
+        this.s3BucketFolder = s3BucketFolder;
+        this.s3BucketName = s3BucketName;
+  }
 }

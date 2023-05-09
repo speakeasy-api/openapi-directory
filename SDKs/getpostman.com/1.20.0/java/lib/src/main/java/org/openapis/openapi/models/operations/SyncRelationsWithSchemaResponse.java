@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SyncRelationsWithSchemaResponse {
     
     public String contentType;
+
     public SyncRelationsWithSchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SyncRelationsWithSchemaResponse {
     
     
     public Integer statusCode;
+
     public SyncRelationsWithSchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SyncRelationsWithSchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SyncRelationsWithSchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SyncRelationsWithSchemaResponse {
      */
     
     public SyncRelationsWithSchema200ApplicationJSON syncRelationsWithSchema200ApplicationJSONObject;
+
     public SyncRelationsWithSchemaResponse withSyncRelationsWithSchema200ApplicationJSONObject(SyncRelationsWithSchema200ApplicationJSON syncRelationsWithSchema200ApplicationJSONObject) {
         this.syncRelationsWithSchema200ApplicationJSONObject = syncRelationsWithSchema200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class SyncRelationsWithSchemaResponse {
      */
     
     public SyncRelationsWithSchema400ApplicationJSON syncRelationsWithSchema400ApplicationJSONObject;
+
     public SyncRelationsWithSchemaResponse withSyncRelationsWithSchema400ApplicationJSONObject(SyncRelationsWithSchema400ApplicationJSON syncRelationsWithSchema400ApplicationJSONObject) {
         this.syncRelationsWithSchema400ApplicationJSONObject = syncRelationsWithSchema400ApplicationJSONObject;
         return this;
     }
     
+    public SyncRelationsWithSchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

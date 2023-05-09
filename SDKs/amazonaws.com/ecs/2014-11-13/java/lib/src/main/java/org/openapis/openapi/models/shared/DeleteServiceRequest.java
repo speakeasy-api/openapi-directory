@@ -12,6 +12,7 @@ public class DeleteServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public DeleteServiceRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -20,6 +21,7 @@ public class DeleteServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public DeleteServiceRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -27,9 +29,13 @@ public class DeleteServiceRequest {
     
     @JsonProperty("service")
     public String service;
+
     public DeleteServiceRequest withService(String service) {
         this.service = service;
         return this;
     }
     
+    public DeleteServiceRequest(@JsonProperty("service") String service) {
+        this.service = service;
+  }
 }

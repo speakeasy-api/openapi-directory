@@ -18,9 +18,11 @@ public class FastSocket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public FastSocket withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public FastSocket(){}
 }

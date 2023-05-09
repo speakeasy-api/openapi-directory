@@ -15,6 +15,7 @@ public class ServiceCatalogProvisioningDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PathId")
     public String pathId;
+
     public ServiceCatalogProvisioningDetails withPathId(String pathId) {
         this.pathId = pathId;
         return this;
@@ -22,6 +23,7 @@ public class ServiceCatalogProvisioningDetails {
     
     @JsonProperty("ProductId")
     public String productId;
+
     public ServiceCatalogProvisioningDetails withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -30,6 +32,7 @@ public class ServiceCatalogProvisioningDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public ServiceCatalogProvisioningDetails withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
@@ -38,9 +41,13 @@ public class ServiceCatalogProvisioningDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningParameters")
     public ProvisioningParameter[] provisioningParameters;
+
     public ServiceCatalogProvisioningDetails withProvisioningParameters(ProvisioningParameter[] provisioningParameters) {
         this.provisioningParameters = provisioningParameters;
         return this;
     }
     
+    public ServiceCatalogProvisioningDetails(@JsonProperty("ProductId") String productId) {
+        this.productId = productId;
+  }
 }

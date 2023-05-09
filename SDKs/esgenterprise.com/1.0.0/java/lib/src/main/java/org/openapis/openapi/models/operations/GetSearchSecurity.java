@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=token")
     public String apiKey;
+
     public GetSearchSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public GetSearchSecurity(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrievePrefixPricingRequest {
@@ -12,6 +13,7 @@ public class RetrievePrefixPricingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public RetrievePrefixPricingRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class RetrievePrefixPricingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_secret")
     public String apiSecret;
+
     public RetrievePrefixPricingRequest withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -32,6 +35,7 @@ public class RetrievePrefixPricingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
     public String prefix;
+
     public RetrievePrefixPricingRequest withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -42,9 +46,16 @@ public class RetrievePrefixPricingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public String type;
+
     public RetrievePrefixPricingRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RetrievePrefixPricingRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("api_secret") String apiSecret, @JsonProperty("prefix") String prefix, @JsonProperty("type") String type) {
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+        this.prefix = prefix;
+        this.type = type;
+  }
 }

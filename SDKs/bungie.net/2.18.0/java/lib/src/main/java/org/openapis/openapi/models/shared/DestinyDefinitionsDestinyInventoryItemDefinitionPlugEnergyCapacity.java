@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCapacity 
      */
     
     public Integer capacityValue;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCapacity withCapacityValue(Integer capacityValue) {
         this.capacityValue = capacityValue;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCapacity 
      */
     
     public Integer energyType;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCapacity withEnergyType(Integer energyType) {
         this.energyType = energyType;
         return this;
@@ -35,9 +37,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCapacity 
      */
     
     public Long energyTypeHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCapacity withEnergyTypeHash(Long energyTypeHash) {
         this.energyTypeHash = energyTypeHash;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCapacity(){}
 }

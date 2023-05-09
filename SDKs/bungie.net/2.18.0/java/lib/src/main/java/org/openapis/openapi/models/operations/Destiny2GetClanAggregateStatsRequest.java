@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetClanAggregateStatsRequest {
@@ -12,6 +13,7 @@ public class Destiny2GetClanAggregateStatsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public Long groupId;
+
     public Destiny2GetClanAggregateStatsRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -22,9 +24,13 @@ public class Destiny2GetClanAggregateStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modes")
     public String modes;
+
     public Destiny2GetClanAggregateStatsRequest withModes(String modes) {
         this.modes = modes;
         return this;
     }
     
+    public Destiny2GetClanAggregateStatsRequest(@JsonProperty("groupId") Long groupId) {
+        this.groupId = groupId;
+  }
 }

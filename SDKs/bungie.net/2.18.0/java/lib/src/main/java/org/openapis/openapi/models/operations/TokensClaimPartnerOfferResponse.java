@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TokensClaimPartnerOfferResponse {
     
     public byte[] body;
+
     public TokensClaimPartnerOfferResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class TokensClaimPartnerOfferResponse {
     
     
     public String contentType;
+
     public TokensClaimPartnerOfferResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class TokensClaimPartnerOfferResponse {
     
     
     public Integer statusCode;
+
     public TokensClaimPartnerOfferResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class TokensClaimPartnerOfferResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TokensClaimPartnerOfferResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TokensClaimPartnerOfferResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteKeyResponse {
@@ -12,6 +13,7 @@ public class DeleteKeyResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteKeyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteKeyResponse {
     
     
     public String contentType;
+
     public DeleteKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteKeyResponse {
      */
     
     public java.util.Map<String, Object> deleteKeyResponse;
+
     public DeleteKeyResponse withDeleteKeyResponse(java.util.Map<String, Object> deleteKeyResponse) {
         this.deleteKeyResponse = deleteKeyResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteKeyResponse {
      */
     
     public Object internalServerException;
+
     public DeleteKeyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteKeyResponse {
     
     
     public Integer statusCode;
+
     public DeleteKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteKeyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteKeyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteKeyResponse {
      */
     
     public Object throttlingException;
+
     public DeleteKeyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteKeyResponse {
      */
     
     public Object validationException;
+
     public DeleteKeyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

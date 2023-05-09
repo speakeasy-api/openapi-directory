@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetValidateRequest {
@@ -12,6 +13,7 @@ public class SetValidateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SetValidateRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class SetValidateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=validate")
     public Integer validate;
+
     public SetValidateRequest withValidate(Integer validate) {
         this.validate = validate;
         return this;
     }
     
+    public SetValidateRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("validate") Integer validate) {
+        this.agentNum = agentNum;
+        this.validate = validate;
+  }
 }

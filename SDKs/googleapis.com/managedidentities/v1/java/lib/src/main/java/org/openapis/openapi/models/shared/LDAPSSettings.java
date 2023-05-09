@@ -18,6 +18,7 @@ public class LDAPSSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate")
     public Certificate certificate;
+
     public LDAPSSettings withCertificate(Certificate certificate) {
         this.certificate = certificate;
         return this;
@@ -29,6 +30,7 @@ public class LDAPSSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificatePassword")
     public String certificatePassword;
+
     public LDAPSSettings withCertificatePassword(String certificatePassword) {
         this.certificatePassword = certificatePassword;
         return this;
@@ -40,6 +42,7 @@ public class LDAPSSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificatePfx")
     public String certificatePfx;
+
     public LDAPSSettings withCertificatePfx(String certificatePfx) {
         this.certificatePfx = certificatePfx;
         return this;
@@ -51,6 +54,7 @@ public class LDAPSSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LDAPSSettings withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class LDAPSSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public LDAPSSettingsStateEnum state;
+
     public LDAPSSettings withState(LDAPSSettingsStateEnum state) {
         this.state = state;
         return this;
@@ -73,9 +78,11 @@ public class LDAPSSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public LDAPSSettings withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public LDAPSSettings(){}
 }

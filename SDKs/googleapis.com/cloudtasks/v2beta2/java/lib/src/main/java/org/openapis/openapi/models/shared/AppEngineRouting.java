@@ -18,6 +18,7 @@ public class AppEngineRouting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public AppEngineRouting withHost(String host) {
         this.host = host;
         return this;
@@ -29,6 +30,7 @@ public class AppEngineRouting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public AppEngineRouting withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -40,6 +42,7 @@ public class AppEngineRouting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public AppEngineRouting withService(String service) {
         this.service = service;
         return this;
@@ -51,9 +54,11 @@ public class AppEngineRouting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public AppEngineRouting withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AppEngineRouting(){}
 }

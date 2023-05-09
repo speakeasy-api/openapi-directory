@@ -15,6 +15,7 @@ public class PipeSourceSqsQueueParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchSize")
     public Long batchSize;
+
     public PipeSourceSqsQueueParameters withBatchSize(Long batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -23,9 +24,11 @@ public class PipeSourceSqsQueueParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumBatchingWindowInSeconds")
     public Long maximumBatchingWindowInSeconds;
+
     public PipeSourceSqsQueueParameters withMaximumBatchingWindowInSeconds(Long maximumBatchingWindowInSeconds) {
         this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
         return this;
     }
     
+    public PipeSourceSqsQueueParameters(){}
 }

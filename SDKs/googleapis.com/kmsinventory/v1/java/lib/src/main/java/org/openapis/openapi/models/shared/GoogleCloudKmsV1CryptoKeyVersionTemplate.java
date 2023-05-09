@@ -18,6 +18,7 @@ public class GoogleCloudKmsV1CryptoKeyVersionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public GoogleCloudKmsV1CryptoKeyVersionTemplateAlgorithmEnum algorithm;
+
     public GoogleCloudKmsV1CryptoKeyVersionTemplate withAlgorithm(GoogleCloudKmsV1CryptoKeyVersionTemplateAlgorithmEnum algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudKmsV1CryptoKeyVersionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protectionLevel")
     public GoogleCloudKmsV1CryptoKeyVersionTemplateProtectionLevelEnum protectionLevel;
+
     public GoogleCloudKmsV1CryptoKeyVersionTemplate withProtectionLevel(GoogleCloudKmsV1CryptoKeyVersionTemplateProtectionLevelEnum protectionLevel) {
         this.protectionLevel = protectionLevel;
         return this;
     }
     
+    public GoogleCloudKmsV1CryptoKeyVersionTemplate(){}
 }

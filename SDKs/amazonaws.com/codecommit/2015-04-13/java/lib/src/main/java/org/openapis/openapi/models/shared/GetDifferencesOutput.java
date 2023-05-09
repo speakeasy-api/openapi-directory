@@ -15,6 +15,7 @@ public class GetDifferencesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetDifferencesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetDifferencesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("differences")
     public Difference[] differences;
+
     public GetDifferencesOutput withDifferences(Difference[] differences) {
         this.differences = differences;
         return this;
     }
     
+    public GetDifferencesOutput(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetContentModerationRequest {
     @JsonProperty("JobId")
     public String jobId;
+
     public GetContentModerationRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -19,6 +20,7 @@ public class GetContentModerationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetContentModerationRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class GetContentModerationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetContentModerationRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class GetContentModerationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public ContentModerationSortByEnum sortBy;
+
     public GetContentModerationRequest withSortBy(ContentModerationSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public GetContentModerationRequest(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

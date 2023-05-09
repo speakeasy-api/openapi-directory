@@ -15,6 +15,7 @@ public class LineItemPricingTaxDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Long amount;
+
     public LineItemPricingTaxDetail withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -23,9 +24,11 @@ public class LineItemPricingTaxDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     public Double rate;
+
     public LineItemPricingTaxDetail withRate(Double rate) {
         this.rate = rate;
         return this;
     }
     
+    public LineItemPricingTaxDetail(){}
 }

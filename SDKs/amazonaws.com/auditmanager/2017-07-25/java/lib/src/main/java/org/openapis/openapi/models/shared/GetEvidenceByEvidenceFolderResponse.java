@@ -15,6 +15,7 @@ public class GetEvidenceByEvidenceFolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidence")
     public Evidence[] evidence;
+
     public GetEvidenceByEvidenceFolderResponse withEvidence(Evidence[] evidence) {
         this.evidence = evidence;
         return this;
@@ -23,9 +24,11 @@ public class GetEvidenceByEvidenceFolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetEvidenceByEvidenceFolderResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetEvidenceByEvidenceFolderResponse(){}
 }

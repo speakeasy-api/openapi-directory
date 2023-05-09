@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsManagementClientIdHashClientIdResponse {
     
     public String contentType;
+
     public AnalyticsManagementClientIdHashClientIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsManagementClientIdHashClientIdResponse {
      */
     
     public org.openapis.openapi.models.shared.HashClientIdResponse hashClientIdResponse;
+
     public AnalyticsManagementClientIdHashClientIdResponse withHashClientIdResponse(org.openapis.openapi.models.shared.HashClientIdResponse hashClientIdResponse) {
         this.hashClientIdResponse = hashClientIdResponse;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsManagementClientIdHashClientIdResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsManagementClientIdHashClientIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsManagementClientIdHashClientIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsManagementClientIdHashClientIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsManagementClientIdHashClientIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

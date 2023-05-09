@@ -18,6 +18,7 @@ public class ToolOutputReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public Timestamp creationTime;
+
     public ToolOutputReference withCreationTime(Timestamp creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class ToolOutputReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("output")
     public FileReference output;
+
     public ToolOutputReference withOutput(FileReference output) {
         this.output = output;
         return this;
@@ -40,9 +42,11 @@ public class ToolOutputReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testCase")
     public TestCaseReference testCase;
+
     public ToolOutputReference withTestCase(TestCaseReference testCase) {
         this.testCase = testCase;
         return this;
     }
     
+    public ToolOutputReference(){}
 }

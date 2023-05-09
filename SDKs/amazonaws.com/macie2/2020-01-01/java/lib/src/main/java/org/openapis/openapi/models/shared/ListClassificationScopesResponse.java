@@ -15,6 +15,7 @@ public class ListClassificationScopesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classificationScopes")
     public ClassificationScopeSummary[] classificationScopes;
+
     public ListClassificationScopesResponse withClassificationScopes(ClassificationScopeSummary[] classificationScopes) {
         this.classificationScopes = classificationScopes;
         return this;
@@ -23,9 +24,11 @@ public class ListClassificationScopesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListClassificationScopesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListClassificationScopesResponse(){}
 }

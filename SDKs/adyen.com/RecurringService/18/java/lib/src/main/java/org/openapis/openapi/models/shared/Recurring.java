@@ -19,6 +19,7 @@ public class Recurring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contract")
     public RecurringContractEnum contract;
+
     public Recurring withContract(RecurringContractEnum contract) {
         this.contract = contract;
         return this;
@@ -30,9 +31,11 @@ public class Recurring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringDetailName")
     public String recurringDetailName;
+
     public Recurring withRecurringDetailName(String recurringDetailName) {
         this.recurringDetailName = recurringDetailName;
         return this;
     }
     
+    public Recurring(){}
 }

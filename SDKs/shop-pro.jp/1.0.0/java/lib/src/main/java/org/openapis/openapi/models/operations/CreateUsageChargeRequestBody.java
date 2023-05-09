@@ -15,9 +15,11 @@ public class CreateUsageChargeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage_charge")
     public CreateUsageChargeRequestBodyUsageCharge usageCharge;
+
     public CreateUsageChargeRequestBody withUsageCharge(CreateUsageChargeRequestBodyUsageCharge usageCharge) {
         this.usageCharge = usageCharge;
         return this;
     }
     
+    public CreateUsageChargeRequestBody(){}
 }

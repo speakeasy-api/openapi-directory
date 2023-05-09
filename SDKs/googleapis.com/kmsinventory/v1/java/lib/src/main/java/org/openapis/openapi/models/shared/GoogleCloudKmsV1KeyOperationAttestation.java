@@ -18,6 +18,7 @@ public class GoogleCloudKmsV1KeyOperationAttestation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certChains")
     public GoogleCloudKmsV1KeyOperationAttestationCertificateChains certChains;
+
     public GoogleCloudKmsV1KeyOperationAttestation withCertChains(GoogleCloudKmsV1KeyOperationAttestationCertificateChains certChains) {
         this.certChains = certChains;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudKmsV1KeyOperationAttestation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GoogleCloudKmsV1KeyOperationAttestation withContent(String content) {
         this.content = content;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudKmsV1KeyOperationAttestation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public GoogleCloudKmsV1KeyOperationAttestationFormatEnum format;
+
     public GoogleCloudKmsV1KeyOperationAttestation withFormat(GoogleCloudKmsV1KeyOperationAttestationFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public GoogleCloudKmsV1KeyOperationAttestation(){}
 }

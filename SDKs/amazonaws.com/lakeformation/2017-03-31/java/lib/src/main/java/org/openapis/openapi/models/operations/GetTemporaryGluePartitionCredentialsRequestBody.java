@@ -15,6 +15,7 @@ public class GetTemporaryGluePartitionCredentialsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuditContext")
     public GetTemporaryGluePartitionCredentialsRequestBodyAuditContext auditContext;
+
     public GetTemporaryGluePartitionCredentialsRequestBody withAuditContext(GetTemporaryGluePartitionCredentialsRequestBodyAuditContext auditContext) {
         this.auditContext = auditContext;
         return this;
@@ -26,6 +27,7 @@ public class GetTemporaryGluePartitionCredentialsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationSeconds")
     public Long durationSeconds;
+
     public GetTemporaryGluePartitionCredentialsRequestBody withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -36,6 +38,7 @@ public class GetTemporaryGluePartitionCredentialsRequestBody {
      */
     @JsonProperty("Partition")
     public GetTemporaryGluePartitionCredentialsRequestBodyPartition partition;
+
     public GetTemporaryGluePartitionCredentialsRequestBody withPartition(GetTemporaryGluePartitionCredentialsRequestBodyPartition partition) {
         this.partition = partition;
         return this;
@@ -47,6 +50,7 @@ public class GetTemporaryGluePartitionCredentialsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permissions")
     public org.openapis.openapi.models.shared.PermissionEnum[] permissions;
+
     public GetTemporaryGluePartitionCredentialsRequestBody withPermissions(org.openapis.openapi.models.shared.PermissionEnum[] permissions) {
         this.permissions = permissions;
         return this;
@@ -57,6 +61,7 @@ public class GetTemporaryGluePartitionCredentialsRequestBody {
      */
     @JsonProperty("SupportedPermissionTypes")
     public org.openapis.openapi.models.shared.PermissionTypeEnum[] supportedPermissionTypes;
+
     public GetTemporaryGluePartitionCredentialsRequestBody withSupportedPermissionTypes(org.openapis.openapi.models.shared.PermissionTypeEnum[] supportedPermissionTypes) {
         this.supportedPermissionTypes = supportedPermissionTypes;
         return this;
@@ -67,9 +72,15 @@ public class GetTemporaryGluePartitionCredentialsRequestBody {
      */
     @JsonProperty("TableArn")
     public String tableArn;
+
     public GetTemporaryGluePartitionCredentialsRequestBody withTableArn(String tableArn) {
         this.tableArn = tableArn;
         return this;
     }
     
+    public GetTemporaryGluePartitionCredentialsRequestBody(@JsonProperty("Partition") GetTemporaryGluePartitionCredentialsRequestBodyPartition partition, @JsonProperty("SupportedPermissionTypes") org.openapis.openapi.models.shared.PermissionTypeEnum[] supportedPermissionTypes, @JsonProperty("TableArn") String tableArn) {
+        this.partition = partition;
+        this.supportedPermissionTypes = supportedPermissionTypes;
+        this.tableArn = tableArn;
+  }
 }

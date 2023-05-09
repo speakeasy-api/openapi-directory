@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessage {
     @JsonProperty("DeliveryMethod")
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum deliveryMethod;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessage withDeliveryMethod(CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum deliveryMethod) {
         this.deliveryMethod = deliveryMethod;
         return this;
@@ -22,6 +23,7 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificati
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailSettings")
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageEmailSettings emailSettings;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessage withEmailSettings(CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageEmailSettings emailSettings) {
         this.emailSettings = emailSettings;
         return this;
@@ -30,9 +32,13 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificati
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmsSettings")
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageSmsSettings smsSettings;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessage withSmsSettings(CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageSmsSettings smsSettings) {
         this.smsSettings = smsSettings;
         return this;
     }
     
+    public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessage(@JsonProperty("DeliveryMethod") CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum deliveryMethod) {
+        this.deliveryMethod = deliveryMethod;
+  }
 }

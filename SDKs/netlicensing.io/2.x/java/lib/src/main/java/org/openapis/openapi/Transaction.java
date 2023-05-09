@@ -59,12 +59,10 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTransactionResponse res = new org.openapis.openapi.models.operations.CreateTransactionResponse() {{
+        org.openapis.openapi.models.operations.CreateTransactionResponse res = new org.openapis.openapi.models.operations.CreateTransactionResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,12 +105,10 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionResponse res = new org.openapis.openapi.models.operations.GetTransactionResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionResponse res = new org.openapis.openapi.models.operations.GetTransactionResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,10 +131,11 @@ public class Transaction {
     /**
      * List Transactions
      * Return a list of all Transactions for the current Vendor
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListTransactionsResponse listTransactions() throws Exception {
+    public org.openapis.openapi.models.operations.ListTransactionsResponse listTransactions(org.openapis.openapi.models.operations.ListTransactionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transaction");
         
@@ -147,17 +144,16 @@ public class Transaction {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTransactionsResponse res = new org.openapis.openapi.models.operations.ListTransactionsResponse() {{
+        org.openapis.openapi.models.operations.ListTransactionsResponse res = new org.openapis.openapi.models.operations.ListTransactionsResponse(contentType, httpRes.statusCode()) {{
             netlicensings = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,12 +198,10 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTransactionResponse res = new org.openapis.openapi.models.operations.UpdateTransactionResponse() {{
+        org.openapis.openapi.models.operations.UpdateTransactionResponse res = new org.openapis.openapi.models.operations.UpdateTransactionResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

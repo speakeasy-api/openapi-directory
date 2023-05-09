@@ -12,9 +12,11 @@ public class GetReturnsReturnsArrayV2Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public GetReturnsReturnsArrayV2MetaPaginationV2 pagination;
+
     public GetReturnsReturnsArrayV2Meta withPagination(GetReturnsReturnsArrayV2MetaPaginationV2 pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public GetReturnsReturnsArrayV2Meta(){}
 }

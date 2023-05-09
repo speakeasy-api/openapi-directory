@@ -12,6 +12,7 @@ public class AgcerRequestBodyCertificateParameters {
      */
     @JsonProperty("Name")
     public String name;
+
     public AgcerRequestBodyCertificateParameters withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,14 @@ public class AgcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RefNo")
     public String refNo;
+
     public AgcerRequestBodyCertificateParameters withRefNo(String refNo) {
         this.refNo = refNo;
         return this;
     }
     
+    public AgcerRequestBodyCertificateParameters(@JsonProperty("Name") String name, @JsonProperty("RefNo") String refNo) {
+        this.name = name;
+        this.refNo = refNo;
+  }
 }

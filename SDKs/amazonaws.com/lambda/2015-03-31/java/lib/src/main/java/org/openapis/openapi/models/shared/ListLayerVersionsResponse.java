@@ -15,6 +15,7 @@ public class ListLayerVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerVersions")
     public LayerVersionsListItem[] layerVersions;
+
     public ListLayerVersionsResponse withLayerVersions(LayerVersionsListItem[] layerVersions) {
         this.layerVersions = layerVersions;
         return this;
@@ -23,9 +24,11 @@ public class ListLayerVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListLayerVersionsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListLayerVersionsResponse(){}
 }

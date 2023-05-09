@@ -12,6 +12,7 @@ public class StromkontoRegisterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public StromkontoRegisterRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -20,6 +21,7 @@ public class StromkontoRegisterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public StromkontoRegisterRequestBody withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -28,6 +30,7 @@ public class StromkontoRegisterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public StromkontoRegisterRequestBody withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -36,9 +39,11 @@ public class StromkontoRegisterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zipcode")
     public String zipcode;
+
     public StromkontoRegisterRequestBody withZipcode(String zipcode) {
         this.zipcode = zipcode;
         return this;
     }
     
+    public StromkontoRegisterRequestBody(){}
 }

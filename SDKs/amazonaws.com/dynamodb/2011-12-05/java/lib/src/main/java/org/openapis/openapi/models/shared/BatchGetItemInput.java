@@ -12,9 +12,13 @@ public class BatchGetItemInput {
      */
     @JsonProperty("RequestItems")
     public java.util.Map<String, KeysAndAttributes> requestItems;
+
     public BatchGetItemInput withRequestItems(java.util.Map<String, KeysAndAttributes> requestItems) {
         this.requestItems = requestItems;
         return this;
     }
     
+    public BatchGetItemInput(@JsonProperty("RequestItems") java.util.Map<String, KeysAndAttributes> requestItems) {
+        this.requestItems = requestItems;
+  }
 }

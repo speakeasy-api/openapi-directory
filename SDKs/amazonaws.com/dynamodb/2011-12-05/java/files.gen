@@ -116,4 +116,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/AttributeActionEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateTableOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateTableInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -44,4 +44,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetPagesbyContentType20
 lib/src/main/java/org/openapis/openapi/models/operations/GetPagesbyContentType200ApplicationJSONData.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPagesbyContentType200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPagesbyContentTypeResponse.java
+docs/sdk/README.md
+docs/pages/README.md
 USAGE.md

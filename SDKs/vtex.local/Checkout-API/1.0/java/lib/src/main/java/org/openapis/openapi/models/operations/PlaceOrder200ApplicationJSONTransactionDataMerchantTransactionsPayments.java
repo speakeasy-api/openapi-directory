@@ -15,6 +15,7 @@ public class PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPaym
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPayments withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPaym
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bin")
     public String bin;
+
     public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPayments withBin(String bin) {
         this.bin = bin;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPaym
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftCardId")
     public String giftCardId;
+
     public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPayments withGiftCardId(String giftCardId) {
         this.giftCardId = giftCardId;
         return this;
@@ -48,6 +51,7 @@ public class PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPaym
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftCardProvider")
     public String giftCardProvider;
+
     public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPayments withGiftCardProvider(String giftCardProvider) {
         this.giftCardProvider = giftCardProvider;
         return this;
@@ -59,6 +63,7 @@ public class PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPaym
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftCardRedemptionCode")
     public String giftCardRedemptionCode;
+
     public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPayments withGiftCardRedemptionCode(String giftCardRedemptionCode) {
         this.giftCardRedemptionCode = giftCardRedemptionCode;
         return this;
@@ -70,6 +75,7 @@ public class PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPaym
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentSystem")
     public String paymentSystem;
+
     public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPayments withPaymentSystem(String paymentSystem) {
         this.paymentSystem = paymentSystem;
         return this;
@@ -81,6 +87,7 @@ public class PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPaym
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceValue")
     public Long referenceValue;
+
     public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPayments withReferenceValue(Long referenceValue) {
         this.referenceValue = referenceValue;
         return this;
@@ -92,6 +99,7 @@ public class PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPaym
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenId")
     public String tokenId;
+
     public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPayments withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
@@ -103,9 +111,11 @@ public class PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPaym
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPayments withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPayments(){}
 }

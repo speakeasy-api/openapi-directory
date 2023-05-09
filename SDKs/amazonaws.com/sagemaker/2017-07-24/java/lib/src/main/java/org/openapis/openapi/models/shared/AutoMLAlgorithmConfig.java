@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AutoMLAlgorithmConfig {
     @JsonProperty("AutoMLAlgorithms")
     public AutoMLAlgorithmEnum[] autoMLAlgorithms;
+
     public AutoMLAlgorithmConfig withAutoMLAlgorithms(AutoMLAlgorithmEnum[] autoMLAlgorithms) {
         this.autoMLAlgorithms = autoMLAlgorithms;
         return this;
     }
     
+    public AutoMLAlgorithmConfig(@JsonProperty("AutoMLAlgorithms") AutoMLAlgorithmEnum[] autoMLAlgorithms) {
+        this.autoMLAlgorithms = autoMLAlgorithms;
+  }
 }

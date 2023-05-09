@@ -12,9 +12,13 @@ public class OBReadDataBalance1 {
      */
     @JsonProperty("Balance")
     public OBCashBalance1[] balance;
+
     public OBReadDataBalance1 withBalance(OBCashBalance1[] balance) {
         this.balance = balance;
         return this;
     }
     
+    public OBReadDataBalance1(@JsonProperty("Balance") OBCashBalance1[] balance) {
+        this.balance = balance;
+  }
 }

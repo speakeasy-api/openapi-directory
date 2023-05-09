@@ -12,9 +12,13 @@ public class DeleteFacetRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public DeleteFacetRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteFacetRequestBody(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

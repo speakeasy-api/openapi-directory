@@ -12,6 +12,7 @@ public class SingleCollection200ApplicationJSONCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public SingleCollection200ApplicationJSONCollectionInfo info;
+
     public SingleCollection200ApplicationJSONCollection withInfo(SingleCollection200ApplicationJSONCollectionInfo info) {
         this.info = info;
         return this;
@@ -20,6 +21,7 @@ public class SingleCollection200ApplicationJSONCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public SingleCollection200ApplicationJSONCollectionItem[] item;
+
     public SingleCollection200ApplicationJSONCollection withItem(SingleCollection200ApplicationJSONCollectionItem[] item) {
         this.item = item;
         return this;
@@ -28,9 +30,11 @@ public class SingleCollection200ApplicationJSONCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variables")
     public Object[] variables;
+
     public SingleCollection200ApplicationJSONCollection withVariables(Object[] variables) {
         this.variables = variables;
         return this;
     }
     
+    public SingleCollection200ApplicationJSONCollection(){}
 }

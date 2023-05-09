@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1AdditionalTargetKeyName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleChromePolicyVersionsV1AdditionalTargetKeyName withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromePolicyVersionsV1AdditionalTargetKeyName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyDescription")
     public String keyDescription;
+
     public GoogleChromePolicyVersionsV1AdditionalTargetKeyName withKeyDescription(String keyDescription) {
         this.keyDescription = keyDescription;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1AdditionalTargetKeyName(){}
 }

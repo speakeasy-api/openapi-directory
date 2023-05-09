@@ -18,6 +18,7 @@ public class UserPassword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public UserPassword withPassword(String password) {
         this.password = password;
         return this;
@@ -29,6 +30,7 @@ public class UserPassword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordSet")
     public Boolean passwordSet;
+
     public UserPassword withPasswordSet(Boolean passwordSet) {
         this.passwordSet = passwordSet;
         return this;
@@ -40,9 +42,11 @@ public class UserPassword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public UserPassword withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public UserPassword(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETListsBestSellersHistoryJsonResponse {
     
     public String contentType;
+
     public GETListsBestSellersHistoryJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GETListsBestSellersHistoryJsonResponse {
     
     
     public GETListsBestSellersHistoryJSON200ApplicationJSON getListsBestSellersHistoryJSON200ApplicationJSONObject;
+
     public GETListsBestSellersHistoryJsonResponse withGETListsBestSellersHistoryJSON200ApplicationJSONObject(GETListsBestSellersHistoryJSON200ApplicationJSON getListsBestSellersHistoryJSON200ApplicationJSONObject) {
         this.getListsBestSellersHistoryJSON200ApplicationJSONObject = getListsBestSellersHistoryJSON200ApplicationJSONObject;
         return this;
@@ -23,6 +26,7 @@ public class GETListsBestSellersHistoryJsonResponse {
     
     
     public Integer statusCode;
+
     public GETListsBestSellersHistoryJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETListsBestSellersHistoryJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETListsBestSellersHistoryJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETListsBestSellersHistoryJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

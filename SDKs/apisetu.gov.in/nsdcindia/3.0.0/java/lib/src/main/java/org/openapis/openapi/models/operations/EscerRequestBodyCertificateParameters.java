@@ -12,6 +12,7 @@ public class EscerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public EscerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class EscerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOCID")
     public String docid;
+
     public EscerRequestBodyCertificateParameters withDocid(String docid) {
         this.docid = docid;
         return this;
@@ -32,9 +34,15 @@ public class EscerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public EscerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
     }
     
+    public EscerRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("DOCID") String docid, @JsonProperty("FullName") String fullName) {
+        this.dob = dob;
+        this.docid = docid;
+        this.fullName = fullName;
+  }
 }

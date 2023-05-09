@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRecordResponse {
     
     public String contentType;
+
     public PutRecordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutRecordResponse {
      */
     
     public Object invalidArgumentException;
+
     public PutRecordResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -29,6 +32,7 @@ public class PutRecordResponse {
      */
     
     public Object invalidKMSResourceException;
+
     public PutRecordResponse withInvalidKMSResourceException(Object invalidKMSResourceException) {
         this.invalidKMSResourceException = invalidKMSResourceException;
         return this;
@@ -39,6 +43,7 @@ public class PutRecordResponse {
      */
     
     public org.openapis.openapi.models.shared.PutRecordOutput putRecordOutput;
+
     public PutRecordResponse withPutRecordOutput(org.openapis.openapi.models.shared.PutRecordOutput putRecordOutput) {
         this.putRecordOutput = putRecordOutput;
         return this;
@@ -49,6 +54,7 @@ public class PutRecordResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutRecordResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PutRecordResponse {
      */
     
     public Object serviceUnavailableException;
+
     public PutRecordResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class PutRecordResponse {
     
     
     public Integer statusCode;
+
     public PutRecordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class PutRecordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRecordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutRecordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

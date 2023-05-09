@@ -15,9 +15,11 @@ public class LastRunErrorStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public LastRunErrorStatusCodeEnum code;
+
     public LastRunErrorStatus withCode(LastRunErrorStatusCodeEnum code) {
         this.code = code;
         return this;
     }
     
+    public LastRunErrorStatus(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeveloperPages - Pages of developer results
@@ -15,6 +15,7 @@ public class DeveloperPages {
      */
     
     public Long count;
+
     public DeveloperPages withCount(Long count) {
         this.count = count;
         return this;
@@ -25,6 +26,7 @@ public class DeveloperPages {
      */
     
     public Developer[] list;
+
     public DeveloperPages withList(Developer[] list) {
         this.list = list;
         return this;
@@ -35,6 +37,7 @@ public class DeveloperPages {
      */
     
     public Long pageNumber;
+
     public DeveloperPages withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -45,9 +48,16 @@ public class DeveloperPages {
      */
     
     public Long pages;
+
     public DeveloperPages withPages(Long pages) {
         this.pages = pages;
         return this;
     }
     
+    public DeveloperPages(@JsonProperty("count") Long count, @JsonProperty("list") Developer[] list, @JsonProperty("pageNumber") Long pageNumber, @JsonProperty("pages") Long pages) {
+        this.count = count;
+        this.list = list;
+        this.pageNumber = pageNumber;
+        this.pages = pages;
+  }
 }

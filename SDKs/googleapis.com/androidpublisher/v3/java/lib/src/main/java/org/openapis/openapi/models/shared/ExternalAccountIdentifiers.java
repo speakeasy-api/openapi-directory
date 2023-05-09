@@ -18,6 +18,7 @@ public class ExternalAccountIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalAccountId")
     public String externalAccountId;
+
     public ExternalAccountIdentifiers withExternalAccountId(String externalAccountId) {
         this.externalAccountId = externalAccountId;
         return this;
@@ -29,6 +30,7 @@ public class ExternalAccountIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obfuscatedExternalAccountId")
     public String obfuscatedExternalAccountId;
+
     public ExternalAccountIdentifiers withObfuscatedExternalAccountId(String obfuscatedExternalAccountId) {
         this.obfuscatedExternalAccountId = obfuscatedExternalAccountId;
         return this;
@@ -40,9 +42,11 @@ public class ExternalAccountIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obfuscatedExternalProfileId")
     public String obfuscatedExternalProfileId;
+
     public ExternalAccountIdentifiers withObfuscatedExternalProfileId(String obfuscatedExternalProfileId) {
         this.obfuscatedExternalProfileId = obfuscatedExternalProfileId;
         return this;
     }
     
+    public ExternalAccountIdentifiers(){}
 }

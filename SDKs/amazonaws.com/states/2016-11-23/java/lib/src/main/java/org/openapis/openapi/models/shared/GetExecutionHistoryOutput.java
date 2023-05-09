@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetExecutionHistoryOutput {
     @JsonProperty("events")
     public HistoryEvent[] events;
+
     public GetExecutionHistoryOutput withEvents(HistoryEvent[] events) {
         this.events = events;
         return this;
@@ -22,9 +23,13 @@ public class GetExecutionHistoryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetExecutionHistoryOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetExecutionHistoryOutput(@JsonProperty("events") HistoryEvent[] events) {
+        this.events = events;
+  }
 }

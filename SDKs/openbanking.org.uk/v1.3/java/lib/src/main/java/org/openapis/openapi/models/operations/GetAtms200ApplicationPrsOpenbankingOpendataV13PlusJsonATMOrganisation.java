@@ -15,6 +15,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisati
      */
     @JsonProperty("Brand")
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationBrand brand;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisation withBrand(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationBrand brand) {
         this.brand = brand;
         return this;
@@ -25,9 +26,14 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisati
      */
     @JsonProperty("ParentOrganisation")
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationParentOrganisation parentOrganisation;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisation withParentOrganisation(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationParentOrganisation parentOrganisation) {
         this.parentOrganisation = parentOrganisation;
         return this;
     }
     
+    public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisation(@JsonProperty("Brand") GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationBrand brand, @JsonProperty("ParentOrganisation") GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationParentOrganisation parentOrganisation) {
+        this.brand = brand;
+        this.parentOrganisation = parentOrganisation;
+  }
 }

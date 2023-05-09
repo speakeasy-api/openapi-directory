@@ -18,6 +18,7 @@ public class CategoryType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public Boolean default_;
+
     public CategoryType withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -29,9 +30,11 @@ public class CategoryType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CategoryType withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CategoryType(){}
 }

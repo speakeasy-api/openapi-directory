@@ -15,6 +15,7 @@ public class ExperimentS3LogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketName")
     public String bucketName;
+
     public ExperimentS3LogConfiguration withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -23,9 +24,11 @@ public class ExperimentS3LogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public ExperimentS3LogConfiguration withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public ExperimentS3LogConfiguration(){}
 }

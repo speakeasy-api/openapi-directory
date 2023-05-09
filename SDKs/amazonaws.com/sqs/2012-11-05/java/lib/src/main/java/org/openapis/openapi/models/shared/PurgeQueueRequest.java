@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PurgeQueueRequest - &lt;p/&gt;
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class PurgeQueueRequest {
     
     public String queueUrl;
+
     public PurgeQueueRequest withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
     }
     
+    public PurgeQueueRequest(@JsonProperty("QueueUrl") String queueUrl) {
+        this.queueUrl = queueUrl;
+  }
 }

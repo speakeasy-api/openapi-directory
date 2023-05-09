@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1EnvironmentInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1EnvironmentInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infrastructureSpec")
     public GoogleCloudDataplexV1EnvironmentInfrastructureSpec infrastructureSpec;
+
     public GoogleCloudDataplexV1EnvironmentInput withInfrastructureSpec(GoogleCloudDataplexV1EnvironmentInfrastructureSpec infrastructureSpec) {
         this.infrastructureSpec = infrastructureSpec;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1EnvironmentInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDataplexV1EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionSpec")
     public GoogleCloudDataplexV1EnvironmentSessionSpec sessionSpec;
+
     public GoogleCloudDataplexV1EnvironmentInput withSessionSpec(GoogleCloudDataplexV1EnvironmentSessionSpec sessionSpec) {
         this.sessionSpec = sessionSpec;
         return this;
     }
     
+    public GoogleCloudDataplexV1EnvironmentInput(){}
 }

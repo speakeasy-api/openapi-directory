@@ -15,6 +15,7 @@ public class BookingAvailability200ApplicationJSONDataAvailability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available")
     public Boolean available;
+
     public BookingAvailability200ApplicationJSONDataAvailability withAvailable(Boolean available) {
         this.available = available;
         return this;
@@ -26,6 +27,7 @@ public class BookingAvailability200ApplicationJSONDataAvailability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingDate")
     public String bookingDate;
+
     public BookingAvailability200ApplicationJSONDataAvailability withBookingDate(String bookingDate) {
         this.bookingDate = bookingDate;
         return this;
@@ -37,6 +39,7 @@ public class BookingAvailability200ApplicationJSONDataAvailability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public BookingAvailability200ApplicationJSONDataAvailability withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -48,6 +51,7 @@ public class BookingAvailability200ApplicationJSONDataAvailability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradeCode")
     public String gradeCode;
+
     public BookingAvailability200ApplicationJSONDataAvailability withGradeCode(String gradeCode) {
         this.gradeCode = gradeCode;
         return this;
@@ -61,6 +65,7 @@ public class BookingAvailability200ApplicationJSONDataAvailability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantNetPrice")
     public Double merchantNetPrice;
+
     public BookingAvailability200ApplicationJSONDataAvailability withMerchantNetPrice(Double merchantNetPrice) {
         this.merchantNetPrice = merchantNetPrice;
         return this;
@@ -74,6 +79,7 @@ public class BookingAvailability200ApplicationJSONDataAvailability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantNetPriceFormatted")
     public String merchantNetPriceFormatted;
+
     public BookingAvailability200ApplicationJSONDataAvailability withMerchantNetPriceFormatted(String merchantNetPriceFormatted) {
         this.merchantNetPriceFormatted = merchantNetPriceFormatted;
         return this;
@@ -87,6 +93,7 @@ public class BookingAvailability200ApplicationJSONDataAvailability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retailPrice")
     public Double retailPrice;
+
     public BookingAvailability200ApplicationJSONDataAvailability withRetailPrice(Double retailPrice) {
         this.retailPrice = retailPrice;
         return this;
@@ -100,6 +107,7 @@ public class BookingAvailability200ApplicationJSONDataAvailability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retailPriceFormatted")
     public String retailPriceFormatted;
+
     public BookingAvailability200ApplicationJSONDataAvailability withRetailPriceFormatted(String retailPriceFormatted) {
         this.retailPriceFormatted = retailPriceFormatted;
         return this;
@@ -111,6 +119,7 @@ public class BookingAvailability200ApplicationJSONDataAvailability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public BookingAvailability200ApplicationJSONDataAvailability withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -122,9 +131,11 @@ public class BookingAvailability200ApplicationJSONDataAvailability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unavailableReason")
     public String unavailableReason;
+
     public BookingAvailability200ApplicationJSONDataAvailability withUnavailableReason(String unavailableReason) {
         this.unavailableReason = unavailableReason;
         return this;
     }
     
+    public BookingAvailability200ApplicationJSONDataAvailability(){}
 }

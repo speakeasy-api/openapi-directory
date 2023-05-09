@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrgsRedeliverWebhookDeliveryResponse {
     
     public String contentType;
+
     public OrgsRedeliverWebhookDeliveryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OrgsRedeliverWebhookDeliveryResponse {
     
     
     public Integer statusCode;
+
     public OrgsRedeliverWebhookDeliveryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class OrgsRedeliverWebhookDeliveryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrgsRedeliverWebhookDeliveryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class OrgsRedeliverWebhookDeliveryResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public OrgsRedeliverWebhookDeliveryResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class OrgsRedeliverWebhookDeliveryResponse {
      */
     
     public java.util.Map<String, Object> orgsRedeliverWebhookDelivery202ApplicationJSONObject;
+
     public OrgsRedeliverWebhookDeliveryResponse withOrgsRedeliverWebhookDelivery202ApplicationJSONObject(java.util.Map<String, Object> orgsRedeliverWebhookDelivery202ApplicationJSONObject) {
         this.orgsRedeliverWebhookDelivery202ApplicationJSONObject = orgsRedeliverWebhookDelivery202ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class OrgsRedeliverWebhookDeliveryResponse {
      */
     
     public org.openapis.openapi.models.shared.ScimError scimError;
+
     public OrgsRedeliverWebhookDeliveryResponse withScimError(org.openapis.openapi.models.shared.ScimError scimError) {
         this.scimError = scimError;
         return this;
@@ -63,9 +70,14 @@ public class OrgsRedeliverWebhookDeliveryResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public OrgsRedeliverWebhookDeliveryResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public OrgsRedeliverWebhookDeliveryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

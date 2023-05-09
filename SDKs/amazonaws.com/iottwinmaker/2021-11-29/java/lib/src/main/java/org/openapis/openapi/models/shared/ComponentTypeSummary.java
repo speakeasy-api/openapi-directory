@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ComponentTypeSummary {
     @JsonProperty("arn")
     public String arn;
+
     public ComponentTypeSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class ComponentTypeSummary {
     
     @JsonProperty("componentTypeId")
     public String componentTypeId;
+
     public ComponentTypeSummary withComponentTypeId(String componentTypeId) {
         this.componentTypeId = componentTypeId;
         return this;
@@ -34,6 +36,7 @@ public class ComponentTypeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentTypeName")
     public String componentTypeName;
+
     public ComponentTypeSummary withComponentTypeName(String componentTypeName) {
         this.componentTypeName = componentTypeName;
         return this;
@@ -43,6 +46,7 @@ public class ComponentTypeSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public ComponentTypeSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -51,6 +55,7 @@ public class ComponentTypeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ComponentTypeSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +64,7 @@ public class ComponentTypeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Status status;
+
     public ComponentTypeSummary withStatus(Status status) {
         this.status = status;
         return this;
@@ -68,9 +74,16 @@ public class ComponentTypeSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateDateTime")
     public OffsetDateTime updateDateTime;
+
     public ComponentTypeSummary withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
     }
     
+    public ComponentTypeSummary(@JsonProperty("arn") String arn, @JsonProperty("componentTypeId") String componentTypeId, @JsonProperty("creationDateTime") OffsetDateTime creationDateTime, @JsonProperty("updateDateTime") OffsetDateTime updateDateTime) {
+        this.arn = arn;
+        this.componentTypeId = componentTypeId;
+        this.creationDateTime = creationDateTime;
+        this.updateDateTime = updateDateTime;
+  }
 }

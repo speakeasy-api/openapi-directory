@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetImpersonationRoleEffectRequest {
     @JsonProperty("ImpersonationRoleId")
     public String impersonationRoleId;
+
     public GetImpersonationRoleEffectRequest withImpersonationRoleId(String impersonationRoleId) {
         this.impersonationRoleId = impersonationRoleId;
         return this;
@@ -16,6 +17,7 @@ public class GetImpersonationRoleEffectRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public GetImpersonationRoleEffectRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -23,9 +25,15 @@ public class GetImpersonationRoleEffectRequest {
     
     @JsonProperty("TargetUser")
     public String targetUser;
+
     public GetImpersonationRoleEffectRequest withTargetUser(String targetUser) {
         this.targetUser = targetUser;
         return this;
     }
     
+    public GetImpersonationRoleEffectRequest(@JsonProperty("ImpersonationRoleId") String impersonationRoleId, @JsonProperty("OrganizationId") String organizationId, @JsonProperty("TargetUser") String targetUser) {
+        this.impersonationRoleId = impersonationRoleId;
+        this.organizationId = organizationId;
+        this.targetUser = targetUser;
+  }
 }

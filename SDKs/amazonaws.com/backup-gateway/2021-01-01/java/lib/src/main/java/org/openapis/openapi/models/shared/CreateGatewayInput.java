@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateGatewayInput {
     @JsonProperty("ActivationKey")
     public String activationKey;
+
     public CreateGatewayInput withActivationKey(String activationKey) {
         this.activationKey = activationKey;
         return this;
@@ -18,6 +19,7 @@ public class CreateGatewayInput {
     
     @JsonProperty("GatewayDisplayName")
     public String gatewayDisplayName;
+
     public CreateGatewayInput withGatewayDisplayName(String gatewayDisplayName) {
         this.gatewayDisplayName = gatewayDisplayName;
         return this;
@@ -25,6 +27,7 @@ public class CreateGatewayInput {
     
     @JsonProperty("GatewayType")
     public GatewayTypeEnum gatewayType;
+
     public CreateGatewayInput withGatewayType(GatewayTypeEnum gatewayType) {
         this.gatewayType = gatewayType;
         return this;
@@ -33,9 +36,15 @@ public class CreateGatewayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateGatewayInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateGatewayInput(@JsonProperty("ActivationKey") String activationKey, @JsonProperty("GatewayDisplayName") String gatewayDisplayName, @JsonProperty("GatewayType") GatewayTypeEnum gatewayType) {
+        this.activationKey = activationKey;
+        this.gatewayDisplayName = gatewayDisplayName;
+        this.gatewayType = gatewayType;
+  }
 }

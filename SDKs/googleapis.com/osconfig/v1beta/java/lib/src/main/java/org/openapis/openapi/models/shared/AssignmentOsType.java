@@ -18,6 +18,7 @@ public class AssignmentOsType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osArchitecture")
     public String osArchitecture;
+
     public AssignmentOsType withOsArchitecture(String osArchitecture) {
         this.osArchitecture = osArchitecture;
         return this;
@@ -29,6 +30,7 @@ public class AssignmentOsType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osShortName")
     public String osShortName;
+
     public AssignmentOsType withOsShortName(String osShortName) {
         this.osShortName = osShortName;
         return this;
@@ -40,9 +42,11 @@ public class AssignmentOsType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osVersion")
     public String osVersion;
+
     public AssignmentOsType withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
     }
     
+    public AssignmentOsType(){}
 }

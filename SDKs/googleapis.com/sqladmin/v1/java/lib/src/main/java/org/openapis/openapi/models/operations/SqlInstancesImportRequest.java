@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SqlInstancesImportRequest {
@@ -12,6 +13,7 @@ public class SqlInstancesImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public SqlInstancesImportRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class SqlInstancesImportRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.InstancesImportRequest instancesImportRequest;
+
     public SqlInstancesImportRequest withInstancesImportRequest(org.openapis.openapi.models.shared.InstancesImportRequest instancesImportRequest) {
         this.instancesImportRequest = instancesImportRequest;
         return this;
@@ -29,6 +32,7 @@ public class SqlInstancesImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public SqlInstancesImportRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class SqlInstancesImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public SqlInstancesImportRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class SqlInstancesImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public SqlInstancesImportRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class SqlInstancesImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public SqlInstancesImportRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class SqlInstancesImportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instance")
     public String instance;
+
     public SqlInstancesImportRequest withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -79,6 +87,7 @@ public class SqlInstancesImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public SqlInstancesImportRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class SqlInstancesImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public SqlInstancesImportRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class SqlInstancesImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public SqlInstancesImportRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class SqlInstancesImportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public SqlInstancesImportRequest withProject(String project) {
         this.project = project;
         return this;
@@ -119,6 +131,7 @@ public class SqlInstancesImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public SqlInstancesImportRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class SqlInstancesImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public SqlInstancesImportRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,14 @@ public class SqlInstancesImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public SqlInstancesImportRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public SqlInstancesImportRequest(@JsonProperty("instance") String instance, @JsonProperty("project") String project) {
+        this.instance = instance;
+        this.project = project;
+  }
 }

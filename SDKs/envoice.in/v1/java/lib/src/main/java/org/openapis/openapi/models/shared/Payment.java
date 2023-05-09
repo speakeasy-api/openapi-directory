@@ -17,6 +17,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Amount")
     public Double amount;
+
     public Payment withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -25,6 +26,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public Payment withId(Integer id) {
         this.id = id;
         return this;
@@ -33,6 +35,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Invoice")
     public Invoice invoice;
+
     public Payment withInvoice(Invoice invoice) {
         this.invoice = invoice;
         return this;
@@ -41,6 +44,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceId")
     public Integer invoiceId;
+
     public Payment withInvoiceId(Integer invoiceId) {
         this.invoiceId = invoiceId;
         return this;
@@ -49,6 +53,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsAutomatic")
     public Boolean isAutomatic;
+
     public Payment withIsAutomatic(Boolean isAutomatic) {
         this.isAutomatic = isAutomatic;
         return this;
@@ -57,6 +62,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Note")
     public String note;
+
     public Payment withNote(String note) {
         this.note = note;
         return this;
@@ -67,6 +73,7 @@ public class Payment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("PaidOn")
     public OffsetDateTime paidOn;
+
     public Payment withPaidOn(OffsetDateTime paidOn) {
         this.paidOn = paidOn;
         return this;
@@ -75,6 +82,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceId")
     public String referenceId;
+
     public Payment withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -83,9 +91,11 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public PaymentTypeEnum type;
+
     public Payment withType(PaymentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Payment(){}
 }

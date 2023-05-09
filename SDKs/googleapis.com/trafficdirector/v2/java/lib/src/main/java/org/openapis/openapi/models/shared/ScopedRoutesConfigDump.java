@@ -18,6 +18,7 @@ public class ScopedRoutesConfigDump {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicScopedRouteConfigs")
     public DynamicScopedRouteConfigs[] dynamicScopedRouteConfigs;
+
     public ScopedRoutesConfigDump withDynamicScopedRouteConfigs(DynamicScopedRouteConfigs[] dynamicScopedRouteConfigs) {
         this.dynamicScopedRouteConfigs = dynamicScopedRouteConfigs;
         return this;
@@ -29,9 +30,11 @@ public class ScopedRoutesConfigDump {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineScopedRouteConfigs")
     public InlineScopedRouteConfigs[] inlineScopedRouteConfigs;
+
     public ScopedRoutesConfigDump withInlineScopedRouteConfigs(InlineScopedRouteConfigs[] inlineScopedRouteConfigs) {
         this.inlineScopedRouteConfigs = inlineScopedRouteConfigs;
         return this;
     }
     
+    public ScopedRoutesConfigDump(){}
 }

@@ -18,20 +18,23 @@ public class ImportDataFileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ImportDataFileInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
     /**
-     * The payload format.
+     * Required. The payload format.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public ImportDataFileFormatEnum format;
+
     public ImportDataFileInput withFormat(ImportDataFileFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public ImportDataFileInput(){}
 }

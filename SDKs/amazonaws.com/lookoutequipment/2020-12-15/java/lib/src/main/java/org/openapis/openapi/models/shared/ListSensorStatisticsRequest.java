@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListSensorStatisticsRequest {
     @JsonProperty("DatasetName")
     public String datasetName;
+
     public ListSensorStatisticsRequest withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -19,6 +20,7 @@ public class ListSensorStatisticsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IngestionJobId")
     public String ingestionJobId;
+
     public ListSensorStatisticsRequest withIngestionJobId(String ingestionJobId) {
         this.ingestionJobId = ingestionJobId;
         return this;
@@ -27,6 +29,7 @@ public class ListSensorStatisticsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListSensorStatisticsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,9 +38,13 @@ public class ListSensorStatisticsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSensorStatisticsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListSensorStatisticsRequest(@JsonProperty("DatasetName") String datasetName) {
+        this.datasetName = datasetName;
+  }
 }

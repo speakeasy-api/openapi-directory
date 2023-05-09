@@ -18,9 +18,11 @@ public class NodePoolAutoConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkTags")
     public NetworkTags networkTags;
+
     public NodePoolAutoConfig withNetworkTags(NetworkTags networkTags) {
         this.networkTags = networkTags;
         return this;
     }
     
+    public NodePoolAutoConfig(){}
 }

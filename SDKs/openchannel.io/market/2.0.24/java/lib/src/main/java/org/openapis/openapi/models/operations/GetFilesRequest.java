@@ -12,6 +12,7 @@ public class GetFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetFilesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class GetFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Long pageNumber;
+
     public GetFilesRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -32,6 +34,7 @@ public class GetFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetFilesRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -42,9 +45,11 @@ public class GetFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetFilesRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetFilesRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutOrganisationsPartyIdElectronicAddressesAddressIdRequest {
@@ -12,6 +13,7 @@ public class PutOrganisationsPartyIdElectronicAddressesAddressIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=addressId")
     public String addressId;
+
     public PutOrganisationsPartyIdElectronicAddressesAddressIdRequest withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -22,6 +24,7 @@ public class PutOrganisationsPartyIdElectronicAddressesAddressIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public PutOrganisationsPartyIdElectronicAddressesAddressIdRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -32,6 +35,7 @@ public class PutOrganisationsPartyIdElectronicAddressesAddressIdRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ElectronicAddressInput electronicAddressInput;
+
     public PutOrganisationsPartyIdElectronicAddressesAddressIdRequest withElectronicAddressInput(org.openapis.openapi.models.shared.ElectronicAddressInput electronicAddressInput) {
         this.electronicAddressInput = electronicAddressInput;
         return this;
@@ -42,9 +46,16 @@ public class PutOrganisationsPartyIdElectronicAddressesAddressIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
     public String partyId;
+
     public PutOrganisationsPartyIdElectronicAddressesAddressIdRequest withPartyId(String partyId) {
         this.partyId = partyId;
         return this;
     }
     
+    public PutOrganisationsPartyIdElectronicAddressesAddressIdRequest(@JsonProperty("addressId") String addressId, @JsonProperty("apiKey") String apiKey, @JsonProperty("electronic-addressInput") org.openapis.openapi.models.shared.ElectronicAddressInput electronicAddressInput, @JsonProperty("partyId") String partyId) {
+        this.addressId = addressId;
+        this.apiKey = apiKey;
+        this.electronicAddressInput = electronicAddressInput;
+        this.partyId = partyId;
+  }
 }

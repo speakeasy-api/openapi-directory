@@ -16,6 +16,7 @@ public class TokenRequest {
     @JsonProperty("grant_type")
     @SpeakeasyMetadata("multipartForm:name=grant_type")
     public String grantType;
+
     public TokenRequest withGrantType(String grantType) {
         this.grantType = grantType;
         return this;
@@ -28,6 +29,7 @@ public class TokenRequest {
     @JsonProperty("password")
     @SpeakeasyMetadata("multipartForm:name=password")
     public String password;
+
     public TokenRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -40,6 +42,7 @@ public class TokenRequest {
     @JsonProperty("refresh_token")
     @SpeakeasyMetadata("multipartForm:name=refresh_token")
     public String refreshToken;
+
     public TokenRequest withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
@@ -51,6 +54,7 @@ public class TokenRequest {
     @JsonProperty("scope")
     @SpeakeasyMetadata("multipartForm:name=scope")
     public String scope;
+
     public TokenRequest withScope(String scope) {
         this.scope = scope;
         return this;
@@ -63,6 +67,7 @@ public class TokenRequest {
     @JsonProperty("user_id")
     @SpeakeasyMetadata("multipartForm:name=user_id")
     public Long userId;
+
     public TokenRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -75,9 +80,14 @@ public class TokenRequest {
     @JsonProperty("username")
     @SpeakeasyMetadata("multipartForm:name=username")
     public String username;
+
     public TokenRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public TokenRequest(@JsonProperty("grant_type") String grantType, @JsonProperty("scope") String scope) {
+        this.grantType = grantType;
+        this.scope = scope;
+  }
 }

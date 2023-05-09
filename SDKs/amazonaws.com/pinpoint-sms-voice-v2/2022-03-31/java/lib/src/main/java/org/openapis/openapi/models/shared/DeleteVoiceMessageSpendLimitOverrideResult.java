@@ -15,9 +15,11 @@ public class DeleteVoiceMessageSpendLimitOverrideResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonthlyLimit")
     public Long monthlyLimit;
+
     public DeleteVoiceMessageSpendLimitOverrideResult withMonthlyLimit(Long monthlyLimit) {
         this.monthlyLimit = monthlyLimit;
         return this;
     }
     
+    public DeleteVoiceMessageSpendLimitOverrideResult(){}
 }

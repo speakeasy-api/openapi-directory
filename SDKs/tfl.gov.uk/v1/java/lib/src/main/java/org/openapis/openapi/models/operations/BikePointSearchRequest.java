@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BikePointSearchRequest {
@@ -12,9 +13,13 @@ public class BikePointSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public BikePointSearchRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public BikePointSearchRequest(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

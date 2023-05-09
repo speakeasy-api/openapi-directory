@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSuiteRunReportResponse {
     
     public String contentType;
+
     public GetSuiteRunReportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSuiteRunReportResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSuiteRunReportResponse getSuiteRunReportResponse;
+
     public GetSuiteRunReportResponse withGetSuiteRunReportResponse(org.openapis.openapi.models.shared.GetSuiteRunReportResponse getSuiteRunReportResponse) {
         this.getSuiteRunReportResponse = getSuiteRunReportResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetSuiteRunReportResponse {
      */
     
     public Object internalServerException;
+
     public GetSuiteRunReportResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetSuiteRunReportResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSuiteRunReportResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetSuiteRunReportResponse {
     
     
     public Integer statusCode;
+
     public GetSuiteRunReportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetSuiteRunReportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSuiteRunReportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetSuiteRunReportResponse {
      */
     
     public Object validationException;
+
     public GetSuiteRunReportResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetSuiteRunReportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

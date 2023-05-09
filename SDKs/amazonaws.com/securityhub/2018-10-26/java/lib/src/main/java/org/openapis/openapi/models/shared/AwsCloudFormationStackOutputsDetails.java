@@ -15,6 +15,7 @@ public class AwsCloudFormationStackOutputsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public AwsCloudFormationStackOutputsDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class AwsCloudFormationStackOutputsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputKey")
     public String outputKey;
+
     public AwsCloudFormationStackOutputsDetails withOutputKey(String outputKey) {
         this.outputKey = outputKey;
         return this;
@@ -31,9 +33,11 @@ public class AwsCloudFormationStackOutputsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputValue")
     public String outputValue;
+
     public AwsCloudFormationStackOutputsDetails withOutputValue(String outputValue) {
         this.outputValue = outputValue;
         return this;
     }
     
+    public AwsCloudFormationStackOutputsDetails(){}
 }

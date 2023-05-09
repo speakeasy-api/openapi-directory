@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AllocateConnectionOnInterconnectResponse {
@@ -12,6 +13,7 @@ public class AllocateConnectionOnInterconnectResponse {
      */
     
     public org.openapis.openapi.models.shared.Connection connection;
+
     public AllocateConnectionOnInterconnectResponse withConnection(org.openapis.openapi.models.shared.Connection connection) {
         this.connection = connection;
         return this;
@@ -19,6 +21,7 @@ public class AllocateConnectionOnInterconnectResponse {
     
     
     public String contentType;
+
     public AllocateConnectionOnInterconnectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AllocateConnectionOnInterconnectResponse {
      */
     
     public Object directConnectClientException;
+
     public AllocateConnectionOnInterconnectResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class AllocateConnectionOnInterconnectResponse {
      */
     
     public Object directConnectServerException;
+
     public AllocateConnectionOnInterconnectResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class AllocateConnectionOnInterconnectResponse {
     
     
     public Integer statusCode;
+
     public AllocateConnectionOnInterconnectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class AllocateConnectionOnInterconnectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AllocateConnectionOnInterconnectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AllocateConnectionOnInterconnectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTransitGatewayRouteResultRouteTransitGatewayAttachments {
     
     public String resourceId;
+
     public CreateTransitGatewayRouteResultRouteTransitGatewayAttachments withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -19,6 +20,7 @@ public class CreateTransitGatewayRouteResultRouteTransitGatewayAttachments {
     
     
     public CreateTransitGatewayRouteResultRouteTransitGatewayAttachmentsResourceTypeEnum resourceType;
+
     public CreateTransitGatewayRouteResultRouteTransitGatewayAttachments withResourceType(CreateTransitGatewayRouteResultRouteTransitGatewayAttachmentsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -26,9 +28,11 @@ public class CreateTransitGatewayRouteResultRouteTransitGatewayAttachments {
     
     
     public String transitGatewayAttachmentId;
+
     public CreateTransitGatewayRouteResultRouteTransitGatewayAttachments withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
     }
     
+    public CreateTransitGatewayRouteResultRouteTransitGatewayAttachments(){}
 }

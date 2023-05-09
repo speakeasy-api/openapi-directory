@@ -15,6 +15,7 @@ public class ListImportFailuresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Failures")
     public ImportFailureListItem[] failures;
+
     public ListImportFailuresResponse withFailures(ImportFailureListItem[] failures) {
         this.failures = failures;
         return this;
@@ -23,9 +24,11 @@ public class ListImportFailuresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListImportFailuresResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListImportFailuresResponse(){}
 }

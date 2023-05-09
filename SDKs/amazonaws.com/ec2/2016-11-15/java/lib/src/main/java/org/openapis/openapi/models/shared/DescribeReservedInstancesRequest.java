@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedInstancesRequest {
     
     public Boolean dryRun;
+
     public DescribeReservedInstancesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class DescribeReservedInstancesRequest {
     
     
     public DescribeReservedInstancesRequestFilters[] filters;
+
     public DescribeReservedInstancesRequest withFilters(DescribeReservedInstancesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +28,7 @@ public class DescribeReservedInstancesRequest {
     
     
     public OfferingClassTypeEnum offeringClass;
+
     public DescribeReservedInstancesRequest withOfferingClass(OfferingClassTypeEnum offeringClass) {
         this.offeringClass = offeringClass;
         return this;
@@ -33,6 +36,7 @@ public class DescribeReservedInstancesRequest {
     
     
     public DescribeReservedInstancesRequestOfferingTypeEnum offeringType;
+
     public DescribeReservedInstancesRequest withOfferingType(DescribeReservedInstancesRequestOfferingTypeEnum offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -40,9 +44,11 @@ public class DescribeReservedInstancesRequest {
     
     
     public String[] reservedInstancesIds;
+
     public DescribeReservedInstancesRequest withReservedInstancesIds(String[] reservedInstancesIds) {
         this.reservedInstancesIds = reservedInstancesIds;
         return this;
     }
     
+    public DescribeReservedInstancesRequest(){}
 }

@@ -19,6 +19,7 @@ public class CatalogCustomAttributeDefinitionSelectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_selections")
     public CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection[] allowedSelections;
+
     public CatalogCustomAttributeDefinitionSelectionConfig withAllowedSelections(CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection[] allowedSelections) {
         this.allowedSelections = allowedSelections;
         return this;
@@ -33,9 +34,11 @@ public class CatalogCustomAttributeDefinitionSelectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_allowed_selections")
     public Long maxAllowedSelections;
+
     public CatalogCustomAttributeDefinitionSelectionConfig withMaxAllowedSelections(Long maxAllowedSelections) {
         this.maxAllowedSelections = maxAllowedSelections;
         return this;
     }
     
+    public CatalogCustomAttributeDefinitionSelectionConfig(){}
 }

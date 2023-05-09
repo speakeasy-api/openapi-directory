@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomFields1Request {
@@ -12,9 +13,13 @@ public class GetCustomFields1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
     public Long customerId;
+
     public GetCustomFields1Request withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public GetCustomFields1Request(@JsonProperty("customerId") Long customerId) {
+        this.customerId = customerId;
+  }
 }

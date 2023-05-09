@@ -15,6 +15,7 @@ public class ActionStartedDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionId")
     public String actionId;
+
     public ActionStartedDTO withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -23,6 +24,7 @@ public class ActionStartedDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultUrl")
     public String resultUrl;
+
     public ActionStartedDTO withResultUrl(String resultUrl) {
         this.resultUrl = resultUrl;
         return this;
@@ -31,9 +33,11 @@ public class ActionStartedDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusUrl")
     public String statusUrl;
+
     public ActionStartedDTO withStatusUrl(String statusUrl) {
         this.statusUrl = statusUrl;
         return this;
     }
     
+    public ActionStartedDTO(){}
 }

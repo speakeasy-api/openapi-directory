@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PackageProjectTranslationMemoryForLanguageResponse {
@@ -12,6 +13,7 @@ public class PackageProjectTranslationMemoryForLanguageResponse {
      */
     
     public org.openapis.openapi.models.shared.AsyncOperationStatus asyncOperationStatus;
+
     public PackageProjectTranslationMemoryForLanguageResponse withAsyncOperationStatus(org.openapis.openapi.models.shared.AsyncOperationStatus asyncOperationStatus) {
         this.asyncOperationStatus = asyncOperationStatus;
         return this;
@@ -19,6 +21,7 @@ public class PackageProjectTranslationMemoryForLanguageResponse {
     
     
     public String contentType;
+
     public PackageProjectTranslationMemoryForLanguageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PackageProjectTranslationMemoryForLanguageResponse {
     
     
     public Integer statusCode;
+
     public PackageProjectTranslationMemoryForLanguageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PackageProjectTranslationMemoryForLanguageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PackageProjectTranslationMemoryForLanguageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class PackageProjectTranslationMemoryForLanguageResponse {
      */
     
     public byte[] packageProjectTranslationMemoryForLanguage200ApplicationXMLBinaryString;
+
     public PackageProjectTranslationMemoryForLanguageResponse withPackageProjectTranslationMemoryForLanguage200ApplicationXMLBinaryString(byte[] packageProjectTranslationMemoryForLanguage200ApplicationXMLBinaryString) {
         this.packageProjectTranslationMemoryForLanguage200ApplicationXMLBinaryString = packageProjectTranslationMemoryForLanguage200ApplicationXMLBinaryString;
         return this;
     }
     
+    public PackageProjectTranslationMemoryForLanguageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

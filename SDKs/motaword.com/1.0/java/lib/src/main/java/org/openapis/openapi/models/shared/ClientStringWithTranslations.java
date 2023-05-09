@@ -17,6 +17,7 @@ public class ClientStringWithTranslations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public ClientStringWithTranslations withContent(String content) {
         this.content = content;
         return this;
@@ -25,6 +26,7 @@ public class ClientStringWithTranslations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public ClientStringWithTranslations withLanguage(String language) {
         this.language = language;
         return this;
@@ -38,6 +40,7 @@ public class ClientStringWithTranslations {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_changed")
     public OffsetDateTime lastChanged;
+
     public ClientStringWithTranslations withLastChanged(OffsetDateTime lastChanged) {
         this.lastChanged = lastChanged;
         return this;
@@ -46,9 +49,11 @@ public class ClientStringWithTranslations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translations")
     public ClientStringTranslation[] translations;
+
     public ClientStringWithTranslations withTranslations(ClientStringTranslation[] translations) {
         this.translations = translations;
         return this;
     }
     
+    public ClientStringWithTranslations(){}
 }

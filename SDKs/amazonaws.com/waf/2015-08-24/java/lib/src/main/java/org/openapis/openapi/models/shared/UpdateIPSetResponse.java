@@ -15,9 +15,11 @@ public class UpdateIPSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public UpdateIPSetResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
     }
     
+    public UpdateIPSetResponse(){}
 }

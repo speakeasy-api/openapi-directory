@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResumeWorkflowRunResponse {
@@ -12,6 +13,7 @@ public class ResumeWorkflowRunResponse {
      */
     
     public Object concurrentRunsExceededException;
+
     public ResumeWorkflowRunResponse withConcurrentRunsExceededException(Object concurrentRunsExceededException) {
         this.concurrentRunsExceededException = concurrentRunsExceededException;
         return this;
@@ -19,6 +21,7 @@ public class ResumeWorkflowRunResponse {
     
     
     public String contentType;
+
     public ResumeWorkflowRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ResumeWorkflowRunResponse {
      */
     
     public Object entityNotFoundException;
+
     public ResumeWorkflowRunResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class ResumeWorkflowRunResponse {
      */
     
     public Object illegalWorkflowStateException;
+
     public ResumeWorkflowRunResponse withIllegalWorkflowStateException(Object illegalWorkflowStateException) {
         this.illegalWorkflowStateException = illegalWorkflowStateException;
         return this;
@@ -49,6 +54,7 @@ public class ResumeWorkflowRunResponse {
      */
     
     public Object internalServiceException;
+
     public ResumeWorkflowRunResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class ResumeWorkflowRunResponse {
      */
     
     public Object invalidInputException;
+
     public ResumeWorkflowRunResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class ResumeWorkflowRunResponse {
      */
     
     public Object operationTimeoutException;
+
     public ResumeWorkflowRunResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -79,6 +87,7 @@ public class ResumeWorkflowRunResponse {
      */
     
     public org.openapis.openapi.models.shared.ResumeWorkflowRunResponse resumeWorkflowRunResponse;
+
     public ResumeWorkflowRunResponse withResumeWorkflowRunResponse(org.openapis.openapi.models.shared.ResumeWorkflowRunResponse resumeWorkflowRunResponse) {
         this.resumeWorkflowRunResponse = resumeWorkflowRunResponse;
         return this;
@@ -86,6 +95,7 @@ public class ResumeWorkflowRunResponse {
     
     
     public Integer statusCode;
+
     public ResumeWorkflowRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class ResumeWorkflowRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResumeWorkflowRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ResumeWorkflowRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

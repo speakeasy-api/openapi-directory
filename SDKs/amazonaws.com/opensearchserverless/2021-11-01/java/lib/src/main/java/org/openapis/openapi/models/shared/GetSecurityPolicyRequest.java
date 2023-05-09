@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSecurityPolicyRequest {
     @JsonProperty("name")
     public String name;
+
     public GetSecurityPolicyRequest withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class GetSecurityPolicyRequest {
     
     @JsonProperty("type")
     public SecurityPolicyTypeEnum type;
+
     public GetSecurityPolicyRequest withType(SecurityPolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetSecurityPolicyRequest(@JsonProperty("name") String name, @JsonProperty("type") SecurityPolicyTypeEnum type) {
+        this.name = name;
+        this.type = type;
+  }
 }

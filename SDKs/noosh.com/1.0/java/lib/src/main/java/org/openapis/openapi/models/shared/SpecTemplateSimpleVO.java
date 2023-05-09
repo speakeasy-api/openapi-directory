@@ -20,6 +20,7 @@ public class SpecTemplateSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public PersonVO createdBy;
+
     public SpecTemplateSimpleVO withCreatedBy(PersonVO createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -29,6 +30,7 @@ public class SpecTemplateSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("created_date")
     public LocalDate createdDate;
+
     public SpecTemplateSimpleVO withCreatedDate(LocalDate createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -37,6 +39,7 @@ public class SpecTemplateSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public SpecTemplateSimpleVO withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -45,6 +48,7 @@ public class SpecTemplateSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_externally_published")
     public Boolean isExternallyPublished;
+
     public SpecTemplateSimpleVO withIsExternallyPublished(Boolean isExternallyPublished) {
         this.isExternallyPublished = isExternallyPublished;
         return this;
@@ -53,6 +57,7 @@ public class SpecTemplateSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_locked")
     public Boolean isLocked;
+
     public SpecTemplateSimpleVO withIsLocked(Boolean isLocked) {
         this.isLocked = isLocked;
         return this;
@@ -62,6 +67,7 @@ public class SpecTemplateSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_updated_date")
     public LocalDate lastUpdatedDate;
+
     public SpecTemplateSimpleVO withLastUpdatedDate(LocalDate lastUpdatedDate) {
         this.lastUpdatedDate = lastUpdatedDate;
         return this;
@@ -70,6 +76,7 @@ public class SpecTemplateSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_template_id")
     public Long specTemplateId;
+
     public SpecTemplateSimpleVO withSpecTemplateId(Long specTemplateId) {
         this.specTemplateId = specTemplateId;
         return this;
@@ -78,9 +85,11 @@ public class SpecTemplateSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_template_name")
     public String specTemplateName;
+
     public SpecTemplateSimpleVO withSpecTemplateName(String specTemplateName) {
         this.specTemplateName = specTemplateName;
         return this;
     }
     
+    public SpecTemplateSimpleVO(){}
 }

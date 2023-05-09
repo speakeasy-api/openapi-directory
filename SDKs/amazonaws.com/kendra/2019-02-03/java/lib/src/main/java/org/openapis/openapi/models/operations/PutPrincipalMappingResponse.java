@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutPrincipalMappingResponse {
@@ -12,6 +13,7 @@ public class PutPrincipalMappingResponse {
      */
     
     public Object accessDeniedException;
+
     public PutPrincipalMappingResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutPrincipalMappingResponse {
      */
     
     public Object conflictException;
+
     public PutPrincipalMappingResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class PutPrincipalMappingResponse {
     
     
     public String contentType;
+
     public PutPrincipalMappingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutPrincipalMappingResponse {
      */
     
     public Object internalServerException;
+
     public PutPrincipalMappingResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PutPrincipalMappingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutPrincipalMappingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PutPrincipalMappingResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public PutPrincipalMappingResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class PutPrincipalMappingResponse {
     
     
     public Integer statusCode;
+
     public PutPrincipalMappingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutPrincipalMappingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutPrincipalMappingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class PutPrincipalMappingResponse {
      */
     
     public Object throttlingException;
+
     public PutPrincipalMappingResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class PutPrincipalMappingResponse {
      */
     
     public Object validationException;
+
     public PutPrincipalMappingResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutPrincipalMappingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

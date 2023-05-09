@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PdfOcrPdfToLinesWithLocationResponse {
     
     public byte[] body;
+
     public PdfOcrPdfToLinesWithLocationResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PdfOcrPdfToLinesWithLocationResponse {
     
     
     public String contentType;
+
     public PdfOcrPdfToLinesWithLocationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PdfOcrPdfToLinesWithLocationResponse {
      */
     
     public org.openapis.openapi.models.shared.PdfToLinesWithLocationResult pdfToLinesWithLocationResult;
+
     public PdfOcrPdfToLinesWithLocationResponse withPdfToLinesWithLocationResult(org.openapis.openapi.models.shared.PdfToLinesWithLocationResult pdfToLinesWithLocationResult) {
         this.pdfToLinesWithLocationResult = pdfToLinesWithLocationResult;
         return this;
@@ -33,6 +37,7 @@ public class PdfOcrPdfToLinesWithLocationResponse {
     
     
     public Integer statusCode;
+
     public PdfOcrPdfToLinesWithLocationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PdfOcrPdfToLinesWithLocationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PdfOcrPdfToLinesWithLocationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PdfOcrPdfToLinesWithLocationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

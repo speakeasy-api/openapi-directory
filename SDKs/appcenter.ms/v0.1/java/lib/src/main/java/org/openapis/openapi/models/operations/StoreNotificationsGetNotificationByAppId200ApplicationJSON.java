@@ -15,6 +15,7 @@ public class StoreNotificationsGetNotificationByAppId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public StoreNotificationsGetNotificationByAppId200ApplicationJSON withService(String service) {
         this.service = service;
         return this;
@@ -23,6 +24,7 @@ public class StoreNotificationsGetNotificationByAppId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public StoreNotificationsGetNotificationByAppId200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class StoreNotificationsGetNotificationByAppId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid_until")
     public Long validUntil;
+
     public StoreNotificationsGetNotificationByAppId200ApplicationJSON withValidUntil(Long validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public StoreNotificationsGetNotificationByAppId200ApplicationJSON(){}
 }

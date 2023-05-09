@@ -15,6 +15,7 @@ public class TwoHundredResultResultAstRulesBodyTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TwoHundredResultResultAstRulesBodyTerms withType(String type) {
         this.type = type;
         return this;
@@ -26,9 +27,11 @@ public class TwoHundredResultResultAstRulesBodyTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public TwoHundredResultResultAstRulesBodyTermsValue[] value;
+
     public TwoHundredResultResultAstRulesBodyTerms withValue(TwoHundredResultResultAstRulesBodyTermsValue[] value) {
         this.value = value;
         return this;
     }
     
+    public TwoHundredResultResultAstRulesBodyTerms(){}
 }

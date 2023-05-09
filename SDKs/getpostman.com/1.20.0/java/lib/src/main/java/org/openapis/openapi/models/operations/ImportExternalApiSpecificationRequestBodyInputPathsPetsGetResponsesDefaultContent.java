@@ -12,9 +12,11 @@ public class ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponses
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application/json")
     public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContentApplicationJson applicationJson;
+
     public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContent withApplicationJson(ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContentApplicationJson applicationJson) {
         this.applicationJson = applicationJson;
         return this;
     }
     
+    public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContent(){}
 }

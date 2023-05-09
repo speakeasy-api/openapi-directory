@@ -18,9 +18,11 @@ public class KeyValueTargetingExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public KeyValueTargetingExpression withExpression(String expression) {
         this.expression = expression;
         return this;
     }
     
+    public KeyValueTargetingExpression(){}
 }

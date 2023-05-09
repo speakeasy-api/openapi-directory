@@ -18,6 +18,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public AppPermissionsActionsEnum actions;
+
     public AppPermissions withActions(AppPermissionsActionsEnum actions) {
         this.actions = actions;
         return this;
@@ -29,6 +30,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("administration")
     public AppPermissionsAdministrationEnum administration;
+
     public AppPermissions withAdministration(AppPermissionsAdministrationEnum administration) {
         this.administration = administration;
         return this;
@@ -40,6 +42,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checks")
     public AppPermissionsChecksEnum checks;
+
     public AppPermissions withChecks(AppPermissionsChecksEnum checks) {
         this.checks = checks;
         return this;
@@ -51,6 +54,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_references")
     public AppPermissionsContentReferencesEnum contentReferences;
+
     public AppPermissions withContentReferences(AppPermissionsContentReferencesEnum contentReferences) {
         this.contentReferences = contentReferences;
         return this;
@@ -62,6 +66,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public AppPermissionsContentsEnum contents;
+
     public AppPermissions withContents(AppPermissionsContentsEnum contents) {
         this.contents = contents;
         return this;
@@ -73,6 +78,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployments")
     public AppPermissionsDeploymentsEnum deployments;
+
     public AppPermissions withDeployments(AppPermissionsDeploymentsEnum deployments) {
         this.deployments = deployments;
         return this;
@@ -84,6 +90,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environments")
     public AppPermissionsEnvironmentsEnum environments;
+
     public AppPermissions withEnvironments(AppPermissionsEnvironmentsEnum environments) {
         this.environments = environments;
         return this;
@@ -95,6 +102,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public AppPermissionsIssuesEnum issues;
+
     public AppPermissions withIssues(AppPermissionsIssuesEnum issues) {
         this.issues = issues;
         return this;
@@ -106,6 +114,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public AppPermissionsMembersEnum members;
+
     public AppPermissions withMembers(AppPermissionsMembersEnum members) {
         this.members = members;
         return this;
@@ -117,6 +126,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public AppPermissionsMetadataEnum metadata;
+
     public AppPermissions withMetadata(AppPermissionsMetadataEnum metadata) {
         this.metadata = metadata;
         return this;
@@ -128,6 +138,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_administration")
     public AppPermissionsOrganizationAdministrationEnum organizationAdministration;
+
     public AppPermissions withOrganizationAdministration(AppPermissionsOrganizationAdministrationEnum organizationAdministration) {
         this.organizationAdministration = organizationAdministration;
         return this;
@@ -139,6 +150,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_hooks")
     public AppPermissionsOrganizationHooksEnum organizationHooks;
+
     public AppPermissions withOrganizationHooks(AppPermissionsOrganizationHooksEnum organizationHooks) {
         this.organizationHooks = organizationHooks;
         return this;
@@ -150,6 +162,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_packages")
     public AppPermissionsOrganizationPackagesEnum organizationPackages;
+
     public AppPermissions withOrganizationPackages(AppPermissionsOrganizationPackagesEnum organizationPackages) {
         this.organizationPackages = organizationPackages;
         return this;
@@ -161,6 +174,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_plan")
     public AppPermissionsOrganizationPlanEnum organizationPlan;
+
     public AppPermissions withOrganizationPlan(AppPermissionsOrganizationPlanEnum organizationPlan) {
         this.organizationPlan = organizationPlan;
         return this;
@@ -172,6 +186,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_projects")
     public AppPermissionsOrganizationProjectsEnum organizationProjects;
+
     public AppPermissions withOrganizationProjects(AppPermissionsOrganizationProjectsEnum organizationProjects) {
         this.organizationProjects = organizationProjects;
         return this;
@@ -183,6 +198,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_secrets")
     public AppPermissionsOrganizationSecretsEnum organizationSecrets;
+
     public AppPermissions withOrganizationSecrets(AppPermissionsOrganizationSecretsEnum organizationSecrets) {
         this.organizationSecrets = organizationSecrets;
         return this;
@@ -194,6 +210,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_self_hosted_runners")
     public AppPermissionsOrganizationSelfHostedRunnersEnum organizationSelfHostedRunners;
+
     public AppPermissions withOrganizationSelfHostedRunners(AppPermissionsOrganizationSelfHostedRunnersEnum organizationSelfHostedRunners) {
         this.organizationSelfHostedRunners = organizationSelfHostedRunners;
         return this;
@@ -205,6 +222,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_user_blocking")
     public AppPermissionsOrganizationUserBlockingEnum organizationUserBlocking;
+
     public AppPermissions withOrganizationUserBlocking(AppPermissionsOrganizationUserBlockingEnum organizationUserBlocking) {
         this.organizationUserBlocking = organizationUserBlocking;
         return this;
@@ -216,6 +234,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packages")
     public AppPermissionsPackagesEnum packages;
+
     public AppPermissions withPackages(AppPermissionsPackagesEnum packages) {
         this.packages = packages;
         return this;
@@ -227,6 +246,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pages")
     public AppPermissionsPagesEnum pages;
+
     public AppPermissions withPages(AppPermissionsPagesEnum pages) {
         this.pages = pages;
         return this;
@@ -238,6 +258,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pull_requests")
     public AppPermissionsPullRequestsEnum pullRequests;
+
     public AppPermissions withPullRequests(AppPermissionsPullRequestsEnum pullRequests) {
         this.pullRequests = pullRequests;
         return this;
@@ -249,6 +270,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository_hooks")
     public AppPermissionsRepositoryHooksEnum repositoryHooks;
+
     public AppPermissions withRepositoryHooks(AppPermissionsRepositoryHooksEnum repositoryHooks) {
         this.repositoryHooks = repositoryHooks;
         return this;
@@ -260,6 +282,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository_projects")
     public AppPermissionsRepositoryProjectsEnum repositoryProjects;
+
     public AppPermissions withRepositoryProjects(AppPermissionsRepositoryProjectsEnum repositoryProjects) {
         this.repositoryProjects = repositoryProjects;
         return this;
@@ -271,6 +294,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret_scanning_alerts")
     public AppPermissionsSecretScanningAlertsEnum secretScanningAlerts;
+
     public AppPermissions withSecretScanningAlerts(AppPermissionsSecretScanningAlertsEnum secretScanningAlerts) {
         this.secretScanningAlerts = secretScanningAlerts;
         return this;
@@ -282,6 +306,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secrets")
     public AppPermissionsSecretsEnum secrets;
+
     public AppPermissions withSecrets(AppPermissionsSecretsEnum secrets) {
         this.secrets = secrets;
         return this;
@@ -293,6 +318,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("security_events")
     public AppPermissionsSecurityEventsEnum securityEvents;
+
     public AppPermissions withSecurityEvents(AppPermissionsSecurityEventsEnum securityEvents) {
         this.securityEvents = securityEvents;
         return this;
@@ -304,6 +330,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("single_file")
     public AppPermissionsSingleFileEnum singleFile;
+
     public AppPermissions withSingleFile(AppPermissionsSingleFileEnum singleFile) {
         this.singleFile = singleFile;
         return this;
@@ -315,6 +342,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statuses")
     public AppPermissionsStatusesEnum statuses;
+
     public AppPermissions withStatuses(AppPermissionsStatusesEnum statuses) {
         this.statuses = statuses;
         return this;
@@ -326,6 +354,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_discussions")
     public AppPermissionsTeamDiscussionsEnum teamDiscussions;
+
     public AppPermissions withTeamDiscussions(AppPermissionsTeamDiscussionsEnum teamDiscussions) {
         this.teamDiscussions = teamDiscussions;
         return this;
@@ -337,6 +366,7 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vulnerability_alerts")
     public AppPermissionsVulnerabilityAlertsEnum vulnerabilityAlerts;
+
     public AppPermissions withVulnerabilityAlerts(AppPermissionsVulnerabilityAlertsEnum vulnerabilityAlerts) {
         this.vulnerabilityAlerts = vulnerabilityAlerts;
         return this;
@@ -348,9 +378,11 @@ public class AppPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflows")
     public AppPermissionsWorkflowsEnum workflows;
+
     public AppPermissions withWorkflows(AppPermissionsWorkflowsEnum workflows) {
         this.workflows = workflows;
         return this;
     }
     
+    public AppPermissions(){}
 }

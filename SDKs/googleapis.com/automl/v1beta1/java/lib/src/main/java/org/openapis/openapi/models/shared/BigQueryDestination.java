@@ -18,9 +18,11 @@ public class BigQueryDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputUri")
     public String outputUri;
+
     public BigQueryDestination withOutputUri(String outputUri) {
         this.outputUri = outputUri;
         return this;
     }
     
+    public BigQueryDestination(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGraphqlApiResponse {
@@ -12,6 +13,7 @@ public class CreateGraphqlApiResponse {
      */
     
     public Object apiLimitExceededException;
+
     public CreateGraphqlApiResponse withApiLimitExceededException(Object apiLimitExceededException) {
         this.apiLimitExceededException = apiLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class CreateGraphqlApiResponse {
      */
     
     public Object badRequestException;
+
     public CreateGraphqlApiResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -32,6 +35,7 @@ public class CreateGraphqlApiResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateGraphqlApiResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class CreateGraphqlApiResponse {
     
     
     public String contentType;
+
     public CreateGraphqlApiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateGraphqlApiResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGraphqlApiResponse createGraphqlApiResponse;
+
     public CreateGraphqlApiResponse withCreateGraphqlApiResponse(org.openapis.openapi.models.shared.CreateGraphqlApiResponse createGraphqlApiResponse) {
         this.createGraphqlApiResponse = createGraphqlApiResponse;
         return this;
@@ -59,6 +65,7 @@ public class CreateGraphqlApiResponse {
      */
     
     public Object internalFailureException;
+
     public CreateGraphqlApiResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -69,6 +76,7 @@ public class CreateGraphqlApiResponse {
      */
     
     public Object limitExceededException;
+
     public CreateGraphqlApiResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateGraphqlApiResponse {
     
     
     public Integer statusCode;
+
     public CreateGraphqlApiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateGraphqlApiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGraphqlApiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateGraphqlApiResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateGraphqlApiResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateGraphqlApiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

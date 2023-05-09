@@ -18,9 +18,11 @@ public class VpcPeeringConnectivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpc")
     public String vpc;
+
     public VpcPeeringConnectivity withVpc(String vpc) {
         this.vpc = vpc;
         return this;
     }
     
+    public VpcPeeringConnectivity(){}
 }

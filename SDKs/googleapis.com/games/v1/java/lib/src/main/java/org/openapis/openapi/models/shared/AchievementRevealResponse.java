@@ -18,6 +18,7 @@ public class AchievementRevealResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentState")
     public AchievementRevealResponseCurrentStateEnum currentState;
+
     public AchievementRevealResponse withCurrentState(AchievementRevealResponseCurrentStateEnum currentState) {
         this.currentState = currentState;
         return this;
@@ -29,9 +30,11 @@ public class AchievementRevealResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AchievementRevealResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public AchievementRevealResponse(){}
 }

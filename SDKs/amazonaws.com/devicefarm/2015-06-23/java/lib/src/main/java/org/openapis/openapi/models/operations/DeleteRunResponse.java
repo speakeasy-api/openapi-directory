@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRunResponse {
@@ -12,6 +13,7 @@ public class DeleteRunResponse {
      */
     
     public Object argumentException;
+
     public DeleteRunResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRunResponse {
     
     
     public String contentType;
+
     public DeleteRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRunResponse {
      */
     
     public java.util.Map<String, Object> deleteRunResult;
+
     public DeleteRunResponse withDeleteRunResult(java.util.Map<String, Object> deleteRunResult) {
         this.deleteRunResult = deleteRunResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRunResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteRunResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRunResponse {
      */
     
     public Object notFoundException;
+
     public DeleteRunResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteRunResponse {
      */
     
     public Object serviceAccountException;
+
     public DeleteRunResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteRunResponse {
     
     
     public Integer statusCode;
+
     public DeleteRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

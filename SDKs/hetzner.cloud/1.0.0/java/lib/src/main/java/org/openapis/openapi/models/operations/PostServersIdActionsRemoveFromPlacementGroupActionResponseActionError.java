@@ -15,6 +15,7 @@ public class PostServersIdActionsRemoveFromPlacementGroupActionResponseActionErr
      */
     @JsonProperty("code")
     public String code;
+
     public PostServersIdActionsRemoveFromPlacementGroupActionResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostServersIdActionsRemoveFromPlacementGroupActionResponseActionErr
      */
     @JsonProperty("message")
     public String message;
+
     public PostServersIdActionsRemoveFromPlacementGroupActionResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostServersIdActionsRemoveFromPlacementGroupActionResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

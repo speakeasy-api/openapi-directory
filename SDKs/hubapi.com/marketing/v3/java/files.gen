@@ -109,4 +109,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/MarketingEventCompleteReque
 lib/src/main/java/org/openapis/openapi/models/shared/CollectionResponseMarketingEventExternalUniqueIdentifierNoPaging.java
 lib/src/main/java/org/openapis/openapi/models/shared/EventDetailSettings.java
 lib/src/main/java/org/openapis/openapi/models/shared/EventDetailSettingsUrl.java
+docs/sdk/README.md
+docs/attendancesubscriberstatechanges/README.md
+docs/marketingeventsexternal/README.md
+docs/search/README.md
+docs/settingsexternal/README.md
 USAGE.md

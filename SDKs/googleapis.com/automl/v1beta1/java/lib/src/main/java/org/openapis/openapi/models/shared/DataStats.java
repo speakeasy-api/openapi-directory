@@ -18,6 +18,7 @@ public class DataStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrayStats")
     public ArrayStats arrayStats;
+
     public DataStats withArrayStats(ArrayStats arrayStats) {
         this.arrayStats = arrayStats;
         return this;
@@ -29,6 +30,7 @@ public class DataStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryStats")
     public CategoryStats categoryStats;
+
     public DataStats withCategoryStats(CategoryStats categoryStats) {
         this.categoryStats = categoryStats;
         return this;
@@ -40,6 +42,7 @@ public class DataStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distinctValueCount")
     public String distinctValueCount;
+
     public DataStats withDistinctValueCount(String distinctValueCount) {
         this.distinctValueCount = distinctValueCount;
         return this;
@@ -51,6 +54,7 @@ public class DataStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("float64Stats")
     public Float64Stats float64Stats;
+
     public DataStats withFloat64Stats(Float64Stats float64Stats) {
         this.float64Stats = float64Stats;
         return this;
@@ -62,6 +66,7 @@ public class DataStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nullValueCount")
     public String nullValueCount;
+
     public DataStats withNullValueCount(String nullValueCount) {
         this.nullValueCount = nullValueCount;
         return this;
@@ -73,6 +78,7 @@ public class DataStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringStats")
     public StringStats stringStats;
+
     public DataStats withStringStats(StringStats stringStats) {
         this.stringStats = stringStats;
         return this;
@@ -84,6 +90,7 @@ public class DataStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structStats")
     public StructStats structStats;
+
     public DataStats withStructStats(StructStats structStats) {
         this.structStats = structStats;
         return this;
@@ -95,6 +102,7 @@ public class DataStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestampStats")
     public TimestampStats timestampStats;
+
     public DataStats withTimestampStats(TimestampStats timestampStats) {
         this.timestampStats = timestampStats;
         return this;
@@ -106,9 +114,11 @@ public class DataStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validValueCount")
     public String validValueCount;
+
     public DataStats withValidValueCount(String validValueCount) {
         this.validValueCount = validValueCount;
         return this;
     }
     
+    public DataStats(){}
 }

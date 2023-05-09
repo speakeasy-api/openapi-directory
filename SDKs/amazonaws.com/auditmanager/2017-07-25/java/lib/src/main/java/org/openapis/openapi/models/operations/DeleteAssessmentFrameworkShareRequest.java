@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAssessmentFrameworkShareRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteAssessmentFrameworkShareRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class DeleteAssessmentFrameworkShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteAssessmentFrameworkShareRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class DeleteAssessmentFrameworkShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteAssessmentFrameworkShareRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class DeleteAssessmentFrameworkShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteAssessmentFrameworkShareRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class DeleteAssessmentFrameworkShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteAssessmentFrameworkShareRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class DeleteAssessmentFrameworkShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteAssessmentFrameworkShareRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class DeleteAssessmentFrameworkShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteAssessmentFrameworkShareRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class DeleteAssessmentFrameworkShareRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=requestId")
     public String requestId;
+
     public DeleteAssessmentFrameworkShareRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -71,9 +80,14 @@ public class DeleteAssessmentFrameworkShareRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestType")
     public DeleteAssessmentFrameworkShareRequestTypeEnum requestType;
+
     public DeleteAssessmentFrameworkShareRequest withRequestType(DeleteAssessmentFrameworkShareRequestTypeEnum requestType) {
         this.requestType = requestType;
         return this;
     }
     
+    public DeleteAssessmentFrameworkShareRequest(@JsonProperty("requestId") String requestId, @JsonProperty("requestType") DeleteAssessmentFrameworkShareRequestTypeEnum requestType) {
+        this.requestId = requestId;
+        this.requestType = requestType;
+  }
 }

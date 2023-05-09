@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DefineIndexFieldRequest {
     /**
@@ -12,6 +12,7 @@ public class DefineIndexFieldRequest {
      */
     
     public String domainName;
+
     public DefineIndexFieldRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,9 +23,14 @@ public class DefineIndexFieldRequest {
      */
     
     public IndexField indexField;
+
     public DefineIndexFieldRequest withIndexField(IndexField indexField) {
         this.indexField = indexField;
         return this;
     }
     
+    public DefineIndexFieldRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("IndexField") IndexField indexField) {
+        this.domainName = domainName;
+        this.indexField = indexField;
+  }
 }

@@ -18,6 +18,7 @@ public class EncryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalAuthenticatedData")
     public String additionalAuthenticatedData;
+
     public EncryptRequest withAdditionalAuthenticatedData(String additionalAuthenticatedData) {
         this.additionalAuthenticatedData = additionalAuthenticatedData;
         return this;
@@ -29,6 +30,7 @@ public class EncryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalAuthenticatedDataCrc32c")
     public String additionalAuthenticatedDataCrc32c;
+
     public EncryptRequest withAdditionalAuthenticatedDataCrc32c(String additionalAuthenticatedDataCrc32c) {
         this.additionalAuthenticatedDataCrc32c = additionalAuthenticatedDataCrc32c;
         return this;
@@ -40,6 +42,7 @@ public class EncryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plaintext")
     public String plaintext;
+
     public EncryptRequest withPlaintext(String plaintext) {
         this.plaintext = plaintext;
         return this;
@@ -51,9 +54,11 @@ public class EncryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plaintextCrc32c")
     public String plaintextCrc32c;
+
     public EncryptRequest withPlaintextCrc32c(String plaintextCrc32c) {
         this.plaintextCrc32c = plaintextCrc32c;
         return this;
     }
     
+    public EncryptRequest(){}
 }

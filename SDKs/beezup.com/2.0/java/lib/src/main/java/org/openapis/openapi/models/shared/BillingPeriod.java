@@ -12,6 +12,7 @@ public class BillingPeriod {
      */
     @JsonProperty("billingPeriodInMonth")
     public Integer billingPeriodInMonth;
+
     public BillingPeriod withBillingPeriodInMonth(Integer billingPeriodInMonth) {
         this.billingPeriodInMonth = billingPeriodInMonth;
         return this;
@@ -22,9 +23,14 @@ public class BillingPeriod {
      */
     @JsonProperty("discountPercentage")
     public Double discountPercentage;
+
     public BillingPeriod withDiscountPercentage(Double discountPercentage) {
         this.discountPercentage = discountPercentage;
         return this;
     }
     
+    public BillingPeriod(@JsonProperty("billingPeriodInMonth") Integer billingPeriodInMonth, @JsonProperty("discountPercentage") Double discountPercentage) {
+        this.billingPeriodInMonth = billingPeriodInMonth;
+        this.discountPercentage = discountPercentage;
+  }
 }

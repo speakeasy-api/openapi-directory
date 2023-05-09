@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class IncreaseNodeGroupsInGlobalReplicationGroupMessage {
     
     public Boolean applyImmediately;
+
     public IncreaseNodeGroupsInGlobalReplicationGroupMessage withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -16,6 +17,7 @@ public class IncreaseNodeGroupsInGlobalReplicationGroupMessage {
     
     
     public String globalReplicationGroupId;
+
     public IncreaseNodeGroupsInGlobalReplicationGroupMessage withGlobalReplicationGroupId(String globalReplicationGroupId) {
         this.globalReplicationGroupId = globalReplicationGroupId;
         return this;
@@ -23,6 +25,7 @@ public class IncreaseNodeGroupsInGlobalReplicationGroupMessage {
     
     
     public Long nodeGroupCount;
+
     public IncreaseNodeGroupsInGlobalReplicationGroupMessage withNodeGroupCount(Long nodeGroupCount) {
         this.nodeGroupCount = nodeGroupCount;
         return this;
@@ -30,9 +33,15 @@ public class IncreaseNodeGroupsInGlobalReplicationGroupMessage {
     
     
     public RegionalConfigurationList[] regionalConfigurations;
+
     public IncreaseNodeGroupsInGlobalReplicationGroupMessage withRegionalConfigurations(RegionalConfigurationList[] regionalConfigurations) {
         this.regionalConfigurations = regionalConfigurations;
         return this;
     }
     
+    public IncreaseNodeGroupsInGlobalReplicationGroupMessage(@JsonProperty("ApplyImmediately") Boolean applyImmediately, @JsonProperty("GlobalReplicationGroupId") String globalReplicationGroupId, @JsonProperty("NodeGroupCount") Long nodeGroupCount) {
+        this.applyImmediately = applyImmediately;
+        this.globalReplicationGroupId = globalReplicationGroupId;
+        this.nodeGroupCount = nodeGroupCount;
+  }
 }

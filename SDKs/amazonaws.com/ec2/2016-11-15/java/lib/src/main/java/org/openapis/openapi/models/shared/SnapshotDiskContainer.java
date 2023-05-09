@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SnapshotDiskContainer {
     
     public String description;
+
     public SnapshotDiskContainer withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class SnapshotDiskContainer {
     
     
     public String format;
+
     public SnapshotDiskContainer withFormat(String format) {
         this.format = format;
         return this;
@@ -26,6 +28,7 @@ public class SnapshotDiskContainer {
     
     
     public String url;
+
     public SnapshotDiskContainer withUrl(String url) {
         this.url = url;
         return this;
@@ -33,9 +36,11 @@ public class SnapshotDiskContainer {
     
     
     public UserBucket userBucket;
+
     public SnapshotDiskContainer withUserBucket(UserBucket userBucket) {
         this.userBucket = userBucket;
         return this;
     }
     
+    public SnapshotDiskContainer(){}
 }

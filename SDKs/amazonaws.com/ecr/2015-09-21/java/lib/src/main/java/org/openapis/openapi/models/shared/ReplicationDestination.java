@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReplicationDestination {
     @JsonProperty("region")
     public String region;
+
     public ReplicationDestination withRegion(String region) {
         this.region = region;
         return this;
@@ -19,9 +20,14 @@ public class ReplicationDestination {
     
     @JsonProperty("registryId")
     public String registryId;
+
     public ReplicationDestination withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
     }
     
+    public ReplicationDestination(@JsonProperty("region") String region, @JsonProperty("registryId") String registryId) {
+        this.region = region;
+        this.registryId = registryId;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateResolverEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverEndpoint")
     public ResolverEndpoint resolverEndpoint;
+
     public CreateResolverEndpointResponse withResolverEndpoint(ResolverEndpoint resolverEndpoint) {
         this.resolverEndpoint = resolverEndpoint;
         return this;
     }
     
+    public CreateResolverEndpointResponse(){}
 }

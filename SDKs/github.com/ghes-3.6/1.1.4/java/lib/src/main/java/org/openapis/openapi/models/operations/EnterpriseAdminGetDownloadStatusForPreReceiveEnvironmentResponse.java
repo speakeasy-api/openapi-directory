@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentResponse {
     
     public String contentType;
+
     public EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentResponse {
      */
     
     public org.openapis.openapi.models.shared.PreReceiveEnvironmentDownloadStatus preReceiveEnvironmentDownloadStatus;
+
     public EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentResponse withPreReceiveEnvironmentDownloadStatus(org.openapis.openapi.models.shared.PreReceiveEnvironmentDownloadStatus preReceiveEnvironmentDownloadStatus) {
         this.preReceiveEnvironmentDownloadStatus = preReceiveEnvironmentDownloadStatus;
         return this;
     }
     
+    public EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

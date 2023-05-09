@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EntityConfiguration {
     @JsonProperty("EntityId")
     public String entityId;
+
     public EntityConfiguration withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -19,9 +20,14 @@ public class EntityConfiguration {
     
     @JsonProperty("EntityType")
     public EntityTypeEnum entityType;
+
     public EntityConfiguration withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
     }
     
+    public EntityConfiguration(@JsonProperty("EntityId") String entityId, @JsonProperty("EntityType") EntityTypeEnum entityType) {
+        this.entityId = entityId;
+        this.entityType = entityType;
+  }
 }

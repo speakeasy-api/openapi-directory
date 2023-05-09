@@ -12,6 +12,7 @@ public class UpdateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorTypes")
     public NotebookInstanceAcceleratorTypeEnum[] acceleratorTypes;
+
     public UpdateNotebookInstanceInput withAcceleratorTypes(NotebookInstanceAcceleratorTypeEnum[] acceleratorTypes) {
         this.acceleratorTypes = acceleratorTypes;
         return this;
@@ -20,6 +21,7 @@ public class UpdateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalCodeRepositories")
     public String[] additionalCodeRepositories;
+
     public UpdateNotebookInstanceInput withAdditionalCodeRepositories(String[] additionalCodeRepositories) {
         this.additionalCodeRepositories = additionalCodeRepositories;
         return this;
@@ -28,6 +30,7 @@ public class UpdateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultCodeRepository")
     public String defaultCodeRepository;
+
     public UpdateNotebookInstanceInput withDefaultCodeRepository(String defaultCodeRepository) {
         this.defaultCodeRepository = defaultCodeRepository;
         return this;
@@ -36,6 +39,7 @@ public class UpdateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisassociateAcceleratorTypes")
     public Boolean disassociateAcceleratorTypes;
+
     public UpdateNotebookInstanceInput withDisassociateAcceleratorTypes(Boolean disassociateAcceleratorTypes) {
         this.disassociateAcceleratorTypes = disassociateAcceleratorTypes;
         return this;
@@ -44,6 +48,7 @@ public class UpdateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisassociateAdditionalCodeRepositories")
     public Boolean disassociateAdditionalCodeRepositories;
+
     public UpdateNotebookInstanceInput withDisassociateAdditionalCodeRepositories(Boolean disassociateAdditionalCodeRepositories) {
         this.disassociateAdditionalCodeRepositories = disassociateAdditionalCodeRepositories;
         return this;
@@ -52,6 +57,7 @@ public class UpdateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisassociateDefaultCodeRepository")
     public Boolean disassociateDefaultCodeRepository;
+
     public UpdateNotebookInstanceInput withDisassociateDefaultCodeRepository(Boolean disassociateDefaultCodeRepository) {
         this.disassociateDefaultCodeRepository = disassociateDefaultCodeRepository;
         return this;
@@ -60,6 +66,7 @@ public class UpdateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisassociateLifecycleConfig")
     public Boolean disassociateLifecycleConfig;
+
     public UpdateNotebookInstanceInput withDisassociateLifecycleConfig(Boolean disassociateLifecycleConfig) {
         this.disassociateLifecycleConfig = disassociateLifecycleConfig;
         return this;
@@ -68,6 +75,7 @@ public class UpdateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceMetadataServiceConfiguration")
     public InstanceMetadataServiceConfiguration instanceMetadataServiceConfiguration;
+
     public UpdateNotebookInstanceInput withInstanceMetadataServiceConfiguration(InstanceMetadataServiceConfiguration instanceMetadataServiceConfiguration) {
         this.instanceMetadataServiceConfiguration = instanceMetadataServiceConfiguration;
         return this;
@@ -76,6 +84,7 @@ public class UpdateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public InstanceTypeEnum instanceType;
+
     public UpdateNotebookInstanceInput withInstanceType(InstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -84,6 +93,7 @@ public class UpdateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LifecycleConfigName")
     public String lifecycleConfigName;
+
     public UpdateNotebookInstanceInput withLifecycleConfigName(String lifecycleConfigName) {
         this.lifecycleConfigName = lifecycleConfigName;
         return this;
@@ -91,6 +101,7 @@ public class UpdateNotebookInstanceInput {
     
     @JsonProperty("NotebookInstanceName")
     public String notebookInstanceName;
+
     public UpdateNotebookInstanceInput withNotebookInstanceName(String notebookInstanceName) {
         this.notebookInstanceName = notebookInstanceName;
         return this;
@@ -99,6 +110,7 @@ public class UpdateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public UpdateNotebookInstanceInput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -107,6 +119,7 @@ public class UpdateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootAccess")
     public RootAccessEnum rootAccess;
+
     public UpdateNotebookInstanceInput withRootAccess(RootAccessEnum rootAccess) {
         this.rootAccess = rootAccess;
         return this;
@@ -115,9 +128,13 @@ public class UpdateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeSizeInGB")
     public Long volumeSizeInGB;
+
     public UpdateNotebookInstanceInput withVolumeSizeInGB(Long volumeSizeInGB) {
         this.volumeSizeInGB = volumeSizeInGB;
         return this;
     }
     
+    public UpdateNotebookInstanceInput(@JsonProperty("NotebookInstanceName") String notebookInstanceName) {
+        this.notebookInstanceName = notebookInstanceName;
+  }
 }

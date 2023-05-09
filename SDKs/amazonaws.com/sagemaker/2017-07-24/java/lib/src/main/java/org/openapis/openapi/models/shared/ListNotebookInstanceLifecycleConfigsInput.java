@@ -19,6 +19,7 @@ public class ListNotebookInstanceLifecycleConfigsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListNotebookInstanceLifecycleConfigsInput withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListNotebookInstanceLifecycleConfigsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListNotebookInstanceLifecycleConfigsInput withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -39,6 +41,7 @@ public class ListNotebookInstanceLifecycleConfigsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeAfter")
     public OffsetDateTime lastModifiedTimeAfter;
+
     public ListNotebookInstanceLifecycleConfigsInput withLastModifiedTimeAfter(OffsetDateTime lastModifiedTimeAfter) {
         this.lastModifiedTimeAfter = lastModifiedTimeAfter;
         return this;
@@ -49,6 +52,7 @@ public class ListNotebookInstanceLifecycleConfigsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeBefore")
     public OffsetDateTime lastModifiedTimeBefore;
+
     public ListNotebookInstanceLifecycleConfigsInput withLastModifiedTimeBefore(OffsetDateTime lastModifiedTimeBefore) {
         this.lastModifiedTimeBefore = lastModifiedTimeBefore;
         return this;
@@ -57,6 +61,7 @@ public class ListNotebookInstanceLifecycleConfigsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListNotebookInstanceLifecycleConfigsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -65,6 +70,7 @@ public class ListNotebookInstanceLifecycleConfigsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListNotebookInstanceLifecycleConfigsInput withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -73,6 +79,7 @@ public class ListNotebookInstanceLifecycleConfigsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListNotebookInstanceLifecycleConfigsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -81,6 +88,7 @@ public class ListNotebookInstanceLifecycleConfigsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public NotebookInstanceLifecycleConfigSortKeyEnum sortBy;
+
     public ListNotebookInstanceLifecycleConfigsInput withSortBy(NotebookInstanceLifecycleConfigSortKeyEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -89,9 +97,11 @@ public class ListNotebookInstanceLifecycleConfigsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public NotebookInstanceLifecycleConfigSortOrderEnum sortOrder;
+
     public ListNotebookInstanceLifecycleConfigsInput withSortOrder(NotebookInstanceLifecycleConfigSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListNotebookInstanceLifecycleConfigsInput(){}
 }

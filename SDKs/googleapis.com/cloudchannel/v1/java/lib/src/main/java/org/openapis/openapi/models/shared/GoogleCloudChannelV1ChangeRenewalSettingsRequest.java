@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1ChangeRenewalSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewalSettings")
     public GoogleCloudChannelV1RenewalSettings renewalSettings;
+
     public GoogleCloudChannelV1ChangeRenewalSettingsRequest withRenewalSettings(GoogleCloudChannelV1RenewalSettings renewalSettings) {
         this.renewalSettings = renewalSettings;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudChannelV1ChangeRenewalSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleCloudChannelV1ChangeRenewalSettingsRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GoogleCloudChannelV1ChangeRenewalSettingsRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MigrateLegacyTrackingChannelCatalogResponse {
@@ -12,6 +13,7 @@ public class MigrateLegacyTrackingChannelCatalogResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public MigrateLegacyTrackingChannelCatalogResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class MigrateLegacyTrackingChannelCatalogResponse {
     
     
     public String contentType;
+
     public MigrateLegacyTrackingChannelCatalogResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class MigrateLegacyTrackingChannelCatalogResponse {
     
     
     public Integer statusCode;
+
     public MigrateLegacyTrackingChannelCatalogResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MigrateLegacyTrackingChannelCatalogResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MigrateLegacyTrackingChannelCatalogResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MigrateLegacyTrackingChannelCatalogResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

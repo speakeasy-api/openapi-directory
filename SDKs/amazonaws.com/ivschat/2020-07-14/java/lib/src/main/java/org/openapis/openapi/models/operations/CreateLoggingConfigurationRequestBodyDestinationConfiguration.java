@@ -15,6 +15,7 @@ public class CreateLoggingConfigurationRequestBodyDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchLogs")
     public org.openapis.openapi.models.shared.CloudWatchLogsDestinationConfiguration cloudWatchLogs;
+
     public CreateLoggingConfigurationRequestBodyDestinationConfiguration withCloudWatchLogs(org.openapis.openapi.models.shared.CloudWatchLogsDestinationConfiguration cloudWatchLogs) {
         this.cloudWatchLogs = cloudWatchLogs;
         return this;
@@ -23,6 +24,7 @@ public class CreateLoggingConfigurationRequestBodyDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firehose")
     public org.openapis.openapi.models.shared.FirehoseDestinationConfiguration firehose;
+
     public CreateLoggingConfigurationRequestBodyDestinationConfiguration withFirehose(org.openapis.openapi.models.shared.FirehoseDestinationConfiguration firehose) {
         this.firehose = firehose;
         return this;
@@ -31,9 +33,11 @@ public class CreateLoggingConfigurationRequestBodyDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3")
     public org.openapis.openapi.models.shared.S3DestinationConfiguration s3;
+
     public CreateLoggingConfigurationRequestBodyDestinationConfiguration withS3(org.openapis.openapi.models.shared.S3DestinationConfiguration s3) {
         this.s3 = s3;
         return this;
     }
     
+    public CreateLoggingConfigurationRequestBodyDestinationConfiguration(){}
 }

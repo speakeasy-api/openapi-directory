@@ -15,6 +15,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Catalog")
     public java.util.Map<String, Object> catalog;
+
     public Resource withCatalog(java.util.Map<String, Object> catalog) {
         this.catalog = catalog;
         return this;
@@ -23,6 +24,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCellsFilter")
     public DataCellsFilterResource dataCellsFilter;
+
     public Resource withDataCellsFilter(DataCellsFilterResource dataCellsFilter) {
         this.dataCellsFilter = dataCellsFilter;
         return this;
@@ -31,6 +33,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataLocation")
     public DataLocationResource dataLocation;
+
     public Resource withDataLocation(DataLocationResource dataLocation) {
         this.dataLocation = dataLocation;
         return this;
@@ -39,6 +42,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Database")
     public DatabaseResource database;
+
     public Resource withDatabase(DatabaseResource database) {
         this.database = database;
         return this;
@@ -47,6 +51,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LFTag")
     public LFTagKeyResource lfTag;
+
     public Resource withLFTag(LFTagKeyResource lfTag) {
         this.lfTag = lfTag;
         return this;
@@ -55,6 +60,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LFTagPolicy")
     public LFTagPolicyResource lfTagPolicy;
+
     public Resource withLFTagPolicy(LFTagPolicyResource lfTagPolicy) {
         this.lfTagPolicy = lfTagPolicy;
         return this;
@@ -63,6 +69,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Table")
     public TableResource table;
+
     public Resource withTable(TableResource table) {
         this.table = table;
         return this;
@@ -71,9 +78,11 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableWithColumns")
     public TableWithColumnsResource tableWithColumns;
+
     public Resource withTableWithColumns(TableWithColumnsResource tableWithColumns) {
         this.tableWithColumns = tableWithColumns;
         return this;
     }
     
+    public Resource(){}
 }

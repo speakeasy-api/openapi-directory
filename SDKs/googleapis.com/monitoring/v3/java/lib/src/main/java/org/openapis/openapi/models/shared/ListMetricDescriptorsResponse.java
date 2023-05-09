@@ -18,6 +18,7 @@ public class ListMetricDescriptorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricDescriptors")
     public MetricDescriptor[] metricDescriptors;
+
     public ListMetricDescriptorsResponse withMetricDescriptors(MetricDescriptor[] metricDescriptors) {
         this.metricDescriptors = metricDescriptors;
         return this;
@@ -29,9 +30,11 @@ public class ListMetricDescriptorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListMetricDescriptorsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListMetricDescriptorsResponse(){}
 }

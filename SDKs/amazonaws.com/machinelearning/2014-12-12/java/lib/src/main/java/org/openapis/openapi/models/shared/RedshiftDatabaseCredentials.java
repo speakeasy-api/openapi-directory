@@ -15,6 +15,7 @@ public class RedshiftDatabaseCredentials {
      */
     @JsonProperty("Password")
     public String password;
+
     public RedshiftDatabaseCredentials withPassword(String password) {
         this.password = password;
         return this;
@@ -25,9 +26,14 @@ public class RedshiftDatabaseCredentials {
      */
     @JsonProperty("Username")
     public String username;
+
     public RedshiftDatabaseCredentials withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public RedshiftDatabaseCredentials(@JsonProperty("Username") String username, @JsonProperty("Password") String password) {
+        this.username = username;
+        this.password = password;
+  }
 }

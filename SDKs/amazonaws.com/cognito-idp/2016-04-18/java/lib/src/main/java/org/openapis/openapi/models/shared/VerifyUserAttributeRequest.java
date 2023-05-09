@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VerifyUserAttributeRequest {
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public VerifyUserAttributeRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -19,6 +20,7 @@ public class VerifyUserAttributeRequest {
     
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public VerifyUserAttributeRequest withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -26,9 +28,15 @@ public class VerifyUserAttributeRequest {
     
     @JsonProperty("Code")
     public String code;
+
     public VerifyUserAttributeRequest withCode(String code) {
         this.code = code;
         return this;
     }
     
+    public VerifyUserAttributeRequest(@JsonProperty("AccessToken") String accessToken, @JsonProperty("AttributeName") String attributeName, @JsonProperty("Code") String code) {
+        this.accessToken = accessToken;
+        this.attributeName = attributeName;
+        this.code = code;
+  }
 }

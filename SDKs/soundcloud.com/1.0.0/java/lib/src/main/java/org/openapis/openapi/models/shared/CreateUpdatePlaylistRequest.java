@@ -15,9 +15,11 @@ public class CreateUpdatePlaylistRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playlist")
     public CreateUpdatePlaylistRequestPlaylist playlist;
+
     public CreateUpdatePlaylistRequest withPlaylist(CreateUpdatePlaylistRequestPlaylist playlist) {
         this.playlist = playlist;
         return this;
     }
     
+    public CreateUpdatePlaylistRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterComputeResponse {
@@ -12,6 +13,7 @@ public class RegisterComputeResponse {
      */
     
     public Object conflictException;
+
     public RegisterComputeResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class RegisterComputeResponse {
     
     
     public String contentType;
+
     public RegisterComputeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RegisterComputeResponse {
      */
     
     public Object internalServiceException;
+
     public RegisterComputeResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterComputeResponse {
      */
     
     public Object invalidRequestException;
+
     public RegisterComputeResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterComputeResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterComputeOutput registerComputeOutput;
+
     public RegisterComputeResponse withRegisterComputeOutput(org.openapis.openapi.models.shared.RegisterComputeOutput registerComputeOutput) {
         this.registerComputeOutput = registerComputeOutput;
         return this;
@@ -56,6 +62,7 @@ public class RegisterComputeResponse {
     
     
     public Integer statusCode;
+
     public RegisterComputeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RegisterComputeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterComputeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class RegisterComputeResponse {
      */
     
     public Object unauthorizedException;
+
     public RegisterComputeResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public RegisterComputeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

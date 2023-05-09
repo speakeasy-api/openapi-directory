@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProductsIdImagesJsonRequest {
@@ -12,6 +13,7 @@ public class PostProductsIdImagesJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ImageEdit imageEdit;
+
     public PostProductsIdImagesJsonRequest withImageEdit(org.openapis.openapi.models.shared.ImageEdit imageEdit) {
         this.imageEdit = imageEdit;
         return this;
@@ -22,6 +24,7 @@ public class PostProductsIdImagesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PostProductsIdImagesJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PostProductsIdImagesJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PostProductsIdImagesJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class PostProductsIdImagesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PostProductsIdImagesJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PostProductsIdImagesJsonRequest(@JsonProperty("ImageEdit") org.openapis.openapi.models.shared.ImageEdit imageEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.imageEdit = imageEdit;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

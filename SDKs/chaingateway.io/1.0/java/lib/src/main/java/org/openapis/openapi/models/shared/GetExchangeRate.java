@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetExchangeRate {
     @JsonProperty("currency")
     public String currency;
+
     public GetExchangeRate withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -16,6 +17,7 @@ public class GetExchangeRate {
     
     @JsonProperty("ok")
     public Boolean ok;
+
     public GetExchangeRate withOk(Boolean ok) {
         this.ok = ok;
         return this;
@@ -23,9 +25,15 @@ public class GetExchangeRate {
     
     @JsonProperty("rate")
     public Double rate;
+
     public GetExchangeRate withRate(Double rate) {
         this.rate = rate;
         return this;
     }
     
+    public GetExchangeRate(@JsonProperty("currency") String currency, @JsonProperty("ok") Boolean ok, @JsonProperty("rate") Double rate) {
+        this.currency = currency;
+        this.ok = ok;
+        this.rate = rate;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagResourceResponse {
@@ -12,6 +13,7 @@ public class TagResourceResponse {
      */
     
     public Object applicationDoesNotExistException;
+
     public TagResourceResponse withApplicationDoesNotExistException(Object applicationDoesNotExistException) {
         this.applicationDoesNotExistException = applicationDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class TagResourceResponse {
      */
     
     public Object arnNotSupportedException;
+
     public TagResourceResponse withArnNotSupportedException(Object arnNotSupportedException) {
         this.arnNotSupportedException = arnNotSupportedException;
         return this;
@@ -29,6 +32,7 @@ public class TagResourceResponse {
     
     
     public String contentType;
+
     public TagResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class TagResourceResponse {
      */
     
     public Object deploymentConfigDoesNotExistException;
+
     public TagResourceResponse withDeploymentConfigDoesNotExistException(Object deploymentConfigDoesNotExistException) {
         this.deploymentConfigDoesNotExistException = deploymentConfigDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class TagResourceResponse {
      */
     
     public Object deploymentGroupDoesNotExistException;
+
     public TagResourceResponse withDeploymentGroupDoesNotExistException(Object deploymentGroupDoesNotExistException) {
         this.deploymentGroupDoesNotExistException = deploymentGroupDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class TagResourceResponse {
      */
     
     public Object invalidArnException;
+
     public TagResourceResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class TagResourceResponse {
      */
     
     public Object invalidTagsToAddException;
+
     public TagResourceResponse withInvalidTagsToAddException(Object invalidTagsToAddException) {
         this.invalidTagsToAddException = invalidTagsToAddException;
         return this;
@@ -76,6 +84,7 @@ public class TagResourceResponse {
     
     
     public Integer statusCode;
+
     public TagResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class TagResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class TagResourceResponse {
      */
     
     public Object resourceArnRequiredException;
+
     public TagResourceResponse withResourceArnRequiredException(Object resourceArnRequiredException) {
         this.resourceArnRequiredException = resourceArnRequiredException;
         return this;
@@ -103,6 +114,7 @@ public class TagResourceResponse {
      */
     
     public Object tagRequiredException;
+
     public TagResourceResponse withTagRequiredException(Object tagRequiredException) {
         this.tagRequiredException = tagRequiredException;
         return this;
@@ -113,9 +125,14 @@ public class TagResourceResponse {
      */
     
     public java.util.Map<String, Object> tagResourceOutput;
+
     public TagResourceResponse withTagResourceOutput(java.util.Map<String, Object> tagResourceOutput) {
         this.tagResourceOutput = tagResourceOutput;
         return this;
     }
     
+    public TagResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

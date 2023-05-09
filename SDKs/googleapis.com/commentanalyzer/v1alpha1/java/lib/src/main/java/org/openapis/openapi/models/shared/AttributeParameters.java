@@ -18,6 +18,7 @@ public class AttributeParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scoreThreshold")
     public Float scoreThreshold;
+
     public AttributeParameters withScoreThreshold(Float scoreThreshold) {
         this.scoreThreshold = scoreThreshold;
         return this;
@@ -29,9 +30,11 @@ public class AttributeParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scoreType")
     public AttributeParametersScoreTypeEnum scoreType;
+
     public AttributeParameters withScoreType(AttributeParametersScoreTypeEnum scoreType) {
         this.scoreType = scoreType;
         return this;
     }
     
+    public AttributeParameters(){}
 }

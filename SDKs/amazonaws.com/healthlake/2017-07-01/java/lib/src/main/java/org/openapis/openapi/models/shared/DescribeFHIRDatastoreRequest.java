@@ -12,9 +12,11 @@ public class DescribeFHIRDatastoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatastoreId")
     public String datastoreId;
+
     public DescribeFHIRDatastoreRequest withDatastoreId(String datastoreId) {
         this.datastoreId = datastoreId;
         return this;
     }
     
+    public DescribeFHIRDatastoreRequest(){}
 }

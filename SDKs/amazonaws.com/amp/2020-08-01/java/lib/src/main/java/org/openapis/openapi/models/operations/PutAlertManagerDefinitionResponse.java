@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAlertManagerDefinitionResponse {
@@ -12,6 +13,7 @@ public class PutAlertManagerDefinitionResponse {
      */
     
     public Object accessDeniedException;
+
     public PutAlertManagerDefinitionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutAlertManagerDefinitionResponse {
      */
     
     public Object conflictException;
+
     public PutAlertManagerDefinitionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class PutAlertManagerDefinitionResponse {
     
     
     public String contentType;
+
     public PutAlertManagerDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutAlertManagerDefinitionResponse {
      */
     
     public Object internalServerException;
+
     public PutAlertManagerDefinitionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PutAlertManagerDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.PutAlertManagerDefinitionResponse putAlertManagerDefinitionResponse;
+
     public PutAlertManagerDefinitionResponse withPutAlertManagerDefinitionResponse(org.openapis.openapi.models.shared.PutAlertManagerDefinitionResponse putAlertManagerDefinitionResponse) {
         this.putAlertManagerDefinitionResponse = putAlertManagerDefinitionResponse;
         return this;
@@ -59,6 +65,7 @@ public class PutAlertManagerDefinitionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutAlertManagerDefinitionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class PutAlertManagerDefinitionResponse {
     
     
     public Integer statusCode;
+
     public PutAlertManagerDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutAlertManagerDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAlertManagerDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class PutAlertManagerDefinitionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public PutAlertManagerDefinitionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class PutAlertManagerDefinitionResponse {
      */
     
     public Object throttlingException;
+
     public PutAlertManagerDefinitionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class PutAlertManagerDefinitionResponse {
      */
     
     public Object validationException;
+
     public PutAlertManagerDefinitionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutAlertManagerDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

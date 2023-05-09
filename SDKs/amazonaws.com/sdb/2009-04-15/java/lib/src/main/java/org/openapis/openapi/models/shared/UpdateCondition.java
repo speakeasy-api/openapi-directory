@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateCondition {
     
     public Boolean exists;
+
     public UpdateCondition withExists(Boolean exists) {
         this.exists = exists;
         return this;
@@ -19,6 +20,7 @@ public class UpdateCondition {
     
     
     public String name;
+
     public UpdateCondition withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,11 @@ public class UpdateCondition {
     
     
     public String value;
+
     public UpdateCondition withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UpdateCondition(){}
 }

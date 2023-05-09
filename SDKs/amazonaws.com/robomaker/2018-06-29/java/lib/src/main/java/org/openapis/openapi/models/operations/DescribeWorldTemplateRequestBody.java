@@ -12,9 +12,13 @@ public class DescribeWorldTemplateRequestBody {
      */
     @JsonProperty("template")
     public String template;
+
     public DescribeWorldTemplateRequestBody withTemplate(String template) {
         this.template = template;
         return this;
     }
     
+    public DescribeWorldTemplateRequestBody(@JsonProperty("template") String template) {
+        this.template = template;
+  }
 }

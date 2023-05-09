@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInternetGatewaysResultInternetGatewaysTags {
     
     public String key;
+
     public DescribeInternetGatewaysResultInternetGatewaysTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInternetGatewaysResultInternetGatewaysTags {
     
     
     public String value;
+
     public DescribeInternetGatewaysResultInternetGatewaysTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeInternetGatewaysResultInternetGatewaysTags(){}
 }

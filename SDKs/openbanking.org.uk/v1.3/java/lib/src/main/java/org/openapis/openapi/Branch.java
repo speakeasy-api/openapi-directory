@@ -63,7 +63,7 @@ public class Branch {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBranchesResponse res = new org.openapis.openapi.models.operations.GetBranchesResponse() {{
+        org.openapis.openapi.models.operations.GetBranchesResponse res = new org.openapis.openapi.models.operations.GetBranchesResponse(contentType, httpRes.statusCode()) {{
             getBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonObject = null;
             fourHundredErrorObject = null;
             fourHundredAndEightErrorObject = null;
@@ -72,8 +72,6 @@ public class Branch {
             fiveHundredAndThreeErrorObject = null;
             errorObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -171,11 +169,9 @@ public class Branch {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HeadBranchesResponse res = new org.openapis.openapi.models.operations.HeadBranchesResponse() {{
+        org.openapis.openapi.models.operations.HeadBranchesResponse res = new org.openapis.openapi.models.operations.HeadBranchesResponse(contentType, httpRes.statusCode()) {{
             noResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

@@ -18,6 +18,7 @@ public class FileSystemEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DNSName")
     public String dnsName;
+
     public FileSystemEndpoint withDNSName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -26,9 +27,11 @@ public class FileSystemEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddresses")
     public String[] ipAddresses;
+
     public FileSystemEndpoint withIpAddresses(String[] ipAddresses) {
         this.ipAddresses = ipAddresses;
         return this;
     }
     
+    public FileSystemEndpoint(){}
 }

@@ -15,9 +15,11 @@ public class StatusRequestDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StatusRequestDTOStatusEnum status;
+
     public StatusRequestDTO withStatus(StatusRequestDTOStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public StatusRequestDTO(){}
 }

@@ -20,6 +20,7 @@ public class PackageItemDTO {
      */
     @JsonProperty("articleId")
     public Integer articleId;
+
     public PackageItemDTO withArticleId(Integer articleId) {
         this.articleId = articleId;
         return this;
@@ -33,6 +34,7 @@ public class PackageItemDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("articleName")
     public String articleName;
+
     public PackageItemDTO withArticleName(String articleName) {
         this.articleName = articleName;
         return this;
@@ -46,6 +48,7 @@ public class PackageItemDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("articleNumber")
     public Integer articleNumber;
+
     public PackageItemDTO withArticleNumber(Integer articleNumber) {
         this.articleNumber = articleNumber;
         return this;
@@ -59,6 +62,7 @@ public class PackageItemDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("articlePrice")
     public Double articlePrice;
+
     public PackageItemDTO withArticlePrice(Double articlePrice) {
         this.articlePrice = articlePrice;
         return this;
@@ -71,6 +75,7 @@ public class PackageItemDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endOrder")
     public Integer endOrder;
+
     public PackageItemDTO withEndOrder(Integer endOrder) {
         this.endOrder = endOrder;
         return this;
@@ -82,6 +87,7 @@ public class PackageItemDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isIncludeServiceInCharge")
     public Boolean isIncludeServiceInCharge;
+
     public PackageItemDTO withIsIncludeServiceInCharge(Boolean isIncludeServiceInCharge) {
         this.isIncludeServiceInCharge = isIncludeServiceInCharge;
         return this;
@@ -90,6 +96,7 @@ public class PackageItemDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measureUnit")
     public String measureUnit;
+
     public PackageItemDTO withMeasureUnit(String measureUnit) {
         this.measureUnit = measureUnit;
         return this;
@@ -102,6 +109,7 @@ public class PackageItemDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfItems")
     public Double numberOfItems;
+
     public PackageItemDTO withNumberOfItems(Double numberOfItems) {
         this.numberOfItems = numberOfItems;
         return this;
@@ -114,9 +122,13 @@ public class PackageItemDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startOrder")
     public Integer startOrder;
+
     public PackageItemDTO withStartOrder(Integer startOrder) {
         this.startOrder = startOrder;
         return this;
     }
     
+    public PackageItemDTO(@JsonProperty("articleId") Integer articleId) {
+        this.articleId = articleId;
+  }
 }

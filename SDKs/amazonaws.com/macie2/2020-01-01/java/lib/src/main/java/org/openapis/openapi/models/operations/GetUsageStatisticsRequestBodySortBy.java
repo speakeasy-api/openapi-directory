@@ -15,6 +15,7 @@ public class GetUsageStatisticsRequestBodySortBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public org.openapis.openapi.models.shared.UsageStatisticsSortKeyEnum key;
+
     public GetUsageStatisticsRequestBodySortBy withKey(org.openapis.openapi.models.shared.UsageStatisticsSortKeyEnum key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class GetUsageStatisticsRequestBodySortBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public org.openapis.openapi.models.shared.OrderByEnum orderBy;
+
     public GetUsageStatisticsRequestBodySortBy withOrderBy(org.openapis.openapi.models.shared.OrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
     }
     
+    public GetUsageStatisticsRequestBodySortBy(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDataflowEndpointGroupsResponse {
     
     public String contentType;
+
     public ListDataflowEndpointGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDataflowEndpointGroupsResponse {
      */
     
     public Object dependencyException;
+
     public ListDataflowEndpointGroupsResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -29,6 +32,7 @@ public class ListDataflowEndpointGroupsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListDataflowEndpointGroupsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListDataflowEndpointGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDataflowEndpointGroupsResponse listDataflowEndpointGroupsResponse;
+
     public ListDataflowEndpointGroupsResponse withListDataflowEndpointGroupsResponse(org.openapis.openapi.models.shared.ListDataflowEndpointGroupsResponse listDataflowEndpointGroupsResponse) {
         this.listDataflowEndpointGroupsResponse = listDataflowEndpointGroupsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListDataflowEndpointGroupsResponse {
     
     
     public Integer statusCode;
+
     public ListDataflowEndpointGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListDataflowEndpointGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDataflowEndpointGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListDataflowEndpointGroupsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListDataflowEndpointGroupsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListDataflowEndpointGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

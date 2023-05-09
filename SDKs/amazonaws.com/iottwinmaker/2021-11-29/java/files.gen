@@ -217,4 +217,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdatePricingPlanResponse.j
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSceneResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWorkspaceResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

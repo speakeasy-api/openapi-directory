@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UnassignPrivateNatGatewayAddressResultNatGatewayAddresses {
     
     public String allocationId;
+
     public UnassignPrivateNatGatewayAddressResultNatGatewayAddresses withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -19,6 +20,7 @@ public class UnassignPrivateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String associationId;
+
     public UnassignPrivateNatGatewayAddressResultNatGatewayAddresses withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -26,6 +28,7 @@ public class UnassignPrivateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String failureMessage;
+
     public UnassignPrivateNatGatewayAddressResultNatGatewayAddresses withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -33,6 +36,7 @@ public class UnassignPrivateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public Boolean isPrimary;
+
     public UnassignPrivateNatGatewayAddressResultNatGatewayAddresses withIsPrimary(Boolean isPrimary) {
         this.isPrimary = isPrimary;
         return this;
@@ -40,6 +44,7 @@ public class UnassignPrivateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String networkInterfaceId;
+
     public UnassignPrivateNatGatewayAddressResultNatGatewayAddresses withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -47,6 +52,7 @@ public class UnassignPrivateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String privateIp;
+
     public UnassignPrivateNatGatewayAddressResultNatGatewayAddresses withPrivateIp(String privateIp) {
         this.privateIp = privateIp;
         return this;
@@ -54,6 +60,7 @@ public class UnassignPrivateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String publicIp;
+
     public UnassignPrivateNatGatewayAddressResultNatGatewayAddresses withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -61,9 +68,11 @@ public class UnassignPrivateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public UnassignPrivateNatGatewayAddressResultNatGatewayAddressesStatusEnum status;
+
     public UnassignPrivateNatGatewayAddressResultNatGatewayAddresses withStatus(UnassignPrivateNatGatewayAddressResultNatGatewayAddressesStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UnassignPrivateNatGatewayAddressResultNatGatewayAddresses(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransactGetItem {
     @JsonProperty("Get")
     public Get get;
+
     public TransactGetItem withGet(Get get) {
         this.get = get;
         return this;
     }
     
+    public TransactGetItem(@JsonProperty("Get") Get get) {
+        this.get = get;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2IntentMessageCardButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postback")
     public String postback;
+
     public GoogleCloudDialogflowV2IntentMessageCardButton withPostback(String postback) {
         this.postback = postback;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2IntentMessageCardButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDialogflowV2IntentMessageCardButton withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentMessageCardButton(){}
 }

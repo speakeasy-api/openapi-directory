@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutBandwidthRateLimitScheduleInput {
     @JsonProperty("BandwidthRateLimitIntervals")
     public BandwidthRateLimitInterval[] bandwidthRateLimitIntervals;
+
     public PutBandwidthRateLimitScheduleInput withBandwidthRateLimitIntervals(BandwidthRateLimitInterval[] bandwidthRateLimitIntervals) {
         this.bandwidthRateLimitIntervals = bandwidthRateLimitIntervals;
         return this;
@@ -16,9 +17,14 @@ public class PutBandwidthRateLimitScheduleInput {
     
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public PutBandwidthRateLimitScheduleInput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
     }
     
+    public PutBandwidthRateLimitScheduleInput(@JsonProperty("BandwidthRateLimitIntervals") BandwidthRateLimitInterval[] bandwidthRateLimitIntervals, @JsonProperty("GatewayArn") String gatewayArn) {
+        this.bandwidthRateLimitIntervals = bandwidthRateLimitIntervals;
+        this.gatewayArn = gatewayArn;
+  }
 }

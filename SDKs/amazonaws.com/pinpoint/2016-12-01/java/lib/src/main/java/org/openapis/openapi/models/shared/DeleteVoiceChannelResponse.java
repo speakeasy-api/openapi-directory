@@ -15,9 +15,13 @@ public class DeleteVoiceChannelResponse {
      */
     @JsonProperty("VoiceChannelResponse")
     public VoiceChannelResponse voiceChannelResponse;
+
     public DeleteVoiceChannelResponse withVoiceChannelResponse(VoiceChannelResponse voiceChannelResponse) {
         this.voiceChannelResponse = voiceChannelResponse;
         return this;
     }
     
+    public DeleteVoiceChannelResponse(@JsonProperty("VoiceChannelResponse") VoiceChannelResponse voiceChannelResponse) {
+        this.voiceChannelResponse = voiceChannelResponse;
+  }
 }

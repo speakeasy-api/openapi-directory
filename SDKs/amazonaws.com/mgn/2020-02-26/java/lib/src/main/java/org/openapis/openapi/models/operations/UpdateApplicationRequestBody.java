@@ -14,6 +14,7 @@ public class UpdateApplicationRequestBody {
      */
     @JsonProperty("applicationID")
     public String applicationID;
+
     public UpdateApplicationRequestBody withApplicationID(String applicationID) {
         this.applicationID = applicationID;
         return this;
@@ -25,6 +26,7 @@ public class UpdateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateApplicationRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,9 +38,13 @@ public class UpdateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateApplicationRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateApplicationRequestBody(@JsonProperty("applicationID") String applicationID) {
+        this.applicationID = applicationID;
+  }
 }

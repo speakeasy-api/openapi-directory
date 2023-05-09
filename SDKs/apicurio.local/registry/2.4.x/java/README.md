@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreateGlobalRuleResponse;
 import org.openapis.openapi.models.shared.Rule;
 import org.openapis.openapi.models.shared.RuleTypeEnum;
@@ -27,10 +26,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.Rule req = new Rule() {{
-                config = "corrupti";
-                type = "VALIDITY";
-            }}            
+            org.openapis.openapi.models.shared.Rule req = new Rule("corrupti") {{
+                type = RuleTypeEnum.VALIDITY;
+            }};            
 
             CreateGlobalRuleResponse res = sdk.admin.createGlobalRule(req);
 
@@ -40,6 +38,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -47,114 +47,116 @@ public class Application {
 ## Available Resources and Operations
 
 
-### admin
+### [admin](docs/admin/README.md)
 
-* `createGlobalRule` - Create global rule
-* `createRoleMapping` - Create a new role mapping
-* `deleteAllGlobalRules` - Delete all global rules
-* `deleteGlobalRule` - Delete global rule
-* `deleteRoleMapping` - Delete a role mapping
-* `exportData` - Export registry data
-* `getConfigProperty` - Get configuration property value
-* `getGlobalRuleConfig` - Get global rule configuration
-* `getLogConfiguration` - Get a single logger configuration
-* `getRoleMapping` - Return a single role mapping
-* `importData` - Import registry data
-* `listArtifactTypes` - List artifact types
-* `listConfigProperties` - List all configuration properties
-* `listGlobalRules` - List global rules
-* `listLogConfigurations` - List logging configurations
-* `listRoleMappings` - List all role mappings
-* `removeLogConfiguration` - Removes logger configuration
-* `resetConfigProperty` - Reset a configuration property
-* `setLogConfiguration` - Set a logger's configuration
-* `updateConfigProperty` - Update a configuration property
-* `updateGlobalRuleConfig` - Update global rule configuration
-* `updateRoleMapping` - Update a role mapping
+* [createGlobalRule](docs/admin/README.md#createglobalrule) - Create global rule
+* [createRoleMapping](docs/admin/README.md#createrolemapping) - Create a new role mapping
+* [deleteAllGlobalRules](docs/admin/README.md#deleteallglobalrules) - Delete all global rules
+* [deleteGlobalRule](docs/admin/README.md#deleteglobalrule) - Delete global rule
+* [deleteRoleMapping](docs/admin/README.md#deleterolemapping) - Delete a role mapping
+* [exportData](docs/admin/README.md#exportdata) - Export registry data
+* [getConfigProperty](docs/admin/README.md#getconfigproperty) - Get configuration property value
+* [getGlobalRuleConfig](docs/admin/README.md#getglobalruleconfig) - Get global rule configuration
+* [getLogConfiguration](docs/admin/README.md#getlogconfiguration) - Get a single logger configuration
+* [getRoleMapping](docs/admin/README.md#getrolemapping) - Return a single role mapping
+* [importData](docs/admin/README.md#importdata) - Import registry data
+* [listArtifactTypes](docs/admin/README.md#listartifacttypes) - List artifact types
+* [listConfigProperties](docs/admin/README.md#listconfigproperties) - List all configuration properties
+* [listGlobalRules](docs/admin/README.md#listglobalrules) - List global rules
+* [listLogConfigurations](docs/admin/README.md#listlogconfigurations) - List logging configurations
+* [listRoleMappings](docs/admin/README.md#listrolemappings) - List all role mappings
+* [removeLogConfiguration](docs/admin/README.md#removelogconfiguration) - Removes logger configuration
+* [resetConfigProperty](docs/admin/README.md#resetconfigproperty) - Reset a configuration property
+* [setLogConfiguration](docs/admin/README.md#setlogconfiguration) - Set a logger's configuration
+* [updateConfigProperty](docs/admin/README.md#updateconfigproperty) - Update a configuration property
+* [updateGlobalRuleConfig](docs/admin/README.md#updateglobalruleconfig) - Update global rule configuration
+* [updateRoleMapping](docs/admin/README.md#updaterolemapping) - Update a role mapping
 
-### artifactType
+### [artifactType](docs/artifacttype/README.md)
 
-* `listArtifactTypes` - List artifact types
+* [listArtifactTypes](docs/artifacttype/README.md#listartifacttypes) - List artifact types
 
-### artifactRules
+### [artifactRules](docs/artifactrules/README.md)
 
-* `createArtifactRule` - Create artifact rule
-* `deleteArtifactRule` - Delete artifact rule
-* `deleteArtifactRules` - Delete artifact rules
-* `getArtifactRuleConfig` - Get artifact rule configuration
-* `listArtifactRules` - List artifact rules
-* `testUpdateArtifact` - Test update artifact
-* `updateArtifactRuleConfig` - Update artifact rule configuration
+* [createArtifactRule](docs/artifactrules/README.md#createartifactrule) - Create artifact rule
+* [deleteArtifactRule](docs/artifactrules/README.md#deleteartifactrule) - Delete artifact rule
+* [deleteArtifactRules](docs/artifactrules/README.md#deleteartifactrules) - Delete artifact rules
+* [getArtifactRuleConfig](docs/artifactrules/README.md#getartifactruleconfig) - Get artifact rule configuration
+* [listArtifactRules](docs/artifactrules/README.md#listartifactrules) - List artifact rules
+* [testUpdateArtifact](docs/artifactrules/README.md#testupdateartifact) - Test update artifact
+* [updateArtifactRuleConfig](docs/artifactrules/README.md#updateartifactruleconfig) - Update artifact rule configuration
 
-### artifacts
+### [artifacts](docs/artifacts/README.md)
 
-* `createArtifactJson` - Create artifact
-* `createArtifactRaw` - Create artifact
-* `deleteArtifact` - Delete artifact
-* `deleteArtifactsInGroup` - Delete artifacts in group
-* `getContentByGlobalId` - Get artifact by global ID
-* `getContentByHash` - Get artifact content by SHA-256 hash
-* `getContentById` - Get artifact content by ID
-* `getLatestArtifact` - Get latest artifact
-* `listArtifactsInGroup` - List artifacts in group
-* `referencesByContentHash` - List artifact references by hash
-* `referencesByContentId` - List artifact references by content ID
-* `referencesByGlobalId` - List artifact references by global ID
-* `searchArtifacts` - Search for artifacts
-* `searchArtifactsByContent` - Search for artifacts by content
-* `updateArtifactState` - Update artifact state
-* `updateArtifactJson` - Update artifact
-* `updateArtifactRaw` - Update artifact
+* [createArtifactJson](docs/artifacts/README.md#createartifactjson) - Create artifact
+* [createArtifactRaw](docs/artifacts/README.md#createartifactraw) - Create artifact
+* [deleteArtifact](docs/artifacts/README.md#deleteartifact) - Delete artifact
+* [deleteArtifactsInGroup](docs/artifacts/README.md#deleteartifactsingroup) - Delete artifacts in group
+* [getContentByGlobalId](docs/artifacts/README.md#getcontentbyglobalid) - Get artifact by global ID
+* [getContentByHash](docs/artifacts/README.md#getcontentbyhash) - Get artifact content by SHA-256 hash
+* [getContentById](docs/artifacts/README.md#getcontentbyid) - Get artifact content by ID
+* [getLatestArtifact](docs/artifacts/README.md#getlatestartifact) - Get latest artifact
+* [listArtifactsInGroup](docs/artifacts/README.md#listartifactsingroup) - List artifacts in group
+* [referencesByContentHash](docs/artifacts/README.md#referencesbycontenthash) - List artifact references by hash
+* [referencesByContentId](docs/artifacts/README.md#referencesbycontentid) - List artifact references by content ID
+* [referencesByGlobalId](docs/artifacts/README.md#referencesbyglobalid) - List artifact references by global ID
+* [searchArtifacts](docs/artifacts/README.md#searchartifacts) - Search for artifacts
+* [searchArtifactsByContent](docs/artifacts/README.md#searchartifactsbycontent) - Search for artifacts by content
+* [updateArtifactState](docs/artifacts/README.md#updateartifactstate) - Update artifact state
+* [updateArtifactJson](docs/artifacts/README.md#updateartifactjson) - Update artifact
+* [updateArtifactRaw](docs/artifacts/README.md#updateartifactraw) - Update artifact
 
-### globalRules
+### [globalRules](docs/globalrules/README.md)
 
-* `createGlobalRule` - Create global rule
-* `deleteAllGlobalRules` - Delete all global rules
-* `deleteGlobalRule` - Delete global rule
-* `getGlobalRuleConfig` - Get global rule configuration
-* `listGlobalRules` - List global rules
-* `updateGlobalRuleConfig` - Update global rule configuration
+* [createGlobalRule](docs/globalrules/README.md#createglobalrule) - Create global rule
+* [deleteAllGlobalRules](docs/globalrules/README.md#deleteallglobalrules) - Delete all global rules
+* [deleteGlobalRule](docs/globalrules/README.md#deleteglobalrule) - Delete global rule
+* [getGlobalRuleConfig](docs/globalrules/README.md#getglobalruleconfig) - Get global rule configuration
+* [listGlobalRules](docs/globalrules/README.md#listglobalrules) - List global rules
+* [updateGlobalRuleConfig](docs/globalrules/README.md#updateglobalruleconfig) - Update global rule configuration
 
-### groups
+### [groups](docs/groups/README.md)
 
-* `createGroup` - Create a new group
-* `deleteGroupById` - Delete a group by the specified ID.
-* `getGroupById` - Get a group by the specified ID.
-* `listGroups` - List groups
+* [createGroup](docs/groups/README.md#creategroup) - Create a new group
+* [deleteGroupById](docs/groups/README.md#deletegroupbyid) - Delete a group by the specified ID.
+* [getGroupById](docs/groups/README.md#getgroupbyid) - Get a group by the specified ID.
+* [listGroups](docs/groups/README.md#listgroups) - List groups
 
-### metadata
+### [metadata](docs/metadata/README.md)
 
-* `deleteArtifactVersionMetaData` - Delete artifact version metadata
-* `getArtifactMetaData` - Get artifact metadata
-* `getArtifactOwner` - Get artifact owner
-* `getArtifactVersionMetaData` - Get artifact version metadata
-* `getArtifactVersionMetaDataByContent` - Get artifact version metadata by content
-* `updateArtifactMetaData` - Update artifact metadata
-* `updateArtifactOwner` - Update artifact owner
-* `updateArtifactVersionMetaData` - Update artifact version metadata
+* [deleteArtifactVersionMetaData](docs/metadata/README.md#deleteartifactversionmetadata) - Delete artifact version metadata
+* [getArtifactMetaData](docs/metadata/README.md#getartifactmetadata) - Get artifact metadata
+* [getArtifactOwner](docs/metadata/README.md#getartifactowner) - Get artifact owner
+* [getArtifactVersionMetaData](docs/metadata/README.md#getartifactversionmetadata) - Get artifact version metadata
+* [getArtifactVersionMetaDataByContentJson](docs/metadata/README.md#getartifactversionmetadatabycontentjson) - Get artifact version metadata by content
+* [getArtifactVersionMetaDataByContentRaw](docs/metadata/README.md#getartifactversionmetadatabycontentraw) - Get artifact version metadata by content
+* [updateArtifactMetaData](docs/metadata/README.md#updateartifactmetadata) - Update artifact metadata
+* [updateArtifactOwner](docs/metadata/README.md#updateartifactowner) - Update artifact owner
+* [updateArtifactVersionMetaData](docs/metadata/README.md#updateartifactversionmetadata) - Update artifact version metadata
 
-### search
+### [search](docs/search/README.md)
 
-* `searchArtifacts` - Search for artifacts
-* `searchArtifactsByContent` - Search for artifacts by content
+* [searchArtifacts](docs/search/README.md#searchartifacts) - Search for artifacts
+* [searchArtifactsByContent](docs/search/README.md#searchartifactsbycontent) - Search for artifacts by content
 
-### system
+### [system](docs/system/README.md)
 
-* `getResourceLimits` - Get resource limits information
-* `getSystemInfo` - Get system information
+* [getResourceLimits](docs/system/README.md#getresourcelimits) - Get resource limits information
+* [getSystemInfo](docs/system/README.md#getsysteminfo) - Get system information
 
-### users
+### [users](docs/users/README.md)
 
-* `getCurrentUserInfo` - Get current user
+* [getCurrentUserInfo](docs/users/README.md#getcurrentuserinfo) - Get current user
 
-### versions
+### [versions](docs/versions/README.md)
 
-* `createArtifactVersionJson` - Create artifact version
-* `createArtifactVersionRaw` - Create artifact version
-* `getArtifactVersion` - Get artifact version
-* `getArtifactVersionReferences` - Get artifact version
-* `listArtifactVersions` - List artifact versions
-* `updateArtifactVersionState` - Update artifact version state
+* [createArtifactVersionJson](docs/versions/README.md#createartifactversionjson) - Create artifact version
+* [createArtifactVersionRaw](docs/versions/README.md#createartifactversionraw) - Create artifact version
+* [deleteArtifactVersion](docs/versions/README.md#deleteartifactversion) - Delete artifact version
+* [getArtifactVersion](docs/versions/README.md#getartifactversion) - Get artifact version
+* [getArtifactVersionReferences](docs/versions/README.md#getartifactversionreferences) - Get artifact version
+* [listArtifactVersions](docs/versions/README.md#listartifactversions) - List artifact versions
+* [updateArtifactVersionState](docs/versions/README.md#updateartifactversionstate) - Update artifact version state
 <!-- End SDK Available Operations -->
 
 ### Maturity

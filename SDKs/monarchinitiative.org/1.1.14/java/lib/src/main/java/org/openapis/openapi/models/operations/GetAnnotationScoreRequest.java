@@ -12,6 +12,7 @@ public class GetAnnotationScoreRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=absent_id")
     public String[] absentId;
+
     public GetAnnotationScoreRequest withAbsentId(String[] absentId) {
         this.absentId = absentId;
         return this;
@@ -22,9 +23,11 @@ public class GetAnnotationScoreRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String[] id;
+
     public GetAnnotationScoreRequest withId(String[] id) {
         this.id = id;
         return this;
     }
     
+    public GetAnnotationScoreRequest(){}
 }

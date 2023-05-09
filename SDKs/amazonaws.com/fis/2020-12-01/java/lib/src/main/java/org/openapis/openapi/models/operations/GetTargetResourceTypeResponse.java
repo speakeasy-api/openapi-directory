@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTargetResourceTypeResponse {
     
     public String contentType;
+
     public GetTargetResourceTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTargetResourceTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTargetResourceTypeResponse getTargetResourceTypeResponse;
+
     public GetTargetResourceTypeResponse withGetTargetResourceTypeResponse(org.openapis.openapi.models.shared.GetTargetResourceTypeResponse getTargetResourceTypeResponse) {
         this.getTargetResourceTypeResponse = getTargetResourceTypeResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetTargetResourceTypeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetTargetResourceTypeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class GetTargetResourceTypeResponse {
     
     
     public Integer statusCode;
+
     public GetTargetResourceTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetTargetResourceTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTargetResourceTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetTargetResourceTypeResponse {
      */
     
     public Object validationException;
+
     public GetTargetResourceTypeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetTargetResourceTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

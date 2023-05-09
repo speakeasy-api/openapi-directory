@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImageOcrImageLinesWithLocationRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public ImageOcrImageLinesWithLocationRequestBody requestBody;
+
     public ImageOcrImageLinesWithLocationRequest withRequestBody(ImageOcrImageLinesWithLocationRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ImageOcrImageLinesWithLocationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=language")
     public String language;
+
     public ImageOcrImageLinesWithLocationRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -29,9 +32,13 @@ public class ImageOcrImageLinesWithLocationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=preprocessing")
     public String preprocessing;
+
     public ImageOcrImageLinesWithLocationRequest withPreprocessing(String preprocessing) {
         this.preprocessing = preprocessing;
         return this;
     }
     
+    public ImageOcrImageLinesWithLocationRequest(@JsonProperty("RequestBody") ImageOcrImageLinesWithLocationRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

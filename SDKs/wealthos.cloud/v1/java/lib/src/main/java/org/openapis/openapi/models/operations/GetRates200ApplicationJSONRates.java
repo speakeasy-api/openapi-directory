@@ -14,6 +14,7 @@ public class GetRates200ApplicationJSONRates {
      */
     @JsonProperty("rate")
     public String rate;
+
     public GetRates200ApplicationJSONRates withRate(String rate) {
         this.rate = rate;
         return this;
@@ -24,6 +25,7 @@ public class GetRates200ApplicationJSONRates {
      */
     @JsonProperty("rate_id")
     public String rateId;
+
     public GetRates200ApplicationJSONRates withRateId(String rateId) {
         this.rateId = rateId;
         return this;
@@ -35,6 +37,7 @@ public class GetRates200ApplicationJSONRates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_on_date")
     public String rateOnDate;
+
     public GetRates200ApplicationJSONRates withRateOnDate(String rateOnDate) {
         this.rateOnDate = rateOnDate;
         return this;
@@ -45,9 +48,15 @@ public class GetRates200ApplicationJSONRates {
      */
     @JsonProperty("rate_type")
     public GetRates200ApplicationJSONRatesRateTypeEnum rateType;
+
     public GetRates200ApplicationJSONRates withRateType(GetRates200ApplicationJSONRatesRateTypeEnum rateType) {
         this.rateType = rateType;
         return this;
     }
     
+    public GetRates200ApplicationJSONRates(@JsonProperty("rate") String rate, @JsonProperty("rate_id") String rateId, @JsonProperty("rate_type") GetRates200ApplicationJSONRatesRateTypeEnum rateType) {
+        this.rate = rate;
+        this.rateId = rateId;
+        this.rateType = rateType;
+  }
 }

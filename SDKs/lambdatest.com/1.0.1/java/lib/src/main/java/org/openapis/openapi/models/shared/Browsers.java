@@ -12,6 +12,7 @@ public class Browsers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chrome")
     public String[] chrome;
+
     public Browsers withChrome(String[] chrome) {
         this.chrome = chrome;
         return this;
@@ -20,6 +21,7 @@ public class Browsers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firefox")
     public String[] firefox;
+
     public Browsers withFirefox(String[] firefox) {
         this.firefox = firefox;
         return this;
@@ -28,9 +30,11 @@ public class Browsers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opera")
     public String[] opera;
+
     public Browsers withOpera(String[] opera) {
         this.opera = opera;
         return this;
     }
     
+    public Browsers(){}
 }

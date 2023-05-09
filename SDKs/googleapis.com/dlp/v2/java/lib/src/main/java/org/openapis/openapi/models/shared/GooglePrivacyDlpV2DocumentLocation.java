@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2DocumentLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileOffset")
     public String fileOffset;
+
     public GooglePrivacyDlpV2DocumentLocation withFileOffset(String fileOffset) {
         this.fileOffset = fileOffset;
         return this;
     }
     
+    public GooglePrivacyDlpV2DocumentLocation(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyAquaInputMessage {
     
     public AquaConfigurationStatusEnum aquaConfigurationStatus;
+
     public ModifyAquaInputMessage withAquaConfigurationStatus(AquaConfigurationStatusEnum aquaConfigurationStatus) {
         this.aquaConfigurationStatus = aquaConfigurationStatus;
         return this;
@@ -16,9 +17,13 @@ public class ModifyAquaInputMessage {
     
     
     public String clusterIdentifier;
+
     public ModifyAquaInputMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
     }
     
+    public ModifyAquaInputMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+  }
 }

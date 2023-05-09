@@ -12,9 +12,13 @@ public class UsersUpdateStatusRequestBody {
      */
     @JsonProperty("status")
     public Long status;
+
     public UsersUpdateStatusRequestBody withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public UsersUpdateStatusRequestBody(@JsonProperty("status") Long status) {
+        this.status = status;
+  }
 }

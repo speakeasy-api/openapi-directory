@@ -12,6 +12,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, Object> attributes;
+
     public Resource withAttributes(java.util.Map<String, Object> attributes) {
         this.attributes = attributes;
         return this;
@@ -20,6 +21,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Resource withId(String id) {
         this.id = id;
         return this;
@@ -28,9 +30,11 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Resource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Resource(){}
 }

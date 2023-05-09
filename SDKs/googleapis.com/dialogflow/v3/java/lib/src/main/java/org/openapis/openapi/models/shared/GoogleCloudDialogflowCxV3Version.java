@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDialogflowCxV3Version withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowCxV3Version withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3Version withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3Version withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nluSettings")
     public GoogleCloudDialogflowCxV3NluSettings nluSettings;
+
     public GoogleCloudDialogflowCxV3Version withNluSettings(GoogleCloudDialogflowCxV3NluSettings nluSettings) {
         this.nluSettings = nluSettings;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowCxV3Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDialogflowCxV3VersionStateEnum state;
+
     public GoogleCloudDialogflowCxV3Version withState(GoogleCloudDialogflowCxV3VersionStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3Version(){}
 }

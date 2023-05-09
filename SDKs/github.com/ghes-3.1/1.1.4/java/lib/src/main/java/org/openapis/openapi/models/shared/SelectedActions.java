@@ -15,6 +15,7 @@ public class SelectedActions {
      */
     @JsonProperty("github_owned_allowed")
     public Boolean githubOwnedAllowed;
+
     public SelectedActions withGithubOwnedAllowed(Boolean githubOwnedAllowed) {
         this.githubOwnedAllowed = githubOwnedAllowed;
         return this;
@@ -25,9 +26,14 @@ public class SelectedActions {
      */
     @JsonProperty("patterns_allowed")
     public String[] patternsAllowed;
+
     public SelectedActions withPatternsAllowed(String[] patternsAllowed) {
         this.patternsAllowed = patternsAllowed;
         return this;
     }
     
+    public SelectedActions(@JsonProperty("github_owned_allowed") Boolean githubOwnedAllowed, @JsonProperty("patterns_allowed") String[] patternsAllowed) {
+        this.githubOwnedAllowed = githubOwnedAllowed;
+        this.patternsAllowed = patternsAllowed;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTestTypeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETTestTypeActionEnum action;
+
     public GETTestTypeRequest withAction(GETTestTypeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETTestTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Arn")
     public String arn;
+
     public GETTestTypeRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -29,6 +32,7 @@ public class GETTestTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LogDeliveryBucket")
     public String logDeliveryBucket;
+
     public GETTestTypeRequest withLogDeliveryBucket(String logDeliveryBucket) {
         this.logDeliveryBucket = logDeliveryBucket;
         return this;
@@ -39,6 +43,7 @@ public class GETTestTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
     public GETTestTypeTypeEnum type;
+
     public GETTestTypeRequest withType(GETTestTypeTypeEnum type) {
         this.type = type;
         return this;
@@ -49,6 +54,7 @@ public class GETTestTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeName")
     public String typeName;
+
     public GETTestTypeRequest withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -56,6 +62,7 @@ public class GETTestTypeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETTestTypeVersionEnum version;
+
     public GETTestTypeRequest withVersion(GETTestTypeVersionEnum version) {
         this.version = version;
         return this;
@@ -66,6 +73,7 @@ public class GETTestTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VersionId")
     public String versionId;
+
     public GETTestTypeRequest withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
@@ -73,6 +81,7 @@ public class GETTestTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETTestTypeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETTestTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETTestTypeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETTestTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETTestTypeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETTestTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETTestTypeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETTestTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETTestTypeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETTestTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETTestTypeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,14 @@ public class GETTestTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETTestTypeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETTestTypeRequest(@JsonProperty("Action") GETTestTypeActionEnum action, @JsonProperty("Version") GETTestTypeVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

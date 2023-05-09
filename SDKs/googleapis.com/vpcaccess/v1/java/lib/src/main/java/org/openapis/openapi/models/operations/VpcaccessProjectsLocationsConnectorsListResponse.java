@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VpcaccessProjectsLocationsConnectorsListResponse {
     
     public String contentType;
+
     public VpcaccessProjectsLocationsConnectorsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class VpcaccessProjectsLocationsConnectorsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListConnectorsResponse listConnectorsResponse;
+
     public VpcaccessProjectsLocationsConnectorsListResponse withListConnectorsResponse(org.openapis.openapi.models.shared.ListConnectorsResponse listConnectorsResponse) {
         this.listConnectorsResponse = listConnectorsResponse;
         return this;
@@ -26,6 +29,7 @@ public class VpcaccessProjectsLocationsConnectorsListResponse {
     
     
     public Integer statusCode;
+
     public VpcaccessProjectsLocationsConnectorsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class VpcaccessProjectsLocationsConnectorsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VpcaccessProjectsLocationsConnectorsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VpcaccessProjectsLocationsConnectorsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

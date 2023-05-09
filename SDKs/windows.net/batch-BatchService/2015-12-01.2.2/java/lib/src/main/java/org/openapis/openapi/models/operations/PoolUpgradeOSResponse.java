@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PoolUpgradeOSResponse {
@@ -12,6 +13,7 @@ public class PoolUpgradeOSResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public PoolUpgradeOSResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class PoolUpgradeOSResponse {
     
     
     public String contentType;
+
     public PoolUpgradeOSResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PoolUpgradeOSResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PoolUpgradeOSResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class PoolUpgradeOSResponse {
     
     
     public Integer statusCode;
+
     public PoolUpgradeOSResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PoolUpgradeOSResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PoolUpgradeOSResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PoolUpgradeOSResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

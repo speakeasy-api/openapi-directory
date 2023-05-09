@@ -15,9 +15,11 @@ public class RetryStageExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineExecutionId")
     public String pipelineExecutionId;
+
     public RetryStageExecutionOutput withPipelineExecutionId(String pipelineExecutionId) {
         this.pipelineExecutionId = pipelineExecutionId;
         return this;
     }
     
+    public RetryStageExecutionOutput(){}
 }

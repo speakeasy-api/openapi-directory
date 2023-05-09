@@ -15,6 +15,7 @@ public class IdentityDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blocks")
     public Block[] blocks;
+
     public IdentityDocument withBlocks(Block[] blocks) {
         this.blocks = blocks;
         return this;
@@ -23,6 +24,7 @@ public class IdentityDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentIndex")
     public Long documentIndex;
+
     public IdentityDocument withDocumentIndex(Long documentIndex) {
         this.documentIndex = documentIndex;
         return this;
@@ -31,9 +33,11 @@ public class IdentityDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityDocumentFields")
     public IdentityDocumentField[] identityDocumentFields;
+
     public IdentityDocument withIdentityDocumentFields(IdentityDocumentField[] identityDocumentFields) {
         this.identityDocumentFields = identityDocumentFields;
         return this;
     }
     
+    public IdentityDocument(){}
 }

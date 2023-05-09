@@ -22,6 +22,7 @@ public class SessionContextAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public SessionContextAttributes withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,9 +31,11 @@ public class SessionContextAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mfaAuthenticated")
     public Boolean mfaAuthenticated;
+
     public SessionContextAttributes withMfaAuthenticated(Boolean mfaAuthenticated) {
         this.mfaAuthenticated = mfaAuthenticated;
         return this;
     }
     
+    public SessionContextAttributes(){}
 }

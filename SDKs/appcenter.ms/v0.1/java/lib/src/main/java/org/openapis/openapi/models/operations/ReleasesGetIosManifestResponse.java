@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReleasesGetIosManifestResponse {
     
     public String contentType;
+
     public ReleasesGetIosManifestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReleasesGetIosManifestResponse {
     
     
     public Integer statusCode;
+
     public ReleasesGetIosManifestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReleasesGetIosManifestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReleasesGetIosManifestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReleasesGetIosManifestResponse {
      */
     
     public ReleasesGetIosManifest400ApplicationJSON releasesGetIosManifest400ApplicationJSONObject;
+
     public ReleasesGetIosManifestResponse withReleasesGetIosManifest400ApplicationJSONObject(ReleasesGetIosManifest400ApplicationJSON releasesGetIosManifest400ApplicationJSONObject) {
         this.releasesGetIosManifest400ApplicationJSONObject = releasesGetIosManifest400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ReleasesGetIosManifestResponse {
      */
     
     public ReleasesGetIosManifest403ApplicationJSON releasesGetIosManifest403ApplicationJSONObject;
+
     public ReleasesGetIosManifestResponse withReleasesGetIosManifest403ApplicationJSONObject(ReleasesGetIosManifest403ApplicationJSON releasesGetIosManifest403ApplicationJSONObject) {
         this.releasesGetIosManifest403ApplicationJSONObject = releasesGetIosManifest403ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class ReleasesGetIosManifestResponse {
      */
     
     public ReleasesGetIosManifest404ApplicationJSON releasesGetIosManifest404ApplicationJSONObject;
+
     public ReleasesGetIosManifestResponse withReleasesGetIosManifest404ApplicationJSONObject(ReleasesGetIosManifest404ApplicationJSON releasesGetIosManifest404ApplicationJSONObject) {
         this.releasesGetIosManifest404ApplicationJSONObject = releasesGetIosManifest404ApplicationJSONObject;
         return this;
     }
     
+    public ReleasesGetIosManifestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_external_details")
     public java.util.Map<String, Object> additionalExternalDetails;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withAdditionalExternalDetails(java.util.Map<String, Object> additionalExternalDetails) {
         this.additionalExternalDetails = additionalExternalDetails;
         return this;
@@ -26,6 +27,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_order_id")
     public String clientOrderId;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withClientOrderId(String clientOrderId) {
         this.clientOrderId = clientOrderId;
         return this;
@@ -36,6 +38,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
      */
     @JsonProperty("created_at")
     public String createdAt;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
      */
     @JsonProperty("currency")
     public String currency;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -56,6 +60,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
      */
     @JsonProperty("direction")
     public ExecuteBuyTrasaction200ApplicationJSONTransactionsDirectionEnum direction;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withDirection(ExecuteBuyTrasaction200ApplicationJSONTransactionsDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -67,6 +72,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("execution_price")
     public String executionPrice;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withExecutionPrice(String executionPrice) {
         this.executionPrice = executionPrice;
         return this;
@@ -78,6 +84,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_transaction_reference")
     public String externalTransactionReference;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withExternalTransactionReference(String externalTransactionReference) {
         this.externalTransactionReference = externalTransactionReference;
         return this;
@@ -88,6 +95,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
      */
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -98,6 +106,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
      */
     @JsonProperty("origin")
     public ExecuteBuyTrasaction200ApplicationJSONTransactionsOriginEnum origin;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withOrigin(ExecuteBuyTrasaction200ApplicationJSONTransactionsOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -109,6 +118,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_transaction_id")
     public String parentTransactionId;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withParentTransactionId(String parentTransactionId) {
         this.parentTransactionId = parentTransactionId;
         return this;
@@ -116,6 +126,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
     
     @JsonProperty("primary_transaction_type")
     public ExecuteBuyTrasaction200ApplicationJSONTransactionsPrimaryTransactionTypeEnum primaryTransactionType;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withPrimaryTransactionType(ExecuteBuyTrasaction200ApplicationJSONTransactionsPrimaryTransactionTypeEnum primaryTransactionType) {
         this.primaryTransactionType = primaryTransactionType;
         return this;
@@ -127,6 +138,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settlement_date")
     public String settlementDate;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withSettlementDate(String settlementDate) {
         this.settlementDate = settlementDate;
         return this;
@@ -134,6 +146,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
     
     @JsonProperty("status")
     public ExecuteBuyTrasaction200ApplicationJSONTransactionsStatusEnum status;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withStatus(ExecuteBuyTrasaction200ApplicationJSONTransactionsStatusEnum status) {
         this.status = status;
         return this;
@@ -144,6 +157,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
      */
     @JsonProperty("sub_transaction_type")
     public ExecuteBuyTrasaction200ApplicationJSONTransactionsSubTransactionTypeEnum subTransactionType;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withSubTransactionType(ExecuteBuyTrasaction200ApplicationJSONTransactionsSubTransactionTypeEnum subTransactionType) {
         this.subTransactionType = subTransactionType;
         return this;
@@ -154,6 +168,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
      */
     @JsonProperty("sub_type")
     public ExecuteBuyTrasaction200ApplicationJSONTransactionsSubTypeEnum subType;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withSubType(ExecuteBuyTrasaction200ApplicationJSONTransactionsSubTypeEnum subType) {
         this.subType = subType;
         return this;
@@ -165,6 +180,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trade_date")
     public String tradeDate;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withTradeDate(String tradeDate) {
         this.tradeDate = tradeDate;
         return this;
@@ -175,6 +191,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
      */
     @JsonProperty("transaction_id")
     public String transactionId;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -186,6 +203,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_quantity")
     public String transactionQuantity;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withTransactionQuantity(String transactionQuantity) {
         this.transactionQuantity = transactionQuantity;
         return this;
@@ -197,6 +215,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_value")
     public String transactionValue;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withTransactionValue(String transactionValue) {
         this.transactionValue = transactionValue;
         return this;
@@ -207,6 +226,7 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
      */
     @JsonProperty("type")
     public ExecuteBuyTrasaction200ApplicationJSONTransactionsTypeEnum type;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withType(ExecuteBuyTrasaction200ApplicationJSONTransactionsTypeEnum type) {
         this.type = type;
         return this;
@@ -217,9 +237,24 @@ public class ExecuteBuyTrasaction200ApplicationJSONTransactions {
      */
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public ExecuteBuyTrasaction200ApplicationJSONTransactions withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public ExecuteBuyTrasaction200ApplicationJSONTransactions(@JsonProperty("created_at") String createdAt, @JsonProperty("currency") String currency, @JsonProperty("direction") ExecuteBuyTrasaction200ApplicationJSONTransactionsDirectionEnum direction, @JsonProperty("investment_product_id") String investmentProductId, @JsonProperty("origin") ExecuteBuyTrasaction200ApplicationJSONTransactionsOriginEnum origin, @JsonProperty("primary_transaction_type") ExecuteBuyTrasaction200ApplicationJSONTransactionsPrimaryTransactionTypeEnum primaryTransactionType, @JsonProperty("status") ExecuteBuyTrasaction200ApplicationJSONTransactionsStatusEnum status, @JsonProperty("sub_transaction_type") ExecuteBuyTrasaction200ApplicationJSONTransactionsSubTransactionTypeEnum subTransactionType, @JsonProperty("sub_type") ExecuteBuyTrasaction200ApplicationJSONTransactionsSubTypeEnum subType, @JsonProperty("transaction_id") String transactionId, @JsonProperty("type") ExecuteBuyTrasaction200ApplicationJSONTransactionsTypeEnum type, @JsonProperty("updated_at") String updatedAt) {
+        this.createdAt = createdAt;
+        this.currency = currency;
+        this.direction = direction;
+        this.investmentProductId = investmentProductId;
+        this.origin = origin;
+        this.primaryTransactionType = primaryTransactionType;
+        this.status = status;
+        this.subTransactionType = subTransactionType;
+        this.subType = subType;
+        this.transactionId = transactionId;
+        this.type = type;
+        this.updatedAt = updatedAt;
+  }
 }

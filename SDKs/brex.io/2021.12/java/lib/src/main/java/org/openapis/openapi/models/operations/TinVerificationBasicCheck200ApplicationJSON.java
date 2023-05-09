@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TinVerificationBasicCheck200ApplicationJSON {
     @JsonProperty("matchStatus")
     public String matchStatus;
+
     public TinVerificationBasicCheck200ApplicationJSON withMatchStatus(String matchStatus) {
         this.matchStatus = matchStatus;
         return this;
@@ -19,6 +20,7 @@ public class TinVerificationBasicCheck200ApplicationJSON {
     
     @JsonProperty("name")
     public String name;
+
     public TinVerificationBasicCheck200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class TinVerificationBasicCheck200ApplicationJSON {
     
     @JsonProperty("possibleMatch")
     public String possibleMatch;
+
     public TinVerificationBasicCheck200ApplicationJSON withPossibleMatch(String possibleMatch) {
         this.possibleMatch = possibleMatch;
         return this;
@@ -33,6 +36,7 @@ public class TinVerificationBasicCheck200ApplicationJSON {
     
     @JsonProperty("tin")
     public String tin;
+
     public TinVerificationBasicCheck200ApplicationJSON withTin(String tin) {
         this.tin = tin;
         return this;
@@ -40,9 +44,17 @@ public class TinVerificationBasicCheck200ApplicationJSON {
     
     @JsonProperty("validationStatus")
     public String validationStatus;
+
     public TinVerificationBasicCheck200ApplicationJSON withValidationStatus(String validationStatus) {
         this.validationStatus = validationStatus;
         return this;
     }
     
+    public TinVerificationBasicCheck200ApplicationJSON(@JsonProperty("matchStatus") String matchStatus, @JsonProperty("name") String name, @JsonProperty("possibleMatch") String possibleMatch, @JsonProperty("tin") String tin, @JsonProperty("validationStatus") String validationStatus) {
+        this.matchStatus = matchStatus;
+        this.name = name;
+        this.possibleMatch = possibleMatch;
+        this.tin = tin;
+        this.validationStatus = validationStatus;
+  }
 }

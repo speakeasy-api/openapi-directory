@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AllergiesListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public AllergiesListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -16,6 +17,7 @@ public class AllergiesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public AllergiesListRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -23,6 +25,7 @@ public class AllergiesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public AllergiesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -30,9 +33,11 @@ public class AllergiesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public AllergiesListRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
     }
     
+    public AllergiesListRequest(){}
 }

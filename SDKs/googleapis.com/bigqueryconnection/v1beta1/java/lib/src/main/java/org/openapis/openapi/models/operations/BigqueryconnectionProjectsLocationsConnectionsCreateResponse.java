@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BigqueryconnectionProjectsLocationsConnectionsCreateResponse {
@@ -12,6 +13,7 @@ public class BigqueryconnectionProjectsLocationsConnectionsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.Connection connection;
+
     public BigqueryconnectionProjectsLocationsConnectionsCreateResponse withConnection(org.openapis.openapi.models.shared.Connection connection) {
         this.connection = connection;
         return this;
@@ -19,6 +21,7 @@ public class BigqueryconnectionProjectsLocationsConnectionsCreateResponse {
     
     
     public String contentType;
+
     public BigqueryconnectionProjectsLocationsConnectionsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class BigqueryconnectionProjectsLocationsConnectionsCreateResponse {
     
     
     public Integer statusCode;
+
     public BigqueryconnectionProjectsLocationsConnectionsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BigqueryconnectionProjectsLocationsConnectionsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BigqueryconnectionProjectsLocationsConnectionsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BigqueryconnectionProjectsLocationsConnectionsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

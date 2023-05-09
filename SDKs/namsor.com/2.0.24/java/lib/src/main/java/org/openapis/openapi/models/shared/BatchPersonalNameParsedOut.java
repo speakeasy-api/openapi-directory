@@ -18,9 +18,11 @@ public class BatchPersonalNameParsedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalNames")
     public PersonalNameParsedOut[] personalNames;
+
     public BatchPersonalNameParsedOut withPersonalNames(PersonalNameParsedOut[] personalNames) {
         this.personalNames = personalNames;
         return this;
     }
     
+    public BatchPersonalNameParsedOut(){}
 }

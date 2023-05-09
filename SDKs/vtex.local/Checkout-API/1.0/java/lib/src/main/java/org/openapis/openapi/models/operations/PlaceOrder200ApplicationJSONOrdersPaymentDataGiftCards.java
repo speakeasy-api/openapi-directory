@@ -15,6 +15,7 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     public Long balance;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards withBalance(Long balance) {
         this.balance = balance;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inUse")
     public Boolean inUse;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards withInUse(Boolean inUse) {
         this.inUse = inUse;
         return this;
@@ -48,6 +51,7 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSpecialCard")
     public Boolean isSpecialCard;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards withIsSpecialCard(Boolean isSpecialCard) {
         this.isSpecialCard = isSpecialCard;
         return this;
@@ -59,6 +63,7 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +75,7 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redemptionCode")
     public String redemptionCode;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards withRedemptionCode(String redemptionCode) {
         this.redemptionCode = redemptionCode;
         return this;
@@ -81,9 +87,11 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards(){}
 }

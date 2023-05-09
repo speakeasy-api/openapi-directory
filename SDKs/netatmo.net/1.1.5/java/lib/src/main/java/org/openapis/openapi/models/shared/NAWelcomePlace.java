@@ -15,6 +15,7 @@ public class NAWelcomePlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public NAWelcomePlace withCity(String city) {
         this.city = city;
         return this;
@@ -26,6 +27,7 @@ public class NAWelcomePlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public NAWelcomePlace withCountry(String country) {
         this.country = country;
         return this;
@@ -37,9 +39,11 @@ public class NAWelcomePlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public NAWelcomePlace withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public NAWelcomePlace(){}
 }

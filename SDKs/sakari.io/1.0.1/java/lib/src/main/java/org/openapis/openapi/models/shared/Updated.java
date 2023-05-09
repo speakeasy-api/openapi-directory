@@ -19,6 +19,7 @@ public class Updated {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("at")
     public OffsetDateTime at;
+
     public Updated withAt(OffsetDateTime at) {
         this.at = at;
         return this;
@@ -27,9 +28,11 @@ public class Updated {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("by")
     public UpdatedBy by;
+
     public Updated withBy(UpdatedBy by) {
         this.by = by;
         return this;
     }
     
+    public Updated(){}
 }

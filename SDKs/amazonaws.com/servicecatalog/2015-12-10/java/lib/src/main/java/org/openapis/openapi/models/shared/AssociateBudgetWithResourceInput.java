@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateBudgetWithResourceInput {
     @JsonProperty("BudgetName")
     public String budgetName;
+
     public AssociateBudgetWithResourceInput withBudgetName(String budgetName) {
         this.budgetName = budgetName;
         return this;
@@ -16,9 +17,14 @@ public class AssociateBudgetWithResourceInput {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public AssociateBudgetWithResourceInput withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public AssociateBudgetWithResourceInput(@JsonProperty("BudgetName") String budgetName, @JsonProperty("ResourceId") String resourceId) {
+        this.budgetName = budgetName;
+        this.resourceId = resourceId;
+  }
 }

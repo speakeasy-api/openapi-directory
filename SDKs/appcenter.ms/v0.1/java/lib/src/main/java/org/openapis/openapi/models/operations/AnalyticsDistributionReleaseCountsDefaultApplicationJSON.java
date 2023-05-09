@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AnalyticsDistributionReleaseCountsDefaultApplicationJSON {
     @JsonProperty("error")
     public AnalyticsDistributionReleaseCountsDefaultApplicationJSONError error;
+
     public AnalyticsDistributionReleaseCountsDefaultApplicationJSON withError(AnalyticsDistributionReleaseCountsDefaultApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public AnalyticsDistributionReleaseCountsDefaultApplicationJSON(@JsonProperty("error") AnalyticsDistributionReleaseCountsDefaultApplicationJSONError error) {
+        this.error = error;
+  }
 }

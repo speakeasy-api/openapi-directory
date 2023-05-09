@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInboxRequest {
@@ -12,9 +13,13 @@ public class GetInboxRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
     public String xeroTenantId;
+
     public GetInboxRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public GetInboxRequest(@JsonProperty("xero-tenant-id") String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
+  }
 }

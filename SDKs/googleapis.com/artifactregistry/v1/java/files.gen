@@ -59,6 +59,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/ArtifactregistryProject
 lib/src/main/java/org/openapis/openapi/models/operations/ArtifactregistryProjectsLocationsRepositoriesGetIamPolicySecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ArtifactregistryProjectsLocationsRepositoriesGetIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ArtifactregistryProjectsLocationsRepositoriesGetIamPolicyResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportSecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadSecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadResponse.java
@@ -163,6 +169,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/Hash.java
 lib/src/main/java/org/openapis/openapi/models/shared/Policy.java
 lib/src/main/java/org/openapis/openapi/models/shared/Binding.java
 lib/src/main/java/org/openapis/openapi/models/shared/Expr.java
+lib/src/main/java/org/openapis/openapi/models/shared/ImportGoogetArtifactsRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/ImportGoogetArtifactsGcsSource.java
+lib/src/main/java/org/openapis/openapi/models/shared/UploadGoogetArtifactMediaResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UploadKfpArtifactMediaResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UploadKfpArtifactRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListRepositoriesResponse.java
@@ -184,4 +193,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.j
 lib/src/main/java/org/openapis/openapi/models/shared/ImportYumArtifactsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImportYumArtifactsGcsSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/UploadYumArtifactMediaResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class OscerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public OscerRequestBodyCertificateParameters certificateParameters;
+
     public OscerRequestBody withCertificateParameters(OscerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class OscerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public OscerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class OscerRequestBody {
      */
     @JsonProperty("format")
     public OscerRequestBodyFormatEnum format;
+
     public OscerRequestBody withFormat(OscerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class OscerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public OscerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public OscerRequestBody(@JsonProperty("format") OscerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

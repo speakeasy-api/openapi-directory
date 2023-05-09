@@ -15,6 +15,7 @@ public class ViewBillingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingRecords")
     public BillingRecord[] billingRecords;
+
     public ViewBillingResponse withBillingRecords(BillingRecord[] billingRecords) {
         this.billingRecords = billingRecords;
         return this;
@@ -23,9 +24,11 @@ public class ViewBillingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageMarker")
     public String nextPageMarker;
+
     public ViewBillingResponse withNextPageMarker(String nextPageMarker) {
         this.nextPageMarker = nextPageMarker;
         return this;
     }
     
+    public ViewBillingResponse(){}
 }

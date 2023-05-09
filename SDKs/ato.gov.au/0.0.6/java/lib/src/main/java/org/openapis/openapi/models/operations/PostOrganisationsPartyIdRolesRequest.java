@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOrganisationsPartyIdRolesRequest {
@@ -12,6 +13,7 @@ public class PostOrganisationsPartyIdRolesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public PostOrganisationsPartyIdRolesRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class PostOrganisationsPartyIdRolesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PartyRoleInput partyRoleInput;
+
     public PostOrganisationsPartyIdRolesRequest withPartyRoleInput(org.openapis.openapi.models.shared.PartyRoleInput partyRoleInput) {
         this.partyRoleInput = partyRoleInput;
         return this;
@@ -32,9 +35,15 @@ public class PostOrganisationsPartyIdRolesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
     public String partyId;
+
     public PostOrganisationsPartyIdRolesRequest withPartyId(String partyId) {
         this.partyId = partyId;
         return this;
     }
     
+    public PostOrganisationsPartyIdRolesRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("party-roleInput") org.openapis.openapi.models.shared.PartyRoleInput partyRoleInput, @JsonProperty("partyId") String partyId) {
+        this.apiKey = apiKey;
+        this.partyRoleInput = partyRoleInput;
+        this.partyId = partyId;
+  }
 }

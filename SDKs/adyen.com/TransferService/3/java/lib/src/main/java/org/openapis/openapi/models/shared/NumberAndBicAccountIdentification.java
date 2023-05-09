@@ -17,6 +17,7 @@ public class NumberAndBicAccountIdentification {
      */
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public NumberAndBicAccountIdentification withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -25,6 +26,7 @@ public class NumberAndBicAccountIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalBankIdentification")
     public AdditionalBankIdentification additionalBankIdentification;
+
     public NumberAndBicAccountIdentification withAdditionalBankIdentification(AdditionalBankIdentification additionalBankIdentification) {
         this.additionalBankIdentification = additionalBankIdentification;
         return this;
@@ -35,6 +37,7 @@ public class NumberAndBicAccountIdentification {
      */
     @JsonProperty("bic")
     public String bic;
+
     public NumberAndBicAccountIdentification withBic(String bic) {
         this.bic = bic;
         return this;
@@ -45,9 +48,15 @@ public class NumberAndBicAccountIdentification {
      */
     @JsonProperty("type")
     public NumberAndBicAccountIdentificationTypeEnum type;
+
     public NumberAndBicAccountIdentification withType(NumberAndBicAccountIdentificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public NumberAndBicAccountIdentification(@JsonProperty("accountNumber") String accountNumber, @JsonProperty("bic") String bic, @JsonProperty("type") NumberAndBicAccountIdentificationTypeEnum type) {
+        this.accountNumber = accountNumber;
+        this.bic = bic;
+        this.type = type;
+  }
 }

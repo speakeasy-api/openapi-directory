@@ -15,6 +15,7 @@ public class Table {
      */
     @JsonProperty("rows")
     public TableRow[] rows;
+
     public Table withRows(TableRow[] rows) {
         this.rows = rows;
         return this;
@@ -25,9 +26,14 @@ public class Table {
      */
     @JsonProperty("title")
     public String title;
+
     public Table withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Table(@JsonProperty("rows") TableRow[] rows, @JsonProperty("title") String title) {
+        this.rows = rows;
+        this.title = title;
+  }
 }

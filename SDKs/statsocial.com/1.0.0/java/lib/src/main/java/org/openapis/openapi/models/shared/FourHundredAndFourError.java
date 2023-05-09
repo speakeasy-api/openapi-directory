@@ -15,6 +15,7 @@ public class FourHundredAndFourError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code_msg")
     public String errorCodeMsg;
+
     public FourHundredAndFourError withErrorCodeMsg(String errorCodeMsg) {
         this.errorCodeMsg = errorCodeMsg;
         return this;
@@ -23,6 +24,7 @@ public class FourHundredAndFourError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msg")
     public String msg;
+
     public FourHundredAndFourError withMsg(String msg) {
         this.msg = msg;
         return this;
@@ -31,9 +33,11 @@ public class FourHundredAndFourError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public String success;
+
     public FourHundredAndFourError withSuccess(String success) {
         this.success = success;
         return this;
     }
     
+    public FourHundredAndFourError(){}
 }

@@ -22,6 +22,7 @@ public class SessionStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndDateTime")
     public OffsetDateTime endDateTime;
+
     public SessionStatus withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -32,6 +33,7 @@ public class SessionStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("IdleSinceDateTime")
     public OffsetDateTime idleSinceDateTime;
+
     public SessionStatus withIdleSinceDateTime(OffsetDateTime idleSinceDateTime) {
         this.idleSinceDateTime = idleSinceDateTime;
         return this;
@@ -42,6 +44,7 @@ public class SessionStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedDateTime")
     public OffsetDateTime lastModifiedDateTime;
+
     public SessionStatus withLastModifiedDateTime(OffsetDateTime lastModifiedDateTime) {
         this.lastModifiedDateTime = lastModifiedDateTime;
         return this;
@@ -52,6 +55,7 @@ public class SessionStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartDateTime")
     public OffsetDateTime startDateTime;
+
     public SessionStatus withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -60,6 +64,7 @@ public class SessionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public SessionStateEnum state;
+
     public SessionStatus withState(SessionStateEnum state) {
         this.state = state;
         return this;
@@ -68,9 +73,11 @@ public class SessionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateChangeReason")
     public String stateChangeReason;
+
     public SessionStatus withStateChangeReason(String stateChangeReason) {
         this.stateChangeReason = stateChangeReason;
         return this;
     }
     
+    public SessionStatus(){}
 }

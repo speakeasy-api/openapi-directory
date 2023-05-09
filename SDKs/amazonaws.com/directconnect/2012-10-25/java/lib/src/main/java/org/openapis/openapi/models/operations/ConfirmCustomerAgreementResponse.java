@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConfirmCustomerAgreementResponse {
@@ -12,6 +13,7 @@ public class ConfirmCustomerAgreementResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfirmCustomerAgreementResponse confirmCustomerAgreementResponse;
+
     public ConfirmCustomerAgreementResponse withConfirmCustomerAgreementResponse(org.openapis.openapi.models.shared.ConfirmCustomerAgreementResponse confirmCustomerAgreementResponse) {
         this.confirmCustomerAgreementResponse = confirmCustomerAgreementResponse;
         return this;
@@ -19,6 +21,7 @@ public class ConfirmCustomerAgreementResponse {
     
     
     public String contentType;
+
     public ConfirmCustomerAgreementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ConfirmCustomerAgreementResponse {
      */
     
     public Object directConnectClientException;
+
     public ConfirmCustomerAgreementResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class ConfirmCustomerAgreementResponse {
      */
     
     public Object directConnectServerException;
+
     public ConfirmCustomerAgreementResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class ConfirmCustomerAgreementResponse {
     
     
     public Integer statusCode;
+
     public ConfirmCustomerAgreementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ConfirmCustomerAgreementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConfirmCustomerAgreementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ConfirmCustomerAgreementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -17,6 +17,7 @@ public class BeezUPCommonErrorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorArguments")
     public java.util.Map<String, String> errorArguments;
+
     public BeezUPCommonErrorSummary withErrorArguments(java.util.Map<String, String> errorArguments) {
         this.errorArguments = errorArguments;
         return this;
@@ -25,6 +26,7 @@ public class BeezUPCommonErrorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public BeezUPCommonErrorSummary withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -33,6 +35,7 @@ public class BeezUPCommonErrorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorGuid")
     public String errorGuid;
+
     public BeezUPCommonErrorSummary withErrorGuid(String errorGuid) {
         this.errorGuid = errorGuid;
         return this;
@@ -41,6 +44,7 @@ public class BeezUPCommonErrorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public BeezUPCommonErrorSummary withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -49,6 +53,7 @@ public class BeezUPCommonErrorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionDetail")
     public BeezUPCommonExceptionDetail exceptionDetail;
+
     public BeezUPCommonErrorSummary withExceptionDetail(BeezUPCommonExceptionDetail exceptionDetail) {
         this.exceptionDetail = exceptionDetail;
         return this;
@@ -57,6 +62,7 @@ public class BeezUPCommonErrorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectName")
     public String objectName;
+
     public BeezUPCommonErrorSummary withObjectName(String objectName) {
         this.objectName = objectName;
         return this;
@@ -65,6 +71,7 @@ public class BeezUPCommonErrorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyName")
     public String propertyName;
+
     public BeezUPCommonErrorSummary withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
@@ -73,6 +80,7 @@ public class BeezUPCommonErrorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyValue")
     public String propertyValue;
+
     public BeezUPCommonErrorSummary withPropertyValue(String propertyValue) {
         this.propertyValue = propertyValue;
         return this;
@@ -81,6 +89,7 @@ public class BeezUPCommonErrorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public BeezUPCommonErrorSummary withSource(String source) {
         this.source = source;
         return this;
@@ -89,6 +98,7 @@ public class BeezUPCommonErrorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("technicalErrorMessage")
     public String technicalErrorMessage;
+
     public BeezUPCommonErrorSummary withTechnicalErrorMessage(String technicalErrorMessage) {
         this.technicalErrorMessage = technicalErrorMessage;
         return this;
@@ -99,9 +109,11 @@ public class BeezUPCommonErrorSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("utcDate")
     public OffsetDateTime utcDate;
+
     public BeezUPCommonErrorSummary withUtcDate(OffsetDateTime utcDate) {
         this.utcDate = utcDate;
         return this;
     }
     
+    public BeezUPCommonErrorSummary(){}
 }

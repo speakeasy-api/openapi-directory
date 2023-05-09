@@ -15,6 +15,7 @@ public class GetDeviceIdentifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceIdentifier")
     public DeviceIdentifier deviceIdentifier;
+
     public GetDeviceIdentifierResponse withDeviceIdentifier(DeviceIdentifier deviceIdentifier) {
         this.deviceIdentifier = deviceIdentifier;
         return this;
@@ -23,9 +24,11 @@ public class GetDeviceIdentifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetDeviceIdentifierResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetDeviceIdentifierResponse(){}
 }

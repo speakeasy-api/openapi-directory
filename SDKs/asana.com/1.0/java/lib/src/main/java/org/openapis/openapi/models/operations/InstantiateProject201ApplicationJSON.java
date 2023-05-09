@@ -15,9 +15,11 @@ public class InstantiateProject201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.JobResponse data;
+
     public InstantiateProject201ApplicationJSON withData(org.openapis.openapi.models.shared.JobResponse data) {
         this.data = data;
         return this;
     }
     
+    public InstantiateProject201ApplicationJSON(){}
 }

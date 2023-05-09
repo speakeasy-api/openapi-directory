@@ -15,9 +15,11 @@ public class CreatePlaceIndexRequestBodyDataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntendedUse")
     public org.openapis.openapi.models.shared.IntendedUseEnum intendedUse;
+
     public CreatePlaceIndexRequestBodyDataSourceConfiguration withIntendedUse(org.openapis.openapi.models.shared.IntendedUseEnum intendedUse) {
         this.intendedUse = intendedUse;
         return this;
     }
     
+    public CreatePlaceIndexRequestBodyDataSourceConfiguration(){}
 }

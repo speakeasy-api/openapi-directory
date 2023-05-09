@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveAttributesResponse {
@@ -12,6 +13,7 @@ public class RemoveAttributesResponse {
      */
     
     public Object badRequestException;
+
     public RemoveAttributesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class RemoveAttributesResponse {
     
     
     public String contentType;
+
     public RemoveAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RemoveAttributesResponse {
      */
     
     public Object forbiddenException;
+
     public RemoveAttributesResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class RemoveAttributesResponse {
      */
     
     public Object internalServerErrorException;
+
     public RemoveAttributesResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveAttributesResponse {
      */
     
     public Object methodNotAllowedException;
+
     public RemoveAttributesResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class RemoveAttributesResponse {
      */
     
     public Object notFoundException;
+
     public RemoveAttributesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class RemoveAttributesResponse {
      */
     
     public Object payloadTooLargeException;
+
     public RemoveAttributesResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -79,6 +87,7 @@ public class RemoveAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.RemoveAttributesResponse removeAttributesResponse;
+
     public RemoveAttributesResponse withRemoveAttributesResponse(org.openapis.openapi.models.shared.RemoveAttributesResponse removeAttributesResponse) {
         this.removeAttributesResponse = removeAttributesResponse;
         return this;
@@ -86,6 +95,7 @@ public class RemoveAttributesResponse {
     
     
     public Integer statusCode;
+
     public RemoveAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class RemoveAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class RemoveAttributesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public RemoveAttributesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public RemoveAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

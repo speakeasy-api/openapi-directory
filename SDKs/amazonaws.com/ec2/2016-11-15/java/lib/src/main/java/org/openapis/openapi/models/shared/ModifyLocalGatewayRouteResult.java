@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyLocalGatewayRouteResult {
     
     public ModifyLocalGatewayRouteResultRoute route;
+
     public ModifyLocalGatewayRouteResult withRoute(ModifyLocalGatewayRouteResultRoute route) {
         this.route = route;
         return this;
     }
     
+    public ModifyLocalGatewayRouteResult(){}
 }

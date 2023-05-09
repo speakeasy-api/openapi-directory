@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -12,6 +13,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETConfigureHealthCheckHealthCheck {
     @SpeakeasyMetadata("queryParam:name=HealthyThreshold")
     public Long healthyThreshold;
+
     public GETConfigureHealthCheckHealthCheck withHealthyThreshold(Long healthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         return this;
@@ -19,6 +21,7 @@ public class GETConfigureHealthCheckHealthCheck {
     
     @SpeakeasyMetadata("queryParam:name=Interval")
     public Long interval;
+
     public GETConfigureHealthCheckHealthCheck withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -26,6 +29,7 @@ public class GETConfigureHealthCheckHealthCheck {
     
     @SpeakeasyMetadata("queryParam:name=Target")
     public String target;
+
     public GETConfigureHealthCheckHealthCheck withTarget(String target) {
         this.target = target;
         return this;
@@ -33,6 +37,7 @@ public class GETConfigureHealthCheckHealthCheck {
     
     @SpeakeasyMetadata("queryParam:name=Timeout")
     public Long timeout;
+
     public GETConfigureHealthCheckHealthCheck withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
@@ -40,9 +45,17 @@ public class GETConfigureHealthCheckHealthCheck {
     
     @SpeakeasyMetadata("queryParam:name=UnhealthyThreshold")
     public Long unhealthyThreshold;
+
     public GETConfigureHealthCheckHealthCheck withUnhealthyThreshold(Long unhealthyThreshold) {
         this.unhealthyThreshold = unhealthyThreshold;
         return this;
     }
     
+    public GETConfigureHealthCheckHealthCheck(@JsonProperty("HealthyThreshold") Long healthyThreshold, @JsonProperty("Interval") Long interval, @JsonProperty("Target") String target, @JsonProperty("Timeout") Long timeout, @JsonProperty("UnhealthyThreshold") Long unhealthyThreshold) {
+        this.healthyThreshold = healthyThreshold;
+        this.interval = interval;
+        this.target = target;
+        this.timeout = timeout;
+        this.unhealthyThreshold = unhealthyThreshold;
+  }
 }

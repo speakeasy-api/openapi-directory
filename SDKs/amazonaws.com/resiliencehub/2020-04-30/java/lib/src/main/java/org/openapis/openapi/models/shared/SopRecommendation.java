@@ -15,6 +15,7 @@ public class SopRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appComponentName")
     public String appComponentName;
+
     public SopRecommendation withAppComponentName(String appComponentName) {
         this.appComponentName = appComponentName;
         return this;
@@ -23,6 +24,7 @@ public class SopRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SopRecommendation withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class SopRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public RecommendationItem[] items;
+
     public SopRecommendation withItems(RecommendationItem[] items) {
         this.items = items;
         return this;
@@ -39,6 +42,7 @@ public class SopRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SopRecommendation withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class SopRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prerequisite")
     public String prerequisite;
+
     public SopRecommendation withPrerequisite(String prerequisite) {
         this.prerequisite = prerequisite;
         return this;
@@ -54,6 +59,7 @@ public class SopRecommendation {
     
     @JsonProperty("recommendationId")
     public String recommendationId;
+
     public SopRecommendation withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
@@ -61,6 +67,7 @@ public class SopRecommendation {
     
     @JsonProperty("referenceId")
     public String referenceId;
+
     public SopRecommendation withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -68,9 +75,15 @@ public class SopRecommendation {
     
     @JsonProperty("serviceType")
     public SopServiceTypeEnum serviceType;
+
     public SopRecommendation withServiceType(SopServiceTypeEnum serviceType) {
         this.serviceType = serviceType;
         return this;
     }
     
+    public SopRecommendation(@JsonProperty("recommendationId") String recommendationId, @JsonProperty("referenceId") String referenceId, @JsonProperty("serviceType") SopServiceTypeEnum serviceType) {
+        this.recommendationId = recommendationId;
+        this.referenceId = referenceId;
+        this.serviceType = serviceType;
+  }
 }

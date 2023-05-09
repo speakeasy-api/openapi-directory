@@ -12,6 +12,7 @@ public class UpdateGatewayCapabilityConfigurationRequestBody {
      */
     @JsonProperty("capabilityConfiguration")
     public String capabilityConfiguration;
+
     public UpdateGatewayCapabilityConfigurationRequestBody withCapabilityConfiguration(String capabilityConfiguration) {
         this.capabilityConfiguration = capabilityConfiguration;
         return this;
@@ -22,9 +23,14 @@ public class UpdateGatewayCapabilityConfigurationRequestBody {
      */
     @JsonProperty("capabilityNamespace")
     public String capabilityNamespace;
+
     public UpdateGatewayCapabilityConfigurationRequestBody withCapabilityNamespace(String capabilityNamespace) {
         this.capabilityNamespace = capabilityNamespace;
         return this;
     }
     
+    public UpdateGatewayCapabilityConfigurationRequestBody(@JsonProperty("capabilityConfiguration") String capabilityConfiguration, @JsonProperty("capabilityNamespace") String capabilityNamespace) {
+        this.capabilityConfiguration = capabilityConfiguration;
+        this.capabilityNamespace = capabilityNamespace;
+  }
 }

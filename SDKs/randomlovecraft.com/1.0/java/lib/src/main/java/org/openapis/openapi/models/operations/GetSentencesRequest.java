@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetSentencesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetSentencesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetSentencesRequest(){}
 }

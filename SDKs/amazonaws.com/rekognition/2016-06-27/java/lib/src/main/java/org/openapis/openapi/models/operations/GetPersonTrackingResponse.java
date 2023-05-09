@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPersonTrackingResponse {
@@ -12,6 +13,7 @@ public class GetPersonTrackingResponse {
      */
     
     public Object accessDeniedException;
+
     public GetPersonTrackingResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetPersonTrackingResponse {
     
     
     public String contentType;
+
     public GetPersonTrackingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPersonTrackingResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPersonTrackingResponse getPersonTrackingResponse;
+
     public GetPersonTrackingResponse withGetPersonTrackingResponse(org.openapis.openapi.models.shared.GetPersonTrackingResponse getPersonTrackingResponse) {
         this.getPersonTrackingResponse = getPersonTrackingResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetPersonTrackingResponse {
      */
     
     public Object internalServerError;
+
     public GetPersonTrackingResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class GetPersonTrackingResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public GetPersonTrackingResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class GetPersonTrackingResponse {
      */
     
     public Object invalidParameterException;
+
     public GetPersonTrackingResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class GetPersonTrackingResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public GetPersonTrackingResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -79,6 +87,7 @@ public class GetPersonTrackingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetPersonTrackingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class GetPersonTrackingResponse {
     
     
     public Integer statusCode;
+
     public GetPersonTrackingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetPersonTrackingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPersonTrackingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetPersonTrackingResponse {
      */
     
     public Object throttlingException;
+
     public GetPersonTrackingResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetPersonTrackingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

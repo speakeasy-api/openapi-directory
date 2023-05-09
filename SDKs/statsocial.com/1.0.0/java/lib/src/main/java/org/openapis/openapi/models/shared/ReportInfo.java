@@ -12,6 +12,7 @@ public class ReportInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public String created;
+
     public ReportInfo withCreated(String created) {
         this.created = created;
         return this;
@@ -20,6 +21,7 @@ public class ReportInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReportInfo withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class ReportInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_type")
     public String reportType;
+
     public ReportInfo withReportType(String reportType) {
         this.reportType = reportType;
         return this;
@@ -36,9 +39,11 @@ public class ReportInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ReportInfo withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ReportInfo(){}
 }

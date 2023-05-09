@@ -12,6 +12,7 @@ public class DescribeServiceUpdatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterNames")
     public String[] clusterNames;
+
     public DescribeServiceUpdatesRequest withClusterNames(String[] clusterNames) {
         this.clusterNames = clusterNames;
         return this;
@@ -20,6 +21,7 @@ public class DescribeServiceUpdatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeServiceUpdatesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeServiceUpdatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeServiceUpdatesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class DescribeServiceUpdatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceUpdateName")
     public String serviceUpdateName;
+
     public DescribeServiceUpdatesRequest withServiceUpdateName(String serviceUpdateName) {
         this.serviceUpdateName = serviceUpdateName;
         return this;
@@ -44,9 +48,11 @@ public class DescribeServiceUpdatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ServiceUpdateStatusEnum[] status;
+
     public DescribeServiceUpdatesRequest withStatus(ServiceUpdateStatusEnum[] status) {
         this.status = status;
         return this;
     }
     
+    public DescribeServiceUpdatesRequest(){}
 }

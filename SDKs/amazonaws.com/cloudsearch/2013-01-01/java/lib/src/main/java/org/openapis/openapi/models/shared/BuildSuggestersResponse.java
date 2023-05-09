@@ -15,9 +15,11 @@ public class BuildSuggestersResponse {
      */
     
     public String[] fieldNames;
+
     public BuildSuggestersResponse withFieldNames(String[] fieldNames) {
         this.fieldNames = fieldNames;
         return this;
     }
     
+    public BuildSuggestersResponse(){}
 }

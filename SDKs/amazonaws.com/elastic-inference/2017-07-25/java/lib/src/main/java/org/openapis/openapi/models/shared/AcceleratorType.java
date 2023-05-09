@@ -15,6 +15,7 @@ public class AcceleratorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorTypeName")
     public String acceleratorTypeName;
+
     public AcceleratorType withAcceleratorTypeName(String acceleratorTypeName) {
         this.acceleratorTypeName = acceleratorTypeName;
         return this;
@@ -23,6 +24,7 @@ public class AcceleratorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryInfo")
     public MemoryInfo memoryInfo;
+
     public AcceleratorType withMemoryInfo(MemoryInfo memoryInfo) {
         this.memoryInfo = memoryInfo;
         return this;
@@ -31,9 +33,11 @@ public class AcceleratorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("throughputInfo")
     public KeyValuePair[] throughputInfo;
+
     public AcceleratorType withThroughputInfo(KeyValuePair[] throughputInfo) {
         this.throughputInfo = throughputInfo;
         return this;
     }
     
+    public AcceleratorType(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResetTimerAction {
     @JsonProperty("timerName")
     public String timerName;
+
     public ResetTimerAction withTimerName(String timerName) {
         this.timerName = timerName;
         return this;
     }
     
+    public ResetTimerAction(@JsonProperty("timerName") String timerName) {
+        this.timerName = timerName;
+  }
 }

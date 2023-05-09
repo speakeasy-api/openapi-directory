@@ -15,6 +15,7 @@ public class AssetUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descriptive")
     public String descriptive;
+
     public AssetUrls withDescriptive(String descriptive) {
         this.descriptive = descriptive;
         return this;
@@ -26,9 +27,11 @@ public class AssetUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standard")
     public String standard;
+
     public AssetUrls withStandard(String standard) {
         this.standard = standard;
         return this;
     }
     
+    public AssetUrls(){}
 }

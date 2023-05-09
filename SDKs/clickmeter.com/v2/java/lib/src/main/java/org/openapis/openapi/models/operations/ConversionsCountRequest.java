@@ -12,6 +12,7 @@ public class ConversionsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
     public String createdAfter;
+
     public ConversionsCountRequest withCreatedAfter(String createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -22,6 +23,7 @@ public class ConversionsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
     public String createdBefore;
+
     public ConversionsCountRequest withCreatedBefore(String createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -32,6 +34,7 @@ public class ConversionsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public ConversionsCountStatusEnum status;
+
     public ConversionsCountRequest withStatus(ConversionsCountStatusEnum status) {
         this.status = status;
         return this;
@@ -42,9 +45,11 @@ public class ConversionsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public ConversionsCountRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
     }
     
+    public ConversionsCountRequest(){}
 }

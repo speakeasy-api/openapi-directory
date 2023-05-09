@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiPostNewOrderRawRequest {
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public OrderApiPostNewOrderRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class OrderApiPostNewOrderRawRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shopId")
     public Long shopId;
+
     public OrderApiPostNewOrderRawRequest withShopId(Long shopId) {
         this.shopId = shopId;
         return this;
     }
     
+    public OrderApiPostNewOrderRawRequest(@JsonProperty("RequestBody") byte[] requestBody) {
+        this.requestBody = requestBody;
+  }
 }

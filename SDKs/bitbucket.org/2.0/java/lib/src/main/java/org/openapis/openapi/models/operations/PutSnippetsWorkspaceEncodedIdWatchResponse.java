@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutSnippetsWorkspaceEncodedIdWatchResponse {
     
     public String contentType;
+
     public PutSnippetsWorkspaceEncodedIdWatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutSnippetsWorkspaceEncodedIdWatchResponse {
     
     
     public Integer statusCode;
+
     public PutSnippetsWorkspaceEncodedIdWatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PutSnippetsWorkspaceEncodedIdWatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutSnippetsWorkspaceEncodedIdWatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PutSnippetsWorkspaceEncodedIdWatchResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public PutSnippetsWorkspaceEncodedIdWatchResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
     }
     
+    public PutSnippetsWorkspaceEncodedIdWatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

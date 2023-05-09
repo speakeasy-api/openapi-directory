@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETStopStackSetOperationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETStopStackSetOperationActionEnum action;
+
     public GETStopStackSetOperationRequest withAction(GETStopStackSetOperationActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETStopStackSetOperationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CallAs")
     public GETStopStackSetOperationCallAsEnum callAs;
+
     public GETStopStackSetOperationRequest withCallAs(GETStopStackSetOperationCallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -29,6 +32,7 @@ public class GETStopStackSetOperationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OperationId")
     public String operationId;
+
     public GETStopStackSetOperationRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -39,6 +43,7 @@ public class GETStopStackSetOperationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackSetName")
     public String stackSetName;
+
     public GETStopStackSetOperationRequest withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
@@ -46,6 +51,7 @@ public class GETStopStackSetOperationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETStopStackSetOperationVersionEnum version;
+
     public GETStopStackSetOperationRequest withVersion(GETStopStackSetOperationVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETStopStackSetOperationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETStopStackSetOperationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETStopStackSetOperationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETStopStackSetOperationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETStopStackSetOperationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETStopStackSetOperationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETStopStackSetOperationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETStopStackSetOperationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETStopStackSetOperationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETStopStackSetOperationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETStopStackSetOperationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETStopStackSetOperationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETStopStackSetOperationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETStopStackSetOperationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETStopStackSetOperationRequest(@JsonProperty("Action") GETStopStackSetOperationActionEnum action, @JsonProperty("OperationId") String operationId, @JsonProperty("StackSetName") String stackSetName, @JsonProperty("Version") GETStopStackSetOperationVersionEnum version) {
+        this.action = action;
+        this.operationId = operationId;
+        this.stackSetName = stackSetName;
+        this.version = version;
+  }
 }

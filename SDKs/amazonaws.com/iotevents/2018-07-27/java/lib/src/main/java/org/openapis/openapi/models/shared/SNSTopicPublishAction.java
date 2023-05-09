@@ -15,6 +15,7 @@ public class SNSTopicPublishAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public Payload payload;
+
     public SNSTopicPublishAction withPayload(Payload payload) {
         this.payload = payload;
         return this;
@@ -22,9 +23,13 @@ public class SNSTopicPublishAction {
     
     @JsonProperty("targetArn")
     public String targetArn;
+
     public SNSTopicPublishAction withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
     }
     
+    public SNSTopicPublishAction(@JsonProperty("targetArn") String targetArn) {
+        this.targetArn = targetArn;
+  }
 }

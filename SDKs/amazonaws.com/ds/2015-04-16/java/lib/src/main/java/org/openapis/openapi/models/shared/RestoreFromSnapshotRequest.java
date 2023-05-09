@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RestoreFromSnapshotRequest {
     @JsonProperty("SnapshotId")
     public String snapshotId;
+
     public RestoreFromSnapshotRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public RestoreFromSnapshotRequest(@JsonProperty("SnapshotId") String snapshotId) {
+        this.snapshotId = snapshotId;
+  }
 }

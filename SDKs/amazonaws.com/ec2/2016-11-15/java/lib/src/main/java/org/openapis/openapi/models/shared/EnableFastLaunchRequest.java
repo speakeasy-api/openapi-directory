@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class EnableFastLaunchRequest {
     
     public Boolean dryRun;
+
     public EnableFastLaunchRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class EnableFastLaunchRequest {
     
     
     public String imageId;
+
     public EnableFastLaunchRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -23,6 +25,7 @@ public class EnableFastLaunchRequest {
     
     
     public FastLaunchLaunchTemplateSpecificationRequest launchTemplate;
+
     public EnableFastLaunchRequest withLaunchTemplate(FastLaunchLaunchTemplateSpecificationRequest launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
@@ -30,6 +33,7 @@ public class EnableFastLaunchRequest {
     
     
     public Long maxParallelLaunches;
+
     public EnableFastLaunchRequest withMaxParallelLaunches(Long maxParallelLaunches) {
         this.maxParallelLaunches = maxParallelLaunches;
         return this;
@@ -37,6 +41,7 @@ public class EnableFastLaunchRequest {
     
     
     public String resourceType;
+
     public EnableFastLaunchRequest withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -44,9 +49,13 @@ public class EnableFastLaunchRequest {
     
     
     public FastLaunchSnapshotConfigurationRequest snapshotConfiguration;
+
     public EnableFastLaunchRequest withSnapshotConfiguration(FastLaunchSnapshotConfigurationRequest snapshotConfiguration) {
         this.snapshotConfiguration = snapshotConfiguration;
         return this;
     }
     
+    public EnableFastLaunchRequest(@JsonProperty("ImageId") String imageId) {
+        this.imageId = imageId;
+  }
 }

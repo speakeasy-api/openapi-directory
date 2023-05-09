@@ -20,6 +20,7 @@ public class FileSystemDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZoneId")
     public String availabilityZoneId;
+
     public FileSystemDescription withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -28,6 +29,7 @@ public class FileSystemDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZoneName")
     public String availabilityZoneName;
+
     public FileSystemDescription withAvailabilityZoneName(String availabilityZoneName) {
         this.availabilityZoneName = availabilityZoneName;
         return this;
@@ -37,6 +39,7 @@ public class FileSystemDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public FileSystemDescription withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -44,6 +47,7 @@ public class FileSystemDescription {
     
     @JsonProperty("CreationToken")
     public String creationToken;
+
     public FileSystemDescription withCreationToken(String creationToken) {
         this.creationToken = creationToken;
         return this;
@@ -52,6 +56,7 @@ public class FileSystemDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encrypted")
     public Boolean encrypted;
+
     public FileSystemDescription withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -60,6 +65,7 @@ public class FileSystemDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemArn")
     public String fileSystemArn;
+
     public FileSystemDescription withFileSystemArn(String fileSystemArn) {
         this.fileSystemArn = fileSystemArn;
         return this;
@@ -67,6 +73,7 @@ public class FileSystemDescription {
     
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public FileSystemDescription withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -75,6 +82,7 @@ public class FileSystemDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public FileSystemDescription withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -82,6 +90,7 @@ public class FileSystemDescription {
     
     @JsonProperty("LifeCycleState")
     public LifeCycleStateEnum lifeCycleState;
+
     public FileSystemDescription withLifeCycleState(LifeCycleStateEnum lifeCycleState) {
         this.lifeCycleState = lifeCycleState;
         return this;
@@ -90,6 +99,7 @@ public class FileSystemDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public FileSystemDescription withName(String name) {
         this.name = name;
         return this;
@@ -97,6 +107,7 @@ public class FileSystemDescription {
     
     @JsonProperty("NumberOfMountTargets")
     public Long numberOfMountTargets;
+
     public FileSystemDescription withNumberOfMountTargets(Long numberOfMountTargets) {
         this.numberOfMountTargets = numberOfMountTargets;
         return this;
@@ -104,6 +115,7 @@ public class FileSystemDescription {
     
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public FileSystemDescription withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -111,6 +123,7 @@ public class FileSystemDescription {
     
     @JsonProperty("PerformanceMode")
     public PerformanceModeEnum performanceMode;
+
     public FileSystemDescription withPerformanceMode(PerformanceModeEnum performanceMode) {
         this.performanceMode = performanceMode;
         return this;
@@ -119,6 +132,7 @@ public class FileSystemDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughputInMibps")
     public Double provisionedThroughputInMibps;
+
     public FileSystemDescription withProvisionedThroughputInMibps(Double provisionedThroughputInMibps) {
         this.provisionedThroughputInMibps = provisionedThroughputInMibps;
         return this;
@@ -126,6 +140,7 @@ public class FileSystemDescription {
     
     @JsonProperty("SizeInBytes")
     public FileSystemSize sizeInBytes;
+
     public FileSystemDescription withSizeInBytes(FileSystemSize sizeInBytes) {
         this.sizeInBytes = sizeInBytes;
         return this;
@@ -133,6 +148,7 @@ public class FileSystemDescription {
     
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public FileSystemDescription withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -141,9 +157,21 @@ public class FileSystemDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThroughputMode")
     public ThroughputModeEnum throughputMode;
+
     public FileSystemDescription withThroughputMode(ThroughputModeEnum throughputMode) {
         this.throughputMode = throughputMode;
         return this;
     }
     
+    public FileSystemDescription(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("CreationToken") String creationToken, @JsonProperty("FileSystemId") String fileSystemId, @JsonProperty("LifeCycleState") LifeCycleStateEnum lifeCycleState, @JsonProperty("NumberOfMountTargets") Long numberOfMountTargets, @JsonProperty("OwnerId") String ownerId, @JsonProperty("PerformanceMode") PerformanceModeEnum performanceMode, @JsonProperty("SizeInBytes") FileSystemSize sizeInBytes, @JsonProperty("Tags") Tag[] tags) {
+        this.creationTime = creationTime;
+        this.creationToken = creationToken;
+        this.fileSystemId = fileSystemId;
+        this.lifeCycleState = lifeCycleState;
+        this.numberOfMountTargets = numberOfMountTargets;
+        this.ownerId = ownerId;
+        this.performanceMode = performanceMode;
+        this.sizeInBytes = sizeInBytes;
+        this.tags = tags;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteCoipPoolResultCoipPoolTags {
     
     public String key;
+
     public DeleteCoipPoolResultCoipPoolTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DeleteCoipPoolResultCoipPoolTags {
     
     
     public String value;
+
     public DeleteCoipPoolResultCoipPoolTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DeleteCoipPoolResultCoipPoolTags(){}
 }

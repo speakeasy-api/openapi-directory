@@ -12,9 +12,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyVpcAttributeEnableDNSSupport {
     @SpeakeasyMetadata("queryParam:name=Value")
     public Boolean value;
+
     public GETModifyVpcAttributeEnableDNSSupport withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public GETModifyVpcAttributeEnableDNSSupport(){}
 }

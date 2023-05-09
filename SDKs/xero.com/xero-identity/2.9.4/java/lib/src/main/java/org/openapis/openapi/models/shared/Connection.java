@@ -24,6 +24,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authEventId")
     public String authEventId;
+
     public Connection withAuthEventId(String authEventId) {
         this.authEventId = authEventId;
         return this;
@@ -37,6 +38,7 @@ public class Connection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDateUtc")
     public OffsetDateTime createdDateUtc;
+
     public Connection withCreatedDateUtc(OffsetDateTime createdDateUtc) {
         this.createdDateUtc = createdDateUtc;
         return this;
@@ -48,6 +50,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Connection withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +62,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenantId")
     public String tenantId;
+
     public Connection withTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
@@ -70,6 +74,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenantName")
     public String tenantName;
+
     public Connection withTenantName(String tenantName) {
         this.tenantName = tenantName;
         return this;
@@ -81,6 +86,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenantType")
     public String tenantType;
+
     public Connection withTenantType(String tenantType) {
         this.tenantType = tenantType;
         return this;
@@ -94,9 +100,11 @@ public class Connection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedDateUtc")
     public OffsetDateTime updatedDateUtc;
+
     public Connection withUpdatedDateUtc(OffsetDateTime updatedDateUtc) {
         this.updatedDateUtc = updatedDateUtc;
         return this;
     }
     
+    public Connection(){}
 }

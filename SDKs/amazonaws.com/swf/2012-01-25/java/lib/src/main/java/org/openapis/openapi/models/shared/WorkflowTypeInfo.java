@@ -21,6 +21,7 @@ public class WorkflowTypeInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public WorkflowTypeInfo withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -31,6 +32,7 @@ public class WorkflowTypeInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deprecationDate")
     public OffsetDateTime deprecationDate;
+
     public WorkflowTypeInfo withDeprecationDate(OffsetDateTime deprecationDate) {
         this.deprecationDate = deprecationDate;
         return this;
@@ -39,6 +41,7 @@ public class WorkflowTypeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public WorkflowTypeInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class WorkflowTypeInfo {
     
     @JsonProperty("status")
     public RegistrationStatusEnum status;
+
     public WorkflowTypeInfo withStatus(RegistrationStatusEnum status) {
         this.status = status;
         return this;
@@ -53,9 +57,15 @@ public class WorkflowTypeInfo {
     
     @JsonProperty("workflowType")
     public WorkflowType workflowType;
+
     public WorkflowTypeInfo withWorkflowType(WorkflowType workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public WorkflowTypeInfo(@JsonProperty("creationDate") OffsetDateTime creationDate, @JsonProperty("status") RegistrationStatusEnum status, @JsonProperty("workflowType") WorkflowType workflowType) {
+        this.creationDate = creationDate;
+        this.status = status;
+        this.workflowType = workflowType;
+  }
 }

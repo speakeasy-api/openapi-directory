@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRotationResponse {
@@ -12,6 +13,7 @@ public class CreateRotationResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateRotationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateRotationResponse {
     
     
     public String contentType;
+
     public CreateRotationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateRotationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRotationResult createRotationResult;
+
     public CreateRotationResponse withCreateRotationResult(org.openapis.openapi.models.shared.CreateRotationResult createRotationResult) {
         this.createRotationResult = createRotationResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateRotationResponse {
      */
     
     public Object internalServerException;
+
     public CreateRotationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class CreateRotationResponse {
     
     
     public Integer statusCode;
+
     public CreateRotationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateRotationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRotationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateRotationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateRotationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class CreateRotationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateRotationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateRotationResponse {
      */
     
     public Object throttlingException;
+
     public CreateRotationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateRotationResponse {
      */
     
     public Object validationException;
+
     public CreateRotationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateRotationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

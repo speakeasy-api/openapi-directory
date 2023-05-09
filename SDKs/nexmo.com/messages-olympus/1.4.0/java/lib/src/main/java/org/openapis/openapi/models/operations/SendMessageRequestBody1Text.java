@@ -17,6 +17,7 @@ public class SendMessageRequestBody1Text {
      */
     @JsonProperty("channel")
     public SendMessageRequestBody1TextChannelEnum channel;
+
     public SendMessageRequestBody1Text withChannel(SendMessageRequestBody1TextChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -28,6 +29,7 @@ public class SendMessageRequestBody1Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public SendMessageRequestBody1Text withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -39,6 +41,7 @@ public class SendMessageRequestBody1Text {
      */
     @JsonProperty("from")
     public String from;
+
     public SendMessageRequestBody1Text withFrom(String from) {
         this.from = from;
         return this;
@@ -49,6 +52,7 @@ public class SendMessageRequestBody1Text {
      */
     @JsonProperty("message_type")
     public SendMessageRequestBody1TextMessageTypeEnum messageType;
+
     public SendMessageRequestBody1Text withMessageType(SendMessageRequestBody1TextMessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -56,6 +60,7 @@ public class SendMessageRequestBody1Text {
     
     @JsonProperty("text")
     public String text;
+
     public SendMessageRequestBody1Text withText(String text) {
         this.text = text;
         return this;
@@ -67,9 +72,17 @@ public class SendMessageRequestBody1Text {
      */
     @JsonProperty("to")
     public String to;
+
     public SendMessageRequestBody1Text withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public SendMessageRequestBody1Text(@JsonProperty("channel") SendMessageRequestBody1TextChannelEnum channel, @JsonProperty("from") String from, @JsonProperty("message_type") SendMessageRequestBody1TextMessageTypeEnum messageType, @JsonProperty("text") String text, @JsonProperty("to") String to) {
+        this.channel = channel;
+        this.from = from;
+        this.messageType = messageType;
+        this.text = text;
+        this.to = to;
+  }
 }

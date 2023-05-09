@@ -15,6 +15,7 @@ public class DescribeAccountLimitsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountLimits")
     public AccountLimit[] accountLimits;
+
     public DescribeAccountLimitsResult withAccountLimits(AccountLimit[] accountLimits) {
         this.accountLimits = accountLimits;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAccountLimitsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeAccountLimitsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAccountLimitsResult(){}
 }

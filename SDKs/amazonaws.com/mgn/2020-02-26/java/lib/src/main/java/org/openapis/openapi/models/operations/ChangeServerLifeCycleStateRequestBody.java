@@ -12,6 +12,7 @@ public class ChangeServerLifeCycleStateRequestBody {
      */
     @JsonProperty("lifeCycle")
     public ChangeServerLifeCycleStateRequestBodyLifeCycle lifeCycle;
+
     public ChangeServerLifeCycleStateRequestBody withLifeCycle(ChangeServerLifeCycleStateRequestBodyLifeCycle lifeCycle) {
         this.lifeCycle = lifeCycle;
         return this;
@@ -22,9 +23,14 @@ public class ChangeServerLifeCycleStateRequestBody {
      */
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public ChangeServerLifeCycleStateRequestBody withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
     }
     
+    public ChangeServerLifeCycleStateRequestBody(@JsonProperty("lifeCycle") ChangeServerLifeCycleStateRequestBodyLifeCycle lifeCycle, @JsonProperty("sourceServerID") String sourceServerID) {
+        this.lifeCycle = lifeCycle;
+        this.sourceServerID = sourceServerID;
+  }
 }

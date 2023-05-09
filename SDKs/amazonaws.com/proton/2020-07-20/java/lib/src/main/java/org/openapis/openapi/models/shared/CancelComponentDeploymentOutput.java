@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelComponentDeploymentOutput {
     @JsonProperty("component")
     public Component component;
+
     public CancelComponentDeploymentOutput withComponent(Component component) {
         this.component = component;
         return this;
     }
     
+    public CancelComponentDeploymentOutput(@JsonProperty("component") Component component) {
+        this.component = component;
+  }
 }

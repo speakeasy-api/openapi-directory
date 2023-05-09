@@ -12,6 +12,7 @@ public class TranslateTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public TranslationSettings settings;
+
     public TranslateTextRequest withSettings(TranslationSettings settings) {
         this.settings = settings;
         return this;
@@ -19,6 +20,7 @@ public class TranslateTextRequest {
     
     @JsonProperty("SourceLanguageCode")
     public String sourceLanguageCode;
+
     public TranslateTextRequest withSourceLanguageCode(String sourceLanguageCode) {
         this.sourceLanguageCode = sourceLanguageCode;
         return this;
@@ -26,6 +28,7 @@ public class TranslateTextRequest {
     
     @JsonProperty("TargetLanguageCode")
     public String targetLanguageCode;
+
     public TranslateTextRequest withTargetLanguageCode(String targetLanguageCode) {
         this.targetLanguageCode = targetLanguageCode;
         return this;
@@ -34,6 +37,7 @@ public class TranslateTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TerminologyNames")
     public String[] terminologyNames;
+
     public TranslateTextRequest withTerminologyNames(String[] terminologyNames) {
         this.terminologyNames = terminologyNames;
         return this;
@@ -41,9 +45,15 @@ public class TranslateTextRequest {
     
     @JsonProperty("Text")
     public String text;
+
     public TranslateTextRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public TranslateTextRequest(@JsonProperty("SourceLanguageCode") String sourceLanguageCode, @JsonProperty("TargetLanguageCode") String targetLanguageCode, @JsonProperty("Text") String text) {
+        this.sourceLanguageCode = sourceLanguageCode;
+        this.targetLanguageCode = targetLanguageCode;
+        this.text = text;
+  }
 }

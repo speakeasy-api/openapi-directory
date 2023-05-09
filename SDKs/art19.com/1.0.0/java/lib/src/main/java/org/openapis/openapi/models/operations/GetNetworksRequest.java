@@ -14,6 +14,7 @@ public class GetNetworksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ad_deal_status")
     public GetNetworksAdDealStatusEnum[] adDealStatus;
+
     public GetNetworksRequest withAdDealStatus(GetNetworksAdDealStatusEnum[] adDealStatus) {
         this.adDealStatus = adDealStatus;
         return this;
@@ -25,6 +26,7 @@ public class GetNetworksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ad_rep_account_id")
     public String adRepAccountId;
+
     public GetNetworksRequest withAdRepAccountId(String adRepAccountId) {
         this.adRepAccountId = adRepAccountId;
         return this;
@@ -38,6 +40,7 @@ public class GetNetworksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids[]")
     public String[] ids;
+
     public GetNetworksRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -50,6 +53,7 @@ public class GetNetworksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
     public Long pageNumber;
+
     public GetNetworksRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -62,6 +66,7 @@ public class GetNetworksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public GetNetworksRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -72,6 +77,7 @@ public class GetNetworksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetNetworksRequest withQ(String q) {
         this.q = q;
         return this;
@@ -84,9 +90,11 @@ public class GetNetworksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
     public GetNetworksSortEnum[] sort;
+
     public GetNetworksRequest withSort(GetNetworksSortEnum[] sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetNetworksRequest(){}
 }

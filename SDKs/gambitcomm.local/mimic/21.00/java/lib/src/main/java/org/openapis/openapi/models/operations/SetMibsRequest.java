@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetMibsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Triplet[] requestBody;
+
     public SetMibsRequest withRequestBody(org.openapis.openapi.models.shared.Triplet[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class SetMibsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SetMibsRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
     }
     
+    public SetMibsRequest(@JsonProperty("RequestBody") org.openapis.openapi.models.shared.Triplet[] requestBody, @JsonProperty("agentNum") Integer agentNum) {
+        this.requestBody = requestBody;
+        this.agentNum = agentNum;
+  }
 }

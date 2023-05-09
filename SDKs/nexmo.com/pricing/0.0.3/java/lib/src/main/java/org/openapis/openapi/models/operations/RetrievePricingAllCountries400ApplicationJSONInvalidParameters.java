@@ -12,6 +12,7 @@ public class RetrievePricingAllCountries400ApplicationJSONInvalidParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public RetrievePricingAllCountries400ApplicationJSONInvalidParameters withMessage(String message) {
         this.message = message;
         return this;
@@ -20,9 +21,11 @@ public class RetrievePricingAllCountries400ApplicationJSONInvalidParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public String parameter;
+
     public RetrievePricingAllCountries400ApplicationJSONInvalidParameters withParameter(String parameter) {
         this.parameter = parameter;
         return this;
     }
     
+    public RetrievePricingAllCountries400ApplicationJSONInvalidParameters(){}
 }

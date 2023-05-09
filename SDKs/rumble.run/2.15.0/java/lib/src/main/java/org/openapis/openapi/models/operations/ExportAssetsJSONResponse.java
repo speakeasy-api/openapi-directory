@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportAssetsJSONResponse {
@@ -12,6 +13,7 @@ public class ExportAssetsJSONResponse {
      */
     
     public org.openapis.openapi.models.shared.Asset[] assets;
+
     public ExportAssetsJSONResponse withAssets(org.openapis.openapi.models.shared.Asset[] assets) {
         this.assets = assets;
         return this;
@@ -19,6 +21,7 @@ public class ExportAssetsJSONResponse {
     
     
     public String contentType;
+
     public ExportAssetsJSONResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ExportAssetsJSONResponse {
     
     
     public Integer statusCode;
+
     public ExportAssetsJSONResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ExportAssetsJSONResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportAssetsJSONResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ExportAssetsJSONResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataAttributeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataAccessSpec")
     public GoogleCloudDataplexV1DataAccessSpec dataAccessSpec;
+
     public GoogleCloudDataplexV1DataAttributeInput withDataAccessSpec(GoogleCloudDataplexV1DataAccessSpec dataAccessSpec) {
         this.dataAccessSpec = dataAccessSpec;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1DataAttributeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1DataAttributeInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1DataAttributeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1DataAttributeInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1DataAttributeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudDataplexV1DataAttributeInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1DataAttributeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1DataAttributeInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1DataAttributeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentId")
     public String parentId;
+
     public GoogleCloudDataplexV1DataAttributeInput withParentId(String parentId) {
         this.parentId = parentId;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDataplexV1DataAttributeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceAccessSpec")
     public GoogleCloudDataplexV1ResourceAccessSpec resourceAccessSpec;
+
     public GoogleCloudDataplexV1DataAttributeInput withResourceAccessSpec(GoogleCloudDataplexV1ResourceAccessSpec resourceAccessSpec) {
         this.resourceAccessSpec = resourceAccessSpec;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataAttributeInput(){}
 }

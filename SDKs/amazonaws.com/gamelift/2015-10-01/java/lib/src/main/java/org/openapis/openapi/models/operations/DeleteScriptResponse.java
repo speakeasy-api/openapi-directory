@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteScriptResponse {
     
     public String contentType;
+
     public DeleteScriptResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteScriptResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteScriptResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteScriptResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteScriptResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteScriptResponse {
      */
     
     public Object notFoundException;
+
     public DeleteScriptResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteScriptResponse {
     
     
     public Integer statusCode;
+
     public DeleteScriptResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteScriptResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteScriptResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteScriptResponse {
      */
     
     public Object taggingFailedException;
+
     public DeleteScriptResponse withTaggingFailedException(Object taggingFailedException) {
         this.taggingFailedException = taggingFailedException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteScriptResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteScriptResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteScriptResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class SqsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public Payload payload;
+
     public SqsAction withPayload(Payload payload) {
         this.payload = payload;
         return this;
@@ -22,6 +23,7 @@ public class SqsAction {
     
     @JsonProperty("queueUrl")
     public String queueUrl;
+
     public SqsAction withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
@@ -30,9 +32,13 @@ public class SqsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useBase64")
     public Boolean useBase64;
+
     public SqsAction withUseBase64(Boolean useBase64) {
         this.useBase64 = useBase64;
         return this;
     }
     
+    public SqsAction(@JsonProperty("queueUrl") String queueUrl) {
+        this.queueUrl = queueUrl;
+  }
 }

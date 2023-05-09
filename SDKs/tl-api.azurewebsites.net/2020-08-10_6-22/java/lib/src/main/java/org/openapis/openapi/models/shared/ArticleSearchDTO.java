@@ -25,6 +25,7 @@ public class ArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeStatus")
     public Boolean activeStatus;
+
     public ArticleSearchDTO withActiveStatus(Boolean activeStatus) {
         this.activeStatus = activeStatus;
         return this;
@@ -33,6 +34,7 @@ public class ArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applyForAllGyms")
     public Boolean applyForAllGyms;
+
     public ArticleSearchDTO withApplyForAllGyms(Boolean applyForAllGyms) {
         this.applyForAllGyms = applyForAllGyms;
         return this;
@@ -41,6 +43,7 @@ public class ArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("articleId")
     public Integer articleId;
+
     public ArticleSearchDTO withArticleId(Integer articleId) {
         this.articleId = articleId;
         return this;
@@ -51,6 +54,7 @@ public class ArticleSearchDTO {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public ArticleSearchDTO withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -59,6 +63,7 @@ public class ArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdUser")
     public String createdUser;
+
     public ArticleSearchDTO withCreatedUser(String createdUser) {
         this.createdUser = createdUser;
         return this;
@@ -67,6 +72,7 @@ public class ArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ArticleSearchDTO withDescription(String description) {
         this.description = description;
         return this;
@@ -78,6 +84,7 @@ public class ArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measureUnit")
     public String measureUnit;
+
     public ArticleSearchDTO withMeasureUnit(String measureUnit) {
         this.measureUnit = measureUnit;
         return this;
@@ -88,6 +95,7 @@ public class ArticleSearchDTO {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedDate")
     public OffsetDateTime modifiedDate;
+
     public ArticleSearchDTO withModifiedDate(OffsetDateTime modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -96,6 +104,7 @@ public class ArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiedUser")
     public String modifiedUser;
+
     public ArticleSearchDTO withModifiedUser(String modifiedUser) {
         this.modifiedUser = modifiedUser;
         return this;
@@ -104,6 +113,7 @@ public class ArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ArticleSearchDTO withName(String name) {
         this.name = name;
         return this;
@@ -112,6 +122,7 @@ public class ArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Integer number;
+
     public ArticleSearchDTO withNumber(Integer number) {
         this.number = number;
         return this;
@@ -120,6 +131,7 @@ public class ArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Double price;
+
     public ArticleSearchDTO withPrice(Double price) {
         this.price = price;
         return this;
@@ -131,6 +143,7 @@ public class ArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellingPrice")
     public Double sellingPrice;
+
     public ArticleSearchDTO withSellingPrice(Double sellingPrice) {
         this.sellingPrice = sellingPrice;
         return this;
@@ -139,6 +152,7 @@ public class ArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String tags;
+
     public ArticleSearchDTO withTags(String tags) {
         this.tags = tags;
         return this;
@@ -150,6 +164,7 @@ public class ArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public ArticleSearchDTO withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -161,9 +176,11 @@ public class ArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ArticleSearchDTO withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ArticleSearchDTO(){}
 }

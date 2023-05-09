@@ -16,6 +16,7 @@ public class ProjectRequestCurrentStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public UserCompactInput author;
+
     public ProjectRequestCurrentStatusInput withAuthor(UserCompactInput author) {
         this.author = author;
         return this;
@@ -26,6 +27,7 @@ public class ProjectRequestCurrentStatusInput {
      */
     @JsonProperty("color")
     public ProjectRequestCurrentStatusColorEnum color;
+
     public ProjectRequestCurrentStatusInput withColor(ProjectRequestCurrentStatusColorEnum color) {
         this.color = color;
         return this;
@@ -34,6 +36,7 @@ public class ProjectRequestCurrentStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public UserCompactInput createdBy;
+
     public ProjectRequestCurrentStatusInput withCreatedBy(UserCompactInput createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -45,6 +48,7 @@ public class ProjectRequestCurrentStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_text")
     public String htmlText;
+
     public ProjectRequestCurrentStatusInput withHtmlText(String htmlText) {
         this.htmlText = htmlText;
         return this;
@@ -55,6 +59,7 @@ public class ProjectRequestCurrentStatusInput {
      */
     @JsonProperty("text")
     public String text;
+
     public ProjectRequestCurrentStatusInput withText(String text) {
         this.text = text;
         return this;
@@ -66,9 +71,14 @@ public class ProjectRequestCurrentStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ProjectRequestCurrentStatusInput withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ProjectRequestCurrentStatusInput(@JsonProperty("color") ProjectRequestCurrentStatusColorEnum color, @JsonProperty("text") String text) {
+        this.color = color;
+        this.text = text;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeProvisionedProductOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchDashboards")
     public CloudWatchDashboard[] cloudWatchDashboards;
+
     public DescribeProvisionedProductOutput withCloudWatchDashboards(CloudWatchDashboard[] cloudWatchDashboards) {
         this.cloudWatchDashboards = cloudWatchDashboards;
         return this;
@@ -23,9 +24,11 @@ public class DescribeProvisionedProductOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProductDetail")
     public ProvisionedProductDetail provisionedProductDetail;
+
     public DescribeProvisionedProductOutput withProvisionedProductDetail(ProvisionedProductDetail provisionedProductDetail) {
         this.provisionedProductDetail = provisionedProductDetail;
         return this;
     }
     
+    public DescribeProvisionedProductOutput(){}
 }

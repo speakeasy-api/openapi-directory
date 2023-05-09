@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEUAByIdV2Response {
     
     public String contentType;
+
     public DeleteEUAByIdV2Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteEUAByIdV2Response {
     
     
     public Integer statusCode;
+
     public DeleteEUAByIdV2Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteEUAByIdV2Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEUAByIdV2Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeleteEUAByIdV2Response {
      */
     
     public java.util.Map<String, Object> deleteEUAByIdV2400ApplicationJSONObject;
+
     public DeleteEUAByIdV2Response withDeleteEUAByIdV2400ApplicationJSONObject(java.util.Map<String, Object> deleteEUAByIdV2400ApplicationJSONObject) {
         this.deleteEUAByIdV2400ApplicationJSONObject = deleteEUAByIdV2400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class DeleteEUAByIdV2Response {
      */
     
     public java.util.Map<String, Object> deleteEUAByIdV2401ApplicationJSONObject;
+
     public DeleteEUAByIdV2Response withDeleteEUAByIdV2401ApplicationJSONObject(java.util.Map<String, Object> deleteEUAByIdV2401ApplicationJSONObject) {
         this.deleteEUAByIdV2401ApplicationJSONObject = deleteEUAByIdV2401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class DeleteEUAByIdV2Response {
      */
     
     public java.util.Map<String, Object> deleteEUAByIdV2403ApplicationJSONObject;
+
     public DeleteEUAByIdV2Response withDeleteEUAByIdV2403ApplicationJSONObject(java.util.Map<String, Object> deleteEUAByIdV2403ApplicationJSONObject) {
         this.deleteEUAByIdV2403ApplicationJSONObject = deleteEUAByIdV2403ApplicationJSONObject;
         return this;
@@ -63,9 +70,25 @@ public class DeleteEUAByIdV2Response {
      */
     
     public java.util.Map<String, Object> deleteEUAByIdV2404ApplicationJSONObject;
+
     public DeleteEUAByIdV2Response withDeleteEUAByIdV2404ApplicationJSONObject(java.util.Map<String, Object> deleteEUAByIdV2404ApplicationJSONObject) {
         this.deleteEUAByIdV2404ApplicationJSONObject = deleteEUAByIdV2404ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Nordigen rate limit exceeded
+     */
+    
+    public java.util.Map<String, Object> deleteEUAByIdV2429ApplicationJSONObject;
+
+    public DeleteEUAByIdV2Response withDeleteEUAByIdV2429ApplicationJSONObject(java.util.Map<String, Object> deleteEUAByIdV2429ApplicationJSONObject) {
+        this.deleteEUAByIdV2429ApplicationJSONObject = deleteEUAByIdV2429ApplicationJSONObject;
+        return this;
+    }
+    
+    public DeleteEUAByIdV2Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

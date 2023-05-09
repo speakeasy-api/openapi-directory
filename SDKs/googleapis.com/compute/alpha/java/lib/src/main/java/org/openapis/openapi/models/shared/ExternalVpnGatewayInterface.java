@@ -18,6 +18,7 @@ public class ExternalVpnGatewayInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ExternalVpnGatewayInterface withId(Long id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class ExternalVpnGatewayInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public ExternalVpnGatewayInterface withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -40,9 +42,11 @@ public class ExternalVpnGatewayInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6Address")
     public String ipv6Address;
+
     public ExternalVpnGatewayInterface withIpv6Address(String ipv6Address) {
         this.ipv6Address = ipv6Address;
         return this;
     }
     
+    public ExternalVpnGatewayInterface(){}
 }

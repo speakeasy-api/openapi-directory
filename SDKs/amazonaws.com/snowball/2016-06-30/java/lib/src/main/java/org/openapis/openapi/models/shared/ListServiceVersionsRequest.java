@@ -12,6 +12,7 @@ public class ListServiceVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DependentServices")
     public DependentService[] dependentServices;
+
     public ListServiceVersionsRequest withDependentServices(DependentService[] dependentServices) {
         this.dependentServices = dependentServices;
         return this;
@@ -20,6 +21,7 @@ public class ListServiceVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListServiceVersionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListServiceVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListServiceVersionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class ListServiceVersionsRequest {
     
     @JsonProperty("ServiceName")
     public ServiceNameEnum serviceName;
+
     public ListServiceVersionsRequest withServiceName(ServiceNameEnum serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public ListServiceVersionsRequest(@JsonProperty("ServiceName") ServiceNameEnum serviceName) {
+        this.serviceName = serviceName;
+  }
 }

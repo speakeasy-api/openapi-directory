@@ -15,6 +15,7 @@ public class ProjectDuplicateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include")
     public ProjectDuplicateRequestIncludeEnum include;
+
     public ProjectDuplicateRequest withInclude(ProjectDuplicateRequestIncludeEnum include) {
         this.include = include;
         return this;
@@ -25,6 +26,7 @@ public class ProjectDuplicateRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public ProjectDuplicateRequest withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +38,7 @@ public class ProjectDuplicateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule_dates")
     public ProjectDuplicateRequestScheduleDates scheduleDates;
+
     public ProjectDuplicateRequest withScheduleDates(ProjectDuplicateRequestScheduleDates scheduleDates) {
         this.scheduleDates = scheduleDates;
         return this;
@@ -47,9 +50,13 @@ public class ProjectDuplicateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public ProjectDuplicateRequest withTeam(String team) {
         this.team = team;
         return this;
     }
     
+    public ProjectDuplicateRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

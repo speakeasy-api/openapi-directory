@@ -21,6 +21,7 @@ public class MarketingEventPublicDefaultResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public MarketingEventPublicDefaultResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -34,6 +35,7 @@ public class MarketingEventPublicDefaultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customProperties")
     public PropertyValue[] customProperties;
+
     public MarketingEventPublicDefaultResponse withCustomProperties(PropertyValue[] customProperties) {
         this.customProperties = customProperties;
         return this;
@@ -47,6 +49,7 @@ public class MarketingEventPublicDefaultResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDateTime")
     public OffsetDateTime endDateTime;
+
     public MarketingEventPublicDefaultResponse withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -58,6 +61,7 @@ public class MarketingEventPublicDefaultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventCancelled")
     public Boolean eventCancelled;
+
     public MarketingEventPublicDefaultResponse withEventCancelled(Boolean eventCancelled) {
         this.eventCancelled = eventCancelled;
         return this;
@@ -69,6 +73,7 @@ public class MarketingEventPublicDefaultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventDescription")
     public String eventDescription;
+
     public MarketingEventPublicDefaultResponse withEventDescription(String eventDescription) {
         this.eventDescription = eventDescription;
         return this;
@@ -79,6 +84,7 @@ public class MarketingEventPublicDefaultResponse {
      */
     @JsonProperty("eventName")
     public String eventName;
+
     public MarketingEventPublicDefaultResponse withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -89,6 +95,7 @@ public class MarketingEventPublicDefaultResponse {
      */
     @JsonProperty("eventOrganizer")
     public String eventOrganizer;
+
     public MarketingEventPublicDefaultResponse withEventOrganizer(String eventOrganizer) {
         this.eventOrganizer = eventOrganizer;
         return this;
@@ -100,6 +107,7 @@ public class MarketingEventPublicDefaultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public String eventType;
+
     public MarketingEventPublicDefaultResponse withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -111,6 +119,7 @@ public class MarketingEventPublicDefaultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventUrl")
     public String eventUrl;
+
     public MarketingEventPublicDefaultResponse withEventUrl(String eventUrl) {
         this.eventUrl = eventUrl;
         return this;
@@ -118,6 +127,7 @@ public class MarketingEventPublicDefaultResponse {
     
     @JsonProperty("id")
     public String id;
+
     public MarketingEventPublicDefaultResponse withId(String id) {
         this.id = id;
         return this;
@@ -131,6 +141,7 @@ public class MarketingEventPublicDefaultResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDateTime")
     public OffsetDateTime startDateTime;
+
     public MarketingEventPublicDefaultResponse withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -140,9 +151,17 @@ public class MarketingEventPublicDefaultResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public MarketingEventPublicDefaultResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public MarketingEventPublicDefaultResponse(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("eventName") String eventName, @JsonProperty("eventOrganizer") String eventOrganizer, @JsonProperty("id") String id, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.createdAt = createdAt;
+        this.eventName = eventName;
+        this.eventOrganizer = eventOrganizer;
+        this.id = id;
+        this.updatedAt = updatedAt;
+  }
 }

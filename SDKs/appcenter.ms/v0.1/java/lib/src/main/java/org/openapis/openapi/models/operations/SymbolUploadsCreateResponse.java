@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SymbolUploadsCreateResponse {
     
     public String contentType;
+
     public SymbolUploadsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SymbolUploadsCreateResponse {
     
     
     public Integer statusCode;
+
     public SymbolUploadsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SymbolUploadsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SymbolUploadsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SymbolUploadsCreateResponse {
      */
     
     public SymbolUploadsCreate200ApplicationJSON symbolUploadsCreate200ApplicationJSONObject;
+
     public SymbolUploadsCreateResponse withSymbolUploadsCreate200ApplicationJSONObject(SymbolUploadsCreate200ApplicationJSON symbolUploadsCreate200ApplicationJSONObject) {
         this.symbolUploadsCreate200ApplicationJSONObject = symbolUploadsCreate200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SymbolUploadsCreateResponse {
      */
     
     public SymbolUploadsCreate400ApplicationJSON symbolUploadsCreate400ApplicationJSONObject;
+
     public SymbolUploadsCreateResponse withSymbolUploadsCreate400ApplicationJSONObject(SymbolUploadsCreate400ApplicationJSON symbolUploadsCreate400ApplicationJSONObject) {
         this.symbolUploadsCreate400ApplicationJSONObject = symbolUploadsCreate400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SymbolUploadsCreateResponse {
      */
     
     public SymbolUploadsCreate403ApplicationJSON symbolUploadsCreate403ApplicationJSONObject;
+
     public SymbolUploadsCreateResponse withSymbolUploadsCreate403ApplicationJSONObject(SymbolUploadsCreate403ApplicationJSON symbolUploadsCreate403ApplicationJSONObject) {
         this.symbolUploadsCreate403ApplicationJSONObject = symbolUploadsCreate403ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class SymbolUploadsCreateResponse {
      */
     
     public SymbolUploadsCreate500ApplicationJSON symbolUploadsCreate500ApplicationJSONObject;
+
     public SymbolUploadsCreateResponse withSymbolUploadsCreate500ApplicationJSONObject(SymbolUploadsCreate500ApplicationJSON symbolUploadsCreate500ApplicationJSONObject) {
         this.symbolUploadsCreate500ApplicationJSONObject = symbolUploadsCreate500ApplicationJSONObject;
         return this;
     }
     
+    public SymbolUploadsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

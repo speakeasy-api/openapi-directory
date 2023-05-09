@@ -18,6 +18,7 @@ public class SasPortalTestPermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public String[] permissions;
+
     public SasPortalTestPermissionsRequest withPermissions(String[] permissions) {
         this.permissions = permissions;
         return this;
@@ -29,9 +30,11 @@ public class SasPortalTestPermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public SasPortalTestPermissionsRequest withResource(String resource) {
         this.resource = resource;
         return this;
     }
     
+    public SasPortalTestPermissionsRequest(){}
 }

@@ -18,6 +18,7 @@ public class PickTimeSeriesFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public PickTimeSeriesFilterDirectionEnum direction;
+
     public PickTimeSeriesFilter withDirection(PickTimeSeriesFilterDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -29,6 +30,7 @@ public class PickTimeSeriesFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numTimeSeries")
     public Integer numTimeSeries;
+
     public PickTimeSeriesFilter withNumTimeSeries(Integer numTimeSeries) {
         this.numTimeSeries = numTimeSeries;
         return this;
@@ -40,9 +42,11 @@ public class PickTimeSeriesFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rankingMethod")
     public PickTimeSeriesFilterRankingMethodEnum rankingMethod;
+
     public PickTimeSeriesFilter withRankingMethod(PickTimeSeriesFilterRankingMethodEnum rankingMethod) {
         this.rankingMethod = rankingMethod;
         return this;
     }
     
+    public PickTimeSeriesFilter(){}
 }

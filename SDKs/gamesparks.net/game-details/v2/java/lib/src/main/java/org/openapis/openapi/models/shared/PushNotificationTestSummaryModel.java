@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class PushNotificationTestSummaryModel {
     
     public Boolean error;
+
     public PushNotificationTestSummaryModel withError(Boolean error) {
         this.error = error;
         return this;
@@ -16,6 +17,7 @@ public class PushNotificationTestSummaryModel {
     
     
     public java.util.Map<String, String> outgoingMessageParts;
+
     public PushNotificationTestSummaryModel withOutgoingMessageParts(java.util.Map<String, String> outgoingMessageParts) {
         this.outgoingMessageParts = outgoingMessageParts;
         return this;
@@ -23,6 +25,7 @@ public class PushNotificationTestSummaryModel {
     
     
     public java.util.Map<String, String> resultParts;
+
     public PushNotificationTestSummaryModel withResultParts(java.util.Map<String, String> resultParts) {
         this.resultParts = resultParts;
         return this;
@@ -30,9 +33,11 @@ public class PushNotificationTestSummaryModel {
     
     
     public String title;
+
     public PushNotificationTestSummaryModel withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PushNotificationTestSummaryModel(){}
 }

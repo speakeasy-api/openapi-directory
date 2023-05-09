@@ -56,7 +56,7 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddExpiryListingsJsonResponse res = new org.openapis.openapi.models.operations.AddExpiryListingsJsonResponse() {{
+        org.openapis.openapi.models.operations.AddExpiryListingsJsonResponse res = new org.openapis.openapi.models.operations.AddExpiryListingsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -73,8 +73,6 @@ public class V1 {
             body = null;
             errorLimit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,7 +173,7 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddExpiryListingsRawResponse res = new org.openapis.openapi.models.operations.AddExpiryListingsRawResponse() {{
+        org.openapis.openapi.models.operations.AddExpiryListingsRawResponse res = new org.openapis.openapi.models.operations.AddExpiryListingsRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -192,8 +190,6 @@ public class V1 {
             body = null;
             errorLimit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,7 +291,7 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteListingsResponse res = new org.openapis.openapi.models.operations.DeleteListingsResponse() {{
+        org.openapis.openapi.models.operations.DeleteListingsResponse res = new org.openapis.openapi.models.operations.DeleteListingsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -312,8 +308,6 @@ public class V1 {
             body = null;
             errorLimit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

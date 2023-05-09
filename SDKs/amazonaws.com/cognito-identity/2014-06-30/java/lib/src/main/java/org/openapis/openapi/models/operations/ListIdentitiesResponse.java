@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListIdentitiesResponse {
     
     public String contentType;
+
     public ListIdentitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListIdentitiesResponse {
      */
     
     public Object internalErrorException;
+
     public ListIdentitiesResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListIdentitiesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListIdentitiesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListIdentitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListIdentitiesResponse listIdentitiesResponse;
+
     public ListIdentitiesResponse withListIdentitiesResponse(org.openapis.openapi.models.shared.ListIdentitiesResponse listIdentitiesResponse) {
         this.listIdentitiesResponse = listIdentitiesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListIdentitiesResponse {
      */
     
     public Object notAuthorizedException;
+
     public ListIdentitiesResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class ListIdentitiesResponse {
     
     
     public Integer statusCode;
+
     public ListIdentitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListIdentitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListIdentitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListIdentitiesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListIdentitiesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class ListIdentitiesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListIdentitiesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListIdentitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

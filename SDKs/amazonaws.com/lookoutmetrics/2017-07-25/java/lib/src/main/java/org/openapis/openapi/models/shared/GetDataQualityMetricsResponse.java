@@ -15,9 +15,11 @@ public class GetDataQualityMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorDataQualityMetricList")
     public AnomalyDetectorDataQualityMetric[] anomalyDetectorDataQualityMetricList;
+
     public GetDataQualityMetricsResponse withAnomalyDetectorDataQualityMetricList(AnomalyDetectorDataQualityMetric[] anomalyDetectorDataQualityMetricList) {
         this.anomalyDetectorDataQualityMetricList = anomalyDetectorDataQualityMetricList;
         return this;
     }
     
+    public GetDataQualityMetricsResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindFormByFormNameRequest {
@@ -12,9 +13,13 @@ public class FindFormByFormNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=form_name")
     public String formName;
+
     public FindFormByFormNameRequest withFormName(String formName) {
         this.formName = formName;
         return this;
     }
     
+    public FindFormByFormNameRequest(@JsonProperty("form_name") String formName) {
+        this.formName = formName;
+  }
 }

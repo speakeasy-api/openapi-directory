@@ -18,6 +18,7 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsClickCount")
     public String adsClickCount;
+
     public PropertyPerformanceResult withAdsClickCount(String adsClickCount) {
         this.adsClickCount = adsClickCount;
         return this;
@@ -29,6 +30,7 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsClickthroughRate")
     public Double adsClickthroughRate;
+
     public PropertyPerformanceResult withAdsClickthroughRate(Double adsClickthroughRate) {
         this.adsClickthroughRate = adsClickthroughRate;
         return this;
@@ -40,6 +42,7 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsImpressionCount")
     public String adsImpressionCount;
+
     public PropertyPerformanceResult withAdsImpressionCount(String adsImpressionCount) {
         this.adsImpressionCount = adsImpressionCount;
         return this;
@@ -51,6 +54,7 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advanceBookingWindow")
     public PropertyPerformanceResultAdvanceBookingWindowEnum advanceBookingWindow;
+
     public PropertyPerformanceResult withAdvanceBookingWindow(PropertyPerformanceResultAdvanceBookingWindowEnum advanceBookingWindow) {
         this.advanceBookingWindow = advanceBookingWindow;
         return this;
@@ -62,6 +66,7 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public PropertyPerformanceResult withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -73,6 +78,7 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickCount")
     public String clickCount;
+
     public PropertyPerformanceResult withClickCount(String clickCount) {
         this.clickCount = clickCount;
         return this;
@@ -84,6 +90,7 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickthroughRate")
     public Double clickthroughRate;
+
     public PropertyPerformanceResult withClickthroughRate(Double clickthroughRate) {
         this.clickthroughRate = clickthroughRate;
         return this;
@@ -95,6 +102,7 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public PropertyPerformanceResult withDate(Date date) {
         this.date = date;
         return this;
@@ -106,6 +114,7 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceType")
     public PropertyPerformanceResultDeviceTypeEnum deviceType;
+
     public PropertyPerformanceResult withDeviceType(PropertyPerformanceResultDeviceTypeEnum deviceType) {
         this.deviceType = deviceType;
         return this;
@@ -117,6 +126,7 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highIntentUsers")
     public Boolean highIntentUsers;
+
     public PropertyPerformanceResult withHighIntentUsers(Boolean highIntentUsers) {
         this.highIntentUsers = highIntentUsers;
         return this;
@@ -128,6 +138,7 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impressionCount")
     public String impressionCount;
+
     public PropertyPerformanceResult withImpressionCount(String impressionCount) {
         this.impressionCount = impressionCount;
         return this;
@@ -139,6 +150,7 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lengthOfStay")
     public PropertyPerformanceResultLengthOfStayEnum lengthOfStay;
+
     public PropertyPerformanceResult withLengthOfStay(PropertyPerformanceResultLengthOfStayEnum lengthOfStay) {
         this.lengthOfStay = lengthOfStay;
         return this;
@@ -150,6 +162,7 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occupancy")
     public PropertyPerformanceResultOccupancyEnum occupancy;
+
     public PropertyPerformanceResult withOccupancy(PropertyPerformanceResultOccupancyEnum occupancy) {
         this.occupancy = occupancy;
         return this;
@@ -161,6 +174,7 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerPropertyDisplayName")
     public String partnerPropertyDisplayName;
+
     public PropertyPerformanceResult withPartnerPropertyDisplayName(String partnerPropertyDisplayName) {
         this.partnerPropertyDisplayName = partnerPropertyDisplayName;
         return this;
@@ -172,6 +186,7 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerPropertyId")
     public String partnerPropertyId;
+
     public PropertyPerformanceResult withPartnerPropertyId(String partnerPropertyId) {
         this.partnerPropertyId = partnerPropertyId;
         return this;
@@ -183,6 +198,7 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyRegionCode")
     public String propertyRegionCode;
+
     public PropertyPerformanceResult withPropertyRegionCode(String propertyRegionCode) {
         this.propertyRegionCode = propertyRegionCode;
         return this;
@@ -194,9 +210,23 @@ public class PropertyPerformanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userRegionCode")
     public String userRegionCode;
+
     public PropertyPerformanceResult withUserRegionCode(String userRegionCode) {
         this.userRegionCode = userRegionCode;
         return this;
     }
     
+    /**
+     * The total number of clicks on the "Website" button on Google for vacation rentals.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("vrWebsiteButtonClicks")
+    public String vrWebsiteButtonClicks;
+
+    public PropertyPerformanceResult withVrWebsiteButtonClicks(String vrWebsiteButtonClicks) {
+        this.vrWebsiteButtonClicks = vrWebsiteButtonClicks;
+        return this;
+    }
+    
+    public PropertyPerformanceResult(){}
 }

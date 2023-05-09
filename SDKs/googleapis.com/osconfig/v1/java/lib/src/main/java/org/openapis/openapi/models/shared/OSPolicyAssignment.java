@@ -18,6 +18,7 @@ public class OSPolicyAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseline")
     public Boolean baseline;
+
     public OSPolicyAssignment withBaseline(Boolean baseline) {
         this.baseline = baseline;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public OSPolicyAssignment withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -40,6 +42,7 @@ public class OSPolicyAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OSPolicyAssignment withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class OSPolicyAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public OSPolicyAssignment withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -62,6 +66,7 @@ public class OSPolicyAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceFilter")
     public OSPolicyAssignmentInstanceFilter instanceFilter;
+
     public OSPolicyAssignment withInstanceFilter(OSPolicyAssignmentInstanceFilter instanceFilter) {
         this.instanceFilter = instanceFilter;
         return this;
@@ -73,6 +78,7 @@ public class OSPolicyAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OSPolicyAssignment withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class OSPolicyAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osPolicies")
     public OSPolicy[] osPolicies;
+
     public OSPolicyAssignment withOsPolicies(OSPolicy[] osPolicies) {
         this.osPolicies = osPolicies;
         return this;
@@ -95,6 +102,7 @@ public class OSPolicyAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reconciling")
     public Boolean reconciling;
+
     public OSPolicyAssignment withReconciling(Boolean reconciling) {
         this.reconciling = reconciling;
         return this;
@@ -106,6 +114,7 @@ public class OSPolicyAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionCreateTime")
     public String revisionCreateTime;
+
     public OSPolicyAssignment withRevisionCreateTime(String revisionCreateTime) {
         this.revisionCreateTime = revisionCreateTime;
         return this;
@@ -117,6 +126,7 @@ public class OSPolicyAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public OSPolicyAssignment withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -128,6 +138,7 @@ public class OSPolicyAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollout")
     public OSPolicyAssignmentRollout rollout;
+
     public OSPolicyAssignment withRollout(OSPolicyAssignmentRollout rollout) {
         this.rollout = rollout;
         return this;
@@ -139,6 +150,7 @@ public class OSPolicyAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolloutState")
     public OSPolicyAssignmentRolloutStateEnum rolloutState;
+
     public OSPolicyAssignment withRolloutState(OSPolicyAssignmentRolloutStateEnum rolloutState) {
         this.rolloutState = rolloutState;
         return this;
@@ -150,9 +162,11 @@ public class OSPolicyAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OSPolicyAssignment withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public OSPolicyAssignment(){}
 }

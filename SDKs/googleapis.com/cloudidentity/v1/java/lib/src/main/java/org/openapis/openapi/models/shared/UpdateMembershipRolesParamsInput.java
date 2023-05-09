@@ -18,6 +18,7 @@ public class UpdateMembershipRolesParamsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldMask")
     public String fieldMask;
+
     public UpdateMembershipRolesParamsInput withFieldMask(String fieldMask) {
         this.fieldMask = fieldMask;
         return this;
@@ -29,9 +30,11 @@ public class UpdateMembershipRolesParamsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipRole")
     public MembershipRoleInput membershipRole;
+
     public UpdateMembershipRolesParamsInput withMembershipRole(MembershipRoleInput membershipRole) {
         this.membershipRole = membershipRole;
         return this;
     }
     
+    public UpdateMembershipRolesParamsInput(){}
 }

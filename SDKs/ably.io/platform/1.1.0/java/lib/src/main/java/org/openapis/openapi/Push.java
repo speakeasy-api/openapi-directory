@@ -67,13 +67,11 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePushDeviceDetailsResponse res = new org.openapis.openapi.models.operations.DeletePushDeviceDetailsResponse() {{
+        org.openapis.openapi.models.operations.DeletePushDeviceDetailsResponse res = new org.openapis.openapi.models.operations.DeletePushDeviceDetailsResponse(contentType, httpRes.statusCode()) {{
             error = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -133,7 +131,7 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelsWithPushSubscribersResponse res = new org.openapis.openapi.models.operations.GetChannelsWithPushSubscribersResponse() {{
+        org.openapis.openapi.models.operations.GetChannelsWithPushSubscribersResponse res = new org.openapis.openapi.models.operations.GetChannelsWithPushSubscribersResponse(contentType, httpRes.statusCode()) {{
             getChannelsWithPushSubscribers2XXApplicationJSONStrings = null;
             body = null;
             body = null;
@@ -141,8 +139,6 @@ public class Push {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -215,7 +211,7 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPushDeviceDetailsResponse res = new org.openapis.openapi.models.operations.GetPushDeviceDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetPushDeviceDetailsResponse res = new org.openapis.openapi.models.operations.GetPushDeviceDetailsResponse(contentType, httpRes.statusCode()) {{
             deviceDetails = null;
             body = null;
             body = null;
@@ -223,8 +219,6 @@ public class Push {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -297,14 +291,12 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPushSubscriptionsOnChannelsResponse res = new org.openapis.openapi.models.operations.GetPushSubscriptionsOnChannelsResponse() {{
+        org.openapis.openapi.models.operations.GetPushSubscriptionsOnChannelsResponse res = new org.openapis.openapi.models.operations.GetPushSubscriptionsOnChannelsResponse(contentType, httpRes.statusCode()) {{
             deviceDetails = null;
             error = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -369,7 +361,7 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRegisteredPushDevicesResponse res = new org.openapis.openapi.models.operations.GetRegisteredPushDevicesResponse() {{
+        org.openapis.openapi.models.operations.GetRegisteredPushDevicesResponse res = new org.openapis.openapi.models.operations.GetRegisteredPushDevicesResponse(contentType, httpRes.statusCode()) {{
             deviceDetails = null;
             body = null;
             body = null;
@@ -377,8 +369,6 @@ public class Push {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -453,7 +443,7 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchPushDeviceDetailsFormResponse res = new org.openapis.openapi.models.operations.PatchPushDeviceDetailsFormResponse() {{
+        org.openapis.openapi.models.operations.PatchPushDeviceDetailsFormResponse res = new org.openapis.openapi.models.operations.PatchPushDeviceDetailsFormResponse(contentType, httpRes.statusCode()) {{
             deviceDetails = null;
             body = null;
             body = null;
@@ -461,8 +451,6 @@ public class Push {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -537,7 +525,7 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchPushDeviceDetailsJsonResponse res = new org.openapis.openapi.models.operations.PatchPushDeviceDetailsJsonResponse() {{
+        org.openapis.openapi.models.operations.PatchPushDeviceDetailsJsonResponse res = new org.openapis.openapi.models.operations.PatchPushDeviceDetailsJsonResponse(contentType, httpRes.statusCode()) {{
             deviceDetails = null;
             body = null;
             body = null;
@@ -545,8 +533,6 @@ public class Push {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -621,7 +607,7 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchPushDeviceDetailsRawResponse res = new org.openapis.openapi.models.operations.PatchPushDeviceDetailsRawResponse() {{
+        org.openapis.openapi.models.operations.PatchPushDeviceDetailsRawResponse res = new org.openapis.openapi.models.operations.PatchPushDeviceDetailsRawResponse(contentType, httpRes.statusCode()) {{
             deviceDetails = null;
             body = null;
             body = null;
@@ -629,8 +615,6 @@ public class Push {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -705,13 +689,11 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PublishPushNotificationToDevicesFormResponse res = new org.openapis.openapi.models.operations.PublishPushNotificationToDevicesFormResponse() {{
+        org.openapis.openapi.models.operations.PublishPushNotificationToDevicesFormResponse res = new org.openapis.openapi.models.operations.PublishPushNotificationToDevicesFormResponse(contentType, httpRes.statusCode()) {{
             error = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -773,13 +755,11 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PublishPushNotificationToDevicesJsonResponse res = new org.openapis.openapi.models.operations.PublishPushNotificationToDevicesJsonResponse() {{
+        org.openapis.openapi.models.operations.PublishPushNotificationToDevicesJsonResponse res = new org.openapis.openapi.models.operations.PublishPushNotificationToDevicesJsonResponse(contentType, httpRes.statusCode()) {{
             error = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -841,13 +821,11 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PublishPushNotificationToDevicesRawResponse res = new org.openapis.openapi.models.operations.PublishPushNotificationToDevicesRawResponse() {{
+        org.openapis.openapi.models.operations.PublishPushNotificationToDevicesRawResponse res = new org.openapis.openapi.models.operations.PublishPushNotificationToDevicesRawResponse(contentType, httpRes.statusCode()) {{
             error = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -909,7 +887,7 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutPushDeviceDetailsFormResponse res = new org.openapis.openapi.models.operations.PutPushDeviceDetailsFormResponse() {{
+        org.openapis.openapi.models.operations.PutPushDeviceDetailsFormResponse res = new org.openapis.openapi.models.operations.PutPushDeviceDetailsFormResponse(contentType, httpRes.statusCode()) {{
             deviceDetails = null;
             body = null;
             body = null;
@@ -917,8 +895,6 @@ public class Push {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -993,7 +969,7 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutPushDeviceDetailsJsonResponse res = new org.openapis.openapi.models.operations.PutPushDeviceDetailsJsonResponse() {{
+        org.openapis.openapi.models.operations.PutPushDeviceDetailsJsonResponse res = new org.openapis.openapi.models.operations.PutPushDeviceDetailsJsonResponse(contentType, httpRes.statusCode()) {{
             deviceDetails = null;
             body = null;
             body = null;
@@ -1001,8 +977,6 @@ public class Push {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -1077,7 +1051,7 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutPushDeviceDetailsRawResponse res = new org.openapis.openapi.models.operations.PutPushDeviceDetailsRawResponse() {{
+        org.openapis.openapi.models.operations.PutPushDeviceDetailsRawResponse res = new org.openapis.openapi.models.operations.PutPushDeviceDetailsRawResponse(contentType, httpRes.statusCode()) {{
             deviceDetails = null;
             body = null;
             body = null;
@@ -1085,8 +1059,6 @@ public class Push {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -1161,7 +1133,7 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterPushDeviceJsonResponse res = new org.openapis.openapi.models.operations.RegisterPushDeviceJsonResponse() {{
+        org.openapis.openapi.models.operations.RegisterPushDeviceJsonResponse res = new org.openapis.openapi.models.operations.RegisterPushDeviceJsonResponse(contentType, httpRes.statusCode()) {{
             deviceDetails = null;
             body = null;
             body = null;
@@ -1169,8 +1141,6 @@ public class Push {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -1245,7 +1215,7 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterPushDeviceRawResponse res = new org.openapis.openapi.models.operations.RegisterPushDeviceRawResponse() {{
+        org.openapis.openapi.models.operations.RegisterPushDeviceRawResponse res = new org.openapis.openapi.models.operations.RegisterPushDeviceRawResponse(contentType, httpRes.statusCode()) {{
             deviceDetails = null;
             body = null;
             body = null;
@@ -1253,8 +1223,6 @@ public class Push {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -1329,13 +1297,11 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubscribePushDeviceToChannelFormResponse res = new org.openapis.openapi.models.operations.SubscribePushDeviceToChannelFormResponse() {{
+        org.openapis.openapi.models.operations.SubscribePushDeviceToChannelFormResponse res = new org.openapis.openapi.models.operations.SubscribePushDeviceToChannelFormResponse(contentType, httpRes.statusCode()) {{
             error = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -1397,13 +1363,11 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubscribePushDeviceToChannelJsonResponse res = new org.openapis.openapi.models.operations.SubscribePushDeviceToChannelJsonResponse() {{
+        org.openapis.openapi.models.operations.SubscribePushDeviceToChannelJsonResponse res = new org.openapis.openapi.models.operations.SubscribePushDeviceToChannelJsonResponse(contentType, httpRes.statusCode()) {{
             error = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -1465,13 +1429,11 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubscribePushDeviceToChannelRawResponse res = new org.openapis.openapi.models.operations.SubscribePushDeviceToChannelRawResponse() {{
+        org.openapis.openapi.models.operations.SubscribePushDeviceToChannelRawResponse res = new org.openapis.openapi.models.operations.SubscribePushDeviceToChannelRawResponse(contentType, httpRes.statusCode()) {{
             error = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -1531,13 +1493,11 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnregisterAllPushDevicesResponse res = new org.openapis.openapi.models.operations.UnregisterAllPushDevicesResponse() {{
+        org.openapis.openapi.models.operations.UnregisterAllPushDevicesResponse res = new org.openapis.openapi.models.operations.UnregisterAllPushDevicesResponse(contentType, httpRes.statusCode()) {{
             error = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -1597,13 +1557,11 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnregisterPushDeviceResponse res = new org.openapis.openapi.models.operations.UnregisterPushDeviceResponse() {{
+        org.openapis.openapi.models.operations.UnregisterPushDeviceResponse res = new org.openapis.openapi.models.operations.UnregisterPushDeviceResponse(contentType, httpRes.statusCode()) {{
             error = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -1663,7 +1621,7 @@ public class Push {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePushDeviceDetailsResponse res = new org.openapis.openapi.models.operations.UpdatePushDeviceDetailsResponse() {{
+        org.openapis.openapi.models.operations.UpdatePushDeviceDetailsResponse res = new org.openapis.openapi.models.operations.UpdatePushDeviceDetailsResponse(contentType, httpRes.statusCode()) {{
             deviceDetails = null;
             body = null;
             body = null;
@@ -1671,8 +1629,6 @@ public class Push {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {

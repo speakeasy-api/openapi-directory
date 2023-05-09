@@ -18,9 +18,11 @@ public class CartSimulation200ApplicationJSONLogisticsInfoItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public CartSimulation200ApplicationJSONLogisticsInfoItemMetadataItems[] items;
+
     public CartSimulation200ApplicationJSONLogisticsInfoItemMetadata withItems(CartSimulation200ApplicationJSONLogisticsInfoItemMetadataItems[] items) {
         this.items = items;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONLogisticsInfoItemMetadata(){}
 }

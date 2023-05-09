@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamesNameIdOutputFormatRequest {
@@ -12,6 +13,7 @@ public class GetNamesNameIdOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nameId")
     public Long nameId;
+
     public GetNamesNameIdOutputFormatRequest withNameId(Long nameId) {
         this.nameId = nameId;
         return this;
@@ -22,9 +24,14 @@ public class GetNamesNameIdOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
     public GetNamesNameIdOutputFormatOutputFormatEnum outputFormat;
+
     public GetNamesNameIdOutputFormatRequest withOutputFormat(GetNamesNameIdOutputFormatOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
     }
     
+    public GetNamesNameIdOutputFormatRequest(@JsonProperty("nameId") Long nameId, @JsonProperty("outputFormat") GetNamesNameIdOutputFormatOutputFormatEnum outputFormat) {
+        this.nameId = nameId;
+        this.outputFormat = outputFormat;
+  }
 }

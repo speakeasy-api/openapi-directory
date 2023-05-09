@@ -15,6 +15,7 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address1")
     public String address1;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainerUserAddress withAddress1(String address1) {
         this.address1 = address1;
         return this;
@@ -23,6 +24,7 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address2")
     public String address2;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainerUserAddress withAddress2(String address2) {
         this.address2 = address2;
         return this;
@@ -31,6 +33,7 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainerUserAddress withCity(String city) {
         this.city = city;
         return this;
@@ -39,6 +42,7 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Company")
     public String company;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainerUserAddress withCompany(String company) {
         this.company = company;
         return this;
@@ -50,6 +54,7 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainerUserAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -58,6 +63,7 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainerUserAddress withName(String name) {
         this.name = name;
         return this;
@@ -66,6 +72,7 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VatId")
     public String vatId;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainerUserAddress withVatId(String vatId) {
         this.vatId = vatId;
         return this;
@@ -74,9 +81,11 @@ public class RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Zip")
     public String zip;
+
     public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainerUserAddress withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainerUserAddress(){}
 }

@@ -12,9 +12,13 @@ public class PostSessionsRequestBody {
      */
     @JsonProperty("public")
     public PostSessionsRequestBodyPublic public_;
+
     public PostSessionsRequestBody withPublic(PostSessionsRequestBodyPublic public_) {
         this.public_ = public_;
         return this;
     }
     
+    public PostSessionsRequestBody(@JsonProperty("public") PostSessionsRequestBodyPublic public_) {
+        this.public_ = public_;
+  }
 }

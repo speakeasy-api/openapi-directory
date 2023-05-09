@@ -12,9 +12,13 @@ public class UpdateSmsTemplateRequestBody {
      */
     @JsonProperty("SMSTemplateRequest")
     public UpdateSMSTemplateRequestBodySMSTemplateRequest smsTemplateRequest;
+
     public UpdateSmsTemplateRequestBody withSMSTemplateRequest(UpdateSMSTemplateRequestBodySMSTemplateRequest smsTemplateRequest) {
         this.smsTemplateRequest = smsTemplateRequest;
         return this;
     }
     
+    public UpdateSmsTemplateRequestBody(@JsonProperty("SMSTemplateRequest") UpdateSMSTemplateRequestBodySMSTemplateRequest smsTemplateRequest) {
+        this.smsTemplateRequest = smsTemplateRequest;
+  }
 }

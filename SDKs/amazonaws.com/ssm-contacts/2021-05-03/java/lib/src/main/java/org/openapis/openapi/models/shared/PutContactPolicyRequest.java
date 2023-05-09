@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutContactPolicyRequest {
     @JsonProperty("ContactArn")
     public String contactArn;
+
     public PutContactPolicyRequest withContactArn(String contactArn) {
         this.contactArn = contactArn;
         return this;
@@ -16,9 +17,14 @@ public class PutContactPolicyRequest {
     
     @JsonProperty("Policy")
     public String policy;
+
     public PutContactPolicyRequest withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public PutContactPolicyRequest(@JsonProperty("ContactArn") String contactArn, @JsonProperty("Policy") String policy) {
+        this.contactArn = contactArn;
+        this.policy = policy;
+  }
 }

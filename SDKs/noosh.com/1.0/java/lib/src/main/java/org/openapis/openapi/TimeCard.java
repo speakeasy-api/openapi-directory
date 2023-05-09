@@ -51,7 +51,7 @@ public class TimeCard {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMyTimeCardResponse res = new org.openapis.openapi.models.operations.GetMyTimeCardResponse() {{
+        org.openapis.openapi.models.operations.GetMyTimeCardResponse res = new org.openapis.openapi.models.operations.GetMyTimeCardResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -69,8 +69,6 @@ public class TimeCard {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,7 +168,7 @@ public class TimeCard {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMyTimeCardListResponse res = new org.openapis.openapi.models.operations.GetMyTimeCardListResponse() {{
+        org.openapis.openapi.models.operations.GetMyTimeCardListResponse res = new org.openapis.openapi.models.operations.GetMyTimeCardListResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -188,8 +186,6 @@ public class TimeCard {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,7 +285,7 @@ public class TimeCard {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReceivedTimeCardResponse res = new org.openapis.openapi.models.operations.GetReceivedTimeCardResponse() {{
+        org.openapis.openapi.models.operations.GetReceivedTimeCardResponse res = new org.openapis.openapi.models.operations.GetReceivedTimeCardResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -307,8 +303,6 @@ public class TimeCard {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -408,7 +402,7 @@ public class TimeCard {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReceivedTimeCardListResponse res = new org.openapis.openapi.models.operations.GetReceivedTimeCardListResponse() {{
+        org.openapis.openapi.models.operations.GetReceivedTimeCardListResponse res = new org.openapis.openapi.models.operations.GetReceivedTimeCardListResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -426,8 +420,6 @@ public class TimeCard {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

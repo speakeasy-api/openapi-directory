@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVmResponse {
@@ -12,6 +13,7 @@ public class GetVmResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public GetVmResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -22,6 +24,7 @@ public class GetVmResponse {
      */
     
     public org.openapis.openapi.models.shared.BaseVirtualMachine baseVirtualMachine;
+
     public GetVmResponse withBaseVirtualMachine(org.openapis.openapi.models.shared.BaseVirtualMachine baseVirtualMachine) {
         this.baseVirtualMachine = baseVirtualMachine;
         return this;
@@ -29,6 +32,7 @@ public class GetVmResponse {
     
     
     public String contentType;
+
     public GetVmResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class GetVmResponse {
     
     
     public Integer statusCode;
+
     public GetVmResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetVmResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVmResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetVmResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

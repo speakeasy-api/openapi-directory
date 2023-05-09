@@ -15,9 +15,11 @@ public class CreateStorageVirtualMachineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageVirtualMachine")
     public StorageVirtualMachine storageVirtualMachine;
+
     public CreateStorageVirtualMachineResponse withStorageVirtualMachine(StorageVirtualMachine storageVirtualMachine) {
         this.storageVirtualMachine = storageVirtualMachine;
         return this;
     }
     
+    public CreateStorageVirtualMachineResponse(){}
 }

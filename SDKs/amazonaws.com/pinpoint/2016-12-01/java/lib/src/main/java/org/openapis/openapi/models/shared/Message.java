@@ -15,6 +15,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public ActionEnum action;
+
     public Message withAction(ActionEnum action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public Message withBody(String body) {
         this.body = body;
         return this;
@@ -31,6 +33,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageIconUrl")
     public String imageIconUrl;
+
     public Message withImageIconUrl(String imageIconUrl) {
         this.imageIconUrl = imageIconUrl;
         return this;
@@ -39,6 +42,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageSmallIconUrl")
     public String imageSmallIconUrl;
+
     public Message withImageSmallIconUrl(String imageSmallIconUrl) {
         this.imageSmallIconUrl = imageSmallIconUrl;
         return this;
@@ -47,6 +51,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageUrl")
     public String imageUrl;
+
     public Message withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -55,6 +60,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JsonBody")
     public String jsonBody;
+
     public Message withJsonBody(String jsonBody) {
         this.jsonBody = jsonBody;
         return this;
@@ -63,6 +69,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MediaUrl")
     public String mediaUrl;
+
     public Message withMediaUrl(String mediaUrl) {
         this.mediaUrl = mediaUrl;
         return this;
@@ -71,6 +78,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RawContent")
     public String rawContent;
+
     public Message withRawContent(String rawContent) {
         this.rawContent = rawContent;
         return this;
@@ -79,6 +87,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SilentPush")
     public Boolean silentPush;
+
     public Message withSilentPush(Boolean silentPush) {
         this.silentPush = silentPush;
         return this;
@@ -87,6 +96,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeToLive")
     public Long timeToLive;
+
     public Message withTimeToLive(Long timeToLive) {
         this.timeToLive = timeToLive;
         return this;
@@ -95,6 +105,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public Message withTitle(String title) {
         this.title = title;
         return this;
@@ -103,9 +114,11 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public Message withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Message(){}
 }

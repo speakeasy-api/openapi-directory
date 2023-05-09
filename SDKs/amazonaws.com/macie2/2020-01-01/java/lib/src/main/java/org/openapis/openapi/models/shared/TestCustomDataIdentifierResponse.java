@@ -15,9 +15,11 @@ public class TestCustomDataIdentifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchCount")
     public Long matchCount;
+
     public TestCustomDataIdentifierResponse withMatchCount(Long matchCount) {
         this.matchCount = matchCount;
         return this;
     }
     
+    public TestCustomDataIdentifierResponse(){}
 }

@@ -15,6 +15,7 @@ public class InlineCustomDocumentEnrichmentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Condition")
     public DocumentAttributeCondition condition;
+
     public InlineCustomDocumentEnrichmentConfiguration withCondition(DocumentAttributeCondition condition) {
         this.condition = condition;
         return this;
@@ -23,6 +24,7 @@ public class InlineCustomDocumentEnrichmentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentContentDeletion")
     public Boolean documentContentDeletion;
+
     public InlineCustomDocumentEnrichmentConfiguration withDocumentContentDeletion(Boolean documentContentDeletion) {
         this.documentContentDeletion = documentContentDeletion;
         return this;
@@ -31,9 +33,11 @@ public class InlineCustomDocumentEnrichmentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public DocumentAttributeTarget target;
+
     public InlineCustomDocumentEnrichmentConfiguration withTarget(DocumentAttributeTarget target) {
         this.target = target;
         return this;
     }
     
+    public InlineCustomDocumentEnrichmentConfiguration(){}
 }

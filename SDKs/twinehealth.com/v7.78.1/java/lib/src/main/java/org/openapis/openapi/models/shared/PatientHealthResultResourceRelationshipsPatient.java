@@ -12,6 +12,7 @@ public class PatientHealthResultResourceRelationshipsPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public PatientHealthResultResourceRelationshipsPatientData data;
+
     public PatientHealthResultResourceRelationshipsPatient withData(PatientHealthResultResourceRelationshipsPatientData data) {
         this.data = data;
         return this;
@@ -20,9 +21,11 @@ public class PatientHealthResultResourceRelationshipsPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public java.util.Map<String, Object> links;
+
     public PatientHealthResultResourceRelationshipsPatient withLinks(java.util.Map<String, Object> links) {
         this.links = links;
         return this;
     }
     
+    public PatientHealthResultResourceRelationshipsPatient(){}
 }

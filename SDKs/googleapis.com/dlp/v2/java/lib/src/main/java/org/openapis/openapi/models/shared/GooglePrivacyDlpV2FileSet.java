@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2FileSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regexFileSet")
     public GooglePrivacyDlpV2CloudStorageRegexFileSet regexFileSet;
+
     public GooglePrivacyDlpV2FileSet withRegexFileSet(GooglePrivacyDlpV2CloudStorageRegexFileSet regexFileSet) {
         this.regexFileSet = regexFileSet;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2FileSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GooglePrivacyDlpV2FileSet withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GooglePrivacyDlpV2FileSet(){}
 }

@@ -14,6 +14,7 @@ public class FraudResult {
      */
     @JsonProperty("accountScore")
     public Integer accountScore;
+
     public FraudResult withAccountScore(Integer accountScore) {
         this.accountScore = accountScore;
         return this;
@@ -24,10 +25,14 @@ public class FraudResult {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
-    public FraudCheckResult[] results;
-    public FraudResult withResults(FraudCheckResult[] results) {
+    public FraudCheckResultWrapper[] results;
+
+    public FraudResult withResults(FraudCheckResultWrapper[] results) {
         this.results = results;
         return this;
     }
     
+    public FraudResult(@JsonProperty("accountScore") Integer accountScore) {
+        this.accountScore = accountScore;
+  }
 }

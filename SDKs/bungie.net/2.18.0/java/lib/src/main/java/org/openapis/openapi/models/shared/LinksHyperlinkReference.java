@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class LinksHyperlinkReference {
     
     public String title;
+
     public LinksHyperlinkReference withTitle(String title) {
         this.title = title;
         return this;
@@ -16,9 +17,11 @@ public class LinksHyperlinkReference {
     
     
     public String url;
+
     public LinksHyperlinkReference withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public LinksHyperlinkReference(){}
 }

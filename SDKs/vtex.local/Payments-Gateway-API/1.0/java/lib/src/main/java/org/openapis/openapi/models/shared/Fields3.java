@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Fields3 {
     @JsonProperty("accountId")
     public String accountId;
+
     public Fields3 withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -16,6 +17,7 @@ public class Fields3 {
     
     @JsonProperty("address")
     public String address;
+
     public Fields3 withAddress(String address) {
         this.address = address;
         return this;
@@ -23,6 +25,7 @@ public class Fields3 {
     
     @JsonProperty("callbackUrl")
     public String callbackUrl;
+
     public Fields3 withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -30,6 +33,7 @@ public class Fields3 {
     
     @JsonProperty("firstDigits")
     public String firstDigits;
+
     public Fields3 withFirstDigits(String firstDigits) {
         this.firstDigits = firstDigits;
         return this;
@@ -37,9 +41,17 @@ public class Fields3 {
     
     @JsonProperty("validationCode")
     public String validationCode;
+
     public Fields3 withValidationCode(String validationCode) {
         this.validationCode = validationCode;
         return this;
     }
     
+    public Fields3(@JsonProperty("accountId") String accountId, @JsonProperty("address") String address, @JsonProperty("callbackUrl") String callbackUrl, @JsonProperty("firstDigits") String firstDigits, @JsonProperty("validationCode") String validationCode) {
+        this.accountId = accountId;
+        this.address = address;
+        this.callbackUrl = callbackUrl;
+        this.firstDigits = firstDigits;
+        this.validationCode = validationCode;
+  }
 }

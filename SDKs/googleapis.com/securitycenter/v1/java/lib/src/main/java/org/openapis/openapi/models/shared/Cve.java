@@ -18,6 +18,7 @@ public class Cve {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cvssv3")
     public Cvssv3 cvssv3;
+
     public Cve withCvssv3(Cvssv3 cvssv3) {
         this.cvssv3 = cvssv3;
         return this;
@@ -29,6 +30,7 @@ public class Cve {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Cve withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class Cve {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("references")
     public Reference[] references;
+
     public Cve withReferences(Reference[] references) {
         this.references = references;
         return this;
@@ -51,9 +54,11 @@ public class Cve {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upstreamFixAvailable")
     public Boolean upstreamFixAvailable;
+
     public Cve withUpstreamFixAvailable(Boolean upstreamFixAvailable) {
         this.upstreamFixAvailable = upstreamFixAvailable;
         return this;
     }
     
+    public Cve(){}
 }

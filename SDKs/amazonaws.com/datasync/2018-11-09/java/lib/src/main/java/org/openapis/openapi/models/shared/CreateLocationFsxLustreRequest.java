@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLocationFsxLustreRequest {
     @JsonProperty("FsxFilesystemArn")
     public String fsxFilesystemArn;
+
     public CreateLocationFsxLustreRequest withFsxFilesystemArn(String fsxFilesystemArn) {
         this.fsxFilesystemArn = fsxFilesystemArn;
         return this;
@@ -18,6 +19,7 @@ public class CreateLocationFsxLustreRequest {
     
     @JsonProperty("SecurityGroupArns")
     public String[] securityGroupArns;
+
     public CreateLocationFsxLustreRequest withSecurityGroupArns(String[] securityGroupArns) {
         this.securityGroupArns = securityGroupArns;
         return this;
@@ -26,6 +28,7 @@ public class CreateLocationFsxLustreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subdirectory")
     public String subdirectory;
+
     public CreateLocationFsxLustreRequest withSubdirectory(String subdirectory) {
         this.subdirectory = subdirectory;
         return this;
@@ -34,9 +37,14 @@ public class CreateLocationFsxLustreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagListEntry[] tags;
+
     public CreateLocationFsxLustreRequest withTags(TagListEntry[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLocationFsxLustreRequest(@JsonProperty("FsxFilesystemArn") String fsxFilesystemArn, @JsonProperty("SecurityGroupArns") String[] securityGroupArns) {
+        this.fsxFilesystemArn = fsxFilesystemArn;
+        this.securityGroupArns = securityGroupArns;
+  }
 }

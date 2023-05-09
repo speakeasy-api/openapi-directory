@@ -15,6 +15,7 @@ public class CreateProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationSeconds")
     public Long durationSeconds;
+
     public CreateProfileRequestBody withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -26,6 +27,7 @@ public class CreateProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CreateProfileRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -37,6 +39,7 @@ public class CreateProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedPolicyArns")
     public String[] managedPolicyArns;
+
     public CreateProfileRequestBody withManagedPolicyArns(String[] managedPolicyArns) {
         this.managedPolicyArns = managedPolicyArns;
         return this;
@@ -47,6 +50,7 @@ public class CreateProfileRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateProfileRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +62,7 @@ public class CreateProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireInstanceProperties")
     public Boolean requireInstanceProperties;
+
     public CreateProfileRequestBody withRequireInstanceProperties(Boolean requireInstanceProperties) {
         this.requireInstanceProperties = requireInstanceProperties;
         return this;
@@ -68,6 +73,7 @@ public class CreateProfileRequestBody {
      */
     @JsonProperty("roleArns")
     public String[] roleArns;
+
     public CreateProfileRequestBody withRoleArns(String[] roleArns) {
         this.roleArns = roleArns;
         return this;
@@ -79,6 +85,7 @@ public class CreateProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionPolicy")
     public String sessionPolicy;
+
     public CreateProfileRequestBody withSessionPolicy(String sessionPolicy) {
         this.sessionPolicy = sessionPolicy;
         return this;
@@ -90,9 +97,14 @@ public class CreateProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateProfileRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateProfileRequestBody(@JsonProperty("name") String name, @JsonProperty("roleArns") String[] roleArns) {
+        this.name = name;
+        this.roleArns = roleArns;
+  }
 }

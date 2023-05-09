@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ConfigurationOptionSetting {
     
     public String namespace;
+
     public ConfigurationOptionSetting withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -19,6 +20,7 @@ public class ConfigurationOptionSetting {
     
     
     public String optionName;
+
     public ConfigurationOptionSetting withOptionName(String optionName) {
         this.optionName = optionName;
         return this;
@@ -26,6 +28,7 @@ public class ConfigurationOptionSetting {
     
     
     public String resourceName;
+
     public ConfigurationOptionSetting withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -33,9 +36,11 @@ public class ConfigurationOptionSetting {
     
     
     public String value;
+
     public ConfigurationOptionSetting withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ConfigurationOptionSetting(){}
 }

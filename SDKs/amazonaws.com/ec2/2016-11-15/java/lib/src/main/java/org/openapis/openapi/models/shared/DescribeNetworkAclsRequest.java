@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkAclsRequest {
     
     public Boolean dryRun;
+
     public DescribeNetworkAclsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeNetworkAclsRequest {
     
     
     public DescribeNetworkAclsRequestFilters[] filters;
+
     public DescribeNetworkAclsRequest withFilters(DescribeNetworkAclsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeNetworkAclsRequest {
     
     
     public Long maxResults;
+
     public DescribeNetworkAclsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeNetworkAclsRequest {
     
     
     public String[] networkAclIds;
+
     public DescribeNetworkAclsRequest withNetworkAclIds(String[] networkAclIds) {
         this.networkAclIds = networkAclIds;
         return this;
@@ -37,9 +41,11 @@ public class DescribeNetworkAclsRequest {
     
     
     public String nextToken;
+
     public DescribeNetworkAclsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeNetworkAclsRequest(){}
 }

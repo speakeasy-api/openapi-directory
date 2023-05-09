@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssociateVpcCidrBlockResultCidrBlockAssociation {
     
     public String associationId;
+
     public AssociateVpcCidrBlockResultCidrBlockAssociation withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -19,6 +20,7 @@ public class AssociateVpcCidrBlockResultCidrBlockAssociation {
     
     
     public String cidrBlock;
+
     public AssociateVpcCidrBlockResultCidrBlockAssociation withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -26,9 +28,11 @@ public class AssociateVpcCidrBlockResultCidrBlockAssociation {
     
     
     public AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState cidrBlockState;
+
     public AssociateVpcCidrBlockResultCidrBlockAssociation withCidrBlockState(AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState cidrBlockState) {
         this.cidrBlockState = cidrBlockState;
         return this;
     }
     
+    public AssociateVpcCidrBlockResultCidrBlockAssociation(){}
 }

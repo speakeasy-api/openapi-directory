@@ -15,6 +15,7 @@ public class PropertyParamSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data_type")
     public String dataType;
+
     public PropertyParamSimpleVO withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -23,9 +24,11 @@ public class PropertyParamSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("param_name")
     public String paramName;
+
     public PropertyParamSimpleVO withParamName(String paramName) {
         this.paramName = paramName;
         return this;
     }
     
+    public PropertyParamSimpleVO(){}
 }

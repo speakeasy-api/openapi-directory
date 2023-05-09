@@ -18,6 +18,7 @@ public class CreditEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditAmount")
     public Money creditAmount;
+
     public CreditEstimate withCreditAmount(Money creditAmount) {
         this.creditAmount = creditAmount;
         return this;
@@ -29,6 +30,7 @@ public class CreditEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditDescription")
     public String creditDescription;
+
     public CreditEstimate withCreditDescription(String creditDescription) {
         this.creditDescription = creditDescription;
         return this;
@@ -40,9 +42,11 @@ public class CreditEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditType")
     public String creditType;
+
     public CreditEstimate withCreditType(String creditType) {
         this.creditType = creditType;
         return this;
     }
     
+    public CreditEstimate(){}
 }

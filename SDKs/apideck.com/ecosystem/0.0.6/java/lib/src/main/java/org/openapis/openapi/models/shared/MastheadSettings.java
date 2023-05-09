@@ -12,6 +12,7 @@ public class MastheadSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("background")
     public String background;
+
     public MastheadSettings withBackground(String background) {
         this.background = background;
         return this;
@@ -20,6 +21,7 @@ public class MastheadSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("background_color")
     public String backgroundColor;
+
     public MastheadSettings withBackgroundColor(String backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
@@ -28,6 +30,7 @@ public class MastheadSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public MastheadSettings withColor(String color) {
         this.color = color;
         return this;
@@ -36,6 +39,7 @@ public class MastheadSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public Long columns;
+
     public MastheadSettings withColumns(Long columns) {
         this.columns = columns;
         return this;
@@ -44,6 +48,7 @@ public class MastheadSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public MastheadSettings withDescription(String description) {
         this.description = description;
         return this;
@@ -52,9 +57,11 @@ public class MastheadSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public MastheadSettings withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public MastheadSettings(){}
 }

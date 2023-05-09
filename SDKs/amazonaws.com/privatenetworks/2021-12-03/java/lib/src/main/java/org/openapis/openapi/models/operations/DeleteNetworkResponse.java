@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteNetworkResponse {
@@ -12,6 +13,7 @@ public class DeleteNetworkResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteNetworkResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteNetworkResponse {
     
     
     public String contentType;
+
     public DeleteNetworkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteNetworkResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteNetworkResponse deleteNetworkResponse;
+
     public DeleteNetworkResponse withDeleteNetworkResponse(org.openapis.openapi.models.shared.DeleteNetworkResponse deleteNetworkResponse) {
         this.deleteNetworkResponse = deleteNetworkResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteNetworkResponse {
      */
     
     public Object internalServerException;
+
     public DeleteNetworkResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteNetworkResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteNetworkResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteNetworkResponse {
     
     
     public Integer statusCode;
+
     public DeleteNetworkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteNetworkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteNetworkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteNetworkResponse {
      */
     
     public Object validationException;
+
     public DeleteNetworkResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteNetworkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

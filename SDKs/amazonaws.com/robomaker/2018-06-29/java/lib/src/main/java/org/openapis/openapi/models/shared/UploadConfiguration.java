@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UploadConfiguration {
     @JsonProperty("name")
     public String name;
+
     public UploadConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class UploadConfiguration {
     
     @JsonProperty("path")
     public String path;
+
     public UploadConfiguration withPath(String path) {
         this.path = path;
         return this;
@@ -26,9 +28,15 @@ public class UploadConfiguration {
     
     @JsonProperty("uploadBehavior")
     public UploadBehaviorEnum uploadBehavior;
+
     public UploadConfiguration withUploadBehavior(UploadBehaviorEnum uploadBehavior) {
         this.uploadBehavior = uploadBehavior;
         return this;
     }
     
+    public UploadConfiguration(@JsonProperty("name") String name, @JsonProperty("path") String path, @JsonProperty("uploadBehavior") UploadBehaviorEnum uploadBehavior) {
+        this.name = name;
+        this.path = path;
+        this.uploadBehavior = uploadBehavior;
+  }
 }

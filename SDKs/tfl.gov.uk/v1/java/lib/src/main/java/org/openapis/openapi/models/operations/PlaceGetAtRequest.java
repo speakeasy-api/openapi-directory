@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlaceGetAtRequest {
@@ -12,6 +13,7 @@ public class PlaceGetAtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Lat")
     public String latPathParameter;
+
     public PlaceGetAtRequest withLatPathParameter(String latPathParameter) {
         this.latPathParameter = latPathParameter;
         return this;
@@ -22,6 +24,7 @@ public class PlaceGetAtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Lon")
     public String lonPathParameter;
+
     public PlaceGetAtRequest withLonPathParameter(String lonPathParameter) {
         this.lonPathParameter = lonPathParameter;
         return this;
@@ -29,6 +32,7 @@ public class PlaceGetAtRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
     public String latQueryParameter;
+
     public PlaceGetAtRequest withLatQueryParameter(String latQueryParameter) {
         this.latQueryParameter = latQueryParameter;
         return this;
@@ -36,6 +40,7 @@ public class PlaceGetAtRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location.lat")
     public Double locationLat;
+
     public PlaceGetAtRequest withLocationLat(Double locationLat) {
         this.locationLat = locationLat;
         return this;
@@ -43,6 +48,7 @@ public class PlaceGetAtRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location.lon")
     public Double locationLon;
+
     public PlaceGetAtRequest withLocationLon(Double locationLon) {
         this.locationLon = locationLon;
         return this;
@@ -50,6 +56,7 @@ public class PlaceGetAtRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon")
     public String lonQueryParameter;
+
     public PlaceGetAtRequest withLonQueryParameter(String lonQueryParameter) {
         this.lonQueryParameter = lonQueryParameter;
         return this;
@@ -60,9 +67,19 @@ public class PlaceGetAtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public String[] type;
+
     public PlaceGetAtRequest withType(String[] type) {
         this.type = type;
         return this;
     }
     
+    public PlaceGetAtRequest(@JsonProperty("LatPathParameter") String latPathParameter, @JsonProperty("LonPathParameter") String lonPathParameter, @JsonProperty("latQueryParameter") String latQueryParameter, @JsonProperty("location.lat") Double locationLat, @JsonProperty("location.lon") Double locationLon, @JsonProperty("lonQueryParameter") String lonQueryParameter, @JsonProperty("type") String[] type) {
+        this.latPathParameter = latPathParameter;
+        this.lonPathParameter = lonPathParameter;
+        this.latQueryParameter = latQueryParameter;
+        this.locationLat = locationLat;
+        this.locationLon = locationLon;
+        this.lonQueryParameter = lonQueryParameter;
+        this.type = type;
+  }
 }

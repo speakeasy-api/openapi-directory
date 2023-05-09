@@ -18,6 +18,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Target withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public Target withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -40,9 +42,11 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Target withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Target(){}
 }

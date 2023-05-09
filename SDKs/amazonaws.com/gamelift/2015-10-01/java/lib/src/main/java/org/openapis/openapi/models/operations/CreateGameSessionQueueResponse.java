@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGameSessionQueueResponse {
     
     public String contentType;
+
     public CreateGameSessionQueueResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateGameSessionQueueResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGameSessionQueueOutput createGameSessionQueueOutput;
+
     public CreateGameSessionQueueResponse withCreateGameSessionQueueOutput(org.openapis.openapi.models.shared.CreateGameSessionQueueOutput createGameSessionQueueOutput) {
         this.createGameSessionQueueOutput = createGameSessionQueueOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateGameSessionQueueResponse {
      */
     
     public Object internalServiceException;
+
     public CreateGameSessionQueueResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class CreateGameSessionQueueResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateGameSessionQueueResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateGameSessionQueueResponse {
      */
     
     public Object limitExceededException;
+
     public CreateGameSessionQueueResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateGameSessionQueueResponse {
      */
     
     public Object notFoundException;
+
     public CreateGameSessionQueueResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateGameSessionQueueResponse {
     
     
     public Integer statusCode;
+
     public CreateGameSessionQueueResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateGameSessionQueueResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGameSessionQueueResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateGameSessionQueueResponse {
      */
     
     public Object taggingFailedException;
+
     public CreateGameSessionQueueResponse withTaggingFailedException(Object taggingFailedException) {
         this.taggingFailedException = taggingFailedException;
         return this;
@@ -93,9 +103,14 @@ public class CreateGameSessionQueueResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateGameSessionQueueResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateGameSessionQueueResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

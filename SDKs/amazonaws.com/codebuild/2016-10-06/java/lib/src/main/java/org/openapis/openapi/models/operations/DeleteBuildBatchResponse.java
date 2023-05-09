@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBuildBatchResponse {
     
     public String contentType;
+
     public DeleteBuildBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBuildBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBuildBatchOutput deleteBuildBatchOutput;
+
     public DeleteBuildBatchResponse withDeleteBuildBatchOutput(org.openapis.openapi.models.shared.DeleteBuildBatchOutput deleteBuildBatchOutput) {
         this.deleteBuildBatchOutput = deleteBuildBatchOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBuildBatchResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteBuildBatchResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteBuildBatchResponse {
     
     
     public Integer statusCode;
+
     public DeleteBuildBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeleteBuildBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBuildBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteBuildBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

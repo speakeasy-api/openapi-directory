@@ -12,6 +12,7 @@ public class AllWarehouses200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public AllWarehouses200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class AllWarehouses200ApplicationJSON {
      */
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public AllWarehouses200ApplicationJSON withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -32,6 +34,7 @@ public class AllWarehouses200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public AllWarehouses200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +45,7 @@ public class AllWarehouses200ApplicationJSON {
      */
     @JsonProperty("pickupPointIds")
     public Object[] pickupPointIds;
+
     public AllWarehouses200ApplicationJSON withPickupPointIds(Object[] pickupPointIds) {
         this.pickupPointIds = pickupPointIds;
         return this;
@@ -52,6 +56,7 @@ public class AllWarehouses200ApplicationJSON {
      */
     @JsonProperty("priority")
     public Long priority;
+
     public AllWarehouses200ApplicationJSON withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -62,9 +67,18 @@ public class AllWarehouses200ApplicationJSON {
      */
     @JsonProperty("warehouseDocks")
     public AllWarehouses200ApplicationJSONWarehouseDock1[] warehouseDocks;
+
     public AllWarehouses200ApplicationJSON withWarehouseDocks(AllWarehouses200ApplicationJSONWarehouseDock1[] warehouseDocks) {
         this.warehouseDocks = warehouseDocks;
         return this;
     }
     
+    public AllWarehouses200ApplicationJSON(@JsonProperty("id") String id, @JsonProperty("isActive") Boolean isActive, @JsonProperty("name") String name, @JsonProperty("pickupPointIds") Object[] pickupPointIds, @JsonProperty("priority") Long priority, @JsonProperty("warehouseDocks") AllWarehouses200ApplicationJSONWarehouseDock1[] warehouseDocks) {
+        this.id = id;
+        this.isActive = isActive;
+        this.name = name;
+        this.pickupPointIds = pickupPointIds;
+        this.priority = priority;
+        this.warehouseDocks = warehouseDocks;
+  }
 }

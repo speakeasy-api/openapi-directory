@@ -15,6 +15,7 @@ public class GetLendingAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyzeLendingModelVersion")
     public String analyzeLendingModelVersion;
+
     public GetLendingAnalysisResponse withAnalyzeLendingModelVersion(String analyzeLendingModelVersion) {
         this.analyzeLendingModelVersion = analyzeLendingModelVersion;
         return this;
@@ -26,6 +27,7 @@ public class GetLendingAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentMetadata")
     public DocumentMetadata documentMetadata;
+
     public GetLendingAnalysisResponse withDocumentMetadata(DocumentMetadata documentMetadata) {
         this.documentMetadata = documentMetadata;
         return this;
@@ -34,6 +36,7 @@ public class GetLendingAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public GetLendingAnalysisResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -42,6 +45,7 @@ public class GetLendingAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetLendingAnalysisResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -50,6 +54,7 @@ public class GetLendingAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Results")
     public LendingResult[] results;
+
     public GetLendingAnalysisResponse withResults(LendingResult[] results) {
         this.results = results;
         return this;
@@ -58,6 +63,7 @@ public class GetLendingAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public GetLendingAnalysisResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -66,9 +72,11 @@ public class GetLendingAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Warnings")
     public Warning[] warnings;
+
     public GetLendingAnalysisResponse withWarnings(Warning[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public GetLendingAnalysisResponse(){}
 }

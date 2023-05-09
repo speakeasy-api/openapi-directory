@@ -18,6 +18,7 @@ public class CustomBiddingModelDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public CustomBiddingModelDetails withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -29,6 +30,7 @@ public class CustomBiddingModelDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readinessState")
     public CustomBiddingModelDetailsReadinessStateEnum readinessState;
+
     public CustomBiddingModelDetails withReadinessState(CustomBiddingModelDetailsReadinessStateEnum readinessState) {
         this.readinessState = readinessState;
         return this;
@@ -40,9 +42,11 @@ public class CustomBiddingModelDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspensionState")
     public CustomBiddingModelDetailsSuspensionStateEnum suspensionState;
+
     public CustomBiddingModelDetails withSuspensionState(CustomBiddingModelDetailsSuspensionStateEnum suspensionState) {
         this.suspensionState = suspensionState;
         return this;
     }
     
+    public CustomBiddingModelDetails(){}
 }

@@ -18,9 +18,11 @@ public class MultiOutputInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public MultiOutputInfo withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public MultiOutputInfo(){}
 }

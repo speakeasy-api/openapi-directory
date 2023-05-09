@@ -18,6 +18,7 @@ public class FetchVerificationOptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public ServiceBusinessContext context;
+
     public FetchVerificationOptionsRequest withContext(ServiceBusinessContext context) {
         this.context = context;
         return this;
@@ -29,9 +30,11 @@ public class FetchVerificationOptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public FetchVerificationOptionsRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
     }
     
+    public FetchVerificationOptionsRequest(){}
 }

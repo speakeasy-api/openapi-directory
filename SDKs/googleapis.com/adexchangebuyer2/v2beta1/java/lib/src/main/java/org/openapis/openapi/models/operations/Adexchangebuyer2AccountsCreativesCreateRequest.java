@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Adexchangebuyer2AccountsCreativesCreateRequest {
@@ -12,6 +13,7 @@ public class Adexchangebuyer2AccountsCreativesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public Adexchangebuyer2AccountsCreativesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class Adexchangebuyer2AccountsCreativesCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Creative creative;
+
     public Adexchangebuyer2AccountsCreativesCreateRequest withCreative(org.openapis.openapi.models.shared.Creative creative) {
         this.creative = creative;
         return this;
@@ -29,6 +32,7 @@ public class Adexchangebuyer2AccountsCreativesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public Adexchangebuyer2AccountsCreativesCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class Adexchangebuyer2AccountsCreativesCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public Adexchangebuyer2AccountsCreativesCreateRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -49,6 +54,7 @@ public class Adexchangebuyer2AccountsCreativesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public Adexchangebuyer2AccountsCreativesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -59,6 +65,7 @@ public class Adexchangebuyer2AccountsCreativesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public Adexchangebuyer2AccountsCreativesCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class Adexchangebuyer2AccountsCreativesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duplicateIdMode")
     public Adexchangebuyer2AccountsCreativesCreateDuplicateIDModeEnum duplicateIdMode;
+
     public Adexchangebuyer2AccountsCreativesCreateRequest withDuplicateIdMode(Adexchangebuyer2AccountsCreativesCreateDuplicateIDModeEnum duplicateIdMode) {
         this.duplicateIdMode = duplicateIdMode;
         return this;
@@ -79,6 +87,7 @@ public class Adexchangebuyer2AccountsCreativesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public Adexchangebuyer2AccountsCreativesCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -89,6 +98,7 @@ public class Adexchangebuyer2AccountsCreativesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public Adexchangebuyer2AccountsCreativesCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class Adexchangebuyer2AccountsCreativesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public Adexchangebuyer2AccountsCreativesCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class Adexchangebuyer2AccountsCreativesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public Adexchangebuyer2AccountsCreativesCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class Adexchangebuyer2AccountsCreativesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public Adexchangebuyer2AccountsCreativesCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class Adexchangebuyer2AccountsCreativesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public Adexchangebuyer2AccountsCreativesCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,13 @@ public class Adexchangebuyer2AccountsCreativesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public Adexchangebuyer2AccountsCreativesCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public Adexchangebuyer2AccountsCreativesCreateRequest(@JsonProperty("accountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

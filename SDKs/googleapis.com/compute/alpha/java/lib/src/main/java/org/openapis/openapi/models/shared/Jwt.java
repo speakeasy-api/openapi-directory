@@ -18,6 +18,7 @@ public class Jwt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audiences")
     public String[] audiences;
+
     public Jwt withAudiences(String[] audiences) {
         this.audiences = audiences;
         return this;
@@ -29,6 +30,7 @@ public class Jwt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuer")
     public String issuer;
+
     public Jwt withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -40,6 +42,7 @@ public class Jwt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwksPublicKeys")
     public String jwksPublicKeys;
+
     public Jwt withJwksPublicKeys(String jwksPublicKeys) {
         this.jwksPublicKeys = jwksPublicKeys;
         return this;
@@ -51,6 +54,7 @@ public class Jwt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwtHeaders")
     public JwtHeader[] jwtHeaders;
+
     public Jwt withJwtHeaders(JwtHeader[] jwtHeaders) {
         this.jwtHeaders = jwtHeaders;
         return this;
@@ -62,9 +66,11 @@ public class Jwt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwtParams")
     public String[] jwtParams;
+
     public Jwt withJwtParams(String[] jwtParams) {
         this.jwtParams = jwtParams;
         return this;
     }
     
+    public Jwt(){}
 }

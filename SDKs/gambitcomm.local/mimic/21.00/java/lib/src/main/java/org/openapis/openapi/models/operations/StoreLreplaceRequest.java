@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoreLreplaceRequest {
@@ -12,6 +13,7 @@ public class StoreLreplaceRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String requestBody;
+
     public StoreLreplaceRequest withRequestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class StoreLreplaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
     public Integer index;
+
     public StoreLreplaceRequest withIndex(Integer index) {
         this.index = index;
         return this;
@@ -32,9 +35,14 @@ public class StoreLreplaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=var")
     public String var;
+
     public StoreLreplaceRequest withVar(String var) {
         this.var = var;
         return this;
     }
     
+    public StoreLreplaceRequest(@JsonProperty("index") Integer index, @JsonProperty("var") String var) {
+        this.index = index;
+        this.var = var;
+  }
 }

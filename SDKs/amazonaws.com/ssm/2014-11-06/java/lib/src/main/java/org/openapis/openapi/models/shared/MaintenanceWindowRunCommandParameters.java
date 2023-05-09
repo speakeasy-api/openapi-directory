@@ -18,6 +18,7 @@ public class MaintenanceWindowRunCommandParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchOutputConfig")
     public CloudWatchOutputConfig cloudWatchOutputConfig;
+
     public MaintenanceWindowRunCommandParameters withCloudWatchOutputConfig(CloudWatchOutputConfig cloudWatchOutputConfig) {
         this.cloudWatchOutputConfig = cloudWatchOutputConfig;
         return this;
@@ -26,6 +27,7 @@ public class MaintenanceWindowRunCommandParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Comment")
     public String comment;
+
     public MaintenanceWindowRunCommandParameters withComment(String comment) {
         this.comment = comment;
         return this;
@@ -34,6 +36,7 @@ public class MaintenanceWindowRunCommandParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentHash")
     public String documentHash;
+
     public MaintenanceWindowRunCommandParameters withDocumentHash(String documentHash) {
         this.documentHash = documentHash;
         return this;
@@ -42,6 +45,7 @@ public class MaintenanceWindowRunCommandParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentHashType")
     public DocumentHashTypeEnum documentHashType;
+
     public MaintenanceWindowRunCommandParameters withDocumentHashType(DocumentHashTypeEnum documentHashType) {
         this.documentHashType = documentHashType;
         return this;
@@ -50,6 +54,7 @@ public class MaintenanceWindowRunCommandParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public MaintenanceWindowRunCommandParameters withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -58,6 +63,7 @@ public class MaintenanceWindowRunCommandParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationConfig")
     public NotificationConfig notificationConfig;
+
     public MaintenanceWindowRunCommandParameters withNotificationConfig(NotificationConfig notificationConfig) {
         this.notificationConfig = notificationConfig;
         return this;
@@ -66,6 +72,7 @@ public class MaintenanceWindowRunCommandParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputS3BucketName")
     public String outputS3BucketName;
+
     public MaintenanceWindowRunCommandParameters withOutputS3BucketName(String outputS3BucketName) {
         this.outputS3BucketName = outputS3BucketName;
         return this;
@@ -74,6 +81,7 @@ public class MaintenanceWindowRunCommandParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputS3KeyPrefix")
     public String outputS3KeyPrefix;
+
     public MaintenanceWindowRunCommandParameters withOutputS3KeyPrefix(String outputS3KeyPrefix) {
         this.outputS3KeyPrefix = outputS3KeyPrefix;
         return this;
@@ -82,6 +90,7 @@ public class MaintenanceWindowRunCommandParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String[]> parameters;
+
     public MaintenanceWindowRunCommandParameters withParameters(java.util.Map<String, String[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -90,6 +99,7 @@ public class MaintenanceWindowRunCommandParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRoleArn")
     public String serviceRoleArn;
+
     public MaintenanceWindowRunCommandParameters withServiceRoleArn(String serviceRoleArn) {
         this.serviceRoleArn = serviceRoleArn;
         return this;
@@ -98,9 +108,11 @@ public class MaintenanceWindowRunCommandParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeoutSeconds")
     public Long timeoutSeconds;
+
     public MaintenanceWindowRunCommandParameters withTimeoutSeconds(Long timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
     }
     
+    public MaintenanceWindowRunCommandParameters(){}
 }

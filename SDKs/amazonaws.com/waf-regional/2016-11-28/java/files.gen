@@ -497,4 +497,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateXssMatchSetResponse.j
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateXssMatchSetRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/XssMatchSetUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

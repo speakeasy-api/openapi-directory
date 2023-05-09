@@ -13,6 +13,7 @@ public class WebhookEventResourceRelationshipsWebhookData {
      */
     @JsonProperty("id")
     public String id;
+
     public WebhookEventResourceRelationshipsWebhookData withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,14 @@ public class WebhookEventResourceRelationshipsWebhookData {
      */
     @JsonProperty("type")
     public String type;
+
     public WebhookEventResourceRelationshipsWebhookData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public WebhookEventResourceRelationshipsWebhookData(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

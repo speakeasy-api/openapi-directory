@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportDataRequest {
@@ -12,6 +13,7 @@ public class ImportDataRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/zip")
     public byte[] requestBody;
+
     public ImportDataRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class ImportDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Preserve-ContentId")
     public Boolean xRegistryPreserveContentId;
+
     public ImportDataRequest withXRegistryPreserveContentId(Boolean xRegistryPreserveContentId) {
         this.xRegistryPreserveContentId = xRegistryPreserveContentId;
         return this;
@@ -32,9 +35,13 @@ public class ImportDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Preserve-GlobalId")
     public Boolean xRegistryPreserveGlobalId;
+
     public ImportDataRequest withXRegistryPreserveGlobalId(Boolean xRegistryPreserveGlobalId) {
         this.xRegistryPreserveGlobalId = xRegistryPreserveGlobalId;
         return this;
     }
     
+    public ImportDataRequest(@JsonProperty("RequestBody") byte[] requestBody) {
+        this.requestBody = requestBody;
+  }
 }

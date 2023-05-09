@@ -18,6 +18,7 @@ public class ExportMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseDumpType")
     public ExportMetadataRequestDatabaseDumpTypeEnum databaseDumpType;
+
     public ExportMetadataRequest withDatabaseDumpType(ExportMetadataRequestDatabaseDumpTypeEnum databaseDumpType) {
         this.databaseDumpType = databaseDumpType;
         return this;
@@ -29,6 +30,7 @@ public class ExportMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationGcsFolder")
     public String destinationGcsFolder;
+
     public ExportMetadataRequest withDestinationGcsFolder(String destinationGcsFolder) {
         this.destinationGcsFolder = destinationGcsFolder;
         return this;
@@ -40,9 +42,11 @@ public class ExportMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public ExportMetadataRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public ExportMetadataRequest(){}
 }

@@ -15,9 +15,11 @@ public class InvalidNextTokenException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public InvalidNextTokenException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InvalidNextTokenException(){}
 }

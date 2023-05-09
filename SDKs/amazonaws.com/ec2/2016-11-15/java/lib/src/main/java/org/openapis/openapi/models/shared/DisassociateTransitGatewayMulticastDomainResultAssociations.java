@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisassociateTransitGatewayMulticastDomainResultAssociations {
     
     public String resourceId;
+
     public DisassociateTransitGatewayMulticastDomainResultAssociations withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -19,6 +20,7 @@ public class DisassociateTransitGatewayMulticastDomainResultAssociations {
     
     
     public String resourceOwnerId;
+
     public DisassociateTransitGatewayMulticastDomainResultAssociations withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
@@ -26,6 +28,7 @@ public class DisassociateTransitGatewayMulticastDomainResultAssociations {
     
     
     public DisassociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum resourceType;
+
     public DisassociateTransitGatewayMulticastDomainResultAssociations withResourceType(DisassociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -33,6 +36,7 @@ public class DisassociateTransitGatewayMulticastDomainResultAssociations {
     
     
     public DisassociateTransitGatewayMulticastDomainResultAssociationsSubnets[] subnets;
+
     public DisassociateTransitGatewayMulticastDomainResultAssociations withSubnets(DisassociateTransitGatewayMulticastDomainResultAssociationsSubnets[] subnets) {
         this.subnets = subnets;
         return this;
@@ -40,6 +44,7 @@ public class DisassociateTransitGatewayMulticastDomainResultAssociations {
     
     
     public String transitGatewayAttachmentId;
+
     public DisassociateTransitGatewayMulticastDomainResultAssociations withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -47,9 +52,11 @@ public class DisassociateTransitGatewayMulticastDomainResultAssociations {
     
     
     public String transitGatewayMulticastDomainId;
+
     public DisassociateTransitGatewayMulticastDomainResultAssociations withTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
         this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
         return this;
     }
     
+    public DisassociateTransitGatewayMulticastDomainResultAssociations(){}
 }

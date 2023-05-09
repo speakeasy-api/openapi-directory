@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ListPartitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDataplexV1ListPartitionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1ListPartitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitions")
     public GoogleCloudDataplexV1Partition[] partitions;
+
     public GoogleCloudDataplexV1ListPartitionsResponse withPartitions(GoogleCloudDataplexV1Partition[] partitions) {
         this.partitions = partitions;
         return this;
     }
     
+    public GoogleCloudDataplexV1ListPartitionsResponse(){}
 }

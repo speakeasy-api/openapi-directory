@@ -15,6 +15,7 @@ public class GetWFSInventory200ApplicationJSONPayloadInventoryShipNodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availToSellQty")
     public Integer availToSellQty;
+
     public GetWFSInventory200ApplicationJSONPayloadInventoryShipNodes withAvailToSellQty(Integer availToSellQty) {
         this.availToSellQty = availToSellQty;
         return this;
@@ -26,6 +27,7 @@ public class GetWFSInventory200ApplicationJSONPayloadInventoryShipNodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiedDate")
     public String modifiedDate;
+
     public GetWFSInventory200ApplicationJSONPayloadInventoryShipNodes withModifiedDate(String modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -37,6 +39,7 @@ public class GetWFSInventory200ApplicationJSONPayloadInventoryShipNodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onHandQty")
     public Integer onHandQty;
+
     public GetWFSInventory200ApplicationJSONPayloadInventoryShipNodes withOnHandQty(Integer onHandQty) {
         this.onHandQty = onHandQty;
         return this;
@@ -48,9 +51,11 @@ public class GetWFSInventory200ApplicationJSONPayloadInventoryShipNodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipNodeType")
     public String shipNodeType;
+
     public GetWFSInventory200ApplicationJSONPayloadInventoryShipNodes withShipNodeType(String shipNodeType) {
         this.shipNodeType = shipNodeType;
         return this;
     }
     
+    public GetWFSInventory200ApplicationJSONPayloadInventoryShipNodes(){}
 }

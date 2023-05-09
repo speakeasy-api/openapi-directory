@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAccountDedicatedIpWarmupAttributesResponse {
@@ -12,6 +13,7 @@ public class PutAccountDedicatedIpWarmupAttributesResponse {
      */
     
     public Object badRequestException;
+
     public PutAccountDedicatedIpWarmupAttributesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class PutAccountDedicatedIpWarmupAttributesResponse {
     
     
     public String contentType;
+
     public PutAccountDedicatedIpWarmupAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutAccountDedicatedIpWarmupAttributesResponse {
      */
     
     public java.util.Map<String, Object> putAccountDedicatedIpWarmupAttributesResponse;
+
     public PutAccountDedicatedIpWarmupAttributesResponse withPutAccountDedicatedIpWarmupAttributesResponse(java.util.Map<String, Object> putAccountDedicatedIpWarmupAttributesResponse) {
         this.putAccountDedicatedIpWarmupAttributesResponse = putAccountDedicatedIpWarmupAttributesResponse;
         return this;
@@ -36,6 +40,7 @@ public class PutAccountDedicatedIpWarmupAttributesResponse {
     
     
     public Integer statusCode;
+
     public PutAccountDedicatedIpWarmupAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class PutAccountDedicatedIpWarmupAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAccountDedicatedIpWarmupAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class PutAccountDedicatedIpWarmupAttributesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutAccountDedicatedIpWarmupAttributesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutAccountDedicatedIpWarmupAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

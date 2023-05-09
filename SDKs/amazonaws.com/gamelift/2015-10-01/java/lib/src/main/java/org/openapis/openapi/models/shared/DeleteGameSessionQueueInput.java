@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteGameSessionQueueInput {
     @JsonProperty("Name")
     public String name;
+
     public DeleteGameSessionQueueInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteGameSessionQueueInput(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

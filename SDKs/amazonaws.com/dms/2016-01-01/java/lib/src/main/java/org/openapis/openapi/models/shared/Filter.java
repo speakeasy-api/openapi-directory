@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Filter {
     @JsonProperty("Name")
     public String name;
+
     public Filter withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class Filter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public Filter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public Filter(@JsonProperty("Name") String name, @JsonProperty("Values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

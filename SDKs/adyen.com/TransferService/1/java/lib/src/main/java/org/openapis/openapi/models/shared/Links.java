@@ -12,6 +12,7 @@ public class Links {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public Link next;
+
     public Links withNext(Link next) {
         this.next = next;
         return this;
@@ -20,9 +21,11 @@ public class Links {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prev")
     public Link prev;
+
     public Links withPrev(Link prev) {
         this.prev = prev;
         return this;
     }
     
+    public Links(){}
 }

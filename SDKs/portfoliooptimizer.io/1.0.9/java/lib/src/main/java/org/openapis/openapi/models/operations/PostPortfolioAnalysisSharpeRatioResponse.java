@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPortfolioAnalysisSharpeRatioResponse {
     
     public String contentType;
+
     public PostPortfolioAnalysisSharpeRatioResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPortfolioAnalysisSharpeRatioResponse {
     
     
     public Integer statusCode;
+
     public PostPortfolioAnalysisSharpeRatioResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPortfolioAnalysisSharpeRatioResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPortfolioAnalysisSharpeRatioResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostPortfolioAnalysisSharpeRatioResponse {
      */
     
     public PostPortfolioAnalysisSharpeRatio200ApplicationJSON postPortfolioAnalysisSharpeRatio200ApplicationJSONObject;
+
     public PostPortfolioAnalysisSharpeRatioResponse withPostPortfolioAnalysisSharpeRatio200ApplicationJSONObject(PostPortfolioAnalysisSharpeRatio200ApplicationJSON postPortfolioAnalysisSharpeRatio200ApplicationJSONObject) {
         this.postPortfolioAnalysisSharpeRatio200ApplicationJSONObject = postPortfolioAnalysisSharpeRatio200ApplicationJSONObject;
         return this;
     }
     
+    public PostPortfolioAnalysisSharpeRatioResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

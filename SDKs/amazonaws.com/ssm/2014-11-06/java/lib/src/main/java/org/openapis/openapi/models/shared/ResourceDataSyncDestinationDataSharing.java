@@ -15,9 +15,11 @@ public class ResourceDataSyncDestinationDataSharing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationDataSharingType")
     public String destinationDataSharingType;
+
     public ResourceDataSyncDestinationDataSharing withDestinationDataSharingType(String destinationDataSharingType) {
         this.destinationDataSharingType = destinationDataSharingType;
         return this;
     }
     
+    public ResourceDataSyncDestinationDataSharing(){}
 }

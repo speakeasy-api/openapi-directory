@@ -18,6 +18,7 @@ public class GeoTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public String[] regions;
+
     public GeoTaxonomy withRegions(String[] regions) {
         this.regions = regions;
         return this;
@@ -29,9 +30,11 @@ public class GeoTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GeoTaxonomyTypeEnum type;
+
     public GeoTaxonomy withType(GeoTaxonomyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GeoTaxonomy(){}
 }

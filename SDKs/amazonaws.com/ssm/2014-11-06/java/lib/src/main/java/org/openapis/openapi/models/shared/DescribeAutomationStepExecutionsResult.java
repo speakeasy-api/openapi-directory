@@ -15,6 +15,7 @@ public class DescribeAutomationStepExecutionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeAutomationStepExecutionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAutomationStepExecutionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepExecutions")
     public StepExecution[] stepExecutions;
+
     public DescribeAutomationStepExecutionsResult withStepExecutions(StepExecution[] stepExecutions) {
         this.stepExecutions = stepExecutions;
         return this;
     }
     
+    public DescribeAutomationStepExecutionsResult(){}
 }

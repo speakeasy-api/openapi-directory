@@ -18,9 +18,11 @@ public class WebServerNetworkAccessControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedIpRanges")
     public AllowedIpRange[] allowedIpRanges;
+
     public WebServerNetworkAccessControl withAllowedIpRanges(AllowedIpRange[] allowedIpRanges) {
         this.allowedIpRanges = allowedIpRanges;
         return this;
     }
     
+    public WebServerNetworkAccessControl(){}
 }

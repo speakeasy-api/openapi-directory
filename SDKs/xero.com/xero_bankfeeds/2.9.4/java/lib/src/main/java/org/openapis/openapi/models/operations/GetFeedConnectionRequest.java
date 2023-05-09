@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeedConnectionRequest {
@@ -12,6 +13,7 @@ public class GetFeedConnectionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
     public String xeroTenantId;
+
     public GetFeedConnectionRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
@@ -22,9 +24,14 @@ public class GetFeedConnectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetFeedConnectionRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetFeedConnectionRequest(@JsonProperty("Xero-Tenant-Id") String xeroTenantId, @JsonProperty("id") String id) {
+        this.xeroTenantId = xeroTenantId;
+        this.id = id;
+  }
 }

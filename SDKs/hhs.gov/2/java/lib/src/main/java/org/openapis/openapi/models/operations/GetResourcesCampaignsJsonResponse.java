@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourcesCampaignsJsonResponse {
@@ -12,6 +13,7 @@ public class GetResourcesCampaignsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.CampaignWrapped campaignWrapped;
+
     public GetResourcesCampaignsJsonResponse withCampaignWrapped(org.openapis.openapi.models.shared.CampaignWrapped campaignWrapped) {
         this.campaignWrapped = campaignWrapped;
         return this;
@@ -19,6 +21,7 @@ public class GetResourcesCampaignsJsonResponse {
     
     
     public String contentType;
+
     public GetResourcesCampaignsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetResourcesCampaignsJsonResponse {
     
     
     public Integer statusCode;
+
     public GetResourcesCampaignsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetResourcesCampaignsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourcesCampaignsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetResourcesCampaignsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

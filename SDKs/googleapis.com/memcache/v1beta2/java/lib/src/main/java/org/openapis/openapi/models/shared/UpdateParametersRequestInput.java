@@ -15,6 +15,7 @@ public class UpdateParametersRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public MemcacheParametersInput parameters;
+
     public UpdateParametersRequestInput withParameters(MemcacheParametersInput parameters) {
         this.parameters = parameters;
         return this;
@@ -26,9 +27,11 @@ public class UpdateParametersRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public UpdateParametersRequestInput withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public UpdateParametersRequestInput(){}
 }

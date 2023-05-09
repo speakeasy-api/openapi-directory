@@ -20,6 +20,7 @@ public class AccessKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessKeyId")
     public String accessKeyId;
+
     public AccessKey withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -30,6 +31,7 @@ public class AccessKey {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public AccessKey withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class AccessKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUsed")
     public AccessKeyLastUsed lastUsed;
+
     public AccessKey withLastUsed(AccessKeyLastUsed lastUsed) {
         this.lastUsed = lastUsed;
         return this;
@@ -46,6 +49,7 @@ public class AccessKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretAccessKey")
     public String secretAccessKey;
+
     public AccessKey withSecretAccessKey(String secretAccessKey) {
         this.secretAccessKey = secretAccessKey;
         return this;
@@ -54,9 +58,11 @@ public class AccessKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StatusTypeEnum status;
+
     public AccessKey withStatus(StatusTypeEnum status) {
         this.status = status;
         return this;
     }
     
+    public AccessKey(){}
 }

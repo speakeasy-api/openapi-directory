@@ -15,9 +15,11 @@ public class DescribeTrustedAdvisorCheckResultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public TrustedAdvisorCheckResult result;
+
     public DescribeTrustedAdvisorCheckResultResponse withResult(TrustedAdvisorCheckResult result) {
         this.result = result;
         return this;
     }
     
+    public DescribeTrustedAdvisorCheckResultResponse(){}
 }

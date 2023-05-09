@@ -18,9 +18,11 @@ public class StatefulPolicyPreservedState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disks")
     public java.util.Map<String, StatefulPolicyPreservedStateDiskDevice> disks;
+
     public StatefulPolicyPreservedState withDisks(java.util.Map<String, StatefulPolicyPreservedStateDiskDevice> disks) {
         this.disks = disks;
         return this;
     }
     
+    public StatefulPolicyPreservedState(){}
 }

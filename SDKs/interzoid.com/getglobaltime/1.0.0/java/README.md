@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetglobaltimeRequest;
 import org.openapis.openapi.models.operations.GetglobaltimeResponse;
 
@@ -26,19 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetglobaltimeRequest req = new GetglobaltimeRequest() {{
-                license = "corrupti";
-                locale = "provident";
-            }}            
+            GetglobaltimeRequest req = new GetglobaltimeRequest("corrupti", "provident");            
 
             GetglobaltimeResponse res = sdk.currentGlobalTime.getglobaltime(req);
 
-            if (res.getglobaltime200ApplicationJSONObject.isPresent()) {
+            if (res.getglobaltime200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,9 +44,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### currentGlobalTime
+### [currentGlobalTime](docs/currentglobaltime/README.md)
 
-* `getglobaltime` - Gets the current time for a global locale
+* [getglobaltime](docs/currentglobaltime/README.md#getglobaltime) - Gets the current time for a global locale
 <!-- End SDK Available Operations -->
 
 ### Maturity

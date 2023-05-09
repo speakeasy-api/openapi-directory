@@ -12,6 +12,7 @@ public class PostBenefitsDocumentUploadValidateDocument200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public PostBenefitsDocumentUploadValidateDocument200ApplicationJSONDataAttributes attributes;
+
     public PostBenefitsDocumentUploadValidateDocument200ApplicationJSONData withAttributes(PostBenefitsDocumentUploadValidateDocument200ApplicationJSONDataAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -23,9 +24,11 @@ public class PostBenefitsDocumentUploadValidateDocument200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PostBenefitsDocumentUploadValidateDocument200ApplicationJSONData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PostBenefitsDocumentUploadValidateDocument200ApplicationJSONData(){}
 }

@@ -15,6 +15,7 @@ public class PretargetingConfigVideoPlayerSizes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aspectRatio")
     public String aspectRatio;
+
     public PretargetingConfigVideoPlayerSizes withAspectRatio(String aspectRatio) {
         this.aspectRatio = aspectRatio;
         return this;
@@ -26,6 +27,7 @@ public class PretargetingConfigVideoPlayerSizes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minHeight")
     public String minHeight;
+
     public PretargetingConfigVideoPlayerSizes withMinHeight(String minHeight) {
         this.minHeight = minHeight;
         return this;
@@ -37,9 +39,11 @@ public class PretargetingConfigVideoPlayerSizes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minWidth")
     public String minWidth;
+
     public PretargetingConfigVideoPlayerSizes withMinWidth(String minWidth) {
         this.minWidth = minWidth;
         return this;
     }
     
+    public PretargetingConfigVideoPlayerSizes(){}
 }

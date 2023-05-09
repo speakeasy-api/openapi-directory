@@ -15,6 +15,7 @@ public class GetVolumes200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetVolumes200ApplicationJSONMeta meta;
+
     public GetVolumes200ApplicationJSON withMeta(GetVolumes200ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
@@ -22,9 +23,13 @@ public class GetVolumes200ApplicationJSON {
     
     @JsonProperty("volumes")
     public GetVolumes200ApplicationJSONVolumes[] volumes;
+
     public GetVolumes200ApplicationJSON withVolumes(GetVolumes200ApplicationJSONVolumes[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public GetVolumes200ApplicationJSON(@JsonProperty("volumes") GetVolumes200ApplicationJSONVolumes[] volumes) {
+        this.volumes = volumes;
+  }
 }

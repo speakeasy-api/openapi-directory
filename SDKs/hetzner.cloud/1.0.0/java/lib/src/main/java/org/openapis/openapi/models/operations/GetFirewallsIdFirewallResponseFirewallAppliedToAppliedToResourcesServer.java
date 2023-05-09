@@ -12,9 +12,13 @@ public class GetFirewallsIdFirewallResponseFirewallAppliedToAppliedToResourcesSe
      */
     @JsonProperty("id")
     public Long id;
+
     public GetFirewallsIdFirewallResponseFirewallAppliedToAppliedToResourcesServer withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetFirewallsIdFirewallResponseFirewallAppliedToAppliedToResourcesServer(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

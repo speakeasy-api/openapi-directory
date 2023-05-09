@@ -19,6 +19,7 @@ public class StartReadSetActivationJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public StartReadSetActivationJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +27,7 @@ public class StartReadSetActivationJobResponse {
     
     @JsonProperty("id")
     public String id;
+
     public StartReadSetActivationJobResponse withId(String id) {
         this.id = id;
         return this;
@@ -33,6 +35,7 @@ public class StartReadSetActivationJobResponse {
     
     @JsonProperty("sequenceStoreId")
     public String sequenceStoreId;
+
     public StartReadSetActivationJobResponse withSequenceStoreId(String sequenceStoreId) {
         this.sequenceStoreId = sequenceStoreId;
         return this;
@@ -40,9 +43,16 @@ public class StartReadSetActivationJobResponse {
     
     @JsonProperty("status")
     public ReadSetActivationJobStatusEnum status;
+
     public StartReadSetActivationJobResponse withStatus(ReadSetActivationJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public StartReadSetActivationJobResponse(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") String id, @JsonProperty("sequenceStoreId") String sequenceStoreId, @JsonProperty("status") ReadSetActivationJobStatusEnum status) {
+        this.creationTime = creationTime;
+        this.id = id;
+        this.sequenceStoreId = sequenceStoreId;
+        this.status = status;
+  }
 }

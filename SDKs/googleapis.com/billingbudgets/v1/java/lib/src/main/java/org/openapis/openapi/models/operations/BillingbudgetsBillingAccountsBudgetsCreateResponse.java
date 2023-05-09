@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BillingbudgetsBillingAccountsBudgetsCreateResponse {
     
     public String contentType;
+
     public BillingbudgetsBillingAccountsBudgetsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BillingbudgetsBillingAccountsBudgetsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudBillingBudgetsV1Budget googleCloudBillingBudgetsV1Budget;
+
     public BillingbudgetsBillingAccountsBudgetsCreateResponse withGoogleCloudBillingBudgetsV1Budget(org.openapis.openapi.models.shared.GoogleCloudBillingBudgetsV1Budget googleCloudBillingBudgetsV1Budget) {
         this.googleCloudBillingBudgetsV1Budget = googleCloudBillingBudgetsV1Budget;
         return this;
@@ -26,6 +29,7 @@ public class BillingbudgetsBillingAccountsBudgetsCreateResponse {
     
     
     public Integer statusCode;
+
     public BillingbudgetsBillingAccountsBudgetsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BillingbudgetsBillingAccountsBudgetsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BillingbudgetsBillingAccountsBudgetsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BillingbudgetsBillingAccountsBudgetsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

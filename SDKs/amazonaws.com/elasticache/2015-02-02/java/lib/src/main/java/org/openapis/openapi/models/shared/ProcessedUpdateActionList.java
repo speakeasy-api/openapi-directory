@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ProcessedUpdateActionList {
     
     public String cacheClusterId;
+
     public ProcessedUpdateActionList withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -19,6 +20,7 @@ public class ProcessedUpdateActionList {
     
     
     public String replicationGroupId;
+
     public ProcessedUpdateActionList withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -26,6 +28,7 @@ public class ProcessedUpdateActionList {
     
     
     public String serviceUpdateName;
+
     public ProcessedUpdateActionList withServiceUpdateName(String serviceUpdateName) {
         this.serviceUpdateName = serviceUpdateName;
         return this;
@@ -33,9 +36,11 @@ public class ProcessedUpdateActionList {
     
     
     public UpdateActionStatusEnum updateActionStatus;
+
     public ProcessedUpdateActionList withUpdateActionStatus(UpdateActionStatusEnum updateActionStatus) {
         this.updateActionStatus = updateActionStatus;
         return this;
     }
     
+    public ProcessedUpdateActionList(){}
 }

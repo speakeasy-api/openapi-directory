@@ -18,6 +18,7 @@ public class CreateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentId")
     public String parentId;
+
     public CreateProjectRequest withParentId(String parentId) {
         this.parentId = parentId;
         return this;
@@ -29,9 +30,11 @@ public class CreateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public CreateProjectRequest withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CreateProjectRequest(){}
 }

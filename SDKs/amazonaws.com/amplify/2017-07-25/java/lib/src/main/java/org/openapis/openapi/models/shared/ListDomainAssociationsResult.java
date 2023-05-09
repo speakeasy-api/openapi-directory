@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDomainAssociationsResult {
     @JsonProperty("domainAssociations")
     public DomainAssociation[] domainAssociations;
+
     public ListDomainAssociationsResult withDomainAssociations(DomainAssociation[] domainAssociations) {
         this.domainAssociations = domainAssociations;
         return this;
@@ -22,9 +23,13 @@ public class ListDomainAssociationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDomainAssociationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDomainAssociationsResult(@JsonProperty("domainAssociations") DomainAssociation[] domainAssociations) {
+        this.domainAssociations = domainAssociations;
+  }
 }

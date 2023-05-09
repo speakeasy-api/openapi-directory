@@ -18,6 +18,7 @@ public class TagBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public TagBindingInput withParent(String parent) {
         this.parent = parent;
         return this;
@@ -29,9 +30,23 @@ public class TagBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagValue")
     public String tagValue;
+
     public TagBindingInput withTagValue(String tagValue) {
         this.tagValue = tagValue;
         return this;
     }
     
+    /**
+     * The namespaced name for the TagValue of the TagBinding. Must be in the format `{parent_id}/{tag_key_short_name}/{short_name}`. For methods that support TagValue namespaced name, only one of tag_value_namespaced_name or tag_value may be filled. Requests with both fields will be rejected.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tagValueNamespacedName")
+    public String tagValueNamespacedName;
+
+    public TagBindingInput withTagValueNamespacedName(String tagValueNamespacedName) {
+        this.tagValueNamespacedName = tagValueNamespacedName;
+        return this;
+    }
+    
+    public TagBindingInput(){}
 }

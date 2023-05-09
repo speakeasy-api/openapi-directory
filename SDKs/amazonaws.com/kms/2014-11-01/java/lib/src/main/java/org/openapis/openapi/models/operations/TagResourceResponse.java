@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagResourceResponse {
     
     public String contentType;
+
     public TagResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TagResourceResponse {
      */
     
     public Object invalidArnException;
+
     public TagResourceResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -29,6 +32,7 @@ public class TagResourceResponse {
      */
     
     public Object kmsInternalException;
+
     public TagResourceResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -39,6 +43,7 @@ public class TagResourceResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public TagResourceResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class TagResourceResponse {
      */
     
     public Object limitExceededException;
+
     public TagResourceResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class TagResourceResponse {
      */
     
     public Object notFoundException;
+
     public TagResourceResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class TagResourceResponse {
     
     
     public Integer statusCode;
+
     public TagResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class TagResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class TagResourceResponse {
      */
     
     public Object tagException;
+
     public TagResourceResponse withTagException(Object tagException) {
         this.tagException = tagException;
         return this;
     }
     
+    public TagResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

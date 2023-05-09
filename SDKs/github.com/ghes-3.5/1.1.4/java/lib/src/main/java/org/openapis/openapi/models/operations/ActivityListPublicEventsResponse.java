@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActivityListPublicEventsResponse {
     
     public String contentType;
+
     public ActivityListPublicEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActivityListPublicEventsResponse {
     
     
     public Integer statusCode;
+
     public ActivityListPublicEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActivityListPublicEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActivityListPublicEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ActivityListPublicEventsResponse {
      */
     
     public ActivityListPublicEvents503ApplicationJSON activityListPublicEvents503ApplicationJSONObject;
+
     public ActivityListPublicEventsResponse withActivityListPublicEvents503ApplicationJSONObject(ActivityListPublicEvents503ApplicationJSON activityListPublicEvents503ApplicationJSONObject) {
         this.activityListPublicEvents503ApplicationJSONObject = activityListPublicEvents503ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ActivityListPublicEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ActivityListPublicEventsResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -53,9 +59,14 @@ public class ActivityListPublicEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.Event[] events;
+
     public ActivityListPublicEventsResponse withEvents(org.openapis.openapi.models.shared.Event[] events) {
         this.events = events;
         return this;
     }
     
+    public ActivityListPublicEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

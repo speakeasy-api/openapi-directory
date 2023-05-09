@@ -15,6 +15,7 @@ public class SubmissionEntryTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public SubmissionEntryTo withAddress(String address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class SubmissionEntryTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String[] fields;
+
     public SubmissionEntryTo withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -40,6 +42,7 @@ public class SubmissionEntryTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SubmissionEntryTo withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class SubmissionEntryTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SubmissionEntryTo withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class SubmissionEntryTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SubmissionEntryToTypeEnum type;
+
     public SubmissionEntryTo withType(SubmissionEntryToTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SubmissionEntryTo(){}
 }

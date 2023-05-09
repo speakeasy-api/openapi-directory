@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesPlaceCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableKeys")
     public String[] availableKeys;
+
     public TflApiPresentationEntitiesPlaceCategory withAvailableKeys(String[] availableKeys) {
         this.availableKeys = availableKeys;
         return this;
@@ -20,9 +21,11 @@ public class TflApiPresentationEntitiesPlaceCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public TflApiPresentationEntitiesPlaceCategory withCategory(String category) {
         this.category = category;
         return this;
     }
     
+    public TflApiPresentationEntitiesPlaceCategory(){}
 }

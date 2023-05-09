@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentRefundRequest {
@@ -12,9 +13,13 @@ public class GetPaymentRefundRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=refund_id")
     public String refundId;
+
     public GetPaymentRefundRequest withRefundId(String refundId) {
         this.refundId = refundId;
         return this;
     }
     
+    public GetPaymentRefundRequest(@JsonProperty("refund_id") String refundId) {
+        this.refundId = refundId;
+  }
 }

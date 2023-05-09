@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetArtifactRuleConfigRequest {
@@ -12,6 +13,7 @@ public class GetArtifactRuleConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
     public String artifactId;
+
     public GetArtifactRuleConfigRequest withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -22,6 +24,7 @@ public class GetArtifactRuleConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public GetArtifactRuleConfigRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -32,9 +35,15 @@ public class GetArtifactRuleConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rule")
     public GetArtifactRuleConfigRuleEnum rule;
+
     public GetArtifactRuleConfigRequest withRule(GetArtifactRuleConfigRuleEnum rule) {
         this.rule = rule;
         return this;
     }
     
+    public GetArtifactRuleConfigRequest(@JsonProperty("artifactId") String artifactId, @JsonProperty("groupId") String groupId, @JsonProperty("rule") GetArtifactRuleConfigRuleEnum rule) {
+        this.artifactId = artifactId;
+        this.groupId = groupId;
+        this.rule = rule;
+  }
 }

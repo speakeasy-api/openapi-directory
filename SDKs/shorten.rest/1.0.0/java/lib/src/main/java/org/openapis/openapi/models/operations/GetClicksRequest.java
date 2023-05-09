@@ -12,6 +12,7 @@ public class GetClicksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=continueFrom")
     public String continueFrom;
+
     public GetClicksRequest withContinueFrom(String continueFrom) {
         this.continueFrom = continueFrom;
         return this;
@@ -22,9 +23,11 @@ public class GetClicksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetClicksRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetClicksRequest(){}
 }

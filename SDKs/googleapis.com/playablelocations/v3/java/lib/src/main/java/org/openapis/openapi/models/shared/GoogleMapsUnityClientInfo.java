@@ -18,6 +18,7 @@ public class GoogleMapsUnityClientInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiClient")
     public String apiClient;
+
     public GoogleMapsUnityClientInfo withApiClient(String apiClient) {
         this.apiClient = apiClient;
         return this;
@@ -29,6 +30,7 @@ public class GoogleMapsUnityClientInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationId")
     public String applicationId;
+
     public GoogleMapsUnityClientInfo withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleMapsUnityClientInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationVersion")
     public String applicationVersion;
+
     public GoogleMapsUnityClientInfo withApplicationVersion(String applicationVersion) {
         this.applicationVersion = applicationVersion;
         return this;
@@ -51,6 +54,7 @@ public class GoogleMapsUnityClientInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceModel")
     public String deviceModel;
+
     public GoogleMapsUnityClientInfo withDeviceModel(String deviceModel) {
         this.deviceModel = deviceModel;
         return this;
@@ -62,6 +66,7 @@ public class GoogleMapsUnityClientInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleMapsUnityClientInfo withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -73,6 +78,7 @@ public class GoogleMapsUnityClientInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystem")
     public String operatingSystem;
+
     public GoogleMapsUnityClientInfo withOperatingSystem(String operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -84,6 +90,7 @@ public class GoogleMapsUnityClientInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystemBuild")
     public String operatingSystemBuild;
+
     public GoogleMapsUnityClientInfo withOperatingSystemBuild(String operatingSystemBuild) {
         this.operatingSystemBuild = operatingSystemBuild;
         return this;
@@ -95,9 +102,11 @@ public class GoogleMapsUnityClientInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public GoogleMapsUnityClientInfoPlatformEnum platform;
+
     public GoogleMapsUnityClientInfo withPlatform(GoogleMapsUnityClientInfoPlatformEnum platform) {
         this.platform = platform;
         return this;
     }
     
+    public GoogleMapsUnityClientInfo(){}
 }

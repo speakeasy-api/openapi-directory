@@ -15,6 +15,7 @@ public class PerformanceInsightsMetricsDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricDisplayName")
     public String metricDisplayName;
+
     public PerformanceInsightsMetricsDetail withMetricDisplayName(String metricDisplayName) {
         this.metricDisplayName = metricDisplayName;
         return this;
@@ -23,6 +24,7 @@ public class PerformanceInsightsMetricsDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricQuery")
     public PerformanceInsightsMetricQuery metricQuery;
+
     public PerformanceInsightsMetricsDetail withMetricQuery(PerformanceInsightsMetricQuery metricQuery) {
         this.metricQuery = metricQuery;
         return this;
@@ -31,6 +33,7 @@ public class PerformanceInsightsMetricsDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceData")
     public PerformanceInsightsReferenceData[] referenceData;
+
     public PerformanceInsightsMetricsDetail withReferenceData(PerformanceInsightsReferenceData[] referenceData) {
         this.referenceData = referenceData;
         return this;
@@ -39,6 +42,7 @@ public class PerformanceInsightsMetricsDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatsAtAnomaly")
     public PerformanceInsightsStat[] statsAtAnomaly;
+
     public PerformanceInsightsMetricsDetail withStatsAtAnomaly(PerformanceInsightsStat[] statsAtAnomaly) {
         this.statsAtAnomaly = statsAtAnomaly;
         return this;
@@ -47,6 +51,7 @@ public class PerformanceInsightsMetricsDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatsAtBaseline")
     public PerformanceInsightsStat[] statsAtBaseline;
+
     public PerformanceInsightsMetricsDetail withStatsAtBaseline(PerformanceInsightsStat[] statsAtBaseline) {
         this.statsAtBaseline = statsAtBaseline;
         return this;
@@ -55,9 +60,11 @@ public class PerformanceInsightsMetricsDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public String unit;
+
     public PerformanceInsightsMetricsDetail withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public PerformanceInsightsMetricsDetail(){}
 }

@@ -15,6 +15,7 @@ public class EbsBlockDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteOnTermination")
     public Boolean deleteOnTermination;
+
     public EbsBlockDevice withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -23,6 +24,7 @@ public class EbsBlockDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Iops")
     public Long iops;
+
     public EbsBlockDevice withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -31,6 +33,7 @@ public class EbsBlockDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotId")
     public String snapshotId;
+
     public EbsBlockDevice withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -39,6 +42,7 @@ public class EbsBlockDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeSize")
     public Long volumeSize;
+
     public EbsBlockDevice withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
@@ -47,9 +51,11 @@ public class EbsBlockDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeType")
     public VolumeTypeEnum volumeType;
+
     public EbsBlockDevice withVolumeType(VolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public EbsBlockDevice(){}
 }

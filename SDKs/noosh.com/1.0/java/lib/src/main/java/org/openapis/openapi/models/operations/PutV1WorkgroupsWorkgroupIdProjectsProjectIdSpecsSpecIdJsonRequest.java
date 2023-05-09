@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SpecUpdatePersistVO specUpdatePersistVO;
+
     public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest withSpecUpdatePersistVO(org.openapis.openapi.models.shared.SpecUpdatePersistVO specUpdatePersistVO) {
         this.specUpdatePersistVO = specUpdatePersistVO;
         return this;
@@ -16,6 +18,7 @@ public class PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public String projectId;
+
     public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -23,6 +26,7 @@ public class PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec_id")
     public String specId;
+
     public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest withSpecId(String specId) {
         this.specId = specId;
         return this;
@@ -30,9 +34,15 @@ public class PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest(@JsonProperty("project_id") String projectId, @JsonProperty("spec_id") String specId, @JsonProperty("workgroup_id") String workgroupId) {
+        this.projectId = projectId;
+        this.specId = specId;
+        this.workgroupId = workgroupId;
+  }
 }

@@ -15,6 +15,7 @@ public class ListBotLocalesRequestBodySortBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute")
     public org.openapis.openapi.models.shared.BotLocaleSortAttributeEnum attribute;
+
     public ListBotLocalesRequestBodySortBy withAttribute(org.openapis.openapi.models.shared.BotLocaleSortAttributeEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -23,9 +24,11 @@ public class ListBotLocalesRequestBodySortBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public org.openapis.openapi.models.shared.SortOrderEnum order;
+
     public ListBotLocalesRequestBodySortBy withOrder(org.openapis.openapi.models.shared.SortOrderEnum order) {
         this.order = order;
         return this;
     }
     
+    public ListBotLocalesRequestBodySortBy(){}
 }

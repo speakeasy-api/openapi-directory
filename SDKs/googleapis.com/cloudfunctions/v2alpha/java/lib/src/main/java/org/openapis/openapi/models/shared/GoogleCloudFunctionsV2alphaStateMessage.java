@@ -18,6 +18,7 @@ public class GoogleCloudFunctionsV2alphaStateMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GoogleCloudFunctionsV2alphaStateMessage withMessage(String message) {
         this.message = message;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudFunctionsV2alphaStateMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public GoogleCloudFunctionsV2alphaStateMessageSeverityEnum severity;
+
     public GoogleCloudFunctionsV2alphaStateMessage withSeverity(GoogleCloudFunctionsV2alphaStateMessageSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudFunctionsV2alphaStateMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudFunctionsV2alphaStateMessage withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudFunctionsV2alphaStateMessage(){}
 }

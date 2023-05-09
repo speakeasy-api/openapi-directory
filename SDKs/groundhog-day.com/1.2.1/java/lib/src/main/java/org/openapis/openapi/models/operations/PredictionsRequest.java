@@ -12,9 +12,11 @@ public class PredictionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public PredictionsRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public PredictionsRequest(){}
 }

@@ -21,6 +21,7 @@ public class FileV1 {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("created_at")
     public LocalDate createdAt;
+
     public FileV1 withCreatedAt(LocalDate createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -32,6 +33,7 @@ public class FileV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_name")
     public String fileName;
+
     public FileV1 withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -43,6 +45,7 @@ public class FileV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public FileV1FormatEnum format;
+
     public FileV1 withFormat(FileV1FormatEnum format) {
         this.format = format;
         return this;
@@ -54,6 +57,7 @@ public class FileV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FileV1 withId(String id) {
         this.id = id;
         return this;
@@ -65,6 +69,7 @@ public class FileV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public FileV1 withSize(Long size) {
         this.size = size;
         return this;
@@ -76,6 +81,7 @@ public class FileV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public FileV1StatusEnum status;
+
     public FileV1 withStatus(FileV1StatusEnum status) {
         this.status = status;
         return this;
@@ -87,6 +93,7 @@ public class FileV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public FileV1 withText(String text) {
         this.text = text;
         return this;
@@ -98,9 +105,11 @@ public class FileV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public FileV1TypeEnum type;
+
     public FileV1 withType(FileV1TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public FileV1(){}
 }

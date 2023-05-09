@@ -18,6 +18,7 @@ public class GoogleIdentityAccesscontextmanagerV1AccessLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basic")
     public GoogleIdentityAccesscontextmanagerV1BasicLevel basic;
+
     public GoogleIdentityAccesscontextmanagerV1AccessLevel withBasic(GoogleIdentityAccesscontextmanagerV1BasicLevel basic) {
         this.basic = basic;
         return this;
@@ -29,6 +30,7 @@ public class GoogleIdentityAccesscontextmanagerV1AccessLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom")
     public GoogleIdentityAccesscontextmanagerV1CustomLevel custom;
+
     public GoogleIdentityAccesscontextmanagerV1AccessLevel withCustom(GoogleIdentityAccesscontextmanagerV1CustomLevel custom) {
         this.custom = custom;
         return this;
@@ -40,6 +42,7 @@ public class GoogleIdentityAccesscontextmanagerV1AccessLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleIdentityAccesscontextmanagerV1AccessLevel withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleIdentityAccesscontextmanagerV1AccessLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleIdentityAccesscontextmanagerV1AccessLevel withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class GoogleIdentityAccesscontextmanagerV1AccessLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleIdentityAccesscontextmanagerV1AccessLevel withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleIdentityAccesscontextmanagerV1AccessLevel(){}
 }

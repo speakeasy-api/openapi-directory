@@ -15,6 +15,7 @@ public class ReceiptPrinting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantApproved")
     public Boolean merchantApproved;
+
     public ReceiptPrinting withMerchantApproved(Boolean merchantApproved) {
         this.merchantApproved = merchantApproved;
         return this;
@@ -26,6 +27,7 @@ public class ReceiptPrinting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantCancelled")
     public Boolean merchantCancelled;
+
     public ReceiptPrinting withMerchantCancelled(Boolean merchantCancelled) {
         this.merchantCancelled = merchantCancelled;
         return this;
@@ -37,6 +39,7 @@ public class ReceiptPrinting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantCaptureApproved")
     public Boolean merchantCaptureApproved;
+
     public ReceiptPrinting withMerchantCaptureApproved(Boolean merchantCaptureApproved) {
         this.merchantCaptureApproved = merchantCaptureApproved;
         return this;
@@ -48,6 +51,7 @@ public class ReceiptPrinting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantCaptureRefused")
     public Boolean merchantCaptureRefused;
+
     public ReceiptPrinting withMerchantCaptureRefused(Boolean merchantCaptureRefused) {
         this.merchantCaptureRefused = merchantCaptureRefused;
         return this;
@@ -59,6 +63,7 @@ public class ReceiptPrinting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantRefundApproved")
     public Boolean merchantRefundApproved;
+
     public ReceiptPrinting withMerchantRefundApproved(Boolean merchantRefundApproved) {
         this.merchantRefundApproved = merchantRefundApproved;
         return this;
@@ -70,6 +75,7 @@ public class ReceiptPrinting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantRefundRefused")
     public Boolean merchantRefundRefused;
+
     public ReceiptPrinting withMerchantRefundRefused(Boolean merchantRefundRefused) {
         this.merchantRefundRefused = merchantRefundRefused;
         return this;
@@ -81,6 +87,7 @@ public class ReceiptPrinting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantRefused")
     public Boolean merchantRefused;
+
     public ReceiptPrinting withMerchantRefused(Boolean merchantRefused) {
         this.merchantRefused = merchantRefused;
         return this;
@@ -92,6 +99,7 @@ public class ReceiptPrinting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantVoid")
     public Boolean merchantVoid;
+
     public ReceiptPrinting withMerchantVoid(Boolean merchantVoid) {
         this.merchantVoid = merchantVoid;
         return this;
@@ -103,6 +111,7 @@ public class ReceiptPrinting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperApproved")
     public Boolean shopperApproved;
+
     public ReceiptPrinting withShopperApproved(Boolean shopperApproved) {
         this.shopperApproved = shopperApproved;
         return this;
@@ -114,6 +123,7 @@ public class ReceiptPrinting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperCancelled")
     public Boolean shopperCancelled;
+
     public ReceiptPrinting withShopperCancelled(Boolean shopperCancelled) {
         this.shopperCancelled = shopperCancelled;
         return this;
@@ -125,6 +135,7 @@ public class ReceiptPrinting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperCaptureApproved")
     public Boolean shopperCaptureApproved;
+
     public ReceiptPrinting withShopperCaptureApproved(Boolean shopperCaptureApproved) {
         this.shopperCaptureApproved = shopperCaptureApproved;
         return this;
@@ -136,6 +147,7 @@ public class ReceiptPrinting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperCaptureRefused")
     public Boolean shopperCaptureRefused;
+
     public ReceiptPrinting withShopperCaptureRefused(Boolean shopperCaptureRefused) {
         this.shopperCaptureRefused = shopperCaptureRefused;
         return this;
@@ -147,6 +159,7 @@ public class ReceiptPrinting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperRefundApproved")
     public Boolean shopperRefundApproved;
+
     public ReceiptPrinting withShopperRefundApproved(Boolean shopperRefundApproved) {
         this.shopperRefundApproved = shopperRefundApproved;
         return this;
@@ -158,6 +171,7 @@ public class ReceiptPrinting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperRefundRefused")
     public Boolean shopperRefundRefused;
+
     public ReceiptPrinting withShopperRefundRefused(Boolean shopperRefundRefused) {
         this.shopperRefundRefused = shopperRefundRefused;
         return this;
@@ -169,6 +183,7 @@ public class ReceiptPrinting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperRefused")
     public Boolean shopperRefused;
+
     public ReceiptPrinting withShopperRefused(Boolean shopperRefused) {
         this.shopperRefused = shopperRefused;
         return this;
@@ -180,9 +195,11 @@ public class ReceiptPrinting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperVoid")
     public Boolean shopperVoid;
+
     public ReceiptPrinting withShopperVoid(Boolean shopperVoid) {
         this.shopperVoid = shopperVoid;
         return this;
     }
     
+    public ReceiptPrinting(){}
 }

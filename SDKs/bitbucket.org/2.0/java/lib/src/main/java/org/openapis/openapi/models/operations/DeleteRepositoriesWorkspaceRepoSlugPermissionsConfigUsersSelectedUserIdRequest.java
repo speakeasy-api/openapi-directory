@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest {
@@ -14,6 +15,7 @@ public class DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUs
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -26,6 +28,7 @@ public class DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUs
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user_id")
     public String selectedUserId;
+
     public DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest withSelectedUserId(String selectedUserId) {
         this.selectedUserId = selectedUserId;
         return this;
@@ -38,9 +41,15 @@ public class DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUs
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest(@JsonProperty("repo_slug") String repoSlug, @JsonProperty("selected_user_id") String selectedUserId, @JsonProperty("workspace") String workspace) {
+        this.repoSlug = repoSlug;
+        this.selectedUserId = selectedUserId;
+        this.workspace = workspace;
+  }
 }

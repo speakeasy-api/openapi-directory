@@ -12,6 +12,7 @@ public class ContinuousProjectLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("editors")
     public java.util.Map<String, Href> editors;
+
     public ContinuousProjectLinks withEditors(java.util.Map<String, Href> editors) {
         this.editors = editors;
         return this;
@@ -20,9 +21,11 @@ public class ContinuousProjectLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Href self;
+
     public ContinuousProjectLinks withSelf(Href self) {
         this.self = self;
         return this;
     }
     
+    public ContinuousProjectLinks(){}
 }

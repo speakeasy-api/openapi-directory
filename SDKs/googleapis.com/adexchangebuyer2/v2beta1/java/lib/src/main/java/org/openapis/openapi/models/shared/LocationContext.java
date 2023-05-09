@@ -18,9 +18,11 @@ public class LocationContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoCriteriaIds")
     public Integer[] geoCriteriaIds;
+
     public LocationContext withGeoCriteriaIds(Integer[] geoCriteriaIds) {
         this.geoCriteriaIds = geoCriteriaIds;
         return this;
     }
     
+    public LocationContext(){}
 }

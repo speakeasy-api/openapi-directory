@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterComputeResponse {
     
     public String contentType;
+
     public DeregisterComputeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterComputeResponse {
      */
     
     public java.util.Map<String, Object> deregisterComputeOutput;
+
     public DeregisterComputeResponse withDeregisterComputeOutput(java.util.Map<String, Object> deregisterComputeOutput) {
         this.deregisterComputeOutput = deregisterComputeOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterComputeResponse {
      */
     
     public Object internalServiceException;
+
     public DeregisterComputeResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterComputeResponse {
      */
     
     public Object invalidRequestException;
+
     public DeregisterComputeResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeregisterComputeResponse {
      */
     
     public Object notFoundException;
+
     public DeregisterComputeResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeregisterComputeResponse {
     
     
     public Integer statusCode;
+
     public DeregisterComputeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeregisterComputeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterComputeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeregisterComputeResponse {
      */
     
     public Object unauthorizedException;
+
     public DeregisterComputeResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeregisterComputeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

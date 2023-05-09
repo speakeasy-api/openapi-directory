@@ -22,6 +22,7 @@ public class ActivateSubscriptionRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("recoverBeginPeriodOrderLastModificationUtcDate")
     public OffsetDateTime recoverBeginPeriodOrderLastModificationUtcDate;
+
     public ActivateSubscriptionRequest withRecoverBeginPeriodOrderLastModificationUtcDate(OffsetDateTime recoverBeginPeriodOrderLastModificationUtcDate) {
         this.recoverBeginPeriodOrderLastModificationUtcDate = recoverBeginPeriodOrderLastModificationUtcDate;
         return this;
@@ -39,9 +40,11 @@ public class ActivateSubscriptionRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("recoverEndPeriodOrderLastModificationUtcDate")
     public OffsetDateTime recoverEndPeriodOrderLastModificationUtcDate;
+
     public ActivateSubscriptionRequest withRecoverEndPeriodOrderLastModificationUtcDate(OffsetDateTime recoverEndPeriodOrderLastModificationUtcDate) {
         this.recoverEndPeriodOrderLastModificationUtcDate = recoverEndPeriodOrderLastModificationUtcDate;
         return this;
     }
     
+    public ActivateSubscriptionRequest(){}
 }

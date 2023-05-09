@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeAvailabilityOptionsRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;DescribeAvailabilityOptions&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to describe. To show the active configuration and exclude any pending changes, set the Deployed option to &lt;code&gt;true&lt;/code&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAvailabilityOptionsRequest {
     
     public Boolean deployed;
+
     public DescribeAvailabilityOptionsRequest withDeployed(Boolean deployed) {
         this.deployed = deployed;
         return this;
@@ -19,9 +20,13 @@ public class DescribeAvailabilityOptionsRequest {
     
     
     public String domainName;
+
     public DescribeAvailabilityOptionsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public DescribeAvailabilityOptionsRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

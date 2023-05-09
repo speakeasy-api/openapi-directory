@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListAllowedNodeTypeModificationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETListAllowedNodeTypeModificationsActionEnum action;
+
     public GETListAllowedNodeTypeModificationsRequest withAction(GETListAllowedNodeTypeModificationsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETListAllowedNodeTypeModificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheClusterId")
     public String cacheClusterId;
+
     public GETListAllowedNodeTypeModificationsRequest withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -29,6 +32,7 @@ public class GETListAllowedNodeTypeModificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReplicationGroupId")
     public String replicationGroupId;
+
     public GETListAllowedNodeTypeModificationsRequest withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -36,6 +40,7 @@ public class GETListAllowedNodeTypeModificationsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETListAllowedNodeTypeModificationsVersionEnum version;
+
     public GETListAllowedNodeTypeModificationsRequest withVersion(GETListAllowedNodeTypeModificationsVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETListAllowedNodeTypeModificationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETListAllowedNodeTypeModificationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETListAllowedNodeTypeModificationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETListAllowedNodeTypeModificationsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETListAllowedNodeTypeModificationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETListAllowedNodeTypeModificationsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETListAllowedNodeTypeModificationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETListAllowedNodeTypeModificationsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETListAllowedNodeTypeModificationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETListAllowedNodeTypeModificationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETListAllowedNodeTypeModificationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETListAllowedNodeTypeModificationsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,14 @@ public class GETListAllowedNodeTypeModificationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETListAllowedNodeTypeModificationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETListAllowedNodeTypeModificationsRequest(@JsonProperty("Action") GETListAllowedNodeTypeModificationsActionEnum action, @JsonProperty("Version") GETListAllowedNodeTypeModificationsVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

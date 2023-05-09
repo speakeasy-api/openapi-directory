@@ -15,6 +15,7 @@ public class NodesCitationListCitationDetailAttributes {
      */
     
     public String author;
+
     public NodesCitationListCitationDetailAttributes withAuthor(String author) {
         this.author = author;
         return this;
@@ -25,6 +26,7 @@ public class NodesCitationListCitationDetailAttributes {
      */
     
     public String doi;
+
     public NodesCitationListCitationDetailAttributes withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -35,6 +37,7 @@ public class NodesCitationListCitationDetailAttributes {
      */
     
     public String publisher;
+
     public NodesCitationListCitationDetailAttributes withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
@@ -45,9 +48,11 @@ public class NodesCitationListCitationDetailAttributes {
      */
     
     public String title;
+
     public NodesCitationListCitationDetailAttributes withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public NodesCitationListCitationDetailAttributes(){}
 }

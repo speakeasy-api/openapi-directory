@@ -15,6 +15,7 @@ public class ListFleetsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.Filter[] filters;
+
     public ListFleetsRequestBody withFilters(org.openapis.openapi.models.shared.Filter[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class ListFleetsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListFleetsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class ListFleetsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFleetsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFleetsRequestBody(){}
 }

@@ -12,6 +12,7 @@ public class GetPricing200ApplicationJSONPricingImagePricePerGbMonth {
      */
     @JsonProperty("gross")
     public String gross;
+
     public GetPricing200ApplicationJSONPricingImagePricePerGbMonth withGross(String gross) {
         this.gross = gross;
         return this;
@@ -22,9 +23,14 @@ public class GetPricing200ApplicationJSONPricingImagePricePerGbMonth {
      */
     @JsonProperty("net")
     public String net;
+
     public GetPricing200ApplicationJSONPricingImagePricePerGbMonth withNet(String net) {
         this.net = net;
         return this;
     }
     
+    public GetPricing200ApplicationJSONPricingImagePricePerGbMonth(@JsonProperty("gross") String gross, @JsonProperty("net") String net) {
+        this.gross = gross;
+        this.net = net;
+  }
 }

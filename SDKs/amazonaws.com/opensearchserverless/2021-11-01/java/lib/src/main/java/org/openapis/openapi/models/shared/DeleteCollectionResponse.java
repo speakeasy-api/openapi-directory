@@ -15,9 +15,11 @@ public class DeleteCollectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteCollectionDetail")
     public DeleteCollectionDetail deleteCollectionDetail;
+
     public DeleteCollectionResponse withDeleteCollectionDetail(DeleteCollectionDetail deleteCollectionDetail) {
         this.deleteCollectionDetail = deleteCollectionDetail;
         return this;
     }
     
+    public DeleteCollectionResponse(){}
 }

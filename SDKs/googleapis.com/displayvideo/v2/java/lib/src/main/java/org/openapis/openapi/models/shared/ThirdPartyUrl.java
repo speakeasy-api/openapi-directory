@@ -18,6 +18,7 @@ public class ThirdPartyUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ThirdPartyUrlTypeEnum type;
+
     public ThirdPartyUrl withType(ThirdPartyUrlTypeEnum type) {
         this.type = type;
         return this;
@@ -29,9 +30,11 @@ public class ThirdPartyUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ThirdPartyUrl withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ThirdPartyUrl(){}
 }

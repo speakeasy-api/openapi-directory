@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TargetContainerRepository {
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public TargetContainerRepository withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -19,9 +20,14 @@ public class TargetContainerRepository {
     
     @JsonProperty("service")
     public ContainerRepositoryServiceEnum service;
+
     public TargetContainerRepository withService(ContainerRepositoryServiceEnum service) {
         this.service = service;
         return this;
     }
     
+    public TargetContainerRepository(@JsonProperty("repositoryName") String repositoryName, @JsonProperty("service") ContainerRepositoryServiceEnum service) {
+        this.repositoryName = repositoryName;
+        this.service = service;
+  }
 }

@@ -18,9 +18,11 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public SearchResult[] results;
+
     public SearchResponse withResults(SearchResult[] results) {
         this.results = results;
         return this;
     }
     
+    public SearchResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAddonsResponse {
@@ -12,6 +13,7 @@ public class ListAddonsResponse {
      */
     
     public Object clientException;
+
     public ListAddonsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class ListAddonsResponse {
     
     
     public String contentType;
+
     public ListAddonsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAddonsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListAddonsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListAddonsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListAddonsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListAddonsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAddonsResponse listAddonsResponse;
+
     public ListAddonsResponse withListAddonsResponse(org.openapis.openapi.models.shared.ListAddonsResponse listAddonsResponse) {
         this.listAddonsResponse = listAddonsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListAddonsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAddonsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListAddonsResponse {
      */
     
     public Object serverException;
+
     public ListAddonsResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -76,6 +84,7 @@ public class ListAddonsResponse {
     
     
     public Integer statusCode;
+
     public ListAddonsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListAddonsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAddonsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAddonsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SaveMultipleReviewsResponse {
     
     public String contentType;
+
     public SaveMultipleReviewsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SaveMultipleReviewsResponse {
      */
     
     public String[] saveMultipleReviews200ApplicationJSONStrings;
+
     public SaveMultipleReviewsResponse withSaveMultipleReviews200ApplicationJSONStrings(String[] saveMultipleReviews200ApplicationJSONStrings) {
         this.saveMultipleReviews200ApplicationJSONStrings = saveMultipleReviews200ApplicationJSONStrings;
         return this;
@@ -26,6 +29,7 @@ public class SaveMultipleReviewsResponse {
     
     
     public Integer statusCode;
+
     public SaveMultipleReviewsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SaveMultipleReviewsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SaveMultipleReviewsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SaveMultipleReviewsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

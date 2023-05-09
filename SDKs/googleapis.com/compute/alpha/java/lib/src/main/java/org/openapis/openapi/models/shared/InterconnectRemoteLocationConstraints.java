@@ -15,6 +15,7 @@ public class InterconnectRemoteLocationConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portPairRemoteLocation")
     public InterconnectRemoteLocationConstraintsPortPairRemoteLocationEnum portPairRemoteLocation;
+
     public InterconnectRemoteLocationConstraints withPortPairRemoteLocation(InterconnectRemoteLocationConstraintsPortPairRemoteLocationEnum portPairRemoteLocation) {
         this.portPairRemoteLocation = portPairRemoteLocation;
         return this;
@@ -26,6 +27,7 @@ public class InterconnectRemoteLocationConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portPairVlan")
     public InterconnectRemoteLocationConstraintsPortPairVlanEnum portPairVlan;
+
     public InterconnectRemoteLocationConstraints withPortPairVlan(InterconnectRemoteLocationConstraintsPortPairVlanEnum portPairVlan) {
         this.portPairVlan = portPairVlan;
         return this;
@@ -34,9 +36,11 @@ public class InterconnectRemoteLocationConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetLengthRange")
     public InterconnectRemoteLocationConstraintsSubnetLengthRange subnetLengthRange;
+
     public InterconnectRemoteLocationConstraints withSubnetLengthRange(InterconnectRemoteLocationConstraintsSubnetLengthRange subnetLengthRange) {
         this.subnetLengthRange = subnetLengthRange;
         return this;
     }
     
+    public InterconnectRemoteLocationConstraints(){}
 }

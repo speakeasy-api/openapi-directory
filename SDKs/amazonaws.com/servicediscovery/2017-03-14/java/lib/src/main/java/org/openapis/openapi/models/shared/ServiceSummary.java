@@ -20,6 +20,7 @@ public class ServiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ServiceSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class ServiceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateDate")
     public OffsetDateTime createDate;
+
     public ServiceSummary withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -38,6 +40,7 @@ public class ServiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ServiceSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class ServiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsConfig")
     public DnsConfig dnsConfig;
+
     public ServiceSummary withDnsConfig(DnsConfig dnsConfig) {
         this.dnsConfig = dnsConfig;
         return this;
@@ -54,6 +58,7 @@ public class ServiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheckConfig")
     public HealthCheckConfig healthCheckConfig;
+
     public ServiceSummary withHealthCheckConfig(HealthCheckConfig healthCheckConfig) {
         this.healthCheckConfig = healthCheckConfig;
         return this;
@@ -62,6 +67,7 @@ public class ServiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheckCustomConfig")
     public HealthCheckCustomConfig healthCheckCustomConfig;
+
     public ServiceSummary withHealthCheckCustomConfig(HealthCheckCustomConfig healthCheckCustomConfig) {
         this.healthCheckCustomConfig = healthCheckCustomConfig;
         return this;
@@ -70,6 +76,7 @@ public class ServiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ServiceSummary withId(String id) {
         this.id = id;
         return this;
@@ -78,6 +85,7 @@ public class ServiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceCount")
     public Long instanceCount;
+
     public ServiceSummary withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -86,6 +94,7 @@ public class ServiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ServiceSummary withName(String name) {
         this.name = name;
         return this;
@@ -94,9 +103,11 @@ public class ServiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ServiceTypeEnum type;
+
     public ServiceSummary withType(ServiceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ServiceSummary(){}
 }

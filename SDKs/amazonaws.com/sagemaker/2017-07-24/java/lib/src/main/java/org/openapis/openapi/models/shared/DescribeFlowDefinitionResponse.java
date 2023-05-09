@@ -21,6 +21,7 @@ public class DescribeFlowDefinitionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeFlowDefinitionResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class DescribeFlowDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeFlowDefinitionResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -36,6 +38,7 @@ public class DescribeFlowDefinitionResponse {
     
     @JsonProperty("FlowDefinitionArn")
     public String flowDefinitionArn;
+
     public DescribeFlowDefinitionResponse withFlowDefinitionArn(String flowDefinitionArn) {
         this.flowDefinitionArn = flowDefinitionArn;
         return this;
@@ -43,6 +46,7 @@ public class DescribeFlowDefinitionResponse {
     
     @JsonProperty("FlowDefinitionName")
     public String flowDefinitionName;
+
     public DescribeFlowDefinitionResponse withFlowDefinitionName(String flowDefinitionName) {
         this.flowDefinitionName = flowDefinitionName;
         return this;
@@ -50,6 +54,7 @@ public class DescribeFlowDefinitionResponse {
     
     @JsonProperty("FlowDefinitionStatus")
     public FlowDefinitionStatusEnum flowDefinitionStatus;
+
     public DescribeFlowDefinitionResponse withFlowDefinitionStatus(FlowDefinitionStatusEnum flowDefinitionStatus) {
         this.flowDefinitionStatus = flowDefinitionStatus;
         return this;
@@ -58,6 +63,7 @@ public class DescribeFlowDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanLoopActivationConfig")
     public HumanLoopActivationConfig humanLoopActivationConfig;
+
     public DescribeFlowDefinitionResponse withHumanLoopActivationConfig(HumanLoopActivationConfig humanLoopActivationConfig) {
         this.humanLoopActivationConfig = humanLoopActivationConfig;
         return this;
@@ -65,6 +71,7 @@ public class DescribeFlowDefinitionResponse {
     
     @JsonProperty("HumanLoopConfig")
     public HumanLoopConfig humanLoopConfig;
+
     public DescribeFlowDefinitionResponse withHumanLoopConfig(HumanLoopConfig humanLoopConfig) {
         this.humanLoopConfig = humanLoopConfig;
         return this;
@@ -73,6 +80,7 @@ public class DescribeFlowDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanLoopRequestSource")
     public HumanLoopRequestSource humanLoopRequestSource;
+
     public DescribeFlowDefinitionResponse withHumanLoopRequestSource(HumanLoopRequestSource humanLoopRequestSource) {
         this.humanLoopRequestSource = humanLoopRequestSource;
         return this;
@@ -80,6 +88,7 @@ public class DescribeFlowDefinitionResponse {
     
     @JsonProperty("OutputConfig")
     public FlowDefinitionOutputConfig outputConfig;
+
     public DescribeFlowDefinitionResponse withOutputConfig(FlowDefinitionOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -87,9 +96,19 @@ public class DescribeFlowDefinitionResponse {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeFlowDefinitionResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public DescribeFlowDefinitionResponse(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("FlowDefinitionArn") String flowDefinitionArn, @JsonProperty("FlowDefinitionName") String flowDefinitionName, @JsonProperty("FlowDefinitionStatus") FlowDefinitionStatusEnum flowDefinitionStatus, @JsonProperty("HumanLoopConfig") HumanLoopConfig humanLoopConfig, @JsonProperty("OutputConfig") FlowDefinitionOutputConfig outputConfig, @JsonProperty("RoleArn") String roleArn) {
+        this.creationTime = creationTime;
+        this.flowDefinitionArn = flowDefinitionArn;
+        this.flowDefinitionName = flowDefinitionName;
+        this.flowDefinitionStatus = flowDefinitionStatus;
+        this.humanLoopConfig = humanLoopConfig;
+        this.outputConfig = outputConfig;
+        this.roleArn = roleArn;
+  }
 }

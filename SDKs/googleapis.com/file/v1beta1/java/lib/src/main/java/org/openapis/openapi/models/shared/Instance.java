@@ -18,6 +18,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityGb")
     public String capacityGb;
+
     public Instance withCapacityGb(String capacityGb) {
         this.capacityGb = capacityGb;
         return this;
@@ -29,6 +30,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityStepSizeGb")
     public String capacityStepSizeGb;
+
     public Instance withCapacityStepSizeGb(String capacityStepSizeGb) {
         this.capacityStepSizeGb = capacityStepSizeGb;
         return this;
@@ -40,6 +42,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Instance withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,8 +54,21 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Instance withDescription(String description) {
         this.description = description;
+        return this;
+    }
+    
+    /**
+     * Directory Services configuration for Kerberos-based authentication.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("directoryServices")
+    public DirectoryServicesConfig directoryServices;
+
+    public Instance withDirectoryServices(DirectoryServicesConfig directoryServices) {
+        this.directoryServices = directoryServices;
         return this;
     }
     
@@ -62,6 +78,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Instance withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -73,6 +90,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileShares")
     public FileShareConfig[] fileShares;
+
     public Instance withFileShares(FileShareConfig[] fileShares) {
         this.fileShares = fileShares;
         return this;
@@ -84,6 +102,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public Instance withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
@@ -95,6 +114,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Instance withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -106,17 +126,19 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxCapacityGb")
     public String maxCapacityGb;
+
     public Instance withMaxCapacityGb(String maxCapacityGb) {
         this.maxCapacityGb = maxCapacityGb;
         return this;
     }
     
     /**
-     * Output only. The max number of shares allowed.
+     * The max number of shares allowed.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxShareCount")
     public String maxShareCount;
+
     public Instance withMaxShareCount(String maxShareCount) {
         this.maxShareCount = maxShareCount;
         return this;
@@ -128,6 +150,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiShareEnabled")
     public Boolean multiShareEnabled;
+
     public Instance withMultiShareEnabled(Boolean multiShareEnabled) {
         this.multiShareEnabled = multiShareEnabled;
         return this;
@@ -139,6 +162,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Instance withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +174,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networks")
     public NetworkConfig[] networks;
+
     public Instance withNetworks(NetworkConfig[] networks) {
         this.networks = networks;
         return this;
@@ -161,6 +186,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public InstanceProtocolEnum protocol;
+
     public Instance withProtocol(InstanceProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -172,6 +198,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satisfiesPzs")
     public Boolean satisfiesPzs;
+
     public Instance withSatisfiesPzs(Boolean satisfiesPzs) {
         this.satisfiesPzs = satisfiesPzs;
         return this;
@@ -183,6 +210,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public InstanceStateEnum state;
+
     public Instance withState(InstanceStateEnum state) {
         this.state = state;
         return this;
@@ -194,6 +222,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public Instance withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -205,6 +234,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspensionReasons")
     public InstanceSuspensionReasonsEnum[] suspensionReasons;
+
     public Instance withSuspensionReasons(InstanceSuspensionReasonsEnum[] suspensionReasons) {
         this.suspensionReasons = suspensionReasons;
         return this;
@@ -216,9 +246,11 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tier")
     public InstanceTierEnum tier;
+
     public Instance withTier(InstanceTierEnum tier) {
         this.tier = tier;
         return this;
     }
     
+    public Instance(){}
 }

@@ -18,19 +18,33 @@ public class GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupIds")
     public String[] groupIds;
+
     public GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest withGroupIds(String[] groupIds) {
         this.groupIds = groupIds;
         return this;
     }
     
     /**
-     * Required. The namespace of the policy type for the request.
+     * The namespace of the policy type for the request.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyNamespace")
     public String policyNamespace;
+
     public GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest withPolicyNamespace(String policyNamespace) {
         this.policyNamespace = policyNamespace;
+        return this;
+    }
+    
+    /**
+     * The schema name of the policy for the request.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("policySchema")
+    public String policySchema;
+
+    public GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest withPolicySchema(String policySchema) {
+        this.policySchema = policySchema;
         return this;
     }
     
@@ -40,9 +54,11 @@ public class GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyTargetKey")
     public GoogleChromePolicyVersionsV1PolicyTargetKey policyTargetKey;
+
     public GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest withPolicyTargetKey(GoogleChromePolicyVersionsV1PolicyTargetKey policyTargetKey) {
         this.policyTargetKey = policyTargetKey;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest(){}
 }

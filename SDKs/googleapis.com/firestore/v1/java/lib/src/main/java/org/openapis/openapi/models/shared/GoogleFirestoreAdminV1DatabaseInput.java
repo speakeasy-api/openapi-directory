@@ -18,6 +18,7 @@ public class GoogleFirestoreAdminV1DatabaseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appEngineIntegrationMode")
     public GoogleFirestoreAdminV1DatabaseAppEngineIntegrationModeEnum appEngineIntegrationMode;
+
     public GoogleFirestoreAdminV1DatabaseInput withAppEngineIntegrationMode(GoogleFirestoreAdminV1DatabaseAppEngineIntegrationModeEnum appEngineIntegrationMode) {
         this.appEngineIntegrationMode = appEngineIntegrationMode;
         return this;
@@ -29,8 +30,21 @@ public class GoogleFirestoreAdminV1DatabaseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concurrencyMode")
     public GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum concurrencyMode;
+
     public GoogleFirestoreAdminV1DatabaseInput withConcurrencyMode(GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum concurrencyMode) {
         this.concurrencyMode = concurrencyMode;
+        return this;
+    }
+    
+    /**
+     * State of delete protection for the database.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deleteProtectionState")
+    public GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum deleteProtectionState;
+
+    public GoogleFirestoreAdminV1DatabaseInput withDeleteProtectionState(GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum deleteProtectionState) {
+        this.deleteProtectionState = deleteProtectionState;
         return this;
     }
     
@@ -40,6 +54,7 @@ public class GoogleFirestoreAdminV1DatabaseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleFirestoreAdminV1DatabaseInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +66,7 @@ public class GoogleFirestoreAdminV1DatabaseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public GoogleFirestoreAdminV1DatabaseInput withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -62,6 +78,7 @@ public class GoogleFirestoreAdminV1DatabaseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleFirestoreAdminV1DatabaseInput withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +90,11 @@ public class GoogleFirestoreAdminV1DatabaseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleFirestoreAdminV1DatabaseTypeEnum type;
+
     public GoogleFirestoreAdminV1DatabaseInput withType(GoogleFirestoreAdminV1DatabaseTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleFirestoreAdminV1DatabaseInput(){}
 }

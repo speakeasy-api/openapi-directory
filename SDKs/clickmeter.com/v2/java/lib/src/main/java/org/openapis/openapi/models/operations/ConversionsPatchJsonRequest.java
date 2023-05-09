@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsPatchJsonRequest {
@@ -12,6 +13,7 @@ public class ConversionsPatchJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApiCoreRequestsConversionPatchBody apiCoreRequestsConversionPatchBody;
+
     public ConversionsPatchJsonRequest withApiCoreRequestsConversionPatchBody(org.openapis.openapi.models.shared.ApiCoreRequestsConversionPatchBody apiCoreRequestsConversionPatchBody) {
         this.apiCoreRequestsConversionPatchBody = apiCoreRequestsConversionPatchBody;
         return this;
@@ -22,9 +24,14 @@ public class ConversionsPatchJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
     public Long conversionId;
+
     public ConversionsPatchJsonRequest withConversionId(Long conversionId) {
         this.conversionId = conversionId;
         return this;
     }
     
+    public ConversionsPatchJsonRequest(@JsonProperty("Api.Core.Requests.ConversionPatchBody") org.openapis.openapi.models.shared.ApiCoreRequestsConversionPatchBody apiCoreRequestsConversionPatchBody, @JsonProperty("conversionId") Long conversionId) {
+        this.apiCoreRequestsConversionPatchBody = apiCoreRequestsConversionPatchBody;
+        this.conversionId = conversionId;
+  }
 }

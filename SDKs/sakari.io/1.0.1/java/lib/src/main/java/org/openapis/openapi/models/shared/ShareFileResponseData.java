@@ -19,6 +19,7 @@ public class ShareFileResponseData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expires")
     public OffsetDateTime expires;
+
     public ShareFileResponseData withExpires(OffsetDateTime expires) {
         this.expires = expires;
         return this;
@@ -27,9 +28,11 @@ public class ShareFileResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public ShareFileResponseData withLink(String link) {
         this.link = link;
         return this;
     }
     
+    public ShareFileResponseData(){}
 }

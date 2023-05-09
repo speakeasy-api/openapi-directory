@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSoftwareUpdateJobResponse {
@@ -12,6 +13,7 @@ public class CreateSoftwareUpdateJobResponse {
      */
     
     public Object badRequestException;
+
     public CreateSoftwareUpdateJobResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateSoftwareUpdateJobResponse {
     
     
     public String contentType;
+
     public CreateSoftwareUpdateJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateSoftwareUpdateJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSoftwareUpdateJobResponse createSoftwareUpdateJobResponse;
+
     public CreateSoftwareUpdateJobResponse withCreateSoftwareUpdateJobResponse(org.openapis.openapi.models.shared.CreateSoftwareUpdateJobResponse createSoftwareUpdateJobResponse) {
         this.createSoftwareUpdateJobResponse = createSoftwareUpdateJobResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateSoftwareUpdateJobResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateSoftwareUpdateJobResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -46,6 +51,7 @@ public class CreateSoftwareUpdateJobResponse {
     
     
     public Integer statusCode;
+
     public CreateSoftwareUpdateJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateSoftwareUpdateJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSoftwareUpdateJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateSoftwareUpdateJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

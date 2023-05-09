@@ -15,6 +15,7 @@ public class ScriptParameterKeyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public ScriptParameterKeyValue withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class ScriptParameterKeyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ScriptParameterKeyValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ScriptParameterKeyValue(){}
 }

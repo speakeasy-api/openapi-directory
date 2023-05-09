@@ -15,6 +15,7 @@ public class CognitoStreams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CognitoStreams withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -23,6 +24,7 @@ public class CognitoStreams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public CognitoStreams withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -31,9 +33,11 @@ public class CognitoStreams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamingStatus")
     public StreamingStatusEnum streamingStatus;
+
     public CognitoStreams withStreamingStatus(StreamingStatusEnum streamingStatus) {
         this.streamingStatus = streamingStatus;
         return this;
     }
     
+    public CognitoStreams(){}
 }

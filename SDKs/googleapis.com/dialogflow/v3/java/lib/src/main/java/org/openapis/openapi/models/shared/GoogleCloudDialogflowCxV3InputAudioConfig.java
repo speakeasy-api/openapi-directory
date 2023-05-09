@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioEncoding")
     public GoogleCloudDialogflowCxV3InputAudioConfigAudioEncodingEnum audioEncoding;
+
     public GoogleCloudDialogflowCxV3InputAudioConfig withAudioEncoding(GoogleCloudDialogflowCxV3InputAudioConfigAudioEncodingEnum audioEncoding) {
         this.audioEncoding = audioEncoding;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableWordInfo")
     public Boolean enableWordInfo;
+
     public GoogleCloudDialogflowCxV3InputAudioConfig withEnableWordInfo(Boolean enableWordInfo) {
         this.enableWordInfo = enableWordInfo;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public GoogleCloudDialogflowCxV3InputAudioConfig withModel(String model) {
         this.model = model;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelVariant")
     public GoogleCloudDialogflowCxV3InputAudioConfigModelVariantEnum modelVariant;
+
     public GoogleCloudDialogflowCxV3InputAudioConfig withModelVariant(GoogleCloudDialogflowCxV3InputAudioConfigModelVariantEnum modelVariant) {
         this.modelVariant = modelVariant;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phraseHints")
     public String[] phraseHints;
+
     public GoogleCloudDialogflowCxV3InputAudioConfig withPhraseHints(String[] phraseHints) {
         this.phraseHints = phraseHints;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowCxV3InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleRateHertz")
     public Integer sampleRateHertz;
+
     public GoogleCloudDialogflowCxV3InputAudioConfig withSampleRateHertz(Integer sampleRateHertz) {
         this.sampleRateHertz = sampleRateHertz;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDialogflowCxV3InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("singleUtterance")
     public Boolean singleUtterance;
+
     public GoogleCloudDialogflowCxV3InputAudioConfig withSingleUtterance(Boolean singleUtterance) {
         this.singleUtterance = singleUtterance;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3InputAudioConfig(){}
 }

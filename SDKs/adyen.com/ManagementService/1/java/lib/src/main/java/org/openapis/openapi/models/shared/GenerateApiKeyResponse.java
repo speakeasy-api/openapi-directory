@@ -15,9 +15,13 @@ public class GenerateApiKeyResponse {
      */
     @JsonProperty("apiKey")
     public String apiKey;
+
     public GenerateApiKeyResponse withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public GenerateApiKeyResponse(@JsonProperty("apiKey") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

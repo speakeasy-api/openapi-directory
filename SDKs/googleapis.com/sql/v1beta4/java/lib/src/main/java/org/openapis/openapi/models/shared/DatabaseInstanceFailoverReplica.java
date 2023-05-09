@@ -18,6 +18,7 @@ public class DatabaseInstanceFailoverReplica {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available")
     public Boolean available;
+
     public DatabaseInstanceFailoverReplica withAvailable(Boolean available) {
         this.available = available;
         return this;
@@ -29,9 +30,11 @@ public class DatabaseInstanceFailoverReplica {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DatabaseInstanceFailoverReplica withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DatabaseInstanceFailoverReplica(){}
 }

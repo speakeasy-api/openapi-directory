@@ -15,6 +15,7 @@ public class AccountReport {
      */
     @JsonProperty("account_id")
     public Long accountId;
+
     public AccountReport withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class AccountReport {
      */
     @JsonProperty("created_date")
     public String createdDate;
+
     public AccountReport withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -35,6 +37,7 @@ public class AccountReport {
      */
     @JsonProperty("download_url")
     public String downloadUrl;
+
     public AccountReport withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -45,6 +48,7 @@ public class AccountReport {
      */
     @JsonProperty("group_id")
     public Long groupId;
+
     public AccountReport withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -55,6 +59,7 @@ public class AccountReport {
      */
     @JsonProperty("id")
     public Long id;
+
     public AccountReport withId(Long id) {
         this.id = id;
         return this;
@@ -65,9 +70,18 @@ public class AccountReport {
      */
     @JsonProperty("status")
     public AccountReportStatusEnum status;
+
     public AccountReport withStatus(AccountReportStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AccountReport(@JsonProperty("account_id") Long accountId, @JsonProperty("created_date") String createdDate, @JsonProperty("download_url") String downloadUrl, @JsonProperty("group_id") Long groupId, @JsonProperty("id") Long id, @JsonProperty("status") AccountReportStatusEnum status) {
+        this.accountId = accountId;
+        this.createdDate = createdDate;
+        this.downloadUrl = downloadUrl;
+        this.groupId = groupId;
+        this.id = id;
+        this.status = status;
+  }
 }

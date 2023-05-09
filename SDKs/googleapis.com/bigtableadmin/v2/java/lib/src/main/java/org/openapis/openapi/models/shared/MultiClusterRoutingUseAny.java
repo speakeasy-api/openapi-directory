@@ -18,9 +18,11 @@ public class MultiClusterRoutingUseAny {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterIds")
     public String[] clusterIds;
+
     public MultiClusterRoutingUseAny withClusterIds(String[] clusterIds) {
         this.clusterIds = clusterIds;
         return this;
     }
     
+    public MultiClusterRoutingUseAny(){}
 }

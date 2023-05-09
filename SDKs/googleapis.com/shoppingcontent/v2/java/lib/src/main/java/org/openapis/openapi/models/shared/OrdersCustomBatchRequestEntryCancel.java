@@ -15,6 +15,7 @@ public class OrdersCustomBatchRequestEntryCancel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public OrdersCustomBatchRequestEntryCancel withReason(String reason) {
         this.reason = reason;
         return this;
@@ -26,9 +27,11 @@ public class OrdersCustomBatchRequestEntryCancel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonText")
     public String reasonText;
+
     public OrdersCustomBatchRequestEntryCancel withReasonText(String reasonText) {
         this.reasonText = reasonText;
         return this;
     }
     
+    public OrdersCustomBatchRequestEntryCancel(){}
 }

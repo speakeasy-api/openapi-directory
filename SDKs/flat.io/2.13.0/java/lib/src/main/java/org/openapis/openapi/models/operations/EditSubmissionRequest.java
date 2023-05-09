@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditSubmissionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AssignmentSubmissionUpdate assignmentSubmissionUpdate;
+
     public EditSubmissionRequest withAssignmentSubmissionUpdate(org.openapis.openapi.models.shared.AssignmentSubmissionUpdate assignmentSubmissionUpdate) {
         this.assignmentSubmissionUpdate = assignmentSubmissionUpdate;
         return this;
@@ -19,6 +21,7 @@ public class EditSubmissionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignment")
     public String assignment;
+
     public EditSubmissionRequest withAssignment(String assignment) {
         this.assignment = assignment;
         return this;
@@ -29,6 +32,7 @@ public class EditSubmissionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
     public String class_;
+
     public EditSubmissionRequest withClass(String class_) {
         this.class_ = class_;
         return this;
@@ -39,9 +43,16 @@ public class EditSubmissionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=submission")
     public String submission;
+
     public EditSubmissionRequest withSubmission(String submission) {
         this.submission = submission;
         return this;
     }
     
+    public EditSubmissionRequest(@JsonProperty("AssignmentSubmissionUpdate") org.openapis.openapi.models.shared.AssignmentSubmissionUpdate assignmentSubmissionUpdate, @JsonProperty("assignment") String assignment, @JsonProperty("class") String class_, @JsonProperty("submission") String submission) {
+        this.assignmentSubmissionUpdate = assignmentSubmissionUpdate;
+        this.assignment = assignment;
+        this.class_ = class_;
+        this.submission = submission;
+  }
 }

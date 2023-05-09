@@ -17,6 +17,7 @@ public class V1UpdateOrderRequest {
      */
     @JsonProperty("action")
     public String action;
+
     public V1UpdateOrderRequest withAction(String action) {
         this.action = action;
         return this;
@@ -28,6 +29,7 @@ public class V1UpdateOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canceled_note")
     public String canceledNote;
+
     public V1UpdateOrderRequest withCanceledNote(String canceledNote) {
         this.canceledNote = canceledNote;
         return this;
@@ -39,6 +41,7 @@ public class V1UpdateOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed_note")
     public String completedNote;
+
     public V1UpdateOrderRequest withCompletedNote(String completedNote) {
         this.completedNote = completedNote;
         return this;
@@ -50,6 +53,7 @@ public class V1UpdateOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_note")
     public String refundedNote;
+
     public V1UpdateOrderRequest withRefundedNote(String refundedNote) {
         this.refundedNote = refundedNote;
         return this;
@@ -61,9 +65,13 @@ public class V1UpdateOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipped_tracking_number")
     public String shippedTrackingNumber;
+
     public V1UpdateOrderRequest withShippedTrackingNumber(String shippedTrackingNumber) {
         this.shippedTrackingNumber = shippedTrackingNumber;
         return this;
     }
     
+    public V1UpdateOrderRequest(@JsonProperty("action") String action) {
+        this.action = action;
+  }
 }

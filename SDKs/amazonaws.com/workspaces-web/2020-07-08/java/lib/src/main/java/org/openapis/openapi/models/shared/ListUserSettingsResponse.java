@@ -15,6 +15,7 @@ public class ListUserSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListUserSettingsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListUserSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userSettings")
     public UserSettingsSummary[] userSettings;
+
     public ListUserSettingsResponse withUserSettings(UserSettingsSummary[] userSettings) {
         this.userSettings = userSettings;
         return this;
     }
     
+    public ListUserSettingsResponse(){}
 }

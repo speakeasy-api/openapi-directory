@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsCreateContentAttachmentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AppsCreateContentAttachmentRequestBody requestBody;
+
     public AppsCreateContentAttachmentRequest withRequestBody(AppsCreateContentAttachmentRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class AppsCreateContentAttachmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=content_reference_id")
     public Long contentReferenceId;
+
     public AppsCreateContentAttachmentRequest withContentReferenceId(Long contentReferenceId) {
         this.contentReferenceId = contentReferenceId;
         return this;
@@ -29,6 +32,7 @@ public class AppsCreateContentAttachmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public AppsCreateContentAttachmentRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -39,9 +43,16 @@ public class AppsCreateContentAttachmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public AppsCreateContentAttachmentRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public AppsCreateContentAttachmentRequest(@JsonProperty("RequestBody") AppsCreateContentAttachmentRequestBody requestBody, @JsonProperty("content_reference_id") Long contentReferenceId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.requestBody = requestBody;
+        this.contentReferenceId = contentReferenceId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

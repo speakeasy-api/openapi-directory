@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLocalGatewayRouteTableRequestTagSpecifications {
     
     public CreateLocalGatewayRouteTableRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateLocalGatewayRouteTableRequestTagSpecifications withResourceType(CreateLocalGatewayRouteTableRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateLocalGatewayRouteTableRequestTagSpecifications {
     
     
     public CreateLocalGatewayRouteTableRequestTagSpecificationsTags[] tags;
+
     public CreateLocalGatewayRouteTableRequestTagSpecifications withTags(CreateLocalGatewayRouteTableRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLocalGatewayRouteTableRequestTagSpecifications(){}
 }

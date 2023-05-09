@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnableIpamOrganizationAdminAccountRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETEnableIpamOrganizationAdminAccountActionEnum action;
+
     public GETEnableIpamOrganizationAdminAccountRequest withAction(GETEnableIpamOrganizationAdminAccountActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETEnableIpamOrganizationAdminAccountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DelegatedAdminAccountId")
     public String delegatedAdminAccountId;
+
     public GETEnableIpamOrganizationAdminAccountRequest withDelegatedAdminAccountId(String delegatedAdminAccountId) {
         this.delegatedAdminAccountId = delegatedAdminAccountId;
         return this;
@@ -29,6 +32,7 @@ public class GETEnableIpamOrganizationAdminAccountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETEnableIpamOrganizationAdminAccountRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -36,6 +40,7 @@ public class GETEnableIpamOrganizationAdminAccountRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETEnableIpamOrganizationAdminAccountVersionEnum version;
+
     public GETEnableIpamOrganizationAdminAccountRequest withVersion(GETEnableIpamOrganizationAdminAccountVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETEnableIpamOrganizationAdminAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETEnableIpamOrganizationAdminAccountRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETEnableIpamOrganizationAdminAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETEnableIpamOrganizationAdminAccountRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETEnableIpamOrganizationAdminAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETEnableIpamOrganizationAdminAccountRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETEnableIpamOrganizationAdminAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETEnableIpamOrganizationAdminAccountRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETEnableIpamOrganizationAdminAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETEnableIpamOrganizationAdminAccountRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETEnableIpamOrganizationAdminAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETEnableIpamOrganizationAdminAccountRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETEnableIpamOrganizationAdminAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETEnableIpamOrganizationAdminAccountRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETEnableIpamOrganizationAdminAccountRequest(@JsonProperty("Action") GETEnableIpamOrganizationAdminAccountActionEnum action, @JsonProperty("DelegatedAdminAccountId") String delegatedAdminAccountId, @JsonProperty("Version") GETEnableIpamOrganizationAdminAccountVersionEnum version) {
+        this.action = action;
+        this.delegatedAdminAccountId = delegatedAdminAccountId;
+        this.version = version;
+  }
 }

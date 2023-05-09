@@ -62,12 +62,10 @@ public class Transactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionsResponse res = new org.openapis.openapi.models.operations.GetTransactionsResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionsResponse res = new org.openapis.openapi.models.operations.GetTransactionsResponse(contentType, httpRes.statusCode()) {{
             transactionSearchResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,12 +109,10 @@ public class Transactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionsIdResponse res = new org.openapis.openapi.models.operations.GetTransactionsIdResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionsIdResponse res = new org.openapis.openapi.models.operations.GetTransactionsIdResponse(contentType, httpRes.statusCode()) {{
             transaction = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

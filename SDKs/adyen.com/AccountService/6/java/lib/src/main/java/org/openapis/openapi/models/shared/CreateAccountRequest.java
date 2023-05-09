@@ -14,6 +14,7 @@ public class CreateAccountRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public CreateAccountRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -25,6 +26,7 @@ public class CreateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountUUID")
     public String bankAccountUUID;
+
     public CreateAccountRequest withBankAccountUUID(String bankAccountUUID) {
         this.bankAccountUUID = bankAccountUUID;
         return this;
@@ -36,6 +38,7 @@ public class CreateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateAccountRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -49,6 +52,7 @@ public class CreateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public CreateAccountRequest withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -60,6 +64,7 @@ public class CreateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutMethodCode")
     public String payoutMethodCode;
+
     public CreateAccountRequest withPayoutMethodCode(String payoutMethodCode) {
         this.payoutMethodCode = payoutMethodCode;
         return this;
@@ -72,6 +77,7 @@ public class CreateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutSchedule")
     public CreateAccountRequestPayoutScheduleEnum payoutSchedule;
+
     public CreateAccountRequest withPayoutSchedule(CreateAccountRequestPayoutScheduleEnum payoutSchedule) {
         this.payoutSchedule = payoutSchedule;
         return this;
@@ -84,6 +90,7 @@ public class CreateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutScheduleReason")
     public String payoutScheduleReason;
+
     public CreateAccountRequest withPayoutScheduleReason(String payoutScheduleReason) {
         this.payoutScheduleReason = payoutScheduleReason;
         return this;
@@ -95,9 +102,13 @@ public class CreateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutSpeed")
     public CreateAccountRequestPayoutSpeedEnum payoutSpeed;
+
     public CreateAccountRequest withPayoutSpeed(CreateAccountRequestPayoutSpeedEnum payoutSpeed) {
         this.payoutSpeed = payoutSpeed;
         return this;
     }
     
+    public CreateAccountRequest(@JsonProperty("accountHolderCode") String accountHolderCode) {
+        this.accountHolderCode = accountHolderCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETSavedRevisionsCountUsingGETResponse {
     
     public String contentType;
+
     public GETSavedRevisionsCountUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GETSavedRevisionsCountUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETSavedRevisionsCountUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GETSavedRevisionsCountUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETSavedRevisionsCountUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GETSavedRevisionsCountUsingGETResponse {
      */
     
     public GETSavedRevisionsCountUsingGET200ApplicationJSON getSavedRevisionsCountUsingGET200ApplicationJSONObject;
+
     public GETSavedRevisionsCountUsingGETResponse withGETSavedRevisionsCountUsingGET200ApplicationJSONObject(GETSavedRevisionsCountUsingGET200ApplicationJSON getSavedRevisionsCountUsingGET200ApplicationJSONObject) {
         this.getSavedRevisionsCountUsingGET200ApplicationJSONObject = getSavedRevisionsCountUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GETSavedRevisionsCountUsingGETResponse {
      */
     
     public GETSavedRevisionsCountUsingGET400ApplicationJSON getSavedRevisionsCountUsingGET400ApplicationJSONObject;
+
     public GETSavedRevisionsCountUsingGETResponse withGETSavedRevisionsCountUsingGET400ApplicationJSONObject(GETSavedRevisionsCountUsingGET400ApplicationJSON getSavedRevisionsCountUsingGET400ApplicationJSONObject) {
         this.getSavedRevisionsCountUsingGET400ApplicationJSONObject = getSavedRevisionsCountUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GETSavedRevisionsCountUsingGETResponse {
      */
     
     public GETSavedRevisionsCountUsingGET401ApplicationJSON getSavedRevisionsCountUsingGET401ApplicationJSONObject;
+
     public GETSavedRevisionsCountUsingGETResponse withGETSavedRevisionsCountUsingGET401ApplicationJSONObject(GETSavedRevisionsCountUsingGET401ApplicationJSON getSavedRevisionsCountUsingGET401ApplicationJSONObject) {
         this.getSavedRevisionsCountUsingGET401ApplicationJSONObject = getSavedRevisionsCountUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GETSavedRevisionsCountUsingGETResponse {
      */
     
     public GETSavedRevisionsCountUsingGET500ApplicationJSON getSavedRevisionsCountUsingGET500ApplicationJSONObject;
+
     public GETSavedRevisionsCountUsingGETResponse withGETSavedRevisionsCountUsingGET500ApplicationJSONObject(GETSavedRevisionsCountUsingGET500ApplicationJSON getSavedRevisionsCountUsingGET500ApplicationJSONObject) {
         this.getSavedRevisionsCountUsingGET500ApplicationJSONObject = getSavedRevisionsCountUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public GETSavedRevisionsCountUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

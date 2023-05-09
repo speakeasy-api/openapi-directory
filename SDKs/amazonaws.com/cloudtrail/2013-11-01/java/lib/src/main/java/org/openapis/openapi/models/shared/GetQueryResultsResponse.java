@@ -15,6 +15,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public GetQueryResultsResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -23,6 +24,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetQueryResultsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,6 +33,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryResultRows")
     public java.util.Map<String, String>[][] queryResultRows;
+
     public GetQueryResultsResponse withQueryResultRows(java.util.Map<String, String>[][] queryResultRows) {
         this.queryResultRows = queryResultRows;
         return this;
@@ -39,6 +42,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryStatistics")
     public QueryStatistics queryStatistics;
+
     public GetQueryResultsResponse withQueryStatistics(QueryStatistics queryStatistics) {
         this.queryStatistics = queryStatistics;
         return this;
@@ -47,9 +51,11 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryStatus")
     public QueryStatusEnum queryStatus;
+
     public GetQueryResultsResponse withQueryStatus(QueryStatusEnum queryStatus) {
         this.queryStatus = queryStatus;
         return this;
     }
     
+    public GetQueryResultsResponse(){}
 }

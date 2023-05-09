@@ -20,9 +20,11 @@ public class Transcript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monologues")
     public TranscriptMonologues[] monologues;
+
     public Transcript withMonologues(TranscriptMonologues[] monologues) {
         this.monologues = monologues;
         return this;
     }
     
+    public Transcript(){}
 }

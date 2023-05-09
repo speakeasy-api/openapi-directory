@@ -18,6 +18,7 @@ public class JobExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public JobExecutionDetails withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class JobExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stages")
     public StageSummary[] stages;
+
     public JobExecutionDetails withStages(StageSummary[] stages) {
         this.stages = stages;
         return this;
     }
     
+    public JobExecutionDetails(){}
 }

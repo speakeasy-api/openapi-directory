@@ -17,6 +17,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automate_id")
     public String automateId;
+
     public Listing withAutomateId(String automateId) {
         this.automateId = automateId;
         return this;
@@ -25,6 +26,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blendr_id")
     public String blendrId;
+
     public Listing withBlendrId(String blendrId) {
         this.blendrId = blendrId;
         return this;
@@ -33,6 +35,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_background_color")
     public String cardBackgroundColor;
+
     public Listing withCardBackgroundColor(String cardBackgroundColor) {
         this.cardBackgroundColor = cardBackgroundColor;
         return this;
@@ -41,6 +44,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_background_image")
     public File cardBackgroundImage;
+
     public Listing withCardBackgroundImage(File cardBackgroundImage) {
         this.cardBackgroundImage = cardBackgroundImage;
         return this;
@@ -49,6 +53,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public Category[] categories;
+
     public Listing withCategories(Category[] categories) {
         this.categories = categories;
         return this;
@@ -57,6 +62,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloud_service_id")
     public String cloudServiceId;
+
     public Listing withCloudServiceId(String cloudServiceId) {
         this.cloudServiceId = cloudServiceId;
         return this;
@@ -65,6 +71,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections")
     public Collection[] collections;
+
     public Listing withCollections(Collection[] collections) {
         this.collections = collections;
         return this;
@@ -73,6 +80,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combidesk_id")
     public String combideskId;
+
     public Listing withCombideskId(String combideskId) {
         this.combideskId = combideskId;
         return this;
@@ -83,6 +91,7 @@ public class Listing {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Listing withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -91,6 +100,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Listing withDescription(String description) {
         this.description = description;
         return this;
@@ -99,6 +109,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail_page_disabled")
     public Boolean detailPageDisabled;
+
     public Listing withDetailPageDisabled(Boolean detailPageDisabled) {
         this.detailPageDisabled = detailPageDisabled;
         return this;
@@ -107,6 +118,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_id")
     public String externalId;
+
     public Listing withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -115,6 +127,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public String features;
+
     public Listing withFeatures(String features) {
         this.features = features;
         return this;
@@ -123,6 +136,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Listing withId(String id) {
         this.id = id;
         return this;
@@ -131,6 +145,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integromat_id")
     public String integromatId;
+
     public Listing withIntegromatId(String integromatId) {
         this.integromatId = integromatId;
         return this;
@@ -139,6 +154,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public Logo logo;
+
     public Listing withLogo(Logo logo) {
         this.logo = logo;
         return this;
@@ -147,6 +163,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     public Media[] media;
+
     public Listing withMedia(Media[] media) {
         this.media = media;
         return this;
@@ -155,6 +172,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta_tag_description")
     public String metaTagDescription;
+
     public Listing withMetaTagDescription(String metaTagDescription) {
         this.metaTagDescription = metaTagDescription;
         return this;
@@ -163,6 +181,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta_tag_keywords")
     public String metaTagKeywords;
+
     public Listing withMetaTagKeywords(String metaTagKeywords) {
         this.metaTagKeywords = metaTagKeywords;
         return this;
@@ -171,6 +190,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta_tag_title")
     public String metaTagTitle;
+
     public Listing withMetaTagTitle(String metaTagTitle) {
         this.metaTagTitle = metaTagTitle;
         return this;
@@ -179,6 +199,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("microsoft_flow_id")
     public String microsoftFlowId;
+
     public Listing withMicrosoftFlowId(String microsoftFlowId) {
         this.microsoftFlowId = microsoftFlowId;
         return this;
@@ -186,6 +207,7 @@ public class Listing {
     
     @JsonProperty("name")
     public String name;
+
     public Listing withName(String name) {
         this.name = name;
         return this;
@@ -194,6 +216,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native_integration")
     public Boolean nativeIntegration;
+
     public Listing withNativeIntegration(Boolean nativeIntegration) {
         this.nativeIntegration = nativeIntegration;
         return this;
@@ -202,6 +225,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native_integration_link")
     public String nativeIntegrationLink;
+
     public Listing withNativeIntegrationLink(String nativeIntegrationLink) {
         this.nativeIntegrationLink = nativeIntegrationLink;
         return this;
@@ -210,6 +234,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partner")
     public Partner partner;
+
     public Listing withPartner(Partner partner) {
         this.partner = partner;
         return this;
@@ -218,6 +243,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("piesync_id")
     public String piesyncId;
+
     public Listing withPiesyncId(String piesyncId) {
         this.piesyncId = piesyncId;
         return this;
@@ -226,6 +252,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricing")
     public String pricing;
+
     public Listing withPricing(String pricing) {
         this.pricing = pricing;
         return this;
@@ -234,6 +261,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public Product[] products;
+
     public Listing withProducts(Product[] products) {
         this.products = products;
         return this;
@@ -242,6 +270,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published")
     public Boolean published;
+
     public Listing withPublished(Boolean published) {
         this.published = published;
         return this;
@@ -252,6 +281,7 @@ public class Listing {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("published_at")
     public OffsetDateTime publishedAt;
+
     public Listing withPublishedAt(OffsetDateTime publishedAt) {
         this.publishedAt = publishedAt;
         return this;
@@ -260,6 +290,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenshots")
     public Screenshot[] screenshots;
+
     public Listing withScreenshots(Screenshot[] screenshots) {
         this.screenshots = screenshots;
         return this;
@@ -268,6 +299,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segment_id")
     public String segmentId;
+
     public Listing withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -275,6 +307,7 @@ public class Listing {
     
     @JsonProperty("slug")
     public String slug;
+
     public Listing withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -283,6 +316,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sticky")
     public Boolean sticky;
+
     public Listing withSticky(Boolean sticky) {
         this.sticky = sticky;
         return this;
@@ -291,6 +325,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag_line")
     public String tagLine;
+
     public Listing withTagLine(String tagLine) {
         this.tagLine = tagLine;
         return this;
@@ -299,6 +334,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("third_party_integration")
     public Boolean thirdPartyIntegration;
+
     public Listing withThirdPartyIntegration(Boolean thirdPartyIntegration) {
         this.thirdPartyIntegration = thirdPartyIntegration;
         return this;
@@ -307,6 +343,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("third_party_integration_link")
     public String thirdPartyIntegrationLink;
+
     public Listing withThirdPartyIntegrationLink(String thirdPartyIntegrationLink) {
         this.thirdPartyIntegrationLink = thirdPartyIntegrationLink;
         return this;
@@ -315,6 +352,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translations")
     public Translation[] translations;
+
     public Listing withTranslations(Translation[] translations) {
         this.translations = translations;
         return this;
@@ -323,6 +361,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tray_io_id")
     public String trayIoId;
+
     public Listing withTrayIoId(String trayIoId) {
         this.trayIoId = trayIoId;
         return this;
@@ -331,6 +370,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unify_connector_id")
     public String unifyConnectorId;
+
     public Listing withUnifyConnectorId(String unifyConnectorId) {
         this.unifyConnectorId = unifyConnectorId;
         return this;
@@ -339,6 +379,7 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upcoming")
     public Boolean upcoming;
+
     public Listing withUpcoming(Boolean upcoming) {
         this.upcoming = upcoming;
         return this;
@@ -349,6 +390,7 @@ public class Listing {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public Listing withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -357,9 +399,14 @@ public class Listing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zapier_id")
     public String zapierId;
+
     public Listing withZapierId(String zapierId) {
         this.zapierId = zapierId;
         return this;
     }
     
+    public Listing(@JsonProperty("name") String name, @JsonProperty("slug") String slug) {
+        this.name = name;
+        this.slug = slug;
+  }
 }

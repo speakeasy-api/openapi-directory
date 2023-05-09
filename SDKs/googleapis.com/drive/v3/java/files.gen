@@ -392,4 +392,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/ReplyList.java
 lib/src/main/java/org/openapis/openapi/models/shared/Revision.java
 lib/src/main/java/org/openapis/openapi/models/shared/RevisionList.java
 lib/src/main/java/org/openapis/openapi/models/shared/TeamDriveList.java
+docs/sdk/README.md
+docs/about/README.md
+docs/changes/README.md
+docs/channels/README.md
+docs/comments/README.md
+docs/drives/README.md
+docs/files/README.md
+docs/permissions/README.md
+docs/replies/README.md
+docs/revisions/README.md
+docs/teamdrives/README.md
 USAGE.md

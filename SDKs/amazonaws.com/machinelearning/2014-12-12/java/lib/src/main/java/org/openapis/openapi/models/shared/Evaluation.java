@@ -23,6 +23,7 @@ public class Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeTime")
     public Long computeTime;
+
     public Evaluation withComputeTime(Long computeTime) {
         this.computeTime = computeTime;
         return this;
@@ -33,6 +34,7 @@ public class Evaluation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public Evaluation withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -41,6 +43,7 @@ public class Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedByIamUser")
     public String createdByIamUser;
+
     public Evaluation withCreatedByIamUser(String createdByIamUser) {
         this.createdByIamUser = createdByIamUser;
         return this;
@@ -49,6 +52,7 @@ public class Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationDataSourceId")
     public String evaluationDataSourceId;
+
     public Evaluation withEvaluationDataSourceId(String evaluationDataSourceId) {
         this.evaluationDataSourceId = evaluationDataSourceId;
         return this;
@@ -57,6 +61,7 @@ public class Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationId")
     public String evaluationId;
+
     public Evaluation withEvaluationId(String evaluationId) {
         this.evaluationId = evaluationId;
         return this;
@@ -70,6 +75,7 @@ public class Evaluation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FinishedAt")
     public OffsetDateTime finishedAt;
+
     public Evaluation withFinishedAt(OffsetDateTime finishedAt) {
         this.finishedAt = finishedAt;
         return this;
@@ -78,6 +84,7 @@ public class Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataLocationS3")
     public String inputDataLocationS3;
+
     public Evaluation withInputDataLocationS3(String inputDataLocationS3) {
         this.inputDataLocationS3 = inputDataLocationS3;
         return this;
@@ -88,6 +95,7 @@ public class Evaluation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public Evaluation withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -96,6 +104,7 @@ public class Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLModelId")
     public String mlModelId;
+
     public Evaluation withMLModelId(String mlModelId) {
         this.mlModelId = mlModelId;
         return this;
@@ -104,6 +113,7 @@ public class Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public Evaluation withMessage(String message) {
         this.message = message;
         return this;
@@ -112,6 +122,7 @@ public class Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Evaluation withName(String name) {
         this.name = name;
         return this;
@@ -120,6 +131,7 @@ public class Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PerformanceMetrics")
     public PerformanceMetrics performanceMetrics;
+
     public Evaluation withPerformanceMetrics(PerformanceMetrics performanceMetrics) {
         this.performanceMetrics = performanceMetrics;
         return this;
@@ -133,6 +145,7 @@ public class Evaluation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedAt")
     public OffsetDateTime startedAt;
+
     public Evaluation withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -141,9 +154,11 @@ public class Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public EntityStatusEnum status;
+
     public Evaluation withStatus(EntityStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Evaluation(){}
 }

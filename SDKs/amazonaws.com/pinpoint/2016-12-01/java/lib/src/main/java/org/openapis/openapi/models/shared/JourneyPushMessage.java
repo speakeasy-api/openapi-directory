@@ -15,9 +15,11 @@ public class JourneyPushMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeToLive")
     public String timeToLive;
+
     public JourneyPushMessage withTimeToLive(String timeToLive) {
         this.timeToLive = timeToLive;
         return this;
     }
     
+    public JourneyPushMessage(){}
 }

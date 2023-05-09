@@ -18,6 +18,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionInfo")
     public EncryptionInfo encryptionInfo;
+
     public Backup withEncryptionInfo(EncryptionInfo encryptionInfo) {
         this.encryptionInfo = encryptionInfo;
         return this;
@@ -29,6 +30,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public Backup withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +42,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public Backup withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -51,6 +54,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Backup withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeBytes")
     public String sizeBytes;
+
     public Backup withSizeBytes(String sizeBytes) {
         this.sizeBytes = sizeBytes;
         return this;
@@ -73,6 +78,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceBackup")
     public String sourceBackup;
+
     public Backup withSourceBackup(String sourceBackup) {
         this.sourceBackup = sourceBackup;
         return this;
@@ -84,6 +90,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceTable")
     public String sourceTable;
+
     public Backup withSourceTable(String sourceTable) {
         this.sourceTable = sourceTable;
         return this;
@@ -95,6 +102,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public Backup withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -106,9 +114,11 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public BackupStateEnum state;
+
     public Backup withState(BackupStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Backup(){}
 }

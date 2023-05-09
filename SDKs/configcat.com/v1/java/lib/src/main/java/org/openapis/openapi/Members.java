@@ -64,10 +64,8 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddMemberToGroupResponse res = new org.openapis.openapi.models.operations.AddMemberToGroupResponse() {{
+        org.openapis.openapi.models.operations.AddMemberToGroupResponse res = new org.openapis.openapi.models.operations.AddMemberToGroupResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -99,10 +97,8 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteOrganizationMemberResponse res = new org.openapis.openapi.models.operations.DeleteOrganizationMemberResponse() {{
+        org.openapis.openapi.models.operations.DeleteOrganizationMemberResponse res = new org.openapis.openapi.models.operations.DeleteOrganizationMemberResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -134,10 +130,8 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteProductMemberResponse res = new org.openapis.openapi.models.operations.DeleteProductMemberResponse() {{
+        org.openapis.openapi.models.operations.DeleteProductMemberResponse res = new org.openapis.openapi.models.operations.DeleteProductMemberResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -169,12 +163,10 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationMembersResponse res = new org.openapis.openapi.models.operations.GetOrganizationMembersResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationMembersResponse res = new org.openapis.openapi.models.operations.GetOrganizationMembersResponse(contentType, httpRes.statusCode()) {{
             userModels = null;
             userModels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -218,12 +210,10 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProductMembersResponse res = new org.openapis.openapi.models.operations.GetProductMembersResponse() {{
+        org.openapis.openapi.models.operations.GetProductMembersResponse res = new org.openapis.openapi.models.operations.GetProductMembersResponse(contentType, httpRes.statusCode()) {{
             memberModels = null;
             memberModels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -271,10 +261,8 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InviteMemberResponse res = new org.openapis.openapi.models.operations.InviteMemberResponse() {{
+        org.openapis.openapi.models.operations.InviteMemberResponse res = new org.openapis.openapi.models.operations.InviteMemberResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {

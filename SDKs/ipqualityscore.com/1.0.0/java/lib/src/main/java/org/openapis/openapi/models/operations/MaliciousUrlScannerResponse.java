@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MaliciousUrlScannerResponse {
     
     public String contentType;
+
     public MaliciousUrlScannerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MaliciousUrlScannerResponse {
     
     
     public Integer statusCode;
+
     public MaliciousUrlScannerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MaliciousUrlScannerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MaliciousUrlScannerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class MaliciousUrlScannerResponse {
      */
     
     public MaliciousUrlScanner200ApplicationJSON maliciousUrlScanner200ApplicationJSONObject;
+
     public MaliciousUrlScannerResponse withMaliciousUrlScanner200ApplicationJSONObject(MaliciousUrlScanner200ApplicationJSON maliciousUrlScanner200ApplicationJSONObject) {
         this.maliciousUrlScanner200ApplicationJSONObject = maliciousUrlScanner200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class MaliciousUrlScannerResponse {
      */
     
     public MaliciousUrlScanner400ApplicationJSON maliciousUrlScanner400ApplicationJSONObject;
+
     public MaliciousUrlScannerResponse withMaliciousUrlScanner400ApplicationJSONObject(MaliciousUrlScanner400ApplicationJSON maliciousUrlScanner400ApplicationJSONObject) {
         this.maliciousUrlScanner400ApplicationJSONObject = maliciousUrlScanner400ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class MaliciousUrlScannerResponse {
      */
     
     public MaliciousUrlScanner500ApplicationJSON maliciousUrlScanner500ApplicationJSONObject;
+
     public MaliciousUrlScannerResponse withMaliciousUrlScanner500ApplicationJSONObject(MaliciousUrlScanner500ApplicationJSON maliciousUrlScanner500ApplicationJSONObject) {
         this.maliciousUrlScanner500ApplicationJSONObject = maliciousUrlScanner500ApplicationJSONObject;
         return this;
     }
     
+    public MaliciousUrlScannerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

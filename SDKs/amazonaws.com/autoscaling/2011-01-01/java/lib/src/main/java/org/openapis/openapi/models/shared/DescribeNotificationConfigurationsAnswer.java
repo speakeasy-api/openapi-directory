@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeNotificationConfigurationsAnswer - Success
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNotificationConfigurationsAnswer {
     
     public String nextToken;
+
     public DescribeNotificationConfigurationsAnswer withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,13 @@ public class DescribeNotificationConfigurationsAnswer {
     
     
     public NotificationConfiguration[] notificationConfigurations;
+
     public DescribeNotificationConfigurationsAnswer withNotificationConfigurations(NotificationConfiguration[] notificationConfigurations) {
         this.notificationConfigurations = notificationConfigurations;
         return this;
     }
     
+    public DescribeNotificationConfigurationsAnswer(@JsonProperty("NotificationConfigurations") NotificationConfiguration[] notificationConfigurations) {
+        this.notificationConfigurations = notificationConfigurations;
+  }
 }

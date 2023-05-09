@@ -21,6 +21,7 @@ public class OrderPricingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_apply_discounts")
     public Boolean autoApplyDiscounts;
+
     public OrderPricingOptions withAutoApplyDiscounts(Boolean autoApplyDiscounts) {
         this.autoApplyDiscounts = autoApplyDiscounts;
         return this;
@@ -33,9 +34,11 @@ public class OrderPricingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_apply_taxes")
     public Boolean autoApplyTaxes;
+
     public OrderPricingOptions withAutoApplyTaxes(Boolean autoApplyTaxes) {
         this.autoApplyTaxes = autoApplyTaxes;
         return this;
     }
     
+    public OrderPricingOptions(){}
 }

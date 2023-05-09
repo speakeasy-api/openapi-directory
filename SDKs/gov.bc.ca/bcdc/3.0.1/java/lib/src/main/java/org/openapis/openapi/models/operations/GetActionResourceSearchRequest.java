@@ -12,6 +12,7 @@ public class GetActionResourceSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GetActionResourceSearchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -22,6 +23,7 @@ public class GetActionResourceSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetActionResourceSearchRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +34,7 @@ public class GetActionResourceSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetActionResourceSearchRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -42,6 +45,7 @@ public class GetActionResourceSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public String orderBy;
+
     public GetActionResourceSearchRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -52,9 +56,11 @@ public class GetActionResourceSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetActionResourceSearchRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public GetActionResourceSearchRequest(){}
 }

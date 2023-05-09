@@ -15,9 +15,11 @@ public class UpdateScheduledAuditResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledAuditArn")
     public String scheduledAuditArn;
+
     public UpdateScheduledAuditResponse withScheduledAuditArn(String scheduledAuditArn) {
         this.scheduledAuditArn = scheduledAuditArn;
         return this;
     }
     
+    public UpdateScheduledAuditResponse(){}
 }

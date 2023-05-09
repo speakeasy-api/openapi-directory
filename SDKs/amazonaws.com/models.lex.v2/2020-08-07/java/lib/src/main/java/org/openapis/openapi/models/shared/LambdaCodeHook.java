@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LambdaCodeHook {
     @JsonProperty("codeHookInterfaceVersion")
     public String codeHookInterfaceVersion;
+
     public LambdaCodeHook withCodeHookInterfaceVersion(String codeHookInterfaceVersion) {
         this.codeHookInterfaceVersion = codeHookInterfaceVersion;
         return this;
@@ -19,9 +20,14 @@ public class LambdaCodeHook {
     
     @JsonProperty("lambdaARN")
     public String lambdaARN;
+
     public LambdaCodeHook withLambdaARN(String lambdaARN) {
         this.lambdaARN = lambdaARN;
         return this;
     }
     
+    public LambdaCodeHook(@JsonProperty("codeHookInterfaceVersion") String codeHookInterfaceVersion, @JsonProperty("lambdaARN") String lambdaARN) {
+        this.codeHookInterfaceVersion = codeHookInterfaceVersion;
+        this.lambdaARN = lambdaARN;
+  }
 }

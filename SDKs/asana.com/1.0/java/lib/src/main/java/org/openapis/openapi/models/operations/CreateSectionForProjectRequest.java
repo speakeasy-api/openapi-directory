@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSectionForProjectRequest {
@@ -12,6 +13,7 @@ public class CreateSectionForProjectRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateSectionForProjectRequestBody requestBody;
+
     public CreateSectionForProjectRequest withRequestBody(CreateSectionForProjectRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class CreateSectionForProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public CreateSectionForProjectRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,6 +38,7 @@ public class CreateSectionForProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public CreateSectionForProjectRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -45,9 +49,14 @@ public class CreateSectionForProjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_gid")
     public String projectGid;
+
     public CreateSectionForProjectRequest withProjectGid(String projectGid) {
         this.projectGid = projectGid;
         return this;
     }
     
+    public CreateSectionForProjectRequest(@JsonProperty("RequestBody") CreateSectionForProjectRequestBody requestBody, @JsonProperty("project_gid") String projectGid) {
+        this.requestBody = requestBody;
+        this.projectGid = projectGid;
+  }
 }

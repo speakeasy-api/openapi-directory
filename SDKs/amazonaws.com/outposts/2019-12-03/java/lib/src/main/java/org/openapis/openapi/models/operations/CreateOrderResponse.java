@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateOrderResponse {
@@ -12,6 +13,7 @@ public class CreateOrderResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateOrderResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateOrderResponse {
      */
     
     public Object conflictException;
+
     public CreateOrderResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateOrderResponse {
     
     
     public String contentType;
+
     public CreateOrderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateOrderResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateOrderOutput createOrderOutput;
+
     public CreateOrderResponse withCreateOrderOutput(org.openapis.openapi.models.shared.CreateOrderOutput createOrderOutput) {
         this.createOrderOutput = createOrderOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateOrderResponse {
      */
     
     public Object internalServerException;
+
     public CreateOrderResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateOrderResponse {
      */
     
     public Object notFoundException;
+
     public CreateOrderResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateOrderResponse {
     
     
     public Integer statusCode;
+
     public CreateOrderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateOrderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateOrderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateOrderResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateOrderResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,9 +103,14 @@ public class CreateOrderResponse {
      */
     
     public Object validationException;
+
     public CreateOrderResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateOrderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

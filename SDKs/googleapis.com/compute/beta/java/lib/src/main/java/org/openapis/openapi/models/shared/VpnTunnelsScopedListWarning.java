@@ -18,6 +18,7 @@ public class VpnTunnelsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public VpnTunnelsScopedListWarningCodeEnum code;
+
     public VpnTunnelsScopedListWarning withCode(VpnTunnelsScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class VpnTunnelsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public VpnTunnelsScopedListWarningData[] data;
+
     public VpnTunnelsScopedListWarning withData(VpnTunnelsScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class VpnTunnelsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public VpnTunnelsScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public VpnTunnelsScopedListWarning(){}
 }

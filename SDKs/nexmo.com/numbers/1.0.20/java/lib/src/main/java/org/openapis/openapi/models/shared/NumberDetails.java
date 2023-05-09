@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class NumberDetails {
      */
     @SpeakeasyMetadata("form:name=country")
     public String country;
+
     public NumberDetails withCountry(String country) {
         this.country = country;
         return this;
@@ -25,6 +27,7 @@ public class NumberDetails {
      */
     @SpeakeasyMetadata("form:name=msisdn")
     public String msisdn;
+
     public NumberDetails withMsisdn(String msisdn) {
         this.msisdn = msisdn;
         return this;
@@ -35,9 +38,14 @@ public class NumberDetails {
      */
     @SpeakeasyMetadata("form:name=target_api_key")
     public String targetApiKey;
+
     public NumberDetails withTargetApiKey(String targetApiKey) {
         this.targetApiKey = targetApiKey;
         return this;
     }
     
+    public NumberDetails(@JsonProperty("country") String country, @JsonProperty("msisdn") String msisdn) {
+        this.country = country;
+        this.msisdn = msisdn;
+  }
 }

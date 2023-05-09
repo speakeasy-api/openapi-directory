@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class PendingModifiedValues {
     
     public Long allocatedStorage;
+
     public PendingModifiedValues withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -16,6 +17,7 @@ public class PendingModifiedValues {
     
     
     public Long backupRetentionPeriod;
+
     public PendingModifiedValues withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -23,6 +25,7 @@ public class PendingModifiedValues {
     
     
     public String dbInstanceClass;
+
     public PendingModifiedValues withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -30,6 +33,7 @@ public class PendingModifiedValues {
     
     
     public String dbInstanceIdentifier;
+
     public PendingModifiedValues withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -37,6 +41,7 @@ public class PendingModifiedValues {
     
     
     public String engineVersion;
+
     public PendingModifiedValues withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -44,6 +49,7 @@ public class PendingModifiedValues {
     
     
     public Long iops;
+
     public PendingModifiedValues withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -51,6 +57,7 @@ public class PendingModifiedValues {
     
     
     public String masterUserPassword;
+
     public PendingModifiedValues withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -58,6 +65,7 @@ public class PendingModifiedValues {
     
     
     public Boolean multiAZ;
+
     public PendingModifiedValues withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -65,9 +73,11 @@ public class PendingModifiedValues {
     
     
     public Long port;
+
     public PendingModifiedValues withPort(Long port) {
         this.port = port;
         return this;
     }
     
+    public PendingModifiedValues(){}
 }

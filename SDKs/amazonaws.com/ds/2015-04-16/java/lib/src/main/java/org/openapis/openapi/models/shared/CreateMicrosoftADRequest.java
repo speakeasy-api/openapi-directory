@@ -15,6 +15,7 @@ public class CreateMicrosoftADRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateMicrosoftADRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class CreateMicrosoftADRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Edition")
     public DirectoryEditionEnum edition;
+
     public CreateMicrosoftADRequest withEdition(DirectoryEditionEnum edition) {
         this.edition = edition;
         return this;
@@ -30,6 +32,7 @@ public class CreateMicrosoftADRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateMicrosoftADRequest withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +40,7 @@ public class CreateMicrosoftADRequest {
     
     @JsonProperty("Password")
     public String password;
+
     public CreateMicrosoftADRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -45,6 +49,7 @@ public class CreateMicrosoftADRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortName")
     public String shortName;
+
     public CreateMicrosoftADRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -53,6 +58,7 @@ public class CreateMicrosoftADRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateMicrosoftADRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -60,9 +66,15 @@ public class CreateMicrosoftADRequest {
     
     @JsonProperty("VpcSettings")
     public DirectoryVpcSettings vpcSettings;
+
     public CreateMicrosoftADRequest withVpcSettings(DirectoryVpcSettings vpcSettings) {
         this.vpcSettings = vpcSettings;
         return this;
     }
     
+    public CreateMicrosoftADRequest(@JsonProperty("Name") String name, @JsonProperty("Password") String password, @JsonProperty("VpcSettings") DirectoryVpcSettings vpcSettings) {
+        this.name = name;
+        this.password = password;
+        this.vpcSettings = vpcSettings;
+  }
 }

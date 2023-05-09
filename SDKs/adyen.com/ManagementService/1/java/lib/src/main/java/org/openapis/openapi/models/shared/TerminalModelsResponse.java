@@ -18,9 +18,11 @@ public class TerminalModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public IdName[] data;
+
     public TerminalModelsResponse withData(IdName[] data) {
         this.data = data;
         return this;
     }
     
+    public TerminalModelsResponse(){}
 }

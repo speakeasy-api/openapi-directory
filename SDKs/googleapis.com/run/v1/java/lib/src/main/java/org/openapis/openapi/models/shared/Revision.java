@@ -18,6 +18,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public String apiVersion;
+
     public Revision withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -29,6 +30,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Revision withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ObjectMeta metadata;
+
     public Revision withMetadata(ObjectMeta metadata) {
         this.metadata = metadata;
         return this;
@@ -51,6 +54,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public RevisionSpec spec;
+
     public Revision withSpec(RevisionSpec spec) {
         this.spec = spec;
         return this;
@@ -62,9 +66,11 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RevisionStatus status;
+
     public Revision withStatus(RevisionStatus status) {
         this.status = status;
         return this;
     }
     
+    public Revision(){}
 }

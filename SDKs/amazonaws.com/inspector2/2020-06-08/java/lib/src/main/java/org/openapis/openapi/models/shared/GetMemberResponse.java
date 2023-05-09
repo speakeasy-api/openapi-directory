@@ -15,9 +15,11 @@ public class GetMemberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member")
     public Member member;
+
     public GetMemberResponse withMember(Member member) {
         this.member = member;
         return this;
     }
     
+    public GetMemberResponse(){}
 }

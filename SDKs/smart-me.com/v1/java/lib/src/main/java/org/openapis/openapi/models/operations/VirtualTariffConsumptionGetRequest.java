@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class VirtualTariffConsumptionGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public OffsetDateTime endDate;
+
     public VirtualTariffConsumptionGetRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -23,6 +25,7 @@ public class VirtualTariffConsumptionGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=folderId")
     public String folderId;
+
     public VirtualTariffConsumptionGetRequest withFolderId(String folderId) {
         this.folderId = folderId;
         return this;
@@ -33,9 +36,15 @@ public class VirtualTariffConsumptionGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public OffsetDateTime startDate;
+
     public VirtualTariffConsumptionGetRequest withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public VirtualTariffConsumptionGetRequest(@JsonProperty("endDate") OffsetDateTime endDate, @JsonProperty("folderId") String folderId, @JsonProperty("startDate") OffsetDateTime startDate) {
+        this.endDate = endDate;
+        this.folderId = folderId;
+        this.startDate = startDate;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2EntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoExpansionMode")
     public GoogleCloudDialogflowV2EntityTypeAutoExpansionModeEnum autoExpansionMode;
+
     public GoogleCloudDialogflowV2EntityType withAutoExpansionMode(GoogleCloudDialogflowV2EntityTypeAutoExpansionModeEnum autoExpansionMode) {
         this.autoExpansionMode = autoExpansionMode;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2EntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowV2EntityType withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2EntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableFuzzyExtraction")
     public Boolean enableFuzzyExtraction;
+
     public GoogleCloudDialogflowV2EntityType withEnableFuzzyExtraction(Boolean enableFuzzyExtraction) {
         this.enableFuzzyExtraction = enableFuzzyExtraction;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2EntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public GoogleCloudDialogflowV2EntityTypeEntity[] entities;
+
     public GoogleCloudDialogflowV2EntityType withEntities(GoogleCloudDialogflowV2EntityTypeEntity[] entities) {
         this.entities = entities;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2EntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public GoogleCloudDialogflowV2EntityTypeKindEnum kind;
+
     public GoogleCloudDialogflowV2EntityType withKind(GoogleCloudDialogflowV2EntityTypeKindEnum kind) {
         this.kind = kind;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowV2EntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2EntityType withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDialogflowV2EntityType(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRegistryNamespacesNamespaceRequest {
@@ -12,6 +13,7 @@ public class PutRegistryNamespacesNamespaceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
     public String xAuthProjectId;
+
     public PutRegistryNamespacesNamespaceRequest withXAuthProjectId(String xAuthProjectId) {
         this.xAuthProjectId = xAuthProjectId;
         return this;
@@ -22,6 +24,7 @@ public class PutRegistryNamespacesNamespaceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
     public String xAuthToken;
+
     public PutRegistryNamespacesNamespaceRequest withXAuthToken(String xAuthToken) {
         this.xAuthToken = xAuthToken;
         return this;
@@ -32,9 +35,15 @@ public class PutRegistryNamespacesNamespaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
     public String namespace;
+
     public PutRegistryNamespacesNamespaceRequest withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public PutRegistryNamespacesNamespaceRequest(@JsonProperty("X-Auth-Project-Id") String xAuthProjectId, @JsonProperty("X-Auth-Token") String xAuthToken, @JsonProperty("namespace") String namespace) {
+        this.xAuthProjectId = xAuthProjectId;
+        this.xAuthToken = xAuthToken;
+        this.namespace = namespace;
+  }
 }

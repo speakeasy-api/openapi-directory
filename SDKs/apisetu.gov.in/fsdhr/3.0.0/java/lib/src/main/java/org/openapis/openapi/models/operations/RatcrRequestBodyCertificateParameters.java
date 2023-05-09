@@ -12,6 +12,7 @@ public class RatcrRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public RatcrRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,9 +23,14 @@ public class RatcrRequestBodyCertificateParameters {
      */
     @JsonProperty("card_no")
     public String cardNo;
+
     public RatcrRequestBodyCertificateParameters withCardNo(String cardNo) {
         this.cardNo = cardNo;
         return this;
     }
     
+    public RatcrRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("card_no") String cardNo) {
+        this.fullName = fullName;
+        this.cardNo = cardNo;
+  }
 }

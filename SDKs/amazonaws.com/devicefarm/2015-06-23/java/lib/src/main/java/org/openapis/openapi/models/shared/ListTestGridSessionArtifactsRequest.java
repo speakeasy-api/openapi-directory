@@ -12,6 +12,7 @@ public class ListTestGridSessionArtifactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResult")
     public Long maxResult;
+
     public ListTestGridSessionArtifactsRequest withMaxResult(Long maxResult) {
         this.maxResult = maxResult;
         return this;
@@ -20,6 +21,7 @@ public class ListTestGridSessionArtifactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTestGridSessionArtifactsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,6 +29,7 @@ public class ListTestGridSessionArtifactsRequest {
     
     @JsonProperty("sessionArn")
     public String sessionArn;
+
     public ListTestGridSessionArtifactsRequest withSessionArn(String sessionArn) {
         this.sessionArn = sessionArn;
         return this;
@@ -35,9 +38,13 @@ public class ListTestGridSessionArtifactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TestGridSessionArtifactCategoryEnum type;
+
     public ListTestGridSessionArtifactsRequest withType(TestGridSessionArtifactCategoryEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListTestGridSessionArtifactsRequest(@JsonProperty("sessionArn") String sessionArn) {
+        this.sessionArn = sessionArn;
+  }
 }

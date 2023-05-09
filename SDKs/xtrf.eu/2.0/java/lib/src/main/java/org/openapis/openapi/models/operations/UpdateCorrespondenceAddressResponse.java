@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCorrespondenceAddressResponse {
@@ -12,6 +13,7 @@ public class UpdateCorrespondenceAddressResponse {
      */
     
     public org.openapis.openapi.models.shared.AddressDTO addressDTO;
+
     public UpdateCorrespondenceAddressResponse withAddressDTO(org.openapis.openapi.models.shared.AddressDTO addressDTO) {
         this.addressDTO = addressDTO;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCorrespondenceAddressResponse {
     
     
     public String contentType;
+
     public UpdateCorrespondenceAddressResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class UpdateCorrespondenceAddressResponse {
     
     
     public Integer statusCode;
+
     public UpdateCorrespondenceAddressResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class UpdateCorrespondenceAddressResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCorrespondenceAddressResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateCorrespondenceAddressResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetExchangeRateRequest {
     @JsonProperty("currency")
     public String currency;
+
     public GetExchangeRateRequest withCurrency(String currency) {
         this.currency = currency;
         return this;
     }
     
+    public GetExchangeRateRequest(@JsonProperty("currency") String currency) {
+        this.currency = currency;
+  }
 }

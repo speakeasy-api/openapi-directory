@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeExpressionsRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;DescribeDomains&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to describe. To restrict the response to particular expressions, specify the names of the expressions you want to describe. To show the active configuration and exclude any pending changes, set the &lt;code&gt;Deployed&lt;/code&gt; option to &lt;code&gt;true&lt;/code&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeExpressionsRequest {
     
     public Boolean deployed;
+
     public DescribeExpressionsRequest withDeployed(Boolean deployed) {
         this.deployed = deployed;
         return this;
@@ -19,6 +20,7 @@ public class DescribeExpressionsRequest {
     
     
     public String domainName;
+
     public DescribeExpressionsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -26,9 +28,13 @@ public class DescribeExpressionsRequest {
     
     
     public String[] expressionNames;
+
     public DescribeExpressionsRequest withExpressionNames(String[] expressionNames) {
         this.expressionNames = expressionNames;
         return this;
     }
     
+    public DescribeExpressionsRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

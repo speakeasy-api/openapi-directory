@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIntersectionsWithinOutputFormatRequest {
@@ -12,6 +13,7 @@ public class GetIntersectionsWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bbox")
     public String bbox;
+
     public GetIntersectionsWithinOutputFormatRequest withBbox(String bbox) {
         this.bbox = bbox;
         return this;
@@ -22,6 +24,7 @@ public class GetIntersectionsWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDegree")
     public Long maxDegree;
+
     public GetIntersectionsWithinOutputFormatRequest withMaxDegree(Long maxDegree) {
         this.maxDegree = maxDegree;
         return this;
@@ -32,6 +35,7 @@ public class GetIntersectionsWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public GetIntersectionsWithinOutputFormatRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -42,6 +46,7 @@ public class GetIntersectionsWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minDegree")
     public Long minDegree;
+
     public GetIntersectionsWithinOutputFormatRequest withMinDegree(Long minDegree) {
         this.minDegree = minDegree;
         return this;
@@ -54,6 +59,7 @@ public class GetIntersectionsWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
     public GetIntersectionsWithinOutputFormatOutputFormatEnum outputFormat;
+
     public GetIntersectionsWithinOutputFormatRequest withOutputFormat(GetIntersectionsWithinOutputFormatOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -64,9 +70,14 @@ public class GetIntersectionsWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetIntersectionsWithinOutputFormatOutputSrsEnum outputSRS;
+
     public GetIntersectionsWithinOutputFormatRequest withOutputSRS(GetIntersectionsWithinOutputFormatOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
     }
     
+    public GetIntersectionsWithinOutputFormatRequest(@JsonProperty("bbox") String bbox, @JsonProperty("outputFormat") GetIntersectionsWithinOutputFormatOutputFormatEnum outputFormat) {
+        this.bbox = bbox;
+        this.outputFormat = outputFormat;
+  }
 }

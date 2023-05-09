@@ -15,9 +15,11 @@ public class GetUploadResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upload")
     public Upload upload;
+
     public GetUploadResult withUpload(Upload upload) {
         this.upload = upload;
         return this;
     }
     
+    public GetUploadResult(){}
 }

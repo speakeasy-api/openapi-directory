@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventsByYearRequest {
@@ -12,6 +13,7 @@ public class GetEventsByYearRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetEventsByYearRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -22,9 +24,13 @@ public class GetEventsByYearRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
     public Long year;
+
     public GetEventsByYearRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetEventsByYearRequest(@JsonProperty("year") Long year) {
+        this.year = year;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAlertResponse {
@@ -12,6 +13,7 @@ public class CreateAlertResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAlertResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateAlertResponse {
      */
     
     public Object conflictException;
+
     public CreateAlertResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateAlertResponse {
     
     
     public String contentType;
+
     public CreateAlertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateAlertResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAlertResponse createAlertResponse;
+
     public CreateAlertResponse withCreateAlertResponse(org.openapis.openapi.models.shared.CreateAlertResponse createAlertResponse) {
         this.createAlertResponse = createAlertResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateAlertResponse {
      */
     
     public Object internalServerException;
+
     public CreateAlertResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAlertResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAlertResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateAlertResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateAlertResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateAlertResponse {
     
     
     public Integer statusCode;
+
     public CreateAlertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateAlertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAlertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateAlertResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateAlertResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class CreateAlertResponse {
      */
     
     public Object validationException;
+
     public CreateAlertResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateAlertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

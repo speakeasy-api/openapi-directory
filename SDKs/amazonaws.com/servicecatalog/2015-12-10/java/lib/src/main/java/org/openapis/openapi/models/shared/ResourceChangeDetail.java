@@ -15,6 +15,7 @@ public class ResourceChangeDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CausingEntity")
     public String causingEntity;
+
     public ResourceChangeDetail withCausingEntity(String causingEntity) {
         this.causingEntity = causingEntity;
         return this;
@@ -23,6 +24,7 @@ public class ResourceChangeDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Evaluation")
     public EvaluationTypeEnum evaluation;
+
     public ResourceChangeDetail withEvaluation(EvaluationTypeEnum evaluation) {
         this.evaluation = evaluation;
         return this;
@@ -31,9 +33,11 @@ public class ResourceChangeDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public ResourceTargetDefinition target;
+
     public ResourceChangeDetail withTarget(ResourceTargetDefinition target) {
         this.target = target;
         return this;
     }
     
+    public ResourceChangeDetail(){}
 }

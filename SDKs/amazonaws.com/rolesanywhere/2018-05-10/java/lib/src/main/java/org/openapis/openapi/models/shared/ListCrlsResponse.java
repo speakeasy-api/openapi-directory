@@ -15,6 +15,7 @@ public class ListCrlsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crls")
     public CrlDetail[] crls;
+
     public ListCrlsResponse withCrls(CrlDetail[] crls) {
         this.crls = crls;
         return this;
@@ -23,9 +24,11 @@ public class ListCrlsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListCrlsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCrlsResponse(){}
 }

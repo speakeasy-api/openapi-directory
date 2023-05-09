@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateNetworkSettingsResponse {
     @JsonProperty("networkSettingsArn")
     public String networkSettingsArn;
+
     public CreateNetworkSettingsResponse withNetworkSettingsArn(String networkSettingsArn) {
         this.networkSettingsArn = networkSettingsArn;
         return this;
     }
     
+    public CreateNetworkSettingsResponse(@JsonProperty("networkSettingsArn") String networkSettingsArn) {
+        this.networkSettingsArn = networkSettingsArn;
+  }
 }

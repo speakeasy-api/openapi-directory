@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderInvoicePreviewRequest {
@@ -12,6 +13,7 @@ public class GetOrderInvoicePreviewRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Encoding")
     public String acceptEncoding;
+
     public GetOrderInvoicePreviewRequest withAcceptEncoding(String acceptEncoding) {
         this.acceptEncoding = acceptEncoding;
         return this;
@@ -22,6 +24,7 @@ public class GetOrderInvoicePreviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public GetOrderInvoicePreviewRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -32,6 +35,7 @@ public class GetOrderInvoicePreviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderUUID")
     public String beezUPOrderUUID;
+
     public GetOrderInvoicePreviewRequest withBeezUPOrderUUID(String beezUPOrderUUID) {
         this.beezUPOrderUUID = beezUPOrderUUID;
         return this;
@@ -42,6 +46,7 @@ public class GetOrderInvoicePreviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public GetOrderInvoicePreviewRequest withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
@@ -49,9 +54,17 @@ public class GetOrderInvoicePreviewRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PreviewOrderInvoiceRequest previewOrderInvoiceRequest;
+
     public GetOrderInvoicePreviewRequest withPreviewOrderInvoiceRequest(org.openapis.openapi.models.shared.PreviewOrderInvoiceRequest previewOrderInvoiceRequest) {
         this.previewOrderInvoiceRequest = previewOrderInvoiceRequest;
         return this;
     }
     
+    public GetOrderInvoicePreviewRequest(@JsonProperty("Accept-Encoding") String acceptEncoding, @JsonProperty("accountId") String accountId, @JsonProperty("beezUPOrderUUID") String beezUPOrderUUID, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode, @JsonProperty("previewOrderInvoiceRequest") org.openapis.openapi.models.shared.PreviewOrderInvoiceRequest previewOrderInvoiceRequest) {
+        this.acceptEncoding = acceptEncoding;
+        this.accountId = accountId;
+        this.beezUPOrderUUID = beezUPOrderUUID;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        this.previewOrderInvoiceRequest = previewOrderInvoiceRequest;
+  }
 }

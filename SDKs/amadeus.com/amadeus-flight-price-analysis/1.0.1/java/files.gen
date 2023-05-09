@@ -48,4 +48,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Error500.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error400ErrorErrorSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error400Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error400.java
+docs/sdk/README.md
+docs/pricemetrics/README.md
 USAGE.md

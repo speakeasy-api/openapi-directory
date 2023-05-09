@@ -19,6 +19,7 @@ public class DescribeFleetEventsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public DescribeFleetEventsInput withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -26,6 +27,7 @@ public class DescribeFleetEventsInput {
     
     @JsonProperty("FleetId")
     public String fleetId;
+
     public DescribeFleetEventsInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -34,6 +36,7 @@ public class DescribeFleetEventsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeFleetEventsInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -42,6 +45,7 @@ public class DescribeFleetEventsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFleetEventsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -52,9 +56,13 @@ public class DescribeFleetEventsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public DescribeFleetEventsInput withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public DescribeFleetEventsInput(@JsonProperty("FleetId") String fleetId) {
+        this.fleetId = fleetId;
+  }
 }

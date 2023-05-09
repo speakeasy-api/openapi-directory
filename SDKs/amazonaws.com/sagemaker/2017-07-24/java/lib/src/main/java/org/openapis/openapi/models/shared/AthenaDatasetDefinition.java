@@ -17,6 +17,7 @@ public class AthenaDatasetDefinition {
      */
     @JsonProperty("Catalog")
     public String catalog;
+
     public AthenaDatasetDefinition withCatalog(String catalog) {
         this.catalog = catalog;
         return this;
@@ -27,6 +28,7 @@ public class AthenaDatasetDefinition {
      */
     @JsonProperty("Database")
     public String database;
+
     public AthenaDatasetDefinition withDatabase(String database) {
         this.database = database;
         return this;
@@ -35,6 +37,7 @@ public class AthenaDatasetDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public AthenaDatasetDefinition withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -46,6 +49,7 @@ public class AthenaDatasetDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputCompression")
     public AthenaResultCompressionTypeEnum outputCompression;
+
     public AthenaDatasetDefinition withOutputCompression(AthenaResultCompressionTypeEnum outputCompression) {
         this.outputCompression = outputCompression;
         return this;
@@ -56,6 +60,7 @@ public class AthenaDatasetDefinition {
      */
     @JsonProperty("OutputFormat")
     public AthenaResultFormatEnum outputFormat;
+
     public AthenaDatasetDefinition withOutputFormat(AthenaResultFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -63,6 +68,7 @@ public class AthenaDatasetDefinition {
     
     @JsonProperty("OutputS3Uri")
     public String outputS3Uri;
+
     public AthenaDatasetDefinition withOutputS3Uri(String outputS3Uri) {
         this.outputS3Uri = outputS3Uri;
         return this;
@@ -73,6 +79,7 @@ public class AthenaDatasetDefinition {
      */
     @JsonProperty("QueryString")
     public String queryString;
+
     public AthenaDatasetDefinition withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
@@ -84,9 +91,17 @@ public class AthenaDatasetDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public AthenaDatasetDefinition withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public AthenaDatasetDefinition(@JsonProperty("Catalog") String catalog, @JsonProperty("Database") String database, @JsonProperty("OutputFormat") AthenaResultFormatEnum outputFormat, @JsonProperty("OutputS3Uri") String outputS3Uri, @JsonProperty("QueryString") String queryString) {
+        this.catalog = catalog;
+        this.database = database;
+        this.outputFormat = outputFormat;
+        this.outputS3Uri = outputS3Uri;
+        this.queryString = queryString;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientKey")
     public GoogleCloudConnectorsV1Secret clientKey;
+
     public GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer withClientKey(GoogleCloudConnectorsV1Secret clientKey) {
         this.clientKey = clientKey;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwtClaims")
     public GoogleCloudConnectorsV1AuthConfigOauth2JwtBearerJwtClaims jwtClaims;
+
     public GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer withJwtClaims(GoogleCloudConnectorsV1AuthConfigOauth2JwtBearerJwtClaims jwtClaims) {
         this.jwtClaims = jwtClaims;
         return this;
     }
     
+    public GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer(){}
 }

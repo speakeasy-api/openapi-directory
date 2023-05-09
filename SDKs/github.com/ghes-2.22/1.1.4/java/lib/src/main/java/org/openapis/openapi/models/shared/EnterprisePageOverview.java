@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnterprisePageOverview {
     @JsonProperty("total_pages")
     public Long totalPages;
+
     public EnterprisePageOverview withTotalPages(Long totalPages) {
         this.totalPages = totalPages;
         return this;
     }
     
+    public EnterprisePageOverview(@JsonProperty("total_pages") Long totalPages) {
+        this.totalPages = totalPages;
+  }
 }

@@ -12,6 +12,7 @@ public class ListLoggingConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListLoggingConfigurationsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,9 +21,11 @@ public class ListLoggingConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListLoggingConfigurationsRequest withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListLoggingConfigurationsRequest(){}
 }

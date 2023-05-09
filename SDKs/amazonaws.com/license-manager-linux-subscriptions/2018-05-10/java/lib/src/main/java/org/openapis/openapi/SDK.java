@@ -148,6 +148,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -180,14 +185,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetServiceSettingsResponse res = new org.openapis.openapi.models.operations.GetServiceSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetServiceSettingsResponse res = new org.openapis.openapi.models.operations.GetServiceSettingsResponse(contentType, httpRes.statusCode()) {{
             getServiceSettingsResponse = null;
             internalServerException = null;
             throttlingException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -262,14 +265,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLinuxSubscriptionInstancesResponse res = new org.openapis.openapi.models.operations.ListLinuxSubscriptionInstancesResponse() {{
+        org.openapis.openapi.models.operations.ListLinuxSubscriptionInstancesResponse res = new org.openapis.openapi.models.operations.ListLinuxSubscriptionInstancesResponse(contentType, httpRes.statusCode()) {{
             listLinuxSubscriptionInstancesResponse = null;
             internalServerException = null;
             throttlingException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,14 +345,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLinuxSubscriptionsResponse res = new org.openapis.openapi.models.operations.ListLinuxSubscriptionsResponse() {{
+        org.openapis.openapi.models.operations.ListLinuxSubscriptionsResponse res = new org.openapis.openapi.models.operations.ListLinuxSubscriptionsResponse(contentType, httpRes.statusCode()) {{
             listLinuxSubscriptionsResponse = null;
             internalServerException = null;
             throttlingException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -420,14 +419,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateServiceSettingsResponse res = new org.openapis.openapi.models.operations.UpdateServiceSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateServiceSettingsResponse res = new org.openapis.openapi.models.operations.UpdateServiceSettingsResponse(contentType, httpRes.statusCode()) {{
             updateServiceSettingsResponse = null;
             internalServerException = null;
             throttlingException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

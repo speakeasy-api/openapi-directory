@@ -18,6 +18,7 @@ public class CommentThreadSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canReply")
     public Boolean canReply;
+
     public CommentThreadSnippet withCanReply(Boolean canReply) {
         this.canReply = canReply;
         return this;
@@ -29,6 +30,7 @@ public class CommentThreadSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelId")
     public String channelId;
+
     public CommentThreadSnippet withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -40,6 +42,7 @@ public class CommentThreadSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPublic")
     public Boolean isPublic;
+
     public CommentThreadSnippet withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -51,6 +54,7 @@ public class CommentThreadSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topLevelComment")
     public Comment topLevelComment;
+
     public CommentThreadSnippet withTopLevelComment(Comment topLevelComment) {
         this.topLevelComment = topLevelComment;
         return this;
@@ -62,6 +66,7 @@ public class CommentThreadSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalReplyCount")
     public Long totalReplyCount;
+
     public CommentThreadSnippet withTotalReplyCount(Long totalReplyCount) {
         this.totalReplyCount = totalReplyCount;
         return this;
@@ -73,9 +78,11 @@ public class CommentThreadSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoId")
     public String videoId;
+
     public CommentThreadSnippet withVideoId(String videoId) {
         this.videoId = videoId;
         return this;
     }
     
+    public CommentThreadSnippet(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProjectsUpdateColumnResponse {
     
     public String contentType;
+
     public ProjectsUpdateColumnResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProjectsUpdateColumnResponse {
     
     
     public Integer statusCode;
+
     public ProjectsUpdateColumnResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProjectsUpdateColumnResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProjectsUpdateColumnResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ProjectsUpdateColumnResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ProjectsUpdateColumnResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ProjectsUpdateColumnResponse {
      */
     
     public org.openapis.openapi.models.shared.ProjectColumn projectColumn;
+
     public ProjectsUpdateColumnResponse withProjectColumn(org.openapis.openapi.models.shared.ProjectColumn projectColumn) {
         this.projectColumn = projectColumn;
         return this;
     }
     
+    public ProjectsUpdateColumnResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

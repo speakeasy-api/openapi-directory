@@ -12,6 +12,7 @@ public class UpdateRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applyImmediately")
     public Boolean applyImmediately;
+
     public UpdateRelationalDatabaseRequest withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -20,6 +21,7 @@ public class UpdateRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caCertificateIdentifier")
     public String caCertificateIdentifier;
+
     public UpdateRelationalDatabaseRequest withCaCertificateIdentifier(String caCertificateIdentifier) {
         this.caCertificateIdentifier = caCertificateIdentifier;
         return this;
@@ -28,6 +30,7 @@ public class UpdateRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableBackupRetention")
     public Boolean disableBackupRetention;
+
     public UpdateRelationalDatabaseRequest withDisableBackupRetention(Boolean disableBackupRetention) {
         this.disableBackupRetention = disableBackupRetention;
         return this;
@@ -36,6 +39,7 @@ public class UpdateRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableBackupRetention")
     public Boolean enableBackupRetention;
+
     public UpdateRelationalDatabaseRequest withEnableBackupRetention(Boolean enableBackupRetention) {
         this.enableBackupRetention = enableBackupRetention;
         return this;
@@ -44,6 +48,7 @@ public class UpdateRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterUserPassword")
     public String masterUserPassword;
+
     public UpdateRelationalDatabaseRequest withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -52,6 +57,7 @@ public class UpdateRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredBackupWindow")
     public String preferredBackupWindow;
+
     public UpdateRelationalDatabaseRequest withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -60,6 +66,7 @@ public class UpdateRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public UpdateRelationalDatabaseRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -68,6 +75,7 @@ public class UpdateRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publiclyAccessible")
     public Boolean publiclyAccessible;
+
     public UpdateRelationalDatabaseRequest withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -75,6 +83,7 @@ public class UpdateRelationalDatabaseRequest {
     
     @JsonProperty("relationalDatabaseName")
     public String relationalDatabaseName;
+
     public UpdateRelationalDatabaseRequest withRelationalDatabaseName(String relationalDatabaseName) {
         this.relationalDatabaseName = relationalDatabaseName;
         return this;
@@ -83,9 +92,13 @@ public class UpdateRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rotateMasterUserPassword")
     public Boolean rotateMasterUserPassword;
+
     public UpdateRelationalDatabaseRequest withRotateMasterUserPassword(Boolean rotateMasterUserPassword) {
         this.rotateMasterUserPassword = rotateMasterUserPassword;
         return this;
     }
     
+    public UpdateRelationalDatabaseRequest(@JsonProperty("relationalDatabaseName") String relationalDatabaseName) {
+        this.relationalDatabaseName = relationalDatabaseName;
+  }
 }

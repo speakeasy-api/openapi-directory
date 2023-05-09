@@ -14,6 +14,7 @@ public class Payee {
      */
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public Payee withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -21,6 +22,7 @@ public class Payee {
     
     @JsonProperty("id")
     public String id;
+
     public Payee withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class Payee {
     
     @JsonProperty("name")
     public String name;
+
     public Payee withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,15 @@ public class Payee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfer_account_id")
     public String transferAccountId;
+
     public Payee withTransferAccountId(String transferAccountId) {
         this.transferAccountId = transferAccountId;
         return this;
     }
     
+    public Payee(@JsonProperty("deleted") Boolean deleted, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.deleted = deleted;
+        this.id = id;
+        this.name = name;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentGetContentByIdRequest {
@@ -12,6 +13,7 @@ public class ContentGetContentByIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=head")
     public Boolean head;
+
     public ContentGetContentByIdRequest withHead(Boolean head) {
         this.head = head;
         return this;
@@ -19,6 +21,7 @@ public class ContentGetContentByIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public ContentGetContentByIdRequest withId(Long id) {
         this.id = id;
         return this;
@@ -26,9 +29,14 @@ public class ContentGetContentByIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=locale")
     public String locale;
+
     public ContentGetContentByIdRequest withLocale(String locale) {
         this.locale = locale;
         return this;
     }
     
+    public ContentGetContentByIdRequest(@JsonProperty("id") Long id, @JsonProperty("locale") String locale) {
+        this.id = id;
+        this.locale = locale;
+  }
 }

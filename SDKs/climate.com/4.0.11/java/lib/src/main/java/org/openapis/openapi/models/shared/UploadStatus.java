@@ -15,6 +15,7 @@ public class UploadStatus {
      */
     @JsonProperty("id")
     public String id;
+
     public UploadStatus withId(String id) {
         this.id = id;
         return this;
@@ -33,9 +34,14 @@ public class UploadStatus {
      */
     @JsonProperty("status")
     public UploadStatusStatusEnum status;
+
     public UploadStatus withStatus(UploadStatusStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UploadStatus(@JsonProperty("id") String id, @JsonProperty("status") UploadStatusStatusEnum status) {
+        this.id = id;
+        this.status = status;
+  }
 }

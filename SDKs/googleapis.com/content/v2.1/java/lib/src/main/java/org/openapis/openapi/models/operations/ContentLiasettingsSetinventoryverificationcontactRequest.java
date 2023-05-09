@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentLiasettingsSetinventoryverificationcontactRequest {
@@ -12,6 +13,7 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -42,6 +46,7 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contactEmail")
     public String contactEmail;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withContactEmail(String contactEmail) {
         this.contactEmail = contactEmail;
         return this;
@@ -72,6 +79,7 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contactName")
     public String contactName;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withContactName(String contactName) {
         this.contactName = contactName;
         return this;
@@ -82,6 +90,7 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -92,6 +101,7 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -102,6 +112,7 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withKey(String key) {
         this.key = key;
         return this;
@@ -112,6 +123,7 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -122,6 +134,7 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -132,6 +145,7 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -142,6 +156,7 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -152,6 +167,7 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -162,6 +178,7 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,9 +189,18 @@ public class ContentLiasettingsSetinventoryverificationcontactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ContentLiasettingsSetinventoryverificationcontactRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ContentLiasettingsSetinventoryverificationcontactRequest(@JsonProperty("accountId") String accountId, @JsonProperty("contactEmail") String contactEmail, @JsonProperty("contactName") String contactName, @JsonProperty("country") String country, @JsonProperty("language") String language, @JsonProperty("merchantId") String merchantId) {
+        this.accountId = accountId;
+        this.contactEmail = contactEmail;
+        this.contactName = contactName;
+        this.country = country;
+        this.language = language;
+        this.merchantId = merchantId;
+  }
 }

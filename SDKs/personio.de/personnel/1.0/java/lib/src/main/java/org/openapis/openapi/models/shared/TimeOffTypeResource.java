@@ -12,6 +12,7 @@ public class TimeOffTypeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public TimeOffTypeResourceAttributes attributes;
+
     public TimeOffTypeResource withAttributes(TimeOffTypeResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class TimeOffTypeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TimeOffTypeResource withId(Long id) {
         this.id = id;
         return this;
@@ -34,9 +36,11 @@ public class TimeOffTypeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TimeOffTypeResourceTypeEnum type;
+
     public TimeOffTypeResource withType(TimeOffTypeResourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TimeOffTypeResource(){}
 }

@@ -74,4 +74,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetActionStatusShowResp
 lib/src/main/java/org/openapis/openapi/models/operations/GetActionTagListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetActionTagListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/action/README.md
 USAGE.md

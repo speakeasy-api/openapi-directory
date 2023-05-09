@@ -18,6 +18,7 @@ public class ListDatasetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasets")
     public Dataset[] datasets;
+
     public ListDatasetsResponse withDatasets(Dataset[] datasets) {
         this.datasets = datasets;
         return this;
@@ -29,9 +30,11 @@ public class ListDatasetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListDatasetsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListDatasetsResponse(){}
 }

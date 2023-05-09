@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageBucketsUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Bucket bucket1;
+
     public StorageBucketsUpdateRequest withBucket1(org.openapis.openapi.models.shared.Bucket bucket1) {
         this.bucket1 = bucket1;
         return this;
@@ -19,6 +21,7 @@ public class StorageBucketsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public StorageBucketsUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class StorageBucketsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket")
     public String bucketPathParameter;
+
     public StorageBucketsUpdateRequest withBucketPathParameter(String bucketPathParameter) {
         this.bucketPathParameter = bucketPathParameter;
         return this;
@@ -39,6 +43,7 @@ public class StorageBucketsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public StorageBucketsUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class StorageBucketsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationMatch")
     public String ifMetagenerationMatch;
+
     public StorageBucketsUpdateRequest withIfMetagenerationMatch(String ifMetagenerationMatch) {
         this.ifMetagenerationMatch = ifMetagenerationMatch;
         return this;
@@ -59,6 +65,7 @@ public class StorageBucketsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationNotMatch")
     public String ifMetagenerationNotMatch;
+
     public StorageBucketsUpdateRequest withIfMetagenerationNotMatch(String ifMetagenerationNotMatch) {
         this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
         return this;
@@ -69,6 +76,7 @@ public class StorageBucketsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public StorageBucketsUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class StorageBucketsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public StorageBucketsUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class StorageBucketsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=predefinedAcl")
     public StorageBucketsUpdatePredefinedACLEnum predefinedAcl;
+
     public StorageBucketsUpdateRequest withPredefinedAcl(StorageBucketsUpdatePredefinedACLEnum predefinedAcl) {
         this.predefinedAcl = predefinedAcl;
         return this;
@@ -99,6 +109,7 @@ public class StorageBucketsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=predefinedDefaultObjectAcl")
     public StorageBucketsUpdatePredefinedDefaultObjectACLEnum predefinedDefaultObjectAcl;
+
     public StorageBucketsUpdateRequest withPredefinedDefaultObjectAcl(StorageBucketsUpdatePredefinedDefaultObjectACLEnum predefinedDefaultObjectAcl) {
         this.predefinedDefaultObjectAcl = predefinedDefaultObjectAcl;
         return this;
@@ -109,6 +120,7 @@ public class StorageBucketsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public StorageBucketsUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class StorageBucketsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
     public StorageBucketsUpdateProjectionEnum projection;
+
     public StorageBucketsUpdateRequest withProjection(StorageBucketsUpdateProjectionEnum projection) {
         this.projection = projection;
         return this;
@@ -129,6 +142,7 @@ public class StorageBucketsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public StorageBucketsUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class StorageBucketsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public StorageBucketsUpdateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,6 +164,7 @@ public class StorageBucketsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public StorageBucketsUpdateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -159,9 +175,13 @@ public class StorageBucketsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userProject")
     public String userProject;
+
     public StorageBucketsUpdateRequest withUserProject(String userProject) {
         this.userProject = userProject;
         return this;
     }
     
+    public StorageBucketsUpdateRequest(@JsonProperty("bucketPathParameter") String bucketPathParameter) {
+        this.bucketPathParameter = bucketPathParameter;
+  }
 }

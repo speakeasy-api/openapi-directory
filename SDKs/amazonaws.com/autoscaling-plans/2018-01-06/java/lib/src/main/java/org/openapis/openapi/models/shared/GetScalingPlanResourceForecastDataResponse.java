@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetScalingPlanResourceForecastDataResponse {
     @JsonProperty("Datapoints")
     public Datapoint[] datapoints;
+
     public GetScalingPlanResourceForecastDataResponse withDatapoints(Datapoint[] datapoints) {
         this.datapoints = datapoints;
         return this;
     }
     
+    public GetScalingPlanResourceForecastDataResponse(@JsonProperty("Datapoints") Datapoint[] datapoints) {
+        this.datapoints = datapoints;
+  }
 }

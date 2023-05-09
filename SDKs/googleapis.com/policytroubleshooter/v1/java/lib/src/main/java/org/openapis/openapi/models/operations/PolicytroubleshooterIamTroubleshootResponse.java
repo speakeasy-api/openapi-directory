@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PolicytroubleshooterIamTroubleshootResponse {
     
     public String contentType;
+
     public PolicytroubleshooterIamTroubleshootResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PolicytroubleshooterIamTroubleshootResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse googleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse;
+
     public PolicytroubleshooterIamTroubleshootResponse withGoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse(org.openapis.openapi.models.shared.GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse googleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse) {
         this.googleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse = googleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse;
         return this;
@@ -26,6 +29,7 @@ public class PolicytroubleshooterIamTroubleshootResponse {
     
     
     public Integer statusCode;
+
     public PolicytroubleshooterIamTroubleshootResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PolicytroubleshooterIamTroubleshootResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PolicytroubleshooterIamTroubleshootResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PolicytroubleshooterIamTroubleshootResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

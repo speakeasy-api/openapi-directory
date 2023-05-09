@@ -15,6 +15,7 @@ public class ListCustomRoutingListenersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Listeners")
     public CustomRoutingListener[] listeners;
+
     public ListCustomRoutingListenersResponse withListeners(CustomRoutingListener[] listeners) {
         this.listeners = listeners;
         return this;
@@ -23,9 +24,11 @@ public class ListCustomRoutingListenersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCustomRoutingListenersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomRoutingListenersResponse(){}
 }

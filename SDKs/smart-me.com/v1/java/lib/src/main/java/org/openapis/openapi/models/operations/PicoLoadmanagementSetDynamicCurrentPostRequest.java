@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PicoLoadmanagementSetDynamicCurrentPostRequest {
@@ -12,6 +13,7 @@ public class PicoLoadmanagementSetDynamicCurrentPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=current")
     public Integer current;
+
     public PicoLoadmanagementSetDynamicCurrentPostRequest withCurrent(Integer current) {
         this.current = current;
         return this;
@@ -22,9 +24,14 @@ public class PicoLoadmanagementSetDynamicCurrentPostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
     public Long serial;
+
     public PicoLoadmanagementSetDynamicCurrentPostRequest withSerial(Long serial) {
         this.serial = serial;
         return this;
     }
     
+    public PicoLoadmanagementSetDynamicCurrentPostRequest(@JsonProperty("current") Integer current, @JsonProperty("serial") Long serial) {
+        this.current = current;
+        this.serial = serial;
+  }
 }

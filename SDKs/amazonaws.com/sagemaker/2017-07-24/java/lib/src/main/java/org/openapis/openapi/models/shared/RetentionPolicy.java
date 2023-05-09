@@ -15,9 +15,11 @@ public class RetentionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeEfsFileSystem")
     public RetentionTypeEnum homeEfsFileSystem;
+
     public RetentionPolicy withHomeEfsFileSystem(RetentionTypeEnum homeEfsFileSystem) {
         this.homeEfsFileSystem = homeEfsFileSystem;
         return this;
     }
     
+    public RetentionPolicy(){}
 }

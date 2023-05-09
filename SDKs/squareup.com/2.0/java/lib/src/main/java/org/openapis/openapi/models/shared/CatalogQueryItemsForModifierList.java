@@ -15,9 +15,13 @@ public class CatalogQueryItemsForModifierList {
      */
     @JsonProperty("modifier_list_ids")
     public String[] modifierListIds;
+
     public CatalogQueryItemsForModifierList withModifierListIds(String[] modifierListIds) {
         this.modifierListIds = modifierListIds;
         return this;
     }
     
+    public CatalogQueryItemsForModifierList(@JsonProperty("modifier_list_ids") String[] modifierListIds) {
+        this.modifierListIds = modifierListIds;
+  }
 }

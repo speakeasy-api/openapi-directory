@@ -15,9 +15,11 @@ public class GetMapSpritesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blob")
     public String blob;
+
     public GetMapSpritesResponse withBlob(String blob) {
         this.blob = blob;
         return this;
     }
     
+    public GetMapSpritesResponse(){}
 }

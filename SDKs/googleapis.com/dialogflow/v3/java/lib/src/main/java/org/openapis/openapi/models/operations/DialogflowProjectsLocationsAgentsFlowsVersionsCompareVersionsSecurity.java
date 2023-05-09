@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsSecurityOption1 option1;
+
     public DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsSecurity withOption1(DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsSecuri
     
     @SpeakeasyMetadata("security:option=true")
     public DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsSecurityOption2 option2;
+
     public DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsSecurity withOption2(DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsSecurity(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class MetricCollectionType {
     
     public String metric;
+
     public MetricCollectionType withMetric(String metric) {
         this.metric = metric;
         return this;
     }
     
+    public MetricCollectionType(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SocialAcceptFriendRequestRequest {
@@ -12,9 +13,13 @@ public class SocialAcceptFriendRequestRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
     public String membershipId;
+
     public SocialAcceptFriendRequestRequest withMembershipId(String membershipId) {
         this.membershipId = membershipId;
         return this;
     }
     
+    public SocialAcceptFriendRequestRequest(@JsonProperty("membershipId") String membershipId) {
+        this.membershipId = membershipId;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesRequest {
     
     public Boolean dryRun;
+
     public DescribeInstanceTypesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeInstanceTypesRequest {
     
     
     public DescribeInstanceTypesRequestFilters[] filters;
+
     public DescribeInstanceTypesRequest withFilters(DescribeInstanceTypesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeInstanceTypesRequest {
     
     
     public InstanceTypeEnum[] instanceTypes;
+
     public DescribeInstanceTypesRequest withInstanceTypes(InstanceTypeEnum[] instanceTypes) {
         this.instanceTypes = instanceTypes;
         return this;
@@ -30,6 +33,7 @@ public class DescribeInstanceTypesRequest {
     
     
     public Long maxResults;
+
     public DescribeInstanceTypesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeInstanceTypesRequest {
     
     
     public String nextToken;
+
     public DescribeInstanceTypesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstanceTypesRequest(){}
 }

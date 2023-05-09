@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeApplicableIndividualAssessmentsResponse {
@@ -12,6 +13,7 @@ public class DescribeApplicableIndividualAssessmentsResponse {
      */
     
     public Object accessDeniedFault;
+
     public DescribeApplicableIndividualAssessmentsResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class DescribeApplicableIndividualAssessmentsResponse {
     
     
     public String contentType;
+
     public DescribeApplicableIndividualAssessmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeApplicableIndividualAssessmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeApplicableIndividualAssessmentsResponse describeApplicableIndividualAssessmentsResponse;
+
     public DescribeApplicableIndividualAssessmentsResponse withDescribeApplicableIndividualAssessmentsResponse(org.openapis.openapi.models.shared.DescribeApplicableIndividualAssessmentsResponse describeApplicableIndividualAssessmentsResponse) {
         this.describeApplicableIndividualAssessmentsResponse = describeApplicableIndividualAssessmentsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeApplicableIndividualAssessmentsResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public DescribeApplicableIndividualAssessmentsResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -46,6 +51,7 @@ public class DescribeApplicableIndividualAssessmentsResponse {
     
     
     public Integer statusCode;
+
     public DescribeApplicableIndividualAssessmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeApplicableIndividualAssessmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeApplicableIndividualAssessmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeApplicableIndividualAssessmentsResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public DescribeApplicableIndividualAssessmentsResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
     }
     
+    public DescribeApplicableIndividualAssessmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

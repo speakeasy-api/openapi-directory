@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePhoneNumberResponse {
@@ -12,6 +13,7 @@ public class UpdatePhoneNumberResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdatePhoneNumberResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdatePhoneNumberResponse {
      */
     
     public Object conflictException;
+
     public UpdatePhoneNumberResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdatePhoneNumberResponse {
     
     
     public String contentType;
+
     public UpdatePhoneNumberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdatePhoneNumberResponse {
      */
     
     public Object internalServerException;
+
     public UpdatePhoneNumberResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdatePhoneNumberResponse {
     
     
     public Integer statusCode;
+
     public UpdatePhoneNumberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdatePhoneNumberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePhoneNumberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdatePhoneNumberResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdatePhoneNumberResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdatePhoneNumberResponse {
      */
     
     public Object throttlingException;
+
     public UpdatePhoneNumberResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdatePhoneNumberResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdatePhoneNumberResult updatePhoneNumberResult;
+
     public UpdatePhoneNumberResponse withUpdatePhoneNumberResult(org.openapis.openapi.models.shared.UpdatePhoneNumberResult updatePhoneNumberResult) {
         this.updatePhoneNumberResult = updatePhoneNumberResult;
         return this;
@@ -93,9 +103,14 @@ public class UpdatePhoneNumberResponse {
      */
     
     public Object validationException;
+
     public UpdatePhoneNumberResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdatePhoneNumberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

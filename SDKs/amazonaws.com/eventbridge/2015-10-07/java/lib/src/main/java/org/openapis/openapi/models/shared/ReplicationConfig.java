@@ -15,9 +15,11 @@ public class ReplicationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ReplicationStateEnum state;
+
     public ReplicationConfig withState(ReplicationStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ReplicationConfig(){}
 }

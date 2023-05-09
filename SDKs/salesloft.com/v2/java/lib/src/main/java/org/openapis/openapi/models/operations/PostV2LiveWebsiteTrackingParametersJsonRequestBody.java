@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2LiveWebsiteTrackingParametersJsonRequestBody {
@@ -12,9 +13,13 @@ public class PostV2LiveWebsiteTrackingParametersJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=person_id")
     public Long personId;
+
     public PostV2LiveWebsiteTrackingParametersJsonRequestBody withPersonId(Long personId) {
         this.personId = personId;
         return this;
     }
     
+    public PostV2LiveWebsiteTrackingParametersJsonRequestBody(@JsonProperty("person_id") Long personId) {
+        this.personId = personId;
+  }
 }

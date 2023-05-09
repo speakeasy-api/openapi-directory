@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListByoipCidrsResponse {
@@ -12,6 +13,7 @@ public class ListByoipCidrsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListByoipCidrsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListByoipCidrsResponse {
     
     
     public String contentType;
+
     public ListByoipCidrsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListByoipCidrsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListByoipCidrsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class ListByoipCidrsResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListByoipCidrsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class ListByoipCidrsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListByoipCidrsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListByoipCidrsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListByoipCidrsResponse listByoipCidrsResponse;
+
     public ListByoipCidrsResponse withListByoipCidrsResponse(org.openapis.openapi.models.shared.ListByoipCidrsResponse listByoipCidrsResponse) {
         this.listByoipCidrsResponse = listByoipCidrsResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListByoipCidrsResponse {
     
     
     public Integer statusCode;
+
     public ListByoipCidrsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListByoipCidrsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListByoipCidrsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListByoipCidrsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

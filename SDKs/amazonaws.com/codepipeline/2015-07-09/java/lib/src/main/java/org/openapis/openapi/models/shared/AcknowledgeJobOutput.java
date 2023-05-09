@@ -15,9 +15,11 @@ public class AcknowledgeJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public AcknowledgeJobOutput withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AcknowledgeJobOutput(){}
 }

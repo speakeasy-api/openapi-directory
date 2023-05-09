@@ -12,6 +12,7 @@ public class GETMostemailedSectionTimePeriodJSON400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright")
     public String copyright;
+
     public GETMostemailedSectionTimePeriodJSON400ApplicationJSON withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -20,6 +21,7 @@ public class GETMostemailedSectionTimePeriodJSON400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public String[] errors;
+
     public GETMostemailedSectionTimePeriodJSON400ApplicationJSON withErrors(String[] errors) {
         this.errors = errors;
         return this;
@@ -28,6 +30,7 @@ public class GETMostemailedSectionTimePeriodJSON400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public Object[] results;
+
     public GETMostemailedSectionTimePeriodJSON400ApplicationJSON withResults(Object[] results) {
         this.results = results;
         return this;
@@ -36,9 +39,11 @@ public class GETMostemailedSectionTimePeriodJSON400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GETMostemailedSectionTimePeriodJSON400ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GETMostemailedSectionTimePeriodJSON400ApplicationJSON(){}
 }

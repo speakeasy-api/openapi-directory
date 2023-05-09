@@ -15,6 +15,7 @@ public class RewardResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_thread")
     public String thread;
+
     public RewardResourceAttributes withThread(String thread) {
         this.thread = thread;
         return this;
@@ -25,6 +26,7 @@ public class RewardResourceAttributes {
      */
     @JsonProperty("allocated_at")
     public String allocatedAt;
+
     public RewardResourceAttributes withAllocatedAt(String allocatedAt) {
         this.allocatedAt = allocatedAt;
         return this;
@@ -36,6 +38,7 @@ public class RewardResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allocated_unit")
     public String allocatedUnit;
+
     public RewardResourceAttributes withAllocatedUnit(String allocatedUnit) {
         this.allocatedUnit = allocatedUnit;
         return this;
@@ -46,6 +49,7 @@ public class RewardResourceAttributes {
      */
     @JsonProperty("allocated_value")
     public Double allocatedValue;
+
     public RewardResourceAttributes withAllocatedValue(Double allocatedValue) {
         this.allocatedValue = allocatedValue;
         return this;
@@ -56,6 +60,7 @@ public class RewardResourceAttributes {
      */
     @JsonProperty("description")
     public String description;
+
     public RewardResourceAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -67,6 +72,7 @@ public class RewardResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earned_at")
     public String earnedAt;
+
     public RewardResourceAttributes withEarnedAt(String earnedAt) {
         this.earnedAt = earnedAt;
         return this;
@@ -78,6 +84,7 @@ public class RewardResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earned_value")
     public Double earnedValue;
+
     public RewardResourceAttributes withEarnedValue(Double earnedValue) {
         this.earnedValue = earnedValue;
         return this;
@@ -89,6 +96,7 @@ public class RewardResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfilled_at")
     public String fulfilledAt;
+
     public RewardResourceAttributes withFulfilledAt(String fulfilledAt) {
         this.fulfilledAt = fulfilledAt;
         return this;
@@ -100,6 +108,7 @@ public class RewardResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfilled_value")
     public Double fulfilledValue;
+
     public RewardResourceAttributes withFulfilledValue(Double fulfilledValue) {
         this.fulfilledValue = fulfilledValue;
         return this;
@@ -111,9 +120,15 @@ public class RewardResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_at")
     public String targetAt;
+
     public RewardResourceAttributes withTargetAt(String targetAt) {
         this.targetAt = targetAt;
         return this;
     }
     
+    public RewardResourceAttributes(@JsonProperty("allocated_at") String allocatedAt, @JsonProperty("allocated_value") Double allocatedValue, @JsonProperty("description") String description) {
+        this.allocatedAt = allocatedAt;
+        this.allocatedValue = allocatedValue;
+        this.description = description;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UnshareTarget {
     @JsonProperty("Id")
     public String id;
+
     public UnshareTarget withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class UnshareTarget {
     
     @JsonProperty("Type")
     public TargetTypeEnum type;
+
     public UnshareTarget withType(TargetTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UnshareTarget(@JsonProperty("Id") String id, @JsonProperty("Type") TargetTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

@@ -15,6 +15,7 @@ public class ComplianceOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonComplianceReason")
     public String nonComplianceReason;
+
     public ComplianceOccurrence withNonComplianceReason(String nonComplianceReason) {
         this.nonComplianceReason = nonComplianceReason;
         return this;
@@ -23,9 +24,11 @@ public class ComplianceOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonCompliantFiles")
     public NonCompliantFile[] nonCompliantFiles;
+
     public ComplianceOccurrence withNonCompliantFiles(NonCompliantFile[] nonCompliantFiles) {
         this.nonCompliantFiles = nonCompliantFiles;
         return this;
     }
     
+    public ComplianceOccurrence(){}
 }

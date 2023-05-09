@@ -225,4 +225,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateSystemTemplateRequest
 lib/src/main/java/org/openapis/openapi/models/shared/UploadEntityDefinitionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UploadEntityDefinitionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

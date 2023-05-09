@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdGetByIdRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdGetByIdRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
@@ -19,6 +21,7 @@ public class GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctio
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
     public String definitionId;
+
     public GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdGetByIdRequest withDefinitionId(String definitionId) {
         this.definitionId = definitionId;
         return this;
@@ -29,6 +32,7 @@ public class GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctio
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionId")
     public String functionId;
+
     public GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdGetByIdRequest withFunctionId(String functionId) {
         this.functionId = functionId;
         return this;
@@ -39,9 +43,16 @@ public class GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctio
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionType")
     public GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdGetByIdFunctionTypeEnum functionType;
+
     public GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdGetByIdRequest withFunctionType(GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdGetByIdFunctionTypeEnum functionType) {
         this.functionType = functionType;
         return this;
     }
     
+    public GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdGetByIdRequest(@JsonProperty("appId") Integer appId, @JsonProperty("definitionId") String definitionId, @JsonProperty("functionId") String functionId, @JsonProperty("functionType") GetAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdGetByIdFunctionTypeEnum functionType) {
+        this.appId = appId;
+        this.definitionId = definitionId;
+        this.functionId = functionId;
+        this.functionType = functionType;
+  }
 }

@@ -15,9 +15,11 @@ public class GetImagesId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public GetImagesId200ApplicationJSONImage image;
+
     public GetImagesId200ApplicationJSON withImage(GetImagesId200ApplicationJSONImage image) {
         this.image = image;
         return this;
     }
     
+    public GetImagesId200ApplicationJSON(){}
 }

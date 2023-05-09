@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EventarcProjectsLocationsTriggersCreateRequest {
@@ -12,6 +13,7 @@ public class EventarcProjectsLocationsTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public EventarcProjectsLocationsTriggersCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class EventarcProjectsLocationsTriggersCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TriggerInput triggerInput;
+
     public EventarcProjectsLocationsTriggersCreateRequest withTriggerInput(org.openapis.openapi.models.shared.TriggerInput triggerInput) {
         this.triggerInput = triggerInput;
         return this;
@@ -29,6 +32,7 @@ public class EventarcProjectsLocationsTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public EventarcProjectsLocationsTriggersCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class EventarcProjectsLocationsTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public EventarcProjectsLocationsTriggersCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class EventarcProjectsLocationsTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public EventarcProjectsLocationsTriggersCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class EventarcProjectsLocationsTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public EventarcProjectsLocationsTriggersCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class EventarcProjectsLocationsTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public EventarcProjectsLocationsTriggersCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class EventarcProjectsLocationsTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public EventarcProjectsLocationsTriggersCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class EventarcProjectsLocationsTriggersCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public EventarcProjectsLocationsTriggersCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -99,6 +109,7 @@ public class EventarcProjectsLocationsTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public EventarcProjectsLocationsTriggersCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class EventarcProjectsLocationsTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public EventarcProjectsLocationsTriggersCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class EventarcProjectsLocationsTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=triggerId")
     public String triggerId;
+
     public EventarcProjectsLocationsTriggersCreateRequest withTriggerId(String triggerId) {
         this.triggerId = triggerId;
         return this;
@@ -129,6 +142,7 @@ public class EventarcProjectsLocationsTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public EventarcProjectsLocationsTriggersCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,19 +153,24 @@ public class EventarcProjectsLocationsTriggersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public EventarcProjectsLocationsTriggersCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
     /**
-     * Required. If set, validate the request and preview the review, but do not post it.
+     * Optional. If set, validate the request and preview the review, but do not post it.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=validateOnly")
     public Boolean validateOnly;
+
     public EventarcProjectsLocationsTriggersCreateRequest withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public EventarcProjectsLocationsTriggersCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

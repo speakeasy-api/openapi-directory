@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWebhookResponse {
@@ -12,6 +13,7 @@ public class CreateWebhookResponse {
      */
     
     public Object badRequestException;
+
     public CreateWebhookResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateWebhookResponse {
     
     
     public String contentType;
+
     public CreateWebhookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWebhookResult createWebhookResult;
+
     public CreateWebhookResponse withCreateWebhookResult(org.openapis.openapi.models.shared.CreateWebhookResult createWebhookResult) {
         this.createWebhookResult = createWebhookResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateWebhookResponse {
      */
     
     public Object dependentServiceFailureException;
+
     public CreateWebhookResponse withDependentServiceFailureException(Object dependentServiceFailureException) {
         this.dependentServiceFailureException = dependentServiceFailureException;
         return this;
@@ -49,6 +54,7 @@ public class CreateWebhookResponse {
      */
     
     public Object internalFailureException;
+
     public CreateWebhookResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class CreateWebhookResponse {
      */
     
     public Object limitExceededException;
+
     public CreateWebhookResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateWebhookResponse {
      */
     
     public Object notFoundException;
+
     public CreateWebhookResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreateWebhookResponse {
     
     
     public Integer statusCode;
+
     public CreateWebhookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateWebhookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWebhookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateWebhookResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateWebhookResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateWebhookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

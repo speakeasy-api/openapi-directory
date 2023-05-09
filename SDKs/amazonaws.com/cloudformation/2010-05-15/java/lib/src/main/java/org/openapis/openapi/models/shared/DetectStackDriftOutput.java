@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DetectStackDriftOutput - Success
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DetectStackDriftOutput {
     
     public String stackDriftDetectionId;
+
     public DetectStackDriftOutput withStackDriftDetectionId(String stackDriftDetectionId) {
         this.stackDriftDetectionId = stackDriftDetectionId;
         return this;
     }
     
+    public DetectStackDriftOutput(@JsonProperty("StackDriftDetectionId") String stackDriftDetectionId) {
+        this.stackDriftDetectionId = stackDriftDetectionId;
+  }
 }

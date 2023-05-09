@@ -18,6 +18,7 @@ public class AcceptTermsOfServiceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptedBy")
     public String acceptedBy;
+
     public AcceptTermsOfServiceResponse withAcceptedBy(String acceptedBy) {
         this.acceptedBy = acceptedBy;
         return this;
@@ -29,6 +30,7 @@ public class AcceptTermsOfServiceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AcceptTermsOfServiceResponse withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class AcceptTermsOfServiceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public AcceptTermsOfServiceResponse withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -51,6 +54,7 @@ public class AcceptTermsOfServiceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public AcceptTermsOfServiceResponse withLanguage(String language) {
         this.language = language;
         return this;
@@ -62,6 +66,7 @@ public class AcceptTermsOfServiceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termsOfServiceDocumentId")
     public String termsOfServiceDocumentId;
+
     public AcceptTermsOfServiceResponse withTermsOfServiceDocumentId(String termsOfServiceDocumentId) {
         this.termsOfServiceDocumentId = termsOfServiceDocumentId;
         return this;
@@ -73,9 +78,11 @@ public class AcceptTermsOfServiceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AcceptTermsOfServiceResponseTypeEnum type;
+
     public AcceptTermsOfServiceResponse withType(AcceptTermsOfServiceResponseTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AcceptTermsOfServiceResponse(){}
 }

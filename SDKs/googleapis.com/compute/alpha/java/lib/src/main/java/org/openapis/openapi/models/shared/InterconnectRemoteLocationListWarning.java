@@ -18,6 +18,7 @@ public class InterconnectRemoteLocationListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public InterconnectRemoteLocationListWarningCodeEnum code;
+
     public InterconnectRemoteLocationListWarning withCode(InterconnectRemoteLocationListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class InterconnectRemoteLocationListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public InterconnectRemoteLocationListWarningData[] data;
+
     public InterconnectRemoteLocationListWarning withData(InterconnectRemoteLocationListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class InterconnectRemoteLocationListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InterconnectRemoteLocationListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InterconnectRemoteLocationListWarning(){}
 }

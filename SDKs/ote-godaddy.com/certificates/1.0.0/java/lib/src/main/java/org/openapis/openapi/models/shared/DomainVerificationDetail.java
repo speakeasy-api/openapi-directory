@@ -25,6 +25,7 @@ public class DomainVerificationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateAuthorityAuthorization")
     public DomainVerificationDetailCertificateAuthorityAuthorization certificateAuthorityAuthorization;
+
     public DomainVerificationDetail withCertificateAuthorityAuthorization(DomainVerificationDetailCertificateAuthorityAuthorization certificateAuthorityAuthorization) {
         this.certificateAuthorityAuthorization = certificateAuthorityAuthorization;
         return this;
@@ -35,6 +36,7 @@ public class DomainVerificationDetail {
      */
     @JsonProperty("createdAt")
     public String createdAt;
+
     public DomainVerificationDetail withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +48,7 @@ public class DomainVerificationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dceToken")
     public String dceToken;
+
     public DomainVerificationDetail withDceToken(String dceToken) {
         this.dceToken = dceToken;
         return this;
@@ -56,6 +59,7 @@ public class DomainVerificationDetail {
      */
     @JsonProperty("domain")
     public String domain;
+
     public DomainVerificationDetail withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -66,6 +70,7 @@ public class DomainVerificationDetail {
      */
     @JsonProperty("domainEntityId")
     public Long domainEntityId;
+
     public DomainVerificationDetail withDomainEntityId(Long domainEntityId) {
         this.domainEntityId = domainEntityId;
         return this;
@@ -76,6 +81,7 @@ public class DomainVerificationDetail {
      */
     @JsonProperty("modifiedAt")
     public String modifiedAt;
+
     public DomainVerificationDetail withModifiedAt(String modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
@@ -97,6 +103,7 @@ public class DomainVerificationDetail {
      */
     @JsonProperty("status")
     public DomainVerificationDetailStatusEnum status;
+
     public DomainVerificationDetail withStatus(DomainVerificationDetailStatusEnum status) {
         this.status = status;
         return this;
@@ -125,6 +132,7 @@ public class DomainVerificationDetail {
      */
     @JsonProperty("type")
     public DomainVerificationDetailTypeEnum type;
+
     public DomainVerificationDetail withType(DomainVerificationDetailTypeEnum type) {
         this.type = type;
         return this;
@@ -135,9 +143,19 @@ public class DomainVerificationDetail {
      */
     @JsonProperty("usage")
     public DomainVerificationDetailUsageEnum usage;
+
     public DomainVerificationDetail withUsage(DomainVerificationDetailUsageEnum usage) {
         this.usage = usage;
         return this;
     }
     
+    public DomainVerificationDetail(@JsonProperty("createdAt") String createdAt, @JsonProperty("domain") String domain, @JsonProperty("domainEntityId") Long domainEntityId, @JsonProperty("modifiedAt") String modifiedAt, @JsonProperty("status") DomainVerificationDetailStatusEnum status, @JsonProperty("type") DomainVerificationDetailTypeEnum type, @JsonProperty("usage") DomainVerificationDetailUsageEnum usage) {
+        this.createdAt = createdAt;
+        this.domain = domain;
+        this.domainEntityId = domainEntityId;
+        this.modifiedAt = modifiedAt;
+        this.status = status;
+        this.type = type;
+        this.usage = usage;
+  }
 }

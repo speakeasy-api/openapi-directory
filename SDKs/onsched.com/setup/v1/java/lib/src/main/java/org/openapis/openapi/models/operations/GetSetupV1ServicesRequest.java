@@ -12,6 +12,7 @@ public class GetSetupV1ServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deleted")
     public Boolean deleted;
+
     public GetSetupV1ServicesRequest withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -22,6 +23,7 @@ public class GetSetupV1ServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetSetupV1ServicesRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,6 +34,7 @@ public class GetSetupV1ServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
     public String locationId;
+
     public GetSetupV1ServicesRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -42,6 +45,7 @@ public class GetSetupV1ServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetSetupV1ServicesRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -52,9 +56,11 @@ public class GetSetupV1ServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceGroupId")
     public Integer serviceGroupId;
+
     public GetSetupV1ServicesRequest withServiceGroupId(Integer serviceGroupId) {
         this.serviceGroupId = serviceGroupId;
         return this;
     }
     
+    public GetSetupV1ServicesRequest(){}
 }

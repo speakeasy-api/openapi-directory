@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateResponse {
     
     public String contentType;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRe
      */
     
     public org.openapis.openapi.models.shared.PerfSampleSeries perfSampleSeries;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateResponse withPerfSampleSeries(org.openapis.openapi.models.shared.PerfSampleSeries perfSampleSeries) {
         this.perfSampleSeries = perfSampleSeries;
         return this;
@@ -26,6 +29,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRe
     
     
     public Integer statusCode;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRe
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

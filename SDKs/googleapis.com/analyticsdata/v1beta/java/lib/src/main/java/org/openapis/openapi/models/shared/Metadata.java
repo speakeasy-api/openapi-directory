@@ -18,6 +18,7 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public DimensionMetadata[] dimensions;
+
     public Metadata withDimensions(DimensionMetadata[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -29,6 +30,7 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public MetricMetadata[] metrics;
+
     public Metadata withMetrics(MetricMetadata[] metrics) {
         this.metrics = metrics;
         return this;
@@ -40,9 +42,11 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Metadata withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Metadata(){}
 }

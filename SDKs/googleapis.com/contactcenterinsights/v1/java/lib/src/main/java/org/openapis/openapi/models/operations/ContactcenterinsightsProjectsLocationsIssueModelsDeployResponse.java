@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContactcenterinsightsProjectsLocationsIssueModelsDeployResponse {
     
     public String contentType;
+
     public ContactcenterinsightsProjectsLocationsIssueModelsDeployResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContactcenterinsightsProjectsLocationsIssueModelsDeployResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleLongrunningOperation googleLongrunningOperation;
+
     public ContactcenterinsightsProjectsLocationsIssueModelsDeployResponse withGoogleLongrunningOperation(org.openapis.openapi.models.shared.GoogleLongrunningOperation googleLongrunningOperation) {
         this.googleLongrunningOperation = googleLongrunningOperation;
         return this;
@@ -26,6 +29,7 @@ public class ContactcenterinsightsProjectsLocationsIssueModelsDeployResponse {
     
     
     public Integer statusCode;
+
     public ContactcenterinsightsProjectsLocationsIssueModelsDeployResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContactcenterinsightsProjectsLocationsIssueModelsDeployResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContactcenterinsightsProjectsLocationsIssueModelsDeployResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContactcenterinsightsProjectsLocationsIssueModelsDeployResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

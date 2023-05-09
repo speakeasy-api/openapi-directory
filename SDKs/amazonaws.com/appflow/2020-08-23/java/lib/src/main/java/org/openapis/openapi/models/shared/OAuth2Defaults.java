@@ -15,6 +15,7 @@ public class OAuth2Defaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authCodeUrls")
     public String[] authCodeUrls;
+
     public OAuth2Defaults withAuthCodeUrls(String[] authCodeUrls) {
         this.authCodeUrls = authCodeUrls;
         return this;
@@ -23,6 +24,7 @@ public class OAuth2Defaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth2CustomProperties")
     public OAuth2CustomParameter[] oauth2CustomProperties;
+
     public OAuth2Defaults withOauth2CustomProperties(OAuth2CustomParameter[] oauth2CustomProperties) {
         this.oauth2CustomProperties = oauth2CustomProperties;
         return this;
@@ -31,6 +33,7 @@ public class OAuth2Defaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth2GrantTypesSupported")
     public OAuth2GrantTypeEnum[] oauth2GrantTypesSupported;
+
     public OAuth2Defaults withOauth2GrantTypesSupported(OAuth2GrantTypeEnum[] oauth2GrantTypesSupported) {
         this.oauth2GrantTypesSupported = oauth2GrantTypesSupported;
         return this;
@@ -39,6 +42,7 @@ public class OAuth2Defaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauthScopes")
     public String[] oauthScopes;
+
     public OAuth2Defaults withOauthScopes(String[] oauthScopes) {
         this.oauthScopes = oauthScopes;
         return this;
@@ -47,9 +51,11 @@ public class OAuth2Defaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenUrls")
     public String[] tokenUrls;
+
     public OAuth2Defaults withTokenUrls(String[] tokenUrls) {
         this.tokenUrls = tokenUrls;
         return this;
     }
     
+    public OAuth2Defaults(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPermissionGroupResponse {
     
     public String contentType;
+
     public GetPermissionGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPermissionGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.PermissionGroupModel permissionGroupModel;
+
     public GetPermissionGroupResponse withPermissionGroupModel(org.openapis.openapi.models.shared.PermissionGroupModel permissionGroupModel) {
         this.permissionGroupModel = permissionGroupModel;
         return this;
@@ -29,6 +32,7 @@ public class GetPermissionGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.PermissionGroupModelHaljson permissionGroupModelHaljson;
+
     public GetPermissionGroupResponse withPermissionGroupModelHaljson(org.openapis.openapi.models.shared.PermissionGroupModelHaljson permissionGroupModelHaljson) {
         this.permissionGroupModelHaljson = permissionGroupModelHaljson;
         return this;
@@ -36,6 +40,7 @@ public class GetPermissionGroupResponse {
     
     
     public Integer statusCode;
+
     public GetPermissionGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetPermissionGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPermissionGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPermissionGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGroupCertificateAuthorityResponse {
@@ -12,6 +13,7 @@ public class CreateGroupCertificateAuthorityResponse {
      */
     
     public Object badRequestException;
+
     public CreateGroupCertificateAuthorityResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateGroupCertificateAuthorityResponse {
     
     
     public String contentType;
+
     public CreateGroupCertificateAuthorityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateGroupCertificateAuthorityResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGroupCertificateAuthorityResponse createGroupCertificateAuthorityResponse;
+
     public CreateGroupCertificateAuthorityResponse withCreateGroupCertificateAuthorityResponse(org.openapis.openapi.models.shared.CreateGroupCertificateAuthorityResponse createGroupCertificateAuthorityResponse) {
         this.createGroupCertificateAuthorityResponse = createGroupCertificateAuthorityResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateGroupCertificateAuthorityResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateGroupCertificateAuthorityResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -46,6 +51,7 @@ public class CreateGroupCertificateAuthorityResponse {
     
     
     public Integer statusCode;
+
     public CreateGroupCertificateAuthorityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateGroupCertificateAuthorityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGroupCertificateAuthorityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateGroupCertificateAuthorityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

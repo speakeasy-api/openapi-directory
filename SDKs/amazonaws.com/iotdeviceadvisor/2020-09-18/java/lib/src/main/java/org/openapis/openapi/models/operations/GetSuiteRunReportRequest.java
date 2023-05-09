@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSuiteRunReportRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetSuiteRunReportRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class GetSuiteRunReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetSuiteRunReportRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class GetSuiteRunReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetSuiteRunReportRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class GetSuiteRunReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetSuiteRunReportRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class GetSuiteRunReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetSuiteRunReportRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class GetSuiteRunReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetSuiteRunReportRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class GetSuiteRunReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetSuiteRunReportRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class GetSuiteRunReportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=suiteDefinitionId")
     public String suiteDefinitionId;
+
     public GetSuiteRunReportRequest withSuiteDefinitionId(String suiteDefinitionId) {
         this.suiteDefinitionId = suiteDefinitionId;
         return this;
@@ -71,9 +80,14 @@ public class GetSuiteRunReportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=suiteRunId")
     public String suiteRunId;
+
     public GetSuiteRunReportRequest withSuiteRunId(String suiteRunId) {
         this.suiteRunId = suiteRunId;
         return this;
     }
     
+    public GetSuiteRunReportRequest(@JsonProperty("suiteDefinitionId") String suiteDefinitionId, @JsonProperty("suiteRunId") String suiteRunId) {
+        this.suiteDefinitionId = suiteDefinitionId;
+        this.suiteRunId = suiteRunId;
+  }
 }

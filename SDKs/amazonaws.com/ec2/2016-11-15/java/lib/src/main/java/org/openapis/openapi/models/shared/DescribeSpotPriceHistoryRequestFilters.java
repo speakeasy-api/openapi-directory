@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotPriceHistoryRequestFilters {
     
     public String name;
+
     public DescribeSpotPriceHistoryRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSpotPriceHistoryRequestFilters {
     
     
     public String[] values;
+
     public DescribeSpotPriceHistoryRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeSpotPriceHistoryRequestFilters(){}
 }

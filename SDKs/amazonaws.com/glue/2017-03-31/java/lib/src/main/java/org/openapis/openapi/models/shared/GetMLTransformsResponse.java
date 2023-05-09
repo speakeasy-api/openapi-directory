@@ -15,6 +15,7 @@ public class GetMLTransformsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetMLTransformsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class GetMLTransformsResponse {
     
     @JsonProperty("Transforms")
     public MLTransform[] transforms;
+
     public GetMLTransformsResponse withTransforms(MLTransform[] transforms) {
         this.transforms = transforms;
         return this;
     }
     
+    public GetMLTransformsResponse(@JsonProperty("Transforms") MLTransform[] transforms) {
+        this.transforms = transforms;
+  }
 }

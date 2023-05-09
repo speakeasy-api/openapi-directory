@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Root200ApplicationJSONLinksGroundhog {
     @JsonProperty("href")
     public String href;
+
     public Root200ApplicationJSONLinksGroundhog withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public Root200ApplicationJSONLinksGroundhog(@JsonProperty("href") String href) {
+        this.href = href;
+  }
 }

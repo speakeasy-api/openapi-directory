@@ -15,6 +15,7 @@ public class GetResourcePermissionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionType")
     public GetResourcePermissionRequestBodyActionTypeEnum actionType;
+
     public GetResourcePermissionRequestBody withActionType(GetResourcePermissionRequestBodyActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -25,9 +26,13 @@ public class GetResourcePermissionRequestBody {
      */
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public GetResourcePermissionRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public GetResourcePermissionRequestBody(@JsonProperty("ResourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

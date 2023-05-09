@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppengineProjectsLocationsApplicationsGetRequest {
@@ -12,6 +13,7 @@ public class AppengineProjectsLocationsApplicationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AppengineProjectsLocationsApplicationsGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class AppengineProjectsLocationsApplicationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AppengineProjectsLocationsApplicationsGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class AppengineProjectsLocationsApplicationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AppengineProjectsLocationsApplicationsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AppengineProjectsLocationsApplicationsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationsId")
     public String applicationsId;
+
     public AppengineProjectsLocationsApplicationsGetRequest withApplicationsId(String applicationsId) {
         this.applicationsId = applicationsId;
         return this;
@@ -52,6 +57,7 @@ public class AppengineProjectsLocationsApplicationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AppengineProjectsLocationsApplicationsGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class AppengineProjectsLocationsApplicationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AppengineProjectsLocationsApplicationsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class AppengineProjectsLocationsApplicationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AppengineProjectsLocationsApplicationsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class AppengineProjectsLocationsApplicationsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=locationsId")
     public String locationsId;
+
     public AppengineProjectsLocationsApplicationsGetRequest withLocationsId(String locationsId) {
         this.locationsId = locationsId;
         return this;
@@ -92,6 +101,7 @@ public class AppengineProjectsLocationsApplicationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AppengineProjectsLocationsApplicationsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class AppengineProjectsLocationsApplicationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AppengineProjectsLocationsApplicationsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class AppengineProjectsLocationsApplicationsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectsId")
     public String projectsId;
+
     public AppengineProjectsLocationsApplicationsGetRequest withProjectsId(String projectsId) {
         this.projectsId = projectsId;
         return this;
@@ -122,6 +134,7 @@ public class AppengineProjectsLocationsApplicationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AppengineProjectsLocationsApplicationsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class AppengineProjectsLocationsApplicationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AppengineProjectsLocationsApplicationsGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,15 @@ public class AppengineProjectsLocationsApplicationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AppengineProjectsLocationsApplicationsGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AppengineProjectsLocationsApplicationsGetRequest(@JsonProperty("applicationsId") String applicationsId, @JsonProperty("locationsId") String locationsId, @JsonProperty("projectsId") String projectsId) {
+        this.applicationsId = applicationsId;
+        this.locationsId = locationsId;
+        this.projectsId = projectsId;
+  }
 }

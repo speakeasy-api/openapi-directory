@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSmDevicesRequest {
@@ -12,6 +13,7 @@ public class GetNetworkSmDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batchSize")
     public Long batchSize;
+
     public GetNetworkSmDevicesRequest withBatchSize(Long batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -25,6 +27,7 @@ public class GetNetworkSmDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batchToken")
     public String batchToken;
+
     public GetNetworkSmDevicesRequest withBatchToken(String batchToken) {
         this.batchToken = batchToken;
         return this;
@@ -41,6 +44,7 @@ public class GetNetworkSmDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GetNetworkSmDevicesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -51,6 +55,7 @@ public class GetNetworkSmDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String ids;
+
     public GetNetworkSmDevicesRequest withIds(String ids) {
         this.ids = ids;
         return this;
@@ -58,6 +63,7 @@ public class GetNetworkSmDevicesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public GetNetworkSmDevicesRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -68,6 +74,7 @@ public class GetNetworkSmDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
     public String scope;
+
     public GetNetworkSmDevicesRequest withScope(String scope) {
         this.scope = scope;
         return this;
@@ -78,6 +85,7 @@ public class GetNetworkSmDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serials")
     public String serials;
+
     public GetNetworkSmDevicesRequest withSerials(String serials) {
         this.serials = serials;
         return this;
@@ -88,9 +96,13 @@ public class GetNetworkSmDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=wifiMacs")
     public String wifiMacs;
+
     public GetNetworkSmDevicesRequest withWifiMacs(String wifiMacs) {
         this.wifiMacs = wifiMacs;
         return this;
     }
     
+    public GetNetworkSmDevicesRequest(@JsonProperty("networkId") String networkId) {
+        this.networkId = networkId;
+  }
 }

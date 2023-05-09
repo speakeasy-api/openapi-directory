@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class JobListResponse {
@@ -12,6 +13,7 @@ public class JobListResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public JobListResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class JobListResponse {
     
     
     public org.openapis.openapi.models.shared.CloudJobListResult cloudJobListResult;
+
     public JobListResponse withCloudJobListResult(org.openapis.openapi.models.shared.CloudJobListResult cloudJobListResult) {
         this.cloudJobListResult = cloudJobListResult;
         return this;
@@ -26,6 +29,7 @@ public class JobListResponse {
     
     
     public String contentType;
+
     public JobListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class JobListResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public JobListResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -40,6 +45,7 @@ public class JobListResponse {
     
     
     public Integer statusCode;
+
     public JobListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class JobListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public JobListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public JobListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

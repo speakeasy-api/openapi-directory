@@ -18,6 +18,7 @@ public class GoogleSearchIdeahubV1alphaIdeaActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ideas")
     public String[] ideas;
+
     public GoogleSearchIdeahubV1alphaIdeaActivity withIdeas(String[] ideas) {
         this.ideas = ideas;
         return this;
@@ -29,6 +30,7 @@ public class GoogleSearchIdeahubV1alphaIdeaActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleSearchIdeahubV1alphaIdeaActivity withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GoogleSearchIdeahubV1alphaIdeaActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topics")
     public String[] topics;
+
     public GoogleSearchIdeahubV1alphaIdeaActivity withTopics(String[] topics) {
         this.topics = topics;
         return this;
@@ -51,6 +54,7 @@ public class GoogleSearchIdeahubV1alphaIdeaActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleSearchIdeahubV1alphaIdeaActivityTypeEnum type;
+
     public GoogleSearchIdeahubV1alphaIdeaActivity withType(GoogleSearchIdeahubV1alphaIdeaActivityTypeEnum type) {
         this.type = type;
         return this;
@@ -62,9 +66,11 @@ public class GoogleSearchIdeahubV1alphaIdeaActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleSearchIdeahubV1alphaIdeaActivity withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleSearchIdeahubV1alphaIdeaActivity(){}
 }

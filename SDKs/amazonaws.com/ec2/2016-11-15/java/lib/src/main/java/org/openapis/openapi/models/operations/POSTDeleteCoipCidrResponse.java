@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTDeleteCoipCidrResponse {
     
     public byte[] body;
+
     public POSTDeleteCoipCidrResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTDeleteCoipCidrResponse {
     
     
     public String contentType;
+
     public POSTDeleteCoipCidrResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTDeleteCoipCidrResponse {
     
     
     public Integer statusCode;
+
     public POSTDeleteCoipCidrResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTDeleteCoipCidrResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTDeleteCoipCidrResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTDeleteCoipCidrResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

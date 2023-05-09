@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UploadLayerPartResponse {
     
     public String contentType;
+
     public UploadLayerPartResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UploadLayerPartResponse {
      */
     
     public Object invalidLayerPartException;
+
     public UploadLayerPartResponse withInvalidLayerPartException(Object invalidLayerPartException) {
         this.invalidLayerPartException = invalidLayerPartException;
         return this;
@@ -29,6 +32,7 @@ public class UploadLayerPartResponse {
      */
     
     public Object invalidParameterException;
+
     public UploadLayerPartResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UploadLayerPartResponse {
      */
     
     public Object limitExceededException;
+
     public UploadLayerPartResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class UploadLayerPartResponse {
      */
     
     public Object registryNotFoundException;
+
     public UploadLayerPartResponse withRegistryNotFoundException(Object registryNotFoundException) {
         this.registryNotFoundException = registryNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class UploadLayerPartResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public UploadLayerPartResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UploadLayerPartResponse {
     
     
     public Integer statusCode;
+
     public UploadLayerPartResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UploadLayerPartResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UploadLayerPartResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UploadLayerPartResponse {
      */
     
     public Object serverException;
+
     public UploadLayerPartResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -93,6 +103,7 @@ public class UploadLayerPartResponse {
      */
     
     public Object unsupportedCommandException;
+
     public UploadLayerPartResponse withUnsupportedCommandException(Object unsupportedCommandException) {
         this.unsupportedCommandException = unsupportedCommandException;
         return this;
@@ -103,6 +114,7 @@ public class UploadLayerPartResponse {
      */
     
     public org.openapis.openapi.models.shared.UploadLayerPartResponse uploadLayerPartResponse;
+
     public UploadLayerPartResponse withUploadLayerPartResponse(org.openapis.openapi.models.shared.UploadLayerPartResponse uploadLayerPartResponse) {
         this.uploadLayerPartResponse = uploadLayerPartResponse;
         return this;
@@ -113,9 +125,14 @@ public class UploadLayerPartResponse {
      */
     
     public Object uploadNotFoundException;
+
     public UploadLayerPartResponse withUploadNotFoundException(Object uploadNotFoundException) {
         this.uploadNotFoundException = uploadNotFoundException;
         return this;
     }
     
+    public UploadLayerPartResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

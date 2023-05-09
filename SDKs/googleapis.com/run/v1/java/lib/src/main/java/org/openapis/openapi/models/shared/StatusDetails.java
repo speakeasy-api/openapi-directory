@@ -18,6 +18,7 @@ public class StatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("causes")
     public StatusCause[] causes;
+
     public StatusDetails withCauses(StatusCause[] causes) {
         this.causes = causes;
         return this;
@@ -29,17 +30,19 @@ public class StatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
+
     public StatusDetails withGroup(String group) {
         this.group = group;
         return this;
     }
     
     /**
-     * The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public StatusDetails withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class StatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StatusDetails withName(String name) {
         this.name = name;
         return this;
@@ -62,20 +66,23 @@ public class StatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryAfterSeconds")
     public Integer retryAfterSeconds;
+
     public StatusDetails withRetryAfterSeconds(Integer retryAfterSeconds) {
         this.retryAfterSeconds = retryAfterSeconds;
         return this;
     }
     
     /**
-     * UID of the resource. (when there is a single resource which can be described). More info: https://kubernetes.io/docs/user-guide/identifiers#uids
+     * UID of the resource. (when there is a single resource which can be described).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public StatusDetails withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public StatusDetails(){}
 }

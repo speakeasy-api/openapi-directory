@@ -15,6 +15,7 @@ public class DeploymentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentOption")
     public DeploymentOptionEnum deploymentOption;
+
     public DeploymentStyle withDeploymentOption(DeploymentOptionEnum deploymentOption) {
         this.deploymentOption = deploymentOption;
         return this;
@@ -23,9 +24,11 @@ public class DeploymentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentType")
     public DeploymentTypeEnum deploymentType;
+
     public DeploymentStyle withDeploymentType(DeploymentTypeEnum deploymentType) {
         this.deploymentType = deploymentType;
         return this;
     }
     
+    public DeploymentStyle(){}
 }

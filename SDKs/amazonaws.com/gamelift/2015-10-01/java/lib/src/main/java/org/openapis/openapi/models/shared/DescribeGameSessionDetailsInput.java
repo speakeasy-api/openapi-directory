@@ -12,6 +12,7 @@ public class DescribeGameSessionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AliasId")
     public String aliasId;
+
     public DescribeGameSessionDetailsInput withAliasId(String aliasId) {
         this.aliasId = aliasId;
         return this;
@@ -20,6 +21,7 @@ public class DescribeGameSessionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public DescribeGameSessionDetailsInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -28,6 +30,7 @@ public class DescribeGameSessionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionId")
     public String gameSessionId;
+
     public DescribeGameSessionDetailsInput withGameSessionId(String gameSessionId) {
         this.gameSessionId = gameSessionId;
         return this;
@@ -36,6 +39,7 @@ public class DescribeGameSessionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeGameSessionDetailsInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -44,6 +48,7 @@ public class DescribeGameSessionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public DescribeGameSessionDetailsInput withLocation(String location) {
         this.location = location;
         return this;
@@ -52,6 +57,7 @@ public class DescribeGameSessionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeGameSessionDetailsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -60,9 +66,11 @@ public class DescribeGameSessionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusFilter")
     public String statusFilter;
+
     public DescribeGameSessionDetailsInput withStatusFilter(String statusFilter) {
         this.statusFilter = statusFilter;
         return this;
     }
     
+    public DescribeGameSessionDetailsInput(){}
 }

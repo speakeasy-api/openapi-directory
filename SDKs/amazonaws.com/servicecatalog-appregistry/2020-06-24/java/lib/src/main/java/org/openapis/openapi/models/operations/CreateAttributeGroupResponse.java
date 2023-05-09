@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAttributeGroupResponse {
@@ -12,6 +13,7 @@ public class CreateAttributeGroupResponse {
      */
     
     public Object conflictException;
+
     public CreateAttributeGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateAttributeGroupResponse {
     
     
     public String contentType;
+
     public CreateAttributeGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateAttributeGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAttributeGroupResponse createAttributeGroupResponse;
+
     public CreateAttributeGroupResponse withCreateAttributeGroupResponse(org.openapis.openapi.models.shared.CreateAttributeGroupResponse createAttributeGroupResponse) {
         this.createAttributeGroupResponse = createAttributeGroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateAttributeGroupResponse {
      */
     
     public Object internalServerException;
+
     public CreateAttributeGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAttributeGroupResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateAttributeGroupResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateAttributeGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateAttributeGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateAttributeGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAttributeGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateAttributeGroupResponse {
      */
     
     public Object validationException;
+
     public CreateAttributeGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateAttributeGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

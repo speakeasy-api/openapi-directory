@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DemoV2LocationsTilesViewerGetResponse {
     
     public String contentType;
+
     public DemoV2LocationsTilesViewerGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DemoV2LocationsTilesViewerGetResponse {
     
     
     public Integer statusCode;
+
     public DemoV2LocationsTilesViewerGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DemoV2LocationsTilesViewerGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DemoV2LocationsTilesViewerGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DemoV2LocationsTilesViewerGetResponse {
      */
     
     public String demoV2LocationsTilesViewerGet200TextHTMLString;
+
     public DemoV2LocationsTilesViewerGetResponse withDemoV2LocationsTilesViewerGet200TextHTMLString(String demoV2LocationsTilesViewerGet200TextHTMLString) {
         this.demoV2LocationsTilesViewerGet200TextHTMLString = demoV2LocationsTilesViewerGet200TextHTMLString;
         return this;
     }
     
+    public DemoV2LocationsTilesViewerGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

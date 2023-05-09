@@ -13,6 +13,7 @@ public class TransactionResourceRelationshipsAccountData {
      */
     @JsonProperty("id")
     public String id;
+
     public TransactionResourceRelationshipsAccountData withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,14 @@ public class TransactionResourceRelationshipsAccountData {
      */
     @JsonProperty("type")
     public String type;
+
     public TransactionResourceRelationshipsAccountData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TransactionResourceRelationshipsAccountData(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

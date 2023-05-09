@@ -12,6 +12,7 @@ public class ListResourcesForTagOptionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public ListResourcesForTagOptionInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -20,6 +21,7 @@ public class ListResourcesForTagOptionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public ListResourcesForTagOptionInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -28,6 +30,7 @@ public class ListResourcesForTagOptionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public ListResourcesForTagOptionInput withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -35,9 +38,13 @@ public class ListResourcesForTagOptionInput {
     
     @JsonProperty("TagOptionId")
     public String tagOptionId;
+
     public ListResourcesForTagOptionInput withTagOptionId(String tagOptionId) {
         this.tagOptionId = tagOptionId;
         return this;
     }
     
+    public ListResourcesForTagOptionInput(@JsonProperty("TagOptionId") String tagOptionId) {
+        this.tagOptionId = tagOptionId;
+  }
 }

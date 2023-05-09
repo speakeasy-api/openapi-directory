@@ -15,6 +15,7 @@ public class CreatePolicyVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefaultVersion")
     public Boolean isDefaultVersion;
+
     public CreatePolicyVersionResponse withIsDefaultVersion(Boolean isDefaultVersion) {
         this.isDefaultVersion = isDefaultVersion;
         return this;
@@ -23,6 +24,7 @@ public class CreatePolicyVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyArn")
     public String policyArn;
+
     public CreatePolicyVersionResponse withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -31,6 +33,7 @@ public class CreatePolicyVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyDocument")
     public String policyDocument;
+
     public CreatePolicyVersionResponse withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -39,9 +42,11 @@ public class CreatePolicyVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyVersionId")
     public String policyVersionId;
+
     public CreatePolicyVersionResponse withPolicyVersionId(String policyVersionId) {
         this.policyVersionId = policyVersionId;
         return this;
     }
     
+    public CreatePolicyVersionResponse(){}
 }

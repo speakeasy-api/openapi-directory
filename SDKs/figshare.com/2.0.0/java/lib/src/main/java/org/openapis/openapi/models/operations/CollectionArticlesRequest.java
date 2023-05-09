@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionArticlesRequest {
@@ -12,6 +13,7 @@ public class CollectionArticlesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
     public Long collectionId;
+
     public CollectionArticlesRequest withCollectionId(Long collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -22,6 +24,7 @@ public class CollectionArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public CollectionArticlesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class CollectionArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public CollectionArticlesRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -42,6 +46,7 @@ public class CollectionArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public CollectionArticlesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -52,9 +57,13 @@ public class CollectionArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public CollectionArticlesRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public CollectionArticlesRequest(@JsonProperty("collection_id") Long collectionId) {
+        this.collectionId = collectionId;
+  }
 }

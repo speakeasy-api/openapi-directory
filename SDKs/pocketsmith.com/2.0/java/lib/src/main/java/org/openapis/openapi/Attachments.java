@@ -53,11 +53,9 @@ public class Attachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAttachmentsIdResponse res = new org.openapis.openapi.models.operations.DeleteAttachmentsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteAttachmentsIdResponse res = new org.openapis.openapi.models.operations.DeleteAttachmentsIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -95,11 +93,9 @@ public class Attachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdAttachmentsAttachmentIdResponse res = new org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdAttachmentsAttachmentIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdAttachmentsAttachmentIdResponse res = new org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdAttachmentsAttachmentIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -137,12 +133,10 @@ public class Attachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAttachmentsIdResponse res = new org.openapis.openapi.models.operations.GetAttachmentsIdResponse() {{
+        org.openapis.openapi.models.operations.GetAttachmentsIdResponse res = new org.openapis.openapi.models.operations.GetAttachmentsIdResponse(contentType, httpRes.statusCode()) {{
             attachment = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -185,12 +179,10 @@ public class Attachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionsIdAttachmentsResponse res = new org.openapis.openapi.models.operations.GetTransactionsIdAttachmentsResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionsIdAttachmentsResponse res = new org.openapis.openapi.models.operations.GetTransactionsIdAttachmentsResponse(contentType, httpRes.statusCode()) {{
             attachments = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -239,12 +231,10 @@ public class Attachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdAttachmentsResponse res = new org.openapis.openapi.models.operations.GetUsersIdAttachmentsResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdAttachmentsResponse res = new org.openapis.openapi.models.operations.GetUsersIdAttachmentsResponse(contentType, httpRes.statusCode()) {{
             attachments = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,12 +279,10 @@ public class Attachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTransactionsIdAttachmentsResponse res = new org.openapis.openapi.models.operations.PostTransactionsIdAttachmentsResponse() {{
+        org.openapis.openapi.models.operations.PostTransactionsIdAttachmentsResponse res = new org.openapis.openapi.models.operations.PostTransactionsIdAttachmentsResponse(contentType, httpRes.statusCode()) {{
             attachment = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -339,12 +327,10 @@ public class Attachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUsersIdAttachmentsResponse res = new org.openapis.openapi.models.operations.PostUsersIdAttachmentsResponse() {{
+        org.openapis.openapi.models.operations.PostUsersIdAttachmentsResponse res = new org.openapis.openapi.models.operations.PostUsersIdAttachmentsResponse(contentType, httpRes.statusCode()) {{
             attachment = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,12 +375,10 @@ public class Attachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutAttachmentsIdResponse res = new org.openapis.openapi.models.operations.PutAttachmentsIdResponse() {{
+        org.openapis.openapi.models.operations.PutAttachmentsIdResponse res = new org.openapis.openapi.models.operations.PutAttachmentsIdResponse(contentType, httpRes.statusCode()) {{
             attachment = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

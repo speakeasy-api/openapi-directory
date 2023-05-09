@@ -15,9 +15,11 @@ public class ActionLocalIpDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddressV4")
     public String ipAddressV4;
+
     public ActionLocalIpDetails withIpAddressV4(String ipAddressV4) {
         this.ipAddressV4 = ipAddressV4;
         return this;
     }
     
+    public ActionLocalIpDetails(){}
 }

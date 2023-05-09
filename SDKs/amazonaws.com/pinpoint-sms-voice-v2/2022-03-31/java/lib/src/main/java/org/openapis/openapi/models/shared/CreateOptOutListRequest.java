@@ -12,6 +12,7 @@ public class CreateOptOutListRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateOptOutListRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateOptOutListRequest {
     
     @JsonProperty("OptOutListName")
     public String optOutListName;
+
     public CreateOptOutListRequest withOptOutListName(String optOutListName) {
         this.optOutListName = optOutListName;
         return this;
@@ -27,9 +29,13 @@ public class CreateOptOutListRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateOptOutListRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateOptOutListRequest(@JsonProperty("OptOutListName") String optOutListName) {
+        this.optOutListName = optOutListName;
+  }
 }

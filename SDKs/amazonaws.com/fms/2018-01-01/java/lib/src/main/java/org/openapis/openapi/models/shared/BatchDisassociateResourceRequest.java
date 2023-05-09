@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDisassociateResourceRequest {
     @JsonProperty("Items")
     public String[] items;
+
     public BatchDisassociateResourceRequest withItems(String[] items) {
         this.items = items;
         return this;
@@ -16,9 +17,14 @@ public class BatchDisassociateResourceRequest {
     
     @JsonProperty("ResourceSetIdentifier")
     public String resourceSetIdentifier;
+
     public BatchDisassociateResourceRequest withResourceSetIdentifier(String resourceSetIdentifier) {
         this.resourceSetIdentifier = resourceSetIdentifier;
         return this;
     }
     
+    public BatchDisassociateResourceRequest(@JsonProperty("Items") String[] items, @JsonProperty("ResourceSetIdentifier") String resourceSetIdentifier) {
+        this.items = items;
+        this.resourceSetIdentifier = resourceSetIdentifier;
+  }
 }

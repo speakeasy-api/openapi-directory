@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeactivateWarehouseRequest {
@@ -12,6 +13,7 @@ public class DeactivateWarehouseRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public DeactivateWarehouseRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class DeactivateWarehouseRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public DeactivateWarehouseRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class DeactivateWarehouseRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=warehouseId")
     public String warehouseId;
+
     public DeactivateWarehouseRequest withWarehouseId(String warehouseId) {
         this.warehouseId = warehouseId;
         return this;
     }
     
+    public DeactivateWarehouseRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("warehouseId") String warehouseId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.warehouseId = warehouseId;
+  }
 }

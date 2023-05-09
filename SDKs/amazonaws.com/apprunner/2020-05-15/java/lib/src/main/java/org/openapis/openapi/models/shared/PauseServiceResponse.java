@@ -15,6 +15,7 @@ public class PauseServiceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public PauseServiceResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -22,9 +23,13 @@ public class PauseServiceResponse {
     
     @JsonProperty("Service")
     public Service service;
+
     public PauseServiceResponse withService(Service service) {
         this.service = service;
         return this;
     }
     
+    public PauseServiceResponse(@JsonProperty("Service") Service service) {
+        this.service = service;
+  }
 }

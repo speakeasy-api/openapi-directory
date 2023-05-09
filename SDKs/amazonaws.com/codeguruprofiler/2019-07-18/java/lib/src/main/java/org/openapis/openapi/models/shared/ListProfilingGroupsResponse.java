@@ -15,6 +15,7 @@ public class ListProfilingGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListProfilingGroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,6 +23,7 @@ public class ListProfilingGroupsResponse {
     
     @JsonProperty("profilingGroupNames")
     public String[] profilingGroupNames;
+
     public ListProfilingGroupsResponse withProfilingGroupNames(String[] profilingGroupNames) {
         this.profilingGroupNames = profilingGroupNames;
         return this;
@@ -30,9 +32,13 @@ public class ListProfilingGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profilingGroups")
     public ProfilingGroupDescription[] profilingGroups;
+
     public ListProfilingGroupsResponse withProfilingGroups(ProfilingGroupDescription[] profilingGroups) {
         this.profilingGroups = profilingGroups;
         return this;
     }
     
+    public ListProfilingGroupsResponse(@JsonProperty("profilingGroupNames") String[] profilingGroupNames) {
+        this.profilingGroupNames = profilingGroupNames;
+  }
 }

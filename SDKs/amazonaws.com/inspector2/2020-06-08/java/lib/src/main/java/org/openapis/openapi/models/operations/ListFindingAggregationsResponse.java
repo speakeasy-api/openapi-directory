@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFindingAggregationsResponse {
     
     public String contentType;
+
     public ListFindingAggregationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListFindingAggregationsResponse {
      */
     
     public Object internalServerException;
+
     public ListFindingAggregationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListFindingAggregationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFindingAggregationsResponse listFindingAggregationsResponse;
+
     public ListFindingAggregationsResponse withListFindingAggregationsResponse(org.openapis.openapi.models.shared.ListFindingAggregationsResponse listFindingAggregationsResponse) {
         this.listFindingAggregationsResponse = listFindingAggregationsResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListFindingAggregationsResponse {
     
     
     public Integer statusCode;
+
     public ListFindingAggregationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListFindingAggregationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFindingAggregationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ListFindingAggregationsResponse {
      */
     
     public Object throttlingException;
+
     public ListFindingAggregationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class ListFindingAggregationsResponse {
      */
     
     public Object validationException;
+
     public ListFindingAggregationsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListFindingAggregationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

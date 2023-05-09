@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutDialRequestBatchResponse {
@@ -12,6 +13,7 @@ public class PutDialRequestBatchResponse {
      */
     
     public Object accessDeniedException;
+
     public PutDialRequestBatchResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutDialRequestBatchResponse {
      */
     
     public Object conflictException;
+
     public PutDialRequestBatchResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class PutDialRequestBatchResponse {
     
     
     public String contentType;
+
     public PutDialRequestBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutDialRequestBatchResponse {
      */
     
     public Object internalServerException;
+
     public PutDialRequestBatchResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PutDialRequestBatchResponse {
      */
     
     public Object invalidCampaignStateException;
+
     public PutDialRequestBatchResponse withInvalidCampaignStateException(Object invalidCampaignStateException) {
         this.invalidCampaignStateException = invalidCampaignStateException;
         return this;
@@ -59,6 +65,7 @@ public class PutDialRequestBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.PutDialRequestBatchResponse putDialRequestBatchResponse;
+
     public PutDialRequestBatchResponse withPutDialRequestBatchResponse(org.openapis.openapi.models.shared.PutDialRequestBatchResponse putDialRequestBatchResponse) {
         this.putDialRequestBatchResponse = putDialRequestBatchResponse;
         return this;
@@ -66,6 +73,7 @@ public class PutDialRequestBatchResponse {
     
     
     public Integer statusCode;
+
     public PutDialRequestBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutDialRequestBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutDialRequestBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class PutDialRequestBatchResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutDialRequestBatchResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class PutDialRequestBatchResponse {
      */
     
     public Object throttlingException;
+
     public PutDialRequestBatchResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class PutDialRequestBatchResponse {
      */
     
     public Object validationException;
+
     public PutDialRequestBatchResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutDialRequestBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

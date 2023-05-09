@@ -25,6 +25,7 @@ public class JobExecutionInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public JobExecutionInformation withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -36,6 +37,7 @@ public class JobExecutionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poolId")
     public String poolId;
+
     public JobExecutionInformation withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -47,6 +49,7 @@ public class JobExecutionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingError")
     public JobSchedulingError schedulingError;
+
     public JobExecutionInformation withSchedulingError(JobSchedulingError schedulingError) {
         this.schedulingError = schedulingError;
         return this;
@@ -59,6 +62,7 @@ public class JobExecutionInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public JobExecutionInformation withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -70,9 +74,13 @@ public class JobExecutionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminateReason")
     public String terminateReason;
+
     public JobExecutionInformation withTerminateReason(String terminateReason) {
         this.terminateReason = terminateReason;
         return this;
     }
     
+    public JobExecutionInformation(@JsonProperty("startTime") OffsetDateTime startTime) {
+        this.startTime = startTime;
+  }
 }

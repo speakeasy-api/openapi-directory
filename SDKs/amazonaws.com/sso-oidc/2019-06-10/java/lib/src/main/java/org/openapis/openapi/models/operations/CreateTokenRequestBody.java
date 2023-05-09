@@ -14,6 +14,7 @@ public class CreateTokenRequestBody {
      */
     @JsonProperty("clientId")
     public String clientId;
+
     public CreateTokenRequestBody withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -24,6 +25,7 @@ public class CreateTokenRequestBody {
      */
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public CreateTokenRequestBody withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -35,6 +37,7 @@ public class CreateTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public CreateTokenRequestBody withCode(String code) {
         this.code = code;
         return this;
@@ -46,6 +49,7 @@ public class CreateTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceCode")
     public String deviceCode;
+
     public CreateTokenRequestBody withDeviceCode(String deviceCode) {
         this.deviceCode = deviceCode;
         return this;
@@ -56,6 +60,7 @@ public class CreateTokenRequestBody {
      */
     @JsonProperty("grantType")
     public String grantType;
+
     public CreateTokenRequestBody withGrantType(String grantType) {
         this.grantType = grantType;
         return this;
@@ -67,6 +72,7 @@ public class CreateTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectUri")
     public String redirectUri;
+
     public CreateTokenRequestBody withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
@@ -78,6 +84,7 @@ public class CreateTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshToken")
     public String refreshToken;
+
     public CreateTokenRequestBody withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
@@ -89,9 +96,15 @@ public class CreateTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String[] scope;
+
     public CreateTokenRequestBody withScope(String[] scope) {
         this.scope = scope;
         return this;
     }
     
+    public CreateTokenRequestBody(@JsonProperty("clientId") String clientId, @JsonProperty("clientSecret") String clientSecret, @JsonProperty("grantType") String grantType) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.grantType = grantType;
+  }
 }

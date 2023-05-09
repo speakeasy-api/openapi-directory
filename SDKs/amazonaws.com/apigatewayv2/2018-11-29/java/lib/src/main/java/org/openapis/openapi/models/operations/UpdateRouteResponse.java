@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRouteResponse {
@@ -12,6 +13,7 @@ public class UpdateRouteResponse {
      */
     
     public Object badRequestException;
+
     public UpdateRouteResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateRouteResponse {
      */
     
     public Object conflictException;
+
     public UpdateRouteResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRouteResponse {
     
     
     public String contentType;
+
     public UpdateRouteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRouteResponse {
      */
     
     public Object notFoundException;
+
     public UpdateRouteResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateRouteResponse {
     
     
     public Integer statusCode;
+
     public UpdateRouteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateRouteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRouteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateRouteResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateRouteResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateRouteResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRouteResult updateRouteResult;
+
     public UpdateRouteResponse withUpdateRouteResult(org.openapis.openapi.models.shared.UpdateRouteResult updateRouteResult) {
         this.updateRouteResult = updateRouteResult;
         return this;
     }
     
+    public UpdateRouteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

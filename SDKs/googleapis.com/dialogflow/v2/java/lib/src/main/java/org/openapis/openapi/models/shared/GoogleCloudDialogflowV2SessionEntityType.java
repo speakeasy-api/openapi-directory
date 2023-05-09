@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2SessionEntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public GoogleCloudDialogflowV2EntityTypeEntity[] entities;
+
     public GoogleCloudDialogflowV2SessionEntityType withEntities(GoogleCloudDialogflowV2EntityTypeEntity[] entities) {
         this.entities = entities;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2SessionEntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityOverrideMode")
     public GoogleCloudDialogflowV2SessionEntityTypeEntityOverrideModeEnum entityOverrideMode;
+
     public GoogleCloudDialogflowV2SessionEntityType withEntityOverrideMode(GoogleCloudDialogflowV2SessionEntityTypeEntityOverrideModeEnum entityOverrideMode) {
         this.entityOverrideMode = entityOverrideMode;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2SessionEntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2SessionEntityType withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDialogflowV2SessionEntityType(){}
 }

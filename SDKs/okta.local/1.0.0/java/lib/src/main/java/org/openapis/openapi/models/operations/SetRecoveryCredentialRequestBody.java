@@ -12,9 +12,11 @@ public class SetRecoveryCredentialRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentials")
     public SetRecoveryCredentialRequestBodyCredentials credentials;
+
     public SetRecoveryCredentialRequestBody withCredentials(SetRecoveryCredentialRequestBodyCredentials credentials) {
         this.credentials = credentials;
         return this;
     }
     
+    public SetRecoveryCredentialRequestBody(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartFailbackLaunchResponse {
@@ -12,6 +13,7 @@ public class StartFailbackLaunchResponse {
      */
     
     public Object conflictException;
+
     public StartFailbackLaunchResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StartFailbackLaunchResponse {
     
     
     public String contentType;
+
     public StartFailbackLaunchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartFailbackLaunchResponse {
      */
     
     public Object internalServerException;
+
     public StartFailbackLaunchResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartFailbackLaunchResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartFailbackLaunchResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StartFailbackLaunchResponse {
      */
     
     public org.openapis.openapi.models.shared.StartFailbackLaunchResponse startFailbackLaunchResponse;
+
     public StartFailbackLaunchResponse withStartFailbackLaunchResponse(org.openapis.openapi.models.shared.StartFailbackLaunchResponse startFailbackLaunchResponse) {
         this.startFailbackLaunchResponse = startFailbackLaunchResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartFailbackLaunchResponse {
     
     
     public Integer statusCode;
+
     public StartFailbackLaunchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartFailbackLaunchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartFailbackLaunchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StartFailbackLaunchResponse {
      */
     
     public Object throttlingException;
+
     public StartFailbackLaunchResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class StartFailbackLaunchResponse {
      */
     
     public Object uninitializedAccountException;
+
     public StartFailbackLaunchResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -93,9 +103,14 @@ public class StartFailbackLaunchResponse {
      */
     
     public Object validationException;
+
     public StartFailbackLaunchResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartFailbackLaunchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

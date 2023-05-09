@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaBatchCreateUserLinksRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifyNewUsers")
     public Boolean notifyNewUsers;
+
     public GoogleAnalyticsAdminV1alphaBatchCreateUserLinksRequestInput withNotifyNewUsers(Boolean notifyNewUsers) {
         this.notifyNewUsers = notifyNewUsers;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaBatchCreateUserLinksRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public GoogleAnalyticsAdminV1alphaCreateUserLinkRequestInput[] requests;
+
     public GoogleAnalyticsAdminV1alphaBatchCreateUserLinksRequestInput withRequests(GoogleAnalyticsAdminV1alphaCreateUserLinkRequestInput[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaBatchCreateUserLinksRequestInput(){}
 }

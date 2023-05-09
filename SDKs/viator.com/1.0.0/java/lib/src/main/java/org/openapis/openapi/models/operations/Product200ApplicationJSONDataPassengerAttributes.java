@@ -15,6 +15,7 @@ public class Product200ApplicationJSONDataPassengerAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customAttribute_kgs")
     public String customAttributeKgs;
+
     public Product200ApplicationJSONDataPassengerAttributes withCustomAttributeKgs(String customAttributeKgs) {
         this.customAttributeKgs = customAttributeKgs;
         return this;
@@ -26,6 +27,7 @@ public class Product200ApplicationJSONDataPassengerAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customAttribute_lbs")
     public String customAttributeLbs;
+
     public Product200ApplicationJSONDataPassengerAttributes withCustomAttributeLbs(String customAttributeLbs) {
         this.customAttributeLbs = customAttributeLbs;
         return this;
@@ -37,6 +39,7 @@ public class Product200ApplicationJSONDataPassengerAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMissingMessage")
     public String errorMissingMessage;
+
     public Product200ApplicationJSONDataPassengerAttributes withErrorMissingMessage(String errorMissingMessage) {
         this.errorMissingMessage = errorMissingMessage;
         return this;
@@ -48,6 +51,7 @@ public class Product200ApplicationJSONDataPassengerAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorValidationMessage")
     public String errorValidationMessage;
+
     public Product200ApplicationJSONDataPassengerAttributes withErrorValidationMessage(String errorValidationMessage) {
         this.errorValidationMessage = errorValidationMessage;
         return this;
@@ -59,6 +63,7 @@ public class Product200ApplicationJSONDataPassengerAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("questionId")
     public String questionId;
+
     public Product200ApplicationJSONDataPassengerAttributes withQuestionId(String questionId) {
         this.questionId = questionId;
         return this;
@@ -70,6 +75,7 @@ public class Product200ApplicationJSONDataPassengerAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public Product200ApplicationJSONDataPassengerAttributes withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -81,6 +87,7 @@ public class Product200ApplicationJSONDataPassengerAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Product200ApplicationJSONDataPassengerAttributes withTitle(String title) {
         this.title = title;
         return this;
@@ -92,9 +99,11 @@ public class Product200ApplicationJSONDataPassengerAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateType")
     public String validateType;
+
     public Product200ApplicationJSONDataPassengerAttributes withValidateType(String validateType) {
         this.validateType = validateType;
         return this;
     }
     
+    public Product200ApplicationJSONDataPassengerAttributes(){}
 }

@@ -15,6 +15,7 @@ public class CreateNetworkSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityZone")
     public String availabilityZone;
+
     public CreateNetworkSiteRequestBody withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +27,7 @@ public class CreateNetworkSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityZoneId")
     public String availabilityZoneId;
+
     public CreateNetworkSiteRequestBody withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -37,6 +39,7 @@ public class CreateNetworkSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateNetworkSiteRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -48,6 +51,7 @@ public class CreateNetworkSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateNetworkSiteRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -58,6 +62,7 @@ public class CreateNetworkSiteRequestBody {
      */
     @JsonProperty("networkArn")
     public String networkArn;
+
     public CreateNetworkSiteRequestBody withNetworkArn(String networkArn) {
         this.networkArn = networkArn;
         return this;
@@ -68,6 +73,7 @@ public class CreateNetworkSiteRequestBody {
      */
     @JsonProperty("networkSiteName")
     public String networkSiteName;
+
     public CreateNetworkSiteRequestBody withNetworkSiteName(String networkSiteName) {
         this.networkSiteName = networkSiteName;
         return this;
@@ -79,6 +85,7 @@ public class CreateNetworkSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingPlan")
     public CreateNetworkSiteRequestBodyPendingPlan pendingPlan;
+
     public CreateNetworkSiteRequestBody withPendingPlan(CreateNetworkSiteRequestBodyPendingPlan pendingPlan) {
         this.pendingPlan = pendingPlan;
         return this;
@@ -90,9 +97,14 @@ public class CreateNetworkSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateNetworkSiteRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateNetworkSiteRequestBody(@JsonProperty("networkArn") String networkArn, @JsonProperty("networkSiteName") String networkSiteName) {
+        this.networkArn = networkArn;
+        this.networkSiteName = networkSiteName;
+  }
 }

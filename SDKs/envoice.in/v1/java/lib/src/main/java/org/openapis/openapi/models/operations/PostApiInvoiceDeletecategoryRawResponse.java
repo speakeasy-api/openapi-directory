@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostApiInvoiceDeletecategoryRawResponse {
     
     public byte[] body;
+
     public PostApiInvoiceDeletecategoryRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostApiInvoiceDeletecategoryRawResponse {
     
     
     public String contentType;
+
     public PostApiInvoiceDeletecategoryRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PostApiInvoiceDeletecategoryRawResponse {
     
     
     public Integer statusCode;
+
     public PostApiInvoiceDeletecategoryRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PostApiInvoiceDeletecategoryRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostApiInvoiceDeletecategoryRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PostApiInvoiceDeletecategoryRawResponse {
      */
     
     public Integer postApiInvoiceDeletecategoryRaw200ApplicationJSONInt32Integer;
+
     public PostApiInvoiceDeletecategoryRawResponse withPostApiInvoiceDeletecategoryRaw200ApplicationJSONInt32Integer(Integer postApiInvoiceDeletecategoryRaw200ApplicationJSONInt32Integer) {
         this.postApiInvoiceDeletecategoryRaw200ApplicationJSONInt32Integer = postApiInvoiceDeletecategoryRaw200ApplicationJSONInt32Integer;
         return this;
@@ -50,9 +56,14 @@ public class PostApiInvoiceDeletecategoryRawResponse {
      */
     
     public Integer postApiInvoiceDeletecategoryRaw200TextJSONInt32Integer;
+
     public PostApiInvoiceDeletecategoryRawResponse withPostApiInvoiceDeletecategoryRaw200TextJSONInt32Integer(Integer postApiInvoiceDeletecategoryRaw200TextJSONInt32Integer) {
         this.postApiInvoiceDeletecategoryRaw200TextJSONInt32Integer = postApiInvoiceDeletecategoryRaw200TextJSONInt32Integer;
         return this;
     }
     
+    public PostApiInvoiceDeletecategoryRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

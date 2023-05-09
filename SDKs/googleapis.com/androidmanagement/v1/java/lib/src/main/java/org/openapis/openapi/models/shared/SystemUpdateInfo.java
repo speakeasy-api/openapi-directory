@@ -18,6 +18,7 @@ public class SystemUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateReceivedTime")
     public String updateReceivedTime;
+
     public SystemUpdateInfo withUpdateReceivedTime(String updateReceivedTime) {
         this.updateReceivedTime = updateReceivedTime;
         return this;
@@ -29,9 +30,11 @@ public class SystemUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateStatus")
     public SystemUpdateInfoUpdateStatusEnum updateStatus;
+
     public SystemUpdateInfo withUpdateStatus(SystemUpdateInfoUpdateStatusEnum updateStatus) {
         this.updateStatus = updateStatus;
         return this;
     }
     
+    public SystemUpdateInfo(){}
 }

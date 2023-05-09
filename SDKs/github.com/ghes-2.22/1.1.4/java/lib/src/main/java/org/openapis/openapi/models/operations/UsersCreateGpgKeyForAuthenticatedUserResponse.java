@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UsersCreateGpgKeyForAuthenticatedUserResponse {
     
     public String contentType;
+
     public UsersCreateGpgKeyForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UsersCreateGpgKeyForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public UsersCreateGpgKeyForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UsersCreateGpgKeyForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UsersCreateGpgKeyForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UsersCreateGpgKeyForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public UsersCreateGpgKeyForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class UsersCreateGpgKeyForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.GpgKey gpgKey;
+
     public UsersCreateGpgKeyForAuthenticatedUserResponse withGpgKey(org.openapis.openapi.models.shared.GpgKey gpgKey) {
         this.gpgKey = gpgKey;
         return this;
@@ -53,9 +59,14 @@ public class UsersCreateGpgKeyForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public UsersCreateGpgKeyForAuthenticatedUserResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public UsersCreateGpgKeyForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

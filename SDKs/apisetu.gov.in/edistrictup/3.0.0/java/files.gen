@@ -210,4 +210,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
+docs/sdk/README.md
+docs/apis/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disjunctiveMatchStatements")
     public DisjunctiveMatchStatement[] disjunctiveMatchStatements;
+
     public Rule withDisjunctiveMatchStatements(DisjunctiveMatchStatement[] disjunctiveMatchStatements) {
         this.disjunctiveMatchStatements = disjunctiveMatchStatements;
         return this;
@@ -26,9 +27,11 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Rule withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Rule(){}
 }

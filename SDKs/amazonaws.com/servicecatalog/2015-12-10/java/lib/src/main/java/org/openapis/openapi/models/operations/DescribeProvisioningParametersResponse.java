@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeProvisioningParametersResponse {
     
     public String contentType;
+
     public DescribeProvisioningParametersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeProvisioningParametersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeProvisioningParametersOutput describeProvisioningParametersOutput;
+
     public DescribeProvisioningParametersResponse withDescribeProvisioningParametersOutput(org.openapis.openapi.models.shared.DescribeProvisioningParametersOutput describeProvisioningParametersOutput) {
         this.describeProvisioningParametersOutput = describeProvisioningParametersOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeProvisioningParametersResponse {
      */
     
     public Object invalidParametersException;
+
     public DescribeProvisioningParametersResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeProvisioningParametersResponse {
     
     
     public Integer statusCode;
+
     public DescribeProvisioningParametersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeProvisioningParametersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeProvisioningParametersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeProvisioningParametersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeProvisioningParametersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeProvisioningParametersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

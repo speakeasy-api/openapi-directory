@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1LocationsIdServicesRequest {
@@ -12,6 +13,7 @@ public class GetSetupV1LocationsIdServicesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetSetupV1LocationsIdServicesRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetSetupV1LocationsIdServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetSetupV1LocationsIdServicesRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,9 +35,13 @@ public class GetSetupV1LocationsIdServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetSetupV1LocationsIdServicesRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetSetupV1LocationsIdServicesRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

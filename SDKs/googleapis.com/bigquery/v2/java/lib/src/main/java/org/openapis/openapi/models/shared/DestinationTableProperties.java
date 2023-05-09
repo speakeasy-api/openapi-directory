@@ -20,6 +20,7 @@ public class DestinationTableProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DestinationTableProperties withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +34,7 @@ public class DestinationTableProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationTime")
     public OffsetDateTime expirationTime;
+
     public DestinationTableProperties withExpirationTime(OffsetDateTime expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -44,6 +46,7 @@ public class DestinationTableProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyName")
     public String friendlyName;
+
     public DestinationTableProperties withFriendlyName(String friendlyName) {
         this.friendlyName = friendlyName;
         return this;
@@ -55,9 +58,11 @@ public class DestinationTableProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public DestinationTableProperties withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public DestinationTableProperties(){}
 }

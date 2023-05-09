@@ -20,6 +20,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public String action;
+
     public StepExecution withAction(String action) {
         this.action = action;
         return this;
@@ -30,6 +31,7 @@ public class StepExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExecutionEndTime")
     public OffsetDateTime executionEndTime;
+
     public StepExecution withExecutionEndTime(OffsetDateTime executionEndTime) {
         this.executionEndTime = executionEndTime;
         return this;
@@ -40,6 +42,7 @@ public class StepExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExecutionStartTime")
     public OffsetDateTime executionStartTime;
+
     public StepExecution withExecutionStartTime(OffsetDateTime executionStartTime) {
         this.executionStartTime = executionStartTime;
         return this;
@@ -48,6 +51,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureDetails")
     public FailureDetails failureDetails;
+
     public StepExecution withFailureDetails(FailureDetails failureDetails) {
         this.failureDetails = failureDetails;
         return this;
@@ -56,6 +60,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureMessage")
     public String failureMessage;
+
     public StepExecution withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -64,6 +69,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Inputs")
     public java.util.Map<String, String> inputs;
+
     public StepExecution withInputs(java.util.Map<String, String> inputs) {
         this.inputs = inputs;
         return this;
@@ -72,6 +78,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsCritical")
     public Boolean isCritical;
+
     public StepExecution withIsCritical(Boolean isCritical) {
         this.isCritical = isCritical;
         return this;
@@ -80,6 +87,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsEnd")
     public Boolean isEnd;
+
     public StepExecution withIsEnd(Boolean isEnd) {
         this.isEnd = isEnd;
         return this;
@@ -88,6 +96,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxAttempts")
     public Long maxAttempts;
+
     public StepExecution withMaxAttempts(Long maxAttempts) {
         this.maxAttempts = maxAttempts;
         return this;
@@ -96,6 +105,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextStep")
     public String nextStep;
+
     public StepExecution withNextStep(String nextStep) {
         this.nextStep = nextStep;
         return this;
@@ -104,6 +114,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnFailure")
     public String onFailure;
+
     public StepExecution withOnFailure(String onFailure) {
         this.onFailure = onFailure;
         return this;
@@ -112,6 +123,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Outputs")
     public java.util.Map<String, String[]> outputs;
+
     public StepExecution withOutputs(java.util.Map<String, String[]> outputs) {
         this.outputs = outputs;
         return this;
@@ -120,6 +132,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverriddenParameters")
     public java.util.Map<String, String[]> overriddenParameters;
+
     public StepExecution withOverriddenParameters(java.util.Map<String, String[]> overriddenParameters) {
         this.overriddenParameters = overriddenParameters;
         return this;
@@ -128,6 +141,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Response")
     public String response;
+
     public StepExecution withResponse(String response) {
         this.response = response;
         return this;
@@ -136,6 +150,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResponseCode")
     public String responseCode;
+
     public StepExecution withResponseCode(String responseCode) {
         this.responseCode = responseCode;
         return this;
@@ -144,6 +159,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepExecutionId")
     public String stepExecutionId;
+
     public StepExecution withStepExecutionId(String stepExecutionId) {
         this.stepExecutionId = stepExecutionId;
         return this;
@@ -152,6 +168,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepName")
     public String stepName;
+
     public StepExecution withStepName(String stepName) {
         this.stepName = stepName;
         return this;
@@ -160,6 +177,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepStatus")
     public AutomationExecutionStatusEnum stepStatus;
+
     public StepExecution withStepStatus(AutomationExecutionStatusEnum stepStatus) {
         this.stepStatus = stepStatus;
         return this;
@@ -168,6 +186,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetLocation")
     public TargetLocation targetLocation;
+
     public StepExecution withTargetLocation(TargetLocation targetLocation) {
         this.targetLocation = targetLocation;
         return this;
@@ -176,6 +195,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public Target[] targets;
+
     public StepExecution withTargets(Target[] targets) {
         this.targets = targets;
         return this;
@@ -184,6 +204,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeoutSeconds")
     public Long timeoutSeconds;
+
     public StepExecution withTimeoutSeconds(Long timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
@@ -192,6 +213,7 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TriggeredAlarms")
     public AlarmStateInformation[] triggeredAlarms;
+
     public StepExecution withTriggeredAlarms(AlarmStateInformation[] triggeredAlarms) {
         this.triggeredAlarms = triggeredAlarms;
         return this;
@@ -200,9 +222,11 @@ public class StepExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidNextSteps")
     public String[] validNextSteps;
+
     public StepExecution withValidNextSteps(String[] validNextSteps) {
         this.validNextSteps = validNextSteps;
         return this;
     }
     
+    public StepExecution(){}
 }

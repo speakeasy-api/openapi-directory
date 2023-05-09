@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InstanceAttributeProductCodes {
     
     public String productCodeId;
+
     public InstanceAttributeProductCodes withProductCodeId(String productCodeId) {
         this.productCodeId = productCodeId;
         return this;
@@ -19,9 +20,11 @@ public class InstanceAttributeProductCodes {
     
     
     public InstanceAttributeProductCodesProductCodeTypeEnum productCodeType;
+
     public InstanceAttributeProductCodes withProductCodeType(InstanceAttributeProductCodesProductCodeTypeEnum productCodeType) {
         this.productCodeType = productCodeType;
         return this;
     }
     
+    public InstanceAttributeProductCodes(){}
 }

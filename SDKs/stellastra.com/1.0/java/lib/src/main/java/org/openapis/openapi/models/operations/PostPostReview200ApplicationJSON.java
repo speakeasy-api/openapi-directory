@@ -15,9 +15,11 @@ public class PostPostReview200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public PostPostReview200ApplicationJSON withData(String data) {
         this.data = data;
         return this;
     }
     
+    public PostPostReview200ApplicationJSON(){}
 }

@@ -20,6 +20,7 @@ public class GetCredentialsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dbPassword")
     public String dbPassword;
+
     public GetCredentialsResponse withDbPassword(String dbPassword) {
         this.dbPassword = dbPassword;
         return this;
@@ -28,6 +29,7 @@ public class GetCredentialsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dbUser")
     public String dbUser;
+
     public GetCredentialsResponse withDbUser(String dbUser) {
         this.dbUser = dbUser;
         return this;
@@ -38,6 +40,7 @@ public class GetCredentialsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiration")
     public OffsetDateTime expiration;
+
     public GetCredentialsResponse withExpiration(OffsetDateTime expiration) {
         this.expiration = expiration;
         return this;
@@ -48,9 +51,11 @@ public class GetCredentialsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("nextRefreshTime")
     public OffsetDateTime nextRefreshTime;
+
     public GetCredentialsResponse withNextRefreshTime(OffsetDateTime nextRefreshTime) {
         this.nextRefreshTime = nextRefreshTime;
         return this;
     }
     
+    public GetCredentialsResponse(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessGroupsRequestFilters {
     
     public String name;
+
     public DescribeVerifiedAccessGroupsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVerifiedAccessGroupsRequestFilters {
     
     
     public String[] values;
+
     public DescribeVerifiedAccessGroupsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeVerifiedAccessGroupsRequestFilters(){}
 }

@@ -15,6 +15,7 @@ public class AppsListTesters200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public AppsListTesters200ApplicationJSON withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -26,6 +27,7 @@ public class AppsListTesters200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("can_change_password")
     public Boolean canChangePassword;
+
     public AppsListTesters200ApplicationJSON withCanChangePassword(Boolean canChangePassword) {
         this.canChangePassword = canChangePassword;
         return this;
@@ -36,6 +38,7 @@ public class AppsListTesters200ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public AppsListTesters200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -46,6 +49,7 @@ public class AppsListTesters200ApplicationJSON {
      */
     @JsonProperty("email")
     public String email;
+
     public AppsListTesters200ApplicationJSON withEmail(String email) {
         this.email = email;
         return this;
@@ -56,6 +60,7 @@ public class AppsListTesters200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public AppsListTesters200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -66,6 +71,7 @@ public class AppsListTesters200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public AppsListTesters200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -76,6 +82,7 @@ public class AppsListTesters200ApplicationJSON {
      */
     @JsonProperty("origin")
     public AppsListTesters200ApplicationJSONOriginEnum origin;
+
     public AppsListTesters200ApplicationJSON withOrigin(AppsListTesters200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -87,9 +94,17 @@ public class AppsListTesters200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public AppsListTesters200ApplicationJSONPermissionsEnum[] permissions;
+
     public AppsListTesters200ApplicationJSON withPermissions(AppsListTesters200ApplicationJSONPermissionsEnum[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public AppsListTesters200ApplicationJSON(@JsonProperty("display_name") String displayName, @JsonProperty("email") String email, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("origin") AppsListTesters200ApplicationJSONOriginEnum origin) {
+        this.displayName = displayName;
+        this.email = email;
+        this.id = id;
+        this.name = name;
+        this.origin = origin;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateApplicationResourceLifecycleMessage {
     
     public String applicationName;
+
     public UpdateApplicationResourceLifecycleMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -16,9 +17,14 @@ public class UpdateApplicationResourceLifecycleMessage {
     
     
     public ApplicationResourceLifecycleConfig resourceLifecycleConfig;
+
     public UpdateApplicationResourceLifecycleMessage withResourceLifecycleConfig(ApplicationResourceLifecycleConfig resourceLifecycleConfig) {
         this.resourceLifecycleConfig = resourceLifecycleConfig;
         return this;
     }
     
+    public UpdateApplicationResourceLifecycleMessage(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("ResourceLifecycleConfig") ApplicationResourceLifecycleConfig resourceLifecycleConfig) {
+        this.applicationName = applicationName;
+        this.resourceLifecycleConfig = resourceLifecycleConfig;
+  }
 }

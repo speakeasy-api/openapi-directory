@@ -15,6 +15,7 @@ public class GetOrder2200ApplicationJSONTotals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetOrder2200ApplicationJSONTotals withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class GetOrder2200ApplicationJSONTotals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetOrder2200ApplicationJSONTotals withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class GetOrder2200ApplicationJSONTotals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Integer value;
+
     public GetOrder2200ApplicationJSONTotals withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public GetOrder2200ApplicationJSONTotals(){}
 }

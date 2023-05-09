@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteUsageReportSubscriptionResponse {
     
     public String contentType;
+
     public DeleteUsageReportSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteUsageReportSubscriptionResponse {
      */
     
     public java.util.Map<String, Object> deleteUsageReportSubscriptionResult;
+
     public DeleteUsageReportSubscriptionResponse withDeleteUsageReportSubscriptionResult(java.util.Map<String, Object> deleteUsageReportSubscriptionResult) {
         this.deleteUsageReportSubscriptionResult = deleteUsageReportSubscriptionResult;
         return this;
@@ -29,6 +32,7 @@ public class DeleteUsageReportSubscriptionResponse {
      */
     
     public Object invalidAccountStatusException;
+
     public DeleteUsageReportSubscriptionResponse withInvalidAccountStatusException(Object invalidAccountStatusException) {
         this.invalidAccountStatusException = invalidAccountStatusException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteUsageReportSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public DeleteUsageReportSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteUsageReportSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteUsageReportSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DeleteUsageReportSubscriptionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteUsageReportSubscriptionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteUsageReportSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

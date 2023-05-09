@@ -15,6 +15,7 @@ public class GroupMembershipExistenceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupId")
     public String groupId;
+
     public GroupMembershipExistenceResult withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -23,6 +24,7 @@ public class GroupMembershipExistenceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemberId")
     public MemberId memberId;
+
     public GroupMembershipExistenceResult withMemberId(MemberId memberId) {
         this.memberId = memberId;
         return this;
@@ -31,9 +33,11 @@ public class GroupMembershipExistenceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MembershipExists")
     public Boolean membershipExists;
+
     public GroupMembershipExistenceResult withMembershipExists(Boolean membershipExists) {
         this.membershipExists = membershipExists;
         return this;
     }
     
+    public GroupMembershipExistenceResult(){}
 }

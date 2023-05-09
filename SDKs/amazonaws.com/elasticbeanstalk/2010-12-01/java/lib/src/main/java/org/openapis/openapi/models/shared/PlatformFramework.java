@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PlatformFramework {
     
     public String name;
+
     public PlatformFramework withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class PlatformFramework {
     
     
     public String version;
+
     public PlatformFramework withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public PlatformFramework(){}
 }

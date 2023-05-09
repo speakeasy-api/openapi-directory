@@ -18,6 +18,7 @@ public class PrepaidBasePlanType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingPeriodDuration")
     public String billingPeriodDuration;
+
     public PrepaidBasePlanType withBillingPeriodDuration(String billingPeriodDuration) {
         this.billingPeriodDuration = billingPeriodDuration;
         return this;
@@ -29,9 +30,11 @@ public class PrepaidBasePlanType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeExtension")
     public PrepaidBasePlanTypeTimeExtensionEnum timeExtension;
+
     public PrepaidBasePlanType withTimeExtension(PrepaidBasePlanTypeTimeExtensionEnum timeExtension) {
         this.timeExtension = timeExtension;
         return this;
     }
     
+    public PrepaidBasePlanType(){}
 }

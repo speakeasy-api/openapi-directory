@@ -20,6 +20,7 @@ public class DescribeTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public DescribeTimeSeriesResponse withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -28,6 +29,7 @@ public class DescribeTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetId")
     public String assetId;
+
     public DescribeTimeSeriesResponse withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -35,6 +37,7 @@ public class DescribeTimeSeriesResponse {
     
     @JsonProperty("dataType")
     public PropertyDataTypeEnum dataType;
+
     public DescribeTimeSeriesResponse withDataType(PropertyDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -43,6 +46,7 @@ public class DescribeTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataTypeSpec")
     public String dataTypeSpec;
+
     public DescribeTimeSeriesResponse withDataTypeSpec(String dataTypeSpec) {
         this.dataTypeSpec = dataTypeSpec;
         return this;
@@ -51,6 +55,7 @@ public class DescribeTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyId")
     public String propertyId;
+
     public DescribeTimeSeriesResponse withPropertyId(String propertyId) {
         this.propertyId = propertyId;
         return this;
@@ -58,6 +63,7 @@ public class DescribeTimeSeriesResponse {
     
     @JsonProperty("timeSeriesArn")
     public String timeSeriesArn;
+
     public DescribeTimeSeriesResponse withTimeSeriesArn(String timeSeriesArn) {
         this.timeSeriesArn = timeSeriesArn;
         return this;
@@ -67,6 +73,7 @@ public class DescribeTimeSeriesResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timeSeriesCreationDate")
     public OffsetDateTime timeSeriesCreationDate;
+
     public DescribeTimeSeriesResponse withTimeSeriesCreationDate(OffsetDateTime timeSeriesCreationDate) {
         this.timeSeriesCreationDate = timeSeriesCreationDate;
         return this;
@@ -74,6 +81,7 @@ public class DescribeTimeSeriesResponse {
     
     @JsonProperty("timeSeriesId")
     public String timeSeriesId;
+
     public DescribeTimeSeriesResponse withTimeSeriesId(String timeSeriesId) {
         this.timeSeriesId = timeSeriesId;
         return this;
@@ -83,9 +91,17 @@ public class DescribeTimeSeriesResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timeSeriesLastUpdateDate")
     public OffsetDateTime timeSeriesLastUpdateDate;
+
     public DescribeTimeSeriesResponse withTimeSeriesLastUpdateDate(OffsetDateTime timeSeriesLastUpdateDate) {
         this.timeSeriesLastUpdateDate = timeSeriesLastUpdateDate;
         return this;
     }
     
+    public DescribeTimeSeriesResponse(@JsonProperty("dataType") PropertyDataTypeEnum dataType, @JsonProperty("timeSeriesArn") String timeSeriesArn, @JsonProperty("timeSeriesCreationDate") OffsetDateTime timeSeriesCreationDate, @JsonProperty("timeSeriesId") String timeSeriesId, @JsonProperty("timeSeriesLastUpdateDate") OffsetDateTime timeSeriesLastUpdateDate) {
+        this.dataType = dataType;
+        this.timeSeriesArn = timeSeriesArn;
+        this.timeSeriesCreationDate = timeSeriesCreationDate;
+        this.timeSeriesId = timeSeriesId;
+        this.timeSeriesLastUpdateDate = timeSeriesLastUpdateDate;
+  }
 }

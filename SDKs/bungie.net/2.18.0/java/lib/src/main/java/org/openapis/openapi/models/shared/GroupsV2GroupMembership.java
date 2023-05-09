@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class GroupsV2GroupMembership {
     
     public GroupsV2GroupV2 group;
+
     public GroupsV2GroupMembership withGroup(GroupsV2GroupV2 group) {
         this.group = group;
         return this;
@@ -16,9 +17,11 @@ public class GroupsV2GroupMembership {
     
     
     public GroupsV2GroupMember member;
+
     public GroupsV2GroupMembership withMember(GroupsV2GroupMember member) {
         this.member = member;
         return this;
     }
     
+    public GroupsV2GroupMembership(){}
 }

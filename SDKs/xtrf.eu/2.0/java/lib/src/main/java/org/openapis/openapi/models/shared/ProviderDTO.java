@@ -15,6 +15,7 @@ public class ProviderDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingAddress")
     public AddressDTO billingAddress;
+
     public ProviderDTO withBillingAddress(AddressDTO billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -23,6 +24,7 @@ public class ProviderDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchId")
     public Long branchId;
+
     public ProviderDTO withBranchId(Long branchId) {
         this.branchId = branchId;
         return this;
@@ -31,6 +33,7 @@ public class ProviderDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("competencies")
     public CompetenciesDTO competencies;
+
     public ProviderDTO withCompetencies(CompetenciesDTO competencies) {
         this.competencies = competencies;
         return this;
@@ -39,6 +42,7 @@ public class ProviderDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact")
     public ContactDTO contact;
+
     public ProviderDTO withContact(ContactDTO contact) {
         this.contact = contact;
         return this;
@@ -47,6 +51,7 @@ public class ProviderDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correspondenceAddress")
     public AddressDTO correspondenceAddress;
+
     public ProviderDTO withCorrespondenceAddress(AddressDTO correspondenceAddress) {
         this.correspondenceAddress = correspondenceAddress;
         return this;
@@ -55,6 +60,7 @@ public class ProviderDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public CustomFieldDTO[] customFields;
+
     public ProviderDTO withCustomFields(CustomFieldDTO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -63,6 +69,7 @@ public class ProviderDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullName")
     public String fullName;
+
     public ProviderDTO withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -71,6 +78,7 @@ public class ProviderDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ProviderDTO withId(Long id) {
         this.id = id;
         return this;
@@ -79,6 +87,7 @@ public class ProviderDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idNumber")
     public String idNumber;
+
     public ProviderDTO withIdNumber(String idNumber) {
         this.idNumber = idNumber;
         return this;
@@ -87,6 +96,7 @@ public class ProviderDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadSourceId")
     public Long leadSourceId;
+
     public ProviderDTO withLeadSourceId(Long leadSourceId) {
         this.leadSourceId = leadSourceId;
         return this;
@@ -95,6 +105,7 @@ public class ProviderDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProviderDTO withName(String name) {
         this.name = name;
         return this;
@@ -103,6 +114,7 @@ public class ProviderDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public ProviderDTO withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -111,6 +123,7 @@ public class ProviderDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persons")
     public ProviderPersonDTO[] persons;
+
     public ProviderDTO withPersons(ProviderPersonDTO[] persons) {
         this.persons = persons;
         return this;
@@ -119,9 +132,11 @@ public class ProviderDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ProviderDTOStatusEnum status;
+
     public ProviderDTO withStatus(ProviderDTOStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ProviderDTO(){}
 }

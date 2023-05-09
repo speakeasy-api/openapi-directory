@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChannelsWithPushSubscribersResponse {
     
     public byte[] body;
+
     public GetChannelsWithPushSubscribersResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetChannelsWithPushSubscribersResponse {
     
     
     public String contentType;
+
     public GetChannelsWithPushSubscribersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetChannelsWithPushSubscribersResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetChannelsWithPushSubscribersResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -33,6 +37,7 @@ public class GetChannelsWithPushSubscribersResponse {
     
     
     public Integer statusCode;
+
     public GetChannelsWithPushSubscribersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetChannelsWithPushSubscribersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChannelsWithPushSubscribersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetChannelsWithPushSubscribersResponse {
      */
     
     public String[] getChannelsWithPushSubscribers2XXApplicationJSONStrings;
+
     public GetChannelsWithPushSubscribersResponse withGetChannelsWithPushSubscribers2XXApplicationJSONStrings(String[] getChannelsWithPushSubscribers2XXApplicationJSONStrings) {
         this.getChannelsWithPushSubscribers2XXApplicationJSONStrings = getChannelsWithPushSubscribers2XXApplicationJSONStrings;
         return this;
     }
     
+    public GetChannelsWithPushSubscribersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

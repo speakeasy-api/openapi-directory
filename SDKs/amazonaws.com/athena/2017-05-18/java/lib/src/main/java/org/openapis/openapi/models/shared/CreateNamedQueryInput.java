@@ -12,6 +12,7 @@ public class CreateNamedQueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateNamedQueryInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateNamedQueryInput {
     
     @JsonProperty("Database")
     public String database;
+
     public CreateNamedQueryInput withDatabase(String database) {
         this.database = database;
         return this;
@@ -27,6 +29,7 @@ public class CreateNamedQueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateNamedQueryInput withDescription(String description) {
         this.description = description;
         return this;
@@ -34,6 +37,7 @@ public class CreateNamedQueryInput {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateNamedQueryInput withName(String name) {
         this.name = name;
         return this;
@@ -41,6 +45,7 @@ public class CreateNamedQueryInput {
     
     @JsonProperty("QueryString")
     public String queryString;
+
     public CreateNamedQueryInput withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
@@ -49,9 +54,15 @@ public class CreateNamedQueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public CreateNamedQueryInput withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public CreateNamedQueryInput(@JsonProperty("Database") String database, @JsonProperty("Name") String name, @JsonProperty("QueryString") String queryString) {
+        this.database = database;
+        this.name = name;
+        this.queryString = queryString;
+  }
 }

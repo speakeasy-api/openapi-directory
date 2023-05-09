@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeStandardsResponse {
     
     public String contentType;
+
     public DescribeStandardsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeStandardsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeStandardsResponse describeStandardsResponse;
+
     public DescribeStandardsResponse withDescribeStandardsResponse(org.openapis.openapi.models.shared.DescribeStandardsResponse describeStandardsResponse) {
         this.describeStandardsResponse = describeStandardsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeStandardsResponse {
      */
     
     public Object internalException;
+
     public DescribeStandardsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeStandardsResponse {
      */
     
     public Object invalidAccessException;
+
     public DescribeStandardsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeStandardsResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeStandardsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeStandardsResponse {
     
     
     public Integer statusCode;
+
     public DescribeStandardsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeStandardsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeStandardsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeStandardsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignId")
     public Long campaignId;
+
     public Schedule withCampaignId(Long campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -29,6 +30,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daysOfWeek")
     public String[] daysOfWeek;
+
     public Schedule withDaysOfWeek(String[] daysOfWeek) {
         this.daysOfWeek = daysOfWeek;
         return this;
@@ -40,6 +42,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Schedule withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public Schedule withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -62,6 +66,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeOfDay")
     public LocalTime startTimeOfDay;
+
     public Schedule withStartTimeOfDay(LocalTime startTimeOfDay) {
         this.startTimeOfDay = startTimeOfDay;
         return this;
@@ -73,6 +78,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopDate")
     public LocalDate stopDate;
+
     public Schedule withStopDate(LocalDate stopDate) {
         this.stopDate = stopDate;
         return this;
@@ -84,6 +90,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopTimeOfDay")
     public LocalTime stopTimeOfDay;
+
     public Schedule withStopTimeOfDay(LocalTime stopTimeOfDay) {
         this.stopTimeOfDay = stopTimeOfDay;
         return this;
@@ -95,9 +102,11 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public Schedule withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public Schedule(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFunctionResponse {
@@ -12,6 +13,7 @@ public class CreateFunctionResponse {
      */
     
     public Object codeSigningConfigNotFoundException;
+
     public CreateFunctionResponse withCodeSigningConfigNotFoundException(Object codeSigningConfigNotFoundException) {
         this.codeSigningConfigNotFoundException = codeSigningConfigNotFoundException;
         return this;
@@ -22,6 +24,7 @@ public class CreateFunctionResponse {
      */
     
     public Object codeStorageExceededException;
+
     public CreateFunctionResponse withCodeStorageExceededException(Object codeStorageExceededException) {
         this.codeStorageExceededException = codeStorageExceededException;
         return this;
@@ -32,6 +35,7 @@ public class CreateFunctionResponse {
      */
     
     public Object codeVerificationFailedException;
+
     public CreateFunctionResponse withCodeVerificationFailedException(Object codeVerificationFailedException) {
         this.codeVerificationFailedException = codeVerificationFailedException;
         return this;
@@ -39,6 +43,7 @@ public class CreateFunctionResponse {
     
     
     public String contentType;
+
     public CreateFunctionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateFunctionResponse {
      */
     
     public org.openapis.openapi.models.shared.FunctionConfiguration functionConfiguration;
+
     public CreateFunctionResponse withFunctionConfiguration(org.openapis.openapi.models.shared.FunctionConfiguration functionConfiguration) {
         this.functionConfiguration = functionConfiguration;
         return this;
@@ -59,6 +65,7 @@ public class CreateFunctionResponse {
      */
     
     public Object invalidCodeSignatureException;
+
     public CreateFunctionResponse withInvalidCodeSignatureException(Object invalidCodeSignatureException) {
         this.invalidCodeSignatureException = invalidCodeSignatureException;
         return this;
@@ -69,6 +76,7 @@ public class CreateFunctionResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CreateFunctionResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -79,6 +87,7 @@ public class CreateFunctionResponse {
      */
     
     public Object resourceConflictException;
+
     public CreateFunctionResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -89,6 +98,7 @@ public class CreateFunctionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateFunctionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -99,6 +109,7 @@ public class CreateFunctionResponse {
      */
     
     public Object serviceException;
+
     public CreateFunctionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -106,6 +117,7 @@ public class CreateFunctionResponse {
     
     
     public Integer statusCode;
+
     public CreateFunctionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class CreateFunctionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFunctionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,9 +136,14 @@ public class CreateFunctionResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateFunctionResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateFunctionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

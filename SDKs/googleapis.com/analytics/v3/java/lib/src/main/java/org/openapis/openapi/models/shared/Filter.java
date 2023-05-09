@@ -23,6 +23,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Filter withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -34,6 +35,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advancedDetails")
     public FilterAdvancedDetails advancedDetails;
+
     public Filter withAdvancedDetails(FilterAdvancedDetails advancedDetails) {
         this.advancedDetails = advancedDetails;
         return this;
@@ -47,6 +49,7 @@ public class Filter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Filter withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -58,6 +61,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeDetails")
     public FilterExpression excludeDetails;
+
     public Filter withExcludeDetails(FilterExpression excludeDetails) {
         this.excludeDetails = excludeDetails;
         return this;
@@ -69,6 +73,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Filter withId(String id) {
         this.id = id;
         return this;
@@ -80,6 +85,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeDetails")
     public FilterExpression includeDetails;
+
     public Filter withIncludeDetails(FilterExpression includeDetails) {
         this.includeDetails = includeDetails;
         return this;
@@ -91,6 +97,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Filter withKind(String kind) {
         this.kind = kind;
         return this;
@@ -102,6 +109,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowercaseDetails")
     public FilterLowercaseDetails lowercaseDetails;
+
     public Filter withLowercaseDetails(FilterLowercaseDetails lowercaseDetails) {
         this.lowercaseDetails = lowercaseDetails;
         return this;
@@ -113,6 +121,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Filter withName(String name) {
         this.name = name;
         return this;
@@ -124,6 +133,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentLink")
     public FilterParentLink parentLink;
+
     public Filter withParentLink(FilterParentLink parentLink) {
         this.parentLink = parentLink;
         return this;
@@ -135,6 +145,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchAndReplaceDetails")
     public FilterSearchAndReplaceDetails searchAndReplaceDetails;
+
     public Filter withSearchAndReplaceDetails(FilterSearchAndReplaceDetails searchAndReplaceDetails) {
         this.searchAndReplaceDetails = searchAndReplaceDetails;
         return this;
@@ -146,6 +157,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Filter withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -157,6 +169,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Filter withType(String type) {
         this.type = type;
         return this;
@@ -170,6 +183,7 @@ public class Filter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated")
     public OffsetDateTime updated;
+
     public Filter withUpdated(OffsetDateTime updated) {
         this.updated = updated;
         return this;
@@ -181,9 +195,11 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uppercaseDetails")
     public FilterUppercaseDetails uppercaseDetails;
+
     public Filter withUppercaseDetails(FilterUppercaseDetails uppercaseDetails) {
         this.uppercaseDetails = uppercaseDetails;
         return this;
     }
     
+    public Filter(){}
 }

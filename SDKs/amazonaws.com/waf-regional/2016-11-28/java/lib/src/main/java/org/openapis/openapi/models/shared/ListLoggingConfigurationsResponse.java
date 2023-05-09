@@ -15,6 +15,7 @@ public class ListLoggingConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoggingConfigurations")
     public LoggingConfiguration[] loggingConfigurations;
+
     public ListLoggingConfigurationsResponse withLoggingConfigurations(LoggingConfiguration[] loggingConfigurations) {
         this.loggingConfigurations = loggingConfigurations;
         return this;
@@ -23,9 +24,11 @@ public class ListLoggingConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListLoggingConfigurationsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListLoggingConfigurationsResponse(){}
 }

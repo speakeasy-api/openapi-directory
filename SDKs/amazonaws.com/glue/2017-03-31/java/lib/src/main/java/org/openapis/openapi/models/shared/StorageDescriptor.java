@@ -15,6 +15,7 @@ public class StorageDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalLocations")
     public String[] additionalLocations;
+
     public StorageDescriptor withAdditionalLocations(String[] additionalLocations) {
         this.additionalLocations = additionalLocations;
         return this;
@@ -23,6 +24,7 @@ public class StorageDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketColumns")
     public String[] bucketColumns;
+
     public StorageDescriptor withBucketColumns(String[] bucketColumns) {
         this.bucketColumns = bucketColumns;
         return this;
@@ -31,6 +33,7 @@ public class StorageDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Columns")
     public Column[] columns;
+
     public StorageDescriptor withColumns(Column[] columns) {
         this.columns = columns;
         return this;
@@ -39,6 +42,7 @@ public class StorageDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Compressed")
     public Boolean compressed;
+
     public StorageDescriptor withCompressed(Boolean compressed) {
         this.compressed = compressed;
         return this;
@@ -47,6 +51,7 @@ public class StorageDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputFormat")
     public String inputFormat;
+
     public StorageDescriptor withInputFormat(String inputFormat) {
         this.inputFormat = inputFormat;
         return this;
@@ -55,6 +60,7 @@ public class StorageDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public StorageDescriptor withLocation(String location) {
         this.location = location;
         return this;
@@ -63,6 +69,7 @@ public class StorageDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfBuckets")
     public Long numberOfBuckets;
+
     public StorageDescriptor withNumberOfBuckets(Long numberOfBuckets) {
         this.numberOfBuckets = numberOfBuckets;
         return this;
@@ -71,6 +78,7 @@ public class StorageDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputFormat")
     public String outputFormat;
+
     public StorageDescriptor withOutputFormat(String outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -79,6 +87,7 @@ public class StorageDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public StorageDescriptor withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -87,6 +96,7 @@ public class StorageDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaReference")
     public SchemaReference schemaReference;
+
     public StorageDescriptor withSchemaReference(SchemaReference schemaReference) {
         this.schemaReference = schemaReference;
         return this;
@@ -95,6 +105,7 @@ public class StorageDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SerdeInfo")
     public SerDeInfo serdeInfo;
+
     public StorageDescriptor withSerdeInfo(SerDeInfo serdeInfo) {
         this.serdeInfo = serdeInfo;
         return this;
@@ -103,6 +114,7 @@ public class StorageDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SkewedInfo")
     public SkewedInfo skewedInfo;
+
     public StorageDescriptor withSkewedInfo(SkewedInfo skewedInfo) {
         this.skewedInfo = skewedInfo;
         return this;
@@ -111,6 +123,7 @@ public class StorageDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortColumns")
     public Order[] sortColumns;
+
     public StorageDescriptor withSortColumns(Order[] sortColumns) {
         this.sortColumns = sortColumns;
         return this;
@@ -119,9 +132,11 @@ public class StorageDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoredAsSubDirectories")
     public Boolean storedAsSubDirectories;
+
     public StorageDescriptor withStoredAsSubDirectories(Boolean storedAsSubDirectories) {
         this.storedAsSubDirectories = storedAsSubDirectories;
         return this;
     }
     
+    public StorageDescriptor(){}
 }

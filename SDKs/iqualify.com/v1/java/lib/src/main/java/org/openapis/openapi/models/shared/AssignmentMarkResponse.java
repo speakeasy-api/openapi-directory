@@ -17,6 +17,7 @@ public class AssignmentMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentId")
     public String assessmentId;
+
     public AssignmentMarkResponse withAssessmentId(String assessmentId) {
         this.assessmentId = assessmentId;
         return this;
@@ -25,6 +26,7 @@ public class AssignmentMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentItemDetails")
     public String assessmentItemDetails;
+
     public AssignmentMarkResponse withAssessmentItemDetails(String assessmentItemDetails) {
         this.assessmentItemDetails = assessmentItemDetails;
         return this;
@@ -33,6 +35,7 @@ public class AssignmentMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentItemName")
     public String assessmentItemName;
+
     public AssignmentMarkResponse withAssessmentItemName(String assessmentItemName) {
         this.assessmentItemName = assessmentItemName;
         return this;
@@ -41,6 +44,7 @@ public class AssignmentMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courseName")
     public String courseName;
+
     public AssignmentMarkResponse withCourseName(String courseName) {
         this.courseName = courseName;
         return this;
@@ -49,6 +53,7 @@ public class AssignmentMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnerEmail")
     public String learnerEmail;
+
     public AssignmentMarkResponse withLearnerEmail(String learnerEmail) {
         this.learnerEmail = learnerEmail;
         return this;
@@ -57,6 +62,7 @@ public class AssignmentMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnerFirstName")
     public String learnerFirstName;
+
     public AssignmentMarkResponse withLearnerFirstName(String learnerFirstName) {
         this.learnerFirstName = learnerFirstName;
         return this;
@@ -65,6 +71,7 @@ public class AssignmentMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnerLastName")
     public String learnerLastName;
+
     public AssignmentMarkResponse withLearnerLastName(String learnerLastName) {
         this.learnerLastName = learnerLastName;
         return this;
@@ -73,6 +80,7 @@ public class AssignmentMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnerPersonId")
     public String learnerPersonId;
+
     public AssignmentMarkResponse withLearnerPersonId(String learnerPersonId) {
         this.learnerPersonId = learnerPersonId;
         return this;
@@ -81,6 +89,7 @@ public class AssignmentMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mark")
     public String mark;
+
     public AssignmentMarkResponse withMark(String mark) {
         this.mark = mark;
         return this;
@@ -89,6 +98,7 @@ public class AssignmentMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markFeedback")
     public String markFeedback;
+
     public AssignmentMarkResponse withMarkFeedback(String markFeedback) {
         this.markFeedback = markFeedback;
         return this;
@@ -97,6 +107,7 @@ public class AssignmentMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markedBy")
     public String markedBy;
+
     public AssignmentMarkResponse withMarkedBy(String markedBy) {
         this.markedBy = markedBy;
         return this;
@@ -105,6 +116,7 @@ public class AssignmentMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markedByEvaluator")
     public Boolean markedByEvaluator;
+
     public AssignmentMarkResponse withMarkedByEvaluator(Boolean markedByEvaluator) {
         this.markedByEvaluator = markedByEvaluator;
         return this;
@@ -113,6 +125,7 @@ public class AssignmentMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markedByFacilitator")
     public Boolean markedByFacilitator;
+
     public AssignmentMarkResponse withMarkedByFacilitator(Boolean markedByFacilitator) {
         this.markedByFacilitator = markedByFacilitator;
         return this;
@@ -121,6 +134,7 @@ public class AssignmentMarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markedByMarker")
     public Boolean markedByMarker;
+
     public AssignmentMarkResponse withMarkedByMarker(Boolean markedByMarker) {
         this.markedByMarker = markedByMarker;
         return this;
@@ -131,6 +145,7 @@ public class AssignmentMarkResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("markedDateTime")
     public OffsetDateTime markedDateTime;
+
     public AssignmentMarkResponse withMarkedDateTime(OffsetDateTime markedDateTime) {
         this.markedDateTime = markedDateTime;
         return this;
@@ -141,9 +156,11 @@ public class AssignmentMarkResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("submissionDateTime")
     public OffsetDateTime submissionDateTime;
+
     public AssignmentMarkResponse withSubmissionDateTime(OffsetDateTime submissionDateTime) {
         this.submissionDateTime = submissionDateTime;
         return this;
     }
     
+    public AssignmentMarkResponse(){}
 }

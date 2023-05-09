@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostV01SoundTouchStopResponse {
     
     public String contentType;
+
     public PostV01SoundTouchStopResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostV01SoundTouchStopResponse {
      */
     
     public org.openapis.openapi.models.shared.SoundTouchStopResponse soundTouchStopResponse;
+
     public PostV01SoundTouchStopResponse withSoundTouchStopResponse(org.openapis.openapi.models.shared.SoundTouchStopResponse soundTouchStopResponse) {
         this.soundTouchStopResponse = soundTouchStopResponse;
         return this;
@@ -26,6 +29,7 @@ public class PostV01SoundTouchStopResponse {
     
     
     public Integer statusCode;
+
     public PostV01SoundTouchStopResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostV01SoundTouchStopResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostV01SoundTouchStopResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostV01SoundTouchStopResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

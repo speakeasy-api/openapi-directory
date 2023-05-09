@@ -15,6 +15,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("account_id")
     public Long accountId;
+
     public CollectionCompletePrivate withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("articles_count")
     public Long articlesCount;
+
     public CollectionCompletePrivate withArticlesCount(Long articlesCount) {
         this.articlesCount = articlesCount;
         return this;
@@ -35,6 +37,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("authors")
     public Author[] authors;
+
     public CollectionCompletePrivate withAuthors(Author[] authors) {
         this.authors = authors;
         return this;
@@ -45,6 +48,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("categories")
     public Category[] categories;
+
     public CollectionCompletePrivate withCategories(Category[] categories) {
         this.categories = categories;
         return this;
@@ -55,6 +59,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("citation")
     public String citation;
+
     public CollectionCompletePrivate withCitation(String citation) {
         this.citation = citation;
         return this;
@@ -65,6 +70,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("created_date")
     public String createdDate;
+
     public CollectionCompletePrivate withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -75,6 +81,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("custom_fields")
     public CustomArticleField[] customFields;
+
     public CollectionCompletePrivate withCustomFields(CustomArticleField[] customFields) {
         this.customFields = customFields;
         return this;
@@ -85,6 +92,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("description")
     public String description;
+
     public CollectionCompletePrivate withDescription(String description) {
         this.description = description;
         return this;
@@ -95,6 +103,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("doi")
     public String doi;
+
     public CollectionCompletePrivate withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -105,6 +114,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("funding")
     public FundingInformation[] funding;
+
     public CollectionCompletePrivate withFunding(FundingInformation[] funding) {
         this.funding = funding;
         return this;
@@ -115,6 +125,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("group_id")
     public Long groupId;
+
     public CollectionCompletePrivate withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -125,6 +136,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("group_resource_id")
     public String groupResourceId;
+
     public CollectionCompletePrivate withGroupResourceId(String groupResourceId) {
         this.groupResourceId = groupResourceId;
         return this;
@@ -135,6 +147,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("handle")
     public String handle;
+
     public CollectionCompletePrivate withHandle(String handle) {
         this.handle = handle;
         return this;
@@ -145,6 +158,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("id")
     public Long id;
+
     public CollectionCompletePrivate withId(Long id) {
         this.id = id;
         return this;
@@ -155,6 +169,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("institution_id")
     public Long institutionId;
+
     public CollectionCompletePrivate withInstitutionId(Long institutionId) {
         this.institutionId = institutionId;
         return this;
@@ -165,6 +180,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("modified_date")
     public String modifiedDate;
+
     public CollectionCompletePrivate withModifiedDate(String modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -175,6 +191,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("public")
     public Boolean public_;
+
     public CollectionCompletePrivate withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -185,6 +202,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("published_date")
     public String publishedDate;
+
     public CollectionCompletePrivate withPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
         return this;
@@ -195,6 +213,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("references")
     public String[] references;
+
     public CollectionCompletePrivate withReferences(String[] references) {
         this.references = references;
         return this;
@@ -205,6 +224,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("resource_doi")
     public String resourceDoi;
+
     public CollectionCompletePrivate withResourceDoi(String resourceDoi) {
         this.resourceDoi = resourceDoi;
         return this;
@@ -215,6 +235,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("resource_id")
     public String resourceId;
+
     public CollectionCompletePrivate withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -225,6 +246,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("resource_link")
     public String resourceLink;
+
     public CollectionCompletePrivate withResourceLink(String resourceLink) {
         this.resourceLink = resourceLink;
         return this;
@@ -235,6 +257,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("resource_title")
     public String resourceTitle;
+
     public CollectionCompletePrivate withResourceTitle(String resourceTitle) {
         this.resourceTitle = resourceTitle;
         return this;
@@ -245,6 +268,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("resource_version")
     public Long resourceVersion;
+
     public CollectionCompletePrivate withResourceVersion(Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -255,6 +279,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("tags")
     public String[] tags;
+
     public CollectionCompletePrivate withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -262,6 +287,7 @@ public class CollectionCompletePrivate {
     
     @JsonProperty("timeline")
     public Timeline timeline;
+
     public CollectionCompletePrivate withTimeline(Timeline timeline) {
         this.timeline = timeline;
         return this;
@@ -272,6 +298,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("title")
     public String title;
+
     public CollectionCompletePrivate withTitle(String title) {
         this.title = title;
         return this;
@@ -282,6 +309,7 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("url")
     public String url;
+
     public CollectionCompletePrivate withUrl(String url) {
         this.url = url;
         return this;
@@ -292,9 +320,41 @@ public class CollectionCompletePrivate {
      */
     @JsonProperty("version")
     public Long version;
+
     public CollectionCompletePrivate withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public CollectionCompletePrivate(@JsonProperty("account_id") Long accountId, @JsonProperty("articles_count") Long articlesCount, @JsonProperty("authors") Author[] authors, @JsonProperty("categories") Category[] categories, @JsonProperty("citation") String citation, @JsonProperty("created_date") String createdDate, @JsonProperty("custom_fields") CustomArticleField[] customFields, @JsonProperty("description") String description, @JsonProperty("doi") String doi, @JsonProperty("funding") FundingInformation[] funding, @JsonProperty("group_id") Long groupId, @JsonProperty("group_resource_id") String groupResourceId, @JsonProperty("handle") String handle, @JsonProperty("id") Long id, @JsonProperty("institution_id") Long institutionId, @JsonProperty("modified_date") String modifiedDate, @JsonProperty("public") Boolean public_, @JsonProperty("published_date") String publishedDate, @JsonProperty("references") String[] references, @JsonProperty("resource_doi") String resourceDoi, @JsonProperty("resource_id") String resourceId, @JsonProperty("resource_link") String resourceLink, @JsonProperty("resource_title") String resourceTitle, @JsonProperty("resource_version") Long resourceVersion, @JsonProperty("tags") String[] tags, @JsonProperty("timeline") Timeline timeline, @JsonProperty("title") String title, @JsonProperty("url") String url, @JsonProperty("version") Long version) {
+        this.accountId = accountId;
+        this.articlesCount = articlesCount;
+        this.authors = authors;
+        this.categories = categories;
+        this.citation = citation;
+        this.createdDate = createdDate;
+        this.customFields = customFields;
+        this.description = description;
+        this.doi = doi;
+        this.funding = funding;
+        this.groupId = groupId;
+        this.groupResourceId = groupResourceId;
+        this.handle = handle;
+        this.id = id;
+        this.institutionId = institutionId;
+        this.modifiedDate = modifiedDate;
+        this.public_ = public_;
+        this.publishedDate = publishedDate;
+        this.references = references;
+        this.resourceDoi = resourceDoi;
+        this.resourceId = resourceId;
+        this.resourceLink = resourceLink;
+        this.resourceTitle = resourceTitle;
+        this.resourceVersion = resourceVersion;
+        this.tags = tags;
+        this.timeline = timeline;
+        this.title = title;
+        this.url = url;
+        this.version = version;
+  }
 }

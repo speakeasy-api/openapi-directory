@@ -16,9 +16,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.ConvertRequestBodyValidateEnum;
 import org.openapis.openapi.models.operations.ConvertRequestBody;
+import org.openapis.openapi.models.operations.ConvertRequestBodyValidateEnum;
 import org.openapis.openapi.models.operations.ConvertResponse;
 
 public class Application {
@@ -30,17 +29,19 @@ public class Application {
             ConvertRequestBody req = new ConvertRequestBody() {{
                 filename = "corrupti";
                 source = "provident";
-                validate = "on";
-            }}            
+                validate = ConvertRequestBodyValidateEnum.ON;
+            }};            
 
             ConvertResponse res = sdk.conversion.convert(req);
 
-            if (res.convert200ApplicationJSONAny.isPresent()) {
+            if (res.convert200ApplicationJSONAny != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,20 +49,20 @@ public class Application {
 ## Available Resources and Operations
 
 
-### conversion
+### [conversion](docs/conversion/README.md)
 
-* `convert` - Convert a Swagger 2.0 definition passed in the body to OpenAPI 3.0.x 
-* `convertUrl` - Convert a Swagger 2.0 definition to OpenAPI 3.0.x from a URL
+* [convert](docs/conversion/README.md#convert) - Convert a Swagger 2.0 definition passed in the body to OpenAPI 3.0.x 
+* [convertUrl](docs/conversion/README.md#converturl) - Convert a Swagger 2.0 definition to OpenAPI 3.0.x from a URL
 
-### metadata
+### [metadata](docs/metadata/README.md)
 
-* `getStatus` - Get the status of the API
+* [getStatus](docs/metadata/README.md#getstatus) - Get the status of the API
 
-### validation
+### [validation](docs/validation/README.md)
 
-* `getBadge` - Return a redirect to a badge svg file depending on a source definition's validity
-* `validate` - Validate an OpenAPI 3.0.x definition supplied in the body of the request
-* `validateUrl` - Validate an OpenAPI 3.0.x definition
+* [getBadge](docs/validation/README.md#getbadge) - Return a redirect to a badge svg file depending on a source definition's validity
+* [validate](docs/validation/README.md#validate) - Validate an OpenAPI 3.0.x definition supplied in the body of the request
+* [validateUrl](docs/validation/README.md#validateurl) - Validate an OpenAPI 3.0.x definition
 <!-- End SDK Available Operations -->
 
 ### Maturity

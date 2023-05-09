@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeStepInput {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public DescribeStepInput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -19,9 +20,14 @@ public class DescribeStepInput {
     
     @JsonProperty("StepId")
     public String stepId;
+
     public DescribeStepInput withStepId(String stepId) {
         this.stepId = stepId;
         return this;
     }
     
+    public DescribeStepInput(@JsonProperty("ClusterId") String clusterId, @JsonProperty("StepId") String stepId) {
+        this.clusterId = clusterId;
+        this.stepId = stepId;
+  }
 }

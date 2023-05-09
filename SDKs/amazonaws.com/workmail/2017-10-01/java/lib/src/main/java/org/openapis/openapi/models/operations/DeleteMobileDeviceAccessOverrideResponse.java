@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMobileDeviceAccessOverrideResponse {
     
     public String contentType;
+
     public DeleteMobileDeviceAccessOverrideResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMobileDeviceAccessOverrideResponse {
      */
     
     public java.util.Map<String, Object> deleteMobileDeviceAccessOverrideResponse;
+
     public DeleteMobileDeviceAccessOverrideResponse withDeleteMobileDeviceAccessOverrideResponse(java.util.Map<String, Object> deleteMobileDeviceAccessOverrideResponse) {
         this.deleteMobileDeviceAccessOverrideResponse = deleteMobileDeviceAccessOverrideResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMobileDeviceAccessOverrideResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteMobileDeviceAccessOverrideResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMobileDeviceAccessOverrideResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteMobileDeviceAccessOverrideResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteMobileDeviceAccessOverrideResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DeleteMobileDeviceAccessOverrideResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteMobileDeviceAccessOverrideResponse {
      */
     
     public Object organizationStateException;
+
     public DeleteMobileDeviceAccessOverrideResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteMobileDeviceAccessOverrideResponse {
     
     
     public Integer statusCode;
+
     public DeleteMobileDeviceAccessOverrideResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteMobileDeviceAccessOverrideResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMobileDeviceAccessOverrideResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteMobileDeviceAccessOverrideResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

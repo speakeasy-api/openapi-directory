@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsNetworkInterfaceCount {
     
     public Long max;
+
     public CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsNetworkInterfaceCount withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstan
     
     
     public Long min;
+
     public CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsNetworkInterfaceCount withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsNetworkInterfaceCount(){}
 }

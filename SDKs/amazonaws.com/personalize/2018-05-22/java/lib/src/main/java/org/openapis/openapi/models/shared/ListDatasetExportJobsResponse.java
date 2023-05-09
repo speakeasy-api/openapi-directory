@@ -15,6 +15,7 @@ public class ListDatasetExportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetExportJobs")
     public DatasetExportJobSummary[] datasetExportJobs;
+
     public ListDatasetExportJobsResponse withDatasetExportJobs(DatasetExportJobSummary[] datasetExportJobs) {
         this.datasetExportJobs = datasetExportJobs;
         return this;
@@ -23,9 +24,11 @@ public class ListDatasetExportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDatasetExportJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDatasetExportJobsResponse(){}
 }

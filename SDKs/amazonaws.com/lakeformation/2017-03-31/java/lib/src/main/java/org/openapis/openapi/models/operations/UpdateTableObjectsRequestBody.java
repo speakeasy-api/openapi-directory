@@ -15,6 +15,7 @@ public class UpdateTableObjectsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public UpdateTableObjectsRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -25,6 +26,7 @@ public class UpdateTableObjectsRequestBody {
      */
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public UpdateTableObjectsRequestBody withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -35,6 +37,7 @@ public class UpdateTableObjectsRequestBody {
      */
     @JsonProperty("TableName")
     public String tableName;
+
     public UpdateTableObjectsRequestBody withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -46,6 +49,7 @@ public class UpdateTableObjectsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public UpdateTableObjectsRequestBody withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -56,9 +60,15 @@ public class UpdateTableObjectsRequestBody {
      */
     @JsonProperty("WriteOperations")
     public org.openapis.openapi.models.shared.WriteOperation[] writeOperations;
+
     public UpdateTableObjectsRequestBody withWriteOperations(org.openapis.openapi.models.shared.WriteOperation[] writeOperations) {
         this.writeOperations = writeOperations;
         return this;
     }
     
+    public UpdateTableObjectsRequestBody(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName, @JsonProperty("WriteOperations") org.openapis.openapi.models.shared.WriteOperation[] writeOperations) {
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+        this.writeOperations = writeOperations;
+  }
 }

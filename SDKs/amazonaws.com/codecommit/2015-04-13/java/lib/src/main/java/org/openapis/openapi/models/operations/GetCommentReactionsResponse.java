@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCommentReactionsResponse {
@@ -12,6 +13,7 @@ public class GetCommentReactionsResponse {
      */
     
     public Object commentDeletedException;
+
     public GetCommentReactionsResponse withCommentDeletedException(Object commentDeletedException) {
         this.commentDeletedException = commentDeletedException;
         return this;
@@ -22,6 +24,7 @@ public class GetCommentReactionsResponse {
      */
     
     public Object commentDoesNotExistException;
+
     public GetCommentReactionsResponse withCommentDoesNotExistException(Object commentDoesNotExistException) {
         this.commentDoesNotExistException = commentDoesNotExistException;
         return this;
@@ -32,6 +35,7 @@ public class GetCommentReactionsResponse {
      */
     
     public Object commentIdRequiredException;
+
     public GetCommentReactionsResponse withCommentIdRequiredException(Object commentIdRequiredException) {
         this.commentIdRequiredException = commentIdRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class GetCommentReactionsResponse {
     
     
     public String contentType;
+
     public GetCommentReactionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class GetCommentReactionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCommentReactionsOutput getCommentReactionsOutput;
+
     public GetCommentReactionsResponse withGetCommentReactionsOutput(org.openapis.openapi.models.shared.GetCommentReactionsOutput getCommentReactionsOutput) {
         this.getCommentReactionsOutput = getCommentReactionsOutput;
         return this;
@@ -59,6 +65,7 @@ public class GetCommentReactionsResponse {
      */
     
     public Object invalidCommentIdException;
+
     public GetCommentReactionsResponse withInvalidCommentIdException(Object invalidCommentIdException) {
         this.invalidCommentIdException = invalidCommentIdException;
         return this;
@@ -69,6 +76,7 @@ public class GetCommentReactionsResponse {
      */
     
     public Object invalidContinuationTokenException;
+
     public GetCommentReactionsResponse withInvalidContinuationTokenException(Object invalidContinuationTokenException) {
         this.invalidContinuationTokenException = invalidContinuationTokenException;
         return this;
@@ -79,6 +87,7 @@ public class GetCommentReactionsResponse {
      */
     
     public Object invalidMaxResultsException;
+
     public GetCommentReactionsResponse withInvalidMaxResultsException(Object invalidMaxResultsException) {
         this.invalidMaxResultsException = invalidMaxResultsException;
         return this;
@@ -89,6 +98,7 @@ public class GetCommentReactionsResponse {
      */
     
     public Object invalidReactionUserArnException;
+
     public GetCommentReactionsResponse withInvalidReactionUserArnException(Object invalidReactionUserArnException) {
         this.invalidReactionUserArnException = invalidReactionUserArnException;
         return this;
@@ -96,6 +106,7 @@ public class GetCommentReactionsResponse {
     
     
     public Integer statusCode;
+
     public GetCommentReactionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class GetCommentReactionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCommentReactionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCommentReactionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

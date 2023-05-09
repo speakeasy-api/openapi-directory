@@ -12,6 +12,7 @@ public class ContactMobile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ContactMobile withCountry(String country) {
         this.country = country;
         return this;
@@ -20,9 +21,11 @@ public class ContactMobile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public ContactMobile withNumber(String number) {
         this.number = number;
         return this;
     }
     
+    public ContactMobile(){}
 }

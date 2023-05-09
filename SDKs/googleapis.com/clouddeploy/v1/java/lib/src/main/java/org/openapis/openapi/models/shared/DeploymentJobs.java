@@ -18,6 +18,7 @@ public class DeploymentJobs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployJob")
     public Job deployJob;
+
     public DeploymentJobs withDeployJob(Job deployJob) {
         this.deployJob = deployJob;
         return this;
@@ -29,9 +30,11 @@ public class DeploymentJobs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verifyJob")
     public Job verifyJob;
+
     public DeploymentJobs withVerifyJob(Job verifyJob) {
         this.verifyJob = verifyJob;
         return this;
     }
     
+    public DeploymentJobs(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteNodegroupResponse {
@@ -12,6 +13,7 @@ public class DeleteNodegroupResponse {
      */
     
     public Object clientException;
+
     public DeleteNodegroupResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteNodegroupResponse {
     
     
     public String contentType;
+
     public DeleteNodegroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteNodegroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteNodegroupResponse deleteNodegroupResponse;
+
     public DeleteNodegroupResponse withDeleteNodegroupResponse(org.openapis.openapi.models.shared.DeleteNodegroupResponse deleteNodegroupResponse) {
         this.deleteNodegroupResponse = deleteNodegroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteNodegroupResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteNodegroupResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteNodegroupResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteNodegroupResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteNodegroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteNodegroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteNodegroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteNodegroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteNodegroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteNodegroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteNodegroupResponse {
      */
     
     public Object serverException;
+
     public DeleteNodegroupResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteNodegroupResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteNodegroupResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public DeleteNodegroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

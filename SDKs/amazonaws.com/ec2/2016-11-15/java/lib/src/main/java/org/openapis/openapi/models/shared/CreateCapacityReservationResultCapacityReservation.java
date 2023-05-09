@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateCapacityReservationResultCapacityReservation {
     
     public String availabilityZone;
+
     public CreateCapacityReservationResultCapacityReservation withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public String availabilityZoneId;
+
     public CreateCapacityReservationResultCapacityReservation withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -26,6 +28,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public Long availableInstanceCount;
+
     public CreateCapacityReservationResultCapacityReservation withAvailableInstanceCount(Long availableInstanceCount) {
         this.availableInstanceCount = availableInstanceCount;
         return this;
@@ -33,6 +36,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public CreateCapacityReservationResultCapacityReservationCapacityAllocations[] capacityAllocations;
+
     public CreateCapacityReservationResultCapacityReservation withCapacityAllocations(CreateCapacityReservationResultCapacityReservationCapacityAllocations[] capacityAllocations) {
         this.capacityAllocations = capacityAllocations;
         return this;
@@ -40,6 +44,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public String capacityReservationArn;
+
     public CreateCapacityReservationResultCapacityReservation withCapacityReservationArn(String capacityReservationArn) {
         this.capacityReservationArn = capacityReservationArn;
         return this;
@@ -47,6 +52,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public String capacityReservationFleetId;
+
     public CreateCapacityReservationResultCapacityReservation withCapacityReservationFleetId(String capacityReservationFleetId) {
         this.capacityReservationFleetId = capacityReservationFleetId;
         return this;
@@ -54,6 +60,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public String capacityReservationId;
+
     public CreateCapacityReservationResultCapacityReservation withCapacityReservationId(String capacityReservationId) {
         this.capacityReservationId = capacityReservationId;
         return this;
@@ -61,6 +68,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public OffsetDateTime createDate;
+
     public CreateCapacityReservationResultCapacityReservation withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -68,6 +76,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public Boolean ebsOptimized;
+
     public CreateCapacityReservationResultCapacityReservation withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -75,6 +84,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public OffsetDateTime endDate;
+
     public CreateCapacityReservationResultCapacityReservation withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -82,6 +92,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public CreateCapacityReservationResultCapacityReservationEndDateTypeEnum endDateType;
+
     public CreateCapacityReservationResultCapacityReservation withEndDateType(CreateCapacityReservationResultCapacityReservationEndDateTypeEnum endDateType) {
         this.endDateType = endDateType;
         return this;
@@ -89,6 +100,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public Boolean ephemeralStorage;
+
     public CreateCapacityReservationResultCapacityReservation withEphemeralStorage(Boolean ephemeralStorage) {
         this.ephemeralStorage = ephemeralStorage;
         return this;
@@ -96,6 +108,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public CreateCapacityReservationResultCapacityReservationInstanceMatchCriteriaEnum instanceMatchCriteria;
+
     public CreateCapacityReservationResultCapacityReservation withInstanceMatchCriteria(CreateCapacityReservationResultCapacityReservationInstanceMatchCriteriaEnum instanceMatchCriteria) {
         this.instanceMatchCriteria = instanceMatchCriteria;
         return this;
@@ -103,6 +116,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public CreateCapacityReservationResultCapacityReservationInstancePlatformEnum instancePlatform;
+
     public CreateCapacityReservationResultCapacityReservation withInstancePlatform(CreateCapacityReservationResultCapacityReservationInstancePlatformEnum instancePlatform) {
         this.instancePlatform = instancePlatform;
         return this;
@@ -110,6 +124,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public String instanceType;
+
     public CreateCapacityReservationResultCapacityReservation withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -117,6 +132,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public String outpostArn;
+
     public CreateCapacityReservationResultCapacityReservation withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -124,6 +140,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public String ownerId;
+
     public CreateCapacityReservationResultCapacityReservation withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -131,6 +148,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public String placementGroupArn;
+
     public CreateCapacityReservationResultCapacityReservation withPlacementGroupArn(String placementGroupArn) {
         this.placementGroupArn = placementGroupArn;
         return this;
@@ -138,6 +156,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public OffsetDateTime startDate;
+
     public CreateCapacityReservationResultCapacityReservation withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -145,6 +164,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public CreateCapacityReservationResultCapacityReservationStateEnum state;
+
     public CreateCapacityReservationResultCapacityReservation withState(CreateCapacityReservationResultCapacityReservationStateEnum state) {
         this.state = state;
         return this;
@@ -152,6 +172,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public CreateCapacityReservationResultCapacityReservationTags[] tags;
+
     public CreateCapacityReservationResultCapacityReservation withTags(CreateCapacityReservationResultCapacityReservationTags[] tags) {
         this.tags = tags;
         return this;
@@ -159,6 +180,7 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public CreateCapacityReservationResultCapacityReservationTenancyEnum tenancy;
+
     public CreateCapacityReservationResultCapacityReservation withTenancy(CreateCapacityReservationResultCapacityReservationTenancyEnum tenancy) {
         this.tenancy = tenancy;
         return this;
@@ -166,9 +188,11 @@ public class CreateCapacityReservationResultCapacityReservation {
     
     
     public Long totalInstanceCount;
+
     public CreateCapacityReservationResultCapacityReservation withTotalInstanceCount(Long totalInstanceCount) {
         this.totalInstanceCount = totalInstanceCount;
         return this;
     }
     
+    public CreateCapacityReservationResultCapacityReservation(){}
 }

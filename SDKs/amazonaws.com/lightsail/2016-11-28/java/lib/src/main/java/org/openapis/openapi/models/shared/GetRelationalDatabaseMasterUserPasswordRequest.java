@@ -12,6 +12,7 @@ public class GetRelationalDatabaseMasterUserPasswordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordVersion")
     public RelationalDatabasePasswordVersionEnum passwordVersion;
+
     public GetRelationalDatabaseMasterUserPasswordRequest withPasswordVersion(RelationalDatabasePasswordVersionEnum passwordVersion) {
         this.passwordVersion = passwordVersion;
         return this;
@@ -19,9 +20,13 @@ public class GetRelationalDatabaseMasterUserPasswordRequest {
     
     @JsonProperty("relationalDatabaseName")
     public String relationalDatabaseName;
+
     public GetRelationalDatabaseMasterUserPasswordRequest withRelationalDatabaseName(String relationalDatabaseName) {
         this.relationalDatabaseName = relationalDatabaseName;
         return this;
     }
     
+    public GetRelationalDatabaseMasterUserPasswordRequest(@JsonProperty("relationalDatabaseName") String relationalDatabaseName) {
+        this.relationalDatabaseName = relationalDatabaseName;
+  }
 }

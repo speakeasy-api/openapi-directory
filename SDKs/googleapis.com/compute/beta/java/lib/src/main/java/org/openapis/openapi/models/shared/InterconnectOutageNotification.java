@@ -18,6 +18,7 @@ public class InterconnectOutageNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affectedCircuits")
     public String[] affectedCircuits;
+
     public InterconnectOutageNotification withAffectedCircuits(String[] affectedCircuits) {
         this.affectedCircuits = affectedCircuits;
         return this;
@@ -29,6 +30,7 @@ public class InterconnectOutageNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InterconnectOutageNotification withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class InterconnectOutageNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public InterconnectOutageNotification withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -51,6 +54,7 @@ public class InterconnectOutageNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueType")
     public InterconnectOutageNotificationIssueTypeEnum issueType;
+
     public InterconnectOutageNotification withIssueType(InterconnectOutageNotificationIssueTypeEnum issueType) {
         this.issueType = issueType;
         return this;
@@ -62,6 +66,7 @@ public class InterconnectOutageNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InterconnectOutageNotification withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class InterconnectOutageNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public InterconnectOutageNotificationSourceEnum source;
+
     public InterconnectOutageNotification withSource(InterconnectOutageNotificationSourceEnum source) {
         this.source = source;
         return this;
@@ -84,6 +90,7 @@ public class InterconnectOutageNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public InterconnectOutageNotification withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -95,9 +102,11 @@ public class InterconnectOutageNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public InterconnectOutageNotificationStateEnum state;
+
     public InterconnectOutageNotification withState(InterconnectOutageNotificationStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public InterconnectOutageNotification(){}
 }

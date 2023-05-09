@@ -15,9 +15,11 @@ public class CreateCaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseId")
     public String caseId;
+
     public CreateCaseResponse withCaseId(String caseId) {
         this.caseId = caseId;
         return this;
     }
     
+    public CreateCaseResponse(){}
 }

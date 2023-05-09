@@ -18,6 +18,7 @@ public class PersonCoverCoverInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leftImageOffset")
     public Integer leftImageOffset;
+
     public PersonCoverCoverInfo withLeftImageOffset(Integer leftImageOffset) {
         this.leftImageOffset = leftImageOffset;
         return this;
@@ -29,9 +30,11 @@ public class PersonCoverCoverInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topImageOffset")
     public Integer topImageOffset;
+
     public PersonCoverCoverInfo withTopImageOffset(Integer topImageOffset) {
         this.topImageOffset = topImageOffset;
         return this;
     }
     
+    public PersonCoverCoverInfo(){}
 }

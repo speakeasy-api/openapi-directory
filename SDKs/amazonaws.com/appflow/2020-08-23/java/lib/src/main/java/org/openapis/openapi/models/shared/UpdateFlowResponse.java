@@ -15,9 +15,11 @@ public class UpdateFlowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowStatus")
     public FlowStatusEnum flowStatus;
+
     public UpdateFlowResponse withFlowStatus(FlowStatusEnum flowStatus) {
         this.flowStatus = flowStatus;
         return this;
     }
     
+    public UpdateFlowResponse(){}
 }

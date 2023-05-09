@@ -22,6 +22,7 @@ public class LastDeploymentInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public LastDeploymentInfo withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -30,6 +31,7 @@ public class LastDeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public LastDeploymentInfo withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -40,6 +42,7 @@ public class LastDeploymentInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public LastDeploymentInfo withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -48,9 +51,11 @@ public class LastDeploymentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DeploymentStatusEnum status;
+
     public LastDeploymentInfo withStatus(DeploymentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public LastDeploymentInfo(){}
 }

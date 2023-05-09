@@ -15,9 +15,11 @@ public class CreateLunaClientResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientArn")
     public String clientArn;
+
     public CreateLunaClientResponse withClientArn(String clientArn) {
         this.clientArn = clientArn;
         return this;
     }
     
+    public CreateLunaClientResponse(){}
 }

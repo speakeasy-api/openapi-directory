@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents {
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAclRule aclRule;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withAclRule(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAclRule aclRule) {
         this.aclRule = aclRule;
         return this;
@@ -19,6 +20,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetails[] additionalDetails;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withAdditionalDetails(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetails[] additionalDetails) {
         this.additionalDetails = additionalDetails;
         return this;
@@ -26,6 +28,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAttachedTo attachedTo;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withAttachedTo(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAttachedTo attachedTo) {
         this.attachedTo = attachedTo;
         return this;
@@ -33,6 +36,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsComponent component;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withComponent(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsComponent component) {
         this.component = component;
         return this;
@@ -40,6 +44,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsDestinationVpc destinationVpc;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withDestinationVpc(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsDestinationVpc destinationVpc) {
         this.destinationVpc = destinationVpc;
         return this;
@@ -47,6 +52,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsElasticLoadBalancerListener elasticLoadBalancerListener;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withElasticLoadBalancerListener(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsElasticLoadBalancerListener elasticLoadBalancerListener) {
         this.elasticLoadBalancerListener = elasticLoadBalancerListener;
         return this;
@@ -54,6 +60,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanations[] explanations;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withExplanations(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanations[] explanations) {
         this.explanations = explanations;
         return this;
@@ -61,6 +68,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRule firewallStatefulRule;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withFirewallStatefulRule(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRule firewallStatefulRule) {
         this.firewallStatefulRule = firewallStatefulRule;
         return this;
@@ -68,6 +76,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatelessRule firewallStatelessRule;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withFirewallStatelessRule(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatelessRule firewallStatelessRule) {
         this.firewallStatelessRule = firewallStatelessRule;
         return this;
@@ -75,6 +84,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsInboundHeader inboundHeader;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withInboundHeader(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsInboundHeader inboundHeader) {
         this.inboundHeader = inboundHeader;
         return this;
@@ -82,6 +92,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsOutboundHeader outboundHeader;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withOutboundHeader(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsOutboundHeader outboundHeader) {
         this.outboundHeader = outboundHeader;
         return this;
@@ -89,6 +100,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute routeTableRoute;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withRouteTableRoute(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute routeTableRoute) {
         this.routeTableRoute = routeTableRoute;
         return this;
@@ -96,6 +108,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSecurityGroupRule securityGroupRule;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withSecurityGroupRule(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSecurityGroupRule securityGroupRule) {
         this.securityGroupRule = securityGroupRule;
         return this;
@@ -103,6 +116,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public Long sequenceNumber;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withSequenceNumber(Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
@@ -110,6 +124,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String serviceName;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -117,6 +132,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSourceVpc sourceVpc;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withSourceVpc(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSourceVpc sourceVpc) {
         this.sourceVpc = sourceVpc;
         return this;
@@ -124,6 +140,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSubnet subnet;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withSubnet(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSubnet subnet) {
         this.subnet = subnet;
         return this;
@@ -131,6 +148,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsTransitGateway transitGateway;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withTransitGateway(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsTransitGateway transitGateway) {
         this.transitGateway = transitGateway;
         return this;
@@ -138,6 +156,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsTransitGatewayRouteTableRoute transitGatewayRouteTableRoute;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withTransitGatewayRouteTableRoute(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsTransitGatewayRouteTableRoute transitGatewayRouteTableRoute) {
         this.transitGatewayRouteTableRoute = transitGatewayRouteTableRoute;
         return this;
@@ -145,9 +164,11 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsVpc vpc;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents withVpc(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsVpc vpc) {
         this.vpc = vpc;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents(){}
 }

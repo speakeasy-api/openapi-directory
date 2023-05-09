@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTestSuiteRelationsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
     public String apiId;
+
     public GetTestSuiteRelationsRequest withApiId(String apiId) {
         this.apiId = apiId;
         return this;
@@ -16,9 +18,14 @@ public class GetTestSuiteRelationsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiVersionId")
     public String apiVersionId;
+
     public GetTestSuiteRelationsRequest withApiVersionId(String apiVersionId) {
         this.apiVersionId = apiVersionId;
         return this;
     }
     
+    public GetTestSuiteRelationsRequest(@JsonProperty("apiId") String apiId, @JsonProperty("apiVersionId") String apiVersionId) {
+        this.apiId = apiId;
+        this.apiVersionId = apiVersionId;
+  }
 }

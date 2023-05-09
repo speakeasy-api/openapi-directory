@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateorupdatepartialdocumentRequest {
@@ -12,6 +13,7 @@ public class CreateorupdatepartialdocumentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreateorupdatepartialdocumentRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreateorupdatepartialdocumentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreateorupdatepartialdocumentRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class CreateorupdatepartialdocumentRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, String> requestBody;
+
     public CreateorupdatepartialdocumentRequest withRequestBody(java.util.Map<String, String> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -42,6 +46,7 @@ public class CreateorupdatepartialdocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_schema")
     public String schema;
+
     public CreateorupdatepartialdocumentRequest withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -52,9 +57,16 @@ public class CreateorupdatepartialdocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
     public String dataEntityName;
+
     public CreateorupdatepartialdocumentRequest withDataEntityName(String dataEntityName) {
         this.dataEntityName = dataEntityName;
         return this;
     }
     
+    public CreateorupdatepartialdocumentRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") java.util.Map<String, String> requestBody, @JsonProperty("dataEntityName") String dataEntityName) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.dataEntityName = dataEntityName;
+  }
 }

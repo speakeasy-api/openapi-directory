@@ -81,12 +81,10 @@ public class FeatureFlagAndSettingValuesUsingSDKKey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSettingValueBySdkkeyResponse res = new org.openapis.openapi.models.operations.GetSettingValueBySdkkeyResponse() {{
+        org.openapis.openapi.models.operations.GetSettingValueBySdkkeyResponse res = new org.openapis.openapi.models.operations.GetSettingValueBySdkkeyResponse(contentType, httpRes.statusCode()) {{
             settingValueModelHaljson = null;
             settingValueModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -187,12 +185,10 @@ public class FeatureFlagAndSettingValuesUsingSDKKey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReplaceSettingValueBySdkkeyResponse res = new org.openapis.openapi.models.operations.ReplaceSettingValueBySdkkeyResponse() {{
+        org.openapis.openapi.models.operations.ReplaceSettingValueBySdkkeyResponse res = new org.openapis.openapi.models.operations.ReplaceSettingValueBySdkkeyResponse(contentType, httpRes.statusCode()) {{
             settingValueModelHaljson = null;
             settingValueModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -308,12 +304,10 @@ public class FeatureFlagAndSettingValuesUsingSDKKey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSettingValueBySdkkeyResponse res = new org.openapis.openapi.models.operations.UpdateSettingValueBySdkkeyResponse() {{
+        org.openapis.openapi.models.operations.UpdateSettingValueBySdkkeyResponse res = new org.openapis.openapi.models.operations.UpdateSettingValueBySdkkeyResponse(contentType, httpRes.statusCode()) {{
             settingValueModelHaljson = null;
             settingValueModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class DescribeObjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluateExpressions")
     public Boolean evaluateExpressions;
+
     public DescribeObjectsInput withEvaluateExpressions(Boolean evaluateExpressions) {
         this.evaluateExpressions = evaluateExpressions;
         return this;
@@ -23,6 +24,7 @@ public class DescribeObjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marker")
     public String marker;
+
     public DescribeObjectsInput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,6 +32,7 @@ public class DescribeObjectsInput {
     
     @JsonProperty("objectIds")
     public String[] objectIds;
+
     public DescribeObjectsInput withObjectIds(String[] objectIds) {
         this.objectIds = objectIds;
         return this;
@@ -37,9 +40,14 @@ public class DescribeObjectsInput {
     
     @JsonProperty("pipelineId")
     public String pipelineId;
+
     public DescribeObjectsInput withPipelineId(String pipelineId) {
         this.pipelineId = pipelineId;
         return this;
     }
     
+    public DescribeObjectsInput(@JsonProperty("objectIds") String[] objectIds, @JsonProperty("pipelineId") String pipelineId) {
+        this.objectIds = objectIds;
+        this.pipelineId = pipelineId;
+  }
 }

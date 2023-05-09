@@ -18,6 +18,7 @@ public class VmToVmEgressWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interRegionEgress")
     public InterRegionEgress interRegionEgress;
+
     public VmToVmEgressWorkload withInterRegionEgress(InterRegionEgress interRegionEgress) {
         this.interRegionEgress = interRegionEgress;
         return this;
@@ -29,9 +30,11 @@ public class VmToVmEgressWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intraRegionEgress")
     public IntraRegionEgress intraRegionEgress;
+
     public VmToVmEgressWorkload withIntraRegionEgress(IntraRegionEgress intraRegionEgress) {
         this.intraRegionEgress = intraRegionEgress;
         return this;
     }
     
+    public VmToVmEgressWorkload(){}
 }

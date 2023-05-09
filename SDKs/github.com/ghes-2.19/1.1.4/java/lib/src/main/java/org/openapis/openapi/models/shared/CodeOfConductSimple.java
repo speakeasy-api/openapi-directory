@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CodeOfConductSimple {
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public CodeOfConductSimple withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -19,6 +20,7 @@ public class CodeOfConductSimple {
     
     @JsonProperty("key")
     public String key;
+
     public CodeOfConductSimple withKey(String key) {
         this.key = key;
         return this;
@@ -26,6 +28,7 @@ public class CodeOfConductSimple {
     
     @JsonProperty("name")
     public String name;
+
     public CodeOfConductSimple withName(String name) {
         this.name = name;
         return this;
@@ -33,9 +36,16 @@ public class CodeOfConductSimple {
     
     @JsonProperty("url")
     public String url;
+
     public CodeOfConductSimple withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CodeOfConductSimple(@JsonProperty("html_url") String htmlUrl, @JsonProperty("key") String key, @JsonProperty("name") String name, @JsonProperty("url") String url) {
+        this.htmlUrl = htmlUrl;
+        this.key = key;
+        this.name = name;
+        this.url = url;
+  }
 }

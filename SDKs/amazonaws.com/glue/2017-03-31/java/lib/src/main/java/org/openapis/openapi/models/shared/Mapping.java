@@ -15,6 +15,7 @@ public class Mapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Children")
     public Mapping[] children;
+
     public Mapping withChildren(Mapping[] children) {
         this.children = children;
         return this;
@@ -23,6 +24,7 @@ public class Mapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dropped")
     public Boolean dropped;
+
     public Mapping withDropped(Boolean dropped) {
         this.dropped = dropped;
         return this;
@@ -31,6 +33,7 @@ public class Mapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromPath")
     public String[] fromPath;
+
     public Mapping withFromPath(String[] fromPath) {
         this.fromPath = fromPath;
         return this;
@@ -39,6 +42,7 @@ public class Mapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromType")
     public String fromType;
+
     public Mapping withFromType(String fromType) {
         this.fromType = fromType;
         return this;
@@ -47,6 +51,7 @@ public class Mapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ToKey")
     public String toKey;
+
     public Mapping withToKey(String toKey) {
         this.toKey = toKey;
         return this;
@@ -55,9 +60,11 @@ public class Mapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ToType")
     public String toType;
+
     public Mapping withToType(String toType) {
         this.toType = toType;
         return this;
     }
     
+    public Mapping(){}
 }

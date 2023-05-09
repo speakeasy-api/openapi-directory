@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3DestinationConfiguration {
     @JsonProperty("bucket")
     public String bucket;
+
     public S3DestinationConfiguration withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -22,6 +23,7 @@ public class S3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glueConfiguration")
     public GlueConfiguration glueConfiguration;
+
     public S3DestinationConfiguration withGlueConfiguration(GlueConfiguration glueConfiguration) {
         this.glueConfiguration = glueConfiguration;
         return this;
@@ -29,6 +31,7 @@ public class S3DestinationConfiguration {
     
     @JsonProperty("key")
     public String key;
+
     public S3DestinationConfiguration withKey(String key) {
         this.key = key;
         return this;
@@ -36,9 +39,15 @@ public class S3DestinationConfiguration {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public S3DestinationConfiguration withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public S3DestinationConfiguration(@JsonProperty("bucket") String bucket, @JsonProperty("key") String key, @JsonProperty("roleArn") String roleArn) {
+        this.bucket = bucket;
+        this.key = key;
+        this.roleArn = roleArn;
+  }
 }

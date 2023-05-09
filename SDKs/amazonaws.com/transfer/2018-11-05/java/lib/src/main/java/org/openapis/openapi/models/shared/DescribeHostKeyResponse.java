@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeHostKeyResponse {
     @JsonProperty("HostKey")
     public DescribedHostKey hostKey;
+
     public DescribeHostKeyResponse withHostKey(DescribedHostKey hostKey) {
         this.hostKey = hostKey;
         return this;
     }
     
+    public DescribeHostKeyResponse(@JsonProperty("HostKey") DescribedHostKey hostKey) {
+        this.hostKey = hostKey;
+  }
 }

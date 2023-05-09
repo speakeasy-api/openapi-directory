@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateKeyspaceResponse {
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public CreateKeyspaceResponse withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public CreateKeyspaceResponse(@JsonProperty("resourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

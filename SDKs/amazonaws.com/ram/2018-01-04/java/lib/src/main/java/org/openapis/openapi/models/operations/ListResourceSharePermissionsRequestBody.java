@@ -15,6 +15,7 @@ public class ListResourceSharePermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListResourceSharePermissionsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,19 +27,24 @@ public class ListResourceSharePermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListResourceSharePermissionsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
     /**
-     * Specifies the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resoure Name (ARN)&lt;/a&gt; of the resource share for which you want to retrieve the associated permissions.
+     * Specifies the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Name (ARN)&lt;/a&gt; of the resource share for which you want to retrieve the associated permissions.
      */
     @JsonProperty("resourceShareArn")
     public String resourceShareArn;
+
     public ListResourceSharePermissionsRequestBody withResourceShareArn(String resourceShareArn) {
         this.resourceShareArn = resourceShareArn;
         return this;
     }
     
+    public ListResourceSharePermissionsRequestBody(@JsonProperty("resourceShareArn") String resourceShareArn) {
+        this.resourceShareArn = resourceShareArn;
+  }
 }

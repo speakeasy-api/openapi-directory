@@ -15,6 +15,7 @@ public class AccountUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admin")
     public Boolean admin;
+
     public AccountUser withAdmin(Boolean admin) {
         this.admin = admin;
         return this;
@@ -26,6 +27,7 @@ public class AccountUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public AccountUser withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -37,6 +39,7 @@ public class AccountUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderManager")
     public Boolean orderManager;
+
     public AccountUser withOrderManager(Boolean orderManager) {
         this.orderManager = orderManager;
         return this;
@@ -48,6 +51,7 @@ public class AccountUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentsAnalyst")
     public Boolean paymentsAnalyst;
+
     public AccountUser withPaymentsAnalyst(Boolean paymentsAnalyst) {
         this.paymentsAnalyst = paymentsAnalyst;
         return this;
@@ -59,6 +63,7 @@ public class AccountUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentsManager")
     public Boolean paymentsManager;
+
     public AccountUser withPaymentsManager(Boolean paymentsManager) {
         this.paymentsManager = paymentsManager;
         return this;
@@ -70,9 +75,11 @@ public class AccountUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportingManager")
     public Boolean reportingManager;
+
     public AccountUser withReportingManager(Boolean reportingManager) {
         this.reportingManager = reportingManager;
         return this;
     }
     
+    public AccountUser(){}
 }

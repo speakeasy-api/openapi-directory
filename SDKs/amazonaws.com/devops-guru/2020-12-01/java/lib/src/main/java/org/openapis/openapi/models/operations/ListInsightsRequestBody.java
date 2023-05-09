@@ -15,6 +15,7 @@ public class ListInsightsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListInsightsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListInsightsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListInsightsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +38,13 @@ public class ListInsightsRequestBody {
      */
     @JsonProperty("StatusFilter")
     public ListInsightsRequestBodyStatusFilter statusFilter;
+
     public ListInsightsRequestBody withStatusFilter(ListInsightsRequestBodyStatusFilter statusFilter) {
         this.statusFilter = statusFilter;
         return this;
     }
     
+    public ListInsightsRequestBody(@JsonProperty("StatusFilter") ListInsightsRequestBodyStatusFilter statusFilter) {
+        this.statusFilter = statusFilter;
+  }
 }

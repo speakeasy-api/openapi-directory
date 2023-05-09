@@ -15,6 +15,7 @@ public class DataRetrievalRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BytesPerHour")
     public Long bytesPerHour;
+
     public DataRetrievalRule withBytesPerHour(Long bytesPerHour) {
         this.bytesPerHour = bytesPerHour;
         return this;
@@ -23,9 +24,11 @@ public class DataRetrievalRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Strategy")
     public String strategy;
+
     public DataRetrievalRule withStrategy(String strategy) {
         this.strategy = strategy;
         return this;
     }
     
+    public DataRetrievalRule(){}
 }

@@ -15,6 +15,7 @@ public class PageResultPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public PageResultPaymentQueryDto withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class PageResultPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public PaymentQueryDto[] items;
+
     public PageResultPaymentQueryDto withItems(PaymentQueryDto[] items) {
         this.items = items;
         return this;
@@ -31,9 +33,11 @@ public class PageResultPaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageLink")
     public String nextPageLink;
+
     public PageResultPaymentQueryDto withNextPageLink(String nextPageLink) {
         this.nextPageLink = nextPageLink;
         return this;
     }
     
+    public PageResultPaymentQueryDto(){}
 }

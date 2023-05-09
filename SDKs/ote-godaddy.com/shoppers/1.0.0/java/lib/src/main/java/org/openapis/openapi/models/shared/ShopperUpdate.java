@@ -15,6 +15,7 @@ public class ShopperUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ShopperUpdate withEmail(String email) {
         this.email = email;
         return this;
@@ -23,6 +24,7 @@ public class ShopperUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public Long externalId;
+
     public ShopperUpdate withExternalId(Long externalId) {
         this.externalId = externalId;
         return this;
@@ -31,6 +33,7 @@ public class ShopperUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketId")
     public ShopperUpdateMarketIdEnum marketId;
+
     public ShopperUpdate withMarketId(ShopperUpdateMarketIdEnum marketId) {
         this.marketId = marketId;
         return this;
@@ -39,6 +42,7 @@ public class ShopperUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameFirst")
     public String nameFirst;
+
     public ShopperUpdate withNameFirst(String nameFirst) {
         this.nameFirst = nameFirst;
         return this;
@@ -47,9 +51,11 @@ public class ShopperUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameLast")
     public String nameLast;
+
     public ShopperUpdate withNameLast(String nameLast) {
         this.nameLast = nameLast;
         return this;
     }
     
+    public ShopperUpdate(){}
 }

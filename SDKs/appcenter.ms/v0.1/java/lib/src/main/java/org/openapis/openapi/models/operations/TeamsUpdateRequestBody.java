@@ -15,9 +15,13 @@ public class TeamsUpdateRequestBody {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public TeamsUpdateRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public TeamsUpdateRequestBody(@JsonProperty("display_name") String displayName) {
+        this.displayName = displayName;
+  }
 }

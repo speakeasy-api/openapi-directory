@@ -15,9 +15,11 @@ public class UpdateConnectivityInfoRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectivityInfo")
     public org.openapis.openapi.models.shared.ConnectivityInfo[] connectivityInfo;
+
     public UpdateConnectivityInfoRequestBody withConnectivityInfo(org.openapis.openapi.models.shared.ConnectivityInfo[] connectivityInfo) {
         this.connectivityInfo = connectivityInfo;
         return this;
     }
     
+    public UpdateConnectivityInfoRequestBody(){}
 }

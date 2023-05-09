@@ -12,9 +12,11 @@ public class Aws {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keypair")
     public String keypair;
+
     public Aws withKeypair(String keypair) {
         this.keypair = keypair;
         return this;
     }
     
+    public Aws(){}
 }

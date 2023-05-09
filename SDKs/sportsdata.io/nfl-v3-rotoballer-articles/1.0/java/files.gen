@@ -41,4 +41,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/RotoballerArticlesByPla
 lib/src/main/java/org/openapis/openapi/models/shared/Article.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlayerInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

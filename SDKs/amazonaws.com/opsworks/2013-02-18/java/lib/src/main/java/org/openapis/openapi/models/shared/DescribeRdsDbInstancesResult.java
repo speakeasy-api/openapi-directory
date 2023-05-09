@@ -15,9 +15,11 @@ public class DescribeRdsDbInstancesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RdsDbInstances")
     public RdsDbInstance[] rdsDbInstances;
+
     public DescribeRdsDbInstancesResult withRdsDbInstances(RdsDbInstance[] rdsDbInstances) {
         this.rdsDbInstances = rdsDbInstances;
         return this;
     }
     
+    public DescribeRdsDbInstancesResult(){}
 }

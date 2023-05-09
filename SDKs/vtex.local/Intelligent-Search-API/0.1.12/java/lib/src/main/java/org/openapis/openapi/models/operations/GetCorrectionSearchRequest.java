@@ -12,6 +12,7 @@ public class GetCorrectionSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetCorrectionSearchRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -22,9 +23,11 @@ public class GetCorrectionSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetCorrectionSearchRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public GetCorrectionSearchRequest(){}
 }

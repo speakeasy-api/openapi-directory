@@ -15,6 +15,7 @@ public class CodeContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3ContentLocation")
     public S3ContentLocation s3ContentLocation;
+
     public CodeContent withS3ContentLocation(S3ContentLocation s3ContentLocation) {
         this.s3ContentLocation = s3ContentLocation;
         return this;
@@ -23,6 +24,7 @@ public class CodeContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextContent")
     public String textContent;
+
     public CodeContent withTextContent(String textContent) {
         this.textContent = textContent;
         return this;
@@ -31,9 +33,11 @@ public class CodeContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZipFileContent")
     public String zipFileContent;
+
     public CodeContent withZipFileContent(String zipFileContent) {
         this.zipFileContent = zipFileContent;
         return this;
     }
     
+    public CodeContent(){}
 }

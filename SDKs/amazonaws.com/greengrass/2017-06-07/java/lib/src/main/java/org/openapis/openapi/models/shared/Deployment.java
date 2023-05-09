@@ -15,6 +15,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedAt")
     public String createdAt;
+
     public Deployment withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -23,6 +24,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentArn")
     public String deploymentArn;
+
     public Deployment withDeploymentArn(String deploymentArn) {
         this.deploymentArn = deploymentArn;
         return this;
@@ -31,6 +33,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentId")
     public String deploymentId;
+
     public Deployment withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -39,6 +42,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentType")
     public DeploymentTypeEnum deploymentType;
+
     public Deployment withDeploymentType(DeploymentTypeEnum deploymentType) {
         this.deploymentType = deploymentType;
         return this;
@@ -47,9 +51,11 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupArn")
     public String groupArn;
+
     public Deployment withGroupArn(String groupArn) {
         this.groupArn = groupArn;
         return this;
     }
     
+    public Deployment(){}
 }

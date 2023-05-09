@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DefineSuggesterRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;DefineSuggester&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to update and the suggester configuration.
@@ -15,6 +15,7 @@ public class DefineSuggesterRequest {
      */
     
     public String domainName;
+
     public DefineSuggesterRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -25,9 +26,14 @@ public class DefineSuggesterRequest {
      */
     
     public Suggester suggester;
+
     public DefineSuggesterRequest withSuggester(Suggester suggester) {
         this.suggester = suggester;
         return this;
     }
     
+    public DefineSuggesterRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("Suggester") Suggester suggester) {
+        this.domainName = domainName;
+        this.suggester = suggester;
+  }
 }

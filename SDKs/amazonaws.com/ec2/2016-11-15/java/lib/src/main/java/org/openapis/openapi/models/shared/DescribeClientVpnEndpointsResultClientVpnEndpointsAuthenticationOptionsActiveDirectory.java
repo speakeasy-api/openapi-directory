@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsActiveDirectory {
     
     public String directoryId;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsActiveDirectory withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
     
+    public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsActiveDirectory(){}
 }

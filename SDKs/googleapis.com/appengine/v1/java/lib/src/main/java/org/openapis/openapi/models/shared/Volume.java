@@ -18,6 +18,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Volume withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeGb")
     public Double sizeGb;
+
     public Volume withSizeGb(Double sizeGb) {
         this.sizeGb = sizeGb;
         return this;
@@ -40,9 +42,11 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeType")
     public String volumeType;
+
     public Volume withVolumeType(String volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public Volume(){}
 }

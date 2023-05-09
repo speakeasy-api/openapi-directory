@@ -20,6 +20,7 @@ public class ProjectDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ProjectDescription withArn(String arn) {
         this.arn = arn;
         return this;
@@ -29,6 +30,7 @@ public class ProjectDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public ProjectDescription withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -37,6 +39,7 @@ public class ProjectDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ProjectDescription withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class ProjectDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementTemplate")
     public PlacementTemplate placementTemplate;
+
     public ProjectDescription withPlacementTemplate(PlacementTemplate placementTemplate) {
         this.placementTemplate = placementTemplate;
         return this;
@@ -52,6 +56,7 @@ public class ProjectDescription {
     
     @JsonProperty("projectName")
     public String projectName;
+
     public ProjectDescription withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -60,6 +65,7 @@ public class ProjectDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ProjectDescription withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -69,9 +75,15 @@ public class ProjectDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedDate")
     public OffsetDateTime updatedDate;
+
     public ProjectDescription withUpdatedDate(OffsetDateTime updatedDate) {
         this.updatedDate = updatedDate;
         return this;
     }
     
+    public ProjectDescription(@JsonProperty("createdDate") OffsetDateTime createdDate, @JsonProperty("projectName") String projectName, @JsonProperty("updatedDate") OffsetDateTime updatedDate) {
+        this.createdDate = createdDate;
+        this.projectName = projectName;
+        this.updatedDate = updatedDate;
+  }
 }

@@ -15,6 +15,7 @@ public class ProductCatalog200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public ProductCatalog200ApplicationJSON withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -23,6 +24,7 @@ public class ProductCatalog200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ProductCatalog200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class ProductCatalog200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form")
     public String form;
+
     public ProductCatalog200ApplicationJSON withForm(String form) {
         this.form = form;
         return this;
@@ -39,6 +42,7 @@ public class ProductCatalog200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public ProductCatalog200ApplicationJSON withMethod(String method) {
         this.method = method;
         return this;
@@ -47,6 +51,7 @@ public class ProductCatalog200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProductCatalog200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +60,7 @@ public class ProductCatalog200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Float price;
+
     public ProductCatalog200ApplicationJSON withPrice(Float price) {
         this.price = price;
         return this;
@@ -63,6 +69,7 @@ public class ProductCatalog200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public ProductCatalog200ApplicationJSON withSku(String sku) {
         this.sku = sku;
         return this;
@@ -70,9 +77,13 @@ public class ProductCatalog200ApplicationJSON {
     
     @JsonProperty("url")
     public String url;
+
     public ProductCatalog200ApplicationJSON withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ProductCatalog200ApplicationJSON(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

@@ -18,9 +18,11 @@ public class DebugInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshKey")
     public String sshKey;
+
     public DebugInstanceRequest withSshKey(String sshKey) {
         this.sshKey = sshKey;
         return this;
     }
     
+    public DebugInstanceRequest(){}
 }

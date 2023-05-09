@@ -18,9 +18,11 @@ public class MembersHasMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMember")
     public Boolean isMember;
+
     public MembersHasMember withIsMember(Boolean isMember) {
         this.isMember = isMember;
         return this;
     }
     
+    public MembersHasMember(){}
 }

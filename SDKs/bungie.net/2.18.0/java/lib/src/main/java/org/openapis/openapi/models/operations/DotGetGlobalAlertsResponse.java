@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DotGetGlobalAlertsResponse {
     
     public byte[] body;
+
     public DotGetGlobalAlertsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DotGetGlobalAlertsResponse {
     
     
     public String contentType;
+
     public DotGetGlobalAlertsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class DotGetGlobalAlertsResponse {
     
     
     public Integer statusCode;
+
     public DotGetGlobalAlertsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class DotGetGlobalAlertsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DotGetGlobalAlertsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DotGetGlobalAlertsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

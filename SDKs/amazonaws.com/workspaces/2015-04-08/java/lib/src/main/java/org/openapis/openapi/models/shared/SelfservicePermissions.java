@@ -15,6 +15,7 @@ public class SelfservicePermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeComputeType")
     public ReconnectEnumEnum changeComputeType;
+
     public SelfservicePermissions withChangeComputeType(ReconnectEnumEnum changeComputeType) {
         this.changeComputeType = changeComputeType;
         return this;
@@ -23,6 +24,7 @@ public class SelfservicePermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncreaseVolumeSize")
     public ReconnectEnumEnum increaseVolumeSize;
+
     public SelfservicePermissions withIncreaseVolumeSize(ReconnectEnumEnum increaseVolumeSize) {
         this.increaseVolumeSize = increaseVolumeSize;
         return this;
@@ -31,6 +33,7 @@ public class SelfservicePermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RebuildWorkspace")
     public ReconnectEnumEnum rebuildWorkspace;
+
     public SelfservicePermissions withRebuildWorkspace(ReconnectEnumEnum rebuildWorkspace) {
         this.rebuildWorkspace = rebuildWorkspace;
         return this;
@@ -39,6 +42,7 @@ public class SelfservicePermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RestartWorkspace")
     public ReconnectEnumEnum restartWorkspace;
+
     public SelfservicePermissions withRestartWorkspace(ReconnectEnumEnum restartWorkspace) {
         this.restartWorkspace = restartWorkspace;
         return this;
@@ -47,9 +51,11 @@ public class SelfservicePermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SwitchRunningMode")
     public ReconnectEnumEnum switchRunningMode;
+
     public SelfservicePermissions withSwitchRunningMode(ReconnectEnumEnum switchRunningMode) {
         this.switchRunningMode = switchRunningMode;
         return this;
     }
     
+    public SelfservicePermissions(){}
 }

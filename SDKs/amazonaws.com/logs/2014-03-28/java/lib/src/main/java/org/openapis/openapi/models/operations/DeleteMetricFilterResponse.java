@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMetricFilterResponse {
     
     public String contentType;
+
     public DeleteMetricFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMetricFilterResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteMetricFilterResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMetricFilterResponse {
      */
     
     public Object operationAbortedException;
+
     public DeleteMetricFilterResponse withOperationAbortedException(Object operationAbortedException) {
         this.operationAbortedException = operationAbortedException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMetricFilterResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteMetricFilterResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteMetricFilterResponse {
     
     
     public Integer statusCode;
+
     public DeleteMetricFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteMetricFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMetricFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteMetricFilterResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteMetricFilterResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public DeleteMetricFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

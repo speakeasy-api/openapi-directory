@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMessageCommentReactionsRequest {
@@ -12,6 +13,7 @@ public class GetMessageCommentReactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetMessageCommentReactionsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +24,7 @@ public class GetMessageCommentReactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message_comment_id")
     public Integer messageCommentId;
+
     public GetMessageCommentReactionsRequest withMessageCommentId(Integer messageCommentId) {
         this.messageCommentId = messageCommentId;
         return this;
@@ -32,6 +35,7 @@ public class GetMessageCommentReactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetMessageCommentReactionsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +46,13 @@ public class GetMessageCommentReactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public Integer userId;
+
     public GetMessageCommentReactionsRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetMessageCommentReactionsRequest(@JsonProperty("message_comment_id") Integer messageCommentId) {
+        this.messageCommentId = messageCommentId;
+  }
 }

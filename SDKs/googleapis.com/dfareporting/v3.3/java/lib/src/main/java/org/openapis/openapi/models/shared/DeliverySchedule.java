@@ -18,6 +18,7 @@ public class DeliverySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequencyCap")
     public FrequencyCap frequencyCap;
+
     public DeliverySchedule withFrequencyCap(FrequencyCap frequencyCap) {
         this.frequencyCap = frequencyCap;
         return this;
@@ -29,6 +30,7 @@ public class DeliverySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hardCutoff")
     public Boolean hardCutoff;
+
     public DeliverySchedule withHardCutoff(Boolean hardCutoff) {
         this.hardCutoff = hardCutoff;
         return this;
@@ -40,6 +42,7 @@ public class DeliverySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impressionRatio")
     public String impressionRatio;
+
     public DeliverySchedule withImpressionRatio(String impressionRatio) {
         this.impressionRatio = impressionRatio;
         return this;
@@ -51,9 +54,11 @@ public class DeliverySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public DeliverySchedulePriorityEnum priority;
+
     public DeliverySchedule withPriority(DeliverySchedulePriorityEnum priority) {
         this.priority = priority;
         return this;
     }
     
+    public DeliverySchedule(){}
 }

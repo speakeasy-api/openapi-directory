@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MybusinessaccountmanagementLocationsTransferResponse {
     
     public String contentType;
+
     public MybusinessaccountmanagementLocationsTransferResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MybusinessaccountmanagementLocationsTransferResponse {
      */
     
     public java.util.Map<String, Object> empty;
+
     public MybusinessaccountmanagementLocationsTransferResponse withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
@@ -26,6 +29,7 @@ public class MybusinessaccountmanagementLocationsTransferResponse {
     
     
     public Integer statusCode;
+
     public MybusinessaccountmanagementLocationsTransferResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MybusinessaccountmanagementLocationsTransferResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MybusinessaccountmanagementLocationsTransferResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MybusinessaccountmanagementLocationsTransferResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

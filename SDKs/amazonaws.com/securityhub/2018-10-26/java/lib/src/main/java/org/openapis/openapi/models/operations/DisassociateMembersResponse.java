@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateMembersResponse {
     
     public String contentType;
+
     public DisassociateMembersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateMembersResponse {
      */
     
     public java.util.Map<String, Object> disassociateMembersResponse;
+
     public DisassociateMembersResponse withDisassociateMembersResponse(java.util.Map<String, Object> disassociateMembersResponse) {
         this.disassociateMembersResponse = disassociateMembersResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateMembersResponse {
      */
     
     public Object internalException;
+
     public DisassociateMembersResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateMembersResponse {
      */
     
     public Object invalidAccessException;
+
     public DisassociateMembersResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateMembersResponse {
      */
     
     public Object invalidInputException;
+
     public DisassociateMembersResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateMembersResponse {
      */
     
     public Object limitExceededException;
+
     public DisassociateMembersResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class DisassociateMembersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateMembersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DisassociateMembersResponse {
     
     
     public Integer statusCode;
+
     public DisassociateMembersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DisassociateMembersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateMembersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisassociateMembersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

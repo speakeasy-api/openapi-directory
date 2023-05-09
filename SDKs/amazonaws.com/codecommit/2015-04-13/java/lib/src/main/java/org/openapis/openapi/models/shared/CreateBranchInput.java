@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateBranchInput {
     @JsonProperty("branchName")
     public String branchName;
+
     public CreateBranchInput withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -19,6 +20,7 @@ public class CreateBranchInput {
     
     @JsonProperty("commitId")
     public String commitId;
+
     public CreateBranchInput withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -26,9 +28,15 @@ public class CreateBranchInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public CreateBranchInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public CreateBranchInput(@JsonProperty("branchName") String branchName, @JsonProperty("commitId") String commitId, @JsonProperty("repositoryName") String repositoryName) {
+        this.branchName = branchName;
+        this.commitId = commitId;
+        this.repositoryName = repositoryName;
+  }
 }

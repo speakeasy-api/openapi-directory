@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLifecyclePolicyResponse {
@@ -12,6 +13,7 @@ public class DeleteLifecyclePolicyResponse {
      */
     
     public Object containerInUseException;
+
     public DeleteLifecyclePolicyResponse withContainerInUseException(Object containerInUseException) {
         this.containerInUseException = containerInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteLifecyclePolicyResponse {
      */
     
     public Object containerNotFoundException;
+
     public DeleteLifecyclePolicyResponse withContainerNotFoundException(Object containerNotFoundException) {
         this.containerNotFoundException = containerNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLifecyclePolicyResponse {
     
     
     public String contentType;
+
     public DeleteLifecyclePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLifecyclePolicyResponse {
      */
     
     public java.util.Map<String, Object> deleteLifecyclePolicyOutput;
+
     public DeleteLifecyclePolicyResponse withDeleteLifecyclePolicyOutput(java.util.Map<String, Object> deleteLifecyclePolicyOutput) {
         this.deleteLifecyclePolicyOutput = deleteLifecyclePolicyOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteLifecyclePolicyResponse {
      */
     
     public Object internalServerError;
+
     public DeleteLifecyclePolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class DeleteLifecyclePolicyResponse {
      */
     
     public Object policyNotFoundException;
+
     public DeleteLifecyclePolicyResponse withPolicyNotFoundException(Object policyNotFoundException) {
         this.policyNotFoundException = policyNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteLifecyclePolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteLifecyclePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteLifecyclePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLifecyclePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteLifecyclePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

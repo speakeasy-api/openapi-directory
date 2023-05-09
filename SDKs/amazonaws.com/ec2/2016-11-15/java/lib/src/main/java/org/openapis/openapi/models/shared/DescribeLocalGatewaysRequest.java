@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLocalGatewaysRequest {
     
     public Boolean dryRun;
+
     public DescribeLocalGatewaysRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeLocalGatewaysRequest {
     
     
     public DescribeLocalGatewaysRequestFilters[] filters;
+
     public DescribeLocalGatewaysRequest withFilters(DescribeLocalGatewaysRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeLocalGatewaysRequest {
     
     
     public String[] localGatewayIds;
+
     public DescribeLocalGatewaysRequest withLocalGatewayIds(String[] localGatewayIds) {
         this.localGatewayIds = localGatewayIds;
         return this;
@@ -30,6 +33,7 @@ public class DescribeLocalGatewaysRequest {
     
     
     public Long maxResults;
+
     public DescribeLocalGatewaysRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeLocalGatewaysRequest {
     
     
     public String nextToken;
+
     public DescribeLocalGatewaysRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeLocalGatewaysRequest(){}
 }

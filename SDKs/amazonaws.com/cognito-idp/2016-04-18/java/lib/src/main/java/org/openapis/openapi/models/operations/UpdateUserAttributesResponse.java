@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateUserAttributesResponse {
@@ -12,6 +13,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object aliasExistsException;
+
     public UpdateUserAttributesResponse withAliasExistsException(Object aliasExistsException) {
         this.aliasExistsException = aliasExistsException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object codeDeliveryFailureException;
+
     public UpdateUserAttributesResponse withCodeDeliveryFailureException(Object codeDeliveryFailureException) {
         this.codeDeliveryFailureException = codeDeliveryFailureException;
         return this;
@@ -32,6 +35,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object codeMismatchException;
+
     public UpdateUserAttributesResponse withCodeMismatchException(Object codeMismatchException) {
         this.codeMismatchException = codeMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateUserAttributesResponse {
     
     
     public String contentType;
+
     public UpdateUserAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object expiredCodeException;
+
     public UpdateUserAttributesResponse withExpiredCodeException(Object expiredCodeException) {
         this.expiredCodeException = expiredCodeException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateUserAttributesResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateUserAttributesResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object invalidEmailRoleAccessPolicyException;
+
     public UpdateUserAttributesResponse withInvalidEmailRoleAccessPolicyException(Object invalidEmailRoleAccessPolicyException) {
         this.invalidEmailRoleAccessPolicyException = invalidEmailRoleAccessPolicyException;
         return this;
@@ -89,6 +98,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object invalidLambdaResponseException;
+
     public UpdateUserAttributesResponse withInvalidLambdaResponseException(Object invalidLambdaResponseException) {
         this.invalidLambdaResponseException = invalidLambdaResponseException;
         return this;
@@ -99,6 +109,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateUserAttributesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -109,6 +120,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object invalidSmsRoleAccessPolicyException;
+
     public UpdateUserAttributesResponse withInvalidSmsRoleAccessPolicyException(Object invalidSmsRoleAccessPolicyException) {
         this.invalidSmsRoleAccessPolicyException = invalidSmsRoleAccessPolicyException;
         return this;
@@ -119,6 +131,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object invalidSmsRoleTrustRelationshipException;
+
     public UpdateUserAttributesResponse withInvalidSmsRoleTrustRelationshipException(Object invalidSmsRoleTrustRelationshipException) {
         this.invalidSmsRoleTrustRelationshipException = invalidSmsRoleTrustRelationshipException;
         return this;
@@ -129,6 +142,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object notAuthorizedException;
+
     public UpdateUserAttributesResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -139,6 +153,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object passwordResetRequiredException;
+
     public UpdateUserAttributesResponse withPasswordResetRequiredException(Object passwordResetRequiredException) {
         this.passwordResetRequiredException = passwordResetRequiredException;
         return this;
@@ -146,6 +161,7 @@ public class UpdateUserAttributesResponse {
     
     
     public Integer statusCode;
+
     public UpdateUserAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -153,6 +169,7 @@ public class UpdateUserAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateUserAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -163,6 +180,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateUserAttributesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -173,6 +191,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateUserAttributesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -183,6 +202,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object unexpectedLambdaException;
+
     public UpdateUserAttributesResponse withUnexpectedLambdaException(Object unexpectedLambdaException) {
         this.unexpectedLambdaException = unexpectedLambdaException;
         return this;
@@ -193,6 +213,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateUserAttributesResponse updateUserAttributesResponse;
+
     public UpdateUserAttributesResponse withUpdateUserAttributesResponse(org.openapis.openapi.models.shared.UpdateUserAttributesResponse updateUserAttributesResponse) {
         this.updateUserAttributesResponse = updateUserAttributesResponse;
         return this;
@@ -203,6 +224,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object userLambdaValidationException;
+
     public UpdateUserAttributesResponse withUserLambdaValidationException(Object userLambdaValidationException) {
         this.userLambdaValidationException = userLambdaValidationException;
         return this;
@@ -213,6 +235,7 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object userNotConfirmedException;
+
     public UpdateUserAttributesResponse withUserNotConfirmedException(Object userNotConfirmedException) {
         this.userNotConfirmedException = userNotConfirmedException;
         return this;
@@ -223,9 +246,14 @@ public class UpdateUserAttributesResponse {
      */
     
     public Object userNotFoundException;
+
     public UpdateUserAttributesResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public UpdateUserAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

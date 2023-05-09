@@ -18,6 +18,7 @@ public class ChromeOsDevices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chromeosdevices")
     public ChromeOsDevice[] chromeosdevices;
+
     public ChromeOsDevices withChromeosdevices(ChromeOsDevice[] chromeosdevices) {
         this.chromeosdevices = chromeosdevices;
         return this;
@@ -29,6 +30,7 @@ public class ChromeOsDevices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ChromeOsDevices withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class ChromeOsDevices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ChromeOsDevices withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class ChromeOsDevices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ChromeOsDevices withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ChromeOsDevices(){}
 }

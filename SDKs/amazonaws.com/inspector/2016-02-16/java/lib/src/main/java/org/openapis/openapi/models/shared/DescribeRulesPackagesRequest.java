@@ -12,6 +12,7 @@ public class DescribeRulesPackagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public LocaleEnum locale;
+
     public DescribeRulesPackagesRequest withLocale(LocaleEnum locale) {
         this.locale = locale;
         return this;
@@ -19,9 +20,13 @@ public class DescribeRulesPackagesRequest {
     
     @JsonProperty("rulesPackageArns")
     public String[] rulesPackageArns;
+
     public DescribeRulesPackagesRequest withRulesPackageArns(String[] rulesPackageArns) {
         this.rulesPackageArns = rulesPackageArns;
         return this;
     }
     
+    public DescribeRulesPackagesRequest(@JsonProperty("rulesPackageArns") String[] rulesPackageArns) {
+        this.rulesPackageArns = rulesPackageArns;
+  }
 }

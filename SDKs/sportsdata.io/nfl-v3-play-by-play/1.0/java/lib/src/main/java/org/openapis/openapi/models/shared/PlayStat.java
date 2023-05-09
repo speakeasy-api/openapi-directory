@@ -12,6 +12,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssistedTackles")
     public Long assistedTackles;
+
     public PlayStat withAssistedTackles(Long assistedTackles) {
         this.assistedTackles = assistedTackles;
         return this;
@@ -20,6 +21,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedKickReturnTouchdowns")
     public Long blockedKickReturnTouchdowns;
+
     public PlayStat withBlockedKickReturnTouchdowns(Long blockedKickReturnTouchdowns) {
         this.blockedKickReturnTouchdowns = blockedKickReturnTouchdowns;
         return this;
@@ -28,6 +30,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedKickReturnYards")
     public Long blockedKickReturnYards;
+
     public PlayStat withBlockedKickReturnYards(Long blockedKickReturnYards) {
         this.blockedKickReturnYards = blockedKickReturnYards;
         return this;
@@ -36,6 +39,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedKickReturns")
     public Long blockedKickReturns;
+
     public PlayStat withBlockedKickReturns(Long blockedKickReturns) {
         this.blockedKickReturns = blockedKickReturns;
         return this;
@@ -44,6 +48,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedKicks")
     public Long blockedKicks;
+
     public PlayStat withBlockedKicks(Long blockedKicks) {
         this.blockedKicks = blockedKicks;
         return this;
@@ -52,6 +57,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Created")
     public String created;
+
     public PlayStat withCreated(String created) {
         this.created = created;
         return this;
@@ -60,6 +66,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Direction")
     public String direction;
+
     public PlayStat withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -68,6 +75,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPointsAttempted")
     public Long extraPointsAttempted;
+
     public PlayStat withExtraPointsAttempted(Long extraPointsAttempted) {
         this.extraPointsAttempted = extraPointsAttempted;
         return this;
@@ -76,6 +84,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPointsHadBlocked")
     public Long extraPointsHadBlocked;
+
     public PlayStat withExtraPointsHadBlocked(Long extraPointsHadBlocked) {
         this.extraPointsHadBlocked = extraPointsHadBlocked;
         return this;
@@ -84,6 +93,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPointsMade")
     public Long extraPointsMade;
+
     public PlayStat withExtraPointsMade(Long extraPointsMade) {
         this.extraPointsMade = extraPointsMade;
         return this;
@@ -92,6 +102,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalReturnTouchdowns")
     public Long fieldGoalReturnTouchdowns;
+
     public PlayStat withFieldGoalReturnTouchdowns(Long fieldGoalReturnTouchdowns) {
         this.fieldGoalReturnTouchdowns = fieldGoalReturnTouchdowns;
         return this;
@@ -100,6 +111,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalReturnYards")
     public Long fieldGoalReturnYards;
+
     public PlayStat withFieldGoalReturnYards(Long fieldGoalReturnYards) {
         this.fieldGoalReturnYards = fieldGoalReturnYards;
         return this;
@@ -108,6 +120,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalReturns")
     public Long fieldGoalReturns;
+
     public PlayStat withFieldGoalReturns(Long fieldGoalReturns) {
         this.fieldGoalReturns = fieldGoalReturns;
         return this;
@@ -116,6 +129,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsAttempted")
     public Long fieldGoalsAttempted;
+
     public PlayStat withFieldGoalsAttempted(Long fieldGoalsAttempted) {
         this.fieldGoalsAttempted = fieldGoalsAttempted;
         return this;
@@ -124,6 +138,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsHadBlocked")
     public Long fieldGoalsHadBlocked;
+
     public PlayStat withFieldGoalsHadBlocked(Long fieldGoalsHadBlocked) {
         this.fieldGoalsHadBlocked = fieldGoalsHadBlocked;
         return this;
@@ -132,6 +147,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsMade")
     public Long fieldGoalsMade;
+
     public PlayStat withFieldGoalsMade(Long fieldGoalsMade) {
         this.fieldGoalsMade = fieldGoalsMade;
         return this;
@@ -140,6 +156,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsYards")
     public Long fieldGoalsYards;
+
     public PlayStat withFieldGoalsYards(Long fieldGoalsYards) {
         this.fieldGoalsYards = fieldGoalsYards;
         return this;
@@ -148,6 +165,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumbleReturnTouchdowns")
     public Long fumbleReturnTouchdowns;
+
     public PlayStat withFumbleReturnTouchdowns(Long fumbleReturnTouchdowns) {
         this.fumbleReturnTouchdowns = fumbleReturnTouchdowns;
         return this;
@@ -156,6 +174,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumbleReturnYards")
     public Long fumbleReturnYards;
+
     public PlayStat withFumbleReturnYards(Long fumbleReturnYards) {
         this.fumbleReturnYards = fumbleReturnYards;
         return this;
@@ -164,6 +183,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Fumbles")
     public Long fumbles;
+
     public PlayStat withFumbles(Long fumbles) {
         this.fumbles = fumbles;
         return this;
@@ -172,6 +192,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesForced")
     public Long fumblesForced;
+
     public PlayStat withFumblesForced(Long fumblesForced) {
         this.fumblesForced = fumblesForced;
         return this;
@@ -180,6 +201,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesLost")
     public Long fumblesLost;
+
     public PlayStat withFumblesLost(Long fumblesLost) {
         this.fumblesLost = fumblesLost;
         return this;
@@ -188,6 +210,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesRecovered")
     public Long fumblesRecovered;
+
     public PlayStat withFumblesRecovered(Long fumblesRecovered) {
         this.fumblesRecovered = fumblesRecovered;
         return this;
@@ -196,6 +219,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeOrAway")
     public String homeOrAway;
+
     public PlayStat withHomeOrAway(String homeOrAway) {
         this.homeOrAway = homeOrAway;
         return this;
@@ -204,6 +228,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterceptionReturnTouchdowns")
     public Long interceptionReturnTouchdowns;
+
     public PlayStat withInterceptionReturnTouchdowns(Long interceptionReturnTouchdowns) {
         this.interceptionReturnTouchdowns = interceptionReturnTouchdowns;
         return this;
@@ -212,6 +237,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterceptionReturnYards")
     public Long interceptionReturnYards;
+
     public PlayStat withInterceptionReturnYards(Long interceptionReturnYards) {
         this.interceptionReturnYards = interceptionReturnYards;
         return this;
@@ -220,6 +246,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interceptions")
     public Long interceptions;
+
     public PlayStat withInterceptions(Long interceptions) {
         this.interceptions = interceptions;
         return this;
@@ -228,6 +255,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnTouchdowns")
     public Long kickReturnTouchdowns;
+
     public PlayStat withKickReturnTouchdowns(Long kickReturnTouchdowns) {
         this.kickReturnTouchdowns = kickReturnTouchdowns;
         return this;
@@ -236,6 +264,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnYards")
     public Long kickReturnYards;
+
     public PlayStat withKickReturnYards(Long kickReturnYards) {
         this.kickReturnYards = kickReturnYards;
         return this;
@@ -244,6 +273,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturns")
     public Long kickReturns;
+
     public PlayStat withKickReturns(Long kickReturns) {
         this.kickReturns = kickReturns;
         return this;
@@ -252,6 +282,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickoffTouchbacks")
     public Long kickoffTouchbacks;
+
     public PlayStat withKickoffTouchbacks(Long kickoffTouchbacks) {
         this.kickoffTouchbacks = kickoffTouchbacks;
         return this;
@@ -260,6 +291,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickoffYards")
     public Long kickoffYards;
+
     public PlayStat withKickoffYards(Long kickoffYards) {
         this.kickoffYards = kickoffYards;
         return this;
@@ -268,6 +300,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Kickoffs")
     public Long kickoffs;
+
     public PlayStat withKickoffs(Long kickoffs) {
         this.kickoffs = kickoffs;
         return this;
@@ -276,6 +309,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayStat withName(String name) {
         this.name = name;
         return this;
@@ -284,6 +318,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Opponent")
     public String opponent;
+
     public PlayStat withOpponent(String opponent) {
         this.opponent = opponent;
         return this;
@@ -292,6 +327,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassesDefended")
     public Long passesDefended;
+
     public PlayStat withPassesDefended(Long passesDefended) {
         this.passesDefended = passesDefended;
         return this;
@@ -300,6 +336,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingAttempts")
     public Long passingAttempts;
+
     public PlayStat withPassingAttempts(Long passingAttempts) {
         this.passingAttempts = passingAttempts;
         return this;
@@ -308,6 +345,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingCompletions")
     public Long passingCompletions;
+
     public PlayStat withPassingCompletions(Long passingCompletions) {
         this.passingCompletions = passingCompletions;
         return this;
@@ -316,6 +354,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingInterceptions")
     public Long passingInterceptions;
+
     public PlayStat withPassingInterceptions(Long passingInterceptions) {
         this.passingInterceptions = passingInterceptions;
         return this;
@@ -324,6 +363,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingSackYards")
     public Long passingSackYards;
+
     public PlayStat withPassingSackYards(Long passingSackYards) {
         this.passingSackYards = passingSackYards;
         return this;
@@ -332,6 +372,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingSacks")
     public Long passingSacks;
+
     public PlayStat withPassingSacks(Long passingSacks) {
         this.passingSacks = passingSacks;
         return this;
@@ -340,6 +381,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingTouchdowns")
     public Long passingTouchdowns;
+
     public PlayStat withPassingTouchdowns(Long passingTouchdowns) {
         this.passingTouchdowns = passingTouchdowns;
         return this;
@@ -348,6 +390,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingYards")
     public Long passingYards;
+
     public PlayStat withPassingYards(Long passingYards) {
         this.passingYards = passingYards;
         return this;
@@ -356,6 +399,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Penalties")
     public Long penalties;
+
     public PlayStat withPenalties(Long penalties) {
         this.penalties = penalties;
         return this;
@@ -364,6 +408,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PenaltyYards")
     public Long penaltyYards;
+
     public PlayStat withPenaltyYards(Long penaltyYards) {
         this.penaltyYards = penaltyYards;
         return this;
@@ -372,6 +417,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayID")
     public Long playID;
+
     public PlayStat withPlayID(Long playID) {
         this.playID = playID;
         return this;
@@ -380,6 +426,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayStatID")
     public Long playStatID;
+
     public PlayStat withPlayStatID(Long playStatID) {
         this.playStatID = playStatID;
         return this;
@@ -388,6 +435,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayStat withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -396,6 +444,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnTouchdowns")
     public Long puntReturnTouchdowns;
+
     public PlayStat withPuntReturnTouchdowns(Long puntReturnTouchdowns) {
         this.puntReturnTouchdowns = puntReturnTouchdowns;
         return this;
@@ -404,6 +453,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnYards")
     public Long puntReturnYards;
+
     public PlayStat withPuntReturnYards(Long puntReturnYards) {
         this.puntReturnYards = puntReturnYards;
         return this;
@@ -412,6 +462,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturns")
     public Long puntReturns;
+
     public PlayStat withPuntReturns(Long puntReturns) {
         this.puntReturns = puntReturns;
         return this;
@@ -420,6 +471,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntTouchbacks")
     public Long puntTouchbacks;
+
     public PlayStat withPuntTouchbacks(Long puntTouchbacks) {
         this.puntTouchbacks = puntTouchbacks;
         return this;
@@ -428,6 +480,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntYards")
     public Long puntYards;
+
     public PlayStat withPuntYards(Long puntYards) {
         this.puntYards = puntYards;
         return this;
@@ -436,6 +489,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Punts")
     public Long punts;
+
     public PlayStat withPunts(Long punts) {
         this.punts = punts;
         return this;
@@ -444,6 +498,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntsHadBlocked")
     public Long puntsHadBlocked;
+
     public PlayStat withPuntsHadBlocked(Long puntsHadBlocked) {
         this.puntsHadBlocked = puntsHadBlocked;
         return this;
@@ -452,6 +507,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivingTargets")
     public Long receivingTargets;
+
     public PlayStat withReceivingTargets(Long receivingTargets) {
         this.receivingTargets = receivingTargets;
         return this;
@@ -460,6 +516,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivingTouchdowns")
     public Long receivingTouchdowns;
+
     public PlayStat withReceivingTouchdowns(Long receivingTouchdowns) {
         this.receivingTouchdowns = receivingTouchdowns;
         return this;
@@ -468,6 +525,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivingYards")
     public Long receivingYards;
+
     public PlayStat withReceivingYards(Long receivingYards) {
         this.receivingYards = receivingYards;
         return this;
@@ -476,6 +534,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Receptions")
     public Long receptions;
+
     public PlayStat withReceptions(Long receptions) {
         this.receptions = receptions;
         return this;
@@ -484,6 +543,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingAttempts")
     public Long rushingAttempts;
+
     public PlayStat withRushingAttempts(Long rushingAttempts) {
         this.rushingAttempts = rushingAttempts;
         return this;
@@ -492,6 +552,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingTouchdowns")
     public Long rushingTouchdowns;
+
     public PlayStat withRushingTouchdowns(Long rushingTouchdowns) {
         this.rushingTouchdowns = rushingTouchdowns;
         return this;
@@ -500,6 +561,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingYards")
     public Long rushingYards;
+
     public PlayStat withRushingYards(Long rushingYards) {
         this.rushingYards = rushingYards;
         return this;
@@ -508,6 +570,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SackYards")
     public Double sackYards;
+
     public PlayStat withSackYards(Double sackYards) {
         this.sackYards = sackYards;
         return this;
@@ -516,6 +579,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sacks")
     public Double sacks;
+
     public PlayStat withSacks(Double sacks) {
         this.sacks = sacks;
         return this;
@@ -524,6 +588,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Safeties")
     public Long safeties;
+
     public PlayStat withSafeties(Long safeties) {
         this.safeties = safeties;
         return this;
@@ -532,6 +597,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sequence")
     public Long sequence;
+
     public PlayStat withSequence(Long sequence) {
         this.sequence = sequence;
         return this;
@@ -540,6 +606,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SoloTackles")
     public Long soloTackles;
+
     public PlayStat withSoloTackles(Long soloTackles) {
         this.soloTackles = soloTackles;
         return this;
@@ -548,6 +615,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TacklesForLoss")
     public Long tacklesForLoss;
+
     public PlayStat withTacklesForLoss(Long tacklesForLoss) {
         this.tacklesForLoss = tacklesForLoss;
         return this;
@@ -556,6 +624,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public PlayStat withTeam(String team) {
         this.team = team;
         return this;
@@ -564,6 +633,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointConversionAttempts")
     public Long twoPointConversionAttempts;
+
     public PlayStat withTwoPointConversionAttempts(Long twoPointConversionAttempts) {
         this.twoPointConversionAttempts = twoPointConversionAttempts;
         return this;
@@ -572,6 +642,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointConversionPasses")
     public Long twoPointConversionPasses;
+
     public PlayStat withTwoPointConversionPasses(Long twoPointConversionPasses) {
         this.twoPointConversionPasses = twoPointConversionPasses;
         return this;
@@ -580,6 +651,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointConversionReceptions")
     public Long twoPointConversionReceptions;
+
     public PlayStat withTwoPointConversionReceptions(Long twoPointConversionReceptions) {
         this.twoPointConversionReceptions = twoPointConversionReceptions;
         return this;
@@ -588,6 +660,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointConversionReturns")
     public Long twoPointConversionReturns;
+
     public PlayStat withTwoPointConversionReturns(Long twoPointConversionReturns) {
         this.twoPointConversionReturns = twoPointConversionReturns;
         return this;
@@ -596,6 +669,7 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointConversionRuns")
     public Long twoPointConversionRuns;
+
     public PlayStat withTwoPointConversionRuns(Long twoPointConversionRuns) {
         this.twoPointConversionRuns = twoPointConversionRuns;
         return this;
@@ -604,9 +678,11 @@ public class PlayStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public PlayStat withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public PlayStat(){}
 }

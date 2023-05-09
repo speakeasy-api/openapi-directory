@@ -15,6 +15,7 @@ public class DeploymentIoTJobConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abortConfig")
     public IoTJobAbortConfig abortConfig;
+
     public DeploymentIoTJobConfiguration withAbortConfig(IoTJobAbortConfig abortConfig) {
         this.abortConfig = abortConfig;
         return this;
@@ -23,6 +24,7 @@ public class DeploymentIoTJobConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobExecutionsRolloutConfig")
     public IoTJobExecutionsRolloutConfig jobExecutionsRolloutConfig;
+
     public DeploymentIoTJobConfiguration withJobExecutionsRolloutConfig(IoTJobExecutionsRolloutConfig jobExecutionsRolloutConfig) {
         this.jobExecutionsRolloutConfig = jobExecutionsRolloutConfig;
         return this;
@@ -31,9 +33,11 @@ public class DeploymentIoTJobConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutConfig")
     public IoTJobTimeoutConfig timeoutConfig;
+
     public DeploymentIoTJobConfiguration withTimeoutConfig(IoTJobTimeoutConfig timeoutConfig) {
         this.timeoutConfig = timeoutConfig;
         return this;
     }
     
+    public DeploymentIoTJobConfiguration(){}
 }

@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             apigatewayPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             apigatewayPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             apigatewayTestIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigatewayProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.ApigatewayProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.ApigatewayProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.ApigatewayProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             apigatewayListLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigatewayProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.ApigatewayProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.ApigatewayProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.ApigatewayProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigatewayProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.ApigatewayProjectsLocationsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ApigatewayProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.ApigatewayProjectsLocationsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigatewayProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.ApigatewayProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.ApigatewayProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.ApigatewayProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             apigatewayOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigatewayProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.ApigatewayProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.ApigatewayProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.ApigatewayProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             apigatewayListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

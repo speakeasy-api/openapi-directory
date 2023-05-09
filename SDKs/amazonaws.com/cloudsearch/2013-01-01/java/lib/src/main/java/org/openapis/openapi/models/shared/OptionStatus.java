@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class OptionStatus {
     
     public OffsetDateTime creationDate;
+
     public OptionStatus withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -19,6 +21,7 @@ public class OptionStatus {
     
     
     public Boolean pendingDeletion;
+
     public OptionStatus withPendingDeletion(Boolean pendingDeletion) {
         this.pendingDeletion = pendingDeletion;
         return this;
@@ -26,6 +29,7 @@ public class OptionStatus {
     
     
     public OptionStateEnum state;
+
     public OptionStatus withState(OptionStateEnum state) {
         this.state = state;
         return this;
@@ -33,6 +37,7 @@ public class OptionStatus {
     
     
     public OffsetDateTime updateDate;
+
     public OptionStatus withUpdateDate(OffsetDateTime updateDate) {
         this.updateDate = updateDate;
         return this;
@@ -40,9 +45,15 @@ public class OptionStatus {
     
     
     public Long updateVersion;
+
     public OptionStatus withUpdateVersion(Long updateVersion) {
         this.updateVersion = updateVersion;
         return this;
     }
     
+    public OptionStatus(@JsonProperty("CreationDate") OffsetDateTime creationDate, @JsonProperty("State") OptionStateEnum state, @JsonProperty("UpdateDate") OffsetDateTime updateDate) {
+        this.creationDate = creationDate;
+        this.state = state;
+        this.updateDate = updateDate;
+  }
 }

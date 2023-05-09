@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETModifyUsageLimitResponse {
     
     public byte[] body;
+
     public GETModifyUsageLimitResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETModifyUsageLimitResponse {
     
     
     public String contentType;
+
     public GETModifyUsageLimitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETModifyUsageLimitResponse {
     
     
     public Integer statusCode;
+
     public GETModifyUsageLimitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETModifyUsageLimitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETModifyUsageLimitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETModifyUsageLimitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

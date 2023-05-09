@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetItemRequest {
@@ -12,6 +13,7 @@ public class Destiny2GetItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=components")
     public Integer[] components;
+
     public Destiny2GetItemRequest withComponents(Integer[] components) {
         this.components = components;
         return this;
@@ -22,6 +24,7 @@ public class Destiny2GetItemRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
     public Long destinyMembershipId;
+
     public Destiny2GetItemRequest withDestinyMembershipId(Long destinyMembershipId) {
         this.destinyMembershipId = destinyMembershipId;
         return this;
@@ -32,6 +35,7 @@ public class Destiny2GetItemRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemInstanceId")
     public Long itemInstanceId;
+
     public Destiny2GetItemRequest withItemInstanceId(Long itemInstanceId) {
         this.itemInstanceId = itemInstanceId;
         return this;
@@ -42,9 +46,15 @@ public class Destiny2GetItemRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public Destiny2GetItemRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
     }
     
+    public Destiny2GetItemRequest(@JsonProperty("destinyMembershipId") Long destinyMembershipId, @JsonProperty("itemInstanceId") Long itemInstanceId, @JsonProperty("membershipType") Integer membershipType) {
+        this.destinyMembershipId = destinyMembershipId;
+        this.itemInstanceId = itemInstanceId;
+        this.membershipType = membershipType;
+  }
 }

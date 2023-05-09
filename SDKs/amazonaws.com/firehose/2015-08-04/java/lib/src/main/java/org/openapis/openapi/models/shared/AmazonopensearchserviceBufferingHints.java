@@ -15,6 +15,7 @@ public class AmazonopensearchserviceBufferingHints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntervalInSeconds")
     public Long intervalInSeconds;
+
     public AmazonopensearchserviceBufferingHints withIntervalInSeconds(Long intervalInSeconds) {
         this.intervalInSeconds = intervalInSeconds;
         return this;
@@ -23,9 +24,11 @@ public class AmazonopensearchserviceBufferingHints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeInMBs")
     public Long sizeInMBs;
+
     public AmazonopensearchserviceBufferingHints withSizeInMBs(Long sizeInMBs) {
         this.sizeInMBs = sizeInMBs;
         return this;
     }
     
+    public AmazonopensearchserviceBufferingHints(){}
 }

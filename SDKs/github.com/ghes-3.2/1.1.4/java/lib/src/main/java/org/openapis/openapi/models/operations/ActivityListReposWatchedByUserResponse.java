@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActivityListReposWatchedByUserResponse {
     
     public String contentType;
+
     public ActivityListReposWatchedByUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActivityListReposWatchedByUserResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ActivityListReposWatchedByUserResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ActivityListReposWatchedByUserResponse {
     
     
     public Integer statusCode;
+
     public ActivityListReposWatchedByUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ActivityListReposWatchedByUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActivityListReposWatchedByUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ActivityListReposWatchedByUserResponse {
      */
     
     public org.openapis.openapi.models.shared.MinimalRepository[] minimalRepositories;
+
     public ActivityListReposWatchedByUserResponse withMinimalRepositories(org.openapis.openapi.models.shared.MinimalRepository[] minimalRepositories) {
         this.minimalRepositories = minimalRepositories;
         return this;
     }
     
+    public ActivityListReposWatchedByUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

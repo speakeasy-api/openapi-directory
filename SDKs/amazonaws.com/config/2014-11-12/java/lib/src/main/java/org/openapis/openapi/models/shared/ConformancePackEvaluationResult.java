@@ -20,6 +20,7 @@ public class ConformancePackEvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Annotation")
     public String annotation;
+
     public ConformancePackEvaluationResult withAnnotation(String annotation) {
         this.annotation = annotation;
         return this;
@@ -27,6 +28,7 @@ public class ConformancePackEvaluationResult {
     
     @JsonProperty("ComplianceType")
     public ConformancePackComplianceTypeEnum complianceType;
+
     public ConformancePackEvaluationResult withComplianceType(ConformancePackComplianceTypeEnum complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -36,6 +38,7 @@ public class ConformancePackEvaluationResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ConfigRuleInvokedTime")
     public OffsetDateTime configRuleInvokedTime;
+
     public ConformancePackEvaluationResult withConfigRuleInvokedTime(OffsetDateTime configRuleInvokedTime) {
         this.configRuleInvokedTime = configRuleInvokedTime;
         return this;
@@ -46,6 +49,7 @@ public class ConformancePackEvaluationResult {
      */
     @JsonProperty("EvaluationResultIdentifier")
     public EvaluationResultIdentifier evaluationResultIdentifier;
+
     public ConformancePackEvaluationResult withEvaluationResultIdentifier(EvaluationResultIdentifier evaluationResultIdentifier) {
         this.evaluationResultIdentifier = evaluationResultIdentifier;
         return this;
@@ -55,9 +59,16 @@ public class ConformancePackEvaluationResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ResultRecordedTime")
     public OffsetDateTime resultRecordedTime;
+
     public ConformancePackEvaluationResult withResultRecordedTime(OffsetDateTime resultRecordedTime) {
         this.resultRecordedTime = resultRecordedTime;
         return this;
     }
     
+    public ConformancePackEvaluationResult(@JsonProperty("ComplianceType") ConformancePackComplianceTypeEnum complianceType, @JsonProperty("ConfigRuleInvokedTime") OffsetDateTime configRuleInvokedTime, @JsonProperty("EvaluationResultIdentifier") EvaluationResultIdentifier evaluationResultIdentifier, @JsonProperty("ResultRecordedTime") OffsetDateTime resultRecordedTime) {
+        this.complianceType = complianceType;
+        this.configRuleInvokedTime = configRuleInvokedTime;
+        this.evaluationResultIdentifier = evaluationResultIdentifier;
+        this.resultRecordedTime = resultRecordedTime;
+  }
 }

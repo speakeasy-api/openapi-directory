@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("atAnyPointInTime")
     public Boolean atAnyPointInTime;
+
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter withAtAnyPointInTime(Boolean atAnyPointInTime) {
         this.atAnyPointInTime = atAnyPointInTime;
         return this;
@@ -29,28 +30,31 @@ public class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("betweenFilter")
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterBetweenFilter betweenFilter;
+
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter withBetweenFilter(GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterBetweenFilter betweenFilter) {
         this.betweenFilter = betweenFilter;
         return this;
     }
     
     /**
-     * Required. Immutable. The dimension name or metric name to filter.
+     * Required. Immutable. The dimension name or metric name to filter. If the field name refers to a custom dimension or metric, a scope prefix will be added to the front of the custom dimensions or metric name. For more on scope prefixes or custom dimensions/metrics, reference the [Google Analytics Data API documentation] (https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#custom_dimensions).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public String fieldName;
+
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
     
     /**
-     * Optional. If set, specifies the time window for which to evaluate data in number of days. If not set, then audience data is evaluated against lifetime data (i.e., infinite time window). For example, if set to 1 day, only the current day's data is evaluated. The reference point is the current day when at_any_point_in_time is unset or false. It can only be set when Audience scope is ACROSS_ALL_SESSIONS and cannot be greater than 60 days.
+     * Optional. If set, specifies the time window for which to evaluate data in number of days. If not set, then audience data is evaluated against lifetime data (For example, infinite time window). For example, if set to 1 day, only the current day's data is evaluated. The reference point is the current day when at_any_point_in_time is unset or false. It can only be set when Audience scope is ACROSS_ALL_SESSIONS and cannot be greater than 60 days.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inAnyNDayPeriod")
     public Integer inAnyNDayPeriod;
+
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter withInAnyNDayPeriod(Integer inAnyNDayPeriod) {
         this.inAnyNDayPeriod = inAnyNDayPeriod;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inListFilter")
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterInListFilter inListFilter;
+
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter withInListFilter(GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterInListFilter inListFilter) {
         this.inListFilter = inListFilter;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numericFilter")
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericFilter numericFilter;
+
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter withNumericFilter(GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericFilter numericFilter) {
         this.numericFilter = numericFilter;
         return this;
@@ -84,9 +90,11 @@ public class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringFilter")
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterStringFilter stringFilter;
+
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter withStringFilter(GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterStringFilter stringFilter) {
         this.stringFilter = stringFilter;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter(){}
 }

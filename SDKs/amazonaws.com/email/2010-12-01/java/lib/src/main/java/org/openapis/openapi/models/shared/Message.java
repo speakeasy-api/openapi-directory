@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Message - Represents the message to be sent, composed of a subject and a body.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Message {
     
     public Body body;
+
     public Message withBody(Body body) {
         this.body = body;
         return this;
@@ -19,9 +20,14 @@ public class Message {
     
     
     public Content subject;
+
     public Message withSubject(Content subject) {
         this.subject = subject;
         return this;
     }
     
+    public Message(@JsonProperty("Body") Body body, @JsonProperty("Subject") Content subject) {
+        this.body = body;
+        this.subject = subject;
+  }
 }

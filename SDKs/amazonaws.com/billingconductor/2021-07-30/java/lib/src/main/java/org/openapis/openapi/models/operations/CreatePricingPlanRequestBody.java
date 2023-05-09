@@ -15,6 +15,7 @@ public class CreatePricingPlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreatePricingPlanRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class CreatePricingPlanRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreatePricingPlanRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +38,7 @@ public class CreatePricingPlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingRuleArns")
     public String[] pricingRuleArns;
+
     public CreatePricingPlanRequestBody withPricingRuleArns(String[] pricingRuleArns) {
         this.pricingRuleArns = pricingRuleArns;
         return this;
@@ -47,9 +50,13 @@ public class CreatePricingPlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreatePricingPlanRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePricingPlanRequestBody(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

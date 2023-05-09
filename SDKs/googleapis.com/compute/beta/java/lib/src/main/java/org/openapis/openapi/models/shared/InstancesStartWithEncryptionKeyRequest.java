@@ -15,9 +15,11 @@ public class InstancesStartWithEncryptionKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disks")
     public CustomerEncryptionKeyProtectedDisk[] disks;
+
     public InstancesStartWithEncryptionKeyRequest withDisks(CustomerEncryptionKeyProtectedDisk[] disks) {
         this.disks = disks;
         return this;
     }
     
+    public InstancesStartWithEncryptionKeyRequest(){}
 }

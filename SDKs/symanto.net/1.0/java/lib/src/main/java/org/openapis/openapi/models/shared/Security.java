@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=x-api-key")
     public String apiKeyHeader;
+
     public Security withApiKeyHeader(String apiKeyHeader) {
         this.apiKeyHeader = apiKeyHeader;
         return this;
     }
     
+    public Security(@JsonProperty("apiKeyHeader") String apiKeyHeader) {
+        this.apiKeyHeader = apiKeyHeader;
+  }
 }

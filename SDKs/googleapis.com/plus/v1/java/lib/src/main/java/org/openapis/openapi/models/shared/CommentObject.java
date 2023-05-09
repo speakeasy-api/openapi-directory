@@ -18,6 +18,7 @@ public class CommentObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public CommentObject withContent(String content) {
         this.content = content;
         return this;
@@ -30,6 +31,7 @@ public class CommentObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectType")
     public String objectType;
+
     public CommentObject withObjectType(String objectType) {
         this.objectType = objectType;
         return this;
@@ -41,9 +43,11 @@ public class CommentObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalContent")
     public String originalContent;
+
     public CommentObject withOriginalContent(String originalContent) {
         this.originalContent = originalContent;
         return this;
     }
     
+    public CommentObject(){}
 }

@@ -18,9 +18,11 @@ public class ReplaceSitesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sites")
     public Site[] sites;
+
     public ReplaceSitesResponse withSites(Site[] sites) {
         this.sites = sites;
         return this;
     }
     
+    public ReplaceSitesResponse(){}
 }

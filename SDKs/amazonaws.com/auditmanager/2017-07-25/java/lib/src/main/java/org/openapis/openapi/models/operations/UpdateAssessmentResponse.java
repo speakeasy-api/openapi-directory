@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAssessmentResponse {
@@ -12,6 +13,7 @@ public class UpdateAssessmentResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateAssessmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAssessmentResponse {
     
     
     public String contentType;
+
     public UpdateAssessmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAssessmentResponse {
      */
     
     public Object internalServerException;
+
     public UpdateAssessmentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateAssessmentResponse {
     
     
     public Integer statusCode;
+
     public UpdateAssessmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateAssessmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAssessmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAssessmentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAssessmentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAssessmentResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAssessmentResponse updateAssessmentResponse;
+
     public UpdateAssessmentResponse withUpdateAssessmentResponse(org.openapis.openapi.models.shared.UpdateAssessmentResponse updateAssessmentResponse) {
         this.updateAssessmentResponse = updateAssessmentResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateAssessmentResponse {
      */
     
     public Object validationException;
+
     public UpdateAssessmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateAssessmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

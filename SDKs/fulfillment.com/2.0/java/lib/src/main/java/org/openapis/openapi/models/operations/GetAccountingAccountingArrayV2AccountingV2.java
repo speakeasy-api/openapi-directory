@@ -12,6 +12,7 @@ public class GetAccountingAccountingArrayV2AccountingV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fees")
     public GetAccountingAccountingArrayV2AccountingV2Fees fees;
+
     public GetAccountingAccountingArrayV2AccountingV2 withFees(GetAccountingAccountingArrayV2AccountingV2Fees fees) {
         this.fees = fees;
         return this;
@@ -23,6 +24,7 @@ public class GetAccountingAccountingArrayV2AccountingV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemCount")
     public Long itemCount;
+
     public GetAccountingAccountingArrayV2AccountingV2 withItemCount(Long itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -31,6 +33,7 @@ public class GetAccountingAccountingArrayV2AccountingV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public GetAccountingAccountingArrayV2AccountingV2Items[] items;
+
     public GetAccountingAccountingArrayV2AccountingV2 withItems(GetAccountingAccountingArrayV2AccountingV2Items[] items) {
         this.items = items;
         return this;
@@ -39,6 +42,7 @@ public class GetAccountingAccountingArrayV2AccountingV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant")
     public GetAccountingAccountingArrayV2AccountingV2Merchant merchant;
+
     public GetAccountingAccountingArrayV2AccountingV2 withMerchant(GetAccountingAccountingArrayV2AccountingV2Merchant merchant) {
         this.merchant = merchant;
         return this;
@@ -47,6 +51,7 @@ public class GetAccountingAccountingArrayV2AccountingV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public GetAccountingAccountingArrayV2AccountingV2Order order;
+
     public GetAccountingAccountingArrayV2AccountingV2 withOrder(GetAccountingAccountingArrayV2AccountingV2Order order) {
         this.order = order;
         return this;
@@ -55,9 +60,11 @@ public class GetAccountingAccountingArrayV2AccountingV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warehouse")
     public GetAccountingAccountingArrayV2AccountingV2Warehouse warehouse;
+
     public GetAccountingAccountingArrayV2AccountingV2 withWarehouse(GetAccountingAccountingArrayV2AccountingV2Warehouse warehouse) {
         this.warehouse = warehouse;
         return this;
     }
     
+    public GetAccountingAccountingArrayV2AccountingV2(){}
 }

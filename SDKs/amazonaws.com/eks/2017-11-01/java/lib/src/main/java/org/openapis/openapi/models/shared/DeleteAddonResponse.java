@@ -18,9 +18,11 @@ public class DeleteAddonResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addon")
     public Addon addon;
+
     public DeleteAddonResponse withAddon(Addon addon) {
         this.addon = addon;
         return this;
     }
     
+    public DeleteAddonResponse(){}
 }

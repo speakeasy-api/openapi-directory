@@ -15,6 +15,7 @@ public class Relevance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public String duration;
+
     public Relevance withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -23,6 +24,7 @@ public class Relevance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Freshness")
     public Boolean freshness;
+
     public Relevance withFreshness(Boolean freshness) {
         this.freshness = freshness;
         return this;
@@ -31,6 +33,7 @@ public class Relevance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Importance")
     public Long importance;
+
     public Relevance withImportance(Long importance) {
         this.importance = importance;
         return this;
@@ -39,6 +42,7 @@ public class Relevance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RankOrder")
     public OrderEnum rankOrder;
+
     public Relevance withRankOrder(OrderEnum rankOrder) {
         this.rankOrder = rankOrder;
         return this;
@@ -47,9 +51,11 @@ public class Relevance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValueImportanceMap")
     public java.util.Map<String, Long> valueImportanceMap;
+
     public Relevance withValueImportanceMap(java.util.Map<String, Long> valueImportanceMap) {
         this.valueImportanceMap = valueImportanceMap;
         return this;
     }
     
+    public Relevance(){}
 }

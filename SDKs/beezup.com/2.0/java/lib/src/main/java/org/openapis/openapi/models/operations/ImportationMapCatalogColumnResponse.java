@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportationMapCatalogColumnResponse {
@@ -14,6 +15,7 @@ public class ImportationMapCatalogColumnResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public ImportationMapCatalogColumnResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -21,6 +23,7 @@ public class ImportationMapCatalogColumnResponse {
     
     
     public String contentType;
+
     public ImportationMapCatalogColumnResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -28,6 +31,7 @@ public class ImportationMapCatalogColumnResponse {
     
     
     public Integer statusCode;
+
     public ImportationMapCatalogColumnResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -35,9 +39,14 @@ public class ImportationMapCatalogColumnResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportationMapCatalogColumnResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ImportationMapCatalogColumnResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

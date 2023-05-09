@@ -18,6 +18,7 @@ public class ShippingsettingsGetSupportedHolidaysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holidays")
     public HolidaysHoliday[] holidays;
+
     public ShippingsettingsGetSupportedHolidaysResponse withHolidays(HolidaysHoliday[] holidays) {
         this.holidays = holidays;
         return this;
@@ -29,9 +30,11 @@ public class ShippingsettingsGetSupportedHolidaysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ShippingsettingsGetSupportedHolidaysResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ShippingsettingsGetSupportedHolidaysResponse(){}
 }

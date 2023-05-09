@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BootstrapActionConfig {
     @JsonProperty("Name")
     public String name;
+
     public BootstrapActionConfig withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class BootstrapActionConfig {
     
     @JsonProperty("ScriptBootstrapAction")
     public ScriptBootstrapActionConfig scriptBootstrapAction;
+
     public BootstrapActionConfig withScriptBootstrapAction(ScriptBootstrapActionConfig scriptBootstrapAction) {
         this.scriptBootstrapAction = scriptBootstrapAction;
         return this;
     }
     
+    public BootstrapActionConfig(@JsonProperty("Name") String name, @JsonProperty("ScriptBootstrapAction") ScriptBootstrapActionConfig scriptBootstrapAction) {
+        this.name = name;
+        this.scriptBootstrapAction = scriptBootstrapAction;
+  }
 }

@@ -63,14 +63,12 @@ public class Partner {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePartnerResponse res = new org.openapis.openapi.models.operations.CreatePartnerResponse() {{
+        org.openapis.openapi.models.operations.CreatePartnerResponse res = new org.openapis.openapi.models.operations.CreatePartnerResponse(contentType, httpRes.statusCode()) {{
             partner = null;
             clientErrorResponse = null;
             validationErrorResponse = null;
             serverErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -135,12 +133,10 @@ public class Partner {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePartnerResponse res = new org.openapis.openapi.models.operations.DeletePartnerResponse() {{
+        org.openapis.openapi.models.operations.DeletePartnerResponse res = new org.openapis.openapi.models.operations.DeletePartnerResponse(contentType, httpRes.statusCode()) {{
             clientErrorResponse = null;
             serverErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -191,14 +187,12 @@ public class Partner {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPartnerResponse res = new org.openapis.openapi.models.operations.GetPartnerResponse() {{
+        org.openapis.openapi.models.operations.GetPartnerResponse res = new org.openapis.openapi.models.operations.GetPartnerResponse(contentType, httpRes.statusCode()) {{
             partner = null;
             clientErrorResponse = null;
             validationErrorResponse = null;
             serverErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -269,14 +263,12 @@ public class Partner {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPartnerResponse res = new org.openapis.openapi.models.operations.ListPartnerResponse() {{
+        org.openapis.openapi.models.operations.ListPartnerResponse res = new org.openapis.openapi.models.operations.ListPartnerResponse(contentType, httpRes.statusCode()) {{
             partnerList = null;
             clientErrorResponse = null;
             validationErrorResponse = null;
             serverErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,14 +338,12 @@ public class Partner {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePartnerResponse res = new org.openapis.openapi.models.operations.UpdatePartnerResponse() {{
+        org.openapis.openapi.models.operations.UpdatePartnerResponse res = new org.openapis.openapi.models.operations.UpdatePartnerResponse(contentType, httpRes.statusCode()) {{
             partner = null;
             clientErrorResponse = null;
             validationErrorResponse = null;
             serverErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Card {
     /**
@@ -12,6 +12,7 @@ public class Card {
      */
     
     public String addressCity;
+
     public Card withAddressCity(String addressCity) {
         this.addressCity = addressCity;
         return this;
@@ -22,6 +23,7 @@ public class Card {
      */
     
     public String addressCountry;
+
     public Card withAddressCountry(String addressCountry) {
         this.addressCountry = addressCountry;
         return this;
@@ -32,6 +34,7 @@ public class Card {
      */
     
     public String addressLine1;
+
     public Card withAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
         return this;
@@ -42,6 +45,7 @@ public class Card {
      */
     
     public String addressLine2;
+
     public Card withAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
         return this;
@@ -52,6 +56,7 @@ public class Card {
      */
     
     public String addressState;
+
     public Card withAddressState(String addressState) {
         this.addressState = addressState;
         return this;
@@ -62,6 +67,7 @@ public class Card {
      */
     
     public String addressZip;
+
     public Card withAddressZip(String addressZip) {
         this.addressZip = addressZip;
         return this;
@@ -72,6 +78,7 @@ public class Card {
      */
     
     public String brand;
+
     public Card withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -82,6 +89,7 @@ public class Card {
      */
     
     public String cardId;
+
     public Card withCardId(String cardId) {
         this.cardId = cardId;
         return this;
@@ -92,6 +100,7 @@ public class Card {
      */
     
     public Long expMonth;
+
     public Card withExpMonth(Long expMonth) {
         this.expMonth = expMonth;
         return this;
@@ -102,6 +111,7 @@ public class Card {
      */
     
     public Long expYear;
+
     public Card withExpYear(Long expYear) {
         this.expYear = expYear;
         return this;
@@ -112,6 +122,7 @@ public class Card {
      */
     
     public Boolean isDefault;
+
     public Card withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -122,6 +133,7 @@ public class Card {
      */
     
     public String last4;
+
     public Card withLast4(String last4) {
         this.last4 = last4;
         return this;
@@ -132,9 +144,19 @@ public class Card {
      */
     
     public String name;
+
     public Card withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Card(@JsonProperty("brand") String brand, @JsonProperty("cardId") String cardId, @JsonProperty("exp_month") Long expMonth, @JsonProperty("exp_year") Long expYear, @JsonProperty("isDefault") Boolean isDefault, @JsonProperty("last4") String last4, @JsonProperty("name") String name) {
+        this.brand = brand;
+        this.cardId = cardId;
+        this.expMonth = expMonth;
+        this.expYear = expYear;
+        this.isDefault = isDefault;
+        this.last4 = last4;
+        this.name = name;
+  }
 }

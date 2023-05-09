@@ -15,6 +15,7 @@ public class DescribeEngineVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersions")
     public EngineVersionInfo[] engineVersions;
+
     public DescribeEngineVersionsResponse withEngineVersions(EngineVersionInfo[] engineVersions) {
         this.engineVersions = engineVersions;
         return this;
@@ -23,9 +24,11 @@ public class DescribeEngineVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeEngineVersionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeEngineVersionsResponse(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CoachResourceLinks {
     @JsonProperty("self")
     public String self;
+
     public CoachResourceLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public CoachResourceLinks(@JsonProperty("self") String self) {
+        this.self = self;
+  }
 }

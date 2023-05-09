@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListenerDescription {
     
     public Listener listener;
+
     public ListenerDescription withListener(Listener listener) {
         this.listener = listener;
         return this;
@@ -19,9 +20,11 @@ public class ListenerDescription {
     
     
     public String[] policyNames;
+
     public ListenerDescription withPolicyNames(String[] policyNames) {
         this.policyNames = policyNames;
         return this;
     }
     
+    public ListenerDescription(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaListIntegrationVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationVersions")
     public GoogleCloudIntegrationsV1alphaIntegrationVersion[] integrationVersions;
+
     public GoogleCloudIntegrationsV1alphaListIntegrationVersionsResponse withIntegrationVersions(GoogleCloudIntegrationsV1alphaIntegrationVersion[] integrationVersions) {
         this.integrationVersions = integrationVersions;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaListIntegrationVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudIntegrationsV1alphaListIntegrationVersionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudIntegrationsV1alphaListIntegrationVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noPermission")
     public Boolean noPermission;
+
     public GoogleCloudIntegrationsV1alphaListIntegrationVersionsResponse withNoPermission(Boolean noPermission) {
         this.noPermission = noPermission;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaListIntegrationVersionsResponse(){}
 }

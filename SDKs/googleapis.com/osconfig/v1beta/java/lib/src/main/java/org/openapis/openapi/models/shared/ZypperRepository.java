@@ -18,6 +18,7 @@ public class ZypperRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseUrl")
     public String baseUrl;
+
     public ZypperRepository withBaseUrl(String baseUrl) {
         this.baseUrl = baseUrl;
         return this;
@@ -29,6 +30,7 @@ public class ZypperRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ZypperRepository withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class ZypperRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gpgKeys")
     public String[] gpgKeys;
+
     public ZypperRepository withGpgKeys(String[] gpgKeys) {
         this.gpgKeys = gpgKeys;
         return this;
@@ -51,9 +54,11 @@ public class ZypperRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ZypperRepository withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ZypperRepository(){}
 }

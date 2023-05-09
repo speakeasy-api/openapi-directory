@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVVersionSitesSiteIdsRequest {
@@ -12,6 +13,7 @@ public class GetVVersionSitesSiteIdsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=site_Ids")
     public String siteIds;
+
     public GetVVersionSitesSiteIdsRequest withSiteIds(String siteIds) {
         this.siteIds = siteIds;
         return this;
@@ -19,9 +21,14 @@ public class GetVVersionSitesSiteIdsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public GetVVersionSitesSiteIdsRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GetVVersionSitesSiteIdsRequest(@JsonProperty("site_Ids") String siteIds, @JsonProperty("version") String version) {
+        this.siteIds = siteIds;
+        this.version = version;
+  }
 }

@@ -17,6 +17,7 @@ public class ChannelFrom3 {
      */
     @JsonProperty("type")
     public String type;
+
     public ChannelFrom3 withType(String type) {
         this.type = type;
         return this;
@@ -28,9 +29,13 @@ public class ChannelFrom3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public ChannelFrom3 withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public ChannelFrom3(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

@@ -66,11 +66,9 @@ public class Uploads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChunkedUploadResponse res = new org.openapis.openapi.models.operations.ChunkedUploadResponse() {{
+        org.openapis.openapi.models.operations.ChunkedUploadResponse res = new org.openapis.openapi.models.operations.ChunkedUploadResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -113,12 +111,10 @@ public class Uploads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchUploadStatusByIdResponse res = new org.openapis.openapi.models.operations.FetchUploadStatusByIdResponse() {{
+        org.openapis.openapi.models.operations.FetchUploadStatusByIdResponse res = new org.openapis.openapi.models.operations.FetchUploadStatusByIdResponse(contentType, httpRes.statusCode()) {{
             uploadStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -166,12 +162,10 @@ public class Uploads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchUploadStatusesResponse res = new org.openapis.openapi.models.operations.FetchUploadStatusesResponse() {{
+        org.openapis.openapi.models.operations.FetchUploadStatusesResponse res = new org.openapis.openapi.models.operations.FetchUploadStatusesResponse(contentType, httpRes.statusCode()) {{
             uploadStatuses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -423,12 +417,10 @@ public class Uploads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUploadResponse res = new org.openapis.openapi.models.operations.PostUploadResponse() {{
+        org.openapis.openapi.models.operations.PostUploadResponse res = new org.openapis.openapi.models.operations.PostUploadResponse(contentType, httpRes.statusCode()) {{
             createdUpload = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

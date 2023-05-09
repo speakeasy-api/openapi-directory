@@ -15,6 +15,7 @@ public class BookingStatus200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingStatus")
     public org.openapis.openapi.models.shared.BookingStatusItem bookingStatus;
+
     public BookingStatus200ApplicationJSONDataItemSummaries withBookingStatus(org.openapis.openapi.models.shared.BookingStatusItem bookingStatus) {
         this.bookingStatus = bookingStatus;
         return this;
@@ -26,6 +27,7 @@ public class BookingStatus200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributorItemRef")
     public String distributorItemRef;
+
     public BookingStatus200ApplicationJSONDataItemSummaries withDistributorItemRef(String distributorItemRef) {
         this.distributorItemRef = distributorItemRef;
         return this;
@@ -39,6 +41,7 @@ public class BookingStatus200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public Long itemId;
+
     public BookingStatus200ApplicationJSONDataItemSummaries withItemId(Long itemId) {
         this.itemId = itemId;
         return this;
@@ -50,6 +53,7 @@ public class BookingStatus200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itineraryId")
     public Long itineraryId;
+
     public BookingStatus200ApplicationJSONDataItemSummaries withItineraryId(Long itineraryId) {
         this.itineraryId = itineraryId;
         return this;
@@ -61,6 +65,7 @@ public class BookingStatus200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public BookingStatus200ApplicationJSONDataItemSummaries withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -72,9 +77,11 @@ public class BookingStatus200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("travelDate")
     public String travelDate;
+
     public BookingStatus200ApplicationJSONDataItemSummaries withTravelDate(String travelDate) {
         this.travelDate = travelDate;
         return this;
     }
     
+    public BookingStatus200ApplicationJSONDataItemSummaries(){}
 }

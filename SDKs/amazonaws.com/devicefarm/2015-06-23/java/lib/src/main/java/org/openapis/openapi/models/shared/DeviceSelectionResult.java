@@ -15,6 +15,7 @@ public class DeviceSelectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public DeviceFilter[] filters;
+
     public DeviceSelectionResult withFilters(DeviceFilter[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +24,7 @@ public class DeviceSelectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchedDevicesCount")
     public Long matchedDevicesCount;
+
     public DeviceSelectionResult withMatchedDevicesCount(Long matchedDevicesCount) {
         this.matchedDevicesCount = matchedDevicesCount;
         return this;
@@ -31,9 +33,11 @@ public class DeviceSelectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDevices")
     public Long maxDevices;
+
     public DeviceSelectionResult withMaxDevices(Long maxDevices) {
         this.maxDevices = maxDevices;
         return this;
     }
     
+    public DeviceSelectionResult(){}
 }

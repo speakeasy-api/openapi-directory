@@ -15,9 +15,13 @@ public class TeamsAddAppRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public TeamsAddAppRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TeamsAddAppRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

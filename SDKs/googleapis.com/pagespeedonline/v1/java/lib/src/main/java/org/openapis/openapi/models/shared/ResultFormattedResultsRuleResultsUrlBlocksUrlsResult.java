@@ -15,6 +15,7 @@ public class ResultFormattedResultsRuleResultsUrlBlocksUrlsResult {
      */
     
     public ResultFormattedResultsRuleResultsUrlBlocksUrlsResultArgs[] args;
+
     public ResultFormattedResultsRuleResultsUrlBlocksUrlsResult withArgs(ResultFormattedResultsRuleResultsUrlBlocksUrlsResultArgs[] args) {
         this.args = args;
         return this;
@@ -25,9 +26,11 @@ public class ResultFormattedResultsRuleResultsUrlBlocksUrlsResult {
      */
     
     public String format;
+
     public ResultFormattedResultsRuleResultsUrlBlocksUrlsResult withFormat(String format) {
         this.format = format;
         return this;
     }
     
+    public ResultFormattedResultsRuleResultsUrlBlocksUrlsResult(){}
 }

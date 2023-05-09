@@ -14,6 +14,7 @@ public class UpdateItemInput {
      */
     @JsonProperty("AttributeUpdates")
     public java.util.Map<String, AttributeValueUpdate> attributeUpdates;
+
     public UpdateItemInput withAttributeUpdates(java.util.Map<String, AttributeValueUpdate> attributeUpdates) {
         this.attributeUpdates = attributeUpdates;
         return this;
@@ -25,6 +26,7 @@ public class UpdateItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expected")
     public java.util.Map<String, ExpectedAttributeValue> expected;
+
     public UpdateItemInput withExpected(java.util.Map<String, ExpectedAttributeValue> expected) {
         this.expected = expected;
         return this;
@@ -35,6 +37,7 @@ public class UpdateItemInput {
      */
     @JsonProperty("Key")
     public Key key;
+
     public UpdateItemInput withKey(Key key) {
         this.key = key;
         return this;
@@ -46,6 +49,7 @@ public class UpdateItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnValues")
     public ReturnValueEnum returnValues;
+
     public UpdateItemInput withReturnValues(ReturnValueEnum returnValues) {
         this.returnValues = returnValues;
         return this;
@@ -53,9 +57,15 @@ public class UpdateItemInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public UpdateItemInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public UpdateItemInput(@JsonProperty("AttributeUpdates") java.util.Map<String, AttributeValueUpdate> attributeUpdates, @JsonProperty("Key") Key key, @JsonProperty("TableName") String tableName) {
+        this.attributeUpdates = attributeUpdates;
+        this.key = key;
+        this.tableName = tableName;
+  }
 }

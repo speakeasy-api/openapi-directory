@@ -18,9 +18,11 @@ public class BucketVersioning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public BucketVersioning withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public BucketVersioning(){}
 }

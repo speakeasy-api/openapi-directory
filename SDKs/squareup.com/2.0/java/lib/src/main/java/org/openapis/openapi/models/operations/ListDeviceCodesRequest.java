@@ -15,6 +15,7 @@ public class ListDeviceCodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListDeviceCodesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -26,6 +27,7 @@ public class ListDeviceCodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     public String locationId;
+
     public ListDeviceCodesRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -37,6 +39,7 @@ public class ListDeviceCodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=product_type")
     public String productType;
+
     public ListDeviceCodesRequest withProductType(String productType) {
         this.productType = productType;
         return this;
@@ -48,9 +51,11 @@ public class ListDeviceCodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public ListDeviceCodesRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ListDeviceCodesRequest(){}
 }

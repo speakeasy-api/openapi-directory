@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListScreensUsingGETResponse {
     
     public String contentType;
+
     public ListScreensUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListScreensUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.ManageItemSummary[] manageItemSummaries;
+
     public ListScreensUsingGETResponse withManageItemSummaries(org.openapis.openapi.models.shared.ManageItemSummary[] manageItemSummaries) {
         this.manageItemSummaries = manageItemSummaries;
         return this;
@@ -29,6 +32,7 @@ public class ListScreensUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public ListScreensUsingGETResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -36,6 +40,7 @@ public class ListScreensUsingGETResponse {
     
     
     public Integer statusCode;
+
     public ListScreensUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListScreensUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListScreensUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListScreensUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

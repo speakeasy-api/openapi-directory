@@ -15,6 +15,7 @@ public class DestinyComponentsPresentationDestinyPresentationNodeComponentObject
      */
     
     public Long activityHash;
+
     public DestinyComponentsPresentationDestinyPresentationNodeComponentObjective withActivityHash(Long activityHash) {
         this.activityHash = activityHash;
         return this;
@@ -25,6 +26,7 @@ public class DestinyComponentsPresentationDestinyPresentationNodeComponentObject
      */
     
     public Boolean complete;
+
     public DestinyComponentsPresentationDestinyPresentationNodeComponentObjective withComplete(Boolean complete) {
         this.complete = complete;
         return this;
@@ -37,6 +39,7 @@ public class DestinyComponentsPresentationDestinyPresentationNodeComponentObject
      */
     
     public Integer completionValue;
+
     public DestinyComponentsPresentationDestinyPresentationNodeComponentObjective withCompletionValue(Integer completionValue) {
         this.completionValue = completionValue;
         return this;
@@ -47,6 +50,7 @@ public class DestinyComponentsPresentationDestinyPresentationNodeComponentObject
      */
     
     public Long destinationHash;
+
     public DestinyComponentsPresentationDestinyPresentationNodeComponentObjective withDestinationHash(Long destinationHash) {
         this.destinationHash = destinationHash;
         return this;
@@ -57,6 +61,7 @@ public class DestinyComponentsPresentationDestinyPresentationNodeComponentObject
      */
     
     public Long objectiveHash;
+
     public DestinyComponentsPresentationDestinyPresentationNodeComponentObjective withObjectiveHash(Long objectiveHash) {
         this.objectiveHash = objectiveHash;
         return this;
@@ -67,6 +72,7 @@ public class DestinyComponentsPresentationDestinyPresentationNodeComponentObject
      */
     
     public Integer progress;
+
     public DestinyComponentsPresentationDestinyPresentationNodeComponentObjective withProgress(Integer progress) {
         this.progress = progress;
         return this;
@@ -77,9 +83,11 @@ public class DestinyComponentsPresentationDestinyPresentationNodeComponentObject
      */
     
     public Boolean visible;
+
     public DestinyComponentsPresentationDestinyPresentationNodeComponentObjective withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public DestinyComponentsPresentationDestinyPresentationNodeComponentObjective(){}
 }

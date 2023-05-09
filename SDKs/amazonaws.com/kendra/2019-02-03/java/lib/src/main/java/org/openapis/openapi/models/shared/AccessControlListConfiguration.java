@@ -15,9 +15,11 @@ public class AccessControlListConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyPath")
     public String keyPath;
+
     public AccessControlListConfiguration withKeyPath(String keyPath) {
         this.keyPath = keyPath;
         return this;
     }
     
+    public AccessControlListConfiguration(){}
 }

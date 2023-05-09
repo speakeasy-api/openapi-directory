@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccountSources {
     @JsonProperty("account")
     public String account;
+
     public AccountSources withAccount(String account) {
         this.account = account;
         return this;
@@ -22,6 +23,7 @@ public class AccountSources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventClass")
     public OcsfEventClassEnum eventClass;
+
     public AccountSources withEventClass(OcsfEventClassEnum eventClass) {
         this.eventClass = eventClass;
         return this;
@@ -30,6 +32,7 @@ public class AccountSources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logsStatus")
     public LogsStatus[] logsStatus;
+
     public AccountSources withLogsStatus(LogsStatus[] logsStatus) {
         this.logsStatus = logsStatus;
         return this;
@@ -37,9 +40,14 @@ public class AccountSources {
     
     @JsonProperty("sourceType")
     public String sourceType;
+
     public AccountSources withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public AccountSources(@JsonProperty("account") String account, @JsonProperty("sourceType") String sourceType) {
+        this.account = account;
+        this.sourceType = sourceType;
+  }
 }

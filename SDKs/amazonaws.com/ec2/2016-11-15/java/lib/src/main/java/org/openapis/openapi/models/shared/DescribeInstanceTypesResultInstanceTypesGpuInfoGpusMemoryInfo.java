@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesGpuInfoGpusMemoryInfo {
     
     public Long sizeInMiB;
+
     public DescribeInstanceTypesResultInstanceTypesGpuInfoGpusMemoryInfo withSizeInMiB(Long sizeInMiB) {
         this.sizeInMiB = sizeInMiB;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesGpuInfoGpusMemoryInfo(){}
 }

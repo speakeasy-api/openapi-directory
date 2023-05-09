@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAssetsCorrelationMatrixInformativenessResponse {
     
     public String contentType;
+
     public PostAssetsCorrelationMatrixInformativenessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostAssetsCorrelationMatrixInformativenessResponse {
     
     
     public Integer statusCode;
+
     public PostAssetsCorrelationMatrixInformativenessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostAssetsCorrelationMatrixInformativenessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAssetsCorrelationMatrixInformativenessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostAssetsCorrelationMatrixInformativenessResponse {
      */
     
     public PostAssetsCorrelationMatrixInformativeness200ApplicationJSON postAssetsCorrelationMatrixInformativeness200ApplicationJSONObject;
+
     public PostAssetsCorrelationMatrixInformativenessResponse withPostAssetsCorrelationMatrixInformativeness200ApplicationJSONObject(PostAssetsCorrelationMatrixInformativeness200ApplicationJSON postAssetsCorrelationMatrixInformativeness200ApplicationJSONObject) {
         this.postAssetsCorrelationMatrixInformativeness200ApplicationJSONObject = postAssetsCorrelationMatrixInformativeness200ApplicationJSONObject;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixInformativenessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

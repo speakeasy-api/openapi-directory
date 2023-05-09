@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetReservedNodeExchangeOfferingsInputMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetReservedNodeExchangeOfferingsInputMessage {
     
     public String marker;
+
     public GetReservedNodeExchangeOfferingsInputMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,6 +20,7 @@ public class GetReservedNodeExchangeOfferingsInputMessage {
     
     
     public Long maxRecords;
+
     public GetReservedNodeExchangeOfferingsInputMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -26,9 +28,13 @@ public class GetReservedNodeExchangeOfferingsInputMessage {
     
     
     public String reservedNodeId;
+
     public GetReservedNodeExchangeOfferingsInputMessage withReservedNodeId(String reservedNodeId) {
         this.reservedNodeId = reservedNodeId;
         return this;
     }
     
+    public GetReservedNodeExchangeOfferingsInputMessage(@JsonProperty("ReservedNodeId") String reservedNodeId) {
+        this.reservedNodeId = reservedNodeId;
+  }
 }

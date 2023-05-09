@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrackingConfig {
     @JsonProperty("autotrack")
     public CriticalityEnum autotrack;
+
     public TrackingConfig withAutotrack(CriticalityEnum autotrack) {
         this.autotrack = autotrack;
         return this;
     }
     
+    public TrackingConfig(@JsonProperty("autotrack") CriticalityEnum autotrack) {
+        this.autotrack = autotrack;
+  }
 }

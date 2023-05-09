@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryRollbackApiDeploymentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RollbackApiDeploymentRequest rollbackApiDeploymentRequest;
+
     public RegistryRollbackApiDeploymentRequest withRollbackApiDeploymentRequest(org.openapis.openapi.models.shared.RollbackApiDeploymentRequest rollbackApiDeploymentRequest) {
         this.rollbackApiDeploymentRequest = rollbackApiDeploymentRequest;
         return this;
@@ -19,6 +21,7 @@ public class RegistryRollbackApiDeploymentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
     public String api;
+
     public RegistryRollbackApiDeploymentRequest withApi(String api) {
         this.api = api;
         return this;
@@ -29,6 +32,7 @@ public class RegistryRollbackApiDeploymentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
     public String deployment;
+
     public RegistryRollbackApiDeploymentRequest withDeployment(String deployment) {
         this.deployment = deployment;
         return this;
@@ -39,6 +43,7 @@ public class RegistryRollbackApiDeploymentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryRollbackApiDeploymentRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -49,9 +54,17 @@ public class RegistryRollbackApiDeploymentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryRollbackApiDeploymentRequest withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public RegistryRollbackApiDeploymentRequest(@JsonProperty("RollbackApiDeploymentRequest") org.openapis.openapi.models.shared.RollbackApiDeploymentRequest rollbackApiDeploymentRequest, @JsonProperty("api") String api, @JsonProperty("deployment") String deployment, @JsonProperty("location") String location, @JsonProperty("project") String project) {
+        this.rollbackApiDeploymentRequest = rollbackApiDeploymentRequest;
+        this.api = api;
+        this.deployment = deployment;
+        this.location = location;
+        this.project = project;
+  }
 }

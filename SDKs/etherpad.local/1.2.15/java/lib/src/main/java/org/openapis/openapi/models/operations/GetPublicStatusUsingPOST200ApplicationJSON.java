@@ -15,6 +15,7 @@ public class GetPublicStatusUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public GetPublicStatusUsingPOST200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class GetPublicStatusUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetPublicStatusUsingPOST200ApplicationJSONData data;
+
     public GetPublicStatusUsingPOST200ApplicationJSON withData(GetPublicStatusUsingPOST200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class GetPublicStatusUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetPublicStatusUsingPOST200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetPublicStatusUsingPOST200ApplicationJSON(){}
 }

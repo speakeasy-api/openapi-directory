@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Category - A category that the law applies to
@@ -15,6 +15,7 @@ public class Category {
      */
     
     public String categoryType;
+
     public Category withCategoryType(String categoryType) {
         this.categoryType = categoryType;
         return this;
@@ -25,6 +26,7 @@ public class Category {
      */
     
     public String code;
+
     public Category withCode(String code) {
         this.code = code;
         return this;
@@ -35,9 +37,15 @@ public class Category {
      */
     
     public String title;
+
     public Category withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Category(@JsonProperty("category_type") String categoryType, @JsonProperty("code") String code, @JsonProperty("title") String title) {
+        this.categoryType = categoryType;
+        this.code = code;
+        this.title = title;
+  }
 }

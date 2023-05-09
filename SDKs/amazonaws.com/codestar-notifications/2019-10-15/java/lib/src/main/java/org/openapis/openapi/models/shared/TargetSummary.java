@@ -15,6 +15,7 @@ public class TargetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetAddress")
     public String targetAddress;
+
     public TargetSummary withTargetAddress(String targetAddress) {
         this.targetAddress = targetAddress;
         return this;
@@ -23,6 +24,7 @@ public class TargetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetStatus")
     public TargetStatusEnum targetStatus;
+
     public TargetSummary withTargetStatus(TargetStatusEnum targetStatus) {
         this.targetStatus = targetStatus;
         return this;
@@ -31,9 +33,11 @@ public class TargetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetType")
     public String targetType;
+
     public TargetSummary withTargetType(String targetType) {
         this.targetType = targetType;
         return this;
     }
     
+    public TargetSummary(){}
 }

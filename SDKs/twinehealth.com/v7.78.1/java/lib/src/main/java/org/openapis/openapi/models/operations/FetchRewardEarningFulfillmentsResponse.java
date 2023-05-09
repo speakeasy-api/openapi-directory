@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FetchRewardEarningFulfillmentsResponse {
     
     public String contentType;
+
     public FetchRewardEarningFulfillmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FetchRewardEarningFulfillmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchErrorResponse fetchErrorResponse;
+
     public FetchRewardEarningFulfillmentsResponse withFetchErrorResponse(org.openapis.openapi.models.shared.FetchErrorResponse fetchErrorResponse) {
         this.fetchErrorResponse = fetchErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class FetchRewardEarningFulfillmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchRewardEarningFulfillmentsResponse fetchRewardEarningFulfillmentsResponse;
+
     public FetchRewardEarningFulfillmentsResponse withFetchRewardEarningFulfillmentsResponse(org.openapis.openapi.models.shared.FetchRewardEarningFulfillmentsResponse fetchRewardEarningFulfillmentsResponse) {
         this.fetchRewardEarningFulfillmentsResponse = fetchRewardEarningFulfillmentsResponse;
         return this;
@@ -36,6 +40,7 @@ public class FetchRewardEarningFulfillmentsResponse {
     
     
     public Integer statusCode;
+
     public FetchRewardEarningFulfillmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class FetchRewardEarningFulfillmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FetchRewardEarningFulfillmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FetchRewardEarningFulfillmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

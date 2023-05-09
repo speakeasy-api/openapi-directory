@@ -17,6 +17,7 @@ public class ProjectsRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bbox")
     public Double[] bbox;
+
     public ProjectsRow withBbox(Double[] bbox) {
         this.bbox = bbox;
         return this;
@@ -25,6 +26,7 @@ public class ProjectsRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countries")
     public String[] countries;
+
     public ProjectsRow withCountries(String[] countries) {
         this.countries = countries;
         return this;
@@ -33,6 +35,7 @@ public class ProjectsRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public String entity;
+
     public ProjectsRow withEntity(String entity) {
         this.entity = entity;
         return this;
@@ -42,6 +45,7 @@ public class ProjectsRow {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstUpdated")
     public OffsetDateTime firstUpdated;
+
     public ProjectsRow withFirstUpdated(OffsetDateTime firstUpdated) {
         this.firstUpdated = firstUpdated;
         return this;
@@ -49,6 +53,7 @@ public class ProjectsRow {
     
     @JsonProperty("id")
     public Long id;
+
     public ProjectsRow withId(Long id) {
         this.id = id;
         return this;
@@ -57,6 +62,7 @@ public class ProjectsRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAnalysis")
     public Boolean isAnalysis;
+
     public ProjectsRow withIsAnalysis(Boolean isAnalysis) {
         this.isAnalysis = isAnalysis;
         return this;
@@ -65,6 +71,7 @@ public class ProjectsRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMobile")
     public Boolean isMobile;
+
     public ProjectsRow withIsMobile(Boolean isMobile) {
         this.isMobile = isMobile;
         return this;
@@ -74,6 +81,7 @@ public class ProjectsRow {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public ProjectsRow withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -81,6 +89,7 @@ public class ProjectsRow {
     
     @JsonProperty("locationIds")
     public Long[] locationIds;
+
     public ProjectsRow withLocationIds(Long[] locationIds) {
         this.locationIds = locationIds;
         return this;
@@ -88,6 +97,7 @@ public class ProjectsRow {
     
     @JsonProperty("locations")
     public Long locations;
+
     public ProjectsRow withLocations(Long locations) {
         this.locations = locations;
         return this;
@@ -95,6 +105,7 @@ public class ProjectsRow {
     
     @JsonProperty("measurements")
     public Long measurements;
+
     public ProjectsRow withMeasurements(Long measurements) {
         this.measurements = measurements;
         return this;
@@ -102,6 +113,7 @@ public class ProjectsRow {
     
     @JsonProperty("name")
     public String name;
+
     public ProjectsRow withName(String name) {
         this.name = name;
         return this;
@@ -109,6 +121,7 @@ public class ProjectsRow {
     
     @JsonProperty("parameters")
     public ProjectParameterDetails[] parameters;
+
     public ProjectsRow withParameters(ProjectParameterDetails[] parameters) {
         this.parameters = parameters;
         return this;
@@ -117,6 +130,7 @@ public class ProjectsRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensorType")
     public String sensorType;
+
     public ProjectsRow withSensorType(String sensorType) {
         this.sensorType = sensorType;
         return this;
@@ -125,6 +139,7 @@ public class ProjectsRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public Object[] sources;
+
     public ProjectsRow withSources(Object[] sources) {
         this.sources = sources;
         return this;
@@ -132,9 +147,21 @@ public class ProjectsRow {
     
     @JsonProperty("subtitle")
     public String subtitle;
+
     public ProjectsRow withSubtitle(String subtitle) {
         this.subtitle = subtitle;
         return this;
     }
     
+    public ProjectsRow(@JsonProperty("firstUpdated") OffsetDateTime firstUpdated, @JsonProperty("id") Long id, @JsonProperty("lastUpdated") OffsetDateTime lastUpdated, @JsonProperty("locationIds") Long[] locationIds, @JsonProperty("locations") Long locations, @JsonProperty("measurements") Long measurements, @JsonProperty("name") String name, @JsonProperty("parameters") ProjectParameterDetails[] parameters, @JsonProperty("subtitle") String subtitle) {
+        this.firstUpdated = firstUpdated;
+        this.id = id;
+        this.lastUpdated = lastUpdated;
+        this.locationIds = locationIds;
+        this.locations = locations;
+        this.measurements = measurements;
+        this.name = name;
+        this.parameters = parameters;
+        this.subtitle = subtitle;
+  }
 }

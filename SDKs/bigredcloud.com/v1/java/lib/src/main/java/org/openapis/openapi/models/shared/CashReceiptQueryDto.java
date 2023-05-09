@@ -17,6 +17,7 @@ public class CashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acCode")
     public String acCode;
+
     public CashReceiptQueryDto withAcCode(String acCode) {
         this.acCode = acCode;
         return this;
@@ -25,6 +26,7 @@ public class CashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acEntries")
     public AcEntryDto[] acEntries;
+
     public CashReceiptQueryDto withAcEntries(AcEntryDto[] acEntries) {
         this.acEntries = acEntries;
         return this;
@@ -33,6 +35,7 @@ public class CashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookTranTypeId")
     public Long bookTranTypeId;
+
     public CashReceiptQueryDto withBookTranTypeId(Long bookTranTypeId) {
         this.bookTranTypeId = bookTranTypeId;
         return this;
@@ -41,6 +44,7 @@ public class CashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public AcudfValueDto[] customFields;
+
     public CashReceiptQueryDto withCustomFields(AcudfValueDto[] customFields) {
         this.customFields = customFields;
         return this;
@@ -49,6 +53,7 @@ public class CashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public Long customerId;
+
     public CashReceiptQueryDto withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
@@ -57,6 +62,7 @@ public class CashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailCollection")
     public String[] detailCollection;
+
     public CashReceiptQueryDto withDetailCollection(String[] detailCollection) {
         this.detailCollection = detailCollection;
         return this;
@@ -65,6 +71,7 @@ public class CashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount")
     public Double discount;
+
     public CashReceiptQueryDto withDiscount(Double discount) {
         this.discount = discount;
         return this;
@@ -75,6 +82,7 @@ public class CashReceiptQueryDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("entryDate")
     public OffsetDateTime entryDate;
+
     public CashReceiptQueryDto withEntryDate(OffsetDateTime entryDate) {
         this.entryDate = entryDate;
         return this;
@@ -83,6 +91,7 @@ public class CashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CashReceiptQueryDto withId(Long id) {
         this.id = id;
         return this;
@@ -91,6 +100,7 @@ public class CashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ledger")
     public Double ledger;
+
     public CashReceiptQueryDto withLedger(Double ledger) {
         this.ledger = ledger;
         return this;
@@ -99,6 +109,7 @@ public class CashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public CashReceiptQueryDto withNote(String note) {
         this.note = note;
         return this;
@@ -107,6 +118,7 @@ public class CashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plaidTransactionId")
     public String plaidTransactionId;
+
     public CashReceiptQueryDto withPlaidTransactionId(String plaidTransactionId) {
         this.plaidTransactionId = plaidTransactionId;
         return this;
@@ -117,6 +129,7 @@ public class CashReceiptQueryDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("procDate")
     public OffsetDateTime procDate;
+
     public CashReceiptQueryDto withProcDate(OffsetDateTime procDate) {
         this.procDate = procDate;
         return this;
@@ -125,6 +138,7 @@ public class CashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public CashReceiptQueryDto withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -133,6 +147,7 @@ public class CashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public CashReceiptQueryDto withTotal(Double total) {
         this.total = total;
         return this;
@@ -141,6 +156,7 @@ public class CashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unallocated")
     public Double unallocated;
+
     public CashReceiptQueryDto withUnallocated(Double unallocated) {
         this.unallocated = unallocated;
         return this;
@@ -149,6 +165,7 @@ public class CashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatEntries")
     public VatEntryDto[] vatEntries;
+
     public CashReceiptQueryDto withVatEntries(VatEntryDto[] vatEntries) {
         this.vatEntries = vatEntries;
         return this;
@@ -157,9 +174,11 @@ public class CashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatTypeId")
     public Long vatTypeId;
+
     public CashReceiptQueryDto withVatTypeId(Long vatTypeId) {
         this.vatTypeId = vatTypeId;
         return this;
     }
     
+    public CashReceiptQueryDto(){}
 }

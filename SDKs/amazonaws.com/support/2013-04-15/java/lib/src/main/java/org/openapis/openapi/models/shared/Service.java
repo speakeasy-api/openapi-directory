@@ -15,6 +15,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public Category[] categories;
+
     public Service withCategories(Category[] categories) {
         this.categories = categories;
         return this;
@@ -23,6 +24,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public Service withCode(String code) {
         this.code = code;
         return this;
@@ -31,9 +33,11 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Service withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Service(){}
 }

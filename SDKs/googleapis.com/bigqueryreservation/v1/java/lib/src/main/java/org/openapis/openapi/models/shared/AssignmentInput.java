@@ -18,6 +18,7 @@ public class AssignmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignee")
     public String assignee;
+
     public AssignmentInput withAssignee(String assignee) {
         this.assignee = assignee;
         return this;
@@ -29,9 +30,11 @@ public class AssignmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobType")
     public AssignmentJobTypeEnum jobType;
+
     public AssignmentInput withJobType(AssignmentJobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
     }
     
+    public AssignmentInput(){}
 }

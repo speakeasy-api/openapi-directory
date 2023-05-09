@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLoggingConfigurationResponse {
     
     public String contentType;
+
     public GetLoggingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetLoggingConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLoggingConfigurationResponse getLoggingConfigurationResponse;
+
     public GetLoggingConfigurationResponse withGetLoggingConfigurationResponse(org.openapis.openapi.models.shared.GetLoggingConfigurationResponse getLoggingConfigurationResponse) {
         this.getLoggingConfigurationResponse = getLoggingConfigurationResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetLoggingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetLoggingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetLoggingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLoggingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetLoggingConfigurationResponse {
      */
     
     public Object wafInternalErrorException;
+
     public GetLoggingConfigurationResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,9 +59,14 @@ public class GetLoggingConfigurationResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public GetLoggingConfigurationResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public GetLoggingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

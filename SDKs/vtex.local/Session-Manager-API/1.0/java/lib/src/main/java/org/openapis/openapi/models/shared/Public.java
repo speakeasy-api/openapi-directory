@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Public {
     @JsonProperty("country")
     public Country country;
+
     public Public withCountry(Country country) {
         this.country = country;
         return this;
@@ -16,9 +17,14 @@ public class Public {
     
     @JsonProperty("postalCode")
     public PostalCode postalCode;
+
     public Public withPostalCode(PostalCode postalCode) {
         this.postalCode = postalCode;
         return this;
     }
     
+    public Public(@JsonProperty("country") Country country, @JsonProperty("postalCode") PostalCode postalCode) {
+        this.country = country;
+        this.postalCode = postalCode;
+  }
 }

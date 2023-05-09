@@ -18,6 +18,7 @@ public class RegionInstanceGroupListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public RegionInstanceGroupListWarningCodeEnum code;
+
     public RegionInstanceGroupListWarning withCode(RegionInstanceGroupListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class RegionInstanceGroupListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public RegionInstanceGroupListWarningData[] data;
+
     public RegionInstanceGroupListWarning withData(RegionInstanceGroupListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class RegionInstanceGroupListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public RegionInstanceGroupListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public RegionInstanceGroupListWarning(){}
 }

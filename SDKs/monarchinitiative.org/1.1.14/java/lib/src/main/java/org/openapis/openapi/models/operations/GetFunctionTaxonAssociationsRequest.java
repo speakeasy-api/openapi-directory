@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFunctionTaxonAssociationsRequest {
@@ -12,6 +13,7 @@ public class GetFunctionTaxonAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
     public String[] evidence;
+
     public GetFunctionTaxonAssociationsRequest withEvidence(String[] evidence) {
         this.evidence = evidence;
         return this;
@@ -22,6 +24,7 @@ public class GetFunctionTaxonAssociationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetFunctionTaxonAssociationsRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class GetFunctionTaxonAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
     public Long rows;
+
     public GetFunctionTaxonAssociationsRequest withRows(Long rows) {
         this.rows = rows;
         return this;
@@ -42,9 +46,13 @@ public class GetFunctionTaxonAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Long start;
+
     public GetFunctionTaxonAssociationsRequest withStart(Long start) {
         this.start = start;
         return this;
     }
     
+    public GetFunctionTaxonAssociationsRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

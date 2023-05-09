@@ -17,6 +17,7 @@ public class DefaultResponseDTOOfListOfPackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isError")
     public Boolean isError;
+
     public DefaultResponseDTOOfListOfPackageSearchDTO withIsError(Boolean isError) {
         this.isError = isError;
         return this;
@@ -25,6 +26,7 @@ public class DefaultResponseDTOOfListOfPackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DefaultResponseDTOOfListOfPackageSearchDTO withMessage(String message) {
         this.message = message;
         return this;
@@ -33,6 +35,7 @@ public class DefaultResponseDTOOfListOfPackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseException")
     public Object responseException;
+
     public DefaultResponseDTOOfListOfPackageSearchDTO withResponseException(Object responseException) {
         this.responseException = responseException;
         return this;
@@ -41,9 +44,11 @@ public class DefaultResponseDTOOfListOfPackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public PackageSearchDTO[] result;
+
     public DefaultResponseDTOOfListOfPackageSearchDTO withResult(PackageSearchDTO[] result) {
         this.result = result;
         return this;
     }
     
+    public DefaultResponseDTOOfListOfPackageSearchDTO(){}
 }

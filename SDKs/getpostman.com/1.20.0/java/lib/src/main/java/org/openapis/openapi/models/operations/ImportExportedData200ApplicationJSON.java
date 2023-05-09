@@ -15,9 +15,11 @@ public class ImportExportedData200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections")
     public ImportExportedData200ApplicationJSONCollections[] collections;
+
     public ImportExportedData200ApplicationJSON withCollections(ImportExportedData200ApplicationJSONCollections[] collections) {
         this.collections = collections;
         return this;
     }
     
+    public ImportExportedData200ApplicationJSON(){}
 }

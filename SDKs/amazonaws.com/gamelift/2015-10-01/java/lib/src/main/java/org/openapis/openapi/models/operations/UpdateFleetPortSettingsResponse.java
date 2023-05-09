@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFleetPortSettingsResponse {
@@ -12,6 +13,7 @@ public class UpdateFleetPortSettingsResponse {
      */
     
     public Object conflictException;
+
     public UpdateFleetPortSettingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFleetPortSettingsResponse {
     
     
     public String contentType;
+
     public UpdateFleetPortSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFleetPortSettingsResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateFleetPortSettingsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFleetPortSettingsResponse {
      */
     
     public Object invalidFleetStatusException;
+
     public UpdateFleetPortSettingsResponse withInvalidFleetStatusException(Object invalidFleetStatusException) {
         this.invalidFleetStatusException = invalidFleetStatusException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFleetPortSettingsResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateFleetPortSettingsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateFleetPortSettingsResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateFleetPortSettingsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateFleetPortSettingsResponse {
      */
     
     public Object notFoundException;
+
     public UpdateFleetPortSettingsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateFleetPortSettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateFleetPortSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateFleetPortSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFleetPortSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateFleetPortSettingsResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateFleetPortSettingsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateFleetPortSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFleetPortSettingsOutput updateFleetPortSettingsOutput;
+
     public UpdateFleetPortSettingsResponse withUpdateFleetPortSettingsOutput(org.openapis.openapi.models.shared.UpdateFleetPortSettingsOutput updateFleetPortSettingsOutput) {
         this.updateFleetPortSettingsOutput = updateFleetPortSettingsOutput;
         return this;
     }
     
+    public UpdateFleetPortSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

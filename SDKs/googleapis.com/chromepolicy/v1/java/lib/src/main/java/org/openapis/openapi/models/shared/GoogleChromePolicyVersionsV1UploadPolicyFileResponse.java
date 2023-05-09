@@ -18,9 +18,11 @@ public class GoogleChromePolicyVersionsV1UploadPolicyFileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadUri")
     public String downloadUri;
+
     public GoogleChromePolicyVersionsV1UploadPolicyFileResponse withDownloadUri(String downloadUri) {
         this.downloadUri = downloadUri;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1UploadPolicyFileResponse(){}
 }

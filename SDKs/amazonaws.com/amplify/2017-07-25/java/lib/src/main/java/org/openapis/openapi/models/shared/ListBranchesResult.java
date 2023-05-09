@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListBranchesResult {
     @JsonProperty("branches")
     public Branch[] branches;
+
     public ListBranchesResult withBranches(Branch[] branches) {
         this.branches = branches;
         return this;
@@ -22,9 +23,13 @@ public class ListBranchesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBranchesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBranchesResult(@JsonProperty("branches") Branch[] branches) {
+        this.branches = branches;
+  }
 }

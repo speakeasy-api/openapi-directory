@@ -12,6 +12,7 @@ public class DeleteResourcePolicyRequestBody {
      */
     @JsonProperty("policyId")
     public String policyId;
+
     public DeleteResourcePolicyRequestBody withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
@@ -22,9 +23,14 @@ public class DeleteResourcePolicyRequestBody {
      */
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public DeleteResourcePolicyRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public DeleteResourcePolicyRequestBody(@JsonProperty("policyId") String policyId, @JsonProperty("resourceArn") String resourceArn) {
+        this.policyId = policyId;
+        this.resourceArn = resourceArn;
+  }
 }

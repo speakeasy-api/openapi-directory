@@ -25,6 +25,7 @@ public class FileCache {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public FileCache withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +34,7 @@ public class FileCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DNSName")
     public String dnsName;
+
     public FileCache withDNSName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -41,6 +43,7 @@ public class FileCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataRepositoryAssociationIds")
     public String[] dataRepositoryAssociationIds;
+
     public FileCache withDataRepositoryAssociationIds(String[] dataRepositoryAssociationIds) {
         this.dataRepositoryAssociationIds = dataRepositoryAssociationIds;
         return this;
@@ -49,6 +52,7 @@ public class FileCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureDetails")
     public FileCacheFailureDetails failureDetails;
+
     public FileCache withFailureDetails(FileCacheFailureDetails failureDetails) {
         this.failureDetails = failureDetails;
         return this;
@@ -57,6 +61,7 @@ public class FileCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileCacheId")
     public String fileCacheId;
+
     public FileCache withFileCacheId(String fileCacheId) {
         this.fileCacheId = fileCacheId;
         return this;
@@ -65,6 +70,7 @@ public class FileCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileCacheType")
     public FileCacheTypeEnum fileCacheType;
+
     public FileCache withFileCacheType(FileCacheTypeEnum fileCacheType) {
         this.fileCacheType = fileCacheType;
         return this;
@@ -73,6 +79,7 @@ public class FileCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileCacheTypeVersion")
     public String fileCacheTypeVersion;
+
     public FileCache withFileCacheTypeVersion(String fileCacheTypeVersion) {
         this.fileCacheTypeVersion = fileCacheTypeVersion;
         return this;
@@ -81,6 +88,7 @@ public class FileCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public FileCache withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -89,6 +97,7 @@ public class FileCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public FileCacheLifecycleEnum lifecycle;
+
     public FileCache withLifecycle(FileCacheLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -97,6 +106,7 @@ public class FileCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LustreConfiguration")
     public FileCacheLustreConfiguration lustreConfiguration;
+
     public FileCache withLustreConfiguration(FileCacheLustreConfiguration lustreConfiguration) {
         this.lustreConfiguration = lustreConfiguration;
         return this;
@@ -108,6 +118,7 @@ public class FileCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkInterfaceIds")
     public String[] networkInterfaceIds;
+
     public FileCache withNetworkInterfaceIds(String[] networkInterfaceIds) {
         this.networkInterfaceIds = networkInterfaceIds;
         return this;
@@ -119,6 +130,7 @@ public class FileCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public FileCache withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -130,6 +142,7 @@ public class FileCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public FileCache withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -138,6 +151,7 @@ public class FileCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageCapacity")
     public Long storageCapacity;
+
     public FileCache withStorageCapacity(Long storageCapacity) {
         this.storageCapacity = storageCapacity;
         return this;
@@ -149,6 +163,7 @@ public class FileCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public FileCache withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -160,9 +175,11 @@ public class FileCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public FileCache withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public FileCache(){}
 }

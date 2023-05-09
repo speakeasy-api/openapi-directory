@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Language {
     @JsonProperty("LanguageCode")
     public String languageCode;
+
     public Language withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -19,9 +20,14 @@ public class Language {
     
     @JsonProperty("LanguageName")
     public String languageName;
+
     public Language withLanguageName(String languageName) {
         this.languageName = languageName;
         return this;
     }
     
+    public Language(@JsonProperty("LanguageCode") String languageCode, @JsonProperty("LanguageName") String languageName) {
+        this.languageCode = languageCode;
+        this.languageName = languageName;
+  }
 }

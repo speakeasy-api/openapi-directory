@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPrincipalsResponse {
     
     public String contentType;
+
     public ListPrincipalsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPrincipalsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListPrincipalsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListPrincipalsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListPrincipalsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListPrincipalsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPrincipalsResponse listPrincipalsResponse;
+
     public ListPrincipalsResponse withListPrincipalsResponse(org.openapis.openapi.models.shared.ListPrincipalsResponse listPrincipalsResponse) {
         this.listPrincipalsResponse = listPrincipalsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListPrincipalsResponse {
      */
     
     public Object malformedArnException;
+
     public ListPrincipalsResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -56,6 +62,7 @@ public class ListPrincipalsResponse {
     
     
     public Integer statusCode;
+
     public ListPrincipalsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListPrincipalsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPrincipalsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListPrincipalsResponse {
      */
     
     public Object serverInternalException;
+
     public ListPrincipalsResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -83,6 +92,7 @@ public class ListPrincipalsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListPrincipalsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class ListPrincipalsResponse {
      */
     
     public Object unknownResourceException;
+
     public ListPrincipalsResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    public ListPrincipalsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

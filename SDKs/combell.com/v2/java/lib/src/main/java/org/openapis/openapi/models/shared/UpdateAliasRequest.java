@@ -18,9 +18,11 @@ public class UpdateAliasRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public String[] destinations;
+
     public UpdateAliasRequest withDestinations(String[] destinations) {
         this.destinations = destinations;
         return this;
     }
     
+    public UpdateAliasRequest(){}
 }

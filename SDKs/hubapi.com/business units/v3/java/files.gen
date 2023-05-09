@@ -38,4 +38,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/PublicBusinessUnit.java
 lib/src/main/java/org/openapis/openapi/models/shared/PublicBusinessUnitLogoMetadata.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorDetail.java
+docs/sdk/README.md
+docs/businessunit/README.md
 USAGE.md

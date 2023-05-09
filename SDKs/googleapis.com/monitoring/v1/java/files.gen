@@ -187,4 +187,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/QueryInstantRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueryExemplarsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueryRangeRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/QuerySeriesRequest.java
+docs/sdk/README.md
+docs/locations/README.md
+docs/projects/README.md
 USAGE.md

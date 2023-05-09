@@ -18,6 +18,7 @@ public class DigitalContentLabelAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentRatingTier")
     public DigitalContentLabelAssignedTargetingOptionDetailsContentRatingTierEnum contentRatingTier;
+
     public DigitalContentLabelAssignedTargetingOptionDetails withContentRatingTier(DigitalContentLabelAssignedTargetingOptionDetailsContentRatingTierEnum contentRatingTier) {
         this.contentRatingTier = contentRatingTier;
         return this;
@@ -29,9 +30,11 @@ public class DigitalContentLabelAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedTargetingOptionId")
     public String excludedTargetingOptionId;
+
     public DigitalContentLabelAssignedTargetingOptionDetails withExcludedTargetingOptionId(String excludedTargetingOptionId) {
         this.excludedTargetingOptionId = excludedTargetingOptionId;
         return this;
     }
     
+    public DigitalContentLabelAssignedTargetingOptionDetails(){}
 }

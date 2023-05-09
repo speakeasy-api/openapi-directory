@@ -18,6 +18,7 @@ public class RequestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_id")
     public String requestId;
+
     public RequestResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -29,9 +30,11 @@ public class RequestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public RequestResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public RequestResponse(){}
 }

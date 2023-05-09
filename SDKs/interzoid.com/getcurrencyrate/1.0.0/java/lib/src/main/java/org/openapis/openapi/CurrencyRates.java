@@ -57,11 +57,9 @@ public class CurrencyRates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetcurrencyrateResponse res = new org.openapis.openapi.models.operations.GetcurrencyrateResponse() {{
+        org.openapis.openapi.models.operations.GetcurrencyrateResponse res = new org.openapis.openapi.models.operations.GetcurrencyrateResponse(contentType, httpRes.statusCode()) {{
             getcurrencyrate200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

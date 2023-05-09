@@ -18,9 +18,11 @@ public class TimestampStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("granularStats")
     public java.util.Map<String, GranularStats> granularStats;
+
     public TimestampStats withGranularStats(java.util.Map<String, GranularStats> granularStats) {
         this.granularStats = granularStats;
         return this;
     }
     
+    public TimestampStats(){}
 }

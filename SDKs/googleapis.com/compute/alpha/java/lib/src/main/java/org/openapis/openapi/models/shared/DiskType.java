@@ -18,6 +18,7 @@ public class DiskType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public DiskType withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class DiskType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultDiskSizeGb")
     public String defaultDiskSizeGb;
+
     public DiskType withDefaultDiskSizeGb(String defaultDiskSizeGb) {
         this.defaultDiskSizeGb = defaultDiskSizeGb;
         return this;
@@ -40,6 +42,7 @@ public class DiskType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public DeprecationStatus deprecated;
+
     public DiskType withDeprecated(DeprecationStatus deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -51,6 +54,7 @@ public class DiskType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DiskType withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class DiskType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DiskType withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +78,7 @@ public class DiskType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DiskType withKind(String kind) {
         this.kind = kind;
         return this;
@@ -84,6 +90,7 @@ public class DiskType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DiskType withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class DiskType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public DiskType withRegion(String region) {
         this.region = region;
         return this;
@@ -106,6 +114,7 @@ public class DiskType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public DiskType withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -117,6 +126,7 @@ public class DiskType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public DiskType withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -128,6 +138,7 @@ public class DiskType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validDiskSize")
     public String validDiskSize;
+
     public DiskType withValidDiskSize(String validDiskSize) {
         this.validDiskSize = validDiskSize;
         return this;
@@ -139,9 +150,11 @@ public class DiskType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public DiskType withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public DiskType(){}
 }

@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETIpamAddressHistoryRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETIpamAddressHistoryActionEnum action;
+
     public GETGETIpamAddressHistoryRequest withAction(GETGETIpamAddressHistoryActionEnum action) {
         this.action = action;
         return this;
@@ -20,6 +22,7 @@ public class GETGETIpamAddressHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Cidr")
     public String cidr;
+
     public GETGETIpamAddressHistoryRequest withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -30,6 +33,7 @@ public class GETGETIpamAddressHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETGETIpamAddressHistoryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -40,6 +44,7 @@ public class GETGETIpamAddressHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndTime")
     public OffsetDateTime endTime;
+
     public GETGETIpamAddressHistoryRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -50,6 +55,7 @@ public class GETGETIpamAddressHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IpamScopeId")
     public String ipamScopeId;
+
     public GETGETIpamAddressHistoryRequest withIpamScopeId(String ipamScopeId) {
         this.ipamScopeId = ipamScopeId;
         return this;
@@ -60,6 +66,7 @@ public class GETGETIpamAddressHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public Long maxResults;
+
     public GETGETIpamAddressHistoryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -70,6 +77,7 @@ public class GETGETIpamAddressHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public GETGETIpamAddressHistoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -80,6 +88,7 @@ public class GETGETIpamAddressHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartTime")
     public OffsetDateTime startTime;
+
     public GETGETIpamAddressHistoryRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -87,6 +96,7 @@ public class GETGETIpamAddressHistoryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETIpamAddressHistoryVersionEnum version;
+
     public GETGETIpamAddressHistoryRequest withVersion(GETGETIpamAddressHistoryVersionEnum version) {
         this.version = version;
         return this;
@@ -97,6 +107,7 @@ public class GETGETIpamAddressHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcId")
     public String vpcId;
+
     public GETGETIpamAddressHistoryRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -104,6 +115,7 @@ public class GETGETIpamAddressHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETIpamAddressHistoryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -111,6 +123,7 @@ public class GETGETIpamAddressHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETIpamAddressHistoryRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -118,6 +131,7 @@ public class GETGETIpamAddressHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETIpamAddressHistoryRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -125,6 +139,7 @@ public class GETGETIpamAddressHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETIpamAddressHistoryRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -132,6 +147,7 @@ public class GETGETIpamAddressHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETIpamAddressHistoryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -139,6 +155,7 @@ public class GETGETIpamAddressHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETIpamAddressHistoryRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -146,9 +163,16 @@ public class GETGETIpamAddressHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETIpamAddressHistoryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETIpamAddressHistoryRequest(@JsonProperty("Action") GETGETIpamAddressHistoryActionEnum action, @JsonProperty("Cidr") String cidr, @JsonProperty("IpamScopeId") String ipamScopeId, @JsonProperty("Version") GETGETIpamAddressHistoryVersionEnum version) {
+        this.action = action;
+        this.cidr = cidr;
+        this.ipamScopeId = ipamScopeId;
+        this.version = version;
+  }
 }

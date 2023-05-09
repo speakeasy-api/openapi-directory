@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectMembershipRequest {
@@ -14,6 +15,7 @@ public class GetProjectMembershipRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetProjectMembershipRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -25,6 +27,7 @@ public class GetProjectMembershipRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetProjectMembershipRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -32,9 +35,13 @@ public class GetProjectMembershipRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_membership_gid")
     public String projectMembershipGid;
+
     public GetProjectMembershipRequest withProjectMembershipGid(String projectMembershipGid) {
         this.projectMembershipGid = projectMembershipGid;
         return this;
     }
     
+    public GetProjectMembershipRequest(@JsonProperty("project_membership_gid") String projectMembershipGid) {
+        this.projectMembershipGid = projectMembershipGid;
+  }
 }

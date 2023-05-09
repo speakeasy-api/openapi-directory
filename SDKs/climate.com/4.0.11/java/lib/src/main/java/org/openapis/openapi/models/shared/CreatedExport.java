@@ -15,9 +15,13 @@ public class CreatedExport {
      */
     @JsonProperty("id")
     public String id;
+
     public CreatedExport withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CreatedExport(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

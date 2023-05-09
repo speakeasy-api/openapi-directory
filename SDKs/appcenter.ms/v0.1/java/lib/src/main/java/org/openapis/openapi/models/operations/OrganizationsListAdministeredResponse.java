@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrganizationsListAdministeredResponse {
     
     public String contentType;
+
     public OrganizationsListAdministeredResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OrganizationsListAdministeredResponse {
     
     
     public Integer statusCode;
+
     public OrganizationsListAdministeredResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class OrganizationsListAdministeredResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrganizationsListAdministeredResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class OrganizationsListAdministeredResponse {
      */
     
     public OrganizationsListAdministered200ApplicationJSON organizationsListAdministered200ApplicationJSONObject;
+
     public OrganizationsListAdministeredResponse withOrganizationsListAdministered200ApplicationJSONObject(OrganizationsListAdministered200ApplicationJSON organizationsListAdministered200ApplicationJSONObject) {
         this.organizationsListAdministered200ApplicationJSONObject = organizationsListAdministered200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class OrganizationsListAdministeredResponse {
      */
     
     public OrganizationsListAdministeredDefaultApplicationJSON organizationsListAdministeredDefaultApplicationJSONObject;
+
     public OrganizationsListAdministeredResponse withOrganizationsListAdministeredDefaultApplicationJSONObject(OrganizationsListAdministeredDefaultApplicationJSON organizationsListAdministeredDefaultApplicationJSONObject) {
         this.organizationsListAdministeredDefaultApplicationJSONObject = organizationsListAdministeredDefaultApplicationJSONObject;
         return this;
     }
     
+    public OrganizationsListAdministeredResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class ScimEnterpriseGroupResponseMembers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("$ref")
     public String dollarRef;
+
     public ScimEnterpriseGroupResponseMembers withDollarRef(String dollarRef) {
         this.dollarRef = dollarRef;
         return this;
@@ -20,6 +21,7 @@ public class ScimEnterpriseGroupResponseMembers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
     public String display;
+
     public ScimEnterpriseGroupResponseMembers withDisplay(String display) {
         this.display = display;
         return this;
@@ -28,9 +30,11 @@ public class ScimEnterpriseGroupResponseMembers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ScimEnterpriseGroupResponseMembers withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ScimEnterpriseGroupResponseMembers(){}
 }

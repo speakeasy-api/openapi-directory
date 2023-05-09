@@ -20,6 +20,7 @@ public class LambdaFunctionAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public LambdaFunctionAggregationResponse withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +29,7 @@ public class LambdaFunctionAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionName")
     public String functionName;
+
     public LambdaFunctionAggregationResponse withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -36,6 +38,7 @@ public class LambdaFunctionAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaTags")
     public java.util.Map<String, String> lambdaTags;
+
     public LambdaFunctionAggregationResponse withLambdaTags(java.util.Map<String, String> lambdaTags) {
         this.lambdaTags = lambdaTags;
         return this;
@@ -46,6 +49,7 @@ public class LambdaFunctionAggregationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public LambdaFunctionAggregationResponse withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -53,6 +57,7 @@ public class LambdaFunctionAggregationResponse {
     
     @JsonProperty("resourceId")
     public String resourceId;
+
     public LambdaFunctionAggregationResponse withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -61,6 +66,7 @@ public class LambdaFunctionAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtime")
     public String runtime;
+
     public LambdaFunctionAggregationResponse withRuntime(String runtime) {
         this.runtime = runtime;
         return this;
@@ -72,9 +78,13 @@ public class LambdaFunctionAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityCounts")
     public SeverityCounts severityCounts;
+
     public LambdaFunctionAggregationResponse withSeverityCounts(SeverityCounts severityCounts) {
         this.severityCounts = severityCounts;
         return this;
     }
     
+    public LambdaFunctionAggregationResponse(@JsonProperty("resourceId") String resourceId) {
+        this.resourceId = resourceId;
+  }
 }

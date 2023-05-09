@@ -18,6 +18,7 @@ public class MetadataFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterLabels")
     public MetadataFilterLabelMatch[] filterLabels;
+
     public MetadataFilter withFilterLabels(MetadataFilterLabelMatch[] filterLabels) {
         this.filterLabels = filterLabels;
         return this;
@@ -29,9 +30,11 @@ public class MetadataFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterMatchCriteria")
     public MetadataFilterFilterMatchCriteriaEnum filterMatchCriteria;
+
     public MetadataFilter withFilterMatchCriteria(MetadataFilterFilterMatchCriteriaEnum filterMatchCriteria) {
         this.filterMatchCriteria = filterMatchCriteria;
         return this;
     }
     
+    public MetadataFilter(){}
 }

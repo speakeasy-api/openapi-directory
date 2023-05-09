@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyDBClusterScalingConfiguration {
     @SpeakeasyMetadata("queryParam:name=AutoPause")
     public Boolean autoPause;
+
     public GETModifyDBClusterScalingConfiguration withAutoPause(Boolean autoPause) {
         this.autoPause = autoPause;
         return this;
@@ -19,6 +20,7 @@ public class GETModifyDBClusterScalingConfiguration {
     
     @SpeakeasyMetadata("queryParam:name=MaxCapacity")
     public Long maxCapacity;
+
     public GETModifyDBClusterScalingConfiguration withMaxCapacity(Long maxCapacity) {
         this.maxCapacity = maxCapacity;
         return this;
@@ -26,6 +28,7 @@ public class GETModifyDBClusterScalingConfiguration {
     
     @SpeakeasyMetadata("queryParam:name=MinCapacity")
     public Long minCapacity;
+
     public GETModifyDBClusterScalingConfiguration withMinCapacity(Long minCapacity) {
         this.minCapacity = minCapacity;
         return this;
@@ -33,6 +36,7 @@ public class GETModifyDBClusterScalingConfiguration {
     
     @SpeakeasyMetadata("queryParam:name=SecondsBeforeTimeout")
     public Long secondsBeforeTimeout;
+
     public GETModifyDBClusterScalingConfiguration withSecondsBeforeTimeout(Long secondsBeforeTimeout) {
         this.secondsBeforeTimeout = secondsBeforeTimeout;
         return this;
@@ -40,6 +44,7 @@ public class GETModifyDBClusterScalingConfiguration {
     
     @SpeakeasyMetadata("queryParam:name=SecondsUntilAutoPause")
     public Long secondsUntilAutoPause;
+
     public GETModifyDBClusterScalingConfiguration withSecondsUntilAutoPause(Long secondsUntilAutoPause) {
         this.secondsUntilAutoPause = secondsUntilAutoPause;
         return this;
@@ -47,9 +52,11 @@ public class GETModifyDBClusterScalingConfiguration {
     
     @SpeakeasyMetadata("queryParam:name=TimeoutAction")
     public String timeoutAction;
+
     public GETModifyDBClusterScalingConfiguration withTimeoutAction(String timeoutAction) {
         this.timeoutAction = timeoutAction;
         return this;
     }
     
+    public GETModifyDBClusterScalingConfiguration(){}
 }

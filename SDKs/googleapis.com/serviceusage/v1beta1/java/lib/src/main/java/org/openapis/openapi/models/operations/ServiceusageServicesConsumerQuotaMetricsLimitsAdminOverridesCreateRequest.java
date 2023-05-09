@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest {
@@ -12,6 +13,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateR
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateR
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.QuotaOverride quotaOverride;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest withQuotaOverride(org.openapis.openapi.models.shared.QuotaOverride quotaOverride) {
         this.quotaOverride = quotaOverride;
         return this;
@@ -29,6 +32,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateR
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateR
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateR
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateR
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateR
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
     public Boolean force;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -79,6 +87,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateR
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceOnly")
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateForceOnlyEnum[] forceOnly;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest withForceOnly(ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateForceOnlyEnum[] forceOnly) {
         this.forceOnly = forceOnly;
         return this;
@@ -89,6 +98,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateR
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateR
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateR
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -119,6 +131,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateR
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -129,6 +142,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateR
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateR
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,13 @@ public class ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateR
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

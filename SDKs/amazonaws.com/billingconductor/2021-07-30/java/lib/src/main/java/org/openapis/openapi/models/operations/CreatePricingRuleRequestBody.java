@@ -15,6 +15,7 @@ public class CreatePricingRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingEntity")
     public String billingEntity;
+
     public CreatePricingRuleRequestBody withBillingEntity(String billingEntity) {
         this.billingEntity = billingEntity;
         return this;
@@ -26,6 +27,7 @@ public class CreatePricingRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreatePricingRuleRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class CreatePricingRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModifierPercentage")
     public Double modifierPercentage;
+
     public CreatePricingRuleRequestBody withModifierPercentage(Double modifierPercentage) {
         this.modifierPercentage = modifierPercentage;
         return this;
@@ -47,6 +50,7 @@ public class CreatePricingRuleRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreatePricingRuleRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +62,7 @@ public class CreatePricingRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Operation")
     public String operation;
+
     public CreatePricingRuleRequestBody withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -68,6 +73,7 @@ public class CreatePricingRuleRequestBody {
      */
     @JsonProperty("Scope")
     public CreatePricingRuleRequestBodyScopeEnum scope;
+
     public CreatePricingRuleRequestBody withScope(CreatePricingRuleRequestBodyScopeEnum scope) {
         this.scope = scope;
         return this;
@@ -79,6 +85,7 @@ public class CreatePricingRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Service")
     public String service;
+
     public CreatePricingRuleRequestBody withService(String service) {
         this.service = service;
         return this;
@@ -90,6 +97,7 @@ public class CreatePricingRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreatePricingRuleRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -101,6 +109,7 @@ public class CreatePricingRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tiering")
     public CreatePricingRuleRequestBodyTiering tiering;
+
     public CreatePricingRuleRequestBody withTiering(CreatePricingRuleRequestBodyTiering tiering) {
         this.tiering = tiering;
         return this;
@@ -111,6 +120,7 @@ public class CreatePricingRuleRequestBody {
      */
     @JsonProperty("Type")
     public CreatePricingRuleRequestBodyTypeEnum type;
+
     public CreatePricingRuleRequestBody withType(CreatePricingRuleRequestBodyTypeEnum type) {
         this.type = type;
         return this;
@@ -122,9 +132,15 @@ public class CreatePricingRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsageType")
     public String usageType;
+
     public CreatePricingRuleRequestBody withUsageType(String usageType) {
         this.usageType = usageType;
         return this;
     }
     
+    public CreatePricingRuleRequestBody(@JsonProperty("Name") String name, @JsonProperty("Scope") CreatePricingRuleRequestBodyScopeEnum scope, @JsonProperty("Type") CreatePricingRuleRequestBodyTypeEnum type) {
+        this.name = name;
+        this.scope = scope;
+        this.type = type;
+  }
 }

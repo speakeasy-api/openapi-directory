@@ -18,9 +18,11 @@ public class MaintenanceScheduleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canReschedule")
     public Boolean canReschedule;
+
     public MaintenanceScheduleInput withCanReschedule(Boolean canReschedule) {
         this.canReschedule = canReschedule;
         return this;
     }
     
+    public MaintenanceScheduleInput(){}
 }

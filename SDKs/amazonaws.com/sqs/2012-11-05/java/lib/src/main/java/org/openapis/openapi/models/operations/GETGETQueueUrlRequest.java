@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETQueueUrlRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETQueueUrlActionEnum action;
+
     public GETGETQueueUrlRequest withAction(GETGETQueueUrlActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETGETQueueUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=QueueName")
     public String queueName;
+
     public GETGETQueueUrlRequest withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
@@ -29,6 +32,7 @@ public class GETGETQueueUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=QueueOwnerAWSAccountId")
     public String queueOwnerAWSAccountId;
+
     public GETGETQueueUrlRequest withQueueOwnerAWSAccountId(String queueOwnerAWSAccountId) {
         this.queueOwnerAWSAccountId = queueOwnerAWSAccountId;
         return this;
@@ -36,6 +40,7 @@ public class GETGETQueueUrlRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETQueueUrlVersionEnum version;
+
     public GETGETQueueUrlRequest withVersion(GETGETQueueUrlVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETGETQueueUrlRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETQueueUrlRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETGETQueueUrlRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETQueueUrlRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETGETQueueUrlRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETQueueUrlRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETGETQueueUrlRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETQueueUrlRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETGETQueueUrlRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETQueueUrlRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETGETQueueUrlRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETQueueUrlRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETGETQueueUrlRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETQueueUrlRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETQueueUrlRequest(@JsonProperty("Action") GETGETQueueUrlActionEnum action, @JsonProperty("QueueName") String queueName, @JsonProperty("Version") GETGETQueueUrlVersionEnum version) {
+        this.action = action;
+        this.queueName = queueName;
+        this.version = version;
+  }
 }

@@ -12,6 +12,7 @@ public class RegisterInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hostname")
     public String hostname;
+
     public RegisterInstanceRequest withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -20,6 +21,7 @@ public class RegisterInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceIdentity")
     public InstanceIdentity instanceIdentity;
+
     public RegisterInstanceRequest withInstanceIdentity(InstanceIdentity instanceIdentity) {
         this.instanceIdentity = instanceIdentity;
         return this;
@@ -28,6 +30,7 @@ public class RegisterInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateIp")
     public String privateIp;
+
     public RegisterInstanceRequest withPrivateIp(String privateIp) {
         this.privateIp = privateIp;
         return this;
@@ -36,6 +39,7 @@ public class RegisterInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicIp")
     public String publicIp;
+
     public RegisterInstanceRequest withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -44,6 +48,7 @@ public class RegisterInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RsaPublicKey")
     public String rsaPublicKey;
+
     public RegisterInstanceRequest withRsaPublicKey(String rsaPublicKey) {
         this.rsaPublicKey = rsaPublicKey;
         return this;
@@ -52,6 +57,7 @@ public class RegisterInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RsaPublicKeyFingerprint")
     public String rsaPublicKeyFingerprint;
+
     public RegisterInstanceRequest withRsaPublicKeyFingerprint(String rsaPublicKeyFingerprint) {
         this.rsaPublicKeyFingerprint = rsaPublicKeyFingerprint;
         return this;
@@ -59,9 +65,13 @@ public class RegisterInstanceRequest {
     
     @JsonProperty("StackId")
     public String stackId;
+
     public RegisterInstanceRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public RegisterInstanceRequest(@JsonProperty("StackId") String stackId) {
+        this.stackId = stackId;
+  }
 }

@@ -25,6 +25,7 @@ public class ImagePrediction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public ImagePrediction withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -36,6 +37,7 @@ public class ImagePrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ImagePrediction withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +49,7 @@ public class ImagePrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iteration")
     public String iteration;
+
     public ImagePrediction withIteration(String iteration) {
         this.iteration = iteration;
         return this;
@@ -58,6 +61,7 @@ public class ImagePrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictions")
     public Prediction[] predictions;
+
     public ImagePrediction withPredictions(Prediction[] predictions) {
         this.predictions = predictions;
         return this;
@@ -69,9 +73,11 @@ public class ImagePrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public ImagePrediction withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public ImagePrediction(){}
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeFleetsResultFleets {
     
     public DescribeFleetsResultFleetsActivityStatusEnum activityStatus;
+
     public DescribeFleetsResultFleets withActivityStatus(DescribeFleetsResultFleetsActivityStatusEnum activityStatus) {
         this.activityStatus = activityStatus;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFleetsResultFleets {
     
     
     public String clientToken;
+
     public DescribeFleetsResultFleets withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +28,7 @@ public class DescribeFleetsResultFleets {
     
     
     public String context;
+
     public DescribeFleetsResultFleets withContext(String context) {
         this.context = context;
         return this;
@@ -33,6 +36,7 @@ public class DescribeFleetsResultFleets {
     
     
     public OffsetDateTime createTime;
+
     public DescribeFleetsResultFleets withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +44,7 @@ public class DescribeFleetsResultFleets {
     
     
     public DescribeFleetsResultFleetsErrors[] errors;
+
     public DescribeFleetsResultFleets withErrors(DescribeFleetsResultFleetsErrors[] errors) {
         this.errors = errors;
         return this;
@@ -47,6 +52,7 @@ public class DescribeFleetsResultFleets {
     
     
     public DescribeFleetsResultFleetsExcessCapacityTerminationPolicyEnum excessCapacityTerminationPolicy;
+
     public DescribeFleetsResultFleets withExcessCapacityTerminationPolicy(DescribeFleetsResultFleetsExcessCapacityTerminationPolicyEnum excessCapacityTerminationPolicy) {
         this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
         return this;
@@ -54,6 +60,7 @@ public class DescribeFleetsResultFleets {
     
     
     public String fleetId;
+
     public DescribeFleetsResultFleets withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -61,6 +68,7 @@ public class DescribeFleetsResultFleets {
     
     
     public DescribeFleetsResultFleetsFleetStateEnum fleetState;
+
     public DescribeFleetsResultFleets withFleetState(DescribeFleetsResultFleetsFleetStateEnum fleetState) {
         this.fleetState = fleetState;
         return this;
@@ -68,6 +76,7 @@ public class DescribeFleetsResultFleets {
     
     
     public Double fulfilledCapacity;
+
     public DescribeFleetsResultFleets withFulfilledCapacity(Double fulfilledCapacity) {
         this.fulfilledCapacity = fulfilledCapacity;
         return this;
@@ -75,6 +84,7 @@ public class DescribeFleetsResultFleets {
     
     
     public Double fulfilledOnDemandCapacity;
+
     public DescribeFleetsResultFleets withFulfilledOnDemandCapacity(Double fulfilledOnDemandCapacity) {
         this.fulfilledOnDemandCapacity = fulfilledOnDemandCapacity;
         return this;
@@ -82,6 +92,7 @@ public class DescribeFleetsResultFleets {
     
     
     public DescribeFleetsResultFleetsInstances[] instances;
+
     public DescribeFleetsResultFleets withInstances(DescribeFleetsResultFleetsInstances[] instances) {
         this.instances = instances;
         return this;
@@ -89,6 +100,7 @@ public class DescribeFleetsResultFleets {
     
     
     public DescribeFleetsResultFleetsLaunchTemplateConfigs[] launchTemplateConfigs;
+
     public DescribeFleetsResultFleets withLaunchTemplateConfigs(DescribeFleetsResultFleetsLaunchTemplateConfigs[] launchTemplateConfigs) {
         this.launchTemplateConfigs = launchTemplateConfigs;
         return this;
@@ -96,6 +108,7 @@ public class DescribeFleetsResultFleets {
     
     
     public DescribeFleetsResultFleetsOnDemandOptions onDemandOptions;
+
     public DescribeFleetsResultFleets withOnDemandOptions(DescribeFleetsResultFleetsOnDemandOptions onDemandOptions) {
         this.onDemandOptions = onDemandOptions;
         return this;
@@ -103,6 +116,7 @@ public class DescribeFleetsResultFleets {
     
     
     public Boolean replaceUnhealthyInstances;
+
     public DescribeFleetsResultFleets withReplaceUnhealthyInstances(Boolean replaceUnhealthyInstances) {
         this.replaceUnhealthyInstances = replaceUnhealthyInstances;
         return this;
@@ -110,6 +124,7 @@ public class DescribeFleetsResultFleets {
     
     
     public DescribeFleetsResultFleetsSpotOptions spotOptions;
+
     public DescribeFleetsResultFleets withSpotOptions(DescribeFleetsResultFleetsSpotOptions spotOptions) {
         this.spotOptions = spotOptions;
         return this;
@@ -117,6 +132,7 @@ public class DescribeFleetsResultFleets {
     
     
     public DescribeFleetsResultFleetsTags[] tags;
+
     public DescribeFleetsResultFleets withTags(DescribeFleetsResultFleetsTags[] tags) {
         this.tags = tags;
         return this;
@@ -124,6 +140,7 @@ public class DescribeFleetsResultFleets {
     
     
     public DescribeFleetsResultFleetsTargetCapacitySpecification targetCapacitySpecification;
+
     public DescribeFleetsResultFleets withTargetCapacitySpecification(DescribeFleetsResultFleetsTargetCapacitySpecification targetCapacitySpecification) {
         this.targetCapacitySpecification = targetCapacitySpecification;
         return this;
@@ -131,6 +148,7 @@ public class DescribeFleetsResultFleets {
     
     
     public Boolean terminateInstancesWithExpiration;
+
     public DescribeFleetsResultFleets withTerminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
         this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
         return this;
@@ -138,6 +156,7 @@ public class DescribeFleetsResultFleets {
     
     
     public DescribeFleetsResultFleetsTypeEnum type;
+
     public DescribeFleetsResultFleets withType(DescribeFleetsResultFleetsTypeEnum type) {
         this.type = type;
         return this;
@@ -145,6 +164,7 @@ public class DescribeFleetsResultFleets {
     
     
     public OffsetDateTime validFrom;
+
     public DescribeFleetsResultFleets withValidFrom(OffsetDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
@@ -152,9 +172,11 @@ public class DescribeFleetsResultFleets {
     
     
     public OffsetDateTime validUntil;
+
     public DescribeFleetsResultFleets withValidUntil(OffsetDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public DescribeFleetsResultFleets(){}
 }

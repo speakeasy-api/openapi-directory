@@ -15,9 +15,11 @@ public class GetPlayerConnectionStatusResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Connections")
     public Connection[] connections;
+
     public GetPlayerConnectionStatusResult withConnections(Connection[] connections) {
         this.connections = connections;
         return this;
     }
     
+    public GetPlayerConnectionStatusResult(){}
 }

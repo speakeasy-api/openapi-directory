@@ -12,9 +12,13 @@ public class DisableDelegatedAdminAccountRequestBody {
      */
     @JsonProperty("delegatedAdminAccountId")
     public String delegatedAdminAccountId;
+
     public DisableDelegatedAdminAccountRequestBody withDelegatedAdminAccountId(String delegatedAdminAccountId) {
         this.delegatedAdminAccountId = delegatedAdminAccountId;
         return this;
     }
     
+    public DisableDelegatedAdminAccountRequestBody(@JsonProperty("delegatedAdminAccountId") String delegatedAdminAccountId) {
+        this.delegatedAdminAccountId = delegatedAdminAccountId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateSubnetsResponse {
@@ -12,6 +13,7 @@ public class AssociateSubnetsResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateSubnetsResponse associateSubnetsResponse;
+
     public AssociateSubnetsResponse withAssociateSubnetsResponse(org.openapis.openapi.models.shared.AssociateSubnetsResponse associateSubnetsResponse) {
         this.associateSubnetsResponse = associateSubnetsResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateSubnetsResponse {
     
     
     public String contentType;
+
     public AssociateSubnetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateSubnetsResponse {
      */
     
     public Object insufficientCapacityException;
+
     public AssociateSubnetsResponse withInsufficientCapacityException(Object insufficientCapacityException) {
         this.insufficientCapacityException = insufficientCapacityException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateSubnetsResponse {
      */
     
     public Object internalServerError;
+
     public AssociateSubnetsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class AssociateSubnetsResponse {
      */
     
     public Object invalidOperationException;
+
     public AssociateSubnetsResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateSubnetsResponse {
      */
     
     public Object invalidRequestException;
+
     public AssociateSubnetsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateSubnetsResponse {
      */
     
     public Object invalidTokenException;
+
     public AssociateSubnetsResponse withInvalidTokenException(Object invalidTokenException) {
         this.invalidTokenException = invalidTokenException;
         return this;
@@ -76,6 +84,7 @@ public class AssociateSubnetsResponse {
     
     
     public Integer statusCode;
+
     public AssociateSubnetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AssociateSubnetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateSubnetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class AssociateSubnetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateSubnetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class AssociateSubnetsResponse {
      */
     
     public Object throttlingException;
+
     public AssociateSubnetsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public AssociateSubnetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

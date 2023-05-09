@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWinProbabilityDataRequest {
@@ -12,9 +13,13 @@ public class GetWinProbabilityDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gameId")
     public Long gameId;
+
     public GetWinProbabilityDataRequest withGameId(Long gameId) {
         this.gameId = gameId;
         return this;
     }
     
+    public GetWinProbabilityDataRequest(@JsonProperty("gameId") Long gameId) {
+        this.gameId = gameId;
+  }
 }

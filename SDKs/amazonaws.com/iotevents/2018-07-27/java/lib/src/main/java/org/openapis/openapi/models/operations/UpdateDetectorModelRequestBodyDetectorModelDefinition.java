@@ -15,6 +15,7 @@ public class UpdateDetectorModelRequestBodyDetectorModelDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialStateName")
     public String initialStateName;
+
     public UpdateDetectorModelRequestBodyDetectorModelDefinition withInitialStateName(String initialStateName) {
         this.initialStateName = initialStateName;
         return this;
@@ -23,9 +24,11 @@ public class UpdateDetectorModelRequestBodyDetectorModelDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("states")
     public org.openapis.openapi.models.shared.State[] states;
+
     public UpdateDetectorModelRequestBodyDetectorModelDefinition withStates(org.openapis.openapi.models.shared.State[] states) {
         this.states = states;
         return this;
     }
     
+    public UpdateDetectorModelRequestBodyDetectorModelDefinition(){}
 }

@@ -18,9 +18,11 @@ public class ConsumptionMeteringConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ConsumptionMeteringConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public ConsumptionMeteringConfig(){}
 }

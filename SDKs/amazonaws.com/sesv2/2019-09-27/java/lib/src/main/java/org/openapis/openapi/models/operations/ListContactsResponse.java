@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListContactsResponse {
@@ -12,6 +13,7 @@ public class ListContactsResponse {
      */
     
     public Object badRequestException;
+
     public ListContactsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListContactsResponse {
     
     
     public String contentType;
+
     public ListContactsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListContactsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListContactsResponse listContactsResponse;
+
     public ListContactsResponse withListContactsResponse(org.openapis.openapi.models.shared.ListContactsResponse listContactsResponse) {
         this.listContactsResponse = listContactsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListContactsResponse {
      */
     
     public Object notFoundException;
+
     public ListContactsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListContactsResponse {
     
     
     public Integer statusCode;
+
     public ListContactsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListContactsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListContactsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListContactsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListContactsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListContactsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

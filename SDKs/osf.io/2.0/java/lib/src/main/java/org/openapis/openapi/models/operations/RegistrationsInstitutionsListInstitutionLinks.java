@@ -15,9 +15,11 @@ public class RegistrationsInstitutionsListInstitutionLinks {
      */
     
     public String self;
+
     public RegistrationsInstitutionsListInstitutionLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public RegistrationsInstitutionsListInstitutionLinks(){}
 }

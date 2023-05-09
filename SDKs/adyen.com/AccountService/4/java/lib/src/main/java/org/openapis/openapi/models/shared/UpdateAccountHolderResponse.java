@@ -18,6 +18,7 @@ public class UpdateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public UpdateAccountHolderResponse withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -26,6 +27,7 @@ public class UpdateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderDetails")
     public AccountHolderDetails accountHolderDetails;
+
     public UpdateAccountHolderResponse withAccountHolderDetails(AccountHolderDetails accountHolderDetails) {
         this.accountHolderDetails = accountHolderDetails;
         return this;
@@ -34,6 +36,7 @@ public class UpdateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderStatus")
     public AccountHolderStatus accountHolderStatus;
+
     public UpdateAccountHolderResponse withAccountHolderStatus(AccountHolderStatus accountHolderStatus) {
         this.accountHolderStatus = accountHolderStatus;
         return this;
@@ -45,6 +48,7 @@ public class UpdateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateAccountHolderResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -55,8 +59,9 @@ public class UpdateAccountHolderResponse {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
-    public ErrorFieldType[] invalidFields;
-    public UpdateAccountHolderResponse withInvalidFields(ErrorFieldType[] invalidFields) {
+    public ErrorFieldTypeWrapper[] invalidFields;
+
+    public UpdateAccountHolderResponse withInvalidFields(ErrorFieldTypeWrapper[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
     }
@@ -67,6 +72,7 @@ public class UpdateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalEntity")
     public UpdateAccountHolderResponseLegalEntityEnum legalEntity;
+
     public UpdateAccountHolderResponse withLegalEntity(UpdateAccountHolderResponseLegalEntityEnum legalEntity) {
         this.legalEntity = legalEntity;
         return this;
@@ -78,6 +84,7 @@ public class UpdateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public UpdateAccountHolderResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -89,6 +96,7 @@ public class UpdateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public UpdateAccountHolderResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -102,6 +110,7 @@ public class UpdateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedAsync")
     public Boolean submittedAsync;
+
     public UpdateAccountHolderResponse withSubmittedAsync(Boolean submittedAsync) {
         this.submittedAsync = submittedAsync;
         return this;
@@ -112,8 +121,9 @@ public class UpdateAccountHolderResponse {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedFields")
-    public FieldType[] updatedFields;
-    public UpdateAccountHolderResponse withUpdatedFields(FieldType[] updatedFields) {
+    public FieldTypeWrapper[] updatedFields;
+
+    public UpdateAccountHolderResponse withUpdatedFields(FieldTypeWrapper[] updatedFields) {
         this.updatedFields = updatedFields;
         return this;
     }
@@ -121,9 +131,11 @@ public class UpdateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification")
     public KYCVerificationResult verification;
+
     public UpdateAccountHolderResponse withVerification(KYCVerificationResult verification) {
         this.verification = verification;
         return this;
     }
     
+    public UpdateAccountHolderResponse(){}
 }

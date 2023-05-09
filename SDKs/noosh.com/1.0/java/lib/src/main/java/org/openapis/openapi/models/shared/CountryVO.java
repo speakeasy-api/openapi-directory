@@ -15,6 +15,7 @@ public class CountryVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constant_token")
     public String constantToken;
+
     public CountryVO withConstantToken(String constantToken) {
         this.constantToken = constantToken;
         return this;
@@ -23,6 +24,7 @@ public class CountryVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public CountryVO withCountry(String country) {
         this.country = country;
         return this;
@@ -31,9 +33,11 @@ public class CountryVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_id")
     public Long countryId;
+
     public CountryVO withCountryId(Long countryId) {
         this.countryId = countryId;
         return this;
     }
     
+    public CountryVO(){}
 }

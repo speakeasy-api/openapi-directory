@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSwaggerYamlResponse {
     
     public String contentType;
+
     public GetSwaggerYamlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSwaggerYamlResponse {
     
     
     public Integer statusCode;
+
     public GetSwaggerYamlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetSwaggerYamlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSwaggerYamlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetSwaggerYamlResponse {
      */
     
     public String getSwaggerYaml200TextYamlString;
+
     public GetSwaggerYamlResponse withGetSwaggerYaml200TextYamlString(String getSwaggerYaml200TextYamlString) {
         this.getSwaggerYaml200TextYamlString = getSwaggerYaml200TextYamlString;
         return this;
     }
     
+    public GetSwaggerYamlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeFeatureGroupRequest {
     @JsonProperty("FeatureGroupName")
     public String featureGroupName;
+
     public DescribeFeatureGroupRequest withFeatureGroupName(String featureGroupName) {
         this.featureGroupName = featureGroupName;
         return this;
@@ -19,9 +20,13 @@ public class DescribeFeatureGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFeatureGroupRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFeatureGroupRequest(@JsonProperty("FeatureGroupName") String featureGroupName) {
+        this.featureGroupName = featureGroupName;
+  }
 }

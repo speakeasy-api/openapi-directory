@@ -15,9 +15,11 @@ public class ResultDisplayLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public ResultDisplayField[] fields;
+
     public ResultDisplayLine withFields(ResultDisplayField[] fields) {
         this.fields = fields;
         return this;
     }
     
+    public ResultDisplayLine(){}
 }

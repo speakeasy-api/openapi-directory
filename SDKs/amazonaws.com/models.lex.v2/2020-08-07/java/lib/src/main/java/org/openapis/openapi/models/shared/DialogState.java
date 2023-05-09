@@ -18,6 +18,7 @@ public class DialogState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialogAction")
     public DialogAction dialogAction;
+
     public DialogState withDialogAction(DialogAction dialogAction) {
         this.dialogAction = dialogAction;
         return this;
@@ -29,6 +30,7 @@ public class DialogState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intent")
     public IntentOverride intent;
+
     public DialogState withIntent(IntentOverride intent) {
         this.intent = intent;
         return this;
@@ -37,9 +39,11 @@ public class DialogState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionAttributes")
     public java.util.Map<String, String> sessionAttributes;
+
     public DialogState withSessionAttributes(java.util.Map<String, String> sessionAttributes) {
         this.sessionAttributes = sessionAttributes;
         return this;
     }
     
+    public DialogState(){}
 }

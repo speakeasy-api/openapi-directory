@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLFTagsResponse {
@@ -12,6 +13,7 @@ public class ListLFTagsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListLFTagsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListLFTagsResponse {
     
     
     public String contentType;
+
     public ListLFTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListLFTagsResponse {
      */
     
     public Object entityNotFoundException;
+
     public ListLFTagsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class ListLFTagsResponse {
      */
     
     public Object internalServiceException;
+
     public ListLFTagsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ListLFTagsResponse {
      */
     
     public Object invalidInputException;
+
     public ListLFTagsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class ListLFTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLFTagsResponse listLFTagsResponse;
+
     public ListLFTagsResponse withListLFTagsResponse(org.openapis.openapi.models.shared.ListLFTagsResponse listLFTagsResponse) {
         this.listLFTagsResponse = listLFTagsResponse;
         return this;
@@ -69,6 +76,7 @@ public class ListLFTagsResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListLFTagsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class ListLFTagsResponse {
     
     
     public Integer statusCode;
+
     public ListLFTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListLFTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLFTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListLFTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

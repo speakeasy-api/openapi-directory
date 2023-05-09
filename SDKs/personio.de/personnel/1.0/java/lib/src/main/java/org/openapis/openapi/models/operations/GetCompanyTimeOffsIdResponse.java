@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCompanyTimeOffsIdResponse {
     
     public java.util.Map<String, Object> absencePeriodResponse;
+
     public GetCompanyTimeOffsIdResponse withAbsencePeriodResponse(java.util.Map<String, Object> absencePeriodResponse) {
         this.absencePeriodResponse = absencePeriodResponse;
         return this;
@@ -16,6 +18,7 @@ public class GetCompanyTimeOffsIdResponse {
     
     
     public String contentType;
+
     public GetCompanyTimeOffsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetCompanyTimeOffsIdResponse {
     
     
     public Integer statusCode;
+
     public GetCompanyTimeOffsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetCompanyTimeOffsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCompanyTimeOffsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCompanyTimeOffsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

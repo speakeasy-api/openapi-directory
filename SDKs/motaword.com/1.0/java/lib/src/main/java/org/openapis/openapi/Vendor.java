@@ -61,11 +61,9 @@ public class Vendor {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAvailableVendorsResponse res = new org.openapis.openapi.models.operations.GetAvailableVendorsResponse() {{
+        org.openapis.openapi.models.operations.GetAvailableVendorsResponse res = new org.openapis.openapi.models.operations.GetAvailableVendorsResponse(contentType, httpRes.statusCode()) {{
             userList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

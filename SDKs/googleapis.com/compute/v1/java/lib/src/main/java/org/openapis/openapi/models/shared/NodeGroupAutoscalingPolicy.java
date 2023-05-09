@@ -15,6 +15,7 @@ public class NodeGroupAutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNodes")
     public Integer maxNodes;
+
     public NodeGroupAutoscalingPolicy withMaxNodes(Integer maxNodes) {
         this.maxNodes = maxNodes;
         return this;
@@ -26,6 +27,7 @@ public class NodeGroupAutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minNodes")
     public Integer minNodes;
+
     public NodeGroupAutoscalingPolicy withMinNodes(Integer minNodes) {
         this.minNodes = minNodes;
         return this;
@@ -37,9 +39,11 @@ public class NodeGroupAutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public NodeGroupAutoscalingPolicyModeEnum mode;
+
     public NodeGroupAutoscalingPolicy withMode(NodeGroupAutoscalingPolicyModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public NodeGroupAutoscalingPolicy(){}
 }

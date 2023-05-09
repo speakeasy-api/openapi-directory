@@ -15,6 +15,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, Object> attributes;
+
     public Driver withAttributes(java.util.Map<String, Object> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Driver withId(Long id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Driver withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniqueId")
     public String uniqueId;
+
     public Driver withUniqueId(String uniqueId) {
         this.uniqueId = uniqueId;
         return this;
     }
     
+    public Driver(){}
 }

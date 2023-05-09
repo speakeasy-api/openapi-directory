@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HyperParameterTuningJobObjective {
     @JsonProperty("MetricName")
     public String metricName;
+
     public HyperParameterTuningJobObjective withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -19,9 +20,14 @@ public class HyperParameterTuningJobObjective {
     
     @JsonProperty("Type")
     public HyperParameterTuningJobObjectiveTypeEnum type;
+
     public HyperParameterTuningJobObjective withType(HyperParameterTuningJobObjectiveTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public HyperParameterTuningJobObjective(@JsonProperty("MetricName") String metricName, @JsonProperty("Type") HyperParameterTuningJobObjectiveTypeEnum type) {
+        this.metricName = metricName;
+        this.type = type;
+  }
 }

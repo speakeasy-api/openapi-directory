@@ -12,6 +12,7 @@ public class MicerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public MicerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class MicerRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public MicerRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -32,6 +34,7 @@ public class MicerRequestBodyCertificateParameters {
      */
     @JsonProperty("rollno")
     public String rollno;
+
     public MicerRequestBodyCertificateParameters withRollno(String rollno) {
         this.rollno = rollno;
         return this;
@@ -42,9 +45,16 @@ public class MicerRequestBodyCertificateParameters {
      */
     @JsonProperty("year")
     public String year;
+
     public MicerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public MicerRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("UID") String uid, @JsonProperty("rollno") String rollno, @JsonProperty("year") String year) {
+        this.fullName = fullName;
+        this.uid = uid;
+        this.rollno = rollno;
+        this.year = year;
+  }
 }

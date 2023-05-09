@@ -12,6 +12,7 @@ public class GetRecruitingPlayersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classification")
     public String classification;
+
     public GetRecruitingPlayersRequest withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -22,6 +23,7 @@ public class GetRecruitingPlayersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=position")
     public String position;
+
     public GetRecruitingPlayersRequest withPosition(String position) {
         this.position = position;
         return this;
@@ -32,6 +34,7 @@ public class GetRecruitingPlayersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String state;
+
     public GetRecruitingPlayersRequest withState(String state) {
         this.state = state;
         return this;
@@ -42,6 +45,7 @@ public class GetRecruitingPlayersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public GetRecruitingPlayersRequest withTeam(String team) {
         this.team = team;
         return this;
@@ -52,9 +56,11 @@ public class GetRecruitingPlayersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetRecruitingPlayersRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetRecruitingPlayersRequest(){}
 }

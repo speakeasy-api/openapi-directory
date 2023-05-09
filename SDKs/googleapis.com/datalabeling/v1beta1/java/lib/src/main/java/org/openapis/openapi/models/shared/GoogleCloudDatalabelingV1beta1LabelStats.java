@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1LabelStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exampleCount")
     public java.util.Map<String, String> exampleCount;
+
     public GoogleCloudDatalabelingV1beta1LabelStats withExampleCount(java.util.Map<String, String> exampleCount) {
         this.exampleCount = exampleCount;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1LabelStats(){}
 }

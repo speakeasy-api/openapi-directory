@@ -17,6 +17,7 @@ public class GetAllBankAccounts409ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public GetAllBankAccounts409ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +29,7 @@ public class GetAllBankAccounts409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public java.util.Map<String, Object> response;
+
     public GetAllBankAccounts409ApplicationJSON withResponse(java.util.Map<String, Object> response) {
         this.response = response;
         return this;
@@ -38,9 +40,14 @@ public class GetAllBankAccounts409ApplicationJSON {
      */
     @JsonProperty("status")
     public GetAllBankAccounts409ApplicationJSONStatusEnum status;
+
     public GetAllBankAccounts409ApplicationJSON withStatus(GetAllBankAccounts409ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetAllBankAccounts409ApplicationJSON(@JsonProperty("message") String message, @JsonProperty("status") GetAllBankAccounts409ApplicationJSONStatusEnum status) {
+        this.message = message;
+        this.status = status;
+  }
 }

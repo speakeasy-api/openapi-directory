@@ -15,9 +15,13 @@ public class AccountNonce {
      */
     @JsonProperty("value")
     public String value;
+
     public AccountNonce withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AccountNonce(@JsonProperty("value") String value) {
+        this.value = value;
+  }
 }

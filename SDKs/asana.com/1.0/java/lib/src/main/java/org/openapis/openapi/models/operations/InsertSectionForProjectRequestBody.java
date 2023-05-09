@@ -15,9 +15,11 @@ public class InsertSectionForProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ProjectSectionInsertRequest data;
+
     public InsertSectionForProjectRequestBody withData(org.openapis.openapi.models.shared.ProjectSectionInsertRequest data) {
         this.data = data;
         return this;
     }
     
+    public InsertSectionForProjectRequestBody(){}
 }

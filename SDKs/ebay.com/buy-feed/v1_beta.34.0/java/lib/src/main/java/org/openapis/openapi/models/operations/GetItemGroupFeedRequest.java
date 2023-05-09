@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemGroupFeedRequest {
@@ -12,6 +13,7 @@ public class GetItemGroupFeedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetItemGroupFeedRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetItemGroupFeedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
     public String range;
+
     public GetItemGroupFeedRequest withRange(String range) {
         this.range = range;
         return this;
@@ -32,6 +35,7 @@ public class GetItemGroupFeedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public GetItemGroupFeedRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -42,6 +46,7 @@ public class GetItemGroupFeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_id")
     public String categoryId;
+
     public GetItemGroupFeedRequest withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -52,6 +57,7 @@ public class GetItemGroupFeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public GetItemGroupFeedRequest withDate(String date) {
         this.date = date;
         return this;
@@ -62,9 +68,16 @@ public class GetItemGroupFeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=feed_scope")
     public String feedScope;
+
     public GetItemGroupFeedRequest withFeedScope(String feedScope) {
         this.feedScope = feedScope;
         return this;
     }
     
+    public GetItemGroupFeedRequest(@JsonProperty("Accept") String accept, @JsonProperty("X-EBAY-C-MARKETPLACE-ID") String xEbayCMarketplaceId, @JsonProperty("category_id") String categoryId, @JsonProperty("feed_scope") String feedScope) {
+        this.accept = accept;
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+        this.categoryId = categoryId;
+        this.feedScope = feedScope;
+  }
 }

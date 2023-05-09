@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse {
     
     public String contentType;
+
     public GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse {
     
     
     public Integer statusCode;
+
     public GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

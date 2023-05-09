@@ -15,6 +15,7 @@ public class DefaultMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public DefaultMessage withBody(String body) {
         this.body = body;
         return this;
@@ -23,9 +24,11 @@ public class DefaultMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Substitutions")
     public java.util.Map<String, String[]> substitutions;
+
     public DefaultMessage withSubstitutions(java.util.Map<String, String[]> substitutions) {
         this.substitutions = substitutions;
         return this;
     }
     
+    public DefaultMessage(){}
 }

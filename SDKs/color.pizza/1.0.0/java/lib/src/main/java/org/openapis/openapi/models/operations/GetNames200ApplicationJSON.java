@@ -15,6 +15,7 @@ public class GetNames200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colors")
     public org.openapis.openapi.models.shared.Color[] colors;
+
     public GetNames200ApplicationJSON withColors(org.openapis.openapi.models.shared.Color[] colors) {
         this.colors = colors;
         return this;
@@ -23,9 +24,11 @@ public class GetNames200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paletteTitle")
     public String paletteTitle;
+
     public GetNames200ApplicationJSON withPaletteTitle(String paletteTitle) {
         this.paletteTitle = paletteTitle;
         return this;
     }
     
+    public GetNames200ApplicationJSON(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamsByYearRequest {
@@ -12,6 +13,7 @@ public class GetTeamsByYearRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetTeamsByYearRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -22,6 +24,7 @@ public class GetTeamsByYearRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page_num")
     public Long pageNum;
+
     public GetTeamsByYearRequest withPageNum(Long pageNum) {
         this.pageNum = pageNum;
         return this;
@@ -32,9 +35,14 @@ public class GetTeamsByYearRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
     public Long year;
+
     public GetTeamsByYearRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetTeamsByYearRequest(@JsonProperty("page_num") Long pageNum, @JsonProperty("year") Long year) {
+        this.pageNum = pageNum;
+        this.year = year;
+  }
 }

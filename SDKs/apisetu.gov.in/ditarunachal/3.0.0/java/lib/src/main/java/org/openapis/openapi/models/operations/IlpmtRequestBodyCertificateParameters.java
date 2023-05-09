@@ -12,6 +12,7 @@ public class IlpmtRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public IlpmtRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class IlpmtRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public IlpmtRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -32,6 +34,7 @@ public class IlpmtRequestBodyCertificateParameters {
      */
     @JsonProperty("eILPAppId")
     public String eILPAppId;
+
     public IlpmtRequestBodyCertificateParameters withEILPAppId(String eILPAppId) {
         this.eILPAppId = eILPAppId;
         return this;
@@ -42,9 +45,16 @@ public class IlpmtRequestBodyCertificateParameters {
      */
     @JsonProperty("eILPContactNumber")
     public String eILPContactNumber;
+
     public IlpmtRequestBodyCertificateParameters withEILPContactNumber(String eILPContactNumber) {
         this.eILPContactNumber = eILPContactNumber;
         return this;
     }
     
+    public IlpmtRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("UID") String uid, @JsonProperty("eILPAppId") String eILPAppId, @JsonProperty("eILPContactNumber") String eILPContactNumber) {
+        this.fullName = fullName;
+        this.uid = uid;
+        this.eILPAppId = eILPAppId;
+        this.eILPContactNumber = eILPContactNumber;
+  }
 }

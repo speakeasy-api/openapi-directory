@@ -12,6 +12,7 @@ public class TagResourceRequestBody {
      */
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public TagResourceRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -22,9 +23,14 @@ public class TagResourceRequestBody {
      */
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public TagResourceRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagResourceRequestBody(@JsonProperty("resourceArn") String resourceArn, @JsonProperty("tags") org.openapis.openapi.models.shared.Tag[] tags) {
+        this.resourceArn = resourceArn;
+        this.tags = tags;
+  }
 }

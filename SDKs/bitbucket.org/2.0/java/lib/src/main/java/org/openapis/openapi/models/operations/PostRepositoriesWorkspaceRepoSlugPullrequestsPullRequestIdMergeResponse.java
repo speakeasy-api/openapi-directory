@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeResponse {
     
     public String contentType;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeResp
     
     
     public Integer statusCode;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -34,6 +38,7 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeResp
      */
     
     public java.util.Map<String, Object> error;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -44,9 +49,14 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeResp
      */
     
     public java.util.Map<String, Object> pullrequest;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeResponse withPullrequest(java.util.Map<String, Object> pullrequest) {
         this.pullrequest = pullrequest;
         return this;
     }
     
+    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

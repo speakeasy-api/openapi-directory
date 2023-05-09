@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDocumentaiV1ProcessResponse - Response message for the process document method.
+ * GoogleCloudDocumentaiV1ProcessResponse - Response message for the ProcessDocument method.
  */
 public class GoogleCloudDocumentaiV1ProcessResponse {
     /**
@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1ProcessResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public GoogleCloudDocumentaiV1Document document;
+
     public GoogleCloudDocumentaiV1ProcessResponse withDocument(GoogleCloudDocumentaiV1Document document) {
         this.document = document;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1ProcessResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("humanReviewStatus")
     public GoogleCloudDocumentaiV1HumanReviewStatus humanReviewStatus;
+
     public GoogleCloudDocumentaiV1ProcessResponse withHumanReviewStatus(GoogleCloudDocumentaiV1HumanReviewStatus humanReviewStatus) {
         this.humanReviewStatus = humanReviewStatus;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1ProcessResponse(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PagespeedApiPagespeedResponseV4LoadingExperienceMetrics {
     
     public String category;
+
     public PagespeedApiPagespeedResponseV4LoadingExperienceMetrics withCategory(String category) {
         this.category = category;
         return this;
@@ -19,6 +20,7 @@ public class PagespeedApiPagespeedResponseV4LoadingExperienceMetrics {
     
     
     public PagespeedApiPagespeedResponseV4LoadingExperienceMetricsDistributions[] distributions;
+
     public PagespeedApiPagespeedResponseV4LoadingExperienceMetrics withDistributions(PagespeedApiPagespeedResponseV4LoadingExperienceMetricsDistributions[] distributions) {
         this.distributions = distributions;
         return this;
@@ -26,9 +28,11 @@ public class PagespeedApiPagespeedResponseV4LoadingExperienceMetrics {
     
     
     public Integer median;
+
     public PagespeedApiPagespeedResponseV4LoadingExperienceMetrics withMedian(Integer median) {
         this.median = median;
         return this;
     }
     
+    public PagespeedApiPagespeedResponseV4LoadingExperienceMetrics(){}
 }

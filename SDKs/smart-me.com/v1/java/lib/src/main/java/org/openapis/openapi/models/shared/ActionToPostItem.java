@@ -18,6 +18,7 @@ public class ActionToPostItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObisCode")
     public String obisCode;
+
     public ActionToPostItem withObisCode(String obisCode) {
         this.obisCode = obisCode;
         return this;
@@ -29,9 +30,11 @@ public class ActionToPostItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Double value;
+
     public ActionToPostItem withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public ActionToPostItem(){}
 }

@@ -18,6 +18,7 @@ public class InterconnectMacsec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failOpen")
     public Boolean failOpen;
+
     public InterconnectMacsec withFailOpen(Boolean failOpen) {
         this.failOpen = failOpen;
         return this;
@@ -29,9 +30,11 @@ public class InterconnectMacsec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preSharedKeys")
     public InterconnectMacsecPreSharedKey[] preSharedKeys;
+
     public InterconnectMacsec withPreSharedKeys(InterconnectMacsecPreSharedKey[] preSharedKeys) {
         this.preSharedKeys = preSharedKeys;
         return this;
     }
     
+    public InterconnectMacsec(){}
 }

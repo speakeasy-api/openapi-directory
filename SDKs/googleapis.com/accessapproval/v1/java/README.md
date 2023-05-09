@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveSecurity;
 import org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveRequest;
 import org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveResponse;
+import org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ApproveApprovalRequestMessage;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -30,35 +29,36 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AccessapprovalProjectsApprovalRequestsApproveRequest req = new AccessapprovalProjectsApprovalRequestsApproveRequest() {{
-                dollarXgafv = "2";
+            AccessapprovalProjectsApprovalRequestsApproveRequest req = new AccessapprovalProjectsApprovalRequestsApproveRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 approveApprovalRequestMessage = new ApproveApprovalRequestMessage() {{
-                    expireTime = "provident";
-                }};
-                accessToken = "distinctio";
-                alt = "proto";
-                callback = "unde";
-                fields = "nulla";
-                key = "corrupti";
-                name = "illum";
+                    expireTime = "distinctio";
+                }};;
+                accessToken = "quibusdam";
+                alt = AltEnum.MEDIA;
+                callback = "nulla";
+                fields = "corrupti";
+                key = "illum";
                 oauthToken = "vel";
                 prettyPrint = false;
                 quotaUser = "error";
                 uploadType = "deserunt";
                 uploadProtocol = "suscipit";
-            }}            
+            }};            
 
-            AccessapprovalProjectsApprovalRequestsApproveResponse res = sdk.projects.accessapprovalProjectsApprovalRequestsApprove(req, new AccessapprovalProjectsApprovalRequestsApproveSecurity() {{
+            AccessapprovalProjectsApprovalRequestsApproveResponse res = sdk.projects.accessapprovalProjectsApprovalRequestsApprove(req, new AccessapprovalProjectsApprovalRequestsApproveSecurity("iure", "magnam") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.approvalRequest.isPresent()) {
+            if (res.approvalRequest != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -66,15 +66,15 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `accessapprovalProjectsApprovalRequestsApprove` - Approves a request and returns the updated ApprovalRequest. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
-* `accessapprovalProjectsApprovalRequestsDismiss` - Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to the resource if another request has been made and approved. It is equivalent in effect to ignoring the request altogether. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
-* `accessapprovalProjectsApprovalRequestsGet` - Gets an approval request. Returns NOT_FOUND if the request does not exist.
-* `accessapprovalProjectsApprovalRequestsInvalidate` - Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does not deny access to the resource if another request has been made and approved. It only invalidates a single approval. Returns FAILED_PRECONDITION if the request exists but is not in an approved state.
-* `accessapprovalProjectsApprovalRequestsList` - Lists approval requests associated with a project, folder, or organization. Approval requests can be filtered by state (pending, active, dismissed). The order is reverse chronological.
-* `accessapprovalProjectsDeleteAccessApprovalSettings` - Deletes the settings associated with a project, folder, or organization. This will have the effect of disabling Access Approval for the project, folder, or organization, but only if all ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level of the hierarchy, then Access Approval will still be enabled at this level as the settings are inherited.
-* `accessapprovalProjectsUpdateAccessApprovalSettings` - Updates the settings associated with a project, folder, or organization. Settings to update are determined by the value of field_mask.
+* [accessapprovalProjectsApprovalRequestsApprove](docs/projects/README.md#accessapprovalprojectsapprovalrequestsapprove) - Approves a request and returns the updated ApprovalRequest. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
+* [accessapprovalProjectsApprovalRequestsDismiss](docs/projects/README.md#accessapprovalprojectsapprovalrequestsdismiss) - Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to the resource if another request has been made and approved. It is equivalent in effect to ignoring the request altogether. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
+* [accessapprovalProjectsApprovalRequestsGet](docs/projects/README.md#accessapprovalprojectsapprovalrequestsget) - Gets an approval request. Returns NOT_FOUND if the request does not exist.
+* [accessapprovalProjectsApprovalRequestsInvalidate](docs/projects/README.md#accessapprovalprojectsapprovalrequestsinvalidate) - Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does not deny access to the resource if another request has been made and approved. It only invalidates a single approval. Returns FAILED_PRECONDITION if the request exists but is not in an approved state.
+* [accessapprovalProjectsApprovalRequestsList](docs/projects/README.md#accessapprovalprojectsapprovalrequestslist) - Lists approval requests associated with a project, folder, or organization. Approval requests can be filtered by state (pending, active, dismissed). The order is reverse chronological.
+* [accessapprovalProjectsDeleteAccessApprovalSettings](docs/projects/README.md#accessapprovalprojectsdeleteaccessapprovalsettings) - Deletes the settings associated with a project, folder, or organization. This will have the effect of disabling Access Approval for the project, folder, or organization, but only if all ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level of the hierarchy, then Access Approval will still be enabled at this level as the settings are inherited.
+* [accessapprovalProjectsUpdateAccessApprovalSettings](docs/projects/README.md#accessapprovalprojectsupdateaccessapprovalsettings) - Updates the settings associated with a project, folder, or organization. Settings to update are determined by the value of field_mask.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroidpublisherInternalappsharingartifactsUploadapkResponse {
     
     public String contentType;
+
     public AndroidpublisherInternalappsharingartifactsUploadapkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AndroidpublisherInternalappsharingartifactsUploadapkResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalAppSharingArtifact internalAppSharingArtifact;
+
     public AndroidpublisherInternalappsharingartifactsUploadapkResponse withInternalAppSharingArtifact(org.openapis.openapi.models.shared.InternalAppSharingArtifact internalAppSharingArtifact) {
         this.internalAppSharingArtifact = internalAppSharingArtifact;
         return this;
@@ -26,6 +29,7 @@ public class AndroidpublisherInternalappsharingartifactsUploadapkResponse {
     
     
     public Integer statusCode;
+
     public AndroidpublisherInternalappsharingartifactsUploadapkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AndroidpublisherInternalappsharingartifactsUploadapkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroidpublisherInternalappsharingartifactsUploadapkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AndroidpublisherInternalappsharingartifactsUploadapkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

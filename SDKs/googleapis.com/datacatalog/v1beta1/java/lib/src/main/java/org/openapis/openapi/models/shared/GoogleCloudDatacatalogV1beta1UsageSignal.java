@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1beta1UsageSignal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDatacatalogV1beta1UsageSignal withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogV1beta1UsageSignal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageWithinTimeRange")
     public java.util.Map<String, GoogleCloudDatacatalogV1beta1UsageStats> usageWithinTimeRange;
+
     public GoogleCloudDatacatalogV1beta1UsageSignal withUsageWithinTimeRange(java.util.Map<String, GoogleCloudDatacatalogV1beta1UsageStats> usageWithinTimeRange) {
         this.usageWithinTimeRange = usageWithinTimeRange;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1UsageSignal(){}
 }

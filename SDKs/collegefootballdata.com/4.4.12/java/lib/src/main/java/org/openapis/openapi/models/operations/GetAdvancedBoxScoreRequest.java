@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAdvancedBoxScoreRequest {
@@ -12,9 +13,13 @@ public class GetAdvancedBoxScoreRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gameId")
     public Long gameId;
+
     public GetAdvancedBoxScoreRequest withGameId(Long gameId) {
         this.gameId = gameId;
         return this;
     }
     
+    public GetAdvancedBoxScoreRequest(@JsonProperty("gameId") Long gameId) {
+        this.gameId = gameId;
+  }
 }

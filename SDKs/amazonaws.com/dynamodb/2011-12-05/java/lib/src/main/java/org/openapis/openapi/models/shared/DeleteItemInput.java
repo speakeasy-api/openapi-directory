@@ -15,6 +15,7 @@ public class DeleteItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expected")
     public java.util.Map<String, ExpectedAttributeValue> expected;
+
     public DeleteItemInput withExpected(java.util.Map<String, ExpectedAttributeValue> expected) {
         this.expected = expected;
         return this;
@@ -25,6 +26,7 @@ public class DeleteItemInput {
      */
     @JsonProperty("Key")
     public Key key;
+
     public DeleteItemInput withKey(Key key) {
         this.key = key;
         return this;
@@ -36,6 +38,7 @@ public class DeleteItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnValues")
     public ReturnValueEnum returnValues;
+
     public DeleteItemInput withReturnValues(ReturnValueEnum returnValues) {
         this.returnValues = returnValues;
         return this;
@@ -43,9 +46,14 @@ public class DeleteItemInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public DeleteItemInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DeleteItemInput(@JsonProperty("Key") Key key, @JsonProperty("TableName") String tableName) {
+        this.key = key;
+        this.tableName = tableName;
+  }
 }

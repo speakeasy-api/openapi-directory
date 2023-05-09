@@ -15,6 +15,7 @@ public class ShippingService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public ShippingService withId(Integer id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class ShippingService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ShippingService withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class ShippingService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_code")
     public String serviceCode;
+
     public ShippingService withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
     
+    public ShippingService(){}
 }

@@ -14,6 +14,7 @@ public class UpdateRobotApplicationRequestBody {
      */
     @JsonProperty("application")
     public String application;
+
     public UpdateRobotApplicationRequestBody withApplication(String application) {
         this.application = application;
         return this;
@@ -25,6 +26,7 @@ public class UpdateRobotApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentRevisionId")
     public String currentRevisionId;
+
     public UpdateRobotApplicationRequestBody withCurrentRevisionId(String currentRevisionId) {
         this.currentRevisionId = currentRevisionId;
         return this;
@@ -36,6 +38,7 @@ public class UpdateRobotApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public UpdateRobotApplicationRequestBodyEnvironment environment;
+
     public UpdateRobotApplicationRequestBody withEnvironment(UpdateRobotApplicationRequestBodyEnvironment environment) {
         this.environment = environment;
         return this;
@@ -46,6 +49,7 @@ public class UpdateRobotApplicationRequestBody {
      */
     @JsonProperty("robotSoftwareSuite")
     public UpdateRobotApplicationRequestBodyRobotSoftwareSuite robotSoftwareSuite;
+
     public UpdateRobotApplicationRequestBody withRobotSoftwareSuite(UpdateRobotApplicationRequestBodyRobotSoftwareSuite robotSoftwareSuite) {
         this.robotSoftwareSuite = robotSoftwareSuite;
         return this;
@@ -57,9 +61,14 @@ public class UpdateRobotApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public org.openapis.openapi.models.shared.SourceConfig[] sources;
+
     public UpdateRobotApplicationRequestBody withSources(org.openapis.openapi.models.shared.SourceConfig[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public UpdateRobotApplicationRequestBody(@JsonProperty("application") String application, @JsonProperty("robotSoftwareSuite") UpdateRobotApplicationRequestBodyRobotSoftwareSuite robotSoftwareSuite) {
+        this.application = application;
+        this.robotSoftwareSuite = robotSoftwareSuite;
+  }
 }

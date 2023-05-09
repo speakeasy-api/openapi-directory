@@ -15,9 +15,11 @@ public class InvokeDeviceMethodResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceMethodResponse")
     public String deviceMethodResponse;
+
     public InvokeDeviceMethodResponse withDeviceMethodResponse(String deviceMethodResponse) {
         this.deviceMethodResponse = deviceMethodResponse;
         return this;
     }
     
+    public InvokeDeviceMethodResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MergePullRequestBySquashResponse {
@@ -12,6 +13,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object commitMessageLengthExceededException;
+
     public MergePullRequestBySquashResponse withCommitMessageLengthExceededException(Object commitMessageLengthExceededException) {
         this.commitMessageLengthExceededException = commitMessageLengthExceededException;
         return this;
@@ -22,6 +24,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object concurrentReferenceUpdateException;
+
     public MergePullRequestBySquashResponse withConcurrentReferenceUpdateException(Object concurrentReferenceUpdateException) {
         this.concurrentReferenceUpdateException = concurrentReferenceUpdateException;
         return this;
@@ -29,6 +32,7 @@ public class MergePullRequestBySquashResponse {
     
     
     public String contentType;
+
     public MergePullRequestBySquashResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public MergePullRequestBySquashResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -49,6 +54,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public MergePullRequestBySquashResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -59,6 +65,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public MergePullRequestBySquashResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -69,6 +76,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public MergePullRequestBySquashResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public MergePullRequestBySquashResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -89,6 +98,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object fileContentSizeLimitExceededException;
+
     public MergePullRequestBySquashResponse withFileContentSizeLimitExceededException(Object fileContentSizeLimitExceededException) {
         this.fileContentSizeLimitExceededException = fileContentSizeLimitExceededException;
         return this;
@@ -99,6 +109,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object folderContentSizeLimitExceededException;
+
     public MergePullRequestBySquashResponse withFolderContentSizeLimitExceededException(Object folderContentSizeLimitExceededException) {
         this.folderContentSizeLimitExceededException = folderContentSizeLimitExceededException;
         return this;
@@ -109,6 +120,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object invalidCommitIdException;
+
     public MergePullRequestBySquashResponse withInvalidCommitIdException(Object invalidCommitIdException) {
         this.invalidCommitIdException = invalidCommitIdException;
         return this;
@@ -119,6 +131,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object invalidConflictDetailLevelException;
+
     public MergePullRequestBySquashResponse withInvalidConflictDetailLevelException(Object invalidConflictDetailLevelException) {
         this.invalidConflictDetailLevelException = invalidConflictDetailLevelException;
         return this;
@@ -129,6 +142,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object invalidConflictResolutionException;
+
     public MergePullRequestBySquashResponse withInvalidConflictResolutionException(Object invalidConflictResolutionException) {
         this.invalidConflictResolutionException = invalidConflictResolutionException;
         return this;
@@ -139,6 +153,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object invalidConflictResolutionStrategyException;
+
     public MergePullRequestBySquashResponse withInvalidConflictResolutionStrategyException(Object invalidConflictResolutionStrategyException) {
         this.invalidConflictResolutionStrategyException = invalidConflictResolutionStrategyException;
         return this;
@@ -149,6 +164,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object invalidEmailException;
+
     public MergePullRequestBySquashResponse withInvalidEmailException(Object invalidEmailException) {
         this.invalidEmailException = invalidEmailException;
         return this;
@@ -159,6 +175,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object invalidFileModeException;
+
     public MergePullRequestBySquashResponse withInvalidFileModeException(Object invalidFileModeException) {
         this.invalidFileModeException = invalidFileModeException;
         return this;
@@ -169,6 +186,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object invalidPathException;
+
     public MergePullRequestBySquashResponse withInvalidPathException(Object invalidPathException) {
         this.invalidPathException = invalidPathException;
         return this;
@@ -179,6 +197,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object invalidPullRequestIdException;
+
     public MergePullRequestBySquashResponse withInvalidPullRequestIdException(Object invalidPullRequestIdException) {
         this.invalidPullRequestIdException = invalidPullRequestIdException;
         return this;
@@ -189,6 +208,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object invalidReplacementContentException;
+
     public MergePullRequestBySquashResponse withInvalidReplacementContentException(Object invalidReplacementContentException) {
         this.invalidReplacementContentException = invalidReplacementContentException;
         return this;
@@ -199,6 +219,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object invalidReplacementTypeException;
+
     public MergePullRequestBySquashResponse withInvalidReplacementTypeException(Object invalidReplacementTypeException) {
         this.invalidReplacementTypeException = invalidReplacementTypeException;
         return this;
@@ -209,6 +230,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public MergePullRequestBySquashResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -219,6 +241,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object manualMergeRequiredException;
+
     public MergePullRequestBySquashResponse withManualMergeRequiredException(Object manualMergeRequiredException) {
         this.manualMergeRequiredException = manualMergeRequiredException;
         return this;
@@ -229,6 +252,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object maximumConflictResolutionEntriesExceededException;
+
     public MergePullRequestBySquashResponse withMaximumConflictResolutionEntriesExceededException(Object maximumConflictResolutionEntriesExceededException) {
         this.maximumConflictResolutionEntriesExceededException = maximumConflictResolutionEntriesExceededException;
         return this;
@@ -239,6 +263,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object maximumFileContentToLoadExceededException;
+
     public MergePullRequestBySquashResponse withMaximumFileContentToLoadExceededException(Object maximumFileContentToLoadExceededException) {
         this.maximumFileContentToLoadExceededException = maximumFileContentToLoadExceededException;
         return this;
@@ -249,6 +274,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object maximumItemsToCompareExceededException;
+
     public MergePullRequestBySquashResponse withMaximumItemsToCompareExceededException(Object maximumItemsToCompareExceededException) {
         this.maximumItemsToCompareExceededException = maximumItemsToCompareExceededException;
         return this;
@@ -259,6 +285,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public org.openapis.openapi.models.shared.MergePullRequestBySquashOutput mergePullRequestBySquashOutput;
+
     public MergePullRequestBySquashResponse withMergePullRequestBySquashOutput(org.openapis.openapi.models.shared.MergePullRequestBySquashOutput mergePullRequestBySquashOutput) {
         this.mergePullRequestBySquashOutput = mergePullRequestBySquashOutput;
         return this;
@@ -269,6 +296,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object multipleConflictResolutionEntriesException;
+
     public MergePullRequestBySquashResponse withMultipleConflictResolutionEntriesException(Object multipleConflictResolutionEntriesException) {
         this.multipleConflictResolutionEntriesException = multipleConflictResolutionEntriesException;
         return this;
@@ -279,6 +307,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object nameLengthExceededException;
+
     public MergePullRequestBySquashResponse withNameLengthExceededException(Object nameLengthExceededException) {
         this.nameLengthExceededException = nameLengthExceededException;
         return this;
@@ -289,6 +318,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object pathRequiredException;
+
     public MergePullRequestBySquashResponse withPathRequiredException(Object pathRequiredException) {
         this.pathRequiredException = pathRequiredException;
         return this;
@@ -299,6 +329,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object pullRequestAlreadyClosedException;
+
     public MergePullRequestBySquashResponse withPullRequestAlreadyClosedException(Object pullRequestAlreadyClosedException) {
         this.pullRequestAlreadyClosedException = pullRequestAlreadyClosedException;
         return this;
@@ -309,6 +340,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object pullRequestApprovalRulesNotSatisfiedException;
+
     public MergePullRequestBySquashResponse withPullRequestApprovalRulesNotSatisfiedException(Object pullRequestApprovalRulesNotSatisfiedException) {
         this.pullRequestApprovalRulesNotSatisfiedException = pullRequestApprovalRulesNotSatisfiedException;
         return this;
@@ -319,6 +351,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object pullRequestDoesNotExistException;
+
     public MergePullRequestBySquashResponse withPullRequestDoesNotExistException(Object pullRequestDoesNotExistException) {
         this.pullRequestDoesNotExistException = pullRequestDoesNotExistException;
         return this;
@@ -329,6 +362,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object pullRequestIdRequiredException;
+
     public MergePullRequestBySquashResponse withPullRequestIdRequiredException(Object pullRequestIdRequiredException) {
         this.pullRequestIdRequiredException = pullRequestIdRequiredException;
         return this;
@@ -339,6 +373,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object replacementContentRequiredException;
+
     public MergePullRequestBySquashResponse withReplacementContentRequiredException(Object replacementContentRequiredException) {
         this.replacementContentRequiredException = replacementContentRequiredException;
         return this;
@@ -349,6 +384,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object replacementTypeRequiredException;
+
     public MergePullRequestBySquashResponse withReplacementTypeRequiredException(Object replacementTypeRequiredException) {
         this.replacementTypeRequiredException = replacementTypeRequiredException;
         return this;
@@ -359,6 +395,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public MergePullRequestBySquashResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -369,6 +406,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public MergePullRequestBySquashResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -379,6 +417,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object repositoryNotAssociatedWithPullRequestException;
+
     public MergePullRequestBySquashResponse withRepositoryNotAssociatedWithPullRequestException(Object repositoryNotAssociatedWithPullRequestException) {
         this.repositoryNotAssociatedWithPullRequestException = repositoryNotAssociatedWithPullRequestException;
         return this;
@@ -386,6 +425,7 @@ public class MergePullRequestBySquashResponse {
     
     
     public Integer statusCode;
+
     public MergePullRequestBySquashResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -393,6 +433,7 @@ public class MergePullRequestBySquashResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MergePullRequestBySquashResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -403,6 +444,7 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object tipOfSourceReferenceIsDifferentException;
+
     public MergePullRequestBySquashResponse withTipOfSourceReferenceIsDifferentException(Object tipOfSourceReferenceIsDifferentException) {
         this.tipOfSourceReferenceIsDifferentException = tipOfSourceReferenceIsDifferentException;
         return this;
@@ -413,9 +455,14 @@ public class MergePullRequestBySquashResponse {
      */
     
     public Object tipsDivergenceExceededException;
+
     public MergePullRequestBySquashResponse withTipsDivergenceExceededException(Object tipsDivergenceExceededException) {
         this.tipsDivergenceExceededException = tipsDivergenceExceededException;
         return this;
     }
     
+    public MergePullRequestBySquashResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class GlobalAlert {
     
     public String alertHtml;
+
     public GlobalAlert withAlertHtml(String alertHtml) {
         this.alertHtml = alertHtml;
         return this;
@@ -16,6 +17,7 @@ public class GlobalAlert {
     
     
     public String alertKey;
+
     public GlobalAlert withAlertKey(String alertKey) {
         this.alertKey = alertKey;
         return this;
@@ -23,6 +25,7 @@ public class GlobalAlert {
     
     
     public Integer alertLevel;
+
     public GlobalAlert withAlertLevel(Integer alertLevel) {
         this.alertLevel = alertLevel;
         return this;
@@ -30,6 +33,7 @@ public class GlobalAlert {
     
     
     public String alertLink;
+
     public GlobalAlert withAlertLink(String alertLink) {
         this.alertLink = alertLink;
         return this;
@@ -37,6 +41,7 @@ public class GlobalAlert {
     
     
     public OffsetDateTime alertTimestamp;
+
     public GlobalAlert withAlertTimestamp(OffsetDateTime alertTimestamp) {
         this.alertTimestamp = alertTimestamp;
         return this;
@@ -44,6 +49,7 @@ public class GlobalAlert {
     
     
     public Integer alertType;
+
     public GlobalAlert withAlertType(Integer alertType) {
         this.alertType = alertType;
         return this;
@@ -51,9 +57,11 @@ public class GlobalAlert {
     
     
     public StreamInfo streamInfo;
+
     public GlobalAlert withStreamInfo(StreamInfo streamInfo) {
         this.streamInfo = streamInfo;
         return this;
     }
     
+    public GlobalAlert(){}
 }

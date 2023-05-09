@@ -18,6 +18,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalInfo")
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfo principalInfo;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput withPrincipalInfo(GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfo principalInfo) {
         this.principalInfo = principalInfo;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceInfo")
     public GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo resourceInfo;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput withResourceInfo(GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo resourceInfo) {
         this.resourceInfo = resourceInfo;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput(){}
 }

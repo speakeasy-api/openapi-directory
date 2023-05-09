@@ -22,6 +22,7 @@ public class StreamRecord {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ApproximateCreationDateTime")
     public OffsetDateTime approximateCreationDateTime;
+
     public StreamRecord withApproximateCreationDateTime(OffsetDateTime approximateCreationDateTime) {
         this.approximateCreationDateTime = approximateCreationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class StreamRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keys")
     public java.util.Map<String, AttributeValue> keys;
+
     public StreamRecord withKeys(java.util.Map<String, AttributeValue> keys) {
         this.keys = keys;
         return this;
@@ -38,6 +40,7 @@ public class StreamRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NewImage")
     public java.util.Map<String, AttributeValue> newImage;
+
     public StreamRecord withNewImage(java.util.Map<String, AttributeValue> newImage) {
         this.newImage = newImage;
         return this;
@@ -46,6 +49,7 @@ public class StreamRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OldImage")
     public java.util.Map<String, AttributeValue> oldImage;
+
     public StreamRecord withOldImage(java.util.Map<String, AttributeValue> oldImage) {
         this.oldImage = oldImage;
         return this;
@@ -54,6 +58,7 @@ public class StreamRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SequenceNumber")
     public String sequenceNumber;
+
     public StreamRecord withSequenceNumber(String sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
@@ -62,6 +67,7 @@ public class StreamRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeBytes")
     public Long sizeBytes;
+
     public StreamRecord withSizeBytes(Long sizeBytes) {
         this.sizeBytes = sizeBytes;
         return this;
@@ -70,9 +76,11 @@ public class StreamRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamViewType")
     public StreamViewTypeEnum streamViewType;
+
     public StreamRecord withStreamViewType(StreamViewTypeEnum streamViewType) {
         this.streamViewType = streamViewType;
         return this;
     }
     
+    public StreamRecord(){}
 }

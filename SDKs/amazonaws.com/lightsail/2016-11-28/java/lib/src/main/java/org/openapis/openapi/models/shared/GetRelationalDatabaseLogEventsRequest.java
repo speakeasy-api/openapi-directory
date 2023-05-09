@@ -19,6 +19,7 @@ public class GetRelationalDatabaseLogEventsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetRelationalDatabaseLogEventsRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -26,6 +27,7 @@ public class GetRelationalDatabaseLogEventsRequest {
     
     @JsonProperty("logStreamName")
     public String logStreamName;
+
     public GetRelationalDatabaseLogEventsRequest withLogStreamName(String logStreamName) {
         this.logStreamName = logStreamName;
         return this;
@@ -34,6 +36,7 @@ public class GetRelationalDatabaseLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetRelationalDatabaseLogEventsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -41,6 +44,7 @@ public class GetRelationalDatabaseLogEventsRequest {
     
     @JsonProperty("relationalDatabaseName")
     public String relationalDatabaseName;
+
     public GetRelationalDatabaseLogEventsRequest withRelationalDatabaseName(String relationalDatabaseName) {
         this.relationalDatabaseName = relationalDatabaseName;
         return this;
@@ -49,6 +53,7 @@ public class GetRelationalDatabaseLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startFromHead")
     public Boolean startFromHead;
+
     public GetRelationalDatabaseLogEventsRequest withStartFromHead(Boolean startFromHead) {
         this.startFromHead = startFromHead;
         return this;
@@ -59,9 +64,14 @@ public class GetRelationalDatabaseLogEventsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GetRelationalDatabaseLogEventsRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetRelationalDatabaseLogEventsRequest(@JsonProperty("logStreamName") String logStreamName, @JsonProperty("relationalDatabaseName") String relationalDatabaseName) {
+        this.logStreamName = logStreamName;
+        this.relationalDatabaseName = relationalDatabaseName;
+  }
 }

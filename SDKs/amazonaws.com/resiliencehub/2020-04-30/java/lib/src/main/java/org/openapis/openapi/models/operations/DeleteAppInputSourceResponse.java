@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAppInputSourceResponse {
@@ -12,6 +13,7 @@ public class DeleteAppInputSourceResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteAppInputSourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteAppInputSourceResponse {
      */
     
     public Object conflictException;
+
     public DeleteAppInputSourceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAppInputSourceResponse {
     
     
     public String contentType;
+
     public DeleteAppInputSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAppInputSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteAppInputSourceResponse deleteAppInputSourceResponse;
+
     public DeleteAppInputSourceResponse withDeleteAppInputSourceResponse(org.openapis.openapi.models.shared.DeleteAppInputSourceResponse deleteAppInputSourceResponse) {
         this.deleteAppInputSourceResponse = deleteAppInputSourceResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAppInputSourceResponse {
      */
     
     public Object internalServerException;
+
     public DeleteAppInputSourceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteAppInputSourceResponse {
     
     
     public Integer statusCode;
+
     public DeleteAppInputSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteAppInputSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAppInputSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteAppInputSourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAppInputSourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteAppInputSourceResponse {
      */
     
     public Object throttlingException;
+
     public DeleteAppInputSourceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteAppInputSourceResponse {
      */
     
     public Object validationException;
+
     public DeleteAppInputSourceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteAppInputSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class GetLoadBalancerMetricDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricData")
     public MetricDatapoint[] metricData;
+
     public GetLoadBalancerMetricDataResult withMetricData(MetricDatapoint[] metricData) {
         this.metricData = metricData;
         return this;
@@ -23,9 +24,11 @@ public class GetLoadBalancerMetricDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public LoadBalancerMetricNameEnum metricName;
+
     public GetLoadBalancerMetricDataResult withMetricName(LoadBalancerMetricNameEnum metricName) {
         this.metricName = metricName;
         return this;
     }
     
+    public GetLoadBalancerMetricDataResult(){}
 }

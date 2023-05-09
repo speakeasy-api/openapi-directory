@@ -3,16 +3,15 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateRequest;
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateResponse;
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateSecurity;
 import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateSecurityOption1;
 import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateSecurityOption2;
 import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateSecurityOption3;
-import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateSecurity;
-import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateRequest;
-import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateResponse;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.CreateProfileRequestProfileTypeEnum;
 import org.openapis.openapi.models.shared.CreateProfileRequest;
+import org.openapis.openapi.models.shared.CreateProfileRequestProfileTypeEnum;
 import org.openapis.openapi.models.shared.Deployment;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -22,49 +21,49 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CloudprofilerProjectsProfilesCreateRequest req = new CloudprofilerProjectsProfilesCreateRequest() {{
-                dollarXgafv = "2";
+            CloudprofilerProjectsProfilesCreateRequest req = new CloudprofilerProjectsProfilesCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 createProfileRequest = new CreateProfileRequest() {{
                     deployment = new Deployment() {{
                         labels = new java.util.HashMap<String, String>() {{
-                            put("distinctio", "quibusdam");
-                            put("unde", "nulla");
-                            put("corrupti", "illum");
+                            put("quibusdam", "unde");
+                            put("nulla", "corrupti");
+                            put("illum", "vel");
                         }};
-                        projectId = "vel";
-                        target = "error";
-                    }};
+                        projectId = "error";
+                        target = "deserunt";
+                    }};;
                     profileType = new org.openapis.openapi.models.shared.CreateProfileRequestProfileTypeEnum[]{{
-                        add("HEAP"),
-                        add("HEAP"),
-                        add("WALL"),
+                        add(CreateProfileRequestProfileTypeEnum.HEAP),
+                        add(CreateProfileRequestProfileTypeEnum.WALL),
                     }};
-                }};
+                }};;
                 accessToken = "debitis";
-                alt = "json";
+                alt = AltEnum.JSON;
                 callback = "delectus";
                 fields = "tempora";
                 key = "suscipit";
                 oauthToken = "molestiae";
-                parent = "minus";
                 prettyPrint = false;
-                quotaUser = "placeat";
-                uploadType = "voluptatum";
-                uploadProtocol = "iusto";
-            }}            
+                quotaUser = "minus";
+                uploadType = "placeat";
+                uploadProtocol = "voluptatum";
+            }};            
 
             CloudprofilerProjectsProfilesCreateResponse res = sdk.projects.cloudprofilerProjectsProfilesCreate(req, new CloudprofilerProjectsProfilesCreateSecurity() {{
-                option1 = new CloudprofilerProjectsProfilesCreateSecurityOption1() {{
+                option1 = new CloudprofilerProjectsProfilesCreateSecurityOption1("iusto", "excepturi") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.profile.isPresent()) {
+            if (res.profile != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

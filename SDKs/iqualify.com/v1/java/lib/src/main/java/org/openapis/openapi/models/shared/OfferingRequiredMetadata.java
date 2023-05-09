@@ -12,6 +12,7 @@ public class OfferingRequiredMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public OfferingRequiredMetadata withCategory(String category) {
         this.category = category;
         return this;
@@ -20,6 +21,7 @@ public class OfferingRequiredMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public String level;
+
     public OfferingRequiredMetadata withLevel(String level) {
         this.level = level;
         return this;
@@ -28,6 +30,7 @@ public class OfferingRequiredMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public OfferingRequiredMetadata withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -36,9 +39,11 @@ public class OfferingRequiredMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public String topic;
+
     public OfferingRequiredMetadata withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public OfferingRequiredMetadata(){}
 }

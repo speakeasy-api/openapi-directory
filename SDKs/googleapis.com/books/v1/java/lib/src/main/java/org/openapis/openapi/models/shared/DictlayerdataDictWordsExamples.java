@@ -12,6 +12,7 @@ public class DictlayerdataDictWordsExamples {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public DictlayerdataDictWordsExamplesSource source;
+
     public DictlayerdataDictWordsExamples withSource(DictlayerdataDictWordsExamplesSource source) {
         this.source = source;
         return this;
@@ -20,9 +21,11 @@ public class DictlayerdataDictWordsExamples {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public DictlayerdataDictWordsExamples withText(String text) {
         this.text = text;
         return this;
     }
     
+    public DictlayerdataDictWordsExamples(){}
 }

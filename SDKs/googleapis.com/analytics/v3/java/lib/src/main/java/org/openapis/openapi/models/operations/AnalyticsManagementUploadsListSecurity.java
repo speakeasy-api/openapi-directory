@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AnalyticsManagementUploadsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsManagementUploadsListSecurityOption1 option1;
+
     public AnalyticsManagementUploadsListSecurity withOption1(AnalyticsManagementUploadsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class AnalyticsManagementUploadsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsManagementUploadsListSecurityOption2 option2;
+
     public AnalyticsManagementUploadsListSecurity withOption2(AnalyticsManagementUploadsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class AnalyticsManagementUploadsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsManagementUploadsListSecurityOption3 option3;
+
     public AnalyticsManagementUploadsListSecurity withOption3(AnalyticsManagementUploadsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public AnalyticsManagementUploadsListSecurity(){}
 }

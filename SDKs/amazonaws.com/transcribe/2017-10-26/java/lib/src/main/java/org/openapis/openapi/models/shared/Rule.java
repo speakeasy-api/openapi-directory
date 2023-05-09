@@ -15,6 +15,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterruptionFilter")
     public InterruptionFilter interruptionFilter;
+
     public Rule withInterruptionFilter(InterruptionFilter interruptionFilter) {
         this.interruptionFilter = interruptionFilter;
         return this;
@@ -23,6 +24,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonTalkTimeFilter")
     public NonTalkTimeFilter nonTalkTimeFilter;
+
     public Rule withNonTalkTimeFilter(NonTalkTimeFilter nonTalkTimeFilter) {
         this.nonTalkTimeFilter = nonTalkTimeFilter;
         return this;
@@ -31,6 +33,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SentimentFilter")
     public SentimentFilter sentimentFilter;
+
     public Rule withSentimentFilter(SentimentFilter sentimentFilter) {
         this.sentimentFilter = sentimentFilter;
         return this;
@@ -39,9 +42,11 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TranscriptFilter")
     public TranscriptFilter transcriptFilter;
+
     public Rule withTranscriptFilter(TranscriptFilter transcriptFilter) {
         this.transcriptFilter = transcriptFilter;
         return this;
     }
     
+    public Rule(){}
 }

@@ -15,9 +15,11 @@ public class GetCognitoEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Events")
     public java.util.Map<String, String> events;
+
     public GetCognitoEventsResponse withEvents(java.util.Map<String, String> events) {
         this.events = events;
         return this;
     }
     
+    public GetCognitoEventsResponse(){}
 }

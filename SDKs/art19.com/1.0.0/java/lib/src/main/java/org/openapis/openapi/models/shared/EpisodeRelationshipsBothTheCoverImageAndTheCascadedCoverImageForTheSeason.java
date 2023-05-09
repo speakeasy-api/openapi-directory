@@ -12,9 +12,11 @@ public class EpisodeRelationshipsBothTheCoverImageAndTheCascadedCoverImageForThe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceIdentifier[] data;
+
     public EpisodeRelationshipsBothTheCoverImageAndTheCascadedCoverImageForTheSeason withData(ResourceIdentifier[] data) {
         this.data = data;
         return this;
     }
     
+    public EpisodeRelationshipsBothTheCoverImageAndTheCascadedCoverImageForTheSeason(){}
 }

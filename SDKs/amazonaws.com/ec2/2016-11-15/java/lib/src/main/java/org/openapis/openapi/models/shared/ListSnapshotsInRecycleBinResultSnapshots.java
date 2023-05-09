@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ListSnapshotsInRecycleBinResultSnapshots {
     
     public String description;
+
     public ListSnapshotsInRecycleBinResultSnapshots withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class ListSnapshotsInRecycleBinResultSnapshots {
     
     
     public OffsetDateTime recycleBinEnterTime;
+
     public ListSnapshotsInRecycleBinResultSnapshots withRecycleBinEnterTime(OffsetDateTime recycleBinEnterTime) {
         this.recycleBinEnterTime = recycleBinEnterTime;
         return this;
@@ -26,6 +28,7 @@ public class ListSnapshotsInRecycleBinResultSnapshots {
     
     
     public OffsetDateTime recycleBinExitTime;
+
     public ListSnapshotsInRecycleBinResultSnapshots withRecycleBinExitTime(OffsetDateTime recycleBinExitTime) {
         this.recycleBinExitTime = recycleBinExitTime;
         return this;
@@ -33,6 +36,7 @@ public class ListSnapshotsInRecycleBinResultSnapshots {
     
     
     public String snapshotId;
+
     public ListSnapshotsInRecycleBinResultSnapshots withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -40,9 +44,11 @@ public class ListSnapshotsInRecycleBinResultSnapshots {
     
     
     public String volumeId;
+
     public ListSnapshotsInRecycleBinResultSnapshots withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public ListSnapshotsInRecycleBinResultSnapshots(){}
 }

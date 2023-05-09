@@ -15,9 +15,11 @@ public class ParametricS3MonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logUri")
     public String logUri;
+
     public ParametricS3MonitoringConfiguration withLogUri(String logUri) {
         this.logUri = logUri;
         return this;
     }
     
+    public ParametricS3MonitoringConfiguration(){}
 }

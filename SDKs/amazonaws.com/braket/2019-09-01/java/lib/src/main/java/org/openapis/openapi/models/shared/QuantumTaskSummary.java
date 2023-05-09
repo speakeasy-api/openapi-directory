@@ -21,6 +21,7 @@ public class QuantumTaskSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public QuantumTaskSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -28,6 +29,7 @@ public class QuantumTaskSummary {
     
     @JsonProperty("deviceArn")
     public String deviceArn;
+
     public QuantumTaskSummary withDeviceArn(String deviceArn) {
         this.deviceArn = deviceArn;
         return this;
@@ -38,6 +40,7 @@ public class QuantumTaskSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endedAt")
     public OffsetDateTime endedAt;
+
     public QuantumTaskSummary withEndedAt(OffsetDateTime endedAt) {
         this.endedAt = endedAt;
         return this;
@@ -45,6 +48,7 @@ public class QuantumTaskSummary {
     
     @JsonProperty("outputS3Bucket")
     public String outputS3Bucket;
+
     public QuantumTaskSummary withOutputS3Bucket(String outputS3Bucket) {
         this.outputS3Bucket = outputS3Bucket;
         return this;
@@ -52,6 +56,7 @@ public class QuantumTaskSummary {
     
     @JsonProperty("outputS3Directory")
     public String outputS3Directory;
+
     public QuantumTaskSummary withOutputS3Directory(String outputS3Directory) {
         this.outputS3Directory = outputS3Directory;
         return this;
@@ -59,6 +64,7 @@ public class QuantumTaskSummary {
     
     @JsonProperty("quantumTaskArn")
     public String quantumTaskArn;
+
     public QuantumTaskSummary withQuantumTaskArn(String quantumTaskArn) {
         this.quantumTaskArn = quantumTaskArn;
         return this;
@@ -66,6 +72,7 @@ public class QuantumTaskSummary {
     
     @JsonProperty("shots")
     public Long shots;
+
     public QuantumTaskSummary withShots(Long shots) {
         this.shots = shots;
         return this;
@@ -73,6 +80,7 @@ public class QuantumTaskSummary {
     
     @JsonProperty("status")
     public QuantumTaskStatusEnum status;
+
     public QuantumTaskSummary withStatus(QuantumTaskStatusEnum status) {
         this.status = status;
         return this;
@@ -81,9 +89,19 @@ public class QuantumTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public QuantumTaskSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public QuantumTaskSummary(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("deviceArn") String deviceArn, @JsonProperty("outputS3Bucket") String outputS3Bucket, @JsonProperty("outputS3Directory") String outputS3Directory, @JsonProperty("quantumTaskArn") String quantumTaskArn, @JsonProperty("shots") Long shots, @JsonProperty("status") QuantumTaskStatusEnum status) {
+        this.createdAt = createdAt;
+        this.deviceArn = deviceArn;
+        this.outputS3Bucket = outputS3Bucket;
+        this.outputS3Directory = outputS3Directory;
+        this.quantumTaskArn = quantumTaskArn;
+        this.shots = shots;
+        this.status = status;
+  }
 }

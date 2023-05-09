@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1CompaniesRegionsIdRequest {
@@ -12,6 +13,7 @@ public class PutSetupV1CompaniesRegionsIdRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RegionUpdateModel regionUpdateModel;
+
     public PutSetupV1CompaniesRegionsIdRequest withRegionUpdateModel(org.openapis.openapi.models.shared.RegionUpdateModel regionUpdateModel) {
         this.regionUpdateModel = regionUpdateModel;
         return this;
@@ -22,9 +24,13 @@ public class PutSetupV1CompaniesRegionsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutSetupV1CompaniesRegionsIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PutSetupV1CompaniesRegionsIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -15,6 +15,7 @@ public class ImportationMonitoringLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activateAutoImport")
     public LinksImportationActivateAutoImportLink activateAutoImport;
+
     public ImportationMonitoringLinks withActivateAutoImport(LinksImportationActivateAutoImportLink activateAutoImport) {
         this.activateAutoImport = activateAutoImport;
         return this;
@@ -23,6 +24,7 @@ public class ImportationMonitoringLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancel")
     public LinksImportationCancelLink cancel;
+
     public ImportationMonitoringLinks withCancel(LinksImportationCancelLink cancel) {
         this.cancel = cancel;
         return this;
@@ -31,6 +33,7 @@ public class ImportationMonitoringLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogColumns")
     public LinksImportationGetDetectedCatalogColumnsLink catalogColumns;
+
     public ImportationMonitoringLinks withCatalogColumns(LinksImportationGetDetectedCatalogColumnsLink catalogColumns) {
         this.catalogColumns = catalogColumns;
         return this;
@@ -39,6 +42,7 @@ public class ImportationMonitoringLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commit")
     public LinksImportationCommitLink commit;
+
     public ImportationMonitoringLinks withCommit(LinksImportationCommitLink commit) {
         this.commit = commit;
         return this;
@@ -47,6 +51,7 @@ public class ImportationMonitoringLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitColumns")
     public LinksImportationCommitColumnsLink commitColumns;
+
     public ImportationMonitoringLinks withCommitColumns(LinksImportationCommitColumnsLink commitColumns) {
         this.commitColumns = commitColumns;
         return this;
@@ -55,6 +60,7 @@ public class ImportationMonitoringLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configureRemainingCatalogColumns")
     public LinksImportationConfigureRemainingCatalogColumnsLink configureRemainingCatalogColumns;
+
     public ImportationMonitoringLinks withConfigureRemainingCatalogColumns(LinksImportationConfigureRemainingCatalogColumnsLink configureRemainingCatalogColumns) {
         this.configureRemainingCatalogColumns = configureRemainingCatalogColumns;
         return this;
@@ -63,6 +69,7 @@ public class ImportationMonitoringLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customColumns")
     public LinksImportationGetCustomColumnsLink customColumns;
+
     public ImportationMonitoringLinks withCustomColumns(LinksImportationGetCustomColumnsLink customColumns) {
         this.customColumns = customColumns;
         return this;
@@ -71,6 +78,7 @@ public class ImportationMonitoringLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productSamples")
     public LinksImportationGetProductSampleLink productSamples;
+
     public ImportationMonitoringLinks withProductSamples(LinksImportationGetProductSampleLink productSamples) {
         this.productSamples = productSamples;
         return this;
@@ -78,6 +86,7 @@ public class ImportationMonitoringLinks {
     
     @JsonProperty("self")
     public LinksImportationGetImportationMonitoringLink self;
+
     public ImportationMonitoringLinks withSelf(LinksImportationGetImportationMonitoringLink self) {
         this.self = self;
         return this;
@@ -85,9 +94,14 @@ public class ImportationMonitoringLinks {
     
     @JsonProperty("technicalProgression")
     public LinksImportationTechnicalProgressionLink technicalProgression;
+
     public ImportationMonitoringLinks withTechnicalProgression(LinksImportationTechnicalProgressionLink technicalProgression) {
         this.technicalProgression = technicalProgression;
         return this;
     }
     
+    public ImportationMonitoringLinks(@JsonProperty("self") LinksImportationGetImportationMonitoringLink self, @JsonProperty("technicalProgression") LinksImportationTechnicalProgressionLink technicalProgression) {
+        this.self = self;
+        this.technicalProgression = technicalProgression;
+  }
 }

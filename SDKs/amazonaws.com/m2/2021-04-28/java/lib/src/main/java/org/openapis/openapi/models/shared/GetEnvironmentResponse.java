@@ -20,6 +20,7 @@ public class GetEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actualCapacity")
     public Long actualCapacity;
+
     public GetEnvironmentResponse withActualCapacity(Long actualCapacity) {
         this.actualCapacity = actualCapacity;
         return this;
@@ -29,6 +30,7 @@ public class GetEnvironmentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetEnvironmentResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -37,6 +39,7 @@ public class GetEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetEnvironmentResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class GetEnvironmentResponse {
     
     @JsonProperty("engineType")
     public EngineTypeEnum engineType;
+
     public GetEnvironmentResponse withEngineType(EngineTypeEnum engineType) {
         this.engineType = engineType;
         return this;
@@ -51,6 +55,7 @@ public class GetEnvironmentResponse {
     
     @JsonProperty("engineVersion")
     public String engineVersion;
+
     public GetEnvironmentResponse withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -58,6 +63,7 @@ public class GetEnvironmentResponse {
     
     @JsonProperty("environmentArn")
     public String environmentArn;
+
     public GetEnvironmentResponse withEnvironmentArn(String environmentArn) {
         this.environmentArn = environmentArn;
         return this;
@@ -65,6 +71,7 @@ public class GetEnvironmentResponse {
     
     @JsonProperty("environmentId")
     public String environmentId;
+
     public GetEnvironmentResponse withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -73,6 +80,7 @@ public class GetEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highAvailabilityConfig")
     public HighAvailabilityConfig highAvailabilityConfig;
+
     public GetEnvironmentResponse withHighAvailabilityConfig(HighAvailabilityConfig highAvailabilityConfig) {
         this.highAvailabilityConfig = highAvailabilityConfig;
         return this;
@@ -80,6 +88,7 @@ public class GetEnvironmentResponse {
     
     @JsonProperty("instanceType")
     public String instanceType;
+
     public GetEnvironmentResponse withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -88,6 +97,7 @@ public class GetEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public GetEnvironmentResponse withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -96,6 +106,7 @@ public class GetEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancerArn")
     public String loadBalancerArn;
+
     public GetEnvironmentResponse withLoadBalancerArn(String loadBalancerArn) {
         this.loadBalancerArn = loadBalancerArn;
         return this;
@@ -103,6 +114,7 @@ public class GetEnvironmentResponse {
     
     @JsonProperty("name")
     public String name;
+
     public GetEnvironmentResponse withName(String name) {
         this.name = name;
         return this;
@@ -111,6 +123,7 @@ public class GetEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingMaintenance")
     public PendingMaintenance pendingMaintenance;
+
     public GetEnvironmentResponse withPendingMaintenance(PendingMaintenance pendingMaintenance) {
         this.pendingMaintenance = pendingMaintenance;
         return this;
@@ -119,6 +132,7 @@ public class GetEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public GetEnvironmentResponse withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -127,6 +141,7 @@ public class GetEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publiclyAccessible")
     public Boolean publiclyAccessible;
+
     public GetEnvironmentResponse withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -134,6 +149,7 @@ public class GetEnvironmentResponse {
     
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public GetEnvironmentResponse withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -141,6 +157,7 @@ public class GetEnvironmentResponse {
     
     @JsonProperty("status")
     public EnvironmentLifecycleEnum status;
+
     public GetEnvironmentResponse withStatus(EnvironmentLifecycleEnum status) {
         this.status = status;
         return this;
@@ -149,6 +166,7 @@ public class GetEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public GetEnvironmentResponse withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -157,6 +175,7 @@ public class GetEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageConfigurations")
     public StorageConfiguration[] storageConfigurations;
+
     public GetEnvironmentResponse withStorageConfigurations(StorageConfiguration[] storageConfigurations) {
         this.storageConfigurations = storageConfigurations;
         return this;
@@ -164,6 +183,7 @@ public class GetEnvironmentResponse {
     
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public GetEnvironmentResponse withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -172,6 +192,7 @@ public class GetEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetEnvironmentResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -179,9 +200,23 @@ public class GetEnvironmentResponse {
     
     @JsonProperty("vpcId")
     public String vpcId;
+
     public GetEnvironmentResponse withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public GetEnvironmentResponse(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("engineType") EngineTypeEnum engineType, @JsonProperty("engineVersion") String engineVersion, @JsonProperty("environmentArn") String environmentArn, @JsonProperty("environmentId") String environmentId, @JsonProperty("instanceType") String instanceType, @JsonProperty("name") String name, @JsonProperty("securityGroupIds") String[] securityGroupIds, @JsonProperty("status") EnvironmentLifecycleEnum status, @JsonProperty("subnetIds") String[] subnetIds, @JsonProperty("vpcId") String vpcId) {
+        this.creationTime = creationTime;
+        this.engineType = engineType;
+        this.engineVersion = engineVersion;
+        this.environmentArn = environmentArn;
+        this.environmentId = environmentId;
+        this.instanceType = instanceType;
+        this.name = name;
+        this.securityGroupIds = securityGroupIds;
+        this.status = status;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
+  }
 }

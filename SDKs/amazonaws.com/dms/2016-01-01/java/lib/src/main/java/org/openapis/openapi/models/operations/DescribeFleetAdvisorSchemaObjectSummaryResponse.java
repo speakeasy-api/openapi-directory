@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFleetAdvisorSchemaObjectSummaryResponse {
     
     public String contentType;
+
     public DescribeFleetAdvisorSchemaObjectSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFleetAdvisorSchemaObjectSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFleetAdvisorSchemaObjectSummaryResponse describeFleetAdvisorSchemaObjectSummaryResponse;
+
     public DescribeFleetAdvisorSchemaObjectSummaryResponse withDescribeFleetAdvisorSchemaObjectSummaryResponse(org.openapis.openapi.models.shared.DescribeFleetAdvisorSchemaObjectSummaryResponse describeFleetAdvisorSchemaObjectSummaryResponse) {
         this.describeFleetAdvisorSchemaObjectSummaryResponse = describeFleetAdvisorSchemaObjectSummaryResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFleetAdvisorSchemaObjectSummaryResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public DescribeFleetAdvisorSchemaObjectSummaryResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -36,6 +40,7 @@ public class DescribeFleetAdvisorSchemaObjectSummaryResponse {
     
     
     public Integer statusCode;
+
     public DescribeFleetAdvisorSchemaObjectSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeFleetAdvisorSchemaObjectSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFleetAdvisorSchemaObjectSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeFleetAdvisorSchemaObjectSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

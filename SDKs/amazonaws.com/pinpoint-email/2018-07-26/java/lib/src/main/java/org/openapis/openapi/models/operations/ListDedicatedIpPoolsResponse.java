@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDedicatedIpPoolsResponse {
@@ -12,6 +13,7 @@ public class ListDedicatedIpPoolsResponse {
      */
     
     public Object badRequestException;
+
     public ListDedicatedIpPoolsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListDedicatedIpPoolsResponse {
     
     
     public String contentType;
+
     public ListDedicatedIpPoolsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDedicatedIpPoolsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDedicatedIpPoolsResponse listDedicatedIpPoolsResponse;
+
     public ListDedicatedIpPoolsResponse withListDedicatedIpPoolsResponse(org.openapis.openapi.models.shared.ListDedicatedIpPoolsResponse listDedicatedIpPoolsResponse) {
         this.listDedicatedIpPoolsResponse = listDedicatedIpPoolsResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListDedicatedIpPoolsResponse {
     
     
     public Integer statusCode;
+
     public ListDedicatedIpPoolsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListDedicatedIpPoolsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDedicatedIpPoolsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListDedicatedIpPoolsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListDedicatedIpPoolsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListDedicatedIpPoolsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

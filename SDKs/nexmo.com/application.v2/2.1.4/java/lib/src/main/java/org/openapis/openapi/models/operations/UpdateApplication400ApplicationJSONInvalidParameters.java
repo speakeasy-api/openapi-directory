@@ -12,6 +12,7 @@ public class UpdateApplication400ApplicationJSONInvalidParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateApplication400ApplicationJSONInvalidParameters withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class UpdateApplication400ApplicationJSONInvalidParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public UpdateApplication400ApplicationJSONInvalidParameters withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public UpdateApplication400ApplicationJSONInvalidParameters(){}
 }

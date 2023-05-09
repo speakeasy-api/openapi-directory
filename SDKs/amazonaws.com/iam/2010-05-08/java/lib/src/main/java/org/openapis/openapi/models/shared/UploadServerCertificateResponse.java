@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UploadServerCertificateResponse {
     
     public ServerCertificateMetadata serverCertificateMetadata;
+
     public UploadServerCertificateResponse withServerCertificateMetadata(ServerCertificateMetadata serverCertificateMetadata) {
         this.serverCertificateMetadata = serverCertificateMetadata;
         return this;
@@ -19,9 +20,11 @@ public class UploadServerCertificateResponse {
     
     
     public Tag[] tags;
+
     public UploadServerCertificateResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public UploadServerCertificateResponse(){}
 }

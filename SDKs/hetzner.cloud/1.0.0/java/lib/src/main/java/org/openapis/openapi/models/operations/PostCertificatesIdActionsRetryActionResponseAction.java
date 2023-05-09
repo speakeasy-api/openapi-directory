@@ -12,6 +12,7 @@ public class PostCertificatesIdActionsRetryActionResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostCertificatesIdActionsRetryActionResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostCertificatesIdActionsRetryActionResponseAction {
      */
     @JsonProperty("error")
     public PostCertificatesIdActionsRetryActionResponseActionError error;
+
     public PostCertificatesIdActionsRetryActionResponseAction withError(PostCertificatesIdActionsRetryActionResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostCertificatesIdActionsRetryActionResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostCertificatesIdActionsRetryActionResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostCertificatesIdActionsRetryActionResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostCertificatesIdActionsRetryActionResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostCertificatesIdActionsRetryActionResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostCertificatesIdActionsRetryActionResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostCertificatesIdActionsRetryActionResponseAction {
      */
     @JsonProperty("resources")
     public PostCertificatesIdActionsRetryActionResponseActionResources[] resources;
+
     public PostCertificatesIdActionsRetryActionResponseAction withResources(PostCertificatesIdActionsRetryActionResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostCertificatesIdActionsRetryActionResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostCertificatesIdActionsRetryActionResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostCertificatesIdActionsRetryActionResponseAction {
      */
     @JsonProperty("status")
     public PostCertificatesIdActionsRetryActionResponseActionStatusEnum status;
+
     public PostCertificatesIdActionsRetryActionResponseAction withStatus(PostCertificatesIdActionsRetryActionResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostCertificatesIdActionsRetryActionResponseAction(@JsonProperty("command") String command, @JsonProperty("error") PostCertificatesIdActionsRetryActionResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostCertificatesIdActionsRetryActionResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostCertificatesIdActionsRetryActionResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

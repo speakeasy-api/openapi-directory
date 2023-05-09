@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SSADistanceResponse {
     @JsonProperty("found")
     public java.util.Map<String, Object> found;
+
     public SSADistanceResponse withFound(java.util.Map<String, Object> found) {
         this.found = found;
         return this;
     }
     
+    public SSADistanceResponse(@JsonProperty("found") java.util.Map<String, Object> found) {
+        this.found = found;
+  }
 }

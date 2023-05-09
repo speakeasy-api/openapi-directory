@@ -15,6 +15,7 @@ public class CloseAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderStatus")
     public AccountHolderStatus accountHolderStatus;
+
     public CloseAccountHolderResponse withAccountHolderStatus(AccountHolderStatus accountHolderStatus) {
         this.accountHolderStatus = accountHolderStatus;
         return this;
@@ -26,6 +27,7 @@ public class CloseAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public CloseAccountHolderResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -37,6 +39,7 @@ public class CloseAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public CloseAccountHolderResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -50,9 +53,11 @@ public class CloseAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedAsync")
     public Boolean submittedAsync;
+
     public CloseAccountHolderResponse withSubmittedAsync(Boolean submittedAsync) {
         this.submittedAsync = submittedAsync;
         return this;
     }
     
+    public CloseAccountHolderResponse(){}
 }

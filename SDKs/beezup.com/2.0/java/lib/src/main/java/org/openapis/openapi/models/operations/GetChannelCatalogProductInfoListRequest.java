@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelCatalogProductInfoListRequest {
@@ -12,6 +13,7 @@ public class GetChannelCatalogProductInfoListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
     public String channelCatalogId;
+
     public GetChannelCatalogProductInfoListRequest withChannelCatalogId(String channelCatalogId) {
         this.channelCatalogId = channelCatalogId;
         return this;
@@ -22,9 +24,14 @@ public class GetChannelCatalogProductInfoListRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetChannelCatalogProductInfoListRequest getChannelCatalogProductInfoListRequest;
+
     public GetChannelCatalogProductInfoListRequest withGetChannelCatalogProductInfoListRequest(org.openapis.openapi.models.shared.GetChannelCatalogProductInfoListRequest getChannelCatalogProductInfoListRequest) {
         this.getChannelCatalogProductInfoListRequest = getChannelCatalogProductInfoListRequest;
         return this;
     }
     
+    public GetChannelCatalogProductInfoListRequest(@JsonProperty("channelCatalogId") String channelCatalogId, @JsonProperty("getChannelCatalogProductInfoListRequest") org.openapis.openapi.models.shared.GetChannelCatalogProductInfoListRequest getChannelCatalogProductInfoListRequest) {
+        this.channelCatalogId = channelCatalogId;
+        this.getChannelCatalogProductInfoListRequest = getChannelCatalogProductInfoListRequest;
+  }
 }

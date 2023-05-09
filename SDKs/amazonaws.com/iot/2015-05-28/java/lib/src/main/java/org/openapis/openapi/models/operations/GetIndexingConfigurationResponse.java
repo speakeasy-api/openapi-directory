@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetIndexingConfigurationResponse {
     
     public String contentType;
+
     public GetIndexingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetIndexingConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetIndexingConfigurationResponse getIndexingConfigurationResponse;
+
     public GetIndexingConfigurationResponse withGetIndexingConfigurationResponse(org.openapis.openapi.models.shared.GetIndexingConfigurationResponse getIndexingConfigurationResponse) {
         this.getIndexingConfigurationResponse = getIndexingConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetIndexingConfigurationResponse {
      */
     
     public Object internalFailureException;
+
     public GetIndexingConfigurationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetIndexingConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public GetIndexingConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class GetIndexingConfigurationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetIndexingConfigurationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class GetIndexingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetIndexingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetIndexingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetIndexingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetIndexingConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public GetIndexingConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetIndexingConfigurationResponse {
      */
     
     public Object unauthorizedException;
+
     public GetIndexingConfigurationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetIndexingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

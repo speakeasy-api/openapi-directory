@@ -30,9 +30,11 @@ public class SweepSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SweepScheduleTypeEnum type;
+
     public SweepSchedule withType(SweepScheduleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SweepSchedule(){}
 }

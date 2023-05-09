@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubscriptionsApiDeleteSubscription2Request {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Api-Key")
     public String xApiKey;
+
     public SubscriptionsApiDeleteSubscription2Request withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
@@ -16,6 +18,7 @@ public class SubscriptionsApiDeleteSubscription2Request {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keep")
     public Boolean keep;
+
     public SubscriptionsApiDeleteSubscription2Request withKeep(Boolean keep) {
         this.keep = keep;
         return this;
@@ -23,9 +26,15 @@ public class SubscriptionsApiDeleteSubscription2Request {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
     public String serial;
+
     public SubscriptionsApiDeleteSubscription2Request withSerial(String serial) {
         this.serial = serial;
         return this;
     }
     
+    public SubscriptionsApiDeleteSubscription2Request(@JsonProperty("X-Api-Key") String xApiKey, @JsonProperty("keep") Boolean keep, @JsonProperty("serial") String serial) {
+        this.xApiKey = xApiKey;
+        this.keep = keep;
+        this.serial = serial;
+  }
 }

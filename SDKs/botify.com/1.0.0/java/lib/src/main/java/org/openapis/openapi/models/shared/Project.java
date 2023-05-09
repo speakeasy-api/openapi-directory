@@ -12,6 +12,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public Project withActive(Boolean active) {
         this.active = active;
         return this;
@@ -19,6 +20,7 @@ public class Project {
     
     @JsonProperty("current_settings")
     public ProjectSettingsSerializer currentSettings;
+
     public Project withCurrentSettings(ProjectSettingsSerializer currentSettings) {
         this.currentSettings = currentSettings;
         return this;
@@ -27,6 +29,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_created")
     public String dateCreated;
+
     public Project withDateCreated(String dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -34,6 +37,7 @@ public class Project {
     
     @JsonProperty("name")
     public String name;
+
     public Project withName(String name) {
         this.name = name;
         return this;
@@ -41,6 +45,7 @@ public class Project {
     
     @JsonProperty("slug")
     public String slug;
+
     public Project withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -48,9 +53,16 @@ public class Project {
     
     @JsonProperty("user")
     public User user;
+
     public Project withUser(User user) {
         this.user = user;
         return this;
     }
     
+    public Project(@JsonProperty("current_settings") ProjectSettingsSerializer currentSettings, @JsonProperty("name") String name, @JsonProperty("slug") String slug, @JsonProperty("user") User user) {
+        this.currentSettings = currentSettings;
+        this.name = name;
+        this.slug = slug;
+        this.user = user;
+  }
 }

@@ -48,15 +48,13 @@ public class AgeUsd {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalcSigmaRsvExchangeResponse res = new org.openapis.openapi.models.operations.CalcSigmaRsvExchangeResponse() {{
+        org.openapis.openapi.models.operations.CalcSigmaRsvExchangeResponse res = new org.openapis.openapi.models.operations.CalcSigmaRsvExchangeResponse(contentType, httpRes.statusCode()) {{
             body = null;
             calcSigmaRsvExchange400WildcardString = null;
             calcSigmaRsvExchange401WildcardString = null;
             calcSigmaRsvExchange404WildcardString = null;
             calcSigmaRsvExchange409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,15 +111,13 @@ public class AgeUsd {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalcSigmaUsdExchangeResponse res = new org.openapis.openapi.models.operations.CalcSigmaUsdExchangeResponse() {{
+        org.openapis.openapi.models.operations.CalcSigmaUsdExchangeResponse res = new org.openapis.openapi.models.operations.CalcSigmaUsdExchangeResponse(contentType, httpRes.statusCode()) {{
             body = null;
             calcSigmaUsdExchange400WildcardString = null;
             calcSigmaUsdExchange401WildcardString = null;
             calcSigmaUsdExchange404WildcardString = null;
             calcSigmaUsdExchange409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -184,15 +180,13 @@ public class AgeUsd {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoSigmaRsvExchangeResponse res = new org.openapis.openapi.models.operations.DoSigmaRsvExchangeResponse() {{
+        org.openapis.openapi.models.operations.DoSigmaRsvExchangeResponse res = new org.openapis.openapi.models.operations.DoSigmaRsvExchangeResponse(contentType, httpRes.statusCode()) {{
             body = null;
             doSigmaRsvExchange400WildcardString = null;
             doSigmaRsvExchange401WildcardString = null;
             doSigmaRsvExchange404WildcardString = null;
             doSigmaRsvExchange409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -255,15 +249,13 @@ public class AgeUsd {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoSigmaUsdExchangeResponse res = new org.openapis.openapi.models.operations.DoSigmaUsdExchangeResponse() {{
+        org.openapis.openapi.models.operations.DoSigmaUsdExchangeResponse res = new org.openapis.openapi.models.operations.DoSigmaUsdExchangeResponse(contentType, httpRes.statusCode()) {{
             body = null;
             doSigmaUsdExchange400WildcardString = null;
             doSigmaUsdExchange401WildcardString = null;
             doSigmaUsdExchange404WildcardString = null;
             doSigmaUsdExchange409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -319,15 +311,13 @@ public class AgeUsd {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAgeUsdInfoResponse res = new org.openapis.openapi.models.operations.GetAgeUsdInfoResponse() {{
+        org.openapis.openapi.models.operations.GetAgeUsdInfoResponse res = new org.openapis.openapi.models.operations.GetAgeUsdInfoResponse(contentType, httpRes.statusCode()) {{
             body = null;
             getAgeUsdInfo400WildcardString = null;
             getAgeUsdInfo401WildcardString = null;
             getAgeUsdInfo404WildcardString = null;
             getAgeUsdInfo409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -383,15 +373,13 @@ public class AgeUsd {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSigmaRsvPriceResponse res = new org.openapis.openapi.models.operations.GetSigmaRsvPriceResponse() {{
+        org.openapis.openapi.models.operations.GetSigmaRsvPriceResponse res = new org.openapis.openapi.models.operations.GetSigmaRsvPriceResponse(contentType, httpRes.statusCode()) {{
             body = null;
             getSigmaRsvPrice400WildcardString = null;
             getSigmaRsvPrice401WildcardString = null;
             getSigmaRsvPrice404WildcardString = null;
             getSigmaRsvPrice409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -447,15 +435,13 @@ public class AgeUsd {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSigmaUsdPriceResponse res = new org.openapis.openapi.models.operations.GetSigmaUsdPriceResponse() {{
+        org.openapis.openapi.models.operations.GetSigmaUsdPriceResponse res = new org.openapis.openapi.models.operations.GetSigmaUsdPriceResponse(contentType, httpRes.statusCode()) {{
             body = null;
             getSigmaUsdPrice400WildcardString = null;
             getSigmaUsdPrice401WildcardString = null;
             getSigmaUsdPrice404WildcardString = null;
             getSigmaUsdPrice409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class ConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudSql")
     public CloudSqlPropertiesInput cloudSql;
+
     public ConnectionInput withCloudSql(CloudSqlPropertiesInput cloudSql) {
         this.cloudSql = cloudSql;
         return this;
@@ -29,6 +30,7 @@ public class ConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ConnectionInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class ConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyName")
     public String friendlyName;
+
     public ConnectionInput withFriendlyName(String friendlyName) {
         this.friendlyName = friendlyName;
         return this;
@@ -51,9 +54,11 @@ public class ConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConnectionInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ConnectionInput(){}
 }

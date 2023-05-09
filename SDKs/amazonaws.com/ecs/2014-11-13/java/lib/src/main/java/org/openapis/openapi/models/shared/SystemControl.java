@@ -15,6 +15,7 @@ public class SystemControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public String namespace;
+
     public SystemControl withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -23,9 +24,11 @@ public class SystemControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public SystemControl withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public SystemControl(){}
 }

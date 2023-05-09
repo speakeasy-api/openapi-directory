@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse {
      */
     
     public java.util.Map<String, Object> milestone;
+
     public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse withMilestone(java.util.Map<String, Object> milestone) {
         this.milestone = milestone;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

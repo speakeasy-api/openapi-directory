@@ -15,6 +15,7 @@ public class AudioRenderTimelineSpanTempoChanges {
      */
     @JsonProperty("tempo")
     public Double tempo;
+
     public AudioRenderTimelineSpanTempoChanges withTempo(Double tempo) {
         this.tempo = tempo;
         return this;
@@ -25,9 +26,14 @@ public class AudioRenderTimelineSpanTempoChanges {
      */
     @JsonProperty("time")
     public Double time;
+
     public AudioRenderTimelineSpanTempoChanges withTime(Double time) {
         this.time = time;
         return this;
     }
     
+    public AudioRenderTimelineSpanTempoChanges(@JsonProperty("tempo") Double tempo, @JsonProperty("time") Double time) {
+        this.tempo = tempo;
+        this.time = time;
+  }
 }

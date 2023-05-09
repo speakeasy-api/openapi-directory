@@ -15,6 +15,7 @@ public class AwsIamGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachedManagedPolicies")
     public AwsIamAttachedManagedPolicy[] attachedManagedPolicies;
+
     public AwsIamGroupDetails withAttachedManagedPolicies(AwsIamAttachedManagedPolicy[] attachedManagedPolicies) {
         this.attachedManagedPolicies = attachedManagedPolicies;
         return this;
@@ -23,6 +24,7 @@ public class AwsIamGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateDate")
     public String createDate;
+
     public AwsIamGroupDetails withCreateDate(String createDate) {
         this.createDate = createDate;
         return this;
@@ -31,6 +33,7 @@ public class AwsIamGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupId")
     public String groupId;
+
     public AwsIamGroupDetails withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -39,6 +42,7 @@ public class AwsIamGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public AwsIamGroupDetails withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -47,6 +51,7 @@ public class AwsIamGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupPolicyList")
     public AwsIamGroupPolicy[] groupPolicyList;
+
     public AwsIamGroupDetails withGroupPolicyList(AwsIamGroupPolicy[] groupPolicyList) {
         this.groupPolicyList = groupPolicyList;
         return this;
@@ -55,9 +60,11 @@ public class AwsIamGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public AwsIamGroupDetails withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public AwsIamGroupDetails(){}
 }

@@ -20,9 +20,11 @@ public class RenewTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access_token")
     public String accessToken;
+
     public RenewTokenRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
     }
     
+    public RenewTokenRequest(){}
 }

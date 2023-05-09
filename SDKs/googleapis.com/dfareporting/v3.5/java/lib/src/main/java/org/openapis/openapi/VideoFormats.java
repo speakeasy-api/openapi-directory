@@ -58,11 +58,9 @@ public class VideoFormats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingVideoFormatsGetResponse res = new org.openapis.openapi.models.operations.DfareportingVideoFormatsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingVideoFormatsGetResponse res = new org.openapis.openapi.models.operations.DfareportingVideoFormatsGetResponse(contentType, httpRes.statusCode()) {{
             videoFormat = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class VideoFormats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingVideoFormatsListResponse res = new org.openapis.openapi.models.operations.DfareportingVideoFormatsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingVideoFormatsListResponse res = new org.openapis.openapi.models.operations.DfareportingVideoFormatsListResponse(contentType, httpRes.statusCode()) {{
             videoFormatsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

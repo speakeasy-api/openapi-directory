@@ -15,6 +15,7 @@ public class CallbackStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CallbackToken")
     public String callbackToken;
+
     public CallbackStepMetadata withCallbackToken(String callbackToken) {
         this.callbackToken = callbackToken;
         return this;
@@ -23,6 +24,7 @@ public class CallbackStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputParameters")
     public OutputParameter[] outputParameters;
+
     public CallbackStepMetadata withOutputParameters(OutputParameter[] outputParameters) {
         this.outputParameters = outputParameters;
         return this;
@@ -31,9 +33,11 @@ public class CallbackStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SqsQueueUrl")
     public String sqsQueueUrl;
+
     public CallbackStepMetadata withSqsQueueUrl(String sqsQueueUrl) {
         this.sqsQueueUrl = sqsQueueUrl;
         return this;
     }
     
+    public CallbackStepMetadata(){}
 }

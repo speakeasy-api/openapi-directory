@@ -18,6 +18,7 @@ public class QueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appEngineHttpQueue")
     public AppEngineHttpQueue appEngineHttpQueue;
+
     public QueueInput withAppEngineHttpQueue(AppEngineHttpQueue appEngineHttpQueue) {
         this.appEngineHttpQueue = appEngineHttpQueue;
         return this;
@@ -29,6 +30,7 @@ public class QueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpTarget")
     public HttpTarget httpTarget;
+
     public QueueInput withHttpTarget(HttpTarget httpTarget) {
         this.httpTarget = httpTarget;
         return this;
@@ -40,6 +42,7 @@ public class QueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public QueueInput withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class QueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purgeTime")
     public String purgeTime;
+
     public QueueInput withPurgeTime(String purgeTime) {
         this.purgeTime = purgeTime;
         return this;
@@ -62,6 +66,7 @@ public class QueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateLimits")
     public RateLimits rateLimits;
+
     public QueueInput withRateLimits(RateLimits rateLimits) {
         this.rateLimits = rateLimits;
         return this;
@@ -73,6 +78,7 @@ public class QueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryConfig")
     public RetryConfig retryConfig;
+
     public QueueInput withRetryConfig(RetryConfig retryConfig) {
         this.retryConfig = retryConfig;
         return this;
@@ -84,6 +90,7 @@ public class QueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackdriverLoggingConfig")
     public StackdriverLoggingConfig stackdriverLoggingConfig;
+
     public QueueInput withStackdriverLoggingConfig(StackdriverLoggingConfig stackdriverLoggingConfig) {
         this.stackdriverLoggingConfig = stackdriverLoggingConfig;
         return this;
@@ -95,6 +102,7 @@ public class QueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public QueueStateEnum state;
+
     public QueueInput withState(QueueStateEnum state) {
         this.state = state;
         return this;
@@ -106,6 +114,7 @@ public class QueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskTtl")
     public String taskTtl;
+
     public QueueInput withTaskTtl(String taskTtl) {
         this.taskTtl = taskTtl;
         return this;
@@ -117,6 +126,7 @@ public class QueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tombstoneTtl")
     public String tombstoneTtl;
+
     public QueueInput withTombstoneTtl(String tombstoneTtl) {
         this.tombstoneTtl = tombstoneTtl;
         return this;
@@ -128,9 +138,11 @@ public class QueueInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public QueueTypeEnum type;
+
     public QueueInput withType(QueueTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public QueueInput(){}
 }

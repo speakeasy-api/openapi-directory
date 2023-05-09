@@ -15,6 +15,7 @@ public class HyperParameterAlgorithmSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlgorithmName")
     public String algorithmName;
+
     public HyperParameterAlgorithmSpecification withAlgorithmName(String algorithmName) {
         this.algorithmName = algorithmName;
         return this;
@@ -23,6 +24,7 @@ public class HyperParameterAlgorithmSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricDefinitions")
     public MetricDefinition[] metricDefinitions;
+
     public HyperParameterAlgorithmSpecification withMetricDefinitions(MetricDefinition[] metricDefinitions) {
         this.metricDefinitions = metricDefinitions;
         return this;
@@ -31,6 +33,7 @@ public class HyperParameterAlgorithmSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingImage")
     public String trainingImage;
+
     public HyperParameterAlgorithmSpecification withTrainingImage(String trainingImage) {
         this.trainingImage = trainingImage;
         return this;
@@ -41,9 +44,13 @@ public class HyperParameterAlgorithmSpecification {
      */
     @JsonProperty("TrainingInputMode")
     public TrainingInputModeEnum trainingInputMode;
+
     public HyperParameterAlgorithmSpecification withTrainingInputMode(TrainingInputModeEnum trainingInputMode) {
         this.trainingInputMode = trainingInputMode;
         return this;
     }
     
+    public HyperParameterAlgorithmSpecification(@JsonProperty("TrainingInputMode") TrainingInputModeEnum trainingInputMode) {
+        this.trainingInputMode = trainingInputMode;
+  }
 }

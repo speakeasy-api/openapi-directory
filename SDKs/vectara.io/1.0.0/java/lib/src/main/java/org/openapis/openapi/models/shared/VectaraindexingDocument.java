@@ -19,6 +19,7 @@ public class VectaraindexingDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customDims")
     public VectaraindexingCustomDimension[] customDims;
+
     public VectaraindexingDocument withCustomDims(VectaraindexingCustomDimension[] customDims) {
         this.customDims = customDims;
         return this;
@@ -30,6 +31,7 @@ public class VectaraindexingDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public VectaraindexingDocument withDescription(String description) {
         this.description = description;
         return this;
@@ -41,6 +43,7 @@ public class VectaraindexingDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentId")
     public String documentId;
+
     public VectaraindexingDocument withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
@@ -53,6 +56,7 @@ public class VectaraindexingDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataJson")
     public String metadataJson;
+
     public VectaraindexingDocument withMetadataJson(String metadataJson) {
         this.metadataJson = metadataJson;
         return this;
@@ -65,6 +69,7 @@ public class VectaraindexingDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section")
     public IndexingSection[] section;
+
     public VectaraindexingDocument withSection(IndexingSection[] section) {
         this.section = section;
         return this;
@@ -76,9 +81,11 @@ public class VectaraindexingDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public VectaraindexingDocument withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public VectaraindexingDocument(){}
 }

@@ -12,6 +12,7 @@ public class DeleteUserDefinedFunctionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public DeleteUserDefinedFunctionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class DeleteUserDefinedFunctionRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DeleteUserDefinedFunctionRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,9 +28,14 @@ public class DeleteUserDefinedFunctionRequest {
     
     @JsonProperty("FunctionName")
     public String functionName;
+
     public DeleteUserDefinedFunctionRequest withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
     }
     
+    public DeleteUserDefinedFunctionRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("FunctionName") String functionName) {
+        this.databaseName = databaseName;
+        this.functionName = functionName;
+  }
 }

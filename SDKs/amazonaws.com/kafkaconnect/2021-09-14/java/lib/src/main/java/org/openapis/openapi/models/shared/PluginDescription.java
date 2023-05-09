@@ -15,9 +15,11 @@ public class PluginDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customPlugin")
     public CustomPluginDescription customPlugin;
+
     public PluginDescription withCustomPlugin(CustomPluginDescription customPlugin) {
         this.customPlugin = customPlugin;
         return this;
     }
     
+    public PluginDescription(){}
 }

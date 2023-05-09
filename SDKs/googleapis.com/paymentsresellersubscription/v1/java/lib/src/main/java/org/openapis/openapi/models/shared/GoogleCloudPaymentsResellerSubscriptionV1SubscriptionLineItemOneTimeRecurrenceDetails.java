@@ -18,9 +18,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTim
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicePeriod")
     public GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod servicePeriod;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails withServicePeriod(GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod servicePeriod) {
         this.servicePeriod = servicePeriod;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails(){}
 }

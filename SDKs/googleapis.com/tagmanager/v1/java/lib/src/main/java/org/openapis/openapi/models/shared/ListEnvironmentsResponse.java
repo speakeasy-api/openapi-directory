@@ -18,9 +18,11 @@ public class ListEnvironmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environments")
     public Environment[] environments;
+
     public ListEnvironmentsResponse withEnvironments(Environment[] environments) {
         this.environments = environments;
         return this;
     }
     
+    public ListEnvironmentsResponse(){}
 }

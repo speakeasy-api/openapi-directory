@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse {
     
     public String contentType;
+
     public IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleSearchIdeahubV1alphaIdeaActivity googleSearchIdeahubV1alphaIdeaActivity;
+
     public IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse withGoogleSearchIdeahubV1alphaIdeaActivity(org.openapis.openapi.models.shared.GoogleSearchIdeahubV1alphaIdeaActivity googleSearchIdeahubV1alphaIdeaActivity) {
         this.googleSearchIdeahubV1alphaIdeaActivity = googleSearchIdeahubV1alphaIdeaActivity;
         return this;
@@ -26,6 +29,7 @@ public class IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse {
     
     
     public Integer statusCode;
+
     public IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

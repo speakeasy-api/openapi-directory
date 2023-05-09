@@ -15,9 +15,13 @@ public class LicenseSFXRequest {
      */
     @JsonProperty("sound_effects")
     public LicenseSFX[] soundEffects;
+
     public LicenseSFXRequest withSoundEffects(LicenseSFX[] soundEffects) {
         this.soundEffects = soundEffects;
         return this;
     }
     
+    public LicenseSFXRequest(@JsonProperty("sound_effects") LicenseSFX[] soundEffects) {
+        this.soundEffects = soundEffects;
+  }
 }

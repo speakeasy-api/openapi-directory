@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ProvisionByoipCidrResultByoipCidr {
     
     public String cidr;
+
     public ProvisionByoipCidrResultByoipCidr withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,6 +20,7 @@ public class ProvisionByoipCidrResultByoipCidr {
     
     
     public String description;
+
     public ProvisionByoipCidrResultByoipCidr withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class ProvisionByoipCidrResultByoipCidr {
     
     
     public ProvisionByoipCidrResultByoipCidrStateEnum state;
+
     public ProvisionByoipCidrResultByoipCidr withState(ProvisionByoipCidrResultByoipCidrStateEnum state) {
         this.state = state;
         return this;
@@ -33,9 +36,11 @@ public class ProvisionByoipCidrResultByoipCidr {
     
     
     public String statusMessage;
+
     public ProvisionByoipCidrResultByoipCidr withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public ProvisionByoipCidrResultByoipCidr(){}
 }

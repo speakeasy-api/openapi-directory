@@ -17,6 +17,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client")
     public String client;
+
     public QuoteDetailVO withClient(String client) {
         this.client = client;
         return this;
@@ -25,6 +26,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_user_id")
     public Long clientUserId;
+
     public QuoteDetailVO withClientUserId(Long clientUserId) {
         this.clientUserId = clientUserId;
         return this;
@@ -33,6 +35,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public QuoteDetailVO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -41,6 +44,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator_user_id")
     public Long creatorUserId;
+
     public QuoteDetailVO withCreatorUserId(Long creatorUserId) {
         this.creatorUserId = creatorUserId;
         return this;
@@ -49,6 +53,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public QuoteDetailVO withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -57,6 +62,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public PropertyPaAndAttVO[] customFields;
+
     public QuoteDetailVO withCustomFields(PropertyPaAndAttVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -65,6 +71,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public QuoteDetailVO withDescription(String description) {
         this.description = description;
         return this;
@@ -76,6 +83,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grand_total")
     public Object grandTotal;
+
     public QuoteDetailVO withGrandTotal(Object grandTotal) {
         this.grandTotal = grandTotal;
         return this;
@@ -84,6 +92,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_show_supplier_information")
     public Boolean isShowSupplierInformation;
+
     public QuoteDetailVO withIsShowSupplierInformation(Boolean isShowSupplierInformation) {
         this.isShowSupplierInformation = isShowSupplierInformation;
         return this;
@@ -92,6 +101,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_update_by_user_id")
     public Long lastUpdateByUserId;
+
     public QuoteDetailVO withLastUpdateByUserId(Long lastUpdateByUserId) {
         this.lastUpdateByUserId = lastUpdateByUserId;
         return this;
@@ -101,6 +111,7 @@ public class QuoteDetailVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("proposed_order_completion_date")
     public LocalDate proposedOrderCompletionDate;
+
     public QuoteDetailVO withProposedOrderCompletionDate(LocalDate proposedOrderCompletionDate) {
         this.proposedOrderCompletionDate = proposedOrderCompletionDate;
         return this;
@@ -110,6 +121,7 @@ public class QuoteDetailVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("quote_expiration_date")
     public LocalDate quoteExpirationDate;
+
     public QuoteDetailVO withQuoteExpirationDate(LocalDate quoteExpirationDate) {
         this.quoteExpirationDate = quoteExpirationDate;
         return this;
@@ -118,6 +130,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_id")
     public Long quoteId;
+
     public QuoteDetailVO withQuoteId(Long quoteId) {
         this.quoteId = quoteId;
         return this;
@@ -126,6 +139,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_items")
     public QuoteItemDetailVO[] quoteItems;
+
     public QuoteDetailVO withQuoteItems(QuoteItemDetailVO[] quoteItems) {
         this.quoteItems = quoteItems;
         return this;
@@ -137,6 +151,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_items_total")
     public Object quoteItemsTotal;
+
     public QuoteDetailVO withQuoteItemsTotal(Object quoteItemsTotal) {
         this.quoteItemsTotal = quoteItemsTotal;
         return this;
@@ -145,6 +160,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_title")
     public String quoteTitle;
+
     public QuoteDetailVO withQuoteTitle(String quoteTitle) {
         this.quoteTitle = quoteTitle;
         return this;
@@ -156,6 +172,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping")
     public Object shipping;
+
     public QuoteDetailVO withShipping(Object shipping) {
         this.shipping = shipping;
         return this;
@@ -164,6 +181,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public QuoteDetailVO withStatus(String status) {
         this.status = status;
         return this;
@@ -173,6 +191,7 @@ public class QuoteDetailVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("submit_date")
     public LocalDate submitDate;
+
     public QuoteDetailVO withSubmitDate(LocalDate submitDate) {
         this.submitDate = submitDate;
         return this;
@@ -184,6 +203,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Object tax;
+
     public QuoteDetailVO withTax(Object tax) {
         this.tax = tax;
         return this;
@@ -192,6 +212,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_currency")
     public String transactionalCurrency;
+
     public QuoteDetailVO withTransactionalCurrency(String transactionalCurrency) {
         this.transactionalCurrency = transactionalCurrency;
         return this;
@@ -203,6 +224,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_grand_total")
     public Object transactionalGrandTotal;
+
     public QuoteDetailVO withTransactionalGrandTotal(Object transactionalGrandTotal) {
         this.transactionalGrandTotal = transactionalGrandTotal;
         return this;
@@ -214,6 +236,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_quote_items_total")
     public Object transactionalQuoteItemsTotal;
+
     public QuoteDetailVO withTransactionalQuoteItemsTotal(Object transactionalQuoteItemsTotal) {
         this.transactionalQuoteItemsTotal = transactionalQuoteItemsTotal;
         return this;
@@ -225,6 +248,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_shipping")
     public Object transactionalShipping;
+
     public QuoteDetailVO withTransactionalShipping(Object transactionalShipping) {
         this.transactionalShipping = transactionalShipping;
         return this;
@@ -236,6 +260,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_tax")
     public Object transactionalTax;
+
     public QuoteDetailVO withTransactionalTax(Object transactionalTax) {
         this.transactionalTax = transactionalTax;
         return this;
@@ -244,6 +269,7 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vat_code")
     public String vatCode;
+
     public QuoteDetailVO withVatCode(String vatCode) {
         this.vatCode = vatCode;
         return this;
@@ -255,9 +281,11 @@ public class QuoteDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vat_rate")
     public Object vatRate;
+
     public QuoteDetailVO withVatRate(Object vatRate) {
         this.vatRate = vatRate;
         return this;
     }
     
+    public QuoteDetailVO(){}
 }

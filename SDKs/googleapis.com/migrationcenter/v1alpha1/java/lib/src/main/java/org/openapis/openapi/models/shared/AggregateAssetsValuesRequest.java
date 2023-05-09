@@ -18,6 +18,7 @@ public class AggregateAssetsValuesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregations")
     public Aggregation[] aggregations;
+
     public AggregateAssetsValuesRequest withAggregations(Aggregation[] aggregations) {
         this.aggregations = aggregations;
         return this;
@@ -29,9 +30,11 @@ public class AggregateAssetsValuesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public AggregateAssetsValuesRequest withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
+    public AggregateAssetsValuesRequest(){}
 }

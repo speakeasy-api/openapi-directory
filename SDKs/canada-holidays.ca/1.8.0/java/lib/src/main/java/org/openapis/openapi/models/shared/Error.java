@@ -20,6 +20,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Error withMessage(String message) {
         this.message = message;
         return this;
@@ -31,6 +32,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public Error withStatus(Long status) {
         this.status = status;
         return this;
@@ -44,9 +46,11 @@ public class Error {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public Error withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public Error(){}
 }

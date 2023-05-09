@@ -15,9 +15,11 @@ public class CreateSignalingChannelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelARN")
     public String channelARN;
+
     public CreateSignalingChannelOutput withChannelARN(String channelARN) {
         this.channelARN = channelARN;
         return this;
     }
     
+    public CreateSignalingChannelOutput(){}
 }

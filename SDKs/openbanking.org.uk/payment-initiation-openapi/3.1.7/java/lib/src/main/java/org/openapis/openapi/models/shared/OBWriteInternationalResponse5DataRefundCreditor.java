@@ -18,6 +18,7 @@ public class OBWriteInternationalResponse5DataRefundCreditor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public OBWriteInternationalResponse5DataRefundCreditor withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class OBWriteInternationalResponse5DataRefundCreditor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostalAddress")
     public OBPostalAddress6 postalAddress;
+
     public OBWriteInternationalResponse5DataRefundCreditor withPostalAddress(OBPostalAddress6 postalAddress) {
         this.postalAddress = postalAddress;
         return this;
     }
     
+    public OBWriteInternationalResponse5DataRefundCreditor(){}
 }

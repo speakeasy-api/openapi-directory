@@ -61,11 +61,9 @@ public class NetworkFirewallPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesAddAssociationResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesAddAssociationResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesAddAssociationResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesAddAssociationResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class NetworkFirewallPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesAddRuleResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesAddRuleResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesAddRuleResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesAddRuleResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class NetworkFirewallPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesCloneRulesResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesCloneRulesResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesCloneRulesResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesCloneRulesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class NetworkFirewallPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class NetworkFirewallPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesGetResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesGetResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesGetResponse(contentType, httpRes.statusCode()) {{
             firewallPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class NetworkFirewallPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesGetAssociationResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesGetAssociationResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesGetAssociationResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesGetAssociationResponse(contentType, httpRes.statusCode()) {{
             firewallPolicyAssociation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class NetworkFirewallPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -385,11 +371,9 @@ public class NetworkFirewallPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesGetRuleResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesGetRuleResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesGetRuleResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesGetRuleResponse(contentType, httpRes.statusCode()) {{
             firewallPolicyRule = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -433,11 +417,9 @@ public class NetworkFirewallPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesInsertResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesInsertResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -479,11 +461,9 @@ public class NetworkFirewallPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesListResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesListResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesListResponse(contentType, httpRes.statusCode()) {{
             firewallPolicyList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -527,11 +507,9 @@ public class NetworkFirewallPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesPatchResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesPatchResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -575,11 +553,9 @@ public class NetworkFirewallPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesPatchRuleResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesPatchRuleResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesPatchRuleResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesPatchRuleResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -621,11 +597,9 @@ public class NetworkFirewallPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesRemoveAssociationResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesRemoveAssociationResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesRemoveAssociationResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesRemoveAssociationResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -667,11 +641,9 @@ public class NetworkFirewallPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesRemoveRuleResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesRemoveRuleResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesRemoveRuleResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesRemoveRuleResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -715,11 +687,9 @@ public class NetworkFirewallPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -763,11 +733,9 @@ public class NetworkFirewallPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeNetworkFirewallPoliciesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

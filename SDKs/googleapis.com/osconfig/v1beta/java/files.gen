@@ -149,4 +149,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/EffectiveGuestPolicySourced
 lib/src/main/java/org/openapis/openapi/models/shared/EffectiveGuestPolicySourcedPackage.java
 lib/src/main/java/org/openapis/openapi/models/shared/EffectiveGuestPolicySourcedPackageRepository.java
 lib/src/main/java/org/openapis/openapi/models/shared/LookupEffectiveGuestPolicyRequest.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

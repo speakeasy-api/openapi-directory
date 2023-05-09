@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutCoursesContentIdMetadataLevelResponse {
     
     public String contentType;
+
     public PutCoursesContentIdMetadataLevelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutCoursesContentIdMetadataLevelResponse {
      */
     
     public org.openapis.openapi.models.shared.CourseMetaResponse courseMetaResponse;
+
     public PutCoursesContentIdMetadataLevelResponse withCourseMetaResponse(org.openapis.openapi.models.shared.CourseMetaResponse courseMetaResponse) {
         this.courseMetaResponse = courseMetaResponse;
         return this;
@@ -29,6 +32,7 @@ public class PutCoursesContentIdMetadataLevelResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PutCoursesContentIdMetadataLevelResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class PutCoursesContentIdMetadataLevelResponse {
     
     
     public Integer statusCode;
+
     public PutCoursesContentIdMetadataLevelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PutCoursesContentIdMetadataLevelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutCoursesContentIdMetadataLevelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutCoursesContentIdMetadataLevelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

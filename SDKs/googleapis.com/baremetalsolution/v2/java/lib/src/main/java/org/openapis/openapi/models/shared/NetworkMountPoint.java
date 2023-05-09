@@ -18,6 +18,7 @@ public class NetworkMountPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultGateway")
     public Boolean defaultGateway;
+
     public NetworkMountPoint withDefaultGateway(Boolean defaultGateway) {
         this.defaultGateway = defaultGateway;
         return this;
@@ -29,6 +30,7 @@ public class NetworkMountPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public NetworkMountPoint withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -40,6 +42,7 @@ public class NetworkMountPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public NetworkMountPoint withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -51,9 +54,11 @@ public class NetworkMountPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logicalInterface")
     public String logicalInterface;
+
     public NetworkMountPoint withLogicalInterface(String logicalInterface) {
         this.logicalInterface = logicalInterface;
         return this;
     }
     
+    public NetworkMountPoint(){}
 }

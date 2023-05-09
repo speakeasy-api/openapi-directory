@@ -20,6 +20,7 @@ public class ListOperationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListOperationsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -28,6 +29,7 @@ public class ListOperationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxItems")
     public Long maxItems;
+
     public ListOperationsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -36,6 +38,7 @@ public class ListOperationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public ListOperationsSortAttributeNameEnum sortBy;
+
     public ListOperationsRequest withSortBy(ListOperationsSortAttributeNameEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -44,6 +47,7 @@ public class ListOperationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListOperationsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -52,6 +56,7 @@ public class ListOperationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public OperationStatusEnum[] status;
+
     public ListOperationsRequest withStatus(OperationStatusEnum[] status) {
         this.status = status;
         return this;
@@ -62,6 +67,7 @@ public class ListOperationsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmittedSince")
     public OffsetDateTime submittedSince;
+
     public ListOperationsRequest withSubmittedSince(OffsetDateTime submittedSince) {
         this.submittedSince = submittedSince;
         return this;
@@ -70,9 +76,11 @@ public class ListOperationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public OperationTypeEnum[] type;
+
     public ListOperationsRequest withType(OperationTypeEnum[] type) {
         this.type = type;
         return this;
     }
     
+    public ListOperationsRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOfferingsOfferingIdGroupsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AssessmentGroupRequired assessmentGroupRequired;
+
     public PostOfferingsOfferingIdGroupsRequest withAssessmentGroupRequired(org.openapis.openapi.models.shared.AssessmentGroupRequired assessmentGroupRequired) {
         this.assessmentGroupRequired = assessmentGroupRequired;
         return this;
@@ -19,9 +21,14 @@ public class PostOfferingsOfferingIdGroupsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public PostOfferingsOfferingIdGroupsRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public PostOfferingsOfferingIdGroupsRequest(@JsonProperty("AssessmentGroupRequired") org.openapis.openapi.models.shared.AssessmentGroupRequired assessmentGroupRequired, @JsonProperty("offeringId") String offeringId) {
+        this.assessmentGroupRequired = assessmentGroupRequired;
+        this.offeringId = offeringId;
+  }
 }

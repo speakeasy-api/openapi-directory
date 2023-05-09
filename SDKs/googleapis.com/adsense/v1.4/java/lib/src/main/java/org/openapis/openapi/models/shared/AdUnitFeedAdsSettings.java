@@ -18,6 +18,7 @@ public class AdUnitFeedAdsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adPosition")
     public String adPosition;
+
     public AdUnitFeedAdsSettings withAdPosition(String adPosition) {
         this.adPosition = adPosition;
         return this;
@@ -29,6 +30,7 @@ public class AdUnitFeedAdsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     public Integer frequency;
+
     public AdUnitFeedAdsSettings withFrequency(Integer frequency) {
         this.frequency = frequency;
         return this;
@@ -40,6 +42,7 @@ public class AdUnitFeedAdsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumWordCount")
     public Integer minimumWordCount;
+
     public AdUnitFeedAdsSettings withMinimumWordCount(Integer minimumWordCount) {
         this.minimumWordCount = minimumWordCount;
         return this;
@@ -51,9 +54,11 @@ public class AdUnitFeedAdsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public AdUnitFeedAdsSettings withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AdUnitFeedAdsSettings(){}
 }

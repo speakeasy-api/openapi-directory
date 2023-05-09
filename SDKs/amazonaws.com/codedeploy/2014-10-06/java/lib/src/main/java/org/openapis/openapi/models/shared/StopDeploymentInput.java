@@ -15,6 +15,7 @@ public class StopDeploymentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoRollbackEnabled")
     public Boolean autoRollbackEnabled;
+
     public StopDeploymentInput withAutoRollbackEnabled(Boolean autoRollbackEnabled) {
         this.autoRollbackEnabled = autoRollbackEnabled;
         return this;
@@ -22,9 +23,13 @@ public class StopDeploymentInput {
     
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public StopDeploymentInput withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
     }
     
+    public StopDeploymentInput(@JsonProperty("deploymentId") String deploymentId) {
+        this.deploymentId = deploymentId;
+  }
 }

@@ -15,6 +15,7 @@ public class GetAtmsErrorObject {
      */
     @JsonProperty("description")
     public String description;
+
     public GetAtmsErrorObject withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class GetAtmsErrorObject {
      */
     @JsonProperty("status")
     public String status;
+
     public GetAtmsErrorObject withStatus(String status) {
         this.status = status;
         return this;
@@ -35,9 +37,15 @@ public class GetAtmsErrorObject {
      */
     @JsonProperty("title")
     public String title;
+
     public GetAtmsErrorObject withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GetAtmsErrorObject(@JsonProperty("description") String description, @JsonProperty("status") String status, @JsonProperty("title") String title) {
+        this.description = description;
+        this.status = status;
+        this.title = title;
+  }
 }

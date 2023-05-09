@@ -18,6 +18,7 @@ public class EnvironmentMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidDeviceList")
     public AndroidDeviceList androidDeviceList;
+
     public EnvironmentMatrix withAndroidDeviceList(AndroidDeviceList androidDeviceList) {
         this.androidDeviceList = androidDeviceList;
         return this;
@@ -29,6 +30,7 @@ public class EnvironmentMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidMatrix")
     public AndroidMatrix androidMatrix;
+
     public EnvironmentMatrix withAndroidMatrix(AndroidMatrix androidMatrix) {
         this.androidMatrix = androidMatrix;
         return this;
@@ -40,9 +42,11 @@ public class EnvironmentMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosDeviceList")
     public IosDeviceList iosDeviceList;
+
     public EnvironmentMatrix withIosDeviceList(IosDeviceList iosDeviceList) {
         this.iosDeviceList = iosDeviceList;
         return this;
     }
     
+    public EnvironmentMatrix(){}
 }

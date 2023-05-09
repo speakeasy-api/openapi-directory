@@ -3,12 +3,11 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonSecurity;
 import org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonRequest;
 import org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonResponse;
-import org.openapis.openapi.models.shared.TimePeriodEnum;
+import org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonSecurity;
 import org.openapis.openapi.models.shared.SectionEnum;
+import org.openapis.openapi.models.shared.TimePeriodEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -16,20 +15,19 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GETMostemailedSectionTimePeriodJsonRequest req = new GETMostemailedSectionTimePeriodJsonRequest() {{
-                section = "Public Editor";
-                timePeriod = "7";
-            }}            
+            GETMostemailedSectionTimePeriodJsonRequest req = new GETMostemailedSectionTimePeriodJsonRequest(SectionEnum.PUBLIC_EDITOR, TimePeriodEnum.SEVEN);            
 
-            GETMostemailedSectionTimePeriodJsonResponse res = sdk.getMostemailedSectionTimePeriodJson(req, new GETMostemailedSectionTimePeriodJsonSecurity() {{
+            GETMostemailedSectionTimePeriodJsonResponse res = sdk.getMostemailedSectionTimePeriodJson(req, new GETMostemailedSectionTimePeriodJsonSecurity("distinctio") {{
                 apiKey = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.getMostemailedSectionTimePeriodJSON200ApplicationJSONObject.isPresent()) {
+            if (res.getMostemailedSectionTimePeriodJSON200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

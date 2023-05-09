@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteResourceResponse {
@@ -12,6 +13,7 @@ public class DeleteResourceResponse {
      */
     
     public Object alreadyExistsException;
+
     public DeleteResourceResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteResourceResponse {
      */
     
     public Object clientTokenConflictException;
+
     public DeleteResourceResponse withClientTokenConflictException(Object clientTokenConflictException) {
         this.clientTokenConflictException = clientTokenConflictException;
         return this;
@@ -32,6 +35,7 @@ public class DeleteResourceResponse {
      */
     
     public Object concurrentOperationException;
+
     public DeleteResourceResponse withConcurrentOperationException(Object concurrentOperationException) {
         this.concurrentOperationException = concurrentOperationException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteResourceResponse {
     
     
     public String contentType;
+
     public DeleteResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class DeleteResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteResourceOutput deleteResourceOutput;
+
     public DeleteResourceResponse withDeleteResourceOutput(org.openapis.openapi.models.shared.DeleteResourceOutput deleteResourceOutput) {
         this.deleteResourceOutput = deleteResourceOutput;
         return this;
@@ -59,6 +65,7 @@ public class DeleteResourceResponse {
      */
     
     public Object generalServiceException;
+
     public DeleteResourceResponse withGeneralServiceException(Object generalServiceException) {
         this.generalServiceException = generalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteResourceResponse {
      */
     
     public Object handlerFailureException;
+
     public DeleteResourceResponse withHandlerFailureException(Object handlerFailureException) {
         this.handlerFailureException = handlerFailureException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteResourceResponse {
      */
     
     public Object handlerInternalFailureException;
+
     public DeleteResourceResponse withHandlerInternalFailureException(Object handlerInternalFailureException) {
         this.handlerInternalFailureException = handlerInternalFailureException;
         return this;
@@ -89,6 +98,7 @@ public class DeleteResourceResponse {
      */
     
     public Object invalidCredentialsException;
+
     public DeleteResourceResponse withInvalidCredentialsException(Object invalidCredentialsException) {
         this.invalidCredentialsException = invalidCredentialsException;
         return this;
@@ -99,6 +109,7 @@ public class DeleteResourceResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteResourceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -109,6 +120,7 @@ public class DeleteResourceResponse {
      */
     
     public Object networkFailureException;
+
     public DeleteResourceResponse withNetworkFailureException(Object networkFailureException) {
         this.networkFailureException = networkFailureException;
         return this;
@@ -119,6 +131,7 @@ public class DeleteResourceResponse {
      */
     
     public Object notStabilizedException;
+
     public DeleteResourceResponse withNotStabilizedException(Object notStabilizedException) {
         this.notStabilizedException = notStabilizedException;
         return this;
@@ -129,6 +142,7 @@ public class DeleteResourceResponse {
      */
     
     public Object notUpdatableException;
+
     public DeleteResourceResponse withNotUpdatableException(Object notUpdatableException) {
         this.notUpdatableException = notUpdatableException;
         return this;
@@ -139,6 +153,7 @@ public class DeleteResourceResponse {
      */
     
     public Object privateTypeException;
+
     public DeleteResourceResponse withPrivateTypeException(Object privateTypeException) {
         this.privateTypeException = privateTypeException;
         return this;
@@ -149,6 +164,7 @@ public class DeleteResourceResponse {
      */
     
     public Object resourceConflictException;
+
     public DeleteResourceResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -159,6 +175,7 @@ public class DeleteResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -169,6 +186,7 @@ public class DeleteResourceResponse {
      */
     
     public Object serviceInternalErrorException;
+
     public DeleteResourceResponse withServiceInternalErrorException(Object serviceInternalErrorException) {
         this.serviceInternalErrorException = serviceInternalErrorException;
         return this;
@@ -179,6 +197,7 @@ public class DeleteResourceResponse {
      */
     
     public Object serviceLimitExceededException;
+
     public DeleteResourceResponse withServiceLimitExceededException(Object serviceLimitExceededException) {
         this.serviceLimitExceededException = serviceLimitExceededException;
         return this;
@@ -186,6 +205,7 @@ public class DeleteResourceResponse {
     
     
     public Integer statusCode;
+
     public DeleteResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -193,6 +213,7 @@ public class DeleteResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -203,6 +224,7 @@ public class DeleteResourceResponse {
      */
     
     public Object throttlingException;
+
     public DeleteResourceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -213,6 +235,7 @@ public class DeleteResourceResponse {
      */
     
     public Object typeNotFoundException;
+
     public DeleteResourceResponse withTypeNotFoundException(Object typeNotFoundException) {
         this.typeNotFoundException = typeNotFoundException;
         return this;
@@ -223,9 +246,14 @@ public class DeleteResourceResponse {
      */
     
     public Object unsupportedActionException;
+
     public DeleteResourceResponse withUnsupportedActionException(Object unsupportedActionException) {
         this.unsupportedActionException = unsupportedActionException;
         return this;
     }
     
+    public DeleteResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

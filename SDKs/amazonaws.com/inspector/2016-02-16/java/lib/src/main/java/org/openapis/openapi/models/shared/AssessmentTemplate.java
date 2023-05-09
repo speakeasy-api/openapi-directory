@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AssessmentTemplate {
     @JsonProperty("arn")
     public String arn;
+
     public AssessmentTemplate withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class AssessmentTemplate {
     
     @JsonProperty("assessmentRunCount")
     public Long assessmentRunCount;
+
     public AssessmentTemplate withAssessmentRunCount(Long assessmentRunCount) {
         this.assessmentRunCount = assessmentRunCount;
         return this;
@@ -33,6 +35,7 @@ public class AssessmentTemplate {
     
     @JsonProperty("assessmentTargetArn")
     public String assessmentTargetArn;
+
     public AssessmentTemplate withAssessmentTargetArn(String assessmentTargetArn) {
         this.assessmentTargetArn = assessmentTargetArn;
         return this;
@@ -42,6 +45,7 @@ public class AssessmentTemplate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public AssessmentTemplate withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -49,6 +53,7 @@ public class AssessmentTemplate {
     
     @JsonProperty("durationInSeconds")
     public Long durationInSeconds;
+
     public AssessmentTemplate withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
@@ -57,6 +62,7 @@ public class AssessmentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastAssessmentRunArn")
     public String lastAssessmentRunArn;
+
     public AssessmentTemplate withLastAssessmentRunArn(String lastAssessmentRunArn) {
         this.lastAssessmentRunArn = lastAssessmentRunArn;
         return this;
@@ -64,6 +70,7 @@ public class AssessmentTemplate {
     
     @JsonProperty("name")
     public String name;
+
     public AssessmentTemplate withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class AssessmentTemplate {
     
     @JsonProperty("rulesPackageArns")
     public String[] rulesPackageArns;
+
     public AssessmentTemplate withRulesPackageArns(String[] rulesPackageArns) {
         this.rulesPackageArns = rulesPackageArns;
         return this;
@@ -78,9 +86,20 @@ public class AssessmentTemplate {
     
     @JsonProperty("userAttributesForFindings")
     public Attribute[] userAttributesForFindings;
+
     public AssessmentTemplate withUserAttributesForFindings(Attribute[] userAttributesForFindings) {
         this.userAttributesForFindings = userAttributesForFindings;
         return this;
     }
     
+    public AssessmentTemplate(@JsonProperty("arn") String arn, @JsonProperty("assessmentRunCount") Long assessmentRunCount, @JsonProperty("assessmentTargetArn") String assessmentTargetArn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("durationInSeconds") Long durationInSeconds, @JsonProperty("name") String name, @JsonProperty("rulesPackageArns") String[] rulesPackageArns, @JsonProperty("userAttributesForFindings") Attribute[] userAttributesForFindings) {
+        this.arn = arn;
+        this.assessmentRunCount = assessmentRunCount;
+        this.assessmentTargetArn = assessmentTargetArn;
+        this.createdAt = createdAt;
+        this.durationInSeconds = durationInSeconds;
+        this.name = name;
+        this.rulesPackageArns = rulesPackageArns;
+        this.userAttributesForFindings = userAttributesForFindings;
+  }
 }

@@ -18,9 +18,11 @@ public class TextAnswers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answers")
     public TextAnswer[] answers;
+
     public TextAnswers withAnswers(TextAnswer[] answers) {
         this.answers = answers;
         return this;
     }
     
+    public TextAnswers(){}
 }

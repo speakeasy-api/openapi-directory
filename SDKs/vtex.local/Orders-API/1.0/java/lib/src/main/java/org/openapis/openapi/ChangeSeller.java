@@ -30,7 +30,7 @@ public class ChangeSeller {
 
     /**
      * Get window to change seller
-     * Retrieves a marketplace\u2019s window to change seller, that is, the period when it is possible to choose another seller to fulfill a given order after the original seller has canceled it.
+     * Retrieves a marketplace’s window to change seller, that is, the period when it is possible to choose another seller to fulfill a given order after the original seller has canceled it.
      * 
      * The default period for this window is of 2 days, but it can be configured by the request Update window to change seller.
      * @param request the request object containing all of the parameters for the API call
@@ -60,11 +60,9 @@ public class ChangeSeller {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWindowToChangeSellerResponse res = new org.openapis.openapi.models.operations.GetWindowToChangeSellerResponse() {{
+        org.openapis.openapi.models.operations.GetWindowToChangeSellerResponse res = new org.openapis.openapi.models.operations.GetWindowToChangeSellerResponse(contentType, httpRes.statusCode()) {{
             getWindowToChangeSeller200TextPlainInteger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -79,7 +77,7 @@ public class ChangeSeller {
 
     /**
      * Update window to change seller
-     * Updates a marketplace\u2019s window to change seller, that is, the period when it is possible to choose another seller to fulfill a given order after the original seller has canceled it.
+     * Updates a marketplace’s window to change seller, that is, the period when it is possible to choose another seller to fulfill a given order after the original seller has canceled it.
      * 
      * It is possible to check the current window using the request Get window to change seller.
      * @param request the request object containing all of the parameters for the API call
@@ -114,10 +112,8 @@ public class ChangeSeller {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateWindowToChangeSellerResponse res = new org.openapis.openapi.models.operations.UpdateWindowToChangeSellerResponse() {{
+        org.openapis.openapi.models.operations.UpdateWindowToChangeSellerResponse res = new org.openapis.openapi.models.operations.UpdateWindowToChangeSellerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

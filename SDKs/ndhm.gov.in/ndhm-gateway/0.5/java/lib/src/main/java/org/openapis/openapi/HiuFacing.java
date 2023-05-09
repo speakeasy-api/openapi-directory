@@ -64,12 +64,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentRequestsInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsInitJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentRequestsInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsInitJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -123,12 +121,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentRequestsInitRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsInitRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentRequestsInitRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsInitRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -182,12 +178,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentRequestsStatusJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsStatusJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentRequestsStatusJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsStatusJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -241,12 +235,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentRequestsStatusRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsStatusRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentRequestsStatusRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsStatusRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -299,12 +291,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentsFetchResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsFetchResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentsFetchResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsFetchResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -359,12 +349,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentsHiuOnNotifyResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsHiuOnNotifyResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentsHiuOnNotifyResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsHiuOnNotifyResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -419,12 +407,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05HealthInformationCmRequestJsonResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationCmRequestJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05HealthInformationCmRequestJsonResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationCmRequestJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -479,12 +465,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05HealthInformationCmRequestRawResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationCmRequestRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05HealthInformationCmRequestRawResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationCmRequestRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -543,12 +527,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05HealthInformationNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05HealthInformationNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -607,12 +589,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05HealthInformationNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05HealthInformationNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -667,13 +647,11 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsFindJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsFindJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsFindJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsFindJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -735,13 +713,11 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsFindRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsFindRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsFindRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsFindRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -802,12 +778,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmInitJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmInitJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -861,12 +835,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmInitRawResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmInitRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmInitRawResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmInitRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -921,12 +893,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuOnNotifyResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuOnNotifyResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuOnNotifyResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuOnNotifyResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -981,12 +951,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionsHiuOnNotifyResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionsHiuOnNotifyResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionsHiuOnNotifyResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionsHiuOnNotifyResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1045,12 +1013,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthConfirmJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthConfirmJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthConfirmJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthConfirmJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1109,12 +1075,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthConfirmRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthConfirmRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthConfirmRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthConfirmRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1169,13 +1133,11 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1237,13 +1199,11 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1305,12 +1265,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthInitJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthInitJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1365,12 +1323,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthInitRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthInitRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthInitRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthInitRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1425,12 +1381,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1485,12 +1439,10 @@ public class HiuFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class BundleInstanceResultBundleTaskStorage {
     
     public S3Storage s3;
+
     public BundleInstanceResultBundleTaskStorage withS3(S3Storage s3) {
         this.s3 = s3;
         return this;
     }
     
+    public BundleInstanceResultBundleTaskStorage(){}
 }

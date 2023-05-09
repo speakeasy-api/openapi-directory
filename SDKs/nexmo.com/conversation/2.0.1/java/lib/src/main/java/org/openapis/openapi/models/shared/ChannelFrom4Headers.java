@@ -18,9 +18,11 @@ public class ChannelFrom4Headers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public String customerId;
+
     public ChannelFrom4Headers withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public ChannelFrom4Headers(){}
 }

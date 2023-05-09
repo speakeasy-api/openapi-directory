@@ -13,6 +13,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchBoulderCrimesRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchBoulderCrimesRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchBoulderCrimesRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchBoulderCrimesRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchBoulderCrimesRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchBoulderCrimesRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchBoulderCrimesRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchBoulderCrimesRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchBoulderCrimesRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchBoulderCrimesRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchBoulderCrimesRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchBoulderCrimesRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchBoulderCrimesRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchBoulderCrimesRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_crimes.blockadd")
     public String searchDbBoulderCrimesBlockadd;
+
     public SearchBoulderCrimesRequest withSearchDbBoulderCrimesBlockadd(String searchDbBoulderCrimesBlockadd) {
         this.searchDbBoulderCrimesBlockadd = searchDbBoulderCrimesBlockadd;
         return this;
@@ -163,6 +178,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_crimes.location")
     public String searchDbBoulderCrimesLocation;
+
     public SearchBoulderCrimesRequest withSearchDbBoulderCrimesLocation(String searchDbBoulderCrimesLocation) {
         this.searchDbBoulderCrimesLocation = searchDbBoulderCrimesLocation;
         return this;
@@ -173,6 +189,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_crimes.offense")
     public String searchDbBoulderCrimesOffense;
+
     public SearchBoulderCrimesRequest withSearchDbBoulderCrimesOffense(String searchDbBoulderCrimesOffense) {
         this.searchDbBoulderCrimesOffense = searchDbBoulderCrimesOffense;
         return this;
@@ -183,6 +200,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_crimes.reportdate")
     public String searchDbBoulderCrimesReportdate;
+
     public SearchBoulderCrimesRequest withSearchDbBoulderCrimesReportdate(String searchDbBoulderCrimesReportdate) {
         this.searchDbBoulderCrimesReportdate = searchDbBoulderCrimesReportdate;
         return this;
@@ -193,6 +211,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchBoulderCrimesRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -203,6 +222,7 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchBoulderCrimesRequest withText(String text) {
         this.text = text;
         return this;
@@ -213,9 +233,11 @@ public class SearchBoulderCrimesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchBoulderCrimesRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchBoulderCrimesRequest(){}
 }

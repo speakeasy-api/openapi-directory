@@ -18,6 +18,7 @@ public class Attempt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dispatchTime")
     public String dispatchTime;
+
     public Attempt withDispatchTime(String dispatchTime) {
         this.dispatchTime = dispatchTime;
         return this;
@@ -29,6 +30,7 @@ public class Attempt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseStatus")
     public Status responseStatus;
+
     public Attempt withResponseStatus(Status responseStatus) {
         this.responseStatus = responseStatus;
         return this;
@@ -40,6 +42,7 @@ public class Attempt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseTime")
     public String responseTime;
+
     public Attempt withResponseTime(String responseTime) {
         this.responseTime = responseTime;
         return this;
@@ -51,9 +54,11 @@ public class Attempt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleTime")
     public String scheduleTime;
+
     public Attempt withScheduleTime(String scheduleTime) {
         this.scheduleTime = scheduleTime;
         return this;
     }
     
+    public Attempt(){}
 }

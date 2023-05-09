@@ -53,12 +53,10 @@ public class Platform {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBalancePlatformsIdResponse res = new org.openapis.openapi.models.operations.GetBalancePlatformsIdResponse() {{
+        org.openapis.openapi.models.operations.GetBalancePlatformsIdResponse res = new org.openapis.openapi.models.operations.GetBalancePlatformsIdResponse(contentType, httpRes.statusCode()) {{
             balancePlatform = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,12 +108,10 @@ public class Platform {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBalancePlatformsIdAccountHoldersResponse res = new org.openapis.openapi.models.operations.GetBalancePlatformsIdAccountHoldersResponse() {{
+        org.openapis.openapi.models.operations.GetBalancePlatformsIdAccountHoldersResponse res = new org.openapis.openapi.models.operations.GetBalancePlatformsIdAccountHoldersResponse(contentType, httpRes.statusCode()) {{
             paginatedAccountHoldersResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

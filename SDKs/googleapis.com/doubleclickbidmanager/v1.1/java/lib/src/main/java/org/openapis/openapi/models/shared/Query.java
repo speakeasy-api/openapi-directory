@@ -18,6 +18,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Query withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public QueryMetadata metadata;
+
     public Query withMetadata(QueryMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -40,6 +42,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public Parameters params;
+
     public Query withParams(Parameters params) {
         this.params = params;
         return this;
@@ -51,6 +54,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryId")
     public String queryId;
+
     public Query withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
@@ -62,6 +66,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportDataEndTimeMs")
     public String reportDataEndTimeMs;
+
     public Query withReportDataEndTimeMs(String reportDataEndTimeMs) {
         this.reportDataEndTimeMs = reportDataEndTimeMs;
         return this;
@@ -73,6 +78,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportDataStartTimeMs")
     public String reportDataStartTimeMs;
+
     public Query withReportDataStartTimeMs(String reportDataStartTimeMs) {
         this.reportDataStartTimeMs = reportDataStartTimeMs;
         return this;
@@ -84,6 +90,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public QuerySchedule schedule;
+
     public Query withSchedule(QuerySchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -95,9 +102,11 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezoneCode")
     public String timezoneCode;
+
     public Query withTimezoneCode(String timezoneCode) {
         this.timezoneCode = timezoneCode;
         return this;
     }
     
+    public Query(){}
 }

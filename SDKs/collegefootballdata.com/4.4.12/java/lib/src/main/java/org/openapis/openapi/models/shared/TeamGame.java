@@ -12,6 +12,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TeamGame withId(Long id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teams")
     public TeamGameTeams[] teams;
+
     public TeamGame withTeams(TeamGameTeams[] teams) {
         this.teams = teams;
         return this;
     }
     
+    public TeamGame(){}
 }

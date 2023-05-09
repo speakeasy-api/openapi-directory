@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAllowListResponse {
@@ -12,6 +13,7 @@ public class UpdateAllowListResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateAllowListResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAllowListResponse {
     
     
     public String contentType;
+
     public UpdateAllowListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAllowListResponse {
      */
     
     public Object internalServerException;
+
     public UpdateAllowListResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateAllowListResponse {
     
     
     public Integer statusCode;
+
     public UpdateAllowListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateAllowListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAllowListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAllowListResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAllowListResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAllowListResponse {
      */
     
     public Object throttlingException;
+
     public UpdateAllowListResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAllowListResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAllowListResponse updateAllowListResponse;
+
     public UpdateAllowListResponse withUpdateAllowListResponse(org.openapis.openapi.models.shared.UpdateAllowListResponse updateAllowListResponse) {
         this.updateAllowListResponse = updateAllowListResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateAllowListResponse {
      */
     
     public Object validationException;
+
     public UpdateAllowListResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateAllowListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class RemediationActionWithOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Order")
     public Long order;
+
     public RemediationActionWithOrder withOrder(Long order) {
         this.order = order;
         return this;
@@ -23,9 +24,11 @@ public class RemediationActionWithOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemediationAction")
     public RemediationAction remediationAction;
+
     public RemediationActionWithOrder withRemediationAction(RemediationAction remediationAction) {
         this.remediationAction = remediationAction;
         return this;
     }
     
+    public RemediationActionWithOrder(){}
 }

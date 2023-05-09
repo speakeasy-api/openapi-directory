@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppDGETResponse {
@@ -12,6 +13,7 @@ public class AppDGETResponse {
      */
     
     public String appD;
+
     public AppDGETResponse withAppD(String appD) {
         this.appD = appD;
         return this;
@@ -19,6 +21,7 @@ public class AppDGETResponse {
     
     
     public byte[] body;
+
     public AppDGETResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -26,6 +29,7 @@ public class AppDGETResponse {
     
     
     public String contentType;
+
     public AppDGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class AppDGETResponse {
      */
     
     public org.openapis.openapi.models.shared.ProblemDetails problemDetails;
+
     public AppDGETResponse withProblemDetails(org.openapis.openapi.models.shared.ProblemDetails problemDetails) {
         this.problemDetails = problemDetails;
         return this;
@@ -43,6 +48,7 @@ public class AppDGETResponse {
     
     
     public Integer statusCode;
+
     public AppDGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class AppDGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppDGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AppDGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

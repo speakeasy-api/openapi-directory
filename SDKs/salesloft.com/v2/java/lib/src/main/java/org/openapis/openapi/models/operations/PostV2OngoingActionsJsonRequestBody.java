@@ -14,9 +14,11 @@ public class PostV2OngoingActionsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=action_id")
     public Long actionId;
+
     public PostV2OngoingActionsJsonRequestBody withActionId(Long actionId) {
         this.actionId = actionId;
         return this;
     }
     
+    public PostV2OngoingActionsJsonRequestBody(){}
 }

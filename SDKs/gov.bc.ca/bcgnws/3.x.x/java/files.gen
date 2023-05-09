@@ -110,4 +110,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNameIdOutputFor
 lib/src/main/java/org/openapis/openapi/models/operations/GetNameAuthoritiesOutputFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNameAuthoritiesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNameAuthoritiesResponse.java
+docs/sdk/README.md
+docs/feature/README.md
+docs/featuretaxonomy/README.md
+docs/name/README.md
+docs/nameauthority/README.md
+docs/search/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_fields")
     public OrderAdditionalFields[] additionalFields;
+
     public OrderFields withAdditionalFields(OrderAdditionalFields[] additionalFields) {
         this.additionalFields = additionalFields;
         return this;
@@ -26,6 +27,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_information")
     public String additionalInformation;
+
     public OrderFields withAdditionalInformation(String additionalInformation) {
         this.additionalInformation = additionalInformation;
         return this;
@@ -34,6 +36,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     public OrderBillingAddress billingAddress;
+
     public OrderFields withBillingAddress(OrderBillingAddress billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -45,6 +48,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkout_url")
     public String checkoutUrl;
+
     public OrderFields withCheckoutUrl(String checkoutUrl) {
         this.checkoutUrl = checkoutUrl;
         return this;
@@ -56,6 +60,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coupons")
     public String coupons;
+
     public OrderFields withCoupons(String coupons) {
         this.coupons = coupons;
         return this;
@@ -67,6 +72,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public OrderFields withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -78,6 +84,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public OrderFields withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -86,6 +93,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public Customer customer;
+
     public OrderFields withCustomer(Customer customer) {
         this.customer = customer;
         return this;
@@ -97,6 +105,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount")
     public Float discount;
+
     public OrderFields withDiscount(Float discount) {
         this.discount = discount;
         return this;
@@ -108,6 +117,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duplicate_url")
     public String duplicateUrl;
+
     public OrderFields withDuplicateUrl(String duplicateUrl) {
         this.duplicateUrl = duplicateUrl;
         return this;
@@ -119,6 +129,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_shipping_rate_id")
     public String externalShippingRateId;
+
     public OrderFields withExternalShippingRateId(String externalShippingRateId) {
         this.externalShippingRateId = externalShippingRateId;
         return this;
@@ -130,6 +141,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public OrderFields withId(Integer id) {
         this.id = id;
         return this;
@@ -141,6 +153,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_information")
     public String paymentInformation;
+
     public OrderFields withPaymentInformation(String paymentInformation) {
         this.paymentInformation = paymentInformation;
         return this;
@@ -152,6 +165,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method_name")
     public String paymentMethodName;
+
     public OrderFields withPaymentMethodName(String paymentMethodName) {
         this.paymentMethodName = paymentMethodName;
         return this;
@@ -163,6 +177,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method_type")
     public String paymentMethodType;
+
     public OrderFields withPaymentMethodType(String paymentMethodType) {
         this.paymentMethodType = paymentMethodType;
         return this;
@@ -171,6 +186,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public OrderProduct[] products;
+
     public OrderFields withProducts(OrderProduct[] products) {
         this.products = products;
         return this;
@@ -182,6 +198,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recovery_url")
     public String recoveryUrl;
+
     public OrderFields withRecoveryUrl(String recoveryUrl) {
         this.recoveryUrl = recoveryUrl;
         return this;
@@ -193,6 +210,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipment_status")
     public OrderFieldsShipmentStatusEnum shipmentStatus;
+
     public OrderFields withShipmentStatus(OrderFieldsShipmentStatusEnum shipmentStatus) {
         this.shipmentStatus = shipmentStatus;
         return this;
@@ -204,6 +222,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping")
     public Float shipping;
+
     public OrderFields withShipping(Float shipping) {
         this.shipping = shipping;
         return this;
@@ -212,6 +231,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
     public OrderShippingAddress shippingAddress;
+
     public OrderFields withShippingAddress(OrderShippingAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -223,6 +243,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_discount")
     public Float shippingDiscount;
+
     public OrderFields withShippingDiscount(Float shippingDiscount) {
         this.shippingDiscount = shippingDiscount;
         return this;
@@ -234,6 +255,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_method_id")
     public Integer shippingMethodId;
+
     public OrderFields withShippingMethodId(Integer shippingMethodId) {
         this.shippingMethodId = shippingMethodId;
         return this;
@@ -245,6 +267,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_method_name")
     public String shippingMethodName;
+
     public OrderFields withShippingMethodName(String shippingMethodName) {
         this.shippingMethodName = shippingMethodName;
         return this;
@@ -256,6 +279,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_option")
     public OrderFieldsShippingOptionEnum shippingOption;
+
     public OrderFields withShippingOption(OrderFieldsShippingOptionEnum shippingOption) {
         this.shippingOption = shippingOption;
         return this;
@@ -267,6 +291,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_required")
     public Boolean shippingRequired;
+
     public OrderFields withShippingRequired(Boolean shippingRequired) {
         this.shippingRequired = shippingRequired;
         return this;
@@ -278,6 +303,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_tax")
     public Float shippingTax;
+
     public OrderFields withShippingTax(Float shippingTax) {
         this.shippingTax = shippingTax;
         return this;
@@ -286,6 +312,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_taxes")
     public OrderShippingTax[] shippingTaxes;
+
     public OrderFields withShippingTaxes(OrderShippingTax[] shippingTaxes) {
         this.shippingTaxes = shippingTaxes;
         return this;
@@ -294,6 +321,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public TrafficSource source;
+
     public OrderFields withSource(TrafficSource source) {
         this.source = source;
         return this;
@@ -305,6 +333,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public OrderFieldsStatusEnum status;
+
     public OrderFields withStatus(OrderFieldsStatusEnum status) {
         this.status = status;
         return this;
@@ -316,6 +345,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtotal")
     public Float subtotal;
+
     public OrderFields withSubtotal(Float subtotal) {
         this.subtotal = subtotal;
         return this;
@@ -327,6 +357,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Float tax;
+
     public OrderFields withTax(Float tax) {
         this.tax = tax;
         return this;
@@ -338,6 +369,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Float total;
+
     public OrderFields withTotal(Float total) {
         this.total = total;
         return this;
@@ -349,6 +381,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_company")
     public String trackingCompany;
+
     public OrderFields withTrackingCompany(String trackingCompany) {
         this.trackingCompany = trackingCompany;
         return this;
@@ -360,6 +393,7 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_number")
     public String trackingNumber;
+
     public OrderFields withTrackingNumber(String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
@@ -371,9 +405,11 @@ public class OrderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_url")
     public String trackingUrl;
+
     public OrderFields withTrackingUrl(String trackingUrl) {
         this.trackingUrl = trackingUrl;
         return this;
     }
     
+    public OrderFields(){}
 }

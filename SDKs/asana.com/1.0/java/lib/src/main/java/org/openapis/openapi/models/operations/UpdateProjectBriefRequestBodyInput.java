@@ -15,9 +15,11 @@ public class UpdateProjectBriefRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ProjectBriefRequestInput data;
+
     public UpdateProjectBriefRequestBodyInput withData(org.openapis.openapi.models.shared.ProjectBriefRequestInput data) {
         this.data = data;
         return this;
     }
     
+    public UpdateProjectBriefRequestBodyInput(){}
 }

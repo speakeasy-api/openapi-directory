@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReportByDayGlobal {
     @JsonProperty("allChannels")
     public ReportByDayGlobalAllChannels allChannels;
+
     public ReportByDayGlobal withAllChannels(ReportByDayGlobalAllChannels allChannels) {
         this.allChannels = allChannels;
         return this;
@@ -16,9 +17,14 @@ public class ReportByDayGlobal {
     
     @JsonProperty("byChannels")
     public ReportByDayGlobalByChannel[] byChannels;
+
     public ReportByDayGlobal withByChannels(ReportByDayGlobalByChannel[] byChannels) {
         this.byChannels = byChannels;
         return this;
     }
     
+    public ReportByDayGlobal(@JsonProperty("allChannels") ReportByDayGlobalAllChannels allChannels, @JsonProperty("byChannels") ReportByDayGlobalByChannel[] byChannels) {
+        this.allChannels = allChannels;
+        this.byChannels = byChannels;
+  }
 }

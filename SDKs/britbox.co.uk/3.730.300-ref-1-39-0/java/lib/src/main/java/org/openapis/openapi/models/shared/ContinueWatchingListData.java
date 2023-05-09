@@ -25,9 +25,11 @@ public class ContinueWatchingListData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemInclusions")
     public java.util.Map<String, ContinueWatchingListDataExpansion> itemInclusions;
+
     public ContinueWatchingListData withItemInclusions(java.util.Map<String, ContinueWatchingListDataExpansion> itemInclusions) {
         this.itemInclusions = itemInclusions;
         return this;
     }
     
+    public ContinueWatchingListData(){}
 }

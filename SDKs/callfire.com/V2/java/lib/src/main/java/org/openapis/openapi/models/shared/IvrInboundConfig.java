@@ -18,9 +18,11 @@ public class IvrInboundConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialplanXml")
     public String dialplanXml;
+
     public IvrInboundConfig withDialplanXml(String dialplanXml) {
         this.dialplanXml = dialplanXml;
         return this;
     }
     
+    public IvrInboundConfig(){}
 }

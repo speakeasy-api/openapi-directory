@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVirtualServiceResponse {
@@ -12,6 +13,7 @@ public class DeleteVirtualServiceResponse {
      */
     
     public Object badRequestException;
+
     public DeleteVirtualServiceResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteVirtualServiceResponse {
     
     
     public String contentType;
+
     public DeleteVirtualServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteVirtualServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteVirtualServiceOutput deleteVirtualServiceOutput;
+
     public DeleteVirtualServiceResponse withDeleteVirtualServiceOutput(org.openapis.openapi.models.shared.DeleteVirtualServiceOutput deleteVirtualServiceOutput) {
         this.deleteVirtualServiceOutput = deleteVirtualServiceOutput;
         return this;
@@ -39,6 +43,7 @@ public class DeleteVirtualServiceResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteVirtualServiceResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteVirtualServiceResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteVirtualServiceResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteVirtualServiceResponse {
      */
     
     public Object notFoundException;
+
     public DeleteVirtualServiceResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteVirtualServiceResponse {
     
     
     public Integer statusCode;
+
     public DeleteVirtualServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteVirtualServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVirtualServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteVirtualServiceResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteVirtualServiceResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteVirtualServiceResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteVirtualServiceResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteVirtualServiceResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteVirtualServiceResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteVirtualServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

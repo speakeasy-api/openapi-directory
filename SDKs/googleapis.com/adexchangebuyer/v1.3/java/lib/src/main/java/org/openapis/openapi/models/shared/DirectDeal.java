@@ -18,6 +18,7 @@ public class DirectDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public Integer accountId;
+
     public DirectDeal withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class DirectDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiser")
     public String advertiser;
+
     public DirectDeal withAdvertiser(String advertiser) {
         this.advertiser = advertiser;
         return this;
@@ -40,6 +42,7 @@ public class DirectDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowsAlcohol")
     public Boolean allowsAlcohol;
+
     public DirectDeal withAllowsAlcohol(Boolean allowsAlcohol) {
         this.allowsAlcohol = allowsAlcohol;
         return this;
@@ -51,6 +54,7 @@ public class DirectDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyerAccountId")
     public String buyerAccountId;
+
     public DirectDeal withBuyerAccountId(String buyerAccountId) {
         this.buyerAccountId = buyerAccountId;
         return this;
@@ -62,6 +66,7 @@ public class DirectDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public DirectDeal withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -73,6 +78,7 @@ public class DirectDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealTier")
     public String dealTier;
+
     public DirectDeal withDealTier(String dealTier) {
         this.dealTier = dealTier;
         return this;
@@ -84,6 +90,7 @@ public class DirectDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public DirectDeal withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -95,6 +102,7 @@ public class DirectDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedCpm")
     public String fixedCpm;
+
     public DirectDeal withFixedCpm(String fixedCpm) {
         this.fixedCpm = fixedCpm;
         return this;
@@ -106,6 +114,7 @@ public class DirectDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DirectDeal withId(String id) {
         this.id = id;
         return this;
@@ -117,6 +126,7 @@ public class DirectDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DirectDeal withKind(String kind) {
         this.kind = kind;
         return this;
@@ -128,6 +138,7 @@ public class DirectDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DirectDeal withName(String name) {
         this.name = name;
         return this;
@@ -139,6 +150,7 @@ public class DirectDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateExchangeMinCpm")
     public String privateExchangeMinCpm;
+
     public DirectDeal withPrivateExchangeMinCpm(String privateExchangeMinCpm) {
         this.privateExchangeMinCpm = privateExchangeMinCpm;
         return this;
@@ -150,6 +162,7 @@ public class DirectDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherBlocksOverriden")
     public Boolean publisherBlocksOverriden;
+
     public DirectDeal withPublisherBlocksOverriden(Boolean publisherBlocksOverriden) {
         this.publisherBlocksOverriden = publisherBlocksOverriden;
         return this;
@@ -161,6 +174,7 @@ public class DirectDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerNetwork")
     public String sellerNetwork;
+
     public DirectDeal withSellerNetwork(String sellerNetwork) {
         this.sellerNetwork = sellerNetwork;
         return this;
@@ -172,9 +186,11 @@ public class DirectDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public DirectDeal withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public DirectDeal(){}
 }

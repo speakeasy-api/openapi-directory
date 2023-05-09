@@ -15,9 +15,11 @@ public class GetSignalingChannelEndpointOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceEndpointList")
     public ResourceEndpointListItem[] resourceEndpointList;
+
     public GetSignalingChannelEndpointOutput withResourceEndpointList(ResourceEndpointListItem[] resourceEndpointList) {
         this.resourceEndpointList = resourceEndpointList;
         return this;
     }
     
+    public GetSignalingChannelEndpointOutput(){}
 }

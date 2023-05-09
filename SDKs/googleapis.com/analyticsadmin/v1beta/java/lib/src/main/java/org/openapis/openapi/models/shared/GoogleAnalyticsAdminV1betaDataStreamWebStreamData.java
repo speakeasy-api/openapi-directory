@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaDataStreamWebStreamData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultUri")
     public String defaultUri;
+
     public GoogleAnalyticsAdminV1betaDataStreamWebStreamData withDefaultUri(String defaultUri) {
         this.defaultUri = defaultUri;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1betaDataStreamWebStreamData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firebaseAppId")
     public String firebaseAppId;
+
     public GoogleAnalyticsAdminV1betaDataStreamWebStreamData withFirebaseAppId(String firebaseAppId) {
         this.firebaseAppId = firebaseAppId;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsAdminV1betaDataStreamWebStreamData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurementId")
     public String measurementId;
+
     public GoogleAnalyticsAdminV1betaDataStreamWebStreamData withMeasurementId(String measurementId) {
         this.measurementId = measurementId;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaDataStreamWebStreamData(){}
 }

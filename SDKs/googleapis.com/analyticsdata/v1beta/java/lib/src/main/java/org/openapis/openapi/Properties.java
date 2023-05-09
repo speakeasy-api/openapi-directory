@@ -61,11 +61,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsdataPropertiesBatchRunPivotReportsResponse res = new org.openapis.openapi.models.operations.AnalyticsdataPropertiesBatchRunPivotReportsResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsdataPropertiesBatchRunPivotReportsResponse res = new org.openapis.openapi.models.operations.AnalyticsdataPropertiesBatchRunPivotReportsResponse(contentType, httpRes.statusCode()) {{
             batchRunPivotReportsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsdataPropertiesBatchRunReportsResponse res = new org.openapis.openapi.models.operations.AnalyticsdataPropertiesBatchRunReportsResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsdataPropertiesBatchRunReportsResponse res = new org.openapis.openapi.models.operations.AnalyticsdataPropertiesBatchRunReportsResponse(contentType, httpRes.statusCode()) {{
             batchRunReportsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsdataPropertiesCheckCompatibilityResponse res = new org.openapis.openapi.models.operations.AnalyticsdataPropertiesCheckCompatibilityResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsdataPropertiesCheckCompatibilityResponse res = new org.openapis.openapi.models.operations.AnalyticsdataPropertiesCheckCompatibilityResponse(contentType, httpRes.statusCode()) {{
             checkCompatibilityResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +197,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsdataPropertiesGetMetadataResponse res = new org.openapis.openapi.models.operations.AnalyticsdataPropertiesGetMetadataResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsdataPropertiesGetMetadataResponse res = new org.openapis.openapi.models.operations.AnalyticsdataPropertiesGetMetadataResponse(contentType, httpRes.statusCode()) {{
             metadata = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,11 +243,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsdataPropertiesRunPivotReportResponse res = new org.openapis.openapi.models.operations.AnalyticsdataPropertiesRunPivotReportResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsdataPropertiesRunPivotReportResponse res = new org.openapis.openapi.models.operations.AnalyticsdataPropertiesRunPivotReportResponse(contentType, httpRes.statusCode()) {{
             runPivotReportResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -299,11 +289,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsdataPropertiesRunRealtimeReportResponse res = new org.openapis.openapi.models.operations.AnalyticsdataPropertiesRunRealtimeReportResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsdataPropertiesRunRealtimeReportResponse res = new org.openapis.openapi.models.operations.AnalyticsdataPropertiesRunRealtimeReportResponse(contentType, httpRes.statusCode()) {{
             runRealtimeReportResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -347,11 +335,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsdataPropertiesRunReportResponse res = new org.openapis.openapi.models.operations.AnalyticsdataPropertiesRunReportResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsdataPropertiesRunReportResponse res = new org.openapis.openapi.models.operations.AnalyticsdataPropertiesRunReportResponse(contentType, httpRes.statusCode()) {{
             runReportResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

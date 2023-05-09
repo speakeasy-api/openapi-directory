@@ -15,6 +15,7 @@ public class CreateResiliencyPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateResiliencyPolicyRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateResiliencyPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataLocationConstraint")
     public CreateResiliencyPolicyRequestBodyDataLocationConstraintEnum dataLocationConstraint;
+
     public CreateResiliencyPolicyRequestBody withDataLocationConstraint(CreateResiliencyPolicyRequestBodyDataLocationConstraintEnum dataLocationConstraint) {
         this.dataLocationConstraint = dataLocationConstraint;
         return this;
@@ -36,6 +38,7 @@ public class CreateResiliencyPolicyRequestBody {
      */
     @JsonProperty("policy")
     public java.util.Map<String, org.openapis.openapi.models.shared.FailurePolicy> policy;
+
     public CreateResiliencyPolicyRequestBody withPolicy(java.util.Map<String, org.openapis.openapi.models.shared.FailurePolicy> policy) {
         this.policy = policy;
         return this;
@@ -47,6 +50,7 @@ public class CreateResiliencyPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyDescription")
     public String policyDescription;
+
     public CreateResiliencyPolicyRequestBody withPolicyDescription(String policyDescription) {
         this.policyDescription = policyDescription;
         return this;
@@ -57,6 +61,7 @@ public class CreateResiliencyPolicyRequestBody {
      */
     @JsonProperty("policyName")
     public String policyName;
+
     public CreateResiliencyPolicyRequestBody withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -68,6 +73,7 @@ public class CreateResiliencyPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateResiliencyPolicyRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -78,9 +84,15 @@ public class CreateResiliencyPolicyRequestBody {
      */
     @JsonProperty("tier")
     public CreateResiliencyPolicyRequestBodyTierEnum tier;
+
     public CreateResiliencyPolicyRequestBody withTier(CreateResiliencyPolicyRequestBodyTierEnum tier) {
         this.tier = tier;
         return this;
     }
     
+    public CreateResiliencyPolicyRequestBody(@JsonProperty("policy") java.util.Map<String, org.openapis.openapi.models.shared.FailurePolicy> policy, @JsonProperty("policyName") String policyName, @JsonProperty("tier") CreateResiliencyPolicyRequestBodyTierEnum tier) {
+        this.policy = policy;
+        this.policyName = policyName;
+        this.tier = tier;
+  }
 }

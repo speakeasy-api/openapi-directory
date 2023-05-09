@@ -18,9 +18,11 @@ public class PageAuthorImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PageAuthorImage withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PageAuthorImage(){}
 }

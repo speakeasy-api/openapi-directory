@@ -12,9 +12,13 @@ public class StartDevEnvironmentSessionRequestBody {
      */
     @JsonProperty("sessionConfiguration")
     public StartDevEnvironmentSessionRequestBodySessionConfiguration sessionConfiguration;
+
     public StartDevEnvironmentSessionRequestBody withSessionConfiguration(StartDevEnvironmentSessionRequestBodySessionConfiguration sessionConfiguration) {
         this.sessionConfiguration = sessionConfiguration;
         return this;
     }
     
+    public StartDevEnvironmentSessionRequestBody(@JsonProperty("sessionConfiguration") StartDevEnvironmentSessionRequestBodySessionConfiguration sessionConfiguration) {
+        this.sessionConfiguration = sessionConfiguration;
+  }
 }

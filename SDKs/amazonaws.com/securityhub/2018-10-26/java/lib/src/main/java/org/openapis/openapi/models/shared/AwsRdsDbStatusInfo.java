@@ -15,6 +15,7 @@ public class AwsRdsDbStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public AwsRdsDbStatusInfo withMessage(String message) {
         this.message = message;
         return this;
@@ -23,6 +24,7 @@ public class AwsRdsDbStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Normal")
     public Boolean normal;
+
     public AwsRdsDbStatusInfo withNormal(Boolean normal) {
         this.normal = normal;
         return this;
@@ -31,6 +33,7 @@ public class AwsRdsDbStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsRdsDbStatusInfo withStatus(String status) {
         this.status = status;
         return this;
@@ -39,9 +42,11 @@ public class AwsRdsDbStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusType")
     public String statusType;
+
     public AwsRdsDbStatusInfo withStatusType(String statusType) {
         this.statusType = statusType;
         return this;
     }
     
+    public AwsRdsDbStatusInfo(){}
 }

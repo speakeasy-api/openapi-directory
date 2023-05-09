@@ -18,6 +18,7 @@ public class BalancePlatform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BalancePlatform withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class BalancePlatform {
      */
     @JsonProperty("id")
     public String id;
+
     public BalancePlatform withId(String id) {
         this.id = id;
         return this;
@@ -41,9 +43,13 @@ public class BalancePlatform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public BalancePlatform withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public BalancePlatform(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateResponsePlanResponse {
@@ -12,6 +13,7 @@ public class UpdateResponsePlanResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateResponsePlanResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateResponsePlanResponse {
      */
     
     public Object conflictException;
+
     public UpdateResponsePlanResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateResponsePlanResponse {
     
     
     public String contentType;
+
     public UpdateResponsePlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateResponsePlanResponse {
      */
     
     public Object internalServerException;
+
     public UpdateResponsePlanResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateResponsePlanResponse {
     
     
     public Integer statusCode;
+
     public UpdateResponsePlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateResponsePlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateResponsePlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateResponsePlanResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateResponsePlanResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateResponsePlanResponse {
      */
     
     public Object throttlingException;
+
     public UpdateResponsePlanResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateResponsePlanResponse {
      */
     
     public java.util.Map<String, Object> updateResponsePlanOutput;
+
     public UpdateResponsePlanResponse withUpdateResponsePlanOutput(java.util.Map<String, Object> updateResponsePlanOutput) {
         this.updateResponsePlanOutput = updateResponsePlanOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateResponsePlanResponse {
      */
     
     public Object validationException;
+
     public UpdateResponsePlanResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateResponsePlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

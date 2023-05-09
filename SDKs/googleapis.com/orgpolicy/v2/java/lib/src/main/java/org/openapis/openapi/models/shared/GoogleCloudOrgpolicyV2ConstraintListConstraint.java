@@ -18,6 +18,7 @@ public class GoogleCloudOrgpolicyV2ConstraintListConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportsIn")
     public Boolean supportsIn;
+
     public GoogleCloudOrgpolicyV2ConstraintListConstraint withSupportsIn(Boolean supportsIn) {
         this.supportsIn = supportsIn;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudOrgpolicyV2ConstraintListConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportsUnder")
     public Boolean supportsUnder;
+
     public GoogleCloudOrgpolicyV2ConstraintListConstraint withSupportsUnder(Boolean supportsUnder) {
         this.supportsUnder = supportsUnder;
         return this;
     }
     
+    public GoogleCloudOrgpolicyV2ConstraintListConstraint(){}
 }

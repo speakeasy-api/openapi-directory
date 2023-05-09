@@ -12,9 +12,13 @@ public class PutLoggingOptionsRequestBody {
      */
     @JsonProperty("loggingOptions")
     public PutLoggingOptionsRequestBodyLoggingOptions loggingOptions;
+
     public PutLoggingOptionsRequestBody withLoggingOptions(PutLoggingOptionsRequestBodyLoggingOptions loggingOptions) {
         this.loggingOptions = loggingOptions;
         return this;
     }
     
+    public PutLoggingOptionsRequestBody(@JsonProperty("loggingOptions") PutLoggingOptionsRequestBodyLoggingOptions loggingOptions) {
+        this.loggingOptions = loggingOptions;
+  }
 }

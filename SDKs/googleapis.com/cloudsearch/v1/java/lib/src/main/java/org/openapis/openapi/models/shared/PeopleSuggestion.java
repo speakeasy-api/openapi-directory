@@ -18,9 +18,11 @@ public class PeopleSuggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("person")
     public Person person;
+
     public PeopleSuggestion withPerson(Person person) {
         this.person = person;
         return this;
     }
     
+    public PeopleSuggestion(){}
 }

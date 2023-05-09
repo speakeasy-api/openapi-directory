@@ -18,6 +18,7 @@ public class BrandedFoodObjectItemsDietLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gluten_free")
     public BrandedFoodObjectItemsDietLabelsGlutenFree glutenFree;
+
     public BrandedFoodObjectItemsDietLabels withGlutenFree(BrandedFoodObjectItemsDietLabelsGlutenFree glutenFree) {
         this.glutenFree = glutenFree;
         return this;
@@ -29,6 +30,7 @@ public class BrandedFoodObjectItemsDietLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vegan")
     public BrandedFoodObjectItemsDietLabelsVegan vegan;
+
     public BrandedFoodObjectItemsDietLabels withVegan(BrandedFoodObjectItemsDietLabelsVegan vegan) {
         this.vegan = vegan;
         return this;
@@ -40,9 +42,11 @@ public class BrandedFoodObjectItemsDietLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vegetarian")
     public BrandedFoodObjectItemsDietLabelsVegetarian vegetarian;
+
     public BrandedFoodObjectItemsDietLabels withVegetarian(BrandedFoodObjectItemsDietLabelsVegetarian vegetarian) {
         this.vegetarian = vegetarian;
         return this;
     }
     
+    public BrandedFoodObjectItemsDietLabels(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SmartMeDeviceConfigurationGetResponse {
     
     public byte[] body;
+
     public SmartMeDeviceConfigurationGetResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class SmartMeDeviceConfigurationGetResponse {
     
     
     public String contentType;
+
     public SmartMeDeviceConfigurationGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SmartMeDeviceConfigurationGetResponse {
      */
     
     public org.openapis.openapi.models.shared.SmartMeDeviceConfigurationContainer smartMeDeviceConfigurationContainer;
+
     public SmartMeDeviceConfigurationGetResponse withSmartMeDeviceConfigurationContainer(org.openapis.openapi.models.shared.SmartMeDeviceConfigurationContainer smartMeDeviceConfigurationContainer) {
         this.smartMeDeviceConfigurationContainer = smartMeDeviceConfigurationContainer;
         return this;
@@ -33,6 +37,7 @@ public class SmartMeDeviceConfigurationGetResponse {
     
     
     public Integer statusCode;
+
     public SmartMeDeviceConfigurationGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class SmartMeDeviceConfigurationGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SmartMeDeviceConfigurationGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SmartMeDeviceConfigurationGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

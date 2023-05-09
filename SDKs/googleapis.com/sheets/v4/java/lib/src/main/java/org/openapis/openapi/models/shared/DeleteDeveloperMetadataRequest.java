@@ -18,9 +18,11 @@ public class DeleteDeveloperMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataFilter")
     public DataFilter dataFilter;
+
     public DeleteDeveloperMetadataRequest withDataFilter(DataFilter dataFilter) {
         this.dataFilter = dataFilter;
         return this;
     }
     
+    public DeleteDeveloperMetadataRequest(){}
 }

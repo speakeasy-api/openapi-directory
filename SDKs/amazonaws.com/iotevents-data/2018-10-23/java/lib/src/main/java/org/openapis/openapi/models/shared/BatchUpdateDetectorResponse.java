@@ -15,9 +15,11 @@ public class BatchUpdateDetectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchUpdateDetectorErrorEntries")
     public BatchUpdateDetectorErrorEntry[] batchUpdateDetectorErrorEntries;
+
     public BatchUpdateDetectorResponse withBatchUpdateDetectorErrorEntries(BatchUpdateDetectorErrorEntry[] batchUpdateDetectorErrorEntries) {
         this.batchUpdateDetectorErrorEntries = batchUpdateDetectorErrorEntries;
         return this;
     }
     
+    public BatchUpdateDetectorResponse(){}
 }

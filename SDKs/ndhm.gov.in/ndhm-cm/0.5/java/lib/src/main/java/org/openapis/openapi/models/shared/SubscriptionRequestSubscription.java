@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubscriptionRequestSubscription {
     @JsonProperty("categories")
     public SubscriptionCategoryEnum[] categories;
+
     public SubscriptionRequestSubscription withCategories(SubscriptionCategoryEnum[] categories) {
         this.categories = categories;
         return this;
@@ -19,6 +20,7 @@ public class SubscriptionRequestSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hips")
     public OrganizationRepresentation[] hips;
+
     public SubscriptionRequestSubscription withHips(OrganizationRepresentation[] hips) {
         this.hips = hips;
         return this;
@@ -26,6 +28,7 @@ public class SubscriptionRequestSubscription {
     
     @JsonProperty("hiu")
     public OrganizationRepresentation hiu;
+
     public SubscriptionRequestSubscription withHiu(OrganizationRepresentation hiu) {
         this.hiu = hiu;
         return this;
@@ -33,6 +36,7 @@ public class SubscriptionRequestSubscription {
     
     @JsonProperty("patient")
     public ConsentManagerPatientID patient;
+
     public SubscriptionRequestSubscription withPatient(ConsentManagerPatientID patient) {
         this.patient = patient;
         return this;
@@ -40,6 +44,7 @@ public class SubscriptionRequestSubscription {
     
     @JsonProperty("period")
     public SubscriptionPeriod period;
+
     public SubscriptionRequestSubscription withPeriod(SubscriptionPeriod period) {
         this.period = period;
         return this;
@@ -47,9 +52,17 @@ public class SubscriptionRequestSubscription {
     
     @JsonProperty("purpose")
     public UsePurpose purpose;
+
     public SubscriptionRequestSubscription withPurpose(UsePurpose purpose) {
         this.purpose = purpose;
         return this;
     }
     
+    public SubscriptionRequestSubscription(@JsonProperty("categories") SubscriptionCategoryEnum[] categories, @JsonProperty("hiu") OrganizationRepresentation hiu, @JsonProperty("patient") ConsentManagerPatientID patient, @JsonProperty("period") SubscriptionPeriod period, @JsonProperty("purpose") UsePurpose purpose) {
+        this.categories = categories;
+        this.hiu = hiu;
+        this.patient = patient;
+        this.period = period;
+        this.purpose = purpose;
+  }
 }

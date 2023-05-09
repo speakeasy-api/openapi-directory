@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1PhysicalSchemaProtobufSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDatacatalogV1PhysicalSchemaProtobufSchema withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1PhysicalSchemaProtobufSchema(){}
 }

@@ -15,6 +15,7 @@ public class ListConstraintsForPortfolioOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConstraintDetails")
     public ConstraintDetail[] constraintDetails;
+
     public ListConstraintsForPortfolioOutput withConstraintDetails(ConstraintDetail[] constraintDetails) {
         this.constraintDetails = constraintDetails;
         return this;
@@ -23,9 +24,11 @@ public class ListConstraintsForPortfolioOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListConstraintsForPortfolioOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListConstraintsForPortfolioOutput(){}
 }

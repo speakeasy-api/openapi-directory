@@ -15,9 +15,13 @@ public class UpdateEndpointResponse {
      */
     @JsonProperty("MessageBody")
     public MessageBody messageBody;
+
     public UpdateEndpointResponse withMessageBody(MessageBody messageBody) {
         this.messageBody = messageBody;
         return this;
     }
     
+    public UpdateEndpointResponse(@JsonProperty("MessageBody") MessageBody messageBody) {
+        this.messageBody = messageBody;
+  }
 }

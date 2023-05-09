@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAccountAttributesRequest {
     
     public DescribeAccountAttributesRequestAttributeNamesEnum[] attributeNames;
+
     public DescribeAccountAttributesRequest withAttributeNames(DescribeAccountAttributesRequestAttributeNamesEnum[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
@@ -16,9 +17,11 @@ public class DescribeAccountAttributesRequest {
     
     
     public Boolean dryRun;
+
     public DescribeAccountAttributesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public DescribeAccountAttributesRequest(){}
 }

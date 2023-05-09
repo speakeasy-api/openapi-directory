@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDeleteRepoSecretRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsDeleteRepoSecretRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -16,6 +18,7 @@ public class ActionsDeleteRepoSecretRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsDeleteRepoSecretRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -26,9 +29,15 @@ public class ActionsDeleteRepoSecretRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
     public String secretName;
+
     public ActionsDeleteRepoSecretRequest withSecretName(String secretName) {
         this.secretName = secretName;
         return this;
     }
     
+    public ActionsDeleteRepoSecretRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("secret_name") String secretName) {
+        this.owner = owner;
+        this.repo = repo;
+        this.secretName = secretName;
+  }
 }

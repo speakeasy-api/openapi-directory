@@ -62,11 +62,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesAliasesCreateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAliasesCreateResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesAliasesCreateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAliasesCreateResponse(contentType, httpRes.statusCode()) {{
             courseAlias = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesAliasesDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAliasesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesAliasesDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAliasesDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesAliasesListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAliasesListResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesAliasesListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAliasesListResponse(contentType, httpRes.statusCode()) {{
             listCourseAliasesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsCreateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsCreateResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsCreateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsCreateResponse(contentType, httpRes.statusCode()) {{
             announcement = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsGetResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsGetResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsGetResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsGetResponse(contentType, httpRes.statusCode()) {{
             announcement = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -340,11 +328,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsListResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsListResponse(contentType, httpRes.statusCode()) {{
             listAnnouncementsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsModifyAssigneesResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsModifyAssigneesResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsModifyAssigneesResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsModifyAssigneesResponse(contentType, httpRes.statusCode()) {{
             announcement = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,11 +420,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsPatchResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsPatchResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsPatchResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesAnnouncementsPatchResponse(contentType, httpRes.statusCode()) {{
             announcement = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +466,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkCreateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkCreateResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkCreateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkCreateResponse(contentType, httpRes.statusCode()) {{
             courseWork = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -530,11 +510,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkDeleteResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -576,11 +554,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkGetResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkGetResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkGetResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkGetResponse(contentType, httpRes.statusCode()) {{
             courseWork = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -622,11 +598,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkListResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkListResponse(contentType, httpRes.statusCode()) {{
             listCourseWorkResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -670,11 +644,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkModifyAssigneesResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkModifyAssigneesResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkModifyAssigneesResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkModifyAssigneesResponse(contentType, httpRes.statusCode()) {{
             courseWork = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -718,11 +690,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkPatchResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkPatchResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkPatchResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkPatchResponse(contentType, httpRes.statusCode()) {{
             courseWork = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -764,11 +734,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsGetResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsGetResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsGetResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsGetResponse(contentType, httpRes.statusCode()) {{
             studentSubmission = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -810,11 +778,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsListResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsListResponse(contentType, httpRes.statusCode()) {{
             listStudentSubmissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -858,11 +824,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsResponse(contentType, httpRes.statusCode()) {{
             studentSubmission = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -906,11 +870,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsPatchResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsPatchResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsPatchResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsPatchResponse(contentType, httpRes.statusCode()) {{
             studentSubmission = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -954,11 +916,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsReclaimResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsReclaimResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsReclaimResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsReclaimResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1002,11 +962,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsReturnResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsReturnResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsReturnResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsReturnResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1050,11 +1008,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsTurnInResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsTurnInResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsTurnInResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkStudentSubmissionsTurnInResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1098,11 +1054,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsCreateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsCreateResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsCreateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsCreateResponse(contentType, httpRes.statusCode()) {{
             courseWorkMaterial = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1144,11 +1098,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1190,11 +1142,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsGetResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsGetResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsGetResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsGetResponse(contentType, httpRes.statusCode()) {{
             courseWorkMaterial = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1236,11 +1186,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsListResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsListResponse(contentType, httpRes.statusCode()) {{
             listCourseWorkMaterialResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1284,11 +1232,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsPatchResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsPatchResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsPatchResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCourseWorkMaterialsPatchResponse(contentType, httpRes.statusCode()) {{
             courseWorkMaterial = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1332,11 +1278,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesCreateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCreateResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesCreateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesCreateResponse(contentType, httpRes.statusCode()) {{
             course = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1378,11 +1322,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1424,11 +1366,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesGetResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesGetResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesGetResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesGetResponse(contentType, httpRes.statusCode()) {{
             course = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1470,11 +1410,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesListResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesListResponse(contentType, httpRes.statusCode()) {{
             listCoursesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1518,11 +1456,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesPatchResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesPatchResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesPatchResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesPatchResponse(contentType, httpRes.statusCode()) {{
             course = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1566,11 +1502,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesStudentsCreateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesStudentsCreateResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesStudentsCreateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesStudentsCreateResponse(contentType, httpRes.statusCode()) {{
             student = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1612,11 +1546,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesStudentsDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesStudentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesStudentsDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesStudentsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1658,11 +1590,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesStudentsGetResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesStudentsGetResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesStudentsGetResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesStudentsGetResponse(contentType, httpRes.statusCode()) {{
             student = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1704,11 +1634,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesStudentsListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesStudentsListResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesStudentsListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesStudentsListResponse(contentType, httpRes.statusCode()) {{
             listStudentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1752,11 +1680,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesTeachersCreateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTeachersCreateResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesTeachersCreateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTeachersCreateResponse(contentType, httpRes.statusCode()) {{
             teacher = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1798,11 +1724,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesTeachersDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTeachersDeleteResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesTeachersDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTeachersDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1844,11 +1768,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesTeachersGetResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTeachersGetResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesTeachersGetResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTeachersGetResponse(contentType, httpRes.statusCode()) {{
             teacher = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1890,11 +1812,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesTeachersListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTeachersListResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesTeachersListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTeachersListResponse(contentType, httpRes.statusCode()) {{
             listTeachersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1938,11 +1858,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesTopicsCreateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTopicsCreateResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesTopicsCreateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTopicsCreateResponse(contentType, httpRes.statusCode()) {{
             topic = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1984,11 +1902,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesTopicsDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTopicsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesTopicsDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTopicsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2030,11 +1946,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesTopicsGetResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTopicsGetResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesTopicsGetResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTopicsGetResponse(contentType, httpRes.statusCode()) {{
             topic = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2076,11 +1990,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesTopicsListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTopicsListResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesTopicsListResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTopicsListResponse(contentType, httpRes.statusCode()) {{
             listTopicResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2124,11 +2036,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesTopicsPatchResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTopicsPatchResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesTopicsPatchResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesTopicsPatchResponse(contentType, httpRes.statusCode()) {{
             topic = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2172,11 +2082,9 @@ public class Courses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomCoursesUpdateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesUpdateResponse() {{
+        org.openapis.openapi.models.operations.ClassroomCoursesUpdateResponse res = new org.openapis.openapi.models.operations.ClassroomCoursesUpdateResponse(contentType, httpRes.statusCode()) {{
             course = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

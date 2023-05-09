@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeClustersResponse {
@@ -12,6 +13,7 @@ public class DescribeClustersResponse {
      */
     
     public Object clusterNotFoundFault;
+
     public DescribeClustersResponse withClusterNotFoundFault(Object clusterNotFoundFault) {
         this.clusterNotFoundFault = clusterNotFoundFault;
         return this;
@@ -19,6 +21,7 @@ public class DescribeClustersResponse {
     
     
     public String contentType;
+
     public DescribeClustersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeClustersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeClustersResponse describeClustersResponse;
+
     public DescribeClustersResponse withDescribeClustersResponse(org.openapis.openapi.models.shared.DescribeClustersResponse describeClustersResponse) {
         this.describeClustersResponse = describeClustersResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeClustersResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public DescribeClustersResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeClustersResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeClustersResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeClustersResponse {
     
     
     public Integer statusCode;
+
     public DescribeClustersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeClustersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeClustersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeClustersResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public DescribeClustersResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
     }
     
+    public DescribeClustersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ListSignalingChannelsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelInfoList")
     public ChannelInfo[] channelInfoList;
+
     public ListSignalingChannelsOutput withChannelInfoList(ChannelInfo[] channelInfoList) {
         this.channelInfoList = channelInfoList;
         return this;
@@ -23,9 +24,11 @@ public class ListSignalingChannelsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSignalingChannelsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListSignalingChannelsOutput(){}
 }

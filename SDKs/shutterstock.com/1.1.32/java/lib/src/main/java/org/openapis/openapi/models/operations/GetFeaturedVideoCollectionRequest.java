@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeaturedVideoCollectionRequest {
@@ -12,6 +13,7 @@ public class GetFeaturedVideoCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetFeaturedVideoCollectionEmbedEnum embed;
+
     public GetFeaturedVideoCollectionRequest withEmbed(GetFeaturedVideoCollectionEmbedEnum embed) {
         this.embed = embed;
         return this;
@@ -22,9 +24,13 @@ public class GetFeaturedVideoCollectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetFeaturedVideoCollectionRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetFeaturedVideoCollectionRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

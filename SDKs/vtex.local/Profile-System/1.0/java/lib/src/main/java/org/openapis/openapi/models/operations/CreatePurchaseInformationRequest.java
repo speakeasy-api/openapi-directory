@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePurchaseInformationRequest {
@@ -12,6 +13,7 @@ public class CreatePurchaseInformationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreatePurchaseInformationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreatePurchaseInformationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreatePurchaseInformationRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreatePurchaseInformationRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public Object requestBody;
+
     public CreatePurchaseInformationRequest withRequestBody(Object requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -41,6 +45,7 @@ public class CreatePurchaseInformationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternativeKey")
     public String alternativeKey;
+
     public CreatePurchaseInformationRequest withAlternativeKey(String alternativeKey) {
         this.alternativeKey = alternativeKey;
         return this;
@@ -51,9 +56,15 @@ public class CreatePurchaseInformationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public CreatePurchaseInformationRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
     }
     
+    public CreatePurchaseInformationRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("profileId") String profileId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.profileId = profileId;
+  }
 }

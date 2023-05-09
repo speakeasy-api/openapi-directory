@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GenerateBatchOrderInvoiceErrorResponseItem {
     @JsonProperty("count")
     public Long count;
+
     public GenerateBatchOrderInvoiceErrorResponseItem withCount(Long count) {
         this.count = count;
         return this;
@@ -16,6 +17,7 @@ public class GenerateBatchOrderInvoiceErrorResponseItem {
     
     @JsonProperty("errorType")
     public String errorType;
+
     public GenerateBatchOrderInvoiceErrorResponseItem withErrorType(String errorType) {
         this.errorType = errorType;
         return this;
@@ -23,9 +25,15 @@ public class GenerateBatchOrderInvoiceErrorResponseItem {
     
     @JsonProperty("errors")
     public GenerateBatchOrderInvoiceErrorResponseItemDetail[] errors;
+
     public GenerateBatchOrderInvoiceErrorResponseItem withErrors(GenerateBatchOrderInvoiceErrorResponseItemDetail[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GenerateBatchOrderInvoiceErrorResponseItem(@JsonProperty("count") Long count, @JsonProperty("errorType") String errorType, @JsonProperty("errors") GenerateBatchOrderInvoiceErrorResponseItemDetail[] errors) {
+        this.count = count;
+        this.errorType = errorType;
+        this.errors = errors;
+  }
 }

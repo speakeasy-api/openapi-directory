@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateTemplateRequest - Represents a request to create an email template. For more information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-personalized-email-api.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class CreateTemplateRequest {
     
     public Template template;
+
     public CreateTemplateRequest withTemplate(Template template) {
         this.template = template;
         return this;
     }
     
+    public CreateTemplateRequest(@JsonProperty("Template") Template template) {
+        this.template = template;
+  }
 }

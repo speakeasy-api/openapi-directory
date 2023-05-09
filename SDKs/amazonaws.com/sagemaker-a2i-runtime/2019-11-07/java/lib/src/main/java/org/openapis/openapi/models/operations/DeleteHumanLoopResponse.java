@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteHumanLoopResponse {
     
     public String contentType;
+
     public DeleteHumanLoopResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteHumanLoopResponse {
      */
     
     public java.util.Map<String, Object> deleteHumanLoopResponse;
+
     public DeleteHumanLoopResponse withDeleteHumanLoopResponse(java.util.Map<String, Object> deleteHumanLoopResponse) {
         this.deleteHumanLoopResponse = deleteHumanLoopResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteHumanLoopResponse {
      */
     
     public Object internalServerException;
+
     public DeleteHumanLoopResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteHumanLoopResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteHumanLoopResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteHumanLoopResponse {
     
     
     public Integer statusCode;
+
     public DeleteHumanLoopResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteHumanLoopResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteHumanLoopResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteHumanLoopResponse {
      */
     
     public Object throttlingException;
+
     public DeleteHumanLoopResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteHumanLoopResponse {
      */
     
     public Object validationException;
+
     public DeleteHumanLoopResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteHumanLoopResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

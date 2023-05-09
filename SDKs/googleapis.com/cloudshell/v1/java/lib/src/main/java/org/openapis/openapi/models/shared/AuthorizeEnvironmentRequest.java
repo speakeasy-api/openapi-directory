@@ -18,6 +18,7 @@ public class AuthorizeEnvironmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public AuthorizeEnvironmentRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -29,6 +30,7 @@ public class AuthorizeEnvironmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public AuthorizeEnvironmentRequest withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -40,9 +42,11 @@ public class AuthorizeEnvironmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idToken")
     public String idToken;
+
     public AuthorizeEnvironmentRequest withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
     }
     
+    public AuthorizeEnvironmentRequest(){}
 }

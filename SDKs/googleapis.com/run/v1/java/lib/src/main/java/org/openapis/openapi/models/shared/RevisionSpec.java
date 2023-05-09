@@ -18,17 +18,19 @@ public class RevisionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerConcurrency")
     public Integer containerConcurrency;
+
     public RevisionSpec withContainerConcurrency(Integer containerConcurrency) {
         this.containerConcurrency = containerConcurrency;
         return this;
     }
     
     /**
-     * Containers holds the single container that defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of fields on this Container, including: name and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is documented here: https://github.com/knative/specs/blob/main/specs/serving/runtime-contract.md
+     * Containers holds the single container that defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of fields on this Container, including: name and lifecycle. In Cloud Run, only a single container may be provided.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public Container[] containers;
+
     public RevisionSpec withContainers(Container[] containers) {
         this.containers = containers;
         return this;
@@ -40,6 +42,7 @@ public class RevisionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableServiceLinks")
     public Boolean enableServiceLinks;
+
     public RevisionSpec withEnableServiceLinks(Boolean enableServiceLinks) {
         this.enableServiceLinks = enableServiceLinks;
         return this;
@@ -51,6 +54,7 @@ public class RevisionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imagePullSecrets")
     public LocalObjectReference[] imagePullSecrets;
+
     public RevisionSpec withImagePullSecrets(LocalObjectReference[] imagePullSecrets) {
         this.imagePullSecrets = imagePullSecrets;
         return this;
@@ -62,6 +66,7 @@ public class RevisionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountName")
     public String serviceAccountName;
+
     public RevisionSpec withServiceAccountName(String serviceAccountName) {
         this.serviceAccountName = serviceAccountName;
         return this;
@@ -73,6 +78,7 @@ public class RevisionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutSeconds")
     public Integer timeoutSeconds;
+
     public RevisionSpec withTimeoutSeconds(Integer timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
@@ -81,9 +87,11 @@ public class RevisionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumes")
     public Volume[] volumes;
+
     public RevisionSpec withVolumes(Volume[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public RevisionSpec(){}
 }

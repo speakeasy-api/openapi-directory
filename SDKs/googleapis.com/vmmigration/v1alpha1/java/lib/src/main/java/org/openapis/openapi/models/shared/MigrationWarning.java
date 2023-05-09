@@ -18,6 +18,7 @@ public class MigrationWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionItem")
     public LocalizedMessage actionItem;
+
     public MigrationWarning withActionItem(LocalizedMessage actionItem) {
         this.actionItem = actionItem;
         return this;
@@ -29,6 +30,7 @@ public class MigrationWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public MigrationWarningCodeEnum code;
+
     public MigrationWarning withCode(MigrationWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -40,6 +42,7 @@ public class MigrationWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("helpLinks")
     public Link[] helpLinks;
+
     public MigrationWarning withHelpLinks(Link[] helpLinks) {
         this.helpLinks = helpLinks;
         return this;
@@ -51,6 +54,7 @@ public class MigrationWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warningMessage")
     public LocalizedMessage warningMessage;
+
     public MigrationWarning withWarningMessage(LocalizedMessage warningMessage) {
         this.warningMessage = warningMessage;
         return this;
@@ -62,9 +66,11 @@ public class MigrationWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warningTime")
     public String warningTime;
+
     public MigrationWarning withWarningTime(String warningTime) {
         this.warningTime = warningTime;
         return this;
     }
     
+    public MigrationWarning(){}
 }

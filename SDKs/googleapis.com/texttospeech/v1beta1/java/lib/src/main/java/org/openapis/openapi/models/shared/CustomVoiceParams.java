@@ -18,6 +18,7 @@ public class CustomVoiceParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public CustomVoiceParams withModel(String model) {
         this.model = model;
         return this;
@@ -29,9 +30,11 @@ public class CustomVoiceParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportedUsage")
     public CustomVoiceParamsReportedUsageEnum reportedUsage;
+
     public CustomVoiceParams withReportedUsage(CustomVoiceParamsReportedUsageEnum reportedUsage) {
         this.reportedUsage = reportedUsage;
         return this;
     }
     
+    public CustomVoiceParams(){}
 }

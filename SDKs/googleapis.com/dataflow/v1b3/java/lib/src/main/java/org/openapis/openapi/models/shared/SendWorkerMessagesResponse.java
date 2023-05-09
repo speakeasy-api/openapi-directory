@@ -18,9 +18,11 @@ public class SendWorkerMessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerMessageResponses")
     public WorkerMessageResponse[] workerMessageResponses;
+
     public SendWorkerMessagesResponse withWorkerMessageResponses(WorkerMessageResponse[] workerMessageResponses) {
         this.workerMessageResponses = workerMessageResponses;
         return this;
     }
     
+    public SendWorkerMessagesResponse(){}
 }

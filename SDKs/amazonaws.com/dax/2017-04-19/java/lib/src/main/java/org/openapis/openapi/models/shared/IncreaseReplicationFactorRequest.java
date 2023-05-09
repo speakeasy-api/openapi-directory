@@ -12,6 +12,7 @@ public class IncreaseReplicationFactorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZones")
     public String[] availabilityZones;
+
     public IncreaseReplicationFactorRequest withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -19,6 +20,7 @@ public class IncreaseReplicationFactorRequest {
     
     @JsonProperty("ClusterName")
     public String clusterName;
+
     public IncreaseReplicationFactorRequest withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -26,9 +28,14 @@ public class IncreaseReplicationFactorRequest {
     
     @JsonProperty("NewReplicationFactor")
     public Long newReplicationFactor;
+
     public IncreaseReplicationFactorRequest withNewReplicationFactor(Long newReplicationFactor) {
         this.newReplicationFactor = newReplicationFactor;
         return this;
     }
     
+    public IncreaseReplicationFactorRequest(@JsonProperty("ClusterName") String clusterName, @JsonProperty("NewReplicationFactor") Long newReplicationFactor) {
+        this.clusterName = clusterName;
+        this.newReplicationFactor = newReplicationFactor;
+  }
 }

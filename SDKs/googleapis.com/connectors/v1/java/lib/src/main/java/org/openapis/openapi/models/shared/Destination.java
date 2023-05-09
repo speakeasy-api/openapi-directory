@@ -15,6 +15,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public Destination withHost(String host) {
         this.host = host;
         return this;
@@ -26,6 +27,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public Destination withPort(Integer port) {
         this.port = port;
         return this;
@@ -37,9 +39,11 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAttachment")
     public String serviceAttachment;
+
     public Destination withServiceAttachment(String serviceAttachment) {
         this.serviceAttachment = serviceAttachment;
         return this;
     }
     
+    public Destination(){}
 }

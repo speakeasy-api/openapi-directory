@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateStreamKeyResponse {
@@ -12,6 +13,7 @@ public class CreateStreamKeyResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateStreamKeyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateStreamKeyResponse {
     
     
     public String contentType;
+
     public CreateStreamKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateStreamKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateStreamKeyResponse createStreamKeyResponse;
+
     public CreateStreamKeyResponse withCreateStreamKeyResponse(org.openapis.openapi.models.shared.CreateStreamKeyResponse createStreamKeyResponse) {
         this.createStreamKeyResponse = createStreamKeyResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateStreamKeyResponse {
      */
     
     public Object pendingVerification;
+
     public CreateStreamKeyResponse withPendingVerification(Object pendingVerification) {
         this.pendingVerification = pendingVerification;
         return this;
@@ -49,6 +54,7 @@ public class CreateStreamKeyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateStreamKeyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateStreamKeyResponse {
     
     
     public Integer statusCode;
+
     public CreateStreamKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateStreamKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateStreamKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateStreamKeyResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateStreamKeyResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,9 +92,14 @@ public class CreateStreamKeyResponse {
      */
     
     public Object validationException;
+
     public CreateStreamKeyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateStreamKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

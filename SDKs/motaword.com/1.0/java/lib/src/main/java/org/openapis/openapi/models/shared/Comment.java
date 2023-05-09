@@ -17,6 +17,7 @@ public class Comment {
      */
     @JsonProperty("comment")
     public String comment;
+
     public Comment withComment(String comment) {
         this.comment = comment;
         return this;
@@ -28,6 +29,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commented_at")
     public Long commentedAt;
+
     public Comment withCommentedAt(Long commentedAt) {
         this.commentedAt = commentedAt;
         return this;
@@ -36,6 +38,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Comment withId(Long id) {
         this.id = id;
         return this;
@@ -44,9 +47,13 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public CommentLinks links;
+
     public Comment withLinks(CommentLinks links) {
         this.links = links;
         return this;
     }
     
+    public Comment(@JsonProperty("comment") String comment) {
+        this.comment = comment;
+  }
 }

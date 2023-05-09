@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteWhatIfForecastExportRequest {
     @JsonProperty("WhatIfForecastExportArn")
     public String whatIfForecastExportArn;
+
     public DeleteWhatIfForecastExportRequest withWhatIfForecastExportArn(String whatIfForecastExportArn) {
         this.whatIfForecastExportArn = whatIfForecastExportArn;
         return this;
     }
     
+    public DeleteWhatIfForecastExportRequest(@JsonProperty("WhatIfForecastExportArn") String whatIfForecastExportArn) {
+        this.whatIfForecastExportArn = whatIfForecastExportArn;
+  }
 }

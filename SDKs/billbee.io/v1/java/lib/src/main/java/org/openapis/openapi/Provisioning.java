@@ -56,12 +56,10 @@ public class Provisioning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountFormResponse res = new org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountFormResponse() {{
+        org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountFormResponse res = new org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountFormResponse(contentType, httpRes.statusCode()) {{
             automaticProvisioningCreateAccountForm200ApplicationJSONObject = null;
             automaticProvisioningCreateAccountForm200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,12 +103,10 @@ public class Provisioning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountJsonResponse res = new org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountJsonResponse() {{
+        org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountJsonResponse res = new org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountJsonResponse(contentType, httpRes.statusCode()) {{
             automaticProvisioningCreateAccountJSON200ApplicationJSONObject = null;
             automaticProvisioningCreateAccountJSON200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,12 +150,10 @@ public class Provisioning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountRawResponse res = new org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountRawResponse() {{
+        org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountRawResponse res = new org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountRawResponse(contentType, httpRes.statusCode()) {{
             automaticProvisioningCreateAccountRaw200ApplicationJSONObject = null;
             automaticProvisioningCreateAccountRaw200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,12 +191,10 @@ public class Provisioning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutomaticProvisioningTermsInfoResponse res = new org.openapis.openapi.models.operations.AutomaticProvisioningTermsInfoResponse() {{
+        org.openapis.openapi.models.operations.AutomaticProvisioningTermsInfoResponse res = new org.openapis.openapi.models.operations.AutomaticProvisioningTermsInfoResponse(contentType, httpRes.statusCode()) {{
             automaticProvisioningTermsInfo200ApplicationJSONObject = null;
             automaticProvisioningTermsInfo200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLoginPageResponse {
     
     public String contentType;
+
     public GetLoginPageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetLoginPageResponse {
     
     
     public Integer statusCode;
+
     public GetLoginPageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetLoginPageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLoginPageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetLoginPageResponse {
      */
     
     public String getLoginPageDefaultTextHTMLString;
+
     public GetLoginPageResponse withGetLoginPageDefaultTextHTMLString(String getLoginPageDefaultTextHTMLString) {
         this.getLoginPageDefaultTextHTMLString = getLoginPageDefaultTextHTMLString;
         return this;
     }
     
+    public GetLoginPageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

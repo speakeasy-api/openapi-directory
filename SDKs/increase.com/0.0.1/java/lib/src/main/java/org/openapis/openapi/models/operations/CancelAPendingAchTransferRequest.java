@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelAPendingAchTransferRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ach_transfer_id")
     public String achTransferId;
+
     public CancelAPendingAchTransferRequest withAchTransferId(String achTransferId) {
         this.achTransferId = achTransferId;
         return this;
     }
     
+    public CancelAPendingAchTransferRequest(@JsonProperty("ach_transfer_id") String achTransferId) {
+        this.achTransferId = achTransferId;
+  }
 }

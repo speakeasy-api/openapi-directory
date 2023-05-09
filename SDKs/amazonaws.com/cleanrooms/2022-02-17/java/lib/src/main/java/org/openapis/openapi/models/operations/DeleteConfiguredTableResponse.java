@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteConfiguredTableResponse {
@@ -12,6 +13,7 @@ public class DeleteConfiguredTableResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteConfiguredTableResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteConfiguredTableResponse {
      */
     
     public Object conflictException;
+
     public DeleteConfiguredTableResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteConfiguredTableResponse {
     
     
     public String contentType;
+
     public DeleteConfiguredTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteConfiguredTableResponse {
      */
     
     public java.util.Map<String, Object> deleteConfiguredTableOutput;
+
     public DeleteConfiguredTableResponse withDeleteConfiguredTableOutput(java.util.Map<String, Object> deleteConfiguredTableOutput) {
         this.deleteConfiguredTableOutput = deleteConfiguredTableOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteConfiguredTableResponse {
      */
     
     public Object internalServerException;
+
     public DeleteConfiguredTableResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteConfiguredTableResponse {
     
     
     public Integer statusCode;
+
     public DeleteConfiguredTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteConfiguredTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteConfiguredTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteConfiguredTableResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteConfiguredTableResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteConfiguredTableResponse {
      */
     
     public Object throttlingException;
+
     public DeleteConfiguredTableResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteConfiguredTableResponse {
      */
     
     public Object validationException;
+
     public DeleteConfiguredTableResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteConfiguredTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

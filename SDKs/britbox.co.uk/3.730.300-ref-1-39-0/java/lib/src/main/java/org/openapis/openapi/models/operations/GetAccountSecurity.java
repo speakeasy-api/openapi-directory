@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String accountAuth;
+
     public GetAccountSecurity withAccountAuth(String accountAuth) {
         this.accountAuth = accountAuth;
         return this;
     }
     
+    public GetAccountSecurity(@JsonProperty("accountAuth") String accountAuth) {
+        this.accountAuth = accountAuth;
+  }
 }

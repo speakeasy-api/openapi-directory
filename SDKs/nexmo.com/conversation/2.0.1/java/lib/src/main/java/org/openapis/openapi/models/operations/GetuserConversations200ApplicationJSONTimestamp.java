@@ -15,9 +15,11 @@ public class GetuserConversations200ApplicationJSONTimestamp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public String created;
+
     public GetuserConversations200ApplicationJSONTimestamp withCreated(String created) {
         this.created = created;
         return this;
     }
     
+    public GetuserConversations200ApplicationJSONTimestamp(){}
 }

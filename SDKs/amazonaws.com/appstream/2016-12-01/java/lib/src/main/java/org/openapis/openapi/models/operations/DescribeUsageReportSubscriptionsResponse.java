@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeUsageReportSubscriptionsResponse {
     
     public String contentType;
+
     public DescribeUsageReportSubscriptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeUsageReportSubscriptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeUsageReportSubscriptionsResult describeUsageReportSubscriptionsResult;
+
     public DescribeUsageReportSubscriptionsResponse withDescribeUsageReportSubscriptionsResult(org.openapis.openapi.models.shared.DescribeUsageReportSubscriptionsResult describeUsageReportSubscriptionsResult) {
         this.describeUsageReportSubscriptionsResult = describeUsageReportSubscriptionsResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeUsageReportSubscriptionsResponse {
      */
     
     public Object invalidAccountStatusException;
+
     public DescribeUsageReportSubscriptionsResponse withInvalidAccountStatusException(Object invalidAccountStatusException) {
         this.invalidAccountStatusException = invalidAccountStatusException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeUsageReportSubscriptionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeUsageReportSubscriptionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeUsageReportSubscriptionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeUsageReportSubscriptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeUsageReportSubscriptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeUsageReportSubscriptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeUsageReportSubscriptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

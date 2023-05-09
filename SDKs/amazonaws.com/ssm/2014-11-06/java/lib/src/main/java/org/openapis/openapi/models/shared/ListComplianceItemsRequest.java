@@ -12,6 +12,7 @@ public class ListComplianceItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ComplianceStringFilter[] filters;
+
     public ListComplianceItemsRequest withFilters(ComplianceStringFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListComplianceItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListComplianceItemsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListComplianceItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListComplianceItemsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ListComplianceItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceIds")
     public String[] resourceIds;
+
     public ListComplianceItemsRequest withResourceIds(String[] resourceIds) {
         this.resourceIds = resourceIds;
         return this;
@@ -44,9 +48,11 @@ public class ListComplianceItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTypes")
     public String[] resourceTypes;
+
     public ListComplianceItemsRequest withResourceTypes(String[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
     }
     
+    public ListComplianceItemsRequest(){}
 }

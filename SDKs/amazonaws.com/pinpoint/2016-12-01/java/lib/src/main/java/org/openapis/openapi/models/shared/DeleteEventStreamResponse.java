@@ -15,9 +15,13 @@ public class DeleteEventStreamResponse {
      */
     @JsonProperty("EventStream")
     public EventStream eventStream;
+
     public DeleteEventStreamResponse withEventStream(EventStream eventStream) {
         this.eventStream = eventStream;
         return this;
     }
     
+    public DeleteEventStreamResponse(@JsonProperty("EventStream") EventStream eventStream) {
+        this.eventStream = eventStream;
+  }
 }

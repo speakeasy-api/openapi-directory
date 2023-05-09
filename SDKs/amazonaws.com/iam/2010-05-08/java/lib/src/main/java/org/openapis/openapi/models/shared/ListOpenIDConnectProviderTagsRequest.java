@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListOpenIDConnectProviderTagsRequest {
     
     public String marker;
+
     public ListOpenIDConnectProviderTagsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class ListOpenIDConnectProviderTagsRequest {
     
     
     public Long maxItems;
+
     public ListOpenIDConnectProviderTagsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -23,9 +25,13 @@ public class ListOpenIDConnectProviderTagsRequest {
     
     
     public String openIDConnectProviderArn;
+
     public ListOpenIDConnectProviderTagsRequest withOpenIDConnectProviderArn(String openIDConnectProviderArn) {
         this.openIDConnectProviderArn = openIDConnectProviderArn;
         return this;
     }
     
+    public ListOpenIDConnectProviderTagsRequest(@JsonProperty("OpenIDConnectProviderArn") String openIDConnectProviderArn) {
+        this.openIDConnectProviderArn = openIDConnectProviderArn;
+  }
 }

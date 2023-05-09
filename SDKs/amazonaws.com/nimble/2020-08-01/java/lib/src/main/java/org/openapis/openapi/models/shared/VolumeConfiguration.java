@@ -15,6 +15,7 @@ public class VolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iops")
     public Long iops;
+
     public VolumeConfiguration withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -23,6 +24,7 @@ public class VolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public VolumeConfiguration withSize(Long size) {
         this.size = size;
         return this;
@@ -31,9 +33,11 @@ public class VolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("throughput")
     public Long throughput;
+
     public VolumeConfiguration withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
     }
     
+    public VolumeConfiguration(){}
 }

@@ -15,6 +15,7 @@ public class TestRoleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Messages")
     public String[] messages;
+
     public TestRoleResponse withMessages(String[] messages) {
         this.messages = messages;
         return this;
@@ -23,9 +24,11 @@ public class TestRoleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Success")
     public String success;
+
     public TestRoleResponse withSuccess(String success) {
         this.success = success;
         return this;
     }
     
+    public TestRoleResponse(){}
 }

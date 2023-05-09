@@ -58,11 +58,9 @@ public class AcceleratorTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             acceleratorTypeAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class AcceleratorTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAcceleratorTypesGetResponse res = new org.openapis.openapi.models.operations.ComputeAcceleratorTypesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeAcceleratorTypesGetResponse res = new org.openapis.openapi.models.operations.ComputeAcceleratorTypesGetResponse(contentType, httpRes.statusCode()) {{
             acceleratorType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class AcceleratorTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeAcceleratorTypesListResponse res = new org.openapis.openapi.models.operations.ComputeAcceleratorTypesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeAcceleratorTypesListResponse res = new org.openapis.openapi.models.operations.ComputeAcceleratorTypesListResponse(contentType, httpRes.statusCode()) {{
             acceleratorTypeList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

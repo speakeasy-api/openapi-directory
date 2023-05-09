@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RevokeClientVpnIngressResultStatus {
     
     public RevokeClientVpnIngressResultStatusCodeEnum code;
+
     public RevokeClientVpnIngressResultStatus withCode(RevokeClientVpnIngressResultStatusCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class RevokeClientVpnIngressResultStatus {
     
     
     public String message;
+
     public RevokeClientVpnIngressResultStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public RevokeClientVpnIngressResultStatus(){}
 }

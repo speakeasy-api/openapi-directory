@@ -15,6 +15,7 @@ public class Lccep401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Lccep401ApplicationJSONErrorEnum error;
+
     public Lccep401ApplicationJSON withError(Lccep401ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Lccep401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Lccep401ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Lccep401ApplicationJSON withErrorDescription(Lccep401ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Lccep401ApplicationJSON(){}
 }

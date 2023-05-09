@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetIdentityNotificationAttributesRequest - Represents a request to return the notification attributes for a list of identities you verified with Amazon SES. For information about Amazon SES notifications, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/notifications.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class GetIdentityNotificationAttributesRequest {
     
     public String[] identities;
+
     public GetIdentityNotificationAttributesRequest withIdentities(String[] identities) {
         this.identities = identities;
         return this;
     }
     
+    public GetIdentityNotificationAttributesRequest(@JsonProperty("Identities") String[] identities) {
+        this.identities = identities;
+  }
 }

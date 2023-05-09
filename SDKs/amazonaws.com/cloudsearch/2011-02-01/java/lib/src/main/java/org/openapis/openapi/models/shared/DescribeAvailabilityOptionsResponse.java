@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeAvailabilityOptionsResponse {
     
     public AvailabilityOptionsStatus availabilityOptions;
+
     public DescribeAvailabilityOptionsResponse withAvailabilityOptions(AvailabilityOptionsStatus availabilityOptions) {
         this.availabilityOptions = availabilityOptions;
         return this;
     }
     
+    public DescribeAvailabilityOptionsResponse(){}
 }

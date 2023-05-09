@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InferRxNormResponse {
     @JsonProperty("Entities")
     public RxNormEntity[] entities;
+
     public InferRxNormResponse withEntities(RxNormEntity[] entities) {
         this.entities = entities;
         return this;
@@ -22,6 +23,7 @@ public class InferRxNormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelVersion")
     public String modelVersion;
+
     public InferRxNormResponse withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
@@ -30,9 +32,13 @@ public class InferRxNormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public InferRxNormResponse withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
     }
     
+    public InferRxNormResponse(@JsonProperty("Entities") RxNormEntity[] entities) {
+        this.entities = entities;
+  }
 }

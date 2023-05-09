@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMobileDeviceAccessOverridesResponse {
     
     public String contentType;
+
     public ListMobileDeviceAccessOverridesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListMobileDeviceAccessOverridesResponse {
      */
     
     public Object entityNotFoundException;
+
     public ListMobileDeviceAccessOverridesResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class ListMobileDeviceAccessOverridesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListMobileDeviceAccessOverridesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListMobileDeviceAccessOverridesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMobileDeviceAccessOverridesResponse listMobileDeviceAccessOverridesResponse;
+
     public ListMobileDeviceAccessOverridesResponse withListMobileDeviceAccessOverridesResponse(org.openapis.openapi.models.shared.ListMobileDeviceAccessOverridesResponse listMobileDeviceAccessOverridesResponse) {
         this.listMobileDeviceAccessOverridesResponse = listMobileDeviceAccessOverridesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListMobileDeviceAccessOverridesResponse {
      */
     
     public Object organizationNotFoundException;
+
     public ListMobileDeviceAccessOverridesResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListMobileDeviceAccessOverridesResponse {
      */
     
     public Object organizationStateException;
+
     public ListMobileDeviceAccessOverridesResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -66,6 +73,7 @@ public class ListMobileDeviceAccessOverridesResponse {
     
     
     public Integer statusCode;
+
     public ListMobileDeviceAccessOverridesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListMobileDeviceAccessOverridesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMobileDeviceAccessOverridesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListMobileDeviceAccessOverridesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class ReferenceSets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPSetReferences")
     public java.util.Map<String, IPSetReference> ipSetReferences;
+
     public ReferenceSets withIPSetReferences(java.util.Map<String, IPSetReference> ipSetReferences) {
         this.ipSetReferences = ipSetReferences;
         return this;
     }
     
+    public ReferenceSets(){}
 }

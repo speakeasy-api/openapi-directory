@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNotificationResponse {
@@ -12,6 +13,7 @@ public class UpdateNotificationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateNotificationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateNotificationResponse {
     
     
     public String contentType;
+
     public UpdateNotificationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateNotificationResponse {
      */
     
     public Object duplicateRecordException;
+
     public UpdateNotificationResponse withDuplicateRecordException(Object duplicateRecordException) {
         this.duplicateRecordException = duplicateRecordException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateNotificationResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateNotificationResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateNotificationResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateNotificationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateNotificationResponse {
      */
     
     public Object notFoundException;
+
     public UpdateNotificationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateNotificationResponse {
     
     
     public Integer statusCode;
+
     public UpdateNotificationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateNotificationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNotificationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateNotificationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateNotificationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateNotificationResponse {
      */
     
     public java.util.Map<String, Object> updateNotificationResponse;
+
     public UpdateNotificationResponse withUpdateNotificationResponse(java.util.Map<String, Object> updateNotificationResponse) {
         this.updateNotificationResponse = updateNotificationResponse;
         return this;
     }
     
+    public UpdateNotificationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

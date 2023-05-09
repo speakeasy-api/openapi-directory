@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Queue {
     
     public String name;
+
     public Queue withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class Queue {
     
     
     public String url;
+
     public Queue withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Queue(){}
 }

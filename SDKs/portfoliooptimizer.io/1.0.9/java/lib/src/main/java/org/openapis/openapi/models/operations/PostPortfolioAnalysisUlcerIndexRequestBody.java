@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostPortfolioAnalysisUlcerIndexRequestBody {
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisUlcerIndexRequestBodyPortfolios[] portfolios;
+
     public PostPortfolioAnalysisUlcerIndexRequestBody withPortfolios(PostPortfolioAnalysisUlcerIndexRequestBodyPortfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
@@ -19,9 +20,14 @@ public class PostPortfolioAnalysisUlcerIndexRequestBody {
      */
     @JsonProperty("riskFreeRate")
     public Double riskFreeRate;
+
     public PostPortfolioAnalysisUlcerIndexRequestBody withRiskFreeRate(Double riskFreeRate) {
         this.riskFreeRate = riskFreeRate;
         return this;
     }
     
+    public PostPortfolioAnalysisUlcerIndexRequestBody(@JsonProperty("portfolios") PostPortfolioAnalysisUlcerIndexRequestBodyPortfolios[] portfolios, @JsonProperty("riskFreeRate") Double riskFreeRate) {
+        this.portfolios = portfolios;
+        this.riskFreeRate = riskFreeRate;
+  }
 }

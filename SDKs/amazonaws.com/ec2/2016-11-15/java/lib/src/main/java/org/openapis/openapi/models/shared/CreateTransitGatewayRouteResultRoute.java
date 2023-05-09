@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTransitGatewayRouteResultRoute {
     
     public String destinationCidrBlock;
+
     public CreateTransitGatewayRouteResultRoute withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -19,6 +20,7 @@ public class CreateTransitGatewayRouteResultRoute {
     
     
     public String prefixListId;
+
     public CreateTransitGatewayRouteResultRoute withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -26,6 +28,7 @@ public class CreateTransitGatewayRouteResultRoute {
     
     
     public CreateTransitGatewayRouteResultRouteStateEnum state;
+
     public CreateTransitGatewayRouteResultRoute withState(CreateTransitGatewayRouteResultRouteStateEnum state) {
         this.state = state;
         return this;
@@ -33,6 +36,7 @@ public class CreateTransitGatewayRouteResultRoute {
     
     
     public CreateTransitGatewayRouteResultRouteTransitGatewayAttachments[] transitGatewayAttachments;
+
     public CreateTransitGatewayRouteResultRoute withTransitGatewayAttachments(CreateTransitGatewayRouteResultRouteTransitGatewayAttachments[] transitGatewayAttachments) {
         this.transitGatewayAttachments = transitGatewayAttachments;
         return this;
@@ -40,6 +44,7 @@ public class CreateTransitGatewayRouteResultRoute {
     
     
     public String transitGatewayRouteTableAnnouncementId;
+
     public CreateTransitGatewayRouteResultRoute withTransitGatewayRouteTableAnnouncementId(String transitGatewayRouteTableAnnouncementId) {
         this.transitGatewayRouteTableAnnouncementId = transitGatewayRouteTableAnnouncementId;
         return this;
@@ -47,9 +52,11 @@ public class CreateTransitGatewayRouteResultRoute {
     
     
     public CreateTransitGatewayRouteResultRouteTypeEnum type;
+
     public CreateTransitGatewayRouteResultRoute withType(CreateTransitGatewayRouteResultRouteTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateTransitGatewayRouteResultRoute(){}
 }

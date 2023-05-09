@@ -15,6 +15,7 @@ public class DescribeTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeTagsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +24,7 @@ public class DescribeTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public DescribeTagsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -30,9 +32,13 @@ public class DescribeTagsResponse {
     
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public DescribeTagsResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeTagsResponse(@JsonProperty("Tags") Tag[] tags) {
+        this.tags = tags;
+  }
 }

@@ -15,6 +15,7 @@ public class ListCoreDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Definitions")
     public DefinitionInformation[] definitions;
+
     public ListCoreDefinitionsResponse withDefinitions(DefinitionInformation[] definitions) {
         this.definitions = definitions;
         return this;
@@ -23,9 +24,11 @@ public class ListCoreDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCoreDefinitionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCoreDefinitionsResponse(){}
 }

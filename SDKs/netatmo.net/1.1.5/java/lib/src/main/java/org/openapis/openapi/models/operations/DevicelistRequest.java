@@ -12,6 +12,7 @@ public class DevicelistRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_type")
     public DevicelistAppTypeEnum appType;
+
     public DevicelistRequest withAppType(DevicelistAppTypeEnum appType) {
         this.appType = appType;
         return this;
@@ -22,6 +23,7 @@ public class DevicelistRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
     public String deviceId;
+
     public DevicelistRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -32,9 +34,11 @@ public class DevicelistRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=get_favorites")
     public Boolean getFavorites;
+
     public DevicelistRequest withGetFavorites(Boolean getFavorites) {
         this.getFavorites = getFavorites;
         return this;
     }
     
+    public DevicelistRequest(){}
 }

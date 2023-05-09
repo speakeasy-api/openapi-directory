@@ -18,6 +18,7 @@ public class SuggestionClusterProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public SuggestionClusterProtoCategoryEnum category;
+
     public SuggestionClusterProto withCategory(SuggestionClusterProtoCategoryEnum category) {
         this.category = category;
         return this;
@@ -29,9 +30,11 @@ public class SuggestionClusterProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestions")
     public SuggestionProto[] suggestions;
+
     public SuggestionClusterProto withSuggestions(SuggestionProto[] suggestions) {
         this.suggestions = suggestions;
         return this;
     }
     
+    public SuggestionClusterProto(){}
 }

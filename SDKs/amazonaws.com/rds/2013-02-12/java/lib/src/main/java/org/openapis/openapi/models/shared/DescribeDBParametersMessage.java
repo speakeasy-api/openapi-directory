@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeDBParametersMessage {
     
     public String dbParameterGroupName;
+
     public DescribeDBParametersMessage withDBParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeDBParametersMessage {
     
     
     public String marker;
+
     public DescribeDBParametersMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +25,7 @@ public class DescribeDBParametersMessage {
     
     
     public Long maxRecords;
+
     public DescribeDBParametersMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -30,9 +33,13 @@ public class DescribeDBParametersMessage {
     
     
     public String source;
+
     public DescribeDBParametersMessage withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public DescribeDBParametersMessage(@JsonProperty("DBParameterGroupName") String dbParameterGroupName) {
+        this.dbParameterGroupName = dbParameterGroupName;
+  }
 }

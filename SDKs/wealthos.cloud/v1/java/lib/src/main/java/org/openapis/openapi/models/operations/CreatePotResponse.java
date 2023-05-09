@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePotResponse {
     
     public String contentType;
+
     public CreatePotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreatePotResponse {
     
     
     public Integer statusCode;
+
     public CreatePotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreatePotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreatePotResponse {
      */
     
     public CreatePot201ApplicationJSON createPot201ApplicationJSONObject;
+
     public CreatePotResponse withCreatePot201ApplicationJSONObject(CreatePot201ApplicationJSON createPot201ApplicationJSONObject) {
         this.createPot201ApplicationJSONObject = createPot201ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreatePotResponse {
      */
     
     public CreatePot400ApplicationJSON createPot400ApplicationJSONObject;
+
     public CreatePotResponse withCreatePot400ApplicationJSONObject(CreatePot400ApplicationJSON createPot400ApplicationJSONObject) {
         this.createPot400ApplicationJSONObject = createPot400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreatePotResponse {
      */
     
     public CreatePot401ApplicationJSON createPot401ApplicationJSONObject;
+
     public CreatePotResponse withCreatePot401ApplicationJSONObject(CreatePot401ApplicationJSON createPot401ApplicationJSONObject) {
         this.createPot401ApplicationJSONObject = createPot401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CreatePotResponse {
      */
     
     public CreatePot403ApplicationJSON createPot403ApplicationJSONObject;
+
     public CreatePotResponse withCreatePot403ApplicationJSONObject(CreatePot403ApplicationJSON createPot403ApplicationJSONObject) {
         this.createPot403ApplicationJSONObject = createPot403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class CreatePotResponse {
      */
     
     public CreatePot409ApplicationJSON createPot409ApplicationJSONObject;
+
     public CreatePotResponse withCreatePot409ApplicationJSONObject(CreatePot409ApplicationJSON createPot409ApplicationJSONObject) {
         this.createPot409ApplicationJSONObject = createPot409ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class CreatePotResponse {
      */
     
     public CreatePot429ApplicationJSON createPot429ApplicationJSONObject;
+
     public CreatePotResponse withCreatePot429ApplicationJSONObject(CreatePot429ApplicationJSON createPot429ApplicationJSONObject) {
         this.createPot429ApplicationJSONObject = createPot429ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class CreatePotResponse {
      */
     
     public CreatePot500ApplicationJSON createPot500ApplicationJSONObject;
+
     public CreatePotResponse withCreatePot500ApplicationJSONObject(CreatePot500ApplicationJSON createPot500ApplicationJSONObject) {
         this.createPot500ApplicationJSONObject = createPot500ApplicationJSONObject;
         return this;
     }
     
+    public CreatePotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

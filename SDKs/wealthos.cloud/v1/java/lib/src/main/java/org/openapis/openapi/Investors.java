@@ -17,7 +17,7 @@ import org.openapis.openapi.utils.SerializedBody;
 /**
  * The Investor endpoint allows you to create investors, update investors and retrieve investor records in bulk or individually. If a KYC/AML service has been set-up through WealthOS (e.g. Onfido), then the investor will be verified using this service. 
  * 
- * When retrieving the investor, the following fields will provide information regarding the investor\u2019s status that can be used for deciding on what subsequent investor action must be permitted.
+ * When retrieving the investor, the following fields will provide information regarding the investor’s status that can be used for deciding on what subsequent investor action must be permitted.
  *  
  * * dealing_status: Normally set to Active once KYC/AML passes, however may be independently set by administrators if required. 
  *  
@@ -81,7 +81,7 @@ public class Investors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateInvestorResponse res = new org.openapis.openapi.models.operations.CreateInvestorResponse() {{
+        org.openapis.openapi.models.operations.CreateInvestorResponse res = new org.openapis.openapi.models.operations.CreateInvestorResponse(contentType, httpRes.statusCode()) {{
             rootTypeForInvestorCreationResponse = null;
             createInvestor400ApplicationJSONObject = null;
             createInvestor401ApplicationJSONObject = null;
@@ -89,8 +89,6 @@ public class Investors {
             createInvestor429ApplicationJSONObject = null;
             createInvestor500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -176,7 +174,7 @@ public class Investors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllInvestorsResponse res = new org.openapis.openapi.models.operations.GetAllInvestorsResponse() {{
+        org.openapis.openapi.models.operations.GetAllInvestorsResponse res = new org.openapis.openapi.models.operations.GetAllInvestorsResponse(contentType, httpRes.statusCode()) {{
             getAllInvestors200ApplicationJSONObject = null;
             getAllInvestors400ApplicationJSONObject = null;
             getAllInvestors401ApplicationJSONObject = null;
@@ -184,8 +182,6 @@ public class Investors {
             getAllInvestors429ApplicationJSONObject = null;
             getAllInvestors500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -265,7 +261,7 @@ public class Investors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInvestorResponse res = new org.openapis.openapi.models.operations.GetInvestorResponse() {{
+        org.openapis.openapi.models.operations.GetInvestorResponse res = new org.openapis.openapi.models.operations.GetInvestorResponse(contentType, httpRes.statusCode()) {{
             rootTypeForInvestor = null;
             getInvestor400ApplicationJSONObject = null;
             getInvestor401ApplicationJSONObject = null;
@@ -274,8 +270,6 @@ public class Investors {
             getInvestor429ApplicationJSONObject = null;
             getInvestor500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -367,7 +361,7 @@ public class Investors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateInvestorResponse res = new org.openapis.openapi.models.operations.UpdateInvestorResponse() {{
+        org.openapis.openapi.models.operations.UpdateInvestorResponse res = new org.openapis.openapi.models.operations.UpdateInvestorResponse(contentType, httpRes.statusCode()) {{
             rootTypeForInvestor = null;
             updateInvestor400ApplicationJSONObject = null;
             updateInvestor401ApplicationJSONObject = null;
@@ -377,8 +371,6 @@ public class Investors {
             updateInvestor429ApplicationJSONObject = null;
             updateInvestor500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

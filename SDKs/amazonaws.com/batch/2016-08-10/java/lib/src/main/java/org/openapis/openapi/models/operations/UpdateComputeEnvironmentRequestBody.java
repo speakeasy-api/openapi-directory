@@ -14,6 +14,7 @@ public class UpdateComputeEnvironmentRequestBody {
      */
     @JsonProperty("computeEnvironment")
     public String computeEnvironment;
+
     public UpdateComputeEnvironmentRequestBody withComputeEnvironment(String computeEnvironment) {
         this.computeEnvironment = computeEnvironment;
         return this;
@@ -25,6 +26,7 @@ public class UpdateComputeEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeResources")
     public UpdateComputeEnvironmentRequestBodyComputeResources computeResources;
+
     public UpdateComputeEnvironmentRequestBody withComputeResources(UpdateComputeEnvironmentRequestBodyComputeResources computeResources) {
         this.computeResources = computeResources;
         return this;
@@ -36,6 +38,7 @@ public class UpdateComputeEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRole")
     public String serviceRole;
+
     public UpdateComputeEnvironmentRequestBody withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -47,6 +50,7 @@ public class UpdateComputeEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public UpdateComputeEnvironmentRequestBodyStateEnum state;
+
     public UpdateComputeEnvironmentRequestBody withState(UpdateComputeEnvironmentRequestBodyStateEnum state) {
         this.state = state;
         return this;
@@ -58,6 +62,7 @@ public class UpdateComputeEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unmanagedvCpus")
     public Long unmanagedvCpus;
+
     public UpdateComputeEnvironmentRequestBody withUnmanagedvCpus(Long unmanagedvCpus) {
         this.unmanagedvCpus = unmanagedvCpus;
         return this;
@@ -69,9 +74,13 @@ public class UpdateComputeEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatePolicy")
     public UpdateComputeEnvironmentRequestBodyUpdatePolicy updatePolicy;
+
     public UpdateComputeEnvironmentRequestBody withUpdatePolicy(UpdateComputeEnvironmentRequestBodyUpdatePolicy updatePolicy) {
         this.updatePolicy = updatePolicy;
         return this;
     }
     
+    public UpdateComputeEnvironmentRequestBody(@JsonProperty("computeEnvironment") String computeEnvironment) {
+        this.computeEnvironment = computeEnvironment;
+  }
 }

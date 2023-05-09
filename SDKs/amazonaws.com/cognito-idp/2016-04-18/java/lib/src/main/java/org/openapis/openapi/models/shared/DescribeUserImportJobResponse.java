@@ -15,9 +15,11 @@ public class DescribeUserImportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserImportJob")
     public UserImportJobType userImportJob;
+
     public DescribeUserImportJobResponse withUserImportJob(UserImportJobType userImportJob) {
         this.userImportJob = userImportJob;
         return this;
     }
     
+    public DescribeUserImportJobResponse(){}
 }

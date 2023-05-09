@@ -18,9 +18,11 @@ public class ObjectPropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subobjectProperties")
     public PropertyDefinition[] subobjectProperties;
+
     public ObjectPropertyOptions withSubobjectProperties(PropertyDefinition[] subobjectProperties) {
         this.subobjectProperties = subobjectProperties;
         return this;
     }
     
+    public ObjectPropertyOptions(){}
 }

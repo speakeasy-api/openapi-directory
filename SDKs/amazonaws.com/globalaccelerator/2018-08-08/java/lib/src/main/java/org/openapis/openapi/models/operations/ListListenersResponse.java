@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListListenersResponse {
@@ -12,6 +13,7 @@ public class ListListenersResponse {
      */
     
     public Object acceleratorNotFoundException;
+
     public ListListenersResponse withAcceleratorNotFoundException(Object acceleratorNotFoundException) {
         this.acceleratorNotFoundException = acceleratorNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class ListListenersResponse {
     
     
     public String contentType;
+
     public ListListenersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListListenersResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListListenersResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class ListListenersResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListListenersResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class ListListenersResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListListenersResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListListenersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListListenersResponse listListenersResponse;
+
     public ListListenersResponse withListListenersResponse(org.openapis.openapi.models.shared.ListListenersResponse listListenersResponse) {
         this.listListenersResponse = listListenersResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListListenersResponse {
     
     
     public Integer statusCode;
+
     public ListListenersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListListenersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListListenersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListListenersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

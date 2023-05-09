@@ -15,6 +15,7 @@ public class LocationPolicyLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public LocationPolicyLocationConstraints constraints;
+
     public LocationPolicyLocation withConstraints(LocationPolicyLocationConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -26,9 +27,11 @@ public class LocationPolicyLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preference")
     public LocationPolicyLocationPreferenceEnum preference;
+
     public LocationPolicyLocation withPreference(LocationPolicyLocationPreferenceEnum preference) {
         this.preference = preference;
         return this;
     }
     
+    public LocationPolicyLocation(){}
 }

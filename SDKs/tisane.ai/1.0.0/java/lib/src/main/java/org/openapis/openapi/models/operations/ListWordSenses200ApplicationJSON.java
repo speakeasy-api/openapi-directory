@@ -12,6 +12,7 @@ public class ListWordSenses200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("families")
     public ListWordSenses200ApplicationJSONFamilies[] families;
+
     public ListWordSenses200ApplicationJSON withFamilies(ListWordSenses200ApplicationJSONFamilies[] families) {
         this.families = families;
         return this;
@@ -20,6 +21,7 @@ public class ListWordSenses200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public ListWordSenses200ApplicationJSONFeatures[] features;
+
     public ListWordSenses200ApplicationJSON withFeatures(ListWordSenses200ApplicationJSONFeatures[] features) {
         this.features = features;
         return this;
@@ -28,6 +30,7 @@ public class ListWordSenses200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     public Double frequency;
+
     public ListWordSenses200ApplicationJSON withFrequency(Double frequency) {
         this.frequency = frequency;
         return this;
@@ -36,6 +39,7 @@ public class ListWordSenses200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isLemma")
     public Boolean isLemma;
+
     public ListWordSenses200ApplicationJSON withIsLemma(Boolean isLemma) {
         this.isLemma = isLemma;
         return this;
@@ -44,6 +48,7 @@ public class ListWordSenses200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacyMapId")
     public Double legacyMapId;
+
     public ListWordSenses200ApplicationJSON withLegacyMapId(Double legacyMapId) {
         this.legacyMapId = legacyMapId;
         return this;
@@ -52,6 +57,7 @@ public class ListWordSenses200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lemma")
     public String lemma;
+
     public ListWordSenses200ApplicationJSON withLemma(String lemma) {
         this.lemma = lemma;
         return this;
@@ -60,9 +66,11 @@ public class ListWordSenses200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lexemeId")
     public Double lexemeId;
+
     public ListWordSenses200ApplicationJSON withLexemeId(Double lexemeId) {
         this.lexemeId = lexemeId;
         return this;
     }
     
+    public ListWordSenses200ApplicationJSON(){}
 }

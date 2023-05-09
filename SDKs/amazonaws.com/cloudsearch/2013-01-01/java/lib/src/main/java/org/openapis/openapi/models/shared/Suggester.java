@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Suggester - Configuration information for a search suggester. Each suggester has a unique name and specifies the text field you want to use for suggestions. The following options can be configured for a suggester: &lt;code&gt;FuzzyMatching&lt;/code&gt;, &lt;code&gt;SortExpression&lt;/code&gt;. 
@@ -15,6 +15,7 @@ public class Suggester {
      */
     
     public DocumentSuggesterOptions documentSuggesterOptions;
+
     public Suggester withDocumentSuggesterOptions(DocumentSuggesterOptions documentSuggesterOptions) {
         this.documentSuggesterOptions = documentSuggesterOptions;
         return this;
@@ -25,9 +26,14 @@ public class Suggester {
      */
     
     public String suggesterName;
+
     public Suggester withSuggesterName(String suggesterName) {
         this.suggesterName = suggesterName;
         return this;
     }
     
+    public Suggester(@JsonProperty("DocumentSuggesterOptions") DocumentSuggesterOptions documentSuggesterOptions, @JsonProperty("SuggesterName") String suggesterName) {
+        this.documentSuggesterOptions = documentSuggesterOptions;
+        this.suggesterName = suggesterName;
+  }
 }

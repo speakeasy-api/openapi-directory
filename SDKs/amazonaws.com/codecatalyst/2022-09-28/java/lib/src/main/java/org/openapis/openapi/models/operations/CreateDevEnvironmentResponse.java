@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDevEnvironmentResponse {
@@ -12,6 +13,7 @@ public class CreateDevEnvironmentResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDevEnvironmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDevEnvironmentResponse {
      */
     
     public Object conflictException;
+
     public CreateDevEnvironmentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateDevEnvironmentResponse {
     
     
     public String contentType;
+
     public CreateDevEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateDevEnvironmentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDevEnvironmentResponse createDevEnvironmentResponse;
+
     public CreateDevEnvironmentResponse withCreateDevEnvironmentResponse(org.openapis.openapi.models.shared.CreateDevEnvironmentResponse createDevEnvironmentResponse) {
         this.createDevEnvironmentResponse = createDevEnvironmentResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateDevEnvironmentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateDevEnvironmentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDevEnvironmentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateDevEnvironmentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateDevEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public CreateDevEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateDevEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDevEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateDevEnvironmentResponse {
      */
     
     public Object throttlingException;
+
     public CreateDevEnvironmentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateDevEnvironmentResponse {
      */
     
     public Object validationException;
+
     public CreateDevEnvironmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateDevEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

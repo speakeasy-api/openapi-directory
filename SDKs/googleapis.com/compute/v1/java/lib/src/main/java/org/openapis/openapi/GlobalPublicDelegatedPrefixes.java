@@ -59,11 +59,9 @@ public class GlobalPublicDelegatedPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class GlobalPublicDelegatedPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesGetResponse res = new org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesGetResponse res = new org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesGetResponse(contentType, httpRes.statusCode()) {{
             publicDelegatedPrefix = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class GlobalPublicDelegatedPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesInsertResponse res = new org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesInsertResponse res = new org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class GlobalPublicDelegatedPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesListResponse res = new org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesListResponse res = new org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesListResponse(contentType, httpRes.statusCode()) {{
             publicDelegatedPrefixList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class GlobalPublicDelegatedPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesPatchResponse res = new org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesPatchResponse res = new org.openapis.openapi.models.operations.ComputeGlobalPublicDelegatedPrefixesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

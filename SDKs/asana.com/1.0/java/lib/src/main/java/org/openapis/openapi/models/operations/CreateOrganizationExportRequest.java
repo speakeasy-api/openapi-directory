@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrganizationExportRequest {
@@ -12,6 +13,7 @@ public class CreateOrganizationExportRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateOrganizationExportRequestBody requestBody;
+
     public CreateOrganizationExportRequest withRequestBody(CreateOrganizationExportRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +25,7 @@ public class CreateOrganizationExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public CreateOrganizationExportRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -35,6 +38,7 @@ public class CreateOrganizationExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public CreateOrganizationExportRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -47,6 +51,7 @@ public class CreateOrganizationExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public CreateOrganizationExportRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -58,9 +63,13 @@ public class CreateOrganizationExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public CreateOrganizationExportRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public CreateOrganizationExportRequest(@JsonProperty("RequestBody") CreateOrganizationExportRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV2PendingEmailsIdJsonRequestBody {
@@ -12,6 +13,7 @@ public class PutV2PendingEmailsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=error_message")
     public String errorMessage;
+
     public PutV2PendingEmailsIdJsonRequestBody withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -22,6 +24,7 @@ public class PutV2PendingEmailsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=message_id")
     public String messageId;
+
     public PutV2PendingEmailsIdJsonRequestBody withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -32,6 +35,7 @@ public class PutV2PendingEmailsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=sent_at")
     public String sentAt;
+
     public PutV2PendingEmailsIdJsonRequestBody withSentAt(String sentAt) {
         this.sentAt = sentAt;
         return this;
@@ -42,9 +46,14 @@ public class PutV2PendingEmailsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=status")
     public String status;
+
     public PutV2PendingEmailsIdJsonRequestBody withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public PutV2PendingEmailsIdJsonRequestBody(@JsonProperty("message_id") String messageId, @JsonProperty("status") String status) {
+        this.messageId = messageId;
+        this.status = status;
+  }
 }

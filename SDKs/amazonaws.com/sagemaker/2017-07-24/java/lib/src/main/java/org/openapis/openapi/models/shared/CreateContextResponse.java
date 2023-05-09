@@ -15,9 +15,11 @@ public class CreateContextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContextArn")
     public String contextArn;
+
     public CreateContextResponse withContextArn(String contextArn) {
         this.contextArn = contextArn;
         return this;
     }
     
+    public CreateContextResponse(){}
 }

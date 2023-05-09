@@ -12,6 +12,7 @@ public class PostDriversRequestBodyPhone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("home")
     public String home;
+
     public PostDriversRequestBodyPhone withHome(String home) {
         this.home = home;
         return this;
@@ -20,6 +21,7 @@ public class PostDriversRequestBodyPhone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile")
     public String mobile;
+
     public PostDriversRequestBodyPhone withMobile(String mobile) {
         this.mobile = mobile;
         return this;
@@ -28,9 +30,11 @@ public class PostDriversRequestBodyPhone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("work")
     public String work;
+
     public PostDriversRequestBodyPhone withWork(String work) {
         this.work = work;
         return this;
     }
     
+    public PostDriversRequestBodyPhone(){}
 }

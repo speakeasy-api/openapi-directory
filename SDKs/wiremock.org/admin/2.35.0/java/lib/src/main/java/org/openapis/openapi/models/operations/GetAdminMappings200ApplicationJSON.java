@@ -15,6 +15,7 @@ public class GetAdminMappings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mappings")
     public GetAdminMappings200ApplicationJSONMappings[] mappings;
+
     public GetAdminMappings200ApplicationJSON withMappings(GetAdminMappings200ApplicationJSONMappings[] mappings) {
         this.mappings = mappings;
         return this;
@@ -23,9 +24,11 @@ public class GetAdminMappings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetAdminMappings200ApplicationJSONMeta meta;
+
     public GetAdminMappings200ApplicationJSON withMeta(GetAdminMappings200ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetAdminMappings200ApplicationJSON(){}
 }

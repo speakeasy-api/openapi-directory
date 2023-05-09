@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpecificClientWorkgroupRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_workgroup_id")
     public String clientWorkgroupId;
+
     public GetSpecificClientWorkgroupRequest withClientWorkgroupId(String clientWorkgroupId) {
         this.clientWorkgroupId = clientWorkgroupId;
         return this;
@@ -16,9 +18,14 @@ public class GetSpecificClientWorkgroupRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public GetSpecificClientWorkgroupRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public GetSpecificClientWorkgroupRequest(@JsonProperty("client_workgroup_id") String clientWorkgroupId, @JsonProperty("workgroup_id") String workgroupId) {
+        this.clientWorkgroupId = clientWorkgroupId;
+        this.workgroupId = workgroupId;
+  }
 }

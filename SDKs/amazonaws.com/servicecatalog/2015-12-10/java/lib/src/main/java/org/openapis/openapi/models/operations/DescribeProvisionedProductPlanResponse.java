@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeProvisionedProductPlanResponse {
     
     public String contentType;
+
     public DescribeProvisionedProductPlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeProvisionedProductPlanResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeProvisionedProductPlanOutput describeProvisionedProductPlanOutput;
+
     public DescribeProvisionedProductPlanResponse withDescribeProvisionedProductPlanOutput(org.openapis.openapi.models.shared.DescribeProvisionedProductPlanOutput describeProvisionedProductPlanOutput) {
         this.describeProvisionedProductPlanOutput = describeProvisionedProductPlanOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeProvisionedProductPlanResponse {
      */
     
     public Object invalidParametersException;
+
     public DescribeProvisionedProductPlanResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeProvisionedProductPlanResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeProvisionedProductPlanResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeProvisionedProductPlanResponse {
     
     
     public Integer statusCode;
+
     public DescribeProvisionedProductPlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeProvisionedProductPlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeProvisionedProductPlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeProvisionedProductPlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

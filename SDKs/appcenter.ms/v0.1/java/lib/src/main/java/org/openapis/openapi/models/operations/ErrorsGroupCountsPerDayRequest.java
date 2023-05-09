@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class ErrorsGroupCountsPerDayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ErrorsGroupCountsPerDayRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -23,6 +25,7 @@ public class ErrorsGroupCountsPerDayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public OffsetDateTime end;
+
     public ErrorsGroupCountsPerDayRequest withEnd(OffsetDateTime end) {
         this.end = end;
         return this;
@@ -33,6 +36,7 @@ public class ErrorsGroupCountsPerDayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorGroupId")
     public String errorGroupId;
+
     public ErrorsGroupCountsPerDayRequest withErrorGroupId(String errorGroupId) {
         this.errorGroupId = errorGroupId;
         return this;
@@ -43,6 +47,7 @@ public class ErrorsGroupCountsPerDayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ErrorsGroupCountsPerDayRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -53,6 +58,7 @@ public class ErrorsGroupCountsPerDayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public OffsetDateTime start;
+
     public ErrorsGroupCountsPerDayRequest withStart(OffsetDateTime start) {
         this.start = start;
         return this;
@@ -60,9 +66,16 @@ public class ErrorsGroupCountsPerDayRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
     public String version;
+
     public ErrorsGroupCountsPerDayRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ErrorsGroupCountsPerDayRequest(@JsonProperty("app_name") String appName, @JsonProperty("errorGroupId") String errorGroupId, @JsonProperty("owner_name") String ownerName, @JsonProperty("start") OffsetDateTime start) {
+        this.appName = appName;
+        this.errorGroupId = errorGroupId;
+        this.ownerName = ownerName;
+        this.start = start;
+  }
 }

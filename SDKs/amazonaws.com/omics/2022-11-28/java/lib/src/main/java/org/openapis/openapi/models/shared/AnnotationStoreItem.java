@@ -19,6 +19,7 @@ public class AnnotationStoreItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public AnnotationStoreItem withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +27,7 @@ public class AnnotationStoreItem {
     
     @JsonProperty("description")
     public String description;
+
     public AnnotationStoreItem withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +35,7 @@ public class AnnotationStoreItem {
     
     @JsonProperty("id")
     public String id;
+
     public AnnotationStoreItem withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +43,7 @@ public class AnnotationStoreItem {
     
     @JsonProperty("name")
     public String name;
+
     public AnnotationStoreItem withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class AnnotationStoreItem {
     
     @JsonProperty("reference")
     public ReferenceItem reference;
+
     public AnnotationStoreItem withReference(ReferenceItem reference) {
         this.reference = reference;
         return this;
@@ -54,6 +59,7 @@ public class AnnotationStoreItem {
     
     @JsonProperty("sseConfig")
     public SseConfig sseConfig;
+
     public AnnotationStoreItem withSseConfig(SseConfig sseConfig) {
         this.sseConfig = sseConfig;
         return this;
@@ -61,6 +67,7 @@ public class AnnotationStoreItem {
     
     @JsonProperty("status")
     public StoreStatusEnum status;
+
     public AnnotationStoreItem withStatus(StoreStatusEnum status) {
         this.status = status;
         return this;
@@ -68,6 +75,7 @@ public class AnnotationStoreItem {
     
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public AnnotationStoreItem withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -75,6 +83,7 @@ public class AnnotationStoreItem {
     
     @JsonProperty("storeArn")
     public String storeArn;
+
     public AnnotationStoreItem withStoreArn(String storeArn) {
         this.storeArn = storeArn;
         return this;
@@ -82,6 +91,7 @@ public class AnnotationStoreItem {
     
     @JsonProperty("storeFormat")
     public StoreFormatEnum storeFormat;
+
     public AnnotationStoreItem withStoreFormat(StoreFormatEnum storeFormat) {
         this.storeFormat = storeFormat;
         return this;
@@ -89,6 +99,7 @@ public class AnnotationStoreItem {
     
     @JsonProperty("storeSizeBytes")
     public Long storeSizeBytes;
+
     public AnnotationStoreItem withStoreSizeBytes(Long storeSizeBytes) {
         this.storeSizeBytes = storeSizeBytes;
         return this;
@@ -98,9 +109,24 @@ public class AnnotationStoreItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public AnnotationStoreItem withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public AnnotationStoreItem(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("description") String description, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("reference") ReferenceItem reference, @JsonProperty("sseConfig") SseConfig sseConfig, @JsonProperty("status") StoreStatusEnum status, @JsonProperty("statusMessage") String statusMessage, @JsonProperty("storeArn") String storeArn, @JsonProperty("storeFormat") StoreFormatEnum storeFormat, @JsonProperty("storeSizeBytes") Long storeSizeBytes, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.creationTime = creationTime;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.reference = reference;
+        this.sseConfig = sseConfig;
+        this.status = status;
+        this.statusMessage = statusMessage;
+        this.storeArn = storeArn;
+        this.storeFormat = storeFormat;
+        this.storeSizeBytes = storeSizeBytes;
+        this.updateTime = updateTime;
+  }
 }

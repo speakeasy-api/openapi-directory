@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateSingleUseSignInTokenResponse {
@@ -12,6 +13,7 @@ public class GenerateSingleUseSignInTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessTokenDTO accessTokenDTO;
+
     public GenerateSingleUseSignInTokenResponse withAccessTokenDTO(org.openapis.openapi.models.shared.AccessTokenDTO accessTokenDTO) {
         this.accessTokenDTO = accessTokenDTO;
         return this;
@@ -19,6 +21,7 @@ public class GenerateSingleUseSignInTokenResponse {
     
     
     public String contentType;
+
     public GenerateSingleUseSignInTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GenerateSingleUseSignInTokenResponse {
     
     
     public Integer statusCode;
+
     public GenerateSingleUseSignInTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GenerateSingleUseSignInTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateSingleUseSignInTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GenerateSingleUseSignInTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateRateBasedRuleRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public UpdateRateBasedRuleRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -16,6 +17,7 @@ public class UpdateRateBasedRuleRequest {
     
     @JsonProperty("RateLimit")
     public Long rateLimit;
+
     public UpdateRateBasedRuleRequest withRateLimit(Long rateLimit) {
         this.rateLimit = rateLimit;
         return this;
@@ -23,6 +25,7 @@ public class UpdateRateBasedRuleRequest {
     
     @JsonProperty("RuleId")
     public String ruleId;
+
     public UpdateRateBasedRuleRequest withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
@@ -30,9 +33,16 @@ public class UpdateRateBasedRuleRequest {
     
     @JsonProperty("Updates")
     public RuleUpdate[] updates;
+
     public UpdateRateBasedRuleRequest withUpdates(RuleUpdate[] updates) {
         this.updates = updates;
         return this;
     }
     
+    public UpdateRateBasedRuleRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("RateLimit") Long rateLimit, @JsonProperty("RuleId") String ruleId, @JsonProperty("Updates") RuleUpdate[] updates) {
+        this.changeToken = changeToken;
+        this.rateLimit = rateLimit;
+        this.ruleId = ruleId;
+        this.updates = updates;
+  }
 }

@@ -18,6 +18,7 @@ public class Printer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auxiliaryMessages")
     public AuxiliaryMessage[] auxiliaryMessages;
+
     public Printer withAuxiliaryMessages(AuxiliaryMessage[] auxiliaryMessages) {
         this.auxiliaryMessages = auxiliaryMessages;
         return this;
@@ -29,6 +30,7 @@ public class Printer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Printer withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class Printer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Printer withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class Printer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Printer withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class Printer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Printer withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +78,7 @@ public class Printer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("makeAndModel")
     public String makeAndModel;
+
     public Printer withMakeAndModel(String makeAndModel) {
         this.makeAndModel = makeAndModel;
         return this;
@@ -84,6 +90,7 @@ public class Printer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Printer withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class Printer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitId")
     public String orgUnitId;
+
     public Printer withOrgUnitId(String orgUnitId) {
         this.orgUnitId = orgUnitId;
         return this;
@@ -106,6 +114,7 @@ public class Printer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public Printer withUri(String uri) {
         this.uri = uri;
         return this;
@@ -117,9 +126,11 @@ public class Printer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useDriverlessConfig")
     public Boolean useDriverlessConfig;
+
     public Printer withUseDriverlessConfig(Boolean useDriverlessConfig) {
         this.useDriverlessConfig = useDriverlessConfig;
         return this;
     }
     
+    public Printer(){}
 }

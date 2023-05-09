@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDeploymentGroupsResponse {
@@ -12,6 +13,7 @@ public class ListDeploymentGroupsResponse {
      */
     
     public Object applicationDoesNotExistException;
+
     public ListDeploymentGroupsResponse withApplicationDoesNotExistException(Object applicationDoesNotExistException) {
         this.applicationDoesNotExistException = applicationDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class ListDeploymentGroupsResponse {
      */
     
     public Object applicationNameRequiredException;
+
     public ListDeploymentGroupsResponse withApplicationNameRequiredException(Object applicationNameRequiredException) {
         this.applicationNameRequiredException = applicationNameRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class ListDeploymentGroupsResponse {
     
     
     public String contentType;
+
     public ListDeploymentGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListDeploymentGroupsResponse {
      */
     
     public Object invalidApplicationNameException;
+
     public ListDeploymentGroupsResponse withInvalidApplicationNameException(Object invalidApplicationNameException) {
         this.invalidApplicationNameException = invalidApplicationNameException;
         return this;
@@ -49,6 +54,7 @@ public class ListDeploymentGroupsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListDeploymentGroupsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListDeploymentGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDeploymentGroupsOutput listDeploymentGroupsOutput;
+
     public ListDeploymentGroupsResponse withListDeploymentGroupsOutput(org.openapis.openapi.models.shared.ListDeploymentGroupsOutput listDeploymentGroupsOutput) {
         this.listDeploymentGroupsOutput = listDeploymentGroupsOutput;
         return this;
@@ -66,6 +73,7 @@ public class ListDeploymentGroupsResponse {
     
     
     public Integer statusCode;
+
     public ListDeploymentGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListDeploymentGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDeploymentGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDeploymentGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

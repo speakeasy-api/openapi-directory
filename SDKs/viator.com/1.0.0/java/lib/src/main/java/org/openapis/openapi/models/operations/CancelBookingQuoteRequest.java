@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelBookingQuoteRequest {
@@ -12,9 +13,13 @@ public class CancelBookingQuoteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=booking-reference")
     public String bookingReference;
+
     public CancelBookingQuoteRequest withBookingReference(String bookingReference) {
         this.bookingReference = bookingReference;
         return this;
     }
     
+    public CancelBookingQuoteRequest(@JsonProperty("booking-reference") String bookingReference) {
+        this.bookingReference = bookingReference;
+  }
 }

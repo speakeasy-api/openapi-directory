@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AcademicCertificateSchemaCertificateDataExamination {
     
     public String month;
+
     public AcademicCertificateSchemaCertificateDataExamination withMonth(String month) {
         this.month = month;
         return this;
@@ -16,6 +17,7 @@ public class AcademicCertificateSchemaCertificateDataExamination {
     
     
     public String name;
+
     public AcademicCertificateSchemaCertificateDataExamination withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +25,15 @@ public class AcademicCertificateSchemaCertificateDataExamination {
     
     
     public String year;
+
     public AcademicCertificateSchemaCertificateDataExamination withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public AcademicCertificateSchemaCertificateDataExamination(@JsonProperty("month") String month, @JsonProperty("name") String name, @JsonProperty("year") String year) {
+        this.month = month;
+        this.name = name;
+        this.year = year;
+  }
 }

@@ -18,9 +18,11 @@ public class UpdateConsumerConfigRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerConfig")
     public ConsumerConfigInput consumerConfig;
+
     public UpdateConsumerConfigRequestInput withConsumerConfig(ConsumerConfigInput consumerConfig) {
         this.consumerConfig = consumerConfig;
         return this;
     }
     
+    public UpdateConsumerConfigRequestInput(){}
 }

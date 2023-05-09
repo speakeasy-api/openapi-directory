@@ -18,6 +18,7 @@ public class MeasurementConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dv360ToCmCostReportingEnabled")
     public Boolean dv360ToCmCostReportingEnabled;
+
     public MeasurementConfig withDv360ToCmCostReportingEnabled(Boolean dv360ToCmCostReportingEnabled) {
         this.dv360ToCmCostReportingEnabled = dv360ToCmCostReportingEnabled;
         return this;
@@ -29,9 +30,11 @@ public class MeasurementConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dv360ToCmDataSharingEnabled")
     public Boolean dv360ToCmDataSharingEnabled;
+
     public MeasurementConfig withDv360ToCmDataSharingEnabled(Boolean dv360ToCmDataSharingEnabled) {
         this.dv360ToCmDataSharingEnabled = dv360ToCmDataSharingEnabled;
         return this;
     }
     
+    public MeasurementConfig(){}
 }

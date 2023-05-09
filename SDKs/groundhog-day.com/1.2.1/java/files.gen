@@ -58,4 +58,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/PredictionsResponse.jav
 lib/src/main/java/org/openapis/openapi/models/shared/GroundhogActiveEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Groundhog.java
 lib/src/main/java/org/openapis/openapi/models/shared/Prediction.java
+docs/sdk/README.md
+docs/groundhogs/README.md
+docs/info/README.md
+docs/predictions/README.md
 USAGE.md

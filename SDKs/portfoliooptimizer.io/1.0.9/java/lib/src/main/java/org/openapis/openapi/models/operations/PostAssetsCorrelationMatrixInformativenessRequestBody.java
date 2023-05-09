@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAssetsCorrelationMatrixInformativenessRequestBody {
     @JsonProperty("assets")
     public Long assets;
+
     public PostAssetsCorrelationMatrixInformativenessRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -21,6 +22,7 @@ public class PostAssetsCorrelationMatrixInformativenessRequestBody {
      */
     @JsonProperty("assetsCorrelationMatrix")
     public Double[][] assetsCorrelationMatrix;
+
     public PostAssetsCorrelationMatrixInformativenessRequestBody withAssetsCorrelationMatrix(Double[][] assetsCorrelationMatrix) {
         this.assetsCorrelationMatrix = assetsCorrelationMatrix;
         return this;
@@ -32,9 +34,14 @@ public class PostAssetsCorrelationMatrixInformativenessRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distanceMetric")
     public PostAssetsCorrelationMatrixInformativenessRequestBodyDistanceMetricEnum distanceMetric;
+
     public PostAssetsCorrelationMatrixInformativenessRequestBody withDistanceMetric(PostAssetsCorrelationMatrixInformativenessRequestBodyDistanceMetricEnum distanceMetric) {
         this.distanceMetric = distanceMetric;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixInformativenessRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCorrelationMatrix") Double[][] assetsCorrelationMatrix) {
+        this.assets = assets;
+        this.assetsCorrelationMatrix = assetsCorrelationMatrix;
+  }
 }

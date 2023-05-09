@@ -12,6 +12,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public Place withCountry(String country) {
         this.country = country;
         return this;
@@ -20,6 +21,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geohash")
     public String geohash;
+
     public Place withGeohash(String geohash) {
         this.geohash = geohash;
         return this;
@@ -28,6 +30,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("google")
     public String google;
+
     public Place withGoogle(String google) {
         this.google = google;
         return this;
@@ -36,6 +39,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latLong")
     public LatLong latLong;
+
     public Place withLatLong(LatLong latLong) {
         this.latLong = latLong;
         return this;
@@ -44,6 +48,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Place withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +57,11 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osm")
     public OsmId osm;
+
     public Place withOsm(OsmId osm) {
         this.osm = osm;
         return this;
     }
     
+    public Place(){}
 }

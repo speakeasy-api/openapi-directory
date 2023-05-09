@@ -15,6 +15,7 @@ public class LabelParameterVersionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvalidLabels")
     public String[] invalidLabels;
+
     public LabelParameterVersionResult withInvalidLabels(String[] invalidLabels) {
         this.invalidLabels = invalidLabels;
         return this;
@@ -23,9 +24,11 @@ public class LabelParameterVersionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterVersion")
     public Long parameterVersion;
+
     public LabelParameterVersionResult withParameterVersion(Long parameterVersion) {
         this.parameterVersion = parameterVersion;
         return this;
     }
     
+    public LabelParameterVersionResult(){}
 }

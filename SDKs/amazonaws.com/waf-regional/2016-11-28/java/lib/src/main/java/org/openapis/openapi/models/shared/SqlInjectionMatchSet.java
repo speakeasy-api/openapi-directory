@@ -15,6 +15,7 @@ public class SqlInjectionMatchSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public SqlInjectionMatchSet withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +23,7 @@ public class SqlInjectionMatchSet {
     
     @JsonProperty("SqlInjectionMatchSetId")
     public String sqlInjectionMatchSetId;
+
     public SqlInjectionMatchSet withSqlInjectionMatchSetId(String sqlInjectionMatchSetId) {
         this.sqlInjectionMatchSetId = sqlInjectionMatchSetId;
         return this;
@@ -29,9 +31,14 @@ public class SqlInjectionMatchSet {
     
     @JsonProperty("SqlInjectionMatchTuples")
     public SqlInjectionMatchTuple[] sqlInjectionMatchTuples;
+
     public SqlInjectionMatchSet withSqlInjectionMatchTuples(SqlInjectionMatchTuple[] sqlInjectionMatchTuples) {
         this.sqlInjectionMatchTuples = sqlInjectionMatchTuples;
         return this;
     }
     
+    public SqlInjectionMatchSet(@JsonProperty("SqlInjectionMatchSetId") String sqlInjectionMatchSetId, @JsonProperty("SqlInjectionMatchTuples") SqlInjectionMatchTuple[] sqlInjectionMatchTuples) {
+        this.sqlInjectionMatchSetId = sqlInjectionMatchSetId;
+        this.sqlInjectionMatchTuples = sqlInjectionMatchTuples;
+  }
 }

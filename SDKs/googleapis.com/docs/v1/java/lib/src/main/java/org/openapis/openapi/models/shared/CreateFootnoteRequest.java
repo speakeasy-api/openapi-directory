@@ -18,6 +18,7 @@ public class CreateFootnoteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endOfSegmentLocation")
     public EndOfSegmentLocation endOfSegmentLocation;
+
     public CreateFootnoteRequest withEndOfSegmentLocation(EndOfSegmentLocation endOfSegmentLocation) {
         this.endOfSegmentLocation = endOfSegmentLocation;
         return this;
@@ -29,9 +30,11 @@ public class CreateFootnoteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public CreateFootnoteRequest withLocation(Location location) {
         this.location = location;
         return this;
     }
     
+    public CreateFootnoteRequest(){}
 }

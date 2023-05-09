@@ -18,6 +18,7 @@ public class SkaffoldSupportedCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenanceModeTime")
     public String maintenanceModeTime;
+
     public SkaffoldSupportedCondition withMaintenanceModeTime(String maintenanceModeTime) {
         this.maintenanceModeTime = maintenanceModeTime;
         return this;
@@ -29,6 +30,7 @@ public class SkaffoldSupportedCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skaffoldSupportState")
     public SkaffoldSupportedConditionSkaffoldSupportStateEnum skaffoldSupportState;
+
     public SkaffoldSupportedCondition withSkaffoldSupportState(SkaffoldSupportedConditionSkaffoldSupportStateEnum skaffoldSupportState) {
         this.skaffoldSupportState = skaffoldSupportState;
         return this;
@@ -40,6 +42,7 @@ public class SkaffoldSupportedCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Boolean status;
+
     public SkaffoldSupportedCondition withStatus(Boolean status) {
         this.status = status;
         return this;
@@ -51,9 +54,11 @@ public class SkaffoldSupportedCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportExpirationTime")
     public String supportExpirationTime;
+
     public SkaffoldSupportedCondition withSupportExpirationTime(String supportExpirationTime) {
         this.supportExpirationTime = supportExpirationTime;
         return this;
     }
     
+    public SkaffoldSupportedCondition(){}
 }

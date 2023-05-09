@@ -52,11 +52,9 @@ public class Snmptcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmptcpGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpGetArgsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmptcpGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpGetArgsResponse(contentType, httpRes.statusCode()) {{
             protocolSnmptcpGetArgs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Snmptcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmptcpGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpGetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmptcpGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpGetConfigResponse(contentType, httpRes.statusCode()) {{
             configSNMPTCP = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class Snmptcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmptcpGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpGetStatisticsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmptcpGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpGetStatisticsResponse(contentType, httpRes.statusCode()) {{
             protocolSnmptcpGetStatistics200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,11 +171,9 @@ public class Snmptcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmptcpGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpGetStatsHdrResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmptcpGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpGetStatsHdrResponse(contentType, httpRes.statusCode()) {{
             protocolSnmptcpGetStatsHdr200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,11 +211,9 @@ public class Snmptcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmptcpGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpGetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmptcpGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpGetTraceResponse(contentType, httpRes.statusCode()) {{
             configSNMPTCP = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,11 +251,9 @@ public class Snmptcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasDisableResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasDisableResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasDisableResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasDisableResponse(contentType, httpRes.statusCode()) {{
             protocolSnmptcpIpaliasDisable200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +290,9 @@ public class Snmptcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasEnableResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasEnableResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasEnableResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasEnableResponse(contentType, httpRes.statusCode()) {{
             protocolSnmptcpIpaliasEnable200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +329,9 @@ public class Snmptcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasIsenabledResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasIsenabledResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasIsenabledResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasIsenabledResponse(contentType, httpRes.statusCode()) {{
             protocolSnmptcpIpaliasIsenabled200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -384,11 +368,9 @@ public class Snmptcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasListResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasListResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasListResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasListResponse(contentType, httpRes.statusCode()) {{
             ipAliases = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -426,11 +408,9 @@ public class Snmptcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmptcpSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpSetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmptcpSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpSetConfigResponse(contentType, httpRes.statusCode()) {{
             protocolSnmptcpSetConfig200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -467,11 +447,9 @@ public class Snmptcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSnmptcpSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpSetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSnmptcpSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolSnmptcpSetTraceResponse(contentType, httpRes.statusCode()) {{
             protocolSnmptcpSetTrace200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

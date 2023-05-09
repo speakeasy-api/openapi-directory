@@ -15,6 +15,7 @@ public class InventoryAggregator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aggregators")
     public InventoryAggregator[] aggregators;
+
     public InventoryAggregator withAggregators(InventoryAggregator[] aggregators) {
         this.aggregators = aggregators;
         return this;
@@ -23,6 +24,7 @@ public class InventoryAggregator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expression")
     public String expression;
+
     public InventoryAggregator withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -31,9 +33,11 @@ public class InventoryAggregator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Groups")
     public InventoryGroup[] groups;
+
     public InventoryAggregator withGroups(InventoryGroup[] groups) {
         this.groups = groups;
         return this;
     }
     
+    public InventoryAggregator(){}
 }

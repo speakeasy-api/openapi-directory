@@ -22,6 +22,7 @@ public class JobSteps {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completed_at")
     public OffsetDateTime completedAt;
+
     public JobSteps withCompletedAt(OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -32,6 +33,7 @@ public class JobSteps {
      */
     @JsonProperty("conclusion")
     public String conclusion;
+
     public JobSteps withConclusion(String conclusion) {
         this.conclusion = conclusion;
         return this;
@@ -42,6 +44,7 @@ public class JobSteps {
      */
     @JsonProperty("name")
     public String name;
+
     public JobSteps withName(String name) {
         this.name = name;
         return this;
@@ -49,6 +52,7 @@ public class JobSteps {
     
     @JsonProperty("number")
     public Long number;
+
     public JobSteps withNumber(Long number) {
         this.number = number;
         return this;
@@ -62,6 +66,7 @@ public class JobSteps {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("started_at")
     public OffsetDateTime startedAt;
+
     public JobSteps withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -72,9 +77,16 @@ public class JobSteps {
      */
     @JsonProperty("status")
     public JobStepsStatusEnum status;
+
     public JobSteps withStatus(JobStepsStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public JobSteps(@JsonProperty("conclusion") String conclusion, @JsonProperty("name") String name, @JsonProperty("number") Long number, @JsonProperty("status") JobStepsStatusEnum status) {
+        this.conclusion = conclusion;
+        this.name = name;
+        this.number = number;
+        this.status = status;
+  }
 }

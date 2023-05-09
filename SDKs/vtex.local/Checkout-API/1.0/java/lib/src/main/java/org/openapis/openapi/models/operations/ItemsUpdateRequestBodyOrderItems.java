@@ -12,6 +12,7 @@ public class ItemsUpdateRequestBodyOrderItems {
      */
     @JsonProperty("index")
     public Long index;
+
     public ItemsUpdateRequestBodyOrderItems withIndex(Long index) {
         this.index = index;
         return this;
@@ -22,9 +23,14 @@ public class ItemsUpdateRequestBodyOrderItems {
      */
     @JsonProperty("quantity")
     public Integer quantity;
+
     public ItemsUpdateRequestBodyOrderItems withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public ItemsUpdateRequestBodyOrderItems(@JsonProperty("index") Long index, @JsonProperty("quantity") Integer quantity) {
+        this.index = index;
+        this.quantity = quantity;
+  }
 }

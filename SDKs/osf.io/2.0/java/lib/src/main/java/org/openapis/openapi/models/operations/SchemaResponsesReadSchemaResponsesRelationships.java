@@ -15,6 +15,7 @@ public class SchemaResponsesReadSchemaResponsesRelationships {
      */
     
     public String actions;
+
     public SchemaResponsesReadSchemaResponsesRelationships withActions(String actions) {
         this.actions = actions;
         return this;
@@ -25,6 +26,7 @@ public class SchemaResponsesReadSchemaResponsesRelationships {
      */
     
     public String initiatedBy;
+
     public SchemaResponsesReadSchemaResponsesRelationships withInitiatedBy(String initiatedBy) {
         this.initiatedBy = initiatedBy;
         return this;
@@ -35,6 +37,7 @@ public class SchemaResponsesReadSchemaResponsesRelationships {
      */
     
     public String registration;
+
     public SchemaResponsesReadSchemaResponsesRelationships withRegistration(String registration) {
         this.registration = registration;
         return this;
@@ -45,9 +48,11 @@ public class SchemaResponsesReadSchemaResponsesRelationships {
      */
     
     public String registrationSchema;
+
     public SchemaResponsesReadSchemaResponsesRelationships withRegistrationSchema(String registrationSchema) {
         this.registrationSchema = registrationSchema;
         return this;
     }
     
+    public SchemaResponsesReadSchemaResponsesRelationships(){}
 }

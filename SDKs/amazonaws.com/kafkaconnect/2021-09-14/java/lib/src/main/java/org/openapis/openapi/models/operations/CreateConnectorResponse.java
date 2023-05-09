@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateConnectorResponse {
@@ -12,6 +13,7 @@ public class CreateConnectorResponse {
      */
     
     public Object badRequestException;
+
     public CreateConnectorResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateConnectorResponse {
      */
     
     public Object conflictException;
+
     public CreateConnectorResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateConnectorResponse {
     
     
     public String contentType;
+
     public CreateConnectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateConnectorResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateConnectorResponse createConnectorResponse;
+
     public CreateConnectorResponse withCreateConnectorResponse(org.openapis.openapi.models.shared.CreateConnectorResponse createConnectorResponse) {
         this.createConnectorResponse = createConnectorResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateConnectorResponse {
      */
     
     public Object forbiddenException;
+
     public CreateConnectorResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CreateConnectorResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateConnectorResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -69,6 +76,7 @@ public class CreateConnectorResponse {
      */
     
     public Object notFoundException;
+
     public CreateConnectorResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class CreateConnectorResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateConnectorResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -86,6 +95,7 @@ public class CreateConnectorResponse {
     
     
     public Integer statusCode;
+
     public CreateConnectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateConnectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateConnectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class CreateConnectorResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateConnectorResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,9 +125,14 @@ public class CreateConnectorResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateConnectorResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateConnectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

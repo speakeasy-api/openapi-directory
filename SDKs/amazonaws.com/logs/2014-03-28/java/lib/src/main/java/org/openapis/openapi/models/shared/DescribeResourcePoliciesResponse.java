@@ -18,6 +18,7 @@ public class DescribeResourcePoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeResourcePoliciesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +27,11 @@ public class DescribeResourcePoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourcePolicies")
     public ResourcePolicy[] resourcePolicies;
+
     public DescribeResourcePoliciesResponse withResourcePolicies(ResourcePolicy[] resourcePolicies) {
         this.resourcePolicies = resourcePolicies;
         return this;
     }
     
+    public DescribeResourcePoliciesResponse(){}
 }

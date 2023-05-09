@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV1EmailDisposableResponse {
     
     public String contentType;
+
     public GetV1EmailDisposableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetV1EmailDisposableResponse {
     
     
     public Integer statusCode;
+
     public GetV1EmailDisposableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetV1EmailDisposableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV1EmailDisposableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetV1EmailDisposableResponse {
      */
     
     public String getV1EmailDisposable200ApplicationJSONString;
+
     public GetV1EmailDisposableResponse withGetV1EmailDisposable200ApplicationJSONString(String getV1EmailDisposable200ApplicationJSONString) {
         this.getV1EmailDisposable200ApplicationJSONString = getV1EmailDisposable200ApplicationJSONString;
         return this;
     }
     
+    public GetV1EmailDisposableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

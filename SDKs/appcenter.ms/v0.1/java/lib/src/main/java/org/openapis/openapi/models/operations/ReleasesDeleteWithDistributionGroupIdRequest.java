@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesDeleteWithDistributionGroupIdRequest {
@@ -12,6 +13,7 @@ public class ReleasesDeleteWithDistributionGroupIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ReleasesDeleteWithDistributionGroupIdRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class ReleasesDeleteWithDistributionGroupIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
     public String distributionGroupName;
+
     public ReleasesDeleteWithDistributionGroupIdRequest withDistributionGroupName(String distributionGroupName) {
         this.distributionGroupName = distributionGroupName;
         return this;
@@ -32,6 +35,7 @@ public class ReleasesDeleteWithDistributionGroupIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ReleasesDeleteWithDistributionGroupIdRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -42,9 +46,16 @@ public class ReleasesDeleteWithDistributionGroupIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public Long releaseId;
+
     public ReleasesDeleteWithDistributionGroupIdRequest withReleaseId(Long releaseId) {
         this.releaseId = releaseId;
         return this;
     }
     
+    public ReleasesDeleteWithDistributionGroupIdRequest(@JsonProperty("app_name") String appName, @JsonProperty("distribution_group_name") String distributionGroupName, @JsonProperty("owner_name") String ownerName, @JsonProperty("release_id") Long releaseId) {
+        this.appName = appName;
+        this.distributionGroupName = distributionGroupName;
+        this.ownerName = ownerName;
+        this.releaseId = releaseId;
+  }
 }

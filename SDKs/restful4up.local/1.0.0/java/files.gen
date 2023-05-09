@@ -52,4 +52,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ApplyYaraRule.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/YaraMeta.java
 lib/src/main/java/org/openapis/openapi/models/shared/Yara.java
+docs/sdk/README.md
 USAGE.md

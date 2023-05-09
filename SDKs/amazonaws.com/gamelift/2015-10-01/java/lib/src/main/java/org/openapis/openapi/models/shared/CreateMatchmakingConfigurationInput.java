@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateMatchmakingConfigurationInput {
     @JsonProperty("AcceptanceRequired")
     public Boolean acceptanceRequired;
+
     public CreateMatchmakingConfigurationInput withAcceptanceRequired(Boolean acceptanceRequired) {
         this.acceptanceRequired = acceptanceRequired;
         return this;
@@ -19,6 +20,7 @@ public class CreateMatchmakingConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptanceTimeoutSeconds")
     public Long acceptanceTimeoutSeconds;
+
     public CreateMatchmakingConfigurationInput withAcceptanceTimeoutSeconds(Long acceptanceTimeoutSeconds) {
         this.acceptanceTimeoutSeconds = acceptanceTimeoutSeconds;
         return this;
@@ -27,6 +29,7 @@ public class CreateMatchmakingConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalPlayerCount")
     public Long additionalPlayerCount;
+
     public CreateMatchmakingConfigurationInput withAdditionalPlayerCount(Long additionalPlayerCount) {
         this.additionalPlayerCount = additionalPlayerCount;
         return this;
@@ -35,6 +38,7 @@ public class CreateMatchmakingConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackfillMode")
     public BackfillModeEnum backfillMode;
+
     public CreateMatchmakingConfigurationInput withBackfillMode(BackfillModeEnum backfillMode) {
         this.backfillMode = backfillMode;
         return this;
@@ -43,6 +47,7 @@ public class CreateMatchmakingConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomEventData")
     public String customEventData;
+
     public CreateMatchmakingConfigurationInput withCustomEventData(String customEventData) {
         this.customEventData = customEventData;
         return this;
@@ -51,6 +56,7 @@ public class CreateMatchmakingConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateMatchmakingConfigurationInput withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +65,7 @@ public class CreateMatchmakingConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlexMatchMode")
     public FlexMatchModeEnum flexMatchMode;
+
     public CreateMatchmakingConfigurationInput withFlexMatchMode(FlexMatchModeEnum flexMatchMode) {
         this.flexMatchMode = flexMatchMode;
         return this;
@@ -67,6 +74,7 @@ public class CreateMatchmakingConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameProperties")
     public GameProperty[] gameProperties;
+
     public CreateMatchmakingConfigurationInput withGameProperties(GameProperty[] gameProperties) {
         this.gameProperties = gameProperties;
         return this;
@@ -75,6 +83,7 @@ public class CreateMatchmakingConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionData")
     public String gameSessionData;
+
     public CreateMatchmakingConfigurationInput withGameSessionData(String gameSessionData) {
         this.gameSessionData = gameSessionData;
         return this;
@@ -83,6 +92,7 @@ public class CreateMatchmakingConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionQueueArns")
     public String[] gameSessionQueueArns;
+
     public CreateMatchmakingConfigurationInput withGameSessionQueueArns(String[] gameSessionQueueArns) {
         this.gameSessionQueueArns = gameSessionQueueArns;
         return this;
@@ -90,6 +100,7 @@ public class CreateMatchmakingConfigurationInput {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateMatchmakingConfigurationInput withName(String name) {
         this.name = name;
         return this;
@@ -98,6 +109,7 @@ public class CreateMatchmakingConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationTarget")
     public String notificationTarget;
+
     public CreateMatchmakingConfigurationInput withNotificationTarget(String notificationTarget) {
         this.notificationTarget = notificationTarget;
         return this;
@@ -105,6 +117,7 @@ public class CreateMatchmakingConfigurationInput {
     
     @JsonProperty("RequestTimeoutSeconds")
     public Long requestTimeoutSeconds;
+
     public CreateMatchmakingConfigurationInput withRequestTimeoutSeconds(Long requestTimeoutSeconds) {
         this.requestTimeoutSeconds = requestTimeoutSeconds;
         return this;
@@ -112,6 +125,7 @@ public class CreateMatchmakingConfigurationInput {
     
     @JsonProperty("RuleSetName")
     public String ruleSetName;
+
     public CreateMatchmakingConfigurationInput withRuleSetName(String ruleSetName) {
         this.ruleSetName = ruleSetName;
         return this;
@@ -120,9 +134,16 @@ public class CreateMatchmakingConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateMatchmakingConfigurationInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateMatchmakingConfigurationInput(@JsonProperty("AcceptanceRequired") Boolean acceptanceRequired, @JsonProperty("Name") String name, @JsonProperty("RequestTimeoutSeconds") Long requestTimeoutSeconds, @JsonProperty("RuleSetName") String ruleSetName) {
+        this.acceptanceRequired = acceptanceRequired;
+        this.name = name;
+        this.requestTimeoutSeconds = requestTimeoutSeconds;
+        this.ruleSetName = ruleSetName;
+  }
 }

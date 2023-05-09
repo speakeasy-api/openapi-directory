@@ -18,6 +18,7 @@ public class QuestionItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public ImageInput image;
+
     public QuestionItemInput withImage(ImageInput image) {
         this.image = image;
         return this;
@@ -29,9 +30,11 @@ public class QuestionItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("question")
     public QuestionInput question;
+
     public QuestionItemInput withQuestion(QuestionInput question) {
         this.question = question;
         return this;
     }
     
+    public QuestionItemInput(){}
 }

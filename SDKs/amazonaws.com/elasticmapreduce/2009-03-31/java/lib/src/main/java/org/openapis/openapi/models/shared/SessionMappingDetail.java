@@ -22,6 +22,7 @@ public class SessionMappingDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public SessionMappingDetail withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class SessionMappingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityId")
     public String identityId;
+
     public SessionMappingDetail withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -38,6 +40,7 @@ public class SessionMappingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityName")
     public String identityName;
+
     public SessionMappingDetail withIdentityName(String identityName) {
         this.identityName = identityName;
         return this;
@@ -46,6 +49,7 @@ public class SessionMappingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityType")
     public IdentityTypeEnum identityType;
+
     public SessionMappingDetail withIdentityType(IdentityTypeEnum identityType) {
         this.identityType = identityType;
         return this;
@@ -56,6 +60,7 @@ public class SessionMappingDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public SessionMappingDetail withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -64,6 +69,7 @@ public class SessionMappingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionPolicyArn")
     public String sessionPolicyArn;
+
     public SessionMappingDetail withSessionPolicyArn(String sessionPolicyArn) {
         this.sessionPolicyArn = sessionPolicyArn;
         return this;
@@ -72,9 +78,11 @@ public class SessionMappingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StudioId")
     public String studioId;
+
     public SessionMappingDetail withStudioId(String studioId) {
         this.studioId = studioId;
         return this;
     }
     
+    public SessionMappingDetail(){}
 }

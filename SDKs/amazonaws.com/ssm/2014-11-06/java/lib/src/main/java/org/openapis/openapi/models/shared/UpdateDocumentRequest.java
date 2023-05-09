@@ -12,6 +12,7 @@ public class UpdateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attachments")
     public AttachmentsSource[] attachments;
+
     public UpdateDocumentRequest withAttachments(AttachmentsSource[] attachments) {
         this.attachments = attachments;
         return this;
@@ -19,6 +20,7 @@ public class UpdateDocumentRequest {
     
     @JsonProperty("Content")
     public String content;
+
     public UpdateDocumentRequest withContent(String content) {
         this.content = content;
         return this;
@@ -27,6 +29,7 @@ public class UpdateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public UpdateDocumentRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -35,6 +38,7 @@ public class UpdateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentFormat")
     public DocumentFormatEnum documentFormat;
+
     public UpdateDocumentRequest withDocumentFormat(DocumentFormatEnum documentFormat) {
         this.documentFormat = documentFormat;
         return this;
@@ -43,6 +47,7 @@ public class UpdateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public UpdateDocumentRequest withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -50,6 +55,7 @@ public class UpdateDocumentRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateDocumentRequest withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +64,7 @@ public class UpdateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetType")
     public String targetType;
+
     public UpdateDocumentRequest withTargetType(String targetType) {
         this.targetType = targetType;
         return this;
@@ -66,9 +73,14 @@ public class UpdateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionName")
     public String versionName;
+
     public UpdateDocumentRequest withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public UpdateDocumentRequest(@JsonProperty("Content") String content, @JsonProperty("Name") String name) {
+        this.content = content;
+        this.name = name;
+  }
 }

@@ -60,4 +60,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/TextExtractionRequestBo
 lib/src/main/java/org/openapis/openapi/models/operations/TextExtractionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocumentSimilarityRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocumentSimilarityResponse.java
+docs/sdk/README.md
+docs/documentclassification/README.md
+docs/informationretrieval/README.md
+docs/metrics/README.md
 USAGE.md

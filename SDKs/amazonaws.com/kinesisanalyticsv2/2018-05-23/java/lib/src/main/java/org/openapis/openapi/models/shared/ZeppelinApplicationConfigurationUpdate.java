@@ -15,6 +15,7 @@ public class ZeppelinApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogConfigurationUpdate")
     public CatalogConfigurationUpdate catalogConfigurationUpdate;
+
     public ZeppelinApplicationConfigurationUpdate withCatalogConfigurationUpdate(CatalogConfigurationUpdate catalogConfigurationUpdate) {
         this.catalogConfigurationUpdate = catalogConfigurationUpdate;
         return this;
@@ -23,6 +24,7 @@ public class ZeppelinApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomArtifactsConfigurationUpdate")
     public CustomArtifactConfiguration[] customArtifactsConfigurationUpdate;
+
     public ZeppelinApplicationConfigurationUpdate withCustomArtifactsConfigurationUpdate(CustomArtifactConfiguration[] customArtifactsConfigurationUpdate) {
         this.customArtifactsConfigurationUpdate = customArtifactsConfigurationUpdate;
         return this;
@@ -34,6 +36,7 @@ public class ZeppelinApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeployAsApplicationConfigurationUpdate")
     public DeployAsApplicationConfigurationUpdate deployAsApplicationConfigurationUpdate;
+
     public ZeppelinApplicationConfigurationUpdate withDeployAsApplicationConfigurationUpdate(DeployAsApplicationConfigurationUpdate deployAsApplicationConfigurationUpdate) {
         this.deployAsApplicationConfigurationUpdate = deployAsApplicationConfigurationUpdate;
         return this;
@@ -42,9 +45,11 @@ public class ZeppelinApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringConfigurationUpdate")
     public ZeppelinMonitoringConfigurationUpdate monitoringConfigurationUpdate;
+
     public ZeppelinApplicationConfigurationUpdate withMonitoringConfigurationUpdate(ZeppelinMonitoringConfigurationUpdate monitoringConfigurationUpdate) {
         this.monitoringConfigurationUpdate = monitoringConfigurationUpdate;
         return this;
     }
     
+    public ZeppelinApplicationConfigurationUpdate(){}
 }

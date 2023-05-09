@@ -20,6 +20,7 @@ public class TransitionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabledReason")
     public String disabledReason;
+
     public TransitionState withDisabledReason(String disabledReason) {
         this.disabledReason = disabledReason;
         return this;
@@ -28,6 +29,7 @@ public class TransitionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public TransitionState withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -38,6 +40,7 @@ public class TransitionState {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastChangedAt")
     public OffsetDateTime lastChangedAt;
+
     public TransitionState withLastChangedAt(OffsetDateTime lastChangedAt) {
         this.lastChangedAt = lastChangedAt;
         return this;
@@ -46,9 +49,11 @@ public class TransitionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastChangedBy")
     public String lastChangedBy;
+
     public TransitionState withLastChangedBy(String lastChangedBy) {
         this.lastChangedBy = lastChangedBy;
         return this;
     }
     
+    public TransitionState(){}
 }

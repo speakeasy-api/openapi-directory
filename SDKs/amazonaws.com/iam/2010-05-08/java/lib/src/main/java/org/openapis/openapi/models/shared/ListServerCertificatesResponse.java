@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListServerCertificatesResponse - Contains the response to a successful &lt;a&gt;ListServerCertificates&lt;/a&gt; request. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListServerCertificatesResponse {
     
     public Boolean isTruncated;
+
     public ListServerCertificatesResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -19,6 +20,7 @@ public class ListServerCertificatesResponse {
     
     
     public String marker;
+
     public ListServerCertificatesResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,9 +28,13 @@ public class ListServerCertificatesResponse {
     
     
     public ServerCertificateMetadata[] serverCertificateMetadataList;
+
     public ListServerCertificatesResponse withServerCertificateMetadataList(ServerCertificateMetadata[] serverCertificateMetadataList) {
         this.serverCertificateMetadataList = serverCertificateMetadataList;
         return this;
     }
     
+    public ListServerCertificatesResponse(@JsonProperty("ServerCertificateMetadataList") ServerCertificateMetadata[] serverCertificateMetadataList) {
+        this.serverCertificateMetadataList = serverCertificateMetadataList;
+  }
 }

@@ -18,6 +18,7 @@ public class ContentInstreamPositionAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adType")
     public ContentInstreamPositionAssignedTargetingOptionDetailsAdTypeEnum adType;
+
     public ContentInstreamPositionAssignedTargetingOptionDetails withAdType(ContentInstreamPositionAssignedTargetingOptionDetailsAdTypeEnum adType) {
         this.adType = adType;
         return this;
@@ -29,9 +30,11 @@ public class ContentInstreamPositionAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentInstreamPosition")
     public ContentInstreamPositionAssignedTargetingOptionDetailsContentInstreamPositionEnum contentInstreamPosition;
+
     public ContentInstreamPositionAssignedTargetingOptionDetails withContentInstreamPosition(ContentInstreamPositionAssignedTargetingOptionDetailsContentInstreamPositionEnum contentInstreamPosition) {
         this.contentInstreamPosition = contentInstreamPosition;
         return this;
     }
     
+    public ContentInstreamPositionAssignedTargetingOptionDetails(){}
 }

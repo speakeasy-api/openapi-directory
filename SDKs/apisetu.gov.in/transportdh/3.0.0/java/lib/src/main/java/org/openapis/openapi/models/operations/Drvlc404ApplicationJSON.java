@@ -15,6 +15,7 @@ public class Drvlc404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Drvlc404ApplicationJSONErrorEnum error;
+
     public Drvlc404ApplicationJSON withError(Drvlc404ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Drvlc404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Drvlc404ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Drvlc404ApplicationJSON withErrorDescription(Drvlc404ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Drvlc404ApplicationJSON(){}
 }

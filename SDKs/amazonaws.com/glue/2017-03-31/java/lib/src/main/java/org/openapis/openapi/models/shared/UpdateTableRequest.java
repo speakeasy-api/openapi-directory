@@ -12,6 +12,7 @@ public class UpdateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public UpdateTableRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateTableRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public UpdateTableRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -27,6 +29,7 @@ public class UpdateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SkipArchive")
     public Boolean skipArchive;
+
     public UpdateTableRequest withSkipArchive(Boolean skipArchive) {
         this.skipArchive = skipArchive;
         return this;
@@ -34,6 +37,7 @@ public class UpdateTableRequest {
     
     @JsonProperty("TableInput")
     public TableInput tableInput;
+
     public UpdateTableRequest withTableInput(TableInput tableInput) {
         this.tableInput = tableInput;
         return this;
@@ -42,6 +46,7 @@ public class UpdateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public UpdateTableRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -50,9 +55,14 @@ public class UpdateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public UpdateTableRequest withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public UpdateTableRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableInput") TableInput tableInput) {
+        this.databaseName = databaseName;
+        this.tableInput = tableInput;
+  }
 }

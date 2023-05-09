@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSubmissionsRequest {
@@ -12,6 +13,7 @@ public class GetSubmissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignment")
     public String assignment;
+
     public GetSubmissionsRequest withAssignment(String assignment) {
         this.assignment = assignment;
         return this;
@@ -22,9 +24,14 @@ public class GetSubmissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
     public String class_;
+
     public GetSubmissionsRequest withClass(String class_) {
         this.class_ = class_;
         return this;
     }
     
+    public GetSubmissionsRequest(@JsonProperty("assignment") String assignment, @JsonProperty("class") String class_) {
+        this.assignment = assignment;
+        this.class_ = class_;
+  }
 }

@@ -18,6 +18,7 @@ public class Instance {
      */
     @JsonProperty("approval_required")
     public Boolean approvalRequired;
+
     public Instance withApprovalRequired(Boolean approvalRequired) {
         this.approvalRequired = approvalRequired;
         return this;
@@ -30,6 +31,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_account")
     public Account contactAccount;
+
     public Instance withContactAccount(Account contactAccount) {
         this.contactAccount = contactAccount;
         return this;
@@ -40,6 +42,7 @@ public class Instance {
      */
     @JsonProperty("description")
     public String description;
+
     public Instance withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +53,7 @@ public class Instance {
      */
     @JsonProperty("email")
     public String email;
+
     public Instance withEmail(String email) {
         this.email = email;
         return this;
@@ -60,6 +64,7 @@ public class Instance {
      */
     @JsonProperty("invites_enabled")
     public Boolean invitesEnabled;
+
     public Instance withInvitesEnabled(Boolean invitesEnabled) {
         this.invitesEnabled = invitesEnabled;
         return this;
@@ -70,6 +75,7 @@ public class Instance {
      */
     @JsonProperty("languages")
     public String[] languages;
+
     public Instance withLanguages(String[] languages) {
         this.languages = languages;
         return this;
@@ -80,6 +86,7 @@ public class Instance {
      */
     @JsonProperty("registrations")
     public Boolean registrations;
+
     public Instance withRegistrations(Boolean registrations) {
         this.registrations = registrations;
         return this;
@@ -90,6 +97,7 @@ public class Instance {
      */
     @JsonProperty("short_description")
     public String shortDescription;
+
     public Instance withShortDescription(String shortDescription) {
         this.shortDescription = shortDescription;
         return this;
@@ -100,6 +108,7 @@ public class Instance {
      */
     @JsonProperty("stats")
     public java.util.Map<String, Object> stats;
+
     public Instance withStats(java.util.Map<String, Object> stats) {
         this.stats = stats;
         return this;
@@ -111,6 +120,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnail")
     public String thumbnail;
+
     public Instance withThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
         return this;
@@ -121,6 +131,7 @@ public class Instance {
      */
     @JsonProperty("title")
     public String title;
+
     public Instance withTitle(String title) {
         this.title = title;
         return this;
@@ -131,6 +142,7 @@ public class Instance {
      */
     @JsonProperty("uri")
     public String uri;
+
     public Instance withUri(String uri) {
         this.uri = uri;
         return this;
@@ -141,6 +153,7 @@ public class Instance {
      */
     @JsonProperty("urls")
     public java.util.Map<String, Object> urls;
+
     public Instance withUrls(java.util.Map<String, Object> urls) {
         this.urls = urls;
         return this;
@@ -151,9 +164,24 @@ public class Instance {
      */
     @JsonProperty("version")
     public String version;
+
     public Instance withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Instance(@JsonProperty("approval_required") Boolean approvalRequired, @JsonProperty("description") String description, @JsonProperty("email") String email, @JsonProperty("invites_enabled") Boolean invitesEnabled, @JsonProperty("languages") String[] languages, @JsonProperty("registrations") Boolean registrations, @JsonProperty("short_description") String shortDescription, @JsonProperty("stats") java.util.Map<String, Object> stats, @JsonProperty("title") String title, @JsonProperty("uri") String uri, @JsonProperty("urls") java.util.Map<String, Object> urls, @JsonProperty("version") String version) {
+        this.approvalRequired = approvalRequired;
+        this.description = description;
+        this.email = email;
+        this.invitesEnabled = invitesEnabled;
+        this.languages = languages;
+        this.registrations = registrations;
+        this.shortDescription = shortDescription;
+        this.stats = stats;
+        this.title = title;
+        this.uri = uri;
+        this.urls = urls;
+        this.version = version;
+  }
 }

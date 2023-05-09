@@ -15,6 +15,7 @@ public class RecommendationJobContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataInputConfig")
     public String dataInputConfig;
+
     public RecommendationJobContainerConfig withDataInputConfig(String dataInputConfig) {
         this.dataInputConfig = dataInputConfig;
         return this;
@@ -23,6 +24,7 @@ public class RecommendationJobContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public RecommendationJobContainerConfig withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -31,6 +33,7 @@ public class RecommendationJobContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Framework")
     public String framework;
+
     public RecommendationJobContainerConfig withFramework(String framework) {
         this.framework = framework;
         return this;
@@ -39,6 +42,7 @@ public class RecommendationJobContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FrameworkVersion")
     public String frameworkVersion;
+
     public RecommendationJobContainerConfig withFrameworkVersion(String frameworkVersion) {
         this.frameworkVersion = frameworkVersion;
         return this;
@@ -47,6 +51,7 @@ public class RecommendationJobContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NearestModelName")
     public String nearestModelName;
+
     public RecommendationJobContainerConfig withNearestModelName(String nearestModelName) {
         this.nearestModelName = nearestModelName;
         return this;
@@ -55,6 +60,7 @@ public class RecommendationJobContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PayloadConfig")
     public RecommendationJobPayloadConfig payloadConfig;
+
     public RecommendationJobContainerConfig withPayloadConfig(RecommendationJobPayloadConfig payloadConfig) {
         this.payloadConfig = payloadConfig;
         return this;
@@ -63,6 +69,7 @@ public class RecommendationJobContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedInstanceTypes")
     public String[] supportedInstanceTypes;
+
     public RecommendationJobContainerConfig withSupportedInstanceTypes(String[] supportedInstanceTypes) {
         this.supportedInstanceTypes = supportedInstanceTypes;
         return this;
@@ -71,9 +78,11 @@ public class RecommendationJobContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Task")
     public String task;
+
     public RecommendationJobContainerConfig withTask(String task) {
         this.task = task;
         return this;
     }
     
+    public RecommendationJobContainerConfig(){}
 }

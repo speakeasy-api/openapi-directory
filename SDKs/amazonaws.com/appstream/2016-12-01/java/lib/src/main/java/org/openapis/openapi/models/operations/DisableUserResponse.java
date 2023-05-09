@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableUserResponse {
     
     public String contentType;
+
     public DisableUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisableUserResponse {
      */
     
     public java.util.Map<String, Object> disableUserResult;
+
     public DisableUserResponse withDisableUserResult(java.util.Map<String, Object> disableUserResult) {
         this.disableUserResult = disableUserResult;
         return this;
@@ -29,6 +32,7 @@ public class DisableUserResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisableUserResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DisableUserResponse {
     
     
     public Integer statusCode;
+
     public DisableUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DisableUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisableUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

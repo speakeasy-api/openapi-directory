@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcClassicLinkResult {
     
     public DescribeVpcClassicLinkResultVpcs[] vpcs;
+
     public DescribeVpcClassicLinkResult withVpcs(DescribeVpcClassicLinkResultVpcs[] vpcs) {
         this.vpcs = vpcs;
         return this;
     }
     
+    public DescribeVpcClassicLinkResult(){}
 }

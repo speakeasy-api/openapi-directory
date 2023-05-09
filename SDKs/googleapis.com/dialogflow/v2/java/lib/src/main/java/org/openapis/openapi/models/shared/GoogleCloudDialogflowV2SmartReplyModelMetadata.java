@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2SmartReplyModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingModelType")
     public GoogleCloudDialogflowV2SmartReplyModelMetadataTrainingModelTypeEnum trainingModelType;
+
     public GoogleCloudDialogflowV2SmartReplyModelMetadata withTrainingModelType(GoogleCloudDialogflowV2SmartReplyModelMetadataTrainingModelTypeEnum trainingModelType) {
         this.trainingModelType = trainingModelType;
         return this;
     }
     
+    public GoogleCloudDialogflowV2SmartReplyModelMetadata(){}
 }

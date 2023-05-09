@@ -15,6 +15,7 @@ public class VpcConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public VpcConfigOutput withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -23,6 +24,7 @@ public class VpcConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public VpcConfigOutput withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -31,9 +33,11 @@ public class VpcConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public VpcConfigOutput withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public VpcConfigOutput(){}
 }

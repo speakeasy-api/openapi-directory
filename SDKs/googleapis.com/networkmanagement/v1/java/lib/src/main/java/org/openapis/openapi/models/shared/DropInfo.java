@@ -18,6 +18,7 @@ public class DropInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public DropInfoCauseEnum cause;
+
     public DropInfo withCause(DropInfoCauseEnum cause) {
         this.cause = cause;
         return this;
@@ -29,9 +30,11 @@ public class DropInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceUri")
     public String resourceUri;
+
     public DropInfo withResourceUri(String resourceUri) {
         this.resourceUri = resourceUri;
         return this;
     }
     
+    public DropInfo(){}
 }

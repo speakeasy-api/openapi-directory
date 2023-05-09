@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETChangePasswordRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETChangePasswordActionEnum action;
+
     public GETChangePasswordRequest withAction(GETChangePasswordActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETChangePasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewPassword")
     public String newPassword;
+
     public GETChangePasswordRequest withNewPassword(String newPassword) {
         this.newPassword = newPassword;
         return this;
@@ -29,6 +32,7 @@ public class GETChangePasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OldPassword")
     public String oldPassword;
+
     public GETChangePasswordRequest withOldPassword(String oldPassword) {
         this.oldPassword = oldPassword;
         return this;
@@ -36,6 +40,7 @@ public class GETChangePasswordRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETChangePasswordVersionEnum version;
+
     public GETChangePasswordRequest withVersion(GETChangePasswordVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETChangePasswordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETChangePasswordRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETChangePasswordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETChangePasswordRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETChangePasswordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETChangePasswordRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETChangePasswordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETChangePasswordRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETChangePasswordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETChangePasswordRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETChangePasswordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETChangePasswordRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETChangePasswordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETChangePasswordRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETChangePasswordRequest(@JsonProperty("Action") GETChangePasswordActionEnum action, @JsonProperty("NewPassword") String newPassword, @JsonProperty("OldPassword") String oldPassword, @JsonProperty("Version") GETChangePasswordVersionEnum version) {
+        this.action = action;
+        this.newPassword = newPassword;
+        this.oldPassword = oldPassword;
+        this.version = version;
+  }
 }

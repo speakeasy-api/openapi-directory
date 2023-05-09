@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class QuotePreviewV1 {
     @JsonProperty("product_id")
     public String productId;
+
     public QuotePreviewV1 withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -22,9 +23,14 @@ public class QuotePreviewV1 {
      */
     @JsonProperty("quote_id")
     public String quoteId;
+
     public QuotePreviewV1 withQuoteId(String quoteId) {
         this.quoteId = quoteId;
         return this;
     }
     
+    public QuotePreviewV1(@JsonProperty("product_id") String productId, @JsonProperty("quote_id") String quoteId) {
+        this.productId = productId;
+        this.quoteId = quoteId;
+  }
 }

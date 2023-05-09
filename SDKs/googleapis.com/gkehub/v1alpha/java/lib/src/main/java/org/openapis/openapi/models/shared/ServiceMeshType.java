@@ -18,6 +18,7 @@ public class ServiceMeshType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ServiceMeshType withCode(String code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class ServiceMeshType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ServiceMeshType withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public ServiceMeshType(){}
 }

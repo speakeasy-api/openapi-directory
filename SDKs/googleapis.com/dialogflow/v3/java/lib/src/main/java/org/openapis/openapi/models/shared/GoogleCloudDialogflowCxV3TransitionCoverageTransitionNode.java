@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flow")
     public GoogleCloudDialogflowCxV3Flow flow;
+
     public GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode withFlow(GoogleCloudDialogflowCxV3Flow flow) {
         this.flow = flow;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public GoogleCloudDialogflowCxV3Page page;
+
     public GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode withPage(GoogleCloudDialogflowCxV3Page page) {
         this.page = page;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode(){}
 }

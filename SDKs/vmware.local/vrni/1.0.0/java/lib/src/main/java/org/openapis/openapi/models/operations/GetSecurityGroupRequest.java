@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSecurityGroupRequest {
@@ -12,6 +13,7 @@ public class GetSecurityGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetSecurityGroupRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,13 @@ public class GetSecurityGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time")
     public Long time;
+
     public GetSecurityGroupRequest withTime(Long time) {
         this.time = time;
         return this;
     }
     
+    public GetSecurityGroupRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

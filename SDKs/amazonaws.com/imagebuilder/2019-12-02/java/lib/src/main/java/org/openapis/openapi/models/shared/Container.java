@@ -15,6 +15,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUris")
     public String[] imageUris;
+
     public Container withImageUris(String[] imageUris) {
         this.imageUris = imageUris;
         return this;
@@ -23,9 +24,11 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Container withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public Container(){}
 }

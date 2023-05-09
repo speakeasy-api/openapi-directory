@@ -18,6 +18,7 @@ public class BuildingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressLines")
     public String[] addressLines;
+
     public BuildingAddress withAddressLines(String[] addressLines) {
         this.addressLines = addressLines;
         return this;
@@ -29,6 +30,7 @@ public class BuildingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("administrativeArea")
     public String administrativeArea;
+
     public BuildingAddress withAdministrativeArea(String administrativeArea) {
         this.administrativeArea = administrativeArea;
         return this;
@@ -40,6 +42,7 @@ public class BuildingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public BuildingAddress withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -51,6 +54,7 @@ public class BuildingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locality")
     public String locality;
+
     public BuildingAddress withLocality(String locality) {
         this.locality = locality;
         return this;
@@ -62,6 +66,7 @@ public class BuildingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public BuildingAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -73,6 +78,7 @@ public class BuildingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public BuildingAddress withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -84,9 +90,11 @@ public class BuildingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sublocality")
     public String sublocality;
+
     public BuildingAddress withSublocality(String sublocality) {
         this.sublocality = sublocality;
         return this;
     }
     
+    public BuildingAddress(){}
 }

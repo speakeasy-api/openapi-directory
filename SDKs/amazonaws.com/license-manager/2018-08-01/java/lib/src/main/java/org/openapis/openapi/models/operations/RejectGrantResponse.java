@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RejectGrantResponse {
@@ -12,6 +13,7 @@ public class RejectGrantResponse {
      */
     
     public Object accessDeniedException;
+
     public RejectGrantResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RejectGrantResponse {
      */
     
     public Object authorizationException;
+
     public RejectGrantResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class RejectGrantResponse {
     
     
     public String contentType;
+
     public RejectGrantResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RejectGrantResponse {
      */
     
     public Object invalidParameterValueException;
+
     public RejectGrantResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class RejectGrantResponse {
      */
     
     public Object rateLimitExceededException;
+
     public RejectGrantResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class RejectGrantResponse {
      */
     
     public org.openapis.openapi.models.shared.RejectGrantResponse rejectGrantResponse;
+
     public RejectGrantResponse withRejectGrantResponse(org.openapis.openapi.models.shared.RejectGrantResponse rejectGrantResponse) {
         this.rejectGrantResponse = rejectGrantResponse;
         return this;
@@ -66,6 +73,7 @@ public class RejectGrantResponse {
     
     
     public Integer statusCode;
+
     public RejectGrantResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class RejectGrantResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RejectGrantResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class RejectGrantResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public RejectGrantResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -93,6 +103,7 @@ public class RejectGrantResponse {
      */
     
     public Object serverInternalException;
+
     public RejectGrantResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -103,9 +114,14 @@ public class RejectGrantResponse {
      */
     
     public Object validationException;
+
     public RejectGrantResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RejectGrantResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

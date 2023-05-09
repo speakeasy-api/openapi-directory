@@ -22,6 +22,7 @@ public class GetResourceMetricsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AlignedEndTime")
     public OffsetDateTime alignedEndTime;
+
     public GetResourceMetricsResponse withAlignedEndTime(OffsetDateTime alignedEndTime) {
         this.alignedEndTime = alignedEndTime;
         return this;
@@ -32,6 +33,7 @@ public class GetResourceMetricsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AlignedStartTime")
     public OffsetDateTime alignedStartTime;
+
     public GetResourceMetricsResponse withAlignedStartTime(OffsetDateTime alignedStartTime) {
         this.alignedStartTime = alignedStartTime;
         return this;
@@ -40,6 +42,7 @@ public class GetResourceMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identifier")
     public String identifier;
+
     public GetResourceMetricsResponse withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -48,6 +51,7 @@ public class GetResourceMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricList")
     public MetricKeyDataPoints[] metricList;
+
     public GetResourceMetricsResponse withMetricList(MetricKeyDataPoints[] metricList) {
         this.metricList = metricList;
         return this;
@@ -56,9 +60,11 @@ public class GetResourceMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetResourceMetricsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetResourceMetricsResponse(){}
 }

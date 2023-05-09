@@ -18,9 +18,11 @@ public class AppUpdateEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public AppUpdateEvent withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public AppUpdateEvent(){}
 }

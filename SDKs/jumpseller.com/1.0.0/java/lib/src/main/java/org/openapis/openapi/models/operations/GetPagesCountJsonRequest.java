@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPagesCountJsonRequest {
@@ -12,6 +13,7 @@ public class GetPagesCountJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public GetPagesCountJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,9 +24,14 @@ public class GetPagesCountJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public GetPagesCountJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public GetPagesCountJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("login") String login) {
+        this.authtoken = authtoken;
+        this.login = login;
+  }
 }

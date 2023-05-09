@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class BackupDetails {
     @JsonProperty("BackupArn")
     public String backupArn;
+
     public BackupDetails withBackupArn(String backupArn) {
         this.backupArn = backupArn;
         return this;
@@ -28,6 +29,7 @@ public class BackupDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("BackupCreationDateTime")
     public OffsetDateTime backupCreationDateTime;
+
     public BackupDetails withBackupCreationDateTime(OffsetDateTime backupCreationDateTime) {
         this.backupCreationDateTime = backupCreationDateTime;
         return this;
@@ -38,6 +40,7 @@ public class BackupDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("BackupExpiryDateTime")
     public OffsetDateTime backupExpiryDateTime;
+
     public BackupDetails withBackupExpiryDateTime(OffsetDateTime backupExpiryDateTime) {
         this.backupExpiryDateTime = backupExpiryDateTime;
         return this;
@@ -45,6 +48,7 @@ public class BackupDetails {
     
     @JsonProperty("BackupName")
     public String backupName;
+
     public BackupDetails withBackupName(String backupName) {
         this.backupName = backupName;
         return this;
@@ -53,6 +57,7 @@ public class BackupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupSizeBytes")
     public Long backupSizeBytes;
+
     public BackupDetails withBackupSizeBytes(Long backupSizeBytes) {
         this.backupSizeBytes = backupSizeBytes;
         return this;
@@ -60,6 +65,7 @@ public class BackupDetails {
     
     @JsonProperty("BackupStatus")
     public BackupStatusEnum backupStatus;
+
     public BackupDetails withBackupStatus(BackupStatusEnum backupStatus) {
         this.backupStatus = backupStatus;
         return this;
@@ -67,9 +73,17 @@ public class BackupDetails {
     
     @JsonProperty("BackupType")
     public BackupTypeEnum backupType;
+
     public BackupDetails withBackupType(BackupTypeEnum backupType) {
         this.backupType = backupType;
         return this;
     }
     
+    public BackupDetails(@JsonProperty("BackupArn") String backupArn, @JsonProperty("BackupCreationDateTime") OffsetDateTime backupCreationDateTime, @JsonProperty("BackupName") String backupName, @JsonProperty("BackupStatus") BackupStatusEnum backupStatus, @JsonProperty("BackupType") BackupTypeEnum backupType) {
+        this.backupArn = backupArn;
+        this.backupCreationDateTime = backupCreationDateTime;
+        this.backupName = backupName;
+        this.backupStatus = backupStatus;
+        this.backupType = backupType;
+  }
 }

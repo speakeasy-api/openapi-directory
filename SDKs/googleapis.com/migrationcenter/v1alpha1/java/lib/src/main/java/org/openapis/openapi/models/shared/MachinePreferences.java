@@ -18,9 +18,11 @@ public class MachinePreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedMachineSeries")
     public MachineSeries[] allowedMachineSeries;
+
     public MachinePreferences withAllowedMachineSeries(MachineSeries[] allowedMachineSeries) {
         this.allowedMachineSeries = allowedMachineSeries;
         return this;
     }
     
+    public MachinePreferences(){}
 }

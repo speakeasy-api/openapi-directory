@@ -18,6 +18,7 @@ public class GetAllContentTypes200ApplicationJSONContentTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationSchemaSets")
     public GetAllContentTypes200ApplicationJSONContentTypesConfigurationSchemaSets[] configurationSchemaSets;
+
     public GetAllContentTypes200ApplicationJSONContentTypes withConfigurationSchemaSets(GetAllContentTypes200ApplicationJSONContentTypesConfigurationSchemaSets[] configurationSchemaSets) {
         this.configurationSchemaSets = configurationSchemaSets;
         return this;
@@ -29,6 +30,7 @@ public class GetAllContentTypes200ApplicationJSONContentTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetAllContentTypes200ApplicationJSONContentTypes withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class GetAllContentTypes200ApplicationJSONContentTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetAllContentTypes200ApplicationJSONContentTypes withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetAllContentTypes200ApplicationJSONContentTypes(){}
 }

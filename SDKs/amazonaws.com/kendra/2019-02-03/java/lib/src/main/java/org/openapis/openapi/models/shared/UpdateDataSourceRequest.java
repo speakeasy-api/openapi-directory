@@ -12,6 +12,7 @@ public class UpdateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public DataSourceConfiguration configuration;
+
     public UpdateDataSourceRequest withConfiguration(DataSourceConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -20,6 +21,7 @@ public class UpdateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomDocumentEnrichmentConfiguration")
     public CustomDocumentEnrichmentConfiguration customDocumentEnrichmentConfiguration;
+
     public UpdateDataSourceRequest withCustomDocumentEnrichmentConfiguration(CustomDocumentEnrichmentConfiguration customDocumentEnrichmentConfiguration) {
         this.customDocumentEnrichmentConfiguration = customDocumentEnrichmentConfiguration;
         return this;
@@ -28,6 +30,7 @@ public class UpdateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateDataSourceRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +38,7 @@ public class UpdateDataSourceRequest {
     
     @JsonProperty("Id")
     public String id;
+
     public UpdateDataSourceRequest withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class UpdateDataSourceRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public UpdateDataSourceRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -50,6 +55,7 @@ public class UpdateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public String languageCode;
+
     public UpdateDataSourceRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -58,6 +64,7 @@ public class UpdateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateDataSourceRequest withName(String name) {
         this.name = name;
         return this;
@@ -66,6 +73,7 @@ public class UpdateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public UpdateDataSourceRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -74,6 +82,7 @@ public class UpdateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public String schedule;
+
     public UpdateDataSourceRequest withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -82,9 +91,14 @@ public class UpdateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfiguration")
     public DataSourceVpcConfiguration vpcConfiguration;
+
     public UpdateDataSourceRequest withVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public UpdateDataSourceRequest(@JsonProperty("Id") String id, @JsonProperty("IndexId") String indexId) {
+        this.id = id;
+        this.indexId = indexId;
+  }
 }

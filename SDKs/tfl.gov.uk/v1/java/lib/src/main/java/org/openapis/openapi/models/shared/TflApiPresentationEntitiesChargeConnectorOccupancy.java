@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesChargeConnectorOccupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public TflApiPresentationEntitiesChargeConnectorOccupancy withId(Integer id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesChargeConnectorOccupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSystemPlaceId")
     public String sourceSystemPlaceId;
+
     public TflApiPresentationEntitiesChargeConnectorOccupancy withSourceSystemPlaceId(String sourceSystemPlaceId) {
         this.sourceSystemPlaceId = sourceSystemPlaceId;
         return this;
@@ -28,9 +30,11 @@ public class TflApiPresentationEntitiesChargeConnectorOccupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public TflApiPresentationEntitiesChargeConnectorOccupancy withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public TflApiPresentationEntitiesChargeConnectorOccupancy(){}
 }

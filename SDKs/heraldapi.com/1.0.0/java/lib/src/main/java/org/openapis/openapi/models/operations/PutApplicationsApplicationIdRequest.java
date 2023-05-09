@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutApplicationsApplicationIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApplicationWriteV1 applicationWriteV1;
+
     public PutApplicationsApplicationIdRequest withApplicationWriteV1(org.openapis.openapi.models.shared.ApplicationWriteV1 applicationWriteV1) {
         this.applicationWriteV1 = applicationWriteV1;
         return this;
@@ -19,9 +21,13 @@ public class PutApplicationsApplicationIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application_id")
     public String applicationId;
+
     public PutApplicationsApplicationIdRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
     }
     
+    public PutApplicationsApplicationIdRequest(@JsonProperty("application_id") String applicationId) {
+        this.applicationId = applicationId;
+  }
 }

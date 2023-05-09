@@ -15,6 +15,7 @@ public class PostPortfolioOptimizationEqualRiskContributionsRequestBodyConstrain
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumAssetsWeights")
     public Double[] maximumAssetsWeights;
+
     public PostPortfolioOptimizationEqualRiskContributionsRequestBodyConstraints withMaximumAssetsWeights(Double[] maximumAssetsWeights) {
         this.maximumAssetsWeights = maximumAssetsWeights;
         return this;
@@ -26,9 +27,11 @@ public class PostPortfolioOptimizationEqualRiskContributionsRequestBodyConstrain
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumAssetsWeights")
     public Double[] minimumAssetsWeights;
+
     public PostPortfolioOptimizationEqualRiskContributionsRequestBodyConstraints withMinimumAssetsWeights(Double[] minimumAssetsWeights) {
         this.minimumAssetsWeights = minimumAssetsWeights;
         return this;
     }
     
+    public PostPortfolioOptimizationEqualRiskContributionsRequestBodyConstraints(){}
 }

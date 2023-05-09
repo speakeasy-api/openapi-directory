@@ -15,6 +15,7 @@ public class Pecer503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Pecer503ApplicationJSONErrorEnum error;
+
     public Pecer503ApplicationJSON withError(Pecer503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Pecer503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Pecer503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Pecer503ApplicationJSON withErrorDescription(Pecer503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Pecer503ApplicationJSON(){}
 }

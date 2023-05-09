@@ -14,6 +14,7 @@ public class UpdateNotificationRuleRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public UpdateNotificationRuleRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -25,6 +26,7 @@ public class UpdateNotificationRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetailType")
     public UpdateNotificationRuleRequestBodyDetailTypeEnum detailType;
+
     public UpdateNotificationRuleRequestBody withDetailType(UpdateNotificationRuleRequestBodyDetailTypeEnum detailType) {
         this.detailType = detailType;
         return this;
@@ -36,6 +38,7 @@ public class UpdateNotificationRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventTypeIds")
     public String[] eventTypeIds;
+
     public UpdateNotificationRuleRequestBody withEventTypeIds(String[] eventTypeIds) {
         this.eventTypeIds = eventTypeIds;
         return this;
@@ -47,6 +50,7 @@ public class UpdateNotificationRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateNotificationRuleRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +62,7 @@ public class UpdateNotificationRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public UpdateNotificationRuleRequestBodyStatusEnum status;
+
     public UpdateNotificationRuleRequestBody withStatus(UpdateNotificationRuleRequestBodyStatusEnum status) {
         this.status = status;
         return this;
@@ -69,9 +74,13 @@ public class UpdateNotificationRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public org.openapis.openapi.models.shared.Target[] targets;
+
     public UpdateNotificationRuleRequestBody withTargets(org.openapis.openapi.models.shared.Target[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public UpdateNotificationRuleRequestBody(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

@@ -20,6 +20,7 @@ public class AssociationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalInfo")
     public String additionalInfo;
+
     public AssociationStatus withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -29,6 +30,7 @@ public class AssociationStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Date")
     public OffsetDateTime date;
+
     public AssociationStatus withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -36,6 +38,7 @@ public class AssociationStatus {
     
     @JsonProperty("Message")
     public String message;
+
     public AssociationStatus withMessage(String message) {
         this.message = message;
         return this;
@@ -43,9 +46,15 @@ public class AssociationStatus {
     
     @JsonProperty("Name")
     public AssociationStatusNameEnum name;
+
     public AssociationStatus withName(AssociationStatusNameEnum name) {
         this.name = name;
         return this;
     }
     
+    public AssociationStatus(@JsonProperty("Date") OffsetDateTime date, @JsonProperty("Message") String message, @JsonProperty("Name") AssociationStatusNameEnum name) {
+        this.date = date;
+        this.message = message;
+        this.name = name;
+  }
 }

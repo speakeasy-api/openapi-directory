@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2TableBoundHint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBox")
     public GoogleCloudDocumentaiV1beta2BoundingPoly boundingBox;
+
     public GoogleCloudDocumentaiV1beta2TableBoundHint withBoundingBox(GoogleCloudDocumentaiV1beta2BoundingPoly boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1beta2TableBoundHint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageNumber")
     public Integer pageNumber;
+
     public GoogleCloudDocumentaiV1beta2TableBoundHint withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2TableBoundHint(){}
 }

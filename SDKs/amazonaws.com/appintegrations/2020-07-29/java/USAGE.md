@@ -3,127 +3,114 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateDataIntegrationRequest;
+import org.openapis.openapi.models.operations.CreateDataIntegrationRequestBody;
 import org.openapis.openapi.models.operations.CreateDataIntegrationRequestBodyFileConfiguration;
 import org.openapis.openapi.models.operations.CreateDataIntegrationRequestBodyScheduleConfig;
-import org.openapis.openapi.models.operations.CreateDataIntegrationRequestBody;
-import org.openapis.openapi.models.operations.CreateDataIntegrationRequest;
 import org.openapis.openapi.models.operations.CreateDataIntegrationResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateDataIntegrationRequest req = new CreateDataIntegrationRequest() {{
-                requestBody = new CreateDataIntegrationRequestBody() {{
-                    clientToken = "corrupti";
-                    description = "provident";
-                    fileConfiguration = new CreateDataIntegrationRequestBodyFileConfiguration() {{
-                        filters = new java.util.HashMap<String, String[]>() {{
-                            put("quibusdam", new String[]{{
-                                add("nulla"),
-                                add("corrupti"),
-                                add("illum"),
-                            }});
-                            put("vel", new String[]{{
-                                add("deserunt"),
-                                add("suscipit"),
-                                add("iure"),
-                            }});
-                            put("magnam", new String[]{{
-                                add("ipsa"),
-                                add("delectus"),
-                                add("tempora"),
-                                add("suscipit"),
-                            }});
-                        }};
-                        folders = new String[]{{
-                            add("minus"),
-                            add("placeat"),
-                        }};
-                    }};
-                    kmsKey = "voluptatum";
-                    name = "iusto";
-                    objectConfiguration = new java.util.HashMap<String, java.util.HashMap<String, String[]>>() {{
-                        put("nisi", new java.util.HashMap<String, String[]>() {{
-                            put("temporibus", new String[]{{
-                                add("quis"),
-                            }});
-                            put("veritatis", new String[]{{
-                                add("perferendis"),
-                                add("ipsam"),
-                                add("repellendus"),
-                            }});
-                            put("sapiente", new String[]{{
-                                add("odit"),
-                                add("at"),
-                                add("at"),
-                                add("maiores"),
-                            }});
-                            put("molestiae", new String[]{{
-                                add("quod"),
-                                add("esse"),
-                                add("totam"),
-                                add("porro"),
-                            }});
-                        }});
-                        put("dolorum", new java.util.HashMap<String, String[]>() {{
-                            put("nam", new String[]{{
-                                add("occaecati"),
-                                add("fugit"),
-                                add("deleniti"),
-                            }});
-                        }});
-                        put("hic", new java.util.HashMap<String, String[]>() {{
-                            put("totam", new String[]{{
-                                add("commodi"),
-                            }});
-                            put("molestiae", new String[]{{
-                                add("qui"),
-                                add("impedit"),
-                            }});
-                            put("cum", new String[]{{
-                                add("ipsum"),
-                                add("excepturi"),
-                            }});
-                            put("aspernatur", new String[]{{
-                                add("ad"),
-                            }});
-                        }});
-                    }};
-                    scheduleConfig = new CreateDataIntegrationRequestBodyScheduleConfig() {{
-                        firstExecutionFrom = "natus";
-                        object = "sed";
-                        scheduleExpression = "iste";
-                    }};
-                    sourceURI = "dolor";
-                    tags = new java.util.HashMap<String, String>() {{
-                        put("laboriosam", "hic");
-                        put("saepe", "fuga");
-                        put("in", "corporis");
-                    }};
-                }};
-                xAmzAlgorithm = "iste";
-                xAmzContentSha256 = "iure";
-                xAmzCredential = "saepe";
-                xAmzDate = "quidem";
-                xAmzSecurityToken = "architecto";
-                xAmzSignature = "ipsa";
-                xAmzSignedHeaders = "reiciendis";
-            }}            
+            CreateDataIntegrationRequest req = new CreateDataIntegrationRequest(                new CreateDataIntegrationRequestBody("provident", "distinctio",                 new CreateDataIntegrationRequestBodyScheduleConfig() {{
+                                                firstExecutionFrom = "quibusdam";
+                                                object = "unde";
+                                                scheduleExpression = "nulla";
+                                            }};, "corrupti") {{
+                                clientToken = "illum";
+                                description = "vel";
+                                fileConfiguration = new CreateDataIntegrationRequestBodyFileConfiguration() {{
+                                    filters = new java.util.HashMap<String, String[]>() {{
+                                        put("deserunt", new String[]{{
+                                            add("iure"),
+                                            add("magnam"),
+                                        }});
+                                        put("debitis", new String[]{{
+                                            add("delectus"),
+                                        }});
+                                        put("tempora", new String[]{{
+                                            add("molestiae"),
+                                            add("minus"),
+                                        }});
+                                    }};
+                                    folders = new String[]{{
+                                        add("voluptatum"),
+                                        add("iusto"),
+                                        add("excepturi"),
+                                        add("nisi"),
+                                    }};
+                                }};;
+                                objectConfiguration = new java.util.HashMap<String, java.util.HashMap<String, String[]>>() {{
+                                    put("temporibus", new java.util.HashMap<String, String[]>() {{
+                                        put("quis", new String[]{{
+                                            add("deserunt"),
+                                        }});
+                                    }});
+                                    put("perferendis", new java.util.HashMap<String, String[]>() {{
+                                        put("repellendus", new String[]{{
+                                            add("quo"),
+                                            add("odit"),
+                                            add("at"),
+                                            add("at"),
+                                        }});
+                                        put("maiores", new String[]{{
+                                            add("quod"),
+                                            add("quod"),
+                                        }});
+                                    }});
+                                    put("esse", new java.util.HashMap<String, String[]>() {{
+                                        put("porro", new String[]{{
+                                            add("dicta"),
+                                            add("nam"),
+                                            add("officia"),
+                                        }});
+                                        put("occaecati", new String[]{{
+                                            add("deleniti"),
+                                        }});
+                                        put("hic", new String[]{{
+                                            add("totam"),
+                                            add("beatae"),
+                                            add("commodi"),
+                                            add("molestiae"),
+                                        }});
+                                    }});
+                                    put("modi", new java.util.HashMap<String, String[]>() {{
+                                        put("impedit", new String[]{{
+                                            add("esse"),
+                                            add("ipsum"),
+                                            add("excepturi"),
+                                        }});
+                                    }});
+                                }};
+                                tags = new java.util.HashMap<String, String>() {{
+                                    put("perferendis", "ad");
+                                }};
+                            }};) {{
+                xAmzAlgorithm = "natus";
+                xAmzContentSha256 = "sed";
+                xAmzCredential = "iste";
+                xAmzDate = "dolor";
+                xAmzSecurityToken = "natus";
+                xAmzSignature = "laboriosam";
+                xAmzSignedHeaders = "hic";
+            }};            
 
             CreateDataIntegrationResponse res = sdk.createDataIntegration(req);
 
-            if (res.createDataIntegrationResponse.isPresent()) {
+            if (res.createDataIntegrationResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

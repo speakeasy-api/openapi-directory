@@ -15,6 +15,7 @@ public class BaseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public BaseEntity withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -23,6 +24,7 @@ public class BaseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public EntityTypeEnum entityType;
+
     public BaseEntity withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -31,9 +33,11 @@ public class BaseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BaseEntity withName(String name) {
         this.name = name;
         return this;
     }
     
+    public BaseEntity(){}
 }

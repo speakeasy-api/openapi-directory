@@ -15,6 +15,7 @@ public class CreateAuthorizerResponseJwtConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Audience")
     public String[] audience;
+
     public CreateAuthorizerResponseJwtConfiguration withAudience(String[] audience) {
         this.audience = audience;
         return this;
@@ -23,9 +24,11 @@ public class CreateAuthorizerResponseJwtConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Issuer")
     public String issuer;
+
     public CreateAuthorizerResponseJwtConfiguration withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
     }
     
+    public CreateAuthorizerResponseJwtConfiguration(){}
 }

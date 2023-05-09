@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteThingGroupResponse {
     
     public String contentType;
+
     public DeleteThingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteThingGroupResponse {
      */
     
     public java.util.Map<String, Object> deleteThingGroupResponse;
+
     public DeleteThingGroupResponse withDeleteThingGroupResponse(java.util.Map<String, Object> deleteThingGroupResponse) {
         this.deleteThingGroupResponse = deleteThingGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteThingGroupResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteThingGroupResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteThingGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteThingGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteThingGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteThingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteThingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteThingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteThingGroupResponse {
      */
     
     public Object throttlingException;
+
     public DeleteThingGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteThingGroupResponse {
      */
     
     public Object versionConflictException;
+
     public DeleteThingGroupResponse withVersionConflictException(Object versionConflictException) {
         this.versionConflictException = versionConflictException;
         return this;
     }
     
+    public DeleteThingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

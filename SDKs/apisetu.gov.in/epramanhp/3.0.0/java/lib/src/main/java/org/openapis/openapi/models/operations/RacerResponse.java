@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RacerResponse {
     
     public String contentType;
+
     public RacerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RacerResponse {
     
     
     public Integer statusCode;
+
     public RacerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RacerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RacerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RacerResponse {
      */
     
     public Racer400ApplicationJSON racer400ApplicationJSONObject;
+
     public RacerResponse withRacer400ApplicationJSONObject(Racer400ApplicationJSON racer400ApplicationJSONObject) {
         this.racer400ApplicationJSONObject = racer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class RacerResponse {
      */
     
     public Racer401ApplicationJSON racer401ApplicationJSONObject;
+
     public RacerResponse withRacer401ApplicationJSONObject(Racer401ApplicationJSON racer401ApplicationJSONObject) {
         this.racer401ApplicationJSONObject = racer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RacerResponse {
      */
     
     public Racer404ApplicationJSON racer404ApplicationJSONObject;
+
     public RacerResponse withRacer404ApplicationJSONObject(Racer404ApplicationJSON racer404ApplicationJSONObject) {
         this.racer404ApplicationJSONObject = racer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class RacerResponse {
      */
     
     public Racer500ApplicationJSON racer500ApplicationJSONObject;
+
     public RacerResponse withRacer500ApplicationJSONObject(Racer500ApplicationJSON racer500ApplicationJSONObject) {
         this.racer500ApplicationJSONObject = racer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class RacerResponse {
      */
     
     public Racer502ApplicationJSON racer502ApplicationJSONObject;
+
     public RacerResponse withRacer502ApplicationJSONObject(Racer502ApplicationJSON racer502ApplicationJSONObject) {
         this.racer502ApplicationJSONObject = racer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class RacerResponse {
      */
     
     public Racer503ApplicationJSON racer503ApplicationJSONObject;
+
     public RacerResponse withRacer503ApplicationJSONObject(Racer503ApplicationJSON racer503ApplicationJSONObject) {
         this.racer503ApplicationJSONObject = racer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class RacerResponse {
      */
     
     public Racer504ApplicationJSON racer504ApplicationJSONObject;
+
     public RacerResponse withRacer504ApplicationJSONObject(Racer504ApplicationJSON racer504ApplicationJSONObject) {
         this.racer504ApplicationJSONObject = racer504ApplicationJSONObject;
         return this;
     }
     
+    public RacerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class DeleteDeveloperMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedDeveloperMetadata")
     public DeveloperMetadata[] deletedDeveloperMetadata;
+
     public DeleteDeveloperMetadataResponse withDeletedDeveloperMetadata(DeveloperMetadata[] deletedDeveloperMetadata) {
         this.deletedDeveloperMetadata = deletedDeveloperMetadata;
         return this;
     }
     
+    public DeleteDeveloperMetadataResponse(){}
 }

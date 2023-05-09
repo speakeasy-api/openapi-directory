@@ -18,9 +18,11 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroundTruthManifest")
     public GroundTruthManifest groundTruthManifest;
+
     public Asset withGroundTruthManifest(GroundTruthManifest groundTruthManifest) {
         this.groundTruthManifest = groundTruthManifest;
         return this;
     }
     
+    public Asset(){}
 }

@@ -15,6 +15,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoscalingPolicy")
     public NodeGroupAutoscalingPolicy autoscalingPolicy;
+
     public NodeGroup withAutoscalingPolicy(NodeGroupAutoscalingPolicy autoscalingPolicy) {
         this.autoscalingPolicy = autoscalingPolicy;
         return this;
@@ -26,6 +27,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public NodeGroup withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -37,6 +39,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NodeGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public NodeGroup withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -56,6 +60,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NodeGroup withId(String id) {
         this.id = id;
         return this;
@@ -67,6 +72,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public NodeGroup withKind(String kind) {
         this.kind = kind;
         return this;
@@ -78,6 +84,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationHint")
     public String locationHint;
+
     public NodeGroup withLocationHint(String locationHint) {
         this.locationHint = locationHint;
         return this;
@@ -89,6 +96,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenancePolicy")
     public NodeGroupMaintenancePolicyEnum maintenancePolicy;
+
     public NodeGroup withMaintenancePolicy(NodeGroupMaintenancePolicyEnum maintenancePolicy) {
         this.maintenancePolicy = maintenancePolicy;
         return this;
@@ -100,6 +108,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenanceWindow")
     public NodeGroupMaintenanceWindow maintenanceWindow;
+
     public NodeGroup withMaintenanceWindow(NodeGroupMaintenanceWindow maintenanceWindow) {
         this.maintenanceWindow = maintenanceWindow;
         return this;
@@ -111,6 +120,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NodeGroup withName(String name) {
         this.name = name;
         return this;
@@ -122,6 +132,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeTemplate")
     public String nodeTemplate;
+
     public NodeGroup withNodeTemplate(String nodeTemplate) {
         this.nodeTemplate = nodeTemplate;
         return this;
@@ -133,6 +144,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public NodeGroup withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -144,6 +156,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareSettings")
     public ShareSettings shareSettings;
+
     public NodeGroup withShareSettings(ShareSettings shareSettings) {
         this.shareSettings = shareSettings;
         return this;
@@ -155,6 +168,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Integer size;
+
     public NodeGroup withSize(Integer size) {
         this.size = size;
         return this;
@@ -163,6 +177,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public NodeGroupStatusEnum status;
+
     public NodeGroup withStatus(NodeGroupStatusEnum status) {
         this.status = status;
         return this;
@@ -174,9 +189,11 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public NodeGroup withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public NodeGroup(){}
 }

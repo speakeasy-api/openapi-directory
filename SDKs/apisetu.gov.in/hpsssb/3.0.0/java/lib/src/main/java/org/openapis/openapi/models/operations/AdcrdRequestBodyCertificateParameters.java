@@ -12,6 +12,7 @@ public class AdcrdRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public AdcrdRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class AdcrdRequestBodyCertificateParameters {
      */
     @JsonProperty("FatherName")
     public String fatherName;
+
     public AdcrdRequestBodyCertificateParameters withFatherName(String fatherName) {
         this.fatherName = fatherName;
         return this;
@@ -32,9 +34,15 @@ public class AdcrdRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public AdcrdRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
     }
     
+    public AdcrdRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FatherName") String fatherName, @JsonProperty("FullName") String fullName) {
+        this.dob = dob;
+        this.fatherName = fatherName;
+        this.fullName = fullName;
+  }
 }

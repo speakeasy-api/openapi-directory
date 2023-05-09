@@ -18,9 +18,11 @@ public class ActionCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitCodes")
     public Integer[] exitCodes;
+
     public ActionCondition withExitCodes(Integer[] exitCodes) {
         this.exitCodes = exitCodes;
         return this;
     }
     
+    public ActionCondition(){}
 }

@@ -18,6 +18,7 @@ public class CallAnalyticsJobSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentRedaction")
     public ContentRedaction contentRedaction;
+
     public CallAnalyticsJobSettings withContentRedaction(ContentRedaction contentRedaction) {
         this.contentRedaction = contentRedaction;
         return this;
@@ -26,6 +27,7 @@ public class CallAnalyticsJobSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageIdSettings")
     public java.util.Map<String, LanguageIdSettings> languageIdSettings;
+
     public CallAnalyticsJobSettings withLanguageIdSettings(java.util.Map<String, LanguageIdSettings> languageIdSettings) {
         this.languageIdSettings = languageIdSettings;
         return this;
@@ -34,6 +36,7 @@ public class CallAnalyticsJobSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageModelName")
     public String languageModelName;
+
     public CallAnalyticsJobSettings withLanguageModelName(String languageModelName) {
         this.languageModelName = languageModelName;
         return this;
@@ -42,6 +45,7 @@ public class CallAnalyticsJobSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageOptions")
     public LanguageCodeEnum[] languageOptions;
+
     public CallAnalyticsJobSettings withLanguageOptions(LanguageCodeEnum[] languageOptions) {
         this.languageOptions = languageOptions;
         return this;
@@ -50,6 +54,7 @@ public class CallAnalyticsJobSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyFilterMethod")
     public VocabularyFilterMethodEnum vocabularyFilterMethod;
+
     public CallAnalyticsJobSettings withVocabularyFilterMethod(VocabularyFilterMethodEnum vocabularyFilterMethod) {
         this.vocabularyFilterMethod = vocabularyFilterMethod;
         return this;
@@ -58,6 +63,7 @@ public class CallAnalyticsJobSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyFilterName")
     public String vocabularyFilterName;
+
     public CallAnalyticsJobSettings withVocabularyFilterName(String vocabularyFilterName) {
         this.vocabularyFilterName = vocabularyFilterName;
         return this;
@@ -66,9 +72,11 @@ public class CallAnalyticsJobSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyName")
     public String vocabularyName;
+
     public CallAnalyticsJobSettings withVocabularyName(String vocabularyName) {
         this.vocabularyName = vocabularyName;
         return this;
     }
     
+    public CallAnalyticsJobSettings(){}
 }

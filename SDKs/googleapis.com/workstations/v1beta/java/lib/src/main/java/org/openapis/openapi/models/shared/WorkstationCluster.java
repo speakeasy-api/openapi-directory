@@ -18,6 +18,7 @@ public class WorkstationCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public WorkstationCluster withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,8 +30,21 @@ public class WorkstationCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public Status[] conditions;
+
     public WorkstationCluster withConditions(Status[] conditions) {
         this.conditions = conditions;
+        return this;
+    }
+    
+    /**
+     * Output only. The private IP address of the control plane for this cluster. Workstation VMs need access to this IP address to work with the service, so make sure that your firewall rules allow egress from the workstation VMs to this address.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("controlPlaneIp")
+    public String controlPlaneIp;
+
+    public WorkstationCluster withControlPlaneIp(String controlPlaneIp) {
+        this.controlPlaneIp = controlPlaneIp;
         return this;
     }
     
@@ -40,6 +54,7 @@ public class WorkstationCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public WorkstationCluster withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +66,7 @@ public class WorkstationCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("degraded")
     public Boolean degraded;
+
     public WorkstationCluster withDegraded(Boolean degraded) {
         this.degraded = degraded;
         return this;
@@ -62,6 +78,7 @@ public class WorkstationCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTime")
     public String deleteTime;
+
     public WorkstationCluster withDeleteTime(String deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -73,17 +90,19 @@ public class WorkstationCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public WorkstationCluster withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
     /**
-     * Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
+     * Checksum computed by the server. May be sent on update and delete requests to make sure that the client has an up-to-date value before proceeding.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public WorkstationCluster withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -95,6 +114,7 @@ public class WorkstationCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public WorkstationCluster withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -106,6 +126,7 @@ public class WorkstationCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WorkstationCluster withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +138,7 @@ public class WorkstationCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public WorkstationCluster withNetwork(String network) {
         this.network = network;
         return this;
@@ -128,6 +150,7 @@ public class WorkstationCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateClusterConfig")
     public PrivateClusterConfig privateClusterConfig;
+
     public WorkstationCluster withPrivateClusterConfig(PrivateClusterConfig privateClusterConfig) {
         this.privateClusterConfig = privateClusterConfig;
         return this;
@@ -139,6 +162,7 @@ public class WorkstationCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reconciling")
     public Boolean reconciling;
+
     public WorkstationCluster withReconciling(Boolean reconciling) {
         this.reconciling = reconciling;
         return this;
@@ -150,6 +174,7 @@ public class WorkstationCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public WorkstationCluster withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
@@ -161,6 +186,7 @@ public class WorkstationCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public WorkstationCluster withUid(String uid) {
         this.uid = uid;
         return this;
@@ -172,9 +198,11 @@ public class WorkstationCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public WorkstationCluster withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public WorkstationCluster(){}
 }

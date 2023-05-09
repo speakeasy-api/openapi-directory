@@ -18,6 +18,7 @@ public class Feature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etags")
     public String etags;
+
     public Feature withEtags(String etags) {
         this.etags = etags;
         return this;
@@ -29,6 +30,7 @@ public class Feature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Feature withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class Feature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Feature withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Feature(){}
 }

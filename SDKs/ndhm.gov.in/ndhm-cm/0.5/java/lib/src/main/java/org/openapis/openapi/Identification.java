@@ -65,13 +65,11 @@ public class Identification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsFindJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsFindJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsFindJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsFindJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -133,13 +131,11 @@ public class Identification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsFindRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsFindRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsFindRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsFindRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

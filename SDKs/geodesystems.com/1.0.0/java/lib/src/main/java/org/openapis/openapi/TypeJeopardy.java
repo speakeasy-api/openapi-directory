@@ -57,10 +57,8 @@ public class TypeJeopardy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchJeopardyResponse res = new org.openapis.openapi.models.operations.SearchJeopardyResponse() {{
+        org.openapis.openapi.models.operations.SearchJeopardyResponse res = new org.openapis.openapi.models.operations.SearchJeopardyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

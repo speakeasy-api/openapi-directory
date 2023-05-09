@@ -346,4 +346,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListLosingBidsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListNonBillableWinningBidsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/NonBillableWinningBidStatusRowStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/NonBillableWinningBidStatusRow.java
+docs/sdk/README.md
+docs/accounts/README.md
+docs/bidders/README.md
 USAGE.md

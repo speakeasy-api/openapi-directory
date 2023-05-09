@@ -18,9 +18,11 @@ public class MembershipSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateManagement")
     public MembershipSpecCertificateManagementEnum certificateManagement;
+
     public MembershipSpec withCertificateManagement(MembershipSpecCertificateManagementEnum certificateManagement) {
         this.certificateManagement = certificateManagement;
         return this;
     }
     
+    public MembershipSpec(){}
 }

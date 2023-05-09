@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AcademicCertificateSchemaCertificateData {
     
     public AcademicCertificateSchemaCertificateDataExamination examination;
+
     public AcademicCertificateSchemaCertificateData withExamination(AcademicCertificateSchemaCertificateDataExamination examination) {
         this.examination = examination;
         return this;
@@ -16,6 +17,7 @@ public class AcademicCertificateSchemaCertificateData {
     
     
     public AcademicCertificateSchemaCertificateDataPerformance performance;
+
     public AcademicCertificateSchemaCertificateData withPerformance(AcademicCertificateSchemaCertificateDataPerformance performance) {
         this.performance = performance;
         return this;
@@ -23,9 +25,15 @@ public class AcademicCertificateSchemaCertificateData {
     
     
     public AcademicCertificateSchemaCertificateDataSchool school;
+
     public AcademicCertificateSchemaCertificateData withSchool(AcademicCertificateSchemaCertificateDataSchool school) {
         this.school = school;
         return this;
     }
     
+    public AcademicCertificateSchemaCertificateData(@JsonProperty("Examination") AcademicCertificateSchemaCertificateDataExamination examination, @JsonProperty("Performance") AcademicCertificateSchemaCertificateDataPerformance performance, @JsonProperty("School") AcademicCertificateSchemaCertificateDataSchool school) {
+        this.examination = examination;
+        this.performance = performance;
+        this.school = school;
+  }
 }

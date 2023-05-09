@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeResourceServerRequest {
     @JsonProperty("Identifier")
     public String identifier;
+
     public DescribeResourceServerRequest withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -16,9 +17,14 @@ public class DescribeResourceServerRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public DescribeResourceServerRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public DescribeResourceServerRequest(@JsonProperty("Identifier") String identifier, @JsonProperty("UserPoolId") String userPoolId) {
+        this.identifier = identifier;
+        this.userPoolId = userPoolId;
+  }
 }

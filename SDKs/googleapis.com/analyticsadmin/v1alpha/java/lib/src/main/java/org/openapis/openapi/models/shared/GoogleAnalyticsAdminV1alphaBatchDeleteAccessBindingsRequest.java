@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaBatchDeleteAccessBindingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public GoogleAnalyticsAdminV1alphaDeleteAccessBindingRequest[] requests;
+
     public GoogleAnalyticsAdminV1alphaBatchDeleteAccessBindingsRequest withRequests(GoogleAnalyticsAdminV1alphaDeleteAccessBindingRequest[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaBatchDeleteAccessBindingsRequest(){}
 }

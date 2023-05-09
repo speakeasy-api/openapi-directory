@@ -18,6 +18,7 @@ public class ListModelEvaluationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelEvaluation")
     public ModelEvaluation[] modelEvaluation;
+
     public ListModelEvaluationsResponse withModelEvaluation(ModelEvaluation[] modelEvaluation) {
         this.modelEvaluation = modelEvaluation;
         return this;
@@ -29,9 +30,11 @@ public class ListModelEvaluationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListModelEvaluationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListModelEvaluationsResponse(){}
 }

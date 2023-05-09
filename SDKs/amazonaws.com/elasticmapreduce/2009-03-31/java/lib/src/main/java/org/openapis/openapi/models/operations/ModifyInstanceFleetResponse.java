@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyInstanceFleetResponse {
     
     public String contentType;
+
     public ModifyInstanceFleetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ModifyInstanceFleetResponse {
      */
     
     public Object internalServerException;
+
     public ModifyInstanceFleetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ModifyInstanceFleetResponse {
      */
     
     public Object invalidRequestException;
+
     public ModifyInstanceFleetResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class ModifyInstanceFleetResponse {
     
     
     public Integer statusCode;
+
     public ModifyInstanceFleetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ModifyInstanceFleetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyInstanceFleetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ModifyInstanceFleetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

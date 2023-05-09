@@ -64,4 +64,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ExchangeMessage.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestNotificationConfigurationRequestEventTypesEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestNotificationConfigurationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateNotificationConfigurationRequest.java
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

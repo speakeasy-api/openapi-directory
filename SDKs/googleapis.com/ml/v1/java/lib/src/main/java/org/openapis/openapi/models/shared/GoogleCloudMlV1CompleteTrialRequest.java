@@ -18,6 +18,7 @@ public class GoogleCloudMlV1CompleteTrialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalMeasurement")
     public GoogleCloudMlV1Measurement finalMeasurement;
+
     public GoogleCloudMlV1CompleteTrialRequest withFinalMeasurement(GoogleCloudMlV1Measurement finalMeasurement) {
         this.finalMeasurement = finalMeasurement;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1CompleteTrialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infeasibleReason")
     public String infeasibleReason;
+
     public GoogleCloudMlV1CompleteTrialRequest withInfeasibleReason(String infeasibleReason) {
         this.infeasibleReason = infeasibleReason;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudMlV1CompleteTrialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trialInfeasible")
     public Boolean trialInfeasible;
+
     public GoogleCloudMlV1CompleteTrialRequest withTrialInfeasible(Boolean trialInfeasible) {
         this.trialInfeasible = trialInfeasible;
         return this;
     }
     
+    public GoogleCloudMlV1CompleteTrialRequest(){}
 }

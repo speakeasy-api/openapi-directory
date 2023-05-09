@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddOrUpdateIntegrationLinkRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AddOrUpdateIntegrationLinkModel addOrUpdateIntegrationLinkModel;
+
     public AddOrUpdateIntegrationLinkRequest withAddOrUpdateIntegrationLinkModel(org.openapis.openapi.models.shared.AddOrUpdateIntegrationLinkModel addOrUpdateIntegrationLinkModel) {
         this.addOrUpdateIntegrationLinkModel = addOrUpdateIntegrationLinkModel;
         return this;
@@ -19,6 +21,7 @@ public class AddOrUpdateIntegrationLinkRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentId")
     public String environmentId;
+
     public AddOrUpdateIntegrationLinkRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -29,6 +32,7 @@ public class AddOrUpdateIntegrationLinkRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=integrationLinkType")
     public org.openapis.openapi.models.shared.IntegrationLinkTypeEnum integrationLinkType;
+
     public AddOrUpdateIntegrationLinkRequest withIntegrationLinkType(org.openapis.openapi.models.shared.IntegrationLinkTypeEnum integrationLinkType) {
         this.integrationLinkType = integrationLinkType;
         return this;
@@ -39,6 +43,7 @@ public class AddOrUpdateIntegrationLinkRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
     public String key;
+
     public AddOrUpdateIntegrationLinkRequest withKey(String key) {
         this.key = key;
         return this;
@@ -49,9 +54,16 @@ public class AddOrUpdateIntegrationLinkRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingId")
     public Integer settingId;
+
     public AddOrUpdateIntegrationLinkRequest withSettingId(Integer settingId) {
         this.settingId = settingId;
         return this;
     }
     
+    public AddOrUpdateIntegrationLinkRequest(@JsonProperty("environmentId") String environmentId, @JsonProperty("integrationLinkType") org.openapis.openapi.models.shared.IntegrationLinkTypeEnum integrationLinkType, @JsonProperty("key") String key, @JsonProperty("settingId") Integer settingId) {
+        this.environmentId = environmentId;
+        this.integrationLinkType = integrationLinkType;
+        this.key = key;
+        this.settingId = settingId;
+  }
 }

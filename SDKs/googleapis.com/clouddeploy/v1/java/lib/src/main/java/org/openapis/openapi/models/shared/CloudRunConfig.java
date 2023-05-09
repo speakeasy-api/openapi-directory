@@ -18,9 +18,11 @@ public class CloudRunConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automaticTrafficControl")
     public Boolean automaticTrafficControl;
+
     public CloudRunConfig withAutomaticTrafficControl(Boolean automaticTrafficControl) {
         this.automaticTrafficControl = automaticTrafficControl;
         return this;
     }
     
+    public CloudRunConfig(){}
 }

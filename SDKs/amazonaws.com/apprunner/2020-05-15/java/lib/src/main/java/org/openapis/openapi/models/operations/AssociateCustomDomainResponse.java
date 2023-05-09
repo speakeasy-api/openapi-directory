@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateCustomDomainResponse {
@@ -12,6 +13,7 @@ public class AssociateCustomDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateCustomDomainResponse associateCustomDomainResponse;
+
     public AssociateCustomDomainResponse withAssociateCustomDomainResponse(org.openapis.openapi.models.shared.AssociateCustomDomainResponse associateCustomDomainResponse) {
         this.associateCustomDomainResponse = associateCustomDomainResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateCustomDomainResponse {
     
     
     public String contentType;
+
     public AssociateCustomDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateCustomDomainResponse {
      */
     
     public Object internalServiceErrorException;
+
     public AssociateCustomDomainResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateCustomDomainResponse {
      */
     
     public Object invalidRequestException;
+
     public AssociateCustomDomainResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateCustomDomainResponse {
      */
     
     public Object invalidStateException;
+
     public AssociateCustomDomainResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateCustomDomainResponse {
     
     
     public Integer statusCode;
+
     public AssociateCustomDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class AssociateCustomDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateCustomDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssociateCustomDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

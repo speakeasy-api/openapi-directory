@@ -15,9 +15,11 @@ public class LicenseConversionContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsageOperation")
     public String usageOperation;
+
     public LicenseConversionContext withUsageOperation(String usageOperation) {
         this.usageOperation = usageOperation;
         return this;
     }
     
+    public LicenseConversionContext(){}
 }

@@ -15,9 +15,11 @@ public class RemoveAttributesRequestBodyUpdateAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blacklist")
     public String[] blacklist;
+
     public RemoveAttributesRequestBodyUpdateAttributesRequest withBlacklist(String[] blacklist) {
         this.blacklist = blacklist;
         return this;
     }
     
+    public RemoveAttributesRequestBodyUpdateAttributesRequest(){}
 }

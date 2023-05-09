@@ -15,6 +15,7 @@ public class FieldInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultChecked")
     public Boolean defaultChecked;
+
     public FieldInputConfig withDefaultChecked(Boolean defaultChecked) {
         this.defaultChecked = defaultChecked;
         return this;
@@ -23,6 +24,7 @@ public class FieldInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultCountryCode")
     public String defaultCountryCode;
+
     public FieldInputConfig withDefaultCountryCode(String defaultCountryCode) {
         this.defaultCountryCode = defaultCountryCode;
         return this;
@@ -31,6 +33,7 @@ public class FieldInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public String defaultValue;
+
     public FieldInputConfig withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -39,14 +42,25 @@ public class FieldInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descriptiveText")
     public String descriptiveText;
+
     public FieldInputConfig withDescriptiveText(String descriptiveText) {
         this.descriptiveText = descriptiveText;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fileUploaderConfig")
+    public FileUploaderFieldConfig fileUploaderConfig;
+
+    public FieldInputConfig withFileUploaderConfig(FileUploaderFieldConfig fileUploaderConfig) {
+        this.fileUploaderConfig = fileUploaderConfig;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isArray")
     public Boolean isArray;
+
     public FieldInputConfig withIsArray(Boolean isArray) {
         this.isArray = isArray;
         return this;
@@ -55,6 +69,7 @@ public class FieldInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public Float maxValue;
+
     public FieldInputConfig withMaxValue(Float maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -63,6 +78,7 @@ public class FieldInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public Float minValue;
+
     public FieldInputConfig withMinValue(Float minValue) {
         this.minValue = minValue;
         return this;
@@ -71,6 +87,7 @@ public class FieldInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FieldInputConfig withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +96,7 @@ public class FieldInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeholder")
     public String placeholder;
+
     public FieldInputConfig withPlaceholder(String placeholder) {
         this.placeholder = placeholder;
         return this;
@@ -87,6 +105,7 @@ public class FieldInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readOnly")
     public Boolean readOnly;
+
     public FieldInputConfig withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -95,6 +114,7 @@ public class FieldInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public FieldInputConfig withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -103,6 +123,7 @@ public class FieldInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("step")
     public Float step;
+
     public FieldInputConfig withStep(Float step) {
         this.step = step;
         return this;
@@ -110,6 +131,7 @@ public class FieldInputConfig {
     
     @JsonProperty("type")
     public String type;
+
     public FieldInputConfig withType(String type) {
         this.type = type;
         return this;
@@ -118,6 +140,7 @@ public class FieldInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public FieldInputConfig withValue(String value) {
         this.value = value;
         return this;
@@ -126,9 +149,13 @@ public class FieldInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueMappings")
     public ValueMappings valueMappings;
+
     public FieldInputConfig withValueMappings(ValueMappings valueMappings) {
         this.valueMappings = valueMappings;
         return this;
     }
     
+    public FieldInputConfig(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

@@ -15,6 +15,7 @@ public class JobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentsWithErrorsCount")
     public Long documentsWithErrorsCount;
+
     public JobDetails withDocumentsWithErrorsCount(Long documentsWithErrorsCount) {
         this.documentsWithErrorsCount = documentsWithErrorsCount;
         return this;
@@ -23,6 +24,7 @@ public class JobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDocumentsCount")
     public Long inputDocumentsCount;
+
     public JobDetails withInputDocumentsCount(Long inputDocumentsCount) {
         this.inputDocumentsCount = inputDocumentsCount;
         return this;
@@ -31,9 +33,11 @@ public class JobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TranslatedDocumentsCount")
     public Long translatedDocumentsCount;
+
     public JobDetails withTranslatedDocumentsCount(Long translatedDocumentsCount) {
         this.translatedDocumentsCount = translatedDocumentsCount;
         return this;
     }
     
+    public JobDetails(){}
 }

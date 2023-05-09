@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateTagsRequest {
     
     public Boolean dryRun;
+
     public CreateTagsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreateTagsRequest {
     
     
     public String[] resources;
+
     public CreateTagsRequest withResources(String[] resources) {
         this.resources = resources;
         return this;
@@ -23,9 +25,14 @@ public class CreateTagsRequest {
     
     
     public CreateTagsRequestTags[] tags;
+
     public CreateTagsRequest withTags(CreateTagsRequestTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateTagsRequest(@JsonProperty("Resources") String[] resources, @JsonProperty("Tags") CreateTagsRequestTags[] tags) {
+        this.resources = resources;
+        this.tags = tags;
+  }
 }

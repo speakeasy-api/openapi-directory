@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class BatchUpdateDevicePositionError {
     @JsonProperty("DeviceId")
     public String deviceId;
+
     public BatchUpdateDevicePositionError withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -24,6 +25,7 @@ public class BatchUpdateDevicePositionError {
     
     @JsonProperty("Error")
     public BatchItemError error;
+
     public BatchUpdateDevicePositionError withError(BatchItemError error) {
         this.error = error;
         return this;
@@ -33,9 +35,15 @@ public class BatchUpdateDevicePositionError {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SampleTime")
     public OffsetDateTime sampleTime;
+
     public BatchUpdateDevicePositionError withSampleTime(OffsetDateTime sampleTime) {
         this.sampleTime = sampleTime;
         return this;
     }
     
+    public BatchUpdateDevicePositionError(@JsonProperty("DeviceId") String deviceId, @JsonProperty("Error") BatchItemError error, @JsonProperty("SampleTime") OffsetDateTime sampleTime) {
+        this.deviceId = deviceId;
+        this.error = error;
+        this.sampleTime = sampleTime;
+  }
 }

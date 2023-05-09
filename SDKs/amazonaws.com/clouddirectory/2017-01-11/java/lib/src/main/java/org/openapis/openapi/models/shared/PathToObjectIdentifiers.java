@@ -15,6 +15,7 @@ public class PathToObjectIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectIdentifiers")
     public String[] objectIdentifiers;
+
     public PathToObjectIdentifiers withObjectIdentifiers(String[] objectIdentifiers) {
         this.objectIdentifiers = objectIdentifiers;
         return this;
@@ -23,9 +24,11 @@ public class PathToObjectIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public PathToObjectIdentifiers withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public PathToObjectIdentifiers(){}
 }

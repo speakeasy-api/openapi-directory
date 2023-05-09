@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLagResponse {
     
     public String contentType;
+
     public CreateLagResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateLagResponse {
      */
     
     public Object directConnectClientException;
+
     public CreateLagResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -29,6 +32,7 @@ public class CreateLagResponse {
      */
     
     public Object directConnectServerException;
+
     public CreateLagResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateLagResponse {
      */
     
     public Object duplicateTagKeysException;
+
     public CreateLagResponse withDuplicateTagKeysException(Object duplicateTagKeysException) {
         this.duplicateTagKeysException = duplicateTagKeysException;
         return this;
@@ -49,6 +54,7 @@ public class CreateLagResponse {
      */
     
     public org.openapis.openapi.models.shared.Lag lag;
+
     public CreateLagResponse withLag(org.openapis.openapi.models.shared.Lag lag) {
         this.lag = lag;
         return this;
@@ -56,6 +62,7 @@ public class CreateLagResponse {
     
     
     public Integer statusCode;
+
     public CreateLagResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateLagResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLagResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateLagResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateLagResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public CreateLagResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

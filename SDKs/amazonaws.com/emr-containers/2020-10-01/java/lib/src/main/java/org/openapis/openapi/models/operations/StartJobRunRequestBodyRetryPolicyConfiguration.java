@@ -15,9 +15,11 @@ public class StartJobRunRequestBodyRetryPolicyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxAttempts")
     public Long maxAttempts;
+
     public StartJobRunRequestBodyRetryPolicyConfiguration withMaxAttempts(Long maxAttempts) {
         this.maxAttempts = maxAttempts;
         return this;
     }
     
+    public StartJobRunRequestBodyRetryPolicyConfiguration(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeNotebookExecutionResponse {
     
     public String contentType;
+
     public DescribeNotebookExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeNotebookExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeNotebookExecutionOutput describeNotebookExecutionOutput;
+
     public DescribeNotebookExecutionResponse withDescribeNotebookExecutionOutput(org.openapis.openapi.models.shared.DescribeNotebookExecutionOutput describeNotebookExecutionOutput) {
         this.describeNotebookExecutionOutput = describeNotebookExecutionOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeNotebookExecutionResponse {
      */
     
     public Object internalServerError;
+
     public DescribeNotebookExecutionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeNotebookExecutionResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeNotebookExecutionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeNotebookExecutionResponse {
     
     
     public Integer statusCode;
+
     public DescribeNotebookExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeNotebookExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeNotebookExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeNotebookExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

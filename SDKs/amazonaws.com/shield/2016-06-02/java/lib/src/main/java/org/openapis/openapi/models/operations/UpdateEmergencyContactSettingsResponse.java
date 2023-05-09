@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEmergencyContactSettingsResponse {
     
     public String contentType;
+
     public UpdateEmergencyContactSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateEmergencyContactSettingsResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateEmergencyContactSettingsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEmergencyContactSettingsResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateEmergencyContactSettingsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateEmergencyContactSettingsResponse {
      */
     
     public Object optimisticLockException;
+
     public UpdateEmergencyContactSettingsResponse withOptimisticLockException(Object optimisticLockException) {
         this.optimisticLockException = optimisticLockException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateEmergencyContactSettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateEmergencyContactSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateEmergencyContactSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEmergencyContactSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateEmergencyContactSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateEmergencyContactSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateEmergencyContactSettingsResponse {
      */
     
     public java.util.Map<String, Object> updateEmergencyContactSettingsResponse;
+
     public UpdateEmergencyContactSettingsResponse withUpdateEmergencyContactSettingsResponse(java.util.Map<String, Object> updateEmergencyContactSettingsResponse) {
         this.updateEmergencyContactSettingsResponse = updateEmergencyContactSettingsResponse;
         return this;
     }
     
+    public UpdateEmergencyContactSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

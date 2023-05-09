@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AbuseTicket - The associated fields returned, given a unique abuse ticket id
@@ -15,6 +15,7 @@ public class AbuseTicket {
      */
     
     public Boolean closed;
+
     public AbuseTicket withClosed(Boolean closed) {
         this.closed = closed;
         return this;
@@ -25,6 +26,7 @@ public class AbuseTicket {
      */
     
     public String closedAt;
+
     public AbuseTicket withClosedAt(String closedAt) {
         this.closedAt = closedAt;
         return this;
@@ -35,6 +37,7 @@ public class AbuseTicket {
      */
     
     public String createdAt;
+
     public AbuseTicket withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -45,6 +48,7 @@ public class AbuseTicket {
      */
     
     public String domainIp;
+
     public AbuseTicket withDomainIp(String domainIp) {
         this.domainIp = domainIp;
         return this;
@@ -55,6 +59,7 @@ public class AbuseTicket {
      */
     
     public String reporter;
+
     public AbuseTicket withReporter(String reporter) {
         this.reporter = reporter;
         return this;
@@ -65,6 +70,7 @@ public class AbuseTicket {
      */
     
     public String source;
+
     public AbuseTicket withSource(String source) {
         this.source = source;
         return this;
@@ -75,6 +81,7 @@ public class AbuseTicket {
      */
     
     public String target;
+
     public AbuseTicket withTarget(String target) {
         this.target = target;
         return this;
@@ -85,6 +92,7 @@ public class AbuseTicket {
      */
     
     public String ticketId;
+
     public AbuseTicket withTicketId(String ticketId) {
         this.ticketId = ticketId;
         return this;
@@ -95,9 +103,21 @@ public class AbuseTicket {
      */
     
     public AbuseTicketTypeEnum type;
+
     public AbuseTicket withType(AbuseTicketTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AbuseTicket(@JsonProperty("closed") Boolean closed, @JsonProperty("closedAt") String closedAt, @JsonProperty("createdAt") String createdAt, @JsonProperty("domainIp") String domainIp, @JsonProperty("reporter") String reporter, @JsonProperty("source") String source, @JsonProperty("target") String target, @JsonProperty("ticketId") String ticketId, @JsonProperty("type") AbuseTicketTypeEnum type) {
+        this.closed = closed;
+        this.closedAt = closedAt;
+        this.createdAt = createdAt;
+        this.domainIp = domainIp;
+        this.reporter = reporter;
+        this.source = source;
+        this.target = target;
+        this.ticketId = ticketId;
+        this.type = type;
+  }
 }

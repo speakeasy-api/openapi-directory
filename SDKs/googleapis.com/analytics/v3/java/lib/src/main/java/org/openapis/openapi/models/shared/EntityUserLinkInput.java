@@ -18,6 +18,7 @@ public class EntityUserLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public EntityUserLinkEntity entity;
+
     public EntityUserLinkInput withEntity(EntityUserLinkEntity entity) {
         this.entity = entity;
         return this;
@@ -29,6 +30,7 @@ public class EntityUserLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public EntityUserLinkInput withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class EntityUserLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public EntityUserLinkInput withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class EntityUserLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public EntityUserLinkPermissionsInput permissions;
+
     public EntityUserLinkInput withPermissions(EntityUserLinkPermissionsInput permissions) {
         this.permissions = permissions;
         return this;
@@ -62,6 +66,7 @@ public class EntityUserLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public EntityUserLinkInput withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -73,9 +78,11 @@ public class EntityUserLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userRef")
     public UserRef userRef;
+
     public EntityUserLinkInput withUserRef(UserRef userRef) {
         this.userRef = userRef;
         return this;
     }
     
+    public EntityUserLinkInput(){}
 }

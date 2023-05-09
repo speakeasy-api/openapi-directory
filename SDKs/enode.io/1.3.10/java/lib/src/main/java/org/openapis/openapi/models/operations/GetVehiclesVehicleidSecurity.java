@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetVehiclesVehicleidSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String userAccessToken;
+
     public GetVehiclesVehicleidSecurity withUserAccessToken(String userAccessToken) {
         this.userAccessToken = userAccessToken;
         return this;
@@ -16,6 +17,7 @@ public class GetVehiclesVehicleidSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String userAccessToken1;
+
     public GetVehiclesVehicleidSecurity withUserAccessToken1(String userAccessToken1) {
         this.userAccessToken1 = userAccessToken1;
         return this;
@@ -23,6 +25,7 @@ public class GetVehiclesVehicleidSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String userAccessToken2;
+
     public GetVehiclesVehicleidSecurity withUserAccessToken2(String userAccessToken2) {
         this.userAccessToken2 = userAccessToken2;
         return this;
@@ -30,6 +33,7 @@ public class GetVehiclesVehicleidSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String userAccessToken3;
+
     public GetVehiclesVehicleidSecurity withUserAccessToken3(String userAccessToken3) {
         this.userAccessToken3 = userAccessToken3;
         return this;
@@ -37,6 +41,7 @@ public class GetVehiclesVehicleidSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String userAccessToken4;
+
     public GetVehiclesVehicleidSecurity withUserAccessToken4(String userAccessToken4) {
         this.userAccessToken4 = userAccessToken4;
         return this;
@@ -44,9 +49,11 @@ public class GetVehiclesVehicleidSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String userAccessToken5;
+
     public GetVehiclesVehicleidSecurity withUserAccessToken5(String userAccessToken5) {
         this.userAccessToken5 = userAccessToken5;
         return this;
     }
     
+    public GetVehiclesVehicleidSecurity(){}
 }

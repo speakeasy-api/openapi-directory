@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class SendCustomVerificationEmailResponse {
     
     public String messageId;
+
     public SendCustomVerificationEmailResponse withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
     }
     
+    public SendCustomVerificationEmailResponse(){}
 }

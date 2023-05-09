@@ -12,6 +12,7 @@ public class UpdateSubnetGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateSubnetGroupRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class UpdateSubnetGroupRequest {
     
     @JsonProperty("SubnetGroupName")
     public String subnetGroupName;
+
     public UpdateSubnetGroupRequest withSubnetGroupName(String subnetGroupName) {
         this.subnetGroupName = subnetGroupName;
         return this;
@@ -27,9 +29,13 @@ public class UpdateSubnetGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public UpdateSubnetGroupRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public UpdateSubnetGroupRequest(@JsonProperty("SubnetGroupName") String subnetGroupName) {
+        this.subnetGroupName = subnetGroupName;
+  }
 }

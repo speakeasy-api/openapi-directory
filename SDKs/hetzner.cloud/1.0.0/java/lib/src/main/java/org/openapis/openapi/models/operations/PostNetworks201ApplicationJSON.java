@@ -15,9 +15,11 @@ public class PostNetworks201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public PostNetworks201ApplicationJSONNetwork network;
+
     public PostNetworks201ApplicationJSON withNetwork(PostNetworks201ApplicationJSONNetwork network) {
         this.network = network;
         return this;
     }
     
+    public PostNetworks201ApplicationJSON(){}
 }

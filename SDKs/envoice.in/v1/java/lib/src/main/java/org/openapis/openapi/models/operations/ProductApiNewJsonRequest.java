@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductApiNewJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ProductCreateApiModel productCreateApiModel;
+
     public ProductApiNewJsonRequest withProductCreateApiModel(org.openapis.openapi.models.shared.ProductCreateApiModel productCreateApiModel) {
         this.productCreateApiModel = productCreateApiModel;
         return this;
@@ -16,6 +18,7 @@ public class ProductApiNewJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public ProductApiNewJsonRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -23,9 +26,15 @@ public class ProductApiNewJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public ProductApiNewJsonRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public ProductApiNewJsonRequest(@JsonProperty("ProductCreateApiModel") org.openapis.openapi.models.shared.ProductCreateApiModel productCreateApiModel, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.productCreateApiModel = productCreateApiModel;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

@@ -18,6 +18,7 @@ public class DateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String from;
+
     public DateRange withFrom(String from) {
         this.from = from;
         return this;
@@ -29,9 +30,11 @@ public class DateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public String to;
+
     public DateRange withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public DateRange(){}
 }

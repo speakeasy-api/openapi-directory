@@ -15,9 +15,11 @@ public class CreateMonitor200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitor")
     public CreateMonitor200ApplicationJSONMonitor monitor;
+
     public CreateMonitor200ApplicationJSON withMonitor(CreateMonitor200ApplicationJSONMonitor monitor) {
         this.monitor = monitor;
         return this;
     }
     
+    public CreateMonitor200ApplicationJSON(){}
 }

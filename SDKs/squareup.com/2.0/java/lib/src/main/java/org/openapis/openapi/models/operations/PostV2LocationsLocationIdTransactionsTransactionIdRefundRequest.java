@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest {
@@ -14,6 +15,7 @@ public class PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateRefundRequest createRefundRequest;
+
     public PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest withCreateRefundRequest(org.openapis.openapi.models.shared.CreateRefundRequest createRefundRequest) {
         this.createRefundRequest = createRefundRequest;
         return this;
@@ -24,6 +26,7 @@ public class PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
     public String locationId;
+
     public PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -34,9 +37,15 @@ public class PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transaction_id")
     public String transactionId;
+
     public PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest(@JsonProperty("CreateRefundRequest") org.openapis.openapi.models.shared.CreateRefundRequest createRefundRequest, @JsonProperty("location_id") String locationId, @JsonProperty("transaction_id") String transactionId) {
+        this.createRefundRequest = createRefundRequest;
+        this.locationId = locationId;
+        this.transactionId = transactionId;
+  }
 }

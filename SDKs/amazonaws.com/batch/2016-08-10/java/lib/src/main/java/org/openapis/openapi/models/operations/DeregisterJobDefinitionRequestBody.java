@@ -12,9 +12,13 @@ public class DeregisterJobDefinitionRequestBody {
      */
     @JsonProperty("jobDefinition")
     public String jobDefinition;
+
     public DeregisterJobDefinitionRequestBody withJobDefinition(String jobDefinition) {
         this.jobDefinition = jobDefinition;
         return this;
     }
     
+    public DeregisterJobDefinitionRequestBody(@JsonProperty("jobDefinition") String jobDefinition) {
+        this.jobDefinition = jobDefinition;
+  }
 }

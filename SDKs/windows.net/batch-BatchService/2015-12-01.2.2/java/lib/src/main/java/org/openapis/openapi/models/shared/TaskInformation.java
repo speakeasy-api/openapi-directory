@@ -18,6 +18,7 @@ public class TaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionInfo")
     public TaskExecutionInformation executionInfo;
+
     public TaskInformation withExecutionInfo(TaskExecutionInformation executionInfo) {
         this.executionInfo = executionInfo;
         return this;
@@ -29,6 +30,7 @@ public class TaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public TaskInformation withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -40,6 +42,7 @@ public class TaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtaskId")
     public Integer subtaskId;
+
     public TaskInformation withSubtaskId(Integer subtaskId) {
         this.subtaskId = subtaskId;
         return this;
@@ -51,6 +54,7 @@ public class TaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public TaskInformation withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -61,6 +65,7 @@ public class TaskInformation {
      */
     @JsonProperty("taskState")
     public TaskInformationTaskStateEnum taskState;
+
     public TaskInformation withTaskState(TaskInformationTaskStateEnum taskState) {
         this.taskState = taskState;
         return this;
@@ -72,9 +77,13 @@ public class TaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskUrl")
     public String taskUrl;
+
     public TaskInformation withTaskUrl(String taskUrl) {
         this.taskUrl = taskUrl;
         return this;
     }
     
+    public TaskInformation(@JsonProperty("taskState") TaskInformationTaskStateEnum taskState) {
+        this.taskState = taskState;
+  }
 }

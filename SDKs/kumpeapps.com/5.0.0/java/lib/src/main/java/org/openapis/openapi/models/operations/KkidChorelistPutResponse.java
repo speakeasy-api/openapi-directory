@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class KkidChorelistPutResponse {
@@ -12,6 +13,7 @@ public class KkidChorelistPutResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndFive fourHundredAndFive;
+
     public KkidChorelistPutResponse withFourHundredAndFive(org.openapis.openapi.models.shared.FourHundredAndFive fourHundredAndFive) {
         this.fourHundredAndFive = fourHundredAndFive;
         return this;
@@ -22,6 +24,7 @@ public class KkidChorelistPutResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndTwelve fourHundredAndTwelve;
+
     public KkidChorelistPutResponse withFourHundredAndTwelve(org.openapis.openapi.models.shared.FourHundredAndTwelve fourHundredAndTwelve) {
         this.fourHundredAndTwelve = fourHundredAndTwelve;
         return this;
@@ -29,6 +32,7 @@ public class KkidChorelistPutResponse {
     
     
     public String contentType;
+
     public KkidChorelistPutResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class KkidChorelistPutResponse {
     
     
     public Integer statusCode;
+
     public KkidChorelistPutResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class KkidChorelistPutResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public KkidChorelistPutResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class KkidChorelistPutResponse {
      */
     
     public org.openapis.openapi.models.shared.Nodata nodata;
+
     public KkidChorelistPutResponse withNodata(org.openapis.openapi.models.shared.Nodata nodata) {
         this.nodata = nodata;
         return this;
@@ -63,9 +70,14 @@ public class KkidChorelistPutResponse {
      */
     
     public org.openapis.openapi.models.shared.Success success;
+
     public KkidChorelistPutResponse withSuccess(org.openapis.openapi.models.shared.Success success) {
         this.success = success;
         return this;
     }
     
+    public KkidChorelistPutResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

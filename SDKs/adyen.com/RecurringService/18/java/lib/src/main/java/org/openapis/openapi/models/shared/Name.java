@@ -14,6 +14,7 @@ public class Name {
      */
     @JsonProperty("firstName")
     public String firstName;
+
     public Name withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -24,6 +25,7 @@ public class Name {
      */
     @JsonProperty("gender")
     public NameGenderEnum gender;
+
     public Name withGender(NameGenderEnum gender) {
         this.gender = gender;
         return this;
@@ -35,6 +37,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infix")
     public String infix;
+
     public Name withInfix(String infix) {
         this.infix = infix;
         return this;
@@ -45,9 +48,15 @@ public class Name {
      */
     @JsonProperty("lastName")
     public String lastName;
+
     public Name withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public Name(@JsonProperty("firstName") String firstName, @JsonProperty("gender") NameGenderEnum gender, @JsonProperty("lastName") String lastName) {
+        this.firstName = firstName;
+        this.gender = gender;
+        this.lastName = lastName;
+  }
 }

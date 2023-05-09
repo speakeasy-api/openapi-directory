@@ -18,6 +18,7 @@ public class MoveDimensionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationIndex")
     public Integer destinationIndex;
+
     public MoveDimensionRequest withDestinationIndex(Integer destinationIndex) {
         this.destinationIndex = destinationIndex;
         return this;
@@ -29,9 +30,11 @@ public class MoveDimensionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public DimensionRange source;
+
     public MoveDimensionRequest withSource(DimensionRange source) {
         this.source = source;
         return this;
     }
     
+    public MoveDimensionRequest(){}
 }

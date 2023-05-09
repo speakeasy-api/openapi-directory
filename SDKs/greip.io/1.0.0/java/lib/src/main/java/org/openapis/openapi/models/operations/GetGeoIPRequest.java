@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGeoIPRequest {
@@ -12,6 +13,7 @@ public class GetGeoIPRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public String format;
+
     public GetGeoIPRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -22,6 +24,7 @@ public class GetGeoIPRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GetGeoIPRequest withKey(String key) {
         this.key = key;
         return this;
@@ -32,6 +35,7 @@ public class GetGeoIPRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetGeoIPRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -42,9 +46,13 @@ public class GetGeoIPRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=params")
     public String params;
+
     public GetGeoIPRequest withParams(String params) {
         this.params = params;
         return this;
     }
     
+    public GetGeoIPRequest(@JsonProperty("key") String key) {
+        this.key = key;
+  }
 }

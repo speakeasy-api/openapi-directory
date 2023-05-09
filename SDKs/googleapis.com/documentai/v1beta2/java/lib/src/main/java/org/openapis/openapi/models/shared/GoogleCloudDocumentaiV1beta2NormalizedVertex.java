@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2NormalizedVertex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x")
     public Float x;
+
     public GoogleCloudDocumentaiV1beta2NormalizedVertex withX(Float x) {
         this.x = x;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1beta2NormalizedVertex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public Float y;
+
     public GoogleCloudDocumentaiV1beta2NormalizedVertex withY(Float y) {
         this.y = y;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2NormalizedVertex(){}
 }

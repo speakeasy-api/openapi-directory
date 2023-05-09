@@ -15,6 +15,7 @@ public class MembershipsLevelSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorChannelId")
     public String creatorChannelId;
+
     public MembershipsLevelSnippet withCreatorChannelId(String creatorChannelId) {
         this.creatorChannelId = creatorChannelId;
         return this;
@@ -23,9 +24,11 @@ public class MembershipsLevelSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("levelDetails")
     public LevelDetails levelDetails;
+
     public MembershipsLevelSnippet withLevelDetails(LevelDetails levelDetails) {
         this.levelDetails = levelDetails;
         return this;
     }
     
+    public MembershipsLevelSnippet(){}
 }

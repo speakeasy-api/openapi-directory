@@ -15,9 +15,11 @@ public class ExplainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClarifyExplainerConfig")
     public ClarifyExplainerConfig clarifyExplainerConfig;
+
     public ExplainerConfig withClarifyExplainerConfig(ClarifyExplainerConfig clarifyExplainerConfig) {
         this.clarifyExplainerConfig = clarifyExplainerConfig;
         return this;
     }
     
+    public ExplainerConfig(){}
 }

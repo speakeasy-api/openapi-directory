@@ -14,6 +14,7 @@ public class SendMessageRequestBody3Template {
      */
     @JsonProperty("channel")
     public SendMessageRequestBody3TemplateChannelEnum channel;
+
     public SendMessageRequestBody3Template withChannel(SendMessageRequestBody3TemplateChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -25,6 +26,7 @@ public class SendMessageRequestBody3Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public SendMessageRequestBody3Template withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -36,6 +38,7 @@ public class SendMessageRequestBody3Template {
      */
     @JsonProperty("from")
     public String from;
+
     public SendMessageRequestBody3Template withFrom(String from) {
         this.from = from;
         return this;
@@ -46,6 +49,7 @@ public class SendMessageRequestBody3Template {
      */
     @JsonProperty("message_type")
     public SendMessageRequestBody3TemplateMessageTypeEnum messageType;
+
     public SendMessageRequestBody3Template withMessageType(SendMessageRequestBody3TemplateMessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -53,6 +57,7 @@ public class SendMessageRequestBody3Template {
     
     @JsonProperty("template")
     public SendMessageRequestBody3TemplateTemplate template;
+
     public SendMessageRequestBody3Template withTemplate(SendMessageRequestBody3TemplateTemplate template) {
         this.template = template;
         return this;
@@ -64,6 +69,7 @@ public class SendMessageRequestBody3Template {
      */
     @JsonProperty("to")
     public String to;
+
     public SendMessageRequestBody3Template withTo(String to) {
         this.to = to;
         return this;
@@ -71,9 +77,18 @@ public class SendMessageRequestBody3Template {
     
     @JsonProperty("whatsapp")
     public SendMessageRequestBody3TemplateWhatsapp whatsapp;
+
     public SendMessageRequestBody3Template withWhatsapp(SendMessageRequestBody3TemplateWhatsapp whatsapp) {
         this.whatsapp = whatsapp;
         return this;
     }
     
+    public SendMessageRequestBody3Template(@JsonProperty("channel") SendMessageRequestBody3TemplateChannelEnum channel, @JsonProperty("from") String from, @JsonProperty("message_type") SendMessageRequestBody3TemplateMessageTypeEnum messageType, @JsonProperty("template") SendMessageRequestBody3TemplateTemplate template, @JsonProperty("to") String to, @JsonProperty("whatsapp") SendMessageRequestBody3TemplateWhatsapp whatsapp) {
+        this.channel = channel;
+        this.from = from;
+        this.messageType = messageType;
+        this.template = template;
+        this.to = to;
+        this.whatsapp = whatsapp;
+  }
 }

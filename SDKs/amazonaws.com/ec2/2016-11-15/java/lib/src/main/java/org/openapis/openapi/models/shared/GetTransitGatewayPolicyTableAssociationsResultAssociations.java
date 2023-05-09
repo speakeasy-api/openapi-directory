@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTransitGatewayPolicyTableAssociationsResultAssociations {
     
     public String resourceId;
+
     public GetTransitGatewayPolicyTableAssociationsResultAssociations withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -19,6 +20,7 @@ public class GetTransitGatewayPolicyTableAssociationsResultAssociations {
     
     
     public GetTransitGatewayPolicyTableAssociationsResultAssociationsResourceTypeEnum resourceType;
+
     public GetTransitGatewayPolicyTableAssociationsResultAssociations withResourceType(GetTransitGatewayPolicyTableAssociationsResultAssociationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -26,6 +28,7 @@ public class GetTransitGatewayPolicyTableAssociationsResultAssociations {
     
     
     public GetTransitGatewayPolicyTableAssociationsResultAssociationsStateEnum state;
+
     public GetTransitGatewayPolicyTableAssociationsResultAssociations withState(GetTransitGatewayPolicyTableAssociationsResultAssociationsStateEnum state) {
         this.state = state;
         return this;
@@ -33,6 +36,7 @@ public class GetTransitGatewayPolicyTableAssociationsResultAssociations {
     
     
     public String transitGatewayAttachmentId;
+
     public GetTransitGatewayPolicyTableAssociationsResultAssociations withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -40,9 +44,11 @@ public class GetTransitGatewayPolicyTableAssociationsResultAssociations {
     
     
     public String transitGatewayPolicyTableId;
+
     public GetTransitGatewayPolicyTableAssociationsResultAssociations withTransitGatewayPolicyTableId(String transitGatewayPolicyTableId) {
         this.transitGatewayPolicyTableId = transitGatewayPolicyTableId;
         return this;
     }
     
+    public GetTransitGatewayPolicyTableAssociationsResultAssociations(){}
 }

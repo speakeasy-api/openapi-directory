@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMatchmakingConfigurationResponse {
     
     public String contentType;
+
     public CreateMatchmakingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateMatchmakingConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMatchmakingConfigurationOutput createMatchmakingConfigurationOutput;
+
     public CreateMatchmakingConfigurationResponse withCreateMatchmakingConfigurationOutput(org.openapis.openapi.models.shared.CreateMatchmakingConfigurationOutput createMatchmakingConfigurationOutput) {
         this.createMatchmakingConfigurationOutput = createMatchmakingConfigurationOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateMatchmakingConfigurationResponse {
      */
     
     public Object internalServiceException;
+
     public CreateMatchmakingConfigurationResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class CreateMatchmakingConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateMatchmakingConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateMatchmakingConfigurationResponse {
      */
     
     public Object limitExceededException;
+
     public CreateMatchmakingConfigurationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateMatchmakingConfigurationResponse {
      */
     
     public Object notFoundException;
+
     public CreateMatchmakingConfigurationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateMatchmakingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateMatchmakingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateMatchmakingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMatchmakingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateMatchmakingConfigurationResponse {
      */
     
     public Object taggingFailedException;
+
     public CreateMatchmakingConfigurationResponse withTaggingFailedException(Object taggingFailedException) {
         this.taggingFailedException = taggingFailedException;
         return this;
@@ -93,9 +103,14 @@ public class CreateMatchmakingConfigurationResponse {
      */
     
     public Object unsupportedRegionException;
+
     public CreateMatchmakingConfigurationResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public CreateMatchmakingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

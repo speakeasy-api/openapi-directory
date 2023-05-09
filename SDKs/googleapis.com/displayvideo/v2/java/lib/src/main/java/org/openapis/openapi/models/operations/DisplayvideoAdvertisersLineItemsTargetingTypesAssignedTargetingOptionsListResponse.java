@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListResponse {
     
     public String contentType;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
      */
     
     public org.openapis.openapi.models.shared.ListLineItemAssignedTargetingOptionsResponse listLineItemAssignedTargetingOptionsResponse;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListResponse withListLineItemAssignedTargetingOptionsResponse(org.openapis.openapi.models.shared.ListLineItemAssignedTargetingOptionsResponse listLineItemAssignedTargetingOptionsResponse) {
         this.listLineItemAssignedTargetingOptionsResponse = listLineItemAssignedTargetingOptionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
     
     
     public Integer statusCode;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

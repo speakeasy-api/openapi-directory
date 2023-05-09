@@ -19,6 +19,7 @@ public class PutGeofenceResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public PutGeofenceResponse withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -26,6 +27,7 @@ public class PutGeofenceResponse {
     
     @JsonProperty("GeofenceId")
     public String geofenceId;
+
     public PutGeofenceResponse withGeofenceId(String geofenceId) {
         this.geofenceId = geofenceId;
         return this;
@@ -35,9 +37,15 @@ public class PutGeofenceResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public PutGeofenceResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public PutGeofenceResponse(@JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("GeofenceId") String geofenceId, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.createTime = createTime;
+        this.geofenceId = geofenceId;
+        this.updateTime = updateTime;
+  }
 }

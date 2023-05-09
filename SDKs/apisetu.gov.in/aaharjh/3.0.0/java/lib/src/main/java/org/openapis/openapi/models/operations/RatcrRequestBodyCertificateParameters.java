@@ -12,6 +12,7 @@ public class RatcrRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public RatcrRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class RatcrRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public RatcrRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class RatcrRequestBodyCertificateParameters {
      */
     @JsonProperty("GENDER")
     public String gender;
+
     public RatcrRequestBodyCertificateParameters withGender(String gender) {
         this.gender = gender;
         return this;
@@ -42,9 +45,16 @@ public class RatcrRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public RatcrRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public RatcrRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("GENDER") String gender, @JsonProperty("UID") String uid) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.gender = gender;
+        this.uid = uid;
+  }
 }

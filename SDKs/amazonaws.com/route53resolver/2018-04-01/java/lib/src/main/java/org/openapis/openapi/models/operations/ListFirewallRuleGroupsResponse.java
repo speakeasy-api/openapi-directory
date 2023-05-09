@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFirewallRuleGroupsResponse {
@@ -12,6 +13,7 @@ public class ListFirewallRuleGroupsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListFirewallRuleGroupsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListFirewallRuleGroupsResponse {
     
     
     public String contentType;
+
     public ListFirewallRuleGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListFirewallRuleGroupsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListFirewallRuleGroupsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class ListFirewallRuleGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFirewallRuleGroupsResponse listFirewallRuleGroupsResponse;
+
     public ListFirewallRuleGroupsResponse withListFirewallRuleGroupsResponse(org.openapis.openapi.models.shared.ListFirewallRuleGroupsResponse listFirewallRuleGroupsResponse) {
         this.listFirewallRuleGroupsResponse = listFirewallRuleGroupsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListFirewallRuleGroupsResponse {
     
     
     public Integer statusCode;
+
     public ListFirewallRuleGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListFirewallRuleGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFirewallRuleGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListFirewallRuleGroupsResponse {
      */
     
     public Object throttlingException;
+
     public ListFirewallRuleGroupsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListFirewallRuleGroupsResponse {
      */
     
     public Object validationException;
+
     public ListFirewallRuleGroupsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListFirewallRuleGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

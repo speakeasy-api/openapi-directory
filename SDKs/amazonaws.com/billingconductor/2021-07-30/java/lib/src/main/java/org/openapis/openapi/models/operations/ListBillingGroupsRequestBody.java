@@ -15,6 +15,7 @@ public class ListBillingGroupsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingPeriod")
     public String billingPeriod;
+
     public ListBillingGroupsRequestBody withBillingPeriod(String billingPeriod) {
         this.billingPeriod = billingPeriod;
         return this;
@@ -26,6 +27,7 @@ public class ListBillingGroupsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ListBillingGroupsRequestBodyFilters filters;
+
     public ListBillingGroupsRequestBody withFilters(ListBillingGroupsRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -37,6 +39,7 @@ public class ListBillingGroupsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListBillingGroupsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -48,9 +51,11 @@ public class ListBillingGroupsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListBillingGroupsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBillingGroupsRequestBody(){}
 }

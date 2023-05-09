@@ -15,6 +15,7 @@ public class Ec2Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amiId")
     public String amiId;
+
     public Ec2Metadata withAmiId(String amiId) {
         this.amiId = amiId;
         return this;
@@ -23,6 +24,7 @@ public class Ec2Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public Ec2PlatformEnum platform;
+
     public Ec2Metadata withPlatform(Ec2PlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -31,9 +33,11 @@ public class Ec2Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Ec2Metadata withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public Ec2Metadata(){}
 }

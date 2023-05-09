@@ -18,9 +18,11 @@ public class AppBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleLocation")
     public FileReference bundleLocation;
+
     public AppBundle withBundleLocation(FileReference bundleLocation) {
         this.bundleLocation = bundleLocation;
         return this;
     }
     
+    public AppBundle(){}
 }

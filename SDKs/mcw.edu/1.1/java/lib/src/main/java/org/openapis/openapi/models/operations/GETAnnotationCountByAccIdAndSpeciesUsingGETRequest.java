@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAnnotationCountByAccIdAndSpeciesUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETAnnotationCountByAccIdAndSpeciesUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId")
     public String accId;
+
     public GETAnnotationCountByAccIdAndSpeciesUsingGETRequest withAccId(String accId) {
         this.accId = accId;
         return this;
@@ -22,6 +24,7 @@ public class GETAnnotationCountByAccIdAndSpeciesUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=includeChildren")
     public Boolean includeChildren;
+
     public GETAnnotationCountByAccIdAndSpeciesUsingGETRequest withIncludeChildren(Boolean includeChildren) {
         this.includeChildren = includeChildren;
         return this;
@@ -32,9 +35,15 @@ public class GETAnnotationCountByAccIdAndSpeciesUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
     public Integer speciesTypeKey;
+
     public GETAnnotationCountByAccIdAndSpeciesUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
         this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     
+    public GETAnnotationCountByAccIdAndSpeciesUsingGETRequest(@JsonProperty("accId") String accId, @JsonProperty("includeChildren") Boolean includeChildren, @JsonProperty("speciesTypeKey") Integer speciesTypeKey) {
+        this.accId = accId;
+        this.includeChildren = includeChildren;
+        this.speciesTypeKey = speciesTypeKey;
+  }
 }

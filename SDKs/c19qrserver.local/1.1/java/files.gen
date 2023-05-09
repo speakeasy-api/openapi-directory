@@ -68,4 +68,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/LoginResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RequestPasswordResetResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateUserResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/attendeessignins/README.md
+docs/authentication/README.md
+docs/passwords/README.md
+docs/teammembers/README.md
 USAGE.md

@@ -12,9 +12,11 @@ public class GHErrorHints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GHErrorHints withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GHErrorHints(){}
 }

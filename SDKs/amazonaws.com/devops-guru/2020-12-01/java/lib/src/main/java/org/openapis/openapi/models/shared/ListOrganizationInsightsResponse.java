@@ -15,6 +15,7 @@ public class ListOrganizationInsightsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListOrganizationInsightsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class ListOrganizationInsightsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProactiveInsights")
     public ProactiveOrganizationInsightSummary[] proactiveInsights;
+
     public ListOrganizationInsightsResponse withProactiveInsights(ProactiveOrganizationInsightSummary[] proactiveInsights) {
         this.proactiveInsights = proactiveInsights;
         return this;
@@ -31,9 +33,11 @@ public class ListOrganizationInsightsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReactiveInsights")
     public ReactiveOrganizationInsightSummary[] reactiveInsights;
+
     public ListOrganizationInsightsResponse withReactiveInsights(ReactiveOrganizationInsightSummary[] reactiveInsights) {
         this.reactiveInsights = reactiveInsights;
         return this;
     }
     
+    public ListOrganizationInsightsResponse(){}
 }

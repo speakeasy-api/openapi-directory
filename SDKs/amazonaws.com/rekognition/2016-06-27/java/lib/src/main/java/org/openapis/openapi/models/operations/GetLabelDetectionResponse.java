@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLabelDetectionResponse {
@@ -12,6 +13,7 @@ public class GetLabelDetectionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLabelDetectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetLabelDetectionResponse {
     
     
     public String contentType;
+
     public GetLabelDetectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetLabelDetectionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLabelDetectionResponse getLabelDetectionResponse;
+
     public GetLabelDetectionResponse withGetLabelDetectionResponse(org.openapis.openapi.models.shared.GetLabelDetectionResponse getLabelDetectionResponse) {
         this.getLabelDetectionResponse = getLabelDetectionResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetLabelDetectionResponse {
      */
     
     public Object internalServerError;
+
     public GetLabelDetectionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class GetLabelDetectionResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public GetLabelDetectionResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class GetLabelDetectionResponse {
      */
     
     public Object invalidParameterException;
+
     public GetLabelDetectionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class GetLabelDetectionResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public GetLabelDetectionResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -79,6 +87,7 @@ public class GetLabelDetectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetLabelDetectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class GetLabelDetectionResponse {
     
     
     public Integer statusCode;
+
     public GetLabelDetectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetLabelDetectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLabelDetectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetLabelDetectionResponse {
      */
     
     public Object throttlingException;
+
     public GetLabelDetectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetLabelDetectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

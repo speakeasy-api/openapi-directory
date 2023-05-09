@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateContributorInsightsInput {
     @JsonProperty("ContributorInsightsAction")
     public ContributorInsightsActionEnum contributorInsightsAction;
+
     public UpdateContributorInsightsInput withContributorInsightsAction(ContributorInsightsActionEnum contributorInsightsAction) {
         this.contributorInsightsAction = contributorInsightsAction;
         return this;
@@ -19,6 +20,7 @@ public class UpdateContributorInsightsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public UpdateContributorInsightsInput withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -26,9 +28,14 @@ public class UpdateContributorInsightsInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public UpdateContributorInsightsInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public UpdateContributorInsightsInput(@JsonProperty("ContributorInsightsAction") ContributorInsightsActionEnum contributorInsightsAction, @JsonProperty("TableName") String tableName) {
+        this.contributorInsightsAction = contributorInsightsAction;
+        this.tableName = tableName;
+  }
 }

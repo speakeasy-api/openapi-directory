@@ -12,6 +12,7 @@ public class PatchOrganizationRequestBodySupport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("business_hours")
     public String businessHours;
+
     public PatchOrganizationRequestBodySupport withBusinessHours(String businessHours) {
         this.businessHours = businessHours;
         return this;
@@ -20,6 +21,7 @@ public class PatchOrganizationRequestBodySupport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chat")
     public PatchOrganizationRequestBodySupportChat chat;
+
     public PatchOrganizationRequestBodySupport withChat(PatchOrganizationRequestBodySupportChat chat) {
         this.chat = chat;
         return this;
@@ -28,6 +30,7 @@ public class PatchOrganizationRequestBodySupport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_number")
     public String contactNumber;
+
     public PatchOrganizationRequestBodySupport withContactNumber(String contactNumber) {
         this.contactNumber = contactNumber;
         return this;
@@ -36,9 +39,11 @@ public class PatchOrganizationRequestBodySupport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public PatchOrganizationRequestBodySupport withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public PatchOrganizationRequestBodySupport(){}
 }

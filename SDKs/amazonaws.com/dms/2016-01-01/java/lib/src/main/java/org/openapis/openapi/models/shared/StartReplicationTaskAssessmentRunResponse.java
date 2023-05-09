@@ -15,9 +15,11 @@ public class StartReplicationTaskAssessmentRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationTaskAssessmentRun")
     public ReplicationTaskAssessmentRun replicationTaskAssessmentRun;
+
     public StartReplicationTaskAssessmentRunResponse withReplicationTaskAssessmentRun(ReplicationTaskAssessmentRun replicationTaskAssessmentRun) {
         this.replicationTaskAssessmentRun = replicationTaskAssessmentRun;
         return this;
     }
     
+    public StartReplicationTaskAssessmentRunResponse(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLicenseRequest {
     @JsonProperty("Beneficiary")
     public String beneficiary;
+
     public CreateLicenseRequest withBeneficiary(String beneficiary) {
         this.beneficiary = beneficiary;
         return this;
@@ -18,6 +19,7 @@ public class CreateLicenseRequest {
     
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateLicenseRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +27,7 @@ public class CreateLicenseRequest {
     
     @JsonProperty("ConsumptionConfiguration")
     public ConsumptionConfiguration consumptionConfiguration;
+
     public CreateLicenseRequest withConsumptionConfiguration(ConsumptionConfiguration consumptionConfiguration) {
         this.consumptionConfiguration = consumptionConfiguration;
         return this;
@@ -32,6 +35,7 @@ public class CreateLicenseRequest {
     
     @JsonProperty("Entitlements")
     public Entitlement[] entitlements;
+
     public CreateLicenseRequest withEntitlements(Entitlement[] entitlements) {
         this.entitlements = entitlements;
         return this;
@@ -39,6 +43,7 @@ public class CreateLicenseRequest {
     
     @JsonProperty("HomeRegion")
     public String homeRegion;
+
     public CreateLicenseRequest withHomeRegion(String homeRegion) {
         this.homeRegion = homeRegion;
         return this;
@@ -46,6 +51,7 @@ public class CreateLicenseRequest {
     
     @JsonProperty("Issuer")
     public Issuer issuer;
+
     public CreateLicenseRequest withIssuer(Issuer issuer) {
         this.issuer = issuer;
         return this;
@@ -54,6 +60,7 @@ public class CreateLicenseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseMetadata")
     public Metadata[] licenseMetadata;
+
     public CreateLicenseRequest withLicenseMetadata(Metadata[] licenseMetadata) {
         this.licenseMetadata = licenseMetadata;
         return this;
@@ -61,6 +68,7 @@ public class CreateLicenseRequest {
     
     @JsonProperty("LicenseName")
     public String licenseName;
+
     public CreateLicenseRequest withLicenseName(String licenseName) {
         this.licenseName = licenseName;
         return this;
@@ -68,6 +76,7 @@ public class CreateLicenseRequest {
     
     @JsonProperty("ProductName")
     public String productName;
+
     public CreateLicenseRequest withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -75,6 +84,7 @@ public class CreateLicenseRequest {
     
     @JsonProperty("ProductSKU")
     public String productSKU;
+
     public CreateLicenseRequest withProductSKU(String productSKU) {
         this.productSKU = productSKU;
         return this;
@@ -82,9 +92,22 @@ public class CreateLicenseRequest {
     
     @JsonProperty("Validity")
     public DatetimeRange validity;
+
     public CreateLicenseRequest withValidity(DatetimeRange validity) {
         this.validity = validity;
         return this;
     }
     
+    public CreateLicenseRequest(@JsonProperty("Beneficiary") String beneficiary, @JsonProperty("ClientToken") String clientToken, @JsonProperty("ConsumptionConfiguration") ConsumptionConfiguration consumptionConfiguration, @JsonProperty("Entitlements") Entitlement[] entitlements, @JsonProperty("HomeRegion") String homeRegion, @JsonProperty("Issuer") Issuer issuer, @JsonProperty("LicenseName") String licenseName, @JsonProperty("ProductName") String productName, @JsonProperty("ProductSKU") String productSKU, @JsonProperty("Validity") DatetimeRange validity) {
+        this.beneficiary = beneficiary;
+        this.clientToken = clientToken;
+        this.consumptionConfiguration = consumptionConfiguration;
+        this.entitlements = entitlements;
+        this.homeRegion = homeRegion;
+        this.issuer = issuer;
+        this.licenseName = licenseName;
+        this.productName = productName;
+        this.productSKU = productSKU;
+        this.validity = validity;
+  }
 }

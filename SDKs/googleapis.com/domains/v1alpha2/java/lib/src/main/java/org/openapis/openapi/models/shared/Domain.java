@@ -18,6 +18,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public Domain withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -29,6 +30,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceState")
     public DomainResourceStateEnum resourceState;
+
     public Domain withResourceState(DomainResourceStateEnum resourceState) {
         this.resourceState = resourceState;
         return this;
@@ -40,9 +42,11 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yearlyPrice")
     public Money yearlyPrice;
+
     public Domain withYearlyPrice(Money yearlyPrice) {
         this.yearlyPrice = yearlyPrice;
         return this;
     }
     
+    public Domain(){}
 }

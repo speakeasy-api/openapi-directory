@@ -46,12 +46,10 @@ public class Crx {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCrxdeStatusResponse res = new org.openapis.openapi.models.operations.GetCrxdeStatusResponse() {{
+        org.openapis.openapi.models.operations.GetCrxdeStatusResponse res = new org.openapis.openapi.models.operations.GetCrxdeStatusResponse(contentType, httpRes.statusCode()) {{
             getCrxdeStatus200PlainTextString = null;
             getCrxdeStatus404PlainTextString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -85,12 +83,10 @@ public class Crx {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInstallStatusResponse res = new org.openapis.openapi.models.operations.GetInstallStatusResponse() {{
+        org.openapis.openapi.models.operations.GetInstallStatusResponse res = new org.openapis.openapi.models.operations.GetInstallStatusResponse(contentType, httpRes.statusCode()) {{
             installStatus = null;
             getInstallStatusDefaultApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -125,12 +121,10 @@ public class Crx {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPackageManagerServletResponse res = new org.openapis.openapi.models.operations.GetPackageManagerServletResponse() {{
+        org.openapis.openapi.models.operations.GetPackageManagerServletResponse res = new org.openapis.openapi.models.operations.GetPackageManagerServletResponse(contentType, httpRes.statusCode()) {{
             getPackageManagerServlet404TextHTMLString = null;
             getPackageManagerServlet405TextHTMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 404) {
@@ -170,11 +164,9 @@ public class Crx {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPackageServiceResponse res = new org.openapis.openapi.models.operations.PostPackageServiceResponse() {{
+        org.openapis.openapi.models.operations.PostPackageServiceResponse res = new org.openapis.openapi.models.operations.PostPackageServiceResponse(contentType, httpRes.statusCode()) {{
             postPackageServiceDefaultTextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -210,11 +202,9 @@ public class Crx {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPackageServiceJsonResponse res = new org.openapis.openapi.models.operations.PostPackageServiceJsonResponse() {{
+        org.openapis.openapi.models.operations.PostPackageServiceJsonResponse res = new org.openapis.openapi.models.operations.PostPackageServiceJsonResponse(contentType, httpRes.statusCode()) {{
             postPackageServiceJSONDefaultApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -248,11 +238,9 @@ public class Crx {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPackageUpdateResponse res = new org.openapis.openapi.models.operations.PostPackageUpdateResponse() {{
+        org.openapis.openapi.models.operations.PostPackageUpdateResponse res = new org.openapis.openapi.models.operations.PostPackageUpdateResponse(contentType, httpRes.statusCode()) {{
             postPackageUpdateDefaultApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -286,11 +274,9 @@ public class Crx {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSetPasswordResponse res = new org.openapis.openapi.models.operations.PostSetPasswordResponse() {{
+        org.openapis.openapi.models.operations.PostSetPasswordResponse res = new org.openapis.openapi.models.operations.PostSetPasswordResponse(contentType, httpRes.statusCode()) {{
             postSetPasswordDefaultTextPlainString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

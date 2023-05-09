@@ -21,6 +21,7 @@ public class RevokeTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access_token")
     public String accessToken;
+
     public RevokeTokenRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -33,6 +34,7 @@ public class RevokeTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_id")
     public String clientId;
+
     public RevokeTokenRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -45,6 +47,7 @@ public class RevokeTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_id")
     public String merchantId;
+
     public RevokeTokenRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -58,9 +61,11 @@ public class RevokeTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revoke_only_access_token")
     public Boolean revokeOnlyAccessToken;
+
     public RevokeTokenRequest withRevokeOnlyAccessToken(Boolean revokeOnlyAccessToken) {
         this.revokeOnlyAccessToken = revokeOnlyAccessToken;
         return this;
     }
     
+    public RevokeTokenRequest(){}
 }

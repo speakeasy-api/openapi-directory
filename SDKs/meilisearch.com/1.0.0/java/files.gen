@@ -2,6 +2,7 @@ lib/src/main/java/org/openapis/openapi/Documents.java
 lib/src/main/java/org/openapis/openapi/Dumps.java
 lib/src/main/java/org/openapis/openapi/Indexes.java
 lib/src/main/java/org/openapis/openapi/KeyManagement.java
+lib/src/main/java/org/openapis/openapi/MultiSearch.java
 lib/src/main/java/org/openapis/openapi/Search.java
 lib/src/main/java/org/openapis/openapi/Settings.java
 lib/src/main/java/org/openapis/openapi/Stats.java
@@ -60,8 +61,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetIndexesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ShowIndexResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SwapIndexesRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/SwapIndexesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/UdpateIndexRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/UdpateIndexResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateIndexRequestBody.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateIndexResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAKeyRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAKeyResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteAKeyResponse.java
@@ -70,6 +71,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetKeysResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetOneKeyResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAKeyRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAKeyResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/SearchOneOrMoreIndexesRequestBodyQueries.java
+lib/src/main/java/org/openapis/openapi/models/operations/SearchOneOrMoreIndexesRequestBody.java
+lib/src/main/java/org/openapis/openapi/models/operations/SearchOneOrMoreIndexesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchInIndexRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchInIndexResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchInIndex1RequestBody.java
@@ -127,4 +131,15 @@ lib/src/main/java/org/openapis/openapi/models/operations/DeleteTasksResponse.jav
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllTasksRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllTasksResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetOneTaskResponse.java
+docs/sdk/README.md
+docs/documents/README.md
+docs/dumps/README.md
+docs/indexes/README.md
+docs/keymanagement/README.md
+docs/multisearch/README.md
+docs/search/README.md
+docs/settings/README.md
+docs/stats/README.md
+docs/subroutes/README.md
+docs/tasks/README.md
 USAGE.md

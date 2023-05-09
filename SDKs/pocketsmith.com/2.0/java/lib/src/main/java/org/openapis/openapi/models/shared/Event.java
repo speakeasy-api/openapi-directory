@@ -18,6 +18,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public Event withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -29,6 +30,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_in_base_currency")
     public Double amountInBaseCurrency;
+
     public Event withAmountInBaseCurrency(Double amountInBaseCurrency) {
         this.amountInBaseCurrency = amountInBaseCurrency;
         return this;
@@ -37,6 +39,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public Category category;
+
     public Event withCategory(Category category) {
         this.category = category;
         return this;
@@ -48,6 +51,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colour")
     public String colour;
+
     public Event withColour(String colour) {
         this.colour = colour;
         return this;
@@ -59,6 +63,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_code")
     public String currencyCode;
+
     public Event withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -70,6 +75,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public Event withDate(String date) {
         this.date = date;
         return this;
@@ -81,6 +87,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Event withId(String id) {
         this.id = id;
         return this;
@@ -92,6 +99,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infinite_series")
     public Boolean infiniteSeries;
+
     public Event withInfiniteSeries(Boolean infiniteSeries) {
         this.infiniteSeries = infiniteSeries;
         return this;
@@ -103,6 +111,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public Event withNote(String note) {
         this.note = note;
         return this;
@@ -114,6 +123,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeat_interval")
     public Long repeatInterval;
+
     public Event withRepeatInterval(Long repeatInterval) {
         this.repeatInterval = repeatInterval;
         return this;
@@ -125,6 +135,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeat_type")
     public EventRepeatTypeEnum repeatType;
+
     public Event withRepeatType(EventRepeatTypeEnum repeatType) {
         this.repeatType = repeatType;
         return this;
@@ -133,6 +144,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scenario")
     public Scenario scenario;
+
     public Event withScenario(Scenario scenario) {
         this.scenario = scenario;
         return this;
@@ -144,6 +156,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("series_id")
     public Long seriesId;
+
     public Event withSeriesId(Long seriesId) {
         this.seriesId = seriesId;
         return this;
@@ -155,9 +168,11 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("series_start_id")
     public String seriesStartId;
+
     public Event withSeriesStartId(String seriesStartId) {
         this.seriesStartId = seriesStartId;
         return this;
     }
     
+    public Event(){}
 }

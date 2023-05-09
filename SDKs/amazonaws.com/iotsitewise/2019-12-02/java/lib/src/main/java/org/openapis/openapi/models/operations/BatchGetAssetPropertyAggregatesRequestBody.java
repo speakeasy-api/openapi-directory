@@ -14,6 +14,7 @@ public class BatchGetAssetPropertyAggregatesRequestBody {
      */
     @JsonProperty("entries")
     public org.openapis.openapi.models.shared.BatchGetAssetPropertyAggregatesEntry[] entries;
+
     public BatchGetAssetPropertyAggregatesRequestBody withEntries(org.openapis.openapi.models.shared.BatchGetAssetPropertyAggregatesEntry[] entries) {
         this.entries = entries;
         return this;
@@ -25,6 +26,7 @@ public class BatchGetAssetPropertyAggregatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public BatchGetAssetPropertyAggregatesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class BatchGetAssetPropertyAggregatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public BatchGetAssetPropertyAggregatesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public BatchGetAssetPropertyAggregatesRequestBody(@JsonProperty("entries") org.openapis.openapi.models.shared.BatchGetAssetPropertyAggregatesEntry[] entries) {
+        this.entries = entries;
+  }
 }

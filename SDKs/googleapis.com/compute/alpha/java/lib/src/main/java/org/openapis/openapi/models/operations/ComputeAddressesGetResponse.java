@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeAddressesGetResponse {
@@ -12,6 +13,7 @@ public class ComputeAddressesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Address address;
+
     public ComputeAddressesGetResponse withAddress(org.openapis.openapi.models.shared.Address address) {
         this.address = address;
         return this;
@@ -19,6 +21,7 @@ public class ComputeAddressesGetResponse {
     
     
     public String contentType;
+
     public ComputeAddressesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ComputeAddressesGetResponse {
     
     
     public Integer statusCode;
+
     public ComputeAddressesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeAddressesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeAddressesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeAddressesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

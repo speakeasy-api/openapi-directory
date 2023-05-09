@@ -15,6 +15,7 @@ public class ListLinuxSubscriptionInstancesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public org.openapis.openapi.models.shared.Filter[] filters;
+
     public ListLinuxSubscriptionInstancesRequestBody withFilters(org.openapis.openapi.models.shared.Filter[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class ListLinuxSubscriptionInstancesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListLinuxSubscriptionInstancesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class ListLinuxSubscriptionInstancesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLinuxSubscriptionInstancesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLinuxSubscriptionInstancesRequestBody(){}
 }

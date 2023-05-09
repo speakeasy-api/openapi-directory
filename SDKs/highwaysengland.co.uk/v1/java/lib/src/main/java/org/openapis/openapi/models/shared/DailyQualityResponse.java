@@ -12,6 +12,7 @@ public class DailyQualityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Qualities")
     public Qualities[] qualities;
+
     public DailyQualityResponse withQualities(Qualities[] qualities) {
         this.qualities = qualities;
         return this;
@@ -20,9 +21,11 @@ public class DailyQualityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("row_count")
     public Integer rowCount;
+
     public DailyQualityResponse withRowCount(Integer rowCount) {
         this.rowCount = rowCount;
         return this;
     }
     
+    public DailyQualityResponse(){}
 }

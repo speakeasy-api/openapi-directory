@@ -15,9 +15,11 @@ public class StoresCreateRequestBodyIntuneDetailsTargetAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StoresCreateRequestBodyIntuneDetailsTargetAudience withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StoresCreateRequestBodyIntuneDetailsTargetAudience(){}
 }

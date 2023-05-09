@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class MembershipSummary {
     @JsonProperty("arn")
     public String arn;
+
     public MembershipSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -24,6 +25,7 @@ public class MembershipSummary {
     
     @JsonProperty("collaborationArn")
     public String collaborationArn;
+
     public MembershipSummary withCollaborationArn(String collaborationArn) {
         this.collaborationArn = collaborationArn;
         return this;
@@ -31,6 +33,7 @@ public class MembershipSummary {
     
     @JsonProperty("collaborationCreatorAccountId")
     public String collaborationCreatorAccountId;
+
     public MembershipSummary withCollaborationCreatorAccountId(String collaborationCreatorAccountId) {
         this.collaborationCreatorAccountId = collaborationCreatorAccountId;
         return this;
@@ -38,6 +41,7 @@ public class MembershipSummary {
     
     @JsonProperty("collaborationCreatorDisplayName")
     public String collaborationCreatorDisplayName;
+
     public MembershipSummary withCollaborationCreatorDisplayName(String collaborationCreatorDisplayName) {
         this.collaborationCreatorDisplayName = collaborationCreatorDisplayName;
         return this;
@@ -45,6 +49,7 @@ public class MembershipSummary {
     
     @JsonProperty("collaborationId")
     public String collaborationId;
+
     public MembershipSummary withCollaborationId(String collaborationId) {
         this.collaborationId = collaborationId;
         return this;
@@ -52,6 +57,7 @@ public class MembershipSummary {
     
     @JsonProperty("collaborationName")
     public String collaborationName;
+
     public MembershipSummary withCollaborationName(String collaborationName) {
         this.collaborationName = collaborationName;
         return this;
@@ -61,6 +67,7 @@ public class MembershipSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public MembershipSummary withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -68,6 +75,7 @@ public class MembershipSummary {
     
     @JsonProperty("id")
     public String id;
+
     public MembershipSummary withId(String id) {
         this.id = id;
         return this;
@@ -75,6 +83,7 @@ public class MembershipSummary {
     
     @JsonProperty("memberAbilities")
     public MemberAbilityEnum[] memberAbilities;
+
     public MembershipSummary withMemberAbilities(MemberAbilityEnum[] memberAbilities) {
         this.memberAbilities = memberAbilities;
         return this;
@@ -82,6 +91,7 @@ public class MembershipSummary {
     
     @JsonProperty("status")
     public MembershipStatusEnum status;
+
     public MembershipSummary withStatus(MembershipStatusEnum status) {
         this.status = status;
         return this;
@@ -91,9 +101,23 @@ public class MembershipSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public MembershipSummary withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public MembershipSummary(@JsonProperty("arn") String arn, @JsonProperty("collaborationArn") String collaborationArn, @JsonProperty("collaborationCreatorAccountId") String collaborationCreatorAccountId, @JsonProperty("collaborationCreatorDisplayName") String collaborationCreatorDisplayName, @JsonProperty("collaborationId") String collaborationId, @JsonProperty("collaborationName") String collaborationName, @JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("id") String id, @JsonProperty("memberAbilities") MemberAbilityEnum[] memberAbilities, @JsonProperty("status") MembershipStatusEnum status, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.arn = arn;
+        this.collaborationArn = collaborationArn;
+        this.collaborationCreatorAccountId = collaborationCreatorAccountId;
+        this.collaborationCreatorDisplayName = collaborationCreatorDisplayName;
+        this.collaborationId = collaborationId;
+        this.collaborationName = collaborationName;
+        this.createTime = createTime;
+        this.id = id;
+        this.memberAbilities = memberAbilities;
+        this.status = status;
+        this.updateTime = updateTime;
+  }
 }

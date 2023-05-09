@@ -12,9 +12,13 @@ public class PostPortfolioOptimizationEqualWeightedRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioOptimizationEqualWeightedRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
     }
     
+    public PostPortfolioOptimizationEqualWeightedRequestBody(@JsonProperty("assets") Long assets) {
+        this.assets = assets;
+  }
 }

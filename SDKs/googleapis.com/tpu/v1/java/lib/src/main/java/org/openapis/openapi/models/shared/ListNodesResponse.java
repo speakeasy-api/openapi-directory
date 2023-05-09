@@ -18,6 +18,7 @@ public class ListNodesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListNodesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListNodesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodes")
     public Node[] nodes;
+
     public ListNodesResponse withNodes(Node[] nodes) {
         this.nodes = nodes;
         return this;
@@ -40,9 +42,11 @@ public class ListNodesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListNodesResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListNodesResponse(){}
 }

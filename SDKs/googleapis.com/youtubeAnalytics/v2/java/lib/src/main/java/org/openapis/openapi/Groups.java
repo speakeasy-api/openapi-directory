@@ -59,11 +59,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeAnalyticsGroupsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeAnalyticsGroupsDeleteResponse() {{
+        org.openapis.openapi.models.operations.YoutubeAnalyticsGroupsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeAnalyticsGroupsDeleteResponse(contentType, httpRes.statusCode()) {{
             emptyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeAnalyticsGroupsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeAnalyticsGroupsInsertResponse() {{
+        org.openapis.openapi.models.operations.YoutubeAnalyticsGroupsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeAnalyticsGroupsInsertResponse(contentType, httpRes.statusCode()) {{
             group = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeAnalyticsGroupsListResponse res = new org.openapis.openapi.models.operations.YoutubeAnalyticsGroupsListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeAnalyticsGroupsListResponse res = new org.openapis.openapi.models.operations.YoutubeAnalyticsGroupsListResponse(contentType, httpRes.statusCode()) {{
             listGroupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeAnalyticsGroupsUpdateResponse res = new org.openapis.openapi.models.operations.YoutubeAnalyticsGroupsUpdateResponse() {{
+        org.openapis.openapi.models.operations.YoutubeAnalyticsGroupsUpdateResponse res = new org.openapis.openapi.models.operations.YoutubeAnalyticsGroupsUpdateResponse(contentType, httpRes.statusCode()) {{
             group = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

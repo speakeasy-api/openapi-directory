@@ -15,9 +15,11 @@ public class RuntimeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TelemetryConfiguration")
     public TelemetryConfiguration telemetryConfiguration;
+
     public RuntimeConfiguration withTelemetryConfiguration(TelemetryConfiguration telemetryConfiguration) {
         this.telemetryConfiguration = telemetryConfiguration;
         return this;
     }
     
+    public RuntimeConfiguration(){}
 }

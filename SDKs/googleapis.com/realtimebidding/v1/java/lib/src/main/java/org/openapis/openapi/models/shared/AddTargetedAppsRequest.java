@@ -18,6 +18,7 @@ public class AddTargetedAppsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appIds")
     public String[] appIds;
+
     public AddTargetedAppsRequest withAppIds(String[] appIds) {
         this.appIds = appIds;
         return this;
@@ -29,9 +30,11 @@ public class AddTargetedAppsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingMode")
     public AddTargetedAppsRequestTargetingModeEnum targetingMode;
+
     public AddTargetedAppsRequest withTargetingMode(AddTargetedAppsRequestTargetingModeEnum targetingMode) {
         this.targetingMode = targetingMode;
         return this;
     }
     
+    public AddTargetedAppsRequest(){}
 }

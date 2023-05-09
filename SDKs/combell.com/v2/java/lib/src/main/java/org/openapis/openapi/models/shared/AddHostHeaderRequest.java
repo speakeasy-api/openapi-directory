@@ -18,9 +18,11 @@ public class AddHostHeaderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_name")
     public String domainName;
+
     public AddHostHeaderRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public AddHostHeaderRequest(){}
 }

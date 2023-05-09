@@ -15,6 +15,7 @@ public class ComputeFarmConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeDirectoryUser")
     public String activeDirectoryUser;
+
     public ComputeFarmConfiguration withActiveDirectoryUser(String activeDirectoryUser) {
         this.activeDirectoryUser = activeDirectoryUser;
         return this;
@@ -23,9 +24,11 @@ public class ComputeFarmConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public ComputeFarmConfiguration withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
+    public ComputeFarmConfiguration(){}
 }

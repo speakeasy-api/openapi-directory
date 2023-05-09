@@ -12,6 +12,7 @@ public class SignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantTokens")
     public String[] grantTokens;
+
     public SignRequest withGrantTokens(String[] grantTokens) {
         this.grantTokens = grantTokens;
         return this;
@@ -19,6 +20,7 @@ public class SignRequest {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public SignRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -26,6 +28,7 @@ public class SignRequest {
     
     @JsonProperty("Message")
     public String message;
+
     public SignRequest withMessage(String message) {
         this.message = message;
         return this;
@@ -34,6 +37,7 @@ public class SignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public SignRequest withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -41,9 +45,15 @@ public class SignRequest {
     
     @JsonProperty("SigningAlgorithm")
     public SigningAlgorithmSpecEnum signingAlgorithm;
+
     public SignRequest withSigningAlgorithm(SigningAlgorithmSpecEnum signingAlgorithm) {
         this.signingAlgorithm = signingAlgorithm;
         return this;
     }
     
+    public SignRequest(@JsonProperty("KeyId") String keyId, @JsonProperty("Message") String message, @JsonProperty("SigningAlgorithm") SigningAlgorithmSpecEnum signingAlgorithm) {
+        this.keyId = keyId;
+        this.message = message;
+        this.signingAlgorithm = signingAlgorithm;
+  }
 }

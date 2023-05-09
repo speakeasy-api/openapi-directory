@@ -18,6 +18,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createImage")
     public CreateImageResponse createImage;
+
     public Response withCreateImage(CreateImageResponse createImage) {
         this.createImage = createImage;
         return this;
@@ -29,6 +30,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createLine")
     public CreateLineResponse createLine;
+
     public Response withCreateLine(CreateLineResponse createLine) {
         this.createLine = createLine;
         return this;
@@ -40,6 +42,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createShape")
     public CreateShapeResponse createShape;
+
     public Response withCreateShape(CreateShapeResponse createShape) {
         this.createShape = createShape;
         return this;
@@ -51,6 +54,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createSheetsChart")
     public CreateSheetsChartResponse createSheetsChart;
+
     public Response withCreateSheetsChart(CreateSheetsChartResponse createSheetsChart) {
         this.createSheetsChart = createSheetsChart;
         return this;
@@ -62,6 +66,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createSlide")
     public CreateSlideResponse createSlide;
+
     public Response withCreateSlide(CreateSlideResponse createSlide) {
         this.createSlide = createSlide;
         return this;
@@ -73,6 +78,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTable")
     public CreateTableResponse createTable;
+
     public Response withCreateTable(CreateTableResponse createTable) {
         this.createTable = createTable;
         return this;
@@ -84,6 +90,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createVideo")
     public CreateVideoResponse createVideo;
+
     public Response withCreateVideo(CreateVideoResponse createVideo) {
         this.createVideo = createVideo;
         return this;
@@ -95,6 +102,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duplicateObject")
     public DuplicateObjectResponse duplicateObject;
+
     public Response withDuplicateObject(DuplicateObjectResponse duplicateObject) {
         this.duplicateObject = duplicateObject;
         return this;
@@ -106,6 +114,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupObjects")
     public GroupObjectsResponse groupObjects;
+
     public Response withGroupObjects(GroupObjectsResponse groupObjects) {
         this.groupObjects = groupObjects;
         return this;
@@ -117,6 +126,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceAllShapesWithImage")
     public ReplaceAllShapesWithImageResponse replaceAllShapesWithImage;
+
     public Response withReplaceAllShapesWithImage(ReplaceAllShapesWithImageResponse replaceAllShapesWithImage) {
         this.replaceAllShapesWithImage = replaceAllShapesWithImage;
         return this;
@@ -128,6 +138,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceAllShapesWithSheetsChart")
     public ReplaceAllShapesWithSheetsChartResponse replaceAllShapesWithSheetsChart;
+
     public Response withReplaceAllShapesWithSheetsChart(ReplaceAllShapesWithSheetsChartResponse replaceAllShapesWithSheetsChart) {
         this.replaceAllShapesWithSheetsChart = replaceAllShapesWithSheetsChart;
         return this;
@@ -139,9 +150,11 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceAllText")
     public ReplaceAllTextResponse replaceAllText;
+
     public Response withReplaceAllText(ReplaceAllTextResponse replaceAllText) {
         this.replaceAllText = replaceAllText;
         return this;
     }
     
+    public Response(){}
 }

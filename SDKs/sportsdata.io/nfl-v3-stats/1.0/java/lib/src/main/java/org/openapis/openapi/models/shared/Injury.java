@@ -12,6 +12,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BodyPart")
     public String bodyPart;
+
     public Injury withBodyPart(String bodyPart) {
         this.bodyPart = bodyPart;
         return this;
@@ -20,6 +21,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeclaredInactive")
     public Boolean declaredInactive;
+
     public Injury withDeclaredInactive(Boolean declaredInactive) {
         this.declaredInactive = declaredInactive;
         return this;
@@ -28,6 +30,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InjuryID")
     public Long injuryID;
+
     public Injury withInjuryID(Long injuryID) {
         this.injuryID = injuryID;
         return this;
@@ -36,6 +39,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Injury withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public Injury withNumber(Long number) {
         this.number = number;
         return this;
@@ -52,6 +57,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Opponent")
     public String opponent;
+
     public Injury withOpponent(String opponent) {
         this.opponent = opponent;
         return this;
@@ -60,6 +66,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentID")
     public Long opponentID;
+
     public Injury withOpponentID(Long opponentID) {
         this.opponentID = opponentID;
         return this;
@@ -68,6 +75,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public Injury withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -76,6 +84,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public Injury withPosition(String position) {
         this.position = position;
         return this;
@@ -84,6 +93,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Practice")
     public String practice;
+
     public Injury withPractice(String practice) {
         this.practice = practice;
         return this;
@@ -92,6 +102,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PracticeDescription")
     public String practiceDescription;
+
     public Injury withPracticeDescription(String practiceDescription) {
         this.practiceDescription = practiceDescription;
         return this;
@@ -100,6 +111,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public Injury withSeason(Long season) {
         this.season = season;
         return this;
@@ -108,6 +120,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public Injury withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -116,6 +129,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Injury withStatus(String status) {
         this.status = status;
         return this;
@@ -124,6 +138,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public Injury withTeam(String team) {
         this.team = team;
         return this;
@@ -132,6 +147,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public Injury withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
@@ -140,6 +156,7 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public Injury withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -148,9 +165,11 @@ public class Injury {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Week")
     public Long week;
+
     public Injury withWeek(Long week) {
         this.week = week;
         return this;
     }
     
+    public Injury(){}
 }

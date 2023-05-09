@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExpireSessionResponse {
     
     public String contentType;
+
     public ExpireSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ExpireSessionResponse {
      */
     
     public java.util.Map<String, Object> expireSessionResult;
+
     public ExpireSessionResponse withExpireSessionResult(java.util.Map<String, Object> expireSessionResult) {
         this.expireSessionResult = expireSessionResult;
         return this;
@@ -26,6 +29,7 @@ public class ExpireSessionResponse {
     
     
     public Integer statusCode;
+
     public ExpireSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ExpireSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExpireSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ExpireSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

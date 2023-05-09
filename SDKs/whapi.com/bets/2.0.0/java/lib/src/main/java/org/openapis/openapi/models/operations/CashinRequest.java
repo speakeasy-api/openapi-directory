@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CashinRequest {
@@ -12,6 +13,7 @@ public class CashinRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public CashinRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class CashinRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiSecret")
     public String apiSecret;
+
     public CashinRequest withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -32,6 +35,7 @@ public class CashinRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiTicket")
     public String apiTicket;
+
     public CashinRequest withApiTicket(String apiTicket) {
         this.apiTicket = apiTicket;
         return this;
@@ -42,6 +46,7 @@ public class CashinRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=betId")
     public String betId;
+
     public CashinRequest withBetId(String betId) {
         this.betId = betId;
         return this;
@@ -52,6 +57,7 @@ public class CashinRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cashInValue")
     public Double cashInValue;
+
     public CashinRequest withCashInValue(Double cashInValue) {
         this.cashInValue = cashInValue;
         return this;
@@ -62,9 +68,18 @@ public class CashinRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cashinBetDelayId")
     public String cashinBetDelayId;
+
     public CashinRequest withCashinBetDelayId(String cashinBetDelayId) {
         this.cashinBetDelayId = cashinBetDelayId;
         return this;
     }
     
+    public CashinRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("apiSecret") String apiSecret, @JsonProperty("apiTicket") String apiTicket, @JsonProperty("betId") String betId, @JsonProperty("cashInValue") Double cashInValue, @JsonProperty("cashinBetDelayId") String cashinBetDelayId) {
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+        this.apiTicket = apiTicket;
+        this.betId = betId;
+        this.cashInValue = cashInValue;
+        this.cashinBetDelayId = cashinBetDelayId;
+  }
 }

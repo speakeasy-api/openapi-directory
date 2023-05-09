@@ -12,6 +12,7 @@ public class SDKKeysModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     public String primary;
+
     public SDKKeysModel withPrimary(String primary) {
         this.primary = primary;
         return this;
@@ -20,9 +21,11 @@ public class SDKKeysModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondary")
     public String secondary;
+
     public SDKKeysModel withSecondary(String secondary) {
         this.secondary = secondary;
         return this;
     }
     
+    public SDKKeysModel(){}
 }

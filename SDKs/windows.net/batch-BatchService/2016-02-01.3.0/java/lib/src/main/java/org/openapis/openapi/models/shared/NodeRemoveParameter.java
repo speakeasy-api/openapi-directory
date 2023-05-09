@@ -18,6 +18,7 @@ public class NodeRemoveParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeDeallocationOption")
     public NodeRemoveParameterNodeDeallocationOptionEnum nodeDeallocationOption;
+
     public NodeRemoveParameter withNodeDeallocationOption(NodeRemoveParameterNodeDeallocationOptionEnum nodeDeallocationOption) {
         this.nodeDeallocationOption = nodeDeallocationOption;
         return this;
@@ -28,6 +29,7 @@ public class NodeRemoveParameter {
      */
     @JsonProperty("nodeList")
     public String[] nodeList;
+
     public NodeRemoveParameter withNodeList(String[] nodeList) {
         this.nodeList = nodeList;
         return this;
@@ -39,9 +41,13 @@ public class NodeRemoveParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resizeTimeout")
     public String resizeTimeout;
+
     public NodeRemoveParameter withResizeTimeout(String resizeTimeout) {
         this.resizeTimeout = resizeTimeout;
         return this;
     }
     
+    public NodeRemoveParameter(@JsonProperty("nodeList") String[] nodeList) {
+        this.nodeList = nodeList;
+  }
 }

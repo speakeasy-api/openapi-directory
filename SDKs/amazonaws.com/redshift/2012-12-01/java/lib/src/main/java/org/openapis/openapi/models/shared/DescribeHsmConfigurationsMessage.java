@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeHsmConfigurationsMessage {
     
     public String hsmConfigurationIdentifier;
+
     public DescribeHsmConfigurationsMessage withHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
         this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class DescribeHsmConfigurationsMessage {
     
     
     public String marker;
+
     public DescribeHsmConfigurationsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,6 +28,7 @@ public class DescribeHsmConfigurationsMessage {
     
     
     public Long maxRecords;
+
     public DescribeHsmConfigurationsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -33,6 +36,7 @@ public class DescribeHsmConfigurationsMessage {
     
     
     public String[] tagKeys;
+
     public DescribeHsmConfigurationsMessage withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -40,9 +44,11 @@ public class DescribeHsmConfigurationsMessage {
     
     
     public String[] tagValues;
+
     public DescribeHsmConfigurationsMessage withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     
+    public DescribeHsmConfigurationsMessage(){}
 }

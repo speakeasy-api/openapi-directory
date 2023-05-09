@@ -61,11 +61,9 @@ public class AccessPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse() {{
+        org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class AccessPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsListResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsListResponse() {{
+        org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsListResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsListResponse(contentType, httpRes.statusCode()) {{
             listAccessLevelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class AccessPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesCreateResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesCreateResponse() {{
+        org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesCreateResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class AccessPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesListResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesListResponse() {{
+        org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesListResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesListResponse(contentType, httpRes.statusCode()) {{
             listAccessPoliciesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class AccessPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateResponse() {{
+        org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class AccessPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersDeleteResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersDeleteResponse() {{
+        org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersDeleteResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class AccessPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersListResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersListResponse() {{
+        org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersListResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersListResponse(contentType, httpRes.statusCode()) {{
             listServicePerimetersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class AccessPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersPatchResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersPatchResponse() {{
+        org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersPatchResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

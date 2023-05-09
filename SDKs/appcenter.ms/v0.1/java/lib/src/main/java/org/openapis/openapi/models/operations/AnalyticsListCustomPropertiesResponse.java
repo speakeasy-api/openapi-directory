@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsListCustomPropertiesResponse {
@@ -12,6 +13,7 @@ public class AnalyticsListCustomPropertiesResponse {
      */
     
     public AnalyticsListCustomProperties200ApplicationJSON analyticsListCustomProperties200ApplicationJSONObject;
+
     public AnalyticsListCustomPropertiesResponse withAnalyticsListCustomProperties200ApplicationJSONObject(AnalyticsListCustomProperties200ApplicationJSON analyticsListCustomProperties200ApplicationJSONObject) {
         this.analyticsListCustomProperties200ApplicationJSONObject = analyticsListCustomProperties200ApplicationJSONObject;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsListCustomPropertiesResponse {
      */
     
     public AnalyticsListCustomPropertiesDefaultApplicationJSON analyticsListCustomPropertiesDefaultApplicationJSONObject;
+
     public AnalyticsListCustomPropertiesResponse withAnalyticsListCustomPropertiesDefaultApplicationJSONObject(AnalyticsListCustomPropertiesDefaultApplicationJSON analyticsListCustomPropertiesDefaultApplicationJSONObject) {
         this.analyticsListCustomPropertiesDefaultApplicationJSONObject = analyticsListCustomPropertiesDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsListCustomPropertiesResponse {
     
     
     public String contentType;
+
     public AnalyticsListCustomPropertiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class AnalyticsListCustomPropertiesResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsListCustomPropertiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AnalyticsListCustomPropertiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsListCustomPropertiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsListCustomPropertiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

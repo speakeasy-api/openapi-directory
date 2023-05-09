@@ -15,6 +15,7 @@ public class VolumeStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InboxRawCount")
     public Long inboxRawCount;
+
     public VolumeStatistics withInboxRawCount(Long inboxRawCount) {
         this.inboxRawCount = inboxRawCount;
         return this;
@@ -23,6 +24,7 @@ public class VolumeStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectedInbox")
     public Long projectedInbox;
+
     public VolumeStatistics withProjectedInbox(Long projectedInbox) {
         this.projectedInbox = projectedInbox;
         return this;
@@ -31,6 +33,7 @@ public class VolumeStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectedSpam")
     public Long projectedSpam;
+
     public VolumeStatistics withProjectedSpam(Long projectedSpam) {
         this.projectedSpam = projectedSpam;
         return this;
@@ -39,9 +42,11 @@ public class VolumeStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpamRawCount")
     public Long spamRawCount;
+
     public VolumeStatistics withSpamRawCount(Long spamRawCount) {
         this.spamRawCount = spamRawCount;
         return this;
     }
     
+    public VolumeStatistics(){}
 }

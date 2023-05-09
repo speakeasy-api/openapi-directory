@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetInstanceProfileRequest {
     
     public String instanceProfileName;
+
     public GetInstanceProfileRequest withInstanceProfileName(String instanceProfileName) {
         this.instanceProfileName = instanceProfileName;
         return this;
     }
     
+    public GetInstanceProfileRequest(@JsonProperty("InstanceProfileName") String instanceProfileName) {
+        this.instanceProfileName = instanceProfileName;
+  }
 }

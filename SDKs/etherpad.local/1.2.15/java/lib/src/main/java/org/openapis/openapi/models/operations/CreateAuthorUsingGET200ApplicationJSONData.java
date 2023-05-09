@@ -12,9 +12,11 @@ public class CreateAuthorUsingGET200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorID")
     public String authorID;
+
     public CreateAuthorUsingGET200ApplicationJSONData withAuthorID(String authorID) {
         this.authorID = authorID;
         return this;
     }
     
+    public CreateAuthorUsingGET200ApplicationJSONData(){}
 }

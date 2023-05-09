@@ -15,6 +15,7 @@ public class ComponentDependencyRequirement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dependencyType")
     public ComponentDependencyTypeEnum dependencyType;
+
     public ComponentDependencyRequirement withDependencyType(ComponentDependencyTypeEnum dependencyType) {
         this.dependencyType = dependencyType;
         return this;
@@ -23,9 +24,11 @@ public class ComponentDependencyRequirement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionRequirement")
     public String versionRequirement;
+
     public ComponentDependencyRequirement withVersionRequirement(String versionRequirement) {
         this.versionRequirement = versionRequirement;
         return this;
     }
     
+    public ComponentDependencyRequirement(){}
 }

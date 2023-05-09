@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SecretScanningGetAlertResponse {
     
     public String contentType;
+
     public SecretScanningGetAlertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SecretScanningGetAlertResponse {
     
     
     public Integer statusCode;
+
     public SecretScanningGetAlertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SecretScanningGetAlertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SecretScanningGetAlertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SecretScanningGetAlertResponse {
      */
     
     public org.openapis.openapi.models.shared.SecretScanningAlert secretScanningAlert;
+
     public SecretScanningGetAlertResponse withSecretScanningAlert(org.openapis.openapi.models.shared.SecretScanningAlert secretScanningAlert) {
         this.secretScanningAlert = secretScanningAlert;
         return this;
@@ -43,9 +48,14 @@ public class SecretScanningGetAlertResponse {
      */
     
     public SecretScanningGetAlert503ApplicationJSON secretScanningGetAlert503ApplicationJSONObject;
+
     public SecretScanningGetAlertResponse withSecretScanningGetAlert503ApplicationJSONObject(SecretScanningGetAlert503ApplicationJSON secretScanningGetAlert503ApplicationJSONObject) {
         this.secretScanningGetAlert503ApplicationJSONObject = secretScanningGetAlert503ApplicationJSONObject;
         return this;
     }
     
+    public SecretScanningGetAlertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

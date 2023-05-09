@@ -15,6 +15,7 @@ public class UpdateMediaStorageConfigurationRequestBodyMediaStorageConfiguration
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public org.openapis.openapi.models.shared.MediaStorageConfigurationStatusEnum status;
+
     public UpdateMediaStorageConfigurationRequestBodyMediaStorageConfiguration withStatus(org.openapis.openapi.models.shared.MediaStorageConfigurationStatusEnum status) {
         this.status = status;
         return this;
@@ -23,9 +24,11 @@ public class UpdateMediaStorageConfigurationRequestBodyMediaStorageConfiguration
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public UpdateMediaStorageConfigurationRequestBodyMediaStorageConfiguration withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
     }
     
+    public UpdateMediaStorageConfigurationRequestBodyMediaStorageConfiguration(){}
 }

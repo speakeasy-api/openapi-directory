@@ -15,9 +15,11 @@ public class DeleteDatasetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dataset")
     public Dataset dataset;
+
     public DeleteDatasetResponse withDataset(Dataset dataset) {
         this.dataset = dataset;
         return this;
     }
     
+    public DeleteDatasetResponse(){}
 }

@@ -12,9 +12,11 @@ public class GetChatHistoryUsingPOST200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public GetChatHistoryUsingPOST200ApplicationJSONDataMessages[] messages;
+
     public GetChatHistoryUsingPOST200ApplicationJSONData withMessages(GetChatHistoryUsingPOST200ApplicationJSONDataMessages[] messages) {
         this.messages = messages;
         return this;
     }
     
+    public GetChatHistoryUsingPOST200ApplicationJSONData(){}
 }

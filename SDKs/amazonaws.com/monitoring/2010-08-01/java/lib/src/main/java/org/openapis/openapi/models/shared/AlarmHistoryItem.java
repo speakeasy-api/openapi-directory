@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class AlarmHistoryItem {
     
     public String alarmName;
+
     public AlarmHistoryItem withAlarmName(String alarmName) {
         this.alarmName = alarmName;
         return this;
@@ -19,6 +20,7 @@ public class AlarmHistoryItem {
     
     
     public AlarmTypeEnum alarmType;
+
     public AlarmHistoryItem withAlarmType(AlarmTypeEnum alarmType) {
         this.alarmType = alarmType;
         return this;
@@ -26,6 +28,7 @@ public class AlarmHistoryItem {
     
     
     public String historyData;
+
     public AlarmHistoryItem withHistoryData(String historyData) {
         this.historyData = historyData;
         return this;
@@ -33,6 +36,7 @@ public class AlarmHistoryItem {
     
     
     public HistoryItemTypeEnum historyItemType;
+
     public AlarmHistoryItem withHistoryItemType(HistoryItemTypeEnum historyItemType) {
         this.historyItemType = historyItemType;
         return this;
@@ -40,6 +44,7 @@ public class AlarmHistoryItem {
     
     
     public String historySummary;
+
     public AlarmHistoryItem withHistorySummary(String historySummary) {
         this.historySummary = historySummary;
         return this;
@@ -47,9 +52,11 @@ public class AlarmHistoryItem {
     
     
     public OffsetDateTime timestamp;
+
     public AlarmHistoryItem withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public AlarmHistoryItem(){}
 }

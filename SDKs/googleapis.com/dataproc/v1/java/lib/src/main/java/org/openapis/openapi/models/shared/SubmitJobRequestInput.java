@@ -18,6 +18,7 @@ public class SubmitJobRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public JobInput job;
+
     public SubmitJobRequestInput withJob(JobInput job) {
         this.job = job;
         return this;
@@ -29,9 +30,11 @@ public class SubmitJobRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public SubmitJobRequestInput withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public SubmitJobRequestInput(){}
 }

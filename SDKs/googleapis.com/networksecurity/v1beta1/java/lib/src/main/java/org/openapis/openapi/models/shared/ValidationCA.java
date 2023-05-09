@@ -18,6 +18,7 @@ public class ValidationCA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateProviderInstance")
     public CertificateProviderInstance certificateProviderInstance;
+
     public ValidationCA withCertificateProviderInstance(CertificateProviderInstance certificateProviderInstance) {
         this.certificateProviderInstance = certificateProviderInstance;
         return this;
@@ -29,9 +30,11 @@ public class ValidationCA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpcEndpoint")
     public GoogleCloudNetworksecurityV1beta1GrpcEndpoint grpcEndpoint;
+
     public ValidationCA withGrpcEndpoint(GoogleCloudNetworksecurityV1beta1GrpcEndpoint grpcEndpoint) {
         this.grpcEndpoint = grpcEndpoint;
         return this;
     }
     
+    public ValidationCA(){}
 }

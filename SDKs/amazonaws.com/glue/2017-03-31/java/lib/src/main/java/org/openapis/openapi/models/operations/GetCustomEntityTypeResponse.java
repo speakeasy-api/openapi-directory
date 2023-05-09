@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCustomEntityTypeResponse {
@@ -12,6 +13,7 @@ public class GetCustomEntityTypeResponse {
      */
     
     public Object accessDeniedException;
+
     public GetCustomEntityTypeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetCustomEntityTypeResponse {
     
     
     public String contentType;
+
     public GetCustomEntityTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCustomEntityTypeResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetCustomEntityTypeResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetCustomEntityTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCustomEntityTypeResponse getCustomEntityTypeResponse;
+
     public GetCustomEntityTypeResponse withGetCustomEntityTypeResponse(org.openapis.openapi.models.shared.GetCustomEntityTypeResponse getCustomEntityTypeResponse) {
         this.getCustomEntityTypeResponse = getCustomEntityTypeResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetCustomEntityTypeResponse {
      */
     
     public Object internalServiceException;
+
     public GetCustomEntityTypeResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetCustomEntityTypeResponse {
      */
     
     public Object invalidInputException;
+
     public GetCustomEntityTypeResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class GetCustomEntityTypeResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetCustomEntityTypeResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class GetCustomEntityTypeResponse {
     
     
     public Integer statusCode;
+
     public GetCustomEntityTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetCustomEntityTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCustomEntityTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCustomEntityTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

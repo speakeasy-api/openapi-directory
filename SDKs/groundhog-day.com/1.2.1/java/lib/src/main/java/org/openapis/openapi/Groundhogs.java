@@ -51,12 +51,10 @@ public class Groundhogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroundhogResponse res = new org.openapis.openapi.models.operations.GroundhogResponse() {{
+        org.openapis.openapi.models.operations.GroundhogResponse res = new org.openapis.openapi.models.operations.GroundhogResponse(contentType, httpRes.statusCode()) {{
             groundhog200ApplicationJSONObject = null;
             groundhog400ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Groundhogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroundhogsResponse res = new org.openapis.openapi.models.operations.GroundhogsResponse() {{
+        org.openapis.openapi.models.operations.GroundhogsResponse res = new org.openapis.openapi.models.operations.GroundhogsResponse(contentType, httpRes.statusCode()) {{
             groundhogs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

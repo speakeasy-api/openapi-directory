@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Connector {
     @JsonProperty("affiliationId")
     public String affiliationId;
+
     public Connector withAffiliationId(String affiliationId) {
         this.affiliationId = affiliationId;
         return this;
@@ -16,9 +17,14 @@ public class Connector {
     
     @JsonProperty("implementation")
     public String implementation;
+
     public Connector withImplementation(String implementation) {
         this.implementation = implementation;
         return this;
     }
     
+    public Connector(@JsonProperty("affiliationId") String affiliationId, @JsonProperty("implementation") String implementation) {
+        this.affiliationId = affiliationId;
+        this.implementation = implementation;
+  }
 }

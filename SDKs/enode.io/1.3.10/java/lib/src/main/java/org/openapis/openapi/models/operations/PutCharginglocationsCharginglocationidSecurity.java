@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PutCharginglocationsCharginglocationidSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String userAccessToken;
+
     public PutCharginglocationsCharginglocationidSecurity withUserAccessToken(String userAccessToken) {
         this.userAccessToken = userAccessToken;
         return this;
@@ -16,9 +17,11 @@ public class PutCharginglocationsCharginglocationidSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String userAccessToken1;
+
     public PutCharginglocationsCharginglocationidSecurity withUserAccessToken1(String userAccessToken1) {
         this.userAccessToken1 = userAccessToken1;
         return this;
     }
     
+    public PutCharginglocationsCharginglocationidSecurity(){}
 }

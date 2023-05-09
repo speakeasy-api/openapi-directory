@@ -15,9 +15,11 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public Domain domain;
+
     public DescribeDomainResponse withDomain(Domain domain) {
         this.domain = domain;
         return this;
     }
     
+    public DescribeDomainResponse(){}
 }

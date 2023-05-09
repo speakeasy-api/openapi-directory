@@ -15,9 +15,11 @@ public class AddCustomFieldSettingForPortfolio200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.CustomFieldSettingResponse data;
+
     public AddCustomFieldSettingForPortfolio200ApplicationJSON withData(org.openapis.openapi.models.shared.CustomFieldSettingResponse data) {
         this.data = data;
         return this;
     }
     
+    public AddCustomFieldSettingForPortfolio200ApplicationJSON(){}
 }

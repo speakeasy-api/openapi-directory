@@ -20,6 +20,7 @@ public class UpdatePatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovalRules")
     public PatchRuleGroup approvalRules;
+
     public UpdatePatchBaselineResult withApprovalRules(PatchRuleGroup approvalRules) {
         this.approvalRules = approvalRules;
         return this;
@@ -28,6 +29,7 @@ public class UpdatePatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovedPatches")
     public String[] approvedPatches;
+
     public UpdatePatchBaselineResult withApprovedPatches(String[] approvedPatches) {
         this.approvedPatches = approvedPatches;
         return this;
@@ -36,6 +38,7 @@ public class UpdatePatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovedPatchesComplianceLevel")
     public PatchComplianceLevelEnum approvedPatchesComplianceLevel;
+
     public UpdatePatchBaselineResult withApprovedPatchesComplianceLevel(PatchComplianceLevelEnum approvedPatchesComplianceLevel) {
         this.approvedPatchesComplianceLevel = approvedPatchesComplianceLevel;
         return this;
@@ -44,6 +47,7 @@ public class UpdatePatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovedPatchesEnableNonSecurity")
     public Boolean approvedPatchesEnableNonSecurity;
+
     public UpdatePatchBaselineResult withApprovedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
         this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
         return this;
@@ -52,6 +56,7 @@ public class UpdatePatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineId")
     public String baselineId;
+
     public UpdatePatchBaselineResult withBaselineId(String baselineId) {
         this.baselineId = baselineId;
         return this;
@@ -62,6 +67,7 @@ public class UpdatePatchBaselineResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public UpdatePatchBaselineResult withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -70,6 +76,7 @@ public class UpdatePatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdatePatchBaselineResult withDescription(String description) {
         this.description = description;
         return this;
@@ -78,6 +85,7 @@ public class UpdatePatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalFilters")
     public PatchFilterGroup globalFilters;
+
     public UpdatePatchBaselineResult withGlobalFilters(PatchFilterGroup globalFilters) {
         this.globalFilters = globalFilters;
         return this;
@@ -88,6 +96,7 @@ public class UpdatePatchBaselineResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ModifiedDate")
     public OffsetDateTime modifiedDate;
+
     public UpdatePatchBaselineResult withModifiedDate(OffsetDateTime modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -96,6 +105,7 @@ public class UpdatePatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdatePatchBaselineResult withName(String name) {
         this.name = name;
         return this;
@@ -104,6 +114,7 @@ public class UpdatePatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingSystem")
     public OperatingSystemEnum operatingSystem;
+
     public UpdatePatchBaselineResult withOperatingSystem(OperatingSystemEnum operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -112,6 +123,7 @@ public class UpdatePatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RejectedPatches")
     public String[] rejectedPatches;
+
     public UpdatePatchBaselineResult withRejectedPatches(String[] rejectedPatches) {
         this.rejectedPatches = rejectedPatches;
         return this;
@@ -120,6 +132,7 @@ public class UpdatePatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RejectedPatchesAction")
     public PatchActionEnum rejectedPatchesAction;
+
     public UpdatePatchBaselineResult withRejectedPatchesAction(PatchActionEnum rejectedPatchesAction) {
         this.rejectedPatchesAction = rejectedPatchesAction;
         return this;
@@ -128,9 +141,11 @@ public class UpdatePatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sources")
     public PatchSource[] sources;
+
     public UpdatePatchBaselineResult withSources(PatchSource[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public UpdatePatchBaselineResult(){}
 }

@@ -15,6 +15,7 @@ public class RespondToAuthChallengeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyticsMetadata")
     public AnalyticsMetadataType analyticsMetadata;
+
     public RespondToAuthChallengeRequest withAnalyticsMetadata(AnalyticsMetadataType analyticsMetadata) {
         this.analyticsMetadata = analyticsMetadata;
         return this;
@@ -22,6 +23,7 @@ public class RespondToAuthChallengeRequest {
     
     @JsonProperty("ChallengeName")
     public ChallengeNameTypeEnum challengeName;
+
     public RespondToAuthChallengeRequest withChallengeName(ChallengeNameTypeEnum challengeName) {
         this.challengeName = challengeName;
         return this;
@@ -30,6 +32,7 @@ public class RespondToAuthChallengeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChallengeResponses")
     public java.util.Map<String, String> challengeResponses;
+
     public RespondToAuthChallengeRequest withChallengeResponses(java.util.Map<String, String> challengeResponses) {
         this.challengeResponses = challengeResponses;
         return this;
@@ -37,6 +40,7 @@ public class RespondToAuthChallengeRequest {
     
     @JsonProperty("ClientId")
     public String clientId;
+
     public RespondToAuthChallengeRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -45,6 +49,7 @@ public class RespondToAuthChallengeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientMetadata")
     public java.util.Map<String, String> clientMetadata;
+
     public RespondToAuthChallengeRequest withClientMetadata(java.util.Map<String, String> clientMetadata) {
         this.clientMetadata = clientMetadata;
         return this;
@@ -53,6 +58,7 @@ public class RespondToAuthChallengeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Session")
     public String session;
+
     public RespondToAuthChallengeRequest withSession(String session) {
         this.session = session;
         return this;
@@ -61,9 +67,14 @@ public class RespondToAuthChallengeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserContextData")
     public UserContextDataType userContextData;
+
     public RespondToAuthChallengeRequest withUserContextData(UserContextDataType userContextData) {
         this.userContextData = userContextData;
         return this;
     }
     
+    public RespondToAuthChallengeRequest(@JsonProperty("ChallengeName") ChallengeNameTypeEnum challengeName, @JsonProperty("ClientId") String clientId) {
+        this.challengeName = challengeName;
+        this.clientId = clientId;
+  }
 }

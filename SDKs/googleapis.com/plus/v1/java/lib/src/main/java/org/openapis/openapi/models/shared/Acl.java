@@ -15,6 +15,7 @@ public class Acl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Acl withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class Acl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public PlusAclentryResource[] items;
+
     public Acl withItems(PlusAclentryResource[] items) {
         this.items = items;
         return this;
@@ -37,9 +39,11 @@ public class Acl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Acl withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Acl(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModifyBackupAttributesRequest {
     @JsonProperty("BackupId")
     public String backupId;
+
     public ModifyBackupAttributesRequest withBackupId(String backupId) {
         this.backupId = backupId;
         return this;
@@ -16,9 +17,14 @@ public class ModifyBackupAttributesRequest {
     
     @JsonProperty("NeverExpires")
     public Boolean neverExpires;
+
     public ModifyBackupAttributesRequest withNeverExpires(Boolean neverExpires) {
         this.neverExpires = neverExpires;
         return this;
     }
     
+    public ModifyBackupAttributesRequest(@JsonProperty("BackupId") String backupId, @JsonProperty("NeverExpires") Boolean neverExpires) {
+        this.backupId = backupId;
+        this.neverExpires = neverExpires;
+  }
 }

@@ -15,6 +15,7 @@ public class DnsRecordCreationState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public DnsRecordCreationStateCodeEnum code;
+
     public DnsRecordCreationState withCode(DnsRecordCreationStateCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class DnsRecordCreationState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DnsRecordCreationState withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DnsRecordCreationState(){}
 }

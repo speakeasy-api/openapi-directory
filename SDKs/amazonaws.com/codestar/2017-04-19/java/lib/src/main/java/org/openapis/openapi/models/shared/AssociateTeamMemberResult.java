@@ -15,9 +15,11 @@ public class AssociateTeamMemberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public AssociateTeamMemberResult withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
     }
     
+    public AssociateTeamMemberResult(){}
 }

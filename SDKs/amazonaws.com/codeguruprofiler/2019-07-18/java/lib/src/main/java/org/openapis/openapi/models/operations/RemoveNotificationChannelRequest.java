@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveNotificationChannelRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public RemoveNotificationChannelRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class RemoveNotificationChannelRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public RemoveNotificationChannelRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class RemoveNotificationChannelRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public RemoveNotificationChannelRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class RemoveNotificationChannelRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public RemoveNotificationChannelRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class RemoveNotificationChannelRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public RemoveNotificationChannelRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class RemoveNotificationChannelRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public RemoveNotificationChannelRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class RemoveNotificationChannelRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public RemoveNotificationChannelRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class RemoveNotificationChannelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
     public String channelId;
+
     public RemoveNotificationChannelRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -71,9 +80,14 @@ public class RemoveNotificationChannelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profilingGroupName")
     public String profilingGroupName;
+
     public RemoveNotificationChannelRequest withProfilingGroupName(String profilingGroupName) {
         this.profilingGroupName = profilingGroupName;
         return this;
     }
     
+    public RemoveNotificationChannelRequest(@JsonProperty("channelId") String channelId, @JsonProperty("profilingGroupName") String profilingGroupName) {
+        this.channelId = channelId;
+        this.profilingGroupName = profilingGroupName;
+  }
 }

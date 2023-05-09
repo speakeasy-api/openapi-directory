@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderExportationsRequest {
@@ -16,6 +17,7 @@ public class GetOrderExportationsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetOrderExportationsRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -26,6 +28,7 @@ public class GetOrderExportationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Integer pageNumber;
+
     public GetOrderExportationsRequest withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -36,6 +39,7 @@ public class GetOrderExportationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public GetOrderExportationsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -46,9 +50,15 @@ public class GetOrderExportationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storeId")
     public String storeId;
+
     public GetOrderExportationsRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public GetOrderExportationsRequest(@JsonProperty("pageNumber") Integer pageNumber, @JsonProperty("pageSize") Integer pageSize, @JsonProperty("storeId") String storeId) {
+        this.pageNumber = pageNumber;
+        this.pageSize = pageSize;
+        this.storeId = storeId;
+  }
 }

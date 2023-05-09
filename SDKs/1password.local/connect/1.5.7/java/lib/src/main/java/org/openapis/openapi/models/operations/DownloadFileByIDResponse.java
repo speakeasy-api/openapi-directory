@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DownloadFileByIDResponse {
     
     public String contentType;
+
     public DownloadFileByIDResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DownloadFileByIDResponse {
      */
     
     public byte[] downloadFileByID200ApplicationOctetStreamBinaryString;
+
     public DownloadFileByIDResponse withDownloadFileByID200ApplicationOctetStreamBinaryString(byte[] downloadFileByID200ApplicationOctetStreamBinaryString) {
         this.downloadFileByID200ApplicationOctetStreamBinaryString = downloadFileByID200ApplicationOctetStreamBinaryString;
         return this;
@@ -29,6 +32,7 @@ public class DownloadFileByIDResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public DownloadFileByIDResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -36,6 +40,7 @@ public class DownloadFileByIDResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public DownloadFileByIDResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -43,6 +48,7 @@ public class DownloadFileByIDResponse {
     
     
     public Integer statusCode;
+
     public DownloadFileByIDResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class DownloadFileByIDResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DownloadFileByIDResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DownloadFileByIDResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

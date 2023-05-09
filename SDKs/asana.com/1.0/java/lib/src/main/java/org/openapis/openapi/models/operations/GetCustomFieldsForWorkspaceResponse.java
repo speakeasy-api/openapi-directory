@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCustomFieldsForWorkspaceResponse {
     
     public String contentType;
+
     public GetCustomFieldsForWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCustomFieldsForWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetCustomFieldsForWorkspaceResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetCustomFieldsForWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public GetCustomFieldsForWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetCustomFieldsForWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCustomFieldsForWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetCustomFieldsForWorkspaceResponse {
      */
     
     public GetCustomFieldsForWorkspace200ApplicationJSON getCustomFieldsForWorkspace200ApplicationJSONObject;
+
     public GetCustomFieldsForWorkspaceResponse withGetCustomFieldsForWorkspace200ApplicationJSONObject(GetCustomFieldsForWorkspace200ApplicationJSON getCustomFieldsForWorkspace200ApplicationJSONObject) {
         this.getCustomFieldsForWorkspace200ApplicationJSONObject = getCustomFieldsForWorkspace200ApplicationJSONObject;
         return this;
     }
     
+    public GetCustomFieldsForWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

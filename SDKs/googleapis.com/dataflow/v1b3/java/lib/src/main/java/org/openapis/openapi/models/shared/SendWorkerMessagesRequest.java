@@ -18,6 +18,7 @@ public class SendWorkerMessagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public SendWorkerMessagesRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -29,9 +30,11 @@ public class SendWorkerMessagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerMessages")
     public WorkerMessage[] workerMessages;
+
     public SendWorkerMessagesRequest withWorkerMessages(WorkerMessage[] workerMessages) {
         this.workerMessages = workerMessages;
         return this;
     }
     
+    public SendWorkerMessagesRequest(){}
 }

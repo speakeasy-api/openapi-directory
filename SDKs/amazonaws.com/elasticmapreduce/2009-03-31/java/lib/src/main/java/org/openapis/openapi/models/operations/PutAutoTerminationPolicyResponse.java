@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAutoTerminationPolicyResponse {
     
     public String contentType;
+
     public PutAutoTerminationPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutAutoTerminationPolicyResponse {
      */
     
     public java.util.Map<String, Object> putAutoTerminationPolicyOutput;
+
     public PutAutoTerminationPolicyResponse withPutAutoTerminationPolicyOutput(java.util.Map<String, Object> putAutoTerminationPolicyOutput) {
         this.putAutoTerminationPolicyOutput = putAutoTerminationPolicyOutput;
         return this;
@@ -26,6 +29,7 @@ public class PutAutoTerminationPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutAutoTerminationPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PutAutoTerminationPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAutoTerminationPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutAutoTerminationPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

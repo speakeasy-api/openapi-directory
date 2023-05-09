@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VpcConfigurationDescription {
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public VpcConfigurationDescription withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -19,6 +20,7 @@ public class VpcConfigurationDescription {
     
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public VpcConfigurationDescription withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -26,6 +28,7 @@ public class VpcConfigurationDescription {
     
     @JsonProperty("VpcConfigurationId")
     public String vpcConfigurationId;
+
     public VpcConfigurationDescription withVpcConfigurationId(String vpcConfigurationId) {
         this.vpcConfigurationId = vpcConfigurationId;
         return this;
@@ -33,9 +36,16 @@ public class VpcConfigurationDescription {
     
     @JsonProperty("VpcId")
     public String vpcId;
+
     public VpcConfigurationDescription withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public VpcConfigurationDescription(@JsonProperty("SecurityGroupIds") String[] securityGroupIds, @JsonProperty("SubnetIds") String[] subnetIds, @JsonProperty("VpcConfigurationId") String vpcConfigurationId, @JsonProperty("VpcId") String vpcId) {
+        this.securityGroupIds = securityGroupIds;
+        this.subnetIds = subnetIds;
+        this.vpcConfigurationId = vpcConfigurationId;
+        this.vpcId = vpcId;
+  }
 }

@@ -12,6 +12,7 @@ public class ProvideFeedbackRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=document")
     public String document;
+
     public ProvideFeedbackRequestBody withDocument(String document) {
         this.document = document;
         return this;
@@ -22,6 +23,7 @@ public class ProvideFeedbackRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=expectedLabel")
     public String expectedLabel;
+
     public ProvideFeedbackRequestBody withExpectedLabel(String expectedLabel) {
         this.expectedLabel = expectedLabel;
         return this;
@@ -32,6 +34,7 @@ public class ProvideFeedbackRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=modelId")
     public String modelId;
+
     public ProvideFeedbackRequestBody withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -42,9 +45,11 @@ public class ProvideFeedbackRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public ProvideFeedbackRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ProvideFeedbackRequestBody(){}
 }

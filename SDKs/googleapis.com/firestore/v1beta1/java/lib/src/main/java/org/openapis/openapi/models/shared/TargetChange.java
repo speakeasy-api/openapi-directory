@@ -18,6 +18,7 @@ public class TargetChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public Status cause;
+
     public TargetChange withCause(Status cause) {
         this.cause = cause;
         return this;
@@ -29,6 +30,7 @@ public class TargetChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public TargetChange withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -40,6 +42,7 @@ public class TargetChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resumeToken")
     public String resumeToken;
+
     public TargetChange withResumeToken(String resumeToken) {
         this.resumeToken = resumeToken;
         return this;
@@ -51,6 +54,7 @@ public class TargetChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetChangeType")
     public TargetChangeTargetChangeTypeEnum targetChangeType;
+
     public TargetChange withTargetChangeType(TargetChangeTargetChangeTypeEnum targetChangeType) {
         this.targetChangeType = targetChangeType;
         return this;
@@ -62,9 +66,11 @@ public class TargetChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetIds")
     public Integer[] targetIds;
+
     public TargetChange withTargetIds(Integer[] targetIds) {
         this.targetIds = targetIds;
         return this;
     }
     
+    public TargetChange(){}
 }

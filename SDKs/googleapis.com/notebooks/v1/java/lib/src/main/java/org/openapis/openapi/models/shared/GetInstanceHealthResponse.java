@@ -18,6 +18,7 @@ public class GetInstanceHealthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthInfo")
     public java.util.Map<String, String> healthInfo;
+
     public GetInstanceHealthResponse withHealthInfo(java.util.Map<String, String> healthInfo) {
         this.healthInfo = healthInfo;
         return this;
@@ -29,9 +30,11 @@ public class GetInstanceHealthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthState")
     public GetInstanceHealthResponseHealthStateEnum healthState;
+
     public GetInstanceHealthResponse withHealthState(GetInstanceHealthResponseHealthStateEnum healthState) {
         this.healthState = healthState;
         return this;
     }
     
+    public GetInstanceHealthResponse(){}
 }

@@ -18,6 +18,7 @@ public class DeleteFirewallResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Firewall")
     public Firewall firewall;
+
     public DeleteFirewallResponse withFirewall(Firewall firewall) {
         this.firewall = firewall;
         return this;
@@ -29,9 +30,11 @@ public class DeleteFirewallResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallStatus")
     public FirewallStatus firewallStatus;
+
     public DeleteFirewallResponse withFirewallStatus(FirewallStatus firewallStatus) {
         this.firewallStatus = firewallStatus;
         return this;
     }
     
+    public DeleteFirewallResponse(){}
 }

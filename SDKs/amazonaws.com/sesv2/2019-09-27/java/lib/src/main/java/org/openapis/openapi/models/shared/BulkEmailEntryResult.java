@@ -15,6 +15,7 @@ public class BulkEmailEntryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public String error;
+
     public BulkEmailEntryResult withError(String error) {
         this.error = error;
         return this;
@@ -23,6 +24,7 @@ public class BulkEmailEntryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageId")
     public String messageId;
+
     public BulkEmailEntryResult withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -31,9 +33,11 @@ public class BulkEmailEntryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public BulkEmailStatusEnum status;
+
     public BulkEmailEntryResult withStatus(BulkEmailStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public BulkEmailEntryResult(){}
 }

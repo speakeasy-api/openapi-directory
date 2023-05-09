@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateEgressOnlyInternetGatewayRequestTagSpecifications {
     
     public CreateEgressOnlyInternetGatewayRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateEgressOnlyInternetGatewayRequestTagSpecifications withResourceType(CreateEgressOnlyInternetGatewayRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateEgressOnlyInternetGatewayRequestTagSpecifications {
     
     
     public CreateEgressOnlyInternetGatewayRequestTagSpecificationsTags[] tags;
+
     public CreateEgressOnlyInternetGatewayRequestTagSpecifications withTags(CreateEgressOnlyInternetGatewayRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEgressOnlyInternetGatewayRequestTagSpecifications(){}
 }

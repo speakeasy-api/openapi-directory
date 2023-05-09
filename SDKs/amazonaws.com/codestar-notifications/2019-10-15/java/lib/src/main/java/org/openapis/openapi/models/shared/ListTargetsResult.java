@@ -15,6 +15,7 @@ public class ListTargetsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTargetsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTargetsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public TargetSummary[] targets;
+
     public ListTargetsResult withTargets(TargetSummary[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public ListTargetsResult(){}
 }

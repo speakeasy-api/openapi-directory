@@ -15,9 +15,11 @@ public class CreateAnnotationStoreRequestBodyReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceArn")
     public String referenceArn;
+
     public CreateAnnotationStoreRequestBodyReference withReferenceArn(String referenceArn) {
         this.referenceArn = referenceArn;
         return this;
     }
     
+    public CreateAnnotationStoreRequestBodyReference(){}
 }

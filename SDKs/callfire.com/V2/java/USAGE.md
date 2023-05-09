@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AddCallBroadcastBatchSecurity;
 import org.openapis.openapi.models.operations.AddCallBroadcastBatchRequest;
 import org.openapis.openapi.models.operations.AddCallBroadcastBatchResponse;
+import org.openapis.openapi.models.operations.AddCallBroadcastBatchSecurity;
 import org.openapis.openapi.models.shared.BatchRequest;
 import org.openapis.openapi.models.shared.Recipient;
 
@@ -16,58 +15,68 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AddCallBroadcastBatchRequest req = new AddCallBroadcastBatchRequest() {{
+            AddCallBroadcastBatchRequest req = new AddCallBroadcastBatchRequest(548814L) {{
                 batchRequest = new BatchRequest() {{
-                    contactListId = 548814;
-                    name = "provident";
+                    contactListId = 592845L;
+                    name = "Ellis Mitchell";
                     recipients = new org.openapis.openapi.models.shared.Recipient[]{{
                         add(new Recipient() {{
                             attributes = new java.util.HashMap<String, String>() {{
-                                put("unde", "nulla");
-                                put("corrupti", "illum");
-                                put("vel", "error");
-                                put("deserunt", "suscipit");
+                                put("error", "deserunt");
+                                put("suscipit", "iure");
                             }};
-                            contactId = 437587;
-                            fromNumber = "magnam";
-                            phoneNumber = "debitis";
+                            contactId = 297534L;
+                            fromNumber = "debitis";
+                            phoneNumber = "ipsa";
                         }}),
                         add(new Recipient() {{
                             attributes = new java.util.HashMap<String, String>() {{
-                                put("delectus", "tempora");
+                                put("tempora", "suscipit");
+                                put("molestiae", "minus");
+                                put("placeat", "voluptatum");
+                                put("iusto", "excepturi");
                             }};
-                            contactId = 383441;
-                            fromNumber = "molestiae";
-                            phoneNumber = "minus";
+                            contactId = 392785L;
+                            fromNumber = "recusandae";
+                            phoneNumber = "temporibus";
                         }}),
                         add(new Recipient() {{
                             attributes = new java.util.HashMap<String, String>() {{
-                                put("voluptatum", "iusto");
-                                put("excepturi", "nisi");
-                                put("recusandae", "temporibus");
-                                put("ab", "quis");
+                                put("quis", "veritatis");
                             }};
-                            contactId = 87129;
-                            fromNumber = "deserunt";
-                            phoneNumber = "perferendis";
+                            contactId = 648172L;
+                            fromNumber = "perferendis";
+                            phoneNumber = "ipsam";
+                        }}),
+                        add(new Recipient() {{
+                            attributes = new java.util.HashMap<String, String>() {{
+                                put("sapiente", "quo");
+                                put("odit", "at");
+                                put("at", "maiores");
+                                put("molestiae", "quod");
+                            }};
+                            contactId = 800911L;
+                            fromNumber = "esse";
+                            phoneNumber = "totam";
                         }}),
                     }};
                     scrubDuplicates = false;
-                }};
-                id = 368241;
+                }};;
                 strictValidation = false;
-            }}            
+            }};            
 
-            AddCallBroadcastBatchResponse res = sdk.calls.addCallBroadcastBatch(req, new AddCallBroadcastBatchSecurity() {{
+            AddCallBroadcastBatchResponse res = sdk.calls.addCallBroadcastBatch(req, new AddCallBroadcastBatchSecurity("porro", "dolorum") {{
                 password = "YOUR_PASSWORD_HERE";
                 username = "YOUR_USERNAME_HERE";
             }});
 
-            if (res.resourceId.isPresent()) {
+            if (res.resourceId != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

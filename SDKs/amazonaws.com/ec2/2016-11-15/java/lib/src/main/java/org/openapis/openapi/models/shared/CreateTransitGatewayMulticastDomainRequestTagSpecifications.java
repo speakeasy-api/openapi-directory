@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTransitGatewayMulticastDomainRequestTagSpecifications {
     
     public CreateTransitGatewayMulticastDomainRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateTransitGatewayMulticastDomainRequestTagSpecifications withResourceType(CreateTransitGatewayMulticastDomainRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateTransitGatewayMulticastDomainRequestTagSpecifications {
     
     
     public CreateTransitGatewayMulticastDomainRequestTagSpecificationsTags[] tags;
+
     public CreateTransitGatewayMulticastDomainRequestTagSpecifications withTags(CreateTransitGatewayMulticastDomainRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateTransitGatewayMulticastDomainRequestTagSpecifications(){}
 }

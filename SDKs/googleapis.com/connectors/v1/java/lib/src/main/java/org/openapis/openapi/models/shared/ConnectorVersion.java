@@ -18,6 +18,7 @@ public class ConnectorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authConfigTemplates")
     public AuthConfigTemplate[] authConfigTemplates;
+
     public ConnectorVersion withAuthConfigTemplates(AuthConfigTemplate[] authConfigTemplates) {
         this.authConfigTemplates = authConfigTemplates;
         return this;
@@ -29,6 +30,7 @@ public class ConnectorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configVariableTemplates")
     public ConfigVariableTemplate[] configVariableTemplates;
+
     public ConnectorVersion withConfigVariableTemplates(ConfigVariableTemplate[] configVariableTemplates) {
         this.configVariableTemplates = configVariableTemplates;
         return this;
@@ -40,8 +42,21 @@ public class ConnectorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public ConnectorVersion withCreateTime(String createTime) {
         this.createTime = createTime;
+        return this;
+    }
+    
+    /**
+     * Output only. List of destination configs needed to create a connection.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("destinationConfigTemplates")
+    public DestinationConfigTemplate[] destinationConfigTemplates;
+
+    public ConnectorVersion withDestinationConfigTemplates(DestinationConfigTemplate[] destinationConfigTemplates) {
+        this.destinationConfigTemplates = destinationConfigTemplates;
         return this;
     }
     
@@ -51,6 +66,7 @@ public class ConnectorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ConnectorVersion withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +78,7 @@ public class ConnectorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("egressControlConfig")
     public EgressControlConfig egressControlConfig;
+
     public ConnectorVersion withEgressControlConfig(EgressControlConfig egressControlConfig) {
         this.egressControlConfig = egressControlConfig;
         return this;
@@ -73,6 +90,7 @@ public class ConnectorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ConnectorVersion withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,6 +102,7 @@ public class ConnectorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchStage")
     public ConnectorVersionLaunchStageEnum launchStage;
+
     public ConnectorVersion withLaunchStage(ConnectorVersionLaunchStageEnum launchStage) {
         this.launchStage = launchStage;
         return this;
@@ -95,6 +114,7 @@ public class ConnectorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConnectorVersion withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +126,7 @@ public class ConnectorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseVersion")
     public String releaseVersion;
+
     public ConnectorVersion withReleaseVersion(String releaseVersion) {
         this.releaseVersion = releaseVersion;
         return this;
@@ -117,6 +138,7 @@ public class ConnectorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleGrant")
     public RoleGrant roleGrant;
+
     public ConnectorVersion withRoleGrant(RoleGrant roleGrant) {
         this.roleGrant = roleGrant;
         return this;
@@ -128,6 +150,7 @@ public class ConnectorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleGrants")
     public RoleGrant[] roleGrants;
+
     public ConnectorVersion withRoleGrants(RoleGrant[] roleGrants) {
         this.roleGrants = roleGrants;
         return this;
@@ -139,6 +162,7 @@ public class ConnectorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslConfigTemplate")
     public SslConfigTemplate sslConfigTemplate;
+
     public ConnectorVersion withSslConfigTemplate(SslConfigTemplate sslConfigTemplate) {
         this.sslConfigTemplate = sslConfigTemplate;
         return this;
@@ -150,6 +174,7 @@ public class ConnectorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedRuntimeFeatures")
     public SupportedRuntimeFeatures supportedRuntimeFeatures;
+
     public ConnectorVersion withSupportedRuntimeFeatures(SupportedRuntimeFeatures supportedRuntimeFeatures) {
         this.supportedRuntimeFeatures = supportedRuntimeFeatures;
         return this;
@@ -161,9 +186,11 @@ public class ConnectorVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public ConnectorVersion withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ConnectorVersion(){}
 }

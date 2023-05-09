@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DocumentSimilarityRequestBody {
@@ -12,6 +13,7 @@ public class DocumentSimilarityRequestBody {
      */
     @SpeakeasyMetadata("form:name=api_key")
     public String apiKey;
+
     public DocumentSimilarityRequestBody withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class DocumentSimilarityRequestBody {
      */
     @SpeakeasyMetadata("form:name=copy")
     public String copy;
+
     public DocumentSimilarityRequestBody withCopy(String copy) {
         this.copy = copy;
         return this;
@@ -32,9 +35,13 @@ public class DocumentSimilarityRequestBody {
      */
     @SpeakeasyMetadata("form:name=original")
     public String original;
+
     public DocumentSimilarityRequestBody withOriginal(String original) {
         this.original = original;
         return this;
     }
     
+    public DocumentSimilarityRequestBody(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

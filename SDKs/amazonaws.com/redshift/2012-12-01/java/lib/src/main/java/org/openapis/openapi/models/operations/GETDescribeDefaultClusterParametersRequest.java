@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeDefaultClusterParametersRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeDefaultClusterParametersActionEnum action;
+
     public GETDescribeDefaultClusterParametersRequest withAction(GETDescribeDefaultClusterParametersActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeDefaultClusterParametersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeDefaultClusterParametersRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeDefaultClusterParametersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeDefaultClusterParametersRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeDefaultClusterParametersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ParameterGroupFamily")
     public String parameterGroupFamily;
+
     public GETDescribeDefaultClusterParametersRequest withParameterGroupFamily(String parameterGroupFamily) {
         this.parameterGroupFamily = parameterGroupFamily;
         return this;
@@ -46,6 +51,7 @@ public class GETDescribeDefaultClusterParametersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeDefaultClusterParametersVersionEnum version;
+
     public GETDescribeDefaultClusterParametersRequest withVersion(GETDescribeDefaultClusterParametersVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETDescribeDefaultClusterParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeDefaultClusterParametersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETDescribeDefaultClusterParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeDefaultClusterParametersRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETDescribeDefaultClusterParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeDefaultClusterParametersRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETDescribeDefaultClusterParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeDefaultClusterParametersRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETDescribeDefaultClusterParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeDefaultClusterParametersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETDescribeDefaultClusterParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeDefaultClusterParametersRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETDescribeDefaultClusterParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeDefaultClusterParametersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeDefaultClusterParametersRequest(@JsonProperty("Action") GETDescribeDefaultClusterParametersActionEnum action, @JsonProperty("ParameterGroupFamily") String parameterGroupFamily, @JsonProperty("Version") GETDescribeDefaultClusterParametersVersionEnum version) {
+        this.action = action;
+        this.parameterGroupFamily = parameterGroupFamily;
+        this.version = version;
+  }
 }

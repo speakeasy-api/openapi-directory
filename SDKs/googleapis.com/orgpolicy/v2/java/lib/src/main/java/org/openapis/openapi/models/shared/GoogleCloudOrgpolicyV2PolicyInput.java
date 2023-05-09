@@ -18,6 +18,7 @@ public class GoogleCloudOrgpolicyV2PolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternate")
     public GoogleCloudOrgpolicyV2AlternatePolicySpecInput alternate;
+
     public GoogleCloudOrgpolicyV2PolicyInput withAlternate(GoogleCloudOrgpolicyV2AlternatePolicySpecInput alternate) {
         this.alternate = alternate;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudOrgpolicyV2PolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dryRunSpec")
     public GoogleCloudOrgpolicyV2PolicySpecInput dryRunSpec;
+
     public GoogleCloudOrgpolicyV2PolicyInput withDryRunSpec(GoogleCloudOrgpolicyV2PolicySpecInput dryRunSpec) {
         this.dryRunSpec = dryRunSpec;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudOrgpolicyV2PolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudOrgpolicyV2PolicyInput withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudOrgpolicyV2PolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public GoogleCloudOrgpolicyV2PolicySpecInput spec;
+
     public GoogleCloudOrgpolicyV2PolicyInput withSpec(GoogleCloudOrgpolicyV2PolicySpecInput spec) {
         this.spec = spec;
         return this;
     }
     
+    public GoogleCloudOrgpolicyV2PolicyInput(){}
 }

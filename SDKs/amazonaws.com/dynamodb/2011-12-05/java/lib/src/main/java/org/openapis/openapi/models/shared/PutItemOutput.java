@@ -15,6 +15,7 @@ public class PutItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, AttributeValue> attributes;
+
     public PutItemOutput withAttributes(java.util.Map<String, AttributeValue> attributes) {
         this.attributes = attributes;
         return this;
@@ -26,9 +27,11 @@ public class PutItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedCapacityUnits")
     public Double consumedCapacityUnits;
+
     public PutItemOutput withConsumedCapacityUnits(Double consumedCapacityUnits) {
         this.consumedCapacityUnits = consumedCapacityUnits;
         return this;
     }
     
+    public PutItemOutput(){}
 }

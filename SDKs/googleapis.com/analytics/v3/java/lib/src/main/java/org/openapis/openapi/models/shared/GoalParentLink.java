@@ -18,6 +18,7 @@ public class GoalParentLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public GoalParentLink withHref(String href) {
         this.href = href;
         return this;
@@ -29,9 +30,11 @@ public class GoalParentLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoalParentLink withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoalParentLink(){}
 }

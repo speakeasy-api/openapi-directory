@@ -12,6 +12,7 @@ public class LocalizedString {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public LocalizedString withLanguage(String language) {
         this.language = language;
         return this;
@@ -20,9 +21,11 @@ public class LocalizedString {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public LocalizedString withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public LocalizedString(){}
 }

@@ -20,6 +20,7 @@ public class PolicyComplianceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationResults")
     public EvaluationResult[] evaluationResults;
+
     public PolicyComplianceStatus withEvaluationResults(EvaluationResult[] evaluationResults) {
         this.evaluationResults = evaluationResults;
         return this;
@@ -28,6 +29,7 @@ public class PolicyComplianceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IssueInfoMap")
     public java.util.Map<String, String> issueInfoMap;
+
     public PolicyComplianceStatus withIssueInfoMap(java.util.Map<String, String> issueInfoMap) {
         this.issueInfoMap = issueInfoMap;
         return this;
@@ -38,6 +40,7 @@ public class PolicyComplianceStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public PolicyComplianceStatus withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -46,6 +49,7 @@ public class PolicyComplianceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemberAccount")
     public String memberAccount;
+
     public PolicyComplianceStatus withMemberAccount(String memberAccount) {
         this.memberAccount = memberAccount;
         return this;
@@ -54,6 +58,7 @@ public class PolicyComplianceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyId")
     public String policyId;
+
     public PolicyComplianceStatus withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
@@ -62,6 +67,7 @@ public class PolicyComplianceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyName")
     public String policyName;
+
     public PolicyComplianceStatus withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -70,9 +76,11 @@ public class PolicyComplianceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyOwner")
     public String policyOwner;
+
     public PolicyComplianceStatus withPolicyOwner(String policyOwner) {
         this.policyOwner = policyOwner;
         return this;
     }
     
+    public PolicyComplianceStatus(){}
 }

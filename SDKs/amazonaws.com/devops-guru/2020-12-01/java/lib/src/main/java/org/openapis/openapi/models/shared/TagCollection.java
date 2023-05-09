@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TagCollection {
     @JsonProperty("AppBoundaryKey")
     public String appBoundaryKey;
+
     public TagCollection withAppBoundaryKey(String appBoundaryKey) {
         this.appBoundaryKey = appBoundaryKey;
         return this;
@@ -19,9 +20,14 @@ public class TagCollection {
     
     @JsonProperty("TagValues")
     public String[] tagValues;
+
     public TagCollection withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     
+    public TagCollection(@JsonProperty("AppBoundaryKey") String appBoundaryKey, @JsonProperty("TagValues") String[] tagValues) {
+        this.appBoundaryKey = appBoundaryKey;
+        this.tagValues = tagValues;
+  }
 }

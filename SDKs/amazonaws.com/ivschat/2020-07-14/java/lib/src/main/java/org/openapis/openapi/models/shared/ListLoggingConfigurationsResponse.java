@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListLoggingConfigurationsResponse {
     @JsonProperty("loggingConfigurations")
     public LoggingConfigurationSummary[] loggingConfigurations;
+
     public ListLoggingConfigurationsResponse withLoggingConfigurations(LoggingConfigurationSummary[] loggingConfigurations) {
         this.loggingConfigurations = loggingConfigurations;
         return this;
@@ -22,9 +23,13 @@ public class ListLoggingConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListLoggingConfigurationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLoggingConfigurationsResponse(@JsonProperty("loggingConfigurations") LoggingConfigurationSummary[] loggingConfigurations) {
+        this.loggingConfigurations = loggingConfigurations;
+  }
 }

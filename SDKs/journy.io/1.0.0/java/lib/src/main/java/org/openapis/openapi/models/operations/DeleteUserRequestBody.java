@@ -15,9 +15,13 @@ public class DeleteUserRequestBody {
      */
     @JsonProperty("identification")
     public DeleteUserRequestBodyIdentification identification;
+
     public DeleteUserRequestBody withIdentification(DeleteUserRequestBodyIdentification identification) {
         this.identification = identification;
         return this;
     }
     
+    public DeleteUserRequestBody(@JsonProperty("identification") DeleteUserRequestBodyIdentification identification) {
+        this.identification = identification;
+  }
 }

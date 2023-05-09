@@ -15,6 +15,7 @@ public class ListEventsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSource")
     public org.openapis.openapi.models.shared.EventDataSourceEnum dataSource;
+
     public ListEventsRequestBodyFilters withDataSource(org.openapis.openapi.models.shared.EventDataSourceEnum dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -23,6 +24,7 @@ public class ListEventsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventClass")
     public org.openapis.openapi.models.shared.EventClassEnum eventClass;
+
     public ListEventsRequestBodyFilters withEventClass(org.openapis.openapi.models.shared.EventClassEnum eventClass) {
         this.eventClass = eventClass;
         return this;
@@ -31,6 +33,7 @@ public class ListEventsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSource")
     public String eventSource;
+
     public ListEventsRequestBodyFilters withEventSource(String eventSource) {
         this.eventSource = eventSource;
         return this;
@@ -39,6 +42,7 @@ public class ListEventsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventTimeRange")
     public org.openapis.openapi.models.shared.EventTimeRange eventTimeRange;
+
     public ListEventsRequestBodyFilters withEventTimeRange(org.openapis.openapi.models.shared.EventTimeRange eventTimeRange) {
         this.eventTimeRange = eventTimeRange;
         return this;
@@ -47,6 +51,7 @@ public class ListEventsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightId")
     public String insightId;
+
     public ListEventsRequestBodyFilters withInsightId(String insightId) {
         this.insightId = insightId;
         return this;
@@ -58,9 +63,11 @@ public class ListEventsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceCollection")
     public org.openapis.openapi.models.shared.ResourceCollection resourceCollection;
+
     public ListEventsRequestBodyFilters withResourceCollection(org.openapis.openapi.models.shared.ResourceCollection resourceCollection) {
         this.resourceCollection = resourceCollection;
         return this;
     }
     
+    public ListEventsRequestBodyFilters(){}
 }

@@ -15,6 +15,7 @@ public class Streams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hls_mp3_128_url")
     public String hlsMp3128Url;
+
     public Streams withHlsMp3128Url(String hlsMp3128Url) {
         this.hlsMp3128Url = hlsMp3128Url;
         return this;
@@ -23,6 +24,7 @@ public class Streams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hls_opus_64_url")
     public String hlsOpus64Url;
+
     public Streams withHlsOpus64Url(String hlsOpus64Url) {
         this.hlsOpus64Url = hlsOpus64Url;
         return this;
@@ -31,6 +33,7 @@ public class Streams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http_mp3_128_url")
     public String httpMp3128Url;
+
     public Streams withHttpMp3128Url(String httpMp3128Url) {
         this.httpMp3128Url = httpMp3128Url;
         return this;
@@ -39,9 +42,11 @@ public class Streams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_mp3_128_url")
     public String previewMp3128Url;
+
     public Streams withPreviewMp3128Url(String previewMp3128Url) {
         this.previewMp3128Url = previewMp3128Url;
         return this;
     }
     
+    public Streams(){}
 }

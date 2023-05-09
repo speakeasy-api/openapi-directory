@@ -20,6 +20,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Certificate withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class Certificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Certificate withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public Certificate withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -46,6 +49,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainValidationRecords")
     public DomainValidationRecord[] domainValidationRecords;
+
     public Certificate withDomainValidationRecords(DomainValidationRecord[] domainValidationRecords) {
         this.domainValidationRecords = domainValidationRecords;
         return this;
@@ -54,6 +58,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eligibleToRenew")
     public String eligibleToRenew;
+
     public Certificate withEligibleToRenew(String eligibleToRenew) {
         this.eligibleToRenew = eligibleToRenew;
         return this;
@@ -62,6 +67,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inUseResourceCount")
     public Long inUseResourceCount;
+
     public Certificate withInUseResourceCount(Long inUseResourceCount) {
         this.inUseResourceCount = inUseResourceCount;
         return this;
@@ -72,6 +78,7 @@ public class Certificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("issuedAt")
     public OffsetDateTime issuedAt;
+
     public Certificate withIssuedAt(OffsetDateTime issuedAt) {
         this.issuedAt = issuedAt;
         return this;
@@ -80,6 +87,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerCA")
     public String issuerCA;
+
     public Certificate withIssuerCA(String issuerCA) {
         this.issuerCA = issuerCA;
         return this;
@@ -88,6 +96,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyAlgorithm")
     public String keyAlgorithm;
+
     public Certificate withKeyAlgorithm(String keyAlgorithm) {
         this.keyAlgorithm = keyAlgorithm;
         return this;
@@ -96,6 +105,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Certificate withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +116,7 @@ public class Certificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("notAfter")
     public OffsetDateTime notAfter;
+
     public Certificate withNotAfter(OffsetDateTime notAfter) {
         this.notAfter = notAfter;
         return this;
@@ -116,6 +127,7 @@ public class Certificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("notBefore")
     public OffsetDateTime notBefore;
+
     public Certificate withNotBefore(OffsetDateTime notBefore) {
         this.notBefore = notBefore;
         return this;
@@ -124,6 +136,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewalSummary")
     public RenewalSummary renewalSummary;
+
     public Certificate withRenewalSummary(RenewalSummary renewalSummary) {
         this.renewalSummary = renewalSummary;
         return this;
@@ -132,6 +145,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestFailureReason")
     public String requestFailureReason;
+
     public Certificate withRequestFailureReason(String requestFailureReason) {
         this.requestFailureReason = requestFailureReason;
         return this;
@@ -140,6 +154,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revocationReason")
     public String revocationReason;
+
     public Certificate withRevocationReason(String revocationReason) {
         this.revocationReason = revocationReason;
         return this;
@@ -150,6 +165,7 @@ public class Certificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("revokedAt")
     public OffsetDateTime revokedAt;
+
     public Certificate withRevokedAt(OffsetDateTime revokedAt) {
         this.revokedAt = revokedAt;
         return this;
@@ -158,6 +174,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumber")
     public String serialNumber;
+
     public Certificate withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -166,6 +183,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CertificateStatusEnum status;
+
     public Certificate withStatus(CertificateStatusEnum status) {
         this.status = status;
         return this;
@@ -174,6 +192,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAlternativeNames")
     public String[] subjectAlternativeNames;
+
     public Certificate withSubjectAlternativeNames(String[] subjectAlternativeNames) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         return this;
@@ -182,6 +201,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportCode")
     public String supportCode;
+
     public Certificate withSupportCode(String supportCode) {
         this.supportCode = supportCode;
         return this;
@@ -190,9 +210,11 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public Certificate withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public Certificate(){}
 }

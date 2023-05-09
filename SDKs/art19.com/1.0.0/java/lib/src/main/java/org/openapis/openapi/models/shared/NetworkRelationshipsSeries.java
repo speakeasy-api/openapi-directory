@@ -15,9 +15,11 @@ public class NetworkRelationshipsSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceIdentifier[] data;
+
     public NetworkRelationshipsSeries withData(ResourceIdentifier[] data) {
         this.data = data;
         return this;
     }
     
+    public NetworkRelationshipsSeries(){}
 }

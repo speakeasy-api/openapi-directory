@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDetectSyntaxResponse {
@@ -12,6 +13,7 @@ public class BatchDetectSyntaxResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDetectSyntaxResponse batchDetectSyntaxResponse;
+
     public BatchDetectSyntaxResponse withBatchDetectSyntaxResponse(org.openapis.openapi.models.shared.BatchDetectSyntaxResponse batchDetectSyntaxResponse) {
         this.batchDetectSyntaxResponse = batchDetectSyntaxResponse;
         return this;
@@ -22,6 +24,7 @@ public class BatchDetectSyntaxResponse {
      */
     
     public Object batchSizeLimitExceededException;
+
     public BatchDetectSyntaxResponse withBatchSizeLimitExceededException(Object batchSizeLimitExceededException) {
         this.batchSizeLimitExceededException = batchSizeLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class BatchDetectSyntaxResponse {
     
     
     public String contentType;
+
     public BatchDetectSyntaxResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchDetectSyntaxResponse {
      */
     
     public Object internalServerException;
+
     public BatchDetectSyntaxResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class BatchDetectSyntaxResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchDetectSyntaxResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class BatchDetectSyntaxResponse {
     
     
     public Integer statusCode;
+
     public BatchDetectSyntaxResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchDetectSyntaxResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDetectSyntaxResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class BatchDetectSyntaxResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public BatchDetectSyntaxResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -83,9 +92,14 @@ public class BatchDetectSyntaxResponse {
      */
     
     public Object unsupportedLanguageException;
+
     public BatchDetectSyntaxResponse withUnsupportedLanguageException(Object unsupportedLanguageException) {
         this.unsupportedLanguageException = unsupportedLanguageException;
         return this;
     }
     
+    public BatchDetectSyntaxResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

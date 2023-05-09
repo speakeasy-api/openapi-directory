@@ -18,6 +18,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactGroupMembership")
     public ContactGroupMembership contactGroupMembership;
+
     public Membership withContactGroupMembership(ContactGroupMembership contactGroupMembership) {
         this.contactGroupMembership = contactGroupMembership;
         return this;
@@ -29,6 +30,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainMembership")
     public DomainMembership domainMembership;
+
     public Membership withDomainMembership(DomainMembership domainMembership) {
         this.domainMembership = domainMembership;
         return this;
@@ -40,9 +42,11 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FieldMetadata metadata;
+
     public Membership withMetadata(FieldMetadata metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public Membership(){}
 }

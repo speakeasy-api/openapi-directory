@@ -14,6 +14,7 @@ public class UsePurpose {
      */
     @JsonProperty("code")
     public String code;
+
     public UsePurpose withCode(String code) {
         this.code = code;
         return this;
@@ -22,6 +23,7 @@ public class UsePurpose {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refUri")
     public String refUri;
+
     public UsePurpose withRefUri(String refUri) {
         this.refUri = refUri;
         return this;
@@ -29,9 +31,14 @@ public class UsePurpose {
     
     @JsonProperty("text")
     public String text;
+
     public UsePurpose withText(String text) {
         this.text = text;
         return this;
     }
     
+    public UsePurpose(@JsonProperty("code") String code, @JsonProperty("text") String text) {
+        this.code = code;
+        this.text = text;
+  }
 }

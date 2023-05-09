@@ -12,6 +12,7 @@ public class EntryContent {
      */
     @JsonProperty("careContextReference")
     public String careContextReference;
+
     public EntryContent withCareContextReference(String careContextReference) {
         this.careContextReference = careContextReference;
         return this;
@@ -22,6 +23,7 @@ public class EntryContent {
      */
     @JsonProperty("checksum")
     public String checksum;
+
     public EntryContent withChecksum(String checksum) {
         this.checksum = checksum;
         return this;
@@ -32,6 +34,7 @@ public class EntryContent {
      */
     @JsonProperty("content")
     public String content;
+
     public EntryContent withContent(String content) {
         this.content = content;
         return this;
@@ -42,9 +45,16 @@ public class EntryContent {
      */
     @JsonProperty("media")
     public EntryContentMediaEnum media;
+
     public EntryContent withMedia(EntryContentMediaEnum media) {
         this.media = media;
         return this;
     }
     
+    public EntryContent(@JsonProperty("careContextReference") String careContextReference, @JsonProperty("checksum") String checksum, @JsonProperty("content") String content, @JsonProperty("media") EntryContentMediaEnum media) {
+        this.careContextReference = careContextReference;
+        this.checksum = checksum;
+        this.content = content;
+        this.media = media;
+  }
 }

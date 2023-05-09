@@ -20,6 +20,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovedVersion")
     public String approvedVersion;
+
     public DocumentDescription withApprovedVersion(String approvedVersion) {
         this.approvedVersion = approvedVersion;
         return this;
@@ -28,6 +29,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachmentsInformation")
     public AttachmentInformation[] attachmentsInformation;
+
     public DocumentDescription withAttachmentsInformation(AttachmentInformation[] attachmentsInformation) {
         this.attachmentsInformation = attachmentsInformation;
         return this;
@@ -36,6 +38,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Author")
     public String author;
+
     public DocumentDescription withAuthor(String author) {
         this.author = author;
         return this;
@@ -44,6 +47,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Category")
     public String[] category;
+
     public DocumentDescription withCategory(String[] category) {
         this.category = category;
         return this;
@@ -52,6 +56,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CategoryEnum")
     public String[] categoryEnum;
+
     public DocumentDescription withCategoryEnum(String[] categoryEnum) {
         this.categoryEnum = categoryEnum;
         return this;
@@ -62,6 +67,7 @@ public class DocumentDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public DocumentDescription withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -70,6 +76,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultVersion")
     public String defaultVersion;
+
     public DocumentDescription withDefaultVersion(String defaultVersion) {
         this.defaultVersion = defaultVersion;
         return this;
@@ -78,6 +85,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DocumentDescription withDescription(String description) {
         this.description = description;
         return this;
@@ -86,6 +94,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public DocumentDescription withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -94,6 +103,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentFormat")
     public DocumentFormatEnum documentFormat;
+
     public DocumentDescription withDocumentFormat(DocumentFormatEnum documentFormat) {
         this.documentFormat = documentFormat;
         return this;
@@ -102,6 +112,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentType")
     public DocumentTypeEnum documentType;
+
     public DocumentDescription withDocumentType(DocumentTypeEnum documentType) {
         this.documentType = documentType;
         return this;
@@ -110,6 +121,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public DocumentDescription withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -118,6 +130,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hash")
     public String hash;
+
     public DocumentDescription withHash(String hash) {
         this.hash = hash;
         return this;
@@ -126,6 +139,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HashType")
     public DocumentHashTypeEnum hashType;
+
     public DocumentDescription withHashType(DocumentHashTypeEnum hashType) {
         this.hashType = hashType;
         return this;
@@ -134,6 +148,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestVersion")
     public String latestVersion;
+
     public DocumentDescription withLatestVersion(String latestVersion) {
         this.latestVersion = latestVersion;
         return this;
@@ -142,6 +157,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DocumentDescription withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +166,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public DocumentDescription withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -158,6 +175,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public DocumentParameter[] parameters;
+
     public DocumentDescription withParameters(DocumentParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -166,6 +184,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PendingReviewVersion")
     public String pendingReviewVersion;
+
     public DocumentDescription withPendingReviewVersion(String pendingReviewVersion) {
         this.pendingReviewVersion = pendingReviewVersion;
         return this;
@@ -174,6 +193,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlatformTypes")
     public PlatformTypeEnum[] platformTypes;
+
     public DocumentDescription withPlatformTypes(PlatformTypeEnum[] platformTypes) {
         this.platformTypes = platformTypes;
         return this;
@@ -182,6 +202,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Requires")
     public DocumentRequires[] requires;
+
     public DocumentDescription withRequires(DocumentRequires[] requires) {
         this.requires = requires;
         return this;
@@ -190,6 +211,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReviewInformation")
     public ReviewInformation[] reviewInformation;
+
     public DocumentDescription withReviewInformation(ReviewInformation[] reviewInformation) {
         this.reviewInformation = reviewInformation;
         return this;
@@ -198,6 +220,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReviewStatus")
     public ReviewStatusEnum reviewStatus;
+
     public DocumentDescription withReviewStatus(ReviewStatusEnum reviewStatus) {
         this.reviewStatus = reviewStatus;
         return this;
@@ -206,6 +229,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaVersion")
     public String schemaVersion;
+
     public DocumentDescription withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -214,6 +238,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sha1")
     public String sha1;
+
     public DocumentDescription withSha1(String sha1) {
         this.sha1 = sha1;
         return this;
@@ -222,6 +247,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DocumentStatusEnum status;
+
     public DocumentDescription withStatus(DocumentStatusEnum status) {
         this.status = status;
         return this;
@@ -230,6 +256,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusInformation")
     public String statusInformation;
+
     public DocumentDescription withStatusInformation(String statusInformation) {
         this.statusInformation = statusInformation;
         return this;
@@ -238,6 +265,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public DocumentDescription withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -246,6 +274,7 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetType")
     public String targetType;
+
     public DocumentDescription withTargetType(String targetType) {
         this.targetType = targetType;
         return this;
@@ -254,9 +283,11 @@ public class DocumentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionName")
     public String versionName;
+
     public DocumentDescription withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public DocumentDescription(){}
 }

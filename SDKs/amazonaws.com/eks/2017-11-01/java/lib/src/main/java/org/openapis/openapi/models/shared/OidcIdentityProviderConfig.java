@@ -15,6 +15,7 @@ public class OidcIdentityProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public OidcIdentityProviderConfig withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,6 +24,7 @@ public class OidcIdentityProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterName")
     public String clusterName;
+
     public OidcIdentityProviderConfig withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -31,6 +33,7 @@ public class OidcIdentityProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupsClaim")
     public String groupsClaim;
+
     public OidcIdentityProviderConfig withGroupsClaim(String groupsClaim) {
         this.groupsClaim = groupsClaim;
         return this;
@@ -39,6 +42,7 @@ public class OidcIdentityProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupsPrefix")
     public String groupsPrefix;
+
     public OidcIdentityProviderConfig withGroupsPrefix(String groupsPrefix) {
         this.groupsPrefix = groupsPrefix;
         return this;
@@ -47,6 +51,7 @@ public class OidcIdentityProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProviderConfigArn")
     public String identityProviderConfigArn;
+
     public OidcIdentityProviderConfig withIdentityProviderConfigArn(String identityProviderConfigArn) {
         this.identityProviderConfigArn = identityProviderConfigArn;
         return this;
@@ -55,6 +60,7 @@ public class OidcIdentityProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProviderConfigName")
     public String identityProviderConfigName;
+
     public OidcIdentityProviderConfig withIdentityProviderConfigName(String identityProviderConfigName) {
         this.identityProviderConfigName = identityProviderConfigName;
         return this;
@@ -63,6 +69,7 @@ public class OidcIdentityProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerUrl")
     public String issuerUrl;
+
     public OidcIdentityProviderConfig withIssuerUrl(String issuerUrl) {
         this.issuerUrl = issuerUrl;
         return this;
@@ -71,6 +78,7 @@ public class OidcIdentityProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredClaims")
     public java.util.Map<String, String> requiredClaims;
+
     public OidcIdentityProviderConfig withRequiredClaims(java.util.Map<String, String> requiredClaims) {
         this.requiredClaims = requiredClaims;
         return this;
@@ -79,6 +87,7 @@ public class OidcIdentityProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ConfigStatusEnum status;
+
     public OidcIdentityProviderConfig withStatus(ConfigStatusEnum status) {
         this.status = status;
         return this;
@@ -87,6 +96,7 @@ public class OidcIdentityProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public OidcIdentityProviderConfig withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -95,6 +105,7 @@ public class OidcIdentityProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usernameClaim")
     public String usernameClaim;
+
     public OidcIdentityProviderConfig withUsernameClaim(String usernameClaim) {
         this.usernameClaim = usernameClaim;
         return this;
@@ -103,9 +114,11 @@ public class OidcIdentityProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usernamePrefix")
     public String usernamePrefix;
+
     public OidcIdentityProviderConfig withUsernamePrefix(String usernamePrefix) {
         this.usernamePrefix = usernamePrefix;
         return this;
     }
     
+    public OidcIdentityProviderConfig(){}
 }

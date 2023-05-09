@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DependencyGraphDiff {
     @JsonProperty("change_type")
     public DependencyGraphDiffChangeTypeEnum changeType;
+
     public DependencyGraphDiff withChangeType(DependencyGraphDiffChangeTypeEnum changeType) {
         this.changeType = changeType;
         return this;
@@ -16,6 +17,7 @@ public class DependencyGraphDiff {
     
     @JsonProperty("ecosystem")
     public String ecosystem;
+
     public DependencyGraphDiff withEcosystem(String ecosystem) {
         this.ecosystem = ecosystem;
         return this;
@@ -23,6 +25,7 @@ public class DependencyGraphDiff {
     
     @JsonProperty("license")
     public String license;
+
     public DependencyGraphDiff withLicense(String license) {
         this.license = license;
         return this;
@@ -30,6 +33,7 @@ public class DependencyGraphDiff {
     
     @JsonProperty("manifest")
     public String manifest;
+
     public DependencyGraphDiff withManifest(String manifest) {
         this.manifest = manifest;
         return this;
@@ -37,6 +41,7 @@ public class DependencyGraphDiff {
     
     @JsonProperty("name")
     public String name;
+
     public DependencyGraphDiff withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +49,7 @@ public class DependencyGraphDiff {
     
     @JsonProperty("package_url")
     public String packageUrl;
+
     public DependencyGraphDiff withPackageUrl(String packageUrl) {
         this.packageUrl = packageUrl;
         return this;
@@ -51,6 +57,7 @@ public class DependencyGraphDiff {
     
     @JsonProperty("source_repository_url")
     public String sourceRepositoryUrl;
+
     public DependencyGraphDiff withSourceRepositoryUrl(String sourceRepositoryUrl) {
         this.sourceRepositoryUrl = sourceRepositoryUrl;
         return this;
@@ -58,6 +65,7 @@ public class DependencyGraphDiff {
     
     @JsonProperty("version")
     public String version;
+
     public DependencyGraphDiff withVersion(String version) {
         this.version = version;
         return this;
@@ -65,9 +73,21 @@ public class DependencyGraphDiff {
     
     @JsonProperty("vulnerabilities")
     public DependencyGraphDiffVulnerabilities[] vulnerabilities;
+
     public DependencyGraphDiff withVulnerabilities(DependencyGraphDiffVulnerabilities[] vulnerabilities) {
         this.vulnerabilities = vulnerabilities;
         return this;
     }
     
+    public DependencyGraphDiff(@JsonProperty("change_type") DependencyGraphDiffChangeTypeEnum changeType, @JsonProperty("ecosystem") String ecosystem, @JsonProperty("license") String license, @JsonProperty("manifest") String manifest, @JsonProperty("name") String name, @JsonProperty("package_url") String packageUrl, @JsonProperty("source_repository_url") String sourceRepositoryUrl, @JsonProperty("version") String version, @JsonProperty("vulnerabilities") DependencyGraphDiffVulnerabilities[] vulnerabilities) {
+        this.changeType = changeType;
+        this.ecosystem = ecosystem;
+        this.license = license;
+        this.manifest = manifest;
+        this.name = name;
+        this.packageUrl = packageUrl;
+        this.sourceRepositoryUrl = sourceRepositoryUrl;
+        this.version = version;
+        this.vulnerabilities = vulnerabilities;
+  }
 }

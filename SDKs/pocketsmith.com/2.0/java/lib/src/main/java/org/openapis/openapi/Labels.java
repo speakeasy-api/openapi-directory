@@ -51,12 +51,10 @@ public class Labels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdLabelsResponse res = new org.openapis.openapi.models.operations.GetUsersIdLabelsResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdLabelsResponse res = new org.openapis.openapi.models.operations.GetUsersIdLabelsResponse(contentType, httpRes.statusCode()) {{
             getUsersIdLabels200ApplicationJSONStrings = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

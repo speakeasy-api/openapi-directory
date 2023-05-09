@@ -18,9 +18,11 @@ public class GoalSetData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goals")
     public GoalData[] goals;
+
     public GoalSetData withGoals(GoalData[] goals) {
         this.goals = goals;
         return this;
     }
     
+    public GoalSetData(){}
 }

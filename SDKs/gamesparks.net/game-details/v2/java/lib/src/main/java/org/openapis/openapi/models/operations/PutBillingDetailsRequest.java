@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutBillingDetailsRequest {
@@ -12,6 +13,7 @@ public class PutBillingDetailsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BillingDetailsModel billingDetailsModel;
+
     public PutBillingDetailsRequest withBillingDetailsModel(org.openapis.openapi.models.shared.BillingDetailsModel billingDetailsModel) {
         this.billingDetailsModel = billingDetailsModel;
         return this;
@@ -22,9 +24,14 @@ public class PutBillingDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public PutBillingDetailsRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public PutBillingDetailsRequest(@JsonProperty("BillingDetailsModel") org.openapis.openapi.models.shared.BillingDetailsModel billingDetailsModel, @JsonProperty("apiKey") String apiKey) {
+        this.billingDetailsModel = billingDetailsModel;
+        this.apiKey = apiKey;
+  }
 }

@@ -12,9 +12,11 @@ public class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventories")
     public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventories[] inventories;
+
     public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElements withInventories(GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventories[] inventories) {
         this.inventories = inventories;
         return this;
     }
     
+    public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElements(){}
 }

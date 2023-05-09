@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScpActionDefinition {
     @JsonProperty("PolicyId")
     public String policyId;
+
     public ScpActionDefinition withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
@@ -19,9 +20,14 @@ public class ScpActionDefinition {
     
     @JsonProperty("TargetIds")
     public String[] targetIds;
+
     public ScpActionDefinition withTargetIds(String[] targetIds) {
         this.targetIds = targetIds;
         return this;
     }
     
+    public ScpActionDefinition(@JsonProperty("PolicyId") String policyId, @JsonProperty("TargetIds") String[] targetIds) {
+        this.policyId = policyId;
+        this.targetIds = targetIds;
+  }
 }

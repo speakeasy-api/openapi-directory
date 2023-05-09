@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1SentimentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("magnitude")
     public Float magnitude;
+
     public GoogleCloudContactcenterinsightsV1SentimentData withMagnitude(Float magnitude) {
         this.magnitude = magnitude;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1SentimentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public GoogleCloudContactcenterinsightsV1SentimentData withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1SentimentData(){}
 }

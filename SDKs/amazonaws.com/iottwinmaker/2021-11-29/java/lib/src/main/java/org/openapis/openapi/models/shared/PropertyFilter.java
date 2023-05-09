@@ -15,6 +15,7 @@ public class PropertyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public String operator;
+
     public PropertyFilter withOperator(String operator) {
         this.operator = operator;
         return this;
@@ -23,6 +24,7 @@ public class PropertyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyName")
     public String propertyName;
+
     public PropertyFilter withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
@@ -31,9 +33,11 @@ public class PropertyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public DataValue value;
+
     public PropertyFilter withValue(DataValue value) {
         this.value = value;
         return this;
     }
     
+    public PropertyFilter(){}
 }

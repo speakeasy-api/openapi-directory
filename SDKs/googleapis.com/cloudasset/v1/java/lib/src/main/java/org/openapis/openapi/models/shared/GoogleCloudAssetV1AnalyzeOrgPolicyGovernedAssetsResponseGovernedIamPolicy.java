@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy {
     /**
-     * The full resource name of the resource associated with this IAM policy. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Cloud Asset Inventory Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-name-format) for more information.
+     * The full resource name of the resource on which this IAM policy is set. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Cloud Asset Inventory Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-name-format) for more information.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachedResource")
     public String attachedResource;
+
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy withAttachedResource(String attachedResource) {
         this.attachedResource = attachedResource;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIam
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folders")
     public String[] folders;
+
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy withFolders(String[] folders) {
         this.folders = folders;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIam
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIam
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public Policy policy;
+
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy withPolicy(Policy policy) {
         this.policy = policy;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIam
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy(){}
 }

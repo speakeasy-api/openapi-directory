@@ -15,6 +15,7 @@ public class PripcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public PripcRequestBodyCertificateParameters certificateParameters;
+
     public PripcRequestBody withCertificateParameters(PripcRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class PripcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public PripcRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class PripcRequestBody {
      */
     @JsonProperty("format")
     public PripcRequestBodyFormatEnum format;
+
     public PripcRequestBody withFormat(PripcRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class PripcRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public PripcRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public PripcRequestBody(@JsonProperty("format") PripcRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

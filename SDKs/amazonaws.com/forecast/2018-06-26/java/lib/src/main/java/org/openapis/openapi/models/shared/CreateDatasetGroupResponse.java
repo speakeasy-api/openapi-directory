@@ -15,9 +15,11 @@ public class CreateDatasetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetGroupArn")
     public String datasetGroupArn;
+
     public CreateDatasetGroupResponse withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
     }
     
+    public CreateDatasetGroupResponse(){}
 }

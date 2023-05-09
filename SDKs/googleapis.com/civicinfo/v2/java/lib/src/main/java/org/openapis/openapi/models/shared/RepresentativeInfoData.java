@@ -18,6 +18,7 @@ public class RepresentativeInfoData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("divisions")
     public java.util.Map<String, GeographicDivision> divisions;
+
     public RepresentativeInfoData withDivisions(java.util.Map<String, GeographicDivision> divisions) {
         this.divisions = divisions;
         return this;
@@ -29,6 +30,7 @@ public class RepresentativeInfoData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offices")
     public Office[] offices;
+
     public RepresentativeInfoData withOffices(Office[] offices) {
         this.offices = offices;
         return this;
@@ -40,9 +42,11 @@ public class RepresentativeInfoData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("officials")
     public Official[] officials;
+
     public RepresentativeInfoData withOfficials(Official[] officials) {
         this.officials = officials;
         return this;
     }
     
+    public RepresentativeInfoData(){}
 }

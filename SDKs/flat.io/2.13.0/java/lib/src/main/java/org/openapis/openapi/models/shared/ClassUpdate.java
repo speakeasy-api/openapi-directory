@@ -18,6 +18,7 @@ public class ClassUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ClassUpdate withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class ClassUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section")
     public String section;
+
     public ClassUpdate withSection(String section) {
         this.section = section;
         return this;
     }
     
+    public ClassUpdate(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Capabilities {
     @JsonProperty("aogh_supported")
     public Boolean aoghSupported;
+
     public Capabilities withAoghSupported(Boolean aoghSupported) {
         this.aoghSupported = aoghSupported;
         return this;
@@ -16,6 +17,7 @@ public class Capabilities {
     
     @JsonProperty("assistant_supported")
     public Boolean assistantSupported;
+
     public Capabilities withAssistantSupported(Boolean assistantSupported) {
         this.assistantSupported = assistantSupported;
         return this;
@@ -23,6 +25,7 @@ public class Capabilities {
     
     @JsonProperty("audio_hdr_supported")
     public Boolean audioHdrSupported;
+
     public Capabilities withAudioHdrSupported(Boolean audioHdrSupported) {
         this.audioHdrSupported = audioHdrSupported;
         return this;
@@ -30,6 +33,7 @@ public class Capabilities {
     
     @JsonProperty("audio_surround_mode_supported")
     public Boolean audioSurroundModeSupported;
+
     public Capabilities withAudioSurroundModeSupported(Boolean audioSurroundModeSupported) {
         this.audioSurroundModeSupported = audioSurroundModeSupported;
         return this;
@@ -37,6 +41,7 @@ public class Capabilities {
     
     @JsonProperty("ble_supported")
     public Boolean bleSupported;
+
     public Capabilities withBleSupported(Boolean bleSupported) {
         this.bleSupported = bleSupported;
         return this;
@@ -44,6 +49,7 @@ public class Capabilities {
     
     @JsonProperty("bluetooth_audio_sink_supported")
     public Boolean bluetoothAudioSinkSupported;
+
     public Capabilities withBluetoothAudioSinkSupported(Boolean bluetoothAudioSinkSupported) {
         this.bluetoothAudioSinkSupported = bluetoothAudioSinkSupported;
         return this;
@@ -51,6 +57,7 @@ public class Capabilities {
     
     @JsonProperty("bluetooth_audio_source_supported")
     public Boolean bluetoothAudioSourceSupported;
+
     public Capabilities withBluetoothAudioSourceSupported(Boolean bluetoothAudioSourceSupported) {
         this.bluetoothAudioSourceSupported = bluetoothAudioSourceSupported;
         return this;
@@ -58,6 +65,7 @@ public class Capabilities {
     
     @JsonProperty("bluetooth_supported")
     public Boolean bluetoothSupported;
+
     public Capabilities withBluetoothSupported(Boolean bluetoothSupported) {
         this.bluetoothSupported = bluetoothSupported;
         return this;
@@ -65,6 +73,7 @@ public class Capabilities {
     
     @JsonProperty("cloudcast_supported")
     public Boolean cloudcastSupported;
+
     public Capabilities withCloudcastSupported(Boolean cloudcastSupported) {
         this.cloudcastSupported = cloudcastSupported;
         return this;
@@ -72,6 +81,7 @@ public class Capabilities {
     
     @JsonProperty("content_filters_supported")
     public Boolean contentFiltersSupported;
+
     public Capabilities withContentFiltersSupported(Boolean contentFiltersSupported) {
         this.contentFiltersSupported = contentFiltersSupported;
         return this;
@@ -79,6 +89,7 @@ public class Capabilities {
     
     @JsonProperty("display_supported")
     public Boolean displaySupported;
+
     public Capabilities withDisplaySupported(Boolean displaySupported) {
         this.displaySupported = displaySupported;
         return this;
@@ -86,6 +97,7 @@ public class Capabilities {
     
     @JsonProperty("fdr_supported")
     public Boolean fdrSupported;
+
     public Capabilities withFdrSupported(Boolean fdrSupported) {
         this.fdrSupported = fdrSupported;
         return this;
@@ -93,6 +105,7 @@ public class Capabilities {
     
     @JsonProperty("hdmi_prefer_50hz_supported")
     public Boolean hdmiPrefer50hzSupported;
+
     public Capabilities withHdmiPrefer50hzSupported(Boolean hdmiPrefer50hzSupported) {
         this.hdmiPrefer50hzSupported = hdmiPrefer50hzSupported;
         return this;
@@ -100,6 +113,7 @@ public class Capabilities {
     
     @JsonProperty("hdmi_prefer_high_fps_supported")
     public Boolean hdmiPreferHighFpsSupported;
+
     public Capabilities withHdmiPreferHighFpsSupported(Boolean hdmiPreferHighFpsSupported) {
         this.hdmiPreferHighFpsSupported = hdmiPreferHighFpsSupported;
         return this;
@@ -107,6 +121,7 @@ public class Capabilities {
     
     @JsonProperty("hotspot_supported")
     public Boolean hotspotSupported;
+
     public Capabilities withHotspotSupported(Boolean hotspotSupported) {
         this.hotspotSupported = hotspotSupported;
         return this;
@@ -114,6 +129,7 @@ public class Capabilities {
     
     @JsonProperty("https_setup_supported")
     public Boolean httpsSetupSupported;
+
     public Capabilities withHttpsSetupSupported(Boolean httpsSetupSupported) {
         this.httpsSetupSupported = httpsSetupSupported;
         return this;
@@ -121,6 +137,7 @@ public class Capabilities {
     
     @JsonProperty("input_management_supported")
     public Boolean inputManagementSupported;
+
     public Capabilities withInputManagementSupported(Boolean inputManagementSupported) {
         this.inputManagementSupported = inputManagementSupported;
         return this;
@@ -128,6 +145,7 @@ public class Capabilities {
     
     @JsonProperty("keep_hotspot_until_connected_supported")
     public Boolean keepHotspotUntilConnectedSupported;
+
     public Capabilities withKeepHotspotUntilConnectedSupported(Boolean keepHotspotUntilConnectedSupported) {
         this.keepHotspotUntilConnectedSupported = keepHotspotUntilConnectedSupported;
         return this;
@@ -135,6 +153,7 @@ public class Capabilities {
     
     @JsonProperty("multi_user_supported")
     public Boolean multiUserSupported;
+
     public Capabilities withMultiUserSupported(Boolean multiUserSupported) {
         this.multiUserSupported = multiUserSupported;
         return this;
@@ -142,6 +161,7 @@ public class Capabilities {
     
     @JsonProperty("multichannel_group_supported")
     public Boolean multichannelGroupSupported;
+
     public Capabilities withMultichannelGroupSupported(Boolean multichannelGroupSupported) {
         this.multichannelGroupSupported = multichannelGroupSupported;
         return this;
@@ -149,6 +169,7 @@ public class Capabilities {
     
     @JsonProperty("multizone_supported")
     public Boolean multizoneSupported;
+
     public Capabilities withMultizoneSupported(Boolean multizoneSupported) {
         this.multizoneSupported = multizoneSupported;
         return this;
@@ -156,6 +177,7 @@ public class Capabilities {
     
     @JsonProperty("night_mode_supported")
     public Boolean nightModeSupported;
+
     public Capabilities withNightModeSupported(Boolean nightModeSupported) {
         this.nightModeSupported = nightModeSupported;
         return this;
@@ -163,6 +185,7 @@ public class Capabilities {
     
     @JsonProperty("night_mode_supported_v2")
     public Boolean nightModeSupportedV2;
+
     public Capabilities withNightModeSupportedV2(Boolean nightModeSupportedV2) {
         this.nightModeSupportedV2 = nightModeSupportedV2;
         return this;
@@ -170,6 +193,7 @@ public class Capabilities {
     
     @JsonProperty("opencast_supported")
     public Boolean opencastSupported;
+
     public Capabilities withOpencastSupported(Boolean opencastSupported) {
         this.opencastSupported = opencastSupported;
         return this;
@@ -177,6 +201,7 @@ public class Capabilities {
     
     @JsonProperty("preview_channel_supported")
     public Boolean previewChannelSupported;
+
     public Capabilities withPreviewChannelSupported(Boolean previewChannelSupported) {
         this.previewChannelSupported = previewChannelSupported;
         return this;
@@ -184,6 +209,7 @@ public class Capabilities {
     
     @JsonProperty("reboot_supported")
     public Boolean rebootSupported;
+
     public Capabilities withRebootSupported(Boolean rebootSupported) {
         this.rebootSupported = rebootSupported;
         return this;
@@ -191,6 +217,7 @@ public class Capabilities {
     
     @JsonProperty("remote_ducking_supported")
     public Boolean remoteDuckingSupported;
+
     public Capabilities withRemoteDuckingSupported(Boolean remoteDuckingSupported) {
         this.remoteDuckingSupported = remoteDuckingSupported;
         return this;
@@ -198,6 +225,7 @@ public class Capabilities {
     
     @JsonProperty("separate_tts_volume_supported")
     public Boolean separateTtsVolumeSupported;
+
     public Capabilities withSeparateTtsVolumeSupported(Boolean separateTtsVolumeSupported) {
         this.separateTtsVolumeSupported = separateTtsVolumeSupported;
         return this;
@@ -205,6 +233,7 @@ public class Capabilities {
     
     @JsonProperty("setup_supported")
     public Boolean setupSupported;
+
     public Capabilities withSetupSupported(Boolean setupSupported) {
         this.setupSupported = setupSupported;
         return this;
@@ -212,6 +241,7 @@ public class Capabilities {
     
     @JsonProperty("sleep_mode_supported")
     public Boolean sleepModeSupported;
+
     public Capabilities withSleepModeSupported(Boolean sleepModeSupported) {
         this.sleepModeSupported = sleepModeSupported;
         return this;
@@ -219,6 +249,7 @@ public class Capabilities {
     
     @JsonProperty("stats_supported")
     public Boolean statsSupported;
+
     public Capabilities withStatsSupported(Boolean statsSupported) {
         this.statsSupported = statsSupported;
         return this;
@@ -226,6 +257,7 @@ public class Capabilities {
     
     @JsonProperty("system_sound_effects_supported")
     public Boolean systemSoundEffectsSupported;
+
     public Capabilities withSystemSoundEffectsSupported(Boolean systemSoundEffectsSupported) {
         this.systemSoundEffectsSupported = systemSoundEffectsSupported;
         return this;
@@ -233,6 +265,7 @@ public class Capabilities {
     
     @JsonProperty("user_eq_supported")
     public Boolean userEqSupported;
+
     public Capabilities withUserEqSupported(Boolean userEqSupported) {
         this.userEqSupported = userEqSupported;
         return this;
@@ -240,6 +273,7 @@ public class Capabilities {
     
     @JsonProperty("wifi_auto_save_supported")
     public Boolean wifiAutoSaveSupported;
+
     public Capabilities withWifiAutoSaveSupported(Boolean wifiAutoSaveSupported) {
         this.wifiAutoSaveSupported = wifiAutoSaveSupported;
         return this;
@@ -247,6 +281,7 @@ public class Capabilities {
     
     @JsonProperty("wifi_regulatory_domain_locked")
     public Boolean wifiRegulatoryDomainLocked;
+
     public Capabilities withWifiRegulatoryDomainLocked(Boolean wifiRegulatoryDomainLocked) {
         this.wifiRegulatoryDomainLocked = wifiRegulatoryDomainLocked;
         return this;
@@ -254,9 +289,48 @@ public class Capabilities {
     
     @JsonProperty("wifi_supported")
     public Boolean wifiSupported;
+
     public Capabilities withWifiSupported(Boolean wifiSupported) {
         this.wifiSupported = wifiSupported;
         return this;
     }
     
+    public Capabilities(@JsonProperty("aogh_supported") Boolean aoghSupported, @JsonProperty("assistant_supported") Boolean assistantSupported, @JsonProperty("audio_hdr_supported") Boolean audioHdrSupported, @JsonProperty("audio_surround_mode_supported") Boolean audioSurroundModeSupported, @JsonProperty("ble_supported") Boolean bleSupported, @JsonProperty("bluetooth_audio_sink_supported") Boolean bluetoothAudioSinkSupported, @JsonProperty("bluetooth_audio_source_supported") Boolean bluetoothAudioSourceSupported, @JsonProperty("bluetooth_supported") Boolean bluetoothSupported, @JsonProperty("cloudcast_supported") Boolean cloudcastSupported, @JsonProperty("content_filters_supported") Boolean contentFiltersSupported, @JsonProperty("display_supported") Boolean displaySupported, @JsonProperty("fdr_supported") Boolean fdrSupported, @JsonProperty("hdmi_prefer_50hz_supported") Boolean hdmiPrefer50hzSupported, @JsonProperty("hdmi_prefer_high_fps_supported") Boolean hdmiPreferHighFpsSupported, @JsonProperty("hotspot_supported") Boolean hotspotSupported, @JsonProperty("https_setup_supported") Boolean httpsSetupSupported, @JsonProperty("input_management_supported") Boolean inputManagementSupported, @JsonProperty("keep_hotspot_until_connected_supported") Boolean keepHotspotUntilConnectedSupported, @JsonProperty("multi_user_supported") Boolean multiUserSupported, @JsonProperty("multichannel_group_supported") Boolean multichannelGroupSupported, @JsonProperty("multizone_supported") Boolean multizoneSupported, @JsonProperty("night_mode_supported") Boolean nightModeSupported, @JsonProperty("night_mode_supported_v2") Boolean nightModeSupportedV2, @JsonProperty("opencast_supported") Boolean opencastSupported, @JsonProperty("preview_channel_supported") Boolean previewChannelSupported, @JsonProperty("reboot_supported") Boolean rebootSupported, @JsonProperty("remote_ducking_supported") Boolean remoteDuckingSupported, @JsonProperty("separate_tts_volume_supported") Boolean separateTtsVolumeSupported, @JsonProperty("setup_supported") Boolean setupSupported, @JsonProperty("sleep_mode_supported") Boolean sleepModeSupported, @JsonProperty("stats_supported") Boolean statsSupported, @JsonProperty("system_sound_effects_supported") Boolean systemSoundEffectsSupported, @JsonProperty("user_eq_supported") Boolean userEqSupported, @JsonProperty("wifi_auto_save_supported") Boolean wifiAutoSaveSupported, @JsonProperty("wifi_regulatory_domain_locked") Boolean wifiRegulatoryDomainLocked, @JsonProperty("wifi_supported") Boolean wifiSupported) {
+        this.aoghSupported = aoghSupported;
+        this.assistantSupported = assistantSupported;
+        this.audioHdrSupported = audioHdrSupported;
+        this.audioSurroundModeSupported = audioSurroundModeSupported;
+        this.bleSupported = bleSupported;
+        this.bluetoothAudioSinkSupported = bluetoothAudioSinkSupported;
+        this.bluetoothAudioSourceSupported = bluetoothAudioSourceSupported;
+        this.bluetoothSupported = bluetoothSupported;
+        this.cloudcastSupported = cloudcastSupported;
+        this.contentFiltersSupported = contentFiltersSupported;
+        this.displaySupported = displaySupported;
+        this.fdrSupported = fdrSupported;
+        this.hdmiPrefer50hzSupported = hdmiPrefer50hzSupported;
+        this.hdmiPreferHighFpsSupported = hdmiPreferHighFpsSupported;
+        this.hotspotSupported = hotspotSupported;
+        this.httpsSetupSupported = httpsSetupSupported;
+        this.inputManagementSupported = inputManagementSupported;
+        this.keepHotspotUntilConnectedSupported = keepHotspotUntilConnectedSupported;
+        this.multiUserSupported = multiUserSupported;
+        this.multichannelGroupSupported = multichannelGroupSupported;
+        this.multizoneSupported = multizoneSupported;
+        this.nightModeSupported = nightModeSupported;
+        this.nightModeSupportedV2 = nightModeSupportedV2;
+        this.opencastSupported = opencastSupported;
+        this.previewChannelSupported = previewChannelSupported;
+        this.rebootSupported = rebootSupported;
+        this.remoteDuckingSupported = remoteDuckingSupported;
+        this.separateTtsVolumeSupported = separateTtsVolumeSupported;
+        this.setupSupported = setupSupported;
+        this.sleepModeSupported = sleepModeSupported;
+        this.statsSupported = statsSupported;
+        this.systemSoundEffectsSupported = systemSoundEffectsSupported;
+        this.userEqSupported = userEqSupported;
+        this.wifiAutoSaveSupported = wifiAutoSaveSupported;
+        this.wifiRegulatoryDomainLocked = wifiRegulatoryDomainLocked;
+        this.wifiSupported = wifiSupported;
+  }
 }

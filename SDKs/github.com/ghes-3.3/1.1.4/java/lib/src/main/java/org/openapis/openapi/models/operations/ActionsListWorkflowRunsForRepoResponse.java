@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsListWorkflowRunsForRepoResponse {
     
     public String contentType;
+
     public ActionsListWorkflowRunsForRepoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsListWorkflowRunsForRepoResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ActionsListWorkflowRunsForRepoResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ActionsListWorkflowRunsForRepoResponse {
     
     
     public Integer statusCode;
+
     public ActionsListWorkflowRunsForRepoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ActionsListWorkflowRunsForRepoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsListWorkflowRunsForRepoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ActionsListWorkflowRunsForRepoResponse {
      */
     
     public ActionsListWorkflowRunsForRepo200ApplicationJSON actionsListWorkflowRunsForRepo200ApplicationJSONObject;
+
     public ActionsListWorkflowRunsForRepoResponse withActionsListWorkflowRunsForRepo200ApplicationJSONObject(ActionsListWorkflowRunsForRepo200ApplicationJSON actionsListWorkflowRunsForRepo200ApplicationJSONObject) {
         this.actionsListWorkflowRunsForRepo200ApplicationJSONObject = actionsListWorkflowRunsForRepo200ApplicationJSONObject;
         return this;
     }
     
+    public ActionsListWorkflowRunsForRepoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

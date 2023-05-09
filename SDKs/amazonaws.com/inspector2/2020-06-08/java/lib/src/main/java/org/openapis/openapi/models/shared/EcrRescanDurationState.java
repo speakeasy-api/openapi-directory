@@ -20,6 +20,7 @@ public class EcrRescanDurationState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rescanDuration")
     public EcrRescanDurationEnum rescanDuration;
+
     public EcrRescanDurationState withRescanDuration(EcrRescanDurationEnum rescanDuration) {
         this.rescanDuration = rescanDuration;
         return this;
@@ -28,6 +29,7 @@ public class EcrRescanDurationState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public EcrRescanDurationStatusEnum status;
+
     public EcrRescanDurationState withStatus(EcrRescanDurationStatusEnum status) {
         this.status = status;
         return this;
@@ -38,9 +40,11 @@ public class EcrRescanDurationState {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public EcrRescanDurationState withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public EcrRescanDurationState(){}
 }

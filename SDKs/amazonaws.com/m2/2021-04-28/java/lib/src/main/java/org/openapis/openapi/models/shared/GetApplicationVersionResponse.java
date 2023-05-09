@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetApplicationVersionResponse {
     @JsonProperty("applicationVersion")
     public Long applicationVersion;
+
     public GetApplicationVersionResponse withApplicationVersion(Long applicationVersion) {
         this.applicationVersion = applicationVersion;
         return this;
@@ -28,6 +29,7 @@ public class GetApplicationVersionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetApplicationVersionResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -35,6 +37,7 @@ public class GetApplicationVersionResponse {
     
     @JsonProperty("definitionContent")
     public String definitionContent;
+
     public GetApplicationVersionResponse withDefinitionContent(String definitionContent) {
         this.definitionContent = definitionContent;
         return this;
@@ -43,6 +46,7 @@ public class GetApplicationVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetApplicationVersionResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +54,7 @@ public class GetApplicationVersionResponse {
     
     @JsonProperty("name")
     public String name;
+
     public GetApplicationVersionResponse withName(String name) {
         this.name = name;
         return this;
@@ -57,6 +62,7 @@ public class GetApplicationVersionResponse {
     
     @JsonProperty("status")
     public ApplicationVersionLifecycleEnum status;
+
     public GetApplicationVersionResponse withStatus(ApplicationVersionLifecycleEnum status) {
         this.status = status;
         return this;
@@ -65,9 +71,17 @@ public class GetApplicationVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public GetApplicationVersionResponse withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public GetApplicationVersionResponse(@JsonProperty("applicationVersion") Long applicationVersion, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("definitionContent") String definitionContent, @JsonProperty("name") String name, @JsonProperty("status") ApplicationVersionLifecycleEnum status) {
+        this.applicationVersion = applicationVersion;
+        this.creationTime = creationTime;
+        this.definitionContent = definitionContent;
+        this.name = name;
+        this.status = status;
+  }
 }

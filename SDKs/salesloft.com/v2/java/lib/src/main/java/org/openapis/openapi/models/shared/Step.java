@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class Step {
     
     public EmbeddedResource cadence;
+
     public Step withCadence(EmbeddedResource cadence) {
         this.cadence = cadence;
         return this;
@@ -22,6 +23,7 @@ public class Step {
      */
     
     public OffsetDateTime createdAt;
+
     public Step withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -32,6 +34,7 @@ public class Step {
      */
     
     public Long day;
+
     public Step withDay(Long day) {
         this.day = day;
         return this;
@@ -39,6 +42,7 @@ public class Step {
     
     
     public EmbeddedResource details;
+
     public Step withDetails(EmbeddedResource details) {
         this.details = details;
         return this;
@@ -49,6 +53,7 @@ public class Step {
      */
     
     public Boolean disabled;
+
     public Step withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -59,6 +64,7 @@ public class Step {
      */
     
     public String displayName;
+
     public Step withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -69,6 +75,7 @@ public class Step {
      */
     
     public Long id;
+
     public Step withId(Long id) {
         this.id = id;
         return this;
@@ -79,6 +86,7 @@ public class Step {
      */
     
     public Boolean multitouchEnabled;
+
     public Step withMultitouchEnabled(Boolean multitouchEnabled) {
         this.multitouchEnabled = multitouchEnabled;
         return this;
@@ -89,6 +97,7 @@ public class Step {
      */
     
     public String name;
+
     public Step withName(String name) {
         this.name = name;
         return this;
@@ -99,6 +108,7 @@ public class Step {
      */
     
     public Long stepNumber;
+
     public Step withStepNumber(Long stepNumber) {
         this.stepNumber = stepNumber;
         return this;
@@ -110,6 +120,7 @@ public class Step {
      */
     
     public String type;
+
     public Step withType(String type) {
         this.type = type;
         return this;
@@ -120,9 +131,11 @@ public class Step {
      */
     
     public OffsetDateTime updatedAt;
+
     public Step withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Step(){}
 }

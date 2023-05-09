@@ -50,12 +50,10 @@ public class Integrations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIntegrationsTokenResponse res = new org.openapis.openapi.models.operations.GetIntegrationsTokenResponse() {{
+        org.openapis.openapi.models.operations.GetIntegrationsTokenResponse res = new org.openapis.openapi.models.operations.GetIntegrationsTokenResponse(contentType, httpRes.statusCode()) {{
             integrationsToken = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

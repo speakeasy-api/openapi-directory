@@ -20,6 +20,7 @@ public class RemediationExecutionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public RemediationExecutionStep withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -28,6 +29,7 @@ public class RemediationExecutionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RemediationExecutionStep withName(String name) {
         this.name = name;
         return this;
@@ -38,6 +40,7 @@ public class RemediationExecutionStep {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public RemediationExecutionStep withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -46,6 +49,7 @@ public class RemediationExecutionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public RemediationExecutionStepStateEnum state;
+
     public RemediationExecutionStep withState(RemediationExecutionStepStateEnum state) {
         this.state = state;
         return this;
@@ -56,9 +60,11 @@ public class RemediationExecutionStep {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StopTime")
     public OffsetDateTime stopTime;
+
     public RemediationExecutionStep withStopTime(OffsetDateTime stopTime) {
         this.stopTime = stopTime;
         return this;
     }
     
+    public RemediationExecutionStep(){}
 }

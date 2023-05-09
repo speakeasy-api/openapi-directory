@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateDelegateFromResourceRequest {
     @JsonProperty("EntityId")
     public String entityId;
+
     public DisassociateDelegateFromResourceRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -16,6 +17,7 @@ public class DisassociateDelegateFromResourceRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public DisassociateDelegateFromResourceRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -23,9 +25,15 @@ public class DisassociateDelegateFromResourceRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public DisassociateDelegateFromResourceRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public DisassociateDelegateFromResourceRequest(@JsonProperty("EntityId") String entityId, @JsonProperty("OrganizationId") String organizationId, @JsonProperty("ResourceId") String resourceId) {
+        this.entityId = entityId;
+        this.organizationId = organizationId;
+        this.resourceId = resourceId;
+  }
 }

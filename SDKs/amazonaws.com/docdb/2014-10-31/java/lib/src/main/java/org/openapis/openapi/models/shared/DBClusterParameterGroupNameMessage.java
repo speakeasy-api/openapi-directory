@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DBClusterParameterGroupNameMessage {
     
     public String dbClusterParameterGroupName;
+
     public DBClusterParameterGroupNameMessage withDBClusterParameterGroupName(String dbClusterParameterGroupName) {
         this.dbClusterParameterGroupName = dbClusterParameterGroupName;
         return this;
     }
     
+    public DBClusterParameterGroupNameMessage(){}
 }

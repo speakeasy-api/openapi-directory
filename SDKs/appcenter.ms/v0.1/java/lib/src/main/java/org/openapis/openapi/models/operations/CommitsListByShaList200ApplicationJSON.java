@@ -12,6 +12,7 @@ public class CommitsListByShaList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commit")
     public CommitsListByShaList200ApplicationJSONCommit commit;
+
     public CommitsListByShaList200ApplicationJSON withCommit(CommitsListByShaList200ApplicationJSONCommit commit) {
         this.commit = commit;
         return this;
@@ -23,6 +24,7 @@ public class CommitsListByShaList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha")
     public String sha;
+
     public CommitsListByShaList200ApplicationJSON withSha(String sha) {
         this.sha = sha;
         return this;
@@ -34,9 +36,11 @@ public class CommitsListByShaList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CommitsListByShaList200ApplicationJSON withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CommitsListByShaList200ApplicationJSON(){}
 }

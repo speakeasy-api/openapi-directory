@@ -18,6 +18,7 @@ public class HotelAgreementStubDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Double count;
+
     public HotelAgreementStubDiscount withCount(Double count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class HotelAgreementStubDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public HotelAgreementStubDiscount withType(String type) {
         this.type = type;
         return this;
     }
     
+    public HotelAgreementStubDiscount(){}
 }

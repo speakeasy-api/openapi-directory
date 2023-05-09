@@ -15,9 +15,13 @@ public class ListTagsForResourceResponse {
      */
     @JsonProperty("TagsModel")
     public TagsModel tagsModel;
+
     public ListTagsForResourceResponse withTagsModel(TagsModel tagsModel) {
         this.tagsModel = tagsModel;
         return this;
     }
     
+    public ListTagsForResourceResponse(@JsonProperty("TagsModel") TagsModel tagsModel) {
+        this.tagsModel = tagsModel;
+  }
 }

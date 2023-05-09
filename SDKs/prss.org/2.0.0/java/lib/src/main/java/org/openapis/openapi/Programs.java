@@ -62,11 +62,9 @@ public class Programs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV2ProgramsSearchResponse res = new org.openapis.openapi.models.operations.GetApiV2ProgramsSearchResponse() {{
+        org.openapis.openapi.models.operations.GetApiV2ProgramsSearchResponse res = new org.openapis.openapi.models.operations.GetApiV2ProgramsSearchResponse(contentType, httpRes.statusCode()) {{
             programs = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,12 +102,10 @@ public class Programs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV2ProgramsIdResponse res = new org.openapis.openapi.models.operations.GetApiV2ProgramsIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiV2ProgramsIdResponse res = new org.openapis.openapi.models.operations.GetApiV2ProgramsIdResponse(contentType, httpRes.statusCode()) {{
             program = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

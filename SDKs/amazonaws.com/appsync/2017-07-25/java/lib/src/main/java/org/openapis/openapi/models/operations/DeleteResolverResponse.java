@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteResolverResponse {
@@ -12,6 +13,7 @@ public class DeleteResolverResponse {
      */
     
     public Object badRequestException;
+
     public DeleteResolverResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteResolverResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteResolverResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteResolverResponse {
     
     
     public String contentType;
+
     public DeleteResolverResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteResolverResponse {
      */
     
     public java.util.Map<String, Object> deleteResolverResponse;
+
     public DeleteResolverResponse withDeleteResolverResponse(java.util.Map<String, Object> deleteResolverResponse) {
         this.deleteResolverResponse = deleteResolverResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteResolverResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteResolverResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteResolverResponse {
      */
     
     public Object notFoundException;
+
     public DeleteResolverResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteResolverResponse {
     
     
     public Integer statusCode;
+
     public DeleteResolverResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteResolverResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteResolverResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteResolverResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteResolverResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteResolverResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

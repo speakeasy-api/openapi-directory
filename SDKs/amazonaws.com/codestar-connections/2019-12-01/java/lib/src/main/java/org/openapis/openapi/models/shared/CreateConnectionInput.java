@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateConnectionInput {
     @JsonProperty("ConnectionName")
     public String connectionName;
+
     public CreateConnectionInput withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -19,6 +20,7 @@ public class CreateConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostArn")
     public String hostArn;
+
     public CreateConnectionInput withHostArn(String hostArn) {
         this.hostArn = hostArn;
         return this;
@@ -27,6 +29,7 @@ public class CreateConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderType")
     public ProviderTypeEnum providerType;
+
     public CreateConnectionInput withProviderType(ProviderTypeEnum providerType) {
         this.providerType = providerType;
         return this;
@@ -35,9 +38,13 @@ public class CreateConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateConnectionInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateConnectionInput(@JsonProperty("ConnectionName") String connectionName) {
+        this.connectionName = connectionName;
+  }
 }

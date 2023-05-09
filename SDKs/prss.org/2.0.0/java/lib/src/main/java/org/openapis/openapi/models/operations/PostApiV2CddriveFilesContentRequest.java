@@ -12,6 +12,7 @@ public class PostApiV2CddriveFilesContentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-MD5")
     public String contentMd5;
+
     public PostApiV2CddriveFilesContentRequest withContentMd5(String contentMd5) {
         this.contentMd5 = contentMd5;
         return this;
@@ -22,9 +23,11 @@ public class PostApiV2CddriveFilesContentRequest {
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostApiV2CddriveFilesContentRequestBody requestBody;
+
     public PostApiV2CddriveFilesContentRequest withRequestBody(PostApiV2CddriveFilesContentRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public PostApiV2CddriveFilesContentRequest(){}
 }

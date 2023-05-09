@@ -55,10 +55,8 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAddressesOutputFormatResponse res = new org.openapis.openapi.models.operations.GetAddressesOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetAddressesOutputFormatResponse res = new org.openapis.openapi.models.operations.GetAddressesOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,10 +93,8 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSitesNearOutputFormatResponse res = new org.openapis.openapi.models.operations.GetSitesNearOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetSitesNearOutputFormatResponse res = new org.openapis.openapi.models.operations.GetSitesNearOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,10 +131,8 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSitesNearestOutputFormatResponse res = new org.openapis.openapi.models.operations.GetSitesNearestOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetSitesNearestOutputFormatResponse res = new org.openapis.openapi.models.operations.GetSitesNearestOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,10 +169,8 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSitesWithinOutputFormatResponse res = new org.openapis.openapi.models.operations.GetSitesWithinOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetSitesWithinOutputFormatResponse res = new org.openapis.openapi.models.operations.GetSitesWithinOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -215,10 +207,8 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSitesSiteIDOutputFormatResponse res = new org.openapis.openapi.models.operations.GetSitesSiteIDOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetSitesSiteIDOutputFormatResponse res = new org.openapis.openapi.models.operations.GetSitesSiteIDOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -255,10 +245,8 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSitesSiteIDSubsitesOutputFormatResponse res = new org.openapis.openapi.models.operations.GetSitesSiteIDSubsitesOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetSitesSiteIDSubsitesOutputFormatResponse res = new org.openapis.openapi.models.operations.GetSitesSiteIDSubsitesOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

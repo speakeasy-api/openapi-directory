@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonProperty("address")
     public CreateInvestorRootTypeForInvestorCreationResponseAddress address;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withAddress(CreateInvestorRootTypeForInvestorCreationResponseAddress address) {
         this.address = address;
         return this;
@@ -27,6 +28,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_accounts")
     public CreateInvestorRootTypeForInvestorCreationResponseBankAccounts[] bankAccounts;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withBankAccounts(CreateInvestorRootTypeForInvestorCreationResponseBankAccounts[] bankAccounts) {
         this.bankAccounts = bankAccounts;
         return this;
@@ -37,6 +39,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -44,6 +47,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     
     @JsonProperty("date_of_birth")
     public CreateInvestorRootTypeForInvestorCreationResponseDateOfBirth dateOfBirth;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withDateOfBirth(CreateInvestorRootTypeForInvestorCreationResponseDateOfBirth dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -52,6 +56,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealing_status")
     public CreateInvestorRootTypeForInvestorCreationResponseDealingStatusEnum dealingStatus;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withDealingStatus(CreateInvestorRootTypeForInvestorCreationResponseDealingStatusEnum dealingStatus) {
         this.dealingStatus = dealingStatus;
         return this;
@@ -60,6 +65,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -68,6 +74,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employment_status")
     public CreateInvestorRootTypeForInvestorCreationResponseEmploymentStatusEnum employmentStatus;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withEmploymentStatus(CreateInvestorRootTypeForInvestorCreationResponseEmploymentStatusEnum employmentStatus) {
         this.employmentStatus = employmentStatus;
         return this;
@@ -76,6 +83,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression_of_wish")
     public CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWish expressionOfWish;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withExpressionOfWish(CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWish expressionOfWish) {
         this.expressionOfWish = expressionOfWish;
         return this;
@@ -83,6 +91,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     
     @JsonProperty("first_name")
     public String firstName;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -91,6 +100,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withGender(String gender) {
         this.gender = gender;
         return this;
@@ -99,6 +109,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("home_number")
     public String homeNumber;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withHomeNumber(String homeNumber) {
         this.homeNumber = homeNumber;
         return this;
@@ -107,6 +118,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_numbers")
     public CreateInvestorRootTypeForInvestorCreationResponseIdNumbers[] idNumbers;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withIdNumbers(CreateInvestorRootTypeForInvestorCreationResponseIdNumbers[] idNumbers) {
         this.idNumbers = idNumbers;
         return this;
@@ -114,6 +126,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     
     @JsonProperty("investor_id")
     public String investorId;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withInvestorId(String investorId) {
         this.investorId = investorId;
         return this;
@@ -122,6 +135,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kyc_aml_status")
     public CreateInvestorRootTypeForInvestorCreationResponseKycAmlStatusEnum kycAmlStatus;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withKycAmlStatus(CreateInvestorRootTypeForInvestorCreationResponseKycAmlStatusEnum kycAmlStatus) {
         this.kycAmlStatus = kycAmlStatus;
         return this;
@@ -132,6 +146,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("kyc_aml_status_last_updated")
     public OffsetDateTime kycAmlStatusLastUpdated;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withKycAmlStatusLastUpdated(OffsetDateTime kycAmlStatusLastUpdated) {
         this.kycAmlStatusLastUpdated = kycAmlStatusLastUpdated;
         return this;
@@ -139,6 +154,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     
     @JsonProperty("last_name")
     public String lastName;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -147,6 +163,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lta_protection_details")
     public CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetails[] ltaProtectionDetails;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withLtaProtectionDetails(CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetails[] ltaProtectionDetails) {
         this.ltaProtectionDetails = ltaProtectionDetails;
         return this;
@@ -155,6 +172,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mifid_tax_id")
     public String mifidTaxId;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withMifidTaxId(String mifidTaxId) {
         this.mifidTaxId = mifidTaxId;
         return this;
@@ -163,6 +181,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile_number")
     public String mobileNumber;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
         return this;
@@ -171,6 +190,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mpaa_triggered")
     public Boolean mpaaTriggered;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withMpaaTriggered(Boolean mpaaTriggered) {
         this.mpaaTriggered = mpaaTriggered;
         return this;
@@ -179,6 +199,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mpaa_triggered_date")
     public String mpaaTriggeredDate;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withMpaaTriggeredDate(String mpaaTriggeredDate) {
         this.mpaaTriggeredDate = mpaaTriggeredDate;
         return this;
@@ -189,6 +210,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
      */
     @JsonProperty("nationality")
     public String nationality;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withNationality(String nationality) {
         this.nationality = nationality;
         return this;
@@ -197,6 +219,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("office_number")
     public String officeNumber;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withOfficeNumber(String officeNumber) {
         this.officeNumber = officeNumber;
         return this;
@@ -205,6 +228,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_version")
     public Long referenceVersion;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withReferenceVersion(Long referenceVersion) {
         this.referenceVersion = referenceVersion;
         return this;
@@ -213,6 +237,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retirement_age")
     public Double retirementAge;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withRetirementAge(Double retirementAge) {
         this.retirementAge = retirementAge;
         return this;
@@ -221,6 +246,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CreateInvestorRootTypeForInvestorCreationResponseStatusEnum status;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withStatus(CreateInvestorRootTypeForInvestorCreationResponseStatusEnum status) {
         this.status = status;
         return this;
@@ -228,6 +254,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     
     @JsonProperty("tax_id")
     public String taxId;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withTaxId(String taxId) {
         this.taxId = taxId;
         return this;
@@ -239,6 +266,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_residence")
     public CreateInvestorRootTypeForInvestorCreationResponseTaxResidenceEnum taxResidence;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withTaxResidence(CreateInvestorRootTypeForInvestorCreationResponseTaxResidenceEnum taxResidence) {
         this.taxResidence = taxResidence;
         return this;
@@ -246,6 +274,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     
     @JsonProperty("tax_residency_compliant")
     public Boolean taxResidencyCompliant;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withTaxResidencyCompliant(Boolean taxResidencyCompliant) {
         this.taxResidencyCompliant = taxResidencyCompliant;
         return this;
@@ -254,6 +283,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withTitle(String title) {
         this.title = title;
         return this;
@@ -264,9 +294,20 @@ public class CreateInvestorRootTypeForInvestorCreationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public CreateInvestorRootTypeForInvestorCreationResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public CreateInvestorRootTypeForInvestorCreationResponse(@JsonProperty("address") CreateInvestorRootTypeForInvestorCreationResponseAddress address, @JsonProperty("date_of_birth") CreateInvestorRootTypeForInvestorCreationResponseDateOfBirth dateOfBirth, @JsonProperty("first_name") String firstName, @JsonProperty("investor_id") String investorId, @JsonProperty("last_name") String lastName, @JsonProperty("nationality") String nationality, @JsonProperty("tax_id") String taxId, @JsonProperty("tax_residency_compliant") Boolean taxResidencyCompliant) {
+        this.address = address;
+        this.dateOfBirth = dateOfBirth;
+        this.firstName = firstName;
+        this.investorId = investorId;
+        this.lastName = lastName;
+        this.nationality = nationality;
+        this.taxId = taxId;
+        this.taxResidencyCompliant = taxResidencyCompliant;
+  }
 }

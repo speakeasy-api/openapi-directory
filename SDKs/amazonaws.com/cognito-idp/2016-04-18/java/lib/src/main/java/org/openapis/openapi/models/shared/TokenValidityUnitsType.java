@@ -15,6 +15,7 @@ public class TokenValidityUnitsType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessToken")
     public TimeUnitsTypeEnum accessToken;
+
     public TokenValidityUnitsType withAccessToken(TimeUnitsTypeEnum accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -23,6 +24,7 @@ public class TokenValidityUnitsType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdToken")
     public TimeUnitsTypeEnum idToken;
+
     public TokenValidityUnitsType withIdToken(TimeUnitsTypeEnum idToken) {
         this.idToken = idToken;
         return this;
@@ -31,9 +33,11 @@ public class TokenValidityUnitsType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RefreshToken")
     public TimeUnitsTypeEnum refreshToken;
+
     public TokenValidityUnitsType withRefreshToken(TimeUnitsTypeEnum refreshToken) {
         this.refreshToken = refreshToken;
         return this;
     }
     
+    public TokenValidityUnitsType(){}
 }

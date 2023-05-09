@@ -15,6 +15,7 @@ public class ListComponentTypesFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extendsFrom")
     public String extendsFrom;
+
     public ListComponentTypesFilter withExtendsFrom(String extendsFrom) {
         this.extendsFrom = extendsFrom;
         return this;
@@ -23,6 +24,7 @@ public class ListComponentTypesFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAbstract")
     public Boolean isAbstract;
+
     public ListComponentTypesFilter withIsAbstract(Boolean isAbstract) {
         this.isAbstract = isAbstract;
         return this;
@@ -31,9 +33,11 @@ public class ListComponentTypesFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public String namespace;
+
     public ListComponentTypesFilter withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public ListComponentTypesFilter(){}
 }

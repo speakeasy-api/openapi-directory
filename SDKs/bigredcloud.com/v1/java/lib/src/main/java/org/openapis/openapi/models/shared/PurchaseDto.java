@@ -20,6 +20,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acCode")
     public String acCode;
+
     public PurchaseDto withAcCode(String acCode) {
         this.acCode = acCode;
         return this;
@@ -28,6 +29,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acEntries")
     public AcEntryDto[] acEntries;
+
     public PurchaseDto withAcEntries(AcEntryDto[] acEntries) {
         this.acEntries = acEntries;
         return this;
@@ -36,6 +38,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookTranTypeId")
     public Long bookTranTypeId;
+
     public PurchaseDto withBookTranTypeId(Long bookTranTypeId) {
         this.bookTranTypeId = bookTranTypeId;
         return this;
@@ -44,6 +47,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public AcudfValueDto[] customFields;
+
     public PurchaseDto withCustomFields(AcudfValueDto[] customFields) {
         this.customFields = customFields;
         return this;
@@ -52,6 +56,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailCollection")
     public String[] detailCollection;
+
     public PurchaseDto withDetailCollection(String[] detailCollection) {
         this.detailCollection = detailCollection;
         return this;
@@ -62,6 +67,7 @@ public class PurchaseDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("entryDate")
     public OffsetDateTime entryDate;
+
     public PurchaseDto withEntryDate(OffsetDateTime entryDate) {
         this.entryDate = entryDate;
         return this;
@@ -70,6 +76,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PurchaseDto withId(Long id) {
         this.id = id;
         return this;
@@ -78,6 +85,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDiscrepancyAccepted")
     public Boolean isDiscrepancyAccepted;
+
     public PurchaseDto withIsDiscrepancyAccepted(Boolean isDiscrepancyAccepted) {
         this.isDiscrepancyAccepted = isDiscrepancyAccepted;
         return this;
@@ -86,6 +94,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("netGoods")
     public Double netGoods;
+
     public PurchaseDto withNetGoods(Double netGoods) {
         this.netGoods = netGoods;
         return this;
@@ -94,6 +103,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("netServices")
     public Double netServices;
+
     public PurchaseDto withNetServices(Double netServices) {
         this.netServices = netServices;
         return this;
@@ -102,6 +112,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public PurchaseDto withNote(String note) {
         this.note = note;
         return this;
@@ -110,6 +121,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postponedAccounting")
     public Boolean postponedAccounting;
+
     public PurchaseDto withPostponedAccounting(Boolean postponedAccounting) {
         this.postponedAccounting = postponedAccounting;
         return this;
@@ -120,6 +132,7 @@ public class PurchaseDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("procDate")
     public OffsetDateTime procDate;
+
     public PurchaseDto withProcDate(OffsetDateTime procDate) {
         this.procDate = procDate;
         return this;
@@ -128,6 +141,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public PurchaseDto withReference(String reference) {
         this.reference = reference;
         return this;
@@ -136,6 +150,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplierId")
     public Long supplierId;
+
     public PurchaseDto withSupplierId(Long supplierId) {
         this.supplierId = supplierId;
         return this;
@@ -144,6 +159,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public PurchaseDto withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -152,6 +168,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public PurchaseDto withTotal(Double total) {
         this.total = total;
         return this;
@@ -160,6 +177,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalNet")
     public Double totalNet;
+
     public PurchaseDto withTotalNet(Double totalNet) {
         this.totalNet = totalNet;
         return this;
@@ -168,6 +186,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalVAT")
     public Double totalVAT;
+
     public PurchaseDto withTotalVAT(Double totalVAT) {
         this.totalVAT = totalVAT;
         return this;
@@ -176,6 +195,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unallocated")
     public Double unallocated;
+
     public PurchaseDto withUnallocated(Double unallocated) {
         this.unallocated = unallocated;
         return this;
@@ -184,6 +204,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unpaid")
     public Double unpaid;
+
     public PurchaseDto withUnpaid(Double unpaid) {
         this.unpaid = unpaid;
         return this;
@@ -192,6 +213,7 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatEntries")
     public VatEntryDto[] vatEntries;
+
     public PurchaseDto withVatEntries(VatEntryDto[] vatEntries) {
         this.vatEntries = vatEntries;
         return this;
@@ -200,9 +222,11 @@ public class PurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatTypeId")
     public Long vatTypeId;
+
     public PurchaseDto withVatTypeId(Long vatTypeId) {
         this.vatTypeId = vatTypeId;
         return this;
     }
     
+    public PurchaseDto(){}
 }

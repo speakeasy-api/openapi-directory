@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDocumentaiV1BatchProcessRequest - Request message for batch process document method.
+ * GoogleCloudDocumentaiV1BatchProcessRequest - Request message for BatchProcessDocuments.
  */
 public class GoogleCloudDocumentaiV1BatchProcessRequest {
     /**
@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1BatchProcessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentOutputConfig")
     public GoogleCloudDocumentaiV1DocumentOutputConfig documentOutputConfig;
+
     public GoogleCloudDocumentaiV1BatchProcessRequest withDocumentOutputConfig(GoogleCloudDocumentaiV1DocumentOutputConfig documentOutputConfig) {
         this.documentOutputConfig = documentOutputConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1BatchProcessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputDocuments")
     public GoogleCloudDocumentaiV1BatchDocumentsInputConfig inputDocuments;
+
     public GoogleCloudDocumentaiV1BatchProcessRequest withInputDocuments(GoogleCloudDocumentaiV1BatchDocumentsInputConfig inputDocuments) {
         this.inputDocuments = inputDocuments;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDocumentaiV1BatchProcessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipHumanReview")
     public Boolean skipHumanReview;
+
     public GoogleCloudDocumentaiV1BatchProcessRequest withSkipHumanReview(Boolean skipHumanReview) {
         this.skipHumanReview = skipHumanReview;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1BatchProcessRequest(){}
 }

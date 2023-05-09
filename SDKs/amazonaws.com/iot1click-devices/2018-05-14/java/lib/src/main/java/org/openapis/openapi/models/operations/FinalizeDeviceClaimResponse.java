@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FinalizeDeviceClaimResponse {
     
     public String contentType;
+
     public FinalizeDeviceClaimResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FinalizeDeviceClaimResponse {
      */
     
     public org.openapis.openapi.models.shared.FinalizeDeviceClaimResponse finalizeDeviceClaimResponse;
+
     public FinalizeDeviceClaimResponse withFinalizeDeviceClaimResponse(org.openapis.openapi.models.shared.FinalizeDeviceClaimResponse finalizeDeviceClaimResponse) {
         this.finalizeDeviceClaimResponse = finalizeDeviceClaimResponse;
         return this;
@@ -29,6 +32,7 @@ public class FinalizeDeviceClaimResponse {
      */
     
     public Object internalFailureException;
+
     public FinalizeDeviceClaimResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class FinalizeDeviceClaimResponse {
      */
     
     public Object invalidRequestException;
+
     public FinalizeDeviceClaimResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class FinalizeDeviceClaimResponse {
      */
     
     public Object preconditionFailedException;
+
     public FinalizeDeviceClaimResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -59,6 +65,7 @@ public class FinalizeDeviceClaimResponse {
      */
     
     public Object resourceConflictException;
+
     public FinalizeDeviceClaimResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -69,6 +76,7 @@ public class FinalizeDeviceClaimResponse {
      */
     
     public Object resourceNotFoundException;
+
     public FinalizeDeviceClaimResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class FinalizeDeviceClaimResponse {
     
     
     public Integer statusCode;
+
     public FinalizeDeviceClaimResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class FinalizeDeviceClaimResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FinalizeDeviceClaimResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FinalizeDeviceClaimResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

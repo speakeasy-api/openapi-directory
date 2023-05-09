@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AutoScalingPolicy {
     @JsonProperty("Constraints")
     public ScalingConstraints constraints;
+
     public AutoScalingPolicy withConstraints(ScalingConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -19,9 +20,14 @@ public class AutoScalingPolicy {
     
     @JsonProperty("Rules")
     public ScalingRule[] rules;
+
     public AutoScalingPolicy withRules(ScalingRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public AutoScalingPolicy(@JsonProperty("Constraints") ScalingConstraints constraints, @JsonProperty("Rules") ScalingRule[] rules) {
+        this.constraints = constraints;
+        this.rules = rules;
+  }
 }

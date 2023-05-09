@@ -18,6 +18,7 @@ public class BatchDeleteAlertsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedAlertStatus")
     public java.util.Map<String, Status> failedAlertStatus;
+
     public BatchDeleteAlertsResponse withFailedAlertStatus(java.util.Map<String, Status> failedAlertStatus) {
         this.failedAlertStatus = failedAlertStatus;
         return this;
@@ -29,9 +30,11 @@ public class BatchDeleteAlertsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successAlertIds")
     public String[] successAlertIds;
+
     public BatchDeleteAlertsResponse withSuccessAlertIds(String[] successAlertIds) {
         this.successAlertIds = successAlertIds;
         return this;
     }
     
+    public BatchDeleteAlertsResponse(){}
 }

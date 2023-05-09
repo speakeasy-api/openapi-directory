@@ -18,6 +18,7 @@ public class ProjectUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public java.util.Map<String, Object> customFields;
+
     public ProjectUpdate withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -29,6 +30,7 @@ public class ProjectUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields_list")
     public CustomArticleFieldAdd[] customFieldsList;
+
     public ProjectUpdate withCustomFieldsList(CustomArticleFieldAdd[] customFieldsList) {
         this.customFieldsList = customFieldsList;
         return this;
@@ -40,6 +42,7 @@ public class ProjectUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ProjectUpdate withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class ProjectUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("funding")
     public String funding;
+
     public ProjectUpdate withFunding(String funding) {
         this.funding = funding;
         return this;
@@ -62,6 +66,7 @@ public class ProjectUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("funding_list")
     public FundingCreate[] fundingList;
+
     public ProjectUpdate withFundingList(FundingCreate[] fundingList) {
         this.fundingList = fundingList;
         return this;
@@ -73,9 +78,11 @@ public class ProjectUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ProjectUpdate withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ProjectUpdate(){}
 }

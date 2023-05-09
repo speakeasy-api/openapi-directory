@@ -58,11 +58,9 @@ public class I18nLanguages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeI18nLanguagesListResponse res = new org.openapis.openapi.models.operations.YoutubeI18nLanguagesListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeI18nLanguagesListResponse res = new org.openapis.openapi.models.operations.YoutubeI18nLanguagesListResponse(contentType, httpRes.statusCode()) {{
             i18nLanguageListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

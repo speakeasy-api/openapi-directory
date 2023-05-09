@@ -18,9 +18,11 @@ public class DeleteConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerNetwork")
     public String consumerNetwork;
+
     public DeleteConnectionRequest withConsumerNetwork(String consumerNetwork) {
         this.consumerNetwork = consumerNetwork;
         return this;
     }
     
+    public DeleteConnectionRequest(){}
 }

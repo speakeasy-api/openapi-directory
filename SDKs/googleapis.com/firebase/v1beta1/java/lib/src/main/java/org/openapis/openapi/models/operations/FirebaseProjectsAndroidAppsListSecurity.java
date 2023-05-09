@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FirebaseProjectsAndroidAppsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public FirebaseProjectsAndroidAppsListSecurityOption1 option1;
+
     public FirebaseProjectsAndroidAppsListSecurity withOption1(FirebaseProjectsAndroidAppsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class FirebaseProjectsAndroidAppsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirebaseProjectsAndroidAppsListSecurityOption2 option2;
+
     public FirebaseProjectsAndroidAppsListSecurity withOption2(FirebaseProjectsAndroidAppsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class FirebaseProjectsAndroidAppsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirebaseProjectsAndroidAppsListSecurityOption3 option3;
+
     public FirebaseProjectsAndroidAppsListSecurity withOption3(FirebaseProjectsAndroidAppsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class FirebaseProjectsAndroidAppsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirebaseProjectsAndroidAppsListSecurityOption4 option4;
+
     public FirebaseProjectsAndroidAppsListSecurity withOption4(FirebaseProjectsAndroidAppsListSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public FirebaseProjectsAndroidAppsListSecurity(){}
 }

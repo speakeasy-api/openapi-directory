@@ -15,6 +15,7 @@ public class UserorderdetailsSubscriptionDataSubscriptionsPlan {
      */
     @JsonProperty("frequency")
     public UserorderdetailsSubscriptionDataSubscriptionsPlanFrequency frequency;
+
     public UserorderdetailsSubscriptionDataSubscriptionsPlan withFrequency(UserorderdetailsSubscriptionDataSubscriptionsPlanFrequency frequency) {
         this.frequency = frequency;
         return this;
@@ -25,6 +26,7 @@ public class UserorderdetailsSubscriptionDataSubscriptionsPlan {
      */
     @JsonProperty("type")
     public String type;
+
     public UserorderdetailsSubscriptionDataSubscriptionsPlan withType(String type) {
         this.type = type;
         return this;
@@ -35,9 +37,15 @@ public class UserorderdetailsSubscriptionDataSubscriptionsPlan {
      */
     @JsonProperty("validity")
     public UserorderdetailsSubscriptionDataSubscriptionsPlanValidity validity;
+
     public UserorderdetailsSubscriptionDataSubscriptionsPlan withValidity(UserorderdetailsSubscriptionDataSubscriptionsPlanValidity validity) {
         this.validity = validity;
         return this;
     }
     
+    public UserorderdetailsSubscriptionDataSubscriptionsPlan(@JsonProperty("frequency") UserorderdetailsSubscriptionDataSubscriptionsPlanFrequency frequency, @JsonProperty("type") String type, @JsonProperty("validity") UserorderdetailsSubscriptionDataSubscriptionsPlanValidity validity) {
+        this.frequency = frequency;
+        this.type = type;
+        this.validity = validity;
+  }
 }

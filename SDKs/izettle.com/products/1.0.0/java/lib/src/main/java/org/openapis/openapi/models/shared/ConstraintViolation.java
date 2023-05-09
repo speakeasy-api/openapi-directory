@@ -12,6 +12,7 @@ public class ConstraintViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraintType")
     public ConstraintViolationConstraintTypeEnum constraintType;
+
     public ConstraintViolation withConstraintType(ConstraintViolationConstraintTypeEnum constraintType) {
         this.constraintType = constraintType;
         return this;
@@ -20,6 +21,7 @@ public class ConstraintViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerMessage")
     public String developerMessage;
+
     public ConstraintViolation withDeveloperMessage(String developerMessage) {
         this.developerMessage = developerMessage;
         return this;
@@ -28,6 +30,7 @@ public class ConstraintViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expected")
     public String expected;
+
     public ConstraintViolation withExpected(String expected) {
         this.expected = expected;
         return this;
@@ -36,6 +39,7 @@ public class ConstraintViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyName")
     public String propertyName;
+
     public ConstraintViolation withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
@@ -44,9 +48,11 @@ public class ConstraintViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ConstraintViolation withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ConstraintViolation(){}
 }

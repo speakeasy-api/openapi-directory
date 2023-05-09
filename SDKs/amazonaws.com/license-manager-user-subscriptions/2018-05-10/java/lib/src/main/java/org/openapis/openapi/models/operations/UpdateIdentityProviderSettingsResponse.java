@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateIdentityProviderSettingsResponse {
@@ -12,6 +13,7 @@ public class UpdateIdentityProviderSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateIdentityProviderSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateIdentityProviderSettingsResponse {
     
     
     public String contentType;
+
     public UpdateIdentityProviderSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateIdentityProviderSettingsResponse {
      */
     
     public Object internalServerException;
+
     public UpdateIdentityProviderSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateIdentityProviderSettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateIdentityProviderSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateIdentityProviderSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateIdentityProviderSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateIdentityProviderSettingsResponse {
      */
     
     public Object throttlingException;
+
     public UpdateIdentityProviderSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateIdentityProviderSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateIdentityProviderSettingsResponse updateIdentityProviderSettingsResponse;
+
     public UpdateIdentityProviderSettingsResponse withUpdateIdentityProviderSettingsResponse(org.openapis.openapi.models.shared.UpdateIdentityProviderSettingsResponse updateIdentityProviderSettingsResponse) {
         this.updateIdentityProviderSettingsResponse = updateIdentityProviderSettingsResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateIdentityProviderSettingsResponse {
      */
     
     public Object validationException;
+
     public UpdateIdentityProviderSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateIdentityProviderSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

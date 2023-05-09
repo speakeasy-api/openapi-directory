@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetV4LayersAsAppliedActivityIdContentsSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Api-Key")
     public String apiKey;
+
     public GetV4LayersAsAppliedActivityIdContentsSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -16,9 +17,11 @@ public class GetV4LayersAsAppliedActivityIdContentsSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2AuthorizationCode;
+
     public GetV4LayersAsAppliedActivityIdContentsSecurity withOauth2AuthorizationCode(String oauth2AuthorizationCode) {
         this.oauth2AuthorizationCode = oauth2AuthorizationCode;
         return this;
     }
     
+    public GetV4LayersAsAppliedActivityIdContentsSecurity(){}
 }

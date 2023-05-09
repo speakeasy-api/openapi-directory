@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VatRatesGetResponse {
     
     public String contentType;
+
     public VatRatesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class VatRatesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.PageResultVatRateDto pageResultVatRateDto;
+
     public VatRatesGetResponse withPageResultVatRateDto(org.openapis.openapi.models.shared.PageResultVatRateDto pageResultVatRateDto) {
         this.pageResultVatRateDto = pageResultVatRateDto;
         return this;
@@ -26,6 +29,7 @@ public class VatRatesGetResponse {
     
     
     public Integer statusCode;
+
     public VatRatesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class VatRatesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VatRatesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VatRatesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class Team {
      */
     
     public java.util.Map<String, Object> privateFields;
+
     public Team withPrivateFields(java.util.Map<String, Object> privateFields) {
         this.privateFields = privateFields;
         return this;
@@ -25,6 +26,7 @@ public class Team {
      */
     
     public Boolean allowAutomatedEmailSteps;
+
     public Team withAllowAutomatedEmailSteps(Boolean allowAutomatedEmailSteps) {
         this.allowAutomatedEmailSteps = allowAutomatedEmailSteps;
         return this;
@@ -35,6 +37,7 @@ public class Team {
      */
     
     public Boolean callRecordingDisabled;
+
     public Team withCallRecordingDisabled(Boolean callRecordingDisabled) {
         this.callRecordingDisabled = callRecordingDisabled;
         return this;
@@ -45,6 +48,7 @@ public class Team {
      */
     
     public Boolean clickTrackingDefault;
+
     public Team withClickTrackingDefault(Boolean clickTrackingDefault) {
         this.clickTrackingDefault = clickTrackingDefault;
         return this;
@@ -55,6 +59,7 @@ public class Team {
      */
     
     public OffsetDateTime createdAt;
+
     public Team withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -65,6 +70,7 @@ public class Team {
      */
     
     public String customTrackingDomain;
+
     public Team withCustomTrackingDomain(String customTrackingDomain) {
         this.customTrackingDomain = customTrackingDomain;
         return this;
@@ -75,6 +81,7 @@ public class Team {
      */
     
     public Boolean deactivated;
+
     public Team withDeactivated(Boolean deactivated) {
         this.deactivated = deactivated;
         return this;
@@ -85,6 +92,7 @@ public class Team {
      */
     
     public Boolean dispositionsRequired;
+
     public Team withDispositionsRequired(Boolean dispositionsRequired) {
         this.dispositionsRequired = dispositionsRequired;
         return this;
@@ -95,6 +103,7 @@ public class Team {
      */
     
     public Long emailDailyLimit;
+
     public Team withEmailDailyLimit(Long emailDailyLimit) {
         this.emailDailyLimit = emailDailyLimit;
         return this;
@@ -108,6 +117,7 @@ public class Team {
      */
     
     public String groupPrivacySetting;
+
     public Team withGroupPrivacySetting(String groupPrivacySetting) {
         this.groupPrivacySetting = groupPrivacySetting;
         return this;
@@ -118,6 +128,7 @@ public class Team {
      */
     
     public Long id;
+
     public Team withId(Long id) {
         this.id = id;
         return this;
@@ -128,6 +139,7 @@ public class Team {
      */
     
     public Long licenseLimit;
+
     public Team withLicenseLimit(Long licenseLimit) {
         this.licenseLimit = licenseLimit;
         return this;
@@ -138,6 +150,7 @@ public class Team {
      */
     
     public Boolean localDialEnabled;
+
     public Team withLocalDialEnabled(Boolean localDialEnabled) {
         this.localDialEnabled = localDialEnabled;
         return this;
@@ -148,6 +161,7 @@ public class Team {
      */
     
     public String name;
+
     public Team withName(String name) {
         this.name = name;
         return this;
@@ -158,6 +172,7 @@ public class Team {
      */
     
     public String plan;
+
     public Team withPlan(String plan) {
         this.plan = plan;
         return this;
@@ -168,6 +183,7 @@ public class Team {
      */
     
     public java.util.Map<String, Object> planFeatures;
+
     public Team withPlanFeatures(java.util.Map<String, Object> planFeatures) {
         this.planFeatures = planFeatures;
         return this;
@@ -178,6 +194,7 @@ public class Team {
      */
     
     public Boolean recordByDefault;
+
     public Team withRecordByDefault(Boolean recordByDefault) {
         this.recordByDefault = recordByDefault;
         return this;
@@ -188,6 +205,7 @@ public class Team {
      */
     
     public Boolean sentimentsRequired;
+
     public Team withSentimentsRequired(Boolean sentimentsRequired) {
         this.sentimentsRequired = sentimentsRequired;
         return this;
@@ -200,6 +218,7 @@ public class Team {
      */
     
     public String teamVisibilityDefault;
+
     public Team withTeamVisibilityDefault(String teamVisibilityDefault) {
         this.teamVisibilityDefault = teamVisibilityDefault;
         return this;
@@ -210,9 +229,11 @@ public class Team {
      */
     
     public OffsetDateTime updatedAt;
+
     public Team withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Team(){}
 }

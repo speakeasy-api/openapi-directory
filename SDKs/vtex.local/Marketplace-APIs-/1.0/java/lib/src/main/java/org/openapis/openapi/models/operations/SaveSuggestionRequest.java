@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveSuggestionRequest {
@@ -12,6 +13,7 @@ public class SaveSuggestionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public SaveSuggestionRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class SaveSuggestionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public SaveSuggestionRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SaveSuggestionRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SaveSuggestionRequest saveSuggestionRequest;
+
     public SaveSuggestionRequest withSaveSuggestionRequest(org.openapis.openapi.models.shared.SaveSuggestionRequest saveSuggestionRequest) {
         this.saveSuggestionRequest = saveSuggestionRequest;
         return this;
@@ -39,6 +43,7 @@ public class SaveSuggestionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public SaveSuggestionRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -49,6 +54,7 @@ public class SaveSuggestionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public SaveSuggestionRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -59,9 +65,18 @@ public class SaveSuggestionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerSkuId")
     public String sellerSkuId;
+
     public SaveSuggestionRequest withSellerSkuId(String sellerSkuId) {
         this.sellerSkuId = sellerSkuId;
         return this;
     }
     
+    public SaveSuggestionRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("SaveSuggestionRequest") org.openapis.openapi.models.shared.SaveSuggestionRequest saveSuggestionRequest, @JsonProperty("accountName") String accountName, @JsonProperty("sellerId") String sellerId, @JsonProperty("sellerSkuId") String sellerSkuId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.saveSuggestionRequest = saveSuggestionRequest;
+        this.accountName = accountName;
+        this.sellerId = sellerId;
+        this.sellerSkuId = sellerSkuId;
+  }
 }

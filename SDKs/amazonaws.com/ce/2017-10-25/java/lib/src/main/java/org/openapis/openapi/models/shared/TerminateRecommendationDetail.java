@@ -15,6 +15,7 @@ public class TerminateRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrencyCode")
     public String currencyCode;
+
     public TerminateRecommendationDetail withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -23,9 +24,11 @@ public class TerminateRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedMonthlySavings")
     public String estimatedMonthlySavings;
+
     public TerminateRecommendationDetail withEstimatedMonthlySavings(String estimatedMonthlySavings) {
         this.estimatedMonthlySavings = estimatedMonthlySavings;
         return this;
     }
     
+    public TerminateRecommendationDetail(){}
 }

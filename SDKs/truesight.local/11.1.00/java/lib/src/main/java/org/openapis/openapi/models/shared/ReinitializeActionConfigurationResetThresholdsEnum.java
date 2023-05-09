@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * ReinitializeActionConfigurationResetThresholdsEnum - When set to &lt;em&gt;1&lt;/em&gt;, resets all thresholds.
  */
 public enum ReinitializeActionConfigurationResetThresholdsEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0),
+    ONE(1);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private ReinitializeActionConfigurationResetThresholdsEnum(String value) {
+    private ReinitializeActionConfigurationResetThresholdsEnum(Integer value) {
         this.value = value;
     }
 }

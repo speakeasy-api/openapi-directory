@@ -18,6 +18,7 @@ public class GoogleCloudKmsV1CryptoKeyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public GoogleCloudKmsV1CryptoKeyVersionAlgorithmEnum algorithm;
+
     public GoogleCloudKmsV1CryptoKeyVersion withAlgorithm(GoogleCloudKmsV1CryptoKeyVersionAlgorithmEnum algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudKmsV1CryptoKeyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attestation")
     public GoogleCloudKmsV1KeyOperationAttestation attestation;
+
     public GoogleCloudKmsV1CryptoKeyVersion withAttestation(GoogleCloudKmsV1KeyOperationAttestation attestation) {
         this.attestation = attestation;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudKmsV1CryptoKeyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudKmsV1CryptoKeyVersion withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudKmsV1CryptoKeyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destroyEventTime")
     public String destroyEventTime;
+
     public GoogleCloudKmsV1CryptoKeyVersion withDestroyEventTime(String destroyEventTime) {
         this.destroyEventTime = destroyEventTime;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudKmsV1CryptoKeyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destroyTime")
     public String destroyTime;
+
     public GoogleCloudKmsV1CryptoKeyVersion withDestroyTime(String destroyTime) {
         this.destroyTime = destroyTime;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudKmsV1CryptoKeyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalDestructionFailureReason")
     public String externalDestructionFailureReason;
+
     public GoogleCloudKmsV1CryptoKeyVersion withExternalDestructionFailureReason(String externalDestructionFailureReason) {
         this.externalDestructionFailureReason = externalDestructionFailureReason;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudKmsV1CryptoKeyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalProtectionLevelOptions")
     public GoogleCloudKmsV1ExternalProtectionLevelOptions externalProtectionLevelOptions;
+
     public GoogleCloudKmsV1CryptoKeyVersion withExternalProtectionLevelOptions(GoogleCloudKmsV1ExternalProtectionLevelOptions externalProtectionLevelOptions) {
         this.externalProtectionLevelOptions = externalProtectionLevelOptions;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudKmsV1CryptoKeyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generateTime")
     public String generateTime;
+
     public GoogleCloudKmsV1CryptoKeyVersion withGenerateTime(String generateTime) {
         this.generateTime = generateTime;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudKmsV1CryptoKeyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generationFailureReason")
     public String generationFailureReason;
+
     public GoogleCloudKmsV1CryptoKeyVersion withGenerationFailureReason(String generationFailureReason) {
         this.generationFailureReason = generationFailureReason;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudKmsV1CryptoKeyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importFailureReason")
     public String importFailureReason;
+
     public GoogleCloudKmsV1CryptoKeyVersion withImportFailureReason(String importFailureReason) {
         this.importFailureReason = importFailureReason;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudKmsV1CryptoKeyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importJob")
     public String importJob;
+
     public GoogleCloudKmsV1CryptoKeyVersion withImportJob(String importJob) {
         this.importJob = importJob;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudKmsV1CryptoKeyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importTime")
     public String importTime;
+
     public GoogleCloudKmsV1CryptoKeyVersion withImportTime(String importTime) {
         this.importTime = importTime;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudKmsV1CryptoKeyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudKmsV1CryptoKeyVersion withName(String name) {
         this.name = name;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudKmsV1CryptoKeyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protectionLevel")
     public GoogleCloudKmsV1CryptoKeyVersionProtectionLevelEnum protectionLevel;
+
     public GoogleCloudKmsV1CryptoKeyVersion withProtectionLevel(GoogleCloudKmsV1CryptoKeyVersionProtectionLevelEnum protectionLevel) {
         this.protectionLevel = protectionLevel;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudKmsV1CryptoKeyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reimportEligible")
     public Boolean reimportEligible;
+
     public GoogleCloudKmsV1CryptoKeyVersion withReimportEligible(Boolean reimportEligible) {
         this.reimportEligible = reimportEligible;
         return this;
@@ -183,9 +198,11 @@ public class GoogleCloudKmsV1CryptoKeyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudKmsV1CryptoKeyVersionStateEnum state;
+
     public GoogleCloudKmsV1CryptoKeyVersion withState(GoogleCloudKmsV1CryptoKeyVersionStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleCloudKmsV1CryptoKeyVersion(){}
 }

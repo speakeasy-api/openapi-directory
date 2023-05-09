@@ -18,6 +18,7 @@ public class UpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("added")
     public String added;
+
     public UpdateModel withAdded(String added) {
         this.added = added;
         return this;
@@ -29,6 +30,7 @@ public class UpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("added_download")
     public String addedDownload;
+
     public UpdateModel withAddedDownload(String addedDownload) {
         this.addedDownload = addedDownload;
         return this;
@@ -40,6 +42,7 @@ public class UpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public UpdateModel withDate(String date) {
         this.date = date;
         return this;
@@ -51,6 +54,7 @@ public class UpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public String deleted;
+
     public UpdateModel withDeleted(String deleted) {
         this.deleted = deleted;
         return this;
@@ -62,9 +66,11 @@ public class UpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted_download")
     public String deletedDownload;
+
     public UpdateModel withDeletedDownload(String deletedDownload) {
         this.deletedDownload = deletedDownload;
         return this;
     }
     
+    public UpdateModel(){}
 }

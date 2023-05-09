@@ -15,6 +15,7 @@ public class NodesViewOnlyLinksListViewOnlyLinksAttributes {
      */
     
     public Boolean anonymous;
+
     public NodesViewOnlyLinksListViewOnlyLinksAttributes withAnonymous(Boolean anonymous) {
         this.anonymous = anonymous;
         return this;
@@ -25,6 +26,7 @@ public class NodesViewOnlyLinksListViewOnlyLinksAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public NodesViewOnlyLinksListViewOnlyLinksAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -35,6 +37,7 @@ public class NodesViewOnlyLinksListViewOnlyLinksAttributes {
      */
     
     public String key;
+
     public NodesViewOnlyLinksListViewOnlyLinksAttributes withKey(String key) {
         this.key = key;
         return this;
@@ -45,9 +48,11 @@ public class NodesViewOnlyLinksListViewOnlyLinksAttributes {
      */
     
     public String name;
+
     public NodesViewOnlyLinksListViewOnlyLinksAttributes withName(String name) {
         this.name = name;
         return this;
     }
     
+    public NodesViewOnlyLinksListViewOnlyLinksAttributes(){}
 }

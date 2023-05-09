@@ -72,10 +72,8 @@ public class Kpi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DailyActiveUsersByDateResponse res = new org.openapis.openapi.models.operations.DailyActiveUsersByDateResponse() {{
+        org.openapis.openapi.models.operations.DailyActiveUsersByDateResponse res = new org.openapis.openapi.models.operations.DailyActiveUsersByDateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,10 +127,8 @@ public class Kpi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DailyNewUsersByDateResponse res = new org.openapis.openapi.models.operations.DailyNewUsersByDateResponse() {{
+        org.openapis.openapi.models.operations.DailyNewUsersByDateResponse res = new org.openapis.openapi.models.operations.DailyNewUsersByDateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -185,10 +181,8 @@ public class Kpi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KpIsForDailyAppUninstallsByDateResponse res = new org.openapis.openapi.models.operations.KpIsForDailyAppUninstallsByDateResponse() {{
+        org.openapis.openapi.models.operations.KpIsForDailyAppUninstallsByDateResponse res = new org.openapis.openapi.models.operations.KpIsForDailyAppUninstallsByDateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,10 +235,8 @@ public class Kpi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonthlyActiveUsersForLast30DaysResponse res = new org.openapis.openapi.models.operations.MonthlyActiveUsersForLast30DaysResponse() {{
+        org.openapis.openapi.models.operations.MonthlyActiveUsersForLast30DaysResponse res = new org.openapis.openapi.models.operations.MonthlyActiveUsersForLast30DaysResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

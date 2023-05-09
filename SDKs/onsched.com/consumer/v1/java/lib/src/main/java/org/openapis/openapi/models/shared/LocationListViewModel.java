@@ -15,6 +15,7 @@ public class LocationListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public LocationListViewModel withCount(Integer count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class LocationListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public LocationViewModel[] data;
+
     public LocationListViewModel withData(LocationViewModel[] data) {
         this.data = data;
         return this;
@@ -31,6 +33,7 @@ public class LocationListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasMore")
     public Boolean hasMore;
+
     public LocationListViewModel withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
@@ -39,6 +42,7 @@ public class LocationListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public LocationListViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -47,6 +51,7 @@ public class LocationListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Integer total;
+
     public LocationListViewModel withTotal(Integer total) {
         this.total = total;
         return this;
@@ -55,9 +60,11 @@ public class LocationListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public LocationListViewModel withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public LocationListViewModel(){}
 }

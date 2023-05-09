@@ -19,6 +19,7 @@ public class FhirEncounter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public FhirEncounter withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -27,6 +28,7 @@ public class FhirEncounter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encounterType")
     public String encounterType;
+
     public FhirEncounter withEncounterType(String encounterType) {
         this.encounterType = encounterType;
         return this;
@@ -35,6 +37,7 @@ public class FhirEncounter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public Group group;
+
     public FhirEncounter withGroup(Group group) {
         this.group = group;
         return this;
@@ -43,6 +46,7 @@ public class FhirEncounter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public FhirEncounter withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +55,7 @@ public class FhirEncounter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public FhirEncounter withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -59,6 +64,7 @@ public class FhirEncounter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public Link[] links;
+
     public FhirEncounter withLinks(Link[] links) {
         this.links = links;
         return this;
@@ -67,6 +73,7 @@ public class FhirEncounter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("observations")
     public FhirObservation[] observations;
+
     public FhirEncounter withObservations(FhirObservation[] observations) {
         this.observations = observations;
         return this;
@@ -75,6 +82,7 @@ public class FhirEncounter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("procedures")
     public FhirProcedure[] procedures;
+
     public FhirEncounter withProcedures(FhirProcedure[] procedures) {
         this.procedures = procedures;
         return this;
@@ -83,9 +91,11 @@ public class FhirEncounter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public FhirEncounter withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public FhirEncounter(){}
 }

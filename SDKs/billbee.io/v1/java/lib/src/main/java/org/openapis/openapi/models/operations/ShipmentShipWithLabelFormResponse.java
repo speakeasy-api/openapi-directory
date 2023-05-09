@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ShipmentShipWithLabelFormResponse {
     
     public byte[] body;
+
     public ShipmentShipWithLabelFormResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ShipmentShipWithLabelFormResponse {
     
     
     public String contentType;
+
     public ShipmentShipWithLabelFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ShipmentShipWithLabelFormResponse {
      */
     
     public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiShipmentWithLabelResult rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiShipmentWithLabelResult;
+
     public ShipmentShipWithLabelFormResponse withRechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiShipmentWithLabelResult(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiShipmentWithLabelResult rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiShipmentWithLabelResult) {
         this.rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiShipmentWithLabelResult = rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiShipmentWithLabelResult;
         return this;
@@ -33,6 +37,7 @@ public class ShipmentShipWithLabelFormResponse {
     
     
     public Integer statusCode;
+
     public ShipmentShipWithLabelFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class ShipmentShipWithLabelFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ShipmentShipWithLabelFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ShipmentShipWithLabelFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

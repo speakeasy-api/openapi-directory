@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcceptInvitationResponse {
@@ -12,6 +13,7 @@ public class AcceptInvitationResponse {
      */
     
     public java.util.Map<String, Object> acceptInvitationResponse;
+
     public AcceptInvitationResponse withAcceptInvitationResponse(java.util.Map<String, Object> acceptInvitationResponse) {
         this.acceptInvitationResponse = acceptInvitationResponse;
         return this;
@@ -22,6 +24,7 @@ public class AcceptInvitationResponse {
      */
     
     public Object accessDeniedException;
+
     public AcceptInvitationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class AcceptInvitationResponse {
      */
     
     public Object conflictException;
+
     public AcceptInvitationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AcceptInvitationResponse {
     
     
     public String contentType;
+
     public AcceptInvitationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AcceptInvitationResponse {
      */
     
     public Object internalServerException;
+
     public AcceptInvitationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class AcceptInvitationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AcceptInvitationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class AcceptInvitationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public AcceptInvitationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class AcceptInvitationResponse {
     
     
     public Integer statusCode;
+
     public AcceptInvitationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AcceptInvitationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcceptInvitationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class AcceptInvitationResponse {
      */
     
     public Object throttlingException;
+
     public AcceptInvitationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class AcceptInvitationResponse {
      */
     
     public Object validationException;
+
     public AcceptInvitationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AcceptInvitationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

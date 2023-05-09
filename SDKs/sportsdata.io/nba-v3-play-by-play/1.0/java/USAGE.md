@@ -3,10 +3,10 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.PlayByPlayFormatEnum;
 import org.openapis.openapi.models.operations.PlayByPlayRequest;
 import org.openapis.openapi.models.operations.PlayByPlayResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,18 +17,17 @@ public class Application {
                 }})
                 .build();
 
-            PlayByPlayRequest req = new PlayByPlayRequest() {{
-                format = "JSON";
-                gameid = "provident";
-            }}            
+            PlayByPlayRequest req = new PlayByPlayRequest(PlayByPlayFormatEnum.JSON, "provident");            
 
             PlayByPlayResponse res = sdk.playByPlay(req);
 
-            if (res.playByPlay.isPresent()) {
+            if (res.playByPlay != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

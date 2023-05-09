@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class UpdateContinuousCheckInput {
      */
     @SpeakeasyMetadata("form:name=frequency")
     public String frequency;
+
     public UpdateContinuousCheckInput withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
@@ -25,9 +27,14 @@ public class UpdateContinuousCheckInput {
      */
     @SpeakeasyMetadata("form:name=status")
     public UpdateContinuousCheckInputStatusEnum status;
+
     public UpdateContinuousCheckInput withStatus(UpdateContinuousCheckInputStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateContinuousCheckInput(@JsonProperty("frequency") String frequency, @JsonProperty("status") UpdateContinuousCheckInputStatusEnum status) {
+        this.frequency = frequency;
+        this.status = status;
+  }
 }

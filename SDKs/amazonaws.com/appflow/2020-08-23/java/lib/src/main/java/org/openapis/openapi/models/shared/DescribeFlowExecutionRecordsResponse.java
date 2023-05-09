@@ -15,6 +15,7 @@ public class DescribeFlowExecutionRecordsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowExecutions")
     public ExecutionRecord[] flowExecutions;
+
     public DescribeFlowExecutionRecordsResponse withFlowExecutions(ExecutionRecord[] flowExecutions) {
         this.flowExecutions = flowExecutions;
         return this;
@@ -23,9 +24,11 @@ public class DescribeFlowExecutionRecordsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeFlowExecutionRecordsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFlowExecutionRecordsResponse(){}
 }

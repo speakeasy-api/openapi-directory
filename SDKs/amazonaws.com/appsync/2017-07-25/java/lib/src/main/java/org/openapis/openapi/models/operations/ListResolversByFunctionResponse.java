@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResolversByFunctionResponse {
@@ -12,6 +13,7 @@ public class ListResolversByFunctionResponse {
      */
     
     public Object badRequestException;
+
     public ListResolversByFunctionResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListResolversByFunctionResponse {
     
     
     public String contentType;
+
     public ListResolversByFunctionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListResolversByFunctionResponse {
      */
     
     public Object internalFailureException;
+
     public ListResolversByFunctionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class ListResolversByFunctionResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResolversByFunctionResponse listResolversByFunctionResponse;
+
     public ListResolversByFunctionResponse withListResolversByFunctionResponse(org.openapis.openapi.models.shared.ListResolversByFunctionResponse listResolversByFunctionResponse) {
         this.listResolversByFunctionResponse = listResolversByFunctionResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListResolversByFunctionResponse {
      */
     
     public Object notFoundException;
+
     public ListResolversByFunctionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListResolversByFunctionResponse {
     
     
     public Integer statusCode;
+
     public ListResolversByFunctionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListResolversByFunctionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResolversByFunctionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListResolversByFunctionResponse {
      */
     
     public Object unauthorizedException;
+
     public ListResolversByFunctionResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListResolversByFunctionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

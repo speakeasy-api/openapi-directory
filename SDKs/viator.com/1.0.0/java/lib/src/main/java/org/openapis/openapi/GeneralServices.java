@@ -64,11 +64,9 @@ public class GeneralServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HealthCheckResponse res = new org.openapis.openapi.models.operations.HealthCheckResponse() {{
+        org.openapis.openapi.models.operations.HealthCheckResponse res = new org.openapis.openapi.models.operations.HealthCheckResponse(contentType, httpRes.statusCode()) {{
             healthCheck200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

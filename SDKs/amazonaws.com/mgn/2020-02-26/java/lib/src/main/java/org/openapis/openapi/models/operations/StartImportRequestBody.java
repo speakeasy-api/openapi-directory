@@ -15,6 +15,7 @@ public class StartImportRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public StartImportRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,9 +26,13 @@ public class StartImportRequestBody {
      */
     @JsonProperty("s3BucketSource")
     public StartImportRequestBodyS3BucketSource s3BucketSource;
+
     public StartImportRequestBody withS3BucketSource(StartImportRequestBodyS3BucketSource s3BucketSource) {
         this.s3BucketSource = s3BucketSource;
         return this;
     }
     
+    public StartImportRequestBody(@JsonProperty("s3BucketSource") StartImportRequestBodyS3BucketSource s3BucketSource) {
+        this.s3BucketSource = s3BucketSource;
+  }
 }

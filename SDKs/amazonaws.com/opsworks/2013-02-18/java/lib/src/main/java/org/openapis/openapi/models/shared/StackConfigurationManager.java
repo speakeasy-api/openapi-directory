@@ -15,6 +15,7 @@ public class StackConfigurationManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public StackConfigurationManager withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class StackConfigurationManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public StackConfigurationManager withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public StackConfigurationManager(){}
 }

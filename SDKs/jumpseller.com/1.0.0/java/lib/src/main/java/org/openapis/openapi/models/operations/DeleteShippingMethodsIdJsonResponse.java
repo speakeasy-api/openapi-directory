@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteShippingMethodsIdJsonResponse {
     
     public String contentType;
+
     public DeleteShippingMethodsIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteShippingMethodsIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public DeleteShippingMethodsIdJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -26,6 +29,7 @@ public class DeleteShippingMethodsIdJsonResponse {
     
     
     public Integer statusCode;
+
     public DeleteShippingMethodsIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteShippingMethodsIdJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteShippingMethodsIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteShippingMethodsIdJsonResponse {
      */
     
     public String deleteShippingMethodsIdJSON200ApplicationJSONString;
+
     public DeleteShippingMethodsIdJsonResponse withDeleteShippingMethodsIdJSON200ApplicationJSONString(String deleteShippingMethodsIdJSON200ApplicationJSONString) {
         this.deleteShippingMethodsIdJSON200ApplicationJSONString = deleteShippingMethodsIdJSON200ApplicationJSONString;
         return this;
     }
     
+    public DeleteShippingMethodsIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -22,6 +22,7 @@ public class CompilationJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompilationEndTime")
     public OffsetDateTime compilationEndTime;
+
     public CompilationJobSummary withCompilationEndTime(OffsetDateTime compilationEndTime) {
         this.compilationEndTime = compilationEndTime;
         return this;
@@ -29,6 +30,7 @@ public class CompilationJobSummary {
     
     @JsonProperty("CompilationJobArn")
     public String compilationJobArn;
+
     public CompilationJobSummary withCompilationJobArn(String compilationJobArn) {
         this.compilationJobArn = compilationJobArn;
         return this;
@@ -36,6 +38,7 @@ public class CompilationJobSummary {
     
     @JsonProperty("CompilationJobName")
     public String compilationJobName;
+
     public CompilationJobSummary withCompilationJobName(String compilationJobName) {
         this.compilationJobName = compilationJobName;
         return this;
@@ -43,6 +46,7 @@ public class CompilationJobSummary {
     
     @JsonProperty("CompilationJobStatus")
     public CompilationJobStatusEnum compilationJobStatus;
+
     public CompilationJobSummary withCompilationJobStatus(CompilationJobStatusEnum compilationJobStatus) {
         this.compilationJobStatus = compilationJobStatus;
         return this;
@@ -53,6 +57,7 @@ public class CompilationJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompilationStartTime")
     public OffsetDateTime compilationStartTime;
+
     public CompilationJobSummary withCompilationStartTime(OffsetDateTime compilationStartTime) {
         this.compilationStartTime = compilationStartTime;
         return this;
@@ -61,6 +66,7 @@ public class CompilationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompilationTargetDevice")
     public TargetDeviceEnum compilationTargetDevice;
+
     public CompilationJobSummary withCompilationTargetDevice(TargetDeviceEnum compilationTargetDevice) {
         this.compilationTargetDevice = compilationTargetDevice;
         return this;
@@ -69,6 +75,7 @@ public class CompilationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompilationTargetPlatformAccelerator")
     public TargetPlatformAcceleratorEnum compilationTargetPlatformAccelerator;
+
     public CompilationJobSummary withCompilationTargetPlatformAccelerator(TargetPlatformAcceleratorEnum compilationTargetPlatformAccelerator) {
         this.compilationTargetPlatformAccelerator = compilationTargetPlatformAccelerator;
         return this;
@@ -77,6 +84,7 @@ public class CompilationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompilationTargetPlatformArch")
     public TargetPlatformArchEnum compilationTargetPlatformArch;
+
     public CompilationJobSummary withCompilationTargetPlatformArch(TargetPlatformArchEnum compilationTargetPlatformArch) {
         this.compilationTargetPlatformArch = compilationTargetPlatformArch;
         return this;
@@ -85,6 +93,7 @@ public class CompilationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompilationTargetPlatformOs")
     public TargetPlatformOsEnum compilationTargetPlatformOs;
+
     public CompilationJobSummary withCompilationTargetPlatformOs(TargetPlatformOsEnum compilationTargetPlatformOs) {
         this.compilationTargetPlatformOs = compilationTargetPlatformOs;
         return this;
@@ -94,6 +103,7 @@ public class CompilationJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public CompilationJobSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -104,9 +114,16 @@ public class CompilationJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public CompilationJobSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
+    public CompilationJobSummary(@JsonProperty("CompilationJobArn") String compilationJobArn, @JsonProperty("CompilationJobName") String compilationJobName, @JsonProperty("CompilationJobStatus") CompilationJobStatusEnum compilationJobStatus, @JsonProperty("CreationTime") OffsetDateTime creationTime) {
+        this.compilationJobArn = compilationJobArn;
+        this.compilationJobName = compilationJobName;
+        this.compilationJobStatus = compilationJobStatus;
+        this.creationTime = creationTime;
+  }
 }

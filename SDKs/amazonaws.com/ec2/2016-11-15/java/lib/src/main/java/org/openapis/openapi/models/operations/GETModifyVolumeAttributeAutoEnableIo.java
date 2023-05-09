@@ -12,9 +12,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyVolumeAttributeAutoEnableIo {
     @SpeakeasyMetadata("queryParam:name=Value")
     public Boolean value;
+
     public GETModifyVolumeAttributeAutoEnableIo withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public GETModifyVolumeAttributeAutoEnableIo(){}
 }

@@ -15,6 +15,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public UpdateInvestorUpdateRequestBodyForInvestorAddress address;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withAddress(UpdateInvestorUpdateRequestBodyForInvestorAddress address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_of_birth")
     public UpdateInvestorUpdateRequestBodyForInvestorDateOfBirth dateOfBirth;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withDateOfBirth(UpdateInvestorUpdateRequestBodyForInvestorDateOfBirth dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -31,6 +33,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealing_status")
     public UpdateInvestorUpdateRequestBodyForInvestorDealingStatusEnum dealingStatus;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withDealingStatus(UpdateInvestorUpdateRequestBodyForInvestorDealingStatusEnum dealingStatus) {
         this.dealingStatus = dealingStatus;
         return this;
@@ -39,6 +42,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withEmail(String email) {
         this.email = email;
         return this;
@@ -50,6 +54,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employment_status")
     public UpdateInvestorUpdateRequestBodyForInvestorEmploymentStatusEnum employmentStatus;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withEmploymentStatus(UpdateInvestorUpdateRequestBodyForInvestorEmploymentStatusEnum employmentStatus) {
         this.employmentStatus = employmentStatus;
         return this;
@@ -61,6 +66,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression_of_wish")
     public UpdateInvestorUpdateRequestBodyForInvestorExpressionOfWish expressionOfWish;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withExpressionOfWish(UpdateInvestorUpdateRequestBodyForInvestorExpressionOfWish expressionOfWish) {
         this.expressionOfWish = expressionOfWish;
         return this;
@@ -69,6 +75,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -77,6 +84,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withGender(String gender) {
         this.gender = gender;
         return this;
@@ -85,6 +93,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("home_number")
     public String homeNumber;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withHomeNumber(String homeNumber) {
         this.homeNumber = homeNumber;
         return this;
@@ -96,6 +105,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_numbers")
     public UpdateInvestorUpdateRequestBodyForInvestorIdNumbers[] idNumbers;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withIdNumbers(UpdateInvestorUpdateRequestBodyForInvestorIdNumbers[] idNumbers) {
         this.idNumbers = idNumbers;
         return this;
@@ -104,6 +114,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kyc_aml_status")
     public UpdateInvestorUpdateRequestBodyForInvestorKycAmlStatusEnum kycAmlStatus;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withKycAmlStatus(UpdateInvestorUpdateRequestBodyForInvestorKycAmlStatusEnum kycAmlStatus) {
         this.kycAmlStatus = kycAmlStatus;
         return this;
@@ -112,6 +123,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -123,6 +135,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lta_protection_details")
     public UpdateInvestorUpdateRequestBodyForInvestorLtaProtectionDetails[] ltaProtectionDetails;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withLtaProtectionDetails(UpdateInvestorUpdateRequestBodyForInvestorLtaProtectionDetails[] ltaProtectionDetails) {
         this.ltaProtectionDetails = ltaProtectionDetails;
         return this;
@@ -131,6 +144,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mifid_tax_id")
     public String mifidTaxId;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withMifidTaxId(String mifidTaxId) {
         this.mifidTaxId = mifidTaxId;
         return this;
@@ -139,6 +153,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile_number")
     public String mobileNumber;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
         return this;
@@ -150,6 +165,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mpaa_triggered")
     public Boolean mpaaTriggered;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withMpaaTriggered(Boolean mpaaTriggered) {
         this.mpaaTriggered = mpaaTriggered;
         return this;
@@ -161,6 +177,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mpaa_triggered_date")
     public String mpaaTriggeredDate;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withMpaaTriggeredDate(String mpaaTriggeredDate) {
         this.mpaaTriggeredDate = mpaaTriggeredDate;
         return this;
@@ -172,6 +189,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nationality")
     public String nationality;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withNationality(String nationality) {
         this.nationality = nationality;
         return this;
@@ -180,6 +198,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("office_number")
     public String officeNumber;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withOfficeNumber(String officeNumber) {
         this.officeNumber = officeNumber;
         return this;
@@ -187,6 +206,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     
     @JsonProperty("reference_version")
     public Long referenceVersion;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withReferenceVersion(Long referenceVersion) {
         this.referenceVersion = referenceVersion;
         return this;
@@ -198,6 +218,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retirement_age")
     public Double retirementAge;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withRetirementAge(Double retirementAge) {
         this.retirementAge = retirementAge;
         return this;
@@ -206,6 +227,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_id")
     public String taxId;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withTaxId(String taxId) {
         this.taxId = taxId;
         return this;
@@ -217,6 +239,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_residence")
     public UpdateInvestorUpdateRequestBodyForInvestorTaxResidenceEnum taxResidence;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withTaxResidence(UpdateInvestorUpdateRequestBodyForInvestorTaxResidenceEnum taxResidence) {
         this.taxResidence = taxResidence;
         return this;
@@ -225,6 +248,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_residency_compliant")
     public Boolean taxResidencyCompliant;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withTaxResidencyCompliant(Boolean taxResidencyCompliant) {
         this.taxResidencyCompliant = taxResidencyCompliant;
         return this;
@@ -233,9 +257,13 @@ public class UpdateInvestorUpdateRequestBodyForInvestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public UpdateInvestorUpdateRequestBodyForInvestorInput withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public UpdateInvestorUpdateRequestBodyForInvestorInput(@JsonProperty("reference_version") Long referenceVersion) {
+        this.referenceVersion = referenceVersion;
+  }
 }

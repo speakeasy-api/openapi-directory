@@ -12,6 +12,7 @@ public class NAYearMonth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("m")
     public Integer m;
+
     public NAYearMonth withM(Integer m) {
         this.m = m;
         return this;
@@ -20,9 +21,11 @@ public class NAYearMonth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public Integer y;
+
     public NAYearMonth withY(Integer y) {
         this.y = y;
         return this;
     }
     
+    public NAYearMonth(){}
 }

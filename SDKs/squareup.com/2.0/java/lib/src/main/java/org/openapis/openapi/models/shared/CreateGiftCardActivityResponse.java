@@ -19,6 +19,7 @@ public class CreateGiftCardActivityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CreateGiftCardActivityResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -30,9 +31,11 @@ public class CreateGiftCardActivityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gift_card_activity")
     public GiftCardActivity giftCardActivity;
+
     public CreateGiftCardActivityResponse withGiftCardActivity(GiftCardActivity giftCardActivity) {
         this.giftCardActivity = giftCardActivity;
         return this;
     }
     
+    public CreateGiftCardActivityResponse(){}
 }

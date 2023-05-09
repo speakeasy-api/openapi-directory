@@ -61,11 +61,9 @@ public class Draft {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDraftPicksResponse res = new org.openapis.openapi.models.operations.GetDraftPicksResponse() {{
+        org.openapis.openapi.models.operations.GetDraftPicksResponse res = new org.openapis.openapi.models.operations.GetDraftPicksResponse(contentType, httpRes.statusCode()) {{
             draftPicks = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class Draft {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNFLPositionsResponse res = new org.openapis.openapi.models.operations.GetNFLPositionsResponse() {{
+        org.openapis.openapi.models.operations.GetNFLPositionsResponse res = new org.openapis.openapi.models.operations.GetNFLPositionsResponse(contentType, httpRes.statusCode()) {{
             draftPositions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -143,11 +139,9 @@ public class Draft {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNFLTeamsResponse res = new org.openapis.openapi.models.operations.GetNFLTeamsResponse() {{
+        org.openapis.openapi.models.operations.GetNFLTeamsResponse res = new org.openapis.openapi.models.operations.GetNFLTeamsResponse(contentType, httpRes.statusCode()) {{
             draftTeams = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

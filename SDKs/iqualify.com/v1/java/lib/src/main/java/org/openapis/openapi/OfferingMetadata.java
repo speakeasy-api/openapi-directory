@@ -58,12 +58,10 @@ public class OfferingMetadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataCategoryResponse res = new org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataCategoryResponse() {{
+        org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataCategoryResponse res = new org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataCategoryResponse(contentType, httpRes.statusCode()) {{
             offeringMetadataResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,12 +109,10 @@ public class OfferingMetadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataLevelResponse res = new org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataLevelResponse() {{
+        org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataLevelResponse res = new org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataLevelResponse(contentType, httpRes.statusCode()) {{
             offeringMetadataResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -164,12 +160,10 @@ public class OfferingMetadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataTagsResponse res = new org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataTagsResponse() {{
+        org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataTagsResponse res = new org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataTagsResponse(contentType, httpRes.statusCode()) {{
             offeringMetadataResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -217,12 +211,10 @@ public class OfferingMetadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataTopicResponse res = new org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataTopicResponse() {{
+        org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataTopicResponse res = new org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataTopicResponse(contentType, httpRes.statusCode()) {{
             offeringMetadataResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

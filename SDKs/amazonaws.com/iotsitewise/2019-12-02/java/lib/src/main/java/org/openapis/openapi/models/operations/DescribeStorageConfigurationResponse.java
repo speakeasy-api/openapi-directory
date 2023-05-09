@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeStorageConfigurationResponse {
@@ -12,6 +13,7 @@ public class DescribeStorageConfigurationResponse {
      */
     
     public Object conflictingOperationException;
+
     public DescribeStorageConfigurationResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeStorageConfigurationResponse {
     
     
     public String contentType;
+
     public DescribeStorageConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeStorageConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeStorageConfigurationResponse describeStorageConfigurationResponse;
+
     public DescribeStorageConfigurationResponse withDescribeStorageConfigurationResponse(org.openapis.openapi.models.shared.DescribeStorageConfigurationResponse describeStorageConfigurationResponse) {
         this.describeStorageConfigurationResponse = describeStorageConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeStorageConfigurationResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeStorageConfigurationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeStorageConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeStorageConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeStorageConfigurationResponse {
      */
     
     public Object limitExceededException;
+
     public DescribeStorageConfigurationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeStorageConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeStorageConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeStorageConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeStorageConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeStorageConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeStorageConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeStorageConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public DescribeStorageConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeStorageConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

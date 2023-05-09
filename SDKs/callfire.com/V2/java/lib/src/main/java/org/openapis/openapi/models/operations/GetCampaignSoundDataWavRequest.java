@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCampaignSoundDataWavRequest {
@@ -12,9 +13,13 @@ public class GetCampaignSoundDataWavRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetCampaignSoundDataWavRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetCampaignSoundDataWavRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

@@ -18,9 +18,11 @@ public class GetOwnerInstanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public GetOwnerInstanceResponse withInstance(String instance) {
         this.instance = instance;
         return this;
     }
     
+    public GetOwnerInstanceResponse(){}
 }

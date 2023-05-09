@@ -22,6 +22,7 @@ public class Model {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LatestInference")
     public OffsetDateTime latestInference;
+
     public Model withLatestInference(OffsetDateTime latestInference) {
         this.latestInference = latestInference;
         return this;
@@ -32,6 +33,7 @@ public class Model {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LatestSampleTime")
     public OffsetDateTime latestSampleTime;
+
     public Model withLatestSampleTime(OffsetDateTime latestSampleTime) {
         this.latestSampleTime = latestSampleTime;
         return this;
@@ -40,6 +42,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelMetrics")
     public EdgeMetric[] modelMetrics;
+
     public Model withModelMetrics(EdgeMetric[] modelMetrics) {
         this.modelMetrics = modelMetrics;
         return this;
@@ -48,6 +51,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelName")
     public String modelName;
+
     public Model withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -56,9 +60,11 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelVersion")
     public String modelVersion;
+
     public Model withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
     }
     
+    public Model(){}
 }

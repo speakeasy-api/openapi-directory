@@ -18,6 +18,7 @@ public class MetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionalValues")
     public DimensionalMetricValue[] dimensionalValues;
+
     public MetricValue withDimensionalValues(DimensionalMetricValue[] dimensionalValues) {
         this.dimensionalValues = dimensionalValues;
         return this;
@@ -29,6 +30,7 @@ public class MetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public MetricValueMetricEnum metric;
+
     public MetricValue withMetric(MetricValueMetricEnum metric) {
         this.metric = metric;
         return this;
@@ -40,9 +42,11 @@ public class MetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalValue")
     public DimensionalMetricValue totalValue;
+
     public MetricValue withTotalValue(DimensionalMetricValue totalValue) {
         this.totalValue = totalValue;
         return this;
     }
     
+    public MetricValue(){}
 }

@@ -15,9 +15,11 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagValue")
     public String tagValue;
+
     public ResourceDetails withTagValue(String tagValue) {
         this.tagValue = tagValue;
         return this;
     }
     
+    public ResourceDetails(){}
 }

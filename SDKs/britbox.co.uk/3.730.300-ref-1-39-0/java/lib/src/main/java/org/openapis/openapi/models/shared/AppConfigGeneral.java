@@ -15,6 +15,7 @@ public class AppConfigGeneral {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public AppConfigGeneral withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -26,6 +27,7 @@ public class AppConfigGeneral {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public java.util.Map<String, Object> customFields;
+
     public AppConfigGeneral withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -37,6 +39,7 @@ public class AppConfigGeneral {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultTimeZone")
     public String defaultTimeZone;
+
     public AppConfigGeneral withDefaultTimeZone(String defaultTimeZone) {
         this.defaultTimeZone = defaultTimeZone;
         return this;
@@ -48,6 +51,7 @@ public class AppConfigGeneral {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facebookAppId")
     public String facebookAppId;
+
     public AppConfigGeneral withFacebookAppId(String facebookAppId) {
         this.facebookAppId = facebookAppId;
         return this;
@@ -59,6 +63,7 @@ public class AppConfigGeneral {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gaToken")
     public String gaToken;
+
     public AppConfigGeneral withGaToken(String gaToken) {
         this.gaToken = gaToken;
         return this;
@@ -70,6 +75,7 @@ public class AppConfigGeneral {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemImageTypes")
     public java.util.Map<String, String> itemImageTypes;
+
     public AppConfigGeneral withItemImageTypes(java.util.Map<String, String> itemImageTypes) {
         this.itemImageTypes = itemImageTypes;
         return this;
@@ -81,6 +87,7 @@ public class AppConfigGeneral {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandatorySignIn")
     public Boolean mandatorySignIn;
+
     public AppConfigGeneral withMandatorySignIn(Boolean mandatorySignIn) {
         this.mandatorySignIn = mandatorySignIn;
         return this;
@@ -92,6 +99,7 @@ public class AppConfigGeneral {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxUserRating")
     public Integer maxUserRating;
+
     public AppConfigGeneral withMaxUserRating(Integer maxUserRating) {
         this.maxUserRating = maxUserRating;
         return this;
@@ -103,6 +111,7 @@ public class AppConfigGeneral {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stripeKey")
     public String stripeKey;
+
     public AppConfigGeneral withStripeKey(String stripeKey) {
         this.stripeKey = stripeKey;
         return this;
@@ -114,9 +123,11 @@ public class AppConfigGeneral {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("websiteUrl")
     public String websiteUrl;
+
     public AppConfigGeneral withWebsiteUrl(String websiteUrl) {
         this.websiteUrl = websiteUrl;
         return this;
     }
     
+    public AppConfigGeneral(){}
 }

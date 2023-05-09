@@ -15,9 +15,13 @@ public class DeleteEmailTemplateResponse {
      */
     @JsonProperty("MessageBody")
     public MessageBody messageBody;
+
     public DeleteEmailTemplateResponse withMessageBody(MessageBody messageBody) {
         this.messageBody = messageBody;
         return this;
     }
     
+    public DeleteEmailTemplateResponse(@JsonProperty("MessageBody") MessageBody messageBody) {
+        this.messageBody = messageBody;
+  }
 }

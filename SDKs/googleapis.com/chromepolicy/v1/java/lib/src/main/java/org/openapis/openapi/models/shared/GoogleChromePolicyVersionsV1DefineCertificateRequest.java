@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1DefineCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ceritificateName")
     public String ceritificateName;
+
     public GoogleChromePolicyVersionsV1DefineCertificateRequest withCeritificateName(String ceritificateName) {
         this.ceritificateName = ceritificateName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromePolicyVersionsV1DefineCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate")
     public String certificate;
+
     public GoogleChromePolicyVersionsV1DefineCertificateRequest withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -40,6 +42,7 @@ public class GoogleChromePolicyVersionsV1DefineCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public GoogleChromePolicyVersionsV1NetworkSetting[] settings;
+
     public GoogleChromePolicyVersionsV1DefineCertificateRequest withSettings(GoogleChromePolicyVersionsV1NetworkSetting[] settings) {
         this.settings = settings;
         return this;
@@ -51,9 +54,11 @@ public class GoogleChromePolicyVersionsV1DefineCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetResource")
     public String targetResource;
+
     public GoogleChromePolicyVersionsV1DefineCertificateRequest withTargetResource(String targetResource) {
         this.targetResource = targetResource;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1DefineCertificateRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetArtifactOwnerResponse {
@@ -12,6 +13,7 @@ public class GetArtifactOwnerResponse {
      */
     
     public org.openapis.openapi.models.shared.ArtifactOwner artifactOwner;
+
     public GetArtifactOwnerResponse withArtifactOwner(org.openapis.openapi.models.shared.ArtifactOwner artifactOwner) {
         this.artifactOwner = artifactOwner;
         return this;
@@ -19,6 +21,7 @@ public class GetArtifactOwnerResponse {
     
     
     public String contentType;
+
     public GetArtifactOwnerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetArtifactOwnerResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetArtifactOwnerResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetArtifactOwnerResponse {
     
     
     public Integer statusCode;
+
     public GetArtifactOwnerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetArtifactOwnerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetArtifactOwnerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetArtifactOwnerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

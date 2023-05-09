@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityType")
     public String entityType;
+
     public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart withEntityType(String entityType) {
         this.entityType = entityType;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart withText(String text) {
         this.text = text;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userDefined")
     public Boolean userDefined;
+
     public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart withUserDefined(Boolean userDefined) {
         this.userDefined = userDefined;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart(){}
 }

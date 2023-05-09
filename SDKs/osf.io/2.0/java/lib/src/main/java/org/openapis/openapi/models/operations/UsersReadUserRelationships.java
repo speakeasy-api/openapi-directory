@@ -15,6 +15,7 @@ public class UsersReadUserRelationships {
      */
     
     public String institutions;
+
     public UsersReadUserRelationships withInstitutions(String institutions) {
         this.institutions = institutions;
         return this;
@@ -25,9 +26,11 @@ public class UsersReadUserRelationships {
      */
     
     public String nodes;
+
     public UsersReadUserRelationships withNodes(String nodes) {
         this.nodes = nodes;
         return this;
     }
     
+    public UsersReadUserRelationships(){}
 }

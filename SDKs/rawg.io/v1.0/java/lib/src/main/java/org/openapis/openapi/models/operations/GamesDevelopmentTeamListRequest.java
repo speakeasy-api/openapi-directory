@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GamesDevelopmentTeamListRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=game_pk")
     public String gamePk;
+
     public GamesDevelopmentTeamListRequest withGamePk(String gamePk) {
         this.gamePk = gamePk;
         return this;
@@ -19,6 +21,7 @@ public class GamesDevelopmentTeamListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
     public String ordering;
+
     public GamesDevelopmentTeamListRequest withOrdering(String ordering) {
         this.ordering = ordering;
         return this;
@@ -29,6 +32,7 @@ public class GamesDevelopmentTeamListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GamesDevelopmentTeamListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -39,9 +43,13 @@ public class GamesDevelopmentTeamListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public GamesDevelopmentTeamListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GamesDevelopmentTeamListRequest(@JsonProperty("game_pk") String gamePk) {
+        this.gamePk = gamePk;
+  }
 }

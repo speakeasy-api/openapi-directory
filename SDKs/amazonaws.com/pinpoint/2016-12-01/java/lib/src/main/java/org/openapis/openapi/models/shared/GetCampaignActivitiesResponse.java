@@ -15,9 +15,13 @@ public class GetCampaignActivitiesResponse {
      */
     @JsonProperty("ActivitiesResponse")
     public ActivitiesResponse activitiesResponse;
+
     public GetCampaignActivitiesResponse withActivitiesResponse(ActivitiesResponse activitiesResponse) {
         this.activitiesResponse = activitiesResponse;
         return this;
     }
     
+    public GetCampaignActivitiesResponse(@JsonProperty("ActivitiesResponse") ActivitiesResponse activitiesResponse) {
+        this.activitiesResponse = activitiesResponse;
+  }
 }

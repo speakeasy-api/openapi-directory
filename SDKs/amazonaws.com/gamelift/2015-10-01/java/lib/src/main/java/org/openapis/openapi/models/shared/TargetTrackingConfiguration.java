@@ -7,14 +7,18 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * TargetTrackingConfiguration - &lt;p&gt; &lt;b&gt;This data type is used with the GameLift FleetIQ and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Settings for a target-based scaling policy as part of a &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_GameServerGroupAutoScalingPolicy.html"&gt;GameServerGroupAutoScalingPolicy&lt;/a&gt; . These settings are used to create a target-based policy that tracks the GameLift FleetIQ metric &lt;code&gt;"PercentUtilizedGameServers"&lt;/code&gt; and specifies a target value for the metric. As player usage changes, the policy triggers to adjust the game server group capacity so that the metric returns to the target value. &lt;/p&gt;
+ * TargetTrackingConfiguration - &lt;p&gt; &lt;b&gt;This data type is used with the Amazon GameLift FleetIQ and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Settings for a target-based scaling policy as part of a &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_GameServerGroupAutoScalingPolicy.html"&gt;GameServerGroupAutoScalingPolicy&lt;/a&gt; . These settings are used to create a target-based policy that tracks the Amazon GameLift FleetIQ metric &lt;code&gt;"PercentUtilizedGameServers"&lt;/code&gt; and specifies a target value for the metric. As player usage changes, the policy triggers to adjust the game server group capacity so that the metric returns to the target value. &lt;/p&gt;
  */
 public class TargetTrackingConfiguration {
     @JsonProperty("TargetValue")
     public Double targetValue;
+
     public TargetTrackingConfiguration withTargetValue(Double targetValue) {
         this.targetValue = targetValue;
         return this;
     }
     
+    public TargetTrackingConfiguration(@JsonProperty("TargetValue") Double targetValue) {
+        this.targetValue = targetValue;
+  }
 }

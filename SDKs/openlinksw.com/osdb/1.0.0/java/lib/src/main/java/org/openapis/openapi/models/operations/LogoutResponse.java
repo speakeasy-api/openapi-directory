@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LogoutResponse {
     
     public String contentType;
+
     public LogoutResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class LogoutResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorModel errorModel;
+
     public LogoutResponse withErrorModel(org.openapis.openapi.models.shared.ErrorModel errorModel) {
         this.errorModel = errorModel;
         return this;
@@ -29,6 +32,7 @@ public class LogoutResponse {
      */
     
     public org.openapis.openapi.models.shared.LogoutResponse logoutResponse;
+
     public LogoutResponse withLogoutResponse(org.openapis.openapi.models.shared.LogoutResponse logoutResponse) {
         this.logoutResponse = logoutResponse;
         return this;
@@ -36,6 +40,7 @@ public class LogoutResponse {
     
     
     public Integer statusCode;
+
     public LogoutResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class LogoutResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LogoutResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LogoutResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

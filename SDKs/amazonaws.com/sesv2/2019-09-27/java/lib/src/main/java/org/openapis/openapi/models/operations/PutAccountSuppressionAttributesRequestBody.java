@@ -15,9 +15,11 @@ public class PutAccountSuppressionAttributesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuppressedReasons")
     public org.openapis.openapi.models.shared.SuppressionListReasonEnum[] suppressedReasons;
+
     public PutAccountSuppressionAttributesRequestBody withSuppressedReasons(org.openapis.openapi.models.shared.SuppressionListReasonEnum[] suppressedReasons) {
         this.suppressedReasons = suppressedReasons;
         return this;
     }
     
+    public PutAccountSuppressionAttributesRequestBody(){}
 }

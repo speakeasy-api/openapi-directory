@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeliverConfigSnapshotRequest {
     @JsonProperty("deliveryChannelName")
     public String deliveryChannelName;
+
     public DeliverConfigSnapshotRequest withDeliveryChannelName(String deliveryChannelName) {
         this.deliveryChannelName = deliveryChannelName;
         return this;
     }
     
+    public DeliverConfigSnapshotRequest(@JsonProperty("deliveryChannelName") String deliveryChannelName) {
+        this.deliveryChannelName = deliveryChannelName;
+  }
 }

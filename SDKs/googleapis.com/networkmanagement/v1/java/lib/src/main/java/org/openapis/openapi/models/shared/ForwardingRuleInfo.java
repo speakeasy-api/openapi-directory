@@ -18,6 +18,7 @@ public class ForwardingRuleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ForwardingRuleInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class ForwardingRuleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchedPortRange")
     public String matchedPortRange;
+
     public ForwardingRuleInfo withMatchedPortRange(String matchedPortRange) {
         this.matchedPortRange = matchedPortRange;
         return this;
@@ -40,6 +42,7 @@ public class ForwardingRuleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchedProtocol")
     public String matchedProtocol;
+
     public ForwardingRuleInfo withMatchedProtocol(String matchedProtocol) {
         this.matchedProtocol = matchedProtocol;
         return this;
@@ -51,6 +54,7 @@ public class ForwardingRuleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkUri")
     public String networkUri;
+
     public ForwardingRuleInfo withNetworkUri(String networkUri) {
         this.networkUri = networkUri;
         return this;
@@ -62,6 +66,7 @@ public class ForwardingRuleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public ForwardingRuleInfo withTarget(String target) {
         this.target = target;
         return this;
@@ -73,6 +78,7 @@ public class ForwardingRuleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public ForwardingRuleInfo withUri(String uri) {
         this.uri = uri;
         return this;
@@ -84,9 +90,11 @@ public class ForwardingRuleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vip")
     public String vip;
+
     public ForwardingRuleInfo withVip(String vip) {
         this.vip = vip;
         return this;
     }
     
+    public ForwardingRuleInfo(){}
 }

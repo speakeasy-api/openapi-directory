@@ -12,6 +12,7 @@ public class CreditRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditable")
     public CreditRelationshipsCreditable creditable;
+
     public CreditRelationships withCreditable(CreditRelationshipsCreditable creditable) {
         this.creditable = creditable;
         return this;
@@ -20,9 +21,11 @@ public class CreditRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("person")
     public CreditRelationshipsPerson person;
+
     public CreditRelationships withPerson(CreditRelationshipsPerson person) {
         this.person = person;
         return this;
     }
     
+    public CreditRelationships(){}
 }

@@ -15,6 +15,7 @@ public class CreateVirtualNodeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateVirtualNodeRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateVirtualNodeRequestBody {
      */
     @JsonProperty("spec")
     public CreateVirtualNodeRequestBodySpec spec;
+
     public CreateVirtualNodeRequestBody withSpec(CreateVirtualNodeRequestBodySpec spec) {
         this.spec = spec;
         return this;
@@ -36,6 +38,7 @@ public class CreateVirtualNodeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.TagRef[] tags;
+
     public CreateVirtualNodeRequestBody withTags(org.openapis.openapi.models.shared.TagRef[] tags) {
         this.tags = tags;
         return this;
@@ -46,9 +49,14 @@ public class CreateVirtualNodeRequestBody {
      */
     @JsonProperty("virtualNodeName")
     public String virtualNodeName;
+
     public CreateVirtualNodeRequestBody withVirtualNodeName(String virtualNodeName) {
         this.virtualNodeName = virtualNodeName;
         return this;
     }
     
+    public CreateVirtualNodeRequestBody(@JsonProperty("spec") CreateVirtualNodeRequestBodySpec spec, @JsonProperty("virtualNodeName") String virtualNodeName) {
+        this.spec = spec;
+        this.virtualNodeName = virtualNodeName;
+  }
 }

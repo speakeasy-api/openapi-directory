@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETStrainTypeDiffUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETStrainTypeDiffUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateFromYYYYMMDD")
     public String dateFromYYYYMMDD;
+
     public GETStrainTypeDiffUsingGETRequest withDateFromYYYYMMDD(String dateFromYYYYMMDD) {
         this.dateFromYYYYMMDD = dateFromYYYYMMDD;
         return this;
@@ -22,6 +24,7 @@ public class GETStrainTypeDiffUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateToYYYYMMDD")
     public String dateToYYYYMMDD;
+
     public GETStrainTypeDiffUsingGETRequest withDateToYYYYMMDD(String dateToYYYYMMDD) {
         this.dateToYYYYMMDD = dateToYYYYMMDD;
         return this;
@@ -32,9 +35,15 @@ public class GETStrainTypeDiffUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
     public Integer speciesTypeKey;
+
     public GETStrainTypeDiffUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
         this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     
+    public GETStrainTypeDiffUsingGETRequest(@JsonProperty("dateFromYYYYMMDD") String dateFromYYYYMMDD, @JsonProperty("dateToYYYYMMDD") String dateToYYYYMMDD, @JsonProperty("speciesTypeKey") Integer speciesTypeKey) {
+        this.dateFromYYYYMMDD = dateFromYYYYMMDD;
+        this.dateToYYYYMMDD = dateToYYYYMMDD;
+        this.speciesTypeKey = speciesTypeKey;
+  }
 }

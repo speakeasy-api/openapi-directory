@@ -15,6 +15,7 @@ public class UpdateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appConfigResource")
     public UpdateProjectRequestBodyAppConfigResource appConfigResource;
+
     public UpdateProjectRequestBody withAppConfigResource(UpdateProjectRequestBodyAppConfigResource appConfigResource) {
         this.appConfigResource = appConfigResource;
         return this;
@@ -26,9 +27,11 @@ public class UpdateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateProjectRequestBody withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public UpdateProjectRequestBody(){}
 }

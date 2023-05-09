@@ -22,6 +22,7 @@ public class EbsInstanceBlockDevice {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("attachTime")
     public OffsetDateTime attachTime;
+
     public EbsInstanceBlockDevice withAttachTime(OffsetDateTime attachTime) {
         this.attachTime = attachTime;
         return this;
@@ -30,6 +31,7 @@ public class EbsInstanceBlockDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteOnTermination")
     public Boolean deleteOnTermination;
+
     public EbsInstanceBlockDevice withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -38,6 +40,7 @@ public class EbsInstanceBlockDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AttachmentStatusEnum status;
+
     public EbsInstanceBlockDevice withStatus(AttachmentStatusEnum status) {
         this.status = status;
         return this;
@@ -46,9 +49,11 @@ public class EbsInstanceBlockDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeId")
     public String volumeId;
+
     public EbsInstanceBlockDevice withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public EbsInstanceBlockDevice(){}
 }

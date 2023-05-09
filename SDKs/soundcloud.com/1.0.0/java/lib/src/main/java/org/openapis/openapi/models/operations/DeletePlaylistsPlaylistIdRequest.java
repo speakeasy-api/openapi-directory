@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePlaylistsPlaylistIdRequest {
@@ -12,9 +13,13 @@ public class DeletePlaylistsPlaylistIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playlist_id")
     public Long playlistId;
+
     public DeletePlaylistsPlaylistIdRequest withPlaylistId(Long playlistId) {
         this.playlistId = playlistId;
         return this;
     }
     
+    public DeletePlaylistsPlaylistIdRequest(@JsonProperty("playlist_id") Long playlistId) {
+        this.playlistId = playlistId;
+  }
 }

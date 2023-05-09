@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSack {
      */
     
     public String detailAction;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSack withDetailAction(String detailAction) {
         this.detailAction = detailAction;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSack {
      */
     
     public String openAction;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSack withOpenAction(String openAction) {
         this.openAction = openAction;
         return this;
@@ -32,6 +34,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSack {
     
     
     public Boolean openOnAcquire;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSack withOpenOnAcquire(Boolean openOnAcquire) {
         this.openOnAcquire = openOnAcquire;
         return this;
@@ -39,6 +42,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSack {
     
     
     public Integer selectItemCount;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSack withSelectItemCount(Integer selectItemCount) {
         this.selectItemCount = selectItemCount;
         return this;
@@ -46,9 +50,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSack {
     
     
     public String vendorSackType;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSack withVendorSackType(String vendorSackType) {
         this.vendorSackType = vendorSackType;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionSack(){}
 }

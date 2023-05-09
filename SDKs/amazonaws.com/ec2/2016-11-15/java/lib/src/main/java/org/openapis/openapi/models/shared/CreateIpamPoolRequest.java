@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateIpamPoolRequest {
     
     public AddressFamilyEnum addressFamily;
+
     public CreateIpamPoolRequest withAddressFamily(AddressFamilyEnum addressFamily) {
         this.addressFamily = addressFamily;
         return this;
@@ -16,6 +17,7 @@ public class CreateIpamPoolRequest {
     
     
     public Long allocationDefaultNetmaskLength;
+
     public CreateIpamPoolRequest withAllocationDefaultNetmaskLength(Long allocationDefaultNetmaskLength) {
         this.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
         return this;
@@ -23,6 +25,7 @@ public class CreateIpamPoolRequest {
     
     
     public Long allocationMaxNetmaskLength;
+
     public CreateIpamPoolRequest withAllocationMaxNetmaskLength(Long allocationMaxNetmaskLength) {
         this.allocationMaxNetmaskLength = allocationMaxNetmaskLength;
         return this;
@@ -30,6 +33,7 @@ public class CreateIpamPoolRequest {
     
     
     public Long allocationMinNetmaskLength;
+
     public CreateIpamPoolRequest withAllocationMinNetmaskLength(Long allocationMinNetmaskLength) {
         this.allocationMinNetmaskLength = allocationMinNetmaskLength;
         return this;
@@ -37,6 +41,7 @@ public class CreateIpamPoolRequest {
     
     
     public CreateIpamPoolRequestAllocationResourceTags[] allocationResourceTags;
+
     public CreateIpamPoolRequest withAllocationResourceTags(CreateIpamPoolRequestAllocationResourceTags[] allocationResourceTags) {
         this.allocationResourceTags = allocationResourceTags;
         return this;
@@ -44,6 +49,7 @@ public class CreateIpamPoolRequest {
     
     
     public Boolean autoImport;
+
     public CreateIpamPoolRequest withAutoImport(Boolean autoImport) {
         this.autoImport = autoImport;
         return this;
@@ -51,6 +57,7 @@ public class CreateIpamPoolRequest {
     
     
     public IpamPoolAwsServiceEnum awsService;
+
     public CreateIpamPoolRequest withAwsService(IpamPoolAwsServiceEnum awsService) {
         this.awsService = awsService;
         return this;
@@ -58,6 +65,7 @@ public class CreateIpamPoolRequest {
     
     
     public String clientToken;
+
     public CreateIpamPoolRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -65,6 +73,7 @@ public class CreateIpamPoolRequest {
     
     
     public String description;
+
     public CreateIpamPoolRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -72,6 +81,7 @@ public class CreateIpamPoolRequest {
     
     
     public Boolean dryRun;
+
     public CreateIpamPoolRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -79,6 +89,7 @@ public class CreateIpamPoolRequest {
     
     
     public String ipamScopeId;
+
     public CreateIpamPoolRequest withIpamScopeId(String ipamScopeId) {
         this.ipamScopeId = ipamScopeId;
         return this;
@@ -86,6 +97,7 @@ public class CreateIpamPoolRequest {
     
     
     public String locale;
+
     public CreateIpamPoolRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -93,6 +105,7 @@ public class CreateIpamPoolRequest {
     
     
     public IpamPoolPublicIpSourceEnum publicIpSource;
+
     public CreateIpamPoolRequest withPublicIpSource(IpamPoolPublicIpSourceEnum publicIpSource) {
         this.publicIpSource = publicIpSource;
         return this;
@@ -100,6 +113,7 @@ public class CreateIpamPoolRequest {
     
     
     public Boolean publiclyAdvertisable;
+
     public CreateIpamPoolRequest withPubliclyAdvertisable(Boolean publiclyAdvertisable) {
         this.publiclyAdvertisable = publiclyAdvertisable;
         return this;
@@ -107,6 +121,7 @@ public class CreateIpamPoolRequest {
     
     
     public String sourceIpamPoolId;
+
     public CreateIpamPoolRequest withSourceIpamPoolId(String sourceIpamPoolId) {
         this.sourceIpamPoolId = sourceIpamPoolId;
         return this;
@@ -114,9 +129,14 @@ public class CreateIpamPoolRequest {
     
     
     public CreateIpamPoolRequestTagSpecifications[] tagSpecifications;
+
     public CreateIpamPoolRequest withTagSpecifications(CreateIpamPoolRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateIpamPoolRequest(@JsonProperty("AddressFamily") AddressFamilyEnum addressFamily, @JsonProperty("IpamScopeId") String ipamScopeId) {
+        this.addressFamily = addressFamily;
+        this.ipamScopeId = ipamScopeId;
+  }
 }

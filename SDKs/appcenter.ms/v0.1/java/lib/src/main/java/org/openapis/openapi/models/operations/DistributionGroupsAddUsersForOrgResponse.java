@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DistributionGroupsAddUsersForOrgResponse {
     
     public String contentType;
+
     public DistributionGroupsAddUsersForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DistributionGroupsAddUsersForOrgResponse {
     
     
     public Integer statusCode;
+
     public DistributionGroupsAddUsersForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DistributionGroupsAddUsersForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DistributionGroupsAddUsersForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DistributionGroupsAddUsersForOrgResponse {
      */
     
     public DistributionGroupsAddUsersForOrg200ApplicationJSON[] distributionGroupsAddUsersForOrg200ApplicationJSONObjects;
+
     public DistributionGroupsAddUsersForOrgResponse withDistributionGroupsAddUsersForOrg200ApplicationJSONObjects(DistributionGroupsAddUsersForOrg200ApplicationJSON[] distributionGroupsAddUsersForOrg200ApplicationJSONObjects) {
         this.distributionGroupsAddUsersForOrg200ApplicationJSONObjects = distributionGroupsAddUsersForOrg200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class DistributionGroupsAddUsersForOrgResponse {
      */
     
     public DistributionGroupsAddUsersForOrgDefaultApplicationJSON distributionGroupsAddUsersForOrgDefaultApplicationJSONObject;
+
     public DistributionGroupsAddUsersForOrgResponse withDistributionGroupsAddUsersForOrgDefaultApplicationJSONObject(DistributionGroupsAddUsersForOrgDefaultApplicationJSON distributionGroupsAddUsersForOrgDefaultApplicationJSONObject) {
         this.distributionGroupsAddUsersForOrgDefaultApplicationJSONObject = distributionGroupsAddUsersForOrgDefaultApplicationJSONObject;
         return this;
     }
     
+    public DistributionGroupsAddUsersForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

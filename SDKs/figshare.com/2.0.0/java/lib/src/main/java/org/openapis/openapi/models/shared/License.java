@@ -12,6 +12,7 @@ public class License {
      */
     @JsonProperty("name")
     public String name;
+
     public License withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +23,7 @@ public class License {
      */
     @JsonProperty("url")
     public String url;
+
     public License withUrl(String url) {
         this.url = url;
         return this;
@@ -32,9 +34,15 @@ public class License {
      */
     @JsonProperty("value")
     public Long value;
+
     public License withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public License(@JsonProperty("name") String name, @JsonProperty("url") String url, @JsonProperty("value") Long value) {
+        this.name = name;
+        this.url = url;
+        this.value = value;
+  }
 }

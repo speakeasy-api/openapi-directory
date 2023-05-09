@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEvidenceFoldersByAssessmentResponse {
@@ -12,6 +13,7 @@ public class GetEvidenceFoldersByAssessmentResponse {
      */
     
     public Object accessDeniedException;
+
     public GetEvidenceFoldersByAssessmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetEvidenceFoldersByAssessmentResponse {
     
     
     public String contentType;
+
     public GetEvidenceFoldersByAssessmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEvidenceFoldersByAssessmentResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEvidenceFoldersByAssessmentResponse getEvidenceFoldersByAssessmentResponse;
+
     public GetEvidenceFoldersByAssessmentResponse withGetEvidenceFoldersByAssessmentResponse(org.openapis.openapi.models.shared.GetEvidenceFoldersByAssessmentResponse getEvidenceFoldersByAssessmentResponse) {
         this.getEvidenceFoldersByAssessmentResponse = getEvidenceFoldersByAssessmentResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetEvidenceFoldersByAssessmentResponse {
      */
     
     public Object internalServerException;
+
     public GetEvidenceFoldersByAssessmentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetEvidenceFoldersByAssessmentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetEvidenceFoldersByAssessmentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetEvidenceFoldersByAssessmentResponse {
     
     
     public Integer statusCode;
+
     public GetEvidenceFoldersByAssessmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetEvidenceFoldersByAssessmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEvidenceFoldersByAssessmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetEvidenceFoldersByAssessmentResponse {
      */
     
     public Object validationException;
+
     public GetEvidenceFoldersByAssessmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetEvidenceFoldersByAssessmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

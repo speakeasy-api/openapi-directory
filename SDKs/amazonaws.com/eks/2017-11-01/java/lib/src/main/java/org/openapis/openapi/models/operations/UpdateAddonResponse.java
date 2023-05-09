@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAddonResponse {
@@ -12,6 +13,7 @@ public class UpdateAddonResponse {
      */
     
     public Object clientException;
+
     public UpdateAddonResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAddonResponse {
     
     
     public String contentType;
+
     public UpdateAddonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAddonResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateAddonResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAddonResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateAddonResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateAddonResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateAddonResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateAddonResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAddonResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateAddonResponse {
     
     
     public Integer statusCode;
+
     public UpdateAddonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAddonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAddonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateAddonResponse {
      */
     
     public Object serverException;
+
     public UpdateAddonResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateAddonResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAddonResponse updateAddonResponse;
+
     public UpdateAddonResponse withUpdateAddonResponse(org.openapis.openapi.models.shared.UpdateAddonResponse updateAddonResponse) {
         this.updateAddonResponse = updateAddonResponse;
         return this;
     }
     
+    public UpdateAddonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

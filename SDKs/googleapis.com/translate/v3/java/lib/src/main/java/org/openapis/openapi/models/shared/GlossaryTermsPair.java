@@ -18,6 +18,7 @@ public class GlossaryTermsPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceTerm")
     public GlossaryTerm sourceTerm;
+
     public GlossaryTermsPair withSourceTerm(GlossaryTerm sourceTerm) {
         this.sourceTerm = sourceTerm;
         return this;
@@ -29,9 +30,11 @@ public class GlossaryTermsPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetTerm")
     public GlossaryTerm targetTerm;
+
     public GlossaryTermsPair withTargetTerm(GlossaryTerm targetTerm) {
         this.targetTerm = targetTerm;
         return this;
     }
     
+    public GlossaryTermsPair(){}
 }

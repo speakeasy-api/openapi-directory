@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkAirMarshalResponse {
     
     public String contentType;
+
     public GetNetworkAirMarshalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkAirMarshalResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkAirMarshalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkAirMarshalResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkAirMarshalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetNetworkAirMarshalResponse {
      */
     
     public java.util.Map<String, Object>[] getNetworkAirMarshal200ApplicationJSONObjects;
+
     public GetNetworkAirMarshalResponse withGetNetworkAirMarshal200ApplicationJSONObjects(java.util.Map<String, Object>[] getNetworkAirMarshal200ApplicationJSONObjects) {
         this.getNetworkAirMarshal200ApplicationJSONObjects = getNetworkAirMarshal200ApplicationJSONObjects;
         return this;
     }
     
+    public GetNetworkAirMarshalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

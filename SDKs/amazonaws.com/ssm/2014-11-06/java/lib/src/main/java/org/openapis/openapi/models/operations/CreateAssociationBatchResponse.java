@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAssociationBatchResponse {
@@ -12,6 +13,7 @@ public class CreateAssociationBatchResponse {
      */
     
     public Object associationLimitExceeded;
+
     public CreateAssociationBatchResponse withAssociationLimitExceeded(Object associationLimitExceeded) {
         this.associationLimitExceeded = associationLimitExceeded;
         return this;
@@ -19,6 +21,7 @@ public class CreateAssociationBatchResponse {
     
     
     public String contentType;
+
     public CreateAssociationBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateAssociationBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAssociationBatchResult createAssociationBatchResult;
+
     public CreateAssociationBatchResponse withCreateAssociationBatchResult(org.openapis.openapi.models.shared.CreateAssociationBatchResult createAssociationBatchResult) {
         this.createAssociationBatchResult = createAssociationBatchResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateAssociationBatchResponse {
      */
     
     public Object duplicateInstanceId;
+
     public CreateAssociationBatchResponse withDuplicateInstanceId(Object duplicateInstanceId) {
         this.duplicateInstanceId = duplicateInstanceId;
         return this;
@@ -49,6 +54,7 @@ public class CreateAssociationBatchResponse {
      */
     
     public Object internalServerError;
+
     public CreateAssociationBatchResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class CreateAssociationBatchResponse {
      */
     
     public Object invalidDocument;
+
     public CreateAssociationBatchResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -69,6 +76,7 @@ public class CreateAssociationBatchResponse {
      */
     
     public Object invalidDocumentVersion;
+
     public CreateAssociationBatchResponse withInvalidDocumentVersion(Object invalidDocumentVersion) {
         this.invalidDocumentVersion = invalidDocumentVersion;
         return this;
@@ -79,6 +87,7 @@ public class CreateAssociationBatchResponse {
      */
     
     public Object invalidInstanceId;
+
     public CreateAssociationBatchResponse withInvalidInstanceId(Object invalidInstanceId) {
         this.invalidInstanceId = invalidInstanceId;
         return this;
@@ -89,6 +98,7 @@ public class CreateAssociationBatchResponse {
      */
     
     public Object invalidOutputLocation;
+
     public CreateAssociationBatchResponse withInvalidOutputLocation(Object invalidOutputLocation) {
         this.invalidOutputLocation = invalidOutputLocation;
         return this;
@@ -99,6 +109,7 @@ public class CreateAssociationBatchResponse {
      */
     
     public Object invalidParameters;
+
     public CreateAssociationBatchResponse withInvalidParameters(Object invalidParameters) {
         this.invalidParameters = invalidParameters;
         return this;
@@ -109,6 +120,7 @@ public class CreateAssociationBatchResponse {
      */
     
     public Object invalidSchedule;
+
     public CreateAssociationBatchResponse withInvalidSchedule(Object invalidSchedule) {
         this.invalidSchedule = invalidSchedule;
         return this;
@@ -119,6 +131,7 @@ public class CreateAssociationBatchResponse {
      */
     
     public Object invalidTarget;
+
     public CreateAssociationBatchResponse withInvalidTarget(Object invalidTarget) {
         this.invalidTarget = invalidTarget;
         return this;
@@ -129,6 +142,7 @@ public class CreateAssociationBatchResponse {
      */
     
     public Object invalidTargetMaps;
+
     public CreateAssociationBatchResponse withInvalidTargetMaps(Object invalidTargetMaps) {
         this.invalidTargetMaps = invalidTargetMaps;
         return this;
@@ -136,6 +150,7 @@ public class CreateAssociationBatchResponse {
     
     
     public Integer statusCode;
+
     public CreateAssociationBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,6 +158,7 @@ public class CreateAssociationBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAssociationBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -153,9 +169,14 @@ public class CreateAssociationBatchResponse {
      */
     
     public Object unsupportedPlatformType;
+
     public CreateAssociationBatchResponse withUnsupportedPlatformType(Object unsupportedPlatformType) {
         this.unsupportedPlatformType = unsupportedPlatformType;
         return this;
     }
     
+    public CreateAssociationBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType {
      */
     @JsonProperty("deprecated")
     public String deprecated;
+
     public GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType withDeprecated(String deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -22,6 +23,7 @@ public class GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType {
      */
     @JsonProperty("description")
     public String description;
+
     public GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +34,7 @@ public class GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType {
      */
     @JsonProperty("id")
     public Double id;
+
     public GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType withId(Double id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType {
      */
     @JsonProperty("max_assigned_certificates")
     public Double maxAssignedCertificates;
+
     public GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType withMaxAssignedCertificates(Double maxAssignedCertificates) {
         this.maxAssignedCertificates = maxAssignedCertificates;
         return this;
@@ -52,6 +56,7 @@ public class GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType {
      */
     @JsonProperty("max_connections")
     public Double maxConnections;
+
     public GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType withMaxConnections(Double maxConnections) {
         this.maxConnections = maxConnections;
         return this;
@@ -62,6 +67,7 @@ public class GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType {
      */
     @JsonProperty("max_services")
     public Double maxServices;
+
     public GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType withMaxServices(Double maxServices) {
         this.maxServices = maxServices;
         return this;
@@ -72,6 +78,7 @@ public class GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType {
      */
     @JsonProperty("max_targets")
     public Double maxTargets;
+
     public GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType withMaxTargets(Double maxTargets) {
         this.maxTargets = maxTargets;
         return this;
@@ -82,6 +89,7 @@ public class GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType {
      */
     @JsonProperty("name")
     public String name;
+
     public GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType withName(String name) {
         this.name = name;
         return this;
@@ -92,9 +100,21 @@ public class GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType {
      */
     @JsonProperty("prices")
     public GetLoadBalancerTypesId200ApplicationJSONLoadBalancerTypePrices[] prices;
+
     public GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType withPrices(GetLoadBalancerTypesId200ApplicationJSONLoadBalancerTypePrices[] prices) {
         this.prices = prices;
         return this;
     }
     
+    public GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType(@JsonProperty("deprecated") String deprecated, @JsonProperty("description") String description, @JsonProperty("id") Double id, @JsonProperty("max_assigned_certificates") Double maxAssignedCertificates, @JsonProperty("max_connections") Double maxConnections, @JsonProperty("max_services") Double maxServices, @JsonProperty("max_targets") Double maxTargets, @JsonProperty("name") String name, @JsonProperty("prices") GetLoadBalancerTypesId200ApplicationJSONLoadBalancerTypePrices[] prices) {
+        this.deprecated = deprecated;
+        this.description = description;
+        this.id = id;
+        this.maxAssignedCertificates = maxAssignedCertificates;
+        this.maxConnections = maxConnections;
+        this.maxServices = maxServices;
+        this.maxTargets = maxTargets;
+        this.name = name;
+        this.prices = prices;
+  }
 }

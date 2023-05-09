@@ -15,6 +15,7 @@ public class UpdateTrustStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificatesToAdd")
     public String[] certificatesToAdd;
+
     public UpdateTrustStoreRequestBody withCertificatesToAdd(String[] certificatesToAdd) {
         this.certificatesToAdd = certificatesToAdd;
         return this;
@@ -26,6 +27,7 @@ public class UpdateTrustStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificatesToDelete")
     public String[] certificatesToDelete;
+
     public UpdateTrustStoreRequestBody withCertificatesToDelete(String[] certificatesToDelete) {
         this.certificatesToDelete = certificatesToDelete;
         return this;
@@ -37,9 +39,11 @@ public class UpdateTrustStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateTrustStoreRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
+    public UpdateTrustStoreRequestBody(){}
 }

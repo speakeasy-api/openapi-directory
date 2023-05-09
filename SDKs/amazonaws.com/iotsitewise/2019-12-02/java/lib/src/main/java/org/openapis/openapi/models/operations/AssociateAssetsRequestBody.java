@@ -14,6 +14,7 @@ public class AssociateAssetsRequestBody {
      */
     @JsonProperty("childAssetId")
     public String childAssetId;
+
     public AssociateAssetsRequestBody withChildAssetId(String childAssetId) {
         this.childAssetId = childAssetId;
         return this;
@@ -25,6 +26,7 @@ public class AssociateAssetsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public AssociateAssetsRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -35,9 +37,14 @@ public class AssociateAssetsRequestBody {
      */
     @JsonProperty("hierarchyId")
     public String hierarchyId;
+
     public AssociateAssetsRequestBody withHierarchyId(String hierarchyId) {
         this.hierarchyId = hierarchyId;
         return this;
     }
     
+    public AssociateAssetsRequestBody(@JsonProperty("childAssetId") String childAssetId, @JsonProperty("hierarchyId") String hierarchyId) {
+        this.childAssetId = childAssetId;
+        this.hierarchyId = hierarchyId;
+  }
 }

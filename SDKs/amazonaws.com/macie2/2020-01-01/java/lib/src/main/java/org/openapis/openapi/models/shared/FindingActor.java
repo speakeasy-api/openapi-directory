@@ -15,6 +15,7 @@ public class FindingActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainDetails")
     public DomainDetails domainDetails;
+
     public FindingActor withDomainDetails(DomainDetails domainDetails) {
         this.domainDetails = domainDetails;
         return this;
@@ -23,6 +24,7 @@ public class FindingActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddressDetails")
     public IpAddressDetails ipAddressDetails;
+
     public FindingActor withIpAddressDetails(IpAddressDetails ipAddressDetails) {
         this.ipAddressDetails = ipAddressDetails;
         return this;
@@ -31,9 +33,11 @@ public class FindingActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userIdentity")
     public UserIdentity userIdentity;
+
     public FindingActor withUserIdentity(UserIdentity userIdentity) {
         this.userIdentity = userIdentity;
         return this;
     }
     
+    public FindingActor(){}
 }

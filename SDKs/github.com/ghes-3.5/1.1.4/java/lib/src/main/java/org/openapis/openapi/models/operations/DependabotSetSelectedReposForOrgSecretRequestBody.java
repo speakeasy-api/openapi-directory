@@ -12,9 +12,13 @@ public class DependabotSetSelectedReposForOrgSecretRequestBody {
      */
     @JsonProperty("selected_repository_ids")
     public Long[] selectedRepositoryIds;
+
     public DependabotSetSelectedReposForOrgSecretRequestBody withSelectedRepositoryIds(Long[] selectedRepositoryIds) {
         this.selectedRepositoryIds = selectedRepositoryIds;
         return this;
     }
     
+    public DependabotSetSelectedReposForOrgSecretRequestBody(@JsonProperty("selected_repository_ids") Long[] selectedRepositoryIds) {
+        this.selectedRepositoryIds = selectedRepositoryIds;
+  }
 }

@@ -20,6 +20,7 @@ public class DescribeTrialResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public DescribeTrialResponse withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -30,6 +31,7 @@ public class DescribeTrialResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeTrialResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class DescribeTrialResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public DescribeTrialResponse withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -46,6 +49,7 @@ public class DescribeTrialResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentName")
     public String experimentName;
+
     public DescribeTrialResponse withExperimentName(String experimentName) {
         this.experimentName = experimentName;
         return this;
@@ -54,6 +58,7 @@ public class DescribeTrialResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public DescribeTrialResponse withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -64,6 +69,7 @@ public class DescribeTrialResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeTrialResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -75,6 +81,7 @@ public class DescribeTrialResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataProperties")
     public MetadataProperties metadataProperties;
+
     public DescribeTrialResponse withMetadataProperties(MetadataProperties metadataProperties) {
         this.metadataProperties = metadataProperties;
         return this;
@@ -83,6 +90,7 @@ public class DescribeTrialResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public TrialSource source;
+
     public DescribeTrialResponse withSource(TrialSource source) {
         this.source = source;
         return this;
@@ -91,6 +99,7 @@ public class DescribeTrialResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialArn")
     public String trialArn;
+
     public DescribeTrialResponse withTrialArn(String trialArn) {
         this.trialArn = trialArn;
         return this;
@@ -99,9 +108,11 @@ public class DescribeTrialResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialName")
     public String trialName;
+
     public DescribeTrialResponse withTrialName(String trialName) {
         this.trialName = trialName;
         return this;
     }
     
+    public DescribeTrialResponse(){}
 }

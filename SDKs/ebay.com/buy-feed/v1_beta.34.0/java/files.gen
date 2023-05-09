@@ -53,4 +53,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/ItemPriorityResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ItemPriority.java
 lib/src/main/java/org/openapis/openapi/models/shared/ItemSnapshotResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ItemSnapshot.java
+docs/sdk/README.md
+docs/item/README.md
+docs/itemgroup/README.md
+docs/itempriority/README.md
+docs/itemsnapshot/README.md
 USAGE.md

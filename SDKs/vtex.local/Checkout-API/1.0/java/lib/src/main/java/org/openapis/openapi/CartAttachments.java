@@ -70,11 +70,9 @@ public class CartAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddClientPreferencesResponse res = new org.openapis.openapi.models.operations.AddClientPreferencesResponse() {{
+        org.openapis.openapi.models.operations.AddClientPreferencesResponse res = new org.openapis.openapi.models.operations.AddClientPreferencesResponse(contentType, httpRes.statusCode()) {{
             addClientPreferences200ApplicationJSONAny = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,10 +127,8 @@ public class CartAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddClientProfileResponse res = new org.openapis.openapi.models.operations.AddClientProfileResponse() {{
+        org.openapis.openapi.models.operations.AddClientProfileResponse res = new org.openapis.openapi.models.operations.AddClientProfileResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -180,10 +176,8 @@ public class CartAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddMarketingDataResponse res = new org.openapis.openapi.models.operations.AddMarketingDataResponse() {{
+        org.openapis.openapi.models.operations.AddMarketingDataResponse res = new org.openapis.openapi.models.operations.AddMarketingDataResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,11 +225,9 @@ public class CartAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddMerchantContextDataResponse res = new org.openapis.openapi.models.operations.AddMerchantContextDataResponse() {{
+        org.openapis.openapi.models.operations.AddMerchantContextDataResponse res = new org.openapis.openapi.models.operations.AddMerchantContextDataResponse(contentType, httpRes.statusCode()) {{
             addMerchantContextData200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,10 +280,8 @@ public class CartAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddPaymentDataResponse res = new org.openapis.openapi.models.operations.AddPaymentDataResponse() {{
+        org.openapis.openapi.models.operations.AddPaymentDataResponse res = new org.openapis.openapi.models.operations.AddPaymentDataResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,10 +333,8 @@ public class CartAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddShippingAddressResponse res = new org.openapis.openapi.models.operations.AddShippingAddressResponse() {{
+        org.openapis.openapi.models.operations.AddShippingAddressResponse res = new org.openapis.openapi.models.operations.AddShippingAddressResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -398,11 +386,9 @@ public class CartAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClientProfileByEmailResponse res = new org.openapis.openapi.models.operations.GetClientProfileByEmailResponse() {{
+        org.openapis.openapi.models.operations.GetClientProfileByEmailResponse res = new org.openapis.openapi.models.operations.GetClientProfileByEmailResponse(contentType, httpRes.statusCode()) {{
             getClientProfileByEmail200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

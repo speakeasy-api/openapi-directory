@@ -15,6 +15,7 @@ public class IamUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public IamUser withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class IamUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public IamUser withArn(String arn) {
         this.arn = arn;
         return this;
@@ -31,6 +33,7 @@ public class IamUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalId")
     public String principalId;
+
     public IamUser withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
@@ -39,9 +42,11 @@ public class IamUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public IamUser withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public IamUser(){}
 }

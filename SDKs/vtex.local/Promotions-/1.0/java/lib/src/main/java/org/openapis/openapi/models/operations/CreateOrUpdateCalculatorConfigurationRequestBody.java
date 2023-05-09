@@ -15,6 +15,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absoluteShippingDiscountValue")
     public Double absoluteShippingDiscountValue;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withAbsoluteShippingDiscountValue(Double absoluteShippingDiscountValue) {
         this.absoluteShippingDiscountValue = absoluteShippingDiscountValue;
         return this;
@@ -26,6 +27,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accumulateWithManualPrice")
     public Boolean accumulateWithManualPrice;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withAccumulateWithManualPrice(Boolean accumulateWithManualPrice) {
         this.accumulateWithManualPrice = accumulateWithManualPrice;
         return this;
@@ -37,6 +39,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activateGiftsMultiplier")
     public Boolean activateGiftsMultiplier;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withActivateGiftsMultiplier(Boolean activateGiftsMultiplier) {
         this.activateGiftsMultiplier = activateGiftsMultiplier;
         return this;
@@ -48,6 +51,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeDaysOfWeek")
     public String[] activeDaysOfWeek;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withActiveDaysOfWeek(String[] activeDaysOfWeek) {
         this.activeDaysOfWeek = activeDaysOfWeek;
         return this;
@@ -59,6 +63,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affiliates")
     public CreateOrUpdateCalculatorConfigurationRequestBodyAffiliates[] affiliates;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withAffiliates(CreateOrUpdateCalculatorConfigurationRequestBodyAffiliates[] affiliates) {
         this.affiliates = affiliates;
         return this;
@@ -70,6 +75,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applyToAllShippings")
     public Boolean applyToAllShippings;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withApplyToAllShippings(Boolean applyToAllShippings) {
         this.applyToAllShippings = applyToAllShippings;
         return this;
@@ -81,6 +87,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("areSalesChannelIdsExclusive")
     public Boolean areSalesChannelIdsExclusive;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withAreSalesChannelIdsExclusive(Boolean areSalesChannelIdsExclusive) {
         this.areSalesChannelIdsExclusive = areSalesChannelIdsExclusive;
         return this;
@@ -92,6 +99,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beginDateUtc")
     public String beginDateUtc;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withBeginDateUtc(String beginDateUtc) {
         this.beginDateUtc = beginDateUtc;
         return this;
@@ -103,6 +111,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brands")
     public CreateOrUpdateCalculatorConfigurationRequestBodyBrands[] brands;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withBrands(CreateOrUpdateCalculatorConfigurationRequestBodyBrands[] brands) {
         this.brands = brands;
         return this;
@@ -114,6 +123,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandsAreInclusive")
     public Boolean brandsAreInclusive;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withBrandsAreInclusive(Boolean brandsAreInclusive) {
         this.brandsAreInclusive = brandsAreInclusive;
         return this;
@@ -125,6 +135,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaigns")
     public Object[] campaigns;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withCampaigns(Object[] campaigns) {
         this.campaigns = campaigns;
         return this;
@@ -133,6 +144,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardIssuers")
     public Object[] cardIssuers;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withCardIssuers(Object[] cardIssuers) {
         this.cardIssuers = cardIssuers;
         return this;
@@ -144,6 +156,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public CreateOrUpdateCalculatorConfigurationRequestBodyCategories[] categories;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withCategories(CreateOrUpdateCalculatorConfigurationRequestBodyCategories[] categories) {
         this.categories = categories;
         return this;
@@ -155,6 +168,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoriesAreInclusive")
     public Boolean categoriesAreInclusive;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withCategoriesAreInclusive(Boolean categoriesAreInclusive) {
         this.categoriesAreInclusive = categoriesAreInclusive;
         return this;
@@ -166,6 +180,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterExpressions")
     public String[] clusterExpressions;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withClusterExpressions(String[] clusterExpressions) {
         this.clusterExpressions = clusterExpressions;
         return this;
@@ -177,6 +192,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections")
     public CreateOrUpdateCalculatorConfigurationRequestBodyCollections[] collections;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withCollections(CreateOrUpdateCalculatorConfigurationRequestBodyCollections[] collections) {
         this.collections = collections;
         return this;
@@ -188,6 +204,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections1BuyTogether")
     public String[] collections1BuyTogether;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withCollections1BuyTogether(String[] collections1BuyTogether) {
         this.collections1BuyTogether = collections1BuyTogether;
         return this;
@@ -196,6 +213,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections2BuyTogether")
     public Object[] collections2BuyTogether;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withCollections2BuyTogether(Object[] collections2BuyTogether) {
         this.collections2BuyTogether = collections2BuyTogether;
         return this;
@@ -207,6 +225,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionsIsInclusive")
     public Boolean collectionsIsInclusive;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withCollectionsIsInclusive(Boolean collectionsIsInclusive) {
         this.collectionsIsInclusive = collectionsIsInclusive;
         return this;
@@ -218,6 +237,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compareListPriceAndPrice")
     public Boolean compareListPriceAndPrice;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withCompareListPriceAndPrice(Boolean compareListPriceAndPrice) {
         this.compareListPriceAndPrice = compareListPriceAndPrice;
         return this;
@@ -229,6 +249,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditionsIds")
     public String[] conditionsIds;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withConditionsIds(String[] conditionsIds) {
         this.conditionsIds = conditionsIds;
         return this;
@@ -237,6 +258,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coupon")
     public Object[] coupon;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withCoupon(Object[] coupon) {
         this.coupon = coupon;
         return this;
@@ -248,6 +270,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cumulative")
     public Boolean cumulative;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withCumulative(Boolean cumulative) {
         this.cumulative = cumulative;
         return this;
@@ -259,6 +282,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daysAgoOfPurchases")
     public Long daysAgoOfPurchases;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withDaysAgoOfPurchases(Long daysAgoOfPurchases) {
         this.daysAgoOfPurchases = daysAgoOfPurchases;
         return this;
@@ -270,6 +294,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -278,6 +303,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableDeal")
     public Boolean disableDeal;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withDisableDeal(Boolean disableDeal) {
         this.disableDeal = disableDeal;
         return this;
@@ -289,6 +315,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discountType")
     public String discountType;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withDiscountType(String discountType) {
         this.discountType = discountType;
         return this;
@@ -300,6 +327,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableBuyTogetherPerSku")
     public Boolean enableBuyTogetherPerSku;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withEnableBuyTogetherPerSku(Boolean enableBuyTogetherPerSku) {
         this.enableBuyTogetherPerSku = enableBuyTogetherPerSku;
         return this;
@@ -311,6 +339,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDateUtc")
     public String endDateUtc;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withEndDateUtc(String endDateUtc) {
         this.endDateUtc = endDateUtc;
         return this;
@@ -322,6 +351,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstBuyIsProfileOptimistic")
     public Boolean firstBuyIsProfileOptimistic;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withFirstBuyIsProfileOptimistic(Boolean firstBuyIsProfileOptimistic) {
         this.firstBuyIsProfileOptimistic = firstBuyIsProfileOptimistic;
         return this;
@@ -333,6 +363,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftListTypes")
     public String[] giftListTypes;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withGiftListTypes(String[] giftListTypes) {
         this.giftListTypes = giftListTypes;
         return this;
@@ -344,6 +375,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idCalculatorConfiguration")
     public String idCalculatorConfiguration;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withIdCalculatorConfiguration(String idCalculatorConfiguration) {
         this.idCalculatorConfiguration = idCalculatorConfiguration;
         return this;
@@ -355,6 +387,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idSeller")
     public String idSeller;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withIdSeller(String idSeller) {
         this.idSeller = idSeller;
         return this;
@@ -366,6 +399,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idSellerIsInclusive")
     public Boolean idSellerIsInclusive;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withIdSellerIsInclusive(Boolean idSellerIsInclusive) {
         this.idSellerIsInclusive = idSellerIsInclusive;
         return this;
@@ -377,6 +411,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idsSalesChannel")
     public String[] idsSalesChannel;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withIdsSalesChannel(String[] idsSalesChannel) {
         this.idsSalesChannel = idsSalesChannel;
         return this;
@@ -385,6 +420,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installment")
     public Long installment;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withInstallment(Long installment) {
         this.installment = installment;
         return this;
@@ -396,6 +432,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -407,6 +444,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isArchived")
     public Boolean isArchived;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -418,6 +456,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDifferentListPriceAndPrice")
     public Boolean isDifferentListPriceAndPrice;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withIsDifferentListPriceAndPrice(Boolean isDifferentListPriceAndPrice) {
         this.isDifferentListPriceAndPrice = isDifferentListPriceAndPrice;
         return this;
@@ -429,6 +468,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFeatured")
     public Boolean isFeatured;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withIsFeatured(Boolean isFeatured) {
         this.isFeatured = isFeatured;
         return this;
@@ -440,6 +480,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFirstBuy")
     public Boolean isFirstBuy;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withIsFirstBuy(Boolean isFirstBuy) {
         this.isFirstBuy = isFirstBuy;
         return this;
@@ -451,6 +492,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMinMaxInstallments")
     public Boolean isMinMaxInstallments;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withIsMinMaxInstallments(Boolean isMinMaxInstallments) {
         this.isMinMaxInstallments = isMinMaxInstallments;
         return this;
@@ -462,6 +504,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSlaSelected")
     public Boolean isSlaSelected;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withIsSlaSelected(Boolean isSlaSelected) {
         this.isSlaSelected = isSlaSelected;
         return this;
@@ -473,6 +516,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemMaxPrice")
     public Double itemMaxPrice;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withItemMaxPrice(Double itemMaxPrice) {
         this.itemMaxPrice = itemMaxPrice;
         return this;
@@ -484,6 +528,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemMinPrice")
     public Double itemMinPrice;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withItemMinPrice(Double itemMinPrice) {
         this.itemMinPrice = itemMinPrice;
         return this;
@@ -495,6 +540,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModified")
     public String lastModified;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -506,6 +552,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listSku1BuyTogether")
     public Object[] listSku1BuyTogether;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withListSku1BuyTogether(Object[] listSku1BuyTogether) {
         this.listSku1BuyTogether = listSku1BuyTogether;
         return this;
@@ -517,6 +564,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listSku2BuyTogether")
     public Object[] listSku2BuyTogether;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withListSku2BuyTogether(Object[] listSku2BuyTogether) {
         this.listSku2BuyTogether = listSku2BuyTogether;
         return this;
@@ -528,6 +576,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingTags")
     public String[] marketingTags;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withMarketingTags(String[] marketingTags) {
         this.marketingTags = marketingTags;
         return this;
@@ -539,6 +588,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingTagsAreNotInclusive")
     public Boolean marketingTagsAreNotInclusive;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withMarketingTagsAreNotInclusive(Boolean marketingTagsAreNotInclusive) {
         this.marketingTagsAreNotInclusive = marketingTagsAreNotInclusive;
         return this;
@@ -550,6 +600,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxInstallment")
     public Long maxInstallment;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withMaxInstallment(Long maxInstallment) {
         this.maxInstallment = maxInstallment;
         return this;
@@ -561,6 +612,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNumberOfAffectedItems")
     public Long maxNumberOfAffectedItems;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withMaxNumberOfAffectedItems(Long maxNumberOfAffectedItems) {
         this.maxNumberOfAffectedItems = maxNumberOfAffectedItems;
         return this;
@@ -572,6 +624,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNumberOfAffectedItemsGroupKey")
     public String maxNumberOfAffectedItemsGroupKey;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withMaxNumberOfAffectedItemsGroupKey(String maxNumberOfAffectedItemsGroupKey) {
         this.maxNumberOfAffectedItemsGroupKey = maxNumberOfAffectedItemsGroupKey;
         return this;
@@ -580,6 +633,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPricesPerItems")
     public Object[] maxPricesPerItems;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withMaxPricesPerItems(Object[] maxPricesPerItems) {
         this.maxPricesPerItems = maxPricesPerItems;
         return this;
@@ -591,6 +645,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxUsage")
     public Long maxUsage;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withMaxUsage(Long maxUsage) {
         this.maxUsage = maxUsage;
         return this;
@@ -602,6 +657,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxUsagePerClient")
     public Long maxUsagePerClient;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withMaxUsagePerClient(Long maxUsagePerClient) {
         this.maxUsagePerClient = maxUsagePerClient;
         return this;
@@ -613,6 +669,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumUnitPriceDiscount")
     public Double maximumUnitPriceDiscount;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withMaximumUnitPriceDiscount(Double maximumUnitPriceDiscount) {
         this.maximumUnitPriceDiscount = maximumUnitPriceDiscount;
         return this;
@@ -621,6 +678,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchants")
     public Object[] merchants;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withMerchants(Object[] merchants) {
         this.merchants = merchants;
         return this;
@@ -632,6 +690,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minInstallment")
     public Long minInstallment;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withMinInstallment(Long minInstallment) {
         this.minInstallment = minInstallment;
         return this;
@@ -643,6 +702,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumQuantityBuyTogether")
     public Long minimumQuantityBuyTogether;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withMinimumQuantityBuyTogether(Long minimumQuantityBuyTogether) {
         this.minimumQuantityBuyTogether = minimumQuantityBuyTogether;
         return this;
@@ -654,6 +714,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multipleUsePerClient")
     public Boolean multipleUsePerClient;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withMultipleUsePerClient(Boolean multipleUsePerClient) {
         this.multipleUsePerClient = multipleUsePerClient;
         return this;
@@ -665,6 +726,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -676,6 +738,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newOffset")
     public Double newOffset;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withNewOffset(Double newOffset) {
         this.newOffset = newOffset;
         return this;
@@ -687,6 +750,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nominalDiscountValue")
     public Double nominalDiscountValue;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withNominalDiscountValue(Double nominalDiscountValue) {
         this.nominalDiscountValue = nominalDiscountValue;
         return this;
@@ -698,6 +762,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nominalRewardValue")
     public Double nominalRewardValue;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withNominalRewardValue(Double nominalRewardValue) {
         this.nominalRewardValue = nominalRewardValue;
         return this;
@@ -709,6 +774,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nominalShippingDiscountValue")
     public Double nominalShippingDiscountValue;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withNominalShippingDiscountValue(Double nominalShippingDiscountValue) {
         this.nominalShippingDiscountValue = nominalShippingDiscountValue;
         return this;
@@ -720,6 +786,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nominalTax")
     public Double nominalTax;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withNominalTax(Double nominalTax) {
         this.nominalTax = nominalTax;
         return this;
@@ -731,6 +798,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Long offset;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -742,6 +810,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderStatusRewardValue")
     public String orderStatusRewardValue;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withOrderStatusRewardValue(String orderStatusRewardValue) {
         this.orderStatusRewardValue = orderStatusRewardValue;
         return this;
@@ -753,6 +822,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String origin;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -764,6 +834,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentsMethods")
     public CreateOrUpdateCalculatorConfigurationRequestBodyPaymentsMethods[] paymentsMethods;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withPaymentsMethods(CreateOrUpdateCalculatorConfigurationRequestBodyPaymentsMethods[] paymentsMethods) {
         this.paymentsMethods = paymentsMethods;
         return this;
@@ -772,6 +843,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentsRules")
     public Object[] paymentsRules;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withPaymentsRules(Object[] paymentsRules) {
         this.paymentsRules = paymentsRules;
         return this;
@@ -783,6 +855,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualDiscountValue")
     public Double percentualDiscountValue;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withPercentualDiscountValue(Double percentualDiscountValue) {
         this.percentualDiscountValue = percentualDiscountValue;
         return this;
@@ -794,6 +867,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualDiscountValueList")
     public Double[] percentualDiscountValueList;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withPercentualDiscountValueList(Double[] percentualDiscountValueList) {
         this.percentualDiscountValueList = percentualDiscountValueList;
         return this;
@@ -805,6 +879,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualDiscountValueList1")
     public Double percentualDiscountValueList1;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withPercentualDiscountValueList1(Double percentualDiscountValueList1) {
         this.percentualDiscountValueList1 = percentualDiscountValueList1;
         return this;
@@ -816,6 +891,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualDiscountValueList2")
     public Double percentualDiscountValueList2;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withPercentualDiscountValueList2(Double percentualDiscountValueList2) {
         this.percentualDiscountValueList2 = percentualDiscountValueList2;
         return this;
@@ -827,6 +903,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualRewardValue")
     public Double percentualRewardValue;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withPercentualRewardValue(Double percentualRewardValue) {
         this.percentualRewardValue = percentualRewardValue;
         return this;
@@ -838,6 +915,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualShippingDiscountValue")
     public Double percentualShippingDiscountValue;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withPercentualShippingDiscountValue(Double percentualShippingDiscountValue) {
         this.percentualShippingDiscountValue = percentualShippingDiscountValue;
         return this;
@@ -849,6 +927,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualTax")
     public Double percentualTax;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withPercentualTax(Double percentualTax) {
         this.percentualTax = percentualTax;
         return this;
@@ -860,6 +939,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public CreateOrUpdateCalculatorConfigurationRequestBodyProducts[] products;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withProducts(CreateOrUpdateCalculatorConfigurationRequestBodyProducts[] products) {
         this.products = products;
         return this;
@@ -871,6 +951,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productsAreInclusive")
     public Boolean productsAreInclusive;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withProductsAreInclusive(Boolean productsAreInclusive) {
         this.productsAreInclusive = productsAreInclusive;
         return this;
@@ -879,6 +960,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productsSpecifications")
     public Object[] productsSpecifications;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withProductsSpecifications(Object[] productsSpecifications) {
         this.productsSpecifications = productsSpecifications;
         return this;
@@ -890,6 +972,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantityToAffectBuyTogether")
     public Long quantityToAffectBuyTogether;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withQuantityToAffectBuyTogether(Long quantityToAffectBuyTogether) {
         this.quantityToAffectBuyTogether = quantityToAffectBuyTogether;
         return this;
@@ -901,6 +984,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rebatePercentualDiscountValue")
     public Double rebatePercentualDiscountValue;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withRebatePercentualDiscountValue(Double rebatePercentualDiscountValue) {
         this.rebatePercentualDiscountValue = rebatePercentualDiscountValue;
         return this;
@@ -912,6 +996,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictionsBins")
     public String[] restrictionsBins;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withRestrictionsBins(String[] restrictionsBins) {
         this.restrictionsBins = restrictionsBins;
         return this;
@@ -923,6 +1008,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingPercentualTax")
     public Double shippingPercentualTax;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withShippingPercentualTax(Double shippingPercentualTax) {
         this.shippingPercentualTax = shippingPercentualTax;
         return this;
@@ -934,6 +1020,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shouldDistributeDiscountAmongMatchedItems")
     public Boolean shouldDistributeDiscountAmongMatchedItems;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withShouldDistributeDiscountAmongMatchedItems(Boolean shouldDistributeDiscountAmongMatchedItems) {
         this.shouldDistributeDiscountAmongMatchedItems = shouldDistributeDiscountAmongMatchedItems;
         return this;
@@ -945,6 +1032,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skus")
     public CreateOrUpdateCalculatorConfigurationRequestBodySkus[] skus;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withSkus(CreateOrUpdateCalculatorConfigurationRequestBodySkus[] skus) {
         this.skus = skus;
         return this;
@@ -956,6 +1044,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skusAreInclusive")
     public Boolean skusAreInclusive;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withSkusAreInclusive(Boolean skusAreInclusive) {
         this.skusAreInclusive = skusAreInclusive;
         return this;
@@ -967,6 +1056,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skusGift")
     public CreateOrUpdateCalculatorConfigurationRequestBodySkusGift skusGift;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withSkusGift(CreateOrUpdateCalculatorConfigurationRequestBodySkusGift skusGift) {
         this.skusGift = skusGift;
         return this;
@@ -978,6 +1068,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slasIds")
     public String[] slasIds;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withSlasIds(String[] slasIds) {
         this.slasIds = slasIds;
         return this;
@@ -986,6 +1077,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stores")
     public Object[] stores;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withStores(Object[] stores) {
         this.stores = stores;
         return this;
@@ -994,6 +1086,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storesAreInclusive")
     public Boolean storesAreInclusive;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withStoresAreInclusive(Boolean storesAreInclusive) {
         this.storesAreInclusive = storesAreInclusive;
         return this;
@@ -1005,6 +1098,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalValueCeling")
     public Double totalValueCeling;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withTotalValueCeling(Double totalValueCeling) {
         this.totalValueCeling = totalValueCeling;
         return this;
@@ -1016,6 +1110,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalValueFloor")
     public Double totalValueFloor;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withTotalValueFloor(Double totalValueFloor) {
         this.totalValueFloor = totalValueFloor;
         return this;
@@ -1024,6 +1119,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalValueIncludeAllItems")
     public Boolean totalValueIncludeAllItems;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withTotalValueIncludeAllItems(Boolean totalValueIncludeAllItems) {
         this.totalValueIncludeAllItems = totalValueIncludeAllItems;
         return this;
@@ -1035,6 +1131,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalValueMode")
     public String totalValueMode;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withTotalValueMode(String totalValueMode) {
         this.totalValueMode = totalValueMode;
         return this;
@@ -1046,6 +1143,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalValuePurchase")
     public Double totalValuePurchase;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withTotalValuePurchase(Double totalValuePurchase) {
         this.totalValuePurchase = totalValuePurchase;
         return this;
@@ -1057,6 +1155,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withType(String type) {
         this.type = type;
         return this;
@@ -1068,6 +1167,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useNewProgressiveAlgorithm")
     public Boolean useNewProgressiveAlgorithm;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withUseNewProgressiveAlgorithm(Boolean useNewProgressiveAlgorithm) {
         this.useNewProgressiveAlgorithm = useNewProgressiveAlgorithm;
         return this;
@@ -1079,6 +1179,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmCampaign")
     public String utmCampaign;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withUtmCampaign(String utmCampaign) {
         this.utmCampaign = utmCampaign;
         return this;
@@ -1090,6 +1191,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmSource")
     public String utmSource;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
@@ -1101,9 +1203,11 @@ public class CreateOrUpdateCalculatorConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zipCodeRanges")
     public CreateOrUpdateCalculatorConfigurationRequestBodyZipCodeRanges[] zipCodeRanges;
+
     public CreateOrUpdateCalculatorConfigurationRequestBody withZipCodeRanges(CreateOrUpdateCalculatorConfigurationRequestBodyZipCodeRanges[] zipCodeRanges) {
         this.zipCodeRanges = zipCodeRanges;
         return this;
     }
     
+    public CreateOrUpdateCalculatorConfigurationRequestBody(){}
 }

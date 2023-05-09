@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MeterUsageResponse {
     
     public String contentType;
+
     public MeterUsageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MeterUsageResponse {
      */
     
     public Object customerNotEntitledException;
+
     public MeterUsageResponse withCustomerNotEntitledException(Object customerNotEntitledException) {
         this.customerNotEntitledException = customerNotEntitledException;
         return this;
@@ -29,6 +32,7 @@ public class MeterUsageResponse {
      */
     
     public Object duplicateRequestException;
+
     public MeterUsageResponse withDuplicateRequestException(Object duplicateRequestException) {
         this.duplicateRequestException = duplicateRequestException;
         return this;
@@ -39,6 +43,7 @@ public class MeterUsageResponse {
      */
     
     public Object internalServiceErrorException;
+
     public MeterUsageResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class MeterUsageResponse {
      */
     
     public Object invalidEndpointRegionException;
+
     public MeterUsageResponse withInvalidEndpointRegionException(Object invalidEndpointRegionException) {
         this.invalidEndpointRegionException = invalidEndpointRegionException;
         return this;
@@ -59,6 +65,7 @@ public class MeterUsageResponse {
      */
     
     public Object invalidProductCodeException;
+
     public MeterUsageResponse withInvalidProductCodeException(Object invalidProductCodeException) {
         this.invalidProductCodeException = invalidProductCodeException;
         return this;
@@ -69,6 +76,7 @@ public class MeterUsageResponse {
      */
     
     public Object invalidTagException;
+
     public MeterUsageResponse withInvalidTagException(Object invalidTagException) {
         this.invalidTagException = invalidTagException;
         return this;
@@ -79,6 +87,7 @@ public class MeterUsageResponse {
      */
     
     public Object invalidUsageAllocationsException;
+
     public MeterUsageResponse withInvalidUsageAllocationsException(Object invalidUsageAllocationsException) {
         this.invalidUsageAllocationsException = invalidUsageAllocationsException;
         return this;
@@ -89,6 +98,7 @@ public class MeterUsageResponse {
      */
     
     public Object invalidUsageDimensionException;
+
     public MeterUsageResponse withInvalidUsageDimensionException(Object invalidUsageDimensionException) {
         this.invalidUsageDimensionException = invalidUsageDimensionException;
         return this;
@@ -99,6 +109,7 @@ public class MeterUsageResponse {
      */
     
     public org.openapis.openapi.models.shared.MeterUsageResult meterUsageResult;
+
     public MeterUsageResponse withMeterUsageResult(org.openapis.openapi.models.shared.MeterUsageResult meterUsageResult) {
         this.meterUsageResult = meterUsageResult;
         return this;
@@ -106,6 +117,7 @@ public class MeterUsageResponse {
     
     
     public Integer statusCode;
+
     public MeterUsageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class MeterUsageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MeterUsageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class MeterUsageResponse {
      */
     
     public Object throttlingException;
+
     public MeterUsageResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -133,9 +147,14 @@ public class MeterUsageResponse {
      */
     
     public Object timestampOutOfBoundsException;
+
     public MeterUsageResponse withTimestampOutOfBoundsException(Object timestampOutOfBoundsException) {
         this.timestampOutOfBoundsException = timestampOutOfBoundsException;
         return this;
     }
     
+    public MeterUsageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

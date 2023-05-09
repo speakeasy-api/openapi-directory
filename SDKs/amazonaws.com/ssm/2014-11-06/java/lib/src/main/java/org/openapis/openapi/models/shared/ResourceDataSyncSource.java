@@ -15,6 +15,7 @@ public class ResourceDataSyncSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsOrganizationsSource")
     public ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource;
+
     public ResourceDataSyncSource withAwsOrganizationsSource(ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource) {
         this.awsOrganizationsSource = awsOrganizationsSource;
         return this;
@@ -23,6 +24,7 @@ public class ResourceDataSyncSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableAllOpsDataSources")
     public Boolean enableAllOpsDataSources;
+
     public ResourceDataSyncSource withEnableAllOpsDataSources(Boolean enableAllOpsDataSources) {
         this.enableAllOpsDataSources = enableAllOpsDataSources;
         return this;
@@ -31,6 +33,7 @@ public class ResourceDataSyncSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeFutureRegions")
     public Boolean includeFutureRegions;
+
     public ResourceDataSyncSource withIncludeFutureRegions(Boolean includeFutureRegions) {
         this.includeFutureRegions = includeFutureRegions;
         return this;
@@ -38,6 +41,7 @@ public class ResourceDataSyncSource {
     
     @JsonProperty("SourceRegions")
     public String[] sourceRegions;
+
     public ResourceDataSyncSource withSourceRegions(String[] sourceRegions) {
         this.sourceRegions = sourceRegions;
         return this;
@@ -45,9 +49,14 @@ public class ResourceDataSyncSource {
     
     @JsonProperty("SourceType")
     public String sourceType;
+
     public ResourceDataSyncSource withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public ResourceDataSyncSource(@JsonProperty("SourceRegions") String[] sourceRegions, @JsonProperty("SourceType") String sourceType) {
+        this.sourceRegions = sourceRegions;
+        this.sourceType = sourceType;
+  }
 }

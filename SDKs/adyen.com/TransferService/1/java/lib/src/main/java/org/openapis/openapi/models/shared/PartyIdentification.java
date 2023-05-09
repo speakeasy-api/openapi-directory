@@ -15,6 +15,7 @@ public class PartyIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balanceAccountId")
     public String balanceAccountId;
+
     public PartyIdentification withBalanceAccountId(String balanceAccountId) {
         this.balanceAccountId = balanceAccountId;
         return this;
@@ -26,9 +27,11 @@ public class PartyIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentInstrumentId")
     public String paymentInstrumentId;
+
     public PartyIdentification withPaymentInstrumentId(String paymentInstrumentId) {
         this.paymentInstrumentId = paymentInstrumentId;
         return this;
     }
     
+    public PartyIdentification(){}
 }

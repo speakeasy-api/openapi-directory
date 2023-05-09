@@ -18,6 +18,7 @@ public class DriveActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public Action[] actions;
+
     public DriveActivity withActions(Action[] actions) {
         this.actions = actions;
         return this;
@@ -29,6 +30,7 @@ public class DriveActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actors")
     public Actor[] actors;
+
     public DriveActivity withActors(Actor[] actors) {
         this.actors = actors;
         return this;
@@ -40,6 +42,7 @@ public class DriveActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryActionDetail")
     public ActionDetail primaryActionDetail;
+
     public DriveActivity withPrimaryActionDetail(ActionDetail primaryActionDetail) {
         this.primaryActionDetail = primaryActionDetail;
         return this;
@@ -51,6 +54,7 @@ public class DriveActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targets")
     public Target[] targets;
+
     public DriveActivity withTargets(Target[] targets) {
         this.targets = targets;
         return this;
@@ -62,6 +66,7 @@ public class DriveActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeRange")
     public TimeRange timeRange;
+
     public DriveActivity withTimeRange(TimeRange timeRange) {
         this.timeRange = timeRange;
         return this;
@@ -73,9 +78,11 @@ public class DriveActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public DriveActivity withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public DriveActivity(){}
 }

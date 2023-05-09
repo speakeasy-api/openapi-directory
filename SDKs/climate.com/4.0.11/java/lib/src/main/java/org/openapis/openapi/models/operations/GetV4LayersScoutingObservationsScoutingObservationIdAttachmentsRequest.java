@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest {
@@ -12,6 +13,7 @@ public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequ
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Limit")
     public Integer xLimit;
+
     public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest withXLimit(Integer xLimit) {
         this.xLimit = xLimit;
         return this;
@@ -22,6 +24,7 @@ public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequ
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Next-Token")
     public String xNextToken;
+
     public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest withXNextToken(String xNextToken) {
         this.xNextToken = xNextToken;
         return this;
@@ -32,9 +35,13 @@ public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequ
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scoutingObservationId")
     public String scoutingObservationId;
+
     public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest withScoutingObservationId(String scoutingObservationId) {
         this.scoutingObservationId = scoutingObservationId;
         return this;
     }
     
+    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest(@JsonProperty("scoutingObservationId") String scoutingObservationId) {
+        this.scoutingObservationId = scoutingObservationId;
+  }
 }

@@ -61,11 +61,9 @@ public class OtherContacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeopleOtherContactsCopyOtherContactToMyContactsGroupResponse res = new org.openapis.openapi.models.operations.PeopleOtherContactsCopyOtherContactToMyContactsGroupResponse() {{
+        org.openapis.openapi.models.operations.PeopleOtherContactsCopyOtherContactToMyContactsGroupResponse res = new org.openapis.openapi.models.operations.PeopleOtherContactsCopyOtherContactToMyContactsGroupResponse(contentType, httpRes.statusCode()) {{
             person = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class OtherContacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeopleOtherContactsListResponse res = new org.openapis.openapi.models.operations.PeopleOtherContactsListResponse() {{
+        org.openapis.openapi.models.operations.PeopleOtherContactsListResponse res = new org.openapis.openapi.models.operations.PeopleOtherContactsListResponse(contentType, httpRes.statusCode()) {{
             listOtherContactsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class OtherContacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeopleOtherContactsSearchResponse res = new org.openapis.openapi.models.operations.PeopleOtherContactsSearchResponse() {{
+        org.openapis.openapi.models.operations.PeopleOtherContactsSearchResponse res = new org.openapis.openapi.models.operations.PeopleOtherContactsSearchResponse(contentType, httpRes.statusCode()) {{
             searchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

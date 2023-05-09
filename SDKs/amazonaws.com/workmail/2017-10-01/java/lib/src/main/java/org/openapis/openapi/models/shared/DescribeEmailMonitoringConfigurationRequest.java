@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeEmailMonitoringConfigurationRequest {
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public DescribeEmailMonitoringConfigurationRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public DescribeEmailMonitoringConfigurationRequest(@JsonProperty("OrganizationId") String organizationId) {
+        this.organizationId = organizationId;
+  }
 }

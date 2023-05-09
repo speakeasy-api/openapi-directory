@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssumeDecoratedRoleWithSAMLResponse {
@@ -12,6 +13,7 @@ public class AssumeDecoratedRoleWithSAMLResponse {
      */
     
     public Object accessDeniedException;
+
     public AssumeDecoratedRoleWithSAMLResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssumeDecoratedRoleWithSAMLResponse {
      */
     
     public org.openapis.openapi.models.shared.AssumeDecoratedRoleWithSAMLResponse assumeDecoratedRoleWithSAMLResponse;
+
     public AssumeDecoratedRoleWithSAMLResponse withAssumeDecoratedRoleWithSAMLResponse(org.openapis.openapi.models.shared.AssumeDecoratedRoleWithSAMLResponse assumeDecoratedRoleWithSAMLResponse) {
         this.assumeDecoratedRoleWithSAMLResponse = assumeDecoratedRoleWithSAMLResponse;
         return this;
@@ -29,6 +32,7 @@ public class AssumeDecoratedRoleWithSAMLResponse {
     
     
     public String contentType;
+
     public AssumeDecoratedRoleWithSAMLResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssumeDecoratedRoleWithSAMLResponse {
      */
     
     public Object entityNotFoundException;
+
     public AssumeDecoratedRoleWithSAMLResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class AssumeDecoratedRoleWithSAMLResponse {
      */
     
     public Object internalServiceException;
+
     public AssumeDecoratedRoleWithSAMLResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class AssumeDecoratedRoleWithSAMLResponse {
      */
     
     public Object invalidInputException;
+
     public AssumeDecoratedRoleWithSAMLResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class AssumeDecoratedRoleWithSAMLResponse {
      */
     
     public Object operationTimeoutException;
+
     public AssumeDecoratedRoleWithSAMLResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class AssumeDecoratedRoleWithSAMLResponse {
     
     
     public Integer statusCode;
+
     public AssumeDecoratedRoleWithSAMLResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class AssumeDecoratedRoleWithSAMLResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssumeDecoratedRoleWithSAMLResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssumeDecoratedRoleWithSAMLResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class SearchCriteriaAdditionalInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandedFares")
     public Boolean brandedFares;
+
     public SearchCriteriaAdditionalInformation withBrandedFares(Boolean brandedFares) {
         this.brandedFares = brandedFares;
         return this;
@@ -26,9 +27,11 @@ public class SearchCriteriaAdditionalInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeableCheckedBags")
     public Boolean chargeableCheckedBags;
+
     public SearchCriteriaAdditionalInformation withChargeableCheckedBags(Boolean chargeableCheckedBags) {
         this.chargeableCheckedBags = chargeableCheckedBags;
         return this;
     }
     
+    public SearchCriteriaAdditionalInformation(){}
 }

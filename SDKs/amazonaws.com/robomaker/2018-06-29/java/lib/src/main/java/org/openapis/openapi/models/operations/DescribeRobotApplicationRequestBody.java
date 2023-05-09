@@ -14,6 +14,7 @@ public class DescribeRobotApplicationRequestBody {
      */
     @JsonProperty("application")
     public String application;
+
     public DescribeRobotApplicationRequestBody withApplication(String application) {
         this.application = application;
         return this;
@@ -25,9 +26,13 @@ public class DescribeRobotApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationVersion")
     public String applicationVersion;
+
     public DescribeRobotApplicationRequestBody withApplicationVersion(String applicationVersion) {
         this.applicationVersion = applicationVersion;
         return this;
     }
     
+    public DescribeRobotApplicationRequestBody(@JsonProperty("application") String application) {
+        this.application = application;
+  }
 }

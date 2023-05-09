@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataPrivateDnsNameOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableResourceNameDnsAAAARecord")
     public Boolean enableResourceNameDnsAAAARecord;
+
     public AwsEc2LaunchTemplateDataPrivateDnsNameOptionsDetails withEnableResourceNameDnsAAAARecord(Boolean enableResourceNameDnsAAAARecord) {
         this.enableResourceNameDnsAAAARecord = enableResourceNameDnsAAAARecord;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2LaunchTemplateDataPrivateDnsNameOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableResourceNameDnsARecord")
     public Boolean enableResourceNameDnsARecord;
+
     public AwsEc2LaunchTemplateDataPrivateDnsNameOptionsDetails withEnableResourceNameDnsARecord(Boolean enableResourceNameDnsARecord) {
         this.enableResourceNameDnsARecord = enableResourceNameDnsARecord;
         return this;
@@ -31,9 +33,11 @@ public class AwsEc2LaunchTemplateDataPrivateDnsNameOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostnameType")
     public String hostnameType;
+
     public AwsEc2LaunchTemplateDataPrivateDnsNameOptionsDetails withHostnameType(String hostnameType) {
         this.hostnameType = hostnameType;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataPrivateDnsNameOptionsDetails(){}
 }

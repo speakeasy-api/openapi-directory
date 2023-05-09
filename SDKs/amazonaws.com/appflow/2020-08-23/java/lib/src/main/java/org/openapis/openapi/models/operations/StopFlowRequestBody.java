@@ -12,9 +12,13 @@ public class StopFlowRequestBody {
      */
     @JsonProperty("flowName")
     public String flowName;
+
     public StopFlowRequestBody withFlowName(String flowName) {
         this.flowName = flowName;
         return this;
     }
     
+    public StopFlowRequestBody(@JsonProperty("flowName") String flowName) {
+        this.flowName = flowName;
+  }
 }

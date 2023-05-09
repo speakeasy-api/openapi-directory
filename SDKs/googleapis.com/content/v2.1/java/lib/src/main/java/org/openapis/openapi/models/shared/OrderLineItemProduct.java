@@ -15,6 +15,7 @@ public class OrderLineItemProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public OrderLineItemProduct withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -26,6 +27,7 @@ public class OrderLineItemProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public OrderLineItemProduct withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -37,6 +39,7 @@ public class OrderLineItemProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentLanguage")
     public String contentLanguage;
+
     public OrderLineItemProduct withContentLanguage(String contentLanguage) {
         this.contentLanguage = contentLanguage;
         return this;
@@ -48,6 +51,7 @@ public class OrderLineItemProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fees")
     public OrderLineItemProductFee[] fees;
+
     public OrderLineItemProduct withFees(OrderLineItemProductFee[] fees) {
         this.fees = fees;
         return this;
@@ -59,6 +63,7 @@ public class OrderLineItemProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gtin")
     public String gtin;
+
     public OrderLineItemProduct withGtin(String gtin) {
         this.gtin = gtin;
         return this;
@@ -70,6 +75,7 @@ public class OrderLineItemProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OrderLineItemProduct withId(String id) {
         this.id = id;
         return this;
@@ -81,6 +87,7 @@ public class OrderLineItemProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageLink")
     public String imageLink;
+
     public OrderLineItemProduct withImageLink(String imageLink) {
         this.imageLink = imageLink;
         return this;
@@ -92,6 +99,7 @@ public class OrderLineItemProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemGroupId")
     public String itemGroupId;
+
     public OrderLineItemProduct withItemGroupId(String itemGroupId) {
         this.itemGroupId = itemGroupId;
         return this;
@@ -103,6 +111,7 @@ public class OrderLineItemProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mpn")
     public String mpn;
+
     public OrderLineItemProduct withMpn(String mpn) {
         this.mpn = mpn;
         return this;
@@ -114,6 +123,7 @@ public class OrderLineItemProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerId")
     public String offerId;
+
     public OrderLineItemProduct withOfferId(String offerId) {
         this.offerId = offerId;
         return this;
@@ -122,6 +132,7 @@ public class OrderLineItemProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Price price;
+
     public OrderLineItemProduct withPrice(Price price) {
         this.price = price;
         return this;
@@ -133,6 +144,7 @@ public class OrderLineItemProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shownImage")
     public String shownImage;
+
     public OrderLineItemProduct withShownImage(String shownImage) {
         this.shownImage = shownImage;
         return this;
@@ -144,6 +156,7 @@ public class OrderLineItemProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetCountry")
     public String targetCountry;
+
     public OrderLineItemProduct withTargetCountry(String targetCountry) {
         this.targetCountry = targetCountry;
         return this;
@@ -155,6 +168,7 @@ public class OrderLineItemProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public OrderLineItemProduct withTitle(String title) {
         this.title = title;
         return this;
@@ -166,9 +180,11 @@ public class OrderLineItemProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variantAttributes")
     public OrderLineItemProductVariantAttribute[] variantAttributes;
+
     public OrderLineItemProduct withVariantAttributes(OrderLineItemProductVariantAttribute[] variantAttributes) {
         this.variantAttributes = variantAttributes;
         return this;
     }
     
+    public OrderLineItemProduct(){}
 }

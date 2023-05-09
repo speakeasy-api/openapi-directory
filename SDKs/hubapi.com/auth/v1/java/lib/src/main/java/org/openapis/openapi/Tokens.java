@@ -46,12 +46,10 @@ public class Tokens {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostOauthV1TokenCreateResponse res = new org.openapis.openapi.models.operations.PostOauthV1TokenCreateResponse() {{
+        org.openapis.openapi.models.operations.PostOauthV1TokenCreateResponse res = new org.openapis.openapi.models.operations.PostOauthV1TokenCreateResponse(contentType, httpRes.statusCode()) {{
             tokenResponseIF = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

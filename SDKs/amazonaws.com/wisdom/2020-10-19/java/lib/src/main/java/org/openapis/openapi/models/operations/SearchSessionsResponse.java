@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchSessionsResponse {
@@ -12,6 +13,7 @@ public class SearchSessionsResponse {
      */
     
     public Object accessDeniedException;
+
     public SearchSessionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SearchSessionsResponse {
     
     
     public String contentType;
+
     public SearchSessionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SearchSessionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SearchSessionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class SearchSessionsResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchSessionsResponse searchSessionsResponse;
+
     public SearchSessionsResponse withSearchSessionsResponse(org.openapis.openapi.models.shared.SearchSessionsResponse searchSessionsResponse) {
         this.searchSessionsResponse = searchSessionsResponse;
         return this;
@@ -46,6 +51,7 @@ public class SearchSessionsResponse {
     
     
     public Integer statusCode;
+
     public SearchSessionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class SearchSessionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchSessionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class SearchSessionsResponse {
      */
     
     public Object validationException;
+
     public SearchSessionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SearchSessionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

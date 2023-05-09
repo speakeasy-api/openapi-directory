@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteNetworkInterfacePermissionResult {
     
     public Boolean return_;
+
     public DeleteNetworkInterfacePermissionResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
     }
     
+    public DeleteNetworkInterfacePermissionResult(){}
 }

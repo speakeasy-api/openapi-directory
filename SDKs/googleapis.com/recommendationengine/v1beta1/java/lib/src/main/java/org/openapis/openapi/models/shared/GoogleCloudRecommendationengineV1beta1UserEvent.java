@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1UserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventDetail")
     public GoogleCloudRecommendationengineV1beta1EventDetail eventDetail;
+
     public GoogleCloudRecommendationengineV1beta1UserEvent withEventDetail(GoogleCloudRecommendationengineV1beta1EventDetail eventDetail) {
         this.eventDetail = eventDetail;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecommendationengineV1beta1UserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventSource")
     public GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum eventSource;
+
     public GoogleCloudRecommendationengineV1beta1UserEvent withEventSource(GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum eventSource) {
         this.eventSource = eventSource;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecommendationengineV1beta1UserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTime")
     public String eventTime;
+
     public GoogleCloudRecommendationengineV1beta1UserEvent withEventTime(String eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecommendationengineV1beta1UserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public String eventType;
+
     public GoogleCloudRecommendationengineV1beta1UserEvent withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRecommendationengineV1beta1UserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productEventDetail")
     public GoogleCloudRecommendationengineV1beta1ProductEventDetail productEventDetail;
+
     public GoogleCloudRecommendationengineV1beta1UserEvent withProductEventDetail(GoogleCloudRecommendationengineV1beta1ProductEventDetail productEventDetail) {
         this.productEventDetail = productEventDetail;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudRecommendationengineV1beta1UserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userInfo")
     public GoogleCloudRecommendationengineV1beta1UserInfo userInfo;
+
     public GoogleCloudRecommendationengineV1beta1UserEvent withUserInfo(GoogleCloudRecommendationengineV1beta1UserInfo userInfo) {
         this.userInfo = userInfo;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1UserEvent(){}
 }

@@ -8,10 +8,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetIsos200ApplicationJSONIsos {
     /**
+     * Type of cpu architecture this iso is compatible with. Null indicates no restriction on the architecture (wildcard).
+     */
+    @JsonProperty("architecture")
+    public GetIsos200ApplicationJSONIsosArchitectureEnum architecture;
+
+    public GetIsos200ApplicationJSONIsos withArchitecture(GetIsos200ApplicationJSONIsosArchitectureEnum architecture) {
+        this.architecture = architecture;
+        return this;
+    }
+    
+    /**
      * ISO 8601 timestamp of deprecation, null if ISO is still available. After the deprecation time it will no longer be possible to attach the ISO to Servers.
      */
     @JsonProperty("deprecated")
     public String deprecated;
+
     public GetIsos200ApplicationJSONIsos withDeprecated(String deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -22,6 +34,7 @@ public class GetIsos200ApplicationJSONIsos {
      */
     @JsonProperty("description")
     public String description;
+
     public GetIsos200ApplicationJSONIsos withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +45,7 @@ public class GetIsos200ApplicationJSONIsos {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetIsos200ApplicationJSONIsos withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +56,7 @@ public class GetIsos200ApplicationJSONIsos {
      */
     @JsonProperty("name")
     public String name;
+
     public GetIsos200ApplicationJSONIsos withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +67,18 @@ public class GetIsos200ApplicationJSONIsos {
      */
     @JsonProperty("type")
     public GetIsos200ApplicationJSONIsosTypeEnum type;
+
     public GetIsos200ApplicationJSONIsos withType(GetIsos200ApplicationJSONIsosTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetIsos200ApplicationJSONIsos(@JsonProperty("architecture") GetIsos200ApplicationJSONIsosArchitectureEnum architecture, @JsonProperty("deprecated") String deprecated, @JsonProperty("description") String description, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("type") GetIsos200ApplicationJSONIsosTypeEnum type) {
+        this.architecture = architecture;
+        this.deprecated = deprecated;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.type = type;
+  }
 }

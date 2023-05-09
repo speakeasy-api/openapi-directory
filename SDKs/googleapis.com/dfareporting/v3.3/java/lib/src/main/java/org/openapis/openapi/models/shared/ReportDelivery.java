@@ -18,6 +18,7 @@ public class ReportDelivery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailOwner")
     public Boolean emailOwner;
+
     public ReportDelivery withEmailOwner(Boolean emailOwner) {
         this.emailOwner = emailOwner;
         return this;
@@ -29,6 +30,7 @@ public class ReportDelivery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailOwnerDeliveryType")
     public ReportDeliveryEmailOwnerDeliveryTypeEnum emailOwnerDeliveryType;
+
     public ReportDelivery withEmailOwnerDeliveryType(ReportDeliveryEmailOwnerDeliveryTypeEnum emailOwnerDeliveryType) {
         this.emailOwnerDeliveryType = emailOwnerDeliveryType;
         return this;
@@ -40,6 +42,7 @@ public class ReportDelivery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ReportDelivery withMessage(String message) {
         this.message = message;
         return this;
@@ -51,9 +54,11 @@ public class ReportDelivery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipients")
     public Recipient[] recipients;
+
     public ReportDelivery withRecipients(Recipient[] recipients) {
         this.recipients = recipients;
         return this;
     }
     
+    public ReportDelivery(){}
 }

@@ -25,6 +25,7 @@ public class ArtifactOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public ArtifactOutput withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -36,6 +37,7 @@ public class ArtifactOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash")
     public String hash;
+
     public ArtifactOutput withHash(String hash) {
         this.hash = hash;
         return this;
@@ -47,6 +49,7 @@ public class ArtifactOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public ArtifactOutput withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -58,6 +61,7 @@ public class ArtifactOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ArtifactOutput withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +73,7 @@ public class ArtifactOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeBytes")
     public Integer sizeBytes;
+
     public ArtifactOutput withSizeBytes(Integer sizeBytes) {
         this.sizeBytes = sizeBytes;
         return this;
@@ -82,9 +87,11 @@ public class ArtifactOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public ArtifactOutput withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ArtifactOutput(){}
 }

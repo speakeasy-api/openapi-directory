@@ -18,6 +18,7 @@ public class AddonsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudRunConfig")
     public CloudRunConfig cloudRunConfig;
+
     public AddonsConfig withCloudRunConfig(CloudRunConfig cloudRunConfig) {
         this.cloudRunConfig = cloudRunConfig;
         return this;
@@ -29,6 +30,7 @@ public class AddonsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configConnectorConfig")
     public ConfigConnectorConfig configConnectorConfig;
+
     public AddonsConfig withConfigConnectorConfig(ConfigConnectorConfig configConnectorConfig) {
         this.configConnectorConfig = configConnectorConfig;
         return this;
@@ -40,6 +42,7 @@ public class AddonsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsCacheConfig")
     public DnsCacheConfig dnsCacheConfig;
+
     public AddonsConfig withDnsCacheConfig(DnsCacheConfig dnsCacheConfig) {
         this.dnsCacheConfig = dnsCacheConfig;
         return this;
@@ -51,6 +54,7 @@ public class AddonsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcePersistentDiskCsiDriverConfig")
     public GcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig;
+
     public AddonsConfig withGcePersistentDiskCsiDriverConfig(GcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig) {
         this.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
         return this;
@@ -62,8 +66,21 @@ public class AddonsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcpFilestoreCsiDriverConfig")
     public GcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig;
+
     public AddonsConfig withGcpFilestoreCsiDriverConfig(GcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig) {
         this.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
+        return this;
+    }
+    
+    /**
+     * Configuration for the Cloud Storage Fuse CSI driver.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("gcsFuseCsiDriverConfig")
+    public GcsFuseCsiDriverConfig gcsFuseCsiDriverConfig;
+
+    public AddonsConfig withGcsFuseCsiDriverConfig(GcsFuseCsiDriverConfig gcsFuseCsiDriverConfig) {
+        this.gcsFuseCsiDriverConfig = gcsFuseCsiDriverConfig;
         return this;
     }
     
@@ -73,6 +90,7 @@ public class AddonsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gkeBackupAgentConfig")
     public GkeBackupAgentConfig gkeBackupAgentConfig;
+
     public AddonsConfig withGkeBackupAgentConfig(GkeBackupAgentConfig gkeBackupAgentConfig) {
         this.gkeBackupAgentConfig = gkeBackupAgentConfig;
         return this;
@@ -84,6 +102,7 @@ public class AddonsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("horizontalPodAutoscaling")
     public HorizontalPodAutoscaling horizontalPodAutoscaling;
+
     public AddonsConfig withHorizontalPodAutoscaling(HorizontalPodAutoscaling horizontalPodAutoscaling) {
         this.horizontalPodAutoscaling = horizontalPodAutoscaling;
         return this;
@@ -95,6 +114,7 @@ public class AddonsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpLoadBalancing")
     public HttpLoadBalancing httpLoadBalancing;
+
     public AddonsConfig withHttpLoadBalancing(HttpLoadBalancing httpLoadBalancing) {
         this.httpLoadBalancing = httpLoadBalancing;
         return this;
@@ -106,6 +126,7 @@ public class AddonsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("istioConfig")
     public IstioConfig istioConfig;
+
     public AddonsConfig withIstioConfig(IstioConfig istioConfig) {
         this.istioConfig = istioConfig;
         return this;
@@ -117,6 +138,7 @@ public class AddonsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kalmConfig")
     public KalmConfig kalmConfig;
+
     public AddonsConfig withKalmConfig(KalmConfig kalmConfig) {
         this.kalmConfig = kalmConfig;
         return this;
@@ -128,6 +150,7 @@ public class AddonsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kubernetesDashboard")
     public KubernetesDashboard kubernetesDashboard;
+
     public AddonsConfig withKubernetesDashboard(KubernetesDashboard kubernetesDashboard) {
         this.kubernetesDashboard = kubernetesDashboard;
         return this;
@@ -139,9 +162,11 @@ public class AddonsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkPolicyConfig")
     public NetworkPolicyConfig networkPolicyConfig;
+
     public AddonsConfig withNetworkPolicyConfig(NetworkPolicyConfig networkPolicyConfig) {
         this.networkPolicyConfig = networkPolicyConfig;
         return this;
     }
     
+    public AddonsConfig(){}
 }

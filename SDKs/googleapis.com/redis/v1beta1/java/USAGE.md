@@ -3,25 +3,24 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreateSecurity;
 import org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreateRequest;
 import org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreateResponse;
+import org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.InstanceConnectModeEnum;
+import org.openapis.openapi.models.shared.InstanceInput;
 import org.openapis.openapi.models.shared.InstanceReadReplicasModeEnum;
 import org.openapis.openapi.models.shared.InstanceSuspensionReasonsEnum;
 import org.openapis.openapi.models.shared.InstanceTierEnum;
 import org.openapis.openapi.models.shared.InstanceTransitEncryptionModeEnum;
-import org.openapis.openapi.models.shared.InstanceInput;
+import org.openapis.openapi.models.shared.MaintenancePolicyInput;
+import org.openapis.openapi.models.shared.MaintenanceScheduleInput;
+import org.openapis.openapi.models.shared.PersistenceConfigInput;
 import org.openapis.openapi.models.shared.PersistenceConfigPersistenceModeEnum;
 import org.openapis.openapi.models.shared.PersistenceConfigRdbSnapshotPeriodEnum;
-import org.openapis.openapi.models.shared.PersistenceConfigInput;
-import org.openapis.openapi.models.shared.MaintenanceScheduleInput;
-import org.openapis.openapi.models.shared.MaintenancePolicyInput;
+import org.openapis.openapi.models.shared.TimeOfDay;
 import org.openapis.openapi.models.shared.WeeklyMaintenanceWindowDayEnum;
 import org.openapis.openapi.models.shared.WeeklyMaintenanceWindowInput;
-import org.openapis.openapi.models.shared.TimeOfDay;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -30,19 +29,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            RedisProjectsLocationsInstancesCreateRequest req = new RedisProjectsLocationsInstancesCreateRequest() {{
-                dollarXgafv = "2";
+            RedisProjectsLocationsInstancesCreateRequest req = new RedisProjectsLocationsInstancesCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 instanceInput = new InstanceInput() {{
-                    alternativeLocationId = "provident";
+                    alternativeLocationId = "distinctio";
                     authEnabled = false;
-                    authorizedNetwork = "distinctio";
+                    authorizedNetwork = "quibusdam";
                     availableMaintenanceVersions = new String[]{{
-                        add("unde"),
                         add("nulla"),
                         add("corrupti"),
                         add("illum"),
                     }};
-                    connectMode = "DIRECT_PEERING";
+                    connectMode = InstanceConnectModeEnum.DIRECT_PEERING;
                     customerManagedKey = "error";
                     displayName = "deserunt";
                     labels = new java.util.HashMap<String, String>() {{
@@ -54,7 +52,7 @@ public class Application {
                         description = "tempora";
                         weeklyMaintenanceWindow = new org.openapis.openapi.models.shared.WeeklyMaintenanceWindowInput[]{{
                             add(new WeeklyMaintenanceWindowInput() {{
-                                day = "WEDNESDAY";
+                                day = WeeklyMaintenanceWindowDayEnum.WEDNESDAY;
                                 startTime = new TimeOfDay() {{
                                     hours = 791725;
                                     minutes = 812169;
@@ -63,7 +61,7 @@ public class Application {
                                 }};
                             }}),
                             add(new WeeklyMaintenanceWindowInput() {{
-                                day = "THURSDAY";
+                                day = WeeklyMaintenanceWindowDayEnum.THURSDAY;
                                 startTime = new TimeOfDay() {{
                                     hours = 392785;
                                     minutes = 925597;
@@ -72,61 +70,62 @@ public class Application {
                                 }};
                             }}),
                         }};
-                    }};
+                    }};;
                     maintenanceSchedule = new MaintenanceScheduleInput() {{
                         canReschedule = false;
-                    }};
+                    }};;
                     maintenanceVersion = "quis";
                     memorySizeGb = 87129;
-                    name = "deserunt";
+                    name = "Christopher Hills";
                     persistenceConfig = new PersistenceConfigInput() {{
-                        persistenceMode = "PERSISTENCE_MODE_UNSPECIFIED";
-                        rdbSnapshotPeriod = "ONE_HOUR";
-                        rdbSnapshotStartTime = "repellendus";
-                    }};
-                    readReplicasMode = "READ_REPLICAS_ENABLED";
+                        persistenceMode = PersistenceConfigPersistenceModeEnum.RDB;
+                        rdbSnapshotPeriod = PersistenceConfigRdbSnapshotPeriodEnum.SNAPSHOT_PERIOD_UNSPECIFIED;
+                        rdbSnapshotStartTime = "at";
+                    }};;
+                    readReplicasMode = InstanceReadReplicasModeEnum.READ_REPLICAS_ENABLED;
                     redisConfigs = new java.util.HashMap<String, String>() {{
-                        put("odit", "at");
-                        put("at", "maiores");
                         put("molestiae", "quod");
                         put("quod", "esse");
+                        put("totam", "porro");
+                        put("dolorum", "dicta");
                     }};
-                    redisVersion = "totam";
-                    replicaCount = 780529;
-                    reservedIpRange = "dolorum";
-                    secondaryIpRange = "dicta";
+                    redisVersion = "nam";
+                    replicaCount = 639921;
+                    reservedIpRange = "occaecati";
+                    secondaryIpRange = "fugit";
                     suspensionReasons = new org.openapis.openapi.models.shared.InstanceSuspensionReasonsEnum[]{{
-                        add("CUSTOMER_MANAGED_KEY_ISSUE"),
-                        add("CUSTOMER_MANAGED_KEY_ISSUE"),
-                        add("SUSPENSION_REASON_UNSPECIFIED"),
+                        add(InstanceSuspensionReasonsEnum.CUSTOMER_MANAGED_KEY_ISSUE),
+                        add(InstanceSuspensionReasonsEnum.CUSTOMER_MANAGED_KEY_ISSUE),
+                        add(InstanceSuspensionReasonsEnum.CUSTOMER_MANAGED_KEY_ISSUE),
                     }};
-                    tier = "BASIC";
-                    transitEncryptionMode = "DISABLED";
-                }};
-                accessToken = "optio";
-                alt = "media";
-                callback = "beatae";
-                fields = "commodi";
-                instanceId = "molestiae";
-                key = "modi";
-                oauthToken = "qui";
-                parent = "impedit";
+                    tier = InstanceTierEnum.TIER_UNSPECIFIED;
+                    transitEncryptionMode = InstanceTransitEncryptionModeEnum.SERVER_AUTHENTICATION;
+                }};;
+                accessToken = "molestiae";
+                alt = AltEnum.JSON;
+                callback = "qui";
+                fields = "impedit";
+                instanceId = "cum";
+                key = "esse";
+                oauthToken = "ipsum";
                 prettyPrint = false;
-                quotaUser = "cum";
-                uploadType = "esse";
-                uploadProtocol = "ipsum";
-            }}            
+                quotaUser = "excepturi";
+                uploadType = "aspernatur";
+                uploadProtocol = "perferendis";
+            }};            
 
-            RedisProjectsLocationsInstancesCreateResponse res = sdk.projects.redisProjectsLocationsInstancesCreate(req, new RedisProjectsLocationsInstancesCreateSecurity() {{
+            RedisProjectsLocationsInstancesCreateResponse res = sdk.projects.redisProjectsLocationsInstancesCreate(req, new RedisProjectsLocationsInstancesCreateSecurity("ad", "natus") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -18,6 +18,7 @@ public class AccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commercialOwnerEmail")
     public String commercialOwnerEmail;
+
     public AccountInfo withCommercialOwnerEmail(String commercialOwnerEmail) {
         this.commercialOwnerEmail = commercialOwnerEmail;
         return this;
@@ -26,6 +27,7 @@ public class AccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyInfo")
     public CompanyInfo companyInfo;
+
     public AccountInfo withCompanyInfo(CompanyInfo companyInfo) {
         this.companyInfo = companyInfo;
         return this;
@@ -36,6 +38,7 @@ public class AccountInfo {
      */
     @JsonProperty("email")
     public String email;
+
     public AccountInfo withEmail(String email) {
         this.email = email;
         return this;
@@ -44,6 +47,7 @@ public class AccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public BeezUPCommonInfoSummaries info;
+
     public AccountInfo withInfo(BeezUPCommonInfoSummaries info) {
         this.info = info;
         return this;
@@ -54,6 +58,7 @@ public class AccountInfo {
      */
     @JsonProperty("links")
     public AccountInfoLinks links;
+
     public AccountInfo withLinks(AccountInfoLinks links) {
         this.links = links;
         return this;
@@ -62,6 +67,7 @@ public class AccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalInfo")
     public PersonalInfo personalInfo;
+
     public AccountInfo withPersonalInfo(PersonalInfo personalInfo) {
         this.personalInfo = personalInfo;
         return this;
@@ -73,6 +79,7 @@ public class AccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profilePictureUrl")
     public String profilePictureUrl;
+
     public AccountInfo withProfilePictureUrl(String profilePictureUrl) {
         this.profilePictureUrl = profilePictureUrl;
         return this;
@@ -88,6 +95,7 @@ public class AccountInfo {
      */
     @JsonProperty("status")
     public AccountStatusEnum status;
+
     public AccountInfo withStatus(AccountStatusEnum status) {
         this.status = status;
         return this;
@@ -98,9 +106,16 @@ public class AccountInfo {
      */
     @JsonProperty("userId")
     public String userId;
+
     public AccountInfo withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public AccountInfo(@JsonProperty("email") String email, @JsonProperty("links") AccountInfoLinks links, @JsonProperty("status") AccountStatusEnum status, @JsonProperty("userId") String userId) {
+        this.email = email;
+        this.links = links;
+        this.status = status;
+        this.userId = userId;
+  }
 }

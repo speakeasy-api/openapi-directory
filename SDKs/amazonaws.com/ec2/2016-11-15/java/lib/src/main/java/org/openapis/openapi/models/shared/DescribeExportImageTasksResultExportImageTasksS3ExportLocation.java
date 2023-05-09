@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeExportImageTasksResultExportImageTasksS3ExportLocation {
     
     public String s3Bucket;
+
     public DescribeExportImageTasksResultExportImageTasksS3ExportLocation withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -19,9 +20,11 @@ public class DescribeExportImageTasksResultExportImageTasksS3ExportLocation {
     
     
     public String s3Prefix;
+
     public DescribeExportImageTasksResultExportImageTasksS3ExportLocation withS3Prefix(String s3Prefix) {
         this.s3Prefix = s3Prefix;
         return this;
     }
     
+    public DescribeExportImageTasksResultExportImageTasksS3ExportLocation(){}
 }

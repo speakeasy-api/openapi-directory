@@ -15,6 +15,7 @@ public class DescribeTableStatisticsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public DescribeTableStatisticsMessage withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +24,7 @@ public class DescribeTableStatisticsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeTableStatisticsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -31,6 +33,7 @@ public class DescribeTableStatisticsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRecords")
     public Long maxRecords;
+
     public DescribeTableStatisticsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -38,9 +41,13 @@ public class DescribeTableStatisticsMessage {
     
     @JsonProperty("ReplicationTaskArn")
     public String replicationTaskArn;
+
     public DescribeTableStatisticsMessage withReplicationTaskArn(String replicationTaskArn) {
         this.replicationTaskArn = replicationTaskArn;
         return this;
     }
     
+    public DescribeTableStatisticsMessage(@JsonProperty("ReplicationTaskArn") String replicationTaskArn) {
+        this.replicationTaskArn = replicationTaskArn;
+  }
 }

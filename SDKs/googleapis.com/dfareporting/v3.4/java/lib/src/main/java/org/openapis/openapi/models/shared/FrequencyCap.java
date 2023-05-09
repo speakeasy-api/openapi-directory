@@ -18,6 +18,7 @@ public class FrequencyCap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public FrequencyCap withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -29,9 +30,11 @@ public class FrequencyCap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impressions")
     public String impressions;
+
     public FrequencyCap withImpressions(String impressions) {
         this.impressions = impressions;
         return this;
     }
     
+    public FrequencyCap(){}
 }

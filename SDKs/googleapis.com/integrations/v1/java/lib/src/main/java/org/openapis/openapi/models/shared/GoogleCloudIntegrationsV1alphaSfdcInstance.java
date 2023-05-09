@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authConfigId")
     public String[] authConfigId;
+
     public GoogleCloudIntegrationsV1alphaSfdcInstance withAuthConfigId(String[] authConfigId) {
         this.authConfigId = authConfigId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudIntegrationsV1alphaSfdcInstance withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTime")
     public String deleteTime;
+
     public GoogleCloudIntegrationsV1alphaSfdcInstance withDeleteTime(String deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudIntegrationsV1alphaSfdcInstance withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudIntegrationsV1alphaSfdcInstance withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudIntegrationsV1alphaSfdcInstance withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAuthority")
     public String serviceAuthority;
+
     public GoogleCloudIntegrationsV1alphaSfdcInstance withServiceAuthority(String serviceAuthority) {
         this.serviceAuthority = serviceAuthority;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudIntegrationsV1alphaSfdcInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sfdcOrgId")
     public String sfdcOrgId;
+
     public GoogleCloudIntegrationsV1alphaSfdcInstance withSfdcOrgId(String sfdcOrgId) {
         this.sfdcOrgId = sfdcOrgId;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudIntegrationsV1alphaSfdcInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudIntegrationsV1alphaSfdcInstance withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaSfdcInstance(){}
 }

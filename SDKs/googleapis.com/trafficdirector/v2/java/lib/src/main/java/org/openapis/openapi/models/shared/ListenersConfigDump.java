@@ -18,6 +18,7 @@ public class ListenersConfigDump {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicListeners")
     public DynamicListener[] dynamicListeners;
+
     public ListenersConfigDump withDynamicListeners(DynamicListener[] dynamicListeners) {
         this.dynamicListeners = dynamicListeners;
         return this;
@@ -29,6 +30,7 @@ public class ListenersConfigDump {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staticListeners")
     public StaticListener[] staticListeners;
+
     public ListenersConfigDump withStaticListeners(StaticListener[] staticListeners) {
         this.staticListeners = staticListeners;
         return this;
@@ -40,9 +42,11 @@ public class ListenersConfigDump {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionInfo")
     public String versionInfo;
+
     public ListenersConfigDump withVersionInfo(String versionInfo) {
         this.versionInfo = versionInfo;
         return this;
     }
     
+    public ListenersConfigDump(){}
 }

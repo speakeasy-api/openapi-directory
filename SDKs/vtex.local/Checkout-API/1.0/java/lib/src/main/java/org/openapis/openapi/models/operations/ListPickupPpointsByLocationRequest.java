@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPickupPpointsByLocationRequest {
@@ -12,6 +13,7 @@ public class ListPickupPpointsByLocationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ListPickupPpointsByLocationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ListPickupPpointsByLocationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ListPickupPpointsByLocationRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class ListPickupPpointsByLocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countryCode")
     public String countryCode;
+
     public ListPickupPpointsByLocationRequest withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -42,6 +46,7 @@ public class ListPickupPpointsByLocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geoCoordinates")
     public Double[] geoCoordinates;
+
     public ListPickupPpointsByLocationRequest withGeoCoordinates(Double[] geoCoordinates) {
         this.geoCoordinates = geoCoordinates;
         return this;
@@ -52,9 +57,14 @@ public class ListPickupPpointsByLocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=postalCode")
     public String postalCode;
+
     public ListPickupPpointsByLocationRequest withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
     
+    public ListPickupPpointsByLocationRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

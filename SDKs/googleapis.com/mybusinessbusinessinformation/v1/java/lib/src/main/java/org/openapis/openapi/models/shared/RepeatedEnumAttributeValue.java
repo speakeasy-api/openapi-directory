@@ -18,6 +18,7 @@ public class RepeatedEnumAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setValues")
     public String[] setValues;
+
     public RepeatedEnumAttributeValue withSetValues(String[] setValues) {
         this.setValues = setValues;
         return this;
@@ -29,9 +30,11 @@ public class RepeatedEnumAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unsetValues")
     public String[] unsetValues;
+
     public RepeatedEnumAttributeValue withUnsetValues(String[] unsetValues) {
         this.unsetValues = unsetValues;
         return this;
     }
     
+    public RepeatedEnumAttributeValue(){}
 }

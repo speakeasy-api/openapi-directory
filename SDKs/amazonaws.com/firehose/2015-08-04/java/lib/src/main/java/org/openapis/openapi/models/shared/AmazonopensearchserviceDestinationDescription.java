@@ -15,6 +15,7 @@ public class AmazonopensearchserviceDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BufferingHints")
     public AmazonopensearchserviceBufferingHints bufferingHints;
+
     public AmazonopensearchserviceDestinationDescription withBufferingHints(AmazonopensearchserviceBufferingHints bufferingHints) {
         this.bufferingHints = bufferingHints;
         return this;
@@ -26,6 +27,7 @@ public class AmazonopensearchserviceDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptions")
     public CloudWatchLoggingOptions cloudWatchLoggingOptions;
+
     public AmazonopensearchserviceDestinationDescription withCloudWatchLoggingOptions(CloudWatchLoggingOptions cloudWatchLoggingOptions) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         return this;
@@ -34,6 +36,7 @@ public class AmazonopensearchserviceDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterEndpoint")
     public String clusterEndpoint;
+
     public AmazonopensearchserviceDestinationDescription withClusterEndpoint(String clusterEndpoint) {
         this.clusterEndpoint = clusterEndpoint;
         return this;
@@ -42,6 +45,7 @@ public class AmazonopensearchserviceDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainARN")
     public String domainARN;
+
     public AmazonopensearchserviceDestinationDescription withDomainARN(String domainARN) {
         this.domainARN = domainARN;
         return this;
@@ -50,6 +54,7 @@ public class AmazonopensearchserviceDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public AmazonopensearchserviceDestinationDescription withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -58,6 +63,7 @@ public class AmazonopensearchserviceDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexRotationPeriod")
     public AmazonopensearchserviceIndexRotationPeriodEnum indexRotationPeriod;
+
     public AmazonopensearchserviceDestinationDescription withIndexRotationPeriod(AmazonopensearchserviceIndexRotationPeriodEnum indexRotationPeriod) {
         this.indexRotationPeriod = indexRotationPeriod;
         return this;
@@ -69,6 +75,7 @@ public class AmazonopensearchserviceDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingConfiguration")
     public ProcessingConfiguration processingConfiguration;
+
     public AmazonopensearchserviceDestinationDescription withProcessingConfiguration(ProcessingConfiguration processingConfiguration) {
         this.processingConfiguration = processingConfiguration;
         return this;
@@ -77,6 +84,7 @@ public class AmazonopensearchserviceDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryOptions")
     public AmazonopensearchserviceRetryOptions retryOptions;
+
     public AmazonopensearchserviceDestinationDescription withRetryOptions(AmazonopensearchserviceRetryOptions retryOptions) {
         this.retryOptions = retryOptions;
         return this;
@@ -85,6 +93,7 @@ public class AmazonopensearchserviceDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public AmazonopensearchserviceDestinationDescription withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -93,6 +102,7 @@ public class AmazonopensearchserviceDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BackupMode")
     public AmazonopensearchserviceS3BackupModeEnum s3BackupMode;
+
     public AmazonopensearchserviceDestinationDescription withS3BackupMode(AmazonopensearchserviceS3BackupModeEnum s3BackupMode) {
         this.s3BackupMode = s3BackupMode;
         return this;
@@ -104,6 +114,7 @@ public class AmazonopensearchserviceDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DestinationDescription")
     public S3DestinationDescription s3DestinationDescription;
+
     public AmazonopensearchserviceDestinationDescription withS3DestinationDescription(S3DestinationDescription s3DestinationDescription) {
         this.s3DestinationDescription = s3DestinationDescription;
         return this;
@@ -112,6 +123,7 @@ public class AmazonopensearchserviceDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeName")
     public String typeName;
+
     public AmazonopensearchserviceDestinationDescription withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -123,9 +135,11 @@ public class AmazonopensearchserviceDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfigurationDescription")
     public VpcConfigurationDescription vpcConfigurationDescription;
+
     public AmazonopensearchserviceDestinationDescription withVpcConfigurationDescription(VpcConfigurationDescription vpcConfigurationDescription) {
         this.vpcConfigurationDescription = vpcConfigurationDescription;
         return this;
     }
     
+    public AmazonopensearchserviceDestinationDescription(){}
 }

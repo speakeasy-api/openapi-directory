@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateRouteTableResultRouteTableAssociationsAssociationState {
     
     public CreateRouteTableResultRouteTableAssociationsAssociationStateStateEnum state;
+
     public CreateRouteTableResultRouteTableAssociationsAssociationState withState(CreateRouteTableResultRouteTableAssociationsAssociationStateStateEnum state) {
         this.state = state;
         return this;
@@ -19,9 +20,11 @@ public class CreateRouteTableResultRouteTableAssociationsAssociationState {
     
     
     public String statusMessage;
+
     public CreateRouteTableResultRouteTableAssociationsAssociationState withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public CreateRouteTableResultRouteTableAssociationsAssociationState(){}
 }

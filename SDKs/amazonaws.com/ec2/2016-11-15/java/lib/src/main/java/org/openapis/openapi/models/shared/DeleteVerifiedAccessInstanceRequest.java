@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteVerifiedAccessInstanceRequest {
     
     public String clientToken;
+
     public DeleteVerifiedAccessInstanceRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class DeleteVerifiedAccessInstanceRequest {
     
     
     public Boolean dryRun;
+
     public DeleteVerifiedAccessInstanceRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,13 @@ public class DeleteVerifiedAccessInstanceRequest {
     
     
     public String verifiedAccessInstanceId;
+
     public DeleteVerifiedAccessInstanceRequest withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
     }
     
+    public DeleteVerifiedAccessInstanceRequest(@JsonProperty("VerifiedAccessInstanceId") String verifiedAccessInstanceId) {
+        this.verifiedAccessInstanceId = verifiedAccessInstanceId;
+  }
 }

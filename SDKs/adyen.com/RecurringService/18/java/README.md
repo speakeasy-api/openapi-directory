@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.PostDisableResponse;
 import org.openapis.openapi.models.shared.DisableRequest;
 
@@ -26,31 +25,31 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.DisableRequest req = new DisableRequest() {{
-                contract = "corrupti";
-                merchantAccount = "provident";
-                recurringDetailReference = "distinctio";
-                shopperReference = "quibusdam";
-            }}            
+            org.openapis.openapi.models.shared.DisableRequest req = new DisableRequest("corrupti", "provident") {{
+                contract = "distinctio";
+                recurringDetailReference = "quibusdam";
+            }};            
 
             PostDisableResponse res = sdk.postDisable(req);
 
-            if (res.disableResult.isPresent()) {
+            if (res.disableResult != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `postDisable` - Disables stored payment details.
-* `postListRecurringDetails` - Retrieves stored payment details for a shopper.
+* [postDisable](docs/sdk/README.md#postdisable) - Disables stored payment details.
+* [postListRecurringDetails](docs/sdk/README.md#postlistrecurringdetails) - Retrieves stored payment details for a shopper.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -18,6 +18,7 @@ public class FunctionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildConfig")
     public BuildConfigInput buildConfig;
+
     public FunctionInput withBuildConfig(BuildConfigInput buildConfig) {
         this.buildConfig = buildConfig;
         return this;
@@ -29,6 +30,7 @@ public class FunctionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FunctionInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class FunctionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public FunctionEnvironmentEnum environment;
+
     public FunctionInput withEnvironment(FunctionEnvironmentEnum environment) {
         this.environment = environment;
         return this;
@@ -51,17 +54,19 @@ public class FunctionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTrigger")
     public EventTriggerInput eventTrigger;
+
     public FunctionInput withEventTrigger(EventTriggerInput eventTrigger) {
         this.eventTrigger = eventTrigger;
         return this;
     }
     
     /**
-     * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+     * [Preview] Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public FunctionInput withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
@@ -73,6 +78,7 @@ public class FunctionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public FunctionInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,20 +90,23 @@ public class FunctionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FunctionInput withName(String name) {
         this.name = name;
         return this;
     }
     
     /**
-     * Describes the Service being deployed. Currently Supported : Cloud Run (fully managed). Next tag: 23
+     * Describes the Service being deployed. Currently Supported : Cloud Run (fully managed).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceConfig")
     public ServiceConfigInput serviceConfig;
+
     public FunctionInput withServiceConfig(ServiceConfigInput serviceConfig) {
         this.serviceConfig = serviceConfig;
         return this;
     }
     
+    public FunctionInput(){}
 }

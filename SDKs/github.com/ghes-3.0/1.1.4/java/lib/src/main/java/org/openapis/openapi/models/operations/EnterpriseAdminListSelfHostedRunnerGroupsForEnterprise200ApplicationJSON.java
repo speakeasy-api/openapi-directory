@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJSON {
     @JsonProperty("runner_groups")
     public org.openapis.openapi.models.shared.RunnerGroupsEnterprise[] runnerGroups;
+
     public EnterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJSON withRunnerGroups(org.openapis.openapi.models.shared.RunnerGroupsEnterprise[] runnerGroups) {
         this.runnerGroups = runnerGroups;
         return this;
@@ -19,9 +20,14 @@ public class EnterpriseAdminListSelfHostedRunnerGroupsForEnterprise200Applicatio
     
     @JsonProperty("total_count")
     public Double totalCount;
+
     public EnterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJSON withTotalCount(Double totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public EnterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJSON(@JsonProperty("runner_groups") org.openapis.openapi.models.shared.RunnerGroupsEnterprise[] runnerGroups, @JsonProperty("total_count") Double totalCount) {
+        this.runnerGroups = runnerGroups;
+        this.totalCount = totalCount;
+  }
 }

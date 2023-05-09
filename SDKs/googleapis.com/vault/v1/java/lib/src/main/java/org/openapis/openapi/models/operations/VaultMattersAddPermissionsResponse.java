@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VaultMattersAddPermissionsResponse {
     
     public String contentType;
+
     public VaultMattersAddPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class VaultMattersAddPermissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.MatterPermission matterPermission;
+
     public VaultMattersAddPermissionsResponse withMatterPermission(org.openapis.openapi.models.shared.MatterPermission matterPermission) {
         this.matterPermission = matterPermission;
         return this;
@@ -26,6 +29,7 @@ public class VaultMattersAddPermissionsResponse {
     
     
     public Integer statusCode;
+
     public VaultMattersAddPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class VaultMattersAddPermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VaultMattersAddPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VaultMattersAddPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

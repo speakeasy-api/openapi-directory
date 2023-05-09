@@ -15,9 +15,13 @@ public class DeleteInAppTemplateResponse {
      */
     @JsonProperty("MessageBody")
     public MessageBody messageBody;
+
     public DeleteInAppTemplateResponse withMessageBody(MessageBody messageBody) {
         this.messageBody = messageBody;
         return this;
     }
     
+    public DeleteInAppTemplateResponse(@JsonProperty("MessageBody") MessageBody messageBody) {
+        this.messageBody = messageBody;
+  }
 }

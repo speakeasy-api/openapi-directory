@@ -52,11 +52,9 @@ public class GenomeFeatures {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFeaturesWithinResourceResponse res = new org.openapis.openapi.models.operations.GetFeaturesWithinResourceResponse() {{
+        org.openapis.openapi.models.operations.GetFeaturesWithinResourceResponse res = new org.openapis.openapi.models.operations.GetFeaturesWithinResourceResponse(contentType, httpRes.statusCode()) {{
             sequenceFeatures = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

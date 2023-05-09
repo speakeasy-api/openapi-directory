@@ -15,6 +15,7 @@ public class UsersNodesListNodeLinks {
      */
     
     public String html;
+
     public UsersNodesListNodeLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -25,9 +26,11 @@ public class UsersNodesListNodeLinks {
      */
     
     public String self;
+
     public UsersNodesListNodeLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public UsersNodesListNodeLinks(){}
 }

@@ -10,11 +10,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateEnvironmentRequestBody {
     /**
-     * A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your environment. To learn more, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html"&gt;Apache Airflow configuration options&lt;/a&gt;.
+     * A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your environment. For more information, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html"&gt;Apache Airflow configuration options&lt;/a&gt;.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AirflowConfigurationOptions")
     public java.util.Map<String, String> airflowConfigurationOptions;
+
     public UpdateEnvironmentRequestBody withAirflowConfigurationOptions(java.util.Map<String, String> airflowConfigurationOptions) {
         this.airflowConfigurationOptions = airflowConfigurationOptions;
         return this;
@@ -26,39 +27,43 @@ public class UpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AirflowVersion")
     public String airflowVersion;
+
     public UpdateEnvironmentRequestBody withAirflowVersion(String airflowVersion) {
         this.airflowVersion = airflowVersion;
         return this;
     }
     
     /**
-     * The relative path to the DAGs folder on your Amazon S3 bucket. For example, &lt;code&gt;dags&lt;/code&gt;. To learn more, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html"&gt;Adding or updating DAGs&lt;/a&gt;.
+     * The relative path to the DAGs folder on your Amazon S3 bucket. For example, &lt;code&gt;dags&lt;/code&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html"&gt;Adding or updating DAGs&lt;/a&gt;.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DagS3Path")
     public String dagS3Path;
+
     public UpdateEnvironmentRequestBody withDagS3Path(String dagS3Path) {
         this.dagS3Path = dagS3Path;
         return this;
     }
     
     /**
-     * The environment class type. Valid values: &lt;code&gt;mw1.small&lt;/code&gt;, &lt;code&gt;mw1.medium&lt;/code&gt;, &lt;code&gt;mw1.large&lt;/code&gt;. To learn more, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html"&gt;Amazon MWAA environment class&lt;/a&gt;.
+     * The environment class type. Valid values: &lt;code&gt;mw1.small&lt;/code&gt;, &lt;code&gt;mw1.medium&lt;/code&gt;, &lt;code&gt;mw1.large&lt;/code&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html"&gt;Amazon MWAA environment class&lt;/a&gt;.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnvironmentClass")
     public String environmentClass;
+
     public UpdateEnvironmentRequestBody withEnvironmentClass(String environmentClass) {
         this.environmentClass = environmentClass;
         return this;
     }
     
     /**
-     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services resources in your environment. For example, &lt;code&gt;arn:aws:iam::123456789:role/my-execution-role&lt;/code&gt;. To learn more, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html"&gt;Amazon MWAA Execution role&lt;/a&gt;.
+     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services resources in your environment. For example, &lt;code&gt;arn:aws:iam::123456789:role/my-execution-role&lt;/code&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html"&gt;Amazon MWAA Execution role&lt;/a&gt;.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public UpdateEnvironmentRequestBody withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -70,6 +75,7 @@ public class UpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoggingConfiguration")
     public UpdateEnvironmentRequestBodyLoggingConfiguration loggingConfiguration;
+
     public UpdateEnvironmentRequestBody withLoggingConfiguration(UpdateEnvironmentRequestBodyLoggingConfiguration loggingConfiguration) {
         this.loggingConfiguration = loggingConfiguration;
         return this;
@@ -81,6 +87,7 @@ public class UpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxWorkers")
     public Long maxWorkers;
+
     public UpdateEnvironmentRequestBody withMaxWorkers(Long maxWorkers) {
         this.maxWorkers = maxWorkers;
         return this;
@@ -92,61 +99,67 @@ public class UpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinWorkers")
     public Long minWorkers;
+
     public UpdateEnvironmentRequestBody withMinWorkers(Long minWorkers) {
         this.minWorkers = minWorkers;
         return this;
     }
     
     /**
-     * Defines the VPC networking components used to secure and enable network traffic between the Amazon Web Services resources for your environment. To learn more, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html"&gt;About networking on Amazon MWAA&lt;/a&gt;.
+     * Defines the VPC networking components used to secure and enable network traffic between the Amazon Web Services resources for your environment. For more information, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html"&gt;About networking on Amazon MWAA&lt;/a&gt;.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConfiguration")
     public UpdateEnvironmentRequestBodyNetworkConfiguration networkConfiguration;
+
     public UpdateEnvironmentRequestBody withNetworkConfiguration(UpdateEnvironmentRequestBodyNetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
     }
     
     /**
-     * The version of the plugins.zip file on your Amazon S3 bucket. A version must be specified each time a plugins.zip file is updated. To learn more, see &lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html"&gt;How S3 Versioning works&lt;/a&gt;.
+     * The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a &lt;code&gt;plugins.zip&lt;/code&gt; file is updated. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html"&gt;How S3 Versioning works&lt;/a&gt;.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PluginsS3ObjectVersion")
     public String pluginsS3ObjectVersion;
+
     public UpdateEnvironmentRequestBody withPluginsS3ObjectVersion(String pluginsS3ObjectVersion) {
         this.pluginsS3ObjectVersion = pluginsS3ObjectVersion;
         return this;
     }
     
     /**
-     * The relative path to the &lt;code&gt;plugins.zip&lt;/code&gt; file on your Amazon S3 bucket. For example, &lt;code&gt;plugins.zip&lt;/code&gt;. If specified, then the plugins.zip version is required. To learn more, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import-plugins.html"&gt;Installing custom plugins&lt;/a&gt;.
+     * The relative path to the &lt;code&gt;plugins.zip&lt;/code&gt; file on your Amazon S3 bucket. For example, &lt;code&gt;plugins.zip&lt;/code&gt;. If specified, then the plugins.zip version is required. For more information, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import-plugins.html"&gt;Installing custom plugins&lt;/a&gt;.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PluginsS3Path")
     public String pluginsS3Path;
+
     public UpdateEnvironmentRequestBody withPluginsS3Path(String pluginsS3Path) {
         this.pluginsS3Path = pluginsS3Path;
         return this;
     }
     
     /**
-     * The version of the requirements.txt file on your Amazon S3 bucket. A version must be specified each time a requirements.txt file is updated. To learn more, see &lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html"&gt;How S3 Versioning works&lt;/a&gt;.
+     * The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a &lt;code&gt;requirements.txt&lt;/code&gt; file is updated. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html"&gt;How S3 Versioning works&lt;/a&gt;.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequirementsS3ObjectVersion")
     public String requirementsS3ObjectVersion;
+
     public UpdateEnvironmentRequestBody withRequirementsS3ObjectVersion(String requirementsS3ObjectVersion) {
         this.requirementsS3ObjectVersion = requirementsS3ObjectVersion;
         return this;
     }
     
     /**
-     * The relative path to the &lt;code&gt;requirements.txt&lt;/code&gt; file on your Amazon S3 bucket. For example, &lt;code&gt;requirements.txt&lt;/code&gt;. If specified, then a file version is required. To learn more, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/working-dags-dependencies.html"&gt;Installing Python dependencies&lt;/a&gt;.
+     * The relative path to the &lt;code&gt;requirements.txt&lt;/code&gt; file on your Amazon S3 bucket. For example, &lt;code&gt;requirements.txt&lt;/code&gt;. If specified, then a file version is required. For more information, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/working-dags-dependencies.html"&gt;Installing Python dependencies&lt;/a&gt;.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequirementsS3Path")
     public String requirementsS3Path;
+
     public UpdateEnvironmentRequestBody withRequirementsS3Path(String requirementsS3Path) {
         this.requirementsS3Path = requirementsS3Path;
         return this;
@@ -158,28 +171,55 @@ public class UpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedulers")
     public Long schedulers;
+
     public UpdateEnvironmentRequestBody withSchedulers(Long schedulers) {
         this.schedulers = schedulers;
         return this;
     }
     
     /**
-     * The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are stored. For example, &lt;code&gt;arn:aws:s3:::my-airflow-bucket-unique-name&lt;/code&gt;. To learn more, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html"&gt;Create an Amazon S3 bucket for Amazon MWAA&lt;/a&gt;.
+     * The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are stored. For example, &lt;code&gt;arn:aws:s3:::my-airflow-bucket-unique-name&lt;/code&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html"&gt;Create an Amazon S3 bucket for Amazon MWAA&lt;/a&gt;.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceBucketArn")
     public String sourceBucketArn;
+
     public UpdateEnvironmentRequestBody withSourceBucketArn(String sourceBucketArn) {
         this.sourceBucketArn = sourceBucketArn;
         return this;
     }
     
     /**
-     * The Apache Airflow &lt;i&gt;Web server&lt;/i&gt; access mode. To learn more, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html"&gt;Apache Airflow access modes&lt;/a&gt;.
+     * &lt;p&gt; The version of the startup shell script in your Amazon S3 bucket. You must specify the &lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html"&gt;version ID&lt;/a&gt; that Amazon S3 assigns to the file every time you update the script. &lt;/p&gt; &lt;p&gt; Version IDs are Unicode, UTF-8 encoded, URL-ready, opaque strings that are no more than 1,024 bytes long. The following is an example: &lt;/p&gt; &lt;p&gt; &lt;code&gt;3sL4kqtJlcpXroDTDmJ+rmSpXd3dIbrHY+MTRCxf3vjVBH40Nr8X8gdRQBpUMLUo&lt;/code&gt; &lt;/p&gt; &lt;p&gt; For more information, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html"&gt;Using a startup script&lt;/a&gt;. &lt;/p&gt;
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StartupScriptS3ObjectVersion")
+    public String startupScriptS3ObjectVersion;
+
+    public UpdateEnvironmentRequestBody withStartupScriptS3ObjectVersion(String startupScriptS3ObjectVersion) {
+        this.startupScriptS3ObjectVersion = startupScriptS3ObjectVersion;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The relative path to the startup shell script in your Amazon S3 bucket. For example, &lt;code&gt;s3://mwaa-environment/startup.sh&lt;/code&gt;.&lt;/p&gt; &lt;p&gt; Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process. You can use this script to install dependencies, modify Apache Airflow configuration options, and set environment variables. For more information, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html"&gt;Using a startup script&lt;/a&gt;. &lt;/p&gt;
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StartupScriptS3Path")
+    public String startupScriptS3Path;
+
+    public UpdateEnvironmentRequestBody withStartupScriptS3Path(String startupScriptS3Path) {
+        this.startupScriptS3Path = startupScriptS3Path;
+        return this;
+    }
+    
+    /**
+     * The Apache Airflow &lt;i&gt;Web server&lt;/i&gt; access mode. For more information, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html"&gt;Apache Airflow access modes&lt;/a&gt;.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebserverAccessMode")
     public UpdateEnvironmentRequestBodyWebserverAccessModeEnum webserverAccessMode;
+
     public UpdateEnvironmentRequestBody withWebserverAccessMode(UpdateEnvironmentRequestBodyWebserverAccessModeEnum webserverAccessMode) {
         this.webserverAccessMode = webserverAccessMode;
         return this;
@@ -191,9 +231,11 @@ public class UpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeeklyMaintenanceWindowStart")
     public String weeklyMaintenanceWindowStart;
+
     public UpdateEnvironmentRequestBody withWeeklyMaintenanceWindowStart(String weeklyMaintenanceWindowStart) {
         this.weeklyMaintenanceWindowStart = weeklyMaintenanceWindowStart;
         return this;
     }
     
+    public UpdateEnvironmentRequestBody(){}
 }

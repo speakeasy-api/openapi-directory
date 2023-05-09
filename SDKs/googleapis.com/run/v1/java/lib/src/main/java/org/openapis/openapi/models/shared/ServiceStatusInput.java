@@ -18,6 +18,7 @@ public class ServiceStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Addressable address;
+
     public ServiceStatusInput withAddress(Addressable address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class ServiceStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public GoogleCloudRunV1Condition[] conditions;
+
     public ServiceStatusInput withConditions(GoogleCloudRunV1Condition[] conditions) {
         this.conditions = conditions;
         return this;
@@ -40,6 +42,7 @@ public class ServiceStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestCreatedRevisionName")
     public String latestCreatedRevisionName;
+
     public ServiceStatusInput withLatestCreatedRevisionName(String latestCreatedRevisionName) {
         this.latestCreatedRevisionName = latestCreatedRevisionName;
         return this;
@@ -51,6 +54,7 @@ public class ServiceStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestReadyRevisionName")
     public String latestReadyRevisionName;
+
     public ServiceStatusInput withLatestReadyRevisionName(String latestReadyRevisionName) {
         this.latestReadyRevisionName = latestReadyRevisionName;
         return this;
@@ -62,6 +66,7 @@ public class ServiceStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("observedGeneration")
     public Integer observedGeneration;
+
     public ServiceStatusInput withObservedGeneration(Integer observedGeneration) {
         this.observedGeneration = observedGeneration;
         return this;
@@ -73,6 +78,7 @@ public class ServiceStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("traffic")
     public TrafficTargetInput[] traffic;
+
     public ServiceStatusInput withTraffic(TrafficTargetInput[] traffic) {
         this.traffic = traffic;
         return this;
@@ -84,9 +90,11 @@ public class ServiceStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ServiceStatusInput withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ServiceStatusInput(){}
 }

@@ -15,6 +15,7 @@ public class DeleteSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botAlias")
     public String botAlias;
+
     public DeleteSessionResponse withBotAlias(String botAlias) {
         this.botAlias = botAlias;
         return this;
@@ -23,6 +24,7 @@ public class DeleteSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botName")
     public String botName;
+
     public DeleteSessionResponse withBotName(String botName) {
         this.botName = botName;
         return this;
@@ -31,6 +33,7 @@ public class DeleteSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionId")
     public String sessionId;
+
     public DeleteSessionResponse withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -39,9 +42,11 @@ public class DeleteSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public DeleteSessionResponse withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public DeleteSessionResponse(){}
 }

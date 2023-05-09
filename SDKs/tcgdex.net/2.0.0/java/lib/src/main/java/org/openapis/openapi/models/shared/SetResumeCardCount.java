@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetResumeCardCount {
     @JsonProperty("official")
     public Double official;
+
     public SetResumeCardCount withOfficial(Double official) {
         this.official = official;
         return this;
@@ -16,9 +17,14 @@ public class SetResumeCardCount {
     
     @JsonProperty("total")
     public Double total;
+
     public SetResumeCardCount withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public SetResumeCardCount(@JsonProperty("official") Double official, @JsonProperty("total") Double total) {
+        this.official = official;
+        this.total = total;
+  }
 }

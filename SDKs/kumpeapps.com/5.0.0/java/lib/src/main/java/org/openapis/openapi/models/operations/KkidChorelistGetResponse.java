@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class KkidChorelistGetResponse {
@@ -12,6 +13,7 @@ public class KkidChorelistGetResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndFive fourHundredAndFive;
+
     public KkidChorelistGetResponse withFourHundredAndFive(org.openapis.openapi.models.shared.FourHundredAndFive fourHundredAndFive) {
         this.fourHundredAndFive = fourHundredAndFive;
         return this;
@@ -22,6 +24,7 @@ public class KkidChorelistGetResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndTwelve fourHundredAndTwelve;
+
     public KkidChorelistGetResponse withFourHundredAndTwelve(org.openapis.openapi.models.shared.FourHundredAndTwelve fourHundredAndTwelve) {
         this.fourHundredAndTwelve = fourHundredAndTwelve;
         return this;
@@ -29,6 +32,7 @@ public class KkidChorelistGetResponse {
     
     
     public String contentType;
+
     public KkidChorelistGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class KkidChorelistGetResponse {
     
     
     public Integer statusCode;
+
     public KkidChorelistGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class KkidChorelistGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public KkidChorelistGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class KkidChorelistGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Chorelist chorelist;
+
     public KkidChorelistGetResponse withChorelist(org.openapis.openapi.models.shared.Chorelist chorelist) {
         this.chorelist = chorelist;
         return this;
@@ -63,9 +70,14 @@ public class KkidChorelistGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Nodata nodata;
+
     public KkidChorelistGetResponse withNodata(org.openapis.openapi.models.shared.Nodata nodata) {
         this.nodata = nodata;
         return this;
     }
     
+    public KkidChorelistGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

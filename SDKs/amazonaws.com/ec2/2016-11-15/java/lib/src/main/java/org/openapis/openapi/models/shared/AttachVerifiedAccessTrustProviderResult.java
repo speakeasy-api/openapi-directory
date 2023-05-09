@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AttachVerifiedAccessTrustProviderResult {
     
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessInstance verifiedAccessInstance;
+
     public AttachVerifiedAccessTrustProviderResult withVerifiedAccessInstance(AttachVerifiedAccessTrustProviderResultVerifiedAccessInstance verifiedAccessInstance) {
         this.verifiedAccessInstance = verifiedAccessInstance;
         return this;
@@ -19,9 +20,11 @@ public class AttachVerifiedAccessTrustProviderResult {
     
     
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider verifiedAccessTrustProvider;
+
     public AttachVerifiedAccessTrustProviderResult withVerifiedAccessTrustProvider(AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider verifiedAccessTrustProvider) {
         this.verifiedAccessTrustProvider = verifiedAccessTrustProvider;
         return this;
     }
     
+    public AttachVerifiedAccessTrustProviderResult(){}
 }

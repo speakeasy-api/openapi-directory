@@ -15,9 +15,11 @@ public class TableRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("f")
     public TableCell[] f;
+
     public TableRow withF(TableCell[] f) {
         this.f = f;
         return this;
     }
     
+    public TableRow(){}
 }

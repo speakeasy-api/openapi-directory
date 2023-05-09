@@ -15,9 +15,13 @@ public class GetArchiveRuleResponse {
      */
     @JsonProperty("archiveRule")
     public ArchiveRuleSummary archiveRule;
+
     public GetArchiveRuleResponse withArchiveRule(ArchiveRuleSummary archiveRule) {
         this.archiveRule = archiveRule;
         return this;
     }
     
+    public GetArchiveRuleResponse(@JsonProperty("archiveRule") ArchiveRuleSummary archiveRule) {
+        this.archiveRule = archiveRule;
+  }
 }

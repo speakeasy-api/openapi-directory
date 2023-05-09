@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * MemoryMiBRequest - The minimum and maximum amount of memory, in MiB.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MemoryMiBRequest {
     
     public Long max;
+
     public MemoryMiBRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,13 @@ public class MemoryMiBRequest {
     
     
     public Long min;
+
     public MemoryMiBRequest withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public MemoryMiBRequest(@JsonProperty("Min") Long min) {
+        this.min = min;
+  }
 }

@@ -15,6 +15,7 @@ public class OpsEntityItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CaptureTime")
     public String captureTime;
+
     public OpsEntityItem withCaptureTime(String captureTime) {
         this.captureTime = captureTime;
         return this;
@@ -23,9 +24,11 @@ public class OpsEntityItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public java.util.Map<String, String>[] content;
+
     public OpsEntityItem withContent(java.util.Map<String, String>[] content) {
         this.content = content;
         return this;
     }
     
+    public OpsEntityItem(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3VersionVariantsVariant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isControlGroup")
     public Boolean isControlGroup;
+
     public GoogleCloudDialogflowCxV3VersionVariantsVariant withIsControlGroup(Boolean isControlGroup) {
         this.isControlGroup = isControlGroup;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3VersionVariantsVariant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trafficAllocation")
     public Float trafficAllocation;
+
     public GoogleCloudDialogflowCxV3VersionVariantsVariant withTrafficAllocation(Float trafficAllocation) {
         this.trafficAllocation = trafficAllocation;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3VersionVariantsVariant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public GoogleCloudDialogflowCxV3VersionVariantsVariant withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3VersionVariantsVariant(){}
 }

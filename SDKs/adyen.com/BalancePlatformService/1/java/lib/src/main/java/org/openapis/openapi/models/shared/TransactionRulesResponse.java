@@ -18,9 +18,11 @@ public class TransactionRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionRules")
     public TransactionRule[] transactionRules;
+
     public TransactionRulesResponse withTransactionRules(TransactionRule[] transactionRules) {
         this.transactionRules = transactionRules;
         return this;
     }
     
+    public TransactionRulesResponse(){}
 }

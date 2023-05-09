@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest {
@@ -12,6 +13,7 @@ public class GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=googleAuthReturnUrl")
     public String googleAuthReturnUrl;
+
     public GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest withGoogleAuthReturnUrl(String googleAuthReturnUrl) {
         this.googleAuthReturnUrl = googleAuthReturnUrl;
         return this;
@@ -22,6 +24,7 @@ public class GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=googleEmailAddress")
     public String googleEmailAddress;
+
     public GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest withGoogleEmailAddress(String googleEmailAddress) {
         this.googleEmailAddress = googleEmailAddress;
         return this;
@@ -32,9 +35,14 @@ public class GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest(@JsonProperty("googleEmailAddress") String googleEmailAddress, @JsonProperty("id") String id) {
+        this.googleEmailAddress = googleEmailAddress;
+        this.id = id;
+  }
 }

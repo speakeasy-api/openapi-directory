@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAssessmentFrameworkResponse {
@@ -12,6 +13,7 @@ public class CreateAssessmentFrameworkResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAssessmentFrameworkResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateAssessmentFrameworkResponse {
     
     
     public String contentType;
+
     public CreateAssessmentFrameworkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateAssessmentFrameworkResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAssessmentFrameworkResponse createAssessmentFrameworkResponse;
+
     public CreateAssessmentFrameworkResponse withCreateAssessmentFrameworkResponse(org.openapis.openapi.models.shared.CreateAssessmentFrameworkResponse createAssessmentFrameworkResponse) {
         this.createAssessmentFrameworkResponse = createAssessmentFrameworkResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateAssessmentFrameworkResponse {
      */
     
     public Object internalServerException;
+
     public CreateAssessmentFrameworkResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAssessmentFrameworkResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAssessmentFrameworkResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateAssessmentFrameworkResponse {
     
     
     public Integer statusCode;
+
     public CreateAssessmentFrameworkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateAssessmentFrameworkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAssessmentFrameworkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateAssessmentFrameworkResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateAssessmentFrameworkResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,9 +92,14 @@ public class CreateAssessmentFrameworkResponse {
      */
     
     public Object validationException;
+
     public CreateAssessmentFrameworkResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateAssessmentFrameworkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

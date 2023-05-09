@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopsStopsForRouteResponse {
     
     public byte[] body;
+
     public StopsStopsForRouteResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class StopsStopsForRouteResponse {
     
     
     public String contentType;
+
     public StopsStopsForRouteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class StopsStopsForRouteResponse {
     
     
     public Integer statusCode;
+
     public StopsStopsForRouteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class StopsStopsForRouteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopsStopsForRouteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class StopsStopsForRouteResponse {
      */
     
     public org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse;
+
     public StopsStopsForRouteResponse withV3ErrorResponse(org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse) {
         this.v3ErrorResponse = v3ErrorResponse;
         return this;
@@ -50,9 +56,14 @@ public class StopsStopsForRouteResponse {
      */
     
     public org.openapis.openapi.models.shared.V3StopsOnRouteResponse v3StopsOnRouteResponse;
+
     public StopsStopsForRouteResponse withV3StopsOnRouteResponse(org.openapis.openapi.models.shared.V3StopsOnRouteResponse v3StopsOnRouteResponse) {
         this.v3StopsOnRouteResponse = v3StopsOnRouteResponse;
         return this;
     }
     
+    public StopsStopsForRouteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

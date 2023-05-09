@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrderApiTagsUpdateRawResponse {
     
     public String contentType;
+
     public OrderApiTagsUpdateRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OrderApiTagsUpdateRawResponse {
      */
     
     public java.util.Map<String, Object> orderApiTagsUpdateRaw200ApplicationJSONObject;
+
     public OrderApiTagsUpdateRawResponse withOrderApiTagsUpdateRaw200ApplicationJSONObject(java.util.Map<String, Object> orderApiTagsUpdateRaw200ApplicationJSONObject) {
         this.orderApiTagsUpdateRaw200ApplicationJSONObject = orderApiTagsUpdateRaw200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class OrderApiTagsUpdateRawResponse {
      */
     
     public java.util.Map<String, Object> orderApiTagsUpdateRaw200TextJSONObject;
+
     public OrderApiTagsUpdateRawResponse withOrderApiTagsUpdateRaw200TextJSONObject(java.util.Map<String, Object> orderApiTagsUpdateRaw200TextJSONObject) {
         this.orderApiTagsUpdateRaw200TextJSONObject = orderApiTagsUpdateRaw200TextJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class OrderApiTagsUpdateRawResponse {
     
     
     public Integer statusCode;
+
     public OrderApiTagsUpdateRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class OrderApiTagsUpdateRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrderApiTagsUpdateRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OrderApiTagsUpdateRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

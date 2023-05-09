@@ -15,9 +15,11 @@ public class UpdateBackendAuthRequestBodyResourceConfigIdentityPoolConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnauthenticatedLogin")
     public Boolean unauthenticatedLogin;
+
     public UpdateBackendAuthRequestBodyResourceConfigIdentityPoolConfigs withUnauthenticatedLogin(Boolean unauthenticatedLogin) {
         this.unauthenticatedLogin = unauthenticatedLogin;
         return this;
     }
     
+    public UpdateBackendAuthRequestBodyResourceConfigIdentityPoolConfigs(){}
 }

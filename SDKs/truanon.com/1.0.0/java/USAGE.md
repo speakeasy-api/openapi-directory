@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetProfileRequest;
 import org.openapis.openapi.models.operations.GetProfileResponse;
 
@@ -16,7 +15,7 @@ public class Application {
             GetProfileRequest req = new GetProfileRequest() {{
                 id = "{{your-member-id}}";
                 service = "{{service-identifier}}";
-            }}            
+            }};            
 
             GetProfileResponse res = sdk.getProfile(req);
 
@@ -26,5 +25,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

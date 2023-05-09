@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class SubnetList {
     
     public AvailabilityZone subnetAvailabilityZone;
+
     public SubnetList withSubnetAvailabilityZone(AvailabilityZone subnetAvailabilityZone) {
         this.subnetAvailabilityZone = subnetAvailabilityZone;
         return this;
@@ -16,6 +17,7 @@ public class SubnetList {
     
     
     public String subnetIdentifier;
+
     public SubnetList withSubnetIdentifier(String subnetIdentifier) {
         this.subnetIdentifier = subnetIdentifier;
         return this;
@@ -23,9 +25,11 @@ public class SubnetList {
     
     
     public String subnetStatus;
+
     public SubnetList withSubnetStatus(String subnetStatus) {
         this.subnetStatus = subnetStatus;
         return this;
     }
     
+    public SubnetList(){}
 }

@@ -12,6 +12,7 @@ public class CardObjectTypeBody {
      */
     @JsonProperty("name")
     public CardObjectTypeBodyNameEnum name;
+
     public CardObjectTypeBody withName(CardObjectTypeBodyNameEnum name) {
         this.name = name;
         return this;
@@ -22,9 +23,14 @@ public class CardObjectTypeBody {
      */
     @JsonProperty("propertiesToSend")
     public String[] propertiesToSend;
+
     public CardObjectTypeBody withPropertiesToSend(String[] propertiesToSend) {
         this.propertiesToSend = propertiesToSend;
         return this;
     }
     
+    public CardObjectTypeBody(@JsonProperty("name") CardObjectTypeBodyNameEnum name, @JsonProperty("propertiesToSend") String[] propertiesToSend) {
+        this.name = name;
+        this.propertiesToSend = propertiesToSend;
+  }
 }

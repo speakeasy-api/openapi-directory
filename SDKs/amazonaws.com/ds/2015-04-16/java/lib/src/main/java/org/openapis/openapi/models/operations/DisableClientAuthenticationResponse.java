@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableClientAuthenticationResponse {
@@ -12,6 +13,7 @@ public class DisableClientAuthenticationResponse {
      */
     
     public Object accessDeniedException;
+
     public DisableClientAuthenticationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisableClientAuthenticationResponse {
      */
     
     public Object clientException;
+
     public DisableClientAuthenticationResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class DisableClientAuthenticationResponse {
     
     
     public String contentType;
+
     public DisableClientAuthenticationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisableClientAuthenticationResponse {
      */
     
     public Object directoryDoesNotExistException;
+
     public DisableClientAuthenticationResponse withDirectoryDoesNotExistException(Object directoryDoesNotExistException) {
         this.directoryDoesNotExistException = directoryDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class DisableClientAuthenticationResponse {
      */
     
     public java.util.Map<String, Object> disableClientAuthenticationResult;
+
     public DisableClientAuthenticationResponse withDisableClientAuthenticationResult(java.util.Map<String, Object> disableClientAuthenticationResult) {
         this.disableClientAuthenticationResult = disableClientAuthenticationResult;
         return this;
@@ -59,6 +65,7 @@ public class DisableClientAuthenticationResponse {
      */
     
     public Object invalidClientAuthStatusException;
+
     public DisableClientAuthenticationResponse withInvalidClientAuthStatusException(Object invalidClientAuthStatusException) {
         this.invalidClientAuthStatusException = invalidClientAuthStatusException;
         return this;
@@ -66,6 +73,7 @@ public class DisableClientAuthenticationResponse {
     
     
     public Integer statusCode;
+
     public DisableClientAuthenticationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DisableClientAuthenticationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableClientAuthenticationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DisableClientAuthenticationResponse {
      */
     
     public Object serviceException;
+
     public DisableClientAuthenticationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,9 +103,14 @@ public class DisableClientAuthenticationResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DisableClientAuthenticationResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DisableClientAuthenticationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

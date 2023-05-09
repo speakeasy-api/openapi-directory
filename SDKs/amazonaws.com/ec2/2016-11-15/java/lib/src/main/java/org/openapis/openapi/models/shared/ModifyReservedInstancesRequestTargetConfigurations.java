@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyReservedInstancesRequestTargetConfigurations {
     
     public String availabilityZone;
+
     public ModifyReservedInstancesRequestTargetConfigurations withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class ModifyReservedInstancesRequestTargetConfigurations {
     
     
     public Long instanceCount;
+
     public ModifyReservedInstancesRequestTargetConfigurations withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -26,6 +28,7 @@ public class ModifyReservedInstancesRequestTargetConfigurations {
     
     
     public ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum instanceType;
+
     public ModifyReservedInstancesRequestTargetConfigurations withInstanceType(ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -33,6 +36,7 @@ public class ModifyReservedInstancesRequestTargetConfigurations {
     
     
     public String platform;
+
     public ModifyReservedInstancesRequestTargetConfigurations withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -40,9 +44,11 @@ public class ModifyReservedInstancesRequestTargetConfigurations {
     
     
     public ModifyReservedInstancesRequestTargetConfigurationsScopeEnum scope;
+
     public ModifyReservedInstancesRequestTargetConfigurations withScope(ModifyReservedInstancesRequestTargetConfigurationsScopeEnum scope) {
         this.scope = scope;
         return this;
     }
     
+    public ModifyReservedInstancesRequestTargetConfigurations(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateRepositoryInput {
     @JsonProperty("connectionArn")
     public String connectionArn;
+
     public CreateRepositoryInput withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
@@ -19,6 +20,7 @@ public class CreateRepositoryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public String encryptionKey;
+
     public CreateRepositoryInput withEncryptionKey(String encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -26,6 +28,7 @@ public class CreateRepositoryInput {
     
     @JsonProperty("name")
     public String name;
+
     public CreateRepositoryInput withName(String name) {
         this.name = name;
         return this;
@@ -33,6 +36,7 @@ public class CreateRepositoryInput {
     
     @JsonProperty("provider")
     public RepositoryProviderEnum provider;
+
     public CreateRepositoryInput withProvider(RepositoryProviderEnum provider) {
         this.provider = provider;
         return this;
@@ -41,9 +45,15 @@ public class CreateRepositoryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateRepositoryInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRepositoryInput(@JsonProperty("connectionArn") String connectionArn, @JsonProperty("name") String name, @JsonProperty("provider") RepositoryProviderEnum provider) {
+        this.connectionArn = connectionArn;
+        this.name = name;
+        this.provider = provider;
+  }
 }

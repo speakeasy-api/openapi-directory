@@ -15,6 +15,7 @@ public class FutureReservationTimeWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Duration duration;
+
     public FutureReservationTimeWindow withDuration(Duration duration) {
         this.duration = duration;
         return this;
@@ -23,6 +24,7 @@ public class FutureReservationTimeWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public FutureReservationTimeWindow withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -34,9 +36,11 @@ public class FutureReservationTimeWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public FutureReservationTimeWindow withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public FutureReservationTimeWindow(){}
 }

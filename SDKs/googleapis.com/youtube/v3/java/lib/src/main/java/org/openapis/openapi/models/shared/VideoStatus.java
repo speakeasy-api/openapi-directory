@@ -23,6 +23,7 @@ public class VideoStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embeddable")
     public Boolean embeddable;
+
     public VideoStatus withEmbeddable(Boolean embeddable) {
         this.embeddable = embeddable;
         return this;
@@ -34,6 +35,7 @@ public class VideoStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public VideoStatusFailureReasonEnum failureReason;
+
     public VideoStatus withFailureReason(VideoStatusFailureReasonEnum failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -45,6 +47,7 @@ public class VideoStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license")
     public VideoStatusLicenseEnum license;
+
     public VideoStatus withLicense(VideoStatusLicenseEnum license) {
         this.license = license;
         return this;
@@ -53,6 +56,7 @@ public class VideoStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("madeForKids")
     public Boolean madeForKids;
+
     public VideoStatus withMadeForKids(Boolean madeForKids) {
         this.madeForKids = madeForKids;
         return this;
@@ -64,6 +68,7 @@ public class VideoStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacyStatus")
     public VideoStatusPrivacyStatusEnum privacyStatus;
+
     public VideoStatus withPrivacyStatus(VideoStatusPrivacyStatusEnum privacyStatus) {
         this.privacyStatus = privacyStatus;
         return this;
@@ -75,6 +80,7 @@ public class VideoStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicStatsViewable")
     public Boolean publicStatsViewable;
+
     public VideoStatus withPublicStatsViewable(Boolean publicStatsViewable) {
         this.publicStatsViewable = publicStatsViewable;
         return this;
@@ -88,6 +94,7 @@ public class VideoStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("publishAt")
     public OffsetDateTime publishAt;
+
     public VideoStatus withPublishAt(OffsetDateTime publishAt) {
         this.publishAt = publishAt;
         return this;
@@ -99,6 +106,7 @@ public class VideoStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejectionReason")
     public VideoStatusRejectionReasonEnum rejectionReason;
+
     public VideoStatus withRejectionReason(VideoStatusRejectionReasonEnum rejectionReason) {
         this.rejectionReason = rejectionReason;
         return this;
@@ -107,6 +115,7 @@ public class VideoStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfDeclaredMadeForKids")
     public Boolean selfDeclaredMadeForKids;
+
     public VideoStatus withSelfDeclaredMadeForKids(Boolean selfDeclaredMadeForKids) {
         this.selfDeclaredMadeForKids = selfDeclaredMadeForKids;
         return this;
@@ -118,9 +127,11 @@ public class VideoStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadStatus")
     public VideoStatusUploadStatusEnum uploadStatus;
+
     public VideoStatus withUploadStatus(VideoStatusUploadStatusEnum uploadStatus) {
         this.uploadStatus = uploadStatus;
         return this;
     }
     
+    public VideoStatus(){}
 }

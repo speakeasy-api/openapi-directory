@@ -16,9 +16,13 @@ public class RegisterDomainRequest {
      */
     @JsonProperty("domain_name")
     public String domainName;
+
     public RegisterDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public RegisterDomainRequest(@JsonProperty("domain_name") String domainName) {
+        this.domainName = domainName;
+  }
 }

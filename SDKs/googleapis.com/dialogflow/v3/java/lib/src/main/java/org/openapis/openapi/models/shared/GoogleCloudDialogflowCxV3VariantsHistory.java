@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3VariantsHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDialogflowCxV3VariantsHistory withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3VariantsHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionVariants")
     public GoogleCloudDialogflowCxV3VersionVariants versionVariants;
+
     public GoogleCloudDialogflowCxV3VariantsHistory withVersionVariants(GoogleCloudDialogflowCxV3VersionVariants versionVariants) {
         this.versionVariants = versionVariants;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3VariantsHistory(){}
 }

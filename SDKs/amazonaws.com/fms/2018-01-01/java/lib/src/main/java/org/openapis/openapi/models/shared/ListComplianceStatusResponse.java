@@ -15,6 +15,7 @@ public class ListComplianceStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListComplianceStatusResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListComplianceStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyComplianceStatusList")
     public PolicyComplianceStatus[] policyComplianceStatusList;
+
     public ListComplianceStatusResponse withPolicyComplianceStatusList(PolicyComplianceStatus[] policyComplianceStatusList) {
         this.policyComplianceStatusList = policyComplianceStatusList;
         return this;
     }
     
+    public ListComplianceStatusResponse(){}
 }

@@ -18,9 +18,11 @@ public class InventorySourceGroupAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventorySourceGroupId")
     public String inventorySourceGroupId;
+
     public InventorySourceGroupAssignedTargetingOptionDetails withInventorySourceGroupId(String inventorySourceGroupId) {
         this.inventorySourceGroupId = inventorySourceGroupId;
         return this;
     }
     
+    public InventorySourceGroupAssignedTargetingOptionDetails(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsMetadataColumnsListResponse {
@@ -12,6 +13,7 @@ public class AnalyticsMetadataColumnsListResponse {
      */
     
     public org.openapis.openapi.models.shared.Columns columns;
+
     public AnalyticsMetadataColumnsListResponse withColumns(org.openapis.openapi.models.shared.Columns columns) {
         this.columns = columns;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsMetadataColumnsListResponse {
     
     
     public String contentType;
+
     public AnalyticsMetadataColumnsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsMetadataColumnsListResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsMetadataColumnsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsMetadataColumnsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsMetadataColumnsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsMetadataColumnsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

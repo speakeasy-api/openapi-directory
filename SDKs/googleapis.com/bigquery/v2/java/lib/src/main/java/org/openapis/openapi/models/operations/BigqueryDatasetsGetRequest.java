@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BigqueryDatasetsGetRequest {
@@ -12,6 +13,7 @@ public class BigqueryDatasetsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BigqueryDatasetsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class BigqueryDatasetsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
     public String datasetId;
+
     public BigqueryDatasetsGetRequest withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -32,6 +35,7 @@ public class BigqueryDatasetsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BigqueryDatasetsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class BigqueryDatasetsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BigqueryDatasetsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class BigqueryDatasetsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BigqueryDatasetsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +68,7 @@ public class BigqueryDatasetsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BigqueryDatasetsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -72,6 +79,7 @@ public class BigqueryDatasetsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public BigqueryDatasetsGetRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -82,6 +90,7 @@ public class BigqueryDatasetsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BigqueryDatasetsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,9 +101,14 @@ public class BigqueryDatasetsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public BigqueryDatasetsGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public BigqueryDatasetsGetRequest(@JsonProperty("datasetId") String datasetId, @JsonProperty("projectId") String projectId) {
+        this.datasetId = datasetId;
+        this.projectId = projectId;
+  }
 }

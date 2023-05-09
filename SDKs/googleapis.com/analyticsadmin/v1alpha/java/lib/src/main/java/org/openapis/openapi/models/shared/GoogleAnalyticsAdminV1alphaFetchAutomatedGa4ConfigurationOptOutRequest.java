@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutRequ
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public String property;
+
     public GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutRequest withProperty(String property) {
         this.property = property;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutRequest(){}
 }

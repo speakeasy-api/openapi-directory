@@ -148,4 +148,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StopDevEnvironmentSessionRe
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateDevEnvironmentResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/VerifySessionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

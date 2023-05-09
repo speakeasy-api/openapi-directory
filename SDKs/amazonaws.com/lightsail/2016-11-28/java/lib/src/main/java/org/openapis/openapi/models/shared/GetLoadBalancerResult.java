@@ -15,9 +15,11 @@ public class GetLoadBalancerResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancer")
     public LoadBalancer loadBalancer;
+
     public GetLoadBalancerResult withLoadBalancer(LoadBalancer loadBalancer) {
         this.loadBalancer = loadBalancer;
         return this;
     }
     
+    public GetLoadBalancerResult(){}
 }

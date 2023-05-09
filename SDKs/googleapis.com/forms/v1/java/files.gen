@@ -174,4 +174,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/WatchTarget.java
 lib/src/main/java/org/openapis/openapi/models/shared/CloudPubsubTopic.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateWatchRequestInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListWatchesResponse.java
+docs/sdk/README.md
+docs/forms/README.md
 USAGE.md

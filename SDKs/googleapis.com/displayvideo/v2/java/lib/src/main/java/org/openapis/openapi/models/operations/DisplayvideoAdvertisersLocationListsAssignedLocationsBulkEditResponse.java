@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditResponse {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditRespon
      */
     
     public org.openapis.openapi.models.shared.BulkEditAssignedLocationsResponse bulkEditAssignedLocationsResponse;
+
     public DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditResponse withBulkEditAssignedLocationsResponse(org.openapis.openapi.models.shared.BulkEditAssignedLocationsResponse bulkEditAssignedLocationsResponse) {
         this.bulkEditAssignedLocationsResponse = bulkEditAssignedLocationsResponse;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditRespon
     
     
     public String contentType;
+
     public DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditRespon
     
     
     public Integer statusCode;
+
     public DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditRespon
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

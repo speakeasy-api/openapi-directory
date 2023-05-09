@@ -17,6 +17,7 @@ public class CourseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverImageUrl")
     public String coverImageUrl;
+
     public CourseResponse withCoverImageUrl(String coverImageUrl) {
         this.coverImageUrl = coverImageUrl;
         return this;
@@ -27,6 +28,7 @@ public class CourseResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CourseResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class CourseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CourseResponse withId(String id) {
         this.id = id;
         return this;
@@ -43,6 +46,7 @@ public class CourseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public CourseResponseMetadata metadata;
+
     public CourseResponse withMetadata(CourseResponseMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -51,9 +55,11 @@ public class CourseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CourseResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CourseResponse(){}
 }

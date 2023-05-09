@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetEventSelectorsRequest {
     @JsonProperty("TrailName")
     public String trailName;
+
     public GetEventSelectorsRequest withTrailName(String trailName) {
         this.trailName = trailName;
         return this;
     }
     
+    public GetEventSelectorsRequest(@JsonProperty("TrailName") String trailName) {
+        this.trailName = trailName;
+  }
 }

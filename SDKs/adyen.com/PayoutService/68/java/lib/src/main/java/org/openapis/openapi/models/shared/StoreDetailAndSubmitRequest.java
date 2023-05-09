@@ -4,14 +4,11 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import java.time.OffsetDateTime;
-import org.openapis.openapi.utils.DateTimeDeserializer;
-import org.openapis.openapi.utils.DateTimeSerializer;
+import java.time.LocalDate;
 
 public class StoreDetailAndSubmitRequest {
     /**
@@ -20,6 +17,7 @@ public class StoreDetailAndSubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalData")
     public java.util.Map<String, String> additionalData;
+
     public StoreDetailAndSubmitRequest withAdditionalData(java.util.Map<String, String> additionalData) {
         this.additionalData = additionalData;
         return this;
@@ -27,6 +25,7 @@ public class StoreDetailAndSubmitRequest {
     
     @JsonProperty("amount")
     public Amount amount;
+
     public StoreDetailAndSubmitRequest withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -35,6 +34,7 @@ public class StoreDetailAndSubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank")
     public BankAccount bank;
+
     public StoreDetailAndSubmitRequest withBank(BankAccount bank) {
         this.bank = bank;
         return this;
@@ -43,6 +43,7 @@ public class StoreDetailAndSubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingAddress")
     public Address billingAddress;
+
     public StoreDetailAndSubmitRequest withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -51,6 +52,7 @@ public class StoreDetailAndSubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public Card card;
+
     public StoreDetailAndSubmitRequest withCard(Card card) {
         this.card = card;
         return this;
@@ -62,11 +64,11 @@ public class StoreDetailAndSubmitRequest {
      * For Paysafecard it must be the same as used when registering the Paysafecard account.
      * &gt; This field is mandatory for natural persons.
      */
-    @JsonSerialize(using = DateTimeSerializer.class)
-    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("dateOfBirth")
-    public OffsetDateTime dateOfBirth;
-    public StoreDetailAndSubmitRequest withDateOfBirth(OffsetDateTime dateOfBirth) {
+    public LocalDate dateOfBirth;
+
+    public StoreDetailAndSubmitRequest withDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
     }
@@ -76,6 +78,7 @@ public class StoreDetailAndSubmitRequest {
      */
     @JsonProperty("entityType")
     public StoreDetailAndSubmitRequestEntityTypeEnum entityType;
+
     public StoreDetailAndSubmitRequest withEntityType(StoreDetailAndSubmitRequestEntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -87,6 +90,7 @@ public class StoreDetailAndSubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fraudOffset")
     public Integer fraudOffset;
+
     public StoreDetailAndSubmitRequest withFraudOffset(Integer fraudOffset) {
         this.fraudOffset = fraudOffset;
         return this;
@@ -97,6 +101,7 @@ public class StoreDetailAndSubmitRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public StoreDetailAndSubmitRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -109,6 +114,7 @@ public class StoreDetailAndSubmitRequest {
      */
     @JsonProperty("nationality")
     public String nationality;
+
     public StoreDetailAndSubmitRequest withNationality(String nationality) {
         this.nationality = nationality;
         return this;
@@ -116,6 +122,7 @@ public class StoreDetailAndSubmitRequest {
     
     @JsonProperty("recurring")
     public Recurring recurring;
+
     public StoreDetailAndSubmitRequest withRecurring(Recurring recurring) {
         this.recurring = recurring;
         return this;
@@ -126,6 +133,7 @@ public class StoreDetailAndSubmitRequest {
      */
     @JsonProperty("reference")
     public String reference;
+
     public StoreDetailAndSubmitRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -139,6 +147,7 @@ public class StoreDetailAndSubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedBrand")
     public String selectedBrand;
+
     public StoreDetailAndSubmitRequest withSelectedBrand(String selectedBrand) {
         this.selectedBrand = selectedBrand;
         return this;
@@ -149,6 +158,7 @@ public class StoreDetailAndSubmitRequest {
      */
     @JsonProperty("shopperEmail")
     public String shopperEmail;
+
     public StoreDetailAndSubmitRequest withShopperEmail(String shopperEmail) {
         this.shopperEmail = shopperEmail;
         return this;
@@ -157,6 +167,7 @@ public class StoreDetailAndSubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperName")
     public Name shopperName;
+
     public StoreDetailAndSubmitRequest withShopperName(Name shopperName) {
         this.shopperName = shopperName;
         return this;
@@ -167,6 +178,7 @@ public class StoreDetailAndSubmitRequest {
      */
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public StoreDetailAndSubmitRequest withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
@@ -178,6 +190,7 @@ public class StoreDetailAndSubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperStatement")
     public String shopperStatement;
+
     public StoreDetailAndSubmitRequest withShopperStatement(String shopperStatement) {
         this.shopperStatement = shopperStatement;
         return this;
@@ -189,6 +202,7 @@ public class StoreDetailAndSubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("socialSecurityNumber")
     public String socialSecurityNumber;
+
     public StoreDetailAndSubmitRequest withSocialSecurityNumber(String socialSecurityNumber) {
         this.socialSecurityNumber = socialSecurityNumber;
         return this;
@@ -200,9 +214,21 @@ public class StoreDetailAndSubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephoneNumber")
     public String telephoneNumber;
+
     public StoreDetailAndSubmitRequest withTelephoneNumber(String telephoneNumber) {
         this.telephoneNumber = telephoneNumber;
         return this;
     }
     
+    public StoreDetailAndSubmitRequest(@JsonProperty("amount") Amount amount, @JsonProperty("dateOfBirth") LocalDate dateOfBirth, @JsonProperty("entityType") StoreDetailAndSubmitRequestEntityTypeEnum entityType, @JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("nationality") String nationality, @JsonProperty("recurring") Recurring recurring, @JsonProperty("reference") String reference, @JsonProperty("shopperEmail") String shopperEmail, @JsonProperty("shopperReference") String shopperReference) {
+        this.amount = amount;
+        this.dateOfBirth = dateOfBirth;
+        this.entityType = entityType;
+        this.merchantAccount = merchantAccount;
+        this.nationality = nationality;
+        this.recurring = recurring;
+        this.reference = reference;
+        this.shopperEmail = shopperEmail;
+        this.shopperReference = shopperReference;
+  }
 }

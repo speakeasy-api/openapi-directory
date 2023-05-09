@@ -12,6 +12,7 @@ public class PutRecommendationFeedbackRequestBody {
      */
     @JsonProperty("CodeReviewArn")
     public String codeReviewArn;
+
     public PutRecommendationFeedbackRequestBody withCodeReviewArn(String codeReviewArn) {
         this.codeReviewArn = codeReviewArn;
         return this;
@@ -22,6 +23,7 @@ public class PutRecommendationFeedbackRequestBody {
      */
     @JsonProperty("Reactions")
     public org.openapis.openapi.models.shared.ReactionEnum[] reactions;
+
     public PutRecommendationFeedbackRequestBody withReactions(org.openapis.openapi.models.shared.ReactionEnum[] reactions) {
         this.reactions = reactions;
         return this;
@@ -32,9 +34,15 @@ public class PutRecommendationFeedbackRequestBody {
      */
     @JsonProperty("RecommendationId")
     public String recommendationId;
+
     public PutRecommendationFeedbackRequestBody withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
     }
     
+    public PutRecommendationFeedbackRequestBody(@JsonProperty("CodeReviewArn") String codeReviewArn, @JsonProperty("Reactions") org.openapis.openapi.models.shared.ReactionEnum[] reactions, @JsonProperty("RecommendationId") String recommendationId) {
+        this.codeReviewArn = codeReviewArn;
+        this.reactions = reactions;
+        this.recommendationId = recommendationId;
+  }
 }

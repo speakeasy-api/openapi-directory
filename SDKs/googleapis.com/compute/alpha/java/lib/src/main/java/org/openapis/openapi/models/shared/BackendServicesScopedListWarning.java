@@ -18,6 +18,7 @@ public class BackendServicesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public BackendServicesScopedListWarningCodeEnum code;
+
     public BackendServicesScopedListWarning withCode(BackendServicesScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class BackendServicesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public BackendServicesScopedListWarningData[] data;
+
     public BackendServicesScopedListWarning withData(BackendServicesScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class BackendServicesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public BackendServicesScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public BackendServicesScopedListWarning(){}
 }

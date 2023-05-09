@@ -18,6 +18,7 @@ public class ListBankAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_accounts")
     public BankAccount[] bankAccounts;
+
     public ListBankAccountsResponse withBankAccounts(BankAccount[] bankAccounts) {
         this.bankAccounts = bankAccounts;
         return this;
@@ -33,6 +34,7 @@ public class ListBankAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public ListBankAccountsResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -44,9 +46,11 @@ public class ListBankAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListBankAccountsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public ListBankAccountsResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSystemInstanceResponse {
     
     public String contentType;
+
     public CreateSystemInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateSystemInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSystemInstanceResponse createSystemInstanceResponse;
+
     public CreateSystemInstanceResponse withCreateSystemInstanceResponse(org.openapis.openapi.models.shared.CreateSystemInstanceResponse createSystemInstanceResponse) {
         this.createSystemInstanceResponse = createSystemInstanceResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateSystemInstanceResponse {
      */
     
     public Object internalFailureException;
+
     public CreateSystemInstanceResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateSystemInstanceResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateSystemInstanceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateSystemInstanceResponse {
      */
     
     public Object limitExceededException;
+
     public CreateSystemInstanceResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateSystemInstanceResponse {
     
     
     public Integer statusCode;
+
     public CreateSystemInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateSystemInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSystemInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateSystemInstanceResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateSystemInstanceResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,9 +92,14 @@ public class CreateSystemInstanceResponse {
      */
     
     public Object throttlingException;
+
     public CreateSystemInstanceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateSystemInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

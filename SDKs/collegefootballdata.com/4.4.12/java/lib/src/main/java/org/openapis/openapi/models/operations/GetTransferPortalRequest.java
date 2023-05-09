@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransferPortalRequest {
@@ -12,9 +13,13 @@ public class GetTransferPortalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetTransferPortalRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetTransferPortalRequest(@JsonProperty("year") Long year) {
+        this.year = year;
+  }
 }

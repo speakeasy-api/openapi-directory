@@ -15,6 +15,7 @@ public class S3Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public S3Destination withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,6 +24,7 @@ public class S3Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public S3Destination withKey(String key) {
         this.key = key;
         return this;
@@ -31,9 +33,11 @@ public class S3Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataKey")
     public String metadataKey;
+
     public S3Destination withMetadataKey(String metadataKey) {
         this.metadataKey = metadataKey;
         return this;
     }
     
+    public S3Destination(){}
 }

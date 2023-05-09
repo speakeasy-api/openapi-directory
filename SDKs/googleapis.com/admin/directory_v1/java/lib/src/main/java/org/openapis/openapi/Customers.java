@@ -63,11 +63,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchCreatePrintServersResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchCreatePrintServersResponse() {{
+        org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchCreatePrintServersResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchCreatePrintServersResponse(contentType, httpRes.statusCode()) {{
             batchCreatePrintServersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,11 +109,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchDeletePrintServersResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchDeletePrintServersResponse() {{
+        org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchDeletePrintServersResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchDeletePrintServersResponse(contentType, httpRes.statusCode()) {{
             batchDeletePrintServersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,11 +155,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdminCustomersChromePrintServersCreateResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintServersCreateResponse() {{
+        org.openapis.openapi.models.operations.AdminCustomersChromePrintServersCreateResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintServersCreateResponse(contentType, httpRes.statusCode()) {{
             printServer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,11 +199,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdminCustomersChromePrintServersDeleteResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintServersDeleteResponse() {{
+        org.openapis.openapi.models.operations.AdminCustomersChromePrintServersDeleteResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintServersDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,11 +243,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdminCustomersChromePrintServersGetResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintServersGetResponse() {{
+        org.openapis.openapi.models.operations.AdminCustomersChromePrintServersGetResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintServersGetResponse(contentType, httpRes.statusCode()) {{
             printServer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -297,11 +287,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdminCustomersChromePrintServersListResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintServersListResponse() {{
+        org.openapis.openapi.models.operations.AdminCustomersChromePrintServersListResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintServersListResponse(contentType, httpRes.statusCode()) {{
             listPrintServersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,11 +333,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdminCustomersChromePrintServersPatchResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintServersPatchResponse() {{
+        org.openapis.openapi.models.operations.AdminCustomersChromePrintServersPatchResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintServersPatchResponse(contentType, httpRes.statusCode()) {{
             printServer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -393,11 +379,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchCreatePrintersResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchCreatePrintersResponse() {{
+        org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchCreatePrintersResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchCreatePrintersResponse(contentType, httpRes.statusCode()) {{
             batchCreatePrintersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -441,11 +425,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchDeletePrintersResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchDeletePrintersResponse() {{
+        org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchDeletePrintersResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchDeletePrintersResponse(contentType, httpRes.statusCode()) {{
             batchDeletePrintersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -489,11 +471,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdminCustomersChromePrintersCreateResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintersCreateResponse() {{
+        org.openapis.openapi.models.operations.AdminCustomersChromePrintersCreateResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintersCreateResponse(contentType, httpRes.statusCode()) {{
             printer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -535,11 +515,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdminCustomersChromePrintersListResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintersListResponse() {{
+        org.openapis.openapi.models.operations.AdminCustomersChromePrintersListResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintersListResponse(contentType, httpRes.statusCode()) {{
             listPrintersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -581,11 +559,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdminCustomersChromePrintersListPrinterModelsResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintersListPrinterModelsResponse() {{
+        org.openapis.openapi.models.operations.AdminCustomersChromePrintersListPrinterModelsResponse res = new org.openapis.openapi.models.operations.AdminCustomersChromePrintersListPrinterModelsResponse(contentType, httpRes.statusCode()) {{
             listPrinterModelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -627,11 +603,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryCustomersGetResponse res = new org.openapis.openapi.models.operations.DirectoryCustomersGetResponse() {{
+        org.openapis.openapi.models.operations.DirectoryCustomersGetResponse res = new org.openapis.openapi.models.operations.DirectoryCustomersGetResponse(contentType, httpRes.statusCode()) {{
             customer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -675,11 +649,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryCustomersPatchResponse res = new org.openapis.openapi.models.operations.DirectoryCustomersPatchResponse() {{
+        org.openapis.openapi.models.operations.DirectoryCustomersPatchResponse res = new org.openapis.openapi.models.operations.DirectoryCustomersPatchResponse(contentType, httpRes.statusCode()) {{
             customer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -723,11 +695,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryCustomersUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryCustomersUpdateResponse() {{
+        org.openapis.openapi.models.operations.DirectoryCustomersUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryCustomersUpdateResponse(contentType, httpRes.statusCode()) {{
             customer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

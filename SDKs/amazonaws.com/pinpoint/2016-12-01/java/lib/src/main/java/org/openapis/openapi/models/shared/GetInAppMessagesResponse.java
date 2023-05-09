@@ -15,9 +15,13 @@ public class GetInAppMessagesResponse {
      */
     @JsonProperty("InAppMessagesResponse")
     public InAppMessagesResponse inAppMessagesResponse;
+
     public GetInAppMessagesResponse withInAppMessagesResponse(InAppMessagesResponse inAppMessagesResponse) {
         this.inAppMessagesResponse = inAppMessagesResponse;
         return this;
     }
     
+    public GetInAppMessagesResponse(@JsonProperty("InAppMessagesResponse") InAppMessagesResponse inAppMessagesResponse) {
+        this.inAppMessagesResponse = inAppMessagesResponse;
+  }
 }

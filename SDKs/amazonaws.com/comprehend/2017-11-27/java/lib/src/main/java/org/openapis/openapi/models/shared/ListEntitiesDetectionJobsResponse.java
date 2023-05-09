@@ -15,6 +15,7 @@ public class ListEntitiesDetectionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntitiesDetectionJobPropertiesList")
     public EntitiesDetectionJobProperties[] entitiesDetectionJobPropertiesList;
+
     public ListEntitiesDetectionJobsResponse withEntitiesDetectionJobPropertiesList(EntitiesDetectionJobProperties[] entitiesDetectionJobPropertiesList) {
         this.entitiesDetectionJobPropertiesList = entitiesDetectionJobPropertiesList;
         return this;
@@ -23,9 +24,11 @@ public class ListEntitiesDetectionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEntitiesDetectionJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEntitiesDetectionJobsResponse(){}
 }

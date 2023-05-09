@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetUserSettingsRequest {
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public SetUserSettingsRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -19,9 +20,14 @@ public class SetUserSettingsRequest {
     
     @JsonProperty("MFAOptions")
     public MFAOptionType[] mfaOptions;
+
     public SetUserSettingsRequest withMFAOptions(MFAOptionType[] mfaOptions) {
         this.mfaOptions = mfaOptions;
         return this;
     }
     
+    public SetUserSettingsRequest(@JsonProperty("AccessToken") String accessToken, @JsonProperty("MFAOptions") MFAOptionType[] mfaOptions) {
+        this.accessToken = accessToken;
+        this.mfaOptions = mfaOptions;
+  }
 }

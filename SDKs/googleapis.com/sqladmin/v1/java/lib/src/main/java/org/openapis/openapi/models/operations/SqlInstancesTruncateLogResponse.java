@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SqlInstancesTruncateLogResponse {
     
     public String contentType;
+
     public SqlInstancesTruncateLogResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SqlInstancesTruncateLogResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public SqlInstancesTruncateLogResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class SqlInstancesTruncateLogResponse {
     
     
     public Integer statusCode;
+
     public SqlInstancesTruncateLogResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SqlInstancesTruncateLogResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SqlInstancesTruncateLogResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SqlInstancesTruncateLogResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

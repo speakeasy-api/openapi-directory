@@ -15,9 +15,11 @@ public class CreateSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaArn")
     public String schemaArn;
+
     public CreateSchemaResponse withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
     }
     
+    public CreateSchemaResponse(){}
 }

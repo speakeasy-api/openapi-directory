@@ -12,6 +12,7 @@ public class MarketingEventEmailSubscriber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactProperties")
     public java.util.Map<String, String> contactProperties;
+
     public MarketingEventEmailSubscriber withContactProperties(java.util.Map<String, String> contactProperties) {
         this.contactProperties = contactProperties;
         return this;
@@ -22,6 +23,7 @@ public class MarketingEventEmailSubscriber {
      */
     @JsonProperty("email")
     public String email;
+
     public MarketingEventEmailSubscriber withEmail(String email) {
         this.email = email;
         return this;
@@ -32,6 +34,7 @@ public class MarketingEventEmailSubscriber {
      */
     @JsonProperty("interactionDateTime")
     public Long interactionDateTime;
+
     public MarketingEventEmailSubscriber withInteractionDateTime(Long interactionDateTime) {
         this.interactionDateTime = interactionDateTime;
         return this;
@@ -40,9 +43,14 @@ public class MarketingEventEmailSubscriber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public MarketingEventEmailSubscriber withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
     }
     
+    public MarketingEventEmailSubscriber(@JsonProperty("email") String email, @JsonProperty("interactionDateTime") Long interactionDateTime) {
+        this.email = email;
+        this.interactionDateTime = interactionDateTime;
+  }
 }

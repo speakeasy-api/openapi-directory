@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetachElasticLoadBalancerResponse {
     
     public String contentType;
+
     public DetachElasticLoadBalancerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DetachElasticLoadBalancerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DetachElasticLoadBalancerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -26,6 +29,7 @@ public class DetachElasticLoadBalancerResponse {
     
     
     public Integer statusCode;
+
     public DetachElasticLoadBalancerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DetachElasticLoadBalancerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetachElasticLoadBalancerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DetachElasticLoadBalancerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

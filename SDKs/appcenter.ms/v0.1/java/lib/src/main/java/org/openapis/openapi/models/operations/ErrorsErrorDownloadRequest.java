@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsErrorDownloadRequest {
@@ -12,6 +13,7 @@ public class ErrorsErrorDownloadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ErrorsErrorDownloadRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class ErrorsErrorDownloadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorGroupId")
     public String errorGroupId;
+
     public ErrorsErrorDownloadRequest withErrorGroupId(String errorGroupId) {
         this.errorGroupId = errorGroupId;
         return this;
@@ -32,6 +35,7 @@ public class ErrorsErrorDownloadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorId")
     public String errorId;
+
     public ErrorsErrorDownloadRequest withErrorId(String errorId) {
         this.errorId = errorId;
         return this;
@@ -42,6 +46,7 @@ public class ErrorsErrorDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public ErrorsErrorDownloadFormatEnum format;
+
     public ErrorsErrorDownloadRequest withFormat(ErrorsErrorDownloadFormatEnum format) {
         this.format = format;
         return this;
@@ -52,9 +57,16 @@ public class ErrorsErrorDownloadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ErrorsErrorDownloadRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public ErrorsErrorDownloadRequest(@JsonProperty("app_name") String appName, @JsonProperty("errorGroupId") String errorGroupId, @JsonProperty("errorId") String errorId, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.errorGroupId = errorGroupId;
+        this.errorId = errorId;
+        this.ownerName = ownerName;
+  }
 }

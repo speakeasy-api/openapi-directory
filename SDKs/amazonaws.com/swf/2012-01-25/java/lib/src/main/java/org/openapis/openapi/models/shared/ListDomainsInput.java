@@ -12,6 +12,7 @@ public class ListDomainsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumPageSize")
     public Long maximumPageSize;
+
     public ListDomainsInput withMaximumPageSize(Long maximumPageSize) {
         this.maximumPageSize = maximumPageSize;
         return this;
@@ -20,6 +21,7 @@ public class ListDomainsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListDomainsInput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -27,6 +29,7 @@ public class ListDomainsInput {
     
     @JsonProperty("registrationStatus")
     public RegistrationStatusEnum registrationStatus;
+
     public ListDomainsInput withRegistrationStatus(RegistrationStatusEnum registrationStatus) {
         this.registrationStatus = registrationStatus;
         return this;
@@ -35,9 +38,13 @@ public class ListDomainsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reverseOrder")
     public Boolean reverseOrder;
+
     public ListDomainsInput withReverseOrder(Boolean reverseOrder) {
         this.reverseOrder = reverseOrder;
         return this;
     }
     
+    public ListDomainsInput(@JsonProperty("registrationStatus") RegistrationStatusEnum registrationStatus) {
+        this.registrationStatus = registrationStatus;
+  }
 }

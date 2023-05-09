@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaAccessFilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessFilter")
     public GoogleAnalyticsAdminV1betaAccessFilter accessFilter;
+
     public GoogleAnalyticsAdminV1betaAccessFilterExpression withAccessFilter(GoogleAnalyticsAdminV1betaAccessFilter accessFilter) {
         this.accessFilter = accessFilter;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1betaAccessFilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("andGroup")
     public GoogleAnalyticsAdminV1betaAccessFilterExpressionList andGroup;
+
     public GoogleAnalyticsAdminV1betaAccessFilterExpression withAndGroup(GoogleAnalyticsAdminV1betaAccessFilterExpressionList andGroup) {
         this.andGroup = andGroup;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1betaAccessFilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notExpression")
     public GoogleAnalyticsAdminV1betaAccessFilterExpression notExpression;
+
     public GoogleAnalyticsAdminV1betaAccessFilterExpression withNotExpression(GoogleAnalyticsAdminV1betaAccessFilterExpression notExpression) {
         this.notExpression = notExpression;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAnalyticsAdminV1betaAccessFilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orGroup")
     public GoogleAnalyticsAdminV1betaAccessFilterExpressionList orGroup;
+
     public GoogleAnalyticsAdminV1betaAccessFilterExpression withOrGroup(GoogleAnalyticsAdminV1betaAccessFilterExpressionList orGroup) {
         this.orGroup = orGroup;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaAccessFilterExpression(){}
 }

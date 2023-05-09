@@ -15,6 +15,7 @@ public class VirtualNodeRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public VirtualNodeRef withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class VirtualNodeRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meshName")
     public String meshName;
+
     public VirtualNodeRef withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -31,9 +33,11 @@ public class VirtualNodeRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualNodeName")
     public String virtualNodeName;
+
     public VirtualNodeRef withVirtualNodeName(String virtualNodeName) {
         this.virtualNodeName = virtualNodeName;
         return this;
     }
     
+    public VirtualNodeRef(){}
 }

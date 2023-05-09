@@ -15,9 +15,11 @@ public class BatchUpdatePartitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public BatchUpdatePartitionFailureEntry[] errors;
+
     public BatchUpdatePartitionResponse withErrors(BatchUpdatePartitionFailureEntry[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchUpdatePartitionResponse(){}
 }

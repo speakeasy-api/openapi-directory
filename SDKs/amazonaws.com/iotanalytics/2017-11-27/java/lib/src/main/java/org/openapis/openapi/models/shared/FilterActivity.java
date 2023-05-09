@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FilterActivity {
     @JsonProperty("filter")
     public String filter;
+
     public FilterActivity withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -21,6 +22,7 @@ public class FilterActivity {
     
     @JsonProperty("name")
     public String name;
+
     public FilterActivity withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class FilterActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public FilterActivity withNext(String next) {
         this.next = next;
         return this;
     }
     
+    public FilterActivity(@JsonProperty("filter") String filter, @JsonProperty("name") String name) {
+        this.filter = filter;
+        this.name = name;
+  }
 }

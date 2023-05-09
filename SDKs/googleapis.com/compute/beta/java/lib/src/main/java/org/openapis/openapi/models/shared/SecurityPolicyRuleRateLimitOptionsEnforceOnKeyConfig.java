@@ -15,6 +15,7 @@ public class SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforceOnKeyName")
     public String enforceOnKeyName;
+
     public SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig withEnforceOnKeyName(String enforceOnKeyName) {
         this.enforceOnKeyName = enforceOnKeyName;
         return this;
@@ -26,9 +27,11 @@ public class SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforceOnKeyType")
     public SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfigEnforceOnKeyTypeEnum enforceOnKeyType;
+
     public SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig withEnforceOnKeyType(SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfigEnforceOnKeyTypeEnum enforceOnKeyType) {
         this.enforceOnKeyType = enforceOnKeyType;
         return this;
     }
     
+    public SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig(){}
 }

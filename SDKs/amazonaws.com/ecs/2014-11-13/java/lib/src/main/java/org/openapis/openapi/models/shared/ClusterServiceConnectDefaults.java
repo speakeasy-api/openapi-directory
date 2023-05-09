@@ -15,9 +15,11 @@ public class ClusterServiceConnectDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public String namespace;
+
     public ClusterServiceConnectDefaults withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public ClusterServiceConnectDefaults(){}
 }

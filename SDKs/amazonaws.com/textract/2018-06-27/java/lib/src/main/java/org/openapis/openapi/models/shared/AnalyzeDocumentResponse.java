@@ -15,6 +15,7 @@ public class AnalyzeDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyzeDocumentModelVersion")
     public String analyzeDocumentModelVersion;
+
     public AnalyzeDocumentResponse withAnalyzeDocumentModelVersion(String analyzeDocumentModelVersion) {
         this.analyzeDocumentModelVersion = analyzeDocumentModelVersion;
         return this;
@@ -23,6 +24,7 @@ public class AnalyzeDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blocks")
     public Block[] blocks;
+
     public AnalyzeDocumentResponse withBlocks(Block[] blocks) {
         this.blocks = blocks;
         return this;
@@ -31,6 +33,7 @@ public class AnalyzeDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentMetadata")
     public DocumentMetadata documentMetadata;
+
     public AnalyzeDocumentResponse withDocumentMetadata(DocumentMetadata documentMetadata) {
         this.documentMetadata = documentMetadata;
         return this;
@@ -39,9 +42,11 @@ public class AnalyzeDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanLoopActivationOutput")
     public HumanLoopActivationOutput humanLoopActivationOutput;
+
     public AnalyzeDocumentResponse withHumanLoopActivationOutput(HumanLoopActivationOutput humanLoopActivationOutput) {
         this.humanLoopActivationOutput = humanLoopActivationOutput;
         return this;
     }
     
+    public AnalyzeDocumentResponse(){}
 }

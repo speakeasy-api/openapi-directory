@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class MoveByoipCidrToIpamResult {
     
     public MoveByoipCidrToIpamResultByoipCidr byoipCidr;
+
     public MoveByoipCidrToIpamResult withByoipCidr(MoveByoipCidrToIpamResultByoipCidr byoipCidr) {
         this.byoipCidr = byoipCidr;
         return this;
     }
     
+    public MoveByoipCidrToIpamResult(){}
 }

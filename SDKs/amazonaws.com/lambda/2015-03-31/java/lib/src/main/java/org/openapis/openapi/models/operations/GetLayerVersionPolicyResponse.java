@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLayerVersionPolicyResponse {
     
     public String contentType;
+
     public GetLayerVersionPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetLayerVersionPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLayerVersionPolicyResponse getLayerVersionPolicyResponse;
+
     public GetLayerVersionPolicyResponse withGetLayerVersionPolicyResponse(org.openapis.openapi.models.shared.GetLayerVersionPolicyResponse getLayerVersionPolicyResponse) {
         this.getLayerVersionPolicyResponse = getLayerVersionPolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetLayerVersionPolicyResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetLayerVersionPolicyResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class GetLayerVersionPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetLayerVersionPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class GetLayerVersionPolicyResponse {
      */
     
     public Object serviceException;
+
     public GetLayerVersionPolicyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -56,6 +62,7 @@ public class GetLayerVersionPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetLayerVersionPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetLayerVersionPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLayerVersionPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetLayerVersionPolicyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetLayerVersionPolicyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetLayerVersionPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

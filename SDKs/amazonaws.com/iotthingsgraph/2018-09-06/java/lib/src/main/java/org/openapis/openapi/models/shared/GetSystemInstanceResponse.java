@@ -15,9 +15,11 @@ public class GetSystemInstanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public SystemInstanceDescription description;
+
     public GetSystemInstanceResponse withDescription(SystemInstanceDescription description) {
         this.description = description;
         return this;
     }
     
+    public GetSystemInstanceResponse(){}
 }

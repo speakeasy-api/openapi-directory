@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetsuggestionsRequest {
@@ -12,6 +13,7 @@ public class GetsuggestionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetsuggestionsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetsuggestionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetsuggestionsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetsuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_from")
     public Integer from;
+
     public GetsuggestionsRequest withFrom(Integer from) {
         this.from = from;
         return this;
@@ -42,6 +46,7 @@ public class GetsuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_to")
     public Integer to;
+
     public GetsuggestionsRequest withTo(Integer to) {
         this.to = to;
         return this;
@@ -52,6 +57,7 @@ public class GetsuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public GetsuggestionsRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -62,6 +68,7 @@ public class GetsuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hasmapping")
     public String hasmapping;
+
     public GetsuggestionsRequest withHasmapping(String hasmapping) {
         this.hasmapping = hasmapping;
         return this;
@@ -72,6 +79,7 @@ public class GetsuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=matcherid")
     public String matcherid;
+
     public GetsuggestionsRequest withMatcherid(String matcherid) {
         this.matcherid = matcherid;
         return this;
@@ -82,6 +90,7 @@ public class GetsuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetsuggestionsRequest withQ(String q) {
         this.q = q;
         return this;
@@ -92,6 +101,7 @@ public class GetsuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seller")
     public String seller;
+
     public GetsuggestionsRequest withSeller(String seller) {
         this.seller = seller;
         return this;
@@ -102,6 +112,7 @@ public class GetsuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public GetsuggestionsRequest withStatus(String status) {
         this.status = status;
         return this;
@@ -112,9 +123,15 @@ public class GetsuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public GetsuggestionsRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetsuggestionsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("accountName") String accountName) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.accountName = accountName;
+  }
 }

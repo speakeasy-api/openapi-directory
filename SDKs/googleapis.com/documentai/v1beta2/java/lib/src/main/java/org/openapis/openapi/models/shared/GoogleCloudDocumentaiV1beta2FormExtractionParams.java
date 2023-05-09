@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2FormExtractionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public GoogleCloudDocumentaiV1beta2FormExtractionParams withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta2FormExtractionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyValuePairHints")
     public GoogleCloudDocumentaiV1beta2KeyValuePairHint[] keyValuePairHints;
+
     public GoogleCloudDocumentaiV1beta2FormExtractionParams withKeyValuePairHints(GoogleCloudDocumentaiV1beta2KeyValuePairHint[] keyValuePairHints) {
         this.keyValuePairHints = keyValuePairHints;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDocumentaiV1beta2FormExtractionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelVersion")
     public String modelVersion;
+
     public GoogleCloudDocumentaiV1beta2FormExtractionParams withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2FormExtractionParams(){}
 }

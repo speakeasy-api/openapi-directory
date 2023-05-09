@@ -18,6 +18,7 @@ public class TeamMemberAssignedLocations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignment_type")
     public String assignmentType;
+
     public TeamMemberAssignedLocations withAssignmentType(String assignmentType) {
         this.assignmentType = assignmentType;
         return this;
@@ -29,9 +30,11 @@ public class TeamMemberAssignedLocations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_ids")
     public String[] locationIds;
+
     public TeamMemberAssignedLocations withLocationIds(String[] locationIds) {
         this.locationIds = locationIds;
         return this;
     }
     
+    public TeamMemberAssignedLocations(){}
 }

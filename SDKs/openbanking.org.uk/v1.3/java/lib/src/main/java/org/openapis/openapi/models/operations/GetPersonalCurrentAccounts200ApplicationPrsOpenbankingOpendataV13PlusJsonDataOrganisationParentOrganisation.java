@@ -18,6 +18,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BIC")
     public String bic;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation withBic(String bic) {
         this.bic = bic;
         return this;
@@ -29,6 +30,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LEI")
     public String lei;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation withLei(String lei) {
         this.lei = lei;
         return this;
@@ -39,9 +41,13 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("OrganisationName")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName organisationName;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation withOrganisationName(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName organisationName) {
         this.organisationName = organisationName;
         return this;
     }
     
+    public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation(@JsonProperty("OrganisationName") GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName organisationName) {
+        this.organisationName = organisationName;
+  }
 }

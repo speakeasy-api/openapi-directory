@@ -15,6 +15,7 @@ public class LabelingJobInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAttributes")
     public LabelingJobDataAttributes dataAttributes;
+
     public LabelingJobInputConfig withDataAttributes(LabelingJobDataAttributes dataAttributes) {
         this.dataAttributes = dataAttributes;
         return this;
@@ -22,9 +23,13 @@ public class LabelingJobInputConfig {
     
     @JsonProperty("DataSource")
     public LabelingJobDataSource dataSource;
+
     public LabelingJobInputConfig withDataSource(LabelingJobDataSource dataSource) {
         this.dataSource = dataSource;
         return this;
     }
     
+    public LabelingJobInputConfig(@JsonProperty("DataSource") LabelingJobDataSource dataSource) {
+        this.dataSource = dataSource;
+  }
 }

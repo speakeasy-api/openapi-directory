@@ -55,10 +55,8 @@ public class Occupants {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOccupantsAddressesOutputFormatResponse res = new org.openapis.openapi.models.operations.GetOccupantsAddressesOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetOccupantsAddressesOutputFormatResponse res = new org.openapis.openapi.models.operations.GetOccupantsAddressesOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,10 +93,8 @@ public class Occupants {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOccupantsNearOutputFormatResponse res = new org.openapis.openapi.models.operations.GetOccupantsNearOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetOccupantsNearOutputFormatResponse res = new org.openapis.openapi.models.operations.GetOccupantsNearOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,10 +131,8 @@ public class Occupants {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOccupantsNearestOutputFormatResponse res = new org.openapis.openapi.models.operations.GetOccupantsNearestOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetOccupantsNearestOutputFormatResponse res = new org.openapis.openapi.models.operations.GetOccupantsNearestOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,10 +169,8 @@ public class Occupants {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOccupantsWithinOutputFormatResponse res = new org.openapis.openapi.models.operations.GetOccupantsWithinOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetOccupantsWithinOutputFormatResponse res = new org.openapis.openapi.models.operations.GetOccupantsWithinOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -215,10 +207,8 @@ public class Occupants {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOccupantsOccupantIDOutputFormatResponse res = new org.openapis.openapi.models.operations.GetOccupantsOccupantIDOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetOccupantsOccupantIDOutputFormatResponse res = new org.openapis.openapi.models.operations.GetOccupantsOccupantIDOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

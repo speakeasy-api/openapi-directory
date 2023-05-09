@@ -17,6 +17,7 @@ public class MessageStatusViber {
      */
     @JsonProperty("channel")
     public MessageStatusViberChannelEnum channel;
+
     public MessageStatusViber withChannel(MessageStatusViberChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -28,6 +29,7 @@ public class MessageStatusViber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public MessageStatusViber withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -39,6 +41,7 @@ public class MessageStatusViber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public MessageStatusViberError error;
+
     public MessageStatusViber withError(MessageStatusViberError error) {
         this.error = error;
         return this;
@@ -50,6 +53,7 @@ public class MessageStatusViber {
      */
     @JsonProperty("from")
     public String from;
+
     public MessageStatusViber withFrom(String from) {
         this.from = from;
         return this;
@@ -60,6 +64,7 @@ public class MessageStatusViber {
      */
     @JsonProperty("message_uuid")
     public String messageUuid;
+
     public MessageStatusViber withMessageUuid(String messageUuid) {
         this.messageUuid = messageUuid;
         return this;
@@ -67,6 +72,7 @@ public class MessageStatusViber {
     
     @JsonProperty("status")
     public MessageStatusViberStatusEnum status;
+
     public MessageStatusViber withStatus(MessageStatusViberStatusEnum status) {
         this.status = status;
         return this;
@@ -77,6 +83,7 @@ public class MessageStatusViber {
      */
     @JsonProperty("timestamp")
     public String timestamp;
+
     public MessageStatusViber withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -88,6 +95,7 @@ public class MessageStatusViber {
      */
     @JsonProperty("to")
     public String to;
+
     public MessageStatusViber withTo(String to) {
         this.to = to;
         return this;
@@ -96,9 +104,18 @@ public class MessageStatusViber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public MessageStatusViberUsage usage;
+
     public MessageStatusViber withUsage(MessageStatusViberUsage usage) {
         this.usage = usage;
         return this;
     }
     
+    public MessageStatusViber(@JsonProperty("channel") MessageStatusViberChannelEnum channel, @JsonProperty("from") String from, @JsonProperty("message_uuid") String messageUuid, @JsonProperty("status") MessageStatusViberStatusEnum status, @JsonProperty("timestamp") String timestamp, @JsonProperty("to") String to) {
+        this.channel = channel;
+        this.from = from;
+        this.messageUuid = messageUuid;
+        this.status = status;
+        this.timestamp = timestamp;
+        this.to = to;
+  }
 }

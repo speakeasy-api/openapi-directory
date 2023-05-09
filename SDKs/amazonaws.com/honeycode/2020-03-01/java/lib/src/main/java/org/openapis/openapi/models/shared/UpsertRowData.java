@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpsertRowData {
     @JsonProperty("batchItemId")
     public String batchItemId;
+
     public UpsertRowData withBatchItemId(String batchItemId) {
         this.batchItemId = batchItemId;
         return this;
@@ -19,6 +20,7 @@ public class UpsertRowData {
     
     @JsonProperty("cellsToUpdate")
     public java.util.Map<String, CellInput> cellsToUpdate;
+
     public UpsertRowData withCellsToUpdate(java.util.Map<String, CellInput> cellsToUpdate) {
         this.cellsToUpdate = cellsToUpdate;
         return this;
@@ -26,9 +28,15 @@ public class UpsertRowData {
     
     @JsonProperty("filter")
     public Filter filter;
+
     public UpsertRowData withFilter(Filter filter) {
         this.filter = filter;
         return this;
     }
     
+    public UpsertRowData(@JsonProperty("batchItemId") String batchItemId, @JsonProperty("cellsToUpdate") java.util.Map<String, CellInput> cellsToUpdate, @JsonProperty("filter") Filter filter) {
+        this.batchItemId = batchItemId;
+        this.cellsToUpdate = cellsToUpdate;
+        this.filter = filter;
+  }
 }

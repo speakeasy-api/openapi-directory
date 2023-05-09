@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeleteSecurity;
 import org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeleteRequest;
 import org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeleteResponse;
+import org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeleteSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,11 +28,10 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GamesConfigurationAchievementConfigurationsDeleteRequest req = new GamesConfigurationAchievementConfigurationsDeleteRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                achievementId = "distinctio";
-                alt = "proto";
+            GamesConfigurationAchievementConfigurationsDeleteRequest req = new GamesConfigurationAchievementConfigurationsDeleteRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
                 callback = "unde";
                 fields = "nulla";
                 key = "corrupti";
@@ -42,9 +40,9 @@ public class Application {
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
-            GamesConfigurationAchievementConfigurationsDeleteResponse res = sdk.achievementConfigurations.gamesConfigurationAchievementConfigurationsDelete(req, new GamesConfigurationAchievementConfigurationsDeleteSecurity() {{
+            GamesConfigurationAchievementConfigurationsDeleteResponse res = sdk.achievementConfigurations.gamesConfigurationAchievementConfigurationsDelete(req, new GamesConfigurationAchievementConfigurationsDeleteSecurity("suscipit", "iure") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
@@ -55,6 +53,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -62,21 +62,21 @@ public class Application {
 ## Available Resources and Operations
 
 
-### achievementConfigurations
+### [achievementConfigurations](docs/achievementconfigurations/README.md)
 
-* `gamesConfigurationAchievementConfigurationsDelete` - Delete the achievement configuration with the given ID.
-* `gamesConfigurationAchievementConfigurationsGet` - Retrieves the metadata of the achievement configuration with the given ID.
-* `gamesConfigurationAchievementConfigurationsInsert` - Insert a new achievement configuration in this application.
-* `gamesConfigurationAchievementConfigurationsList` - Returns a list of the achievement configurations in this application.
-* `gamesConfigurationAchievementConfigurationsUpdate` - Update the metadata of the achievement configuration with the given ID.
+* [gamesConfigurationAchievementConfigurationsDelete](docs/achievementconfigurations/README.md#gamesconfigurationachievementconfigurationsdelete) - Delete the achievement configuration with the given ID.
+* [gamesConfigurationAchievementConfigurationsGet](docs/achievementconfigurations/README.md#gamesconfigurationachievementconfigurationsget) - Retrieves the metadata of the achievement configuration with the given ID.
+* [gamesConfigurationAchievementConfigurationsInsert](docs/achievementconfigurations/README.md#gamesconfigurationachievementconfigurationsinsert) - Insert a new achievement configuration in this application.
+* [gamesConfigurationAchievementConfigurationsList](docs/achievementconfigurations/README.md#gamesconfigurationachievementconfigurationslist) - Returns a list of the achievement configurations in this application.
+* [gamesConfigurationAchievementConfigurationsUpdate](docs/achievementconfigurations/README.md#gamesconfigurationachievementconfigurationsupdate) - Update the metadata of the achievement configuration with the given ID.
 
-### leaderboardConfigurations
+### [leaderboardConfigurations](docs/leaderboardconfigurations/README.md)
 
-* `gamesConfigurationLeaderboardConfigurationsDelete` - Delete the leaderboard configuration with the given ID.
-* `gamesConfigurationLeaderboardConfigurationsGet` - Retrieves the metadata of the leaderboard configuration with the given ID.
-* `gamesConfigurationLeaderboardConfigurationsInsert` - Insert a new leaderboard configuration in this application.
-* `gamesConfigurationLeaderboardConfigurationsList` - Returns a list of the leaderboard configurations in this application.
-* `gamesConfigurationLeaderboardConfigurationsUpdate` - Update the metadata of the leaderboard configuration with the given ID.
+* [gamesConfigurationLeaderboardConfigurationsDelete](docs/leaderboardconfigurations/README.md#gamesconfigurationleaderboardconfigurationsdelete) - Delete the leaderboard configuration with the given ID.
+* [gamesConfigurationLeaderboardConfigurationsGet](docs/leaderboardconfigurations/README.md#gamesconfigurationleaderboardconfigurationsget) - Retrieves the metadata of the leaderboard configuration with the given ID.
+* [gamesConfigurationLeaderboardConfigurationsInsert](docs/leaderboardconfigurations/README.md#gamesconfigurationleaderboardconfigurationsinsert) - Insert a new leaderboard configuration in this application.
+* [gamesConfigurationLeaderboardConfigurationsList](docs/leaderboardconfigurations/README.md#gamesconfigurationleaderboardconfigurationslist) - Returns a list of the leaderboard configurations in this application.
+* [gamesConfigurationLeaderboardConfigurationsUpdate](docs/leaderboardconfigurations/README.md#gamesconfigurationleaderboardconfigurationsupdate) - Update the metadata of the leaderboard configuration with the given ID.
 <!-- End SDK Available Operations -->
 
 ### Maturity

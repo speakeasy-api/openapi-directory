@@ -12,6 +12,7 @@ public class ActionsCreateOrUpdateEnvironmentSecretRequestBody {
      */
     @JsonProperty("encrypted_value")
     public String encryptedValue;
+
     public ActionsCreateOrUpdateEnvironmentSecretRequestBody withEncryptedValue(String encryptedValue) {
         this.encryptedValue = encryptedValue;
         return this;
@@ -22,9 +23,14 @@ public class ActionsCreateOrUpdateEnvironmentSecretRequestBody {
      */
     @JsonProperty("key_id")
     public String keyId;
+
     public ActionsCreateOrUpdateEnvironmentSecretRequestBody withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public ActionsCreateOrUpdateEnvironmentSecretRequestBody(@JsonProperty("encrypted_value") String encryptedValue, @JsonProperty("key_id") String keyId) {
+        this.encryptedValue = encryptedValue;
+        this.keyId = keyId;
+  }
 }

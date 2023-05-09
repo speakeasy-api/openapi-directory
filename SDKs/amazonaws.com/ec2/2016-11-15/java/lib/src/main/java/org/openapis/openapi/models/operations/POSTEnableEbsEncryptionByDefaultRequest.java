@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTEnableEbsEncryptionByDefaultRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTEnableEbsEncryptionByDefaultActionEnum action;
+
     public POSTEnableEbsEncryptionByDefaultRequest withAction(POSTEnableEbsEncryptionByDefaultActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTEnableEbsEncryptionByDefaultRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTEnableEbsEncryptionByDefaultRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTEnableEbsEncryptionByDefaultRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTEnableEbsEncryptionByDefaultVersionEnum version;
+
     public POSTEnableEbsEncryptionByDefaultRequest withVersion(POSTEnableEbsEncryptionByDefaultVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTEnableEbsEncryptionByDefaultRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTEnableEbsEncryptionByDefaultRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTEnableEbsEncryptionByDefaultRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTEnableEbsEncryptionByDefaultRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTEnableEbsEncryptionByDefaultRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTEnableEbsEncryptionByDefaultRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTEnableEbsEncryptionByDefaultRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTEnableEbsEncryptionByDefaultRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTEnableEbsEncryptionByDefaultRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTEnableEbsEncryptionByDefaultRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTEnableEbsEncryptionByDefaultRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTEnableEbsEncryptionByDefaultRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTEnableEbsEncryptionByDefaultRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTEnableEbsEncryptionByDefaultRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTEnableEbsEncryptionByDefaultRequest(@JsonProperty("Action") POSTEnableEbsEncryptionByDefaultActionEnum action, @JsonProperty("Version") POSTEnableEbsEncryptionByDefaultVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

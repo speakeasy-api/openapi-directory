@@ -15,6 +15,7 @@ public class UpdateBotAliasRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botAliasLocaleSettings")
     public java.util.Map<String, org.openapis.openapi.models.shared.BotAliasLocaleSettings> botAliasLocaleSettings;
+
     public UpdateBotAliasRequestBody withBotAliasLocaleSettings(java.util.Map<String, org.openapis.openapi.models.shared.BotAliasLocaleSettings> botAliasLocaleSettings) {
         this.botAliasLocaleSettings = botAliasLocaleSettings;
         return this;
@@ -25,6 +26,7 @@ public class UpdateBotAliasRequestBody {
      */
     @JsonProperty("botAliasName")
     public String botAliasName;
+
     public UpdateBotAliasRequestBody withBotAliasName(String botAliasName) {
         this.botAliasName = botAliasName;
         return this;
@@ -36,6 +38,7 @@ public class UpdateBotAliasRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public UpdateBotAliasRequestBody withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -47,6 +50,7 @@ public class UpdateBotAliasRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationLogSettings")
     public UpdateBotAliasRequestBodyConversationLogSettings conversationLogSettings;
+
     public UpdateBotAliasRequestBody withConversationLogSettings(UpdateBotAliasRequestBodyConversationLogSettings conversationLogSettings) {
         this.conversationLogSettings = conversationLogSettings;
         return this;
@@ -58,6 +62,7 @@ public class UpdateBotAliasRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateBotAliasRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -69,9 +74,13 @@ public class UpdateBotAliasRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentimentAnalysisSettings")
     public UpdateBotAliasRequestBodySentimentAnalysisSettings sentimentAnalysisSettings;
+
     public UpdateBotAliasRequestBody withSentimentAnalysisSettings(UpdateBotAliasRequestBodySentimentAnalysisSettings sentimentAnalysisSettings) {
         this.sentimentAnalysisSettings = sentimentAnalysisSettings;
         return this;
     }
     
+    public UpdateBotAliasRequestBody(@JsonProperty("botAliasName") String botAliasName) {
+        this.botAliasName = botAliasName;
+  }
 }

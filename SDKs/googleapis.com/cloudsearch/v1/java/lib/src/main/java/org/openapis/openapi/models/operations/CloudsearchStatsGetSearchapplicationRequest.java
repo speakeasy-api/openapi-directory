@@ -12,6 +12,7 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudsearchStatsGetSearchapplicationRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudsearchStatsGetSearchapplicationRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudsearchStatsGetSearchapplicationRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudsearchStatsGetSearchapplicationRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.day")
     public Long endDateDay;
+
     public CloudsearchStatsGetSearchapplicationRequest withEndDateDay(Long endDateDay) {
         this.endDateDay = endDateDay;
         return this;
@@ -62,6 +67,7 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.month")
     public Long endDateMonth;
+
     public CloudsearchStatsGetSearchapplicationRequest withEndDateMonth(Long endDateMonth) {
         this.endDateMonth = endDateMonth;
         return this;
@@ -72,6 +78,7 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.year")
     public Long endDateYear;
+
     public CloudsearchStatsGetSearchapplicationRequest withEndDateYear(Long endDateYear) {
         this.endDateYear = endDateYear;
         return this;
@@ -82,6 +89,7 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudsearchStatsGetSearchapplicationRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -92,6 +100,7 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudsearchStatsGetSearchapplicationRequest withKey(String key) {
         this.key = key;
         return this;
@@ -102,6 +111,7 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudsearchStatsGetSearchapplicationRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +122,7 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudsearchStatsGetSearchapplicationRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +133,7 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudsearchStatsGetSearchapplicationRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +144,7 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.day")
     public Long startDateDay;
+
     public CloudsearchStatsGetSearchapplicationRequest withStartDateDay(Long startDateDay) {
         this.startDateDay = startDateDay;
         return this;
@@ -142,6 +155,7 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.month")
     public Long startDateMonth;
+
     public CloudsearchStatsGetSearchapplicationRequest withStartDateMonth(Long startDateMonth) {
         this.startDateMonth = startDateMonth;
         return this;
@@ -152,6 +166,7 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.year")
     public Long startDateYear;
+
     public CloudsearchStatsGetSearchapplicationRequest withStartDateYear(Long startDateYear) {
         this.startDateYear = startDateYear;
         return this;
@@ -162,6 +177,7 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudsearchStatsGetSearchapplicationRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,9 +188,11 @@ public class CloudsearchStatsGetSearchapplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudsearchStatsGetSearchapplicationRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CloudsearchStatsGetSearchapplicationRequest(){}
 }

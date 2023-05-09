@@ -15,6 +15,7 @@ public class S3JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketCriteria")
     public S3BucketCriteriaForJob bucketCriteria;
+
     public S3JobDefinition withBucketCriteria(S3BucketCriteriaForJob bucketCriteria) {
         this.bucketCriteria = bucketCriteria;
         return this;
@@ -23,6 +24,7 @@ public class S3JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketDefinitions")
     public S3BucketDefinitionForJob[] bucketDefinitions;
+
     public S3JobDefinition withBucketDefinitions(S3BucketDefinitionForJob[] bucketDefinitions) {
         this.bucketDefinitions = bucketDefinitions;
         return this;
@@ -31,9 +33,11 @@ public class S3JobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scoping")
     public Scoping scoping;
+
     public S3JobDefinition withScoping(Scoping scoping) {
         this.scoping = scoping;
         return this;
     }
     
+    public S3JobDefinition(){}
 }

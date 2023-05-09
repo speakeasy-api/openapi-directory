@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrganizationSecurityIntrusionSettingsResponse {
     
     public String contentType;
+
     public GetOrganizationSecurityIntrusionSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetOrganizationSecurityIntrusionSettingsResponse {
     
     
     public Integer statusCode;
+
     public GetOrganizationSecurityIntrusionSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetOrganizationSecurityIntrusionSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrganizationSecurityIntrusionSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetOrganizationSecurityIntrusionSettingsResponse {
      */
     
     public java.util.Map<String, Object> getOrganizationSecurityIntrusionSettings200ApplicationJSONObject;
+
     public GetOrganizationSecurityIntrusionSettingsResponse withGetOrganizationSecurityIntrusionSettings200ApplicationJSONObject(java.util.Map<String, Object> getOrganizationSecurityIntrusionSettings200ApplicationJSONObject) {
         this.getOrganizationSecurityIntrusionSettings200ApplicationJSONObject = getOrganizationSecurityIntrusionSettings200ApplicationJSONObject;
         return this;
     }
     
+    public GetOrganizationSecurityIntrusionSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

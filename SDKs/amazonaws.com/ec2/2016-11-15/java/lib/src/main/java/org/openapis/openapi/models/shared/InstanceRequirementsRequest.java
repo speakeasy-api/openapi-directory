@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * InstanceRequirementsRequest - &lt;p&gt;The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify instance types with these attributes.&lt;/p&gt; &lt;p&gt;When you specify multiple attributes, you get instance types that satisfy all of the specified attributes. If you specify multiple values for an attribute, you get instance types that satisfy any of the specified values.&lt;/p&gt; &lt;p&gt;To limit the list of instance types from which Amazon EC2 can identify matching instance types, you can use one of the following parameters, but not both in the same request:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AllowedInstanceTypes&lt;/code&gt; - The instance types to include in the list. All other instance types are ignored, even if they match your specified attributes.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ExcludedInstanceTypes&lt;/code&gt; - The instance types to exclude from the list, even if they match your specified attributes.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;note&gt; &lt;p&gt;You must specify &lt;code&gt;VCpuCount&lt;/code&gt; and &lt;code&gt;MemoryMiB&lt;/code&gt;. All other attributes are optional. Any unspecified optional attribute is set to its default.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html"&gt;Attribute-based instance type selection for EC2 Fleet&lt;/a&gt;, &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html"&gt;Attribute-based instance type selection for Spot Fleet&lt;/a&gt;, and &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html"&gt;Spot placement score&lt;/a&gt; in the &lt;i&gt;Amazon EC2 User Guide&lt;/i&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InstanceRequirementsRequest {
     
     public AcceleratorCountRequest acceleratorCount;
+
     public InstanceRequirementsRequest withAcceleratorCount(AcceleratorCountRequest acceleratorCount) {
         this.acceleratorCount = acceleratorCount;
         return this;
@@ -19,6 +20,7 @@ public class InstanceRequirementsRequest {
     
     
     public InstanceRequirementsRequestAcceleratorManufacturersEnum[] acceleratorManufacturers;
+
     public InstanceRequirementsRequest withAcceleratorManufacturers(InstanceRequirementsRequestAcceleratorManufacturersEnum[] acceleratorManufacturers) {
         this.acceleratorManufacturers = acceleratorManufacturers;
         return this;
@@ -26,6 +28,7 @@ public class InstanceRequirementsRequest {
     
     
     public InstanceRequirementsRequestAcceleratorNamesEnum[] acceleratorNames;
+
     public InstanceRequirementsRequest withAcceleratorNames(InstanceRequirementsRequestAcceleratorNamesEnum[] acceleratorNames) {
         this.acceleratorNames = acceleratorNames;
         return this;
@@ -33,6 +36,7 @@ public class InstanceRequirementsRequest {
     
     
     public AcceleratorTotalMemoryMiBRequest acceleratorTotalMemoryMiB;
+
     public InstanceRequirementsRequest withAcceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequest acceleratorTotalMemoryMiB) {
         this.acceleratorTotalMemoryMiB = acceleratorTotalMemoryMiB;
         return this;
@@ -40,6 +44,7 @@ public class InstanceRequirementsRequest {
     
     
     public InstanceRequirementsRequestAcceleratorTypesEnum[] acceleratorTypes;
+
     public InstanceRequirementsRequest withAcceleratorTypes(InstanceRequirementsRequestAcceleratorTypesEnum[] acceleratorTypes) {
         this.acceleratorTypes = acceleratorTypes;
         return this;
@@ -47,6 +52,7 @@ public class InstanceRequirementsRequest {
     
     
     public String[] allowedInstanceTypes;
+
     public InstanceRequirementsRequest withAllowedInstanceTypes(String[] allowedInstanceTypes) {
         this.allowedInstanceTypes = allowedInstanceTypes;
         return this;
@@ -54,6 +60,7 @@ public class InstanceRequirementsRequest {
     
     
     public BareMetalEnum bareMetal;
+
     public InstanceRequirementsRequest withBareMetal(BareMetalEnum bareMetal) {
         this.bareMetal = bareMetal;
         return this;
@@ -61,6 +68,7 @@ public class InstanceRequirementsRequest {
     
     
     public BaselineEbsBandwidthMbpsRequest baselineEbsBandwidthMbps;
+
     public InstanceRequirementsRequest withBaselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequest baselineEbsBandwidthMbps) {
         this.baselineEbsBandwidthMbps = baselineEbsBandwidthMbps;
         return this;
@@ -68,6 +76,7 @@ public class InstanceRequirementsRequest {
     
     
     public BurstablePerformanceEnum burstablePerformance;
+
     public InstanceRequirementsRequest withBurstablePerformance(BurstablePerformanceEnum burstablePerformance) {
         this.burstablePerformance = burstablePerformance;
         return this;
@@ -75,6 +84,7 @@ public class InstanceRequirementsRequest {
     
     
     public InstanceRequirementsRequestCpuManufacturersEnum[] cpuManufacturers;
+
     public InstanceRequirementsRequest withCpuManufacturers(InstanceRequirementsRequestCpuManufacturersEnum[] cpuManufacturers) {
         this.cpuManufacturers = cpuManufacturers;
         return this;
@@ -82,6 +92,7 @@ public class InstanceRequirementsRequest {
     
     
     public String[] excludedInstanceTypes;
+
     public InstanceRequirementsRequest withExcludedInstanceTypes(String[] excludedInstanceTypes) {
         this.excludedInstanceTypes = excludedInstanceTypes;
         return this;
@@ -89,6 +100,7 @@ public class InstanceRequirementsRequest {
     
     
     public InstanceRequirementsRequestInstanceGenerationsEnum[] instanceGenerations;
+
     public InstanceRequirementsRequest withInstanceGenerations(InstanceRequirementsRequestInstanceGenerationsEnum[] instanceGenerations) {
         this.instanceGenerations = instanceGenerations;
         return this;
@@ -96,6 +108,7 @@ public class InstanceRequirementsRequest {
     
     
     public LocalStorageEnum localStorage;
+
     public InstanceRequirementsRequest withLocalStorage(LocalStorageEnum localStorage) {
         this.localStorage = localStorage;
         return this;
@@ -103,6 +116,7 @@ public class InstanceRequirementsRequest {
     
     
     public InstanceRequirementsRequestLocalStorageTypesEnum[] localStorageTypes;
+
     public InstanceRequirementsRequest withLocalStorageTypes(InstanceRequirementsRequestLocalStorageTypesEnum[] localStorageTypes) {
         this.localStorageTypes = localStorageTypes;
         return this;
@@ -110,6 +124,7 @@ public class InstanceRequirementsRequest {
     
     
     public MemoryGiBPerVCpuRequest memoryGiBPerVCpu;
+
     public InstanceRequirementsRequest withMemoryGiBPerVCpu(MemoryGiBPerVCpuRequest memoryGiBPerVCpu) {
         this.memoryGiBPerVCpu = memoryGiBPerVCpu;
         return this;
@@ -117,6 +132,7 @@ public class InstanceRequirementsRequest {
     
     
     public MemoryMiBRequest memoryMiB;
+
     public InstanceRequirementsRequest withMemoryMiB(MemoryMiBRequest memoryMiB) {
         this.memoryMiB = memoryMiB;
         return this;
@@ -124,6 +140,7 @@ public class InstanceRequirementsRequest {
     
     
     public NetworkBandwidthGbpsRequest networkBandwidthGbps;
+
     public InstanceRequirementsRequest withNetworkBandwidthGbps(NetworkBandwidthGbpsRequest networkBandwidthGbps) {
         this.networkBandwidthGbps = networkBandwidthGbps;
         return this;
@@ -131,6 +148,7 @@ public class InstanceRequirementsRequest {
     
     
     public NetworkInterfaceCountRequest networkInterfaceCount;
+
     public InstanceRequirementsRequest withNetworkInterfaceCount(NetworkInterfaceCountRequest networkInterfaceCount) {
         this.networkInterfaceCount = networkInterfaceCount;
         return this;
@@ -138,6 +156,7 @@ public class InstanceRequirementsRequest {
     
     
     public Long onDemandMaxPricePercentageOverLowestPrice;
+
     public InstanceRequirementsRequest withOnDemandMaxPricePercentageOverLowestPrice(Long onDemandMaxPricePercentageOverLowestPrice) {
         this.onDemandMaxPricePercentageOverLowestPrice = onDemandMaxPricePercentageOverLowestPrice;
         return this;
@@ -145,6 +164,7 @@ public class InstanceRequirementsRequest {
     
     
     public Boolean requireHibernateSupport;
+
     public InstanceRequirementsRequest withRequireHibernateSupport(Boolean requireHibernateSupport) {
         this.requireHibernateSupport = requireHibernateSupport;
         return this;
@@ -152,6 +172,7 @@ public class InstanceRequirementsRequest {
     
     
     public Long spotMaxPricePercentageOverLowestPrice;
+
     public InstanceRequirementsRequest withSpotMaxPricePercentageOverLowestPrice(Long spotMaxPricePercentageOverLowestPrice) {
         this.spotMaxPricePercentageOverLowestPrice = spotMaxPricePercentageOverLowestPrice;
         return this;
@@ -159,6 +180,7 @@ public class InstanceRequirementsRequest {
     
     
     public TotalLocalStorageGBRequest totalLocalStorageGB;
+
     public InstanceRequirementsRequest withTotalLocalStorageGB(TotalLocalStorageGBRequest totalLocalStorageGB) {
         this.totalLocalStorageGB = totalLocalStorageGB;
         return this;
@@ -166,9 +188,14 @@ public class InstanceRequirementsRequest {
     
     
     public VCpuCountRangeRequest vCpuCount;
+
     public InstanceRequirementsRequest withVCpuCount(VCpuCountRangeRequest vCpuCount) {
         this.vCpuCount = vCpuCount;
         return this;
     }
     
+    public InstanceRequirementsRequest(@JsonProperty("MemoryMiB") MemoryMiBRequest memoryMiB, @JsonProperty("VCpuCount") VCpuCountRangeRequest vCpuCount) {
+        this.memoryMiB = memoryMiB;
+        this.vCpuCount = vCpuCount;
+  }
 }

@@ -23,6 +23,7 @@ public class OrderHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changeOrderReportings")
     public ChangeOrderReporting[] changeOrderReportings;
+
     public OrderHistory withChangeOrderReportings(ChangeOrderReporting[] changeOrderReportings) {
         this.changeOrderReportings = changeOrderReportings;
         return this;
@@ -31,6 +32,7 @@ public class OrderHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("harvestOrderReportings")
     public HarvestOrderReporting[] harvestOrderReportings;
+
     public OrderHistory withHarvestOrderReportings(HarvestOrderReporting[] harvestOrderReportings) {
         this.harvestOrderReportings = harvestOrderReportings;
         return this;
@@ -41,9 +43,11 @@ public class OrderHistory {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModificationUtcDate")
     public OffsetDateTime lastModificationUtcDate;
+
     public OrderHistory withLastModificationUtcDate(OffsetDateTime lastModificationUtcDate) {
         this.lastModificationUtcDate = lastModificationUtcDate;
         return this;
     }
     
+    public OrderHistory(){}
 }

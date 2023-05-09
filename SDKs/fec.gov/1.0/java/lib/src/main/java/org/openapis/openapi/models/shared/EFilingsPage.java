@@ -12,6 +12,7 @@ public class EFilingsPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public EFilingsPage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class EFilingsPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public EFilings[] results;
+
     public EFilingsPage withResults(EFilings[] results) {
         this.results = results;
         return this;
     }
     
+    public EFilingsPage(){}
 }

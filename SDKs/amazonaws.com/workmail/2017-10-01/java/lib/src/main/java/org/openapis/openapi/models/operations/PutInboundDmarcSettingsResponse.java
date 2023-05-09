@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutInboundDmarcSettingsResponse {
     
     public String contentType;
+
     public PutInboundDmarcSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutInboundDmarcSettingsResponse {
      */
     
     public Object organizationNotFoundException;
+
     public PutInboundDmarcSettingsResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class PutInboundDmarcSettingsResponse {
      */
     
     public Object organizationStateException;
+
     public PutInboundDmarcSettingsResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -39,6 +43,7 @@ public class PutInboundDmarcSettingsResponse {
      */
     
     public java.util.Map<String, Object> putInboundDmarcSettingsResponse;
+
     public PutInboundDmarcSettingsResponse withPutInboundDmarcSettingsResponse(java.util.Map<String, Object> putInboundDmarcSettingsResponse) {
         this.putInboundDmarcSettingsResponse = putInboundDmarcSettingsResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutInboundDmarcSettingsResponse {
     
     
     public Integer statusCode;
+
     public PutInboundDmarcSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class PutInboundDmarcSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutInboundDmarcSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutInboundDmarcSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

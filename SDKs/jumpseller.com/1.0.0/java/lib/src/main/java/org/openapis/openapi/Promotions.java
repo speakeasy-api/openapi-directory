@@ -57,12 +57,10 @@ public class Promotions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePromotionsIdJsonResponse res = new org.openapis.openapi.models.operations.DeletePromotionsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeletePromotionsIdJsonResponse res = new org.openapis.openapi.models.operations.DeletePromotionsIdJsonResponse(contentType, httpRes.statusCode()) {{
             deletePromotionsIdJSON200ApplicationJSONString = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Promotions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPromotionsJsonResponse res = new org.openapis.openapi.models.operations.GetPromotionsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetPromotionsJsonResponse res = new org.openapis.openapi.models.operations.GetPromotionsJsonResponse(contentType, httpRes.statusCode()) {{
             promotions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,12 +148,10 @@ public class Promotions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPromotionsIdJsonResponse res = new org.openapis.openapi.models.operations.GetPromotionsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetPromotionsIdJsonResponse res = new org.openapis.openapi.models.operations.GetPromotionsIdJsonResponse(contentType, httpRes.statusCode()) {{
             promotion = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -209,12 +203,10 @@ public class Promotions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPromotionsJsonResponse res = new org.openapis.openapi.models.operations.PostPromotionsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostPromotionsJsonResponse res = new org.openapis.openapi.models.operations.PostPromotionsJsonResponse(contentType, httpRes.statusCode()) {{
             promotion = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -266,12 +258,10 @@ public class Promotions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutPromotionsIdJsonResponse res = new org.openapis.openapi.models.operations.PutPromotionsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutPromotionsIdJsonResponse res = new org.openapis.openapi.models.operations.PutPromotionsIdJsonResponse(contentType, httpRes.statusCode()) {{
             promotion = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChatHistoryUsingPOSTResponse {
     
     public String contentType;
+
     public GetChatHistoryUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetChatHistoryUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public GetChatHistoryUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetChatHistoryUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChatHistoryUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetChatHistoryUsingPOSTResponse {
      */
     
     public GetChatHistoryUsingPOST200ApplicationJSON getChatHistoryUsingPOST200ApplicationJSONObject;
+
     public GetChatHistoryUsingPOSTResponse withGetChatHistoryUsingPOST200ApplicationJSONObject(GetChatHistoryUsingPOST200ApplicationJSON getChatHistoryUsingPOST200ApplicationJSONObject) {
         this.getChatHistoryUsingPOST200ApplicationJSONObject = getChatHistoryUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetChatHistoryUsingPOSTResponse {
      */
     
     public GetChatHistoryUsingPOST400ApplicationJSON getChatHistoryUsingPOST400ApplicationJSONObject;
+
     public GetChatHistoryUsingPOSTResponse withGetChatHistoryUsingPOST400ApplicationJSONObject(GetChatHistoryUsingPOST400ApplicationJSON getChatHistoryUsingPOST400ApplicationJSONObject) {
         this.getChatHistoryUsingPOST400ApplicationJSONObject = getChatHistoryUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetChatHistoryUsingPOSTResponse {
      */
     
     public GetChatHistoryUsingPOST401ApplicationJSON getChatHistoryUsingPOST401ApplicationJSONObject;
+
     public GetChatHistoryUsingPOSTResponse withGetChatHistoryUsingPOST401ApplicationJSONObject(GetChatHistoryUsingPOST401ApplicationJSON getChatHistoryUsingPOST401ApplicationJSONObject) {
         this.getChatHistoryUsingPOST401ApplicationJSONObject = getChatHistoryUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GetChatHistoryUsingPOSTResponse {
      */
     
     public GetChatHistoryUsingPOST500ApplicationJSON getChatHistoryUsingPOST500ApplicationJSONObject;
+
     public GetChatHistoryUsingPOSTResponse withGetChatHistoryUsingPOST500ApplicationJSONObject(GetChatHistoryUsingPOST500ApplicationJSON getChatHistoryUsingPOST500ApplicationJSONObject) {
         this.getChatHistoryUsingPOST500ApplicationJSONObject = getChatHistoryUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public GetChatHistoryUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

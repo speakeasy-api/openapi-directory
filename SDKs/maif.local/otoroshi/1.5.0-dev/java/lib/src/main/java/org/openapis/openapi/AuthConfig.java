@@ -58,11 +58,9 @@ public class AuthConfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGlobalAuthModuleResponse res = new org.openapis.openapi.models.operations.CreateGlobalAuthModuleResponse() {{
+        org.openapis.openapi.models.operations.CreateGlobalAuthModuleResponse res = new org.openapis.openapi.models.operations.CreateGlobalAuthModuleResponse(contentType, httpRes.statusCode()) {{
             createGlobalAuthModule200ApplicationJSONOneOf = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class AuthConfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteGlobalAuthModuleResponse res = new org.openapis.openapi.models.operations.DeleteGlobalAuthModuleResponse() {{
+        org.openapis.openapi.models.operations.DeleteGlobalAuthModuleResponse res = new org.openapis.openapi.models.operations.DeleteGlobalAuthModuleResponse(contentType, httpRes.statusCode()) {{
             deleted = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,10 +120,11 @@ public class AuthConfig {
     /**
      * Get all global auth. module configs
      * Get all global auth. module configs
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindAllGlobalAuthModulesResponse findAllGlobalAuthModules() throws Exception {
+    public org.openapis.openapi.models.operations.FindAllGlobalAuthModulesResponse findAllGlobalAuthModules(org.openapis.openapi.models.operations.FindAllGlobalAuthModulesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/auths");
         
@@ -136,16 +133,15 @@ public class AuthConfig {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindAllGlobalAuthModulesResponse res = new org.openapis.openapi.models.operations.FindAllGlobalAuthModulesResponse() {{
+        org.openapis.openapi.models.operations.FindAllGlobalAuthModulesResponse res = new org.openapis.openapi.models.operations.FindAllGlobalAuthModulesResponse(contentType, httpRes.statusCode()) {{
             findAllGlobalAuthModules200ApplicationJSONOneoves = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -184,11 +180,9 @@ public class AuthConfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindGlobalAuthModuleByIdResponse res = new org.openapis.openapi.models.operations.FindGlobalAuthModuleByIdResponse() {{
+        org.openapis.openapi.models.operations.FindGlobalAuthModuleByIdResponse res = new org.openapis.openapi.models.operations.FindGlobalAuthModuleByIdResponse(contentType, httpRes.statusCode()) {{
             findGlobalAuthModuleById200ApplicationJSONOneOf = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -229,11 +223,9 @@ public class AuthConfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchGlobalAuthModuleResponse res = new org.openapis.openapi.models.operations.PatchGlobalAuthModuleResponse() {{
+        org.openapis.openapi.models.operations.PatchGlobalAuthModuleResponse res = new org.openapis.openapi.models.operations.PatchGlobalAuthModuleResponse(contentType, httpRes.statusCode()) {{
             patchGlobalAuthModule200ApplicationJSONOneOf = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -274,11 +266,9 @@ public class AuthConfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGlobalAuthModuleResponse res = new org.openapis.openapi.models.operations.UpdateGlobalAuthModuleResponse() {{
+        org.openapis.openapi.models.operations.UpdateGlobalAuthModuleResponse res = new org.openapis.openapi.models.operations.UpdateGlobalAuthModuleResponse(contentType, httpRes.statusCode()) {{
             updateGlobalAuthModule200ApplicationJSONOneOf = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

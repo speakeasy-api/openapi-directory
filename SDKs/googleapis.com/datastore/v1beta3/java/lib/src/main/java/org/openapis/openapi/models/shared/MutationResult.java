@@ -18,6 +18,7 @@ public class MutationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictDetected")
     public Boolean conflictDetected;
+
     public MutationResult withConflictDetected(Boolean conflictDetected) {
         this.conflictDetected = conflictDetected;
         return this;
@@ -29,6 +30,7 @@ public class MutationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public MutationResult withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class MutationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public Key key;
+
     public MutationResult withKey(Key key) {
         this.key = key;
         return this;
@@ -51,6 +54,7 @@ public class MutationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public MutationResult withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -62,9 +66,11 @@ public class MutationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public MutationResult withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public MutationResult(){}
 }

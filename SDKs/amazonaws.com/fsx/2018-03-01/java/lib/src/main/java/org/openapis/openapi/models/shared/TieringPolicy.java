@@ -15,6 +15,7 @@ public class TieringPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CoolingPeriod")
     public Long coolingPeriod;
+
     public TieringPolicy withCoolingPeriod(Long coolingPeriod) {
         this.coolingPeriod = coolingPeriod;
         return this;
@@ -23,9 +24,11 @@ public class TieringPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public TieringPolicyNameEnum name;
+
     public TieringPolicy withName(TieringPolicyNameEnum name) {
         this.name = name;
         return this;
     }
     
+    public TieringPolicy(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=advertiserId")
     public String advertiserId;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -42,6 +46,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,16 +68,18 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withFields(String fields) {
         this.fields = fields;
         return this;
     }
     
     /**
-     * Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR` on the same field. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `targetingType` Examples: * AssignedTargetingOptions of targeting type TARGETING_TYPE_YOUTUBE_VIDEO or TARGETING_TYPE_YOUTUBE_CHANNEL `targetingType="TARGETING_TYPE_YOUTUBE_VIDEO" OR targetingType="TARGETING_TYPE_YOUTUBE_CHANNEL"` The length of this field should be no more than 500 characters.
+     * Allows filtering by assigned targeting option fields. Supported syntax: * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: * `targetingType` Examples: * `AssignedTargetingOption` resources of targeting type `TARGETING_TYPE_YOUTUBE_VIDEO` or `TARGETING_TYPE_YOUTUBE_CHANNEL`: `targetingType="TARGETING_TYPE_YOUTUBE_VIDEO" OR targetingType="TARGETING_TYPE_YOUTUBE_CHANNEL"` The length of this field should be no more than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide for more information.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -82,6 +90,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -112,6 +123,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -122,6 +134,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -132,6 +145,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +156,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,6 +178,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -172,9 +189,13 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=youtubeAdGroupIds")
     public String[] youtubeAdGroupIds;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest withYoutubeAdGroupIds(String[] youtubeAdGroupIds) {
         this.youtubeAdGroupIds = youtubeAdGroupIds;
         return this;
     }
     
+    public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest(@JsonProperty("advertiserId") String advertiserId) {
+        this.advertiserId = advertiserId;
+  }
 }

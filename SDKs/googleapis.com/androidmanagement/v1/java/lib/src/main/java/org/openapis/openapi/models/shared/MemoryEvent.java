@@ -18,6 +18,7 @@ public class MemoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byteCount")
     public String byteCount;
+
     public MemoryEvent withByteCount(String byteCount) {
         this.byteCount = byteCount;
         return this;
@@ -29,6 +30,7 @@ public class MemoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public MemoryEvent withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,9 +42,11 @@ public class MemoryEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public MemoryEventEventTypeEnum eventType;
+
     public MemoryEvent withEventType(MemoryEventEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
     }
     
+    public MemoryEvent(){}
 }

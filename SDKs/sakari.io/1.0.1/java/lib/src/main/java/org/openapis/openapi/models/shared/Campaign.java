@@ -12,9 +12,11 @@ public class Campaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Campaign withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Campaign(){}
 }

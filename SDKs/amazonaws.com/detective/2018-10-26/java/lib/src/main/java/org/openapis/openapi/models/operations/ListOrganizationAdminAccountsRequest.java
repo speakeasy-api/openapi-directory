@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListOrganizationAdminAccountsRequest {
@@ -12,6 +13,7 @@ public class ListOrganizationAdminAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public ListOrganizationAdminAccountsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -22,6 +24,7 @@ public class ListOrganizationAdminAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListOrganizationAdminAccountsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,6 +32,7 @@ public class ListOrganizationAdminAccountsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ListOrganizationAdminAccountsRequestBody requestBody;
+
     public ListOrganizationAdminAccountsRequest withRequestBody(ListOrganizationAdminAccountsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -36,6 +40,7 @@ public class ListOrganizationAdminAccountsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListOrganizationAdminAccountsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class ListOrganizationAdminAccountsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListOrganizationAdminAccountsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class ListOrganizationAdminAccountsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListOrganizationAdminAccountsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class ListOrganizationAdminAccountsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListOrganizationAdminAccountsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class ListOrganizationAdminAccountsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListOrganizationAdminAccountsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class ListOrganizationAdminAccountsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListOrganizationAdminAccountsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,9 +88,13 @@ public class ListOrganizationAdminAccountsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListOrganizationAdminAccountsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public ListOrganizationAdminAccountsRequest(@JsonProperty("RequestBody") ListOrganizationAdminAccountsRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

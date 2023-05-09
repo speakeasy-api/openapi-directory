@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateConnectorRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateConnectorRequestBody requestBody;
+
     public UpdateConnectorRequest withRequestBody(UpdateConnectorRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateConnectorRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateConnectorRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateConnectorRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateConnectorRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateConnectorRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateConnectorRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateConnectorRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateConnectorRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateConnectorRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateConnectorRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateConnectorRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateConnectorRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateConnectorRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateConnectorRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class UpdateConnectorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connectorArn")
     public String connectorArn;
+
     public UpdateConnectorRequest withConnectorArn(String connectorArn) {
         this.connectorArn = connectorArn;
         return this;
@@ -78,9 +88,15 @@ public class UpdateConnectorRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentVersion")
     public String currentVersion;
+
     public UpdateConnectorRequest withCurrentVersion(String currentVersion) {
         this.currentVersion = currentVersion;
         return this;
     }
     
+    public UpdateConnectorRequest(@JsonProperty("RequestBody") UpdateConnectorRequestBody requestBody, @JsonProperty("connectorArn") String connectorArn, @JsonProperty("currentVersion") String currentVersion) {
+        this.requestBody = requestBody;
+        this.connectorArn = connectorArn;
+        this.currentVersion = currentVersion;
+  }
 }

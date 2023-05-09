@@ -14,9 +14,11 @@ public class CanvasDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=canvas_id")
     public String canvasId;
+
     public CanvasDetailsRequest withCanvasId(String canvasId) {
         this.canvasId = canvasId;
         return this;
     }
     
+    public CanvasDetailsRequest(){}
 }

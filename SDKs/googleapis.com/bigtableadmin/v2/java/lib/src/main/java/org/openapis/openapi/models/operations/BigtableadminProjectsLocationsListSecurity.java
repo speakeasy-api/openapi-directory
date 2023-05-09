@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigtableadminProjectsLocationsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsLocationsListSecurityOption1 option1;
+
     public BigtableadminProjectsLocationsListSecurity withOption1(BigtableadminProjectsLocationsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigtableadminProjectsLocationsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsLocationsListSecurityOption2 option2;
+
     public BigtableadminProjectsLocationsListSecurity withOption2(BigtableadminProjectsLocationsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class BigtableadminProjectsLocationsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsLocationsListSecurityOption3 option3;
+
     public BigtableadminProjectsLocationsListSecurity withOption3(BigtableadminProjectsLocationsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class BigtableadminProjectsLocationsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsLocationsListSecurityOption4 option4;
+
     public BigtableadminProjectsLocationsListSecurity withOption4(BigtableadminProjectsLocationsListSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class BigtableadminProjectsLocationsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsLocationsListSecurityOption5 option5;
+
     public BigtableadminProjectsLocationsListSecurity withOption5(BigtableadminProjectsLocationsListSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,6 +49,7 @@ public class BigtableadminProjectsLocationsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsLocationsListSecurityOption6 option6;
+
     public BigtableadminProjectsLocationsListSecurity withOption6(BigtableadminProjectsLocationsListSecurityOption6 option6) {
         this.option6 = option6;
         return this;
@@ -51,9 +57,11 @@ public class BigtableadminProjectsLocationsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsLocationsListSecurityOption7 option7;
+
     public BigtableadminProjectsLocationsListSecurity withOption7(BigtableadminProjectsLocationsListSecurityOption7 option7) {
         this.option7 = option7;
         return this;
     }
     
+    public BigtableadminProjectsLocationsListSecurity(){}
 }

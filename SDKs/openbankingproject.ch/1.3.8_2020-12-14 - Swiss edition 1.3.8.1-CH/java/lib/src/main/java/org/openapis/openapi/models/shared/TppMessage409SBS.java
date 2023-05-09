@@ -14,6 +14,7 @@ public class TppMessage409SBS {
      */
     @JsonProperty("category")
     public TppMessageCategoryEnum category;
+
     public TppMessage409SBS withCategory(TppMessageCategoryEnum category) {
         this.category = category;
         return this;
@@ -24,6 +25,7 @@ public class TppMessage409SBS {
      */
     @JsonProperty("code")
     public MessageCode409SBSEnum code;
+
     public TppMessage409SBS withCode(MessageCode409SBSEnum code) {
         this.code = code;
         return this;
@@ -32,6 +34,7 @@ public class TppMessage409SBS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public TppMessage409SBS withPath(String path) {
         this.path = path;
         return this;
@@ -43,9 +46,14 @@ public class TppMessage409SBS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public TppMessage409SBS withText(String text) {
         this.text = text;
         return this;
     }
     
+    public TppMessage409SBS(@JsonProperty("category") TppMessageCategoryEnum category, @JsonProperty("code") MessageCode409SBSEnum code) {
+        this.category = category;
+        this.code = code;
+  }
 }

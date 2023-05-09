@@ -58,11 +58,9 @@ public class ServiceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1ServicegroupsResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ServicegroupsResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1ServicegroupsResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ServicegroupsResponse(contentType, httpRes.statusCode()) {{
             serviceGroupListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class ServiceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1ServicegroupsIdResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ServicegroupsIdResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1ServicegroupsIdResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ServicegroupsIdResponse(contentType, httpRes.statusCode()) {{
             serviceGroupViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

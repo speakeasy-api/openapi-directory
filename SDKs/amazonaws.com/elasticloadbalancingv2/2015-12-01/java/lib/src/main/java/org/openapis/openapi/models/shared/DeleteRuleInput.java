@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteRuleInput {
     
     public String ruleArn;
+
     public DeleteRuleInput withRuleArn(String ruleArn) {
         this.ruleArn = ruleArn;
         return this;
     }
     
+    public DeleteRuleInput(@JsonProperty("RuleArn") String ruleArn) {
+        this.ruleArn = ruleArn;
+  }
 }

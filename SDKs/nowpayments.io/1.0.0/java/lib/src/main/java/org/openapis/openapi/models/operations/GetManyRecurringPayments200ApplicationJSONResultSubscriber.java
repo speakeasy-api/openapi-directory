@@ -12,6 +12,7 @@ public class GetManyRecurringPayments200ApplicationJSONResultSubscriber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public GetManyRecurringPayments200ApplicationJSONResultSubscriber withEmail(String email) {
         this.email = email;
         return this;
@@ -20,9 +21,11 @@ public class GetManyRecurringPayments200ApplicationJSONResultSubscriber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_partner_id")
     public String subPartnerId;
+
     public GetManyRecurringPayments200ApplicationJSONResultSubscriber withSubPartnerId(String subPartnerId) {
         this.subPartnerId = subPartnerId;
         return this;
     }
     
+    public GetManyRecurringPayments200ApplicationJSONResultSubscriber(){}
 }

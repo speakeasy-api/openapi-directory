@@ -61,11 +61,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingReportsCompatibleFieldsQueryResponse res = new org.openapis.openapi.models.operations.DfareportingReportsCompatibleFieldsQueryResponse() {{
+        org.openapis.openapi.models.operations.DfareportingReportsCompatibleFieldsQueryResponse res = new org.openapis.openapi.models.operations.DfareportingReportsCompatibleFieldsQueryResponse(contentType, httpRes.statusCode()) {{
             compatibleFields = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingReportsDeleteResponse res = new org.openapis.openapi.models.operations.DfareportingReportsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DfareportingReportsDeleteResponse res = new org.openapis.openapi.models.operations.DfareportingReportsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingReportsFilesGetResponse res = new org.openapis.openapi.models.operations.DfareportingReportsFilesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingReportsFilesGetResponse res = new org.openapis.openapi.models.operations.DfareportingReportsFilesGetResponse(contentType, httpRes.statusCode()) {{
             file = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingReportsFilesListResponse res = new org.openapis.openapi.models.operations.DfareportingReportsFilesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingReportsFilesListResponse res = new org.openapis.openapi.models.operations.DfareportingReportsFilesListResponse(contentType, httpRes.statusCode()) {{
             fileList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -239,11 +231,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingReportsGetResponse res = new org.openapis.openapi.models.operations.DfareportingReportsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingReportsGetResponse res = new org.openapis.openapi.models.operations.DfareportingReportsGetResponse(contentType, httpRes.statusCode()) {{
             report = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -287,11 +277,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingReportsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingReportsInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingReportsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingReportsInsertResponse(contentType, httpRes.statusCode()) {{
             report = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -333,11 +321,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingReportsListResponse res = new org.openapis.openapi.models.operations.DfareportingReportsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingReportsListResponse res = new org.openapis.openapi.models.operations.DfareportingReportsListResponse(contentType, httpRes.statusCode()) {{
             reportList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -381,11 +367,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingReportsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingReportsPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingReportsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingReportsPatchResponse(contentType, httpRes.statusCode()) {{
             report = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -427,11 +411,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingReportsRunResponse res = new org.openapis.openapi.models.operations.DfareportingReportsRunResponse() {{
+        org.openapis.openapi.models.operations.DfareportingReportsRunResponse res = new org.openapis.openapi.models.operations.DfareportingReportsRunResponse(contentType, httpRes.statusCode()) {{
             file = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -475,11 +457,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingReportsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingReportsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingReportsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingReportsUpdateResponse(contentType, httpRes.statusCode()) {{
             report = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

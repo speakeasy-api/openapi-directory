@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MfrGetV2ManufacturersGetResponse {
     
     public String contentType;
+
     public MfrGetV2ManufacturersGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MfrGetV2ManufacturersGetResponse {
      */
     
     public org.openapis.openapi.models.shared.OpenAQResult openAQResult;
+
     public MfrGetV2ManufacturersGetResponse withOpenAQResult(org.openapis.openapi.models.shared.OpenAQResult openAQResult) {
         this.openAQResult = openAQResult;
         return this;
@@ -26,6 +29,7 @@ public class MfrGetV2ManufacturersGetResponse {
     
     
     public Integer statusCode;
+
     public MfrGetV2ManufacturersGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MfrGetV2ManufacturersGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MfrGetV2ManufacturersGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MfrGetV2ManufacturersGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

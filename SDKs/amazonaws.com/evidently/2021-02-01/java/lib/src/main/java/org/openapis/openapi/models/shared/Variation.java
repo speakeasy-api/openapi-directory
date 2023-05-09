@@ -15,6 +15,7 @@ public class Variation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Variation withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class Variation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public VariableValue value;
+
     public Variation withValue(VariableValue value) {
         this.value = value;
         return this;
     }
     
+    public Variation(){}
 }

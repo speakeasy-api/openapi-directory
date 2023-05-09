@@ -20,6 +20,7 @@ public class AccessTokenToPut {
     @JsonProperty("CardId")
     @SpeakeasyMetadata("form:name=CardId")
     public Long cardId;
+
     public AccessTokenToPut withCardId(Long cardId) {
         this.cardId = cardId;
         return this;
@@ -33,9 +34,11 @@ public class AccessTokenToPut {
     @JsonProperty("UserId")
     @SpeakeasyMetadata("form:name=UserId")
     public Long userId;
+
     public AccessTokenToPut withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public AccessTokenToPut(){}
 }

@@ -18,9 +18,11 @@ public class GoogleCloudContactcenterinsightsV1IssueMatchData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueAssignment")
     public GoogleCloudContactcenterinsightsV1IssueAssignment issueAssignment;
+
     public GoogleCloudContactcenterinsightsV1IssueMatchData withIssueAssignment(GoogleCloudContactcenterinsightsV1IssueAssignment issueAssignment) {
         this.issueAssignment = issueAssignment;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1IssueMatchData(){}
 }

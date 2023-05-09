@@ -12,6 +12,7 @@ public class ScreenshotType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activity_id")
     public String activityId;
+
     public ScreenshotType withActivityId(String activityId) {
         this.activityId = activityId;
         return this;
@@ -20,6 +21,7 @@ public class ScreenshotType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browser")
     public String browser;
+
     public ScreenshotType withBrowser(String browser) {
         this.browser = browser;
         return this;
@@ -28,6 +30,7 @@ public class ScreenshotType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browser_version")
     public String browserVersion;
+
     public ScreenshotType withBrowserVersion(String browserVersion) {
         this.browserVersion = browserVersion;
         return this;
@@ -36,6 +39,7 @@ public class ScreenshotType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     public String os;
+
     public ScreenshotType withOs(String os) {
         this.os = os;
         return this;
@@ -44,6 +48,7 @@ public class ScreenshotType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolution")
     public String resolution;
+
     public ScreenshotType withResolution(String resolution) {
         this.resolution = resolution;
         return this;
@@ -52,6 +57,7 @@ public class ScreenshotType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenshot_url")
     public String screenshotUrl;
+
     public ScreenshotType withScreenshotUrl(String screenshotUrl) {
         this.screenshotUrl = screenshotUrl;
         return this;
@@ -60,6 +66,7 @@ public class ScreenshotType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ScreenshotType withStatus(String status) {
         this.status = status;
         return this;
@@ -68,9 +75,11 @@ public class ScreenshotType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnail_url")
     public String thumbnailUrl;
+
     public ScreenshotType withThumbnailUrl(String thumbnailUrl) {
         this.thumbnailUrl = thumbnailUrl;
         return this;
     }
     
+    public ScreenshotType(){}
 }

@@ -12,6 +12,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntry {
      */
     
     public Long characterId;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntry withCharacterId(Long characterId) {
         this.characterId = characterId;
         return this;
@@ -22,6 +23,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntry {
      */
     
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryExtended extended;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntry withExtended(DestinyHistoricalStatsDestinyPostGameCarnageReportEntryExtended extended) {
         this.extended = extended;
         return this;
@@ -32,6 +34,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntry {
      */
     
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer player;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntry withPlayer(DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer player) {
         this.player = player;
         return this;
@@ -42,6 +45,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntry {
      */
     
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryScore score;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntry withScore(DestinyHistoricalStatsDestinyPostGameCarnageReportEntryScore score) {
         this.score = score;
         return this;
@@ -52,6 +56,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntry {
      */
     
     public Integer standing;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntry withStanding(Integer standing) {
         this.standing = standing;
         return this;
@@ -62,9 +67,11 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntry {
      */
     
     public java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> values;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntry withValues(java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> values) {
         this.values = values;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyPostGameCarnageReportEntry(){}
 }

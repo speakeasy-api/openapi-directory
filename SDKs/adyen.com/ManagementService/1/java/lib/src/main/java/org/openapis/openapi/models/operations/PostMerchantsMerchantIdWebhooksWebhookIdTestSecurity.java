@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostMerchantsMerchantIdWebhooksWebhookIdTestSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-Key")
     public String apiKeyAuth;
+
     public PostMerchantsMerchantIdWebhooksWebhookIdTestSecurity withApiKeyAuth(String apiKeyAuth) {
         this.apiKeyAuth = apiKeyAuth;
         return this;
@@ -16,9 +17,11 @@ public class PostMerchantsMerchantIdWebhooksWebhookIdTestSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
     public org.openapis.openapi.models.shared.SchemeBasicAuth basicAuth;
+
     public PostMerchantsMerchantIdWebhooksWebhookIdTestSecurity withBasicAuth(org.openapis.openapi.models.shared.SchemeBasicAuth basicAuth) {
         this.basicAuth = basicAuth;
         return this;
     }
     
+    public PostMerchantsMerchantIdWebhooksWebhookIdTestSecurity(){}
 }

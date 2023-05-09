@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CompanyMonitorUnregisterDefaultApplicationJSON {
     @JsonProperty("code")
     public Integer code;
+
     public CompanyMonitorUnregisterDefaultApplicationJSON withCode(Integer code) {
         this.code = code;
         return this;
@@ -22,6 +23,7 @@ public class CompanyMonitorUnregisterDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fault")
     public String fault;
+
     public CompanyMonitorUnregisterDefaultApplicationJSON withFault(String fault) {
         this.fault = fault;
         return this;
@@ -29,6 +31,7 @@ public class CompanyMonitorUnregisterDefaultApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public CompanyMonitorUnregisterDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -36,9 +39,15 @@ public class CompanyMonitorUnregisterDefaultApplicationJSON {
     
     @JsonProperty("tag")
     public String tag;
+
     public CompanyMonitorUnregisterDefaultApplicationJSON withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public CompanyMonitorUnregisterDefaultApplicationJSON(@JsonProperty("code") Integer code, @JsonProperty("message") String message, @JsonProperty("tag") String tag) {
+        this.code = code;
+        this.message = message;
+        this.tag = tag;
+  }
 }

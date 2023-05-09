@@ -15,6 +15,7 @@ public class IOUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadIOs")
     public Long readIOs;
+
     public IOUsage withReadIOs(Long readIOs) {
         this.readIOs = readIOs;
         return this;
@@ -23,9 +24,11 @@ public class IOUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WriteIOs")
     public Long writeIOs;
+
     public IOUsage withWriteIOs(Long writeIOs) {
         this.writeIOs = writeIOs;
         return this;
     }
     
+    public IOUsage(){}
 }

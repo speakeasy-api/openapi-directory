@@ -15,9 +15,11 @@ public class GoogleCloudPrivatecatalogproducerV1beta1CopyProductRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationProductName")
     public String destinationProductName;
+
     public GoogleCloudPrivatecatalogproducerV1beta1CopyProductRequest withDestinationProductName(String destinationProductName) {
         this.destinationProductName = destinationProductName;
         return this;
     }
     
+    public GoogleCloudPrivatecatalogproducerV1beta1CopyProductRequest(){}
 }

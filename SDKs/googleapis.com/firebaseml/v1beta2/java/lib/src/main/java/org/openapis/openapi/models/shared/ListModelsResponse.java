@@ -18,6 +18,7 @@ public class ListModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("models")
     public Model[] models;
+
     public ListModelsResponse withModels(Model[] models) {
         this.models = models;
         return this;
@@ -29,9 +30,11 @@ public class ListModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListModelsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListModelsResponse(){}
 }

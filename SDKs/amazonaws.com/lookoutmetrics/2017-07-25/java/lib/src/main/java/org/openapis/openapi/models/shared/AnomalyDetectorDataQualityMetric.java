@@ -20,6 +20,7 @@ public class AnomalyDetectorDataQualityMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSetDataQualityMetricList")
     public MetricSetDataQualityMetric[] metricSetDataQualityMetricList;
+
     public AnomalyDetectorDataQualityMetric withMetricSetDataQualityMetricList(MetricSetDataQualityMetric[] metricSetDataQualityMetricList) {
         this.metricSetDataQualityMetricList = metricSetDataQualityMetricList;
         return this;
@@ -30,9 +31,11 @@ public class AnomalyDetectorDataQualityMetric {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTimestamp")
     public OffsetDateTime startTimestamp;
+
     public AnomalyDetectorDataQualityMetric withStartTimestamp(OffsetDateTime startTimestamp) {
         this.startTimestamp = startTimestamp;
         return this;
     }
     
+    public AnomalyDetectorDataQualityMetric(){}
 }

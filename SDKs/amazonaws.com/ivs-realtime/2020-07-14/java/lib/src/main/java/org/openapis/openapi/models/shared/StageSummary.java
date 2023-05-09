@@ -15,6 +15,7 @@ public class StageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeSessionId")
     public String activeSessionId;
+
     public StageSummary withActiveSessionId(String activeSessionId) {
         this.activeSessionId = activeSessionId;
         return this;
@@ -22,6 +23,7 @@ public class StageSummary {
     
     @JsonProperty("arn")
     public String arn;
+
     public StageSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +32,7 @@ public class StageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StageSummary withName(String name) {
         this.name = name;
         return this;
@@ -38,9 +41,13 @@ public class StageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StageSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StageSummary(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

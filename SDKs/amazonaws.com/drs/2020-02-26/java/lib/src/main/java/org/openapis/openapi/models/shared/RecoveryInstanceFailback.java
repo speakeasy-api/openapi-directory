@@ -15,6 +15,7 @@ public class RecoveryInstanceFailback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentLastSeenByServiceDateTime")
     public String agentLastSeenByServiceDateTime;
+
     public RecoveryInstanceFailback withAgentLastSeenByServiceDateTime(String agentLastSeenByServiceDateTime) {
         this.agentLastSeenByServiceDateTime = agentLastSeenByServiceDateTime;
         return this;
@@ -23,6 +24,7 @@ public class RecoveryInstanceFailback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elapsedReplicationDuration")
     public String elapsedReplicationDuration;
+
     public RecoveryInstanceFailback withElapsedReplicationDuration(String elapsedReplicationDuration) {
         this.elapsedReplicationDuration = elapsedReplicationDuration;
         return this;
@@ -31,6 +33,7 @@ public class RecoveryInstanceFailback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failbackClientID")
     public String failbackClientID;
+
     public RecoveryInstanceFailback withFailbackClientID(String failbackClientID) {
         this.failbackClientID = failbackClientID;
         return this;
@@ -39,6 +42,7 @@ public class RecoveryInstanceFailback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failbackClientLastSeenByServiceDateTime")
     public String failbackClientLastSeenByServiceDateTime;
+
     public RecoveryInstanceFailback withFailbackClientLastSeenByServiceDateTime(String failbackClientLastSeenByServiceDateTime) {
         this.failbackClientLastSeenByServiceDateTime = failbackClientLastSeenByServiceDateTime;
         return this;
@@ -47,6 +51,7 @@ public class RecoveryInstanceFailback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failbackInitiationTime")
     public String failbackInitiationTime;
+
     public RecoveryInstanceFailback withFailbackInitiationTime(String failbackInitiationTime) {
         this.failbackInitiationTime = failbackInitiationTime;
         return this;
@@ -55,6 +60,7 @@ public class RecoveryInstanceFailback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failbackJobID")
     public String failbackJobID;
+
     public RecoveryInstanceFailback withFailbackJobID(String failbackJobID) {
         this.failbackJobID = failbackJobID;
         return this;
@@ -63,6 +69,7 @@ public class RecoveryInstanceFailback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failbackLaunchType")
     public FailbackLaunchTypeEnum failbackLaunchType;
+
     public RecoveryInstanceFailback withFailbackLaunchType(FailbackLaunchTypeEnum failbackLaunchType) {
         this.failbackLaunchType = failbackLaunchType;
         return this;
@@ -71,6 +78,7 @@ public class RecoveryInstanceFailback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failbackToOriginalServer")
     public Boolean failbackToOriginalServer;
+
     public RecoveryInstanceFailback withFailbackToOriginalServer(Boolean failbackToOriginalServer) {
         this.failbackToOriginalServer = failbackToOriginalServer;
         return this;
@@ -79,6 +87,7 @@ public class RecoveryInstanceFailback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstByteDateTime")
     public String firstByteDateTime;
+
     public RecoveryInstanceFailback withFirstByteDateTime(String firstByteDateTime) {
         this.firstByteDateTime = firstByteDateTime;
         return this;
@@ -87,9 +96,11 @@ public class RecoveryInstanceFailback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public FailbackStateEnum state;
+
     public RecoveryInstanceFailback withState(FailbackStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public RecoveryInstanceFailback(){}
 }

@@ -18,6 +18,7 @@ public class UpdateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public Job job;
+
     public UpdateJobRequest withJob(Job job) {
         this.job = job;
         return this;
@@ -29,9 +30,11 @@ public class UpdateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public UpdateJobRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public UpdateJobRequest(){}
 }

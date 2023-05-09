@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProductRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateProductRequest createProductRequest;
+
     public CreateProductRequest withCreateProductRequest(org.openapis.openapi.models.shared.CreateProductRequest createProductRequest) {
         this.createProductRequest = createProductRequest;
         return this;
@@ -19,9 +21,14 @@ public class CreateProductRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public String organizationId;
+
     public CreateProductRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public CreateProductRequest(@JsonProperty("CreateProductRequest") org.openapis.openapi.models.shared.CreateProductRequest createProductRequest, @JsonProperty("organizationId") String organizationId) {
+        this.createProductRequest = createProductRequest;
+        this.organizationId = organizationId;
+  }
 }

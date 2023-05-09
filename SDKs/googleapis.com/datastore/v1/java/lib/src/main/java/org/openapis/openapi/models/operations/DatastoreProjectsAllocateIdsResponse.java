@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatastoreProjectsAllocateIdsResponse {
@@ -12,6 +13,7 @@ public class DatastoreProjectsAllocateIdsResponse {
      */
     
     public org.openapis.openapi.models.shared.AllocateIdsResponse allocateIdsResponse;
+
     public DatastoreProjectsAllocateIdsResponse withAllocateIdsResponse(org.openapis.openapi.models.shared.AllocateIdsResponse allocateIdsResponse) {
         this.allocateIdsResponse = allocateIdsResponse;
         return this;
@@ -19,6 +21,7 @@ public class DatastoreProjectsAllocateIdsResponse {
     
     
     public String contentType;
+
     public DatastoreProjectsAllocateIdsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DatastoreProjectsAllocateIdsResponse {
     
     
     public Integer statusCode;
+
     public DatastoreProjectsAllocateIdsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatastoreProjectsAllocateIdsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatastoreProjectsAllocateIdsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatastoreProjectsAllocateIdsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ExecuteQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnDescriptions")
     public ColumnDescription[] columnDescriptions;
+
     public ExecuteQueryResponse withColumnDescriptions(ColumnDescription[] columnDescriptions) {
         this.columnDescriptions = columnDescriptions;
         return this;
@@ -23,6 +24,7 @@ public class ExecuteQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ExecuteQueryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class ExecuteQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public Row[] rows;
+
     public ExecuteQueryResponse withRows(Row[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public ExecuteQueryResponse(){}
 }

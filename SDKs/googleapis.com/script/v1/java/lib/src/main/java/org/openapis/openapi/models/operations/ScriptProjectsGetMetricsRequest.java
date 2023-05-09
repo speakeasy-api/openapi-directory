@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ScriptProjectsGetMetricsRequest {
@@ -12,6 +13,7 @@ public class ScriptProjectsGetMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ScriptProjectsGetMetricsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ScriptProjectsGetMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ScriptProjectsGetMetricsRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ScriptProjectsGetMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ScriptProjectsGetMetricsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ScriptProjectsGetMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ScriptProjectsGetMetricsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ScriptProjectsGetMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ScriptProjectsGetMetricsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ScriptProjectsGetMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ScriptProjectsGetMetricsRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class ScriptProjectsGetMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metricsFilter.deploymentId")
     public String metricsFilterDeploymentId;
+
     public ScriptProjectsGetMetricsRequest withMetricsFilterDeploymentId(String metricsFilterDeploymentId) {
         this.metricsFilterDeploymentId = metricsFilterDeploymentId;
         return this;
@@ -82,6 +90,7 @@ public class ScriptProjectsGetMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metricsGranularity")
     public ScriptProjectsGetMetricsMetricsGranularityEnum metricsGranularity;
+
     public ScriptProjectsGetMetricsRequest withMetricsGranularity(ScriptProjectsGetMetricsMetricsGranularityEnum metricsGranularity) {
         this.metricsGranularity = metricsGranularity;
         return this;
@@ -92,6 +101,7 @@ public class ScriptProjectsGetMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ScriptProjectsGetMetricsRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class ScriptProjectsGetMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ScriptProjectsGetMetricsRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class ScriptProjectsGetMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ScriptProjectsGetMetricsRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class ScriptProjectsGetMetricsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scriptId")
     public String scriptId;
+
     public ScriptProjectsGetMetricsRequest withScriptId(String scriptId) {
         this.scriptId = scriptId;
         return this;
@@ -132,6 +145,7 @@ public class ScriptProjectsGetMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ScriptProjectsGetMetricsRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,13 @@ public class ScriptProjectsGetMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ScriptProjectsGetMetricsRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ScriptProjectsGetMetricsRequest(@JsonProperty("scriptId") String scriptId) {
+        this.scriptId = scriptId;
+  }
 }

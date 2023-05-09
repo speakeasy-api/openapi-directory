@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DeleteLikesPlaylistsPlaylistIdSecurity;
 import org.openapis.openapi.models.operations.DeleteLikesPlaylistsPlaylistIdRequest;
 import org.openapis.openapi.models.operations.DeleteLikesPlaylistsPlaylistIdResponse;
+import org.openapis.openapi.models.operations.DeleteLikesPlaylistsPlaylistIdSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,11 +13,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteLikesPlaylistsPlaylistIdRequest req = new DeleteLikesPlaylistsPlaylistIdRequest() {{
-                playlistId = 548814;
-            }}            
+            DeleteLikesPlaylistsPlaylistIdRequest req = new DeleteLikesPlaylistsPlaylistIdRequest(548814L);            
 
-            DeleteLikesPlaylistsPlaylistIdResponse res = sdk.likes.deleteLikesPlaylistsPlaylistId(req, new DeleteLikesPlaylistsPlaylistIdSecurity() {{
+            DeleteLikesPlaylistsPlaylistIdResponse res = sdk.likes.deleteLikesPlaylistsPlaylistId(req, new DeleteLikesPlaylistsPlaylistIdSecurity("provident") {{
                 authHeader = "YOUR_API_KEY_HERE";
             }});
 
@@ -28,5 +25,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

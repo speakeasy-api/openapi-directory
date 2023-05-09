@@ -18,9 +18,11 @@ public class TestIamPermissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public String[] permissions;
+
     public TestIamPermissionsResponse withPermissions(String[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public TestIamPermissionsResponse(){}
 }

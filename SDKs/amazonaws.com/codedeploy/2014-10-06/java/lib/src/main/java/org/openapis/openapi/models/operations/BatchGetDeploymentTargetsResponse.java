@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetDeploymentTargetsResponse {
@@ -12,6 +13,7 @@ public class BatchGetDeploymentTargetsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetDeploymentTargetsOutput batchGetDeploymentTargetsOutput;
+
     public BatchGetDeploymentTargetsResponse withBatchGetDeploymentTargetsOutput(org.openapis.openapi.models.shared.BatchGetDeploymentTargetsOutput batchGetDeploymentTargetsOutput) {
         this.batchGetDeploymentTargetsOutput = batchGetDeploymentTargetsOutput;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetDeploymentTargetsResponse {
     
     
     public String contentType;
+
     public BatchGetDeploymentTargetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetDeploymentTargetsResponse {
      */
     
     public Object deploymentDoesNotExistException;
+
     public BatchGetDeploymentTargetsResponse withDeploymentDoesNotExistException(Object deploymentDoesNotExistException) {
         this.deploymentDoesNotExistException = deploymentDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetDeploymentTargetsResponse {
      */
     
     public Object deploymentIdRequiredException;
+
     public BatchGetDeploymentTargetsResponse withDeploymentIdRequiredException(Object deploymentIdRequiredException) {
         this.deploymentIdRequiredException = deploymentIdRequiredException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetDeploymentTargetsResponse {
      */
     
     public Object deploymentNotStartedException;
+
     public BatchGetDeploymentTargetsResponse withDeploymentNotStartedException(Object deploymentNotStartedException) {
         this.deploymentNotStartedException = deploymentNotStartedException;
         return this;
@@ -59,6 +65,7 @@ public class BatchGetDeploymentTargetsResponse {
      */
     
     public Object deploymentTargetDoesNotExistException;
+
     public BatchGetDeploymentTargetsResponse withDeploymentTargetDoesNotExistException(Object deploymentTargetDoesNotExistException) {
         this.deploymentTargetDoesNotExistException = deploymentTargetDoesNotExistException;
         return this;
@@ -69,6 +76,7 @@ public class BatchGetDeploymentTargetsResponse {
      */
     
     public Object deploymentTargetIdRequiredException;
+
     public BatchGetDeploymentTargetsResponse withDeploymentTargetIdRequiredException(Object deploymentTargetIdRequiredException) {
         this.deploymentTargetIdRequiredException = deploymentTargetIdRequiredException;
         return this;
@@ -79,6 +87,7 @@ public class BatchGetDeploymentTargetsResponse {
      */
     
     public Object deploymentTargetListSizeExceededException;
+
     public BatchGetDeploymentTargetsResponse withDeploymentTargetListSizeExceededException(Object deploymentTargetListSizeExceededException) {
         this.deploymentTargetListSizeExceededException = deploymentTargetListSizeExceededException;
         return this;
@@ -89,6 +98,7 @@ public class BatchGetDeploymentTargetsResponse {
      */
     
     public Object instanceDoesNotExistException;
+
     public BatchGetDeploymentTargetsResponse withInstanceDoesNotExistException(Object instanceDoesNotExistException) {
         this.instanceDoesNotExistException = instanceDoesNotExistException;
         return this;
@@ -99,6 +109,7 @@ public class BatchGetDeploymentTargetsResponse {
      */
     
     public Object invalidDeploymentIdException;
+
     public BatchGetDeploymentTargetsResponse withInvalidDeploymentIdException(Object invalidDeploymentIdException) {
         this.invalidDeploymentIdException = invalidDeploymentIdException;
         return this;
@@ -109,6 +120,7 @@ public class BatchGetDeploymentTargetsResponse {
      */
     
     public Object invalidDeploymentTargetIdException;
+
     public BatchGetDeploymentTargetsResponse withInvalidDeploymentTargetIdException(Object invalidDeploymentTargetIdException) {
         this.invalidDeploymentTargetIdException = invalidDeploymentTargetIdException;
         return this;
@@ -116,6 +128,7 @@ public class BatchGetDeploymentTargetsResponse {
     
     
     public Integer statusCode;
+
     public BatchGetDeploymentTargetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,9 +136,14 @@ public class BatchGetDeploymentTargetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetDeploymentTargetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetDeploymentTargetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

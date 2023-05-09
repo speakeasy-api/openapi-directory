@@ -15,6 +15,7 @@ public class AvailableVendorsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporateId")
     public Double corporateId;
+
     public AvailableVendorsFilter withCorporateId(Double corporateId) {
         this.corporateId = corporateId;
         return this;
@@ -26,6 +27,7 @@ public class AvailableVendorsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualWorkPermission")
     public Boolean manualWorkPermission;
+
     public AvailableVendorsFilter withManualWorkPermission(Boolean manualWorkPermission) {
         this.manualWorkPermission = manualWorkPermission;
         return this;
@@ -37,6 +39,7 @@ public class AvailableVendorsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLanguage")
     public String sourceLanguage;
+
     public AvailableVendorsFilter withSourceLanguage(String sourceLanguage) {
         this.sourceLanguage = sourceLanguage;
         return this;
@@ -48,6 +51,7 @@ public class AvailableVendorsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLanguages")
     public String[] targetLanguages;
+
     public AvailableVendorsFilter withTargetLanguages(String[] targetLanguages) {
         this.targetLanguages = targetLanguages;
         return this;
@@ -59,9 +63,11 @@ public class AvailableVendorsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("types")
     public AvailableVendorsFilterTypesEnum[] types;
+
     public AvailableVendorsFilter withTypes(AvailableVendorsFilterTypesEnum[] types) {
         this.types = types;
         return this;
     }
     
+    public AvailableVendorsFilter(){}
 }

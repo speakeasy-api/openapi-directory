@@ -18,9 +18,11 @@ public class PushLoginRequest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public PushLoginRequest200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public PushLoginRequest200ApplicationJSON(){}
 }

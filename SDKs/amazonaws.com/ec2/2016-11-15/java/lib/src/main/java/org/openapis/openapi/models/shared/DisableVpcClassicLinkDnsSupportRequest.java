@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DisableVpcClassicLinkDnsSupportRequest {
     
     public String vpcId;
+
     public DisableVpcClassicLinkDnsSupportRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DisableVpcClassicLinkDnsSupportRequest(){}
 }

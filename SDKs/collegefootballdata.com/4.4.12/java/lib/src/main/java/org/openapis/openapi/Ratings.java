@@ -61,11 +61,9 @@ public class Ratings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConferenceSPRatingsResponse res = new org.openapis.openapi.models.operations.GetConferenceSPRatingsResponse() {{
+        org.openapis.openapi.models.operations.GetConferenceSPRatingsResponse res = new org.openapis.openapi.models.operations.GetConferenceSPRatingsResponse(contentType, httpRes.statusCode()) {{
             conferenceSPRatings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Ratings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEloRatingsResponse res = new org.openapis.openapi.models.operations.GetEloRatingsResponse() {{
+        org.openapis.openapi.models.operations.GetEloRatingsResponse res = new org.openapis.openapi.models.operations.GetEloRatingsResponse(contentType, httpRes.statusCode()) {{
             teamEloRatings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class Ratings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSPRatingsResponse res = new org.openapis.openapi.models.operations.GetSPRatingsResponse() {{
+        org.openapis.openapi.models.operations.GetSPRatingsResponse res = new org.openapis.openapi.models.operations.GetSPRatingsResponse(contentType, httpRes.statusCode()) {{
             teamSPRatings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,11 +199,9 @@ public class Ratings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSRSRatingsResponse res = new org.openapis.openapi.models.operations.GetSRSRatingsResponse() {{
+        org.openapis.openapi.models.operations.GetSRSRatingsResponse res = new org.openapis.openapi.models.operations.GetSRSRatingsResponse(contentType, httpRes.statusCode()) {{
             teamSRSRatings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

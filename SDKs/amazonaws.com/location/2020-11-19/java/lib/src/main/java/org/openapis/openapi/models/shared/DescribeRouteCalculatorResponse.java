@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeRouteCalculatorResponse {
     @JsonProperty("CalculatorArn")
     public String calculatorArn;
+
     public DescribeRouteCalculatorResponse withCalculatorArn(String calculatorArn) {
         this.calculatorArn = calculatorArn;
         return this;
@@ -26,6 +27,7 @@ public class DescribeRouteCalculatorResponse {
     
     @JsonProperty("CalculatorName")
     public String calculatorName;
+
     public DescribeRouteCalculatorResponse withCalculatorName(String calculatorName) {
         this.calculatorName = calculatorName;
         return this;
@@ -35,6 +37,7 @@ public class DescribeRouteCalculatorResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public DescribeRouteCalculatorResponse withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -42,6 +45,7 @@ public class DescribeRouteCalculatorResponse {
     
     @JsonProperty("DataSource")
     public String dataSource;
+
     public DescribeRouteCalculatorResponse withDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -49,6 +53,7 @@ public class DescribeRouteCalculatorResponse {
     
     @JsonProperty("Description")
     public String description;
+
     public DescribeRouteCalculatorResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -57,6 +62,7 @@ public class DescribeRouteCalculatorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public DescribeRouteCalculatorResponsePricingPlanEnum pricingPlan;
+
     public DescribeRouteCalculatorResponse withPricingPlan(DescribeRouteCalculatorResponsePricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -65,6 +71,7 @@ public class DescribeRouteCalculatorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public DescribeRouteCalculatorResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -74,9 +81,18 @@ public class DescribeRouteCalculatorResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public DescribeRouteCalculatorResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public DescribeRouteCalculatorResponse(@JsonProperty("CalculatorArn") String calculatorArn, @JsonProperty("CalculatorName") String calculatorName, @JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("DataSource") String dataSource, @JsonProperty("Description") String description, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.calculatorArn = calculatorArn;
+        this.calculatorName = calculatorName;
+        this.createTime = createTime;
+        this.dataSource = dataSource;
+        this.description = description;
+        this.updateTime = updateTime;
+  }
 }

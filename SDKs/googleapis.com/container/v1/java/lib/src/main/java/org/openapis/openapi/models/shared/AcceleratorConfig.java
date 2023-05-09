@@ -18,6 +18,7 @@ public class AcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorCount")
     public String acceleratorCount;
+
     public AcceleratorConfig withAcceleratorCount(String acceleratorCount) {
         this.acceleratorCount = acceleratorCount;
         return this;
@@ -29,6 +30,7 @@ public class AcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorType")
     public String acceleratorType;
+
     public AcceleratorConfig withAcceleratorType(String acceleratorType) {
         this.acceleratorType = acceleratorType;
         return this;
@@ -40,6 +42,7 @@ public class AcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gpuPartitionSize")
     public String gpuPartitionSize;
+
     public AcceleratorConfig withGpuPartitionSize(String gpuPartitionSize) {
         this.gpuPartitionSize = gpuPartitionSize;
         return this;
@@ -51,9 +54,11 @@ public class AcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gpuSharingConfig")
     public GPUSharingConfig gpuSharingConfig;
+
     public AcceleratorConfig withGpuSharingConfig(GPUSharingConfig gpuSharingConfig) {
         this.gpuSharingConfig = gpuSharingConfig;
         return this;
     }
     
+    public AcceleratorConfig(){}
 }

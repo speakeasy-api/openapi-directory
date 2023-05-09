@@ -15,6 +15,7 @@ public class RtcCapabilityWebhooksEventUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public RtcCapabilityWebhooksEventUrl withAddress(String address) {
         this.address = address;
         return this;
@@ -23,9 +24,11 @@ public class RtcCapabilityWebhooksEventUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http_method")
     public RtcCapabilityWebhooksEventUrlHttpMethodEnum httpMethod;
+
     public RtcCapabilityWebhooksEventUrl withHttpMethod(RtcCapabilityWebhooksEventUrlHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
     }
     
+    public RtcCapabilityWebhooksEventUrl(){}
 }

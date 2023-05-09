@@ -20,6 +20,7 @@ public class GenerateDataSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerDefinedValues")
     public java.util.Map<String, String> customerDefinedValues;
+
     public GenerateDataSetRequest withCustomerDefinedValues(java.util.Map<String, String> customerDefinedValues) {
         this.customerDefinedValues = customerDefinedValues;
         return this;
@@ -29,6 +30,7 @@ public class GenerateDataSetRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dataSetPublicationDate")
     public OffsetDateTime dataSetPublicationDate;
+
     public GenerateDataSetRequest withDataSetPublicationDate(OffsetDateTime dataSetPublicationDate) {
         this.dataSetPublicationDate = dataSetPublicationDate;
         return this;
@@ -36,6 +38,7 @@ public class GenerateDataSetRequest {
     
     @JsonProperty("dataSetType")
     public DataSetTypeEnum dataSetType;
+
     public GenerateDataSetRequest withDataSetType(DataSetTypeEnum dataSetType) {
         this.dataSetType = dataSetType;
         return this;
@@ -43,6 +46,7 @@ public class GenerateDataSetRequest {
     
     @JsonProperty("destinationS3BucketName")
     public String destinationS3BucketName;
+
     public GenerateDataSetRequest withDestinationS3BucketName(String destinationS3BucketName) {
         this.destinationS3BucketName = destinationS3BucketName;
         return this;
@@ -51,6 +55,7 @@ public class GenerateDataSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationS3Prefix")
     public String destinationS3Prefix;
+
     public GenerateDataSetRequest withDestinationS3Prefix(String destinationS3Prefix) {
         this.destinationS3Prefix = destinationS3Prefix;
         return this;
@@ -58,6 +63,7 @@ public class GenerateDataSetRequest {
     
     @JsonProperty("roleNameArn")
     public String roleNameArn;
+
     public GenerateDataSetRequest withRoleNameArn(String roleNameArn) {
         this.roleNameArn = roleNameArn;
         return this;
@@ -65,9 +71,17 @@ public class GenerateDataSetRequest {
     
     @JsonProperty("snsTopicArn")
     public String snsTopicArn;
+
     public GenerateDataSetRequest withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
     }
     
+    public GenerateDataSetRequest(@JsonProperty("dataSetPublicationDate") OffsetDateTime dataSetPublicationDate, @JsonProperty("dataSetType") DataSetTypeEnum dataSetType, @JsonProperty("destinationS3BucketName") String destinationS3BucketName, @JsonProperty("roleNameArn") String roleNameArn, @JsonProperty("snsTopicArn") String snsTopicArn) {
+        this.dataSetPublicationDate = dataSetPublicationDate;
+        this.dataSetType = dataSetType;
+        this.destinationS3BucketName = destinationS3BucketName;
+        this.roleNameArn = roleNameArn;
+        this.snsTopicArn = snsTopicArn;
+  }
 }

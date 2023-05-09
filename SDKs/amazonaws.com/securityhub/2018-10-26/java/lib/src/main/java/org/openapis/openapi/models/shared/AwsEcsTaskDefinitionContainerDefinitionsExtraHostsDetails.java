@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsExtraHostsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hostname")
     public String hostname;
+
     public AwsEcsTaskDefinitionContainerDefinitionsExtraHostsDetails withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsExtraHostsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public AwsEcsTaskDefinitionContainerDefinitionsExtraHostsDetails withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsExtraHostsDetails(){}
 }

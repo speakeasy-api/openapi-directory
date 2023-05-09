@@ -18,9 +18,11 @@ public class GoogleCloudOrgpolicyV1BooleanPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforced")
     public Boolean enforced;
+
     public GoogleCloudOrgpolicyV1BooleanPolicy withEnforced(Boolean enforced) {
         this.enforced = enforced;
         return this;
     }
     
+    public GoogleCloudOrgpolicyV1BooleanPolicy(){}
 }

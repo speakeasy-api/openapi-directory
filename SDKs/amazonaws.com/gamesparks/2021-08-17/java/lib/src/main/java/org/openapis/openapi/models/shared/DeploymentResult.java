@@ -15,6 +15,7 @@ public class DeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DeploymentResult withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class DeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultCode")
     public ResultCodeEnum resultCode;
+
     public DeploymentResult withResultCode(ResultCodeEnum resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public DeploymentResult(){}
 }

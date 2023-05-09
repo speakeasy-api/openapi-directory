@@ -19,6 +19,7 @@ public class TflApiPresentationEntitiesJourneyPlannerPlannedWork {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDateTime")
     public OffsetDateTime createdDateTime;
+
     public TflApiPresentationEntitiesJourneyPlannerPlannedWork withCreatedDateTime(OffsetDateTime createdDateTime) {
         this.createdDateTime = createdDateTime;
         return this;
@@ -27,6 +28,7 @@ public class TflApiPresentationEntitiesJourneyPlannerPlannedWork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TflApiPresentationEntitiesJourneyPlannerPlannedWork withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class TflApiPresentationEntitiesJourneyPlannerPlannedWork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TflApiPresentationEntitiesJourneyPlannerPlannedWork withId(String id) {
         this.id = id;
         return this;
@@ -45,9 +48,11 @@ public class TflApiPresentationEntitiesJourneyPlannerPlannedWork {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateDateTime")
     public OffsetDateTime lastUpdateDateTime;
+
     public TflApiPresentationEntitiesJourneyPlannerPlannedWork withLastUpdateDateTime(OffsetDateTime lastUpdateDateTime) {
         this.lastUpdateDateTime = lastUpdateDateTime;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerPlannedWork(){}
 }

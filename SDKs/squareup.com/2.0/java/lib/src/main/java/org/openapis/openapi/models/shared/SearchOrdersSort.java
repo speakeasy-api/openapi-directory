@@ -27,6 +27,7 @@ public class SearchOrdersSort {
      */
     @JsonProperty("sort_field")
     public String sortField;
+
     public SearchOrdersSort withSortField(String sortField) {
         this.sortField = sortField;
         return this;
@@ -38,9 +39,13 @@ public class SearchOrdersSort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort_order")
     public String sortOrder;
+
     public SearchOrdersSort withSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public SearchOrdersSort(@JsonProperty("sort_field") String sortField) {
+        this.sortField = sortField;
+  }
 }

@@ -14,6 +14,7 @@ public class PostApiV1ReportsRequestBody {
      */
     @JsonProperty("account_id")
     public String accountId;
+
     public PostApiV1ReportsRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class PostApiV1ReportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public PostApiV1ReportsRequestBody withComment(String comment) {
         this.comment = comment;
         return this;
@@ -36,6 +38,7 @@ public class PostApiV1ReportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forward")
     public Boolean forward;
+
     public PostApiV1ReportsRequestBody withForward(Boolean forward) {
         this.forward = forward;
         return this;
@@ -47,9 +50,13 @@ public class PostApiV1ReportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_ids")
     public String[] statusIds;
+
     public PostApiV1ReportsRequestBody withStatusIds(String[] statusIds) {
         this.statusIds = statusIds;
         return this;
     }
     
+    public PostApiV1ReportsRequestBody(@JsonProperty("account_id") String accountId) {
+        this.accountId = accountId;
+  }
 }

@@ -18,6 +18,7 @@ public class PdfToLinesWithLocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OcrPages")
     public OcrPageResultWithLinesWithLocation[] ocrPages;
+
     public PdfToLinesWithLocationResult withOcrPages(OcrPageResultWithLinesWithLocation[] ocrPages) {
         this.ocrPages = ocrPages;
         return this;
@@ -29,9 +30,11 @@ public class PdfToLinesWithLocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Successful")
     public Boolean successful;
+
     public PdfToLinesWithLocationResult withSuccessful(Boolean successful) {
         this.successful = successful;
         return this;
     }
     
+    public PdfToLinesWithLocationResult(){}
 }

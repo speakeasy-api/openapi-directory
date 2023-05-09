@@ -14,6 +14,7 @@ public class CreateGroupRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateGroupRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,13 @@ public class CreateGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateGroupRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateGroupRequestBody(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -15,6 +15,7 @@ public class ListDataCellsFilterRequestBodyTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public ListDataCellsFilterRequestBodyTable withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -23,6 +24,7 @@ public class ListDataCellsFilterRequestBodyTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public ListDataCellsFilterRequestBodyTable withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -31,6 +33,7 @@ public class ListDataCellsFilterRequestBodyTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ListDataCellsFilterRequestBodyTable withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class ListDataCellsFilterRequestBodyTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableWildcard")
     public java.util.Map<String, Object> tableWildcard;
+
     public ListDataCellsFilterRequestBodyTable withTableWildcard(java.util.Map<String, Object> tableWildcard) {
         this.tableWildcard = tableWildcard;
         return this;
     }
     
+    public ListDataCellsFilterRequestBodyTable(){}
 }

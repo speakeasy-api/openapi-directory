@@ -22,6 +22,7 @@ public class RecommenderUpdateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public RecommenderUpdateSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class RecommenderUpdateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public RecommenderUpdateSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -40,6 +42,7 @@ public class RecommenderUpdateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public RecommenderUpdateSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -48,6 +51,7 @@ public class RecommenderUpdateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommenderConfig")
     public RecommenderConfig recommenderConfig;
+
     public RecommenderUpdateSummary withRecommenderConfig(RecommenderConfig recommenderConfig) {
         this.recommenderConfig = recommenderConfig;
         return this;
@@ -56,9 +60,11 @@ public class RecommenderUpdateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public RecommenderUpdateSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public RecommenderUpdateSummary(){}
 }

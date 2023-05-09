@@ -59,11 +59,9 @@ public class ChannelsChannelsGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAvailableChannelsResponse res = new org.openapis.openapi.models.operations.GetAvailableChannelsResponse() {{
+        org.openapis.openapi.models.operations.GetAvailableChannelsResponse res = new org.openapis.openapi.models.operations.GetAvailableChannelsResponse(contentType, httpRes.statusCode()) {{
             channelHeaders = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class ChannelsChannelsGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelCategoriesResponse res = new org.openapis.openapi.models.operations.GetChannelCategoriesResponse() {{
+        org.openapis.openapi.models.operations.GetChannelCategoriesResponse res = new org.openapis.openapi.models.operations.GetChannelCategoriesResponse(contentType, httpRes.statusCode()) {{
             channelRootCategory = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class ChannelsChannelsGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelColumnsResponse res = new org.openapis.openapi.models.operations.GetChannelColumnsResponse() {{
+        org.openapis.openapi.models.operations.GetChannelColumnsResponse res = new org.openapis.openapi.models.operations.GetChannelColumnsResponse(contentType, httpRes.statusCode()) {{
             channelColumns = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,11 +189,9 @@ public class ChannelsChannelsGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelInfoResponse res = new org.openapis.openapi.models.operations.GetChannelInfoResponse() {{
+        org.openapis.openapi.models.operations.GetChannelInfoResponse res = new org.openapis.openapi.models.operations.GetChannelInfoResponse(contentType, httpRes.statusCode()) {{
             channelInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

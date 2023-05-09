@@ -18,6 +18,7 @@ public class SourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public SourceInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class SourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SourceInput withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class SourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SourceTypeEnum type;
+
     public SourceInput withType(SourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SourceInput(){}
 }

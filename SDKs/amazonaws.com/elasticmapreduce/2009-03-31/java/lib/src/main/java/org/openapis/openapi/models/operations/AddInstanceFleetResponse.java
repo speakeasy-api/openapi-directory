@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddInstanceFleetResponse {
@@ -12,6 +13,7 @@ public class AddInstanceFleetResponse {
      */
     
     public org.openapis.openapi.models.shared.AddInstanceFleetOutput addInstanceFleetOutput;
+
     public AddInstanceFleetResponse withAddInstanceFleetOutput(org.openapis.openapi.models.shared.AddInstanceFleetOutput addInstanceFleetOutput) {
         this.addInstanceFleetOutput = addInstanceFleetOutput;
         return this;
@@ -19,6 +21,7 @@ public class AddInstanceFleetResponse {
     
     
     public String contentType;
+
     public AddInstanceFleetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AddInstanceFleetResponse {
      */
     
     public Object internalServerException;
+
     public AddInstanceFleetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class AddInstanceFleetResponse {
      */
     
     public Object invalidRequestException;
+
     public AddInstanceFleetResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class AddInstanceFleetResponse {
     
     
     public Integer statusCode;
+
     public AddInstanceFleetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class AddInstanceFleetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddInstanceFleetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddInstanceFleetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

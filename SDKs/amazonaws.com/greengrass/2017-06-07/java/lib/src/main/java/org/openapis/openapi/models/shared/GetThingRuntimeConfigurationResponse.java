@@ -15,9 +15,11 @@ public class GetThingRuntimeConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuntimeConfiguration")
     public RuntimeConfiguration runtimeConfiguration;
+
     public GetThingRuntimeConfigurationResponse withRuntimeConfiguration(RuntimeConfiguration runtimeConfiguration) {
         this.runtimeConfiguration = runtimeConfiguration;
         return this;
     }
     
+    public GetThingRuntimeConfigurationResponse(){}
 }

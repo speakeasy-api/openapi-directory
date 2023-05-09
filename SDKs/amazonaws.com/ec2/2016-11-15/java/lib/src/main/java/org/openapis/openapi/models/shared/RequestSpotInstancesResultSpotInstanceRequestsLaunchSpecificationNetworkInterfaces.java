@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces {
     
     public Boolean associateCarrierIpAddress;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withAssociateCarrierIpAddress(Boolean associateCarrierIpAddress) {
         this.associateCarrierIpAddress = associateCarrierIpAddress;
         return this;
@@ -19,6 +20,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public Boolean associatePublicIpAddress;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         return this;
@@ -26,6 +28,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public Boolean deleteOnTermination;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -33,6 +36,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public String description;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +44,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public Long deviceIndex;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withDeviceIndex(Long deviceIndex) {
         this.deviceIndex = deviceIndex;
         return this;
@@ -47,6 +52,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public String[] groups;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -54,6 +60,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public String interfaceType;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withInterfaceType(String interfaceType) {
         this.interfaceType = interfaceType;
         return this;
@@ -61,6 +68,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public Long ipv4PrefixCount;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withIpv4PrefixCount(Long ipv4PrefixCount) {
         this.ipv4PrefixCount = ipv4PrefixCount;
         return this;
@@ -68,6 +76,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfacesIpv4Prefixes[] ipv4Prefixes;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withIpv4Prefixes(RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfacesIpv4Prefixes[] ipv4Prefixes) {
         this.ipv4Prefixes = ipv4Prefixes;
         return this;
@@ -75,6 +84,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public Long ipv6AddressCount;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withIpv6AddressCount(Long ipv6AddressCount) {
         this.ipv6AddressCount = ipv6AddressCount;
         return this;
@@ -82,6 +92,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfacesIpv6Addresses[] ipv6Addresses;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withIpv6Addresses(RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfacesIpv6Addresses[] ipv6Addresses) {
         this.ipv6Addresses = ipv6Addresses;
         return this;
@@ -89,6 +100,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public Long ipv6PrefixCount;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withIpv6PrefixCount(Long ipv6PrefixCount) {
         this.ipv6PrefixCount = ipv6PrefixCount;
         return this;
@@ -96,6 +108,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfacesIpv6Prefixes[] ipv6Prefixes;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withIpv6Prefixes(RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfacesIpv6Prefixes[] ipv6Prefixes) {
         this.ipv6Prefixes = ipv6Prefixes;
         return this;
@@ -103,6 +116,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public Long networkCardIndex;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withNetworkCardIndex(Long networkCardIndex) {
         this.networkCardIndex = networkCardIndex;
         return this;
@@ -110,6 +124,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public String networkInterfaceId;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -117,6 +132,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public String privateIpAddress;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -124,6 +140,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfacesPrivateIpAddresses[] privateIpAddresses;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withPrivateIpAddresses(RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfacesPrivateIpAddresses[] privateIpAddresses) {
         this.privateIpAddresses = privateIpAddresses;
         return this;
@@ -131,6 +148,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public Long secondaryPrivateIpAddressCount;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withSecondaryPrivateIpAddressCount(Long secondaryPrivateIpAddressCount) {
         this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
         return this;
@@ -138,9 +156,11 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNe
     
     
     public String subnetId;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces(){}
 }

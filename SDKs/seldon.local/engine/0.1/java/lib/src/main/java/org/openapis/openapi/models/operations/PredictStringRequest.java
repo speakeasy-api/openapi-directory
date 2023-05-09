@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictStringRequest {
     @SpeakeasyMetadata("request:mediaType=text/*")
     public String requestBody;
+
     public PredictStringRequest withRequestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class PredictStringRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
     public String deployment;
+
     public PredictStringRequest withDeployment(String deployment) {
         this.deployment = deployment;
         return this;
@@ -23,9 +26,15 @@ public class PredictStringRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
     public String namespace;
+
     public PredictStringRequest withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public PredictStringRequest(@JsonProperty("RequestBody") String requestBody, @JsonProperty("deployment") String deployment, @JsonProperty("namespace") String namespace) {
+        this.requestBody = requestBody;
+        this.deployment = deployment;
+        this.namespace = namespace;
+  }
 }

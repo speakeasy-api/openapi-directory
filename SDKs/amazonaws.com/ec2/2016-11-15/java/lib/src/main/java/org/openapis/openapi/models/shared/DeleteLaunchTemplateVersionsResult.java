@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteLaunchTemplateVersionsResult {
     
     public DeleteLaunchTemplateVersionsResultSuccessfullyDeletedLaunchTemplateVersions[] successfullyDeletedLaunchTemplateVersions;
+
     public DeleteLaunchTemplateVersionsResult withSuccessfullyDeletedLaunchTemplateVersions(DeleteLaunchTemplateVersionsResultSuccessfullyDeletedLaunchTemplateVersions[] successfullyDeletedLaunchTemplateVersions) {
         this.successfullyDeletedLaunchTemplateVersions = successfullyDeletedLaunchTemplateVersions;
         return this;
@@ -19,9 +20,11 @@ public class DeleteLaunchTemplateVersionsResult {
     
     
     public DeleteLaunchTemplateVersionsResultUnsuccessfullyDeletedLaunchTemplateVersions[] unsuccessfullyDeletedLaunchTemplateVersions;
+
     public DeleteLaunchTemplateVersionsResult withUnsuccessfullyDeletedLaunchTemplateVersions(DeleteLaunchTemplateVersionsResultUnsuccessfullyDeletedLaunchTemplateVersions[] unsuccessfullyDeletedLaunchTemplateVersions) {
         this.unsuccessfullyDeletedLaunchTemplateVersions = unsuccessfullyDeletedLaunchTemplateVersions;
         return this;
     }
     
+    public DeleteLaunchTemplateVersionsResult(){}
 }

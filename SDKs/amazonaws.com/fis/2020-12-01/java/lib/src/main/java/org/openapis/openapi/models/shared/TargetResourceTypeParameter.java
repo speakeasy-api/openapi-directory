@@ -15,6 +15,7 @@ public class TargetResourceTypeParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TargetResourceTypeParameter withDescription(String description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class TargetResourceTypeParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public TargetResourceTypeParameter withRequired(Boolean required) {
         this.required = required;
         return this;
     }
     
+    public TargetResourceTypeParameter(){}
 }

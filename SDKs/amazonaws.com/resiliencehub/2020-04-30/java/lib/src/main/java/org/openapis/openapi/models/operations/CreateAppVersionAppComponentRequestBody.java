@@ -15,16 +15,18 @@ public class CreateAppVersionAppComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInfo")
     public java.util.Map<String, String[]> additionalInfo;
+
     public CreateAppVersionAppComponentRequestBody withAdditionalInfo(java.util.Map<String, String[]> additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
     }
     
     /**
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
      */
     @JsonProperty("appArn")
     public String appArn;
+
     public CreateAppVersionAppComponentRequestBody withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -36,6 +38,7 @@ public class CreateAppVersionAppComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateAppVersionAppComponentRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -47,6 +50,7 @@ public class CreateAppVersionAppComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateAppVersionAppComponentRequestBody withId(String id) {
         this.id = id;
         return this;
@@ -57,6 +61,7 @@ public class CreateAppVersionAppComponentRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateAppVersionAppComponentRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -67,9 +72,15 @@ public class CreateAppVersionAppComponentRequestBody {
      */
     @JsonProperty("type")
     public String type;
+
     public CreateAppVersionAppComponentRequestBody withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CreateAppVersionAppComponentRequestBody(@JsonProperty("appArn") String appArn, @JsonProperty("name") String name, @JsonProperty("type") String type) {
+        this.appArn = appArn;
+        this.name = name;
+        this.type = type;
+  }
 }

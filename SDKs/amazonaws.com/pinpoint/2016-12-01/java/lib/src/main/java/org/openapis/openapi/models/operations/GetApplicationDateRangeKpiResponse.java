@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApplicationDateRangeKpiResponse {
@@ -12,6 +13,7 @@ public class GetApplicationDateRangeKpiResponse {
      */
     
     public Object badRequestException;
+
     public GetApplicationDateRangeKpiResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetApplicationDateRangeKpiResponse {
     
     
     public String contentType;
+
     public GetApplicationDateRangeKpiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetApplicationDateRangeKpiResponse {
      */
     
     public Object forbiddenException;
+
     public GetApplicationDateRangeKpiResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetApplicationDateRangeKpiResponse {
      */
     
     public org.openapis.openapi.models.shared.GetApplicationDateRangeKpiResponse getApplicationDateRangeKpiResponse;
+
     public GetApplicationDateRangeKpiResponse withGetApplicationDateRangeKpiResponse(org.openapis.openapi.models.shared.GetApplicationDateRangeKpiResponse getApplicationDateRangeKpiResponse) {
         this.getApplicationDateRangeKpiResponse = getApplicationDateRangeKpiResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetApplicationDateRangeKpiResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetApplicationDateRangeKpiResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetApplicationDateRangeKpiResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetApplicationDateRangeKpiResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetApplicationDateRangeKpiResponse {
      */
     
     public Object notFoundException;
+
     public GetApplicationDateRangeKpiResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetApplicationDateRangeKpiResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetApplicationDateRangeKpiResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetApplicationDateRangeKpiResponse {
     
     
     public Integer statusCode;
+
     public GetApplicationDateRangeKpiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetApplicationDateRangeKpiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApplicationDateRangeKpiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetApplicationDateRangeKpiResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetApplicationDateRangeKpiResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetApplicationDateRangeKpiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

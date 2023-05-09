@@ -18,6 +18,7 @@ public class PhoneNumbers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalPhones")
     public String[] additionalPhones;
+
     public PhoneNumbers withAdditionalPhones(String[] additionalPhones) {
         this.additionalPhones = additionalPhones;
         return this;
@@ -29,9 +30,11 @@ public class PhoneNumbers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryPhone")
     public String primaryPhone;
+
     public PhoneNumbers withPrimaryPhone(String primaryPhone) {
         this.primaryPhone = primaryPhone;
         return this;
     }
     
+    public PhoneNumbers(){}
 }

@@ -12,9 +12,13 @@ public class PutTraceSegmentsRequestBody {
      */
     @JsonProperty("TraceSegmentDocuments")
     public String[] traceSegmentDocuments;
+
     public PutTraceSegmentsRequestBody withTraceSegmentDocuments(String[] traceSegmentDocuments) {
         this.traceSegmentDocuments = traceSegmentDocuments;
         return this;
     }
     
+    public PutTraceSegmentsRequestBody(@JsonProperty("TraceSegmentDocuments") String[] traceSegmentDocuments) {
+        this.traceSegmentDocuments = traceSegmentDocuments;
+  }
 }

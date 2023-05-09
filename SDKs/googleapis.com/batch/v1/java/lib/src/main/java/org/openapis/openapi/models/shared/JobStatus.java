@@ -18,6 +18,7 @@ public class JobStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runDuration")
     public String runDuration;
+
     public JobStatus withRunDuration(String runDuration) {
         this.runDuration = runDuration;
         return this;
@@ -29,6 +30,7 @@ public class JobStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public JobStatusStateEnum state;
+
     public JobStatus withState(JobStatusStateEnum state) {
         this.state = state;
         return this;
@@ -40,6 +42,7 @@ public class JobStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusEvents")
     public StatusEvent[] statusEvents;
+
     public JobStatus withStatusEvents(StatusEvent[] statusEvents) {
         this.statusEvents = statusEvents;
         return this;
@@ -51,9 +54,11 @@ public class JobStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskGroups")
     public java.util.Map<String, TaskGroupStatus> taskGroups;
+
     public JobStatus withTaskGroups(java.util.Map<String, TaskGroupStatus> taskGroups) {
         this.taskGroups = taskGroups;
         return this;
     }
     
+    public JobStatus(){}
 }

@@ -15,6 +15,7 @@ public class ListFlowsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flows")
     public FlowDefinition[] flows;
+
     public ListFlowsResponse withFlows(FlowDefinition[] flows) {
         this.flows = flows;
         return this;
@@ -23,9 +24,11 @@ public class ListFlowsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFlowsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFlowsResponse(){}
 }

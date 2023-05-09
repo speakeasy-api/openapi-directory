@@ -18,6 +18,7 @@ public class DeploymentOutputEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public DeploymentOutputEntry withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class DeploymentOutputEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public DeploymentOutputEntry withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DeploymentOutputEntry(){}
 }

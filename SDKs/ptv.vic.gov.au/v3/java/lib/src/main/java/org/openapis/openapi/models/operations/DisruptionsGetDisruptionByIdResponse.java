@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisruptionsGetDisruptionByIdResponse {
     
     public byte[] body;
+
     public DisruptionsGetDisruptionByIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DisruptionsGetDisruptionByIdResponse {
     
     
     public String contentType;
+
     public DisruptionsGetDisruptionByIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class DisruptionsGetDisruptionByIdResponse {
     
     
     public Integer statusCode;
+
     public DisruptionsGetDisruptionByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class DisruptionsGetDisruptionByIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisruptionsGetDisruptionByIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class DisruptionsGetDisruptionByIdResponse {
      */
     
     public org.openapis.openapi.models.shared.V3DisruptionResponse v3DisruptionResponse;
+
     public DisruptionsGetDisruptionByIdResponse withV3DisruptionResponse(org.openapis.openapi.models.shared.V3DisruptionResponse v3DisruptionResponse) {
         this.v3DisruptionResponse = v3DisruptionResponse;
         return this;
@@ -50,9 +56,14 @@ public class DisruptionsGetDisruptionByIdResponse {
      */
     
     public org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse;
+
     public DisruptionsGetDisruptionByIdResponse withV3ErrorResponse(org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse) {
         this.v3ErrorResponse = v3ErrorResponse;
         return this;
     }
     
+    public DisruptionsGetDisruptionByIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

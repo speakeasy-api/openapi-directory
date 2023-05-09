@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SSESpecification {
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public SSESpecification withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public SSESpecification(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

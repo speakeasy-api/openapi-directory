@@ -18,6 +18,7 @@ public class VideoSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companionSettings")
     public CompanionSetting companionSettings;
+
     public VideoSettings withCompanionSettings(CompanionSetting companionSettings) {
         this.companionSettings = companionSettings;
         return this;
@@ -29,6 +30,7 @@ public class VideoSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationSeconds")
     public Integer durationSeconds;
+
     public VideoSettings withDurationSeconds(Integer durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -40,6 +42,7 @@ public class VideoSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public VideoSettings withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class VideoSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obaEnabled")
     public Boolean obaEnabled;
+
     public VideoSettings withObaEnabled(Boolean obaEnabled) {
         this.obaEnabled = obaEnabled;
         return this;
@@ -62,6 +66,7 @@ public class VideoSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obaSettings")
     public ObaIcon obaSettings;
+
     public VideoSettings withObaSettings(ObaIcon obaSettings) {
         this.obaSettings = obaSettings;
         return this;
@@ -73,6 +78,7 @@ public class VideoSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orientation")
     public VideoSettingsOrientationEnum orientation;
+
     public VideoSettings withOrientation(VideoSettingsOrientationEnum orientation) {
         this.orientation = orientation;
         return this;
@@ -84,6 +90,7 @@ public class VideoSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skippableSettings")
     public SkippableSetting skippableSettings;
+
     public VideoSettings withSkippableSettings(SkippableSetting skippableSettings) {
         this.skippableSettings = skippableSettings;
         return this;
@@ -95,9 +102,11 @@ public class VideoSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcodeSettings")
     public TranscodeSetting transcodeSettings;
+
     public VideoSettings withTranscodeSettings(TranscodeSetting transcodeSettings) {
         this.transcodeSettings = transcodeSettings;
         return this;
     }
     
+    public VideoSettings(){}
 }

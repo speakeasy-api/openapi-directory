@@ -15,9 +15,11 @@ public class GetDedicatedIpPoolResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DedicatedIpPool")
     public DedicatedIpPool dedicatedIpPool;
+
     public GetDedicatedIpPoolResponse withDedicatedIpPool(DedicatedIpPool dedicatedIpPool) {
         this.dedicatedIpPool = dedicatedIpPool;
         return this;
     }
     
+    public GetDedicatedIpPoolResponse(){}
 }

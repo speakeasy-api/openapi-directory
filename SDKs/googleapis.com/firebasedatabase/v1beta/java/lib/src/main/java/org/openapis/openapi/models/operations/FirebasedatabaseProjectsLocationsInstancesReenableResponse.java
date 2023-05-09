@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebasedatabaseProjectsLocationsInstancesReenableResponse {
     
     public String contentType;
+
     public FirebasedatabaseProjectsLocationsInstancesReenableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebasedatabaseProjectsLocationsInstancesReenableResponse {
      */
     
     public org.openapis.openapi.models.shared.DatabaseInstance databaseInstance;
+
     public FirebasedatabaseProjectsLocationsInstancesReenableResponse withDatabaseInstance(org.openapis.openapi.models.shared.DatabaseInstance databaseInstance) {
         this.databaseInstance = databaseInstance;
         return this;
@@ -26,6 +29,7 @@ public class FirebasedatabaseProjectsLocationsInstancesReenableResponse {
     
     
     public Integer statusCode;
+
     public FirebasedatabaseProjectsLocationsInstancesReenableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebasedatabaseProjectsLocationsInstancesReenableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebasedatabaseProjectsLocationsInstancesReenableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebasedatabaseProjectsLocationsInstancesReenableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

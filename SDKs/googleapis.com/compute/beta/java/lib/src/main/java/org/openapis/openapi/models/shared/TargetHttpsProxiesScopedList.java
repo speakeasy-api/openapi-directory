@@ -15,6 +15,7 @@ public class TargetHttpsProxiesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetHttpsProxies")
     public TargetHttpsProxy[] targetHttpsProxies;
+
     public TargetHttpsProxiesScopedList withTargetHttpsProxies(TargetHttpsProxy[] targetHttpsProxies) {
         this.targetHttpsProxies = targetHttpsProxies;
         return this;
@@ -26,9 +27,11 @@ public class TargetHttpsProxiesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public TargetHttpsProxiesScopedListWarning warning;
+
     public TargetHttpsProxiesScopedList withWarning(TargetHttpsProxiesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public TargetHttpsProxiesScopedList(){}
 }

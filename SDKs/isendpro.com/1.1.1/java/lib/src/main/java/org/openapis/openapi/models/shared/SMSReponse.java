@@ -15,9 +15,11 @@ public class SMSReponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etat")
     public SMSReponseEtat etat;
+
     public SMSReponse withEtat(SMSReponseEtat etat) {
         this.etat = etat;
         return this;
     }
     
+    public SMSReponse(){}
 }

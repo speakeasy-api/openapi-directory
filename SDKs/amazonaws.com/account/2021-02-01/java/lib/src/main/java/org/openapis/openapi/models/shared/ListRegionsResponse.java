@@ -15,6 +15,7 @@ public class ListRegionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRegionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRegionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Regions")
     public Region[] regions;
+
     public ListRegionsResponse withRegions(Region[] regions) {
         this.regions = regions;
         return this;
     }
     
+    public ListRegionsResponse(){}
 }

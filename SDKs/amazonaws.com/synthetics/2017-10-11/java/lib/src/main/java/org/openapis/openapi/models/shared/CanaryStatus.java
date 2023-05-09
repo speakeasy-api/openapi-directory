@@ -15,6 +15,7 @@ public class CanaryStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public CanaryStateEnum state;
+
     public CanaryStatus withState(CanaryStateEnum state) {
         this.state = state;
         return this;
@@ -23,6 +24,7 @@ public class CanaryStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReason")
     public String stateReason;
+
     public CanaryStatus withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -31,9 +33,11 @@ public class CanaryStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReasonCode")
     public CanaryStateReasonCodeEnum stateReasonCode;
+
     public CanaryStatus withStateReasonCode(CanaryStateReasonCodeEnum stateReasonCode) {
         this.stateReasonCode = stateReasonCode;
         return this;
     }
     
+    public CanaryStatus(){}
 }

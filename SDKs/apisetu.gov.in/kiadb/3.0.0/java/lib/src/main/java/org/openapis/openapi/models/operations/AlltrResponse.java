@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AlltrResponse {
     
     public String contentType;
+
     public AlltrResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AlltrResponse {
     
     
     public Integer statusCode;
+
     public AlltrResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AlltrResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AlltrResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AlltrResponse {
      */
     
     public Alltr400ApplicationJSON alltr400ApplicationJSONObject;
+
     public AlltrResponse withAlltr400ApplicationJSONObject(Alltr400ApplicationJSON alltr400ApplicationJSONObject) {
         this.alltr400ApplicationJSONObject = alltr400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class AlltrResponse {
      */
     
     public Alltr401ApplicationJSON alltr401ApplicationJSONObject;
+
     public AlltrResponse withAlltr401ApplicationJSONObject(Alltr401ApplicationJSON alltr401ApplicationJSONObject) {
         this.alltr401ApplicationJSONObject = alltr401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class AlltrResponse {
      */
     
     public Alltr404ApplicationJSON alltr404ApplicationJSONObject;
+
     public AlltrResponse withAlltr404ApplicationJSONObject(Alltr404ApplicationJSON alltr404ApplicationJSONObject) {
         this.alltr404ApplicationJSONObject = alltr404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class AlltrResponse {
      */
     
     public Alltr500ApplicationJSON alltr500ApplicationJSONObject;
+
     public AlltrResponse withAlltr500ApplicationJSONObject(Alltr500ApplicationJSON alltr500ApplicationJSONObject) {
         this.alltr500ApplicationJSONObject = alltr500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class AlltrResponse {
      */
     
     public Alltr502ApplicationJSON alltr502ApplicationJSONObject;
+
     public AlltrResponse withAlltr502ApplicationJSONObject(Alltr502ApplicationJSON alltr502ApplicationJSONObject) {
         this.alltr502ApplicationJSONObject = alltr502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class AlltrResponse {
      */
     
     public Alltr503ApplicationJSON alltr503ApplicationJSONObject;
+
     public AlltrResponse withAlltr503ApplicationJSONObject(Alltr503ApplicationJSON alltr503ApplicationJSONObject) {
         this.alltr503ApplicationJSONObject = alltr503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class AlltrResponse {
      */
     
     public Alltr504ApplicationJSON alltr504ApplicationJSONObject;
+
     public AlltrResponse withAlltr504ApplicationJSONObject(Alltr504ApplicationJSON alltr504ApplicationJSONObject) {
         this.alltr504ApplicationJSONObject = alltr504ApplicationJSONObject;
         return this;
     }
     
+    public AlltrResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFindingsResponse {
     
     public String contentType;
+
     public UpdateFindingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFindingsResponse {
      */
     
     public Object internalException;
+
     public UpdateFindingsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFindingsResponse {
      */
     
     public Object invalidAccessException;
+
     public UpdateFindingsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFindingsResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateFindingsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFindingsResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateFindingsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateFindingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateFindingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateFindingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFindingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFindingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFindingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateFindingsResponse {
      */
     
     public java.util.Map<String, Object> updateFindingsResponse;
+
     public UpdateFindingsResponse withUpdateFindingsResponse(java.util.Map<String, Object> updateFindingsResponse) {
         this.updateFindingsResponse = updateFindingsResponse;
         return this;
     }
     
+    public UpdateFindingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

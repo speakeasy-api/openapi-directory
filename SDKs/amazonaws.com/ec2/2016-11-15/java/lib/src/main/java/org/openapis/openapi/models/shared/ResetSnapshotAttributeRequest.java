@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ResetSnapshotAttributeRequest {
     
     public SnapshotAttributeNameEnum attribute;
+
     public ResetSnapshotAttributeRequest withAttribute(SnapshotAttributeNameEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -16,6 +17,7 @@ public class ResetSnapshotAttributeRequest {
     
     
     public Boolean dryRun;
+
     public ResetSnapshotAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,14 @@ public class ResetSnapshotAttributeRequest {
     
     
     public String snapshotId;
+
     public ResetSnapshotAttributeRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public ResetSnapshotAttributeRequest(@JsonProperty("Attribute") SnapshotAttributeNameEnum attribute, @JsonProperty("SnapshotId") String snapshotId) {
+        this.attribute = attribute;
+        this.snapshotId = snapshotId;
+  }
 }

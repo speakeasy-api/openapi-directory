@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsListPublicMembersRequest {
@@ -12,6 +13,7 @@ public class OrgsListPublicMembersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public OrgsListPublicMembersRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -22,6 +24,7 @@ public class OrgsListPublicMembersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public OrgsListPublicMembersRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,9 +35,13 @@ public class OrgsListPublicMembersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public OrgsListPublicMembersRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public OrgsListPublicMembersRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

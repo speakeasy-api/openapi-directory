@@ -12,6 +12,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeFilter")
     public AttributeFilter attributeFilter;
+
     public QueryRequest withAttributeFilter(AttributeFilter attributeFilter) {
         this.attributeFilter = attributeFilter;
         return this;
@@ -20,6 +21,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentRelevanceOverrideConfigurations")
     public DocumentRelevanceConfiguration[] documentRelevanceOverrideConfigurations;
+
     public QueryRequest withDocumentRelevanceOverrideConfigurations(DocumentRelevanceConfiguration[] documentRelevanceOverrideConfigurations) {
         this.documentRelevanceOverrideConfigurations = documentRelevanceOverrideConfigurations;
         return this;
@@ -28,6 +30,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Facets")
     public Facet[] facets;
+
     public QueryRequest withFacets(Facet[] facets) {
         this.facets = facets;
         return this;
@@ -35,6 +38,7 @@ public class QueryRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public QueryRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -43,6 +47,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageNumber")
     public Long pageNumber;
+
     public QueryRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -51,6 +56,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public QueryRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -59,6 +65,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryResultTypeFilter")
     public QueryResultTypeEnum queryResultTypeFilter;
+
     public QueryRequest withQueryResultTypeFilter(QueryResultTypeEnum queryResultTypeFilter) {
         this.queryResultTypeFilter = queryResultTypeFilter;
         return this;
@@ -67,6 +74,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryText")
     public String queryText;
+
     public QueryRequest withQueryText(String queryText) {
         this.queryText = queryText;
         return this;
@@ -75,6 +83,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestedDocumentAttributes")
     public String[] requestedDocumentAttributes;
+
     public QueryRequest withRequestedDocumentAttributes(String[] requestedDocumentAttributes) {
         this.requestedDocumentAttributes = requestedDocumentAttributes;
         return this;
@@ -83,6 +92,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortingConfiguration")
     public SortingConfiguration sortingConfiguration;
+
     public QueryRequest withSortingConfiguration(SortingConfiguration sortingConfiguration) {
         this.sortingConfiguration = sortingConfiguration;
         return this;
@@ -91,6 +101,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpellCorrectionConfiguration")
     public SpellCorrectionConfiguration spellCorrectionConfiguration;
+
     public QueryRequest withSpellCorrectionConfiguration(SpellCorrectionConfiguration spellCorrectionConfiguration) {
         this.spellCorrectionConfiguration = spellCorrectionConfiguration;
         return this;
@@ -99,6 +110,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserContext")
     public UserContext userContext;
+
     public QueryRequest withUserContext(UserContext userContext) {
         this.userContext = userContext;
         return this;
@@ -107,9 +119,13 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VisitorId")
     public String visitorId;
+
     public QueryRequest withVisitorId(String visitorId) {
         this.visitorId = visitorId;
         return this;
     }
     
+    public QueryRequest(@JsonProperty("IndexId") String indexId) {
+        this.indexId = indexId;
+  }
 }

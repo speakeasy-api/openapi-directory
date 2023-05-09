@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartFileTransferResponse {
     
     public String contentType;
+
     public StartFileTransferResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartFileTransferResponse {
      */
     
     public Object internalServiceError;
+
     public StartFileTransferResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class StartFileTransferResponse {
      */
     
     public Object invalidRequestException;
+
     public StartFileTransferResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartFileTransferResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartFileTransferResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartFileTransferResponse {
      */
     
     public Object serviceUnavailableException;
+
     public StartFileTransferResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -59,6 +65,7 @@ public class StartFileTransferResponse {
      */
     
     public org.openapis.openapi.models.shared.StartFileTransferResponse startFileTransferResponse;
+
     public StartFileTransferResponse withStartFileTransferResponse(org.openapis.openapi.models.shared.StartFileTransferResponse startFileTransferResponse) {
         this.startFileTransferResponse = startFileTransferResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartFileTransferResponse {
     
     
     public Integer statusCode;
+
     public StartFileTransferResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartFileTransferResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartFileTransferResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class StartFileTransferResponse {
      */
     
     public Object throttlingException;
+
     public StartFileTransferResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public StartFileTransferResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

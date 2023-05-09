@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissionsResponse {
     
     public String contentType;
+
     public ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissionsR
     
     
     public Integer statusCode;
+
     public ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissionsR
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissionsR
      */
     
     public org.openapis.openapi.models.shared.TestIamPermissionsResponse testIamPermissionsResponse;
+
     public ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissionsResponse withTestIamPermissionsResponse(org.openapis.openapi.models.shared.TestIamPermissionsResponse testIamPermissionsResponse) {
         this.testIamPermissionsResponse = testIamPermissionsResponse;
         return this;
     }
     
+    public ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

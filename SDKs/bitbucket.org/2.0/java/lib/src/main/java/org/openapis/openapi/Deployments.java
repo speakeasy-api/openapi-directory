@@ -50,7 +50,7 @@ public class Deployments {
      */
     public org.openapis.openapi.models.operations.CreateEnvironmentResponse createEnvironment(org.openapis.openapi.models.operations.CreateEnvironmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateEnvironmentRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/environments/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateEnvironmentRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/environments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -67,12 +67,10 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEnvironmentResponse res = new org.openapis.openapi.models.operations.CreateEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.CreateEnvironmentResponse res = new org.openapis.openapi.models.operations.CreateEnvironmentResponse(contentType, httpRes.statusCode()) {{
             deploymentEnvironment = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -116,11 +114,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteEnvironmentForRepositoryResponse res = new org.openapis.openapi.models.operations.DeleteEnvironmentForRepositoryResponse() {{
+        org.openapis.openapi.models.operations.DeleteEnvironmentForRepositoryResponse res = new org.openapis.openapi.models.operations.DeleteEnvironmentForRepositoryResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -166,11 +162,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse res = new org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse res = new org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 403) {
@@ -216,11 +210,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdResponse res = new org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdResponse res = new org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -257,12 +249,10 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeploymentForRepositoryResponse res = new org.openapis.openapi.models.operations.GetDeploymentForRepositoryResponse() {{
+        org.openapis.openapi.models.operations.GetDeploymentForRepositoryResponse res = new org.openapis.openapi.models.operations.GetDeploymentForRepositoryResponse(contentType, httpRes.statusCode()) {{
             deployment = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,7 +282,7 @@ public class Deployments {
      */
     public org.openapis.openapi.models.operations.GetDeploymentsForRepositoryResponse getDeploymentsForRepository(org.openapis.openapi.models.operations.GetDeploymentsForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeploymentsForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deployments/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeploymentsForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -304,11 +294,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeploymentsForRepositoryResponse res = new org.openapis.openapi.models.operations.GetDeploymentsForRepositoryResponse() {{
+        org.openapis.openapi.models.operations.GetDeploymentsForRepositoryResponse res = new org.openapis.openapi.models.operations.GetDeploymentsForRepositoryResponse(contentType, httpRes.statusCode()) {{
             paginatedDeployments = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,12 +331,10 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEnvironmentForRepositoryResponse res = new org.openapis.openapi.models.operations.GetEnvironmentForRepositoryResponse() {{
+        org.openapis.openapi.models.operations.GetEnvironmentForRepositoryResponse res = new org.openapis.openapi.models.operations.GetEnvironmentForRepositoryResponse(contentType, httpRes.statusCode()) {{
             deploymentEnvironment = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -378,7 +364,7 @@ public class Deployments {
      */
     public org.openapis.openapi.models.operations.GetEnvironmentsForRepositoryResponse getEnvironmentsForRepository(org.openapis.openapi.models.operations.GetEnvironmentsForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEnvironmentsForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/environments/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEnvironmentsForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/environments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -390,11 +376,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEnvironmentsForRepositoryResponse res = new org.openapis.openapi.models.operations.GetEnvironmentsForRepositoryResponse() {{
+        org.openapis.openapi.models.operations.GetEnvironmentsForRepositoryResponse res = new org.openapis.openapi.models.operations.GetEnvironmentsForRepositoryResponse(contentType, httpRes.statusCode()) {{
             paginatedEnvironments = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -466,12 +450,10 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysResponse(contentType, httpRes.statusCode()) {{
             paginatedDeployKeys = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -545,12 +527,10 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse(contentType, httpRes.statusCode()) {{
             deployKey = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -636,12 +616,10 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse res = new org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse res = new org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse(contentType, httpRes.statusCode()) {{
             paginatedProjectDeployKeys = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -723,12 +701,10 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdResponse res = new org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdResponse res = new org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdResponse(contentType, httpRes.statusCode()) {{
             projectDeployKey = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -809,12 +785,10 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDeployKeysResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDeployKeysResponse() {{
+        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDeployKeysResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDeployKeysResponse(contentType, httpRes.statusCode()) {{
             deployKey = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -891,12 +865,10 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse res = new org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse() {{
+        org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse res = new org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse(contentType, httpRes.statusCode()) {{
             projectDeployKey = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -976,12 +948,10 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse res = new org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse() {{
+        org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse res = new org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse(contentType, httpRes.statusCode()) {{
             deployKey = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1013,7 +983,7 @@ public class Deployments {
      */
     public org.openapis.openapi.models.operations.UpdateEnvironmentForRepositoryResponse updateEnvironmentForRepository(org.openapis.openapi.models.operations.UpdateEnvironmentForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateEnvironmentForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}/changes/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateEnvironmentForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}/changes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1025,11 +995,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateEnvironmentForRepositoryResponse res = new org.openapis.openapi.models.operations.UpdateEnvironmentForRepositoryResponse() {{
+        org.openapis.openapi.models.operations.UpdateEnvironmentForRepositoryResponse res = new org.openapis.openapi.models.operations.UpdateEnvironmentForRepositoryResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

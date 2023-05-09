@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateReplicationSubnetGroupResponse {
@@ -12,6 +13,7 @@ public class CreateReplicationSubnetGroupResponse {
      */
     
     public Object accessDeniedFault;
+
     public CreateReplicationSubnetGroupResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class CreateReplicationSubnetGroupResponse {
     
     
     public String contentType;
+
     public CreateReplicationSubnetGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateReplicationSubnetGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateReplicationSubnetGroupResponse createReplicationSubnetGroupResponse;
+
     public CreateReplicationSubnetGroupResponse withCreateReplicationSubnetGroupResponse(org.openapis.openapi.models.shared.CreateReplicationSubnetGroupResponse createReplicationSubnetGroupResponse) {
         this.createReplicationSubnetGroupResponse = createReplicationSubnetGroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateReplicationSubnetGroupResponse {
      */
     
     public Object invalidSubnet;
+
     public CreateReplicationSubnetGroupResponse withInvalidSubnet(Object invalidSubnet) {
         this.invalidSubnet = invalidSubnet;
         return this;
@@ -49,6 +54,7 @@ public class CreateReplicationSubnetGroupResponse {
      */
     
     public Object replicationSubnetGroupDoesNotCoverEnoughAZs;
+
     public CreateReplicationSubnetGroupResponse withReplicationSubnetGroupDoesNotCoverEnoughAZs(Object replicationSubnetGroupDoesNotCoverEnoughAZs) {
         this.replicationSubnetGroupDoesNotCoverEnoughAZs = replicationSubnetGroupDoesNotCoverEnoughAZs;
         return this;
@@ -59,6 +65,7 @@ public class CreateReplicationSubnetGroupResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public CreateReplicationSubnetGroupResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -66,6 +73,7 @@ public class CreateReplicationSubnetGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateReplicationSubnetGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateReplicationSubnetGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateReplicationSubnetGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateReplicationSubnetGroupResponse {
      */
     
     public Object resourceAlreadyExistsFault;
+
     public CreateReplicationSubnetGroupResponse withResourceAlreadyExistsFault(Object resourceAlreadyExistsFault) {
         this.resourceAlreadyExistsFault = resourceAlreadyExistsFault;
         return this;
@@ -93,9 +103,14 @@ public class CreateReplicationSubnetGroupResponse {
      */
     
     public Object resourceQuotaExceededFault;
+
     public CreateReplicationSubnetGroupResponse withResourceQuotaExceededFault(Object resourceQuotaExceededFault) {
         this.resourceQuotaExceededFault = resourceQuotaExceededFault;
         return this;
     }
     
+    public CreateReplicationSubnetGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

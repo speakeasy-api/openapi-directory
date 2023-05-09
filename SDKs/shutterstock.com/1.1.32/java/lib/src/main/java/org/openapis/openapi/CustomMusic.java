@@ -59,11 +59,9 @@ public class CustomMusic {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAudioRendersResponse res = new org.openapis.openapi.models.operations.CreateAudioRendersResponse() {{
+        org.openapis.openapi.models.operations.CreateAudioRendersResponse res = new org.openapis.openapi.models.operations.CreateAudioRendersResponse(contentType, httpRes.statusCode()) {{
             audioRendersListResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class CustomMusic {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchRendersResponse res = new org.openapis.openapi.models.operations.FetchRendersResponse() {{
+        org.openapis.openapi.models.operations.FetchRendersResponse res = new org.openapis.openapi.models.operations.FetchRendersResponse(contentType, httpRes.statusCode()) {{
             audioRendersListResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class CustomMusic {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCustomDescriptorsResponse res = new org.openapis.openapi.models.operations.ListCustomDescriptorsResponse() {{
+        org.openapis.openapi.models.operations.ListCustomDescriptorsResponse res = new org.openapis.openapi.models.operations.ListCustomDescriptorsResponse(contentType, httpRes.statusCode()) {{
             descriptorsListResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -206,11 +200,9 @@ public class CustomMusic {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCustomInstrumentsResponse res = new org.openapis.openapi.models.operations.ListCustomInstrumentsResponse() {{
+        org.openapis.openapi.models.operations.ListCustomInstrumentsResponse res = new org.openapis.openapi.models.operations.ListCustomInstrumentsResponse(contentType, httpRes.statusCode()) {{
             instrumentsListResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

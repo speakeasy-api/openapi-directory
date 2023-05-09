@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CarePlansReadResponse {
@@ -12,6 +13,7 @@ public class CarePlansReadResponse {
      */
     
     public org.openapis.openapi.models.shared.CarePlan carePlan;
+
     public CarePlansReadResponse withCarePlan(org.openapis.openapi.models.shared.CarePlan carePlan) {
         this.carePlan = carePlan;
         return this;
@@ -19,6 +21,7 @@ public class CarePlansReadResponse {
     
     
     public String contentType;
+
     public CarePlansReadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CarePlansReadResponse {
     
     
     public Integer statusCode;
+
     public CarePlansReadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CarePlansReadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CarePlansReadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CarePlansReadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

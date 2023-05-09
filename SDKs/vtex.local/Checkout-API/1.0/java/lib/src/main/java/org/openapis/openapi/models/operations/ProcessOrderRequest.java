@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProcessOrderRequest {
@@ -12,6 +13,7 @@ public class ProcessOrderRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ProcessOrderRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ProcessOrderRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ProcessOrderRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class ProcessOrderRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Cookie")
     public String cookie;
+
     public ProcessOrderRequest withCookie(String cookie) {
         this.cookie = cookie;
         return this;
@@ -42,9 +46,16 @@ public class ProcessOrderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderGroup")
     public String orderGroup;
+
     public ProcessOrderRequest withOrderGroup(String orderGroup) {
         this.orderGroup = orderGroup;
         return this;
     }
     
+    public ProcessOrderRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("Cookie") String cookie, @JsonProperty("orderGroup") String orderGroup) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.cookie = cookie;
+        this.orderGroup = orderGroup;
+  }
 }

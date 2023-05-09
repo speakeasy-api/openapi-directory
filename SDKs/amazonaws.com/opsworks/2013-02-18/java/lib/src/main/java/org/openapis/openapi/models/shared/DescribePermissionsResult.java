@@ -15,9 +15,11 @@ public class DescribePermissionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permissions")
     public Permission[] permissions;
+
     public DescribePermissionsResult withPermissions(Permission[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public DescribePermissionsResult(){}
 }

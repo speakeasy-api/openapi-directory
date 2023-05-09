@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListSnapshotsInRecycleBinRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETListSnapshotsInRecycleBinActionEnum action;
+
     public GETListSnapshotsInRecycleBinRequest withAction(GETListSnapshotsInRecycleBinActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETListSnapshotsInRecycleBinRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETListSnapshotsInRecycleBinRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETListSnapshotsInRecycleBinRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public Long maxResults;
+
     public GETListSnapshotsInRecycleBinRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -39,6 +43,7 @@ public class GETListSnapshotsInRecycleBinRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public GETListSnapshotsInRecycleBinRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -49,6 +54,7 @@ public class GETListSnapshotsInRecycleBinRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotId")
     public String[] snapshotId;
+
     public GETListSnapshotsInRecycleBinRequest withSnapshotId(String[] snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -56,6 +62,7 @@ public class GETListSnapshotsInRecycleBinRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETListSnapshotsInRecycleBinVersionEnum version;
+
     public GETListSnapshotsInRecycleBinRequest withVersion(GETListSnapshotsInRecycleBinVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETListSnapshotsInRecycleBinRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETListSnapshotsInRecycleBinRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETListSnapshotsInRecycleBinRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETListSnapshotsInRecycleBinRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETListSnapshotsInRecycleBinRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETListSnapshotsInRecycleBinRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETListSnapshotsInRecycleBinRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETListSnapshotsInRecycleBinRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETListSnapshotsInRecycleBinRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETListSnapshotsInRecycleBinRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETListSnapshotsInRecycleBinRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETListSnapshotsInRecycleBinRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,14 @@ public class GETListSnapshotsInRecycleBinRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETListSnapshotsInRecycleBinRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETListSnapshotsInRecycleBinRequest(@JsonProperty("Action") GETListSnapshotsInRecycleBinActionEnum action, @JsonProperty("Version") GETListSnapshotsInRecycleBinVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

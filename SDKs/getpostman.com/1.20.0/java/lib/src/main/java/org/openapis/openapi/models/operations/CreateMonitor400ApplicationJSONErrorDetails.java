@@ -12,9 +12,11 @@ public class CreateMonitor400ApplicationJSONErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("param")
     public String param;
+
     public CreateMonitor400ApplicationJSONErrorDetails withParam(String param) {
         this.param = param;
         return this;
     }
     
+    public CreateMonitor400ApplicationJSONErrorDetails(){}
 }

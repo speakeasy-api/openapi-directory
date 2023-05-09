@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateTransitGatewayRouteTableAnnouncementRequest {
     
     public Boolean dryRun;
+
     public CreateTransitGatewayRouteTableAnnouncementRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreateTransitGatewayRouteTableAnnouncementRequest {
     
     
     public String peeringAttachmentId;
+
     public CreateTransitGatewayRouteTableAnnouncementRequest withPeeringAttachmentId(String peeringAttachmentId) {
         this.peeringAttachmentId = peeringAttachmentId;
         return this;
@@ -23,6 +25,7 @@ public class CreateTransitGatewayRouteTableAnnouncementRequest {
     
     
     public CreateTransitGatewayRouteTableAnnouncementRequestTagSpecifications[] tagSpecifications;
+
     public CreateTransitGatewayRouteTableAnnouncementRequest withTagSpecifications(CreateTransitGatewayRouteTableAnnouncementRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -30,9 +33,14 @@ public class CreateTransitGatewayRouteTableAnnouncementRequest {
     
     
     public String transitGatewayRouteTableId;
+
     public CreateTransitGatewayRouteTableAnnouncementRequest withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
     }
     
+    public CreateTransitGatewayRouteTableAnnouncementRequest(@JsonProperty("PeeringAttachmentId") String peeringAttachmentId, @JsonProperty("TransitGatewayRouteTableId") String transitGatewayRouteTableId) {
+        this.peeringAttachmentId = peeringAttachmentId;
+        this.transitGatewayRouteTableId = transitGatewayRouteTableId;
+  }
 }

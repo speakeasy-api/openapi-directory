@@ -18,6 +18,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public PermissionConstraint[] constraints;
+
     public Permission withConstraints(PermissionConstraint[] constraints) {
         this.constraints = constraints;
         return this;
@@ -29,6 +30,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hosts")
     public String[] hosts;
+
     public Permission withHosts(String[] hosts) {
         this.hosts = hosts;
         return this;
@@ -40,6 +42,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("methods")
     public String[] methods;
+
     public Permission withMethods(String[] methods) {
         this.methods = methods;
         return this;
@@ -51,6 +54,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notHosts")
     public String[] notHosts;
+
     public Permission withNotHosts(String[] notHosts) {
         this.notHosts = notHosts;
         return this;
@@ -62,6 +66,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notMethods")
     public String[] notMethods;
+
     public Permission withNotMethods(String[] notMethods) {
         this.notMethods = notMethods;
         return this;
@@ -73,6 +78,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notPaths")
     public String[] notPaths;
+
     public Permission withNotPaths(String[] notPaths) {
         this.notPaths = notPaths;
         return this;
@@ -84,6 +90,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notPorts")
     public String[] notPorts;
+
     public Permission withNotPorts(String[] notPorts) {
         this.notPorts = notPorts;
         return this;
@@ -95,6 +102,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paths")
     public String[] paths;
+
     public Permission withPaths(String[] paths) {
         this.paths = paths;
         return this;
@@ -106,9 +114,11 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ports")
     public String[] ports;
+
     public Permission withPorts(String[] ports) {
         this.ports = ports;
         return this;
     }
     
+    public Permission(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BrlcsResponse {
     
     public String contentType;
+
     public BrlcsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BrlcsResponse {
     
     
     public Integer statusCode;
+
     public BrlcsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BrlcsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BrlcsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class BrlcsResponse {
      */
     
     public Brlcs400ApplicationJSON brlcs400ApplicationJSONObject;
+
     public BrlcsResponse withBrlcs400ApplicationJSONObject(Brlcs400ApplicationJSON brlcs400ApplicationJSONObject) {
         this.brlcs400ApplicationJSONObject = brlcs400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class BrlcsResponse {
      */
     
     public Brlcs401ApplicationJSON brlcs401ApplicationJSONObject;
+
     public BrlcsResponse withBrlcs401ApplicationJSONObject(Brlcs401ApplicationJSON brlcs401ApplicationJSONObject) {
         this.brlcs401ApplicationJSONObject = brlcs401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class BrlcsResponse {
      */
     
     public Brlcs404ApplicationJSON brlcs404ApplicationJSONObject;
+
     public BrlcsResponse withBrlcs404ApplicationJSONObject(Brlcs404ApplicationJSON brlcs404ApplicationJSONObject) {
         this.brlcs404ApplicationJSONObject = brlcs404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class BrlcsResponse {
      */
     
     public Brlcs500ApplicationJSON brlcs500ApplicationJSONObject;
+
     public BrlcsResponse withBrlcs500ApplicationJSONObject(Brlcs500ApplicationJSON brlcs500ApplicationJSONObject) {
         this.brlcs500ApplicationJSONObject = brlcs500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class BrlcsResponse {
      */
     
     public Brlcs502ApplicationJSON brlcs502ApplicationJSONObject;
+
     public BrlcsResponse withBrlcs502ApplicationJSONObject(Brlcs502ApplicationJSON brlcs502ApplicationJSONObject) {
         this.brlcs502ApplicationJSONObject = brlcs502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class BrlcsResponse {
      */
     
     public Brlcs503ApplicationJSON brlcs503ApplicationJSONObject;
+
     public BrlcsResponse withBrlcs503ApplicationJSONObject(Brlcs503ApplicationJSON brlcs503ApplicationJSONObject) {
         this.brlcs503ApplicationJSONObject = brlcs503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class BrlcsResponse {
      */
     
     public Brlcs504ApplicationJSON brlcs504ApplicationJSONObject;
+
     public BrlcsResponse withBrlcs504ApplicationJSONObject(Brlcs504ApplicationJSON brlcs504ApplicationJSONObject) {
         this.brlcs504ApplicationJSONObject = brlcs504ApplicationJSONObject;
         return this;
     }
     
+    public BrlcsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

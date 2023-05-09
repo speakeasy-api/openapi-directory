@@ -15,9 +15,11 @@ public class GetAccountAliasResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountAlias")
     public String accountAlias;
+
     public GetAccountAliasResult withAccountAlias(String accountAlias) {
         this.accountAlias = accountAlias;
         return this;
     }
     
+    public GetAccountAliasResult(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RetrieveEnvironmentInfoResultMessage {
     
     public EnvironmentInfoDescription[] environmentInfo;
+
     public RetrieveEnvironmentInfoResultMessage withEnvironmentInfo(EnvironmentInfoDescription[] environmentInfo) {
         this.environmentInfo = environmentInfo;
         return this;
     }
     
+    public RetrieveEnvironmentInfoResultMessage(){}
 }

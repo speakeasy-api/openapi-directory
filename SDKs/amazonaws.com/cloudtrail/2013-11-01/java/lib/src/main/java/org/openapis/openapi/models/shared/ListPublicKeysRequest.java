@@ -22,6 +22,7 @@ public class ListPublicKeysRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public ListPublicKeysRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -30,6 +31,7 @@ public class ListPublicKeysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPublicKeysRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -40,9 +42,11 @@ public class ListPublicKeysRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public ListPublicKeysRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ListPublicKeysRequest(){}
 }

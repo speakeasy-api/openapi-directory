@@ -15,6 +15,7 @@ public class EventPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public EventPayload withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,9 +24,11 @@ public class EventPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public EventPayload withData(String data) {
         this.data = data;
         return this;
     }
     
+    public EventPayload(){}
 }

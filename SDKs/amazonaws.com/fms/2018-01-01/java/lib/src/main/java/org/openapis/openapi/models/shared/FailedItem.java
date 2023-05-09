@@ -15,6 +15,7 @@ public class FailedItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public FailedItemReasonEnum reason;
+
     public FailedItem withReason(FailedItemReasonEnum reason) {
         this.reason = reason;
         return this;
@@ -23,9 +24,11 @@ public class FailedItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("URI")
     public String uri;
+
     public FailedItem withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public FailedItem(){}
 }

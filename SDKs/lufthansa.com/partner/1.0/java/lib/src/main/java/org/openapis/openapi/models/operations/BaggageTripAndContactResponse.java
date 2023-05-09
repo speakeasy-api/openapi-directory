@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BaggageTripAndContactResponse {
     
     public String baggageTripAndContact200ApplicationJSONString;
+
     public BaggageTripAndContactResponse withBaggageTripAndContact200ApplicationJSONString(String baggageTripAndContact200ApplicationJSONString) {
         this.baggageTripAndContact200ApplicationJSONString = baggageTripAndContact200ApplicationJSONString;
         return this;
@@ -16,6 +18,7 @@ public class BaggageTripAndContactResponse {
     
     
     public String contentType;
+
     public BaggageTripAndContactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class BaggageTripAndContactResponse {
     
     
     public Integer statusCode;
+
     public BaggageTripAndContactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class BaggageTripAndContactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BaggageTripAndContactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BaggageTripAndContactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

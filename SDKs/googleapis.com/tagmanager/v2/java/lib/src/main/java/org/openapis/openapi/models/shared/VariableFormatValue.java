@@ -15,6 +15,7 @@ public class VariableFormatValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseConversionType")
     public VariableFormatValueCaseConversionTypeEnum caseConversionType;
+
     public VariableFormatValue withCaseConversionType(VariableFormatValueCaseConversionTypeEnum caseConversionType) {
         this.caseConversionType = caseConversionType;
         return this;
@@ -26,6 +27,7 @@ public class VariableFormatValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("convertFalseToValue")
     public Parameter convertFalseToValue;
+
     public VariableFormatValue withConvertFalseToValue(Parameter convertFalseToValue) {
         this.convertFalseToValue = convertFalseToValue;
         return this;
@@ -37,6 +39,7 @@ public class VariableFormatValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("convertNullToValue")
     public Parameter convertNullToValue;
+
     public VariableFormatValue withConvertNullToValue(Parameter convertNullToValue) {
         this.convertNullToValue = convertNullToValue;
         return this;
@@ -48,6 +51,7 @@ public class VariableFormatValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("convertTrueToValue")
     public Parameter convertTrueToValue;
+
     public VariableFormatValue withConvertTrueToValue(Parameter convertTrueToValue) {
         this.convertTrueToValue = convertTrueToValue;
         return this;
@@ -59,9 +63,11 @@ public class VariableFormatValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("convertUndefinedToValue")
     public Parameter convertUndefinedToValue;
+
     public VariableFormatValue withConvertUndefinedToValue(Parameter convertUndefinedToValue) {
         this.convertUndefinedToValue = convertUndefinedToValue;
         return this;
     }
     
+    public VariableFormatValue(){}
 }

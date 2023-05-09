@@ -15,6 +15,7 @@ public class RoutingControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlPanelArn")
     public String controlPanelArn;
+
     public RoutingControl withControlPanelArn(String controlPanelArn) {
         this.controlPanelArn = controlPanelArn;
         return this;
@@ -23,6 +24,7 @@ public class RoutingControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RoutingControl withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class RoutingControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingControlArn")
     public String routingControlArn;
+
     public RoutingControl withRoutingControlArn(String routingControlArn) {
         this.routingControlArn = routingControlArn;
         return this;
@@ -39,9 +42,11 @@ public class RoutingControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusEnum status;
+
     public RoutingControl withStatus(StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public RoutingControl(){}
 }

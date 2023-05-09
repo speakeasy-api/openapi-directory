@@ -15,6 +15,7 @@ public class MatchAlliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dq_team_keys")
     public String[] dqTeamKeys;
+
     public MatchAlliance withDqTeamKeys(String[] dqTeamKeys) {
         this.dqTeamKeys = dqTeamKeys;
         return this;
@@ -25,6 +26,7 @@ public class MatchAlliance {
      */
     @JsonProperty("score")
     public Long score;
+
     public MatchAlliance withScore(Long score) {
         this.score = score;
         return this;
@@ -36,6 +38,7 @@ public class MatchAlliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surrogate_team_keys")
     public String[] surrogateTeamKeys;
+
     public MatchAlliance withSurrogateTeamKeys(String[] surrogateTeamKeys) {
         this.surrogateTeamKeys = surrogateTeamKeys;
         return this;
@@ -43,9 +46,14 @@ public class MatchAlliance {
     
     @JsonProperty("team_keys")
     public String[] teamKeys;
+
     public MatchAlliance withTeamKeys(String[] teamKeys) {
         this.teamKeys = teamKeys;
         return this;
     }
     
+    public MatchAlliance(@JsonProperty("score") Long score, @JsonProperty("team_keys") String[] teamKeys) {
+        this.score = score;
+        this.teamKeys = teamKeys;
+  }
 }

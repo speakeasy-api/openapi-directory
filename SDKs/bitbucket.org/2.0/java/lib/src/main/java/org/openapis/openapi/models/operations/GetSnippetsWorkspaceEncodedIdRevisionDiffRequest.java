@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSnippetsWorkspaceEncodedIdRevisionDiffRequest {
@@ -12,6 +13,7 @@ public class GetSnippetsWorkspaceEncodedIdRevisionDiffRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=encoded_id")
     public String encodedId;
+
     public GetSnippetsWorkspaceEncodedIdRevisionDiffRequest withEncodedId(String encodedId) {
         this.encodedId = encodedId;
         return this;
@@ -22,6 +24,7 @@ public class GetSnippetsWorkspaceEncodedIdRevisionDiffRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
     public String path;
+
     public GetSnippetsWorkspaceEncodedIdRevisionDiffRequest withPath(String path) {
         this.path = path;
         return this;
@@ -32,6 +35,7 @@ public class GetSnippetsWorkspaceEncodedIdRevisionDiffRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=revision")
     public String revision;
+
     public GetSnippetsWorkspaceEncodedIdRevisionDiffRequest withRevision(String revision) {
         this.revision = revision;
         return this;
@@ -44,9 +48,15 @@ public class GetSnippetsWorkspaceEncodedIdRevisionDiffRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetSnippetsWorkspaceEncodedIdRevisionDiffRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetSnippetsWorkspaceEncodedIdRevisionDiffRequest(@JsonProperty("encoded_id") String encodedId, @JsonProperty("revision") String revision, @JsonProperty("workspace") String workspace) {
+        this.encodedId = encodedId;
+        this.revision = revision;
+        this.workspace = workspace;
+  }
 }

@@ -15,6 +15,7 @@ public class FirewallStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityUsageSummary")
     public CapacityUsageSummary capacityUsageSummary;
+
     public FirewallStatus withCapacityUsageSummary(CapacityUsageSummary capacityUsageSummary) {
         this.capacityUsageSummary = capacityUsageSummary;
         return this;
@@ -22,6 +23,7 @@ public class FirewallStatus {
     
     @JsonProperty("ConfigurationSyncStateSummary")
     public ConfigurationSyncStateEnum configurationSyncStateSummary;
+
     public FirewallStatus withConfigurationSyncStateSummary(ConfigurationSyncStateEnum configurationSyncStateSummary) {
         this.configurationSyncStateSummary = configurationSyncStateSummary;
         return this;
@@ -29,6 +31,7 @@ public class FirewallStatus {
     
     @JsonProperty("Status")
     public FirewallStatusValueEnum status;
+
     public FirewallStatus withStatus(FirewallStatusValueEnum status) {
         this.status = status;
         return this;
@@ -37,9 +40,14 @@ public class FirewallStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncStates")
     public java.util.Map<String, SyncState> syncStates;
+
     public FirewallStatus withSyncStates(java.util.Map<String, SyncState> syncStates) {
         this.syncStates = syncStates;
         return this;
     }
     
+    public FirewallStatus(@JsonProperty("ConfigurationSyncStateSummary") ConfigurationSyncStateEnum configurationSyncStateSummary, @JsonProperty("Status") FirewallStatusValueEnum status) {
+        this.configurationSyncStateSummary = configurationSyncStateSummary;
+        this.status = status;
+  }
 }

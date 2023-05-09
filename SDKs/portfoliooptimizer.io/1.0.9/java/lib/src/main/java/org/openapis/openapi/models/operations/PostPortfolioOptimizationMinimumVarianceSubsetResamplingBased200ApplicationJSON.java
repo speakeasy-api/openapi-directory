@@ -15,9 +15,13 @@ public class PostPortfolioOptimizationMinimumVarianceSubsetResamplingBased200App
      */
     @JsonProperty("assetsWeights")
     public Double[] assetsWeights;
+
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBased200ApplicationJSON withAssetsWeights(Double[] assetsWeights) {
         this.assetsWeights = assetsWeights;
         return this;
     }
     
+    public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBased200ApplicationJSON(@JsonProperty("assetsWeights") Double[] assetsWeights) {
+        this.assetsWeights = assetsWeights;
+  }
 }

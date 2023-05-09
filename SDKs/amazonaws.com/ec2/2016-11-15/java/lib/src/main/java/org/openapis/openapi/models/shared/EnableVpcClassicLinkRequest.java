@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class EnableVpcClassicLinkRequest {
     
     public Boolean dryRun;
+
     public EnableVpcClassicLinkRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class EnableVpcClassicLinkRequest {
     
     
     public String vpcId;
+
     public EnableVpcClassicLinkRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public EnableVpcClassicLinkRequest(@JsonProperty("VpcId") String vpcId) {
+        this.vpcId = vpcId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TransactWriteItemsResponse {
     
     public String contentType;
+
     public TransactWriteItemsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TransactWriteItemsResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public TransactWriteItemsResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -29,6 +32,7 @@ public class TransactWriteItemsResponse {
      */
     
     public Object internalServerError;
+
     public TransactWriteItemsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class TransactWriteItemsResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public TransactWriteItemsResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -46,6 +51,7 @@ public class TransactWriteItemsResponse {
     
     
     public Integer statusCode;
+
     public TransactWriteItemsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class TransactWriteItemsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TransactWriteItemsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class TransactWriteItemsResponse {
      */
     
     public Object requestLimitExceeded;
+
     public TransactWriteItemsResponse withRequestLimitExceeded(Object requestLimitExceeded) {
         this.requestLimitExceeded = requestLimitExceeded;
         return this;
@@ -73,6 +81,7 @@ public class TransactWriteItemsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public TransactWriteItemsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class TransactWriteItemsResponse {
      */
     
     public org.openapis.openapi.models.shared.TransactWriteItemsOutput transactWriteItemsOutput;
+
     public TransactWriteItemsResponse withTransactWriteItemsOutput(org.openapis.openapi.models.shared.TransactWriteItemsOutput transactWriteItemsOutput) {
         this.transactWriteItemsOutput = transactWriteItemsOutput;
         return this;
@@ -93,6 +103,7 @@ public class TransactWriteItemsResponse {
      */
     
     public Object transactionCanceledException;
+
     public TransactWriteItemsResponse withTransactionCanceledException(Object transactionCanceledException) {
         this.transactionCanceledException = transactionCanceledException;
         return this;
@@ -103,9 +114,14 @@ public class TransactWriteItemsResponse {
      */
     
     public Object transactionInProgressException;
+
     public TransactWriteItemsResponse withTransactionInProgressException(Object transactionInProgressException) {
         this.transactionInProgressException = transactionInProgressException;
         return this;
     }
     
+    public TransactWriteItemsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

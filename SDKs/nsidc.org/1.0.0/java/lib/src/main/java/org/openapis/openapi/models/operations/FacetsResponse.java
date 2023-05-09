@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FacetsResponse {
     
     public String contentType;
+
     public FacetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class FacetsResponse {
     
     
     public Integer statusCode;
+
     public FacetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class FacetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FacetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class FacetsResponse {
      */
     
     public String facets200ApplicationNsidcfacetsPlusXmlString;
+
     public FacetsResponse withFacets200ApplicationNsidcfacetsPlusXmlString(String facets200ApplicationNsidcfacetsPlusXmlString) {
         this.facets200ApplicationNsidcfacetsPlusXmlString = facets200ApplicationNsidcfacetsPlusXmlString;
         return this;
     }
     
+    public FacetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Account withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public Account withEmail(String email) {
         this.email = email;
         return this;
@@ -36,6 +38,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Account withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +47,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JoinedMethod")
     public AccountJoinedMethodEnum joinedMethod;
+
     public Account withJoinedMethod(AccountJoinedMethodEnum joinedMethod) {
         this.joinedMethod = joinedMethod;
         return this;
@@ -54,6 +58,7 @@ public class Account {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("JoinedTimestamp")
     public OffsetDateTime joinedTimestamp;
+
     public Account withJoinedTimestamp(OffsetDateTime joinedTimestamp) {
         this.joinedTimestamp = joinedTimestamp;
         return this;
@@ -62,6 +67,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Account withName(String name) {
         this.name = name;
         return this;
@@ -70,9 +76,11 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AccountStatusEnum status;
+
     public Account withStatus(AccountStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Account(){}
 }

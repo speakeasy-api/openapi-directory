@@ -14,6 +14,7 @@ public class DisassociateAssetsRequestBody {
      */
     @JsonProperty("childAssetId")
     public String childAssetId;
+
     public DisassociateAssetsRequestBody withChildAssetId(String childAssetId) {
         this.childAssetId = childAssetId;
         return this;
@@ -25,6 +26,7 @@ public class DisassociateAssetsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DisassociateAssetsRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -35,9 +37,14 @@ public class DisassociateAssetsRequestBody {
      */
     @JsonProperty("hierarchyId")
     public String hierarchyId;
+
     public DisassociateAssetsRequestBody withHierarchyId(String hierarchyId) {
         this.hierarchyId = hierarchyId;
         return this;
     }
     
+    public DisassociateAssetsRequestBody(@JsonProperty("childAssetId") String childAssetId, @JsonProperty("hierarchyId") String hierarchyId) {
+        this.childAssetId = childAssetId;
+        this.hierarchyId = hierarchyId;
+  }
 }

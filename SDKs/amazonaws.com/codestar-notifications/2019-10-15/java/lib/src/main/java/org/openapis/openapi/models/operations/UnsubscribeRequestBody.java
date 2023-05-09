@@ -12,6 +12,7 @@ public class UnsubscribeRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public UnsubscribeRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,9 +23,14 @@ public class UnsubscribeRequestBody {
      */
     @JsonProperty("TargetAddress")
     public String targetAddress;
+
     public UnsubscribeRequestBody withTargetAddress(String targetAddress) {
         this.targetAddress = targetAddress;
         return this;
     }
     
+    public UnsubscribeRequestBody(@JsonProperty("Arn") String arn, @JsonProperty("TargetAddress") String targetAddress) {
+        this.arn = arn;
+        this.targetAddress = targetAddress;
+  }
 }

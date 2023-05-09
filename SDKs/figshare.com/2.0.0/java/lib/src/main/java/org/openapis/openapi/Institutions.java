@@ -57,12 +57,10 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountInstitutionCurationResponse res = new org.openapis.openapi.models.operations.AccountInstitutionCurationResponse() {{
+        org.openapis.openapi.models.operations.AccountInstitutionCurationResponse res = new org.openapis.openapi.models.operations.AccountInstitutionCurationResponse(contentType, httpRes.statusCode()) {{
             curationDetail = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -114,12 +112,10 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountInstitutionCurationCommentsResponse res = new org.openapis.openapi.models.operations.AccountInstitutionCurationCommentsResponse() {{
+        org.openapis.openapi.models.operations.AccountInstitutionCurationCommentsResponse res = new org.openapis.openapi.models.operations.AccountInstitutionCurationCommentsResponse(contentType, httpRes.statusCode()) {{
             curationComment = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -171,12 +167,10 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountInstitutionCurationsResponse res = new org.openapis.openapi.models.operations.AccountInstitutionCurationsResponse() {{
+        org.openapis.openapi.models.operations.AccountInstitutionCurationsResponse res = new org.openapis.openapi.models.operations.AccountInstitutionCurationsResponse(contentType, httpRes.statusCode()) {{
             curation = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -228,12 +222,10 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomFieldsListResponse res = new org.openapis.openapi.models.operations.CustomFieldsListResponse() {{
+        org.openapis.openapi.models.operations.CustomFieldsListResponse res = new org.openapis.openapi.models.operations.CustomFieldsListResponse(contentType, httpRes.statusCode()) {{
             shortCustomFields = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,12 +273,10 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomFieldsUploadResponse res = new org.openapis.openapi.models.operations.CustomFieldsUploadResponse() {{
+        org.openapis.openapi.models.operations.CustomFieldsUploadResponse res = new org.openapis.openapi.models.operations.CustomFieldsUploadResponse(contentType, httpRes.statusCode()) {{
             customFieldsUpload200ApplicationJSONObject = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -336,11 +326,9 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InstitutionArticlesResponse res = new org.openapis.openapi.models.operations.InstitutionArticlesResponse() {{
+        org.openapis.openapi.models.operations.InstitutionArticlesResponse res = new org.openapis.openapi.models.operations.InstitutionArticlesResponse(contentType, httpRes.statusCode()) {{
             articles = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -381,12 +369,10 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InstitutionHrfeedUploadResponse res = new org.openapis.openapi.models.operations.InstitutionHrfeedUploadResponse() {{
+        org.openapis.openapi.models.operations.InstitutionHrfeedUploadResponse res = new org.openapis.openapi.models.operations.InstitutionHrfeedUploadResponse(contentType, httpRes.statusCode()) {{
             responseMessage = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -437,11 +423,9 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAccountInstitutionReviewCurationIdCommentsResponse res = new org.openapis.openapi.models.operations.PostAccountInstitutionReviewCurationIdCommentsResponse() {{
+        org.openapis.openapi.models.operations.PostAccountInstitutionReviewCurationIdCommentsResponse res = new org.openapis.openapi.models.operations.PostAccountInstitutionReviewCurationIdCommentsResponse(contentType, httpRes.statusCode()) {{
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -480,12 +464,10 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateAccountInstitutionUserResponse res = new org.openapis.openapi.models.operations.PrivateAccountInstitutionUserResponse() {{
+        org.openapis.openapi.models.operations.PrivateAccountInstitutionUserResponse res = new org.openapis.openapi.models.operations.PrivateAccountInstitutionUserResponse(contentType, httpRes.statusCode()) {{
             user = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -511,10 +493,11 @@ public class Institutions {
     /**
      * Private Account Categories
      * List institution categories (including parent Categories)
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCategoriesListResponse privateCategoriesList() throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCategoriesListResponse privateCategoriesList(org.openapis.openapi.models.operations.PrivateCategoriesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/categories");
         
@@ -523,17 +506,16 @@ public class Institutions {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCategoriesListResponse res = new org.openapis.openapi.models.operations.PrivateCategoriesListResponse() {{
+        org.openapis.openapi.models.operations.PrivateCategoriesListResponse res = new org.openapis.openapi.models.operations.PrivateCategoriesListResponse(contentType, httpRes.statusCode()) {{
             categories = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -579,12 +561,10 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateGroupEmbargoOptionsDetailsResponse res = new org.openapis.openapi.models.operations.PrivateGroupEmbargoOptionsDetailsResponse() {{
+        org.openapis.openapi.models.operations.PrivateGroupEmbargoOptionsDetailsResponse res = new org.openapis.openapi.models.operations.PrivateGroupEmbargoOptionsDetailsResponse(contentType, httpRes.statusCode()) {{
             groupEmbargoOptions = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -630,11 +610,9 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRoleDeleteResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRoleDeleteResponse() {{
+        org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRoleDeleteResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRoleDeleteResponse(contentType, httpRes.statusCode()) {{
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -673,12 +651,10 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesResponse() {{
+        org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesResponse(contentType, httpRes.statusCode()) {{
             accountGroupRoles = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -729,11 +705,9 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesCreateResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesCreateResponse() {{
+        org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesCreateResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesCreateResponse(contentType, httpRes.statusCode()) {{
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 400 || httpRes.statusCode() == 500) {
@@ -777,11 +751,9 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateInstitutionAccountsCreateResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionAccountsCreateResponse() {{
+        org.openapis.openapi.models.operations.PrivateInstitutionAccountsCreateResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionAccountsCreateResponse(contentType, httpRes.statusCode()) {{
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 400 || httpRes.statusCode() == 500) {
@@ -826,12 +798,10 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateInstitutionAccountsListResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionAccountsListResponse() {{
+        org.openapis.openapi.models.operations.PrivateInstitutionAccountsListResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionAccountsListResponse(contentType, httpRes.statusCode()) {{
             shortAccounts = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -882,12 +852,10 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateInstitutionAccountsSearchResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionAccountsSearchResponse() {{
+        org.openapis.openapi.models.operations.PrivateInstitutionAccountsSearchResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionAccountsSearchResponse(contentType, httpRes.statusCode()) {{
             shortAccounts = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -938,11 +906,9 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateInstitutionAccountsUpdateResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionAccountsUpdateResponse() {{
+        org.openapis.openapi.models.operations.PrivateInstitutionAccountsUpdateResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionAccountsUpdateResponse(contentType, httpRes.statusCode()) {{
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 205) {
@@ -991,12 +957,10 @@ public class Institutions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateInstitutionArticlesResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionArticlesResponse() {{
+        org.openapis.openapi.models.operations.PrivateInstitutionArticlesResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionArticlesResponse(contentType, httpRes.statusCode()) {{
             articles = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1022,10 +986,11 @@ public class Institutions {
     /**
      * Private Account Institutions
      * Account institution details
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateInstitutionDetailsResponse privateInstitutionDetails() throws Exception {
+    public org.openapis.openapi.models.operations.PrivateInstitutionDetailsResponse privateInstitutionDetails(org.openapis.openapi.models.operations.PrivateInstitutionDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/institution");
         
@@ -1034,17 +999,16 @@ public class Institutions {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateInstitutionDetailsResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionDetailsResponse() {{
+        org.openapis.openapi.models.operations.PrivateInstitutionDetailsResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionDetailsResponse(contentType, httpRes.statusCode()) {{
             institution = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1070,10 +1034,11 @@ public class Institutions {
     /**
      * Private Account Institution embargo options
      * Account institution embargo options details
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateInstitutionEmbargoOptionsDetailsResponse privateInstitutionEmbargoOptionsDetails() throws Exception {
+    public org.openapis.openapi.models.operations.PrivateInstitutionEmbargoOptionsDetailsResponse privateInstitutionEmbargoOptionsDetails(org.openapis.openapi.models.operations.PrivateInstitutionEmbargoOptionsDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/institution/embargo_options");
         
@@ -1082,17 +1047,16 @@ public class Institutions {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateInstitutionEmbargoOptionsDetailsResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionEmbargoOptionsDetailsResponse() {{
+        org.openapis.openapi.models.operations.PrivateInstitutionEmbargoOptionsDetailsResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionEmbargoOptionsDetailsResponse(contentType, httpRes.statusCode()) {{
             groupEmbargoOptions = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1118,10 +1082,11 @@ public class Institutions {
     /**
      * Private Account Institution Groups
      * Returns the groups for which the account has administrative privileges (assigned and inherited).
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateInstitutionGroupsListResponse privateInstitutionGroupsList() throws Exception {
+    public org.openapis.openapi.models.operations.PrivateInstitutionGroupsListResponse privateInstitutionGroupsList(org.openapis.openapi.models.operations.PrivateInstitutionGroupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/institution/groups");
         
@@ -1130,17 +1095,16 @@ public class Institutions {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateInstitutionGroupsListResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionGroupsListResponse() {{
+        org.openapis.openapi.models.operations.PrivateInstitutionGroupsListResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionGroupsListResponse(contentType, httpRes.statusCode()) {{
             groups = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1166,10 +1130,11 @@ public class Institutions {
     /**
      * Private Account Institution Roles
      * Returns the roles available for groups and the institution group.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateInstitutionRolesListResponse privateInstitutionRolesList() throws Exception {
+    public org.openapis.openapi.models.operations.PrivateInstitutionRolesListResponse privateInstitutionRolesList(org.openapis.openapi.models.operations.PrivateInstitutionRolesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/institution/roles");
         
@@ -1178,17 +1143,16 @@ public class Institutions {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateInstitutionRolesListResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionRolesListResponse() {{
+        org.openapis.openapi.models.operations.PrivateInstitutionRolesListResponse res = new org.openapis.openapi.models.operations.PrivateInstitutionRolesListResponse(contentType, httpRes.statusCode()) {{
             roles = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class Phase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationInSeconds")
     public Long durationInSeconds;
+
     public Phase withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
@@ -23,6 +24,7 @@ public class Phase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InitialNumberOfUsers")
     public Long initialNumberOfUsers;
+
     public Phase withInitialNumberOfUsers(Long initialNumberOfUsers) {
         this.initialNumberOfUsers = initialNumberOfUsers;
         return this;
@@ -31,9 +33,11 @@ public class Phase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpawnRate")
     public Long spawnRate;
+
     public Phase withSpawnRate(Long spawnRate) {
         this.spawnRate = spawnRate;
         return this;
     }
     
+    public Phase(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AgcerResponse {
     
     public String contentType;
+
     public AgcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AgcerResponse {
     
     
     public Integer statusCode;
+
     public AgcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AgcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AgcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AgcerResponse {
      */
     
     public Agcer400ApplicationJSON agcer400ApplicationJSONObject;
+
     public AgcerResponse withAgcer400ApplicationJSONObject(Agcer400ApplicationJSON agcer400ApplicationJSONObject) {
         this.agcer400ApplicationJSONObject = agcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class AgcerResponse {
      */
     
     public Agcer401ApplicationJSON agcer401ApplicationJSONObject;
+
     public AgcerResponse withAgcer401ApplicationJSONObject(Agcer401ApplicationJSON agcer401ApplicationJSONObject) {
         this.agcer401ApplicationJSONObject = agcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class AgcerResponse {
      */
     
     public Agcer404ApplicationJSON agcer404ApplicationJSONObject;
+
     public AgcerResponse withAgcer404ApplicationJSONObject(Agcer404ApplicationJSON agcer404ApplicationJSONObject) {
         this.agcer404ApplicationJSONObject = agcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class AgcerResponse {
      */
     
     public Agcer500ApplicationJSON agcer500ApplicationJSONObject;
+
     public AgcerResponse withAgcer500ApplicationJSONObject(Agcer500ApplicationJSON agcer500ApplicationJSONObject) {
         this.agcer500ApplicationJSONObject = agcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class AgcerResponse {
      */
     
     public Agcer502ApplicationJSON agcer502ApplicationJSONObject;
+
     public AgcerResponse withAgcer502ApplicationJSONObject(Agcer502ApplicationJSON agcer502ApplicationJSONObject) {
         this.agcer502ApplicationJSONObject = agcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class AgcerResponse {
      */
     
     public Agcer503ApplicationJSON agcer503ApplicationJSONObject;
+
     public AgcerResponse withAgcer503ApplicationJSONObject(Agcer503ApplicationJSON agcer503ApplicationJSONObject) {
         this.agcer503ApplicationJSONObject = agcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class AgcerResponse {
      */
     
     public Agcer504ApplicationJSON agcer504ApplicationJSONObject;
+
     public AgcerResponse withAgcer504ApplicationJSONObject(Agcer504ApplicationJSON agcer504ApplicationJSONObject) {
         this.agcer504ApplicationJSONObject = agcer504ApplicationJSONObject;
         return this;
     }
     
+    public AgcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

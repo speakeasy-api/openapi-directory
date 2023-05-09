@@ -15,6 +15,7 @@ public class ListCollectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionSummaries")
     public CollectionSummary[] collectionSummaries;
+
     public ListCollectionsResponse withCollectionSummaries(CollectionSummary[] collectionSummaries) {
         this.collectionSummaries = collectionSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListCollectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListCollectionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCollectionsResponse(){}
 }

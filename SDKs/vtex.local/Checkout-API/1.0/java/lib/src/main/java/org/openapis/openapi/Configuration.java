@@ -68,11 +68,9 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClearorderFormMessagesResponse res = new org.openapis.openapi.models.operations.ClearorderFormMessagesResponse() {{
+        org.openapis.openapi.models.operations.ClearorderFormMessagesResponse res = new org.openapis.openapi.models.operations.ClearorderFormMessagesResponse(contentType, httpRes.statusCode()) {{
             clearorderFormMessages200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,10 +116,8 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWindowToChangeSellerResponse res = new org.openapis.openapi.models.operations.GetWindowToChangeSellerResponse() {{
+        org.openapis.openapi.models.operations.GetWindowToChangeSellerResponse res = new org.openapis.openapi.models.operations.GetWindowToChangeSellerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -164,11 +160,9 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetorderFormconfigurationResponse res = new org.openapis.openapi.models.operations.GetorderFormconfigurationResponse() {{
+        org.openapis.openapi.models.operations.GetorderFormconfigurationResponse res = new org.openapis.openapi.models.operations.GetorderFormconfigurationResponse(contentType, httpRes.statusCode()) {{
             getorderFormconfiguration200ApplicationJSONAny = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,10 +213,8 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateWindowToChangeSellerResponse res = new org.openapis.openapi.models.operations.UpdateWindowToChangeSellerResponse() {{
+        org.openapis.openapi.models.operations.UpdateWindowToChangeSellerResponse res = new org.openapis.openapi.models.operations.UpdateWindowToChangeSellerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -270,10 +262,8 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateorderFormconfigurationResponse res = new org.openapis.openapi.models.operations.UpdateorderFormconfigurationResponse() {{
+        org.openapis.openapi.models.operations.UpdateorderFormconfigurationResponse res = new org.openapis.openapi.models.operations.UpdateorderFormconfigurationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

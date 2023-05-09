@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageTableCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buttons")
     public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton[] buttons;
+
     public GoogleCloudDialogflowV2beta1IntentMessageTableCard withButtons(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton[] buttons) {
         this.buttons = buttons;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageTableCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnProperties")
     public GoogleCloudDialogflowV2beta1IntentMessageColumnProperties[] columnProperties;
+
     public GoogleCloudDialogflowV2beta1IntentMessageTableCard withColumnProperties(GoogleCloudDialogflowV2beta1IntentMessageColumnProperties[] columnProperties) {
         this.columnProperties = columnProperties;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageTableCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public GoogleCloudDialogflowV2beta1IntentMessageImage image;
+
     public GoogleCloudDialogflowV2beta1IntentMessageTableCard withImage(GoogleCloudDialogflowV2beta1IntentMessageImage image) {
         this.image = image;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageTableCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public GoogleCloudDialogflowV2beta1IntentMessageTableCardRow[] rows;
+
     public GoogleCloudDialogflowV2beta1IntentMessageTableCard withRows(GoogleCloudDialogflowV2beta1IntentMessageTableCardRow[] rows) {
         this.rows = rows;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageTableCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtitle")
     public String subtitle;
+
     public GoogleCloudDialogflowV2beta1IntentMessageTableCard withSubtitle(String subtitle) {
         this.subtitle = subtitle;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageTableCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleCloudDialogflowV2beta1IntentMessageTableCard withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageTableCard(){}
 }

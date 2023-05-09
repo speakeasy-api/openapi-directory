@@ -15,6 +15,7 @@ public class BreakoutVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breakout_id")
     public Long breakoutId;
+
     public BreakoutVO withBreakoutId(Long breakoutId) {
         this.breakoutId = breakoutId;
         return this;
@@ -23,6 +24,7 @@ public class BreakoutVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breakout_name")
     public String breakoutName;
+
     public BreakoutVO withBreakoutName(String breakoutName) {
         this.breakoutName = breakoutName;
         return this;
@@ -34,6 +36,7 @@ public class BreakoutVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breakout_pre_markup")
     public Object breakoutPreMarkup;
+
     public BreakoutVO withBreakoutPreMarkup(Object breakoutPreMarkup) {
         this.breakoutPreMarkup = breakoutPreMarkup;
         return this;
@@ -45,6 +48,7 @@ public class BreakoutVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breakout_price")
     public Object breakoutPrice;
+
     public BreakoutVO withBreakoutPrice(Object breakoutPrice) {
         this.breakoutPrice = breakoutPrice;
         return this;
@@ -56,6 +60,7 @@ public class BreakoutVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_breakout_pre_markup")
     public Object transactionalBreakoutPreMarkup;
+
     public BreakoutVO withTransactionalBreakoutPreMarkup(Object transactionalBreakoutPreMarkup) {
         this.transactionalBreakoutPreMarkup = transactionalBreakoutPreMarkup;
         return this;
@@ -67,9 +72,11 @@ public class BreakoutVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_breakout_price")
     public Object transactionalBreakoutPrice;
+
     public BreakoutVO withTransactionalBreakoutPrice(Object transactionalBreakoutPrice) {
         this.transactionalBreakoutPrice = transactionalBreakoutPrice;
         return this;
     }
     
+    public BreakoutVO(){}
 }

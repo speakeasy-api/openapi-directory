@@ -18,6 +18,7 @@ public class GoogleAppsCardV1CardHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageAltText")
     public String imageAltText;
+
     public GoogleAppsCardV1CardHeader withImageAltText(String imageAltText) {
         this.imageAltText = imageAltText;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCardV1CardHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageType")
     public GoogleAppsCardV1CardHeaderImageTypeEnum imageType;
+
     public GoogleAppsCardV1CardHeader withImageType(GoogleAppsCardV1CardHeaderImageTypeEnum imageType) {
         this.imageType = imageType;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsCardV1CardHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public GoogleAppsCardV1CardHeader withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsCardV1CardHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtitle")
     public String subtitle;
+
     public GoogleAppsCardV1CardHeader withSubtitle(String subtitle) {
         this.subtitle = subtitle;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAppsCardV1CardHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleAppsCardV1CardHeader withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleAppsCardV1CardHeader(){}
 }

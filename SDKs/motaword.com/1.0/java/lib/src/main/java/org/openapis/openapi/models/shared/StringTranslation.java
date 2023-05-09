@@ -15,6 +15,7 @@ public class StringTranslation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public StringTranslation withContent(String content) {
         this.content = content;
         return this;
@@ -23,6 +24,7 @@ public class StringTranslation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public StringTranslation withId(String id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class StringTranslation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public StringTranslationStateEnum state;
+
     public StringTranslation withState(StringTranslationStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public StringTranslation(){}
 }

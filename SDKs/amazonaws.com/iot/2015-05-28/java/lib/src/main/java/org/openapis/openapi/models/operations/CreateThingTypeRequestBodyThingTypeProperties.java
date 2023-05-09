@@ -15,6 +15,7 @@ public class CreateThingTypeRequestBodyThingTypeProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchableAttributes")
     public String[] searchableAttributes;
+
     public CreateThingTypeRequestBodyThingTypeProperties withSearchableAttributes(String[] searchableAttributes) {
         this.searchableAttributes = searchableAttributes;
         return this;
@@ -23,9 +24,11 @@ public class CreateThingTypeRequestBodyThingTypeProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingTypeDescription")
     public String thingTypeDescription;
+
     public CreateThingTypeRequestBodyThingTypeProperties withThingTypeDescription(String thingTypeDescription) {
         this.thingTypeDescription = thingTypeDescription;
         return this;
     }
     
+    public CreateThingTypeRequestBodyThingTypeProperties(){}
 }

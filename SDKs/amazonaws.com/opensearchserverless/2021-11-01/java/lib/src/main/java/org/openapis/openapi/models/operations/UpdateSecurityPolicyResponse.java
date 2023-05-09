@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSecurityPolicyResponse {
@@ -12,6 +13,7 @@ public class UpdateSecurityPolicyResponse {
      */
     
     public Object conflictException;
+
     public UpdateSecurityPolicyResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSecurityPolicyResponse {
     
     
     public String contentType;
+
     public UpdateSecurityPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSecurityPolicyResponse {
      */
     
     public Object internalServerException;
+
     public UpdateSecurityPolicyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSecurityPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateSecurityPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSecurityPolicyResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateSecurityPolicyResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateSecurityPolicyResponse {
     
     
     public Integer statusCode;
+
     public UpdateSecurityPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateSecurityPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSecurityPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSecurityPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSecurityPolicyResponse updateSecurityPolicyResponse;
+
     public UpdateSecurityPolicyResponse withUpdateSecurityPolicyResponse(org.openapis.openapi.models.shared.UpdateSecurityPolicyResponse updateSecurityPolicyResponse) {
         this.updateSecurityPolicyResponse = updateSecurityPolicyResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateSecurityPolicyResponse {
      */
     
     public Object validationException;
+
     public UpdateSecurityPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateSecurityPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

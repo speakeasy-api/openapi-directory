@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InstanceEventWindowDisassociationRequest {
     
     public String[] dedicatedHostIds;
+
     public InstanceEventWindowDisassociationRequest withDedicatedHostIds(String[] dedicatedHostIds) {
         this.dedicatedHostIds = dedicatedHostIds;
         return this;
@@ -19,6 +20,7 @@ public class InstanceEventWindowDisassociationRequest {
     
     
     public String[] instanceIds;
+
     public InstanceEventWindowDisassociationRequest withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -26,9 +28,11 @@ public class InstanceEventWindowDisassociationRequest {
     
     
     public InstanceEventWindowDisassociationRequestInstanceTags[] instanceTags;
+
     public InstanceEventWindowDisassociationRequest withInstanceTags(InstanceEventWindowDisassociationRequestInstanceTags[] instanceTags) {
         this.instanceTags = instanceTags;
         return this;
     }
     
+    public InstanceEventWindowDisassociationRequest(){}
 }

@@ -15,6 +15,7 @@ public class CapacityProviderStrategyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base")
     public Long base;
+
     public CapacityProviderStrategyItem withBase(Long base) {
         this.base = base;
         return this;
@@ -22,6 +23,7 @@ public class CapacityProviderStrategyItem {
     
     @JsonProperty("capacityProvider")
     public String capacityProvider;
+
     public CapacityProviderStrategyItem withCapacityProvider(String capacityProvider) {
         this.capacityProvider = capacityProvider;
         return this;
@@ -30,9 +32,13 @@ public class CapacityProviderStrategyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Long weight;
+
     public CapacityProviderStrategyItem withWeight(Long weight) {
         this.weight = weight;
         return this;
     }
     
+    public CapacityProviderStrategyItem(@JsonProperty("capacityProvider") String capacityProvider) {
+        this.capacityProvider = capacityProvider;
+  }
 }

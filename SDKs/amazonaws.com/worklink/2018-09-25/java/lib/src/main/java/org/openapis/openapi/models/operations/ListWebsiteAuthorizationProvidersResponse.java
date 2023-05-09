@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWebsiteAuthorizationProvidersResponse {
     
     public String contentType;
+
     public ListWebsiteAuthorizationProvidersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListWebsiteAuthorizationProvidersResponse {
      */
     
     public Object internalServerErrorException;
+
     public ListWebsiteAuthorizationProvidersResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListWebsiteAuthorizationProvidersResponse {
      */
     
     public Object invalidRequestException;
+
     public ListWebsiteAuthorizationProvidersResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListWebsiteAuthorizationProvidersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWebsiteAuthorizationProvidersResponse listWebsiteAuthorizationProvidersResponse;
+
     public ListWebsiteAuthorizationProvidersResponse withListWebsiteAuthorizationProvidersResponse(org.openapis.openapi.models.shared.ListWebsiteAuthorizationProvidersResponse listWebsiteAuthorizationProvidersResponse) {
         this.listWebsiteAuthorizationProvidersResponse = listWebsiteAuthorizationProvidersResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListWebsiteAuthorizationProvidersResponse {
     
     
     public Integer statusCode;
+
     public ListWebsiteAuthorizationProvidersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListWebsiteAuthorizationProvidersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWebsiteAuthorizationProvidersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListWebsiteAuthorizationProvidersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListWebsiteAuthorizationProvidersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListWebsiteAuthorizationProvidersResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListWebsiteAuthorizationProvidersResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class ListWebsiteAuthorizationProvidersResponse {
      */
     
     public Object unauthorizedException;
+
     public ListWebsiteAuthorizationProvidersResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListWebsiteAuthorizationProvidersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

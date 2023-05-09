@@ -15,6 +15,7 @@ public class ResultFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("records")
     public Record[] records;
+
     public ResultFrame withRecords(Record[] records) {
         this.records = records;
         return this;
@@ -23,9 +24,11 @@ public class ResultFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultSetMetadata")
     public ResultSetMetadata resultSetMetadata;
+
     public ResultFrame withResultSetMetadata(ResultSetMetadata resultSetMetadata) {
         this.resultSetMetadata = resultSetMetadata;
         return this;
     }
     
+    public ResultFrame(){}
 }

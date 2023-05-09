@@ -18,6 +18,7 @@ public class ChromeOsDeviceAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public ChromeOsDeviceAction withAction(String action) {
         this.action = action;
         return this;
@@ -29,9 +30,11 @@ public class ChromeOsDeviceAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprovisionReason")
     public String deprovisionReason;
+
     public ChromeOsDeviceAction withDeprovisionReason(String deprovisionReason) {
         this.deprovisionReason = deprovisionReason;
         return this;
     }
     
+    public ChromeOsDeviceAction(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05SubscriptionsHiuNotifyJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05SubscriptionsHiuNotifyJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05SubscriptionsHiuNotifyJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05SubscriptionsHiuNotifyJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HIUSubscriptionNotification hiuSubscriptionNotification;
+
     public PostV05SubscriptionsHiuNotifyJsonRequest withHIUSubscriptionNotification(org.openapis.openapi.models.shared.HIUSubscriptionNotification hiuSubscriptionNotification) {
         this.hiuSubscriptionNotification = hiuSubscriptionNotification;
         return this;
@@ -29,9 +32,15 @@ public class PostV05SubscriptionsHiuNotifyJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
     public String xHiuId;
+
     public PostV05SubscriptionsHiuNotifyJsonRequest withXHiuId(String xHiuId) {
         this.xHiuId = xHiuId;
         return this;
     }
     
+    public PostV05SubscriptionsHiuNotifyJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("HIUSubscriptionNotification") org.openapis.openapi.models.shared.HIUSubscriptionNotification hiuSubscriptionNotification, @JsonProperty("X-HIU-ID") String xHiuId) {
+        this.authorization = authorization;
+        this.hiuSubscriptionNotification = hiuSubscriptionNotification;
+        this.xHiuId = xHiuId;
+  }
 }

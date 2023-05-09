@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAutoMLJobV2Request {
     @JsonProperty("AutoMLJobName")
     public String autoMLJobName;
+
     public DescribeAutoMLJobV2Request withAutoMLJobName(String autoMLJobName) {
         this.autoMLJobName = autoMLJobName;
         return this;
     }
     
+    public DescribeAutoMLJobV2Request(@JsonProperty("AutoMLJobName") String autoMLJobName) {
+        this.autoMLJobName = autoMLJobName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReportsCustomGenerateRequest {
@@ -12,9 +13,13 @@ public class GetReportsCustomGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_name")
     public String reportName;
+
     public GetReportsCustomGenerateRequest withReportName(String reportName) {
         this.reportName = reportName;
         return this;
     }
     
+    public GetReportsCustomGenerateRequest(@JsonProperty("report_name") String reportName) {
+        this.reportName = reportName;
+  }
 }

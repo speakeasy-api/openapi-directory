@@ -18,6 +18,7 @@ public class CreateVideoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elementProperties")
     public PageElementProperties elementProperties;
+
     public CreateVideoRequest withElementProperties(PageElementProperties elementProperties) {
         this.elementProperties = elementProperties;
         return this;
@@ -29,6 +30,7 @@ public class CreateVideoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateVideoRequest withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class CreateVideoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public CreateVideoRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -51,9 +54,11 @@ public class CreateVideoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public CreateVideoRequestSourceEnum source;
+
     public CreateVideoRequest withSource(CreateVideoRequestSourceEnum source) {
         this.source = source;
         return this;
     }
     
+    public CreateVideoRequest(){}
 }

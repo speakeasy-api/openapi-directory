@@ -15,6 +15,7 @@ public class ValueHolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IonBinary")
     public String ionBinary;
+
     public ValueHolder withIonBinary(String ionBinary) {
         this.ionBinary = ionBinary;
         return this;
@@ -23,9 +24,11 @@ public class ValueHolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IonText")
     public String ionText;
+
     public ValueHolder withIonText(String ionText) {
         this.ionText = ionText;
         return this;
     }
     
+    public ValueHolder(){}
 }

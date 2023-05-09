@@ -15,6 +15,7 @@ public class ReservationUtilizationGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public ReservationUtilizationGroup withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class ReservationUtilizationGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public ReservationUtilizationGroup withKey(String key) {
         this.key = key;
         return this;
@@ -31,6 +33,7 @@ public class ReservationUtilizationGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Utilization")
     public ReservationAggregates utilization;
+
     public ReservationUtilizationGroup withUtilization(ReservationAggregates utilization) {
         this.utilization = utilization;
         return this;
@@ -39,9 +42,11 @@ public class ReservationUtilizationGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public ReservationUtilizationGroup withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ReservationUtilizationGroup(){}
 }

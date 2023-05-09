@@ -15,6 +15,7 @@ public class UploadAccountResponseError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Integer index;
+
     public UploadAccountResponseError withIndex(Integer index) {
         this.index = index;
         return this;
@@ -26,9 +27,11 @@ public class UploadAccountResponseError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public UploadAccountResponseError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public UploadAccountResponseError(){}
 }

@@ -15,6 +15,7 @@ public class DescribeAccountPreferencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeAccountPreferencesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAccountPreferencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceIdPreference")
     public ResourceIdPreference resourceIdPreference;
+
     public DescribeAccountPreferencesResponse withResourceIdPreference(ResourceIdPreference resourceIdPreference) {
         this.resourceIdPreference = resourceIdPreference;
         return this;
     }
     
+    public DescribeAccountPreferencesResponse(){}
 }

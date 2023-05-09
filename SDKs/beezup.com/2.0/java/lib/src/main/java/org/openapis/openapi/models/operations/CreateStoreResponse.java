@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateStoreResponse {
@@ -12,6 +13,7 @@ public class CreateStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public CreateStoreResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class CreateStoreResponse {
     
     
     public String contentType;
+
     public CreateStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CreateStoreResponse {
     
     
     public Integer statusCode;
+
     public CreateStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponseMessagePaymentRequired errorResponseMessagePaymentRequired;
+
     public CreateStoreResponse withErrorResponseMessagePaymentRequired(org.openapis.openapi.models.shared.ErrorResponseMessagePaymentRequired errorResponseMessagePaymentRequired) {
         this.errorResponseMessagePaymentRequired = errorResponseMessagePaymentRequired;
         return this;
@@ -53,9 +59,14 @@ public class CreateStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.LinksGetStoreLink linksGetStoreLink;
+
     public CreateStoreResponse withLinksGetStoreLink(org.openapis.openapi.models.shared.LinksGetStoreLink linksGetStoreLink) {
         this.linksGetStoreLink = linksGetStoreLink;
         return this;
     }
     
+    public CreateStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

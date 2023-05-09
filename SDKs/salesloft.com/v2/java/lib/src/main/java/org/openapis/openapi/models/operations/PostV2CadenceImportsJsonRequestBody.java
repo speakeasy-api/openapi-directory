@@ -12,6 +12,7 @@ public class PostV2CadenceImportsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=cadence_content,json")
     public java.util.Map<String, Object> cadenceContent;
+
     public PostV2CadenceImportsJsonRequestBody withCadenceContent(java.util.Map<String, Object> cadenceContent) {
         this.cadenceContent = cadenceContent;
         return this;
@@ -22,6 +23,7 @@ public class PostV2CadenceImportsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=settings,json")
     public java.util.Map<String, Object> settings;
+
     public PostV2CadenceImportsJsonRequestBody withSettings(java.util.Map<String, Object> settings) {
         this.settings = settings;
         return this;
@@ -32,9 +34,11 @@ public class PostV2CadenceImportsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=sharing_settings,json")
     public java.util.Map<String, Object> sharingSettings;
+
     public PostV2CadenceImportsJsonRequestBody withSharingSettings(java.util.Map<String, Object> sharingSettings) {
         this.sharingSettings = sharingSettings;
         return this;
     }
     
+    public PostV2CadenceImportsJsonRequestBody(){}
 }

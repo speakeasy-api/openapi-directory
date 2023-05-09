@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UncrdResponse {
     
     public String contentType;
+
     public UncrdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UncrdResponse {
     
     
     public Integer statusCode;
+
     public UncrdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UncrdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UncrdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UncrdResponse {
      */
     
     public Uncrd400ApplicationJSON uncrd400ApplicationJSONObject;
+
     public UncrdResponse withUncrd400ApplicationJSONObject(Uncrd400ApplicationJSON uncrd400ApplicationJSONObject) {
         this.uncrd400ApplicationJSONObject = uncrd400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class UncrdResponse {
      */
     
     public Uncrd401ApplicationJSON uncrd401ApplicationJSONObject;
+
     public UncrdResponse withUncrd401ApplicationJSONObject(Uncrd401ApplicationJSON uncrd401ApplicationJSONObject) {
         this.uncrd401ApplicationJSONObject = uncrd401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class UncrdResponse {
      */
     
     public Uncrd404ApplicationJSON uncrd404ApplicationJSONObject;
+
     public UncrdResponse withUncrd404ApplicationJSONObject(Uncrd404ApplicationJSON uncrd404ApplicationJSONObject) {
         this.uncrd404ApplicationJSONObject = uncrd404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class UncrdResponse {
      */
     
     public Uncrd500ApplicationJSON uncrd500ApplicationJSONObject;
+
     public UncrdResponse withUncrd500ApplicationJSONObject(Uncrd500ApplicationJSON uncrd500ApplicationJSONObject) {
         this.uncrd500ApplicationJSONObject = uncrd500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class UncrdResponse {
      */
     
     public Uncrd502ApplicationJSON uncrd502ApplicationJSONObject;
+
     public UncrdResponse withUncrd502ApplicationJSONObject(Uncrd502ApplicationJSON uncrd502ApplicationJSONObject) {
         this.uncrd502ApplicationJSONObject = uncrd502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class UncrdResponse {
      */
     
     public Uncrd503ApplicationJSON uncrd503ApplicationJSONObject;
+
     public UncrdResponse withUncrd503ApplicationJSONObject(Uncrd503ApplicationJSON uncrd503ApplicationJSONObject) {
         this.uncrd503ApplicationJSONObject = uncrd503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class UncrdResponse {
      */
     
     public Uncrd504ApplicationJSON uncrd504ApplicationJSONObject;
+
     public UncrdResponse withUncrd504ApplicationJSONObject(Uncrd504ApplicationJSON uncrd504ApplicationJSONObject) {
         this.uncrd504ApplicationJSONObject = uncrd504ApplicationJSONObject;
         return this;
     }
     
+    public UncrdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

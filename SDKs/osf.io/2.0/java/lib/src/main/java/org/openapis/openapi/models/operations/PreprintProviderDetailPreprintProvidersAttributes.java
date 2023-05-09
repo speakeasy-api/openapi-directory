@@ -15,6 +15,7 @@ public class PreprintProviderDetailPreprintProvidersAttributes {
      */
     
     public String advisoryBoard;
+
     public PreprintProviderDetailPreprintProvidersAttributes withAdvisoryBoard(String advisoryBoard) {
         this.advisoryBoard = advisoryBoard;
         return this;
@@ -25,6 +26,7 @@ public class PreprintProviderDetailPreprintProvidersAttributes {
      */
     
     public String bannerPath;
+
     public PreprintProviderDetailPreprintProvidersAttributes withBannerPath(String bannerPath) {
         this.bannerPath = bannerPath;
         return this;
@@ -35,6 +37,7 @@ public class PreprintProviderDetailPreprintProvidersAttributes {
      */
     
     public String description;
+
     public PreprintProviderDetailPreprintProvidersAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class PreprintProviderDetailPreprintProvidersAttributes {
      */
     
     public String domain;
+
     public PreprintProviderDetailPreprintProvidersAttributes withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -55,6 +59,7 @@ public class PreprintProviderDetailPreprintProvidersAttributes {
      */
     
     public Boolean domainRedirectEnabled;
+
     public PreprintProviderDetailPreprintProvidersAttributes withDomainRedirectEnabled(Boolean domainRedirectEnabled) {
         this.domainRedirectEnabled = domainRedirectEnabled;
         return this;
@@ -65,6 +70,7 @@ public class PreprintProviderDetailPreprintProvidersAttributes {
      */
     
     public String emailContact;
+
     public PreprintProviderDetailPreprintProvidersAttributes withEmailContact(String emailContact) {
         this.emailContact = emailContact;
         return this;
@@ -75,6 +81,7 @@ public class PreprintProviderDetailPreprintProvidersAttributes {
      */
     
     public String emailSupport;
+
     public PreprintProviderDetailPreprintProvidersAttributes withEmailSupport(String emailSupport) {
         this.emailSupport = emailSupport;
         return this;
@@ -85,6 +92,7 @@ public class PreprintProviderDetailPreprintProvidersAttributes {
      */
     
     public String example;
+
     public PreprintProviderDetailPreprintProvidersAttributes withExample(String example) {
         this.example = example;
         return this;
@@ -95,6 +103,7 @@ public class PreprintProviderDetailPreprintProvidersAttributes {
      */
     
     public String logoPath;
+
     public PreprintProviderDetailPreprintProvidersAttributes withLogoPath(String logoPath) {
         this.logoPath = logoPath;
         return this;
@@ -105,6 +114,7 @@ public class PreprintProviderDetailPreprintProvidersAttributes {
      */
     
     public String name;
+
     public PreprintProviderDetailPreprintProvidersAttributes withName(String name) {
         this.name = name;
         return this;
@@ -115,6 +125,7 @@ public class PreprintProviderDetailPreprintProvidersAttributes {
      */
     
     public String socialFacebook;
+
     public PreprintProviderDetailPreprintProvidersAttributes withSocialFacebook(String socialFacebook) {
         this.socialFacebook = socialFacebook;
         return this;
@@ -125,6 +136,7 @@ public class PreprintProviderDetailPreprintProvidersAttributes {
      */
     
     public String socialInstagram;
+
     public PreprintProviderDetailPreprintProvidersAttributes withSocialInstagram(String socialInstagram) {
         this.socialInstagram = socialInstagram;
         return this;
@@ -135,9 +147,11 @@ public class PreprintProviderDetailPreprintProvidersAttributes {
      */
     
     public String subjectsAcceptable;
+
     public PreprintProviderDetailPreprintProvidersAttributes withSubjectsAcceptable(String subjectsAcceptable) {
         this.subjectsAcceptable = subjectsAcceptable;
         return this;
     }
     
+    public PreprintProviderDetailPreprintProvidersAttributes(){}
 }

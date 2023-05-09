@@ -12,6 +12,7 @@ public class GetChangelogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetChangelogsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,9 +23,11 @@ public class GetChangelogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
     public Long perPage;
+
     public GetChangelogsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetChangelogsRequest(){}
 }

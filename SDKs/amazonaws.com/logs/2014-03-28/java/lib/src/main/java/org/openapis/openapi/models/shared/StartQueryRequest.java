@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartQueryRequest {
     @JsonProperty("endTime")
     public Long endTime;
+
     public StartQueryRequest withEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
@@ -19,6 +20,7 @@ public class StartQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public StartQueryRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -27,6 +29,7 @@ public class StartQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupIdentifiers")
     public String[] logGroupIdentifiers;
+
     public StartQueryRequest withLogGroupIdentifiers(String[] logGroupIdentifiers) {
         this.logGroupIdentifiers = logGroupIdentifiers;
         return this;
@@ -35,6 +38,7 @@ public class StartQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public StartQueryRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -43,6 +47,7 @@ public class StartQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupNames")
     public String[] logGroupNames;
+
     public StartQueryRequest withLogGroupNames(String[] logGroupNames) {
         this.logGroupNames = logGroupNames;
         return this;
@@ -50,6 +55,7 @@ public class StartQueryRequest {
     
     @JsonProperty("queryString")
     public String queryString;
+
     public StartQueryRequest withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
@@ -57,9 +63,15 @@ public class StartQueryRequest {
     
     @JsonProperty("startTime")
     public Long startTime;
+
     public StartQueryRequest withStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public StartQueryRequest(@JsonProperty("endTime") Long endTime, @JsonProperty("queryString") String queryString, @JsonProperty("startTime") Long startTime) {
+        this.endTime = endTime;
+        this.queryString = queryString;
+        this.startTime = startTime;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class RegisterPublisherInput {
     
     public Boolean acceptTermsAndConditions;
+
     public RegisterPublisherInput withAcceptTermsAndConditions(Boolean acceptTermsAndConditions) {
         this.acceptTermsAndConditions = acceptTermsAndConditions;
         return this;
@@ -16,9 +17,11 @@ public class RegisterPublisherInput {
     
     
     public String connectionArn;
+
     public RegisterPublisherInput withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
     }
     
+    public RegisterPublisherInput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposGetAccessRestrictionsResponse {
     
     public String contentType;
+
     public ReposGetAccessRestrictionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposGetAccessRestrictionsResponse {
     
     
     public Integer statusCode;
+
     public ReposGetAccessRestrictionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposGetAccessRestrictionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposGetAccessRestrictionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposGetAccessRestrictionsResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposGetAccessRestrictionsResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ReposGetAccessRestrictionsResponse {
      */
     
     public org.openapis.openapi.models.shared.BranchRestrictionPolicy branchRestrictionPolicy;
+
     public ReposGetAccessRestrictionsResponse withBranchRestrictionPolicy(org.openapis.openapi.models.shared.BranchRestrictionPolicy branchRestrictionPolicy) {
         this.branchRestrictionPolicy = branchRestrictionPolicy;
         return this;
     }
     
+    public ReposGetAccessRestrictionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

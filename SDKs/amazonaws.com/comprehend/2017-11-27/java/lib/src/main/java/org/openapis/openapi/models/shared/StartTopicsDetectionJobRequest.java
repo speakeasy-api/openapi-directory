@@ -12,6 +12,7 @@ public class StartTopicsDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartTopicsDetectionJobRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class StartTopicsDetectionJobRequest {
     
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public StartTopicsDetectionJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -26,6 +28,7 @@ public class StartTopicsDetectionJobRequest {
     
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public StartTopicsDetectionJobRequest withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -34,6 +37,7 @@ public class StartTopicsDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public StartTopicsDetectionJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -42,6 +46,7 @@ public class StartTopicsDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfTopics")
     public Long numberOfTopics;
+
     public StartTopicsDetectionJobRequest withNumberOfTopics(Long numberOfTopics) {
         this.numberOfTopics = numberOfTopics;
         return this;
@@ -49,6 +54,7 @@ public class StartTopicsDetectionJobRequest {
     
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public StartTopicsDetectionJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -57,6 +63,7 @@ public class StartTopicsDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public StartTopicsDetectionJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -65,6 +72,7 @@ public class StartTopicsDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeKmsKeyId")
     public String volumeKmsKeyId;
+
     public StartTopicsDetectionJobRequest withVolumeKmsKeyId(String volumeKmsKeyId) {
         this.volumeKmsKeyId = volumeKmsKeyId;
         return this;
@@ -73,9 +81,15 @@ public class StartTopicsDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public StartTopicsDetectionJobRequest withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public StartTopicsDetectionJobRequest(@JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("InputDataConfig") InputDataConfig inputDataConfig, @JsonProperty("OutputDataConfig") OutputDataConfig outputDataConfig) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.inputDataConfig = inputDataConfig;
+        this.outputDataConfig = outputDataConfig;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateDeviceDefinitionVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Devices")
     public org.openapis.openapi.models.shared.Device[] devices;
+
     public CreateDeviceDefinitionVersionRequestBody withDevices(org.openapis.openapi.models.shared.Device[] devices) {
         this.devices = devices;
         return this;
     }
     
+    public CreateDeviceDefinitionVersionRequestBody(){}
 }

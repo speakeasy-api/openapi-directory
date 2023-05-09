@@ -15,6 +15,7 @@ public class AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails withType(String type) {
         this.type = type;
         return this;
@@ -31,9 +33,11 @@ public class AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails(){}
 }

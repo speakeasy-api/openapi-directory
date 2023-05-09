@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CancelSpotInstanceRequestsResult {
     
     public CancelSpotInstanceRequestsResultCancelledSpotInstanceRequests[] cancelledSpotInstanceRequests;
+
     public CancelSpotInstanceRequestsResult withCancelledSpotInstanceRequests(CancelSpotInstanceRequestsResultCancelledSpotInstanceRequests[] cancelledSpotInstanceRequests) {
         this.cancelledSpotInstanceRequests = cancelledSpotInstanceRequests;
         return this;
     }
     
+    public CancelSpotInstanceRequestsResult(){}
 }

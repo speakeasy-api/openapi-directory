@@ -18,6 +18,7 @@ public class SearchJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customRankingInfo")
     public CustomRankingInfo customRankingInfo;
+
     public SearchJobsRequest withCustomRankingInfo(CustomRankingInfo customRankingInfo) {
         this.customRankingInfo = customRankingInfo;
         return this;
@@ -29,6 +30,7 @@ public class SearchJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableKeywordMatch")
     public Boolean disableKeywordMatch;
+
     public SearchJobsRequest withDisableKeywordMatch(Boolean disableKeywordMatch) {
         this.disableKeywordMatch = disableKeywordMatch;
         return this;
@@ -40,6 +42,7 @@ public class SearchJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diversificationLevel")
     public SearchJobsRequestDiversificationLevelEnum diversificationLevel;
+
     public SearchJobsRequest withDiversificationLevel(SearchJobsRequestDiversificationLevelEnum diversificationLevel) {
         this.diversificationLevel = diversificationLevel;
         return this;
@@ -51,6 +54,7 @@ public class SearchJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableBroadening")
     public Boolean enableBroadening;
+
     public SearchJobsRequest withEnableBroadening(Boolean enableBroadening) {
         this.enableBroadening = enableBroadening;
         return this;
@@ -62,6 +66,7 @@ public class SearchJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("histogramQueries")
     public HistogramQuery[] histogramQueries;
+
     public SearchJobsRequest withHistogramQueries(HistogramQuery[] histogramQueries) {
         this.histogramQueries = histogramQueries;
         return this;
@@ -73,6 +78,7 @@ public class SearchJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobQuery")
     public JobQuery jobQuery;
+
     public SearchJobsRequest withJobQuery(JobQuery jobQuery) {
         this.jobQuery = jobQuery;
         return this;
@@ -84,6 +90,7 @@ public class SearchJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobView")
     public SearchJobsRequestJobViewEnum jobView;
+
     public SearchJobsRequest withJobView(SearchJobsRequestJobViewEnum jobView) {
         this.jobView = jobView;
         return this;
@@ -95,6 +102,7 @@ public class SearchJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywordMatchMode")
     public SearchJobsRequestKeywordMatchModeEnum keywordMatchMode;
+
     public SearchJobsRequest withKeywordMatchMode(SearchJobsRequestKeywordMatchModeEnum keywordMatchMode) {
         this.keywordMatchMode = keywordMatchMode;
         return this;
@@ -106,6 +114,7 @@ public class SearchJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPageSize")
     public Integer maxPageSize;
+
     public SearchJobsRequest withMaxPageSize(Integer maxPageSize) {
         this.maxPageSize = maxPageSize;
         return this;
@@ -117,6 +126,7 @@ public class SearchJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public SearchJobsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -128,6 +138,7 @@ public class SearchJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public String orderBy;
+
     public SearchJobsRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -139,6 +150,7 @@ public class SearchJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public SearchJobsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -150,6 +162,7 @@ public class SearchJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestMetadata")
     public RequestMetadata requestMetadata;
+
     public SearchJobsRequest withRequestMetadata(RequestMetadata requestMetadata) {
         this.requestMetadata = requestMetadata;
         return this;
@@ -161,9 +174,11 @@ public class SearchJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchMode")
     public SearchJobsRequestSearchModeEnum searchMode;
+
     public SearchJobsRequest withSearchMode(SearchJobsRequestSearchModeEnum searchMode) {
         this.searchMode = searchMode;
         return this;
     }
     
+    public SearchJobsRequest(){}
 }

@@ -12,6 +12,7 @@ public class GetCredentialsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dbName")
     public String dbName;
+
     public GetCredentialsRequest withDbName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -20,6 +21,7 @@ public class GetCredentialsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationSeconds")
     public Long durationSeconds;
+
     public GetCredentialsRequest withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -27,9 +29,13 @@ public class GetCredentialsRequest {
     
     @JsonProperty("workgroupName")
     public String workgroupName;
+
     public GetCredentialsRequest withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public GetCredentialsRequest(@JsonProperty("workgroupName") String workgroupName) {
+        this.workgroupName = workgroupName;
+  }
 }

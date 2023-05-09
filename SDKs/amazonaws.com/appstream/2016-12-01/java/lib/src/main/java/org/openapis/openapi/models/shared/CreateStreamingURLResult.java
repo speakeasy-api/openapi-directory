@@ -22,6 +22,7 @@ public class CreateStreamingURLResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Expires")
     public OffsetDateTime expires;
+
     public CreateStreamingURLResult withExpires(OffsetDateTime expires) {
         this.expires = expires;
         return this;
@@ -30,9 +31,11 @@ public class CreateStreamingURLResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamingURL")
     public String streamingURL;
+
     public CreateStreamingURLResult withStreamingURL(String streamingURL) {
         this.streamingURL = streamingURL;
         return this;
     }
     
+    public CreateStreamingURLResult(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApiV1DomainBlocksResponse {
     
     public String contentType;
+
     public DeleteApiV1DomainBlocksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApiV1DomainBlocksResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public DeleteApiV1DomainBlocksResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class DeleteApiV1DomainBlocksResponse {
     
     
     public Integer statusCode;
+
     public DeleteApiV1DomainBlocksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteApiV1DomainBlocksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApiV1DomainBlocksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteApiV1DomainBlocksResponse {
      */
     
     public java.util.Map<String, Object> deleteApiV1DomainBlocks200ApplicationJSONObject;
+
     public DeleteApiV1DomainBlocksResponse withDeleteApiV1DomainBlocks200ApplicationJSONObject(java.util.Map<String, Object> deleteApiV1DomainBlocks200ApplicationJSONObject) {
         this.deleteApiV1DomainBlocks200ApplicationJSONObject = deleteApiV1DomainBlocks200ApplicationJSONObject;
         return this;
     }
     
+    public DeleteApiV1DomainBlocksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class V1PaymentModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_money")
     public V1Money appliedMoney;
+
     public V1PaymentModifier withAppliedMoney(V1Money appliedMoney) {
         this.appliedMoney = appliedMoney;
         return this;
@@ -26,6 +27,7 @@ public class V1PaymentModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifier_option_id")
     public String modifierOptionId;
+
     public V1PaymentModifier withModifierOptionId(String modifierOptionId) {
         this.modifierOptionId = modifierOptionId;
         return this;
@@ -37,9 +39,11 @@ public class V1PaymentModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public V1PaymentModifier withName(String name) {
         this.name = name;
         return this;
     }
     
+    public V1PaymentModifier(){}
 }

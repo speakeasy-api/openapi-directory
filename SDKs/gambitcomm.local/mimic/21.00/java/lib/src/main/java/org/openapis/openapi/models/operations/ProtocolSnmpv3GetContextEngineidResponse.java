@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProtocolSnmpv3GetContextEngineidResponse {
     
     public String contentType;
+
     public ProtocolSnmpv3GetContextEngineidResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProtocolSnmpv3GetContextEngineidResponse {
     
     
     public Integer statusCode;
+
     public ProtocolSnmpv3GetContextEngineidResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProtocolSnmpv3GetContextEngineidResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProtocolSnmpv3GetContextEngineidResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ProtocolSnmpv3GetContextEngineidResponse {
      */
     
     public String protocolSnmpv3GetContextEngineid200ApplicationJSONString;
+
     public ProtocolSnmpv3GetContextEngineidResponse withProtocolSnmpv3GetContextEngineid200ApplicationJSONString(String protocolSnmpv3GetContextEngineid200ApplicationJSONString) {
         this.protocolSnmpv3GetContextEngineid200ApplicationJSONString = protocolSnmpv3GetContextEngineid200ApplicationJSONString;
         return this;
     }
     
+    public ProtocolSnmpv3GetContextEngineidResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

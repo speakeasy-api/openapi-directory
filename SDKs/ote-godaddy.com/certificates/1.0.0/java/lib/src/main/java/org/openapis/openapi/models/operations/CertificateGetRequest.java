@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateGetRequest {
@@ -12,9 +13,13 @@ public class CertificateGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
     public String certificateId;
+
     public CertificateGetRequest withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
     }
     
+    public CertificateGetRequest(@JsonProperty("certificateId") String certificateId) {
+        this.certificateId = certificateId;
+  }
 }

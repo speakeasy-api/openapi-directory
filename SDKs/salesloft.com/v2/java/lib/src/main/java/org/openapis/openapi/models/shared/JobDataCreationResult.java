@@ -15,9 +15,11 @@ public class JobDataCreationResult {
      */
     
     public Long records;
+
     public JobDataCreationResult withRecords(Long records) {
         this.records = records;
         return this;
     }
     
+    public JobDataCreationResult(){}
 }

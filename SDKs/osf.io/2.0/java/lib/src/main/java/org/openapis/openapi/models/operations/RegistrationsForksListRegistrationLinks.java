@@ -15,6 +15,7 @@ public class RegistrationsForksListRegistrationLinks {
      */
     
     public String html;
+
     public RegistrationsForksListRegistrationLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -25,9 +26,11 @@ public class RegistrationsForksListRegistrationLinks {
      */
     
     public String self;
+
     public RegistrationsForksListRegistrationLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public RegistrationsForksListRegistrationLinks(){}
 }

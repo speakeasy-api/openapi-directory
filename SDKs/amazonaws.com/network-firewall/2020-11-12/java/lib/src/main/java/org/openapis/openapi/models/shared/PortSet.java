@@ -15,9 +15,11 @@ public class PortSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Definition")
     public String[] definition;
+
     public PortSet withDefinition(String[] definition) {
         this.definition = definition;
         return this;
     }
     
+    public PortSet(){}
 }

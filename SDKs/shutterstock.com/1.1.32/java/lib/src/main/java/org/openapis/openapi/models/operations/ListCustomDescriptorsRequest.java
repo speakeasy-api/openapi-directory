@@ -12,6 +12,7 @@ public class ListCustomDescriptorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=band_id")
     public String bandId;
+
     public ListCustomDescriptorsRequest withBandId(String bandId) {
         this.bandId = bandId;
         return this;
@@ -22,6 +23,7 @@ public class ListCustomDescriptorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=band_name")
     public String bandName;
+
     public ListCustomDescriptorsRequest withBandName(String bandName) {
         this.bandName = bandName;
         return this;
@@ -32,6 +34,7 @@ public class ListCustomDescriptorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String[] id;
+
     public ListCustomDescriptorsRequest withId(String[] id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class ListCustomDescriptorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=instrument_id")
     public String instrumentId;
+
     public ListCustomDescriptorsRequest withInstrumentId(String instrumentId) {
         this.instrumentId = instrumentId;
         return this;
@@ -52,6 +56,7 @@ public class ListCustomDescriptorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=instrument_name")
     public String instrumentName;
+
     public ListCustomDescriptorsRequest withInstrumentName(String instrumentName) {
         this.instrumentName = instrumentName;
         return this;
@@ -62,6 +67,7 @@ public class ListCustomDescriptorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public ListCustomDescriptorsRequest withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +78,7 @@ public class ListCustomDescriptorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ListCustomDescriptorsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -82,6 +89,7 @@ public class ListCustomDescriptorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ListCustomDescriptorsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -92,6 +100,7 @@ public class ListCustomDescriptorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=render_speed_over")
     public Double renderSpeedOver;
+
     public ListCustomDescriptorsRequest withRenderSpeedOver(Double renderSpeedOver) {
         this.renderSpeedOver = renderSpeedOver;
         return this;
@@ -102,6 +111,7 @@ public class ListCustomDescriptorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
     public String tag;
+
     public ListCustomDescriptorsRequest withTag(String tag) {
         this.tag = tag;
         return this;
@@ -112,6 +122,7 @@ public class ListCustomDescriptorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tempo")
     public Double tempo;
+
     public ListCustomDescriptorsRequest withTempo(Double tempo) {
         this.tempo = tempo;
         return this;
@@ -122,6 +133,7 @@ public class ListCustomDescriptorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tempo_from")
     public Double tempoFrom;
+
     public ListCustomDescriptorsRequest withTempoFrom(Double tempoFrom) {
         this.tempoFrom = tempoFrom;
         return this;
@@ -132,9 +144,11 @@ public class ListCustomDescriptorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tempo_to")
     public Double tempoTo;
+
     public ListCustomDescriptorsRequest withTempoTo(Double tempoTo) {
         this.tempoTo = tempoTo;
         return this;
     }
     
+    public ListCustomDescriptorsRequest(){}
 }

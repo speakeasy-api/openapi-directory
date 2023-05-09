@@ -15,6 +15,7 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Principal withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public Principal withService(String service) {
         this.service = service;
         return this;
     }
     
+    public Principal(){}
 }

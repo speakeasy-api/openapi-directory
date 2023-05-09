@@ -70,4 +70,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/LongReturnTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DecimalReturnTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/RollbackTransactionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

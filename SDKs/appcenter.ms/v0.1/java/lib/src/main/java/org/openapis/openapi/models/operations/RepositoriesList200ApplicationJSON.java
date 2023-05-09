@@ -18,6 +18,7 @@ public class RepositoriesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clone_url")
     public String cloneUrl;
+
     public RepositoriesList200ApplicationJSON withCloneUrl(String cloneUrl) {
         this.cloneUrl = cloneUrl;
         return this;
@@ -29,9 +30,11 @@ public class RepositoriesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RepositoriesList200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RepositoriesList200ApplicationJSON(){}
 }

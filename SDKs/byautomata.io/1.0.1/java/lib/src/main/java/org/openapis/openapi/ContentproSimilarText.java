@@ -55,11 +55,9 @@ public class ContentproSimilarText {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostContentproSimilarTextResponse res = new org.openapis.openapi.models.operations.PostContentproSimilarTextResponse() {{
+        org.openapis.openapi.models.operations.PostContentproSimilarTextResponse res = new org.openapis.openapi.models.operations.PostContentproSimilarTextResponse(contentType, httpRes.statusCode()) {{
             postContentproSimilarText200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

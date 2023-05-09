@@ -18,6 +18,7 @@ public class Quota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Double limit;
+
     public Quota withLimit(Double limit) {
         this.limit = limit;
         return this;
@@ -29,6 +30,7 @@ public class Quota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public QuotaMetricEnum metric;
+
     public Quota withMetric(QuotaMetricEnum metric) {
         this.metric = metric;
         return this;
@@ -40,6 +42,7 @@ public class Quota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public Quota withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -51,9 +54,11 @@ public class Quota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public Double usage;
+
     public Quota withUsage(Double usage) {
         this.usage = usage;
         return this;
     }
     
+    public Quota(){}
 }

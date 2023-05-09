@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAnnouncementsResponse {
     
     public String contentType;
+
     public PostAnnouncementsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostAnnouncementsResponse {
     
     
     public Integer statusCode;
+
     public PostAnnouncementsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostAnnouncementsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAnnouncementsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostAnnouncementsResponse {
      */
     
     public PostAnnouncements201ApplicationJSON postAnnouncements201ApplicationJSONObject;
+
     public PostAnnouncementsResponse withPostAnnouncements201ApplicationJSONObject(PostAnnouncements201ApplicationJSON postAnnouncements201ApplicationJSONObject) {
         this.postAnnouncements201ApplicationJSONObject = postAnnouncements201ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PostAnnouncementsResponse {
      */
     
     public PostAnnouncements400ApplicationJSON postAnnouncements400ApplicationJSONObject;
+
     public PostAnnouncementsResponse withPostAnnouncements400ApplicationJSONObject(PostAnnouncements400ApplicationJSON postAnnouncements400ApplicationJSONObject) {
         this.postAnnouncements400ApplicationJSONObject = postAnnouncements400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PostAnnouncementsResponse {
      */
     
     public PostAnnouncements403ApplicationJSON postAnnouncements403ApplicationJSONObject;
+
     public PostAnnouncementsResponse withPostAnnouncements403ApplicationJSONObject(PostAnnouncements403ApplicationJSON postAnnouncements403ApplicationJSONObject) {
         this.postAnnouncements403ApplicationJSONObject = postAnnouncements403ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class PostAnnouncementsResponse {
      */
     
     public org.openapis.openapi.models.shared.OneannouncementsPostResponses403ContentApplication1jsonSchema oneannouncementsPostResponses403ContentApplication1jsonSchema;
+
     public PostAnnouncementsResponse withOneannouncementsPostResponses403ContentApplication1jsonSchema(org.openapis.openapi.models.shared.OneannouncementsPostResponses403ContentApplication1jsonSchema oneannouncementsPostResponses403ContentApplication1jsonSchema) {
         this.oneannouncementsPostResponses403ContentApplication1jsonSchema = oneannouncementsPostResponses403ContentApplication1jsonSchema;
         return this;
     }
     
+    public PostAnnouncementsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

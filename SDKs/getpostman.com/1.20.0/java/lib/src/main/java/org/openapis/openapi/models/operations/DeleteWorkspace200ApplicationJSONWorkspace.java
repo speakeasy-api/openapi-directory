@@ -12,9 +12,11 @@ public class DeleteWorkspace200ApplicationJSONWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeleteWorkspace200ApplicationJSONWorkspace withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteWorkspace200ApplicationJSONWorkspace(){}
 }

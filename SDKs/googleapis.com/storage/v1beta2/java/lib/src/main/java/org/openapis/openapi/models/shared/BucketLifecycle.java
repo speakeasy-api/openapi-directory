@@ -18,9 +18,11 @@ public class BucketLifecycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public BucketLifecycleRule[] rule;
+
     public BucketLifecycle withRule(BucketLifecycleRule[] rule) {
         this.rule = rule;
         return this;
     }
     
+    public BucketLifecycle(){}
 }

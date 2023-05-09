@@ -18,6 +18,7 @@ public class NestedParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boolValue")
     public Boolean boolValue;
+
     public NestedParameter withBoolValue(Boolean boolValue) {
         this.boolValue = boolValue;
         return this;
@@ -29,6 +30,7 @@ public class NestedParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intValue")
     public String intValue;
+
     public NestedParameter withIntValue(String intValue) {
         this.intValue = intValue;
         return this;
@@ -40,6 +42,7 @@ public class NestedParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiBoolValue")
     public Boolean[] multiBoolValue;
+
     public NestedParameter withMultiBoolValue(Boolean[] multiBoolValue) {
         this.multiBoolValue = multiBoolValue;
         return this;
@@ -51,6 +54,7 @@ public class NestedParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiIntValue")
     public String[] multiIntValue;
+
     public NestedParameter withMultiIntValue(String[] multiIntValue) {
         this.multiIntValue = multiIntValue;
         return this;
@@ -62,6 +66,7 @@ public class NestedParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiValue")
     public String[] multiValue;
+
     public NestedParameter withMultiValue(String[] multiValue) {
         this.multiValue = multiValue;
         return this;
@@ -73,6 +78,7 @@ public class NestedParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NestedParameter withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,11 @@ public class NestedParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public NestedParameter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public NestedParameter(){}
 }

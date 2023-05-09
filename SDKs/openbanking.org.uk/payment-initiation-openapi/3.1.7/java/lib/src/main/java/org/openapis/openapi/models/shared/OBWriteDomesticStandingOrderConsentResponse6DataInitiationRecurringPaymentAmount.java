@@ -15,6 +15,7 @@ public class OBWriteDomesticStandingOrderConsentResponse6DataInitiationRecurring
      */
     @JsonProperty("Amount")
     public String amount;
+
     public OBWriteDomesticStandingOrderConsentResponse6DataInitiationRecurringPaymentAmount withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -25,9 +26,14 @@ public class OBWriteDomesticStandingOrderConsentResponse6DataInitiationRecurring
      */
     @JsonProperty("Currency")
     public String currency;
+
     public OBWriteDomesticStandingOrderConsentResponse6DataInitiationRecurringPaymentAmount withCurrency(String currency) {
         this.currency = currency;
         return this;
     }
     
+    public OBWriteDomesticStandingOrderConsentResponse6DataInitiationRecurringPaymentAmount(@JsonProperty("Amount") String amount, @JsonProperty("Currency") String currency) {
+        this.amount = amount;
+        this.currency = currency;
+  }
 }

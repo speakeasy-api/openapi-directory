@@ -15,16 +15,31 @@ public class CreateMonitorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateMonitorRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
     /**
-     * The maximum number of city-network combinations (that is, combinations of a city location and network, such as an ISP) to be monitored for your resources.
+     * Publish internet measurements to an Amazon S3 bucket in addition to CloudWatch Logs.
      */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InternetMeasurementsLogDelivery")
+    public CreateMonitorRequestBodyInternetMeasurementsLogDelivery internetMeasurementsLogDelivery;
+
+    public CreateMonitorRequestBody withInternetMeasurementsLogDelivery(CreateMonitorRequestBodyInternetMeasurementsLogDelivery internetMeasurementsLogDelivery) {
+        this.internetMeasurementsLogDelivery = internetMeasurementsLogDelivery;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The maximum number of city-networks to monitor for your resources. A city-network is the location (city) where clients access your application resources from and the network or ASN, such as an internet service provider (ISP), that clients access the resources through. This limit helps control billing costs.&lt;/p&gt; &lt;p&gt;To learn more, see &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/IMCityNetworksMaximum.html"&gt;Choosing a city-network maximum value &lt;/a&gt; in the Amazon CloudWatch Internet Monitor section of the &lt;i&gt;CloudWatch User Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCityNetworksToMonitor")
     public Long maxCityNetworksToMonitor;
+
     public CreateMonitorRequestBody withMaxCityNetworksToMonitor(Long maxCityNetworksToMonitor) {
         this.maxCityNetworksToMonitor = maxCityNetworksToMonitor;
         return this;
@@ -35,6 +50,7 @@ public class CreateMonitorRequestBody {
      */
     @JsonProperty("MonitorName")
     public String monitorName;
+
     public CreateMonitorRequestBody withMonitorName(String monitorName) {
         this.monitorName = monitorName;
         return this;
@@ -46,6 +62,7 @@ public class CreateMonitorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public String[] resources;
+
     public CreateMonitorRequestBody withResources(String[] resources) {
         this.resources = resources;
         return this;
@@ -57,9 +74,25 @@ public class CreateMonitorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateMonitorRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    /**
+     * The percentage of the internet-facing traffic for your application that you want to monitor with this monitor.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TrafficPercentageToMonitor")
+    public Long trafficPercentageToMonitor;
+
+    public CreateMonitorRequestBody withTrafficPercentageToMonitor(Long trafficPercentageToMonitor) {
+        this.trafficPercentageToMonitor = trafficPercentageToMonitor;
+        return this;
+    }
+    
+    public CreateMonitorRequestBody(@JsonProperty("MonitorName") String monitorName) {
+        this.monitorName = monitorName;
+  }
 }

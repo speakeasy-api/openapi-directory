@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyMilestonesDestinyMilestoneChallengeActivity {
     
     public Long activityHash;
+
     public DestinyMilestonesDestinyMilestoneChallengeActivity withActivityHash(Long activityHash) {
         this.activityHash = activityHash;
         return this;
@@ -22,6 +23,7 @@ public class DestinyMilestonesDestinyMilestoneChallengeActivity {
      */
     
     public java.util.Map<String, Boolean> booleanActivityOptions;
+
     public DestinyMilestonesDestinyMilestoneChallengeActivity withBooleanActivityOptions(java.util.Map<String, Boolean> booleanActivityOptions) {
         this.booleanActivityOptions = booleanActivityOptions;
         return this;
@@ -29,6 +31,7 @@ public class DestinyMilestonesDestinyMilestoneChallengeActivity {
     
     
     public DestinyChallengesDestinyChallengeStatus[] challenges;
+
     public DestinyMilestonesDestinyMilestoneChallengeActivity withChallenges(DestinyChallengesDestinyChallengeStatus[] challenges) {
         this.challenges = challenges;
         return this;
@@ -39,6 +42,7 @@ public class DestinyMilestonesDestinyMilestoneChallengeActivity {
      */
     
     public Integer loadoutRequirementIndex;
+
     public DestinyMilestonesDestinyMilestoneChallengeActivity withLoadoutRequirementIndex(Integer loadoutRequirementIndex) {
         this.loadoutRequirementIndex = loadoutRequirementIndex;
         return this;
@@ -50,6 +54,7 @@ public class DestinyMilestonesDestinyMilestoneChallengeActivity {
      */
     
     public Long[] modifierHashes;
+
     public DestinyMilestonesDestinyMilestoneChallengeActivity withModifierHashes(Long[] modifierHashes) {
         this.modifierHashes = modifierHashes;
         return this;
@@ -60,9 +65,11 @@ public class DestinyMilestonesDestinyMilestoneChallengeActivity {
      */
     
     public DestinyMilestonesDestinyMilestoneActivityPhase[] phases;
+
     public DestinyMilestonesDestinyMilestoneChallengeActivity withPhases(DestinyMilestonesDestinyMilestoneActivityPhase[] phases) {
         this.phases = phases;
         return this;
     }
     
+    public DestinyMilestonesDestinyMilestoneChallengeActivity(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateWorkloadShareRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateWorkloadShareRequestBody requestBody;
+
     public CreateWorkloadShareRequest withRequestBody(CreateWorkloadShareRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class CreateWorkloadShareRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkloadId")
     public String workloadId;
+
     public CreateWorkloadShareRequest withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
@@ -23,6 +26,7 @@ public class CreateWorkloadShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public CreateWorkloadShareRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -30,6 +34,7 @@ public class CreateWorkloadShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public CreateWorkloadShareRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -37,6 +42,7 @@ public class CreateWorkloadShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public CreateWorkloadShareRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -44,6 +50,7 @@ public class CreateWorkloadShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public CreateWorkloadShareRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -51,6 +58,7 @@ public class CreateWorkloadShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public CreateWorkloadShareRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -58,6 +66,7 @@ public class CreateWorkloadShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public CreateWorkloadShareRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -65,9 +74,14 @@ public class CreateWorkloadShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public CreateWorkloadShareRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public CreateWorkloadShareRequest(@JsonProperty("RequestBody") CreateWorkloadShareRequestBody requestBody, @JsonProperty("WorkloadId") String workloadId) {
+        this.requestBody = requestBody;
+        this.workloadId = workloadId;
+  }
 }

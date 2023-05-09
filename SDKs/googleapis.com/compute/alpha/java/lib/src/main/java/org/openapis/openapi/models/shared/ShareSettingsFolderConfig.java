@@ -18,9 +18,11 @@ public class ShareSettingsFolderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folderId")
     public String folderId;
+
     public ShareSettingsFolderConfig withFolderId(String folderId) {
         this.folderId = folderId;
         return this;
     }
     
+    public ShareSettingsFolderConfig(){}
 }

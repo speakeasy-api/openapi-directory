@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IotEventsDestinationConfiguration {
     @JsonProperty("inputName")
     public String inputName;
+
     public IotEventsDestinationConfiguration withInputName(String inputName) {
         this.inputName = inputName;
         return this;
@@ -19,9 +20,14 @@ public class IotEventsDestinationConfiguration {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public IotEventsDestinationConfiguration withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public IotEventsDestinationConfiguration(@JsonProperty("inputName") String inputName, @JsonProperty("roleArn") String roleArn) {
+        this.inputName = inputName;
+        this.roleArn = roleArn;
+  }
 }

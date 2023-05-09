@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CompanyNotificationRegister200ApplicationJSON {
     @JsonProperty("monitorStatus")
     public String monitorStatus;
+
     public CompanyNotificationRegister200ApplicationJSON withMonitorStatus(String monitorStatus) {
         this.monitorStatus = monitorStatus;
         return this;
@@ -19,9 +20,14 @@ public class CompanyNotificationRegister200ApplicationJSON {
     
     @JsonProperty("notificationId")
     public String notificationId;
+
     public CompanyNotificationRegister200ApplicationJSON withNotificationId(String notificationId) {
         this.notificationId = notificationId;
         return this;
     }
     
+    public CompanyNotificationRegister200ApplicationJSON(@JsonProperty("monitorStatus") String monitorStatus, @JsonProperty("notificationId") String notificationId) {
+        this.monitorStatus = monitorStatus;
+        this.notificationId = notificationId;
+  }
 }

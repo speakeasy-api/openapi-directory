@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyActivityStreamRequest {
     
     public AuditPolicyStateEnum auditPolicyState;
+
     public ModifyActivityStreamRequest withAuditPolicyState(AuditPolicyStateEnum auditPolicyState) {
         this.auditPolicyState = auditPolicyState;
         return this;
@@ -16,9 +17,11 @@ public class ModifyActivityStreamRequest {
     
     
     public String resourceArn;
+
     public ModifyActivityStreamRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public ModifyActivityStreamRequest(){}
 }

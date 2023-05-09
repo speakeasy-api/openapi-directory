@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeApplicationResponse {
     @JsonProperty("applicationArn")
     public String applicationArn;
+
     public DescribeApplicationResponse withApplicationArn(String applicationArn) {
         this.applicationArn = applicationArn;
         return this;
@@ -21,6 +22,7 @@ public class DescribeApplicationResponse {
     
     @JsonProperty("applicationCreationDate")
     public Long applicationCreationDate;
+
     public DescribeApplicationResponse withApplicationCreationDate(Long applicationCreationDate) {
         this.applicationCreationDate = applicationCreationDate;
         return this;
@@ -29,6 +31,7 @@ public class DescribeApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationDescription")
     public String applicationDescription;
+
     public DescribeApplicationResponse withApplicationDescription(String applicationDescription) {
         this.applicationDescription = applicationDescription;
         return this;
@@ -36,6 +39,7 @@ public class DescribeApplicationResponse {
     
     @JsonProperty("applicationId")
     public String applicationId;
+
     public DescribeApplicationResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -43,6 +47,7 @@ public class DescribeApplicationResponse {
     
     @JsonProperty("applicationLastUpdateDate")
     public Long applicationLastUpdateDate;
+
     public DescribeApplicationResponse withApplicationLastUpdateDate(Long applicationLastUpdateDate) {
         this.applicationLastUpdateDate = applicationLastUpdateDate;
         return this;
@@ -50,6 +55,7 @@ public class DescribeApplicationResponse {
     
     @JsonProperty("applicationName")
     public String applicationName;
+
     public DescribeApplicationResponse withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -57,6 +63,7 @@ public class DescribeApplicationResponse {
     
     @JsonProperty("applicationState")
     public ApplicationStateEnum applicationState;
+
     public DescribeApplicationResponse withApplicationState(ApplicationStateEnum applicationState) {
         this.applicationState = applicationState;
         return this;
@@ -64,6 +71,7 @@ public class DescribeApplicationResponse {
     
     @JsonProperty("applicationUrl")
     public String applicationUrl;
+
     public DescribeApplicationResponse withApplicationUrl(String applicationUrl) {
         this.applicationUrl = applicationUrl;
         return this;
@@ -72,6 +80,7 @@ public class DescribeApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public DescribeApplicationResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -79,6 +88,7 @@ public class DescribeApplicationResponse {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DescribeApplicationResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -87,6 +97,7 @@ public class DescribeApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssoClientId")
     public String ssoClientId;
+
     public DescribeApplicationResponse withSsoClientId(String ssoClientId) {
         this.ssoClientId = ssoClientId;
         return this;
@@ -95,9 +106,20 @@ public class DescribeApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public DescribeApplicationResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeApplicationResponse(@JsonProperty("applicationArn") String applicationArn, @JsonProperty("applicationCreationDate") Long applicationCreationDate, @JsonProperty("applicationId") String applicationId, @JsonProperty("applicationLastUpdateDate") Long applicationLastUpdateDate, @JsonProperty("applicationName") String applicationName, @JsonProperty("applicationState") ApplicationStateEnum applicationState, @JsonProperty("applicationUrl") String applicationUrl, @JsonProperty("roleArn") String roleArn) {
+        this.applicationArn = applicationArn;
+        this.applicationCreationDate = applicationCreationDate;
+        this.applicationId = applicationId;
+        this.applicationLastUpdateDate = applicationLastUpdateDate;
+        this.applicationName = applicationName;
+        this.applicationState = applicationState;
+        this.applicationUrl = applicationUrl;
+        this.roleArn = roleArn;
+  }
 }

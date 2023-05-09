@@ -17,6 +17,7 @@ public class EeBtEligibility {
      */
     @JsonProperty("eligible")
     public Boolean eligible;
+
     public EeBtEligibility withEligible(Boolean eligible) {
         this.eligible = eligible;
         return this;
@@ -28,6 +29,7 @@ public class EeBtEligibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan")
     public String plan;
+
     public EeBtEligibility withPlan(String plan) {
         this.plan = plan;
         return this;
@@ -39,9 +41,13 @@ public class EeBtEligibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public EeBtEligibility withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public EeBtEligibility(@JsonProperty("eligible") Boolean eligible) {
+        this.eligible = eligible;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetTransactions {
     @JsonProperty("ok")
     public Boolean ok;
+
     public GetTransactions withOk(Boolean ok) {
         this.ok = ok;
         return this;
@@ -16,9 +17,14 @@ public class GetTransactions {
     
     @JsonProperty("transactions")
     public Transaction[] transactions;
+
     public GetTransactions withTransactions(Transaction[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public GetTransactions(@JsonProperty("ok") Boolean ok, @JsonProperty("transactions") Transaction[] transactions) {
+        this.ok = ok;
+        this.transactions = transactions;
+  }
 }

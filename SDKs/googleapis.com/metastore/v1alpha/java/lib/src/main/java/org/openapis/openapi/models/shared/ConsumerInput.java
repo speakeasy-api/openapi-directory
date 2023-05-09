@@ -18,9 +18,11 @@ public class ConsumerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public ConsumerInput withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
     }
     
+    public ConsumerInput(){}
 }

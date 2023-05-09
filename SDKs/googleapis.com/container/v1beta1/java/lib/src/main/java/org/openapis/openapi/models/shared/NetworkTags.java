@@ -18,9 +18,11 @@ public class NetworkTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public NetworkTags withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public NetworkTags(){}
 }

@@ -18,6 +18,7 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSize")
     public String maxSize;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale withMaxSize(String maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -29,9 +30,11 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minSize")
     public String minSize;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale withMinSize(String minSize) {
         this.minSize = minSize;
         return this;
     }
     
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale(){}
 }

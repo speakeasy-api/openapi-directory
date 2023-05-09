@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGovCloudAccountResponse {
@@ -12,6 +13,7 @@ public class CreateGovCloudAccountResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public CreateGovCloudAccountResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class CreateGovCloudAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateGovCloudAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class CreateGovCloudAccountResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateGovCloudAccountResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -42,6 +46,7 @@ public class CreateGovCloudAccountResponse {
      */
     
     public Object constraintViolationException;
+
     public CreateGovCloudAccountResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -49,6 +54,7 @@ public class CreateGovCloudAccountResponse {
     
     
     public String contentType;
+
     public CreateGovCloudAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class CreateGovCloudAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGovCloudAccountResponse createGovCloudAccountResponse;
+
     public CreateGovCloudAccountResponse withCreateGovCloudAccountResponse(org.openapis.openapi.models.shared.CreateGovCloudAccountResponse createGovCloudAccountResponse) {
         this.createGovCloudAccountResponse = createGovCloudAccountResponse;
         return this;
@@ -69,6 +76,7 @@ public class CreateGovCloudAccountResponse {
      */
     
     public Object finalizingOrganizationException;
+
     public CreateGovCloudAccountResponse withFinalizingOrganizationException(Object finalizingOrganizationException) {
         this.finalizingOrganizationException = finalizingOrganizationException;
         return this;
@@ -79,6 +87,7 @@ public class CreateGovCloudAccountResponse {
      */
     
     public Object invalidInputException;
+
     public CreateGovCloudAccountResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -89,6 +98,7 @@ public class CreateGovCloudAccountResponse {
      */
     
     public Object serviceException;
+
     public CreateGovCloudAccountResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -96,6 +106,7 @@ public class CreateGovCloudAccountResponse {
     
     
     public Integer statusCode;
+
     public CreateGovCloudAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateGovCloudAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGovCloudAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class CreateGovCloudAccountResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateGovCloudAccountResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -123,9 +136,14 @@ public class CreateGovCloudAccountResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public CreateGovCloudAccountResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public CreateGovCloudAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

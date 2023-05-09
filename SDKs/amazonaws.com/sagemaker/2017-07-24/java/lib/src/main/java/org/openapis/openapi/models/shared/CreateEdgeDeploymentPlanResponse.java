@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateEdgeDeploymentPlanResponse {
     @JsonProperty("EdgeDeploymentPlanArn")
     public String edgeDeploymentPlanArn;
+
     public CreateEdgeDeploymentPlanResponse withEdgeDeploymentPlanArn(String edgeDeploymentPlanArn) {
         this.edgeDeploymentPlanArn = edgeDeploymentPlanArn;
         return this;
     }
     
+    public CreateEdgeDeploymentPlanResponse(@JsonProperty("EdgeDeploymentPlanArn") String edgeDeploymentPlanArn) {
+        this.edgeDeploymentPlanArn = edgeDeploymentPlanArn;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyCacheSubnetGroupMessage - Represents the input of a &lt;code&gt;ModifyCacheSubnetGroup&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyCacheSubnetGroupMessage {
     
     public String cacheSubnetGroupDescription;
+
     public ModifyCacheSubnetGroupMessage withCacheSubnetGroupDescription(String cacheSubnetGroupDescription) {
         this.cacheSubnetGroupDescription = cacheSubnetGroupDescription;
         return this;
@@ -19,6 +20,7 @@ public class ModifyCacheSubnetGroupMessage {
     
     
     public String cacheSubnetGroupName;
+
     public ModifyCacheSubnetGroupMessage withCacheSubnetGroupName(String cacheSubnetGroupName) {
         this.cacheSubnetGroupName = cacheSubnetGroupName;
         return this;
@@ -26,9 +28,13 @@ public class ModifyCacheSubnetGroupMessage {
     
     
     public String[] subnetIds;
+
     public ModifyCacheSubnetGroupMessage withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public ModifyCacheSubnetGroupMessage(@JsonProperty("CacheSubnetGroupName") String cacheSubnetGroupName) {
+        this.cacheSubnetGroupName = cacheSubnetGroupName;
+  }
 }

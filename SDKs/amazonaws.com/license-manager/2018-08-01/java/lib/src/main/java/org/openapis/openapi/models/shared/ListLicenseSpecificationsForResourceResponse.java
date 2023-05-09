@@ -15,6 +15,7 @@ public class ListLicenseSpecificationsForResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseSpecifications")
     public LicenseSpecification[] licenseSpecifications;
+
     public ListLicenseSpecificationsForResourceResponse withLicenseSpecifications(LicenseSpecification[] licenseSpecifications) {
         this.licenseSpecifications = licenseSpecifications;
         return this;
@@ -23,9 +24,11 @@ public class ListLicenseSpecificationsForResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLicenseSpecificationsForResourceResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLicenseSpecificationsForResourceResponse(){}
 }

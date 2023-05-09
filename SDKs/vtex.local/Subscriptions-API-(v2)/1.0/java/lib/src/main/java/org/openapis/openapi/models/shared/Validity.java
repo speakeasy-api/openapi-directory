@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Validity {
     @JsonProperty("begin")
     public String begin;
+
     public Validity withBegin(String begin) {
         this.begin = begin;
         return this;
@@ -16,9 +17,14 @@ public class Validity {
     
     @JsonProperty("end")
     public String end;
+
     public Validity withEnd(String end) {
         this.end = end;
         return this;
     }
     
+    public Validity(@JsonProperty("begin") String begin, @JsonProperty("end") String end) {
+        this.begin = begin;
+        this.end = end;
+  }
 }

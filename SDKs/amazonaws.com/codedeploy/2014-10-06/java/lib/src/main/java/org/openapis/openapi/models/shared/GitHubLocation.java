@@ -15,6 +15,7 @@ public class GitHubLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitId")
     public String commitId;
+
     public GitHubLocation withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -23,9 +24,11 @@ public class GitHubLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public String repository;
+
     public GitHubLocation withRepository(String repository) {
         this.repository = repository;
         return this;
     }
     
+    public GitHubLocation(){}
 }

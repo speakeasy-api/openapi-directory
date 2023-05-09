@@ -15,6 +15,7 @@ public class UpdateConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorArn")
     public String connectorArn;
+
     public UpdateConnectorResponse withConnectorArn(String connectorArn) {
         this.connectorArn = connectorArn;
         return this;
@@ -23,9 +24,11 @@ public class UpdateConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorState")
     public ConnectorStateEnum connectorState;
+
     public UpdateConnectorResponse withConnectorState(ConnectorStateEnum connectorState) {
         this.connectorState = connectorState;
         return this;
     }
     
+    public UpdateConnectorResponse(){}
 }

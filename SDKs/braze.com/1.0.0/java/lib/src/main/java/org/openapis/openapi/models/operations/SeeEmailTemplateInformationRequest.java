@@ -14,9 +14,11 @@ public class SeeEmailTemplateInformationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email_template_id")
     public String emailTemplateId;
+
     public SeeEmailTemplateInformationRequest withEmailTemplateId(String emailTemplateId) {
         this.emailTemplateId = emailTemplateId;
         return this;
     }
     
+    public SeeEmailTemplateInformationRequest(){}
 }

@@ -15,9 +15,11 @@ public class GenerateAccessLogsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logUrl")
     public String logUrl;
+
     public GenerateAccessLogsResult withLogUrl(String logUrl) {
         this.logUrl = logUrl;
         return this;
     }
     
+    public GenerateAccessLogsResult(){}
 }

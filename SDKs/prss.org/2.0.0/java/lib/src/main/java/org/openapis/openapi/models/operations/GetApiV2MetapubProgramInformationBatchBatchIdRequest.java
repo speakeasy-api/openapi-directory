@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2MetapubProgramInformationBatchBatchIdRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batch-id")
     public Long batchId;
+
     public GetApiV2MetapubProgramInformationBatchBatchIdRequest withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
     }
     
+    public GetApiV2MetapubProgramInformationBatchBatchIdRequest(@JsonProperty("batch-id") Long batchId) {
+        this.batchId = batchId;
+  }
 }

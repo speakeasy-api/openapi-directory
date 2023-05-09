@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EventBridgeParameters {
     @JsonProperty("DetailType")
     public String detailType;
+
     public EventBridgeParameters withDetailType(String detailType) {
         this.detailType = detailType;
         return this;
@@ -19,9 +20,14 @@ public class EventBridgeParameters {
     
     @JsonProperty("Source")
     public String source;
+
     public EventBridgeParameters withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public EventBridgeParameters(@JsonProperty("DetailType") String detailType, @JsonProperty("Source") String source) {
+        this.detailType = detailType;
+        this.source = source;
+  }
 }

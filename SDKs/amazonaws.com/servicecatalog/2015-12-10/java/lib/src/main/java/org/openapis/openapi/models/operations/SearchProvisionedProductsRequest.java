@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchProvisionedProductsRequest {
@@ -12,6 +13,7 @@ public class SearchProvisionedProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
     public String pageSize;
+
     public SearchProvisionedProductsRequest withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -22,6 +24,7 @@ public class SearchProvisionedProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
     public String pageToken;
+
     public SearchProvisionedProductsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -29,6 +32,7 @@ public class SearchProvisionedProductsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SearchProvisionedProductsInput searchProvisionedProductsInput;
+
     public SearchProvisionedProductsRequest withSearchProvisionedProductsInput(org.openapis.openapi.models.shared.SearchProvisionedProductsInput searchProvisionedProductsInput) {
         this.searchProvisionedProductsInput = searchProvisionedProductsInput;
         return this;
@@ -36,6 +40,7 @@ public class SearchProvisionedProductsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public SearchProvisionedProductsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class SearchProvisionedProductsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public SearchProvisionedProductsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class SearchProvisionedProductsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public SearchProvisionedProductsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class SearchProvisionedProductsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public SearchProvisionedProductsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class SearchProvisionedProductsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public SearchProvisionedProductsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class SearchProvisionedProductsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public SearchProvisionedProductsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class SearchProvisionedProductsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public SearchProvisionedProductsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class SearchProvisionedProductsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public SearchProvisionedProductsXAmzTargetEnum xAmzTarget;
+
     public SearchProvisionedProductsRequest withXAmzTarget(SearchProvisionedProductsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public SearchProvisionedProductsRequest(@JsonProperty("SearchProvisionedProductsInput") org.openapis.openapi.models.shared.SearchProvisionedProductsInput searchProvisionedProductsInput, @JsonProperty("X-Amz-Target") SearchProvisionedProductsXAmzTargetEnum xAmzTarget) {
+        this.searchProvisionedProductsInput = searchProvisionedProductsInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

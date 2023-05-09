@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DependabotCreateOrUpdateOrgSecretRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public DependabotCreateOrUpdateOrgSecretRequestBody requestBody;
+
     public DependabotCreateOrUpdateOrgSecretRequest withRequestBody(DependabotCreateOrUpdateOrgSecretRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class DependabotCreateOrUpdateOrgSecretRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public DependabotCreateOrUpdateOrgSecretRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -29,9 +32,15 @@ public class DependabotCreateOrUpdateOrgSecretRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
     public String secretName;
+
     public DependabotCreateOrUpdateOrgSecretRequest withSecretName(String secretName) {
         this.secretName = secretName;
         return this;
     }
     
+    public DependabotCreateOrUpdateOrgSecretRequest(@JsonProperty("RequestBody") DependabotCreateOrUpdateOrgSecretRequestBody requestBody, @JsonProperty("org") String org, @JsonProperty("secret_name") String secretName) {
+        this.requestBody = requestBody;
+        this.org = org;
+        this.secretName = secretName;
+  }
 }

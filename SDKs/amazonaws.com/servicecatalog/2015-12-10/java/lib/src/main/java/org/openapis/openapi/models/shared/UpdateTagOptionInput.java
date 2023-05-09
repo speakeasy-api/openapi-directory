@@ -12,6 +12,7 @@ public class UpdateTagOptionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Active")
     public Boolean active;
+
     public UpdateTagOptionInput withActive(Boolean active) {
         this.active = active;
         return this;
@@ -19,6 +20,7 @@ public class UpdateTagOptionInput {
     
     @JsonProperty("Id")
     public String id;
+
     public UpdateTagOptionInput withId(String id) {
         this.id = id;
         return this;
@@ -27,9 +29,13 @@ public class UpdateTagOptionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public UpdateTagOptionInput withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UpdateTagOptionInput(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

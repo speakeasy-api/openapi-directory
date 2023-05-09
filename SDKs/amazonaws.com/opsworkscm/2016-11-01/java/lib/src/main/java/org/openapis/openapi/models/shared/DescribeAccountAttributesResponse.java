@@ -15,9 +15,11 @@ public class DescribeAccountAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public AccountAttribute[] attributes;
+
     public DescribeAccountAttributesResponse withAttributes(AccountAttribute[] attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public DescribeAccountAttributesResponse(){}
 }

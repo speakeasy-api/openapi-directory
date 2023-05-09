@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LoggingInfo {
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public LoggingInfo withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -22,6 +23,7 @@ public class LoggingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3KeyPrefix")
     public String s3KeyPrefix;
+
     public LoggingInfo withS3KeyPrefix(String s3KeyPrefix) {
         this.s3KeyPrefix = s3KeyPrefix;
         return this;
@@ -29,9 +31,14 @@ public class LoggingInfo {
     
     @JsonProperty("S3Region")
     public String s3Region;
+
     public LoggingInfo withS3Region(String s3Region) {
         this.s3Region = s3Region;
         return this;
     }
     
+    public LoggingInfo(@JsonProperty("S3BucketName") String s3BucketName, @JsonProperty("S3Region") String s3Region) {
+        this.s3BucketName = s3BucketName;
+        this.s3Region = s3Region;
+  }
 }

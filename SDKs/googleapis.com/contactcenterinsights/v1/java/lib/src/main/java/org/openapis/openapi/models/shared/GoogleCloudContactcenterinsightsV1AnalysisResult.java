@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1AnalysisResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callAnalysisMetadata")
     public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata callAnalysisMetadata;
+
     public GoogleCloudContactcenterinsightsV1AnalysisResult withCallAnalysisMetadata(GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata callAnalysisMetadata) {
         this.callAnalysisMetadata = callAnalysisMetadata;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1AnalysisResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudContactcenterinsightsV1AnalysisResult withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1AnalysisResult(){}
 }

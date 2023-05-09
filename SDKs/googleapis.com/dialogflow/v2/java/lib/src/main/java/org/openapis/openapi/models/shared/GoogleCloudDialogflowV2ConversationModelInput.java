@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ConversationModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("articleSuggestionModelMetadata")
     public GoogleCloudDialogflowV2ArticleSuggestionModelMetadata articleSuggestionModelMetadata;
+
     public GoogleCloudDialogflowV2ConversationModelInput withArticleSuggestionModelMetadata(GoogleCloudDialogflowV2ArticleSuggestionModelMetadata articleSuggestionModelMetadata) {
         this.articleSuggestionModelMetadata = articleSuggestionModelMetadata;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2ConversationModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasets")
     public GoogleCloudDialogflowV2InputDataset[] datasets;
+
     public GoogleCloudDialogflowV2ConversationModelInput withDatasets(GoogleCloudDialogflowV2InputDataset[] datasets) {
         this.datasets = datasets;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2ConversationModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowV2ConversationModelInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2ConversationModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2ConversationModelInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2ConversationModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2ConversationModelInput withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowV2ConversationModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smartReplyModelMetadata")
     public GoogleCloudDialogflowV2SmartReplyModelMetadata smartReplyModelMetadata;
+
     public GoogleCloudDialogflowV2ConversationModelInput withSmartReplyModelMetadata(GoogleCloudDialogflowV2SmartReplyModelMetadata smartReplyModelMetadata) {
         this.smartReplyModelMetadata = smartReplyModelMetadata;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ConversationModelInput(){}
 }

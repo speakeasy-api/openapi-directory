@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class Area120tablesTablesRowsBatchUpdateResponse {
@@ -12,6 +13,7 @@ public class Area120tablesTablesRowsBatchUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchUpdateRowsResponse batchUpdateRowsResponse;
+
     public Area120tablesTablesRowsBatchUpdateResponse withBatchUpdateRowsResponse(org.openapis.openapi.models.shared.BatchUpdateRowsResponse batchUpdateRowsResponse) {
         this.batchUpdateRowsResponse = batchUpdateRowsResponse;
         return this;
@@ -19,6 +21,7 @@ public class Area120tablesTablesRowsBatchUpdateResponse {
     
     
     public String contentType;
+
     public Area120tablesTablesRowsBatchUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class Area120tablesTablesRowsBatchUpdateResponse {
     
     
     public Integer statusCode;
+
     public Area120tablesTablesRowsBatchUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class Area120tablesTablesRowsBatchUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public Area120tablesTablesRowsBatchUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public Area120tablesTablesRowsBatchUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

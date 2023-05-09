@@ -18,6 +18,7 @@ public class CloudSQLConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public CloudSQLConfig withService(String service) {
         this.service = service;
         return this;
@@ -29,6 +30,7 @@ public class CloudSQLConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("umbrellaNetwork")
     public String umbrellaNetwork;
+
     public CloudSQLConfig withUmbrellaNetwork(String umbrellaNetwork) {
         this.umbrellaNetwork = umbrellaNetwork;
         return this;
@@ -40,9 +42,11 @@ public class CloudSQLConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("umbrellaProject")
     public String umbrellaProject;
+
     public CloudSQLConfig withUmbrellaProject(String umbrellaProject) {
         this.umbrellaProject = umbrellaProject;
         return this;
     }
     
+    public CloudSQLConfig(){}
 }

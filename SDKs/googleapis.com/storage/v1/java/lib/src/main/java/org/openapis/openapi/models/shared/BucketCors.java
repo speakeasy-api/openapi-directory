@@ -15,6 +15,7 @@ public class BucketCors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxAgeSeconds")
     public Integer maxAgeSeconds;
+
     public BucketCors withMaxAgeSeconds(Integer maxAgeSeconds) {
         this.maxAgeSeconds = maxAgeSeconds;
         return this;
@@ -26,6 +27,7 @@ public class BucketCors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String[] method;
+
     public BucketCors withMethod(String[] method) {
         this.method = method;
         return this;
@@ -37,6 +39,7 @@ public class BucketCors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String[] origin;
+
     public BucketCors withOrigin(String[] origin) {
         this.origin = origin;
         return this;
@@ -48,9 +51,11 @@ public class BucketCors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseHeader")
     public String[] responseHeader;
+
     public BucketCors withResponseHeader(String[] responseHeader) {
         this.responseHeader = responseHeader;
         return this;
     }
     
+    public BucketCors(){}
 }

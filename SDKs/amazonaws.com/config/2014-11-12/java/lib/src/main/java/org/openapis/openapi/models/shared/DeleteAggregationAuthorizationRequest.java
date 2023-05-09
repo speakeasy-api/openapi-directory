@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAggregationAuthorizationRequest {
     @JsonProperty("AuthorizedAccountId")
     public String authorizedAccountId;
+
     public DeleteAggregationAuthorizationRequest withAuthorizedAccountId(String authorizedAccountId) {
         this.authorizedAccountId = authorizedAccountId;
         return this;
@@ -16,9 +17,14 @@ public class DeleteAggregationAuthorizationRequest {
     
     @JsonProperty("AuthorizedAwsRegion")
     public String authorizedAwsRegion;
+
     public DeleteAggregationAuthorizationRequest withAuthorizedAwsRegion(String authorizedAwsRegion) {
         this.authorizedAwsRegion = authorizedAwsRegion;
         return this;
     }
     
+    public DeleteAggregationAuthorizationRequest(@JsonProperty("AuthorizedAccountId") String authorizedAccountId, @JsonProperty("AuthorizedAwsRegion") String authorizedAwsRegion) {
+        this.authorizedAccountId = authorizedAccountId;
+        this.authorizedAwsRegion = authorizedAwsRegion;
+  }
 }

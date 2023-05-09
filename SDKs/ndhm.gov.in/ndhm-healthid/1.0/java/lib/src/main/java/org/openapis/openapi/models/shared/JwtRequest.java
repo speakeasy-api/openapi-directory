@@ -15,6 +15,7 @@ public class JwtRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthId")
     public String healthId;
+
     public JwtRequest withHealthId(String healthId) {
         this.healthId = healthId;
         return this;
@@ -23,9 +24,11 @@ public class JwtRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public JwtRequest withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public JwtRequest(){}
 }

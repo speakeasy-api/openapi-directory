@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateSoftwareTokenResponse {
@@ -12,6 +13,7 @@ public class AssociateSoftwareTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateSoftwareTokenResponse associateSoftwareTokenResponse;
+
     public AssociateSoftwareTokenResponse withAssociateSoftwareTokenResponse(org.openapis.openapi.models.shared.AssociateSoftwareTokenResponse associateSoftwareTokenResponse) {
         this.associateSoftwareTokenResponse = associateSoftwareTokenResponse;
         return this;
@@ -22,6 +24,7 @@ public class AssociateSoftwareTokenResponse {
      */
     
     public Object concurrentModificationException;
+
     public AssociateSoftwareTokenResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class AssociateSoftwareTokenResponse {
     
     
     public String contentType;
+
     public AssociateSoftwareTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateSoftwareTokenResponse {
      */
     
     public Object forbiddenException;
+
     public AssociateSoftwareTokenResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateSoftwareTokenResponse {
      */
     
     public Object internalErrorException;
+
     public AssociateSoftwareTokenResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateSoftwareTokenResponse {
      */
     
     public Object invalidParameterException;
+
     public AssociateSoftwareTokenResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateSoftwareTokenResponse {
      */
     
     public Object notAuthorizedException;
+
     public AssociateSoftwareTokenResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -79,6 +87,7 @@ public class AssociateSoftwareTokenResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateSoftwareTokenResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class AssociateSoftwareTokenResponse {
      */
     
     public Object softwareTokenMFANotFoundException;
+
     public AssociateSoftwareTokenResponse withSoftwareTokenMFANotFoundException(Object softwareTokenMFANotFoundException) {
         this.softwareTokenMFANotFoundException = softwareTokenMFANotFoundException;
         return this;
@@ -96,6 +106,7 @@ public class AssociateSoftwareTokenResponse {
     
     
     public Integer statusCode;
+
     public AssociateSoftwareTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class AssociateSoftwareTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateSoftwareTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssociateSoftwareTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

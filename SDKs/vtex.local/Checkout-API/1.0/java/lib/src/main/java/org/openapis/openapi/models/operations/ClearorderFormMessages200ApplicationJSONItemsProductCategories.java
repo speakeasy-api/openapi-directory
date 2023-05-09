@@ -18,9 +18,11 @@ public class ClearorderFormMessages200ApplicationJSONItemsProductCategories {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("{ID}")
     public String id;
+
     public ClearorderFormMessages200ApplicationJSONItemsProductCategories withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ClearorderFormMessages200ApplicationJSONItemsProductCategories(){}
 }

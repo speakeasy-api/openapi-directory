@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MovePadUsingPOSTResponse {
     
     public String contentType;
+
     public MovePadUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MovePadUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public MovePadUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MovePadUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MovePadUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class MovePadUsingPOSTResponse {
      */
     
     public MovePadUsingPOST200ApplicationJSON movePadUsingPOST200ApplicationJSONObject;
+
     public MovePadUsingPOSTResponse withMovePadUsingPOST200ApplicationJSONObject(MovePadUsingPOST200ApplicationJSON movePadUsingPOST200ApplicationJSONObject) {
         this.movePadUsingPOST200ApplicationJSONObject = movePadUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class MovePadUsingPOSTResponse {
      */
     
     public MovePadUsingPOST400ApplicationJSON movePadUsingPOST400ApplicationJSONObject;
+
     public MovePadUsingPOSTResponse withMovePadUsingPOST400ApplicationJSONObject(MovePadUsingPOST400ApplicationJSON movePadUsingPOST400ApplicationJSONObject) {
         this.movePadUsingPOST400ApplicationJSONObject = movePadUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class MovePadUsingPOSTResponse {
      */
     
     public MovePadUsingPOST401ApplicationJSON movePadUsingPOST401ApplicationJSONObject;
+
     public MovePadUsingPOSTResponse withMovePadUsingPOST401ApplicationJSONObject(MovePadUsingPOST401ApplicationJSON movePadUsingPOST401ApplicationJSONObject) {
         this.movePadUsingPOST401ApplicationJSONObject = movePadUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class MovePadUsingPOSTResponse {
      */
     
     public MovePadUsingPOST500ApplicationJSON movePadUsingPOST500ApplicationJSONObject;
+
     public MovePadUsingPOSTResponse withMovePadUsingPOST500ApplicationJSONObject(MovePadUsingPOST500ApplicationJSON movePadUsingPOST500ApplicationJSONObject) {
         this.movePadUsingPOST500ApplicationJSONObject = movePadUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public MovePadUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

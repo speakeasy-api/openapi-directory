@@ -18,9 +18,11 @@ public class UniformSharding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numShards")
     public Integer numShards;
+
     public UniformSharding withNumShards(Integer numShards) {
         this.numShards = numShards;
         return this;
     }
     
+    public UniformSharding(){}
 }

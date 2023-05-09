@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateNotificationConfigurationRequest {
     @JsonProperty("configurationDetails")
     public NotificationConfigurationDetails configurationDetails;
+
     public CreateNotificationConfigurationRequest withConfigurationDetails(NotificationConfigurationDetails configurationDetails) {
         this.configurationDetails = configurationDetails;
         return this;
     }
     
+    public CreateNotificationConfigurationRequest(@JsonProperty("configurationDetails") NotificationConfigurationDetails configurationDetails) {
+        this.configurationDetails = configurationDetails;
+  }
 }

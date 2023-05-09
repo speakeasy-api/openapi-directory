@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateLoadBalancerInput {
     
     public String customerOwnedIpv4Pool;
+
     public CreateLoadBalancerInput withCustomerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
         this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
         return this;
@@ -16,6 +17,7 @@ public class CreateLoadBalancerInput {
     
     
     public IpAddressTypeEnum ipAddressType;
+
     public CreateLoadBalancerInput withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -23,6 +25,7 @@ public class CreateLoadBalancerInput {
     
     
     public String name;
+
     public CreateLoadBalancerInput withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +33,7 @@ public class CreateLoadBalancerInput {
     
     
     public LoadBalancerSchemeEnumEnum scheme;
+
     public CreateLoadBalancerInput withScheme(LoadBalancerSchemeEnumEnum scheme) {
         this.scheme = scheme;
         return this;
@@ -37,6 +41,7 @@ public class CreateLoadBalancerInput {
     
     
     public String[] securityGroups;
+
     public CreateLoadBalancerInput withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -44,6 +49,7 @@ public class CreateLoadBalancerInput {
     
     
     public SubnetMapping[] subnetMappings;
+
     public CreateLoadBalancerInput withSubnetMappings(SubnetMapping[] subnetMappings) {
         this.subnetMappings = subnetMappings;
         return this;
@@ -51,6 +57,7 @@ public class CreateLoadBalancerInput {
     
     
     public String[] subnets;
+
     public CreateLoadBalancerInput withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
@@ -58,6 +65,7 @@ public class CreateLoadBalancerInput {
     
     
     public Tag[] tags;
+
     public CreateLoadBalancerInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -65,9 +73,13 @@ public class CreateLoadBalancerInput {
     
     
     public LoadBalancerTypeEnumEnum type;
+
     public CreateLoadBalancerInput withType(LoadBalancerTypeEnumEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateLoadBalancerInput(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

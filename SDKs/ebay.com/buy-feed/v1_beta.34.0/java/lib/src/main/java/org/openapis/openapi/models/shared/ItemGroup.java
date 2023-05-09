@@ -18,6 +18,7 @@ public class ItemGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalImageUrls")
     public String additionalImageUrls;
+
     public ItemGroup withAdditionalImageUrls(String additionalImageUrls) {
         this.additionalImageUrls = additionalImageUrls;
         return this;
@@ -29,6 +30,7 @@ public class ItemGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageAlteringProhibited")
     public Boolean imageAlteringProhibited;
+
     public ItemGroup withImageAlteringProhibited(Boolean imageAlteringProhibited) {
         this.imageAlteringProhibited = imageAlteringProhibited;
         return this;
@@ -40,6 +42,7 @@ public class ItemGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public ItemGroup withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -51,6 +54,7 @@ public class ItemGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemGroupId")
     public String itemGroupId;
+
     public ItemGroup withItemGroupId(String itemGroupId) {
         this.itemGroupId = itemGroupId;
         return this;
@@ -62,6 +66,7 @@ public class ItemGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemGroupType")
     public String itemGroupType;
+
     public ItemGroup withItemGroupType(String itemGroupType) {
         this.itemGroupType = itemGroupType;
         return this;
@@ -73,6 +78,7 @@ public class ItemGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ItemGroup withTitle(String title) {
         this.title = title;
         return this;
@@ -84,9 +90,11 @@ public class ItemGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variesByLocalizedAspects")
     public String variesByLocalizedAspects;
+
     public ItemGroup withVariesByLocalizedAspects(String variesByLocalizedAspects) {
         this.variesByLocalizedAspects = variesByLocalizedAspects;
         return this;
     }
     
+    public ItemGroup(){}
 }

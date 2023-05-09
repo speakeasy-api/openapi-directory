@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagmanagerAccountsContainersFoldersUpdateRequest {
@@ -12,6 +13,7 @@ public class TagmanagerAccountsContainersFoldersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public TagmanagerAccountsContainersFoldersUpdateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class TagmanagerAccountsContainersFoldersUpdateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Folder folder;
+
     public TagmanagerAccountsContainersFoldersUpdateRequest withFolder(org.openapis.openapi.models.shared.Folder folder) {
         this.folder = folder;
         return this;
@@ -29,6 +32,7 @@ public class TagmanagerAccountsContainersFoldersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public TagmanagerAccountsContainersFoldersUpdateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class TagmanagerAccountsContainersFoldersUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public TagmanagerAccountsContainersFoldersUpdateRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -49,6 +54,7 @@ public class TagmanagerAccountsContainersFoldersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public TagmanagerAccountsContainersFoldersUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -59,6 +65,7 @@ public class TagmanagerAccountsContainersFoldersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public TagmanagerAccountsContainersFoldersUpdateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class TagmanagerAccountsContainersFoldersUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=containerId")
     public String containerId;
+
     public TagmanagerAccountsContainersFoldersUpdateRequest withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -79,6 +87,7 @@ public class TagmanagerAccountsContainersFoldersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public TagmanagerAccountsContainersFoldersUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -89,6 +98,7 @@ public class TagmanagerAccountsContainersFoldersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fingerprint")
     public String fingerprint;
+
     public TagmanagerAccountsContainersFoldersUpdateRequest withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -99,6 +109,7 @@ public class TagmanagerAccountsContainersFoldersUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=folderId")
     public String folderId;
+
     public TagmanagerAccountsContainersFoldersUpdateRequest withFolderId(String folderId) {
         this.folderId = folderId;
         return this;
@@ -109,6 +120,7 @@ public class TagmanagerAccountsContainersFoldersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public TagmanagerAccountsContainersFoldersUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -119,6 +131,7 @@ public class TagmanagerAccountsContainersFoldersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public TagmanagerAccountsContainersFoldersUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -129,6 +142,7 @@ public class TagmanagerAccountsContainersFoldersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public TagmanagerAccountsContainersFoldersUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -139,6 +153,7 @@ public class TagmanagerAccountsContainersFoldersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public TagmanagerAccountsContainersFoldersUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -149,6 +164,7 @@ public class TagmanagerAccountsContainersFoldersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public TagmanagerAccountsContainersFoldersUpdateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,9 +175,15 @@ public class TagmanagerAccountsContainersFoldersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public TagmanagerAccountsContainersFoldersUpdateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public TagmanagerAccountsContainersFoldersUpdateRequest(@JsonProperty("accountId") String accountId, @JsonProperty("containerId") String containerId, @JsonProperty("folderId") String folderId) {
+        this.accountId = accountId;
+        this.containerId = containerId;
+        this.folderId = folderId;
+  }
 }

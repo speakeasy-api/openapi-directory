@@ -18,6 +18,7 @@ public class AppEngineHttpTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appEngineRouting")
     public AppEngineRouting appEngineRouting;
+
     public AppEngineHttpTarget withAppEngineRouting(AppEngineRouting appEngineRouting) {
         this.appEngineRouting = appEngineRouting;
         return this;
@@ -29,6 +30,7 @@ public class AppEngineHttpTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public AppEngineHttpTarget withBody(String body) {
         this.body = body;
         return this;
@@ -40,6 +42,7 @@ public class AppEngineHttpTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, String> headers;
+
     public AppEngineHttpTarget withHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
@@ -51,6 +54,7 @@ public class AppEngineHttpTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpMethod")
     public AppEngineHttpTargetHttpMethodEnum httpMethod;
+
     public AppEngineHttpTarget withHttpMethod(AppEngineHttpTargetHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
@@ -62,9 +66,11 @@ public class AppEngineHttpTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativeUri")
     public String relativeUri;
+
     public AppEngineHttpTarget withRelativeUri(String relativeUri) {
         this.relativeUri = relativeUri;
         return this;
     }
     
+    public AppEngineHttpTarget(){}
 }

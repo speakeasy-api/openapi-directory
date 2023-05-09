@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetResume {
     @JsonProperty("cardCount")
     public SetResumeCardCount cardCount;
+
     public SetResume withCardCount(SetResumeCardCount cardCount) {
         this.cardCount = cardCount;
         return this;
@@ -18,6 +19,7 @@ public class SetResume {
     
     @JsonProperty("id")
     public String id;
+
     public SetResume withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class SetResume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public SetResume withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -33,6 +36,7 @@ public class SetResume {
     
     @JsonProperty("name")
     public String name;
+
     public SetResume withName(String name) {
         this.name = name;
         return this;
@@ -41,9 +45,15 @@ public class SetResume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symbol")
     public String symbol;
+
     public SetResume withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
     }
     
+    public SetResume(@JsonProperty("cardCount") SetResumeCardCount cardCount, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.cardCount = cardCount;
+        this.id = id;
+        this.name = name;
+  }
 }

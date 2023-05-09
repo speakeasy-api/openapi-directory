@@ -12,6 +12,7 @@ public class Installment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Price amount;
+
     public Installment withAmount(Price amount) {
         this.amount = amount;
         return this;
@@ -23,9 +24,11 @@ public class Installment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("months")
     public String months;
+
     public Installment withMonths(String months) {
         this.months = months;
         return this;
     }
     
+    public Installment(){}
 }

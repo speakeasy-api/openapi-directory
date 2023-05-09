@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDataplexV1Task withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1Task withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1Task withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionSpec")
     public GoogleCloudDataplexV1TaskExecutionSpec executionSpec;
+
     public GoogleCloudDataplexV1Task withExecutionSpec(GoogleCloudDataplexV1TaskExecutionSpec executionSpec) {
         this.executionSpec = executionSpec;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionStatus")
     public GoogleCloudDataplexV1TaskExecutionStatus executionStatus;
+
     public GoogleCloudDataplexV1Task withExecutionStatus(GoogleCloudDataplexV1TaskExecutionStatus executionStatus) {
         this.executionStatus = executionStatus;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1Task withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDataplexV1Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1Task withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDataplexV1Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notebook")
     public GoogleCloudDataplexV1TaskNotebookTaskConfig notebook;
+
     public GoogleCloudDataplexV1Task withNotebook(GoogleCloudDataplexV1TaskNotebookTaskConfig notebook) {
         this.notebook = notebook;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDataplexV1Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spark")
     public GoogleCloudDataplexV1TaskSparkTaskConfig spark;
+
     public GoogleCloudDataplexV1Task withSpark(GoogleCloudDataplexV1TaskSparkTaskConfig spark) {
         this.spark = spark;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDataplexV1Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDataplexV1TaskStateEnum state;
+
     public GoogleCloudDataplexV1Task withState(GoogleCloudDataplexV1TaskStateEnum state) {
         this.state = state;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDataplexV1Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerSpec")
     public GoogleCloudDataplexV1TaskTriggerSpec triggerSpec;
+
     public GoogleCloudDataplexV1Task withTriggerSpec(GoogleCloudDataplexV1TaskTriggerSpec triggerSpec) {
         this.triggerSpec = triggerSpec;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudDataplexV1Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public GoogleCloudDataplexV1Task withUid(String uid) {
         this.uid = uid;
         return this;
@@ -150,9 +162,11 @@ public class GoogleCloudDataplexV1Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDataplexV1Task withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDataplexV1Task(){}
 }

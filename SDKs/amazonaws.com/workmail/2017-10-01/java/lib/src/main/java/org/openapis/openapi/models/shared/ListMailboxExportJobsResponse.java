@@ -15,6 +15,7 @@ public class ListMailboxExportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Jobs")
     public MailboxExportJob[] jobs;
+
     public ListMailboxExportJobsResponse withJobs(MailboxExportJob[] jobs) {
         this.jobs = jobs;
         return this;
@@ -23,9 +24,11 @@ public class ListMailboxExportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMailboxExportJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMailboxExportJobsResponse(){}
 }

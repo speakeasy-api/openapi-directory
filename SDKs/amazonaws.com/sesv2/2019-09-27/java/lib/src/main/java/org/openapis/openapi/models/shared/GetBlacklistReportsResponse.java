@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBlacklistReportsResponse {
     @JsonProperty("BlacklistReport")
     public java.util.Map<String, BlacklistEntry[]> blacklistReport;
+
     public GetBlacklistReportsResponse withBlacklistReport(java.util.Map<String, BlacklistEntry[]> blacklistReport) {
         this.blacklistReport = blacklistReport;
         return this;
     }
     
+    public GetBlacklistReportsResponse(@JsonProperty("BlacklistReport") java.util.Map<String, BlacklistEntry[]> blacklistReport) {
+        this.blacklistReport = blacklistReport;
+  }
 }

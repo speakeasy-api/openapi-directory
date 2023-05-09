@@ -15,9 +15,11 @@ public class StartRecommenderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommenderArn")
     public String recommenderArn;
+
     public StartRecommenderResponse withRecommenderArn(String recommenderArn) {
         this.recommenderArn = recommenderArn;
         return this;
     }
     
+    public StartRecommenderResponse(){}
 }

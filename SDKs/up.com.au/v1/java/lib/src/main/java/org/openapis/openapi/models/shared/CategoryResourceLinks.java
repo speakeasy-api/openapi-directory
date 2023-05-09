@@ -13,9 +13,13 @@ public class CategoryResourceLinks {
      */
     @JsonProperty("self")
     public String self;
+
     public CategoryResourceLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public CategoryResourceLinks(@JsonProperty("self") String self) {
+        this.self = self;
+  }
 }

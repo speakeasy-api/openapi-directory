@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAllowListResponse {
@@ -12,6 +13,7 @@ public class CreateAllowListResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAllowListResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateAllowListResponse {
      */
     
     public Object conflictException;
+
     public CreateAllowListResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateAllowListResponse {
     
     
     public String contentType;
+
     public CreateAllowListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateAllowListResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAllowListResponse createAllowListResponse;
+
     public CreateAllowListResponse withCreateAllowListResponse(org.openapis.openapi.models.shared.CreateAllowListResponse createAllowListResponse) {
         this.createAllowListResponse = createAllowListResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateAllowListResponse {
      */
     
     public Object internalServerException;
+
     public CreateAllowListResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAllowListResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAllowListResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateAllowListResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateAllowListResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateAllowListResponse {
     
     
     public Integer statusCode;
+
     public CreateAllowListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateAllowListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAllowListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateAllowListResponse {
      */
     
     public Object throttlingException;
+
     public CreateAllowListResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateAllowListResponse {
      */
     
     public Object validationException;
+
     public CreateAllowListResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateAllowListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

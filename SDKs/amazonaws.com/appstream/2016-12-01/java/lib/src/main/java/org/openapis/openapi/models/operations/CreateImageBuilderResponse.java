@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateImageBuilderResponse {
@@ -12,6 +13,7 @@ public class CreateImageBuilderResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateImageBuilderResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class CreateImageBuilderResponse {
     
     
     public String contentType;
+
     public CreateImageBuilderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateImageBuilderResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateImageBuilderResult createImageBuilderResult;
+
     public CreateImageBuilderResponse withCreateImageBuilderResult(org.openapis.openapi.models.shared.CreateImageBuilderResult createImageBuilderResult) {
         this.createImageBuilderResult = createImageBuilderResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateImageBuilderResponse {
      */
     
     public Object incompatibleImageException;
+
     public CreateImageBuilderResponse withIncompatibleImageException(Object incompatibleImageException) {
         this.incompatibleImageException = incompatibleImageException;
         return this;
@@ -49,6 +54,7 @@ public class CreateImageBuilderResponse {
      */
     
     public Object invalidAccountStatusException;
+
     public CreateImageBuilderResponse withInvalidAccountStatusException(Object invalidAccountStatusException) {
         this.invalidAccountStatusException = invalidAccountStatusException;
         return this;
@@ -59,6 +65,7 @@ public class CreateImageBuilderResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public CreateImageBuilderResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -69,6 +76,7 @@ public class CreateImageBuilderResponse {
      */
     
     public Object invalidRoleException;
+
     public CreateImageBuilderResponse withInvalidRoleException(Object invalidRoleException) {
         this.invalidRoleException = invalidRoleException;
         return this;
@@ -79,6 +87,7 @@ public class CreateImageBuilderResponse {
      */
     
     public Object limitExceededException;
+
     public CreateImageBuilderResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class CreateImageBuilderResponse {
      */
     
     public Object operationNotPermittedException;
+
     public CreateImageBuilderResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -99,6 +109,7 @@ public class CreateImageBuilderResponse {
      */
     
     public Object resourceNotAvailableException;
+
     public CreateImageBuilderResponse withResourceNotAvailableException(Object resourceNotAvailableException) {
         this.resourceNotAvailableException = resourceNotAvailableException;
         return this;
@@ -106,6 +117,7 @@ public class CreateImageBuilderResponse {
     
     
     public Integer statusCode;
+
     public CreateImageBuilderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class CreateImageBuilderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateImageBuilderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class CreateImageBuilderResponse {
      */
     
     public Object requestLimitExceededException;
+
     public CreateImageBuilderResponse withRequestLimitExceededException(Object requestLimitExceededException) {
         this.requestLimitExceededException = requestLimitExceededException;
         return this;
@@ -133,6 +147,7 @@ public class CreateImageBuilderResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateImageBuilderResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -143,9 +158,14 @@ public class CreateImageBuilderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateImageBuilderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateImageBuilderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

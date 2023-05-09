@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePresignedNotebookInstanceUrlResponse {
     
     public String contentType;
+
     public CreatePresignedNotebookInstanceUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePresignedNotebookInstanceUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePresignedNotebookInstanceUrlOutput createPresignedNotebookInstanceUrlOutput;
+
     public CreatePresignedNotebookInstanceUrlResponse withCreatePresignedNotebookInstanceUrlOutput(org.openapis.openapi.models.shared.CreatePresignedNotebookInstanceUrlOutput createPresignedNotebookInstanceUrlOutput) {
         this.createPresignedNotebookInstanceUrlOutput = createPresignedNotebookInstanceUrlOutput;
         return this;
@@ -26,6 +29,7 @@ public class CreatePresignedNotebookInstanceUrlResponse {
     
     
     public Integer statusCode;
+
     public CreatePresignedNotebookInstanceUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CreatePresignedNotebookInstanceUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePresignedNotebookInstanceUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreatePresignedNotebookInstanceUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

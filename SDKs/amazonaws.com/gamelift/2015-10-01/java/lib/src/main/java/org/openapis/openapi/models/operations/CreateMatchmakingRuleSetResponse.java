@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMatchmakingRuleSetResponse {
     
     public String contentType;
+
     public CreateMatchmakingRuleSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateMatchmakingRuleSetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMatchmakingRuleSetOutput createMatchmakingRuleSetOutput;
+
     public CreateMatchmakingRuleSetResponse withCreateMatchmakingRuleSetOutput(org.openapis.openapi.models.shared.CreateMatchmakingRuleSetOutput createMatchmakingRuleSetOutput) {
         this.createMatchmakingRuleSetOutput = createMatchmakingRuleSetOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateMatchmakingRuleSetResponse {
      */
     
     public Object internalServiceException;
+
     public CreateMatchmakingRuleSetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class CreateMatchmakingRuleSetResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateMatchmakingRuleSetResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateMatchmakingRuleSetResponse {
      */
     
     public Object limitExceededException;
+
     public CreateMatchmakingRuleSetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateMatchmakingRuleSetResponse {
     
     
     public Integer statusCode;
+
     public CreateMatchmakingRuleSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateMatchmakingRuleSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMatchmakingRuleSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateMatchmakingRuleSetResponse {
      */
     
     public Object taggingFailedException;
+
     public CreateMatchmakingRuleSetResponse withTaggingFailedException(Object taggingFailedException) {
         this.taggingFailedException = taggingFailedException;
         return this;
@@ -83,9 +92,14 @@ public class CreateMatchmakingRuleSetResponse {
      */
     
     public Object unsupportedRegionException;
+
     public CreateMatchmakingRuleSetResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public CreateMatchmakingRuleSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

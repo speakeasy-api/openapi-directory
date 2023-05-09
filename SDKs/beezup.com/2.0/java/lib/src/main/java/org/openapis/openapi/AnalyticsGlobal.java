@@ -48,12 +48,10 @@ public class AnalyticsGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsIndexResponse res = new org.openapis.openapi.models.operations.AnalyticsIndexResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsIndexResponse res = new org.openapis.openapi.models.operations.AnalyticsIndexResponse(contentType, httpRes.statusCode()) {{
             analyticsIndex = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,12 +92,10 @@ public class AnalyticsGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsStoreIndexResponse res = new org.openapis.openapi.models.operations.AnalyticsStoreIndexResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsStoreIndexResponse res = new org.openapis.openapi.models.operations.AnalyticsStoreIndexResponse(contentType, httpRes.statusCode()) {{
             analyticsStoreIndex = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

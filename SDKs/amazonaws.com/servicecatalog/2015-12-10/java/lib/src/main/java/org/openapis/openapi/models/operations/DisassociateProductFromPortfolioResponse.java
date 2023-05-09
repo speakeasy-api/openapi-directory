@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateProductFromPortfolioResponse {
     
     public String contentType;
+
     public DisassociateProductFromPortfolioResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateProductFromPortfolioResponse {
      */
     
     public java.util.Map<String, Object> disassociateProductFromPortfolioOutput;
+
     public DisassociateProductFromPortfolioResponse withDisassociateProductFromPortfolioOutput(java.util.Map<String, Object> disassociateProductFromPortfolioOutput) {
         this.disassociateProductFromPortfolioOutput = disassociateProductFromPortfolioOutput;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateProductFromPortfolioResponse {
      */
     
     public Object invalidParametersException;
+
     public DisassociateProductFromPortfolioResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateProductFromPortfolioResponse {
      */
     
     public Object resourceInUseException;
+
     public DisassociateProductFromPortfolioResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateProductFromPortfolioResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateProductFromPortfolioResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociateProductFromPortfolioResponse {
     
     
     public Integer statusCode;
+
     public DisassociateProductFromPortfolioResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DisassociateProductFromPortfolioResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateProductFromPortfolioResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisassociateProductFromPortfolioResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

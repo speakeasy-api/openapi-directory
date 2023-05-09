@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutClusterCapacityProvidersRequest {
     @JsonProperty("capacityProviders")
     public String[] capacityProviders;
+
     public PutClusterCapacityProvidersRequest withCapacityProviders(String[] capacityProviders) {
         this.capacityProviders = capacityProviders;
         return this;
@@ -16,6 +17,7 @@ public class PutClusterCapacityProvidersRequest {
     
     @JsonProperty("cluster")
     public String cluster;
+
     public PutClusterCapacityProvidersRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -23,9 +25,15 @@ public class PutClusterCapacityProvidersRequest {
     
     @JsonProperty("defaultCapacityProviderStrategy")
     public CapacityProviderStrategyItem[] defaultCapacityProviderStrategy;
+
     public PutClusterCapacityProvidersRequest withDefaultCapacityProviderStrategy(CapacityProviderStrategyItem[] defaultCapacityProviderStrategy) {
         this.defaultCapacityProviderStrategy = defaultCapacityProviderStrategy;
         return this;
     }
     
+    public PutClusterCapacityProvidersRequest(@JsonProperty("capacityProviders") String[] capacityProviders, @JsonProperty("cluster") String cluster, @JsonProperty("defaultCapacityProviderStrategy") CapacityProviderStrategyItem[] defaultCapacityProviderStrategy) {
+        this.capacityProviders = capacityProviders;
+        this.cluster = cluster;
+        this.defaultCapacityProviderStrategy = defaultCapacityProviderStrategy;
+  }
 }

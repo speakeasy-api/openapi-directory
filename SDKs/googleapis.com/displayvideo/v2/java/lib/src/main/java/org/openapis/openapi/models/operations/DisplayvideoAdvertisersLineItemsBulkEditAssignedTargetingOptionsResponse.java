@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsResponse {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsRes
      */
     
     public org.openapis.openapi.models.shared.BulkEditAssignedTargetingOptionsResponse bulkEditAssignedTargetingOptionsResponse;
+
     public DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsResponse withBulkEditAssignedTargetingOptionsResponse(org.openapis.openapi.models.shared.BulkEditAssignedTargetingOptionsResponse bulkEditAssignedTargetingOptionsResponse) {
         this.bulkEditAssignedTargetingOptionsResponse = bulkEditAssignedTargetingOptionsResponse;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsRes
     
     
     public String contentType;
+
     public DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsRes
     
     
     public Integer statusCode;
+
     public DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsRes
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

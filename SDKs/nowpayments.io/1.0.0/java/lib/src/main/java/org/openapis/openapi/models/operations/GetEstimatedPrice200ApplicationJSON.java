@@ -15,6 +15,7 @@ public class GetEstimatedPrice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_from")
     public Double amountFrom;
+
     public GetEstimatedPrice200ApplicationJSON withAmountFrom(Double amountFrom) {
         this.amountFrom = amountFrom;
         return this;
@@ -23,6 +24,7 @@ public class GetEstimatedPrice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_from")
     public String currencyFrom;
+
     public GetEstimatedPrice200ApplicationJSON withCurrencyFrom(String currencyFrom) {
         this.currencyFrom = currencyFrom;
         return this;
@@ -31,6 +33,7 @@ public class GetEstimatedPrice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_to")
     public String currencyTo;
+
     public GetEstimatedPrice200ApplicationJSON withCurrencyTo(String currencyTo) {
         this.currencyTo = currencyTo;
         return this;
@@ -39,9 +42,11 @@ public class GetEstimatedPrice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimated_amount")
     public Double estimatedAmount;
+
     public GetEstimatedPrice200ApplicationJSON withEstimatedAmount(Double estimatedAmount) {
         this.estimatedAmount = estimatedAmount;
         return this;
     }
     
+    public GetEstimatedPrice200ApplicationJSON(){}
 }

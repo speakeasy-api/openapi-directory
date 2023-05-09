@@ -12,6 +12,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public Message withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -20,6 +21,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDetail")
     public String errorDetail;
+
     public Message withErrorDetail(String errorDetail) {
         this.errorDetail = errorDetail;
         return this;
@@ -28,6 +30,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public Message withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -36,9 +39,11 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userMessage")
     public String userMessage;
+
     public Message withUserMessage(String userMessage) {
         this.userMessage = userMessage;
         return this;
     }
     
+    public Message(){}
 }

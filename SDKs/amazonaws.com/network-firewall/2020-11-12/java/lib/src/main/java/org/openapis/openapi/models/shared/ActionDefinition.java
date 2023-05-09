@@ -15,9 +15,11 @@ public class ActionDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublishMetricAction")
     public PublishMetricAction publishMetricAction;
+
     public ActionDefinition withPublishMetricAction(PublishMetricAction publishMetricAction) {
         this.publishMetricAction = publishMetricAction;
         return this;
     }
     
+    public ActionDefinition(){}
 }

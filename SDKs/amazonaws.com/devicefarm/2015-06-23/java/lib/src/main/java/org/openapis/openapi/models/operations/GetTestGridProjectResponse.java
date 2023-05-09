@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTestGridProjectResponse {
@@ -12,6 +13,7 @@ public class GetTestGridProjectResponse {
      */
     
     public Object argumentException;
+
     public GetTestGridProjectResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class GetTestGridProjectResponse {
     
     
     public String contentType;
+
     public GetTestGridProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTestGridProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTestGridProjectResult getTestGridProjectResult;
+
     public GetTestGridProjectResponse withGetTestGridProjectResult(org.openapis.openapi.models.shared.GetTestGridProjectResult getTestGridProjectResult) {
         this.getTestGridProjectResult = getTestGridProjectResult;
         return this;
@@ -39,6 +43,7 @@ public class GetTestGridProjectResponse {
      */
     
     public Object internalServiceException;
+
     public GetTestGridProjectResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetTestGridProjectResponse {
      */
     
     public Object notFoundException;
+
     public GetTestGridProjectResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetTestGridProjectResponse {
     
     
     public Integer statusCode;
+
     public GetTestGridProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetTestGridProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTestGridProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTestGridProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

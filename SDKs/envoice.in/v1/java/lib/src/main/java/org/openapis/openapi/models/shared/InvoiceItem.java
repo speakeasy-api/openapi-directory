@@ -12,6 +12,7 @@ public class InvoiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cost")
     public Double cost;
+
     public InvoiceItem withCost(Double cost) {
         this.cost = cost;
         return this;
@@ -20,6 +21,7 @@ public class InvoiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public InvoiceItem withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class InvoiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscountAmount")
     public Double discountAmount;
+
     public InvoiceItem withDiscountAmount(Double discountAmount) {
         this.discountAmount = discountAmount;
         return this;
@@ -36,6 +39,7 @@ public class InvoiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscountPercentage")
     public Double discountPercentage;
+
     public InvoiceItem withDiscountPercentage(Double discountPercentage) {
         this.discountPercentage = discountPercentage;
         return this;
@@ -44,6 +48,7 @@ public class InvoiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public InvoiceItem withId(Integer id) {
         this.id = id;
         return this;
@@ -52,6 +57,7 @@ public class InvoiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceId")
     public Integer invoiceId;
+
     public InvoiceItem withInvoiceId(Integer invoiceId) {
         this.invoiceId = invoiceId;
         return this;
@@ -60,6 +66,7 @@ public class InvoiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quantity")
     public Double quantity;
+
     public InvoiceItem withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
@@ -68,6 +75,7 @@ public class InvoiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubTotalAmount")
     public Double subTotalAmount;
+
     public InvoiceItem withSubTotalAmount(Double subTotalAmount) {
         this.subTotalAmount = subTotalAmount;
         return this;
@@ -76,6 +84,7 @@ public class InvoiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxAmount")
     public Double taxAmount;
+
     public InvoiceItem withTaxAmount(Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
@@ -84,6 +93,7 @@ public class InvoiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxId")
     public Integer taxId;
+
     public InvoiceItem withTaxId(Integer taxId) {
         this.taxId = taxId;
         return this;
@@ -92,6 +102,7 @@ public class InvoiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxPercentage")
     public Double taxPercentage;
+
     public InvoiceItem withTaxPercentage(Double taxPercentage) {
         this.taxPercentage = taxPercentage;
         return this;
@@ -100,6 +111,7 @@ public class InvoiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalAmount")
     public Double totalAmount;
+
     public InvoiceItem withTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -108,9 +120,11 @@ public class InvoiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkTypeId")
     public Integer workTypeId;
+
     public InvoiceItem withWorkTypeId(Integer workTypeId) {
         this.workTypeId = workTypeId;
         return this;
     }
     
+    public InvoiceItem(){}
 }

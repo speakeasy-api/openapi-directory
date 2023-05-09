@@ -19,6 +19,7 @@ public class ProductView {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public ProductView withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -27,6 +28,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom")
     public Object custom;
+
     public ProductView withCustom(Object custom) {
         this.custom = custom;
         return this;
@@ -35,6 +37,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProductView withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +46,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serial")
     public String serial;
+
     public ProductView withSerial(String serial) {
         this.serial = serial;
         return this;
@@ -51,6 +55,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptions")
     public SubscriptionView[] subscriptions;
+
     public ProductView withSubscriptions(SubscriptionView[] subscriptions) {
         this.subscriptions = subscriptions;
         return this;
@@ -61,9 +66,11 @@ public class ProductView {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated")
     public OffsetDateTime updated;
+
     public ProductView withUpdated(OffsetDateTime updated) {
         this.updated = updated;
         return this;
     }
     
+    public ProductView(){}
 }

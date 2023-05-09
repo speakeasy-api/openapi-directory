@@ -15,9 +15,11 @@ public class DeleteAlarmResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public DeleteAlarmResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public DeleteAlarmResult(){}
 }

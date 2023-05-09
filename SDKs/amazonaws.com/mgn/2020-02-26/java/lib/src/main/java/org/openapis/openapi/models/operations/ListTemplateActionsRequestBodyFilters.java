@@ -15,9 +15,11 @@ public class ListTemplateActionsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionIDs")
     public String[] actionIDs;
+
     public ListTemplateActionsRequestBodyFilters withActionIDs(String[] actionIDs) {
         this.actionIDs = actionIDs;
         return this;
     }
     
+    public ListTemplateActionsRequestBodyFilters(){}
 }

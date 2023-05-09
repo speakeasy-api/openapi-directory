@@ -15,9 +15,11 @@ public class UpdateKnowledgeBaseTemplateUriResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knowledgeBase")
     public KnowledgeBaseData knowledgeBase;
+
     public UpdateKnowledgeBaseTemplateUriResponse withKnowledgeBase(KnowledgeBaseData knowledgeBase) {
         this.knowledgeBase = knowledgeBase;
         return this;
     }
     
+    public UpdateKnowledgeBaseTemplateUriResponse(){}
 }

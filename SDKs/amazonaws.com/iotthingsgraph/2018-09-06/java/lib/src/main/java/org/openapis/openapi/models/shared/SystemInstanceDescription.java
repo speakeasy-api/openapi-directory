@@ -18,6 +18,7 @@ public class SystemInstanceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public DefinitionDocument definition;
+
     public SystemInstanceDescription withDefinition(DefinitionDocument definition) {
         this.definition = definition;
         return this;
@@ -26,6 +27,7 @@ public class SystemInstanceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowActionsRoleArn")
     public String flowActionsRoleArn;
+
     public SystemInstanceDescription withFlowActionsRoleArn(String flowActionsRoleArn) {
         this.flowActionsRoleArn = flowActionsRoleArn;
         return this;
@@ -37,6 +39,7 @@ public class SystemInstanceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricsConfiguration")
     public MetricsConfiguration metricsConfiguration;
+
     public SystemInstanceDescription withMetricsConfiguration(MetricsConfiguration metricsConfiguration) {
         this.metricsConfiguration = metricsConfiguration;
         return this;
@@ -45,6 +48,7 @@ public class SystemInstanceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3BucketName")
     public String s3BucketName;
+
     public SystemInstanceDescription withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -53,6 +57,7 @@ public class SystemInstanceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public SystemInstanceSummary summary;
+
     public SystemInstanceDescription withSummary(SystemInstanceSummary summary) {
         this.summary = summary;
         return this;
@@ -61,6 +66,7 @@ public class SystemInstanceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validatedDependencyRevisions")
     public DependencyRevision[] validatedDependencyRevisions;
+
     public SystemInstanceDescription withValidatedDependencyRevisions(DependencyRevision[] validatedDependencyRevisions) {
         this.validatedDependencyRevisions = validatedDependencyRevisions;
         return this;
@@ -69,9 +75,11 @@ public class SystemInstanceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validatedNamespaceVersion")
     public Long validatedNamespaceVersion;
+
     public SystemInstanceDescription withValidatedNamespaceVersion(Long validatedNamespaceVersion) {
         this.validatedNamespaceVersion = validatedNamespaceVersion;
         return this;
     }
     
+    public SystemInstanceDescription(){}
 }

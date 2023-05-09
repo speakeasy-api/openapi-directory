@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListMonitoredResourcesResponse {
     @JsonProperty("MonitoredResourceIdentifiers")
     public MonitoredResourceIdentifier[] monitoredResourceIdentifiers;
+
     public ListMonitoredResourcesResponse withMonitoredResourceIdentifiers(MonitoredResourceIdentifier[] monitoredResourceIdentifiers) {
         this.monitoredResourceIdentifiers = monitoredResourceIdentifiers;
         return this;
@@ -22,9 +23,13 @@ public class ListMonitoredResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMonitoredResourcesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMonitoredResourcesResponse(@JsonProperty("MonitoredResourceIdentifiers") MonitoredResourceIdentifier[] monitoredResourceIdentifiers) {
+        this.monitoredResourceIdentifiers = monitoredResourceIdentifiers;
+  }
 }

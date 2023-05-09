@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResetPasswordResponse {
     
     public String contentType;
+
     public ResetPasswordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ResetPasswordResponse {
      */
     
     public Object directoryServiceAuthenticationFailedException;
+
     public ResetPasswordResponse withDirectoryServiceAuthenticationFailedException(Object directoryServiceAuthenticationFailedException) {
         this.directoryServiceAuthenticationFailedException = directoryServiceAuthenticationFailedException;
         return this;
@@ -29,6 +32,7 @@ public class ResetPasswordResponse {
      */
     
     public Object directoryUnavailableException;
+
     public ResetPasswordResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -39,6 +43,7 @@ public class ResetPasswordResponse {
      */
     
     public Object entityNotFoundException;
+
     public ResetPasswordResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ResetPasswordResponse {
      */
     
     public Object entityStateException;
+
     public ResetPasswordResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -59,6 +65,7 @@ public class ResetPasswordResponse {
      */
     
     public Object invalidParameterException;
+
     public ResetPasswordResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class ResetPasswordResponse {
      */
     
     public Object invalidPasswordException;
+
     public ResetPasswordResponse withInvalidPasswordException(Object invalidPasswordException) {
         this.invalidPasswordException = invalidPasswordException;
         return this;
@@ -79,6 +87,7 @@ public class ResetPasswordResponse {
      */
     
     public Object organizationNotFoundException;
+
     public ResetPasswordResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class ResetPasswordResponse {
      */
     
     public Object organizationStateException;
+
     public ResetPasswordResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -99,6 +109,7 @@ public class ResetPasswordResponse {
      */
     
     public java.util.Map<String, Object> resetPasswordResponse;
+
     public ResetPasswordResponse withResetPasswordResponse(java.util.Map<String, Object> resetPasswordResponse) {
         this.resetPasswordResponse = resetPasswordResponse;
         return this;
@@ -106,6 +117,7 @@ public class ResetPasswordResponse {
     
     
     public Integer statusCode;
+
     public ResetPasswordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class ResetPasswordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResetPasswordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,9 +136,14 @@ public class ResetPasswordResponse {
      */
     
     public Object unsupportedOperationException;
+
     public ResetPasswordResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public ResetPasswordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

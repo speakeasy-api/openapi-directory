@@ -15,6 +15,7 @@ public class AddAttachmentsToSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachmentSetId")
     public String attachmentSetId;
+
     public AddAttachmentsToSetResponse withAttachmentSetId(String attachmentSetId) {
         this.attachmentSetId = attachmentSetId;
         return this;
@@ -23,9 +24,11 @@ public class AddAttachmentsToSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiryTime")
     public String expiryTime;
+
     public AddAttachmentsToSetResponse withExpiryTime(String expiryTime) {
         this.expiryTime = expiryTime;
         return this;
     }
     
+    public AddAttachmentsToSetResponse(){}
 }

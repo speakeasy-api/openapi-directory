@@ -19,6 +19,7 @@ public class SearchTeamMembersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchTeamMembersRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -30,6 +31,7 @@ public class SearchTeamMembersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public SearchTeamMembersRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -41,9 +43,11 @@ public class SearchTeamMembersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public SearchTeamMembersQuery query;
+
     public SearchTeamMembersRequest withQuery(SearchTeamMembersQuery query) {
         this.query = query;
         return this;
     }
     
+    public SearchTeamMembersRequest(){}
 }

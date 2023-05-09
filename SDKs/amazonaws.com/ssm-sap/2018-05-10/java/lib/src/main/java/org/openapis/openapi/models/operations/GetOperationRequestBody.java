@@ -12,9 +12,13 @@ public class GetOperationRequestBody {
      */
     @JsonProperty("OperationId")
     public String operationId;
+
     public GetOperationRequestBody withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public GetOperationRequestBody(@JsonProperty("OperationId") String operationId) {
+        this.operationId = operationId;
+  }
 }

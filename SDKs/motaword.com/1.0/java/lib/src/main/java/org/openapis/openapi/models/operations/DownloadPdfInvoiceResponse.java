@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DownloadPdfInvoiceResponse {
     
     public String contentType;
+
     public DownloadPdfInvoiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DownloadPdfInvoiceResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public DownloadPdfInvoiceResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class DownloadPdfInvoiceResponse {
     
     
     public Integer statusCode;
+
     public DownloadPdfInvoiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DownloadPdfInvoiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DownloadPdfInvoiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DownloadPdfInvoiceResponse {
      */
     
     public byte[] downloadPdfInvoice200ApplicationPdfBinaryString;
+
     public DownloadPdfInvoiceResponse withDownloadPdfInvoice200ApplicationPdfBinaryString(byte[] downloadPdfInvoice200ApplicationPdfBinaryString) {
         this.downloadPdfInvoice200ApplicationPdfBinaryString = downloadPdfInvoice200ApplicationPdfBinaryString;
         return this;
     }
     
+    public DownloadPdfInvoiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

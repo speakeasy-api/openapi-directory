@@ -25,6 +25,7 @@ public class NodeUpdateUserParameter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiryTime")
     public OffsetDateTime expiryTime;
+
     public NodeUpdateUserParameter withExpiryTime(OffsetDateTime expiryTime) {
         this.expiryTime = expiryTime;
         return this;
@@ -35,9 +36,13 @@ public class NodeUpdateUserParameter {
      */
     @JsonProperty("password")
     public String password;
+
     public NodeUpdateUserParameter withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public NodeUpdateUserParameter(@JsonProperty("password") String password) {
+        this.password = password;
+  }
 }

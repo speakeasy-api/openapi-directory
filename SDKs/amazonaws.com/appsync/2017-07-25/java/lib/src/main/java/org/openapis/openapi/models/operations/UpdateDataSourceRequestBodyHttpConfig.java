@@ -15,6 +15,7 @@ public class UpdateDataSourceRequestBodyHttpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationConfig")
     public org.openapis.openapi.models.shared.AuthorizationConfig authorizationConfig;
+
     public UpdateDataSourceRequestBodyHttpConfig withAuthorizationConfig(org.openapis.openapi.models.shared.AuthorizationConfig authorizationConfig) {
         this.authorizationConfig = authorizationConfig;
         return this;
@@ -23,9 +24,11 @@ public class UpdateDataSourceRequestBodyHttpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public UpdateDataSourceRequestBodyHttpConfig withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
+    public UpdateDataSourceRequestBodyHttpConfig(){}
 }

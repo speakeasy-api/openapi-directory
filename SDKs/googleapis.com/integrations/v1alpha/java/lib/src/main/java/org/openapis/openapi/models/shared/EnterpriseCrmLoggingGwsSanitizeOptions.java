@@ -18,6 +18,7 @@ public class EnterpriseCrmLoggingGwsSanitizeOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAlreadySanitized")
     public Boolean isAlreadySanitized;
+
     public EnterpriseCrmLoggingGwsSanitizeOptions withIsAlreadySanitized(Boolean isAlreadySanitized) {
         this.isAlreadySanitized = isAlreadySanitized;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmLoggingGwsSanitizeOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logType")
     public EnterpriseCrmLoggingGwsSanitizeOptionsLogTypeEnum[] logType;
+
     public EnterpriseCrmLoggingGwsSanitizeOptions withLogType(EnterpriseCrmLoggingGwsSanitizeOptionsLogTypeEnum[] logType) {
         this.logType = logType;
         return this;
@@ -37,6 +39,7 @@ public class EnterpriseCrmLoggingGwsSanitizeOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy")
     public EnterpriseCrmLoggingGwsSanitizeOptionsPrivacyEnum privacy;
+
     public EnterpriseCrmLoggingGwsSanitizeOptions withPrivacy(EnterpriseCrmLoggingGwsSanitizeOptionsPrivacyEnum privacy) {
         this.privacy = privacy;
         return this;
@@ -45,9 +48,11 @@ public class EnterpriseCrmLoggingGwsSanitizeOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sanitizeType")
     public EnterpriseCrmLoggingGwsSanitizeOptionsSanitizeTypeEnum sanitizeType;
+
     public EnterpriseCrmLoggingGwsSanitizeOptions withSanitizeType(EnterpriseCrmLoggingGwsSanitizeOptionsSanitizeTypeEnum sanitizeType) {
         this.sanitizeType = sanitizeType;
         return this;
     }
     
+    public EnterpriseCrmLoggingGwsSanitizeOptions(){}
 }

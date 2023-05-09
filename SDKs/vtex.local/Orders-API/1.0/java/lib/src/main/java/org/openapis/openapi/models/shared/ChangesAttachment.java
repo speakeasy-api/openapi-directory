@@ -15,6 +15,7 @@ public class ChangesAttachment {
      */
     @JsonProperty("changesData")
     public ChangesDatum[] changesData;
+
     public ChangesAttachment withChangesData(ChangesDatum[] changesData) {
         this.changesData = changesData;
         return this;
@@ -25,9 +26,14 @@ public class ChangesAttachment {
      */
     @JsonProperty("id")
     public String id;
+
     public ChangesAttachment withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ChangesAttachment(@JsonProperty("changesData") ChangesDatum[] changesData, @JsonProperty("id") String id) {
+        this.changesData = changesData;
+        this.id = id;
+  }
 }

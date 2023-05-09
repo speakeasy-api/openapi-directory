@@ -20,6 +20,7 @@ public class GetTableObjectsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetTableObjectsRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -30,6 +31,7 @@ public class GetTableObjectsRequestBody {
      */
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetTableObjectsRequestBody withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -41,6 +43,7 @@ public class GetTableObjectsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetTableObjectsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -52,6 +55,7 @@ public class GetTableObjectsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetTableObjectsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -63,6 +67,7 @@ public class GetTableObjectsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionPredicate")
     public String partitionPredicate;
+
     public GetTableObjectsRequestBody withPartitionPredicate(String partitionPredicate) {
         this.partitionPredicate = partitionPredicate;
         return this;
@@ -76,6 +81,7 @@ public class GetTableObjectsRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("QueryAsOfTime")
     public OffsetDateTime queryAsOfTime;
+
     public GetTableObjectsRequestBody withQueryAsOfTime(OffsetDateTime queryAsOfTime) {
         this.queryAsOfTime = queryAsOfTime;
         return this;
@@ -86,6 +92,7 @@ public class GetTableObjectsRequestBody {
      */
     @JsonProperty("TableName")
     public String tableName;
+
     public GetTableObjectsRequestBody withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -97,9 +104,14 @@ public class GetTableObjectsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public GetTableObjectsRequestBody withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public GetTableObjectsRequestBody(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+  }
 }

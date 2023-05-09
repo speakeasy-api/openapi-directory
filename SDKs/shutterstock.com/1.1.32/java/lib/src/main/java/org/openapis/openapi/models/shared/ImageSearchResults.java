@@ -17,6 +17,7 @@ public class ImageSearchResults {
      */
     @JsonProperty("data")
     public Image[] data;
+
     public ImageSearchResults withData(Image[] data) {
         this.data = data;
         return this;
@@ -28,6 +29,7 @@ public class ImageSearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insights")
     public Insights insights;
+
     public ImageSearchResults withInsights(Insights insights) {
         this.insights = insights;
         return this;
@@ -39,6 +41,7 @@ public class ImageSearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ImageSearchResults withMessage(String message) {
         this.message = message;
         return this;
@@ -50,6 +53,7 @@ public class ImageSearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public ImageSearchResults withPage(Long page) {
         this.page = page;
         return this;
@@ -61,6 +65,7 @@ public class ImageSearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public ImageSearchResults withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -71,6 +76,7 @@ public class ImageSearchResults {
      */
     @JsonProperty("search_id")
     public String searchId;
+
     public ImageSearchResults withSearchId(String searchId) {
         this.searchId = searchId;
         return this;
@@ -82,6 +88,7 @@ public class ImageSearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spellcheck_info")
     public java.util.Map<String, Object> spellcheckInfo;
+
     public ImageSearchResults withSpellcheckInfo(java.util.Map<String, Object> spellcheckInfo) {
         this.spellcheckInfo = spellcheckInfo;
         return this;
@@ -92,9 +99,15 @@ public class ImageSearchResults {
      */
     @JsonProperty("total_count")
     public Long totalCount;
+
     public ImageSearchResults withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public ImageSearchResults(@JsonProperty("data") Image[] data, @JsonProperty("search_id") String searchId, @JsonProperty("total_count") Long totalCount) {
+        this.data = data;
+        this.searchId = searchId;
+        this.totalCount = totalCount;
+  }
 }

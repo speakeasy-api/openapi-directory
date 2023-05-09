@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMultiNodeInventoryForSkuAndAllShipnodesResponse {
     
     public String contentType;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodesResponse {
     
     
     public Integer statusCode;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodesResponse {
      */
     
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSON getMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONObject;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodesResponse withGetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONObject(GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSON getMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONObject) {
         this.getMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONObject = getMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONObject;
         return this;
     }
     
+    public GetMultiNodeInventoryForSkuAndAllShipnodesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

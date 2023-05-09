@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETEnableSerialConsoleAccessResponse {
     
     public byte[] body;
+
     public GETEnableSerialConsoleAccessResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETEnableSerialConsoleAccessResponse {
     
     
     public String contentType;
+
     public GETEnableSerialConsoleAccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETEnableSerialConsoleAccessResponse {
     
     
     public Integer statusCode;
+
     public GETEnableSerialConsoleAccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETEnableSerialConsoleAccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETEnableSerialConsoleAccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETEnableSerialConsoleAccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

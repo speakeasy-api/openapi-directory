@@ -18,6 +18,7 @@ public class GetDirectDebitsForMandateUuidDirectDebitsDirectDebitCurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public GetDirectDebitsForMandateUuidDirectDebitsDirectDebitCurrencyCodeEnum code;
+
     public GetDirectDebitsForMandateUuidDirectDebitsDirectDebitCurrency withCode(GetDirectDebitsForMandateUuidDirectDebitsDirectDebitCurrencyCodeEnum code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class GetDirectDebitsForMandateUuidDirectDebitsDirectDebitCurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetDirectDebitsForMandateUuidDirectDebitsDirectDebitCurrency withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public GetDirectDebitsForMandateUuidDirectDebitsDirectDebitCurrency(){}
 }

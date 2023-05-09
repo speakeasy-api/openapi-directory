@@ -15,6 +15,7 @@ public class FilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Negated")
     public Boolean negated;
+
     public FilterExpression withNegated(Boolean negated) {
         this.negated = negated;
         return this;
@@ -22,6 +23,7 @@ public class FilterExpression {
     
     @JsonProperty("Operation")
     public FilterOperationEnum operation;
+
     public FilterExpression withOperation(FilterOperationEnum operation) {
         this.operation = operation;
         return this;
@@ -29,9 +31,14 @@ public class FilterExpression {
     
     @JsonProperty("Values")
     public FilterValue[] values;
+
     public FilterExpression withValues(FilterValue[] values) {
         this.values = values;
         return this;
     }
     
+    public FilterExpression(@JsonProperty("Operation") FilterOperationEnum operation, @JsonProperty("Values") FilterValue[] values) {
+        this.operation = operation;
+        this.values = values;
+  }
 }

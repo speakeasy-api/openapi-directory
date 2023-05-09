@@ -15,6 +15,7 @@ public class KernelCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("add")
     public String[] add;
+
     public KernelCapabilities withAdd(String[] add) {
         this.add = add;
         return this;
@@ -23,9 +24,11 @@ public class KernelCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drop")
     public String[] drop;
+
     public KernelCapabilities withDrop(String[] drop) {
         this.drop = drop;
         return this;
     }
     
+    public KernelCapabilities(){}
 }

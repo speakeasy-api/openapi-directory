@@ -15,6 +15,7 @@ public class PatientResourceAttributesStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public PatientResourceAttributesStatement withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -23,6 +24,7 @@ public class PatientResourceAttributesStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_by")
     public String updatedBy;
+
     public PatientResourceAttributesStatement withUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
         return this;
@@ -31,9 +33,11 @@ public class PatientResourceAttributesStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public PatientResourceAttributesStatement withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PatientResourceAttributesStatement(){}
 }

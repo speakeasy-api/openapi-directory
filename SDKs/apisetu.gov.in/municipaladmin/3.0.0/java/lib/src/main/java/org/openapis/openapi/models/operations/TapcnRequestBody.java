@@ -15,6 +15,7 @@ public class TapcnRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public TapcnRequestBodyCertificateParameters certificateParameters;
+
     public TapcnRequestBody withCertificateParameters(TapcnRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class TapcnRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public TapcnRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class TapcnRequestBody {
      */
     @JsonProperty("format")
     public TapcnRequestBodyFormatEnum format;
+
     public TapcnRequestBody withFormat(TapcnRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class TapcnRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public TapcnRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public TapcnRequestBody(@JsonProperty("format") TapcnRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

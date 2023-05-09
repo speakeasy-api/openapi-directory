@@ -22,6 +22,7 @@ public class Announcement {
      */
     @JsonProperty("announcement")
     public String announcement;
+
     public Announcement withAnnouncement(String announcement) {
         this.announcement = announcement;
         return this;
@@ -35,9 +36,13 @@ public class Announcement {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expires_at")
     public OffsetDateTime expiresAt;
+
     public Announcement withExpiresAt(OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
     }
     
+    public Announcement(@JsonProperty("announcement") String announcement) {
+        this.announcement = announcement;
+  }
 }

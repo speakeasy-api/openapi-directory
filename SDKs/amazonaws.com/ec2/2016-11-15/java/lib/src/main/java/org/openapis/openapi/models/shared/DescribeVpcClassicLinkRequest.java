@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcClassicLinkRequest {
     
     public Boolean dryRun;
+
     public DescribeVpcClassicLinkRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeVpcClassicLinkRequest {
     
     
     public DescribeVpcClassicLinkRequestFilters[] filters;
+
     public DescribeVpcClassicLinkRequest withFilters(DescribeVpcClassicLinkRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,9 +25,11 @@ public class DescribeVpcClassicLinkRequest {
     
     
     public String[] vpcIds;
+
     public DescribeVpcClassicLinkRequest withVpcIds(String[] vpcIds) {
         this.vpcIds = vpcIds;
         return this;
     }
     
+    public DescribeVpcClassicLinkRequest(){}
 }

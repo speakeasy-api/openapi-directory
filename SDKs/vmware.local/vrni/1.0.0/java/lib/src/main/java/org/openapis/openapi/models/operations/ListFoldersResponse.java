@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFoldersResponse {
@@ -12,6 +13,7 @@ public class ListFoldersResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public ListFoldersResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -19,6 +21,7 @@ public class ListFoldersResponse {
     
     
     public String contentType;
+
     public ListFoldersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListFoldersResponse {
      */
     
     public org.openapis.openapi.models.shared.PagedListResponseWithTime pagedListResponseWithTime;
+
     public ListFoldersResponse withPagedListResponseWithTime(org.openapis.openapi.models.shared.PagedListResponseWithTime pagedListResponseWithTime) {
         this.pagedListResponseWithTime = pagedListResponseWithTime;
         return this;
@@ -36,6 +40,7 @@ public class ListFoldersResponse {
     
     
     public Integer statusCode;
+
     public ListFoldersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListFoldersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFoldersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListFoldersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

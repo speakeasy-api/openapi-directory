@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProductsIdFieldsJsonRequest {
@@ -12,6 +13,7 @@ public class PostProductsIdFieldsJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AddProductCustomField addProductCustomField;
+
     public PostProductsIdFieldsJsonRequest withAddProductCustomField(org.openapis.openapi.models.shared.AddProductCustomField addProductCustomField) {
         this.addProductCustomField = addProductCustomField;
         return this;
@@ -22,6 +24,7 @@ public class PostProductsIdFieldsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PostProductsIdFieldsJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PostProductsIdFieldsJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PostProductsIdFieldsJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class PostProductsIdFieldsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PostProductsIdFieldsJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PostProductsIdFieldsJsonRequest(@JsonProperty("AddProductCustomField") org.openapis.openapi.models.shared.AddProductCustomField addProductCustomField, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.addProductCustomField = addProductCustomField;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

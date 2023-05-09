@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1PageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3beta1PageInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1PageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryFulfillment")
     public GoogleCloudDialogflowCxV3beta1FulfillmentInput entryFulfillment;
+
     public GoogleCloudDialogflowCxV3beta1PageInput withEntryFulfillment(GoogleCloudDialogflowCxV3beta1FulfillmentInput entryFulfillment) {
         this.entryFulfillment = entryFulfillment;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1PageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventHandlers")
     public GoogleCloudDialogflowCxV3beta1EventHandlerInput[] eventHandlers;
+
     public GoogleCloudDialogflowCxV3beta1PageInput withEventHandlers(GoogleCloudDialogflowCxV3beta1EventHandlerInput[] eventHandlers) {
         this.eventHandlers = eventHandlers;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3beta1PageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form")
     public GoogleCloudDialogflowCxV3beta1FormInput form;
+
     public GoogleCloudDialogflowCxV3beta1PageInput withForm(GoogleCloudDialogflowCxV3beta1FormInput form) {
         this.form = form;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3beta1PageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3beta1PageInput withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowCxV3beta1PageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitionRouteGroups")
     public String[] transitionRouteGroups;
+
     public GoogleCloudDialogflowCxV3beta1PageInput withTransitionRouteGroups(String[] transitionRouteGroups) {
         this.transitionRouteGroups = transitionRouteGroups;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDialogflowCxV3beta1PageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitionRoutes")
     public GoogleCloudDialogflowCxV3beta1TransitionRouteInput[] transitionRoutes;
+
     public GoogleCloudDialogflowCxV3beta1PageInput withTransitionRoutes(GoogleCloudDialogflowCxV3beta1TransitionRouteInput[] transitionRoutes) {
         this.transitionRoutes = transitionRoutes;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1PageInput(){}
 }

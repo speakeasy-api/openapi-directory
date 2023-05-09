@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostApiV1NotificationsIdDismissResponse {
     
     public String contentType;
+
     public PostApiV1NotificationsIdDismissResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostApiV1NotificationsIdDismissResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PostApiV1NotificationsIdDismissResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class PostApiV1NotificationsIdDismissResponse {
      */
     
     public org.openapis.openapi.models.shared.Notification notification;
+
     public PostApiV1NotificationsIdDismissResponse withNotification(org.openapis.openapi.models.shared.Notification notification) {
         this.notification = notification;
         return this;
@@ -36,6 +40,7 @@ public class PostApiV1NotificationsIdDismissResponse {
     
     
     public Integer statusCode;
+
     public PostApiV1NotificationsIdDismissResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostApiV1NotificationsIdDismissResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostApiV1NotificationsIdDismissResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostApiV1NotificationsIdDismissResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

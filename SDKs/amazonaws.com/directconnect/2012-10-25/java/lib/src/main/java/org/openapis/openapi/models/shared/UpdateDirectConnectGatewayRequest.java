@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateDirectConnectGatewayRequest {
     @JsonProperty("directConnectGatewayId")
     public String directConnectGatewayId;
+
     public UpdateDirectConnectGatewayRequest withDirectConnectGatewayId(String directConnectGatewayId) {
         this.directConnectGatewayId = directConnectGatewayId;
         return this;
@@ -16,9 +17,14 @@ public class UpdateDirectConnectGatewayRequest {
     
     @JsonProperty("newDirectConnectGatewayName")
     public String newDirectConnectGatewayName;
+
     public UpdateDirectConnectGatewayRequest withNewDirectConnectGatewayName(String newDirectConnectGatewayName) {
         this.newDirectConnectGatewayName = newDirectConnectGatewayName;
         return this;
     }
     
+    public UpdateDirectConnectGatewayRequest(@JsonProperty("directConnectGatewayId") String directConnectGatewayId, @JsonProperty("newDirectConnectGatewayName") String newDirectConnectGatewayName) {
+        this.directConnectGatewayId = directConnectGatewayId;
+        this.newDirectConnectGatewayName = newDirectConnectGatewayName;
+  }
 }

@@ -12,6 +12,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessType")
     public AccessTypeEnum accessType;
+
     public CreatePermissionGroupRequest withAccessType(AccessTypeEnum accessType) {
         this.accessType = accessType;
         return this;
@@ -20,6 +21,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canCreateOrUpdateConfig")
     public Boolean canCreateOrUpdateConfig;
+
     public CreatePermissionGroupRequest withCanCreateOrUpdateConfig(Boolean canCreateOrUpdateConfig) {
         this.canCreateOrUpdateConfig = canCreateOrUpdateConfig;
         return this;
@@ -28,6 +30,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canCreateOrUpdateEnvironment")
     public Boolean canCreateOrUpdateEnvironment;
+
     public CreatePermissionGroupRequest withCanCreateOrUpdateEnvironment(Boolean canCreateOrUpdateEnvironment) {
         this.canCreateOrUpdateEnvironment = canCreateOrUpdateEnvironment;
         return this;
@@ -36,6 +39,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canCreateOrUpdateSegments")
     public Boolean canCreateOrUpdateSegments;
+
     public CreatePermissionGroupRequest withCanCreateOrUpdateSegments(Boolean canCreateOrUpdateSegments) {
         this.canCreateOrUpdateSegments = canCreateOrUpdateSegments;
         return this;
@@ -44,6 +48,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canCreateOrUpdateSetting")
     public Boolean canCreateOrUpdateSetting;
+
     public CreatePermissionGroupRequest withCanCreateOrUpdateSetting(Boolean canCreateOrUpdateSetting) {
         this.canCreateOrUpdateSetting = canCreateOrUpdateSetting;
         return this;
@@ -52,6 +57,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canCreateOrUpdateTag")
     public Boolean canCreateOrUpdateTag;
+
     public CreatePermissionGroupRequest withCanCreateOrUpdateTag(Boolean canCreateOrUpdateTag) {
         this.canCreateOrUpdateTag = canCreateOrUpdateTag;
         return this;
@@ -60,6 +66,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDeleteConfig")
     public Boolean canDeleteConfig;
+
     public CreatePermissionGroupRequest withCanDeleteConfig(Boolean canDeleteConfig) {
         this.canDeleteConfig = canDeleteConfig;
         return this;
@@ -68,6 +75,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDeleteEnvironment")
     public Boolean canDeleteEnvironment;
+
     public CreatePermissionGroupRequest withCanDeleteEnvironment(Boolean canDeleteEnvironment) {
         this.canDeleteEnvironment = canDeleteEnvironment;
         return this;
@@ -76,6 +84,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDeleteSegments")
     public Boolean canDeleteSegments;
+
     public CreatePermissionGroupRequest withCanDeleteSegments(Boolean canDeleteSegments) {
         this.canDeleteSegments = canDeleteSegments;
         return this;
@@ -84,6 +93,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDeleteSetting")
     public Boolean canDeleteSetting;
+
     public CreatePermissionGroupRequest withCanDeleteSetting(Boolean canDeleteSetting) {
         this.canDeleteSetting = canDeleteSetting;
         return this;
@@ -92,6 +102,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDeleteTag")
     public Boolean canDeleteTag;
+
     public CreatePermissionGroupRequest withCanDeleteTag(Boolean canDeleteTag) {
         this.canDeleteTag = canDeleteTag;
         return this;
@@ -100,6 +111,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canManageIntegrations")
     public Boolean canManageIntegrations;
+
     public CreatePermissionGroupRequest withCanManageIntegrations(Boolean canManageIntegrations) {
         this.canManageIntegrations = canManageIntegrations;
         return this;
@@ -108,6 +120,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canManageMembers")
     public Boolean canManageMembers;
+
     public CreatePermissionGroupRequest withCanManageMembers(Boolean canManageMembers) {
         this.canManageMembers = canManageMembers;
         return this;
@@ -116,6 +129,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canManageProductPreferences")
     public Boolean canManageProductPreferences;
+
     public CreatePermissionGroupRequest withCanManageProductPreferences(Boolean canManageProductPreferences) {
         this.canManageProductPreferences = canManageProductPreferences;
         return this;
@@ -124,6 +138,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canManageWebhook")
     public Boolean canManageWebhook;
+
     public CreatePermissionGroupRequest withCanManageWebhook(Boolean canManageWebhook) {
         this.canManageWebhook = canManageWebhook;
         return this;
@@ -132,6 +147,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canRotateSdkKey")
     public Boolean canRotateSDKKey;
+
     public CreatePermissionGroupRequest withCanRotateSDKKey(Boolean canRotateSDKKey) {
         this.canRotateSDKKey = canRotateSDKKey;
         return this;
@@ -140,6 +156,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canTagSetting")
     public Boolean canTagSetting;
+
     public CreatePermissionGroupRequest withCanTagSetting(Boolean canTagSetting) {
         this.canTagSetting = canTagSetting;
         return this;
@@ -148,6 +165,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canUseExportImport")
     public Boolean canUseExportImport;
+
     public CreatePermissionGroupRequest withCanUseExportImport(Boolean canUseExportImport) {
         this.canUseExportImport = canUseExportImport;
         return this;
@@ -156,6 +174,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canViewProductAuditLog")
     public Boolean canViewProductAuditLog;
+
     public CreatePermissionGroupRequest withCanViewProductAuditLog(Boolean canViewProductAuditLog) {
         this.canViewProductAuditLog = canViewProductAuditLog;
         return this;
@@ -164,6 +183,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canViewProductStatistics")
     public Boolean canViewProductStatistics;
+
     public CreatePermissionGroupRequest withCanViewProductStatistics(Boolean canViewProductStatistics) {
         this.canViewProductStatistics = canViewProductStatistics;
         return this;
@@ -172,6 +192,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canViewSdkKey")
     public Boolean canViewSDKKey;
+
     public CreatePermissionGroupRequest withCanViewSDKKey(Boolean canViewSDKKey) {
         this.canViewSDKKey = canViewSDKKey;
         return this;
@@ -180,6 +201,7 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentAccesses")
     public CreateOrUpdateEnvironmentAccessModel[] environmentAccesses;
+
     public CreatePermissionGroupRequest withEnvironmentAccesses(CreateOrUpdateEnvironmentAccessModel[] environmentAccesses) {
         this.environmentAccesses = environmentAccesses;
         return this;
@@ -187,6 +209,7 @@ public class CreatePermissionGroupRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreatePermissionGroupRequest withName(String name) {
         this.name = name;
         return this;
@@ -195,9 +218,13 @@ public class CreatePermissionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newEnvironmentAccessType")
     public EnvironmentAccessTypeEnum newEnvironmentAccessType;
+
     public CreatePermissionGroupRequest withNewEnvironmentAccessType(EnvironmentAccessTypeEnum newEnvironmentAccessType) {
         this.newEnvironmentAccessType = newEnvironmentAccessType;
         return this;
     }
     
+    public CreatePermissionGroupRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

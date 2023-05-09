@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSubAccountResponse {
     
     public String contentType;
+
     public CreateSubAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateSubAccountResponse {
     
     
     public Integer statusCode;
+
     public CreateSubAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateSubAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSubAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateSubAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.SubaccountCreateResponse subaccountCreateResponse;
+
     public CreateSubAccountResponse withSubaccountCreateResponse(org.openapis.openapi.models.shared.SubaccountCreateResponse subaccountCreateResponse) {
         this.subaccountCreateResponse = subaccountCreateResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateSubAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.UnprovisionedErrorResponse unprovisionedErrorResponse;
+
     public CreateSubAccountResponse withUnprovisionedErrorResponse(org.openapis.openapi.models.shared.UnprovisionedErrorResponse unprovisionedErrorResponse) {
         this.unprovisionedErrorResponse = unprovisionedErrorResponse;
         return this;
@@ -53,6 +59,7 @@ public class CreateSubAccountResponse {
      */
     
     public CreateSubAccount401ApplicationJSON createSubAccount401ApplicationJSONObject;
+
     public CreateSubAccountResponse withCreateSubAccount401ApplicationJSONObject(CreateSubAccount401ApplicationJSON createSubAccount401ApplicationJSONObject) {
         this.createSubAccount401ApplicationJSONObject = createSubAccount401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CreateSubAccountResponse {
      */
     
     public CreateSubAccount404ApplicationJSON createSubAccount404ApplicationJSONObject;
+
     public CreateSubAccountResponse withCreateSubAccount404ApplicationJSONObject(CreateSubAccount404ApplicationJSON createSubAccount404ApplicationJSONObject) {
         this.createSubAccount404ApplicationJSONObject = createSubAccount404ApplicationJSONObject;
         return this;
@@ -73,9 +81,14 @@ public class CreateSubAccountResponse {
      */
     
     public CreateSubAccount422ApplicationJSON createSubAccount422ApplicationJSONObject;
+
     public CreateSubAccountResponse withCreateSubAccount422ApplicationJSONObject(CreateSubAccount422ApplicationJSON createSubAccount422ApplicationJSONObject) {
         this.createSubAccount422ApplicationJSONObject = createSubAccount422ApplicationJSONObject;
         return this;
     }
     
+    public CreateSubAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

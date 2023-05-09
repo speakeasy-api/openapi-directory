@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContentOrderinvoicesCreatechargeinvoiceResponse {
     
     public String contentType;
+
     public ContentOrderinvoicesCreatechargeinvoiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContentOrderinvoicesCreatechargeinvoiceResponse {
      */
     
     public org.openapis.openapi.models.shared.OrderinvoicesCreateChargeInvoiceResponse orderinvoicesCreateChargeInvoiceResponse;
+
     public ContentOrderinvoicesCreatechargeinvoiceResponse withOrderinvoicesCreateChargeInvoiceResponse(org.openapis.openapi.models.shared.OrderinvoicesCreateChargeInvoiceResponse orderinvoicesCreateChargeInvoiceResponse) {
         this.orderinvoicesCreateChargeInvoiceResponse = orderinvoicesCreateChargeInvoiceResponse;
         return this;
@@ -26,6 +29,7 @@ public class ContentOrderinvoicesCreatechargeinvoiceResponse {
     
     
     public Integer statusCode;
+
     public ContentOrderinvoicesCreatechargeinvoiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContentOrderinvoicesCreatechargeinvoiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContentOrderinvoicesCreatechargeinvoiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContentOrderinvoicesCreatechargeinvoiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

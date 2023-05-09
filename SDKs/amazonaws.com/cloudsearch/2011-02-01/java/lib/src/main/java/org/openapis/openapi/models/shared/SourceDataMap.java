@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SourceDataMap - Specifies how to map source attribute values to custom values when populating an &lt;code&gt;IndexField&lt;/code&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SourceDataMap {
     
     public java.util.Map<String, String> cases;
+
     public SourceDataMap withCases(java.util.Map<String, String> cases) {
         this.cases = cases;
         return this;
@@ -19,6 +20,7 @@ public class SourceDataMap {
     
     
     public String defaultValue;
+
     public SourceDataMap withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -26,9 +28,13 @@ public class SourceDataMap {
     
     
     public String sourceName;
+
     public SourceDataMap withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
     }
     
+    public SourceDataMap(@JsonProperty("SourceName") String sourceName) {
+        this.sourceName = sourceName;
+  }
 }

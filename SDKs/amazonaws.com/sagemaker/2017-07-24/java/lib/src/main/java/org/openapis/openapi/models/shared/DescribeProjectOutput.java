@@ -23,6 +23,7 @@ public class DescribeProjectOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public DescribeProjectOutput withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -32,6 +33,7 @@ public class DescribeProjectOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeProjectOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -43,6 +45,7 @@ public class DescribeProjectOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public DescribeProjectOutput withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -53,6 +56,7 @@ public class DescribeProjectOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeProjectOutput withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -60,6 +64,7 @@ public class DescribeProjectOutput {
     
     @JsonProperty("ProjectArn")
     public String projectArn;
+
     public DescribeProjectOutput withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -68,6 +73,7 @@ public class DescribeProjectOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectDescription")
     public String projectDescription;
+
     public DescribeProjectOutput withProjectDescription(String projectDescription) {
         this.projectDescription = projectDescription;
         return this;
@@ -75,6 +81,7 @@ public class DescribeProjectOutput {
     
     @JsonProperty("ProjectId")
     public String projectId;
+
     public DescribeProjectOutput withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -82,6 +89,7 @@ public class DescribeProjectOutput {
     
     @JsonProperty("ProjectName")
     public String projectName;
+
     public DescribeProjectOutput withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -89,6 +97,7 @@ public class DescribeProjectOutput {
     
     @JsonProperty("ProjectStatus")
     public ProjectStatusEnum projectStatus;
+
     public DescribeProjectOutput withProjectStatus(ProjectStatusEnum projectStatus) {
         this.projectStatus = projectStatus;
         return this;
@@ -97,6 +106,7 @@ public class DescribeProjectOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCatalogProvisionedProductDetails")
     public ServiceCatalogProvisionedProductDetails serviceCatalogProvisionedProductDetails;
+
     public DescribeProjectOutput withServiceCatalogProvisionedProductDetails(ServiceCatalogProvisionedProductDetails serviceCatalogProvisionedProductDetails) {
         this.serviceCatalogProvisionedProductDetails = serviceCatalogProvisionedProductDetails;
         return this;
@@ -104,9 +114,18 @@ public class DescribeProjectOutput {
     
     @JsonProperty("ServiceCatalogProvisioningDetails")
     public ServiceCatalogProvisioningDetails serviceCatalogProvisioningDetails;
+
     public DescribeProjectOutput withServiceCatalogProvisioningDetails(ServiceCatalogProvisioningDetails serviceCatalogProvisioningDetails) {
         this.serviceCatalogProvisioningDetails = serviceCatalogProvisioningDetails;
         return this;
     }
     
+    public DescribeProjectOutput(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ProjectArn") String projectArn, @JsonProperty("ProjectId") String projectId, @JsonProperty("ProjectName") String projectName, @JsonProperty("ProjectStatus") ProjectStatusEnum projectStatus, @JsonProperty("ServiceCatalogProvisioningDetails") ServiceCatalogProvisioningDetails serviceCatalogProvisioningDetails) {
+        this.creationTime = creationTime;
+        this.projectArn = projectArn;
+        this.projectId = projectId;
+        this.projectName = projectName;
+        this.projectStatus = projectStatus;
+        this.serviceCatalogProvisioningDetails = serviceCatalogProvisioningDetails;
+  }
 }

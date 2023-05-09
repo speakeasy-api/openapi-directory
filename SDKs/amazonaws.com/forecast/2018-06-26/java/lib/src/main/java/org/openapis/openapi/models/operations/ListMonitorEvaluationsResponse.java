@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMonitorEvaluationsResponse {
     
     public String contentType;
+
     public ListMonitorEvaluationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListMonitorEvaluationsResponse {
      */
     
     public Object invalidInputException;
+
     public ListMonitorEvaluationsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class ListMonitorEvaluationsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListMonitorEvaluationsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListMonitorEvaluationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMonitorEvaluationsResponse listMonitorEvaluationsResponse;
+
     public ListMonitorEvaluationsResponse withListMonitorEvaluationsResponse(org.openapis.openapi.models.shared.ListMonitorEvaluationsResponse listMonitorEvaluationsResponse) {
         this.listMonitorEvaluationsResponse = listMonitorEvaluationsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListMonitorEvaluationsResponse {
     
     
     public Integer statusCode;
+
     public ListMonitorEvaluationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListMonitorEvaluationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMonitorEvaluationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListMonitorEvaluationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListMonitorEvaluationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListMonitorEvaluationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

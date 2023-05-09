@@ -15,6 +15,7 @@ public class ObjectIdentifierAndLinkNameTuple {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinkName")
     public String linkName;
+
     public ObjectIdentifierAndLinkNameTuple withLinkName(String linkName) {
         this.linkName = linkName;
         return this;
@@ -23,9 +24,11 @@ public class ObjectIdentifierAndLinkNameTuple {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectIdentifier")
     public String objectIdentifier;
+
     public ObjectIdentifierAndLinkNameTuple withObjectIdentifier(String objectIdentifier) {
         this.objectIdentifier = objectIdentifier;
         return this;
     }
     
+    public ObjectIdentifierAndLinkNameTuple(){}
 }

@@ -15,9 +15,11 @@ public class OperationStatusFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusValuesEnum status;
+
     public OperationStatusFilter withStatus(StatusValuesEnum status) {
         this.status = status;
         return this;
     }
     
+    public OperationStatusFilter(){}
 }

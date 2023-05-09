@@ -56,11 +56,9 @@ public class Assets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PolyAssetsGetResponse res = new org.openapis.openapi.models.operations.PolyAssetsGetResponse() {{
+        org.openapis.openapi.models.operations.PolyAssetsGetResponse res = new org.openapis.openapi.models.operations.PolyAssetsGetResponse(contentType, httpRes.statusCode()) {{
             asset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Assets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PolyAssetsListResponse res = new org.openapis.openapi.models.operations.PolyAssetsListResponse() {{
+        org.openapis.openapi.models.operations.PolyAssetsListResponse res = new org.openapis.openapi.models.operations.PolyAssetsListResponse(contentType, httpRes.statusCode()) {{
             listAssetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

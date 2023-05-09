@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTrafficMirrorFilterResultTrafficMirrorFilterTags {
     
     public String key;
+
     public CreateTrafficMirrorFilterResultTrafficMirrorFilterTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateTrafficMirrorFilterResultTrafficMirrorFilterTags {
     
     
     public String value;
+
     public CreateTrafficMirrorFilterResultTrafficMirrorFilterTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateTrafficMirrorFilterResultTrafficMirrorFilterTags(){}
 }

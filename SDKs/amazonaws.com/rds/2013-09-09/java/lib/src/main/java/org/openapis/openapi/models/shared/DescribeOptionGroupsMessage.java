@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeOptionGroupsMessage {
     
     public String engineName;
+
     public DescribeOptionGroupsMessage withEngineName(String engineName) {
         this.engineName = engineName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeOptionGroupsMessage {
     
     
     public FilterList[] filters;
+
     public DescribeOptionGroupsMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeOptionGroupsMessage {
     
     
     public String majorEngineVersion;
+
     public DescribeOptionGroupsMessage withMajorEngineVersion(String majorEngineVersion) {
         this.majorEngineVersion = majorEngineVersion;
         return this;
@@ -30,6 +33,7 @@ public class DescribeOptionGroupsMessage {
     
     
     public String marker;
+
     public DescribeOptionGroupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -37,6 +41,7 @@ public class DescribeOptionGroupsMessage {
     
     
     public Long maxRecords;
+
     public DescribeOptionGroupsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -44,9 +49,11 @@ public class DescribeOptionGroupsMessage {
     
     
     public String optionGroupName;
+
     public DescribeOptionGroupsMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
     }
     
+    public DescribeOptionGroupsMessage(){}
 }

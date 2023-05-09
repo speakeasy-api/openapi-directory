@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Geometry - &lt;p/&gt;
+ * Geometry - The structure representing a Geometry in terms of Type and Coordinates as per GeoJson spec.
  */
 public class Geometry {
     @JsonProperty("Coordinates")
     public Double[][][] coordinates;
+
     public Geometry withCoordinates(Double[][][] coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -19,9 +20,14 @@ public class Geometry {
     
     @JsonProperty("Type")
     public String type;
+
     public Geometry withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Geometry(@JsonProperty("Coordinates") Double[][][] coordinates, @JsonProperty("Type") String type) {
+        this.coordinates = coordinates;
+        this.type = type;
+  }
 }

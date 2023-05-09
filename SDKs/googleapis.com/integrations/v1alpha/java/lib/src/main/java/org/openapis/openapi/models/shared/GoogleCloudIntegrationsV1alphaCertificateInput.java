@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaCertificateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateStatus")
     public GoogleCloudIntegrationsV1alphaCertificateCertificateStatusEnum certificateStatus;
+
     public GoogleCloudIntegrationsV1alphaCertificateInput withCertificateStatus(GoogleCloudIntegrationsV1alphaCertificateCertificateStatusEnum certificateStatus) {
         this.certificateStatus = certificateStatus;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaCertificateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentialId")
     public String credentialId;
+
     public GoogleCloudIntegrationsV1alphaCertificateInput withCredentialId(String credentialId) {
         this.credentialId = credentialId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaCertificateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudIntegrationsV1alphaCertificateInput withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaCertificateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudIntegrationsV1alphaCertificateInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaCertificateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawCertificate")
     public GoogleCloudIntegrationsV1alphaClientCertificate rawCertificate;
+
     public GoogleCloudIntegrationsV1alphaCertificateInput withRawCertificate(GoogleCloudIntegrationsV1alphaClientCertificate rawCertificate) {
         this.rawCertificate = rawCertificate;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudIntegrationsV1alphaCertificateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestorId")
     public String requestorId;
+
     public GoogleCloudIntegrationsV1alphaCertificateInput withRequestorId(String requestorId) {
         this.requestorId = requestorId;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaCertificateInput(){}
 }

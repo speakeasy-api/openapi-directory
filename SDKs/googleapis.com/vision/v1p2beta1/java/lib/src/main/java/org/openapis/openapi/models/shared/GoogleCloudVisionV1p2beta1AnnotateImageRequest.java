@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p2beta1AnnotateImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public GoogleCloudVisionV1p2beta1Feature[] features;
+
     public GoogleCloudVisionV1p2beta1AnnotateImageRequest withFeatures(GoogleCloudVisionV1p2beta1Feature[] features) {
         this.features = features;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p2beta1AnnotateImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public GoogleCloudVisionV1p2beta1Image image;
+
     public GoogleCloudVisionV1p2beta1AnnotateImageRequest withImage(GoogleCloudVisionV1p2beta1Image image) {
         this.image = image;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudVisionV1p2beta1AnnotateImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageContext")
     public GoogleCloudVisionV1p2beta1ImageContext imageContext;
+
     public GoogleCloudVisionV1p2beta1AnnotateImageRequest withImageContext(GoogleCloudVisionV1p2beta1ImageContext imageContext) {
         this.imageContext = imageContext;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1AnnotateImageRequest(){}
 }

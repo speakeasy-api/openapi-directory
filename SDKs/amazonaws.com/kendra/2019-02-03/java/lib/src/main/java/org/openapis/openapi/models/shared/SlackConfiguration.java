@@ -15,6 +15,7 @@ public class SlackConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlBotMessage")
     public Boolean crawlBotMessage;
+
     public SlackConfiguration withCrawlBotMessage(Boolean crawlBotMessage) {
         this.crawlBotMessage = crawlBotMessage;
         return this;
@@ -23,6 +24,7 @@ public class SlackConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludeArchived")
     public Boolean excludeArchived;
+
     public SlackConfiguration withExcludeArchived(Boolean excludeArchived) {
         this.excludeArchived = excludeArchived;
         return this;
@@ -31,6 +33,7 @@ public class SlackConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusionPatterns")
     public String[] exclusionPatterns;
+
     public SlackConfiguration withExclusionPatterns(String[] exclusionPatterns) {
         this.exclusionPatterns = exclusionPatterns;
         return this;
@@ -39,6 +42,7 @@ public class SlackConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldMappings")
     public DataSourceToIndexFieldMapping[] fieldMappings;
+
     public SlackConfiguration withFieldMappings(DataSourceToIndexFieldMapping[] fieldMappings) {
         this.fieldMappings = fieldMappings;
         return this;
@@ -47,6 +51,7 @@ public class SlackConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InclusionPatterns")
     public String[] inclusionPatterns;
+
     public SlackConfiguration withInclusionPatterns(String[] inclusionPatterns) {
         this.inclusionPatterns = inclusionPatterns;
         return this;
@@ -55,6 +60,7 @@ public class SlackConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LookBackPeriod")
     public Long lookBackPeriod;
+
     public SlackConfiguration withLookBackPeriod(Long lookBackPeriod) {
         this.lookBackPeriod = lookBackPeriod;
         return this;
@@ -63,6 +69,7 @@ public class SlackConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateChannelFilter")
     public String[] privateChannelFilter;
+
     public SlackConfiguration withPrivateChannelFilter(String[] privateChannelFilter) {
         this.privateChannelFilter = privateChannelFilter;
         return this;
@@ -71,6 +78,7 @@ public class SlackConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicChannelFilter")
     public String[] publicChannelFilter;
+
     public SlackConfiguration withPublicChannelFilter(String[] publicChannelFilter) {
         this.publicChannelFilter = publicChannelFilter;
         return this;
@@ -78,6 +86,7 @@ public class SlackConfiguration {
     
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public SlackConfiguration withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -85,6 +94,7 @@ public class SlackConfiguration {
     
     @JsonProperty("SinceCrawlDate")
     public String sinceCrawlDate;
+
     public SlackConfiguration withSinceCrawlDate(String sinceCrawlDate) {
         this.sinceCrawlDate = sinceCrawlDate;
         return this;
@@ -92,6 +102,7 @@ public class SlackConfiguration {
     
     @JsonProperty("SlackEntityList")
     public SlackEntityEnum[] slackEntityList;
+
     public SlackConfiguration withSlackEntityList(SlackEntityEnum[] slackEntityList) {
         this.slackEntityList = slackEntityList;
         return this;
@@ -99,6 +110,7 @@ public class SlackConfiguration {
     
     @JsonProperty("TeamId")
     public String teamId;
+
     public SlackConfiguration withTeamId(String teamId) {
         this.teamId = teamId;
         return this;
@@ -107,6 +119,7 @@ public class SlackConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseChangeLog")
     public Boolean useChangeLog;
+
     public SlackConfiguration withUseChangeLog(Boolean useChangeLog) {
         this.useChangeLog = useChangeLog;
         return this;
@@ -115,9 +128,16 @@ public class SlackConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfiguration")
     public DataSourceVpcConfiguration vpcConfiguration;
+
     public SlackConfiguration withVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public SlackConfiguration(@JsonProperty("SecretArn") String secretArn, @JsonProperty("SinceCrawlDate") String sinceCrawlDate, @JsonProperty("SlackEntityList") SlackEntityEnum[] slackEntityList, @JsonProperty("TeamId") String teamId) {
+        this.secretArn = secretArn;
+        this.sinceCrawlDate = sinceCrawlDate;
+        this.slackEntityList = slackEntityList;
+        this.teamId = teamId;
+  }
 }

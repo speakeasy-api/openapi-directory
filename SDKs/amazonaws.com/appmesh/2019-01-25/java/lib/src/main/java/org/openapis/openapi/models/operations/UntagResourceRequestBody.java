@@ -12,9 +12,13 @@ public class UntagResourceRequestBody {
      */
     @JsonProperty("tagKeys")
     public String[] tagKeys;
+
     public UntagResourceRequestBody withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
     
+    public UntagResourceRequestBody(@JsonProperty("tagKeys") String[] tagKeys) {
+        this.tagKeys = tagKeys;
+  }
 }

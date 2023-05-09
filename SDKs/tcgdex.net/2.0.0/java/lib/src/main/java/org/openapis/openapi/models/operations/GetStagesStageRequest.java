@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStagesStageRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stage")
     public String stage;
+
     public GetStagesStageRequest withStage(String stage) {
         this.stage = stage;
         return this;
     }
     
+    public GetStagesStageRequest(@JsonProperty("stage") String stage) {
+        this.stage = stage;
+  }
 }

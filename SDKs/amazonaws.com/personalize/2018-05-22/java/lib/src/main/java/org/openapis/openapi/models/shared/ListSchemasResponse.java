@@ -15,6 +15,7 @@ public class ListSchemasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSchemasResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSchemasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemas")
     public DatasetSchemaSummary[] schemas;
+
     public ListSchemasResponse withSchemas(DatasetSchemaSummary[] schemas) {
         this.schemas = schemas;
         return this;
     }
     
+    public ListSchemasResponse(){}
 }

@@ -15,6 +15,7 @@ public class ConfigParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterKey")
     public String parameterKey;
+
     public ConfigParameter withParameterKey(String parameterKey) {
         this.parameterKey = parameterKey;
         return this;
@@ -23,9 +24,11 @@ public class ConfigParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterValue")
     public String parameterValue;
+
     public ConfigParameter withParameterValue(String parameterValue) {
         this.parameterValue = parameterValue;
         return this;
     }
     
+    public ConfigParameter(){}
 }

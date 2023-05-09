@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFileSystemPolicyResponse {
@@ -12,6 +13,7 @@ public class DeleteFileSystemPolicyResponse {
      */
     
     public Object badRequest;
+
     public DeleteFileSystemPolicyResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFileSystemPolicyResponse {
     
     
     public String contentType;
+
     public DeleteFileSystemPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFileSystemPolicyResponse {
      */
     
     public Object fileSystemNotFound;
+
     public DeleteFileSystemPolicyResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFileSystemPolicyResponse {
      */
     
     public Object incorrectFileSystemLifeCycleState;
+
     public DeleteFileSystemPolicyResponse withIncorrectFileSystemLifeCycleState(Object incorrectFileSystemLifeCycleState) {
         this.incorrectFileSystemLifeCycleState = incorrectFileSystemLifeCycleState;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFileSystemPolicyResponse {
      */
     
     public Object internalServerError;
+
     public DeleteFileSystemPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -56,6 +62,7 @@ public class DeleteFileSystemPolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteFileSystemPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteFileSystemPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFileSystemPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteFileSystemPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

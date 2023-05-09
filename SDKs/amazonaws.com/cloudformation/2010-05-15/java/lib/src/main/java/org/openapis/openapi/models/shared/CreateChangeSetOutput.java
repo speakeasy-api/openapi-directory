@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateChangeSetOutput {
     
     public String id;
+
     public CreateChangeSetOutput withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,11 @@ public class CreateChangeSetOutput {
     
     
     public String stackId;
+
     public CreateChangeSetOutput withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public CreateChangeSetOutput(){}
 }

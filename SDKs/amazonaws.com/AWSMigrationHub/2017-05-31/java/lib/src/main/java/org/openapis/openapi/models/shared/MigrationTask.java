@@ -20,6 +20,7 @@ public class MigrationTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MigrationTaskName")
     public String migrationTaskName;
+
     public MigrationTask withMigrationTaskName(String migrationTaskName) {
         this.migrationTaskName = migrationTaskName;
         return this;
@@ -28,6 +29,7 @@ public class MigrationTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgressUpdateStream")
     public String progressUpdateStream;
+
     public MigrationTask withProgressUpdateStream(String progressUpdateStream) {
         this.progressUpdateStream = progressUpdateStream;
         return this;
@@ -36,6 +38,7 @@ public class MigrationTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAttributeList")
     public ResourceAttribute[] resourceAttributeList;
+
     public MigrationTask withResourceAttributeList(ResourceAttribute[] resourceAttributeList) {
         this.resourceAttributeList = resourceAttributeList;
         return this;
@@ -44,6 +47,7 @@ public class MigrationTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Task")
     public Task task;
+
     public MigrationTask withTask(Task task) {
         this.task = task;
         return this;
@@ -54,9 +58,11 @@ public class MigrationTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateDateTime")
     public OffsetDateTime updateDateTime;
+
     public MigrationTask withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
     }
     
+    public MigrationTask(){}
 }

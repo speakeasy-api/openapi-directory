@@ -15,6 +15,7 @@ public class LocationListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public LocationListEntry withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
@@ -23,9 +24,11 @@ public class LocationListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationUri")
     public String locationUri;
+
     public LocationListEntry withLocationUri(String locationUri) {
         this.locationUri = locationUri;
         return this;
     }
     
+    public LocationListEntry(){}
 }

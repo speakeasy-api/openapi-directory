@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPricingPlanResponse {
@@ -12,6 +13,7 @@ public class GetPricingPlanResponse {
      */
     
     public Object accessDeniedException;
+
     public GetPricingPlanResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetPricingPlanResponse {
     
     
     public String contentType;
+
     public GetPricingPlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPricingPlanResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPricingPlanResponse getPricingPlanResponse;
+
     public GetPricingPlanResponse withGetPricingPlanResponse(org.openapis.openapi.models.shared.GetPricingPlanResponse getPricingPlanResponse) {
         this.getPricingPlanResponse = getPricingPlanResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetPricingPlanResponse {
      */
     
     public Object internalServerException;
+
     public GetPricingPlanResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetPricingPlanResponse {
     
     
     public Integer statusCode;
+
     public GetPricingPlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetPricingPlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPricingPlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetPricingPlanResponse {
      */
     
     public Object throttlingException;
+
     public GetPricingPlanResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetPricingPlanResponse {
      */
     
     public Object validationException;
+
     public GetPricingPlanResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetPricingPlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

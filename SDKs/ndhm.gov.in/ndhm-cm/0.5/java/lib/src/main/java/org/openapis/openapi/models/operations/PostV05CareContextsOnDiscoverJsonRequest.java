@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05CareContextsOnDiscoverJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05CareContextsOnDiscoverJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05CareContextsOnDiscoverJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class PostV05CareContextsOnDiscoverJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatientDiscoveryResult patientDiscoveryResult;
+
     public PostV05CareContextsOnDiscoverJsonRequest withPatientDiscoveryResult(org.openapis.openapi.models.shared.PatientDiscoveryResult patientDiscoveryResult) {
         this.patientDiscoveryResult = patientDiscoveryResult;
         return this;
     }
     
+    public PostV05CareContextsOnDiscoverJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("PatientDiscoveryResult") org.openapis.openapi.models.shared.PatientDiscoveryResult patientDiscoveryResult) {
+        this.authorization = authorization;
+        this.patientDiscoveryResult = patientDiscoveryResult;
+  }
 }

@@ -17,6 +17,7 @@ public class BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandId")
     public Long bandId;
+
     public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDatesTourGradesPricingMatrixAgeBandPrices withBandId(Long bandId) {
         this.bandId = bandId;
         return this;
@@ -28,6 +29,7 @@ public class BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumCountRequired")
     public Long maximumCountRequired;
+
     public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDatesTourGradesPricingMatrixAgeBandPrices withMaximumCountRequired(Long maximumCountRequired) {
         this.maximumCountRequired = maximumCountRequired;
         return this;
@@ -39,6 +41,7 @@ public class BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumCountRequired")
     public Long minimumCountRequired;
+
     public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDatesTourGradesPricingMatrixAgeBandPrices withMinimumCountRequired(Long minimumCountRequired) {
         this.minimumCountRequired = minimumCountRequired;
         return this;
@@ -50,6 +53,7 @@ public class BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prices")
     public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDatesTourGradesPricingMatrixAgeBandPricesPrices[] prices;
+
     public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDatesTourGradesPricingMatrixAgeBandPrices withPrices(BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDatesTourGradesPricingMatrixAgeBandPricesPrices[] prices) {
         this.prices = prices;
         return this;
@@ -61,9 +65,11 @@ public class BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDatesTourGradesPricingMatrixAgeBandPrices withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDatesTourGradesPricingMatrixAgeBandPrices(){}
 }

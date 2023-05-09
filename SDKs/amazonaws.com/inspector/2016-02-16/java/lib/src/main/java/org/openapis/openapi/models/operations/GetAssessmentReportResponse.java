@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAssessmentReportResponse {
@@ -12,6 +13,7 @@ public class GetAssessmentReportResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAssessmentReportResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetAssessmentReportResponse {
      */
     
     public Object assessmentRunInProgressException;
+
     public GetAssessmentReportResponse withAssessmentRunInProgressException(Object assessmentRunInProgressException) {
         this.assessmentRunInProgressException = assessmentRunInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetAssessmentReportResponse {
     
     
     public String contentType;
+
     public GetAssessmentReportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetAssessmentReportResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAssessmentReportResponse getAssessmentReportResponse;
+
     public GetAssessmentReportResponse withGetAssessmentReportResponse(org.openapis.openapi.models.shared.GetAssessmentReportResponse getAssessmentReportResponse) {
         this.getAssessmentReportResponse = getAssessmentReportResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetAssessmentReportResponse {
      */
     
     public Object internalException;
+
     public GetAssessmentReportResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -59,6 +65,7 @@ public class GetAssessmentReportResponse {
      */
     
     public Object invalidInputException;
+
     public GetAssessmentReportResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class GetAssessmentReportResponse {
      */
     
     public Object noSuchEntityException;
+
     public GetAssessmentReportResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -76,6 +84,7 @@ public class GetAssessmentReportResponse {
     
     
     public Integer statusCode;
+
     public GetAssessmentReportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetAssessmentReportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAssessmentReportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetAssessmentReportResponse {
      */
     
     public Object serviceTemporarilyUnavailableException;
+
     public GetAssessmentReportResponse withServiceTemporarilyUnavailableException(Object serviceTemporarilyUnavailableException) {
         this.serviceTemporarilyUnavailableException = serviceTemporarilyUnavailableException;
         return this;
@@ -103,9 +114,14 @@ public class GetAssessmentReportResponse {
      */
     
     public Object unsupportedFeatureException;
+
     public GetAssessmentReportResponse withUnsupportedFeatureException(Object unsupportedFeatureException) {
         this.unsupportedFeatureException = unsupportedFeatureException;
         return this;
     }
     
+    public GetAssessmentReportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

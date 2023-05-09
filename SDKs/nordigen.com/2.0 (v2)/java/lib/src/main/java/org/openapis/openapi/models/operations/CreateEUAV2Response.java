@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEUAV2Response {
     
     public String contentType;
+
     public CreateEUAV2Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateEUAV2Response {
      */
     
     public org.openapis.openapi.models.shared.EndUserAgreement endUserAgreement;
+
     public CreateEUAV2Response withEndUserAgreement(org.openapis.openapi.models.shared.EndUserAgreement endUserAgreement) {
         this.endUserAgreement = endUserAgreement;
         return this;
@@ -26,6 +29,7 @@ public class CreateEUAV2Response {
     
     
     public Integer statusCode;
+
     public CreateEUAV2Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateEUAV2Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEUAV2Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateEUAV2Response {
      */
     
     public java.util.Map<String, Object> createEUAV2400ApplicationJSONObject;
+
     public CreateEUAV2Response withCreateEUAV2400ApplicationJSONObject(java.util.Map<String, Object> createEUAV2400ApplicationJSONObject) {
         this.createEUAV2400ApplicationJSONObject = createEUAV2400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateEUAV2Response {
      */
     
     public java.util.Map<String, Object> createEUAV2401ApplicationJSONObject;
+
     public CreateEUAV2Response withCreateEUAV2401ApplicationJSONObject(java.util.Map<String, Object> createEUAV2401ApplicationJSONObject) {
         this.createEUAV2401ApplicationJSONObject = createEUAV2401ApplicationJSONObject;
         return this;
@@ -63,9 +70,25 @@ public class CreateEUAV2Response {
      */
     
     public java.util.Map<String, Object> createEUAV2403ApplicationJSONObject;
+
     public CreateEUAV2Response withCreateEUAV2403ApplicationJSONObject(java.util.Map<String, Object> createEUAV2403ApplicationJSONObject) {
         this.createEUAV2403ApplicationJSONObject = createEUAV2403ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Nordigen rate limit exceeded
+     */
+    
+    public java.util.Map<String, Object> createEUAV2429ApplicationJSONObject;
+
+    public CreateEUAV2Response withCreateEUAV2429ApplicationJSONObject(java.util.Map<String, Object> createEUAV2429ApplicationJSONObject) {
+        this.createEUAV2429ApplicationJSONObject = createEUAV2429ApplicationJSONObject;
+        return this;
+    }
+    
+    public CreateEUAV2Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

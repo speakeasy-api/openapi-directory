@@ -20,6 +20,7 @@ public class DataRepositoryTaskStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedCount")
     public Long failedCount;
+
     public DataRepositoryTaskStatus withFailedCount(Long failedCount) {
         this.failedCount = failedCount;
         return this;
@@ -30,6 +31,7 @@ public class DataRepositoryTaskStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public DataRepositoryTaskStatus withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -38,6 +40,7 @@ public class DataRepositoryTaskStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReleasedCapacity")
     public Long releasedCapacity;
+
     public DataRepositoryTaskStatus withReleasedCapacity(Long releasedCapacity) {
         this.releasedCapacity = releasedCapacity;
         return this;
@@ -46,6 +49,7 @@ public class DataRepositoryTaskStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SucceededCount")
     public Long succeededCount;
+
     public DataRepositoryTaskStatus withSucceededCount(Long succeededCount) {
         this.succeededCount = succeededCount;
         return this;
@@ -54,9 +58,11 @@ public class DataRepositoryTaskStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalCount")
     public Long totalCount;
+
     public DataRepositoryTaskStatus withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public DataRepositoryTaskStatus(){}
 }

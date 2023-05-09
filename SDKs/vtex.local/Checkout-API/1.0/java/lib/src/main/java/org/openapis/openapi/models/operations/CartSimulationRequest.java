@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CartSimulationRequest {
@@ -12,6 +13,7 @@ public class CartSimulationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CartSimulationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CartSimulationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CartSimulationRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CartSimulationRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CartSimulationRequestBody requestBody;
+
     public CartSimulationRequest withRequestBody(CartSimulationRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -41,6 +45,7 @@ public class CartSimulationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RnbBehavior")
     public Long rnbBehavior;
+
     public CartSimulationRequest withRnbBehavior(Long rnbBehavior) {
         this.rnbBehavior = rnbBehavior;
         return this;
@@ -51,9 +56,14 @@ public class CartSimulationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sc")
     public Long sc;
+
     public CartSimulationRequest withSc(Long sc) {
         this.sc = sc;
         return this;
     }
     
+    public CartSimulationRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

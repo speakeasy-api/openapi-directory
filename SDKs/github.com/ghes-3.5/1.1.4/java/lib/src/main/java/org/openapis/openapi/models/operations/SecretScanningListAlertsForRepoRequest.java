@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecretScanningListAlertsForRepoRequest {
@@ -12,6 +13,7 @@ public class SecretScanningListAlertsForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public SecretScanningListAlertsForRepoRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class SecretScanningListAlertsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public SecretScanningListAlertsForRepoRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class SecretScanningListAlertsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public SecretScanningListAlertsForRepoRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,6 +46,7 @@ public class SecretScanningListAlertsForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public SecretScanningListAlertsForRepoRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -52,6 +57,7 @@ public class SecretScanningListAlertsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
     public String resolution;
+
     public SecretScanningListAlertsForRepoRequest withResolution(String resolution) {
         this.resolution = resolution;
         return this;
@@ -64,6 +70,7 @@ public class SecretScanningListAlertsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secret_type")
     public String secretType;
+
     public SecretScanningListAlertsForRepoRequest withSecretType(String secretType) {
         this.secretType = secretType;
         return this;
@@ -74,9 +81,14 @@ public class SecretScanningListAlertsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public org.openapis.openapi.models.shared.SecretScanningAlertStateEnum state;
+
     public SecretScanningListAlertsForRepoRequest withState(org.openapis.openapi.models.shared.SecretScanningAlertStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public SecretScanningListAlertsForRepoRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

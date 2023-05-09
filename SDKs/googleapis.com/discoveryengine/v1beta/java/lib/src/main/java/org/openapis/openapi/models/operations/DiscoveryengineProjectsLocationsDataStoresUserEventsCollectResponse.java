@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectResponse {
     
     public String contentType;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectResponse
      */
     
     public org.openapis.openapi.models.shared.GoogleApiHttpBody googleApiHttpBody;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectResponse withGoogleApiHttpBody(org.openapis.openapi.models.shared.GoogleApiHttpBody googleApiHttpBody) {
         this.googleApiHttpBody = googleApiHttpBody;
         return this;
@@ -26,6 +29,7 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectResponse
     
     
     public Integer statusCode;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

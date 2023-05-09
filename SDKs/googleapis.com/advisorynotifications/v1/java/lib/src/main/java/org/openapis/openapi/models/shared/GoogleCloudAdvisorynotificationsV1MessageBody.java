@@ -18,9 +18,11 @@ public class GoogleCloudAdvisorynotificationsV1MessageBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public GoogleCloudAdvisorynotificationsV1Text text;
+
     public GoogleCloudAdvisorynotificationsV1MessageBody withText(GoogleCloudAdvisorynotificationsV1Text text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudAdvisorynotificationsV1MessageBody(){}
 }

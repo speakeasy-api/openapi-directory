@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterElasticIpRequest {
     @JsonProperty("ElasticIp")
     public String elasticIp;
+
     public RegisterElasticIpRequest withElasticIp(String elasticIp) {
         this.elasticIp = elasticIp;
         return this;
@@ -16,9 +17,14 @@ public class RegisterElasticIpRequest {
     
     @JsonProperty("StackId")
     public String stackId;
+
     public RegisterElasticIpRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public RegisterElasticIpRequest(@JsonProperty("ElasticIp") String elasticIp, @JsonProperty("StackId") String stackId) {
+        this.elasticIp = elasticIp;
+        this.stackId = stackId;
+  }
 }

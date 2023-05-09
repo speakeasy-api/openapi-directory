@@ -3,15 +3,14 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreateSecurity;
 import org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreateRequest;
 import org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreateResponse;
+import org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.Client;
 import org.openapis.openapi.models.shared.ClientEntityTypeEnum;
 import org.openapis.openapi.models.shared.ClientRoleEnum;
 import org.openapis.openapi.models.shared.ClientStatusEnum;
-import org.openapis.openapi.models.shared.Client;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -20,22 +19,21 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            Adexchangebuyer2AccountsClientsCreateRequest req = new Adexchangebuyer2AccountsClientsCreateRequest() {{
-                dollarXgafv = "2";
+            Adexchangebuyer2AccountsClientsCreateRequest req = new Adexchangebuyer2AccountsClientsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 client = new Client() {{
-                    clientAccountId = "provident";
-                    clientName = "distinctio";
-                    entityId = "quibusdam";
-                    entityName = "unde";
-                    entityType = "ENTITY_TYPE_UNCLASSIFIED";
-                    partnerClientId = "corrupti";
-                    role = "CLIENT_DEAL_APPROVER";
-                    status = "DISABLED";
+                    clientAccountId = "distinctio";
+                    clientName = "quibusdam";
+                    entityId = "unde";
+                    entityName = "nulla";
+                    entityType = ClientEntityTypeEnum.BRAND;
+                    partnerClientId = "illum";
+                    role = ClientRoleEnum.CLIENT_DEAL_VIEWER;
+                    status = ClientStatusEnum.DISABLED;
                     visibleToSeller = false;
-                }};
-                accessToken = "error";
-                accountId = "deserunt";
-                alt = "media";
+                }};;
+                accessToken = "deserunt";
+                alt = AltEnum.MEDIA;
                 callback = "iure";
                 fields = "magnam";
                 key = "debitis";
@@ -44,18 +42,20 @@ public class Application {
                 quotaUser = "delectus";
                 uploadType = "tempora";
                 uploadProtocol = "suscipit";
-            }}            
+            }};            
 
-            Adexchangebuyer2AccountsClientsCreateResponse res = sdk.accounts.adexchangebuyer2AccountsClientsCreate(req, new Adexchangebuyer2AccountsClientsCreateSecurity() {{
+            Adexchangebuyer2AccountsClientsCreateResponse res = sdk.accounts.adexchangebuyer2AccountsClientsCreate(req, new Adexchangebuyer2AccountsClientsCreateSecurity("molestiae", "minus") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.client.isPresent()) {
+            if (res.client != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

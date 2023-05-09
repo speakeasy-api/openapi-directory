@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportHubContentResponse {
     @JsonProperty("HubArn")
     public String hubArn;
+
     public ImportHubContentResponse withHubArn(String hubArn) {
         this.hubArn = hubArn;
         return this;
@@ -19,9 +20,14 @@ public class ImportHubContentResponse {
     
     @JsonProperty("HubContentArn")
     public String hubContentArn;
+
     public ImportHubContentResponse withHubContentArn(String hubContentArn) {
         this.hubContentArn = hubContentArn;
         return this;
     }
     
+    public ImportHubContentResponse(@JsonProperty("HubArn") String hubArn, @JsonProperty("HubContentArn") String hubContentArn) {
+        this.hubArn = hubArn;
+        this.hubContentArn = hubContentArn;
+  }
 }

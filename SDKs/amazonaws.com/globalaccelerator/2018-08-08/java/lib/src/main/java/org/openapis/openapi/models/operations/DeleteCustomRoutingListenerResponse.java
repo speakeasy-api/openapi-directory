@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCustomRoutingListenerResponse {
@@ -12,6 +13,7 @@ public class DeleteCustomRoutingListenerResponse {
      */
     
     public Object associatedEndpointGroupFoundException;
+
     public DeleteCustomRoutingListenerResponse withAssociatedEndpointGroupFoundException(Object associatedEndpointGroupFoundException) {
         this.associatedEndpointGroupFoundException = associatedEndpointGroupFoundException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCustomRoutingListenerResponse {
     
     
     public String contentType;
+
     public DeleteCustomRoutingListenerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCustomRoutingListenerResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteCustomRoutingListenerResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCustomRoutingListenerResponse {
      */
     
     public Object invalidArgumentException;
+
     public DeleteCustomRoutingListenerResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCustomRoutingListenerResponse {
      */
     
     public Object listenerNotFoundException;
+
     public DeleteCustomRoutingListenerResponse withListenerNotFoundException(Object listenerNotFoundException) {
         this.listenerNotFoundException = listenerNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteCustomRoutingListenerResponse {
     
     
     public Integer statusCode;
+
     public DeleteCustomRoutingListenerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteCustomRoutingListenerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCustomRoutingListenerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteCustomRoutingListenerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

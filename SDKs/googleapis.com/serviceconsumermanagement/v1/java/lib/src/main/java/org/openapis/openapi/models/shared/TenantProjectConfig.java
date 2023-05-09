@@ -18,6 +18,7 @@ public class TenantProjectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingConfig")
     public BillingConfig billingConfig;
+
     public TenantProjectConfig withBillingConfig(BillingConfig billingConfig) {
         this.billingConfig = billingConfig;
         return this;
@@ -29,6 +30,7 @@ public class TenantProjectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folder")
     public String folder;
+
     public TenantProjectConfig withFolder(String folder) {
         this.folder = folder;
         return this;
@@ -40,6 +42,7 @@ public class TenantProjectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public TenantProjectConfig withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class TenantProjectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountConfig")
     public ServiceAccountConfig serviceAccountConfig;
+
     public TenantProjectConfig withServiceAccountConfig(ServiceAccountConfig serviceAccountConfig) {
         this.serviceAccountConfig = serviceAccountConfig;
         return this;
@@ -62,6 +66,7 @@ public class TenantProjectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public String[] services;
+
     public TenantProjectConfig withServices(String[] services) {
         this.services = services;
         return this;
@@ -73,9 +78,11 @@ public class TenantProjectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenantProjectPolicy")
     public TenantProjectPolicy tenantProjectPolicy;
+
     public TenantProjectConfig withTenantProjectPolicy(TenantProjectPolicy tenantProjectPolicy) {
         this.tenantProjectPolicy = tenantProjectPolicy;
         return this;
     }
     
+    public TenantProjectConfig(){}
 }

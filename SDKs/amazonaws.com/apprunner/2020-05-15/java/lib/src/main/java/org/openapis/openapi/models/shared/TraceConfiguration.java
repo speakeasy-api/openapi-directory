@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TraceConfiguration {
     @JsonProperty("Vendor")
     public TracingVendorEnum vendor;
+
     public TraceConfiguration withVendor(TracingVendorEnum vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public TraceConfiguration(@JsonProperty("Vendor") TracingVendorEnum vendor) {
+        this.vendor = vendor;
+  }
 }

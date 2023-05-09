@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.AuthorizeRequest;
 import org.openapis.openapi.models.operations.AuthorizeResponse;
 
@@ -26,19 +25,14 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AuthorizeRequest req = new AuthorizeRequest() {{
-                clientId = "corrupti";
-                display = "provident";
-                maxAge = 715190;
-                nonce = "quibusdam";
-                prompt = "unde";
-                redirectUri = "nulla";
-                responseMode = "corrupti";
-                responseType = "illum";
-                scope = "vel";
-                state = "error";
+            AuthorizeRequest req = new AuthorizeRequest("corrupti", "provident", "distinctio", "quibusdam", "unde") {{
+                display = "nulla";
+                maxAge = 544883L;
+                nonce = "illum";
+                prompt = "vel";
+                responseMode = "error";
                 uiLocales = "deserunt";
-            }}            
+            }};            
 
             AuthorizeResponse res = sdk.authentication.authorize(req);
 
@@ -48,6 +42,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -55,23 +51,23 @@ public class Application {
 ## Available Resources and Operations
 
 
-### authentication
+### [authentication](docs/authentication/README.md)
 
-* `authorize` - Authenticate a user
-* `token` - Obtain an ID Token
-* `userInfo` - Retrieve a user profile
+* [authorize](docs/authentication/README.md#authorize) - Authenticate a user
+* [token](docs/authentication/README.md#token) - Obtain an ID Token
+* [userInfo](docs/authentication/README.md#userinfo) - Retrieve a user profile
 
-### clientManagement
+### [clientManagement](docs/clientmanagement/README.md)
 
-* `client` - List clients
-* `clientClientId` - Delete a client
-* `createClient` - Register a client
-* `getClient` - View a client
-* `updateClient` - Update a client
+* [client](docs/clientmanagement/README.md#client) - List clients
+* [clientClientId](docs/clientmanagement/README.md#clientclientid) - Delete a client
+* [createClient](docs/clientmanagement/README.md#createclient) - Register a client
+* [getClient](docs/clientmanagement/README.md#getclient) - View a client
+* [updateClient](docs/clientmanagement/README.md#updateclient) - Update a client
 
-### sessionManagement
+### [sessionManagement](docs/sessionmanagement/README.md)
 
-* `authorizeIframe` - Include a session iframe
+* [authorizeIframe](docs/sessionmanagement/README.md#authorizeiframe) - Include a session iframe
 <!-- End SDK Available Operations -->
 
 ### Maturity

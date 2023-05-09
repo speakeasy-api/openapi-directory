@@ -12,6 +12,7 @@ public class PaginationResult {
      */
     @JsonProperty("entryCount")
     public Long entryCount;
+
     public PaginationResult withEntryCount(Long entryCount) {
         this.entryCount = entryCount;
         return this;
@@ -22,6 +23,7 @@ public class PaginationResult {
      */
     @JsonProperty("links")
     public PaginationResultLinks links;
+
     public PaginationResult withLinks(PaginationResultLinks links) {
         this.links = links;
         return this;
@@ -32,6 +34,7 @@ public class PaginationResult {
      */
     @JsonProperty("pageCount")
     public Long pageCount;
+
     public PaginationResult withPageCount(Long pageCount) {
         this.pageCount = pageCount;
         return this;
@@ -42,9 +45,16 @@ public class PaginationResult {
      */
     @JsonProperty("totalEntryCount")
     public Long totalEntryCount;
+
     public PaginationResult withTotalEntryCount(Long totalEntryCount) {
         this.totalEntryCount = totalEntryCount;
         return this;
     }
     
+    public PaginationResult(@JsonProperty("entryCount") Long entryCount, @JsonProperty("links") PaginationResultLinks links, @JsonProperty("pageCount") Long pageCount, @JsonProperty("totalEntryCount") Long totalEntryCount) {
+        this.entryCount = entryCount;
+        this.links = links;
+        this.pageCount = pageCount;
+        this.totalEntryCount = totalEntryCount;
+  }
 }

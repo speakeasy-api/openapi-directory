@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * YaraMeta - Yara rule meta data section
@@ -15,6 +15,7 @@ public class YaraMeta {
      */
     
     public String date;
+
     public YaraMeta withDate(String date) {
         this.date = date;
         return this;
@@ -25,6 +26,7 @@ public class YaraMeta {
      */
     
     public String md5sum;
+
     public YaraMeta withMd5sum(String md5sum) {
         this.md5sum = md5sum;
         return this;
@@ -35,6 +37,7 @@ public class YaraMeta {
      */
     
     public String sha256sum;
+
     public YaraMeta withSha256sum(String sha256sum) {
         this.sha256sum = sha256sum;
         return this;
@@ -45,9 +48,16 @@ public class YaraMeta {
      */
     
     public String sha512sum;
+
     public YaraMeta withSha512sum(String sha512sum) {
         this.sha512sum = sha512sum;
         return this;
     }
     
+    public YaraMeta(@JsonProperty("date") String date, @JsonProperty("md5sum") String md5sum, @JsonProperty("sha256sum") String sha256sum, @JsonProperty("sha512sum") String sha512sum) {
+        this.date = date;
+        this.md5sum = md5sum;
+        this.sha256sum = sha256sum;
+        this.sha512sum = sha512sum;
+  }
 }

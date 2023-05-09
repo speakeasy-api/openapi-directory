@@ -15,6 +15,7 @@ public class JobDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("communication")
     public JobCommunicationDto communication;
+
     public JobDto withCommunication(JobCommunicationDto communication) {
         this.communication = communication;
         return this;
@@ -23,6 +24,7 @@ public class JobDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dates")
     public JobDatesDto dates;
+
     public JobDto withDates(JobDatesDto dates) {
         this.dates = dates;
         return this;
@@ -31,6 +33,7 @@ public class JobDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public JobDocumentsDto documents;
+
     public JobDto withDocuments(JobDocumentsDto documents) {
         this.documents = documents;
         return this;
@@ -39,6 +42,7 @@ public class JobDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public JobFilesDto files;
+
     public JobDto withFiles(JobFilesDto files) {
         this.files = files;
         return this;
@@ -47,6 +51,7 @@ public class JobDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public JobDto withId(String id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class JobDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idNumber")
     public String idNumber;
+
     public JobDto withIdNumber(String idNumber) {
         this.idNumber = idNumber;
         return this;
@@ -63,6 +69,7 @@ public class JobDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public JobLanguageCombinationDto[] languages;
+
     public JobDto withLanguages(JobLanguageCombinationDto[] languages) {
         this.languages = languages;
         return this;
@@ -71,6 +78,7 @@ public class JobDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public JobDto withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +87,7 @@ public class JobDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public JobDto withStatus(String status) {
         this.status = status;
         return this;
@@ -87,6 +96,7 @@ public class JobDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepNumber")
     public Integer stepNumber;
+
     public JobDto withStepNumber(Integer stepNumber) {
         this.stepNumber = stepNumber;
         return this;
@@ -95,6 +105,7 @@ public class JobDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepType")
     public StepTypeDto stepType;
+
     public JobDto withStepType(StepTypeDto stepType) {
         this.stepType = stepType;
         return this;
@@ -103,6 +114,7 @@ public class JobDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorId")
     public Long vendorId;
+
     public JobDto withVendorId(Long vendorId) {
         this.vendorId = vendorId;
         return this;
@@ -111,9 +123,11 @@ public class JobDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorPriceProfileId")
     public Long vendorPriceProfileId;
+
     public JobDto withVendorPriceProfileId(Long vendorPriceProfileId) {
         this.vendorPriceProfileId = vendorPriceProfileId;
         return this;
     }
     
+    public JobDto(){}
 }

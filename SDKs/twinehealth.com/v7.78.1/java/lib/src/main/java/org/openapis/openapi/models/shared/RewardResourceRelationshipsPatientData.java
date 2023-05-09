@@ -12,6 +12,7 @@ public class RewardResourceRelationshipsPatientData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RewardResourceRelationshipsPatientData withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class RewardResourceRelationshipsPatientData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public RewardResourceRelationshipsPatientData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RewardResourceRelationshipsPatientData(){}
 }

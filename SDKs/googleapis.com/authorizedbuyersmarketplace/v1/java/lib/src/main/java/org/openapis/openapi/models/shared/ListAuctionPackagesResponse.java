@@ -18,6 +18,7 @@ public class ListAuctionPackagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auctionPackages")
     public AuctionPackage[] auctionPackages;
+
     public ListAuctionPackagesResponse withAuctionPackages(AuctionPackage[] auctionPackages) {
         this.auctionPackages = auctionPackages;
         return this;
@@ -29,9 +30,11 @@ public class ListAuctionPackagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAuctionPackagesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAuctionPackagesResponse(){}
 }

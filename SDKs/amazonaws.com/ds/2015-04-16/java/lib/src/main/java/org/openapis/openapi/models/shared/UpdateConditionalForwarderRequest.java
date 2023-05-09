@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateConditionalForwarderRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public UpdateConditionalForwarderRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateConditionalForwarderRequest {
     
     @JsonProperty("DnsIpAddrs")
     public String[] dnsIpAddrs;
+
     public UpdateConditionalForwarderRequest withDnsIpAddrs(String[] dnsIpAddrs) {
         this.dnsIpAddrs = dnsIpAddrs;
         return this;
@@ -26,9 +28,15 @@ public class UpdateConditionalForwarderRequest {
     
     @JsonProperty("RemoteDomainName")
     public String remoteDomainName;
+
     public UpdateConditionalForwarderRequest withRemoteDomainName(String remoteDomainName) {
         this.remoteDomainName = remoteDomainName;
         return this;
     }
     
+    public UpdateConditionalForwarderRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("DnsIpAddrs") String[] dnsIpAddrs, @JsonProperty("RemoteDomainName") String remoteDomainName) {
+        this.directoryId = directoryId;
+        this.dnsIpAddrs = dnsIpAddrs;
+        this.remoteDomainName = remoteDomainName;
+  }
 }

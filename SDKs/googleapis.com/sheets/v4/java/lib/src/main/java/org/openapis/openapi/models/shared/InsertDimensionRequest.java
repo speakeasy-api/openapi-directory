@@ -18,6 +18,7 @@ public class InsertDimensionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inheritFromBefore")
     public Boolean inheritFromBefore;
+
     public InsertDimensionRequest withInheritFromBefore(Boolean inheritFromBefore) {
         this.inheritFromBefore = inheritFromBefore;
         return this;
@@ -29,9 +30,11 @@ public class InsertDimensionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public DimensionRange range;
+
     public InsertDimensionRequest withRange(DimensionRange range) {
         this.range = range;
         return this;
     }
     
+    public InsertDimensionRequest(){}
 }

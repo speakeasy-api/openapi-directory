@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV1WorkgroupsWorkgroupIdSpecTypesSpecTypeIdSpecTypeFieldsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec_type_id")
     public String specTypeId;
+
     public GetV1WorkgroupsWorkgroupIdSpecTypesSpecTypeIdSpecTypeFieldsRequest withSpecTypeId(String specTypeId) {
         this.specTypeId = specTypeId;
         return this;
@@ -16,9 +18,14 @@ public class GetV1WorkgroupsWorkgroupIdSpecTypesSpecTypeIdSpecTypeFieldsRequest 
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public GetV1WorkgroupsWorkgroupIdSpecTypesSpecTypeIdSpecTypeFieldsRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public GetV1WorkgroupsWorkgroupIdSpecTypesSpecTypeIdSpecTypeFieldsRequest(@JsonProperty("spec_type_id") String specTypeId, @JsonProperty("workgroup_id") String workgroupId) {
+        this.specTypeId = specTypeId;
+        this.workgroupId = workgroupId;
+  }
 }

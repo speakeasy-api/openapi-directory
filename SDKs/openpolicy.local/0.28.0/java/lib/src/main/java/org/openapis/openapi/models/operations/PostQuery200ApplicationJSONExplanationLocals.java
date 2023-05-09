@@ -12,6 +12,7 @@ public class PostQuery200ApplicationJSONExplanationLocals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public PostQuery200ApplicationJSONExplanationLocalsKey key;
+
     public PostQuery200ApplicationJSONExplanationLocals withKey(PostQuery200ApplicationJSONExplanationLocalsKey key) {
         this.key = key;
         return this;
@@ -20,9 +21,11 @@ public class PostQuery200ApplicationJSONExplanationLocals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public PostQuery200ApplicationJSONExplanationLocalsValue value;
+
     public PostQuery200ApplicationJSONExplanationLocals withValue(PostQuery200ApplicationJSONExplanationLocalsValue value) {
         this.value = value;
         return this;
     }
     
+    public PostQuery200ApplicationJSONExplanationLocals(){}
 }

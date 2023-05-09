@@ -18,6 +18,7 @@ public class DeleteUserRequestBodyIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public DeleteUserRequestBodyIdentification withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class DeleteUserRequestBodyIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public DeleteUserRequestBodyIdentification withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public DeleteUserRequestBodyIdentification(){}
 }

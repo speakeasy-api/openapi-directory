@@ -15,6 +15,7 @@ public class ListTimelineEventsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.Filter[] filters;
+
     public ListTimelineEventsRequestBody withFilters(org.openapis.openapi.models.shared.Filter[] filters) {
         this.filters = filters;
         return this;
@@ -25,6 +26,7 @@ public class ListTimelineEventsRequestBody {
      */
     @JsonProperty("incidentRecordArn")
     public String incidentRecordArn;
+
     public ListTimelineEventsRequestBody withIncidentRecordArn(String incidentRecordArn) {
         this.incidentRecordArn = incidentRecordArn;
         return this;
@@ -36,6 +38,7 @@ public class ListTimelineEventsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListTimelineEventsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -47,6 +50,7 @@ public class ListTimelineEventsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTimelineEventsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -58,6 +62,7 @@ public class ListTimelineEventsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public ListTimelineEventsRequestBodySortByEnum sortBy;
+
     public ListTimelineEventsRequestBody withSortBy(ListTimelineEventsRequestBodySortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -69,9 +74,13 @@ public class ListTimelineEventsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public ListTimelineEventsRequestBodySortOrderEnum sortOrder;
+
     public ListTimelineEventsRequestBody withSortOrder(ListTimelineEventsRequestBodySortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListTimelineEventsRequestBody(@JsonProperty("incidentRecordArn") String incidentRecordArn) {
+        this.incidentRecordArn = incidentRecordArn;
+  }
 }

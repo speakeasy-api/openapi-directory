@@ -12,6 +12,7 @@ public class GetPregameWinProbabilitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seasonType")
     public String seasonType;
+
     public GetPregameWinProbabilitiesRequest withSeasonType(String seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -22,6 +23,7 @@ public class GetPregameWinProbabilitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public GetPregameWinProbabilitiesRequest withTeam(String team) {
         this.team = team;
         return this;
@@ -32,6 +34,7 @@ public class GetPregameWinProbabilitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
     public Long week;
+
     public GetPregameWinProbabilitiesRequest withWeek(Long week) {
         this.week = week;
         return this;
@@ -42,9 +45,11 @@ public class GetPregameWinProbabilitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetPregameWinProbabilitiesRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetPregameWinProbabilitiesRequest(){}
 }

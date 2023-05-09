@@ -18,6 +18,7 @@ public class XpnHostList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public XpnHostList withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class XpnHostList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Project[] items;
+
     public XpnHostList withItems(Project[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class XpnHostList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public XpnHostList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class XpnHostList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public XpnHostList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -62,6 +66,7 @@ public class XpnHostList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public XpnHostList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -73,9 +78,11 @@ public class XpnHostList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public XpnHostListWarning warning;
+
     public XpnHostList withWarning(XpnHostListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public XpnHostList(){}
 }

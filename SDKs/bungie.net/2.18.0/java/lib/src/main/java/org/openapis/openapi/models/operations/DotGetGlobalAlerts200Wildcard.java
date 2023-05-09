@@ -12,6 +12,7 @@ package org.openapis.openapi.models.operations;
 public class DotGetGlobalAlerts200Wildcard {
     
     public String detailedErrorTrace;
+
     public DotGetGlobalAlerts200Wildcard withDetailedErrorTrace(String detailedErrorTrace) {
         this.detailedErrorTrace = detailedErrorTrace;
         return this;
@@ -19,6 +20,7 @@ public class DotGetGlobalAlerts200Wildcard {
     
     
     public Integer errorCode;
+
     public DotGetGlobalAlerts200Wildcard withErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -26,6 +28,7 @@ public class DotGetGlobalAlerts200Wildcard {
     
     
     public String errorStatus;
+
     public DotGetGlobalAlerts200Wildcard withErrorStatus(String errorStatus) {
         this.errorStatus = errorStatus;
         return this;
@@ -33,6 +36,7 @@ public class DotGetGlobalAlerts200Wildcard {
     
     
     public String message;
+
     public DotGetGlobalAlerts200Wildcard withMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +44,7 @@ public class DotGetGlobalAlerts200Wildcard {
     
     
     public java.util.Map<String, String> messageData;
+
     public DotGetGlobalAlerts200Wildcard withMessageData(java.util.Map<String, String> messageData) {
         this.messageData = messageData;
         return this;
@@ -47,6 +52,7 @@ public class DotGetGlobalAlerts200Wildcard {
     
     
     public org.openapis.openapi.models.shared.GlobalAlert[] response;
+
     public DotGetGlobalAlerts200Wildcard withResponse(org.openapis.openapi.models.shared.GlobalAlert[] response) {
         this.response = response;
         return this;
@@ -54,9 +60,11 @@ public class DotGetGlobalAlerts200Wildcard {
     
     
     public Integer throttleSeconds;
+
     public DotGetGlobalAlerts200Wildcard withThrottleSeconds(Integer throttleSeconds) {
         this.throttleSeconds = throttleSeconds;
         return this;
     }
     
+    public DotGetGlobalAlerts200Wildcard(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDatastoresResponse {
     
     public String contentType;
+
     public ListDatastoresResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDatastoresResponse {
      */
     
     public Object internalFailureException;
+
     public ListDatastoresResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListDatastoresResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDatastoresResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListDatastoresResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDatastoresResponse listDatastoresResponse;
+
     public ListDatastoresResponse withListDatastoresResponse(org.openapis.openapi.models.shared.ListDatastoresResponse listDatastoresResponse) {
         this.listDatastoresResponse = listDatastoresResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListDatastoresResponse {
     
     
     public Integer statusCode;
+
     public ListDatastoresResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListDatastoresResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDatastoresResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListDatastoresResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListDatastoresResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class ListDatastoresResponse {
      */
     
     public Object throttlingException;
+
     public ListDatastoresResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListDatastoresResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseResponse {
     
     public String contentType;
+
     public EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpr
     
     
     public Integer statusCode;
+
     public EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpr
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpr
      */
     
     public EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSON enterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSONObject;
+
     public EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseResponse withEnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSONObject(EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSON enterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSONObject) {
         this.enterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSONObject = enterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSONObject;
         return this;
     }
     
+    public EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

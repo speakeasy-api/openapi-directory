@@ -24,6 +24,7 @@ public class GetTrackTrackingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public org.openapis.openapi.models.shared.OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigin destination;
+
     public GetTrackTrackingResponse withDestination(org.openapis.openapi.models.shared.OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigin destination) {
         this.destination = destination;
         return this;
@@ -32,6 +33,7 @@ public class GetTrackTrackingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fdcOrderId")
     public Long fdcOrderId;
+
     public GetTrackTrackingResponse withFdcOrderId(Long fdcOrderId) {
         this.fdcOrderId = fdcOrderId;
         return this;
@@ -42,6 +44,7 @@ public class GetTrackTrackingResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstCheckedDateTime")
     public OffsetDateTime firstCheckedDateTime;
+
     public GetTrackTrackingResponse withFirstCheckedDateTime(OffsetDateTime firstCheckedDateTime) {
         this.firstCheckedDateTime = firstCheckedDateTime;
         return this;
@@ -52,6 +55,7 @@ public class GetTrackTrackingResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstTransitEvent")
     public OffsetDateTime firstTransitEvent;
+
     public GetTrackTrackingResponse withFirstTransitEvent(OffsetDateTime firstTransitEvent) {
         this.firstTransitEvent = firstTransitEvent;
         return this;
@@ -62,6 +66,7 @@ public class GetTrackTrackingResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastCheckedDateTime")
     public OffsetDateTime lastCheckedDateTime;
+
     public GetTrackTrackingResponse withLastCheckedDateTime(OffsetDateTime lastCheckedDateTime) {
         this.lastCheckedDateTime = lastCheckedDateTime;
         return this;
@@ -72,6 +77,7 @@ public class GetTrackTrackingResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public GetTrackTrackingResponse withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -84,6 +90,7 @@ public class GetTrackTrackingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public GetTrackTrackingResponseFeature origin;
+
     public GetTrackTrackingResponse withOrigin(GetTrackTrackingResponseFeature origin) {
         this.origin = origin;
         return this;
@@ -92,6 +99,7 @@ public class GetTrackTrackingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GetTrackTrackingResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -100,6 +108,7 @@ public class GetTrackTrackingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCategoryCode")
     public Long statusCategoryCode;
+
     public GetTrackTrackingResponse withStatusCategoryCode(Long statusCategoryCode) {
         this.statusCategoryCode = statusCategoryCode;
         return this;
@@ -110,6 +119,7 @@ public class GetTrackTrackingResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("statusDateTime")
     public OffsetDateTime statusDateTime;
+
     public GetTrackTrackingResponse withStatusDateTime(OffsetDateTime statusDateTime) {
         this.statusDateTime = statusDateTime;
         return this;
@@ -118,6 +128,7 @@ public class GetTrackTrackingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public GetTrackTrackingResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -126,6 +137,7 @@ public class GetTrackTrackingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackedEvents")
     public GetTrackTrackingResponseTrackingEventV2[] trackedEvents;
+
     public GetTrackTrackingResponse withTrackedEvents(GetTrackTrackingResponseTrackingEventV2[] trackedEvents) {
         this.trackedEvents = trackedEvents;
         return this;
@@ -134,9 +146,11 @@ public class GetTrackTrackingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingNumber")
     public GetTrackTrackingResponseTrackingNumberV2 trackingNumber;
+
     public GetTrackTrackingResponse withTrackingNumber(GetTrackTrackingResponseTrackingNumberV2 trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
     }
     
+    public GetTrackTrackingResponse(){}
 }

@@ -15,6 +15,7 @@ public class VrwmiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public VrwmiRequestBodyCertificateParameters certificateParameters;
+
     public VrwmiRequestBody withCertificateParameters(VrwmiRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class VrwmiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public VrwmiRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class VrwmiRequestBody {
      */
     @JsonProperty("format")
     public VrwmiRequestBodyFormatEnum format;
+
     public VrwmiRequestBody withFormat(VrwmiRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class VrwmiRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public VrwmiRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public VrwmiRequestBody(@JsonProperty("format") VrwmiRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

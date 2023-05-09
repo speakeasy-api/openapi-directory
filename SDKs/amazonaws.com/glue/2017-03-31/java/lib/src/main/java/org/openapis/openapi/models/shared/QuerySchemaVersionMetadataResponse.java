@@ -15,6 +15,7 @@ public class QuerySchemaVersionMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataInfoMap")
     public java.util.Map<String, MetadataInfo> metadataInfoMap;
+
     public QuerySchemaVersionMetadataResponse withMetadataInfoMap(java.util.Map<String, MetadataInfo> metadataInfoMap) {
         this.metadataInfoMap = metadataInfoMap;
         return this;
@@ -23,6 +24,7 @@ public class QuerySchemaVersionMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public QuerySchemaVersionMetadataResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class QuerySchemaVersionMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaVersionId")
     public String schemaVersionId;
+
     public QuerySchemaVersionMetadataResponse withSchemaVersionId(String schemaVersionId) {
         this.schemaVersionId = schemaVersionId;
         return this;
     }
     
+    public QuerySchemaVersionMetadataResponse(){}
 }

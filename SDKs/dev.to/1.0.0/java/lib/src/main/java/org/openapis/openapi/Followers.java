@@ -60,11 +60,9 @@ public class Followers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFollowersResponse res = new org.openapis.openapi.models.operations.GetFollowersResponse() {{
+        org.openapis.openapi.models.operations.GetFollowersResponse res = new org.openapis.openapi.models.operations.GetFollowersResponse(contentType, httpRes.statusCode()) {{
             getFollowers200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,9 +15,11 @@ public class Allowed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policies")
     public Policy[] policies;
+
     public Allowed withPolicies(Policy[] policies) {
         this.policies = policies;
         return this;
     }
     
+    public Allowed(){}
 }

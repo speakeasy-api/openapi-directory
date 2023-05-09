@@ -15,6 +15,7 @@ public class ExportErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportResults")
     public ExportErrorDetailsOutput exportResults;
+
     public ExportErrorDetails withExportResults(ExportErrorDetailsOutput exportResults) {
         this.exportResults = exportResults;
         return this;
@@ -23,9 +24,11 @@ public class ExportErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportSourceImages")
     public ExportErrorDetailsOutput exportSourceImages;
+
     public ExportErrorDetails withExportSourceImages(ExportErrorDetailsOutput exportSourceImages) {
         this.exportSourceImages = exportSourceImages;
         return this;
     }
     
+    public ExportErrorDetails(){}
 }

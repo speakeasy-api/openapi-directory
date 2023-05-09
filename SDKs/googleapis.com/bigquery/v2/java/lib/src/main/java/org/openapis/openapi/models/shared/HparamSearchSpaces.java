@@ -18,6 +18,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activationFn")
     public StringHparamSearchSpace activationFn;
+
     public HparamSearchSpaces withActivationFn(StringHparamSearchSpace activationFn) {
         this.activationFn = activationFn;
         return this;
@@ -29,6 +30,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchSize")
     public IntHparamSearchSpace batchSize;
+
     public HparamSearchSpaces withBatchSize(IntHparamSearchSpace batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -40,6 +42,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boosterType")
     public StringHparamSearchSpace boosterType;
+
     public HparamSearchSpaces withBoosterType(StringHparamSearchSpace boosterType) {
         this.boosterType = boosterType;
         return this;
@@ -51,6 +54,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colsampleBylevel")
     public DoubleHparamSearchSpace colsampleBylevel;
+
     public HparamSearchSpaces withColsampleBylevel(DoubleHparamSearchSpace colsampleBylevel) {
         this.colsampleBylevel = colsampleBylevel;
         return this;
@@ -62,6 +66,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colsampleBynode")
     public DoubleHparamSearchSpace colsampleBynode;
+
     public HparamSearchSpaces withColsampleBynode(DoubleHparamSearchSpace colsampleBynode) {
         this.colsampleBynode = colsampleBynode;
         return this;
@@ -73,6 +78,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colsampleBytree")
     public DoubleHparamSearchSpace colsampleBytree;
+
     public HparamSearchSpaces withColsampleBytree(DoubleHparamSearchSpace colsampleBytree) {
         this.colsampleBytree = colsampleBytree;
         return this;
@@ -84,6 +90,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dartNormalizeType")
     public StringHparamSearchSpace dartNormalizeType;
+
     public HparamSearchSpaces withDartNormalizeType(StringHparamSearchSpace dartNormalizeType) {
         this.dartNormalizeType = dartNormalizeType;
         return this;
@@ -95,6 +102,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dropout")
     public DoubleHparamSearchSpace dropout;
+
     public HparamSearchSpaces withDropout(DoubleHparamSearchSpace dropout) {
         this.dropout = dropout;
         return this;
@@ -106,6 +114,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiddenUnits")
     public IntArrayHparamSearchSpace hiddenUnits;
+
     public HparamSearchSpaces withHiddenUnits(IntArrayHparamSearchSpace hiddenUnits) {
         this.hiddenUnits = hiddenUnits;
         return this;
@@ -117,6 +126,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("l1Reg")
     public DoubleHparamSearchSpace l1Reg;
+
     public HparamSearchSpaces withL1Reg(DoubleHparamSearchSpace l1Reg) {
         this.l1Reg = l1Reg;
         return this;
@@ -128,6 +138,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("l2Reg")
     public DoubleHparamSearchSpace l2Reg;
+
     public HparamSearchSpaces withL2Reg(DoubleHparamSearchSpace l2Reg) {
         this.l2Reg = l2Reg;
         return this;
@@ -139,6 +150,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnRate")
     public DoubleHparamSearchSpace learnRate;
+
     public HparamSearchSpaces withLearnRate(DoubleHparamSearchSpace learnRate) {
         this.learnRate = learnRate;
         return this;
@@ -150,6 +162,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTreeDepth")
     public IntHparamSearchSpace maxTreeDepth;
+
     public HparamSearchSpaces withMaxTreeDepth(IntHparamSearchSpace maxTreeDepth) {
         this.maxTreeDepth = maxTreeDepth;
         return this;
@@ -161,6 +174,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minSplitLoss")
     public DoubleHparamSearchSpace minSplitLoss;
+
     public HparamSearchSpaces withMinSplitLoss(DoubleHparamSearchSpace minSplitLoss) {
         this.minSplitLoss = minSplitLoss;
         return this;
@@ -172,6 +186,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minTreeChildWeight")
     public IntHparamSearchSpace minTreeChildWeight;
+
     public HparamSearchSpaces withMinTreeChildWeight(IntHparamSearchSpace minTreeChildWeight) {
         this.minTreeChildWeight = minTreeChildWeight;
         return this;
@@ -183,6 +198,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numClusters")
     public IntHparamSearchSpace numClusters;
+
     public HparamSearchSpaces withNumClusters(IntHparamSearchSpace numClusters) {
         this.numClusters = numClusters;
         return this;
@@ -194,6 +210,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numFactors")
     public IntHparamSearchSpace numFactors;
+
     public HparamSearchSpaces withNumFactors(IntHparamSearchSpace numFactors) {
         this.numFactors = numFactors;
         return this;
@@ -205,6 +222,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numParallelTree")
     public IntHparamSearchSpace numParallelTree;
+
     public HparamSearchSpaces withNumParallelTree(IntHparamSearchSpace numParallelTree) {
         this.numParallelTree = numParallelTree;
         return this;
@@ -216,6 +234,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimizer")
     public StringHparamSearchSpace optimizer;
+
     public HparamSearchSpaces withOptimizer(StringHparamSearchSpace optimizer) {
         this.optimizer = optimizer;
         return this;
@@ -227,6 +246,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsample")
     public DoubleHparamSearchSpace subsample;
+
     public HparamSearchSpaces withSubsample(DoubleHparamSearchSpace subsample) {
         this.subsample = subsample;
         return this;
@@ -238,6 +258,7 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("treeMethod")
     public StringHparamSearchSpace treeMethod;
+
     public HparamSearchSpaces withTreeMethod(StringHparamSearchSpace treeMethod) {
         this.treeMethod = treeMethod;
         return this;
@@ -249,9 +270,11 @@ public class HparamSearchSpaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("walsAlpha")
     public DoubleHparamSearchSpace walsAlpha;
+
     public HparamSearchSpaces withWalsAlpha(DoubleHparamSearchSpace walsAlpha) {
         this.walsAlpha = walsAlpha;
         return this;
     }
     
+    public HparamSearchSpaces(){}
 }

@@ -15,6 +15,7 @@ public class GetAdminMappings200ApplicationJSONMappingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicAuthCredentials")
     public GetAdminMappings200ApplicationJSONMappingsRequestBasicAuthCredentials basicAuthCredentials;
+
     public GetAdminMappings200ApplicationJSONMappingsRequest withBasicAuthCredentials(GetAdminMappings200ApplicationJSONMappingsRequestBasicAuthCredentials basicAuthCredentials) {
         this.basicAuthCredentials = basicAuthCredentials;
         return this;
@@ -26,6 +27,7 @@ public class GetAdminMappings200ApplicationJSONMappingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bodyPatterns")
     public java.util.Map<String, Object>[] bodyPatterns;
+
     public GetAdminMappings200ApplicationJSONMappingsRequest withBodyPatterns(java.util.Map<String, Object>[] bodyPatterns) {
         this.bodyPatterns = bodyPatterns;
         return this;
@@ -37,6 +39,7 @@ public class GetAdminMappings200ApplicationJSONMappingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookies")
     public java.util.Map<String, Object> cookies;
+
     public GetAdminMappings200ApplicationJSONMappingsRequest withCookies(java.util.Map<String, Object> cookies) {
         this.cookies = cookies;
         return this;
@@ -48,6 +51,7 @@ public class GetAdminMappings200ApplicationJSONMappingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, Object> headers;
+
     public GetAdminMappings200ApplicationJSONMappingsRequest withHeaders(java.util.Map<String, Object> headers) {
         this.headers = headers;
         return this;
@@ -59,6 +63,7 @@ public class GetAdminMappings200ApplicationJSONMappingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public GetAdminMappings200ApplicationJSONMappingsRequest withMethod(String method) {
         this.method = method;
         return this;
@@ -70,6 +75,7 @@ public class GetAdminMappings200ApplicationJSONMappingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParameters")
     public java.util.Map<String, Object> queryParameters;
+
     public GetAdminMappings200ApplicationJSONMappingsRequest withQueryParameters(java.util.Map<String, Object> queryParameters) {
         this.queryParameters = queryParameters;
         return this;
@@ -81,6 +87,7 @@ public class GetAdminMappings200ApplicationJSONMappingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GetAdminMappings200ApplicationJSONMappingsRequest withUrl(String url) {
         this.url = url;
         return this;
@@ -92,6 +99,7 @@ public class GetAdminMappings200ApplicationJSONMappingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlPath")
     public String urlPath;
+
     public GetAdminMappings200ApplicationJSONMappingsRequest withUrlPath(String urlPath) {
         this.urlPath = urlPath;
         return this;
@@ -103,6 +111,7 @@ public class GetAdminMappings200ApplicationJSONMappingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlPathPattern")
     public String urlPathPattern;
+
     public GetAdminMappings200ApplicationJSONMappingsRequest withUrlPathPattern(String urlPathPattern) {
         this.urlPathPattern = urlPathPattern;
         return this;
@@ -114,9 +123,11 @@ public class GetAdminMappings200ApplicationJSONMappingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlPattern")
     public String urlPattern;
+
     public GetAdminMappings200ApplicationJSONMappingsRequest withUrlPattern(String urlPattern) {
         this.urlPattern = urlPattern;
         return this;
     }
     
+    public GetAdminMappings200ApplicationJSONMappingsRequest(){}
 }

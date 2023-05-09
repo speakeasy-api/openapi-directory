@@ -17,6 +17,7 @@ public class ExtensionActionDefinitionInput {
      */
     @JsonProperty("actionUrl")
     public String actionUrl;
+
     public ExtensionActionDefinitionInput withActionUrl(String actionUrl) {
         this.actionUrl = actionUrl;
         return this;
@@ -28,6 +29,7 @@ public class ExtensionActionDefinitionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archivedAt")
     public Long archivedAt;
+
     public ExtensionActionDefinitionInput withArchivedAt(Long archivedAt) {
         this.archivedAt = archivedAt;
         return this;
@@ -38,6 +40,7 @@ public class ExtensionActionDefinitionInput {
      */
     @JsonProperty("functions")
     public ActionFunction[] functions;
+
     public ExtensionActionDefinitionInput withFunctions(ActionFunction[] functions) {
         this.functions = functions;
         return this;
@@ -49,6 +52,7 @@ public class ExtensionActionDefinitionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputFieldDependencies")
     public Object[] inputFieldDependencies;
+
     public ExtensionActionDefinitionInput withInputFieldDependencies(Object[] inputFieldDependencies) {
         this.inputFieldDependencies = inputFieldDependencies;
         return this;
@@ -59,6 +63,7 @@ public class ExtensionActionDefinitionInput {
      */
     @JsonProperty("inputFields")
     public InputFieldDefinition[] inputFields;
+
     public ExtensionActionDefinitionInput withInputFields(InputFieldDefinition[] inputFields) {
         this.inputFields = inputFields;
         return this;
@@ -69,6 +74,7 @@ public class ExtensionActionDefinitionInput {
      */
     @JsonProperty("labels")
     public java.util.Map<String, ActionLabels> labels;
+
     public ExtensionActionDefinitionInput withLabels(java.util.Map<String, ActionLabels> labels) {
         this.labels = labels;
         return this;
@@ -80,6 +86,7 @@ public class ExtensionActionDefinitionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectRequestOptions")
     public ObjectRequestOptions objectRequestOptions;
+
     public ExtensionActionDefinitionInput withObjectRequestOptions(ObjectRequestOptions objectRequestOptions) {
         this.objectRequestOptions = objectRequestOptions;
         return this;
@@ -90,6 +97,7 @@ public class ExtensionActionDefinitionInput {
      */
     @JsonProperty("objectTypes")
     public String[] objectTypes;
+
     public ExtensionActionDefinitionInput withObjectTypes(String[] objectTypes) {
         this.objectTypes = objectTypes;
         return this;
@@ -100,9 +108,18 @@ public class ExtensionActionDefinitionInput {
      */
     @JsonProperty("published")
     public Boolean published;
+
     public ExtensionActionDefinitionInput withPublished(Boolean published) {
         this.published = published;
         return this;
     }
     
+    public ExtensionActionDefinitionInput(@JsonProperty("actionUrl") String actionUrl, @JsonProperty("functions") ActionFunction[] functions, @JsonProperty("inputFields") InputFieldDefinition[] inputFields, @JsonProperty("labels") java.util.Map<String, ActionLabels> labels, @JsonProperty("objectTypes") String[] objectTypes, @JsonProperty("published") Boolean published) {
+        this.actionUrl = actionUrl;
+        this.functions = functions;
+        this.inputFields = inputFields;
+        this.labels = labels;
+        this.objectTypes = objectTypes;
+        this.published = published;
+  }
 }

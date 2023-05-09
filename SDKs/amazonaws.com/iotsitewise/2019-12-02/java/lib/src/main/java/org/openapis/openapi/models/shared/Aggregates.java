@@ -15,6 +15,7 @@ public class Aggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average")
     public Double average;
+
     public Aggregates withAverage(Double average) {
         this.average = average;
         return this;
@@ -23,6 +24,7 @@ public class Aggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Double count;
+
     public Aggregates withCount(Double count) {
         this.count = count;
         return this;
@@ -31,6 +33,7 @@ public class Aggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximum")
     public Double maximum;
+
     public Aggregates withMaximum(Double maximum) {
         this.maximum = maximum;
         return this;
@@ -39,6 +42,7 @@ public class Aggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum")
     public Double minimum;
+
     public Aggregates withMinimum(Double minimum) {
         this.minimum = minimum;
         return this;
@@ -47,6 +51,7 @@ public class Aggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardDeviation")
     public Double standardDeviation;
+
     public Aggregates withStandardDeviation(Double standardDeviation) {
         this.standardDeviation = standardDeviation;
         return this;
@@ -55,9 +60,11 @@ public class Aggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sum")
     public Double sum;
+
     public Aggregates withSum(Double sum) {
         this.sum = sum;
         return this;
     }
     
+    public Aggregates(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTableRequest {
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public CreateTableRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -19,6 +20,7 @@ public class CreateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MagneticStoreWriteProperties")
     public MagneticStoreWriteProperties magneticStoreWriteProperties;
+
     public CreateTableRequest withMagneticStoreWriteProperties(MagneticStoreWriteProperties magneticStoreWriteProperties) {
         this.magneticStoreWriteProperties = magneticStoreWriteProperties;
         return this;
@@ -27,6 +29,7 @@ public class CreateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionProperties")
     public RetentionProperties retentionProperties;
+
     public CreateTableRequest withRetentionProperties(RetentionProperties retentionProperties) {
         this.retentionProperties = retentionProperties;
         return this;
@@ -34,6 +37,7 @@ public class CreateTableRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public CreateTableRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -42,9 +46,14 @@ public class CreateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateTableRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateTableRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+  }
 }

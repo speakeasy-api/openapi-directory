@@ -18,6 +18,7 @@ public class Probe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exec")
     public ExecAction exec;
+
     public Probe withExec(ExecAction exec) {
         this.exec = exec;
         return this;
@@ -29,6 +30,7 @@ public class Probe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureThreshold")
     public Integer failureThreshold;
+
     public Probe withFailureThreshold(Integer failureThreshold) {
         this.failureThreshold = failureThreshold;
         return this;
@@ -40,6 +42,7 @@ public class Probe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpc")
     public GRPCAction grpc;
+
     public Probe withGrpc(GRPCAction grpc) {
         this.grpc = grpc;
         return this;
@@ -51,17 +54,19 @@ public class Probe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpGet")
     public HTTPGetAction httpGet;
+
     public Probe withHttpGet(HTTPGetAction httpGet) {
         this.httpGet = httpGet;
         return this;
     }
     
     /**
-     * Number of seconds after the container has started before the probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * Number of seconds after the container has started before the probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialDelaySeconds")
     public Integer initialDelaySeconds;
+
     public Probe withInitialDelaySeconds(Integer initialDelaySeconds) {
         this.initialDelaySeconds = initialDelaySeconds;
         return this;
@@ -73,6 +78,7 @@ public class Probe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodSeconds")
     public Integer periodSeconds;
+
     public Probe withPeriodSeconds(Integer periodSeconds) {
         this.periodSeconds = periodSeconds;
         return this;
@@ -84,6 +90,7 @@ public class Probe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successThreshold")
     public Integer successThreshold;
+
     public Probe withSuccessThreshold(Integer successThreshold) {
         this.successThreshold = successThreshold;
         return this;
@@ -95,20 +102,23 @@ public class Probe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tcpSocket")
     public TCPSocketAction tcpSocket;
+
     public Probe withTcpSocket(TCPSocketAction tcpSocket) {
         this.tcpSocket = tcpSocket;
         return this;
     }
     
     /**
-     * Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than period_seconds. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+     * Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than period_seconds.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutSeconds")
     public Integer timeoutSeconds;
+
     public Probe withTimeoutSeconds(Integer timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
     }
     
+    public Probe(){}
 }

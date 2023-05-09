@@ -16,37 +16,39 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetAlmawsV1TaskListsRsLendingRequestsRequest;
 import org.openapis.openapi.models.operations.GetAlmawsV1TaskListsRsLendingRequestsResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     apiKeyAuth = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetAlmawsV1TaskListsRsLendingRequestsRequest req = new GetAlmawsV1TaskListsRsLendingRequestsRequest() {{
-                library = "corrupti";
-                partner = "provident";
-                printed = "distinctio";
-                reported = "quibusdam";
-                requestedFormat = "unde";
-                status = "nulla";
-                suppliedFormat = "corrupti";
-            }}            
+                library = "provident";
+                partner = "distinctio";
+                printed = "quibusdam";
+                reported = "unde";
+                requestedFormat = "nulla";
+                status = "corrupti";
+                suppliedFormat = "illum";
+            }};            
 
             GetAlmawsV1TaskListsRsLendingRequestsResponse res = sdk.lendingRequests.getAlmawsV1TaskListsRsLendingRequests(req);
 
-            if (res.getAlmawsV1TaskListsRsLendingRequests200ApplicationJSONObject.isPresent()) {
+            if (res.getAlmawsV1TaskListsRsLendingRequests200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -54,27 +56,27 @@ public class Application {
 ## Available Resources and Operations
 
 
-### lendingRequests
+### [lendingRequests](docs/lendingrequests/README.md)
 
-* `getAlmawsV1TaskListsRsLendingRequests` - Get Lending Requests
-* `postAlmawsV1TaskListsRsLendingRequests` - Act on Lending Requests
+* [getAlmawsV1TaskListsRsLendingRequests](docs/lendingrequests/README.md#getalmawsv1tasklistsrslendingrequests) - Get Lending Requests
+* [postAlmawsV1TaskListsRsLendingRequests](docs/lendingrequests/README.md#postalmawsv1tasklistsrslendingrequests) - Act on Lending Requests
 
-### printouts
+### [printouts](docs/printouts/README.md)
 
-* `getAlmawsV1TaskListsPrintouts` - Retrieve Printouts
-* `getAlmawsV1TaskListsPrintoutsPrintoutId` - Retrieve a Printout
-* `postAlmawsV1TaskListsPrintouts` - Act on Printouts
-* `postAlmawsV1TaskListsPrintoutsPrintoutId` - Printout Service
+* [getAlmawsV1TaskListsPrintouts](docs/printouts/README.md#getalmawsv1tasklistsprintouts) - Retrieve Printouts
+* [getAlmawsV1TaskListsPrintoutsPrintoutId](docs/printouts/README.md#getalmawsv1tasklistsprintoutsprintoutid) - Retrieve a Printout
+* [postAlmawsV1TaskListsPrintouts](docs/printouts/README.md#postalmawsv1tasklistsprintouts) - Act on Printouts
+* [postAlmawsV1TaskListsPrintoutsPrintoutId](docs/printouts/README.md#postalmawsv1tasklistsprintoutsprintoutid) - Printout Service
 
-### requestedResources
+### [requestedResources](docs/requestedresources/README.md)
 
-* `getAlmawsV1TaskListsRequestedResources` - Get Requested Resources
-* `postAlmawsV1TaskListsRequestedResources` - Act on Requested Resources
+* [getAlmawsV1TaskListsRequestedResources](docs/requestedresources/README.md#getalmawsv1tasklistsrequestedresources) - Get Requested Resources
+* [postAlmawsV1TaskListsRequestedResources](docs/requestedresources/README.md#postalmawsv1tasklistsrequestedresources) - Act on Requested Resources
 
-### test
+### [test](docs/test/README.md)
 
-* `getAlmawsV1TaskListsTest` - GET Task-lists Test API
-* `postAlmawsV1TaskListsTest` - POST Task-lists Test API
+* [getAlmawsV1TaskListsTest](docs/test/README.md#getalmawsv1taskliststest) - GET Task-lists Test API
+* [postAlmawsV1TaskListsTest](docs/test/README.md#postalmawsv1taskliststest) - POST Task-lists Test API
 <!-- End SDK Available Operations -->
 
 ### Maturity

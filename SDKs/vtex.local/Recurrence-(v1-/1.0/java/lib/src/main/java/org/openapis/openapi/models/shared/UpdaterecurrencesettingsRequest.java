@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdaterecurrencesettingsRequest {
     @JsonProperty("defaultSLA")
     public String defaultSLA;
+
     public UpdaterecurrencesettingsRequest withDefaultSLA(String defaultSLA) {
         this.defaultSLA = defaultSLA;
         return this;
@@ -16,9 +17,14 @@ public class UpdaterecurrencesettingsRequest {
     
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public UpdaterecurrencesettingsRequest withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
     }
     
+    public UpdaterecurrencesettingsRequest(@JsonProperty("defaultSLA") String defaultSLA, @JsonProperty("salesChannel") String salesChannel) {
+        this.defaultSLA = defaultSLA;
+        this.salesChannel = salesChannel;
+  }
 }

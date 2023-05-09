@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReplicaGlobalSecondaryIndex {
     @JsonProperty("IndexName")
     public String indexName;
+
     public ReplicaGlobalSecondaryIndex withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -22,9 +23,13 @@ public class ReplicaGlobalSecondaryIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughputOverride")
     public ProvisionedThroughputOverride provisionedThroughputOverride;
+
     public ReplicaGlobalSecondaryIndex withProvisionedThroughputOverride(ProvisionedThroughputOverride provisionedThroughputOverride) {
         this.provisionedThroughputOverride = provisionedThroughputOverride;
         return this;
     }
     
+    public ReplicaGlobalSecondaryIndex(@JsonProperty("IndexName") String indexName) {
+        this.indexName = indexName;
+  }
 }

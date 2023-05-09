@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProductInformationFilter {
     @JsonProperty("ProductInformationFilterComparator")
     public String productInformationFilterComparator;
+
     public ProductInformationFilter withProductInformationFilterComparator(String productInformationFilterComparator) {
         this.productInformationFilterComparator = productInformationFilterComparator;
         return this;
@@ -21,6 +22,7 @@ public class ProductInformationFilter {
     
     @JsonProperty("ProductInformationFilterName")
     public String productInformationFilterName;
+
     public ProductInformationFilter withProductInformationFilterName(String productInformationFilterName) {
         this.productInformationFilterName = productInformationFilterName;
         return this;
@@ -29,9 +31,14 @@ public class ProductInformationFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductInformationFilterValue")
     public String[] productInformationFilterValue;
+
     public ProductInformationFilter withProductInformationFilterValue(String[] productInformationFilterValue) {
         this.productInformationFilterValue = productInformationFilterValue;
         return this;
     }
     
+    public ProductInformationFilter(@JsonProperty("ProductInformationFilterComparator") String productInformationFilterComparator, @JsonProperty("ProductInformationFilterName") String productInformationFilterName) {
+        this.productInformationFilterComparator = productInformationFilterComparator;
+        this.productInformationFilterName = productInformationFilterName;
+  }
 }

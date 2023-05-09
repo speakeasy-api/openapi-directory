@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetActiveNamesResponse {
@@ -12,6 +13,7 @@ public class GetActiveNamesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetActiveNamesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetActiveNamesResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetActiveNamesResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetActiveNamesResponse {
     
     
     public String contentType;
+
     public GetActiveNamesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetActiveNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetActiveNamesResult getActiveNamesResult;
+
     public GetActiveNamesResponse withGetActiveNamesResult(org.openapis.openapi.models.shared.GetActiveNamesResult getActiveNamesResult) {
         this.getActiveNamesResult = getActiveNamesResult;
         return this;
@@ -49,6 +54,7 @@ public class GetActiveNamesResponse {
      */
     
     public Object invalidInputException;
+
     public GetActiveNamesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetActiveNamesResponse {
      */
     
     public Object notFoundException;
+
     public GetActiveNamesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetActiveNamesResponse {
      */
     
     public Object operationFailureException;
+
     public GetActiveNamesResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetActiveNamesResponse {
      */
     
     public Object serviceException;
+
     public GetActiveNamesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetActiveNamesResponse {
     
     
     public Integer statusCode;
+
     public GetActiveNamesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetActiveNamesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetActiveNamesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetActiveNamesResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetActiveNamesResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetActiveNamesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

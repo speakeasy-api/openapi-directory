@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnEndpointsResult {
     
     public DescribeClientVpnEndpointsResultClientVpnEndpoints[] clientVpnEndpoints;
+
     public DescribeClientVpnEndpointsResult withClientVpnEndpoints(DescribeClientVpnEndpointsResultClientVpnEndpoints[] clientVpnEndpoints) {
         this.clientVpnEndpoints = clientVpnEndpoints;
         return this;
@@ -19,9 +20,11 @@ public class DescribeClientVpnEndpointsResult {
     
     
     public String nextToken;
+
     public DescribeClientVpnEndpointsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeClientVpnEndpointsResult(){}
 }

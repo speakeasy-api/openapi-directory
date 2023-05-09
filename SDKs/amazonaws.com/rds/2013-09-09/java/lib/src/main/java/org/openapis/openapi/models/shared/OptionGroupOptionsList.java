@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class OptionGroupOptionsList {
     
     public Long defaultPort;
+
     public OptionGroupOptionsList withDefaultPort(Long defaultPort) {
         this.defaultPort = defaultPort;
         return this;
@@ -16,6 +17,7 @@ public class OptionGroupOptionsList {
     
     
     public String description;
+
     public OptionGroupOptionsList withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class OptionGroupOptionsList {
     
     
     public String engineName;
+
     public OptionGroupOptionsList withEngineName(String engineName) {
         this.engineName = engineName;
         return this;
@@ -30,6 +33,7 @@ public class OptionGroupOptionsList {
     
     
     public String majorEngineVersion;
+
     public OptionGroupOptionsList withMajorEngineVersion(String majorEngineVersion) {
         this.majorEngineVersion = majorEngineVersion;
         return this;
@@ -37,6 +41,7 @@ public class OptionGroupOptionsList {
     
     
     public String minimumRequiredMinorEngineVersion;
+
     public OptionGroupOptionsList withMinimumRequiredMinorEngineVersion(String minimumRequiredMinorEngineVersion) {
         this.minimumRequiredMinorEngineVersion = minimumRequiredMinorEngineVersion;
         return this;
@@ -44,6 +49,7 @@ public class OptionGroupOptionsList {
     
     
     public String name;
+
     public OptionGroupOptionsList withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +57,7 @@ public class OptionGroupOptionsList {
     
     
     public OptionGroupOptionSettingsList[] optionGroupOptionSettings;
+
     public OptionGroupOptionsList withOptionGroupOptionSettings(OptionGroupOptionSettingsList[] optionGroupOptionSettings) {
         this.optionGroupOptionSettings = optionGroupOptionSettings;
         return this;
@@ -58,6 +65,7 @@ public class OptionGroupOptionsList {
     
     
     public String[] optionsDependedOn;
+
     public OptionGroupOptionsList withOptionsDependedOn(String[] optionsDependedOn) {
         this.optionsDependedOn = optionsDependedOn;
         return this;
@@ -65,6 +73,7 @@ public class OptionGroupOptionsList {
     
     
     public Boolean permanent;
+
     public OptionGroupOptionsList withPermanent(Boolean permanent) {
         this.permanent = permanent;
         return this;
@@ -72,6 +81,7 @@ public class OptionGroupOptionsList {
     
     
     public Boolean persistent;
+
     public OptionGroupOptionsList withPersistent(Boolean persistent) {
         this.persistent = persistent;
         return this;
@@ -79,9 +89,11 @@ public class OptionGroupOptionsList {
     
     
     public Boolean portRequired;
+
     public OptionGroupOptionsList withPortRequired(Boolean portRequired) {
         this.portRequired = portRequired;
         return this;
     }
     
+    public OptionGroupOptionsList(){}
 }

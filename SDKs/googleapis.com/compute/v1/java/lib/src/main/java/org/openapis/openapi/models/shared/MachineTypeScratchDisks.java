@@ -15,9 +15,11 @@ public class MachineTypeScratchDisks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskGb")
     public Integer diskGb;
+
     public MachineTypeScratchDisks withDiskGb(Integer diskGb) {
         this.diskGb = diskGb;
         return this;
     }
     
+    public MachineTypeScratchDisks(){}
 }

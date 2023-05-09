@@ -15,6 +15,7 @@ public class Getcitystandard200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CityStandard")
     public String cityStandard;
+
     public Getcitystandard200ApplicationJSON withCityStandard(String cityStandard) {
         this.cityStandard = cityStandard;
         return this;
@@ -23,6 +24,7 @@ public class Getcitystandard200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Getcitystandard200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -31,9 +33,11 @@ public class Getcitystandard200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credits")
     public String credits;
+
     public Getcitystandard200ApplicationJSON withCredits(String credits) {
         this.credits = credits;
         return this;
     }
     
+    public Getcitystandard200ApplicationJSON(){}
 }

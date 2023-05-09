@@ -17,6 +17,7 @@ public class DestinyComponentsProfilesDestinyProfileProgressionComponent {
      */
     
     public java.util.Map<String, java.util.Map<String, Boolean>> checklists;
+
     public DestinyComponentsProfilesDestinyProfileProgressionComponent withChecklists(java.util.Map<String, java.util.Map<String, Boolean>> checklists) {
         this.checklists = checklists;
         return this;
@@ -27,9 +28,11 @@ public class DestinyComponentsProfilesDestinyProfileProgressionComponent {
      */
     
     public DestinyComponentsProfilesDestinyProfileProgressionComponentSeasonalArtifact seasonalArtifact;
+
     public DestinyComponentsProfilesDestinyProfileProgressionComponent withSeasonalArtifact(DestinyComponentsProfilesDestinyProfileProgressionComponentSeasonalArtifact seasonalArtifact) {
         this.seasonalArtifact = seasonalArtifact;
         return this;
     }
     
+    public DestinyComponentsProfilesDestinyProfileProgressionComponent(){}
 }

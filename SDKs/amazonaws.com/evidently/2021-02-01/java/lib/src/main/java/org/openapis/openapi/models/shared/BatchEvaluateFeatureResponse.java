@@ -15,9 +15,11 @@ public class BatchEvaluateFeatureResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public EvaluationResult[] results;
+
     public BatchEvaluateFeatureResponse withResults(EvaluationResult[] results) {
         this.results = results;
         return this;
     }
     
+    public BatchEvaluateFeatureResponse(){}
 }

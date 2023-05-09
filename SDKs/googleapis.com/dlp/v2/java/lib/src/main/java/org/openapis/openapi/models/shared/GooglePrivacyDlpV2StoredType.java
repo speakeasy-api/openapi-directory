@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2StoredType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GooglePrivacyDlpV2StoredType withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2StoredType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GooglePrivacyDlpV2StoredType withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GooglePrivacyDlpV2StoredType(){}
 }

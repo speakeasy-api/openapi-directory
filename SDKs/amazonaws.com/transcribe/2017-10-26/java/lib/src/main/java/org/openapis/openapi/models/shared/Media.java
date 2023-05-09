@@ -15,6 +15,7 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MediaFileUri")
     public String mediaFileUri;
+
     public Media withMediaFileUri(String mediaFileUri) {
         this.mediaFileUri = mediaFileUri;
         return this;
@@ -23,9 +24,11 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedactedMediaFileUri")
     public String redactedMediaFileUri;
+
     public Media withRedactedMediaFileUri(String redactedMediaFileUri) {
         this.redactedMediaFileUri = redactedMediaFileUri;
         return this;
     }
     
+    public Media(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrainedModelsRequest {
@@ -12,6 +13,7 @@ public class GetTrainedModelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public String count;
+
     public GetTrainedModelsRequest withCount(String count) {
         this.count = count;
         return this;
@@ -22,6 +24,7 @@ public class GetTrainedModelsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
     public String datasetId;
+
     public GetTrainedModelsRequest withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -32,9 +35,13 @@ public class GetTrainedModelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetTrainedModelsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetTrainedModelsRequest(@JsonProperty("datasetId") String datasetId) {
+        this.datasetId = datasetId;
+  }
 }

@@ -15,6 +15,7 @@ public class GetDocumentWithWebHook200ApplicationJSONResultAstPackagePath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GetDocumentWithWebHook200ApplicationJSONResultAstPackagePathTypeEnum type;
+
     public GetDocumentWithWebHook200ApplicationJSONResultAstPackagePath withType(GetDocumentWithWebHook200ApplicationJSONResultAstPackagePathTypeEnum type) {
         this.type = type;
         return this;
@@ -26,9 +27,11 @@ public class GetDocumentWithWebHook200ApplicationJSONResultAstPackagePath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GetDocumentWithWebHook200ApplicationJSONResultAstPackagePath withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetDocumentWithWebHook200ApplicationJSONResultAstPackagePath(){}
 }

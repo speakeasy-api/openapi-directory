@@ -15,6 +15,7 @@ public class ConferenceListParameters {
      */
     @SpeakeasyMetadata("form:name=CallUUIDFilter")
     public String callUUIDFilter;
+
     public ConferenceListParameters withCallUUIDFilter(String callUUIDFilter) {
         this.callUUIDFilter = callUUIDFilter;
         return this;
@@ -25,6 +26,7 @@ public class ConferenceListParameters {
      */
     @SpeakeasyMetadata("form:name=DeafFilter")
     public Boolean deafFilter;
+
     public ConferenceListParameters withDeafFilter(Boolean deafFilter) {
         this.deafFilter = deafFilter;
         return this;
@@ -35,6 +37,7 @@ public class ConferenceListParameters {
      */
     @SpeakeasyMetadata("form:name=MemberFilter")
     public String memberFilter;
+
     public ConferenceListParameters withMemberFilter(String memberFilter) {
         this.memberFilter = memberFilter;
         return this;
@@ -45,9 +48,11 @@ public class ConferenceListParameters {
      */
     @SpeakeasyMetadata("form:name=MutedFilter")
     public Boolean mutedFilter;
+
     public ConferenceListParameters withMutedFilter(Boolean mutedFilter) {
         this.mutedFilter = mutedFilter;
         return this;
     }
     
+    public ConferenceListParameters(){}
 }

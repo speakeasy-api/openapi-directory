@@ -15,6 +15,7 @@ public class DescribeActivationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActivationList")
     public Activation[] activationList;
+
     public DescribeActivationsResult withActivationList(Activation[] activationList) {
         this.activationList = activationList;
         return this;
@@ -23,9 +24,11 @@ public class DescribeActivationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeActivationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeActivationsResult(){}
 }

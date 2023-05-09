@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCacheEngineVersionsMessage {
     
     public String cacheParameterGroupFamily;
+
     public DescribeCacheEngineVersionsMessage withCacheParameterGroupFamily(String cacheParameterGroupFamily) {
         this.cacheParameterGroupFamily = cacheParameterGroupFamily;
         return this;
@@ -19,6 +20,7 @@ public class DescribeCacheEngineVersionsMessage {
     
     
     public Boolean defaultOnly;
+
     public DescribeCacheEngineVersionsMessage withDefaultOnly(Boolean defaultOnly) {
         this.defaultOnly = defaultOnly;
         return this;
@@ -26,6 +28,7 @@ public class DescribeCacheEngineVersionsMessage {
     
     
     public String engine;
+
     public DescribeCacheEngineVersionsMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -33,6 +36,7 @@ public class DescribeCacheEngineVersionsMessage {
     
     
     public String engineVersion;
+
     public DescribeCacheEngineVersionsMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -40,6 +44,7 @@ public class DescribeCacheEngineVersionsMessage {
     
     
     public String marker;
+
     public DescribeCacheEngineVersionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -47,9 +52,11 @@ public class DescribeCacheEngineVersionsMessage {
     
     
     public Long maxRecords;
+
     public DescribeCacheEngineVersionsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeCacheEngineVersionsMessage(){}
 }

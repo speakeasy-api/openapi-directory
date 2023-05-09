@@ -14,6 +14,7 @@ public class EnduserAcceptanceDetailsRequest {
     @JsonProperty("ip_address")
     @SpeakeasyMetadata("form:name=ip_address multipartForm:name=ip_address")
     public String ipAddress;
+
     public EnduserAcceptanceDetailsRequest withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -22,9 +23,14 @@ public class EnduserAcceptanceDetailsRequest {
     @JsonProperty("user_agent")
     @SpeakeasyMetadata("form:name=user_agent multipartForm:name=user_agent")
     public String userAgent;
+
     public EnduserAcceptanceDetailsRequest withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
     }
     
+    public EnduserAcceptanceDetailsRequest(@JsonProperty("ip_address") String ipAddress, @JsonProperty("user_agent") String userAgent) {
+        this.ipAddress = ipAddress;
+        this.userAgent = userAgent;
+  }
 }

@@ -22,6 +22,7 @@ public class DeleteLifecyclePolicyResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastEvaluatedAt")
     public OffsetDateTime lastEvaluatedAt;
+
     public DeleteLifecyclePolicyResponse withLastEvaluatedAt(OffsetDateTime lastEvaluatedAt) {
         this.lastEvaluatedAt = lastEvaluatedAt;
         return this;
@@ -30,6 +31,7 @@ public class DeleteLifecyclePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecyclePolicyText")
     public String lifecyclePolicyText;
+
     public DeleteLifecyclePolicyResponse withLifecyclePolicyText(String lifecyclePolicyText) {
         this.lifecyclePolicyText = lifecyclePolicyText;
         return this;
@@ -38,6 +40,7 @@ public class DeleteLifecyclePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public DeleteLifecyclePolicyResponse withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -46,9 +49,11 @@ public class DeleteLifecyclePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public DeleteLifecyclePolicyResponse withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public DeleteLifecyclePolicyResponse(){}
 }

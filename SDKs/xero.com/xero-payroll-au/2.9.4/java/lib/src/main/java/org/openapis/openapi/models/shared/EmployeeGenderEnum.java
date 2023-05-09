@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * EmployeeGenderEnum - The employee\u2019s gender. See\u00a0Employee Gender
+ * EmployeeGenderEnum - The employee’s gender. See Employee Gender
  */
 public enum EmployeeGenderEnum {
     N("N"),

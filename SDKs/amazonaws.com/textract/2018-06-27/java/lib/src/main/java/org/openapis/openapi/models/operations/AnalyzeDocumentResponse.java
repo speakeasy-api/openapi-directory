@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyzeDocumentResponse {
@@ -12,6 +13,7 @@ public class AnalyzeDocumentResponse {
      */
     
     public Object accessDeniedException;
+
     public AnalyzeDocumentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AnalyzeDocumentResponse {
      */
     
     public org.openapis.openapi.models.shared.AnalyzeDocumentResponse analyzeDocumentResponse;
+
     public AnalyzeDocumentResponse withAnalyzeDocumentResponse(org.openapis.openapi.models.shared.AnalyzeDocumentResponse analyzeDocumentResponse) {
         this.analyzeDocumentResponse = analyzeDocumentResponse;
         return this;
@@ -32,6 +35,7 @@ public class AnalyzeDocumentResponse {
      */
     
     public Object badDocumentException;
+
     public AnalyzeDocumentResponse withBadDocumentException(Object badDocumentException) {
         this.badDocumentException = badDocumentException;
         return this;
@@ -39,6 +43,7 @@ public class AnalyzeDocumentResponse {
     
     
     public String contentType;
+
     public AnalyzeDocumentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AnalyzeDocumentResponse {
      */
     
     public Object documentTooLargeException;
+
     public AnalyzeDocumentResponse withDocumentTooLargeException(Object documentTooLargeException) {
         this.documentTooLargeException = documentTooLargeException;
         return this;
@@ -59,6 +65,7 @@ public class AnalyzeDocumentResponse {
      */
     
     public Object humanLoopQuotaExceededException;
+
     public AnalyzeDocumentResponse withHumanLoopQuotaExceededException(Object humanLoopQuotaExceededException) {
         this.humanLoopQuotaExceededException = humanLoopQuotaExceededException;
         return this;
@@ -69,6 +76,7 @@ public class AnalyzeDocumentResponse {
      */
     
     public Object internalServerError;
+
     public AnalyzeDocumentResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -79,6 +87,7 @@ public class AnalyzeDocumentResponse {
      */
     
     public Object invalidParameterException;
+
     public AnalyzeDocumentResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -89,6 +98,7 @@ public class AnalyzeDocumentResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public AnalyzeDocumentResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -99,6 +109,7 @@ public class AnalyzeDocumentResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public AnalyzeDocumentResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -106,6 +117,7 @@ public class AnalyzeDocumentResponse {
     
     
     public Integer statusCode;
+
     public AnalyzeDocumentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class AnalyzeDocumentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyzeDocumentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class AnalyzeDocumentResponse {
      */
     
     public Object throttlingException;
+
     public AnalyzeDocumentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -133,9 +147,14 @@ public class AnalyzeDocumentResponse {
      */
     
     public Object unsupportedDocumentException;
+
     public AnalyzeDocumentResponse withUnsupportedDocumentException(Object unsupportedDocumentException) {
         this.unsupportedDocumentException = unsupportedDocumentException;
         return this;
     }
     
+    public AnalyzeDocumentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

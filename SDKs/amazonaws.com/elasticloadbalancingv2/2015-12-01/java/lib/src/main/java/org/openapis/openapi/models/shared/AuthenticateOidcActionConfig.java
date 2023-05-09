@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AuthenticateOidcActionConfig - Request parameters when using an identity provider (IdP) that is compliant with OpenID Connect (OIDC) to authenticate users.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AuthenticateOidcActionConfig {
     
     public java.util.Map<String, String> authenticationRequestExtraParams;
+
     public AuthenticateOidcActionConfig withAuthenticationRequestExtraParams(java.util.Map<String, String> authenticationRequestExtraParams) {
         this.authenticationRequestExtraParams = authenticationRequestExtraParams;
         return this;
@@ -19,6 +20,7 @@ public class AuthenticateOidcActionConfig {
     
     
     public String authorizationEndpoint;
+
     public AuthenticateOidcActionConfig withAuthorizationEndpoint(String authorizationEndpoint) {
         this.authorizationEndpoint = authorizationEndpoint;
         return this;
@@ -26,6 +28,7 @@ public class AuthenticateOidcActionConfig {
     
     
     public String clientId;
+
     public AuthenticateOidcActionConfig withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -33,6 +36,7 @@ public class AuthenticateOidcActionConfig {
     
     
     public String clientSecret;
+
     public AuthenticateOidcActionConfig withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -40,6 +44,7 @@ public class AuthenticateOidcActionConfig {
     
     
     public String issuer;
+
     public AuthenticateOidcActionConfig withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -47,6 +52,7 @@ public class AuthenticateOidcActionConfig {
     
     
     public AuthenticateOidcActionConditionalBehaviorEnumEnum onUnauthenticatedRequest;
+
     public AuthenticateOidcActionConfig withOnUnauthenticatedRequest(AuthenticateOidcActionConditionalBehaviorEnumEnum onUnauthenticatedRequest) {
         this.onUnauthenticatedRequest = onUnauthenticatedRequest;
         return this;
@@ -54,6 +60,7 @@ public class AuthenticateOidcActionConfig {
     
     
     public String scope;
+
     public AuthenticateOidcActionConfig withScope(String scope) {
         this.scope = scope;
         return this;
@@ -61,6 +68,7 @@ public class AuthenticateOidcActionConfig {
     
     
     public String sessionCookieName;
+
     public AuthenticateOidcActionConfig withSessionCookieName(String sessionCookieName) {
         this.sessionCookieName = sessionCookieName;
         return this;
@@ -68,6 +76,7 @@ public class AuthenticateOidcActionConfig {
     
     
     public Long sessionTimeout;
+
     public AuthenticateOidcActionConfig withSessionTimeout(Long sessionTimeout) {
         this.sessionTimeout = sessionTimeout;
         return this;
@@ -75,6 +84,7 @@ public class AuthenticateOidcActionConfig {
     
     
     public String tokenEndpoint;
+
     public AuthenticateOidcActionConfig withTokenEndpoint(String tokenEndpoint) {
         this.tokenEndpoint = tokenEndpoint;
         return this;
@@ -82,6 +92,7 @@ public class AuthenticateOidcActionConfig {
     
     
     public Boolean useExistingClientSecret;
+
     public AuthenticateOidcActionConfig withUseExistingClientSecret(Boolean useExistingClientSecret) {
         this.useExistingClientSecret = useExistingClientSecret;
         return this;
@@ -89,9 +100,17 @@ public class AuthenticateOidcActionConfig {
     
     
     public String userInfoEndpoint;
+
     public AuthenticateOidcActionConfig withUserInfoEndpoint(String userInfoEndpoint) {
         this.userInfoEndpoint = userInfoEndpoint;
         return this;
     }
     
+    public AuthenticateOidcActionConfig(@JsonProperty("AuthorizationEndpoint") String authorizationEndpoint, @JsonProperty("ClientId") String clientId, @JsonProperty("Issuer") String issuer, @JsonProperty("TokenEndpoint") String tokenEndpoint, @JsonProperty("UserInfoEndpoint") String userInfoEndpoint) {
+        this.authorizationEndpoint = authorizationEndpoint;
+        this.clientId = clientId;
+        this.issuer = issuer;
+        this.tokenEndpoint = tokenEndpoint;
+        this.userInfoEndpoint = userInfoEndpoint;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDescribeByoipCidrsResponse {
     
     public byte[] body;
+
     public GETDescribeByoipCidrsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDescribeByoipCidrsResponse {
     
     
     public String contentType;
+
     public GETDescribeByoipCidrsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDescribeByoipCidrsResponse {
     
     
     public Integer statusCode;
+
     public GETDescribeByoipCidrsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDescribeByoipCidrsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDescribeByoipCidrsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDescribeByoipCidrsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

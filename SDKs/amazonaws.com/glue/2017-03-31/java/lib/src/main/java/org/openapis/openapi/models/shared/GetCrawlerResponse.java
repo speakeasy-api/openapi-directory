@@ -15,9 +15,11 @@ public class GetCrawlerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Crawler")
     public Crawler crawler;
+
     public GetCrawlerResponse withCrawler(Crawler crawler) {
         this.crawler = crawler;
         return this;
     }
     
+    public GetCrawlerResponse(){}
 }

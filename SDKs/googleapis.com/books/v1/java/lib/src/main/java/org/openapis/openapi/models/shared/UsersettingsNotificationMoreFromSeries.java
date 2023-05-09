@@ -12,9 +12,11 @@ public class UsersettingsNotificationMoreFromSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opted_state")
     public String optedState;
+
     public UsersettingsNotificationMoreFromSeries withOptedState(String optedState) {
         this.optedState = optedState;
         return this;
     }
     
+    public UsersettingsNotificationMoreFromSeries(){}
 }

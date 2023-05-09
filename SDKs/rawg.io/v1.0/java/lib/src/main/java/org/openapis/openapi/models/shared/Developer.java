@@ -12,6 +12,7 @@ public class Developer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("games_count")
     public Long gamesCount;
+
     public Developer withGamesCount(Long gamesCount) {
         this.gamesCount = gamesCount;
         return this;
@@ -20,6 +21,7 @@ public class Developer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Developer withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class Developer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_background")
     public String imageBackground;
+
     public Developer withImageBackground(String imageBackground) {
         this.imageBackground = imageBackground;
         return this;
@@ -35,6 +38,7 @@ public class Developer {
     
     @JsonProperty("name")
     public String name;
+
     public Developer withName(String name) {
         this.name = name;
         return this;
@@ -43,9 +47,13 @@ public class Developer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public Developer withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public Developer(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

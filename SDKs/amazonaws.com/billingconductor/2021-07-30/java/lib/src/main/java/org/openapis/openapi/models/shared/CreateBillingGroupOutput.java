@@ -15,9 +15,11 @@ public class CreateBillingGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public CreateBillingGroupOutput withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public CreateBillingGroupOutput(){}
 }

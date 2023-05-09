@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeInterconnectsSetLabelsRequest {
@@ -12,6 +13,7 @@ public class ComputeInterconnectsSetLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeInterconnectsSetLabelsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeInterconnectsSetLabelsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GlobalSetLabelsRequest globalSetLabelsRequest;
+
     public ComputeInterconnectsSetLabelsRequest withGlobalSetLabelsRequest(org.openapis.openapi.models.shared.GlobalSetLabelsRequest globalSetLabelsRequest) {
         this.globalSetLabelsRequest = globalSetLabelsRequest;
         return this;
@@ -29,6 +32,7 @@ public class ComputeInterconnectsSetLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeInterconnectsSetLabelsRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeInterconnectsSetLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeInterconnectsSetLabelsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeInterconnectsSetLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeInterconnectsSetLabelsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeInterconnectsSetLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeInterconnectsSetLabelsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeInterconnectsSetLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeInterconnectsSetLabelsRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class ComputeInterconnectsSetLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeInterconnectsSetLabelsRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class ComputeInterconnectsSetLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeInterconnectsSetLabelsRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class ComputeInterconnectsSetLabelsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeInterconnectsSetLabelsRequest withProject(String project) {
         this.project = project;
         return this;
@@ -109,6 +120,7 @@ public class ComputeInterconnectsSetLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeInterconnectsSetLabelsRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class ComputeInterconnectsSetLabelsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource")
     public String resource;
+
     public ComputeInterconnectsSetLabelsRequest withResource(String resource) {
         this.resource = resource;
         return this;
@@ -129,6 +142,7 @@ public class ComputeInterconnectsSetLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeInterconnectsSetLabelsRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,6 +153,7 @@ public class ComputeInterconnectsSetLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeInterconnectsSetLabelsRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -149,9 +164,14 @@ public class ComputeInterconnectsSetLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeInterconnectsSetLabelsRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeInterconnectsSetLabelsRequest(@JsonProperty("project") String project, @JsonProperty("resource") String resource) {
+        this.project = project;
+        this.resource = resource;
+  }
 }

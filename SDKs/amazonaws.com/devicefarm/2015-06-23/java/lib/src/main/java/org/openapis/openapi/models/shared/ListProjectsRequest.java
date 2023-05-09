@@ -15,6 +15,7 @@ public class ListProjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ListProjectsRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class ListProjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListProjectsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListProjectsRequest(){}
 }

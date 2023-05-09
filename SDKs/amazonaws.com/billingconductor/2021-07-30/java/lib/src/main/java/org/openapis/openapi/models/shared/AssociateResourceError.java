@@ -15,6 +15,7 @@ public class AssociateResourceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public AssociateResourceError withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class AssociateResourceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public AssociateResourceErrorReasonEnum reason;
+
     public AssociateResourceError withReason(AssociateResourceErrorReasonEnum reason) {
         this.reason = reason;
         return this;
     }
     
+    public AssociateResourceError(){}
 }

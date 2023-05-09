@@ -18,6 +18,7 @@ public class AdministrativeBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absenteeVotingInfoUrl")
     public String absenteeVotingInfoUrl;
+
     public AdministrativeBody withAbsenteeVotingInfoUrl(String absenteeVotingInfoUrl) {
         this.absenteeVotingInfoUrl = absenteeVotingInfoUrl;
         return this;
@@ -29,6 +30,7 @@ public class AdministrativeBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ballotInfoUrl")
     public String ballotInfoUrl;
+
     public AdministrativeBody withBallotInfoUrl(String ballotInfoUrl) {
         this.ballotInfoUrl = ballotInfoUrl;
         return this;
@@ -40,6 +42,7 @@ public class AdministrativeBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correspondenceAddress")
     public SimpleAddressType correspondenceAddress;
+
     public AdministrativeBody withCorrespondenceAddress(SimpleAddressType correspondenceAddress) {
         this.correspondenceAddress = correspondenceAddress;
         return this;
@@ -51,6 +54,7 @@ public class AdministrativeBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electionInfoUrl")
     public String electionInfoUrl;
+
     public AdministrativeBody withElectionInfoUrl(String electionInfoUrl) {
         this.electionInfoUrl = electionInfoUrl;
         return this;
@@ -62,6 +66,7 @@ public class AdministrativeBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electionNoticeText")
     public String electionNoticeText;
+
     public AdministrativeBody withElectionNoticeText(String electionNoticeText) {
         this.electionNoticeText = electionNoticeText;
         return this;
@@ -73,6 +78,7 @@ public class AdministrativeBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electionNoticeUrl")
     public String electionNoticeUrl;
+
     public AdministrativeBody withElectionNoticeUrl(String electionNoticeUrl) {
         this.electionNoticeUrl = electionNoticeUrl;
         return this;
@@ -84,6 +90,7 @@ public class AdministrativeBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electionOfficials")
     public ElectionOfficial[] electionOfficials;
+
     public AdministrativeBody withElectionOfficials(ElectionOfficial[] electionOfficials) {
         this.electionOfficials = electionOfficials;
         return this;
@@ -95,6 +102,7 @@ public class AdministrativeBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electionRegistrationConfirmationUrl")
     public String electionRegistrationConfirmationUrl;
+
     public AdministrativeBody withElectionRegistrationConfirmationUrl(String electionRegistrationConfirmationUrl) {
         this.electionRegistrationConfirmationUrl = electionRegistrationConfirmationUrl;
         return this;
@@ -106,6 +114,7 @@ public class AdministrativeBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electionRegistrationUrl")
     public String electionRegistrationUrl;
+
     public AdministrativeBody withElectionRegistrationUrl(String electionRegistrationUrl) {
         this.electionRegistrationUrl = electionRegistrationUrl;
         return this;
@@ -117,6 +126,7 @@ public class AdministrativeBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electionRulesUrl")
     public String electionRulesUrl;
+
     public AdministrativeBody withElectionRulesUrl(String electionRulesUrl) {
         this.electionRulesUrl = electionRulesUrl;
         return this;
@@ -128,6 +138,7 @@ public class AdministrativeBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hoursOfOperation")
     public String hoursOfOperation;
+
     public AdministrativeBody withHoursOfOperation(String hoursOfOperation) {
         this.hoursOfOperation = hoursOfOperation;
         return this;
@@ -139,6 +150,7 @@ public class AdministrativeBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AdministrativeBody withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +162,7 @@ public class AdministrativeBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("physicalAddress")
     public SimpleAddressType physicalAddress;
+
     public AdministrativeBody withPhysicalAddress(SimpleAddressType physicalAddress) {
         this.physicalAddress = physicalAddress;
         return this;
@@ -161,6 +174,7 @@ public class AdministrativeBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voter_services")
     public String[] voterServices;
+
     public AdministrativeBody withVoterServices(String[] voterServices) {
         this.voterServices = voterServices;
         return this;
@@ -172,9 +186,11 @@ public class AdministrativeBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("votingLocationFinderUrl")
     public String votingLocationFinderUrl;
+
     public AdministrativeBody withVotingLocationFinderUrl(String votingLocationFinderUrl) {
         this.votingLocationFinderUrl = votingLocationFinderUrl;
         return this;
     }
     
+    public AdministrativeBody(){}
 }

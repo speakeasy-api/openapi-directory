@@ -15,6 +15,7 @@ public class GeocodingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public GeocodingLocation withCity(String city) {
         this.city = city;
         return this;
@@ -26,6 +27,7 @@ public class GeocodingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public GeocodingLocation withCountry(String country) {
         this.country = country;
         return this;
@@ -37,6 +39,7 @@ public class GeocodingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("housenumber")
     public String housenumber;
+
     public GeocodingLocation withHousenumber(String housenumber) {
         this.housenumber = housenumber;
         return this;
@@ -48,6 +51,7 @@ public class GeocodingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GeocodingLocation withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class GeocodingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osm_id")
     public String osmId;
+
     public GeocodingLocation withOsmId(String osmId) {
         this.osmId = osmId;
         return this;
@@ -70,6 +75,7 @@ public class GeocodingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osm_key")
     public String osmKey;
+
     public GeocodingLocation withOsmKey(String osmKey) {
         this.osmKey = osmKey;
         return this;
@@ -81,6 +87,7 @@ public class GeocodingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osm_type")
     public String osmType;
+
     public GeocodingLocation withOsmType(String osmType) {
         this.osmType = osmType;
         return this;
@@ -89,6 +96,7 @@ public class GeocodingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("point")
     public GeocodingPoint point;
+
     public GeocodingLocation withPoint(GeocodingPoint point) {
         this.point = point;
         return this;
@@ -100,6 +108,7 @@ public class GeocodingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postcode")
     public String postcode;
+
     public GeocodingLocation withPostcode(String postcode) {
         this.postcode = postcode;
         return this;
@@ -111,6 +120,7 @@ public class GeocodingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public GeocodingLocation withState(String state) {
         this.state = state;
         return this;
@@ -122,9 +132,11 @@ public class GeocodingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street")
     public String street;
+
     public GeocodingLocation withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public GeocodingLocation(){}
 }

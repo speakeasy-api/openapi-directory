@@ -15,6 +15,7 @@ public class UpdateLFTagRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public UpdateLFTagRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -25,6 +26,7 @@ public class UpdateLFTagRequestBody {
      */
     @JsonProperty("TagKey")
     public String tagKey;
+
     public UpdateLFTagRequestBody withTagKey(String tagKey) {
         this.tagKey = tagKey;
         return this;
@@ -36,6 +38,7 @@ public class UpdateLFTagRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagValuesToAdd")
     public String[] tagValuesToAdd;
+
     public UpdateLFTagRequestBody withTagValuesToAdd(String[] tagValuesToAdd) {
         this.tagValuesToAdd = tagValuesToAdd;
         return this;
@@ -47,9 +50,13 @@ public class UpdateLFTagRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagValuesToDelete")
     public String[] tagValuesToDelete;
+
     public UpdateLFTagRequestBody withTagValuesToDelete(String[] tagValuesToDelete) {
         this.tagValuesToDelete = tagValuesToDelete;
         return this;
     }
     
+    public UpdateLFTagRequestBody(@JsonProperty("TagKey") String tagKey) {
+        this.tagKey = tagKey;
+  }
 }

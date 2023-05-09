@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETCopyClusterSnapshotResponse {
     
     public byte[] body;
+
     public GETCopyClusterSnapshotResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETCopyClusterSnapshotResponse {
     
     
     public String contentType;
+
     public GETCopyClusterSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETCopyClusterSnapshotResponse {
     
     
     public Integer statusCode;
+
     public GETCopyClusterSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETCopyClusterSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETCopyClusterSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETCopyClusterSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

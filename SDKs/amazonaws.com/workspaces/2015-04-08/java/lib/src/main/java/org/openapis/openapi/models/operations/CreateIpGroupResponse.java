@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateIpGroupResponse {
@@ -12,6 +13,7 @@ public class CreateIpGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateIpGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateIpGroupResponse {
     
     
     public String contentType;
+
     public CreateIpGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateIpGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateIpGroupResult createIpGroupResult;
+
     public CreateIpGroupResponse withCreateIpGroupResult(org.openapis.openapi.models.shared.CreateIpGroupResult createIpGroupResult) {
         this.createIpGroupResult = createIpGroupResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateIpGroupResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public CreateIpGroupResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class CreateIpGroupResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateIpGroupResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -56,6 +62,7 @@ public class CreateIpGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateIpGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateIpGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateIpGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateIpGroupResponse {
      */
     
     public Object resourceCreationFailedException;
+
     public CreateIpGroupResponse withResourceCreationFailedException(Object resourceCreationFailedException) {
         this.resourceCreationFailedException = resourceCreationFailedException;
         return this;
@@ -83,9 +92,14 @@ public class CreateIpGroupResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateIpGroupResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
     }
     
+    public CreateIpGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

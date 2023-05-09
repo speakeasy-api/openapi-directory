@@ -18,9 +18,11 @@ public class WebAppsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webApp")
     public WebApp[] webApp;
+
     public WebAppsListResponse withWebApp(WebApp[] webApp) {
         this.webApp = webApp;
         return this;
     }
     
+    public WebAppsListResponse(){}
 }

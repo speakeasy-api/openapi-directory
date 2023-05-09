@@ -15,6 +15,7 @@ public class TeamTemplate {
      */
     
     public java.util.Map<String, Object> links;
+
     public TeamTemplate withLinks(java.util.Map<String, Object> links) {
         this.links = links;
         return this;
@@ -25,6 +26,7 @@ public class TeamTemplate {
      */
     
     public OffsetDateTime archivedAt;
+
     public TeamTemplate withArchivedAt(OffsetDateTime archivedAt) {
         this.archivedAt = archivedAt;
         return this;
@@ -35,6 +37,7 @@ public class TeamTemplate {
      */
     
     public String body;
+
     public TeamTemplate withBody(String body) {
         this.body = body;
         return this;
@@ -45,6 +48,7 @@ public class TeamTemplate {
      */
     
     public String bodyPreview;
+
     public TeamTemplate withBodyPreview(String bodyPreview) {
         this.bodyPreview = bodyPreview;
         return this;
@@ -55,6 +59,7 @@ public class TeamTemplate {
      */
     
     public Boolean clickTrackingEnabled;
+
     public TeamTemplate withClickTrackingEnabled(Boolean clickTrackingEnabled) {
         this.clickTrackingEnabled = clickTrackingEnabled;
         return this;
@@ -62,6 +67,7 @@ public class TeamTemplate {
     
     
     public TeamTemplateCounts counts;
+
     public TeamTemplate withCounts(TeamTemplateCounts counts) {
         this.counts = counts;
         return this;
@@ -72,6 +78,7 @@ public class TeamTemplate {
      */
     
     public OffsetDateTime createdAt;
+
     public TeamTemplate withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -82,6 +89,7 @@ public class TeamTemplate {
      */
     
     public String id;
+
     public TeamTemplate withId(String id) {
         this.id = id;
         return this;
@@ -92,6 +100,7 @@ public class TeamTemplate {
      */
     
     public OffsetDateTime lastModifiedAt;
+
     public TeamTemplate withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -99,6 +108,7 @@ public class TeamTemplate {
     
     
     public EmbeddedResource lastModifiedUser;
+
     public TeamTemplate withLastModifiedUser(EmbeddedResource lastModifiedUser) {
         this.lastModifiedUser = lastModifiedUser;
         return this;
@@ -109,6 +119,7 @@ public class TeamTemplate {
      */
     
     public OffsetDateTime lastUsedAt;
+
     public TeamTemplate withLastUsedAt(OffsetDateTime lastUsedAt) {
         this.lastUsedAt = lastUsedAt;
         return this;
@@ -119,6 +130,7 @@ public class TeamTemplate {
      */
     
     public Boolean openTrackingEnabled;
+
     public TeamTemplate withOpenTrackingEnabled(Boolean openTrackingEnabled) {
         this.openTrackingEnabled = openTrackingEnabled;
         return this;
@@ -129,6 +141,7 @@ public class TeamTemplate {
      */
     
     public String subject;
+
     public TeamTemplate withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -139,6 +152,7 @@ public class TeamTemplate {
      */
     
     public String[] tags;
+
     public TeamTemplate withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -149,6 +163,7 @@ public class TeamTemplate {
      */
     
     public String title;
+
     public TeamTemplate withTitle(String title) {
         this.title = title;
         return this;
@@ -159,9 +174,11 @@ public class TeamTemplate {
      */
     
     public OffsetDateTime updatedAt;
+
     public TeamTemplate withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public TeamTemplate(){}
 }

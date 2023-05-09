@@ -15,9 +15,11 @@ public class SubjectDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public SubjectDetail subject;
+
     public SubjectDetailResponse withSubject(SubjectDetail subject) {
         this.subject = subject;
         return this;
     }
     
+    public SubjectDetailResponse(){}
 }

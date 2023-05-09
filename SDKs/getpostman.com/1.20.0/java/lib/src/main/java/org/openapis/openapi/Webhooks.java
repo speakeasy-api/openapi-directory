@@ -69,10 +69,8 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateWebhookResponse res = new org.openapis.openapi.models.operations.CreateWebhookResponse() {{
+        org.openapis.openapi.models.operations.CreateWebhookResponse res = new org.openapis.openapi.models.operations.CreateWebhookResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

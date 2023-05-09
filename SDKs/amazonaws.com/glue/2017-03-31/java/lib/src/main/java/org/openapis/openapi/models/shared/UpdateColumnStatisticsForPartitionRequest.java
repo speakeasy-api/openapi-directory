@@ -12,6 +12,7 @@ public class UpdateColumnStatisticsForPartitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public UpdateColumnStatisticsForPartitionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateColumnStatisticsForPartitionRequest {
     
     @JsonProperty("ColumnStatisticsList")
     public ColumnStatistics[] columnStatisticsList;
+
     public UpdateColumnStatisticsForPartitionRequest withColumnStatisticsList(ColumnStatistics[] columnStatisticsList) {
         this.columnStatisticsList = columnStatisticsList;
         return this;
@@ -26,6 +28,7 @@ public class UpdateColumnStatisticsForPartitionRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public UpdateColumnStatisticsForPartitionRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -33,6 +36,7 @@ public class UpdateColumnStatisticsForPartitionRequest {
     
     @JsonProperty("PartitionValues")
     public String[] partitionValues;
+
     public UpdateColumnStatisticsForPartitionRequest withPartitionValues(String[] partitionValues) {
         this.partitionValues = partitionValues;
         return this;
@@ -40,9 +44,16 @@ public class UpdateColumnStatisticsForPartitionRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public UpdateColumnStatisticsForPartitionRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public UpdateColumnStatisticsForPartitionRequest(@JsonProperty("ColumnStatisticsList") ColumnStatistics[] columnStatisticsList, @JsonProperty("DatabaseName") String databaseName, @JsonProperty("PartitionValues") String[] partitionValues, @JsonProperty("TableName") String tableName) {
+        this.columnStatisticsList = columnStatisticsList;
+        this.databaseName = databaseName;
+        this.partitionValues = partitionValues;
+        this.tableName = tableName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBenefitsDocumentUploadDownloadResponse {
     
     public String contentType;
+
     public GetBenefitsDocumentUploadDownloadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetBenefitsDocumentUploadDownloadResponse {
     
     
     public Integer statusCode;
+
     public GetBenefitsDocumentUploadDownloadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetBenefitsDocumentUploadDownloadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBenefitsDocumentUploadDownloadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetBenefitsDocumentUploadDownloadResponse {
      */
     
     public byte[] getBenefitsDocumentUploadDownload200ApplicationZipBinaryString;
+
     public GetBenefitsDocumentUploadDownloadResponse withGetBenefitsDocumentUploadDownload200ApplicationZipBinaryString(byte[] getBenefitsDocumentUploadDownload200ApplicationZipBinaryString) {
         this.getBenefitsDocumentUploadDownload200ApplicationZipBinaryString = getBenefitsDocumentUploadDownload200ApplicationZipBinaryString;
         return this;
@@ -43,6 +48,7 @@ public class GetBenefitsDocumentUploadDownloadResponse {
      */
     
     public GetBenefitsDocumentUploadDownload401ApplicationJSON getBenefitsDocumentUploadDownload401ApplicationJSONObject;
+
     public GetBenefitsDocumentUploadDownloadResponse withGetBenefitsDocumentUploadDownload401ApplicationJSONObject(GetBenefitsDocumentUploadDownload401ApplicationJSON getBenefitsDocumentUploadDownload401ApplicationJSONObject) {
         this.getBenefitsDocumentUploadDownload401ApplicationJSONObject = getBenefitsDocumentUploadDownload401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetBenefitsDocumentUploadDownloadResponse {
      */
     
     public GetBenefitsDocumentUploadDownload403ApplicationJSON getBenefitsDocumentUploadDownload403ApplicationJSONObject;
+
     public GetBenefitsDocumentUploadDownloadResponse withGetBenefitsDocumentUploadDownload403ApplicationJSONObject(GetBenefitsDocumentUploadDownload403ApplicationJSON getBenefitsDocumentUploadDownload403ApplicationJSONObject) {
         this.getBenefitsDocumentUploadDownload403ApplicationJSONObject = getBenefitsDocumentUploadDownload403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetBenefitsDocumentUploadDownloadResponse {
      */
     
     public GetBenefitsDocumentUploadDownload404ApplicationJSON getBenefitsDocumentUploadDownload404ApplicationJSONObject;
+
     public GetBenefitsDocumentUploadDownloadResponse withGetBenefitsDocumentUploadDownload404ApplicationJSONObject(GetBenefitsDocumentUploadDownload404ApplicationJSON getBenefitsDocumentUploadDownload404ApplicationJSONObject) {
         this.getBenefitsDocumentUploadDownload404ApplicationJSONObject = getBenefitsDocumentUploadDownload404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetBenefitsDocumentUploadDownloadResponse {
      */
     
     public GetBenefitsDocumentUploadDownload429ApplicationJSON getBenefitsDocumentUploadDownload429ApplicationJSONObject;
+
     public GetBenefitsDocumentUploadDownloadResponse withGetBenefitsDocumentUploadDownload429ApplicationJSONObject(GetBenefitsDocumentUploadDownload429ApplicationJSON getBenefitsDocumentUploadDownload429ApplicationJSONObject) {
         this.getBenefitsDocumentUploadDownload429ApplicationJSONObject = getBenefitsDocumentUploadDownload429ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class GetBenefitsDocumentUploadDownloadResponse {
      */
     
     public GetBenefitsDocumentUploadDownload500ApplicationJSON getBenefitsDocumentUploadDownload500ApplicationJSONObject;
+
     public GetBenefitsDocumentUploadDownloadResponse withGetBenefitsDocumentUploadDownload500ApplicationJSONObject(GetBenefitsDocumentUploadDownload500ApplicationJSON getBenefitsDocumentUploadDownload500ApplicationJSONObject) {
         this.getBenefitsDocumentUploadDownload500ApplicationJSONObject = getBenefitsDocumentUploadDownload500ApplicationJSONObject;
         return this;
     }
     
+    public GetBenefitsDocumentUploadDownloadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

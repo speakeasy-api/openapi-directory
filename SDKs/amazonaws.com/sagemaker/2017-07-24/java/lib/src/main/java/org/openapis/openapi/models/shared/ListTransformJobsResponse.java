@@ -15,6 +15,7 @@ public class ListTransformJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTransformJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListTransformJobsResponse {
     
     @JsonProperty("TransformJobSummaries")
     public TransformJobSummary[] transformJobSummaries;
+
     public ListTransformJobsResponse withTransformJobSummaries(TransformJobSummary[] transformJobSummaries) {
         this.transformJobSummaries = transformJobSummaries;
         return this;
     }
     
+    public ListTransformJobsResponse(@JsonProperty("TransformJobSummaries") TransformJobSummary[] transformJobSummaries) {
+        this.transformJobSummaries = transformJobSummaries;
+  }
 }

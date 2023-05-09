@@ -15,9 +15,11 @@ public class DeobfuscationFile {
      */
     
     public String symbolType;
+
     public DeobfuscationFile withSymbolType(String symbolType) {
         this.symbolType = symbolType;
         return this;
     }
     
+    public DeobfuscationFile(){}
 }

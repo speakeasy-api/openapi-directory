@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrderApiParsePlaceholdersFormResponse {
     
     public String contentType;
+
     public OrderApiParsePlaceholdersFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OrderApiParsePlaceholdersFormResponse {
      */
     
     public java.util.Map<String, Object> orderApiParsePlaceholdersForm200ApplicationJSONObject;
+
     public OrderApiParsePlaceholdersFormResponse withOrderApiParsePlaceholdersForm200ApplicationJSONObject(java.util.Map<String, Object> orderApiParsePlaceholdersForm200ApplicationJSONObject) {
         this.orderApiParsePlaceholdersForm200ApplicationJSONObject = orderApiParsePlaceholdersForm200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class OrderApiParsePlaceholdersFormResponse {
      */
     
     public java.util.Map<String, Object> orderApiParsePlaceholdersForm200TextJSONObject;
+
     public OrderApiParsePlaceholdersFormResponse withOrderApiParsePlaceholdersForm200TextJSONObject(java.util.Map<String, Object> orderApiParsePlaceholdersForm200TextJSONObject) {
         this.orderApiParsePlaceholdersForm200TextJSONObject = orderApiParsePlaceholdersForm200TextJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class OrderApiParsePlaceholdersFormResponse {
     
     
     public Integer statusCode;
+
     public OrderApiParsePlaceholdersFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class OrderApiParsePlaceholdersFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrderApiParsePlaceholdersFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OrderApiParsePlaceholdersFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

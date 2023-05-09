@@ -15,6 +15,7 @@ public class FailureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public FailureDetails withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class FailureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusCode")
     public Long statusCode;
+
     public FailureDetails withStatusCode(Long statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public FailureDetails(){}
 }

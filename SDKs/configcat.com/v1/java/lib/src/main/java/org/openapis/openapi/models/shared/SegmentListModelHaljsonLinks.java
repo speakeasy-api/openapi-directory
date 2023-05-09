@@ -12,9 +12,11 @@ public class SegmentListModelHaljsonLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public SegmentListModelHaljsonLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public SegmentListModelHaljsonLinks(){}
 }

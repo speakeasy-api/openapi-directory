@@ -22,6 +22,7 @@ public class MonitoringSchedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public MonitoringSchedule withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class MonitoringSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public MonitoringSchedule withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -38,6 +40,7 @@ public class MonitoringSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public MonitoringSchedule withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -48,6 +51,7 @@ public class MonitoringSchedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public MonitoringSchedule withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -59,6 +63,7 @@ public class MonitoringSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastMonitoringExecutionSummary")
     public MonitoringExecutionSummary lastMonitoringExecutionSummary;
+
     public MonitoringSchedule withLastMonitoringExecutionSummary(MonitoringExecutionSummary lastMonitoringExecutionSummary) {
         this.lastMonitoringExecutionSummary = lastMonitoringExecutionSummary;
         return this;
@@ -67,6 +72,7 @@ public class MonitoringSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringScheduleArn")
     public String monitoringScheduleArn;
+
     public MonitoringSchedule withMonitoringScheduleArn(String monitoringScheduleArn) {
         this.monitoringScheduleArn = monitoringScheduleArn;
         return this;
@@ -78,6 +84,7 @@ public class MonitoringSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringScheduleConfig")
     public MonitoringScheduleConfig monitoringScheduleConfig;
+
     public MonitoringSchedule withMonitoringScheduleConfig(MonitoringScheduleConfig monitoringScheduleConfig) {
         this.monitoringScheduleConfig = monitoringScheduleConfig;
         return this;
@@ -86,6 +93,7 @@ public class MonitoringSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringScheduleName")
     public String monitoringScheduleName;
+
     public MonitoringSchedule withMonitoringScheduleName(String monitoringScheduleName) {
         this.monitoringScheduleName = monitoringScheduleName;
         return this;
@@ -94,6 +102,7 @@ public class MonitoringSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringScheduleStatus")
     public ScheduleStatusEnum monitoringScheduleStatus;
+
     public MonitoringSchedule withMonitoringScheduleStatus(ScheduleStatusEnum monitoringScheduleStatus) {
         this.monitoringScheduleStatus = monitoringScheduleStatus;
         return this;
@@ -102,6 +111,7 @@ public class MonitoringSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringType")
     public MonitoringTypeEnum monitoringType;
+
     public MonitoringSchedule withMonitoringType(MonitoringTypeEnum monitoringType) {
         this.monitoringType = monitoringType;
         return this;
@@ -110,9 +120,11 @@ public class MonitoringSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public MonitoringSchedule withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public MonitoringSchedule(){}
 }

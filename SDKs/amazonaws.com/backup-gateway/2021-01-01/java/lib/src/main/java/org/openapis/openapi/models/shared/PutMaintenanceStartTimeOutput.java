@@ -15,9 +15,11 @@ public class PutMaintenanceStartTimeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public PutMaintenanceStartTimeOutput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
     }
     
+    public PutMaintenanceStartTimeOutput(){}
 }

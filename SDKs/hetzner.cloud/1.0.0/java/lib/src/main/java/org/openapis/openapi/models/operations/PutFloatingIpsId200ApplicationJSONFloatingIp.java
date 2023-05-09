@@ -12,6 +12,7 @@ public class PutFloatingIpsId200ApplicationJSONFloatingIp {
      */
     @JsonProperty("blocked")
     public Boolean blocked;
+
     public PutFloatingIpsId200ApplicationJSONFloatingIp withBlocked(Boolean blocked) {
         this.blocked = blocked;
         return this;
@@ -22,6 +23,7 @@ public class PutFloatingIpsId200ApplicationJSONFloatingIp {
      */
     @JsonProperty("created")
     public String created;
+
     public PutFloatingIpsId200ApplicationJSONFloatingIp withCreated(String created) {
         this.created = created;
         return this;
@@ -32,6 +34,7 @@ public class PutFloatingIpsId200ApplicationJSONFloatingIp {
      */
     @JsonProperty("description")
     public String description;
+
     public PutFloatingIpsId200ApplicationJSONFloatingIp withDescription(String description) {
         this.description = description;
         return this;
@@ -42,6 +45,7 @@ public class PutFloatingIpsId200ApplicationJSONFloatingIp {
      */
     @JsonProperty("dns_ptr")
     public PutFloatingIpsId200ApplicationJSONFloatingIpDnsPtr[] dnsPtr;
+
     public PutFloatingIpsId200ApplicationJSONFloatingIp withDnsPtr(PutFloatingIpsId200ApplicationJSONFloatingIpDnsPtr[] dnsPtr) {
         this.dnsPtr = dnsPtr;
         return this;
@@ -52,6 +56,7 @@ public class PutFloatingIpsId200ApplicationJSONFloatingIp {
      */
     @JsonProperty("home_location")
     public PutFloatingIpsId200ApplicationJSONFloatingIpHomeLocation homeLocation;
+
     public PutFloatingIpsId200ApplicationJSONFloatingIp withHomeLocation(PutFloatingIpsId200ApplicationJSONFloatingIpHomeLocation homeLocation) {
         this.homeLocation = homeLocation;
         return this;
@@ -62,6 +67,7 @@ public class PutFloatingIpsId200ApplicationJSONFloatingIp {
      */
     @JsonProperty("id")
     public Long id;
+
     public PutFloatingIpsId200ApplicationJSONFloatingIp withId(Long id) {
         this.id = id;
         return this;
@@ -72,6 +78,7 @@ public class PutFloatingIpsId200ApplicationJSONFloatingIp {
      */
     @JsonProperty("ip")
     public String ip;
+
     public PutFloatingIpsId200ApplicationJSONFloatingIp withIp(String ip) {
         this.ip = ip;
         return this;
@@ -82,6 +89,7 @@ public class PutFloatingIpsId200ApplicationJSONFloatingIp {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public PutFloatingIpsId200ApplicationJSONFloatingIp withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -92,6 +100,7 @@ public class PutFloatingIpsId200ApplicationJSONFloatingIp {
      */
     @JsonProperty("name")
     public String name;
+
     public PutFloatingIpsId200ApplicationJSONFloatingIp withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +111,7 @@ public class PutFloatingIpsId200ApplicationJSONFloatingIp {
      */
     @JsonProperty("protection")
     public PutFloatingIpsId200ApplicationJSONFloatingIpProtection protection;
+
     public PutFloatingIpsId200ApplicationJSONFloatingIp withProtection(PutFloatingIpsId200ApplicationJSONFloatingIpProtection protection) {
         this.protection = protection;
         return this;
@@ -112,6 +122,7 @@ public class PutFloatingIpsId200ApplicationJSONFloatingIp {
      */
     @JsonProperty("server")
     public Long server;
+
     public PutFloatingIpsId200ApplicationJSONFloatingIp withServer(Long server) {
         this.server = server;
         return this;
@@ -122,9 +133,24 @@ public class PutFloatingIpsId200ApplicationJSONFloatingIp {
      */
     @JsonProperty("type")
     public PutFloatingIpsId200ApplicationJSONFloatingIpTypeEnum type;
+
     public PutFloatingIpsId200ApplicationJSONFloatingIp withType(PutFloatingIpsId200ApplicationJSONFloatingIpTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PutFloatingIpsId200ApplicationJSONFloatingIp(@JsonProperty("blocked") Boolean blocked, @JsonProperty("created") String created, @JsonProperty("description") String description, @JsonProperty("dns_ptr") PutFloatingIpsId200ApplicationJSONFloatingIpDnsPtr[] dnsPtr, @JsonProperty("home_location") PutFloatingIpsId200ApplicationJSONFloatingIpHomeLocation homeLocation, @JsonProperty("id") Long id, @JsonProperty("ip") String ip, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("name") String name, @JsonProperty("protection") PutFloatingIpsId200ApplicationJSONFloatingIpProtection protection, @JsonProperty("server") Long server, @JsonProperty("type") PutFloatingIpsId200ApplicationJSONFloatingIpTypeEnum type) {
+        this.blocked = blocked;
+        this.created = created;
+        this.description = description;
+        this.dnsPtr = dnsPtr;
+        this.homeLocation = homeLocation;
+        this.id = id;
+        this.ip = ip;
+        this.labels = labels;
+        this.name = name;
+        this.protection = protection;
+        this.server = server;
+        this.type = type;
+  }
 }

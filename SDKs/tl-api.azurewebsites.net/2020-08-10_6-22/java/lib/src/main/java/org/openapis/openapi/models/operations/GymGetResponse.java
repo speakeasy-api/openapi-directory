@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GymGetResponse {
     
     public org.openapis.openapi.models.shared.ApiResponse apiResponse;
+
     public GymGetResponse withApiResponse(org.openapis.openapi.models.shared.ApiResponse apiResponse) {
         this.apiResponse = apiResponse;
         return this;
@@ -16,6 +18,7 @@ public class GymGetResponse {
     
     
     public String contentType;
+
     public GymGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GymGetResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultResponseDTOOfGymDTO defaultResponseDTOOfGymDTO;
+
     public GymGetResponse withDefaultResponseDTOOfGymDTO(org.openapis.openapi.models.shared.DefaultResponseDTOOfGymDTO defaultResponseDTOOfGymDTO) {
         this.defaultResponseDTOOfGymDTO = defaultResponseDTOOfGymDTO;
         return this;
@@ -33,6 +37,7 @@ public class GymGetResponse {
     
     
     public Integer statusCode;
+
     public GymGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GymGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GymGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GymGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class TrailInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeRegion")
     public String homeRegion;
+
     public TrailInfo withHomeRegion(String homeRegion) {
         this.homeRegion = homeRegion;
         return this;
@@ -23,6 +24,7 @@ public class TrailInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public TrailInfo withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class TrailInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrailARN")
     public String trailARN;
+
     public TrailInfo withTrailARN(String trailARN) {
         this.trailARN = trailARN;
         return this;
     }
     
+    public TrailInfo(){}
 }

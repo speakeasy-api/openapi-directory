@@ -15,9 +15,11 @@ public class WirelessConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsWifiEnabled")
     public Boolean isWifiEnabled;
+
     public WirelessConnection withIsWifiEnabled(Boolean isWifiEnabled) {
         this.isWifiEnabled = isWifiEnabled;
         return this;
     }
     
+    public WirelessConnection(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteUserResponse {
     
     public String contentType;
+
     public DeleteUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteUserResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteUserResponse deleteUserResponse;
+
     public DeleteUserResponse withDeleteUserResponse(org.openapis.openapi.models.shared.DeleteUserResponse deleteUserResponse) {
         this.deleteUserResponse = deleteUserResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteUserResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteUserResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteUserResponse {
      */
     
     public Object invalidUserStateFault;
+
     public DeleteUserResponse withInvalidUserStateFault(Object invalidUserStateFault) {
         this.invalidUserStateFault = invalidUserStateFault;
         return this;
@@ -46,6 +51,7 @@ public class DeleteUserResponse {
     
     
     public Integer statusCode;
+
     public DeleteUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteUserResponse {
      */
     
     public Object userNotFoundFault;
+
     public DeleteUserResponse withUserNotFoundFault(Object userNotFoundFault) {
         this.userNotFoundFault = userNotFoundFault;
         return this;
     }
     
+    public DeleteUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

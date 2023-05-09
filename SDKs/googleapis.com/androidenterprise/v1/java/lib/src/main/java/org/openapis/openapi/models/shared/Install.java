@@ -18,6 +18,7 @@ public class Install {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installState")
     public InstallInstallStateEnum installState;
+
     public Install withInstallState(InstallInstallStateEnum installState) {
         this.installState = installState;
         return this;
@@ -29,6 +30,7 @@ public class Install {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public Install withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -40,9 +42,11 @@ public class Install {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionCode")
     public Integer versionCode;
+
     public Install withVersionCode(Integer versionCode) {
         this.versionCode = versionCode;
         return this;
     }
     
+    public Install(){}
 }

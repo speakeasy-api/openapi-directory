@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetResponse {
     
     public String contentType;
+
     public IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudIntegrationsV1alphaSfdcChannel googleCloudIntegrationsV1alphaSfdcChannel;
+
     public IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetResponse withGoogleCloudIntegrationsV1alphaSfdcChannel(org.openapis.openapi.models.shared.GoogleCloudIntegrationsV1alphaSfdcChannel googleCloudIntegrationsV1alphaSfdcChannel) {
         this.googleCloudIntegrationsV1alphaSfdcChannel = googleCloudIntegrationsV1alphaSfdcChannel;
         return this;
@@ -26,6 +29,7 @@ public class IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetResponse {
     
     
     public Integer statusCode;
+
     public IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

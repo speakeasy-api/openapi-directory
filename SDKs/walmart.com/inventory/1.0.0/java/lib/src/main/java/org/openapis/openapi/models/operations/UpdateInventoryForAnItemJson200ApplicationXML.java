@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateInventoryForAnItemJson200ApplicationXML - Successful Operation
@@ -15,6 +15,7 @@ public class UpdateInventoryForAnItemJson200ApplicationXML {
      */
     
     public UpdateInventoryForAnItemJson200ApplicationXMLQuantity quantity;
+
     public UpdateInventoryForAnItemJson200ApplicationXML withQuantity(UpdateInventoryForAnItemJson200ApplicationXMLQuantity quantity) {
         this.quantity = quantity;
         return this;
@@ -25,9 +26,14 @@ public class UpdateInventoryForAnItemJson200ApplicationXML {
      */
     
     public String sku;
+
     public UpdateInventoryForAnItemJson200ApplicationXML withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public UpdateInventoryForAnItemJson200ApplicationXML(@JsonProperty("quantity") UpdateInventoryForAnItemJson200ApplicationXMLQuantity quantity, @JsonProperty("sku") String sku) {
+        this.quantity = quantity;
+        this.sku = sku;
+  }
 }

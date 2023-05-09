@@ -12,6 +12,7 @@ public class GetNetworksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
     public String labelSelector;
+
     public GetNetworksRequest withLabelSelector(String labelSelector) {
         this.labelSelector = labelSelector;
         return this;
@@ -22,9 +23,11 @@ public class GetNetworksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetNetworksRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetNetworksRequest(){}
 }

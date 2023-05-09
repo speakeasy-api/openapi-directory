@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestIdentityProviderResponse {
     
     public String contentType;
+
     public TestIdentityProviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TestIdentityProviderResponse {
      */
     
     public Object internalServiceError;
+
     public TestIdentityProviderResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class TestIdentityProviderResponse {
      */
     
     public Object invalidRequestException;
+
     public TestIdentityProviderResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class TestIdentityProviderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public TestIdentityProviderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class TestIdentityProviderResponse {
     
     
     public Integer statusCode;
+
     public TestIdentityProviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class TestIdentityProviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestIdentityProviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class TestIdentityProviderResponse {
      */
     
     public Object serviceUnavailableException;
+
     public TestIdentityProviderResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class TestIdentityProviderResponse {
      */
     
     public org.openapis.openapi.models.shared.TestIdentityProviderResponse testIdentityProviderResponse;
+
     public TestIdentityProviderResponse withTestIdentityProviderResponse(org.openapis.openapi.models.shared.TestIdentityProviderResponse testIdentityProviderResponse) {
         this.testIdentityProviderResponse = testIdentityProviderResponse;
         return this;
     }
     
+    public TestIdentityProviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ListProtocolsListsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListProtocolsListsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListProtocolsListsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProtocolsLists")
     public ProtocolsListDataSummary[] protocolsLists;
+
     public ListProtocolsListsResponse withProtocolsLists(ProtocolsListDataSummary[] protocolsLists) {
         this.protocolsLists = protocolsLists;
         return this;
     }
     
+    public ListProtocolsListsResponse(){}
 }

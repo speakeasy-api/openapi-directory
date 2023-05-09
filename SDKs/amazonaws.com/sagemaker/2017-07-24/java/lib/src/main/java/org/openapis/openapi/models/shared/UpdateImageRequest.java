@@ -12,6 +12,7 @@ public class UpdateImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteProperties")
     public String[] deleteProperties;
+
     public UpdateImageRequest withDeleteProperties(String[] deleteProperties) {
         this.deleteProperties = deleteProperties;
         return this;
@@ -20,6 +21,7 @@ public class UpdateImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateImageRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class UpdateImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public UpdateImageRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -35,6 +38,7 @@ public class UpdateImageRequest {
     
     @JsonProperty("ImageName")
     public String imageName;
+
     public UpdateImageRequest withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -43,9 +47,13 @@ public class UpdateImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public UpdateImageRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public UpdateImageRequest(@JsonProperty("ImageName") String imageName) {
+        this.imageName = imageName;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ArtifactDetails {
     @JsonProperty("maximumCount")
     public Long maximumCount;
+
     public ArtifactDetails withMaximumCount(Long maximumCount) {
         this.maximumCount = maximumCount;
         return this;
@@ -19,9 +20,14 @@ public class ArtifactDetails {
     
     @JsonProperty("minimumCount")
     public Long minimumCount;
+
     public ArtifactDetails withMinimumCount(Long minimumCount) {
         this.minimumCount = minimumCount;
         return this;
     }
     
+    public ArtifactDetails(@JsonProperty("maximumCount") Long maximumCount, @JsonProperty("minimumCount") Long minimumCount) {
+        this.maximumCount = maximumCount;
+        this.minimumCount = minimumCount;
+  }
 }

@@ -15,6 +15,7 @@ public class SearchApplicationSessionStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public SearchApplicationSessionStats withDate(Date date) {
         this.date = date;
         return this;
@@ -26,9 +27,11 @@ public class SearchApplicationSessionStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchSessionsCount")
     public String searchSessionsCount;
+
     public SearchApplicationSessionStats withSearchSessionsCount(String searchSessionsCount) {
         this.searchSessionsCount = searchSessionsCount;
         return this;
     }
     
+    public SearchApplicationSessionStats(){}
 }

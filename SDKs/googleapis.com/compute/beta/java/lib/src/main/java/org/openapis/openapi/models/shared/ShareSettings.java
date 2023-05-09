@@ -18,6 +18,7 @@ public class ShareSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectMap")
     public java.util.Map<String, ShareSettingsProjectConfig> projectMap;
+
     public ShareSettings withProjectMap(java.util.Map<String, ShareSettingsProjectConfig> projectMap) {
         this.projectMap = projectMap;
         return this;
@@ -29,6 +30,7 @@ public class ShareSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projects")
     public String[] projects;
+
     public ShareSettings withProjects(String[] projects) {
         this.projects = projects;
         return this;
@@ -40,9 +42,11 @@ public class ShareSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareType")
     public ShareSettingsShareTypeEnum shareType;
+
     public ShareSettings withShareType(ShareSettingsShareTypeEnum shareType) {
         this.shareType = shareType;
         return this;
     }
     
+    public ShareSettings(){}
 }

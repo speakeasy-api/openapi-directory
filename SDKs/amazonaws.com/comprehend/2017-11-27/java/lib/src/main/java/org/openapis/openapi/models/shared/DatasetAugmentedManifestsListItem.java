@@ -15,6 +15,7 @@ public class DatasetAugmentedManifestsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnnotationDataS3Uri")
     public String annotationDataS3Uri;
+
     public DatasetAugmentedManifestsListItem withAnnotationDataS3Uri(String annotationDataS3Uri) {
         this.annotationDataS3Uri = annotationDataS3Uri;
         return this;
@@ -22,6 +23,7 @@ public class DatasetAugmentedManifestsListItem {
     
     @JsonProperty("AttributeNames")
     public String[] attributeNames;
+
     public DatasetAugmentedManifestsListItem withAttributeNames(String[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
@@ -30,6 +32,7 @@ public class DatasetAugmentedManifestsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentType")
     public AugmentedManifestsDocumentTypeFormatEnum documentType;
+
     public DatasetAugmentedManifestsListItem withDocumentType(AugmentedManifestsDocumentTypeFormatEnum documentType) {
         this.documentType = documentType;
         return this;
@@ -37,6 +40,7 @@ public class DatasetAugmentedManifestsListItem {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public DatasetAugmentedManifestsListItem withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
@@ -45,9 +49,14 @@ public class DatasetAugmentedManifestsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceDocumentsS3Uri")
     public String sourceDocumentsS3Uri;
+
     public DatasetAugmentedManifestsListItem withSourceDocumentsS3Uri(String sourceDocumentsS3Uri) {
         this.sourceDocumentsS3Uri = sourceDocumentsS3Uri;
         return this;
     }
     
+    public DatasetAugmentedManifestsListItem(@JsonProperty("AttributeNames") String[] attributeNames, @JsonProperty("S3Uri") String s3Uri) {
+        this.attributeNames = attributeNames;
+        this.s3Uri = s3Uri;
+  }
 }

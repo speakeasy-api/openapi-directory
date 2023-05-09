@@ -7,14 +7,18 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * AnywhereConfiguration - GameLift Anywhere configuration options for your Anywhere fleets.
+ * AnywhereConfiguration - Amazon GameLift Anywhere configuration options for your Anywhere fleets.
  */
 public class AnywhereConfiguration {
     @JsonProperty("Cost")
     public String cost;
+
     public AnywhereConfiguration withCost(String cost) {
         this.cost = cost;
         return this;
     }
     
+    public AnywhereConfiguration(@JsonProperty("Cost") String cost) {
+        this.cost = cost;
+  }
 }

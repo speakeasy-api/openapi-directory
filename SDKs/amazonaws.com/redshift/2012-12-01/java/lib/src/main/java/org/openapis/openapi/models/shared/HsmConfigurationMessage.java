@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class HsmConfigurationMessage {
     
     public HsmConfigurationList[] hsmConfigurations;
+
     public HsmConfigurationMessage withHsmConfigurations(HsmConfigurationList[] hsmConfigurations) {
         this.hsmConfigurations = hsmConfigurations;
         return this;
@@ -19,9 +20,11 @@ public class HsmConfigurationMessage {
     
     
     public String marker;
+
     public HsmConfigurationMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public HsmConfigurationMessage(){}
 }

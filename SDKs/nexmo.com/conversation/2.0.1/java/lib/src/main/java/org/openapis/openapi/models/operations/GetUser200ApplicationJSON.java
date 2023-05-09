@@ -15,6 +15,7 @@ public class GetUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public GetUser200ApplicationJSON withHref(String href) {
         this.href = href;
         return this;
@@ -26,6 +27,7 @@ public class GetUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetUser200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -37,9 +39,11 @@ public class GetUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetUser200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetUser200ApplicationJSON(){}
 }

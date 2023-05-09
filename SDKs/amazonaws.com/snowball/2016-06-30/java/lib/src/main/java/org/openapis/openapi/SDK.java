@@ -172,6 +172,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -209,14 +214,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelClusterResponse res = new org.openapis.openapi.models.operations.CancelClusterResponse() {{
+        org.openapis.openapi.models.operations.CancelClusterResponse res = new org.openapis.openapi.models.operations.CancelClusterResponse(contentType, httpRes.statusCode()) {{
             cancelClusterResult = null;
             kmsRequestFailedException = null;
             invalidJobStateException = null;
             invalidResourceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -285,14 +288,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelJobResponse res = new org.openapis.openapi.models.operations.CancelJobResponse() {{
+        org.openapis.openapi.models.operations.CancelJobResponse res = new org.openapis.openapi.models.operations.CancelJobResponse(contentType, httpRes.statusCode()) {{
             cancelJobResult = null;
             invalidResourceException = null;
             invalidJobStateException = null;
             kmsRequestFailedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -361,13 +362,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAddressResponse res = new org.openapis.openapi.models.operations.CreateAddressResponse() {{
+        org.openapis.openapi.models.operations.CreateAddressResponse res = new org.openapis.openapi.models.operations.CreateAddressResponse(contentType, httpRes.statusCode()) {{
             createAddressResult = null;
             invalidAddressException = null;
             unsupportedAddressException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -429,15 +428,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateClusterResponse res = new org.openapis.openapi.models.operations.CreateClusterResponse() {{
+        org.openapis.openapi.models.operations.CreateClusterResponse res = new org.openapis.openapi.models.operations.CreateClusterResponse(contentType, httpRes.statusCode()) {{
             createClusterResult = null;
             invalidResourceException = null;
             kmsRequestFailedException = null;
             invalidInputCombinationException = null;
             ec2RequestFailedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -480,7 +477,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Creates a job to import or export data between Amazon S3 and your on-premises data center. Your Amazon Web Services account must have the right trust policies and permissions in place to create a job for a Snow device. If you're creating a job for a node in a cluster, you only need to provide the &lt;code&gt;clusterId&lt;/code&gt; value; the other job attributes are inherited from the cluster. &lt;/p&gt; &lt;note&gt; &lt;p&gt;Only the Snowball; Edge device type is supported when ordering clustered jobs.&lt;/p&gt; &lt;p&gt;The device capacity is optional.&lt;/p&gt; &lt;p&gt;Availability of device types differ by Amazon Web Services Region. For more information about Region availability, see &lt;a href="https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/?p=ngi&amp;amp;loc=4"&gt;Amazon Web Services Regional Services&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt; &lt;p/&gt; &lt;p class="title"&gt; &lt;b&gt;Snow Family devices and their capacities.&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Snow Family device type: &lt;b&gt;SNC1_SSD&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T14&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Snowcone &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Snow Family device type: &lt;b&gt;SNC1_HDD&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T8&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Snowcone &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Device type: &lt;b&gt;EDGE_S&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T98&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Snowball Edge Storage Optimized for data transfer only &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Device type: &lt;b&gt;EDGE_CG&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T42&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Snowball Edge Compute Optimized with GPU&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Device type: &lt;b&gt;EDGE_C&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T42&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Snowball Edge Compute Optimized without GPU&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Device type: &lt;b&gt;EDGE&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T100&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Snowball Edge Storage Optimized with EC2 Compute&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Device type: &lt;b&gt;STANDARD&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T50&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Original Snowball device&lt;/p&gt; &lt;note&gt; &lt;p&gt;This device is only available in the Ningxia, Beijing, and Singapore Amazon Web Services Region &lt;/p&gt; &lt;/note&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Device type: &lt;b&gt;STANDARD&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T80&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Original Snowball device&lt;/p&gt; &lt;note&gt; &lt;p&gt;This device is only available in the Ningxia, Beijing, and Singapore Amazon Web Services Region. &lt;/p&gt; &lt;/note&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;/ul&gt;
+     * &lt;p&gt;Creates a job to import or export data between Amazon S3 and your on-premises data center. Your Amazon Web Services account must have the right trust policies and permissions in place to create a job for a Snow device. If you're creating a job for a node in a cluster, you only need to provide the &lt;code&gt;clusterId&lt;/code&gt; value; the other job attributes are inherited from the cluster. &lt;/p&gt; &lt;note&gt; &lt;p&gt;Only the Snowball; Edge device type is supported when ordering clustered jobs.&lt;/p&gt; &lt;p&gt;The device capacity is optional.&lt;/p&gt; &lt;p&gt;Availability of device types differ by Amazon Web Services Region. For more information about Region availability, see &lt;a href="https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/?p=ngi&amp;amp;loc=4"&gt;Amazon Web Services Regional Services&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt; &lt;p/&gt; &lt;p class="title"&gt; &lt;b&gt;Snow Family devices and their capacities.&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Device type: &lt;b&gt;SNC1_SSD&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T14&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Snowcone &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Device type: &lt;b&gt;SNC1_HDD&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T8&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Snowcone &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Device type: &lt;b&gt;EDGE_S&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T98&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Snowball Edge Storage Optimized for data transfer only &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Device type: &lt;b&gt;EDGE_CG&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T42&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Snowball Edge Compute Optimized with GPU&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Device type: &lt;b&gt;EDGE_C&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T42&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Snowball Edge Compute Optimized without GPU&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Device type: &lt;b&gt;EDGE&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T100&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Snowball Edge Storage Optimized with EC2 Compute&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Device type: &lt;b&gt;STANDARD&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T50&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Original Snowball device&lt;/p&gt; &lt;note&gt; &lt;p&gt;This device is only available in the Ningxia, Beijing, and Singapore Amazon Web Services Region &lt;/p&gt; &lt;/note&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Device type: &lt;b&gt;STANDARD&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T80&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Original Snowball device&lt;/p&gt; &lt;note&gt; &lt;p&gt;This device is only available in the Ningxia, Beijing, and Singapore Amazon Web Services Region. &lt;/p&gt; &lt;/note&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Device type: &lt;b&gt;V3_5C&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T32&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Snowball Edge Compute Optimized without GPU&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Device type: &lt;b&gt;V3_5S&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Capacity: T240&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Description: Snowball Edge Storage Optimized 210TB&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p/&gt; &lt;/li&gt; &lt;/ul&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -513,7 +510,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateJobResponse res = new org.openapis.openapi.models.operations.CreateJobResponse() {{
+        org.openapis.openapi.models.operations.CreateJobResponse res = new org.openapis.openapi.models.operations.CreateJobResponse(contentType, httpRes.statusCode()) {{
             createJobResult = null;
             invalidResourceException = null;
             kmsRequestFailedException = null;
@@ -521,8 +518,6 @@ public class SDK {
             clusterLimitExceededException = null;
             ec2RequestFailedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -605,12 +600,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLongTermPricingResponse res = new org.openapis.openapi.models.operations.CreateLongTermPricingResponse() {{
+        org.openapis.openapi.models.operations.CreateLongTermPricingResponse res = new org.openapis.openapi.models.operations.CreateLongTermPricingResponse(contentType, httpRes.statusCode()) {{
             createLongTermPricingResult = null;
             invalidResourceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -665,7 +658,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateReturnShippingLabelResponse res = new org.openapis.openapi.models.operations.CreateReturnShippingLabelResponse() {{
+        org.openapis.openapi.models.operations.CreateReturnShippingLabelResponse res = new org.openapis.openapi.models.operations.CreateReturnShippingLabelResponse(contentType, httpRes.statusCode()) {{
             createReturnShippingLabelResult = null;
             invalidResourceException = null;
             invalidJobStateException = null;
@@ -673,8 +666,6 @@ public class SDK {
             conflictException = null;
             returnShippingLabelAlreadyExistsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -757,12 +748,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeAddressResponse res = new org.openapis.openapi.models.operations.DescribeAddressResponse() {{
+        org.openapis.openapi.models.operations.DescribeAddressResponse res = new org.openapis.openapi.models.operations.DescribeAddressResponse(contentType, httpRes.statusCode()) {{
             describeAddressResult = null;
             invalidResourceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -823,13 +812,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeAddressesResponse res = new org.openapis.openapi.models.operations.DescribeAddressesResponse() {{
+        org.openapis.openapi.models.operations.DescribeAddressesResponse res = new org.openapis.openapi.models.operations.DescribeAddressesResponse(contentType, httpRes.statusCode()) {{
             describeAddressesResult = null;
             invalidResourceException = null;
             invalidNextTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -891,12 +878,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeClusterResponse res = new org.openapis.openapi.models.operations.DescribeClusterResponse() {{
+        org.openapis.openapi.models.operations.DescribeClusterResponse res = new org.openapis.openapi.models.operations.DescribeClusterResponse(contentType, httpRes.statusCode()) {{
             describeClusterResult = null;
             invalidResourceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -951,12 +936,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeJobResponse res = new org.openapis.openapi.models.operations.DescribeJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeJobResponse res = new org.openapis.openapi.models.operations.DescribeJobResponse(contentType, httpRes.statusCode()) {{
             describeJobResult = null;
             invalidResourceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1011,14 +994,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeReturnShippingLabelResponse res = new org.openapis.openapi.models.operations.DescribeReturnShippingLabelResponse() {{
+        org.openapis.openapi.models.operations.DescribeReturnShippingLabelResponse res = new org.openapis.openapi.models.operations.DescribeReturnShippingLabelResponse(contentType, httpRes.statusCode()) {{
             describeReturnShippingLabelResult = null;
             invalidResourceException = null;
             invalidJobStateException = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1087,13 +1068,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetJobManifestResponse res = new org.openapis.openapi.models.operations.GetJobManifestResponse() {{
+        org.openapis.openapi.models.operations.GetJobManifestResponse res = new org.openapis.openapi.models.operations.GetJobManifestResponse(contentType, httpRes.statusCode()) {{
             getJobManifestResult = null;
             invalidResourceException = null;
             invalidJobStateException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1155,13 +1134,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetJobUnlockCodeResponse res = new org.openapis.openapi.models.operations.GetJobUnlockCodeResponse() {{
+        org.openapis.openapi.models.operations.GetJobUnlockCodeResponse res = new org.openapis.openapi.models.operations.GetJobUnlockCodeResponse(contentType, httpRes.statusCode()) {{
             getJobUnlockCodeResult = null;
             invalidResourceException = null;
             invalidJobStateException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1223,11 +1200,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnowballUsageResponse res = new org.openapis.openapi.models.operations.GetSnowballUsageResponse() {{
+        org.openapis.openapi.models.operations.GetSnowballUsageResponse res = new org.openapis.openapi.models.operations.GetSnowballUsageResponse(contentType, httpRes.statusCode()) {{
             getSnowballUsageResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1275,13 +1250,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSoftwareUpdatesResponse res = new org.openapis.openapi.models.operations.GetSoftwareUpdatesResponse() {{
+        org.openapis.openapi.models.operations.GetSoftwareUpdatesResponse res = new org.openapis.openapi.models.operations.GetSoftwareUpdatesResponse(contentType, httpRes.statusCode()) {{
             getSoftwareUpdatesResult = null;
             invalidResourceException = null;
             invalidJobStateException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1349,13 +1322,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListClusterJobsResponse res = new org.openapis.openapi.models.operations.ListClusterJobsResponse() {{
+        org.openapis.openapi.models.operations.ListClusterJobsResponse res = new org.openapis.openapi.models.operations.ListClusterJobsResponse(contentType, httpRes.statusCode()) {{
             listClusterJobsResult = null;
             invalidResourceException = null;
             invalidNextTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1423,12 +1394,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListClustersResponse res = new org.openapis.openapi.models.operations.ListClustersResponse() {{
+        org.openapis.openapi.models.operations.ListClustersResponse res = new org.openapis.openapi.models.operations.ListClustersResponse(contentType, httpRes.statusCode()) {{
             listClustersResult = null;
             invalidNextTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1450,7 +1419,7 @@ public class SDK {
     }
 
     /**
-     * This action returns a list of the different Amazon EC2 Amazon Machine Images (AMIs) that are owned by your Amazon Web Services accountthat would be supported for use on a Snow device. Currently, supported AMIs are based on the CentOS 7 (x86_64) - with Updates HVM, Ubuntu Server 14.04 LTS (HVM), and Ubuntu 16.04 LTS - Xenial (HVM) images, available on the Amazon Web Services Marketplace.
+     * This action returns a list of the different Amazon EC2 Amazon Machine Images (AMIs) that are owned by your Amazon Web Services accountthat would be supported for use on a Snow device. Currently, supported AMIs are based on the Amazon Linux-2, Ubuntu 20.04 LTS - Focal, or Ubuntu 22.04 LTS - Jammy images, available on the Amazon Web Services Marketplace. Ubuntu 16.04 LTS - Xenial (HVM) images are no longer supported in the Market, but still supported for use on devices through Amazon EC2 VM Import/Export and running locally in AMIs.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1489,13 +1458,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCompatibleImagesResponse res = new org.openapis.openapi.models.operations.ListCompatibleImagesResponse() {{
+        org.openapis.openapi.models.operations.ListCompatibleImagesResponse res = new org.openapis.openapi.models.operations.ListCompatibleImagesResponse(contentType, httpRes.statusCode()) {{
             listCompatibleImagesResult = null;
             invalidNextTokenException = null;
             ec2RequestFailedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1563,12 +1530,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListJobsResponse res = new org.openapis.openapi.models.operations.ListJobsResponse() {{
+        org.openapis.openapi.models.operations.ListJobsResponse res = new org.openapis.openapi.models.operations.ListJobsResponse(contentType, httpRes.statusCode()) {{
             listJobsResult = null;
             invalidNextTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1629,13 +1594,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLongTermPricingResponse res = new org.openapis.openapi.models.operations.ListLongTermPricingResponse() {{
+        org.openapis.openapi.models.operations.ListLongTermPricingResponse res = new org.openapis.openapi.models.operations.ListLongTermPricingResponse(contentType, httpRes.statusCode()) {{
             listLongTermPricingResult = null;
             invalidResourceException = null;
             invalidNextTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1697,13 +1660,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListServiceVersionsResponse res = new org.openapis.openapi.models.operations.ListServiceVersionsResponse() {{
+        org.openapis.openapi.models.operations.ListServiceVersionsResponse res = new org.openapis.openapi.models.operations.ListServiceVersionsResponse(contentType, httpRes.statusCode()) {{
             listServiceVersionsResult = null;
             invalidNextTokenException = null;
             invalidResourceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1765,7 +1726,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateClusterResponse res = new org.openapis.openapi.models.operations.UpdateClusterResponse() {{
+        org.openapis.openapi.models.operations.UpdateClusterResponse res = new org.openapis.openapi.models.operations.UpdateClusterResponse(contentType, httpRes.statusCode()) {{
             updateClusterResult = null;
             invalidResourceException = null;
             invalidJobStateException = null;
@@ -1773,8 +1734,6 @@ public class SDK {
             invalidInputCombinationException = null;
             ec2RequestFailedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1857,7 +1816,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateJobResponse res = new org.openapis.openapi.models.operations.UpdateJobResponse() {{
+        org.openapis.openapi.models.operations.UpdateJobResponse res = new org.openapis.openapi.models.operations.UpdateJobResponse(contentType, httpRes.statusCode()) {{
             updateJobResult = null;
             invalidResourceException = null;
             invalidJobStateException = null;
@@ -1866,8 +1825,6 @@ public class SDK {
             clusterLimitExceededException = null;
             ec2RequestFailedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1957,13 +1914,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateJobShipmentStateResponse res = new org.openapis.openapi.models.operations.UpdateJobShipmentStateResponse() {{
+        org.openapis.openapi.models.operations.UpdateJobShipmentStateResponse res = new org.openapis.openapi.models.operations.UpdateJobShipmentStateResponse(contentType, httpRes.statusCode()) {{
             updateJobShipmentStateResult = null;
             invalidResourceException = null;
             invalidJobStateException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2025,12 +1980,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateLongTermPricingResponse res = new org.openapis.openapi.models.operations.UpdateLongTermPricingResponse() {{
+        org.openapis.openapi.models.operations.UpdateLongTermPricingResponse res = new org.openapis.openapi.models.operations.UpdateLongTermPricingResponse(contentType, httpRes.statusCode()) {{
             updateLongTermPricingResult = null;
             invalidResourceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

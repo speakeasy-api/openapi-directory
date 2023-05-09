@@ -12,9 +12,11 @@ public class ListPlatformsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
     public Boolean aliases;
+
     public ListPlatformsRequest withAliases(Boolean aliases) {
         this.aliases = aliases;
         return this;
     }
     
+    public ListPlatformsRequest(){}
 }

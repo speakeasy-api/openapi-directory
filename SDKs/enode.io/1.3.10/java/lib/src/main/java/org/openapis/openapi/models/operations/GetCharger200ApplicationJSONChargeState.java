@@ -17,6 +17,7 @@ public class GetCharger200ApplicationJSONChargeState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeRate")
     public Double chargeRate;
+
     public GetCharger200ApplicationJSONChargeState withChargeRate(Double chargeRate) {
         this.chargeRate = chargeRate;
         return this;
@@ -28,6 +29,7 @@ public class GetCharger200ApplicationJSONChargeState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCharging")
     public Boolean isCharging;
+
     public GetCharger200ApplicationJSONChargeState withIsCharging(Boolean isCharging) {
         this.isCharging = isCharging;
         return this;
@@ -39,9 +41,11 @@ public class GetCharger200ApplicationJSONChargeState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPluggedIn")
     public Boolean isPluggedIn;
+
     public GetCharger200ApplicationJSONChargeState withIsPluggedIn(Boolean isPluggedIn) {
         this.isPluggedIn = isPluggedIn;
         return this;
     }
     
+    public GetCharger200ApplicationJSONChargeState(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContentByGlobalIdRequest {
@@ -12,6 +13,7 @@ public class GetContentByGlobalIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dereference")
     public Boolean dereference;
+
     public GetContentByGlobalIdRequest withDereference(Boolean dereference) {
         this.dereference = dereference;
         return this;
@@ -22,9 +24,13 @@ public class GetContentByGlobalIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=globalId")
     public Long globalId;
+
     public GetContentByGlobalIdRequest withGlobalId(Long globalId) {
         this.globalId = globalId;
         return this;
     }
     
+    public GetContentByGlobalIdRequest(@JsonProperty("globalId") Long globalId) {
+        this.globalId = globalId;
+  }
 }

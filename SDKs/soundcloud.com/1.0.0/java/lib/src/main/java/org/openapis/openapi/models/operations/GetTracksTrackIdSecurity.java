@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTracksTrackIdSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=client_id")
     public String clientId;
+
     public GetTracksTrackIdSecurity withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
     
+    public GetTracksTrackIdSecurity(@JsonProperty("ClientId") String clientId) {
+        this.clientId = clientId;
+  }
 }

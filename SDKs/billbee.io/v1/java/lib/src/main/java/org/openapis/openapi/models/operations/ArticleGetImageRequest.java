@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleGetImageRequest {
@@ -12,9 +13,13 @@ public class ArticleGetImageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=imageId")
     public Long imageId;
+
     public ArticleGetImageRequest withImageId(Long imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public ArticleGetImageRequest(@JsonProperty("imageId") Long imageId) {
+        this.imageId = imageId;
+  }
 }

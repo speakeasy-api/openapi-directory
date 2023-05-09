@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GistsListCommentsResponse {
     
     public String contentType;
+
     public GistsListCommentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GistsListCommentsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GistsListCommentsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GistsListCommentsResponse {
     
     
     public Integer statusCode;
+
     public GistsListCommentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GistsListCommentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GistsListCommentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GistsListCommentsResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public GistsListCommentsResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class GistsListCommentsResponse {
      */
     
     public org.openapis.openapi.models.shared.GistComment[] gistComments;
+
     public GistsListCommentsResponse withGistComments(org.openapis.openapi.models.shared.GistComment[] gistComments) {
         this.gistComments = gistComments;
         return this;
     }
     
+    public GistsListCommentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

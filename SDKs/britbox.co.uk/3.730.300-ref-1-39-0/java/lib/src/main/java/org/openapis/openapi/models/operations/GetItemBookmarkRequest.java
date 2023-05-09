@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemBookmarkRequest {
@@ -32,6 +33,7 @@ public class GetItemBookmarkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetItemBookmarkRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -42,6 +44,7 @@ public class GetItemBookmarkRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
     public String itemId;
+
     public GetItemBookmarkRequest withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -62,9 +65,13 @@ public class GetItemBookmarkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetItemBookmarkRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetItemBookmarkRequest(@JsonProperty("itemId") String itemId) {
+        this.itemId = itemId;
+  }
 }

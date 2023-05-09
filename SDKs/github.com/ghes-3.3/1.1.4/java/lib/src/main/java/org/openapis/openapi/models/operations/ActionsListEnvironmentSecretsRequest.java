@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListEnvironmentSecretsRequest {
@@ -12,6 +13,7 @@ public class ActionsListEnvironmentSecretsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
     public String environmentName;
+
     public ActionsListEnvironmentSecretsRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -22,6 +24,7 @@ public class ActionsListEnvironmentSecretsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActionsListEnvironmentSecretsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class ActionsListEnvironmentSecretsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActionsListEnvironmentSecretsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +46,14 @@ public class ActionsListEnvironmentSecretsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
     public Long repositoryId;
+
     public ActionsListEnvironmentSecretsRequest withRepositoryId(Long repositoryId) {
         this.repositoryId = repositoryId;
         return this;
     }
     
+    public ActionsListEnvironmentSecretsRequest(@JsonProperty("environment_name") String environmentName, @JsonProperty("repository_id") Long repositoryId) {
+        this.environmentName = environmentName;
+        this.repositoryId = repositoryId;
+  }
 }

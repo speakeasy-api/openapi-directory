@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFirewallResponse {
@@ -12,6 +13,7 @@ public class GetFirewallResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public GetFirewallResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -22,6 +24,7 @@ public class GetFirewallResponse {
      */
     
     public org.openapis.openapi.models.shared.BaseFirewallRule baseFirewallRule;
+
     public GetFirewallResponse withBaseFirewallRule(org.openapis.openapi.models.shared.BaseFirewallRule baseFirewallRule) {
         this.baseFirewallRule = baseFirewallRule;
         return this;
@@ -29,6 +32,7 @@ public class GetFirewallResponse {
     
     
     public String contentType;
+
     public GetFirewallResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class GetFirewallResponse {
     
     
     public Integer statusCode;
+
     public GetFirewallResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetFirewallResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFirewallResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFirewallResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

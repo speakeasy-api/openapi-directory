@@ -12,6 +12,7 @@ public class Root200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holidays")
     public Root200ApplicationJSONLinksHolidays holidays;
+
     public Root200ApplicationJSONLinks withHolidays(Root200ApplicationJSONLinksHolidays holidays) {
         this.holidays = holidays;
         return this;
@@ -20,6 +21,7 @@ public class Root200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provinces")
     public Root200ApplicationJSONLinksProvinces provinces;
+
     public Root200ApplicationJSONLinks withProvinces(Root200ApplicationJSONLinksProvinces provinces) {
         this.provinces = provinces;
         return this;
@@ -28,6 +30,7 @@ public class Root200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Root200ApplicationJSONLinksSelf self;
+
     public Root200ApplicationJSONLinks withSelf(Root200ApplicationJSONLinksSelf self) {
         this.self = self;
         return this;
@@ -36,9 +39,11 @@ public class Root200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public Root200ApplicationJSONLinksSpec spec;
+
     public Root200ApplicationJSONLinks withSpec(Root200ApplicationJSONLinksSpec spec) {
         this.spec = spec;
         return this;
     }
     
+    public Root200ApplicationJSONLinks(){}
 }

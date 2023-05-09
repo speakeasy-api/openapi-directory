@@ -15,9 +15,11 @@ public class GetDimensionKeyDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public DimensionKeyDetail[] dimensions;
+
     public GetDimensionKeyDetailsResponse withDimensions(DimensionKeyDetail[] dimensions) {
         this.dimensions = dimensions;
         return this;
     }
     
+    public GetDimensionKeyDetailsResponse(){}
 }

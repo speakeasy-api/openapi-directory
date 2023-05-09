@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProtocolSnmpv3GetEnginebootsResponse {
     
     public String contentType;
+
     public ProtocolSnmpv3GetEnginebootsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProtocolSnmpv3GetEnginebootsResponse {
     
     
     public Integer statusCode;
+
     public ProtocolSnmpv3GetEnginebootsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProtocolSnmpv3GetEnginebootsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProtocolSnmpv3GetEnginebootsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ProtocolSnmpv3GetEnginebootsResponse {
      */
     
     public Integer protocolSnmpv3GetEngineboots200ApplicationJSONInt32Integer;
+
     public ProtocolSnmpv3GetEnginebootsResponse withProtocolSnmpv3GetEngineboots200ApplicationJSONInt32Integer(Integer protocolSnmpv3GetEngineboots200ApplicationJSONInt32Integer) {
         this.protocolSnmpv3GetEngineboots200ApplicationJSONInt32Integer = protocolSnmpv3GetEngineboots200ApplicationJSONInt32Integer;
         return this;
     }
     
+    public ProtocolSnmpv3GetEnginebootsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

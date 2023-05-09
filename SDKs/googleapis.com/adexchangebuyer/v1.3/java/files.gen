@@ -127,4 +127,12 @@ lib/src/main/java/org/openapis/openapi/models/shared/PretargetingConfigExcludedP
 lib/src/main/java/org/openapis/openapi/models/shared/PretargetingConfigPlacements.java
 lib/src/main/java/org/openapis/openapi/models/shared/PretargetingConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/PretargetingConfigList.java
+docs/sdk/README.md
+docs/accounts/README.md
+docs/billinginfo/README.md
+docs/budget/README.md
+docs/creatives/README.md
+docs/directdeals/README.md
+docs/performancereport/README.md
+docs/pretargetingconfig/README.md
 USAGE.md

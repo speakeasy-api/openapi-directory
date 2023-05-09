@@ -15,6 +15,7 @@ public class UpcomingMaintenanceTimeWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earliest")
     public String earliest;
+
     public UpcomingMaintenanceTimeWindow withEarliest(String earliest) {
         this.earliest = earliest;
         return this;
@@ -23,9 +24,11 @@ public class UpcomingMaintenanceTimeWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latest")
     public String latest;
+
     public UpcomingMaintenanceTimeWindow withLatest(String latest) {
         this.latest = latest;
         return this;
     }
     
+    public UpcomingMaintenanceTimeWindow(){}
 }

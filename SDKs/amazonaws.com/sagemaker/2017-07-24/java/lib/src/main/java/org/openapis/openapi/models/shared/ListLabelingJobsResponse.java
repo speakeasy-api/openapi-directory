@@ -15,6 +15,7 @@ public class ListLabelingJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelingJobSummaryList")
     public LabelingJobSummary[] labelingJobSummaryList;
+
     public ListLabelingJobsResponse withLabelingJobSummaryList(LabelingJobSummary[] labelingJobSummaryList) {
         this.labelingJobSummaryList = labelingJobSummaryList;
         return this;
@@ -23,9 +24,11 @@ public class ListLabelingJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLabelingJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLabelingJobsResponse(){}
 }

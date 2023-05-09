@@ -18,6 +18,7 @@ public class Line {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBox")
     public Double[] boundingBox;
+
     public Line withBoundingBox(Double[] boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -29,6 +30,7 @@ public class Line {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public Line withText(String text) {
         this.text = text;
         return this;
@@ -40,9 +42,11 @@ public class Line {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("words")
     public Word[] words;
+
     public Line withWords(Word[] words) {
         this.words = words;
         return this;
     }
     
+    public Line(){}
 }

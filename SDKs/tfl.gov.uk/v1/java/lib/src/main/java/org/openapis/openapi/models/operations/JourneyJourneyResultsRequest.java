@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JourneyJourneyResultsRequest {
@@ -12,6 +13,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accessibilityPreference")
     public JourneyJourneyResultsAccessibilityPreferenceEnum[] accessibilityPreference;
+
     public JourneyJourneyResultsRequest withAccessibilityPreference(JourneyJourneyResultsAccessibilityPreferenceEnum[] accessibilityPreference) {
         this.accessibilityPreference = accessibilityPreference;
         return this;
@@ -22,6 +24,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=adjustment")
     public String adjustment;
+
     public JourneyJourneyResultsRequest withAdjustment(String adjustment) {
         this.adjustment = adjustment;
         return this;
@@ -32,6 +35,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternativeCycle")
     public Boolean alternativeCycle;
+
     public JourneyJourneyResultsRequest withAlternativeCycle(Boolean alternativeCycle) {
         this.alternativeCycle = alternativeCycle;
         return this;
@@ -42,6 +46,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternativeWalking")
     public Boolean alternativeWalking;
+
     public JourneyJourneyResultsRequest withAlternativeWalking(Boolean alternativeWalking) {
         this.alternativeWalking = alternativeWalking;
         return this;
@@ -52,6 +57,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=applyHtmlMarkup")
     public Boolean applyHtmlMarkup;
+
     public JourneyJourneyResultsRequest withApplyHtmlMarkup(Boolean applyHtmlMarkup) {
         this.applyHtmlMarkup = applyHtmlMarkup;
         return this;
@@ -62,6 +68,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bikeProficiency")
     public JourneyJourneyResultsBikeProficiencyEnum[] bikeProficiency;
+
     public JourneyJourneyResultsRequest withBikeProficiency(JourneyJourneyResultsBikeProficiencyEnum[] bikeProficiency) {
         this.bikeProficiency = bikeProficiency;
         return this;
@@ -72,6 +79,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=calcOneDirection")
     public Boolean calcOneDirection;
+
     public JourneyJourneyResultsRequest withCalcOneDirection(Boolean calcOneDirection) {
         this.calcOneDirection = calcOneDirection;
         return this;
@@ -82,6 +90,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cyclePreference")
     public JourneyJourneyResultsCyclePreferenceEnum cyclePreference;
+
     public JourneyJourneyResultsRequest withCyclePreference(JourneyJourneyResultsCyclePreferenceEnum cyclePreference) {
         this.cyclePreference = cyclePreference;
         return this;
@@ -92,6 +101,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public JourneyJourneyResultsRequest withDate(String date) {
         this.date = date;
         return this;
@@ -102,6 +112,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=from")
     public String from;
+
     public JourneyJourneyResultsRequest withFrom(String from) {
         this.from = from;
         return this;
@@ -112,6 +123,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromName")
     public String fromName;
+
     public JourneyJourneyResultsRequest withFromName(String fromName) {
         this.fromName = fromName;
         return this;
@@ -122,6 +134,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=journeyPreference")
     public JourneyJourneyResultsJourneyPreferenceEnum journeyPreference;
+
     public JourneyJourneyResultsRequest withJourneyPreference(JourneyJourneyResultsJourneyPreferenceEnum journeyPreference) {
         this.journeyPreference = journeyPreference;
         return this;
@@ -132,6 +145,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxTransferMinutes")
     public String maxTransferMinutes;
+
     public JourneyJourneyResultsRequest withMaxTransferMinutes(String maxTransferMinutes) {
         this.maxTransferMinutes = maxTransferMinutes;
         return this;
@@ -142,6 +156,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxWalkingMinutes")
     public String maxWalkingMinutes;
+
     public JourneyJourneyResultsRequest withMaxWalkingMinutes(String maxWalkingMinutes) {
         this.maxWalkingMinutes = maxWalkingMinutes;
         return this;
@@ -152,6 +167,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mode")
     public String[] mode;
+
     public JourneyJourneyResultsRequest withMode(String[] mode) {
         this.mode = mode;
         return this;
@@ -162,6 +178,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nationalSearch")
     public Boolean nationalSearch;
+
     public JourneyJourneyResultsRequest withNationalSearch(Boolean nationalSearch) {
         this.nationalSearch = nationalSearch;
         return this;
@@ -172,6 +189,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeBetweenEntrances")
     public Boolean routeBetweenEntrances;
+
     public JourneyJourneyResultsRequest withRouteBetweenEntrances(Boolean routeBetweenEntrances) {
         this.routeBetweenEntrances = routeBetweenEntrances;
         return this;
@@ -182,6 +200,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxiOnlyTrip")
     public Boolean taxiOnlyTrip;
+
     public JourneyJourneyResultsRequest withTaxiOnlyTrip(Boolean taxiOnlyTrip) {
         this.taxiOnlyTrip = taxiOnlyTrip;
         return this;
@@ -192,6 +211,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time")
     public String time;
+
     public JourneyJourneyResultsRequest withTime(String time) {
         this.time = time;
         return this;
@@ -202,6 +222,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeIs")
     public JourneyJourneyResultsTimeIsEnum timeIs;
+
     public JourneyJourneyResultsRequest withTimeIs(JourneyJourneyResultsTimeIsEnum timeIs) {
         this.timeIs = timeIs;
         return this;
@@ -212,6 +233,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=to")
     public String to;
+
     public JourneyJourneyResultsRequest withTo(String to) {
         this.to = to;
         return this;
@@ -222,6 +244,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toName")
     public String toName;
+
     public JourneyJourneyResultsRequest withToName(String toName) {
         this.toName = toName;
         return this;
@@ -232,6 +255,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useMultiModalCall")
     public Boolean useMultiModalCall;
+
     public JourneyJourneyResultsRequest withUseMultiModalCall(Boolean useMultiModalCall) {
         this.useMultiModalCall = useMultiModalCall;
         return this;
@@ -242,6 +266,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useRealTimeLiveArrivals")
     public Boolean useRealTimeLiveArrivals;
+
     public JourneyJourneyResultsRequest withUseRealTimeLiveArrivals(Boolean useRealTimeLiveArrivals) {
         this.useRealTimeLiveArrivals = useRealTimeLiveArrivals;
         return this;
@@ -252,6 +277,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=via")
     public String via;
+
     public JourneyJourneyResultsRequest withVia(String via) {
         this.via = via;
         return this;
@@ -262,6 +288,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=viaName")
     public String viaName;
+
     public JourneyJourneyResultsRequest withViaName(String viaName) {
         this.viaName = viaName;
         return this;
@@ -272,6 +299,7 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=walkingOptimization")
     public Boolean walkingOptimization;
+
     public JourneyJourneyResultsRequest withWalkingOptimization(Boolean walkingOptimization) {
         this.walkingOptimization = walkingOptimization;
         return this;
@@ -282,9 +310,14 @@ public class JourneyJourneyResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=walkingSpeed")
     public JourneyJourneyResultsWalkingSpeedEnum walkingSpeed;
+
     public JourneyJourneyResultsRequest withWalkingSpeed(JourneyJourneyResultsWalkingSpeedEnum walkingSpeed) {
         this.walkingSpeed = walkingSpeed;
         return this;
     }
     
+    public JourneyJourneyResultsRequest(@JsonProperty("from") String from, @JsonProperty("to") String to) {
+        this.from = from;
+        this.to = to;
+  }
 }

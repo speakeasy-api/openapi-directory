@@ -15,9 +15,11 @@ public class HttpAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sigv4")
     public SigV4Authorization sigv4;
+
     public HttpAuthorization withSigv4(SigV4Authorization sigv4) {
         this.sigv4 = sigv4;
         return this;
     }
     
+    public HttpAuthorization(){}
 }

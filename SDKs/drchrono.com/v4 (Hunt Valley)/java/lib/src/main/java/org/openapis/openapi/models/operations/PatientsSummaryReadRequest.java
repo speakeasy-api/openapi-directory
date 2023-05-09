@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientsSummaryReadRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_of_birth")
     public String dateOfBirth;
+
     public PatientsSummaryReadRequest withDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -16,6 +18,7 @@ public class PatientsSummaryReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public PatientsSummaryReadRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -23,6 +26,7 @@ public class PatientsSummaryReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_name")
     public String firstName;
+
     public PatientsSummaryReadRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -30,6 +34,7 @@ public class PatientsSummaryReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gender")
     public String gender;
+
     public PatientsSummaryReadRequest withGender(String gender) {
         this.gender = gender;
         return this;
@@ -37,6 +42,7 @@ public class PatientsSummaryReadRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PatientsSummaryReadRequest withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +50,7 @@ public class PatientsSummaryReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_name")
     public String lastName;
+
     public PatientsSummaryReadRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -51,9 +58,13 @@ public class PatientsSummaryReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public PatientsSummaryReadRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public PatientsSummaryReadRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

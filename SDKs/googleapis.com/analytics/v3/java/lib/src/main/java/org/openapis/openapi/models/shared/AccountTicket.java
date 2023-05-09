@@ -18,6 +18,7 @@ public class AccountTicket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public Account account;
+
     public AccountTicket withAccount(Account account) {
         this.account = account;
         return this;
@@ -29,6 +30,7 @@ public class AccountTicket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AccountTicket withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class AccountTicket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountTicket withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class AccountTicket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile")
     public Profile profile;
+
     public AccountTicket withProfile(Profile profile) {
         this.profile = profile;
         return this;
@@ -62,6 +66,7 @@ public class AccountTicket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectUri")
     public String redirectUri;
+
     public AccountTicket withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
@@ -73,9 +78,11 @@ public class AccountTicket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webproperty")
     public Webproperty webproperty;
+
     public AccountTicket withWebproperty(Webproperty webproperty) {
         this.webproperty = webproperty;
         return this;
     }
     
+    public AccountTicket(){}
 }

@@ -18,6 +18,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BIC")
     public String bic;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation withBic(String bic) {
         this.bic = bic;
         return this;
@@ -29,6 +30,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LEI")
     public String lei;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation withLei(String lei) {
         this.lei = lei;
         return this;
@@ -39,9 +41,13 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("OrganisationName")
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName organisationName;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation withOrganisationName(GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName organisationName) {
         this.organisationName = organisationName;
         return this;
     }
     
+    public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisation(@JsonProperty("OrganisationName") GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName organisationName) {
+        this.organisationName = organisationName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLensResponse {
@@ -12,6 +13,7 @@ public class DeleteLensResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteLensResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteLensResponse {
      */
     
     public Object conflictException;
+
     public DeleteLensResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLensResponse {
     
     
     public String contentType;
+
     public DeleteLensResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLensResponse {
      */
     
     public Object internalServerException;
+
     public DeleteLensResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteLensResponse {
     
     
     public Integer statusCode;
+
     public DeleteLensResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteLensResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLensResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteLensResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteLensResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteLensResponse {
      */
     
     public Object throttlingException;
+
     public DeleteLensResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteLensResponse {
      */
     
     public Object validationException;
+
     public DeleteLensResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteLensResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest {
@@ -12,6 +13,7 @@ public class PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ExtensionActionDefinitionPatch extensionActionDefinitionPatch;
+
     public PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest withExtensionActionDefinitionPatch(org.openapis.openapi.models.shared.ExtensionActionDefinitionPatch extensionActionDefinitionPatch) {
         this.extensionActionDefinitionPatch = extensionActionDefinitionPatch;
         return this;
@@ -19,6 +21,7 @@ public class PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
@@ -29,9 +32,15 @@ public class PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
     public String definitionId;
+
     public PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest withDefinitionId(String definitionId) {
         this.definitionId = definitionId;
         return this;
     }
     
+    public PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest(@JsonProperty("ExtensionActionDefinitionPatch") org.openapis.openapi.models.shared.ExtensionActionDefinitionPatch extensionActionDefinitionPatch, @JsonProperty("appId") Integer appId, @JsonProperty("definitionId") String definitionId) {
+        this.extensionActionDefinitionPatch = extensionActionDefinitionPatch;
+        this.appId = appId;
+        this.definitionId = definitionId;
+  }
 }

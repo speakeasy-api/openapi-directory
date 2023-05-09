@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPlanResponse {
     
     public String contentType;
+
     public GetPlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPlanResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPlanResponse getPlanResponse;
+
     public GetPlanResponse withGetPlanResponse(org.openapis.openapi.models.shared.GetPlanResponse getPlanResponse) {
         this.getPlanResponse = getPlanResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetPlanResponse {
      */
     
     public Object internalServiceException;
+
     public GetPlanResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class GetPlanResponse {
      */
     
     public Object invalidInputException;
+
     public GetPlanResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetPlanResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetPlanResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class GetPlanResponse {
     
     
     public Integer statusCode;
+
     public GetPlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetPlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

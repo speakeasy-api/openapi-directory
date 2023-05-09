@@ -15,9 +15,11 @@ public class GetCertificateAuthorityCsrResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Csr")
     public String csr;
+
     public GetCertificateAuthorityCsrResponse withCsr(String csr) {
         this.csr = csr;
         return this;
     }
     
+    public GetCertificateAuthorityCsrResponse(){}
 }

@@ -18,6 +18,7 @@ public class ClearValuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clearedRange")
     public String clearedRange;
+
     public ClearValuesResponse withClearedRange(String clearedRange) {
         this.clearedRange = clearedRange;
         return this;
@@ -29,9 +30,11 @@ public class ClearValuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spreadsheetId")
     public String spreadsheetId;
+
     public ClearValuesResponse withSpreadsheetId(String spreadsheetId) {
         this.spreadsheetId = spreadsheetId;
         return this;
     }
     
+    public ClearValuesResponse(){}
 }

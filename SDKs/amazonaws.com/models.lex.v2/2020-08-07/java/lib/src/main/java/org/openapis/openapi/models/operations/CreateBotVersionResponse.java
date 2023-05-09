@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBotVersionResponse {
@@ -12,6 +13,7 @@ public class CreateBotVersionResponse {
      */
     
     public Object conflictException;
+
     public CreateBotVersionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateBotVersionResponse {
     
     
     public String contentType;
+
     public CreateBotVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateBotVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBotVersionResponse createBotVersionResponse;
+
     public CreateBotVersionResponse withCreateBotVersionResponse(org.openapis.openapi.models.shared.CreateBotVersionResponse createBotVersionResponse) {
         this.createBotVersionResponse = createBotVersionResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateBotVersionResponse {
      */
     
     public Object internalServerException;
+
     public CreateBotVersionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateBotVersionResponse {
      */
     
     public Object preconditionFailedException;
+
     public CreateBotVersionResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -59,6 +65,7 @@ public class CreateBotVersionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateBotVersionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateBotVersionResponse {
     
     
     public Integer statusCode;
+
     public CreateBotVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateBotVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBotVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateBotVersionResponse {
      */
     
     public Object throttlingException;
+
     public CreateBotVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateBotVersionResponse {
      */
     
     public Object validationException;
+
     public CreateBotVersionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateBotVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

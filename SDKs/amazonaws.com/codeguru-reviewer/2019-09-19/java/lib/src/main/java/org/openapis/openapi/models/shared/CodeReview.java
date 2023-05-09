@@ -20,6 +20,7 @@ public class CodeReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalysisTypes")
     public AnalysisTypeEnum[] analysisTypes;
+
     public CodeReview withAnalysisTypes(AnalysisTypeEnum[] analysisTypes) {
         this.analysisTypes = analysisTypes;
         return this;
@@ -28,6 +29,7 @@ public class CodeReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationArn")
     public String associationArn;
+
     public CodeReview withAssociationArn(String associationArn) {
         this.associationArn = associationArn;
         return this;
@@ -36,6 +38,7 @@ public class CodeReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeReviewArn")
     public String codeReviewArn;
+
     public CodeReview withCodeReviewArn(String codeReviewArn) {
         this.codeReviewArn = codeReviewArn;
         return this;
@@ -44,6 +47,7 @@ public class CodeReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigFileState")
     public ConfigFileStateEnum configFileState;
+
     public CodeReview withConfigFileState(ConfigFileStateEnum configFileState) {
         this.configFileState = configFileState;
         return this;
@@ -54,6 +58,7 @@ public class CodeReview {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimeStamp")
     public OffsetDateTime createdTimeStamp;
+
     public CodeReview withCreatedTimeStamp(OffsetDateTime createdTimeStamp) {
         this.createdTimeStamp = createdTimeStamp;
         return this;
@@ -64,6 +69,7 @@ public class CodeReview {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTimeStamp")
     public OffsetDateTime lastUpdatedTimeStamp;
+
     public CodeReview withLastUpdatedTimeStamp(OffsetDateTime lastUpdatedTimeStamp) {
         this.lastUpdatedTimeStamp = lastUpdatedTimeStamp;
         return this;
@@ -72,6 +78,7 @@ public class CodeReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public Metrics metrics;
+
     public CodeReview withMetrics(Metrics metrics) {
         this.metrics = metrics;
         return this;
@@ -80,6 +87,7 @@ public class CodeReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CodeReview withName(String name) {
         this.name = name;
         return this;
@@ -88,6 +96,7 @@ public class CodeReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public CodeReview withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -96,6 +105,7 @@ public class CodeReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderType")
     public ProviderTypeEnum providerType;
+
     public CodeReview withProviderType(ProviderTypeEnum providerType) {
         this.providerType = providerType;
         return this;
@@ -104,6 +114,7 @@ public class CodeReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PullRequestId")
     public String pullRequestId;
+
     public CodeReview withPullRequestId(String pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
@@ -112,6 +123,7 @@ public class CodeReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepositoryName")
     public String repositoryName;
+
     public CodeReview withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -120,6 +132,7 @@ public class CodeReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceCodeType")
     public SourceCodeType sourceCodeType;
+
     public CodeReview withSourceCodeType(SourceCodeType sourceCodeType) {
         this.sourceCodeType = sourceCodeType;
         return this;
@@ -128,6 +141,7 @@ public class CodeReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public JobStateEnum state;
+
     public CodeReview withState(JobStateEnum state) {
         this.state = state;
         return this;
@@ -136,6 +150,7 @@ public class CodeReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReason")
     public String stateReason;
+
     public CodeReview withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -144,9 +159,11 @@ public class CodeReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public TypeEnum type;
+
     public CodeReview withType(TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CodeReview(){}
 }

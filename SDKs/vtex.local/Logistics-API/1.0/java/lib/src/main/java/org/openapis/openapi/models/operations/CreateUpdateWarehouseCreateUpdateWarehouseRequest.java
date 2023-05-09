@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUpdateWarehouseCreateUpdateWarehouseRequest {
     @JsonProperty("id")
     public String id;
+
     public CreateUpdateWarehouseCreateUpdateWarehouseRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,6 +17,7 @@ public class CreateUpdateWarehouseCreateUpdateWarehouseRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateUpdateWarehouseCreateUpdateWarehouseRequest withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +25,15 @@ public class CreateUpdateWarehouseCreateUpdateWarehouseRequest {
     
     @JsonProperty("warehouseDocks")
     public CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock[] warehouseDocks;
+
     public CreateUpdateWarehouseCreateUpdateWarehouseRequest withWarehouseDocks(CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock[] warehouseDocks) {
         this.warehouseDocks = warehouseDocks;
         return this;
     }
     
+    public CreateUpdateWarehouseCreateUpdateWarehouseRequest(@JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("warehouseDocks") CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock[] warehouseDocks) {
+        this.id = id;
+        this.name = name;
+        this.warehouseDocks = warehouseDocks;
+  }
 }

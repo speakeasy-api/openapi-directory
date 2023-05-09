@@ -15,6 +15,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public ResourceDetails details;
+
     public Resource withDetails(ResourceDetails details) {
         this.details = details;
         return this;
@@ -22,6 +23,7 @@ public class Resource {
     
     @JsonProperty("id")
     public String id;
+
     public Resource withId(String id) {
         this.id = id;
         return this;
@@ -30,6 +32,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partition")
     public String partition;
+
     public Resource withPartition(String partition) {
         this.partition = partition;
         return this;
@@ -38,6 +41,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Resource withRegion(String region) {
         this.region = region;
         return this;
@@ -46,6 +50,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Resource withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -53,9 +58,14 @@ public class Resource {
     
     @JsonProperty("type")
     public ResourceTypeEnum type;
+
     public Resource withType(ResourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Resource(@JsonProperty("id") String id, @JsonProperty("type") ResourceTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

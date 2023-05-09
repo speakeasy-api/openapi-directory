@@ -18,9 +18,11 @@ public class WorkloadConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditMode")
     public WorkloadConfigAuditModeEnum auditMode;
+
     public WorkloadConfig withAuditMode(WorkloadConfigAuditModeEnum auditMode) {
         this.auditMode = auditMode;
         return this;
     }
     
+    public WorkloadConfig(){}
 }

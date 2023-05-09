@@ -12,6 +12,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=area_id")
     public String areaId;
+
     public GetEventsRequest withAreaId(String areaId) {
         this.areaId = areaId;
         return this;
@@ -22,6 +23,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bbox")
     public String bbox;
+
     public GetEventsRequest withBbox(String bbox) {
         this.bbox = bbox;
         return this;
@@ -32,6 +34,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created")
     public String created;
+
     public GetEventsRequest withCreated(String created) {
         this.created = created;
         return this;
@@ -42,6 +45,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event_type")
     public GetEventsEventTypeEnum eventType;
+
     public GetEventsRequest withEventType(GetEventsEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -52,6 +56,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetEventsFormatEnum format;
+
     public GetEventsRequest withFormat(GetEventsFormatEnum format) {
         this.format = format;
         return this;
@@ -62,6 +67,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jurisdiction")
     public String jurisdiction;
+
     public GetEventsRequest withJurisdiction(String jurisdiction) {
         this.jurisdiction = jurisdiction;
         return this;
@@ -72,6 +78,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=road_name")
     public String roadName;
+
     public GetEventsRequest withRoadName(String roadName) {
         this.roadName = roadName;
         return this;
@@ -82,6 +89,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=severity")
     public String severity;
+
     public GetEventsRequest withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -92,6 +100,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public GetEventsStatusEnum status;
+
     public GetEventsRequest withStatus(GetEventsStatusEnum status) {
         this.status = status;
         return this;
@@ -102,9 +111,11 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated")
     public String updated;
+
     public GetEventsRequest withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public GetEventsRequest(){}
 }

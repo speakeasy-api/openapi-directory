@@ -12,6 +12,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssistedTackles")
     public Long assistedTackles;
+
     public PlayerDefense withAssistedTackles(Long assistedTackles) {
         this.assistedTackles = assistedTackles;
         return this;
@@ -20,6 +21,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public PlayerDefense withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -28,6 +30,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPosition")
     public String fantasyPosition;
+
     public PlayerDefense withFantasyPosition(String fantasyPosition) {
         this.fantasyPosition = fantasyPosition;
         return this;
@@ -36,6 +39,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumbleReturnTouchdowns")
     public Long fumbleReturnTouchdowns;
+
     public PlayerDefense withFumbleReturnTouchdowns(Long fumbleReturnTouchdowns) {
         this.fumbleReturnTouchdowns = fumbleReturnTouchdowns;
         return this;
@@ -44,6 +48,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesForced")
     public Long fumblesForced;
+
     public PlayerDefense withFumblesForced(Long fumblesForced) {
         this.fumblesForced = fumblesForced;
         return this;
@@ -52,6 +57,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesRecovered")
     public Long fumblesRecovered;
+
     public PlayerDefense withFumblesRecovered(Long fumblesRecovered) {
         this.fumblesRecovered = fumblesRecovered;
         return this;
@@ -60,6 +66,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterceptionReturnTouchdowns")
     public Long interceptionReturnTouchdowns;
+
     public PlayerDefense withInterceptionReturnTouchdowns(Long interceptionReturnTouchdowns) {
         this.interceptionReturnTouchdowns = interceptionReturnTouchdowns;
         return this;
@@ -68,6 +75,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterceptionReturnYards")
     public Long interceptionReturnYards;
+
     public PlayerDefense withInterceptionReturnYards(Long interceptionReturnYards) {
         this.interceptionReturnYards = interceptionReturnYards;
         return this;
@@ -76,6 +84,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interceptions")
     public Long interceptions;
+
     public PlayerDefense withInterceptions(Long interceptions) {
         this.interceptions = interceptions;
         return this;
@@ -84,6 +93,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayerDefense withName(String name) {
         this.name = name;
         return this;
@@ -92,6 +102,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public PlayerDefense withNumber(Long number) {
         this.number = number;
         return this;
@@ -100,6 +111,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassesDefended")
     public Long passesDefended;
+
     public PlayerDefense withPassesDefended(Long passesDefended) {
         this.passesDefended = passesDefended;
         return this;
@@ -108,6 +120,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerGameID")
     public Long playerGameID;
+
     public PlayerDefense withPlayerGameID(Long playerGameID) {
         this.playerGameID = playerGameID;
         return this;
@@ -116,6 +129,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayerDefense withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -124,6 +138,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public PlayerDefense withPosition(String position) {
         this.position = position;
         return this;
@@ -132,6 +147,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionCategory")
     public String positionCategory;
+
     public PlayerDefense withPositionCategory(String positionCategory) {
         this.positionCategory = positionCategory;
         return this;
@@ -140,6 +156,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuarterbackHits")
     public Long quarterbackHits;
+
     public PlayerDefense withQuarterbackHits(Long quarterbackHits) {
         this.quarterbackHits = quarterbackHits;
         return this;
@@ -148,6 +165,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SackYards")
     public Long sackYards;
+
     public PlayerDefense withSackYards(Long sackYards) {
         this.sackYards = sackYards;
         return this;
@@ -156,6 +174,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sacks")
     public Double sacks;
+
     public PlayerDefense withSacks(Double sacks) {
         this.sacks = sacks;
         return this;
@@ -164,6 +183,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Safeties")
     public Long safeties;
+
     public PlayerDefense withSafeties(Long safeties) {
         this.safeties = safeties;
         return this;
@@ -172,6 +192,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortName")
     public String shortName;
+
     public PlayerDefense withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -180,6 +201,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SoloTackles")
     public Long soloTackles;
+
     public PlayerDefense withSoloTackles(Long soloTackles) {
         this.soloTackles = soloTackles;
         return this;
@@ -188,6 +210,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tackles")
     public Long tackles;
+
     public PlayerDefense withTackles(Long tackles) {
         this.tackles = tackles;
         return this;
@@ -196,6 +219,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TacklesForLoss")
     public Long tacklesForLoss;
+
     public PlayerDefense withTacklesForLoss(Long tacklesForLoss) {
         this.tacklesForLoss = tacklesForLoss;
         return this;
@@ -204,6 +228,7 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public PlayerDefense withTeam(String team) {
         this.team = team;
         return this;
@@ -212,9 +237,11 @@ public class PlayerDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public PlayerDefense withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public PlayerDefense(){}
 }

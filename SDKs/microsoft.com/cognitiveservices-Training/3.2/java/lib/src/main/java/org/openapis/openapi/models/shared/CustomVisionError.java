@@ -15,6 +15,7 @@ public class CustomVisionError {
      */
     @JsonProperty("code")
     public CustomVisionErrorCodeEnum code;
+
     public CustomVisionError withCode(CustomVisionErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class CustomVisionError {
      */
     @JsonProperty("message")
     public String message;
+
     public CustomVisionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CustomVisionError(@JsonProperty("code") CustomVisionErrorCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

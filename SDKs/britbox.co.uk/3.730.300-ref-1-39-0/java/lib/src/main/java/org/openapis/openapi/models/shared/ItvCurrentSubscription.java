@@ -15,6 +15,7 @@ public class ItvCurrentSubscription {
      */
     @JsonProperty("cancelAtPeriodEnd")
     public Boolean cancelAtPeriodEnd;
+
     public ItvCurrentSubscription withCancelAtPeriodEnd(Boolean cancelAtPeriodEnd) {
         this.cancelAtPeriodEnd = cancelAtPeriodEnd;
         return this;
@@ -25,6 +26,7 @@ public class ItvCurrentSubscription {
      */
     @JsonProperty("collectionMethod")
     public String collectionMethod;
+
     public ItvCurrentSubscription withCollectionMethod(String collectionMethod) {
         this.collectionMethod = collectionMethod;
         return this;
@@ -35,6 +37,7 @@ public class ItvCurrentSubscription {
      */
     @JsonProperty("created")
     public Integer created;
+
     public ItvCurrentSubscription withCreated(Integer created) {
         this.created = created;
         return this;
@@ -45,6 +48,7 @@ public class ItvCurrentSubscription {
      */
     @JsonProperty("currentPeriodEnd")
     public Integer currentPeriodEnd;
+
     public ItvCurrentSubscription withCurrentPeriodEnd(Integer currentPeriodEnd) {
         this.currentPeriodEnd = currentPeriodEnd;
         return this;
@@ -55,6 +59,7 @@ public class ItvCurrentSubscription {
      */
     @JsonProperty("currentPeriodStart")
     public Integer currentPeriodStart;
+
     public ItvCurrentSubscription withCurrentPeriodStart(Integer currentPeriodStart) {
         this.currentPeriodStart = currentPeriodStart;
         return this;
@@ -65,6 +70,7 @@ public class ItvCurrentSubscription {
      */
     @JsonProperty("plan")
     public java.util.Map<String, Object> plan;
+
     public ItvCurrentSubscription withPlan(java.util.Map<String, Object> plan) {
         this.plan = plan;
         return this;
@@ -75,9 +81,19 @@ public class ItvCurrentSubscription {
      */
     @JsonProperty("status")
     public String status;
+
     public ItvCurrentSubscription withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ItvCurrentSubscription(@JsonProperty("cancelAtPeriodEnd") Boolean cancelAtPeriodEnd, @JsonProperty("collectionMethod") String collectionMethod, @JsonProperty("created") Integer created, @JsonProperty("currentPeriodEnd") Integer currentPeriodEnd, @JsonProperty("currentPeriodStart") Integer currentPeriodStart, @JsonProperty("plan") java.util.Map<String, Object> plan, @JsonProperty("status") String status) {
+        this.cancelAtPeriodEnd = cancelAtPeriodEnd;
+        this.collectionMethod = collectionMethod;
+        this.created = created;
+        this.currentPeriodEnd = currentPeriodEnd;
+        this.currentPeriodStart = currentPeriodStart;
+        this.plan = plan;
+        this.status = status;
+  }
 }

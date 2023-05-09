@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDiffHTMLUsingGETResponse {
     
     public String contentType;
+
     public CreateDiffHTMLUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateDiffHTMLUsingGETResponse {
     
     
     public Integer statusCode;
+
     public CreateDiffHTMLUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateDiffHTMLUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDiffHTMLUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateDiffHTMLUsingGETResponse {
      */
     
     public CreateDiffHTMLUsingGET200ApplicationJSON createDiffHTMLUsingGET200ApplicationJSONObject;
+
     public CreateDiffHTMLUsingGETResponse withCreateDiffHTMLUsingGET200ApplicationJSONObject(CreateDiffHTMLUsingGET200ApplicationJSON createDiffHTMLUsingGET200ApplicationJSONObject) {
         this.createDiffHTMLUsingGET200ApplicationJSONObject = createDiffHTMLUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreateDiffHTMLUsingGETResponse {
      */
     
     public CreateDiffHTMLUsingGET400ApplicationJSON createDiffHTMLUsingGET400ApplicationJSONObject;
+
     public CreateDiffHTMLUsingGETResponse withCreateDiffHTMLUsingGET400ApplicationJSONObject(CreateDiffHTMLUsingGET400ApplicationJSON createDiffHTMLUsingGET400ApplicationJSONObject) {
         this.createDiffHTMLUsingGET400ApplicationJSONObject = createDiffHTMLUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateDiffHTMLUsingGETResponse {
      */
     
     public CreateDiffHTMLUsingGET401ApplicationJSON createDiffHTMLUsingGET401ApplicationJSONObject;
+
     public CreateDiffHTMLUsingGETResponse withCreateDiffHTMLUsingGET401ApplicationJSONObject(CreateDiffHTMLUsingGET401ApplicationJSON createDiffHTMLUsingGET401ApplicationJSONObject) {
         this.createDiffHTMLUsingGET401ApplicationJSONObject = createDiffHTMLUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreateDiffHTMLUsingGETResponse {
      */
     
     public CreateDiffHTMLUsingGET500ApplicationJSON createDiffHTMLUsingGET500ApplicationJSONObject;
+
     public CreateDiffHTMLUsingGETResponse withCreateDiffHTMLUsingGET500ApplicationJSONObject(CreateDiffHTMLUsingGET500ApplicationJSON createDiffHTMLUsingGET500ApplicationJSONObject) {
         this.createDiffHTMLUsingGET500ApplicationJSONObject = createDiffHTMLUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public CreateDiffHTMLUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class GetCalendarsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
     public Boolean all;
+
     public GetCalendarsRequest withAll(Boolean all) {
         this.all = all;
         return this;
@@ -22,9 +23,11 @@ public class GetCalendarsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public Long userId;
+
     public GetCalendarsRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetCalendarsRequest(){}
 }

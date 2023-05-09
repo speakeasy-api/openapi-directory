@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListReferenceStoresResponse {
@@ -12,6 +13,7 @@ public class ListReferenceStoresResponse {
      */
     
     public Object accessDeniedException;
+
     public ListReferenceStoresResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListReferenceStoresResponse {
     
     
     public String contentType;
+
     public ListReferenceStoresResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListReferenceStoresResponse {
      */
     
     public Object internalServerException;
+
     public ListReferenceStoresResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListReferenceStoresResponse {
      */
     
     public org.openapis.openapi.models.shared.ListReferenceStoresResponse listReferenceStoresResponse;
+
     public ListReferenceStoresResponse withListReferenceStoresResponse(org.openapis.openapi.models.shared.ListReferenceStoresResponse listReferenceStoresResponse) {
         this.listReferenceStoresResponse = listReferenceStoresResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListReferenceStoresResponse {
      */
     
     public Object requestTimeoutException;
+
     public ListReferenceStoresResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class ListReferenceStoresResponse {
     
     
     public Integer statusCode;
+
     public ListReferenceStoresResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListReferenceStoresResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListReferenceStoresResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListReferenceStoresResponse {
      */
     
     public Object throttlingException;
+
     public ListReferenceStoresResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListReferenceStoresResponse {
      */
     
     public Object validationException;
+
     public ListReferenceStoresResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListReferenceStoresResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

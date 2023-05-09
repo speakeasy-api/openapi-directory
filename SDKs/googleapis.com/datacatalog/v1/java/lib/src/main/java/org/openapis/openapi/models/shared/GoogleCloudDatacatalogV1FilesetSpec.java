@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1FilesetSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataplexFileset")
     public GoogleCloudDatacatalogV1DataplexFilesetSpec dataplexFileset;
+
     public GoogleCloudDatacatalogV1FilesetSpec withDataplexFileset(GoogleCloudDatacatalogV1DataplexFilesetSpec dataplexFileset) {
         this.dataplexFileset = dataplexFileset;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1FilesetSpec(){}
 }

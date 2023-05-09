@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDeleteDevicePositionHistoryResponse {
@@ -12,6 +13,7 @@ public class BatchDeleteDevicePositionHistoryResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchDeleteDevicePositionHistoryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchDeleteDevicePositionHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDeleteDevicePositionHistoryResponse batchDeleteDevicePositionHistoryResponse;
+
     public BatchDeleteDevicePositionHistoryResponse withBatchDeleteDevicePositionHistoryResponse(org.openapis.openapi.models.shared.BatchDeleteDevicePositionHistoryResponse batchDeleteDevicePositionHistoryResponse) {
         this.batchDeleteDevicePositionHistoryResponse = batchDeleteDevicePositionHistoryResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchDeleteDevicePositionHistoryResponse {
     
     
     public String contentType;
+
     public BatchDeleteDevicePositionHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchDeleteDevicePositionHistoryResponse {
      */
     
     public Object internalServerException;
+
     public BatchDeleteDevicePositionHistoryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class BatchDeleteDevicePositionHistoryResponse {
     
     
     public Integer statusCode;
+
     public BatchDeleteDevicePositionHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchDeleteDevicePositionHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDeleteDevicePositionHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchDeleteDevicePositionHistoryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchDeleteDevicePositionHistoryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class BatchDeleteDevicePositionHistoryResponse {
      */
     
     public Object throttlingException;
+
     public BatchDeleteDevicePositionHistoryResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class BatchDeleteDevicePositionHistoryResponse {
      */
     
     public Object validationException;
+
     public BatchDeleteDevicePositionHistoryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchDeleteDevicePositionHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -17,6 +17,7 @@ public class BugTrackerGetRepoIssueFromCrashDefaultApplicationJSON {
      */
     @JsonProperty("code")
     public BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum code;
+
     public BugTrackerGetRepoIssueFromCrashDefaultApplicationJSON withCode(BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum code) {
         this.code = code;
         return this;
@@ -28,6 +29,7 @@ public class BugTrackerGetRepoIssueFromCrashDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public BugTrackerGetRepoIssueFromCrashDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -38,9 +40,14 @@ public class BugTrackerGetRepoIssueFromCrashDefaultApplicationJSON {
      */
     @JsonProperty("request_id")
     public String requestId;
+
     public BugTrackerGetRepoIssueFromCrashDefaultApplicationJSON withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public BugTrackerGetRepoIssueFromCrashDefaultApplicationJSON(@JsonProperty("code") BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum code, @JsonProperty("request_id") String requestId) {
+        this.code = code;
+        this.requestId = requestId;
+  }
 }

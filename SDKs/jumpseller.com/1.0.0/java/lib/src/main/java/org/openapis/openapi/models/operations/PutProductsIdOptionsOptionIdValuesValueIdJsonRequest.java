@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutProductsIdOptionsOptionIdValuesValueIdJsonRequest {
@@ -12,6 +13,7 @@ public class PutProductsIdOptionsOptionIdValuesValueIdJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ProductOptionValueEdit productOptionValueEdit;
+
     public PutProductsIdOptionsOptionIdValuesValueIdJsonRequest withProductOptionValueEdit(org.openapis.openapi.models.shared.ProductOptionValueEdit productOptionValueEdit) {
         this.productOptionValueEdit = productOptionValueEdit;
         return this;
@@ -22,6 +24,7 @@ public class PutProductsIdOptionsOptionIdValuesValueIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PutProductsIdOptionsOptionIdValuesValueIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PutProductsIdOptionsOptionIdValuesValueIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PutProductsIdOptionsOptionIdValuesValueIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class PutProductsIdOptionsOptionIdValuesValueIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PutProductsIdOptionsOptionIdValuesValueIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
@@ -52,6 +57,7 @@ public class PutProductsIdOptionsOptionIdValuesValueIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=option_id")
     public Integer optionId;
+
     public PutProductsIdOptionsOptionIdValuesValueIdJsonRequest withOptionId(Integer optionId) {
         this.optionId = optionId;
         return this;
@@ -62,9 +68,18 @@ public class PutProductsIdOptionsOptionIdValuesValueIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value_id")
     public Integer valueId;
+
     public PutProductsIdOptionsOptionIdValuesValueIdJsonRequest withValueId(Integer valueId) {
         this.valueId = valueId;
         return this;
     }
     
+    public PutProductsIdOptionsOptionIdValuesValueIdJsonRequest(@JsonProperty("ProductOptionValueEdit") org.openapis.openapi.models.shared.ProductOptionValueEdit productOptionValueEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login, @JsonProperty("option_id") Integer optionId, @JsonProperty("value_id") Integer valueId) {
+        this.productOptionValueEdit = productOptionValueEdit;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+        this.optionId = optionId;
+        this.valueId = valueId;
+  }
 }

@@ -15,6 +15,7 @@ public class ListOpsMetadataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListOpsMetadataResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListOpsMetadataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsMetadataList")
     public OpsMetadata[] opsMetadataList;
+
     public ListOpsMetadataResult withOpsMetadataList(OpsMetadata[] opsMetadataList) {
         this.opsMetadataList = opsMetadataList;
         return this;
     }
     
+    public ListOpsMetadataResult(){}
 }

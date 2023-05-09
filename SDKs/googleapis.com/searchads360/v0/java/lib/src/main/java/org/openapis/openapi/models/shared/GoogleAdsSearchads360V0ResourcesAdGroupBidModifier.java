@@ -18,8 +18,21 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidModifier")
     public Double bidModifier;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupBidModifier withBidModifier(Double bidModifier) {
         this.bidModifier = bidModifier;
+        return this;
+    }
+    
+    /**
+     * A device criterion.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("device")
+    public GoogleAdsSearchads360V0CommonDeviceInfo device;
+
+    public GoogleAdsSearchads360V0ResourcesAdGroupBidModifier withDevice(GoogleAdsSearchads360V0CommonDeviceInfo device) {
+        this.device = device;
         return this;
     }
     
@@ -29,9 +42,11 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupBidModifier withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesAdGroupBidModifier(){}
 }

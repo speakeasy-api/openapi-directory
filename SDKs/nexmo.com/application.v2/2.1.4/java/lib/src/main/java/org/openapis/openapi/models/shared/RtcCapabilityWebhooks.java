@@ -15,9 +15,11 @@ public class RtcCapabilityWebhooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_url")
     public RtcCapabilityWebhooksEventUrl eventUrl;
+
     public RtcCapabilityWebhooks withEventUrl(RtcCapabilityWebhooksEventUrl eventUrl) {
         this.eventUrl = eventUrl;
         return this;
     }
     
+    public RtcCapabilityWebhooks(){}
 }

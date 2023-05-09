@@ -15,6 +15,7 @@ public class SubmitJobRequestBodyContainerOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public String[] command;
+
     public SubmitJobRequestBodyContainerOverrides withCommand(String[] command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class SubmitJobRequestBodyContainerOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public org.openapis.openapi.models.shared.KeyValuePair[] environment;
+
     public SubmitJobRequestBodyContainerOverrides withEnvironment(org.openapis.openapi.models.shared.KeyValuePair[] environment) {
         this.environment = environment;
         return this;
@@ -31,6 +33,7 @@ public class SubmitJobRequestBodyContainerOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceType")
     public String instanceType;
+
     public SubmitJobRequestBodyContainerOverrides withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -39,6 +42,7 @@ public class SubmitJobRequestBodyContainerOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public Long memory;
+
     public SubmitJobRequestBodyContainerOverrides withMemory(Long memory) {
         this.memory = memory;
         return this;
@@ -47,6 +51,7 @@ public class SubmitJobRequestBodyContainerOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRequirements")
     public org.openapis.openapi.models.shared.ResourceRequirement[] resourceRequirements;
+
     public SubmitJobRequestBodyContainerOverrides withResourceRequirements(org.openapis.openapi.models.shared.ResourceRequirement[] resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
@@ -55,9 +60,11 @@ public class SubmitJobRequestBodyContainerOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcpus")
     public Long vcpus;
+
     public SubmitJobRequestBodyContainerOverrides withVcpus(Long vcpus) {
         this.vcpus = vcpus;
         return this;
     }
     
+    public SubmitJobRequestBodyContainerOverrides(){}
 }

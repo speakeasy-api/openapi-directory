@@ -12,6 +12,7 @@ public class UpdateThesaurusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateThesaurusRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class UpdateThesaurusRequest {
     
     @JsonProperty("Id")
     public String id;
+
     public UpdateThesaurusRequest withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class UpdateThesaurusRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public UpdateThesaurusRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -34,6 +37,7 @@ public class UpdateThesaurusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateThesaurusRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +46,7 @@ public class UpdateThesaurusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public UpdateThesaurusRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -53,9 +58,14 @@ public class UpdateThesaurusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceS3Path")
     public S3Path sourceS3Path;
+
     public UpdateThesaurusRequest withSourceS3Path(S3Path sourceS3Path) {
         this.sourceS3Path = sourceS3Path;
         return this;
     }
     
+    public UpdateThesaurusRequest(@JsonProperty("Id") String id, @JsonProperty("IndexId") String indexId) {
+        this.id = id;
+        this.indexId = indexId;
+  }
 }

@@ -18,6 +18,7 @@ public class ServiceMeshMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisMessages")
     public ServiceMeshAnalysisMessage[] analysisMessages;
+
     public ServiceMeshMembershipState withAnalysisMessages(ServiceMeshAnalysisMessage[] analysisMessages) {
         this.analysisMessages = analysisMessages;
         return this;
@@ -29,6 +30,7 @@ public class ServiceMeshMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configApiVersion")
     public String configApiVersion;
+
     public ServiceMeshMembershipState withConfigApiVersion(String configApiVersion) {
         this.configApiVersion = configApiVersion;
         return this;
@@ -40,6 +42,7 @@ public class ServiceMeshMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlPlaneManagement")
     public ServiceMeshControlPlaneManagement controlPlaneManagement;
+
     public ServiceMeshMembershipState withControlPlaneManagement(ServiceMeshControlPlaneManagement controlPlaneManagement) {
         this.controlPlaneManagement = controlPlaneManagement;
         return this;
@@ -51,9 +54,11 @@ public class ServiceMeshMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataPlaneManagement")
     public ServiceMeshDataPlaneManagement dataPlaneManagement;
+
     public ServiceMeshMembershipState withDataPlaneManagement(ServiceMeshDataPlaneManagement dataPlaneManagement) {
         this.dataPlaneManagement = dataPlaneManagement;
         return this;
     }
     
+    public ServiceMeshMembershipState(){}
 }

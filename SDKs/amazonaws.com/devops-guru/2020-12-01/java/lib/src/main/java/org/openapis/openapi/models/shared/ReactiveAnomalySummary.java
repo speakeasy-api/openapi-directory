@@ -15,6 +15,7 @@ public class ReactiveAnomalySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyReportedTimeRange")
     public AnomalyReportedTimeRange anomalyReportedTimeRange;
+
     public ReactiveAnomalySummary withAnomalyReportedTimeRange(AnomalyReportedTimeRange anomalyReportedTimeRange) {
         this.anomalyReportedTimeRange = anomalyReportedTimeRange;
         return this;
@@ -23,6 +24,7 @@ public class ReactiveAnomalySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyResources")
     public AnomalyResource[] anomalyResources;
+
     public ReactiveAnomalySummary withAnomalyResources(AnomalyResource[] anomalyResources) {
         this.anomalyResources = anomalyResources;
         return this;
@@ -34,6 +36,7 @@ public class ReactiveAnomalySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyTimeRange")
     public AnomalyTimeRange anomalyTimeRange;
+
     public ReactiveAnomalySummary withAnomalyTimeRange(AnomalyTimeRange anomalyTimeRange) {
         this.anomalyTimeRange = anomalyTimeRange;
         return this;
@@ -42,6 +45,7 @@ public class ReactiveAnomalySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociatedInsightId")
     public String associatedInsightId;
+
     public ReactiveAnomalySummary withAssociatedInsightId(String associatedInsightId) {
         this.associatedInsightId = associatedInsightId;
         return this;
@@ -50,6 +54,7 @@ public class ReactiveAnomalySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CausalAnomalyId")
     public String causalAnomalyId;
+
     public ReactiveAnomalySummary withCausalAnomalyId(String causalAnomalyId) {
         this.causalAnomalyId = causalAnomalyId;
         return this;
@@ -58,6 +63,7 @@ public class ReactiveAnomalySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ReactiveAnomalySummary withDescription(String description) {
         this.description = description;
         return this;
@@ -66,6 +72,7 @@ public class ReactiveAnomalySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ReactiveAnomalySummary withId(String id) {
         this.id = id;
         return this;
@@ -74,6 +81,7 @@ public class ReactiveAnomalySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ReactiveAnomalySummary withName(String name) {
         this.name = name;
         return this;
@@ -85,6 +93,7 @@ public class ReactiveAnomalySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceCollection")
     public ResourceCollection resourceCollection;
+
     public ReactiveAnomalySummary withResourceCollection(ResourceCollection resourceCollection) {
         this.resourceCollection = resourceCollection;
         return this;
@@ -93,6 +102,7 @@ public class ReactiveAnomalySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severity")
     public AnomalySeverityEnum severity;
+
     public ReactiveAnomalySummary withSeverity(AnomalySeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -101,6 +111,7 @@ public class ReactiveAnomalySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceDetails")
     public AnomalySourceDetails sourceDetails;
+
     public ReactiveAnomalySummary withSourceDetails(AnomalySourceDetails sourceDetails) {
         this.sourceDetails = sourceDetails;
         return this;
@@ -109,6 +120,7 @@ public class ReactiveAnomalySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AnomalyStatusEnum status;
+
     public ReactiveAnomalySummary withStatus(AnomalyStatusEnum status) {
         this.status = status;
         return this;
@@ -117,9 +129,11 @@ public class ReactiveAnomalySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public AnomalyTypeEnum type;
+
     public ReactiveAnomalySummary withType(AnomalyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ReactiveAnomalySummary(){}
 }

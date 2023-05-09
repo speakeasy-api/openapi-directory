@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetDefaultMessageTypeRequest {
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public SetDefaultMessageTypeRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -16,9 +17,14 @@ public class SetDefaultMessageTypeRequest {
     
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public SetDefaultMessageTypeRequest withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
     }
     
+    public SetDefaultMessageTypeRequest(@JsonProperty("ConfigurationSetName") String configurationSetName, @JsonProperty("MessageType") MessageTypeEnum messageType) {
+        this.configurationSetName = configurationSetName;
+        this.messageType = messageType;
+  }
 }

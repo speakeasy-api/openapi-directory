@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDraftAppVersionResourcesImportStatusResponse {
@@ -12,6 +13,7 @@ public class DescribeDraftAppVersionResourcesImportStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeDraftAppVersionResourcesImportStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDraftAppVersionResourcesImportStatusResponse {
     
     
     public String contentType;
+
     public DescribeDraftAppVersionResourcesImportStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDraftAppVersionResourcesImportStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDraftAppVersionResourcesImportStatusResponse describeDraftAppVersionResourcesImportStatusResponse;
+
     public DescribeDraftAppVersionResourcesImportStatusResponse withDescribeDraftAppVersionResourcesImportStatusResponse(org.openapis.openapi.models.shared.DescribeDraftAppVersionResourcesImportStatusResponse describeDraftAppVersionResourcesImportStatusResponse) {
         this.describeDraftAppVersionResourcesImportStatusResponse = describeDraftAppVersionResourcesImportStatusResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDraftAppVersionResourcesImportStatusResponse {
      */
     
     public Object internalServerException;
+
     public DescribeDraftAppVersionResourcesImportStatusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeDraftAppVersionResourcesImportStatusResponse {
     
     
     public Integer statusCode;
+
     public DescribeDraftAppVersionResourcesImportStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeDraftAppVersionResourcesImportStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDraftAppVersionResourcesImportStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeDraftAppVersionResourcesImportStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeDraftAppVersionResourcesImportStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeDraftAppVersionResourcesImportStatusResponse {
      */
     
     public Object throttlingException;
+
     public DescribeDraftAppVersionResourcesImportStatusResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeDraftAppVersionResourcesImportStatusResponse {
      */
     
     public Object validationException;
+
     public DescribeDraftAppVersionResourcesImportStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeDraftAppVersionResourcesImportStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

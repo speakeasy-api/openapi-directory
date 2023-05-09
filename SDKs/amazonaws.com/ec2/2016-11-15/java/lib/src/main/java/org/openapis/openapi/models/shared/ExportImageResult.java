@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ExportImageResult {
     
     public String description;
+
     public ExportImageResult withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class ExportImageResult {
     
     
     public ExportImageResultDiskImageFormatEnum diskImageFormat;
+
     public ExportImageResult withDiskImageFormat(ExportImageResultDiskImageFormatEnum diskImageFormat) {
         this.diskImageFormat = diskImageFormat;
         return this;
@@ -26,6 +28,7 @@ public class ExportImageResult {
     
     
     public String exportImageTaskId;
+
     public ExportImageResult withExportImageTaskId(String exportImageTaskId) {
         this.exportImageTaskId = exportImageTaskId;
         return this;
@@ -33,6 +36,7 @@ public class ExportImageResult {
     
     
     public String imageId;
+
     public ExportImageResult withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -40,6 +44,7 @@ public class ExportImageResult {
     
     
     public String progress;
+
     public ExportImageResult withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -47,6 +52,7 @@ public class ExportImageResult {
     
     
     public String roleName;
+
     public ExportImageResult withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -54,6 +60,7 @@ public class ExportImageResult {
     
     
     public ExportImageResultS3ExportLocation s3ExportLocation;
+
     public ExportImageResult withS3ExportLocation(ExportImageResultS3ExportLocation s3ExportLocation) {
         this.s3ExportLocation = s3ExportLocation;
         return this;
@@ -61,6 +68,7 @@ public class ExportImageResult {
     
     
     public String status;
+
     public ExportImageResult withStatus(String status) {
         this.status = status;
         return this;
@@ -68,6 +76,7 @@ public class ExportImageResult {
     
     
     public String statusMessage;
+
     public ExportImageResult withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -75,9 +84,11 @@ public class ExportImageResult {
     
     
     public ExportImageResultTags[] tags;
+
     public ExportImageResult withTags(ExportImageResultTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ExportImageResult(){}
 }

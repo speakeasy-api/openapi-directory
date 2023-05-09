@@ -12,6 +12,7 @@ public class CompanyDeepsearchISIN200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isin")
     public String isin;
+
     public CompanyDeepsearchISIN200ApplicationJSON withIsin(String isin) {
         this.isin = isin;
         return this;
@@ -20,6 +21,7 @@ public class CompanyDeepsearchISIN200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listings")
     public CompanyDeepsearchISIN200ApplicationJSONListings[] listings;
+
     public CompanyDeepsearchISIN200ApplicationJSON withListings(CompanyDeepsearchISIN200ApplicationJSONListings[] listings) {
         this.listings = listings;
         return this;
@@ -28,9 +30,11 @@ public class CompanyDeepsearchISIN200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validIsin")
     public Boolean validIsin;
+
     public CompanyDeepsearchISIN200ApplicationJSON withValidIsin(Boolean validIsin) {
         this.validIsin = validIsin;
         return this;
     }
     
+    public CompanyDeepsearchISIN200ApplicationJSON(){}
 }

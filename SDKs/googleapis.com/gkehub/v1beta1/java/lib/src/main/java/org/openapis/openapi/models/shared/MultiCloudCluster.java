@@ -18,6 +18,7 @@ public class MultiCloudCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterMissing")
     public Boolean clusterMissing;
+
     public MultiCloudCluster withClusterMissing(Boolean clusterMissing) {
         this.clusterMissing = clusterMissing;
         return this;
@@ -29,9 +30,11 @@ public class MultiCloudCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLink")
     public String resourceLink;
+
     public MultiCloudCluster withResourceLink(String resourceLink) {
         this.resourceLink = resourceLink;
         return this;
     }
     
+    public MultiCloudCluster(){}
 }

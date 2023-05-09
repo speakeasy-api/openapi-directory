@@ -18,9 +18,11 @@ public class ConfigConnectorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ConfigConnectorConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public ConfigConnectorConfig(){}
 }

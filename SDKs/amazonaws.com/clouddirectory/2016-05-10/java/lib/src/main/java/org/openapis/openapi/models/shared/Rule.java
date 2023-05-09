@@ -15,6 +15,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public Rule withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -23,9 +24,11 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public RuleTypeEnum type;
+
     public Rule withType(RuleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Rule(){}
 }

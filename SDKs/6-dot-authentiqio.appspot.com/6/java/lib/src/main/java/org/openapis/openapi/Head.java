@@ -49,11 +49,9 @@ public class Head {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HeadKeyPKResponse res = new org.openapis.openapi.models.operations.HeadKeyPKResponse() {{
+        org.openapis.openapi.models.operations.HeadKeyPKResponse res = new org.openapis.openapi.models.operations.HeadKeyPKResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -88,12 +86,10 @@ public class Head {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SignRetrieveHeadResponse res = new org.openapis.openapi.models.operations.SignRetrieveHeadResponse() {{
+        org.openapis.openapi.models.operations.SignRetrieveHeadResponse res = new org.openapis.openapi.models.operations.SignRetrieveHeadResponse(contentType, httpRes.statusCode()) {{
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 204) {

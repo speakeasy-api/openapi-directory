@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyTargetGroupRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyTargetGroupActionEnum action;
+
     public GETModifyTargetGroupRequest withAction(GETModifyTargetGroupActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyTargetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HealthCheckEnabled")
     public Boolean healthCheckEnabled;
+
     public GETModifyTargetGroupRequest withHealthCheckEnabled(Boolean healthCheckEnabled) {
         this.healthCheckEnabled = healthCheckEnabled;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyTargetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HealthCheckIntervalSeconds")
     public Long healthCheckIntervalSeconds;
+
     public GETModifyTargetGroupRequest withHealthCheckIntervalSeconds(Long healthCheckIntervalSeconds) {
         this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyTargetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HealthCheckPath")
     public String healthCheckPath;
+
     public GETModifyTargetGroupRequest withHealthCheckPath(String healthCheckPath) {
         this.healthCheckPath = healthCheckPath;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyTargetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HealthCheckPort")
     public String healthCheckPort;
+
     public GETModifyTargetGroupRequest withHealthCheckPort(String healthCheckPort) {
         this.healthCheckPort = healthCheckPort;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyTargetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HealthCheckProtocol")
     public GETModifyTargetGroupHealthCheckProtocolEnum healthCheckProtocol;
+
     public GETModifyTargetGroupRequest withHealthCheckProtocol(GETModifyTargetGroupHealthCheckProtocolEnum healthCheckProtocol) {
         this.healthCheckProtocol = healthCheckProtocol;
         return this;
@@ -69,6 +76,7 @@ public class GETModifyTargetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HealthCheckTimeoutSeconds")
     public Long healthCheckTimeoutSeconds;
+
     public GETModifyTargetGroupRequest withHealthCheckTimeoutSeconds(Long healthCheckTimeoutSeconds) {
         this.healthCheckTimeoutSeconds = healthCheckTimeoutSeconds;
         return this;
@@ -79,6 +87,7 @@ public class GETModifyTargetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HealthyThresholdCount")
     public Long healthyThresholdCount;
+
     public GETModifyTargetGroupRequest withHealthyThresholdCount(Long healthyThresholdCount) {
         this.healthyThresholdCount = healthyThresholdCount;
         return this;
@@ -89,6 +98,7 @@ public class GETModifyTargetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Matcher")
     public GETModifyTargetGroupMatcher matcher;
+
     public GETModifyTargetGroupRequest withMatcher(GETModifyTargetGroupMatcher matcher) {
         this.matcher = matcher;
         return this;
@@ -99,6 +109,7 @@ public class GETModifyTargetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetGroupArn")
     public String targetGroupArn;
+
     public GETModifyTargetGroupRequest withTargetGroupArn(String targetGroupArn) {
         this.targetGroupArn = targetGroupArn;
         return this;
@@ -109,6 +120,7 @@ public class GETModifyTargetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UnhealthyThresholdCount")
     public Long unhealthyThresholdCount;
+
     public GETModifyTargetGroupRequest withUnhealthyThresholdCount(Long unhealthyThresholdCount) {
         this.unhealthyThresholdCount = unhealthyThresholdCount;
         return this;
@@ -116,6 +128,7 @@ public class GETModifyTargetGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyTargetGroupVersionEnum version;
+
     public GETModifyTargetGroupRequest withVersion(GETModifyTargetGroupVersionEnum version) {
         this.version = version;
         return this;
@@ -123,6 +136,7 @@ public class GETModifyTargetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyTargetGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -130,6 +144,7 @@ public class GETModifyTargetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyTargetGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -137,6 +152,7 @@ public class GETModifyTargetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyTargetGroupRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -144,6 +160,7 @@ public class GETModifyTargetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyTargetGroupRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -151,6 +168,7 @@ public class GETModifyTargetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyTargetGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -158,6 +176,7 @@ public class GETModifyTargetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyTargetGroupRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -165,9 +184,15 @@ public class GETModifyTargetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyTargetGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyTargetGroupRequest(@JsonProperty("Action") GETModifyTargetGroupActionEnum action, @JsonProperty("TargetGroupArn") String targetGroupArn, @JsonProperty("Version") GETModifyTargetGroupVersionEnum version) {
+        this.action = action;
+        this.targetGroupArn = targetGroupArn;
+        this.version = version;
+  }
 }

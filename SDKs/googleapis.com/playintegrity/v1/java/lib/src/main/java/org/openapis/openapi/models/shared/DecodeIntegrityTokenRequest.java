@@ -18,9 +18,11 @@ public class DecodeIntegrityTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrityToken")
     public String integrityToken;
+
     public DecodeIntegrityTokenRequest withIntegrityToken(String integrityToken) {
         this.integrityToken = integrityToken;
         return this;
     }
     
+    public DecodeIntegrityTokenRequest(){}
 }

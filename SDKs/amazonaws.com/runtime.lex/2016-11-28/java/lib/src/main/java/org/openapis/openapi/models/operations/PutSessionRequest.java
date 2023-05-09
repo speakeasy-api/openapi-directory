@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSessionRequest {
@@ -12,6 +13,7 @@ public class PutSessionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PutSessionRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -19,6 +21,7 @@ public class PutSessionRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PutSessionRequestBody requestBody;
+
     public PutSessionRequest withRequestBody(PutSessionRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class PutSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public PutSessionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class PutSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public PutSessionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class PutSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public PutSessionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class PutSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public PutSessionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class PutSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public PutSessionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class PutSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public PutSessionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,6 +77,7 @@ public class PutSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public PutSessionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -78,6 +88,7 @@ public class PutSessionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botAlias")
     public String botAlias;
+
     public PutSessionRequest withBotAlias(String botAlias) {
         this.botAlias = botAlias;
         return this;
@@ -88,6 +99,7 @@ public class PutSessionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botName")
     public String botName;
+
     public PutSessionRequest withBotName(String botName) {
         this.botName = botName;
         return this;
@@ -98,9 +110,16 @@ public class PutSessionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public PutSessionRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public PutSessionRequest(@JsonProperty("RequestBody") PutSessionRequestBody requestBody, @JsonProperty("botAlias") String botAlias, @JsonProperty("botName") String botName, @JsonProperty("userId") String userId) {
+        this.requestBody = requestBody;
+        this.botAlias = botAlias;
+        this.botName = botName;
+        this.userId = userId;
+  }
 }

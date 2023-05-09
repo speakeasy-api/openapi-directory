@@ -15,6 +15,7 @@ public class VerifyOTPMessageRequestBodyVerifyOTPMessageRequestParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationIdentity")
     public String destinationIdentity;
+
     public VerifyOTPMessageRequestBodyVerifyOTPMessageRequestParameters withDestinationIdentity(String destinationIdentity) {
         this.destinationIdentity = destinationIdentity;
         return this;
@@ -23,6 +24,7 @@ public class VerifyOTPMessageRequestBodyVerifyOTPMessageRequestParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Otp")
     public String otp;
+
     public VerifyOTPMessageRequestBodyVerifyOTPMessageRequestParameters withOtp(String otp) {
         this.otp = otp;
         return this;
@@ -31,9 +33,11 @@ public class VerifyOTPMessageRequestBodyVerifyOTPMessageRequestParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceId")
     public String referenceId;
+
     public VerifyOTPMessageRequestBodyVerifyOTPMessageRequestParameters withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
     }
     
+    public VerifyOTPMessageRequestBodyVerifyOTPMessageRequestParameters(){}
 }

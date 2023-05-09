@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReplicationRule {
     @JsonProperty("destinations")
     public ReplicationDestination[] destinations;
+
     public ReplicationRule withDestinations(ReplicationDestination[] destinations) {
         this.destinations = destinations;
         return this;
@@ -22,9 +23,13 @@ public class ReplicationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryFilters")
     public RepositoryFilter[] repositoryFilters;
+
     public ReplicationRule withRepositoryFilters(RepositoryFilter[] repositoryFilters) {
         this.repositoryFilters = repositoryFilters;
         return this;
     }
     
+    public ReplicationRule(@JsonProperty("destinations") ReplicationDestination[] destinations) {
+        this.destinations = destinations;
+  }
 }

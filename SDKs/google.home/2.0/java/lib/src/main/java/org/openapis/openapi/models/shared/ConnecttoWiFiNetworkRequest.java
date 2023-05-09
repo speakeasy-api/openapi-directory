@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConnecttoWiFiNetworkRequest {
     @JsonProperty("bssid")
     public String bssid;
+
     public ConnecttoWiFiNetworkRequest withBssid(String bssid) {
         this.bssid = bssid;
         return this;
@@ -16,6 +17,7 @@ public class ConnecttoWiFiNetworkRequest {
     
     @JsonProperty("enc_passwd")
     public String encPasswd;
+
     public ConnecttoWiFiNetworkRequest withEncPasswd(String encPasswd) {
         this.encPasswd = encPasswd;
         return this;
@@ -23,6 +25,7 @@ public class ConnecttoWiFiNetworkRequest {
     
     @JsonProperty("signal_level")
     public Integer signalLevel;
+
     public ConnecttoWiFiNetworkRequest withSignalLevel(Integer signalLevel) {
         this.signalLevel = signalLevel;
         return this;
@@ -30,6 +33,7 @@ public class ConnecttoWiFiNetworkRequest {
     
     @JsonProperty("ssid")
     public String ssid;
+
     public ConnecttoWiFiNetworkRequest withSsid(String ssid) {
         this.ssid = ssid;
         return this;
@@ -37,6 +41,7 @@ public class ConnecttoWiFiNetworkRequest {
     
     @JsonProperty("wpa_auth")
     public Integer wpaAuth;
+
     public ConnecttoWiFiNetworkRequest withWpaAuth(Integer wpaAuth) {
         this.wpaAuth = wpaAuth;
         return this;
@@ -44,9 +49,18 @@ public class ConnecttoWiFiNetworkRequest {
     
     @JsonProperty("wpa_cipher")
     public Integer wpaCipher;
+
     public ConnecttoWiFiNetworkRequest withWpaCipher(Integer wpaCipher) {
         this.wpaCipher = wpaCipher;
         return this;
     }
     
+    public ConnecttoWiFiNetworkRequest(@JsonProperty("bssid") String bssid, @JsonProperty("enc_passwd") String encPasswd, @JsonProperty("signal_level") Integer signalLevel, @JsonProperty("ssid") String ssid, @JsonProperty("wpa_auth") Integer wpaAuth, @JsonProperty("wpa_cipher") Integer wpaCipher) {
+        this.bssid = bssid;
+        this.encPasswd = encPasswd;
+        this.signalLevel = signalLevel;
+        this.ssid = ssid;
+        this.wpaAuth = wpaAuth;
+        this.wpaCipher = wpaCipher;
+  }
 }

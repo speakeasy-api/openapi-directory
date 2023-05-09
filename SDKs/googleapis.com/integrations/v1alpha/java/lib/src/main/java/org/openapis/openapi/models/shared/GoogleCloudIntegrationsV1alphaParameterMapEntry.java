@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaParameterMapEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public GoogleCloudIntegrationsV1alphaParameterMapField key;
+
     public GoogleCloudIntegrationsV1alphaParameterMapEntry withKey(GoogleCloudIntegrationsV1alphaParameterMapField key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaParameterMapEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public GoogleCloudIntegrationsV1alphaParameterMapField value;
+
     public GoogleCloudIntegrationsV1alphaParameterMapEntry withValue(GoogleCloudIntegrationsV1alphaParameterMapField value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaParameterMapEntry(){}
 }

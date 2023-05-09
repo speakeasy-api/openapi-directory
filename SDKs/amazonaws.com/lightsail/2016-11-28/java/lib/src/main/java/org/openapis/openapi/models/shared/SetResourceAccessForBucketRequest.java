@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetResourceAccessForBucketRequest {
     @JsonProperty("access")
     public ResourceBucketAccessEnum access;
+
     public SetResourceAccessForBucketRequest withAccess(ResourceBucketAccessEnum access) {
         this.access = access;
         return this;
@@ -16,6 +17,7 @@ public class SetResourceAccessForBucketRequest {
     
     @JsonProperty("bucketName")
     public String bucketName;
+
     public SetResourceAccessForBucketRequest withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -23,9 +25,15 @@ public class SetResourceAccessForBucketRequest {
     
     @JsonProperty("resourceName")
     public String resourceName;
+
     public SetResourceAccessForBucketRequest withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public SetResourceAccessForBucketRequest(@JsonProperty("access") ResourceBucketAccessEnum access, @JsonProperty("bucketName") String bucketName, @JsonProperty("resourceName") String resourceName) {
+        this.access = access;
+        this.bucketName = bucketName;
+        this.resourceName = resourceName;
+  }
 }

@@ -15,6 +15,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageBands")
     public Object[] ageBands;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withAgeBands(Object[] ageBands) {
         this.ageBands = ageBands;
         return this;
@@ -28,6 +29,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageBandsRequired")
     public BookingAvailabilityTourgrades200ApplicationJSONDataAgeBandsRequired[][] ageBandsRequired;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withAgeBandsRequired(BookingAvailabilityTourgrades200ApplicationJSONDataAgeBandsRequired[][] ageBandsRequired) {
         this.ageBandsRequired = ageBandsRequired;
         return this;
@@ -39,6 +41,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available")
     public Boolean available;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withAvailable(Boolean available) {
         this.available = available;
         return this;
@@ -50,6 +53,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingDate")
     public String bookingDate;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withBookingDate(String bookingDate) {
         this.bookingDate = bookingDate;
         return this;
@@ -61,6 +65,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -72,6 +77,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLanguageCode")
     public String defaultLanguageCode;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withDefaultLanguageCode(String defaultLanguageCode) {
         this.defaultLanguageCode = defaultLanguageCode;
         return this;
@@ -83,6 +89,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradeCode")
     public String gradeCode;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withGradeCode(String gradeCode) {
         this.gradeCode = gradeCode;
         return this;
@@ -94,6 +101,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradeDepartureTime")
     public String gradeDepartureTime;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withGradeDepartureTime(String gradeDepartureTime) {
         this.gradeDepartureTime = gradeDepartureTime;
         return this;
@@ -105,6 +113,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradeDescription")
     public String gradeDescription;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withGradeDescription(String gradeDescription) {
         this.gradeDescription = gradeDescription;
         return this;
@@ -116,6 +125,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradeTitle")
     public String gradeTitle;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withGradeTitle(String gradeTitle) {
         this.gradeTitle = gradeTitle;
         return this;
@@ -127,6 +137,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("langServices")
     public java.util.Map<String, Object> langServices;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withLangServices(java.util.Map<String, Object> langServices) {
         this.langServices = langServices;
         return this;
@@ -141,6 +152,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantNetPrice")
     public Double merchantNetPrice;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withMerchantNetPrice(Double merchantNetPrice) {
         this.merchantNetPrice = merchantNetPrice;
         return this;
@@ -155,6 +167,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantNetPriceFormatted")
     public String merchantNetPriceFormatted;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withMerchantNetPriceFormatted(String merchantNetPriceFormatted) {
         this.merchantNetPriceFormatted = merchantNetPriceFormatted;
         return this;
@@ -169,6 +182,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retailPrice")
     public Double retailPrice;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withRetailPrice(Double retailPrice) {
         this.retailPrice = retailPrice;
         return this;
@@ -183,6 +197,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retailPriceFormatted")
     public String retailPriceFormatted;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withRetailPriceFormatted(String retailPriceFormatted) {
         this.retailPriceFormatted = retailPriceFormatted;
         return this;
@@ -194,6 +209,7 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -205,9 +221,11 @@ public class BookingAvailabilityTourgrades200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unavailableReason")
     public String unavailableReason;
+
     public BookingAvailabilityTourgrades200ApplicationJSONData withUnavailableReason(String unavailableReason) {
         this.unavailableReason = unavailableReason;
         return this;
     }
     
+    public BookingAvailabilityTourgrades200ApplicationJSONData(){}
 }

@@ -15,6 +15,7 @@ public class ListEarthObservationJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListEarthObservationJobsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListEarthObservationJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEarthObservationJobsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,6 +39,7 @@ public class ListEarthObservationJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public String sortBy;
+
     public ListEarthObservationJobsRequestBody withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -48,6 +51,7 @@ public class ListEarthObservationJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public ListEarthObservationJobsRequestBodySortOrderEnum sortOrder;
+
     public ListEarthObservationJobsRequestBody withSortOrder(ListEarthObservationJobsRequestBodySortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -59,9 +63,11 @@ public class ListEarthObservationJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusEquals")
     public ListEarthObservationJobsRequestBodyStatusEqualsEnum statusEquals;
+
     public ListEarthObservationJobsRequestBody withStatusEquals(ListEarthObservationJobsRequestBodyStatusEqualsEnum statusEquals) {
         this.statusEquals = statusEquals;
         return this;
     }
     
+    public ListEarthObservationJobsRequestBody(){}
 }

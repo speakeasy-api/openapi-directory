@@ -12,6 +12,7 @@ public class UpdateResourceCollectionRequestBody {
      */
     @JsonProperty("Action")
     public UpdateResourceCollectionRequestBodyActionEnum action;
+
     public UpdateResourceCollectionRequestBody withAction(UpdateResourceCollectionRequestBodyActionEnum action) {
         this.action = action;
         return this;
@@ -22,9 +23,14 @@ public class UpdateResourceCollectionRequestBody {
      */
     @JsonProperty("ResourceCollection")
     public UpdateResourceCollectionRequestBodyResourceCollection resourceCollection;
+
     public UpdateResourceCollectionRequestBody withResourceCollection(UpdateResourceCollectionRequestBodyResourceCollection resourceCollection) {
         this.resourceCollection = resourceCollection;
         return this;
     }
     
+    public UpdateResourceCollectionRequestBody(@JsonProperty("Action") UpdateResourceCollectionRequestBodyActionEnum action, @JsonProperty("ResourceCollection") UpdateResourceCollectionRequestBodyResourceCollection resourceCollection) {
+        this.action = action;
+        this.resourceCollection = resourceCollection;
+  }
 }

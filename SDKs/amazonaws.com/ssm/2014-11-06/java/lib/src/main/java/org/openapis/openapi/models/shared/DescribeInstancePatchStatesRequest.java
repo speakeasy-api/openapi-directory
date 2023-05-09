@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeInstancePatchStatesRequest {
     @JsonProperty("InstanceIds")
     public String[] instanceIds;
+
     public DescribeInstancePatchStatesRequest withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstancePatchStatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeInstancePatchStatesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class DescribeInstancePatchStatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeInstancePatchStatesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstancePatchStatesRequest(@JsonProperty("InstanceIds") String[] instanceIds) {
+        this.instanceIds = instanceIds;
+  }
 }

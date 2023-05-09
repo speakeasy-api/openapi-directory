@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Example11 {
     @JsonProperty("app_device_id")
     public String appDeviceId;
+
     public Example11 withAppDeviceId(String appDeviceId) {
         this.appDeviceId = appDeviceId;
         return this;
@@ -16,6 +17,7 @@ public class Example11 {
     
     @JsonProperty("certificate")
     public String certificate;
+
     public Example11 withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -23,9 +25,15 @@ public class Example11 {
     
     @JsonProperty("signed_data")
     public String signedData;
+
     public Example11 withSignedData(String signedData) {
         this.signedData = signedData;
         return this;
     }
     
+    public Example11(@JsonProperty("app_device_id") String appDeviceId, @JsonProperty("certificate") String certificate, @JsonProperty("signed_data") String signedData) {
+        this.appDeviceId = appDeviceId;
+        this.certificate = certificate;
+        this.signedData = signedData;
+  }
 }

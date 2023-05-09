@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutContainersQuotaRequest {
@@ -12,6 +13,7 @@ public class PutContainersQuotaRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ContainersQuotaList containersQuotaList;
+
     public PutContainersQuotaRequest withContainersQuotaList(org.openapis.openapi.models.shared.ContainersQuotaList containersQuotaList) {
         this.containersQuotaList = containersQuotaList;
         return this;
@@ -22,6 +24,7 @@ public class PutContainersQuotaRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
     public String xAuthProjectId;
+
     public PutContainersQuotaRequest withXAuthProjectId(String xAuthProjectId) {
         this.xAuthProjectId = xAuthProjectId;
         return this;
@@ -32,9 +35,15 @@ public class PutContainersQuotaRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
     public String xAuthToken;
+
     public PutContainersQuotaRequest withXAuthToken(String xAuthToken) {
         this.xAuthToken = xAuthToken;
         return this;
     }
     
+    public PutContainersQuotaRequest(@JsonProperty("ContainersQuotaList") org.openapis.openapi.models.shared.ContainersQuotaList containersQuotaList, @JsonProperty("X-Auth-Project-Id") String xAuthProjectId, @JsonProperty("X-Auth-Token") String xAuthToken) {
+        this.containersQuotaList = containersQuotaList;
+        this.xAuthProjectId = xAuthProjectId;
+        this.xAuthToken = xAuthToken;
+  }
 }

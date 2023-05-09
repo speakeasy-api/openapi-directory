@@ -15,6 +15,7 @@ public class SavingsPlansCoverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public SavingsPlansCoverage withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class SavingsPlansCoverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Coverage")
     public SavingsPlansCoverageData coverage;
+
     public SavingsPlansCoverage withCoverage(SavingsPlansCoverageData coverage) {
         this.coverage = coverage;
         return this;
@@ -34,9 +36,11 @@ public class SavingsPlansCoverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public SavingsPlansCoverage withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public SavingsPlansCoverage(){}
 }

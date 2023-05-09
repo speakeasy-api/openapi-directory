@@ -15,9 +15,11 @@ public class CreateCapacityProviderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityProvider")
     public CapacityProvider capacityProvider;
+
     public CreateCapacityProviderResponse withCapacityProvider(CapacityProvider capacityProvider) {
         this.capacityProvider = capacityProvider;
         return this;
     }
     
+    public CreateCapacityProviderResponse(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2SearchAgentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agents")
     public GoogleCloudDialogflowV2Agent[] agents;
+
     public GoogleCloudDialogflowV2SearchAgentsResponse withAgents(GoogleCloudDialogflowV2Agent[] agents) {
         this.agents = agents;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2SearchAgentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowV2SearchAgentsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDialogflowV2SearchAgentsResponse(){}
 }

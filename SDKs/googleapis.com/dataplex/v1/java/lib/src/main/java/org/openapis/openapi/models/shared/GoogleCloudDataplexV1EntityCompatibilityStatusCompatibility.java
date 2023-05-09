@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1EntityCompatibilityStatusCompatibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatible")
     public Boolean compatible;
+
     public GoogleCloudDataplexV1EntityCompatibilityStatusCompatibility withCompatible(Boolean compatible) {
         this.compatible = compatible;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1EntityCompatibilityStatusCompatibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public GoogleCloudDataplexV1EntityCompatibilityStatusCompatibility withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public GoogleCloudDataplexV1EntityCompatibilityStatusCompatibility(){}
 }

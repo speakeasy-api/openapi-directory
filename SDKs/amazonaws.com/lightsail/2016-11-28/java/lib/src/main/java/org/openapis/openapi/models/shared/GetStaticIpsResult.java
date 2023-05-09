@@ -15,6 +15,7 @@ public class GetStaticIpsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetStaticIpsResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class GetStaticIpsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staticIps")
     public StaticIp[] staticIps;
+
     public GetStaticIpsResult withStaticIps(StaticIp[] staticIps) {
         this.staticIps = staticIps;
         return this;
     }
     
+    public GetStaticIpsResult(){}
 }

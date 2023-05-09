@@ -20,6 +20,7 @@ public class GetTeamMemberWageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public GetTeamMemberWageResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -32,9 +33,11 @@ public class GetTeamMemberWageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_member_wage")
     public TeamMemberWage teamMemberWage;
+
     public GetTeamMemberWageResponse withTeamMemberWage(TeamMemberWage teamMemberWage) {
         this.teamMemberWage = teamMemberWage;
         return this;
     }
     
+    public GetTeamMemberWageResponse(){}
 }

@@ -18,6 +18,7 @@ public class LicenseImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allotment_charge")
     public Long allotmentCharge;
+
     public LicenseImageResult withAllotmentCharge(Long allotmentCharge) {
         this.allotmentCharge = allotmentCharge;
         return this;
@@ -29,6 +30,7 @@ public class LicenseImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download")
     public Url download;
+
     public LicenseImageResult withDownload(Url download) {
         this.download = download;
         return this;
@@ -40,6 +42,7 @@ public class LicenseImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public LicenseImageResult withError(String error) {
         this.error = error;
         return this;
@@ -50,6 +53,7 @@ public class LicenseImageResult {
      */
     @JsonProperty("image_id")
     public String imageId;
+
     public LicenseImageResult withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -61,6 +65,7 @@ public class LicenseImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license_id")
     public String licenseId;
+
     public LicenseImageResult withLicenseId(String licenseId) {
         this.licenseId = licenseId;
         return this;
@@ -72,9 +77,13 @@ public class LicenseImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Price price;
+
     public LicenseImageResult withPrice(Price price) {
         this.price = price;
         return this;
     }
     
+    public LicenseImageResult(@JsonProperty("image_id") String imageId) {
+        this.imageId = imageId;
+  }
 }

@@ -15,9 +15,11 @@ public class ImportExportedData400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public ImportExportedData400ApplicationJSONError error;
+
     public ImportExportedData400ApplicationJSON withError(ImportExportedData400ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public ImportExportedData400ApplicationJSON(){}
 }

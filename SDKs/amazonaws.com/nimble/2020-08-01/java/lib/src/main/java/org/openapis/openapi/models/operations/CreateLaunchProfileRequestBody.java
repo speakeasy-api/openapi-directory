@@ -15,6 +15,7 @@ public class CreateLaunchProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateLaunchProfileRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class CreateLaunchProfileRequestBody {
      */
     @JsonProperty("ec2SubnetIds")
     public String[] ec2SubnetIds;
+
     public CreateLaunchProfileRequestBody withEc2SubnetIds(String[] ec2SubnetIds) {
         this.ec2SubnetIds = ec2SubnetIds;
         return this;
@@ -35,6 +37,7 @@ public class CreateLaunchProfileRequestBody {
      */
     @JsonProperty("launchProfileProtocolVersions")
     public String[] launchProfileProtocolVersions;
+
     public CreateLaunchProfileRequestBody withLaunchProfileProtocolVersions(String[] launchProfileProtocolVersions) {
         this.launchProfileProtocolVersions = launchProfileProtocolVersions;
         return this;
@@ -45,6 +48,7 @@ public class CreateLaunchProfileRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateLaunchProfileRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +59,7 @@ public class CreateLaunchProfileRequestBody {
      */
     @JsonProperty("streamConfiguration")
     public CreateLaunchProfileRequestBodyStreamConfiguration streamConfiguration;
+
     public CreateLaunchProfileRequestBody withStreamConfiguration(CreateLaunchProfileRequestBodyStreamConfiguration streamConfiguration) {
         this.streamConfiguration = streamConfiguration;
         return this;
@@ -65,6 +70,7 @@ public class CreateLaunchProfileRequestBody {
      */
     @JsonProperty("studioComponentIds")
     public String[] studioComponentIds;
+
     public CreateLaunchProfileRequestBody withStudioComponentIds(String[] studioComponentIds) {
         this.studioComponentIds = studioComponentIds;
         return this;
@@ -76,9 +82,17 @@ public class CreateLaunchProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateLaunchProfileRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLaunchProfileRequestBody(@JsonProperty("ec2SubnetIds") String[] ec2SubnetIds, @JsonProperty("launchProfileProtocolVersions") String[] launchProfileProtocolVersions, @JsonProperty("name") String name, @JsonProperty("streamConfiguration") CreateLaunchProfileRequestBodyStreamConfiguration streamConfiguration, @JsonProperty("studioComponentIds") String[] studioComponentIds) {
+        this.ec2SubnetIds = ec2SubnetIds;
+        this.launchProfileProtocolVersions = launchProfileProtocolVersions;
+        this.name = name;
+        this.streamConfiguration = streamConfiguration;
+        this.studioComponentIds = studioComponentIds;
+  }
 }

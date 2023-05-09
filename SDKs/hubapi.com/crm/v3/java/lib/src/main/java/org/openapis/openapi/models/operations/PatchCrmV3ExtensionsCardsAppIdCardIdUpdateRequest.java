@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest {
@@ -12,6 +13,7 @@ public class PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CardPatchRequest cardPatchRequest;
+
     public PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest withCardPatchRequest(org.openapis.openapi.models.shared.CardPatchRequest cardPatchRequest) {
         this.cardPatchRequest = cardPatchRequest;
         return this;
@@ -22,6 +24,7 @@ public class PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
@@ -32,9 +35,15 @@ public class PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cardId")
     public String cardId;
+
     public PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest withCardId(String cardId) {
         this.cardId = cardId;
         return this;
     }
     
+    public PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest(@JsonProperty("CardPatchRequest") org.openapis.openapi.models.shared.CardPatchRequest cardPatchRequest, @JsonProperty("appId") Integer appId, @JsonProperty("cardId") String cardId) {
+        this.cardPatchRequest = cardPatchRequest;
+        this.appId = appId;
+        this.cardId = cardId;
+  }
 }

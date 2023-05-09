@@ -15,6 +15,7 @@ public class DataModelConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataModel")
     public DataModel dataModel;
+
     public DataModelConfiguration withDataModel(DataModel dataModel) {
         this.dataModel = dataModel;
         return this;
@@ -23,9 +24,11 @@ public class DataModelConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataModelS3Configuration")
     public DataModelS3Configuration dataModelS3Configuration;
+
     public DataModelConfiguration withDataModelS3Configuration(DataModelS3Configuration dataModelS3Configuration) {
         this.dataModelS3Configuration = dataModelS3Configuration;
         return this;
     }
     
+    public DataModelConfiguration(){}
 }

@@ -28,6 +28,7 @@ public class OrderLineItemAppliedDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_money")
     public Money appliedMoney;
+
     public OrderLineItemAppliedDiscount withAppliedMoney(Money appliedMoney) {
         this.appliedMoney = appliedMoney;
         return this;
@@ -42,6 +43,7 @@ public class OrderLineItemAppliedDiscount {
      */
     @JsonProperty("discount_uid")
     public String discountUid;
+
     public OrderLineItemAppliedDiscount withDiscountUid(String discountUid) {
         this.discountUid = discountUid;
         return this;
@@ -53,9 +55,13 @@ public class OrderLineItemAppliedDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OrderLineItemAppliedDiscount withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public OrderLineItemAppliedDiscount(@JsonProperty("discount_uid") String discountUid) {
+        this.discountUid = discountUid;
+  }
 }

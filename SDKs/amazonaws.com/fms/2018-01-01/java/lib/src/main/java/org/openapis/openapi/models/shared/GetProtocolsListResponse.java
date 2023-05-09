@@ -15,6 +15,7 @@ public class GetProtocolsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProtocolsList")
     public ProtocolsListData protocolsList;
+
     public GetProtocolsListResponse withProtocolsList(ProtocolsListData protocolsList) {
         this.protocolsList = protocolsList;
         return this;
@@ -23,9 +24,11 @@ public class GetProtocolsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProtocolsListArn")
     public String protocolsListArn;
+
     public GetProtocolsListResponse withProtocolsListArn(String protocolsListArn) {
         this.protocolsListArn = protocolsListArn;
         return this;
     }
     
+    public GetProtocolsListResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetComicIdInfo0JsonResponse {
     
     public byte[] body;
+
     public GetComicIdInfo0JsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetComicIdInfo0JsonResponse {
     
     
     public String contentType;
+
     public GetComicIdInfo0JsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetComicIdInfo0JsonResponse {
     
     
     public Integer statusCode;
+
     public GetComicIdInfo0JsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetComicIdInfo0JsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetComicIdInfo0JsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetComicIdInfo0JsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

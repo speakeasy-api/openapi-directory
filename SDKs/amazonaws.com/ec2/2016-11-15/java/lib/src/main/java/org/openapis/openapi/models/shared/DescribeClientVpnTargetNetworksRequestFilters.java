@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnTargetNetworksRequestFilters {
     
     public String name;
+
     public DescribeClientVpnTargetNetworksRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeClientVpnTargetNetworksRequestFilters {
     
     
     public String[] values;
+
     public DescribeClientVpnTargetNetworksRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeClientVpnTargetNetworksRequestFilters(){}
 }

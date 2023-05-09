@@ -55,7 +55,7 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventsResponse res = new org.openapis.openapi.models.operations.GetEventsResponse() {{
+        org.openapis.openapi.models.operations.GetEventsResponse res = new org.openapis.openapi.models.operations.GetEventsResponse(contentType, httpRes.statusCode()) {{
             getEvents200ApplicationJSONObject = null;
             getEvents400ApplicationJSONObject = null;
             getEvents401ApplicationJSONObject = null;
@@ -63,8 +63,6 @@ public class Events {
             getEvents429ApplicationJSONObject = null;
             getEvents500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -133,7 +131,9 @@ public class Events {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TrackJourneyEventResponse trackJourneyEvent(org.openapis.openapi.models.operations.TrackJourneyEventRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/events");
@@ -153,7 +153,7 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TrackJourneyEventResponse res = new org.openapis.openapi.models.operations.TrackJourneyEventResponse() {{
+        org.openapis.openapi.models.operations.TrackJourneyEventResponse res = new org.openapis.openapi.models.operations.TrackJourneyEventResponse(contentType, httpRes.statusCode()) {{
             trackJourneyEvent201ApplicationJSONObject = null;
             trackJourneyEvent400ApplicationJSONObject = null;
             trackJourneyEvent401ApplicationJSONObject = null;
@@ -161,8 +161,6 @@ public class Events {
             trackJourneyEvent429ApplicationJSONObject = null;
             trackJourneyEvent500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

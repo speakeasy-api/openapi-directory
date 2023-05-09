@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPipelineTestReportTestCaseReasonsResponse {
     
     public String contentType;
+
     public GetPipelineTestReportTestCaseReasonsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPipelineTestReportTestCaseReasonsResponse {
     
     
     public Integer statusCode;
+
     public GetPipelineTestReportTestCaseReasonsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetPipelineTestReportTestCaseReasonsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPipelineTestReportTestCaseReasonsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetPipelineTestReportTestCaseReasonsResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetPipelineTestReportTestCaseReasonsResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
     }
     
+    public GetPipelineTestReportTestCaseReasonsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

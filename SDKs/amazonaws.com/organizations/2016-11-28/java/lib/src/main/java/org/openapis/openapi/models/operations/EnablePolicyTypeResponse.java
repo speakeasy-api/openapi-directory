@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnablePolicyTypeResponse {
@@ -12,6 +13,7 @@ public class EnablePolicyTypeResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public EnablePolicyTypeResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class EnablePolicyTypeResponse {
      */
     
     public Object accessDeniedException;
+
     public EnablePolicyTypeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class EnablePolicyTypeResponse {
      */
     
     public Object concurrentModificationException;
+
     public EnablePolicyTypeResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -42,6 +46,7 @@ public class EnablePolicyTypeResponse {
      */
     
     public Object constraintViolationException;
+
     public EnablePolicyTypeResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -49,6 +54,7 @@ public class EnablePolicyTypeResponse {
     
     
     public String contentType;
+
     public EnablePolicyTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class EnablePolicyTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.EnablePolicyTypeResponse enablePolicyTypeResponse;
+
     public EnablePolicyTypeResponse withEnablePolicyTypeResponse(org.openapis.openapi.models.shared.EnablePolicyTypeResponse enablePolicyTypeResponse) {
         this.enablePolicyTypeResponse = enablePolicyTypeResponse;
         return this;
@@ -69,6 +76,7 @@ public class EnablePolicyTypeResponse {
      */
     
     public Object invalidInputException;
+
     public EnablePolicyTypeResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class EnablePolicyTypeResponse {
      */
     
     public Object policyChangesInProgressException;
+
     public EnablePolicyTypeResponse withPolicyChangesInProgressException(Object policyChangesInProgressException) {
         this.policyChangesInProgressException = policyChangesInProgressException;
         return this;
@@ -89,6 +98,7 @@ public class EnablePolicyTypeResponse {
      */
     
     public Object policyTypeAlreadyEnabledException;
+
     public EnablePolicyTypeResponse withPolicyTypeAlreadyEnabledException(Object policyTypeAlreadyEnabledException) {
         this.policyTypeAlreadyEnabledException = policyTypeAlreadyEnabledException;
         return this;
@@ -99,6 +109,7 @@ public class EnablePolicyTypeResponse {
      */
     
     public Object policyTypeNotAvailableForOrganizationException;
+
     public EnablePolicyTypeResponse withPolicyTypeNotAvailableForOrganizationException(Object policyTypeNotAvailableForOrganizationException) {
         this.policyTypeNotAvailableForOrganizationException = policyTypeNotAvailableForOrganizationException;
         return this;
@@ -109,6 +120,7 @@ public class EnablePolicyTypeResponse {
      */
     
     public Object rootNotFoundException;
+
     public EnablePolicyTypeResponse withRootNotFoundException(Object rootNotFoundException) {
         this.rootNotFoundException = rootNotFoundException;
         return this;
@@ -116,6 +128,7 @@ public class EnablePolicyTypeResponse {
     
     
     public Integer statusCode;
+
     public EnablePolicyTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class EnablePolicyTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnablePolicyTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,6 +147,7 @@ public class EnablePolicyTypeResponse {
      */
     
     public Object serviceException;
+
     public EnablePolicyTypeResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -143,6 +158,7 @@ public class EnablePolicyTypeResponse {
      */
     
     public Object tooManyRequestsException;
+
     public EnablePolicyTypeResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -153,9 +169,14 @@ public class EnablePolicyTypeResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public EnablePolicyTypeResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public EnablePolicyTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

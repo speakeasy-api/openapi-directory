@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePushTemplateResponse {
@@ -12,6 +13,7 @@ public class DeletePushTemplateResponse {
      */
     
     public Object badRequestException;
+
     public DeletePushTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeletePushTemplateResponse {
     
     
     public String contentType;
+
     public DeletePushTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeletePushTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.DeletePushTemplateResponse deletePushTemplateResponse;
+
     public DeletePushTemplateResponse withDeletePushTemplateResponse(org.openapis.openapi.models.shared.DeletePushTemplateResponse deletePushTemplateResponse) {
         this.deletePushTemplateResponse = deletePushTemplateResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeletePushTemplateResponse {
      */
     
     public Object forbiddenException;
+
     public DeletePushTemplateResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeletePushTemplateResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeletePushTemplateResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeletePushTemplateResponse {
      */
     
     public Object methodNotAllowedException;
+
     public DeletePushTemplateResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class DeletePushTemplateResponse {
      */
     
     public Object notFoundException;
+
     public DeletePushTemplateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class DeletePushTemplateResponse {
      */
     
     public Object payloadTooLargeException;
+
     public DeletePushTemplateResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class DeletePushTemplateResponse {
     
     
     public Integer statusCode;
+
     public DeletePushTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeletePushTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePushTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeletePushTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeletePushTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeletePushTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

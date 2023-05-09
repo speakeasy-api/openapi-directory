@@ -15,17 +15,18 @@ public class Address2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public Address2 withCity(String city) {
         this.city = city;
         return this;
     }
     
     /**
-     * The two-character ISO 3166-1 alpha-2 country code. For example, **US**.
-     * &gt;If you don't know the country or are not collecting the country from the shopper, provide `country` as `ZZ`.
+     * The two-character ISO 3166-1 alpha-2 country code. For example, **US**, **NL**, or **GB**.
      */
     @JsonProperty("country")
     public String country;
+
     public Address2 withCountry(String country) {
         this.country = country;
         return this;
@@ -37,6 +38,7 @@ public class Address2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line1")
     public String line1;
+
     public Address2 withLine1(String line1) {
         this.line1 = line1;
         return this;
@@ -48,6 +50,7 @@ public class Address2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line2")
     public String line2;
+
     public Address2 withLine2(String line2) {
         this.line2 = line2;
         return this;
@@ -62,6 +65,7 @@ public class Address2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public Address2 withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -74,9 +78,13 @@ public class Address2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateOrProvince")
     public String stateOrProvince;
+
     public Address2 withStateOrProvince(String stateOrProvince) {
         this.stateOrProvince = stateOrProvince;
         return this;
     }
     
+    public Address2(@JsonProperty("country") String country) {
+        this.country = country;
+  }
 }

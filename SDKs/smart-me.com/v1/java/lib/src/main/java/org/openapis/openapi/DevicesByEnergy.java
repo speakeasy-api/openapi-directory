@@ -57,14 +57,12 @@ public class DevicesByEnergy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevicesByEnergyGetResponse res = new org.openapis.openapi.models.operations.DevicesByEnergyGetResponse() {{
+        org.openapis.openapi.models.operations.DevicesByEnergyGetResponse res = new org.openapis.openapi.models.operations.DevicesByEnergyGetResponse(contentType, httpRes.statusCode()) {{
             devices = null;
             devices = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

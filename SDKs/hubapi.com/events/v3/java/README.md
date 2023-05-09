@@ -15,11 +15,11 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 ```java
 package hello.world;
 
+import java.time.OffsetDateTime;
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetEventsV3EventsGetPageSecurity;
 import org.openapis.openapi.models.operations.GetEventsV3EventsGetPageRequest;
 import org.openapis.openapi.models.operations.GetEventsV3EventsGetPageResponse;
+import org.openapis.openapi.models.operations.GetEventsV3EventsGetPageSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -32,27 +32,29 @@ public class Application {
                 before = "provident";
                 eventType = "distinctio";
                 limit = 844266;
-                objectId = 602763;
+                objectId = 602763L;
                 objectType = "nulla";
-                occurredAfter = "2021-04-22T12:08:58.275Z";
-                occurredBefore = "2022-05-18T09:34:54.894Z";
+                occurredAfter = OffsetDateTime.parse("2021-04-22T12:08:58.275Z");
+                occurredBefore = OffsetDateTime.parse("2022-05-18T09:34:54.894Z");
                 sort = new String[]{{
                     add("suscipit"),
                     add("iure"),
                     add("magnam"),
                 }};
-            }}            
+            }};            
 
             GetEventsV3EventsGetPageResponse res = sdk.events.getEventsV3EventsGetPage(req, new GetEventsV3EventsGetPageSecurity() {{
                 hapikey = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.collectionResponseExternalUnifiedEvent.isPresent()) {
+            if (res.collectionResponseExternalUnifiedEvent != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -60,9 +62,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### events
+### [events](docs/events/README.md)
 
-* `getEventsV3EventsGetPage` - Returns a collection of events matching a query.
+* [getEventsV3EventsGetPage](docs/events/README.md#geteventsv3eventsgetpage) - Returns a collection of events matching a query.
 <!-- End SDK Available Operations -->
 
 ### Maturity

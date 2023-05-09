@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Parameter {
     
     public String parameterKey;
+
     public Parameter withParameterKey(String parameterKey) {
         this.parameterKey = parameterKey;
         return this;
@@ -19,6 +20,7 @@ public class Parameter {
     
     
     public String parameterValue;
+
     public Parameter withParameterValue(String parameterValue) {
         this.parameterValue = parameterValue;
         return this;
@@ -26,6 +28,7 @@ public class Parameter {
     
     
     public String resolvedValue;
+
     public Parameter withResolvedValue(String resolvedValue) {
         this.resolvedValue = resolvedValue;
         return this;
@@ -33,9 +36,11 @@ public class Parameter {
     
     
     public Boolean usePreviousValue;
+
     public Parameter withUsePreviousValue(Boolean usePreviousValue) {
         this.usePreviousValue = usePreviousValue;
         return this;
     }
     
+    public Parameter(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceAttributeRequestKernel {
     
     public String value;
+
     public ModifyInstanceAttributeRequestKernel withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ModifyInstanceAttributeRequestKernel(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PullRequestSimpleLabels {
     @JsonProperty("color")
     public String color;
+
     public PullRequestSimpleLabels withColor(String color) {
         this.color = color;
         return this;
@@ -16,6 +17,7 @@ public class PullRequestSimpleLabels {
     
     @JsonProperty("default")
     public Boolean default_;
+
     public PullRequestSimpleLabels withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -23,6 +25,7 @@ public class PullRequestSimpleLabels {
     
     @JsonProperty("description")
     public String description;
+
     public PullRequestSimpleLabels withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +33,7 @@ public class PullRequestSimpleLabels {
     
     @JsonProperty("id")
     public Long id;
+
     public PullRequestSimpleLabels withId(Long id) {
         this.id = id;
         return this;
@@ -37,6 +41,7 @@ public class PullRequestSimpleLabels {
     
     @JsonProperty("name")
     public String name;
+
     public PullRequestSimpleLabels withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +49,7 @@ public class PullRequestSimpleLabels {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public PullRequestSimpleLabels withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -51,9 +57,19 @@ public class PullRequestSimpleLabels {
     
     @JsonProperty("url")
     public String url;
+
     public PullRequestSimpleLabels withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PullRequestSimpleLabels(@JsonProperty("color") String color, @JsonProperty("default") Boolean default_, @JsonProperty("description") String description, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("url") String url) {
+        this.color = color;
+        this.default_ = default_;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.url = url;
+  }
 }

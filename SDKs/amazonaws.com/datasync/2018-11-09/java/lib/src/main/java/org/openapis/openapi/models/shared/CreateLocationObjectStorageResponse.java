@@ -15,9 +15,11 @@ public class CreateLocationObjectStorageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public CreateLocationObjectStorageResponse withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
     }
     
+    public CreateLocationObjectStorageResponse(){}
 }

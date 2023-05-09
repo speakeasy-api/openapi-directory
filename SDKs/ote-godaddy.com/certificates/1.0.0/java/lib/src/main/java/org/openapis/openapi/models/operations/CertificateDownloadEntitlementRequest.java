@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateDownloadEntitlementRequest {
@@ -12,9 +13,13 @@ public class CertificateDownloadEntitlementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entitlementId")
     public String entitlementId;
+
     public CertificateDownloadEntitlementRequest withEntitlementId(String entitlementId) {
         this.entitlementId = entitlementId;
         return this;
     }
     
+    public CertificateDownloadEntitlementRequest(@JsonProperty("entitlementId") String entitlementId) {
+        this.entitlementId = entitlementId;
+  }
 }

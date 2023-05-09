@@ -15,6 +15,7 @@ public class SuppressedDestinationAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeedbackId")
     public String feedbackId;
+
     public SuppressedDestinationAttributes withFeedbackId(String feedbackId) {
         this.feedbackId = feedbackId;
         return this;
@@ -23,9 +24,11 @@ public class SuppressedDestinationAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageId")
     public String messageId;
+
     public SuppressedDestinationAttributes withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
     }
     
+    public SuppressedDestinationAttributes(){}
 }

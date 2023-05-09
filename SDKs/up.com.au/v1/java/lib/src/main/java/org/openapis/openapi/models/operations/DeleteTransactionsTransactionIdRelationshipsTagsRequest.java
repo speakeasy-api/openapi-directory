@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTransactionsTransactionIdRelationshipsTagsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateTransactionTagsRequest updateTransactionTagsRequest;
+
     public DeleteTransactionsTransactionIdRelationshipsTagsRequest withUpdateTransactionTagsRequest(org.openapis.openapi.models.shared.UpdateTransactionTagsRequest updateTransactionTagsRequest) {
         this.updateTransactionTagsRequest = updateTransactionTagsRequest;
         return this;
@@ -20,9 +22,13 @@ public class DeleteTransactionsTransactionIdRelationshipsTagsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionId")
     public String transactionId;
+
     public DeleteTransactionsTransactionIdRelationshipsTagsRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public DeleteTransactionsTransactionIdRelationshipsTagsRequest(@JsonProperty("transactionId") String transactionId) {
+        this.transactionId = transactionId;
+  }
 }

@@ -15,6 +15,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Args")
     public String[] args;
+
     public Command withArgs(String[] args) {
         this.args = args;
         return this;
@@ -23,6 +24,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Command withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScriptPath")
     public String scriptPath;
+
     public Command withScriptPath(String scriptPath) {
         this.scriptPath = scriptPath;
         return this;
     }
     
+    public Command(){}
 }

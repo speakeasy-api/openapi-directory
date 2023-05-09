@@ -18,6 +18,7 @@ public class ForwardingRulesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ForwardingRulesScopedListWarningCodeEnum code;
+
     public ForwardingRulesScopedListWarning withCode(ForwardingRulesScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ForwardingRulesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ForwardingRulesScopedListWarningData[] data;
+
     public ForwardingRulesScopedListWarning withData(ForwardingRulesScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class ForwardingRulesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ForwardingRulesScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ForwardingRulesScopedListWarning(){}
 }

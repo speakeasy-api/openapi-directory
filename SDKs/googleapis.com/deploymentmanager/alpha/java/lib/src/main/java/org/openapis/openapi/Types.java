@@ -58,11 +58,9 @@ public class Types {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerTypesGetResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypesGetResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerTypesGetResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypesGetResponse(contentType, httpRes.statusCode()) {{
             type = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Types {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerTypesListResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypesListResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerTypesListResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypesListResponse(contentType, httpRes.statusCode()) {{
             typesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

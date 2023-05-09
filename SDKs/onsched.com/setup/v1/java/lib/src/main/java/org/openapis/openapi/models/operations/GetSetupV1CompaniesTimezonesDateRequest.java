@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,9 +14,13 @@ public class GetSetupV1CompaniesTimezonesDateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
     public OffsetDateTime date;
+
     public GetSetupV1CompaniesTimezonesDateRequest withDate(OffsetDateTime date) {
         this.date = date;
         return this;
     }
     
+    public GetSetupV1CompaniesTimezonesDateRequest(@JsonProperty("date") OffsetDateTime date) {
+        this.date = date;
+  }
 }

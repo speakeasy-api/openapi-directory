@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPayslipResponse {
     
     public String contentType;
+
     public GetPayslipResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPayslipResponse {
      */
     
     public org.openapis.openapi.models.shared.PayslipObject payslipObject;
+
     public GetPayslipResponse withPayslipObject(org.openapis.openapi.models.shared.PayslipObject payslipObject) {
         this.payslipObject = payslipObject;
         return this;
@@ -26,6 +29,7 @@ public class GetPayslipResponse {
     
     
     public Integer statusCode;
+
     public GetPayslipResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetPayslipResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPayslipResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPayslipResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

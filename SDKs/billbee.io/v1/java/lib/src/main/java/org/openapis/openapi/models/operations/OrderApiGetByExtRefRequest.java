@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiGetByExtRefRequest {
@@ -12,9 +13,13 @@ public class OrderApiGetByExtRefRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=extRef")
     public String extRef;
+
     public OrderApiGetByExtRefRequest withExtRef(String extRef) {
         this.extRef = extRef;
         return this;
     }
     
+    public OrderApiGetByExtRefRequest(@JsonProperty("extRef") String extRef) {
+        this.extRef = extRef;
+  }
 }

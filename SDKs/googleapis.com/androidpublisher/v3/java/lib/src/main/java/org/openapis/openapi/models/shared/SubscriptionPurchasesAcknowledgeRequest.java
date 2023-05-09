@@ -18,9 +18,11 @@ public class SubscriptionPurchasesAcknowledgeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerPayload")
     public String developerPayload;
+
     public SubscriptionPurchasesAcknowledgeRequest withDeveloperPayload(String developerPayload) {
         this.developerPayload = developerPayload;
         return this;
     }
     
+    public SubscriptionPurchasesAcknowledgeRequest(){}
 }

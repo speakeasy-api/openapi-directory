@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class StackInstanceSummary {
     
     public String account;
+
     public StackInstanceSummary withAccount(String account) {
         this.account = account;
         return this;
@@ -19,6 +20,7 @@ public class StackInstanceSummary {
     
     
     public StackDriftStatusEnum driftStatus;
+
     public StackInstanceSummary withDriftStatus(StackDriftStatusEnum driftStatus) {
         this.driftStatus = driftStatus;
         return this;
@@ -26,6 +28,7 @@ public class StackInstanceSummary {
     
     
     public OffsetDateTime lastDriftCheckTimestamp;
+
     public StackInstanceSummary withLastDriftCheckTimestamp(OffsetDateTime lastDriftCheckTimestamp) {
         this.lastDriftCheckTimestamp = lastDriftCheckTimestamp;
         return this;
@@ -33,6 +36,7 @@ public class StackInstanceSummary {
     
     
     public String lastOperationId;
+
     public StackInstanceSummary withLastOperationId(String lastOperationId) {
         this.lastOperationId = lastOperationId;
         return this;
@@ -40,6 +44,7 @@ public class StackInstanceSummary {
     
     
     public String organizationalUnitId;
+
     public StackInstanceSummary withOrganizationalUnitId(String organizationalUnitId) {
         this.organizationalUnitId = organizationalUnitId;
         return this;
@@ -47,6 +52,7 @@ public class StackInstanceSummary {
     
     
     public String region;
+
     public StackInstanceSummary withRegion(String region) {
         this.region = region;
         return this;
@@ -54,6 +60,7 @@ public class StackInstanceSummary {
     
     
     public String stackId;
+
     public StackInstanceSummary withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -61,6 +68,7 @@ public class StackInstanceSummary {
     
     
     public StackInstanceComprehensiveStatus stackInstanceStatus;
+
     public StackInstanceSummary withStackInstanceStatus(StackInstanceComprehensiveStatus stackInstanceStatus) {
         this.stackInstanceStatus = stackInstanceStatus;
         return this;
@@ -68,6 +76,7 @@ public class StackInstanceSummary {
     
     
     public String stackSetId;
+
     public StackInstanceSummary withStackSetId(String stackSetId) {
         this.stackSetId = stackSetId;
         return this;
@@ -75,6 +84,7 @@ public class StackInstanceSummary {
     
     
     public StackInstanceStatusEnum status;
+
     public StackInstanceSummary withStatus(StackInstanceStatusEnum status) {
         this.status = status;
         return this;
@@ -82,9 +92,11 @@ public class StackInstanceSummary {
     
     
     public String statusReason;
+
     public StackInstanceSummary withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public StackInstanceSummary(){}
 }

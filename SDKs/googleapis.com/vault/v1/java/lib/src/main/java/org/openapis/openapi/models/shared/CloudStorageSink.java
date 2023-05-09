@@ -18,9 +18,11 @@ public class CloudStorageSink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public CloudStorageFile[] files;
+
     public CloudStorageSink withFiles(CloudStorageFile[] files) {
         this.files = files;
         return this;
     }
     
+    public CloudStorageSink(){}
 }

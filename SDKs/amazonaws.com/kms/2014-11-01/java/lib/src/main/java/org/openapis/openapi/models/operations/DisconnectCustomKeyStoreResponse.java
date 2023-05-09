@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisconnectCustomKeyStoreResponse {
     
     public String contentType;
+
     public DisconnectCustomKeyStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisconnectCustomKeyStoreResponse {
      */
     
     public Object customKeyStoreInvalidStateException;
+
     public DisconnectCustomKeyStoreResponse withCustomKeyStoreInvalidStateException(Object customKeyStoreInvalidStateException) {
         this.customKeyStoreInvalidStateException = customKeyStoreInvalidStateException;
         return this;
@@ -29,6 +32,7 @@ public class DisconnectCustomKeyStoreResponse {
      */
     
     public Object customKeyStoreNotFoundException;
+
     public DisconnectCustomKeyStoreResponse withCustomKeyStoreNotFoundException(Object customKeyStoreNotFoundException) {
         this.customKeyStoreNotFoundException = customKeyStoreNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DisconnectCustomKeyStoreResponse {
      */
     
     public java.util.Map<String, Object> disconnectCustomKeyStoreResponse;
+
     public DisconnectCustomKeyStoreResponse withDisconnectCustomKeyStoreResponse(java.util.Map<String, Object> disconnectCustomKeyStoreResponse) {
         this.disconnectCustomKeyStoreResponse = disconnectCustomKeyStoreResponse;
         return this;
@@ -49,6 +54,7 @@ public class DisconnectCustomKeyStoreResponse {
      */
     
     public Object kmsInternalException;
+
     public DisconnectCustomKeyStoreResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -56,6 +62,7 @@ public class DisconnectCustomKeyStoreResponse {
     
     
     public Integer statusCode;
+
     public DisconnectCustomKeyStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DisconnectCustomKeyStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisconnectCustomKeyStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisconnectCustomKeyStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

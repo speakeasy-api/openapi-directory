@@ -18,6 +18,7 @@ public class DeviceFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obbFile")
     public ObbFile obbFile;
+
     public DeviceFile withObbFile(ObbFile obbFile) {
         this.obbFile = obbFile;
         return this;
@@ -29,9 +30,11 @@ public class DeviceFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regularFile")
     public RegularFile regularFile;
+
     public DeviceFile withRegularFile(RegularFile regularFile) {
         this.regularFile = regularFile;
         return this;
     }
     
+    public DeviceFile(){}
 }

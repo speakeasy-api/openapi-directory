@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ConfigLog {
     @JsonProperty("id")
     public Long id;
+
     public ConfigLog withId(Long id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class ConfigLog {
     
     @JsonProperty("key")
     public String key;
+
     public ConfigLog withKey(String key) {
         this.key = key;
         return this;
@@ -31,6 +33,7 @@ public class ConfigLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_value")
     public String newValue;
+
     public ConfigLog withNewValue(String newValue) {
         this.newValue = newValue;
         return this;
@@ -42,6 +45,7 @@ public class ConfigLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String origin;
+
     public ConfigLog withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -50,6 +54,7 @@ public class ConfigLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous_value")
     public String previousValue;
+
     public ConfigLog withPreviousValue(String previousValue) {
         this.previousValue = previousValue;
         return this;
@@ -62,6 +67,7 @@ public class ConfigLog {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public ConfigLog withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -72,9 +78,16 @@ public class ConfigLog {
      */
     @JsonProperty("type")
     public String type;
+
     public ConfigLog withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ConfigLog(@JsonProperty("id") Long id, @JsonProperty("key") String key, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("type") String type) {
+        this.id = id;
+        this.key = key;
+        this.timestamp = timestamp;
+        this.type = type;
+  }
 }

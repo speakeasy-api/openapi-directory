@@ -22,6 +22,7 @@ public class DataCollectionDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completionTime")
     public OffsetDateTime completionTime;
+
     public DataCollectionDetails withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -30,6 +31,7 @@ public class DataCollectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failed")
     public Long failed;
+
     public DataCollectionDetails withFailed(Long failed) {
         this.failed = failed;
         return this;
@@ -38,6 +40,7 @@ public class DataCollectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inProgress")
     public Long inProgress;
+
     public DataCollectionDetails withInProgress(Long inProgress) {
         this.inProgress = inProgress;
         return this;
@@ -46,6 +49,7 @@ public class DataCollectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servers")
     public Long servers;
+
     public DataCollectionDetails withServers(Long servers) {
         this.servers = servers;
         return this;
@@ -56,6 +60,7 @@ public class DataCollectionDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public DataCollectionDetails withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -64,6 +69,7 @@ public class DataCollectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AssessmentStatusEnum status;
+
     public DataCollectionDetails withStatus(AssessmentStatusEnum status) {
         this.status = status;
         return this;
@@ -72,6 +78,7 @@ public class DataCollectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public DataCollectionDetails withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -80,9 +87,11 @@ public class DataCollectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Long success;
+
     public DataCollectionDetails withSuccess(Long success) {
         this.success = success;
         return this;
     }
     
+    public DataCollectionDetails(){}
 }

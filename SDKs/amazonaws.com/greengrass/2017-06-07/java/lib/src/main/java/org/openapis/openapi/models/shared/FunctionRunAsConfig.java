@@ -15,6 +15,7 @@ public class FunctionRunAsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gid")
     public Long gid;
+
     public FunctionRunAsConfig withGid(Long gid) {
         this.gid = gid;
         return this;
@@ -23,9 +24,11 @@ public class FunctionRunAsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Uid")
     public Long uid;
+
     public FunctionRunAsConfig withUid(Long uid) {
         this.uid = uid;
         return this;
     }
     
+    public FunctionRunAsConfig(){}
 }

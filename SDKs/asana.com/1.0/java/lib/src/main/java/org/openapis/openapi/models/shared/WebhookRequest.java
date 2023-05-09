@@ -15,6 +15,7 @@ public class WebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public WebhookRequestFilters[] filters;
+
     public WebhookRequest withFilters(WebhookRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -25,6 +26,7 @@ public class WebhookRequest {
      */
     @JsonProperty("resource")
     public String resource;
+
     public WebhookRequest withResource(String resource) {
         this.resource = resource;
         return this;
@@ -35,9 +37,14 @@ public class WebhookRequest {
      */
     @JsonProperty("target")
     public String target;
+
     public WebhookRequest withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public WebhookRequest(@JsonProperty("resource") String resource, @JsonProperty("target") String target) {
+        this.resource = resource;
+        this.target = target;
+  }
 }

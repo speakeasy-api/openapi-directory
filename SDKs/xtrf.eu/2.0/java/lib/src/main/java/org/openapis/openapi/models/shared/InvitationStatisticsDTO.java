@@ -15,6 +15,7 @@ public class InvitationStatisticsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alreadyRegisteredPersonsCount")
     public Integer alreadyRegisteredPersonsCount;
+
     public InvitationStatisticsDTO withAlreadyRegisteredPersonsCount(Integer alreadyRegisteredPersonsCount) {
         this.alreadyRegisteredPersonsCount = alreadyRegisteredPersonsCount;
         return this;
@@ -23,6 +24,7 @@ public class InvitationStatisticsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invitedPersonsCount")
     public Integer invitedPersonsCount;
+
     public InvitationStatisticsDTO withInvitedPersonsCount(Integer invitedPersonsCount) {
         this.invitedPersonsCount = invitedPersonsCount;
         return this;
@@ -31,6 +33,7 @@ public class InvitationStatisticsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providersWithAlreadyRegisteredPersonCount")
     public Integer providersWithAlreadyRegisteredPersonCount;
+
     public InvitationStatisticsDTO withProvidersWithAlreadyRegisteredPersonCount(Integer providersWithAlreadyRegisteredPersonCount) {
         this.providersWithAlreadyRegisteredPersonCount = providersWithAlreadyRegisteredPersonCount;
         return this;
@@ -39,6 +42,7 @@ public class InvitationStatisticsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providersWithInvitedPersonCount")
     public Integer providersWithInvitedPersonCount;
+
     public InvitationStatisticsDTO withProvidersWithInvitedPersonCount(Integer providersWithInvitedPersonCount) {
         this.providersWithInvitedPersonCount = providersWithInvitedPersonCount;
         return this;
@@ -47,9 +51,11 @@ public class InvitationStatisticsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providersWithoutPersonCount")
     public Integer providersWithoutPersonCount;
+
     public InvitationStatisticsDTO withProvidersWithoutPersonCount(Integer providersWithoutPersonCount) {
         this.providersWithoutPersonCount = providersWithoutPersonCount;
         return this;
     }
     
+    public InvitationStatisticsDTO(){}
 }

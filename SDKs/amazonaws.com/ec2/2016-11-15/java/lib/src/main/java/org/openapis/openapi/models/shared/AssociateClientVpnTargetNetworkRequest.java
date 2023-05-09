@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AssociateClientVpnTargetNetworkRequest {
     
     public String clientToken;
+
     public AssociateClientVpnTargetNetworkRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class AssociateClientVpnTargetNetworkRequest {
     
     
     public String clientVpnEndpointId;
+
     public AssociateClientVpnTargetNetworkRequest withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -23,6 +25,7 @@ public class AssociateClientVpnTargetNetworkRequest {
     
     
     public Boolean dryRun;
+
     public AssociateClientVpnTargetNetworkRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,9 +33,14 @@ public class AssociateClientVpnTargetNetworkRequest {
     
     
     public String subnetId;
+
     public AssociateClientVpnTargetNetworkRequest withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public AssociateClientVpnTargetNetworkRequest(@JsonProperty("ClientVpnEndpointId") String clientVpnEndpointId, @JsonProperty("SubnetId") String subnetId) {
+        this.clientVpnEndpointId = clientVpnEndpointId;
+        this.subnetId = subnetId;
+  }
 }

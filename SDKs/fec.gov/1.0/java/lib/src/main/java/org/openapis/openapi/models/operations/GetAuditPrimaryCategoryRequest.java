@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAuditPrimaryCategoryRequest {
@@ -13,6 +14,7 @@ public class GetAuditPrimaryCategoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetAuditPrimaryCategoryRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -23,6 +25,7 @@ public class GetAuditPrimaryCategoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetAuditPrimaryCategoryRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -33,6 +36,7 @@ public class GetAuditPrimaryCategoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetAuditPrimaryCategoryRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -44,6 +48,7 @@ public class GetAuditPrimaryCategoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=primary_category_id")
     public String[] primaryCategoryId;
+
     public GetAuditPrimaryCategoryRequest withPrimaryCategoryId(String[] primaryCategoryId) {
         this.primaryCategoryId = primaryCategoryId;
         return this;
@@ -69,6 +74,7 @@ public class GetAuditPrimaryCategoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=primary_category_name")
     public String[] primaryCategoryName;
+
     public GetAuditPrimaryCategoryRequest withPrimaryCategoryName(String[] primaryCategoryName) {
         this.primaryCategoryName = primaryCategoryName;
         return this;
@@ -80,6 +86,7 @@ public class GetAuditPrimaryCategoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetAuditPrimaryCategoryRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -90,6 +97,7 @@ public class GetAuditPrimaryCategoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetAuditPrimaryCategoryRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -100,6 +108,7 @@ public class GetAuditPrimaryCategoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetAuditPrimaryCategoryRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -110,9 +119,13 @@ public class GetAuditPrimaryCategoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetAuditPrimaryCategoryRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
+    public GetAuditPrimaryCategoryRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

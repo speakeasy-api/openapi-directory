@@ -16,8 +16,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CheckResponse;
+import org.openapis.openapi.models.operations.CheckSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -25,7 +25,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CheckResponse res = sdk.check();
+            CheckResponse res = sdk.check(new CheckSecurity() {{
+                accessPointApiKeyHeader = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -33,18 +35,21 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `check` - Check
-* `executeAppActionEndpoint` - Execute App Action Endpoint
-* `getConfigurationLink` - Get Configuration Link
-* `listExposedActions` - List Exposed Actions
+* [check](docs/sdk/README.md#check) - Check
+* [executeAppActionEndpoint](docs/sdk/README.md#executeappactionendpoint) - Execute App Action Endpoint
+* [getConfigurationLink](docs/sdk/README.md#getconfigurationlink) - Get Configuration Link
+* [getExecutionLogEndpoint](docs/sdk/README.md#getexecutionlogendpoint) - Get Execution Log Endpoint
+* [listExposedActions](docs/sdk/README.md#listexposedactions) - List Exposed Actions
 <!-- End SDK Available Operations -->
 
 ### Maturity

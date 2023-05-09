@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
@@ -12,6 +13,7 @@ public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Document document;
+
     public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withDocument(org.openapis.openapi.models.shared.Document document) {
         this.document = document;
         return this;
@@ -29,6 +32,7 @@ public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectionId")
     public String collectionId;
+
     public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -69,6 +76,7 @@ public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=documentId")
     public String documentId;
+
     public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
@@ -79,6 +87,7 @@ public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -89,6 +98,7 @@ public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mask.fieldPaths")
     public String[] maskFieldPaths;
+
     public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withMaskFieldPaths(String[] maskFieldPaths) {
         this.maskFieldPaths = maskFieldPaths;
         return this;
@@ -109,6 +120,7 @@ public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -119,6 +131,7 @@ public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -129,6 +142,7 @@ public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -139,6 +153,7 @@ public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -149,6 +164,7 @@ public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,9 +175,14 @@ public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest(@JsonProperty("collectionId") String collectionId, @JsonProperty("parent") String parent) {
+        this.collectionId = collectionId;
+        this.parent = parent;
+  }
 }

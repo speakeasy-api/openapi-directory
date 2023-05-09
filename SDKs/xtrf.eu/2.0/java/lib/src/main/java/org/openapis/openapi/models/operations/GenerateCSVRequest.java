@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateCSVRequest {
@@ -12,9 +13,13 @@ public class GenerateCSVRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
     public Long reportId;
+
     public GenerateCSVRequest withReportId(Long reportId) {
         this.reportId = reportId;
         return this;
     }
     
+    public GenerateCSVRequest(@JsonProperty("reportId") Long reportId) {
+        this.reportId = reportId;
+  }
 }

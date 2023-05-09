@@ -180,4 +180,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateBranchResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateDomainAssociationResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWebhookResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

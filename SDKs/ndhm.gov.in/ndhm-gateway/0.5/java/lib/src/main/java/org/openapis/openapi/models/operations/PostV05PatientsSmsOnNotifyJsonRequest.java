@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05PatientsSmsOnNotifyJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05PatientsSmsOnNotifyJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05PatientsSmsOnNotifyJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05PatientsSmsOnNotifyJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatientSMSNotifcationResponse patientSMSNotifcationResponse;
+
     public PostV05PatientsSmsOnNotifyJsonRequest withPatientSMSNotifcationResponse(org.openapis.openapi.models.shared.PatientSMSNotifcationResponse patientSMSNotifcationResponse) {
         this.patientSMSNotifcationResponse = patientSMSNotifcationResponse;
         return this;
@@ -29,9 +32,15 @@ public class PostV05PatientsSmsOnNotifyJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
     public String xHipId;
+
     public PostV05PatientsSmsOnNotifyJsonRequest withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
     }
     
+    public PostV05PatientsSmsOnNotifyJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("PatientSMSNotifcationResponse") org.openapis.openapi.models.shared.PatientSMSNotifcationResponse patientSMSNotifcationResponse, @JsonProperty("X-HIP-ID") String xHipId) {
+        this.authorization = authorization;
+        this.patientSMSNotifcationResponse = patientSMSNotifcationResponse;
+        this.xHipId = xHipId;
+  }
 }

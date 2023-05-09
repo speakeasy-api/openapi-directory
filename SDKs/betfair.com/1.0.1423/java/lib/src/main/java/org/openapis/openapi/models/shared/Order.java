@@ -15,6 +15,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avp")
     public Double avp;
+
     public Order withAvp(Double avp) {
         this.avp = avp;
         return this;
@@ -26,6 +27,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bsp")
     public Double bsp;
+
     public Order withBsp(Double bsp) {
         this.bsp = bsp;
         return this;
@@ -37,6 +39,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cd")
     public Long cd;
+
     public Order withCd(Long cd) {
         this.cd = cd;
         return this;
@@ -48,6 +51,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Order withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ld")
     public Long ld;
+
     public Order withLd(Long ld) {
         this.ld = ld;
         return this;
@@ -70,6 +75,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lsrc")
     public String lsrc;
+
     public Order withLsrc(String lsrc) {
         this.lsrc = lsrc;
         return this;
@@ -81,6 +87,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("md")
     public Long md;
+
     public Order withMd(Long md) {
         this.md = md;
         return this;
@@ -92,6 +99,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ot")
     public OrderOtEnum ot;
+
     public Order withOt(OrderOtEnum ot) {
         this.ot = ot;
         return this;
@@ -103,6 +111,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("p")
     public Double p;
+
     public Order withP(Double p) {
         this.p = p;
         return this;
@@ -114,6 +123,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pd")
     public Long pd;
+
     public Order withPd(Long pd) {
         this.pd = pd;
         return this;
@@ -125,6 +135,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pt")
     public OrderPtEnum pt;
+
     public Order withPt(OrderPtEnum pt) {
         this.pt = pt;
         return this;
@@ -136,6 +147,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rac")
     public String rac;
+
     public Order withRac(String rac) {
         this.rac = rac;
         return this;
@@ -147,6 +159,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rc")
     public String rc;
+
     public Order withRc(String rc) {
         this.rc = rc;
         return this;
@@ -158,6 +171,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfo")
     public String rfo;
+
     public Order withRfo(String rfo) {
         this.rfo = rfo;
         return this;
@@ -169,6 +183,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfs")
     public String rfs;
+
     public Order withRfs(String rfs) {
         this.rfs = rfs;
         return this;
@@ -180,6 +195,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s")
     public Double s;
+
     public Order withS(Double s) {
         this.s = s;
         return this;
@@ -191,6 +207,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sc")
     public Double sc;
+
     public Order withSc(Double sc) {
         this.sc = sc;
         return this;
@@ -202,6 +219,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("side")
     public OrderSideEnum side;
+
     public Order withSide(OrderSideEnum side) {
         this.side = side;
         return this;
@@ -213,6 +231,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sl")
     public Double sl;
+
     public Order withSl(Double sl) {
         this.sl = sl;
         return this;
@@ -224,6 +243,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sm")
     public Double sm;
+
     public Order withSm(Double sm) {
         this.sm = sm;
         return this;
@@ -235,6 +255,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sr")
     public Double sr;
+
     public Order withSr(Double sr) {
         this.sr = sr;
         return this;
@@ -246,6 +267,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public OrderStatusEnum status;
+
     public Order withStatus(OrderStatusEnum status) {
         this.status = status;
         return this;
@@ -257,9 +279,11 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sv")
     public Double sv;
+
     public Order withSv(Double sv) {
         this.sv = sv;
         return this;
     }
     
+    public Order(){}
 }

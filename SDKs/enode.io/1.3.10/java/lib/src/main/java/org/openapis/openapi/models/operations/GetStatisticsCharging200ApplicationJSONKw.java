@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetStatisticsCharging200ApplicationJSONKw {
     @JsonProperty("max")
     public Double max;
+
     public GetStatisticsCharging200ApplicationJSONKw withMax(Double max) {
         this.max = max;
         return this;
@@ -19,6 +20,7 @@ public class GetStatisticsCharging200ApplicationJSONKw {
     
     @JsonProperty("mean")
     public Double mean;
+
     public GetStatisticsCharging200ApplicationJSONKw withMean(Double mean) {
         this.mean = mean;
         return this;
@@ -26,9 +28,15 @@ public class GetStatisticsCharging200ApplicationJSONKw {
     
     @JsonProperty("min")
     public Double min;
+
     public GetStatisticsCharging200ApplicationJSONKw withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public GetStatisticsCharging200ApplicationJSONKw(@JsonProperty("max") Double max, @JsonProperty("mean") Double mean, @JsonProperty("min") Double min) {
+        this.max = max;
+        this.mean = mean;
+        this.min = min;
+  }
 }

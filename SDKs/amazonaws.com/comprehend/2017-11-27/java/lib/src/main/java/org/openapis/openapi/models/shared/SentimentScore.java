@@ -15,6 +15,7 @@ public class SentimentScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mixed")
     public Float mixed;
+
     public SentimentScore withMixed(Float mixed) {
         this.mixed = mixed;
         return this;
@@ -23,6 +24,7 @@ public class SentimentScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Negative")
     public Float negative;
+
     public SentimentScore withNegative(Float negative) {
         this.negative = negative;
         return this;
@@ -31,6 +33,7 @@ public class SentimentScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Neutral")
     public Float neutral;
+
     public SentimentScore withNeutral(Float neutral) {
         this.neutral = neutral;
         return this;
@@ -39,9 +42,11 @@ public class SentimentScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Positive")
     public Float positive;
+
     public SentimentScore withPositive(Float positive) {
         this.positive = positive;
         return this;
     }
     
+    public SentimentScore(){}
 }

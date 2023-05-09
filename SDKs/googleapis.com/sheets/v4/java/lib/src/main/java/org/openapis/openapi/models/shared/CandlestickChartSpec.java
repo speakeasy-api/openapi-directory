@@ -18,6 +18,7 @@ public class CandlestickChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CandlestickData[] data;
+
     public CandlestickChartSpec withData(CandlestickData[] data) {
         this.data = data;
         return this;
@@ -29,9 +30,11 @@ public class CandlestickChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public CandlestickDomain domain;
+
     public CandlestickChartSpec withDomain(CandlestickDomain domain) {
         this.domain = domain;
         return this;
     }
     
+    public CandlestickChartSpec(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EcommerceDeliveryRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public EcommerceDeliveryRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,9 +18,13 @@ public class EcommerceDeliveryRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public EcommerceDeliveryRequestBody requestBody;
+
     public EcommerceDeliveryRequest withRequestBody(EcommerceDeliveryRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public EcommerceDeliveryRequest(@JsonProperty("Content-Type") String contentType) {
+        this.contentType = contentType;
+  }
 }

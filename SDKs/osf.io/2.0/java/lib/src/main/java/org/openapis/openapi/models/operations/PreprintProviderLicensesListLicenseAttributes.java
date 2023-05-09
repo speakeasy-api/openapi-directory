@@ -15,6 +15,7 @@ public class PreprintProviderLicensesListLicenseAttributes {
      */
     
     public String name;
+
     public PreprintProviderLicensesListLicenseAttributes withName(String name) {
         this.name = name;
         return this;
@@ -25,6 +26,7 @@ public class PreprintProviderLicensesListLicenseAttributes {
      */
     
     public String[] requiredFields;
+
     public PreprintProviderLicensesListLicenseAttributes withRequiredFields(String[] requiredFields) {
         this.requiredFields = requiredFields;
         return this;
@@ -35,9 +37,11 @@ public class PreprintProviderLicensesListLicenseAttributes {
      */
     
     public String text;
+
     public PreprintProviderLicensesListLicenseAttributes withText(String text) {
         this.text = text;
         return this;
     }
     
+    public PreprintProviderLicensesListLicenseAttributes(){}
 }

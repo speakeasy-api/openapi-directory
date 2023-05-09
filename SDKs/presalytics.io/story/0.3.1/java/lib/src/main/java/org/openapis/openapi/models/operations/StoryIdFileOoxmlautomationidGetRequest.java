@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdFileOoxmlautomationidGetRequest {
@@ -12,6 +13,7 @@ public class StoryIdFileOoxmlautomationidGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public StoryIdFileOoxmlautomationidGetRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,14 @@ public class StoryIdFileOoxmlautomationidGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ooxml_automation_id")
     public String ooxmlAutomationId;
+
     public StoryIdFileOoxmlautomationidGetRequest withOoxmlAutomationId(String ooxmlAutomationId) {
         this.ooxmlAutomationId = ooxmlAutomationId;
         return this;
     }
     
+    public StoryIdFileOoxmlautomationidGetRequest(@JsonProperty("id") String id, @JsonProperty("ooxml_automation_id") String ooxmlAutomationId) {
+        this.id = id;
+        this.ooxmlAutomationId = ooxmlAutomationId;
+  }
 }

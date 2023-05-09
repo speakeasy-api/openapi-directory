@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UserDTO {
     
     public String address;
+
     public UserDTO withAddress(String address) {
         this.address = address;
         return this;
@@ -19,6 +20,7 @@ public class UserDTO {
     
     
     public UserDTOAuthMethodsEnum[] authMethods;
+
     public UserDTO withAuthMethods(UserDTOAuthMethodsEnum[] authMethods) {
         this.authMethods = authMethods;
         return this;
@@ -26,6 +28,7 @@ public class UserDTO {
     
     
     public String dayOfBirth;
+
     public UserDTO withDayOfBirth(String dayOfBirth) {
         this.dayOfBirth = dayOfBirth;
         return this;
@@ -33,6 +36,7 @@ public class UserDTO {
     
     
     public String districtCode;
+
     public UserDTO withDistrictCode(String districtCode) {
         this.districtCode = districtCode;
         return this;
@@ -40,6 +44,7 @@ public class UserDTO {
     
     
     public String districtName;
+
     public UserDTO withDistrictName(String districtName) {
         this.districtName = districtName;
         return this;
@@ -47,6 +52,7 @@ public class UserDTO {
     
     
     public String email;
+
     public UserDTO withEmail(String email) {
         this.email = email;
         return this;
@@ -54,6 +60,7 @@ public class UserDTO {
     
     
     public String firstName;
+
     public UserDTO withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -61,6 +68,7 @@ public class UserDTO {
     
     
     public String gender;
+
     public UserDTO withGender(String gender) {
         this.gender = gender;
         return this;
@@ -68,6 +76,7 @@ public class UserDTO {
     
     
     public String healthId;
+
     public UserDTO withHealthId(String healthId) {
         this.healthId = healthId;
         return this;
@@ -75,6 +84,7 @@ public class UserDTO {
     
     
     public String healthIdNumber;
+
     public UserDTO withHealthIdNumber(String healthIdNumber) {
         this.healthIdNumber = healthIdNumber;
         return this;
@@ -82,6 +92,7 @@ public class UserDTO {
     
     
     public String kycPhoto;
+
     public UserDTO withKycPhoto(String kycPhoto) {
         this.kycPhoto = kycPhoto;
         return this;
@@ -89,6 +100,7 @@ public class UserDTO {
     
     
     public Boolean kycVerified;
+
     public UserDTO withKycVerified(Boolean kycVerified) {
         this.kycVerified = kycVerified;
         return this;
@@ -96,6 +108,7 @@ public class UserDTO {
     
     
     public String lastName;
+
     public UserDTO withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -103,6 +116,7 @@ public class UserDTO {
     
     
     public String middleName;
+
     public UserDTO withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -110,6 +124,7 @@ public class UserDTO {
     
     
     public String mobile;
+
     public UserDTO withMobile(String mobile) {
         this.mobile = mobile;
         return this;
@@ -117,6 +132,7 @@ public class UserDTO {
     
     
     public String monthOfBirth;
+
     public UserDTO withMonthOfBirth(String monthOfBirth) {
         this.monthOfBirth = monthOfBirth;
         return this;
@@ -124,6 +140,7 @@ public class UserDTO {
     
     
     public String name;
+
     public UserDTO withName(String name) {
         this.name = name;
         return this;
@@ -131,6 +148,7 @@ public class UserDTO {
     
     
     public Boolean new_;
+
     public UserDTO withNew(Boolean new_) {
         this.new_ = new_;
         return this;
@@ -138,6 +156,7 @@ public class UserDTO {
     
     
     public String pincode;
+
     public UserDTO withPincode(String pincode) {
         this.pincode = pincode;
         return this;
@@ -145,6 +164,7 @@ public class UserDTO {
     
     
     public String profilePhoto;
+
     public UserDTO withProfilePhoto(String profilePhoto) {
         this.profilePhoto = profilePhoto;
         return this;
@@ -152,6 +172,7 @@ public class UserDTO {
     
     
     public String stateCode;
+
     public UserDTO withStateCode(String stateCode) {
         this.stateCode = stateCode;
         return this;
@@ -159,6 +180,7 @@ public class UserDTO {
     
     
     public String stateName;
+
     public UserDTO withStateName(String stateName) {
         this.stateName = stateName;
         return this;
@@ -166,6 +188,7 @@ public class UserDTO {
     
     
     public String subDistrictCode;
+
     public UserDTO withSubDistrictCode(String subDistrictCode) {
         this.subDistrictCode = subDistrictCode;
         return this;
@@ -173,6 +196,7 @@ public class UserDTO {
     
     
     public String subdistrictName;
+
     public UserDTO withSubdistrictName(String subdistrictName) {
         this.subdistrictName = subdistrictName;
         return this;
@@ -180,6 +204,7 @@ public class UserDTO {
     
     
     public java.util.Map<String, String> tags;
+
     public UserDTO withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -187,6 +212,7 @@ public class UserDTO {
     
     
     public String townCode;
+
     public UserDTO withTownCode(String townCode) {
         this.townCode = townCode;
         return this;
@@ -194,6 +220,7 @@ public class UserDTO {
     
     
     public String townName;
+
     public UserDTO withTownName(String townName) {
         this.townName = townName;
         return this;
@@ -201,6 +228,7 @@ public class UserDTO {
     
     
     public String villageCode;
+
     public UserDTO withVillageCode(String villageCode) {
         this.villageCode = villageCode;
         return this;
@@ -208,6 +236,7 @@ public class UserDTO {
     
     
     public String villageName;
+
     public UserDTO withVillageName(String villageName) {
         this.villageName = villageName;
         return this;
@@ -215,6 +244,7 @@ public class UserDTO {
     
     
     public String wardCode;
+
     public UserDTO withWardCode(String wardCode) {
         this.wardCode = wardCode;
         return this;
@@ -222,6 +252,7 @@ public class UserDTO {
     
     
     public String wardName;
+
     public UserDTO withWardName(String wardName) {
         this.wardName = wardName;
         return this;
@@ -229,9 +260,11 @@ public class UserDTO {
     
     
     public String yearOfBirth;
+
     public UserDTO withYearOfBirth(String yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
         return this;
     }
     
+    public UserDTO(){}
 }

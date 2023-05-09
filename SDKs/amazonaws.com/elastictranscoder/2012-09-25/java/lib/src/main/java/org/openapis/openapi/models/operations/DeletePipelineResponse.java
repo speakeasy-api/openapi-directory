@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePipelineResponse {
@@ -12,6 +13,7 @@ public class DeletePipelineResponse {
      */
     
     public Object accessDeniedException;
+
     public DeletePipelineResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeletePipelineResponse {
     
     
     public String contentType;
+
     public DeletePipelineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeletePipelineResponse {
      */
     
     public java.util.Map<String, Object> deletePipelineResponse;
+
     public DeletePipelineResponse withDeletePipelineResponse(java.util.Map<String, Object> deletePipelineResponse) {
         this.deletePipelineResponse = deletePipelineResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeletePipelineResponse {
      */
     
     public Object incompatibleVersionException;
+
     public DeletePipelineResponse withIncompatibleVersionException(Object incompatibleVersionException) {
         this.incompatibleVersionException = incompatibleVersionException;
         return this;
@@ -49,6 +54,7 @@ public class DeletePipelineResponse {
      */
     
     public Object internalServiceException;
+
     public DeletePipelineResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DeletePipelineResponse {
      */
     
     public Object resourceInUseException;
+
     public DeletePipelineResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -69,6 +76,7 @@ public class DeletePipelineResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeletePipelineResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DeletePipelineResponse {
     
     
     public Integer statusCode;
+
     public DeletePipelineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeletePipelineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePipelineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DeletePipelineResponse {
      */
     
     public Object validationException;
+
     public DeletePipelineResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeletePipelineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

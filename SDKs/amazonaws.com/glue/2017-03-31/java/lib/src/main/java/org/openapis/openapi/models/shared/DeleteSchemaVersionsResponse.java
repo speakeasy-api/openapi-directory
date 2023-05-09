@@ -15,9 +15,11 @@ public class DeleteSchemaVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaVersionErrors")
     public SchemaVersionErrorItem[] schemaVersionErrors;
+
     public DeleteSchemaVersionsResponse withSchemaVersionErrors(SchemaVersionErrorItem[] schemaVersionErrors) {
         this.schemaVersionErrors = schemaVersionErrors;
         return this;
     }
     
+    public DeleteSchemaVersionsResponse(){}
 }

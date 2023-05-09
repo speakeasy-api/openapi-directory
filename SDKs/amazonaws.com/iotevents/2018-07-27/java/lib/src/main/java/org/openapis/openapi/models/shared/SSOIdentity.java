@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SSOIdentity {
     @JsonProperty("identityStoreId")
     public String identityStoreId;
+
     public SSOIdentity withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
@@ -22,9 +23,13 @@ public class SSOIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public SSOIdentity withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public SSOIdentity(@JsonProperty("identityStoreId") String identityStoreId) {
+        this.identityStoreId = identityStoreId;
+  }
 }

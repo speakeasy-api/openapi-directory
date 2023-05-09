@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActivityListReposStarredByUserResponse {
     
     public String contentType;
+
     public ActivityListReposStarredByUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActivityListReposStarredByUserResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ActivityListReposStarredByUserResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ActivityListReposStarredByUserResponse {
     
     
     public Integer statusCode;
+
     public ActivityListReposStarredByUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ActivityListReposStarredByUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActivityListReposStarredByUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ActivityListReposStarredByUserResponse {
      */
     
     public Object activityListReposStarredByUser200ApplicationJSONAnyOf;
+
     public ActivityListReposStarredByUserResponse withActivityListReposStarredByUser200ApplicationJSONAnyOf(Object activityListReposStarredByUser200ApplicationJSONAnyOf) {
         this.activityListReposStarredByUser200ApplicationJSONAnyOf = activityListReposStarredByUser200ApplicationJSONAnyOf;
         return this;
     }
     
+    public ActivityListReposStarredByUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

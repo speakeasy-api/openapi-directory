@@ -18,6 +18,7 @@ public class ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsByp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apps")
     public String[] apps;
+
     public ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsBypassPullRequestAllowances withApps(String[] apps) {
         this.apps = apps;
         return this;
@@ -29,6 +30,7 @@ public class ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsByp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teams")
     public String[] teams;
+
     public ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsBypassPullRequestAllowances withTeams(String[] teams) {
         this.teams = teams;
         return this;
@@ -40,9 +42,11 @@ public class ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsByp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public String[] users;
+
     public ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsBypassPullRequestAllowances withUsers(String[] users) {
         this.users = users;
         return this;
     }
     
+    public ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsBypassPullRequestAllowances(){}
 }

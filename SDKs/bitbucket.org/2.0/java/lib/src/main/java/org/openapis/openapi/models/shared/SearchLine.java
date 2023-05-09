@@ -12,6 +12,7 @@ public class SearchLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line")
     public Integer line;
+
     public SearchLine withLine(Integer line) {
         this.line = line;
         return this;
@@ -20,9 +21,11 @@ public class SearchLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segments")
     public SearchSegment[] segments;
+
     public SearchLine withSegments(SearchSegment[] segments) {
         this.segments = segments;
         return this;
     }
     
+    public SearchLine(){}
 }

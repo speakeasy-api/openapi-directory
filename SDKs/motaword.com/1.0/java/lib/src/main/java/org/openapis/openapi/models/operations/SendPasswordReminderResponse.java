@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendPasswordReminderResponse {
     
     public String contentType;
+
     public SendPasswordReminderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SendPasswordReminderResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public SendPasswordReminderResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class SendPasswordReminderResponse {
      */
     
     public org.openapis.openapi.models.shared.OperationStatus operationStatus;
+
     public SendPasswordReminderResponse withOperationStatus(org.openapis.openapi.models.shared.OperationStatus operationStatus) {
         this.operationStatus = operationStatus;
         return this;
@@ -36,6 +40,7 @@ public class SendPasswordReminderResponse {
     
     
     public Integer statusCode;
+
     public SendPasswordReminderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class SendPasswordReminderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendPasswordReminderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SendPasswordReminderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

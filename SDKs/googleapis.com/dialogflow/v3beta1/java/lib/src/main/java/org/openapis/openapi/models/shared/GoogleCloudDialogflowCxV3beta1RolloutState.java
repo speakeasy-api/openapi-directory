@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1RolloutState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudDialogflowCxV3beta1RolloutState withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1RolloutState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("step")
     public String step;
+
     public GoogleCloudDialogflowCxV3beta1RolloutState withStep(String step) {
         this.step = step;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3beta1RolloutState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepIndex")
     public Integer stepIndex;
+
     public GoogleCloudDialogflowCxV3beta1RolloutState withStepIndex(Integer stepIndex) {
         this.stepIndex = stepIndex;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1RolloutState(){}
 }

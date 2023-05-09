@@ -145,4 +145,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/InstallStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/TruststoreInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/TruststoreItems.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/console/README.md
+docs/cq/README.md
+docs/crx/README.md
+docs/custom/README.md
+docs/granite/README.md
+docs/sling/README.md
 USAGE.md

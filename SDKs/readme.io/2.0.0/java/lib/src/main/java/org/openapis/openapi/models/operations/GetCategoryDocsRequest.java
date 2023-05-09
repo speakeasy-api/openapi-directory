@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCategoryDocsRequest {
@@ -12,6 +13,7 @@ public class GetCategoryDocsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
     public String slug;
+
     public GetCategoryDocsRequest withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -22,9 +24,14 @@ public class GetCategoryDocsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-readme-version")
     public String xReadmeVersion;
+
     public GetCategoryDocsRequest withXReadmeVersion(String xReadmeVersion) {
         this.xReadmeVersion = xReadmeVersion;
         return this;
     }
     
+    public GetCategoryDocsRequest(@JsonProperty("slug") String slug, @JsonProperty("x-readme-version") String xReadmeVersion) {
+        this.slug = slug;
+        this.xReadmeVersion = xReadmeVersion;
+  }
 }

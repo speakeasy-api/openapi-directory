@@ -15,6 +15,7 @@ public class CreateAuthorizerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizerArn")
     public String authorizerArn;
+
     public CreateAuthorizerResponse withAuthorizerArn(String authorizerArn) {
         this.authorizerArn = authorizerArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateAuthorizerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizerName")
     public String authorizerName;
+
     public CreateAuthorizerResponse withAuthorizerName(String authorizerName) {
         this.authorizerName = authorizerName;
         return this;
     }
     
+    public CreateAuthorizerResponse(){}
 }

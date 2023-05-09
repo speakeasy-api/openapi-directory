@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBatchInferenceJobsResponse {
     
     public String contentType;
+
     public ListBatchInferenceJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListBatchInferenceJobsResponse {
      */
     
     public Object invalidInputException;
+
     public ListBatchInferenceJobsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class ListBatchInferenceJobsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListBatchInferenceJobsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListBatchInferenceJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBatchInferenceJobsResponse listBatchInferenceJobsResponse;
+
     public ListBatchInferenceJobsResponse withListBatchInferenceJobsResponse(org.openapis.openapi.models.shared.ListBatchInferenceJobsResponse listBatchInferenceJobsResponse) {
         this.listBatchInferenceJobsResponse = listBatchInferenceJobsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListBatchInferenceJobsResponse {
     
     
     public Integer statusCode;
+
     public ListBatchInferenceJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListBatchInferenceJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBatchInferenceJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListBatchInferenceJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -3,34 +3,34 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity;
 import org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest;
 import org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateResponse;
+import org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity;
+import org.openapis.openapi.models.shared.AlloyDbConnectionProfileInput;
+import org.openapis.openapi.models.shared.AlloyDbSettingsInput;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.ConnectionProfileProviderEnum;
-import org.openapis.openapi.models.shared.ConnectionProfileStateEnum;
-import org.openapis.openapi.models.shared.ConnectionProfileInput;
-import org.openapis.openapi.models.shared.PostgreSqlConnectionProfileInput;
-import org.openapis.openapi.models.shared.SslConfigInput;
-import org.openapis.openapi.models.shared.PrivateServiceConnectConnectivity;
-import org.openapis.openapi.models.shared.OracleConnectionProfileInput;
-import org.openapis.openapi.models.shared.PrivateConnectivity;
-import org.openapis.openapi.models.shared.ForwardSshTunnelConnectivity;
-import org.openapis.openapi.models.shared.MySqlConnectionProfileInput;
-import org.openapis.openapi.models.shared.Status;
 import org.openapis.openapi.models.shared.CloudSqlConnectionProfileInput;
 import org.openapis.openapi.models.shared.CloudSqlSettingsActivationPolicyEnum;
 import org.openapis.openapi.models.shared.CloudSqlSettingsAvailabilityTypeEnum;
 import org.openapis.openapi.models.shared.CloudSqlSettingsDataDiskTypeEnum;
 import org.openapis.openapi.models.shared.CloudSqlSettingsDatabaseVersionEnum;
 import org.openapis.openapi.models.shared.CloudSqlSettingsInput;
-import org.openapis.openapi.models.shared.SqlIpConfig;
-import org.openapis.openapi.models.shared.SqlAclEntry;
-import org.openapis.openapi.models.shared.AlloyDbConnectionProfileInput;
-import org.openapis.openapi.models.shared.AlloyDbSettingsInput;
-import org.openapis.openapi.models.shared.PrimaryInstanceSettingsInput;
+import org.openapis.openapi.models.shared.ConnectionProfileInput;
+import org.openapis.openapi.models.shared.ConnectionProfileProviderEnum;
+import org.openapis.openapi.models.shared.ConnectionProfileStateEnum;
+import org.openapis.openapi.models.shared.EncryptionConfig;
+import org.openapis.openapi.models.shared.ForwardSshTunnelConnectivity;
 import org.openapis.openapi.models.shared.MachineConfig;
+import org.openapis.openapi.models.shared.MySqlConnectionProfileInput;
+import org.openapis.openapi.models.shared.OracleConnectionProfileInput;
+import org.openapis.openapi.models.shared.PostgreSqlConnectionProfileInput;
+import org.openapis.openapi.models.shared.PrimaryInstanceSettingsInput;
+import org.openapis.openapi.models.shared.PrivateConnectivity;
+import org.openapis.openapi.models.shared.PrivateServiceConnectConnectivity;
+import org.openapis.openapi.models.shared.SqlAclEntry;
+import org.openapis.openapi.models.shared.SqlIpConfig;
+import org.openapis.openapi.models.shared.SslConfigInput;
+import org.openapis.openapi.models.shared.Status;
 import org.openapis.openapi.models.shared.UserPasswordInput;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -40,201 +40,189 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DatamigrationProjectsLocationsConnectionProfilesCreateRequest req = new DatamigrationProjectsLocationsConnectionProfilesCreateRequest() {{
-                dollarXgafv = "2";
+            DatamigrationProjectsLocationsConnectionProfilesCreateRequest req = new DatamigrationProjectsLocationsConnectionProfilesCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 connectionProfileInput = new ConnectionProfileInput() {{
                     alloydb = new AlloyDbConnectionProfileInput() {{
-                        clusterId = "provident";
+                        clusterId = "distinctio";
                         settings = new AlloyDbSettingsInput() {{
+                            encryptionConfig = new EncryptionConfig() {{
+                                kmsKeyName = "quibusdam";
+                            }};;
                             initialUser = new UserPasswordInput() {{
-                                password = "distinctio";
-                                user = "quibusdam";
-                            }};
+                                password = "unde";
+                                user = "nulla";
+                            }};;
                             labels = new java.util.HashMap<String, String>() {{
-                                put("nulla", "corrupti");
                                 put("illum", "vel");
                                 put("error", "deserunt");
+                                put("suscipit", "iure");
                             }};
                             primaryInstanceSettings = new PrimaryInstanceSettingsInput() {{
                                 databaseFlags = new java.util.HashMap<String, String>() {{
-                                    put("iure", "magnam");
                                     put("debitis", "ipsa");
+                                    put("delectus", "tempora");
                                 }};
-                                id = "delectus";
+                                id = "67cc8796-ed15-41a0-9dfc-2ddf7cc78ca1";
                                 labels = new java.util.HashMap<String, String>() {{
-                                    put("suscipit", "molestiae");
-                                    put("minus", "placeat");
+                                    put("officia", "occaecati");
+                                    put("fugit", "deleniti");
+                                    put("hic", "optio");
                                 }};
                                 machineConfig = new MachineConfig() {{
-                                    cpuCount = 528895;
-                                }};
-                            }};
-                            vpcNetwork = "iusto";
-                        }};
-                    }};
+                                    cpuCount = 521848;
+                                }};;
+                            }};;
+                            vpcNetwork = "beatae";
+                        }};;
+                    }};;
                     cloudsql = new CloudSqlConnectionProfileInput() {{
                         settings = new CloudSqlSettingsInput() {{
-                            activationPolicy = "ALWAYS";
+                            activationPolicy = CloudSqlSettingsActivationPolicyEnum.ALWAYS;
                             autoStorageIncrease = false;
-                            availabilityType = "ZONAL";
-                            cmekKeyName = "recusandae";
-                            collation = "temporibus";
-                            dataDiskSizeGb = "ab";
-                            dataDiskType = "PD_SSD";
+                            availabilityType = CloudSqlSettingsAvailabilityTypeEnum.ZONAL;
+                            cmekKeyName = "modi";
+                            collation = "qui";
+                            dataDiskSizeGb = "impedit";
+                            dataDiskType = CloudSqlSettingsDataDiskTypeEnum.PD_HDD;
                             databaseFlags = new java.util.HashMap<String, String>() {{
-                                put("deserunt", "perferendis");
+                                put("ipsum", "excepturi");
+                                put("aspernatur", "perferendis");
                             }};
-                            databaseVersion = "POSTGRES_9_6";
+                            databaseVersion = CloudSqlSettingsDatabaseVersionEnum.POSTGRES96;
                             ipConfig = new SqlIpConfig() {{
+                                allocatedIpRange = "natus";
                                 authorizedNetworks = new org.openapis.openapi.models.shared.SqlAclEntry[]{{
                                     add(new SqlAclEntry() {{
-                                        expireTime = "sapiente";
-                                        label = "quo";
-                                        ttl = "odit";
-                                        value = "at";
-                                    }}),
-                                    add(new SqlAclEntry() {{
-                                        expireTime = "at";
-                                        label = "maiores";
-                                        ttl = "molestiae";
-                                        value = "quod";
-                                    }}),
-                                    add(new SqlAclEntry() {{
-                                        expireTime = "quod";
-                                        label = "esse";
-                                        ttl = "totam";
-                                        value = "porro";
-                                    }}),
-                                    add(new SqlAclEntry() {{
-                                        expireTime = "dolorum";
-                                        label = "dicta";
-                                        ttl = "nam";
-                                        value = "officia";
+                                        expireTime = "iste";
+                                        label = "dolor";
+                                        ttl = "natus";
+                                        value = "laboriosam";
                                     }}),
                                 }};
                                 enableIpv4 = false;
-                                privateNetwork = "occaecati";
+                                privateNetwork = "hic";
                                 requireSsl = false;
-                            }};
-                            rootPassword = "fugit";
-                            secondaryZone = "deleniti";
-                            sourceId = "hic";
-                            storageAutoResizeLimit = "optio";
-                            tier = "totam";
+                            }};;
+                            rootPassword = "saepe";
+                            secondaryZone = "fuga";
+                            sourceId = "in";
+                            storageAutoResizeLimit = "corporis";
+                            tier = "iste";
                             userLabels = new java.util.HashMap<String, String>() {{
-                                put("commodi", "molestiae");
+                                put("saepe", "quidem");
+                                put("architecto", "ipsa");
                             }};
-                            zone = "modi";
-                        }};
-                    }};
-                    displayName = "qui";
+                            zone = "reiciendis";
+                        }};;
+                    }};;
+                    displayName = "est";
                     error = new Status() {{
-                        code = 774234;
+                        code = 653140;
                         details = new java.util.HashMap<String, Object>[]{{
                             add(new java.util.HashMap<String, Object>() {{
-                                put("ipsum", "excepturi");
-                                put("aspernatur", "perferendis");
+                                put("dolorem", "corporis");
                             }}),
                             add(new java.util.HashMap<String, Object>() {{
-                                put("natus", "sed");
-                                put("iste", "dolor");
+                                put("nobis", "enim");
                             }}),
                             add(new java.util.HashMap<String, Object>() {{
-                                put("laboriosam", "hic");
-                                put("saepe", "fuga");
-                                put("in", "corporis");
+                                put("nemo", "minima");
+                                put("excepturi", "accusantium");
+                                put("iure", "culpa");
                             }}),
                         }};
-                        message = "iste";
-                    }};
+                        message = "doloribus";
+                    }};;
                     labels = new java.util.HashMap<String, String>() {{
-                        put("saepe", "quidem");
-                        put("architecto", "ipsa");
+                        put("architecto", "mollitia");
+                        put("dolorem", "culpa");
+                        put("consequuntur", "repellat");
+                        put("mollitia", "occaecati");
                     }};
                     mysql = new MySqlConnectionProfileInput() {{
-                        cloudSqlId = "reiciendis";
-                        host = "est";
-                        password = "mollitia";
-                        port = 670638;
+                        cloudSqlId = "numquam";
+                        host = "commodi";
+                        password = "quam";
+                        port = 474697;
                         ssl = new SslConfigInput() {{
-                            caCertificate = "dolores";
-                            clientCertificate = "dolorem";
-                            clientKey = "corporis";
-                        }};
-                        username = "Braulio60";
-                    }};
-                    name = "nemo";
+                            caCertificate = "velit";
+                            clientCertificate = "error";
+                            clientKey = "quia";
+                        }};;
+                        username = "Eugene_Brown31";
+                    }};;
+                    name = "Angelica Dietrich";
                     oracle = new OracleConnectionProfileInput() {{
-                        databaseService = "minima";
+                        databaseService = "id";
                         forwardSshConnectivity = new ForwardSshTunnelConnectivity() {{
-                            hostname = "nippy-apse.info";
-                            password = "culpa";
-                            port = 988374;
-                            privateKey = "sapiente";
-                            username = "Bart63";
-                        }};
-                        host = "consequuntur";
-                        password = "repellat";
-                        port = 653108;
+                            hostname = "sugary-afoul.com";
+                            password = "error";
+                            port = 837945;
+                            privateKey = "laborum";
+                            username = "Austyn_Witting46";
+                        }};;
+                        host = "praesentium";
+                        password = "voluptatibus";
+                        port = 55714;
                         privateConnectivity = new PrivateConnectivity() {{
-                            privateConnection = "occaecati";
-                        }};
+                            privateConnection = "omnis";
+                        }};;
                         staticServiceIpConnectivity = new java.util.HashMap<String, Object>() {{
-                            put("commodi", "quam");
-                            put("molestiae", "velit");
+                            put("cum", "perferendis");
+                            put("doloremque", "reprehenderit");
                         }};
-                        username = "Linda.Cronin";
-                    }};
+                        username = "Easter35";
+                    }};;
                     postgresql = new PostgreSqlConnectionProfileInput() {{
-                        cloudSqlId = "laborum";
-                        host = "animi";
-                        password = "enim";
-                        port = 138183;
+                        cloudSqlId = "dolore";
+                        host = "iusto";
+                        password = "dicta";
+                        port = 688661;
                         privateServiceConnectConnectivity = new PrivateServiceConnectConnectivity() {{
-                            serviceAttachment = "quo";
-                        }};
+                            serviceAttachment = "enim";
+                        }};;
                         ssl = new SslConfigInput() {{
-                            caCertificate = "sequi";
-                            clientCertificate = "tenetur";
-                            clientKey = "ipsam";
-                        }};
+                            caCertificate = "accusamus";
+                            clientCertificate = "commodi";
+                            clientKey = "repudiandae";
+                        }};;
                         staticIpConnectivity = new java.util.HashMap<String, Object>() {{
-                            put("possimus", "aut");
-                            put("quasi", "error");
-                            put("temporibus", "laborum");
+                            put("ipsum", "quidem");
                         }};
-                        username = "Austyn_Witting46";
-                    }};
-                    provider = "RDS";
-                    state = "FAILED";
-                }};
-                accessToken = "ipsa";
-                alt = "media";
-                callback = "voluptate";
-                connectionProfileId = "cum";
-                fields = "perferendis";
-                key = "doloremque";
-                oauthToken = "reprehenderit";
-                parent = "ut";
+                        username = "Kennedi.Mante50";
+                    }};;
+                    provider = ConnectionProfileProviderEnum.RDS;
+                    state = ConnectionProfileStateEnum.FAILED;
+                }};;
+                accessToken = "quasi";
+                alt = AltEnum.PROTO;
+                callback = "sint";
+                connectionProfileId = "veritatis";
+                fields = "itaque";
+                key = "incidunt";
+                oauthToken = "enim";
                 prettyPrint = false;
-                quotaUser = "maiores";
-                requestId = "dicta";
+                quotaUser = "consequatur";
+                requestId = "est";
                 skipValidation = false;
-                uploadType = "corporis";
-                uploadProtocol = "dolore";
+                uploadType = "quibusdam";
+                uploadProtocol = "explicabo";
                 validateOnly = false;
-            }}            
+            }};            
 
-            DatamigrationProjectsLocationsConnectionProfilesCreateResponse res = sdk.projects.datamigrationProjectsLocationsConnectionProfilesCreate(req, new DatamigrationProjectsLocationsConnectionProfilesCreateSecurity() {{
+            DatamigrationProjectsLocationsConnectionProfilesCreateResponse res = sdk.projects.datamigrationProjectsLocationsConnectionProfilesCreate(req, new DatamigrationProjectsLocationsConnectionProfilesCreateSecurity("deserunt", "distinctio") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

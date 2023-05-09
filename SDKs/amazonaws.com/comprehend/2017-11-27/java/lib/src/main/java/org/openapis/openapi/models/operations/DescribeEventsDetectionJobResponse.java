@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEventsDetectionJobResponse {
     
     public String contentType;
+
     public DescribeEventsDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEventsDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEventsDetectionJobResponse describeEventsDetectionJobResponse;
+
     public DescribeEventsDetectionJobResponse withDescribeEventsDetectionJobResponse(org.openapis.openapi.models.shared.DescribeEventsDetectionJobResponse describeEventsDetectionJobResponse) {
         this.describeEventsDetectionJobResponse = describeEventsDetectionJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEventsDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public DescribeEventsDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEventsDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeEventsDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeEventsDetectionJobResponse {
      */
     
     public Object jobNotFoundException;
+
     public DescribeEventsDetectionJobResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeEventsDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeEventsDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeEventsDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEventsDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeEventsDetectionJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeEventsDetectionJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeEventsDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

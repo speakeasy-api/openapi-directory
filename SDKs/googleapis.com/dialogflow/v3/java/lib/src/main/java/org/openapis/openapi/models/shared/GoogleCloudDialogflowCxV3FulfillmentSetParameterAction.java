@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3FulfillmentSetParameterAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public String parameter;
+
     public GoogleCloudDialogflowCxV3FulfillmentSetParameterAction withParameter(String parameter) {
         this.parameter = parameter;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3FulfillmentSetParameterAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public GoogleCloudDialogflowCxV3FulfillmentSetParameterAction withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3FulfillmentSetParameterAction(){}
 }

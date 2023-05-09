@@ -15,6 +15,7 @@ public class DeleteParametersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletedParameters")
     public String[] deletedParameters;
+
     public DeleteParametersResult withDeletedParameters(String[] deletedParameters) {
         this.deletedParameters = deletedParameters;
         return this;
@@ -23,9 +24,11 @@ public class DeleteParametersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvalidParameters")
     public String[] invalidParameters;
+
     public DeleteParametersResult withInvalidParameters(String[] invalidParameters) {
         this.invalidParameters = invalidParameters;
         return this;
     }
     
+    public DeleteParametersResult(){}
 }

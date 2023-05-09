@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PublishSchemaResponse {
@@ -12,6 +13,7 @@ public class PublishSchemaResponse {
      */
     
     public Object accessDeniedException;
+
     public PublishSchemaResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class PublishSchemaResponse {
     
     
     public String contentType;
+
     public PublishSchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PublishSchemaResponse {
      */
     
     public Object internalServiceException;
+
     public PublishSchemaResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class PublishSchemaResponse {
      */
     
     public Object invalidArnException;
+
     public PublishSchemaResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class PublishSchemaResponse {
      */
     
     public Object limitExceededException;
+
     public PublishSchemaResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class PublishSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.PublishSchemaResponse publishSchemaResponse;
+
     public PublishSchemaResponse withPublishSchemaResponse(org.openapis.openapi.models.shared.PublishSchemaResponse publishSchemaResponse) {
         this.publishSchemaResponse = publishSchemaResponse;
         return this;
@@ -66,6 +73,7 @@ public class PublishSchemaResponse {
     
     
     public Integer statusCode;
+
     public PublishSchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PublishSchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PublishSchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class PublishSchemaResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PublishSchemaResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class PublishSchemaResponse {
      */
     
     public Object retryableConflictException;
+
     public PublishSchemaResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -103,6 +114,7 @@ public class PublishSchemaResponse {
      */
     
     public Object schemaAlreadyPublishedException;
+
     public PublishSchemaResponse withSchemaAlreadyPublishedException(Object schemaAlreadyPublishedException) {
         this.schemaAlreadyPublishedException = schemaAlreadyPublishedException;
         return this;
@@ -113,9 +125,14 @@ public class PublishSchemaResponse {
      */
     
     public Object validationException;
+
     public PublishSchemaResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PublishSchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

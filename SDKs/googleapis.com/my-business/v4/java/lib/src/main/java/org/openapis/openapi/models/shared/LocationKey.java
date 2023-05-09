@@ -18,6 +18,7 @@ public class LocationKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explicitNoPlaceId")
     public Boolean explicitNoPlaceId;
+
     public LocationKey withExplicitNoPlaceId(Boolean explicitNoPlaceId) {
         this.explicitNoPlaceId = explicitNoPlaceId;
         return this;
@@ -29,6 +30,7 @@ public class LocationKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeId")
     public String placeId;
+
     public LocationKey withPlaceId(String placeId) {
         this.placeId = placeId;
         return this;
@@ -40,6 +42,7 @@ public class LocationKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plusPageId")
     public String plusPageId;
+
     public LocationKey withPlusPageId(String plusPageId) {
         this.plusPageId = plusPageId;
         return this;
@@ -51,9 +54,11 @@ public class LocationKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public LocationKey withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public LocationKey(){}
 }

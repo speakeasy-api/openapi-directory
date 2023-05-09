@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagmanagerAccountsContainersDestinationsLinkRequest {
@@ -12,6 +13,7 @@ public class TagmanagerAccountsContainersDestinationsLinkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public TagmanagerAccountsContainersDestinationsLinkRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class TagmanagerAccountsContainersDestinationsLinkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public TagmanagerAccountsContainersDestinationsLinkRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class TagmanagerAccountsContainersDestinationsLinkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowUserPermissionFeatureUpdate")
     public Boolean allowUserPermissionFeatureUpdate;
+
     public TagmanagerAccountsContainersDestinationsLinkRequest withAllowUserPermissionFeatureUpdate(Boolean allowUserPermissionFeatureUpdate) {
         this.allowUserPermissionFeatureUpdate = allowUserPermissionFeatureUpdate;
         return this;
@@ -42,6 +46,7 @@ public class TagmanagerAccountsContainersDestinationsLinkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public TagmanagerAccountsContainersDestinationsLinkRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class TagmanagerAccountsContainersDestinationsLinkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public TagmanagerAccountsContainersDestinationsLinkRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class TagmanagerAccountsContainersDestinationsLinkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationId")
     public String destinationId;
+
     public TagmanagerAccountsContainersDestinationsLinkRequest withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -72,6 +79,7 @@ public class TagmanagerAccountsContainersDestinationsLinkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public TagmanagerAccountsContainersDestinationsLinkRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class TagmanagerAccountsContainersDestinationsLinkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public TagmanagerAccountsContainersDestinationsLinkRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class TagmanagerAccountsContainersDestinationsLinkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public TagmanagerAccountsContainersDestinationsLinkRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class TagmanagerAccountsContainersDestinationsLinkRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public TagmanagerAccountsContainersDestinationsLinkRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -112,6 +123,7 @@ public class TagmanagerAccountsContainersDestinationsLinkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public TagmanagerAccountsContainersDestinationsLinkRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class TagmanagerAccountsContainersDestinationsLinkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public TagmanagerAccountsContainersDestinationsLinkRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class TagmanagerAccountsContainersDestinationsLinkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public TagmanagerAccountsContainersDestinationsLinkRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,13 @@ public class TagmanagerAccountsContainersDestinationsLinkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public TagmanagerAccountsContainersDestinationsLinkRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public TagmanagerAccountsContainersDestinationsLinkRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteSubnetCidrReservationRequest {
     
     public Boolean dryRun;
+
     public DeleteSubnetCidrReservationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DeleteSubnetCidrReservationRequest {
     
     
     public String subnetCidrReservationId;
+
     public DeleteSubnetCidrReservationRequest withSubnetCidrReservationId(String subnetCidrReservationId) {
         this.subnetCidrReservationId = subnetCidrReservationId;
         return this;
     }
     
+    public DeleteSubnetCidrReservationRequest(@JsonProperty("SubnetCidrReservationId") String subnetCidrReservationId) {
+        this.subnetCidrReservationId = subnetCidrReservationId;
+  }
 }

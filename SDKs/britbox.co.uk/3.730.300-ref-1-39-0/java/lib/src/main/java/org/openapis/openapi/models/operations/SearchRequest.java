@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchRequest {
@@ -12,6 +13,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public SearchRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -42,6 +44,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public SearchRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -62,6 +65,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public Boolean group;
+
     public SearchRequest withGroup(Boolean group) {
         this.group = group;
         return this;
@@ -80,6 +84,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=include")
     public SearchIncludeEnum[] include;
+
     public SearchRequest withInclude(SearchIncludeEnum[] include) {
         this.include = include;
         return this;
@@ -100,6 +105,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public SearchRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -110,6 +116,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_rating")
     public String maxRating;
+
     public SearchRequest withMaxRating(String maxRating) {
         this.maxRating = maxRating;
         return this;
@@ -120,6 +127,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_results")
     public Integer maxResults;
+
     public SearchRequest withMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -130,6 +138,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public SearchRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -140,6 +149,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
     public String sub;
+
     public SearchRequest withSub(String sub) {
         this.sub = sub;
         return this;
@@ -150,9 +160,13 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=term")
     public String term;
+
     public SearchRequest withTerm(String term) {
         this.term = term;
         return this;
     }
     
+    public SearchRequest(@JsonProperty("term") String term) {
+        this.term = term;
+  }
 }

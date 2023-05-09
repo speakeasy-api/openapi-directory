@@ -18,6 +18,7 @@ public class Payouts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public Payouts withHref(String href) {
         this.href = href;
         return this;
@@ -29,6 +30,7 @@ public class Payouts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public Payouts withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -40,6 +42,7 @@ public class Payouts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public Payouts withNext(String next) {
         this.next = next;
         return this;
@@ -51,6 +54,7 @@ public class Payouts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public Payouts withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -62,6 +66,7 @@ public class Payouts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payouts")
     public Payout[] payouts;
+
     public Payouts withPayouts(Payout[] payouts) {
         this.payouts = payouts;
         return this;
@@ -73,6 +78,7 @@ public class Payouts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prev")
     public String prev;
+
     public Payouts withPrev(String prev) {
         this.prev = prev;
         return this;
@@ -84,9 +90,11 @@ public class Payouts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Integer total;
+
     public Payouts withTotal(Integer total) {
         this.total = total;
         return this;
     }
     
+    public Payouts(){}
 }

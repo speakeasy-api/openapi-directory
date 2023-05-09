@@ -15,6 +15,7 @@ public class AnalyticsListAudiences200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextLink")
     public String nextLink;
+
     public AnalyticsListAudiences200ApplicationJSON withNextLink(String nextLink) {
         this.nextLink = nextLink;
         return this;
@@ -25,9 +26,13 @@ public class AnalyticsListAudiences200ApplicationJSON {
      */
     @JsonProperty("values")
     public AnalyticsListAudiences200ApplicationJSONValues[] values;
+
     public AnalyticsListAudiences200ApplicationJSON withValues(AnalyticsListAudiences200ApplicationJSONValues[] values) {
         this.values = values;
         return this;
     }
     
+    public AnalyticsListAudiences200ApplicationJSON(@JsonProperty("values") AnalyticsListAudiences200ApplicationJSONValues[] values) {
+        this.values = values;
+  }
 }

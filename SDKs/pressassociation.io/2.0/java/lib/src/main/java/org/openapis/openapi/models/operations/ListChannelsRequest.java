@@ -12,6 +12,7 @@ public class ListChannelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
     public Boolean aliases;
+
     public ListChannelsRequest withAliases(Boolean aliases) {
         this.aliases = aliases;
         return this;
@@ -22,6 +23,7 @@ public class ListChannelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public ListChannelsRequest withDate(String date) {
         this.date = date;
         return this;
@@ -32,6 +34,7 @@ public class ListChannelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=platformId")
     public String platformId;
+
     public ListChannelsRequest withPlatformId(String platformId) {
         this.platformId = platformId;
         return this;
@@ -42,6 +45,7 @@ public class ListChannelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regionId")
     public String regionId;
+
     public ListChannelsRequest withRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -52,6 +56,7 @@ public class ListChannelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scheduleEnd")
     public String scheduleEnd;
+
     public ListChannelsRequest withScheduleEnd(String scheduleEnd) {
         this.scheduleEnd = scheduleEnd;
         return this;
@@ -62,6 +67,7 @@ public class ListChannelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scheduleStart")
     public String scheduleStart;
+
     public ListChannelsRequest withScheduleStart(String scheduleStart) {
         this.scheduleStart = scheduleStart;
         return this;
@@ -72,9 +78,11 @@ public class ListChannelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scheduleUpdatedSince")
     public String scheduleUpdatedSince;
+
     public ListChannelsRequest withScheduleUpdatedSince(String scheduleUpdatedSince) {
         this.scheduleUpdatedSince = scheduleUpdatedSince;
         return this;
     }
     
+    public ListChannelsRequest(){}
 }

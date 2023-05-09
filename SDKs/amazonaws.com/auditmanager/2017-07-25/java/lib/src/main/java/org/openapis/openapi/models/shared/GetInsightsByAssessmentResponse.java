@@ -15,9 +15,11 @@ public class GetInsightsByAssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insights")
     public InsightsByAssessment insights;
+
     public GetInsightsByAssessmentResponse withInsights(InsightsByAssessment insights) {
         this.insights = insights;
         return this;
     }
     
+    public GetInsightsByAssessmentResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GlobalSignOutResponse {
     
     public String contentType;
+
     public GlobalSignOutResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GlobalSignOutResponse {
      */
     
     public Object forbiddenException;
+
     public GlobalSignOutResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -29,6 +32,7 @@ public class GlobalSignOutResponse {
      */
     
     public java.util.Map<String, Object> globalSignOutResponse;
+
     public GlobalSignOutResponse withGlobalSignOutResponse(java.util.Map<String, Object> globalSignOutResponse) {
         this.globalSignOutResponse = globalSignOutResponse;
         return this;
@@ -39,6 +43,7 @@ public class GlobalSignOutResponse {
      */
     
     public Object internalErrorException;
+
     public GlobalSignOutResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class GlobalSignOutResponse {
      */
     
     public Object invalidParameterException;
+
     public GlobalSignOutResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GlobalSignOutResponse {
      */
     
     public Object notAuthorizedException;
+
     public GlobalSignOutResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -69,6 +76,7 @@ public class GlobalSignOutResponse {
      */
     
     public Object passwordResetRequiredException;
+
     public GlobalSignOutResponse withPasswordResetRequiredException(Object passwordResetRequiredException) {
         this.passwordResetRequiredException = passwordResetRequiredException;
         return this;
@@ -79,6 +87,7 @@ public class GlobalSignOutResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GlobalSignOutResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class GlobalSignOutResponse {
     
     
     public Integer statusCode;
+
     public GlobalSignOutResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GlobalSignOutResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GlobalSignOutResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class GlobalSignOutResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GlobalSignOutResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,9 +125,14 @@ public class GlobalSignOutResponse {
      */
     
     public Object userNotConfirmedException;
+
     public GlobalSignOutResponse withUserNotConfirmedException(Object userNotConfirmedException) {
         this.userNotConfirmedException = userNotConfirmedException;
         return this;
     }
     
+    public GlobalSignOutResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Active")
     public Boolean active;
+
     public Stadium withActive(Boolean active) {
         this.active = active;
         return this;
@@ -20,6 +21,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Altitude")
     public Long altitude;
+
     public Stadium withAltitude(Long altitude) {
         this.altitude = altitude;
         return this;
@@ -28,6 +30,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Capacity")
     public Long capacity;
+
     public Stadium withCapacity(Long capacity) {
         this.capacity = capacity;
         return this;
@@ -36,6 +39,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CenterField")
     public Long centerField;
+
     public Stadium withCenterField(Long centerField) {
         this.centerField = centerField;
         return this;
@@ -44,6 +48,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public Stadium withCity(String city) {
         this.city = city;
         return this;
@@ -52,6 +57,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public Stadium withCountry(String country) {
         this.country = country;
         return this;
@@ -60,6 +66,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeoLat")
     public Double geoLat;
+
     public Stadium withGeoLat(Double geoLat) {
         this.geoLat = geoLat;
         return this;
@@ -68,6 +75,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeoLong")
     public Double geoLong;
+
     public Stadium withGeoLong(Double geoLong) {
         this.geoLong = geoLong;
         return this;
@@ -76,6 +84,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomePlateDirection")
     public Long homePlateDirection;
+
     public Stadium withHomePlateDirection(Long homePlateDirection) {
         this.homePlateDirection = homePlateDirection;
         return this;
@@ -84,6 +93,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeftCenterField")
     public Long leftCenterField;
+
     public Stadium withLeftCenterField(Long leftCenterField) {
         this.leftCenterField = leftCenterField;
         return this;
@@ -92,6 +102,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeftField")
     public Long leftField;
+
     public Stadium withLeftField(Long leftField) {
         this.leftField = leftField;
         return this;
@@ -100,6 +111,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MidLeftCenterField")
     public Long midLeftCenterField;
+
     public Stadium withMidLeftCenterField(Long midLeftCenterField) {
         this.midLeftCenterField = midLeftCenterField;
         return this;
@@ -108,6 +120,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MidLeftField")
     public Long midLeftField;
+
     public Stadium withMidLeftField(Long midLeftField) {
         this.midLeftField = midLeftField;
         return this;
@@ -116,6 +129,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MidRightCenterField")
     public Long midRightCenterField;
+
     public Stadium withMidRightCenterField(Long midRightCenterField) {
         this.midRightCenterField = midRightCenterField;
         return this;
@@ -124,6 +138,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MidRightField")
     public Long midRightField;
+
     public Stadium withMidRightField(Long midRightField) {
         this.midRightField = midRightField;
         return this;
@@ -132,6 +147,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Stadium withName(String name) {
         this.name = name;
         return this;
@@ -140,6 +156,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RightCenterField")
     public Long rightCenterField;
+
     public Stadium withRightCenterField(Long rightCenterField) {
         this.rightCenterField = rightCenterField;
         return this;
@@ -148,6 +165,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RightField")
     public Long rightField;
+
     public Stadium withRightField(Long rightField) {
         this.rightField = rightField;
         return this;
@@ -156,6 +174,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StadiumID")
     public Long stadiumID;
+
     public Stadium withStadiumID(Long stadiumID) {
         this.stadiumID = stadiumID;
         return this;
@@ -164,6 +183,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public Stadium withState(String state) {
         this.state = state;
         return this;
@@ -172,6 +192,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Surface")
     public String surface;
+
     public Stadium withSurface(String surface) {
         this.surface = surface;
         return this;
@@ -180,9 +201,11 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public Stadium withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Stadium(){}
 }

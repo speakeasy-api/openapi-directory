@@ -12,9 +12,11 @@ public class EnterpriseSettingsEnterprisePages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public EnterpriseSettingsEnterprisePages withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public EnterpriseSettingsEnterprisePages(){}
 }

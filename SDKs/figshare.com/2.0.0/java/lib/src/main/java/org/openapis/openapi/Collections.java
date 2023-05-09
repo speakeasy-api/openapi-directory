@@ -60,11 +60,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionArticlesResponse res = new org.openapis.openapi.models.operations.CollectionArticlesResponse() {{
+        org.openapis.openapi.models.operations.CollectionArticlesResponse res = new org.openapis.openapi.models.operations.CollectionArticlesResponse(contentType, httpRes.statusCode()) {{
             articles = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionDetailsResponse res = new org.openapis.openapi.models.operations.CollectionDetailsResponse() {{
+        org.openapis.openapi.models.operations.CollectionDetailsResponse res = new org.openapis.openapi.models.operations.CollectionDetailsResponse(contentType, httpRes.statusCode()) {{
             collectionComplete = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -142,11 +138,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionVersionDetailsResponse res = new org.openapis.openapi.models.operations.CollectionVersionDetailsResponse() {{
+        org.openapis.openapi.models.operations.CollectionVersionDetailsResponse res = new org.openapis.openapi.models.operations.CollectionVersionDetailsResponse(contentType, httpRes.statusCode()) {{
             collectionComplete = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,11 +177,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionVersionsResponse res = new org.openapis.openapi.models.operations.CollectionVersionsResponse() {{
+        org.openapis.openapi.models.operations.CollectionVersionsResponse res = new org.openapis.openapi.models.operations.CollectionVersionsResponse(contentType, httpRes.statusCode()) {{
             collectionVersions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -238,11 +230,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsListResponse res = new org.openapis.openapi.models.operations.CollectionsListResponse() {{
+        org.openapis.openapi.models.operations.CollectionsListResponse res = new org.openapis.openapi.models.operations.CollectionsListResponse(contentType, httpRes.statusCode()) {{
             collections = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsSearchResponse res = new org.openapis.openapi.models.operations.CollectionsSearchResponse() {{
+        org.openapis.openapi.models.operations.CollectionsSearchResponse res = new org.openapis.openapi.models.operations.CollectionsSearchResponse(contentType, httpRes.statusCode()) {{
             collections = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -336,11 +324,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionArticleDeleteResponse res = new org.openapis.openapi.models.operations.PrivateCollectionArticleDeleteResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionArticleDeleteResponse res = new org.openapis.openapi.models.operations.PrivateCollectionArticleDeleteResponse(contentType, httpRes.statusCode()) {{
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -384,12 +370,10 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionArticlesAddResponse res = new org.openapis.openapi.models.operations.PrivateCollectionArticlesAddResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionArticlesAddResponse res = new org.openapis.openapi.models.operations.PrivateCollectionArticlesAddResponse(contentType, httpRes.statusCode()) {{
             location = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -443,12 +427,10 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionArticlesListResponse res = new org.openapis.openapi.models.operations.PrivateCollectionArticlesListResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionArticlesListResponse res = new org.openapis.openapi.models.operations.PrivateCollectionArticlesListResponse(contentType, httpRes.statusCode()) {{
             articles = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -499,11 +481,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionArticlesReplaceResponse res = new org.openapis.openapi.models.operations.PrivateCollectionArticlesReplaceResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionArticlesReplaceResponse res = new org.openapis.openapi.models.operations.PrivateCollectionArticlesReplaceResponse(contentType, httpRes.statusCode()) {{
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 205) {
@@ -546,11 +526,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionAuthorDeleteResponse res = new org.openapis.openapi.models.operations.PrivateCollectionAuthorDeleteResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionAuthorDeleteResponse res = new org.openapis.openapi.models.operations.PrivateCollectionAuthorDeleteResponse(contentType, httpRes.statusCode()) {{
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -594,12 +572,10 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionAuthorsAddResponse res = new org.openapis.openapi.models.operations.PrivateCollectionAuthorsAddResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionAuthorsAddResponse res = new org.openapis.openapi.models.operations.PrivateCollectionAuthorsAddResponse(contentType, httpRes.statusCode()) {{
             location = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -647,12 +623,10 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionAuthorsListResponse res = new org.openapis.openapi.models.operations.PrivateCollectionAuthorsListResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionAuthorsListResponse res = new org.openapis.openapi.models.operations.PrivateCollectionAuthorsListResponse(contentType, httpRes.statusCode()) {{
             authors = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -703,11 +677,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionAuthorsReplaceResponse res = new org.openapis.openapi.models.operations.PrivateCollectionAuthorsReplaceResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionAuthorsReplaceResponse res = new org.openapis.openapi.models.operations.PrivateCollectionAuthorsReplaceResponse(contentType, httpRes.statusCode()) {{
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 205) {
@@ -755,12 +727,10 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionCategoriesAddResponse res = new org.openapis.openapi.models.operations.PrivateCollectionCategoriesAddResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionCategoriesAddResponse res = new org.openapis.openapi.models.operations.PrivateCollectionCategoriesAddResponse(contentType, httpRes.statusCode()) {{
             location = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -808,12 +778,10 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionCategoriesListResponse res = new org.openapis.openapi.models.operations.PrivateCollectionCategoriesListResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionCategoriesListResponse res = new org.openapis.openapi.models.operations.PrivateCollectionCategoriesListResponse(contentType, httpRes.statusCode()) {{
             categories = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -864,11 +832,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionCategoriesReplaceResponse res = new org.openapis.openapi.models.operations.PrivateCollectionCategoriesReplaceResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionCategoriesReplaceResponse res = new org.openapis.openapi.models.operations.PrivateCollectionCategoriesReplaceResponse(contentType, httpRes.statusCode()) {{
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 205) {
@@ -911,11 +877,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionCategoryDeleteResponse res = new org.openapis.openapi.models.operations.PrivateCollectionCategoryDeleteResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionCategoryDeleteResponse res = new org.openapis.openapi.models.operations.PrivateCollectionCategoryDeleteResponse(contentType, httpRes.statusCode()) {{
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -959,12 +923,10 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionCreateResponse res = new org.openapis.openapi.models.operations.PrivateCollectionCreateResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionCreateResponse res = new org.openapis.openapi.models.operations.PrivateCollectionCreateResponse(contentType, httpRes.statusCode()) {{
             locationWarnings = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1010,11 +972,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionDeleteResponse res = new org.openapis.openapi.models.operations.PrivateCollectionDeleteResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionDeleteResponse res = new org.openapis.openapi.models.operations.PrivateCollectionDeleteResponse(contentType, httpRes.statusCode()) {{
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1053,11 +1013,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionDetailsResponse res = new org.openapis.openapi.models.operations.PrivateCollectionDetailsResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionDetailsResponse res = new org.openapis.openapi.models.operations.PrivateCollectionDetailsResponse(contentType, httpRes.statusCode()) {{
             collectionCompletePrivate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1098,12 +1056,10 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkCreateResponse res = new org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkCreateResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkCreateResponse res = new org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkCreateResponse(contentType, httpRes.statusCode()) {{
             privateLinkResponse = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1151,11 +1107,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkDeleteResponse res = new org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkDeleteResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkDeleteResponse res = new org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkDeleteResponse(contentType, httpRes.statusCode()) {{
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1196,11 +1150,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkUpdateResponse res = new org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkUpdateResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkUpdateResponse res = new org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkUpdateResponse(contentType, httpRes.statusCode()) {{
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 205) {
@@ -1243,12 +1195,10 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionPrivateLinksListResponse res = new org.openapis.openapi.models.operations.PrivateCollectionPrivateLinksListResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionPrivateLinksListResponse res = new org.openapis.openapi.models.operations.PrivateCollectionPrivateLinksListResponse(contentType, httpRes.statusCode()) {{
             privateLinks = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1294,12 +1244,10 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionPublishResponse res = new org.openapis.openapi.models.operations.PrivateCollectionPublishResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionPublishResponse res = new org.openapis.openapi.models.operations.PrivateCollectionPublishResponse(contentType, httpRes.statusCode()) {{
             location = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1347,12 +1295,10 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionReserveDoiResponse res = new org.openapis.openapi.models.operations.PrivateCollectionReserveDoiResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionReserveDoiResponse res = new org.openapis.openapi.models.operations.PrivateCollectionReserveDoiResponse(contentType, httpRes.statusCode()) {{
             collectionDOI = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1398,12 +1344,10 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionReserveHandleResponse res = new org.openapis.openapi.models.operations.PrivateCollectionReserveHandleResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionReserveHandleResponse res = new org.openapis.openapi.models.operations.PrivateCollectionReserveHandleResponse(contentType, httpRes.statusCode()) {{
             collectionHandle = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1454,12 +1398,10 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionResourceResponse res = new org.openapis.openapi.models.operations.PrivateCollectionResourceResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionResourceResponse res = new org.openapis.openapi.models.operations.PrivateCollectionResourceResponse(contentType, httpRes.statusCode()) {{
             location = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 205) {
@@ -1512,12 +1454,10 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionUpdateResponse res = new org.openapis.openapi.models.operations.PrivateCollectionUpdateResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionUpdateResponse res = new org.openapis.openapi.models.operations.PrivateCollectionUpdateResponse(contentType, httpRes.statusCode()) {{
             locationWarningsUpdate = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 205) {
@@ -1571,12 +1511,10 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionsListResponse res = new org.openapis.openapi.models.operations.PrivateCollectionsListResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionsListResponse res = new org.openapis.openapi.models.operations.PrivateCollectionsListResponse(contentType, httpRes.statusCode()) {{
             collections = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1627,12 +1565,10 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateCollectionsSearchResponse res = new org.openapis.openapi.models.operations.PrivateCollectionsSearchResponse() {{
+        org.openapis.openapi.models.operations.PrivateCollectionsSearchResponse res = new org.openapis.openapi.models.operations.PrivateCollectionsSearchResponse(contentType, httpRes.statusCode()) {{
             collections = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSyncJobsResponse {
@@ -12,6 +13,7 @@ public class ListSyncJobsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSyncJobsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListSyncJobsResponse {
     
     
     public String contentType;
+
     public ListSyncJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSyncJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListSyncJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListSyncJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSyncJobsResponse listSyncJobsResponse;
+
     public ListSyncJobsResponse withListSyncJobsResponse(org.openapis.openapi.models.shared.ListSyncJobsResponse listSyncJobsResponse) {
         this.listSyncJobsResponse = listSyncJobsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListSyncJobsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListSyncJobsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class ListSyncJobsResponse {
     
     
     public Integer statusCode;
+
     public ListSyncJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListSyncJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSyncJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListSyncJobsResponse {
      */
     
     public Object throttlingException;
+
     public ListSyncJobsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListSyncJobsResponse {
      */
     
     public Object validationException;
+
     public ListSyncJobsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSyncJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

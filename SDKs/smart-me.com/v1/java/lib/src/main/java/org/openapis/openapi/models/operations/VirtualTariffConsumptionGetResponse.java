@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VirtualTariffConsumptionGetResponse {
     
     public byte[] body;
+
     public VirtualTariffConsumptionGetResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class VirtualTariffConsumptionGetResponse {
     
     
     public String contentType;
+
     public VirtualTariffConsumptionGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class VirtualTariffConsumptionGetResponse {
     
     
     public Integer statusCode;
+
     public VirtualTariffConsumptionGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class VirtualTariffConsumptionGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VirtualTariffConsumptionGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class VirtualTariffConsumptionGetResponse {
      */
     
     public org.openapis.openapi.models.shared.VirtualTariffConsumptionData[] virtualTariffConsumptionData;
+
     public VirtualTariffConsumptionGetResponse withVirtualTariffConsumptionData(org.openapis.openapi.models.shared.VirtualTariffConsumptionData[] virtualTariffConsumptionData) {
         this.virtualTariffConsumptionData = virtualTariffConsumptionData;
         return this;
     }
     
+    public VirtualTariffConsumptionGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

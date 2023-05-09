@@ -15,6 +15,7 @@ public class GameEndpointsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveElasticSearch")
     public String liveElasticSearch;
+
     public GameEndpointsModel withLiveElasticSearch(String liveElasticSearch) {
         this.liveElasticSearch = liveElasticSearch;
         return this;
@@ -23,6 +24,7 @@ public class GameEndpointsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveNosql")
     public String liveNosql;
+
     public GameEndpointsModel withLiveNosql(String liveNosql) {
         this.liveNosql = liveNosql;
         return this;
@@ -31,6 +33,7 @@ public class GameEndpointsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previewElasticSearch")
     public String previewElasticSearch;
+
     public GameEndpointsModel withPreviewElasticSearch(String previewElasticSearch) {
         this.previewElasticSearch = previewElasticSearch;
         return this;
@@ -39,9 +42,11 @@ public class GameEndpointsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previewNosql")
     public String previewNosql;
+
     public GameEndpointsModel withPreviewNosql(String previewNosql) {
         this.previewNosql = previewNosql;
         return this;
     }
     
+    public GameEndpointsModel(){}
 }

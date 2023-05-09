@@ -25,9 +25,11 @@ public class GetClassifications400ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public GetClassifications400ApplicationVndApiPlusJsonErrors[] errors;
+
     public GetClassifications400ApplicationVndApiPlusJson withErrors(GetClassifications400ApplicationVndApiPlusJsonErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetClassifications400ApplicationVndApiPlusJson(){}
 }

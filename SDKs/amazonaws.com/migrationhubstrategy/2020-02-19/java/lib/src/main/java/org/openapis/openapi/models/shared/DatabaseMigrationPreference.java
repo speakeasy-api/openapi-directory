@@ -15,6 +15,7 @@ public class DatabaseMigrationPreference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heterogeneous")
     public Heterogeneous heterogeneous;
+
     public DatabaseMigrationPreference withHeterogeneous(Heterogeneous heterogeneous) {
         this.heterogeneous = heterogeneous;
         return this;
@@ -23,6 +24,7 @@ public class DatabaseMigrationPreference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homogeneous")
     public Homogeneous homogeneous;
+
     public DatabaseMigrationPreference withHomogeneous(Homogeneous homogeneous) {
         this.homogeneous = homogeneous;
         return this;
@@ -31,9 +33,11 @@ public class DatabaseMigrationPreference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noPreference")
     public NoDatabaseMigrationPreference noPreference;
+
     public DatabaseMigrationPreference withNoPreference(NoDatabaseMigrationPreference noPreference) {
         this.noPreference = noPreference;
         return this;
     }
     
+    public DatabaseMigrationPreference(){}
 }

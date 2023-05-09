@@ -15,6 +15,7 @@ public class ThingGroupIndexingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public Field[] customFields;
+
     public ThingGroupIndexingConfiguration withCustomFields(Field[] customFields) {
         this.customFields = customFields;
         return this;
@@ -23,6 +24,7 @@ public class ThingGroupIndexingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedFields")
     public Field[] managedFields;
+
     public ThingGroupIndexingConfiguration withManagedFields(Field[] managedFields) {
         this.managedFields = managedFields;
         return this;
@@ -30,9 +32,13 @@ public class ThingGroupIndexingConfiguration {
     
     @JsonProperty("thingGroupIndexingMode")
     public ThingGroupIndexingModeEnum thingGroupIndexingMode;
+
     public ThingGroupIndexingConfiguration withThingGroupIndexingMode(ThingGroupIndexingModeEnum thingGroupIndexingMode) {
         this.thingGroupIndexingMode = thingGroupIndexingMode;
         return this;
     }
     
+    public ThingGroupIndexingConfiguration(@JsonProperty("thingGroupIndexingMode") ThingGroupIndexingModeEnum thingGroupIndexingMode) {
+        this.thingGroupIndexingMode = thingGroupIndexingMode;
+  }
 }

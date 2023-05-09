@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InstanceInformationStringFilter {
     @JsonProperty("Key")
     public String key;
+
     public InstanceInformationStringFilter withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class InstanceInformationStringFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public InstanceInformationStringFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public InstanceInformationStringFilter(@JsonProperty("Key") String key, @JsonProperty("Values") String[] values) {
+        this.key = key;
+        this.values = values;
+  }
 }

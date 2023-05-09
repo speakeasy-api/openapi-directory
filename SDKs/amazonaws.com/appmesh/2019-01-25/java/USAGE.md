@@ -3,330 +3,290 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateGatewayRouteRequestBodySpec;
-import org.openapis.openapi.models.operations.CreateGatewayRouteRequestBody;
 import org.openapis.openapi.models.operations.CreateGatewayRouteRequest;
+import org.openapis.openapi.models.operations.CreateGatewayRouteRequestBody;
+import org.openapis.openapi.models.operations.CreateGatewayRouteRequestBodySpec;
 import org.openapis.openapi.models.operations.CreateGatewayRouteResponse;
-import org.openapis.openapi.models.shared.TagRef;
-import org.openapis.openapi.models.shared.HttpGatewayRoute;
-import org.openapis.openapi.models.shared.HttpGatewayRouteMatch;
-import org.openapis.openapi.models.shared.HttpQueryParameter;
-import org.openapis.openapi.models.shared.QueryParameterMatch;
-import org.openapis.openapi.models.shared.HttpPathMatch;
-import org.openapis.openapi.models.shared.HttpMethodEnum;
+import org.openapis.openapi.models.shared.DefaultGatewayRouteRewriteEnum;
 import org.openapis.openapi.models.shared.GatewayRouteHostnameMatch;
-import org.openapis.openapi.models.shared.HttpGatewayRouteHeader;
-import org.openapis.openapi.models.shared.HeaderMatchMethod;
-import org.openapis.openapi.models.shared.MatchRange;
-import org.openapis.openapi.models.shared.HttpGatewayRouteAction;
+import org.openapis.openapi.models.shared.GatewayRouteHostnameRewrite;
 import org.openapis.openapi.models.shared.GatewayRouteTarget;
 import org.openapis.openapi.models.shared.GatewayRouteVirtualService;
-import org.openapis.openapi.models.shared.HttpGatewayRouteRewrite;
-import org.openapis.openapi.models.shared.HttpGatewayRoutePrefixRewrite;
-import org.openapis.openapi.models.shared.DefaultGatewayRouteRewriteEnum;
-import org.openapis.openapi.models.shared.HttpGatewayRoutePathRewrite;
-import org.openapis.openapi.models.shared.GatewayRouteHostnameRewrite;
 import org.openapis.openapi.models.shared.GrpcGatewayRoute;
+import org.openapis.openapi.models.shared.GrpcGatewayRouteAction;
 import org.openapis.openapi.models.shared.GrpcGatewayRouteMatch;
 import org.openapis.openapi.models.shared.GrpcGatewayRouteMetadata;
-import org.openapis.openapi.models.shared.GrpcMetadataMatchMethod;
-import org.openapis.openapi.models.shared.GrpcGatewayRouteAction;
 import org.openapis.openapi.models.shared.GrpcGatewayRouteRewrite;
+import org.openapis.openapi.models.shared.GrpcMetadataMatchMethod;
+import org.openapis.openapi.models.shared.HeaderMatchMethod;
+import org.openapis.openapi.models.shared.HttpGatewayRoute;
+import org.openapis.openapi.models.shared.HttpGatewayRouteAction;
+import org.openapis.openapi.models.shared.HttpGatewayRouteHeader;
+import org.openapis.openapi.models.shared.HttpGatewayRouteMatch;
+import org.openapis.openapi.models.shared.HttpGatewayRoutePathRewrite;
+import org.openapis.openapi.models.shared.HttpGatewayRoutePrefixRewrite;
+import org.openapis.openapi.models.shared.HttpGatewayRouteRewrite;
+import org.openapis.openapi.models.shared.HttpMethodEnum;
+import org.openapis.openapi.models.shared.HttpPathMatch;
+import org.openapis.openapi.models.shared.HttpQueryParameter;
+import org.openapis.openapi.models.shared.MatchRange;
+import org.openapis.openapi.models.shared.QueryParameterMatch;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.shared.TagRef;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateGatewayRouteRequest req = new CreateGatewayRouteRequest() {{
-                requestBody = new CreateGatewayRouteRequestBody() {{
-                    clientToken = "corrupti";
-                    gatewayRouteName = "provident";
-                    spec = new CreateGatewayRouteRequestBodySpec() {{
-                        grpcRoute = new GrpcGatewayRoute() {{
-                            action = new GrpcGatewayRouteAction() {{
-                                rewrite = new GrpcGatewayRouteRewrite() {{
-                                    hostname = new GatewayRouteHostnameRewrite() {{
-                                        defaultTargetHostname = "DISABLED";
-                                    }};
-                                }};
-                                target = new GatewayRouteTarget() {{
-                                    port = 844266;
-                                    virtualService = new GatewayRouteVirtualService() {{
-                                        virtualServiceName = "unde";
-                                    }};
-                                }};
-                            }};
-                            match = new GrpcGatewayRouteMatch() {{
-                                hostname = new GatewayRouteHostnameMatch() {{
-                                    exact = "nulla";
-                                    suffix = "corrupti";
-                                }};
-                                metadata = new org.openapis.openapi.models.shared.GrpcGatewayRouteMetadata[]{{
-                                    add(new GrpcGatewayRouteMetadata() {{
-                                        invert = false;
-                                        match = new GrpcMetadataMatchMethod() {{
-                                            exact = "vel";
-                                            prefix = "error";
-                                            range = new MatchRange() {{
-                                                end = 645894;
-                                                start = 384382;
-                                            }};
-                                            regex = "iure";
-                                            suffix = "magnam";
-                                        }};
-                                        name = "debitis";
+            CreateGatewayRouteRequest req = new CreateGatewayRouteRequest(                new CreateGatewayRouteRequestBody("provident",                 new CreateGatewayRouteRequestBodySpec() {{
+                                                grpcRoute = new GrpcGatewayRoute(                new GrpcGatewayRouteAction(                new GatewayRouteTarget(                new GatewayRouteVirtualService("distinctio");) {{
+                                                                                    port = 844266L;
+                                                                                }};) {{
+                                                                    rewrite = new GrpcGatewayRouteRewrite() {{
+                                                                        hostname = new GatewayRouteHostnameRewrite() {{
+                                                                            defaultTargetHostname = DefaultGatewayRouteRewriteEnum.DISABLED;
+                                                                        }};;
+                                                                    }};;
+                                                                }};,                 new GrpcGatewayRouteMatch() {{
+                                                                    hostname = new GatewayRouteHostnameMatch() {{
+                                                                        exact = "nulla";
+                                                                        suffix = "corrupti";
+                                                                    }};;
+                                                                    metadata = new org.openapis.openapi.models.shared.GrpcGatewayRouteMetadata[]{{
+                                                                        add(new GrpcGatewayRouteMetadata("placeat") {{
+                                                                            invert = false;
+                                                                            match = new GrpcMetadataMatchMethod() {{
+                                                                                exact = "vel";
+                                                                                prefix = "error";
+                                                                                range = new MatchRange(437587L, 297534L) {{
+                                                                                    end = 645894L;
+                                                                                    start = 384382L;
+                                                                                }};
+                                                                                regex = "debitis";
+                                                                                suffix = "ipsa";
+                                                                            }};
+                                                                            name = "Ricky Hoppe";
+                                                                        }}),
+                                                                        add(new GrpcGatewayRouteMetadata("sapiente") {{
+                                                                            invert = false;
+                                                                            match = new GrpcMetadataMatchMethod() {{
+                                                                                exact = "voluptatum";
+                                                                                prefix = "iusto";
+                                                                                range = new MatchRange(925597L, 836079L) {{
+                                                                                    end = 568045L;
+                                                                                    start = 392785L;
+                                                                                }};
+                                                                                regex = "ab";
+                                                                                suffix = "quis";
+                                                                            }};
+                                                                            name = "Iris Aufderhar";
+                                                                        }}),
+                                                                        add(new GrpcGatewayRouteMetadata("officia") {{
+                                                                            invert = false;
+                                                                            match = new GrpcMetadataMatchMethod() {{
+                                                                                exact = "quo";
+                                                                                prefix = "odit";
+                                                                                range = new MatchRange(978619L, 473608L) {{
+                                                                                    end = 870013L;
+                                                                                    start = 870088L;
+                                                                                }};
+                                                                                regex = "quod";
+                                                                                suffix = "quod";
+                                                                            }};
+                                                                            name = "Deanna Sauer MD";
+                                                                        }}),
+                                                                        add(new GrpcGatewayRouteMetadata("esse") {{
+                                                                            invert = false;
+                                                                            match = new GrpcMetadataMatchMethod() {{
+                                                                                exact = "occaecati";
+                                                                                prefix = "fugit";
+                                                                                range = new MatchRange(758616L, 521848L) {{
+                                                                                    end = 537373L;
+                                                                                    start = 944669L;
+                                                                                }};
+                                                                                regex = "beatae";
+                                                                                suffix = "commodi";
+                                                                            }};
+                                                                            name = "Pauline Dibbert";
+                                                                        }}),
+                                                                    }};
+                                                                    port = 216550L;
+                                                                    serviceName = "excepturi";
+                                                                }};);;
+                                                http2Route = new HttpGatewayRoute(                new HttpGatewayRouteAction(                new GatewayRouteTarget(                new GatewayRouteVirtualService("aspernatur");) {{
+                                                                                    port = 18789L;
+                                                                                }};) {{
+                                                                    rewrite = new HttpGatewayRouteRewrite() {{
+                                                                        hostname = new GatewayRouteHostnameRewrite() {{
+                                                                            defaultTargetHostname = DefaultGatewayRouteRewriteEnum.ENABLED;
+                                                                        }};;
+                                                                        path = new HttpGatewayRoutePathRewrite() {{
+                                                                            exact = "natus";
+                                                                        }};;
+                                                                        prefix = new HttpGatewayRoutePrefixRewrite() {{
+                                                                            defaultPrefix = DefaultGatewayRouteRewriteEnum.ENABLED;
+                                                                            value = "iste";
+                                                                        }};;
+                                                                    }};;
+                                                                }};,                 new HttpGatewayRouteMatch() {{
+                                                                    headers = new org.openapis.openapi.models.shared.HttpGatewayRouteHeader[]{{
+                                                                        add(new HttpGatewayRouteHeader("est") {{
+                                                                            invert = false;
+                                                                            match = new HeaderMatchMethod() {{
+                                                                                exact = "natus";
+                                                                                prefix = "laboriosam";
+                                                                                range = new MatchRange(681820L, 449950L) {{
+                                                                                    end = 943749L;
+                                                                                    start = 902599L;
+                                                                                }};
+                                                                                regex = "corporis";
+                                                                                suffix = "iste";
+                                                                            }};
+                                                                            name = "Mr. Kerry Predovic";
+                                                                        }}),
+                                                                    }};
+                                                                    hostname = new GatewayRouteHostnameMatch() {{
+                                                                        exact = "mollitia";
+                                                                        suffix = "laborum";
+                                                                    }};;
+                                                                    method = HttpMethodEnum.HEAD;
+                                                                    path = new HttpPathMatch() {{
+                                                                        exact = "dolorem";
+                                                                        regex = "corporis";
+                                                                    }};;
+                                                                    port = 128926L;
+                                                                    prefix = "nobis";
+                                                                    queryParameters = new org.openapis.openapi.models.shared.HttpQueryParameter[]{{
+                                                                        add(new HttpQueryParameter("doloribus") {{
+                                                                            match = new QueryParameterMatch() {{
+                                                                                exact = "omnis";
+                                                                            }};
+                                                                            name = "Ms. Cathy Marks";
+                                                                        }}),
+                                                                        add(new HttpQueryParameter("repellat") {{
+                                                                            match = new QueryParameterMatch() {{
+                                                                                exact = "sapiente";
+                                                                            }};
+                                                                            name = "Angie Durgan";
+                                                                        }}),
+                                                                    }};
+                                                                }};);;
+                                                httpRoute = new HttpGatewayRoute(                new HttpGatewayRouteAction(                new GatewayRouteTarget(                new GatewayRouteVirtualService("mollitia");) {{
+                                                                                    port = 581850L;
+                                                                                }};) {{
+                                                                    rewrite = new HttpGatewayRouteRewrite() {{
+                                                                        hostname = new GatewayRouteHostnameRewrite() {{
+                                                                            defaultTargetHostname = DefaultGatewayRouteRewriteEnum.ENABLED;
+                                                                        }};;
+                                                                        path = new HttpGatewayRoutePathRewrite() {{
+                                                                            exact = "commodi";
+                                                                        }};;
+                                                                        prefix = new HttpGatewayRoutePrefixRewrite() {{
+                                                                            defaultPrefix = DefaultGatewayRouteRewriteEnum.ENABLED;
+                                                                            value = "molestiae";
+                                                                        }};;
+                                                                    }};;
+                                                                }};,                 new HttpGatewayRouteMatch() {{
+                                                                    headers = new org.openapis.openapi.models.shared.HttpGatewayRouteHeader[]{{
+                                                                        add(new HttpGatewayRouteHeader("possimus") {{
+                                                                            invert = false;
+                                                                            match = new HeaderMatchMethod() {{
+                                                                                exact = "error";
+                                                                                prefix = "quia";
+                                                                                range = new MatchRange(674752L, 656330L) {{
+                                                                                    end = 338007L;
+                                                                                    start = 110375L;
+                                                                                }};
+                                                                                regex = "enim";
+                                                                                suffix = "odit";
+                                                                            }};
+                                                                            name = "Jimmy Wiegand";
+                                                                        }}),
+                                                                    }};
+                                                                    hostname = new GatewayRouteHostnameMatch() {{
+                                                                        exact = "aut";
+                                                                        suffix = "quasi";
+                                                                    }};;
+                                                                    method = HttpMethodEnum.CONNECT;
+                                                                    path = new HttpPathMatch() {{
+                                                                        exact = "temporibus";
+                                                                        regex = "laborum";
+                                                                    }};;
+                                                                    port = 96098L;
+                                                                    prefix = "reiciendis";
+                                                                    queryParameters = new org.openapis.openapi.models.shared.HttpQueryParameter[]{{
+                                                                        add(new HttpQueryParameter("cum") {{
+                                                                            match = new QueryParameterMatch() {{
+                                                                                exact = "vero";
+                                                                            }};
+                                                                            name = "Miss Irma Wolff";
+                                                                        }}),
+                                                                        add(new HttpQueryParameter("dolore") {{
+                                                                            match = new QueryParameterMatch() {{
+                                                                                exact = "perferendis";
+                                                                            }};
+                                                                            name = "Bessie Grady II";
+                                                                        }}),
+                                                                        add(new HttpQueryParameter("repudiandae") {{
+                                                                            match = new QueryParameterMatch() {{
+                                                                                exact = "iusto";
+                                                                            }};
+                                                                            name = "Maryann Hamill";
+                                                                        }}),
+                                                                        add(new HttpQueryParameter("modi") {{
+                                                                            match = new QueryParameterMatch() {{
+                                                                                exact = "quae";
+                                                                            }};
+                                                                            name = "Alison Mann";
+                                                                        }}),
+                                                                    }};
+                                                                }};);;
+                                                priority = 508969L;
+                                            }};) {{
+                                clientToken = "rem";
+                                tags = new org.openapis.openapi.models.shared.TagRef[]{{
+                                    add(new TagRef("sint", "veritatis") {{
+                                        key = "quasi";
+                                        value = "repudiandae";
                                     }}),
-                                    add(new GrpcGatewayRouteMetadata() {{
-                                        invert = false;
-                                        match = new GrpcMetadataMatchMethod() {{
-                                            exact = "ipsa";
-                                            prefix = "delectus";
-                                            range = new MatchRange() {{
-                                                end = 272656;
-                                                start = 383441;
-                                            }};
-                                            regex = "molestiae";
-                                            suffix = "minus";
-                                        }};
-                                        name = "placeat";
+                                    add(new TagRef("enim", "consequatur") {{
+                                        key = "itaque";
+                                        value = "incidunt";
                                     }}),
-                                    add(new GrpcGatewayRouteMetadata() {{
-                                        invert = false;
-                                        match = new GrpcMetadataMatchMethod() {{
-                                            exact = "voluptatum";
-                                            prefix = "iusto";
-                                            range = new MatchRange() {{
-                                                end = 568045;
-                                                start = 392785;
-                                            }};
-                                            regex = "recusandae";
-                                            suffix = "temporibus";
-                                        }};
-                                        name = "ab";
+                                    add(new TagRef("explicabo", "deserunt") {{
+                                        key = "est";
+                                        value = "quibusdam";
                                     }}),
-                                    add(new GrpcGatewayRouteMetadata() {{
-                                        invert = false;
-                                        match = new GrpcMetadataMatchMethod() {{
-                                            exact = "quis";
-                                            prefix = "veritatis";
-                                            range = new MatchRange() {{
-                                                end = 648172;
-                                                start = 20218;
-                                            }};
-                                            regex = "ipsam";
-                                            suffix = "repellendus";
-                                        }};
-                                        name = "sapiente";
-                                    }}),
-                                }};
-                                port = 778157;
-                                serviceName = "odit";
-                            }};
-                        }};
-                        http2Route = new HttpGatewayRoute() {{
-                            action = new HttpGatewayRouteAction() {{
-                                rewrite = new HttpGatewayRouteRewrite() {{
-                                    hostname = new GatewayRouteHostnameRewrite() {{
-                                        defaultTargetHostname = "DISABLED";
-                                    }};
-                                    path = new HttpGatewayRoutePathRewrite() {{
-                                        exact = "at";
-                                    }};
-                                    prefix = new HttpGatewayRoutePrefixRewrite() {{
-                                        defaultPrefix = "DISABLED";
-                                        value = "molestiae";
-                                    }};
-                                }};
-                                target = new GatewayRouteTarget() {{
-                                    port = 799159;
-                                    virtualService = new GatewayRouteVirtualService() {{
-                                        virtualServiceName = "quod";
-                                    }};
-                                }};
-                            }};
-                            match = new HttpGatewayRouteMatch() {{
-                                headers = new org.openapis.openapi.models.shared.HttpGatewayRouteHeader[]{{
-                                    add(new HttpGatewayRouteHeader() {{
-                                        invert = false;
-                                        match = new HeaderMatchMethod() {{
-                                            exact = "totam";
-                                            prefix = "porro";
-                                            range = new MatchRange() {{
-                                                end = 678880;
-                                                start = 118274;
-                                            }};
-                                            regex = "nam";
-                                            suffix = "officia";
-                                        }};
-                                        name = "occaecati";
-                                    }}),
-                                    add(new HttpGatewayRouteHeader() {{
-                                        invert = false;
-                                        match = new HeaderMatchMethod() {{
-                                            exact = "fugit";
-                                            prefix = "deleniti";
-                                            range = new MatchRange() {{
-                                                end = 944669;
-                                                start = 758616;
-                                            }};
-                                            regex = "totam";
-                                            suffix = "beatae";
-                                        }};
-                                        name = "commodi";
-                                    }}),
-                                }};
-                                hostname = new GatewayRouteHostnameMatch() {{
-                                    exact = "molestiae";
-                                    suffix = "modi";
-                                }};
-                                method = "HEAD";
-                                path = new HttpPathMatch() {{
-                                    exact = "impedit";
-                                    regex = "cum";
-                                }};
-                                port = 456150;
-                                prefix = "ipsum";
-                                queryParameters = new org.openapis.openapi.models.shared.HttpQueryParameter[]{{
-                                    add(new HttpQueryParameter() {{
-                                        match = new QueryParameterMatch() {{
-                                            exact = "aspernatur";
-                                        }};
-                                        name = "perferendis";
-                                    }}),
-                                    add(new HttpQueryParameter() {{
-                                        match = new QueryParameterMatch() {{
-                                            exact = "ad";
-                                        }};
-                                        name = "natus";
-                                    }}),
-                                    add(new HttpQueryParameter() {{
-                                        match = new QueryParameterMatch() {{
-                                            exact = "sed";
-                                        }};
-                                        name = "iste";
-                                    }}),
-                                }};
-                            }};
-                        }};
-                        httpRoute = new HttpGatewayRoute() {{
-                            action = new HttpGatewayRouteAction() {{
-                                rewrite = new HttpGatewayRouteRewrite() {{
-                                    hostname = new GatewayRouteHostnameRewrite() {{
-                                        defaultTargetHostname = "ENABLED";
-                                    }};
-                                    path = new HttpGatewayRoutePathRewrite() {{
-                                        exact = "natus";
-                                    }};
-                                    prefix = new HttpGatewayRoutePrefixRewrite() {{
-                                        defaultPrefix = "ENABLED";
-                                        value = "hic";
-                                    }};
-                                }};
-                                target = new GatewayRouteTarget() {{
-                                    port = 902599;
-                                    virtualService = new GatewayRouteVirtualService() {{
-                                        virtualServiceName = "fuga";
-                                    }};
-                                }};
-                            }};
-                            match = new HttpGatewayRouteMatch() {{
-                                headers = new org.openapis.openapi.models.shared.HttpGatewayRouteHeader[]{{
-                                    add(new HttpGatewayRouteHeader() {{
-                                        invert = false;
-                                        match = new HeaderMatchMethod() {{
-                                            exact = "corporis";
-                                            prefix = "iste";
-                                            range = new MatchRange() {{
-                                                end = 437032;
-                                                start = 902349;
-                                            }};
-                                            regex = "quidem";
-                                            suffix = "architecto";
-                                        }};
-                                        name = "ipsa";
-                                    }}),
-                                    add(new HttpGatewayRouteHeader() {{
-                                        invert = false;
-                                        match = new HeaderMatchMethod() {{
-                                            exact = "reiciendis";
-                                            prefix = "est";
-                                            range = new MatchRange() {{
-                                                end = 653140;
-                                                start = 670638;
-                                            }};
-                                            regex = "dolores";
-                                            suffix = "dolorem";
-                                        }};
-                                        name = "corporis";
-                                    }}),
-                                }};
-                                hostname = new GatewayRouteHostnameMatch() {{
-                                    exact = "explicabo";
-                                    suffix = "nobis";
-                                }};
-                                method = "POST";
-                                path = new HttpPathMatch() {{
-                                    exact = "omnis";
-                                    regex = "nemo";
-                                }};
-                                port = 325047;
-                                prefix = "excepturi";
-                                queryParameters = new org.openapis.openapi.models.shared.HttpQueryParameter[]{{
-                                    add(new HttpQueryParameter() {{
-                                        match = new QueryParameterMatch() {{
-                                            exact = "iure";
-                                        }};
-                                        name = "culpa";
+                                    add(new TagRef("labore", "modi") {{
+                                        key = "distinctio";
+                                        value = "quibusdam";
                                     }}),
                                 }};
-                            }};
-                        }};
-                        priority = 988374;
-                    }};
-                    tags = new org.openapis.openapi.models.shared.TagRef[]{{
-                        add(new TagRef() {{
-                            key = "architecto";
-                            value = "mollitia";
-                        }}),
-                        add(new TagRef() {{
-                            key = "dolorem";
-                            value = "culpa";
-                        }}),
-                        add(new TagRef() {{
-                            key = "consequuntur";
-                            value = "repellat";
-                        }}),
-                        add(new TagRef() {{
-                            key = "mollitia";
-                            value = "occaecati";
-                        }}),
-                    }};
-                }};
-                xAmzAlgorithm = "numquam";
-                xAmzContentSha256 = "commodi";
-                xAmzCredential = "quam";
-                xAmzDate = "molestiae";
-                xAmzSecurityToken = "velit";
-                xAmzSignature = "error";
-                xAmzSignedHeaders = "quia";
-                meshName = "quis";
-                meshOwner = "vitae";
-                virtualGatewayName = "laborum";
-            }}            
+                            }};, "qui", "aliquid") {{
+                xAmzAlgorithm = "cupiditate";
+                xAmzContentSha256 = "quos";
+                xAmzCredential = "perferendis";
+                xAmzDate = "magni";
+                xAmzSecurityToken = "assumenda";
+                xAmzSignature = "ipsam";
+                xAmzSignedHeaders = "alias";
+                meshOwner = "fugit";
+            }};            
 
             CreateGatewayRouteResponse res = sdk.createGatewayRoute(req);
 
-            if (res.createGatewayRouteOutput.isPresent()) {
+            if (res.createGatewayRouteOutput != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyComponentsSocialDestinySocialCommendationsComponent {
     
     public java.util.Map<String, Integer> commendationNodeScoresByHash;
+
     public DestinyComponentsSocialDestinySocialCommendationsComponent withCommendationNodeScoresByHash(java.util.Map<String, Integer> commendationNodeScoresByHash) {
         this.commendationNodeScoresByHash = commendationNodeScoresByHash;
         return this;
@@ -16,6 +17,7 @@ public class DestinyComponentsSocialDestinySocialCommendationsComponent {
     
     
     public java.util.Map<String, Integer> commendationScoresByHash;
+
     public DestinyComponentsSocialDestinySocialCommendationsComponent withCommendationScoresByHash(java.util.Map<String, Integer> commendationScoresByHash) {
         this.commendationScoresByHash = commendationScoresByHash;
         return this;
@@ -23,6 +25,7 @@ public class DestinyComponentsSocialDestinySocialCommendationsComponent {
     
     
     public Integer[] scoreDetailValues;
+
     public DestinyComponentsSocialDestinySocialCommendationsComponent withScoreDetailValues(Integer[] scoreDetailValues) {
         this.scoreDetailValues = scoreDetailValues;
         return this;
@@ -30,9 +33,11 @@ public class DestinyComponentsSocialDestinySocialCommendationsComponent {
     
     
     public Integer totalScore;
+
     public DestinyComponentsSocialDestinySocialCommendationsComponent withTotalScore(Integer totalScore) {
         this.totalScore = totalScore;
         return this;
     }
     
+    public DestinyComponentsSocialDestinySocialCommendationsComponent(){}
 }

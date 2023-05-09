@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutResourceSetRequest {
     @JsonProperty("ResourceSet")
     public ResourceSet resourceSet;
+
     public PutResourceSetRequest withResourceSet(ResourceSet resourceSet) {
         this.resourceSet = resourceSet;
         return this;
@@ -19,9 +20,13 @@ public class PutResourceSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagList")
     public Tag[] tagList;
+
     public PutResourceSetRequest withTagList(Tag[] tagList) {
         this.tagList = tagList;
         return this;
     }
     
+    public PutResourceSetRequest(@JsonProperty("ResourceSet") ResourceSet resourceSet) {
+        this.resourceSet = resourceSet;
+  }
 }

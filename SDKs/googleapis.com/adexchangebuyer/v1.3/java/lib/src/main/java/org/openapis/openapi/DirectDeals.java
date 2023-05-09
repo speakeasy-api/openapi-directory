@@ -58,11 +58,9 @@ public class DirectDeals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsGetResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsGetResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsGetResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsGetResponse(contentType, httpRes.statusCode()) {{
             directDeal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class DirectDeals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsListResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsListResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsListResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsListResponse(contentType, httpRes.statusCode()) {{
             directDealsList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

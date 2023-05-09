@@ -18,6 +18,7 @@ public class GetNotificationConfigurationListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurations")
     public NotificationConfigurationDetails[] configurations;
+
     public GetNotificationConfigurationListResponse withConfigurations(NotificationConfigurationDetails[] configurations) {
         this.configurations = configurations;
         return this;
@@ -29,6 +30,7 @@ public class GetNotificationConfigurationListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public GetNotificationConfigurationListResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -40,6 +42,7 @@ public class GetNotificationConfigurationListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public GetNotificationConfigurationListResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -51,9 +54,11 @@ public class GetNotificationConfigurationListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public GetNotificationConfigurationListResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public GetNotificationConfigurationListResponse(){}
 }

@@ -20,6 +20,7 @@ public class DescribeExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public String cause;
+
     public DescribeExecutionOutput withCause(String cause) {
         this.cause = cause;
         return this;
@@ -28,6 +29,7 @@ public class DescribeExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public DescribeExecutionOutput withError(String error) {
         this.error = error;
         return this;
@@ -35,6 +37,7 @@ public class DescribeExecutionOutput {
     
     @JsonProperty("executionArn")
     public String executionArn;
+
     public DescribeExecutionOutput withExecutionArn(String executionArn) {
         this.executionArn = executionArn;
         return this;
@@ -43,6 +46,7 @@ public class DescribeExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public DescribeExecutionOutput withInput(String input) {
         this.input = input;
         return this;
@@ -54,6 +58,7 @@ public class DescribeExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputDetails")
     public CloudWatchEventsExecutionDataDetails inputDetails;
+
     public DescribeExecutionOutput withInputDetails(CloudWatchEventsExecutionDataDetails inputDetails) {
         this.inputDetails = inputDetails;
         return this;
@@ -62,6 +67,7 @@ public class DescribeExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapRunArn")
     public String mapRunArn;
+
     public DescribeExecutionOutput withMapRunArn(String mapRunArn) {
         this.mapRunArn = mapRunArn;
         return this;
@@ -70,6 +76,7 @@ public class DescribeExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DescribeExecutionOutput withName(String name) {
         this.name = name;
         return this;
@@ -78,6 +85,7 @@ public class DescribeExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("output")
     public String output;
+
     public DescribeExecutionOutput withOutput(String output) {
         this.output = output;
         return this;
@@ -89,6 +97,7 @@ public class DescribeExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputDetails")
     public CloudWatchEventsExecutionDataDetails outputDetails;
+
     public DescribeExecutionOutput withOutputDetails(CloudWatchEventsExecutionDataDetails outputDetails) {
         this.outputDetails = outputDetails;
         return this;
@@ -98,6 +107,7 @@ public class DescribeExecutionOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDate")
     public OffsetDateTime startDate;
+
     public DescribeExecutionOutput withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -105,6 +115,7 @@ public class DescribeExecutionOutput {
     
     @JsonProperty("stateMachineArn")
     public String stateMachineArn;
+
     public DescribeExecutionOutput withStateMachineArn(String stateMachineArn) {
         this.stateMachineArn = stateMachineArn;
         return this;
@@ -112,6 +123,7 @@ public class DescribeExecutionOutput {
     
     @JsonProperty("status")
     public ExecutionStatusEnum status;
+
     public DescribeExecutionOutput withStatus(ExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -122,6 +134,7 @@ public class DescribeExecutionOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stopDate")
     public OffsetDateTime stopDate;
+
     public DescribeExecutionOutput withStopDate(OffsetDateTime stopDate) {
         this.stopDate = stopDate;
         return this;
@@ -130,9 +143,16 @@ public class DescribeExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("traceHeader")
     public String traceHeader;
+
     public DescribeExecutionOutput withTraceHeader(String traceHeader) {
         this.traceHeader = traceHeader;
         return this;
     }
     
+    public DescribeExecutionOutput(@JsonProperty("executionArn") String executionArn, @JsonProperty("startDate") OffsetDateTime startDate, @JsonProperty("stateMachineArn") String stateMachineArn, @JsonProperty("status") ExecutionStatusEnum status) {
+        this.executionArn = executionArn;
+        this.startDate = startDate;
+        this.stateMachineArn = stateMachineArn;
+        this.status = status;
+  }
 }

@@ -15,6 +15,7 @@ public class DataReplicationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public DataReplicationErrorStringEnum error;
+
     public DataReplicationError withError(DataReplicationErrorStringEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class DataReplicationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawError")
     public String rawError;
+
     public DataReplicationError withRawError(String rawError) {
         this.rawError = rawError;
         return this;
     }
     
+    public DataReplicationError(){}
 }

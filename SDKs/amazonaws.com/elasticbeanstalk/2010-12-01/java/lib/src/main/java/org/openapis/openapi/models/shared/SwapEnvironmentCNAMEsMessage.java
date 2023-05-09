@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SwapEnvironmentCNAMEsMessage {
     
     public String destinationEnvironmentId;
+
     public SwapEnvironmentCNAMEsMessage withDestinationEnvironmentId(String destinationEnvironmentId) {
         this.destinationEnvironmentId = destinationEnvironmentId;
         return this;
@@ -19,6 +20,7 @@ public class SwapEnvironmentCNAMEsMessage {
     
     
     public String destinationEnvironmentName;
+
     public SwapEnvironmentCNAMEsMessage withDestinationEnvironmentName(String destinationEnvironmentName) {
         this.destinationEnvironmentName = destinationEnvironmentName;
         return this;
@@ -26,6 +28,7 @@ public class SwapEnvironmentCNAMEsMessage {
     
     
     public String sourceEnvironmentId;
+
     public SwapEnvironmentCNAMEsMessage withSourceEnvironmentId(String sourceEnvironmentId) {
         this.sourceEnvironmentId = sourceEnvironmentId;
         return this;
@@ -33,9 +36,11 @@ public class SwapEnvironmentCNAMEsMessage {
     
     
     public String sourceEnvironmentName;
+
     public SwapEnvironmentCNAMEsMessage withSourceEnvironmentName(String sourceEnvironmentName) {
         this.sourceEnvironmentName = sourceEnvironmentName;
         return this;
     }
     
+    public SwapEnvironmentCNAMEsMessage(){}
 }

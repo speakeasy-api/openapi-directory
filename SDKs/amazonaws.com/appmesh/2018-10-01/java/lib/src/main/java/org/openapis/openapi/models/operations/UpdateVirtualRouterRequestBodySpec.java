@@ -15,9 +15,11 @@ public class UpdateVirtualRouterRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceNames")
     public String[] serviceNames;
+
     public UpdateVirtualRouterRequestBodySpec withServiceNames(String[] serviceNames) {
         this.serviceNames = serviceNames;
         return this;
     }
     
+    public UpdateVirtualRouterRequestBodySpec(){}
 }

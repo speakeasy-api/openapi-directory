@@ -20,6 +20,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public Node withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -30,6 +31,7 @@ public class Node {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public Node withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -38,6 +40,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoint")
     public Endpoint endpoint;
+
     public Node withEndpoint(Endpoint endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -46,6 +49,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Node withName(String name) {
         this.name = name;
         return this;
@@ -54,9 +58,11 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Node withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Node(){}
 }

@@ -15,9 +15,11 @@ public class PutResourcePolicyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public PutResourcePolicyOutput withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public PutResourcePolicyOutput(){}
 }

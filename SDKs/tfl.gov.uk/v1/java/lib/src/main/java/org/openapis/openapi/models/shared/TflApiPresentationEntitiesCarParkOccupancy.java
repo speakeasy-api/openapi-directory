@@ -15,6 +15,7 @@ public class TflApiPresentationEntitiesCarParkOccupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bays")
     public TflApiPresentationEntitiesBay[] bays;
+
     public TflApiPresentationEntitiesCarParkOccupancy withBays(TflApiPresentationEntitiesBay[] bays) {
         this.bays = bays;
         return this;
@@ -23,6 +24,7 @@ public class TflApiPresentationEntitiesCarParkOccupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carParkDetailsUrl")
     public String carParkDetailsUrl;
+
     public TflApiPresentationEntitiesCarParkOccupancy withCarParkDetailsUrl(String carParkDetailsUrl) {
         this.carParkDetailsUrl = carParkDetailsUrl;
         return this;
@@ -31,6 +33,7 @@ public class TflApiPresentationEntitiesCarParkOccupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TflApiPresentationEntitiesCarParkOccupancy withId(String id) {
         this.id = id;
         return this;
@@ -39,9 +42,11 @@ public class TflApiPresentationEntitiesCarParkOccupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TflApiPresentationEntitiesCarParkOccupancy withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TflApiPresentationEntitiesCarParkOccupancy(){}
 }

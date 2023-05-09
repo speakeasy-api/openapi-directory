@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRecommendationPreferencesRequest {
     @JsonProperty("recommendationPreferenceNames")
     public RecommendationPreferenceNameEnum[] recommendationPreferenceNames;
+
     public DeleteRecommendationPreferencesRequest withRecommendationPreferenceNames(RecommendationPreferenceNameEnum[] recommendationPreferenceNames) {
         this.recommendationPreferenceNames = recommendationPreferenceNames;
         return this;
@@ -18,6 +19,7 @@ public class DeleteRecommendationPreferencesRequest {
     
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public DeleteRecommendationPreferencesRequest withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -26,9 +28,14 @@ public class DeleteRecommendationPreferencesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public Scope scope;
+
     public DeleteRecommendationPreferencesRequest withScope(Scope scope) {
         this.scope = scope;
         return this;
     }
     
+    public DeleteRecommendationPreferencesRequest(@JsonProperty("recommendationPreferenceNames") RecommendationPreferenceNameEnum[] recommendationPreferenceNames, @JsonProperty("resourceType") ResourceTypeEnum resourceType) {
+        this.recommendationPreferenceNames = recommendationPreferenceNames;
+        this.resourceType = resourceType;
+  }
 }

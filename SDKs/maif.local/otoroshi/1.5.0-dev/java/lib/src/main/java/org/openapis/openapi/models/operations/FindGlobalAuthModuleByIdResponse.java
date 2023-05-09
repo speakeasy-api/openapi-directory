@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindGlobalAuthModuleByIdResponse {
     
     public String contentType;
+
     public FindGlobalAuthModuleByIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class FindGlobalAuthModuleByIdResponse {
     
     
     public Integer statusCode;
+
     public FindGlobalAuthModuleByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class FindGlobalAuthModuleByIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindGlobalAuthModuleByIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class FindGlobalAuthModuleByIdResponse {
      */
     
     public Object findGlobalAuthModuleById200ApplicationJSONOneOf;
+
     public FindGlobalAuthModuleByIdResponse withFindGlobalAuthModuleById200ApplicationJSONOneOf(Object findGlobalAuthModuleById200ApplicationJSONOneOf) {
         this.findGlobalAuthModuleById200ApplicationJSONOneOf = findGlobalAuthModuleById200ApplicationJSONOneOf;
         return this;
     }
     
+    public FindGlobalAuthModuleByIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

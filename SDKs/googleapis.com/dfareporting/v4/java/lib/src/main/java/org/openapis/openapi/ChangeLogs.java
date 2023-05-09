@@ -59,11 +59,9 @@ public class ChangeLogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingChangeLogsGetResponse res = new org.openapis.openapi.models.operations.DfareportingChangeLogsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingChangeLogsGetResponse res = new org.openapis.openapi.models.operations.DfareportingChangeLogsGetResponse(contentType, httpRes.statusCode()) {{
             changeLog = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class ChangeLogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingChangeLogsListResponse res = new org.openapis.openapi.models.operations.DfareportingChangeLogsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingChangeLogsListResponse res = new org.openapis.openapi.models.operations.DfareportingChangeLogsListResponse(contentType, httpRes.statusCode()) {{
             changeLogsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

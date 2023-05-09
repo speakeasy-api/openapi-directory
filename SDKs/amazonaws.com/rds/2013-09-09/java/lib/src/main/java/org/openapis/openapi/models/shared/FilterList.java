@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class FilterList {
     
     public String name;
+
     public FilterList withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class FilterList {
     
     
     public String[] values;
+
     public FilterList withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public FilterList(@JsonProperty("Name") String name, @JsonProperty("Values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

@@ -15,6 +15,7 @@ public class BGPPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressFamily")
     public AddressFamilyEnum addressFamily;
+
     public BGPPeer withAddressFamily(AddressFamilyEnum addressFamily) {
         this.addressFamily = addressFamily;
         return this;
@@ -23,6 +24,7 @@ public class BGPPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amazonAddress")
     public String amazonAddress;
+
     public BGPPeer withAmazonAddress(String amazonAddress) {
         this.amazonAddress = amazonAddress;
         return this;
@@ -31,6 +33,7 @@ public class BGPPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asn")
     public Long asn;
+
     public BGPPeer withAsn(Long asn) {
         this.asn = asn;
         return this;
@@ -39,6 +42,7 @@ public class BGPPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authKey")
     public String authKey;
+
     public BGPPeer withAuthKey(String authKey) {
         this.authKey = authKey;
         return this;
@@ -47,6 +51,7 @@ public class BGPPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsDeviceV2")
     public String awsDeviceV2;
+
     public BGPPeer withAwsDeviceV2(String awsDeviceV2) {
         this.awsDeviceV2 = awsDeviceV2;
         return this;
@@ -55,6 +60,7 @@ public class BGPPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsLogicalDeviceId")
     public String awsLogicalDeviceId;
+
     public BGPPeer withAwsLogicalDeviceId(String awsLogicalDeviceId) {
         this.awsLogicalDeviceId = awsLogicalDeviceId;
         return this;
@@ -63,6 +69,7 @@ public class BGPPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bgpPeerId")
     public String bgpPeerId;
+
     public BGPPeer withBgpPeerId(String bgpPeerId) {
         this.bgpPeerId = bgpPeerId;
         return this;
@@ -71,6 +78,7 @@ public class BGPPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bgpPeerState")
     public BGPPeerStateEnum bgpPeerState;
+
     public BGPPeer withBgpPeerState(BGPPeerStateEnum bgpPeerState) {
         this.bgpPeerState = bgpPeerState;
         return this;
@@ -79,6 +87,7 @@ public class BGPPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bgpStatus")
     public BGPStatusEnum bgpStatus;
+
     public BGPPeer withBgpStatus(BGPStatusEnum bgpStatus) {
         this.bgpStatus = bgpStatus;
         return this;
@@ -87,9 +96,11 @@ public class BGPPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerAddress")
     public String customerAddress;
+
     public BGPPeer withCustomerAddress(String customerAddress) {
         this.customerAddress = customerAddress;
         return this;
     }
     
+    public BGPPeer(){}
 }

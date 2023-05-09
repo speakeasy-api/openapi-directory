@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopsStopsByGeolocationRequest {
@@ -12,6 +13,7 @@ public class StopsStopsByGeolocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public StopsStopsByGeolocationRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -22,6 +24,7 @@ public class StopsStopsByGeolocationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=latitude")
     public Float latitude;
+
     public StopsStopsByGeolocationRequest withLatitude(Float latitude) {
         this.latitude = latitude;
         return this;
@@ -32,6 +35,7 @@ public class StopsStopsByGeolocationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=longitude")
     public Float longitude;
+
     public StopsStopsByGeolocationRequest withLongitude(Float longitude) {
         this.longitude = longitude;
         return this;
@@ -42,6 +46,7 @@ public class StopsStopsByGeolocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_distance")
     public Double maxDistance;
+
     public StopsStopsByGeolocationRequest withMaxDistance(Double maxDistance) {
         this.maxDistance = maxDistance;
         return this;
@@ -52,6 +57,7 @@ public class StopsStopsByGeolocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_results")
     public Integer maxResults;
+
     public StopsStopsByGeolocationRequest withMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -62,6 +68,7 @@ public class StopsStopsByGeolocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=route_types")
     public StopsStopsByGeolocationRouteTypesEnum[] routeTypes;
+
     public StopsStopsByGeolocationRequest withRouteTypes(StopsStopsByGeolocationRouteTypesEnum[] routeTypes) {
         this.routeTypes = routeTypes;
         return this;
@@ -72,6 +79,7 @@ public class StopsStopsByGeolocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public StopsStopsByGeolocationRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -82,6 +90,7 @@ public class StopsStopsByGeolocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_disruptions")
     public Boolean stopDisruptions;
+
     public StopsStopsByGeolocationRequest withStopDisruptions(Boolean stopDisruptions) {
         this.stopDisruptions = stopDisruptions;
         return this;
@@ -92,9 +101,14 @@ public class StopsStopsByGeolocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public StopsStopsByGeolocationRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public StopsStopsByGeolocationRequest(@JsonProperty("latitude") Float latitude, @JsonProperty("longitude") Float longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+  }
 }

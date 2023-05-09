@@ -138,4 +138,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/ForgetWiFiNetworkRequest.ja
 lib/src/main/java/org/openapis/openapi/models/shared/Example113.java
 lib/src/main/java/org/openapis/openapi/models/shared/Example114.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/assistant/README.md
+docs/bluetooth/README.md
+docs/deviceinfo/README.md
+docs/devicesettings/README.md
+docs/staticfiles/README.md
+docs/wifi/README.md
 USAGE.md

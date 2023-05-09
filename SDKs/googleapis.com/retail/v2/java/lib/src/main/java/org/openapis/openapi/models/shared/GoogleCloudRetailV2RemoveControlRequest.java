@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2RemoveControlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlId")
     public String controlId;
+
     public GoogleCloudRetailV2RemoveControlRequest withControlId(String controlId) {
         this.controlId = controlId;
         return this;
     }
     
+    public GoogleCloudRetailV2RemoveControlRequest(){}
 }

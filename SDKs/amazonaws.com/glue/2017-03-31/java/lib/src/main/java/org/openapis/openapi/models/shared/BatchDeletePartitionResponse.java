@@ -15,9 +15,11 @@ public class BatchDeletePartitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public PartitionError[] errors;
+
     public BatchDeletePartitionResponse withErrors(PartitionError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchDeletePartitionResponse(){}
 }

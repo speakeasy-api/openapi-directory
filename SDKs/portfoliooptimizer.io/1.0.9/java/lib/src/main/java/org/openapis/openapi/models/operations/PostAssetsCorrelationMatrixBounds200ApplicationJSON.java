@@ -15,6 +15,7 @@ public class PostAssetsCorrelationMatrixBounds200ApplicationJSON {
      */
     @JsonProperty("assetsCorrelationMatrixLowerBounds")
     public Double[][] assetsCorrelationMatrixLowerBounds;
+
     public PostAssetsCorrelationMatrixBounds200ApplicationJSON withAssetsCorrelationMatrixLowerBounds(Double[][] assetsCorrelationMatrixLowerBounds) {
         this.assetsCorrelationMatrixLowerBounds = assetsCorrelationMatrixLowerBounds;
         return this;
@@ -25,9 +26,14 @@ public class PostAssetsCorrelationMatrixBounds200ApplicationJSON {
      */
     @JsonProperty("assetsCorrelationMatrixUpperBounds")
     public Double[][] assetsCorrelationMatrixUpperBounds;
+
     public PostAssetsCorrelationMatrixBounds200ApplicationJSON withAssetsCorrelationMatrixUpperBounds(Double[][] assetsCorrelationMatrixUpperBounds) {
         this.assetsCorrelationMatrixUpperBounds = assetsCorrelationMatrixUpperBounds;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixBounds200ApplicationJSON(@JsonProperty("assetsCorrelationMatrixLowerBounds") Double[][] assetsCorrelationMatrixLowerBounds, @JsonProperty("assetsCorrelationMatrixUpperBounds") Double[][] assetsCorrelationMatrixUpperBounds) {
+        this.assetsCorrelationMatrixLowerBounds = assetsCorrelationMatrixLowerBounds;
+        this.assetsCorrelationMatrixUpperBounds = assetsCorrelationMatrixUpperBounds;
+  }
 }

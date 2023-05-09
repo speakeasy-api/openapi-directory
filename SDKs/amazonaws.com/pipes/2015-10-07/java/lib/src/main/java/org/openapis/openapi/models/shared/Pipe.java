@@ -20,6 +20,7 @@ public class Pipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Pipe withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class Pipe {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Pipe withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class Pipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentState")
     public PipeStateEnum currentState;
+
     public Pipe withCurrentState(PipeStateEnum currentState) {
         this.currentState = currentState;
         return this;
@@ -46,6 +49,7 @@ public class Pipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredState")
     public RequestedPipeStateEnum desiredState;
+
     public Pipe withDesiredState(RequestedPipeStateEnum desiredState) {
         this.desiredState = desiredState;
         return this;
@@ -54,6 +58,7 @@ public class Pipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enrichment")
     public String enrichment;
+
     public Pipe withEnrichment(String enrichment) {
         this.enrichment = enrichment;
         return this;
@@ -64,6 +69,7 @@ public class Pipe {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public Pipe withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -72,6 +78,7 @@ public class Pipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Pipe withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +87,7 @@ public class Pipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public Pipe withSource(String source) {
         this.source = source;
         return this;
@@ -88,6 +96,7 @@ public class Pipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReason")
     public String stateReason;
+
     public Pipe withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -96,9 +105,11 @@ public class Pipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public String target;
+
     public Pipe withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public Pipe(){}
 }

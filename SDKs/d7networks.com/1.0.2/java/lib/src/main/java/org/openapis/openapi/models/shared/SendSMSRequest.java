@@ -15,6 +15,7 @@ public class SendSMSRequest {
      */
     @JsonProperty("content")
     public String content;
+
     public SendSMSRequest withContent(String content) {
         this.content = content;
         return this;
@@ -25,6 +26,7 @@ public class SendSMSRequest {
      */
     @JsonProperty("from")
     public String from;
+
     public SendSMSRequest withFrom(String from) {
         this.from = from;
         return this;
@@ -35,9 +37,15 @@ public class SendSMSRequest {
      */
     @JsonProperty("to")
     public Long to;
+
     public SendSMSRequest withTo(Long to) {
         this.to = to;
         return this;
     }
     
+    public SendSMSRequest(@JsonProperty("content") String content, @JsonProperty("from") String from, @JsonProperty("to") Long to) {
+        this.content = content;
+        this.from = from;
+        this.to = to;
+  }
 }

@@ -58,11 +58,9 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerProductsGetResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerProductsGetResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerProductsGetResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerProductsGetResponse(contentType, httpRes.statusCode()) {{
             product = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerProductsSearchResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerProductsSearchResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerProductsSearchResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerProductsSearchResponse(contentType, httpRes.statusCode()) {{
             getOffersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class GetAs2PartnersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetAs2PartnersRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,9 +23,11 @@ public class GetAs2PartnersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetAs2PartnersRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetAs2PartnersRequest(){}
 }

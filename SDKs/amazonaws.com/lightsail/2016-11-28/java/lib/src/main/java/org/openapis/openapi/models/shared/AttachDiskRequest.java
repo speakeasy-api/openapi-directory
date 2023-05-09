@@ -12,6 +12,7 @@ public class AttachDiskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoMounting")
     public Boolean autoMounting;
+
     public AttachDiskRequest withAutoMounting(Boolean autoMounting) {
         this.autoMounting = autoMounting;
         return this;
@@ -19,6 +20,7 @@ public class AttachDiskRequest {
     
     @JsonProperty("diskName")
     public String diskName;
+
     public AttachDiskRequest withDiskName(String diskName) {
         this.diskName = diskName;
         return this;
@@ -26,6 +28,7 @@ public class AttachDiskRequest {
     
     @JsonProperty("diskPath")
     public String diskPath;
+
     public AttachDiskRequest withDiskPath(String diskPath) {
         this.diskPath = diskPath;
         return this;
@@ -33,9 +36,15 @@ public class AttachDiskRequest {
     
     @JsonProperty("instanceName")
     public String instanceName;
+
     public AttachDiskRequest withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
     
+    public AttachDiskRequest(@JsonProperty("diskName") String diskName, @JsonProperty("diskPath") String diskPath, @JsonProperty("instanceName") String instanceName) {
+        this.diskName = diskName;
+        this.diskPath = diskPath;
+        this.instanceName = instanceName;
+  }
 }

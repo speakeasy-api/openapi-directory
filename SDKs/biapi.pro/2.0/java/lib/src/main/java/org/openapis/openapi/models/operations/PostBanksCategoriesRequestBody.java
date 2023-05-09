@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostBanksCategoriesRequestBody {
@@ -12,9 +13,13 @@ public class PostBanksCategoriesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PostBanksCategoriesRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PostBanksCategoriesRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

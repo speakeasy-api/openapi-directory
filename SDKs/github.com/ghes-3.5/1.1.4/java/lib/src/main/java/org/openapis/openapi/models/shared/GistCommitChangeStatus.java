@@ -12,6 +12,7 @@ public class GistCommitChangeStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additions")
     public Long additions;
+
     public GistCommitChangeStatus withAdditions(Long additions) {
         this.additions = additions;
         return this;
@@ -20,6 +21,7 @@ public class GistCommitChangeStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletions")
     public Long deletions;
+
     public GistCommitChangeStatus withDeletions(Long deletions) {
         this.deletions = deletions;
         return this;
@@ -28,9 +30,11 @@ public class GistCommitChangeStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public GistCommitChangeStatus withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public GistCommitChangeStatus(){}
 }

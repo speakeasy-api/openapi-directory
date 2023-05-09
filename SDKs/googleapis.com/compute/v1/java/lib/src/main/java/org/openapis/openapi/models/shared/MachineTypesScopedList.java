@@ -15,6 +15,7 @@ public class MachineTypesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineTypes")
     public MachineType[] machineTypes;
+
     public MachineTypesScopedList withMachineTypes(MachineType[] machineTypes) {
         this.machineTypes = machineTypes;
         return this;
@@ -26,9 +27,11 @@ public class MachineTypesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public MachineTypesScopedListWarning warning;
+
     public MachineTypesScopedList withWarning(MachineTypesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public MachineTypesScopedList(){}
 }

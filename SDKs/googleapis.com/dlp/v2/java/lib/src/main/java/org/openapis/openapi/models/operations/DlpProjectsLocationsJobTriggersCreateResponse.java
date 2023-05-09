@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DlpProjectsLocationsJobTriggersCreateResponse {
     
     public String contentType;
+
     public DlpProjectsLocationsJobTriggersCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DlpProjectsLocationsJobTriggersCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GooglePrivacyDlpV2JobTrigger googlePrivacyDlpV2JobTrigger;
+
     public DlpProjectsLocationsJobTriggersCreateResponse withGooglePrivacyDlpV2JobTrigger(org.openapis.openapi.models.shared.GooglePrivacyDlpV2JobTrigger googlePrivacyDlpV2JobTrigger) {
         this.googlePrivacyDlpV2JobTrigger = googlePrivacyDlpV2JobTrigger;
         return this;
@@ -26,6 +29,7 @@ public class DlpProjectsLocationsJobTriggersCreateResponse {
     
     
     public Integer statusCode;
+
     public DlpProjectsLocationsJobTriggersCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DlpProjectsLocationsJobTriggersCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DlpProjectsLocationsJobTriggersCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DlpProjectsLocationsJobTriggersCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

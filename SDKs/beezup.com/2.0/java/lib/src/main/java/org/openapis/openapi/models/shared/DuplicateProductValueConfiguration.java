@@ -15,6 +15,7 @@ public class DuplicateProductValueConfiguration {
      */
     @JsonProperty("compareOptions")
     public CompareOptionsEnum compareOptions;
+
     public DuplicateProductValueConfiguration withCompareOptions(CompareOptionsEnum compareOptions) {
         this.compareOptions = compareOptions;
         return this;
@@ -25,9 +26,14 @@ public class DuplicateProductValueConfiguration {
      */
     @JsonProperty("strategy")
     public DuplicateProductValueStrategyEnum strategy;
+
     public DuplicateProductValueConfiguration withStrategy(DuplicateProductValueStrategyEnum strategy) {
         this.strategy = strategy;
         return this;
     }
     
+    public DuplicateProductValueConfiguration(@JsonProperty("compareOptions") CompareOptionsEnum compareOptions, @JsonProperty("strategy") DuplicateProductValueStrategyEnum strategy) {
+        this.compareOptions = compareOptions;
+        this.strategy = strategy;
+  }
 }

@@ -15,6 +15,7 @@ public class ProjectStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ProjectStatus withReason(String reason) {
         this.reason = reason;
         return this;
@@ -22,9 +23,13 @@ public class ProjectStatus {
     
     @JsonProperty("state")
     public String state;
+
     public ProjectStatus withState(String state) {
         this.state = state;
         return this;
     }
     
+    public ProjectStatus(@JsonProperty("state") String state) {
+        this.state = state;
+  }
 }

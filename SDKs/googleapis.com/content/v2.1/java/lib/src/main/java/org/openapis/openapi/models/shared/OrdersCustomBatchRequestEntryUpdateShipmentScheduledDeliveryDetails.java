@@ -18,6 +18,7 @@ public class OrdersCustomBatchRequestEntryUpdateShipmentScheduledDeliveryDetails
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierPhoneNumber")
     public String carrierPhoneNumber;
+
     public OrdersCustomBatchRequestEntryUpdateShipmentScheduledDeliveryDetails withCarrierPhoneNumber(String carrierPhoneNumber) {
         this.carrierPhoneNumber = carrierPhoneNumber;
         return this;
@@ -29,9 +30,11 @@ public class OrdersCustomBatchRequestEntryUpdateShipmentScheduledDeliveryDetails
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledDate")
     public String scheduledDate;
+
     public OrdersCustomBatchRequestEntryUpdateShipmentScheduledDeliveryDetails withScheduledDate(String scheduledDate) {
         this.scheduledDate = scheduledDate;
         return this;
     }
     
+    public OrdersCustomBatchRequestEntryUpdateShipmentScheduledDeliveryDetails(){}
 }

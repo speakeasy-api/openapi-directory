@@ -18,6 +18,7 @@ public class CategoryDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("celebrities")
     public CelebritiesModel[] celebrities;
+
     public CategoryDetail withCelebrities(CelebritiesModel[] celebrities) {
         this.celebrities = celebrities;
         return this;
@@ -29,9 +30,11 @@ public class CategoryDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("landmarks")
     public LandmarksModel[] landmarks;
+
     public CategoryDetail withLandmarks(LandmarksModel[] landmarks) {
         this.landmarks = landmarks;
         return this;
     }
     
+    public CategoryDetail(){}
 }

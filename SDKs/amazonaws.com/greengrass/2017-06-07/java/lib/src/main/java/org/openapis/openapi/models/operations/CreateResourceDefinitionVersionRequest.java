@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateResourceDefinitionVersionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateResourceDefinitionVersionRequestBody requestBody;
+
     public CreateResourceDefinitionVersionRequest withRequestBody(CreateResourceDefinitionVersionRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class CreateResourceDefinitionVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ResourceDefinitionId")
     public String resourceDefinitionId;
+
     public CreateResourceDefinitionVersionRequest withResourceDefinitionId(String resourceDefinitionId) {
         this.resourceDefinitionId = resourceDefinitionId;
         return this;
@@ -26,6 +29,7 @@ public class CreateResourceDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public CreateResourceDefinitionVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class CreateResourceDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public CreateResourceDefinitionVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class CreateResourceDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public CreateResourceDefinitionVersionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class CreateResourceDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public CreateResourceDefinitionVersionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class CreateResourceDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public CreateResourceDefinitionVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class CreateResourceDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public CreateResourceDefinitionVersionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,6 +77,7 @@ public class CreateResourceDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public CreateResourceDefinitionVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -78,9 +88,14 @@ public class CreateResourceDefinitionVersionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-Client-Token")
     public String xAmznClientToken;
+
     public CreateResourceDefinitionVersionRequest withXAmznClientToken(String xAmznClientToken) {
         this.xAmznClientToken = xAmznClientToken;
         return this;
     }
     
+    public CreateResourceDefinitionVersionRequest(@JsonProperty("RequestBody") CreateResourceDefinitionVersionRequestBody requestBody, @JsonProperty("ResourceDefinitionId") String resourceDefinitionId) {
+        this.requestBody = requestBody;
+        this.resourceDefinitionId = resourceDefinitionId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostApiV1AnnouncementsIdDismissResponse {
     
     public String contentType;
+
     public PostApiV1AnnouncementsIdDismissResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostApiV1AnnouncementsIdDismissResponse {
     
     
     public Integer statusCode;
+
     public PostApiV1AnnouncementsIdDismissResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostApiV1AnnouncementsIdDismissResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostApiV1AnnouncementsIdDismissResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostApiV1AnnouncementsIdDismissResponse {
      */
     
     public java.util.Map<String, Object> postApiV1AnnouncementsIdDismiss200ApplicationJSONObject;
+
     public PostApiV1AnnouncementsIdDismissResponse withPostApiV1AnnouncementsIdDismiss200ApplicationJSONObject(java.util.Map<String, Object> postApiV1AnnouncementsIdDismiss200ApplicationJSONObject) {
         this.postApiV1AnnouncementsIdDismiss200ApplicationJSONObject = postApiV1AnnouncementsIdDismiss200ApplicationJSONObject;
         return this;
     }
     
+    public PostApiV1AnnouncementsIdDismissResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

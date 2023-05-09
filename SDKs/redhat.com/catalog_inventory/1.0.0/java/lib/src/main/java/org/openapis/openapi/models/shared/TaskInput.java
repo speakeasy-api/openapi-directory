@@ -22,6 +22,7 @@ public class TaskInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completed_at")
     public OffsetDateTime completedAt;
+
     public TaskInput withCompletedAt(OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -30,6 +31,7 @@ public class TaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TaskInput withMessage(String message) {
         this.message = message;
         return this;
@@ -38,6 +40,7 @@ public class TaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TaskInput withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +49,7 @@ public class TaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("output")
     public java.util.Map<String, Object> output;
+
     public TaskInput withOutput(java.util.Map<String, Object> output) {
         this.output = output;
         return this;
@@ -54,6 +58,7 @@ public class TaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public TaskStateEnum state;
+
     public TaskInput withState(TaskStateEnum state) {
         this.state = state;
         return this;
@@ -62,6 +67,7 @@ public class TaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TaskStatusEnum status;
+
     public TaskInput withStatus(TaskStatusEnum status) {
         this.status = status;
         return this;
@@ -70,6 +76,7 @@ public class TaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_source_ref")
     public String targetSourceRef;
+
     public TaskInput withTargetSourceRef(String targetSourceRef) {
         this.targetSourceRef = targetSourceRef;
         return this;
@@ -78,6 +85,7 @@ public class TaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_type")
     public String targetType;
+
     public TaskInput withTargetType(String targetType) {
         this.targetType = targetType;
         return this;
@@ -86,9 +94,11 @@ public class TaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TaskInput withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TaskInput(){}
 }

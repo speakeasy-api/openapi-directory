@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListForUserRequest {
@@ -12,6 +13,7 @@ public class ReposListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public ReposListForUserDirectionEnum direction;
+
     public ReposListForUserRequest withDirection(ReposListForUserDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -22,6 +24,7 @@ public class ReposListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ReposListForUserRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class ReposListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ReposListForUserRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,6 +46,7 @@ public class ReposListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public ReposListForUserSortEnum sort;
+
     public ReposListForUserRequest withSort(ReposListForUserSortEnum sort) {
         this.sort = sort;
         return this;
@@ -52,6 +57,7 @@ public class ReposListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public ReposListForUserTypeEnum type;
+
     public ReposListForUserRequest withType(ReposListForUserTypeEnum type) {
         this.type = type;
         return this;
@@ -59,9 +65,13 @@ public class ReposListForUserRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public ReposListForUserRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ReposListForUserRequest(@JsonProperty("username") String username) {
+        this.username = username;
+  }
 }

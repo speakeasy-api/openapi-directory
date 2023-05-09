@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAccessControlConfigurationResponse {
@@ -12,6 +13,7 @@ public class DescribeAccessControlConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeAccessControlConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAccessControlConfigurationResponse {
     
     
     public String contentType;
+
     public DescribeAccessControlConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAccessControlConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAccessControlConfigurationResponse describeAccessControlConfigurationResponse;
+
     public DescribeAccessControlConfigurationResponse withDescribeAccessControlConfigurationResponse(org.openapis.openapi.models.shared.DescribeAccessControlConfigurationResponse describeAccessControlConfigurationResponse) {
         this.describeAccessControlConfigurationResponse = describeAccessControlConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAccessControlConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public DescribeAccessControlConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeAccessControlConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeAccessControlConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeAccessControlConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAccessControlConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAccessControlConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAccessControlConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeAccessControlConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public DescribeAccessControlConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeAccessControlConfigurationResponse {
      */
     
     public Object validationException;
+
     public DescribeAccessControlConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeAccessControlConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -61,11 +61,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityDevicesCreateResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityDevicesCreateResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersApproveResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersApproveResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersApproveResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersApproveResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersBlockResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersBlockResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersBlockResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersBlockResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,11 +199,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersCancelWipeResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersCancelWipeResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersCancelWipeResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersCancelWipeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,11 +243,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersClientStatesListResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersClientStatesListResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersClientStatesListResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersClientStatesListResponse(contentType, httpRes.statusCode()) {{
             googleAppsCloudidentityDevicesV1ListClientStatesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -297,11 +287,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersListResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersListResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersListResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersListResponse(contentType, httpRes.statusCode()) {{
             googleAppsCloudidentityDevicesV1ListDeviceUsersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +331,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersLookupResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersLookupResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersLookupResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersLookupResponse(contentType, httpRes.statusCode()) {{
             googleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -391,11 +377,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersWipeResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersWipeResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersWipeResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersWipeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -437,11 +421,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityDevicesListResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesListResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityDevicesListResponse res = new org.openapis.openapi.models.operations.CloudidentityDevicesListResponse(contentType, httpRes.statusCode()) {{
             googleAppsCloudidentityDevicesV1ListDevicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

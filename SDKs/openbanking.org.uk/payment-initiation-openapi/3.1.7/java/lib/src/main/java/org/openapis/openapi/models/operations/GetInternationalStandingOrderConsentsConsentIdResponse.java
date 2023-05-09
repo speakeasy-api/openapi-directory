@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInternationalStandingOrderConsentsConsentIdResponse {
     
     public byte[] body;
+
     public GetInternationalStandingOrderConsentsConsentIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetInternationalStandingOrderConsentsConsentIdResponse {
     
     
     public String contentType;
+
     public GetInternationalStandingOrderConsentsConsentIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetInternationalStandingOrderConsentsConsentIdResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetInternationalStandingOrderConsentsConsentIdResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetInternationalStandingOrderConsentsConsentIdResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public GetInternationalStandingOrderConsentsConsentIdResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -43,6 +48,7 @@ public class GetInternationalStandingOrderConsentsConsentIdResponse {
      */
     
     public org.openapis.openapi.models.shared.OBWriteInternationalStandingOrderConsentResponse7 obWriteInternationalStandingOrderConsentResponse7;
+
     public GetInternationalStandingOrderConsentsConsentIdResponse withOBWriteInternationalStandingOrderConsentResponse7(org.openapis.openapi.models.shared.OBWriteInternationalStandingOrderConsentResponse7 obWriteInternationalStandingOrderConsentResponse7) {
         this.obWriteInternationalStandingOrderConsentResponse7 = obWriteInternationalStandingOrderConsentResponse7;
         return this;
@@ -50,6 +56,7 @@ public class GetInternationalStandingOrderConsentsConsentIdResponse {
     
     
     public Integer statusCode;
+
     public GetInternationalStandingOrderConsentsConsentIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class GetInternationalStandingOrderConsentsConsentIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInternationalStandingOrderConsentsConsentIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetInternationalStandingOrderConsentsConsentIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

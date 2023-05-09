@@ -18,6 +18,7 @@ public class NativeContentPositionAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentPosition")
     public NativeContentPositionAssignedTargetingOptionDetailsContentPositionEnum contentPosition;
+
     public NativeContentPositionAssignedTargetingOptionDetails withContentPosition(NativeContentPositionAssignedTargetingOptionDetailsContentPositionEnum contentPosition) {
         this.contentPosition = contentPosition;
         return this;
@@ -29,9 +30,11 @@ public class NativeContentPositionAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public NativeContentPositionAssignedTargetingOptionDetails withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public NativeContentPositionAssignedTargetingOptionDetails(){}
 }

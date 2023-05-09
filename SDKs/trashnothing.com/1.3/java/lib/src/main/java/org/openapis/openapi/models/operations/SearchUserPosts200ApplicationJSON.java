@@ -18,6 +18,7 @@ public class SearchUserPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_index")
     public Long endIndex;
+
     public SearchUserPosts200ApplicationJSON withEndIndex(Long endIndex) {
         this.endIndex = endIndex;
         return this;
@@ -30,6 +31,7 @@ public class SearchUserPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_ids")
     public String[] groupIds;
+
     public SearchUserPosts200ApplicationJSON withGroupIds(String[] groupIds) {
         this.groupIds = groupIds;
         return this;
@@ -41,6 +43,7 @@ public class SearchUserPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_pages")
     public Long numPages;
+
     public SearchUserPosts200ApplicationJSON withNumPages(Long numPages) {
         this.numPages = numPages;
         return this;
@@ -52,6 +55,7 @@ public class SearchUserPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_posts")
     public Long numPosts;
+
     public SearchUserPosts200ApplicationJSON withNumPosts(Long numPosts) {
         this.numPosts = numPosts;
         return this;
@@ -63,6 +67,7 @@ public class SearchUserPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public SearchUserPosts200ApplicationJSON withPage(Long page) {
         this.page = page;
         return this;
@@ -74,6 +79,7 @@ public class SearchUserPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public SearchUserPosts200ApplicationJSON withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -82,6 +88,7 @@ public class SearchUserPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posts")
     public org.openapis.openapi.models.shared.PostSearchResult[] posts;
+
     public SearchUserPosts200ApplicationJSON withPosts(org.openapis.openapi.models.shared.PostSearchResult[] posts) {
         this.posts = posts;
         return this;
@@ -93,9 +100,11 @@ public class SearchUserPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_index")
     public Long startIndex;
+
     public SearchUserPosts200ApplicationJSON withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
     }
     
+    public SearchUserPosts200ApplicationJSON(){}
 }

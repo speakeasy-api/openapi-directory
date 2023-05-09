@@ -15,9 +15,11 @@ public class DeleteBranchOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedBranch")
     public BranchInfo deletedBranch;
+
     public DeleteBranchOutput withDeletedBranch(BranchInfo deletedBranch) {
         this.deletedBranch = deletedBranch;
         return this;
     }
     
+    public DeleteBranchOutput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetfrequencyoptionsbygroupIdResponse {
     
     public String contentType;
+
     public GetfrequencyoptionsbygroupIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetfrequencyoptionsbygroupIdResponse {
     
     
     public Integer statusCode;
+
     public GetfrequencyoptionsbygroupIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class GetfrequencyoptionsbygroupIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetfrequencyoptionsbygroupIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetfrequencyoptionsbygroupIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

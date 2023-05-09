@@ -12,9 +12,11 @@ public class GetListOfAspspsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
     public String currency;
+
     public GetListOfAspspsRequest withCurrency(String currency) {
         this.currency = currency;
         return this;
     }
     
+    public GetListOfAspspsRequest(){}
 }

@@ -17,6 +17,7 @@ public class PatientAuthConfirmRequest {
      */
     @JsonProperty("credential")
     public PatientAuthConfirmRequestCredential credential;
+
     public PatientAuthConfirmRequest withCredential(PatientAuthConfirmRequestCredential credential) {
         this.credential = credential;
         return this;
@@ -27,6 +28,7 @@ public class PatientAuthConfirmRequest {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public PatientAuthConfirmRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -39,6 +41,7 @@ public class PatientAuthConfirmRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public PatientAuthConfirmRequest withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -46,9 +49,16 @@ public class PatientAuthConfirmRequest {
     
     @JsonProperty("transactionId")
     public String transactionId;
+
     public PatientAuthConfirmRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public PatientAuthConfirmRequest(@JsonProperty("credential") PatientAuthConfirmRequestCredential credential, @JsonProperty("requestId") String requestId, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("transactionId") String transactionId) {
+        this.credential = credential;
+        this.requestId = requestId;
+        this.timestamp = timestamp;
+        this.transactionId = transactionId;
+  }
 }

@@ -17,6 +17,7 @@ public class ReposCreatePagesSiteRequestBody2 {
      */
     @JsonProperty("build_type")
     public ReposCreatePagesSiteRequestBody2BuildTypeEnum buildType;
+
     public ReposCreatePagesSiteRequestBody2 withBuildType(ReposCreatePagesSiteRequestBody2BuildTypeEnum buildType) {
         this.buildType = buildType;
         return this;
@@ -28,9 +29,13 @@ public class ReposCreatePagesSiteRequestBody2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public ReposCreatePagesSiteRequestBody2Source source;
+
     public ReposCreatePagesSiteRequestBody2 withSource(ReposCreatePagesSiteRequestBody2Source source) {
         this.source = source;
         return this;
     }
     
+    public ReposCreatePagesSiteRequestBody2(@JsonProperty("build_type") ReposCreatePagesSiteRequestBody2BuildTypeEnum buildType) {
+        this.buildType = buildType;
+  }
 }

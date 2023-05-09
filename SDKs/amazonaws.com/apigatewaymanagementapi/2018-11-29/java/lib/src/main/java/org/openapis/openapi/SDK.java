@@ -147,6 +147,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -179,13 +184,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteConnectionResponse res = new org.openapis.openapi.models.operations.DeleteConnectionResponse() {{
+        org.openapis.openapi.models.operations.DeleteConnectionResponse res = new org.openapis.openapi.models.operations.DeleteConnectionResponse(contentType, httpRes.statusCode()) {{
             goneException = null;
             limitExceededException = null;
             forbiddenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -244,14 +247,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConnectionResponse res = new org.openapis.openapi.models.operations.GetConnectionResponse() {{
+        org.openapis.openapi.models.operations.GetConnectionResponse res = new org.openapis.openapi.models.operations.GetConnectionResponse(contentType, httpRes.statusCode()) {{
             getConnectionResponse = null;
             goneException = null;
             limitExceededException = null;
             forbiddenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -320,14 +321,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostToConnectionResponse res = new org.openapis.openapi.models.operations.PostToConnectionResponse() {{
+        org.openapis.openapi.models.operations.PostToConnectionResponse res = new org.openapis.openapi.models.operations.PostToConnectionResponse(contentType, httpRes.statusCode()) {{
             goneException = null;
             limitExceededException = null;
             payloadTooLargeException = null;
             forbiddenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

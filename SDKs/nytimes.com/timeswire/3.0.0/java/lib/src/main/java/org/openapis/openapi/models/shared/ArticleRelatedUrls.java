@@ -12,6 +12,7 @@ public class ArticleRelatedUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggested_link_text")
     public String suggestedLinkText;
+
     public ArticleRelatedUrls withSuggestedLinkText(String suggestedLinkText) {
         this.suggestedLinkText = suggestedLinkText;
         return this;
@@ -20,9 +21,11 @@ public class ArticleRelatedUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ArticleRelatedUrls withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ArticleRelatedUrls(){}
 }

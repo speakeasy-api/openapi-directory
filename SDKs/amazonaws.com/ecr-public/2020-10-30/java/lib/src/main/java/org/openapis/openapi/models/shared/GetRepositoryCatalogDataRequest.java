@@ -12,6 +12,7 @@ public class GetRepositoryCatalogDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public GetRepositoryCatalogDataRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -19,9 +20,13 @@ public class GetRepositoryCatalogDataRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public GetRepositoryCatalogDataRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public GetRepositoryCatalogDataRequest(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

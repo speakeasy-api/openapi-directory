@@ -15,6 +15,7 @@ public class ProtectedBranchPullRequestReviewDismissalRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teams")
     public Team[] teams;
+
     public ProtectedBranchPullRequestReviewDismissalRestrictions withTeams(Team[] teams) {
         this.teams = teams;
         return this;
@@ -23,6 +24,7 @@ public class ProtectedBranchPullRequestReviewDismissalRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teams_url")
     public String teamsUrl;
+
     public ProtectedBranchPullRequestReviewDismissalRestrictions withTeamsUrl(String teamsUrl) {
         this.teamsUrl = teamsUrl;
         return this;
@@ -31,6 +33,7 @@ public class ProtectedBranchPullRequestReviewDismissalRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ProtectedBranchPullRequestReviewDismissalRestrictions withUrl(String url) {
         this.url = url;
         return this;
@@ -42,6 +45,7 @@ public class ProtectedBranchPullRequestReviewDismissalRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public SimpleUser[] users;
+
     public ProtectedBranchPullRequestReviewDismissalRestrictions withUsers(SimpleUser[] users) {
         this.users = users;
         return this;
@@ -50,9 +54,11 @@ public class ProtectedBranchPullRequestReviewDismissalRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users_url")
     public String usersUrl;
+
     public ProtectedBranchPullRequestReviewDismissalRestrictions withUsersUrl(String usersUrl) {
         this.usersUrl = usersUrl;
         return this;
     }
     
+    public ProtectedBranchPullRequestReviewDismissalRestrictions(){}
 }

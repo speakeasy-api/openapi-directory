@@ -15,6 +15,7 @@ public class CreateTrustAnchorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CreateTrustAnchorRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -25,6 +26,7 @@ public class CreateTrustAnchorRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateTrustAnchorRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +37,7 @@ public class CreateTrustAnchorRequestBody {
      */
     @JsonProperty("source")
     public CreateTrustAnchorRequestBodySource source;
+
     public CreateTrustAnchorRequestBody withSource(CreateTrustAnchorRequestBodySource source) {
         this.source = source;
         return this;
@@ -46,9 +49,14 @@ public class CreateTrustAnchorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateTrustAnchorRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateTrustAnchorRequestBody(@JsonProperty("name") String name, @JsonProperty("source") CreateTrustAnchorRequestBodySource source) {
+        this.name = name;
+        this.source = source;
+  }
 }

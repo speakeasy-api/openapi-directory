@@ -18,6 +18,7 @@ public class AddressDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressLine1")
     public String addressLine1;
+
     public AddressDTO withAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
         return this;
@@ -29,6 +30,7 @@ public class AddressDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressLine2")
     public String addressLine2;
+
     public AddressDTO withAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
         return this;
@@ -40,6 +42,7 @@ public class AddressDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public AddressDTO withCity(String city) {
         this.city = city;
         return this;
@@ -51,6 +54,7 @@ public class AddressDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryId")
     public Long countryId;
+
     public AddressDTO withCountryId(Long countryId) {
         this.countryId = countryId;
         return this;
@@ -62,6 +66,7 @@ public class AddressDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public AddressDTO withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -73,6 +78,7 @@ public class AddressDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provinceId")
     public Long provinceId;
+
     public AddressDTO withProvinceId(Long provinceId) {
         this.provinceId = provinceId;
         return this;
@@ -84,9 +90,11 @@ public class AddressDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sameAsBillingAddress")
     public Boolean sameAsBillingAddress;
+
     public AddressDTO withSameAsBillingAddress(Boolean sameAsBillingAddress) {
         this.sameAsBillingAddress = sameAsBillingAddress;
         return this;
     }
     
+    public AddressDTO(){}
 }

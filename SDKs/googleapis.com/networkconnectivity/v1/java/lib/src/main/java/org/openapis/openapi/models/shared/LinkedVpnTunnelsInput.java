@@ -18,6 +18,7 @@ public class LinkedVpnTunnelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("siteToSiteDataTransfer")
     public Boolean siteToSiteDataTransfer;
+
     public LinkedVpnTunnelsInput withSiteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
         this.siteToSiteDataTransfer = siteToSiteDataTransfer;
         return this;
@@ -29,9 +30,11 @@ public class LinkedVpnTunnelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uris")
     public String[] uris;
+
     public LinkedVpnTunnelsInput withUris(String[] uris) {
         this.uris = uris;
         return this;
     }
     
+    public LinkedVpnTunnelsInput(){}
 }

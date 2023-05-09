@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLayerResponse {
     
     public String contentType;
+
     public CreateLayerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateLayerResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLayerResult createLayerResult;
+
     public CreateLayerResponse withCreateLayerResult(org.openapis.openapi.models.shared.CreateLayerResult createLayerResult) {
         this.createLayerResult = createLayerResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateLayerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateLayerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class CreateLayerResponse {
     
     
     public Integer statusCode;
+
     public CreateLayerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateLayerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLayerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CreateLayerResponse {
      */
     
     public Object validationException;
+
     public CreateLayerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateLayerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

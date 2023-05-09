@@ -73,11 +73,9 @@ public class ComputeNodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeAddUserResponse res = new org.openapis.openapi.models.operations.ComputeNodeAddUserResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeAddUserResponse res = new org.openapis.openapi.models.operations.ComputeNodeAddUserResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -129,11 +127,9 @@ public class ComputeNodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeDeleteUserResponse res = new org.openapis.openapi.models.operations.ComputeNodeDeleteUserResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeDeleteUserResponse res = new org.openapis.openapi.models.operations.ComputeNodeDeleteUserResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -187,11 +183,9 @@ public class ComputeNodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeDisableSchedulingResponse res = new org.openapis.openapi.models.operations.ComputeNodeDisableSchedulingResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeDisableSchedulingResponse res = new org.openapis.openapi.models.operations.ComputeNodeDisableSchedulingResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,11 +237,9 @@ public class ComputeNodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeEnableSchedulingResponse res = new org.openapis.openapi.models.operations.ComputeNodeEnableSchedulingResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeEnableSchedulingResponse res = new org.openapis.openapi.models.operations.ComputeNodeEnableSchedulingResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -299,12 +291,10 @@ public class ComputeNodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGetResponse res = new org.openapis.openapi.models.operations.ComputeNodeGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGetResponse res = new org.openapis.openapi.models.operations.ComputeNodeGetResponse(contentType, httpRes.statusCode()) {{
             computeNode = null;
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -361,20 +351,17 @@ public class ComputeNodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGetRemoteDesktopResponse res = new org.openapis.openapi.models.operations.ComputeNodeGetRemoteDesktopResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGetRemoteDesktopResponse res = new org.openapis.openapi.models.operations.ComputeNodeGetRemoteDesktopResponse(contentType, httpRes.statusCode()) {{
             computeNodeGetRemoteDesktop200ApplicationJSONBinaryString = null;
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
             
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                byte[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), byte[].class);
+                byte[] out = httpRes.body();
                 res.computeNodeGetRemoteDesktop200ApplicationJSONBinaryString = out;
             }
         }
@@ -423,12 +410,10 @@ public class ComputeNodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGetRemoteLoginSettingsResponse res = new org.openapis.openapi.models.operations.ComputeNodeGetRemoteLoginSettingsResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGetRemoteLoginSettingsResponse res = new org.openapis.openapi.models.operations.ComputeNodeGetRemoteLoginSettingsResponse(contentType, httpRes.statusCode()) {{
             computeNodeGetRemoteLoginSettingsResult = null;
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,12 +470,10 @@ public class ComputeNodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeListResponse res = new org.openapis.openapi.models.operations.ComputeNodeListResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeListResponse res = new org.openapis.openapi.models.operations.ComputeNodeListResponse(contentType, httpRes.statusCode()) {{
             computeNodeListResult = null;
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -549,11 +532,9 @@ public class ComputeNodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeRebootResponse res = new org.openapis.openapi.models.operations.ComputeNodeRebootResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeRebootResponse res = new org.openapis.openapi.models.operations.ComputeNodeRebootResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -607,11 +588,9 @@ public class ComputeNodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeReimageResponse res = new org.openapis.openapi.models.operations.ComputeNodeReimageResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeReimageResponse res = new org.openapis.openapi.models.operations.ComputeNodeReimageResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -668,11 +647,9 @@ public class ComputeNodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeUpdateUserResponse res = new org.openapis.openapi.models.operations.ComputeNodeUpdateUserResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeUpdateUserResponse res = new org.openapis.openapi.models.operations.ComputeNodeUpdateUserResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -729,11 +706,9 @@ public class ComputeNodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PoolRemoveNodesResponse res = new org.openapis.openapi.models.operations.PoolRemoveNodesResponse() {{
+        org.openapis.openapi.models.operations.PoolRemoveNodesResponse res = new org.openapis.openapi.models.operations.PoolRemoveNodesResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

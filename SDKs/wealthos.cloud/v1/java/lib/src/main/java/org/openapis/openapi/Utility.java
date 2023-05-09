@@ -66,7 +66,7 @@ public class Utility {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CopyFileToS3Response res = new org.openapis.openapi.models.operations.CopyFileToS3Response() {{
+        org.openapis.openapi.models.operations.CopyFileToS3Response res = new org.openapis.openapi.models.operations.CopyFileToS3Response(contentType, httpRes.statusCode()) {{
             copyFileToS3200ApplicationJSONObject = null;
             copyFileToS3400ApplicationJSONObject = null;
             copyFileToS3401ApplicationJSONObject = null;
@@ -75,8 +75,6 @@ public class Utility {
             copyFileToS3429ApplicationJSONObject = null;
             copyFileToS3500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

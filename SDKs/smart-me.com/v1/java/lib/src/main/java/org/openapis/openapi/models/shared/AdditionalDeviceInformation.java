@@ -18,6 +18,7 @@ public class AdditionalDeviceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalMeterSerialNumber")
     public String additionalMeterSerialNumber;
+
     public AdditionalDeviceInformation withAdditionalMeterSerialNumber(String additionalMeterSerialNumber) {
         this.additionalMeterSerialNumber = additionalMeterSerialNumber;
         return this;
@@ -29,6 +30,7 @@ public class AdditionalDeviceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirmwareVersion")
     public Integer firmwareVersion;
+
     public AdditionalDeviceInformation withFirmwareVersion(Integer firmwareVersion) {
         this.firmwareVersion = firmwareVersion;
         return this;
@@ -40,6 +42,7 @@ public class AdditionalDeviceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HardwareVersion")
     public Integer hardwareVersion;
+
     public AdditionalDeviceInformation withHardwareVersion(Integer hardwareVersion) {
         this.hardwareVersion = hardwareVersion;
         return this;
@@ -51,6 +54,7 @@ public class AdditionalDeviceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ID")
     public String id;
+
     public AdditionalDeviceInformation withId(String id) {
         this.id = id;
         return this;
@@ -63,6 +67,7 @@ public class AdditionalDeviceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConnection")
     public String networkConnection;
+
     public AdditionalDeviceInformation withNetworkConnection(String networkConnection) {
         this.networkConnection = networkConnection;
         return this;
@@ -74,9 +79,11 @@ public class AdditionalDeviceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConnectionRSSI")
     public Integer networkConnectionRSSI;
+
     public AdditionalDeviceInformation withNetworkConnectionRSSI(Integer networkConnectionRSSI) {
         this.networkConnectionRSSI = networkConnectionRSSI;
         return this;
     }
     
+    public AdditionalDeviceInformation(){}
 }

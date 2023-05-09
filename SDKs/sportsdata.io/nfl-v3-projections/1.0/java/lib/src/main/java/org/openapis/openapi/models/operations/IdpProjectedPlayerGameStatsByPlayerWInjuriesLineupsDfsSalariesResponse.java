@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse {
     
     public String contentType;
+
     public IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRespo
     
     
     public org.openapis.openapi.models.shared.PlayerGameProjection playerGameProjection;
+
     public IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse withPlayerGameProjection(org.openapis.openapi.models.shared.PlayerGameProjection playerGameProjection) {
         this.playerGameProjection = playerGameProjection;
         return this;
@@ -23,6 +26,7 @@ public class IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRespo
     
     
     public Integer statusCode;
+
     public IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRespo
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

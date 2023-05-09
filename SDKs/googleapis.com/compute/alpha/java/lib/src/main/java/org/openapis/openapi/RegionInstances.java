@@ -61,11 +61,9 @@ public class RegionInstances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstancesBulkInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstancesBulkInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstancesBulkInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstancesBulkInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETFailoverGlobalClusterRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETFailoverGlobalClusterActionEnum action;
+
     public GETFailoverGlobalClusterRequest withAction(GETFailoverGlobalClusterActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETFailoverGlobalClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalClusterIdentifier")
     public String globalClusterIdentifier;
+
     public GETFailoverGlobalClusterRequest withGlobalClusterIdentifier(String globalClusterIdentifier) {
         this.globalClusterIdentifier = globalClusterIdentifier;
         return this;
@@ -29,6 +32,7 @@ public class GETFailoverGlobalClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetDbClusterIdentifier")
     public String targetDbClusterIdentifier;
+
     public GETFailoverGlobalClusterRequest withTargetDbClusterIdentifier(String targetDbClusterIdentifier) {
         this.targetDbClusterIdentifier = targetDbClusterIdentifier;
         return this;
@@ -36,6 +40,7 @@ public class GETFailoverGlobalClusterRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETFailoverGlobalClusterVersionEnum version;
+
     public GETFailoverGlobalClusterRequest withVersion(GETFailoverGlobalClusterVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETFailoverGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETFailoverGlobalClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETFailoverGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETFailoverGlobalClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETFailoverGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETFailoverGlobalClusterRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETFailoverGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETFailoverGlobalClusterRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETFailoverGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETFailoverGlobalClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETFailoverGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETFailoverGlobalClusterRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETFailoverGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETFailoverGlobalClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETFailoverGlobalClusterRequest(@JsonProperty("Action") GETFailoverGlobalClusterActionEnum action, @JsonProperty("GlobalClusterIdentifier") String globalClusterIdentifier, @JsonProperty("TargetDbClusterIdentifier") String targetDbClusterIdentifier, @JsonProperty("Version") GETFailoverGlobalClusterVersionEnum version) {
+        this.action = action;
+        this.globalClusterIdentifier = globalClusterIdentifier;
+        this.targetDbClusterIdentifier = targetDbClusterIdentifier;
+        this.version = version;
+  }
 }

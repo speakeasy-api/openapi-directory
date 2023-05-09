@@ -18,6 +18,7 @@ public class VlanAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandwidth")
     public VlanAttachmentBandwidthEnum bandwidth;
+
     public VlanAttachment withBandwidth(VlanAttachmentBandwidthEnum bandwidth) {
         this.bandwidth = bandwidth;
         return this;
@@ -29,9 +30,11 @@ public class VlanAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vlanCount")
     public Usage vlanCount;
+
     public VlanAttachment withVlanCount(Usage vlanCount) {
         this.vlanCount = vlanCount;
         return this;
     }
     
+    public VlanAttachment(){}
 }

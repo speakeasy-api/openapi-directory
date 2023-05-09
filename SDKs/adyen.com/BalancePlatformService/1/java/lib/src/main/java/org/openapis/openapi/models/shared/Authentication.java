@@ -15,6 +15,7 @@ public class Authentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Authentication withEmail(String email) {
         this.email = email;
         return this;
@@ -30,6 +31,7 @@ public class Authentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public Authentication withPassword(String password) {
         this.password = password;
         return this;
@@ -38,9 +40,11 @@ public class Authentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public Phone phone;
+
     public Authentication withPhone(Phone phone) {
         this.phone = phone;
         return this;
     }
     
+    public Authentication(){}
 }

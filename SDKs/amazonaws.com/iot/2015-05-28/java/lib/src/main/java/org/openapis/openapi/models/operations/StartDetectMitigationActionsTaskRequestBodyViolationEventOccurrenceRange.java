@@ -22,6 +22,7 @@ public class StartDetectMitigationActionsTaskRequestBodyViolationEventOccurrence
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public StartDetectMitigationActionsTaskRequestBodyViolationEventOccurrenceRange withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -32,9 +33,11 @@ public class StartDetectMitigationActionsTaskRequestBodyViolationEventOccurrence
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public StartDetectMitigationActionsTaskRequestBodyViolationEventOccurrenceRange withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public StartDetectMitigationActionsTaskRequestBodyViolationEventOccurrenceRange(){}
 }

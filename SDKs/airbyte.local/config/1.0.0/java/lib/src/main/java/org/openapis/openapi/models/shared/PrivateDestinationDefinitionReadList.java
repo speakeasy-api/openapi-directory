@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PrivateDestinationDefinitionReadList {
     @JsonProperty("destinationDefinitions")
     public PrivateDestinationDefinitionRead[] destinationDefinitions;
+
     public PrivateDestinationDefinitionReadList withDestinationDefinitions(PrivateDestinationDefinitionRead[] destinationDefinitions) {
         this.destinationDefinitions = destinationDefinitions;
         return this;
     }
     
+    public PrivateDestinationDefinitionReadList(@JsonProperty("destinationDefinitions") PrivateDestinationDefinitionRead[] destinationDefinitions) {
+        this.destinationDefinitions = destinationDefinitions;
+  }
 }

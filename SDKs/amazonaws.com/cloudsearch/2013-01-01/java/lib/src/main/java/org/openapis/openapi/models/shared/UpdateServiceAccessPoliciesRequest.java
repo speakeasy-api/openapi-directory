@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateServiceAccessPoliciesRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;UpdateServiceAccessPolicies&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to update and the access rules you want to configure.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateServiceAccessPoliciesRequest {
     
     public String accessPolicies;
+
     public UpdateServiceAccessPoliciesRequest withAccessPolicies(String accessPolicies) {
         this.accessPolicies = accessPolicies;
         return this;
@@ -22,9 +23,14 @@ public class UpdateServiceAccessPoliciesRequest {
      */
     
     public String domainName;
+
     public UpdateServiceAccessPoliciesRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public UpdateServiceAccessPoliciesRequest(@JsonProperty("AccessPolicies") String accessPolicies, @JsonProperty("DomainName") String domainName) {
+        this.accessPolicies = accessPolicies;
+        this.domainName = domainName;
+  }
 }

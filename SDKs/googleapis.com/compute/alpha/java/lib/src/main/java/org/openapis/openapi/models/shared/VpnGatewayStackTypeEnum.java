@@ -11,7 +11,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
  */
 public enum VpnGatewayStackTypeEnum {
     IPV4_IPV6("IPV4_IPV6"),
-    IPV4_ONLY("IPV4_ONLY");
+    IPV4_ONLY("IPV4_ONLY"),
+    IPV6_ONLY("IPV6_ONLY");
 
     @JsonValue
     public final String value;

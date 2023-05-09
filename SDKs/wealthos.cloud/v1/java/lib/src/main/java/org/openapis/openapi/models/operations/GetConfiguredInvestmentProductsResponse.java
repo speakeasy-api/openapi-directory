@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConfiguredInvestmentProductsResponse {
     
     public String contentType;
+
     public GetConfiguredInvestmentProductsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetConfiguredInvestmentProductsResponse {
     
     
     public Integer statusCode;
+
     public GetConfiguredInvestmentProductsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetConfiguredInvestmentProductsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConfiguredInvestmentProductsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetConfiguredInvestmentProductsResponse {
      */
     
     public GetConfiguredInvestmentProducts200ApplicationJSON getConfiguredInvestmentProducts200ApplicationJSONObject;
+
     public GetConfiguredInvestmentProductsResponse withGetConfiguredInvestmentProducts200ApplicationJSONObject(GetConfiguredInvestmentProducts200ApplicationJSON getConfiguredInvestmentProducts200ApplicationJSONObject) {
         this.getConfiguredInvestmentProducts200ApplicationJSONObject = getConfiguredInvestmentProducts200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetConfiguredInvestmentProductsResponse {
      */
     
     public GetConfiguredInvestmentProducts401ApplicationJSON getConfiguredInvestmentProducts401ApplicationJSONObject;
+
     public GetConfiguredInvestmentProductsResponse withGetConfiguredInvestmentProducts401ApplicationJSONObject(GetConfiguredInvestmentProducts401ApplicationJSON getConfiguredInvestmentProducts401ApplicationJSONObject) {
         this.getConfiguredInvestmentProducts401ApplicationJSONObject = getConfiguredInvestmentProducts401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetConfiguredInvestmentProductsResponse {
      */
     
     public GetConfiguredInvestmentProducts403ApplicationJSON getConfiguredInvestmentProducts403ApplicationJSONObject;
+
     public GetConfiguredInvestmentProductsResponse withGetConfiguredInvestmentProducts403ApplicationJSONObject(GetConfiguredInvestmentProducts403ApplicationJSON getConfiguredInvestmentProducts403ApplicationJSONObject) {
         this.getConfiguredInvestmentProducts403ApplicationJSONObject = getConfiguredInvestmentProducts403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetConfiguredInvestmentProductsResponse {
      */
     
     public GetConfiguredInvestmentProducts404ApplicationJSON getConfiguredInvestmentProducts404ApplicationJSONObject;
+
     public GetConfiguredInvestmentProductsResponse withGetConfiguredInvestmentProducts404ApplicationJSONObject(GetConfiguredInvestmentProducts404ApplicationJSON getConfiguredInvestmentProducts404ApplicationJSONObject) {
         this.getConfiguredInvestmentProducts404ApplicationJSONObject = getConfiguredInvestmentProducts404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetConfiguredInvestmentProductsResponse {
      */
     
     public GetConfiguredInvestmentProducts429ApplicationJSON getConfiguredInvestmentProducts429ApplicationJSONObject;
+
     public GetConfiguredInvestmentProductsResponse withGetConfiguredInvestmentProducts429ApplicationJSONObject(GetConfiguredInvestmentProducts429ApplicationJSON getConfiguredInvestmentProducts429ApplicationJSONObject) {
         this.getConfiguredInvestmentProducts429ApplicationJSONObject = getConfiguredInvestmentProducts429ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class GetConfiguredInvestmentProductsResponse {
      */
     
     public GetConfiguredInvestmentProducts500ApplicationJSON getConfiguredInvestmentProducts500ApplicationJSONObject;
+
     public GetConfiguredInvestmentProductsResponse withGetConfiguredInvestmentProducts500ApplicationJSONObject(GetConfiguredInvestmentProducts500ApplicationJSON getConfiguredInvestmentProducts500ApplicationJSONObject) {
         this.getConfiguredInvestmentProducts500ApplicationJSONObject = getConfiguredInvestmentProducts500ApplicationJSONObject;
         return this;
     }
     
+    public GetConfiguredInvestmentProductsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

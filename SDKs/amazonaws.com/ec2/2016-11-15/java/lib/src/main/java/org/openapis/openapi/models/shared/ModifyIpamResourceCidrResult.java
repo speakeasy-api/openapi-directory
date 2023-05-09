@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyIpamResourceCidrResult {
     
     public ModifyIpamResourceCidrResultIpamResourceCidr ipamResourceCidr;
+
     public ModifyIpamResourceCidrResult withIpamResourceCidr(ModifyIpamResourceCidrResultIpamResourceCidr ipamResourceCidr) {
         this.ipamResourceCidr = ipamResourceCidr;
         return this;
     }
     
+    public ModifyIpamResourceCidrResult(){}
 }

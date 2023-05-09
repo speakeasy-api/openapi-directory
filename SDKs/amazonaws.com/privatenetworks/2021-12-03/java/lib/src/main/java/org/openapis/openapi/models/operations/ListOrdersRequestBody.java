@@ -15,6 +15,7 @@ public class ListOrdersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public java.util.Map<String, String[]> filters;
+
     public ListOrdersRequestBody withFilters(java.util.Map<String, String[]> filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class ListOrdersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListOrdersRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +38,7 @@ public class ListOrdersRequestBody {
      */
     @JsonProperty("networkArn")
     public String networkArn;
+
     public ListOrdersRequestBody withNetworkArn(String networkArn) {
         this.networkArn = networkArn;
         return this;
@@ -47,9 +50,13 @@ public class ListOrdersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startToken")
     public String startToken;
+
     public ListOrdersRequestBody withStartToken(String startToken) {
         this.startToken = startToken;
         return this;
     }
     
+    public ListOrdersRequestBody(@JsonProperty("networkArn") String networkArn) {
+        this.networkArn = networkArn;
+  }
 }

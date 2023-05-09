@@ -18,6 +18,7 @@ public class DimensionMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public Dimension dimension;
+
     public DimensionMetric withDimension(Dimension dimension) {
         this.dimension = dimension;
         return this;
@@ -29,9 +30,11 @@ public class DimensionMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public Metric[] metrics;
+
     public DimensionMetric withMetrics(Metric[] metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public DimensionMetric(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransferInstrument {
     @JsonProperty("bankAccount")
     public BankAccountInfo bankAccount;
+
     public TransferInstrument withBankAccount(BankAccountInfo bankAccount) {
         this.bankAccount = bankAccount;
         return this;
@@ -25,6 +26,7 @@ public class TransferInstrument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public java.util.Map<String, SupportingEntityCapability> capabilities;
+
     public TransferInstrument withCapabilities(java.util.Map<String, SupportingEntityCapability> capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -36,6 +38,7 @@ public class TransferInstrument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentDetails")
     public DocumentReference[] documentDetails;
+
     public TransferInstrument withDocumentDetails(DocumentReference[] documentDetails) {
         this.documentDetails = documentDetails;
         return this;
@@ -46,6 +49,7 @@ public class TransferInstrument {
      */
     @JsonProperty("id")
     public String id;
+
     public TransferInstrument withId(String id) {
         this.id = id;
         return this;
@@ -56,6 +60,7 @@ public class TransferInstrument {
      */
     @JsonProperty("legalEntityId")
     public String legalEntityId;
+
     public TransferInstrument withLegalEntityId(String legalEntityId) {
         this.legalEntityId = legalEntityId;
         return this;
@@ -67,6 +72,7 @@ public class TransferInstrument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("problems")
     public CapabilityProblem[] problems;
+
     public TransferInstrument withProblems(CapabilityProblem[] problems) {
         this.problems = problems;
         return this;
@@ -79,9 +85,16 @@ public class TransferInstrument {
      */
     @JsonProperty("type")
     public TransferInstrumentTypeEnum type;
+
     public TransferInstrument withType(TransferInstrumentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TransferInstrument(@JsonProperty("bankAccount") BankAccountInfo bankAccount, @JsonProperty("id") String id, @JsonProperty("legalEntityId") String legalEntityId, @JsonProperty("type") TransferInstrumentTypeEnum type) {
+        this.bankAccount = bankAccount;
+        this.id = id;
+        this.legalEntityId = legalEntityId;
+        this.type = type;
+  }
 }

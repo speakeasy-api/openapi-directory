@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCustomPluginResponse {
@@ -12,6 +13,7 @@ public class CreateCustomPluginResponse {
      */
     
     public Object badRequestException;
+
     public CreateCustomPluginResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateCustomPluginResponse {
      */
     
     public Object conflictException;
+
     public CreateCustomPluginResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateCustomPluginResponse {
     
     
     public String contentType;
+
     public CreateCustomPluginResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateCustomPluginResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCustomPluginResponse createCustomPluginResponse;
+
     public CreateCustomPluginResponse withCreateCustomPluginResponse(org.openapis.openapi.models.shared.CreateCustomPluginResponse createCustomPluginResponse) {
         this.createCustomPluginResponse = createCustomPluginResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateCustomPluginResponse {
      */
     
     public Object forbiddenException;
+
     public CreateCustomPluginResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CreateCustomPluginResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateCustomPluginResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -69,6 +76,7 @@ public class CreateCustomPluginResponse {
      */
     
     public Object notFoundException;
+
     public CreateCustomPluginResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class CreateCustomPluginResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateCustomPluginResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -86,6 +95,7 @@ public class CreateCustomPluginResponse {
     
     
     public Integer statusCode;
+
     public CreateCustomPluginResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateCustomPluginResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCustomPluginResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class CreateCustomPluginResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateCustomPluginResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,9 +125,14 @@ public class CreateCustomPluginResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateCustomPluginResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateCustomPluginResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

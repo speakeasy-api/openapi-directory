@@ -14,6 +14,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
      */
     @JsonProperty("bound_to")
     public Long boundTo;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withBoundTo(Long boundTo) {
         this.boundTo = boundTo;
         return this;
@@ -24,6 +25,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
      */
     @JsonProperty("created")
     public String created;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withCreated(String created) {
         this.created = created;
         return this;
@@ -34,6 +36,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
      */
     @JsonProperty("created_from")
     public PostServersIdActionsCreateImage201ApplicationJSONImageCreatedFrom createdFrom;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withCreatedFrom(PostServersIdActionsCreateImage201ApplicationJSONImageCreatedFrom createdFrom) {
         this.createdFrom = createdFrom;
         return this;
@@ -44,6 +47,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
      */
     @JsonProperty("deleted")
     public String deleted;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withDeleted(String deleted) {
         this.deleted = deleted;
         return this;
@@ -54,6 +58,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
      */
     @JsonProperty("deprecated")
     public String deprecated;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withDeprecated(String deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -64,6 +69,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
      */
     @JsonProperty("description")
     public String description;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withDescription(String description) {
         this.description = description;
         return this;
@@ -74,6 +80,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
      */
     @JsonProperty("disk_size")
     public Double diskSize;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withDiskSize(Double diskSize) {
         this.diskSize = diskSize;
         return this;
@@ -84,6 +91,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withId(Long id) {
         this.id = id;
         return this;
@@ -94,6 +102,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
      */
     @JsonProperty("image_size")
     public Double imageSize;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withImageSize(Double imageSize) {
         this.imageSize = imageSize;
         return this;
@@ -104,6 +113,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -114,6 +124,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
      */
     @JsonProperty("name")
     public String name;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withName(String name) {
         this.name = name;
         return this;
@@ -124,6 +135,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
      */
     @JsonProperty("os_flavor")
     public PostServersIdActionsCreateImage201ApplicationJSONImageOsFlavorEnum osFlavor;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withOsFlavor(PostServersIdActionsCreateImage201ApplicationJSONImageOsFlavorEnum osFlavor) {
         this.osFlavor = osFlavor;
         return this;
@@ -134,6 +146,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
      */
     @JsonProperty("os_version")
     public String osVersion;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -144,6 +157,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
      */
     @JsonProperty("protection")
     public PostServersIdActionsCreateImage201ApplicationJSONImageProtection protection;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withProtection(PostServersIdActionsCreateImage201ApplicationJSONImageProtection protection) {
         this.protection = protection;
         return this;
@@ -155,6 +169,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rapid_deploy")
     public Boolean rapidDeploy;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withRapidDeploy(Boolean rapidDeploy) {
         this.rapidDeploy = rapidDeploy;
         return this;
@@ -165,6 +180,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
      */
     @JsonProperty("status")
     public PostServersIdActionsCreateImage201ApplicationJSONImageStatusEnum status;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withStatus(PostServersIdActionsCreateImage201ApplicationJSONImageStatusEnum status) {
         this.status = status;
         return this;
@@ -175,9 +191,28 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImage {
      */
     @JsonProperty("type")
     public PostServersIdActionsCreateImage201ApplicationJSONImageTypeEnum type;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImage withType(PostServersIdActionsCreateImage201ApplicationJSONImageTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostServersIdActionsCreateImage201ApplicationJSONImage(@JsonProperty("bound_to") Long boundTo, @JsonProperty("created") String created, @JsonProperty("created_from") PostServersIdActionsCreateImage201ApplicationJSONImageCreatedFrom createdFrom, @JsonProperty("deleted") String deleted, @JsonProperty("deprecated") String deprecated, @JsonProperty("description") String description, @JsonProperty("disk_size") Double diskSize, @JsonProperty("id") Long id, @JsonProperty("image_size") Double imageSize, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("name") String name, @JsonProperty("os_flavor") PostServersIdActionsCreateImage201ApplicationJSONImageOsFlavorEnum osFlavor, @JsonProperty("os_version") String osVersion, @JsonProperty("protection") PostServersIdActionsCreateImage201ApplicationJSONImageProtection protection, @JsonProperty("status") PostServersIdActionsCreateImage201ApplicationJSONImageStatusEnum status, @JsonProperty("type") PostServersIdActionsCreateImage201ApplicationJSONImageTypeEnum type) {
+        this.boundTo = boundTo;
+        this.created = created;
+        this.createdFrom = createdFrom;
+        this.deleted = deleted;
+        this.deprecated = deprecated;
+        this.description = description;
+        this.diskSize = diskSize;
+        this.id = id;
+        this.imageSize = imageSize;
+        this.labels = labels;
+        this.name = name;
+        this.osFlavor = osFlavor;
+        this.osVersion = osVersion;
+        this.protection = protection;
+        this.status = status;
+        this.type = type;
+  }
 }

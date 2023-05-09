@@ -18,6 +18,7 @@ public class ListImpressionMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impressionMetricsRows")
     public ImpressionMetricsRow[] impressionMetricsRows;
+
     public ListImpressionMetricsResponse withImpressionMetricsRows(ImpressionMetricsRow[] impressionMetricsRows) {
         this.impressionMetricsRows = impressionMetricsRows;
         return this;
@@ -29,9 +30,11 @@ public class ListImpressionMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListImpressionMetricsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListImpressionMetricsResponse(){}
 }

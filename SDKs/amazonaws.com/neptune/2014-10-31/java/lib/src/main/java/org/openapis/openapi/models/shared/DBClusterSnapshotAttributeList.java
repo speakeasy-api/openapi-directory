@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBClusterSnapshotAttributeList {
     
     public String attributeName;
+
     public DBClusterSnapshotAttributeList withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,9 +20,11 @@ public class DBClusterSnapshotAttributeList {
     
     
     public String[] attributeValues;
+
     public DBClusterSnapshotAttributeList withAttributeValues(String[] attributeValues) {
         this.attributeValues = attributeValues;
         return this;
     }
     
+    public DBClusterSnapshotAttributeList(){}
 }

@@ -15,9 +15,11 @@ public class DisassociateTimeSeriesFromAssetPropertyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DisassociateTimeSeriesFromAssetPropertyRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
+    public DisassociateTimeSeriesFromAssetPropertyRequestBody(){}
 }

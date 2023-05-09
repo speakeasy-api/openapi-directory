@@ -15,9 +15,13 @@ public class ItvUpgradePlanRequest {
      */
     @JsonProperty("planId")
     public String planId;
+
     public ItvUpgradePlanRequest withPlanId(String planId) {
         this.planId = planId;
         return this;
     }
     
+    public ItvUpgradePlanRequest(@JsonProperty("planId") String planId) {
+        this.planId = planId;
+  }
 }

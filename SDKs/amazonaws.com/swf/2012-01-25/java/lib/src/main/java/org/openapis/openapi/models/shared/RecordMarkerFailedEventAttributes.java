@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RecordMarkerFailedEventAttributes {
     @JsonProperty("cause")
     public RecordMarkerFailedCauseEnum cause;
+
     public RecordMarkerFailedEventAttributes withCause(RecordMarkerFailedCauseEnum cause) {
         this.cause = cause;
         return this;
@@ -19,6 +20,7 @@ public class RecordMarkerFailedEventAttributes {
     
     @JsonProperty("decisionTaskCompletedEventId")
     public Long decisionTaskCompletedEventId;
+
     public RecordMarkerFailedEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
@@ -26,9 +28,15 @@ public class RecordMarkerFailedEventAttributes {
     
     @JsonProperty("markerName")
     public String markerName;
+
     public RecordMarkerFailedEventAttributes withMarkerName(String markerName) {
         this.markerName = markerName;
         return this;
     }
     
+    public RecordMarkerFailedEventAttributes(@JsonProperty("cause") RecordMarkerFailedCauseEnum cause, @JsonProperty("decisionTaskCompletedEventId") Long decisionTaskCompletedEventId, @JsonProperty("markerName") String markerName) {
+        this.cause = cause;
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+        this.markerName = markerName;
+  }
 }

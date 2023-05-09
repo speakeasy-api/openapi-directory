@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkFirewalledServicesRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public GetNetworkFirewalledServicesRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
     }
     
+    public GetNetworkFirewalledServicesRequest(@JsonProperty("networkId") String networkId) {
+        this.networkId = networkId;
+  }
 }

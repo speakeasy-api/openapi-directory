@@ -20,6 +20,7 @@ public class OpsItemEventSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public OpsItemIdentity createdBy;
+
     public OpsItemEventSummary withCreatedBy(OpsItemIdentity createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -30,6 +31,7 @@ public class OpsItemEventSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public OpsItemEventSummary withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -38,6 +40,7 @@ public class OpsItemEventSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Detail")
     public String detail;
+
     public OpsItemEventSummary withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -46,6 +49,7 @@ public class OpsItemEventSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetailType")
     public String detailType;
+
     public OpsItemEventSummary withDetailType(String detailType) {
         this.detailType = detailType;
         return this;
@@ -54,6 +58,7 @@ public class OpsItemEventSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventId")
     public String eventId;
+
     public OpsItemEventSummary withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -62,6 +67,7 @@ public class OpsItemEventSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItemId")
     public String opsItemId;
+
     public OpsItemEventSummary withOpsItemId(String opsItemId) {
         this.opsItemId = opsItemId;
         return this;
@@ -70,9 +76,11 @@ public class OpsItemEventSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public OpsItemEventSummary withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public OpsItemEventSummary(){}
 }

@@ -14,6 +14,7 @@ public class CreateMembershipRequestBody {
      */
     @JsonProperty("collaborationIdentifier")
     public String collaborationIdentifier;
+
     public CreateMembershipRequestBody withCollaborationIdentifier(String collaborationIdentifier) {
         this.collaborationIdentifier = collaborationIdentifier;
         return this;
@@ -24,6 +25,7 @@ public class CreateMembershipRequestBody {
      */
     @JsonProperty("queryLogStatus")
     public CreateMembershipRequestBodyQueryLogStatusEnum queryLogStatus;
+
     public CreateMembershipRequestBody withQueryLogStatus(CreateMembershipRequestBodyQueryLogStatusEnum queryLogStatus) {
         this.queryLogStatus = queryLogStatus;
         return this;
@@ -35,9 +37,14 @@ public class CreateMembershipRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateMembershipRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateMembershipRequestBody(@JsonProperty("collaborationIdentifier") String collaborationIdentifier, @JsonProperty("queryLogStatus") CreateMembershipRequestBodyQueryLogStatusEnum queryLogStatus) {
+        this.collaborationIdentifier = collaborationIdentifier;
+        this.queryLogStatus = queryLogStatus;
+  }
 }

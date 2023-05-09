@@ -15,6 +15,7 @@ public class LabelingJobDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DataSource")
     public LabelingJobS3DataSource s3DataSource;
+
     public LabelingJobDataSource withS3DataSource(LabelingJobS3DataSource s3DataSource) {
         this.s3DataSource = s3DataSource;
         return this;
@@ -23,9 +24,11 @@ public class LabelingJobDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsDataSource")
     public LabelingJobSnsDataSource snsDataSource;
+
     public LabelingJobDataSource withSnsDataSource(LabelingJobSnsDataSource snsDataSource) {
         this.snsDataSource = snsDataSource;
         return this;
     }
     
+    public LabelingJobDataSource(){}
 }

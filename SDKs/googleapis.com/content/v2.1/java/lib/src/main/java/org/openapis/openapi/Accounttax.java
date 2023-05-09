@@ -61,11 +61,9 @@ public class Accounttax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentAccounttaxCustombatchResponse res = new org.openapis.openapi.models.operations.ContentAccounttaxCustombatchResponse() {{
+        org.openapis.openapi.models.operations.ContentAccounttaxCustombatchResponse res = new org.openapis.openapi.models.operations.ContentAccounttaxCustombatchResponse(contentType, httpRes.statusCode()) {{
             accounttaxCustomBatchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Accounttax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentAccounttaxGetResponse res = new org.openapis.openapi.models.operations.ContentAccounttaxGetResponse() {{
+        org.openapis.openapi.models.operations.ContentAccounttaxGetResponse res = new org.openapis.openapi.models.operations.ContentAccounttaxGetResponse(contentType, httpRes.statusCode()) {{
             accountTax = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Accounttax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentAccounttaxListResponse res = new org.openapis.openapi.models.operations.ContentAccounttaxListResponse() {{
+        org.openapis.openapi.models.operations.ContentAccounttaxListResponse res = new org.openapis.openapi.models.operations.ContentAccounttaxListResponse(contentType, httpRes.statusCode()) {{
             accounttaxListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class Accounttax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentAccounttaxUpdateResponse res = new org.openapis.openapi.models.operations.ContentAccounttaxUpdateResponse() {{
+        org.openapis.openapi.models.operations.ContentAccounttaxUpdateResponse res = new org.openapis.openapi.models.operations.ContentAccounttaxUpdateResponse(contentType, httpRes.statusCode()) {{
             accountTax = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

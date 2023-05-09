@@ -58,12 +58,10 @@ public class TestnetNtp1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestnetBroadcastTxResponse res = new org.openapis.openapi.models.operations.TestnetBroadcastTxResponse() {{
+        org.openapis.openapi.models.operations.TestnetBroadcastTxResponse res = new org.openapis.openapi.models.operations.TestnetBroadcastTxResponse(contentType, httpRes.statusCode()) {{
             broadcastTxResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,12 +109,10 @@ public class TestnetNtp1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestnetBurnTokenResponse res = new org.openapis.openapi.models.operations.TestnetBurnTokenResponse() {{
+        org.openapis.openapi.models.operations.TestnetBurnTokenResponse res = new org.openapis.openapi.models.operations.TestnetBurnTokenResponse(contentType, httpRes.statusCode()) {{
             burnTokenResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,12 +155,10 @@ public class TestnetNtp1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestnetGetAddressInfoResponse res = new org.openapis.openapi.models.operations.TestnetGetAddressInfoResponse() {{
+        org.openapis.openapi.models.operations.TestnetGetAddressInfoResponse res = new org.openapis.openapi.models.operations.TestnetGetAddressInfoResponse(contentType, httpRes.statusCode()) {{
             getAddressInfoResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -207,12 +201,10 @@ public class TestnetNtp1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestnetGetTokenHoldersResponse res = new org.openapis.openapi.models.operations.TestnetGetTokenHoldersResponse() {{
+        org.openapis.openapi.models.operations.TestnetGetTokenHoldersResponse res = new org.openapis.openapi.models.operations.TestnetGetTokenHoldersResponse(contentType, httpRes.statusCode()) {{
             getTokenHoldersResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -255,11 +247,9 @@ public class TestnetNtp1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestnetGetTokenIdResponse res = new org.openapis.openapi.models.operations.TestnetGetTokenIdResponse() {{
+        org.openapis.openapi.models.operations.TestnetGetTokenIdResponse res = new org.openapis.openapi.models.operations.TestnetGetTokenIdResponse(contentType, httpRes.statusCode()) {{
             getTokenIdResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -301,12 +291,10 @@ public class TestnetNtp1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestnetGetTokenMetadataResponse res = new org.openapis.openapi.models.operations.TestnetGetTokenMetadataResponse() {{
+        org.openapis.openapi.models.operations.TestnetGetTokenMetadataResponse res = new org.openapis.openapi.models.operations.TestnetGetTokenMetadataResponse(contentType, httpRes.statusCode()) {{
             getTokenMetadataResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -355,12 +343,10 @@ public class TestnetNtp1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestnetGetTokenMetadataOfUtxoResponse res = new org.openapis.openapi.models.operations.TestnetGetTokenMetadataOfUtxoResponse() {{
+        org.openapis.openapi.models.operations.TestnetGetTokenMetadataOfUtxoResponse res = new org.openapis.openapi.models.operations.TestnetGetTokenMetadataOfUtxoResponse(contentType, httpRes.statusCode()) {{
             getTokenMetadataResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -403,12 +389,10 @@ public class TestnetNtp1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestnetGetTransactionInfoResponse res = new org.openapis.openapi.models.operations.TestnetGetTransactionInfoResponse() {{
+        org.openapis.openapi.models.operations.TestnetGetTransactionInfoResponse res = new org.openapis.openapi.models.operations.TestnetGetTransactionInfoResponse(contentType, httpRes.statusCode()) {{
             getTransactionInfoResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -456,12 +440,10 @@ public class TestnetNtp1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestnetIssueTokenResponse res = new org.openapis.openapi.models.operations.TestnetIssueTokenResponse() {{
+        org.openapis.openapi.models.operations.TestnetIssueTokenResponse res = new org.openapis.openapi.models.operations.TestnetIssueTokenResponse(contentType, httpRes.statusCode()) {{
             issueTokenResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -509,12 +491,10 @@ public class TestnetNtp1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestnetSendTokenResponse res = new org.openapis.openapi.models.operations.TestnetSendTokenResponse() {{
+        org.openapis.openapi.models.operations.TestnetSendTokenResponse res = new org.openapis.openapi.models.operations.TestnetSendTokenResponse(contentType, httpRes.statusCode()) {{
             sendTokenResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

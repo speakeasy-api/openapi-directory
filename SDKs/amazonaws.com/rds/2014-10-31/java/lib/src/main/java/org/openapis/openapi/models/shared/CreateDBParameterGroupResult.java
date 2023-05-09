@@ -15,9 +15,11 @@ public class CreateDBParameterGroupResult {
      */
     
     public DBParameterGroup dbParameterGroup;
+
     public CreateDBParameterGroupResult withDBParameterGroup(DBParameterGroup dbParameterGroup) {
         this.dbParameterGroup = dbParameterGroup;
         return this;
     }
     
+    public CreateDBParameterGroupResult(){}
 }

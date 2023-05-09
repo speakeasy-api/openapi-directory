@@ -12,9 +12,13 @@ public class DescribeFleetMetadataRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public DescribeFleetMetadataRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
     }
     
+    public DescribeFleetMetadataRequestBody(@JsonProperty("FleetArn") String fleetArn) {
+        this.fleetArn = fleetArn;
+  }
 }

@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteSecurity;
 import org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteRequest;
 import org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteResponse;
+import org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.BatchDeleteAlertsRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -18,7 +17,7 @@ public class Application {
                 .build();
 
             AlertcenterAlertsBatchDeleteRequest req = new AlertcenterAlertsBatchDeleteRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 batchDeleteAlertsRequest = new BatchDeleteAlertsRequest() {{
                     alertId = new String[]{{
                         add("distinctio"),
@@ -26,9 +25,9 @@ public class Application {
                         add("unde"),
                     }};
                     customerId = "nulla";
-                }};
+                }};;
                 accessToken = "corrupti";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "vel";
                 fields = "error";
                 key = "deserunt";
@@ -37,18 +36,20 @@ public class Application {
                 quotaUser = "iure";
                 uploadType = "magnam";
                 uploadProtocol = "debitis";
-            }}            
+            }};            
 
-            AlertcenterAlertsBatchDeleteResponse res = sdk.alerts.alertcenterAlertsBatchDelete(req, new AlertcenterAlertsBatchDeleteSecurity() {{
+            AlertcenterAlertsBatchDeleteResponse res = sdk.alerts.alertcenterAlertsBatchDelete(req, new AlertcenterAlertsBatchDeleteSecurity("ipsa", "delectus") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.batchDeleteAlertsResponse.isPresent()) {
+            if (res.batchDeleteAlertsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

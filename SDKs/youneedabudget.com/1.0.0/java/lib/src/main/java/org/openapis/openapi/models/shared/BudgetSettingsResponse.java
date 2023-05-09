@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BudgetSettingsResponse {
     @JsonProperty("data")
     public BudgetSettingsResponseData data;
+
     public BudgetSettingsResponse withData(BudgetSettingsResponseData data) {
         this.data = data;
         return this;
     }
     
+    public BudgetSettingsResponse(@JsonProperty("data") BudgetSettingsResponseData data) {
+        this.data = data;
+  }
 }

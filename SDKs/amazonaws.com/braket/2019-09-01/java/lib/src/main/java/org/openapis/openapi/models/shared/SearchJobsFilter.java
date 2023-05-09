@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SearchJobsFilter {
     @JsonProperty("name")
     public String name;
+
     public SearchJobsFilter withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class SearchJobsFilter {
     
     @JsonProperty("operator")
     public SearchJobsFilterOperatorEnum operator;
+
     public SearchJobsFilter withOperator(SearchJobsFilterOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -26,9 +28,15 @@ public class SearchJobsFilter {
     
     @JsonProperty("values")
     public String[] values;
+
     public SearchJobsFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SearchJobsFilter(@JsonProperty("name") String name, @JsonProperty("operator") SearchJobsFilterOperatorEnum operator, @JsonProperty("values") String[] values) {
+        this.name = name;
+        this.operator = operator;
+        this.values = values;
+  }
 }

@@ -15,6 +15,7 @@ public class TLEEphemeris {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Object")
     public S3Object s3Object;
+
     public TLEEphemeris withS3Object(S3Object s3Object) {
         this.s3Object = s3Object;
         return this;
@@ -23,9 +24,11 @@ public class TLEEphemeris {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tleData")
     public TLEData[] tleData;
+
     public TLEEphemeris withTleData(TLEData[] tleData) {
         this.tleData = tleData;
         return this;
     }
     
+    public TLEEphemeris(){}
 }

@@ -15,6 +15,7 @@ public class UpdateLoggingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallArn")
     public String firewallArn;
+
     public UpdateLoggingConfigurationResponse withFirewallArn(String firewallArn) {
         this.firewallArn = firewallArn;
         return this;
@@ -23,6 +24,7 @@ public class UpdateLoggingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallName")
     public String firewallName;
+
     public UpdateLoggingConfigurationResponse withFirewallName(String firewallName) {
         this.firewallName = firewallName;
         return this;
@@ -34,9 +36,11 @@ public class UpdateLoggingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoggingConfiguration")
     public LoggingConfiguration loggingConfiguration;
+
     public UpdateLoggingConfigurationResponse withLoggingConfiguration(LoggingConfiguration loggingConfiguration) {
         this.loggingConfiguration = loggingConfiguration;
         return this;
     }
     
+    public UpdateLoggingConfigurationResponse(){}
 }

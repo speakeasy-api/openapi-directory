@@ -12,6 +12,7 @@ public class GetAppConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public GetAppConfigRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -42,6 +43,7 @@ public class GetAppConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetAppConfigRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -54,6 +56,7 @@ public class GetAppConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=include")
     public GetAppConfigIncludeEnum[] include;
+
     public GetAppConfigRequest withInclude(GetAppConfigIncludeEnum[] include) {
         this.include = include;
         return this;
@@ -74,6 +77,7 @@ public class GetAppConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetAppConfigRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -84,6 +88,7 @@ public class GetAppConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public GetAppConfigRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -94,6 +99,7 @@ public class GetAppConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
     public String sub;
+
     public GetAppConfigRequest withSub(String sub) {
         this.sub = sub;
         return this;
@@ -105,9 +111,11 @@ public class GetAppConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=system")
     public String system;
+
     public GetAppConfigRequest withSystem(String system) {
         this.system = system;
         return this;
     }
     
+    public GetAppConfigRequest(){}
 }

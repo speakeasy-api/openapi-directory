@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileListFromComputeNodeRequest {
@@ -12,6 +13,7 @@ public class FileListFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$filter")
     public String dollarFilter;
+
     public FileListFromComputeNodeRequest withDollarFilter(String dollarFilter) {
         this.dollarFilter = dollarFilter;
         return this;
@@ -22,6 +24,7 @@ public class FileListFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public FileListFromComputeNodeRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -32,6 +35,7 @@ public class FileListFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public FileListFromComputeNodeRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -42,6 +46,7 @@ public class FileListFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxresults")
     public Integer maxresults;
+
     public FileListFromComputeNodeRequest withMaxresults(Integer maxresults) {
         this.maxresults = maxresults;
         return this;
@@ -52,6 +57,7 @@ public class FileListFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nodeId")
     public String nodeId;
+
     public FileListFromComputeNodeRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -62,6 +68,7 @@ public class FileListFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public FileListFromComputeNodeRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -72,6 +79,7 @@ public class FileListFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
     public String poolId;
+
     public FileListFromComputeNodeRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -82,6 +90,7 @@ public class FileListFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
     public Boolean recursive;
+
     public FileListFromComputeNodeRequest withRecursive(Boolean recursive) {
         this.recursive = recursive;
         return this;
@@ -92,6 +101,7 @@ public class FileListFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public FileListFromComputeNodeRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -102,9 +112,15 @@ public class FileListFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public FileListFromComputeNodeRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public FileListFromComputeNodeRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("nodeId") String nodeId, @JsonProperty("poolId") String poolId) {
+        this.apiVersion = apiVersion;
+        this.nodeId = nodeId;
+        this.poolId = poolId;
+  }
 }

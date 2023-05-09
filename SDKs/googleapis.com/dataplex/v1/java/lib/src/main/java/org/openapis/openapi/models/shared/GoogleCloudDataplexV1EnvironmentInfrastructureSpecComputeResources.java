@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1EnvironmentInfrastructureSpecComputeResources 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public Integer diskSizeGb;
+
     public GoogleCloudDataplexV1EnvironmentInfrastructureSpecComputeResources withDiskSizeGb(Integer diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1EnvironmentInfrastructureSpecComputeResources 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNodeCount")
     public Integer maxNodeCount;
+
     public GoogleCloudDataplexV1EnvironmentInfrastructureSpecComputeResources withMaxNodeCount(Integer maxNodeCount) {
         this.maxNodeCount = maxNodeCount;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDataplexV1EnvironmentInfrastructureSpecComputeResources 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeCount")
     public Integer nodeCount;
+
     public GoogleCloudDataplexV1EnvironmentInfrastructureSpecComputeResources withNodeCount(Integer nodeCount) {
         this.nodeCount = nodeCount;
         return this;
     }
     
+    public GoogleCloudDataplexV1EnvironmentInfrastructureSpecComputeResources(){}
 }

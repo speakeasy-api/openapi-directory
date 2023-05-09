@@ -15,6 +15,7 @@ public class SavingsPlansPurchaseRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountScope")
     public AccountScopeEnum accountScope;
+
     public SavingsPlansPurchaseRecommendation withAccountScope(AccountScopeEnum accountScope) {
         this.accountScope = accountScope;
         return this;
@@ -23,6 +24,7 @@ public class SavingsPlansPurchaseRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LookbackPeriodInDays")
     public LookbackPeriodInDaysEnum lookbackPeriodInDays;
+
     public SavingsPlansPurchaseRecommendation withLookbackPeriodInDays(LookbackPeriodInDaysEnum lookbackPeriodInDays) {
         this.lookbackPeriodInDays = lookbackPeriodInDays;
         return this;
@@ -31,6 +33,7 @@ public class SavingsPlansPurchaseRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentOption")
     public PaymentOptionEnum paymentOption;
+
     public SavingsPlansPurchaseRecommendation withPaymentOption(PaymentOptionEnum paymentOption) {
         this.paymentOption = paymentOption;
         return this;
@@ -39,6 +42,7 @@ public class SavingsPlansPurchaseRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SavingsPlansPurchaseRecommendationDetails")
     public SavingsPlansPurchaseRecommendationDetail[] savingsPlansPurchaseRecommendationDetails;
+
     public SavingsPlansPurchaseRecommendation withSavingsPlansPurchaseRecommendationDetails(SavingsPlansPurchaseRecommendationDetail[] savingsPlansPurchaseRecommendationDetails) {
         this.savingsPlansPurchaseRecommendationDetails = savingsPlansPurchaseRecommendationDetails;
         return this;
@@ -47,6 +51,7 @@ public class SavingsPlansPurchaseRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SavingsPlansPurchaseRecommendationSummary")
     public SavingsPlansPurchaseRecommendationSummary savingsPlansPurchaseRecommendationSummary;
+
     public SavingsPlansPurchaseRecommendation withSavingsPlansPurchaseRecommendationSummary(SavingsPlansPurchaseRecommendationSummary savingsPlansPurchaseRecommendationSummary) {
         this.savingsPlansPurchaseRecommendationSummary = savingsPlansPurchaseRecommendationSummary;
         return this;
@@ -55,6 +60,7 @@ public class SavingsPlansPurchaseRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SavingsPlansType")
     public SupportedSavingsPlansTypeEnum savingsPlansType;
+
     public SavingsPlansPurchaseRecommendation withSavingsPlansType(SupportedSavingsPlansTypeEnum savingsPlansType) {
         this.savingsPlansType = savingsPlansType;
         return this;
@@ -63,9 +69,11 @@ public class SavingsPlansPurchaseRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TermInYears")
     public TermInYearsEnum termInYears;
+
     public SavingsPlansPurchaseRecommendation withTermInYears(TermInYearsEnum termInYears) {
         this.termInYears = termInYears;
         return this;
     }
     
+    public SavingsPlansPurchaseRecommendation(){}
 }

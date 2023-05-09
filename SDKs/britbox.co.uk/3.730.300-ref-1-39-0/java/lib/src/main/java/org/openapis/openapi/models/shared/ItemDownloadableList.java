@@ -15,9 +15,13 @@ public class ItemDownloadableList {
      */
     @JsonProperty("items")
     public ItemDownloadable[] items;
+
     public ItemDownloadableList withItems(ItemDownloadable[] items) {
         this.items = items;
         return this;
     }
     
+    public ItemDownloadableList(@JsonProperty("items") ItemDownloadable[] items) {
+        this.items = items;
+  }
 }

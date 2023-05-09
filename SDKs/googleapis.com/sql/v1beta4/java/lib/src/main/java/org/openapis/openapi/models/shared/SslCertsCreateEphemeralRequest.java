@@ -18,6 +18,7 @@ public class SslCertsCreateEphemeralRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access_token")
     public String accessToken;
+
     public SslCertsCreateEphemeralRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -29,9 +30,11 @@ public class SslCertsCreateEphemeralRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_key")
     public String publicKey;
+
     public SslCertsCreateEphemeralRequest withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public SslCertsCreateEphemeralRequest(){}
 }

@@ -18,6 +18,7 @@ public class LicensesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LicensesListResponse withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class LicensesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public License[] items;
+
     public LicensesListResponse withItems(License[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class LicensesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public LicensesListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -51,6 +54,7 @@ public class LicensesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public LicensesListResponse withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -62,9 +66,11 @@ public class LicensesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public LicensesListResponseWarning warning;
+
     public LicensesListResponse withWarning(LicensesListResponseWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public LicensesListResponse(){}
 }

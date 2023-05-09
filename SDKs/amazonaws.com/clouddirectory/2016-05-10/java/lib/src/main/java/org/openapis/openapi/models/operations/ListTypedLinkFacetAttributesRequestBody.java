@@ -15,6 +15,7 @@ public class ListTypedLinkFacetAttributesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTypedLinkFacetAttributesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -25,6 +26,7 @@ public class ListTypedLinkFacetAttributesRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public ListTypedLinkFacetAttributesRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +38,13 @@ public class ListTypedLinkFacetAttributesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTypedLinkFacetAttributesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTypedLinkFacetAttributesRequestBody(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRecommenderV1RecommendationStateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudRecommenderV1RecommendationStateInfoStateEnum state;
+
     public GoogleCloudRecommenderV1RecommendationStateInfo withState(GoogleCloudRecommenderV1RecommendationStateInfoStateEnum state) {
         this.state = state;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecommenderV1RecommendationStateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateMetadata")
     public java.util.Map<String, String> stateMetadata;
+
     public GoogleCloudRecommenderV1RecommendationStateInfo withStateMetadata(java.util.Map<String, String> stateMetadata) {
         this.stateMetadata = stateMetadata;
         return this;
     }
     
+    public GoogleCloudRecommenderV1RecommendationStateInfo(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaUserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directUserRequest")
     public Boolean directUserRequest;
+
     public GoogleCloudRetailV2alphaUserInfo withDirectUserRequest(Boolean directUserRequest) {
         this.directUserRequest = directUserRequest;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaUserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public GoogleCloudRetailV2alphaUserInfo withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2alphaUserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAgent")
     public String userAgent;
+
     public GoogleCloudRetailV2alphaUserInfo withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudRetailV2alphaUserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public GoogleCloudRetailV2alphaUserInfo withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaUserInfo(){}
 }

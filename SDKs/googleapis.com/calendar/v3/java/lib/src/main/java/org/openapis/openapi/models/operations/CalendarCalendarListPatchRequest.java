@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalendarCalendarListPatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CalendarListEntry calendarListEntry;
+
     public CalendarCalendarListPatchRequest withCalendarListEntry(org.openapis.openapi.models.shared.CalendarListEntry calendarListEntry) {
         this.calendarListEntry = calendarListEntry;
         return this;
@@ -19,6 +21,7 @@ public class CalendarCalendarListPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CalendarCalendarListPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class CalendarCalendarListPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=calendarId")
     public String calendarId;
+
     public CalendarCalendarListPatchRequest withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -39,6 +43,7 @@ public class CalendarCalendarListPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=colorRgbFormat")
     public Boolean colorRgbFormat;
+
     public CalendarCalendarListPatchRequest withColorRgbFormat(Boolean colorRgbFormat) {
         this.colorRgbFormat = colorRgbFormat;
         return this;
@@ -49,6 +54,7 @@ public class CalendarCalendarListPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CalendarCalendarListPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -59,6 +65,7 @@ public class CalendarCalendarListPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CalendarCalendarListPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -69,6 +76,7 @@ public class CalendarCalendarListPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CalendarCalendarListPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -79,6 +87,7 @@ public class CalendarCalendarListPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CalendarCalendarListPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -89,6 +98,7 @@ public class CalendarCalendarListPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CalendarCalendarListPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -99,9 +109,13 @@ public class CalendarCalendarListPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public CalendarCalendarListPatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public CalendarCalendarListPatchRequest(@JsonProperty("calendarId") String calendarId) {
+        this.calendarId = calendarId;
+  }
 }

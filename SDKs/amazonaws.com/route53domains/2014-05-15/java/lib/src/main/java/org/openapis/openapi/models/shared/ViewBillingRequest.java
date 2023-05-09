@@ -22,6 +22,7 @@ public class ViewBillingRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("End")
     public OffsetDateTime end;
+
     public ViewBillingRequest withEnd(OffsetDateTime end) {
         this.end = end;
         return this;
@@ -30,6 +31,7 @@ public class ViewBillingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ViewBillingRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -38,6 +40,7 @@ public class ViewBillingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxItems")
     public Long maxItems;
+
     public ViewBillingRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -48,9 +51,11 @@ public class ViewBillingRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Start")
     public OffsetDateTime start;
+
     public ViewBillingRequest withStart(OffsetDateTime start) {
         this.start = start;
         return this;
     }
     
+    public ViewBillingRequest(){}
 }

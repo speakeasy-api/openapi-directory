@@ -15,6 +15,7 @@ public class UpdateGroupCertificateConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateAuthorityExpiryInMilliseconds")
     public String certificateAuthorityExpiryInMilliseconds;
+
     public UpdateGroupCertificateConfigurationResponse withCertificateAuthorityExpiryInMilliseconds(String certificateAuthorityExpiryInMilliseconds) {
         this.certificateAuthorityExpiryInMilliseconds = certificateAuthorityExpiryInMilliseconds;
         return this;
@@ -23,6 +24,7 @@ public class UpdateGroupCertificateConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateExpiryInMilliseconds")
     public String certificateExpiryInMilliseconds;
+
     public UpdateGroupCertificateConfigurationResponse withCertificateExpiryInMilliseconds(String certificateExpiryInMilliseconds) {
         this.certificateExpiryInMilliseconds = certificateExpiryInMilliseconds;
         return this;
@@ -31,9 +33,11 @@ public class UpdateGroupCertificateConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupId")
     public String groupId;
+
     public UpdateGroupCertificateConfigurationResponse withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public UpdateGroupCertificateConfigurationResponse(){}
 }

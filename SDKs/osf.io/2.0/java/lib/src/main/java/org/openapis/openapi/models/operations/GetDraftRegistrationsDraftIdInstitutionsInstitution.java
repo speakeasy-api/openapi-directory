@@ -15,6 +15,7 @@ public class GetDraftRegistrationsDraftIdInstitutionsInstitution {
      */
     
     public GetDraftRegistrationsDraftIdInstitutionsInstitutionAttributes attributes;
+
     public GetDraftRegistrationsDraftIdInstitutionsInstitution withAttributes(GetDraftRegistrationsDraftIdInstitutionsInstitutionAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class GetDraftRegistrationsDraftIdInstitutionsInstitution {
      */
     
     public String id;
+
     public GetDraftRegistrationsDraftIdInstitutionsInstitution withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class GetDraftRegistrationsDraftIdInstitutionsInstitution {
      */
     
     public GetDraftRegistrationsDraftIdInstitutionsInstitutionLinks links;
+
     public GetDraftRegistrationsDraftIdInstitutionsInstitution withLinks(GetDraftRegistrationsDraftIdInstitutionsInstitutionLinks links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class GetDraftRegistrationsDraftIdInstitutionsInstitution {
      */
     
     public GetDraftRegistrationsDraftIdInstitutionsInstitutionRelationships relationships;
+
     public GetDraftRegistrationsDraftIdInstitutionsInstitution withRelationships(GetDraftRegistrationsDraftIdInstitutionsInstitutionRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -55,9 +59,11 @@ public class GetDraftRegistrationsDraftIdInstitutionsInstitution {
      */
     
     public String type;
+
     public GetDraftRegistrationsDraftIdInstitutionsInstitution withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetDraftRegistrationsDraftIdInstitutionsInstitution(){}
 }

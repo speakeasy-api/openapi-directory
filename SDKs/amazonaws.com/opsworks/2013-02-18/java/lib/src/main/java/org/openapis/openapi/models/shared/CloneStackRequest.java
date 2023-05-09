@@ -12,6 +12,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentVersion")
     public String agentVersion;
+
     public CloneStackRequest withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -20,6 +21,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public CloneStackRequest withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -28,6 +30,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChefConfiguration")
     public ChefConfiguration chefConfiguration;
+
     public CloneStackRequest withChefConfiguration(ChefConfiguration chefConfiguration) {
         this.chefConfiguration = chefConfiguration;
         return this;
@@ -36,6 +39,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloneAppIds")
     public String[] cloneAppIds;
+
     public CloneStackRequest withCloneAppIds(String[] cloneAppIds) {
         this.cloneAppIds = cloneAppIds;
         return this;
@@ -44,6 +48,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClonePermissions")
     public Boolean clonePermissions;
+
     public CloneStackRequest withClonePermissions(Boolean clonePermissions) {
         this.clonePermissions = clonePermissions;
         return this;
@@ -52,6 +57,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationManager")
     public StackConfigurationManager configurationManager;
+
     public CloneStackRequest withConfigurationManager(StackConfigurationManager configurationManager) {
         this.configurationManager = configurationManager;
         return this;
@@ -60,6 +66,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomCookbooksSource")
     public Source customCookbooksSource;
+
     public CloneStackRequest withCustomCookbooksSource(Source customCookbooksSource) {
         this.customCookbooksSource = customCookbooksSource;
         return this;
@@ -68,6 +75,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomJson")
     public String customJson;
+
     public CloneStackRequest withCustomJson(String customJson) {
         this.customJson = customJson;
         return this;
@@ -76,6 +84,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultAvailabilityZone")
     public String defaultAvailabilityZone;
+
     public CloneStackRequest withDefaultAvailabilityZone(String defaultAvailabilityZone) {
         this.defaultAvailabilityZone = defaultAvailabilityZone;
         return this;
@@ -84,6 +93,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultInstanceProfileArn")
     public String defaultInstanceProfileArn;
+
     public CloneStackRequest withDefaultInstanceProfileArn(String defaultInstanceProfileArn) {
         this.defaultInstanceProfileArn = defaultInstanceProfileArn;
         return this;
@@ -92,6 +102,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultOs")
     public String defaultOs;
+
     public CloneStackRequest withDefaultOs(String defaultOs) {
         this.defaultOs = defaultOs;
         return this;
@@ -100,6 +111,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultRootDeviceType")
     public RootDeviceTypeEnum defaultRootDeviceType;
+
     public CloneStackRequest withDefaultRootDeviceType(RootDeviceTypeEnum defaultRootDeviceType) {
         this.defaultRootDeviceType = defaultRootDeviceType;
         return this;
@@ -108,6 +120,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSshKeyName")
     public String defaultSshKeyName;
+
     public CloneStackRequest withDefaultSshKeyName(String defaultSshKeyName) {
         this.defaultSshKeyName = defaultSshKeyName;
         return this;
@@ -116,6 +129,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSubnetId")
     public String defaultSubnetId;
+
     public CloneStackRequest withDefaultSubnetId(String defaultSubnetId) {
         this.defaultSubnetId = defaultSubnetId;
         return this;
@@ -124,6 +138,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostnameTheme")
     public String hostnameTheme;
+
     public CloneStackRequest withHostnameTheme(String hostnameTheme) {
         this.hostnameTheme = hostnameTheme;
         return this;
@@ -132,6 +147,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CloneStackRequest withName(String name) {
         this.name = name;
         return this;
@@ -140,6 +156,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public CloneStackRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -147,6 +164,7 @@ public class CloneStackRequest {
     
     @JsonProperty("ServiceRoleArn")
     public String serviceRoleArn;
+
     public CloneStackRequest withServiceRoleArn(String serviceRoleArn) {
         this.serviceRoleArn = serviceRoleArn;
         return this;
@@ -154,6 +172,7 @@ public class CloneStackRequest {
     
     @JsonProperty("SourceStackId")
     public String sourceStackId;
+
     public CloneStackRequest withSourceStackId(String sourceStackId) {
         this.sourceStackId = sourceStackId;
         return this;
@@ -162,6 +181,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseCustomCookbooks")
     public Boolean useCustomCookbooks;
+
     public CloneStackRequest withUseCustomCookbooks(Boolean useCustomCookbooks) {
         this.useCustomCookbooks = useCustomCookbooks;
         return this;
@@ -170,6 +190,7 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseOpsworksSecurityGroups")
     public Boolean useOpsworksSecurityGroups;
+
     public CloneStackRequest withUseOpsworksSecurityGroups(Boolean useOpsworksSecurityGroups) {
         this.useOpsworksSecurityGroups = useOpsworksSecurityGroups;
         return this;
@@ -178,9 +199,14 @@ public class CloneStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public CloneStackRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CloneStackRequest(@JsonProperty("ServiceRoleArn") String serviceRoleArn, @JsonProperty("SourceStackId") String sourceStackId) {
+        this.serviceRoleArn = serviceRoleArn;
+        this.sourceStackId = sourceStackId;
+  }
 }

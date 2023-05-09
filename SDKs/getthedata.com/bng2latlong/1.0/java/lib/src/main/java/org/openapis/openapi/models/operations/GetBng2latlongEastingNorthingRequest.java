@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBng2latlongEastingNorthingRequest {
@@ -12,6 +13,7 @@ public class GetBng2latlongEastingNorthingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=easting")
     public Long easting;
+
     public GetBng2latlongEastingNorthingRequest withEasting(Long easting) {
         this.easting = easting;
         return this;
@@ -22,9 +24,14 @@ public class GetBng2latlongEastingNorthingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=northing")
     public Long northing;
+
     public GetBng2latlongEastingNorthingRequest withNorthing(Long northing) {
         this.northing = northing;
         return this;
     }
     
+    public GetBng2latlongEastingNorthingRequest(@JsonProperty("easting") Long easting, @JsonProperty("northing") Long northing) {
+        this.easting = easting;
+        this.northing = northing;
+  }
 }

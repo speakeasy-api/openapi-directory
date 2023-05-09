@@ -12,9 +12,13 @@ public class GetFailbackReplicationConfigurationRequestBody {
      */
     @JsonProperty("recoveryInstanceID")
     public String recoveryInstanceID;
+
     public GetFailbackReplicationConfigurationRequestBody withRecoveryInstanceID(String recoveryInstanceID) {
         this.recoveryInstanceID = recoveryInstanceID;
         return this;
     }
     
+    public GetFailbackReplicationConfigurationRequestBody(@JsonProperty("recoveryInstanceID") String recoveryInstanceID) {
+        this.recoveryInstanceID = recoveryInstanceID;
+  }
 }

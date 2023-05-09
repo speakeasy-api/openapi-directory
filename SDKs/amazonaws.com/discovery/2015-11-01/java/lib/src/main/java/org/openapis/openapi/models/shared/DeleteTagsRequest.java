@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteTagsRequest {
     @JsonProperty("configurationIds")
     public String[] configurationIds;
+
     public DeleteTagsRequest withConfigurationIds(String[] configurationIds) {
         this.configurationIds = configurationIds;
         return this;
@@ -19,9 +20,13 @@ public class DeleteTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public DeleteTagsRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DeleteTagsRequest(@JsonProperty("configurationIds") String[] configurationIds) {
+        this.configurationIds = configurationIds;
+  }
 }

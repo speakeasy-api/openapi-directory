@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDetachUserPolicyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDetachUserPolicyActionEnum action;
+
     public GETDetachUserPolicyRequest withAction(GETDetachUserPolicyActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDetachUserPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyArn")
     public String policyArn;
+
     public GETDetachUserPolicyRequest withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -29,6 +32,7 @@ public class GETDetachUserPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
     public String userName;
+
     public GETDetachUserPolicyRequest withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -36,6 +40,7 @@ public class GETDetachUserPolicyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDetachUserPolicyVersionEnum version;
+
     public GETDetachUserPolicyRequest withVersion(GETDetachUserPolicyVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDetachUserPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDetachUserPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDetachUserPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDetachUserPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDetachUserPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDetachUserPolicyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDetachUserPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDetachUserPolicyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDetachUserPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDetachUserPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDetachUserPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDetachUserPolicyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETDetachUserPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDetachUserPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDetachUserPolicyRequest(@JsonProperty("Action") GETDetachUserPolicyActionEnum action, @JsonProperty("PolicyArn") String policyArn, @JsonProperty("UserName") String userName, @JsonProperty("Version") GETDetachUserPolicyVersionEnum version) {
+        this.action = action;
+        this.policyArn = policyArn;
+        this.userName = userName;
+        this.version = version;
+  }
 }

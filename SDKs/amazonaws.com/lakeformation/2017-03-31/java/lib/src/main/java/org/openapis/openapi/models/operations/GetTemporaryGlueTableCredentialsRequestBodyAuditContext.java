@@ -15,9 +15,11 @@ public class GetTemporaryGlueTableCredentialsRequestBodyAuditContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalAuditContext")
     public String additionalAuditContext;
+
     public GetTemporaryGlueTableCredentialsRequestBodyAuditContext withAdditionalAuditContext(String additionalAuditContext) {
         this.additionalAuditContext = additionalAuditContext;
         return this;
     }
     
+    public GetTemporaryGlueTableCredentialsRequestBodyAuditContext(){}
 }

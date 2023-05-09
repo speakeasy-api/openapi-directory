@@ -18,6 +18,7 @@ public class StreamProcessorSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectedHome")
     public ConnectedHomeSettings connectedHome;
+
     public StreamProcessorSettings withConnectedHome(ConnectedHomeSettings connectedHome) {
         this.connectedHome = connectedHome;
         return this;
@@ -26,9 +27,11 @@ public class StreamProcessorSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceSearch")
     public FaceSearchSettings faceSearch;
+
     public StreamProcessorSettings withFaceSearch(FaceSearchSettings faceSearch) {
         this.faceSearch = faceSearch;
         return this;
     }
     
+    public StreamProcessorSettings(){}
 }

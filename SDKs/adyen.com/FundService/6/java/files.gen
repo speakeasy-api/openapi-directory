@@ -81,4 +81,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/SetupBeneficiaryResponse.ja
 lib/src/main/java/org/openapis/openapi/models/shared/SetupBeneficiaryRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransferFundsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransferFundsRequest.java
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class QuotaBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminOverride")
     public QuotaOverride adminOverride;
+
     public QuotaBucket withAdminOverride(QuotaOverride adminOverride) {
         this.adminOverride = adminOverride;
         return this;
@@ -29,6 +30,7 @@ public class QuotaBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerOverride")
     public QuotaOverride consumerOverride;
+
     public QuotaBucket withConsumerOverride(QuotaOverride consumerOverride) {
         this.consumerOverride = consumerOverride;
         return this;
@@ -40,6 +42,7 @@ public class QuotaBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLimit")
     public String defaultLimit;
+
     public QuotaBucket withDefaultLimit(String defaultLimit) {
         this.defaultLimit = defaultLimit;
         return this;
@@ -51,6 +54,7 @@ public class QuotaBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public java.util.Map<String, String> dimensions;
+
     public QuotaBucket withDimensions(java.util.Map<String, String> dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -62,6 +66,7 @@ public class QuotaBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveLimit")
     public String effectiveLimit;
+
     public QuotaBucket withEffectiveLimit(String effectiveLimit) {
         this.effectiveLimit = effectiveLimit;
         return this;
@@ -73,9 +78,11 @@ public class QuotaBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerOverride")
     public QuotaOverride producerOverride;
+
     public QuotaBucket withProducerOverride(QuotaOverride producerOverride) {
         this.producerOverride = producerOverride;
         return this;
     }
     
+    public QuotaBucket(){}
 }

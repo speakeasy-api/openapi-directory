@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImageLocation {
     @JsonProperty("id")
     public String id;
+
     public ImageLocation withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class ImageLocation {
     
     @JsonProperty("url")
     public String url;
+
     public ImageLocation withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ImageLocation(@JsonProperty("id") String id, @JsonProperty("url") String url) {
+        this.id = id;
+        this.url = url;
+  }
 }

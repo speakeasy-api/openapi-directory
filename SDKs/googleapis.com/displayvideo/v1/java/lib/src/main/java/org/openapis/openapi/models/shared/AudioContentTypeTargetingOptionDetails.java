@@ -18,9 +18,11 @@ public class AudioContentTypeTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioContentType")
     public AudioContentTypeTargetingOptionDetailsAudioContentTypeEnum audioContentType;
+
     public AudioContentTypeTargetingOptionDetails withAudioContentType(AudioContentTypeTargetingOptionDetailsAudioContentTypeEnum audioContentType) {
         this.audioContentType = audioContentType;
         return this;
     }
     
+    public AudioContentTypeTargetingOptionDetails(){}
 }

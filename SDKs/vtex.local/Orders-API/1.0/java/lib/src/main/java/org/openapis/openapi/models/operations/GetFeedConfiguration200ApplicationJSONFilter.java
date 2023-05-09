@@ -18,6 +18,7 @@ public class GetFeedConfiguration200ApplicationJSONFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableSingleFire")
     public Boolean disableSingleFire;
+
     public GetFeedConfiguration200ApplicationJSONFilter withDisableSingleFire(Boolean disableSingleFire) {
         this.disableSingleFire = disableSingleFire;
         return this;
@@ -29,6 +30,7 @@ public class GetFeedConfiguration200ApplicationJSONFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public GetFeedConfiguration200ApplicationJSONFilter withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -40,20 +42,23 @@ public class GetFeedConfiguration200ApplicationJSONFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String[] status;
+
     public GetFeedConfiguration200ApplicationJSONFilter withStatus(String[] status) {
         this.status = status;
         return this;
     }
     
     /**
-     * Determines what orders appear in the feed and how they are filtered. If a feed has the `FromWorkflow` type configuration, it will receive order updates only when order\u2019s statuses change and orders can be filtered by status, using the `status` field. A feed with the `FromOrders` type configuration gets updates whenever any change is made to an order. in this case, orders can be filtered by any property, according to JSONata expressions set in the `expression` field.
+     * Determines what orders appear in the feed and how they are filtered. If a feed has the `FromWorkflow` type configuration, it will receive order updates only when order’s statuses change and orders can be filtered by status, using the `status` field. A feed with the `FromOrders` type configuration gets updates whenever any change is made to an order. in this case, orders can be filtered by any property, according to JSONata expressions set in the `expression` field.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetFeedConfiguration200ApplicationJSONFilter withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetFeedConfiguration200ApplicationJSONFilter(){}
 }

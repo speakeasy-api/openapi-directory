@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OauthAuthorizationsGetGrantRequest {
@@ -12,9 +13,13 @@ public class OauthAuthorizationsGetGrantRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=grant_id")
     public Long grantId;
+
     public OauthAuthorizationsGetGrantRequest withGrantId(Long grantId) {
         this.grantId = grantId;
         return this;
     }
     
+    public OauthAuthorizationsGetGrantRequest(@JsonProperty("grant_id") Long grantId) {
+        this.grantId = grantId;
+  }
 }

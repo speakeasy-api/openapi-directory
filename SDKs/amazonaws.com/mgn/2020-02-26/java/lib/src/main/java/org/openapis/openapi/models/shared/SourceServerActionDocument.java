@@ -15,6 +15,7 @@ public class SourceServerActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionID")
     public String actionID;
+
     public SourceServerActionDocument withActionID(String actionID) {
         this.actionID = actionID;
         return this;
@@ -23,6 +24,7 @@ public class SourceServerActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionName")
     public String actionName;
+
     public SourceServerActionDocument withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -31,6 +33,7 @@ public class SourceServerActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public SourceServerActionDocument withActive(Boolean active) {
         this.active = active;
         return this;
@@ -39,6 +42,7 @@ public class SourceServerActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public ActionCategoryEnum category;
+
     public SourceServerActionDocument withCategory(ActionCategoryEnum category) {
         this.category = category;
         return this;
@@ -47,6 +51,7 @@ public class SourceServerActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SourceServerActionDocument withDescription(String description) {
         this.description = description;
         return this;
@@ -55,6 +60,7 @@ public class SourceServerActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentIdentifier")
     public String documentIdentifier;
+
     public SourceServerActionDocument withDocumentIdentifier(String documentIdentifier) {
         this.documentIdentifier = documentIdentifier;
         return this;
@@ -63,6 +69,7 @@ public class SourceServerActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentVersion")
     public String documentVersion;
+
     public SourceServerActionDocument withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -71,6 +78,7 @@ public class SourceServerActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalParameters")
     public java.util.Map<String, SsmExternalParameter> externalParameters;
+
     public SourceServerActionDocument withExternalParameters(java.util.Map<String, SsmExternalParameter> externalParameters) {
         this.externalParameters = externalParameters;
         return this;
@@ -79,6 +87,7 @@ public class SourceServerActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mustSucceedForCutover")
     public Boolean mustSucceedForCutover;
+
     public SourceServerActionDocument withMustSucceedForCutover(Boolean mustSucceedForCutover) {
         this.mustSucceedForCutover = mustSucceedForCutover;
         return this;
@@ -87,6 +96,7 @@ public class SourceServerActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Long order;
+
     public SourceServerActionDocument withOrder(Long order) {
         this.order = order;
         return this;
@@ -95,6 +105,7 @@ public class SourceServerActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, SsmParameterStoreParameter[]> parameters;
+
     public SourceServerActionDocument withParameters(java.util.Map<String, SsmParameterStoreParameter[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -103,9 +114,11 @@ public class SourceServerActionDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutSeconds")
     public Long timeoutSeconds;
+
     public SourceServerActionDocument withTimeoutSeconds(Long timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
     }
     
+    public SourceServerActionDocument(){}
 }

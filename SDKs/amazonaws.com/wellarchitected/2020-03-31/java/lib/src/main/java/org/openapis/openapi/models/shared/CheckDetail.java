@@ -23,6 +23,7 @@ public class CheckDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public CheckDetail withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -34,6 +35,7 @@ public class CheckDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChoiceId")
     public String choiceId;
+
     public CheckDetail withChoiceId(String choiceId) {
         this.choiceId = choiceId;
         return this;
@@ -42,6 +44,7 @@ public class CheckDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CheckDetail withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +53,7 @@ public class CheckDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlaggedResources")
     public Long flaggedResources;
+
     public CheckDetail withFlaggedResources(Long flaggedResources) {
         this.flaggedResources = flaggedResources;
         return this;
@@ -58,6 +62,7 @@ public class CheckDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public CheckDetail withId(String id) {
         this.id = id;
         return this;
@@ -66,6 +71,7 @@ public class CheckDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensArn")
     public String lensArn;
+
     public CheckDetail withLensArn(String lensArn) {
         this.lensArn = lensArn;
         return this;
@@ -74,6 +80,7 @@ public class CheckDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CheckDetail withName(String name) {
         this.name = name;
         return this;
@@ -85,6 +92,7 @@ public class CheckDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PillarId")
     public String pillarId;
+
     public CheckDetail withPillarId(String pillarId) {
         this.pillarId = pillarId;
         return this;
@@ -93,6 +101,7 @@ public class CheckDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Provider")
     public CheckProviderEnum provider;
+
     public CheckDetail withProvider(CheckProviderEnum provider) {
         this.provider = provider;
         return this;
@@ -104,6 +113,7 @@ public class CheckDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuestionId")
     public String questionId;
+
     public CheckDetail withQuestionId(String questionId) {
         this.questionId = questionId;
         return this;
@@ -112,6 +122,7 @@ public class CheckDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public CheckFailureReasonEnum reason;
+
     public CheckDetail withReason(CheckFailureReasonEnum reason) {
         this.reason = reason;
         return this;
@@ -120,6 +131,7 @@ public class CheckDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CheckStatusEnum status;
+
     public CheckDetail withStatus(CheckStatusEnum status) {
         this.status = status;
         return this;
@@ -133,9 +145,11 @@ public class CheckDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public CheckDetail withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public CheckDetail(){}
 }

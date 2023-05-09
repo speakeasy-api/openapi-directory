@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ScheduledInstancesIamInstanceProfile {
     
     public String arn;
+
     public ScheduledInstancesIamInstanceProfile withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,11 @@ public class ScheduledInstancesIamInstanceProfile {
     
     
     public String name;
+
     public ScheduledInstancesIamInstanceProfile withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ScheduledInstancesIamInstanceProfile(){}
 }

@@ -14,6 +14,7 @@ public class UpdateAccountHolderStateRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public UpdateAccountHolderStateRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -24,6 +25,7 @@ public class UpdateAccountHolderStateRequest {
      */
     @JsonProperty("disable")
     public Boolean disable;
+
     public UpdateAccountHolderStateRequest withDisable(Boolean disable) {
         this.disable = disable;
         return this;
@@ -36,6 +38,7 @@ public class UpdateAccountHolderStateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public UpdateAccountHolderStateRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -47,9 +50,15 @@ public class UpdateAccountHolderStateRequest {
      */
     @JsonProperty("stateType")
     public UpdateAccountHolderStateRequestStateTypeEnum stateType;
+
     public UpdateAccountHolderStateRequest withStateType(UpdateAccountHolderStateRequestStateTypeEnum stateType) {
         this.stateType = stateType;
         return this;
     }
     
+    public UpdateAccountHolderStateRequest(@JsonProperty("accountHolderCode") String accountHolderCode, @JsonProperty("disable") Boolean disable, @JsonProperty("stateType") UpdateAccountHolderStateRequestStateTypeEnum stateType) {
+        this.accountHolderCode = accountHolderCode;
+        this.disable = disable;
+        this.stateType = stateType;
+  }
 }

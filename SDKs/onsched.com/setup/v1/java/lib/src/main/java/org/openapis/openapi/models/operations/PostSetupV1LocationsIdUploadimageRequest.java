@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSetupV1LocationsIdUploadimageRequest {
@@ -12,6 +13,7 @@ public class PostSetupV1LocationsIdUploadimageRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ResourceImageInputModel resourceImageInputModel;
+
     public PostSetupV1LocationsIdUploadimageRequest withResourceImageInputModel(org.openapis.openapi.models.shared.ResourceImageInputModel resourceImageInputModel) {
         this.resourceImageInputModel = resourceImageInputModel;
         return this;
@@ -22,9 +24,13 @@ public class PostSetupV1LocationsIdUploadimageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PostSetupV1LocationsIdUploadimageRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PostSetupV1LocationsIdUploadimageRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLabelGroupResponse {
@@ -12,6 +13,7 @@ public class UpdateLabelGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateLabelGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateLabelGroupResponse {
      */
     
     public Object conflictException;
+
     public UpdateLabelGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateLabelGroupResponse {
     
     
     public String contentType;
+
     public UpdateLabelGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateLabelGroupResponse {
      */
     
     public Object internalServerException;
+
     public UpdateLabelGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateLabelGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateLabelGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateLabelGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateLabelGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateLabelGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLabelGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateLabelGroupResponse {
      */
     
     public Object throttlingException;
+
     public UpdateLabelGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateLabelGroupResponse {
      */
     
     public Object validationException;
+
     public UpdateLabelGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateLabelGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

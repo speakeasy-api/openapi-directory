@@ -20,6 +20,7 @@ public class RetrieveCustomerSegmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveCustomerSegmentResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -34,9 +35,11 @@ public class RetrieveCustomerSegmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segment")
     public CustomerSegment segment;
+
     public RetrieveCustomerSegmentResponse withSegment(CustomerSegment segment) {
         this.segment = segment;
         return this;
     }
     
+    public RetrieveCustomerSegmentResponse(){}
 }

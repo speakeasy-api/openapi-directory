@@ -22,6 +22,7 @@ public class MatchmakingRuleSet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public MatchmakingRuleSet withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class MatchmakingRuleSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleSetArn")
     public String ruleSetArn;
+
     public MatchmakingRuleSet withRuleSetArn(String ruleSetArn) {
         this.ruleSetArn = ruleSetArn;
         return this;
@@ -37,6 +39,7 @@ public class MatchmakingRuleSet {
     
     @JsonProperty("RuleSetBody")
     public String ruleSetBody;
+
     public MatchmakingRuleSet withRuleSetBody(String ruleSetBody) {
         this.ruleSetBody = ruleSetBody;
         return this;
@@ -45,9 +48,13 @@ public class MatchmakingRuleSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleSetName")
     public String ruleSetName;
+
     public MatchmakingRuleSet withRuleSetName(String ruleSetName) {
         this.ruleSetName = ruleSetName;
         return this;
     }
     
+    public MatchmakingRuleSet(@JsonProperty("RuleSetBody") String ruleSetBody) {
+        this.ruleSetBody = ruleSetBody;
+  }
 }

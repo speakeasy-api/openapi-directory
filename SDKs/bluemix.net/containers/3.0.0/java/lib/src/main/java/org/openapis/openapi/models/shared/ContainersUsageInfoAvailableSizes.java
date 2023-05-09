@@ -15,6 +15,7 @@ public class ContainersUsageInfoAvailableSizes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disk")
     public Integer disk;
+
     public ContainersUsageInfoAvailableSizes withDisk(Integer disk) {
         this.disk = disk;
         return this;
@@ -26,6 +27,7 @@ public class ContainersUsageInfoAvailableSizes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ContainersUsageInfoAvailableSizes withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class ContainersUsageInfoAvailableSizes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory_MB")
     public Integer memoryMB;
+
     public ContainersUsageInfoAvailableSizes withMemoryMB(Integer memoryMB) {
         this.memoryMB = memoryMB;
         return this;
@@ -48,6 +51,7 @@ public class ContainersUsageInfoAvailableSizes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContainersUsageInfoAvailableSizes withName(String name) {
         this.name = name;
         return this;
@@ -59,9 +63,11 @@ public class ContainersUsageInfoAvailableSizes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcpus")
     public Integer vcpus;
+
     public ContainersUsageInfoAvailableSizes withVcpus(Integer vcpus) {
         this.vcpus = vcpus;
         return this;
     }
     
+    public ContainersUsageInfoAvailableSizes(){}
 }

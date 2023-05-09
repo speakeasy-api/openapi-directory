@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcknowledgeOrderReceiptResponse {
@@ -12,6 +13,7 @@ public class AcknowledgeOrderReceiptResponse {
      */
     
     public org.openapis.openapi.models.shared.AcknowledgeOrderReceiptResponse acknowledgeOrderReceiptResponse;
+
     public AcknowledgeOrderReceiptResponse withAcknowledgeOrderReceiptResponse(org.openapis.openapi.models.shared.AcknowledgeOrderReceiptResponse acknowledgeOrderReceiptResponse) {
         this.acknowledgeOrderReceiptResponse = acknowledgeOrderReceiptResponse;
         return this;
@@ -19,6 +21,7 @@ public class AcknowledgeOrderReceiptResponse {
     
     
     public String contentType;
+
     public AcknowledgeOrderReceiptResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AcknowledgeOrderReceiptResponse {
      */
     
     public Object internalServerException;
+
     public AcknowledgeOrderReceiptResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class AcknowledgeOrderReceiptResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AcknowledgeOrderReceiptResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class AcknowledgeOrderReceiptResponse {
     
     
     public Integer statusCode;
+
     public AcknowledgeOrderReceiptResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AcknowledgeOrderReceiptResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcknowledgeOrderReceiptResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class AcknowledgeOrderReceiptResponse {
      */
     
     public Object validationException;
+
     public AcknowledgeOrderReceiptResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AcknowledgeOrderReceiptResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

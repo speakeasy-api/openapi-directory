@@ -18,6 +18,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audits")
     public java.util.Map<String, LighthouseAuditResultV5> audits;
+
     public LighthouseResultV5 withAudits(java.util.Map<String, LighthouseAuditResultV5> audits) {
         this.audits = audits;
         return this;
@@ -29,6 +30,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public Categories categories;
+
     public LighthouseResultV5 withCategories(Categories categories) {
         this.categories = categories;
         return this;
@@ -40,6 +42,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryGroups")
     public java.util.Map<String, CategoryGroupV5> categoryGroups;
+
     public LighthouseResultV5 withCategoryGroups(java.util.Map<String, CategoryGroupV5> categoryGroups) {
         this.categoryGroups = categoryGroups;
         return this;
@@ -51,6 +54,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configSettings")
     public ConfigSettings configSettings;
+
     public LighthouseResultV5 withConfigSettings(ConfigSettings configSettings) {
         this.configSettings = configSettings;
         return this;
@@ -62,6 +66,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public LhrEntity[] entities;
+
     public LighthouseResultV5 withEntities(LhrEntity[] entities) {
         this.entities = entities;
         return this;
@@ -73,6 +78,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public Environment environment;
+
     public LighthouseResultV5 withEnvironment(Environment environment) {
         this.environment = environment;
         return this;
@@ -84,6 +90,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fetchTime")
     public String fetchTime;
+
     public LighthouseResultV5 withFetchTime(String fetchTime) {
         this.fetchTime = fetchTime;
         return this;
@@ -95,6 +102,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalDisplayedUrl")
     public String finalDisplayedUrl;
+
     public LighthouseResultV5 withFinalDisplayedUrl(String finalDisplayedUrl) {
         this.finalDisplayedUrl = finalDisplayedUrl;
         return this;
@@ -106,6 +114,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalUrl")
     public String finalUrl;
+
     public LighthouseResultV5 withFinalUrl(String finalUrl) {
         this.finalUrl = finalUrl;
         return this;
@@ -117,6 +126,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullPageScreenshot")
     public Object fullPageScreenshot;
+
     public LighthouseResultV5 withFullPageScreenshot(Object fullPageScreenshot) {
         this.fullPageScreenshot = fullPageScreenshot;
         return this;
@@ -128,6 +138,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("i18n")
     public I18n i18n;
+
     public LighthouseResultV5 withI18n(I18n i18n) {
         this.i18n = i18n;
         return this;
@@ -139,6 +150,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lighthouseVersion")
     public String lighthouseVersion;
+
     public LighthouseResultV5 withLighthouseVersion(String lighthouseVersion) {
         this.lighthouseVersion = lighthouseVersion;
         return this;
@@ -150,6 +162,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mainDocumentUrl")
     public String mainDocumentUrl;
+
     public LighthouseResultV5 withMainDocumentUrl(String mainDocumentUrl) {
         this.mainDocumentUrl = mainDocumentUrl;
         return this;
@@ -161,6 +174,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedUrl")
     public String requestedUrl;
+
     public LighthouseResultV5 withRequestedUrl(String requestedUrl) {
         this.requestedUrl = requestedUrl;
         return this;
@@ -172,6 +186,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runWarnings")
     public Object[] runWarnings;
+
     public LighthouseResultV5 withRunWarnings(Object[] runWarnings) {
         this.runWarnings = runWarnings;
         return this;
@@ -183,6 +198,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeError")
     public RuntimeError runtimeError;
+
     public LighthouseResultV5 withRuntimeError(RuntimeError runtimeError) {
         this.runtimeError = runtimeError;
         return this;
@@ -194,6 +210,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackPacks")
     public StackPack[] stackPacks;
+
     public LighthouseResultV5 withStackPacks(StackPack[] stackPacks) {
         this.stackPacks = stackPacks;
         return this;
@@ -205,6 +222,7 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timing")
     public Timing timing;
+
     public LighthouseResultV5 withTiming(Timing timing) {
         this.timing = timing;
         return this;
@@ -216,9 +234,11 @@ public class LighthouseResultV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAgent")
     public String userAgent;
+
     public LighthouseResultV5 withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
     }
     
+    public LighthouseResultV5(){}
 }

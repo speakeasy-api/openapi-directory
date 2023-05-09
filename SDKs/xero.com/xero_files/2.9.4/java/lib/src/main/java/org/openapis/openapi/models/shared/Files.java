@@ -15,6 +15,7 @@ public class Files {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public FileObject[] items;
+
     public Files withItems(FileObject[] items) {
         this.items = items;
         return this;
@@ -23,6 +24,7 @@ public class Files {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Page")
     public Long page;
+
     public Files withPage(Long page) {
         this.page = page;
         return this;
@@ -31,6 +33,7 @@ public class Files {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PerPage")
     public Long perPage;
+
     public Files withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -39,9 +42,11 @@ public class Files {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalCount")
     public Long totalCount;
+
     public Files withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public Files(){}
 }

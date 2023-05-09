@@ -15,6 +15,7 @@ public class AwsWafv2RulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public AwsWafv2RulesActionDetails action;
+
     public AwsWafv2RulesDetails withAction(AwsWafv2RulesActionDetails action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class AwsWafv2RulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsWafv2RulesDetails withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class AwsWafv2RulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverrideAction")
     public String overrideAction;
+
     public AwsWafv2RulesDetails withOverrideAction(String overrideAction) {
         this.overrideAction = overrideAction;
         return this;
@@ -39,6 +42,7 @@ public class AwsWafv2RulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public AwsWafv2RulesDetails withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -47,9 +51,11 @@ public class AwsWafv2RulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VisibilityConfig")
     public AwsWafv2VisibilityConfigDetails visibilityConfig;
+
     public AwsWafv2RulesDetails withVisibilityConfig(AwsWafv2VisibilityConfigDetails visibilityConfig) {
         this.visibilityConfig = visibilityConfig;
         return this;
     }
     
+    public AwsWafv2RulesDetails(){}
 }

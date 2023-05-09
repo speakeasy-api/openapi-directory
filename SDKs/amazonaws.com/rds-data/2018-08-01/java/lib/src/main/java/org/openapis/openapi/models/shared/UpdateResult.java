@@ -15,9 +15,11 @@ public class UpdateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generatedFields")
     public Field[] generatedFields;
+
     public UpdateResult withGeneratedFields(Field[] generatedFields) {
         this.generatedFields = generatedFields;
         return this;
     }
     
+    public UpdateResult(){}
 }

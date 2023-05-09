@@ -15,6 +15,7 @@ public class GetLambdaFunctionRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionRecommendations")
     public LambdaFunctionRecommendation[] lambdaFunctionRecommendations;
+
     public GetLambdaFunctionRecommendationsResponse withLambdaFunctionRecommendations(LambdaFunctionRecommendation[] lambdaFunctionRecommendations) {
         this.lambdaFunctionRecommendations = lambdaFunctionRecommendations;
         return this;
@@ -23,9 +24,11 @@ public class GetLambdaFunctionRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetLambdaFunctionRecommendationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetLambdaFunctionRecommendationsResponse(){}
 }

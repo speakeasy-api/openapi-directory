@@ -18,6 +18,7 @@ public class SasPortalListDeploymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployments")
     public SasPortalDeployment[] deployments;
+
     public SasPortalListDeploymentsResponse withDeployments(SasPortalDeployment[] deployments) {
         this.deployments = deployments;
         return this;
@@ -29,9 +30,11 @@ public class SasPortalListDeploymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SasPortalListDeploymentsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public SasPortalListDeploymentsResponse(){}
 }

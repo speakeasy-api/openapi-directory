@@ -89,4 +89,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/HttpRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportError.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportRequest.java
+docs/sdk/README.md
+docs/services/README.md
 USAGE.md

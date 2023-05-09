@@ -15,9 +15,11 @@ public class UpdateAssessmentControlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("control")
     public AssessmentControl control;
+
     public UpdateAssessmentControlResponse withControl(AssessmentControl control) {
         this.control = control;
         return this;
     }
     
+    public UpdateAssessmentControlResponse(){}
 }

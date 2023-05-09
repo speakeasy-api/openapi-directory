@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChecksListAnnotationsResponse {
     
     public String contentType;
+
     public ChecksListAnnotationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ChecksListAnnotationsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ChecksListAnnotationsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ChecksListAnnotationsResponse {
     
     
     public Integer statusCode;
+
     public ChecksListAnnotationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ChecksListAnnotationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChecksListAnnotationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ChecksListAnnotationsResponse {
      */
     
     public org.openapis.openapi.models.shared.CheckAnnotation[] checkAnnotations;
+
     public ChecksListAnnotationsResponse withCheckAnnotations(org.openapis.openapi.models.shared.CheckAnnotation[] checkAnnotations) {
         this.checkAnnotations = checkAnnotations;
         return this;
     }
     
+    public ChecksListAnnotationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

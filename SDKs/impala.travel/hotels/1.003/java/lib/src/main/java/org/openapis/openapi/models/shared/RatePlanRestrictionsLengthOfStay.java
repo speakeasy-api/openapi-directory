@@ -18,6 +18,7 @@ public class RatePlanRestrictionsLengthOfStay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
     public Double max;
+
     public RatePlanRestrictionsLengthOfStay withMax(Double max) {
         this.max = max;
         return this;
@@ -28,9 +29,13 @@ public class RatePlanRestrictionsLengthOfStay {
      */
     @JsonProperty("min")
     public Double min;
+
     public RatePlanRestrictionsLengthOfStay withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public RatePlanRestrictionsLengthOfStay(@JsonProperty("min") Double min) {
+        this.min = min;
+  }
 }

@@ -18,6 +18,7 @@ public class GridData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnMetadata")
     public DimensionProperties[] columnMetadata;
+
     public GridData withColumnMetadata(DimensionProperties[] columnMetadata) {
         this.columnMetadata = columnMetadata;
         return this;
@@ -29,6 +30,7 @@ public class GridData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowData")
     public RowData[] rowData;
+
     public GridData withRowData(RowData[] rowData) {
         this.rowData = rowData;
         return this;
@@ -40,6 +42,7 @@ public class GridData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowMetadata")
     public DimensionProperties[] rowMetadata;
+
     public GridData withRowMetadata(DimensionProperties[] rowMetadata) {
         this.rowMetadata = rowMetadata;
         return this;
@@ -51,6 +54,7 @@ public class GridData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startColumn")
     public Integer startColumn;
+
     public GridData withStartColumn(Integer startColumn) {
         this.startColumn = startColumn;
         return this;
@@ -62,9 +66,11 @@ public class GridData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startRow")
     public Integer startRow;
+
     public GridData withStartRow(Integer startRow) {
         this.startRow = startRow;
         return this;
     }
     
+    public GridData(){}
 }

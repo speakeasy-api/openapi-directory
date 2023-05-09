@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ArchivedResult {
     @JsonProperty("snapshot")
     public Snapshot snapshot;
+
     public ArchivedResult withSnapshot(Snapshot snapshot) {
         this.snapshot = snapshot;
         return this;
@@ -22,6 +23,7 @@ public class ArchivedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public ArchivedResult withTag(String tag) {
         this.tag = tag;
         return this;
@@ -32,6 +34,7 @@ public class ArchivedResult {
      */
     @JsonProperty("timestamp")
     public String timestamp;
+
     public ArchivedResult withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -42,9 +45,15 @@ public class ArchivedResult {
      */
     @JsonProperty("url")
     public String url;
+
     public ArchivedResult withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ArchivedResult(@JsonProperty("snapshot") Snapshot snapshot, @JsonProperty("timestamp") String timestamp, @JsonProperty("url") String url) {
+        this.snapshot = snapshot;
+        this.timestamp = timestamp;
+        this.url = url;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGroupResponse {
@@ -12,6 +13,7 @@ public class GetGroupResponse {
      */
     
     public Object conflictException;
+
     public GetGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class GetGroupResponse {
     
     
     public String contentType;
+
     public GetGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.GetGroupResponse getGroupResponse;
+
     public GetGroupResponse withGetGroupResponse(org.openapis.openapi.models.shared.GetGroupResponse getGroupResponse) {
         this.getGroupResponse = getGroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetGroupResponse {
      */
     
     public Object internalServerException;
+
     public GetGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetGroupResponse {
     
     
     public Integer statusCode;
+
     public GetGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetGroupResponse {
      */
     
     public Object validationException;
+
     public GetGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

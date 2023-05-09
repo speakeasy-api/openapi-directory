@@ -15,9 +15,11 @@ public class UpdateDataSourceRequestBodyLambdaConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionArn")
     public String lambdaFunctionArn;
+
     public UpdateDataSourceRequestBodyLambdaConfig withLambdaFunctionArn(String lambdaFunctionArn) {
         this.lambdaFunctionArn = lambdaFunctionArn;
         return this;
     }
     
+    public UpdateDataSourceRequestBodyLambdaConfig(){}
 }

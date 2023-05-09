@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Configuration {
     @JsonProperty("classification")
     public String classification;
+
     public Configuration withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -22,6 +23,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurations")
     public Configuration[] configurations;
+
     public Configuration withConfigurations(Configuration[] configurations) {
         this.configurations = configurations;
         return this;
@@ -33,9 +35,13 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public Object properties;
+
     public Configuration withProperties(Object properties) {
         this.properties = properties;
         return this;
     }
     
+    public Configuration(@JsonProperty("classification") String classification) {
+        this.classification = classification;
+  }
 }

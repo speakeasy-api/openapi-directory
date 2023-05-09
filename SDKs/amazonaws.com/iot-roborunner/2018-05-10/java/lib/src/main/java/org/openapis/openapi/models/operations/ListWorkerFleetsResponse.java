@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWorkerFleetsResponse {
@@ -12,6 +13,7 @@ public class ListWorkerFleetsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListWorkerFleetsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListWorkerFleetsResponse {
     
     
     public String contentType;
+
     public ListWorkerFleetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListWorkerFleetsResponse {
      */
     
     public Object internalServerException;
+
     public ListWorkerFleetsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListWorkerFleetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWorkerFleetsResponse listWorkerFleetsResponse;
+
     public ListWorkerFleetsResponse withListWorkerFleetsResponse(org.openapis.openapi.models.shared.ListWorkerFleetsResponse listWorkerFleetsResponse) {
         this.listWorkerFleetsResponse = listWorkerFleetsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListWorkerFleetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListWorkerFleetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListWorkerFleetsResponse {
     
     
     public Integer statusCode;
+
     public ListWorkerFleetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListWorkerFleetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWorkerFleetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListWorkerFleetsResponse {
      */
     
     public Object throttlingException;
+
     public ListWorkerFleetsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListWorkerFleetsResponse {
      */
     
     public Object validationException;
+
     public ListWorkerFleetsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListWorkerFleetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

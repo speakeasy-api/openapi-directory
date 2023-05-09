@@ -18,6 +18,7 @@ public class ResolveServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointFilter")
     public String endpointFilter;
+
     public ResolveServiceRequest withEndpointFilter(String endpointFilter) {
         this.endpointFilter = endpointFilter;
         return this;
@@ -29,9 +30,11 @@ public class ResolveServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxEndpoints")
     public Integer maxEndpoints;
+
     public ResolveServiceRequest withMaxEndpoints(Integer maxEndpoints) {
         this.maxEndpoints = maxEndpoints;
         return this;
     }
     
+    public ResolveServiceRequest(){}
 }

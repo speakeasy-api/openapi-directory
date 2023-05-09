@@ -15,6 +15,7 @@ public class GetRebalanceDetails200ApplicationJSON {
      */
     @JsonProperty("created_at")
     public String createdAt;
+
     public GetRebalanceDetails200ApplicationJSON withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -25,6 +26,7 @@ public class GetRebalanceDetails200ApplicationJSON {
      */
     @JsonProperty("pot_details")
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequest[] potDetails;
+
     public GetRebalanceDetails200ApplicationJSON withPotDetails(GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequest[] potDetails) {
         this.potDetails = potDetails;
         return this;
@@ -35,6 +37,7 @@ public class GetRebalanceDetails200ApplicationJSON {
      */
     @JsonProperty("rebalance_request_id")
     public String rebalanceRequestId;
+
     public GetRebalanceDetails200ApplicationJSON withRebalanceRequestId(String rebalanceRequestId) {
         this.rebalanceRequestId = rebalanceRequestId;
         return this;
@@ -45,9 +48,16 @@ public class GetRebalanceDetails200ApplicationJSON {
      */
     @JsonProperty("status")
     public GetRebalanceDetails200ApplicationJSONStatusEnum status;
+
     public GetRebalanceDetails200ApplicationJSON withStatus(GetRebalanceDetails200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetRebalanceDetails200ApplicationJSON(@JsonProperty("created_at") String createdAt, @JsonProperty("pot_details") GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequest[] potDetails, @JsonProperty("rebalance_request_id") String rebalanceRequestId, @JsonProperty("status") GetRebalanceDetails200ApplicationJSONStatusEnum status) {
+        this.createdAt = createdAt;
+        this.potDetails = potDetails;
+        this.rebalanceRequestId = rebalanceRequestId;
+        this.status = status;
+  }
 }

@@ -12,6 +12,7 @@ public class VideointelligenceVideosAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public VideointelligenceVideosAnnotateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +20,7 @@ public class VideointelligenceVideosAnnotateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1beta2AnnotateVideoRequest googleCloudVideointelligenceV1beta2AnnotateVideoRequest;
+
     public VideointelligenceVideosAnnotateRequest withGoogleCloudVideointelligenceV1beta2AnnotateVideoRequest(org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1beta2AnnotateVideoRequest googleCloudVideointelligenceV1beta2AnnotateVideoRequest) {
         this.googleCloudVideointelligenceV1beta2AnnotateVideoRequest = googleCloudVideointelligenceV1beta2AnnotateVideoRequest;
         return this;
@@ -29,6 +31,7 @@ public class VideointelligenceVideosAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public VideointelligenceVideosAnnotateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +42,7 @@ public class VideointelligenceVideosAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public VideointelligenceVideosAnnotateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +53,7 @@ public class VideointelligenceVideosAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public VideointelligenceVideosAnnotateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +64,7 @@ public class VideointelligenceVideosAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public VideointelligenceVideosAnnotateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +75,7 @@ public class VideointelligenceVideosAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public VideointelligenceVideosAnnotateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +86,7 @@ public class VideointelligenceVideosAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public VideointelligenceVideosAnnotateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +97,7 @@ public class VideointelligenceVideosAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public VideointelligenceVideosAnnotateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +108,7 @@ public class VideointelligenceVideosAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public VideointelligenceVideosAnnotateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -109,6 +119,7 @@ public class VideointelligenceVideosAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public VideointelligenceVideosAnnotateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -119,9 +130,11 @@ public class VideointelligenceVideosAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public VideointelligenceVideosAnnotateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public VideointelligenceVideosAnnotateRequest(){}
 }

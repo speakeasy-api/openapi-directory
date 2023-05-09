@@ -17,6 +17,7 @@ public class SegmentListModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public SegmentListModelHaljsonEmbedded embedded;
+
     public SegmentListModelHaljson withEmbedded(SegmentListModelHaljsonEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -25,6 +26,7 @@ public class SegmentListModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public SegmentListModelHaljsonLinks links;
+
     public SegmentListModelHaljson withLinks(SegmentListModelHaljsonLinks links) {
         this.links = links;
         return this;
@@ -35,6 +37,7 @@ public class SegmentListModelHaljson {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public SegmentListModelHaljson withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -43,6 +46,7 @@ public class SegmentListModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorEmail")
     public String creatorEmail;
+
     public SegmentListModelHaljson withCreatorEmail(String creatorEmail) {
         this.creatorEmail = creatorEmail;
         return this;
@@ -51,6 +55,7 @@ public class SegmentListModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorFullName")
     public String creatorFullName;
+
     public SegmentListModelHaljson withCreatorFullName(String creatorFullName) {
         this.creatorFullName = creatorFullName;
         return this;
@@ -59,6 +64,7 @@ public class SegmentListModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SegmentListModelHaljson withDescription(String description) {
         this.description = description;
         return this;
@@ -67,6 +73,7 @@ public class SegmentListModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdaterEmail")
     public String lastUpdaterEmail;
+
     public SegmentListModelHaljson withLastUpdaterEmail(String lastUpdaterEmail) {
         this.lastUpdaterEmail = lastUpdaterEmail;
         return this;
@@ -75,6 +82,7 @@ public class SegmentListModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdaterFullName")
     public String lastUpdaterFullName;
+
     public SegmentListModelHaljson withLastUpdaterFullName(String lastUpdaterFullName) {
         this.lastUpdaterFullName = lastUpdaterFullName;
         return this;
@@ -83,6 +91,7 @@ public class SegmentListModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SegmentListModelHaljson withName(String name) {
         this.name = name;
         return this;
@@ -91,6 +100,7 @@ public class SegmentListModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentId")
     public String segmentId;
+
     public SegmentListModelHaljson withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -101,6 +111,7 @@ public class SegmentListModelHaljson {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public SegmentListModelHaljson withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -109,9 +120,11 @@ public class SegmentListModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public Integer usage;
+
     public SegmentListModelHaljson withUsage(Integer usage) {
         this.usage = usage;
         return this;
     }
     
+    public SegmentListModelHaljson(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAdmChannelResponse {
@@ -12,6 +13,7 @@ public class GetAdmChannelResponse {
      */
     
     public Object badRequestException;
+
     public GetAdmChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetAdmChannelResponse {
     
     
     public String contentType;
+
     public GetAdmChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAdmChannelResponse {
      */
     
     public Object forbiddenException;
+
     public GetAdmChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetAdmChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAdmChannelResponse getAdmChannelResponse;
+
     public GetAdmChannelResponse withGetAdmChannelResponse(org.openapis.openapi.models.shared.GetAdmChannelResponse getAdmChannelResponse) {
         this.getAdmChannelResponse = getAdmChannelResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetAdmChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetAdmChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetAdmChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetAdmChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetAdmChannelResponse {
      */
     
     public Object notFoundException;
+
     public GetAdmChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetAdmChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetAdmChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetAdmChannelResponse {
     
     
     public Integer statusCode;
+
     public GetAdmChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetAdmChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAdmChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetAdmChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetAdmChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetAdmChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

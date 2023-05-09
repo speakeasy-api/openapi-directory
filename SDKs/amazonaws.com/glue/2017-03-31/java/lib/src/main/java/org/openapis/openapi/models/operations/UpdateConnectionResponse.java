@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateConnectionResponse {
     
     public String contentType;
+
     public UpdateConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateConnectionResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateConnectionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateConnectionResponse {
      */
     
     public Object glueEncryptionException;
+
     public UpdateConnectionResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateConnectionResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateConnectionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateConnectionResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateConnectionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateConnectionResponse {
     
     
     public Integer statusCode;
+
     public UpdateConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateConnectionResponse {
      */
     
     public java.util.Map<String, Object> updateConnectionResponse;
+
     public UpdateConnectionResponse withUpdateConnectionResponse(java.util.Map<String, Object> updateConnectionResponse) {
         this.updateConnectionResponse = updateConnectionResponse;
         return this;
     }
     
+    public UpdateConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

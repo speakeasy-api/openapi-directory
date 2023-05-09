@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeNetworkInterfaceAttributeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeNetworkInterfaceAttributeActionEnum action;
+
     public GETDescribeNetworkInterfaceAttributeRequest withAction(GETDescribeNetworkInterfaceAttributeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeNetworkInterfaceAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Attribute")
     public GETDescribeNetworkInterfaceAttributeAttributeEnum attribute;
+
     public GETDescribeNetworkInterfaceAttributeRequest withAttribute(GETDescribeNetworkInterfaceAttributeAttributeEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeNetworkInterfaceAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDescribeNetworkInterfaceAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeNetworkInterfaceAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceId")
     public String networkInterfaceId;
+
     public GETDescribeNetworkInterfaceAttributeRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -46,6 +51,7 @@ public class GETDescribeNetworkInterfaceAttributeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeNetworkInterfaceAttributeVersionEnum version;
+
     public GETDescribeNetworkInterfaceAttributeRequest withVersion(GETDescribeNetworkInterfaceAttributeVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETDescribeNetworkInterfaceAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeNetworkInterfaceAttributeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETDescribeNetworkInterfaceAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeNetworkInterfaceAttributeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETDescribeNetworkInterfaceAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeNetworkInterfaceAttributeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETDescribeNetworkInterfaceAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeNetworkInterfaceAttributeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETDescribeNetworkInterfaceAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeNetworkInterfaceAttributeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETDescribeNetworkInterfaceAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeNetworkInterfaceAttributeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETDescribeNetworkInterfaceAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeNetworkInterfaceAttributeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeNetworkInterfaceAttributeRequest(@JsonProperty("Action") GETDescribeNetworkInterfaceAttributeActionEnum action, @JsonProperty("NetworkInterfaceId") String networkInterfaceId, @JsonProperty("Version") GETDescribeNetworkInterfaceAttributeVersionEnum version) {
+        this.action = action;
+        this.networkInterfaceId = networkInterfaceId;
+        this.version = version;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDataQualityRulesetEvaluationRunsResponse {
     
     public String contentType;
+
     public ListDataQualityRulesetEvaluationRunsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDataQualityRulesetEvaluationRunsResponse {
      */
     
     public Object internalServiceException;
+
     public ListDataQualityRulesetEvaluationRunsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ListDataQualityRulesetEvaluationRunsResponse {
      */
     
     public Object invalidInputException;
+
     public ListDataQualityRulesetEvaluationRunsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class ListDataQualityRulesetEvaluationRunsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDataQualityRulesetEvaluationRunsResponse listDataQualityRulesetEvaluationRunsResponse;
+
     public ListDataQualityRulesetEvaluationRunsResponse withListDataQualityRulesetEvaluationRunsResponse(org.openapis.openapi.models.shared.ListDataQualityRulesetEvaluationRunsResponse listDataQualityRulesetEvaluationRunsResponse) {
         this.listDataQualityRulesetEvaluationRunsResponse = listDataQualityRulesetEvaluationRunsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListDataQualityRulesetEvaluationRunsResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListDataQualityRulesetEvaluationRunsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class ListDataQualityRulesetEvaluationRunsResponse {
     
     
     public Integer statusCode;
+
     public ListDataQualityRulesetEvaluationRunsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListDataQualityRulesetEvaluationRunsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDataQualityRulesetEvaluationRunsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDataQualityRulesetEvaluationRunsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

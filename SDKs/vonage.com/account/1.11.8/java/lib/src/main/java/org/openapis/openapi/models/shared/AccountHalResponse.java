@@ -18,6 +18,7 @@ public class AccountHalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public AccountEmbeddedObject embedded;
+
     public AccountHalResponse withEmbedded(AccountEmbeddedObject embedded) {
         this.embedded = embedded;
         return this;
@@ -26,6 +27,7 @@ public class AccountHalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public Links links;
+
     public AccountHalResponse withLinks(Links links) {
         this.links = links;
         return this;
@@ -37,6 +39,7 @@ public class AccountHalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Double page;
+
     public AccountHalResponse withPage(Double page) {
         this.page = page;
         return this;
@@ -48,6 +51,7 @@ public class AccountHalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_size")
     public Double pageSize;
+
     public AccountHalResponse withPageSize(Double pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -59,6 +63,7 @@ public class AccountHalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_items")
     public Double totalItems;
+
     public AccountHalResponse withTotalItems(Double totalItems) {
         this.totalItems = totalItems;
         return this;
@@ -70,9 +75,11 @@ public class AccountHalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_pages")
     public Double totalPages;
+
     public AccountHalResponse withTotalPages(Double totalPages) {
         this.totalPages = totalPages;
         return this;
     }
     
+    public AccountHalResponse(){}
 }

@@ -18,6 +18,7 @@ public class ClusterStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public ClusterStatus withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -29,6 +30,7 @@ public class ClusterStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ClusterStatusStateEnum state;
+
     public ClusterStatus withState(ClusterStatusStateEnum state) {
         this.state = state;
         return this;
@@ -40,6 +42,7 @@ public class ClusterStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateStartTime")
     public String stateStartTime;
+
     public ClusterStatus withStateStartTime(String stateStartTime) {
         this.stateStartTime = stateStartTime;
         return this;
@@ -51,9 +54,11 @@ public class ClusterStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("substate")
     public ClusterStatusSubstateEnum substate;
+
     public ClusterStatus withSubstate(ClusterStatusSubstateEnum substate) {
         this.substate = substate;
         return this;
     }
     
+    public ClusterStatus(){}
 }

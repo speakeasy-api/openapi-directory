@@ -51,7 +51,7 @@ public class Rfe {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRfeResponse res = new org.openapis.openapi.models.operations.GetRfeResponse() {{
+        org.openapis.openapi.models.operations.GetRfeResponse res = new org.openapis.openapi.models.operations.GetRfeResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -69,8 +69,6 @@ public class Rfe {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,7 +168,7 @@ public class Rfe {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRfeListResponse res = new org.openapis.openapi.models.operations.GetRfeListResponse() {{
+        org.openapis.openapi.models.operations.GetRfeListResponse res = new org.openapis.openapi.models.operations.GetRfeListResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -188,8 +186,6 @@ public class Rfe {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,7 +287,7 @@ public class Rfe {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRfeJsonResponse res = new org.openapis.openapi.models.operations.PostRfeJsonResponse() {{
+        org.openapis.openapi.models.operations.PostRfeJsonResponse res = new org.openapis.openapi.models.operations.PostRfeJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -309,8 +305,6 @@ public class Rfe {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -412,7 +406,7 @@ public class Rfe {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRfeRawResponse res = new org.openapis.openapi.models.operations.PostRfeRawResponse() {{
+        org.openapis.openapi.models.operations.PostRfeRawResponse res = new org.openapis.openapi.models.operations.PostRfeRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -430,8 +424,6 @@ public class Rfe {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

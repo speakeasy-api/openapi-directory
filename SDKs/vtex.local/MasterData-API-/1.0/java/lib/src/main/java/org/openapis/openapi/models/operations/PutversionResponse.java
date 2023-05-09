@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutversionResponse {
     
     public String contentType;
+
     public PutversionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutversionResponse {
     
     
     public org.openapis.openapi.models.shared.Putversion putversion;
+
     public PutversionResponse withPutversion(org.openapis.openapi.models.shared.Putversion putversion) {
         this.putversion = putversion;
         return this;
@@ -23,6 +26,7 @@ public class PutversionResponse {
     
     
     public Integer statusCode;
+
     public PutversionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class PutversionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutversionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutversionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

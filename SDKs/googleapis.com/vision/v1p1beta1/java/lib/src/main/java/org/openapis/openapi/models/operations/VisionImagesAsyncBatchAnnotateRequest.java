@@ -12,6 +12,7 @@ public class VisionImagesAsyncBatchAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public VisionImagesAsyncBatchAnnotateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +20,7 @@ public class VisionImagesAsyncBatchAnnotateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest googleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest;
+
     public VisionImagesAsyncBatchAnnotateRequest withGoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest(org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest googleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest) {
         this.googleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest = googleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest;
         return this;
@@ -29,6 +31,7 @@ public class VisionImagesAsyncBatchAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public VisionImagesAsyncBatchAnnotateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +42,7 @@ public class VisionImagesAsyncBatchAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public VisionImagesAsyncBatchAnnotateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +53,7 @@ public class VisionImagesAsyncBatchAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public VisionImagesAsyncBatchAnnotateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +64,7 @@ public class VisionImagesAsyncBatchAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public VisionImagesAsyncBatchAnnotateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +75,7 @@ public class VisionImagesAsyncBatchAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public VisionImagesAsyncBatchAnnotateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +86,7 @@ public class VisionImagesAsyncBatchAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public VisionImagesAsyncBatchAnnotateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +97,7 @@ public class VisionImagesAsyncBatchAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public VisionImagesAsyncBatchAnnotateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +108,7 @@ public class VisionImagesAsyncBatchAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public VisionImagesAsyncBatchAnnotateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -109,6 +119,7 @@ public class VisionImagesAsyncBatchAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public VisionImagesAsyncBatchAnnotateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -119,9 +130,11 @@ public class VisionImagesAsyncBatchAnnotateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public VisionImagesAsyncBatchAnnotateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public VisionImagesAsyncBatchAnnotateRequest(){}
 }

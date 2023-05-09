@@ -15,6 +15,7 @@ public class LearnerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public LearnerResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -23,6 +24,7 @@ public class LearnerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public LearnerResponse withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -31,6 +33,7 @@ public class LearnerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LearnerResponse withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class LearnerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public LearnerResponse withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -47,6 +51,7 @@ public class LearnerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerings")
     public OfferingProgressRow[] offerings;
+
     public LearnerResponse withOfferings(OfferingProgressRow[] offerings) {
         this.offerings = offerings;
         return this;
@@ -55,9 +60,11 @@ public class LearnerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personId")
     public String personId;
+
     public LearnerResponse withPersonId(String personId) {
         this.personId = personId;
         return this;
     }
     
+    public LearnerResponse(){}
 }

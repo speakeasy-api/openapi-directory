@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RebootDBClusterMessage {
     
     public String dbClusterIdentifier;
+
     public RebootDBClusterMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
     }
     
+    public RebootDBClusterMessage(@JsonProperty("DBClusterIdentifier") String dbClusterIdentifier) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+  }
 }

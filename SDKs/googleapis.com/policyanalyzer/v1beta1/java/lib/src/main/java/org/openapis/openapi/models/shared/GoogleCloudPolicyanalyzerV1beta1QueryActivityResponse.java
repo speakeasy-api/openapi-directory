@@ -18,6 +18,7 @@ public class GoogleCloudPolicyanalyzerV1beta1QueryActivityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activities")
     public GoogleCloudPolicyanalyzerV1beta1Activity[] activities;
+
     public GoogleCloudPolicyanalyzerV1beta1QueryActivityResponse withActivities(GoogleCloudPolicyanalyzerV1beta1Activity[] activities) {
         this.activities = activities;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudPolicyanalyzerV1beta1QueryActivityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudPolicyanalyzerV1beta1QueryActivityResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudPolicyanalyzerV1beta1QueryActivityResponse(){}
 }

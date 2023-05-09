@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeReportCreationResponse {
@@ -12,6 +13,7 @@ public class DescribeReportCreationResponse {
      */
     
     public Object constraintViolationException;
+
     public DescribeReportCreationResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeReportCreationResponse {
     
     
     public String contentType;
+
     public DescribeReportCreationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeReportCreationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeReportCreationOutput describeReportCreationOutput;
+
     public DescribeReportCreationResponse withDescribeReportCreationOutput(org.openapis.openapi.models.shared.DescribeReportCreationOutput describeReportCreationOutput) {
         this.describeReportCreationOutput = describeReportCreationOutput;
         return this;
@@ -39,6 +43,7 @@ public class DescribeReportCreationResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeReportCreationResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeReportCreationResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeReportCreationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeReportCreationResponse {
     
     
     public Integer statusCode;
+
     public DescribeReportCreationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeReportCreationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeReportCreationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeReportCreationResponse {
      */
     
     public Object throttledException;
+
     public DescribeReportCreationResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
     }
     
+    public DescribeReportCreationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

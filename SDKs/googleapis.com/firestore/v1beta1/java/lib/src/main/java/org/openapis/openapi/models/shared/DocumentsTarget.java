@@ -18,9 +18,11 @@ public class DocumentsTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public String[] documents;
+
     public DocumentsTarget withDocuments(String[] documents) {
         this.documents = documents;
         return this;
     }
     
+    public DocumentsTarget(){}
 }

@@ -18,6 +18,7 @@ public class DisjunctiveMatchStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventFilters")
     public EventFilter[] eventFilters;
+
     public DisjunctiveMatchStatement withEventFilters(EventFilter[] eventFilters) {
         this.eventFilters = eventFilters;
         return this;
@@ -29,9 +30,11 @@ public class DisjunctiveMatchStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DisjunctiveMatchStatement withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public DisjunctiveMatchStatement(){}
 }

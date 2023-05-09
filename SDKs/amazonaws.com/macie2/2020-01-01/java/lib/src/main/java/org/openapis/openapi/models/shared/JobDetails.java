@@ -20,6 +20,7 @@ public class JobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefinedInJob")
     public IsDefinedInJobEnum isDefinedInJob;
+
     public JobDetails withIsDefinedInJob(IsDefinedInJobEnum isDefinedInJob) {
         this.isDefinedInJob = isDefinedInJob;
         return this;
@@ -28,6 +29,7 @@ public class JobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMonitoredByJob")
     public IsMonitoredByJobEnum isMonitoredByJob;
+
     public JobDetails withIsMonitoredByJob(IsMonitoredByJobEnum isMonitoredByJob) {
         this.isMonitoredByJob = isMonitoredByJob;
         return this;
@@ -36,6 +38,7 @@ public class JobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastJobId")
     public String lastJobId;
+
     public JobDetails withLastJobId(String lastJobId) {
         this.lastJobId = lastJobId;
         return this;
@@ -46,9 +49,11 @@ public class JobDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastJobRunTime")
     public OffsetDateTime lastJobRunTime;
+
     public JobDetails withLastJobRunTime(OffsetDateTime lastJobRunTime) {
         this.lastJobRunTime = lastJobRunTime;
         return this;
     }
     
+    public JobDetails(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSshKeyRequest {
@@ -12,6 +13,7 @@ public class DeleteSshKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainNamePathParameter;
+
     public DeleteSshKeyRequest withDomainNamePathParameter(String domainNamePathParameter) {
         this.domainNamePathParameter = domainNamePathParameter;
         return this;
@@ -22,6 +24,7 @@ public class DeleteSshKeyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainNameQueryParameter;
+
     public DeleteSshKeyRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
         this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
@@ -32,9 +35,15 @@ public class DeleteSshKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fingerprint")
     public String fingerprint;
+
     public DeleteSshKeyRequest withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
     }
     
+    public DeleteSshKeyRequest(@JsonProperty("domainNamePathParameter") String domainNamePathParameter, @JsonProperty("domain_nameQueryParameter") String domainNameQueryParameter, @JsonProperty("fingerprint") String fingerprint) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        this.fingerprint = fingerprint;
+  }
 }

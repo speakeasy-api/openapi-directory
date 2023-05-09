@@ -12,9 +12,11 @@ public class SecurityAndAnalysisSecretScanningPushProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SecurityAndAnalysisSecretScanningPushProtectionStatusEnum status;
+
     public SecurityAndAnalysisSecretScanningPushProtection withStatus(SecurityAndAnalysisSecretScanningPushProtectionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public SecurityAndAnalysisSecretScanningPushProtection(){}
 }

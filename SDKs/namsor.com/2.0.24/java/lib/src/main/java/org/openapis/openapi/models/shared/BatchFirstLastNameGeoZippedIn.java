@@ -15,6 +15,7 @@ public class BatchFirstLastNameGeoZippedIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facts")
     public FactIn[] facts;
+
     public BatchFirstLastNameGeoZippedIn withFacts(FactIn[] facts) {
         this.facts = facts;
         return this;
@@ -23,9 +24,11 @@ public class BatchFirstLastNameGeoZippedIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalNames")
     public FirstLastNameGeoZippedIn[] personalNames;
+
     public BatchFirstLastNameGeoZippedIn withPersonalNames(FirstLastNameGeoZippedIn[] personalNames) {
         this.personalNames = personalNames;
         return this;
     }
     
+    public BatchFirstLastNameGeoZippedIn(){}
 }

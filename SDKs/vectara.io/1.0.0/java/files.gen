@@ -99,4 +99,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/ServingBatchQueryRequest.ja
 lib/src/main/java/org/openapis/openapi/models/shared/ServingQueryRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueryRequestRerankingConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/adminservice/README.md
+docs/indexservice/README.md
+docs/queryservice/README.md
 USAGE.md

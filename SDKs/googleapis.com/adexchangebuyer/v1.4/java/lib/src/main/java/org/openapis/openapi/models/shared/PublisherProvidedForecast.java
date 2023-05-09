@@ -18,6 +18,7 @@ public class PublisherProvidedForecast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public Dimension[] dimensions;
+
     public PublisherProvidedForecast withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -29,6 +30,7 @@ public class PublisherProvidedForecast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weeklyImpressions")
     public String weeklyImpressions;
+
     public PublisherProvidedForecast withWeeklyImpressions(String weeklyImpressions) {
         this.weeklyImpressions = weeklyImpressions;
         return this;
@@ -40,9 +42,11 @@ public class PublisherProvidedForecast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weeklyUniques")
     public String weeklyUniques;
+
     public PublisherProvidedForecast withWeeklyUniques(String weeklyUniques) {
         this.weeklyUniques = weeklyUniques;
         return this;
     }
     
+    public PublisherProvidedForecast(){}
 }

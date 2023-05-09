@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest {
     @SpeakeasyMetadata("request:mediaType=application/xml")
     public byte[] requestBody;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accelerationEfficiency")
     public Float accelerationEfficiency;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withAccelerationEfficiency(Float accelerationEfficiency) {
         this.accelerationEfficiency = accelerationEfficiency;
         return this;
@@ -29,6 +32,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternativeType")
     public org.openapis.openapi.models.shared.AlternativeTypeEnum alternativeType;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withAlternativeType(org.openapis.openapi.models.shared.AlternativeTypeEnum alternativeType) {
         this.alternativeType = alternativeType;
         return this;
@@ -39,6 +43,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=arriveAt")
     public String arriveAt;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withArriveAt(String arriveAt) {
         this.arriveAt = arriveAt;
         return this;
@@ -49,6 +54,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auxiliaryPowerInLitersPerHour")
     public Float auxiliaryPowerInLitersPerHour;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withAuxiliaryPowerInLitersPerHour(Float auxiliaryPowerInLitersPerHour) {
         this.auxiliaryPowerInLitersPerHour = auxiliaryPowerInLitersPerHour;
         return this;
@@ -66,6 +72,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=avoid")
     public String avoid;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withAvoid(String avoid) {
         this.avoid = avoid;
         return this;
@@ -76,6 +83,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -86,6 +94,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=computeBestOrder")
     public Boolean computeBestOrder;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withComputeBestOrder(Boolean computeBestOrder) {
         this.computeBestOrder = computeBestOrder;
         return this;
@@ -96,6 +105,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=computeTravelTimeFor")
     public org.openapis.openapi.models.shared.ComputeTravelTimeForEnum computeTravelTimeFor;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withComputeTravelTimeFor(org.openapis.openapi.models.shared.ComputeTravelTimeForEnum computeTravelTimeFor) {
         this.computeTravelTimeFor = computeTravelTimeFor;
         return this;
@@ -106,6 +116,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=constantSpeedConsumptionInLitersPerHundredkm")
     public String constantSpeedConsumptionInLitersPerHundredkm;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withConstantSpeedConsumptionInLitersPerHundredkm(String constantSpeedConsumptionInLitersPerHundredkm) {
         this.constantSpeedConsumptionInLitersPerHundredkm = constantSpeedConsumptionInLitersPerHundredkm;
         return this;
@@ -116,6 +127,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=constantSpeedConsumptionInkWhPerHundredkm")
     public String constantSpeedConsumptionInkWhPerHundredkm;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withConstantSpeedConsumptionInkWhPerHundredkm(String constantSpeedConsumptionInkWhPerHundredkm) {
         this.constantSpeedConsumptionInkWhPerHundredkm = constantSpeedConsumptionInkWhPerHundredkm;
         return this;
@@ -126,6 +138,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contentType")
     public org.openapis.openapi.models.shared.ContentTypeEnum contentType;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withContentType(org.openapis.openapi.models.shared.ContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -136,6 +149,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentFuelInLiters")
     public Float currentFuelInLiters;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withCurrentFuelInLiters(Float currentFuelInLiters) {
         this.currentFuelInLiters = currentFuelInLiters;
         return this;
@@ -146,6 +160,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=decelerationEfficiency")
     public Float decelerationEfficiency;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withDecelerationEfficiency(Float decelerationEfficiency) {
         this.decelerationEfficiency = decelerationEfficiency;
         return this;
@@ -156,6 +171,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=departAt")
     public String departAt;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withDepartAt(String departAt) {
         this.departAt = departAt;
         return this;
@@ -166,6 +182,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=downhillEfficiency")
     public Float downhillEfficiency;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withDownhillEfficiency(Float downhillEfficiency) {
         this.downhillEfficiency = downhillEfficiency;
         return this;
@@ -176,6 +193,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fuelEnergyDensityInMJoulesPerLiter")
     public Float fuelEnergyDensityInMJoulesPerLiter;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withFuelEnergyDensityInMJoulesPerLiter(Float fuelEnergyDensityInMJoulesPerLiter) {
         this.fuelEnergyDensityInMJoulesPerLiter = fuelEnergyDensityInMJoulesPerLiter;
         return this;
@@ -186,6 +204,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hilliness")
     public org.openapis.openapi.models.shared.HillinessEnum hilliness;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withHilliness(org.openapis.openapi.models.shared.HillinessEnum hilliness) {
         this.hilliness = hilliness;
         return this;
@@ -196,6 +215,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=instructionsType")
     public org.openapis.openapi.models.shared.InstructionsTypeEnum instructionsType;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withInstructionsType(org.openapis.openapi.models.shared.InstructionsTypeEnum instructionsType) {
         this.instructionsType = instructionsType;
         return this;
@@ -206,6 +226,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -216,6 +237,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=locations")
     public String locations;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withLocations(String locations) {
         this.locations = locations;
         return this;
@@ -226,6 +248,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxAlternatives")
     public Long maxAlternatives;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withMaxAlternatives(Long maxAlternatives) {
         this.maxAlternatives = maxAlternatives;
         return this;
@@ -236,6 +259,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minDeviationDistance")
     public Long minDeviationDistance;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withMinDeviationDistance(Long minDeviationDistance) {
         this.minDeviationDistance = minDeviationDistance;
         return this;
@@ -246,6 +270,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minDeviationTime")
     public Long minDeviationTime;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withMinDeviationTime(Long minDeviationTime) {
         this.minDeviationTime = minDeviationTime;
         return this;
@@ -256,6 +281,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report")
     public org.openapis.openapi.models.shared.ReportEnum report;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withReport(org.openapis.openapi.models.shared.ReportEnum report) {
         this.report = report;
         return this;
@@ -266,6 +292,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeRepresentation")
     public org.openapis.openapi.models.shared.RouteRepresentationEnum routeRepresentation;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withRouteRepresentation(org.openapis.openapi.models.shared.RouteRepresentationEnum routeRepresentation) {
         this.routeRepresentation = routeRepresentation;
         return this;
@@ -276,6 +303,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeType")
     public org.openapis.openapi.models.shared.RouteTypeEnum routeType;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withRouteType(org.openapis.openapi.models.shared.RouteTypeEnum routeType) {
         this.routeType = routeType;
         return this;
@@ -293,6 +321,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sectionType")
     public String sectionType;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withSectionType(String sectionType) {
         this.sectionType = sectionType;
         return this;
@@ -303,6 +332,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=traffic")
     public Boolean traffic;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withTraffic(Boolean traffic) {
         this.traffic = traffic;
         return this;
@@ -313,6 +343,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelMode")
     public org.openapis.openapi.models.shared.TravelModeEnum travelMode;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withTravelMode(org.openapis.openapi.models.shared.TravelModeEnum travelMode) {
         this.travelMode = travelMode;
         return this;
@@ -323,6 +354,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uphillEfficiency")
     public Float uphillEfficiency;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withUphillEfficiency(Float uphillEfficiency) {
         this.uphillEfficiency = uphillEfficiency;
         return this;
@@ -333,6 +365,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleAxleWeight")
     public Long vehicleAxleWeight;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleAxleWeight(Long vehicleAxleWeight) {
         this.vehicleAxleWeight = vehicleAxleWeight;
         return this;
@@ -343,6 +376,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleCommercial")
     public Boolean vehicleCommercial;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleCommercial(Boolean vehicleCommercial) {
         this.vehicleCommercial = vehicleCommercial;
         return this;
@@ -353,6 +387,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleEngineType")
     public org.openapis.openapi.models.shared.VehicleEngineTypeEnum vehicleEngineType;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleEngineType(org.openapis.openapi.models.shared.VehicleEngineTypeEnum vehicleEngineType) {
         this.vehicleEngineType = vehicleEngineType;
         return this;
@@ -363,6 +398,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleHeading")
     public Long vehicleHeading;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleHeading(Long vehicleHeading) {
         this.vehicleHeading = vehicleHeading;
         return this;
@@ -373,6 +409,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleHeight")
     public Float vehicleHeight;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleHeight(Float vehicleHeight) {
         this.vehicleHeight = vehicleHeight;
         return this;
@@ -383,6 +420,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleLength")
     public Float vehicleLength;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleLength(Float vehicleLength) {
         this.vehicleLength = vehicleLength;
         return this;
@@ -412,6 +450,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleLoadType")
     public String vehicleLoadType;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleLoadType(String vehicleLoadType) {
         this.vehicleLoadType = vehicleLoadType;
         return this;
@@ -422,6 +461,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleMaxSpeed")
     public Long vehicleMaxSpeed;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleMaxSpeed(Long vehicleMaxSpeed) {
         this.vehicleMaxSpeed = vehicleMaxSpeed;
         return this;
@@ -432,6 +472,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleWeight")
     public Long vehicleWeight;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleWeight(Long vehicleWeight) {
         this.vehicleWeight = vehicleWeight;
         return this;
@@ -442,6 +483,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleWidth")
     public Float vehicleWidth;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleWidth(Float vehicleWidth) {
         this.vehicleWidth = vehicleWidth;
         return this;
@@ -452,6 +494,7 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
@@ -462,9 +505,15 @@ public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=windingness")
     public org.openapis.openapi.models.shared.WindingnessEnum windingness;
+
     public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withWindingness(org.openapis.openapi.models.shared.WindingnessEnum windingness) {
         this.windingness = windingness;
         return this;
     }
     
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest(@JsonProperty("contentType") org.openapis.openapi.models.shared.ContentTypeEnum contentType, @JsonProperty("locations") String locations, @JsonProperty("versionNumber") org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.contentType = contentType;
+        this.locations = locations;
+        this.versionNumber = versionNumber;
+  }
 }

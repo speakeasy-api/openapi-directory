@@ -15,6 +15,7 @@ public class CreateTweet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CreateTweetResponse data;
+
     public CreateTweet withData(CreateTweetResponse data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class CreateTweet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msg")
     public String msg;
+
     public CreateTweet withMsg(String msg) {
         this.msg = msg;
         return this;
@@ -31,9 +33,11 @@ public class CreateTweet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public String success;
+
     public CreateTweet withSuccess(String success) {
         this.success = success;
         return this;
     }
     
+    public CreateTweet(){}
 }

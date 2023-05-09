@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LambdaFunctionTimedOutEventAttributes {
     @JsonProperty("scheduledEventId")
     public Long scheduledEventId;
+
     public LambdaFunctionTimedOutEventAttributes withScheduledEventId(Long scheduledEventId) {
         this.scheduledEventId = scheduledEventId;
         return this;
@@ -21,6 +22,7 @@ public class LambdaFunctionTimedOutEventAttributes {
     
     @JsonProperty("startedEventId")
     public Long startedEventId;
+
     public LambdaFunctionTimedOutEventAttributes withStartedEventId(Long startedEventId) {
         this.startedEventId = startedEventId;
         return this;
@@ -29,9 +31,14 @@ public class LambdaFunctionTimedOutEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutType")
     public LambdaFunctionTimeoutTypeEnum timeoutType;
+
     public LambdaFunctionTimedOutEventAttributes withTimeoutType(LambdaFunctionTimeoutTypeEnum timeoutType) {
         this.timeoutType = timeoutType;
         return this;
     }
     
+    public LambdaFunctionTimedOutEventAttributes(@JsonProperty("scheduledEventId") Long scheduledEventId, @JsonProperty("startedEventId") Long startedEventId) {
+        this.scheduledEventId = scheduledEventId;
+        this.startedEventId = startedEventId;
+  }
 }

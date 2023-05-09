@@ -15,6 +15,7 @@ public class CreateExportRequestBodyResourceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botExportSpecification")
     public org.openapis.openapi.models.shared.BotExportSpecification botExportSpecification;
+
     public CreateExportRequestBodyResourceSpecification withBotExportSpecification(org.openapis.openapi.models.shared.BotExportSpecification botExportSpecification) {
         this.botExportSpecification = botExportSpecification;
         return this;
@@ -23,6 +24,7 @@ public class CreateExportRequestBodyResourceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botLocaleExportSpecification")
     public org.openapis.openapi.models.shared.BotLocaleExportSpecification botLocaleExportSpecification;
+
     public CreateExportRequestBodyResourceSpecification withBotLocaleExportSpecification(org.openapis.openapi.models.shared.BotLocaleExportSpecification botLocaleExportSpecification) {
         this.botLocaleExportSpecification = botLocaleExportSpecification;
         return this;
@@ -31,9 +33,11 @@ public class CreateExportRequestBodyResourceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customVocabularyExportSpecification")
     public org.openapis.openapi.models.shared.CustomVocabularyExportSpecification customVocabularyExportSpecification;
+
     public CreateExportRequestBodyResourceSpecification withCustomVocabularyExportSpecification(org.openapis.openapi.models.shared.CustomVocabularyExportSpecification customVocabularyExportSpecification) {
         this.customVocabularyExportSpecification = customVocabularyExportSpecification;
         return this;
     }
     
+    public CreateExportRequestBodyResourceSpecification(){}
 }

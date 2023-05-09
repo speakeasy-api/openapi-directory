@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyzeIDResponse {
@@ -12,6 +13,7 @@ public class AnalyzeIDResponse {
      */
     
     public Object accessDeniedException;
+
     public AnalyzeIDResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AnalyzeIDResponse {
      */
     
     public org.openapis.openapi.models.shared.AnalyzeIDResponse analyzeIDResponse;
+
     public AnalyzeIDResponse withAnalyzeIDResponse(org.openapis.openapi.models.shared.AnalyzeIDResponse analyzeIDResponse) {
         this.analyzeIDResponse = analyzeIDResponse;
         return this;
@@ -32,6 +35,7 @@ public class AnalyzeIDResponse {
      */
     
     public Object badDocumentException;
+
     public AnalyzeIDResponse withBadDocumentException(Object badDocumentException) {
         this.badDocumentException = badDocumentException;
         return this;
@@ -39,6 +43,7 @@ public class AnalyzeIDResponse {
     
     
     public String contentType;
+
     public AnalyzeIDResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AnalyzeIDResponse {
      */
     
     public Object documentTooLargeException;
+
     public AnalyzeIDResponse withDocumentTooLargeException(Object documentTooLargeException) {
         this.documentTooLargeException = documentTooLargeException;
         return this;
@@ -59,6 +65,7 @@ public class AnalyzeIDResponse {
      */
     
     public Object internalServerError;
+
     public AnalyzeIDResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class AnalyzeIDResponse {
      */
     
     public Object invalidParameterException;
+
     public AnalyzeIDResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class AnalyzeIDResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public AnalyzeIDResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -89,6 +98,7 @@ public class AnalyzeIDResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public AnalyzeIDResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -96,6 +106,7 @@ public class AnalyzeIDResponse {
     
     
     public Integer statusCode;
+
     public AnalyzeIDResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class AnalyzeIDResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyzeIDResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class AnalyzeIDResponse {
      */
     
     public Object throttlingException;
+
     public AnalyzeIDResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -123,9 +136,14 @@ public class AnalyzeIDResponse {
      */
     
     public Object unsupportedDocumentException;
+
     public AnalyzeIDResponse withUnsupportedDocumentException(Object unsupportedDocumentException) {
         this.unsupportedDocumentException = unsupportedDocumentException;
         return this;
     }
     
+    public AnalyzeIDResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

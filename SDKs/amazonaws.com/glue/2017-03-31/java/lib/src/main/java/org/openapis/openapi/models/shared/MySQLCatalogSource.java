@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MySQLCatalogSource {
     @JsonProperty("Database")
     public String database;
+
     public MySQLCatalogSource withDatabase(String database) {
         this.database = database;
         return this;
@@ -19,6 +20,7 @@ public class MySQLCatalogSource {
     
     @JsonProperty("Name")
     public String name;
+
     public MySQLCatalogSource withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class MySQLCatalogSource {
     
     @JsonProperty("Table")
     public String table;
+
     public MySQLCatalogSource withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public MySQLCatalogSource(@JsonProperty("Database") String database, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.name = name;
+        this.table = table;
+  }
 }

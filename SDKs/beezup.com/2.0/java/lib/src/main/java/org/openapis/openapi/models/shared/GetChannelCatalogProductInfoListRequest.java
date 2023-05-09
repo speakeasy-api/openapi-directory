@@ -15,6 +15,7 @@ public class GetChannelCatalogProductInfoListRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogCategoryFilter")
     public BeezUPCommonCatalogCategoryFilter catalogCategoryFilter;
+
     public GetChannelCatalogProductInfoListRequest withCatalogCategoryFilter(BeezUPCommonCatalogCategoryFilter catalogCategoryFilter) {
         this.catalogCategoryFilter = catalogCategoryFilter;
         return this;
@@ -23,6 +24,7 @@ public class GetChannelCatalogProductInfoListRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCategoryFilter")
     public BeezUPCommonChannelCategoryFilter channelCategoryFilter;
+
     public GetChannelCatalogProductInfoListRequest withChannelCategoryFilter(BeezUPCommonChannelCategoryFilter channelCategoryFilter) {
         this.channelCategoryFilter = channelCategoryFilter;
         return this;
@@ -30,6 +32,7 @@ public class GetChannelCatalogProductInfoListRequest {
     
     @JsonProperty("criteria")
     public ProductSetVisibilityCriteria criteria;
+
     public GetChannelCatalogProductInfoListRequest withCriteria(ProductSetVisibilityCriteria criteria) {
         this.criteria = criteria;
         return this;
@@ -41,6 +44,7 @@ public class GetChannelCatalogProductInfoListRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overridden")
     public Boolean overridden;
+
     public GetChannelCatalogProductInfoListRequest withOverridden(Boolean overridden) {
         this.overridden = overridden;
         return this;
@@ -48,6 +52,7 @@ public class GetChannelCatalogProductInfoListRequest {
     
     @JsonProperty("pageNumber")
     public Integer pageNumber;
+
     public GetChannelCatalogProductInfoListRequest withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -55,6 +60,7 @@ public class GetChannelCatalogProductInfoListRequest {
     
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GetChannelCatalogProductInfoListRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -63,9 +69,15 @@ public class GetChannelCatalogProductInfoListRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productFilters")
     public ChannelCatalogProductFilters productFilters;
+
     public GetChannelCatalogProductInfoListRequest withProductFilters(ChannelCatalogProductFilters productFilters) {
         this.productFilters = productFilters;
         return this;
     }
     
+    public GetChannelCatalogProductInfoListRequest(@JsonProperty("criteria") ProductSetVisibilityCriteria criteria, @JsonProperty("pageNumber") Integer pageNumber, @JsonProperty("pageSize") Integer pageSize) {
+        this.criteria = criteria;
+        this.pageNumber = pageNumber;
+        this.pageSize = pageSize;
+  }
 }

@@ -18,6 +18,7 @@ public class FunctionDefaultExecutionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsolationMode")
     public FunctionIsolationModeEnum isolationMode;
+
     public FunctionDefaultExecutionConfig withIsolationMode(FunctionIsolationModeEnum isolationMode) {
         this.isolationMode = isolationMode;
         return this;
@@ -29,9 +30,11 @@ public class FunctionDefaultExecutionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunAs")
     public FunctionRunAsConfig runAs;
+
     public FunctionDefaultExecutionConfig withRunAs(FunctionRunAsConfig runAs) {
         this.runAs = runAs;
         return this;
     }
     
+    public FunctionDefaultExecutionConfig(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
@@ -12,6 +13,7 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FirewallPolicyRule firewallPolicyRule;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withFirewallPolicyRule(org.openapis.openapi.models.shared.FirewallPolicyRule firewallPolicyRule) {
         this.firewallPolicyRule = firewallPolicyRule;
         return this;
@@ -29,6 +32,7 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firewallPolicy")
     public String firewallPolicy;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withFirewallPolicy(String firewallPolicy) {
         this.firewallPolicy = firewallPolicy;
         return this;
@@ -79,6 +87,7 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=priority")
     public Long priority;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -119,6 +131,7 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withProject(String project) {
         this.project = project;
         return this;
@@ -129,6 +142,7 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -149,6 +164,7 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,6 +175,7 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -169,9 +186,14 @@ public class ComputeNetworkFirewallPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeNetworkFirewallPoliciesPatchRuleRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeNetworkFirewallPoliciesPatchRuleRequest(@JsonProperty("firewallPolicy") String firewallPolicy, @JsonProperty("project") String project) {
+        this.firewallPolicy = firewallPolicy;
+        this.project = project;
+  }
 }

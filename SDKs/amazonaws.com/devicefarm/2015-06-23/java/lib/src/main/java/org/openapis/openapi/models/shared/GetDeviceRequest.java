@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDeviceRequest {
     @JsonProperty("arn")
     public String arn;
+
     public GetDeviceRequest withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public GetDeviceRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

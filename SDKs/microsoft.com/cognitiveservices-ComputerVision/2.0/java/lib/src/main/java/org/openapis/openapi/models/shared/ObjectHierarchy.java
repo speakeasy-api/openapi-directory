@@ -18,6 +18,7 @@ public class ObjectHierarchy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Double confidence;
+
     public ObjectHierarchy withConfidence(Double confidence) {
         this.confidence = confidence;
         return this;
@@ -29,6 +30,7 @@ public class ObjectHierarchy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public ObjectHierarchy withObject(String object) {
         this.object = object;
         return this;
@@ -40,9 +42,11 @@ public class ObjectHierarchy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public ObjectHierarchy parent;
+
     public ObjectHierarchy withParent(ObjectHierarchy parent) {
         this.parent = parent;
         return this;
     }
     
+    public ObjectHierarchy(){}
 }

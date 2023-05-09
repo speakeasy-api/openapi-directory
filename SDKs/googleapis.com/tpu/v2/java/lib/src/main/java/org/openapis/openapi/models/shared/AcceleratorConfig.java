@@ -18,6 +18,7 @@ public class AcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topology")
     public String topology;
+
     public AcceleratorConfig withTopology(String topology) {
         this.topology = topology;
         return this;
@@ -29,9 +30,11 @@ public class AcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AcceleratorConfigTypeEnum type;
+
     public AcceleratorConfig withType(AcceleratorConfigTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AcceleratorConfig(){}
 }

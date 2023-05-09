@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETPhenotypesForTaxonUsingGETResponse {
     
     public byte[] body;
+
     public GETPhenotypesForTaxonUsingGETResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETPhenotypesForTaxonUsingGETResponse {
     
     
     public String contentType;
+
     public GETPhenotypesForTaxonUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETPhenotypesForTaxonUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETPhenotypesForTaxonUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETPhenotypesForTaxonUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETPhenotypesForTaxonUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETPhenotypesForTaxonUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

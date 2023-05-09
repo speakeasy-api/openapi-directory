@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImplantableDevicesReadRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public ImplantableDevicesReadRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -16,6 +18,7 @@ public class ImplantableDevicesReadRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ImplantableDevicesReadRequest withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +26,7 @@ public class ImplantableDevicesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mu_date")
     public String muDate;
+
     public ImplantableDevicesReadRequest withMuDate(String muDate) {
         this.muDate = muDate;
         return this;
@@ -30,6 +34,7 @@ public class ImplantableDevicesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mu_date_range")
     public String muDateRange;
+
     public ImplantableDevicesReadRequest withMuDateRange(String muDateRange) {
         this.muDateRange = muDateRange;
         return this;
@@ -37,9 +42,13 @@ public class ImplantableDevicesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public ImplantableDevicesReadRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
     }
     
+    public ImplantableDevicesReadRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

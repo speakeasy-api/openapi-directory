@@ -15,6 +15,7 @@ public class FileMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absolutePath")
     public String absolutePath;
+
     public FileMetadata withAbsolutePath(String absolutePath) {
         this.absolutePath = absolutePath;
         return this;
@@ -23,6 +24,7 @@ public class FileMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blobId")
     public String blobId;
+
     public FileMetadata withBlobId(String blobId) {
         this.blobId = blobId;
         return this;
@@ -31,9 +33,11 @@ public class FileMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileMode")
     public FileModeTypeEnumEnum fileMode;
+
     public FileMetadata withFileMode(FileModeTypeEnumEnum fileMode) {
         this.fileMode = fileMode;
         return this;
     }
     
+    public FileMetadata(){}
 }

@@ -12,9 +12,13 @@ public class ReposSetAppAccessRestrictionsRequestBody1 {
      */
     @JsonProperty("apps")
     public String[] apps;
+
     public ReposSetAppAccessRestrictionsRequestBody1 withApps(String[] apps) {
         this.apps = apps;
         return this;
     }
     
+    public ReposSetAppAccessRestrictionsRequestBody1(@JsonProperty("apps") String[] apps) {
+        this.apps = apps;
+  }
 }

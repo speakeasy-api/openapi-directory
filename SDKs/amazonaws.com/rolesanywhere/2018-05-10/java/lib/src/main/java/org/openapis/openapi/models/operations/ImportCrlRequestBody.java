@@ -14,6 +14,7 @@ public class ImportCrlRequestBody {
      */
     @JsonProperty("crlData")
     public String crlData;
+
     public ImportCrlRequestBody withCrlData(String crlData) {
         this.crlData = crlData;
         return this;
@@ -25,6 +26,7 @@ public class ImportCrlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ImportCrlRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -35,6 +37,7 @@ public class ImportCrlRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public ImportCrlRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +49,7 @@ public class ImportCrlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public ImportCrlRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -56,9 +60,15 @@ public class ImportCrlRequestBody {
      */
     @JsonProperty("trustAnchorArn")
     public String trustAnchorArn;
+
     public ImportCrlRequestBody withTrustAnchorArn(String trustAnchorArn) {
         this.trustAnchorArn = trustAnchorArn;
         return this;
     }
     
+    public ImportCrlRequestBody(@JsonProperty("crlData") String crlData, @JsonProperty("name") String name, @JsonProperty("trustAnchorArn") String trustAnchorArn) {
+        this.crlData = crlData;
+        this.name = name;
+        this.trustAnchorArn = trustAnchorArn;
+  }
 }

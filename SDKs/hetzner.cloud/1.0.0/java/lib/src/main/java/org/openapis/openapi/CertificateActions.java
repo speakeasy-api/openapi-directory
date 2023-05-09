@@ -60,11 +60,9 @@ public class CertificateActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCertificatesIdActionsResponse res = new org.openapis.openapi.models.operations.GetCertificatesIdActionsResponse() {{
+        org.openapis.openapi.models.operations.GetCertificatesIdActionsResponse res = new org.openapis.openapi.models.operations.GetCertificatesIdActionsResponse(contentType, httpRes.statusCode()) {{
             actionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class CertificateActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCertificatesIdActionsActionIdResponse res = new org.openapis.openapi.models.operations.GetCertificatesIdActionsActionIdResponse() {{
+        org.openapis.openapi.models.operations.GetCertificatesIdActionsActionIdResponse res = new org.openapis.openapi.models.operations.GetCertificatesIdActionsActionIdResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class CertificateActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCertificatesIdActionsRetryResponse res = new org.openapis.openapi.models.operations.PostCertificatesIdActionsRetryResponse() {{
+        org.openapis.openapi.models.operations.PostCertificatesIdActionsRetryResponse res = new org.openapis.openapi.models.operations.PostCertificatesIdActionsRetryResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

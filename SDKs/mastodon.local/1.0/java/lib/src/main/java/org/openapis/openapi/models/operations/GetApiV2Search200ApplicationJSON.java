@@ -15,6 +15,7 @@ public class GetApiV2Search200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accounts")
     public org.openapis.openapi.models.shared.Account[] accounts;
+
     public GetApiV2Search200ApplicationJSON withAccounts(org.openapis.openapi.models.shared.Account[] accounts) {
         this.accounts = accounts;
         return this;
@@ -23,6 +24,7 @@ public class GetApiV2Search200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashtags")
     public org.openapis.openapi.models.shared.Status[] hashtags;
+
     public GetApiV2Search200ApplicationJSON withHashtags(org.openapis.openapi.models.shared.Status[] hashtags) {
         this.hashtags = hashtags;
         return this;
@@ -31,9 +33,11 @@ public class GetApiV2Search200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statuses")
     public org.openapis.openapi.models.shared.Tag[] statuses;
+
     public GetApiV2Search200ApplicationJSON withStatuses(org.openapis.openapi.models.shared.Tag[] statuses) {
         this.statuses = statuses;
         return this;
     }
     
+    public GetApiV2Search200ApplicationJSON(){}
 }

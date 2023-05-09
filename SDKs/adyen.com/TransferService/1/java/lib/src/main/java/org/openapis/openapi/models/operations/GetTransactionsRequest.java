@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountHolderId")
     public String accountHolderId;
+
     public GetTransactionsRequest withAccountHolderId(String accountHolderId) {
         this.accountHolderId = accountHolderId;
         return this;
@@ -23,6 +25,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=balanceAccountId")
     public String balanceAccountId;
+
     public GetTransactionsRequest withBalanceAccountId(String balanceAccountId) {
         this.balanceAccountId = balanceAccountId;
         return this;
@@ -33,6 +36,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=balancePlatform")
     public String balancePlatform;
+
     public GetTransactionsRequest withBalancePlatform(String balancePlatform) {
         this.balancePlatform = balancePlatform;
         return this;
@@ -43,6 +47,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdSince")
     public OffsetDateTime createdSince;
+
     public GetTransactionsRequest withCreatedSince(OffsetDateTime createdSince) {
         this.createdSince = createdSince;
         return this;
@@ -53,6 +58,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdUntil")
     public OffsetDateTime createdUntil;
+
     public GetTransactionsRequest withCreatedUntil(OffsetDateTime createdUntil) {
         this.createdUntil = createdUntil;
         return this;
@@ -63,6 +69,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetTransactionsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -73,6 +80,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetTransactionsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -83,9 +91,14 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paymentInstrumentId")
     public String paymentInstrumentId;
+
     public GetTransactionsRequest withPaymentInstrumentId(String paymentInstrumentId) {
         this.paymentInstrumentId = paymentInstrumentId;
         return this;
     }
     
+    public GetTransactionsRequest(@JsonProperty("createdSince") OffsetDateTime createdSince, @JsonProperty("createdUntil") OffsetDateTime createdUntil) {
+        this.createdSince = createdSince;
+        this.createdUntil = createdUntil;
+  }
 }

@@ -15,6 +15,7 @@ public class PlacementStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DkimPercentage")
     public Double dkimPercentage;
+
     public PlacementStatistics withDkimPercentage(Double dkimPercentage) {
         this.dkimPercentage = dkimPercentage;
         return this;
@@ -23,6 +24,7 @@ public class PlacementStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InboxPercentage")
     public Double inboxPercentage;
+
     public PlacementStatistics withInboxPercentage(Double inboxPercentage) {
         this.inboxPercentage = inboxPercentage;
         return this;
@@ -31,6 +33,7 @@ public class PlacementStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MissingPercentage")
     public Double missingPercentage;
+
     public PlacementStatistics withMissingPercentage(Double missingPercentage) {
         this.missingPercentage = missingPercentage;
         return this;
@@ -39,6 +42,7 @@ public class PlacementStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpamPercentage")
     public Double spamPercentage;
+
     public PlacementStatistics withSpamPercentage(Double spamPercentage) {
         this.spamPercentage = spamPercentage;
         return this;
@@ -47,9 +51,11 @@ public class PlacementStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpfPercentage")
     public Double spfPercentage;
+
     public PlacementStatistics withSpfPercentage(Double spfPercentage) {
         this.spfPercentage = spfPercentage;
         return this;
     }
     
+    public PlacementStatistics(){}
 }

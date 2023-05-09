@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SlotDefaultValue {
     @JsonProperty("defaultValue")
     public String defaultValue;
+
     public SlotDefaultValue withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
     }
     
+    public SlotDefaultValue(@JsonProperty("defaultValue") String defaultValue) {
+        this.defaultValue = defaultValue;
+  }
 }

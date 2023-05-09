@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OptOutSpeakerResponse {
@@ -12,6 +13,7 @@ public class OptOutSpeakerResponse {
      */
     
     public Object accessDeniedException;
+
     public OptOutSpeakerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class OptOutSpeakerResponse {
      */
     
     public Object conflictException;
+
     public OptOutSpeakerResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class OptOutSpeakerResponse {
     
     
     public String contentType;
+
     public OptOutSpeakerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class OptOutSpeakerResponse {
      */
     
     public Object internalServerException;
+
     public OptOutSpeakerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class OptOutSpeakerResponse {
      */
     
     public org.openapis.openapi.models.shared.OptOutSpeakerResponse optOutSpeakerResponse;
+
     public OptOutSpeakerResponse withOptOutSpeakerResponse(org.openapis.openapi.models.shared.OptOutSpeakerResponse optOutSpeakerResponse) {
         this.optOutSpeakerResponse = optOutSpeakerResponse;
         return this;
@@ -59,6 +65,7 @@ public class OptOutSpeakerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public OptOutSpeakerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class OptOutSpeakerResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public OptOutSpeakerResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class OptOutSpeakerResponse {
     
     
     public Integer statusCode;
+
     public OptOutSpeakerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class OptOutSpeakerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OptOutSpeakerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class OptOutSpeakerResponse {
      */
     
     public Object throttlingException;
+
     public OptOutSpeakerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class OptOutSpeakerResponse {
      */
     
     public Object validationException;
+
     public OptOutSpeakerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public OptOutSpeakerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateCodeSigningConfigRequestBodyCodeSigningPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UntrustedArtifactOnDeployment")
     public org.openapis.openapi.models.shared.CodeSigningPolicyEnum untrustedArtifactOnDeployment;
+
     public CreateCodeSigningConfigRequestBodyCodeSigningPolicies withUntrustedArtifactOnDeployment(org.openapis.openapi.models.shared.CodeSigningPolicyEnum untrustedArtifactOnDeployment) {
         this.untrustedArtifactOnDeployment = untrustedArtifactOnDeployment;
         return this;
     }
     
+    public CreateCodeSigningConfigRequestBodyCodeSigningPolicies(){}
 }

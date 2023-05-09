@@ -15,6 +15,7 @@ public class Ec2InstanceAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Ec2InstanceAggregationResponse withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class Ec2InstanceAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ami")
     public String ami;
+
     public Ec2InstanceAggregationResponse withAmi(String ami) {
         this.ami = ami;
         return this;
@@ -30,6 +32,7 @@ public class Ec2InstanceAggregationResponse {
     
     @JsonProperty("instanceId")
     public String instanceId;
+
     public Ec2InstanceAggregationResponse withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -38,6 +41,7 @@ public class Ec2InstanceAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTags")
     public java.util.Map<String, String> instanceTags;
+
     public Ec2InstanceAggregationResponse withInstanceTags(java.util.Map<String, String> instanceTags) {
         this.instanceTags = instanceTags;
         return this;
@@ -46,6 +50,7 @@ public class Ec2InstanceAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkFindings")
     public Long networkFindings;
+
     public Ec2InstanceAggregationResponse withNetworkFindings(Long networkFindings) {
         this.networkFindings = networkFindings;
         return this;
@@ -54,6 +59,7 @@ public class Ec2InstanceAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystem")
     public String operatingSystem;
+
     public Ec2InstanceAggregationResponse withOperatingSystem(String operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -62,9 +68,13 @@ public class Ec2InstanceAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityCounts")
     public SeverityCounts severityCounts;
+
     public Ec2InstanceAggregationResponse withSeverityCounts(SeverityCounts severityCounts) {
         this.severityCounts = severityCounts;
         return this;
     }
     
+    public Ec2InstanceAggregationResponse(@JsonProperty("instanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

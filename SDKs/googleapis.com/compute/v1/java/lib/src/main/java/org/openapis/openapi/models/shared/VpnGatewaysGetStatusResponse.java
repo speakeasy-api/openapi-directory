@@ -15,9 +15,11 @@ public class VpnGatewaysGetStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public VpnGatewayStatus result;
+
     public VpnGatewaysGetStatusResponse withResult(VpnGatewayStatus result) {
         this.result = result;
         return this;
     }
     
+    public VpnGatewaysGetStatusResponse(){}
 }

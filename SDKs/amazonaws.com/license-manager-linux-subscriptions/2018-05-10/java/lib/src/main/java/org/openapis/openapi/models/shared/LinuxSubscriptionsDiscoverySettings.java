@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LinuxSubscriptionsDiscoverySettings {
     @JsonProperty("OrganizationIntegration")
     public OrganizationIntegrationEnum organizationIntegration;
+
     public LinuxSubscriptionsDiscoverySettings withOrganizationIntegration(OrganizationIntegrationEnum organizationIntegration) {
         this.organizationIntegration = organizationIntegration;
         return this;
@@ -19,9 +20,14 @@ public class LinuxSubscriptionsDiscoverySettings {
     
     @JsonProperty("SourceRegions")
     public String[] sourceRegions;
+
     public LinuxSubscriptionsDiscoverySettings withSourceRegions(String[] sourceRegions) {
         this.sourceRegions = sourceRegions;
         return this;
     }
     
+    public LinuxSubscriptionsDiscoverySettings(@JsonProperty("OrganizationIntegration") OrganizationIntegrationEnum organizationIntegration, @JsonProperty("SourceRegions") String[] sourceRegions) {
+        this.organizationIntegration = organizationIntegration;
+        this.sourceRegions = sourceRegions;
+  }
 }

@@ -12,6 +12,7 @@ public class GetAppsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isOwner")
     public Boolean isOwner;
+
     public GetAppsRequest withIsOwner(Boolean isOwner) {
         this.isOwner = isOwner;
         return this;
@@ -22,6 +23,7 @@ public class GetAppsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetAppsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +34,7 @@ public class GetAppsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Long pageNumber;
+
     public GetAppsRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -42,6 +45,7 @@ public class GetAppsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetAppsRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -52,6 +56,7 @@ public class GetAppsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetAppsRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -62,9 +67,11 @@ public class GetAppsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public String userId;
+
     public GetAppsRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetAppsRequest(){}
 }

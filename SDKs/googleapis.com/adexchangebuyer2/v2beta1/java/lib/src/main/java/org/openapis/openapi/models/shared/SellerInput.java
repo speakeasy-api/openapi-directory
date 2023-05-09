@@ -18,9 +18,11 @@ public class SellerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public SellerInput withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public SellerInput(){}
 }

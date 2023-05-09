@@ -18,6 +18,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Dataset withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Dataset withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exampleCount")
     public Integer exampleCount;
+
     public Dataset withExampleCount(Integer exampleCount) {
         this.exampleCount = exampleCount;
         return this;
@@ -51,6 +54,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Dataset withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLanguageCode")
     public String sourceLanguageCode;
+
     public Dataset withSourceLanguageCode(String sourceLanguageCode) {
         this.sourceLanguageCode = sourceLanguageCode;
         return this;
@@ -73,6 +78,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLanguageCode")
     public String targetLanguageCode;
+
     public Dataset withTargetLanguageCode(String targetLanguageCode) {
         this.targetLanguageCode = targetLanguageCode;
         return this;
@@ -84,6 +90,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testExampleCount")
     public Integer testExampleCount;
+
     public Dataset withTestExampleCount(Integer testExampleCount) {
         this.testExampleCount = testExampleCount;
         return this;
@@ -95,6 +102,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainExampleCount")
     public Integer trainExampleCount;
+
     public Dataset withTrainExampleCount(Integer trainExampleCount) {
         this.trainExampleCount = trainExampleCount;
         return this;
@@ -106,6 +114,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Dataset withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -117,9 +126,11 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateExampleCount")
     public Integer validateExampleCount;
+
     public Dataset withValidateExampleCount(Integer validateExampleCount) {
         this.validateExampleCount = validateExampleCount;
         return this;
     }
     
+    public Dataset(){}
 }

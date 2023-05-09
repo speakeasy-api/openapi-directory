@@ -18,6 +18,7 @@ public class UsageRateTimelineEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveTime")
     public EstimationTimePoint effectiveTime;
+
     public UsageRateTimelineEntry withEffectiveTime(EstimationTimePoint effectiveTime) {
         this.effectiveTime = effectiveTime;
         return this;
@@ -29,9 +30,11 @@ public class UsageRateTimelineEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageRate")
     public Double usageRate;
+
     public UsageRateTimelineEntry withUsageRate(Double usageRate) {
         this.usageRate = usageRate;
         return this;
     }
     
+    public UsageRateTimelineEntry(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class QueryWhatIfForecastResponse {
     
     public String contentType;
+
     public QueryWhatIfForecastResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class QueryWhatIfForecastResponse {
      */
     
     public Object invalidInputException;
+
     public QueryWhatIfForecastResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class QueryWhatIfForecastResponse {
      */
     
     public Object invalidNextTokenException;
+
     public QueryWhatIfForecastResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class QueryWhatIfForecastResponse {
      */
     
     public Object limitExceededException;
+
     public QueryWhatIfForecastResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class QueryWhatIfForecastResponse {
      */
     
     public org.openapis.openapi.models.shared.QueryWhatIfForecastResponse queryWhatIfForecastResponse;
+
     public QueryWhatIfForecastResponse withQueryWhatIfForecastResponse(org.openapis.openapi.models.shared.QueryWhatIfForecastResponse queryWhatIfForecastResponse) {
         this.queryWhatIfForecastResponse = queryWhatIfForecastResponse;
         return this;
@@ -59,6 +65,7 @@ public class QueryWhatIfForecastResponse {
      */
     
     public Object resourceInUseException;
+
     public QueryWhatIfForecastResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -69,6 +76,7 @@ public class QueryWhatIfForecastResponse {
      */
     
     public Object resourceNotFoundException;
+
     public QueryWhatIfForecastResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class QueryWhatIfForecastResponse {
     
     
     public Integer statusCode;
+
     public QueryWhatIfForecastResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class QueryWhatIfForecastResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public QueryWhatIfForecastResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public QueryWhatIfForecastResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

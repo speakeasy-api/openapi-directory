@@ -18,6 +18,7 @@ public class Charge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellationId")
     public String cancellationId;
+
     public Charge withCancellationId(String cancellationId) {
         this.cancellationId = cancellationId;
         return this;
@@ -29,6 +30,7 @@ public class Charge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseId")
     public String caseId;
+
     public Charge withCaseId(String caseId) {
         this.caseId = caseId;
         return this;
@@ -40,6 +42,7 @@ public class Charge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeNetAmount")
     public Amount chargeNetAmount;
+
     public Charge withChargeNetAmount(Amount chargeNetAmount) {
         this.chargeNetAmount = chargeNetAmount;
         return this;
@@ -51,6 +54,7 @@ public class Charge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inquiryId")
     public String inquiryId;
+
     public Charge withInquiryId(String inquiryId) {
         this.inquiryId = inquiryId;
         return this;
@@ -62,6 +66,7 @@ public class Charge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderId")
     public String orderId;
+
     public Charge withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -73,6 +78,7 @@ public class Charge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentDisputeId")
     public String paymentDisputeId;
+
     public Charge withPaymentDisputeId(String paymentDisputeId) {
         this.paymentDisputeId = paymentDisputeId;
         return this;
@@ -84,6 +90,7 @@ public class Charge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refundId")
     public String refundId;
+
     public Charge withRefundId(String refundId) {
         this.refundId = refundId;
         return this;
@@ -95,9 +102,11 @@ public class Charge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnId")
     public String returnId;
+
     public Charge withReturnId(String returnId) {
         this.returnId = returnId;
         return this;
     }
     
+    public Charge(){}
 }

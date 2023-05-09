@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JobScheduleEnableRequest {
@@ -12,6 +13,7 @@ public class JobScheduleEnableRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public JobScheduleEnableRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -22,6 +24,7 @@ public class JobScheduleEnableRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
     public String ifModifiedSince;
+
     public JobScheduleEnableRequest withIfModifiedSince(String ifModifiedSince) {
         this.ifModifiedSince = ifModifiedSince;
         return this;
@@ -32,6 +35,7 @@ public class JobScheduleEnableRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public JobScheduleEnableRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -42,6 +46,7 @@ public class JobScheduleEnableRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
     public String ifUnmodifiedSince;
+
     public JobScheduleEnableRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
         this.ifUnmodifiedSince = ifUnmodifiedSince;
         return this;
@@ -52,6 +57,7 @@ public class JobScheduleEnableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public JobScheduleEnableRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -62,6 +68,7 @@ public class JobScheduleEnableRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public JobScheduleEnableRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -72,6 +79,7 @@ public class JobScheduleEnableRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobScheduleId")
     public String jobScheduleId;
+
     public JobScheduleEnableRequest withJobScheduleId(String jobScheduleId) {
         this.jobScheduleId = jobScheduleId;
         return this;
@@ -82,6 +90,7 @@ public class JobScheduleEnableRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public JobScheduleEnableRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -92,6 +101,7 @@ public class JobScheduleEnableRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public JobScheduleEnableRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -102,9 +112,14 @@ public class JobScheduleEnableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public JobScheduleEnableRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public JobScheduleEnableRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("jobScheduleId") String jobScheduleId) {
+        this.apiVersion = apiVersion;
+        this.jobScheduleId = jobScheduleId;
+  }
 }

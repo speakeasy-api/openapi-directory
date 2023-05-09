@@ -183,6 +183,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -226,7 +231,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGatewayRouteResponse res = new org.openapis.openapi.models.operations.CreateGatewayRouteResponse() {{
+        org.openapis.openapi.models.operations.CreateGatewayRouteResponse res = new org.openapis.openapi.models.operations.CreateGatewayRouteResponse(contentType, httpRes.statusCode()) {{
             createGatewayRouteOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -237,8 +242,6 @@ public class SDK {
             internalServerErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,7 +345,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateMeshResponse res = new org.openapis.openapi.models.operations.CreateMeshResponse() {{
+        org.openapis.openapi.models.operations.CreateMeshResponse res = new org.openapis.openapi.models.operations.CreateMeshResponse(contentType, httpRes.statusCode()) {{
             createMeshOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -353,8 +356,6 @@ public class SDK {
             internalServerErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -464,7 +465,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRouteResponse res = new org.openapis.openapi.models.operations.CreateRouteResponse() {{
+        org.openapis.openapi.models.operations.CreateRouteResponse res = new org.openapis.openapi.models.operations.CreateRouteResponse(contentType, httpRes.statusCode()) {{
             createRouteOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -475,8 +476,6 @@ public class SDK {
             internalServerErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -586,7 +585,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateVirtualGatewayResponse res = new org.openapis.openapi.models.operations.CreateVirtualGatewayResponse() {{
+        org.openapis.openapi.models.operations.CreateVirtualGatewayResponse res = new org.openapis.openapi.models.operations.CreateVirtualGatewayResponse(contentType, httpRes.statusCode()) {{
             createVirtualGatewayOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -597,8 +596,6 @@ public class SDK {
             internalServerErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -708,7 +705,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateVirtualNodeResponse res = new org.openapis.openapi.models.operations.CreateVirtualNodeResponse() {{
+        org.openapis.openapi.models.operations.CreateVirtualNodeResponse res = new org.openapis.openapi.models.operations.CreateVirtualNodeResponse(contentType, httpRes.statusCode()) {{
             createVirtualNodeOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -719,8 +716,6 @@ public class SDK {
             internalServerErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -830,7 +825,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateVirtualRouterResponse res = new org.openapis.openapi.models.operations.CreateVirtualRouterResponse() {{
+        org.openapis.openapi.models.operations.CreateVirtualRouterResponse res = new org.openapis.openapi.models.operations.CreateVirtualRouterResponse(contentType, httpRes.statusCode()) {{
             createVirtualRouterOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -841,8 +836,6 @@ public class SDK {
             internalServerErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -952,7 +945,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateVirtualServiceResponse res = new org.openapis.openapi.models.operations.CreateVirtualServiceResponse() {{
+        org.openapis.openapi.models.operations.CreateVirtualServiceResponse res = new org.openapis.openapi.models.operations.CreateVirtualServiceResponse(contentType, httpRes.statusCode()) {{
             createVirtualServiceOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -963,8 +956,6 @@ public class SDK {
             internalServerErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1069,7 +1060,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteGatewayRouteResponse res = new org.openapis.openapi.models.operations.DeleteGatewayRouteResponse() {{
+        org.openapis.openapi.models.operations.DeleteGatewayRouteResponse res = new org.openapis.openapi.models.operations.DeleteGatewayRouteResponse(contentType, httpRes.statusCode()) {{
             deleteGatewayRouteOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -1079,8 +1070,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1172,7 +1161,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMeshResponse res = new org.openapis.openapi.models.operations.DeleteMeshResponse() {{
+        org.openapis.openapi.models.operations.DeleteMeshResponse res = new org.openapis.openapi.models.operations.DeleteMeshResponse(contentType, httpRes.statusCode()) {{
             deleteMeshOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -1182,8 +1171,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1281,7 +1268,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRouteResponse res = new org.openapis.openapi.models.operations.DeleteRouteResponse() {{
+        org.openapis.openapi.models.operations.DeleteRouteResponse res = new org.openapis.openapi.models.operations.DeleteRouteResponse(contentType, httpRes.statusCode()) {{
             deleteRouteOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -1291,8 +1278,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1390,7 +1375,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVirtualGatewayResponse res = new org.openapis.openapi.models.operations.DeleteVirtualGatewayResponse() {{
+        org.openapis.openapi.models.operations.DeleteVirtualGatewayResponse res = new org.openapis.openapi.models.operations.DeleteVirtualGatewayResponse(contentType, httpRes.statusCode()) {{
             deleteVirtualGatewayOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -1400,8 +1385,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1499,7 +1482,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVirtualNodeResponse res = new org.openapis.openapi.models.operations.DeleteVirtualNodeResponse() {{
+        org.openapis.openapi.models.operations.DeleteVirtualNodeResponse res = new org.openapis.openapi.models.operations.DeleteVirtualNodeResponse(contentType, httpRes.statusCode()) {{
             deleteVirtualNodeOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -1509,8 +1492,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1608,7 +1589,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVirtualRouterResponse res = new org.openapis.openapi.models.operations.DeleteVirtualRouterResponse() {{
+        org.openapis.openapi.models.operations.DeleteVirtualRouterResponse res = new org.openapis.openapi.models.operations.DeleteVirtualRouterResponse(contentType, httpRes.statusCode()) {{
             deleteVirtualRouterOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -1618,8 +1599,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1717,7 +1696,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVirtualServiceResponse res = new org.openapis.openapi.models.operations.DeleteVirtualServiceResponse() {{
+        org.openapis.openapi.models.operations.DeleteVirtualServiceResponse res = new org.openapis.openapi.models.operations.DeleteVirtualServiceResponse(contentType, httpRes.statusCode()) {{
             deleteVirtualServiceOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -1727,8 +1706,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1826,7 +1803,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeGatewayRouteResponse res = new org.openapis.openapi.models.operations.DescribeGatewayRouteResponse() {{
+        org.openapis.openapi.models.operations.DescribeGatewayRouteResponse res = new org.openapis.openapi.models.operations.DescribeGatewayRouteResponse(contentType, httpRes.statusCode()) {{
             describeGatewayRouteOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -1835,8 +1812,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1927,7 +1902,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeMeshResponse res = new org.openapis.openapi.models.operations.DescribeMeshResponse() {{
+        org.openapis.openapi.models.operations.DescribeMeshResponse res = new org.openapis.openapi.models.operations.DescribeMeshResponse(contentType, httpRes.statusCode()) {{
             describeMeshOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -1936,8 +1911,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2028,7 +2001,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeRouteResponse res = new org.openapis.openapi.models.operations.DescribeRouteResponse() {{
+        org.openapis.openapi.models.operations.DescribeRouteResponse res = new org.openapis.openapi.models.operations.DescribeRouteResponse(contentType, httpRes.statusCode()) {{
             describeRouteOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -2037,8 +2010,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2129,7 +2100,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeVirtualGatewayResponse res = new org.openapis.openapi.models.operations.DescribeVirtualGatewayResponse() {{
+        org.openapis.openapi.models.operations.DescribeVirtualGatewayResponse res = new org.openapis.openapi.models.operations.DescribeVirtualGatewayResponse(contentType, httpRes.statusCode()) {{
             describeVirtualGatewayOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -2138,8 +2109,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2230,7 +2199,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeVirtualNodeResponse res = new org.openapis.openapi.models.operations.DescribeVirtualNodeResponse() {{
+        org.openapis.openapi.models.operations.DescribeVirtualNodeResponse res = new org.openapis.openapi.models.operations.DescribeVirtualNodeResponse(contentType, httpRes.statusCode()) {{
             describeVirtualNodeOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -2239,8 +2208,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2331,7 +2298,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeVirtualRouterResponse res = new org.openapis.openapi.models.operations.DescribeVirtualRouterResponse() {{
+        org.openapis.openapi.models.operations.DescribeVirtualRouterResponse res = new org.openapis.openapi.models.operations.DescribeVirtualRouterResponse(contentType, httpRes.statusCode()) {{
             describeVirtualRouterOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -2340,8 +2307,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2432,7 +2397,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeVirtualServiceResponse res = new org.openapis.openapi.models.operations.DescribeVirtualServiceResponse() {{
+        org.openapis.openapi.models.operations.DescribeVirtualServiceResponse res = new org.openapis.openapi.models.operations.DescribeVirtualServiceResponse(contentType, httpRes.statusCode()) {{
             describeVirtualServiceOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -2441,8 +2406,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2533,7 +2496,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGatewayRoutesResponse res = new org.openapis.openapi.models.operations.ListGatewayRoutesResponse() {{
+        org.openapis.openapi.models.operations.ListGatewayRoutesResponse res = new org.openapis.openapi.models.operations.ListGatewayRoutesResponse(contentType, httpRes.statusCode()) {{
             listGatewayRoutesOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -2542,8 +2505,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2634,7 +2595,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListMeshesResponse res = new org.openapis.openapi.models.operations.ListMeshesResponse() {{
+        org.openapis.openapi.models.operations.ListMeshesResponse res = new org.openapis.openapi.models.operations.ListMeshesResponse(contentType, httpRes.statusCode()) {{
             listMeshesOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -2643,8 +2604,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2735,7 +2694,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRoutesResponse res = new org.openapis.openapi.models.operations.ListRoutesResponse() {{
+        org.openapis.openapi.models.operations.ListRoutesResponse res = new org.openapis.openapi.models.operations.ListRoutesResponse(contentType, httpRes.statusCode()) {{
             listRoutesOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -2744,8 +2703,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2836,7 +2793,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -2845,8 +2802,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2937,7 +2892,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListVirtualGatewaysResponse res = new org.openapis.openapi.models.operations.ListVirtualGatewaysResponse() {{
+        org.openapis.openapi.models.operations.ListVirtualGatewaysResponse res = new org.openapis.openapi.models.operations.ListVirtualGatewaysResponse(contentType, httpRes.statusCode()) {{
             listVirtualGatewaysOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -2946,8 +2901,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3038,7 +2991,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListVirtualNodesResponse res = new org.openapis.openapi.models.operations.ListVirtualNodesResponse() {{
+        org.openapis.openapi.models.operations.ListVirtualNodesResponse res = new org.openapis.openapi.models.operations.ListVirtualNodesResponse(contentType, httpRes.statusCode()) {{
             listVirtualNodesOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -3047,8 +3000,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3139,7 +3090,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListVirtualRoutersResponse res = new org.openapis.openapi.models.operations.ListVirtualRoutersResponse() {{
+        org.openapis.openapi.models.operations.ListVirtualRoutersResponse res = new org.openapis.openapi.models.operations.ListVirtualRoutersResponse(contentType, httpRes.statusCode()) {{
             listVirtualRoutersOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -3148,8 +3099,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3240,7 +3189,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListVirtualServicesResponse res = new org.openapis.openapi.models.operations.ListVirtualServicesResponse() {{
+        org.openapis.openapi.models.operations.ListVirtualServicesResponse res = new org.openapis.openapi.models.operations.ListVirtualServicesResponse(contentType, httpRes.statusCode()) {{
             listVirtualServicesOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -3249,8 +3198,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3346,7 +3293,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -3356,8 +3303,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3460,7 +3405,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -3469,8 +3414,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3566,7 +3509,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGatewayRouteResponse res = new org.openapis.openapi.models.operations.UpdateGatewayRouteResponse() {{
+        org.openapis.openapi.models.operations.UpdateGatewayRouteResponse res = new org.openapis.openapi.models.operations.UpdateGatewayRouteResponse(contentType, httpRes.statusCode()) {{
             updateGatewayRouteOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -3577,8 +3520,6 @@ public class SDK {
             internalServerErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3682,7 +3623,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateMeshResponse res = new org.openapis.openapi.models.operations.UpdateMeshResponse() {{
+        org.openapis.openapi.models.operations.UpdateMeshResponse res = new org.openapis.openapi.models.operations.UpdateMeshResponse(contentType, httpRes.statusCode()) {{
             updateMeshOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -3692,8 +3633,6 @@ public class SDK {
             serviceUnavailableException = null;
             internalServerErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3796,7 +3735,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRouteResponse res = new org.openapis.openapi.models.operations.UpdateRouteResponse() {{
+        org.openapis.openapi.models.operations.UpdateRouteResponse res = new org.openapis.openapi.models.operations.UpdateRouteResponse(contentType, httpRes.statusCode()) {{
             updateRouteOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -3807,8 +3746,6 @@ public class SDK {
             internalServerErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3918,7 +3855,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateVirtualGatewayResponse res = new org.openapis.openapi.models.operations.UpdateVirtualGatewayResponse() {{
+        org.openapis.openapi.models.operations.UpdateVirtualGatewayResponse res = new org.openapis.openapi.models.operations.UpdateVirtualGatewayResponse(contentType, httpRes.statusCode()) {{
             updateVirtualGatewayOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -3929,8 +3866,6 @@ public class SDK {
             internalServerErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4040,7 +3975,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateVirtualNodeResponse res = new org.openapis.openapi.models.operations.UpdateVirtualNodeResponse() {{
+        org.openapis.openapi.models.operations.UpdateVirtualNodeResponse res = new org.openapis.openapi.models.operations.UpdateVirtualNodeResponse(contentType, httpRes.statusCode()) {{
             updateVirtualNodeOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -4051,8 +3986,6 @@ public class SDK {
             internalServerErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4162,7 +4095,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateVirtualRouterResponse res = new org.openapis.openapi.models.operations.UpdateVirtualRouterResponse() {{
+        org.openapis.openapi.models.operations.UpdateVirtualRouterResponse res = new org.openapis.openapi.models.operations.UpdateVirtualRouterResponse(contentType, httpRes.statusCode()) {{
             updateVirtualRouterOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -4173,8 +4106,6 @@ public class SDK {
             internalServerErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4284,7 +4215,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateVirtualServiceResponse res = new org.openapis.openapi.models.operations.UpdateVirtualServiceResponse() {{
+        org.openapis.openapi.models.operations.UpdateVirtualServiceResponse res = new org.openapis.openapi.models.operations.UpdateVirtualServiceResponse(contentType, httpRes.statusCode()) {{
             updateVirtualServiceOutput = null;
             notFoundException = null;
             badRequestException = null;
@@ -4295,8 +4226,6 @@ public class SDK {
             internalServerErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

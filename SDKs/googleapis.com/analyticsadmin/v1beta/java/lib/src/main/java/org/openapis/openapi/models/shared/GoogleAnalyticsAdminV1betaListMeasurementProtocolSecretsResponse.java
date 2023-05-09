@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaListMeasurementProtocolSecretsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurementProtocolSecrets")
     public GoogleAnalyticsAdminV1betaMeasurementProtocolSecret[] measurementProtocolSecrets;
+
     public GoogleAnalyticsAdminV1betaListMeasurementProtocolSecretsResponse withMeasurementProtocolSecrets(GoogleAnalyticsAdminV1betaMeasurementProtocolSecret[] measurementProtocolSecrets) {
         this.measurementProtocolSecrets = measurementProtocolSecrets;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1betaListMeasurementProtocolSecretsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAnalyticsAdminV1betaListMeasurementProtocolSecretsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaListMeasurementProtocolSecretsResponse(){}
 }

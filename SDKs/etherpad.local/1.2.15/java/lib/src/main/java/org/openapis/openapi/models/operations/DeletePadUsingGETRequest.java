@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DeletePadUsingGETRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
     public String padID;
+
     public DeletePadUsingGETRequest withPadID(String padID) {
         this.padID = padID;
         return this;
     }
     
+    public DeletePadUsingGETRequest(){}
 }

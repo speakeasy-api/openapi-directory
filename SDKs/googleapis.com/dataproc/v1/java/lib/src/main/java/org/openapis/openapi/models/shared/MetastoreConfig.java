@@ -18,9 +18,11 @@ public class MetastoreConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataprocMetastoreService")
     public String dataprocMetastoreService;
+
     public MetastoreConfig withDataprocMetastoreService(String dataprocMetastoreService) {
         this.dataprocMetastoreService = dataprocMetastoreService;
         return this;
     }
     
+    public MetastoreConfig(){}
 }

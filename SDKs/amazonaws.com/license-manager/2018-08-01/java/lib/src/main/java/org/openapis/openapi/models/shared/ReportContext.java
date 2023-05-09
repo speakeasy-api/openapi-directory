@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReportContext {
     @JsonProperty("licenseConfigurationArns")
     public String[] licenseConfigurationArns;
+
     public ReportContext withLicenseConfigurationArns(String[] licenseConfigurationArns) {
         this.licenseConfigurationArns = licenseConfigurationArns;
         return this;
     }
     
+    public ReportContext(@JsonProperty("licenseConfigurationArns") String[] licenseConfigurationArns) {
+        this.licenseConfigurationArns = licenseConfigurationArns;
+  }
 }

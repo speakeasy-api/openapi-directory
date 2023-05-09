@@ -15,9 +15,11 @@ public class AttachCertificateToDistributionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public AttachCertificateToDistributionResult withOperation(Operation operation) {
         this.operation = operation;
         return this;
     }
     
+    public AttachCertificateToDistributionResult(){}
 }

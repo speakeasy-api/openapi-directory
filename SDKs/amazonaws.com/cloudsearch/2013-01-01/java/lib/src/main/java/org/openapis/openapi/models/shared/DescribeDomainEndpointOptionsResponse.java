@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeDomainEndpointOptionsResponse {
     
     public DomainEndpointOptionsStatus domainEndpointOptions;
+
     public DescribeDomainEndpointOptionsResponse withDomainEndpointOptions(DomainEndpointOptionsStatus domainEndpointOptions) {
         this.domainEndpointOptions = domainEndpointOptions;
         return this;
     }
     
+    public DescribeDomainEndpointOptionsResponse(){}
 }

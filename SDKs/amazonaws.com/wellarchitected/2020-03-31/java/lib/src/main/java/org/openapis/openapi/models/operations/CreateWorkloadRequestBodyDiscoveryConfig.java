@@ -15,9 +15,11 @@ public class CreateWorkloadRequestBodyDiscoveryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrustedAdvisorIntegrationStatus")
     public org.openapis.openapi.models.shared.TrustedAdvisorIntegrationStatusEnum trustedAdvisorIntegrationStatus;
+
     public CreateWorkloadRequestBodyDiscoveryConfig withTrustedAdvisorIntegrationStatus(org.openapis.openapi.models.shared.TrustedAdvisorIntegrationStatusEnum trustedAdvisorIntegrationStatus) {
         this.trustedAdvisorIntegrationStatus = trustedAdvisorIntegrationStatus;
         return this;
     }
     
+    public CreateWorkloadRequestBodyDiscoveryConfig(){}
 }

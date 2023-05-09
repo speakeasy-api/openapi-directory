@@ -12,6 +12,7 @@ public class ListMonitorEvaluationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public ListMonitorEvaluationsRequest withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListMonitorEvaluationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListMonitorEvaluationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class ListMonitorEvaluationsRequest {
     
     @JsonProperty("MonitorArn")
     public String monitorArn;
+
     public ListMonitorEvaluationsRequest withMonitorArn(String monitorArn) {
         this.monitorArn = monitorArn;
         return this;
@@ -35,9 +38,13 @@ public class ListMonitorEvaluationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMonitorEvaluationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMonitorEvaluationsRequest(@JsonProperty("MonitorArn") String monitorArn) {
+        this.monitorArn = monitorArn;
+  }
 }

@@ -18,9 +18,11 @@ public class SiteVerificationWebResourceListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public SiteVerificationWebResourceResource[] items;
+
     public SiteVerificationWebResourceListResponse withItems(SiteVerificationWebResourceResource[] items) {
         this.items = items;
         return this;
     }
     
+    public SiteVerificationWebResourceListResponse(){}
 }

@@ -15,6 +15,7 @@ public class BatchListObjectChildrenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Children")
     public java.util.Map<String, String> children;
+
     public BatchListObjectChildrenResponse withChildren(java.util.Map<String, String> children) {
         this.children = children;
         return this;
@@ -23,9 +24,11 @@ public class BatchListObjectChildrenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public BatchListObjectChildrenResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public BatchListObjectChildrenResponse(){}
 }

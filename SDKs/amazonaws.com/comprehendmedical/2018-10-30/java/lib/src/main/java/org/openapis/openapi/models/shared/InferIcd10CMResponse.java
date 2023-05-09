@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InferIcd10CMResponse {
     @JsonProperty("Entities")
     public Icd10CMEntity[] entities;
+
     public InferIcd10CMResponse withEntities(Icd10CMEntity[] entities) {
         this.entities = entities;
         return this;
@@ -22,6 +23,7 @@ public class InferIcd10CMResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelVersion")
     public String modelVersion;
+
     public InferIcd10CMResponse withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
@@ -30,9 +32,13 @@ public class InferIcd10CMResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public InferIcd10CMResponse withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
     }
     
+    public InferIcd10CMResponse(@JsonProperty("Entities") Icd10CMEntity[] entities) {
+        this.entities = entities;
+  }
 }

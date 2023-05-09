@@ -25,6 +25,7 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public Account account;
+
     public AdminAccount withAccount(Account account) {
         this.account = account;
         return this;
@@ -36,6 +37,7 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approved")
     public Boolean approved;
+
     public AdminAccount withApproved(Boolean approved) {
         this.approved = approved;
         return this;
@@ -47,6 +49,7 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmed")
     public Boolean confirmed;
+
     public AdminAccount withConfirmed(Boolean confirmed) {
         this.confirmed = confirmed;
         return this;
@@ -60,6 +63,7 @@ public class AdminAccount {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public AdminAccount withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -71,6 +75,7 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by_application_id")
     public String createdByApplicationId;
+
     public AdminAccount withCreatedByApplicationId(String createdByApplicationId) {
         this.createdByApplicationId = createdByApplicationId;
         return this;
@@ -82,6 +87,7 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public AdminAccount withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -93,6 +99,7 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AdminAccount withEmail(String email) {
         this.email = email;
         return this;
@@ -104,6 +111,7 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AdminAccount withId(String id) {
         this.id = id;
         return this;
@@ -115,6 +123,7 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invite_request")
     public String inviteRequest;
+
     public AdminAccount withInviteRequest(String inviteRequest) {
         this.inviteRequest = inviteRequest;
         return this;
@@ -126,6 +135,7 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invited_by_account_id")
     public String invitedByAccountId;
+
     public AdminAccount withInvitedByAccountId(String invitedByAccountId) {
         this.invitedByAccountId = invitedByAccountId;
         return this;
@@ -137,6 +147,7 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public AdminAccount withIp(String ip) {
         this.ip = ip;
         return this;
@@ -148,6 +159,7 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public AdminAccount withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -159,6 +171,7 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public AdminAccount withRole(String role) {
         this.role = role;
         return this;
@@ -170,6 +183,7 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("silenced")
     public Boolean silenced;
+
     public AdminAccount withSilenced(Boolean silenced) {
         this.silenced = silenced;
         return this;
@@ -181,6 +195,7 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspended")
     public Boolean suspended;
+
     public AdminAccount withSuspended(Boolean suspended) {
         this.suspended = suspended;
         return this;
@@ -192,9 +207,11 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public AdminAccount withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AdminAccount(){}
 }

@@ -15,9 +15,11 @@ public class TargetPoolsAddInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public InstanceReference[] instances;
+
     public TargetPoolsAddInstanceRequest withInstances(InstanceReference[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public TargetPoolsAddInstanceRequest(){}
 }

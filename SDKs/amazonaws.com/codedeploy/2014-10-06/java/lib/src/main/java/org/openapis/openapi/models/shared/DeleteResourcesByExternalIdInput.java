@@ -12,9 +12,11 @@ public class DeleteResourcesByExternalIdInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public DeleteResourcesByExternalIdInput withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
     }
     
+    public DeleteResourcesByExternalIdInput(){}
 }

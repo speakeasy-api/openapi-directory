@@ -60,6 +60,7 @@ public class SigningBasketResponse201 {
      */
     @JsonProperty("_links")
     public LinksSigningBasket links;
+
     public SigningBasketResponse201 withLinks(LinksSigningBasket links) {
         this.links = links;
         return this;
@@ -70,6 +71,7 @@ public class SigningBasketResponse201 {
      */
     @JsonProperty("basketId")
     public String basketId;
+
     public SigningBasketResponse201 withBasketId(String basketId) {
         this.basketId = basketId;
         return this;
@@ -83,6 +85,7 @@ public class SigningBasketResponse201 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("challengeData")
     public ChallengeData challengeData;
+
     public SigningBasketResponse201 withChallengeData(ChallengeData challengeData) {
         this.challengeData = challengeData;
         return this;
@@ -95,6 +98,7 @@ public class SigningBasketResponse201 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chosenScaMethod")
     public ChosenScaMethod chosenScaMethod;
+
     public SigningBasketResponse201 withChosenScaMethod(ChosenScaMethod chosenScaMethod) {
         this.chosenScaMethod = chosenScaMethod;
         return this;
@@ -106,6 +110,7 @@ public class SigningBasketResponse201 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("psuMessage")
     public String psuMessage;
+
     public SigningBasketResponse201 withPsuMessage(String psuMessage) {
         this.psuMessage = psuMessage;
         return this;
@@ -127,6 +132,7 @@ public class SigningBasketResponse201 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaMethods")
     public AuthenticationObject[] scaMethods;
+
     public SigningBasketResponse201 withScaMethods(AuthenticationObject[] scaMethods) {
         this.scaMethods = scaMethods;
         return this;
@@ -135,6 +141,7 @@ public class SigningBasketResponse201 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tppMessages")
     public TppMessage2XX[] tppMessages;
+
     public SigningBasketResponse201 withTppMessages(TppMessage2XX[] tppMessages) {
         this.tppMessages = tppMessages;
         return this;
@@ -157,9 +164,15 @@ public class SigningBasketResponse201 {
      */
     @JsonProperty("transactionStatus")
     public TransactionStatusSBSEnum transactionStatus;
+
     public SigningBasketResponse201 withTransactionStatus(TransactionStatusSBSEnum transactionStatus) {
         this.transactionStatus = transactionStatus;
         return this;
     }
     
+    public SigningBasketResponse201(@JsonProperty("_links") LinksSigningBasket links, @JsonProperty("basketId") String basketId, @JsonProperty("transactionStatus") TransactionStatusSBSEnum transactionStatus) {
+        this.links = links;
+        this.basketId = basketId;
+        this.transactionStatus = transactionStatus;
+  }
 }

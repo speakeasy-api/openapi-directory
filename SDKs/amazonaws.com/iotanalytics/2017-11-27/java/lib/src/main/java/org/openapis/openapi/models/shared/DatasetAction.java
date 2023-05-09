@@ -15,6 +15,7 @@ public class DatasetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionName")
     public String actionName;
+
     public DatasetAction withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -23,6 +24,7 @@ public class DatasetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerAction")
     public ContainerDatasetAction containerAction;
+
     public DatasetAction withContainerAction(ContainerDatasetAction containerAction) {
         this.containerAction = containerAction;
         return this;
@@ -31,9 +33,11 @@ public class DatasetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryAction")
     public SqlQueryDatasetAction queryAction;
+
     public DatasetAction withQueryAction(SqlQueryDatasetAction queryAction) {
         this.queryAction = queryAction;
         return this;
     }
     
+    public DatasetAction(){}
 }

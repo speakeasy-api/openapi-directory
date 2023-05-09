@@ -18,6 +18,7 @@ public class ListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugString")
     public String debugString;
+
     public ListResponse withDebugString(String debugString) {
         this.debugString = debugString;
         return this;
@@ -29,6 +30,7 @@ public class ListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public ListResponseErrorCodeEnum[] errorCode;
+
     public ListResponse withErrorCode(ListResponseErrorCodeEnum[] errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -40,6 +42,7 @@ public class ListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxAge")
     public String maxAge;
+
     public ListResponse withMaxAge(String maxAge) {
         this.maxAge = maxAge;
         return this;
@@ -51,9 +54,11 @@ public class ListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statements")
     public Statement[] statements;
+
     public ListResponse withStatements(Statement[] statements) {
         this.statements = statements;
         return this;
     }
     
+    public ListResponse(){}
 }

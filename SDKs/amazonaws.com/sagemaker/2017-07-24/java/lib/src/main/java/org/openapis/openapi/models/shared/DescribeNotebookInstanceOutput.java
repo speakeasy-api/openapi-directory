@@ -20,6 +20,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorTypes")
     public NotebookInstanceAcceleratorTypeEnum[] acceleratorTypes;
+
     public DescribeNotebookInstanceOutput withAcceleratorTypes(NotebookInstanceAcceleratorTypeEnum[] acceleratorTypes) {
         this.acceleratorTypes = acceleratorTypes;
         return this;
@@ -28,6 +29,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalCodeRepositories")
     public String[] additionalCodeRepositories;
+
     public DescribeNotebookInstanceOutput withAdditionalCodeRepositories(String[] additionalCodeRepositories) {
         this.additionalCodeRepositories = additionalCodeRepositories;
         return this;
@@ -38,6 +40,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeNotebookInstanceOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -46,6 +49,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultCodeRepository")
     public String defaultCodeRepository;
+
     public DescribeNotebookInstanceOutput withDefaultCodeRepository(String defaultCodeRepository) {
         this.defaultCodeRepository = defaultCodeRepository;
         return this;
@@ -54,6 +58,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectInternetAccess")
     public DirectInternetAccessEnum directInternetAccess;
+
     public DescribeNotebookInstanceOutput withDirectInternetAccess(DirectInternetAccessEnum directInternetAccess) {
         this.directInternetAccess = directInternetAccess;
         return this;
@@ -62,6 +67,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeNotebookInstanceOutput withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -70,6 +76,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceMetadataServiceConfiguration")
     public InstanceMetadataServiceConfiguration instanceMetadataServiceConfiguration;
+
     public DescribeNotebookInstanceOutput withInstanceMetadataServiceConfiguration(InstanceMetadataServiceConfiguration instanceMetadataServiceConfiguration) {
         this.instanceMetadataServiceConfiguration = instanceMetadataServiceConfiguration;
         return this;
@@ -78,6 +85,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public InstanceTypeEnum instanceType;
+
     public DescribeNotebookInstanceOutput withInstanceType(InstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -86,6 +94,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public DescribeNotebookInstanceOutput withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -96,6 +105,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeNotebookInstanceOutput withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -104,6 +114,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkInterfaceId")
     public String networkInterfaceId;
+
     public DescribeNotebookInstanceOutput withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -112,6 +123,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceArn")
     public String notebookInstanceArn;
+
     public DescribeNotebookInstanceOutput withNotebookInstanceArn(String notebookInstanceArn) {
         this.notebookInstanceArn = notebookInstanceArn;
         return this;
@@ -120,6 +132,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceLifecycleConfigName")
     public String notebookInstanceLifecycleConfigName;
+
     public DescribeNotebookInstanceOutput withNotebookInstanceLifecycleConfigName(String notebookInstanceLifecycleConfigName) {
         this.notebookInstanceLifecycleConfigName = notebookInstanceLifecycleConfigName;
         return this;
@@ -128,6 +141,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceName")
     public String notebookInstanceName;
+
     public DescribeNotebookInstanceOutput withNotebookInstanceName(String notebookInstanceName) {
         this.notebookInstanceName = notebookInstanceName;
         return this;
@@ -136,6 +150,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceStatus")
     public NotebookInstanceStatusEnum notebookInstanceStatus;
+
     public DescribeNotebookInstanceOutput withNotebookInstanceStatus(NotebookInstanceStatusEnum notebookInstanceStatus) {
         this.notebookInstanceStatus = notebookInstanceStatus;
         return this;
@@ -144,6 +159,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlatformIdentifier")
     public String platformIdentifier;
+
     public DescribeNotebookInstanceOutput withPlatformIdentifier(String platformIdentifier) {
         this.platformIdentifier = platformIdentifier;
         return this;
@@ -152,6 +168,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeNotebookInstanceOutput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -160,6 +177,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootAccess")
     public RootAccessEnum rootAccess;
+
     public DescribeNotebookInstanceOutput withRootAccess(RootAccessEnum rootAccess) {
         this.rootAccess = rootAccess;
         return this;
@@ -168,6 +186,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroups")
     public String[] securityGroups;
+
     public DescribeNotebookInstanceOutput withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -176,6 +195,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public DescribeNotebookInstanceOutput withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -184,6 +204,7 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public DescribeNotebookInstanceOutput withUrl(String url) {
         this.url = url;
         return this;
@@ -192,9 +213,11 @@ public class DescribeNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeSizeInGB")
     public Long volumeSizeInGB;
+
     public DescribeNotebookInstanceOutput withVolumeSizeInGB(Long volumeSizeInGB) {
         this.volumeSizeInGB = volumeSizeInGB;
         return this;
     }
     
+    public DescribeNotebookInstanceOutput(){}
 }

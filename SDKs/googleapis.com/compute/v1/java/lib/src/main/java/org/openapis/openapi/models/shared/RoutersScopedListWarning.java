@@ -18,6 +18,7 @@ public class RoutersScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public RoutersScopedListWarningCodeEnum code;
+
     public RoutersScopedListWarning withCode(RoutersScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class RoutersScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public RoutersScopedListWarningData[] data;
+
     public RoutersScopedListWarning withData(RoutersScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class RoutersScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public RoutersScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public RoutersScopedListWarning(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ZendeskTokenResponse {
@@ -12,6 +13,7 @@ public class ZendeskTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public ZendeskTokenResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class ZendeskTokenResponse {
     
     
     public String contentType;
+
     public ZendeskTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ZendeskTokenResponse {
     
     
     public Integer statusCode;
+
     public ZendeskTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ZendeskTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ZendeskTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class ZendeskTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.ZendeskToken zendeskToken;
+
     public ZendeskTokenResponse withZendeskToken(org.openapis.openapi.models.shared.ZendeskToken zendeskToken) {
         this.zendeskToken = zendeskToken;
         return this;
     }
     
+    public ZendeskTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class EnterStandbyQuery {
     
     public String autoScalingGroupName;
+
     public EnterStandbyQuery withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class EnterStandbyQuery {
     
     
     public String[] instanceIds;
+
     public EnterStandbyQuery withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -23,9 +25,14 @@ public class EnterStandbyQuery {
     
     
     public Boolean shouldDecrementDesiredCapacity;
+
     public EnterStandbyQuery withShouldDecrementDesiredCapacity(Boolean shouldDecrementDesiredCapacity) {
         this.shouldDecrementDesiredCapacity = shouldDecrementDesiredCapacity;
         return this;
     }
     
+    public EnterStandbyQuery(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("ShouldDecrementDesiredCapacity") Boolean shouldDecrementDesiredCapacity) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.shouldDecrementDesiredCapacity = shouldDecrementDesiredCapacity;
+  }
 }

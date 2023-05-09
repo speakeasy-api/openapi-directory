@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPlatformRegionsRequest {
@@ -12,6 +13,7 @@ public class ListPlatformRegionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
     public Boolean aliases;
+
     public ListPlatformRegionsRequest withAliases(Boolean aliases) {
         this.aliases = aliases;
         return this;
@@ -22,9 +24,13 @@ public class ListPlatformRegionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platformId")
     public String platformId;
+
     public ListPlatformRegionsRequest withPlatformId(String platformId) {
         this.platformId = platformId;
         return this;
     }
     
+    public ListPlatformRegionsRequest(@JsonProperty("platformId") String platformId) {
+        this.platformId = platformId;
+  }
 }

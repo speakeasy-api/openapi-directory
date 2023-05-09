@@ -15,6 +15,7 @@ public class CaseFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("andAll")
     public CaseFilter[] andAll;
+
     public CaseFilter withAndAll(CaseFilter[] andAll) {
         this.andAll = andAll;
         return this;
@@ -23,6 +24,7 @@ public class CaseFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public FieldFilter field;
+
     public CaseFilter withField(FieldFilter field) {
         this.field = field;
         return this;
@@ -34,9 +36,11 @@ public class CaseFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("not")
     public CaseFilter not;
+
     public CaseFilter withNot(CaseFilter not) {
         this.not = not;
         return this;
     }
     
+    public CaseFilter(){}
 }

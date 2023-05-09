@@ -16,6 +16,7 @@ public class DestinyDefinitionsDestinyItemInvestmentStatDefinition {
      */
     
     public Boolean isConditionallyActive;
+
     public DestinyDefinitionsDestinyItemInvestmentStatDefinition withIsConditionallyActive(Boolean isConditionallyActive) {
         this.isConditionallyActive = isConditionallyActive;
         return this;
@@ -26,6 +27,7 @@ public class DestinyDefinitionsDestinyItemInvestmentStatDefinition {
      */
     
     public Long statTypeHash;
+
     public DestinyDefinitionsDestinyItemInvestmentStatDefinition withStatTypeHash(Long statTypeHash) {
         this.statTypeHash = statTypeHash;
         return this;
@@ -36,9 +38,11 @@ public class DestinyDefinitionsDestinyItemInvestmentStatDefinition {
      */
     
     public Integer value;
+
     public DestinyDefinitionsDestinyItemInvestmentStatDefinition withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public DestinyDefinitionsDestinyItemInvestmentStatDefinition(){}
 }

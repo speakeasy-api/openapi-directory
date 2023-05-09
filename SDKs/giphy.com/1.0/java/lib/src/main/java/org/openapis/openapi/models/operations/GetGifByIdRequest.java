@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGifByIdRequest {
@@ -12,9 +13,13 @@ public class GetGifByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gifId")
     public Integer gifId;
+
     public GetGifByIdRequest withGifId(Integer gifId) {
         this.gifId = gifId;
         return this;
     }
     
+    public GetGifByIdRequest(@JsonProperty("gifId") Integer gifId) {
+        this.gifId = gifId;
+  }
 }

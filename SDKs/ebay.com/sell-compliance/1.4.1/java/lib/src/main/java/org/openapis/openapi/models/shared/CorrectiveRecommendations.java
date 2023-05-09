@@ -18,6 +18,7 @@ public class CorrectiveRecommendations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aspectRecommendations")
     public AspectRecommendations[] aspectRecommendations;
+
     public CorrectiveRecommendations withAspectRecommendations(AspectRecommendations[] aspectRecommendations) {
         this.aspectRecommendations = aspectRecommendations;
         return this;
@@ -29,9 +30,11 @@ public class CorrectiveRecommendations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productRecommendation")
     public ProductRecommendation productRecommendation;
+
     public CorrectiveRecommendations withProductRecommendation(ProductRecommendation productRecommendation) {
         this.productRecommendation = productRecommendation;
         return this;
     }
     
+    public CorrectiveRecommendations(){}
 }

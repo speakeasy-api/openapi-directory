@@ -23,6 +23,7 @@ public class WebhookResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public WebhookResponse withActive(Boolean active) {
         this.active = active;
         return this;
@@ -36,6 +37,7 @@ public class WebhookResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public WebhookResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -47,6 +49,7 @@ public class WebhookResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public WebhookResponseFilters[] filters;
+
     public WebhookResponse withFilters(WebhookResponseFilters[] filters) {
         this.filters = filters;
         return this;
@@ -58,6 +61,7 @@ public class WebhookResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public WebhookResponse withGid(String gid) {
         this.gid = gid;
         return this;
@@ -71,6 +75,7 @@ public class WebhookResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_failure_at")
     public OffsetDateTime lastFailureAt;
+
     public WebhookResponse withLastFailureAt(OffsetDateTime lastFailureAt) {
         this.lastFailureAt = lastFailureAt;
         return this;
@@ -82,6 +87,7 @@ public class WebhookResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_failure_content")
     public String lastFailureContent;
+
     public WebhookResponse withLastFailureContent(String lastFailureContent) {
         this.lastFailureContent = lastFailureContent;
         return this;
@@ -95,6 +101,7 @@ public class WebhookResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_success_at")
     public OffsetDateTime lastSuccessAt;
+
     public WebhookResponse withLastSuccessAt(OffsetDateTime lastSuccessAt) {
         this.lastSuccessAt = lastSuccessAt;
         return this;
@@ -103,6 +110,7 @@ public class WebhookResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public AsanaNamedResource resource;
+
     public WebhookResponse withResource(AsanaNamedResource resource) {
         this.resource = resource;
         return this;
@@ -114,6 +122,7 @@ public class WebhookResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public WebhookResponse withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -125,9 +134,11 @@ public class WebhookResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public WebhookResponse withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public WebhookResponse(){}
 }

@@ -12,6 +12,7 @@ public class GetAlmawsV1TaskListsRsLendingRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=library")
     public String library;
+
     public GetAlmawsV1TaskListsRsLendingRequestsRequest withLibrary(String library) {
         this.library = library;
         return this;
@@ -22,6 +23,7 @@ public class GetAlmawsV1TaskListsRsLendingRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partner")
     public String partner;
+
     public GetAlmawsV1TaskListsRsLendingRequestsRequest withPartner(String partner) {
         this.partner = partner;
         return this;
@@ -32,6 +34,7 @@ public class GetAlmawsV1TaskListsRsLendingRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=printed")
     public String printed;
+
     public GetAlmawsV1TaskListsRsLendingRequestsRequest withPrinted(String printed) {
         this.printed = printed;
         return this;
@@ -42,6 +45,7 @@ public class GetAlmawsV1TaskListsRsLendingRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reported")
     public String reported;
+
     public GetAlmawsV1TaskListsRsLendingRequestsRequest withReported(String reported) {
         this.reported = reported;
         return this;
@@ -52,6 +56,7 @@ public class GetAlmawsV1TaskListsRsLendingRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requested_format")
     public String requestedFormat;
+
     public GetAlmawsV1TaskListsRsLendingRequestsRequest withRequestedFormat(String requestedFormat) {
         this.requestedFormat = requestedFormat;
         return this;
@@ -62,6 +67,7 @@ public class GetAlmawsV1TaskListsRsLendingRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public GetAlmawsV1TaskListsRsLendingRequestsRequest withStatus(String status) {
         this.status = status;
         return this;
@@ -72,9 +78,11 @@ public class GetAlmawsV1TaskListsRsLendingRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supplied_format")
     public String suppliedFormat;
+
     public GetAlmawsV1TaskListsRsLendingRequestsRequest withSuppliedFormat(String suppliedFormat) {
         this.suppliedFormat = suppliedFormat;
         return this;
     }
     
+    public GetAlmawsV1TaskListsRsLendingRequestsRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDomainResponse {
@@ -12,6 +13,7 @@ public class CreateDomainResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDomainResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDomainResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public CreateDomainResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class CreateDomainResponse {
     
     
     public String contentType;
+
     public CreateDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDomainResult createDomainResult;
+
     public CreateDomainResponse withCreateDomainResult(org.openapis.openapi.models.shared.CreateDomainResult createDomainResult) {
         this.createDomainResult = createDomainResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateDomainResponse {
      */
     
     public Object invalidInputException;
+
     public CreateDomainResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDomainResponse {
      */
     
     public Object notFoundException;
+
     public CreateDomainResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDomainResponse {
      */
     
     public Object operationFailureException;
+
     public CreateDomainResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class CreateDomainResponse {
      */
     
     public Object serviceException;
+
     public CreateDomainResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class CreateDomainResponse {
     
     
     public Integer statusCode;
+
     public CreateDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateDomainResponse {
      */
     
     public Object unauthenticatedException;
+
     public CreateDomainResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public CreateDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

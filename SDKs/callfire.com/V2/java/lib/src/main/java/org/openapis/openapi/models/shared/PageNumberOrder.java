@@ -18,6 +18,7 @@ public class PageNumberOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public NumberOrder[] items;
+
     public PageNumberOrder withItems(NumberOrder[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class PageNumberOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public PageNumberOrder withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -40,6 +42,7 @@ public class PageNumberOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public PageNumberOrder withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -51,9 +54,11 @@ public class PageNumberOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public PageNumberOrder withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public PageNumberOrder(){}
 }

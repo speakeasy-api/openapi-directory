@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaSuspensionApprovalExpirationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liftWhenExpired")
     public Boolean liftWhenExpired;
+
     public GoogleCloudIntegrationsV1alphaSuspensionApprovalExpirationInput withLiftWhenExpired(Boolean liftWhenExpired) {
         this.liftWhenExpired = liftWhenExpired;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaSuspensionApprovalExpirationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remindTime")
     public String remindTime;
+
     public GoogleCloudIntegrationsV1alphaSuspensionApprovalExpirationInput withRemindTime(String remindTime) {
         this.remindTime = remindTime;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaSuspensionApprovalExpirationInput(){}
 }

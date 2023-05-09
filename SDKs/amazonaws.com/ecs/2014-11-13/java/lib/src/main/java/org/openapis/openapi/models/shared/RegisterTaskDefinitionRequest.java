@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterTaskDefinitionRequest {
     @JsonProperty("containerDefinitions")
     public ContainerDefinition[] containerDefinitions;
+
     public RegisterTaskDefinitionRequest withContainerDefinitions(ContainerDefinition[] containerDefinitions) {
         this.containerDefinitions = containerDefinitions;
         return this;
@@ -19,6 +20,7 @@ public class RegisterTaskDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu")
     public String cpu;
+
     public RegisterTaskDefinitionRequest withCpu(String cpu) {
         this.cpu = cpu;
         return this;
@@ -27,6 +29,7 @@ public class RegisterTaskDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ephemeralStorage")
     public EphemeralStorage ephemeralStorage;
+
     public RegisterTaskDefinitionRequest withEphemeralStorage(EphemeralStorage ephemeralStorage) {
         this.ephemeralStorage = ephemeralStorage;
         return this;
@@ -35,6 +38,7 @@ public class RegisterTaskDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionRoleArn")
     public String executionRoleArn;
+
     public RegisterTaskDefinitionRequest withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -42,6 +46,7 @@ public class RegisterTaskDefinitionRequest {
     
     @JsonProperty("family")
     public String family;
+
     public RegisterTaskDefinitionRequest withFamily(String family) {
         this.family = family;
         return this;
@@ -50,6 +55,7 @@ public class RegisterTaskDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inferenceAccelerators")
     public InferenceAccelerator[] inferenceAccelerators;
+
     public RegisterTaskDefinitionRequest withInferenceAccelerators(InferenceAccelerator[] inferenceAccelerators) {
         this.inferenceAccelerators = inferenceAccelerators;
         return this;
@@ -58,6 +64,7 @@ public class RegisterTaskDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipcMode")
     public IpcModeEnum ipcMode;
+
     public RegisterTaskDefinitionRequest withIpcMode(IpcModeEnum ipcMode) {
         this.ipcMode = ipcMode;
         return this;
@@ -66,6 +73,7 @@ public class RegisterTaskDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public String memory;
+
     public RegisterTaskDefinitionRequest withMemory(String memory) {
         this.memory = memory;
         return this;
@@ -74,6 +82,7 @@ public class RegisterTaskDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkMode")
     public NetworkModeEnum networkMode;
+
     public RegisterTaskDefinitionRequest withNetworkMode(NetworkModeEnum networkMode) {
         this.networkMode = networkMode;
         return this;
@@ -82,6 +91,7 @@ public class RegisterTaskDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pidMode")
     public PidModeEnum pidMode;
+
     public RegisterTaskDefinitionRequest withPidMode(PidModeEnum pidMode) {
         this.pidMode = pidMode;
         return this;
@@ -90,6 +100,7 @@ public class RegisterTaskDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementConstraints")
     public TaskDefinitionPlacementConstraint[] placementConstraints;
+
     public RegisterTaskDefinitionRequest withPlacementConstraints(TaskDefinitionPlacementConstraint[] placementConstraints) {
         this.placementConstraints = placementConstraints;
         return this;
@@ -98,6 +109,7 @@ public class RegisterTaskDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxyConfiguration")
     public ProxyConfiguration proxyConfiguration;
+
     public RegisterTaskDefinitionRequest withProxyConfiguration(ProxyConfiguration proxyConfiguration) {
         this.proxyConfiguration = proxyConfiguration;
         return this;
@@ -106,6 +118,7 @@ public class RegisterTaskDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiresCompatibilities")
     public CompatibilityEnum[] requiresCompatibilities;
+
     public RegisterTaskDefinitionRequest withRequiresCompatibilities(CompatibilityEnum[] requiresCompatibilities) {
         this.requiresCompatibilities = requiresCompatibilities;
         return this;
@@ -114,6 +127,7 @@ public class RegisterTaskDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimePlatform")
     public RuntimePlatform runtimePlatform;
+
     public RegisterTaskDefinitionRequest withRuntimePlatform(RuntimePlatform runtimePlatform) {
         this.runtimePlatform = runtimePlatform;
         return this;
@@ -122,6 +136,7 @@ public class RegisterTaskDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public RegisterTaskDefinitionRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -130,6 +145,7 @@ public class RegisterTaskDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskRoleArn")
     public String taskRoleArn;
+
     public RegisterTaskDefinitionRequest withTaskRoleArn(String taskRoleArn) {
         this.taskRoleArn = taskRoleArn;
         return this;
@@ -138,9 +154,14 @@ public class RegisterTaskDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumes")
     public Volume[] volumes;
+
     public RegisterTaskDefinitionRequest withVolumes(Volume[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public RegisterTaskDefinitionRequest(@JsonProperty("containerDefinitions") ContainerDefinition[] containerDefinitions, @JsonProperty("family") String family) {
+        this.containerDefinitions = containerDefinitions;
+        this.family = family;
+  }
 }

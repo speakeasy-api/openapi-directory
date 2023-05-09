@@ -58,13 +58,11 @@ public class CustomerStores {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateStoreResponse res = new org.openapis.openapi.models.operations.CreateStoreResponse() {{
+        org.openapis.openapi.models.operations.CreateStoreResponse res = new org.openapis.openapi.models.operations.CreateStoreResponse(contentType, httpRes.statusCode()) {{
             linksGetStoreLink = null;
             errorResponseMessagePaymentRequired = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -112,11 +110,9 @@ public class CustomerStores {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteStoreResponse res = new org.openapis.openapi.models.operations.DeleteStoreResponse() {{
+        org.openapis.openapi.models.operations.DeleteStoreResponse res = new org.openapis.openapi.models.operations.DeleteStoreResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -160,12 +156,10 @@ public class CustomerStores {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoreResponse res = new org.openapis.openapi.models.operations.GetStoreResponse() {{
+        org.openapis.openapi.models.operations.GetStoreResponse res = new org.openapis.openapi.models.operations.GetStoreResponse(contentType, httpRes.statusCode()) {{
             store = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -218,12 +212,10 @@ public class CustomerStores {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoresResponse res = new org.openapis.openapi.models.operations.GetStoresResponse() {{
+        org.openapis.openapi.models.operations.GetStoresResponse res = new org.openapis.openapi.models.operations.GetStoresResponse(contentType, httpRes.statusCode()) {{
             storeList = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -275,11 +267,9 @@ public class CustomerStores {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateStoreResponse res = new org.openapis.openapi.models.operations.UpdateStoreResponse() {{
+        org.openapis.openapi.models.operations.UpdateStoreResponse res = new org.openapis.openapi.models.operations.UpdateStoreResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

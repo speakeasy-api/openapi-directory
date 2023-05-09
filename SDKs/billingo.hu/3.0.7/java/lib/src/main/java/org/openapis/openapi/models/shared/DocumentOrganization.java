@@ -12,6 +12,7 @@ public class DocumentOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address address;
+
     public DocumentOrganization withAddress(Address address) {
         this.address = address;
         return this;
@@ -20,6 +21,7 @@ public class DocumentOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_account")
     public DocumentBankAccount bankAccount;
+
     public DocumentOrganization withBankAccount(DocumentBankAccount bankAccount) {
         this.bankAccount = bankAccount;
         return this;
@@ -28,6 +30,7 @@ public class DocumentOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_settled")
     public Boolean cashSettled;
+
     public DocumentOrganization withCashSettled(Boolean cashSettled) {
         this.cashSettled = cashSettled;
         return this;
@@ -36,6 +39,7 @@ public class DocumentOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eu_tax_number")
     public String euTaxNumber;
+
     public DocumentOrganization withEuTaxNumber(String euTaxNumber) {
         this.euTaxNumber = euTaxNumber;
         return this;
@@ -44,6 +48,7 @@ public class DocumentOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ev_number")
     public String evNumber;
+
     public DocumentOrganization withEvNumber(String evNumber) {
         this.evNumber = evNumber;
         return this;
@@ -52,6 +57,7 @@ public class DocumentOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DocumentOrganization withName(String name) {
         this.name = name;
         return this;
@@ -60,6 +66,7 @@ public class DocumentOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("small_taxpayer")
     public Boolean smallTaxpayer;
+
     public DocumentOrganization withSmallTaxpayer(Boolean smallTaxpayer) {
         this.smallTaxpayer = smallTaxpayer;
         return this;
@@ -68,9 +75,11 @@ public class DocumentOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_number")
     public String taxNumber;
+
     public DocumentOrganization withTaxNumber(String taxNumber) {
         this.taxNumber = taxNumber;
         return this;
     }
     
+    public DocumentOrganization(){}
 }

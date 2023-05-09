@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetQueryResultsResponse {
     
     public String contentType;
+
     public GetQueryResultsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetQueryResultsResponse {
      */
     
     public Object eventDataStoreARNInvalidException;
+
     public GetQueryResultsResponse withEventDataStoreARNInvalidException(Object eventDataStoreARNInvalidException) {
         this.eventDataStoreARNInvalidException = eventDataStoreARNInvalidException;
         return this;
@@ -29,6 +32,7 @@ public class GetQueryResultsResponse {
      */
     
     public Object eventDataStoreNotFoundException;
+
     public GetQueryResultsResponse withEventDataStoreNotFoundException(Object eventDataStoreNotFoundException) {
         this.eventDataStoreNotFoundException = eventDataStoreNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetQueryResultsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetQueryResultsResponse getQueryResultsResponse;
+
     public GetQueryResultsResponse withGetQueryResultsResponse(org.openapis.openapi.models.shared.GetQueryResultsResponse getQueryResultsResponse) {
         this.getQueryResultsResponse = getQueryResultsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetQueryResultsResponse {
      */
     
     public Object inactiveEventDataStoreException;
+
     public GetQueryResultsResponse withInactiveEventDataStoreException(Object inactiveEventDataStoreException) {
         this.inactiveEventDataStoreException = inactiveEventDataStoreException;
         return this;
@@ -59,6 +65,7 @@ public class GetQueryResultsResponse {
      */
     
     public Object insufficientEncryptionPolicyException;
+
     public GetQueryResultsResponse withInsufficientEncryptionPolicyException(Object insufficientEncryptionPolicyException) {
         this.insufficientEncryptionPolicyException = insufficientEncryptionPolicyException;
         return this;
@@ -69,6 +76,7 @@ public class GetQueryResultsResponse {
      */
     
     public Object invalidMaxResultsException;
+
     public GetQueryResultsResponse withInvalidMaxResultsException(Object invalidMaxResultsException) {
         this.invalidMaxResultsException = invalidMaxResultsException;
         return this;
@@ -79,6 +87,7 @@ public class GetQueryResultsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetQueryResultsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -89,6 +98,7 @@ public class GetQueryResultsResponse {
      */
     
     public Object invalidParameterException;
+
     public GetQueryResultsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -99,6 +109,7 @@ public class GetQueryResultsResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public GetQueryResultsResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -109,6 +120,7 @@ public class GetQueryResultsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public GetQueryResultsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -119,6 +131,7 @@ public class GetQueryResultsResponse {
      */
     
     public Object queryIdNotFoundException;
+
     public GetQueryResultsResponse withQueryIdNotFoundException(Object queryIdNotFoundException) {
         this.queryIdNotFoundException = queryIdNotFoundException;
         return this;
@@ -126,6 +139,7 @@ public class GetQueryResultsResponse {
     
     
     public Integer statusCode;
+
     public GetQueryResultsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class GetQueryResultsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetQueryResultsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,9 +158,14 @@ public class GetQueryResultsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public GetQueryResultsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public GetQueryResultsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

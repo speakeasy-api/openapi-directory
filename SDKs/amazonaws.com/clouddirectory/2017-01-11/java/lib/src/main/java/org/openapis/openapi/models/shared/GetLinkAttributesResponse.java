@@ -15,9 +15,11 @@ public class GetLinkAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public AttributeKeyAndValue[] attributes;
+
     public GetLinkAttributesResponse withAttributes(AttributeKeyAndValue[] attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public GetLinkAttributesResponse(){}
 }

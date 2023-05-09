@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClusterIamRoleList {
     
     public String applyStatus;
+
     public ClusterIamRoleList withApplyStatus(String applyStatus) {
         this.applyStatus = applyStatus;
         return this;
@@ -19,9 +20,11 @@ public class ClusterIamRoleList {
     
     
     public String iamRoleArn;
+
     public ClusterIamRoleList withIamRoleArn(String iamRoleArn) {
         this.iamRoleArn = iamRoleArn;
         return this;
     }
     
+    public ClusterIamRoleList(){}
 }

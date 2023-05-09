@@ -15,9 +15,11 @@ public class AlarmEventActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmActions")
     public AlarmAction[] alarmActions;
+
     public AlarmEventActions withAlarmActions(AlarmAction[] alarmActions) {
         this.alarmActions = alarmActions;
         return this;
     }
     
+    public AlarmEventActions(){}
 }

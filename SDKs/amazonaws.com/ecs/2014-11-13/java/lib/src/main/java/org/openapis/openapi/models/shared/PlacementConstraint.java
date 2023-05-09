@@ -15,6 +15,7 @@ public class PlacementConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public PlacementConstraint withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -23,9 +24,11 @@ public class PlacementConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PlacementConstraintTypeEnum type;
+
     public PlacementConstraint withType(PlacementConstraintTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PlacementConstraint(){}
 }

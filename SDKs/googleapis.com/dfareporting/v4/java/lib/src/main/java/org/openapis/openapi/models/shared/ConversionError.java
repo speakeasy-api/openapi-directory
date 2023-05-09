@@ -18,6 +18,7 @@ public class ConversionError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ConversionErrorCodeEnum code;
+
     public ConversionError withCode(ConversionErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ConversionError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ConversionError withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class ConversionError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ConversionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ConversionError(){}
 }

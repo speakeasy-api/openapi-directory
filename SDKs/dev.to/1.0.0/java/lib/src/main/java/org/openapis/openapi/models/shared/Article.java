@@ -15,9 +15,11 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("article")
     public ArticleArticle article;
+
     public Article withArticle(ArticleArticle article) {
         this.article = article;
         return this;
     }
     
+    public Article(){}
 }

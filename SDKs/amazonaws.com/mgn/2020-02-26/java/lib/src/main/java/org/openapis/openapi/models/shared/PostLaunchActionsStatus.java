@@ -15,6 +15,7 @@ public class PostLaunchActionsStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postLaunchActionsLaunchStatusList")
     public JobPostLaunchActionsLaunchStatus[] postLaunchActionsLaunchStatusList;
+
     public PostLaunchActionsStatus withPostLaunchActionsLaunchStatusList(JobPostLaunchActionsLaunchStatus[] postLaunchActionsLaunchStatusList) {
         this.postLaunchActionsLaunchStatusList = postLaunchActionsLaunchStatusList;
         return this;
@@ -23,9 +24,11 @@ public class PostLaunchActionsStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssmAgentDiscoveryDatetime")
     public String ssmAgentDiscoveryDatetime;
+
     public PostLaunchActionsStatus withSsmAgentDiscoveryDatetime(String ssmAgentDiscoveryDatetime) {
         this.ssmAgentDiscoveryDatetime = ssmAgentDiscoveryDatetime;
         return this;
     }
     
+    public PostLaunchActionsStatus(){}
 }

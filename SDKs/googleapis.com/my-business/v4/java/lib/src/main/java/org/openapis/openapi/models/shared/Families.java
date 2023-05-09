@@ -18,6 +18,7 @@ public class Families {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("babysitting")
     public Boolean babysitting;
+
     public Families withBabysitting(Boolean babysitting) {
         this.babysitting = babysitting;
         return this;
@@ -29,6 +30,7 @@ public class Families {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("babysittingException")
     public FamiliesBabysittingExceptionEnum babysittingException;
+
     public Families withBabysittingException(FamiliesBabysittingExceptionEnum babysittingException) {
         this.babysittingException = babysittingException;
         return this;
@@ -40,6 +42,7 @@ public class Families {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kidsActivities")
     public Boolean kidsActivities;
+
     public Families withKidsActivities(Boolean kidsActivities) {
         this.kidsActivities = kidsActivities;
         return this;
@@ -51,6 +54,7 @@ public class Families {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kidsActivitiesException")
     public FamiliesKidsActivitiesExceptionEnum kidsActivitiesException;
+
     public Families withKidsActivitiesException(FamiliesKidsActivitiesExceptionEnum kidsActivitiesException) {
         this.kidsActivitiesException = kidsActivitiesException;
         return this;
@@ -62,6 +66,7 @@ public class Families {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kidsClub")
     public Boolean kidsClub;
+
     public Families withKidsClub(Boolean kidsClub) {
         this.kidsClub = kidsClub;
         return this;
@@ -73,9 +78,11 @@ public class Families {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kidsClubException")
     public FamiliesKidsClubExceptionEnum kidsClubException;
+
     public Families withKidsClubException(FamiliesKidsClubExceptionEnum kidsClubException) {
         this.kidsClubException = kidsClubException;
         return this;
     }
     
+    public Families(){}
 }

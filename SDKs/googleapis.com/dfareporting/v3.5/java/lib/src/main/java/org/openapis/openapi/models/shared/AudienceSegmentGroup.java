@@ -18,6 +18,7 @@ public class AudienceSegmentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audienceSegments")
     public AudienceSegment[] audienceSegments;
+
     public AudienceSegmentGroup withAudienceSegments(AudienceSegment[] audienceSegments) {
         this.audienceSegments = audienceSegments;
         return this;
@@ -29,6 +30,7 @@ public class AudienceSegmentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AudienceSegmentGroup withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class AudienceSegmentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AudienceSegmentGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AudienceSegmentGroup(){}
 }

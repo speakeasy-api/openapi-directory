@@ -429,4 +429,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/TypedLinkFacetAttributeUpda
 lib/src/main/java/org/openapis/openapi/models/shared/UpgradeAppliedSchemaResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpgradePublishedSchemaResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

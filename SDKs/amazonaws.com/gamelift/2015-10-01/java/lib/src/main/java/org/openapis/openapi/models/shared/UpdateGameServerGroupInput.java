@@ -12,6 +12,7 @@ public class UpdateGameServerGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BalancingStrategy")
     public BalancingStrategyEnum balancingStrategy;
+
     public UpdateGameServerGroupInput withBalancingStrategy(BalancingStrategyEnum balancingStrategy) {
         this.balancingStrategy = balancingStrategy;
         return this;
@@ -19,6 +20,7 @@ public class UpdateGameServerGroupInput {
     
     @JsonProperty("GameServerGroupName")
     public String gameServerGroupName;
+
     public UpdateGameServerGroupInput withGameServerGroupName(String gameServerGroupName) {
         this.gameServerGroupName = gameServerGroupName;
         return this;
@@ -27,6 +29,7 @@ public class UpdateGameServerGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerProtectionPolicy")
     public GameServerProtectionPolicyEnum gameServerProtectionPolicy;
+
     public UpdateGameServerGroupInput withGameServerProtectionPolicy(GameServerProtectionPolicyEnum gameServerProtectionPolicy) {
         this.gameServerProtectionPolicy = gameServerProtectionPolicy;
         return this;
@@ -35,6 +38,7 @@ public class UpdateGameServerGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceDefinitions")
     public InstanceDefinition[] instanceDefinitions;
+
     public UpdateGameServerGroupInput withInstanceDefinitions(InstanceDefinition[] instanceDefinitions) {
         this.instanceDefinitions = instanceDefinitions;
         return this;
@@ -43,9 +47,13 @@ public class UpdateGameServerGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public UpdateGameServerGroupInput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public UpdateGameServerGroupInput(@JsonProperty("GameServerGroupName") String gameServerGroupName) {
+        this.gameServerGroupName = gameServerGroupName;
+  }
 }

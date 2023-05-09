@@ -14,6 +14,7 @@ public class CreateAllowListRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateAllowListRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -24,6 +25,7 @@ public class CreateAllowListRequestBody {
      */
     @JsonProperty("criteria")
     public CreateAllowListRequestBodyCriteria criteria;
+
     public CreateAllowListRequestBody withCriteria(CreateAllowListRequestBodyCriteria criteria) {
         this.criteria = criteria;
         return this;
@@ -35,6 +37,7 @@ public class CreateAllowListRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateAllowListRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class CreateAllowListRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateAllowListRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -56,9 +60,15 @@ public class CreateAllowListRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateAllowListRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAllowListRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("criteria") CreateAllowListRequestBodyCriteria criteria, @JsonProperty("name") String name) {
+        this.clientToken = clientToken;
+        this.criteria = criteria;
+        this.name = name;
+  }
 }

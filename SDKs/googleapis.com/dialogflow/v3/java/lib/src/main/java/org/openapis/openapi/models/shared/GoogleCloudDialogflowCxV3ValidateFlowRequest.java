@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3ValidateFlowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowCxV3ValidateFlowRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ValidateFlowRequest(){}
 }

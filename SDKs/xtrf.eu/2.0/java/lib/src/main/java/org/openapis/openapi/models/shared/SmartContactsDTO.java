@@ -15,6 +15,7 @@ public class SmartContactsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalIds")
     public Long[] additionalIds;
+
     public SmartContactsDTO withAdditionalIds(Long[] additionalIds) {
         this.additionalIds = additionalIds;
         return this;
@@ -23,9 +24,11 @@ public class SmartContactsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryId")
     public Long primaryId;
+
     public SmartContactsDTO withPrimaryId(Long primaryId) {
         this.primaryId = primaryId;
         return this;
     }
     
+    public SmartContactsDTO(){}
 }

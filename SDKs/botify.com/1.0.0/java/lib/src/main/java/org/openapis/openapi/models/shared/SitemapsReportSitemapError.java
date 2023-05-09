@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SitemapsReportSitemapError {
     @JsonProperty("message")
     public String message;
+
     public SitemapsReportSitemapError withMessage(String message) {
         this.message = message;
         return this;
@@ -16,9 +17,14 @@ public class SitemapsReportSitemapError {
     
     @JsonProperty("type")
     public String type;
+
     public SitemapsReportSitemapError withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SitemapsReportSitemapError(@JsonProperty("message") String message, @JsonProperty("type") String type) {
+        this.message = message;
+        this.type = type;
+  }
 }

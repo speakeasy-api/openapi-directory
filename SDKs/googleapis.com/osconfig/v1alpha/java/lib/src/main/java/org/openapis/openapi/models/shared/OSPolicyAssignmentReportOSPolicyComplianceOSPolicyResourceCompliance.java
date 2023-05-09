@@ -18,6 +18,7 @@ public class OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceState")
     public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceComplianceStateEnum complianceState;
+
     public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceCompliance withComplianceState(OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceComplianceStateEnum complianceState) {
         this.complianceState = complianceState;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceStateReason")
     public String complianceStateReason;
+
     public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceCompliance withComplianceStateReason(String complianceStateReason) {
         this.complianceStateReason = complianceStateReason;
         return this;
@@ -40,6 +42,7 @@ public class OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configSteps")
     public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStep[] configSteps;
+
     public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceCompliance withConfigSteps(OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStep[] configSteps) {
         this.configSteps = configSteps;
         return this;
@@ -51,6 +54,7 @@ public class OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("execResourceOutput")
     public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceExecResourceOutput execResourceOutput;
+
     public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceCompliance withExecResourceOutput(OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceExecResourceOutput execResourceOutput) {
         this.execResourceOutput = execResourceOutput;
         return this;
@@ -62,9 +66,11 @@ public class OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osPolicyResourceId")
     public String osPolicyResourceId;
+
     public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceCompliance withOsPolicyResourceId(String osPolicyResourceId) {
         this.osPolicyResourceId = osPolicyResourceId;
         return this;
     }
     
+    public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceCompliance(){}
 }

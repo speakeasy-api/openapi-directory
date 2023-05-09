@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2Regex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupIndexes")
     public Integer[] groupIndexes;
+
     public GooglePrivacyDlpV2Regex withGroupIndexes(Integer[] groupIndexes) {
         this.groupIndexes = groupIndexes;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2Regex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pattern")
     public String pattern;
+
     public GooglePrivacyDlpV2Regex withPattern(String pattern) {
         this.pattern = pattern;
         return this;
     }
     
+    public GooglePrivacyDlpV2Regex(){}
 }

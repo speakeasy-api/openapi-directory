@@ -15,6 +15,7 @@ public class ListSubscribersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSubscribersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListSubscribersResponse {
     
     @JsonProperty("subscribers")
     public SubscriberResource[] subscribers;
+
     public ListSubscribersResponse withSubscribers(SubscriberResource[] subscribers) {
         this.subscribers = subscribers;
         return this;
     }
     
+    public ListSubscribersResponse(@JsonProperty("subscribers") SubscriberResource[] subscribers) {
+        this.subscribers = subscribers;
+  }
 }

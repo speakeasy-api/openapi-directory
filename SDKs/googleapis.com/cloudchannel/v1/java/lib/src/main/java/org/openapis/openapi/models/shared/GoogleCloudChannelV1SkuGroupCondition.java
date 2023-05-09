@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1SkuGroupCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skuGroup")
     public String skuGroup;
+
     public GoogleCloudChannelV1SkuGroupCondition withSkuGroup(String skuGroup) {
         this.skuGroup = skuGroup;
         return this;
     }
     
+    public GoogleCloudChannelV1SkuGroupCondition(){}
 }

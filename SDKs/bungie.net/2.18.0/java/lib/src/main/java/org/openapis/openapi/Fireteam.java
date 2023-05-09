@@ -52,11 +52,9 @@ public class Fireteam {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FireteamGetActivePrivateClanFireteamCountResponse res = new org.openapis.openapi.models.operations.FireteamGetActivePrivateClanFireteamCountResponse() {{
+        org.openapis.openapi.models.operations.FireteamGetActivePrivateClanFireteamCountResponse res = new org.openapis.openapi.models.operations.FireteamGetActivePrivateClanFireteamCountResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,11 +95,9 @@ public class Fireteam {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FireteamGetAvailableClanFireteamsResponse res = new org.openapis.openapi.models.operations.FireteamGetAvailableClanFireteamsResponse() {{
+        org.openapis.openapi.models.operations.FireteamGetAvailableClanFireteamsResponse res = new org.openapis.openapi.models.operations.FireteamGetAvailableClanFireteamsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class Fireteam {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FireteamGetClanFireteamResponse res = new org.openapis.openapi.models.operations.FireteamGetClanFireteamResponse() {{
+        org.openapis.openapi.models.operations.FireteamGetClanFireteamResponse res = new org.openapis.openapi.models.operations.FireteamGetClanFireteamResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -181,11 +175,9 @@ public class Fireteam {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FireteamGetMyClanFireteamsResponse res = new org.openapis.openapi.models.operations.FireteamGetMyClanFireteamsResponse() {{
+        org.openapis.openapi.models.operations.FireteamGetMyClanFireteamsResponse res = new org.openapis.openapi.models.operations.FireteamGetMyClanFireteamsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -226,11 +218,9 @@ public class Fireteam {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FireteamSearchPublicAvailableClanFireteamsResponse res = new org.openapis.openapi.models.operations.FireteamSearchPublicAvailableClanFireteamsResponse() {{
+        org.openapis.openapi.models.operations.FireteamSearchPublicAvailableClanFireteamsResponse res = new org.openapis.openapi.models.operations.FireteamSearchPublicAvailableClanFireteamsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class CreateStudioComponentRequestBodyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeDirectoryConfiguration")
     public org.openapis.openapi.models.shared.ActiveDirectoryConfiguration activeDirectoryConfiguration;
+
     public CreateStudioComponentRequestBodyConfiguration withActiveDirectoryConfiguration(org.openapis.openapi.models.shared.ActiveDirectoryConfiguration activeDirectoryConfiguration) {
         this.activeDirectoryConfiguration = activeDirectoryConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class CreateStudioComponentRequestBodyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeFarmConfiguration")
     public org.openapis.openapi.models.shared.ComputeFarmConfiguration computeFarmConfiguration;
+
     public CreateStudioComponentRequestBodyConfiguration withComputeFarmConfiguration(org.openapis.openapi.models.shared.ComputeFarmConfiguration computeFarmConfiguration) {
         this.computeFarmConfiguration = computeFarmConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class CreateStudioComponentRequestBodyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseServiceConfiguration")
     public org.openapis.openapi.models.shared.LicenseServiceConfiguration licenseServiceConfiguration;
+
     public CreateStudioComponentRequestBodyConfiguration withLicenseServiceConfiguration(org.openapis.openapi.models.shared.LicenseServiceConfiguration licenseServiceConfiguration) {
         this.licenseServiceConfiguration = licenseServiceConfiguration;
         return this;
@@ -39,9 +42,11 @@ public class CreateStudioComponentRequestBodyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedFileSystemConfiguration")
     public org.openapis.openapi.models.shared.SharedFileSystemConfiguration sharedFileSystemConfiguration;
+
     public CreateStudioComponentRequestBodyConfiguration withSharedFileSystemConfiguration(org.openapis.openapi.models.shared.SharedFileSystemConfiguration sharedFileSystemConfiguration) {
         this.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
         return this;
     }
     
+    public CreateStudioComponentRequestBodyConfiguration(){}
 }

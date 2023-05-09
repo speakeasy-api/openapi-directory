@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsAllocateIdsResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsAllocateIdsResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsAllocateIdsResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsAllocateIdsResponse(contentType, httpRes.statusCode()) {{
             allocateIdsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsBeginTransactionResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsBeginTransactionResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsBeginTransactionResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsBeginTransactionResponse(contentType, httpRes.statusCode()) {{
             beginTransactionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsCommitResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsCommitResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsCommitResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsCommitResponse(contentType, httpRes.statusCode()) {{
             commitResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -206,11 +200,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsExportResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsExportResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsExportResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsExportResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -254,11 +246,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsImportResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsImportResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsImportResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsImportResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +292,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsIndexesCreateResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsIndexesCreateResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsIndexesCreateResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsIndexesCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -348,11 +336,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsIndexesDeleteResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsIndexesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsIndexesDeleteResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsIndexesDeleteResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -394,11 +380,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsIndexesGetResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsIndexesGetResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsIndexesGetResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsIndexesGetResponse(contentType, httpRes.statusCode()) {{
             googleDatastoreAdminV1Index = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,11 +424,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsIndexesListResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsIndexesListResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsIndexesListResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsIndexesListResponse(contentType, httpRes.statusCode()) {{
             googleDatastoreAdminV1ListIndexesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -488,11 +470,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsLookupResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsLookupResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsLookupResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsLookupResponse(contentType, httpRes.statusCode()) {{
             lookupResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,11 +514,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,11 +558,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,11 +646,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsOperationsListResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsOperationsListResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -720,11 +692,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsReserveIdsResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsReserveIdsResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsReserveIdsResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsReserveIdsResponse(contentType, httpRes.statusCode()) {{
             reserveIdsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -768,11 +738,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsRollbackResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsRollbackResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsRollbackResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsRollbackResponse(contentType, httpRes.statusCode()) {{
             rollbackResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -816,11 +784,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsRunAggregationQueryResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsRunAggregationQueryResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsRunAggregationQueryResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsRunAggregationQueryResponse(contentType, httpRes.statusCode()) {{
             runAggregationQueryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -864,11 +830,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatastoreProjectsRunQueryResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsRunQueryResponse() {{
+        org.openapis.openapi.models.operations.DatastoreProjectsRunQueryResponse res = new org.openapis.openapi.models.operations.DatastoreProjectsRunQueryResponse(contentType, httpRes.statusCode()) {{
             runQueryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdTerminalOrdersOrderIdRequest {
@@ -12,6 +13,7 @@ public class GetMerchantsMerchantIdTerminalOrdersOrderIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public GetMerchantsMerchantIdTerminalOrdersOrderIdRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -22,9 +24,14 @@ public class GetMerchantsMerchantIdTerminalOrdersOrderIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
     public String orderId;
+
     public GetMerchantsMerchantIdTerminalOrdersOrderIdRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     
+    public GetMerchantsMerchantIdTerminalOrdersOrderIdRequest(@JsonProperty("merchantId") String merchantId, @JsonProperty("orderId") String orderId) {
+        this.merchantId = merchantId;
+        this.orderId = orderId;
+  }
 }

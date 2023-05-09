@@ -17,6 +17,7 @@ public class UpdateTrialComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public UpdateTrialComponentRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -27,6 +28,7 @@ public class UpdateTrialComponentRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public UpdateTrialComponentRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -35,6 +37,7 @@ public class UpdateTrialComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputArtifacts")
     public java.util.Map<String, TrialComponentArtifact> inputArtifacts;
+
     public UpdateTrialComponentRequest withInputArtifacts(java.util.Map<String, TrialComponentArtifact> inputArtifacts) {
         this.inputArtifacts = inputArtifacts;
         return this;
@@ -43,6 +46,7 @@ public class UpdateTrialComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputArtifactsToRemove")
     public String[] inputArtifactsToRemove;
+
     public UpdateTrialComponentRequest withInputArtifactsToRemove(String[] inputArtifactsToRemove) {
         this.inputArtifactsToRemove = inputArtifactsToRemove;
         return this;
@@ -51,6 +55,7 @@ public class UpdateTrialComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputArtifacts")
     public java.util.Map<String, TrialComponentArtifact> outputArtifacts;
+
     public UpdateTrialComponentRequest withOutputArtifacts(java.util.Map<String, TrialComponentArtifact> outputArtifacts) {
         this.outputArtifacts = outputArtifacts;
         return this;
@@ -59,6 +64,7 @@ public class UpdateTrialComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputArtifactsToRemove")
     public String[] outputArtifactsToRemove;
+
     public UpdateTrialComponentRequest withOutputArtifactsToRemove(String[] outputArtifactsToRemove) {
         this.outputArtifactsToRemove = outputArtifactsToRemove;
         return this;
@@ -67,6 +73,7 @@ public class UpdateTrialComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, TrialComponentParameterValue> parameters;
+
     public UpdateTrialComponentRequest withParameters(java.util.Map<String, TrialComponentParameterValue> parameters) {
         this.parameters = parameters;
         return this;
@@ -75,6 +82,7 @@ public class UpdateTrialComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParametersToRemove")
     public String[] parametersToRemove;
+
     public UpdateTrialComponentRequest withParametersToRemove(String[] parametersToRemove) {
         this.parametersToRemove = parametersToRemove;
         return this;
@@ -85,6 +93,7 @@ public class UpdateTrialComponentRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public UpdateTrialComponentRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -93,6 +102,7 @@ public class UpdateTrialComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TrialComponentStatus status;
+
     public UpdateTrialComponentRequest withStatus(TrialComponentStatus status) {
         this.status = status;
         return this;
@@ -100,9 +110,13 @@ public class UpdateTrialComponentRequest {
     
     @JsonProperty("TrialComponentName")
     public String trialComponentName;
+
     public UpdateTrialComponentRequest withTrialComponentName(String trialComponentName) {
         this.trialComponentName = trialComponentName;
         return this;
     }
     
+    public UpdateTrialComponentRequest(@JsonProperty("TrialComponentName") String trialComponentName) {
+        this.trialComponentName = trialComponentName;
+  }
 }

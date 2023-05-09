@@ -70,11 +70,9 @@ public class SearchAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRelatedSearchesResponse res = new org.openapis.openapi.models.operations.GetRelatedSearchesResponse() {{
+        org.openapis.openapi.models.operations.GetRelatedSearchesResponse res = new org.openapis.openapi.models.operations.GetRelatedSearchesResponse(contentType, httpRes.statusCode()) {{
             relatedSearchesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -121,11 +119,9 @@ public class SearchAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrendingSearchesResponse res = new org.openapis.openapi.models.operations.GetTrendingSearchesResponse() {{
+        org.openapis.openapi.models.operations.GetTrendingSearchesResponse res = new org.openapis.openapi.models.operations.GetTrendingSearchesResponse(contentType, httpRes.statusCode()) {{
             trendingSearchesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,11 +179,9 @@ public class SearchAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchResponse res = new org.openapis.openapi.models.operations.SearchResponse() {{
+        org.openapis.openapi.models.operations.SearchResponse res = new org.openapis.openapi.models.operations.SearchResponse(contentType, httpRes.statusCode()) {{
             searchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,11 +234,9 @@ public class SearchAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpellcheckResponse res = new org.openapis.openapi.models.operations.SpellcheckResponse() {{
+        org.openapis.openapi.models.operations.SpellcheckResponse res = new org.openapis.openapi.models.operations.SpellcheckResponse(contentType, httpRes.statusCode()) {{
             spellCheckResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -297,11 +289,9 @@ public class SearchAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TypeaheadResponse res = new org.openapis.openapi.models.operations.TypeaheadResponse() {{
+        org.openapis.openapi.models.operations.TypeaheadResponse res = new org.openapis.openapi.models.operations.TypeaheadResponse(contentType, httpRes.statusCode()) {{
             typeaheadResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssetContributorsRequest {
@@ -12,6 +13,7 @@ public class GetAssetContributorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
     public Boolean aliases;
+
     public GetAssetContributorsRequest withAliases(Boolean aliases) {
         this.aliases = aliases;
         return this;
@@ -22,9 +24,13 @@ public class GetAssetContributorsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assetId")
     public String assetId;
+
     public GetAssetContributorsRequest withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
     }
     
+    public GetAssetContributorsRequest(@JsonProperty("assetId") String assetId) {
+        this.assetId = assetId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompanySetupConfigGetFinancialYearResponse {
     
     public String contentType;
+
     public CompanySetupConfigGetFinancialYearResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CompanySetupConfigGetFinancialYearResponse {
      */
     
     public org.openapis.openapi.models.shared.FinancialYearDto financialYearDto;
+
     public CompanySetupConfigGetFinancialYearResponse withFinancialYearDto(org.openapis.openapi.models.shared.FinancialYearDto financialYearDto) {
         this.financialYearDto = financialYearDto;
         return this;
@@ -26,6 +29,7 @@ public class CompanySetupConfigGetFinancialYearResponse {
     
     
     public Integer statusCode;
+
     public CompanySetupConfigGetFinancialYearResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CompanySetupConfigGetFinancialYearResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompanySetupConfigGetFinancialYearResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CompanySetupConfigGetFinancialYearResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

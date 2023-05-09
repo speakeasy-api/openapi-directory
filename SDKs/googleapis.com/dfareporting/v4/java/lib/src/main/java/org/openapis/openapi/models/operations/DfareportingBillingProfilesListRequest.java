@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingBillingProfilesListRequest {
@@ -12,6 +13,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DfareportingBillingProfilesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DfareportingBillingProfilesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DfareportingBillingProfilesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DfareportingBillingProfilesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency_code")
     public String currencyCode;
+
     public DfareportingBillingProfilesListRequest withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -62,6 +68,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DfareportingBillingProfilesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String[] ids;
+
     public DfareportingBillingProfilesListRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -82,6 +90,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DfareportingBillingProfilesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DfareportingBillingProfilesListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -102,6 +112,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public DfareportingBillingProfilesListRequest withName(String name) {
         this.name = name;
         return this;
@@ -112,6 +123,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DfareportingBillingProfilesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -122,6 +134,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlySuggestion")
     public Boolean onlySuggestion;
+
     public DfareportingBillingProfilesListRequest withOnlySuggestion(Boolean onlySuggestion) {
         this.onlySuggestion = onlySuggestion;
         return this;
@@ -132,6 +145,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DfareportingBillingProfilesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -142,6 +156,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DfareportingBillingProfilesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -152,6 +167,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public DfareportingBillingProfilesListRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -162,6 +178,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DfareportingBillingProfilesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -172,6 +189,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
     public DfareportingBillingProfilesListSortFieldEnum sortField;
+
     public DfareportingBillingProfilesListRequest withSortField(DfareportingBillingProfilesListSortFieldEnum sortField) {
         this.sortField = sortField;
         return this;
@@ -182,6 +200,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public DfareportingBillingProfilesListSortOrderEnum sortOrder;
+
     public DfareportingBillingProfilesListRequest withSortOrder(DfareportingBillingProfilesListSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -192,6 +211,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public DfareportingBillingProfilesListStatusEnum[] status;
+
     public DfareportingBillingProfilesListRequest withStatus(DfareportingBillingProfilesListStatusEnum[] status) {
         this.status = status;
         return this;
@@ -202,6 +222,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subaccountIds")
     public String[] subaccountIds;
+
     public DfareportingBillingProfilesListRequest withSubaccountIds(String[] subaccountIds) {
         this.subaccountIds = subaccountIds;
         return this;
@@ -212,6 +233,7 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DfareportingBillingProfilesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -222,9 +244,13 @@ public class DfareportingBillingProfilesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DfareportingBillingProfilesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DfareportingBillingProfilesListRequest(@JsonProperty("profileId") String profileId) {
+        this.profileId = profileId;
+  }
 }

@@ -15,6 +15,7 @@ public class NAWelcomePersonsAwayResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public NAWelcomePersonsAwayResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -23,6 +24,7 @@ public class NAWelcomePersonsAwayResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_exec")
     public Double timeExec;
+
     public NAWelcomePersonsAwayResponse withTimeExec(Double timeExec) {
         this.timeExec = timeExec;
         return this;
@@ -31,9 +33,11 @@ public class NAWelcomePersonsAwayResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_server")
     public Integer timeServer;
+
     public NAWelcomePersonsAwayResponse withTimeServer(Integer timeServer) {
         this.timeServer = timeServer;
         return this;
     }
     
+    public NAWelcomePersonsAwayResponse(){}
 }

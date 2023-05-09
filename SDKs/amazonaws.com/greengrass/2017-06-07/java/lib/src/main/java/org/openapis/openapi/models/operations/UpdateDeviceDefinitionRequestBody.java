@@ -15,9 +15,11 @@ public class UpdateDeviceDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateDeviceDefinitionRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateDeviceDefinitionRequestBody(){}
 }

@@ -15,9 +15,11 @@ public class BootstrapActionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BootstrapActionConfig")
     public BootstrapActionConfig bootstrapActionConfig;
+
     public BootstrapActionDetail withBootstrapActionConfig(BootstrapActionConfig bootstrapActionConfig) {
         this.bootstrapActionConfig = bootstrapActionConfig;
         return this;
     }
     
+    public BootstrapActionDetail(){}
 }

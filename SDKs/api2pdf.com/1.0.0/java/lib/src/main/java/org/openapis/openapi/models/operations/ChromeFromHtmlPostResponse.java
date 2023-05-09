@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromeFromHtmlPostResponse {
@@ -12,6 +13,7 @@ public class ChromeFromHtmlPostResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiResponseFailure apiResponseFailure;
+
     public ChromeFromHtmlPostResponse withApiResponseFailure(org.openapis.openapi.models.shared.ApiResponseFailure apiResponseFailure) {
         this.apiResponseFailure = apiResponseFailure;
         return this;
@@ -22,6 +24,7 @@ public class ChromeFromHtmlPostResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiResponseSuccess apiResponseSuccess;
+
     public ChromeFromHtmlPostResponse withApiResponseSuccess(org.openapis.openapi.models.shared.ApiResponseSuccess apiResponseSuccess) {
         this.apiResponseSuccess = apiResponseSuccess;
         return this;
@@ -29,6 +32,7 @@ public class ChromeFromHtmlPostResponse {
     
     
     public String contentType;
+
     public ChromeFromHtmlPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class ChromeFromHtmlPostResponse {
     
     
     public Integer statusCode;
+
     public ChromeFromHtmlPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ChromeFromHtmlPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromeFromHtmlPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChromeFromHtmlPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

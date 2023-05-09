@@ -12,6 +12,7 @@ public class PostV2Scim20UsersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public org.openapis.openapi.models.shared.ScimUserName name;
+
     public PostV2Scim20UsersRequestBody withName(org.openapis.openapi.models.shared.ScimUserName name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class PostV2Scim20UsersRequestBody {
     
     @JsonProperty("schemas")
     public String[] schemas;
+
     public PostV2Scim20UsersRequestBody withSchemas(String[] schemas) {
         this.schemas = schemas;
         return this;
@@ -29,9 +31,14 @@ public class PostV2Scim20UsersRequestBody {
      */
     @JsonProperty("userName")
     public String userName;
+
     public PostV2Scim20UsersRequestBody withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public PostV2Scim20UsersRequestBody(@JsonProperty("schemas") String[] schemas, @JsonProperty("userName") String userName) {
+        this.schemas = schemas;
+        this.userName = userName;
+  }
 }

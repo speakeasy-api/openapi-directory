@@ -20,6 +20,7 @@ public class TestGridProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public TestGridProject withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class TestGridProject {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public TestGridProject withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -38,6 +40,7 @@ public class TestGridProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TestGridProject withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class TestGridProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TestGridProject withName(String name) {
         this.name = name;
         return this;
@@ -54,9 +58,11 @@ public class TestGridProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfig")
     public TestGridVpcConfig vpcConfig;
+
     public TestGridProject withVpcConfig(TestGridVpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public TestGridProject(){}
 }

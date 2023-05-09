@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
+import org.openapis.openapi.models.operations.ApplyYaraRulesRequestBody;
 import org.openapis.openapi.models.operations.ApplyYaraRulesRequestBodyFile;
 import org.openapis.openapi.models.operations.ApplyYaraRulesRequestBodyIsUnpackingRequiredEnum;
-import org.openapis.openapi.models.operations.ApplyYaraRulesRequestBody;
 import org.openapis.openapi.models.operations.ApplyYaraRulesResponse;
 
 public class Application {
@@ -28,41 +27,37 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ApplyYaraRulesRequestBody req = new ApplyYaraRulesRequestBody() {{
-                file = new ApplyYaraRulesRequestBodyFile() {{
-                    content = "corrupti".getBytes();
-                    file = "provident";
-                }};
-                isUnpackingRequired = "false";
-                rules = new String[]{{
-                    add("unde"),
-                    add("nulla"),
-                    add("corrupti"),
-                    add("illum"),
-                }};
-            }}            
+            ApplyYaraRulesRequestBody req = new ApplyYaraRulesRequestBody(                new ApplyYaraRulesRequestBodyFile("corrupti".getBytes(), "provident");,                 new String[]{{
+                                add("quibusdam"),
+                                add("unde"),
+                                add("nulla"),
+                            }}) {{
+                isUnpackingRequired = ApplyYaraRulesRequestBodyIsUnpackingRequiredEnum.FALSE;
+            }};            
 
             ApplyYaraRulesResponse res = sdk.applyYaraRules(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `applyYaraRules` - apply given YARA rules to the given executable. (upto 10 rules)
-* `clean` - clean up the uploaded files
-* `emulationOutput` - try to get the emulation output after unpacking the file
-* `generatePartialYaraRule` - generate partial YARA rules for give executable. (Rule without the condition section)
-* `unpack` - try to unpack the given file
+* [applyYaraRules](docs/sdk/README.md#applyyararules) - apply given YARA rules to the given executable. (upto 10 rules)
+* [clean](docs/sdk/README.md#clean) - clean up the uploaded files
+* [emulationOutput](docs/sdk/README.md#emulationoutput) - try to get the emulation output after unpacking the file
+* [generatePartialYaraRule](docs/sdk/README.md#generatepartialyararule) - generate partial YARA rules for give executable. (Rule without the condition section)
+* [unpack](docs/sdk/README.md#unpack) - try to unpack the given file
 <!-- End SDK Available Operations -->
 
 ### Maturity

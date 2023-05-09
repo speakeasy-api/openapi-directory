@@ -15,6 +15,7 @@ public class Gender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public Gender withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -23,9 +24,11 @@ public class Gender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public GenderTypeEnum value;
+
     public Gender withValue(GenderTypeEnum value) {
         this.value = value;
         return this;
     }
     
+    public Gender(){}
 }

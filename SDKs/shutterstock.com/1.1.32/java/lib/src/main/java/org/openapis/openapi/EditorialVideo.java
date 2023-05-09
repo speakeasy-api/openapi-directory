@@ -61,11 +61,9 @@ public class EditorialVideo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEditorialVideoResponse res = new org.openapis.openapi.models.operations.GetEditorialVideoResponse() {{
+        org.openapis.openapi.models.operations.GetEditorialVideoResponse res = new org.openapis.openapi.models.operations.GetEditorialVideoResponse(contentType, httpRes.statusCode()) {{
             editorialVideoContent = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class EditorialVideo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEditorialVideoLicenseListResponse res = new org.openapis.openapi.models.operations.GetEditorialVideoLicenseListResponse() {{
+        org.openapis.openapi.models.operations.GetEditorialVideoLicenseListResponse res = new org.openapis.openapi.models.operations.GetEditorialVideoLicenseListResponse(contentType, httpRes.statusCode()) {{
             downloadHistoryDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class EditorialVideo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LicenseEditorialVideoResponse res = new org.openapis.openapi.models.operations.LicenseEditorialVideoResponse() {{
+        org.openapis.openapi.models.operations.LicenseEditorialVideoResponse res = new org.openapis.openapi.models.operations.LicenseEditorialVideoResponse(contentType, httpRes.statusCode()) {{
             licenseEditorialContentResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -181,10 +175,11 @@ public class EditorialVideo {
     /**
      * List editorial video categories
      * This endpoint lists the categories that editorial videos can belong to, which are separate from the categories that other types of assets can belong to.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListEditorialVideoCategoriesResponse listEditorialVideoCategories() throws Exception {
+    public org.openapis.openapi.models.operations.ListEditorialVideoCategoriesResponse listEditorialVideoCategories(org.openapis.openapi.models.operations.ListEditorialVideoCategoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/videos/categories");
         
@@ -193,16 +188,15 @@ public class EditorialVideo {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListEditorialVideoCategoriesResponse res = new org.openapis.openapi.models.operations.ListEditorialVideoCategoriesResponse() {{
+        org.openapis.openapi.models.operations.ListEditorialVideoCategoriesResponse res = new org.openapis.openapi.models.operations.ListEditorialVideoCategoriesResponse(contentType, httpRes.statusCode()) {{
             editorialVideoCategoryResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +241,9 @@ public class EditorialVideo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchEditorialVideosResponse res = new org.openapis.openapi.models.operations.SearchEditorialVideosResponse() {{
+        org.openapis.openapi.models.operations.SearchEditorialVideosResponse res = new org.openapis.openapi.models.operations.SearchEditorialVideosResponse(contentType, httpRes.statusCode()) {{
             editorialVideoSearchResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -20,6 +20,7 @@ public class ReferencedImageDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactMediaType")
     public String artifactMediaType;
+
     public ReferencedImageDetail withArtifactMediaType(String artifactMediaType) {
         this.artifactMediaType = artifactMediaType;
         return this;
@@ -28,6 +29,7 @@ public class ReferencedImageDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageDigest")
     public String imageDigest;
+
     public ReferencedImageDetail withImageDigest(String imageDigest) {
         this.imageDigest = imageDigest;
         return this;
@@ -36,6 +38,7 @@ public class ReferencedImageDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageManifestMediaType")
     public String imageManifestMediaType;
+
     public ReferencedImageDetail withImageManifestMediaType(String imageManifestMediaType) {
         this.imageManifestMediaType = imageManifestMediaType;
         return this;
@@ -46,6 +49,7 @@ public class ReferencedImageDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("imagePushedAt")
     public OffsetDateTime imagePushedAt;
+
     public ReferencedImageDetail withImagePushedAt(OffsetDateTime imagePushedAt) {
         this.imagePushedAt = imagePushedAt;
         return this;
@@ -54,9 +58,11 @@ public class ReferencedImageDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageSizeInBytes")
     public Long imageSizeInBytes;
+
     public ReferencedImageDetail withImageSizeInBytes(Long imageSizeInBytes) {
         this.imageSizeInBytes = imageSizeInBytes;
         return this;
     }
     
+    public ReferencedImageDetail(){}
 }

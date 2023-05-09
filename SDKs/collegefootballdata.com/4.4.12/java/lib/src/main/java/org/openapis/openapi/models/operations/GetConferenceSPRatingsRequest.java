@@ -12,6 +12,7 @@ public class GetConferenceSPRatingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
     public String conference;
+
     public GetConferenceSPRatingsRequest withConference(String conference) {
         this.conference = conference;
         return this;
@@ -22,9 +23,11 @@ public class GetConferenceSPRatingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetConferenceSPRatingsRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetConferenceSPRatingsRequest(){}
 }

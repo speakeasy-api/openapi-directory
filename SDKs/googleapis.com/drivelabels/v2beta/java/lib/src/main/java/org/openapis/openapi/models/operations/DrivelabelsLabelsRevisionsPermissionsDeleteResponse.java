@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DrivelabelsLabelsRevisionsPermissionsDeleteResponse {
     
     public String contentType;
+
     public DrivelabelsLabelsRevisionsPermissionsDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DrivelabelsLabelsRevisionsPermissionsDeleteResponse {
      */
     
     public java.util.Map<String, Object> googleProtobufEmpty;
+
     public DrivelabelsLabelsRevisionsPermissionsDeleteResponse withGoogleProtobufEmpty(java.util.Map<String, Object> googleProtobufEmpty) {
         this.googleProtobufEmpty = googleProtobufEmpty;
         return this;
@@ -26,6 +29,7 @@ public class DrivelabelsLabelsRevisionsPermissionsDeleteResponse {
     
     
     public Integer statusCode;
+
     public DrivelabelsLabelsRevisionsPermissionsDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DrivelabelsLabelsRevisionsPermissionsDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DrivelabelsLabelsRevisionsPermissionsDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DrivelabelsLabelsRevisionsPermissionsDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

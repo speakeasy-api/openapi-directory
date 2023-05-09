@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProductSubscriptionsResponse {
@@ -12,6 +13,7 @@ public class ListProductSubscriptionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListProductSubscriptionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListProductSubscriptionsResponse {
      */
     
     public Object conflictException;
+
     public ListProductSubscriptionsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListProductSubscriptionsResponse {
     
     
     public String contentType;
+
     public ListProductSubscriptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListProductSubscriptionsResponse {
      */
     
     public Object internalServerException;
+
     public ListProductSubscriptionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListProductSubscriptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProductSubscriptionsResponse listProductSubscriptionsResponse;
+
     public ListProductSubscriptionsResponse withListProductSubscriptionsResponse(org.openapis.openapi.models.shared.ListProductSubscriptionsResponse listProductSubscriptionsResponse) {
         this.listProductSubscriptionsResponse = listProductSubscriptionsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListProductSubscriptionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListProductSubscriptionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListProductSubscriptionsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListProductSubscriptionsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListProductSubscriptionsResponse {
     
     
     public Integer statusCode;
+
     public ListProductSubscriptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListProductSubscriptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProductSubscriptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListProductSubscriptionsResponse {
      */
     
     public Object throttlingException;
+
     public ListProductSubscriptionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ListProductSubscriptionsResponse {
      */
     
     public Object validationException;
+
     public ListProductSubscriptionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListProductSubscriptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

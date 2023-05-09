@@ -15,9 +15,11 @@ public class RetryOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationInSeconds")
     public Long durationInSeconds;
+
     public RetryOptions withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
     }
     
+    public RetryOptions(){}
 }

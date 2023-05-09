@@ -17,6 +17,7 @@ public class ReviewRequestedIssueEvent {
      */
     @JsonProperty("actor")
     public SimpleUser actor;
+
     public ReviewRequestedIssueEvent withActor(SimpleUser actor) {
         this.actor = actor;
         return this;
@@ -24,6 +25,7 @@ public class ReviewRequestedIssueEvent {
     
     @JsonProperty("commit_id")
     public String commitId;
+
     public ReviewRequestedIssueEvent withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -31,6 +33,7 @@ public class ReviewRequestedIssueEvent {
     
     @JsonProperty("commit_url")
     public String commitUrl;
+
     public ReviewRequestedIssueEvent withCommitUrl(String commitUrl) {
         this.commitUrl = commitUrl;
         return this;
@@ -38,6 +41,7 @@ public class ReviewRequestedIssueEvent {
     
     @JsonProperty("created_at")
     public String createdAt;
+
     public ReviewRequestedIssueEvent withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -45,6 +49,7 @@ public class ReviewRequestedIssueEvent {
     
     @JsonProperty("event")
     public String event;
+
     public ReviewRequestedIssueEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -52,6 +57,7 @@ public class ReviewRequestedIssueEvent {
     
     @JsonProperty("id")
     public Long id;
+
     public ReviewRequestedIssueEvent withId(Long id) {
         this.id = id;
         return this;
@@ -59,6 +65,7 @@ public class ReviewRequestedIssueEvent {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public ReviewRequestedIssueEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -69,6 +76,7 @@ public class ReviewRequestedIssueEvent {
      */
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public ReviewRequestedIssueEvent withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -80,6 +88,7 @@ public class ReviewRequestedIssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_reviewer")
     public SimpleUser requestedReviewer;
+
     public ReviewRequestedIssueEvent withRequestedReviewer(SimpleUser requestedReviewer) {
         this.requestedReviewer = requestedReviewer;
         return this;
@@ -91,6 +100,7 @@ public class ReviewRequestedIssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_team")
     public Team requestedTeam;
+
     public ReviewRequestedIssueEvent withRequestedTeam(Team requestedTeam) {
         this.requestedTeam = requestedTeam;
         return this;
@@ -101,6 +111,7 @@ public class ReviewRequestedIssueEvent {
      */
     @JsonProperty("review_requester")
     public SimpleUser reviewRequester;
+
     public ReviewRequestedIssueEvent withReviewRequester(SimpleUser reviewRequester) {
         this.reviewRequester = reviewRequester;
         return this;
@@ -108,9 +119,22 @@ public class ReviewRequestedIssueEvent {
     
     @JsonProperty("url")
     public String url;
+
     public ReviewRequestedIssueEvent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ReviewRequestedIssueEvent(@JsonProperty("actor") SimpleUser actor, @JsonProperty("commit_id") String commitId, @JsonProperty("commit_url") String commitUrl, @JsonProperty("created_at") String createdAt, @JsonProperty("event") String event, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("performed_via_github_app") NullableIntegration performedViaGithubApp, @JsonProperty("review_requester") SimpleUser reviewRequester, @JsonProperty("url") String url) {
+        this.actor = actor;
+        this.commitId = commitId;
+        this.commitUrl = commitUrl;
+        this.createdAt = createdAt;
+        this.event = event;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.performedViaGithubApp = performedViaGithubApp;
+        this.reviewRequester = reviewRequester;
+        this.url = url;
+  }
 }

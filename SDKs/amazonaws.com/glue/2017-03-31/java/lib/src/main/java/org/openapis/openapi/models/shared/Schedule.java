@@ -15,6 +15,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public Schedule withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
@@ -23,9 +24,11 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ScheduleStateEnum state;
+
     public Schedule withState(ScheduleStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Schedule(){}
 }

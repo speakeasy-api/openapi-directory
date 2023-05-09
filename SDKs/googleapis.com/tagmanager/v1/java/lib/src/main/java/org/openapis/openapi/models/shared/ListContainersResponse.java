@@ -18,9 +18,11 @@ public class ListContainersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public Container[] containers;
+
     public ListContainersResponse withContainers(Container[] containers) {
         this.containers = containers;
         return this;
     }
     
+    public ListContainersResponse(){}
 }

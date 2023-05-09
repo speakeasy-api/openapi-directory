@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendUsersMessagesResponse {
@@ -12,6 +13,7 @@ public class SendUsersMessagesResponse {
      */
     
     public Object badRequestException;
+
     public SendUsersMessagesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class SendUsersMessagesResponse {
     
     
     public String contentType;
+
     public SendUsersMessagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SendUsersMessagesResponse {
      */
     
     public Object forbiddenException;
+
     public SendUsersMessagesResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class SendUsersMessagesResponse {
      */
     
     public Object internalServerErrorException;
+
     public SendUsersMessagesResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class SendUsersMessagesResponse {
      */
     
     public Object methodNotAllowedException;
+
     public SendUsersMessagesResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class SendUsersMessagesResponse {
      */
     
     public Object notFoundException;
+
     public SendUsersMessagesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class SendUsersMessagesResponse {
      */
     
     public Object payloadTooLargeException;
+
     public SendUsersMessagesResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -79,6 +87,7 @@ public class SendUsersMessagesResponse {
      */
     
     public org.openapis.openapi.models.shared.SendUsersMessagesResponse sendUsersMessagesResponse;
+
     public SendUsersMessagesResponse withSendUsersMessagesResponse(org.openapis.openapi.models.shared.SendUsersMessagesResponse sendUsersMessagesResponse) {
         this.sendUsersMessagesResponse = sendUsersMessagesResponse;
         return this;
@@ -86,6 +95,7 @@ public class SendUsersMessagesResponse {
     
     
     public Integer statusCode;
+
     public SendUsersMessagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class SendUsersMessagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendUsersMessagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class SendUsersMessagesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public SendUsersMessagesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public SendUsersMessagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -22,6 +22,7 @@ public class ScoutingObservation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public ScoutingObservation withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -32,6 +33,7 @@ public class ScoutingObservation {
      */
     @JsonProperty("fieldIds")
     public String[] fieldIds;
+
     public ScoutingObservation withFieldIds(String[] fieldIds) {
         this.fieldIds = fieldIds;
         return this;
@@ -42,6 +44,7 @@ public class ScoutingObservation {
      */
     @JsonProperty("id")
     public String id;
+
     public ScoutingObservation withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +55,7 @@ public class ScoutingObservation {
      */
     @JsonProperty("location")
     public Geometry location;
+
     public ScoutingObservation withLocation(Geometry location) {
         this.location = location;
         return this;
@@ -71,6 +75,7 @@ public class ScoutingObservation {
      */
     @JsonProperty("locationDisplayColor")
     public ScoutingObservationLocationDisplayColorEnum locationDisplayColor;
+
     public ScoutingObservation withLocationDisplayColor(ScoutingObservationLocationDisplayColorEnum locationDisplayColor) {
         this.locationDisplayColor = locationDisplayColor;
         return this;
@@ -81,6 +86,7 @@ public class ScoutingObservation {
      */
     @JsonProperty("note")
     public String note;
+
     public ScoutingObservation withNote(String note) {
         this.note = note;
         return this;
@@ -93,6 +99,7 @@ public class ScoutingObservation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ScoutingObservation withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -103,6 +110,7 @@ public class ScoutingObservation {
      */
     @JsonProperty("status")
     public ScoutingObservationStatusEnum status;
+
     public ScoutingObservation withStatus(ScoutingObservationStatusEnum status) {
         this.status = status;
         return this;
@@ -113,6 +121,7 @@ public class ScoutingObservation {
      */
     @JsonProperty("tags")
     public ScoutingTag[] tags;
+
     public ScoutingObservation withTags(ScoutingTag[] tags) {
         this.tags = tags;
         return this;
@@ -123,6 +132,7 @@ public class ScoutingObservation {
      */
     @JsonProperty("timespan")
     public ScoutingObservationTimespanEnum timespan;
+
     public ScoutingObservation withTimespan(ScoutingObservationTimespanEnum timespan) {
         this.timespan = timespan;
         return this;
@@ -133,6 +143,7 @@ public class ScoutingObservation {
      */
     @JsonProperty("title")
     public String title;
+
     public ScoutingObservation withTitle(String title) {
         this.title = title;
         return this;
@@ -145,9 +156,24 @@ public class ScoutingObservation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public ScoutingObservation withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public ScoutingObservation(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("fieldIds") String[] fieldIds, @JsonProperty("id") String id, @JsonProperty("location") Geometry location, @JsonProperty("locationDisplayColor") ScoutingObservationLocationDisplayColorEnum locationDisplayColor, @JsonProperty("note") String note, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("status") ScoutingObservationStatusEnum status, @JsonProperty("tags") ScoutingTag[] tags, @JsonProperty("timespan") ScoutingObservationTimespanEnum timespan, @JsonProperty("title") String title, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.endTime = endTime;
+        this.fieldIds = fieldIds;
+        this.id = id;
+        this.location = location;
+        this.locationDisplayColor = locationDisplayColor;
+        this.note = note;
+        this.startTime = startTime;
+        this.status = status;
+        this.tags = tags;
+        this.timespan = timespan;
+        this.title = title;
+        this.updatedAt = updatedAt;
+  }
 }

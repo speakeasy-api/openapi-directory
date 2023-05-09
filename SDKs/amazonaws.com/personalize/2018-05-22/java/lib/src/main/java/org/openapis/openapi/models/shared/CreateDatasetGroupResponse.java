@@ -15,6 +15,7 @@ public class CreateDatasetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public CreateDatasetGroupResponse withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateDatasetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public DomainEnum domain;
+
     public CreateDatasetGroupResponse withDomain(DomainEnum domain) {
         this.domain = domain;
         return this;
     }
     
+    public CreateDatasetGroupResponse(){}
 }

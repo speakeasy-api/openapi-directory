@@ -15,9 +15,11 @@ public class HttpGatewayRoutePathRewrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exact")
     public String exact;
+
     public HttpGatewayRoutePathRewrite withExact(String exact) {
         this.exact = exact;
         return this;
     }
     
+    public HttpGatewayRoutePathRewrite(){}
 }

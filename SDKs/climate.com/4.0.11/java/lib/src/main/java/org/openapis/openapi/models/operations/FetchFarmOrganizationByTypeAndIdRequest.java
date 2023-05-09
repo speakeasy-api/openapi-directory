@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchFarmOrganizationByTypeAndIdRequest {
@@ -12,6 +13,7 @@ public class FetchFarmOrganizationByTypeAndIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=farmOrganizationId")
     public String farmOrganizationId;
+
     public FetchFarmOrganizationByTypeAndIdRequest withFarmOrganizationId(String farmOrganizationId) {
         this.farmOrganizationId = farmOrganizationId;
         return this;
@@ -22,9 +24,14 @@ public class FetchFarmOrganizationByTypeAndIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=farmOrganizationType")
     public org.openapis.openapi.models.shared.FarmOrganizationTypeEnum farmOrganizationType;
+
     public FetchFarmOrganizationByTypeAndIdRequest withFarmOrganizationType(org.openapis.openapi.models.shared.FarmOrganizationTypeEnum farmOrganizationType) {
         this.farmOrganizationType = farmOrganizationType;
         return this;
     }
     
+    public FetchFarmOrganizationByTypeAndIdRequest(@JsonProperty("farmOrganizationId") String farmOrganizationId, @JsonProperty("farmOrganizationType") org.openapis.openapi.models.shared.FarmOrganizationTypeEnum farmOrganizationType) {
+        this.farmOrganizationId = farmOrganizationId;
+        this.farmOrganizationType = farmOrganizationType;
+  }
 }

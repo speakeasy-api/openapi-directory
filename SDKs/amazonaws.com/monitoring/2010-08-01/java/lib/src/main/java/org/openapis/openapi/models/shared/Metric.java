@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Metric {
     
     public Dimension[] dimensions;
+
     public Metric withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -19,6 +20,7 @@ public class Metric {
     
     
     public String metricName;
+
     public Metric withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -26,9 +28,11 @@ public class Metric {
     
     
     public String namespace;
+
     public Metric withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public Metric(){}
 }

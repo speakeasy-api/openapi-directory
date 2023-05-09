@@ -3,18 +3,17 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1;
-import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurityOption2;
-import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurity;
 import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesRequest;
 import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesResponse;
+import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurity;
+import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1;
+import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.AnalyzeEntitiesRequestEncodingTypeEnum;
 import org.openapis.openapi.models.shared.AnalyzeEntitiesRequest;
+import org.openapis.openapi.models.shared.AnalyzeEntitiesRequestEncodingTypeEnum;
+import org.openapis.openapi.models.shared.Document;
 import org.openapis.openapi.models.shared.DocumentBoilerplateHandlingEnum;
 import org.openapis.openapi.models.shared.DocumentTypeEnum;
-import org.openapis.openapi.models.shared.Document;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -24,20 +23,20 @@ public class Application {
                 .build();
 
             LanguageDocumentsAnalyzeEntitiesRequest req = new LanguageDocumentsAnalyzeEntitiesRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 analyzeEntitiesRequest = new AnalyzeEntitiesRequest() {{
                     document = new Document() {{
-                        boilerplateHandling = "SKIP_BOILERPLATE";
+                        boilerplateHandling = DocumentBoilerplateHandlingEnum.SKIP_BOILERPLATE;
                         content = "distinctio";
                         gcsContentUri = "quibusdam";
                         language = "unde";
                         referenceWebUri = "nulla";
-                        type = "PLAIN_TEXT";
-                    }};
-                    encodingType = "UTF32";
-                }};
+                        type = DocumentTypeEnum.PLAIN_TEXT;
+                    }};;
+                    encodingType = AnalyzeEntitiesRequestEncodingTypeEnum.UTF32;
+                }};;
                 accessToken = "vel";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 callback = "deserunt";
                 fields = "suscipit";
                 key = "iure";
@@ -46,20 +45,22 @@ public class Application {
                 quotaUser = "debitis";
                 uploadType = "ipsa";
                 uploadProtocol = "delectus";
-            }}            
+            }};            
 
             LanguageDocumentsAnalyzeEntitiesResponse res = sdk.documents.languageDocumentsAnalyzeEntities(req, new LanguageDocumentsAnalyzeEntitiesSecurity() {{
-                option1 = new LanguageDocumentsAnalyzeEntitiesSecurityOption1() {{
+                option1 = new LanguageDocumentsAnalyzeEntitiesSecurityOption1("tempora", "suscipit") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.analyzeEntitiesResponse.isPresent()) {
+            if (res.analyzeEntitiesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

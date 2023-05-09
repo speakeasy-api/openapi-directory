@@ -18,6 +18,7 @@ public class DeviceTier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceGroupNames")
     public String[] deviceGroupNames;
+
     public DeviceTier withDeviceGroupNames(String[] deviceGroupNames) {
         this.deviceGroupNames = deviceGroupNames;
         return this;
@@ -29,9 +30,11 @@ public class DeviceTier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public Integer level;
+
     public DeviceTier withLevel(Integer level) {
         this.level = level;
         return this;
     }
     
+    public DeviceTier(){}
 }

@@ -12,6 +12,7 @@ public class ListEndpointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeRegion")
     public String homeRegion;
+
     public ListEndpointsRequest withHomeRegion(String homeRegion) {
         this.homeRegion = homeRegion;
         return this;
@@ -20,6 +21,7 @@ public class ListEndpointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListEndpointsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListEndpointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NamePrefix")
     public String namePrefix;
+
     public ListEndpointsRequest withNamePrefix(String namePrefix) {
         this.namePrefix = namePrefix;
         return this;
@@ -36,9 +39,11 @@ public class ListEndpointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEndpointsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEndpointsRequest(){}
 }

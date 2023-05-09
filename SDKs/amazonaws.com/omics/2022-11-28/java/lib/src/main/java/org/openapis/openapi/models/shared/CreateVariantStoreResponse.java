@@ -21,6 +21,7 @@ public class CreateVariantStoreResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public CreateVariantStoreResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class CreateVariantStoreResponse {
     
     @JsonProperty("id")
     public String id;
+
     public CreateVariantStoreResponse withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class CreateVariantStoreResponse {
     
     @JsonProperty("name")
     public String name;
+
     public CreateVariantStoreResponse withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +46,7 @@ public class CreateVariantStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public ReferenceItem reference;
+
     public CreateVariantStoreResponse withReference(ReferenceItem reference) {
         this.reference = reference;
         return this;
@@ -50,9 +54,16 @@ public class CreateVariantStoreResponse {
     
     @JsonProperty("status")
     public StoreStatusEnum status;
+
     public CreateVariantStoreResponse withStatus(StoreStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateVariantStoreResponse(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("status") StoreStatusEnum status) {
+        this.creationTime = creationTime;
+        this.id = id;
+        this.name = name;
+        this.status = status;
+  }
 }

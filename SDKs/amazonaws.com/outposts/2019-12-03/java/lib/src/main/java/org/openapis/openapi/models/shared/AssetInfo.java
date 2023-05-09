@@ -15,6 +15,7 @@ public class AssetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssetId")
     public String assetId;
+
     public AssetInfo withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -23,6 +24,7 @@ public class AssetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssetLocation")
     public AssetLocation assetLocation;
+
     public AssetInfo withAssetLocation(AssetLocation assetLocation) {
         this.assetLocation = assetLocation;
         return this;
@@ -31,6 +33,7 @@ public class AssetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssetType")
     public AssetTypeEnum assetType;
+
     public AssetInfo withAssetType(AssetTypeEnum assetType) {
         this.assetType = assetType;
         return this;
@@ -39,6 +42,7 @@ public class AssetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeAttributes")
     public ComputeAttributes computeAttributes;
+
     public AssetInfo withComputeAttributes(ComputeAttributes computeAttributes) {
         this.computeAttributes = computeAttributes;
         return this;
@@ -47,9 +51,11 @@ public class AssetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RackId")
     public String rackId;
+
     public AssetInfo withRackId(String rackId) {
         this.rackId = rackId;
         return this;
     }
     
+    public AssetInfo(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGetPathwaysByOntologyTermResponse {
     
     public String contentType;
+
     public GetGetPathwaysByOntologyTermResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetGetPathwaysByOntologyTermResponse {
     
     
     public Integer statusCode;
+
     public GetGetPathwaysByOntologyTermResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class GetGetPathwaysByOntologyTermResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGetPathwaysByOntologyTermResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetGetPathwaysByOntologyTermResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

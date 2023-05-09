@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CodePushDeploymentsListResponse {
     
     public String contentType;
+
     public CodePushDeploymentsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CodePushDeploymentsListResponse {
     
     
     public Integer statusCode;
+
     public CodePushDeploymentsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CodePushDeploymentsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CodePushDeploymentsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CodePushDeploymentsListResponse {
      */
     
     public CodePushDeploymentsList200ApplicationJSON[] codePushDeploymentsList200ApplicationJSONObjects;
+
     public CodePushDeploymentsListResponse withCodePushDeploymentsList200ApplicationJSONObjects(CodePushDeploymentsList200ApplicationJSON[] codePushDeploymentsList200ApplicationJSONObjects) {
         this.codePushDeploymentsList200ApplicationJSONObjects = codePushDeploymentsList200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class CodePushDeploymentsListResponse {
      */
     
     public CodePushDeploymentsListDefaultApplicationJSON codePushDeploymentsListDefaultApplicationJSONObject;
+
     public CodePushDeploymentsListResponse withCodePushDeploymentsListDefaultApplicationJSONObject(CodePushDeploymentsListDefaultApplicationJSON codePushDeploymentsListDefaultApplicationJSONObject) {
         this.codePushDeploymentsListDefaultApplicationJSONObject = codePushDeploymentsListDefaultApplicationJSONObject;
         return this;
     }
     
+    public CodePushDeploymentsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

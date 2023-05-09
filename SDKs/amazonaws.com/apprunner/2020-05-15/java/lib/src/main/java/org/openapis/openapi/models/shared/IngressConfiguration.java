@@ -15,9 +15,11 @@ public class IngressConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsPubliclyAccessible")
     public Boolean isPubliclyAccessible;
+
     public IngressConfiguration withIsPubliclyAccessible(Boolean isPubliclyAccessible) {
         this.isPubliclyAccessible = isPubliclyAccessible;
         return this;
     }
     
+    public IngressConfiguration(){}
 }

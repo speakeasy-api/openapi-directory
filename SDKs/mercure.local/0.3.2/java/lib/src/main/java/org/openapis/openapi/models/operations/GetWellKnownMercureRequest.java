@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWellKnownMercureRequest {
@@ -12,6 +13,7 @@ public class GetWellKnownMercureRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Last-Event-ID")
     public String lastEventID;
+
     public GetWellKnownMercureRequest withLastEventID(String lastEventID) {
         this.lastEventID = lastEventID;
         return this;
@@ -22,6 +24,7 @@ public class GetWellKnownMercureRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Last-Event-ID")
     public String lastEventIDQueryParameter;
+
     public GetWellKnownMercureRequest withLastEventIDQueryParameter(String lastEventIDQueryParameter) {
         this.lastEventIDQueryParameter = lastEventIDQueryParameter;
         return this;
@@ -32,9 +35,13 @@ public class GetWellKnownMercureRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topic")
     public String[] topic;
+
     public GetWellKnownMercureRequest withTopic(String[] topic) {
         this.topic = topic;
         return this;
     }
     
+    public GetWellKnownMercureRequest(@JsonProperty("topic") String[] topic) {
+        this.topic = topic;
+  }
 }

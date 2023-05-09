@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCustomerCertificatesByCustomerIdResponse {
     
     public byte[] body;
+
     public GetCustomerCertificatesByCustomerIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -19,6 +21,7 @@ public class GetCustomerCertificatesByCustomerIdResponse {
      */
     
     public org.openapis.openapi.models.shared.CertificateSummariesV2 certificateSummariesV2;
+
     public GetCustomerCertificatesByCustomerIdResponse withCertificateSummariesV2(org.openapis.openapi.models.shared.CertificateSummariesV2 certificateSummariesV2) {
         this.certificateSummariesV2 = certificateSummariesV2;
         return this;
@@ -26,6 +29,7 @@ public class GetCustomerCertificatesByCustomerIdResponse {
     
     
     public String contentType;
+
     public GetCustomerCertificatesByCustomerIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class GetCustomerCertificatesByCustomerIdResponse {
     
     
     public Integer statusCode;
+
     public GetCustomerCertificatesByCustomerIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetCustomerCertificatesByCustomerIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCustomerCertificatesByCustomerIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCustomerCertificatesByCustomerIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

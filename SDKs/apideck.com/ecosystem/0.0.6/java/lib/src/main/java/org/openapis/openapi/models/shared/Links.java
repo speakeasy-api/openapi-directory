@@ -17,6 +17,7 @@ public class Links {
      */
     @JsonProperty("current")
     public String current;
+
     public Links withCurrent(String current) {
         this.current = current;
         return this;
@@ -28,6 +29,7 @@ public class Links {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public Links withNext(String next) {
         this.next = next;
         return this;
@@ -39,9 +41,13 @@ public class Links {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public Links withPrevious(String previous) {
         this.previous = previous;
         return this;
     }
     
+    public Links(@JsonProperty("current") String current) {
+        this.current = current;
+  }
 }

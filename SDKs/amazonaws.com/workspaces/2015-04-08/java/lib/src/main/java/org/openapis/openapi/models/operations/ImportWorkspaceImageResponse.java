@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportWorkspaceImageResponse {
@@ -12,6 +13,7 @@ public class ImportWorkspaceImageResponse {
      */
     
     public Object accessDeniedException;
+
     public ImportWorkspaceImageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ImportWorkspaceImageResponse {
     
     
     public String contentType;
+
     public ImportWorkspaceImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ImportWorkspaceImageResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportWorkspaceImageResult importWorkspaceImageResult;
+
     public ImportWorkspaceImageResponse withImportWorkspaceImageResult(org.openapis.openapi.models.shared.ImportWorkspaceImageResult importWorkspaceImageResult) {
         this.importWorkspaceImageResult = importWorkspaceImageResult;
         return this;
@@ -39,6 +43,7 @@ public class ImportWorkspaceImageResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public ImportWorkspaceImageResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class ImportWorkspaceImageResponse {
      */
     
     public Object operationNotSupportedException;
+
     public ImportWorkspaceImageResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -59,6 +65,7 @@ public class ImportWorkspaceImageResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public ImportWorkspaceImageResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -69,6 +76,7 @@ public class ImportWorkspaceImageResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public ImportWorkspaceImageResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ImportWorkspaceImageResponse {
     
     
     public Integer statusCode;
+
     public ImportWorkspaceImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ImportWorkspaceImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportWorkspaceImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ImportWorkspaceImageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ImportWorkspaceImageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ImportWorkspaceImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

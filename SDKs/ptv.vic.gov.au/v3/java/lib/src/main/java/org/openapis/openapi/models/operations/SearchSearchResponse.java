@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchSearchResponse {
     
     public byte[] body;
+
     public SearchSearchResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class SearchSearchResponse {
     
     
     public String contentType;
+
     public SearchSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class SearchSearchResponse {
     
     
     public Integer statusCode;
+
     public SearchSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class SearchSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class SearchSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse;
+
     public SearchSearchResponse withV3ErrorResponse(org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse) {
         this.v3ErrorResponse = v3ErrorResponse;
         return this;
@@ -50,9 +56,14 @@ public class SearchSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.V3SearchResult v3SearchResult;
+
     public SearchSearchResponse withV3SearchResult(org.openapis.openapi.models.shared.V3SearchResult v3SearchResult) {
         this.v3SearchResult = v3SearchResult;
         return this;
     }
     
+    public SearchSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

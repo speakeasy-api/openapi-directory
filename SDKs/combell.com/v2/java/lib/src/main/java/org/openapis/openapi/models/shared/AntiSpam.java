@@ -15,6 +15,7 @@ public class AntiSpam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_types")
     public AntiSpamTypesEnum[] allowedTypes;
+
     public AntiSpam withAllowedTypes(AntiSpamTypesEnum[] allowedTypes) {
         this.allowedTypes = allowedTypes;
         return this;
@@ -26,9 +27,11 @@ public class AntiSpam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AntiSpamTypesEnum type;
+
     public AntiSpam withType(AntiSpamTypesEnum type) {
         this.type = type;
         return this;
     }
     
+    public AntiSpam(){}
 }

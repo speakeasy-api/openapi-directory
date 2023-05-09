@@ -22,6 +22,7 @@ public class EstimationCreateApiModel {
     @JsonProperty("Attachments")
     @SpeakeasyMetadata("form:name=Attachments,json")
     public EstimationCreateAttachmentApiModel[] attachments;
+
     public EstimationCreateApiModel withAttachments(EstimationCreateAttachmentApiModel[] attachments) {
         this.attachments = attachments;
         return this;
@@ -34,6 +35,7 @@ public class EstimationCreateApiModel {
     @JsonProperty("ClientId")
     @SpeakeasyMetadata("form:name=ClientId")
     public Integer clientId;
+
     public EstimationCreateApiModel withClientId(Integer clientId) {
         this.clientId = clientId;
         return this;
@@ -46,6 +48,7 @@ public class EstimationCreateApiModel {
     @JsonProperty("ClonedFromId")
     @SpeakeasyMetadata("form:name=ClonedFromId")
     public Integer clonedFromId;
+
     public EstimationCreateApiModel withClonedFromId(Integer clonedFromId) {
         this.clonedFromId = clonedFromId;
         return this;
@@ -58,6 +61,7 @@ public class EstimationCreateApiModel {
     @JsonProperty("CurrencyId")
     @SpeakeasyMetadata("form:name=CurrencyId")
     public Integer currencyId;
+
     public EstimationCreateApiModel withCurrencyId(Integer currencyId) {
         this.currencyId = currencyId;
         return this;
@@ -72,6 +76,7 @@ public class EstimationCreateApiModel {
     @JsonProperty("ExpiresOn")
     @SpeakeasyMetadata("form:name=ExpiresOn")
     public OffsetDateTime expiresOn;
+
     public EstimationCreateApiModel withExpiresOn(OffsetDateTime expiresOn) {
         this.expiresOn = expiresOn;
         return this;
@@ -86,6 +91,7 @@ public class EstimationCreateApiModel {
     @JsonProperty("IssuedOn")
     @SpeakeasyMetadata("form:name=IssuedOn")
     public OffsetDateTime issuedOn;
+
     public EstimationCreateApiModel withIssuedOn(OffsetDateTime issuedOn) {
         this.issuedOn = issuedOn;
         return this;
@@ -98,6 +104,7 @@ public class EstimationCreateApiModel {
     @JsonProperty("Items")
     @SpeakeasyMetadata("form:name=Items,json")
     public EstimationCreateItemApiModel[] items;
+
     public EstimationCreateApiModel withItems(EstimationCreateItemApiModel[] items) {
         this.items = items;
         return this;
@@ -110,6 +117,7 @@ public class EstimationCreateApiModel {
     @JsonProperty("Notes")
     @SpeakeasyMetadata("form:name=Notes")
     public String notes;
+
     public EstimationCreateApiModel withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -122,6 +130,7 @@ public class EstimationCreateApiModel {
     @JsonProperty("Number")
     @SpeakeasyMetadata("form:name=Number")
     public String number;
+
     public EstimationCreateApiModel withNumber(String number) {
         this.number = number;
         return this;
@@ -134,6 +143,7 @@ public class EstimationCreateApiModel {
     @JsonProperty("PaymentGateways")
     @SpeakeasyMetadata("form:name=PaymentGateways,json")
     public EstimationGatewayApiModel[] paymentGateways;
+
     public EstimationCreateApiModel withPaymentGateways(EstimationGatewayApiModel[] paymentGateways) {
         this.paymentGateways = paymentGateways;
         return this;
@@ -146,6 +156,7 @@ public class EstimationCreateApiModel {
     @JsonProperty("PoNumber")
     @SpeakeasyMetadata("form:name=PoNumber")
     public String poNumber;
+
     public EstimationCreateApiModel withPoNumber(String poNumber) {
         this.poNumber = poNumber;
         return this;
@@ -158,6 +169,7 @@ public class EstimationCreateApiModel {
     @JsonProperty("Status")
     @SpeakeasyMetadata("form:name=Status")
     public EstimationCreateApiModelStatusEnum status;
+
     public EstimationCreateApiModel withStatus(EstimationCreateApiModelStatusEnum status) {
         this.status = status;
         return this;
@@ -170,9 +182,11 @@ public class EstimationCreateApiModel {
     @JsonProperty("Terms")
     @SpeakeasyMetadata("form:name=Terms")
     public String terms;
+
     public EstimationCreateApiModel withTerms(String terms) {
         this.terms = terms;
         return this;
     }
     
+    public EstimationCreateApiModel(){}
 }

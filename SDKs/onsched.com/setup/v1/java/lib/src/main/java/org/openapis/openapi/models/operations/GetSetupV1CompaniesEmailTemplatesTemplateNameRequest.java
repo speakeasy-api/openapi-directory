@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1CompaniesEmailTemplatesTemplateNameRequest {
@@ -12,9 +13,13 @@ public class GetSetupV1CompaniesEmailTemplatesTemplateNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=templateName")
     public String templateName;
+
     public GetSetupV1CompaniesEmailTemplatesTemplateNameRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public GetSetupV1CompaniesEmailTemplatesTemplateNameRequest(@JsonProperty("templateName") String templateName) {
+        this.templateName = templateName;
+  }
 }

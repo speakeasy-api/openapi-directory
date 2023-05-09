@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DatastoreProjectsRollbackSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DatastoreProjectsRollbackSecurityOption1 option1;
+
     public DatastoreProjectsRollbackSecurity withOption1(DatastoreProjectsRollbackSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class DatastoreProjectsRollbackSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DatastoreProjectsRollbackSecurityOption2 option2;
+
     public DatastoreProjectsRollbackSecurity withOption2(DatastoreProjectsRollbackSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public DatastoreProjectsRollbackSecurity(){}
 }

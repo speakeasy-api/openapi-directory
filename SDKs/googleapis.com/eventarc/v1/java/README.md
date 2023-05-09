@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreateSecurity;
 import org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreateRequest;
 import org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreateResponse;
+import org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ChannelConnectionInput;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -30,38 +29,39 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            EventarcProjectsLocationsChannelConnectionsCreateRequest req = new EventarcProjectsLocationsChannelConnectionsCreateRequest() {{
-                dollarXgafv = "2";
+            EventarcProjectsLocationsChannelConnectionsCreateRequest req = new EventarcProjectsLocationsChannelConnectionsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 channelConnectionInput = new ChannelConnectionInput() {{
-                    activationToken = "provident";
-                    channel = "distinctio";
-                    name = "quibusdam";
-                }};
-                accessToken = "unde";
-                alt = "proto";
-                callback = "corrupti";
-                channelConnectionId = "illum";
-                fields = "vel";
-                key = "error";
-                oauthToken = "deserunt";
-                parent = "suscipit";
+                    activationToken = "distinctio";
+                    channel = "quibusdam";
+                    name = "Ismael Little";
+                }};;
+                accessToken = "error";
+                alt = AltEnum.MEDIA;
+                callback = "suscipit";
+                channelConnectionId = "iure";
+                fields = "magnam";
+                key = "debitis";
+                oauthToken = "ipsa";
                 prettyPrint = false;
-                quotaUser = "iure";
-                uploadType = "magnam";
-                uploadProtocol = "debitis";
-            }}            
+                quotaUser = "delectus";
+                uploadType = "tempora";
+                uploadProtocol = "suscipit";
+            }};            
 
-            EventarcProjectsLocationsChannelConnectionsCreateResponse res = sdk.projects.eventarcProjectsLocationsChannelConnectionsCreate(req, new EventarcProjectsLocationsChannelConnectionsCreateSecurity() {{
+            EventarcProjectsLocationsChannelConnectionsCreateResponse res = sdk.projects.eventarcProjectsLocationsChannelConnectionsCreate(req, new EventarcProjectsLocationsChannelConnectionsCreateSecurity("molestiae", "minus") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleLongrunningOperation.isPresent()) {
+            if (res.googleLongrunningOperation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -69,24 +69,24 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `eventarcProjectsLocationsChannelConnectionsCreate` - Create a new ChannelConnection in a particular project and location.
-* `eventarcProjectsLocationsChannelConnectionsList` - List channel connections.
-* `eventarcProjectsLocationsChannelsCreate` - Create a new channel in a particular project and location.
-* `eventarcProjectsLocationsChannelsList` - List channels.
-* `eventarcProjectsLocationsList` - Lists information about the supported locations for this service.
-* `eventarcProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `eventarcProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `eventarcProjectsLocationsProvidersList` - List providers.
-* `eventarcProjectsLocationsTriggersCreate` - Create a new trigger in a particular project and location.
-* `eventarcProjectsLocationsTriggersDelete` - Delete a single trigger.
-* `eventarcProjectsLocationsTriggersGet` - Get a single trigger.
-* `eventarcProjectsLocationsTriggersGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-* `eventarcProjectsLocationsTriggersList` - List triggers.
-* `eventarcProjectsLocationsTriggersPatch` - Update a single trigger.
-* `eventarcProjectsLocationsTriggersSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-* `eventarcProjectsLocationsTriggersTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+* [eventarcProjectsLocationsChannelConnectionsCreate](docs/projects/README.md#eventarcprojectslocationschannelconnectionscreate) - Create a new ChannelConnection in a particular project and location.
+* [eventarcProjectsLocationsChannelConnectionsList](docs/projects/README.md#eventarcprojectslocationschannelconnectionslist) - List channel connections.
+* [eventarcProjectsLocationsChannelsCreate](docs/projects/README.md#eventarcprojectslocationschannelscreate) - Create a new channel in a particular project and location.
+* [eventarcProjectsLocationsChannelsList](docs/projects/README.md#eventarcprojectslocationschannelslist) - List channels.
+* [eventarcProjectsLocationsList](docs/projects/README.md#eventarcprojectslocationslist) - Lists information about the supported locations for this service.
+* [eventarcProjectsLocationsOperationsCancel](docs/projects/README.md#eventarcprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [eventarcProjectsLocationsOperationsList](docs/projects/README.md#eventarcprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [eventarcProjectsLocationsProvidersList](docs/projects/README.md#eventarcprojectslocationsproviderslist) - List providers.
+* [eventarcProjectsLocationsTriggersCreate](docs/projects/README.md#eventarcprojectslocationstriggerscreate) - Create a new trigger in a particular project and location.
+* [eventarcProjectsLocationsTriggersDelete](docs/projects/README.md#eventarcprojectslocationstriggersdelete) - Delete a single trigger.
+* [eventarcProjectsLocationsTriggersGet](docs/projects/README.md#eventarcprojectslocationstriggersget) - Get a single trigger.
+* [eventarcProjectsLocationsTriggersGetIamPolicy](docs/projects/README.md#eventarcprojectslocationstriggersgetiampolicy) - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+* [eventarcProjectsLocationsTriggersList](docs/projects/README.md#eventarcprojectslocationstriggerslist) - List triggers.
+* [eventarcProjectsLocationsTriggersPatch](docs/projects/README.md#eventarcprojectslocationstriggerspatch) - Update a single trigger.
+* [eventarcProjectsLocationsTriggersSetIamPolicy](docs/projects/README.md#eventarcprojectslocationstriggerssetiampolicy) - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+* [eventarcProjectsLocationsTriggersTestIamPermissions](docs/projects/README.md#eventarcprojectslocationstriggerstestiampermissions) - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 <!-- End SDK Available Operations -->
 
 ### Maturity

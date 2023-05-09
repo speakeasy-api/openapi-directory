@@ -18,6 +18,7 @@ public class TargetGrpcProxyListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public TargetGrpcProxyListWarningCodeEnum code;
+
     public TargetGrpcProxyListWarning withCode(TargetGrpcProxyListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class TargetGrpcProxyListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public TargetGrpcProxyListWarningData[] data;
+
     public TargetGrpcProxyListWarning withData(TargetGrpcProxyListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class TargetGrpcProxyListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TargetGrpcProxyListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public TargetGrpcProxyListWarning(){}
 }

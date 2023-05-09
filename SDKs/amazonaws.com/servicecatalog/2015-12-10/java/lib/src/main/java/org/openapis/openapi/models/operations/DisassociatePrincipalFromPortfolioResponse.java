@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociatePrincipalFromPortfolioResponse {
     
     public String contentType;
+
     public DisassociatePrincipalFromPortfolioResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociatePrincipalFromPortfolioResponse {
      */
     
     public java.util.Map<String, Object> disassociatePrincipalFromPortfolioOutput;
+
     public DisassociatePrincipalFromPortfolioResponse withDisassociatePrincipalFromPortfolioOutput(java.util.Map<String, Object> disassociatePrincipalFromPortfolioOutput) {
         this.disassociatePrincipalFromPortfolioOutput = disassociatePrincipalFromPortfolioOutput;
         return this;
@@ -29,6 +32,7 @@ public class DisassociatePrincipalFromPortfolioResponse {
      */
     
     public Object invalidParametersException;
+
     public DisassociatePrincipalFromPortfolioResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -36,6 +40,7 @@ public class DisassociatePrincipalFromPortfolioResponse {
     
     
     public Integer statusCode;
+
     public DisassociatePrincipalFromPortfolioResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DisassociatePrincipalFromPortfolioResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociatePrincipalFromPortfolioResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DisassociatePrincipalFromPortfolioResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociatePrincipalFromPortfolioResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DisassociatePrincipalFromPortfolioResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

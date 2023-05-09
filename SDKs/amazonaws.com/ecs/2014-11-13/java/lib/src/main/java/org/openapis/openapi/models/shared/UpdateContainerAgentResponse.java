@@ -15,9 +15,11 @@ public class UpdateContainerAgentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerInstance")
     public ContainerInstance containerInstance;
+
     public UpdateContainerAgentResponse withContainerInstance(ContainerInstance containerInstance) {
         this.containerInstance = containerInstance;
         return this;
     }
     
+    public UpdateContainerAgentResponse(){}
 }

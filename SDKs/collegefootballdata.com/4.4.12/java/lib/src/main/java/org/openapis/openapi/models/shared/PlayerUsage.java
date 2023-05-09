@@ -12,6 +12,7 @@ public class PlayerUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference")
     public String conference;
+
     public PlayerUsage withConference(String conference) {
         this.conference = conference;
         return this;
@@ -20,6 +21,7 @@ public class PlayerUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PlayerUsage withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class PlayerUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlayerUsage withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class PlayerUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public String position;
+
     public PlayerUsage withPosition(String position) {
         this.position = position;
         return this;
@@ -44,6 +48,7 @@ public class PlayerUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("season")
     public Long season;
+
     public PlayerUsage withSeason(Long season) {
         this.season = season;
         return this;
@@ -52,6 +57,7 @@ public class PlayerUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public PlayerUsage withTeam(String team) {
         this.team = team;
         return this;
@@ -60,9 +66,11 @@ public class PlayerUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public PlayerUsageUsage usage;
+
     public PlayerUsage withUsage(PlayerUsageUsage usage) {
         this.usage = usage;
         return this;
     }
     
+    public PlayerUsage(){}
 }

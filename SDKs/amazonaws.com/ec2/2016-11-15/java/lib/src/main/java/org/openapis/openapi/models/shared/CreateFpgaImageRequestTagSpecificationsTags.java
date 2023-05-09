@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateFpgaImageRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateFpgaImageRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateFpgaImageRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateFpgaImageRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateFpgaImageRequestTagSpecificationsTags(){}
 }

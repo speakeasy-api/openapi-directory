@@ -18,6 +18,7 @@ public class Enum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("edition")
     public String edition;
+
     public Enum withEdition(String edition) {
         this.edition = edition;
         return this;
@@ -29,6 +30,7 @@ public class Enum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enumvalue")
     public EnumValue[] enumvalue;
+
     public Enum withEnumvalue(EnumValue[] enumvalue) {
         this.enumvalue = enumvalue;
         return this;
@@ -40,6 +42,7 @@ public class Enum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Enum withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Enum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Option[] options;
+
     public Enum withOptions(Option[] options) {
         this.options = options;
         return this;
@@ -62,6 +66,7 @@ public class Enum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceContext")
     public SourceContext sourceContext;
+
     public Enum withSourceContext(SourceContext sourceContext) {
         this.sourceContext = sourceContext;
         return this;
@@ -73,9 +78,11 @@ public class Enum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syntax")
     public EnumSyntaxEnum syntax;
+
     public Enum withSyntax(EnumSyntaxEnum syntax) {
         this.syntax = syntax;
         return this;
     }
     
+    public Enum(){}
 }

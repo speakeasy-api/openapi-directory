@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSubmissionCommentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AssignmentSubmissionCommentCreation assignmentSubmissionCommentCreation;
+
     public PostSubmissionCommentRequest withAssignmentSubmissionCommentCreation(org.openapis.openapi.models.shared.AssignmentSubmissionCommentCreation assignmentSubmissionCommentCreation) {
         this.assignmentSubmissionCommentCreation = assignmentSubmissionCommentCreation;
         return this;
@@ -19,6 +21,7 @@ public class PostSubmissionCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignment")
     public String assignment;
+
     public PostSubmissionCommentRequest withAssignment(String assignment) {
         this.assignment = assignment;
         return this;
@@ -29,6 +32,7 @@ public class PostSubmissionCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
     public String class_;
+
     public PostSubmissionCommentRequest withClass(String class_) {
         this.class_ = class_;
         return this;
@@ -39,9 +43,16 @@ public class PostSubmissionCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=submission")
     public String submission;
+
     public PostSubmissionCommentRequest withSubmission(String submission) {
         this.submission = submission;
         return this;
     }
     
+    public PostSubmissionCommentRequest(@JsonProperty("AssignmentSubmissionCommentCreation") org.openapis.openapi.models.shared.AssignmentSubmissionCommentCreation assignmentSubmissionCommentCreation, @JsonProperty("assignment") String assignment, @JsonProperty("class") String class_, @JsonProperty("submission") String submission) {
+        this.assignmentSubmissionCommentCreation = assignmentSubmissionCommentCreation;
+        this.assignment = assignment;
+        this.class_ = class_;
+        this.submission = submission;
+  }
 }

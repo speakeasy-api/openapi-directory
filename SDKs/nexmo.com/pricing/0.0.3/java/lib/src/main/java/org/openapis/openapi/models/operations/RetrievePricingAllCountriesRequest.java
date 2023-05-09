@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrievePricingAllCountriesRequest {
@@ -12,6 +13,7 @@ public class RetrievePricingAllCountriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public RetrievePricingAllCountriesRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class RetrievePricingAllCountriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_secret")
     public String apiSecret;
+
     public RetrievePricingAllCountriesRequest withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -32,9 +35,15 @@ public class RetrievePricingAllCountriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public String type;
+
     public RetrievePricingAllCountriesRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RetrievePricingAllCountriesRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("api_secret") String apiSecret, @JsonProperty("type") String type) {
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+        this.type = type;
+  }
 }

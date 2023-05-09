@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
@@ -12,6 +13,7 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,18 +35,9 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
-        return this;
-    }
-    
-    /**
-     * The banner context for completion suggestions.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=banner")
-    public String banner;
-    public RetailProjectsLocationsCatalogsCompleteQueryRequest withBanner(String banner) {
-        this.banner = banner;
         return this;
     }
     
@@ -52,6 +46,7 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +57,7 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=catalog")
     public String catalog;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withCatalog(String catalog) {
         this.catalog = catalog;
         return this;
@@ -72,6 +68,7 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dataset")
     public String dataset;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withDataset(String dataset) {
         this.dataset = dataset;
         return this;
@@ -82,8 +79,20 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceType")
     public String deviceType;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withDeviceType(String deviceType) {
         this.deviceType = deviceType;
+        return this;
+    }
+    
+    /**
+     * The entity for customers who run multiple entities, domains, sites, or regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this is set, it must be an exact match with UserEvent.entity to get per-entity autocomplete results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity")
+    public String entity;
+
+    public RetailProjectsLocationsCatalogsCompleteQueryRequest withEntity(String entity) {
+        this.entity = entity;
         return this;
     }
     
@@ -92,6 +101,7 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -102,6 +112,7 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withKey(String key) {
         this.key = key;
         return this;
@@ -112,6 +123,7 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=languageCodes")
     public String[] languageCodes;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withLanguageCodes(String[] languageCodes) {
         this.languageCodes = languageCodes;
         return this;
@@ -122,6 +134,7 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxSuggestions")
     public Long maxSuggestions;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withMaxSuggestions(Long maxSuggestions) {
         this.maxSuggestions = maxSuggestions;
         return this;
@@ -132,6 +145,7 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -142,6 +156,7 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -152,6 +167,7 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -162,6 +178,7 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -172,6 +189,7 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -182,6 +200,7 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -192,9 +211,13 @@ public class RetailProjectsLocationsCatalogsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=visitorId")
     public String visitorId;
+
     public RetailProjectsLocationsCatalogsCompleteQueryRequest withVisitorId(String visitorId) {
         this.visitorId = visitorId;
         return this;
     }
     
+    public RetailProjectsLocationsCatalogsCompleteQueryRequest(@JsonProperty("catalog") String catalog) {
+        this.catalog = catalog;
+  }
 }

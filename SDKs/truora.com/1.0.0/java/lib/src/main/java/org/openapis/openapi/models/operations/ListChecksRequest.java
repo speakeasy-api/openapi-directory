@@ -12,6 +12,7 @@ public class ListChecksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_id")
     public String reportId;
+
     public ListChecksRequest withReportId(String reportId) {
         this.reportId = reportId;
         return this;
@@ -22,9 +23,11 @@ public class ListChecksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_key")
     public String startKey;
+
     public ListChecksRequest withStartKey(String startKey) {
         this.startKey = startKey;
         return this;
     }
     
+    public ListChecksRequest(){}
 }

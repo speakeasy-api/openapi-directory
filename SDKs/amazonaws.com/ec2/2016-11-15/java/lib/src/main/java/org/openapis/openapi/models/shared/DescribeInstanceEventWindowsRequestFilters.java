@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceEventWindowsRequestFilters {
     
     public String name;
+
     public DescribeInstanceEventWindowsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstanceEventWindowsRequestFilters {
     
     
     public String[] values;
+
     public DescribeInstanceEventWindowsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeInstanceEventWindowsRequestFilters(){}
 }

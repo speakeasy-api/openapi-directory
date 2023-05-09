@@ -15,6 +15,7 @@ public class PermissionsBoundary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerManagedPolicyReference")
     public CustomerManagedPolicyReference customerManagedPolicyReference;
+
     public PermissionsBoundary withCustomerManagedPolicyReference(CustomerManagedPolicyReference customerManagedPolicyReference) {
         this.customerManagedPolicyReference = customerManagedPolicyReference;
         return this;
@@ -23,9 +24,11 @@ public class PermissionsBoundary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManagedPolicyArn")
     public String managedPolicyArn;
+
     public PermissionsBoundary withManagedPolicyArn(String managedPolicyArn) {
         this.managedPolicyArn = managedPolicyArn;
         return this;
     }
     
+    public PermissionsBoundary(){}
 }

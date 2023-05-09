@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListReferencesResponse {
@@ -12,6 +13,7 @@ public class ListReferencesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListReferencesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListReferencesResponse {
     
     
     public String contentType;
+
     public ListReferencesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListReferencesResponse {
      */
     
     public Object internalServerException;
+
     public ListReferencesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListReferencesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListReferencesResponse listReferencesResponse;
+
     public ListReferencesResponse withListReferencesResponse(org.openapis.openapi.models.shared.ListReferencesResponse listReferencesResponse) {
         this.listReferencesResponse = listReferencesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListReferencesResponse {
      */
     
     public Object requestTimeoutException;
+
     public ListReferencesResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -59,6 +65,7 @@ public class ListReferencesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListReferencesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListReferencesResponse {
     
     
     public Integer statusCode;
+
     public ListReferencesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListReferencesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListReferencesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListReferencesResponse {
      */
     
     public Object throttlingException;
+
     public ListReferencesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListReferencesResponse {
      */
     
     public Object validationException;
+
     public ListReferencesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListReferencesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

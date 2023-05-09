@@ -18,6 +18,7 @@ public class DeleteAssignedTargetingOptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignedTargetingOptionIds")
     public String[] assignedTargetingOptionIds;
+
     public DeleteAssignedTargetingOptionsRequest withAssignedTargetingOptionIds(String[] assignedTargetingOptionIds) {
         this.assignedTargetingOptionIds = assignedTargetingOptionIds;
         return this;
@@ -29,9 +30,11 @@ public class DeleteAssignedTargetingOptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingType")
     public DeleteAssignedTargetingOptionsRequestTargetingTypeEnum targetingType;
+
     public DeleteAssignedTargetingOptionsRequest withTargetingType(DeleteAssignedTargetingOptionsRequestTargetingTypeEnum targetingType) {
         this.targetingType = targetingType;
         return this;
     }
     
+    public DeleteAssignedTargetingOptionsRequest(){}
 }

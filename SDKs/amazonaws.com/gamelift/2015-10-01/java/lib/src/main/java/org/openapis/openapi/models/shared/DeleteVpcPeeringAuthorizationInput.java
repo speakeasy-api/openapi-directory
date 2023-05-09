@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteVpcPeeringAuthorizationInput {
     @JsonProperty("GameLiftAwsAccountId")
     public String gameLiftAwsAccountId;
+
     public DeleteVpcPeeringAuthorizationInput withGameLiftAwsAccountId(String gameLiftAwsAccountId) {
         this.gameLiftAwsAccountId = gameLiftAwsAccountId;
         return this;
@@ -16,9 +17,14 @@ public class DeleteVpcPeeringAuthorizationInput {
     
     @JsonProperty("PeerVpcId")
     public String peerVpcId;
+
     public DeleteVpcPeeringAuthorizationInput withPeerVpcId(String peerVpcId) {
         this.peerVpcId = peerVpcId;
         return this;
     }
     
+    public DeleteVpcPeeringAuthorizationInput(@JsonProperty("GameLiftAwsAccountId") String gameLiftAwsAccountId, @JsonProperty("PeerVpcId") String peerVpcId) {
+        this.gameLiftAwsAccountId = gameLiftAwsAccountId;
+        this.peerVpcId = peerVpcId;
+  }
 }

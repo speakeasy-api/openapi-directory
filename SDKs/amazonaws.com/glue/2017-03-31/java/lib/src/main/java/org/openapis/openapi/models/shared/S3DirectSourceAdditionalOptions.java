@@ -15,6 +15,7 @@ public class S3DirectSourceAdditionalOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundedFiles")
     public Long boundedFiles;
+
     public S3DirectSourceAdditionalOptions withBoundedFiles(Long boundedFiles) {
         this.boundedFiles = boundedFiles;
         return this;
@@ -23,6 +24,7 @@ public class S3DirectSourceAdditionalOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundedSize")
     public Long boundedSize;
+
     public S3DirectSourceAdditionalOptions withBoundedSize(Long boundedSize) {
         this.boundedSize = boundedSize;
         return this;
@@ -31,6 +33,7 @@ public class S3DirectSourceAdditionalOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableSamplePath")
     public Boolean enableSamplePath;
+
     public S3DirectSourceAdditionalOptions withEnableSamplePath(Boolean enableSamplePath) {
         this.enableSamplePath = enableSamplePath;
         return this;
@@ -39,9 +42,11 @@ public class S3DirectSourceAdditionalOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SamplePath")
     public String samplePath;
+
     public S3DirectSourceAdditionalOptions withSamplePath(String samplePath) {
         this.samplePath = samplePath;
         return this;
     }
     
+    public S3DirectSourceAdditionalOptions(){}
 }

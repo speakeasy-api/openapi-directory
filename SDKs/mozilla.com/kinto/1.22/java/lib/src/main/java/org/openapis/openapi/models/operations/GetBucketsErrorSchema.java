@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBucketsErrorSchema {
     @JsonProperty("code")
     public Long code;
+
     public GetBucketsErrorSchema withCode(Long code) {
         this.code = code;
         return this;
@@ -22,6 +23,7 @@ public class GetBucketsErrorSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public Object details;
+
     public GetBucketsErrorSchema withDetails(Object details) {
         this.details = details;
         return this;
@@ -29,6 +31,7 @@ public class GetBucketsErrorSchema {
     
     @JsonProperty("errno")
     public Long errno;
+
     public GetBucketsErrorSchema withErrno(Long errno) {
         this.errno = errno;
         return this;
@@ -36,6 +39,7 @@ public class GetBucketsErrorSchema {
     
     @JsonProperty("error")
     public String error;
+
     public GetBucketsErrorSchema withError(String error) {
         this.error = error;
         return this;
@@ -44,6 +48,7 @@ public class GetBucketsErrorSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public String info;
+
     public GetBucketsErrorSchema withInfo(String info) {
         this.info = info;
         return this;
@@ -52,9 +57,15 @@ public class GetBucketsErrorSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetBucketsErrorSchema withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetBucketsErrorSchema(@JsonProperty("code") Long code, @JsonProperty("errno") Long errno, @JsonProperty("error") String error) {
+        this.code = code;
+        this.errno = errno;
+        this.error = error;
+  }
 }

@@ -15,6 +15,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arguments")
     public java.util.Map<String, String> arguments;
+
     public Action withArguments(java.util.Map<String, String> arguments) {
         this.arguments = arguments;
         return this;
@@ -23,6 +24,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlerName")
     public String crawlerName;
+
     public Action withCrawlerName(String crawlerName) {
         this.crawlerName = crawlerName;
         return this;
@@ -31,6 +33,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public Action withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -39,6 +42,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationProperty")
     public NotificationProperty notificationProperty;
+
     public Action withNotificationProperty(NotificationProperty notificationProperty) {
         this.notificationProperty = notificationProperty;
         return this;
@@ -47,6 +51,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfiguration")
     public String securityConfiguration;
+
     public Action withSecurityConfiguration(String securityConfiguration) {
         this.securityConfiguration = securityConfiguration;
         return this;
@@ -55,9 +60,11 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeout")
     public Long timeout;
+
     public Action withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public Action(){}
 }

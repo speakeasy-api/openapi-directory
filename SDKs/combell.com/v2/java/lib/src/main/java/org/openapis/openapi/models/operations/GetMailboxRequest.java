@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMailboxRequest {
@@ -12,6 +13,7 @@ public class GetMailboxRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mailboxName")
     public String mailboxNamePathParameter;
+
     public GetMailboxRequest withMailboxNamePathParameter(String mailboxNamePathParameter) {
         this.mailboxNamePathParameter = mailboxNamePathParameter;
         return this;
@@ -22,9 +24,14 @@ public class GetMailboxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mailbox_name")
     public String mailboxNameQueryParameter;
+
     public GetMailboxRequest withMailboxNameQueryParameter(String mailboxNameQueryParameter) {
         this.mailboxNameQueryParameter = mailboxNameQueryParameter;
         return this;
     }
     
+    public GetMailboxRequest(@JsonProperty("mailboxNamePathParameter") String mailboxNamePathParameter, @JsonProperty("mailbox_nameQueryParameter") String mailboxNameQueryParameter) {
+        this.mailboxNamePathParameter = mailboxNamePathParameter;
+        this.mailboxNameQueryParameter = mailboxNameQueryParameter;
+  }
 }

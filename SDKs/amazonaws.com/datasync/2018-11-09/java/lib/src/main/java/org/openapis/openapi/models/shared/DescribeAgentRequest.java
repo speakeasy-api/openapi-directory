@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAgentRequest {
     @JsonProperty("AgentArn")
     public String agentArn;
+
     public DescribeAgentRequest withAgentArn(String agentArn) {
         this.agentArn = agentArn;
         return this;
     }
     
+    public DescribeAgentRequest(@JsonProperty("AgentArn") String agentArn) {
+        this.agentArn = agentArn;
+  }
 }

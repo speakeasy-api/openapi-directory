@@ -12,6 +12,7 @@ public class ListDataIngestionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetName")
     public String datasetName;
+
     public ListDataIngestionJobsRequest withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -20,6 +21,7 @@ public class ListDataIngestionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDataIngestionJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListDataIngestionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDataIngestionJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class ListDataIngestionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public IngestionJobStatusEnum status;
+
     public ListDataIngestionJobsRequest withStatus(IngestionJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListDataIngestionJobsRequest(){}
 }

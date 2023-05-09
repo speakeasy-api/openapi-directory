@@ -18,6 +18,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access")
     public Access access;
+
     public Finding withAccess(Access access) {
         this.access = access;
         return this;
@@ -29,6 +30,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canonicalName")
     public String canonicalName;
+
     public Finding withCanonicalName(String canonicalName) {
         this.canonicalName = canonicalName;
         return this;
@@ -40,6 +42,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public Finding withCategory(String category) {
         this.category = category;
         return this;
@@ -51,6 +54,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudDlpDataProfile")
     public CloudDlpDataProfile cloudDlpDataProfile;
+
     public Finding withCloudDlpDataProfile(CloudDlpDataProfile cloudDlpDataProfile) {
         this.cloudDlpDataProfile = cloudDlpDataProfile;
         return this;
@@ -62,6 +66,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudDlpInspection")
     public CloudDlpInspection cloudDlpInspection;
+
     public Finding withCloudDlpInspection(CloudDlpInspection cloudDlpInspection) {
         this.cloudDlpInspection = cloudDlpInspection;
         return this;
@@ -73,6 +78,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compliances")
     public Compliance[] compliances;
+
     public Finding withCompliances(Compliance[] compliances) {
         this.compliances = compliances;
         return this;
@@ -84,6 +90,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connections")
     public Connection[] connections;
+
     public Finding withConnections(Connection[] connections) {
         this.connections = connections;
         return this;
@@ -95,17 +102,19 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     public java.util.Map<String, ContactDetails> contacts;
+
     public Finding withContacts(java.util.Map<String, ContactDetails> contacts) {
         this.contacts = contacts;
         return this;
     }
     
     /**
-     * Containers associated with the finding. containers provides information for both Kubernetes and non-Kubernetes containers.
+     * Containers associated with the finding. This field provides information for both Kubernetes and non-Kubernetes containers.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public Container[] containers;
+
     public Finding withContainers(Container[] containers) {
         this.containers = containers;
         return this;
@@ -117,28 +126,31 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Finding withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
     }
     
     /**
-     * Represents database access information, such as queries. A database may be a sub-resource of an instance (as in the case of CloudSQL instances or Cloud Spanner instances), or the database instance itself. Some database resources may not have the full resource name populated because these resource types are not yet supported by Cloud Asset Inventory (e.g. CloudSQL databases). In these cases only the display name will be provided.
+     * Represents database access information, such as queries. A database may be a sub-resource of an instance (as in the case of Cloud SQL instances or Cloud Spanner instances), or the database instance itself. Some database resources might not have the [full resource name](https://google.aip.dev/122#full-resource-names) populated because these resource types, such as Cloud SQL databases, are not yet supported by Cloud Asset Inventory. In these cases only the display name is provided. Some database resources may not have the [full resource name](https://google.aip.dev/122#full-resource-names) populated because these resource types are not yet supported by Cloud Asset Inventory (e.g. Cloud SQL databases). In these cases only the display name will be provided.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("database")
     public Database database;
+
     public Finding withDatabase(Database database) {
         this.database = database;
         return this;
     }
     
     /**
-     * Contains more detail about the finding.
+     * Contains more details about the finding.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Finding withDescription(String description) {
         this.description = description;
         return this;
@@ -150,17 +162,19 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTime")
     public String eventTime;
+
     public Finding withEventTime(String eventTime) {
         this.eventTime = eventTime;
         return this;
     }
     
     /**
-     * Exfiltration represents a data exfiltration attempt of one or more sources to one or more targets. Sources represent the source of data that is exfiltrated, and Targets represents the destination the data was copied to.
+     * Exfiltration represents a data exfiltration attempt from one or more sources to one or more targets. The `sources` attribute lists the sources of the exfiltrated data. The `targets` attribute lists the destinations the data was copied to.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exfiltration")
     public Exfiltration exfiltration;
+
     public Finding withExfiltration(Exfiltration exfiltration) {
         this.exfiltration = exfiltration;
         return this;
@@ -172,6 +186,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalSystems")
     public java.util.Map<String, GoogleCloudSecuritycenterV1ExternalSystem> externalSystems;
+
     public Finding withExternalSystems(java.util.Map<String, GoogleCloudSecuritycenterV1ExternalSystem> externalSystems) {
         this.externalSystems = externalSystems;
         return this;
@@ -183,6 +198,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalUri")
     public String externalUri;
+
     public Finding withExternalUri(String externalUri) {
         this.externalUri = externalUri;
         return this;
@@ -194,6 +210,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public File[] files;
+
     public Finding withFiles(File[] files) {
         this.files = files;
         return this;
@@ -205,17 +222,19 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingClass")
     public FindingFindingClassEnum findingClass;
+
     public Finding withFindingClass(FindingFindingClassEnum findingClass) {
         this.findingClass = findingClass;
         return this;
     }
     
     /**
-     * Represents IAM bindings associated with the Finding.
+     * Represents IAM bindings associated with the finding.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamBindings")
     public IamBinding[] iamBindings;
+
     public Finding withIamBindings(IamBinding[] iamBindings) {
         this.iamBindings = iamBindings;
         return this;
@@ -227,6 +246,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indicator")
     public Indicator indicator;
+
     public Finding withIndicator(Indicator indicator) {
         this.indicator = indicator;
         return this;
@@ -238,6 +258,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kernelRootkit")
     public KernelRootkit kernelRootkit;
+
     public Finding withKernelRootkit(KernelRootkit kernelRootkit) {
         this.kernelRootkit = kernelRootkit;
         return this;
@@ -249,6 +270,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kubernetes")
     public Kubernetes kubernetes;
+
     public Finding withKubernetes(Kubernetes kubernetes) {
         this.kubernetes = kubernetes;
         return this;
@@ -260,6 +282,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mitreAttack")
     public MitreAttack mitreAttack;
+
     public Finding withMitreAttack(MitreAttack mitreAttack) {
         this.mitreAttack = mitreAttack;
         return this;
@@ -271,6 +294,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moduleName")
     public String moduleName;
+
     public Finding withModuleName(String moduleName) {
         this.moduleName = moduleName;
         return this;
@@ -282,17 +306,19 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mute")
     public FindingMuteEnum mute;
+
     public Finding withMute(FindingMuteEnum mute) {
         this.mute = mute;
         return this;
     }
     
     /**
-     * First known as mute_annotation. Records additional information about the mute operation e.g. mute config that muted the finding, user who muted the finding, etc. Unlike other attributes of a finding, a finding provider shouldn't set the value of mute.
+     * Records additional information about the mute operation, for example, the [mute configuration](/security-command-center/docs/how-to-mute-findings) that muted the finding and the user who muted the finding.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("muteInitiator")
     public String muteInitiator;
+
     public Finding withMuteInitiator(String muteInitiator) {
         this.muteInitiator = muteInitiator;
         return this;
@@ -304,41 +330,33 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("muteUpdateTime")
     public String muteUpdateTime;
+
     public Finding withMuteUpdateTime(String muteUpdateTime) {
         this.muteUpdateTime = muteUpdateTime;
         return this;
     }
     
     /**
-     * The relative resource name of this finding. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+     * The [relative resource name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding. Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}", "folders/{folder_id}/sources/{source_id}/findings/{finding_id}", "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Finding withName(String name) {
         this.name = name;
         return this;
     }
     
     /**
-     * Next steps associate to the finding.
+     * Steps to address the finding.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextSteps")
     public String nextSteps;
+
     public Finding withNextSteps(String nextSteps) {
         this.nextSteps = nextSteps;
-        return this;
-    }
-    
-    /**
-     * Contains information about the org policy constraints associated with the finding.
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("orgPolicyConstraints")
-    public OrgPolicyConstraint[] orgPolicyConstraints;
-    public Finding withOrgPolicyConstraints(OrgPolicyConstraint[] orgPolicyConstraints) {
-        this.orgPolicyConstraints = orgPolicyConstraints;
         return this;
     }
     
@@ -348,6 +366,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public Finding withParent(String parent) {
         this.parent = parent;
         return this;
@@ -359,6 +378,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentDisplayName")
     public String parentDisplayName;
+
     public Finding withParentDisplayName(String parentDisplayName) {
         this.parentDisplayName = parentDisplayName;
         return this;
@@ -370,6 +390,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processes")
     public Process[] processes;
+
     public Finding withProcesses(Process[] processes) {
         this.processes = processes;
         return this;
@@ -381,6 +402,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public Finding withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -392,6 +414,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityMarks")
     public SecurityMarks securityMarks;
+
     public Finding withSecurityMarks(SecurityMarks securityMarks) {
         this.securityMarks = securityMarks;
         return this;
@@ -403,6 +426,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public FindingSeverityEnum severity;
+
     public Finding withSeverity(FindingSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -414,6 +438,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceProperties")
     public java.util.Map<String, Object> sourceProperties;
+
     public Finding withSourceProperties(java.util.Map<String, Object> sourceProperties) {
         this.sourceProperties = sourceProperties;
         return this;
@@ -425,6 +450,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public FindingStateEnum state;
+
     public Finding withState(FindingStateEnum state) {
         this.state = state;
         return this;
@@ -436,9 +462,11 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vulnerability")
     public Vulnerability vulnerability;
+
     public Finding withVulnerability(Vulnerability vulnerability) {
         this.vulnerability = vulnerability;
         return this;
     }
     
+    public Finding(){}
 }

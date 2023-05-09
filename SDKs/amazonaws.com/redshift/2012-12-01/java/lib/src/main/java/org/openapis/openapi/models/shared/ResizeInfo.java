@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ResizeInfo {
     
     public Boolean allowCancelResize;
+
     public ResizeInfo withAllowCancelResize(Boolean allowCancelResize) {
         this.allowCancelResize = allowCancelResize;
         return this;
@@ -19,9 +20,11 @@ public class ResizeInfo {
     
     
     public String resizeType;
+
     public ResizeInfo withResizeType(String resizeType) {
         this.resizeType = resizeType;
         return this;
     }
     
+    public ResizeInfo(){}
 }

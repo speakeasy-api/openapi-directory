@@ -18,6 +18,7 @@ public class LicenseVideoResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allotment_charge")
     public Long allotmentCharge;
+
     public LicenseVideoResult withAllotmentCharge(Long allotmentCharge) {
         this.allotmentCharge = allotmentCharge;
         return this;
@@ -29,6 +30,7 @@ public class LicenseVideoResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download")
     public Url download;
+
     public LicenseVideoResult withDownload(Url download) {
         this.download = download;
         return this;
@@ -40,6 +42,7 @@ public class LicenseVideoResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public LicenseVideoResult withError(String error) {
         this.error = error;
         return this;
@@ -51,6 +54,7 @@ public class LicenseVideoResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license_id")
     public String licenseId;
+
     public LicenseVideoResult withLicenseId(String licenseId) {
         this.licenseId = licenseId;
         return this;
@@ -62,6 +66,7 @@ public class LicenseVideoResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Price price;
+
     public LicenseVideoResult withPrice(Price price) {
         this.price = price;
         return this;
@@ -72,9 +77,13 @@ public class LicenseVideoResult {
      */
     @JsonProperty("video_id")
     public String videoId;
+
     public LicenseVideoResult withVideoId(String videoId) {
         this.videoId = videoId;
         return this;
     }
     
+    public LicenseVideoResult(@JsonProperty("video_id") String videoId) {
+        this.videoId = videoId;
+  }
 }

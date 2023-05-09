@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Finding {
     @JsonProperty("awsAccountId")
     public String awsAccountId;
+
     public Finding withAwsAccountId(String awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -26,6 +27,7 @@ public class Finding {
     
     @JsonProperty("description")
     public String description;
+
     public Finding withDescription(String description) {
         this.description = description;
         return this;
@@ -34,6 +36,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exploitAvailable")
     public ExploitAvailableEnum exploitAvailable;
+
     public Finding withExploitAvailable(ExploitAvailableEnum exploitAvailable) {
         this.exploitAvailable = exploitAvailable;
         return this;
@@ -42,6 +45,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exploitabilityDetails")
     public ExploitabilityDetails exploitabilityDetails;
+
     public Finding withExploitabilityDetails(ExploitabilityDetails exploitabilityDetails) {
         this.exploitabilityDetails = exploitabilityDetails;
         return this;
@@ -49,6 +53,7 @@ public class Finding {
     
     @JsonProperty("findingArn")
     public String findingArn;
+
     public Finding withFindingArn(String findingArn) {
         this.findingArn = findingArn;
         return this;
@@ -58,6 +63,7 @@ public class Finding {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstObservedAt")
     public OffsetDateTime firstObservedAt;
+
     public Finding withFirstObservedAt(OffsetDateTime firstObservedAt) {
         this.firstObservedAt = firstObservedAt;
         return this;
@@ -66,6 +72,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixAvailable")
     public FixAvailableEnum fixAvailable;
+
     public Finding withFixAvailable(FixAvailableEnum fixAvailable) {
         this.fixAvailable = fixAvailable;
         return this;
@@ -74,6 +81,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inspectorScore")
     public Double inspectorScore;
+
     public Finding withInspectorScore(Double inspectorScore) {
         this.inspectorScore = inspectorScore;
         return this;
@@ -82,6 +90,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inspectorScoreDetails")
     public InspectorScoreDetails inspectorScoreDetails;
+
     public Finding withInspectorScoreDetails(InspectorScoreDetails inspectorScoreDetails) {
         this.inspectorScoreDetails = inspectorScoreDetails;
         return this;
@@ -91,6 +100,7 @@ public class Finding {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastObservedAt")
     public OffsetDateTime lastObservedAt;
+
     public Finding withLastObservedAt(OffsetDateTime lastObservedAt) {
         this.lastObservedAt = lastObservedAt;
         return this;
@@ -99,6 +109,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkReachabilityDetails")
     public NetworkReachabilityDetails networkReachabilityDetails;
+
     public Finding withNetworkReachabilityDetails(NetworkReachabilityDetails networkReachabilityDetails) {
         this.networkReachabilityDetails = networkReachabilityDetails;
         return this;
@@ -107,6 +118,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageVulnerabilityDetails")
     public PackageVulnerabilityDetails packageVulnerabilityDetails;
+
     public Finding withPackageVulnerabilityDetails(PackageVulnerabilityDetails packageVulnerabilityDetails) {
         this.packageVulnerabilityDetails = packageVulnerabilityDetails;
         return this;
@@ -114,6 +126,7 @@ public class Finding {
     
     @JsonProperty("remediation")
     public Remediation remediation;
+
     public Finding withRemediation(Remediation remediation) {
         this.remediation = remediation;
         return this;
@@ -121,6 +134,7 @@ public class Finding {
     
     @JsonProperty("resources")
     public Resource[] resources;
+
     public Finding withResources(Resource[] resources) {
         this.resources = resources;
         return this;
@@ -128,6 +142,7 @@ public class Finding {
     
     @JsonProperty("severity")
     public SeverityEnum severity;
+
     public Finding withSeverity(SeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -135,6 +150,7 @@ public class Finding {
     
     @JsonProperty("status")
     public FindingStatusEnum status;
+
     public Finding withStatus(FindingStatusEnum status) {
         this.status = status;
         return this;
@@ -143,6 +159,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Finding withTitle(String title) {
         this.title = title;
         return this;
@@ -150,6 +167,7 @@ public class Finding {
     
     @JsonProperty("type")
     public FindingTypeEnum type;
+
     public Finding withType(FindingTypeEnum type) {
         this.type = type;
         return this;
@@ -160,9 +178,22 @@ public class Finding {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public Finding withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Finding(@JsonProperty("awsAccountId") String awsAccountId, @JsonProperty("description") String description, @JsonProperty("findingArn") String findingArn, @JsonProperty("firstObservedAt") OffsetDateTime firstObservedAt, @JsonProperty("lastObservedAt") OffsetDateTime lastObservedAt, @JsonProperty("remediation") Remediation remediation, @JsonProperty("resources") Resource[] resources, @JsonProperty("severity") SeverityEnum severity, @JsonProperty("status") FindingStatusEnum status, @JsonProperty("type") FindingTypeEnum type) {
+        this.awsAccountId = awsAccountId;
+        this.description = description;
+        this.findingArn = findingArn;
+        this.firstObservedAt = firstObservedAt;
+        this.lastObservedAt = lastObservedAt;
+        this.remediation = remediation;
+        this.resources = resources;
+        this.severity = severity;
+        this.status = status;
+        this.type = type;
+  }
 }

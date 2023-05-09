@@ -15,6 +15,7 @@ public class GetInstancesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public Instance[] instances;
+
     public GetInstancesResult withInstances(Instance[] instances) {
         this.instances = instances;
         return this;
@@ -23,9 +24,11 @@ public class GetInstancesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetInstancesResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetInstancesResult(){}
 }

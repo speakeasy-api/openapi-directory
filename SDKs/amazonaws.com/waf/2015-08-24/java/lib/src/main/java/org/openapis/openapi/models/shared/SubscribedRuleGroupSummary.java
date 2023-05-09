@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubscribedRuleGroupSummary {
     @JsonProperty("MetricName")
     public String metricName;
+
     public SubscribedRuleGroupSummary withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -19,6 +20,7 @@ public class SubscribedRuleGroupSummary {
     
     @JsonProperty("Name")
     public String name;
+
     public SubscribedRuleGroupSummary withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class SubscribedRuleGroupSummary {
     
     @JsonProperty("RuleGroupId")
     public String ruleGroupId;
+
     public SubscribedRuleGroupSummary withRuleGroupId(String ruleGroupId) {
         this.ruleGroupId = ruleGroupId;
         return this;
     }
     
+    public SubscribedRuleGroupSummary(@JsonProperty("MetricName") String metricName, @JsonProperty("Name") String name, @JsonProperty("RuleGroupId") String ruleGroupId) {
+        this.metricName = metricName;
+        this.name = name;
+        this.ruleGroupId = ruleGroupId;
+  }
 }

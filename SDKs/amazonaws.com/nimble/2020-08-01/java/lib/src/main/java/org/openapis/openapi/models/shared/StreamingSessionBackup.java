@@ -20,6 +20,7 @@ public class StreamingSessionBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public StreamingSessionBackup withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class StreamingSessionBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupId")
     public String backupId;
+
     public StreamingSessionBackup withBackupId(String backupId) {
         this.backupId = backupId;
         return this;
@@ -38,6 +40,7 @@ public class StreamingSessionBackup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public StreamingSessionBackup withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class StreamingSessionBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchProfileId")
     public String launchProfileId;
+
     public StreamingSessionBackup withLaunchProfileId(String launchProfileId) {
         this.launchProfileId = launchProfileId;
         return this;
@@ -54,6 +58,7 @@ public class StreamingSessionBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownedBy")
     public String ownedBy;
+
     public StreamingSessionBackup withOwnedBy(String ownedBy) {
         this.ownedBy = ownedBy;
         return this;
@@ -62,6 +67,7 @@ public class StreamingSessionBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionId")
     public String sessionId;
+
     public StreamingSessionBackup withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -73,6 +79,7 @@ public class StreamingSessionBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public StreamingSessionStateEnum state;
+
     public StreamingSessionBackup withState(StreamingSessionStateEnum state) {
         this.state = state;
         return this;
@@ -81,6 +88,7 @@ public class StreamingSessionBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public StreamingSessionStatusCodeEnum statusCode;
+
     public StreamingSessionBackup withStatusCode(StreamingSessionStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -89,6 +97,7 @@ public class StreamingSessionBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public StreamingSessionBackup withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -97,9 +106,11 @@ public class StreamingSessionBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StreamingSessionBackup withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StreamingSessionBackup(){}
 }

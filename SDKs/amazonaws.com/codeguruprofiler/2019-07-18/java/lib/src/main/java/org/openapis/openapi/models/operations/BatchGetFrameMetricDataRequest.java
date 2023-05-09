@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchGetFrameMetricDataRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public BatchGetFrameMetricDataRequestBody requestBody;
+
     public BatchGetFrameMetricDataRequest withRequestBody(BatchGetFrameMetricDataRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -17,6 +19,7 @@ public class BatchGetFrameMetricDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public BatchGetFrameMetricDataRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -24,6 +27,7 @@ public class BatchGetFrameMetricDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public BatchGetFrameMetricDataRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -31,6 +35,7 @@ public class BatchGetFrameMetricDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public BatchGetFrameMetricDataRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -38,6 +43,7 @@ public class BatchGetFrameMetricDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public BatchGetFrameMetricDataRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -45,6 +51,7 @@ public class BatchGetFrameMetricDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public BatchGetFrameMetricDataRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -52,6 +59,7 @@ public class BatchGetFrameMetricDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public BatchGetFrameMetricDataRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -59,6 +67,7 @@ public class BatchGetFrameMetricDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public BatchGetFrameMetricDataRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -69,6 +78,7 @@ public class BatchGetFrameMetricDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
     public OffsetDateTime endTime;
+
     public BatchGetFrameMetricDataRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -79,6 +89,7 @@ public class BatchGetFrameMetricDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
     public String period;
+
     public BatchGetFrameMetricDataRequest withPeriod(String period) {
         this.period = period;
         return this;
@@ -89,6 +100,7 @@ public class BatchGetFrameMetricDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profilingGroupName")
     public String profilingGroupName;
+
     public BatchGetFrameMetricDataRequest withProfilingGroupName(String profilingGroupName) {
         this.profilingGroupName = profilingGroupName;
         return this;
@@ -99,6 +111,7 @@ public class BatchGetFrameMetricDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
     public OffsetDateTime startTime;
+
     public BatchGetFrameMetricDataRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -109,9 +122,14 @@ public class BatchGetFrameMetricDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=targetResolution")
     public BatchGetFrameMetricDataTargetResolutionEnum targetResolution;
+
     public BatchGetFrameMetricDataRequest withTargetResolution(BatchGetFrameMetricDataTargetResolutionEnum targetResolution) {
         this.targetResolution = targetResolution;
         return this;
     }
     
+    public BatchGetFrameMetricDataRequest(@JsonProperty("RequestBody") BatchGetFrameMetricDataRequestBody requestBody, @JsonProperty("profilingGroupName") String profilingGroupName) {
+        this.requestBody = requestBody;
+        this.profilingGroupName = profilingGroupName;
+  }
 }

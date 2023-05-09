@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrdersRequest {
@@ -12,6 +13,7 @@ public class GetOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate")
     public String fromDate;
+
     public GetOrdersRequest withFromDate(String fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -22,6 +24,7 @@ public class GetOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=hydrate")
     public org.openapis.openapi.models.shared.HydrateParamEnum[] hydrate;
+
     public GetOrdersRequest withHydrate(org.openapis.openapi.models.shared.HydrateParamEnum[] hydrate) {
         this.hydrate = hydrate;
         return this;
@@ -32,6 +35,7 @@ public class GetOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetOrdersRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -42,6 +46,7 @@ public class GetOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=merchantIds")
     public Long[] merchantIds;
+
     public GetOrdersRequest withMerchantIds(Long[] merchantIds) {
         this.merchantIds = merchantIds;
         return this;
@@ -52,6 +57,7 @@ public class GetOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetOrdersRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -62,6 +68,7 @@ public class GetOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate")
     public String toDate;
+
     public GetOrdersRequest withToDate(String toDate) {
         this.toDate = toDate;
         return this;
@@ -72,9 +79,14 @@ public class GetOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=warehouseIds")
     public Long[] warehouseIds;
+
     public GetOrdersRequest withWarehouseIds(Long[] warehouseIds) {
         this.warehouseIds = warehouseIds;
         return this;
     }
     
+    public GetOrdersRequest(@JsonProperty("fromDate") String fromDate, @JsonProperty("toDate") String toDate) {
+        this.fromDate = fromDate;
+        this.toDate = toDate;
+  }
 }

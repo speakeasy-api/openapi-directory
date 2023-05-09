@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutPortfolioPreferencesResponse {
@@ -12,6 +13,7 @@ public class PutPortfolioPreferencesResponse {
      */
     
     public Object accessDeniedException;
+
     public PutPortfolioPreferencesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutPortfolioPreferencesResponse {
      */
     
     public Object conflictException;
+
     public PutPortfolioPreferencesResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class PutPortfolioPreferencesResponse {
     
     
     public String contentType;
+
     public PutPortfolioPreferencesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutPortfolioPreferencesResponse {
      */
     
     public Object internalServerException;
+
     public PutPortfolioPreferencesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PutPortfolioPreferencesResponse {
      */
     
     public java.util.Map<String, Object> putPortfolioPreferencesResponse;
+
     public PutPortfolioPreferencesResponse withPutPortfolioPreferencesResponse(java.util.Map<String, Object> putPortfolioPreferencesResponse) {
         this.putPortfolioPreferencesResponse = putPortfolioPreferencesResponse;
         return this;
@@ -56,6 +62,7 @@ public class PutPortfolioPreferencesResponse {
     
     
     public Integer statusCode;
+
     public PutPortfolioPreferencesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutPortfolioPreferencesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutPortfolioPreferencesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class PutPortfolioPreferencesResponse {
      */
     
     public Object throttlingException;
+
     public PutPortfolioPreferencesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class PutPortfolioPreferencesResponse {
      */
     
     public Object validationException;
+
     public PutPortfolioPreferencesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutPortfolioPreferencesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteEdgeDeploymentPlanRequest {
     @JsonProperty("EdgeDeploymentPlanName")
     public String edgeDeploymentPlanName;
+
     public DeleteEdgeDeploymentPlanRequest withEdgeDeploymentPlanName(String edgeDeploymentPlanName) {
         this.edgeDeploymentPlanName = edgeDeploymentPlanName;
         return this;
     }
     
+    public DeleteEdgeDeploymentPlanRequest(@JsonProperty("EdgeDeploymentPlanName") String edgeDeploymentPlanName) {
+        this.edgeDeploymentPlanName = edgeDeploymentPlanName;
+  }
 }

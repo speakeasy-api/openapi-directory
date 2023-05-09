@@ -18,9 +18,11 @@ public class DeleteProjectBrief200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public DeleteProjectBrief200ApplicationJSON withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
     }
     
+    public DeleteProjectBrief200ApplicationJSON(){}
 }

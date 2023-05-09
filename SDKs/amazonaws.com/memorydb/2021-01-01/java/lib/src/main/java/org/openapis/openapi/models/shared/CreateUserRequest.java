@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUserRequest {
     @JsonProperty("AccessString")
     public String accessString;
+
     public CreateUserRequest withAccessString(String accessString) {
         this.accessString = accessString;
         return this;
@@ -18,6 +19,7 @@ public class CreateUserRequest {
     
     @JsonProperty("AuthenticationMode")
     public AuthenticationMode authenticationMode;
+
     public CreateUserRequest withAuthenticationMode(AuthenticationMode authenticationMode) {
         this.authenticationMode = authenticationMode;
         return this;
@@ -26,6 +28,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateUserRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -33,9 +36,15 @@ public class CreateUserRequest {
     
     @JsonProperty("UserName")
     public String userName;
+
     public CreateUserRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public CreateUserRequest(@JsonProperty("AccessString") String accessString, @JsonProperty("AuthenticationMode") AuthenticationMode authenticationMode, @JsonProperty("UserName") String userName) {
+        this.accessString = accessString;
+        this.authenticationMode = authenticationMode;
+        this.userName = userName;
+  }
 }

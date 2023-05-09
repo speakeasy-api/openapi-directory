@@ -22,6 +22,7 @@ public class Connector {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("associatedOn")
     public OffsetDateTime associatedOn;
+
     public Connector withAssociatedOn(OffsetDateTime associatedOn) {
         this.associatedOn = associatedOn;
         return this;
@@ -30,6 +31,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilityList")
     public ConnectorCapabilityEnum[] capabilityList;
+
     public Connector withCapabilityList(ConnectorCapabilityEnum[] capabilityList) {
         this.capabilityList = capabilityList;
         return this;
@@ -38,6 +40,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorId")
     public String connectorId;
+
     public Connector withConnectorId(String connectorId) {
         this.connectorId = connectorId;
         return this;
@@ -46,6 +49,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public Connector withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -54,6 +58,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macAddress")
     public String macAddress;
+
     public Connector withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
@@ -62,6 +67,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ConnectorStatusEnum status;
+
     public Connector withStatus(ConnectorStatusEnum status) {
         this.status = status;
         return this;
@@ -70,6 +76,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public Connector withVersion(String version) {
         this.version = version;
         return this;
@@ -78,6 +85,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmManagerId")
     public String vmManagerId;
+
     public Connector withVmManagerId(String vmManagerId) {
         this.vmManagerId = vmManagerId;
         return this;
@@ -86,6 +94,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmManagerName")
     public String vmManagerName;
+
     public Connector withVmManagerName(String vmManagerName) {
         this.vmManagerName = vmManagerName;
         return this;
@@ -94,9 +103,11 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmManagerType")
     public VmManagerTypeEnum vmManagerType;
+
     public Connector withVmManagerType(VmManagerTypeEnum vmManagerType) {
         this.vmManagerType = vmManagerType;
         return this;
     }
     
+    public Connector(){}
 }

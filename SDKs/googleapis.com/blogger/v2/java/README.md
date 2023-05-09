@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.BloggerBlogsGetSecurity;
 import org.openapis.openapi.models.operations.BloggerBlogsGetRequest;
 import org.openapis.openapi.models.operations.BloggerBlogsGetResponse;
+import org.openapis.openapi.models.operations.BloggerBlogsGetSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,11 +28,10 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            BloggerBlogsGetRequest req = new BloggerBlogsGetRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                blogId = "quibusdam";
+            BloggerBlogsGetRequest req = new BloggerBlogsGetRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
                 callback = "unde";
                 fields = "nulla";
                 key = "corrupti";
@@ -42,19 +40,21 @@ public class Application {
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
-            BloggerBlogsGetResponse res = sdk.blogs.bloggerBlogsGet(req, new BloggerBlogsGetSecurity() {{
+            BloggerBlogsGetResponse res = sdk.blogs.bloggerBlogsGet(req, new BloggerBlogsGetSecurity("suscipit", "iure") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.blog.isPresent()) {
+            if (res.blog != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -62,29 +62,29 @@ public class Application {
 ## Available Resources and Operations
 
 
-### blogs
+### [blogs](docs/blogs/README.md)
 
-* `bloggerBlogsGet` - Gets a blog by id.
-* `bloggerBlogsList` - Lists blogs by user id, possibly filtered.
+* [bloggerBlogsGet](docs/blogs/README.md#bloggerblogsget) - Gets a blog by id.
+* [bloggerBlogsList](docs/blogs/README.md#bloggerblogslist) - Lists blogs by user id, possibly filtered.
 
-### comments
+### [comments](docs/comments/README.md)
 
-* `bloggerCommentsGet` - Gets a comment by blog id, post id and comment id.
-* `bloggerCommentsList` - Lists comments.
+* [bloggerCommentsGet](docs/comments/README.md#bloggercommentsget) - Gets a comment by blog id, post id and comment id.
+* [bloggerCommentsList](docs/comments/README.md#bloggercommentslist) - Lists comments.
 
-### pages
+### [pages](docs/pages/README.md)
 
-* `bloggerPagesGet` - Gets a page by blog id and page id.
-* `bloggerPagesList` - Lists pages.
+* [bloggerPagesGet](docs/pages/README.md#bloggerpagesget) - Gets a page by blog id and page id.
+* [bloggerPagesList](docs/pages/README.md#bloggerpageslist) - Lists pages.
 
-### posts
+### [posts](docs/posts/README.md)
 
-* `bloggerPostsGet` - Gets a post by blog id and post id
-* `bloggerPostsList` - Lists posts.
+* [bloggerPostsGet](docs/posts/README.md#bloggerpostsget) - Gets a post by blog id and post id
+* [bloggerPostsList](docs/posts/README.md#bloggerpostslist) - Lists posts.
 
-### users
+### [users](docs/users/README.md)
 
-* `bloggerUsersGet` - Gets a user by user id.
+* [bloggerUsersGet](docs/users/README.md#bloggerusersget) - Gets a user by user id.
 <!-- End SDK Available Operations -->
 
 ### Maturity

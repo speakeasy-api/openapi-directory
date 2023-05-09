@@ -15,9 +15,11 @@ public class OfferLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createContract")
     public LinksCreateContractLink createContract;
+
     public OfferLinks withCreateContract(LinksCreateContractLink createContract) {
         this.createContract = createContract;
         return this;
     }
     
+    public OfferLinks(){}
 }

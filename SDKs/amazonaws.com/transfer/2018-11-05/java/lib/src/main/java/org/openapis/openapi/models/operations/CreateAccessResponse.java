@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAccessResponse {
     
     public String contentType;
+
     public CreateAccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateAccessResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAccessResponse createAccessResponse;
+
     public CreateAccessResponse withCreateAccessResponse(org.openapis.openapi.models.shared.CreateAccessResponse createAccessResponse) {
         this.createAccessResponse = createAccessResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateAccessResponse {
      */
     
     public Object internalServiceError;
+
     public CreateAccessResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class CreateAccessResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateAccessResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAccessResponse {
      */
     
     public Object resourceExistsException;
+
     public CreateAccessResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAccessResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAccessResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateAccessResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateAccessResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class CreateAccessResponse {
     
     
     public Integer statusCode;
+
     public CreateAccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateAccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateAccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

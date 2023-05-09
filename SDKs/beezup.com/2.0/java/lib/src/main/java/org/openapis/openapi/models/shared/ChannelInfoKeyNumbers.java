@@ -15,6 +15,7 @@ public class ChannelInfoKeyNumbers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public String categories;
+
     public ChannelInfoKeyNumbers withCategories(String categories) {
         this.categories = categories;
         return this;
@@ -26,6 +27,7 @@ public class ChannelInfoKeyNumbers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public String products;
+
     public ChannelInfoKeyNumbers withProducts(String products) {
         this.products = products;
         return this;
@@ -37,6 +39,7 @@ public class ChannelInfoKeyNumbers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stores")
     public String stores;
+
     public ChannelInfoKeyNumbers withStores(String stores) {
         this.stores = stores;
         return this;
@@ -48,9 +51,11 @@ public class ChannelInfoKeyNumbers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewsPerMonth")
     public String viewsPerMonth;
+
     public ChannelInfoKeyNumbers withViewsPerMonth(String viewsPerMonth) {
         this.viewsPerMonth = viewsPerMonth;
         return this;
     }
     
+    public ChannelInfoKeyNumbers(){}
 }

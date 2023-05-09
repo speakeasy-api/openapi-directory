@@ -17,6 +17,7 @@ public class EstimateDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public EstimateDetailsVO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -26,6 +27,7 @@ public class EstimateDetailsVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("create_date")
     public LocalDate createDate;
+
     public EstimateDetailsVO withCreateDate(LocalDate createDate) {
         this.createDate = createDate;
         return this;
@@ -34,6 +36,7 @@ public class EstimateDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public EstimateDetailsVO withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -42,6 +45,7 @@ public class EstimateDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public PropertyPaAndAttVO[] customFields;
+
     public EstimateDetailsVO withCustomFields(PropertyPaAndAttVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -50,6 +54,7 @@ public class EstimateDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EstimateDetailsVO withDescription(String description) {
         this.description = description;
         return this;
@@ -58,6 +63,7 @@ public class EstimateDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimate_id")
     public Long estimateId;
+
     public EstimateDetailsVO withEstimateId(Long estimateId) {
         this.estimateId = estimateId;
         return this;
@@ -66,6 +72,7 @@ public class EstimateDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimate_title")
     public String estimateTitle;
+
     public EstimateDetailsVO withEstimateTitle(String estimateTitle) {
         this.estimateTitle = estimateTitle;
         return this;
@@ -75,6 +82,7 @@ public class EstimateDetailsVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("expiration_date")
     public LocalDate expirationDate;
+
     public EstimateDetailsVO withExpirationDate(LocalDate expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -83,6 +91,7 @@ public class EstimateDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public EstimateItemDetailsVO[] items;
+
     public EstimateDetailsVO withItems(EstimateItemDetailsVO[] items) {
         this.items = items;
         return this;
@@ -94,6 +103,7 @@ public class EstimateDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public ProjectBaseVO project;
+
     public EstimateDetailsVO withProject(ProjectBaseVO project) {
         this.project = project;
         return this;
@@ -102,6 +112,7 @@ public class EstimateDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_number")
     public String referenceNumber;
+
     public EstimateDetailsVO withReferenceNumber(String referenceNumber) {
         this.referenceNumber = referenceNumber;
         return this;
@@ -113,6 +124,7 @@ public class EstimateDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfe")
     public RfeBaseVO rfe;
+
     public EstimateDetailsVO withRfe(RfeBaseVO rfe) {
         this.rfe = rfe;
         return this;
@@ -121,6 +133,7 @@ public class EstimateDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public EstimateDetailsVO withStatus(String status) {
         this.status = status;
         return this;
@@ -130,6 +143,7 @@ public class EstimateDetailsVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("submit_date")
     public LocalDate submitDate;
+
     public EstimateDetailsVO withSubmitDate(LocalDate submitDate) {
         this.submitDate = submitDate;
         return this;
@@ -138,6 +152,7 @@ public class EstimateDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submitted_by")
     public String submittedBy;
+
     public EstimateDetailsVO withSubmittedBy(String submittedBy) {
         this.submittedBy = submittedBy;
         return this;
@@ -146,6 +161,7 @@ public class EstimateDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submitted_by_user_id")
     public Long submittedByUserId;
+
     public EstimateDetailsVO withSubmittedByUserId(Long submittedByUserId) {
         this.submittedByUserId = submittedByUserId;
         return this;
@@ -157,6 +173,7 @@ public class EstimateDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_workgroup")
     public WorkgroupBaseVO supplierWorkgroup;
+
     public EstimateDetailsVO withSupplierWorkgroup(WorkgroupBaseVO supplierWorkgroup) {
         this.supplierWorkgroup = supplierWorkgroup;
         return this;
@@ -165,9 +182,11 @@ public class EstimateDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_currency")
     public String transactionalCurrency;
+
     public EstimateDetailsVO withTransactionalCurrency(String transactionalCurrency) {
         this.transactionalCurrency = transactionalCurrency;
         return this;
     }
     
+    public EstimateDetailsVO(){}
 }

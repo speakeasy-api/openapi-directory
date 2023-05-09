@@ -15,6 +15,7 @@ public class CreateDatastoreRequestBodyFileFormatConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonConfiguration")
     public java.util.Map<String, Object> jsonConfiguration;
+
     public CreateDatastoreRequestBodyFileFormatConfiguration withJsonConfiguration(java.util.Map<String, Object> jsonConfiguration) {
         this.jsonConfiguration = jsonConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class CreateDatastoreRequestBodyFileFormatConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parquetConfiguration")
     public org.openapis.openapi.models.shared.ParquetConfiguration parquetConfiguration;
+
     public CreateDatastoreRequestBodyFileFormatConfiguration withParquetConfiguration(org.openapis.openapi.models.shared.ParquetConfiguration parquetConfiguration) {
         this.parquetConfiguration = parquetConfiguration;
         return this;
     }
     
+    public CreateDatastoreRequestBodyFileFormatConfiguration(){}
 }

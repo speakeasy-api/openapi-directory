@@ -17,6 +17,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action_code")
     public String actionCode;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withActionCode(String actionCode) {
         this.actionCode = actionCode;
         return this;
@@ -25,6 +26,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action_code_full")
     public String actionCodeFull;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withActionCodeFull(String actionCodeFull) {
         this.actionCodeFull = actionCodeFull;
         return this;
@@ -33,6 +35,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregate_general_election_expenditure")
     public String aggregateGeneralElectionExpenditure;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withAggregateGeneralElectionExpenditure(String aggregateGeneralElectionExpenditure) {
         this.aggregateGeneralElectionExpenditure = aggregateGeneralElectionExpenditure;
         return this;
@@ -41,6 +44,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("back_reference_schedule_name")
     public String backReferenceScheduleName;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withBackReferenceScheduleName(String backReferenceScheduleName) {
         this.backReferenceScheduleName = backReferenceScheduleName;
         return this;
@@ -49,6 +53,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("back_reference_transaction_id")
     public String backReferenceTransactionId;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withBackReferenceTransactionId(String backReferenceTransactionId) {
         this.backReferenceTransactionId = backReferenceTransactionId;
         return this;
@@ -57,6 +62,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_first_name")
     public String candidateFirstName;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCandidateFirstName(String candidateFirstName) {
         this.candidateFirstName = candidateFirstName;
         return this;
@@ -65,11 +71,18 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     /**
      * A unique identifier assigned to each candidate registered with the FEC.
      * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * First character indicates office - [P]residential, [H]ouse, [S]enate].
+     * Second character is the last digit of the two-year period the ID was created.
+     * Third and fourth is the candidate state. Presidential IDs don't have state.
+     * Fifth and sixth is the district when the candidate first ran. This does not change if the
+     * candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+     * The rest is sequence.
      * 
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     public String candidateId;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCandidateId(String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -78,6 +91,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_last_name")
     public String candidateLastName;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCandidateLastName(String candidateLastName) {
         this.candidateLastName = candidateLastName;
         return this;
@@ -86,6 +100,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_middle_name")
     public String candidateMiddleName;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCandidateMiddleName(String candidateMiddleName) {
         this.candidateMiddleName = candidateMiddleName;
         return this;
@@ -97,6 +112,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_name")
     public String candidateName;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCandidateName(String candidateName) {
         this.candidateName = candidateName;
         return this;
@@ -105,6 +121,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office")
     public String candidateOffice;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCandidateOffice(String candidateOffice) {
         this.candidateOffice = candidateOffice;
         return this;
@@ -113,6 +130,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office_district")
     public String candidateOfficeDistrict;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCandidateOfficeDistrict(String candidateOfficeDistrict) {
         this.candidateOfficeDistrict = candidateOfficeDistrict;
         return this;
@@ -121,6 +139,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office_full")
     public String candidateOfficeFull;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCandidateOfficeFull(String candidateOfficeFull) {
         this.candidateOfficeFull = candidateOfficeFull;
         return this;
@@ -129,6 +148,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office_state")
     public String candidateOfficeState;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCandidateOfficeState(String candidateOfficeState) {
         this.candidateOfficeState = candidateOfficeState;
         return this;
@@ -137,6 +157,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office_state_full")
     public String candidateOfficeStateFull;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCandidateOfficeStateFull(String candidateOfficeStateFull) {
         this.candidateOfficeStateFull = candidateOfficeStateFull;
         return this;
@@ -145,6 +166,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_prefix")
     public String candidatePrefix;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCandidatePrefix(String candidatePrefix) {
         this.candidatePrefix = candidatePrefix;
         return this;
@@ -153,6 +175,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_suffix")
     public String candidateSuffix;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCandidateSuffix(String candidateSuffix) {
         this.candidateSuffix = candidateSuffix;
         return this;
@@ -161,6 +184,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catolog_code")
     public String catologCode;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCatologCode(String catologCode) {
         this.catologCode = catologCode;
         return this;
@@ -169,6 +193,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catolog_code_full")
     public String catologCodeFull;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCatologCodeFull(String catologCodeFull) {
         this.catologCodeFull = catologCodeFull;
         return this;
@@ -177,6 +202,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee")
     public org.openapis.openapi.models.shared.CommitteeHistory committee;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCommittee(org.openapis.openapi.models.shared.CommitteeHistory committee) {
         this.committee = committee;
         return this;
@@ -185,6 +211,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_designated_coordinated_expenditure_indicator")
     public String committeeDesignatedCoordinatedExpenditureIndicator;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCommitteeDesignatedCoordinatedExpenditureIndicator(String committeeDesignatedCoordinatedExpenditureIndicator) {
         this.committeeDesignatedCoordinatedExpenditureIndicator = committeeDesignatedCoordinatedExpenditureIndicator;
         return this;
@@ -197,6 +224,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_id")
     public String committeeId;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -205,6 +233,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_name")
     public String committeeName;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withCommitteeName(String committeeName) {
         this.committeeName = committeeName;
         return this;
@@ -213,6 +242,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conduit_committee_city")
     public String conduitCommitteeCity;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withConduitCommitteeCity(String conduitCommitteeCity) {
         this.conduitCommitteeCity = conduitCommitteeCity;
         return this;
@@ -221,6 +251,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conduit_committee_id")
     public String conduitCommitteeId;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withConduitCommitteeId(String conduitCommitteeId) {
         this.conduitCommitteeId = conduitCommitteeId;
         return this;
@@ -229,6 +260,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conduit_committee_name")
     public String conduitCommitteeName;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withConduitCommitteeName(String conduitCommitteeName) {
         this.conduitCommitteeName = conduitCommitteeName;
         return this;
@@ -237,6 +269,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conduit_committee_state")
     public String conduitCommitteeState;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withConduitCommitteeState(String conduitCommitteeState) {
         this.conduitCommitteeState = conduitCommitteeState;
         return this;
@@ -245,6 +278,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conduit_committee_street1")
     public String conduitCommitteeStreet1;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withConduitCommitteeStreet1(String conduitCommitteeStreet1) {
         this.conduitCommitteeStreet1 = conduitCommitteeStreet1;
         return this;
@@ -253,6 +287,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conduit_committee_street2")
     public String conduitCommitteeStreet2;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withConduitCommitteeStreet2(String conduitCommitteeStreet2) {
         this.conduitCommitteeStreet2 = conduitCommitteeStreet2;
         return this;
@@ -261,6 +296,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conduit_committee_zip")
     public Integer conduitCommitteeZip;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withConduitCommitteeZip(Integer conduitCommitteeZip) {
         this.conduitCommitteeZip = conduitCommitteeZip;
         return this;
@@ -269,6 +305,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("designated_committee_id")
     public String designatedCommitteeId;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withDesignatedCommitteeId(String designatedCommitteeId) {
         this.designatedCommitteeId = designatedCommitteeId;
         return this;
@@ -277,6 +314,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("designated_committee_name")
     public String designatedCommitteeName;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withDesignatedCommitteeName(String designatedCommitteeName) {
         this.designatedCommitteeName = designatedCommitteeName;
         return this;
@@ -285,6 +323,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("election_cycle")
     public Integer electionCycle;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withElectionCycle(Integer electionCycle) {
         this.electionCycle = electionCycle;
         return this;
@@ -293,6 +332,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public String entityType;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withEntityType(String entityType) {
         this.entityType = entityType;
         return this;
@@ -301,6 +341,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type_desc")
     public String entityTypeDesc;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withEntityTypeDesc(String entityTypeDesc) {
         this.entityTypeDesc = entityTypeDesc;
         return this;
@@ -309,6 +350,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expenditure_amount")
     public Integer expenditureAmount;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withExpenditureAmount(Integer expenditureAmount) {
         this.expenditureAmount = expenditureAmount;
         return this;
@@ -319,6 +361,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expenditure_date")
     public OffsetDateTime expenditureDate;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withExpenditureDate(OffsetDateTime expenditureDate) {
         this.expenditureDate = expenditureDate;
         return this;
@@ -327,6 +370,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expenditure_purpose_full")
     public String expenditurePurposeFull;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withExpenditurePurposeFull(String expenditurePurposeFull) {
         this.expenditurePurposeFull = expenditurePurposeFull;
         return this;
@@ -335,6 +379,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expenditure_type")
     public String expenditureType;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withExpenditureType(String expenditureType) {
         this.expenditureType = expenditureType;
         return this;
@@ -343,6 +388,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expenditure_type_full")
     public String expenditureTypeFull;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withExpenditureTypeFull(String expenditureTypeFull) {
         this.expenditureTypeFull = expenditureTypeFull;
         return this;
@@ -351,6 +397,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_number")
     public Integer fileNumber;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withFileNumber(Integer fileNumber) {
         this.fileNumber = fileNumber;
         return this;
@@ -359,6 +406,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filing_form")
     public String filingForm;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withFilingForm(String filingForm) {
         this.filingForm = filingForm;
         return this;
@@ -371,6 +419,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_number")
     public String imageNumber;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withImageNumber(String imageNumber) {
         this.imageNumber = imageNumber;
         return this;
@@ -379,6 +428,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line_number")
     public String lineNumber;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withLineNumber(String lineNumber) {
         this.lineNumber = lineNumber;
         return this;
@@ -387,6 +437,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link_id")
     public Integer linkId;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withLinkId(Integer linkId) {
         this.linkId = linkId;
         return this;
@@ -397,6 +448,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("load_date")
     public OffsetDateTime loadDate;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withLoadDate(OffsetDateTime loadDate) {
         this.loadDate = loadDate;
         return this;
@@ -405,6 +457,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo_code")
     public String memoCode;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withMemoCode(String memoCode) {
         this.memoCode = memoCode;
         return this;
@@ -413,6 +466,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo_code_full")
     public String memoCodeFull;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withMemoCodeFull(String memoCodeFull) {
         this.memoCodeFull = memoCodeFull;
         return this;
@@ -421,6 +475,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo_text")
     public String memoText;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withMemoText(String memoText) {
         this.memoText = memoText;
         return this;
@@ -429,6 +484,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_sub_id")
     public Integer originalSubId;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withOriginalSubId(Integer originalSubId) {
         this.originalSubId = originalSubId;
         return this;
@@ -437,6 +493,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_first_name")
     public String payeeFirstName;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withPayeeFirstName(String payeeFirstName) {
         this.payeeFirstName = payeeFirstName;
         return this;
@@ -445,6 +502,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_last_name")
     public String payeeLastName;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withPayeeLastName(String payeeLastName) {
         this.payeeLastName = payeeLastName;
         return this;
@@ -453,6 +511,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_middle_name")
     public String payeeMiddleName;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withPayeeMiddleName(String payeeMiddleName) {
         this.payeeMiddleName = payeeMiddleName;
         return this;
@@ -461,6 +520,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_name")
     public String payeeName;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withPayeeName(String payeeName) {
         this.payeeName = payeeName;
         return this;
@@ -469,6 +529,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pdf_url")
     public String pdfUrl;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withPdfUrl(String pdfUrl) {
         this.pdfUrl = pdfUrl;
         return this;
@@ -530,6 +591,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_type")
     public String reportType;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withReportType(String reportType) {
         this.reportType = reportType;
         return this;
@@ -545,6 +607,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_year")
     public Integer reportYear;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withReportYear(Integer reportYear) {
         this.reportYear = reportYear;
         return this;
@@ -553,6 +616,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule_type")
     public String scheduleType;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withScheduleType(String scheduleType) {
         this.scheduleType = scheduleType;
         return this;
@@ -561,6 +625,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule_type_full")
     public String scheduleTypeFull;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withScheduleTypeFull(String scheduleTypeFull) {
         this.scheduleTypeFull = scheduleTypeFull;
         return this;
@@ -569,6 +634,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_id")
     public String subId;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withSubId(String subId) {
         this.subId = subId;
         return this;
@@ -577,6 +643,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subordinate_committee")
     public org.openapis.openapi.models.shared.CommitteeHistory subordinateCommittee;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withSubordinateCommittee(org.openapis.openapi.models.shared.CommitteeHistory subordinateCommittee) {
         this.subordinateCommittee = subordinateCommittee;
         return this;
@@ -585,6 +652,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subordinate_committee_id")
     public String subordinateCommitteeId;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withSubordinateCommitteeId(String subordinateCommitteeId) {
         this.subordinateCommitteeId = subordinateCommitteeId;
         return this;
@@ -593,6 +661,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_id")
     public String transactionId;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -601,6 +670,7 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unlimited_spending_flag")
     public String unlimitedSpendingFlag;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withUnlimitedSpendingFlag(String unlimitedSpendingFlag) {
         this.unlimitedSpendingFlag = unlimitedSpendingFlag;
         return this;
@@ -609,9 +679,11 @@ public class GetSchedulesScheduleFSubIdDefaultApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unlimited_spending_flag_full")
     public String unlimitedSpendingFlagFull;
+
     public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults withUnlimitedSpendingFlagFull(String unlimitedSpendingFlagFull) {
         this.unlimitedSpendingFlagFull = unlimitedSpendingFlagFull;
         return this;
     }
     
+    public GetSchedulesScheduleFSubIdDefaultApplicationJSONResults(){}
 }

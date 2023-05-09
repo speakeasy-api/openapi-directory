@@ -18,6 +18,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public Parameter withKey(String key) {
         this.key = key;
         return this;
@@ -29,6 +30,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list")
     public Parameter[] list;
+
     public Parameter withList(Parameter[] list) {
         this.list = list;
         return this;
@@ -40,6 +42,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("map")
     public Parameter[] map;
+
     public Parameter withMap(Parameter[] map) {
         this.map = map;
         return this;
@@ -51,6 +54,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ParameterTypeEnum type;
+
     public Parameter withType(ParameterTypeEnum type) {
         this.type = type;
         return this;
@@ -62,9 +66,11 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Parameter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Parameter(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CheckVoucherResponse {
     
     public String contentType;
+
     public CheckVoucherResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CheckVoucherResponse {
      */
     
     public org.openapis.openapi.models.shared.ItvVoucher itvVoucher;
+
     public CheckVoucherResponse withItvVoucher(org.openapis.openapi.models.shared.ItvVoucher itvVoucher) {
         this.itvVoucher = itvVoucher;
         return this;
@@ -29,6 +32,7 @@ public class CheckVoucherResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public CheckVoucherResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class CheckVoucherResponse {
     
     
     public Integer statusCode;
+
     public CheckVoucherResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CheckVoucherResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CheckVoucherResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CheckVoucherResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

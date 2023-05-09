@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddFollowersResponse {
     
     public String contentType;
+
     public AddFollowersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AddFollowersResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public AddFollowersResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class AddFollowersResponse {
     
     
     public Integer statusCode;
+
     public AddFollowersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class AddFollowersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddFollowersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class AddFollowersResponse {
      */
     
     public AddFollowers200ApplicationJSON addFollowers200ApplicationJSONObject;
+
     public AddFollowersResponse withAddFollowers200ApplicationJSONObject(AddFollowers200ApplicationJSON addFollowers200ApplicationJSONObject) {
         this.addFollowers200ApplicationJSONObject = addFollowers200ApplicationJSONObject;
         return this;
     }
     
+    public AddFollowersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

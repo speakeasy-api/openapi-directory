@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogLineageV1ListRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatacatalogLineageV1ListRunsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogLineageV1ListRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runs")
     public GoogleCloudDatacatalogLineageV1Run[] runs;
+
     public GoogleCloudDatacatalogLineageV1ListRunsResponse withRuns(GoogleCloudDatacatalogLineageV1Run[] runs) {
         this.runs = runs;
         return this;
     }
     
+    public GoogleCloudDatacatalogLineageV1ListRunsResponse(){}
 }

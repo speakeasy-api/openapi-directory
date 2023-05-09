@@ -59,10 +59,8 @@ public class UserRoles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingUserRolesDeleteResponse res = new org.openapis.openapi.models.operations.DfareportingUserRolesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DfareportingUserRolesDeleteResponse res = new org.openapis.openapi.models.operations.DfareportingUserRolesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class UserRoles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingUserRolesGetResponse res = new org.openapis.openapi.models.operations.DfareportingUserRolesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingUserRolesGetResponse res = new org.openapis.openapi.models.operations.DfareportingUserRolesGetResponse(contentType, httpRes.statusCode()) {{
             userRole = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class UserRoles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingUserRolesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingUserRolesInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingUserRolesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingUserRolesInsertResponse(contentType, httpRes.statusCode()) {{
             userRole = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class UserRoles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingUserRolesListResponse res = new org.openapis.openapi.models.operations.DfareportingUserRolesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingUserRolesListResponse res = new org.openapis.openapi.models.operations.DfareportingUserRolesListResponse(contentType, httpRes.statusCode()) {{
             userRolesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class UserRoles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingUserRolesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingUserRolesPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingUserRolesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingUserRolesPatchResponse(contentType, httpRes.statusCode()) {{
             userRole = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class UserRoles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingUserRolesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingUserRolesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingUserRolesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingUserRolesUpdateResponse(contentType, httpRes.statusCode()) {{
             userRole = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class UpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateEnvironmentRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("federationMode")
     public UpdateEnvironmentRequestBodyFederationModeEnum federationMode;
+
     public UpdateEnvironmentRequestBody withFederationMode(UpdateEnvironmentRequestBodyFederationModeEnum federationMode) {
         this.federationMode = federationMode;
         return this;
@@ -37,6 +39,7 @@ public class UpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("federationParameters")
     public UpdateEnvironmentRequestBodyFederationParameters federationParameters;
+
     public UpdateEnvironmentRequestBody withFederationParameters(UpdateEnvironmentRequestBodyFederationParameters federationParameters) {
         this.federationParameters = federationParameters;
         return this;
@@ -48,9 +51,11 @@ public class UpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateEnvironmentRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateEnvironmentRequestBody(){}
 }

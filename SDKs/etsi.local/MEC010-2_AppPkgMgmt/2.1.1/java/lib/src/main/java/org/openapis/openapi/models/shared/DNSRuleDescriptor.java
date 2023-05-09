@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DNSRuleDescriptor {
     /**
@@ -12,6 +12,7 @@ public class DNSRuleDescriptor {
      */
     
     public String dnsRuleId;
+
     public DNSRuleDescriptor withDnsRuleId(String dnsRuleId) {
         this.dnsRuleId = dnsRuleId;
         return this;
@@ -22,6 +23,7 @@ public class DNSRuleDescriptor {
      */
     
     public String domainName;
+
     public DNSRuleDescriptor withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -32,6 +34,7 @@ public class DNSRuleDescriptor {
      */
     
     public String ipAddress;
+
     public DNSRuleDescriptor withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -42,6 +45,7 @@ public class DNSRuleDescriptor {
      */
     
     public IpAddressTypeEnum ipAddressType;
+
     public DNSRuleDescriptor withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -52,9 +56,16 @@ public class DNSRuleDescriptor {
      */
     
     public Long ttl;
+
     public DNSRuleDescriptor withTtl(Long ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public DNSRuleDescriptor(@JsonProperty("dnsRuleId") String dnsRuleId, @JsonProperty("domainName") String domainName, @JsonProperty("ipAddress") String ipAddress, @JsonProperty("ipAddressType") IpAddressTypeEnum ipAddressType) {
+        this.dnsRuleId = dnsRuleId;
+        this.domainName = domainName;
+        this.ipAddress = ipAddress;
+        this.ipAddressType = ipAddressType;
+  }
 }

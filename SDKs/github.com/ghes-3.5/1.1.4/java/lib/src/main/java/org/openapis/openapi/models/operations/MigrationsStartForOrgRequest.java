@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrationsStartForOrgRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public MigrationsStartForOrgRequestBody requestBody;
+
     public MigrationsStartForOrgRequest withRequestBody(MigrationsStartForOrgRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class MigrationsStartForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public MigrationsStartForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
     }
     
+    public MigrationsStartForOrgRequest(@JsonProperty("RequestBody") MigrationsStartForOrgRequestBody requestBody, @JsonProperty("org") String org) {
+        this.requestBody = requestBody;
+        this.org = org;
+  }
 }

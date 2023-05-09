@@ -15,6 +15,7 @@ public class ListAvailabilityConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityConfigurations")
     public AvailabilityConfiguration[] availabilityConfigurations;
+
     public ListAvailabilityConfigurationsResponse withAvailabilityConfigurations(AvailabilityConfiguration[] availabilityConfigurations) {
         this.availabilityConfigurations = availabilityConfigurations;
         return this;
@@ -23,9 +24,11 @@ public class ListAvailabilityConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAvailabilityConfigurationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAvailabilityConfigurationsResponse(){}
 }

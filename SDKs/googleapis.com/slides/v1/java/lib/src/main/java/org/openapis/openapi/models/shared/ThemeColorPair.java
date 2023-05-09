@@ -18,6 +18,7 @@ public class ThemeColorPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public RgbColor color;
+
     public ThemeColorPair withColor(RgbColor color) {
         this.color = color;
         return this;
@@ -29,9 +30,11 @@ public class ThemeColorPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ThemeColorPairTypeEnum type;
+
     public ThemeColorPair withType(ThemeColorPairTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ThemeColorPair(){}
 }

@@ -18,6 +18,7 @@ public class PartnerGeneralConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public PartnerGeneralConfig withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -29,9 +30,11 @@ public class PartnerGeneralConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public PartnerGeneralConfig withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public PartnerGeneralConfig(){}
 }

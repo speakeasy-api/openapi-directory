@@ -15,6 +15,7 @@ public class PostChargeStations201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargestation")
     public java.util.Map<String, Object> chargestation;
+
     public PostChargeStations201ApplicationJSON withChargestation(java.util.Map<String, Object> chargestation) {
         this.chargestation = chargestation;
         return this;
@@ -23,6 +24,7 @@ public class PostChargeStations201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PostChargeStations201ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class PostChargeStations201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ok")
     public Boolean ok;
+
     public PostChargeStations201ApplicationJSON withOk(Boolean ok) {
         this.ok = ok;
         return this;
     }
     
+    public PostChargeStations201ApplicationJSON(){}
 }

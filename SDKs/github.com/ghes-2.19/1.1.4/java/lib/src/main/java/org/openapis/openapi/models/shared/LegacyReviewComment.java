@@ -15,6 +15,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public LegacyReviewCommentLinks links;
+
     public LegacyReviewComment withLinks(LegacyReviewCommentLinks links) {
         this.links = links;
         return this;
@@ -23,6 +24,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_association")
     public String authorAssociation;
+
     public LegacyReviewComment withAuthorAssociation(String authorAssociation) {
         this.authorAssociation = authorAssociation;
         return this;
@@ -31,6 +33,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public LegacyReviewComment withBody(String body) {
         this.body = body;
         return this;
@@ -39,6 +42,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commit_id")
     public String commitId;
+
     public LegacyReviewComment withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -47,6 +51,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public LegacyReviewComment withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -55,6 +60,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diff_hunk")
     public String diffHunk;
+
     public LegacyReviewComment withDiffHunk(String diffHunk) {
         this.diffHunk = diffHunk;
         return this;
@@ -63,6 +69,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public LegacyReviewComment withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -71,6 +78,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public LegacyReviewComment withId(Long id) {
         this.id = id;
         return this;
@@ -79,6 +87,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_reply_to_id")
     public Long inReplyToId;
+
     public LegacyReviewComment withInReplyToId(Long inReplyToId) {
         this.inReplyToId = inReplyToId;
         return this;
@@ -87,6 +96,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_id")
     public String nodeId;
+
     public LegacyReviewComment withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -95,6 +105,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_commit_id")
     public String originalCommitId;
+
     public LegacyReviewComment withOriginalCommitId(String originalCommitId) {
         this.originalCommitId = originalCommitId;
         return this;
@@ -103,6 +114,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_position")
     public Long originalPosition;
+
     public LegacyReviewComment withOriginalPosition(Long originalPosition) {
         this.originalPosition = originalPosition;
         return this;
@@ -111,6 +123,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public LegacyReviewComment withPath(String path) {
         this.path = path;
         return this;
@@ -119,6 +132,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Long position;
+
     public LegacyReviewComment withPosition(Long position) {
         this.position = position;
         return this;
@@ -127,6 +141,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pull_request_review_id")
     public Long pullRequestReviewId;
+
     public LegacyReviewComment withPullRequestReviewId(Long pullRequestReviewId) {
         this.pullRequestReviewId = pullRequestReviewId;
         return this;
@@ -135,6 +150,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pull_request_url")
     public String pullRequestUrl;
+
     public LegacyReviewComment withPullRequestUrl(String pullRequestUrl) {
         this.pullRequestUrl = pullRequestUrl;
         return this;
@@ -143,6 +159,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public LegacyReviewComment withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -151,6 +168,7 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public LegacyReviewComment withUrl(String url) {
         this.url = url;
         return this;
@@ -159,9 +177,11 @@ public class LegacyReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public LegacyReviewCommentUser user;
+
     public LegacyReviewComment withUser(LegacyReviewCommentUser user) {
         this.user = user;
         return this;
     }
     
+    public LegacyReviewComment(){}
 }

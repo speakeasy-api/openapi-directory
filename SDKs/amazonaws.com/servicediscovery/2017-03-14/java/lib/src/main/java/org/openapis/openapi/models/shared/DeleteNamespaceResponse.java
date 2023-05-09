@@ -15,9 +15,11 @@ public class DeleteNamespaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public DeleteNamespaceResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public DeleteNamespaceResponse(){}
 }

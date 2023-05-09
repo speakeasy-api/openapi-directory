@@ -18,9 +18,11 @@ public class AllocationResourceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specificSkuAllocation")
     public AllocationResourceStatusSpecificSKUAllocation specificSkuAllocation;
+
     public AllocationResourceStatus withSpecificSkuAllocation(AllocationResourceStatusSpecificSKUAllocation specificSkuAllocation) {
         this.specificSkuAllocation = specificSkuAllocation;
         return this;
     }
     
+    public AllocationResourceStatus(){}
 }

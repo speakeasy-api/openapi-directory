@@ -15,6 +15,7 @@ public class TflApiPresentationEntitiesJourneyPlannerRouteOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public String direction;
+
     public TflApiPresentationEntitiesJourneyPlannerRouteOption withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -23,6 +24,7 @@ public class TflApiPresentationEntitiesJourneyPlannerRouteOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directions")
     public String[] directions;
+
     public TflApiPresentationEntitiesJourneyPlannerRouteOption withDirections(String[] directions) {
         this.directions = directions;
         return this;
@@ -34,6 +36,7 @@ public class TflApiPresentationEntitiesJourneyPlannerRouteOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TflApiPresentationEntitiesJourneyPlannerRouteOption withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class TflApiPresentationEntitiesJourneyPlannerRouteOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineIdentifier")
     public TflApiPresentationEntitiesIdentifier lineIdentifier;
+
     public TflApiPresentationEntitiesJourneyPlannerRouteOption withLineIdentifier(TflApiPresentationEntitiesIdentifier lineIdentifier) {
         this.lineIdentifier = lineIdentifier;
         return this;
@@ -53,9 +57,11 @@ public class TflApiPresentationEntitiesJourneyPlannerRouteOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TflApiPresentationEntitiesJourneyPlannerRouteOption withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerRouteOption(){}
 }

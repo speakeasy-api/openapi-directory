@@ -221,4 +221,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateConfiguredTableAssoci
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateMembershipOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateProtectedQueryOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

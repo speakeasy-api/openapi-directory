@@ -12,9 +12,11 @@ public class UpdateSchemaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public UpdateSchemaRequestBodySchema schema;
+
     public UpdateSchemaRequestBody withSchema(UpdateSchemaRequestBodySchema schema) {
         this.schema = schema;
         return this;
     }
     
+    public UpdateSchemaRequestBody(){}
 }

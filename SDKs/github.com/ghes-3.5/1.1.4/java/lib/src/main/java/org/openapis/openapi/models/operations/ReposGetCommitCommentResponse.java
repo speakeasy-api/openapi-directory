@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposGetCommitCommentResponse {
     
     public String contentType;
+
     public ReposGetCommitCommentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposGetCommitCommentResponse {
     
     
     public Integer statusCode;
+
     public ReposGetCommitCommentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposGetCommitCommentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposGetCommitCommentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposGetCommitCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposGetCommitCommentResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ReposGetCommitCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.CommitComment commitComment;
+
     public ReposGetCommitCommentResponse withCommitComment(org.openapis.openapi.models.shared.CommitComment commitComment) {
         this.commitComment = commitComment;
         return this;
     }
     
+    public ReposGetCommitCommentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

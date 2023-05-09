@@ -15,6 +15,7 @@ public class S3ExportingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public S3ExportingLocation withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -23,9 +24,11 @@ public class S3ExportingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3KeyName")
     public String s3KeyName;
+
     public S3ExportingLocation withS3KeyName(String s3KeyName) {
         this.s3KeyName = s3KeyName;
         return this;
     }
     
+    public S3ExportingLocation(){}
 }

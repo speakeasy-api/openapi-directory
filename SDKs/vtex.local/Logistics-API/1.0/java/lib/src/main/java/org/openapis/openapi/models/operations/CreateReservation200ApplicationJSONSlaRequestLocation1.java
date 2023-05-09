@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateReservation200ApplicationJSONSlaRequestLocation1 {
     @JsonProperty("country")
     public String country;
+
     public CreateReservation200ApplicationJSONSlaRequestLocation1 withCountry(String country) {
         this.country = country;
         return this;
@@ -16,6 +17,7 @@ public class CreateReservation200ApplicationJSONSlaRequestLocation1 {
     
     @JsonProperty("deliveryPointId")
     public String deliveryPointId;
+
     public CreateReservation200ApplicationJSONSlaRequestLocation1 withDeliveryPointId(String deliveryPointId) {
         this.deliveryPointId = deliveryPointId;
         return this;
@@ -23,6 +25,7 @@ public class CreateReservation200ApplicationJSONSlaRequestLocation1 {
     
     @JsonProperty("inStore")
     public CreateReservation200ApplicationJSONSlaRequestLocation1InStore1 inStore;
+
     public CreateReservation200ApplicationJSONSlaRequestLocation1 withInStore(CreateReservation200ApplicationJSONSlaRequestLocation1InStore1 inStore) {
         this.inStore = inStore;
         return this;
@@ -30,6 +33,7 @@ public class CreateReservation200ApplicationJSONSlaRequestLocation1 {
     
     @JsonProperty("point")
     public String point;
+
     public CreateReservation200ApplicationJSONSlaRequestLocation1 withPoint(String point) {
         this.point = point;
         return this;
@@ -37,9 +41,17 @@ public class CreateReservation200ApplicationJSONSlaRequestLocation1 {
     
     @JsonProperty("zipCode")
     public String zipCode;
+
     public CreateReservation200ApplicationJSONSlaRequestLocation1 withZipCode(String zipCode) {
         this.zipCode = zipCode;
         return this;
     }
     
+    public CreateReservation200ApplicationJSONSlaRequestLocation1(@JsonProperty("country") String country, @JsonProperty("deliveryPointId") String deliveryPointId, @JsonProperty("inStore") CreateReservation200ApplicationJSONSlaRequestLocation1InStore1 inStore, @JsonProperty("point") String point, @JsonProperty("zipCode") String zipCode) {
+        this.country = country;
+        this.deliveryPointId = deliveryPointId;
+        this.inStore = inStore;
+        this.point = point;
+        this.zipCode = zipCode;
+  }
 }

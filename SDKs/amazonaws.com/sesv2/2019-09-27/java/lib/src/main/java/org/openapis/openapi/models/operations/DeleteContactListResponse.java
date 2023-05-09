@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteContactListResponse {
@@ -12,6 +13,7 @@ public class DeleteContactListResponse {
      */
     
     public Object badRequestException;
+
     public DeleteContactListResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteContactListResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteContactListResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteContactListResponse {
     
     
     public String contentType;
+
     public DeleteContactListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteContactListResponse {
      */
     
     public java.util.Map<String, Object> deleteContactListResponse;
+
     public DeleteContactListResponse withDeleteContactListResponse(java.util.Map<String, Object> deleteContactListResponse) {
         this.deleteContactListResponse = deleteContactListResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteContactListResponse {
      */
     
     public Object notFoundException;
+
     public DeleteContactListResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteContactListResponse {
     
     
     public Integer statusCode;
+
     public DeleteContactListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteContactListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteContactListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteContactListResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteContactListResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteContactListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

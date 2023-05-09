@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeEnvironmentHealthRequest {
     
     public EnvironmentHealthAttributeEnum[] attributeNames;
+
     public DescribeEnvironmentHealthRequest withAttributeNames(EnvironmentHealthAttributeEnum[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
@@ -19,6 +20,7 @@ public class DescribeEnvironmentHealthRequest {
     
     
     public String environmentId;
+
     public DescribeEnvironmentHealthRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -26,9 +28,11 @@ public class DescribeEnvironmentHealthRequest {
     
     
     public String environmentName;
+
     public DescribeEnvironmentHealthRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
     }
     
+    public DescribeEnvironmentHealthRequest(){}
 }

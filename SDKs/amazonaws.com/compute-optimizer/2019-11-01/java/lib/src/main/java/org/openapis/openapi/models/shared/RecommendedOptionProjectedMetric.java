@@ -15,6 +15,7 @@ public class RecommendedOptionProjectedMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectedMetrics")
     public ProjectedMetric[] projectedMetrics;
+
     public RecommendedOptionProjectedMetric withProjectedMetrics(ProjectedMetric[] projectedMetrics) {
         this.projectedMetrics = projectedMetrics;
         return this;
@@ -23,6 +24,7 @@ public class RecommendedOptionProjectedMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rank")
     public Long rank;
+
     public RecommendedOptionProjectedMetric withRank(Long rank) {
         this.rank = rank;
         return this;
@@ -31,9 +33,11 @@ public class RecommendedOptionProjectedMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedInstanceType")
     public String recommendedInstanceType;
+
     public RecommendedOptionProjectedMetric withRecommendedInstanceType(String recommendedInstanceType) {
         this.recommendedInstanceType = recommendedInstanceType;
         return this;
     }
     
+    public RecommendedOptionProjectedMetric(){}
 }

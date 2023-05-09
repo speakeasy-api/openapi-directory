@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DatasetContentVersionValue {
     @JsonProperty("datasetName")
     public String datasetName;
+
     public DatasetContentVersionValue withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
     
+    public DatasetContentVersionValue(@JsonProperty("datasetName") String datasetName) {
+        this.datasetName = datasetName;
+  }
 }

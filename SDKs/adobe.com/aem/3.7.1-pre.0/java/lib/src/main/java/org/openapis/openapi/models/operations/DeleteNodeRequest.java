@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNodeRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public DeleteNodeRequest withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +18,14 @@ public class DeleteNodeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public DeleteNodeRequest withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public DeleteNodeRequest(@JsonProperty("name") String name, @JsonProperty("path") String path) {
+        this.name = name;
+        this.path = path;
+  }
 }

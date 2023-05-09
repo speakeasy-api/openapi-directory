@@ -12,6 +12,7 @@ public class PaymentLinkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cost")
     public Double cost;
+
     public PaymentLinkItem withCost(Double cost) {
         this.cost = cost;
         return this;
@@ -20,6 +21,7 @@ public class PaymentLinkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscountAmount")
     public Double discountAmount;
+
     public PaymentLinkItem withDiscountAmount(Double discountAmount) {
         this.discountAmount = discountAmount;
         return this;
@@ -28,6 +30,7 @@ public class PaymentLinkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscountPercentage")
     public Double discountPercentage;
+
     public PaymentLinkItem withDiscountPercentage(Double discountPercentage) {
         this.discountPercentage = discountPercentage;
         return this;
@@ -36,6 +39,7 @@ public class PaymentLinkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public PaymentLinkItem withId(Integer id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class PaymentLinkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentLinkId")
     public Integer paymentLinkId;
+
     public PaymentLinkItem withPaymentLinkId(Integer paymentLinkId) {
         this.paymentLinkId = paymentLinkId;
         return this;
@@ -52,6 +57,7 @@ public class PaymentLinkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quantity")
     public Double quantity;
+
     public PaymentLinkItem withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
@@ -60,6 +66,7 @@ public class PaymentLinkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubTotalAmount")
     public Double subTotalAmount;
+
     public PaymentLinkItem withSubTotalAmount(Double subTotalAmount) {
         this.subTotalAmount = subTotalAmount;
         return this;
@@ -68,6 +75,7 @@ public class PaymentLinkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tax")
     public Tax tax;
+
     public PaymentLinkItem withTax(Tax tax) {
         this.tax = tax;
         return this;
@@ -76,6 +84,7 @@ public class PaymentLinkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxAmount")
     public Double taxAmount;
+
     public PaymentLinkItem withTaxAmount(Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
@@ -84,6 +93,7 @@ public class PaymentLinkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxId")
     public Integer taxId;
+
     public PaymentLinkItem withTaxId(Integer taxId) {
         this.taxId = taxId;
         return this;
@@ -92,6 +102,7 @@ public class PaymentLinkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxPercentage")
     public Double taxPercentage;
+
     public PaymentLinkItem withTaxPercentage(Double taxPercentage) {
         this.taxPercentage = taxPercentage;
         return this;
@@ -100,6 +111,7 @@ public class PaymentLinkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalAmount")
     public Double totalAmount;
+
     public PaymentLinkItem withTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -108,6 +120,7 @@ public class PaymentLinkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkType")
     public WorkType workType;
+
     public PaymentLinkItem withWorkType(WorkType workType) {
         this.workType = workType;
         return this;
@@ -116,9 +129,11 @@ public class PaymentLinkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkTypeId")
     public Integer workTypeId;
+
     public PaymentLinkItem withWorkTypeId(Integer workTypeId) {
         this.workTypeId = workTypeId;
         return this;
     }
     
+    public PaymentLinkItem(){}
 }

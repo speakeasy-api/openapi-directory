@@ -18,6 +18,7 @@ public class PullMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public PullMessage withPayload(String payload) {
         this.payload = payload;
         return this;
@@ -29,9 +30,11 @@ public class PullMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public PullMessage withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public PullMessage(){}
 }

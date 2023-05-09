@@ -15,6 +15,7 @@ public class ReplaceConversation200ApplicationJSON {
      */
     @JsonProperty("href")
     public String href;
+
     public ReplaceConversation200ApplicationJSON withHref(String href) {
         this.href = href;
         return this;
@@ -25,9 +26,14 @@ public class ReplaceConversation200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public ReplaceConversation200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ReplaceConversation200ApplicationJSON(@JsonProperty("href") String href, @JsonProperty("id") String id) {
+        this.href = href;
+        this.id = id;
+  }
 }

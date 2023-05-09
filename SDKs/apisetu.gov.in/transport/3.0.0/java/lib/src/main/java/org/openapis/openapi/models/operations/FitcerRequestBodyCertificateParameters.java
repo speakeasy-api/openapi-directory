@@ -12,6 +12,7 @@ public class FitcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public FitcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class FitcerRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public FitcerRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -32,6 +34,7 @@ public class FitcerRequestBodyCertificateParameters {
      */
     @JsonProperty("chasis_no")
     public String chasisNo;
+
     public FitcerRequestBodyCertificateParameters withChasisNo(String chasisNo) {
         this.chasisNo = chasisNo;
         return this;
@@ -42,6 +45,7 @@ public class FitcerRequestBodyCertificateParameters {
      */
     @JsonProperty("reg_no")
     public String regNo;
+
     public FitcerRequestBodyCertificateParameters withRegNo(String regNo) {
         this.regNo = regNo;
         return this;
@@ -52,9 +56,17 @@ public class FitcerRequestBodyCertificateParameters {
      */
     @JsonProperty("swd_name")
     public String swdName;
+
     public FitcerRequestBodyCertificateParameters withSwdName(String swdName) {
         this.swdName = swdName;
         return this;
     }
     
+    public FitcerRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("UID") String uid, @JsonProperty("chasis_no") String chasisNo, @JsonProperty("reg_no") String regNo, @JsonProperty("swd_name") String swdName) {
+        this.fullName = fullName;
+        this.uid = uid;
+        this.chasisNo = chasisNo;
+        this.regNo = regNo;
+        this.swdName = swdName;
+  }
 }

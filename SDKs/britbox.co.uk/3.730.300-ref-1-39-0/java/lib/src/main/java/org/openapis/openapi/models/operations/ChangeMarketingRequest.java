@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeMarketingRequest {
@@ -12,6 +13,7 @@ public class ChangeMarketingRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItvChangeMarketingRequest itvChangeMarketingRequest;
+
     public ChangeMarketingRequest withItvChangeMarketingRequest(org.openapis.openapi.models.shared.ItvChangeMarketingRequest itvChangeMarketingRequest) {
         this.itvChangeMarketingRequest = itvChangeMarketingRequest;
         return this;
@@ -42,6 +44,7 @@ public class ChangeMarketingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public ChangeMarketingRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -62,9 +65,13 @@ public class ChangeMarketingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public ChangeMarketingRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public ChangeMarketingRequest(@JsonProperty("ItvChangeMarketingRequest") org.openapis.openapi.models.shared.ItvChangeMarketingRequest itvChangeMarketingRequest) {
+        this.itvChangeMarketingRequest = itvChangeMarketingRequest;
+  }
 }

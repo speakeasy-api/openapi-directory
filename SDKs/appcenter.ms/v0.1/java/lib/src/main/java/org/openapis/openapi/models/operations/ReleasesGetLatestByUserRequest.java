@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetLatestByUserRequest {
@@ -12,6 +13,7 @@ public class ReleasesGetLatestByUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ReleasesGetLatestByUserRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class ReleasesGetLatestByUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_install_page")
     public Boolean isInstallPage;
+
     public ReleasesGetLatestByUserRequest withIsInstallPage(Boolean isInstallPage) {
         this.isInstallPage = isInstallPage;
         return this;
@@ -32,6 +35,7 @@ public class ReleasesGetLatestByUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ReleasesGetLatestByUserRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -42,6 +46,7 @@ public class ReleasesGetLatestByUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public String releaseId;
+
     public ReleasesGetLatestByUserRequest withReleaseId(String releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -52,9 +57,15 @@ public class ReleasesGetLatestByUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=udid")
     public String udid;
+
     public ReleasesGetLatestByUserRequest withUdid(String udid) {
         this.udid = udid;
         return this;
     }
     
+    public ReleasesGetLatestByUserRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("release_id") String releaseId) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.releaseId = releaseId;
+  }
 }

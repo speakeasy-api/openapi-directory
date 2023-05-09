@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActivateEventSourceResponse {
@@ -12,6 +13,7 @@ public class ActivateEventSourceResponse {
      */
     
     public Object concurrentModificationException;
+
     public ActivateEventSourceResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class ActivateEventSourceResponse {
     
     
     public String contentType;
+
     public ActivateEventSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ActivateEventSourceResponse {
      */
     
     public Object internalException;
+
     public ActivateEventSourceResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class ActivateEventSourceResponse {
      */
     
     public Object invalidStateException;
+
     public ActivateEventSourceResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class ActivateEventSourceResponse {
      */
     
     public Object operationDisabledException;
+
     public ActivateEventSourceResponse withOperationDisabledException(Object operationDisabledException) {
         this.operationDisabledException = operationDisabledException;
         return this;
@@ -59,6 +65,7 @@ public class ActivateEventSourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ActivateEventSourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ActivateEventSourceResponse {
     
     
     public Integer statusCode;
+
     public ActivateEventSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ActivateEventSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActivateEventSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ActivateEventSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

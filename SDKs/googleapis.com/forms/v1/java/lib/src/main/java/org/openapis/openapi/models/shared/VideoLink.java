@@ -18,6 +18,7 @@ public class VideoLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayText")
     public String displayText;
+
     public VideoLink withDisplayText(String displayText) {
         this.displayText = displayText;
         return this;
@@ -29,9 +30,11 @@ public class VideoLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("youtubeUri")
     public String youtubeUri;
+
     public VideoLink withYoutubeUri(String youtubeUri) {
         this.youtubeUri = youtubeUri;
         return this;
     }
     
+    public VideoLink(){}
 }

@@ -12,9 +12,13 @@ public class ActivateAnomalyDetectorRequestBody {
      */
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public ActivateAnomalyDetectorRequestBody withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
     }
     
+    public ActivateAnomalyDetectorRequestBody(@JsonProperty("AnomalyDetectorArn") String anomalyDetectorArn) {
+        this.anomalyDetectorArn = anomalyDetectorArn;
+  }
 }

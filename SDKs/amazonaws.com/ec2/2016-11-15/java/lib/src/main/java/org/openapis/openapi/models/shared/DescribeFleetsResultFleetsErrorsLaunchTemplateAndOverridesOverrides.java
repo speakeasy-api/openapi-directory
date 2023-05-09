@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides {
     
     public String availabilityZone;
+
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides
     
     
     public String imageId;
+
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides
     
     
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceRequirements instanceRequirements;
+
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides withInstanceRequirements(DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceRequirements instanceRequirements) {
         this.instanceRequirements = instanceRequirements;
         return this;
@@ -33,6 +36,7 @@ public class DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides
     
     
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum instanceType;
+
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides withInstanceType(DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -40,6 +44,7 @@ public class DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides
     
     
     public String maxPrice;
+
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides withMaxPrice(String maxPrice) {
         this.maxPrice = maxPrice;
         return this;
@@ -47,6 +52,7 @@ public class DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides
     
     
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesPlacement placement;
+
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides withPlacement(DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesPlacement placement) {
         this.placement = placement;
         return this;
@@ -54,6 +60,7 @@ public class DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides
     
     
     public Double priority;
+
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides withPriority(Double priority) {
         this.priority = priority;
         return this;
@@ -61,6 +68,7 @@ public class DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides
     
     
     public String subnetId;
+
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -68,9 +76,11 @@ public class DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides
     
     
     public Double weightedCapacity;
+
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides withWeightedCapacity(Double weightedCapacity) {
         this.weightedCapacity = weightedCapacity;
         return this;
     }
     
+    public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides(){}
 }

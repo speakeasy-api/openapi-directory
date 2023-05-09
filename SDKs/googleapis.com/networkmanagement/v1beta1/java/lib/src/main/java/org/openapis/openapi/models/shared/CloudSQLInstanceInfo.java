@@ -18,6 +18,7 @@ public class CloudSQLInstanceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CloudSQLInstanceInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class CloudSQLInstanceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIp")
     public String externalIp;
+
     public CloudSQLInstanceInfo withExternalIp(String externalIp) {
         this.externalIp = externalIp;
         return this;
@@ -40,6 +42,7 @@ public class CloudSQLInstanceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalIp")
     public String internalIp;
+
     public CloudSQLInstanceInfo withInternalIp(String internalIp) {
         this.internalIp = internalIp;
         return this;
@@ -51,6 +54,7 @@ public class CloudSQLInstanceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkUri")
     public String networkUri;
+
     public CloudSQLInstanceInfo withNetworkUri(String networkUri) {
         this.networkUri = networkUri;
         return this;
@@ -62,6 +66,7 @@ public class CloudSQLInstanceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public CloudSQLInstanceInfo withRegion(String region) {
         this.region = region;
         return this;
@@ -73,9 +78,11 @@ public class CloudSQLInstanceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public CloudSQLInstanceInfo withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public CloudSQLInstanceInfo(){}
 }

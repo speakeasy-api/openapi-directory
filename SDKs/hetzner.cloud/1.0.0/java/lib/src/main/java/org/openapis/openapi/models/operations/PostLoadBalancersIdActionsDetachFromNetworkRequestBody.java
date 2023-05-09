@@ -12,9 +12,13 @@ public class PostLoadBalancersIdActionsDetachFromNetworkRequestBody {
      */
     @JsonProperty("network")
     public Double network;
+
     public PostLoadBalancersIdActionsDetachFromNetworkRequestBody withNetwork(Double network) {
         this.network = network;
         return this;
     }
     
+    public PostLoadBalancersIdActionsDetachFromNetworkRequestBody(@JsonProperty("network") Double network) {
+        this.network = network;
+  }
 }

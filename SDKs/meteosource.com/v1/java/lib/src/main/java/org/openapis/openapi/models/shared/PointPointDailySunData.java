@@ -20,6 +20,7 @@ public class PointPointDailySunData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("always_down")
     public Boolean alwaysDown;
+
     public PointPointDailySunData withAlwaysDown(Boolean alwaysDown) {
         this.alwaysDown = alwaysDown;
         return this;
@@ -31,6 +32,7 @@ public class PointPointDailySunData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("always_up")
     public Boolean alwaysUp;
+
     public PointPointDailySunData withAlwaysUp(Boolean alwaysUp) {
         this.alwaysUp = alwaysUp;
         return this;
@@ -44,6 +46,7 @@ public class PointPointDailySunData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("rise")
     public OffsetDateTime rise;
+
     public PointPointDailySunData withRise(OffsetDateTime rise) {
         this.rise = rise;
         return this;
@@ -57,9 +60,11 @@ public class PointPointDailySunData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("set")
     public OffsetDateTime set;
+
     public PointPointDailySunData withSet(OffsetDateTime set) {
         this.set = set;
         return this;
     }
     
+    public PointPointDailySunData(){}
 }

@@ -15,6 +15,7 @@ public class ServiceActionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Definition")
     public java.util.Map<String, String> definition;
+
     public ServiceActionDetail withDefinition(java.util.Map<String, String> definition) {
         this.definition = definition;
         return this;
@@ -23,9 +24,11 @@ public class ServiceActionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceActionSummary")
     public ServiceActionSummary serviceActionSummary;
+
     public ServiceActionDetail withServiceActionSummary(ServiceActionSummary serviceActionSummary) {
         this.serviceActionSummary = serviceActionSummary;
         return this;
     }
     
+    public ServiceActionDetail(){}
 }

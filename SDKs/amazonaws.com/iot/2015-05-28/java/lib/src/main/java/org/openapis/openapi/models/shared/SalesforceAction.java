@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SalesforceAction {
     @JsonProperty("token")
     public String token;
+
     public SalesforceAction withToken(String token) {
         this.token = token;
         return this;
@@ -19,9 +20,14 @@ public class SalesforceAction {
     
     @JsonProperty("url")
     public String url;
+
     public SalesforceAction withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SalesforceAction(@JsonProperty("token") String token, @JsonProperty("url") String url) {
+        this.token = token;
+        this.url = url;
+  }
 }

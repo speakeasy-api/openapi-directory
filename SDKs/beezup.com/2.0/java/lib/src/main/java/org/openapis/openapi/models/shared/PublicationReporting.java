@@ -15,6 +15,7 @@ public class PublicationReporting {
      */
     @JsonProperty("feeds")
     public PublicationFeedReporting[] feeds;
+
     public PublicationReporting withFeeds(PublicationFeedReporting[] feeds) {
         this.feeds = feeds;
         return this;
@@ -25,9 +26,14 @@ public class PublicationReporting {
      */
     @JsonProperty("publicationType")
     public PublicationTypeEnum publicationType;
+
     public PublicationReporting withPublicationType(PublicationTypeEnum publicationType) {
         this.publicationType = publicationType;
         return this;
     }
     
+    public PublicationReporting(@JsonProperty("feeds") PublicationFeedReporting[] feeds, @JsonProperty("publicationType") PublicationTypeEnum publicationType) {
+        this.feeds = feeds;
+        this.publicationType = publicationType;
+  }
 }

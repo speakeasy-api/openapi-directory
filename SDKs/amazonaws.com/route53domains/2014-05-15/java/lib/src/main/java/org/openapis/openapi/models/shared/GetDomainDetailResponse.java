@@ -20,6 +20,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AbuseContactEmail")
     public String abuseContactEmail;
+
     public GetDomainDetailResponse withAbuseContactEmail(String abuseContactEmail) {
         this.abuseContactEmail = abuseContactEmail;
         return this;
@@ -28,6 +29,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AbuseContactPhone")
     public String abuseContactPhone;
+
     public GetDomainDetailResponse withAbuseContactPhone(String abuseContactPhone) {
         this.abuseContactPhone = abuseContactPhone;
         return this;
@@ -36,6 +38,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdminContact")
     public ContactDetail adminContact;
+
     public GetDomainDetailResponse withAdminContact(ContactDetail adminContact) {
         this.adminContact = adminContact;
         return this;
@@ -44,6 +47,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdminPrivacy")
     public Boolean adminPrivacy;
+
     public GetDomainDetailResponse withAdminPrivacy(Boolean adminPrivacy) {
         this.adminPrivacy = adminPrivacy;
         return this;
@@ -52,6 +56,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoRenew")
     public Boolean autoRenew;
+
     public GetDomainDetailResponse withAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
@@ -62,6 +67,7 @@ public class GetDomainDetailResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public GetDomainDetailResponse withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -70,6 +76,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsSec")
     public String dnsSec;
+
     public GetDomainDetailResponse withDnsSec(String dnsSec) {
         this.dnsSec = dnsSec;
         return this;
@@ -78,6 +85,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnssecKeys")
     public DnssecKey[] dnssecKeys;
+
     public GetDomainDetailResponse withDnssecKeys(DnssecKey[] dnssecKeys) {
         this.dnssecKeys = dnssecKeys;
         return this;
@@ -86,6 +94,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public GetDomainDetailResponse withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -96,6 +105,7 @@ public class GetDomainDetailResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationDate")
     public OffsetDateTime expirationDate;
+
     public GetDomainDetailResponse withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -104,6 +114,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Nameservers")
     public Nameserver[] nameservers;
+
     public GetDomainDetailResponse withNameservers(Nameserver[] nameservers) {
         this.nameservers = nameservers;
         return this;
@@ -112,6 +123,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistrantContact")
     public ContactDetail registrantContact;
+
     public GetDomainDetailResponse withRegistrantContact(ContactDetail registrantContact) {
         this.registrantContact = registrantContact;
         return this;
@@ -120,6 +132,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistrantPrivacy")
     public Boolean registrantPrivacy;
+
     public GetDomainDetailResponse withRegistrantPrivacy(Boolean registrantPrivacy) {
         this.registrantPrivacy = registrantPrivacy;
         return this;
@@ -128,6 +141,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistrarName")
     public String registrarName;
+
     public GetDomainDetailResponse withRegistrarName(String registrarName) {
         this.registrarName = registrarName;
         return this;
@@ -136,6 +150,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistrarUrl")
     public String registrarUrl;
+
     public GetDomainDetailResponse withRegistrarUrl(String registrarUrl) {
         this.registrarUrl = registrarUrl;
         return this;
@@ -144,6 +159,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryDomainId")
     public String registryDomainId;
+
     public GetDomainDetailResponse withRegistryDomainId(String registryDomainId) {
         this.registryDomainId = registryDomainId;
         return this;
@@ -152,6 +168,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reseller")
     public String reseller;
+
     public GetDomainDetailResponse withReseller(String reseller) {
         this.reseller = reseller;
         return this;
@@ -160,6 +177,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusList")
     public String[] statusList;
+
     public GetDomainDetailResponse withStatusList(String[] statusList) {
         this.statusList = statusList;
         return this;
@@ -168,6 +186,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TechContact")
     public ContactDetail techContact;
+
     public GetDomainDetailResponse withTechContact(ContactDetail techContact) {
         this.techContact = techContact;
         return this;
@@ -176,6 +195,7 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TechPrivacy")
     public Boolean techPrivacy;
+
     public GetDomainDetailResponse withTechPrivacy(Boolean techPrivacy) {
         this.techPrivacy = techPrivacy;
         return this;
@@ -186,6 +206,7 @@ public class GetDomainDetailResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedDate")
     public OffsetDateTime updatedDate;
+
     public GetDomainDetailResponse withUpdatedDate(OffsetDateTime updatedDate) {
         this.updatedDate = updatedDate;
         return this;
@@ -194,9 +215,11 @@ public class GetDomainDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhoIsServer")
     public String whoIsServer;
+
     public GetDomainDetailResponse withWhoIsServer(String whoIsServer) {
         this.whoIsServer = whoIsServer;
         return this;
     }
     
+    public GetDomainDetailResponse(){}
 }

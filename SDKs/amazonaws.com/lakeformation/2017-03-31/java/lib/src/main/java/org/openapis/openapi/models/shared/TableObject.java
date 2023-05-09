@@ -15,6 +15,7 @@ public class TableObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ETag")
     public String eTag;
+
     public TableObject withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -23,6 +24,7 @@ public class TableObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public Long size;
+
     public TableObject withSize(Long size) {
         this.size = size;
         return this;
@@ -31,9 +33,11 @@ public class TableObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Uri")
     public String uri;
+
     public TableObject withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public TableObject(){}
 }

@@ -18,6 +18,7 @@ public class PackageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFeatures")
     public java.util.Map<String, Object> customFeatures;
+
     public PackageEntity withCustomFeatures(java.util.Map<String, Object> customFeatures) {
         this.customFeatures = customFeatures;
         return this;
@@ -29,6 +30,7 @@ public class PackageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageBody")
     public String packageBody;
+
     public PackageEntity withPackageBody(String packageBody) {
         this.packageBody = packageBody;
         return this;
@@ -40,9 +42,11 @@ public class PackageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageSqlCode")
     public String packageSqlCode;
+
     public PackageEntity withPackageSqlCode(String packageSqlCode) {
         this.packageSqlCode = packageSqlCode;
         return this;
     }
     
+    public PackageEntity(){}
 }

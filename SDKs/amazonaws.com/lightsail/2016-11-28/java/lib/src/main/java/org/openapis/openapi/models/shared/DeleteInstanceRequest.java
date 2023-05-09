@@ -12,6 +12,7 @@ public class DeleteInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceDeleteAddOns")
     public Boolean forceDeleteAddOns;
+
     public DeleteInstanceRequest withForceDeleteAddOns(Boolean forceDeleteAddOns) {
         this.forceDeleteAddOns = forceDeleteAddOns;
         return this;
@@ -19,9 +20,13 @@ public class DeleteInstanceRequest {
     
     @JsonProperty("instanceName")
     public String instanceName;
+
     public DeleteInstanceRequest withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
     
+    public DeleteInstanceRequest(@JsonProperty("instanceName") String instanceName) {
+        this.instanceName = instanceName;
+  }
 }

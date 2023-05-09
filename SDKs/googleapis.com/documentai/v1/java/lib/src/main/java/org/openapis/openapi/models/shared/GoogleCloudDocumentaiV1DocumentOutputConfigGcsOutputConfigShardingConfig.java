@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfigShardingC
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagesOverlap")
     public Integer pagesOverlap;
+
     public GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfigShardingConfig withPagesOverlap(Integer pagesOverlap) {
         this.pagesOverlap = pagesOverlap;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfigShardingC
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagesPerShard")
     public Integer pagesPerShard;
+
     public GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfigShardingConfig withPagesPerShard(Integer pagesPerShard) {
         this.pagesPerShard = pagesPerShard;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfigShardingConfig(){}
 }

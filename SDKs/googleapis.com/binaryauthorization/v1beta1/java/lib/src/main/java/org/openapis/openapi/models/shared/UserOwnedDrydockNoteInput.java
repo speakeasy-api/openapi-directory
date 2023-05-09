@@ -18,6 +18,7 @@ public class UserOwnedDrydockNoteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noteReference")
     public String noteReference;
+
     public UserOwnedDrydockNoteInput withNoteReference(String noteReference) {
         this.noteReference = noteReference;
         return this;
@@ -29,9 +30,11 @@ public class UserOwnedDrydockNoteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKeys")
     public AttestorPublicKey[] publicKeys;
+
     public UserOwnedDrydockNoteInput withPublicKeys(AttestorPublicKey[] publicKeys) {
         this.publicKeys = publicKeys;
         return this;
     }
     
+    public UserOwnedDrydockNoteInput(){}
 }

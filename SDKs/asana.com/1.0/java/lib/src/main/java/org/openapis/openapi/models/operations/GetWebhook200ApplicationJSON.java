@@ -15,9 +15,11 @@ public class GetWebhook200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.WebhookResponse data;
+
     public GetWebhook200ApplicationJSON withData(org.openapis.openapi.models.shared.WebhookResponse data) {
         this.data = data;
         return this;
     }
     
+    public GetWebhook200ApplicationJSON(){}
 }

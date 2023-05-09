@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetObservationsByCodesRequest {
@@ -12,6 +13,7 @@ public class GetObservationsByCodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
     public String[] code;
+
     public GetObservationsByCodesRequest withCode(String[] code) {
         this.code = code;
         return this;
@@ -22,6 +24,7 @@ public class GetObservationsByCodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetObservationsByCodesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class GetObservationsByCodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetObservationsByCodesRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -42,6 +46,7 @@ public class GetObservationsByCodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderDirection")
     public String orderDirection;
+
     public GetObservationsByCodesRequest withOrderDirection(String orderDirection) {
         this.orderDirection = orderDirection;
         return this;
@@ -52,9 +57,17 @@ public class GetObservationsByCodesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public Long userId;
+
     public GetObservationsByCodesRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetObservationsByCodesRequest(@JsonProperty("code") String[] code, @JsonProperty("limit") Long limit, @JsonProperty("offset") Long offset, @JsonProperty("orderDirection") String orderDirection, @JsonProperty("userId") Long userId) {
+        this.code = code;
+        this.limit = limit;
+        this.offset = offset;
+        this.orderDirection = orderDirection;
+        this.userId = userId;
+  }
 }

@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class VehicleRegistrationSchemaIssuedTo {
     
     public VehicleRegistrationSchemaIssuedToPerson person;
+
     public VehicleRegistrationSchemaIssuedTo withPerson(VehicleRegistrationSchemaIssuedToPerson person) {
         this.person = person;
         return this;
     }
     
+    public VehicleRegistrationSchemaIssuedTo(@JsonProperty("Person") VehicleRegistrationSchemaIssuedToPerson person) {
+        this.person = person;
+  }
 }

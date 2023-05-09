@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BooksVolumesListRequest {
@@ -12,6 +13,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BooksVolumesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BooksVolumesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BooksVolumesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BooksVolumesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=download")
     public BooksVolumesListDownloadEnum download;
+
     public BooksVolumesListRequest withDownload(BooksVolumesListDownloadEnum download) {
         this.download = download;
         return this;
@@ -62,6 +68,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BooksVolumesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public BooksVolumesListFilterEnum filter;
+
     public BooksVolumesListRequest withFilter(BooksVolumesListFilterEnum filter) {
         this.filter = filter;
         return this;
@@ -82,6 +90,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BooksVolumesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=langRestrict")
     public String langRestrict;
+
     public BooksVolumesListRequest withLangRestrict(String langRestrict) {
         this.langRestrict = langRestrict;
         return this;
@@ -102,6 +112,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=libraryRestrict")
     public BooksVolumesListLibraryRestrictEnum libraryRestrict;
+
     public BooksVolumesListRequest withLibraryRestrict(BooksVolumesListLibraryRestrictEnum libraryRestrict) {
         this.libraryRestrict = libraryRestrict;
         return this;
@@ -112,6 +123,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxAllowedMaturityRating")
     public BooksVolumesListMaxAllowedMaturityRatingEnum maxAllowedMaturityRating;
+
     public BooksVolumesListRequest withMaxAllowedMaturityRating(BooksVolumesListMaxAllowedMaturityRatingEnum maxAllowedMaturityRating) {
         this.maxAllowedMaturityRating = maxAllowedMaturityRating;
         return this;
@@ -122,6 +134,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public BooksVolumesListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -132,6 +145,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BooksVolumesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -142,6 +156,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public BooksVolumesListOrderByEnum orderBy;
+
     public BooksVolumesListRequest withOrderBy(BooksVolumesListOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -152,6 +167,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partner")
     public String partner;
+
     public BooksVolumesListRequest withPartner(String partner) {
         this.partner = partner;
         return this;
@@ -162,6 +178,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BooksVolumesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -172,6 +189,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=printType")
     public BooksVolumesListPrintTypeEnum printType;
+
     public BooksVolumesListRequest withPrintType(BooksVolumesListPrintTypeEnum printType) {
         this.printType = printType;
         return this;
@@ -182,6 +200,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
     public BooksVolumesListProjectionEnum projection;
+
     public BooksVolumesListRequest withProjection(BooksVolumesListProjectionEnum projection) {
         this.projection = projection;
         return this;
@@ -192,6 +211,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public BooksVolumesListRequest withQ(String q) {
         this.q = q;
         return this;
@@ -202,6 +222,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BooksVolumesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -212,6 +233,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showPreorders")
     public Boolean showPreorders;
+
     public BooksVolumesListRequest withShowPreorders(Boolean showPreorders) {
         this.showPreorders = showPreorders;
         return this;
@@ -222,6 +244,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public String source;
+
     public BooksVolumesListRequest withSource(String source) {
         this.source = source;
         return this;
@@ -232,6 +255,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public Long startIndex;
+
     public BooksVolumesListRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -242,6 +266,7 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BooksVolumesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -252,9 +277,13 @@ public class BooksVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BooksVolumesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public BooksVolumesListRequest(@JsonProperty("q") String q) {
+        this.q = q;
+  }
 }

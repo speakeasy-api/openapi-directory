@@ -15,6 +15,7 @@ public class OrderinvoicesCreateChargeInvoiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceId")
     public String invoiceId;
+
     public OrderinvoicesCreateChargeInvoiceRequest withInvoiceId(String invoiceId) {
         this.invoiceId = invoiceId;
         return this;
@@ -23,6 +24,7 @@ public class OrderinvoicesCreateChargeInvoiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceSummary")
     public InvoiceSummary invoiceSummary;
+
     public OrderinvoicesCreateChargeInvoiceRequest withInvoiceSummary(InvoiceSummary invoiceSummary) {
         this.invoiceSummary = invoiceSummary;
         return this;
@@ -34,6 +36,7 @@ public class OrderinvoicesCreateChargeInvoiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemInvoices")
     public ShipmentInvoiceLineItemInvoice[] lineItemInvoices;
+
     public OrderinvoicesCreateChargeInvoiceRequest withLineItemInvoices(ShipmentInvoiceLineItemInvoice[] lineItemInvoices) {
         this.lineItemInvoices = lineItemInvoices;
         return this;
@@ -45,6 +48,7 @@ public class OrderinvoicesCreateChargeInvoiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public OrderinvoicesCreateChargeInvoiceRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -56,9 +60,11 @@ public class OrderinvoicesCreateChargeInvoiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipmentGroupId")
     public String shipmentGroupId;
+
     public OrderinvoicesCreateChargeInvoiceRequest withShipmentGroupId(String shipmentGroupId) {
         this.shipmentGroupId = shipmentGroupId;
         return this;
     }
     
+    public OrderinvoicesCreateChargeInvoiceRequest(){}
 }

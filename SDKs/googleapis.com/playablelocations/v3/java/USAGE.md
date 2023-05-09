@@ -3,15 +3,14 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.PlayablelocationsLogImpressionsRequest;
 import org.openapis.openapi.models.operations.PlayablelocationsLogImpressionsResponse;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.GoogleMapsPlayablelocationsV3LogImpressionsRequest;
-import org.openapis.openapi.models.shared.GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum;
 import org.openapis.openapi.models.shared.GoogleMapsPlayablelocationsV3Impression;
-import org.openapis.openapi.models.shared.GoogleMapsUnityClientInfoPlatformEnum;
+import org.openapis.openapi.models.shared.GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum;
+import org.openapis.openapi.models.shared.GoogleMapsPlayablelocationsV3LogImpressionsRequest;
 import org.openapis.openapi.models.shared.GoogleMapsUnityClientInfo;
+import org.openapis.openapi.models.shared.GoogleMapsUnityClientInfoPlatformEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -21,7 +20,7 @@ public class Application {
                 .build();
 
             PlayablelocationsLogImpressionsRequest req = new PlayablelocationsLogImpressionsRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 googleMapsPlayablelocationsV3LogImpressionsRequest = new GoogleMapsPlayablelocationsV3LogImpressionsRequest() {{
                     clientInfo = new GoogleMapsUnityClientInfo() {{
                         apiClient = "provident";
@@ -31,29 +30,29 @@ public class Application {
                         languageCode = "nulla";
                         operatingSystem = "corrupti";
                         operatingSystemBuild = "illum";
-                        platform = "WINDOWS";
-                    }};
+                        platform = GoogleMapsUnityClientInfoPlatformEnum.WINDOWS;
+                    }};;
                     impressions = new org.openapis.openapi.models.shared.GoogleMapsPlayablelocationsV3Impression[]{{
                         add(new GoogleMapsPlayablelocationsV3Impression() {{
                             gameObjectType = 645894;
-                            impressionType = "PRESENTED";
+                            impressionType = GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum.PRESENTED;
                             locationName = "iure";
                         }}),
                         add(new GoogleMapsPlayablelocationsV3Impression() {{
                             gameObjectType = 297534;
-                            impressionType = "INTERACTED";
+                            impressionType = GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum.INTERACTED;
                             locationName = "ipsa";
                         }}),
                         add(new GoogleMapsPlayablelocationsV3Impression() {{
                             gameObjectType = 963663;
-                            impressionType = "IMPRESSION_TYPE_UNSPECIFIED";
+                            impressionType = GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum.IMPRESSION_TYPE_UNSPECIFIED;
                             locationName = "suscipit";
                         }}),
                     }};
                     requestId = "molestiae";
-                }};
+                }};;
                 accessToken = "minus";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "voluptatum";
                 fields = "iusto";
                 key = "excepturi";
@@ -62,15 +61,17 @@ public class Application {
                 quotaUser = "recusandae";
                 uploadType = "temporibus";
                 uploadProtocol = "ab";
-            }}            
+            }};            
 
             PlayablelocationsLogImpressionsResponse res = sdk.v3.playablelocationsLogImpressions(req);
 
-            if (res.googleMapsPlayablelocationsV3LogImpressionsResponse.isPresent()) {
+            if (res.googleMapsPlayablelocationsV3LogImpressionsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

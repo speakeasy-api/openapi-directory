@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAnnouncements400ApplicationJSONErrors {
     @JsonProperty("field")
     public String field;
+
     public PostAnnouncements400ApplicationJSONErrors withField(String field) {
         this.field = field;
         return this;
@@ -16,9 +17,14 @@ public class PostAnnouncements400ApplicationJSONErrors {
     
     @JsonProperty("message")
     public String[] message;
+
     public PostAnnouncements400ApplicationJSONErrors withMessage(String[] message) {
         this.message = message;
         return this;
     }
     
+    public PostAnnouncements400ApplicationJSONErrors(@JsonProperty("field") String field, @JsonProperty("message") String[] message) {
+        this.field = field;
+        this.message = message;
+  }
 }

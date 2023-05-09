@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDatacenters200ApplicationJSON {
     @JsonProperty("datacenters")
     public GetDatacenters200ApplicationJSONDatacenters[] datacenters;
+
     public GetDatacenters200ApplicationJSON withDatacenters(GetDatacenters200ApplicationJSONDatacenters[] datacenters) {
         this.datacenters = datacenters;
         return this;
@@ -22,9 +23,14 @@ public class GetDatacenters200ApplicationJSON {
      */
     @JsonProperty("recommendation")
     public Double recommendation;
+
     public GetDatacenters200ApplicationJSON withRecommendation(Double recommendation) {
         this.recommendation = recommendation;
         return this;
     }
     
+    public GetDatacenters200ApplicationJSON(@JsonProperty("datacenters") GetDatacenters200ApplicationJSONDatacenters[] datacenters, @JsonProperty("recommendation") Double recommendation) {
+        this.datacenters = datacenters;
+        this.recommendation = recommendation;
+  }
 }

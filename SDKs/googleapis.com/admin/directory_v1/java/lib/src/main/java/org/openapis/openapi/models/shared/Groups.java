@@ -18,6 +18,7 @@ public class Groups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Groups withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class Groups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public Group[] groups;
+
     public Groups withGroups(Group[] groups) {
         this.groups = groups;
         return this;
@@ -40,6 +42,7 @@ public class Groups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Groups withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class Groups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public Groups withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public Groups(){}
 }

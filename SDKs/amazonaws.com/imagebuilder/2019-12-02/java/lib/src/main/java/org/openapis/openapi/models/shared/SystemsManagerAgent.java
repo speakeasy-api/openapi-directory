@@ -15,9 +15,11 @@ public class SystemsManagerAgent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uninstallAfterBuild")
     public Boolean uninstallAfterBuild;
+
     public SystemsManagerAgent withUninstallAfterBuild(Boolean uninstallAfterBuild) {
         this.uninstallAfterBuild = uninstallAfterBuild;
         return this;
     }
     
+    public SystemsManagerAgent(){}
 }

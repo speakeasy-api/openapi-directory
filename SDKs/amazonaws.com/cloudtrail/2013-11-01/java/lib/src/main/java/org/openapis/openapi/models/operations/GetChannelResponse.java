@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChannelResponse {
@@ -12,6 +13,7 @@ public class GetChannelResponse {
      */
     
     public Object channelARNInvalidException;
+
     public GetChannelResponse withChannelARNInvalidException(Object channelARNInvalidException) {
         this.channelARNInvalidException = channelARNInvalidException;
         return this;
@@ -22,6 +24,7 @@ public class GetChannelResponse {
      */
     
     public Object channelNotFoundException;
+
     public GetChannelResponse withChannelNotFoundException(Object channelNotFoundException) {
         this.channelNotFoundException = channelNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetChannelResponse {
     
     
     public String contentType;
+
     public GetChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.GetChannelResponse getChannelResponse;
+
     public GetChannelResponse withGetChannelResponse(org.openapis.openapi.models.shared.GetChannelResponse getChannelResponse) {
         this.getChannelResponse = getChannelResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetChannelResponse {
      */
     
     public Object operationNotPermittedException;
+
     public GetChannelResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -56,6 +62,7 @@ public class GetChannelResponse {
     
     
     public Integer statusCode;
+
     public GetChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetChannelResponse {
      */
     
     public Object unsupportedOperationException;
+
     public GetChannelResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public GetChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

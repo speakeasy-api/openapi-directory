@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePortfolioTemplateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreatePortfolioTemplateRequestBodyInput requestBody;
+
     public CreatePortfolioTemplateRequest withRequestBody(CreatePortfolioTemplateRequestBodyInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class CreatePortfolioTemplateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public CreatePortfolioTemplateRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public CreatePortfolioTemplateRequest(@JsonProperty("RequestBody") CreatePortfolioTemplateRequestBodyInput requestBody, @JsonProperty("x-api-key") String xApiKey) {
+        this.requestBody = requestBody;
+        this.xApiKey = xApiKey;
+  }
 }

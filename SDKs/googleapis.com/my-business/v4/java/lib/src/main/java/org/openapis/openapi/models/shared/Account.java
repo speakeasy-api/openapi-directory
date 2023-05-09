@@ -18,6 +18,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountName")
     public String accountName;
+
     public Account withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -29,6 +30,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public Account withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -40,6 +42,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Account withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationInfo")
     public OrganizationInfo organizationInfo;
+
     public Account withOrganizationInfo(OrganizationInfo organizationInfo) {
         this.organizationInfo = organizationInfo;
         return this;
@@ -62,6 +66,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissionLevel")
     public AccountPermissionLevelEnum permissionLevel;
+
     public Account withPermissionLevel(AccountPermissionLevelEnum permissionLevel) {
         this.permissionLevel = permissionLevel;
         return this;
@@ -73,6 +78,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public AccountRoleEnum role;
+
     public Account withRole(AccountRoleEnum role) {
         this.role = role;
         return this;
@@ -84,6 +90,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public AccountState state;
+
     public Account withState(AccountState state) {
         this.state = state;
         return this;
@@ -95,9 +102,11 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AccountTypeEnum type;
+
     public Account withType(AccountTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Account(){}
 }

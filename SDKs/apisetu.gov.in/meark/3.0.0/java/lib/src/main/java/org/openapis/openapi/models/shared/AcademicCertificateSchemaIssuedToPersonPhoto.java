@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AcademicCertificateSchemaIssuedToPersonPhoto {
     
     public String format;
+
     public AcademicCertificateSchemaIssuedToPersonPhoto withFormat(String format) {
         this.format = format;
         return this;
     }
     
+    public AcademicCertificateSchemaIssuedToPersonPhoto(@JsonProperty("format") String format) {
+        this.format = format;
+  }
 }

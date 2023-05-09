@@ -18,6 +18,7 @@ public class ChainName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ChainName withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class ChainName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public ChainName withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
     }
     
+    public ChainName(){}
 }

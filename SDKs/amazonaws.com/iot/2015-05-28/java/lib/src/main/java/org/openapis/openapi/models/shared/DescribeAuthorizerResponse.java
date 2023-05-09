@@ -15,9 +15,11 @@ public class DescribeAuthorizerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizerDescription")
     public AuthorizerDescription authorizerDescription;
+
     public DescribeAuthorizerResponse withAuthorizerDescription(AuthorizerDescription authorizerDescription) {
         this.authorizerDescription = authorizerDescription;
         return this;
     }
     
+    public DescribeAuthorizerResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFileResponse {
@@ -12,6 +13,7 @@ public class DeleteFileResponse {
      */
     
     public Object branchDoesNotExistException;
+
     public DeleteFileResponse withBranchDoesNotExistException(Object branchDoesNotExistException) {
         this.branchDoesNotExistException = branchDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteFileResponse {
      */
     
     public Object branchNameIsTagNameException;
+
     public DeleteFileResponse withBranchNameIsTagNameException(Object branchNameIsTagNameException) {
         this.branchNameIsTagNameException = branchNameIsTagNameException;
         return this;
@@ -32,6 +35,7 @@ public class DeleteFileResponse {
      */
     
     public Object branchNameRequiredException;
+
     public DeleteFileResponse withBranchNameRequiredException(Object branchNameRequiredException) {
         this.branchNameRequiredException = branchNameRequiredException;
         return this;
@@ -42,6 +46,7 @@ public class DeleteFileResponse {
      */
     
     public Object commitMessageLengthExceededException;
+
     public DeleteFileResponse withCommitMessageLengthExceededException(Object commitMessageLengthExceededException) {
         this.commitMessageLengthExceededException = commitMessageLengthExceededException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFileResponse {
     
     
     public String contentType;
+
     public DeleteFileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class DeleteFileResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteFileOutput deleteFileOutput;
+
     public DeleteFileResponse withDeleteFileOutput(org.openapis.openapi.models.shared.DeleteFileOutput deleteFileOutput) {
         this.deleteFileOutput = deleteFileOutput;
         return this;
@@ -69,6 +76,7 @@ public class DeleteFileResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public DeleteFileResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteFileResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public DeleteFileResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -89,6 +98,7 @@ public class DeleteFileResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public DeleteFileResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -99,6 +109,7 @@ public class DeleteFileResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public DeleteFileResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -109,6 +120,7 @@ public class DeleteFileResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public DeleteFileResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -119,6 +131,7 @@ public class DeleteFileResponse {
      */
     
     public Object fileDoesNotExistException;
+
     public DeleteFileResponse withFileDoesNotExistException(Object fileDoesNotExistException) {
         this.fileDoesNotExistException = fileDoesNotExistException;
         return this;
@@ -129,6 +142,7 @@ public class DeleteFileResponse {
      */
     
     public Object invalidBranchNameException;
+
     public DeleteFileResponse withInvalidBranchNameException(Object invalidBranchNameException) {
         this.invalidBranchNameException = invalidBranchNameException;
         return this;
@@ -139,6 +153,7 @@ public class DeleteFileResponse {
      */
     
     public Object invalidEmailException;
+
     public DeleteFileResponse withInvalidEmailException(Object invalidEmailException) {
         this.invalidEmailException = invalidEmailException;
         return this;
@@ -149,6 +164,7 @@ public class DeleteFileResponse {
      */
     
     public Object invalidParentCommitIdException;
+
     public DeleteFileResponse withInvalidParentCommitIdException(Object invalidParentCommitIdException) {
         this.invalidParentCommitIdException = invalidParentCommitIdException;
         return this;
@@ -159,6 +175,7 @@ public class DeleteFileResponse {
      */
     
     public Object invalidPathException;
+
     public DeleteFileResponse withInvalidPathException(Object invalidPathException) {
         this.invalidPathException = invalidPathException;
         return this;
@@ -169,6 +186,7 @@ public class DeleteFileResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public DeleteFileResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -179,6 +197,7 @@ public class DeleteFileResponse {
      */
     
     public Object nameLengthExceededException;
+
     public DeleteFileResponse withNameLengthExceededException(Object nameLengthExceededException) {
         this.nameLengthExceededException = nameLengthExceededException;
         return this;
@@ -189,6 +208,7 @@ public class DeleteFileResponse {
      */
     
     public Object parentCommitDoesNotExistException;
+
     public DeleteFileResponse withParentCommitDoesNotExistException(Object parentCommitDoesNotExistException) {
         this.parentCommitDoesNotExistException = parentCommitDoesNotExistException;
         return this;
@@ -199,6 +219,7 @@ public class DeleteFileResponse {
      */
     
     public Object parentCommitIdOutdatedException;
+
     public DeleteFileResponse withParentCommitIdOutdatedException(Object parentCommitIdOutdatedException) {
         this.parentCommitIdOutdatedException = parentCommitIdOutdatedException;
         return this;
@@ -209,6 +230,7 @@ public class DeleteFileResponse {
      */
     
     public Object parentCommitIdRequiredException;
+
     public DeleteFileResponse withParentCommitIdRequiredException(Object parentCommitIdRequiredException) {
         this.parentCommitIdRequiredException = parentCommitIdRequiredException;
         return this;
@@ -219,6 +241,7 @@ public class DeleteFileResponse {
      */
     
     public Object pathRequiredException;
+
     public DeleteFileResponse withPathRequiredException(Object pathRequiredException) {
         this.pathRequiredException = pathRequiredException;
         return this;
@@ -229,6 +252,7 @@ public class DeleteFileResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public DeleteFileResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -239,6 +263,7 @@ public class DeleteFileResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public DeleteFileResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -246,6 +271,7 @@ public class DeleteFileResponse {
     
     
     public Integer statusCode;
+
     public DeleteFileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -253,9 +279,14 @@ public class DeleteFileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteFileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

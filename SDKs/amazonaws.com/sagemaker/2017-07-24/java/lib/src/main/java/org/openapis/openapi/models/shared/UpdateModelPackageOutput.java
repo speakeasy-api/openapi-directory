@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateModelPackageOutput {
     @JsonProperty("ModelPackageArn")
     public String modelPackageArn;
+
     public UpdateModelPackageOutput withModelPackageArn(String modelPackageArn) {
         this.modelPackageArn = modelPackageArn;
         return this;
     }
     
+    public UpdateModelPackageOutput(@JsonProperty("ModelPackageArn") String modelPackageArn) {
+        this.modelPackageArn = modelPackageArn;
+  }
 }

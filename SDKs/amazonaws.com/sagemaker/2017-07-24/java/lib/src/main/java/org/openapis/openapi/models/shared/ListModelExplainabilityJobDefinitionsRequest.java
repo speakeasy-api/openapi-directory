@@ -19,6 +19,7 @@ public class ListModelExplainabilityJobDefinitionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListModelExplainabilityJobDefinitionsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListModelExplainabilityJobDefinitionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListModelExplainabilityJobDefinitionsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListModelExplainabilityJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public ListModelExplainabilityJobDefinitionsRequest withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -45,6 +48,7 @@ public class ListModelExplainabilityJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListModelExplainabilityJobDefinitionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -53,6 +57,7 @@ public class ListModelExplainabilityJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListModelExplainabilityJobDefinitionsRequest withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -61,6 +66,7 @@ public class ListModelExplainabilityJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListModelExplainabilityJobDefinitionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -69,6 +75,7 @@ public class ListModelExplainabilityJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public MonitoringJobDefinitionSortKeyEnum sortBy;
+
     public ListModelExplainabilityJobDefinitionsRequest withSortBy(MonitoringJobDefinitionSortKeyEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -77,9 +84,11 @@ public class ListModelExplainabilityJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListModelExplainabilityJobDefinitionsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListModelExplainabilityJobDefinitionsRequest(){}
 }

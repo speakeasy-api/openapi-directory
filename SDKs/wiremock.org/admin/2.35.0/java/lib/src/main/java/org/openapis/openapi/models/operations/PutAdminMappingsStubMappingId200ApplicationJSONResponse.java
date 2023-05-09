@@ -15,6 +15,7 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalProxyRequestHeaders")
     public java.util.Map<String, Object> additionalProxyRequestHeaders;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponse withAdditionalProxyRequestHeaders(java.util.Map<String, Object> additionalProxyRequestHeaders) {
         this.additionalProxyRequestHeaders = additionalProxyRequestHeaders;
         return this;
@@ -26,6 +27,7 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base64Body")
     public String base64Body;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponse withBase64Body(String base64Body) {
         this.base64Body = base64Body;
         return this;
@@ -37,6 +39,7 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponse withBody(String body) {
         this.body = body;
         return this;
@@ -48,6 +51,7 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bodyFileName")
     public String bodyFileName;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponse withBodyFileName(String bodyFileName) {
         this.bodyFileName = bodyFileName;
         return this;
@@ -59,6 +63,7 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delayDistribution")
     public Object delayDistribution;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponse withDelayDistribution(Object delayDistribution) {
         this.delayDistribution = delayDistribution;
         return this;
@@ -70,6 +75,7 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fault")
     public PutAdminMappingsStubMappingId200ApplicationJSONResponseFaultEnum fault;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponse withFault(PutAdminMappingsStubMappingId200ApplicationJSONResponseFaultEnum fault) {
         this.fault = fault;
         return this;
@@ -81,6 +87,7 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedDelayMilliseconds")
     public Long fixedDelayMilliseconds;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponse withFixedDelayMilliseconds(Long fixedDelayMilliseconds) {
         this.fixedDelayMilliseconds = fixedDelayMilliseconds;
         return this;
@@ -92,6 +99,7 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromConfiguredStub")
     public Boolean fromConfiguredStub;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponse withFromConfiguredStub(Boolean fromConfiguredStub) {
         this.fromConfiguredStub = fromConfiguredStub;
         return this;
@@ -103,6 +111,7 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, Object> headers;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponse withHeaders(java.util.Map<String, Object> headers) {
         this.headers = headers;
         return this;
@@ -114,6 +123,7 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonBody")
     public java.util.Map<String, Object> jsonBody;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponse withJsonBody(java.util.Map<String, Object> jsonBody) {
         this.jsonBody = jsonBody;
         return this;
@@ -125,6 +135,7 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxyBaseUrl")
     public String proxyBaseUrl;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponse withProxyBaseUrl(String proxyBaseUrl) {
         this.proxyBaseUrl = proxyBaseUrl;
         return this;
@@ -136,6 +147,7 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponse withStatus(Long status) {
         this.status = status;
         return this;
@@ -147,6 +159,7 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -158,6 +171,7 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformerParameters")
     public java.util.Map<String, Object> transformerParameters;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponse withTransformerParameters(java.util.Map<String, Object> transformerParameters) {
         this.transformerParameters = transformerParameters;
         return this;
@@ -169,9 +183,11 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformers")
     public String[] transformers;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponse withTransformers(String[] transformers) {
         this.transformers = transformers;
         return this;
     }
     
+    public PutAdminMappingsStubMappingId200ApplicationJSONResponse(){}
 }

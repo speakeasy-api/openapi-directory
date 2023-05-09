@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeListenersInput {
     
     public String[] listenerArns;
+
     public DescribeListenersInput withListenerArns(String[] listenerArns) {
         this.listenerArns = listenerArns;
         return this;
@@ -16,6 +17,7 @@ public class DescribeListenersInput {
     
     
     public String loadBalancerArn;
+
     public DescribeListenersInput withLoadBalancerArn(String loadBalancerArn) {
         this.loadBalancerArn = loadBalancerArn;
         return this;
@@ -23,6 +25,7 @@ public class DescribeListenersInput {
     
     
     public String marker;
+
     public DescribeListenersInput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,9 +33,11 @@ public class DescribeListenersInput {
     
     
     public Long pageSize;
+
     public DescribeListenersInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public DescribeListenersInput(){}
 }

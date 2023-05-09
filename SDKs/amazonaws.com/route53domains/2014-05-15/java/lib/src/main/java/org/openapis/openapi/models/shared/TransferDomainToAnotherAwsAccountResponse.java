@@ -15,6 +15,7 @@ public class TransferDomainToAnotherAwsAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public TransferDomainToAnotherAwsAccountResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -23,9 +24,11 @@ public class TransferDomainToAnotherAwsAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public TransferDomainToAnotherAwsAccountResponse withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public TransferDomainToAnotherAwsAccountResponse(){}
 }

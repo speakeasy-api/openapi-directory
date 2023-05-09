@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMessengerAccountResponse {
@@ -12,6 +13,7 @@ public class DeleteMessengerAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOneResponse fourHundredAndOneResponse;
+
     public DeleteMessengerAccountResponse withFourHundredAndOneResponse(org.openapis.openapi.models.shared.FourHundredAndOneResponse fourHundredAndOneResponse) {
         this.fourHundredAndOneResponse = fourHundredAndOneResponse;
         return this;
@@ -22,6 +24,7 @@ public class DeleteMessengerAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndThreeResponse fourHundredAndThreeResponse;
+
     public DeleteMessengerAccountResponse withFourHundredAndThreeResponse(org.openapis.openapi.models.shared.FourHundredAndThreeResponse fourHundredAndThreeResponse) {
         this.fourHundredAndThreeResponse = fourHundredAndThreeResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMessengerAccountResponse {
     
     
     public String contentType;
+
     public DeleteMessengerAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class DeleteMessengerAccountResponse {
     
     
     public Integer statusCode;
+
     public DeleteMessengerAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeleteMessengerAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMessengerAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteMessengerAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

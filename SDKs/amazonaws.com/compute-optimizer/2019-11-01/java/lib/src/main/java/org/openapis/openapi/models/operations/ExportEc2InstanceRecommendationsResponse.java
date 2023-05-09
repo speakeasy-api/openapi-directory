@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportEc2InstanceRecommendationsResponse {
@@ -12,6 +13,7 @@ public class ExportEc2InstanceRecommendationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ExportEc2InstanceRecommendationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ExportEc2InstanceRecommendationsResponse {
     
     
     public String contentType;
+
     public ExportEc2InstanceRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ExportEc2InstanceRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ExportEc2InstanceRecommendationsResponse exportEc2InstanceRecommendationsResponse;
+
     public ExportEc2InstanceRecommendationsResponse withExportEc2InstanceRecommendationsResponse(org.openapis.openapi.models.shared.ExportEc2InstanceRecommendationsResponse exportEc2InstanceRecommendationsResponse) {
         this.exportEc2InstanceRecommendationsResponse = exportEc2InstanceRecommendationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ExportEc2InstanceRecommendationsResponse {
      */
     
     public Object internalServerException;
+
     public ExportEc2InstanceRecommendationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ExportEc2InstanceRecommendationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ExportEc2InstanceRecommendationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class ExportEc2InstanceRecommendationsResponse {
      */
     
     public Object limitExceededException;
+
     public ExportEc2InstanceRecommendationsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ExportEc2InstanceRecommendationsResponse {
      */
     
     public Object missingAuthenticationToken;
+
     public ExportEc2InstanceRecommendationsResponse withMissingAuthenticationToken(Object missingAuthenticationToken) {
         this.missingAuthenticationToken = missingAuthenticationToken;
         return this;
@@ -79,6 +87,7 @@ public class ExportEc2InstanceRecommendationsResponse {
      */
     
     public Object optInRequiredException;
+
     public ExportEc2InstanceRecommendationsResponse withOptInRequiredException(Object optInRequiredException) {
         this.optInRequiredException = optInRequiredException;
         return this;
@@ -86,6 +95,7 @@ public class ExportEc2InstanceRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public ExportEc2InstanceRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ExportEc2InstanceRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportEc2InstanceRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class ExportEc2InstanceRecommendationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ExportEc2InstanceRecommendationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class ExportEc2InstanceRecommendationsResponse {
      */
     
     public Object throttlingException;
+
     public ExportEc2InstanceRecommendationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ExportEc2InstanceRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsReviewPendingDeploymentsForRunRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ActionsReviewPendingDeploymentsForRunRequestBody requestBody;
+
     public ActionsReviewPendingDeploymentsForRunRequest withRequestBody(ActionsReviewPendingDeploymentsForRunRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ActionsReviewPendingDeploymentsForRunRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsReviewPendingDeploymentsForRunRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -29,6 +32,7 @@ public class ActionsReviewPendingDeploymentsForRunRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsReviewPendingDeploymentsForRunRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -39,9 +43,16 @@ public class ActionsReviewPendingDeploymentsForRunRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_id")
     public Long runId;
+
     public ActionsReviewPendingDeploymentsForRunRequest withRunId(Long runId) {
         this.runId = runId;
         return this;
     }
     
+    public ActionsReviewPendingDeploymentsForRunRequest(@JsonProperty("RequestBody") ActionsReviewPendingDeploymentsForRunRequestBody requestBody, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("run_id") Long runId) {
+        this.requestBody = requestBody;
+        this.owner = owner;
+        this.repo = repo;
+        this.runId = runId;
+  }
 }

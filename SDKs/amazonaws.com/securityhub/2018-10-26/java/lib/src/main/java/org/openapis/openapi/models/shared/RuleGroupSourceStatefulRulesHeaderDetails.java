@@ -15,6 +15,7 @@ public class RuleGroupSourceStatefulRulesHeaderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destination")
     public String destination;
+
     public RuleGroupSourceStatefulRulesHeaderDetails withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -23,6 +24,7 @@ public class RuleGroupSourceStatefulRulesHeaderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationPort")
     public String destinationPort;
+
     public RuleGroupSourceStatefulRulesHeaderDetails withDestinationPort(String destinationPort) {
         this.destinationPort = destinationPort;
         return this;
@@ -31,6 +33,7 @@ public class RuleGroupSourceStatefulRulesHeaderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Direction")
     public String direction;
+
     public RuleGroupSourceStatefulRulesHeaderDetails withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -39,6 +42,7 @@ public class RuleGroupSourceStatefulRulesHeaderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocol")
     public String protocol;
+
     public RuleGroupSourceStatefulRulesHeaderDetails withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -47,6 +51,7 @@ public class RuleGroupSourceStatefulRulesHeaderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public RuleGroupSourceStatefulRulesHeaderDetails withSource(String source) {
         this.source = source;
         return this;
@@ -55,9 +60,11 @@ public class RuleGroupSourceStatefulRulesHeaderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourcePort")
     public String sourcePort;
+
     public RuleGroupSourceStatefulRulesHeaderDetails withSourcePort(String sourcePort) {
         this.sourcePort = sourcePort;
         return this;
     }
     
+    public RuleGroupSourceStatefulRulesHeaderDetails(){}
 }

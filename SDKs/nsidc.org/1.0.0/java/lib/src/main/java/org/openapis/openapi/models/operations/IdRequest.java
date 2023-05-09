@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IdRequest {
@@ -12,6 +13,7 @@ public class IdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public IdRequest withQ(String q) {
         this.q = q;
         return this;
@@ -22,9 +24,14 @@ public class IdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public IdSourceEnum source;
+
     public IdRequest withSource(IdSourceEnum source) {
         this.source = source;
         return this;
     }
     
+    public IdRequest(@JsonProperty("q") String q, @JsonProperty("source") IdSourceEnum source) {
+        this.q = q;
+        this.source = source;
+  }
 }

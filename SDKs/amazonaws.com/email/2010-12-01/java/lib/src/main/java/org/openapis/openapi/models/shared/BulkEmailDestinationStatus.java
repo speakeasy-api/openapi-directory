@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class BulkEmailDestinationStatus {
     
     public String error;
+
     public BulkEmailDestinationStatus withError(String error) {
         this.error = error;
         return this;
@@ -19,6 +20,7 @@ public class BulkEmailDestinationStatus {
     
     
     public String messageId;
+
     public BulkEmailDestinationStatus withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -26,9 +28,11 @@ public class BulkEmailDestinationStatus {
     
     
     public BulkEmailStatusEnum status;
+
     public BulkEmailDestinationStatus withStatus(BulkEmailStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public BulkEmailDestinationStatus(){}
 }

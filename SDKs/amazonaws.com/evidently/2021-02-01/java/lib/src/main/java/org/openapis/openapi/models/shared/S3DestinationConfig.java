@@ -15,6 +15,7 @@ public class S3DestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public S3DestinationConfig withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,9 +24,11 @@ public class S3DestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public S3DestinationConfig withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public S3DestinationConfig(){}
 }

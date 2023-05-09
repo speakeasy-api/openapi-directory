@@ -18,6 +18,7 @@ public class GetAccountProperties200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public GetAccountProperties200ApplicationJSONDataGroup group;
+
     public GetAccountProperties200ApplicationJSONData withGroup(GetAccountProperties200ApplicationJSONDataGroup group) {
         this.group = group;
         return this;
@@ -25,6 +26,7 @@ public class GetAccountProperties200ApplicationJSONData {
     
     @JsonProperty("isComputed")
     public Boolean isComputed;
+
     public GetAccountProperties200ApplicationJSONData withIsComputed(Boolean isComputed) {
         this.isComputed = isComputed;
         return this;
@@ -32,6 +34,7 @@ public class GetAccountProperties200ApplicationJSONData {
     
     @JsonProperty("label")
     public String label;
+
     public GetAccountProperties200ApplicationJSONData withLabel(String label) {
         this.label = label;
         return this;
@@ -39,9 +42,15 @@ public class GetAccountProperties200ApplicationJSONData {
     
     @JsonProperty("name")
     public String name;
+
     public GetAccountProperties200ApplicationJSONData withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetAccountProperties200ApplicationJSONData(@JsonProperty("isComputed") Boolean isComputed, @JsonProperty("label") String label, @JsonProperty("name") String name) {
+        this.isComputed = isComputed;
+        this.label = label;
+        this.name = name;
+  }
 }

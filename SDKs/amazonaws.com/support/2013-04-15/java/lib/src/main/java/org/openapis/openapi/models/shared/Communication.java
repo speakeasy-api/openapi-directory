@@ -15,6 +15,7 @@ public class Communication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachmentSet")
     public AttachmentDetails[] attachmentSet;
+
     public Communication withAttachmentSet(AttachmentDetails[] attachmentSet) {
         this.attachmentSet = attachmentSet;
         return this;
@@ -23,6 +24,7 @@ public class Communication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public Communication withBody(String body) {
         this.body = body;
         return this;
@@ -31,6 +33,7 @@ public class Communication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseId")
     public String caseId;
+
     public Communication withCaseId(String caseId) {
         this.caseId = caseId;
         return this;
@@ -39,6 +42,7 @@ public class Communication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedBy")
     public String submittedBy;
+
     public Communication withSubmittedBy(String submittedBy) {
         this.submittedBy = submittedBy;
         return this;
@@ -47,9 +51,11 @@ public class Communication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeCreated")
     public String timeCreated;
+
     public Communication withTimeCreated(String timeCreated) {
         this.timeCreated = timeCreated;
         return this;
     }
     
+    public Communication(){}
 }

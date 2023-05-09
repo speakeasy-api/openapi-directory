@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class UserGeneralUser {
     
     public String about;
+
     public UserGeneralUser withAbout(String about) {
         this.about = about;
         return this;
@@ -16,6 +17,7 @@ public class UserGeneralUser {
     
     
     public String blizzardDisplayName;
+
     public UserGeneralUser withBlizzardDisplayName(String blizzardDisplayName) {
         this.blizzardDisplayName = blizzardDisplayName;
         return this;
@@ -23,6 +25,7 @@ public class UserGeneralUser {
     
     
     public String cachedBungieGlobalDisplayName;
+
     public UserGeneralUser withCachedBungieGlobalDisplayName(String cachedBungieGlobalDisplayName) {
         this.cachedBungieGlobalDisplayName = cachedBungieGlobalDisplayName;
         return this;
@@ -30,6 +33,7 @@ public class UserGeneralUser {
     
     
     public Long cachedBungieGlobalDisplayNameCode;
+
     public UserGeneralUser withCachedBungieGlobalDisplayNameCode(Long cachedBungieGlobalDisplayNameCode) {
         this.cachedBungieGlobalDisplayNameCode = cachedBungieGlobalDisplayNameCode;
         return this;
@@ -37,6 +41,7 @@ public class UserGeneralUser {
     
     
     public UserUserToUserContext context;
+
     public UserGeneralUser withContext(UserUserToUserContext context) {
         this.context = context;
         return this;
@@ -44,6 +49,7 @@ public class UserGeneralUser {
     
     
     public String displayName;
+
     public UserGeneralUser withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +57,7 @@ public class UserGeneralUser {
     
     
     public String egsDisplayName;
+
     public UserGeneralUser withEgsDisplayName(String egsDisplayName) {
         this.egsDisplayName = egsDisplayName;
         return this;
@@ -58,6 +65,7 @@ public class UserGeneralUser {
     
     
     public String fbDisplayName;
+
     public UserGeneralUser withFbDisplayName(String fbDisplayName) {
         this.fbDisplayName = fbDisplayName;
         return this;
@@ -65,6 +73,7 @@ public class UserGeneralUser {
     
     
     public OffsetDateTime firstAccess;
+
     public UserGeneralUser withFirstAccess(OffsetDateTime firstAccess) {
         this.firstAccess = firstAccess;
         return this;
@@ -72,6 +81,7 @@ public class UserGeneralUser {
     
     
     public Boolean isDeleted;
+
     public UserGeneralUser withIsDeleted(Boolean isDeleted) {
         this.isDeleted = isDeleted;
         return this;
@@ -79,6 +89,7 @@ public class UserGeneralUser {
     
     
     public Long lastBanReportId;
+
     public UserGeneralUser withLastBanReportId(Long lastBanReportId) {
         this.lastBanReportId = lastBanReportId;
         return this;
@@ -86,6 +97,7 @@ public class UserGeneralUser {
     
     
     public OffsetDateTime lastUpdate;
+
     public UserGeneralUser withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -93,6 +105,7 @@ public class UserGeneralUser {
     
     
     public Long legacyPortalUID;
+
     public UserGeneralUser withLegacyPortalUID(Long legacyPortalUID) {
         this.legacyPortalUID = legacyPortalUID;
         return this;
@@ -100,6 +113,7 @@ public class UserGeneralUser {
     
     
     public String locale;
+
     public UserGeneralUser withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -107,6 +121,7 @@ public class UserGeneralUser {
     
     
     public Boolean localeInheritDefault;
+
     public UserGeneralUser withLocaleInheritDefault(Boolean localeInheritDefault) {
         this.localeInheritDefault = localeInheritDefault;
         return this;
@@ -114,6 +129,7 @@ public class UserGeneralUser {
     
     
     public Long membershipId;
+
     public UserGeneralUser withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -121,6 +137,7 @@ public class UserGeneralUser {
     
     
     public String normalizedName;
+
     public UserGeneralUser withNormalizedName(String normalizedName) {
         this.normalizedName = normalizedName;
         return this;
@@ -128,6 +145,7 @@ public class UserGeneralUser {
     
     
     public OffsetDateTime profileBanExpire;
+
     public UserGeneralUser withProfileBanExpire(OffsetDateTime profileBanExpire) {
         this.profileBanExpire = profileBanExpire;
         return this;
@@ -135,6 +153,7 @@ public class UserGeneralUser {
     
     
     public Integer profilePicture;
+
     public UserGeneralUser withProfilePicture(Integer profilePicture) {
         this.profilePicture = profilePicture;
         return this;
@@ -142,6 +161,7 @@ public class UserGeneralUser {
     
     
     public String profilePicturePath;
+
     public UserGeneralUser withProfilePicturePath(String profilePicturePath) {
         this.profilePicturePath = profilePicturePath;
         return this;
@@ -149,6 +169,7 @@ public class UserGeneralUser {
     
     
     public String profilePictureWidePath;
+
     public UserGeneralUser withProfilePictureWidePath(String profilePictureWidePath) {
         this.profilePictureWidePath = profilePictureWidePath;
         return this;
@@ -156,6 +177,7 @@ public class UserGeneralUser {
     
     
     public Integer profileTheme;
+
     public UserGeneralUser withProfileTheme(Integer profileTheme) {
         this.profileTheme = profileTheme;
         return this;
@@ -163,6 +185,7 @@ public class UserGeneralUser {
     
     
     public String profileThemeName;
+
     public UserGeneralUser withProfileThemeName(String profileThemeName) {
         this.profileThemeName = profileThemeName;
         return this;
@@ -170,6 +193,7 @@ public class UserGeneralUser {
     
     
     public String psnDisplayName;
+
     public UserGeneralUser withPsnDisplayName(String psnDisplayName) {
         this.psnDisplayName = psnDisplayName;
         return this;
@@ -177,6 +201,7 @@ public class UserGeneralUser {
     
     
     public Boolean showActivity;
+
     public UserGeneralUser withShowActivity(Boolean showActivity) {
         this.showActivity = showActivity;
         return this;
@@ -184,6 +209,7 @@ public class UserGeneralUser {
     
     
     public Boolean showGroupMessaging;
+
     public UserGeneralUser withShowGroupMessaging(Boolean showGroupMessaging) {
         this.showGroupMessaging = showGroupMessaging;
         return this;
@@ -191,6 +217,7 @@ public class UserGeneralUser {
     
     
     public String stadiaDisplayName;
+
     public UserGeneralUser withStadiaDisplayName(String stadiaDisplayName) {
         this.stadiaDisplayName = stadiaDisplayName;
         return this;
@@ -198,6 +225,7 @@ public class UserGeneralUser {
     
     
     public OffsetDateTime statusDate;
+
     public UserGeneralUser withStatusDate(OffsetDateTime statusDate) {
         this.statusDate = statusDate;
         return this;
@@ -205,6 +233,7 @@ public class UserGeneralUser {
     
     
     public String statusText;
+
     public UserGeneralUser withStatusText(String statusText) {
         this.statusText = statusText;
         return this;
@@ -212,6 +241,7 @@ public class UserGeneralUser {
     
     
     public String steamDisplayName;
+
     public UserGeneralUser withSteamDisplayName(String steamDisplayName) {
         this.steamDisplayName = steamDisplayName;
         return this;
@@ -219,6 +249,7 @@ public class UserGeneralUser {
     
     
     public Long successMessageFlags;
+
     public UserGeneralUser withSuccessMessageFlags(Long successMessageFlags) {
         this.successMessageFlags = successMessageFlags;
         return this;
@@ -226,6 +257,7 @@ public class UserGeneralUser {
     
     
     public String twitchDisplayName;
+
     public UserGeneralUser withTwitchDisplayName(String twitchDisplayName) {
         this.twitchDisplayName = twitchDisplayName;
         return this;
@@ -233,6 +265,7 @@ public class UserGeneralUser {
     
     
     public String uniqueName;
+
     public UserGeneralUser withUniqueName(String uniqueName) {
         this.uniqueName = uniqueName;
         return this;
@@ -240,6 +273,7 @@ public class UserGeneralUser {
     
     
     public Integer userTitle;
+
     public UserGeneralUser withUserTitle(Integer userTitle) {
         this.userTitle = userTitle;
         return this;
@@ -247,6 +281,7 @@ public class UserGeneralUser {
     
     
     public String userTitleDisplay;
+
     public UserGeneralUser withUserTitleDisplay(String userTitleDisplay) {
         this.userTitleDisplay = userTitleDisplay;
         return this;
@@ -254,9 +289,11 @@ public class UserGeneralUser {
     
     
     public String xboxDisplayName;
+
     public UserGeneralUser withXboxDisplayName(String xboxDisplayName) {
         this.xboxDisplayName = xboxDisplayName;
         return this;
     }
     
+    public UserGeneralUser(){}
 }

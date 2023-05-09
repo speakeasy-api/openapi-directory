@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlaceOrderFromExistingOrderFormRequest {
@@ -12,6 +13,7 @@ public class PlaceOrderFromExistingOrderFormRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PlaceOrderFromExistingOrderFormRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PlaceOrderFromExistingOrderFormRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PlaceOrderFromExistingOrderFormRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PlaceOrderFromExistingOrderFormRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PlaceOrderFromExistingOrderFormRequestBody requestBody;
+
     public PlaceOrderFromExistingOrderFormRequest withRequestBody(PlaceOrderFromExistingOrderFormRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,9 +43,15 @@ public class PlaceOrderFromExistingOrderFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderFormId")
     public String orderFormId;
+
     public PlaceOrderFromExistingOrderFormRequest withOrderFormId(String orderFormId) {
         this.orderFormId = orderFormId;
         return this;
     }
     
+    public PlaceOrderFromExistingOrderFormRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("orderFormId") String orderFormId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.orderFormId = orderFormId;
+  }
 }

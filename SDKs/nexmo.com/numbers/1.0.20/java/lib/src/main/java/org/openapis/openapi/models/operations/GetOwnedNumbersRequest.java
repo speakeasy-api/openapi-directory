@@ -12,6 +12,7 @@ public class GetOwnedNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application_id")
     public String applicationId;
+
     public GetOwnedNumbersRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -19,6 +20,7 @@ public class GetOwnedNumbersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public GetOwnedNumbersRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -34,6 +36,7 @@ public class GetOwnedNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=has_application")
     public Boolean hasApplication;
+
     public GetOwnedNumbersRequest withHasApplication(Boolean hasApplication) {
         this.hasApplication = hasApplication;
         return this;
@@ -44,6 +47,7 @@ public class GetOwnedNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=index")
     public Long index;
+
     public GetOwnedNumbersRequest withIndex(Long index) {
         this.index = index;
         return this;
@@ -54,6 +58,7 @@ public class GetOwnedNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pattern")
     public String pattern;
+
     public GetOwnedNumbersRequest withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -70,6 +75,7 @@ public class GetOwnedNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_pattern")
     public org.openapis.openapi.models.shared.SearchPatternEnum searchPattern;
+
     public GetOwnedNumbersRequest withSearchPattern(org.openapis.openapi.models.shared.SearchPatternEnum searchPattern) {
         this.searchPattern = searchPattern;
         return this;
@@ -80,9 +86,11 @@ public class GetOwnedNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Long size;
+
     public GetOwnedNumbersRequest withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public GetOwnedNumbersRequest(){}
 }

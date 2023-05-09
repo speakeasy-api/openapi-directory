@@ -15,6 +15,7 @@ public class GetValidity200ApplicationJSON {
      */
     @JsonProperty("data")
     public GetValidity200ApplicationJSONData data;
+
     public GetValidity200ApplicationJSON withData(GetValidity200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -22,9 +23,14 @@ public class GetValidity200ApplicationJSON {
     
     @JsonProperty("meta")
     public GetValidity200ApplicationJSONMeta meta;
+
     public GetValidity200ApplicationJSON withMeta(GetValidity200ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetValidity200ApplicationJSON(@JsonProperty("data") GetValidity200ApplicationJSONData data, @JsonProperty("meta") GetValidity200ApplicationJSONMeta meta) {
+        this.data = data;
+        this.meta = meta;
+  }
 }

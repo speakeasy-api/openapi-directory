@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETLastEditedUsingGETResponse {
     
     public String contentType;
+
     public GETLastEditedUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GETLastEditedUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETLastEditedUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GETLastEditedUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETLastEditedUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GETLastEditedUsingGETResponse {
      */
     
     public GETLastEditedUsingGET200ApplicationJSON getLastEditedUsingGET200ApplicationJSONObject;
+
     public GETLastEditedUsingGETResponse withGETLastEditedUsingGET200ApplicationJSONObject(GETLastEditedUsingGET200ApplicationJSON getLastEditedUsingGET200ApplicationJSONObject) {
         this.getLastEditedUsingGET200ApplicationJSONObject = getLastEditedUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GETLastEditedUsingGETResponse {
      */
     
     public GETLastEditedUsingGET400ApplicationJSON getLastEditedUsingGET400ApplicationJSONObject;
+
     public GETLastEditedUsingGETResponse withGETLastEditedUsingGET400ApplicationJSONObject(GETLastEditedUsingGET400ApplicationJSON getLastEditedUsingGET400ApplicationJSONObject) {
         this.getLastEditedUsingGET400ApplicationJSONObject = getLastEditedUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GETLastEditedUsingGETResponse {
      */
     
     public GETLastEditedUsingGET401ApplicationJSON getLastEditedUsingGET401ApplicationJSONObject;
+
     public GETLastEditedUsingGETResponse withGETLastEditedUsingGET401ApplicationJSONObject(GETLastEditedUsingGET401ApplicationJSON getLastEditedUsingGET401ApplicationJSONObject) {
         this.getLastEditedUsingGET401ApplicationJSONObject = getLastEditedUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GETLastEditedUsingGETResponse {
      */
     
     public GETLastEditedUsingGET500ApplicationJSON getLastEditedUsingGET500ApplicationJSONObject;
+
     public GETLastEditedUsingGETResponse withGETLastEditedUsingGET500ApplicationJSONObject(GETLastEditedUsingGET500ApplicationJSON getLastEditedUsingGET500ApplicationJSONObject) {
         this.getLastEditedUsingGET500ApplicationJSONObject = getLastEditedUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public GETLastEditedUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

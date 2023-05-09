@@ -18,6 +18,7 @@ public class InventoryWindowsQuickFixEngineeringPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caption")
     public String caption;
+
     public InventoryWindowsQuickFixEngineeringPackage withCaption(String caption) {
         this.caption = caption;
         return this;
@@ -29,6 +30,7 @@ public class InventoryWindowsQuickFixEngineeringPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InventoryWindowsQuickFixEngineeringPackage withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class InventoryWindowsQuickFixEngineeringPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotFixId")
     public String hotFixId;
+
     public InventoryWindowsQuickFixEngineeringPackage withHotFixId(String hotFixId) {
         this.hotFixId = hotFixId;
         return this;
@@ -51,9 +54,11 @@ public class InventoryWindowsQuickFixEngineeringPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installTime")
     public String installTime;
+
     public InventoryWindowsQuickFixEngineeringPackage withInstallTime(String installTime) {
         this.installTime = installTime;
         return this;
     }
     
+    public InventoryWindowsQuickFixEngineeringPackage(){}
 }

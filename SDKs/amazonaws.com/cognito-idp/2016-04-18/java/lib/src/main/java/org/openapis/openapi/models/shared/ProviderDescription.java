@@ -22,6 +22,7 @@ public class ProviderDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public ProviderDescription withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -32,6 +33,7 @@ public class ProviderDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public ProviderDescription withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -40,6 +42,7 @@ public class ProviderDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderName")
     public String providerName;
+
     public ProviderDescription withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
@@ -48,9 +51,11 @@ public class ProviderDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderType")
     public IdentityProviderTypeTypeEnum providerType;
+
     public ProviderDescription withProviderType(IdentityProviderTypeTypeEnum providerType) {
         this.providerType = providerType;
         return this;
     }
     
+    public ProviderDescription(){}
 }

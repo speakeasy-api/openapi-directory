@@ -31,10 +31,11 @@ public class Users {
 
     /**
      * Get access token details
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccessTokenResponse getAccessToken() throws Exception {
+    public org.openapis.openapi.models.operations.GetAccessTokenResponse getAccessToken(org.openapis.openapi.models.operations.GetAccessTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/access_token");
         
@@ -43,16 +44,15 @@ public class Users {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccessTokenResponse res = new org.openapis.openapi.models.operations.GetAccessTokenResponse() {{
+        org.openapis.openapi.models.operations.GetAccessTokenResponse res = new org.openapis.openapi.models.operations.GetAccessTokenResponse(contentType, httpRes.statusCode()) {{
             accessTokenDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -70,10 +70,11 @@ public class Users {
 
     /**
      * Get user details
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserResponse getUser() throws Exception {
+    public org.openapis.openapi.models.operations.GetUserResponse getUser(org.openapis.openapi.models.operations.GetUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user");
         
@@ -82,16 +83,15 @@ public class Users {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserResponse res = new org.openapis.openapi.models.operations.GetUserResponse() {{
+        org.openapis.openapi.models.operations.GetUserResponse res = new org.openapis.openapi.models.operations.GetUserResponse(contentType, httpRes.statusCode()) {{
             userDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,10 +109,11 @@ public class Users {
 
     /**
      * List user subscriptions
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserSubscriptionListResponse getUserSubscriptionList() throws Exception {
+    public org.openapis.openapi.models.operations.GetUserSubscriptionListResponse getUserSubscriptionList(org.openapis.openapi.models.operations.GetUserSubscriptionListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/subscriptions");
         
@@ -121,16 +122,15 @@ public class Users {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserSubscriptionListResponse res = new org.openapis.openapi.models.operations.GetUserSubscriptionListResponse() {{
+        org.openapis.openapi.models.operations.GetUserSubscriptionListResponse res = new org.openapis.openapi.models.operations.GetUserSubscriptionListResponse(contentType, httpRes.statusCode()) {{
             subscriptionDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

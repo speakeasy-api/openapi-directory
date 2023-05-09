@@ -18,6 +18,7 @@ public class EliminationAllianceBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in")
     public String in;
+
     public EliminationAllianceBackup withIn(String in) {
         this.in = in;
         return this;
@@ -29,9 +30,11 @@ public class EliminationAllianceBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("out")
     public String out;
+
     public EliminationAllianceBackup withOut(String out) {
         this.out = out;
         return this;
     }
     
+    public EliminationAllianceBackup(){}
 }

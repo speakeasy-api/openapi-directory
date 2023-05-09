@@ -15,6 +15,7 @@ public class LeaveAccrualLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoCalculate")
     public Boolean autoCalculate;
+
     public LeaveAccrualLine withAutoCalculate(Boolean autoCalculate) {
         this.autoCalculate = autoCalculate;
         return this;
@@ -26,6 +27,7 @@ public class LeaveAccrualLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeaveTypeID")
     public String leaveTypeID;
+
     public LeaveAccrualLine withLeaveTypeID(String leaveTypeID) {
         this.leaveTypeID = leaveTypeID;
         return this;
@@ -37,9 +39,11 @@ public class LeaveAccrualLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfUnits")
     public Double numberOfUnits;
+
     public LeaveAccrualLine withNumberOfUnits(Double numberOfUnits) {
         this.numberOfUnits = numberOfUnits;
         return this;
     }
     
+    public LeaveAccrualLine(){}
 }

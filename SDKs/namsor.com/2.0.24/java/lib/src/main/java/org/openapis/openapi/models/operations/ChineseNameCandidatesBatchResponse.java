@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChineseNameCandidatesBatchResponse {
@@ -12,6 +13,7 @@ public class ChineseNameCandidatesBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchNameMatchCandidatesOut batchNameMatchCandidatesOut;
+
     public ChineseNameCandidatesBatchResponse withBatchNameMatchCandidatesOut(org.openapis.openapi.models.shared.BatchNameMatchCandidatesOut batchNameMatchCandidatesOut) {
         this.batchNameMatchCandidatesOut = batchNameMatchCandidatesOut;
         return this;
@@ -19,6 +21,7 @@ public class ChineseNameCandidatesBatchResponse {
     
     
     public String contentType;
+
     public ChineseNameCandidatesBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ChineseNameCandidatesBatchResponse {
     
     
     public Integer statusCode;
+
     public ChineseNameCandidatesBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChineseNameCandidatesBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChineseNameCandidatesBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChineseNameCandidatesBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

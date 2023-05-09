@@ -15,6 +15,7 @@ public class UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty {
      */
     @JsonProperty("amount")
     public Double amount;
+
     public UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -25,9 +26,14 @@ public class UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty {
      */
     @JsonProperty("unit")
     public UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum unit;
+
     public UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty withUnit(UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty(@JsonProperty("amount") Double amount, @JsonProperty("unit") UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum unit) {
+        this.amount = amount;
+        this.unit = unit;
+  }
 }

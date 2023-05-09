@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssetSettingsRequest {
@@ -12,9 +13,13 @@ public class GetAssetSettingsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
     public String xeroTenantId;
+
     public GetAssetSettingsRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public GetAssetSettingsRequest(@JsonProperty("xero-tenant-id") String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
+  }
 }

@@ -15,6 +15,7 @@ public class NodesContributorsCreateContributorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public NodesContributorsCreateContributorAttributesInput attributes;
+
     public NodesContributorsCreateContributorInput withAttributes(NodesContributorsCreateContributorAttributesInput attributes) {
         this.attributes = attributes;
         return this;
@@ -25,9 +26,13 @@ public class NodesContributorsCreateContributorInput {
      */
     @JsonProperty("relationships")
     public NodesContributorsCreateContributorRelationshipsInput relationships;
+
     public NodesContributorsCreateContributorInput withRelationships(NodesContributorsCreateContributorRelationshipsInput relationships) {
         this.relationships = relationships;
         return this;
     }
     
+    public NodesContributorsCreateContributorInput(@JsonProperty("relationships") NodesContributorsCreateContributorRelationshipsInput relationships) {
+        this.relationships = relationships;
+  }
 }

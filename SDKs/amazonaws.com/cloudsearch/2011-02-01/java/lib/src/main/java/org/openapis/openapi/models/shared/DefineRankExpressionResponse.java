@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DefineRankExpressionResponse - A response message that contains the status of an updated &lt;code&gt;RankExpression&lt;/code&gt;.
@@ -15,9 +15,13 @@ public class DefineRankExpressionResponse {
      */
     
     public RankExpressionStatus rankExpression;
+
     public DefineRankExpressionResponse withRankExpression(RankExpressionStatus rankExpression) {
         this.rankExpression = rankExpression;
         return this;
     }
     
+    public DefineRankExpressionResponse(@JsonProperty("RankExpression") RankExpressionStatus rankExpression) {
+        this.rankExpression = rankExpression;
+  }
 }

@@ -12,6 +12,7 @@ public class LogLevelSummaryModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public LogLevelSummaryModel withCount(Long count) {
         this.count = count;
         return this;
@@ -20,9 +21,11 @@ public class LogLevelSummaryModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public String level;
+
     public LogLevelSummaryModel withLevel(String level) {
         this.level = level;
         return this;
     }
     
+    public LogLevelSummaryModel(){}
 }

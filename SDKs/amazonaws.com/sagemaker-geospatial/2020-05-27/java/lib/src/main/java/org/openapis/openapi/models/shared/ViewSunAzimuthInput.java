@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ViewSunAzimuthInput - &lt;p/&gt;
+ * ViewSunAzimuthInput - The input structure for specifying ViewSunAzimuth property filter. ViewSunAzimuth refers to the Sun azimuth angle. From the scene center point on the ground, this is the angle between truth north and the sun. Measured clockwise in degrees (0-360).
  */
 public class ViewSunAzimuthInput {
     @JsonProperty("LowerBound")
     public Float lowerBound;
+
     public ViewSunAzimuthInput withLowerBound(Float lowerBound) {
         this.lowerBound = lowerBound;
         return this;
@@ -19,9 +20,14 @@ public class ViewSunAzimuthInput {
     
     @JsonProperty("UpperBound")
     public Float upperBound;
+
     public ViewSunAzimuthInput withUpperBound(Float upperBound) {
         this.upperBound = upperBound;
         return this;
     }
     
+    public ViewSunAzimuthInput(@JsonProperty("LowerBound") Float lowerBound, @JsonProperty("UpperBound") Float upperBound) {
+        this.lowerBound = lowerBound;
+        this.upperBound = upperBound;
+  }
 }

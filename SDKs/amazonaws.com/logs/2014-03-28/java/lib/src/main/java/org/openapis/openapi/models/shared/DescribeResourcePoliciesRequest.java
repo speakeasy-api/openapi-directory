@@ -12,6 +12,7 @@ public class DescribeResourcePoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public DescribeResourcePoliciesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -23,9 +24,11 @@ public class DescribeResourcePoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeResourcePoliciesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeResourcePoliciesRequest(){}
 }

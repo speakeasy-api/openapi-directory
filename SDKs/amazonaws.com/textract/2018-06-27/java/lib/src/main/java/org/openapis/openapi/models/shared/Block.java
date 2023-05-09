@@ -15,6 +15,7 @@ public class Block {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockType")
     public BlockTypeEnum blockType;
+
     public Block withBlockType(BlockTypeEnum blockType) {
         this.blockType = blockType;
         return this;
@@ -23,6 +24,7 @@ public class Block {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnIndex")
     public Long columnIndex;
+
     public Block withColumnIndex(Long columnIndex) {
         this.columnIndex = columnIndex;
         return this;
@@ -31,6 +33,7 @@ public class Block {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnSpan")
     public Long columnSpan;
+
     public Block withColumnSpan(Long columnSpan) {
         this.columnSpan = columnSpan;
         return this;
@@ -39,6 +42,7 @@ public class Block {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public Block withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -47,6 +51,7 @@ public class Block {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityTypes")
     public EntityTypeEnum[] entityTypes;
+
     public Block withEntityTypes(EntityTypeEnum[] entityTypes) {
         this.entityTypes = entityTypes;
         return this;
@@ -55,6 +60,7 @@ public class Block {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Geometry")
     public Geometry geometry;
+
     public Block withGeometry(Geometry geometry) {
         this.geometry = geometry;
         return this;
@@ -63,6 +69,7 @@ public class Block {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Block withId(String id) {
         this.id = id;
         return this;
@@ -71,6 +78,7 @@ public class Block {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Page")
     public Long page;
+
     public Block withPage(Long page) {
         this.page = page;
         return this;
@@ -79,6 +87,7 @@ public class Block {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Query")
     public Query query;
+
     public Block withQuery(Query query) {
         this.query = query;
         return this;
@@ -87,6 +96,7 @@ public class Block {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Relationships")
     public Relationship[] relationships;
+
     public Block withRelationships(Relationship[] relationships) {
         this.relationships = relationships;
         return this;
@@ -95,6 +105,7 @@ public class Block {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RowIndex")
     public Long rowIndex;
+
     public Block withRowIndex(Long rowIndex) {
         this.rowIndex = rowIndex;
         return this;
@@ -103,6 +114,7 @@ public class Block {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RowSpan")
     public Long rowSpan;
+
     public Block withRowSpan(Long rowSpan) {
         this.rowSpan = rowSpan;
         return this;
@@ -111,6 +123,7 @@ public class Block {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelectionStatus")
     public SelectionStatusEnum selectionStatus;
+
     public Block withSelectionStatus(SelectionStatusEnum selectionStatus) {
         this.selectionStatus = selectionStatus;
         return this;
@@ -119,6 +132,7 @@ public class Block {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public Block withText(String text) {
         this.text = text;
         return this;
@@ -127,9 +141,11 @@ public class Block {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextType")
     public TextTypeEnum textType;
+
     public Block withTextType(TextTypeEnum textType) {
         this.textType = textType;
         return this;
     }
     
+    public Block(){}
 }

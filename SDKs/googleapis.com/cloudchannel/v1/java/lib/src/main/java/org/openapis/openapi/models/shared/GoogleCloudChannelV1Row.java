@@ -13,14 +13,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudChannelV1Row {
     /**
+     * The key for the partition this row belongs to. This field is empty if the report is not partitioned.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("partitionKey")
+    public String partitionKey;
+
+    public GoogleCloudChannelV1Row withPartitionKey(String partitionKey) {
+        this.partitionKey = partitionKey;
+        return this;
+    }
+    
+    /**
      * The list of values in the row.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public GoogleCloudChannelV1ReportValue[] values;
+
     public GoogleCloudChannelV1Row withValues(GoogleCloudChannelV1ReportValue[] values) {
         this.values = values;
         return this;
     }
     
+    public GoogleCloudChannelV1Row(){}
 }

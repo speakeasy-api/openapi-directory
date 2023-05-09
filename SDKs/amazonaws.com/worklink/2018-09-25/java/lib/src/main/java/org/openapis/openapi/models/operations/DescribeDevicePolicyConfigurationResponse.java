@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDevicePolicyConfigurationResponse {
     
     public String contentType;
+
     public DescribeDevicePolicyConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDevicePolicyConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDevicePolicyConfigurationResponse describeDevicePolicyConfigurationResponse;
+
     public DescribeDevicePolicyConfigurationResponse withDescribeDevicePolicyConfigurationResponse(org.openapis.openapi.models.shared.DescribeDevicePolicyConfigurationResponse describeDevicePolicyConfigurationResponse) {
         this.describeDevicePolicyConfigurationResponse = describeDevicePolicyConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDevicePolicyConfigurationResponse {
      */
     
     public Object internalServerErrorException;
+
     public DescribeDevicePolicyConfigurationResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDevicePolicyConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeDevicePolicyConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeDevicePolicyConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeDevicePolicyConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeDevicePolicyConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDevicePolicyConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeDevicePolicyConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeDevicePolicyConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeDevicePolicyConfigurationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeDevicePolicyConfigurationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeDevicePolicyConfigurationResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeDevicePolicyConfigurationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeDevicePolicyConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogComputeExpressionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ComputeExpressionRequest computeExpressionRequest;
+
     public CatalogComputeExpressionRequest withComputeExpressionRequest(org.openapis.openapi.models.shared.ComputeExpressionRequest computeExpressionRequest) {
         this.computeExpressionRequest = computeExpressionRequest;
         return this;
@@ -19,9 +21,14 @@ public class CatalogComputeExpressionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public CatalogComputeExpressionRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public CatalogComputeExpressionRequest(@JsonProperty("computeExpressionRequest") org.openapis.openapi.models.shared.ComputeExpressionRequest computeExpressionRequest, @JsonProperty("storeId") String storeId) {
+        this.computeExpressionRequest = computeExpressionRequest;
+        this.storeId = storeId;
+  }
 }

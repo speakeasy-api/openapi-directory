@@ -12,9 +12,11 @@ public class FinalReportLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public FinalReportLinksMessages[] messages;
+
     public FinalReportLinks withMessages(FinalReportLinksMessages[] messages) {
         this.messages = messages;
         return this;
     }
     
+    public FinalReportLinks(){}
 }

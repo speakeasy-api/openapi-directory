@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LatLonOptions {
     
     public String defaultValue;
+
     public LatLonOptions withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -19,6 +20,7 @@ public class LatLonOptions {
     
     
     public Boolean facetEnabled;
+
     public LatLonOptions withFacetEnabled(Boolean facetEnabled) {
         this.facetEnabled = facetEnabled;
         return this;
@@ -26,6 +28,7 @@ public class LatLonOptions {
     
     
     public Boolean returnEnabled;
+
     public LatLonOptions withReturnEnabled(Boolean returnEnabled) {
         this.returnEnabled = returnEnabled;
         return this;
@@ -33,6 +36,7 @@ public class LatLonOptions {
     
     
     public Boolean searchEnabled;
+
     public LatLonOptions withSearchEnabled(Boolean searchEnabled) {
         this.searchEnabled = searchEnabled;
         return this;
@@ -40,6 +44,7 @@ public class LatLonOptions {
     
     
     public Boolean sortEnabled;
+
     public LatLonOptions withSortEnabled(Boolean sortEnabled) {
         this.sortEnabled = sortEnabled;
         return this;
@@ -50,9 +55,11 @@ public class LatLonOptions {
      */
     
     public String sourceField;
+
     public LatLonOptions withSourceField(String sourceField) {
         this.sourceField = sourceField;
         return this;
     }
     
+    public LatLonOptions(){}
 }

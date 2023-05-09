@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeForecastExportJobResponse {
     
     public String contentType;
+
     public DescribeForecastExportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeForecastExportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeForecastExportJobResponse describeForecastExportJobResponse;
+
     public DescribeForecastExportJobResponse withDescribeForecastExportJobResponse(org.openapis.openapi.models.shared.DescribeForecastExportJobResponse describeForecastExportJobResponse) {
         this.describeForecastExportJobResponse = describeForecastExportJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeForecastExportJobResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeForecastExportJobResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeForecastExportJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeForecastExportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeForecastExportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeForecastExportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeForecastExportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeForecastExportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeForecastExportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

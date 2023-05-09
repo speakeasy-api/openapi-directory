@@ -12,6 +12,7 @@ public class ListWordSenses200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Double index;
+
     public ListWordSenses200ApplicationJSONFeatures withIndex(Double index) {
         this.index = index;
         return this;
@@ -20,6 +21,7 @@ public class ListWordSenses200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ListWordSenses200ApplicationJSONFeatures withType(String type) {
         this.type = type;
         return this;
@@ -28,9 +30,11 @@ public class ListWordSenses200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ListWordSenses200ApplicationJSONFeatures withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ListWordSenses200ApplicationJSONFeatures(){}
 }

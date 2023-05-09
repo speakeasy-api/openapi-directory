@@ -16,24 +16,23 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PredictJsonSecurity;
 import org.openapis.openapi.models.operations.PredictJsonRequest;
 import org.openapis.openapi.models.operations.PredictJsonResponse;
-import org.openapis.openapi.models.shared.SeldonMessage;
-import org.openapis.openapi.models.shared.Status;
-import org.openapis.openapi.models.shared.StatusStatusFlagEnum;
+import org.openapis.openapi.models.operations.PredictJsonSecurity;
+import org.openapis.openapi.models.shared.DefaultData;
 import org.openapis.openapi.models.shared.Meta;
 import org.openapis.openapi.models.shared.Metric;
 import org.openapis.openapi.models.shared.MetricTypeEnum;
-import org.openapis.openapi.models.shared.DefaultData;
-import org.openapis.openapi.models.shared.TensorflowTensorProto;
-import org.openapis.openapi.models.shared.TensorflowVariantTensorDataProto;
-import org.openapis.openapi.models.shared.TensorflowTensorShapeProto;
-import org.openapis.openapi.models.shared.TensorShapeProtoDim;
-import org.openapis.openapi.models.shared.TensorflowResourceHandleProto;
-import org.openapis.openapi.models.shared.TensorflowDataTypeEnum;
+import org.openapis.openapi.models.shared.SeldonMessage;
+import org.openapis.openapi.models.shared.Status;
+import org.openapis.openapi.models.shared.StatusStatusFlagEnum;
 import org.openapis.openapi.models.shared.Tensor;
+import org.openapis.openapi.models.shared.TensorShapeProtoDim;
+import org.openapis.openapi.models.shared.TensorflowDataTypeEnum;
+import org.openapis.openapi.models.shared.TensorflowResourceHandleProto;
+import org.openapis.openapi.models.shared.TensorflowTensorProto;
+import org.openapis.openapi.models.shared.TensorflowTensorShapeProto;
+import org.openapis.openapi.models.shared.TensorflowVariantTensorDataProto;
 
 public class Application {
     public static void main(String[] args) {
@@ -41,216 +40,194 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PredictJsonRequest req = new PredictJsonRequest() {{
-                seldonMessage = new SeldonMessage() {{
-                    binData = "corrupti";
-                    data = new DefaultData() {{
-                        names = new String[]{{
-                            add("distinctio"),
-                            add("quibusdam"),
-                            add("unde"),
-                        }};
-                        ndarray = new Object[]{{
-                            add("corrupti"),
-                            add("illum"),
-                            add("vel"),
-                            add("error"),
-                        }};
-                        tensor = new Tensor() {{
-                            shape = new Integer[]{{
-                                add(384382),
-                                add(437587),
-                                add(297534),
-                            }};
-                            values = new Double[]{{
-                                add(567.13),
-                                add(9636.63),
-                                add(2726.56),
-                                add(3834.41),
-                            }};
-                        }};
-                        tftensor = new TensorflowTensorProto() {{
-                            boolVal = new Boolean[]{{
-                                add(false),
-                                add(false),
-                            }};
-                            dcomplexVal = new Double[]{{
-                                add(8121.69),
-                                add(5288.95),
-                                add(4799.77),
-                                add(5680.45),
-                            }};
-                            doubleVal = new Double[]{{
-                                add(9255.97),
-                                add(8360.79),
-                            }};
-                            dtype = "DT_INT32";
-                            floatVal = new Float[]{{
-                                add(871.29),
-                                add(6481.72),
-                            }};
-                            halfVal = new Integer[]{{
-                                add(368241),
-                            }};
-                            int64Val = new String[]{{
-                                add("sapiente"),
-                                add("quo"),
-                                add("odit"),
-                                add("at"),
-                            }};
-                            intVal = new Integer[]{{
-                                add(978619),
-                                add(473608),
-                                add(799159),
-                                add(800911),
-                            }};
-                            resourceHandleVal = new org.openapis.openapi.models.shared.TensorflowResourceHandleProto[]{{
-                                add(new TensorflowResourceHandleProto() {{
-                                    container = "totam";
-                                    device = "porro";
-                                    hashCode = "dolorum";
-                                    maybeTypeName = "dicta";
-                                    name = "nam";
-                                }}),
-                                add(new TensorflowResourceHandleProto() {{
-                                    container = "officia";
-                                    device = "occaecati";
-                                    hashCode = "fugit";
-                                    maybeTypeName = "deleniti";
-                                    name = "hic";
-                                }}),
-                            }};
-                            scomplexVal = new Float[]{{
-                                add(5218.48),
-                                add(1059.07),
-                                add(4146.62),
-                                add(4736),
-                            }};
-                            stringVal = new String[]{{
-                                add("qui"),
-                                add("impedit"),
-                            }};
-                            tensorContent = "cum";
-                            tensorShape = new TensorflowTensorShapeProto() {{
-                                dim = new org.openapis.openapi.models.shared.TensorShapeProtoDim[]{{
-                                    add(new TensorShapeProtoDim() {{
-                                        name = "ipsum";
-                                        size = "excepturi";
-                                    }}),
-                                    add(new TensorShapeProtoDim() {{
-                                        name = "aspernatur";
-                                        size = "perferendis";
-                                    }}),
-                                }};
-                                unknownRank = false;
-                            }};
-                            uint32Val = new Long[]{{
-                                add(617636),
-                                add(149675),
-                            }};
-                            uint64Val = new String[]{{
-                                add("dolor"),
-                                add("natus"),
-                                add("laboriosam"),
-                            }};
-                            variantVal = new org.openapis.openapi.models.shared.TensorflowVariantTensorDataProto[]{{
-                                add(new TensorflowVariantTensorDataProto() {{
-                                    metadata = "saepe";
-                                    tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
-                                        add(new TensorflowTensorProto() {{}}),
-                                        add(new TensorflowTensorProto() {{}}),
-                                        add(new TensorflowTensorProto() {{}}),
+            PredictJsonRequest req = new PredictJsonRequest(                new SeldonMessage() {{
+                                binData = "corrupti";
+                                data = new DefaultData() {{
+                                    names = new String[]{{
+                                        add("distinctio"),
+                                        add("quibusdam"),
+                                        add("unde"),
                                     }};
-                                    typeName = "in";
-                                }}),
-                                add(new TensorflowVariantTensorDataProto() {{
-                                    metadata = "corporis";
-                                    tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
-                                        add(new TensorflowTensorProto() {{}}),
-                                        add(new TensorflowTensorProto() {{}}),
-                                        add(new TensorflowTensorProto() {{}}),
+                                    ndarray = new Object[]{{
+                                        add("corrupti"),
+                                        add("illum"),
+                                        add("vel"),
+                                        add("error"),
                                     }};
-                                    typeName = "iure";
-                                }}),
-                                add(new TensorflowVariantTensorDataProto() {{
-                                    metadata = "saepe";
-                                    tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
-                                        add(new TensorflowTensorProto() {{}}),
-                                        add(new TensorflowTensorProto() {{}}),
-                                        add(new TensorflowTensorProto() {{}}),
+                                    tensor = new Tensor() {{
+                                        shape = new Integer[]{{
+                                            add(384382),
+                                            add(437587),
+                                            add(297534),
+                                        }};
+                                        values = new Double[]{{
+                                            add(567.13),
+                                            add(9636.63),
+                                            add(2726.56),
+                                            add(3834.41),
+                                        }};
+                                    }};;
+                                    tftensor = new TensorflowTensorProto() {{
+                                        boolVal = new Boolean[]{{
+                                            add(false),
+                                            add(false),
+                                        }};
+                                        dcomplexVal = new Double[]{{
+                                            add(8121.69),
+                                            add(5288.95),
+                                            add(4799.77),
+                                            add(5680.45),
+                                        }};
+                                        doubleVal = new Double[]{{
+                                            add(9255.97),
+                                            add(8360.79),
+                                        }};
+                                        dtype = TensorflowDataTypeEnum.DT_INT32;
+                                        floatVal = new Float[]{{
+                                            add(871.29),
+                                            add(6481.72),
+                                        }};
+                                        halfVal = new Integer[]{{
+                                            add(368241),
+                                        }};
+                                        int64Val = new String[]{{
+                                            add("sapiente"),
+                                            add("quo"),
+                                            add("odit"),
+                                            add("at"),
+                                        }};
+                                        intVal = new Integer[]{{
+                                            add(978619),
+                                            add(473608),
+                                            add(799159),
+                                            add(800911),
+                                        }};
+                                        resourceHandleVal = new org.openapis.openapi.models.shared.TensorflowResourceHandleProto[]{{
+                                            add(new TensorflowResourceHandleProto() {{
+                                                container = "totam";
+                                                device = "porro";
+                                                hashCode = "dolorum";
+                                                maybeTypeName = "dicta";
+                                                name = "Luke McCullough";
+                                            }}),
+                                            add(new TensorflowResourceHandleProto() {{
+                                                container = "hic";
+                                                device = "optio";
+                                                hashCode = "totam";
+                                                maybeTypeName = "beatae";
+                                                name = "Tanya Gleason";
+                                            }}),
+                                        }};
+                                        scomplexVal = new Float[]{{
+                                            add(4561.5),
+                                            add(2165.5),
+                                            add(5684.34),
+                                        }};
+                                        stringVal = new String[]{{
+                                            add("perferendis"),
+                                        }};
+                                        tensorContent = "ad";
+                                        tensorShape = new TensorflowTensorShapeProto() {{
+                                            dim = new org.openapis.openapi.models.shared.TensorShapeProtoDim[]{{
+                                                add(new TensorShapeProtoDim() {{
+                                                    name = "Sheryl Fadel";
+                                                    size = "hic";
+                                                }}),
+                                                add(new TensorShapeProtoDim() {{
+                                                    name = "Wilbur Kirlin";
+                                                    size = "iure";
+                                                }}),
+                                                add(new TensorShapeProtoDim() {{
+                                                    name = "Dr. Rickey Boyle";
+                                                    size = "mollitia";
+                                                }}),
+                                            }};
+                                            unknownRank = false;
+                                        }};;
+                                        uint32Val = new Long[]{{
+                                            add(170909L),
+                                            add(210382L),
+                                            add(358152L),
+                                        }};
+                                        uint64Val = new String[]{{
+                                            add("nobis"),
+                                        }};
+                                        variantVal = new org.openapis.openapi.models.shared.TensorflowVariantTensorDataProto[]{{
+                                            add(new TensorflowVariantTensorDataProto() {{
+                                                metadata = "omnis";
+                                                tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
+                                                    add(new TensorflowTensorProto() {{}}),
+                                                    add(new TensorflowTensorProto() {{}}),
+                                                }};
+                                                typeName = "minima";
+                                            }}),
+                                            add(new TensorflowVariantTensorDataProto() {{
+                                                metadata = "excepturi";
+                                                tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
+                                                    add(new TensorflowTensorProto() {{}}),
+                                                }};
+                                                typeName = "iure";
+                                            }}),
+                                        }};
+                                        versionNumber = 634274;
+                                    }};;
+                                }};;
+                                meta = new Meta() {{
+                                    metrics = new org.openapis.openapi.models.shared.Metric[]{{
+                                        add(new Metric() {{
+                                            key = "sapiente";
+                                            type = MetricTypeEnum.COUNTER;
+                                            value = 6527.9;
+                                        }}),
+                                        add(new Metric() {{
+                                            key = "dolorem";
+                                            type = MetricTypeEnum.GAUGE;
+                                            value = 1613.09;
+                                        }}),
+                                        add(new Metric() {{
+                                            key = "repellat";
+                                            type = MetricTypeEnum.GAUGE;
+                                            value = 5818.5;
+                                        }}),
+                                        add(new Metric() {{
+                                            key = "numquam";
+                                            type = MetricTypeEnum.GAUGE;
+                                            value = 4663.11;
+                                        }}),
                                     }};
-                                    typeName = "architecto";
-                                }}),
-                                add(new TensorflowVariantTensorDataProto() {{
-                                    metadata = "ipsa";
-                                    tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
-                                        add(new TensorflowTensorProto() {{}}),
-                                        add(new TensorflowTensorProto() {{}}),
-                                        add(new TensorflowTensorProto() {{}}),
-                                        add(new TensorflowTensorProto() {{}}),
+                                    puid = "molestiae";
+                                    requestPath = new java.util.HashMap<String, String>() {{
+                                        put("error", "quia");
                                     }};
-                                    typeName = "est";
-                                }}),
-                            }};
-                            versionNumber = 653140;
-                        }};
-                    }};
-                    meta = new Meta() {{
-                        metrics = new org.openapis.openapi.models.shared.Metric[]{{
-                            add(new Metric() {{
-                                key = "dolores";
-                                type = "COUNTER";
-                                value = 3581.52;
-                            }}),
-                            add(new Metric() {{
-                                key = "explicabo";
-                                type = "TIMER";
-                                value = 3154.28;
-                            }}),
-                            add(new Metric() {{
-                                key = "omnis";
-                                type = "GAUGE";
-                                value = 3250.47;
-                            }}),
-                        }};
-                        puid = "excepturi";
-                        requestPath = new java.util.HashMap<String, String>() {{
-                            put("iure", "culpa");
-                        }};
-                        routing = new java.util.HashMap<String, Integer>() {{
-                            put("sapiente", 102044);
-                            put("mollitia", 208876);
-                            put("culpa", 161309);
-                            put("repellat", 653108);
-                        }};
-                        tags = new java.util.HashMap<String, Object>() {{
-                            put("numquam", "commodi");
-                            put("quam", "molestiae");
-                            put("velit", "error");
-                        }};
-                    }};
-                    status = new Status() {{
-                        code = 158969;
-                        info = "quis";
-                        reason = "vitae";
-                        status = "FAILURE";
-                    }};
-                    strData = "animi";
-                }};
-                deployment = "enim";
-                namespace = "odit";
-            }}            
+                                    routing = new java.util.HashMap<String, Integer>() {{
+                                        put("vitae", 674752);
+                                        put("animi", 317202);
+                                    }};
+                                    tags = new java.util.HashMap<String, Object>() {{
+                                        put("quo", "sequi");
+                                    }};
+                                }};;
+                                status = new Status() {{
+                                    code = 949572;
+                                    info = "ipsam";
+                                    reason = "id";
+                                    status = StatusStatusFlagEnum.FAILURE;
+                                }};;
+                                strData = "aut";
+                            }};, "quasi", "error");            
 
-            PredictJsonResponse res = sdk.externalAmbassadorAPI.predictJson(req, new PredictJsonSecurity() {{
+            PredictJsonResponse res = sdk.externalAmbassadorAPI.predictJson(req, new PredictJsonSecurity("temporibus") {{
                 httpBearer = "Bearer YOUR_BEARER_TOKEN_HERE";
             }});
 
-            if (res.seldonMessage.isPresent()) {
+            if (res.seldonMessage != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -258,12 +235,12 @@ public class Application {
 ## Available Resources and Operations
 
 
-### externalAmbassadorAPI
+### [externalAmbassadorAPI](docs/externalambassadorapi/README.md)
 
-* `predictJson`
-* `predictRaw`
-* `predictString`
-* `sendFeedback`
+* [predictJson](docs/externalambassadorapi/README.md#predictjson)
+* [predictRaw](docs/externalambassadorapi/README.md#predictraw)
+* [predictString](docs/externalambassadorapi/README.md#predictstring)
+* [sendFeedback](docs/externalambassadorapi/README.md#sendfeedback)
 <!-- End SDK Available Operations -->
 
 ### Maturity

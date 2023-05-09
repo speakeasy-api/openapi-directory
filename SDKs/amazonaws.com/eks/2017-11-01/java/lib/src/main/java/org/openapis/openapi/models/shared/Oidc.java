@@ -15,9 +15,11 @@ public class Oidc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuer")
     public String issuer;
+
     public Oidc withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
     }
     
+    public Oidc(){}
 }

@@ -15,9 +15,11 @@ public class PutConfigurationSetTrackingOptionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomRedirectDomain")
     public String customRedirectDomain;
+
     public PutConfigurationSetTrackingOptionsRequestBody withCustomRedirectDomain(String customRedirectDomain) {
         this.customRedirectDomain = customRedirectDomain;
         return this;
     }
     
+    public PutConfigurationSetTrackingOptionsRequestBody(){}
 }

@@ -57,10 +57,8 @@ public class TypeOpendaplink {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchOpendaplinkResponse res = new org.openapis.openapi.models.operations.SearchOpendaplinkResponse() {{
+        org.openapis.openapi.models.operations.SearchOpendaplinkResponse res = new org.openapis.openapi.models.operations.SearchOpendaplinkResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

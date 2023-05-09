@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeletePublicIpv4PoolRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeletePublicIpv4PoolActionEnum action;
+
     public GETDeletePublicIpv4PoolRequest withAction(GETDeletePublicIpv4PoolActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeletePublicIpv4PoolRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDeletePublicIpv4PoolRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETDeletePublicIpv4PoolRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PoolId")
     public String poolId;
+
     public GETDeletePublicIpv4PoolRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -36,6 +40,7 @@ public class GETDeletePublicIpv4PoolRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeletePublicIpv4PoolVersionEnum version;
+
     public GETDeletePublicIpv4PoolRequest withVersion(GETDeletePublicIpv4PoolVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDeletePublicIpv4PoolRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeletePublicIpv4PoolRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeletePublicIpv4PoolRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeletePublicIpv4PoolRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeletePublicIpv4PoolRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeletePublicIpv4PoolRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeletePublicIpv4PoolRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeletePublicIpv4PoolRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeletePublicIpv4PoolRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeletePublicIpv4PoolRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeletePublicIpv4PoolRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeletePublicIpv4PoolRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDeletePublicIpv4PoolRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeletePublicIpv4PoolRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeletePublicIpv4PoolRequest(@JsonProperty("Action") GETDeletePublicIpv4PoolActionEnum action, @JsonProperty("PoolId") String poolId, @JsonProperty("Version") GETDeletePublicIpv4PoolVersionEnum version) {
+        this.action = action;
+        this.poolId = poolId;
+        this.version = version;
+  }
 }

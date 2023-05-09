@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AdminChannelsStopSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AdminChannelsStopSecurityOption1 option1;
+
     public AdminChannelsStopSecurity withOption1(AdminChannelsStopSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class AdminChannelsStopSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AdminChannelsStopSecurityOption2 option2;
+
     public AdminChannelsStopSecurity withOption2(AdminChannelsStopSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class AdminChannelsStopSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AdminChannelsStopSecurityOption3 option3;
+
     public AdminChannelsStopSecurity withOption3(AdminChannelsStopSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class AdminChannelsStopSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AdminChannelsStopSecurityOption4 option4;
+
     public AdminChannelsStopSecurity withOption4(AdminChannelsStopSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,9 +41,11 @@ public class AdminChannelsStopSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AdminChannelsStopSecurityOption5 option5;
+
     public AdminChannelsStopSecurity withOption5(AdminChannelsStopSecurityOption5 option5) {
         this.option5 = option5;
         return this;
     }
     
+    public AdminChannelsStopSecurity(){}
 }

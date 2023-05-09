@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDetachVpnGatewayRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDetachVpnGatewayActionEnum action;
+
     public GETDetachVpnGatewayRequest withAction(GETDetachVpnGatewayActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDetachVpnGatewayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDetachVpnGatewayRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,6 +29,7 @@ public class GETDetachVpnGatewayRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDetachVpnGatewayVersionEnum version;
+
     public GETDetachVpnGatewayRequest withVersion(GETDetachVpnGatewayVersionEnum version) {
         this.version = version;
         return this;
@@ -36,6 +40,7 @@ public class GETDetachVpnGatewayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcId")
     public String vpcId;
+
     public GETDetachVpnGatewayRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -46,6 +51,7 @@ public class GETDetachVpnGatewayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpnGatewayId")
     public String vpnGatewayId;
+
     public GETDetachVpnGatewayRequest withVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
@@ -53,6 +59,7 @@ public class GETDetachVpnGatewayRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDetachVpnGatewayRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETDetachVpnGatewayRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDetachVpnGatewayRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETDetachVpnGatewayRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDetachVpnGatewayRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETDetachVpnGatewayRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDetachVpnGatewayRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETDetachVpnGatewayRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDetachVpnGatewayRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETDetachVpnGatewayRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDetachVpnGatewayRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETDetachVpnGatewayRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDetachVpnGatewayRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDetachVpnGatewayRequest(@JsonProperty("Action") GETDetachVpnGatewayActionEnum action, @JsonProperty("Version") GETDetachVpnGatewayVersionEnum version, @JsonProperty("VpcId") String vpcId, @JsonProperty("VpnGatewayId") String vpnGatewayId) {
+        this.action = action;
+        this.version = version;
+        this.vpcId = vpcId;
+        this.vpnGatewayId = vpnGatewayId;
+  }
 }

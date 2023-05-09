@@ -15,6 +15,7 @@ public class DateRange {
      */
     @JsonProperty("from")
     public String from;
+
     public DateRange withFrom(String from) {
         this.from = from;
         return this;
@@ -25,9 +26,14 @@ public class DateRange {
      */
     @JsonProperty("to")
     public String to;
+
     public DateRange withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public DateRange(@JsonProperty("from") String from, @JsonProperty("to") String to) {
+        this.from = from;
+        this.to = to;
+  }
 }

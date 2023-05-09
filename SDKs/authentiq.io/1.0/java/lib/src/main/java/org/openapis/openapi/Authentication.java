@@ -66,10 +66,8 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthorizeResponse res = new org.openapis.openapi.models.operations.AuthorizeResponse() {{
+        org.openapis.openapi.models.operations.AuthorizeResponse res = new org.openapis.openapi.models.operations.AuthorizeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 302 || httpRes.statusCode() == 303) {
@@ -116,7 +114,7 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TokenResponse res = new org.openapis.openapi.models.operations.TokenResponse() {{
+        org.openapis.openapi.models.operations.TokenResponse res = new org.openapis.openapi.models.operations.TokenResponse(contentType, httpRes.statusCode()) {{
             token = null;
             token = null;
             body = null;
@@ -126,8 +124,6 @@ public class Authentication {
             oAuth2Error = null;
             oAuth2Error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,10 +175,11 @@ public class Authentication {
      * Use this endpoint to retrieve a user's profile in case you are unable to parse an ID Token or you've not already obtained enough details from the ID Token via the Token Endpoint.
      * 
      * http://openid.net/specs/openid-connect-core-1_0.html#UserInfo - OIDC UserInfo Endpoint
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UserInfoResponse userInfo() throws Exception {
+    public org.openapis.openapi.models.operations.UserInfoResponse userInfo(org.openapis.openapi.models.operations.UserInfoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/userinfo");
         
@@ -191,12 +188,13 @@ public class Authentication {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserInfoResponse res = new org.openapis.openapi.models.operations.UserInfoResponse() {{
+        org.openapis.openapi.models.operations.UserInfoResponse res = new org.openapis.openapi.models.operations.UserInfoResponse(contentType, httpRes.statusCode()) {{
             userInfo = null;
             userInfo = null;
             body = null;
@@ -206,8 +204,6 @@ public class Authentication {
             oAuth2Error = null;
             oAuth2Error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class ListTableStorageOptimizersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTableStorageOptimizersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTableStorageOptimizersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageOptimizerList")
     public StorageOptimizer[] storageOptimizerList;
+
     public ListTableStorageOptimizersResponse withStorageOptimizerList(StorageOptimizer[] storageOptimizerList) {
         this.storageOptimizerList = storageOptimizerList;
         return this;
     }
     
+    public ListTableStorageOptimizersResponse(){}
 }

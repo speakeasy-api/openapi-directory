@@ -1,11 +1,17 @@
 configVersion: 1.0.0
 generation:
-  telemetryEnabled: false
+  baseServerURL: https://redhat.local
   sdkClassName: SDK
-  sdkFlattening: true
   singleTagPerOp: false
+  tagNamespacingDisabled: false
 java:
   version: 0.0.1
   artifactID: openapi
+  companyEmail: info@mycompany.com
+  companyName: My Company
+  companyURL: www.mycompany.com
+  githubURL: github.com/owner/repo
   groupID: org.openapis
+  maxMethodParams: 0
+  ossrhURL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
   projectName: openapi

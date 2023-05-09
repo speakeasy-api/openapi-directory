@@ -18,9 +18,11 @@ public class NFSMount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public NFSMount withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public NFSMount(){}
 }

@@ -23,9 +23,11 @@ public class CatalogCustomAttributeDefinitionNumberConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Long precision;
+
     public CatalogCustomAttributeDefinitionNumberConfig withPrecision(Long precision) {
         this.precision = precision;
         return this;
     }
     
+    public CatalogCustomAttributeDefinitionNumberConfig(){}
 }

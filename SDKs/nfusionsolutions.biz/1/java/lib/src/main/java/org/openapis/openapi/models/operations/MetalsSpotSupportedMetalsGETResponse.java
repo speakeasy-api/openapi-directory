@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MetalsSpotSupportedMetalsGETResponse {
     
     public byte[] body;
+
     public MetalsSpotSupportedMetalsGETResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class MetalsSpotSupportedMetalsGETResponse {
     
     
     public String contentType;
+
     public MetalsSpotSupportedMetalsGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class MetalsSpotSupportedMetalsGETResponse {
      */
     
     public String[] metalsSpotSupportedMetalsGET200ApplicationJSONStrings;
+
     public MetalsSpotSupportedMetalsGETResponse withMetalsSpotSupportedMetalsGET200ApplicationJSONStrings(String[] metalsSpotSupportedMetalsGET200ApplicationJSONStrings) {
         this.metalsSpotSupportedMetalsGET200ApplicationJSONStrings = metalsSpotSupportedMetalsGET200ApplicationJSONStrings;
         return this;
@@ -33,6 +37,7 @@ public class MetalsSpotSupportedMetalsGETResponse {
     
     
     public Integer statusCode;
+
     public MetalsSpotSupportedMetalsGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class MetalsSpotSupportedMetalsGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MetalsSpotSupportedMetalsGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MetalsSpotSupportedMetalsGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public ServiceInput withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,9 +30,11 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServiceInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ServiceInput(){}
 }

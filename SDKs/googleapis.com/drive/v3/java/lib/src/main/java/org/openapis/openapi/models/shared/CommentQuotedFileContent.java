@@ -18,6 +18,7 @@ public class CommentQuotedFileContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public CommentQuotedFileContent withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -29,9 +30,11 @@ public class CommentQuotedFileContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CommentQuotedFileContent withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CommentQuotedFileContent(){}
 }

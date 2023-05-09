@@ -12,6 +12,7 @@ public class GetApplicationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public GetApplicationsDirectionEnum direction;
+
     public GetApplicationsRequest withDirection(GetApplicationsDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -22,6 +23,7 @@ public class GetApplicationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetApplicationsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,6 +34,7 @@ public class GetApplicationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetApplicationsRequest withPage(String page) {
         this.page = page;
         return this;
@@ -42,9 +45,11 @@ public class GetApplicationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetApplicationsRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetApplicationsRequest(){}
 }

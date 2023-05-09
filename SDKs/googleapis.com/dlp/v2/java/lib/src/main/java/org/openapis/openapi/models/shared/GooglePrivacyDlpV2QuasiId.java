@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2QuasiId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customTag")
     public String customTag;
+
     public GooglePrivacyDlpV2QuasiId withCustomTag(String customTag) {
         this.customTag = customTag;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2QuasiId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public GooglePrivacyDlpV2FieldId field;
+
     public GooglePrivacyDlpV2QuasiId withField(GooglePrivacyDlpV2FieldId field) {
         this.field = field;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2QuasiId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inferred")
     public java.util.Map<String, Object> inferred;
+
     public GooglePrivacyDlpV2QuasiId withInferred(java.util.Map<String, Object> inferred) {
         this.inferred = inferred;
         return this;
@@ -51,9 +54,11 @@ public class GooglePrivacyDlpV2QuasiId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infoType")
     public GooglePrivacyDlpV2InfoType infoType;
+
     public GooglePrivacyDlpV2QuasiId withInfoType(GooglePrivacyDlpV2InfoType infoType) {
         this.infoType = infoType;
         return this;
     }
     
+    public GooglePrivacyDlpV2QuasiId(){}
 }

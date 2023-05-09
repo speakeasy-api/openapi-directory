@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveDomainAuthCodeRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RetrieveDomainAuthCodeRequest retrieveDomainAuthCodeRequest;
+
     public RetrieveDomainAuthCodeRequest withRetrieveDomainAuthCodeRequest(org.openapis.openapi.models.shared.RetrieveDomainAuthCodeRequest retrieveDomainAuthCodeRequest) {
         this.retrieveDomainAuthCodeRequest = retrieveDomainAuthCodeRequest;
         return this;
@@ -16,6 +18,7 @@ public class RetrieveDomainAuthCodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public RetrieveDomainAuthCodeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class RetrieveDomainAuthCodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public RetrieveDomainAuthCodeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class RetrieveDomainAuthCodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public RetrieveDomainAuthCodeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class RetrieveDomainAuthCodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public RetrieveDomainAuthCodeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class RetrieveDomainAuthCodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public RetrieveDomainAuthCodeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class RetrieveDomainAuthCodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public RetrieveDomainAuthCodeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class RetrieveDomainAuthCodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public RetrieveDomainAuthCodeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class RetrieveDomainAuthCodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public RetrieveDomainAuthCodeXAmzTargetEnum xAmzTarget;
+
     public RetrieveDomainAuthCodeRequest withXAmzTarget(RetrieveDomainAuthCodeXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public RetrieveDomainAuthCodeRequest(@JsonProperty("RetrieveDomainAuthCodeRequest") org.openapis.openapi.models.shared.RetrieveDomainAuthCodeRequest retrieveDomainAuthCodeRequest, @JsonProperty("X-Amz-Target") RetrieveDomainAuthCodeXAmzTargetEnum xAmzTarget) {
+        this.retrieveDomainAuthCodeRequest = retrieveDomainAuthCodeRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

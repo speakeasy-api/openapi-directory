@@ -99,10 +99,8 @@ public class RoadDistance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmCarbonOffset5Response res = new org.openapis.openapi.models.operations.ConfirmCarbonOffset5Response() {{
+        org.openapis.openapi.models.operations.ConfirmCarbonOffset5Response res = new org.openapis.openapi.models.operations.ConfirmCarbonOffset5Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,10 +146,8 @@ public class RoadDistance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmPayment5Response res = new org.openapis.openapi.models.operations.ConfirmPayment5Response() {{
+        org.openapis.openapi.models.operations.ConfirmPayment5Response res = new org.openapis.openapi.models.operations.ConfirmPayment5Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,10 +193,8 @@ public class RoadDistance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction5Response res = new org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction5Response() {{
+        org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction5Response res = new org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction5Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,10 +240,8 @@ public class RoadDistance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmsPlanting5Response res = new org.openapis.openapi.models.operations.ConfirmsPlanting5Response() {{
+        org.openapis.openapi.models.operations.ConfirmsPlanting5Response res = new org.openapis.openapi.models.operations.ConfirmsPlanting5Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,10 +287,8 @@ public class RoadDistance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RoadDistanceResponse res = new org.openapis.openapi.models.operations.RoadDistanceResponse() {{
+        org.openapis.openapi.models.operations.RoadDistanceResponse res = new org.openapis.openapi.models.operations.RoadDistanceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

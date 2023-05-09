@@ -15,6 +15,7 @@ public class TsvStoreOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationType")
     public AnnotationTypeEnum annotationType;
+
     public TsvStoreOptions withAnnotationType(AnnotationTypeEnum annotationType) {
         this.annotationType = annotationType;
         return this;
@@ -23,6 +24,7 @@ public class TsvStoreOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatToHeader")
     public java.util.Map<String, String> formatToHeader;
+
     public TsvStoreOptions withFormatToHeader(java.util.Map<String, String> formatToHeader) {
         this.formatToHeader = formatToHeader;
         return this;
@@ -31,9 +33,11 @@ public class TsvStoreOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public java.util.Map<String, SchemaValueTypeEnum>[] schema;
+
     public TsvStoreOptions withSchema(java.util.Map<String, SchemaValueTypeEnum>[] schema) {
         this.schema = schema;
         return this;
     }
     
+    public TsvStoreOptions(){}
 }

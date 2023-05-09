@@ -12,6 +12,7 @@ public class LicerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public LicerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,9 +23,14 @@ public class LicerRequestBodyCertificateParameters {
      */
     @JsonProperty("policynumber")
     public String policynumber;
+
     public LicerRequestBodyCertificateParameters withPolicynumber(String policynumber) {
         this.policynumber = policynumber;
         return this;
     }
     
+    public LicerRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("policynumber") String policynumber) {
+        this.dob = dob;
+        this.policynumber = policynumber;
+  }
 }

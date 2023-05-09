@@ -18,9 +18,11 @@ public class RequestPhoneVerificationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationId")
     public String verificationId;
+
     public RequestPhoneVerificationResponse withVerificationId(String verificationId) {
         this.verificationId = verificationId;
         return this;
     }
     
+    public RequestPhoneVerificationResponse(){}
 }

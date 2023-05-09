@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCustomFieldsIdSelectOptionsJsonResponse {
     
     public String contentType;
+
     public GetCustomFieldsIdSelectOptionsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCustomFieldsIdSelectOptionsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomFieldSelectOption[] customFieldSelectOptions;
+
     public GetCustomFieldsIdSelectOptionsJsonResponse withCustomFieldSelectOptions(org.openapis.openapi.models.shared.CustomFieldSelectOption[] customFieldSelectOptions) {
         this.customFieldSelectOptions = customFieldSelectOptions;
         return this;
@@ -26,6 +29,7 @@ public class GetCustomFieldsIdSelectOptionsJsonResponse {
     
     
     public Integer statusCode;
+
     public GetCustomFieldsIdSelectOptionsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetCustomFieldsIdSelectOptionsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCustomFieldsIdSelectOptionsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCustomFieldsIdSelectOptionsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

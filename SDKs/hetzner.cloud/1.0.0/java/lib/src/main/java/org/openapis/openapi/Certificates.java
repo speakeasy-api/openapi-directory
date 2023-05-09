@@ -55,10 +55,8 @@ public class Certificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCertificatesIdResponse res = new org.openapis.openapi.models.operations.DeleteCertificatesIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteCertificatesIdResponse res = new org.openapis.openapi.models.operations.DeleteCertificatesIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -94,11 +92,9 @@ public class Certificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCertificatesResponse res = new org.openapis.openapi.models.operations.GetCertificatesResponse() {{
+        org.openapis.openapi.models.operations.GetCertificatesResponse res = new org.openapis.openapi.models.operations.GetCertificatesResponse(contentType, httpRes.statusCode()) {{
             certificatesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -133,11 +129,9 @@ public class Certificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCertificatesIdResponse res = new org.openapis.openapi.models.operations.GetCertificatesIdResponse() {{
+        org.openapis.openapi.models.operations.GetCertificatesIdResponse res = new org.openapis.openapi.models.operations.GetCertificatesIdResponse(contentType, httpRes.statusCode()) {{
             certificateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -181,11 +175,9 @@ public class Certificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCertificatesResponse res = new org.openapis.openapi.models.operations.PostCertificatesResponse() {{
+        org.openapis.openapi.models.operations.PostCertificatesResponse res = new org.openapis.openapi.models.operations.PostCertificatesResponse(contentType, httpRes.statusCode()) {{
             createCertificateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -227,11 +219,9 @@ public class Certificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutCertificatesIdResponse res = new org.openapis.openapi.models.operations.PutCertificatesIdResponse() {{
+        org.openapis.openapi.models.operations.PutCertificatesIdResponse res = new org.openapis.openapi.models.operations.PutCertificatesIdResponse(contentType, httpRes.statusCode()) {{
             certificateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -96,4 +96,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/SerieResume.java
 lib/src/main/java/org/openapis/openapi/models/shared/Serie.java
 lib/src/main/java/org/openapis/openapi/models/shared/SetCardCount.java
 lib/src/main/java/org/openapis/openapi/models/shared/Set.java
+docs/sdk/README.md
+docs/cards/README.md
+docs/filters/README.md
 USAGE.md

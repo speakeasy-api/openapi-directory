@@ -32,4 +32,5 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/CheckSpellingRussianRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/CheckSpellingRussianRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CheckSpellingRussianResponse.java
+docs/sdk/README.md
 USAGE.md

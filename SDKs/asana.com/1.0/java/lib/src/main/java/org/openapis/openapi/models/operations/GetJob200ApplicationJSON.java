@@ -15,9 +15,11 @@ public class GetJob200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.JobResponse data;
+
     public GetJob200ApplicationJSON withData(org.openapis.openapi.models.shared.JobResponse data) {
         this.data = data;
         return this;
     }
     
+    public GetJob200ApplicationJSON(){}
 }

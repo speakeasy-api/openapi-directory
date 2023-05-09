@@ -18,6 +18,7 @@ public class MergeConflict {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityInBaseVersion")
     public Entity entityInBaseVersion;
+
     public MergeConflict withEntityInBaseVersion(Entity entityInBaseVersion) {
         this.entityInBaseVersion = entityInBaseVersion;
         return this;
@@ -29,9 +30,11 @@ public class MergeConflict {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityInWorkspace")
     public Entity entityInWorkspace;
+
     public MergeConflict withEntityInWorkspace(Entity entityInWorkspace) {
         this.entityInWorkspace = entityInWorkspace;
         return this;
     }
     
+    public MergeConflict(){}
 }

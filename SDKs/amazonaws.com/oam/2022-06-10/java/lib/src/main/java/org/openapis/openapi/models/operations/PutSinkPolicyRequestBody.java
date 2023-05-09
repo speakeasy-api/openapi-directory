@@ -12,6 +12,7 @@ public class PutSinkPolicyRequestBody {
      */
     @JsonProperty("Policy")
     public String policy;
+
     public PutSinkPolicyRequestBody withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -22,9 +23,14 @@ public class PutSinkPolicyRequestBody {
      */
     @JsonProperty("SinkIdentifier")
     public String sinkIdentifier;
+
     public PutSinkPolicyRequestBody withSinkIdentifier(String sinkIdentifier) {
         this.sinkIdentifier = sinkIdentifier;
         return this;
     }
     
+    public PutSinkPolicyRequestBody(@JsonProperty("Policy") String policy, @JsonProperty("SinkIdentifier") String sinkIdentifier) {
+        this.policy = policy;
+        this.sinkIdentifier = sinkIdentifier;
+  }
 }

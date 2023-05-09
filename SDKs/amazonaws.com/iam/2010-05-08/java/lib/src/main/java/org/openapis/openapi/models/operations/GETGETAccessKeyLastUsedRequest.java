@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETAccessKeyLastUsedRequest {
@@ -12,6 +13,7 @@ public class GETGETAccessKeyLastUsedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccessKeyId")
     public String accessKeyId;
+
     public GETGETAccessKeyLastUsedRequest withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -19,6 +21,7 @@ public class GETGETAccessKeyLastUsedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETAccessKeyLastUsedActionEnum action;
+
     public GETGETAccessKeyLastUsedRequest withAction(GETGETAccessKeyLastUsedActionEnum action) {
         this.action = action;
         return this;
@@ -26,6 +29,7 @@ public class GETGETAccessKeyLastUsedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETAccessKeyLastUsedVersionEnum version;
+
     public GETGETAccessKeyLastUsedRequest withVersion(GETGETAccessKeyLastUsedVersionEnum version) {
         this.version = version;
         return this;
@@ -33,6 +37,7 @@ public class GETGETAccessKeyLastUsedRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETAccessKeyLastUsedRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -40,6 +45,7 @@ public class GETGETAccessKeyLastUsedRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETAccessKeyLastUsedRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -47,6 +53,7 @@ public class GETGETAccessKeyLastUsedRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETAccessKeyLastUsedRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -54,6 +61,7 @@ public class GETGETAccessKeyLastUsedRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETAccessKeyLastUsedRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -61,6 +69,7 @@ public class GETGETAccessKeyLastUsedRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETAccessKeyLastUsedRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -68,6 +77,7 @@ public class GETGETAccessKeyLastUsedRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETAccessKeyLastUsedRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -75,9 +85,15 @@ public class GETGETAccessKeyLastUsedRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETAccessKeyLastUsedRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETAccessKeyLastUsedRequest(@JsonProperty("AccessKeyId") String accessKeyId, @JsonProperty("Action") GETGETAccessKeyLastUsedActionEnum action, @JsonProperty("Version") GETGETAccessKeyLastUsedVersionEnum version) {
+        this.accessKeyId = accessKeyId;
+        this.action = action;
+        this.version = version;
+  }
 }

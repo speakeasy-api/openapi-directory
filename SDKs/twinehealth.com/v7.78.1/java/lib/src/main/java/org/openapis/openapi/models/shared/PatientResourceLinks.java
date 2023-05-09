@@ -12,6 +12,7 @@ public class PatientResourceLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public PatientResourceLinks withSelf(String self) {
         this.self = self;
         return this;
@@ -23,9 +24,11 @@ public class PatientResourceLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twine_web_app")
     public String twineWebApp;
+
     public PatientResourceLinks withTwineWebApp(String twineWebApp) {
         this.twineWebApp = twineWebApp;
         return this;
     }
     
+    public PatientResourceLinks(){}
 }

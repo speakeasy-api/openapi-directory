@@ -15,6 +15,7 @@ public class ScheduleRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appArn")
     public String appArn;
+
     public ScheduleRunRequest withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -23,6 +24,7 @@ public class ScheduleRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public ScheduleRunConfiguration configuration;
+
     public ScheduleRunRequest withConfiguration(ScheduleRunConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -31,6 +33,7 @@ public class ScheduleRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devicePoolArn")
     public String devicePoolArn;
+
     public ScheduleRunRequest withDevicePoolArn(String devicePoolArn) {
         this.devicePoolArn = devicePoolArn;
         return this;
@@ -39,6 +42,7 @@ public class ScheduleRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceSelectionConfiguration")
     public DeviceSelectionConfiguration deviceSelectionConfiguration;
+
     public ScheduleRunRequest withDeviceSelectionConfiguration(DeviceSelectionConfiguration deviceSelectionConfiguration) {
         this.deviceSelectionConfiguration = deviceSelectionConfiguration;
         return this;
@@ -47,6 +51,7 @@ public class ScheduleRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionConfiguration")
     public ExecutionConfiguration executionConfiguration;
+
     public ScheduleRunRequest withExecutionConfiguration(ExecutionConfiguration executionConfiguration) {
         this.executionConfiguration = executionConfiguration;
         return this;
@@ -55,6 +60,7 @@ public class ScheduleRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ScheduleRunRequest withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +68,7 @@ public class ScheduleRunRequest {
     
     @JsonProperty("projectArn")
     public String projectArn;
+
     public ScheduleRunRequest withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -69,9 +76,14 @@ public class ScheduleRunRequest {
     
     @JsonProperty("test")
     public ScheduleRunTest test;
+
     public ScheduleRunRequest withTest(ScheduleRunTest test) {
         this.test = test;
         return this;
     }
     
+    public ScheduleRunRequest(@JsonProperty("projectArn") String projectArn, @JsonProperty("test") ScheduleRunTest test) {
+        this.projectArn = projectArn;
+        this.test = test;
+  }
 }

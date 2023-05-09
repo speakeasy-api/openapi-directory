@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateTemplateRequest {
     /**
@@ -12,9 +12,13 @@ public class UpdateTemplateRequest {
      */
     
     public Template template;
+
     public UpdateTemplateRequest withTemplate(Template template) {
         this.template = template;
         return this;
     }
     
+    public UpdateTemplateRequest(@JsonProperty("Template") Template template) {
+        this.template = template;
+  }
 }

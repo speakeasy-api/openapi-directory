@@ -15,6 +15,7 @@ public class UpdateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateProjectRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class UpdateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementTemplate")
     public UpdateProjectRequestBodyPlacementTemplate placementTemplate;
+
     public UpdateProjectRequestBody withPlacementTemplate(UpdateProjectRequestBodyPlacementTemplate placementTemplate) {
         this.placementTemplate = placementTemplate;
         return this;
     }
     
+    public UpdateProjectRequestBody(){}
 }

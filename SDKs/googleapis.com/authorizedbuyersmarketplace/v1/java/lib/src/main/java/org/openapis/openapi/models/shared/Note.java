@@ -18,6 +18,7 @@ public class Note {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Note withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Note {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorRole")
     public NoteCreatorRoleEnum creatorRole;
+
     public Note withCreatorRole(NoteCreatorRoleEnum creatorRole) {
         this.creatorRole = creatorRole;
         return this;
@@ -40,9 +42,11 @@ public class Note {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public Note withNote(String note) {
         this.note = note;
         return this;
     }
     
+    public Note(){}
 }

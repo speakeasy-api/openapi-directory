@@ -58,11 +58,9 @@ public class Appointments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1AppointmentsResponse res = new org.openapis.openapi.models.operations.GetSetupV1AppointmentsResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1AppointmentsResponse res = new org.openapis.openapi.models.operations.GetSetupV1AppointmentsResponse(contentType, httpRes.statusCode()) {{
             appointmentListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class Appointments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1AppointmentsIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1AppointmentsIdResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1AppointmentsIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1AppointmentsIdResponse(contentType, httpRes.statusCode()) {{
             appointmentViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,11 +134,9 @@ public class Appointments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSetupV1AppointmentsIdReassignResourceResourceIdResponse res = new org.openapis.openapi.models.operations.PutSetupV1AppointmentsIdReassignResourceResourceIdResponse() {{
+        org.openapis.openapi.models.operations.PutSetupV1AppointmentsIdReassignResourceResourceIdResponse res = new org.openapis.openapi.models.operations.PutSetupV1AppointmentsIdReassignResourceResourceIdResponse(contentType, httpRes.statusCode()) {{
             appointmentViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

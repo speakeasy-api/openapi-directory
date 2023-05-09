@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PredictiveScalingConfiguration - Represents a predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PredictiveScalingConfiguration {
     
     public PredictiveScalingMaxCapacityBreachBehaviorEnum maxCapacityBreachBehavior;
+
     public PredictiveScalingConfiguration withMaxCapacityBreachBehavior(PredictiveScalingMaxCapacityBreachBehaviorEnum maxCapacityBreachBehavior) {
         this.maxCapacityBreachBehavior = maxCapacityBreachBehavior;
         return this;
@@ -19,6 +20,7 @@ public class PredictiveScalingConfiguration {
     
     
     public Long maxCapacityBuffer;
+
     public PredictiveScalingConfiguration withMaxCapacityBuffer(Long maxCapacityBuffer) {
         this.maxCapacityBuffer = maxCapacityBuffer;
         return this;
@@ -26,6 +28,7 @@ public class PredictiveScalingConfiguration {
     
     
     public PredictiveScalingMetricSpecification[] metricSpecifications;
+
     public PredictiveScalingConfiguration withMetricSpecifications(PredictiveScalingMetricSpecification[] metricSpecifications) {
         this.metricSpecifications = metricSpecifications;
         return this;
@@ -33,6 +36,7 @@ public class PredictiveScalingConfiguration {
     
     
     public PredictiveScalingModeEnum mode;
+
     public PredictiveScalingConfiguration withMode(PredictiveScalingModeEnum mode) {
         this.mode = mode;
         return this;
@@ -40,9 +44,13 @@ public class PredictiveScalingConfiguration {
     
     
     public Long schedulingBufferTime;
+
     public PredictiveScalingConfiguration withSchedulingBufferTime(Long schedulingBufferTime) {
         this.schedulingBufferTime = schedulingBufferTime;
         return this;
     }
     
+    public PredictiveScalingConfiguration(@JsonProperty("MetricSpecifications") PredictiveScalingMetricSpecification[] metricSpecifications) {
+        this.metricSpecifications = metricSpecifications;
+  }
 }

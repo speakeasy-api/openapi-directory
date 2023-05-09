@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class TripsTripDetailsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trackToken")
     public String trackToken;
+
     public TripsTripDetailsRequest withTrackToken(String trackToken) {
         this.trackToken = trackToken;
         return this;
     }
     
+    public TripsTripDetailsRequest(){}
 }

@@ -12,9 +12,13 @@ public class StartInstanceOnboardingJobRequestBody {
      */
     @JsonProperty("encryptionConfig")
     public StartInstanceOnboardingJobRequestBodyEncryptionConfig encryptionConfig;
+
     public StartInstanceOnboardingJobRequestBody withEncryptionConfig(StartInstanceOnboardingJobRequestBodyEncryptionConfig encryptionConfig) {
         this.encryptionConfig = encryptionConfig;
         return this;
     }
     
+    public StartInstanceOnboardingJobRequestBody(@JsonProperty("encryptionConfig") StartInstanceOnboardingJobRequestBodyEncryptionConfig encryptionConfig) {
+        this.encryptionConfig = encryptionConfig;
+  }
 }

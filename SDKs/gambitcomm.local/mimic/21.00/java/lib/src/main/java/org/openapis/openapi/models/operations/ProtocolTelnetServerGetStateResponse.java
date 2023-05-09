@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProtocolTelnetServerGetStateResponse {
     
     public String contentType;
+
     public ProtocolTelnetServerGetStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProtocolTelnetServerGetStateResponse {
     
     
     public Integer statusCode;
+
     public ProtocolTelnetServerGetStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProtocolTelnetServerGetStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProtocolTelnetServerGetStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ProtocolTelnetServerGetStateResponse {
      */
     
     public Integer[] protocolTelnetServerGetState200ApplicationJSONInt32Integers;
+
     public ProtocolTelnetServerGetStateResponse withProtocolTelnetServerGetState200ApplicationJSONInt32Integers(Integer[] protocolTelnetServerGetState200ApplicationJSONInt32Integers) {
         this.protocolTelnetServerGetState200ApplicationJSONInt32Integers = protocolTelnetServerGetState200ApplicationJSONInt32Integers;
         return this;
     }
     
+    public ProtocolTelnetServerGetStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

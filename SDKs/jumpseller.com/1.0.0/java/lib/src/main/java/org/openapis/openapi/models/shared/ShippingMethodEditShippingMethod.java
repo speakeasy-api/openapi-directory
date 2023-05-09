@@ -15,6 +15,7 @@ public class ShippingMethodEditShippingMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callback_url")
     public String callbackUrl;
+
     public ShippingMethodEditShippingMethod withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -26,6 +27,7 @@ public class ShippingMethodEditShippingMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public ShippingMethodEditShippingMethod withCity(String city) {
         this.city = city;
         return this;
@@ -37,6 +39,7 @@ public class ShippingMethodEditShippingMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fetch_services_url")
     public String fetchServicesUrl;
+
     public ShippingMethodEditShippingMethod withFetchServicesUrl(String fetchServicesUrl) {
         this.fetchServicesUrl = fetchServicesUrl;
         return this;
@@ -48,6 +51,7 @@ public class ShippingMethodEditShippingMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ShippingMethodEditShippingMethod withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class ShippingMethodEditShippingMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal")
     public String postal;
+
     public ShippingMethodEditShippingMethod withPostal(String postal) {
         this.postal = postal;
         return this;
@@ -70,6 +75,7 @@ public class ShippingMethodEditShippingMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ShippingMethodEditShippingMethod withState(String state) {
         this.state = state;
         return this;
@@ -81,9 +87,11 @@ public class ShippingMethodEditShippingMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public ShippingMethodEditShippingMethod withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public ShippingMethodEditShippingMethod(){}
 }

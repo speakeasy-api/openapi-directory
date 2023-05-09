@@ -18,6 +18,7 @@ public class WeightedFontFamily {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fontFamily")
     public String fontFamily;
+
     public WeightedFontFamily withFontFamily(String fontFamily) {
         this.fontFamily = fontFamily;
         return this;
@@ -29,9 +30,11 @@ public class WeightedFontFamily {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Integer weight;
+
     public WeightedFontFamily withWeight(Integer weight) {
         this.weight = weight;
         return this;
     }
     
+    public WeightedFontFamily(){}
 }

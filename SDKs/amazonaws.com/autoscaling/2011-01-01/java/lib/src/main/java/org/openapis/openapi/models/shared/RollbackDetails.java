@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class RollbackDetails {
     
     public Long instancesToUpdateOnRollback;
+
     public RollbackDetails withInstancesToUpdateOnRollback(Long instancesToUpdateOnRollback) {
         this.instancesToUpdateOnRollback = instancesToUpdateOnRollback;
         return this;
@@ -19,16 +20,15 @@ public class RollbackDetails {
     
     
     public Long percentageCompleteOnRollback;
+
     public RollbackDetails withPercentageCompleteOnRollback(Long percentageCompleteOnRollback) {
         this.percentageCompleteOnRollback = percentageCompleteOnRollback;
         return this;
     }
     
-    /**
-     * Reports progress on replacing instances in an Auto Scaling group that has a warm pool. This includes separate details for instances in the warm pool and instances in the Auto Scaling group (the live pool).
-     */
     
     public InstanceRefreshProgressDetails progressDetailsOnRollback;
+
     public RollbackDetails withProgressDetailsOnRollback(InstanceRefreshProgressDetails progressDetailsOnRollback) {
         this.progressDetailsOnRollback = progressDetailsOnRollback;
         return this;
@@ -36,6 +36,7 @@ public class RollbackDetails {
     
     
     public String rollbackReason;
+
     public RollbackDetails withRollbackReason(String rollbackReason) {
         this.rollbackReason = rollbackReason;
         return this;
@@ -43,9 +44,11 @@ public class RollbackDetails {
     
     
     public OffsetDateTime rollbackStartTime;
+
     public RollbackDetails withRollbackStartTime(OffsetDateTime rollbackStartTime) {
         this.rollbackStartTime = rollbackStartTime;
         return this;
     }
     
+    public RollbackDetails(){}
 }

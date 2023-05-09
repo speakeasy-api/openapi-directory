@@ -12,6 +12,7 @@ public class PackageSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activeStatus")
     public Integer activeStatus;
+
     public PackageSearchRequest withActiveStatus(Integer activeStatus) {
         this.activeStatus = activeStatus;
         return this;
@@ -22,6 +23,7 @@ public class PackageSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categoryId")
     public Integer categoryId;
+
     public PackageSearchRequest withCategoryId(Integer categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -32,6 +34,7 @@ public class PackageSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endPrice")
     public Double endPrice;
+
     public PackageSearchRequest withEndPrice(Double endPrice) {
         this.endPrice = endPrice;
         return this;
@@ -42,6 +45,7 @@ public class PackageSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gymId")
     public Integer gymId;
+
     public PackageSearchRequest withGymId(Integer gymId) {
         this.gymId = gymId;
         return this;
@@ -52,6 +56,7 @@ public class PackageSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public PackageSearchRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -62,6 +67,7 @@ public class PackageSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public PackageSearchRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -72,6 +78,7 @@ public class PackageSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public PackageSearchRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -82,6 +89,7 @@ public class PackageSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestSource")
     public Integer requestSource;
+
     public PackageSearchRequest withRequestSource(Integer requestSource) {
         this.requestSource = requestSource;
         return this;
@@ -92,6 +100,7 @@ public class PackageSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchText")
     public String searchText;
+
     public PackageSearchRequest withSearchText(String searchText) {
         this.searchText = searchText;
         return this;
@@ -102,6 +111,7 @@ public class PackageSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startpPrice")
     public Double startpPrice;
+
     public PackageSearchRequest withStartpPrice(Double startpPrice) {
         this.startpPrice = startpPrice;
         return this;
@@ -112,9 +122,11 @@ public class PackageSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public PackageSearchRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PackageSearchRequest(){}
 }

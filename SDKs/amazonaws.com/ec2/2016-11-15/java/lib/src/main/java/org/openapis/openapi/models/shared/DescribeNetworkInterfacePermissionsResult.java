@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInterfacePermissionsResult {
     
     public DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissions[] networkInterfacePermissions;
+
     public DescribeNetworkInterfacePermissionsResult withNetworkInterfacePermissions(DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissions[] networkInterfacePermissions) {
         this.networkInterfacePermissions = networkInterfacePermissions;
         return this;
@@ -19,9 +20,11 @@ public class DescribeNetworkInterfacePermissionsResult {
     
     
     public String nextToken;
+
     public DescribeNetworkInterfacePermissionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeNetworkInterfacePermissionsResult(){}
 }

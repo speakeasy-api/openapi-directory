@@ -15,9 +15,11 @@ public class AwsEc2InstanceMonitoringDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public AwsEc2InstanceMonitoringDetails withState(String state) {
         this.state = state;
         return this;
     }
     
+    public AwsEc2InstanceMonitoringDetails(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRequisitionByIdV2Response {
     
     public String contentType;
+
     public DeleteRequisitionByIdV2Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteRequisitionByIdV2Response {
     
     
     public Integer statusCode;
+
     public DeleteRequisitionByIdV2Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteRequisitionByIdV2Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRequisitionByIdV2Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeleteRequisitionByIdV2Response {
      */
     
     public java.util.Map<String, Object> deleteRequisitionByIdV2400ApplicationJSONObject;
+
     public DeleteRequisitionByIdV2Response withDeleteRequisitionByIdV2400ApplicationJSONObject(java.util.Map<String, Object> deleteRequisitionByIdV2400ApplicationJSONObject) {
         this.deleteRequisitionByIdV2400ApplicationJSONObject = deleteRequisitionByIdV2400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class DeleteRequisitionByIdV2Response {
      */
     
     public java.util.Map<String, Object> deleteRequisitionByIdV2401ApplicationJSONObject;
+
     public DeleteRequisitionByIdV2Response withDeleteRequisitionByIdV2401ApplicationJSONObject(java.util.Map<String, Object> deleteRequisitionByIdV2401ApplicationJSONObject) {
         this.deleteRequisitionByIdV2401ApplicationJSONObject = deleteRequisitionByIdV2401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class DeleteRequisitionByIdV2Response {
      */
     
     public java.util.Map<String, Object> deleteRequisitionByIdV2403ApplicationJSONObject;
+
     public DeleteRequisitionByIdV2Response withDeleteRequisitionByIdV2403ApplicationJSONObject(java.util.Map<String, Object> deleteRequisitionByIdV2403ApplicationJSONObject) {
         this.deleteRequisitionByIdV2403ApplicationJSONObject = deleteRequisitionByIdV2403ApplicationJSONObject;
         return this;
@@ -63,9 +70,25 @@ public class DeleteRequisitionByIdV2Response {
      */
     
     public java.util.Map<String, Object> deleteRequisitionByIdV2404ApplicationJSONObject;
+
     public DeleteRequisitionByIdV2Response withDeleteRequisitionByIdV2404ApplicationJSONObject(java.util.Map<String, Object> deleteRequisitionByIdV2404ApplicationJSONObject) {
         this.deleteRequisitionByIdV2404ApplicationJSONObject = deleteRequisitionByIdV2404ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Nordigen rate limit exceeded
+     */
+    
+    public java.util.Map<String, Object> deleteRequisitionByIdV2429ApplicationJSONObject;
+
+    public DeleteRequisitionByIdV2Response withDeleteRequisitionByIdV2429ApplicationJSONObject(java.util.Map<String, Object> deleteRequisitionByIdV2429ApplicationJSONObject) {
+        this.deleteRequisitionByIdV2429ApplicationJSONObject = deleteRequisitionByIdV2429ApplicationJSONObject;
+        return this;
+    }
+    
+    public DeleteRequisitionByIdV2Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

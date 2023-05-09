@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteInferenceSchedulerResponse {
@@ -12,6 +13,7 @@ public class DeleteInferenceSchedulerResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteInferenceSchedulerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteInferenceSchedulerResponse {
      */
     
     public Object conflictException;
+
     public DeleteInferenceSchedulerResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteInferenceSchedulerResponse {
     
     
     public String contentType;
+
     public DeleteInferenceSchedulerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteInferenceSchedulerResponse {
      */
     
     public Object internalServerException;
+
     public DeleteInferenceSchedulerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteInferenceSchedulerResponse {
     
     
     public Integer statusCode;
+
     public DeleteInferenceSchedulerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteInferenceSchedulerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteInferenceSchedulerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteInferenceSchedulerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteInferenceSchedulerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteInferenceSchedulerResponse {
      */
     
     public Object throttlingException;
+
     public DeleteInferenceSchedulerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteInferenceSchedulerResponse {
      */
     
     public Object validationException;
+
     public DeleteInferenceSchedulerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteInferenceSchedulerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

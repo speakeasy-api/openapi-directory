@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MunsetValueResponse {
     
     public String contentType;
+
     public MunsetValueResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MunsetValueResponse {
     
     
     public Integer statusCode;
+
     public MunsetValueResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MunsetValueResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MunsetValueResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class MunsetValueResponse {
      */
     
     public String munsetValue200ApplicationJSONString;
+
     public MunsetValueResponse withMunsetValue200ApplicationJSONString(String munsetValue200ApplicationJSONString) {
         this.munsetValue200ApplicationJSONString = munsetValue200ApplicationJSONString;
         return this;
     }
     
+    public MunsetValueResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

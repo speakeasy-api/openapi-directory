@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPermissionSetProvisioningStatusResponse {
@@ -12,6 +13,7 @@ public class ListPermissionSetProvisioningStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPermissionSetProvisioningStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPermissionSetProvisioningStatusResponse {
     
     
     public String contentType;
+
     public ListPermissionSetProvisioningStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPermissionSetProvisioningStatusResponse {
      */
     
     public Object internalServerException;
+
     public ListPermissionSetProvisioningStatusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListPermissionSetProvisioningStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPermissionSetProvisioningStatusResponse listPermissionSetProvisioningStatusResponse;
+
     public ListPermissionSetProvisioningStatusResponse withListPermissionSetProvisioningStatusResponse(org.openapis.openapi.models.shared.ListPermissionSetProvisioningStatusResponse listPermissionSetProvisioningStatusResponse) {
         this.listPermissionSetProvisioningStatusResponse = listPermissionSetProvisioningStatusResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListPermissionSetProvisioningStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListPermissionSetProvisioningStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListPermissionSetProvisioningStatusResponse {
     
     
     public Integer statusCode;
+
     public ListPermissionSetProvisioningStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListPermissionSetProvisioningStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPermissionSetProvisioningStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListPermissionSetProvisioningStatusResponse {
      */
     
     public Object throttlingException;
+
     public ListPermissionSetProvisioningStatusResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListPermissionSetProvisioningStatusResponse {
      */
     
     public Object validationException;
+
     public ListPermissionSetProvisioningStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPermissionSetProvisioningStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

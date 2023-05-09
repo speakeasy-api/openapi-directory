@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDatalakeDelegatedAdminResponse {
@@ -12,6 +13,7 @@ public class DeleteDatalakeDelegatedAdminResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteDatalakeDelegatedAdminResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDatalakeDelegatedAdminResponse {
     
     
     public String contentType;
+
     public DeleteDatalakeDelegatedAdminResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDatalakeDelegatedAdminResponse {
      */
     
     public java.util.Map<String, Object> deleteDatalakeDelegatedAdminResponse;
+
     public DeleteDatalakeDelegatedAdminResponse withDeleteDatalakeDelegatedAdminResponse(java.util.Map<String, Object> deleteDatalakeDelegatedAdminResponse) {
         this.deleteDatalakeDelegatedAdminResponse = deleteDatalakeDelegatedAdminResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDatalakeDelegatedAdminResponse {
      */
     
     public Object internalServerException;
+
     public DeleteDatalakeDelegatedAdminResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteDatalakeDelegatedAdminResponse {
     
     
     public Integer statusCode;
+
     public DeleteDatalakeDelegatedAdminResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteDatalakeDelegatedAdminResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDatalakeDelegatedAdminResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteDatalakeDelegatedAdminResponse {
      */
     
     public Object throttlingException;
+
     public DeleteDatalakeDelegatedAdminResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteDatalakeDelegatedAdminResponse {
      */
     
     public Object validationException;
+
     public DeleteDatalakeDelegatedAdminResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteDatalakeDelegatedAdminResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

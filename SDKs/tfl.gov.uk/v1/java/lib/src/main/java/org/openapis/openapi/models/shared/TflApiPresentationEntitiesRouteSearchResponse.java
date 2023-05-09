@@ -15,6 +15,7 @@ public class TflApiPresentationEntitiesRouteSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public TflApiPresentationEntitiesRouteSearchResponse withInput(String input) {
         this.input = input;
         return this;
@@ -23,9 +24,11 @@ public class TflApiPresentationEntitiesRouteSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchMatches")
     public TflApiPresentationEntitiesRouteSearchMatch[] searchMatches;
+
     public TflApiPresentationEntitiesRouteSearchResponse withSearchMatches(TflApiPresentationEntitiesRouteSearchMatch[] searchMatches) {
         this.searchMatches = searchMatches;
         return this;
     }
     
+    public TflApiPresentationEntitiesRouteSearchResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TrackEventResponse {
     
     public String contentType;
+
     public TrackEventResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TrackEventResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public TrackEventResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class TrackEventResponse {
     
     
     public Integer statusCode;
+
     public TrackEventResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class TrackEventResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TrackEventResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class TrackEventResponse {
      */
     
     public TrackEvent201ApplicationJSON trackEvent201ApplicationJSONObject;
+
     public TrackEventResponse withTrackEvent201ApplicationJSONObject(TrackEvent201ApplicationJSON trackEvent201ApplicationJSONObject) {
         this.trackEvent201ApplicationJSONObject = trackEvent201ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class TrackEventResponse {
      */
     
     public TrackEvent400ApplicationJSON trackEvent400ApplicationJSONObject;
+
     public TrackEventResponse withTrackEvent400ApplicationJSONObject(TrackEvent400ApplicationJSON trackEvent400ApplicationJSONObject) {
         this.trackEvent400ApplicationJSONObject = trackEvent400ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class TrackEventResponse {
      */
     
     public TrackEvent401ApplicationJSON trackEvent401ApplicationJSONObject;
+
     public TrackEventResponse withTrackEvent401ApplicationJSONObject(TrackEvent401ApplicationJSON trackEvent401ApplicationJSONObject) {
         this.trackEvent401ApplicationJSONObject = trackEvent401ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class TrackEventResponse {
      */
     
     public TrackEvent403ApplicationJSON trackEvent403ApplicationJSONObject;
+
     public TrackEventResponse withTrackEvent403ApplicationJSONObject(TrackEvent403ApplicationJSON trackEvent403ApplicationJSONObject) {
         this.trackEvent403ApplicationJSONObject = trackEvent403ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class TrackEventResponse {
      */
     
     public TrackEvent429ApplicationJSON trackEvent429ApplicationJSONObject;
+
     public TrackEventResponse withTrackEvent429ApplicationJSONObject(TrackEvent429ApplicationJSON trackEvent429ApplicationJSONObject) {
         this.trackEvent429ApplicationJSONObject = trackEvent429ApplicationJSONObject;
         return this;
@@ -90,9 +100,14 @@ public class TrackEventResponse {
      */
     
     public TrackEvent500ApplicationJSON trackEvent500ApplicationJSONObject;
+
     public TrackEventResponse withTrackEvent500ApplicationJSONObject(TrackEvent500ApplicationJSON trackEvent500ApplicationJSONObject) {
         this.trackEvent500ApplicationJSONObject = trackEvent500ApplicationJSONObject;
         return this;
     }
     
+    public TrackEventResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

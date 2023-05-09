@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCrawlerMetricsResponse {
     
     public String contentType;
+
     public GetCrawlerMetricsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCrawlerMetricsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCrawlerMetricsResponse getCrawlerMetricsResponse;
+
     public GetCrawlerMetricsResponse withGetCrawlerMetricsResponse(org.openapis.openapi.models.shared.GetCrawlerMetricsResponse getCrawlerMetricsResponse) {
         this.getCrawlerMetricsResponse = getCrawlerMetricsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetCrawlerMetricsResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetCrawlerMetricsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -36,6 +40,7 @@ public class GetCrawlerMetricsResponse {
     
     
     public Integer statusCode;
+
     public GetCrawlerMetricsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCrawlerMetricsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCrawlerMetricsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCrawlerMetricsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

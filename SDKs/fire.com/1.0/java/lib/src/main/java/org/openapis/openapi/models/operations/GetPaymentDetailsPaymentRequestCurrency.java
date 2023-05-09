@@ -18,6 +18,7 @@ public class GetPaymentDetailsPaymentRequestCurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public GetPaymentDetailsPaymentRequestCurrencyCodeEnum code;
+
     public GetPaymentDetailsPaymentRequestCurrency withCode(GetPaymentDetailsPaymentRequestCurrencyCodeEnum code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class GetPaymentDetailsPaymentRequestCurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetPaymentDetailsPaymentRequestCurrency withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public GetPaymentDetailsPaymentRequestCurrency(){}
 }

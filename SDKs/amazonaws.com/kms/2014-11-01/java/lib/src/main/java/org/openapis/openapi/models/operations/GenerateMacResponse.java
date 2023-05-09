@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateMacResponse {
     
     public String contentType;
+
     public GenerateMacResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GenerateMacResponse {
      */
     
     public Object disabledException;
+
     public GenerateMacResponse withDisabledException(Object disabledException) {
         this.disabledException = disabledException;
         return this;
@@ -29,6 +32,7 @@ public class GenerateMacResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateMacResponse generateMacResponse;
+
     public GenerateMacResponse withGenerateMacResponse(org.openapis.openapi.models.shared.GenerateMacResponse generateMacResponse) {
         this.generateMacResponse = generateMacResponse;
         return this;
@@ -39,6 +43,7 @@ public class GenerateMacResponse {
      */
     
     public Object invalidGrantTokenException;
+
     public GenerateMacResponse withInvalidGrantTokenException(Object invalidGrantTokenException) {
         this.invalidGrantTokenException = invalidGrantTokenException;
         return this;
@@ -49,6 +54,7 @@ public class GenerateMacResponse {
      */
     
     public Object invalidKeyUsageException;
+
     public GenerateMacResponse withInvalidKeyUsageException(Object invalidKeyUsageException) {
         this.invalidKeyUsageException = invalidKeyUsageException;
         return this;
@@ -59,6 +65,7 @@ public class GenerateMacResponse {
      */
     
     public Object kmsInternalException;
+
     public GenerateMacResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -69,6 +76,7 @@ public class GenerateMacResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public GenerateMacResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -79,6 +87,7 @@ public class GenerateMacResponse {
      */
     
     public Object keyUnavailableException;
+
     public GenerateMacResponse withKeyUnavailableException(Object keyUnavailableException) {
         this.keyUnavailableException = keyUnavailableException;
         return this;
@@ -89,6 +98,7 @@ public class GenerateMacResponse {
      */
     
     public Object notFoundException;
+
     public GenerateMacResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -96,6 +106,7 @@ public class GenerateMacResponse {
     
     
     public Integer statusCode;
+
     public GenerateMacResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class GenerateMacResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateMacResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GenerateMacResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

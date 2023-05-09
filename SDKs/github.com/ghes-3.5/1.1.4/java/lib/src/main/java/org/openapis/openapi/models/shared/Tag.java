@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Tag {
     @JsonProperty("commit")
     public TagCommit commit;
+
     public Tag withCommit(TagCommit commit) {
         this.commit = commit;
         return this;
@@ -19,6 +20,7 @@ public class Tag {
     
     @JsonProperty("name")
     public String name;
+
     public Tag withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class Tag {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public Tag withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -33,6 +36,7 @@ public class Tag {
     
     @JsonProperty("tarball_url")
     public String tarballUrl;
+
     public Tag withTarballUrl(String tarballUrl) {
         this.tarballUrl = tarballUrl;
         return this;
@@ -40,9 +44,17 @@ public class Tag {
     
     @JsonProperty("zipball_url")
     public String zipballUrl;
+
     public Tag withZipballUrl(String zipballUrl) {
         this.zipballUrl = zipballUrl;
         return this;
     }
     
+    public Tag(@JsonProperty("commit") TagCommit commit, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("tarball_url") String tarballUrl, @JsonProperty("zipball_url") String zipballUrl) {
+        this.commit = commit;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.tarballUrl = tarballUrl;
+        this.zipballUrl = zipballUrl;
+  }
 }

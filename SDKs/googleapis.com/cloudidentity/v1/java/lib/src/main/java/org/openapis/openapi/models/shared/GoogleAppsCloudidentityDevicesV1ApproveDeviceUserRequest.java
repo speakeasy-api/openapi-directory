@@ -18,9 +18,11 @@ public class GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public String customer;
+
     public GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest withCustomer(String customer) {
         this.customer = customer;
         return this;
     }
     
+    public GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContainersNameOrIdStopRequest {
@@ -12,6 +13,7 @@ public class PostContainersNameOrIdStopRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
     public String xAuthProjectId;
+
     public PostContainersNameOrIdStopRequest withXAuthProjectId(String xAuthProjectId) {
         this.xAuthProjectId = xAuthProjectId;
         return this;
@@ -22,6 +24,7 @@ public class PostContainersNameOrIdStopRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
     public String xAuthToken;
+
     public PostContainersNameOrIdStopRequest withXAuthToken(String xAuthToken) {
         this.xAuthToken = xAuthToken;
         return this;
@@ -32,6 +35,7 @@ public class PostContainersNameOrIdStopRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name_or_id")
     public String nameOrId;
+
     public PostContainersNameOrIdStopRequest withNameOrId(String nameOrId) {
         this.nameOrId = nameOrId;
         return this;
@@ -42,9 +46,15 @@ public class PostContainersNameOrIdStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t")
     public Long t;
+
     public PostContainersNameOrIdStopRequest withT(Long t) {
         this.t = t;
         return this;
     }
     
+    public PostContainersNameOrIdStopRequest(@JsonProperty("X-Auth-Project-Id") String xAuthProjectId, @JsonProperty("X-Auth-Token") String xAuthToken, @JsonProperty("name_or_id") String nameOrId) {
+        this.xAuthProjectId = xAuthProjectId;
+        this.xAuthToken = xAuthToken;
+        this.nameOrId = nameOrId;
+  }
 }

@@ -15,6 +15,7 @@ public class ListReviewPolicyResultsForHITResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssignmentReviewPolicy")
     public ReviewPolicy assignmentReviewPolicy;
+
     public ListReviewPolicyResultsForHITResponse withAssignmentReviewPolicy(ReviewPolicy assignmentReviewPolicy) {
         this.assignmentReviewPolicy = assignmentReviewPolicy;
         return this;
@@ -23,6 +24,7 @@ public class ListReviewPolicyResultsForHITResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssignmentReviewReport")
     public ReviewReport assignmentReviewReport;
+
     public ListReviewPolicyResultsForHITResponse withAssignmentReviewReport(ReviewReport assignmentReviewReport) {
         this.assignmentReviewReport = assignmentReviewReport;
         return this;
@@ -31,6 +33,7 @@ public class ListReviewPolicyResultsForHITResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITId")
     public String hitId;
+
     public ListReviewPolicyResultsForHITResponse withHITId(String hitId) {
         this.hitId = hitId;
         return this;
@@ -39,6 +42,7 @@ public class ListReviewPolicyResultsForHITResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITReviewPolicy")
     public ReviewPolicy hitReviewPolicy;
+
     public ListReviewPolicyResultsForHITResponse withHITReviewPolicy(ReviewPolicy hitReviewPolicy) {
         this.hitReviewPolicy = hitReviewPolicy;
         return this;
@@ -47,6 +51,7 @@ public class ListReviewPolicyResultsForHITResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITReviewReport")
     public ReviewReport hitReviewReport;
+
     public ListReviewPolicyResultsForHITResponse withHITReviewReport(ReviewReport hitReviewReport) {
         this.hitReviewReport = hitReviewReport;
         return this;
@@ -58,9 +63,11 @@ public class ListReviewPolicyResultsForHITResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListReviewPolicyResultsForHITResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListReviewPolicyResultsForHITResponse(){}
 }

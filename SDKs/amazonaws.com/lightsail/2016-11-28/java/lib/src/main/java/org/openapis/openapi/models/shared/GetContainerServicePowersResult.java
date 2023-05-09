@@ -15,9 +15,11 @@ public class GetContainerServicePowersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("powers")
     public ContainerServicePower[] powers;
+
     public GetContainerServicePowersResult withPowers(ContainerServicePower[] powers) {
         this.powers = powers;
         return this;
     }
     
+    public GetContainerServicePowersResult(){}
 }

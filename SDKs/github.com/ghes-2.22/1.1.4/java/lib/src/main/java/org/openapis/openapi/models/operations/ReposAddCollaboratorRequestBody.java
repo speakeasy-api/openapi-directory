@@ -20,6 +20,7 @@ public class ReposAddCollaboratorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public ReposAddCollaboratorRequestBodyPermissionEnum permission;
+
     public ReposAddCollaboratorRequestBody withPermission(ReposAddCollaboratorRequestBodyPermissionEnum permission) {
         this.permission = permission;
         return this;
@@ -28,9 +29,11 @@ public class ReposAddCollaboratorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public String permissions;
+
     public ReposAddCollaboratorRequestBody withPermissions(String permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public ReposAddCollaboratorRequestBody(){}
 }

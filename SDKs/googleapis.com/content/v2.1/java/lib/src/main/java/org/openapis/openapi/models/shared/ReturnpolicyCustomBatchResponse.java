@@ -18,6 +18,7 @@ public class ReturnpolicyCustomBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public ReturnpolicyCustomBatchResponseEntry[] entries;
+
     public ReturnpolicyCustomBatchResponse withEntries(ReturnpolicyCustomBatchResponseEntry[] entries) {
         this.entries = entries;
         return this;
@@ -29,9 +30,11 @@ public class ReturnpolicyCustomBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ReturnpolicyCustomBatchResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ReturnpolicyCustomBatchResponse(){}
 }

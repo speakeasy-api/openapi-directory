@@ -15,9 +15,11 @@ public class DeleteBucketResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public DeleteBucketResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public DeleteBucketResult(){}
 }

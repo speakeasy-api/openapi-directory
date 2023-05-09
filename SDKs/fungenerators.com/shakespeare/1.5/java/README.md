@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetShakespeareGenerateInsultSecurity;
 import org.openapis.openapi.models.operations.GetShakespeareGenerateInsultRequest;
 import org.openapis.openapi.models.operations.GetShakespeareGenerateInsultResponse;
+import org.openapis.openapi.models.operations.GetShakespeareGenerateInsultSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -28,10 +27,10 @@ public class Application {
                 .build();
 
             GetShakespeareGenerateInsultRequest req = new GetShakespeareGenerateInsultRequest() {{
-                limit = 548814;
-            }}            
+                limit = 548814L;
+            }};            
 
-            GetShakespeareGenerateInsultResponse res = sdk.generation.getShakespeareGenerateInsult(req, new GetShakespeareGenerateInsultSecurity() {{
+            GetShakespeareGenerateInsultResponse res = sdk.generation.getShakespeareGenerateInsult(req, new GetShakespeareGenerateInsultSecurity("provident") {{
                 xFungeneratorsApiSecret = "YOUR_API_KEY_HERE";
             }});
 
@@ -41,6 +40,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,19 +49,19 @@ public class Application {
 ## Available Resources and Operations
 
 
-### generation
+### [generation](docs/generation/README.md)
 
-* `getShakespeareGenerateInsult` - Generate random Shakespeare style insults.
-* `getShakespeareGenerateLoremIpsum` - Generate Shakespeare lorem ipsum.
-* `getShakespeareGenerateName` - Generate random Shakespearen names.
+* [getShakespeareGenerateInsult](docs/generation/README.md#getshakespearegenerateinsult) - Generate random Shakespeare style insults.
+* [getShakespeareGenerateLoremIpsum](docs/generation/README.md#getshakespearegenerateloremipsum) - Generate Shakespeare lorem ipsum.
+* [getShakespeareGenerateName](docs/generation/README.md#getshakespearegeneratename) - Generate random Shakespearen names.
 
-### translation
+### [translation](docs/translation/README.md)
 
-* `getShakespeareTranslate` - Translate from English to Shakespeare English.
+* [getShakespeareTranslate](docs/translation/README.md#getshakespearetranslate) - Translate from English to Shakespeare English.
 
-### works
+### [works](docs/works/README.md)
 
-* `getShakespeareQuote` - Get a random Shakespeare quote.
+* [getShakespeareQuote](docs/works/README.md#getshakespearequote) - Get a random Shakespeare quote.
 <!-- End SDK Available Operations -->
 
 ### Maturity

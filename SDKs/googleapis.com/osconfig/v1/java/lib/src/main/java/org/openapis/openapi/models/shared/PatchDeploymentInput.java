@@ -18,6 +18,7 @@ public class PatchDeploymentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PatchDeploymentInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class PatchDeploymentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public PatchDeploymentInput withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -40,6 +42,7 @@ public class PatchDeploymentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceFilter")
     public PatchInstanceFilter instanceFilter;
+
     public PatchDeploymentInput withInstanceFilter(PatchInstanceFilter instanceFilter) {
         this.instanceFilter = instanceFilter;
         return this;
@@ -51,6 +54,7 @@ public class PatchDeploymentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PatchDeploymentInput withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class PatchDeploymentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneTimeSchedule")
     public OneTimeSchedule oneTimeSchedule;
+
     public PatchDeploymentInput withOneTimeSchedule(OneTimeSchedule oneTimeSchedule) {
         this.oneTimeSchedule = oneTimeSchedule;
         return this;
@@ -73,6 +78,7 @@ public class PatchDeploymentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patchConfig")
     public PatchConfig patchConfig;
+
     public PatchDeploymentInput withPatchConfig(PatchConfig patchConfig) {
         this.patchConfig = patchConfig;
         return this;
@@ -84,6 +90,7 @@ public class PatchDeploymentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringSchedule")
     public RecurringScheduleInput recurringSchedule;
+
     public PatchDeploymentInput withRecurringSchedule(RecurringScheduleInput recurringSchedule) {
         this.recurringSchedule = recurringSchedule;
         return this;
@@ -95,9 +102,11 @@ public class PatchDeploymentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollout")
     public PatchRollout rollout;
+
     public PatchDeploymentInput withRollout(PatchRollout rollout) {
         this.rollout = rollout;
         return this;
     }
     
+    public PatchDeploymentInput(){}
 }

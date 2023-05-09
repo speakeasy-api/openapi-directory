@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class NoSuchDomain {
     
     public Float boxUsage;
+
     public NoSuchDomain withBoxUsage(Float boxUsage) {
         this.boxUsage = boxUsage;
         return this;
     }
     
+    public NoSuchDomain(){}
 }

@@ -15,6 +15,7 @@ public class AuditLogActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public AuditLogAction[] actions;
+
     public AuditLogActions withActions(AuditLogAction[] actions) {
         this.actions = actions;
         return this;
@@ -26,9 +27,11 @@ public class AuditLogActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public AuditLogActions withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public AuditLogActions(){}
 }

@@ -15,6 +15,7 @@ public class UsersPreprintsListPreprintAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public UsersPreprintsListPreprintAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -25,6 +26,7 @@ public class UsersPreprintsListPreprintAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public UsersPreprintsListPreprintAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -35,6 +37,7 @@ public class UsersPreprintsListPreprintAttributes {
      */
     
     public OffsetDateTime datePublished;
+
     public UsersPreprintsListPreprintAttributes withDatePublished(OffsetDateTime datePublished) {
         this.datePublished = datePublished;
         return this;
@@ -45,6 +48,7 @@ public class UsersPreprintsListPreprintAttributes {
      */
     
     public String doi;
+
     public UsersPreprintsListPreprintAttributes withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -55,6 +59,7 @@ public class UsersPreprintsListPreprintAttributes {
      */
     
     public Boolean isPreprintOrphan;
+
     public UsersPreprintsListPreprintAttributes withIsPreprintOrphan(Boolean isPreprintOrphan) {
         this.isPreprintOrphan = isPreprintOrphan;
         return this;
@@ -65,6 +70,7 @@ public class UsersPreprintsListPreprintAttributes {
      */
     
     public String licenseRecord;
+
     public UsersPreprintsListPreprintAttributes withLicenseRecord(String licenseRecord) {
         this.licenseRecord = licenseRecord;
         return this;
@@ -75,9 +81,11 @@ public class UsersPreprintsListPreprintAttributes {
      */
     
     public String[] subjects;
+
     public UsersPreprintsListPreprintAttributes withSubjects(String[] subjects) {
         this.subjects = subjects;
         return this;
     }
     
+    public UsersPreprintsListPreprintAttributes(){}
 }

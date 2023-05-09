@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConsentStatusRequest {
@@ -12,6 +13,7 @@ public class GetConsentStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
     public String digest;
+
     public GetConsentStatusRequest withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -23,6 +25,7 @@ public class GetConsentStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept")
     public String psuAccept;
+
     public GetConsentStatusRequest withPSUAccept(String psuAccept) {
         this.psuAccept = psuAccept;
         return this;
@@ -34,6 +37,7 @@ public class GetConsentStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Charset")
     public String psuAcceptCharset;
+
     public GetConsentStatusRequest withPSUAcceptCharset(String psuAcceptCharset) {
         this.psuAcceptCharset = psuAcceptCharset;
         return this;
@@ -45,6 +49,7 @@ public class GetConsentStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Encoding")
     public String psuAcceptEncoding;
+
     public GetConsentStatusRequest withPSUAcceptEncoding(String psuAcceptEncoding) {
         this.psuAcceptEncoding = psuAcceptEncoding;
         return this;
@@ -56,6 +61,7 @@ public class GetConsentStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Language")
     public String psuAcceptLanguage;
+
     public GetConsentStatusRequest withPSUAcceptLanguage(String psuAcceptLanguage) {
         this.psuAcceptLanguage = psuAcceptLanguage;
         return this;
@@ -69,6 +75,7 @@ public class GetConsentStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Device-ID")
     public String psuDeviceID;
+
     public GetConsentStatusRequest withPSUDeviceID(String psuDeviceID) {
         this.psuDeviceID = psuDeviceID;
         return this;
@@ -80,6 +87,7 @@ public class GetConsentStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Geo-Location")
     public String psuGeoLocation;
+
     public GetConsentStatusRequest withPSUGeoLocation(String psuGeoLocation) {
         this.psuGeoLocation = psuGeoLocation;
         return this;
@@ -97,6 +105,7 @@ public class GetConsentStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Http-Method")
     public org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod;
+
     public GetConsentStatusRequest withPSUHttpMethod(org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod) {
         this.psuHttpMethod = psuHttpMethod;
         return this;
@@ -110,6 +119,7 @@ public class GetConsentStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Address")
     public String psuIPAddress;
+
     public GetConsentStatusRequest withPSUIPAddress(String psuIPAddress) {
         this.psuIPAddress = psuIPAddress;
         return this;
@@ -121,6 +131,7 @@ public class GetConsentStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Port")
     public String psuIPPort;
+
     public GetConsentStatusRequest withPSUIPPort(String psuIPPort) {
         this.psuIPPort = psuIPPort;
         return this;
@@ -132,6 +143,7 @@ public class GetConsentStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-User-Agent")
     public String psuUserAgent;
+
     public GetConsentStatusRequest withPSUUserAgent(String psuUserAgent) {
         this.psuUserAgent = psuUserAgent;
         return this;
@@ -143,6 +155,7 @@ public class GetConsentStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
     public String signature;
+
     public GetConsentStatusRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -155,6 +168,7 @@ public class GetConsentStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
     public String tppSignatureCertificate;
+
     public GetConsentStatusRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
         this.tppSignatureCertificate = tppSignatureCertificate;
         return this;
@@ -165,6 +179,7 @@ public class GetConsentStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
     public String xRequestID;
+
     public GetConsentStatusRequest withXRequestID(String xRequestID) {
         this.xRequestID = xRequestID;
         return this;
@@ -176,9 +191,14 @@ public class GetConsentStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=consentId")
     public String consentId;
+
     public GetConsentStatusRequest withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
     }
     
+    public GetConsentStatusRequest(@JsonProperty("X-Request-ID") String xRequestID, @JsonProperty("consentId") String consentId) {
+        this.xRequestID = xRequestID;
+        this.consentId = consentId;
+  }
 }

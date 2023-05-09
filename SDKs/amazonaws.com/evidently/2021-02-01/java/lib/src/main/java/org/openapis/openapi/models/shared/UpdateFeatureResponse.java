@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateFeatureResponse {
     @JsonProperty("feature")
     public Feature feature;
+
     public UpdateFeatureResponse withFeature(Feature feature) {
         this.feature = feature;
         return this;
     }
     
+    public UpdateFeatureResponse(@JsonProperty("feature") Feature feature) {
+        this.feature = feature;
+  }
 }

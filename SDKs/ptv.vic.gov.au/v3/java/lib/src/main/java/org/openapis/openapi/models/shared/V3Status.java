@@ -15,6 +15,7 @@ public class V3Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("health")
     public V3StatusHealthEnum health;
+
     public V3Status withHealth(V3StatusHealthEnum health) {
         this.health = health;
         return this;
@@ -26,9 +27,11 @@ public class V3Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public V3Status withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public V3Status(){}
 }

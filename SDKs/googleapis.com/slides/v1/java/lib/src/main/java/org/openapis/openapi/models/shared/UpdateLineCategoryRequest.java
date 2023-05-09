@@ -18,6 +18,7 @@ public class UpdateLineCategoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineCategory")
     public UpdateLineCategoryRequestLineCategoryEnum lineCategory;
+
     public UpdateLineCategoryRequest withLineCategory(UpdateLineCategoryRequestLineCategoryEnum lineCategory) {
         this.lineCategory = lineCategory;
         return this;
@@ -29,9 +30,11 @@ public class UpdateLineCategoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public UpdateLineCategoryRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public UpdateLineCategoryRequest(){}
 }

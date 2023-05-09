@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSearchV1ScrapeResponse {
     
     public byte[] body;
+
     public GetSearchV1ScrapeResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetSearchV1ScrapeResponse {
     
     
     public String contentType;
+
     public GetSearchV1ScrapeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetSearchV1ScrapeResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetSearchV1ScrapeResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetSearchV1ScrapeResponse {
      */
     
     public org.openapis.openapi.models.shared.ScrapeResult scrapeResult;
+
     public GetSearchV1ScrapeResponse withScrapeResult(org.openapis.openapi.models.shared.ScrapeResult scrapeResult) {
         this.scrapeResult = scrapeResult;
         return this;
@@ -43,6 +48,7 @@ public class GetSearchV1ScrapeResponse {
     
     
     public Integer statusCode;
+
     public GetSearchV1ScrapeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetSearchV1ScrapeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSearchV1ScrapeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSearchV1ScrapeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

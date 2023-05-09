@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopAppReplicationResponse {
     
     public String contentType;
+
     public StopAppReplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopAppReplicationResponse {
      */
     
     public Object internalError;
+
     public StopAppReplicationResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -29,6 +32,7 @@ public class StopAppReplicationResponse {
      */
     
     public Object invalidParameterException;
+
     public StopAppReplicationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class StopAppReplicationResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public StopAppReplicationResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -49,6 +54,7 @@ public class StopAppReplicationResponse {
      */
     
     public Object operationNotPermittedException;
+
     public StopAppReplicationResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -56,6 +62,7 @@ public class StopAppReplicationResponse {
     
     
     public Integer statusCode;
+
     public StopAppReplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StopAppReplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopAppReplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StopAppReplicationResponse {
      */
     
     public java.util.Map<String, Object> stopAppReplicationResponse;
+
     public StopAppReplicationResponse withStopAppReplicationResponse(java.util.Map<String, Object> stopAppReplicationResponse) {
         this.stopAppReplicationResponse = stopAppReplicationResponse;
         return this;
@@ -83,9 +92,14 @@ public class StopAppReplicationResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public StopAppReplicationResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public StopAppReplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

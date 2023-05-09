@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListNetworkProfilesResponse {
@@ -12,6 +13,7 @@ public class ListNetworkProfilesResponse {
      */
     
     public Object argumentException;
+
     public ListNetworkProfilesResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class ListNetworkProfilesResponse {
     
     
     public String contentType;
+
     public ListNetworkProfilesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListNetworkProfilesResponse {
      */
     
     public Object limitExceededException;
+
     public ListNetworkProfilesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class ListNetworkProfilesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListNetworkProfilesResult listNetworkProfilesResult;
+
     public ListNetworkProfilesResponse withListNetworkProfilesResult(org.openapis.openapi.models.shared.ListNetworkProfilesResult listNetworkProfilesResult) {
         this.listNetworkProfilesResult = listNetworkProfilesResult;
         return this;
@@ -49,6 +54,7 @@ public class ListNetworkProfilesResponse {
      */
     
     public Object notFoundException;
+
     public ListNetworkProfilesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListNetworkProfilesResponse {
      */
     
     public Object serviceAccountException;
+
     public ListNetworkProfilesResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class ListNetworkProfilesResponse {
     
     
     public Integer statusCode;
+
     public ListNetworkProfilesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListNetworkProfilesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListNetworkProfilesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListNetworkProfilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

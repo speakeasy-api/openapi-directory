@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConfigPropertyResponse {
@@ -12,6 +13,7 @@ public class GetConfigPropertyResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfigurationProperty configurationProperty;
+
     public GetConfigPropertyResponse withConfigurationProperty(org.openapis.openapi.models.shared.ConfigurationProperty configurationProperty) {
         this.configurationProperty = configurationProperty;
         return this;
@@ -19,6 +21,7 @@ public class GetConfigPropertyResponse {
     
     
     public String contentType;
+
     public GetConfigPropertyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetConfigPropertyResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetConfigPropertyResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetConfigPropertyResponse {
     
     
     public Integer statusCode;
+
     public GetConfigPropertyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetConfigPropertyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConfigPropertyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetConfigPropertyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

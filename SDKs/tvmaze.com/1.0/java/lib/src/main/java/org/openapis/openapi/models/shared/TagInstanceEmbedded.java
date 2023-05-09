@@ -12,9 +12,11 @@ public class TagInstanceEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show")
     public java.util.Map<String, Object> show;
+
     public TagInstanceEmbedded withShow(java.util.Map<String, Object> show) {
         this.show = show;
         return this;
     }
     
+    public TagInstanceEmbedded(){}
 }

@@ -15,9 +15,11 @@ public class AwsWafv2ActionBlockDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomResponse")
     public AwsWafv2CustomResponseDetails customResponse;
+
     public AwsWafv2ActionBlockDetails withCustomResponse(AwsWafv2CustomResponseDetails customResponse) {
         this.customResponse = customResponse;
         return this;
     }
     
+    public AwsWafv2ActionBlockDetails(){}
 }

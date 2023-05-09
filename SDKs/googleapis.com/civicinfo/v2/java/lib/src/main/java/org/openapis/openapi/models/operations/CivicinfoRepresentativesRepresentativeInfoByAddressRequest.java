@@ -12,6 +12,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address")
     public String address;
+
     public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withAddress(String address) {
         this.address = address;
         return this;
@@ -42,6 +45,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +56,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +67,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +78,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeOffices")
     public Boolean includeOffices;
+
     public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withIncludeOffices(Boolean includeOffices) {
         this.includeOffices = includeOffices;
         return this;
@@ -82,6 +89,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +100,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=levels")
     public CivicinfoRepresentativesRepresentativeInfoByAddressLevelsEnum[] levels;
+
     public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withLevels(CivicinfoRepresentativesRepresentativeInfoByAddressLevelsEnum[] levels) {
         this.levels = levels;
         return this;
@@ -102,6 +111,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +122,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +133,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +144,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roles")
     public CivicinfoRepresentativesRepresentativeInfoByAddressRolesEnum[] roles;
+
     public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withRoles(CivicinfoRepresentativesRepresentativeInfoByAddressRolesEnum[] roles) {
         this.roles = roles;
         return this;
@@ -142,6 +155,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +166,11 @@ public class CivicinfoRepresentativesRepresentativeInfoByAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Eirp {
     @JsonProperty("units")
     public EirpUnitsEnum units;
+
     public Eirp withUnits(EirpUnitsEnum units) {
         this.units = units;
         return this;
@@ -19,9 +20,14 @@ public class Eirp {
     
     @JsonProperty("value")
     public Double value;
+
     public Eirp withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public Eirp(@JsonProperty("units") EirpUnitsEnum units, @JsonProperty("value") Double value) {
+        this.units = units;
+        this.value = value;
+  }
 }

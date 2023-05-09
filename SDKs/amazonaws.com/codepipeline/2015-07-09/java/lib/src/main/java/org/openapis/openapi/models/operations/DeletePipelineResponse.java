@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePipelineResponse {
@@ -12,6 +13,7 @@ public class DeletePipelineResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeletePipelineResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeletePipelineResponse {
     
     
     public String contentType;
+
     public DeletePipelineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DeletePipelineResponse {
     
     
     public Integer statusCode;
+
     public DeletePipelineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeletePipelineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePipelineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeletePipelineResponse {
      */
     
     public Object validationException;
+
     public DeletePipelineResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeletePipelineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

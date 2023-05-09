@@ -15,6 +15,7 @@ public class GetBackendAPIResponseResourceConfigDefaultAuthType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public GetBackendAPIResponseResourceConfigDefaultAuthTypeModeEnum mode;
+
     public GetBackendAPIResponseResourceConfigDefaultAuthType withMode(GetBackendAPIResponseResourceConfigDefaultAuthTypeModeEnum mode) {
         this.mode = mode;
         return this;
@@ -23,9 +24,11 @@ public class GetBackendAPIResponseResourceConfigDefaultAuthType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public GetBackendAPIResponseResourceConfigDefaultAuthTypeSettings settings;
+
     public GetBackendAPIResponseResourceConfigDefaultAuthType withSettings(GetBackendAPIResponseResourceConfigDefaultAuthTypeSettings settings) {
         this.settings = settings;
         return this;
     }
     
+    public GetBackendAPIResponseResourceConfigDefaultAuthType(){}
 }

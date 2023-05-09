@@ -18,6 +18,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public UpdateNodePoolRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -29,6 +30,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidentialNodes")
     public ConfidentialNodes confidentialNodes;
+
     public UpdateNodePoolRequest withConfidentialNodes(ConfidentialNodes confidentialNodes) {
         this.confidentialNodes = confidentialNodes;
         return this;
@@ -40,6 +42,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public UpdateNodePoolRequest withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fastSocket")
     public FastSocket fastSocket;
+
     public UpdateNodePoolRequest withFastSocket(FastSocket fastSocket) {
         this.fastSocket = fastSocket;
         return this;
@@ -62,6 +66,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcfsConfig")
     public GcfsConfig gcfsConfig;
+
     public UpdateNodePoolRequest withGcfsConfig(GcfsConfig gcfsConfig) {
         this.gcfsConfig = gcfsConfig;
         return this;
@@ -73,6 +78,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gvnic")
     public VirtualNIC gvnic;
+
     public UpdateNodePoolRequest withGvnic(VirtualNIC gvnic) {
         this.gvnic = gvnic;
         return this;
@@ -84,6 +90,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageType")
     public String imageType;
+
     public UpdateNodePoolRequest withImageType(String imageType) {
         this.imageType = imageType;
         return this;
@@ -95,6 +102,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kubeletConfig")
     public NodeKubeletConfig kubeletConfig;
+
     public UpdateNodePoolRequest withKubeletConfig(NodeKubeletConfig kubeletConfig) {
         this.kubeletConfig = kubeletConfig;
         return this;
@@ -106,6 +114,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public NodeLabels labels;
+
     public UpdateNodePoolRequest withLabels(NodeLabels labels) {
         this.labels = labels;
         return this;
@@ -117,6 +126,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linuxNodeConfig")
     public LinuxNodeConfig linuxNodeConfig;
+
     public UpdateNodePoolRequest withLinuxNodeConfig(LinuxNodeConfig linuxNodeConfig) {
         this.linuxNodeConfig = linuxNodeConfig;
         return this;
@@ -128,6 +138,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public String[] locations;
+
     public UpdateNodePoolRequest withLocations(String[] locations) {
         this.locations = locations;
         return this;
@@ -139,6 +150,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfig")
     public NodePoolLoggingConfig loggingConfig;
+
     public UpdateNodePoolRequest withLoggingConfig(NodePoolLoggingConfig loggingConfig) {
         this.loggingConfig = loggingConfig;
         return this;
@@ -150,6 +162,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateNodePoolRequest withName(String name) {
         this.name = name;
         return this;
@@ -161,6 +174,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeNetworkConfig")
     public NodeNetworkConfig nodeNetworkConfig;
+
     public UpdateNodePoolRequest withNodeNetworkConfig(NodeNetworkConfig nodeNetworkConfig) {
         this.nodeNetworkConfig = nodeNetworkConfig;
         return this;
@@ -172,6 +186,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodePoolId")
     public String nodePoolId;
+
     public UpdateNodePoolRequest withNodePoolId(String nodePoolId) {
         this.nodePoolId = nodePoolId;
         return this;
@@ -183,6 +198,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeVersion")
     public String nodeVersion;
+
     public UpdateNodePoolRequest withNodeVersion(String nodeVersion) {
         this.nodeVersion = nodeVersion;
         return this;
@@ -194,6 +210,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public UpdateNodePoolRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -205,6 +222,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLabels")
     public ResourceLabels resourceLabels;
+
     public UpdateNodePoolRequest withResourceLabels(ResourceLabels resourceLabels) {
         this.resourceLabels = resourceLabels;
         return this;
@@ -216,6 +234,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public NetworkTags tags;
+
     public UpdateNodePoolRequest withTags(NetworkTags tags) {
         this.tags = tags;
         return this;
@@ -227,6 +246,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taints")
     public NodeTaints taints;
+
     public UpdateNodePoolRequest withTaints(NodeTaints taints) {
         this.taints = taints;
         return this;
@@ -238,6 +258,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upgradeSettings")
     public UpgradeSettings upgradeSettings;
+
     public UpdateNodePoolRequest withUpgradeSettings(UpgradeSettings upgradeSettings) {
         this.upgradeSettings = upgradeSettings;
         return this;
@@ -249,6 +270,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowsNodeConfig")
     public WindowsNodeConfig windowsNodeConfig;
+
     public UpdateNodePoolRequest withWindowsNodeConfig(WindowsNodeConfig windowsNodeConfig) {
         this.windowsNodeConfig = windowsNodeConfig;
         return this;
@@ -260,6 +282,7 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadMetadataConfig")
     public WorkloadMetadataConfig workloadMetadataConfig;
+
     public UpdateNodePoolRequest withWorkloadMetadataConfig(WorkloadMetadataConfig workloadMetadataConfig) {
         this.workloadMetadataConfig = workloadMetadataConfig;
         return this;
@@ -271,9 +294,11 @@ public class UpdateNodePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public UpdateNodePoolRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public UpdateNodePoolRequest(){}
 }

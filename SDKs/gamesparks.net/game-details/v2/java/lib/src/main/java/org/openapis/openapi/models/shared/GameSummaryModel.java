@@ -15,6 +15,7 @@ public class GameSummaryModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logLevelData")
     public java.util.Map<String, Object>[] logLevelData;
+
     public GameSummaryModel withLogLevelData(java.util.Map<String, Object>[] logLevelData) {
         this.logLevelData = logLevelData;
         return this;
@@ -23,6 +24,7 @@ public class GameSummaryModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logLevelSummary")
     public LogLevelSummaryModel[] logLevelSummary;
+
     public GameSummaryModel withLogLevelSummary(LogLevelSummaryModel[] logLevelSummary) {
         this.logLevelSummary = logLevelSummary;
         return this;
@@ -31,9 +33,11 @@ public class GameSummaryModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GameSummaryModel withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GameSummaryModel(){}
 }

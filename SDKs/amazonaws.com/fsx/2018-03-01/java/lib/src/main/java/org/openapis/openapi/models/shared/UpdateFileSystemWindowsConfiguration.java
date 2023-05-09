@@ -15,6 +15,7 @@ public class UpdateFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuditLogConfiguration")
     public WindowsAuditLogCreateConfiguration auditLogConfiguration;
+
     public UpdateFileSystemWindowsConfiguration withAuditLogConfiguration(WindowsAuditLogCreateConfiguration auditLogConfiguration) {
         this.auditLogConfiguration = auditLogConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class UpdateFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomaticBackupRetentionDays")
     public Long automaticBackupRetentionDays;
+
     public UpdateFileSystemWindowsConfiguration withAutomaticBackupRetentionDays(Long automaticBackupRetentionDays) {
         this.automaticBackupRetentionDays = automaticBackupRetentionDays;
         return this;
@@ -31,6 +33,7 @@ public class UpdateFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DailyAutomaticBackupStartTime")
     public String dailyAutomaticBackupStartTime;
+
     public UpdateFileSystemWindowsConfiguration withDailyAutomaticBackupStartTime(String dailyAutomaticBackupStartTime) {
         this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
         return this;
@@ -39,6 +42,7 @@ public class UpdateFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelfManagedActiveDirectoryConfiguration")
     public SelfManagedActiveDirectoryConfigurationUpdates selfManagedActiveDirectoryConfiguration;
+
     public UpdateFileSystemWindowsConfiguration withSelfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfigurationUpdates selfManagedActiveDirectoryConfiguration) {
         this.selfManagedActiveDirectoryConfiguration = selfManagedActiveDirectoryConfiguration;
         return this;
@@ -47,6 +51,7 @@ public class UpdateFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThroughputCapacity")
     public Long throughputCapacity;
+
     public UpdateFileSystemWindowsConfiguration withThroughputCapacity(Long throughputCapacity) {
         this.throughputCapacity = throughputCapacity;
         return this;
@@ -55,9 +60,11 @@ public class UpdateFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeeklyMaintenanceStartTime")
     public String weeklyMaintenanceStartTime;
+
     public UpdateFileSystemWindowsConfiguration withWeeklyMaintenanceStartTime(String weeklyMaintenanceStartTime) {
         this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
         return this;
     }
     
+    public UpdateFileSystemWindowsConfiguration(){}
 }

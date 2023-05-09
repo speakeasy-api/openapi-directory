@@ -61,11 +61,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesAddSubnetworkResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesAddSubnetworkResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesAddSubnetworkResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesAddSubnetworkResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsCreateResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsCreateResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsCreateResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsDeleteConnectionResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsDeleteConnectionResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsDeleteConnectionResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsDeleteConnectionResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +197,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsListResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsListResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsListResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsListResponse(contentType, httpRes.statusCode()) {{
             listConnectionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,11 +243,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsPatchResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsPatchResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsPatchResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -299,11 +289,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesDisableVpcServiceControlsResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesDisableVpcServiceControlsResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesDisableVpcServiceControlsResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesDisableVpcServiceControlsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -347,11 +335,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsAddResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsAddResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsAddResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsAddResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -395,11 +381,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsRemoveResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsRemoveResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsRemoveResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsRemoveResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -443,11 +427,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsUpdateResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsUpdateResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsUpdateResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -491,11 +473,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesAddResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesAddResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesAddResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesAddResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -539,11 +519,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesRemoveResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesRemoveResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesRemoveResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesRemoveResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -587,11 +565,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesEnableVpcServiceControlsResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesEnableVpcServiceControlsResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesEnableVpcServiceControlsResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesEnableVpcServiceControlsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -633,11 +609,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksGetResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksGetResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksGetResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksGetResponse(contentType, httpRes.statusCode()) {{
             consumerConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -681,11 +655,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsCreateResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsCreateResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsCreateResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -727,11 +699,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -773,11 +743,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListResponse(contentType, httpRes.statusCode()) {{
             listPeeredDnsDomainsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -821,11 +789,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -869,11 +835,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesRolesAddResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesRolesAddResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesRolesAddResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesRolesAddResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -917,11 +881,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesSearchRangeResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesSearchRangeResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesSearchRangeResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesSearchRangeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -965,11 +927,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicenetworkingServicesValidateResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesValidateResponse() {{
+        org.openapis.openapi.models.operations.ServicenetworkingServicesValidateResponse res = new org.openapis.openapi.models.operations.ServicenetworkingServicesValidateResponse(contentType, httpRes.statusCode()) {{
             validateConsumerConfigResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

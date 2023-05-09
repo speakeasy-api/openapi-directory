@@ -18,6 +18,7 @@ public class APIException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorNumber")
     public Double errorNumber;
+
     public APIException withErrorNumber(Double errorNumber) {
         this.errorNumber = errorNumber;
         return this;
@@ -29,6 +30,7 @@ public class APIException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public APIException withMessage(String message) {
         this.message = message;
         return this;
@@ -40,9 +42,11 @@ public class APIException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public APIException withType(String type) {
         this.type = type;
         return this;
     }
     
+    public APIException(){}
 }

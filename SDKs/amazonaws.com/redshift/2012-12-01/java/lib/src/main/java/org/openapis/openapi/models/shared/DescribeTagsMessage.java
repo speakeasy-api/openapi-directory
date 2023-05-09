@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTagsMessage {
     
     public String marker;
+
     public DescribeTagsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,6 +20,7 @@ public class DescribeTagsMessage {
     
     
     public Long maxRecords;
+
     public DescribeTagsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -26,6 +28,7 @@ public class DescribeTagsMessage {
     
     
     public String resourceName;
+
     public DescribeTagsMessage withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -33,6 +36,7 @@ public class DescribeTagsMessage {
     
     
     public String resourceType;
+
     public DescribeTagsMessage withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -40,6 +44,7 @@ public class DescribeTagsMessage {
     
     
     public String[] tagKeys;
+
     public DescribeTagsMessage withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -47,9 +52,11 @@ public class DescribeTagsMessage {
     
     
     public String[] tagValues;
+
     public DescribeTagsMessage withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     
+    public DescribeTagsMessage(){}
 }

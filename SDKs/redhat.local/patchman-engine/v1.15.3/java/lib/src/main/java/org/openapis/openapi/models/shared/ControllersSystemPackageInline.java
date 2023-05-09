@@ -12,6 +12,7 @@ public class ControllersSystemPackageInline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ControllersSystemPackageInline withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class ControllersSystemPackageInline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evra")
     public String evra;
+
     public ControllersSystemPackageInline withEvra(String evra) {
         this.evra = evra;
         return this;
@@ -28,6 +30,7 @@ public class ControllersSystemPackageInline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latest_evra")
     public String latestEvra;
+
     public ControllersSystemPackageInline withLatestEvra(String latestEvra) {
         this.latestEvra = latestEvra;
         return this;
@@ -36,6 +39,7 @@ public class ControllersSystemPackageInline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ControllersSystemPackageInline withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class ControllersSystemPackageInline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public ControllersSystemPackageInline withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -52,9 +57,11 @@ public class ControllersSystemPackageInline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatable")
     public Boolean updatable;
+
     public ControllersSystemPackageInline withUpdatable(Boolean updatable) {
         this.updatable = updatable;
         return this;
     }
     
+    public ControllersSystemPackageInline(){}
 }

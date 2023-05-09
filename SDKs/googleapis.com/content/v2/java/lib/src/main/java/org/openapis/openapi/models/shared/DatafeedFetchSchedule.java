@@ -18,6 +18,7 @@ public class DatafeedFetchSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfMonth")
     public Long dayOfMonth;
+
     public DatafeedFetchSchedule withDayOfMonth(Long dayOfMonth) {
         this.dayOfMonth = dayOfMonth;
         return this;
@@ -29,6 +30,7 @@ public class DatafeedFetchSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fetchUrl")
     public String fetchUrl;
+
     public DatafeedFetchSchedule withFetchUrl(String fetchUrl) {
         this.fetchUrl = fetchUrl;
         return this;
@@ -40,6 +42,7 @@ public class DatafeedFetchSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hour")
     public Long hour;
+
     public DatafeedFetchSchedule withHour(Long hour) {
         this.hour = hour;
         return this;
@@ -51,6 +54,7 @@ public class DatafeedFetchSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minuteOfHour")
     public Long minuteOfHour;
+
     public DatafeedFetchSchedule withMinuteOfHour(Long minuteOfHour) {
         this.minuteOfHour = minuteOfHour;
         return this;
@@ -62,6 +66,7 @@ public class DatafeedFetchSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public DatafeedFetchSchedule withPassword(String password) {
         this.password = password;
         return this;
@@ -73,6 +78,7 @@ public class DatafeedFetchSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paused")
     public Boolean paused;
+
     public DatafeedFetchSchedule withPaused(Boolean paused) {
         this.paused = paused;
         return this;
@@ -84,6 +90,7 @@ public class DatafeedFetchSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public DatafeedFetchSchedule withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -95,6 +102,7 @@ public class DatafeedFetchSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public DatafeedFetchSchedule withUsername(String username) {
         this.username = username;
         return this;
@@ -106,9 +114,11 @@ public class DatafeedFetchSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weekday")
     public String weekday;
+
     public DatafeedFetchSchedule withWeekday(String weekday) {
         this.weekday = weekday;
         return this;
     }
     
+    public DatafeedFetchSchedule(){}
 }

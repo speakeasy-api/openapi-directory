@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetActionNotificationExportResultsRequest;
 import org.openapis.openapi.models.operations.GetActionNotificationExportResultsResponse;
 
@@ -26,21 +25,22 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetActionNotificationExportResultsRequest req = new GetActionNotificationExportResultsRequest() {{
-                actionNotificationExportId = 548814;
+            GetActionNotificationExportResultsRequest req = new GetActionNotificationExportResultsRequest(548814) {{
                 cursor = "provident";
                 perPage = 715190;
                 userId = 844266;
-            }}            
+            }};            
 
             GetActionNotificationExportResultsResponse res = sdk.actionNotificationExportResults.getActionNotificationExportResults(req);
 
-            if (res.actionNotificationExportResultEntities.isPresent()) {
+            if (res.actionNotificationExportResultEntities != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,425 +48,425 @@ public class Application {
 ## Available Resources and Operations
 
 
-### actionNotificationExportResults
+### [actionNotificationExportResults](docs/actionnotificationexportresults/README.md)
 
-* `getActionNotificationExportResults` - List Action Notification Export Results
+* [getActionNotificationExportResults](docs/actionnotificationexportresults/README.md#getactionnotificationexportresults) - List Action Notification Export Results
 
-### actionNotificationExports
+### [actionNotificationExports](docs/actionnotificationexports/README.md)
 
-* `getActionNotificationExportsId` - Show Action Notification Export
-* `postActionNotificationExports` - Create Action Notification Export
+* [getActionNotificationExportsId](docs/actionnotificationexports/README.md#getactionnotificationexportsid) - Show Action Notification Export
+* [postActionNotificationExports](docs/actionnotificationexports/README.md#postactionnotificationexports) - Create Action Notification Export
 
-### actionWebhookFailures
+### [actionWebhookFailures](docs/actionwebhookfailures/README.md)
 
-* `postActionWebhookFailuresIdRetry` - retry Action Webhook Failure
+* [postActionWebhookFailuresIdRetry](docs/actionwebhookfailures/README.md#postactionwebhookfailuresidretry) - retry Action Webhook Failure
 
-### apiKey
+### [apiKey](docs/apikey/README.md)
 
-* `apiKeyDeleteCurrent` - Delete current API key.  (Requires current API connection to be using an API key.)
-* `apiKeyFindCurrent` - Show information about current API key.  (Requires current API connection to be using an API key.)
-* `apiKeyUpdateCurrent` - Update current API key.  (Requires current API connection to be using an API key.)
+* [apiKeyDeleteCurrent](docs/apikey/README.md#apikeydeletecurrent) - Delete current API key.  (Requires current API connection to be using an API key.)
+* [apiKeyFindCurrent](docs/apikey/README.md#apikeyfindcurrent) - Show information about current API key.  (Requires current API connection to be using an API key.)
+* [apiKeyUpdateCurrent](docs/apikey/README.md#apikeyupdatecurrent) - Update current API key.  (Requires current API connection to be using an API key.)
 
-### apiKeys
+### [apiKeys](docs/apikeys/README.md)
 
-* `deleteApiKeysId` - Delete Api Key
-* `getApiKeys` - List Api Keys
-* `getApiKeysId` - Show Api Key
-* `patchApiKeysId` - Update Api Key
-* `postApiKeys` - Create Api Key
+* [deleteApiKeysId](docs/apikeys/README.md#deleteapikeysid) - Delete Api Key
+* [getApiKeys](docs/apikeys/README.md#getapikeys) - List Api Keys
+* [getApiKeysId](docs/apikeys/README.md#getapikeysid) - Show Api Key
+* [patchApiKeysId](docs/apikeys/README.md#patchapikeysid) - Update Api Key
+* [postApiKeys](docs/apikeys/README.md#postapikeys) - Create Api Key
 
-### apps
+### [apps](docs/apps/README.md)
 
-* `getApps` - List Apps
+* [getApps](docs/apps/README.md#getapps) - List Apps
 
-### as2IncomingMessages
+### [as2IncomingMessages](docs/as2incomingmessages/README.md)
 
-* `getAs2IncomingMessages` - List As2 Incoming Messages
+* [getAs2IncomingMessages](docs/as2incomingmessages/README.md#getas2incomingmessages) - List As2 Incoming Messages
 
-### as2OutgoingMessages
+### [as2OutgoingMessages](docs/as2outgoingmessages/README.md)
 
-* `getAs2OutgoingMessages` - List As2 Outgoing Messages
+* [getAs2OutgoingMessages](docs/as2outgoingmessages/README.md#getas2outgoingmessages) - List As2 Outgoing Messages
 
-### as2Partners
+### [as2Partners](docs/as2partners/README.md)
 
-* `deleteAs2PartnersId` - Delete As2 Partner
-* `getAs2Partners` - List As2 Partners
-* `getAs2PartnersId` - Show As2 Partner
-* `patchAs2PartnersId` - Update As2 Partner
-* `postAs2Partners` - Create As2 Partner
+* [deleteAs2PartnersId](docs/as2partners/README.md#deleteas2partnersid) - Delete As2 Partner
+* [getAs2Partners](docs/as2partners/README.md#getas2partners) - List As2 Partners
+* [getAs2PartnersId](docs/as2partners/README.md#getas2partnersid) - Show As2 Partner
+* [patchAs2PartnersId](docs/as2partners/README.md#patchas2partnersid) - Update As2 Partner
+* [postAs2Partners](docs/as2partners/README.md#postas2partners) - Create As2 Partner
 
-### as2Stations
+### [as2Stations](docs/as2stations/README.md)
 
-* `deleteAs2StationsId` - Delete As2 Station
-* `getAs2Stations` - List As2 Stations
-* `getAs2StationsId` - Show As2 Station
-* `patchAs2StationsId` - Update As2 Station
-* `postAs2Stations` - Create As2 Station
+* [deleteAs2StationsId](docs/as2stations/README.md#deleteas2stationsid) - Delete As2 Station
+* [getAs2Stations](docs/as2stations/README.md#getas2stations) - List As2 Stations
+* [getAs2StationsId](docs/as2stations/README.md#getas2stationsid) - Show As2 Station
+* [patchAs2StationsId](docs/as2stations/README.md#patchas2stationsid) - Update As2 Station
+* [postAs2Stations](docs/as2stations/README.md#postas2stations) - Create As2 Station
 
-### automationRuns
+### [automationRuns](docs/automationruns/README.md)
 
-* `getAutomationRuns` - List Automation Runs
-* `getAutomationRunsId` - Show Automation Run
+* [getAutomationRuns](docs/automationruns/README.md#getautomationruns) - List Automation Runs
+* [getAutomationRunsId](docs/automationruns/README.md#getautomationrunsid) - Show Automation Run
 
-### automations
+### [automations](docs/automations/README.md)
 
-* `deleteAutomationsId` - Delete Automation
-* `getAutomations` - List Automations
-* `getAutomationsId` - Show Automation
-* `patchAutomationsId` - Update Automation
-* `postAutomations` - Create Automation
+* [deleteAutomationsId](docs/automations/README.md#deleteautomationsid) - Delete Automation
+* [getAutomations](docs/automations/README.md#getautomations) - List Automations
+* [getAutomationsId](docs/automations/README.md#getautomationsid) - Show Automation
+* [patchAutomationsId](docs/automations/README.md#patchautomationsid) - Update Automation
+* [postAutomations](docs/automations/README.md#postautomations) - Create Automation
 
-### bandwidthSnapshots
+### [bandwidthSnapshots](docs/bandwidthsnapshots/README.md)
 
-* `getBandwidthSnapshots` - List Bandwidth Snapshots
+* [getBandwidthSnapshots](docs/bandwidthsnapshots/README.md#getbandwidthsnapshots) - List Bandwidth Snapshots
 
-### behaviors
+### [behaviors](docs/behaviors/README.md)
 
-* `behaviorListForPath` - List Behaviors by path
-* `deleteBehaviorsId` - Delete Behavior
-* `getBehaviors` - List Behaviors
-* `getBehaviorsId` - Show Behavior
-* `patchBehaviorsId` - Update Behavior
-* `postBehaviors` - Create Behavior
-* `postBehaviorsWebhookTest` - Test webhook.
+* [behaviorListForPath](docs/behaviors/README.md#behaviorlistforpath) - List Behaviors by path
+* [deleteBehaviorsId](docs/behaviors/README.md#deletebehaviorsid) - Delete Behavior
+* [getBehaviors](docs/behaviors/README.md#getbehaviors) - List Behaviors
+* [getBehaviorsId](docs/behaviors/README.md#getbehaviorsid) - Show Behavior
+* [patchBehaviorsId](docs/behaviors/README.md#patchbehaviorsid) - Update Behavior
+* [postBehaviors](docs/behaviors/README.md#postbehaviors) - Create Behavior
+* [postBehaviorsWebhookTest](docs/behaviors/README.md#postbehaviorswebhooktest) - Test webhook.
 
-### bundleDownloads
+### [bundleDownloads](docs/bundledownloads/README.md)
 
-* `getBundleDownloads` - List Bundle Downloads
+* [getBundleDownloads](docs/bundledownloads/README.md#getbundledownloads) - List Bundle Downloads
 
-### bundleNotifications
+### [bundleNotifications](docs/bundlenotifications/README.md)
 
-* `deleteBundleNotificationsId` - Delete Bundle Notification
-* `getBundleNotifications` - List Bundle Notifications
-* `getBundleNotificationsId` - Show Bundle Notification
-* `patchBundleNotificationsId` - Update Bundle Notification
-* `postBundleNotifications` - Create Bundle Notification
+* [deleteBundleNotificationsId](docs/bundlenotifications/README.md#deletebundlenotificationsid) - Delete Bundle Notification
+* [getBundleNotifications](docs/bundlenotifications/README.md#getbundlenotifications) - List Bundle Notifications
+* [getBundleNotificationsId](docs/bundlenotifications/README.md#getbundlenotificationsid) - Show Bundle Notification
+* [patchBundleNotificationsId](docs/bundlenotifications/README.md#patchbundlenotificationsid) - Update Bundle Notification
+* [postBundleNotifications](docs/bundlenotifications/README.md#postbundlenotifications) - Create Bundle Notification
 
-### bundleRecipients
+### [bundleRecipients](docs/bundlerecipients/README.md)
 
-* `getBundleRecipients` - List Bundle Recipients
-* `postBundleRecipients` - Create Bundle Recipient
+* [getBundleRecipients](docs/bundlerecipients/README.md#getbundlerecipients) - List Bundle Recipients
+* [postBundleRecipients](docs/bundlerecipients/README.md#postbundlerecipients) - Create Bundle Recipient
 
-### bundleRegistrations
+### [bundleRegistrations](docs/bundleregistrations/README.md)
 
-* `getBundleRegistrations` - List Bundle Registrations
+* [getBundleRegistrations](docs/bundleregistrations/README.md#getbundleregistrations) - List Bundle Registrations
 
-### bundles
+### [bundles](docs/bundles/README.md)
 
-* `deleteBundlesId` - Delete Bundle
-* `getBundles` - List Bundles
-* `getBundlesId` - Show Bundle
-* `patchBundlesId` - Update Bundle
-* `postBundles` - Create Bundle
-* `postBundlesIdShare` - Send email(s) with a link to bundle
+* [deleteBundlesId](docs/bundles/README.md#deletebundlesid) - Delete Bundle
+* [getBundles](docs/bundles/README.md#getbundles) - List Bundles
+* [getBundlesId](docs/bundles/README.md#getbundlesid) - Show Bundle
+* [patchBundlesId](docs/bundles/README.md#patchbundlesid) - Update Bundle
+* [postBundles](docs/bundles/README.md#postbundles) - Create Bundle
+* [postBundlesIdShare](docs/bundles/README.md#postbundlesidshare) - Send email(s) with a link to bundle
 
-### clickwraps
+### [clickwraps](docs/clickwraps/README.md)
 
-* `deleteClickwrapsId` - Delete Clickwrap
-* `getClickwraps` - List Clickwraps
-* `getClickwrapsId` - Show Clickwrap
-* `patchClickwrapsId` - Update Clickwrap
-* `postClickwraps` - Create Clickwrap
+* [deleteClickwrapsId](docs/clickwraps/README.md#deleteclickwrapsid) - Delete Clickwrap
+* [getClickwraps](docs/clickwraps/README.md#getclickwraps) - List Clickwraps
+* [getClickwrapsId](docs/clickwraps/README.md#getclickwrapsid) - Show Clickwrap
+* [patchClickwrapsId](docs/clickwraps/README.md#patchclickwrapsid) - Update Clickwrap
+* [postClickwraps](docs/clickwraps/README.md#postclickwraps) - Create Clickwrap
 
-### dnsRecords
+### [dnsRecords](docs/dnsrecords/README.md)
 
-* `getDnsRecords` - Show site DNS configuration.
+* [getDnsRecords](docs/dnsrecords/README.md#getdnsrecords) - Show site DNS configuration.
 
-### externalEvents
+### [externalEvents](docs/externalevents/README.md)
 
-* `getExternalEvents` - List External Events
-* `getExternalEventsId` - Show External Event
-* `postExternalEvents` - Create External Event
+* [getExternalEvents](docs/externalevents/README.md#getexternalevents) - List External Events
+* [getExternalEventsId](docs/externalevents/README.md#getexternaleventsid) - Show External Event
+* [postExternalEvents](docs/externalevents/README.md#postexternalevents) - Create External Event
 
-### fileActions
+### [fileActions](docs/fileactions/README.md)
 
-* `fileActionBeginUpload` - Begin file upload
-* `fileActionCopy` - Copy file/folder
-* `fileActionFind` - Find file/folder by path
-* `fileActionMove` - Move file/folder
+* [fileActionBeginUpload](docs/fileactions/README.md#fileactionbeginupload) - Begin file upload
+* [fileActionCopy](docs/fileactions/README.md#fileactioncopy) - Copy file/folder
+* [fileActionFind](docs/fileactions/README.md#fileactionfind) - Find file/folder by path
+* [fileActionMove](docs/fileactions/README.md#fileactionmove) - Move file/folder
 
-### fileCommentReactions
+### [fileCommentReactions](docs/filecommentreactions/README.md)
 
-* `deleteFileCommentReactionsId` - Delete File Comment Reaction
-* `postFileCommentReactions` - Create File Comment Reaction
+* [deleteFileCommentReactionsId](docs/filecommentreactions/README.md#deletefilecommentreactionsid) - Delete File Comment Reaction
+* [postFileCommentReactions](docs/filecommentreactions/README.md#postfilecommentreactions) - Create File Comment Reaction
 
-### fileComments
+### [fileComments](docs/filecomments/README.md)
 
-* `deleteFileCommentsId` - Delete File Comment
-* `fileCommentListForPath` - List File Comments by path
-* `patchFileCommentsId` - Update File Comment
-* `postFileComments` - Create File Comment
+* [deleteFileCommentsId](docs/filecomments/README.md#deletefilecommentsid) - Delete File Comment
+* [fileCommentListForPath](docs/filecomments/README.md#filecommentlistforpath) - List File Comments by path
+* [patchFileCommentsId](docs/filecomments/README.md#patchfilecommentsid) - Update File Comment
+* [postFileComments](docs/filecomments/README.md#postfilecomments) - Create File Comment
 
-### fileMigrations
+### [fileMigrations](docs/filemigrations/README.md)
 
-* `getFileMigrationsId` - Show File Migration
+* [getFileMigrationsId](docs/filemigrations/README.md#getfilemigrationsid) - Show File Migration
 
-### files
+### [files](docs/files/README.md)
 
-* `deleteFilesPath` - Delete file/folder
-* `fileDownload` - Download file
-* `patchFilesPath` - Update file/folder metadata
-* `postFilesPath` - Upload file
+* [deleteFilesPath](docs/files/README.md#deletefilespath) - Delete file/folder
+* [fileDownload](docs/files/README.md#filedownload) - Download file
+* [patchFilesPath](docs/files/README.md#patchfilespath) - Update file/folder metadata
+* [postFilesPath](docs/files/README.md#postfilespath) - Upload file
 
-### folders
+### [folders](docs/folders/README.md)
 
-* `folderListForPath` - List Folders by path
-* `postFoldersPath` - Create folder
+* [folderListForPath](docs/folders/README.md#folderlistforpath) - List Folders by path
+* [postFoldersPath](docs/folders/README.md#postfolderspath) - Create folder
 
-### formFieldSets
+### [formFieldSets](docs/formfieldsets/README.md)
 
-* `deleteFormFieldSetsId` - Delete Form Field Set
-* `getFormFieldSets` - List Form Field Sets
-* `getFormFieldSetsId` - Show Form Field Set
-* `patchFormFieldSetsId` - Update Form Field Set
-* `postFormFieldSets` - Create Form Field Set
+* [deleteFormFieldSetsId](docs/formfieldsets/README.md#deleteformfieldsetsid) - Delete Form Field Set
+* [getFormFieldSets](docs/formfieldsets/README.md#getformfieldsets) - List Form Field Sets
+* [getFormFieldSetsId](docs/formfieldsets/README.md#getformfieldsetsid) - Show Form Field Set
+* [patchFormFieldSetsId](docs/formfieldsets/README.md#patchformfieldsetsid) - Update Form Field Set
+* [postFormFieldSets](docs/formfieldsets/README.md#postformfieldsets) - Create Form Field Set
 
-### groupUsers
+### [groupUsers](docs/groupusers/README.md)
 
-* `deleteGroupUsersId` - Delete Group User
-* `getGroupUsers` - List Group Users
-* `patchGroupUsersId` - Update Group User
-* `postGroupUsers` - Create Group User
+* [deleteGroupUsersId](docs/groupusers/README.md#deletegroupusersid) - Delete Group User
+* [getGroupUsers](docs/groupusers/README.md#getgroupusers) - List Group Users
+* [patchGroupUsersId](docs/groupusers/README.md#patchgroupusersid) - Update Group User
+* [postGroupUsers](docs/groupusers/README.md#postgroupusers) - Create Group User
 
-### groups
+### [groups](docs/groups/README.md)
 
-* `deleteGroupsGroupIdMembershipsUserId` - Delete Group User
-* `deleteGroupsId` - Delete Group
-* `getGroups` - List Groups
-* `getGroupsGroupIdPermissions` - List Permissions
-* `getGroupsGroupIdUsers` - List Group Users
-* `getGroupsId` - Show Group
-* `patchGroupsGroupIdMembershipsUserId` - Update Group User
-* `patchGroupsId` - Update Group
-* `postGroups` - Create Group
-* `postGroupsGroupIdUsers` - Create User
+* [deleteGroupsGroupIdMembershipsUserId](docs/groups/README.md#deletegroupsgroupidmembershipsuserid) - Delete Group User
+* [deleteGroupsId](docs/groups/README.md#deletegroupsid) - Delete Group
+* [getGroups](docs/groups/README.md#getgroups) - List Groups
+* [getGroupsGroupIdPermissions](docs/groups/README.md#getgroupsgroupidpermissions) - List Permissions
+* [getGroupsGroupIdUsers](docs/groups/README.md#getgroupsgroupidusers) - List Group Users
+* [getGroupsId](docs/groups/README.md#getgroupsid) - Show Group
+* [patchGroupsGroupIdMembershipsUserId](docs/groups/README.md#patchgroupsgroupidmembershipsuserid) - Update Group User
+* [patchGroupsId](docs/groups/README.md#patchgroupsid) - Update Group
+* [postGroups](docs/groups/README.md#postgroups) - Create Group
+* [postGroupsGroupIdUsers](docs/groups/README.md#postgroupsgroupidusers) - Create User
 
-### history
+### [history](docs/history/README.md)
 
-* `historyList` - List site full action history.
-* `historyListForFile` - List history for specific file.
-* `historyListForFolder` - List history for specific folder.
-* `historyListForUser` - List history for specific user.
-* `historyListLogins` - List site login history.
+* [historyList](docs/history/README.md#historylist) - List site full action history.
+* [historyListForFile](docs/history/README.md#historylistforfile) - List history for specific file.
+* [historyListForFolder](docs/history/README.md#historylistforfolder) - List history for specific folder.
+* [historyListForUser](docs/history/README.md#historylistforuser) - List history for specific user.
+* [historyListLogins](docs/history/README.md#historylistlogins) - List site login history.
 
-### historyExportResults
+### [historyExportResults](docs/historyexportresults/README.md)
 
-* `getHistoryExportResults` - List History Export Results
+* [getHistoryExportResults](docs/historyexportresults/README.md#gethistoryexportresults) - List History Export Results
 
-### historyExports
+### [historyExports](docs/historyexports/README.md)
 
-* `getHistoryExportsId` - Show History Export
-* `postHistoryExports` - Create History Export
+* [getHistoryExportsId](docs/historyexports/README.md#gethistoryexportsid) - Show History Export
+* [postHistoryExports](docs/historyexports/README.md#posthistoryexports) - Create History Export
 
-### inboxRecipients
+### [inboxRecipients](docs/inboxrecipients/README.md)
 
-* `getInboxRecipients` - List Inbox Recipients
-* `postInboxRecipients` - Create Inbox Recipient
+* [getInboxRecipients](docs/inboxrecipients/README.md#getinboxrecipients) - List Inbox Recipients
+* [postInboxRecipients](docs/inboxrecipients/README.md#postinboxrecipients) - Create Inbox Recipient
 
-### inboxRegistrations
+### [inboxRegistrations](docs/inboxregistrations/README.md)
 
-* `getInboxRegistrations` - List Inbox Registrations
+* [getInboxRegistrations](docs/inboxregistrations/README.md#getinboxregistrations) - List Inbox Registrations
 
-### inboxUploads
+### [inboxUploads](docs/inboxuploads/README.md)
 
-* `getInboxUploads` - List Inbox Uploads
+* [getInboxUploads](docs/inboxuploads/README.md#getinboxuploads) - List Inbox Uploads
 
-### invoices
+### [invoices](docs/invoices/README.md)
 
-* `getInvoices` - List Invoices
-* `getInvoicesId` - Show Invoice
+* [getInvoices](docs/invoices/README.md#getinvoices) - List Invoices
+* [getInvoicesId](docs/invoices/README.md#getinvoicesid) - Show Invoice
 
-### ipAddresses
+### [ipAddresses](docs/ipaddresses/README.md)
 
-* `getIpAddresses` - List IP Addresses associated with the current site
-* `getIpAddressesExavaultReserved` - List all possible public ExaVault IP addresses
-* `getIpAddressesReserved` - List all possible public IP addresses
+* [getIpAddresses](docs/ipaddresses/README.md#getipaddresses) - List IP Addresses associated with the current site
+* [getIpAddressesExavaultReserved](docs/ipaddresses/README.md#getipaddressesexavaultreserved) - List all possible public ExaVault IP addresses
+* [getIpAddressesReserved](docs/ipaddresses/README.md#getipaddressesreserved) - List all possible public IP addresses
 
-### locks
+### [locks](docs/locks/README.md)
 
-* `deleteLocksPath` - Delete Lock
-* `lockListForPath` - List Locks by path
-* `postLocksPath` - Create Lock
+* [deleteLocksPath](docs/locks/README.md#deletelockspath) - Delete Lock
+* [lockListForPath](docs/locks/README.md#locklistforpath) - List Locks by path
+* [postLocksPath](docs/locks/README.md#postlockspath) - Create Lock
 
-### messageCommentReactions
+### [messageCommentReactions](docs/messagecommentreactions/README.md)
 
-* `deleteMessageCommentReactionsId` - Delete Message Comment Reaction
-* `getMessageCommentReactions` - List Message Comment Reactions
-* `getMessageCommentReactionsId` - Show Message Comment Reaction
-* `postMessageCommentReactions` - Create Message Comment Reaction
+* [deleteMessageCommentReactionsId](docs/messagecommentreactions/README.md#deletemessagecommentreactionsid) - Delete Message Comment Reaction
+* [getMessageCommentReactions](docs/messagecommentreactions/README.md#getmessagecommentreactions) - List Message Comment Reactions
+* [getMessageCommentReactionsId](docs/messagecommentreactions/README.md#getmessagecommentreactionsid) - Show Message Comment Reaction
+* [postMessageCommentReactions](docs/messagecommentreactions/README.md#postmessagecommentreactions) - Create Message Comment Reaction
 
-### messageComments
+### [messageComments](docs/messagecomments/README.md)
 
-* `deleteMessageCommentsId` - Delete Message Comment
-* `getMessageComments` - List Message Comments
-* `getMessageCommentsId` - Show Message Comment
-* `patchMessageCommentsId` - Update Message Comment
-* `postMessageComments` - Create Message Comment
+* [deleteMessageCommentsId](docs/messagecomments/README.md#deletemessagecommentsid) - Delete Message Comment
+* [getMessageComments](docs/messagecomments/README.md#getmessagecomments) - List Message Comments
+* [getMessageCommentsId](docs/messagecomments/README.md#getmessagecommentsid) - Show Message Comment
+* [patchMessageCommentsId](docs/messagecomments/README.md#patchmessagecommentsid) - Update Message Comment
+* [postMessageComments](docs/messagecomments/README.md#postmessagecomments) - Create Message Comment
 
-### messageReactions
+### [messageReactions](docs/messagereactions/README.md)
 
-* `deleteMessageReactionsId` - Delete Message Reaction
-* `getMessageReactions` - List Message Reactions
-* `getMessageReactionsId` - Show Message Reaction
-* `postMessageReactions` - Create Message Reaction
+* [deleteMessageReactionsId](docs/messagereactions/README.md#deletemessagereactionsid) - Delete Message Reaction
+* [getMessageReactions](docs/messagereactions/README.md#getmessagereactions) - List Message Reactions
+* [getMessageReactionsId](docs/messagereactions/README.md#getmessagereactionsid) - Show Message Reaction
+* [postMessageReactions](docs/messagereactions/README.md#postmessagereactions) - Create Message Reaction
 
-### messages
+### [messages](docs/messages/README.md)
 
-* `deleteMessagesId` - Delete Message
-* `getMessages` - List Messages
-* `getMessagesId` - Show Message
-* `patchMessagesId` - Update Message
-* `postMessages` - Create Message
+* [deleteMessagesId](docs/messages/README.md#deletemessagesid) - Delete Message
+* [getMessages](docs/messages/README.md#getmessages) - List Messages
+* [getMessagesId](docs/messages/README.md#getmessagesid) - Show Message
+* [patchMessagesId](docs/messages/README.md#patchmessagesid) - Update Message
+* [postMessages](docs/messages/README.md#postmessages) - Create Message
 
-### notifications
+### [notifications](docs/notifications/README.md)
 
-* `deleteNotificationsId` - Delete Notification
-* `getNotifications` - List Notifications
-* `getNotificationsId` - Show Notification
-* `patchNotificationsId` - Update Notification
-* `postNotifications` - Create Notification
+* [deleteNotificationsId](docs/notifications/README.md#deletenotificationsid) - Delete Notification
+* [getNotifications](docs/notifications/README.md#getnotifications) - List Notifications
+* [getNotificationsId](docs/notifications/README.md#getnotificationsid) - Show Notification
+* [patchNotificationsId](docs/notifications/README.md#patchnotificationsid) - Update Notification
+* [postNotifications](docs/notifications/README.md#postnotifications) - Create Notification
 
-### payments
+### [payments](docs/payments/README.md)
 
-* `getPayments` - List Payments
-* `getPaymentsId` - Show Payment
+* [getPayments](docs/payments/README.md#getpayments) - List Payments
+* [getPaymentsId](docs/payments/README.md#getpaymentsid) - Show Payment
 
-### permissions
+### [permissions](docs/permissions/README.md)
 
-* `deletePermissionsId` - Delete Permission
-* `getPermissions` - List Permissions
-* `postPermissions` - Create Permission
+* [deletePermissionsId](docs/permissions/README.md#deletepermissionsid) - Delete Permission
+* [getPermissions](docs/permissions/README.md#getpermissions) - List Permissions
+* [postPermissions](docs/permissions/README.md#postpermissions) - Create Permission
 
-### priorities
+### [priorities](docs/priorities/README.md)
 
-* `getPriorities` - List Priorities
+* [getPriorities](docs/priorities/README.md#getpriorities) - List Priorities
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `deleteProjectsId` - Delete Project
-* `getProjects` - List Projects
-* `getProjectsId` - Show Project
-* `patchProjectsId` - Update Project
-* `postProjects` - Create Project
+* [deleteProjectsId](docs/projects/README.md#deleteprojectsid) - Delete Project
+* [getProjects](docs/projects/README.md#getprojects) - List Projects
+* [getProjectsId](docs/projects/README.md#getprojectsid) - Show Project
+* [patchProjectsId](docs/projects/README.md#patchprojectsid) - Update Project
+* [postProjects](docs/projects/README.md#postprojects) - Create Project
 
-### publicKeys
+### [publicKeys](docs/publickeys/README.md)
 
-* `deletePublicKeysId` - Delete Public Key
-* `getPublicKeys` - List Public Keys
-* `getPublicKeysId` - Show Public Key
-* `patchPublicKeysId` - Update Public Key
-* `postPublicKeys` - Create Public Key
+* [deletePublicKeysId](docs/publickeys/README.md#deletepublickeysid) - Delete Public Key
+* [getPublicKeys](docs/publickeys/README.md#getpublickeys) - List Public Keys
+* [getPublicKeysId](docs/publickeys/README.md#getpublickeysid) - Show Public Key
+* [patchPublicKeysId](docs/publickeys/README.md#patchpublickeysid) - Update Public Key
+* [postPublicKeys](docs/publickeys/README.md#postpublickeys) - Create Public Key
 
-### remoteBandwidthSnapshots
+### [remoteBandwidthSnapshots](docs/remotebandwidthsnapshots/README.md)
 
-* `getRemoteBandwidthSnapshots` - List Remote Bandwidth Snapshots
+* [getRemoteBandwidthSnapshots](docs/remotebandwidthsnapshots/README.md#getremotebandwidthsnapshots) - List Remote Bandwidth Snapshots
 
-### remoteServers
+### [remoteServers](docs/remoteservers/README.md)
 
-* `deleteRemoteServersId` - Delete Remote Server
-* `getRemoteServers` - List Remote Servers
-* `getRemoteServersId` - Show Remote Server
-* `getRemoteServersIdConfigurationFile` - Download configuration file (required for some Remote Server integrations, such as the Files.com Agent)
-* `patchRemoteServersId` - Update Remote Server
-* `postRemoteServers` - Create Remote Server
-* `postRemoteServersIdConfigurationFile` - Post local changes, check in, and download configuration file (used by some Remote Server integrations, such as the Files.com Agent)
+* [deleteRemoteServersId](docs/remoteservers/README.md#deleteremoteserversid) - Delete Remote Server
+* [getRemoteServers](docs/remoteservers/README.md#getremoteservers) - List Remote Servers
+* [getRemoteServersId](docs/remoteservers/README.md#getremoteserversid) - Show Remote Server
+* [getRemoteServersIdConfigurationFile](docs/remoteservers/README.md#getremoteserversidconfigurationfile) - Download configuration file (required for some Remote Server integrations, such as the Files.com Agent)
+* [patchRemoteServersId](docs/remoteservers/README.md#patchremoteserversid) - Update Remote Server
+* [postRemoteServers](docs/remoteservers/README.md#postremoteservers) - Create Remote Server
+* [postRemoteServersIdConfigurationFile](docs/remoteservers/README.md#postremoteserversidconfigurationfile) - Post local changes, check in, and download configuration file (used by some Remote Server integrations, such as the Files.com Agent)
 
-### requests
+### [requests](docs/requests/README.md)
 
-* `deleteRequestsId` - Delete Request
-* `getRequests` - List Requests
-* `getRequestsFoldersPath` - List Requests
-* `postRequests` - Create Request
+* [deleteRequestsId](docs/requests/README.md#deleterequestsid) - Delete Request
+* [getRequests](docs/requests/README.md#getrequests) - List Requests
+* [getRequestsFoldersPath](docs/requests/README.md#getrequestsfolderspath) - List Requests
+* [postRequests](docs/requests/README.md#postrequests) - Create Request
 
-### sessions
+### [sessions](docs/sessions/README.md)
 
-* `deleteSessions` - Delete user session (log out)
-* `postSessions` - Create user session (log in)
+* [deleteSessions](docs/sessions/README.md#deletesessions) - Delete user session (log out)
+* [postSessions](docs/sessions/README.md#postsessions) - Create user session (log in)
 
-### settingsChanges
+### [settingsChanges](docs/settingschanges/README.md)
 
-* `getSettingsChanges` - List Settings Changes
+* [getSettingsChanges](docs/settingschanges/README.md#getsettingschanges) - List Settings Changes
 
-### sftpHostKeys
+### [sftpHostKeys](docs/sftphostkeys/README.md)
 
-* `deleteSftpHostKeysId` - Delete Sftp Host Key
-* `getSftpHostKeys` - List Sftp Host Keys
-* `getSftpHostKeysId` - Show Sftp Host Key
-* `patchSftpHostKeysId` - Update Sftp Host Key
-* `postSftpHostKeys` - Create Sftp Host Key
+* [deleteSftpHostKeysId](docs/sftphostkeys/README.md#deletesftphostkeysid) - Delete Sftp Host Key
+* [getSftpHostKeys](docs/sftphostkeys/README.md#getsftphostkeys) - List Sftp Host Keys
+* [getSftpHostKeysId](docs/sftphostkeys/README.md#getsftphostkeysid) - Show Sftp Host Key
+* [patchSftpHostKeysId](docs/sftphostkeys/README.md#patchsftphostkeysid) - Update Sftp Host Key
+* [postSftpHostKeys](docs/sftphostkeys/README.md#postsftphostkeys) - Create Sftp Host Key
 
-### site
+### [site](docs/site/README.md)
 
-* `getSite` - Show site settings
-* `getSiteApiKeys` - List Api Keys
-* `getSiteDnsRecords` - Show site DNS configuration.
-* `getSiteIpAddresses` - List IP Addresses associated with the current site
-* `getSiteUsage` - Get the most recent usage snapshot (usage data for billing purposes) for a Site.
-* `patchSite` - Update site settings.
-* `postSiteApiKeys` - Create Api Key
-* `postSiteTestWebhook` - Test webhook.
+* [getSite](docs/site/README.md#getsite) - Show site settings
+* [getSiteApiKeys](docs/site/README.md#getsiteapikeys) - List Api Keys
+* [getSiteDnsRecords](docs/site/README.md#getsitednsrecords) - Show site DNS configuration.
+* [getSiteIpAddresses](docs/site/README.md#getsiteipaddresses) - List IP Addresses associated with the current site
+* [getSiteUsage](docs/site/README.md#getsiteusage) - Get the most recent usage snapshot (usage data for billing purposes) for a Site.
+* [patchSite](docs/site/README.md#patchsite) - Update site settings.
+* [postSiteApiKeys](docs/site/README.md#postsiteapikeys) - Create Api Key
+* [postSiteTestWebhook](docs/site/README.md#postsitetestwebhook) - Test webhook.
 
-### ssoStrategies
+### [ssoStrategies](docs/ssostrategies/README.md)
 
-* `getSsoStrategies` - List Sso Strategies
-* `getSsoStrategiesId` - Show Sso Strategy
-* `postSsoStrategiesIdSync` - Synchronize provisioning data with the SSO remote server.
+* [getSsoStrategies](docs/ssostrategies/README.md#getssostrategies) - List Sso Strategies
+* [getSsoStrategiesId](docs/ssostrategies/README.md#getssostrategiesid) - Show Sso Strategy
+* [postSsoStrategiesIdSync](docs/ssostrategies/README.md#postssostrategiesidsync) - Synchronize provisioning data with the SSO remote server.
 
-### styles
+### [styles](docs/styles/README.md)
 
-* `deleteStylesPath` - Delete Style
-* `getStylesPath` - Show Style
-* `patchStylesPath` - Update Style
+* [deleteStylesPath](docs/styles/README.md#deletestylespath) - Delete Style
+* [getStylesPath](docs/styles/README.md#getstylespath) - Show Style
+* [patchStylesPath](docs/styles/README.md#patchstylespath) - Update Style
 
-### usageDailySnapshots
+### [usageDailySnapshots](docs/usagedailysnapshots/README.md)
 
-* `getUsageDailySnapshots` - List Usage Daily Snapshots
+* [getUsageDailySnapshots](docs/usagedailysnapshots/README.md#getusagedailysnapshots) - List Usage Daily Snapshots
 
-### usageSnapshots
+### [usageSnapshots](docs/usagesnapshots/README.md)
 
-* `getUsageSnapshots` - List Usage Snapshots
+* [getUsageSnapshots](docs/usagesnapshots/README.md#getusagesnapshots) - List Usage Snapshots
 
-### user
+### [user](docs/user/README.md)
 
-* `getUserApiKeys` - List Api Keys
-* `getUserGroups` - List Group Users
-* `getUserPublicKeys` - List Public Keys
-* `patchUser` - Update User
-* `postUserApiKeys` - Create Api Key
-* `postUserPublicKeys` - Create Public Key
+* [getUserApiKeys](docs/user/README.md#getuserapikeys) - List Api Keys
+* [getUserGroups](docs/user/README.md#getusergroups) - List Group Users
+* [getUserPublicKeys](docs/user/README.md#getuserpublickeys) - List Public Keys
+* [patchUser](docs/user/README.md#patchuser) - Update User
+* [postUserApiKeys](docs/user/README.md#postuserapikeys) - Create Api Key
+* [postUserPublicKeys](docs/user/README.md#postuserpublickeys) - Create Public Key
 
-### userCipherUses
+### [userCipherUses](docs/usercipheruses/README.md)
 
-* `getUserCipherUses` - List User Cipher Uses
+* [getUserCipherUses](docs/usercipheruses/README.md#getusercipheruses) - List User Cipher Uses
 
-### userRequests
+### [userRequests](docs/userrequests/README.md)
 
-* `deleteUserRequestsId` - Delete User Request
-* `getUserRequests` - List User Requests
-* `getUserRequestsId` - Show User Request
-* `postUserRequests` - Create User Request
+* [deleteUserRequestsId](docs/userrequests/README.md#deleteuserrequestsid) - Delete User Request
+* [getUserRequests](docs/userrequests/README.md#getuserrequests) - List User Requests
+* [getUserRequestsId](docs/userrequests/README.md#getuserrequestsid) - Show User Request
+* [postUserRequests](docs/userrequests/README.md#postuserrequests) - Create User Request
 
-### users
+### [users](docs/users/README.md)
 
-* `deleteUsersId` - Delete User
-* `getUsers` - List Users
-* `getUsersId` - Show User
-* `getUsersUserIdApiKeys` - List Api Keys
-* `getUsersUserIdCipherUses` - List User Cipher Uses
-* `getUsersUserIdGroups` - List Group Users
-* `getUsersUserIdPermissions` - List Permissions
-* `getUsersUserIdPublicKeys` - List Public Keys
-* `patchUsersId` - Update User
-* `postUsers` - Create User
-* `postUsersId2faReset` - Trigger 2FA Reset process for user who has lost access to their existing 2FA methods.
-* `postUsersIdResendWelcomeEmail` - Resend user welcome email
-* `postUsersIdUnlock` - Unlock user who has been locked out due to failed logins.
-* `postUsersUserIdApiKeys` - Create Api Key
-* `postUsersUserIdPublicKeys` - Create Public Key
+* [deleteUsersId](docs/users/README.md#deleteusersid) - Delete User
+* [getUsers](docs/users/README.md#getusers) - List Users
+* [getUsersId](docs/users/README.md#getusersid) - Show User
+* [getUsersUserIdApiKeys](docs/users/README.md#getusersuseridapikeys) - List Api Keys
+* [getUsersUserIdCipherUses](docs/users/README.md#getusersuseridcipheruses) - List User Cipher Uses
+* [getUsersUserIdGroups](docs/users/README.md#getusersuseridgroups) - List Group Users
+* [getUsersUserIdPermissions](docs/users/README.md#getusersuseridpermissions) - List Permissions
+* [getUsersUserIdPublicKeys](docs/users/README.md#getusersuseridpublickeys) - List Public Keys
+* [patchUsersId](docs/users/README.md#patchusersid) - Update User
+* [postUsers](docs/users/README.md#postusers) - Create User
+* [postUsersId2faReset](docs/users/README.md#postusersid2fareset) - Trigger 2FA Reset process for user who has lost access to their existing 2FA methods.
+* [postUsersIdResendWelcomeEmail](docs/users/README.md#postusersidresendwelcomeemail) - Resend user welcome email
+* [postUsersIdUnlock](docs/users/README.md#postusersidunlock) - Unlock user who has been locked out due to failed logins.
+* [postUsersUserIdApiKeys](docs/users/README.md#postusersuseridapikeys) - Create Api Key
+* [postUsersUserIdPublicKeys](docs/users/README.md#postusersuseridpublickeys) - Create Public Key
 
-### webhookTests
+### [webhookTests](docs/webhooktests/README.md)
 
-* `postWebhookTests` - Create Webhook Test
+* [postWebhookTests](docs/webhooktests/README.md#postwebhooktests) - Create Webhook Test
 <!-- End SDK Available Operations -->
 
 ### Maturity

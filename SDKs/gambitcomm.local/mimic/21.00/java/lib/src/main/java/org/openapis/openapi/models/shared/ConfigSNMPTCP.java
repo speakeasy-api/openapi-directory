@@ -15,9 +15,11 @@ public class ConfigSNMPTCP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connections")
     public Integer connections;
+
     public ConfigSNMPTCP withConnections(Integer connections) {
         this.connections = connections;
         return this;
     }
     
+    public ConfigSNMPTCP(){}
 }

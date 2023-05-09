@@ -15,6 +15,7 @@ public class ECSServiceUtilizationMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public ECSServiceMetricNameEnum name;
+
     public ECSServiceUtilizationMetric withName(ECSServiceMetricNameEnum name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class ECSServiceUtilizationMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistic")
     public ECSServiceMetricStatisticEnum statistic;
+
     public ECSServiceUtilizationMetric withStatistic(ECSServiceMetricStatisticEnum statistic) {
         this.statistic = statistic;
         return this;
@@ -31,9 +33,11 @@ public class ECSServiceUtilizationMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public ECSServiceUtilizationMetric withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public ECSServiceUtilizationMetric(){}
 }

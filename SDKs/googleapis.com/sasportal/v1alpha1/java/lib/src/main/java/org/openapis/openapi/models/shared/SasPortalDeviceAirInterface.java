@@ -18,6 +18,7 @@ public class SasPortalDeviceAirInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radioTechnology")
     public SasPortalDeviceAirInterfaceRadioTechnologyEnum radioTechnology;
+
     public SasPortalDeviceAirInterface withRadioTechnology(SasPortalDeviceAirInterfaceRadioTechnologyEnum radioTechnology) {
         this.radioTechnology = radioTechnology;
         return this;
@@ -29,9 +30,11 @@ public class SasPortalDeviceAirInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedSpec")
     public String supportedSpec;
+
     public SasPortalDeviceAirInterface withSupportedSpec(String supportedSpec) {
         this.supportedSpec = supportedSpec;
         return this;
     }
     
+    public SasPortalDeviceAirInterface(){}
 }

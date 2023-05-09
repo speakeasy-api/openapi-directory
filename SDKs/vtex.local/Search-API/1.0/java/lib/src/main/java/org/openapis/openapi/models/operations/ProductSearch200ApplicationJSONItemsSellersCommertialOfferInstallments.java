@@ -12,6 +12,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferInstallme
      */
     @JsonProperty("InterestRate")
     public Double interestRate;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferInstallments withInterestRate(Double interestRate) {
         this.interestRate = interestRate;
         return this;
@@ -22,6 +23,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferInstallme
      */
     @JsonProperty("Name")
     public String name;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferInstallments withName(String name) {
         this.name = name;
         return this;
@@ -32,6 +34,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferInstallme
      */
     @JsonProperty("NumberOfInstallments")
     public Long numberOfInstallments;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferInstallments withNumberOfInstallments(Long numberOfInstallments) {
         this.numberOfInstallments = numberOfInstallments;
         return this;
@@ -42,6 +45,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferInstallme
      */
     @JsonProperty("PaymentSystemGroupName")
     public String paymentSystemGroupName;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferInstallments withPaymentSystemGroupName(String paymentSystemGroupName) {
         this.paymentSystemGroupName = paymentSystemGroupName;
         return this;
@@ -52,6 +56,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferInstallme
      */
     @JsonProperty("PaymentSystemName")
     public String paymentSystemName;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferInstallments withPaymentSystemName(String paymentSystemName) {
         this.paymentSystemName = paymentSystemName;
         return this;
@@ -62,6 +67,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferInstallme
      */
     @JsonProperty("TotalValuePlusInterestRate")
     public Double totalValuePlusInterestRate;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferInstallments withTotalValuePlusInterestRate(Double totalValuePlusInterestRate) {
         this.totalValuePlusInterestRate = totalValuePlusInterestRate;
         return this;
@@ -72,9 +78,19 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferInstallme
      */
     @JsonProperty("Value")
     public Double value;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferInstallments withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public ProductSearch200ApplicationJSONItemsSellersCommertialOfferInstallments(@JsonProperty("InterestRate") Double interestRate, @JsonProperty("Name") String name, @JsonProperty("NumberOfInstallments") Long numberOfInstallments, @JsonProperty("PaymentSystemGroupName") String paymentSystemGroupName, @JsonProperty("PaymentSystemName") String paymentSystemName, @JsonProperty("TotalValuePlusInterestRate") Double totalValuePlusInterestRate, @JsonProperty("Value") Double value) {
+        this.interestRate = interestRate;
+        this.name = name;
+        this.numberOfInstallments = numberOfInstallments;
+        this.paymentSystemGroupName = paymentSystemGroupName;
+        this.paymentSystemName = paymentSystemName;
+        this.totalValuePlusInterestRate = totalValuePlusInterestRate;
+        this.value = value;
+  }
 }

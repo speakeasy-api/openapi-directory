@@ -14,8 +14,21 @@ public class ExportEarthObservationJobRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public ExportEarthObservationJobRequestBody withArn(String arn) {
         this.arn = arn;
+        return this;
+    }
+    
+    /**
+     * A unique token that guarantees that the call to this API is idempotent.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClientToken")
+    public String clientToken;
+
+    public ExportEarthObservationJobRequestBody withClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
     
@@ -24,6 +37,7 @@ public class ExportEarthObservationJobRequestBody {
      */
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public ExportEarthObservationJobRequestBody withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -35,6 +49,7 @@ public class ExportEarthObservationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportSourceImages")
     public Boolean exportSourceImages;
+
     public ExportEarthObservationJobRequestBody withExportSourceImages(Boolean exportSourceImages) {
         this.exportSourceImages = exportSourceImages;
         return this;
@@ -45,9 +60,15 @@ public class ExportEarthObservationJobRequestBody {
      */
     @JsonProperty("OutputConfig")
     public ExportEarthObservationJobRequestBodyOutputConfig outputConfig;
+
     public ExportEarthObservationJobRequestBody withOutputConfig(ExportEarthObservationJobRequestBodyOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
     }
     
+    public ExportEarthObservationJobRequestBody(@JsonProperty("Arn") String arn, @JsonProperty("ExecutionRoleArn") String executionRoleArn, @JsonProperty("OutputConfig") ExportEarthObservationJobRequestBodyOutputConfig outputConfig) {
+        this.arn = arn;
+        this.executionRoleArn = executionRoleArn;
+        this.outputConfig = outputConfig;
+  }
 }

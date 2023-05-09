@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateBudgetWithResourceResponse {
@@ -12,6 +13,7 @@ public class AssociateBudgetWithResourceResponse {
      */
     
     public java.util.Map<String, Object> associateBudgetWithResourceOutput;
+
     public AssociateBudgetWithResourceResponse withAssociateBudgetWithResourceOutput(java.util.Map<String, Object> associateBudgetWithResourceOutput) {
         this.associateBudgetWithResourceOutput = associateBudgetWithResourceOutput;
         return this;
@@ -19,6 +21,7 @@ public class AssociateBudgetWithResourceResponse {
     
     
     public String contentType;
+
     public AssociateBudgetWithResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateBudgetWithResourceResponse {
      */
     
     public Object duplicateResourceException;
+
     public AssociateBudgetWithResourceResponse withDuplicateResourceException(Object duplicateResourceException) {
         this.duplicateResourceException = duplicateResourceException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateBudgetWithResourceResponse {
      */
     
     public Object invalidParametersException;
+
     public AssociateBudgetWithResourceResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateBudgetWithResourceResponse {
      */
     
     public Object limitExceededException;
+
     public AssociateBudgetWithResourceResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateBudgetWithResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateBudgetWithResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AssociateBudgetWithResourceResponse {
     
     
     public Integer statusCode;
+
     public AssociateBudgetWithResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class AssociateBudgetWithResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateBudgetWithResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssociateBudgetWithResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

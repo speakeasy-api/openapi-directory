@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CloudWatchLogsDestinationDetails {
     
     public String logGroup;
+
     public CloudWatchLogsDestinationDetails withLogGroup(String logGroup) {
         this.logGroup = logGroup;
         return this;
     }
     
+    public CloudWatchLogsDestinationDetails(){}
 }

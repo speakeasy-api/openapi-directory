@@ -15,6 +15,7 @@ public class ListPendingInvitationResourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListPendingInvitationResourcesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListPendingInvitationResourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListPendingInvitationResourcesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,19 +39,24 @@ public class ListPendingInvitationResourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRegionScope")
     public ListPendingInvitationResourcesRequestBodyResourceRegionScopeEnum resourceRegionScope;
+
     public ListPendingInvitationResourcesRequestBody withResourceRegionScope(ListPendingInvitationResourcesRequestBodyResourceRegionScopeEnum resourceRegionScope) {
         this.resourceRegionScope = resourceRegionScope;
         return this;
     }
     
     /**
-     * Specifies the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resoure Name (ARN)&lt;/a&gt; of the invitation. You can use &lt;a&gt;GetResourceShareInvitations&lt;/a&gt; to find the ARN of the invitation.
+     * Specifies the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Name (ARN)&lt;/a&gt; of the invitation. You can use &lt;a&gt;GetResourceShareInvitations&lt;/a&gt; to find the ARN of the invitation.
      */
     @JsonProperty("resourceShareInvitationArn")
     public String resourceShareInvitationArn;
+
     public ListPendingInvitationResourcesRequestBody withResourceShareInvitationArn(String resourceShareInvitationArn) {
         this.resourceShareInvitationArn = resourceShareInvitationArn;
         return this;
     }
     
+    public ListPendingInvitationResourcesRequestBody(@JsonProperty("resourceShareInvitationArn") String resourceShareInvitationArn) {
+        this.resourceShareInvitationArn = resourceShareInvitationArn;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCoursesContentIdPermissionsRequest {
@@ -12,9 +13,13 @@ public class GetCoursesContentIdPermissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contentId")
     public String contentId;
+
     public GetCoursesContentIdPermissionsRequest withContentId(String contentId) {
         this.contentId = contentId;
         return this;
     }
     
+    public GetCoursesContentIdPermissionsRequest(@JsonProperty("contentId") String contentId) {
+        this.contentId = contentId;
+  }
 }

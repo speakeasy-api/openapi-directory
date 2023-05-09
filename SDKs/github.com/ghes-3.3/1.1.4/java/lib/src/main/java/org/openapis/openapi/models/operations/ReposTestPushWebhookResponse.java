@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposTestPushWebhookResponse {
     
     public String contentType;
+
     public ReposTestPushWebhookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposTestPushWebhookResponse {
     
     
     public Integer statusCode;
+
     public ReposTestPushWebhookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposTestPushWebhookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposTestPushWebhookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ReposTestPushWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposTestPushWebhookResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
     }
     
+    public ReposTestPushWebhookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

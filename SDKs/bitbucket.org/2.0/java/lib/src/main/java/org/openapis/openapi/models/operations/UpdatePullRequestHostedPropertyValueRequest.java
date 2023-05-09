@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePullRequestHostedPropertyValueRequest {
@@ -12,6 +13,7 @@ public class UpdatePullRequestHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public UpdatePullRequestHostedPropertyValueRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class UpdatePullRequestHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_key")
     public String appKey;
+
     public UpdatePullRequestHostedPropertyValueRequest withAppKey(String appKey) {
         this.appKey = appKey;
         return this;
@@ -32,6 +35,7 @@ public class UpdatePullRequestHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property_name")
     public String propertyName;
+
     public UpdatePullRequestHostedPropertyValueRequest withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
@@ -42,6 +46,7 @@ public class UpdatePullRequestHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pullrequest_id")
     public String pullrequestId;
+
     public UpdatePullRequestHostedPropertyValueRequest withPullrequestId(String pullrequestId) {
         this.pullrequestId = pullrequestId;
         return this;
@@ -52,6 +57,7 @@ public class UpdatePullRequestHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public UpdatePullRequestHostedPropertyValueRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -62,9 +68,18 @@ public class UpdatePullRequestHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public UpdatePullRequestHostedPropertyValueRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public UpdatePullRequestHostedPropertyValueRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("app_key") String appKey, @JsonProperty("property_name") String propertyName, @JsonProperty("pullrequest_id") String pullrequestId, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.requestBody = requestBody;
+        this.appKey = appKey;
+        this.propertyName = propertyName;
+        this.pullrequestId = pullrequestId;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetAssetPropertyValueHistoryResponse {
@@ -12,6 +13,7 @@ public class BatchGetAssetPropertyValueHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetAssetPropertyValueHistoryResponse batchGetAssetPropertyValueHistoryResponse;
+
     public BatchGetAssetPropertyValueHistoryResponse withBatchGetAssetPropertyValueHistoryResponse(org.openapis.openapi.models.shared.BatchGetAssetPropertyValueHistoryResponse batchGetAssetPropertyValueHistoryResponse) {
         this.batchGetAssetPropertyValueHistoryResponse = batchGetAssetPropertyValueHistoryResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetAssetPropertyValueHistoryResponse {
     
     
     public String contentType;
+
     public BatchGetAssetPropertyValueHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetAssetPropertyValueHistoryResponse {
      */
     
     public Object internalFailureException;
+
     public BatchGetAssetPropertyValueHistoryResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetAssetPropertyValueHistoryResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchGetAssetPropertyValueHistoryResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class BatchGetAssetPropertyValueHistoryResponse {
     
     
     public Integer statusCode;
+
     public BatchGetAssetPropertyValueHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchGetAssetPropertyValueHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetAssetPropertyValueHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchGetAssetPropertyValueHistoryResponse {
      */
     
     public Object serviceUnavailableException;
+
     public BatchGetAssetPropertyValueHistoryResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class BatchGetAssetPropertyValueHistoryResponse {
      */
     
     public Object throttlingException;
+
     public BatchGetAssetPropertyValueHistoryResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public BatchGetAssetPropertyValueHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

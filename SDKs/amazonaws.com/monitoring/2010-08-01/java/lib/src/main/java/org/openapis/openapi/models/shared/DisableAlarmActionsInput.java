@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisableAlarmActionsInput {
     
     public String[] alarmNames;
+
     public DisableAlarmActionsInput withAlarmNames(String[] alarmNames) {
         this.alarmNames = alarmNames;
         return this;
     }
     
+    public DisableAlarmActionsInput(@JsonProperty("AlarmNames") String[] alarmNames) {
+        this.alarmNames = alarmNames;
+  }
 }

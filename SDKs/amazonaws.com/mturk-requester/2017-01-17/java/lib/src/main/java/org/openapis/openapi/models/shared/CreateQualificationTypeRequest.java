@@ -12,6 +12,7 @@ public class CreateQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnswerKey")
     public String answerKey;
+
     public CreateQualificationTypeRequest withAnswerKey(String answerKey) {
         this.answerKey = answerKey;
         return this;
@@ -20,6 +21,7 @@ public class CreateQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoGranted")
     public Boolean autoGranted;
+
     public CreateQualificationTypeRequest withAutoGranted(Boolean autoGranted) {
         this.autoGranted = autoGranted;
         return this;
@@ -28,6 +30,7 @@ public class CreateQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoGrantedValue")
     public Long autoGrantedValue;
+
     public CreateQualificationTypeRequest withAutoGrantedValue(Long autoGrantedValue) {
         this.autoGrantedValue = autoGrantedValue;
         return this;
@@ -35,6 +38,7 @@ public class CreateQualificationTypeRequest {
     
     @JsonProperty("Description")
     public String description;
+
     public CreateQualificationTypeRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +47,7 @@ public class CreateQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keywords")
     public String keywords;
+
     public CreateQualificationTypeRequest withKeywords(String keywords) {
         this.keywords = keywords;
         return this;
@@ -50,6 +55,7 @@ public class CreateQualificationTypeRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateQualificationTypeRequest withName(String name) {
         this.name = name;
         return this;
@@ -57,6 +63,7 @@ public class CreateQualificationTypeRequest {
     
     @JsonProperty("QualificationTypeStatus")
     public QualificationTypeStatusEnum qualificationTypeStatus;
+
     public CreateQualificationTypeRequest withQualificationTypeStatus(QualificationTypeStatusEnum qualificationTypeStatus) {
         this.qualificationTypeStatus = qualificationTypeStatus;
         return this;
@@ -65,6 +72,7 @@ public class CreateQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryDelayInSeconds")
     public Long retryDelayInSeconds;
+
     public CreateQualificationTypeRequest withRetryDelayInSeconds(Long retryDelayInSeconds) {
         this.retryDelayInSeconds = retryDelayInSeconds;
         return this;
@@ -73,6 +81,7 @@ public class CreateQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Test")
     public String test;
+
     public CreateQualificationTypeRequest withTest(String test) {
         this.test = test;
         return this;
@@ -81,9 +90,15 @@ public class CreateQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TestDurationInSeconds")
     public Long testDurationInSeconds;
+
     public CreateQualificationTypeRequest withTestDurationInSeconds(Long testDurationInSeconds) {
         this.testDurationInSeconds = testDurationInSeconds;
         return this;
     }
     
+    public CreateQualificationTypeRequest(@JsonProperty("Description") String description, @JsonProperty("Name") String name, @JsonProperty("QualificationTypeStatus") QualificationTypeStatusEnum qualificationTypeStatus) {
+        this.description = description;
+        this.name = name;
+        this.qualificationTypeStatus = qualificationTypeStatus;
+  }
 }

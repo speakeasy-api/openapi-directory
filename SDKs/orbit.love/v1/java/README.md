@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIdSecurity;
 import org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest;
 import org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIdResponse;
+import org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIdSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,13 +26,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest req = new DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest() {{
-                id = "corrupti";
-                memberSlug = "provident";
-                workspaceSlug = "distinctio";
-            }}            
+            DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest req = new DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest("corrupti", "provident", "distinctio");            
 
-            DeleteWorkspaceSlugMembersMemberSlugActivitiesIdResponse res = sdk.activities.deleteWorkspaceSlugMembersMemberSlugActivitiesId(req, new DeleteWorkspaceSlugMembersMemberSlugActivitiesIdSecurity() {{
+            DeleteWorkspaceSlugMembersMemberSlugActivitiesIdResponse res = sdk.activities.deleteWorkspaceSlugMembersMemberSlugActivitiesId(req, new DeleteWorkspaceSlugMembersMemberSlugActivitiesIdSecurity("quibusdam") {{
                 bearer = "Bearer YOUR_BEARER_TOKEN_HERE";
             }});
 
@@ -43,6 +38,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -50,65 +47,65 @@ public class Application {
 ## Available Resources and Operations
 
 
-### activities
+### [activities](docs/activities/README.md)
 
-* `deleteWorkspaceSlugMembersMemberSlugActivitiesId` - Delete a post activity
-* `getWorkspaceSlugActivities` - List activities for a workspace
-* `getWorkspaceSlugActivitiesId` - Get an activity in the workspace
-* `getWorkspaceSlugMembersMemberSlugActivities` - List activities for a member
-* `getWorkspaceSlugOrganizationsOrganizationIdActivities` - List member activities in an organization
-* `postWorkspaceSlugActivities` - Create a Custom or a Content activity for a new or existing member
-* `postWorkspaceSlugMembersMemberSlugActivities` - Create a Custom or a Content activity for a member
-* `putWorkspaceSlugMembersMemberSlugActivitiesId` - Update a custom activity for a member
+* [deleteWorkspaceSlugMembersMemberSlugActivitiesId](docs/activities/README.md#deleteworkspaceslugmembersmemberslugactivitiesid) - Delete a post activity
+* [getWorkspaceSlugActivities](docs/activities/README.md#getworkspaceslugactivities) - List activities for a workspace
+* [getWorkspaceSlugActivitiesId](docs/activities/README.md#getworkspaceslugactivitiesid) - Get an activity in the workspace
+* [getWorkspaceSlugMembersMemberSlugActivities](docs/activities/README.md#getworkspaceslugmembersmemberslugactivities) - List activities for a member
+* [getWorkspaceSlugOrganizationsOrganizationIdActivities](docs/activities/README.md#getworkspaceslugorganizationsorganizationidactivities) - List member activities in an organization
+* [postWorkspaceSlugActivities](docs/activities/README.md#postworkspaceslugactivities) - Create a Custom or a Content activity for a new or existing member
+* [postWorkspaceSlugMembersMemberSlugActivities](docs/activities/README.md#postworkspaceslugmembersmemberslugactivities) - Create a Custom or a Content activity for a member
+* [putWorkspaceSlugMembersMemberSlugActivitiesId](docs/activities/README.md#putworkspaceslugmembersmemberslugactivitiesid) - Update a custom activity for a member
 
-### activityTypes
+### [activityTypes](docs/activitytypes/README.md)
 
-* `getWorkspaceSlugActivityTypes` - List all activity types for a workspace
+* [getWorkspaceSlugActivityTypes](docs/activitytypes/README.md#getworkspaceslugactivitytypes) - List all activity types for a workspace
 
-### members
+### [members](docs/members/README.md)
 
-* `deleteWorkspaceSlugMembersMemberSlug` - Delete a member
-* `deleteWorkspaceSlugMembersMemberSlugIdentities` - Remove identity from a member
-* `getWorkspaceSlugMembers` - List members in a workspace
-* `getWorkspaceSlugMembersFind` - Find a member by an identity
-* `getWorkspaceSlugMembersMemberSlug` - Get a member
-* `getWorkspaceSlugOrganizationsOrganizationIdMembers` - List members in an organization
-* `postWorkspaceSlugMembers` - Create or update a member
-* `postWorkspaceSlugMembersMemberSlugIdentities` - Add identity to a member
-* `putWorkspaceSlugMembersMemberSlug` - Update a member
+* [deleteWorkspaceSlugMembersMemberSlug](docs/members/README.md#deleteworkspaceslugmembersmemberslug) - Delete a member
+* [deleteWorkspaceSlugMembersMemberSlugIdentities](docs/members/README.md#deleteworkspaceslugmembersmemberslugidentities) - Remove identity from a member
+* [getWorkspaceSlugMembers](docs/members/README.md#getworkspaceslugmembers) - List members in a workspace
+* [getWorkspaceSlugMembersFind](docs/members/README.md#getworkspaceslugmembersfind) - Find a member by an identity
+* [getWorkspaceSlugMembersMemberSlug](docs/members/README.md#getworkspaceslugmembersmemberslug) - Get a member
+* [getWorkspaceSlugOrganizationsOrganizationIdMembers](docs/members/README.md#getworkspaceslugorganizationsorganizationidmembers) - List members in an organization
+* [postWorkspaceSlugMembers](docs/members/README.md#postworkspaceslugmembers) - Create or update a member
+* [postWorkspaceSlugMembersMemberSlugIdentities](docs/members/README.md#postworkspaceslugmembersmemberslugidentities) - Add identity to a member
+* [putWorkspaceSlugMembersMemberSlug](docs/members/README.md#putworkspaceslugmembersmemberslug) - Update a member
 
-### notes
+### [notes](docs/notes/README.md)
 
-* `getWorkspaceSlugMembersMemberSlugNotes` - Get the member's notes
-* `postWorkspaceSlugMembersMemberSlugNotes` - Create a note
-* `putWorkspaceSlugMembersMemberSlugNotesId` - Update a note
+* [getWorkspaceSlugMembersMemberSlugNotes](docs/notes/README.md#getworkspaceslugmembersmemberslugnotes) - Get the member's notes
+* [postWorkspaceSlugMembersMemberSlugNotes](docs/notes/README.md#postworkspaceslugmembersmemberslugnotes) - Create a note
+* [putWorkspaceSlugMembersMemberSlugNotesId](docs/notes/README.md#putworkspaceslugmembersmemberslugnotesid) - Update a note
 
-### organizations
+### [organizations](docs/organizations/README.md)
 
-* `getWorkspaceSlugOrganizations` - List organizations in a workspace
-* `getWorkspaceSlugOrganizationsOrganizationId` - Get an organization
-* `putWorkspaceSlugOrganizationsOrganizationId` - Update an organization
+* [getWorkspaceSlugOrganizations](docs/organizations/README.md#getworkspaceslugorganizations) - List organizations in a workspace
+* [getWorkspaceSlugOrganizationsOrganizationId](docs/organizations/README.md#getworkspaceslugorganizationsorganizationid) - Get an organization
+* [putWorkspaceSlugOrganizationsOrganizationId](docs/organizations/README.md#putworkspaceslugorganizationsorganizationid) - Update an organization
 
-### reports
+### [reports](docs/reports/README.md)
 
-* `getWorkspaceSlugReports` - Get a workspace stats
+* [getWorkspaceSlugReports](docs/reports/README.md#getworkspaceslugreports) - Get a workspace stats
 
-### users
+### [users](docs/users/README.md)
 
-* `getUser` - Get info about the current user
+* [getUser](docs/users/README.md#getuser) - Get info about the current user
 
-### webhooks
+### [webhooks](docs/webhooks/README.md)
 
-* `deleteWorkspaceSlugWebhooksId` - Delete a webhook
-* `getWorkspaceSlugWebhooks` - List webhooks in a workspace
-* `getWorkspaceSlugWebhooksId` - Get a webhook
-* `postWorkspaceSlugWebhooks` - Create a webhook
-* `putWorkspaceSlugWebhooksId` - Update a webhook
+* [deleteWorkspaceSlugWebhooksId](docs/webhooks/README.md#deleteworkspaceslugwebhooksid) - Delete a webhook
+* [getWorkspaceSlugWebhooks](docs/webhooks/README.md#getworkspaceslugwebhooks) - List webhooks in a workspace
+* [getWorkspaceSlugWebhooksId](docs/webhooks/README.md#getworkspaceslugwebhooksid) - Get a webhook
+* [postWorkspaceSlugWebhooks](docs/webhooks/README.md#postworkspaceslugwebhooks) - Create a webhook
+* [putWorkspaceSlugWebhooksId](docs/webhooks/README.md#putworkspaceslugwebhooksid) - Update a webhook
 
-### workspaces
+### [workspaces](docs/workspaces/README.md)
 
-* `getWorkspaces` - Get all workspaces for the current user
-* `getWorkspacesWorkspaceSlug` - Get a workspace
+* [getWorkspaces](docs/workspaces/README.md#getworkspaces) - Get all workspaces for the current user
+* [getWorkspacesWorkspaceSlug](docs/workspaces/README.md#getworkspacesworkspaceslug) - Get a workspace
 <!-- End SDK Available Operations -->
 
 ### Maturity

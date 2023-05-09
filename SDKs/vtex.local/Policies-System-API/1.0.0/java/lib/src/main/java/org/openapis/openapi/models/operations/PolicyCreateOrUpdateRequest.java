@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PolicyCreateOrUpdateRequest {
@@ -12,6 +13,7 @@ public class PolicyCreateOrUpdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PolicyCreateOrUpdateRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PolicyCreateOrUpdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PolicyCreateOrUpdateRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PolicyCreateOrUpdateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PolicySaveRequest policySaveRequest;
+
     public PolicyCreateOrUpdateRequest withPolicySaveRequest(org.openapis.openapi.models.shared.PolicySaveRequest policySaveRequest) {
         this.policySaveRequest = policySaveRequest;
         return this;
@@ -39,9 +43,15 @@ public class PolicyCreateOrUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PolicyCreateOrUpdateRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PolicyCreateOrUpdateRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("id") String id) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.id = id;
+  }
 }

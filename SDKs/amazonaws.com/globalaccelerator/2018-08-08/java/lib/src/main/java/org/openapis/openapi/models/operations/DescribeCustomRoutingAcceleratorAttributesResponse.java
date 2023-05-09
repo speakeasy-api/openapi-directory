@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCustomRoutingAcceleratorAttributesResponse {
@@ -12,6 +13,7 @@ public class DescribeCustomRoutingAcceleratorAttributesResponse {
      */
     
     public Object acceleratorNotFoundException;
+
     public DescribeCustomRoutingAcceleratorAttributesResponse withAcceleratorNotFoundException(Object acceleratorNotFoundException) {
         this.acceleratorNotFoundException = acceleratorNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCustomRoutingAcceleratorAttributesResponse {
     
     
     public String contentType;
+
     public DescribeCustomRoutingAcceleratorAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCustomRoutingAcceleratorAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCustomRoutingAcceleratorAttributesResponse describeCustomRoutingAcceleratorAttributesResponse;
+
     public DescribeCustomRoutingAcceleratorAttributesResponse withDescribeCustomRoutingAcceleratorAttributesResponse(org.openapis.openapi.models.shared.DescribeCustomRoutingAcceleratorAttributesResponse describeCustomRoutingAcceleratorAttributesResponse) {
         this.describeCustomRoutingAcceleratorAttributesResponse = describeCustomRoutingAcceleratorAttributesResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCustomRoutingAcceleratorAttributesResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DescribeCustomRoutingAcceleratorAttributesResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeCustomRoutingAcceleratorAttributesResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeCustomRoutingAcceleratorAttributesResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeCustomRoutingAcceleratorAttributesResponse {
     
     
     public Integer statusCode;
+
     public DescribeCustomRoutingAcceleratorAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeCustomRoutingAcceleratorAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCustomRoutingAcceleratorAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeCustomRoutingAcceleratorAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

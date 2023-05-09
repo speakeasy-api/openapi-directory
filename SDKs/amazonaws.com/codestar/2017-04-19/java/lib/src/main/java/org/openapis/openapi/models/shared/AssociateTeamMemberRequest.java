@@ -12,6 +12,7 @@ public class AssociateTeamMemberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public AssociateTeamMemberRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class AssociateTeamMemberRequest {
     
     @JsonProperty("projectId")
     public String projectId;
+
     public AssociateTeamMemberRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -26,6 +28,7 @@ public class AssociateTeamMemberRequest {
     
     @JsonProperty("projectRole")
     public String projectRole;
+
     public AssociateTeamMemberRequest withProjectRole(String projectRole) {
         this.projectRole = projectRole;
         return this;
@@ -34,6 +37,7 @@ public class AssociateTeamMemberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteAccessAllowed")
     public Boolean remoteAccessAllowed;
+
     public AssociateTeamMemberRequest withRemoteAccessAllowed(Boolean remoteAccessAllowed) {
         this.remoteAccessAllowed = remoteAccessAllowed;
         return this;
@@ -41,9 +45,15 @@ public class AssociateTeamMemberRequest {
     
     @JsonProperty("userArn")
     public String userArn;
+
     public AssociateTeamMemberRequest withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public AssociateTeamMemberRequest(@JsonProperty("projectId") String projectId, @JsonProperty("projectRole") String projectRole, @JsonProperty("userArn") String userArn) {
+        this.projectId = projectId;
+        this.projectRole = projectRole;
+        this.userArn = userArn;
+  }
 }

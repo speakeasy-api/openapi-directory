@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRemoveCurationTagRequest {
@@ -12,6 +13,7 @@ public class GetRemoveCurationTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth")
     public String auth;
+
     public GetRemoveCurationTagRequest withAuth(String auth) {
         this.auth = auth;
         return this;
@@ -19,6 +21,7 @@ public class GetRemoveCurationTagRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetRemoveCurationTagFormatEnum format;
+
     public GetRemoveCurationTagRequest withFormat(GetRemoveCurationTagFormatEnum format) {
         this.format = format;
         return this;
@@ -29,6 +32,7 @@ public class GetRemoveCurationTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
     public String pwId;
+
     public GetRemoveCurationTagRequest withPwId(String pwId) {
         this.pwId = pwId;
         return this;
@@ -39,6 +43,7 @@ public class GetRemoveCurationTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagName")
     public String tagName;
+
     public GetRemoveCurationTagRequest withTagName(String tagName) {
         this.tagName = tagName;
         return this;
@@ -49,9 +54,16 @@ public class GetRemoveCurationTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public GetRemoveCurationTagRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetRemoveCurationTagRequest(@JsonProperty("auth") String auth, @JsonProperty("pwId") String pwId, @JsonProperty("tagName") String tagName, @JsonProperty("username") String username) {
+        this.auth = auth;
+        this.pwId = pwId;
+        this.tagName = tagName;
+        this.username = username;
+  }
 }

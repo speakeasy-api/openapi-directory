@@ -12,6 +12,7 @@ public class CreateHITWithHITTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssignmentReviewPolicy")
     public ReviewPolicy assignmentReviewPolicy;
+
     public CreateHITWithHITTypeRequest withAssignmentReviewPolicy(ReviewPolicy assignmentReviewPolicy) {
         this.assignmentReviewPolicy = assignmentReviewPolicy;
         return this;
@@ -20,6 +21,7 @@ public class CreateHITWithHITTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITLayoutId")
     public String hitLayoutId;
+
     public CreateHITWithHITTypeRequest withHITLayoutId(String hitLayoutId) {
         this.hitLayoutId = hitLayoutId;
         return this;
@@ -28,6 +30,7 @@ public class CreateHITWithHITTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITLayoutParameters")
     public HITLayoutParameter[] hitLayoutParameters;
+
     public CreateHITWithHITTypeRequest withHITLayoutParameters(HITLayoutParameter[] hitLayoutParameters) {
         this.hitLayoutParameters = hitLayoutParameters;
         return this;
@@ -36,6 +39,7 @@ public class CreateHITWithHITTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITReviewPolicy")
     public ReviewPolicy hitReviewPolicy;
+
     public CreateHITWithHITTypeRequest withHITReviewPolicy(ReviewPolicy hitReviewPolicy) {
         this.hitReviewPolicy = hitReviewPolicy;
         return this;
@@ -43,6 +47,7 @@ public class CreateHITWithHITTypeRequest {
     
     @JsonProperty("HITTypeId")
     public String hitTypeId;
+
     public CreateHITWithHITTypeRequest withHITTypeId(String hitTypeId) {
         this.hitTypeId = hitTypeId;
         return this;
@@ -50,6 +55,7 @@ public class CreateHITWithHITTypeRequest {
     
     @JsonProperty("LifetimeInSeconds")
     public Long lifetimeInSeconds;
+
     public CreateHITWithHITTypeRequest withLifetimeInSeconds(Long lifetimeInSeconds) {
         this.lifetimeInSeconds = lifetimeInSeconds;
         return this;
@@ -58,6 +64,7 @@ public class CreateHITWithHITTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxAssignments")
     public Long maxAssignments;
+
     public CreateHITWithHITTypeRequest withMaxAssignments(Long maxAssignments) {
         this.maxAssignments = maxAssignments;
         return this;
@@ -66,6 +73,7 @@ public class CreateHITWithHITTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Question")
     public String question;
+
     public CreateHITWithHITTypeRequest withQuestion(String question) {
         this.question = question;
         return this;
@@ -74,6 +82,7 @@ public class CreateHITWithHITTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequesterAnnotation")
     public String requesterAnnotation;
+
     public CreateHITWithHITTypeRequest withRequesterAnnotation(String requesterAnnotation) {
         this.requesterAnnotation = requesterAnnotation;
         return this;
@@ -82,9 +91,14 @@ public class CreateHITWithHITTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UniqueRequestToken")
     public String uniqueRequestToken;
+
     public CreateHITWithHITTypeRequest withUniqueRequestToken(String uniqueRequestToken) {
         this.uniqueRequestToken = uniqueRequestToken;
         return this;
     }
     
+    public CreateHITWithHITTypeRequest(@JsonProperty("HITTypeId") String hitTypeId, @JsonProperty("LifetimeInSeconds") Long lifetimeInSeconds) {
+        this.hitTypeId = hitTypeId;
+        this.lifetimeInSeconds = lifetimeInSeconds;
+  }
 }

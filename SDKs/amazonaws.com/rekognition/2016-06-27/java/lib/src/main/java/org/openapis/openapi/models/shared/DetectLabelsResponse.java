@@ -15,6 +15,7 @@ public class DetectLabelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageProperties")
     public DetectLabelsImageProperties imageProperties;
+
     public DetectLabelsResponse withImageProperties(DetectLabelsImageProperties imageProperties) {
         this.imageProperties = imageProperties;
         return this;
@@ -23,6 +24,7 @@ public class DetectLabelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelModelVersion")
     public String labelModelVersion;
+
     public DetectLabelsResponse withLabelModelVersion(String labelModelVersion) {
         this.labelModelVersion = labelModelVersion;
         return this;
@@ -31,6 +33,7 @@ public class DetectLabelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Labels")
     public Label[] labels;
+
     public DetectLabelsResponse withLabels(Label[] labels) {
         this.labels = labels;
         return this;
@@ -39,9 +42,11 @@ public class DetectLabelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrientationCorrection")
     public OrientationCorrectionEnum orientationCorrection;
+
     public DetectLabelsResponse withOrientationCorrection(OrientationCorrectionEnum orientationCorrection) {
         this.orientationCorrection = orientationCorrection;
         return this;
     }
     
+    public DetectLabelsResponse(){}
 }

@@ -18,6 +18,7 @@ public class UpdateNetworkAlertSettingsRequestBodyDefaultDestinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allAdmins")
     public Boolean allAdmins;
+
     public UpdateNetworkAlertSettingsRequestBodyDefaultDestinations withAllAdmins(Boolean allAdmins) {
         this.allAdmins = allAdmins;
         return this;
@@ -29,6 +30,7 @@ public class UpdateNetworkAlertSettingsRequestBodyDefaultDestinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public String[] emails;
+
     public UpdateNetworkAlertSettingsRequestBodyDefaultDestinations withEmails(String[] emails) {
         this.emails = emails;
         return this;
@@ -40,6 +42,7 @@ public class UpdateNetworkAlertSettingsRequestBodyDefaultDestinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpServerIds")
     public String[] httpServerIds;
+
     public UpdateNetworkAlertSettingsRequestBodyDefaultDestinations withHttpServerIds(String[] httpServerIds) {
         this.httpServerIds = httpServerIds;
         return this;
@@ -51,9 +54,11 @@ public class UpdateNetworkAlertSettingsRequestBodyDefaultDestinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snmp")
     public Boolean snmp;
+
     public UpdateNetworkAlertSettingsRequestBodyDefaultDestinations withSnmp(Boolean snmp) {
         this.snmp = snmp;
         return this;
     }
     
+    public UpdateNetworkAlertSettingsRequestBodyDefaultDestinations(){}
 }

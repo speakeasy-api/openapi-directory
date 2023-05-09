@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePermissionsRequest {
@@ -12,6 +13,7 @@ public class UpdatePermissionsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PermissionsDTO permissionsDTO;
+
     public UpdatePermissionsRequest withPermissionsDTO(org.openapis.openapi.models.shared.PermissionsDTO permissionsDTO) {
         this.permissionsDTO = permissionsDTO;
         return this;
@@ -22,9 +24,14 @@ public class UpdatePermissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
     public Long viewId;
+
     public UpdatePermissionsRequest withViewId(Long viewId) {
         this.viewId = viewId;
         return this;
     }
     
+    public UpdatePermissionsRequest(@JsonProperty("PermissionsDTO") org.openapis.openapi.models.shared.PermissionsDTO permissionsDTO, @JsonProperty("viewId") Long viewId) {
+        this.permissionsDTO = permissionsDTO;
+        this.viewId = viewId;
+  }
 }

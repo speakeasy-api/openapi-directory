@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateRepositoryOutput {
     @JsonProperty("repository")
     public Repository repository;
+
     public CreateRepositoryOutput withRepository(Repository repository) {
         this.repository = repository;
         return this;
     }
     
+    public CreateRepositoryOutput(@JsonProperty("repository") Repository repository) {
+        this.repository = repository;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetItemsMediaClipFilesResponse {
     
     public String contentType;
+
     public GetItemsMediaClipFilesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetItemsMediaClipFilesResponse {
      */
     
     public org.openapis.openapi.models.shared.ItemClipFilesList itemClipFilesList;
+
     public GetItemsMediaClipFilesResponse withItemClipFilesList(org.openapis.openapi.models.shared.ItemClipFilesList itemClipFilesList) {
         this.itemClipFilesList = itemClipFilesList;
         return this;
@@ -29,6 +32,7 @@ public class GetItemsMediaClipFilesResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetItemsMediaClipFilesResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GetItemsMediaClipFilesResponse {
     
     
     public Integer statusCode;
+
     public GetItemsMediaClipFilesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetItemsMediaClipFilesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetItemsMediaClipFilesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetItemsMediaClipFilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

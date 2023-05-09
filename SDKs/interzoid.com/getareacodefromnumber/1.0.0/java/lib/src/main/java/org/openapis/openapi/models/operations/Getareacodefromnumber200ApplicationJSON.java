@@ -15,6 +15,7 @@ public class Getareacodefromnumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Abbreviation")
     public String abbreviation;
+
     public Getareacodefromnumber200ApplicationJSON withAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
         return this;
@@ -23,6 +24,7 @@ public class Getareacodefromnumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AreaCode")
     public String areaCode;
+
     public Getareacodefromnumber200ApplicationJSON withAreaCode(String areaCode) {
         this.areaCode = areaCode;
         return this;
@@ -31,6 +33,7 @@ public class Getareacodefromnumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Getareacodefromnumber200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -39,6 +42,7 @@ public class Getareacodefromnumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credits")
     public String credits;
+
     public Getareacodefromnumber200ApplicationJSON withCredits(String credits) {
         this.credits = credits;
         return this;
@@ -47,6 +51,7 @@ public class Getareacodefromnumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Locale")
     public String locale;
+
     public Getareacodefromnumber200ApplicationJSON withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -55,9 +60,11 @@ public class Getareacodefromnumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryCity")
     public String primaryCity;
+
     public Getareacodefromnumber200ApplicationJSON withPrimaryCity(String primaryCity) {
         this.primaryCity = primaryCity;
         return this;
     }
     
+    public Getareacodefromnumber200ApplicationJSON(){}
 }

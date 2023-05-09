@@ -19,6 +19,7 @@ public class ListAccountsResponse {
      */
     @JsonProperty("data")
     public AccountResource[] data;
+
     public ListAccountsResponse withData(AccountResource[] data) {
         this.data = data;
         return this;
@@ -26,9 +27,14 @@ public class ListAccountsResponse {
     
     @JsonProperty("links")
     public ListAccountsResponseLinks links;
+
     public ListAccountsResponse withLinks(ListAccountsResponseLinks links) {
         this.links = links;
         return this;
     }
     
+    public ListAccountsResponse(@JsonProperty("data") AccountResource[] data, @JsonProperty("links") ListAccountsResponseLinks links) {
+        this.data = data;
+        this.links = links;
+  }
 }

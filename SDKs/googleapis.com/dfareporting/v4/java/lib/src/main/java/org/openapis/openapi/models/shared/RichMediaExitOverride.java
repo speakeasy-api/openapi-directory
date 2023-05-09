@@ -18,6 +18,7 @@ public class RichMediaExitOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickThroughUrl")
     public ClickThroughUrl clickThroughUrl;
+
     public RichMediaExitOverride withClickThroughUrl(ClickThroughUrl clickThroughUrl) {
         this.clickThroughUrl = clickThroughUrl;
         return this;
@@ -29,6 +30,7 @@ public class RichMediaExitOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public RichMediaExitOverride withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -40,9 +42,11 @@ public class RichMediaExitOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitId")
     public String exitId;
+
     public RichMediaExitOverride withExitId(String exitId) {
         this.exitId = exitId;
         return this;
     }
     
+    public RichMediaExitOverride(){}
 }

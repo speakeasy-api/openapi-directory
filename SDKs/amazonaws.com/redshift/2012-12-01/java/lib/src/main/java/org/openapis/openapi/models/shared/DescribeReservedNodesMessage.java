@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedNodesMessage {
     
     public String marker;
+
     public DescribeReservedNodesMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,6 +20,7 @@ public class DescribeReservedNodesMessage {
     
     
     public Long maxRecords;
+
     public DescribeReservedNodesMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -26,9 +28,11 @@ public class DescribeReservedNodesMessage {
     
     
     public String reservedNodeId;
+
     public DescribeReservedNodesMessage withReservedNodeId(String reservedNodeId) {
         this.reservedNodeId = reservedNodeId;
         return this;
     }
     
+    public DescribeReservedNodesMessage(){}
 }

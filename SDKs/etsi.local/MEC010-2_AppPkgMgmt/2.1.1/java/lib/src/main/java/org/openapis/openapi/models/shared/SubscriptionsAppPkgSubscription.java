@@ -15,6 +15,7 @@ public class SubscriptionsAppPkgSubscription {
      */
     @JsonProperty("href")
     public String href;
+
     public SubscriptionsAppPkgSubscription withHref(String href) {
         this.href = href;
         return this;
@@ -25,9 +26,14 @@ public class SubscriptionsAppPkgSubscription {
      */
     @JsonProperty("subsctiptionType")
     public SubsctiptionTypeAppPkgEnum subsctiptionType;
+
     public SubscriptionsAppPkgSubscription withSubsctiptionType(SubsctiptionTypeAppPkgEnum subsctiptionType) {
         this.subsctiptionType = subsctiptionType;
         return this;
     }
     
+    public SubscriptionsAppPkgSubscription(@JsonProperty("href") String href, @JsonProperty("subsctiptionType") SubsctiptionTypeAppPkgEnum subsctiptionType) {
+        this.href = href;
+        this.subsctiptionType = subsctiptionType;
+  }
 }

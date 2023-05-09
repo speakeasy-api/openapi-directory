@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateorderFormconfigurationRequest {
@@ -12,6 +13,7 @@ public class UpdateorderFormconfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpdateorderFormconfigurationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpdateorderFormconfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpdateorderFormconfigurationRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class UpdateorderFormconfigurationRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateorderFormconfigurationRequest updateorderFormconfigurationRequest;
+
     public UpdateorderFormconfigurationRequest withUpdateorderFormconfigurationRequest(org.openapis.openapi.models.shared.UpdateorderFormconfigurationRequest updateorderFormconfigurationRequest) {
         this.updateorderFormconfigurationRequest = updateorderFormconfigurationRequest;
         return this;
     }
     
+    public UpdateorderFormconfigurationRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("UpdateorderFormconfigurationRequest") org.openapis.openapi.models.shared.UpdateorderFormconfigurationRequest updateorderFormconfigurationRequest) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.updateorderFormconfigurationRequest = updateorderFormconfigurationRequest;
+  }
 }

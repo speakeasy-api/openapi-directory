@@ -60,11 +60,9 @@ public class FulfillmentPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFulfillmentPolicyResponse res = new org.openapis.openapi.models.operations.CreateFulfillmentPolicyResponse() {{
+        org.openapis.openapi.models.operations.CreateFulfillmentPolicyResponse res = new org.openapis.openapi.models.operations.CreateFulfillmentPolicyResponse(contentType, httpRes.statusCode()) {{
             setFulfillmentPolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -104,10 +102,8 @@ public class FulfillmentPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFulfillmentPolicyResponse res = new org.openapis.openapi.models.operations.DeleteFulfillmentPolicyResponse() {{
+        org.openapis.openapi.models.operations.DeleteFulfillmentPolicyResponse res = new org.openapis.openapi.models.operations.DeleteFulfillmentPolicyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 409 || httpRes.statusCode() == 500) {
@@ -144,11 +140,9 @@ public class FulfillmentPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFulfillmentPoliciesResponse res = new org.openapis.openapi.models.operations.GetFulfillmentPoliciesResponse() {{
+        org.openapis.openapi.models.operations.GetFulfillmentPoliciesResponse res = new org.openapis.openapi.models.operations.GetFulfillmentPoliciesResponse(contentType, httpRes.statusCode()) {{
             fulfillmentPolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -186,11 +180,9 @@ public class FulfillmentPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFulfillmentPolicyResponse res = new org.openapis.openapi.models.operations.GetFulfillmentPolicyResponse() {{
+        org.openapis.openapi.models.operations.GetFulfillmentPolicyResponse res = new org.openapis.openapi.models.operations.GetFulfillmentPolicyResponse(contentType, httpRes.statusCode()) {{
             fulfillmentPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,11 +226,9 @@ public class FulfillmentPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFulfillmentPolicyByNameResponse res = new org.openapis.openapi.models.operations.GetFulfillmentPolicyByNameResponse() {{
+        org.openapis.openapi.models.operations.GetFulfillmentPolicyByNameResponse res = new org.openapis.openapi.models.operations.GetFulfillmentPolicyByNameResponse(contentType, httpRes.statusCode()) {{
             fulfillmentPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,11 +271,9 @@ public class FulfillmentPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFulfillmentPolicyResponse res = new org.openapis.openapi.models.operations.UpdateFulfillmentPolicyResponse() {{
+        org.openapis.openapi.models.operations.UpdateFulfillmentPolicyResponse res = new org.openapis.openapi.models.operations.UpdateFulfillmentPolicyResponse(contentType, httpRes.statusCode()) {{
             setFulfillmentPolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

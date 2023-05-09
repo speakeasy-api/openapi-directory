@@ -12,6 +12,7 @@ public class DistributionsResponseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elements")
     public DistributionsResponseResultElements[] elements;
+
     public DistributionsResponseResult withElements(DistributionsResponseResultElements[] elements) {
         this.elements = elements;
         return this;
@@ -20,9 +21,11 @@ public class DistributionsResponseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPage")
     public Object nextPage;
+
     public DistributionsResponseResult withNextPage(Object nextPage) {
         this.nextPage = nextPage;
         return this;
     }
     
+    public DistributionsResponseResult(){}
 }

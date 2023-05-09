@@ -13,6 +13,7 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active")
     public Boolean active;
+
     public GetChargeStationsRequest withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$gte]")
     public OffsetDateTime createdAtDollarGte;
+
     public GetChargeStationsRequest withCreatedAtDollarGte(OffsetDateTime createdAtDollarGte) {
         this.createdAtDollarGte = createdAtDollarGte;
         return this;
@@ -33,6 +35,7 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$lte]")
     public OffsetDateTime createdAtDollarLte;
+
     public GetChargeStationsRequest withCreatedAtDollarLte(OffsetDateTime createdAtDollarLte) {
         this.createdAtDollarLte = createdAtDollarLte;
         return this;
@@ -43,6 +46,7 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_evses")
     public Boolean includeEvses;
+
     public GetChargeStationsRequest withIncludeEvses(Boolean includeEvses) {
         this.includeEvses = includeEvses;
         return this;
@@ -53,6 +57,7 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_location")
     public Boolean includeLocation;
+
     public GetChargeStationsRequest withIncludeLocation(Boolean includeLocation) {
         this.includeLocation = includeLocation;
         return this;
@@ -63,6 +68,7 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
     public Boolean includeOrganization;
+
     public GetChargeStationsRequest withIncludeOrganization(Boolean includeOrganization) {
         this.includeOrganization = includeOrganization;
         return this;
@@ -73,6 +79,7 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
     public String location;
+
     public GetChargeStationsRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -83,6 +90,7 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=online")
     public Boolean online;
+
     public GetChargeStationsRequest withOnline(Boolean online) {
         this.online = online;
         return this;
@@ -93,6 +101,7 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=organization")
     public String organization;
+
     public GetChargeStationsRequest withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -103,6 +112,7 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_enabled")
     public Boolean paginateEnabled;
+
     public GetChargeStationsRequest withPaginateEnabled(Boolean paginateEnabled) {
         this.paginateEnabled = paginateEnabled;
         return this;
@@ -113,6 +123,7 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_limit")
     public Long paginateLimit;
+
     public GetChargeStationsRequest withPaginateLimit(Long paginateLimit) {
         this.paginateLimit = paginateLimit;
         return this;
@@ -123,6 +134,7 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_page")
     public String paginatePage;
+
     public GetChargeStationsRequest withPaginatePage(String paginatePage) {
         this.paginatePage = paginatePage;
         return this;
@@ -133,6 +145,7 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=public")
     public Boolean public_;
+
     public GetChargeStationsRequest withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -143,6 +156,7 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetChargeStationsRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -153,6 +167,7 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
     public org.openapis.openapi.models.shared.SortOrder1Enum sortOrder;
+
     public GetChargeStationsRequest withSortOrder(org.openapis.openapi.models.shared.SortOrder1Enum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -163,6 +178,7 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$gte]")
     public OffsetDateTime updatedAtDollarGte;
+
     public GetChargeStationsRequest withUpdatedAtDollarGte(OffsetDateTime updatedAtDollarGte) {
         this.updatedAtDollarGte = updatedAtDollarGte;
         return this;
@@ -173,9 +189,11 @@ public class GetChargeStationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$lte]")
     public OffsetDateTime updatedAtDollarLte;
+
     public GetChargeStationsRequest withUpdatedAtDollarLte(OffsetDateTime updatedAtDollarLte) {
         this.updatedAtDollarLte = updatedAtDollarLte;
         return this;
     }
     
+    public GetChargeStationsRequest(){}
 }

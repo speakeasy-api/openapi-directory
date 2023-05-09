@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportSitesJSONResponse {
     
     public String contentType;
+
     public ExportSitesJSONResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ExportSitesJSONResponse {
      */
     
     public org.openapis.openapi.models.shared.Site[] sites;
+
     public ExportSitesJSONResponse withSites(org.openapis.openapi.models.shared.Site[] sites) {
         this.sites = sites;
         return this;
@@ -26,6 +29,7 @@ public class ExportSitesJSONResponse {
     
     
     public Integer statusCode;
+
     public ExportSitesJSONResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ExportSitesJSONResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportSitesJSONResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ExportSitesJSONResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

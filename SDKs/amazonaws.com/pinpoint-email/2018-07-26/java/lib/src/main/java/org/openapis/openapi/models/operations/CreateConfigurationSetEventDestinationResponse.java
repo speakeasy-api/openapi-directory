@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateConfigurationSetEventDestinationResponse {
@@ -12,6 +13,7 @@ public class CreateConfigurationSetEventDestinationResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateConfigurationSetEventDestinationResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class CreateConfigurationSetEventDestinationResponse {
      */
     
     public Object badRequestException;
+
     public CreateConfigurationSetEventDestinationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class CreateConfigurationSetEventDestinationResponse {
     
     
     public String contentType;
+
     public CreateConfigurationSetEventDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateConfigurationSetEventDestinationResponse {
      */
     
     public java.util.Map<String, Object> createConfigurationSetEventDestinationResponse;
+
     public CreateConfigurationSetEventDestinationResponse withCreateConfigurationSetEventDestinationResponse(java.util.Map<String, Object> createConfigurationSetEventDestinationResponse) {
         this.createConfigurationSetEventDestinationResponse = createConfigurationSetEventDestinationResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateConfigurationSetEventDestinationResponse {
      */
     
     public Object limitExceededException;
+
     public CreateConfigurationSetEventDestinationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateConfigurationSetEventDestinationResponse {
      */
     
     public Object notFoundException;
+
     public CreateConfigurationSetEventDestinationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateConfigurationSetEventDestinationResponse {
     
     
     public Integer statusCode;
+
     public CreateConfigurationSetEventDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateConfigurationSetEventDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateConfigurationSetEventDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateConfigurationSetEventDestinationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateConfigurationSetEventDestinationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateConfigurationSetEventDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

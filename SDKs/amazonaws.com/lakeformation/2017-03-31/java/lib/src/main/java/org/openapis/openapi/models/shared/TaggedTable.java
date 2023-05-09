@@ -15,6 +15,7 @@ public class TaggedTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LFTagOnDatabase")
     public LFTagPair[] lfTagOnDatabase;
+
     public TaggedTable withLFTagOnDatabase(LFTagPair[] lfTagOnDatabase) {
         this.lfTagOnDatabase = lfTagOnDatabase;
         return this;
@@ -23,6 +24,7 @@ public class TaggedTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LFTagsOnColumns")
     public ColumnLFTag[] lfTagsOnColumns;
+
     public TaggedTable withLFTagsOnColumns(ColumnLFTag[] lfTagsOnColumns) {
         this.lfTagsOnColumns = lfTagsOnColumns;
         return this;
@@ -31,6 +33,7 @@ public class TaggedTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LFTagsOnTable")
     public LFTagPair[] lfTagsOnTable;
+
     public TaggedTable withLFTagsOnTable(LFTagPair[] lfTagsOnTable) {
         this.lfTagsOnTable = lfTagsOnTable;
         return this;
@@ -39,9 +42,11 @@ public class TaggedTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Table")
     public TableResource table;
+
     public TaggedTable withTable(TableResource table) {
         this.table = table;
         return this;
     }
     
+    public TaggedTable(){}
 }

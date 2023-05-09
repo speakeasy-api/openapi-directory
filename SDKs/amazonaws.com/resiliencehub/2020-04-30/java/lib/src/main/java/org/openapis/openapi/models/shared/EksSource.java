@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EksSource {
     @JsonProperty("eksClusterArn")
     public String eksClusterArn;
+
     public EksSource withEksClusterArn(String eksClusterArn) {
         this.eksClusterArn = eksClusterArn;
         return this;
@@ -19,9 +20,14 @@ public class EksSource {
     
     @JsonProperty("namespaces")
     public String[] namespaces;
+
     public EksSource withNamespaces(String[] namespaces) {
         this.namespaces = namespaces;
         return this;
     }
     
+    public EksSource(@JsonProperty("eksClusterArn") String eksClusterArn, @JsonProperty("namespaces") String[] namespaces) {
+        this.eksClusterArn = eksClusterArn;
+        this.namespaces = namespaces;
+  }
 }

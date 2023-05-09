@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OpsResultAttribute {
     @JsonProperty("TypeName")
     public String typeName;
+
     public OpsResultAttribute withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public OpsResultAttribute(@JsonProperty("TypeName") String typeName) {
+        this.typeName = typeName;
+  }
 }

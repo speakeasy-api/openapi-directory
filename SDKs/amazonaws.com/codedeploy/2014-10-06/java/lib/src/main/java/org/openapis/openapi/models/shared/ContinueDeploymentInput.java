@@ -12,6 +12,7 @@ public class ContinueDeploymentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public ContinueDeploymentInput withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -20,9 +21,11 @@ public class ContinueDeploymentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentWaitType")
     public DeploymentWaitTypeEnum deploymentWaitType;
+
     public ContinueDeploymentInput withDeploymentWaitType(DeploymentWaitTypeEnum deploymentWaitType) {
         this.deploymentWaitType = deploymentWaitType;
         return this;
     }
     
+    public ContinueDeploymentInput(){}
 }

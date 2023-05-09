@@ -12,6 +12,7 @@ public class Teacher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public String created;
+
     public Teacher withCreated(String created) {
         this.created = created;
         return this;
@@ -20,6 +21,7 @@ public class Teacher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentials")
     public Credentials credentials;
+
     public Teacher withCredentials(Credentials credentials) {
         this.credentials = credentials;
         return this;
@@ -28,6 +30,7 @@ public class Teacher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("district")
     public String district;
+
     public Teacher withDistrict(String district) {
         this.district = district;
         return this;
@@ -36,6 +39,7 @@ public class Teacher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Teacher withEmail(String email) {
         this.email = email;
         return this;
@@ -44,6 +48,7 @@ public class Teacher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Teacher withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +57,7 @@ public class Teacher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_modified")
     public String lastModified;
+
     public Teacher withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -60,6 +66,7 @@ public class Teacher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public Name name;
+
     public Teacher withName(Name name) {
         this.name = name;
         return this;
@@ -68,6 +75,7 @@ public class Teacher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("school")
     public String school;
+
     public Teacher withSchool(String school) {
         this.school = school;
         return this;
@@ -76,6 +84,7 @@ public class Teacher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schools")
     public String[] schools;
+
     public Teacher withSchools(String[] schools) {
         this.schools = schools;
         return this;
@@ -84,6 +93,7 @@ public class Teacher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sis_id")
     public String sisId;
+
     public Teacher withSisId(String sisId) {
         this.sisId = sisId;
         return this;
@@ -92,6 +102,7 @@ public class Teacher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state_id")
     public String stateId;
+
     public Teacher withStateId(String stateId) {
         this.stateId = stateId;
         return this;
@@ -100,6 +111,7 @@ public class Teacher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teacher_number")
     public String teacherNumber;
+
     public Teacher withTeacherNumber(String teacherNumber) {
         this.teacherNumber = teacherNumber;
         return this;
@@ -108,9 +120,11 @@ public class Teacher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Teacher withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Teacher(){}
 }

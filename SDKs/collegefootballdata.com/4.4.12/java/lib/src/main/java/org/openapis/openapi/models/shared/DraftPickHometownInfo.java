@@ -12,6 +12,7 @@ public class DraftPickHometownInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public DraftPickHometownInfo withCity(String city) {
         this.city = city;
         return this;
@@ -20,6 +21,7 @@ public class DraftPickHometownInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public DraftPickHometownInfo withCountry(String country) {
         this.country = country;
         return this;
@@ -28,6 +30,7 @@ public class DraftPickHometownInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryFips")
     public Long countryFips;
+
     public DraftPickHometownInfo withCountryFips(Long countryFips) {
         this.countryFips = countryFips;
         return this;
@@ -36,6 +39,7 @@ public class DraftPickHometownInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public DraftPickHometownInfo withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -44,6 +48,7 @@ public class DraftPickHometownInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public DraftPickHometownInfo withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -52,9 +57,11 @@ public class DraftPickHometownInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public DraftPickHometownInfo withState(String state) {
         this.state = state;
         return this;
     }
     
+    public DraftPickHometownInfo(){}
 }

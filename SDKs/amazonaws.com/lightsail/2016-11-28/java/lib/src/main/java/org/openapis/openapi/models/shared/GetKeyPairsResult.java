@@ -15,6 +15,7 @@ public class GetKeyPairsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPairs")
     public KeyPair[] keyPairs;
+
     public GetKeyPairsResult withKeyPairs(KeyPair[] keyPairs) {
         this.keyPairs = keyPairs;
         return this;
@@ -23,9 +24,11 @@ public class GetKeyPairsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetKeyPairsResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetKeyPairsResult(){}
 }

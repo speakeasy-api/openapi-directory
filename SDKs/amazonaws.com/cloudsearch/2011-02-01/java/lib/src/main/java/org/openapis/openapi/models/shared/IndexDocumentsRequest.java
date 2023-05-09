@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class IndexDocumentsRequest {
     /**
@@ -12,9 +12,13 @@ public class IndexDocumentsRequest {
      */
     
     public String domainName;
+
     public IndexDocumentsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public IndexDocumentsRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

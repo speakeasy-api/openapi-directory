@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateProvisionedProductPlanResponse {
     
     public String contentType;
+
     public CreateProvisionedProductPlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateProvisionedProductPlanResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateProvisionedProductPlanOutput createProvisionedProductPlanOutput;
+
     public CreateProvisionedProductPlanResponse withCreateProvisionedProductPlanOutput(org.openapis.openapi.models.shared.CreateProvisionedProductPlanOutput createProvisionedProductPlanOutput) {
         this.createProvisionedProductPlanOutput = createProvisionedProductPlanOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateProvisionedProductPlanResponse {
      */
     
     public Object invalidParametersException;
+
     public CreateProvisionedProductPlanResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class CreateProvisionedProductPlanResponse {
      */
     
     public Object invalidStateException;
+
     public CreateProvisionedProductPlanResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -46,6 +51,7 @@ public class CreateProvisionedProductPlanResponse {
     
     
     public Integer statusCode;
+
     public CreateProvisionedProductPlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateProvisionedProductPlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateProvisionedProductPlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateProvisionedProductPlanResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateProvisionedProductPlanResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateProvisionedProductPlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

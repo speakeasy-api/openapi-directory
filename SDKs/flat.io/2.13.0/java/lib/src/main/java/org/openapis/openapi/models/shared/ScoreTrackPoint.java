@@ -18,6 +18,7 @@ public class ScoreTrackPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measureUuid")
     public String measureUuid;
+
     public ScoreTrackPoint withMeasureUuid(String measureUuid) {
         this.measureUuid = measureUuid;
         return this;
@@ -28,6 +29,7 @@ public class ScoreTrackPoint {
      */
     @JsonProperty("time")
     public Double time;
+
     public ScoreTrackPoint withTime(Double time) {
         this.time = time;
         return this;
@@ -38,9 +40,14 @@ public class ScoreTrackPoint {
      */
     @JsonProperty("type")
     public ScoreTrackPointTypeEnum type;
+
     public ScoreTrackPoint withType(ScoreTrackPointTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ScoreTrackPoint(@JsonProperty("time") Double time, @JsonProperty("type") ScoreTrackPointTypeEnum type) {
+        this.time = time;
+        this.type = type;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsenseAccountsCustomchannelsAdunitsListRequest {
@@ -12,6 +13,7 @@ public class AdsenseAccountsCustomchannelsAdunitsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AdsenseAccountsCustomchannelsAdunitsListRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class AdsenseAccountsCustomchannelsAdunitsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adClientId")
     public String adClientId;
+
     public AdsenseAccountsCustomchannelsAdunitsListRequest withAdClientId(String adClientId) {
         this.adClientId = adClientId;
         return this;
@@ -32,6 +35,7 @@ public class AdsenseAccountsCustomchannelsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdsenseAccountsCustomchannelsAdunitsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AdsenseAccountsCustomchannelsAdunitsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customChannelId")
     public String customChannelId;
+
     public AdsenseAccountsCustomchannelsAdunitsListRequest withCustomChannelId(String customChannelId) {
         this.customChannelId = customChannelId;
         return this;
@@ -52,6 +57,7 @@ public class AdsenseAccountsCustomchannelsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdsenseAccountsCustomchannelsAdunitsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class AdsenseAccountsCustomchannelsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeInactive")
     public Boolean includeInactive;
+
     public AdsenseAccountsCustomchannelsAdunitsListRequest withIncludeInactive(Boolean includeInactive) {
         this.includeInactive = includeInactive;
         return this;
@@ -72,6 +79,7 @@ public class AdsenseAccountsCustomchannelsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdsenseAccountsCustomchannelsAdunitsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class AdsenseAccountsCustomchannelsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public AdsenseAccountsCustomchannelsAdunitsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -92,6 +101,7 @@ public class AdsenseAccountsCustomchannelsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdsenseAccountsCustomchannelsAdunitsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class AdsenseAccountsCustomchannelsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public AdsenseAccountsCustomchannelsAdunitsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -112,6 +123,7 @@ public class AdsenseAccountsCustomchannelsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdsenseAccountsCustomchannelsAdunitsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class AdsenseAccountsCustomchannelsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdsenseAccountsCustomchannelsAdunitsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,9 +145,15 @@ public class AdsenseAccountsCustomchannelsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdsenseAccountsCustomchannelsAdunitsListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdsenseAccountsCustomchannelsAdunitsListRequest(@JsonProperty("accountId") String accountId, @JsonProperty("adClientId") String adClientId, @JsonProperty("customChannelId") String customChannelId) {
+        this.accountId = accountId;
+        this.adClientId = adClientId;
+        this.customChannelId = customChannelId;
+  }
 }

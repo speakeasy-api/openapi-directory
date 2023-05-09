@@ -15,6 +15,7 @@ public class CreateConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorArn")
     public String connectorArn;
+
     public CreateConnectorResponse withConnectorArn(String connectorArn) {
         this.connectorArn = connectorArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorName")
     public String connectorName;
+
     public CreateConnectorResponse withConnectorName(String connectorName) {
         this.connectorName = connectorName;
         return this;
@@ -31,9 +33,11 @@ public class CreateConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorState")
     public ConnectorStateEnum connectorState;
+
     public CreateConnectorResponse withConnectorState(ConnectorStateEnum connectorState) {
         this.connectorState = connectorState;
         return this;
     }
     
+    public CreateConnectorResponse(){}
 }

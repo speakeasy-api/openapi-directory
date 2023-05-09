@@ -15,6 +15,7 @@ public class ContainerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExitCode")
     public String exitCode;
+
     public ContainerState withExitCode(String exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -26,6 +27,7 @@ public class ContainerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinishedAt")
     public String finishedAt;
+
     public ContainerState withFinishedAt(String finishedAt) {
         this.finishedAt = finishedAt;
         return this;
@@ -37,6 +39,7 @@ public class ContainerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ghost")
     public String ghost;
+
     public ContainerState withGhost(String ghost) {
         this.ghost = ghost;
         return this;
@@ -48,6 +51,7 @@ public class ContainerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pid")
     public Long pid;
+
     public ContainerState withPid(Long pid) {
         this.pid = pid;
         return this;
@@ -59,6 +63,7 @@ public class ContainerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Running")
     public Boolean running;
+
     public ContainerState withRunning(Boolean running) {
         this.running = running;
         return this;
@@ -70,6 +75,7 @@ public class ContainerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartedAt")
     public String startedAt;
+
     public ContainerState withStartedAt(String startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -81,9 +87,11 @@ public class ContainerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public ContainerState withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ContainerState(){}
 }

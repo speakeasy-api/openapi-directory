@@ -56,4 +56,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleHomeEnterpriseSdmV1Li
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleHomeEnterpriseSdmV1Structure.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleHomeEnterpriseSdmV1Room.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleHomeEnterpriseSdmV1ListRoomsResponse.java
+docs/sdk/README.md
+docs/enterprises/README.md
 USAGE.md

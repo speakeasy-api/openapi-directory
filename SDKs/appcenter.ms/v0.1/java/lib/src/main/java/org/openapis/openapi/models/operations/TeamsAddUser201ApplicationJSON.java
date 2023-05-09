@@ -15,6 +15,7 @@ public class TeamsAddUser201ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public TeamsAddUser201ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -25,6 +26,7 @@ public class TeamsAddUser201ApplicationJSON {
      */
     @JsonProperty("email")
     public String email;
+
     public TeamsAddUser201ApplicationJSON withEmail(String email) {
         this.email = email;
         return this;
@@ -35,6 +37,7 @@ public class TeamsAddUser201ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public TeamsAddUser201ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -45,9 +48,16 @@ public class TeamsAddUser201ApplicationJSON {
      */
     @JsonProperty("role")
     public TeamsAddUser201ApplicationJSONRoleEnum role;
+
     public TeamsAddUser201ApplicationJSON withRole(TeamsAddUser201ApplicationJSONRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public TeamsAddUser201ApplicationJSON(@JsonProperty("display_name") String displayName, @JsonProperty("email") String email, @JsonProperty("name") String name, @JsonProperty("role") TeamsAddUser201ApplicationJSONRoleEnum role) {
+        this.displayName = displayName;
+        this.email = email;
+        this.name = name;
+        this.role = role;
+  }
 }

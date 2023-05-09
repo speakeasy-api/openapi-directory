@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccountDetails {
     @JsonProperty("AccountId")
     public String accountId;
+
     public AccountDetails withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,9 +23,13 @@ public class AccountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public AccountDetails withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public AccountDetails(@JsonProperty("AccountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateEnvironmentRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateEnvironmentRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class CreateEnvironmentRequestBody {
      */
     @JsonProperty("engineType")
     public CreateEnvironmentRequestBodyEngineTypeEnum engineType;
+
     public CreateEnvironmentRequestBody withEngineType(CreateEnvironmentRequestBodyEngineTypeEnum engineType) {
         this.engineType = engineType;
         return this;
@@ -47,6 +50,7 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engineVersion")
     public String engineVersion;
+
     public CreateEnvironmentRequestBody withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -58,6 +62,7 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highAvailabilityConfig")
     public CreateEnvironmentRequestBodyHighAvailabilityConfig highAvailabilityConfig;
+
     public CreateEnvironmentRequestBody withHighAvailabilityConfig(CreateEnvironmentRequestBodyHighAvailabilityConfig highAvailabilityConfig) {
         this.highAvailabilityConfig = highAvailabilityConfig;
         return this;
@@ -68,6 +73,7 @@ public class CreateEnvironmentRequestBody {
      */
     @JsonProperty("instanceType")
     public String instanceType;
+
     public CreateEnvironmentRequestBody withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -79,6 +85,7 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public CreateEnvironmentRequestBody withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -89,6 +96,7 @@ public class CreateEnvironmentRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateEnvironmentRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -100,6 +108,7 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public CreateEnvironmentRequestBody withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -111,6 +120,7 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publiclyAccessible")
     public Boolean publiclyAccessible;
+
     public CreateEnvironmentRequestBody withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -122,6 +132,7 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public CreateEnvironmentRequestBody withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -133,6 +144,7 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageConfigurations")
     public org.openapis.openapi.models.shared.StorageConfiguration[] storageConfigurations;
+
     public CreateEnvironmentRequestBody withStorageConfigurations(org.openapis.openapi.models.shared.StorageConfiguration[] storageConfigurations) {
         this.storageConfigurations = storageConfigurations;
         return this;
@@ -144,6 +156,7 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public CreateEnvironmentRequestBody withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -155,9 +168,15 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateEnvironmentRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEnvironmentRequestBody(@JsonProperty("engineType") CreateEnvironmentRequestBodyEngineTypeEnum engineType, @JsonProperty("instanceType") String instanceType, @JsonProperty("name") String name) {
+        this.engineType = engineType;
+        this.instanceType = instanceType;
+        this.name = name;
+  }
 }

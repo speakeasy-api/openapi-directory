@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3Location {
     @JsonProperty("bucket")
     public String bucket;
+
     public S3Location withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -19,9 +20,14 @@ public class S3Location {
     
     @JsonProperty("prefix")
     public String prefix;
+
     public S3Location withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public S3Location(@JsonProperty("bucket") String bucket, @JsonProperty("prefix") String prefix) {
+        this.bucket = bucket;
+        this.prefix = prefix;
+  }
 }

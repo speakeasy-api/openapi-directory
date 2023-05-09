@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveCustomRoutingEndpointsResponse {
@@ -12,6 +13,7 @@ public class RemoveCustomRoutingEndpointsResponse {
      */
     
     public Object accessDeniedException;
+
     public RemoveCustomRoutingEndpointsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RemoveCustomRoutingEndpointsResponse {
      */
     
     public Object conflictException;
+
     public RemoveCustomRoutingEndpointsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class RemoveCustomRoutingEndpointsResponse {
     
     
     public String contentType;
+
     public RemoveCustomRoutingEndpointsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RemoveCustomRoutingEndpointsResponse {
      */
     
     public Object endpointGroupNotFoundException;
+
     public RemoveCustomRoutingEndpointsResponse withEndpointGroupNotFoundException(Object endpointGroupNotFoundException) {
         this.endpointGroupNotFoundException = endpointGroupNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveCustomRoutingEndpointsResponse {
      */
     
     public Object endpointNotFoundException;
+
     public RemoveCustomRoutingEndpointsResponse withEndpointNotFoundException(Object endpointNotFoundException) {
         this.endpointNotFoundException = endpointNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class RemoveCustomRoutingEndpointsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public RemoveCustomRoutingEndpointsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -69,6 +76,7 @@ public class RemoveCustomRoutingEndpointsResponse {
      */
     
     public Object invalidArgumentException;
+
     public RemoveCustomRoutingEndpointsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -76,6 +84,7 @@ public class RemoveCustomRoutingEndpointsResponse {
     
     
     public Integer statusCode;
+
     public RemoveCustomRoutingEndpointsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class RemoveCustomRoutingEndpointsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveCustomRoutingEndpointsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemoveCustomRoutingEndpointsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

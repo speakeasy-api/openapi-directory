@@ -18,6 +18,7 @@ public class SegmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("individualSegments")
     public Boolean individualSegments;
+
     public SegmentSettings withIndividualSegments(Boolean individualSegments) {
         this.individualSegments = individualSegments;
         return this;
@@ -29,9 +30,11 @@ public class SegmentSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentDuration")
     public String segmentDuration;
+
     public SegmentSettings withSegmentDuration(String segmentDuration) {
         this.segmentDuration = segmentDuration;
         return this;
     }
     
+    public SegmentSettings(){}
 }

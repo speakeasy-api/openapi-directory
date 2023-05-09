@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointGetByGeoPointRequest {
@@ -12,6 +13,7 @@ public class StopPointGetByGeoPointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categories")
     public String[] categories;
+
     public StopPointGetByGeoPointRequest withCategories(String[] categories) {
         this.categories = categories;
         return this;
@@ -19,6 +21,7 @@ public class StopPointGetByGeoPointRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location.lat")
     public Double locationLat;
+
     public StopPointGetByGeoPointRequest withLocationLat(Double locationLat) {
         this.locationLat = locationLat;
         return this;
@@ -26,6 +29,7 @@ public class StopPointGetByGeoPointRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location.lon")
     public Double locationLon;
+
     public StopPointGetByGeoPointRequest withLocationLon(Double locationLon) {
         this.locationLon = locationLon;
         return this;
@@ -36,6 +40,7 @@ public class StopPointGetByGeoPointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modes")
     public String[] modes;
+
     public StopPointGetByGeoPointRequest withModes(String[] modes) {
         this.modes = modes;
         return this;
@@ -46,6 +51,7 @@ public class StopPointGetByGeoPointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
     public Integer radius;
+
     public StopPointGetByGeoPointRequest withRadius(Integer radius) {
         this.radius = radius;
         return this;
@@ -56,6 +62,7 @@ public class StopPointGetByGeoPointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnLines")
     public Boolean returnLines;
+
     public StopPointGetByGeoPointRequest withReturnLines(Boolean returnLines) {
         this.returnLines = returnLines;
         return this;
@@ -66,6 +73,7 @@ public class StopPointGetByGeoPointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stopTypes")
     public String[] stopTypes;
+
     public StopPointGetByGeoPointRequest withStopTypes(String[] stopTypes) {
         this.stopTypes = stopTypes;
         return this;
@@ -76,9 +84,15 @@ public class StopPointGetByGeoPointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useStopPointHierarchy")
     public Boolean useStopPointHierarchy;
+
     public StopPointGetByGeoPointRequest withUseStopPointHierarchy(Boolean useStopPointHierarchy) {
         this.useStopPointHierarchy = useStopPointHierarchy;
         return this;
     }
     
+    public StopPointGetByGeoPointRequest(@JsonProperty("location.lat") Double locationLat, @JsonProperty("location.lon") Double locationLon, @JsonProperty("stopTypes") String[] stopTypes) {
+        this.locationLat = locationLat;
+        this.locationLon = locationLon;
+        this.stopTypes = stopTypes;
+  }
 }

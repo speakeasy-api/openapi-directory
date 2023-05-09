@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBanksIdConnectorConnectionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public GetBanksIdConnectorConnectionsRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -16,6 +18,7 @@ public class GetBanksIdConnectorConnectionsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connector")
     public Long idConnector;
+
     public GetBanksIdConnectorConnectionsRequest withIdConnector(Long idConnector) {
         this.idConnector = idConnector;
         return this;
@@ -26,6 +29,7 @@ public class GetBanksIdConnectorConnectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=method")
     public String method;
+
     public GetBanksIdConnectorConnectionsRequest withMethod(String method) {
         this.method = method;
         return this;
@@ -36,6 +40,7 @@ public class GetBanksIdConnectorConnectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minutes_without_sync")
     public Long minutesWithoutSync;
+
     public GetBanksIdConnectorConnectionsRequest withMinutesWithoutSync(Long minutesWithoutSync) {
         this.minutesWithoutSync = minutesWithoutSync;
         return this;
@@ -46,6 +51,7 @@ public class GetBanksIdConnectorConnectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=n")
     public Long n;
+
     public GetBanksIdConnectorConnectionsRequest withN(Long n) {
         this.n = n;
         return this;
@@ -56,6 +62,7 @@ public class GetBanksIdConnectorConnectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurences")
     public Long occurences;
+
     public GetBanksIdConnectorConnectionsRequest withOccurences(Long occurences) {
         this.occurences = occurences;
         return this;
@@ -66,6 +73,7 @@ public class GetBanksIdConnectorConnectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public String source;
+
     public GetBanksIdConnectorConnectionsRequest withSource(String source) {
         this.source = source;
         return this;
@@ -76,9 +84,13 @@ public class GetBanksIdConnectorConnectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public Long type;
+
     public GetBanksIdConnectorConnectionsRequest withType(Long type) {
         this.type = type;
         return this;
     }
     
+    public GetBanksIdConnectorConnectionsRequest(@JsonProperty("id_connector") Long idConnector) {
+        this.idConnector = idConnector;
+  }
 }

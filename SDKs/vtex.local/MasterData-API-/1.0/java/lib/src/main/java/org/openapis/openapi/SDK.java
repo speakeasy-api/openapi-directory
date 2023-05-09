@@ -41,7 +41,7 @@ public class SDK {
      * Another important note: The id field will only be considered on the **POST** verb if the ID type entered in the Data Entity is the option:
      * 
      * ```
-     * A chave prim\u00e1ria ser\u00e1 informada pelo cliente atrav\u00e9s do atributo 'id'
+     * A chave primária será informada pelo cliente através do atributo 'id'
      * ```
      * 
      * Otherwise, a new document will always be created.
@@ -175,6 +175,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.attachments = new Attachments(

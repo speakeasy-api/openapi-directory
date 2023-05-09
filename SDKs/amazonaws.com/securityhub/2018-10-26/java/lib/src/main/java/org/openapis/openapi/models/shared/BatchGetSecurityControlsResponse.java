@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetSecurityControlsResponse {
     @JsonProperty("SecurityControls")
     public SecurityControl[] securityControls;
+
     public BatchGetSecurityControlsResponse withSecurityControls(SecurityControl[] securityControls) {
         this.securityControls = securityControls;
         return this;
@@ -22,9 +23,13 @@ public class BatchGetSecurityControlsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedIds")
     public UnprocessedSecurityControl[] unprocessedIds;
+
     public BatchGetSecurityControlsResponse withUnprocessedIds(UnprocessedSecurityControl[] unprocessedIds) {
         this.unprocessedIds = unprocessedIds;
         return this;
     }
     
+    public BatchGetSecurityControlsResponse(@JsonProperty("SecurityControls") SecurityControl[] securityControls) {
+        this.securityControls = securityControls;
+  }
 }

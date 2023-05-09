@@ -15,6 +15,7 @@ public class DestinyHistoricalStatsDestinyClanAggregateStatValueBasic {
      */
     
     public String displayValue;
+
     public DestinyHistoricalStatsDestinyClanAggregateStatValueBasic withDisplayValue(String displayValue) {
         this.displayValue = displayValue;
         return this;
@@ -25,9 +26,11 @@ public class DestinyHistoricalStatsDestinyClanAggregateStatValueBasic {
      */
     
     public Double value;
+
     public DestinyHistoricalStatsDestinyClanAggregateStatValueBasic withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyClanAggregateStatValueBasic(){}
 }

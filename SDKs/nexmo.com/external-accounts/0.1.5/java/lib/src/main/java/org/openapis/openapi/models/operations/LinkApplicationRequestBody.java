@@ -15,9 +15,13 @@ public class LinkApplicationRequestBody {
      */
     @JsonProperty("application")
     public String application;
+
     public LinkApplicationRequestBody withApplication(String application) {
         this.application = application;
         return this;
     }
     
+    public LinkApplicationRequestBody(@JsonProperty("application") String application) {
+        this.application = application;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRoutingControlStateResponse {
@@ -12,6 +13,7 @@ public class GetRoutingControlStateResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRoutingControlStateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetRoutingControlStateResponse {
     
     
     public String contentType;
+
     public GetRoutingControlStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetRoutingControlStateResponse {
      */
     
     public Object endpointTemporarilyUnavailableException;
+
     public GetRoutingControlStateResponse withEndpointTemporarilyUnavailableException(Object endpointTemporarilyUnavailableException) {
         this.endpointTemporarilyUnavailableException = endpointTemporarilyUnavailableException;
         return this;
@@ -39,6 +43,7 @@ public class GetRoutingControlStateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRoutingControlStateResponse getRoutingControlStateResponse;
+
     public GetRoutingControlStateResponse withGetRoutingControlStateResponse(org.openapis.openapi.models.shared.GetRoutingControlStateResponse getRoutingControlStateResponse) {
         this.getRoutingControlStateResponse = getRoutingControlStateResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetRoutingControlStateResponse {
      */
     
     public Object internalServerException;
+
     public GetRoutingControlStateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class GetRoutingControlStateResponse {
     
     
     public Integer statusCode;
+
     public GetRoutingControlStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetRoutingControlStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRoutingControlStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetRoutingControlStateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetRoutingControlStateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class GetRoutingControlStateResponse {
      */
     
     public Object throttlingException;
+
     public GetRoutingControlStateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class GetRoutingControlStateResponse {
      */
     
     public Object validationException;
+
     public GetRoutingControlStateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetRoutingControlStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

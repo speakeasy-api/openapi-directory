@@ -10,6 +10,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AppsListInstallationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outdated")
     public String outdated;
+
     public AppsListInstallationsRequest withOutdated(String outdated) {
         this.outdated = outdated;
         return this;
@@ -20,6 +21,7 @@ public class AppsListInstallationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public AppsListInstallationsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -30,6 +32,7 @@ public class AppsListInstallationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public AppsListInstallationsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -40,9 +43,11 @@ public class AppsListInstallationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public OffsetDateTime since;
+
     public AppsListInstallationsRequest withSince(OffsetDateTime since) {
         this.since = since;
         return this;
     }
     
+    public AppsListInstallationsRequest(){}
 }

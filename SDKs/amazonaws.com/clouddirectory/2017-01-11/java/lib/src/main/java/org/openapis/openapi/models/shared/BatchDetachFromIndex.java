@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDetachFromIndex {
     @JsonProperty("IndexReference")
     public ObjectReference indexReference;
+
     public BatchDetachFromIndex withIndexReference(ObjectReference indexReference) {
         this.indexReference = indexReference;
         return this;
@@ -19,9 +20,14 @@ public class BatchDetachFromIndex {
     
     @JsonProperty("TargetReference")
     public ObjectReference targetReference;
+
     public BatchDetachFromIndex withTargetReference(ObjectReference targetReference) {
         this.targetReference = targetReference;
         return this;
     }
     
+    public BatchDetachFromIndex(@JsonProperty("IndexReference") ObjectReference indexReference, @JsonProperty("TargetReference") ObjectReference targetReference) {
+        this.indexReference = indexReference;
+        this.targetReference = targetReference;
+  }
 }

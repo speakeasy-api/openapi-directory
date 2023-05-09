@@ -12,6 +12,7 @@ public class EnvironmentDimensionValueEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public EnvironmentDimensionValueEntry withKey(String key) {
         this.key = key;
         return this;
@@ -20,9 +21,11 @@ public class EnvironmentDimensionValueEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public EnvironmentDimensionValueEntry withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public EnvironmentDimensionValueEntry(){}
 }

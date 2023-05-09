@@ -18,6 +18,7 @@ public class DocumentChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public Document document;
+
     public DocumentChange withDocument(Document document) {
         this.document = document;
         return this;
@@ -29,6 +30,7 @@ public class DocumentChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removedTargetIds")
     public Integer[] removedTargetIds;
+
     public DocumentChange withRemovedTargetIds(Integer[] removedTargetIds) {
         this.removedTargetIds = removedTargetIds;
         return this;
@@ -40,9 +42,11 @@ public class DocumentChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetIds")
     public Integer[] targetIds;
+
     public DocumentChange withTargetIds(Integer[] targetIds) {
         this.targetIds = targetIds;
         return this;
     }
     
+    public DocumentChange(){}
 }

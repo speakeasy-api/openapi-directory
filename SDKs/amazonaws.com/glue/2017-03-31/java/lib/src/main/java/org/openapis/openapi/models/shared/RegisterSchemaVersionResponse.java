@@ -15,6 +15,7 @@ public class RegisterSchemaVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaVersionId")
     public String schemaVersionId;
+
     public RegisterSchemaVersionResponse withSchemaVersionId(String schemaVersionId) {
         this.schemaVersionId = schemaVersionId;
         return this;
@@ -23,6 +24,7 @@ public class RegisterSchemaVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SchemaVersionStatusEnum status;
+
     public RegisterSchemaVersionResponse withStatus(SchemaVersionStatusEnum status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class RegisterSchemaVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionNumber")
     public Long versionNumber;
+
     public RegisterSchemaVersionResponse withVersionNumber(Long versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public RegisterSchemaVersionResponse(){}
 }

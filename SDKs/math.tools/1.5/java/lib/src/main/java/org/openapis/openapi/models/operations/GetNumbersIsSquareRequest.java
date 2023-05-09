@@ -12,9 +12,11 @@ public class GetNumbersIsSquareRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public Long number;
+
     public GetNumbersIsSquareRequest withNumber(Long number) {
         this.number = number;
         return this;
     }
     
+    public GetNumbersIsSquareRequest(){}
 }

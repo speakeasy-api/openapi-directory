@@ -18,9 +18,11 @@ public class DestinationUrlEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationUrl")
     public String destinationUrl;
+
     public DestinationUrlEvidence withDestinationUrl(String destinationUrl) {
         this.destinationUrl = destinationUrl;
         return this;
     }
     
+    public DestinationUrlEvidence(){}
 }

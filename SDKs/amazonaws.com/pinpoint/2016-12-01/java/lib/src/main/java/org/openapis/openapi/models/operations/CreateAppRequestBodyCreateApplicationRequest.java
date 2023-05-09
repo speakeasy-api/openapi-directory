@@ -15,6 +15,7 @@ public class CreateAppRequestBodyCreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateAppRequestBodyCreateApplicationRequest withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class CreateAppRequestBodyCreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateAppRequestBodyCreateApplicationRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAppRequestBodyCreateApplicationRequest(){}
 }

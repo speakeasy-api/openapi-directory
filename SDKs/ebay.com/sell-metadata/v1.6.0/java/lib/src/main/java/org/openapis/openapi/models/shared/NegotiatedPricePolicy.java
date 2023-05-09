@@ -15,6 +15,7 @@ public class NegotiatedPricePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestOfferAutoAcceptEnabled")
     public Boolean bestOfferAutoAcceptEnabled;
+
     public NegotiatedPricePolicy withBestOfferAutoAcceptEnabled(Boolean bestOfferAutoAcceptEnabled) {
         this.bestOfferAutoAcceptEnabled = bestOfferAutoAcceptEnabled;
         return this;
@@ -26,6 +27,7 @@ public class NegotiatedPricePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestOfferAutoDeclineEnabled")
     public Boolean bestOfferAutoDeclineEnabled;
+
     public NegotiatedPricePolicy withBestOfferAutoDeclineEnabled(Boolean bestOfferAutoDeclineEnabled) {
         this.bestOfferAutoDeclineEnabled = bestOfferAutoDeclineEnabled;
         return this;
@@ -37,6 +39,7 @@ public class NegotiatedPricePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestOfferCounterEnabled")
     public Boolean bestOfferCounterEnabled;
+
     public NegotiatedPricePolicy withBestOfferCounterEnabled(Boolean bestOfferCounterEnabled) {
         this.bestOfferCounterEnabled = bestOfferCounterEnabled;
         return this;
@@ -48,6 +51,7 @@ public class NegotiatedPricePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryId")
     public String categoryId;
+
     public NegotiatedPricePolicy withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -59,9 +63,11 @@ public class NegotiatedPricePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryTreeId")
     public String categoryTreeId;
+
     public NegotiatedPricePolicy withCategoryTreeId(String categoryTreeId) {
         this.categoryTreeId = categoryTreeId;
         return this;
     }
     
+    public NegotiatedPricePolicy(){}
 }

@@ -15,9 +15,11 @@ public class DescribeCustomRoutingEndpointGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointGroup")
     public CustomRoutingEndpointGroup endpointGroup;
+
     public DescribeCustomRoutingEndpointGroupResponse withEndpointGroup(CustomRoutingEndpointGroup endpointGroup) {
         this.endpointGroup = endpointGroup;
         return this;
     }
     
+    public DescribeCustomRoutingEndpointGroupResponse(){}
 }

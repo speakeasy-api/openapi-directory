@@ -15,6 +15,7 @@ public class ListActivatedRulesInRuleGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActivatedRules")
     public ActivatedRule[] activatedRules;
+
     public ListActivatedRulesInRuleGroupResponse withActivatedRules(ActivatedRule[] activatedRules) {
         this.activatedRules = activatedRules;
         return this;
@@ -23,9 +24,11 @@ public class ListActivatedRulesInRuleGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListActivatedRulesInRuleGroupResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListActivatedRulesInRuleGroupResponse(){}
 }

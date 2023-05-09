@@ -12,6 +12,7 @@ public class DeleteSecurityPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DeleteSecurityPolicyRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class DeleteSecurityPolicyRequest {
     
     @JsonProperty("name")
     public String name;
+
     public DeleteSecurityPolicyRequest withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,14 @@ public class DeleteSecurityPolicyRequest {
     
     @JsonProperty("type")
     public SecurityPolicyTypeEnum type;
+
     public DeleteSecurityPolicyRequest withType(SecurityPolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DeleteSecurityPolicyRequest(@JsonProperty("name") String name, @JsonProperty("type") SecurityPolicyTypeEnum type) {
+        this.name = name;
+        this.type = type;
+  }
 }

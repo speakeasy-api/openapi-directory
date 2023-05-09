@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeletePullRequestApprovalRuleOutput {
     @JsonProperty("approvalRuleId")
     public String approvalRuleId;
+
     public DeletePullRequestApprovalRuleOutput withApprovalRuleId(String approvalRuleId) {
         this.approvalRuleId = approvalRuleId;
         return this;
     }
     
+    public DeletePullRequestApprovalRuleOutput(@JsonProperty("approvalRuleId") String approvalRuleId) {
+        this.approvalRuleId = approvalRuleId;
+  }
 }

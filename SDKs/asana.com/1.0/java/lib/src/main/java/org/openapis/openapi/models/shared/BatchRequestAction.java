@@ -18,6 +18,7 @@ public class BatchRequestAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public BatchRequestAction withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -28,6 +29,7 @@ public class BatchRequestAction {
      */
     @JsonProperty("method")
     public BatchRequestActionMethodEnum method;
+
     public BatchRequestAction withMethod(BatchRequestActionMethodEnum method) {
         this.method = method;
         return this;
@@ -39,6 +41,7 @@ public class BatchRequestAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public BatchRequestActionOptions options;
+
     public BatchRequestAction withOptions(BatchRequestActionOptions options) {
         this.options = options;
         return this;
@@ -49,9 +52,14 @@ public class BatchRequestAction {
      */
     @JsonProperty("relative_path")
     public String relativePath;
+
     public BatchRequestAction withRelativePath(String relativePath) {
         this.relativePath = relativePath;
         return this;
     }
     
+    public BatchRequestAction(@JsonProperty("method") BatchRequestActionMethodEnum method, @JsonProperty("relative_path") String relativePath) {
+        this.method = method;
+        this.relativePath = relativePath;
+  }
 }

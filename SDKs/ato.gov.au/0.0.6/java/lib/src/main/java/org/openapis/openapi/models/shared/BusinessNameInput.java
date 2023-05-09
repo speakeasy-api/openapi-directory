@@ -18,6 +18,7 @@ public class BusinessNameInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleState")
     public BusinessNameLifecycleStateEnum lifecycleState;
+
     public BusinessNameInput withLifecycleState(BusinessNameLifecycleStateEnum lifecycleState) {
         this.lifecycleState = lifecycleState;
         return this;
@@ -29,9 +30,11 @@ public class BusinessNameInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BusinessNameInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public BusinessNameInput(){}
 }

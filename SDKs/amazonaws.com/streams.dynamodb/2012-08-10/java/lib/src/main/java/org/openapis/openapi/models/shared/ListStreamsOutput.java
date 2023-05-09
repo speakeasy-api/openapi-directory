@@ -15,6 +15,7 @@ public class ListStreamsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastEvaluatedStreamArn")
     public String lastEvaluatedStreamArn;
+
     public ListStreamsOutput withLastEvaluatedStreamArn(String lastEvaluatedStreamArn) {
         this.lastEvaluatedStreamArn = lastEvaluatedStreamArn;
         return this;
@@ -23,9 +24,11 @@ public class ListStreamsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Streams")
     public Stream[] streams;
+
     public ListStreamsOutput withStreams(Stream[] streams) {
         this.streams = streams;
         return this;
     }
     
+    public ListStreamsOutput(){}
 }

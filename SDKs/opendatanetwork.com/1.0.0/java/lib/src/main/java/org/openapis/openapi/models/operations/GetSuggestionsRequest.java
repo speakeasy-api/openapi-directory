@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSuggestionsRequest {
@@ -12,6 +13,7 @@ public class GetSuggestionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-App-Token")
     public String xAppToken;
+
     public GetSuggestionsRequest withXAppToken(String xAppToken) {
         this.xAppToken = xAppToken;
         return this;
@@ -23,6 +25,7 @@ public class GetSuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_token")
     public String appToken;
+
     public GetSuggestionsRequest withAppToken(String appToken) {
         this.appToken = appToken;
         return this;
@@ -34,6 +37,7 @@ public class GetSuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Double limit;
+
     public GetSuggestionsRequest withLimit(Double limit) {
         this.limit = limit;
         return this;
@@ -44,6 +48,7 @@ public class GetSuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetSuggestionsRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -54,6 +59,7 @@ public class GetSuggestionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public GetSuggestionsTypeEnum type;
+
     public GetSuggestionsRequest withType(GetSuggestionsTypeEnum type) {
         this.type = type;
         return this;
@@ -71,9 +77,14 @@ public class GetSuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=variable_id")
     public String variableId;
+
     public GetSuggestionsRequest withVariableId(String variableId) {
         this.variableId = variableId;
         return this;
     }
     
+    public GetSuggestionsRequest(@JsonProperty("query") String query, @JsonProperty("type") GetSuggestionsTypeEnum type) {
+        this.query = query;
+        this.type = type;
+  }
 }

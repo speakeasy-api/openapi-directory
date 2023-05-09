@@ -15,6 +15,7 @@ public class PostServersIdActionsAttachToNetworkAttachToNetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias_ips")
     public String[] aliasIps;
+
     public PostServersIdActionsAttachToNetworkAttachToNetworkRequest withAliasIps(String[] aliasIps) {
         this.aliasIps = aliasIps;
         return this;
@@ -26,6 +27,7 @@ public class PostServersIdActionsAttachToNetworkAttachToNetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public PostServersIdActionsAttachToNetworkAttachToNetworkRequest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -36,9 +38,13 @@ public class PostServersIdActionsAttachToNetworkAttachToNetworkRequest {
      */
     @JsonProperty("network")
     public Long network;
+
     public PostServersIdActionsAttachToNetworkAttachToNetworkRequest withNetwork(Long network) {
         this.network = network;
         return this;
     }
     
+    public PostServersIdActionsAttachToNetworkAttachToNetworkRequest(@JsonProperty("network") Long network) {
+        this.network = network;
+  }
 }

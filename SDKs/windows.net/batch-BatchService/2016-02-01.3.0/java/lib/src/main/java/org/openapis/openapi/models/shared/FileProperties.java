@@ -22,6 +22,7 @@ public class FileProperties {
      */
     @JsonProperty("contentLength")
     public Long contentLength;
+
     public FileProperties withContentLength(Long contentLength) {
         this.contentLength = contentLength;
         return this;
@@ -33,6 +34,7 @@ public class FileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public FileProperties withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -46,6 +48,7 @@ public class FileProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public FileProperties withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -57,6 +60,7 @@ public class FileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileMode")
     public String fileMode;
+
     public FileProperties withFileMode(String fileMode) {
         this.fileMode = fileMode;
         return this;
@@ -69,9 +73,14 @@ public class FileProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModified")
     public OffsetDateTime lastModified;
+
     public FileProperties withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
     }
     
+    public FileProperties(@JsonProperty("contentLength") Long contentLength, @JsonProperty("lastModified") OffsetDateTime lastModified) {
+        this.contentLength = contentLength;
+        this.lastModified = lastModified;
+  }
 }

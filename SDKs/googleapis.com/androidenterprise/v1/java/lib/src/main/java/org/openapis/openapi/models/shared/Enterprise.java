@@ -18,6 +18,7 @@ public class Enterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("administrator")
     public Administrator[] administrator;
+
     public Enterprise withAdministrator(Administrator[] administrator) {
         this.administrator = administrator;
         return this;
@@ -29,6 +30,7 @@ public class Enterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAuthenticationSettings")
     public GoogleAuthenticationSettings googleAuthenticationSettings;
+
     public Enterprise withGoogleAuthenticationSettings(GoogleAuthenticationSettings googleAuthenticationSettings) {
         this.googleAuthenticationSettings = googleAuthenticationSettings;
         return this;
@@ -40,6 +42,7 @@ public class Enterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Enterprise withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Enterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Enterprise withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class Enterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryDomain")
     public String primaryDomain;
+
     public Enterprise withPrimaryDomain(String primaryDomain) {
         this.primaryDomain = primaryDomain;
         return this;
     }
     
+    public Enterprise(){}
 }

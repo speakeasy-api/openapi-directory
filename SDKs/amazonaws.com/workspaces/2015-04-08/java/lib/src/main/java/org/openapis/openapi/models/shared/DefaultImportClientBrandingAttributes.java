@@ -15,6 +15,7 @@ public class DefaultImportClientBrandingAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForgotPasswordLink")
     public String forgotPasswordLink;
+
     public DefaultImportClientBrandingAttributes withForgotPasswordLink(String forgotPasswordLink) {
         this.forgotPasswordLink = forgotPasswordLink;
         return this;
@@ -23,6 +24,7 @@ public class DefaultImportClientBrandingAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoginMessage")
     public java.util.Map<String, String> loginMessage;
+
     public DefaultImportClientBrandingAttributes withLoginMessage(java.util.Map<String, String> loginMessage) {
         this.loginMessage = loginMessage;
         return this;
@@ -31,6 +33,7 @@ public class DefaultImportClientBrandingAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Logo")
     public String logo;
+
     public DefaultImportClientBrandingAttributes withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -39,6 +42,7 @@ public class DefaultImportClientBrandingAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportEmail")
     public String supportEmail;
+
     public DefaultImportClientBrandingAttributes withSupportEmail(String supportEmail) {
         this.supportEmail = supportEmail;
         return this;
@@ -47,9 +51,11 @@ public class DefaultImportClientBrandingAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportLink")
     public String supportLink;
+
     public DefaultImportClientBrandingAttributes withSupportLink(String supportLink) {
         this.supportLink = supportLink;
         return this;
     }
     
+    public DefaultImportClientBrandingAttributes(){}
 }

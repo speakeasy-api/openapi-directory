@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListEnvironmentProvisionedResourcesInput {
     @JsonProperty("environmentName")
     public String environmentName;
+
     public ListEnvironmentProvisionedResourcesInput withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -19,9 +20,13 @@ public class ListEnvironmentProvisionedResourcesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEnvironmentProvisionedResourcesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEnvironmentProvisionedResourcesInput(@JsonProperty("environmentName") String environmentName) {
+        this.environmentName = environmentName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBng2latlongEastingNorthingResponse {
     
     public String contentType;
+
     public GetBng2latlongEastingNorthingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetBng2latlongEastingNorthingResponse {
     
     
     public Integer statusCode;
+
     public GetBng2latlongEastingNorthingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetBng2latlongEastingNorthingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBng2latlongEastingNorthingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetBng2latlongEastingNorthingResponse {
      */
     
     public GetBng2latlongEastingNorthing200ApplicationJSON getBng2latlongEastingNorthing200ApplicationJSONObject;
+
     public GetBng2latlongEastingNorthingResponse withGetBng2latlongEastingNorthing200ApplicationJSONObject(GetBng2latlongEastingNorthing200ApplicationJSON getBng2latlongEastingNorthing200ApplicationJSONObject) {
         this.getBng2latlongEastingNorthing200ApplicationJSONObject = getBng2latlongEastingNorthing200ApplicationJSONObject;
         return this;
     }
     
+    public GetBng2latlongEastingNorthingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

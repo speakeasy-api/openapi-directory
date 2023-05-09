@@ -12,6 +12,7 @@ public class TagResourceRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public TagResourceRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,9 +23,14 @@ public class TagResourceRequestBody {
      */
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public TagResourceRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagResourceRequestBody(@JsonProperty("Arn") String arn, @JsonProperty("Tags") java.util.Map<String, String> tags) {
+        this.arn = arn;
+        this.tags = tags;
+  }
 }

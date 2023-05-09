@@ -14,6 +14,7 @@ public class UpdateAccountRequest {
      */
     @JsonProperty("accountCode")
     public String accountCode;
+
     public UpdateAccountRequest withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -25,6 +26,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateAccountRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -33,9 +35,13 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutSchedule")
     public UpdatePayoutScheduleRequest payoutSchedule;
+
     public UpdateAccountRequest withPayoutSchedule(UpdatePayoutScheduleRequest payoutSchedule) {
         this.payoutSchedule = payoutSchedule;
         return this;
     }
     
+    public UpdateAccountRequest(@JsonProperty("accountCode") String accountCode) {
+        this.accountCode = accountCode;
+  }
 }

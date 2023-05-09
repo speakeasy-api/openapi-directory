@@ -18,9 +18,11 @@ public class ItemPriorityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemDelta")
     public ItemPriority[] itemDelta;
+
     public ItemPriorityResponse withItemDelta(ItemPriority[] itemDelta) {
         this.itemDelta = itemDelta;
         return this;
     }
     
+    public ItemPriorityResponse(){}
 }

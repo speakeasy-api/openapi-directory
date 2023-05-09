@@ -15,6 +15,7 @@ public class PendingModifiedServiceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceUpdateName")
     public String serviceUpdateName;
+
     public PendingModifiedServiceUpdate withServiceUpdateName(String serviceUpdateName) {
         this.serviceUpdateName = serviceUpdateName;
         return this;
@@ -23,9 +24,11 @@ public class PendingModifiedServiceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ServiceUpdateStatusEnum status;
+
     public PendingModifiedServiceUpdate withStatus(ServiceUpdateStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PendingModifiedServiceUpdate(){}
 }

@@ -18,6 +18,7 @@ public class RemarketingList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public RemarketingList withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class RemarketingList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public RemarketingList withActive(Boolean active) {
         this.active = active;
         return this;
@@ -40,6 +42,7 @@ public class RemarketingList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public RemarketingList withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -51,6 +54,7 @@ public class RemarketingList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserIdDimensionValue")
     public DimensionValue advertiserIdDimensionValue;
+
     public RemarketingList withAdvertiserIdDimensionValue(DimensionValue advertiserIdDimensionValue) {
         this.advertiserIdDimensionValue = advertiserIdDimensionValue;
         return this;
@@ -62,6 +66,7 @@ public class RemarketingList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RemarketingList withDescription(String description) {
         this.description = description;
         return this;
@@ -73,6 +78,7 @@ public class RemarketingList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RemarketingList withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class RemarketingList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RemarketingList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -95,6 +102,7 @@ public class RemarketingList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifeSpan")
     public String lifeSpan;
+
     public RemarketingList withLifeSpan(String lifeSpan) {
         this.lifeSpan = lifeSpan;
         return this;
@@ -106,6 +114,7 @@ public class RemarketingList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listPopulationRule")
     public ListPopulationRule listPopulationRule;
+
     public RemarketingList withListPopulationRule(ListPopulationRule listPopulationRule) {
         this.listPopulationRule = listPopulationRule;
         return this;
@@ -117,6 +126,7 @@ public class RemarketingList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listSize")
     public String listSize;
+
     public RemarketingList withListSize(String listSize) {
         this.listSize = listSize;
         return this;
@@ -128,6 +138,7 @@ public class RemarketingList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listSource")
     public RemarketingListListSourceEnum listSource;
+
     public RemarketingList withListSource(RemarketingListListSourceEnum listSource) {
         this.listSource = listSource;
         return this;
@@ -139,6 +150,7 @@ public class RemarketingList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RemarketingList withName(String name) {
         this.name = name;
         return this;
@@ -150,9 +162,11 @@ public class RemarketingList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subaccountId")
     public String subaccountId;
+
     public RemarketingList withSubaccountId(String subaccountId) {
         this.subaccountId = subaccountId;
         return this;
     }
     
+    public RemarketingList(){}
 }

@@ -18,9 +18,11 @@ public class TaskTemplateSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public TaskSpec spec;
+
     public TaskTemplateSpec withSpec(TaskSpec spec) {
         this.spec = spec;
         return this;
     }
     
+    public TaskTemplateSpec(){}
 }

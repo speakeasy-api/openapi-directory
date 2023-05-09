@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssignPrivateIpAddressesResult {
     
     public AssignPrivateIpAddressesResultAssignedIpv4Prefixes[] assignedIpv4Prefixes;
+
     public AssignPrivateIpAddressesResult withAssignedIpv4Prefixes(AssignPrivateIpAddressesResultAssignedIpv4Prefixes[] assignedIpv4Prefixes) {
         this.assignedIpv4Prefixes = assignedIpv4Prefixes;
         return this;
@@ -19,6 +20,7 @@ public class AssignPrivateIpAddressesResult {
     
     
     public AssignPrivateIpAddressesResultAssignedPrivateIpAddresses[] assignedPrivateIpAddresses;
+
     public AssignPrivateIpAddressesResult withAssignedPrivateIpAddresses(AssignPrivateIpAddressesResultAssignedPrivateIpAddresses[] assignedPrivateIpAddresses) {
         this.assignedPrivateIpAddresses = assignedPrivateIpAddresses;
         return this;
@@ -26,9 +28,11 @@ public class AssignPrivateIpAddressesResult {
     
     
     public String networkInterfaceId;
+
     public AssignPrivateIpAddressesResult withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
     
+    public AssignPrivateIpAddressesResult(){}
 }

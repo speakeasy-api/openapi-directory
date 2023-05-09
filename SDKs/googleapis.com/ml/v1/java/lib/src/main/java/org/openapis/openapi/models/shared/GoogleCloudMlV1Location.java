@@ -15,6 +15,7 @@ public class GoogleCloudMlV1Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public GoogleCloudMlV1Capability[] capabilities;
+
     public GoogleCloudMlV1Location withCapabilities(GoogleCloudMlV1Capability[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -23,9 +24,11 @@ public class GoogleCloudMlV1Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudMlV1Location withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudMlV1Location(){}
 }

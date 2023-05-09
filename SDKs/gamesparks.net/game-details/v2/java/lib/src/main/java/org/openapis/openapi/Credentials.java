@@ -52,11 +52,9 @@ public class Credentials {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCredentialSecretUsingPOSTResponse res = new org.openapis.openapi.models.operations.UpdateCredentialSecretUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.UpdateCredentialSecretUsingPOSTResponse res = new org.openapis.openapi.models.operations.UpdateCredentialSecretUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {

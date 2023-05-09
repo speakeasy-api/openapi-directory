@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromeuxreportRecordsQueryRecordResponse {
     
     public String contentType;
+
     public ChromeuxreportRecordsQueryRecordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChromeuxreportRecordsQueryRecordResponse {
      */
     
     public org.openapis.openapi.models.shared.QueryResponse queryResponse;
+
     public ChromeuxreportRecordsQueryRecordResponse withQueryResponse(org.openapis.openapi.models.shared.QueryResponse queryResponse) {
         this.queryResponse = queryResponse;
         return this;
@@ -26,6 +29,7 @@ public class ChromeuxreportRecordsQueryRecordResponse {
     
     
     public Integer statusCode;
+
     public ChromeuxreportRecordsQueryRecordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChromeuxreportRecordsQueryRecordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromeuxreportRecordsQueryRecordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChromeuxreportRecordsQueryRecordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

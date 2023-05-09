@@ -15,6 +15,7 @@ public class ListStoredQueriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListStoredQueriesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListStoredQueriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoredQueryMetadata")
     public StoredQueryMetadata[] storedQueryMetadata;
+
     public ListStoredQueriesResponse withStoredQueryMetadata(StoredQueryMetadata[] storedQueryMetadata) {
         this.storedQueryMetadata = storedQueryMetadata;
         return this;
     }
     
+    public ListStoredQueriesResponse(){}
 }

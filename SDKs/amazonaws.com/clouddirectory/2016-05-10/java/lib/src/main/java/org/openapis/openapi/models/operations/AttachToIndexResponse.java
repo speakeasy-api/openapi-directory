@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AttachToIndexResponse {
@@ -12,6 +13,7 @@ public class AttachToIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public AttachToIndexResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AttachToIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.AttachToIndexResponse attachToIndexResponse;
+
     public AttachToIndexResponse withAttachToIndexResponse(org.openapis.openapi.models.shared.AttachToIndexResponse attachToIndexResponse) {
         this.attachToIndexResponse = attachToIndexResponse;
         return this;
@@ -29,6 +32,7 @@ public class AttachToIndexResponse {
     
     
     public String contentType;
+
     public AttachToIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AttachToIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.DirectoryNotEnabledException directoryNotEnabledException;
+
     public AttachToIndexResponse withDirectoryNotEnabledException(org.openapis.openapi.models.shared.DirectoryNotEnabledException directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -49,6 +54,7 @@ public class AttachToIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.IndexedAttributeMissingException indexedAttributeMissingException;
+
     public AttachToIndexResponse withIndexedAttributeMissingException(org.openapis.openapi.models.shared.IndexedAttributeMissingException indexedAttributeMissingException) {
         this.indexedAttributeMissingException = indexedAttributeMissingException;
         return this;
@@ -59,6 +65,7 @@ public class AttachToIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public AttachToIndexResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class AttachToIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public AttachToIndexResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -79,6 +87,7 @@ public class AttachToIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidAttachmentException invalidAttachmentException;
+
     public AttachToIndexResponse withInvalidAttachmentException(org.openapis.openapi.models.shared.InvalidAttachmentException invalidAttachmentException) {
         this.invalidAttachmentException = invalidAttachmentException;
         return this;
@@ -89,6 +98,7 @@ public class AttachToIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public AttachToIndexResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -99,6 +109,7 @@ public class AttachToIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.LinkNameAlreadyInUseException linkNameAlreadyInUseException;
+
     public AttachToIndexResponse withLinkNameAlreadyInUseException(org.openapis.openapi.models.shared.LinkNameAlreadyInUseException linkNameAlreadyInUseException) {
         this.linkNameAlreadyInUseException = linkNameAlreadyInUseException;
         return this;
@@ -109,6 +120,7 @@ public class AttachToIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.NotIndexException notIndexException;
+
     public AttachToIndexResponse withNotIndexException(org.openapis.openapi.models.shared.NotIndexException notIndexException) {
         this.notIndexException = notIndexException;
         return this;
@@ -116,6 +128,7 @@ public class AttachToIndexResponse {
     
     
     public Integer statusCode;
+
     public AttachToIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class AttachToIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AttachToIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,6 +147,7 @@ public class AttachToIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public AttachToIndexResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -143,6 +158,7 @@ public class AttachToIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public AttachToIndexResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -153,9 +169,14 @@ public class AttachToIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public AttachToIndexResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AttachToIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

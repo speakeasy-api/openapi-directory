@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListExtensionsResponse {
@@ -12,6 +13,7 @@ public class ListExtensionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListExtensionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListExtensionsResponse {
     
     
     public String contentType;
+
     public ListExtensionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListExtensionsResponse {
      */
     
     public Object internalServerException;
+
     public ListExtensionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListExtensionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListExtensionsResult listExtensionsResult;
+
     public ListExtensionsResponse withListExtensionsResult(org.openapis.openapi.models.shared.ListExtensionsResult listExtensionsResult) {
         this.listExtensionsResult = listExtensionsResult;
         return this;
@@ -46,6 +51,7 @@ public class ListExtensionsResponse {
     
     
     public Integer statusCode;
+
     public ListExtensionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListExtensionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListExtensionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListExtensionsResponse {
      */
     
     public Object throttlingException;
+
     public ListExtensionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListExtensionsResponse {
      */
     
     public Object validationException;
+
     public ListExtensionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListExtensionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

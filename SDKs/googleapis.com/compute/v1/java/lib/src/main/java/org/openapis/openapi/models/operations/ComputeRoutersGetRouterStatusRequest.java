@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeRoutersGetRouterStatusRequest {
@@ -12,6 +13,7 @@ public class ComputeRoutersGetRouterStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeRoutersGetRouterStatusRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ComputeRoutersGetRouterStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeRoutersGetRouterStatusRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ComputeRoutersGetRouterStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeRoutersGetRouterStatusRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ComputeRoutersGetRouterStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeRoutersGetRouterStatusRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ComputeRoutersGetRouterStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeRoutersGetRouterStatusRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ComputeRoutersGetRouterStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeRoutersGetRouterStatusRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class ComputeRoutersGetRouterStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeRoutersGetRouterStatusRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class ComputeRoutersGetRouterStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeRoutersGetRouterStatusRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +101,7 @@ public class ComputeRoutersGetRouterStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeRoutersGetRouterStatusRequest withProject(String project) {
         this.project = project;
         return this;
@@ -102,6 +112,7 @@ public class ComputeRoutersGetRouterStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeRoutersGetRouterStatusRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class ComputeRoutersGetRouterStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
     public String region;
+
     public ComputeRoutersGetRouterStatusRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -122,6 +134,7 @@ public class ComputeRoutersGetRouterStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=router")
     public String router;
+
     public ComputeRoutersGetRouterStatusRequest withRouter(String router) {
         this.router = router;
         return this;
@@ -132,6 +145,7 @@ public class ComputeRoutersGetRouterStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeRoutersGetRouterStatusRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,6 +156,7 @@ public class ComputeRoutersGetRouterStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeRoutersGetRouterStatusRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -152,9 +167,15 @@ public class ComputeRoutersGetRouterStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeRoutersGetRouterStatusRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeRoutersGetRouterStatusRequest(@JsonProperty("project") String project, @JsonProperty("region") String region, @JsonProperty("router") String router) {
+        this.project = project;
+        this.region = region;
+        this.router = router;
+  }
 }

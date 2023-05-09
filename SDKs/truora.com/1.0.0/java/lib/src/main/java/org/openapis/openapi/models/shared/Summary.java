@@ -25,6 +25,7 @@ public class Summary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_of_birth")
     public OffsetDateTime dateOfBirth;
+
     public Summary withDateOfBirth(OffsetDateTime dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -38,6 +39,7 @@ public class Summary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("death_date")
     public OffsetDateTime deathDate;
+
     public Summary withDeathDate(OffsetDateTime deathDate) {
         this.deathDate = deathDate;
         return this;
@@ -49,6 +51,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drivers_license")
     public String driversLicense;
+
     public Summary withDriversLicense(String driversLicense) {
         this.driversLicense = driversLicense;
         return this;
@@ -60,6 +63,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public SummaryGenderEnum gender;
+
     public Summary withGender(SummaryGenderEnum gender) {
         this.gender = gender;
         return this;
@@ -71,6 +75,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identity_status")
     public SummaryIdentityStatusEnum identityStatus;
+
     public Summary withIdentityStatus(SummaryIdentityStatusEnum identityStatus) {
         this.identityStatus = identityStatus;
         return this;
@@ -81,6 +86,7 @@ public class Summary {
      */
     @JsonProperty("names_found")
     public NameFound[] namesFound;
+
     public Summary withNamesFound(NameFound[] namesFound) {
         this.namesFound = namesFound;
         return this;
@@ -92,6 +98,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nss")
     public String nss;
+
     public Summary withNss(String nss) {
         this.nss = nss;
         return this;
@@ -103,9 +110,13 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfc")
     public String rfc;
+
     public Summary withRfc(String rfc) {
         this.rfc = rfc;
         return this;
     }
     
+    public Summary(@JsonProperty("names_found") NameFound[] namesFound) {
+        this.namesFound = namesFound;
+  }
 }

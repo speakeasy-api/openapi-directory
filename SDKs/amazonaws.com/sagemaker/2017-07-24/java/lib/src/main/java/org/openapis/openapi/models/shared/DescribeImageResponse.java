@@ -22,6 +22,7 @@ public class DescribeImageResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeImageResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeImageResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class DescribeImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public DescribeImageResponse withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -46,6 +49,7 @@ public class DescribeImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeImageResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -54,6 +58,7 @@ public class DescribeImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageArn")
     public String imageArn;
+
     public DescribeImageResponse withImageArn(String imageArn) {
         this.imageArn = imageArn;
         return this;
@@ -62,6 +67,7 @@ public class DescribeImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageName")
     public String imageName;
+
     public DescribeImageResponse withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -70,6 +76,7 @@ public class DescribeImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageStatus")
     public ImageStatusEnum imageStatus;
+
     public DescribeImageResponse withImageStatus(ImageStatusEnum imageStatus) {
         this.imageStatus = imageStatus;
         return this;
@@ -80,6 +87,7 @@ public class DescribeImageResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeImageResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -88,9 +96,11 @@ public class DescribeImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeImageResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public DescribeImageResponse(){}
 }

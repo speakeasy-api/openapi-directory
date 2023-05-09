@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecificationsError {
     
     public ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecificationsErrorCodeEnum code;
+
     public ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecificationsError withCode(ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecificationsErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSp
     
     
     public String message;
+
     public ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecificationsError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecificationsError(){}
 }

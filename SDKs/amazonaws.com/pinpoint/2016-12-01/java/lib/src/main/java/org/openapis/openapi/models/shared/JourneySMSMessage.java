@@ -15,6 +15,7 @@ public class JourneySMSMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityId")
     public String entityId;
+
     public JourneySMSMessage withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -23,6 +24,7 @@ public class JourneySMSMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public JourneySMSMessage withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -31,6 +33,7 @@ public class JourneySMSMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginationNumber")
     public String originationNumber;
+
     public JourneySMSMessage withOriginationNumber(String originationNumber) {
         this.originationNumber = originationNumber;
         return this;
@@ -39,6 +42,7 @@ public class JourneySMSMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SenderId")
     public String senderId;
+
     public JourneySMSMessage withSenderId(String senderId) {
         this.senderId = senderId;
         return this;
@@ -47,9 +51,11 @@ public class JourneySMSMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateId")
     public String templateId;
+
     public JourneySMSMessage withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public JourneySMSMessage(){}
 }

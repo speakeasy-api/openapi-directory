@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchRetrieveInventoryCountsResponse {
@@ -12,6 +13,7 @@ public class BatchRetrieveInventoryCountsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchRetrieveInventoryCountsResponse batchRetrieveInventoryCountsResponse;
+
     public BatchRetrieveInventoryCountsResponse withBatchRetrieveInventoryCountsResponse(org.openapis.openapi.models.shared.BatchRetrieveInventoryCountsResponse batchRetrieveInventoryCountsResponse) {
         this.batchRetrieveInventoryCountsResponse = batchRetrieveInventoryCountsResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchRetrieveInventoryCountsResponse {
     
     
     public String contentType;
+
     public BatchRetrieveInventoryCountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class BatchRetrieveInventoryCountsResponse {
     
     
     public Integer statusCode;
+
     public BatchRetrieveInventoryCountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BatchRetrieveInventoryCountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchRetrieveInventoryCountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchRetrieveInventoryCountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

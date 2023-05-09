@@ -60,12 +60,10 @@ public class RewardProgramActivation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRewardProgramActivationResponse res = new org.openapis.openapi.models.operations.CreateRewardProgramActivationResponse() {{
+        org.openapis.openapi.models.operations.CreateRewardProgramActivationResponse res = new org.openapis.openapi.models.operations.CreateRewardProgramActivationResponse(contentType, httpRes.statusCode()) {{
             createRewardProgramActivationResponse = null;
             createOrUpdateErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,12 +105,10 @@ public class RewardProgramActivation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchRewardProgramActivationResponse res = new org.openapis.openapi.models.operations.FetchRewardProgramActivationResponse() {{
+        org.openapis.openapi.models.operations.FetchRewardProgramActivationResponse res = new org.openapis.openapi.models.operations.FetchRewardProgramActivationResponse(contentType, httpRes.statusCode()) {{
             fetchRewardProgramActivationResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,12 +156,10 @@ public class RewardProgramActivation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchRewardProgramActivationsResponse res = new org.openapis.openapi.models.operations.FetchRewardProgramActivationsResponse() {{
+        org.openapis.openapi.models.operations.FetchRewardProgramActivationsResponse res = new org.openapis.openapi.models.operations.FetchRewardProgramActivationsResponse(contentType, httpRes.statusCode()) {{
             fetchRewardProgramActivationsResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

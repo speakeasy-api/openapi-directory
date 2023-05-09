@@ -12,9 +12,13 @@ public class TeamsUpdatePermissionsRequestBody {
      */
     @JsonProperty("permissions")
     public TeamsUpdatePermissionsRequestBodyPermissionsEnum[] permissions;
+
     public TeamsUpdatePermissionsRequestBody withPermissions(TeamsUpdatePermissionsRequestBodyPermissionsEnum[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public TeamsUpdatePermissionsRequestBody(@JsonProperty("permissions") TeamsUpdatePermissionsRequestBodyPermissionsEnum[] permissions) {
+        this.permissions = permissions;
+  }
 }

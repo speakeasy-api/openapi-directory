@@ -18,6 +18,7 @@ public class ContactCenter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminUser")
     public AdminUser adminUser;
+
     public ContactCenter withAdminUser(AdminUser adminUser) {
         this.adminUser = adminUser;
         return this;
@@ -29,6 +30,7 @@ public class ContactCenter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ccaipManagedUsers")
     public Boolean ccaipManagedUsers;
+
     public ContactCenter withCcaipManagedUsers(Boolean ccaipManagedUsers) {
         this.ccaipManagedUsers = ccaipManagedUsers;
         return this;
@@ -40,6 +42,7 @@ public class ContactCenter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public ContactCenter withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class ContactCenter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerDomainPrefix")
     public String customerDomainPrefix;
+
     public ContactCenter withCustomerDomainPrefix(String customerDomainPrefix) {
         this.customerDomainPrefix = customerDomainPrefix;
         return this;
@@ -62,6 +66,7 @@ public class ContactCenter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ContactCenter withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class ContactCenter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceConfig")
     public InstanceConfig instanceConfig;
+
     public ContactCenter withInstanceConfig(InstanceConfig instanceConfig) {
         this.instanceConfig = instanceConfig;
         return this;
@@ -84,6 +90,7 @@ public class ContactCenter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ContactCenter withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -95,6 +102,7 @@ public class ContactCenter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContactCenter withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class ContactCenter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samlParams")
     public SAMLParams samlParams;
+
     public ContactCenter withSamlParams(SAMLParams samlParams) {
         this.samlParams = samlParams;
         return this;
@@ -117,6 +126,7 @@ public class ContactCenter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ContactCenterStateEnum state;
+
     public ContactCenter withState(ContactCenterStateEnum state) {
         this.state = state;
         return this;
@@ -128,6 +138,7 @@ public class ContactCenter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public ContactCenter withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -139,6 +150,7 @@ public class ContactCenter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uris")
     public URIs uris;
+
     public ContactCenter withUris(URIs uris) {
         this.uris = uris;
         return this;
@@ -150,9 +162,11 @@ public class ContactCenter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEmail")
     public String userEmail;
+
     public ContactCenter withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public ContactCenter(){}
 }

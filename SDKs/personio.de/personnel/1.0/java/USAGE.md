@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DeleteCompanyAttendancesIdRequest;
 import org.openapis.openapi.models.operations.DeleteCompanyAttendancesIdResponse;
 
@@ -13,17 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteCompanyAttendancesIdRequest req = new DeleteCompanyAttendancesIdRequest() {{
-                id = 548814;
-            }}            
+            DeleteCompanyAttendancesIdRequest req = new DeleteCompanyAttendancesIdRequest(548814);            
 
             DeleteCompanyAttendancesIdResponse res = sdk.deleteCompanyAttendancesId(req);
 
-            if (res.response.isPresent()) {
+            if (res.response != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

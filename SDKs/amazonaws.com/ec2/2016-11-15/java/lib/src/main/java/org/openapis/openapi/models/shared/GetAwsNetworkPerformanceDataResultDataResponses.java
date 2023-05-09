@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetAwsNetworkPerformanceDataResultDataResponses {
     
     public String destination;
+
     public GetAwsNetworkPerformanceDataResultDataResponses withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -19,6 +20,7 @@ public class GetAwsNetworkPerformanceDataResultDataResponses {
     
     
     public String id;
+
     public GetAwsNetworkPerformanceDataResultDataResponses withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class GetAwsNetworkPerformanceDataResultDataResponses {
     
     
     public GetAwsNetworkPerformanceDataResultDataResponsesMetricEnum metric;
+
     public GetAwsNetworkPerformanceDataResultDataResponses withMetric(GetAwsNetworkPerformanceDataResultDataResponsesMetricEnum metric) {
         this.metric = metric;
         return this;
@@ -33,6 +36,7 @@ public class GetAwsNetworkPerformanceDataResultDataResponses {
     
     
     public GetAwsNetworkPerformanceDataResultDataResponsesMetricPoints[] metricPoints;
+
     public GetAwsNetworkPerformanceDataResultDataResponses withMetricPoints(GetAwsNetworkPerformanceDataResultDataResponsesMetricPoints[] metricPoints) {
         this.metricPoints = metricPoints;
         return this;
@@ -40,6 +44,7 @@ public class GetAwsNetworkPerformanceDataResultDataResponses {
     
     
     public GetAwsNetworkPerformanceDataResultDataResponsesPeriodEnum period;
+
     public GetAwsNetworkPerformanceDataResultDataResponses withPeriod(GetAwsNetworkPerformanceDataResultDataResponsesPeriodEnum period) {
         this.period = period;
         return this;
@@ -47,6 +52,7 @@ public class GetAwsNetworkPerformanceDataResultDataResponses {
     
     
     public String source;
+
     public GetAwsNetworkPerformanceDataResultDataResponses withSource(String source) {
         this.source = source;
         return this;
@@ -54,9 +60,11 @@ public class GetAwsNetworkPerformanceDataResultDataResponses {
     
     
     public GetAwsNetworkPerformanceDataResultDataResponsesStatisticEnum statistic;
+
     public GetAwsNetworkPerformanceDataResultDataResponses withStatistic(GetAwsNetworkPerformanceDataResultDataResponsesStatisticEnum statistic) {
         this.statistic = statistic;
         return this;
     }
     
+    public GetAwsNetworkPerformanceDataResultDataResponses(){}
 }

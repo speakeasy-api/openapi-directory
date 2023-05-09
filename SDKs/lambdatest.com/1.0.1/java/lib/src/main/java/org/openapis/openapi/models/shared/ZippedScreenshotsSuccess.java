@@ -15,9 +15,11 @@ public class ZippedScreenshotsSuccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ZippedScreenshotsSuccess withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ZippedScreenshotsSuccess(){}
 }

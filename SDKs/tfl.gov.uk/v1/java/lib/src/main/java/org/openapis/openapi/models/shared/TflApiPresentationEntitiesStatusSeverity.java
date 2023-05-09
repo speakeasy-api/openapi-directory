@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesStatusSeverity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TflApiPresentationEntitiesStatusSeverity withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesStatusSeverity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modeName")
     public String modeName;
+
     public TflApiPresentationEntitiesStatusSeverity withModeName(String modeName) {
         this.modeName = modeName;
         return this;
@@ -28,9 +30,11 @@ public class TflApiPresentationEntitiesStatusSeverity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityLevel")
     public Integer severityLevel;
+
     public TflApiPresentationEntitiesStatusSeverity withSeverityLevel(Integer severityLevel) {
         this.severityLevel = severityLevel;
         return this;
     }
     
+    public TflApiPresentationEntitiesStatusSeverity(){}
 }

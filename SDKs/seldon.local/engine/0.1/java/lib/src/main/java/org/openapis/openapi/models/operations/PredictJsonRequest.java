@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SeldonMessage seldonMessage;
+
     public PredictJsonRequest withSeldonMessage(org.openapis.openapi.models.shared.SeldonMessage seldonMessage) {
         this.seldonMessage = seldonMessage;
         return this;
@@ -16,6 +18,7 @@ public class PredictJsonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
     public String deployment;
+
     public PredictJsonRequest withDeployment(String deployment) {
         this.deployment = deployment;
         return this;
@@ -23,9 +26,15 @@ public class PredictJsonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
     public String namespace;
+
     public PredictJsonRequest withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public PredictJsonRequest(@JsonProperty("SeldonMessage") org.openapis.openapi.models.shared.SeldonMessage seldonMessage, @JsonProperty("deployment") String deployment, @JsonProperty("namespace") String namespace) {
+        this.seldonMessage = seldonMessage;
+        this.deployment = deployment;
+        this.namespace = namespace;
+  }
 }

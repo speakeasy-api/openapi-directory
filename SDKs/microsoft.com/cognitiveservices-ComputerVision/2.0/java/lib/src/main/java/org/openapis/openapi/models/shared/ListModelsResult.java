@@ -18,9 +18,11 @@ public class ListModelsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("models")
     public ModelDescription[] models;
+
     public ListModelsResult withModels(ModelDescription[] models) {
         this.models = models;
         return this;
     }
     
+    public ListModelsResult(){}
 }

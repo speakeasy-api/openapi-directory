@@ -18,6 +18,7 @@ public class VolumeUserInfoFamilySharing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("familyRole")
     public String familyRole;
+
     public VolumeUserInfoFamilySharing withFamilyRole(String familyRole) {
         this.familyRole = familyRole;
         return this;
@@ -29,6 +30,7 @@ public class VolumeUserInfoFamilySharing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSharingAllowed")
     public Boolean isSharingAllowed;
+
     public VolumeUserInfoFamilySharing withIsSharingAllowed(Boolean isSharingAllowed) {
         this.isSharingAllowed = isSharingAllowed;
         return this;
@@ -40,9 +42,11 @@ public class VolumeUserInfoFamilySharing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSharingDisabledByFop")
     public Boolean isSharingDisabledByFop;
+
     public VolumeUserInfoFamilySharing withIsSharingDisabledByFop(Boolean isSharingDisabledByFop) {
         this.isSharingDisabledByFop = isSharingDisabledByFop;
         return this;
     }
     
+    public VolumeUserInfoFamilySharing(){}
 }

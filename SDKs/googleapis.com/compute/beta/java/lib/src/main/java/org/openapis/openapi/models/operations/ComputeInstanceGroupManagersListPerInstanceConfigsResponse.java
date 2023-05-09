@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeInstanceGroupManagersListPerInstanceConfigsResponse {
     
     public String contentType;
+
     public ComputeInstanceGroupManagersListPerInstanceConfigsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeInstanceGroupManagersListPerInstanceConfigsResponse {
      */
     
     public org.openapis.openapi.models.shared.InstanceGroupManagersListPerInstanceConfigsResp instanceGroupManagersListPerInstanceConfigsResp;
+
     public ComputeInstanceGroupManagersListPerInstanceConfigsResponse withInstanceGroupManagersListPerInstanceConfigsResp(org.openapis.openapi.models.shared.InstanceGroupManagersListPerInstanceConfigsResp instanceGroupManagersListPerInstanceConfigsResp) {
         this.instanceGroupManagersListPerInstanceConfigsResp = instanceGroupManagersListPerInstanceConfigsResp;
         return this;
@@ -26,6 +29,7 @@ public class ComputeInstanceGroupManagersListPerInstanceConfigsResponse {
     
     
     public Integer statusCode;
+
     public ComputeInstanceGroupManagersListPerInstanceConfigsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeInstanceGroupManagersListPerInstanceConfigsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeInstanceGroupManagersListPerInstanceConfigsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeInstanceGroupManagersListPerInstanceConfigsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

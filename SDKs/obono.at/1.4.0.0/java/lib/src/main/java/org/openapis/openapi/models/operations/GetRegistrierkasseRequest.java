@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRegistrierkasseRequest {
@@ -12,9 +13,13 @@ public class GetRegistrierkasseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrierkasseUuid")
     public String registrierkasseUuid;
+
     public GetRegistrierkasseRequest withRegistrierkasseUuid(String registrierkasseUuid) {
         this.registrierkasseUuid = registrierkasseUuid;
         return this;
     }
     
+    public GetRegistrierkasseRequest(@JsonProperty("registrierkasseUuid") String registrierkasseUuid) {
+        this.registrierkasseUuid = registrierkasseUuid;
+  }
 }

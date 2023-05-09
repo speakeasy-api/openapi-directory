@@ -18,6 +18,7 @@ public class AppointmentProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public AppointmentProfile withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -25,6 +26,7 @@ public class AppointmentProfile {
     
     @JsonProperty("color")
     public String color;
+
     public AppointmentProfile withColor(String color) {
         this.color = color;
         return this;
@@ -33,6 +35,7 @@ public class AppointmentProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doctor")
     public Long doctor;
+
     public AppointmentProfile withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -44,6 +47,7 @@ public class AppointmentProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Long duration;
+
     public AppointmentProfile withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -52,6 +56,7 @@ public class AppointmentProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public AppointmentProfile withId(Long id) {
         this.id = id;
         return this;
@@ -59,6 +64,7 @@ public class AppointmentProfile {
     
     @JsonProperty("name")
     public String name;
+
     public AppointmentProfile withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +75,7 @@ public class AppointmentProfile {
      */
     @JsonProperty("online_scheduling")
     public Boolean onlineScheduling;
+
     public AppointmentProfile withOnlineScheduling(Boolean onlineScheduling) {
         this.onlineScheduling = onlineScheduling;
         return this;
@@ -77,6 +84,7 @@ public class AppointmentProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public AppointmentProfile withReason(String reason) {
         this.reason = reason;
         return this;
@@ -88,9 +96,15 @@ public class AppointmentProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort_order")
     public Long sortOrder;
+
     public AppointmentProfile withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public AppointmentProfile(@JsonProperty("color") String color, @JsonProperty("name") String name, @JsonProperty("online_scheduling") Boolean onlineScheduling) {
+        this.color = color;
+        this.name = name;
+        this.onlineScheduling = onlineScheduling;
+  }
 }

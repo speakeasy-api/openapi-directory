@@ -53,12 +53,10 @@ public class LegalEntities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLegalEntitiesIdResponse res = new org.openapis.openapi.models.operations.GetLegalEntitiesIdResponse() {{
+        org.openapis.openapi.models.operations.GetLegalEntitiesIdResponse res = new org.openapis.openapi.models.operations.GetLegalEntitiesIdResponse(contentType, httpRes.statusCode()) {{
             legalEntity = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,12 +104,10 @@ public class LegalEntities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchLegalEntitiesIdResponse res = new org.openapis.openapi.models.operations.PatchLegalEntitiesIdResponse() {{
+        org.openapis.openapi.models.operations.PatchLegalEntitiesIdResponse res = new org.openapis.openapi.models.operations.PatchLegalEntitiesIdResponse(contentType, httpRes.statusCode()) {{
             legalEntity = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -161,12 +157,10 @@ public class LegalEntities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLegalEntitiesResponse res = new org.openapis.openapi.models.operations.PostLegalEntitiesResponse() {{
+        org.openapis.openapi.models.operations.PostLegalEntitiesResponse res = new org.openapis.openapi.models.operations.PostLegalEntitiesResponse(contentType, httpRes.statusCode()) {{
             legalEntity = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

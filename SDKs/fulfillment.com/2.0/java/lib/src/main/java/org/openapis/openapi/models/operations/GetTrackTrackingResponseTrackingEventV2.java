@@ -17,6 +17,7 @@ public class GetTrackTrackingResponseTrackingEventV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventCategory")
     public String eventCategory;
+
     public GetTrackTrackingResponseTrackingEventV2 withEventCategory(String eventCategory) {
         this.eventCategory = eventCategory;
         return this;
@@ -25,6 +26,7 @@ public class GetTrackTrackingResponseTrackingEventV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventCategoryCode")
     public Long eventCategoryCode;
+
     public GetTrackTrackingResponseTrackingEventV2 withEventCategoryCode(Long eventCategoryCode) {
         this.eventCategoryCode = eventCategoryCode;
         return this;
@@ -35,6 +37,7 @@ public class GetTrackTrackingResponseTrackingEventV2 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("eventDateTime")
     public OffsetDateTime eventDateTime;
+
     public GetTrackTrackingResponseTrackingEventV2 withEventDateTime(OffsetDateTime eventDateTime) {
         this.eventDateTime = eventDateTime;
         return this;
@@ -47,6 +50,7 @@ public class GetTrackTrackingResponseTrackingEventV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventLocation")
     public org.openapis.openapi.models.shared.OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigin eventLocation;
+
     public GetTrackTrackingResponseTrackingEventV2 withEventLocation(org.openapis.openapi.models.shared.OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigin eventLocation) {
         this.eventLocation = eventLocation;
         return this;
@@ -55,6 +59,7 @@ public class GetTrackTrackingResponseTrackingEventV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventSource")
     public GetTrackTrackingResponseTrackingEventV2EventSourceEnum eventSource;
+
     public GetTrackTrackingResponseTrackingEventV2 withEventSource(GetTrackTrackingResponseTrackingEventV2EventSourceEnum eventSource) {
         this.eventSource = eventSource;
         return this;
@@ -63,9 +68,11 @@ public class GetTrackTrackingResponseTrackingEventV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventStatus")
     public String eventStatus;
+
     public GetTrackTrackingResponseTrackingEventV2 withEventStatus(String eventStatus) {
         this.eventStatus = eventStatus;
         return this;
     }
     
+    public GetTrackTrackingResponseTrackingEventV2(){}
 }

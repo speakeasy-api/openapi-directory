@@ -15,6 +15,7 @@ public class ListBotVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public ListBotVersionsResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -23,6 +24,7 @@ public class ListBotVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersionSummaries")
     public BotVersionSummary[] botVersionSummaries;
+
     public ListBotVersionsResponse withBotVersionSummaries(BotVersionSummary[] botVersionSummaries) {
         this.botVersionSummaries = botVersionSummaries;
         return this;
@@ -31,9 +33,11 @@ public class ListBotVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBotVersionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBotVersionsResponse(){}
 }

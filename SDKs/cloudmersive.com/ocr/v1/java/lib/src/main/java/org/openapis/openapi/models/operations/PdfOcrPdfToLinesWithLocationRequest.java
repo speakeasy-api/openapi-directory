@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PdfOcrPdfToLinesWithLocationRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PdfOcrPdfToLinesWithLocationRequestBody requestBody;
+
     public PdfOcrPdfToLinesWithLocationRequest withRequestBody(PdfOcrPdfToLinesWithLocationRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PdfOcrPdfToLinesWithLocationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=language")
     public String language;
+
     public PdfOcrPdfToLinesWithLocationRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -29,9 +32,13 @@ public class PdfOcrPdfToLinesWithLocationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=preprocessing")
     public String preprocessing;
+
     public PdfOcrPdfToLinesWithLocationRequest withPreprocessing(String preprocessing) {
         this.preprocessing = preprocessing;
         return this;
     }
     
+    public PdfOcrPdfToLinesWithLocationRequest(@JsonProperty("RequestBody") PdfOcrPdfToLinesWithLocationRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

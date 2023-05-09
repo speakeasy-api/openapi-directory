@@ -15,9 +15,11 @@ public class Dma {
      */
     
     public Integer id;
+
     public Dma withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public Dma(){}
 }

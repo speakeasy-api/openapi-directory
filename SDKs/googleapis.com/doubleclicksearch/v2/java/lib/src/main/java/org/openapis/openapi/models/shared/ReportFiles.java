@@ -15,6 +15,7 @@ public class ReportFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byteCount")
     public String byteCount;
+
     public ReportFiles withByteCount(String byteCount) {
         this.byteCount = byteCount;
         return this;
@@ -26,9 +27,11 @@ public class ReportFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ReportFiles withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ReportFiles(){}
 }

@@ -18,6 +18,7 @@ public class EmbeddedObjectBorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public Color color;
+
     public EmbeddedObjectBorder withColor(Color color) {
         this.color = color;
         return this;
@@ -29,9 +30,11 @@ public class EmbeddedObjectBorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colorStyle")
     public ColorStyle colorStyle;
+
     public EmbeddedObjectBorder withColorStyle(ColorStyle colorStyle) {
         this.colorStyle = colorStyle;
         return this;
     }
     
+    public EmbeddedObjectBorder(){}
 }

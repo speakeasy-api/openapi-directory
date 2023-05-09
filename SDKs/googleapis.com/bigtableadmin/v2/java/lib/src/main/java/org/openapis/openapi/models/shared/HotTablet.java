@@ -18,6 +18,7 @@ public class HotTablet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endKey")
     public String endKey;
+
     public HotTablet withEndKey(String endKey) {
         this.endKey = endKey;
         return this;
@@ -29,6 +30,7 @@ public class HotTablet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public HotTablet withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +42,7 @@ public class HotTablet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public HotTablet withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class HotTablet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeCpuUsagePercent")
     public Float nodeCpuUsagePercent;
+
     public HotTablet withNodeCpuUsagePercent(Float nodeCpuUsagePercent) {
         this.nodeCpuUsagePercent = nodeCpuUsagePercent;
         return this;
@@ -62,6 +66,7 @@ public class HotTablet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startKey")
     public String startKey;
+
     public HotTablet withStartKey(String startKey) {
         this.startKey = startKey;
         return this;
@@ -73,6 +78,7 @@ public class HotTablet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public HotTablet withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -84,9 +90,11 @@ public class HotTablet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableName")
     public String tableName;
+
     public HotTablet withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public HotTablet(){}
 }

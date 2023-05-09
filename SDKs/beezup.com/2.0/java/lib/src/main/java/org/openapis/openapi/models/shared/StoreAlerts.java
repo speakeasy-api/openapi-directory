@@ -15,9 +15,11 @@ public class StoreAlerts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alerts")
     public StoreAlert[] alerts;
+
     public StoreAlerts withAlerts(StoreAlert[] alerts) {
         this.alerts = alerts;
         return this;
     }
     
+    public StoreAlerts(){}
 }

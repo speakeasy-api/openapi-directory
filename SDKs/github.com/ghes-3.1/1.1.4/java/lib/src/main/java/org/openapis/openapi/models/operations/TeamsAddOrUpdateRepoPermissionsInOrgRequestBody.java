@@ -15,9 +15,11 @@ public class TeamsAddOrUpdateRepoPermissionsInOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum permission;
+
     public TeamsAddOrUpdateRepoPermissionsInOrgRequestBody withPermission(TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum permission) {
         this.permission = permission;
         return this;
     }
     
+    public TeamsAddOrUpdateRepoPermissionsInOrgRequestBody(){}
 }

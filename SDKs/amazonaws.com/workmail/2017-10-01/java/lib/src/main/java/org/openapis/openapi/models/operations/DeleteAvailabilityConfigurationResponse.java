@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAvailabilityConfigurationResponse {
     
     public String contentType;
+
     public DeleteAvailabilityConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAvailabilityConfigurationResponse {
      */
     
     public java.util.Map<String, Object> deleteAvailabilityConfigurationResponse;
+
     public DeleteAvailabilityConfigurationResponse withDeleteAvailabilityConfigurationResponse(java.util.Map<String, Object> deleteAvailabilityConfigurationResponse) {
         this.deleteAvailabilityConfigurationResponse = deleteAvailabilityConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAvailabilityConfigurationResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DeleteAvailabilityConfigurationResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAvailabilityConfigurationResponse {
      */
     
     public Object organizationStateException;
+
     public DeleteAvailabilityConfigurationResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteAvailabilityConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteAvailabilityConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteAvailabilityConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAvailabilityConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteAvailabilityConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

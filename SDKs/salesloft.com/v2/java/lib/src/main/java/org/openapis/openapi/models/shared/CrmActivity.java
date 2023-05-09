@@ -15,6 +15,7 @@ public class CrmActivity {
      */
     
     public String activityType;
+
     public CrmActivity withActivityType(String activityType) {
         this.activityType = activityType;
         return this;
@@ -25,6 +26,7 @@ public class CrmActivity {
      */
     
     public OffsetDateTime createdAt;
+
     public CrmActivity withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class CrmActivity {
      */
     
     public String crmId;
+
     public CrmActivity withCrmId(String crmId) {
         this.crmId = crmId;
         return this;
@@ -45,6 +48,7 @@ public class CrmActivity {
      */
     
     public java.util.Map<String, Object> customCrmFields;
+
     public CrmActivity withCustomCrmFields(java.util.Map<String, Object> customCrmFields) {
         this.customCrmFields = customCrmFields;
         return this;
@@ -55,6 +59,7 @@ public class CrmActivity {
      */
     
     public String description;
+
     public CrmActivity withDescription(String description) {
         this.description = description;
         return this;
@@ -65,6 +70,7 @@ public class CrmActivity {
      */
     
     public String error;
+
     public CrmActivity withError(String error) {
         this.error = error;
         return this;
@@ -75,6 +81,7 @@ public class CrmActivity {
      */
     
     public Long id;
+
     public CrmActivity withId(Long id) {
         this.id = id;
         return this;
@@ -82,6 +89,7 @@ public class CrmActivity {
     
     
     public EmbeddedResource person;
+
     public CrmActivity withPerson(EmbeddedResource person) {
         this.person = person;
         return this;
@@ -92,6 +100,7 @@ public class CrmActivity {
      */
     
     public String subject;
+
     public CrmActivity withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -102,6 +111,7 @@ public class CrmActivity {
      */
     
     public OffsetDateTime updatedAt;
+
     public CrmActivity withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -109,9 +119,11 @@ public class CrmActivity {
     
     
     public EmbeddedResource user;
+
     public CrmActivity withUser(EmbeddedResource user) {
         this.user = user;
         return this;
     }
     
+    public CrmActivity(){}
 }

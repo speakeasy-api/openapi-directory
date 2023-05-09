@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGeneHomologAssociationsRequest {
@@ -12,6 +13,7 @@ public class GetGeneHomologAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direct")
     public Boolean direct;
+
     public GetGeneHomologAssociationsRequest withDirect(Boolean direct) {
         this.direct = direct;
         return this;
@@ -22,6 +24,7 @@ public class GetGeneHomologAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direct_taxon")
     public Boolean directTaxon;
+
     public GetGeneHomologAssociationsRequest withDirectTaxon(Boolean directTaxon) {
         this.directTaxon = directTaxon;
         return this;
@@ -32,6 +35,7 @@ public class GetGeneHomologAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
     public String evidence;
+
     public GetGeneHomologAssociationsRequest withEvidence(String evidence) {
         this.evidence = evidence;
         return this;
@@ -42,6 +46,7 @@ public class GetGeneHomologAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
     public Boolean excludeAutomaticAssertions;
+
     public GetGeneHomologAssociationsRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
         this.excludeAutomaticAssertions = excludeAutomaticAssertions;
         return this;
@@ -52,6 +57,7 @@ public class GetGeneHomologAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet")
     public Boolean facet;
+
     public GetGeneHomologAssociationsRequest withFacet(Boolean facet) {
         this.facet = facet;
         return this;
@@ -62,6 +68,7 @@ public class GetGeneHomologAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet_fields")
     public String[] facetFields;
+
     public GetGeneHomologAssociationsRequest withFacetFields(String[] facetFields) {
         this.facetFields = facetFields;
         return this;
@@ -72,6 +79,7 @@ public class GetGeneHomologAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fetch_objects")
     public Boolean fetchObjects;
+
     public GetGeneHomologAssociationsRequest withFetchObjects(Boolean fetchObjects) {
         this.fetchObjects = fetchObjects;
         return this;
@@ -82,6 +90,7 @@ public class GetGeneHomologAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=homology_type")
     public GetGeneHomologAssociationsHomologyTypeEnum homologyType;
+
     public GetGeneHomologAssociationsRequest withHomologyType(GetGeneHomologAssociationsHomologyTypeEnum homologyType) {
         this.homologyType = homologyType;
         return this;
@@ -92,6 +101,7 @@ public class GetGeneHomologAssociationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetGeneHomologAssociationsRequest withId(String id) {
         this.id = id;
         return this;
@@ -102,6 +112,7 @@ public class GetGeneHomologAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
     public Long rows;
+
     public GetGeneHomologAssociationsRequest withRows(Long rows) {
         this.rows = rows;
         return this;
@@ -112,6 +123,7 @@ public class GetGeneHomologAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slim")
     public String[] slim;
+
     public GetGeneHomologAssociationsRequest withSlim(String[] slim) {
         this.slim = slim;
         return this;
@@ -122,6 +134,7 @@ public class GetGeneHomologAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Long start;
+
     public GetGeneHomologAssociationsRequest withStart(Long start) {
         this.start = start;
         return this;
@@ -132,6 +145,7 @@ public class GetGeneHomologAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxon")
     public String[] taxon;
+
     public GetGeneHomologAssociationsRequest withTaxon(String[] taxon) {
         this.taxon = taxon;
         return this;
@@ -142,6 +156,7 @@ public class GetGeneHomologAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unselect_evidence")
     public Boolean unselectEvidence;
+
     public GetGeneHomologAssociationsRequest withUnselectEvidence(Boolean unselectEvidence) {
         this.unselectEvidence = unselectEvidence;
         return this;
@@ -152,9 +167,13 @@ public class GetGeneHomologAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_compact_associations")
     public Boolean useCompactAssociations;
+
     public GetGeneHomologAssociationsRequest withUseCompactAssociations(Boolean useCompactAssociations) {
         this.useCompactAssociations = useCompactAssociations;
         return this;
     }
     
+    public GetGeneHomologAssociationsRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -73,13 +73,11 @@ public class Organisations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdResponse res = new org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdResponse res = new org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdResponse(contentType, httpRes.statusCode()) {{
             failedPrecondition = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -145,13 +143,11 @@ public class Organisations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganisationsResponse res = new org.openapis.openapi.models.operations.GetOrganisationsResponse() {{
+        org.openapis.openapi.models.operations.GetOrganisationsResponse res = new org.openapis.openapi.models.operations.GetOrganisationsResponse(contentType, httpRes.statusCode()) {{
             organisations = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -211,13 +207,11 @@ public class Organisations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganisationsPartyIdResponse res = new org.openapis.openapi.models.operations.GetOrganisationsPartyIdResponse() {{
+        org.openapis.openapi.models.operations.GetOrganisationsPartyIdResponse res = new org.openapis.openapi.models.operations.GetOrganisationsPartyIdResponse(contentType, httpRes.statusCode()) {{
             organisation = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -280,13 +274,11 @@ public class Organisations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostOrganisationsResponse res = new org.openapis.openapi.models.operations.PostOrganisationsResponse() {{
+        org.openapis.openapi.models.operations.PostOrganisationsResponse res = new org.openapis.openapi.models.operations.PostOrganisationsResponse(contentType, httpRes.statusCode()) {{
             organisation = null;
             invalidArgument = null;
             unauthenticated = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -351,14 +343,12 @@ public class Organisations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutOrganisationsPartyIdResponse res = new org.openapis.openapi.models.operations.PutOrganisationsPartyIdResponse() {{
+        org.openapis.openapi.models.operations.PutOrganisationsPartyIdResponse res = new org.openapis.openapi.models.operations.PutOrganisationsPartyIdResponse(contentType, httpRes.statusCode()) {{
             organisation = null;
             invalidArgument = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

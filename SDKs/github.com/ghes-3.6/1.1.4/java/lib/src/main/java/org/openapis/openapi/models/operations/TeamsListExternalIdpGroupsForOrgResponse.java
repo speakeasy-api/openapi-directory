@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsListExternalIdpGroupsForOrgResponse {
     
     public String contentType;
+
     public TeamsListExternalIdpGroupsForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsListExternalIdpGroupsForOrgResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public TeamsListExternalIdpGroupsForOrgResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class TeamsListExternalIdpGroupsForOrgResponse {
     
     
     public Integer statusCode;
+
     public TeamsListExternalIdpGroupsForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class TeamsListExternalIdpGroupsForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsListExternalIdpGroupsForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class TeamsListExternalIdpGroupsForOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.ExternalGroups externalGroups;
+
     public TeamsListExternalIdpGroupsForOrgResponse withExternalGroups(org.openapis.openapi.models.shared.ExternalGroups externalGroups) {
         this.externalGroups = externalGroups;
         return this;
     }
     
+    public TeamsListExternalIdpGroupsForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

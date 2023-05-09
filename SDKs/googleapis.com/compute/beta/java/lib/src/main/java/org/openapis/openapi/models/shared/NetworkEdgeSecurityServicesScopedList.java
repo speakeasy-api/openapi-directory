@@ -15,6 +15,7 @@ public class NetworkEdgeSecurityServicesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkEdgeSecurityServices")
     public NetworkEdgeSecurityService[] networkEdgeSecurityServices;
+
     public NetworkEdgeSecurityServicesScopedList withNetworkEdgeSecurityServices(NetworkEdgeSecurityService[] networkEdgeSecurityServices) {
         this.networkEdgeSecurityServices = networkEdgeSecurityServices;
         return this;
@@ -26,9 +27,11 @@ public class NetworkEdgeSecurityServicesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public NetworkEdgeSecurityServicesScopedListWarning warning;
+
     public NetworkEdgeSecurityServicesScopedList withWarning(NetworkEdgeSecurityServicesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public NetworkEdgeSecurityServicesScopedList(){}
 }

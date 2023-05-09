@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTableStatisticsResponse {
     
     public String contentType;
+
     public DescribeTableStatisticsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTableStatisticsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTableStatisticsResponse describeTableStatisticsResponse;
+
     public DescribeTableStatisticsResponse withDescribeTableStatisticsResponse(org.openapis.openapi.models.shared.DescribeTableStatisticsResponse describeTableStatisticsResponse) {
         this.describeTableStatisticsResponse = describeTableStatisticsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTableStatisticsResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public DescribeTableStatisticsResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -39,6 +43,7 @@ public class DescribeTableStatisticsResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public DescribeTableStatisticsResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -46,6 +51,7 @@ public class DescribeTableStatisticsResponse {
     
     
     public Integer statusCode;
+
     public DescribeTableStatisticsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeTableStatisticsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTableStatisticsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeTableStatisticsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class DisassociateFraudsterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Fraudster")
     public Fraudster fraudster;
+
     public DisassociateFraudsterResponse withFraudster(Fraudster fraudster) {
         this.fraudster = fraudster;
         return this;
     }
     
+    public DisassociateFraudsterResponse(){}
 }

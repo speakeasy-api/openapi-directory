@@ -15,9 +15,11 @@ public class DescribeValidDBInstanceModificationsResult {
      */
     
     public ValidDBInstanceModificationsMessage validDBInstanceModificationsMessage;
+
     public DescribeValidDBInstanceModificationsResult withValidDBInstanceModificationsMessage(ValidDBInstanceModificationsMessage validDBInstanceModificationsMessage) {
         this.validDBInstanceModificationsMessage = validDBInstanceModificationsMessage;
         return this;
     }
     
+    public DescribeValidDBInstanceModificationsResult(){}
 }

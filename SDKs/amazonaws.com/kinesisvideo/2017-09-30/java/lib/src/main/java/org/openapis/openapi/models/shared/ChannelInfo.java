@@ -20,6 +20,7 @@ public class ChannelInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelARN")
     public String channelARN;
+
     public ChannelInfo withChannelARN(String channelARN) {
         this.channelARN = channelARN;
         return this;
@@ -28,6 +29,7 @@ public class ChannelInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelName")
     public String channelName;
+
     public ChannelInfo withChannelName(String channelName) {
         this.channelName = channelName;
         return this;
@@ -36,6 +38,7 @@ public class ChannelInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelStatus")
     public StatusEnum channelStatus;
+
     public ChannelInfo withChannelStatus(StatusEnum channelStatus) {
         this.channelStatus = channelStatus;
         return this;
@@ -44,6 +47,7 @@ public class ChannelInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelType")
     public ChannelTypeEnum channelType;
+
     public ChannelInfo withChannelType(ChannelTypeEnum channelType) {
         this.channelType = channelType;
         return this;
@@ -54,6 +58,7 @@ public class ChannelInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ChannelInfo withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -62,6 +67,7 @@ public class ChannelInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SingleMasterConfiguration")
     public SingleMasterConfiguration singleMasterConfiguration;
+
     public ChannelInfo withSingleMasterConfiguration(SingleMasterConfiguration singleMasterConfiguration) {
         this.singleMasterConfiguration = singleMasterConfiguration;
         return this;
@@ -70,9 +76,11 @@ public class ChannelInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public ChannelInfo withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ChannelInfo(){}
 }

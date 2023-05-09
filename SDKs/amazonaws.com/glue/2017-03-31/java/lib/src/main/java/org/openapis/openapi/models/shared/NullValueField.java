@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NullValueField {
     @JsonProperty("Datatype")
     public Datatype datatype;
+
     public NullValueField withDatatype(Datatype datatype) {
         this.datatype = datatype;
         return this;
@@ -19,9 +20,14 @@ public class NullValueField {
     
     @JsonProperty("Value")
     public String value;
+
     public NullValueField withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public NullValueField(@JsonProperty("Datatype") Datatype datatype, @JsonProperty("Value") String value) {
+        this.datatype = datatype;
+        this.value = value;
+  }
 }

@@ -18,6 +18,7 @@ public class ProjectSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classificationType")
     public ProjectSettingsClassificationTypeEnum classificationType;
+
     public ProjectSettingsInput withClassificationType(ProjectSettingsClassificationTypeEnum classificationType) {
         this.classificationType = classificationType;
         return this;
@@ -29,6 +30,7 @@ public class ProjectSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainId")
     public String domainId;
+
     public ProjectSettingsInput withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -40,6 +42,7 @@ public class ProjectSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageProcessingSettings")
     public ImageProcessingSettings imageProcessingSettings;
+
     public ProjectSettingsInput withImageProcessingSettings(ImageProcessingSettings imageProcessingSettings) {
         this.imageProcessingSettings = imageProcessingSettings;
         return this;
@@ -51,9 +54,11 @@ public class ProjectSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetExportPlatforms")
     public ProjectSettingsTargetExportPlatformsEnum[] targetExportPlatforms;
+
     public ProjectSettingsInput withTargetExportPlatforms(ProjectSettingsTargetExportPlatformsEnum[] targetExportPlatforms) {
         this.targetExportPlatforms = targetExportPlatforms;
         return this;
     }
     
+    public ProjectSettingsInput(){}
 }

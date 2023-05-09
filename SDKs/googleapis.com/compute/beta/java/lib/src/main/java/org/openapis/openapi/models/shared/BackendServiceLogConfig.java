@@ -18,6 +18,7 @@ public class BackendServiceLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable")
     public Boolean enable;
+
     public BackendServiceLogConfig withEnable(Boolean enable) {
         this.enable = enable;
         return this;
@@ -29,6 +30,7 @@ public class BackendServiceLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optionalFields")
     public String[] optionalFields;
+
     public BackendServiceLogConfig withOptionalFields(String[] optionalFields) {
         this.optionalFields = optionalFields;
         return this;
@@ -40,6 +42,7 @@ public class BackendServiceLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optionalMode")
     public BackendServiceLogConfigOptionalModeEnum optionalMode;
+
     public BackendServiceLogConfig withOptionalMode(BackendServiceLogConfigOptionalModeEnum optionalMode) {
         this.optionalMode = optionalMode;
         return this;
@@ -51,9 +54,11 @@ public class BackendServiceLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleRate")
     public Float sampleRate;
+
     public BackendServiceLogConfig withSampleRate(Float sampleRate) {
         this.sampleRate = sampleRate;
         return this;
     }
     
+    public BackendServiceLogConfig(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest {
@@ -12,6 +13,7 @@ public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,16 +79,18 @@ public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
     }
     
     /**
-     * The maximum number of processor versions to return. If unspecified, at most 10 processor versions will be returned. The maximum value is 20; values above 20 will be coerced to 20.
+     * The maximum number of processor versions to return. If unspecified, at most `10` processor versions will be returned. The maximum value is `20`. Values above `20` will be coerced to `20`.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -92,6 +101,7 @@ public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -102,6 +112,7 @@ public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -112,6 +123,7 @@ public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,13 @@ public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

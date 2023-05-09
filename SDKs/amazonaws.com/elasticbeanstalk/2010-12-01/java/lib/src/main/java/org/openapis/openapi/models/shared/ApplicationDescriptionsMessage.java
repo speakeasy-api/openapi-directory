@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ApplicationDescriptionsMessage {
     
     public ApplicationDescription[] applications;
+
     public ApplicationDescriptionsMessage withApplications(ApplicationDescription[] applications) {
         this.applications = applications;
         return this;
     }
     
+    public ApplicationDescriptionsMessage(){}
 }

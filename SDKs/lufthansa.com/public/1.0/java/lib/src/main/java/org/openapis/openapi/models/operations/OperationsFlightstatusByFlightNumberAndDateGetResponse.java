@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OperationsFlightstatusByFlightNumberAndDateGetResponse {
     
     public String contentType;
+
     public OperationsFlightstatusByFlightNumberAndDateGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OperationsFlightstatusByFlightNumberAndDateGetResponse {
     
     
     public java.util.Map<String, Object> operationsFlightstatusByFlightNumberAndDateGet200ApplicationJSONObject;
+
     public OperationsFlightstatusByFlightNumberAndDateGetResponse withOperationsFlightstatusByFlightNumberAndDateGet200ApplicationJSONObject(java.util.Map<String, Object> operationsFlightstatusByFlightNumberAndDateGet200ApplicationJSONObject) {
         this.operationsFlightstatusByFlightNumberAndDateGet200ApplicationJSONObject = operationsFlightstatusByFlightNumberAndDateGet200ApplicationJSONObject;
         return this;
@@ -23,6 +26,7 @@ public class OperationsFlightstatusByFlightNumberAndDateGetResponse {
     
     
     public Integer statusCode;
+
     public OperationsFlightstatusByFlightNumberAndDateGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class OperationsFlightstatusByFlightNumberAndDateGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OperationsFlightstatusByFlightNumberAndDateGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OperationsFlightstatusByFlightNumberAndDateGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

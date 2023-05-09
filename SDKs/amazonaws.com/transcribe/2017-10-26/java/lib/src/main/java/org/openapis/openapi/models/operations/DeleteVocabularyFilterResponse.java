@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVocabularyFilterResponse {
@@ -12,6 +13,7 @@ public class DeleteVocabularyFilterResponse {
      */
     
     public Object badRequestException;
+
     public DeleteVocabularyFilterResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteVocabularyFilterResponse {
     
     
     public String contentType;
+
     public DeleteVocabularyFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteVocabularyFilterResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteVocabularyFilterResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteVocabularyFilterResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteVocabularyFilterResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteVocabularyFilterResponse {
      */
     
     public Object notFoundException;
+
     public DeleteVocabularyFilterResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteVocabularyFilterResponse {
     
     
     public Integer statusCode;
+
     public DeleteVocabularyFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteVocabularyFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVocabularyFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteVocabularyFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

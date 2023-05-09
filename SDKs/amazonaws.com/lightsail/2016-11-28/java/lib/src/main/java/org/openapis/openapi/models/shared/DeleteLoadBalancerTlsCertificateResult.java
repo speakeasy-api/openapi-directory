@@ -15,9 +15,11 @@ public class DeleteLoadBalancerTlsCertificateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public DeleteLoadBalancerTlsCertificateResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public DeleteLoadBalancerTlsCertificateResult(){}
 }

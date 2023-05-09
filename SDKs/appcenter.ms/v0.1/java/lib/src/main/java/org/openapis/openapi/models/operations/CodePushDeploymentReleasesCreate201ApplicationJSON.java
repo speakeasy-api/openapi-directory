@@ -15,6 +15,7 @@ public class CodePushDeploymentReleasesCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blob_url")
     public String blobUrl;
+
     public CodePushDeploymentReleasesCreate201ApplicationJSON withBlobUrl(String blobUrl) {
         this.blobUrl = blobUrl;
         return this;
@@ -23,6 +24,7 @@ public class CodePushDeploymentReleasesCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CodePushDeploymentReleasesCreate201ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class CodePushDeploymentReleasesCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diff_package_map")
     public java.util.Map<String, CodePushDeploymentReleasesCreate201ApplicationJSONDiffPackageMap> diffPackageMap;
+
     public CodePushDeploymentReleasesCreate201ApplicationJSON withDiffPackageMap(java.util.Map<String, CodePushDeploymentReleasesCreate201ApplicationJSONDiffPackageMap> diffPackageMap) {
         this.diffPackageMap = diffPackageMap;
         return this;
@@ -39,6 +42,7 @@ public class CodePushDeploymentReleasesCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_disabled")
     public Boolean isDisabled;
+
     public CodePushDeploymentReleasesCreate201ApplicationJSON withIsDisabled(Boolean isDisabled) {
         this.isDisabled = isDisabled;
         return this;
@@ -47,6 +51,7 @@ public class CodePushDeploymentReleasesCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_mandatory")
     public Boolean isMandatory;
+
     public CodePushDeploymentReleasesCreate201ApplicationJSON withIsMandatory(Boolean isMandatory) {
         this.isMandatory = isMandatory;
         return this;
@@ -55,6 +60,7 @@ public class CodePushDeploymentReleasesCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CodePushDeploymentReleasesCreate201ApplicationJSON withLabel(String label) {
         this.label = label;
         return this;
@@ -66,6 +72,7 @@ public class CodePushDeploymentReleasesCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_deployment")
     public String originalDeployment;
+
     public CodePushDeploymentReleasesCreate201ApplicationJSON withOriginalDeployment(String originalDeployment) {
         this.originalDeployment = originalDeployment;
         return this;
@@ -77,6 +84,7 @@ public class CodePushDeploymentReleasesCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_label")
     public String originalLabel;
+
     public CodePushDeploymentReleasesCreate201ApplicationJSON withOriginalLabel(String originalLabel) {
         this.originalLabel = originalLabel;
         return this;
@@ -85,6 +93,7 @@ public class CodePushDeploymentReleasesCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package_hash")
     public String packageHash;
+
     public CodePushDeploymentReleasesCreate201ApplicationJSON withPackageHash(String packageHash) {
         this.packageHash = packageHash;
         return this;
@@ -96,6 +105,7 @@ public class CodePushDeploymentReleasesCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_method")
     public CodePushDeploymentReleasesCreate201ApplicationJSONReleaseMethodEnum releaseMethod;
+
     public CodePushDeploymentReleasesCreate201ApplicationJSON withReleaseMethod(CodePushDeploymentReleasesCreate201ApplicationJSONReleaseMethodEnum releaseMethod) {
         this.releaseMethod = releaseMethod;
         return this;
@@ -104,6 +114,7 @@ public class CodePushDeploymentReleasesCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("released_by")
     public String releasedBy;
+
     public CodePushDeploymentReleasesCreate201ApplicationJSON withReleasedBy(String releasedBy) {
         this.releasedBy = releasedBy;
         return this;
@@ -112,6 +123,7 @@ public class CodePushDeploymentReleasesCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollout")
     public Long rollout;
+
     public CodePushDeploymentReleasesCreate201ApplicationJSON withRollout(Long rollout) {
         this.rollout = rollout;
         return this;
@@ -120,6 +132,7 @@ public class CodePushDeploymentReleasesCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Double size;
+
     public CodePushDeploymentReleasesCreate201ApplicationJSON withSize(Double size) {
         this.size = size;
         return this;
@@ -128,6 +141,7 @@ public class CodePushDeploymentReleasesCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_binary_range")
     public String targetBinaryRange;
+
     public CodePushDeploymentReleasesCreate201ApplicationJSON withTargetBinaryRange(String targetBinaryRange) {
         this.targetBinaryRange = targetBinaryRange;
         return this;
@@ -136,9 +150,11 @@ public class CodePushDeploymentReleasesCreate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upload_time")
     public Long uploadTime;
+
     public CodePushDeploymentReleasesCreate201ApplicationJSON withUploadTime(Long uploadTime) {
         this.uploadTime = uploadTime;
         return this;
     }
     
+    public CodePushDeploymentReleasesCreate201ApplicationJSON(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClouddeployProjectsLocationsTargetsPatchResponse {
     
     public String contentType;
+
     public ClouddeployProjectsLocationsTargetsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ClouddeployProjectsLocationsTargetsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public ClouddeployProjectsLocationsTargetsPatchResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class ClouddeployProjectsLocationsTargetsPatchResponse {
     
     
     public Integer statusCode;
+
     public ClouddeployProjectsLocationsTargetsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ClouddeployProjectsLocationsTargetsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClouddeployProjectsLocationsTargetsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClouddeployProjectsLocationsTargetsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

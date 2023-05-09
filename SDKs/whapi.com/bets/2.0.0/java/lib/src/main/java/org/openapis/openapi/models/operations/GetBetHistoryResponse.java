@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBetHistoryResponse {
     
     public String contentType;
+
     public GetBetHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetBetHistoryResponse {
     
     
     public Integer statusCode;
+
     public GetBetHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetBetHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBetHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetBetHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.BetHistoryResponse betHistoryResponse;
+
     public GetBetHistoryResponse withBetHistoryResponse(org.openapis.openapi.models.shared.BetHistoryResponse betHistoryResponse) {
         this.betHistoryResponse = betHistoryResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetBetHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.Errors errors;
+
     public GetBetHistoryResponse withErrors(org.openapis.openapi.models.shared.Errors errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetBetHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAwsLogSourceResponse {
@@ -12,6 +13,7 @@ public class DeleteAwsLogSourceResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteAwsLogSourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteAwsLogSourceResponse {
      */
     
     public Object accountNotFoundException;
+
     public DeleteAwsLogSourceResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAwsLogSourceResponse {
     
     
     public String contentType;
+
     public DeleteAwsLogSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAwsLogSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteAwsLogSourceResponse deleteAwsLogSourceResponse;
+
     public DeleteAwsLogSourceResponse withDeleteAwsLogSourceResponse(org.openapis.openapi.models.shared.DeleteAwsLogSourceResponse deleteAwsLogSourceResponse) {
         this.deleteAwsLogSourceResponse = deleteAwsLogSourceResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAwsLogSourceResponse {
      */
     
     public Object internalServerException;
+
     public DeleteAwsLogSourceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteAwsLogSourceResponse {
     
     
     public Integer statusCode;
+
     public DeleteAwsLogSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteAwsLogSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAwsLogSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteAwsLogSourceResponse {
      */
     
     public Object validationException;
+
     public DeleteAwsLogSourceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteAwsLogSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

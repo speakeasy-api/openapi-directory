@@ -15,6 +15,7 @@ public class ListTagsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTagsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTagsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ListTagsOutput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListTagsOutput(){}
 }

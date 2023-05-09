@@ -48,10 +48,8 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse res = new org.openapis.openapi.models.operations.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse() {{
+        org.openapis.openapi.models.operations.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse res = new org.openapis.openapi.models.operations.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -81,10 +79,8 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse res = new org.openapis.openapi.models.operations.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse() {{
+        org.openapis.openapi.models.operations.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse res = new org.openapis.openapi.models.operations.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -114,10 +110,8 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeResponse res = new org.openapis.openapi.models.operations.GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeResponse() {{
+        org.openapis.openapi.models.operations.GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeResponse res = new org.openapis.openapi.models.operations.GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,10 +141,8 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExportGobdRegistrierkassenRegistrierkasseUuidResponse res = new org.openapis.openapi.models.operations.GetExportGobdRegistrierkassenRegistrierkasseUuidResponse() {{
+        org.openapis.openapi.models.operations.GetExportGobdRegistrierkassenRegistrierkasseUuidResponse res = new org.openapis.openapi.models.operations.GetExportGobdRegistrierkassenRegistrierkasseUuidResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,10 +166,8 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExportHtmlBelegeBelegUuidResponse res = new org.openapis.openapi.models.operations.GetExportHtmlBelegeBelegUuidResponse() {{
+        org.openapis.openapi.models.operations.GetExportHtmlBelegeBelegUuidResponse res = new org.openapis.openapi.models.operations.GetExportHtmlBelegeBelegUuidResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,10 +191,8 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExportPdfBelegeBelegUuidResponse res = new org.openapis.openapi.models.operations.GetExportPdfBelegeBelegUuidResponse() {{
+        org.openapis.openapi.models.operations.GetExportPdfBelegeBelegUuidResponse res = new org.openapis.openapi.models.operations.GetExportPdfBelegeBelegUuidResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -228,10 +216,8 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExportQrBelegeBelegUuidResponse res = new org.openapis.openapi.models.operations.GetExportQrBelegeBelegUuidResponse() {{
+        org.openapis.openapi.models.operations.GetExportQrBelegeBelegUuidResponse res = new org.openapis.openapi.models.operations.GetExportQrBelegeBelegUuidResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,10 +247,8 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExportThermalPrintBelegeBelegUuidResponse res = new org.openapis.openapi.models.operations.GetExportThermalPrintBelegeBelegUuidResponse() {{
+        org.openapis.openapi.models.operations.GetExportThermalPrintBelegeBelegUuidResponse res = new org.openapis.openapi.models.operations.GetExportThermalPrintBelegeBelegUuidResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,10 +278,8 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeResponse res = new org.openapis.openapi.models.operations.GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeResponse() {{
+        org.openapis.openapi.models.operations.GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeResponse res = new org.openapis.openapi.models.operations.GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

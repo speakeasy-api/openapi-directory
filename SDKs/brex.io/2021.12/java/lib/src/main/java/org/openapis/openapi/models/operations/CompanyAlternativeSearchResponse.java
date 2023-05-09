@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompanyAlternativeSearchResponse {
@@ -12,6 +13,7 @@ public class CompanyAlternativeSearchResponse {
      */
     
     public CompanyAlternativeSearch200ApplicationJSON[] companyAlternativeSearch200ApplicationJSONObjects;
+
     public CompanyAlternativeSearchResponse withCompanyAlternativeSearch200ApplicationJSONObjects(CompanyAlternativeSearch200ApplicationJSON[] companyAlternativeSearch200ApplicationJSONObjects) {
         this.companyAlternativeSearch200ApplicationJSONObjects = companyAlternativeSearch200ApplicationJSONObjects;
         return this;
@@ -22,6 +24,7 @@ public class CompanyAlternativeSearchResponse {
      */
     
     public CompanyAlternativeSearchDefaultApplicationJSON companyAlternativeSearchDefaultApplicationJSONObject;
+
     public CompanyAlternativeSearchResponse withCompanyAlternativeSearchDefaultApplicationJSONObject(CompanyAlternativeSearchDefaultApplicationJSON companyAlternativeSearchDefaultApplicationJSONObject) {
         this.companyAlternativeSearchDefaultApplicationJSONObject = companyAlternativeSearchDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class CompanyAlternativeSearchResponse {
     
     
     public String contentType;
+
     public CompanyAlternativeSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class CompanyAlternativeSearchResponse {
     
     
     public Integer statusCode;
+
     public CompanyAlternativeSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CompanyAlternativeSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompanyAlternativeSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CompanyAlternativeSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

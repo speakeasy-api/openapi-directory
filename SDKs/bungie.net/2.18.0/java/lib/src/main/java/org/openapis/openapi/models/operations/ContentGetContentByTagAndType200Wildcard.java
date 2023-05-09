@@ -12,6 +12,7 @@ package org.openapis.openapi.models.operations;
 public class ContentGetContentByTagAndType200Wildcard {
     
     public String detailedErrorTrace;
+
     public ContentGetContentByTagAndType200Wildcard withDetailedErrorTrace(String detailedErrorTrace) {
         this.detailedErrorTrace = detailedErrorTrace;
         return this;
@@ -19,6 +20,7 @@ public class ContentGetContentByTagAndType200Wildcard {
     
     
     public Integer errorCode;
+
     public ContentGetContentByTagAndType200Wildcard withErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -26,6 +28,7 @@ public class ContentGetContentByTagAndType200Wildcard {
     
     
     public String errorStatus;
+
     public ContentGetContentByTagAndType200Wildcard withErrorStatus(String errorStatus) {
         this.errorStatus = errorStatus;
         return this;
@@ -33,6 +36,7 @@ public class ContentGetContentByTagAndType200Wildcard {
     
     
     public String message;
+
     public ContentGetContentByTagAndType200Wildcard withMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +44,7 @@ public class ContentGetContentByTagAndType200Wildcard {
     
     
     public java.util.Map<String, String> messageData;
+
     public ContentGetContentByTagAndType200Wildcard withMessageData(java.util.Map<String, String> messageData) {
         this.messageData = messageData;
         return this;
@@ -47,6 +52,7 @@ public class ContentGetContentByTagAndType200Wildcard {
     
     
     public org.openapis.openapi.models.shared.ContentContentItemPublicContract response;
+
     public ContentGetContentByTagAndType200Wildcard withResponse(org.openapis.openapi.models.shared.ContentContentItemPublicContract response) {
         this.response = response;
         return this;
@@ -54,9 +60,11 @@ public class ContentGetContentByTagAndType200Wildcard {
     
     
     public Integer throttleSeconds;
+
     public ContentGetContentByTagAndType200Wildcard withThrottleSeconds(Integer throttleSeconds) {
         this.throttleSeconds = throttleSeconds;
         return this;
     }
     
+    public ContentGetContentByTagAndType200Wildcard(){}
 }

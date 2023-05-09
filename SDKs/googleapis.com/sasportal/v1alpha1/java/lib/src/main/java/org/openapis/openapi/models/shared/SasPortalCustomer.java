@@ -18,6 +18,7 @@ public class SasPortalCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SasPortalCustomer withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class SasPortalCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SasPortalCustomer withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class SasPortalCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sasUserIds")
     public String[] sasUserIds;
+
     public SasPortalCustomer withSasUserIds(String[] sasUserIds) {
         this.sasUserIds = sasUserIds;
         return this;
     }
     
+    public SasPortalCustomer(){}
 }

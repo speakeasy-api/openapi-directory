@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutMarketingV3MarketingEventsEventsExternalEventIdReplaceRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.MarketingEventCreateRequestParams marketingEventCreateRequestParams;
+
     public PutMarketingV3MarketingEventsEventsExternalEventIdReplaceRequest withMarketingEventCreateRequestParams(org.openapis.openapi.models.shared.MarketingEventCreateRequestParams marketingEventCreateRequestParams) {
         this.marketingEventCreateRequestParams = marketingEventCreateRequestParams;
         return this;
@@ -16,9 +18,14 @@ public class PutMarketingV3MarketingEventsEventsExternalEventIdReplaceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalEventId")
     public String externalEventId;
+
     public PutMarketingV3MarketingEventsEventsExternalEventIdReplaceRequest withExternalEventId(String externalEventId) {
         this.externalEventId = externalEventId;
         return this;
     }
     
+    public PutMarketingV3MarketingEventsEventsExternalEventIdReplaceRequest(@JsonProperty("MarketingEventCreateRequestParams") org.openapis.openapi.models.shared.MarketingEventCreateRequestParams marketingEventCreateRequestParams, @JsonProperty("externalEventId") String externalEventId) {
+        this.marketingEventCreateRequestParams = marketingEventCreateRequestParams;
+        this.externalEventId = externalEventId;
+  }
 }

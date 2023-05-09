@@ -15,6 +15,7 @@ public class CreateUpdatePlaylistRequestPlaylist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateUpdatePlaylistRequestPlaylist withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class CreateUpdatePlaylistRequestPlaylist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharing")
     public CreateUpdatePlaylistRequestPlaylistSharingEnum sharing;
+
     public CreateUpdatePlaylistRequestPlaylist withSharing(CreateUpdatePlaylistRequestPlaylistSharingEnum sharing) {
         this.sharing = sharing;
         return this;
@@ -37,6 +39,7 @@ public class CreateUpdatePlaylistRequestPlaylist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public CreateUpdatePlaylistRequestPlaylist withTitle(String title) {
         this.title = title;
         return this;
@@ -48,9 +51,11 @@ public class CreateUpdatePlaylistRequestPlaylist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracks")
     public CreateUpdatePlaylistRequestPlaylistTracks[] tracks;
+
     public CreateUpdatePlaylistRequestPlaylist withTracks(CreateUpdatePlaylistRequestPlaylistTracks[] tracks) {
         this.tracks = tracks;
         return this;
     }
     
+    public CreateUpdatePlaylistRequestPlaylist(){}
 }

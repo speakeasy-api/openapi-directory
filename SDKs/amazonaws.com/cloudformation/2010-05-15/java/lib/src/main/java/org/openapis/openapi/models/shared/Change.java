@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Change {
     
     public Long hookInvocationCount;
+
     public Change withHookInvocationCount(Long hookInvocationCount) {
         this.hookInvocationCount = hookInvocationCount;
         return this;
@@ -19,6 +20,7 @@ public class Change {
     
     
     public ResourceChange resourceChange;
+
     public Change withResourceChange(ResourceChange resourceChange) {
         this.resourceChange = resourceChange;
         return this;
@@ -26,9 +28,11 @@ public class Change {
     
     
     public ChangeTypeEnum type;
+
     public Change withType(ChangeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Change(){}
 }

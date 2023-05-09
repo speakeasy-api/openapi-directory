@@ -58,11 +58,9 @@ public class CameraQualityRetentionProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateNetworkCameraQualityRetentionProfileResponse res = new org.openapis.openapi.models.operations.CreateNetworkCameraQualityRetentionProfileResponse() {{
+        org.openapis.openapi.models.operations.CreateNetworkCameraQualityRetentionProfileResponse res = new org.openapis.openapi.models.operations.CreateNetworkCameraQualityRetentionProfileResponse(contentType, httpRes.statusCode()) {{
             createNetworkCameraQualityRetentionProfile200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,10 +96,8 @@ public class CameraQualityRetentionProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNetworkCameraQualityRetentionProfileResponse res = new org.openapis.openapi.models.operations.DeleteNetworkCameraQualityRetentionProfileResponse() {{
+        org.openapis.openapi.models.operations.DeleteNetworkCameraQualityRetentionProfileResponse res = new org.openapis.openapi.models.operations.DeleteNetworkCameraQualityRetentionProfileResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -132,11 +128,9 @@ public class CameraQualityRetentionProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkCameraQualityRetentionProfileResponse res = new org.openapis.openapi.models.operations.GetNetworkCameraQualityRetentionProfileResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkCameraQualityRetentionProfileResponse res = new org.openapis.openapi.models.operations.GetNetworkCameraQualityRetentionProfileResponse(contentType, httpRes.statusCode()) {{
             getNetworkCameraQualityRetentionProfile200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -172,11 +166,9 @@ public class CameraQualityRetentionProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkCameraQualityRetentionProfilesResponse res = new org.openapis.openapi.models.operations.GetNetworkCameraQualityRetentionProfilesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkCameraQualityRetentionProfilesResponse res = new org.openapis.openapi.models.operations.GetNetworkCameraQualityRetentionProfilesResponse(contentType, httpRes.statusCode()) {{
             getNetworkCameraQualityRetentionProfiles200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -214,11 +206,9 @@ public class CameraQualityRetentionProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkCameraQualityRetentionProfileResponse res = new org.openapis.openapi.models.operations.UpdateNetworkCameraQualityRetentionProfileResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkCameraQualityRetentionProfileResponse res = new org.openapis.openapi.models.operations.UpdateNetworkCameraQualityRetentionProfileResponse(contentType, httpRes.statusCode()) {{
             updateNetworkCameraQualityRetentionProfile200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

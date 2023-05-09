@@ -11,17 +11,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ComponentVersion {
     @JsonProperty("componentType")
-    public ComponentTypeEnum componentType;
-    public ComponentVersion withComponentType(ComponentTypeEnum componentType) {
+    public String componentType;
+
+    public ComponentVersion withComponentType(String componentType) {
         this.componentType = componentType;
         return this;
     }
     
     @JsonProperty("versions")
     public String[] versions;
+
     public ComponentVersion withVersions(String[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public ComponentVersion(@JsonProperty("componentType") String componentType, @JsonProperty("versions") String[] versions) {
+        this.componentType = componentType;
+        this.versions = versions;
+  }
 }

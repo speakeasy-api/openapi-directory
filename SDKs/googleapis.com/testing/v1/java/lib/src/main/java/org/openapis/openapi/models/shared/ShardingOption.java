@@ -18,8 +18,21 @@ public class ShardingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualSharding")
     public ManualSharding manualSharding;
+
     public ShardingOption withManualSharding(ManualSharding manualSharding) {
         this.manualSharding = manualSharding;
+        return this;
+    }
+    
+    /**
+     * Shards test based on previous test case timing records.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("smartSharding")
+    public SmartSharding smartSharding;
+
+    public ShardingOption withSmartSharding(SmartSharding smartSharding) {
+        this.smartSharding = smartSharding;
         return this;
     }
     
@@ -29,9 +42,11 @@ public class ShardingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniformSharding")
     public UniformSharding uniformSharding;
+
     public ShardingOption withUniformSharding(UniformSharding uniformSharding) {
         this.uniformSharding = uniformSharding;
         return this;
     }
     
+    public ShardingOption(){}
 }

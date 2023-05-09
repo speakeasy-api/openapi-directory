@@ -17,9 +17,11 @@ public class FolderMenuGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public FolderMenuGetRequest withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
+    public FolderMenuGetRequest(){}
 }

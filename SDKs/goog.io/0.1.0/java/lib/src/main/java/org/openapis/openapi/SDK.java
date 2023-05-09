@@ -207,6 +207,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -240,12 +245,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrawlResponse res = new org.openapis.openapi.models.operations.CrawlResponse() {{
+        org.openapis.openapi.models.operations.CrawlResponse res = new org.openapis.openapi.models.operations.CrawlResponse(contentType, httpRes.statusCode()) {{
             crawl200ApplicationJSONObject = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +292,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTheStatusOfTheAPIServiceResponse res = new org.openapis.openapi.models.operations.GetTheStatusOfTheAPIServiceResponse() {{
+        org.openapis.openapi.models.operations.GetTheStatusOfTheAPIServiceResponse res = new org.openapis.openapi.models.operations.GetTheStatusOfTheAPIServiceResponse(contentType, httpRes.statusCode()) {{
             getTheStatusOfTheAPIService200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,12 +340,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImagesResponse res = new org.openapis.openapi.models.operations.ImagesResponse() {{
+        org.openapis.openapi.models.operations.ImagesResponse res = new org.openapis.openapi.models.operations.ImagesResponse(contentType, httpRes.statusCode()) {{
             images200ApplicationJSONObject = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -395,12 +394,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NewsResponse res = new org.openapis.openapi.models.operations.NewsResponse() {{
+        org.openapis.openapi.models.operations.NewsResponse res = new org.openapis.openapi.models.operations.NewsResponse(contentType, httpRes.statusCode()) {{
             news200ApplicationJSONObject = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -453,12 +450,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchResponse res = new org.openapis.openapi.models.operations.SearchResponse() {{
+        org.openapis.openapi.models.operations.SearchResponse res = new org.openapis.openapi.models.operations.SearchResponse(contentType, httpRes.statusCode()) {{
             search200ApplicationJSONObject = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -516,12 +511,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SerpResponse res = new org.openapis.openapi.models.operations.SerpResponse() {{
+        org.openapis.openapi.models.operations.SerpResponse res = new org.openapis.openapi.models.operations.SerpResponse(contentType, httpRes.statusCode()) {{
             serp200ApplicationJSONObject = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

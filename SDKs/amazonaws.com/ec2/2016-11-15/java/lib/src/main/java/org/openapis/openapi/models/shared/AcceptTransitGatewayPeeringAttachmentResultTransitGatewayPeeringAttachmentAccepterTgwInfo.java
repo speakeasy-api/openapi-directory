@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AcceptTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo {
     
     public String coreNetworkId;
+
     public AcceptTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo withCoreNetworkId(String coreNetworkId) {
         this.coreNetworkId = coreNetworkId;
         return this;
@@ -19,6 +20,7 @@ public class AcceptTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAtt
     
     
     public String ownerId;
+
     public AcceptTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -26,6 +28,7 @@ public class AcceptTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAtt
     
     
     public String region;
+
     public AcceptTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo withRegion(String region) {
         this.region = region;
         return this;
@@ -33,9 +36,11 @@ public class AcceptTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAtt
     
     
     public String transitGatewayId;
+
     public AcceptTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
     }
     
+    public AcceptTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSequenceStoreResponse {
@@ -12,6 +13,7 @@ public class DeleteSequenceStoreResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteSequenceStoreResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteSequenceStoreResponse {
      */
     
     public Object conflictException;
+
     public DeleteSequenceStoreResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSequenceStoreResponse {
     
     
     public String contentType;
+
     public DeleteSequenceStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSequenceStoreResponse {
      */
     
     public java.util.Map<String, Object> deleteSequenceStoreResponse;
+
     public DeleteSequenceStoreResponse withDeleteSequenceStoreResponse(java.util.Map<String, Object> deleteSequenceStoreResponse) {
         this.deleteSequenceStoreResponse = deleteSequenceStoreResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSequenceStoreResponse {
      */
     
     public Object internalServerException;
+
     public DeleteSequenceStoreResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteSequenceStoreResponse {
      */
     
     public Object requestTimeoutException;
+
     public DeleteSequenceStoreResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteSequenceStoreResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSequenceStoreResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteSequenceStoreResponse {
     
     
     public Integer statusCode;
+
     public DeleteSequenceStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteSequenceStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSequenceStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteSequenceStoreResponse {
      */
     
     public Object throttlingException;
+
     public DeleteSequenceStoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteSequenceStoreResponse {
      */
     
     public Object validationException;
+
     public DeleteSequenceStoreResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteSequenceStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

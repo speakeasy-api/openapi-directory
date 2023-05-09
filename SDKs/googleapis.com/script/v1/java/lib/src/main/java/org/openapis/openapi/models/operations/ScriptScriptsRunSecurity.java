@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ScriptScriptsRunSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ScriptScriptsRunSecurityOption1 option1;
+
     public ScriptScriptsRunSecurity withOption1(ScriptScriptsRunSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ScriptScriptsRunSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ScriptScriptsRunSecurityOption10 option10;
+
     public ScriptScriptsRunSecurity withOption10(ScriptScriptsRunSecurityOption10 option10) {
         this.option10 = option10;
         return this;
@@ -23,6 +25,7 @@ public class ScriptScriptsRunSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ScriptScriptsRunSecurityOption11 option11;
+
     public ScriptScriptsRunSecurity withOption11(ScriptScriptsRunSecurityOption11 option11) {
         this.option11 = option11;
         return this;
@@ -30,6 +33,7 @@ public class ScriptScriptsRunSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ScriptScriptsRunSecurityOption12 option12;
+
     public ScriptScriptsRunSecurity withOption12(ScriptScriptsRunSecurityOption12 option12) {
         this.option12 = option12;
         return this;
@@ -37,6 +41,7 @@ public class ScriptScriptsRunSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ScriptScriptsRunSecurityOption2 option2;
+
     public ScriptScriptsRunSecurity withOption2(ScriptScriptsRunSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -44,6 +49,7 @@ public class ScriptScriptsRunSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ScriptScriptsRunSecurityOption3 option3;
+
     public ScriptScriptsRunSecurity withOption3(ScriptScriptsRunSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -51,6 +57,7 @@ public class ScriptScriptsRunSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ScriptScriptsRunSecurityOption4 option4;
+
     public ScriptScriptsRunSecurity withOption4(ScriptScriptsRunSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -58,6 +65,7 @@ public class ScriptScriptsRunSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ScriptScriptsRunSecurityOption5 option5;
+
     public ScriptScriptsRunSecurity withOption5(ScriptScriptsRunSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -65,6 +73,7 @@ public class ScriptScriptsRunSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ScriptScriptsRunSecurityOption6 option6;
+
     public ScriptScriptsRunSecurity withOption6(ScriptScriptsRunSecurityOption6 option6) {
         this.option6 = option6;
         return this;
@@ -72,6 +81,7 @@ public class ScriptScriptsRunSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ScriptScriptsRunSecurityOption7 option7;
+
     public ScriptScriptsRunSecurity withOption7(ScriptScriptsRunSecurityOption7 option7) {
         this.option7 = option7;
         return this;
@@ -79,6 +89,7 @@ public class ScriptScriptsRunSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ScriptScriptsRunSecurityOption8 option8;
+
     public ScriptScriptsRunSecurity withOption8(ScriptScriptsRunSecurityOption8 option8) {
         this.option8 = option8;
         return this;
@@ -86,9 +97,11 @@ public class ScriptScriptsRunSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ScriptScriptsRunSecurityOption9 option9;
+
     public ScriptScriptsRunSecurity withOption9(ScriptScriptsRunSecurityOption9 option9) {
         this.option9 = option9;
         return this;
     }
     
+    public ScriptScriptsRunSecurity(){}
 }

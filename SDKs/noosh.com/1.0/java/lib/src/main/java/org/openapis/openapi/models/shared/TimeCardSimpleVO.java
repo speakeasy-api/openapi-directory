@@ -17,6 +17,7 @@ public class TimeCardSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_submit")
     public Boolean isSubmit;
+
     public TimeCardSimpleVO withIsSubmit(Boolean isSubmit) {
         this.isSubmit = isSubmit;
         return this;
@@ -26,6 +27,7 @@ public class TimeCardSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_updated_date")
     public LocalDate lastUpdatedDate;
+
     public TimeCardSimpleVO withLastUpdatedDate(LocalDate lastUpdatedDate) {
         this.lastUpdatedDate = lastUpdatedDate;
         return this;
@@ -34,6 +36,7 @@ public class TimeCardSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("no_of_workdays")
     public Integer noOfWorkdays;
+
     public TimeCardSimpleVO withNoOfWorkdays(Integer noOfWorkdays) {
         this.noOfWorkdays = noOfWorkdays;
         return this;
@@ -43,6 +46,7 @@ public class TimeCardSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("submit_date")
     public LocalDate submitDate;
+
     public TimeCardSimpleVO withSubmitDate(LocalDate submitDate) {
         this.submitDate = submitDate;
         return this;
@@ -51,6 +55,7 @@ public class TimeCardSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timecard_id")
     public Long timecardId;
+
     public TimeCardSimpleVO withTimecardId(Long timecardId) {
         this.timecardId = timecardId;
         return this;
@@ -62,6 +67,7 @@ public class TimeCardSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_hours")
     public Object totalHours;
+
     public TimeCardSimpleVO withTotalHours(Object totalHours) {
         this.totalHours = totalHours;
         return this;
@@ -71,9 +77,11 @@ public class TimeCardSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("week_beginning")
     public LocalDate weekBeginning;
+
     public TimeCardSimpleVO withWeekBeginning(LocalDate weekBeginning) {
         this.weekBeginning = weekBeginning;
         return this;
     }
     
+    public TimeCardSimpleVO(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendAlexaOfferToMasterResponse {
@@ -12,6 +13,7 @@ public class SendAlexaOfferToMasterResponse {
      */
     
     public Object clientLimitExceededException;
+
     public SendAlexaOfferToMasterResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class SendAlexaOfferToMasterResponse {
     
     
     public String contentType;
+
     public SendAlexaOfferToMasterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SendAlexaOfferToMasterResponse {
      */
     
     public Object invalidArgumentException;
+
     public SendAlexaOfferToMasterResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class SendAlexaOfferToMasterResponse {
      */
     
     public Object notAuthorizedException;
+
     public SendAlexaOfferToMasterResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -49,6 +54,7 @@ public class SendAlexaOfferToMasterResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SendAlexaOfferToMasterResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class SendAlexaOfferToMasterResponse {
      */
     
     public org.openapis.openapi.models.shared.SendAlexaOfferToMasterResponse sendAlexaOfferToMasterResponse;
+
     public SendAlexaOfferToMasterResponse withSendAlexaOfferToMasterResponse(org.openapis.openapi.models.shared.SendAlexaOfferToMasterResponse sendAlexaOfferToMasterResponse) {
         this.sendAlexaOfferToMasterResponse = sendAlexaOfferToMasterResponse;
         return this;
@@ -66,6 +73,7 @@ public class SendAlexaOfferToMasterResponse {
     
     
     public Integer statusCode;
+
     public SendAlexaOfferToMasterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class SendAlexaOfferToMasterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendAlexaOfferToMasterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SendAlexaOfferToMasterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

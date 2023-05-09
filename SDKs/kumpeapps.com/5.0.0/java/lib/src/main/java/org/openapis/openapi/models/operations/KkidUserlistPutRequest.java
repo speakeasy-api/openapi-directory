@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidUserlistPutRequest {
@@ -12,6 +13,7 @@ public class KkidUserlistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public KkidUserlistPutRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -22,6 +24,7 @@ public class KkidUserlistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=emoji")
     public String emoji;
+
     public KkidUserlistPutRequest withEmoji(String emoji) {
         this.emoji = emoji;
         return this;
@@ -32,6 +35,7 @@ public class KkidUserlistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enableAdmin")
     public Boolean enableAdmin;
+
     public KkidUserlistPutRequest withEnableAdmin(Boolean enableAdmin) {
         this.enableAdmin = enableAdmin;
         return this;
@@ -42,6 +46,7 @@ public class KkidUserlistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enableAllowance")
     public Boolean enableAllowance;
+
     public KkidUserlistPutRequest withEnableAllowance(Boolean enableAllowance) {
         this.enableAllowance = enableAllowance;
         return this;
@@ -52,6 +57,7 @@ public class KkidUserlistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enableChores")
     public Boolean enableChores;
+
     public KkidUserlistPutRequest withEnableChores(Boolean enableChores) {
         this.enableChores = enableChores;
         return this;
@@ -62,6 +68,7 @@ public class KkidUserlistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enableObjectDetection")
     public Boolean enableObjectDetection;
+
     public KkidUserlistPutRequest withEnableObjectDetection(Boolean enableObjectDetection) {
         this.enableObjectDetection = enableObjectDetection;
         return this;
@@ -72,6 +79,7 @@ public class KkidUserlistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enableTmdb")
     public Boolean enableTmdb;
+
     public KkidUserlistPutRequest withEnableTmdb(Boolean enableTmdb) {
         this.enableTmdb = enableTmdb;
         return this;
@@ -82,6 +90,7 @@ public class KkidUserlistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enableWishList")
     public Boolean enableWishList;
+
     public KkidUserlistPutRequest withEnableWishList(Boolean enableWishList) {
         this.enableWishList = enableWishList;
         return this;
@@ -92,6 +101,7 @@ public class KkidUserlistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=firstName")
     public String firstName;
+
     public KkidUserlistPutRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -102,6 +112,7 @@ public class KkidUserlistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastName")
     public String lastName;
+
     public KkidUserlistPutRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -112,6 +123,7 @@ public class KkidUserlistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tmdbKey")
     public String tmdbKey;
+
     public KkidUserlistPutRequest withTmdbKey(String tmdbKey) {
         this.tmdbKey = tmdbKey;
         return this;
@@ -122,6 +134,7 @@ public class KkidUserlistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userID")
     public Long userID;
+
     public KkidUserlistPutRequest withUserID(Long userID) {
         this.userID = userID;
         return this;
@@ -132,9 +145,17 @@ public class KkidUserlistPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public KkidUserlistPutRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public KkidUserlistPutRequest(@JsonProperty("email") String email, @JsonProperty("firstName") String firstName, @JsonProperty("lastName") String lastName, @JsonProperty("userID") Long userID, @JsonProperty("username") String username) {
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userID = userID;
+        this.username = username;
+  }
 }

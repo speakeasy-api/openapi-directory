@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBatchInferenceJobResponse {
     
     public String contentType;
+
     public CreateBatchInferenceJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateBatchInferenceJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBatchInferenceJobResponse createBatchInferenceJobResponse;
+
     public CreateBatchInferenceJobResponse withCreateBatchInferenceJobResponse(org.openapis.openapi.models.shared.CreateBatchInferenceJobResponse createBatchInferenceJobResponse) {
         this.createBatchInferenceJobResponse = createBatchInferenceJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateBatchInferenceJobResponse {
      */
     
     public Object invalidInputException;
+
     public CreateBatchInferenceJobResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateBatchInferenceJobResponse {
      */
     
     public Object limitExceededException;
+
     public CreateBatchInferenceJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateBatchInferenceJobResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateBatchInferenceJobResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -56,6 +62,7 @@ public class CreateBatchInferenceJobResponse {
     
     
     public Integer statusCode;
+
     public CreateBatchInferenceJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateBatchInferenceJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBatchInferenceJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateBatchInferenceJobResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateBatchInferenceJobResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,6 +92,7 @@ public class CreateBatchInferenceJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateBatchInferenceJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class CreateBatchInferenceJobResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateBatchInferenceJobResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public CreateBatchInferenceJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

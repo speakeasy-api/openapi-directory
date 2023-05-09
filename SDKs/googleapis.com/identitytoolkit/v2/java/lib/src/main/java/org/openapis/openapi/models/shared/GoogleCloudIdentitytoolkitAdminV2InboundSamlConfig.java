@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2InboundSamlConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudIdentitytoolkitAdminV2InboundSamlConfig withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIdentitytoolkitAdminV2InboundSamlConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public GoogleCloudIdentitytoolkitAdminV2InboundSamlConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIdentitytoolkitAdminV2InboundSamlConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idpConfig")
     public GoogleCloudIdentitytoolkitAdminV2IdpConfig idpConfig;
+
     public GoogleCloudIdentitytoolkitAdminV2InboundSamlConfig withIdpConfig(GoogleCloudIdentitytoolkitAdminV2IdpConfig idpConfig) {
         this.idpConfig = idpConfig;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIdentitytoolkitAdminV2InboundSamlConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudIdentitytoolkitAdminV2InboundSamlConfig withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudIdentitytoolkitAdminV2InboundSamlConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spConfig")
     public GoogleCloudIdentitytoolkitAdminV2SpConfig spConfig;
+
     public GoogleCloudIdentitytoolkitAdminV2InboundSamlConfig withSpConfig(GoogleCloudIdentitytoolkitAdminV2SpConfig spConfig) {
         this.spConfig = spConfig;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2InboundSamlConfig(){}
 }

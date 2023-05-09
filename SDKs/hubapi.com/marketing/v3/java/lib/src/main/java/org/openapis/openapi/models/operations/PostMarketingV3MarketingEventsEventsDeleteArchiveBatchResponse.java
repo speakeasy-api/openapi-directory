@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostMarketingV3MarketingEventsEventsDeleteArchiveBatchResponse {
     
     public byte[] body;
+
     public PostMarketingV3MarketingEventsEventsDeleteArchiveBatchResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostMarketingV3MarketingEventsEventsDeleteArchiveBatchResponse {
     
     
     public String contentType;
+
     public PostMarketingV3MarketingEventsEventsDeleteArchiveBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PostMarketingV3MarketingEventsEventsDeleteArchiveBatchResponse {
     
     
     public Integer statusCode;
+
     public PostMarketingV3MarketingEventsEventsDeleteArchiveBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class PostMarketingV3MarketingEventsEventsDeleteArchiveBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostMarketingV3MarketingEventsEventsDeleteArchiveBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostMarketingV3MarketingEventsEventsDeleteArchiveBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class GetContactListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactListName")
     public String contactListName;
+
     public GetContactListResponse withContactListName(String contactListName) {
         this.contactListName = contactListName;
         return this;
@@ -30,6 +31,7 @@ public class GetContactListResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public GetContactListResponse withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -38,6 +40,7 @@ public class GetContactListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GetContactListResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class GetContactListResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTimestamp")
     public OffsetDateTime lastUpdatedTimestamp;
+
     public GetContactListResponse withLastUpdatedTimestamp(OffsetDateTime lastUpdatedTimestamp) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         return this;
@@ -56,6 +60,7 @@ public class GetContactListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public GetContactListResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -64,9 +69,11 @@ public class GetContactListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Topics")
     public Topic[] topics;
+
     public GetContactListResponse withTopics(Topic[] topics) {
         this.topics = topics;
         return this;
     }
     
+    public GetContactListResponse(){}
 }

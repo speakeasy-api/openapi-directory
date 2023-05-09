@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HovercardContexts {
     @JsonProperty("message")
     public String message;
+
     public HovercardContexts withMessage(String message) {
         this.message = message;
         return this;
@@ -16,9 +17,14 @@ public class HovercardContexts {
     
     @JsonProperty("octicon")
     public String octicon;
+
     public HovercardContexts withOcticon(String octicon) {
         this.octicon = octicon;
         return this;
     }
     
+    public HovercardContexts(@JsonProperty("message") String message, @JsonProperty("octicon") String octicon) {
+        this.message = message;
+        this.octicon = octicon;
+  }
 }

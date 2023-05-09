@@ -15,6 +15,7 @@ public class ImportTerminologyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuxiliaryDataLocation")
     public TerminologyDataLocation auxiliaryDataLocation;
+
     public ImportTerminologyResponse withAuxiliaryDataLocation(TerminologyDataLocation auxiliaryDataLocation) {
         this.auxiliaryDataLocation = auxiliaryDataLocation;
         return this;
@@ -23,9 +24,11 @@ public class ImportTerminologyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TerminologyProperties")
     public TerminologyProperties terminologyProperties;
+
     public ImportTerminologyResponse withTerminologyProperties(TerminologyProperties terminologyProperties) {
         this.terminologyProperties = terminologyProperties;
         return this;
     }
     
+    public ImportTerminologyResponse(){}
 }

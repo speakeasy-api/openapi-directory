@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAgentRequest {
     @JsonProperty("AgentArn")
     public String agentArn;
+
     public DeleteAgentRequest withAgentArn(String agentArn) {
         this.agentArn = agentArn;
         return this;
     }
     
+    public DeleteAgentRequest(@JsonProperty("AgentArn") String agentArn) {
+        this.agentArn = agentArn;
+  }
 }

@@ -18,6 +18,7 @@ public class RefreshDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceId")
     public String dataSourceId;
+
     public RefreshDataSourceRequest withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -29,6 +30,7 @@ public class RefreshDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public RefreshDataSourceRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -40,6 +42,7 @@ public class RefreshDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAll")
     public Boolean isAll;
+
     public RefreshDataSourceRequest withIsAll(Boolean isAll) {
         this.isAll = isAll;
         return this;
@@ -51,9 +54,11 @@ public class RefreshDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("references")
     public DataSourceObjectReferences references;
+
     public RefreshDataSourceRequest withReferences(DataSourceObjectReferences references) {
         this.references = references;
         return this;
     }
     
+    public RefreshDataSourceRequest(){}
 }

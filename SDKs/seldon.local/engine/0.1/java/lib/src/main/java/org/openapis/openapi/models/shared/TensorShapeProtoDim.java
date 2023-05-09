@@ -18,6 +18,7 @@ public class TensorShapeProtoDim {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TensorShapeProtoDim withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class TensorShapeProtoDim {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public String size;
+
     public TensorShapeProtoDim withSize(String size) {
         this.size = size;
         return this;
     }
     
+    public TensorShapeProtoDim(){}
 }

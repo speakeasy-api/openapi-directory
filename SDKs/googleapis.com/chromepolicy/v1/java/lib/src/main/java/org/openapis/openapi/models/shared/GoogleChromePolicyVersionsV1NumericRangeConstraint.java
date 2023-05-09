@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1NumericRangeConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximum")
     public String maximum;
+
     public GoogleChromePolicyVersionsV1NumericRangeConstraint withMaximum(String maximum) {
         this.maximum = maximum;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromePolicyVersionsV1NumericRangeConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum")
     public String minimum;
+
     public GoogleChromePolicyVersionsV1NumericRangeConstraint withMinimum(String minimum) {
         this.minimum = minimum;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1NumericRangeConstraint(){}
 }

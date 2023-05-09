@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class RuleGroupsNamespaceSummary {
     @JsonProperty("arn")
     public String arn;
+
     public RuleGroupsNamespaceSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class RuleGroupsNamespaceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public RuleGroupsNamespaceSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -37,6 +39,7 @@ public class RuleGroupsNamespaceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedAt")
     public OffsetDateTime modifiedAt;
+
     public RuleGroupsNamespaceSummary withModifiedAt(OffsetDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
@@ -44,6 +47,7 @@ public class RuleGroupsNamespaceSummary {
     
     @JsonProperty("name")
     public String name;
+
     public RuleGroupsNamespaceSummary withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +55,7 @@ public class RuleGroupsNamespaceSummary {
     
     @JsonProperty("status")
     public RuleGroupsNamespaceStatus status;
+
     public RuleGroupsNamespaceSummary withStatus(RuleGroupsNamespaceStatus status) {
         this.status = status;
         return this;
@@ -59,9 +64,17 @@ public class RuleGroupsNamespaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public RuleGroupsNamespaceSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public RuleGroupsNamespaceSummary(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("modifiedAt") OffsetDateTime modifiedAt, @JsonProperty("name") String name, @JsonProperty("status") RuleGroupsNamespaceStatus status) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.modifiedAt = modifiedAt;
+        this.name = name;
+        this.status = status;
+  }
 }

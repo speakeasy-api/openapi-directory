@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Note {
     @JsonProperty("Text")
     public String text;
+
     public Note withText(String text) {
         this.text = text;
         return this;
@@ -19,6 +20,7 @@ public class Note {
     
     @JsonProperty("UpdatedAt")
     public String updatedAt;
+
     public Note withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -26,9 +28,15 @@ public class Note {
     
     @JsonProperty("UpdatedBy")
     public String updatedBy;
+
     public Note withUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
         return this;
     }
     
+    public Note(@JsonProperty("Text") String text, @JsonProperty("UpdatedAt") String updatedAt, @JsonProperty("UpdatedBy") String updatedBy) {
+        this.text = text;
+        this.updatedAt = updatedAt;
+        this.updatedBy = updatedBy;
+  }
 }

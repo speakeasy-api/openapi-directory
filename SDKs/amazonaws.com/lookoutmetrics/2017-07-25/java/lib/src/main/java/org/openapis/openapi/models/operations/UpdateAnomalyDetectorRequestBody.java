@@ -14,6 +14,7 @@ public class UpdateAnomalyDetectorRequestBody {
      */
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public UpdateAnomalyDetectorRequestBody withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -25,6 +26,7 @@ public class UpdateAnomalyDetectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorConfig")
     public UpdateAnomalyDetectorRequestBodyAnomalyDetectorConfig anomalyDetectorConfig;
+
     public UpdateAnomalyDetectorRequestBody withAnomalyDetectorConfig(UpdateAnomalyDetectorRequestBodyAnomalyDetectorConfig anomalyDetectorConfig) {
         this.anomalyDetectorConfig = anomalyDetectorConfig;
         return this;
@@ -36,6 +38,7 @@ public class UpdateAnomalyDetectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorDescription")
     public String anomalyDetectorDescription;
+
     public UpdateAnomalyDetectorRequestBody withAnomalyDetectorDescription(String anomalyDetectorDescription) {
         this.anomalyDetectorDescription = anomalyDetectorDescription;
         return this;
@@ -47,9 +50,13 @@ public class UpdateAnomalyDetectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyArn")
     public String kmsKeyArn;
+
     public UpdateAnomalyDetectorRequestBody withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
     }
     
+    public UpdateAnomalyDetectorRequestBody(@JsonProperty("AnomalyDetectorArn") String anomalyDetectorArn) {
+        this.anomalyDetectorArn = anomalyDetectorArn;
+  }
 }

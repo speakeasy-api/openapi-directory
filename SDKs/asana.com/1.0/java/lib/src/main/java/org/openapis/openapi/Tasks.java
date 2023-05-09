@@ -71,12 +71,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddDependenciesForTaskResponse res = new org.openapis.openapi.models.operations.AddDependenciesForTaskResponse() {{
+        org.openapis.openapi.models.operations.AddDependenciesForTaskResponse res = new org.openapis.openapi.models.operations.AddDependenciesForTaskResponse(contentType, httpRes.statusCode()) {{
             addDependenciesForTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,12 +128,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddDependentsForTaskResponse res = new org.openapis.openapi.models.operations.AddDependentsForTaskResponse() {{
+        org.openapis.openapi.models.operations.AddDependentsForTaskResponse res = new org.openapis.openapi.models.operations.AddDependentsForTaskResponse(contentType, httpRes.statusCode()) {{
             addDependentsForTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -191,12 +187,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddFollowersForTaskResponse res = new org.openapis.openapi.models.operations.AddFollowersForTaskResponse() {{
+        org.openapis.openapi.models.operations.AddFollowersForTaskResponse res = new org.openapis.openapi.models.operations.AddFollowersForTaskResponse(contentType, httpRes.statusCode()) {{
             addFollowersForTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,12 +257,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddProjectForTaskResponse res = new org.openapis.openapi.models.operations.AddProjectForTaskResponse() {{
+        org.openapis.openapi.models.operations.AddProjectForTaskResponse res = new org.openapis.openapi.models.operations.AddProjectForTaskResponse(contentType, httpRes.statusCode()) {{
             addProjectForTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -322,12 +314,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddTagForTaskResponse res = new org.openapis.openapi.models.operations.AddTagForTaskResponse() {{
+        org.openapis.openapi.models.operations.AddTagForTaskResponse res = new org.openapis.openapi.models.operations.AddTagForTaskResponse(contentType, httpRes.statusCode()) {{
             addTagForTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -381,12 +371,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSubtaskForTaskResponse res = new org.openapis.openapi.models.operations.CreateSubtaskForTaskResponse() {{
+        org.openapis.openapi.models.operations.CreateSubtaskForTaskResponse res = new org.openapis.openapi.models.operations.CreateSubtaskForTaskResponse(contentType, httpRes.statusCode()) {{
             createSubtaskForTask201ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -446,12 +434,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTaskResponse res = new org.openapis.openapi.models.operations.CreateTaskResponse() {{
+        org.openapis.openapi.models.operations.CreateTaskResponse res = new org.openapis.openapi.models.operations.CreateTaskResponse(contentType, httpRes.statusCode()) {{
             createTask201ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -505,12 +491,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTaskResponse res = new org.openapis.openapi.models.operations.DeleteTaskResponse() {{
+        org.openapis.openapi.models.operations.DeleteTaskResponse res = new org.openapis.openapi.models.operations.DeleteTaskResponse(contentType, httpRes.statusCode()) {{
             deleteTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -564,12 +548,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DuplicateTaskResponse res = new org.openapis.openapi.models.operations.DuplicateTaskResponse() {{
+        org.openapis.openapi.models.operations.DuplicateTaskResponse res = new org.openapis.openapi.models.operations.DuplicateTaskResponse(contentType, httpRes.statusCode()) {{
             duplicateTask201ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -618,12 +600,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDependenciesForTaskResponse res = new org.openapis.openapi.models.operations.GetDependenciesForTaskResponse() {{
+        org.openapis.openapi.models.operations.GetDependenciesForTaskResponse res = new org.openapis.openapi.models.operations.GetDependenciesForTaskResponse(contentType, httpRes.statusCode()) {{
             getDependenciesForTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,12 +652,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDependentsForTaskResponse res = new org.openapis.openapi.models.operations.GetDependentsForTaskResponse() {{
+        org.openapis.openapi.models.operations.GetDependentsForTaskResponse res = new org.openapis.openapi.models.operations.GetDependentsForTaskResponse(contentType, httpRes.statusCode()) {{
             getDependentsForTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -726,12 +704,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubtasksForTaskResponse res = new org.openapis.openapi.models.operations.GetSubtasksForTaskResponse() {{
+        org.openapis.openapi.models.operations.GetSubtasksForTaskResponse res = new org.openapis.openapi.models.operations.GetSubtasksForTaskResponse(contentType, httpRes.statusCode()) {{
             getSubtasksForTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -780,12 +756,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTaskResponse res = new org.openapis.openapi.models.operations.GetTaskResponse() {{
+        org.openapis.openapi.models.operations.GetTaskResponse res = new org.openapis.openapi.models.operations.GetTaskResponse(contentType, httpRes.statusCode()) {{
             getTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -836,12 +810,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTasksResponse res = new org.openapis.openapi.models.operations.GetTasksResponse() {{
+        org.openapis.openapi.models.operations.GetTasksResponse res = new org.openapis.openapi.models.operations.GetTasksResponse(contentType, httpRes.statusCode()) {{
             getTasks200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -890,12 +862,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTasksForProjectResponse res = new org.openapis.openapi.models.operations.GetTasksForProjectResponse() {{
+        org.openapis.openapi.models.operations.GetTasksForProjectResponse res = new org.openapis.openapi.models.operations.GetTasksForProjectResponse(contentType, httpRes.statusCode()) {{
             getTasksForProject200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -944,12 +914,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTasksForSectionResponse res = new org.openapis.openapi.models.operations.GetTasksForSectionResponse() {{
+        org.openapis.openapi.models.operations.GetTasksForSectionResponse res = new org.openapis.openapi.models.operations.GetTasksForSectionResponse(contentType, httpRes.statusCode()) {{
             getTasksForSection200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -998,12 +966,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTasksForTagResponse res = new org.openapis.openapi.models.operations.GetTasksForTagResponse() {{
+        org.openapis.openapi.models.operations.GetTasksForTagResponse res = new org.openapis.openapi.models.operations.GetTasksForTagResponse(contentType, httpRes.statusCode()) {{
             getTasksForTag200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1054,12 +1020,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTasksForUserTaskListResponse res = new org.openapis.openapi.models.operations.GetTasksForUserTaskListResponse() {{
+        org.openapis.openapi.models.operations.GetTasksForUserTaskListResponse res = new org.openapis.openapi.models.operations.GetTasksForUserTaskListResponse(contentType, httpRes.statusCode()) {{
             getTasksForUserTaskList200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1113,12 +1077,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveDependenciesForTaskResponse res = new org.openapis.openapi.models.operations.RemoveDependenciesForTaskResponse() {{
+        org.openapis.openapi.models.operations.RemoveDependenciesForTaskResponse res = new org.openapis.openapi.models.operations.RemoveDependenciesForTaskResponse(contentType, httpRes.statusCode()) {{
             removeDependenciesForTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1172,12 +1134,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveDependentsForTaskResponse res = new org.openapis.openapi.models.operations.RemoveDependentsForTaskResponse() {{
+        org.openapis.openapi.models.operations.RemoveDependentsForTaskResponse res = new org.openapis.openapi.models.operations.RemoveDependentsForTaskResponse(contentType, httpRes.statusCode()) {{
             removeDependentsForTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1231,12 +1191,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveFollowerForTaskResponse res = new org.openapis.openapi.models.operations.RemoveFollowerForTaskResponse() {{
+        org.openapis.openapi.models.operations.RemoveFollowerForTaskResponse res = new org.openapis.openapi.models.operations.RemoveFollowerForTaskResponse(contentType, httpRes.statusCode()) {{
             removeFollowerForTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1293,12 +1251,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveProjectForTaskResponse res = new org.openapis.openapi.models.operations.RemoveProjectForTaskResponse() {{
+        org.openapis.openapi.models.operations.RemoveProjectForTaskResponse res = new org.openapis.openapi.models.operations.RemoveProjectForTaskResponse(contentType, httpRes.statusCode()) {{
             removeProjectForTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1352,12 +1308,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveTagForTaskResponse res = new org.openapis.openapi.models.operations.RemoveTagForTaskResponse() {{
+        org.openapis.openapi.models.operations.RemoveTagForTaskResponse res = new org.openapis.openapi.models.operations.RemoveTagForTaskResponse(contentType, httpRes.statusCode()) {{
             removeTagForTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1437,12 +1391,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTasksForWorkspaceResponse res = new org.openapis.openapi.models.operations.SearchTasksForWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.SearchTasksForWorkspaceResponse res = new org.openapis.openapi.models.operations.SearchTasksForWorkspaceResponse(contentType, httpRes.statusCode()) {{
             searchTasksForWorkspace200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1496,12 +1448,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetParentForTaskResponse res = new org.openapis.openapi.models.operations.SetParentForTaskResponse() {{
+        org.openapis.openapi.models.operations.SetParentForTaskResponse res = new org.openapis.openapi.models.operations.SetParentForTaskResponse(contentType, httpRes.statusCode()) {{
             setParentForTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1563,12 +1513,10 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTaskResponse res = new org.openapis.openapi.models.operations.UpdateTaskResponse() {{
+        org.openapis.openapi.models.operations.UpdateTaskResponse res = new org.openapis.openapi.models.operations.UpdateTaskResponse(contentType, httpRes.statusCode()) {{
             updateTask200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

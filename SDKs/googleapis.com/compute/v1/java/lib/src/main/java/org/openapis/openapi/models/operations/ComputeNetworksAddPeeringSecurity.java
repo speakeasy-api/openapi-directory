@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeNetworksAddPeeringSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeNetworksAddPeeringSecurityOption1 option1;
+
     public ComputeNetworksAddPeeringSecurity withOption1(ComputeNetworksAddPeeringSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeNetworksAddPeeringSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeNetworksAddPeeringSecurityOption2 option2;
+
     public ComputeNetworksAddPeeringSecurity withOption2(ComputeNetworksAddPeeringSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeNetworksAddPeeringSecurity(){}
 }

@@ -15,6 +15,7 @@ public class UpdateReplicationConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public UpdateReplicationConfigurationTemplateRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,8 +27,21 @@ public class UpdateReplicationConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associateDefaultSecurityGroup")
     public Boolean associateDefaultSecurityGroup;
+
     public UpdateReplicationConfigurationTemplateRequestBody withAssociateDefaultSecurityGroup(Boolean associateDefaultSecurityGroup) {
         this.associateDefaultSecurityGroup = associateDefaultSecurityGroup;
+        return this;
+    }
+    
+    /**
+     * Whether to allow the AWS replication agent to automatically replicate newly added disks.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("autoReplicateNewDisks")
+    public Boolean autoReplicateNewDisks;
+
+    public UpdateReplicationConfigurationTemplateRequestBody withAutoReplicateNewDisks(Boolean autoReplicateNewDisks) {
+        this.autoReplicateNewDisks = autoReplicateNewDisks;
         return this;
     }
     
@@ -37,6 +51,7 @@ public class UpdateReplicationConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandwidthThrottling")
     public Long bandwidthThrottling;
+
     public UpdateReplicationConfigurationTemplateRequestBody withBandwidthThrottling(Long bandwidthThrottling) {
         this.bandwidthThrottling = bandwidthThrottling;
         return this;
@@ -48,6 +63,7 @@ public class UpdateReplicationConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createPublicIP")
     public Boolean createPublicIP;
+
     public UpdateReplicationConfigurationTemplateRequestBody withCreatePublicIP(Boolean createPublicIP) {
         this.createPublicIP = createPublicIP;
         return this;
@@ -59,6 +75,7 @@ public class UpdateReplicationConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataPlaneRouting")
     public UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum dataPlaneRouting;
+
     public UpdateReplicationConfigurationTemplateRequestBody withDataPlaneRouting(UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum dataPlaneRouting) {
         this.dataPlaneRouting = dataPlaneRouting;
         return this;
@@ -70,6 +87,7 @@ public class UpdateReplicationConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLargeStagingDiskType")
     public UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum defaultLargeStagingDiskType;
+
     public UpdateReplicationConfigurationTemplateRequestBody withDefaultLargeStagingDiskType(UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum defaultLargeStagingDiskType) {
         this.defaultLargeStagingDiskType = defaultLargeStagingDiskType;
         return this;
@@ -81,6 +99,7 @@ public class UpdateReplicationConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ebsEncryption")
     public UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum ebsEncryption;
+
     public UpdateReplicationConfigurationTemplateRequestBody withEbsEncryption(UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum ebsEncryption) {
         this.ebsEncryption = ebsEncryption;
         return this;
@@ -92,6 +111,7 @@ public class UpdateReplicationConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ebsEncryptionKeyArn")
     public String ebsEncryptionKeyArn;
+
     public UpdateReplicationConfigurationTemplateRequestBody withEbsEncryptionKeyArn(String ebsEncryptionKeyArn) {
         this.ebsEncryptionKeyArn = ebsEncryptionKeyArn;
         return this;
@@ -103,6 +123,7 @@ public class UpdateReplicationConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pitPolicy")
     public org.openapis.openapi.models.shared.PITPolicyRule[] pitPolicy;
+
     public UpdateReplicationConfigurationTemplateRequestBody withPitPolicy(org.openapis.openapi.models.shared.PITPolicyRule[] pitPolicy) {
         this.pitPolicy = pitPolicy;
         return this;
@@ -113,6 +134,7 @@ public class UpdateReplicationConfigurationTemplateRequestBody {
      */
     @JsonProperty("replicationConfigurationTemplateID")
     public String replicationConfigurationTemplateID;
+
     public UpdateReplicationConfigurationTemplateRequestBody withReplicationConfigurationTemplateID(String replicationConfigurationTemplateID) {
         this.replicationConfigurationTemplateID = replicationConfigurationTemplateID;
         return this;
@@ -124,6 +146,7 @@ public class UpdateReplicationConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationServerInstanceType")
     public String replicationServerInstanceType;
+
     public UpdateReplicationConfigurationTemplateRequestBody withReplicationServerInstanceType(String replicationServerInstanceType) {
         this.replicationServerInstanceType = replicationServerInstanceType;
         return this;
@@ -135,6 +158,7 @@ public class UpdateReplicationConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationServersSecurityGroupsIDs")
     public String[] replicationServersSecurityGroupsIDs;
+
     public UpdateReplicationConfigurationTemplateRequestBody withReplicationServersSecurityGroupsIDs(String[] replicationServersSecurityGroupsIDs) {
         this.replicationServersSecurityGroupsIDs = replicationServersSecurityGroupsIDs;
         return this;
@@ -146,6 +170,7 @@ public class UpdateReplicationConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stagingAreaSubnetId")
     public String stagingAreaSubnetId;
+
     public UpdateReplicationConfigurationTemplateRequestBody withStagingAreaSubnetId(String stagingAreaSubnetId) {
         this.stagingAreaSubnetId = stagingAreaSubnetId;
         return this;
@@ -157,6 +182,7 @@ public class UpdateReplicationConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stagingAreaTags")
     public java.util.Map<String, String> stagingAreaTags;
+
     public UpdateReplicationConfigurationTemplateRequestBody withStagingAreaTags(java.util.Map<String, String> stagingAreaTags) {
         this.stagingAreaTags = stagingAreaTags;
         return this;
@@ -168,9 +194,13 @@ public class UpdateReplicationConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useDedicatedReplicationServer")
     public Boolean useDedicatedReplicationServer;
+
     public UpdateReplicationConfigurationTemplateRequestBody withUseDedicatedReplicationServer(Boolean useDedicatedReplicationServer) {
         this.useDedicatedReplicationServer = useDedicatedReplicationServer;
         return this;
     }
     
+    public UpdateReplicationConfigurationTemplateRequestBody(@JsonProperty("replicationConfigurationTemplateID") String replicationConfigurationTemplateID) {
+        this.replicationConfigurationTemplateID = replicationConfigurationTemplateID;
+  }
 }

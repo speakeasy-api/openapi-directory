@@ -15,9 +15,11 @@ public class CreateDetectorModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorModelConfiguration")
     public DetectorModelConfiguration detectorModelConfiguration;
+
     public CreateDetectorModelResponse withDetectorModelConfiguration(DetectorModelConfiguration detectorModelConfiguration) {
         this.detectorModelConfiguration = detectorModelConfiguration;
         return this;
     }
     
+    public CreateDetectorModelResponse(){}
 }

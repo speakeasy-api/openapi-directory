@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActionARealTimeDecisionDefaultApplicationJSON13 {
     @JsonProperty("detail")
     public String detail;
+
     public ActionARealTimeDecisionDefaultApplicationJSON13 withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -19,6 +20,7 @@ public class ActionARealTimeDecisionDefaultApplicationJSON13 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retry_after")
     public Long retryAfter;
+
     public ActionARealTimeDecisionDefaultApplicationJSON13 withRetryAfter(Long retryAfter) {
         this.retryAfter = retryAfter;
         return this;
@@ -26,6 +28,7 @@ public class ActionARealTimeDecisionDefaultApplicationJSON13 {
     
     @JsonProperty("status")
     public ActionARealTimeDecisionDefaultApplicationJSON13StatusEnum status;
+
     public ActionARealTimeDecisionDefaultApplicationJSON13 withStatus(ActionARealTimeDecisionDefaultApplicationJSON13StatusEnum status) {
         this.status = status;
         return this;
@@ -33,6 +36,7 @@ public class ActionARealTimeDecisionDefaultApplicationJSON13 {
     
     @JsonProperty("title")
     public String title;
+
     public ActionARealTimeDecisionDefaultApplicationJSON13 withTitle(String title) {
         this.title = title;
         return this;
@@ -40,9 +44,16 @@ public class ActionARealTimeDecisionDefaultApplicationJSON13 {
     
     @JsonProperty("type")
     public ActionARealTimeDecisionDefaultApplicationJSON13TypeEnum type;
+
     public ActionARealTimeDecisionDefaultApplicationJSON13 withType(ActionARealTimeDecisionDefaultApplicationJSON13TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ActionARealTimeDecisionDefaultApplicationJSON13(@JsonProperty("detail") String detail, @JsonProperty("status") ActionARealTimeDecisionDefaultApplicationJSON13StatusEnum status, @JsonProperty("title") String title, @JsonProperty("type") ActionARealTimeDecisionDefaultApplicationJSON13TypeEnum type) {
+        this.detail = detail;
+        this.status = status;
+        this.title = title;
+        this.type = type;
+  }
 }

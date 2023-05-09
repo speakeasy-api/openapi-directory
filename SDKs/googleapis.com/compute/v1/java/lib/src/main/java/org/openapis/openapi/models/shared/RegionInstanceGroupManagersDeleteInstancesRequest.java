@@ -15,6 +15,7 @@ public class RegionInstanceGroupManagersDeleteInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public String[] instances;
+
     public RegionInstanceGroupManagersDeleteInstancesRequest withInstances(String[] instances) {
         this.instances = instances;
         return this;
@@ -26,9 +27,11 @@ public class RegionInstanceGroupManagersDeleteInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipInstancesOnValidationError")
     public Boolean skipInstancesOnValidationError;
+
     public RegionInstanceGroupManagersDeleteInstancesRequest withSkipInstancesOnValidationError(Boolean skipInstancesOnValidationError) {
         this.skipInstancesOnValidationError = skipInstancesOnValidationError;
         return this;
     }
     
+    public RegionInstanceGroupManagersDeleteInstancesRequest(){}
 }

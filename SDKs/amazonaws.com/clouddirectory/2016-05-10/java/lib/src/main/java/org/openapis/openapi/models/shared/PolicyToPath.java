@@ -15,6 +15,7 @@ public class PolicyToPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public PolicyToPath withPath(String path) {
         this.path = path;
         return this;
@@ -23,9 +24,11 @@ public class PolicyToPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policies")
     public PolicyAttachment[] policies;
+
     public PolicyToPath withPolicies(PolicyAttachment[] policies) {
         this.policies = policies;
         return this;
     }
     
+    public PolicyToPath(){}
 }

@@ -15,6 +15,7 @@ public class ListDeploymentTargetsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDeploymentTargetsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListDeploymentTargetsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetIds")
     public String[] targetIds;
+
     public ListDeploymentTargetsOutput withTargetIds(String[] targetIds) {
         this.targetIds = targetIds;
         return this;
     }
     
+    public ListDeploymentTargetsOutput(){}
 }

@@ -15,9 +15,11 @@ public class GetPriceListFileUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public GetPriceListFileUrlResponse withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GetPriceListFileUrlResponse(){}
 }

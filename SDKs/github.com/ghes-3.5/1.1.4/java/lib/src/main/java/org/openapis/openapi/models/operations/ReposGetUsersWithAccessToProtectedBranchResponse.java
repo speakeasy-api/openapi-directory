@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposGetUsersWithAccessToProtectedBranchResponse {
     
     public String contentType;
+
     public ReposGetUsersWithAccessToProtectedBranchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposGetUsersWithAccessToProtectedBranchResponse {
     
     
     public Integer statusCode;
+
     public ReposGetUsersWithAccessToProtectedBranchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposGetUsersWithAccessToProtectedBranchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposGetUsersWithAccessToProtectedBranchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposGetUsersWithAccessToProtectedBranchResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposGetUsersWithAccessToProtectedBranchResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ReposGetUsersWithAccessToProtectedBranchResponse {
      */
     
     public org.openapis.openapi.models.shared.SimpleUser[] simpleUsers;
+
     public ReposGetUsersWithAccessToProtectedBranchResponse withSimpleUsers(org.openapis.openapi.models.shared.SimpleUser[] simpleUsers) {
         this.simpleUsers = simpleUsers;
         return this;
     }
     
+    public ReposGetUsersWithAccessToProtectedBranchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class PayrollCalendars {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PayrollCalendars")
     public PayrollCalendar[] payrollCalendars;
+
     public PayrollCalendars withPayrollCalendars(PayrollCalendar[] payrollCalendars) {
         this.payrollCalendars = payrollCalendars;
         return this;
     }
     
+    public PayrollCalendars(){}
 }

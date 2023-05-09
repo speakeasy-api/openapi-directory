@@ -15,6 +15,7 @@ public class AddShippingAddressRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clearAddressIfPostalCodeNotFound")
     public Boolean clearAddressIfPostalCodeNotFound;
+
     public AddShippingAddressRequestBody withClearAddressIfPostalCodeNotFound(Boolean clearAddressIfPostalCodeNotFound) {
         this.clearAddressIfPostalCodeNotFound = clearAddressIfPostalCodeNotFound;
         return this;
@@ -26,6 +27,7 @@ public class AddShippingAddressRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logisticsInfo")
     public AddShippingAddressRequestBodyLogisticsInfo[] logisticsInfo;
+
     public AddShippingAddressRequestBody withLogisticsInfo(AddShippingAddressRequestBodyLogisticsInfo[] logisticsInfo) {
         this.logisticsInfo = logisticsInfo;
         return this;
@@ -37,9 +39,11 @@ public class AddShippingAddressRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedAddresses")
     public AddShippingAddressRequestBodySelectedAddresses[] selectedAddresses;
+
     public AddShippingAddressRequestBody withSelectedAddresses(AddShippingAddressRequestBodySelectedAddresses[] selectedAddresses) {
         this.selectedAddresses = selectedAddresses;
         return this;
     }
     
+    public AddShippingAddressRequestBody(){}
 }

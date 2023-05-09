@@ -12,6 +12,7 @@ public class PostServersCreateServerResponseServerPublicNetIpv6DnsPtr {
      */
     @JsonProperty("dns_ptr")
     public String dnsPtr;
+
     public PostServersCreateServerResponseServerPublicNetIpv6DnsPtr withDnsPtr(String dnsPtr) {
         this.dnsPtr = dnsPtr;
         return this;
@@ -22,9 +23,14 @@ public class PostServersCreateServerResponseServerPublicNetIpv6DnsPtr {
      */
     @JsonProperty("ip")
     public String ip;
+
     public PostServersCreateServerResponseServerPublicNetIpv6DnsPtr withIp(String ip) {
         this.ip = ip;
         return this;
     }
     
+    public PostServersCreateServerResponseServerPublicNetIpv6DnsPtr(@JsonProperty("dns_ptr") String dnsPtr, @JsonProperty("ip") String ip) {
+        this.dnsPtr = dnsPtr;
+        this.ip = ip;
+  }
 }

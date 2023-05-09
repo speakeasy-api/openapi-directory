@@ -15,6 +15,7 @@ public class GrpcTimeout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idle")
     public Duration idle;
+
     public GrpcTimeout withIdle(Duration idle) {
         this.idle = idle;
         return this;
@@ -23,9 +24,11 @@ public class GrpcTimeout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perRequest")
     public Duration perRequest;
+
     public GrpcTimeout withPerRequest(Duration perRequest) {
         this.perRequest = perRequest;
         return this;
     }
     
+    public GrpcTimeout(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SplitOidResponse {
     
     public String contentType;
+
     public SplitOidResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SplitOidResponse {
     
     
     public Integer statusCode;
+
     public SplitOidResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SplitOidResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SplitOidResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class SplitOidResponse {
      */
     
     public String[] splitOid200ApplicationJSONStrings;
+
     public SplitOidResponse withSplitOid200ApplicationJSONStrings(String[] splitOid200ApplicationJSONStrings) {
         this.splitOid200ApplicationJSONStrings = splitOid200ApplicationJSONStrings;
         return this;
     }
     
+    public SplitOidResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

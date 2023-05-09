@@ -15,6 +15,7 @@ public class PrivateIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateDnsName")
     public String privateDnsName;
+
     public PrivateIp withPrivateDnsName(String privateDnsName) {
         this.privateDnsName = privateDnsName;
         return this;
@@ -23,9 +24,11 @@ public class PrivateIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateIpAddress")
     public String privateIpAddress;
+
     public PrivateIp withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
     }
     
+    public PrivateIp(){}
 }

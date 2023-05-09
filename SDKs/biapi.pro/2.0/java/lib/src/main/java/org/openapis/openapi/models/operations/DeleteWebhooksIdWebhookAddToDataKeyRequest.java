@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWebhooksIdWebhookAddToDataKeyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public DeleteWebhooksIdWebhookAddToDataKeyRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -16,6 +18,7 @@ public class DeleteWebhooksIdWebhookAddToDataKeyRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_webhook")
     public Long idWebhook;
+
     public DeleteWebhooksIdWebhookAddToDataKeyRequest withIdWebhook(Long idWebhook) {
         this.idWebhook = idWebhook;
         return this;
@@ -23,9 +26,14 @@ public class DeleteWebhooksIdWebhookAddToDataKeyRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
     public String key;
+
     public DeleteWebhooksIdWebhookAddToDataKeyRequest withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public DeleteWebhooksIdWebhookAddToDataKeyRequest(@JsonProperty("id_webhook") Long idWebhook, @JsonProperty("key") String key) {
+        this.idWebhook = idWebhook;
+        this.key = key;
+  }
 }

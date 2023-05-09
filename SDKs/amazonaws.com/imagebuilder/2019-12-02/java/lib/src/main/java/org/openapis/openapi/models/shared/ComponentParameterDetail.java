@@ -15,6 +15,7 @@ public class ComponentParameterDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public String[] defaultValue;
+
     public ComponentParameterDetail withDefaultValue(String[] defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -23,6 +24,7 @@ public class ComponentParameterDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ComponentParameterDetail withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +32,7 @@ public class ComponentParameterDetail {
     
     @JsonProperty("name")
     public String name;
+
     public ComponentParameterDetail withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +40,14 @@ public class ComponentParameterDetail {
     
     @JsonProperty("type")
     public String type;
+
     public ComponentParameterDetail withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ComponentParameterDetail(@JsonProperty("name") String name, @JsonProperty("type") String type) {
+        this.name = name;
+        this.type = type;
+  }
 }

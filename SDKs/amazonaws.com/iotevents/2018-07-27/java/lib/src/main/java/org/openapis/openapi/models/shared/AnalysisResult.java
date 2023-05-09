@@ -15,6 +15,7 @@ public class AnalysisResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public AnalysisResultLevelEnum level;
+
     public AnalysisResult withLevel(AnalysisResultLevelEnum level) {
         this.level = level;
         return this;
@@ -23,6 +24,7 @@ public class AnalysisResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public AnalysisResultLocation[] locations;
+
     public AnalysisResult withLocations(AnalysisResultLocation[] locations) {
         this.locations = locations;
         return this;
@@ -31,6 +33,7 @@ public class AnalysisResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AnalysisResult withMessage(String message) {
         this.message = message;
         return this;
@@ -39,9 +42,11 @@ public class AnalysisResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public AnalysisResult withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AnalysisResult(){}
 }

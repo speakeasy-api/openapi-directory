@@ -18,6 +18,7 @@ public class AnalyzePackagesRequestV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeOsvData")
     public Boolean includeOsvData;
+
     public AnalyzePackagesRequestV1 withIncludeOsvData(Boolean includeOsvData) {
         this.includeOsvData = includeOsvData;
         return this;
@@ -29,6 +30,7 @@ public class AnalyzePackagesRequestV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packages")
     public PackageData[] packages;
+
     public AnalyzePackagesRequestV1 withPackages(PackageData[] packages) {
         this.packages = packages;
         return this;
@@ -40,9 +42,11 @@ public class AnalyzePackagesRequestV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceUri")
     public String resourceUri;
+
     public AnalyzePackagesRequestV1 withResourceUri(String resourceUri) {
         this.resourceUri = resourceUri;
         return this;
     }
     
+    public AnalyzePackagesRequestV1(){}
 }

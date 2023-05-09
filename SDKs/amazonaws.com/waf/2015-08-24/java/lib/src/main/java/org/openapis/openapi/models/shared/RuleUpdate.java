@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RuleUpdate {
     @JsonProperty("Action")
     public ChangeActionEnum action;
+
     public RuleUpdate withAction(ChangeActionEnum action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class RuleUpdate {
     
     @JsonProperty("Predicate")
     public Predicate predicate;
+
     public RuleUpdate withPredicate(Predicate predicate) {
         this.predicate = predicate;
         return this;
     }
     
+    public RuleUpdate(@JsonProperty("Action") ChangeActionEnum action, @JsonProperty("Predicate") Predicate predicate) {
+        this.action = action;
+        this.predicate = predicate;
+  }
 }

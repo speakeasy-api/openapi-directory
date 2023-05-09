@@ -13,6 +13,7 @@ public class PatchApiKeysIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=description")
     public String description;
+
     public PatchApiKeysIdRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class PatchApiKeysIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=expires_at")
     public OffsetDateTime expiresAt;
+
     public PatchApiKeysIdRequestBody withExpiresAt(OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -33,6 +35,7 @@ public class PatchApiKeysIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PatchApiKeysIdRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -43,9 +46,11 @@ public class PatchApiKeysIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=permission_set")
     public PatchApiKeysIdRequestBodyPermissionSetEnum permissionSet;
+
     public PatchApiKeysIdRequestBody withPermissionSet(PatchApiKeysIdRequestBodyPermissionSetEnum permissionSet) {
         this.permissionSet = permissionSet;
         return this;
     }
     
+    public PatchApiKeysIdRequestBody(){}
 }

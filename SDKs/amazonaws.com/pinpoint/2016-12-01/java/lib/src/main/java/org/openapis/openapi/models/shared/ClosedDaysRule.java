@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ClosedDaysRule - Closed Days Rule. Part of Journey sending schedule.
+ * ClosedDaysRule - Specifies the rule settings for when messages can't be sent.
  */
 public class ClosedDaysRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDateTime")
     public String endDateTime;
+
     public ClosedDaysRule withEndDateTime(String endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -23,6 +24,7 @@ public class ClosedDaysRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ClosedDaysRule withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class ClosedDaysRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDateTime")
     public String startDateTime;
+
     public ClosedDaysRule withStartDateTime(String startDateTime) {
         this.startDateTime = startDateTime;
         return this;
     }
     
+    public ClosedDaysRule(){}
 }

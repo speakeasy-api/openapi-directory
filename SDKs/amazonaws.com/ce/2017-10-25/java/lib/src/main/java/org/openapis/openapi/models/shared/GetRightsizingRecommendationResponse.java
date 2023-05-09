@@ -15,6 +15,7 @@ public class GetRightsizingRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public RightsizingRecommendationConfiguration configuration;
+
     public GetRightsizingRecommendationResponse withConfiguration(RightsizingRecommendationConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -23,6 +24,7 @@ public class GetRightsizingRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metadata")
     public RightsizingRecommendationMetadata metadata;
+
     public GetRightsizingRecommendationResponse withMetadata(RightsizingRecommendationMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -31,6 +33,7 @@ public class GetRightsizingRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetRightsizingRecommendationResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -39,6 +42,7 @@ public class GetRightsizingRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RightsizingRecommendations")
     public RightsizingRecommendation[] rightsizingRecommendations;
+
     public GetRightsizingRecommendationResponse withRightsizingRecommendations(RightsizingRecommendation[] rightsizingRecommendations) {
         this.rightsizingRecommendations = rightsizingRecommendations;
         return this;
@@ -47,9 +51,11 @@ public class GetRightsizingRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Summary")
     public RightsizingRecommendationSummary summary;
+
     public GetRightsizingRecommendationResponse withSummary(RightsizingRecommendationSummary summary) {
         this.summary = summary;
         return this;
     }
     
+    public GetRightsizingRecommendationResponse(){}
 }

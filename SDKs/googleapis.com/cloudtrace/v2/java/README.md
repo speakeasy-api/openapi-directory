@@ -16,32 +16,31 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWriteSecurityOption1;
-import org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWriteSecurityOption2;
-import org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWriteSecurity;
 import org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWriteRequest;
 import org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWriteResponse;
+import org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWriteSecurity;
+import org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWriteSecurityOption1;
+import org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWriteSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.BatchWriteSpansRequest;
-import org.openapis.openapi.models.shared.SpanSpanKindEnum;
-import org.openapis.openapi.models.shared.Span;
-import org.openapis.openapi.models.shared.TimeEvents;
-import org.openapis.openapi.models.shared.TimeEvent;
-import org.openapis.openapi.models.shared.MessageEventTypeEnum;
-import org.openapis.openapi.models.shared.MessageEvent;
 import org.openapis.openapi.models.shared.Annotation;
-import org.openapis.openapi.models.shared.TruncatableString;
-import org.openapis.openapi.models.shared.Attributes;
 import org.openapis.openapi.models.shared.AttributeValue;
-import org.openapis.openapi.models.shared.Status;
-import org.openapis.openapi.models.shared.StackTrace;
-import org.openapis.openapi.models.shared.StackFrames;
-import org.openapis.openapi.models.shared.StackFrame;
-import org.openapis.openapi.models.shared.Module;
-import org.openapis.openapi.models.shared.Links;
-import org.openapis.openapi.models.shared.LinkTypeEnum;
+import org.openapis.openapi.models.shared.Attributes;
+import org.openapis.openapi.models.shared.BatchWriteSpansRequest;
 import org.openapis.openapi.models.shared.Link;
+import org.openapis.openapi.models.shared.LinkTypeEnum;
+import org.openapis.openapi.models.shared.Links;
+import org.openapis.openapi.models.shared.MessageEvent;
+import org.openapis.openapi.models.shared.MessageEventTypeEnum;
+import org.openapis.openapi.models.shared.Module;
+import org.openapis.openapi.models.shared.Span;
+import org.openapis.openapi.models.shared.SpanSpanKindEnum;
+import org.openapis.openapi.models.shared.StackFrame;
+import org.openapis.openapi.models.shared.StackFrames;
+import org.openapis.openapi.models.shared.StackTrace;
+import org.openapis.openapi.models.shared.Status;
+import org.openapis.openapi.models.shared.TimeEvent;
+import org.openapis.openapi.models.shared.TimeEvents;
+import org.openapis.openapi.models.shared.TruncatableString;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -50,86 +49,84 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CloudtraceProjectsTracesBatchWriteRequest req = new CloudtraceProjectsTracesBatchWriteRequest() {{
-                dollarXgafv = "2";
+            CloudtraceProjectsTracesBatchWriteRequest req = new CloudtraceProjectsTracesBatchWriteRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 batchWriteSpansRequest = new BatchWriteSpansRequest() {{
                     spans = new org.openapis.openapi.models.shared.Span[]{{
                         add(new Span() {{
                             attributes = new Attributes() {{
                                 attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                    put("quibusdam", new AttributeValue() {{
+                                    put("unde", new AttributeValue() {{
                                         boolValue = false;
-                                        intValue = "unde";
+                                        intValue = "nulla";
                                         stringValue = new TruncatableString() {{
-                                            truncatedByteCount = 857946;
-                                            value = "corrupti";
+                                            truncatedByteCount = 544883;
+                                            value = "illum";
                                         }};
                                     }});
-                                    put("illum", new AttributeValue() {{
+                                    put("vel", new AttributeValue() {{
                                         boolValue = false;
-                                        intValue = "vel";
+                                        intValue = "error";
                                         stringValue = new TruncatableString() {{
-                                            truncatedByteCount = 623564;
-                                            value = "deserunt";
+                                            truncatedByteCount = 645894;
+                                            value = "suscipit";
                                         }};
                                     }});
-                                    put("suscipit", new AttributeValue() {{
+                                    put("iure", new AttributeValue() {{
                                         boolValue = false;
-                                        intValue = "iure";
+                                        intValue = "magnam";
                                         stringValue = new TruncatableString() {{
-                                            truncatedByteCount = 297534;
-                                            value = "debitis";
+                                            truncatedByteCount = 891773;
+                                            value = "ipsa";
+                                        }};
+                                    }});
+                                    put("delectus", new AttributeValue() {{
+                                        boolValue = false;
+                                        intValue = "tempora";
+                                        stringValue = new TruncatableString() {{
+                                            truncatedByteCount = 383441;
+                                            value = "molestiae";
                                         }};
                                     }});
                                 }};
-                                droppedAttributesCount = 56713;
+                                droppedAttributesCount = 791725;
                             }};
-                            childSpanCount = 963663;
+                            childSpanCount = 812169;
                             displayName = new TruncatableString() {{
-                                truncatedByteCount = 272656;
-                                value = "suscipit";
+                                truncatedByteCount = 528895;
+                                value = "iusto";
                             }};
-                            endTime = "molestiae";
+                            endTime = "excepturi";
                             links = new Links() {{
-                                droppedLinksCount = 791725;
+                                droppedLinksCount = 392785;
                                 link = new org.openapis.openapi.models.shared.Link[]{{
                                     add(new Link() {{
                                         attributes = new Attributes() {{
                                             attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                put("iusto", new AttributeValue() {{
+                                                put("ab", new AttributeValue() {{
                                                     boolValue = false;
-                                                    intValue = "excepturi";
+                                                    intValue = "quis";
                                                     stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 392785;
-                                                        value = "recusandae";
+                                                        truncatedByteCount = 87129;
+                                                        value = "deserunt";
                                                     }};
                                                 }});
-                                                put("temporibus", new AttributeValue() {{
+                                                put("perferendis", new AttributeValue() {{
                                                     boolValue = false;
-                                                    intValue = "ab";
+                                                    intValue = "ipsam";
                                                     stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 337396;
-                                                        value = "veritatis";
+                                                        truncatedByteCount = 832620;
+                                                        value = "sapiente";
                                                     }};
                                                 }});
-                                                put("deserunt", new AttributeValue() {{
+                                                put("quo", new AttributeValue() {{
                                                     boolValue = false;
-                                                    intValue = "perferendis";
+                                                    intValue = "odit";
                                                     stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 368241;
-                                                        value = "repellendus";
+                                                        truncatedByteCount = 870013;
+                                                        value = "at";
                                                     }};
                                                 }});
-                                            }};
-                                            droppedAttributesCount = 957156;
-                                        }};
-                                        spanId = "quo";
-                                        traceId = "odit";
-                                        type = "PARENT_LINKED_SPAN";
-                                    }}),
-                                    add(new Link() {{
-                                        attributes = new Attributes() {{
-                                            attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
                                                 put("maiores", new AttributeValue() {{
                                                     boolValue = false;
                                                     intValue = "molestiae";
@@ -138,363 +135,329 @@ public class Application {
                                                         value = "quod";
                                                     }};
                                                 }});
-                                                put("esse", new AttributeValue() {{
-                                                    boolValue = false;
-                                                    intValue = "totam";
-                                                    stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 780529;
-                                                        value = "dolorum";
-                                                    }};
-                                                }});
-                                                put("dicta", new AttributeValue() {{
-                                                    boolValue = false;
-                                                    intValue = "nam";
-                                                    stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 639921;
-                                                        value = "occaecati";
-                                                    }};
-                                                }});
-                                                put("fugit", new AttributeValue() {{
-                                                    boolValue = false;
-                                                    intValue = "deleniti";
-                                                    stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 944669;
-                                                        value = "optio";
-                                                    }};
-                                                }});
                                             }};
-                                            droppedAttributesCount = 521848;
+                                            droppedAttributesCount = 461479;
                                         }};
-                                        spanId = "beatae";
-                                        traceId = "commodi";
-                                        type = "CHILD_LINKED_SPAN";
+                                        spanId = "totam";
+                                        traceId = "porro";
+                                        type = LinkTypeEnum.PARENT_LINKED_SPAN;
                                     }}),
                                     add(new Link() {{
                                         attributes = new Attributes() {{
                                             attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                put("qui", new AttributeValue() {{
+                                                put("nam", new AttributeValue() {{
                                                     boolValue = false;
-                                                    intValue = "impedit";
+                                                    intValue = "officia";
                                                     stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 736918;
-                                                        value = "esse";
-                                                    }};
-                                                }});
-                                                put("ipsum", new AttributeValue() {{
-                                                    boolValue = false;
-                                                    intValue = "excepturi";
-                                                    stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 135218;
-                                                        value = "perferendis";
+                                                        truncatedByteCount = 582020;
+                                                        value = "fugit";
                                                     }};
                                                 }});
                                             }};
-                                            droppedAttributesCount = 324141;
+                                            droppedAttributesCount = 537373;
                                         }};
-                                        spanId = "natus";
-                                        traceId = "sed";
-                                        type = "CHILD_LINKED_SPAN";
+                                        spanId = "hic";
+                                        traceId = "optio";
+                                        type = LinkTypeEnum.CHILD_LINKED_SPAN;
                                     }}),
                                     add(new Link() {{
                                         attributes = new Attributes() {{
                                             attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                put("natus", new AttributeValue() {{
+                                                put("commodi", new AttributeValue() {{
                                                     boolValue = false;
-                                                    intValue = "laboriosam";
+                                                    intValue = "molestiae";
                                                     stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 943749;
-                                                        value = "saepe";
+                                                        truncatedByteCount = 264555;
+                                                        value = "qui";
                                                     }};
                                                 }});
                                             }};
-                                            droppedAttributesCount = 681820;
+                                            droppedAttributesCount = 774234;
                                         }};
-                                        spanId = "in";
-                                        traceId = "corporis";
-                                        type = "CHILD_LINKED_SPAN";
+                                        spanId = "cum";
+                                        traceId = "esse";
+                                        type = LinkTypeEnum.TYPE_UNSPECIFIED;
+                                    }}),
+                                    add(new Link() {{
+                                        attributes = new Attributes() {{
+                                            attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
+                                                put("aspernatur", new AttributeValue() {{
+                                                    boolValue = false;
+                                                    intValue = "perferendis";
+                                                    stringValue = new TruncatableString() {{
+                                                        truncatedByteCount = 324141;
+                                                        value = "natus";
+                                                    }};
+                                                }});
+                                                put("sed", new AttributeValue() {{
+                                                    boolValue = false;
+                                                    intValue = "iste";
+                                                    stringValue = new TruncatableString() {{
+                                                        truncatedByteCount = 222321;
+                                                        value = "natus";
+                                                    }};
+                                                }});
+                                                put("laboriosam", new AttributeValue() {{
+                                                    boolValue = false;
+                                                    intValue = "hic";
+                                                    stringValue = new TruncatableString() {{
+                                                        truncatedByteCount = 902599;
+                                                        value = "fuga";
+                                                    }};
+                                                }});
+                                            }};
+                                            droppedAttributesCount = 449950;
+                                        }};
+                                        spanId = "corporis";
+                                        traceId = "iste";
+                                        type = LinkTypeEnum.CHILD_LINKED_SPAN;
                                     }}),
                                 }};
                             }};
-                            name = "iure";
-                            parentSpanId = "saepe";
+                            name = "Dr. Rickey Boyle";
+                            parentSpanId = "mollitia";
                             sameProcessAsParentSpan = false;
-                            spanId = "quidem";
-                            spanKind = "SPAN_KIND_UNSPECIFIED";
+                            spanId = "laborum";
+                            spanKind = SpanSpanKindEnum.INTERNAL;
                             stackTrace = new StackTrace() {{
                                 stackFrames = new StackFrames() {{
-                                    droppedFramesCount = 60225;
+                                    droppedFramesCount = 210382;
                                     frame = new org.openapis.openapi.models.shared.StackFrame[]{{
                                         add(new StackFrame() {{
-                                            columnNumber = "est";
+                                            columnNumber = "explicabo";
                                             fileName = new TruncatableString() {{
-                                                truncatedByteCount = 653140;
-                                                value = "laborum";
+                                                truncatedByteCount = 750686;
+                                                value = "enim";
                                             }};
                                             functionName = new TruncatableString() {{
-                                                truncatedByteCount = 170909;
-                                                value = "dolorem";
+                                                truncatedByteCount = 607831;
+                                                value = "nemo";
                                             }};
-                                            lineNumber = "corporis";
+                                            lineNumber = "minima";
                                             loadModule = new Module() {{
                                                 buildId = new TruncatableString() {{
-                                                    truncatedByteCount = 128926;
-                                                    value = "nobis";
+                                                    truncatedByteCount = 570197;
+                                                    value = "accusantium";
                                                 }};
                                                 module = new TruncatableString() {{
-                                                    truncatedByteCount = 315428;
-                                                    value = "omnis";
-                                                }};
-                                            }};
-                                            originalFunctionName = new TruncatableString() {{
-                                                truncatedByteCount = 363711;
-                                                value = "minima";
-                                            }};
-                                            sourceVersion = new TruncatableString() {{
-                                                truncatedByteCount = 570197;
-                                                value = "accusantium";
-                                            }};
-                                        }}),
-                                        add(new StackFrame() {{
-                                            columnNumber = "iure";
-                                            fileName = new TruncatableString() {{
-                                                truncatedByteCount = 634274;
-                                                value = "doloribus";
-                                            }};
-                                            functionName = new TruncatableString() {{
-                                                truncatedByteCount = 958950;
-                                                value = "architecto";
-                                            }};
-                                            lineNumber = "mollitia";
-                                            loadModule = new Module() {{
-                                                buildId = new TruncatableString() {{
-                                                    truncatedByteCount = 208876;
+                                                    truncatedByteCount = 438601;
                                                     value = "culpa";
                                                 }};
-                                                module = new TruncatableString() {{
-                                                    truncatedByteCount = 161309;
-                                                    value = "repellat";
-                                                }};
                                             }};
                                             originalFunctionName = new TruncatableString() {{
-                                                truncatedByteCount = 653108;
-                                                value = "occaecati";
+                                                truncatedByteCount = 988374;
+                                                value = "sapiente";
                                             }};
                                             sourceVersion = new TruncatableString() {{
-                                                truncatedByteCount = 253291;
-                                                value = "commodi";
+                                                truncatedByteCount = 102044;
+                                                value = "mollitia";
                                             }};
                                         }}),
                                         add(new StackFrame() {{
-                                            columnNumber = "quam";
+                                            columnNumber = "dolorem";
                                             fileName = new TruncatableString() {{
-                                                truncatedByteCount = 474697;
-                                                value = "velit";
+                                                truncatedByteCount = 635059;
+                                                value = "consequuntur";
                                             }};
                                             functionName = new TruncatableString() {{
-                                                truncatedByteCount = 623510;
-                                                value = "quia";
+                                                truncatedByteCount = 995300;
+                                                value = "mollitia";
                                             }};
-                                            lineNumber = "quis";
+                                            lineNumber = "occaecati";
                                             loadModule = new Module() {{
                                                 buildId = new TruncatableString() {{
-                                                    truncatedByteCount = 110375;
-                                                    value = "laborum";
+                                                    truncatedByteCount = 253291;
+                                                    value = "commodi";
                                                 }};
                                                 module = new TruncatableString() {{
-                                                    truncatedByteCount = 656330;
-                                                    value = "enim";
+                                                    truncatedByteCount = 466311;
+                                                    value = "molestiae";
                                                 }};
                                             }};
                                             originalFunctionName = new TruncatableString() {{
-                                                truncatedByteCount = 138183;
-                                                value = "quo";
+                                                truncatedByteCount = 244425;
+                                                value = "error";
                                             }};
                                             sourceVersion = new TruncatableString() {{
-                                                truncatedByteCount = 196582;
-                                                value = "tenetur";
-                                            }};
-                                        }}),
-                                        add(new StackFrame() {{
-                                            columnNumber = "ipsam";
-                                            fileName = new TruncatableString() {{
-                                                truncatedByteCount = 662527;
-                                                value = "possimus";
-                                            }};
-                                            functionName = new TruncatableString() {{
-                                                truncatedByteCount = 13571;
-                                                value = "quasi";
-                                            }};
-                                            lineNumber = "error";
-                                            loadModule = new Module() {{
-                                                buildId = new TruncatableString() {{
-                                                    truncatedByteCount = 837945;
-                                                    value = "laborum";
-                                                }};
-                                                module = new TruncatableString() {{
-                                                    truncatedByteCount = 96098;
-                                                    value = "reiciendis";
-                                                }};
-                                            }};
-                                            originalFunctionName = new TruncatableString() {{
-                                                truncatedByteCount = 976460;
-                                                value = "vero";
-                                            }};
-                                            sourceVersion = new TruncatableString() {{
-                                                truncatedByteCount = 468651;
-                                                value = "praesentium";
+                                                truncatedByteCount = 158969;
+                                                value = "quis";
                                             }};
                                         }}),
                                     }};
                                 }};
-                                stackTraceHashId = "voluptatibus";
+                                stackTraceHashId = "vitae";
                             }};
-                            startTime = "ipsa";
+                            startTime = "laborum";
                             status = new Status() {{
-                                code = 604846;
+                                code = 656330;
                                 details = new java.util.HashMap<String, Object>[]{{
                                     add(new java.util.HashMap<String, Object>() {{
-                                        put("perferendis", "doloremque");
-                                        put("reprehenderit", "ut");
-                                        put("maiores", "dicta");
+                                        put("quo", "sequi");
                                     }}),
                                     add(new java.util.HashMap<String, Object>() {{
-                                        put("dolore", "iusto");
-                                        put("dicta", "harum");
+                                        put("ipsam", "id");
+                                        put("possimus", "aut");
+                                        put("quasi", "error");
+                                        put("temporibus", "laborum");
                                     }}),
                                 }};
-                                message = "enim";
+                                message = "quasi";
                             }};
                             timeEvents = new TimeEvents() {{
-                                droppedAnnotationsCount = 880476;
-                                droppedMessageEventsCount = 414263;
+                                droppedAnnotationsCount = 971945;
+                                droppedMessageEventsCount = 976460;
                                 timeEvent = new org.openapis.openapi.models.shared.TimeEvent[]{{
                                     add(new TimeEvent() {{
                                         annotation = new Annotation() {{
                                             attributes = new Attributes() {{
                                                 attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                    put("ipsum", new AttributeValue() {{
+                                                    put("praesentium", new AttributeValue() {{
                                                         boolValue = false;
-                                                        intValue = "quidem";
+                                                        intValue = "voluptatibus";
                                                         stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 565189;
+                                                            truncatedByteCount = 55714;
+                                                            value = "omnis";
+                                                        }};
+                                                    }});
+                                                    put("voluptate", new AttributeValue() {{
+                                                        boolValue = false;
+                                                        intValue = "cum";
+                                                        stringValue = new TruncatableString() {{
+                                                            truncatedByteCount = 19987;
+                                                            value = "doloremque";
+                                                        }};
+                                                    }});
+                                                }};
+                                                droppedAttributesCount = 441711;
+                                            }};
+                                            description = new TruncatableString() {{
+                                                truncatedByteCount = 282807;
+                                                value = "maiores";
+                                            }};
+                                        }};
+                                        messageEvent = new MessageEvent() {{
+                                            compressedSizeBytes = "dicta";
+                                            id = "corporis";
+                                            type = MessageEventTypeEnum.TYPE_UNSPECIFIED;
+                                            uncompressedSizeBytes = "iusto";
+                                        }};
+                                        time = "dicta";
+                                    }}),
+                                    add(new TimeEvent() {{
+                                        annotation = new Annotation() {{
+                                            attributes = new Attributes() {{
+                                                attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
+                                                    put("enim", new AttributeValue() {{
+                                                        boolValue = false;
+                                                        intValue = "accusamus";
+                                                        stringValue = new TruncatableString() {{
+                                                            truncatedByteCount = 414263;
+                                                            value = "repudiandae";
+                                                        }};
+                                                    }});
+                                                    put("quae", new AttributeValue() {{
+                                                        boolValue = false;
+                                                        intValue = "ipsum";
+                                                        stringValue = new TruncatableString() {{
+                                                            truncatedByteCount = 692472;
+                                                            value = "molestias";
+                                                        }};
+                                                    }});
+                                                    put("excepturi", new AttributeValue() {{
+                                                        boolValue = false;
+                                                        intValue = "pariatur";
+                                                        stringValue = new TruncatableString() {{
+                                                            truncatedByteCount = 265389;
+                                                            value = "praesentium";
+                                                        }};
+                                                    }});
+                                                }};
+                                                droppedAttributesCount = 523248;
+                                            }};
+                                            description = new TruncatableString() {{
+                                                truncatedByteCount = 916723;
+                                                value = "quasi";
+                                            }};
+                                        }};
+                                        messageEvent = new MessageEvent() {{
+                                            compressedSizeBytes = "repudiandae";
+                                            id = "sint";
+                                            type = MessageEventTypeEnum.TYPE_UNSPECIFIED;
+                                            uncompressedSizeBytes = "itaque";
+                                        }};
+                                        time = "incidunt";
+                                    }}),
+                                    add(new TimeEvent() {{
+                                        annotation = new Annotation() {{
+                                            attributes = new Attributes() {{
+                                                attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
+                                                    put("consequatur", new AttributeValue() {{
+                                                        boolValue = false;
+                                                        intValue = "est";
+                                                        stringValue = new TruncatableString() {{
+                                                            truncatedByteCount = 842342;
+                                                            value = "explicabo";
+                                                        }};
+                                                    }});
+                                                    put("deserunt", new AttributeValue() {{
+                                                        boolValue = false;
+                                                        intValue = "distinctio";
+                                                        stringValue = new TruncatableString() {{
+                                                            truncatedByteCount = 841386;
+                                                            value = "labore";
+                                                        }};
+                                                    }});
+                                                }};
+                                                droppedAttributesCount = 264730;
+                                            }};
+                                            description = new TruncatableString() {{
+                                                truncatedByteCount = 183191;
+                                                value = "aliquid";
+                                            }};
+                                        }};
+                                        messageEvent = new MessageEvent() {{
+                                            compressedSizeBytes = "cupiditate";
+                                            id = "quos";
+                                            type = MessageEventTypeEnum.TYPE_UNSPECIFIED;
+                                            uncompressedSizeBytes = "magni";
+                                        }};
+                                        time = "assumenda";
+                                    }}),
+                                    add(new TimeEvent() {{
+                                        annotation = new Annotation() {{
+                                            attributes = new Attributes() {{
+                                                attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
+                                                    put("alias", new AttributeValue() {{
+                                                        boolValue = false;
+                                                        intValue = "fugit";
+                                                        stringValue = new TruncatableString() {{
+                                                            truncatedByteCount = 677817;
                                                             value = "excepturi";
                                                         }};
                                                     }});
-                                                }};
-                                                droppedAttributesCount = 865103;
-                                            }};
-                                            description = new TruncatableString() {{
-                                                truncatedByteCount = 265389;
-                                                value = "praesentium";
-                                            }};
-                                        }};
-                                        messageEvent = new MessageEvent() {{
-                                            compressedSizeBytes = "rem";
-                                            id = "voluptates";
-                                            type = "TYPE_UNSPECIFIED";
-                                            uncompressedSizeBytes = "repudiandae";
-                                        }};
-                                        time = "sint";
-                                    }}),
-                                    add(new TimeEvent() {{
-                                        annotation = new Annotation() {{
-                                            attributes = new Attributes() {{
-                                                attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                    put("itaque", new AttributeValue() {{
+                                                    put("tempora", new AttributeValue() {{
                                                         boolValue = false;
-                                                        intValue = "incidunt";
+                                                        intValue = "facilis";
                                                         stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 318569;
-                                                            value = "consequatur";
+                                                            truncatedByteCount = 735194;
+                                                            value = "labore";
                                                         }};
                                                     }});
                                                 }};
-                                                droppedAttributesCount = 667411;
+                                                droppedAttributesCount = 962189;
                                             }};
                                             description = new TruncatableString() {{
-                                                truncatedByteCount = 842342;
-                                                value = "explicabo";
+                                                truncatedByteCount = 433288;
+                                                value = "non";
                                             }};
                                         }};
                                         messageEvent = new MessageEvent() {{
-                                            compressedSizeBytes = "deserunt";
-                                            id = "distinctio";
-                                            type = "RECEIVED";
-                                            uncompressedSizeBytes = "labore";
+                                            compressedSizeBytes = "eligendi";
+                                            id = "sint";
+                                            type = MessageEventTypeEnum.SENT;
+                                            uncompressedSizeBytes = "provident";
                                         }};
-                                        time = "modi";
-                                    }}),
-                                    add(new TimeEvent() {{
-                                        annotation = new Annotation() {{
-                                            attributes = new Attributes() {{
-                                                attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                    put("aliquid", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "cupiditate";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 552822;
-                                                            value = "perferendis";
-                                                        }};
-                                                    }});
-                                                }};
-                                                droppedAttributesCount = 164940;
-                                            }};
-                                            description = new TruncatableString() {{
-                                                truncatedByteCount = 828940;
-                                                value = "ipsam";
-                                            }};
-                                        }};
-                                        messageEvent = new MessageEvent() {{
-                                            compressedSizeBytes = "alias";
-                                            id = "fugit";
-                                            type = "RECEIVED";
-                                            uncompressedSizeBytes = "excepturi";
-                                        }};
-                                        time = "tempora";
-                                    }}),
-                                    add(new TimeEvent() {{
-                                        annotation = new Annotation() {{
-                                            attributes = new Attributes() {{
-                                                attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                    put("tempore", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "labore";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 962189;
-                                                            value = "eum";
-                                                        }};
-                                                    }});
-                                                    put("non", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "eligendi";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 576157;
-                                                            value = "aliquid";
-                                                        }};
-                                                    }});
-                                                    put("provident", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "necessitatibus";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 572252;
-                                                            value = "officia";
-                                                        }};
-                                                    }});
-                                                }};
-                                                droppedAttributesCount = 223081;
-                                            }};
-                                            description = new TruncatableString() {{
-                                                truncatedByteCount = 891555;
-                                                value = "a";
-                                            }};
-                                        }};
-                                        messageEvent = new MessageEvent() {{
-                                            compressedSizeBytes = "dolorum";
-                                            id = "in";
-                                            type = "SENT";
-                                            uncompressedSizeBytes = "illum";
-                                        }};
-                                        time = "maiores";
+                                        time = "necessitatibus";
                                     }}),
                                 }};
                             }};
@@ -502,856 +465,655 @@ public class Application {
                         add(new Span() {{
                             attributes = new Attributes() {{
                                 attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                    put("dicta", new AttributeValue() {{
+                                    put("officia", new AttributeValue() {{
                                         boolValue = false;
-                                        intValue = "magnam";
+                                        intValue = "dolor";
                                         stringValue = new TruncatableString() {{
-                                            truncatedByteCount = 767024;
-                                            value = "facere";
+                                            truncatedByteCount = 891555;
+                                            value = "a";
                                         }};
                                     }});
-                                    put("ea", new AttributeValue() {{
+                                    put("dolorum", new AttributeValue() {{
                                         boolValue = false;
-                                        intValue = "aliquid";
+                                        intValue = "in";
                                         stringValue = new TruncatableString() {{
-                                            truncatedByteCount = 675439;
-                                            value = "accusamus";
+                                            truncatedByteCount = 449198;
+                                            value = "illum";
                                         }};
                                     }});
-                                    put("non", new AttributeValue() {{
+                                    put("maiores", new AttributeValue() {{
                                         boolValue = false;
-                                        intValue = "occaecati";
+                                        intValue = "rerum";
                                         stringValue = new TruncatableString() {{
-                                            truncatedByteCount = 313218;
-                                            value = "accusamus";
+                                            truncatedByteCount = 116202;
+                                            value = "magnam";
                                         }};
                                     }});
                                 }};
-                                droppedAttributesCount = 965417;
+                                droppedAttributesCount = 767024;
                             }};
-                            childSpanCount = 692532;
+                            childSpanCount = 813798;
                             displayName = new TruncatableString() {{
-                                truncatedByteCount = 588465;
-                                value = "nam";
+                                truncatedByteCount = 411820;
+                                value = "aliquid";
                             }};
-                            endTime = "id";
+                            endTime = "laborum";
                             links = new Links() {{
-                                droppedLinksCount = 501324;
+                                droppedLinksCount = 881104;
                                 link = new org.openapis.openapi.models.shared.Link[]{{
+                                    add(new Link() {{
+                                        attributes = new Attributes() {{
+                                            attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
+                                                put("enim", new AttributeValue() {{
+                                                    boolValue = false;
+                                                    intValue = "accusamus";
+                                                    stringValue = new TruncatableString() {{
+                                                        truncatedByteCount = 965417;
+                                                        value = "quidem";
+                                                    }};
+                                                }});
+                                                put("provident", new AttributeValue() {{
+                                                    boolValue = false;
+                                                    intValue = "nam";
+                                                    stringValue = new TruncatableString() {{
+                                                        truncatedByteCount = 659669;
+                                                        value = "blanditiis";
+                                                    }};
+                                                }});
+                                                put("deleniti", new AttributeValue() {{
+                                                    boolValue = false;
+                                                    intValue = "sapiente";
+                                                    stringValue = new TruncatableString() {{
+                                                        truncatedByteCount = 230533;
+                                                        value = "deserunt";
+                                                    }};
+                                                }});
+                                            }};
+                                            droppedAttributesCount = 394869;
+                                        }};
+                                        spanId = "vel";
+                                        traceId = "natus";
+                                        type = LinkTypeEnum.CHILD_LINKED_SPAN;
+                                    }}),
+                                }};
+                            }};
+                            name = "Dorothy Kovacek";
+                            parentSpanId = "id";
+                            sameProcessAsParentSpan = false;
+                            spanId = "labore";
+                            spanKind = SpanSpanKindEnum.INTERNAL;
+                            stackTrace = new StackTrace() {{
+                                stackFrames = new StackFrames() {{
+                                    droppedFramesCount = 383462;
+                                    frame = new org.openapis.openapi.models.shared.StackFrame[]{{
+                                        add(new StackFrame() {{
+                                            columnNumber = "nobis";
+                                            fileName = new TruncatableString() {{
+                                                truncatedByteCount = 428769;
+                                                value = "vero";
+                                            }};
+                                            functionName = new TruncatableString() {{
+                                                truncatedByteCount = 135474;
+                                                value = "architecto";
+                                            }};
+                                            lineNumber = "magnam";
+                                            loadModule = new Module() {{
+                                                buildId = new TruncatableString() {{
+                                                    truncatedByteCount = 92373;
+                                                    value = "excepturi";
+                                                }};
+                                                module = new TruncatableString() {{
+                                                    truncatedByteCount = 354047;
+                                                    value = "provident";
+                                                }};
+                                            }};
+                                            originalFunctionName = new TruncatableString() {{
+                                                truncatedByteCount = 551816;
+                                                value = "sint";
+                                            }};
+                                            sourceVersion = new TruncatableString() {{
+                                                truncatedByteCount = 33625;
+                                                value = "mollitia";
+                                            }};
+                                        }}),
+                                        add(new StackFrame() {{
+                                            columnNumber = "reiciendis";
+                                            fileName = new TruncatableString() {{
+                                                truncatedByteCount = 652103;
+                                                value = "ad";
+                                            }};
+                                            functionName = new TruncatableString() {{
+                                                truncatedByteCount = 431418;
+                                                value = "dolor";
+                                            }};
+                                            lineNumber = "necessitatibus";
+                                            loadModule = new Module() {{
+                                                buildId = new TruncatableString() {{
+                                                    truncatedByteCount = 141264;
+                                                    value = "nemo";
+                                                }};
+                                                module = new TruncatableString() {{
+                                                    truncatedByteCount = 97260;
+                                                    value = "iure";
+                                                }};
+                                            }};
+                                            originalFunctionName = new TruncatableString() {{
+                                                truncatedByteCount = 984043;
+                                                value = "debitis";
+                                            }};
+                                            sourceVersion = new TruncatableString() {{
+                                                truncatedByteCount = 260341;
+                                                value = "maxime";
+                                            }};
+                                        }}),
+                                        add(new StackFrame() {{
+                                            columnNumber = "deleniti";
+                                            fileName = new TruncatableString() {{
+                                                truncatedByteCount = 703889;
+                                                value = "in";
+                                            }};
+                                            functionName = new TruncatableString() {{
+                                                truncatedByteCount = 100226;
+                                                value = "architecto";
+                                            }};
+                                            lineNumber = "repudiandae";
+                                            loadModule = new Module() {{
+                                                buildId = new TruncatableString() {{
+                                                    truncatedByteCount = 352312;
+                                                    value = "expedita";
+                                                }};
+                                                module = new TruncatableString() {{
+                                                    truncatedByteCount = 469249;
+                                                    value = "repellat";
+                                                }};
+                                            }};
+                                            originalFunctionName = new TruncatableString() {{
+                                                truncatedByteCount = 841140;
+                                                value = "sed";
+                                            }};
+                                            sourceVersion = new TruncatableString() {{
+                                                truncatedByteCount = 904648;
+                                                value = "pariatur";
+                                            }};
+                                        }}),
+                                    }};
+                                }};
+                                stackTraceHashId = "accusantium";
+                            }};
+                            startTime = "consequuntur";
+                            status = new Status() {{
+                                code = 508315;
+                                details = new java.util.HashMap<String, Object>[]{{
+                                    add(new java.util.HashMap<String, Object>() {{
+                                        put("sunt", "quo");
+                                    }}),
+                                    add(new java.util.HashMap<String, Object>() {{
+                                        put("pariatur", "maxime");
+                                        put("ea", "excepturi");
+                                        put("odit", "ea");
+                                        put("accusantium", "ab");
+                                    }}),
+                                    add(new java.util.HashMap<String, Object>() {{
+                                        put("quidem", "ipsam");
+                                        put("voluptate", "autem");
+                                        put("nam", "eaque");
+                                        put("pariatur", "nemo");
+                                    }}),
+                                }};
+                                message = "voluptatibus";
+                            }};
+                            timeEvents = new TimeEvents() {{
+                                droppedAnnotationsCount = 16627;
+                                droppedMessageEventsCount = 855804;
+                                timeEvent = new org.openapis.openapi.models.shared.TimeEvent[]{{
+                                    add(new TimeEvent() {{
+                                        annotation = new Annotation() {{
+                                            attributes = new Attributes() {{
+                                                attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
+                                                    put("cumque", new AttributeValue() {{
+                                                        boolValue = false;
+                                                        intValue = "corporis";
+                                                        stringValue = new TruncatableString() {{
+                                                            truncatedByteCount = 944124;
+                                                            value = "libero";
+                                                        }};
+                                                    }});
+                                                }};
+                                                droppedAttributesCount = 749999;
+                                            }};
+                                            description = new TruncatableString() {{
+                                                truncatedByteCount = 171629;
+                                                value = "quis";
+                                            }};
+                                        }};
+                                        messageEvent = new MessageEvent() {{
+                                            compressedSizeBytes = "totam";
+                                            id = "dignissimos";
+                                            type = MessageEventTypeEnum.TYPE_UNSPECIFIED;
+                                            uncompressedSizeBytes = "quis";
+                                        }};
+                                        time = "nesciunt";
+                                    }}),
+                                }};
+                            }};
+                        }}),
+                        add(new Span() {{
+                            attributes = new Attributes() {{
+                                attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
+                                    put("perferendis", new AttributeValue() {{
+                                        boolValue = false;
+                                        intValue = "dolores";
+                                        stringValue = new TruncatableString() {{
+                                            truncatedByteCount = 793698;
+                                            value = "quam";
+                                        }};
+                                    }});
+                                }};
+                                droppedAttributesCount = 223924;
+                            }};
+                            childSpanCount = 874573;
+                            displayName = new TruncatableString() {{
+                                truncatedByteCount = 345352;
+                                value = "hic";
+                            }};
+                            endTime = "recusandae";
+                            links = new Links() {{
+                                droppedLinksCount = 608253;
+                                link = new org.openapis.openapi.models.shared.Link[]{{
+                                    add(new Link() {{
+                                        attributes = new Attributes() {{
+                                            attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
+                                                put("voluptatem", new AttributeValue() {{
+                                                    boolValue = false;
+                                                    intValue = "porro";
+                                                    stringValue = new TruncatableString() {{
+                                                        truncatedByteCount = 164694;
+                                                        value = "blanditiis";
+                                                    }};
+                                                }});
+                                                put("error", new AttributeValue() {{
+                                                    boolValue = false;
+                                                    intValue = "eaque";
+                                                    stringValue = new TruncatableString() {{
+                                                        truncatedByteCount = 577229;
+                                                        value = "rerum";
+                                                    }};
+                                                }});
+                                                put("adipisci", new AttributeValue() {{
+                                                    boolValue = false;
+                                                    intValue = "asperiores";
+                                                    stringValue = new TruncatableString() {{
+                                                        truncatedByteCount = 934214;
+                                                        value = "modi";
+                                                    }};
+                                                }});
+                                            }};
+                                            droppedAttributesCount = 613966;
+                                        }};
+                                        spanId = "dolorum";
+                                        traceId = "deleniti";
+                                        type = LinkTypeEnum.PARENT_LINKED_SPAN;
+                                    }}),
+                                    add(new Link() {{
+                                        attributes = new Attributes() {{
+                                            attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
+                                                put("nobis", new AttributeValue() {{
+                                                    boolValue = false;
+                                                    intValue = "libero";
+                                                    stringValue = new TruncatableString() {{
+                                                        truncatedByteCount = 964490;
+                                                        value = "quaerat";
+                                                    }};
+                                                }});
+                                                put("quos", new AttributeValue() {{
+                                                    boolValue = false;
+                                                    intValue = "aliquid";
+                                                    stringValue = new TruncatableString() {{
+                                                        truncatedByteCount = 212390;
+                                                        value = "dolorem";
+                                                    }};
+                                                }});
+                                                put("dolor", new AttributeValue() {{
+                                                    boolValue = false;
+                                                    intValue = "qui";
+                                                    stringValue = new TruncatableString() {{
+                                                        truncatedByteCount = 218749;
+                                                        value = "hic";
+                                                    }};
+                                                }});
+                                            }};
+                                            droppedAttributesCount = 569574;
+                                        }};
+                                        spanId = "cum";
+                                        traceId = "voluptate";
+                                        type = LinkTypeEnum.CHILD_LINKED_SPAN;
+                                    }}),
                                     add(new Link() {{
                                         attributes = new Attributes() {{
                                             attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
                                                 put("amet", new AttributeValue() {{
                                                     boolValue = false;
-                                                    intValue = "deserunt";
+                                                    intValue = "dolorum";
                                                     stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 394869;
-                                                        value = "vel";
+                                                        truncatedByteCount = 254356;
+                                                        value = "veritatis";
                                                     }};
                                                 }});
-                                                put("natus", new AttributeValue() {{
+                                                put("ipsa", new AttributeValue() {{
                                                     boolValue = false;
-                                                    intValue = "omnis";
+                                                    intValue = "ipsa";
                                                     stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 474867;
-                                                        value = "perferendis";
+                                                        truncatedByteCount = 434417;
+                                                        value = "odio";
                                                     }};
                                                 }});
-                                                put("nihil", new AttributeValue() {{
-                                                    boolValue = false;
-                                                    intValue = "magnam";
-                                                    stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 716075;
-                                                        value = "id";
-                                                    }};
-                                                }});
-                                                put("labore", new AttributeValue() {{
-                                                    boolValue = false;
-                                                    intValue = "labore";
-                                                    stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 383462;
-                                                        value = "natus";
-                                                    }};
-                                                }});
-                                            }};
-                                            droppedAttributesCount = 749170;
-                                        }};
-                                        spanId = "eum";
-                                        traceId = "vero";
-                                        type = "TYPE_UNSPECIFIED";
-                                    }}),
-                                    add(new Link() {{
-                                        attributes = new Attributes() {{
-                                            attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                put("magnam", new AttributeValue() {{
-                                                    boolValue = false;
-                                                    intValue = "et";
-                                                    stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 569965;
-                                                        value = "ullam";
-                                                    }};
-                                                }});
-                                            }};
-                                            droppedAttributesCount = 590873;
-                                        }};
-                                        spanId = "quos";
-                                        traceId = "sint";
-                                        type = "TYPE_UNSPECIFIED";
-                                    }}),
-                                    add(new Link() {{
-                                        attributes = new Attributes() {{
-                                            attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                put("reiciendis", new AttributeValue() {{
-                                                    boolValue = false;
-                                                    intValue = "mollitia";
-                                                    stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 320997;
-                                                        value = "eum";
-                                                    }};
-                                                }});
-                                                put("dolor", new AttributeValue() {{
-                                                    boolValue = false;
-                                                    intValue = "necessitatibus";
-                                                    stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 141264;
-                                                        value = "nemo";
-                                                    }};
-                                                }});
-                                                put("quasi", new AttributeValue() {{
-                                                    boolValue = false;
-                                                    intValue = "iure";
-                                                    stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 984043;
-                                                        value = "debitis";
-                                                    }};
-                                                }});
-                                            }};
-                                            droppedAttributesCount = 260341;
-                                        }};
-                                        spanId = "maxime";
-                                        traceId = "deleniti";
-                                        type = "PARENT_LINKED_SPAN";
-                                    }}),
-                                }};
-                            }};
-                            name = "in";
-                            parentSpanId = "architecto";
-                            sameProcessAsParentSpan = false;
-                            spanId = "architecto";
-                            spanKind = "CONSUMER";
-                            stackTrace = new StackTrace() {{
-                                stackFrames = new StackFrames() {{
-                                    droppedFramesCount = 352312;
-                                    frame = new org.openapis.openapi.models.shared.StackFrame[]{{
-                                        add(new StackFrame() {{
-                                            columnNumber = "nihil";
-                                            fileName = new TruncatableString() {{
-                                                truncatedByteCount = 998848;
-                                                value = "quibusdam";
-                                            }};
-                                            functionName = new TruncatableString() {{
-                                                truncatedByteCount = 149448;
-                                                value = "saepe";
-                                            }};
-                                            lineNumber = "pariatur";
-                                            loadModule = new Module() {{
-                                                buildId = new TruncatableString() {{
-                                                    truncatedByteCount = 37559;
-                                                    value = "consequuntur";
-                                                }};
-                                                module = new TruncatableString() {{
-                                                    truncatedByteCount = 508315;
-                                                    value = "natus";
-                                                }};
-                                            }};
-                                            originalFunctionName = new TruncatableString() {{
-                                                truncatedByteCount = 166847;
-                                                value = "sunt";
-                                            }};
-                                            sourceVersion = new TruncatableString() {{
-                                                truncatedByteCount = 779051;
-                                                value = "illum";
-                                            }};
-                                        }}),
-                                        add(new StackFrame() {{
-                                            columnNumber = "pariatur";
-                                            fileName = new TruncatableString() {{
-                                                truncatedByteCount = 807319;
-                                                value = "ea";
-                                            }};
-                                            functionName = new TruncatableString() {{
-                                                truncatedByteCount = 569101;
-                                                value = "odit";
-                                            }};
-                                            lineNumber = "ea";
-                                            loadModule = new Module() {{
-                                                buildId = new TruncatableString() {{
-                                                    truncatedByteCount = 33222;
-                                                    value = "ab";
-                                                }};
-                                                module = new TruncatableString() {{
-                                                    truncatedByteCount = 982575;
-                                                    value = "quidem";
-                                                }};
-                                            }};
-                                            originalFunctionName = new TruncatableString() {{
-                                                truncatedByteCount = 373291;
-                                                value = "voluptate";
-                                            }};
-                                            sourceVersion = new TruncatableString() {{
-                                                truncatedByteCount = 420075;
-                                                value = "nam";
-                                            }};
-                                        }}),
-                                        add(new StackFrame() {{
-                                            columnNumber = "eaque";
-                                            fileName = new TruncatableString() {{
-                                                truncatedByteCount = 866383;
-                                                value = "nemo";
-                                            }};
-                                            functionName = new TruncatableString() {{
-                                                truncatedByteCount = 975522;
-                                                value = "perferendis";
-                                            }};
-                                            lineNumber = "fugiat";
-                                            loadModule = new Module() {{
-                                                buildId = new TruncatableString() {{
-                                                    truncatedByteCount = 230742;
-                                                    value = "aut";
-                                                }};
-                                                module = new TruncatableString() {{
-                                                    truncatedByteCount = 764912;
-                                                    value = "corporis";
-                                                }};
-                                            }};
-                                            originalFunctionName = new TruncatableString() {{
-                                                truncatedByteCount = 944124;
-                                                value = "libero";
-                                            }};
-                                            sourceVersion = new TruncatableString() {{
-                                                truncatedByteCount = 749999;
-                                                value = "dolores";
-                                            }};
-                                        }}),
-                                    }};
-                                }};
-                                stackTraceHashId = "quis";
-                            }};
-                            startTime = "totam";
-                            status = new Status() {{
-                                code = 489549;
-                                details = new java.util.HashMap<String, Object>[]{{
-                                    add(new java.util.HashMap<String, Object>() {{
-                                        put("nesciunt", "eos");
-                                        put("perferendis", "dolores");
-                                    }}),
-                                }};
-                                message = "minus";
-                            }};
-                            timeEvents = new TimeEvents() {{
-                                droppedAnnotationsCount = 463451;
-                                droppedMessageEventsCount = 223924;
-                                timeEvent = new org.openapis.openapi.models.shared.TimeEvent[]{{
-                                    add(new TimeEvent() {{
-                                        annotation = new Annotation() {{
-                                            attributes = new Attributes() {{
-                                                attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                    put("hic", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "recusandae";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 608253;
-                                                            value = "facilis";
-                                                        }};
-                                                    }});
-                                                    put("perspiciatis", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "voluptatem";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 783645;
-                                                            value = "consequuntur";
-                                                        }};
-                                                    }});
-                                                }};
-                                                droppedAttributesCount = 500026;
-                                            }};
-                                            description = new TruncatableString() {{
-                                                truncatedByteCount = 621479;
-                                                value = "eaque";
-                                            }};
-                                        }};
-                                        messageEvent = new MessageEvent() {{
-                                            compressedSizeBytes = "occaecati";
-                                            id = "rerum";
-                                            type = "TYPE_UNSPECIFIED";
-                                            uncompressedSizeBytes = "asperiores";
-                                        }};
-                                        time = "earum";
-                                    }}),
-                                    add(new TimeEvent() {{
-                                        annotation = new Annotation() {{
-                                            attributes = new Attributes() {{
-                                                attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                    put("iste", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "dolorum";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 535633;
-                                                            value = "pariatur";
-                                                        }};
-                                                    }});
-                                                    put("provident", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "nobis";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 730122;
-                                                            value = "delectus";
-                                                        }};
-                                                    }});
-                                                }};
-                                                droppedAttributesCount = 311945;
-                                            }};
-                                            description = new TruncatableString() {{
-                                                truncatedByteCount = 554242;
-                                                value = "aliquid";
-                                            }};
-                                        }};
-                                        messageEvent = new MessageEvent() {{
-                                            compressedSizeBytes = "dolorem";
-                                            id = "dolorem";
-                                            type = "TYPE_UNSPECIFIED";
-                                            uncompressedSizeBytes = "qui";
-                                        }};
-                                        time = "ipsum";
-                                    }}),
-                                    add(new TimeEvent() {{
-                                        annotation = new Annotation() {{
-                                            attributes = new Attributes() {{
-                                                attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                    put("excepturi", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "cum";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 452109;
-                                                            value = "dignissimos";
-                                                        }};
-                                                    }});
-                                                    put("reiciendis", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "amet";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 680545;
-                                                            value = "numquam";
-                                                        }};
-                                                    }});
-                                                    put("veritatis", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "ipsa";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 56418;
-                                                            value = "iure";
-                                                        }};
-                                                    }});
-                                                    put("odio", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "quaerat";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 881005;
-                                                            value = "quidem";
-                                                        }};
-                                                    }});
-                                                }};
-                                                droppedAttributesCount = 976405;
-                                            }};
-                                            description = new TruncatableString() {{
-                                                truncatedByteCount = 377752;
-                                                value = "natus";
-                                            }};
-                                        }};
-                                        messageEvent = new MessageEvent() {{
-                                            compressedSizeBytes = "eos";
-                                            id = "atque";
-                                            type = "TYPE_UNSPECIFIED";
-                                            uncompressedSizeBytes = "fugiat";
-                                        }};
-                                        time = "ab";
-                                    }}),
-                                    add(new TimeEvent() {{
-                                        annotation = new Annotation() {{
-                                            attributes = new Attributes() {{
-                                                attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                    put("dolorum", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "iusto";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 453697;
-                                                            value = "dolorum";
-                                                        }};
-                                                    }});
-                                                    put("deleniti", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "omnis";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 896672;
-                                                            value = "distinctio";
-                                                        }};
-                                                    }});
-                                                    put("asperiores", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "nihil";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 216897;
-                                                            value = "voluptate";
-                                                        }};
-                                                    }});
-                                                }};
-                                                droppedAttributesCount = 663078;
-                                            }};
-                                            description = new TruncatableString() {{
-                                                truncatedByteCount = 906418;
-                                                value = "eius";
-                                            }};
-                                        }};
-                                        messageEvent = new MessageEvent() {{
-                                            compressedSizeBytes = "aspernatur";
-                                            id = "perferendis";
-                                            type = "TYPE_UNSPECIFIED";
-                                            uncompressedSizeBytes = "optio";
-                                        }};
-                                        time = "accusamus";
-                                    }}),
-                                }};
-                            }};
-                        }}),
-                        add(new Span() {{
-                            attributes = new Attributes() {{
-                                attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                    put("saepe", new AttributeValue() {{
-                                        boolValue = false;
-                                        intValue = "suscipit";
-                                        stringValue = new TruncatableString() {{
-                                            truncatedByteCount = 645785;
-                                            value = "provident";
-                                        }};
-                                    }});
-                                    put("minima", new AttributeValue() {{
-                                        boolValue = false;
-                                        intValue = "repellendus";
-                                        stringValue = new TruncatableString() {{
-                                            truncatedByteCount = 519711;
-                                            value = "similique";
-                                        }};
-                                    }});
-                                }};
-                                droppedAttributesCount = 55;
-                            }};
-                            childSpanCount = 872651;
-                            displayName = new TruncatableString() {{
-                                truncatedByteCount = 311860;
-                                value = "tempora";
-                            }};
-                            endTime = "vel";
-                            links = new Links() {{
-                                droppedLinksCount = 798047;
-                                link = new org.openapis.openapi.models.shared.Link[]{{
-                                    add(new Link() {{
-                                        attributes = new Attributes() {{
-                                            attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                put("dolorum", new AttributeValue() {{
-                                                    boolValue = false;
-                                                    intValue = "a";
-                                                    stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 456130;
-                                                        value = "harum";
-                                                    }};
-                                                }});
-                                            }};
-                                            droppedAttributesCount = 483409;
-                                        }};
-                                        spanId = "ipsum";
-                                        traceId = "quisquam";
-                                        type = "PARENT_LINKED_SPAN";
-                                    }}),
-                                    add(new Link() {{
-                                        attributes = new Attributes() {{
-                                            attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                put("tempore", new AttributeValue() {{
+                                                put("quaerat", new AttributeValue() {{
                                                     boolValue = false;
                                                     intValue = "accusamus";
                                                     stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 253941;
-                                                        value = "enim";
+                                                        truncatedByteCount = 696344;
+                                                        value = "voluptatibus";
                                                     }};
                                                 }});
-                                            }};
-                                            droppedAttributesCount = 213312;
-                                        }};
-                                        spanId = "sapiente";
-                                        traceId = "totam";
-                                        type = "CHILD_LINKED_SPAN";
-                                    }}),
-                                    add(new Link() {{
-                                        attributes = new Attributes() {{
-                                            attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                put("expedita", new AttributeValue() {{
+                                                put("voluptas", new AttributeValue() {{
                                                     boolValue = false;
-                                                    intValue = "neque";
+                                                    intValue = "natus";
                                                     stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 153694;
-                                                        value = "vel";
+                                                        truncatedByteCount = 179603;
+                                                        value = "atque";
                                                     }};
                                                 }});
                                             }};
-                                            droppedAttributesCount = 730442;
+                                            droppedAttributesCount = 24678;
                                         }};
-                                        spanId = "voluptas";
-                                        traceId = "deserunt";
-                                        type = "CHILD_LINKED_SPAN";
-                                    }}),
-                                    add(new Link() {{
-                                        attributes = new Attributes() {{
-                                            attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                put("incidunt", new AttributeValue() {{
-                                                    boolValue = false;
-                                                    intValue = "qui";
-                                                    stringValue = new TruncatableString() {{
-                                                        truncatedByteCount = 586784;
-                                                        value = "maxime";
-                                                    }};
-                                                }});
-                                            }};
-                                            droppedAttributesCount = 863856;
-                                        }};
-                                        spanId = "soluta";
-                                        traceId = "dicta";
-                                        type = "PARENT_LINKED_SPAN";
+                                        spanId = "fugiat";
+                                        traceId = "ab";
+                                        type = LinkTypeEnum.PARENT_LINKED_SPAN;
                                     }}),
                                 }};
                             }};
-                            name = "totam";
-                            parentSpanId = "incidunt";
+                            name = "Ted Kling";
+                            parentSpanId = "omnis";
                             sameProcessAsParentSpan = false;
-                            spanId = "aspernatur";
-                            spanKind = "INTERNAL";
+                            spanId = "necessitatibus";
+                            spanKind = SpanSpanKindEnum.PRODUCER;
                             stackTrace = new StackTrace() {{
                                 stackFrames = new StackFrames() {{
-                                    droppedFramesCount = 716860;
+                                    droppedFramesCount = 990339;
                                     frame = new org.openapis.openapi.models.shared.StackFrame[]{{
                                         add(new StackFrame() {{
-                                            columnNumber = "aliquid";
+                                            columnNumber = "ipsum";
                                             fileName = new TruncatableString() {{
-                                                truncatedByteCount = 463150;
-                                                value = "molestias";
+                                                truncatedByteCount = 456015;
+                                                value = "id";
                                             }};
                                             functionName = new TruncatableString() {{
-                                                truncatedByteCount = 840429;
-                                                value = "qui";
+                                                truncatedByteCount = 906418;
+                                                value = "eius";
                                             }};
-                                            lineNumber = "neque";
+                                            lineNumber = "aspernatur";
                                             loadModule = new Module() {{
                                                 buildId = new TruncatableString() {{
-                                                    truncatedByteCount = 144847;
-                                                    value = "magni";
+                                                    truncatedByteCount = 20651;
+                                                    value = "amet";
                                                 }};
                                                 module = new TruncatableString() {{
-                                                    truncatedByteCount = 488056;
-                                                    value = "sunt";
+                                                    truncatedByteCount = 758379;
+                                                    value = "accusamus";
                                                 }};
                                             }};
                                             originalFunctionName = new TruncatableString() {{
-                                                truncatedByteCount = 355613;
-                                                value = "nam";
-                                            }};
-                                            sourceVersion = new TruncatableString() {{
-                                                truncatedByteCount = 940432;
-                                                value = "voluptatem";
-                                            }};
-                                        }}),
-                                        add(new StackFrame() {{
-                                            columnNumber = "cumque";
-                                            fileName = new TruncatableString() {{
-                                                truncatedByteCount = 746994;
-                                                value = "nobis";
-                                            }};
-                                            functionName = new TruncatableString() {{
-                                                truncatedByteCount = 92596;
+                                                truncatedByteCount = 320017;
                                                 value = "saepe";
                                             }};
-                                            lineNumber = "ipsum";
-                                            loadModule = new Module() {{
-                                                buildId = new TruncatableString() {{
-                                                    truncatedByteCount = 83422;
-                                                    value = "nobis";
-                                                }};
-                                                module = new TruncatableString() {{
-                                                    truncatedByteCount = 552193;
-                                                    value = "tempore";
-                                                }};
-                                            }};
-                                            originalFunctionName = new TruncatableString() {{
-                                                truncatedByteCount = 584476;
-                                                value = "aperiam";
-                                            }};
                                             sourceVersion = new TruncatableString() {{
-                                                truncatedByteCount = 961937;
-                                                value = "dolorem";
+                                                truncatedByteCount = 383464;
+                                                value = "deserunt";
                                             }};
                                         }}),
                                         add(new StackFrame() {{
-                                            columnNumber = "dolore";
+                                            columnNumber = "provident";
                                             fileName = new TruncatableString() {{
-                                                truncatedByteCount = 286915;
-                                                value = "adipisci";
+                                                truncatedByteCount = 324683;
+                                                value = "repellendus";
                                             }};
                                             functionName = new TruncatableString() {{
-                                                truncatedByteCount = 677263;
-                                                value = "architecto";
+                                                truncatedByteCount = 519711;
+                                                value = "similique";
                                             }};
-                                            lineNumber = "quae";
+                                            lineNumber = "alias";
                                             loadModule = new Module() {{
                                                 buildId = new TruncatableString() {{
-                                                    truncatedByteCount = 16429;
-                                                    value = "quas";
+                                                    truncatedByteCount = 872651;
+                                                    value = "quaerat";
                                                 }};
                                                 module = new TruncatableString() {{
-                                                    truncatedByteCount = 929530;
-                                                    value = "consequatur";
+                                                    truncatedByteCount = 273542;
+                                                    value = "vel";
                                                 }};
                                             }};
                                             originalFunctionName = new TruncatableString() {{
-                                                truncatedByteCount = 669917;
-                                                value = "repellendus";
+                                                truncatedByteCount = 798047;
+                                                value = "officiis";
                                             }};
                                             sourceVersion = new TruncatableString() {{
-                                                truncatedByteCount = 785153;
-                                                value = "doloribus";
+                                                truncatedByteCount = 185636;
+                                                value = "dolorum";
                                             }};
                                         }}),
                                     }};
                                 }};
-                                stackTraceHashId = "ut";
+                                stackTraceHashId = "a";
                             }};
-                            startTime = "facilis";
+                            startTime = "esse";
                             status = new Status() {{
-                                code = 586410;
+                                code = 687488;
                                 details = new java.util.HashMap<String, Object>[]{{
                                     add(new java.util.HashMap<String, Object>() {{
-                                        put("laudantium", "odio");
+                                        put("quisquam", "tenetur");
+                                    }}),
+                                    add(new java.util.HashMap<String, Object>() {{
+                                        put("tempore", "accusamus");
                                     }}),
                                 }};
-                                message = "occaecati";
+                                message = "numquam";
                             }};
                             timeEvents = new TimeEvents() {{
-                                droppedAnnotationsCount = 977496;
-                                droppedMessageEventsCount = 787542;
+                                droppedAnnotationsCount = 313692;
+                                droppedMessageEventsCount = 213312;
                                 timeEvent = new org.openapis.openapi.models.shared.TimeEvent[]{{
                                     add(new TimeEvent() {{
                                         annotation = new Annotation() {{
                                             attributes = new Attributes() {{
                                                 attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                    put("quis", new AttributeValue() {{
+                                                    put("nihil", new AttributeValue() {{
                                                         boolValue = false;
-                                                        intValue = "ipsum";
+                                                        intValue = "sit";
                                                         stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 961571;
-                                                            value = "voluptate";
+                                                            truncatedByteCount = 711584;
+                                                            value = "neque";
                                                         }};
                                                     }});
-                                                    put("consectetur", new AttributeValue() {{
+                                                    put("sed", new AttributeValue() {{
                                                         boolValue = false;
-                                                        intValue = "vero";
+                                                        intValue = "vel";
                                                         stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 949319;
-                                                            value = "dignissimos";
+                                                            truncatedByteCount = 730442;
+                                                            value = "voluptas";
                                                         }};
                                                     }});
-                                                    put("hic", new AttributeValue() {{
+                                                    put("deserunt", new AttributeValue() {{
                                                         boolValue = false;
-                                                        intValue = "distinctio";
+                                                        intValue = "quam";
                                                         stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 799203;
-                                                            value = "odio";
+                                                            truncatedByteCount = 214880;
+                                                            value = "incidunt";
                                                         }};
                                                     }});
                                                 }};
-                                                droppedAttributesCount = 630448;
+                                                droppedAttributesCount = 186458;
                                             }};
                                             description = new TruncatableString() {{
-                                                truncatedByteCount = 708548;
-                                                value = "vero";
+                                                truncatedByteCount = 586784;
+                                                value = "maxime";
                                             }};
                                         }};
                                         messageEvent = new MessageEvent() {{
-                                            compressedSizeBytes = "ducimus";
-                                            id = "dolore";
-                                            type = "RECEIVED";
-                                            uncompressedSizeBytes = "illum";
+                                            compressedSizeBytes = "pariatur";
+                                            id = "soluta";
+                                            type = MessageEventTypeEnum.TYPE_UNSPECIFIED;
+                                            uncompressedSizeBytes = "laborum";
                                         }};
-                                        time = "sequi";
+                                        time = "totam";
                                     }}),
                                     add(new TimeEvent() {{
                                         annotation = new Annotation() {{
                                             attributes = new Attributes() {{
                                                 attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                    put("impedit", new AttributeValue() {{
+                                                    put("aspernatur", new AttributeValue() {{
                                                         boolValue = false;
-                                                        intValue = "aut";
+                                                        intValue = "dolores";
                                                         stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 974259;
-                                                            value = "exercitationem";
+                                                            truncatedByteCount = 716860;
+                                                            value = "facilis";
                                                         }};
                                                     }});
-                                                    put("nulla", new AttributeValue() {{
+                                                    put("aliquid", new AttributeValue() {{
                                                         boolValue = false;
-                                                        intValue = "fugit";
+                                                        intValue = "quam";
                                                         stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 780427;
-                                                            value = "maiores";
-                                                        }};
-                                                    }});
-                                                    put("doloribus", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "iusto";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 753570;
-                                                            value = "ducimus";
+                                                            truncatedByteCount = 565421;
+                                                            value = "temporibus";
                                                         }};
                                                     }});
                                                 }};
-                                                droppedAttributesCount = 4048;
+                                                droppedAttributesCount = 183280;
                                             }};
                                             description = new TruncatableString() {{
-                                                truncatedByteCount = 639473;
-                                                value = "tempora";
+                                                truncatedByteCount = 204865;
+                                                value = "fugit";
                                             }};
                                         }};
                                         messageEvent = new MessageEvent() {{
-                                            compressedSizeBytes = "ipsam";
-                                            id = "ea";
-                                            type = "TYPE_UNSPECIFIED";
-                                            uncompressedSizeBytes = "vel";
+                                            compressedSizeBytes = "magni";
+                                            id = "odio";
+                                            type = MessageEventTypeEnum.TYPE_UNSPECIFIED;
+                                            uncompressedSizeBytes = "ullam";
                                         }};
-                                        time = "possimus";
+                                        time = "nam";
                                     }}),
                                     add(new TimeEvent() {{
                                         annotation = new Annotation() {{
                                             attributes = new Attributes() {{
                                                 attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                    put("ratione", new AttributeValue() {{
+                                                    put("voluptatem", new AttributeValue() {{
                                                         boolValue = false;
-                                                        intValue = "ex";
+                                                        intValue = "cumque";
                                                         stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 511319;
-                                                            value = "dicta";
+                                                            truncatedByteCount = 746994;
+                                                            value = "nobis";
                                                         }};
                                                     }});
-                                                    put("dolor", new AttributeValue() {{
+                                                    put("et", new AttributeValue() {{
                                                         boolValue = false;
-                                                        intValue = "maiores";
+                                                        intValue = "saepe";
                                                         stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 97844;
-                                                            value = "ex";
+                                                            truncatedByteCount = 217450;
+                                                            value = "veritatis";
+                                                        }};
+                                                    }});
+                                                    put("nobis", new AttributeValue() {{
+                                                        boolValue = false;
+                                                        intValue = "quos";
+                                                        stringValue = new TruncatableString() {{
+                                                            truncatedByteCount = 731694;
+                                                            value = "cupiditate";
+                                                        }};
+                                                    }});
+                                                    put("aperiam", new AttributeValue() {{
+                                                        boolValue = false;
+                                                        intValue = "delectus";
+                                                        stringValue = new TruncatableString() {{
+                                                            truncatedByteCount = 209157;
+                                                            value = "dolore";
                                                         }};
                                                     }});
                                                 }};
-                                                droppedAttributesCount = 862192;
+                                                droppedAttributesCount = 286915;
                                             }};
                                             description = new TruncatableString() {{
-                                                truncatedByteCount = 569211;
-                                                value = "voluptatibus";
+                                                truncatedByteCount = 240829;
+                                                value = "dolorum";
                                             }};
                                         }};
                                         messageEvent = new MessageEvent() {{
-                                            compressedSizeBytes = "nostrum";
-                                            id = "sapiente";
-                                            type = "RECEIVED";
-                                            uncompressedSizeBytes = "saepe";
+                                            compressedSizeBytes = "architecto";
+                                            id = "quae";
+                                            type = MessageEventTypeEnum.TYPE_UNSPECIFIED;
+                                            uncompressedSizeBytes = "quas";
                                         }};
-                                        time = "ea";
+                                        time = "itaque";
                                     }}),
                                     add(new TimeEvent() {{
                                         annotation = new Annotation() {{
                                             attributes = new Attributes() {{
                                                 attributeMap = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                                    put("corporis", new AttributeValue() {{
+                                                    put("est", new AttributeValue() {{
                                                         boolValue = false;
-                                                        intValue = "veniam";
+                                                        intValue = "repellendus";
                                                         stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 399499;
-                                                            value = "inventore";
-                                                        }};
-                                                    }});
-                                                    put("magnam", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "ea";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 775220;
-                                                            value = "consectetur";
-                                                        }};
-                                                    }});
-                                                    put("recusandae", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "aspernatur";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 325310;
-                                                            value = "eaque";
-                                                        }};
-                                                    }});
-                                                    put("a", new AttributeValue() {{
-                                                        boolValue = false;
-                                                        intValue = "libero";
-                                                        stringValue = new TruncatableString() {{
-                                                            truncatedByteCount = 13948;
-                                                            value = "aut";
+                                                            truncatedByteCount = 785153;
+                                                            value = "doloribus";
                                                         }};
                                                     }});
                                                 }};
-                                                droppedAttributesCount = 533466;
+                                                droppedAttributesCount = 281730;
                                             }};
                                             description = new TruncatableString() {{
-                                                truncatedByteCount = 770581;
-                                                value = "aliquam";
+                                                truncatedByteCount = 703495;
+                                                value = "cupiditate";
                                             }};
                                         }};
                                         messageEvent = new MessageEvent() {{
-                                            compressedSizeBytes = "fugit";
-                                            id = "accusamus";
-                                            type = "TYPE_UNSPECIFIED";
-                                            uncompressedSizeBytes = "non";
+                                            compressedSizeBytes = "qui";
+                                            id = "quae";
+                                            type = MessageEventTypeEnum.SENT;
+                                            uncompressedSizeBytes = "odio";
                                         }};
-                                        time = "et";
+                                        time = "occaecati";
                                     }}),
                                 }};
                             }};
                         }}),
                     }};
-                }};
-                accessToken = "dolorum";
-                alt = "proto";
-                callback = "placeat";
-                fields = "velit";
-                key = "eum";
-                name = "autem";
-                oauthToken = "nobis";
+                }};;
+                accessToken = "voluptatibus";
+                alt = AltEnum.PROTO;
+                callback = "vero";
+                fields = "omnis";
+                key = "quis";
+                oauthToken = "ipsum";
                 prettyPrint = false;
-                quotaUser = "quas";
-                uploadType = "assumenda";
-                uploadProtocol = "nulla";
-            }}            
+                quotaUser = "delectus";
+                uploadType = "voluptate";
+                uploadProtocol = "consectetur";
+            }};            
 
             CloudtraceProjectsTracesBatchWriteResponse res = sdk.projects.cloudtraceProjectsTracesBatchWrite(req, new CloudtraceProjectsTracesBatchWriteSecurity() {{
-                option1 = new CloudtraceProjectsTracesBatchWriteSecurityOption1() {{
+                option1 = new CloudtraceProjectsTracesBatchWriteSecurityOption1("vero", "tenetur") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.empty.isPresent()) {
+            if (res.empty != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -1359,10 +1121,10 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `cloudtraceProjectsTracesBatchWrite` - Batch writes new spans to new or existing traces. You cannot update existing spans.
-* `cloudtraceProjectsTracesSpansCreateSpan` - Creates a new span.
+* [cloudtraceProjectsTracesBatchWrite](docs/projects/README.md#cloudtraceprojectstracesbatchwrite) - Batch writes new spans to new or existing traces. You cannot update existing spans.
+* [cloudtraceProjectsTracesSpansCreateSpan](docs/projects/README.md#cloudtraceprojectstracesspanscreatespan) - Creates a new span.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -15,6 +15,7 @@ public class ApmclRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public ApmclRequestBodyCertificateParameters certificateParameters;
+
     public ApmclRequestBody withCertificateParameters(ApmclRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class ApmclRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public ApmclRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class ApmclRequestBody {
      */
     @JsonProperty("format")
     public ApmclRequestBodyFormatEnum format;
+
     public ApmclRequestBody withFormat(ApmclRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class ApmclRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public ApmclRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public ApmclRequestBody(@JsonProperty("format") ApmclRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

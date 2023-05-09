@@ -15,9 +15,11 @@ public class InstanceGroupManagerInstanceLifecyclePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceUpdateOnRepair")
     public InstanceGroupManagerInstanceLifecyclePolicyForceUpdateOnRepairEnum forceUpdateOnRepair;
+
     public InstanceGroupManagerInstanceLifecyclePolicy withForceUpdateOnRepair(InstanceGroupManagerInstanceLifecyclePolicyForceUpdateOnRepairEnum forceUpdateOnRepair) {
         this.forceUpdateOnRepair = forceUpdateOnRepair;
         return this;
     }
     
+    public InstanceGroupManagerInstanceLifecyclePolicy(){}
 }

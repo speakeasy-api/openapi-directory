@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContinuousProjectInvoicesResponse {
     
     public String contentType;
+
     public GetContinuousProjectInvoicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetContinuousProjectInvoicesResponse {
      */
     
     public org.openapis.openapi.models.shared.ContinuousProjectInvoices continuousProjectInvoices;
+
     public GetContinuousProjectInvoicesResponse withContinuousProjectInvoices(org.openapis.openapi.models.shared.ContinuousProjectInvoices continuousProjectInvoices) {
         this.continuousProjectInvoices = continuousProjectInvoices;
         return this;
@@ -29,6 +32,7 @@ public class GetContinuousProjectInvoicesResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetContinuousProjectInvoicesResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetContinuousProjectInvoicesResponse {
     
     
     public Integer statusCode;
+
     public GetContinuousProjectInvoicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetContinuousProjectInvoicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContinuousProjectInvoicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetContinuousProjectInvoicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

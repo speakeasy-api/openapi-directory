@@ -13,9 +13,13 @@ public class WebhookResourceLinks {
      */
     @JsonProperty("self")
     public String self;
+
     public WebhookResourceLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public WebhookResourceLinks(@JsonProperty("self") String self) {
+        this.self = self;
+  }
 }

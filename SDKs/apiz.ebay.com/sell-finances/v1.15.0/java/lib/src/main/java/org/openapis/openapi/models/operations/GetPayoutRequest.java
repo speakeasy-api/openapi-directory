@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayoutRequest {
@@ -12,6 +13,7 @@ public class GetPayoutRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public GetPayoutRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -22,9 +24,13 @@ public class GetPayoutRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payout_Id")
     public String payoutId;
+
     public GetPayoutRequest withPayoutId(String payoutId) {
         this.payoutId = payoutId;
         return this;
     }
     
+    public GetPayoutRequest(@JsonProperty("payout_Id") String payoutId) {
+        this.payoutId = payoutId;
+  }
 }

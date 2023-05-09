@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteGlobalClusterMessage {
     
     public String globalClusterIdentifier;
+
     public DeleteGlobalClusterMessage withGlobalClusterIdentifier(String globalClusterIdentifier) {
         this.globalClusterIdentifier = globalClusterIdentifier;
         return this;
     }
     
+    public DeleteGlobalClusterMessage(@JsonProperty("GlobalClusterIdentifier") String globalClusterIdentifier) {
+        this.globalClusterIdentifier = globalClusterIdentifier;
+  }
 }

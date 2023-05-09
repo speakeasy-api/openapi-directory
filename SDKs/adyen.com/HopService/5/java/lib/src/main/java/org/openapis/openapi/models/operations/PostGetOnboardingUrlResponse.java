@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostGetOnboardingUrlResponse {
     
     public String contentType;
+
     public PostGetOnboardingUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostGetOnboardingUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOnboardingUrlResponse getOnboardingUrlResponse;
+
     public PostGetOnboardingUrlResponse withGetOnboardingUrlResponse(org.openapis.openapi.models.shared.GetOnboardingUrlResponse getOnboardingUrlResponse) {
         this.getOnboardingUrlResponse = getOnboardingUrlResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostGetOnboardingUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostGetOnboardingUrlResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostGetOnboardingUrlResponse {
     
     
     public Integer statusCode;
+
     public PostGetOnboardingUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostGetOnboardingUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostGetOnboardingUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostGetOnboardingUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

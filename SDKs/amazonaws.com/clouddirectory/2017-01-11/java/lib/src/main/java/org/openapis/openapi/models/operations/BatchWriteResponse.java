@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchWriteResponse {
@@ -12,6 +13,7 @@ public class BatchWriteResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchWriteResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchWriteResponse {
      */
     
     public Object batchWriteException;
+
     public BatchWriteResponse withBatchWriteException(Object batchWriteException) {
         this.batchWriteException = batchWriteException;
         return this;
@@ -32,6 +35,7 @@ public class BatchWriteResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchWriteResponse batchWriteResponse;
+
     public BatchWriteResponse withBatchWriteResponse(org.openapis.openapi.models.shared.BatchWriteResponse batchWriteResponse) {
         this.batchWriteResponse = batchWriteResponse;
         return this;
@@ -39,6 +43,7 @@ public class BatchWriteResponse {
     
     
     public String contentType;
+
     public BatchWriteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class BatchWriteResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public BatchWriteResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -59,6 +65,7 @@ public class BatchWriteResponse {
      */
     
     public Object internalServiceException;
+
     public BatchWriteResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class BatchWriteResponse {
      */
     
     public Object invalidArnException;
+
     public BatchWriteResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -79,6 +87,7 @@ public class BatchWriteResponse {
      */
     
     public Object limitExceededException;
+
     public BatchWriteResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -86,6 +95,7 @@ public class BatchWriteResponse {
     
     
     public Integer statusCode;
+
     public BatchWriteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class BatchWriteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchWriteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class BatchWriteResponse {
      */
     
     public Object retryableConflictException;
+
     public BatchWriteResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class BatchWriteResponse {
      */
     
     public Object validationException;
+
     public BatchWriteResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchWriteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

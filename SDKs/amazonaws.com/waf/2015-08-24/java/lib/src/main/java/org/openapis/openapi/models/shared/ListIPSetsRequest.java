@@ -12,6 +12,7 @@ public class ListIPSetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListIPSetsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,9 +21,11 @@ public class ListIPSetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListIPSetsRequest withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListIPSetsRequest(){}
 }

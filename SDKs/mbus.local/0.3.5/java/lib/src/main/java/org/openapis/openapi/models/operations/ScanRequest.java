@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ScanRequest {
@@ -12,6 +13,7 @@ public class ScanRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=baudrate")
     public org.openapis.openapi.models.shared.BaudrateEnum baudrate;
+
     public ScanRequest withBaudrate(org.openapis.openapi.models.shared.BaudrateEnum baudrate) {
         this.baudrate = baudrate;
         return this;
@@ -22,9 +24,14 @@ public class ScanRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=device")
     public String device;
+
     public ScanRequest withDevice(String device) {
         this.device = device;
         return this;
     }
     
+    public ScanRequest(@JsonProperty("baudrate") org.openapis.openapi.models.shared.BaudrateEnum baudrate, @JsonProperty("device") String device) {
+        this.baudrate = baudrate;
+        this.device = device;
+  }
 }

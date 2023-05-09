@@ -20,6 +20,7 @@ public class CreateWorldTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CreateWorldTemplateResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class CreateWorldTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreateWorldTemplateResponse withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -38,6 +40,7 @@ public class CreateWorldTemplateResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CreateWorldTemplateResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class CreateWorldTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateWorldTemplateResponse withName(String name) {
         this.name = name;
         return this;
@@ -54,9 +58,11 @@ public class CreateWorldTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateWorldTemplateResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateWorldTemplateResponse(){}
 }

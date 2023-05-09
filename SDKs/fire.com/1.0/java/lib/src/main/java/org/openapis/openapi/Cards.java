@@ -54,10 +54,8 @@ public class Cards {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BlockCardResponse res = new org.openapis.openapi.models.operations.BlockCardResponse() {{
+        org.openapis.openapi.models.operations.BlockCardResponse res = new org.openapis.openapi.models.operations.BlockCardResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -93,11 +91,9 @@ public class Cards {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateNewCardResponse res = new org.openapis.openapi.models.operations.CreateNewCardResponse() {{
+        org.openapis.openapi.models.operations.CreateNewCardResponse res = new org.openapis.openapi.models.operations.CreateNewCardResponse(contentType, httpRes.statusCode()) {{
             newCardResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class Cards {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetListofCardTransactionsResponse res = new org.openapis.openapi.models.operations.GetListofCardTransactionsResponse() {{
+        org.openapis.openapi.models.operations.GetListofCardTransactionsResponse res = new org.openapis.openapi.models.operations.GetListofCardTransactionsResponse(contentType, httpRes.statusCode()) {{
             cardTransactionsv1s = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -180,11 +174,9 @@ public class Cards {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetListofCardsResponse res = new org.openapis.openapi.models.operations.GetListofCardsResponse() {{
+        org.openapis.openapi.models.operations.GetListofCardsResponse res = new org.openapis.openapi.models.operations.GetListofCardsResponse(contentType, httpRes.statusCode()) {{
             cards = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -222,10 +214,8 @@ public class Cards {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnblockCardResponse res = new org.openapis.openapi.models.operations.UnblockCardResponse() {{
+        org.openapis.openapi.models.operations.UnblockCardResponse res = new org.openapis.openapi.models.operations.UnblockCardResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Transfer {
     @JsonProperty("amount")
     public Amount amount;
+
     public Transfer withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -25,6 +26,7 @@ public class Transfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balanceAccountId")
     public String balanceAccountId;
+
     public Transfer withBalanceAccountId(String balanceAccountId) {
         this.balanceAccountId = balanceAccountId;
         return this;
@@ -33,6 +35,7 @@ public class Transfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank")
     public Bank bank;
+
     public Transfer withBank(Bank bank) {
         this.bank = bank;
         return this;
@@ -40,17 +43,23 @@ public class Transfer {
     
     @JsonProperty("counterparty")
     public Counterparty counterparty;
+
     public Transfer withCounterparty(Counterparty counterparty) {
         this.counterparty = counterparty;
         return this;
     }
     
     /**
-     * A human-readable description for the transfer. You can use alphanumeric characters and hyphens. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+     * Your description for the transfer. It is used by most banks as the transfer description. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+     * 
+     * Supported characters: **[a-z] [A-Z] [0-9] / - ?** **: ( ) . , ' + Space**
+     * 
+     * Supported characters for **regular** and **fast** transfers to a US counterparty: **[a-z] [A-Z] [0-9] &amp; $ % # @** **~ = + - _ ' " ! ?**
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Transfer withDescription(String description) {
         this.description = description;
         return this;
@@ -64,6 +73,7 @@ public class Transfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public TransferDirectionEnum direction;
+
     public Transfer withDirection(TransferDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -75,17 +85,19 @@ public class Transfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Transfer withId(String id) {
         this.id = id;
         return this;
     }
     
     /**
-     * The unique identifier of the source [payment instrument](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/paymentInstruments__resParam_id).
+     * The unique identifier of the [payment instrument](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/balanceAccounts__resParam_id) used in the transfer.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentInstrumentId")
     public String paymentInstrumentId;
+
     public Transfer withPaymentInstrumentId(String paymentInstrumentId) {
         this.paymentInstrumentId = paymentInstrumentId;
         return this;
@@ -97,6 +109,7 @@ public class Transfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public TransferReasonEnum reason;
+
     public Transfer withReason(TransferReasonEnum reason) {
         this.reason = reason;
         return this;
@@ -108,6 +121,7 @@ public class Transfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public Transfer withReference(String reference) {
         this.reference = reference;
         return this;
@@ -121,6 +135,7 @@ public class Transfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceForBeneficiary")
     public String referenceForBeneficiary;
+
     public Transfer withReferenceForBeneficiary(String referenceForBeneficiary) {
         this.referenceForBeneficiary = referenceForBeneficiary;
         return this;
@@ -133,9 +148,15 @@ public class Transfer {
      */
     @JsonProperty("status")
     public TransferStatusEnum status;
+
     public Transfer withStatus(TransferStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Transfer(@JsonProperty("amount") Amount amount, @JsonProperty("counterparty") Counterparty counterparty, @JsonProperty("status") TransferStatusEnum status) {
+        this.amount = amount;
+        this.counterparty = counterparty;
+        this.status = status;
+  }
 }

@@ -18,6 +18,7 @@ public class ImageTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Double confidence;
+
     public ImageTag withConfidence(Double confidence) {
         this.confidence = confidence;
         return this;
@@ -29,6 +30,7 @@ public class ImageTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hint")
     public String hint;
+
     public ImageTag withHint(String hint) {
         this.hint = hint;
         return this;
@@ -40,9 +42,11 @@ public class ImageTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ImageTag withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ImageTag(){}
 }

@@ -12,9 +12,11 @@ public class OBReadDataScheduledPayment3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduledPayment")
     public OBScheduledPayment3[] scheduledPayment;
+
     public OBReadDataScheduledPayment3 withScheduledPayment(OBScheduledPayment3[] scheduledPayment) {
         this.scheduledPayment = scheduledPayment;
         return this;
     }
     
+    public OBReadDataScheduledPayment3(){}
 }

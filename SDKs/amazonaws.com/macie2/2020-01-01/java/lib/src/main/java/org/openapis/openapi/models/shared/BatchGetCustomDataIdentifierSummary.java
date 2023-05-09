@@ -20,6 +20,7 @@ public class BatchGetCustomDataIdentifierSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public BatchGetCustomDataIdentifierSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class BatchGetCustomDataIdentifierSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public BatchGetCustomDataIdentifierSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class BatchGetCustomDataIdentifierSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public BatchGetCustomDataIdentifierSummary withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -46,6 +49,7 @@ public class BatchGetCustomDataIdentifierSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BatchGetCustomDataIdentifierSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class BatchGetCustomDataIdentifierSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BatchGetCustomDataIdentifierSummary withId(String id) {
         this.id = id;
         return this;
@@ -62,9 +67,11 @@ public class BatchGetCustomDataIdentifierSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BatchGetCustomDataIdentifierSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public BatchGetCustomDataIdentifierSummary(){}
 }

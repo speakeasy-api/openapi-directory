@@ -18,6 +18,7 @@ public class TlsCertificateContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificatePaths")
     public TlsCertificatePaths certificatePaths;
+
     public TlsCertificateContext withCertificatePaths(TlsCertificatePaths certificatePaths) {
         this.certificatePaths = certificatePaths;
         return this;
@@ -29,6 +30,7 @@ public class TlsCertificateContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateSource")
     public TlsCertificateContextCertificateSourceEnum certificateSource;
+
     public TlsCertificateContext withCertificateSource(TlsCertificateContextCertificateSourceEnum certificateSource) {
         this.certificateSource = certificateSource;
         return this;
@@ -40,9 +42,11 @@ public class TlsCertificateContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdsConfig")
     public SdsConfig sdsConfig;
+
     public TlsCertificateContext withSdsConfig(SdsConfig sdsConfig) {
         this.sdsConfig = sdsConfig;
         return this;
     }
     
+    public TlsCertificateContext(){}
 }

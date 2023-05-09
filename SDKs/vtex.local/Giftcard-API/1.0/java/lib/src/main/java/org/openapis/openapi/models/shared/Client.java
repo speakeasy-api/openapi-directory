@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Client {
     @JsonProperty("document")
     public String document;
+
     public Client withDocument(String document) {
         this.document = document;
         return this;
@@ -16,6 +17,7 @@ public class Client {
     
     @JsonProperty("email")
     public String email;
+
     public Client withEmail(String email) {
         this.email = email;
         return this;
@@ -23,9 +25,15 @@ public class Client {
     
     @JsonProperty("id")
     public String id;
+
     public Client withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Client(@JsonProperty("document") String document, @JsonProperty("email") String email, @JsonProperty("id") String id) {
+        this.document = document;
+        this.email = email;
+        this.id = id;
+  }
 }

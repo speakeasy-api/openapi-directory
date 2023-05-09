@@ -19,6 +19,7 @@ public class User {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ActionNotificationsLastReadOn")
     public OffsetDateTime actionNotificationsLastReadOn;
+
     public User withActionNotificationsLastReadOn(OffsetDateTime actionNotificationsLastReadOn) {
         this.actionNotificationsLastReadOn = actionNotificationsLastReadOn;
         return this;
@@ -27,6 +28,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public User withEmail(String email) {
         this.email = email;
         return this;
@@ -35,6 +37,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalConnections")
     public ExternalConnection[] externalConnections;
+
     public User withExternalConnections(ExternalConnection[] externalConnections) {
         this.externalConnections = externalConnections;
         return this;
@@ -43,6 +46,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasBeenOnboarded")
     public Boolean hasBeenOnboarded;
+
     public User withHasBeenOnboarded(Boolean hasBeenOnboarded) {
         this.hasBeenOnboarded = hasBeenOnboarded;
         return this;
@@ -51,6 +55,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public User withId(Integer id) {
         this.id = id;
         return this;
@@ -59,6 +64,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsLocked")
     public Boolean isLocked;
+
     public User withIsLocked(Boolean isLocked) {
         this.isLocked = isLocked;
         return this;
@@ -67,6 +73,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsVerified")
     public Boolean isVerified;
+
     public User withIsVerified(Boolean isVerified) {
         this.isVerified = isVerified;
         return this;
@@ -77,6 +84,7 @@ public class User {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("KnowledgeNotificationsLastReadOn")
     public OffsetDateTime knowledgeNotificationsLastReadOn;
+
     public User withKnowledgeNotificationsLastReadOn(OffsetDateTime knowledgeNotificationsLastReadOn) {
         this.knowledgeNotificationsLastReadOn = knowledgeNotificationsLastReadOn;
         return this;
@@ -87,6 +95,7 @@ public class User {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastSeenOn")
     public OffsetDateTime lastSeenOn;
+
     public User withLastSeenOn(OffsetDateTime lastSeenOn) {
         this.lastSeenOn = lastSeenOn;
         return this;
@@ -95,6 +104,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public User withName(String name) {
         this.name = name;
         return this;
@@ -103,6 +113,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public User withPassword(String password) {
         this.password = password;
         return this;
@@ -111,6 +122,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PasswordSalt")
     public String passwordSalt;
+
     public User withPasswordSalt(String passwordSalt) {
         this.passwordSalt = passwordSalt;
         return this;
@@ -119,6 +131,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferralPath")
     public String referralPath;
+
     public User withReferralPath(String referralPath) {
         this.referralPath = referralPath;
         return this;
@@ -127,6 +140,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferredUsers")
     public Integer referredUsers;
+
     public User withReferredUsers(Integer referredUsers) {
         this.referredUsers = referredUsers;
         return this;
@@ -135,6 +149,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferrerKey")
     public String referrerKey;
+
     public User withReferrerKey(String referrerKey) {
         this.referrerKey = referrerKey;
         return this;
@@ -143,6 +158,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public UserSettings settings;
+
     public User withSettings(UserSettings settings) {
         this.settings = settings;
         return this;
@@ -151,6 +167,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public UserStatusEnum status;
+
     public User withStatus(UserStatusEnum status) {
         this.status = status;
         return this;
@@ -159,6 +176,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubscriptionPlan")
     public SubscriptionPlan subscriptionPlan;
+
     public User withSubscriptionPlan(SubscriptionPlan subscriptionPlan) {
         this.subscriptionPlan = subscriptionPlan;
         return this;
@@ -167,6 +185,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public UserTypeEnum type;
+
     public User withType(UserTypeEnum type) {
         this.type = type;
         return this;
@@ -175,6 +194,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public User withUsername(String username) {
         this.username = username;
         return this;
@@ -185,6 +205,7 @@ public class User {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("VerifiedOn")
     public OffsetDateTime verifiedOn;
+
     public User withVerifiedOn(OffsetDateTime verifiedOn) {
         this.verifiedOn = verifiedOn;
         return this;
@@ -193,9 +214,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YearsOfExperience")
     public UserYearsOfExperienceEnum yearsOfExperience;
+
     public User withYearsOfExperience(UserYearsOfExperienceEnum yearsOfExperience) {
         this.yearsOfExperience = yearsOfExperience;
         return this;
     }
     
+    public User(){}
 }

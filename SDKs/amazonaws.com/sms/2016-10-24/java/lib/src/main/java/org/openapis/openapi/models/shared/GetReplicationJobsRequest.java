@@ -12,6 +12,7 @@ public class GetReplicationJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetReplicationJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class GetReplicationJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetReplicationJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class GetReplicationJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationJobId")
     public String replicationJobId;
+
     public GetReplicationJobsRequest withReplicationJobId(String replicationJobId) {
         this.replicationJobId = replicationJobId;
         return this;
     }
     
+    public GetReplicationJobsRequest(){}
 }

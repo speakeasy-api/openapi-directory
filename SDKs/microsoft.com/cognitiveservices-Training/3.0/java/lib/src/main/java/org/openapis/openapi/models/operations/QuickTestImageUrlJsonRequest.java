@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuickTestImageUrlJsonRequest {
@@ -12,6 +13,7 @@ public class QuickTestImageUrlJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+
     public QuickTestImageUrlJsonRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -22,6 +24,7 @@ public class QuickTestImageUrlJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public QuickTestImageUrlJsonRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -33,6 +36,7 @@ public class QuickTestImageUrlJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public QuickTestImageUrlJsonRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -43,9 +47,15 @@ public class QuickTestImageUrlJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public QuickTestImageUrlJsonRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public QuickTestImageUrlJsonRequest(@JsonProperty("ImageUrl") org.openapis.openapi.models.shared.ImageUrl imageUrl, @JsonProperty("Training-Key") String trainingKey, @JsonProperty("projectId") String projectId) {
+        this.imageUrl = imageUrl;
+        this.trainingKey = trainingKey;
+        this.projectId = projectId;
+  }
 }

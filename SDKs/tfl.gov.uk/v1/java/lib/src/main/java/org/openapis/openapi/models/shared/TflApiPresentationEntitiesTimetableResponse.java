@@ -15,6 +15,7 @@ public class TflApiPresentationEntitiesTimetableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public String direction;
+
     public TflApiPresentationEntitiesTimetableResponse withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -23,6 +24,7 @@ public class TflApiPresentationEntitiesTimetableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disambiguation")
     public TflApiPresentationEntitiesTimetablesDisambiguation disambiguation;
+
     public TflApiPresentationEntitiesTimetableResponse withDisambiguation(TflApiPresentationEntitiesTimetablesDisambiguation disambiguation) {
         this.disambiguation = disambiguation;
         return this;
@@ -31,6 +33,7 @@ public class TflApiPresentationEntitiesTimetableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineId")
     public String lineId;
+
     public TflApiPresentationEntitiesTimetableResponse withLineId(String lineId) {
         this.lineId = lineId;
         return this;
@@ -39,6 +42,7 @@ public class TflApiPresentationEntitiesTimetableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineName")
     public String lineName;
+
     public TflApiPresentationEntitiesTimetableResponse withLineName(String lineName) {
         this.lineName = lineName;
         return this;
@@ -47,6 +51,7 @@ public class TflApiPresentationEntitiesTimetableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pdfUrl")
     public String pdfUrl;
+
     public TflApiPresentationEntitiesTimetableResponse withPdfUrl(String pdfUrl) {
         this.pdfUrl = pdfUrl;
         return this;
@@ -55,6 +60,7 @@ public class TflApiPresentationEntitiesTimetableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stations")
     public TflApiPresentationEntitiesMatchedStop[] stations;
+
     public TflApiPresentationEntitiesTimetableResponse withStations(TflApiPresentationEntitiesMatchedStop[] stations) {
         this.stations = stations;
         return this;
@@ -63,6 +69,7 @@ public class TflApiPresentationEntitiesTimetableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusErrorMessage")
     public String statusErrorMessage;
+
     public TflApiPresentationEntitiesTimetableResponse withStatusErrorMessage(String statusErrorMessage) {
         this.statusErrorMessage = statusErrorMessage;
         return this;
@@ -71,6 +78,7 @@ public class TflApiPresentationEntitiesTimetableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stops")
     public TflApiPresentationEntitiesMatchedStop[] stops;
+
     public TflApiPresentationEntitiesTimetableResponse withStops(TflApiPresentationEntitiesMatchedStop[] stops) {
         this.stops = stops;
         return this;
@@ -79,9 +87,11 @@ public class TflApiPresentationEntitiesTimetableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timetable")
     public TflApiPresentationEntitiesTimetable timetable;
+
     public TflApiPresentationEntitiesTimetableResponse withTimetable(TflApiPresentationEntitiesTimetable timetable) {
         this.timetable = timetable;
         return this;
     }
     
+    public TflApiPresentationEntitiesTimetableResponse(){}
 }

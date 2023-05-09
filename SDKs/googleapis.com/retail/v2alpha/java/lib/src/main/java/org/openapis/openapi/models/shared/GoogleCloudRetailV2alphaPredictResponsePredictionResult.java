@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaPredictResponsePredictionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudRetailV2alphaPredictResponsePredictionResult withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2alphaPredictResponsePredictionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public GoogleCloudRetailV2alphaPredictResponsePredictionResult withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaPredictResponsePredictionResult(){}
 }

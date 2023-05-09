@@ -61,11 +61,9 @@ public class Tabledata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryTabledataInsertAllResponse res = new org.openapis.openapi.models.operations.BigqueryTabledataInsertAllResponse() {{
+        org.openapis.openapi.models.operations.BigqueryTabledataInsertAllResponse res = new org.openapis.openapi.models.operations.BigqueryTabledataInsertAllResponse(contentType, httpRes.statusCode()) {{
             tableDataInsertAllResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Tabledata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryTabledataListResponse res = new org.openapis.openapi.models.operations.BigqueryTabledataListResponse() {{
+        org.openapis.openapi.models.operations.BigqueryTabledataListResponse res = new org.openapis.openapi.models.operations.BigqueryTabledataListResponse(contentType, httpRes.statusCode()) {{
             tableDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

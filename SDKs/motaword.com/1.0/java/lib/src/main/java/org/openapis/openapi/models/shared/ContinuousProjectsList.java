@@ -15,6 +15,7 @@ public class ContinuousProjectsList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public ContinuousProjectsList withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
@@ -23,9 +24,11 @@ public class ContinuousProjectsList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projects")
     public ContinuousProject[] projects;
+
     public ContinuousProjectsList withProjects(ContinuousProject[] projects) {
         this.projects = projects;
         return this;
     }
     
+    public ContinuousProjectsList(){}
 }

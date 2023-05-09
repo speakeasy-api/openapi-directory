@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetargetingPostJsonResponse {
     
     public org.openapis.openapi.models.shared.ApiCoreResponsesEntityUriSystemInt64 apiCoreResponsesEntityUriSystemInt64;
+
     public RetargetingPostJsonResponse withApiCoreResponsesEntityUriSystemInt64(org.openapis.openapi.models.shared.ApiCoreResponsesEntityUriSystemInt64 apiCoreResponsesEntityUriSystemInt64) {
         this.apiCoreResponsesEntityUriSystemInt64 = apiCoreResponsesEntityUriSystemInt64;
         return this;
@@ -16,6 +18,7 @@ public class RetargetingPostJsonResponse {
     
     
     public byte[] body;
+
     public RetargetingPostJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -23,6 +26,7 @@ public class RetargetingPostJsonResponse {
     
     
     public String contentType;
+
     public RetargetingPostJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -30,6 +34,7 @@ public class RetargetingPostJsonResponse {
     
     
     public Integer statusCode;
+
     public RetargetingPostJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class RetargetingPostJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetargetingPostJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RetargetingPostJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

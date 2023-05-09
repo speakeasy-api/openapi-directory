@@ -18,9 +18,11 @@ public class GoogleCloudMlV1XraiAttribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numIntegralSteps")
     public Integer numIntegralSteps;
+
     public GoogleCloudMlV1XraiAttribution withNumIntegralSteps(Integer numIntegralSteps) {
         this.numIntegralSteps = numIntegralSteps;
         return this;
     }
     
+    public GoogleCloudMlV1XraiAttribution(){}
 }

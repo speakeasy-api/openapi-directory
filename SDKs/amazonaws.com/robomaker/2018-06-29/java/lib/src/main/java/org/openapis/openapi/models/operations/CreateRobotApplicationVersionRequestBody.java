@@ -14,6 +14,7 @@ public class CreateRobotApplicationVersionRequestBody {
      */
     @JsonProperty("application")
     public String application;
+
     public CreateRobotApplicationVersionRequestBody withApplication(String application) {
         this.application = application;
         return this;
@@ -25,6 +26,7 @@ public class CreateRobotApplicationVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentRevisionId")
     public String currentRevisionId;
+
     public CreateRobotApplicationVersionRequestBody withCurrentRevisionId(String currentRevisionId) {
         this.currentRevisionId = currentRevisionId;
         return this;
@@ -36,6 +38,7 @@ public class CreateRobotApplicationVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageDigest")
     public String imageDigest;
+
     public CreateRobotApplicationVersionRequestBody withImageDigest(String imageDigest) {
         this.imageDigest = imageDigest;
         return this;
@@ -47,9 +50,13 @@ public class CreateRobotApplicationVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Etags")
     public String[] s3Etags;
+
     public CreateRobotApplicationVersionRequestBody withS3Etags(String[] s3Etags) {
         this.s3Etags = s3Etags;
         return this;
     }
     
+    public CreateRobotApplicationVersionRequestBody(@JsonProperty("application") String application) {
+        this.application = application;
+  }
 }

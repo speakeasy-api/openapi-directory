@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListResponse {
     
     public String contentType;
+
     public IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsLi
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudIntegrationsV1alphaListIntegrationTemplateVersionsResponse googleCloudIntegrationsV1alphaListIntegrationTemplateVersionsResponse;
+
     public IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListResponse withGoogleCloudIntegrationsV1alphaListIntegrationTemplateVersionsResponse(org.openapis.openapi.models.shared.GoogleCloudIntegrationsV1alphaListIntegrationTemplateVersionsResponse googleCloudIntegrationsV1alphaListIntegrationTemplateVersionsResponse) {
         this.googleCloudIntegrationsV1alphaListIntegrationTemplateVersionsResponse = googleCloudIntegrationsV1alphaListIntegrationTemplateVersionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsLi
     
     
     public Integer statusCode;
+
     public IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsLi
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

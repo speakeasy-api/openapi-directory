@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCoreDefinitionResponse {
@@ -12,6 +13,7 @@ public class GetCoreDefinitionResponse {
      */
     
     public Object badRequestException;
+
     public GetCoreDefinitionResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetCoreDefinitionResponse {
     
     
     public String contentType;
+
     public GetCoreDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCoreDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCoreDefinitionResponse getCoreDefinitionResponse;
+
     public GetCoreDefinitionResponse withGetCoreDefinitionResponse(org.openapis.openapi.models.shared.GetCoreDefinitionResponse getCoreDefinitionResponse) {
         this.getCoreDefinitionResponse = getCoreDefinitionResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetCoreDefinitionResponse {
     
     
     public Integer statusCode;
+
     public GetCoreDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCoreDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCoreDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCoreDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

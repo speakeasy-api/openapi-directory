@@ -15,6 +15,7 @@ public class TimePartitioning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationMs")
     public String expirationMs;
+
     public TimePartitioning withExpirationMs(String expirationMs) {
         this.expirationMs = expirationMs;
         return this;
@@ -26,6 +27,7 @@ public class TimePartitioning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public TimePartitioning withField(String field) {
         this.field = field;
         return this;
@@ -34,6 +36,7 @@ public class TimePartitioning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requirePartitionFilter")
     public Boolean requirePartitionFilter;
+
     public TimePartitioning withRequirePartitionFilter(Boolean requirePartitionFilter) {
         this.requirePartitionFilter = requirePartitionFilter;
         return this;
@@ -45,9 +48,11 @@ public class TimePartitioning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TimePartitioning withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TimePartitioning(){}
 }

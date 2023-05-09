@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RunnerGroupsOrg {
     @JsonProperty("allows_public_repositories")
     public Boolean allowsPublicRepositories;
+
     public RunnerGroupsOrg withAllowsPublicRepositories(Boolean allowsPublicRepositories) {
         this.allowsPublicRepositories = allowsPublicRepositories;
         return this;
@@ -21,6 +22,7 @@ public class RunnerGroupsOrg {
     
     @JsonProperty("default")
     public Boolean default_;
+
     public RunnerGroupsOrg withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -28,6 +30,7 @@ public class RunnerGroupsOrg {
     
     @JsonProperty("id")
     public Double id;
+
     public RunnerGroupsOrg withId(Double id) {
         this.id = id;
         return this;
@@ -35,6 +38,7 @@ public class RunnerGroupsOrg {
     
     @JsonProperty("inherited")
     public Boolean inherited;
+
     public RunnerGroupsOrg withInherited(Boolean inherited) {
         this.inherited = inherited;
         return this;
@@ -43,6 +47,7 @@ public class RunnerGroupsOrg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inherited_allows_public_repositories")
     public Boolean inheritedAllowsPublicRepositories;
+
     public RunnerGroupsOrg withInheritedAllowsPublicRepositories(Boolean inheritedAllowsPublicRepositories) {
         this.inheritedAllowsPublicRepositories = inheritedAllowsPublicRepositories;
         return this;
@@ -50,6 +55,7 @@ public class RunnerGroupsOrg {
     
     @JsonProperty("name")
     public String name;
+
     public RunnerGroupsOrg withName(String name) {
         this.name = name;
         return this;
@@ -61,6 +67,7 @@ public class RunnerGroupsOrg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restricted_to_workflows")
     public Boolean restrictedToWorkflows;
+
     public RunnerGroupsOrg withRestrictedToWorkflows(Boolean restrictedToWorkflows) {
         this.restrictedToWorkflows = restrictedToWorkflows;
         return this;
@@ -68,6 +75,7 @@ public class RunnerGroupsOrg {
     
     @JsonProperty("runners_url")
     public String runnersUrl;
+
     public RunnerGroupsOrg withRunnersUrl(String runnersUrl) {
         this.runnersUrl = runnersUrl;
         return this;
@@ -79,6 +87,7 @@ public class RunnerGroupsOrg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected_repositories_url")
     public String selectedRepositoriesUrl;
+
     public RunnerGroupsOrg withSelectedRepositoriesUrl(String selectedRepositoriesUrl) {
         this.selectedRepositoriesUrl = selectedRepositoriesUrl;
         return this;
@@ -90,6 +99,7 @@ public class RunnerGroupsOrg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected_workflows")
     public String[] selectedWorkflows;
+
     public RunnerGroupsOrg withSelectedWorkflows(String[] selectedWorkflows) {
         this.selectedWorkflows = selectedWorkflows;
         return this;
@@ -97,6 +107,7 @@ public class RunnerGroupsOrg {
     
     @JsonProperty("visibility")
     public String visibility;
+
     public RunnerGroupsOrg withVisibility(String visibility) {
         this.visibility = visibility;
         return this;
@@ -108,9 +119,19 @@ public class RunnerGroupsOrg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflow_restrictions_read_only")
     public Boolean workflowRestrictionsReadOnly;
+
     public RunnerGroupsOrg withWorkflowRestrictionsReadOnly(Boolean workflowRestrictionsReadOnly) {
         this.workflowRestrictionsReadOnly = workflowRestrictionsReadOnly;
         return this;
     }
     
+    public RunnerGroupsOrg(@JsonProperty("allows_public_repositories") Boolean allowsPublicRepositories, @JsonProperty("default") Boolean default_, @JsonProperty("id") Double id, @JsonProperty("inherited") Boolean inherited, @JsonProperty("name") String name, @JsonProperty("runners_url") String runnersUrl, @JsonProperty("visibility") String visibility) {
+        this.allowsPublicRepositories = allowsPublicRepositories;
+        this.default_ = default_;
+        this.id = id;
+        this.inherited = inherited;
+        this.name = name;
+        this.runnersUrl = runnersUrl;
+        this.visibility = visibility;
+  }
 }

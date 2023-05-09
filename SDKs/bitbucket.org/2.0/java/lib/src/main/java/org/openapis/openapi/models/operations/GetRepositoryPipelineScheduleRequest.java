@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoryPipelineScheduleRequest {
@@ -12,6 +13,7 @@ public class GetRepositoryPipelineScheduleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoryPipelineScheduleRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -22,6 +24,7 @@ public class GetRepositoryPipelineScheduleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schedule_uuid")
     public String scheduleUuid;
+
     public GetRepositoryPipelineScheduleRequest withScheduleUuid(String scheduleUuid) {
         this.scheduleUuid = scheduleUuid;
         return this;
@@ -32,9 +35,15 @@ public class GetRepositoryPipelineScheduleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoryPipelineScheduleRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoryPipelineScheduleRequest(@JsonProperty("repo_slug") String repoSlug, @JsonProperty("schedule_uuid") String scheduleUuid, @JsonProperty("workspace") String workspace) {
+        this.repoSlug = repoSlug;
+        this.scheduleUuid = scheduleUuid;
+        this.workspace = workspace;
+  }
 }

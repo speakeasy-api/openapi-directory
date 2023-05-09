@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SearchLocalGatewayRoutesResultRoutes {
     
     public String coipPoolId;
+
     public SearchLocalGatewayRoutesResultRoutes withCoipPoolId(String coipPoolId) {
         this.coipPoolId = coipPoolId;
         return this;
@@ -19,6 +20,7 @@ public class SearchLocalGatewayRoutesResultRoutes {
     
     
     public String destinationCidrBlock;
+
     public SearchLocalGatewayRoutesResultRoutes withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -26,6 +28,7 @@ public class SearchLocalGatewayRoutesResultRoutes {
     
     
     public String destinationPrefixListId;
+
     public SearchLocalGatewayRoutesResultRoutes withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -33,6 +36,7 @@ public class SearchLocalGatewayRoutesResultRoutes {
     
     
     public String localGatewayRouteTableArn;
+
     public SearchLocalGatewayRoutesResultRoutes withLocalGatewayRouteTableArn(String localGatewayRouteTableArn) {
         this.localGatewayRouteTableArn = localGatewayRouteTableArn;
         return this;
@@ -40,6 +44,7 @@ public class SearchLocalGatewayRoutesResultRoutes {
     
     
     public String localGatewayRouteTableId;
+
     public SearchLocalGatewayRoutesResultRoutes withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
@@ -47,6 +52,7 @@ public class SearchLocalGatewayRoutesResultRoutes {
     
     
     public String localGatewayVirtualInterfaceGroupId;
+
     public SearchLocalGatewayRoutesResultRoutes withLocalGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
         this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
         return this;
@@ -54,6 +60,7 @@ public class SearchLocalGatewayRoutesResultRoutes {
     
     
     public String networkInterfaceId;
+
     public SearchLocalGatewayRoutesResultRoutes withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -61,6 +68,7 @@ public class SearchLocalGatewayRoutesResultRoutes {
     
     
     public String ownerId;
+
     public SearchLocalGatewayRoutesResultRoutes withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -68,6 +76,7 @@ public class SearchLocalGatewayRoutesResultRoutes {
     
     
     public SearchLocalGatewayRoutesResultRoutesStateEnum state;
+
     public SearchLocalGatewayRoutesResultRoutes withState(SearchLocalGatewayRoutesResultRoutesStateEnum state) {
         this.state = state;
         return this;
@@ -75,6 +84,7 @@ public class SearchLocalGatewayRoutesResultRoutes {
     
     
     public String subnetId;
+
     public SearchLocalGatewayRoutesResultRoutes withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -82,9 +92,11 @@ public class SearchLocalGatewayRoutesResultRoutes {
     
     
     public SearchLocalGatewayRoutesResultRoutesTypeEnum type;
+
     public SearchLocalGatewayRoutesResultRoutes withType(SearchLocalGatewayRoutesResultRoutesTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SearchLocalGatewayRoutesResultRoutes(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateIntegrationResponseResponse {
@@ -12,6 +13,7 @@ public class UpdateIntegrationResponseResponse {
      */
     
     public Object badRequestException;
+
     public UpdateIntegrationResponseResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateIntegrationResponseResponse {
      */
     
     public Object conflictException;
+
     public UpdateIntegrationResponseResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateIntegrationResponseResponse {
     
     
     public String contentType;
+
     public UpdateIntegrationResponseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateIntegrationResponseResponse {
      */
     
     public Object notFoundException;
+
     public UpdateIntegrationResponseResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateIntegrationResponseResponse {
     
     
     public Integer statusCode;
+
     public UpdateIntegrationResponseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateIntegrationResponseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateIntegrationResponseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateIntegrationResponseResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateIntegrationResponseResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateIntegrationResponseResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateIntegrationResponseResponse updateIntegrationResponseResponse;
+
     public UpdateIntegrationResponseResponse withUpdateIntegrationResponseResponse(org.openapis.openapi.models.shared.UpdateIntegrationResponseResponse updateIntegrationResponseResponse) {
         this.updateIntegrationResponseResponse = updateIntegrationResponseResponse;
         return this;
     }
     
+    public UpdateIntegrationResponseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

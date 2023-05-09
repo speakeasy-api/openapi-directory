@@ -18,6 +18,7 @@ public class RecognizeRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audio")
     public RecognitionAudio audio;
+
     public RecognizeRequestInput withAudio(RecognitionAudio audio) {
         this.audio = audio;
         return this;
@@ -29,9 +30,11 @@ public class RecognizeRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public RecognitionConfigInput config;
+
     public RecognizeRequestInput withConfig(RecognitionConfigInput config) {
         this.config = config;
         return this;
     }
     
+    public RecognizeRequestInput(){}
 }

@@ -15,6 +15,7 @@ public class StopInstanceOnIdleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public StopInstanceOnIdleRequest withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -23,9 +24,11 @@ public class StopInstanceOnIdleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threshold")
     public String threshold;
+
     public StopInstanceOnIdleRequest withThreshold(String threshold) {
         this.threshold = threshold;
         return this;
     }
     
+    public StopInstanceOnIdleRequest(){}
 }

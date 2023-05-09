@@ -14,6 +14,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action_code")
     public String actionCode;
+
     public CommunicationCost withActionCode(String actionCode) {
         this.actionCode = actionCode;
         return this;
@@ -22,6 +23,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action_code_full")
     public String actionCodeFull;
+
     public CommunicationCost withActionCodeFull(String actionCodeFull) {
         this.actionCodeFull = actionCodeFull;
         return this;
@@ -30,6 +32,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_first_name")
     public String candidateFirstName;
+
     public CommunicationCost withCandidateFirstName(String candidateFirstName) {
         this.candidateFirstName = candidateFirstName;
         return this;
@@ -38,6 +41,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     public String candidateId;
+
     public CommunicationCost withCandidateId(String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -46,6 +50,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_last_name")
     public String candidateLastName;
+
     public CommunicationCost withCandidateLastName(String candidateLastName) {
         this.candidateLastName = candidateLastName;
         return this;
@@ -54,6 +59,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_middle_name")
     public String candidateMiddleName;
+
     public CommunicationCost withCandidateMiddleName(String candidateMiddleName) {
         this.candidateMiddleName = candidateMiddleName;
         return this;
@@ -62,6 +68,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_name")
     public String candidateName;
+
     public CommunicationCost withCandidateName(String candidateName) {
         this.candidateName = candidateName;
         return this;
@@ -70,6 +77,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office")
     public String candidateOffice;
+
     public CommunicationCost withCandidateOffice(String candidateOffice) {
         this.candidateOffice = candidateOffice;
         return this;
@@ -78,6 +86,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office_district")
     public String candidateOfficeDistrict;
+
     public CommunicationCost withCandidateOfficeDistrict(String candidateOfficeDistrict) {
         this.candidateOfficeDistrict = candidateOfficeDistrict;
         return this;
@@ -86,6 +95,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office_full")
     public String candidateOfficeFull;
+
     public CommunicationCost withCandidateOfficeFull(String candidateOfficeFull) {
         this.candidateOfficeFull = candidateOfficeFull;
         return this;
@@ -94,6 +104,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office_state")
     public String candidateOfficeState;
+
     public CommunicationCost withCandidateOfficeState(String candidateOfficeState) {
         this.candidateOfficeState = candidateOfficeState;
         return this;
@@ -102,6 +113,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_id")
     public String committeeId;
+
     public CommunicationCost withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -110,6 +122,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_name")
     public String committeeName;
+
     public CommunicationCost withCommitteeName(String committeeName) {
         this.committeeName = committeeName;
         return this;
@@ -118,6 +131,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("communication_class")
     public String communicationClass;
+
     public CommunicationCost withCommunicationClass(String communicationClass) {
         this.communicationClass = communicationClass;
         return this;
@@ -126,6 +140,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("communication_type")
     public String communicationType;
+
     public CommunicationCost withCommunicationType(String communicationType) {
         this.communicationType = communicationType;
         return this;
@@ -134,6 +149,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("communication_type_full")
     public String communicationTypeFull;
+
     public CommunicationCost withCommunicationTypeFull(String communicationTypeFull) {
         this.communicationTypeFull = communicationTypeFull;
         return this;
@@ -142,6 +158,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycle")
     public Integer cycle;
+
     public CommunicationCost withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -150,6 +167,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_number")
     public Integer fileNumber;
+
     public CommunicationCost withFileNumber(Integer fileNumber) {
         this.fileNumber = fileNumber;
         return this;
@@ -158,6 +176,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form_type_code")
     public String formTypeCode;
+
     public CommunicationCost withFormTypeCode(String formTypeCode) {
         this.formTypeCode = formTypeCode;
         return this;
@@ -166,6 +185,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_number")
     public String imageNumber;
+
     public CommunicationCost withImageNumber(String imageNumber) {
         this.imageNumber = imageNumber;
         return this;
@@ -174,6 +194,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_sub_id")
     public Integer originalSubId;
+
     public CommunicationCost withOriginalSubId(Integer originalSubId) {
         this.originalSubId = originalSubId;
         return this;
@@ -182,6 +203,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pdf_url")
     public String pdfUrl;
+
     public CommunicationCost withPdfUrl(String pdfUrl) {
         this.pdfUrl = pdfUrl;
         return this;
@@ -190,6 +212,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_general_indicator")
     public String primaryGeneralIndicator;
+
     public CommunicationCost withPrimaryGeneralIndicator(String primaryGeneralIndicator) {
         this.primaryGeneralIndicator = primaryGeneralIndicator;
         return this;
@@ -198,6 +221,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_general_indicator_description")
     public String primaryGeneralIndicatorDescription;
+
     public CommunicationCost withPrimaryGeneralIndicatorDescription(String primaryGeneralIndicatorDescription) {
         this.primaryGeneralIndicatorDescription = primaryGeneralIndicatorDescription;
         return this;
@@ -206,6 +230,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purpose")
     public String purpose;
+
     public CommunicationCost withPurpose(String purpose) {
         this.purpose = purpose;
         return this;
@@ -214,6 +239,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_type")
     public String reportType;
+
     public CommunicationCost withReportType(String reportType) {
         this.reportType = reportType;
         return this;
@@ -222,6 +248,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_year")
     public Integer reportYear;
+
     public CommunicationCost withReportYear(Integer reportYear) {
         this.reportYear = reportYear;
         return this;
@@ -230,6 +257,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule_type")
     public String scheduleType;
+
     public CommunicationCost withScheduleType(String scheduleType) {
         this.scheduleType = scheduleType;
         return this;
@@ -238,6 +266,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule_type_full")
     public String scheduleTypeFull;
+
     public CommunicationCost withScheduleTypeFull(String scheduleTypeFull) {
         this.scheduleTypeFull = scheduleTypeFull;
         return this;
@@ -246,6 +275,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state_full")
     public String stateFull;
+
     public CommunicationCost withStateFull(String stateFull) {
         this.stateFull = stateFull;
         return this;
@@ -254,6 +284,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_id")
     public Integer subId;
+
     public CommunicationCost withSubId(Integer subId) {
         this.subId = subId;
         return this;
@@ -262,6 +293,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("support_oppose_indicator")
     public String supportOpposeIndicator;
+
     public CommunicationCost withSupportOpposeIndicator(String supportOpposeIndicator) {
         this.supportOpposeIndicator = supportOpposeIndicator;
         return this;
@@ -270,6 +302,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tran_id")
     public String tranId;
+
     public CommunicationCost withTranId(String tranId) {
         this.tranId = tranId;
         return this;
@@ -278,6 +311,7 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_amount")
     public Double transactionAmount;
+
     public CommunicationCost withTransactionAmount(Double transactionAmount) {
         this.transactionAmount = transactionAmount;
         return this;
@@ -287,6 +321,7 @@ public class CommunicationCost {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("transaction_date")
     public LocalDate transactionDate;
+
     public CommunicationCost withTransactionDate(LocalDate transactionDate) {
         this.transactionDate = transactionDate;
         return this;
@@ -295,9 +330,11 @@ public class CommunicationCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_type")
     public String transactionType;
+
     public CommunicationCost withTransactionType(String transactionType) {
         this.transactionType = transactionType;
         return this;
     }
     
+    public CommunicationCost(){}
 }

@@ -15,6 +15,7 @@ public class Transcript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedactedTranscriptFileUri")
     public String redactedTranscriptFileUri;
+
     public Transcript withRedactedTranscriptFileUri(String redactedTranscriptFileUri) {
         this.redactedTranscriptFileUri = redactedTranscriptFileUri;
         return this;
@@ -23,9 +24,11 @@ public class Transcript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TranscriptFileUri")
     public String transcriptFileUri;
+
     public Transcript withTranscriptFileUri(String transcriptFileUri) {
         this.transcriptFileUri = transcriptFileUri;
         return this;
     }
     
+    public Transcript(){}
 }

@@ -90,4 +90,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/AnnotateTextResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AnnotateTextRequestEncodingTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AnnotateTextRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Features.java
+docs/sdk/README.md
+docs/documents/README.md
 USAGE.md

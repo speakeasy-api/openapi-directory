@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CodeScanningGetSarifResponse {
     
     public String contentType;
+
     public CodeScanningGetSarifResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CodeScanningGetSarifResponse {
     
     
     public Integer statusCode;
+
     public CodeScanningGetSarifResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CodeScanningGetSarifResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CodeScanningGetSarifResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CodeScanningGetSarifResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public CodeScanningGetSarifResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class CodeScanningGetSarifResponse {
      */
     
     public org.openapis.openapi.models.shared.CodeScanningSarifsStatus codeScanningSarifsStatus;
+
     public CodeScanningGetSarifResponse withCodeScanningSarifsStatus(org.openapis.openapi.models.shared.CodeScanningSarifsStatus codeScanningSarifsStatus) {
         this.codeScanningSarifsStatus = codeScanningSarifsStatus;
         return this;
@@ -53,9 +59,14 @@ public class CodeScanningGetSarifResponse {
      */
     
     public CodeScanningGetSarif503ApplicationJSON codeScanningGetSarif503ApplicationJSONObject;
+
     public CodeScanningGetSarifResponse withCodeScanningGetSarif503ApplicationJSONObject(CodeScanningGetSarif503ApplicationJSON codeScanningGetSarif503ApplicationJSONObject) {
         this.codeScanningGetSarif503ApplicationJSONObject = codeScanningGetSarif503ApplicationJSONObject;
         return this;
     }
     
+    public CodeScanningGetSarifResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Snooze {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criteria")
     public Criteria criteria;
+
     public Snooze withCriteria(Criteria criteria) {
         this.criteria = criteria;
         return this;
@@ -29,6 +30,7 @@ public class Snooze {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Snooze withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class Snooze {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public TimeInterval interval;
+
     public Snooze withInterval(TimeInterval interval) {
         this.interval = interval;
         return this;
@@ -51,9 +54,11 @@ public class Snooze {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Snooze withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Snooze(){}
 }

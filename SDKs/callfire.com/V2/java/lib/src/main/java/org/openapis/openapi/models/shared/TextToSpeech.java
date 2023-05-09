@@ -18,6 +18,7 @@ public class TextToSpeech {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TextToSpeech withMessage(String message) {
         this.message = message;
         return this;
@@ -29,9 +30,11 @@ public class TextToSpeech {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voice")
     public TextToSpeechVoiceEnum voice;
+
     public TextToSpeech withVoice(TextToSpeechVoiceEnum voice) {
         this.voice = voice;
         return this;
     }
     
+    public TextToSpeech(){}
 }

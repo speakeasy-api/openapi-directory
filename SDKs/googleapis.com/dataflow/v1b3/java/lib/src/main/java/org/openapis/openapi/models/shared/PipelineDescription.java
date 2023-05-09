@@ -18,6 +18,7 @@ public class PipelineDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayData")
     public DisplayData[] displayData;
+
     public PipelineDescription withDisplayData(DisplayData[] displayData) {
         this.displayData = displayData;
         return this;
@@ -29,6 +30,7 @@ public class PipelineDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionPipelineStage")
     public ExecutionStageSummary[] executionPipelineStage;
+
     public PipelineDescription withExecutionPipelineStage(ExecutionStageSummary[] executionPipelineStage) {
         this.executionPipelineStage = executionPipelineStage;
         return this;
@@ -40,6 +42,7 @@ public class PipelineDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalPipelineTransform")
     public TransformSummary[] originalPipelineTransform;
+
     public PipelineDescription withOriginalPipelineTransform(TransformSummary[] originalPipelineTransform) {
         this.originalPipelineTransform = originalPipelineTransform;
         return this;
@@ -51,9 +54,11 @@ public class PipelineDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepNamesHash")
     public String stepNamesHash;
+
     public PipelineDescription withStepNamesHash(String stepNamesHash) {
         this.stepNamesHash = stepNamesHash;
         return this;
     }
     
+    public PipelineDescription(){}
 }

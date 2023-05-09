@@ -15,6 +15,7 @@ public class AwsOpenSearchServiceDomainLogPublishingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogsLogGroupArn")
     public String cloudWatchLogsLogGroupArn;
+
     public AwsOpenSearchServiceDomainLogPublishingOption withCloudWatchLogsLogGroupArn(String cloudWatchLogsLogGroupArn) {
         this.cloudWatchLogsLogGroupArn = cloudWatchLogsLogGroupArn;
         return this;
@@ -23,9 +24,11 @@ public class AwsOpenSearchServiceDomainLogPublishingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public AwsOpenSearchServiceDomainLogPublishingOption withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public AwsOpenSearchServiceDomainLogPublishingOption(){}
 }

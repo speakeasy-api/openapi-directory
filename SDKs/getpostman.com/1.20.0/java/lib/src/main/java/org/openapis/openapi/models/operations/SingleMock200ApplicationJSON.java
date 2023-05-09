@@ -15,9 +15,11 @@ public class SingleMock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mock")
     public SingleMock200ApplicationJSONMock mock;
+
     public SingleMock200ApplicationJSON withMock(SingleMock200ApplicationJSONMock mock) {
         this.mock = mock;
         return this;
     }
     
+    public SingleMock200ApplicationJSON(){}
 }

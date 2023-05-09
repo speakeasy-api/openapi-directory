@@ -12,6 +12,7 @@ public class Item2 {
      */
     @JsonProperty("description")
     public String description;
+
     public Item2 withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class Item2 {
      */
     @JsonProperty("ean")
     public String ean;
+
     public Item2 withEan(String ean) {
         this.ean = ean;
         return this;
@@ -32,6 +34,7 @@ public class Item2 {
      */
     @JsonProperty("id")
     public String id;
+
     public Item2 withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class Item2 {
      */
     @JsonProperty("price")
     public Integer price;
+
     public Item2 withPrice(Integer price) {
         this.price = price;
         return this;
@@ -52,6 +56,7 @@ public class Item2 {
      */
     @JsonProperty("productId")
     public String productId;
+
     public Item2 withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -62,6 +67,7 @@ public class Item2 {
      */
     @JsonProperty("quantity")
     public Integer quantity;
+
     public Item2 withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -72,6 +78,7 @@ public class Item2 {
      */
     @JsonProperty("refId")
     public String refId;
+
     public Item2 withRefId(String refId) {
         this.refId = refId;
         return this;
@@ -82,6 +89,7 @@ public class Item2 {
      */
     @JsonProperty("seller")
     public String seller;
+
     public Item2 withSeller(String seller) {
         this.seller = seller;
         return this;
@@ -92,9 +100,21 @@ public class Item2 {
      */
     @JsonProperty("sellingPrice")
     public Integer sellingPrice;
+
     public Item2 withSellingPrice(Integer sellingPrice) {
         this.sellingPrice = sellingPrice;
         return this;
     }
     
+    public Item2(@JsonProperty("description") String description, @JsonProperty("ean") String ean, @JsonProperty("id") String id, @JsonProperty("price") Integer price, @JsonProperty("productId") String productId, @JsonProperty("quantity") Integer quantity, @JsonProperty("refId") String refId, @JsonProperty("seller") String seller, @JsonProperty("sellingPrice") Integer sellingPrice) {
+        this.description = description;
+        this.ean = ean;
+        this.id = id;
+        this.price = price;
+        this.productId = productId;
+        this.quantity = quantity;
+        this.refId = refId;
+        this.seller = seller;
+        this.sellingPrice = sellingPrice;
+  }
 }

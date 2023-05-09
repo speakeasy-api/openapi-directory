@@ -12,6 +12,7 @@ public class DeleteAccessPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DeleteAccessPolicyRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class DeleteAccessPolicyRequest {
     
     @JsonProperty("name")
     public String name;
+
     public DeleteAccessPolicyRequest withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,14 @@ public class DeleteAccessPolicyRequest {
     
     @JsonProperty("type")
     public AccessPolicyTypeEnum type;
+
     public DeleteAccessPolicyRequest withType(AccessPolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DeleteAccessPolicyRequest(@JsonProperty("name") String name, @JsonProperty("type") AccessPolicyTypeEnum type) {
+        this.name = name;
+        this.type = type;
+  }
 }

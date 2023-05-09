@@ -15,6 +15,7 @@ public class DestinyHistoricalStatsDestinyClanAggregateStatValueWeighted {
      */
     
     public String displayValue;
+
     public DestinyHistoricalStatsDestinyClanAggregateStatValueWeighted withDisplayValue(String displayValue) {
         this.displayValue = displayValue;
         return this;
@@ -25,9 +26,11 @@ public class DestinyHistoricalStatsDestinyClanAggregateStatValueWeighted {
      */
     
     public Double value;
+
     public DestinyHistoricalStatsDestinyClanAggregateStatValueWeighted withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyClanAggregateStatValueWeighted(){}
 }

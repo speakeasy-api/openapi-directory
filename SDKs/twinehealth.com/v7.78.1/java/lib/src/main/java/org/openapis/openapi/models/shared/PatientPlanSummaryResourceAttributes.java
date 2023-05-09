@@ -12,6 +12,7 @@ public class PatientPlanSummaryResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adherence")
     public java.util.Map<String, Object> adherence;
+
     public PatientPlanSummaryResourceAttributes withAdherence(java.util.Map<String, Object> adherence) {
         this.adherence = adherence;
         return this;
@@ -20,6 +21,7 @@ public class PatientPlanSummaryResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("critical")
     public java.util.Map<String, Object> critical;
+
     public PatientPlanSummaryResourceAttributes withCritical(java.util.Map<String, Object> critical) {
         this.critical = critical;
         return this;
@@ -28,6 +30,7 @@ public class PatientPlanSummaryResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effective_from")
     public String effectiveFrom;
+
     public PatientPlanSummaryResourceAttributes withEffectiveFrom(String effectiveFrom) {
         this.effectiveFrom = effectiveFrom;
         return this;
@@ -36,6 +39,7 @@ public class PatientPlanSummaryResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_zone")
     public String timeZone;
+
     public PatientPlanSummaryResourceAttributes withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -44,6 +48,7 @@ public class PatientPlanSummaryResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("window_notification_times")
     public PatientPlanSummaryResourceAttributesWindowNotificationTimes windowNotificationTimes;
+
     public PatientPlanSummaryResourceAttributes withWindowNotificationTimes(PatientPlanSummaryResourceAttributesWindowNotificationTimes windowNotificationTimes) {
         this.windowNotificationTimes = windowNotificationTimes;
         return this;
@@ -52,9 +57,11 @@ public class PatientPlanSummaryResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("window_order")
     public PatientPlanSummaryResourceAttributesWindowOrder[] windowOrder;
+
     public PatientPlanSummaryResourceAttributes withWindowOrder(PatientPlanSummaryResourceAttributesWindowOrder[] windowOrder) {
         this.windowOrder = windowOrder;
         return this;
     }
     
+    public PatientPlanSummaryResourceAttributes(){}
 }

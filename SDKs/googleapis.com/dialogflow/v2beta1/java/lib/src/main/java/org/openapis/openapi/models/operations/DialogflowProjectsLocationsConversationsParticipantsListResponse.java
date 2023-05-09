@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DialogflowProjectsLocationsConversationsParticipantsListResponse {
     
     public String contentType;
+
     public DialogflowProjectsLocationsConversationsParticipantsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DialogflowProjectsLocationsConversationsParticipantsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDialogflowV2beta1ListParticipantsResponse googleCloudDialogflowV2beta1ListParticipantsResponse;
+
     public DialogflowProjectsLocationsConversationsParticipantsListResponse withGoogleCloudDialogflowV2beta1ListParticipantsResponse(org.openapis.openapi.models.shared.GoogleCloudDialogflowV2beta1ListParticipantsResponse googleCloudDialogflowV2beta1ListParticipantsResponse) {
         this.googleCloudDialogflowV2beta1ListParticipantsResponse = googleCloudDialogflowV2beta1ListParticipantsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DialogflowProjectsLocationsConversationsParticipantsListResponse {
     
     
     public Integer statusCode;
+
     public DialogflowProjectsLocationsConversationsParticipantsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DialogflowProjectsLocationsConversationsParticipantsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DialogflowProjectsLocationsConversationsParticipantsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DialogflowProjectsLocationsConversationsParticipantsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

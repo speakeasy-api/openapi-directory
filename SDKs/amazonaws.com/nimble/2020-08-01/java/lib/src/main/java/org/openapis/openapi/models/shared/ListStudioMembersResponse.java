@@ -15,6 +15,7 @@ public class ListStudioMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public StudioMembership[] members;
+
     public ListStudioMembersResponse withMembers(StudioMembership[] members) {
         this.members = members;
         return this;
@@ -23,9 +24,11 @@ public class ListStudioMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListStudioMembersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListStudioMembersResponse(){}
 }

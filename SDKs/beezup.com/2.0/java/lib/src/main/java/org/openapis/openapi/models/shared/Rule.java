@@ -22,6 +22,7 @@ public class Rule {
      */
     @JsonProperty("actionName")
     public OptimisationActionNameEnum actionName;
+
     public Rule withActionName(OptimisationActionNameEnum actionName) {
         this.actionName = actionName;
         return this;
@@ -32,6 +33,7 @@ public class Rule {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public Rule withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -43,6 +45,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastExecutionStatus")
     public RuleLastExecutionStatusEnum lastExecutionStatus;
+
     public Rule withLastExecutionStatus(RuleLastExecutionStatusEnum lastExecutionStatus) {
         this.lastExecutionStatus = lastExecutionStatus;
         return this;
@@ -56,6 +59,7 @@ public class Rule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastExecutionUtcDate")
     public OffsetDateTime lastExecutionUtcDate;
+
     public Rule withLastExecutionUtcDate(OffsetDateTime lastExecutionUtcDate) {
         this.lastExecutionUtcDate = lastExecutionUtcDate;
         return this;
@@ -66,6 +70,7 @@ public class Rule {
      */
     @JsonProperty("links")
     public RuleLinks links;
+
     public Rule withLinks(RuleLinks links) {
         this.links = links;
         return this;
@@ -76,6 +81,7 @@ public class Rule {
      */
     @JsonProperty("position")
     public Long position;
+
     public Rule withPosition(Long position) {
         this.position = position;
         return this;
@@ -86,6 +92,7 @@ public class Rule {
      */
     @JsonProperty("reportFilterId")
     public String reportFilterId;
+
     public Rule withReportFilterId(String reportFilterId) {
         this.reportFilterId = reportFilterId;
         return this;
@@ -96,6 +103,7 @@ public class Rule {
      */
     @JsonProperty("ruleId")
     public String ruleId;
+
     public Rule withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
@@ -106,6 +114,7 @@ public class Rule {
      */
     @JsonProperty("ruleName")
     public String ruleName;
+
     public Rule withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -119,6 +128,7 @@ public class Rule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("validityEndUtcDate")
     public OffsetDateTime validityEndUtcDate;
+
     public Rule withValidityEndUtcDate(OffsetDateTime validityEndUtcDate) {
         this.validityEndUtcDate = validityEndUtcDate;
         return this;
@@ -132,9 +142,19 @@ public class Rule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("validityStartUtcDate")
     public OffsetDateTime validityStartUtcDate;
+
     public Rule withValidityStartUtcDate(OffsetDateTime validityStartUtcDate) {
         this.validityStartUtcDate = validityStartUtcDate;
         return this;
     }
     
+    public Rule(@JsonProperty("actionName") OptimisationActionNameEnum actionName, @JsonProperty("enabled") Boolean enabled, @JsonProperty("links") RuleLinks links, @JsonProperty("position") Long position, @JsonProperty("reportFilterId") String reportFilterId, @JsonProperty("ruleId") String ruleId, @JsonProperty("ruleName") String ruleName) {
+        this.actionName = actionName;
+        this.enabled = enabled;
+        this.links = links;
+        this.position = position;
+        this.reportFilterId = reportFilterId;
+        this.ruleId = ruleId;
+        this.ruleName = ruleName;
+  }
 }

@@ -18,6 +18,7 @@ public class MeterFolderInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommunicationModuleFirmwareVersion")
     public Integer communicationModuleFirmwareVersion;
+
     public MeterFolderInformation withCommunicationModuleFirmwareVersion(Integer communicationModuleFirmwareVersion) {
         this.communicationModuleFirmwareVersion = communicationModuleFirmwareVersion;
         return this;
@@ -29,6 +30,7 @@ public class MeterFolderInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommunicationModuleHardwareVersion")
     public Integer communicationModuleHardwareVersion;
+
     public MeterFolderInformation withCommunicationModuleHardwareVersion(Integer communicationModuleHardwareVersion) {
         this.communicationModuleHardwareVersion = communicationModuleHardwareVersion;
         return this;
@@ -40,6 +42,7 @@ public class MeterFolderInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirmwareVersion")
     public Integer firmwareVersion;
+
     public MeterFolderInformation withFirmwareVersion(Integer firmwareVersion) {
         this.firmwareVersion = firmwareVersion;
         return this;
@@ -51,6 +54,7 @@ public class MeterFolderInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HardwareVersion")
     public Integer hardwareVersion;
+
     public MeterFolderInformation withHardwareVersion(Integer hardwareVersion) {
         this.hardwareVersion = hardwareVersion;
         return this;
@@ -62,6 +66,7 @@ public class MeterFolderInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputInformations")
     public InputInformation[] inputInformations;
+
     public MeterFolderInformation withInputInformations(InputInformation[] inputInformations) {
         this.inputInformations = inputInformations;
         return this;
@@ -73,6 +78,7 @@ public class MeterFolderInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsFolder")
     public Boolean isFolder;
+
     public MeterFolderInformation withIsFolder(Boolean isFolder) {
         this.isFolder = isFolder;
         return this;
@@ -84,6 +90,7 @@ public class MeterFolderInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public MeterFolderInformation withName(String name) {
         this.name = name;
         return this;
@@ -95,9 +102,11 @@ public class MeterFolderInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputInformations")
     public OutputInformation[] outputInformations;
+
     public MeterFolderInformation withOutputInformations(OutputInformation[] outputInformations) {
         this.outputInformations = outputInformations;
         return this;
     }
     
+    public MeterFolderInformation(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDatapipelinesV1ScheduleSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public String schedule;
+
     public GoogleCloudDatapipelinesV1ScheduleSpecInput withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatapipelinesV1ScheduleSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public GoogleCloudDatapipelinesV1ScheduleSpecInput withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public GoogleCloudDatapipelinesV1ScheduleSpecInput(){}
 }

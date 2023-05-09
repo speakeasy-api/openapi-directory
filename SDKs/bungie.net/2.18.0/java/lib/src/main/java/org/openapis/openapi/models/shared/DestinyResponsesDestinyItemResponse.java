@@ -15,6 +15,7 @@ public class DestinyResponsesDestinyItemResponse {
      */
     
     public Long characterId;
+
     public DestinyResponsesDestinyItemResponse withCharacterId(Long characterId) {
         this.characterId = characterId;
         return this;
@@ -26,6 +27,7 @@ public class DestinyResponsesDestinyItemResponse {
      */
     
     public DestinyResponsesDestinyItemResponseInstance instance;
+
     public DestinyResponsesDestinyItemResponse withInstance(DestinyResponsesDestinyItemResponseInstance instance) {
         this.instance = instance;
         return this;
@@ -37,6 +39,7 @@ public class DestinyResponsesDestinyItemResponse {
      */
     
     public DestinyResponsesDestinyItemResponseItem item;
+
     public DestinyResponsesDestinyItemResponse withItem(DestinyResponsesDestinyItemResponseItem item) {
         this.item = item;
         return this;
@@ -48,6 +51,7 @@ public class DestinyResponsesDestinyItemResponse {
      */
     
     public DestinyResponsesDestinyItemResponseObjectives objectives;
+
     public DestinyResponsesDestinyItemResponse withObjectives(DestinyResponsesDestinyItemResponseObjectives objectives) {
         this.objectives = objectives;
         return this;
@@ -59,6 +63,7 @@ public class DestinyResponsesDestinyItemResponse {
      */
     
     public DestinyResponsesDestinyItemResponsePerks perks;
+
     public DestinyResponsesDestinyItemResponse withPerks(DestinyResponsesDestinyItemResponsePerks perks) {
         this.perks = perks;
         return this;
@@ -70,6 +75,7 @@ public class DestinyResponsesDestinyItemResponse {
      */
     
     public DestinyResponsesDestinyItemResponsePlugObjectives plugObjectives;
+
     public DestinyResponsesDestinyItemResponse withPlugObjectives(DestinyResponsesDestinyItemResponsePlugObjectives plugObjectives) {
         this.plugObjectives = plugObjectives;
         return this;
@@ -81,6 +87,7 @@ public class DestinyResponsesDestinyItemResponse {
      */
     
     public DestinyResponsesDestinyItemResponseRenderData renderData;
+
     public DestinyResponsesDestinyItemResponse withRenderData(DestinyResponsesDestinyItemResponseRenderData renderData) {
         this.renderData = renderData;
         return this;
@@ -93,6 +100,7 @@ public class DestinyResponsesDestinyItemResponse {
      */
     
     public DestinyResponsesDestinyItemResponseReusablePlugs reusablePlugs;
+
     public DestinyResponsesDestinyItemResponse withReusablePlugs(DestinyResponsesDestinyItemResponseReusablePlugs reusablePlugs) {
         this.reusablePlugs = reusablePlugs;
         return this;
@@ -104,6 +112,7 @@ public class DestinyResponsesDestinyItemResponse {
      */
     
     public DestinyResponsesDestinyItemResponseSockets sockets;
+
     public DestinyResponsesDestinyItemResponse withSockets(DestinyResponsesDestinyItemResponseSockets sockets) {
         this.sockets = sockets;
         return this;
@@ -115,6 +124,7 @@ public class DestinyResponsesDestinyItemResponse {
      */
     
     public DestinyResponsesDestinyItemResponseStats stats;
+
     public DestinyResponsesDestinyItemResponse withStats(DestinyResponsesDestinyItemResponseStats stats) {
         this.stats = stats;
         return this;
@@ -126,9 +136,11 @@ public class DestinyResponsesDestinyItemResponse {
      */
     
     public DestinyResponsesDestinyItemResponseTalentGrid talentGrid;
+
     public DestinyResponsesDestinyItemResponse withTalentGrid(DestinyResponsesDestinyItemResponseTalentGrid talentGrid) {
         this.talentGrid = talentGrid;
         return this;
     }
     
+    public DestinyResponsesDestinyItemResponse(){}
 }

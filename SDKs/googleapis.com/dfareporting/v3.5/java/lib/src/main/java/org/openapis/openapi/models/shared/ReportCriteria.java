@@ -18,6 +18,7 @@ public class ReportCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activities")
     public Activities activities;
+
     public ReportCriteria withActivities(Activities activities) {
         this.activities = activities;
         return this;
@@ -29,6 +30,7 @@ public class ReportCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customRichMediaEvents")
     public CustomRichMediaEvents customRichMediaEvents;
+
     public ReportCriteria withCustomRichMediaEvents(CustomRichMediaEvents customRichMediaEvents) {
         this.customRichMediaEvents = customRichMediaEvents;
         return this;
@@ -40,6 +42,7 @@ public class ReportCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRange")
     public DateRange dateRange;
+
     public ReportCriteria withDateRange(DateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -51,6 +54,7 @@ public class ReportCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilters")
     public DimensionValue[] dimensionFilters;
+
     public ReportCriteria withDimensionFilters(DimensionValue[] dimensionFilters) {
         this.dimensionFilters = dimensionFilters;
         return this;
@@ -62,6 +66,7 @@ public class ReportCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public SortedDimension[] dimensions;
+
     public ReportCriteria withDimensions(SortedDimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -73,9 +78,11 @@ public class ReportCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricNames")
     public String[] metricNames;
+
     public ReportCriteria withMetricNames(String[] metricNames) {
         this.metricNames = metricNames;
         return this;
     }
     
+    public ReportCriteria(){}
 }

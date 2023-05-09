@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebaserulesProjectsRulesetsGetResponse {
     
     public String contentType;
+
     public FirebaserulesProjectsRulesetsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebaserulesProjectsRulesetsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Ruleset ruleset;
+
     public FirebaserulesProjectsRulesetsGetResponse withRuleset(org.openapis.openapi.models.shared.Ruleset ruleset) {
         this.ruleset = ruleset;
         return this;
@@ -26,6 +29,7 @@ public class FirebaserulesProjectsRulesetsGetResponse {
     
     
     public Integer statusCode;
+
     public FirebaserulesProjectsRulesetsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebaserulesProjectsRulesetsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebaserulesProjectsRulesetsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebaserulesProjectsRulesetsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

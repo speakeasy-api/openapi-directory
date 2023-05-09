@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
@@ -12,6 +13,7 @@ public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeTargetHttpsProxiesSetQuicOverrideRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TargetHttpsProxiesSetQuicOverrideRequest targetHttpsProxiesSetQuicOverrideRequest;
+
     public ComputeTargetHttpsProxiesSetQuicOverrideRequest withTargetHttpsProxiesSetQuicOverrideRequest(org.openapis.openapi.models.shared.TargetHttpsProxiesSetQuicOverrideRequest targetHttpsProxiesSetQuicOverrideRequest) {
         this.targetHttpsProxiesSetQuicOverrideRequest = targetHttpsProxiesSetQuicOverrideRequest;
         return this;
@@ -29,6 +32,7 @@ public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeTargetHttpsProxiesSetQuicOverrideRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeTargetHttpsProxiesSetQuicOverrideRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeTargetHttpsProxiesSetQuicOverrideRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeTargetHttpsProxiesSetQuicOverrideRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeTargetHttpsProxiesSetQuicOverrideRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeTargetHttpsProxiesSetQuicOverrideRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeTargetHttpsProxiesSetQuicOverrideRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeTargetHttpsProxiesSetQuicOverrideRequest withProject(String project) {
         this.project = project;
         return this;
@@ -109,6 +120,7 @@ public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeTargetHttpsProxiesSetQuicOverrideRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeTargetHttpsProxiesSetQuicOverrideRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -129,6 +142,7 @@ public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetHttpsProxy")
     public String targetHttpsProxy;
+
     public ComputeTargetHttpsProxiesSetQuicOverrideRequest withTargetHttpsProxy(String targetHttpsProxy) {
         this.targetHttpsProxy = targetHttpsProxy;
         return this;
@@ -139,6 +153,7 @@ public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeTargetHttpsProxiesSetQuicOverrideRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,6 +164,7 @@ public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeTargetHttpsProxiesSetQuicOverrideRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -159,9 +175,14 @@ public class ComputeTargetHttpsProxiesSetQuicOverrideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeTargetHttpsProxiesSetQuicOverrideRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeTargetHttpsProxiesSetQuicOverrideRequest(@JsonProperty("project") String project, @JsonProperty("targetHttpsProxy") String targetHttpsProxy) {
+        this.project = project;
+        this.targetHttpsProxy = targetHttpsProxy;
+  }
 }

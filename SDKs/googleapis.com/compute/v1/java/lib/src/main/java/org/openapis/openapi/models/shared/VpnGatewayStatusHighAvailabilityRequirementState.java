@@ -18,6 +18,7 @@ public class VpnGatewayStatusHighAvailabilityRequirementState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public VpnGatewayStatusHighAvailabilityRequirementStateStateEnum state;
+
     public VpnGatewayStatusHighAvailabilityRequirementState withState(VpnGatewayStatusHighAvailabilityRequirementStateStateEnum state) {
         this.state = state;
         return this;
@@ -29,9 +30,11 @@ public class VpnGatewayStatusHighAvailabilityRequirementState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unsatisfiedReason")
     public VpnGatewayStatusHighAvailabilityRequirementStateUnsatisfiedReasonEnum unsatisfiedReason;
+
     public VpnGatewayStatusHighAvailabilityRequirementState withUnsatisfiedReason(VpnGatewayStatusHighAvailabilityRequirementStateUnsatisfiedReasonEnum unsatisfiedReason) {
         this.unsatisfiedReason = unsatisfiedReason;
         return this;
     }
     
+    public VpnGatewayStatusHighAvailabilityRequirementState(){}
 }

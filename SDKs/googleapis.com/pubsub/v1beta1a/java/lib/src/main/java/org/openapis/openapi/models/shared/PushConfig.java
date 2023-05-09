@@ -18,9 +18,11 @@ public class PushConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pushEndpoint")
     public String pushEndpoint;
+
     public PushConfig withPushEndpoint(String pushEndpoint) {
         this.pushEndpoint = pushEndpoint;
         return this;
     }
     
+    public PushConfig(){}
 }

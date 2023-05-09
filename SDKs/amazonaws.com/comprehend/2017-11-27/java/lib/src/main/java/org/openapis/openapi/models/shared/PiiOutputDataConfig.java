@@ -15,6 +15,7 @@ public class PiiOutputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public PiiOutputDataConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -22,9 +23,13 @@ public class PiiOutputDataConfig {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public PiiOutputDataConfig withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public PiiOutputDataConfig(@JsonProperty("S3Uri") String s3Uri) {
+        this.s3Uri = s3Uri;
+  }
 }

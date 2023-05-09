@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Experiment {
     @JsonProperty("arn")
     public String arn;
+
     public Experiment withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class Experiment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdTime")
     public OffsetDateTime createdTime;
+
     public Experiment withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -36,6 +38,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Experiment withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("execution")
     public ExperimentExecution execution;
+
     public Experiment withExecution(ExperimentExecution execution) {
         this.execution = execution;
         return this;
@@ -53,6 +57,7 @@ public class Experiment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public Experiment withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -61,6 +66,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricGoals")
     public MetricGoal[] metricGoals;
+
     public Experiment withMetricGoals(MetricGoal[] metricGoals) {
         this.metricGoals = metricGoals;
         return this;
@@ -68,6 +74,7 @@ public class Experiment {
     
     @JsonProperty("name")
     public String name;
+
     public Experiment withName(String name) {
         this.name = name;
         return this;
@@ -76,6 +83,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlineAbDefinition")
     public OnlineAbDefinition onlineAbDefinition;
+
     public Experiment withOnlineAbDefinition(OnlineAbDefinition onlineAbDefinition) {
         this.onlineAbDefinition = onlineAbDefinition;
         return this;
@@ -84,6 +92,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public Experiment withProject(String project) {
         this.project = project;
         return this;
@@ -92,6 +101,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("randomizationSalt")
     public String randomizationSalt;
+
     public Experiment withRandomizationSalt(String randomizationSalt) {
         this.randomizationSalt = randomizationSalt;
         return this;
@@ -100,6 +110,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samplingRate")
     public Long samplingRate;
+
     public Experiment withSamplingRate(Long samplingRate) {
         this.samplingRate = samplingRate;
         return this;
@@ -108,6 +119,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public ExperimentSchedule schedule;
+
     public Experiment withSchedule(ExperimentSchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -116,6 +128,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segment")
     public String segment;
+
     public Experiment withSegment(String segment) {
         this.segment = segment;
         return this;
@@ -123,6 +136,7 @@ public class Experiment {
     
     @JsonProperty("status")
     public ExperimentStatusEnum status;
+
     public Experiment withStatus(ExperimentStatusEnum status) {
         this.status = status;
         return this;
@@ -131,6 +145,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public Experiment withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -139,6 +154,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Experiment withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -147,6 +163,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("treatments")
     public Treatment[] treatments;
+
     public Experiment withTreatments(Treatment[] treatments) {
         this.treatments = treatments;
         return this;
@@ -154,9 +171,18 @@ public class Experiment {
     
     @JsonProperty("type")
     public ExperimentTypeEnum type;
+
     public Experiment withType(ExperimentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Experiment(@JsonProperty("arn") String arn, @JsonProperty("createdTime") OffsetDateTime createdTime, @JsonProperty("lastUpdatedTime") OffsetDateTime lastUpdatedTime, @JsonProperty("name") String name, @JsonProperty("status") ExperimentStatusEnum status, @JsonProperty("type") ExperimentTypeEnum type) {
+        this.arn = arn;
+        this.createdTime = createdTime;
+        this.lastUpdatedTime = lastUpdatedTime;
+        this.name = name;
+        this.status = status;
+        this.type = type;
+  }
 }

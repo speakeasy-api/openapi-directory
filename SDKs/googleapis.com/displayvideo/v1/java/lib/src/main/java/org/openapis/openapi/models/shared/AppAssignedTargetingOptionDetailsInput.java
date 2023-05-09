@@ -18,6 +18,7 @@ public class AppAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public AppAssignedTargetingOptionDetailsInput withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -29,6 +30,7 @@ public class AppAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appPlatform")
     public AppAssignedTargetingOptionDetailsAppPlatformEnum appPlatform;
+
     public AppAssignedTargetingOptionDetailsInput withAppPlatform(AppAssignedTargetingOptionDetailsAppPlatformEnum appPlatform) {
         this.appPlatform = appPlatform;
         return this;
@@ -40,9 +42,11 @@ public class AppAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negative")
     public Boolean negative;
+
     public AppAssignedTargetingOptionDetailsInput withNegative(Boolean negative) {
         this.negative = negative;
         return this;
     }
     
+    public AppAssignedTargetingOptionDetailsInput(){}
 }

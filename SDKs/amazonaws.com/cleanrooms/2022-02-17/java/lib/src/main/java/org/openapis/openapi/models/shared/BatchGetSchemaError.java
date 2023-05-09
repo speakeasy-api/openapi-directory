@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetSchemaError {
     @JsonProperty("code")
     public String code;
+
     public BatchGetSchemaError withCode(String code) {
         this.code = code;
         return this;
@@ -19,6 +20,7 @@ public class BatchGetSchemaError {
     
     @JsonProperty("message")
     public String message;
+
     public BatchGetSchemaError withMessage(String message) {
         this.message = message;
         return this;
@@ -26,9 +28,15 @@ public class BatchGetSchemaError {
     
     @JsonProperty("name")
     public String name;
+
     public BatchGetSchemaError withName(String name) {
         this.name = name;
         return this;
     }
     
+    public BatchGetSchemaError(@JsonProperty("code") String code, @JsonProperty("message") String message, @JsonProperty("name") String name) {
+        this.code = code;
+        this.message = message;
+        this.name = name;
+  }
 }

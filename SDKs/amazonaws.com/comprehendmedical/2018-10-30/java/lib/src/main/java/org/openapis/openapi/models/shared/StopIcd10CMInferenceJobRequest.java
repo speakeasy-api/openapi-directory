@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopIcd10CMInferenceJobRequest {
     @JsonProperty("JobId")
     public String jobId;
+
     public StopIcd10CMInferenceJobRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public StopIcd10CMInferenceJobRequest(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

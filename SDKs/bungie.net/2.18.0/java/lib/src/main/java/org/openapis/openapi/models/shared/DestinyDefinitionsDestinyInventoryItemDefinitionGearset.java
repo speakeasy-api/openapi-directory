@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionGearset {
      */
     
     public Long[] itemList;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionGearset withItemList(Long[] itemList) {
         this.itemList = itemList;
         return this;
@@ -25,9 +26,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionGearset {
      */
     
     public Integer trackingValueMax;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionGearset withTrackingValueMax(Integer trackingValueMax) {
         this.trackingValueMax = trackingValueMax;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionGearset(){}
 }

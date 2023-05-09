@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest {
@@ -12,6 +13,7 @@ public class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdReque
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
     public Long commentId;
+
     public PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest withCommentId(Long commentId) {
         this.commentId = commentId;
         return this;
@@ -32,6 +35,7 @@ public class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_id")
     public String issueId;
+
     public PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest withIssueId(String issueId) {
         this.issueId = issueId;
         return this;
@@ -44,6 +48,7 @@ public class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -56,9 +61,17 @@ public class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("comment_id") Long commentId, @JsonProperty("issue_id") String issueId, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.requestBody = requestBody;
+        this.commentId = commentId;
+        this.issueId = issueId;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

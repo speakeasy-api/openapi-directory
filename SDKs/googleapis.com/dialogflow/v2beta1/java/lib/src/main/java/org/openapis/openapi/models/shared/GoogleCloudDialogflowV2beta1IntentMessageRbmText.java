@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rbmSuggestion")
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion[] rbmSuggestion;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmText withRbmSuggestion(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion[] rbmSuggestion) {
         this.rbmSuggestion = rbmSuggestion;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmText withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmText(){}
 }

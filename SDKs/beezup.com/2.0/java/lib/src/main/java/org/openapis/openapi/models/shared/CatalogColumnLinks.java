@@ -12,9 +12,11 @@ public class CatalogColumnLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rename")
     public LinksCatalogChangeCatalogColumnUserNameLink rename;
+
     public CatalogColumnLinks withRename(LinksCatalogChangeCatalogColumnUserNameLink rename) {
         this.rename = rename;
         return this;
     }
     
+    public CatalogColumnLinks(){}
 }

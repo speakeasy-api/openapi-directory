@@ -15,9 +15,11 @@ public class RenewOfferingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeringTransaction")
     public OfferingTransaction offeringTransaction;
+
     public RenewOfferingResult withOfferingTransaction(OfferingTransaction offeringTransaction) {
         this.offeringTransaction = offeringTransaction;
         return this;
     }
     
+    public RenewOfferingResult(){}
 }

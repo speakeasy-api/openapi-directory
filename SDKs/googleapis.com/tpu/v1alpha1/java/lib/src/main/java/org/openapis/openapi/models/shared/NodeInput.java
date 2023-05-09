@@ -18,6 +18,7 @@ public class NodeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorType")
     public String acceleratorType;
+
     public NodeInput withAcceleratorType(String acceleratorType) {
         this.acceleratorType = acceleratorType;
         return this;
@@ -29,6 +30,7 @@ public class NodeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cidrBlock")
     public String cidrBlock;
+
     public NodeInput withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -40,6 +42,7 @@ public class NodeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NodeInput withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class NodeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("health")
     public NodeHealthEnum health;
+
     public NodeInput withHealth(NodeHealthEnum health) {
         this.health = health;
         return this;
@@ -62,6 +66,7 @@ public class NodeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public NodeInput withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -73,6 +78,7 @@ public class NodeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public NodeInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,6 +90,7 @@ public class NodeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public NodeInput withNetwork(String network) {
         this.network = network;
         return this;
@@ -95,6 +102,7 @@ public class NodeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public String port;
+
     public NodeInput withPort(String port) {
         this.port = port;
         return this;
@@ -106,6 +114,7 @@ public class NodeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingConfig")
     public SchedulingConfig schedulingConfig;
+
     public NodeInput withSchedulingConfig(SchedulingConfig schedulingConfig) {
         this.schedulingConfig = schedulingConfig;
         return this;
@@ -117,6 +126,7 @@ public class NodeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tensorflowVersion")
     public String tensorflowVersion;
+
     public NodeInput withTensorflowVersion(String tensorflowVersion) {
         this.tensorflowVersion = tensorflowVersion;
         return this;
@@ -128,9 +138,11 @@ public class NodeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useServiceNetworking")
     public Boolean useServiceNetworking;
+
     public NodeInput withUseServiceNetworking(Boolean useServiceNetworking) {
         this.useServiceNetworking = useServiceNetworking;
         return this;
     }
     
+    public NodeInput(){}
 }

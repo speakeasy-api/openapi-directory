@@ -22,6 +22,7 @@ public class LogEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public LogEvent withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,9 +31,11 @@ public class LogEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public LogEvent withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public LogEvent(){}
 }

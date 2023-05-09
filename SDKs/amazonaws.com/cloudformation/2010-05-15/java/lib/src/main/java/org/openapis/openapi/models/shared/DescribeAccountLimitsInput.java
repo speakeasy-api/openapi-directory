@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeAccountLimitsInput {
     
     public String nextToken;
+
     public DescribeAccountLimitsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAccountLimitsInput(){}
 }

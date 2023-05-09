@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProjectResponse {
@@ -12,6 +13,7 @@ public class GetProjectResponse {
      */
     
     public Object accessDeniedException;
+
     public GetProjectResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetProjectResponse {
     
     
     public String contentType;
+
     public GetProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.GetProjectResponse getProjectResponse;
+
     public GetProjectResponse withGetProjectResponse(org.openapis.openapi.models.shared.GetProjectResponse getProjectResponse) {
         this.getProjectResponse = getProjectResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetProjectResponse {
     
     
     public Integer statusCode;
+
     public GetProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class GetProjectResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetProjectResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class GetProjectResponse {
      */
     
     public Object throttlingException;
+
     public GetProjectResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetProjectResponse {
      */
     
     public Object validationException;
+
     public GetProjectResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

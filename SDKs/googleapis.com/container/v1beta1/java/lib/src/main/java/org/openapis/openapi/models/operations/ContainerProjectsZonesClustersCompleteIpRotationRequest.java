@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContainerProjectsZonesClustersCompleteIpRotationRequest {
@@ -12,6 +13,7 @@ public class ContainerProjectsZonesClustersCompleteIpRotationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ContainerProjectsZonesClustersCompleteIpRotationRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ContainerProjectsZonesClustersCompleteIpRotationRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CompleteIPRotationRequest completeIPRotationRequest;
+
     public ContainerProjectsZonesClustersCompleteIpRotationRequest withCompleteIPRotationRequest(org.openapis.openapi.models.shared.CompleteIPRotationRequest completeIPRotationRequest) {
         this.completeIPRotationRequest = completeIPRotationRequest;
         return this;
@@ -29,6 +32,7 @@ public class ContainerProjectsZonesClustersCompleteIpRotationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ContainerProjectsZonesClustersCompleteIpRotationRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ContainerProjectsZonesClustersCompleteIpRotationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ContainerProjectsZonesClustersCompleteIpRotationRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ContainerProjectsZonesClustersCompleteIpRotationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ContainerProjectsZonesClustersCompleteIpRotationRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ContainerProjectsZonesClustersCompleteIpRotationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clusterId")
     public String clusterId;
+
     public ContainerProjectsZonesClustersCompleteIpRotationRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -69,6 +76,7 @@ public class ContainerProjectsZonesClustersCompleteIpRotationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ContainerProjectsZonesClustersCompleteIpRotationRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class ContainerProjectsZonesClustersCompleteIpRotationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ContainerProjectsZonesClustersCompleteIpRotationRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class ContainerProjectsZonesClustersCompleteIpRotationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ContainerProjectsZonesClustersCompleteIpRotationRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class ContainerProjectsZonesClustersCompleteIpRotationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ContainerProjectsZonesClustersCompleteIpRotationRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class ContainerProjectsZonesClustersCompleteIpRotationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public ContainerProjectsZonesClustersCompleteIpRotationRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -119,6 +131,7 @@ public class ContainerProjectsZonesClustersCompleteIpRotationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ContainerProjectsZonesClustersCompleteIpRotationRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class ContainerProjectsZonesClustersCompleteIpRotationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ContainerProjectsZonesClustersCompleteIpRotationRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,6 +153,7 @@ public class ContainerProjectsZonesClustersCompleteIpRotationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ContainerProjectsZonesClustersCompleteIpRotationRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -149,9 +164,15 @@ public class ContainerProjectsZonesClustersCompleteIpRotationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
     public String zone;
+
     public ContainerProjectsZonesClustersCompleteIpRotationRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ContainerProjectsZonesClustersCompleteIpRotationRequest(@JsonProperty("clusterId") String clusterId, @JsonProperty("projectId") String projectId, @JsonProperty("zone") String zone) {
+        this.clusterId = clusterId;
+        this.projectId = projectId;
+        this.zone = zone;
+  }
 }

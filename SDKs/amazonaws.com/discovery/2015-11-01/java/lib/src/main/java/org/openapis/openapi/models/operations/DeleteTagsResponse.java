@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTagsResponse {
@@ -12,6 +13,7 @@ public class DeleteTagsResponse {
      */
     
     public Object authorizationErrorException;
+
     public DeleteTagsResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTagsResponse {
     
     
     public String contentType;
+
     public DeleteTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTagsResponse {
      */
     
     public java.util.Map<String, Object> deleteTagsResponse;
+
     public DeleteTagsResponse withDeleteTagsResponse(java.util.Map<String, Object> deleteTagsResponse) {
         this.deleteTagsResponse = deleteTagsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTagsResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public DeleteTagsResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTagsResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteTagsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteTagsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteTagsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteTagsResponse {
     
     
     public Integer statusCode;
+
     public DeleteTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteTagsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteTagsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteTagsResponse {
      */
     
     public Object serverInternalErrorException;
+
     public DeleteTagsResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
     }
     
+    public DeleteTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

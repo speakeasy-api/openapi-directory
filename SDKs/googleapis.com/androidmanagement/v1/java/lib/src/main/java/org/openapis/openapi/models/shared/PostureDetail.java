@@ -18,6 +18,7 @@ public class PostureDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advice")
     public UserFacingMessage[] advice;
+
     public PostureDetail withAdvice(UserFacingMessage[] advice) {
         this.advice = advice;
         return this;
@@ -29,9 +30,11 @@ public class PostureDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityRisk")
     public PostureDetailSecurityRiskEnum securityRisk;
+
     public PostureDetail withSecurityRisk(PostureDetailSecurityRiskEnum securityRisk) {
         this.securityRisk = securityRisk;
         return this;
     }
     
+    public PostureDetail(){}
 }

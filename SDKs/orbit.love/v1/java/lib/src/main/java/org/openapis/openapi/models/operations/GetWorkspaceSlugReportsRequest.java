@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceSlugReportsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activity_type")
     public String activityType;
+
     public GetWorkspaceSlugReportsRequest withActivityType(String activityType) {
         this.activityType = activityType;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkspaceSlugReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public String endDate;
+
     public GetWorkspaceSlugReportsRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -26,6 +29,7 @@ public class GetWorkspaceSlugReportsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=properties")
     public String properties;
+
     public GetWorkspaceSlugReportsRequest withProperties(String properties) {
         this.properties = properties;
         return this;
@@ -36,6 +40,7 @@ public class GetWorkspaceSlugReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relative")
     public String relative;
+
     public GetWorkspaceSlugReportsRequest withRelative(String relative) {
         this.relative = relative;
         return this;
@@ -46,6 +51,7 @@ public class GetWorkspaceSlugReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public String startDate;
+
     public GetWorkspaceSlugReportsRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -53,9 +59,13 @@ public class GetWorkspaceSlugReportsRequest {
     
     /**
      * Deprecated in favor of the activity_type parameter.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    @Deprecated
     public String type;
+
+    @Deprecated
     public GetWorkspaceSlugReportsRequest withType(String type) {
         this.type = type;
         return this;
@@ -63,9 +73,13 @@ public class GetWorkspaceSlugReportsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
     public String workspaceSlug;
+
     public GetWorkspaceSlugReportsRequest withWorkspaceSlug(String workspaceSlug) {
         this.workspaceSlug = workspaceSlug;
         return this;
     }
     
+    public GetWorkspaceSlugReportsRequest(@JsonProperty("workspace_slug") String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
+  }
 }

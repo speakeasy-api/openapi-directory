@@ -15,6 +15,7 @@ public class ListExplainabilitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Explainabilities")
     public ExplainabilitySummary[] explainabilities;
+
     public ListExplainabilitiesResponse withExplainabilities(ExplainabilitySummary[] explainabilities) {
         this.explainabilities = explainabilities;
         return this;
@@ -23,9 +24,11 @@ public class ListExplainabilitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListExplainabilitiesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListExplainabilitiesResponse(){}
 }

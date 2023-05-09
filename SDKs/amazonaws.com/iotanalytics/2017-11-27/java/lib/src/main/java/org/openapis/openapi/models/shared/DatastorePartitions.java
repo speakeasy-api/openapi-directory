@@ -15,9 +15,11 @@ public class DatastorePartitions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitions")
     public DatastorePartition[] partitions;
+
     public DatastorePartitions withPartitions(DatastorePartition[] partitions) {
         this.partitions = partitions;
         return this;
     }
     
+    public DatastorePartitions(){}
 }

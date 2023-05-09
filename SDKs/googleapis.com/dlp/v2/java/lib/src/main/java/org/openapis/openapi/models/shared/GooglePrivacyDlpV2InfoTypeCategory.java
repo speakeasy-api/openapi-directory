@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2InfoTypeCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("industryCategory")
     public GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum industryCategory;
+
     public GooglePrivacyDlpV2InfoTypeCategory withIndustryCategory(GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum industryCategory) {
         this.industryCategory = industryCategory;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2InfoTypeCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationCategory")
     public GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum locationCategory;
+
     public GooglePrivacyDlpV2InfoTypeCategory withLocationCategory(GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum locationCategory) {
         this.locationCategory = locationCategory;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2InfoTypeCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeCategory")
     public GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum typeCategory;
+
     public GooglePrivacyDlpV2InfoTypeCategory withTypeCategory(GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum typeCategory) {
         this.typeCategory = typeCategory;
         return this;
     }
     
+    public GooglePrivacyDlpV2InfoTypeCategory(){}
 }

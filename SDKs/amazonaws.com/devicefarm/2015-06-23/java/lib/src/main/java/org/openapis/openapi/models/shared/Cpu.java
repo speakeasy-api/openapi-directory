@@ -15,6 +15,7 @@ public class Cpu {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public String architecture;
+
     public Cpu withArchitecture(String architecture) {
         this.architecture = architecture;
         return this;
@@ -23,6 +24,7 @@ public class Cpu {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clock")
     public Double clock;
+
     public Cpu withClock(Double clock) {
         this.clock = clock;
         return this;
@@ -31,9 +33,11 @@ public class Cpu {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     public String frequency;
+
     public Cpu withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
     }
     
+    public Cpu(){}
 }

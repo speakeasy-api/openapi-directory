@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedResponse {
     
     public String contentType;
+
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRes
     
     
     public Integer statusCode;
+
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRes
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRes
      */
     
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased200ApplicationJSON postPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased200ApplicationJSONObject;
+
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedResponse withPostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased200ApplicationJSONObject(PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased200ApplicationJSON postPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased200ApplicationJSONObject) {
         this.postPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased200ApplicationJSONObject = postPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased200ApplicationJSONObject;
         return this;
     }
     
+    public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

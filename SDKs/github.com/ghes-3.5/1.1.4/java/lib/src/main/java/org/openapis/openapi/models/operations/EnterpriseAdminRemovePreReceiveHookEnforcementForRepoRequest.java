@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminRemovePreReceiveHookEnforcementForRepoRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminRemovePreReceiveHookEnforcementForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public EnterpriseAdminRemovePreReceiveHookEnforcementForRepoRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class EnterpriseAdminRemovePreReceiveHookEnforcementForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pre_receive_hook_id")
     public Long preReceiveHookId;
+
     public EnterpriseAdminRemovePreReceiveHookEnforcementForRepoRequest withPreReceiveHookId(Long preReceiveHookId) {
         this.preReceiveHookId = preReceiveHookId;
         return this;
@@ -32,9 +35,15 @@ public class EnterpriseAdminRemovePreReceiveHookEnforcementForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public EnterpriseAdminRemovePreReceiveHookEnforcementForRepoRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public EnterpriseAdminRemovePreReceiveHookEnforcementForRepoRequest(@JsonProperty("owner") String owner, @JsonProperty("pre_receive_hook_id") Long preReceiveHookId, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.preReceiveHookId = preReceiveHookId;
+        this.repo = repo;
+  }
 }

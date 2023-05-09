@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopCrawlerScheduleResponse {
     
     public String contentType;
+
     public StopCrawlerScheduleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopCrawlerScheduleResponse {
      */
     
     public Object entityNotFoundException;
+
     public StopCrawlerScheduleResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class StopCrawlerScheduleResponse {
      */
     
     public Object operationTimeoutException;
+
     public StopCrawlerScheduleResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class StopCrawlerScheduleResponse {
      */
     
     public Object schedulerNotRunningException;
+
     public StopCrawlerScheduleResponse withSchedulerNotRunningException(Object schedulerNotRunningException) {
         this.schedulerNotRunningException = schedulerNotRunningException;
         return this;
@@ -49,6 +54,7 @@ public class StopCrawlerScheduleResponse {
      */
     
     public Object schedulerTransitioningException;
+
     public StopCrawlerScheduleResponse withSchedulerTransitioningException(Object schedulerTransitioningException) {
         this.schedulerTransitioningException = schedulerTransitioningException;
         return this;
@@ -56,6 +62,7 @@ public class StopCrawlerScheduleResponse {
     
     
     public Integer statusCode;
+
     public StopCrawlerScheduleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StopCrawlerScheduleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopCrawlerScheduleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class StopCrawlerScheduleResponse {
      */
     
     public java.util.Map<String, Object> stopCrawlerScheduleResponse;
+
     public StopCrawlerScheduleResponse withStopCrawlerScheduleResponse(java.util.Map<String, Object> stopCrawlerScheduleResponse) {
         this.stopCrawlerScheduleResponse = stopCrawlerScheduleResponse;
         return this;
     }
     
+    public StopCrawlerScheduleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

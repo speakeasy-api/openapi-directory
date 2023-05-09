@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLayoutsResponse {
@@ -12,6 +13,7 @@ public class ListLayoutsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListLayoutsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListLayoutsResponse {
     
     
     public String contentType;
+
     public ListLayoutsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListLayoutsResponse {
      */
     
     public Object internalServerException;
+
     public ListLayoutsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListLayoutsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLayoutsResponse listLayoutsResponse;
+
     public ListLayoutsResponse withListLayoutsResponse(org.openapis.openapi.models.shared.ListLayoutsResponse listLayoutsResponse) {
         this.listLayoutsResponse = listLayoutsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListLayoutsResponse {
     
     
     public Integer statusCode;
+
     public ListLayoutsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListLayoutsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLayoutsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListLayoutsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListLayoutsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListLayoutsResponse {
      */
     
     public Object throttlingException;
+
     public ListLayoutsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListLayoutsResponse {
      */
     
     public Object validationException;
+
     public ListLayoutsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListLayoutsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

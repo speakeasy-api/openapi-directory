@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataEncryptionMetadata {
     @JsonProperty("allowCleartext")
     public Boolean allowCleartext;
+
     public DataEncryptionMetadata withAllowCleartext(Boolean allowCleartext) {
         this.allowCleartext = allowCleartext;
         return this;
@@ -19,6 +20,7 @@ public class DataEncryptionMetadata {
     
     @JsonProperty("allowDuplicates")
     public Boolean allowDuplicates;
+
     public DataEncryptionMetadata withAllowDuplicates(Boolean allowDuplicates) {
         this.allowDuplicates = allowDuplicates;
         return this;
@@ -26,6 +28,7 @@ public class DataEncryptionMetadata {
     
     @JsonProperty("allowJoinsOnColumnsWithDifferentNames")
     public Boolean allowJoinsOnColumnsWithDifferentNames;
+
     public DataEncryptionMetadata withAllowJoinsOnColumnsWithDifferentNames(Boolean allowJoinsOnColumnsWithDifferentNames) {
         this.allowJoinsOnColumnsWithDifferentNames = allowJoinsOnColumnsWithDifferentNames;
         return this;
@@ -33,9 +36,16 @@ public class DataEncryptionMetadata {
     
     @JsonProperty("preserveNulls")
     public Boolean preserveNulls;
+
     public DataEncryptionMetadata withPreserveNulls(Boolean preserveNulls) {
         this.preserveNulls = preserveNulls;
         return this;
     }
     
+    public DataEncryptionMetadata(@JsonProperty("allowCleartext") Boolean allowCleartext, @JsonProperty("allowDuplicates") Boolean allowDuplicates, @JsonProperty("allowJoinsOnColumnsWithDifferentNames") Boolean allowJoinsOnColumnsWithDifferentNames, @JsonProperty("preserveNulls") Boolean preserveNulls) {
+        this.allowCleartext = allowCleartext;
+        this.allowDuplicates = allowDuplicates;
+        this.allowJoinsOnColumnsWithDifferentNames = allowJoinsOnColumnsWithDifferentNames;
+        this.preserveNulls = preserveNulls;
+  }
 }

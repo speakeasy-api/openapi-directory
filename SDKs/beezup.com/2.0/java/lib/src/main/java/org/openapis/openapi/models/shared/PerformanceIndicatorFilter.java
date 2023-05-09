@@ -12,6 +12,7 @@ public class PerformanceIndicatorFilter {
      */
     @JsonProperty("operatorName")
     public String operatorName;
+
     public PerformanceIndicatorFilter withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
@@ -22,6 +23,7 @@ public class PerformanceIndicatorFilter {
      */
     @JsonProperty("performanceIndicator")
     public PerformanceIndicatorTypeEnum performanceIndicator;
+
     public PerformanceIndicatorFilter withPerformanceIndicator(PerformanceIndicatorTypeEnum performanceIndicator) {
         this.performanceIndicator = performanceIndicator;
         return this;
@@ -32,9 +34,15 @@ public class PerformanceIndicatorFilter {
      */
     @JsonProperty("value")
     public Double value;
+
     public PerformanceIndicatorFilter withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public PerformanceIndicatorFilter(@JsonProperty("operatorName") String operatorName, @JsonProperty("performanceIndicator") PerformanceIndicatorTypeEnum performanceIndicator, @JsonProperty("value") Double value) {
+        this.operatorName = operatorName;
+        this.performanceIndicator = performanceIndicator;
+        this.value = value;
+  }
 }

@@ -15,6 +15,7 @@ public class ApplicationConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationCodeConfigurationDescription")
     public ApplicationCodeConfigurationDescription applicationCodeConfigurationDescription;
+
     public ApplicationConfigurationDescription withApplicationCodeConfigurationDescription(ApplicationCodeConfigurationDescription applicationCodeConfigurationDescription) {
         this.applicationCodeConfigurationDescription = applicationCodeConfigurationDescription;
         return this;
@@ -23,6 +24,7 @@ public class ApplicationConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationSnapshotConfigurationDescription")
     public ApplicationSnapshotConfigurationDescription applicationSnapshotConfigurationDescription;
+
     public ApplicationConfigurationDescription withApplicationSnapshotConfigurationDescription(ApplicationSnapshotConfigurationDescription applicationSnapshotConfigurationDescription) {
         this.applicationSnapshotConfigurationDescription = applicationSnapshotConfigurationDescription;
         return this;
@@ -31,6 +33,7 @@ public class ApplicationConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnvironmentPropertyDescriptions")
     public EnvironmentPropertyDescriptions environmentPropertyDescriptions;
+
     public ApplicationConfigurationDescription withEnvironmentPropertyDescriptions(EnvironmentPropertyDescriptions environmentPropertyDescriptions) {
         this.environmentPropertyDescriptions = environmentPropertyDescriptions;
         return this;
@@ -39,6 +42,7 @@ public class ApplicationConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlinkApplicationConfigurationDescription")
     public FlinkApplicationConfigurationDescription flinkApplicationConfigurationDescription;
+
     public ApplicationConfigurationDescription withFlinkApplicationConfigurationDescription(FlinkApplicationConfigurationDescription flinkApplicationConfigurationDescription) {
         this.flinkApplicationConfigurationDescription = flinkApplicationConfigurationDescription;
         return this;
@@ -47,6 +51,7 @@ public class ApplicationConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunConfigurationDescription")
     public RunConfigurationDescription runConfigurationDescription;
+
     public ApplicationConfigurationDescription withRunConfigurationDescription(RunConfigurationDescription runConfigurationDescription) {
         this.runConfigurationDescription = runConfigurationDescription;
         return this;
@@ -55,6 +60,7 @@ public class ApplicationConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SqlApplicationConfigurationDescription")
     public SqlApplicationConfigurationDescription sqlApplicationConfigurationDescription;
+
     public ApplicationConfigurationDescription withSqlApplicationConfigurationDescription(SqlApplicationConfigurationDescription sqlApplicationConfigurationDescription) {
         this.sqlApplicationConfigurationDescription = sqlApplicationConfigurationDescription;
         return this;
@@ -63,6 +69,7 @@ public class ApplicationConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfigurationDescriptions")
     public VpcConfigurationDescription[] vpcConfigurationDescriptions;
+
     public ApplicationConfigurationDescription withVpcConfigurationDescriptions(VpcConfigurationDescription[] vpcConfigurationDescriptions) {
         this.vpcConfigurationDescriptions = vpcConfigurationDescriptions;
         return this;
@@ -71,9 +78,11 @@ public class ApplicationConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZeppelinApplicationConfigurationDescription")
     public ZeppelinApplicationConfigurationDescription zeppelinApplicationConfigurationDescription;
+
     public ApplicationConfigurationDescription withZeppelinApplicationConfigurationDescription(ZeppelinApplicationConfigurationDescription zeppelinApplicationConfigurationDescription) {
         this.zeppelinApplicationConfigurationDescription = zeppelinApplicationConfigurationDescription;
         return this;
     }
     
+    public ApplicationConfigurationDescription(){}
 }

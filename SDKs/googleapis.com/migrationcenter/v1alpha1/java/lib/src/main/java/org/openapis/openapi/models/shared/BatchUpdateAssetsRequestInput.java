@@ -18,9 +18,11 @@ public class BatchUpdateAssetsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public UpdateAssetRequestInput[] requests;
+
     public BatchUpdateAssetsRequestInput withRequests(UpdateAssetRequestInput[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public BatchUpdateAssetsRequestInput(){}
 }

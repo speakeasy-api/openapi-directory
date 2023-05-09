@@ -12,6 +12,7 @@ public class ListReplaysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSourceArn")
     public String eventSourceArn;
+
     public ListReplaysRequest withEventSourceArn(String eventSourceArn) {
         this.eventSourceArn = eventSourceArn;
         return this;
@@ -20,6 +21,7 @@ public class ListReplaysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListReplaysRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -28,6 +30,7 @@ public class ListReplaysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NamePrefix")
     public String namePrefix;
+
     public ListReplaysRequest withNamePrefix(String namePrefix) {
         this.namePrefix = namePrefix;
         return this;
@@ -36,6 +39,7 @@ public class ListReplaysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListReplaysRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,9 +48,11 @@ public class ListReplaysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ReplayStateEnum state;
+
     public ListReplaysRequest withState(ReplayStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ListReplaysRequest(){}
 }

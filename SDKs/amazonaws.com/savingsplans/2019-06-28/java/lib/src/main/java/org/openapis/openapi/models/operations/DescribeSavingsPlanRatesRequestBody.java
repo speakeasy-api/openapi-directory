@@ -15,6 +15,7 @@ public class DescribeSavingsPlanRatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.SavingsPlanRateFilter[] filters;
+
     public DescribeSavingsPlanRatesRequestBody withFilters(org.openapis.openapi.models.shared.SavingsPlanRateFilter[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class DescribeSavingsPlanRatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeSavingsPlanRatesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class DescribeSavingsPlanRatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeSavingsPlanRatesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -47,9 +50,13 @@ public class DescribeSavingsPlanRatesRequestBody {
      */
     @JsonProperty("savingsPlanId")
     public String savingsPlanId;
+
     public DescribeSavingsPlanRatesRequestBody withSavingsPlanId(String savingsPlanId) {
         this.savingsPlanId = savingsPlanId;
         return this;
     }
     
+    public DescribeSavingsPlanRatesRequestBody(@JsonProperty("savingsPlanId") String savingsPlanId) {
+        this.savingsPlanId = savingsPlanId;
+  }
 }

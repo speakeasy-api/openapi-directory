@@ -22,6 +22,7 @@ public class ControlOperation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public ControlOperation withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -30,6 +31,7 @@ public class ControlOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationType")
     public ControlOperationTypeEnum operationType;
+
     public ControlOperation withOperationType(ControlOperationTypeEnum operationType) {
         this.operationType = operationType;
         return this;
@@ -40,6 +42,7 @@ public class ControlOperation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ControlOperation withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -48,6 +51,7 @@ public class ControlOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ControlOperationStatusEnum status;
+
     public ControlOperation withStatus(ControlOperationStatusEnum status) {
         this.status = status;
         return this;
@@ -56,9 +60,11 @@ public class ControlOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public ControlOperation withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public ControlOperation(){}
 }

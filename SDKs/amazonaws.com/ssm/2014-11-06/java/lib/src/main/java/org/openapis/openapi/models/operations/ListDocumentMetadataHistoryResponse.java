@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDocumentMetadataHistoryResponse {
     
     public String contentType;
+
     public ListDocumentMetadataHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDocumentMetadataHistoryResponse {
      */
     
     public Object internalServerError;
+
     public ListDocumentMetadataHistoryResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ListDocumentMetadataHistoryResponse {
      */
     
     public Object invalidDocument;
+
     public ListDocumentMetadataHistoryResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -39,6 +43,7 @@ public class ListDocumentMetadataHistoryResponse {
      */
     
     public Object invalidDocumentVersion;
+
     public ListDocumentMetadataHistoryResponse withInvalidDocumentVersion(Object invalidDocumentVersion) {
         this.invalidDocumentVersion = invalidDocumentVersion;
         return this;
@@ -49,6 +54,7 @@ public class ListDocumentMetadataHistoryResponse {
      */
     
     public Object invalidNextToken;
+
     public ListDocumentMetadataHistoryResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -59,6 +65,7 @@ public class ListDocumentMetadataHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDocumentMetadataHistoryResponse listDocumentMetadataHistoryResponse;
+
     public ListDocumentMetadataHistoryResponse withListDocumentMetadataHistoryResponse(org.openapis.openapi.models.shared.ListDocumentMetadataHistoryResponse listDocumentMetadataHistoryResponse) {
         this.listDocumentMetadataHistoryResponse = listDocumentMetadataHistoryResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListDocumentMetadataHistoryResponse {
     
     
     public Integer statusCode;
+
     public ListDocumentMetadataHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListDocumentMetadataHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDocumentMetadataHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDocumentMetadataHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

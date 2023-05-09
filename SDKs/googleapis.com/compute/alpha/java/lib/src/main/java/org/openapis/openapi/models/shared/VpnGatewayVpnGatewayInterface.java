@@ -18,6 +18,7 @@ public class VpnGatewayVpnGatewayInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public VpnGatewayVpnGatewayInterface withId(Long id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class VpnGatewayVpnGatewayInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interconnectAttachment")
     public String interconnectAttachment;
+
     public VpnGatewayVpnGatewayInterface withInterconnectAttachment(String interconnectAttachment) {
         this.interconnectAttachment = interconnectAttachment;
         return this;
@@ -40,6 +42,7 @@ public class VpnGatewayVpnGatewayInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public VpnGatewayVpnGatewayInterface withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -51,9 +54,11 @@ public class VpnGatewayVpnGatewayInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6Address")
     public String ipv6Address;
+
     public VpnGatewayVpnGatewayInterface withIpv6Address(String ipv6Address) {
         this.ipv6Address = ipv6Address;
         return this;
     }
     
+    public VpnGatewayVpnGatewayInterface(){}
 }

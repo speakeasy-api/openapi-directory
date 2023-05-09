@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLibraryRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
     public Boolean all;
+
     public GetLibraryRequest withAll(Boolean all) {
         this.all = all;
         return this;
@@ -16,6 +18,7 @@ public class GetLibraryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=eventLogUuid")
     public String eventLogUuid;
+
     public GetLibraryRequest withEventLogUuid(String eventLogUuid) {
         this.eventLogUuid = eventLogUuid;
         return this;
@@ -23,6 +26,7 @@ public class GetLibraryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetLibraryRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -30,6 +34,7 @@ public class GetLibraryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetLibraryRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -37,9 +42,13 @@ public class GetLibraryRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
     public String organizationUuid;
+
     public GetLibraryRequest withOrganizationUuid(String organizationUuid) {
         this.organizationUuid = organizationUuid;
         return this;
     }
     
+    public GetLibraryRequest(@JsonProperty("organizationUuid") String organizationUuid) {
+        this.organizationUuid = organizationUuid;
+  }
 }

@@ -15,6 +15,7 @@ public class ListDatabasesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Databases")
     public DatabaseSummary[] databases;
+
     public ListDatabasesOutput withDatabases(DatabaseSummary[] databases) {
         this.databases = databases;
         return this;
@@ -23,9 +24,11 @@ public class ListDatabasesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDatabasesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDatabasesOutput(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopGUISessionRequest {
     @JsonProperty("resourceName")
     public String resourceName;
+
     public StopGUISessionRequest withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public StopGUISessionRequest(@JsonProperty("resourceName") String resourceName) {
+        this.resourceName = resourceName;
+  }
 }

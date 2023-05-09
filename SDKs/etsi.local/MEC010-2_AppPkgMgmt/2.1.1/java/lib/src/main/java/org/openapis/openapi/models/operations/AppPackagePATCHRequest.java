@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppPackagePATCHRequest {
@@ -12,6 +13,7 @@ public class AppPackagePATCHRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AppPkgInfoModifications appPkgInfoModifications;
+
     public AppPackagePATCHRequest withAppPkgInfoModifications(org.openapis.openapi.models.shared.AppPkgInfoModifications appPkgInfoModifications) {
         this.appPkgInfoModifications = appPkgInfoModifications;
         return this;
@@ -22,9 +24,14 @@ public class AppPackagePATCHRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appPkgId")
     public String appPkgId;
+
     public AppPackagePATCHRequest withAppPkgId(String appPkgId) {
         this.appPkgId = appPkgId;
         return this;
     }
     
+    public AppPackagePATCHRequest(@JsonProperty("AppPkgInfoModifications") org.openapis.openapi.models.shared.AppPkgInfoModifications appPkgInfoModifications, @JsonProperty("appPkgId") String appPkgId) {
+        this.appPkgInfoModifications = appPkgInfoModifications;
+        this.appPkgId = appPkgId;
+  }
 }

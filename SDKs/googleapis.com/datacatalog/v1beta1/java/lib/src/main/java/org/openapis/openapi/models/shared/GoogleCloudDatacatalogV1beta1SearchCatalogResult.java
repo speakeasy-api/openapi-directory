@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1beta1SearchCatalogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedResource")
     public String linkedResource;
+
     public GoogleCloudDatacatalogV1beta1SearchCatalogResult withLinkedResource(String linkedResource) {
         this.linkedResource = linkedResource;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1beta1SearchCatalogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifyTime")
     public String modifyTime;
+
     public GoogleCloudDatacatalogV1beta1SearchCatalogResult withModifyTime(String modifyTime) {
         this.modifyTime = modifyTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1beta1SearchCatalogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativeResourceName")
     public String relativeResourceName;
+
     public GoogleCloudDatacatalogV1beta1SearchCatalogResult withRelativeResourceName(String relativeResourceName) {
         this.relativeResourceName = relativeResourceName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogV1beta1SearchCatalogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchResultSubtype")
     public String searchResultSubtype;
+
     public GoogleCloudDatacatalogV1beta1SearchCatalogResult withSearchResultSubtype(String searchResultSubtype) {
         this.searchResultSubtype = searchResultSubtype;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDatacatalogV1beta1SearchCatalogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchResultType")
     public GoogleCloudDatacatalogV1beta1SearchCatalogResultSearchResultTypeEnum searchResultType;
+
     public GoogleCloudDatacatalogV1beta1SearchCatalogResult withSearchResultType(GoogleCloudDatacatalogV1beta1SearchCatalogResultSearchResultTypeEnum searchResultType) {
         this.searchResultType = searchResultType;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1SearchCatalogResult(){}
 }

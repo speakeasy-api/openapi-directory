@@ -22,6 +22,7 @@ public class NotebookInstanceLifecycleConfigSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public NotebookInstanceLifecycleConfigSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -32,6 +33,7 @@ public class NotebookInstanceLifecycleConfigSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public NotebookInstanceLifecycleConfigSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -39,6 +41,7 @@ public class NotebookInstanceLifecycleConfigSummary {
     
     @JsonProperty("NotebookInstanceLifecycleConfigArn")
     public String notebookInstanceLifecycleConfigArn;
+
     public NotebookInstanceLifecycleConfigSummary withNotebookInstanceLifecycleConfigArn(String notebookInstanceLifecycleConfigArn) {
         this.notebookInstanceLifecycleConfigArn = notebookInstanceLifecycleConfigArn;
         return this;
@@ -46,9 +49,14 @@ public class NotebookInstanceLifecycleConfigSummary {
     
     @JsonProperty("NotebookInstanceLifecycleConfigName")
     public String notebookInstanceLifecycleConfigName;
+
     public NotebookInstanceLifecycleConfigSummary withNotebookInstanceLifecycleConfigName(String notebookInstanceLifecycleConfigName) {
         this.notebookInstanceLifecycleConfigName = notebookInstanceLifecycleConfigName;
         return this;
     }
     
+    public NotebookInstanceLifecycleConfigSummary(@JsonProperty("NotebookInstanceLifecycleConfigArn") String notebookInstanceLifecycleConfigArn, @JsonProperty("NotebookInstanceLifecycleConfigName") String notebookInstanceLifecycleConfigName) {
+        this.notebookInstanceLifecycleConfigArn = notebookInstanceLifecycleConfigArn;
+        this.notebookInstanceLifecycleConfigName = notebookInstanceLifecycleConfigName;
+  }
 }

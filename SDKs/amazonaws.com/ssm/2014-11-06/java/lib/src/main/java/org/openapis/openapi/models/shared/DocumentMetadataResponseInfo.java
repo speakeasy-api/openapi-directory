@@ -15,9 +15,11 @@ public class DocumentMetadataResponseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReviewerResponse")
     public DocumentReviewerResponseSource[] reviewerResponse;
+
     public DocumentMetadataResponseInfo withReviewerResponse(DocumentReviewerResponseSource[] reviewerResponse) {
         this.reviewerResponse = reviewerResponse;
         return this;
     }
     
+    public DocumentMetadataResponseInfo(){}
 }

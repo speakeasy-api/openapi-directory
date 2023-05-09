@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeploymentmanagerManifestsGetResponse {
     
     public String contentType;
+
     public DeploymentmanagerManifestsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeploymentmanagerManifestsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Manifest manifest;
+
     public DeploymentmanagerManifestsGetResponse withManifest(org.openapis.openapi.models.shared.Manifest manifest) {
         this.manifest = manifest;
         return this;
@@ -26,6 +29,7 @@ public class DeploymentmanagerManifestsGetResponse {
     
     
     public Integer statusCode;
+
     public DeploymentmanagerManifestsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeploymentmanagerManifestsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeploymentmanagerManifestsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeploymentmanagerManifestsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

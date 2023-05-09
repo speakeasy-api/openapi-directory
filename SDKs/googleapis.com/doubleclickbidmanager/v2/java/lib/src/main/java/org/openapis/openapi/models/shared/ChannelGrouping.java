@@ -18,6 +18,7 @@ public class ChannelGrouping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fallbackName")
     public String fallbackName;
+
     public ChannelGrouping withFallbackName(String fallbackName) {
         this.fallbackName = fallbackName;
         return this;
@@ -29,6 +30,7 @@ public class ChannelGrouping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ChannelGrouping withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class ChannelGrouping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public Rule[] rules;
+
     public ChannelGrouping withRules(Rule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public ChannelGrouping(){}
 }

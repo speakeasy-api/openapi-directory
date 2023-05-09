@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProtocolSnmptcpGetConfigResponse {
@@ -12,6 +13,7 @@ public class ProtocolSnmptcpGetConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfigSNMPTCP configSNMPTCP;
+
     public ProtocolSnmptcpGetConfigResponse withConfigSNMPTCP(org.openapis.openapi.models.shared.ConfigSNMPTCP configSNMPTCP) {
         this.configSNMPTCP = configSNMPTCP;
         return this;
@@ -19,6 +21,7 @@ public class ProtocolSnmptcpGetConfigResponse {
     
     
     public String contentType;
+
     public ProtocolSnmptcpGetConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ProtocolSnmptcpGetConfigResponse {
     
     
     public Integer statusCode;
+
     public ProtocolSnmptcpGetConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ProtocolSnmptcpGetConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProtocolSnmptcpGetConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProtocolSnmptcpGetConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

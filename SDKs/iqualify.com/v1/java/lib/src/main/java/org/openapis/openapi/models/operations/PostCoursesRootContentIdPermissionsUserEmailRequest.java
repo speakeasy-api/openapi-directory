@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCoursesRootContentIdPermissionsUserEmailRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostCoursesRootContentIdPermissionsUserEmailPermissionToBeGrantedToTheUser requestBody;
+
     public PostCoursesRootContentIdPermissionsUserEmailRequest withRequestBody(PostCoursesRootContentIdPermissionsUserEmailPermissionToBeGrantedToTheUser requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PostCoursesRootContentIdPermissionsUserEmailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rootContentId")
     public String rootContentId;
+
     public PostCoursesRootContentIdPermissionsUserEmailRequest withRootContentId(String rootContentId) {
         this.rootContentId = rootContentId;
         return this;
@@ -29,9 +32,15 @@ public class PostCoursesRootContentIdPermissionsUserEmailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
     public String userEmail;
+
     public PostCoursesRootContentIdPermissionsUserEmailRequest withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public PostCoursesRootContentIdPermissionsUserEmailRequest(@JsonProperty("RequestBody") PostCoursesRootContentIdPermissionsUserEmailPermissionToBeGrantedToTheUser requestBody, @JsonProperty("rootContentId") String rootContentId, @JsonProperty("userEmail") String userEmail) {
+        this.requestBody = requestBody;
+        this.rootContentId = rootContentId;
+        this.userEmail = userEmail;
+  }
 }

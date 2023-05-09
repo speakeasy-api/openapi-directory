@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ExportTasksList {
     
     public String[] exportOnly;
+
     public ExportTasksList withExportOnly(String[] exportOnly) {
         this.exportOnly = exportOnly;
         return this;
@@ -19,6 +20,7 @@ public class ExportTasksList {
     
     
     public String exportTaskIdentifier;
+
     public ExportTasksList withExportTaskIdentifier(String exportTaskIdentifier) {
         this.exportTaskIdentifier = exportTaskIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class ExportTasksList {
     
     
     public String failureCause;
+
     public ExportTasksList withFailureCause(String failureCause) {
         this.failureCause = failureCause;
         return this;
@@ -33,6 +36,7 @@ public class ExportTasksList {
     
     
     public String iamRoleArn;
+
     public ExportTasksList withIamRoleArn(String iamRoleArn) {
         this.iamRoleArn = iamRoleArn;
         return this;
@@ -40,6 +44,7 @@ public class ExportTasksList {
     
     
     public String kmsKeyId;
+
     public ExportTasksList withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -47,6 +52,7 @@ public class ExportTasksList {
     
     
     public Long percentProgress;
+
     public ExportTasksList withPercentProgress(Long percentProgress) {
         this.percentProgress = percentProgress;
         return this;
@@ -54,6 +60,7 @@ public class ExportTasksList {
     
     
     public String s3Bucket;
+
     public ExportTasksList withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -61,6 +68,7 @@ public class ExportTasksList {
     
     
     public String s3Prefix;
+
     public ExportTasksList withS3Prefix(String s3Prefix) {
         this.s3Prefix = s3Prefix;
         return this;
@@ -68,6 +76,7 @@ public class ExportTasksList {
     
     
     public OffsetDateTime snapshotTime;
+
     public ExportTasksList withSnapshotTime(OffsetDateTime snapshotTime) {
         this.snapshotTime = snapshotTime;
         return this;
@@ -75,6 +84,7 @@ public class ExportTasksList {
     
     
     public String sourceArn;
+
     public ExportTasksList withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -82,6 +92,7 @@ public class ExportTasksList {
     
     
     public ExportSourceTypeEnum sourceType;
+
     public ExportTasksList withSourceType(ExportSourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -89,6 +100,7 @@ public class ExportTasksList {
     
     
     public String status;
+
     public ExportTasksList withStatus(String status) {
         this.status = status;
         return this;
@@ -96,6 +108,7 @@ public class ExportTasksList {
     
     
     public OffsetDateTime taskEndTime;
+
     public ExportTasksList withTaskEndTime(OffsetDateTime taskEndTime) {
         this.taskEndTime = taskEndTime;
         return this;
@@ -103,6 +116,7 @@ public class ExportTasksList {
     
     
     public OffsetDateTime taskStartTime;
+
     public ExportTasksList withTaskStartTime(OffsetDateTime taskStartTime) {
         this.taskStartTime = taskStartTime;
         return this;
@@ -110,6 +124,7 @@ public class ExportTasksList {
     
     
     public Long totalExtractedDataInGB;
+
     public ExportTasksList withTotalExtractedDataInGB(Long totalExtractedDataInGB) {
         this.totalExtractedDataInGB = totalExtractedDataInGB;
         return this;
@@ -117,9 +132,11 @@ public class ExportTasksList {
     
     
     public String warningMessage;
+
     public ExportTasksList withWarningMessage(String warningMessage) {
         this.warningMessage = warningMessage;
         return this;
     }
     
+    public ExportTasksList(){}
 }

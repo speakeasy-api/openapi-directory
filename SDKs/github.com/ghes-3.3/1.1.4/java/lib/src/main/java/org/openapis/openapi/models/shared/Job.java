@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Job {
     @JsonProperty("check_run_url")
     public String checkRunUrl;
+
     public Job withCheckRunUrl(String checkRunUrl) {
         this.checkRunUrl = checkRunUrl;
         return this;
@@ -31,6 +32,7 @@ public class Job {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completed_at")
     public OffsetDateTime completedAt;
+
     public Job withCompletedAt(OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -41,6 +43,7 @@ public class Job {
      */
     @JsonProperty("conclusion")
     public JobConclusionEnum conclusion;
+
     public Job withConclusion(JobConclusionEnum conclusion) {
         this.conclusion = conclusion;
         return this;
@@ -51,6 +54,7 @@ public class Job {
      */
     @JsonProperty("head_sha")
     public String headSha;
+
     public Job withHeadSha(String headSha) {
         this.headSha = headSha;
         return this;
@@ -58,6 +62,7 @@ public class Job {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public Job withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -68,6 +73,7 @@ public class Job {
      */
     @JsonProperty("id")
     public Long id;
+
     public Job withId(Long id) {
         this.id = id;
         return this;
@@ -78,6 +84,7 @@ public class Job {
      */
     @JsonProperty("labels")
     public String[] labels;
+
     public Job withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -88,6 +95,7 @@ public class Job {
      */
     @JsonProperty("name")
     public String name;
+
     public Job withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +103,7 @@ public class Job {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public Job withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -106,6 +115,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("run_attempt")
     public Long runAttempt;
+
     public Job withRunAttempt(Long runAttempt) {
         this.runAttempt = runAttempt;
         return this;
@@ -116,6 +126,7 @@ public class Job {
      */
     @JsonProperty("run_id")
     public Long runId;
+
     public Job withRunId(Long runId) {
         this.runId = runId;
         return this;
@@ -123,6 +134,7 @@ public class Job {
     
     @JsonProperty("run_url")
     public String runUrl;
+
     public Job withRunUrl(String runUrl) {
         this.runUrl = runUrl;
         return this;
@@ -133,6 +145,7 @@ public class Job {
      */
     @JsonProperty("runner_group_id")
     public Long runnerGroupId;
+
     public Job withRunnerGroupId(Long runnerGroupId) {
         this.runnerGroupId = runnerGroupId;
         return this;
@@ -143,6 +156,7 @@ public class Job {
      */
     @JsonProperty("runner_group_name")
     public String runnerGroupName;
+
     public Job withRunnerGroupName(String runnerGroupName) {
         this.runnerGroupName = runnerGroupName;
         return this;
@@ -153,6 +167,7 @@ public class Job {
      */
     @JsonProperty("runner_id")
     public Long runnerId;
+
     public Job withRunnerId(Long runnerId) {
         this.runnerId = runnerId;
         return this;
@@ -163,6 +178,7 @@ public class Job {
      */
     @JsonProperty("runner_name")
     public String runnerName;
+
     public Job withRunnerName(String runnerName) {
         this.runnerName = runnerName;
         return this;
@@ -175,6 +191,7 @@ public class Job {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("started_at")
     public OffsetDateTime startedAt;
+
     public Job withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -185,6 +202,7 @@ public class Job {
      */
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public Job withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
@@ -196,6 +214,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public JobSteps[] steps;
+
     public Job withSteps(JobSteps[] steps) {
         this.steps = steps;
         return this;
@@ -203,9 +222,30 @@ public class Job {
     
     @JsonProperty("url")
     public String url;
+
     public Job withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Job(@JsonProperty("check_run_url") String checkRunUrl, @JsonProperty("completed_at") OffsetDateTime completedAt, @JsonProperty("conclusion") JobConclusionEnum conclusion, @JsonProperty("head_sha") String headSha, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("labels") String[] labels, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("run_id") Long runId, @JsonProperty("run_url") String runUrl, @JsonProperty("runner_group_id") Long runnerGroupId, @JsonProperty("runner_group_name") String runnerGroupName, @JsonProperty("runner_id") Long runnerId, @JsonProperty("runner_name") String runnerName, @JsonProperty("started_at") OffsetDateTime startedAt, @JsonProperty("status") JobStatusEnum status, @JsonProperty("url") String url) {
+        this.checkRunUrl = checkRunUrl;
+        this.completedAt = completedAt;
+        this.conclusion = conclusion;
+        this.headSha = headSha;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.labels = labels;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.runId = runId;
+        this.runUrl = runUrl;
+        this.runnerGroupId = runnerGroupId;
+        this.runnerGroupName = runnerGroupName;
+        this.runnerId = runnerId;
+        this.runnerName = runnerName;
+        this.startedAt = startedAt;
+        this.status = status;
+        this.url = url;
+  }
 }

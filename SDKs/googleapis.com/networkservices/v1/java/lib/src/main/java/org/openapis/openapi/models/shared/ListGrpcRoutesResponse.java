@@ -18,6 +18,7 @@ public class ListGrpcRoutesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpcRoutes")
     public GrpcRoute[] grpcRoutes;
+
     public ListGrpcRoutesResponse withGrpcRoutes(GrpcRoute[] grpcRoutes) {
         this.grpcRoutes = grpcRoutes;
         return this;
@@ -29,9 +30,11 @@ public class ListGrpcRoutesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListGrpcRoutesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListGrpcRoutesResponse(){}
 }

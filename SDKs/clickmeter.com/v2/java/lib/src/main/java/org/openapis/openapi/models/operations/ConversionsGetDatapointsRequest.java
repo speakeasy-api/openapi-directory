@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsGetDatapointsRequest {
@@ -12,6 +13,7 @@ public class ConversionsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
     public Long conversionId;
+
     public ConversionsGetDatapointsRequest withConversionId(Long conversionId) {
         this.conversionId = conversionId;
         return this;
@@ -22,6 +24,7 @@ public class ConversionsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
     public String createdAfter;
+
     public ConversionsGetDatapointsRequest withCreatedAfter(String createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -32,6 +35,7 @@ public class ConversionsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
     public String createdBefore;
+
     public ConversionsGetDatapointsRequest withCreatedBefore(String createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -42,6 +46,7 @@ public class ConversionsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public ConversionsGetDatapointsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -52,6 +57,7 @@ public class ConversionsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public ConversionsGetDatapointsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -62,6 +68,7 @@ public class ConversionsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public ConversionsGetDatapointsStatusEnum status;
+
     public ConversionsGetDatapointsRequest withStatus(ConversionsGetDatapointsStatusEnum status) {
         this.status = status;
         return this;
@@ -72,6 +79,7 @@ public class ConversionsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String tags;
+
     public ConversionsGetDatapointsRequest withTags(String tags) {
         this.tags = tags;
         return this;
@@ -82,6 +90,7 @@ public class ConversionsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public ConversionsGetDatapointsRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
@@ -92,9 +101,13 @@ public class ConversionsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public ConversionsGetDatapointsTypeEnum type;
+
     public ConversionsGetDatapointsRequest withType(ConversionsGetDatapointsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ConversionsGetDatapointsRequest(@JsonProperty("conversionId") Long conversionId) {
+        this.conversionId = conversionId;
+  }
 }

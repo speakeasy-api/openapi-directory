@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateSvgCardUsingGET1Request {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public GenerateSvgCardUsingGET1Request withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +21,7 @@ public class GenerateSvgCardUsingGET1Request {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Health-ID")
     public String healthID;
+
     public GenerateSvgCardUsingGET1Request withHealthID(String healthID) {
         this.healthID = healthID;
         return this;
@@ -29,9 +32,14 @@ public class GenerateSvgCardUsingGET1Request {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
     public String xToken;
+
     public GenerateSvgCardUsingGET1Request withXToken(String xToken) {
         this.xToken = xToken;
         return this;
     }
     
+    public GenerateSvgCardUsingGET1Request(@JsonProperty("Health-ID") String healthID, @JsonProperty("X-Token") String xToken) {
+        this.healthID = healthID;
+        this.xToken = xToken;
+  }
 }

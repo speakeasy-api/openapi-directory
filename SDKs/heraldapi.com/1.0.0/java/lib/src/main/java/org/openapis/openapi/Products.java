@@ -60,12 +60,10 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProductsResponse res = new org.openapis.openapi.models.operations.GetProductsResponse() {{
+        org.openapis.openapi.models.operations.GetProductsResponse res = new org.openapis.openapi.models.operations.GetProductsResponse(contentType, httpRes.statusCode()) {{
             getProducts200ApplicationJSONObject = null;
             getProducts400ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

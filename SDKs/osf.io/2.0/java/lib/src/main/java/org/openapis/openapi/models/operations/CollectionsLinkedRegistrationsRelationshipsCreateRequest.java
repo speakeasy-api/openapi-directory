@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionsLinkedRegistrationsRelationshipsCreateRequest {
@@ -12,9 +13,13 @@ public class CollectionsLinkedRegistrationsRelationshipsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
     public String collectionId;
+
     public CollectionsLinkedRegistrationsRelationshipsCreateRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
     }
     
+    public CollectionsLinkedRegistrationsRelationshipsCreateRequest(@JsonProperty("collection_id") String collectionId) {
+        this.collectionId = collectionId;
+  }
 }

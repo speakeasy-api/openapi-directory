@@ -328,4 +328,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GooglePrivacyDlpV2BigQueryF
 lib/src/main/java/org/openapis/openapi/models/shared/GooglePrivacyDlpV2CreateStoredInfoTypeRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GooglePrivacyDlpV2ListStoredInfoTypesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GooglePrivacyDlpV2UpdateStoredInfoTypeRequest.java
+docs/sdk/README.md
+docs/infotypes/README.md
+docs/locations/README.md
+docs/projects/README.md
 USAGE.md

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GoogleAnalyticsSourceProperties {
     @JsonProperty("object")
     public String object;
+
     public GoogleAnalyticsSourceProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public GoogleAnalyticsSourceProperties(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

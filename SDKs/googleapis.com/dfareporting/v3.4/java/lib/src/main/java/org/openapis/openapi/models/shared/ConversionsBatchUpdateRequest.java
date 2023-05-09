@@ -18,6 +18,7 @@ public class ConversionsBatchUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversions")
     public Conversion[] conversions;
+
     public ConversionsBatchUpdateRequest withConversions(Conversion[] conversions) {
         this.conversions = conversions;
         return this;
@@ -29,6 +30,7 @@ public class ConversionsBatchUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionInfo")
     public EncryptionInfo encryptionInfo;
+
     public ConversionsBatchUpdateRequest withEncryptionInfo(EncryptionInfo encryptionInfo) {
         this.encryptionInfo = encryptionInfo;
         return this;
@@ -40,9 +42,11 @@ public class ConversionsBatchUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ConversionsBatchUpdateRequest withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ConversionsBatchUpdateRequest(){}
 }

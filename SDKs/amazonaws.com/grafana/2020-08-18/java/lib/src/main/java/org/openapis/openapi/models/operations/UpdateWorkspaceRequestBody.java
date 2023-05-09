@@ -15,6 +15,7 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountAccessType")
     public UpdateWorkspaceRequestBodyAccountAccessTypeEnum accountAccessType;
+
     public UpdateWorkspaceRequestBody withAccountAccessType(UpdateWorkspaceRequestBodyAccountAccessTypeEnum accountAccessType) {
         this.accountAccessType = accountAccessType;
         return this;
@@ -26,6 +27,7 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkAccessControl")
     public UpdateWorkspaceRequestBodyNetworkAccessControl networkAccessControl;
+
     public UpdateWorkspaceRequestBody withNetworkAccessControl(UpdateWorkspaceRequestBodyNetworkAccessControl networkAccessControl) {
         this.networkAccessControl = networkAccessControl;
         return this;
@@ -37,6 +39,7 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationRoleName")
     public String organizationRoleName;
+
     public UpdateWorkspaceRequestBody withOrganizationRoleName(String organizationRoleName) {
         this.organizationRoleName = organizationRoleName;
         return this;
@@ -48,6 +51,7 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissionType")
     public UpdateWorkspaceRequestBodyPermissionTypeEnum permissionType;
+
     public UpdateWorkspaceRequestBody withPermissionType(UpdateWorkspaceRequestBodyPermissionTypeEnum permissionType) {
         this.permissionType = permissionType;
         return this;
@@ -59,6 +63,7 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeNetworkAccessConfiguration")
     public Boolean removeNetworkAccessConfiguration;
+
     public UpdateWorkspaceRequestBody withRemoveNetworkAccessConfiguration(Boolean removeNetworkAccessConfiguration) {
         this.removeNetworkAccessConfiguration = removeNetworkAccessConfiguration;
         return this;
@@ -70,6 +75,7 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeVpcConfiguration")
     public Boolean removeVpcConfiguration;
+
     public UpdateWorkspaceRequestBody withRemoveVpcConfiguration(Boolean removeVpcConfiguration) {
         this.removeVpcConfiguration = removeVpcConfiguration;
         return this;
@@ -81,6 +87,7 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackSetName")
     public String stackSetName;
+
     public UpdateWorkspaceRequestBody withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
@@ -92,6 +99,7 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfiguration")
     public UpdateWorkspaceRequestBodyVpcConfiguration vpcConfiguration;
+
     public UpdateWorkspaceRequestBody withVpcConfiguration(UpdateWorkspaceRequestBodyVpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
@@ -103,6 +111,7 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceDataSources")
     public org.openapis.openapi.models.shared.DataSourceTypeEnum[] workspaceDataSources;
+
     public UpdateWorkspaceRequestBody withWorkspaceDataSources(org.openapis.openapi.models.shared.DataSourceTypeEnum[] workspaceDataSources) {
         this.workspaceDataSources = workspaceDataSources;
         return this;
@@ -114,6 +123,7 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceDescription")
     public String workspaceDescription;
+
     public UpdateWorkspaceRequestBody withWorkspaceDescription(String workspaceDescription) {
         this.workspaceDescription = workspaceDescription;
         return this;
@@ -125,6 +135,7 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceName")
     public String workspaceName;
+
     public UpdateWorkspaceRequestBody withWorkspaceName(String workspaceName) {
         this.workspaceName = workspaceName;
         return this;
@@ -136,6 +147,7 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceNotificationDestinations")
     public org.openapis.openapi.models.shared.NotificationDestinationTypeEnum[] workspaceNotificationDestinations;
+
     public UpdateWorkspaceRequestBody withWorkspaceNotificationDestinations(org.openapis.openapi.models.shared.NotificationDestinationTypeEnum[] workspaceNotificationDestinations) {
         this.workspaceNotificationDestinations = workspaceNotificationDestinations;
         return this;
@@ -147,6 +159,7 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceOrganizationalUnits")
     public String[] workspaceOrganizationalUnits;
+
     public UpdateWorkspaceRequestBody withWorkspaceOrganizationalUnits(String[] workspaceOrganizationalUnits) {
         this.workspaceOrganizationalUnits = workspaceOrganizationalUnits;
         return this;
@@ -158,9 +171,11 @@ public class UpdateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceRoleArn")
     public String workspaceRoleArn;
+
     public UpdateWorkspaceRequestBody withWorkspaceRoleArn(String workspaceRoleArn) {
         this.workspaceRoleArn = workspaceRoleArn;
         return this;
     }
     
+    public UpdateWorkspaceRequestBody(){}
 }

@@ -14,6 +14,7 @@ public class GetStoresUnderAccountRequest {
      */
     @JsonProperty("companyAccount")
     public String companyAccount;
+
     public GetStoresUnderAccountRequest withCompanyAccount(String companyAccount) {
         this.companyAccount = companyAccount;
         return this;
@@ -25,9 +26,13 @@ public class GetStoresUnderAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public GetStoresUnderAccountRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
     }
     
+    public GetStoresUnderAccountRequest(@JsonProperty("companyAccount") String companyAccount) {
+        this.companyAccount = companyAccount;
+  }
 }

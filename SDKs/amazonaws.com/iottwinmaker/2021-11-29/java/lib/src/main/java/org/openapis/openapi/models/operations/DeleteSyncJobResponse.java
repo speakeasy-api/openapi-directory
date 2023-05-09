@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSyncJobResponse {
@@ -12,6 +13,7 @@ public class DeleteSyncJobResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteSyncJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSyncJobResponse {
     
     
     public String contentType;
+
     public DeleteSyncJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSyncJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteSyncJobResponse deleteSyncJobResponse;
+
     public DeleteSyncJobResponse withDeleteSyncJobResponse(org.openapis.openapi.models.shared.DeleteSyncJobResponse deleteSyncJobResponse) {
         this.deleteSyncJobResponse = deleteSyncJobResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSyncJobResponse {
      */
     
     public Object internalServerException;
+
     public DeleteSyncJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSyncJobResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteSyncJobResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteSyncJobResponse {
     
     
     public Integer statusCode;
+
     public DeleteSyncJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteSyncJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSyncJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteSyncJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSyncJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteSyncJobResponse {
      */
     
     public Object throttlingException;
+
     public DeleteSyncJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteSyncJobResponse {
      */
     
     public Object validationException;
+
     public DeleteSyncJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteSyncJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ public class UpdatePipelineStatusRequestBody {
      */
     @JsonProperty("Status")
     public String status;
+
     public UpdatePipelineStatusRequestBody withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public UpdatePipelineStatusRequestBody(@JsonProperty("Status") String status) {
+        this.status = status;
+  }
 }

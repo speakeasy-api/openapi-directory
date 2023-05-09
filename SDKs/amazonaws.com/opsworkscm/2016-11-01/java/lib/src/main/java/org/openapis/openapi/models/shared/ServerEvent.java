@@ -22,6 +22,7 @@ public class ServerEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public ServerEvent withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class ServerEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogUrl")
     public String logUrl;
+
     public ServerEvent withLogUrl(String logUrl) {
         this.logUrl = logUrl;
         return this;
@@ -38,6 +40,7 @@ public class ServerEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ServerEvent withMessage(String message) {
         this.message = message;
         return this;
@@ -46,9 +49,11 @@ public class ServerEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerName")
     public String serverName;
+
     public ServerEvent withServerName(String serverName) {
         this.serverName = serverName;
         return this;
     }
     
+    public ServerEvent(){}
 }

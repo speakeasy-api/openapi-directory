@@ -14,6 +14,7 @@ public class CreateConfigurationSetRequestBody {
      */
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public CreateConfigurationSetRequestBody withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -25,6 +26,7 @@ public class CreateConfigurationSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryOptions")
     public CreateConfigurationSetRequestBodyDeliveryOptions deliveryOptions;
+
     public CreateConfigurationSetRequestBody withDeliveryOptions(CreateConfigurationSetRequestBodyDeliveryOptions deliveryOptions) {
         this.deliveryOptions = deliveryOptions;
         return this;
@@ -36,6 +38,7 @@ public class CreateConfigurationSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReputationOptions")
     public CreateConfigurationSetRequestBodyReputationOptions reputationOptions;
+
     public CreateConfigurationSetRequestBody withReputationOptions(CreateConfigurationSetRequestBodyReputationOptions reputationOptions) {
         this.reputationOptions = reputationOptions;
         return this;
@@ -47,6 +50,7 @@ public class CreateConfigurationSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SendingOptions")
     public CreateConfigurationSetRequestBodySendingOptions sendingOptions;
+
     public CreateConfigurationSetRequestBody withSendingOptions(CreateConfigurationSetRequestBodySendingOptions sendingOptions) {
         this.sendingOptions = sendingOptions;
         return this;
@@ -58,6 +62,7 @@ public class CreateConfigurationSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuppressionOptions")
     public CreateConfigurationSetRequestBodySuppressionOptions suppressionOptions;
+
     public CreateConfigurationSetRequestBody withSuppressionOptions(CreateConfigurationSetRequestBodySuppressionOptions suppressionOptions) {
         this.suppressionOptions = suppressionOptions;
         return this;
@@ -69,6 +74,7 @@ public class CreateConfigurationSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateConfigurationSetRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -80,6 +86,7 @@ public class CreateConfigurationSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrackingOptions")
     public CreateConfigurationSetRequestBodyTrackingOptions trackingOptions;
+
     public CreateConfigurationSetRequestBody withTrackingOptions(CreateConfigurationSetRequestBodyTrackingOptions trackingOptions) {
         this.trackingOptions = trackingOptions;
         return this;
@@ -91,9 +98,13 @@ public class CreateConfigurationSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VdmOptions")
     public CreateConfigurationSetRequestBodyVdmOptions vdmOptions;
+
     public CreateConfigurationSetRequestBody withVdmOptions(CreateConfigurationSetRequestBodyVdmOptions vdmOptions) {
         this.vdmOptions = vdmOptions;
         return this;
     }
     
+    public CreateConfigurationSetRequestBody(@JsonProperty("ConfigurationSetName") String configurationSetName) {
+        this.configurationSetName = configurationSetName;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeRouterConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routerTypeIdentifier")
     public String routerTypeIdentifier;
+
     public DescribeRouterConfigurationRequest withRouterTypeIdentifier(String routerTypeIdentifier) {
         this.routerTypeIdentifier = routerTypeIdentifier;
         return this;
@@ -22,9 +23,13 @@ public class DescribeRouterConfigurationRequest {
     
     @JsonProperty("virtualInterfaceId")
     public String virtualInterfaceId;
+
     public DescribeRouterConfigurationRequest withVirtualInterfaceId(String virtualInterfaceId) {
         this.virtualInterfaceId = virtualInterfaceId;
         return this;
     }
     
+    public DescribeRouterConfigurationRequest(@JsonProperty("virtualInterfaceId") String virtualInterfaceId) {
+        this.virtualInterfaceId = virtualInterfaceId;
+  }
 }

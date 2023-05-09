@@ -19,9 +19,11 @@ public class PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequestBody
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dueDate")
     public OffsetDateTime dueDate;
+
     public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequestBody withDueDate(OffsetDateTime dueDate) {
         this.dueDate = dueDate;
         return this;
     }
     
+    public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequestBody(){}
 }

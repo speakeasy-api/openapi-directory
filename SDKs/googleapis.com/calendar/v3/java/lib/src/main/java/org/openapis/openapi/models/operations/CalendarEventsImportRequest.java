@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalendarEventsImportRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Event event;
+
     public CalendarEventsImportRequest withEvent(org.openapis.openapi.models.shared.Event event) {
         this.event = event;
         return this;
@@ -19,6 +21,7 @@ public class CalendarEventsImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CalendarEventsImportRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class CalendarEventsImportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=calendarId")
     public String calendarId;
+
     public CalendarEventsImportRequest withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -39,6 +43,7 @@ public class CalendarEventsImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conferenceDataVersion")
     public Long conferenceDataVersion;
+
     public CalendarEventsImportRequest withConferenceDataVersion(Long conferenceDataVersion) {
         this.conferenceDataVersion = conferenceDataVersion;
         return this;
@@ -49,6 +54,7 @@ public class CalendarEventsImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CalendarEventsImportRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -59,6 +65,7 @@ public class CalendarEventsImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CalendarEventsImportRequest withKey(String key) {
         this.key = key;
         return this;
@@ -69,6 +76,7 @@ public class CalendarEventsImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CalendarEventsImportRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -79,6 +87,7 @@ public class CalendarEventsImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CalendarEventsImportRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -89,6 +98,7 @@ public class CalendarEventsImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CalendarEventsImportRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -99,6 +109,7 @@ public class CalendarEventsImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAttachments")
     public Boolean supportsAttachments;
+
     public CalendarEventsImportRequest withSupportsAttachments(Boolean supportsAttachments) {
         this.supportsAttachments = supportsAttachments;
         return this;
@@ -109,9 +120,13 @@ public class CalendarEventsImportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public CalendarEventsImportRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public CalendarEventsImportRequest(@JsonProperty("calendarId") String calendarId) {
+        this.calendarId = calendarId;
+  }
 }

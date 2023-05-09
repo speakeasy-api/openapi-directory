@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAccessPointsInput {
     
     public String[] loadBalancerNames;
+
     public DescribeAccessPointsInput withLoadBalancerNames(String[] loadBalancerNames) {
         this.loadBalancerNames = loadBalancerNames;
         return this;
@@ -19,6 +20,7 @@ public class DescribeAccessPointsInput {
     
     
     public String marker;
+
     public DescribeAccessPointsInput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,9 +28,11 @@ public class DescribeAccessPointsInput {
     
     
     public Long pageSize;
+
     public DescribeAccessPointsInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public DescribeAccessPointsInput(){}
 }

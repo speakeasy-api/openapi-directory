@@ -15,6 +15,7 @@ public class CreateApplicationRequestBodyAutoStopConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CreateApplicationRequestBodyAutoStopConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,9 +24,11 @@ public class CreateApplicationRequestBodyAutoStopConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idleTimeoutMinutes")
     public Long idleTimeoutMinutes;
+
     public CreateApplicationRequestBodyAutoStopConfiguration withIdleTimeoutMinutes(Long idleTimeoutMinutes) {
         this.idleTimeoutMinutes = idleTimeoutMinutes;
         return this;
     }
     
+    public CreateApplicationRequestBodyAutoStopConfiguration(){}
 }

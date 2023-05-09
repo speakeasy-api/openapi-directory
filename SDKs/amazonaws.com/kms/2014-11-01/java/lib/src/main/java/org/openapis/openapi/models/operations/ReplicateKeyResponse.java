@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReplicateKeyResponse {
@@ -12,6 +13,7 @@ public class ReplicateKeyResponse {
      */
     
     public Object alreadyExistsException;
+
     public ReplicateKeyResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -19,6 +21,7 @@ public class ReplicateKeyResponse {
     
     
     public String contentType;
+
     public ReplicateKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ReplicateKeyResponse {
      */
     
     public Object disabledException;
+
     public ReplicateKeyResponse withDisabledException(Object disabledException) {
         this.disabledException = disabledException;
         return this;
@@ -39,6 +43,7 @@ public class ReplicateKeyResponse {
      */
     
     public Object invalidArnException;
+
     public ReplicateKeyResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class ReplicateKeyResponse {
      */
     
     public Object kmsInternalException;
+
     public ReplicateKeyResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -59,6 +65,7 @@ public class ReplicateKeyResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public ReplicateKeyResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -69,6 +76,7 @@ public class ReplicateKeyResponse {
      */
     
     public Object limitExceededException;
+
     public ReplicateKeyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class ReplicateKeyResponse {
      */
     
     public Object malformedPolicyDocumentException;
+
     public ReplicateKeyResponse withMalformedPolicyDocumentException(Object malformedPolicyDocumentException) {
         this.malformedPolicyDocumentException = malformedPolicyDocumentException;
         return this;
@@ -89,6 +98,7 @@ public class ReplicateKeyResponse {
      */
     
     public Object notFoundException;
+
     public ReplicateKeyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -99,6 +109,7 @@ public class ReplicateKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.ReplicateKeyResponse replicateKeyResponse;
+
     public ReplicateKeyResponse withReplicateKeyResponse(org.openapis.openapi.models.shared.ReplicateKeyResponse replicateKeyResponse) {
         this.replicateKeyResponse = replicateKeyResponse;
         return this;
@@ -106,6 +117,7 @@ public class ReplicateKeyResponse {
     
     
     public Integer statusCode;
+
     public ReplicateKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class ReplicateKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReplicateKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class ReplicateKeyResponse {
      */
     
     public Object tagException;
+
     public ReplicateKeyResponse withTagException(Object tagException) {
         this.tagException = tagException;
         return this;
@@ -133,9 +147,14 @@ public class ReplicateKeyResponse {
      */
     
     public Object unsupportedOperationException;
+
     public ReplicateKeyResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public ReplicateKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

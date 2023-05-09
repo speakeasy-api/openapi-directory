@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * VCpuCountRequest - Specifies the minimum and maximum for the &lt;code&gt;VCpuCount&lt;/code&gt; object when you specify &lt;a&gt;InstanceRequirements&lt;/a&gt; for an Auto Scaling group.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class VCpuCountRequest {
     
     public Long max;
+
     public VCpuCountRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,13 @@ public class VCpuCountRequest {
     
     
     public Long min;
+
     public VCpuCountRequest withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public VCpuCountRequest(@JsonProperty("Min") Long min) {
+        this.min = min;
+  }
 }

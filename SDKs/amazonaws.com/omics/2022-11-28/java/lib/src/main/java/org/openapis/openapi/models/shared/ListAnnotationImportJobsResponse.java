@@ -15,6 +15,7 @@ public class ListAnnotationImportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationImportJobs")
     public AnnotationImportJobItem[] annotationImportJobs;
+
     public ListAnnotationImportJobsResponse withAnnotationImportJobs(AnnotationImportJobItem[] annotationImportJobs) {
         this.annotationImportJobs = annotationImportJobs;
         return this;
@@ -23,9 +24,11 @@ public class ListAnnotationImportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAnnotationImportJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAnnotationImportJobsResponse(){}
 }

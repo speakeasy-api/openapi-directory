@@ -15,6 +15,7 @@ public class AddInstanceFleetOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterArn")
     public String clusterArn;
+
     public AddInstanceFleetOutput withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -23,6 +24,7 @@ public class AddInstanceFleetOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public AddInstanceFleetOutput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -31,9 +33,11 @@ public class AddInstanceFleetOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceFleetId")
     public String instanceFleetId;
+
     public AddInstanceFleetOutput withInstanceFleetId(String instanceFleetId) {
         this.instanceFleetId = instanceFleetId;
         return this;
     }
     
+    public AddInstanceFleetOutput(){}
 }

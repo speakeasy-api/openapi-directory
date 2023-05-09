@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05HealthInformationOnRequestJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05HealthInformationOnRequestJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05HealthInformationOnRequestJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class PostV05HealthInformationOnRequestJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HIPHealthInformationRequestAcknowledgement hipHealthInformationRequestAcknowledgement;
+
     public PostV05HealthInformationOnRequestJsonRequest withHIPHealthInformationRequestAcknowledgement(org.openapis.openapi.models.shared.HIPHealthInformationRequestAcknowledgement hipHealthInformationRequestAcknowledgement) {
         this.hipHealthInformationRequestAcknowledgement = hipHealthInformationRequestAcknowledgement;
         return this;
     }
     
+    public PostV05HealthInformationOnRequestJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("HIPHealthInformationRequestAcknowledgement") org.openapis.openapi.models.shared.HIPHealthInformationRequestAcknowledgement hipHealthInformationRequestAcknowledgement) {
+        this.authorization = authorization;
+        this.hipHealthInformationRequestAcknowledgement = hipHealthInformationRequestAcknowledgement;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLoggerDefinitionResponse {
@@ -12,6 +13,7 @@ public class CreateLoggerDefinitionResponse {
      */
     
     public Object badRequestException;
+
     public CreateLoggerDefinitionResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateLoggerDefinitionResponse {
     
     
     public String contentType;
+
     public CreateLoggerDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateLoggerDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLoggerDefinitionResponse createLoggerDefinitionResponse;
+
     public CreateLoggerDefinitionResponse withCreateLoggerDefinitionResponse(org.openapis.openapi.models.shared.CreateLoggerDefinitionResponse createLoggerDefinitionResponse) {
         this.createLoggerDefinitionResponse = createLoggerDefinitionResponse;
         return this;
@@ -36,6 +40,7 @@ public class CreateLoggerDefinitionResponse {
     
     
     public Integer statusCode;
+
     public CreateLoggerDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateLoggerDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLoggerDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateLoggerDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

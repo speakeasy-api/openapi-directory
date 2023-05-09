@@ -18,6 +18,7 @@ public class ConferenceKickResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Members")
     public String[] members;
+
     public ConferenceKickResponse withMembers(String[] members) {
         this.members = members;
         return this;
@@ -28,6 +29,7 @@ public class ConferenceKickResponse {
      */
     @JsonProperty("Message")
     public ConferenceKickResponseMessageEnum message;
+
     public ConferenceKickResponse withMessage(ConferenceKickResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -38,9 +40,14 @@ public class ConferenceKickResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public ConferenceKickResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ConferenceKickResponse(@JsonProperty("Message") ConferenceKickResponseMessageEnum message, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.success = success;
+  }
 }

@@ -15,6 +15,7 @@ public class ComplianceSummaryByResourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceSummary")
     public ComplianceSummary complianceSummary;
+
     public ComplianceSummaryByResourceType withComplianceSummary(ComplianceSummary complianceSummary) {
         this.complianceSummary = complianceSummary;
         return this;
@@ -23,9 +24,11 @@ public class ComplianceSummaryByResourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public ComplianceSummaryByResourceType withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ComplianceSummaryByResourceType(){}
 }

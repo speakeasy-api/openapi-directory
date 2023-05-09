@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OauthAuthorizationsGetOrCreateAuthorizationForAppResponse {
     
     public String contentType;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppResponse {
     
     
     public Integer statusCode;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppResponse {
      */
     
     public org.openapis.openapi.models.shared.Authorization authorization;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppResponse withAuthorization(org.openapis.openapi.models.shared.Authorization authorization) {
         this.authorization = authorization;
         return this;
@@ -50,6 +56,7 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -60,9 +67,14 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public OauthAuthorizationsGetOrCreateAuthorizationForAppResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

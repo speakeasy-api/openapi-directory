@@ -18,6 +18,7 @@ public class CancelBookingQuoteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingId")
     public String bookingId;
+
     public CancelBookingQuoteResponse withBookingId(String bookingId) {
         this.bookingId = bookingId;
         return this;
@@ -32,6 +33,7 @@ public class CancelBookingQuoteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refundDetails")
     public RefundDetails refundDetails;
+
     public CancelBookingQuoteResponse withRefundDetails(RefundDetails refundDetails) {
         this.refundDetails = refundDetails;
         return this;
@@ -48,9 +50,11 @@ public class CancelBookingQuoteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CancelBookingQuoteResponseStatusEnum status;
+
     public CancelBookingQuoteResponse withStatus(CancelBookingQuoteResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CancelBookingQuoteResponse(){}
 }

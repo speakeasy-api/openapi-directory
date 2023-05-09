@@ -15,6 +15,7 @@ public class DescribeApplicationFleetAssociationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationFleetAssociations")
     public ApplicationFleetAssociation[] applicationFleetAssociations;
+
     public DescribeApplicationFleetAssociationsResult withApplicationFleetAssociations(ApplicationFleetAssociation[] applicationFleetAssociations) {
         this.applicationFleetAssociations = applicationFleetAssociations;
         return this;
@@ -23,9 +24,11 @@ public class DescribeApplicationFleetAssociationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeApplicationFleetAssociationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeApplicationFleetAssociationsResult(){}
 }

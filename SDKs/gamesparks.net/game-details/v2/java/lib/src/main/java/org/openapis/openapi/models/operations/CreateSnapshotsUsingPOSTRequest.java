@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSnapshotsUsingPOSTRequest {
@@ -12,6 +13,7 @@ public class CreateSnapshotsUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SnapshotCreationModel snapshotCreationModel;
+
     public CreateSnapshotsUsingPOSTRequest withSnapshotCreationModel(org.openapis.openapi.models.shared.SnapshotCreationModel snapshotCreationModel) {
         this.snapshotCreationModel = snapshotCreationModel;
         return this;
@@ -22,9 +24,14 @@ public class CreateSnapshotsUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public CreateSnapshotsUsingPOSTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public CreateSnapshotsUsingPOSTRequest(@JsonProperty("SnapshotCreationModel") org.openapis.openapi.models.shared.SnapshotCreationModel snapshotCreationModel, @JsonProperty("apiKey") String apiKey) {
+        this.snapshotCreationModel = snapshotCreationModel;
+        this.apiKey = apiKey;
+  }
 }

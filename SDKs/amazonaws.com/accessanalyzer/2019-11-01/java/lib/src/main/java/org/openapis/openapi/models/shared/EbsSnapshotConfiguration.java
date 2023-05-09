@@ -15,6 +15,7 @@ public class EbsSnapshotConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public String[] groups;
+
     public EbsSnapshotConfiguration withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -23,6 +24,7 @@ public class EbsSnapshotConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public EbsSnapshotConfiguration withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -31,9 +33,11 @@ public class EbsSnapshotConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userIds")
     public String[] userIds;
+
     public EbsSnapshotConfiguration withUserIds(String[] userIds) {
         this.userIds = userIds;
         return this;
     }
     
+    public EbsSnapshotConfiguration(){}
 }

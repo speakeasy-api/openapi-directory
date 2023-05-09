@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeInstancesGetShieldedVmIdentitySecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesGetShieldedVmIdentitySecurityOption1 option1;
+
     public ComputeInstancesGetShieldedVmIdentitySecurity withOption1(ComputeInstancesGetShieldedVmIdentitySecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeInstancesGetShieldedVmIdentitySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesGetShieldedVmIdentitySecurityOption2 option2;
+
     public ComputeInstancesGetShieldedVmIdentitySecurity withOption2(ComputeInstancesGetShieldedVmIdentitySecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeInstancesGetShieldedVmIdentitySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesGetShieldedVmIdentitySecurityOption3 option3;
+
     public ComputeInstancesGetShieldedVmIdentitySecurity withOption3(ComputeInstancesGetShieldedVmIdentitySecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeInstancesGetShieldedVmIdentitySecurity(){}
 }

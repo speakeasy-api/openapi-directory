@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemovePagesV1Response {
     
     public String contentType;
+
     public RemovePagesV1Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RemovePagesV1Response {
     
     
     public Integer statusCode;
+
     public RemovePagesV1Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RemovePagesV1Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemovePagesV1Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RemovePagesV1Response {
      */
     
     public byte[] removePagesV1200ApplicationPdfBinaryString;
+
     public RemovePagesV1Response withRemovePagesV1200ApplicationPdfBinaryString(byte[] removePagesV1200ApplicationPdfBinaryString) {
         this.removePagesV1200ApplicationPdfBinaryString = removePagesV1200ApplicationPdfBinaryString;
         return this;
@@ -43,9 +48,14 @@ public class RemovePagesV1Response {
      */
     
     public RemovePagesV14XXApplicationProblemPlusJson removePagesV14XXApplicationProblemPlusJsonObject;
+
     public RemovePagesV1Response withRemovePagesV14XXApplicationProblemPlusJsonObject(RemovePagesV14XXApplicationProblemPlusJson removePagesV14XXApplicationProblemPlusJsonObject) {
         this.removePagesV14XXApplicationProblemPlusJsonObject = removePagesV14XXApplicationProblemPlusJsonObject;
         return this;
     }
     
+    public RemovePagesV1Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

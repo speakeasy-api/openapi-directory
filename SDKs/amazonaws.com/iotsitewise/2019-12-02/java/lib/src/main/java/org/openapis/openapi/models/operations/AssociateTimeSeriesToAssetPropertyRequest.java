@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssociateTimeSeriesToAssetPropertyRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AssociateTimeSeriesToAssetPropertyRequestBody requestBody;
+
     public AssociateTimeSeriesToAssetPropertyRequest withRequestBody(AssociateTimeSeriesToAssetPropertyRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class AssociateTimeSeriesToAssetPropertyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public AssociateTimeSeriesToAssetPropertyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class AssociateTimeSeriesToAssetPropertyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public AssociateTimeSeriesToAssetPropertyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class AssociateTimeSeriesToAssetPropertyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public AssociateTimeSeriesToAssetPropertyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class AssociateTimeSeriesToAssetPropertyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public AssociateTimeSeriesToAssetPropertyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class AssociateTimeSeriesToAssetPropertyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public AssociateTimeSeriesToAssetPropertyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class AssociateTimeSeriesToAssetPropertyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public AssociateTimeSeriesToAssetPropertyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class AssociateTimeSeriesToAssetPropertyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public AssociateTimeSeriesToAssetPropertyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class AssociateTimeSeriesToAssetPropertyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alias")
     public String alias;
+
     public AssociateTimeSeriesToAssetPropertyRequest withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -78,6 +88,7 @@ public class AssociateTimeSeriesToAssetPropertyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assetId")
     public String assetId;
+
     public AssociateTimeSeriesToAssetPropertyRequest withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -88,9 +99,16 @@ public class AssociateTimeSeriesToAssetPropertyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyId")
     public String propertyId;
+
     public AssociateTimeSeriesToAssetPropertyRequest withPropertyId(String propertyId) {
         this.propertyId = propertyId;
         return this;
     }
     
+    public AssociateTimeSeriesToAssetPropertyRequest(@JsonProperty("RequestBody") AssociateTimeSeriesToAssetPropertyRequestBody requestBody, @JsonProperty("alias") String alias, @JsonProperty("assetId") String assetId, @JsonProperty("propertyId") String propertyId) {
+        this.requestBody = requestBody;
+        this.alias = alias;
+        this.assetId = assetId;
+        this.propertyId = propertyId;
+  }
 }

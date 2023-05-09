@@ -8,20 +8,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeAppVersionAppComponentRequestBody {
     /**
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
      */
     @JsonProperty("appArn")
     public String appArn;
+
     public DescribeAppVersionAppComponentRequestBody withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
     }
     
     /**
-     * The AWS Resilience Hub application version.
+     * The Resilience Hub application version.
      */
     @JsonProperty("appVersion")
     public String appVersion;
+
     public DescribeAppVersionAppComponentRequestBody withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -32,9 +34,15 @@ public class DescribeAppVersionAppComponentRequestBody {
      */
     @JsonProperty("id")
     public String id;
+
     public DescribeAppVersionAppComponentRequestBody withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DescribeAppVersionAppComponentRequestBody(@JsonProperty("appArn") String appArn, @JsonProperty("appVersion") String appVersion, @JsonProperty("id") String id) {
+        this.appArn = appArn;
+        this.appVersion = appVersion;
+        this.id = id;
+  }
 }

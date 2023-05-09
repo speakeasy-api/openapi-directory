@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchCheckLayerAvailabilityRequest {
     @JsonProperty("layerDigests")
     public String[] layerDigests;
+
     public BatchCheckLayerAvailabilityRequest withLayerDigests(String[] layerDigests) {
         this.layerDigests = layerDigests;
         return this;
@@ -19,6 +20,7 @@ public class BatchCheckLayerAvailabilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public BatchCheckLayerAvailabilityRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -26,9 +28,14 @@ public class BatchCheckLayerAvailabilityRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public BatchCheckLayerAvailabilityRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public BatchCheckLayerAvailabilityRequest(@JsonProperty("layerDigests") String[] layerDigests, @JsonProperty("repositoryName") String repositoryName) {
+        this.layerDigests = layerDigests;
+        this.repositoryName = repositoryName;
+  }
 }

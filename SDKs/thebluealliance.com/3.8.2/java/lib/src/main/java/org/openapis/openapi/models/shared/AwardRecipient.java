@@ -18,6 +18,7 @@ public class AwardRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awardee")
     public String awardee;
+
     public AwardRecipient withAwardee(String awardee) {
         this.awardee = awardee;
         return this;
@@ -29,9 +30,11 @@ public class AwardRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_key")
     public String teamKey;
+
     public AwardRecipient withTeamKey(String teamKey) {
         this.teamKey = teamKey;
         return this;
     }
     
+    public AwardRecipient(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateApprovalRuleTemplateFromRepositoryResponse {
@@ -12,6 +13,7 @@ public class DisassociateApprovalRuleTemplateFromRepositoryResponse {
      */
     
     public Object approvalRuleTemplateDoesNotExistException;
+
     public DisassociateApprovalRuleTemplateFromRepositoryResponse withApprovalRuleTemplateDoesNotExistException(Object approvalRuleTemplateDoesNotExistException) {
         this.approvalRuleTemplateDoesNotExistException = approvalRuleTemplateDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class DisassociateApprovalRuleTemplateFromRepositoryResponse {
      */
     
     public Object approvalRuleTemplateNameRequiredException;
+
     public DisassociateApprovalRuleTemplateFromRepositoryResponse withApprovalRuleTemplateNameRequiredException(Object approvalRuleTemplateNameRequiredException) {
         this.approvalRuleTemplateNameRequiredException = approvalRuleTemplateNameRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateApprovalRuleTemplateFromRepositoryResponse {
     
     
     public String contentType;
+
     public DisassociateApprovalRuleTemplateFromRepositoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateApprovalRuleTemplateFromRepositoryResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public DisassociateApprovalRuleTemplateFromRepositoryResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateApprovalRuleTemplateFromRepositoryResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public DisassociateApprovalRuleTemplateFromRepositoryResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateApprovalRuleTemplateFromRepositoryResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public DisassociateApprovalRuleTemplateFromRepositoryResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -69,6 +76,7 @@ public class DisassociateApprovalRuleTemplateFromRepositoryResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public DisassociateApprovalRuleTemplateFromRepositoryResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class DisassociateApprovalRuleTemplateFromRepositoryResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public DisassociateApprovalRuleTemplateFromRepositoryResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -89,6 +98,7 @@ public class DisassociateApprovalRuleTemplateFromRepositoryResponse {
      */
     
     public Object invalidApprovalRuleTemplateNameException;
+
     public DisassociateApprovalRuleTemplateFromRepositoryResponse withInvalidApprovalRuleTemplateNameException(Object invalidApprovalRuleTemplateNameException) {
         this.invalidApprovalRuleTemplateNameException = invalidApprovalRuleTemplateNameException;
         return this;
@@ -99,6 +109,7 @@ public class DisassociateApprovalRuleTemplateFromRepositoryResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public DisassociateApprovalRuleTemplateFromRepositoryResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -106,6 +117,7 @@ public class DisassociateApprovalRuleTemplateFromRepositoryResponse {
     
     
     public Integer statusCode;
+
     public DisassociateApprovalRuleTemplateFromRepositoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class DisassociateApprovalRuleTemplateFromRepositoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateApprovalRuleTemplateFromRepositoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class DisassociateApprovalRuleTemplateFromRepositoryResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public DisassociateApprovalRuleTemplateFromRepositoryResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -133,9 +147,14 @@ public class DisassociateApprovalRuleTemplateFromRepositoryResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public DisassociateApprovalRuleTemplateFromRepositoryResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
     }
     
+    public DisassociateApprovalRuleTemplateFromRepositoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

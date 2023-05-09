@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAllinvestorAccountsResponse {
     
     public String contentType;
+
     public GetAllinvestorAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAllinvestorAccountsResponse {
     
     
     public Integer statusCode;
+
     public GetAllinvestorAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetAllinvestorAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAllinvestorAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetAllinvestorAccountsResponse {
      */
     
     public GetAllinvestorAccounts200ApplicationJSON getAllinvestorAccounts200ApplicationJSONObject;
+
     public GetAllinvestorAccountsResponse withGetAllinvestorAccounts200ApplicationJSONObject(GetAllinvestorAccounts200ApplicationJSON getAllinvestorAccounts200ApplicationJSONObject) {
         this.getAllinvestorAccounts200ApplicationJSONObject = getAllinvestorAccounts200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetAllinvestorAccountsResponse {
      */
     
     public GetAllinvestorAccounts400ApplicationJSON getAllinvestorAccounts400ApplicationJSONObject;
+
     public GetAllinvestorAccountsResponse withGetAllinvestorAccounts400ApplicationJSONObject(GetAllinvestorAccounts400ApplicationJSON getAllinvestorAccounts400ApplicationJSONObject) {
         this.getAllinvestorAccounts400ApplicationJSONObject = getAllinvestorAccounts400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetAllinvestorAccountsResponse {
      */
     
     public GetAllinvestorAccounts401ApplicationJSON getAllinvestorAccounts401ApplicationJSONObject;
+
     public GetAllinvestorAccountsResponse withGetAllinvestorAccounts401ApplicationJSONObject(GetAllinvestorAccounts401ApplicationJSON getAllinvestorAccounts401ApplicationJSONObject) {
         this.getAllinvestorAccounts401ApplicationJSONObject = getAllinvestorAccounts401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetAllinvestorAccountsResponse {
      */
     
     public GetAllinvestorAccounts403ApplicationJSON getAllinvestorAccounts403ApplicationJSONObject;
+
     public GetAllinvestorAccountsResponse withGetAllinvestorAccounts403ApplicationJSONObject(GetAllinvestorAccounts403ApplicationJSON getAllinvestorAccounts403ApplicationJSONObject) {
         this.getAllinvestorAccounts403ApplicationJSONObject = getAllinvestorAccounts403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetAllinvestorAccountsResponse {
      */
     
     public GetAllinvestorAccounts404ApplicationJSON getAllinvestorAccounts404ApplicationJSONObject;
+
     public GetAllinvestorAccountsResponse withGetAllinvestorAccounts404ApplicationJSONObject(GetAllinvestorAccounts404ApplicationJSON getAllinvestorAccounts404ApplicationJSONObject) {
         this.getAllinvestorAccounts404ApplicationJSONObject = getAllinvestorAccounts404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class GetAllinvestorAccountsResponse {
      */
     
     public GetAllinvestorAccounts409ApplicationJSON getAllinvestorAccounts409ApplicationJSONObject;
+
     public GetAllinvestorAccountsResponse withGetAllinvestorAccounts409ApplicationJSONObject(GetAllinvestorAccounts409ApplicationJSON getAllinvestorAccounts409ApplicationJSONObject) {
         this.getAllinvestorAccounts409ApplicationJSONObject = getAllinvestorAccounts409ApplicationJSONObject;
         return this;
@@ -93,6 +103,7 @@ public class GetAllinvestorAccountsResponse {
      */
     
     public GetAllinvestorAccounts429ApplicationJSON getAllinvestorAccounts429ApplicationJSONObject;
+
     public GetAllinvestorAccountsResponse withGetAllinvestorAccounts429ApplicationJSONObject(GetAllinvestorAccounts429ApplicationJSON getAllinvestorAccounts429ApplicationJSONObject) {
         this.getAllinvestorAccounts429ApplicationJSONObject = getAllinvestorAccounts429ApplicationJSONObject;
         return this;
@@ -103,9 +114,14 @@ public class GetAllinvestorAccountsResponse {
      */
     
     public GetAllinvestorAccounts500ApplicationJSON getAllinvestorAccounts500ApplicationJSONObject;
+
     public GetAllinvestorAccountsResponse withGetAllinvestorAccounts500ApplicationJSONObject(GetAllinvestorAccounts500ApplicationJSON getAllinvestorAccounts500ApplicationJSONObject) {
         this.getAllinvestorAccounts500ApplicationJSONObject = getAllinvestorAccounts500ApplicationJSONObject;
         return this;
     }
     
+    public GetAllinvestorAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

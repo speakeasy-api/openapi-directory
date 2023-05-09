@@ -15,6 +15,7 @@ public class Subscription {
      */
     
     public String callbackToken;
+
     public Subscription withCallbackToken(String callbackToken) {
         this.callbackToken = callbackToken;
         return this;
@@ -25,6 +26,7 @@ public class Subscription {
      */
     
     public String callbackUrl;
+
     public Subscription withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -35,6 +37,7 @@ public class Subscription {
      */
     
     public Boolean enabled;
+
     public Subscription withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -45,6 +48,7 @@ public class Subscription {
      */
     
     public String eventType;
+
     public Subscription withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -55,6 +59,7 @@ public class Subscription {
      */
     
     public Long id;
+
     public Subscription withId(Long id) {
         this.id = id;
         return this;
@@ -65,6 +70,7 @@ public class Subscription {
      */
     
     public Long tenantId;
+
     public Subscription withTenantId(Long tenantId) {
         this.tenantId = tenantId;
         return this;
@@ -75,9 +81,11 @@ public class Subscription {
      */
     
     public String userGuid;
+
     public Subscription withUserGuid(String userGuid) {
         this.userGuid = userGuid;
         return this;
     }
     
+    public Subscription(){}
 }

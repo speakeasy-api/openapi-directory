@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnableRadiusRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public EnableRadiusRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -19,9 +20,14 @@ public class EnableRadiusRequest {
     
     @JsonProperty("RadiusSettings")
     public RadiusSettings radiusSettings;
+
     public EnableRadiusRequest withRadiusSettings(RadiusSettings radiusSettings) {
         this.radiusSettings = radiusSettings;
         return this;
     }
     
+    public EnableRadiusRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("RadiusSettings") RadiusSettings radiusSettings) {
+        this.directoryId = directoryId;
+        this.radiusSettings = radiusSettings;
+  }
 }

@@ -18,6 +18,7 @@ public class SetNetworkPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public SetNetworkPolicyRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -29,6 +30,7 @@ public class SetNetworkPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SetNetworkPolicyRequest withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class SetNetworkPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkPolicy")
     public NetworkPolicy networkPolicy;
+
     public SetNetworkPolicyRequest withNetworkPolicy(NetworkPolicy networkPolicy) {
         this.networkPolicy = networkPolicy;
         return this;
@@ -51,6 +54,7 @@ public class SetNetworkPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public SetNetworkPolicyRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -62,9 +66,11 @@ public class SetNetworkPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public SetNetworkPolicyRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public SetNetworkPolicyRequest(){}
 }

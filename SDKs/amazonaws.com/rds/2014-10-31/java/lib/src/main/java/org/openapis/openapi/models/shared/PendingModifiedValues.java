@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class PendingModifiedValues {
     
     public Long allocatedStorage;
+
     public PendingModifiedValues withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -19,6 +20,7 @@ public class PendingModifiedValues {
     
     
     public AutomationModeEnum automationMode;
+
     public PendingModifiedValues withAutomationMode(AutomationModeEnum automationMode) {
         this.automationMode = automationMode;
         return this;
@@ -26,6 +28,7 @@ public class PendingModifiedValues {
     
     
     public Long backupRetentionPeriod;
+
     public PendingModifiedValues withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -33,6 +36,7 @@ public class PendingModifiedValues {
     
     
     public String caCertificateIdentifier;
+
     public PendingModifiedValues withCACertificateIdentifier(String caCertificateIdentifier) {
         this.caCertificateIdentifier = caCertificateIdentifier;
         return this;
@@ -40,6 +44,7 @@ public class PendingModifiedValues {
     
     
     public String dbInstanceClass;
+
     public PendingModifiedValues withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -47,6 +52,7 @@ public class PendingModifiedValues {
     
     
     public String dbInstanceIdentifier;
+
     public PendingModifiedValues withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -54,6 +60,7 @@ public class PendingModifiedValues {
     
     
     public String dbSubnetGroupName;
+
     public PendingModifiedValues withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -61,6 +68,7 @@ public class PendingModifiedValues {
     
     
     public String engineVersion;
+
     public PendingModifiedValues withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -68,6 +76,7 @@ public class PendingModifiedValues {
     
     
     public Boolean iamDatabaseAuthenticationEnabled;
+
     public PendingModifiedValues withIAMDatabaseAuthenticationEnabled(Boolean iamDatabaseAuthenticationEnabled) {
         this.iamDatabaseAuthenticationEnabled = iamDatabaseAuthenticationEnabled;
         return this;
@@ -75,6 +84,7 @@ public class PendingModifiedValues {
     
     
     public Long iops;
+
     public PendingModifiedValues withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -82,6 +92,7 @@ public class PendingModifiedValues {
     
     
     public String licenseModel;
+
     public PendingModifiedValues withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -89,6 +100,7 @@ public class PendingModifiedValues {
     
     
     public String masterUserPassword;
+
     public PendingModifiedValues withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -96,6 +108,7 @@ public class PendingModifiedValues {
     
     
     public Boolean multiAZ;
+
     public PendingModifiedValues withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -106,6 +119,7 @@ public class PendingModifiedValues {
      */
     
     public PendingCloudwatchLogsExports pendingCloudwatchLogsExports;
+
     public PendingModifiedValues withPendingCloudwatchLogsExports(PendingCloudwatchLogsExports pendingCloudwatchLogsExports) {
         this.pendingCloudwatchLogsExports = pendingCloudwatchLogsExports;
         return this;
@@ -113,6 +127,7 @@ public class PendingModifiedValues {
     
     
     public Long port;
+
     public PendingModifiedValues withPort(Long port) {
         this.port = port;
         return this;
@@ -120,6 +135,7 @@ public class PendingModifiedValues {
     
     
     public ProcessorFeatureList[] processorFeatures;
+
     public PendingModifiedValues withProcessorFeatures(ProcessorFeatureList[] processorFeatures) {
         this.processorFeatures = processorFeatures;
         return this;
@@ -127,6 +143,7 @@ public class PendingModifiedValues {
     
     
     public OffsetDateTime resumeFullAutomationModeTime;
+
     public PendingModifiedValues withResumeFullAutomationModeTime(OffsetDateTime resumeFullAutomationModeTime) {
         this.resumeFullAutomationModeTime = resumeFullAutomationModeTime;
         return this;
@@ -134,6 +151,7 @@ public class PendingModifiedValues {
     
     
     public Long storageThroughput;
+
     public PendingModifiedValues withStorageThroughput(Long storageThroughput) {
         this.storageThroughput = storageThroughput;
         return this;
@@ -141,9 +159,11 @@ public class PendingModifiedValues {
     
     
     public String storageType;
+
     public PendingModifiedValues withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
     }
     
+    public PendingModifiedValues(){}
 }

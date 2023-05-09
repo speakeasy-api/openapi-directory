@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteFaqRequest {
     @JsonProperty("Id")
     public String id;
+
     public DeleteFaqRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class DeleteFaqRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public DeleteFaqRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
     }
     
+    public DeleteFaqRequest(@JsonProperty("Id") String id, @JsonProperty("IndexId") String indexId) {
+        this.id = id;
+        this.indexId = indexId;
+  }
 }

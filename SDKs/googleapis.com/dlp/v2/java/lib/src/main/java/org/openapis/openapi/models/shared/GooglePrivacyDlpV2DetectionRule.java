@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2DetectionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotwordRule")
     public GooglePrivacyDlpV2HotwordRule hotwordRule;
+
     public GooglePrivacyDlpV2DetectionRule withHotwordRule(GooglePrivacyDlpV2HotwordRule hotwordRule) {
         this.hotwordRule = hotwordRule;
         return this;
     }
     
+    public GooglePrivacyDlpV2DetectionRule(){}
 }

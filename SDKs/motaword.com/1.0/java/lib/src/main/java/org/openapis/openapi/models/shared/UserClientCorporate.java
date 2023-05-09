@@ -12,6 +12,7 @@ public class UserClientCorporate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserClientCorporate withEmail(String email) {
         this.email = email;
         return this;
@@ -20,6 +21,7 @@ public class UserClientCorporate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public UserClientCorporate withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class UserClientCorporate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public UserClientCorporate withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -36,6 +39,7 @@ public class UserClientCorporate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserClientCorporate withName(String name) {
         this.name = name;
         return this;
@@ -44,9 +48,11 @@ public class UserClientCorporate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public UserClientCorporate withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public UserClientCorporate(){}
 }

@@ -15,9 +15,11 @@ public class GetConnectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Connection")
     public Connection connection;
+
     public GetConnectionResponse withConnection(Connection connection) {
         this.connection = connection;
         return this;
     }
     
+    public GetConnectionResponse(){}
 }

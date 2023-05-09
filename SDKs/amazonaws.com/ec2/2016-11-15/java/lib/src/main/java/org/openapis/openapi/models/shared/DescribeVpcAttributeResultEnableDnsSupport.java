@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcAttributeResultEnableDnsSupport {
     
     public Boolean value;
+
     public DescribeVpcAttributeResultEnableDnsSupport withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public DescribeVpcAttributeResultEnableDnsSupport(){}
 }

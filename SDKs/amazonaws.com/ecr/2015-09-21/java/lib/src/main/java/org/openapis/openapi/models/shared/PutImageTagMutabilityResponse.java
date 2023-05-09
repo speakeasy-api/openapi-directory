@@ -15,6 +15,7 @@ public class PutImageTagMutabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTagMutability")
     public ImageTagMutabilityEnum imageTagMutability;
+
     public PutImageTagMutabilityResponse withImageTagMutability(ImageTagMutabilityEnum imageTagMutability) {
         this.imageTagMutability = imageTagMutability;
         return this;
@@ -23,6 +24,7 @@ public class PutImageTagMutabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public PutImageTagMutabilityResponse withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -31,9 +33,11 @@ public class PutImageTagMutabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public PutImageTagMutabilityResponse withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public PutImageTagMutabilityResponse(){}
 }

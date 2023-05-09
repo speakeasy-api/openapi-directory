@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CopyPadUsingGETResponse {
     
     public String contentType;
+
     public CopyPadUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CopyPadUsingGETResponse {
     
     
     public Integer statusCode;
+
     public CopyPadUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CopyPadUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CopyPadUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CopyPadUsingGETResponse {
      */
     
     public CopyPadUsingGET200ApplicationJSON copyPadUsingGET200ApplicationJSONObject;
+
     public CopyPadUsingGETResponse withCopyPadUsingGET200ApplicationJSONObject(CopyPadUsingGET200ApplicationJSON copyPadUsingGET200ApplicationJSONObject) {
         this.copyPadUsingGET200ApplicationJSONObject = copyPadUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CopyPadUsingGETResponse {
      */
     
     public CopyPadUsingGET400ApplicationJSON copyPadUsingGET400ApplicationJSONObject;
+
     public CopyPadUsingGETResponse withCopyPadUsingGET400ApplicationJSONObject(CopyPadUsingGET400ApplicationJSON copyPadUsingGET400ApplicationJSONObject) {
         this.copyPadUsingGET400ApplicationJSONObject = copyPadUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CopyPadUsingGETResponse {
      */
     
     public CopyPadUsingGET401ApplicationJSON copyPadUsingGET401ApplicationJSONObject;
+
     public CopyPadUsingGETResponse withCopyPadUsingGET401ApplicationJSONObject(CopyPadUsingGET401ApplicationJSON copyPadUsingGET401ApplicationJSONObject) {
         this.copyPadUsingGET401ApplicationJSONObject = copyPadUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CopyPadUsingGETResponse {
      */
     
     public CopyPadUsingGET500ApplicationJSON copyPadUsingGET500ApplicationJSONObject;
+
     public CopyPadUsingGETResponse withCopyPadUsingGET500ApplicationJSONObject(CopyPadUsingGET500ApplicationJSON copyPadUsingGET500ApplicationJSONObject) {
         this.copyPadUsingGET500ApplicationJSONObject = copyPadUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public CopyPadUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

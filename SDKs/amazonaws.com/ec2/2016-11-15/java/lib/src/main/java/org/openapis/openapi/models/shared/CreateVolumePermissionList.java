@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVolumePermissionList {
     
     public CreateVolumePermissionListGroupEnum group;
+
     public CreateVolumePermissionList withGroup(CreateVolumePermissionListGroupEnum group) {
         this.group = group;
         return this;
@@ -19,9 +20,11 @@ public class CreateVolumePermissionList {
     
     
     public String userId;
+
     public CreateVolumePermissionList withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public CreateVolumePermissionList(){}
 }

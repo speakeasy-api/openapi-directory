@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdminResetUserPasswordRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AdminResetUserPasswordRequest adminResetUserPasswordRequest;
+
     public AdminResetUserPasswordRequest withAdminResetUserPasswordRequest(org.openapis.openapi.models.shared.AdminResetUserPasswordRequest adminResetUserPasswordRequest) {
         this.adminResetUserPasswordRequest = adminResetUserPasswordRequest;
         return this;
@@ -16,6 +18,7 @@ public class AdminResetUserPasswordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public AdminResetUserPasswordRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class AdminResetUserPasswordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public AdminResetUserPasswordRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class AdminResetUserPasswordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public AdminResetUserPasswordRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class AdminResetUserPasswordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public AdminResetUserPasswordRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class AdminResetUserPasswordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public AdminResetUserPasswordRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class AdminResetUserPasswordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public AdminResetUserPasswordRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class AdminResetUserPasswordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public AdminResetUserPasswordRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class AdminResetUserPasswordRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public AdminResetUserPasswordXAmzTargetEnum xAmzTarget;
+
     public AdminResetUserPasswordRequest withXAmzTarget(AdminResetUserPasswordXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public AdminResetUserPasswordRequest(@JsonProperty("AdminResetUserPasswordRequest") org.openapis.openapi.models.shared.AdminResetUserPasswordRequest adminResetUserPasswordRequest, @JsonProperty("X-Amz-Target") AdminResetUserPasswordXAmzTargetEnum xAmzTarget) {
+        this.adminResetUserPasswordRequest = adminResetUserPasswordRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

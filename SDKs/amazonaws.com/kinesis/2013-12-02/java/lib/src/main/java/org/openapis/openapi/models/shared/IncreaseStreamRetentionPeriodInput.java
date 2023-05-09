@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IncreaseStreamRetentionPeriodInput {
     @JsonProperty("RetentionPeriodHours")
     public Long retentionPeriodHours;
+
     public IncreaseStreamRetentionPeriodInput withRetentionPeriodHours(Long retentionPeriodHours) {
         this.retentionPeriodHours = retentionPeriodHours;
         return this;
@@ -22,6 +23,7 @@ public class IncreaseStreamRetentionPeriodInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public IncreaseStreamRetentionPeriodInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -30,9 +32,13 @@ public class IncreaseStreamRetentionPeriodInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public IncreaseStreamRetentionPeriodInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public IncreaseStreamRetentionPeriodInput(@JsonProperty("RetentionPeriodHours") Long retentionPeriodHours) {
+        this.retentionPeriodHours = retentionPeriodHours;
+  }
 }

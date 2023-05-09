@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChannelCatalogResponse {
@@ -12,6 +13,7 @@ public class GetChannelCatalogResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetChannelCatalogResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetChannelCatalogResponse {
     
     
     public String contentType;
+
     public GetChannelCatalogResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetChannelCatalogResponse {
     
     
     public Integer statusCode;
+
     public GetChannelCatalogResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetChannelCatalogResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChannelCatalogResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetChannelCatalogResponse {
      */
     
     public org.openapis.openapi.models.shared.ChannelCatalog channelCatalog;
+
     public GetChannelCatalogResponse withChannelCatalog(org.openapis.openapi.models.shared.ChannelCatalog channelCatalog) {
         this.channelCatalog = channelCatalog;
         return this;
     }
     
+    public GetChannelCatalogResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

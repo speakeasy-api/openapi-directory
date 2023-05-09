@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateVirtualInterfaceAttributesResponse {
     
     public String contentType;
+
     public UpdateVirtualInterfaceAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateVirtualInterfaceAttributesResponse {
      */
     
     public Object directConnectClientException;
+
     public UpdateVirtualInterfaceAttributesResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateVirtualInterfaceAttributesResponse {
      */
     
     public Object directConnectServerException;
+
     public UpdateVirtualInterfaceAttributesResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateVirtualInterfaceAttributesResponse {
     
     
     public Integer statusCode;
+
     public UpdateVirtualInterfaceAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateVirtualInterfaceAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateVirtualInterfaceAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UpdateVirtualInterfaceAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.VirtualInterface virtualInterface;
+
     public UpdateVirtualInterfaceAttributesResponse withVirtualInterface(org.openapis.openapi.models.shared.VirtualInterface virtualInterface) {
         this.virtualInterface = virtualInterface;
         return this;
     }
     
+    public UpdateVirtualInterfaceAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class FinalReportUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public FinalReportUsageCurrencyEnum currency;
+
     public FinalReportUsage withCurrency(FinalReportUsageCurrencyEnum currency) {
         this.currency = currency;
         return this;
@@ -29,9 +30,11 @@ public class FinalReportUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public String price;
+
     public FinalReportUsage withPrice(String price) {
         this.price = price;
         return this;
     }
     
+    public FinalReportUsage(){}
 }

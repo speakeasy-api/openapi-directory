@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaJwt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwt")
     public String jwt;
+
     public GoogleCloudIntegrationsV1alphaJwt withJwt(String jwt) {
         this.jwt = jwt;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaJwt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwtHeader")
     public String jwtHeader;
+
     public GoogleCloudIntegrationsV1alphaJwt withJwtHeader(String jwtHeader) {
         this.jwtHeader = jwtHeader;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaJwt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwtPayload")
     public String jwtPayload;
+
     public GoogleCloudIntegrationsV1alphaJwt withJwtPayload(String jwtPayload) {
         this.jwtPayload = jwtPayload;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudIntegrationsV1alphaJwt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public GoogleCloudIntegrationsV1alphaJwt withSecret(String secret) {
         this.secret = secret;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaJwt(){}
 }

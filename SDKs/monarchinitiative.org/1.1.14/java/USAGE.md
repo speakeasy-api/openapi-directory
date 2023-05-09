@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetAssociationBySubjectAndAssocTypeRequest;
 import org.openapis.openapi.models.operations.GetAssociationBySubjectAndAssocTypeResponse;
 
@@ -13,25 +12,26 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetAssociationBySubjectAndAssocTypeRequest req = new GetAssociationBySubjectAndAssocTypeRequest() {{
-                associationType = "corrupti";
+            GetAssociationBySubjectAndAssocTypeRequest req = new GetAssociationBySubjectAndAssocTypeRequest("corrupti") {{
                 evidence = "provident";
                 excludeAutomaticAssertions = false;
                 object = "distinctio";
-                rows = 844266;
-                start = 602763;
+                rows = 844266L;
+                start = 602763L;
                 subject = "nulla";
                 unselectEvidence = false;
                 useCompactAssociations = false;
-            }}            
+            }};            
 
             GetAssociationBySubjectAndAssocTypeResponse res = sdk.association.getAssociationBySubjectAndAssocType(req);
 
-            if (res.associationResults.isPresent()) {
+            if (res.associationResults != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

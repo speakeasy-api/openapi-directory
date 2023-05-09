@@ -15,6 +15,7 @@ public class ListVirtualGatewaysOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListVirtualGatewaysOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListVirtualGatewaysOutput {
     
     @JsonProperty("virtualGateways")
     public VirtualGatewayRef[] virtualGateways;
+
     public ListVirtualGatewaysOutput withVirtualGateways(VirtualGatewayRef[] virtualGateways) {
         this.virtualGateways = virtualGateways;
         return this;
     }
     
+    public ListVirtualGatewaysOutput(@JsonProperty("virtualGateways") VirtualGatewayRef[] virtualGateways) {
+        this.virtualGateways = virtualGateways;
+  }
 }

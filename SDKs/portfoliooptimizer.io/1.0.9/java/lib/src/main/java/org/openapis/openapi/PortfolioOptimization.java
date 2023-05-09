@@ -62,11 +62,9 @@ public class PortfolioOptimization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualRiskContributionsResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualRiskContributionsResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualRiskContributionsResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualRiskContributionsResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationEqualRiskContributions200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,11 +109,9 @@ public class PortfolioOptimization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualSharpeRatioContributionsResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualSharpeRatioContributionsResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualSharpeRatioContributionsResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualSharpeRatioContributionsResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,11 +156,9 @@ public class PortfolioOptimization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualVolatilityWeightedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualVolatilityWeightedResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualVolatilityWeightedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualVolatilityWeightedResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationEqualVolatilityWeighted200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -209,11 +203,9 @@ public class PortfolioOptimization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualWeightedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualWeightedResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualWeightedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualWeightedResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationEqualWeighted200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,11 +253,9 @@ public class PortfolioOptimization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationHierarchicalRiskParityResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationHierarchicalRiskParityResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationHierarchicalRiskParityResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationHierarchicalRiskParityResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationHierarchicalRiskParity200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -315,11 +305,9 @@ public class PortfolioOptimization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationHierarchicalRiskParityClusteringBased200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -364,11 +352,9 @@ public class PortfolioOptimization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationInverseVarianceWeightedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationInverseVarianceWeightedResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationInverseVarianceWeightedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationInverseVarianceWeightedResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationInverseVarianceWeighted200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -413,11 +399,9 @@ public class PortfolioOptimization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationInverseVolatilityWeightedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationInverseVolatilityWeightedResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationInverseVolatilityWeightedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationInverseVolatilityWeightedResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationInverseVolatilityWeighted200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -462,11 +446,9 @@ public class PortfolioOptimization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMarketCapitalizationWeightedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMarketCapitalizationWeightedResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMarketCapitalizationWeightedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMarketCapitalizationWeightedResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -514,11 +496,9 @@ public class PortfolioOptimization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumDecorrelationResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumDecorrelationResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumDecorrelationResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumDecorrelationResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMaximumDecorrelation200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -571,11 +551,9 @@ public class PortfolioOptimization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumUlcerPerformanceIndexResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumUlcerPerformanceIndexResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumUlcerPerformanceIndexResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumUlcerPerformanceIndexResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMaximumUlcerPerformanceIndex200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -620,11 +598,9 @@ public class PortfolioOptimization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumCorrelationResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumCorrelationResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumCorrelationResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumCorrelationResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMinimumCorrelation200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -674,11 +650,9 @@ public class PortfolioOptimization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumUlcerIndexResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumUlcerIndexResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumUlcerIndexResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumUlcerIndexResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMinimumUlcerIndex200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -726,11 +700,9 @@ public class PortfolioOptimization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMostDiversifiedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMostDiversifiedResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMostDiversifiedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMostDiversifiedResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMostDiversified200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

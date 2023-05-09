@@ -18,6 +18,7 @@ public class GoogleCloudAdvisorynotificationsV1Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("csv")
     public GoogleCloudAdvisorynotificationsV1Csv csv;
+
     public GoogleCloudAdvisorynotificationsV1Attachment withCsv(GoogleCloudAdvisorynotificationsV1Csv csv) {
         this.csv = csv;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudAdvisorynotificationsV1Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudAdvisorynotificationsV1Attachment withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public GoogleCloudAdvisorynotificationsV1Attachment(){}
 }

@@ -12,6 +12,7 @@ public class GetDocumentWithWebHook200ApplicationJSONExplanationLocals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public GetDocumentWithWebHook200ApplicationJSONExplanationLocalsKey key;
+
     public GetDocumentWithWebHook200ApplicationJSONExplanationLocals withKey(GetDocumentWithWebHook200ApplicationJSONExplanationLocalsKey key) {
         this.key = key;
         return this;
@@ -20,9 +21,11 @@ public class GetDocumentWithWebHook200ApplicationJSONExplanationLocals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public GetDocumentWithWebHook200ApplicationJSONExplanationLocalsValue value;
+
     public GetDocumentWithWebHook200ApplicationJSONExplanationLocals withValue(GetDocumentWithWebHook200ApplicationJSONExplanationLocalsValue value) {
         this.value = value;
         return this;
     }
     
+    public GetDocumentWithWebHook200ApplicationJSONExplanationLocals(){}
 }

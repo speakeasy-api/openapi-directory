@@ -19,6 +19,7 @@ public class ColumnStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AnalyzedTime")
     public OffsetDateTime analyzedTime;
+
     public ColumnStatistics withAnalyzedTime(OffsetDateTime analyzedTime) {
         this.analyzedTime = analyzedTime;
         return this;
@@ -26,6 +27,7 @@ public class ColumnStatistics {
     
     @JsonProperty("ColumnName")
     public String columnName;
+
     public ColumnStatistics withColumnName(String columnName) {
         this.columnName = columnName;
         return this;
@@ -33,6 +35,7 @@ public class ColumnStatistics {
     
     @JsonProperty("ColumnType")
     public String columnType;
+
     public ColumnStatistics withColumnType(String columnType) {
         this.columnType = columnType;
         return this;
@@ -40,9 +43,16 @@ public class ColumnStatistics {
     
     @JsonProperty("StatisticsData")
     public ColumnStatisticsData statisticsData;
+
     public ColumnStatistics withStatisticsData(ColumnStatisticsData statisticsData) {
         this.statisticsData = statisticsData;
         return this;
     }
     
+    public ColumnStatistics(@JsonProperty("AnalyzedTime") OffsetDateTime analyzedTime, @JsonProperty("ColumnName") String columnName, @JsonProperty("ColumnType") String columnType, @JsonProperty("StatisticsData") ColumnStatisticsData statisticsData) {
+        this.analyzedTime = analyzedTime;
+        this.columnName = columnName;
+        this.columnType = columnType;
+        this.statisticsData = statisticsData;
+  }
 }

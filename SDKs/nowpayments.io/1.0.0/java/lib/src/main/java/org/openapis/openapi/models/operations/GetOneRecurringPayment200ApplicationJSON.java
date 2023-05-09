@@ -15,9 +15,11 @@ public class GetOneRecurringPayment200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public GetOneRecurringPayment200ApplicationJSONResult result;
+
     public GetOneRecurringPayment200ApplicationJSON withResult(GetOneRecurringPayment200ApplicationJSONResult result) {
         this.result = result;
         return this;
     }
     
+    public GetOneRecurringPayment200ApplicationJSON(){}
 }

@@ -21,6 +21,7 @@ public class ModelCardVersionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ModelCardVersionSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -31,6 +32,7 @@ public class ModelCardVersionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public ModelCardVersionSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -38,6 +40,7 @@ public class ModelCardVersionSummary {
     
     @JsonProperty("ModelCardArn")
     public String modelCardArn;
+
     public ModelCardVersionSummary withModelCardArn(String modelCardArn) {
         this.modelCardArn = modelCardArn;
         return this;
@@ -45,6 +48,7 @@ public class ModelCardVersionSummary {
     
     @JsonProperty("ModelCardName")
     public String modelCardName;
+
     public ModelCardVersionSummary withModelCardName(String modelCardName) {
         this.modelCardName = modelCardName;
         return this;
@@ -52,6 +56,7 @@ public class ModelCardVersionSummary {
     
     @JsonProperty("ModelCardStatus")
     public ModelCardStatusEnum modelCardStatus;
+
     public ModelCardVersionSummary withModelCardStatus(ModelCardStatusEnum modelCardStatus) {
         this.modelCardStatus = modelCardStatus;
         return this;
@@ -59,9 +64,17 @@ public class ModelCardVersionSummary {
     
     @JsonProperty("ModelCardVersion")
     public Long modelCardVersion;
+
     public ModelCardVersionSummary withModelCardVersion(Long modelCardVersion) {
         this.modelCardVersion = modelCardVersion;
         return this;
     }
     
+    public ModelCardVersionSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ModelCardArn") String modelCardArn, @JsonProperty("ModelCardName") String modelCardName, @JsonProperty("ModelCardStatus") ModelCardStatusEnum modelCardStatus, @JsonProperty("ModelCardVersion") Long modelCardVersion) {
+        this.creationTime = creationTime;
+        this.modelCardArn = modelCardArn;
+        this.modelCardName = modelCardName;
+        this.modelCardStatus = modelCardStatus;
+        this.modelCardVersion = modelCardVersion;
+  }
 }

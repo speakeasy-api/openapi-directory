@@ -15,9 +15,13 @@ public class BindtoanotherskuRequestBody {
      */
     @JsonProperty("StockKeepingUnitId")
     public Integer stockKeepingUnitId;
+
     public BindtoanotherskuRequestBody withStockKeepingUnitId(Integer stockKeepingUnitId) {
         this.stockKeepingUnitId = stockKeepingUnitId;
         return this;
     }
     
+    public BindtoanotherskuRequestBody(@JsonProperty("StockKeepingUnitId") Integer stockKeepingUnitId) {
+        this.stockKeepingUnitId = stockKeepingUnitId;
+  }
 }

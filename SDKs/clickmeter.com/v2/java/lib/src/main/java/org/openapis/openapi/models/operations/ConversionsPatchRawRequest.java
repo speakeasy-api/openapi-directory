@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsPatchRawRequest {
@@ -12,6 +13,7 @@ public class ConversionsPatchRawRequest {
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public ConversionsPatchRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class ConversionsPatchRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
     public Long conversionId;
+
     public ConversionsPatchRawRequest withConversionId(Long conversionId) {
         this.conversionId = conversionId;
         return this;
     }
     
+    public ConversionsPatchRawRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("conversionId") Long conversionId) {
+        this.requestBody = requestBody;
+        this.conversionId = conversionId;
+  }
 }

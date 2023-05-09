@@ -16,13 +16,12 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.TravelimpactmodelFlightsComputeFlightEmissionsRequest;
 import org.openapis.openapi.models.operations.TravelimpactmodelFlightsComputeFlightEmissionsResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ComputeFlightEmissionsRequest;
-import org.openapis.openapi.models.shared.Flight;
 import org.openapis.openapi.models.shared.Date;
+import org.openapis.openapi.models.shared.Flight;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -32,7 +31,7 @@ public class Application {
                 .build();
 
             TravelimpactmodelFlightsComputeFlightEmissionsRequest req = new TravelimpactmodelFlightsComputeFlightEmissionsRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 computeFlightEmissionsRequest = new ComputeFlightEmissionsRequest() {{
                     flights = new org.openapis.openapi.models.shared.Flight[]{{
                         add(new Flight() {{
@@ -69,9 +68,9 @@ public class Application {
                             origin = "voluptatum";
                         }}),
                     }};
-                }};
+                }};;
                 accessToken = "iusto";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 callback = "nisi";
                 fields = "recusandae";
                 key = "temporibus";
@@ -80,16 +79,18 @@ public class Application {
                 quotaUser = "quis";
                 uploadType = "veritatis";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
             TravelimpactmodelFlightsComputeFlightEmissionsResponse res = sdk.flights.travelimpactmodelFlightsComputeFlightEmissions(req);
 
-            if (res.computeFlightEmissionsResponse.isPresent()) {
+            if (res.computeFlightEmissionsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -97,9 +98,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### flights
+### [flights](docs/flights/README.md)
 
-* `travelimpactmodelFlightsComputeFlightEmissions` - Stateless method to retrieve emission estimates. Details on how emission estimates are computed: https://github.com/google/travel-impact-model The response will contain all entries that match the input flight legs, in the same order. If there are no estimates available for a certain flight leg, the response will return the flight leg object with empty emission fields. The request will still be considered successful. Reasons for missing emission estimates include: - The flight is unknown to the server. - The input flight leg is missing one or more identifiers. - The flight date is in the past. - The aircraft type is not supported by the model. - Missing seat configuration. The request can contain up to 1000 flight legs. If the request has more than 1000 direct flights, if will fail with an INVALID_ARGUMENT error.
+* [travelimpactmodelFlightsComputeFlightEmissions](docs/flights/README.md#travelimpactmodelflightscomputeflightemissions) - Stateless method to retrieve emission estimates. Details on how emission estimates are computed: https://github.com/google/travel-impact-model The response will contain all entries that match the input flight legs, in the same order. If there are no estimates available for a certain flight leg, the response will return the flight leg object with empty emission fields. The request will still be considered successful. Reasons for missing emission estimates include: - The flight is unknown to the server. - The input flight leg is missing one or more identifiers. - The flight date is in the past. - The aircraft type is not supported by the model. - Missing seat configuration. The request can contain up to 1000 flight legs. If the request has more than 1000 direct flights, if will fail with an INVALID_ARGUMENT error.
 <!-- End SDK Available Operations -->
 
 ### Maturity

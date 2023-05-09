@@ -12,6 +12,7 @@ public class NASetpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setpoint_endtime")
     public Integer setpointEndtime;
+
     public NASetpoint withSetpointEndtime(Integer setpointEndtime) {
         this.setpointEndtime = setpointEndtime;
         return this;
@@ -20,6 +21,7 @@ public class NASetpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setpoint_mode")
     public String setpointMode;
+
     public NASetpoint withSetpointMode(String setpointMode) {
         this.setpointMode = setpointMode;
         return this;
@@ -28,9 +30,11 @@ public class NASetpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setpoint_temp")
     public Float setpointTemp;
+
     public NASetpoint withSetpointTemp(Float setpointTemp) {
         this.setpointTemp = setpointTemp;
         return this;
     }
     
+    public NASetpoint(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSettlementsRequest {
@@ -13,6 +14,7 @@ public class ListSettlementsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batch_token")
     public String batchToken;
+
     public ListSettlementsRequest withBatchToken(String batchToken) {
         this.batchToken = batchToken;
         return this;
@@ -23,6 +25,7 @@ public class ListSettlementsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
     public String beginTime;
+
     public ListSettlementsRequest withBeginTime(String beginTime) {
         this.beginTime = beginTime;
         return this;
@@ -33,6 +36,7 @@ public class ListSettlementsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
     public String endTime;
+
     public ListSettlementsRequest withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -43,6 +47,7 @@ public class ListSettlementsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListSettlementsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -53,6 +58,7 @@ public class ListSettlementsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
     public String locationId;
+
     public ListSettlementsRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -63,6 +69,7 @@ public class ListSettlementsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public String order;
+
     public ListSettlementsRequest withOrder(String order) {
         this.order = order;
         return this;
@@ -73,9 +80,13 @@ public class ListSettlementsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public ListSettlementsRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ListSettlementsRequest(@JsonProperty("location_id") String locationId) {
+        this.locationId = locationId;
+  }
 }

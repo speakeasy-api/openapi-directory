@@ -18,6 +18,7 @@ public class Activities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public DimensionValue[] filters;
+
     public Activities withFilters(DimensionValue[] filters) {
         this.filters = filters;
         return this;
@@ -29,6 +30,7 @@ public class Activities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Activities withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class Activities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricNames")
     public String[] metricNames;
+
     public Activities withMetricNames(String[] metricNames) {
         this.metricNames = metricNames;
         return this;
     }
     
+    public Activities(){}
 }

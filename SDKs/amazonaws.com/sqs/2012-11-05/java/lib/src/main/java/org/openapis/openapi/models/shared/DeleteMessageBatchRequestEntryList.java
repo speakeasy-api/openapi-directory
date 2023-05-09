@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteMessageBatchRequestEntryList - Encloses a receipt handle and an identifier for it.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteMessageBatchRequestEntryList {
     
     public String id;
+
     public DeleteMessageBatchRequestEntryList withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class DeleteMessageBatchRequestEntryList {
     
     
     public String receiptHandle;
+
     public DeleteMessageBatchRequestEntryList withReceiptHandle(String receiptHandle) {
         this.receiptHandle = receiptHandle;
         return this;
     }
     
+    public DeleteMessageBatchRequestEntryList(@JsonProperty("Id") String id, @JsonProperty("ReceiptHandle") String receiptHandle) {
+        this.id = id;
+        this.receiptHandle = receiptHandle;
+  }
 }

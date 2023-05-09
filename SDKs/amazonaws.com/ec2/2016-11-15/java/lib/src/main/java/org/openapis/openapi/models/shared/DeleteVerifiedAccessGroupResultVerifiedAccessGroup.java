@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * DeleteVerifiedAccessGroupResultVerifiedAccessGroup - The ID of the Amazon Web Services Verified Access group.
+ * DeleteVerifiedAccessGroupResultVerifiedAccessGroup - The ID of the Verified Access group.
  */
 public class DeleteVerifiedAccessGroupResultVerifiedAccessGroup {
     
     public String creationTime;
+
     public DeleteVerifiedAccessGroupResultVerifiedAccessGroup withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class DeleteVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String deletionTime;
+
     public DeleteVerifiedAccessGroupResultVerifiedAccessGroup withDeletionTime(String deletionTime) {
         this.deletionTime = deletionTime;
         return this;
@@ -26,6 +28,7 @@ public class DeleteVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String description;
+
     public DeleteVerifiedAccessGroupResultVerifiedAccessGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class DeleteVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String lastUpdatedTime;
+
     public DeleteVerifiedAccessGroupResultVerifiedAccessGroup withLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -40,6 +44,7 @@ public class DeleteVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String owner;
+
     public DeleteVerifiedAccessGroupResultVerifiedAccessGroup withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -47,6 +52,7 @@ public class DeleteVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public DeleteVerifiedAccessGroupResultVerifiedAccessGroupTags[] tags;
+
     public DeleteVerifiedAccessGroupResultVerifiedAccessGroup withTags(DeleteVerifiedAccessGroupResultVerifiedAccessGroupTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,6 +60,7 @@ public class DeleteVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String verifiedAccessGroupArn;
+
     public DeleteVerifiedAccessGroupResultVerifiedAccessGroup withVerifiedAccessGroupArn(String verifiedAccessGroupArn) {
         this.verifiedAccessGroupArn = verifiedAccessGroupArn;
         return this;
@@ -61,6 +68,7 @@ public class DeleteVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String verifiedAccessGroupId;
+
     public DeleteVerifiedAccessGroupResultVerifiedAccessGroup withVerifiedAccessGroupId(String verifiedAccessGroupId) {
         this.verifiedAccessGroupId = verifiedAccessGroupId;
         return this;
@@ -68,9 +76,11 @@ public class DeleteVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String verifiedAccessInstanceId;
+
     public DeleteVerifiedAccessGroupResultVerifiedAccessGroup withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
     }
     
+    public DeleteVerifiedAccessGroupResultVerifiedAccessGroup(){}
 }

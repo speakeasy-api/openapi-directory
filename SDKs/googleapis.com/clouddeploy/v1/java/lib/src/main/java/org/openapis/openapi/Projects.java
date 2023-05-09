@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesListResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesListResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesListResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesListResponse(contentType, httpRes.statusCode()) {{
             listDeliveryPipelinesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonResponse(contentType, httpRes.statusCode()) {{
             abandonReleaseResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreateResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreateResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreateResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesListResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesListResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesListResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesListResponse(contentType, httpRes.statusCode()) {{
             listReleasesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceResponse(contentType, httpRes.statusCode()) {{
             advanceRolloutResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,11 +334,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveResponse(contentType, httpRes.statusCode()) {{
             approveRolloutResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -394,11 +380,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreateResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreateResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreateResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -442,11 +426,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobResponse(contentType, httpRes.statusCode()) {{
             ignoreJobResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -488,11 +470,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListResponse(contentType, httpRes.statusCode()) {{
             listJobRunsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -536,11 +516,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminateResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminateResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminateResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminateResponse(contentType, httpRes.statusCode()) {{
             terminateJobRunResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -582,11 +560,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsListResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsListResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsListResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsListResponse(contentType, httpRes.statusCode()) {{
             listRolloutsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -630,11 +606,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsRetryJobResponse(contentType, httpRes.statusCode()) {{
             retryJobResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -676,11 +650,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -724,11 +696,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -770,11 +740,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -818,11 +786,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsCreateResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsCreateResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsCreateResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -864,11 +830,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsDeleteResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsDeleteResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -910,11 +874,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsGetResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsGetResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsGetResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsGetResponse(contentType, httpRes.statusCode()) {{
             target = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -956,11 +918,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1002,11 +962,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsListResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsListResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsListResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsListResponse(contentType, httpRes.statusCode()) {{
             listTargetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1050,11 +1008,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsPatchResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsPatchResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsPatchResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1098,11 +1054,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1146,11 +1100,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ClouddeployProjectsLocationsTargetsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

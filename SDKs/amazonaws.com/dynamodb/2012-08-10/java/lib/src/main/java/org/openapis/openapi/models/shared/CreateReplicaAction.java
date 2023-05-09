@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateReplicaAction {
     @JsonProperty("RegionName")
     public String regionName;
+
     public CreateReplicaAction withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
     }
     
+    public CreateReplicaAction(@JsonProperty("RegionName") String regionName) {
+        this.regionName = regionName;
+  }
 }

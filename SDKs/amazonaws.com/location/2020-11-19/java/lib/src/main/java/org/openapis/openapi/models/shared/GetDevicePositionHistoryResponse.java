@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDevicePositionHistoryResponse {
     @JsonProperty("DevicePositions")
     public DevicePosition[] devicePositions;
+
     public GetDevicePositionHistoryResponse withDevicePositions(DevicePosition[] devicePositions) {
         this.devicePositions = devicePositions;
         return this;
@@ -22,9 +23,13 @@ public class GetDevicePositionHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetDevicePositionHistoryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetDevicePositionHistoryResponse(@JsonProperty("DevicePositions") DevicePosition[] devicePositions) {
+        this.devicePositions = devicePositions;
+  }
 }

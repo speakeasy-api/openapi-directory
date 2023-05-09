@@ -18,6 +18,7 @@ public class RulesetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public Metadata metadata;
+
     public RulesetInput withMetadata(Metadata metadata) {
         this.metadata = metadata;
         return this;
@@ -29,9 +30,11 @@ public class RulesetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public RulesetInput withSource(Source source) {
         this.source = source;
         return this;
     }
     
+    public RulesetInput(){}
 }

@@ -18,6 +18,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Model withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetId")
     public String datasetId;
+
     public Model withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -40,6 +42,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentState")
     public ModelDeploymentStateEnum deploymentState;
+
     public Model withDeploymentState(ModelDeploymentStateEnum deploymentState) {
         this.deploymentState = deploymentState;
         return this;
@@ -51,6 +54,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Model withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageClassificationModelMetadata")
     public ImageClassificationModelMetadata imageClassificationModelMetadata;
+
     public Model withImageClassificationModelMetadata(ImageClassificationModelMetadata imageClassificationModelMetadata) {
         this.imageClassificationModelMetadata = imageClassificationModelMetadata;
         return this;
@@ -73,6 +78,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageObjectDetectionModelMetadata")
     public ImageObjectDetectionModelMetadata imageObjectDetectionModelMetadata;
+
     public Model withImageObjectDetectionModelMetadata(ImageObjectDetectionModelMetadata imageObjectDetectionModelMetadata) {
         this.imageObjectDetectionModelMetadata = imageObjectDetectionModelMetadata;
         return this;
@@ -84,6 +90,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Model withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tablesModelMetadata")
     public TablesModelMetadata tablesModelMetadata;
+
     public Model withTablesModelMetadata(TablesModelMetadata tablesModelMetadata) {
         this.tablesModelMetadata = tablesModelMetadata;
         return this;
@@ -106,6 +114,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textClassificationModelMetadata")
     public TextClassificationModelMetadata textClassificationModelMetadata;
+
     public Model withTextClassificationModelMetadata(TextClassificationModelMetadata textClassificationModelMetadata) {
         this.textClassificationModelMetadata = textClassificationModelMetadata;
         return this;
@@ -117,6 +126,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textExtractionModelMetadata")
     public TextExtractionModelMetadata textExtractionModelMetadata;
+
     public Model withTextExtractionModelMetadata(TextExtractionModelMetadata textExtractionModelMetadata) {
         this.textExtractionModelMetadata = textExtractionModelMetadata;
         return this;
@@ -128,6 +138,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textSentimentModelMetadata")
     public java.util.Map<String, Object> textSentimentModelMetadata;
+
     public Model withTextSentimentModelMetadata(java.util.Map<String, Object> textSentimentModelMetadata) {
         this.textSentimentModelMetadata = textSentimentModelMetadata;
         return this;
@@ -139,6 +150,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainExampleCount")
     public Integer trainExampleCount;
+
     public Model withTrainExampleCount(Integer trainExampleCount) {
         this.trainExampleCount = trainExampleCount;
         return this;
@@ -150,6 +162,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translationModelMetadata")
     public TranslationModelMetadata translationModelMetadata;
+
     public Model withTranslationModelMetadata(TranslationModelMetadata translationModelMetadata) {
         this.translationModelMetadata = translationModelMetadata;
         return this;
@@ -161,6 +174,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Model withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -172,6 +186,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateExampleCount")
     public Integer validateExampleCount;
+
     public Model withValidateExampleCount(Integer validateExampleCount) {
         this.validateExampleCount = validateExampleCount;
         return this;
@@ -183,6 +198,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoClassificationModelMetadata")
     public java.util.Map<String, Object> videoClassificationModelMetadata;
+
     public Model withVideoClassificationModelMetadata(java.util.Map<String, Object> videoClassificationModelMetadata) {
         this.videoClassificationModelMetadata = videoClassificationModelMetadata;
         return this;
@@ -194,9 +210,11 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoObjectTrackingModelMetadata")
     public java.util.Map<String, Object> videoObjectTrackingModelMetadata;
+
     public Model withVideoObjectTrackingModelMetadata(java.util.Map<String, Object> videoObjectTrackingModelMetadata) {
         this.videoObjectTrackingModelMetadata = videoObjectTrackingModelMetadata;
         return this;
     }
     
+    public Model(){}
 }

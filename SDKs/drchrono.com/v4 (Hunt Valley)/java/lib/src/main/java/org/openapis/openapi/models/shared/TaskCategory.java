@@ -15,6 +15,7 @@ public class TaskCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public TaskCategory withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -23,6 +24,7 @@ public class TaskCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public TaskCategory withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +33,7 @@ public class TaskCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TaskCategory withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class TaskCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_global")
     public String isGlobal;
+
     public TaskCategory withIsGlobal(String isGlobal) {
         this.isGlobal = isGlobal;
         return this;
@@ -49,6 +53,7 @@ public class TaskCategory {
     
     @JsonProperty("name")
     public String name;
+
     public TaskCategory withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +61,7 @@ public class TaskCategory {
     
     @JsonProperty("practice_group")
     public Long practiceGroup;
+
     public TaskCategory withPracticeGroup(Long practiceGroup) {
         this.practiceGroup = practiceGroup;
         return this;
@@ -64,9 +70,14 @@ public class TaskCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public TaskCategory withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public TaskCategory(@JsonProperty("name") String name, @JsonProperty("practice_group") Long practiceGroup) {
+        this.name = name;
+        this.practiceGroup = practiceGroup;
+  }
 }

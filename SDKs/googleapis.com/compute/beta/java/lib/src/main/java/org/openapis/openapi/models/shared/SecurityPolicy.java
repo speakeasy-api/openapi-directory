@@ -18,6 +18,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adaptiveProtectionConfig")
     public SecurityPolicyAdaptiveProtectionConfig adaptiveProtectionConfig;
+
     public SecurityPolicy withAdaptiveProtectionConfig(SecurityPolicyAdaptiveProtectionConfig adaptiveProtectionConfig) {
         this.adaptiveProtectionConfig = adaptiveProtectionConfig;
         return this;
@@ -26,6 +27,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advancedOptionsConfig")
     public SecurityPolicyAdvancedOptionsConfig advancedOptionsConfig;
+
     public SecurityPolicy withAdvancedOptionsConfig(SecurityPolicyAdvancedOptionsConfig advancedOptionsConfig) {
         this.advancedOptionsConfig = advancedOptionsConfig;
         return this;
@@ -37,6 +39,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associations")
     public SecurityPolicyAssociation[] associations;
+
     public SecurityPolicy withAssociations(SecurityPolicyAssociation[] associations) {
         this.associations = associations;
         return this;
@@ -48,6 +51,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public SecurityPolicy withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -56,6 +60,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ddosProtectionConfig")
     public SecurityPolicyDdosProtectionConfig ddosProtectionConfig;
+
     public SecurityPolicy withDdosProtectionConfig(SecurityPolicyDdosProtectionConfig ddosProtectionConfig) {
         this.ddosProtectionConfig = ddosProtectionConfig;
         return this;
@@ -67,6 +72,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SecurityPolicy withDescription(String description) {
         this.description = description;
         return this;
@@ -78,6 +84,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SecurityPolicy withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -89,6 +96,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public SecurityPolicy withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -100,6 +108,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SecurityPolicy withId(String id) {
         this.id = id;
         return this;
@@ -111,6 +120,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SecurityPolicy withKind(String kind) {
         this.kind = kind;
         return this;
@@ -122,6 +132,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public SecurityPolicy withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -133,6 +144,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public SecurityPolicy withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -144,6 +156,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SecurityPolicy withName(String name) {
         this.name = name;
         return this;
@@ -155,6 +168,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public SecurityPolicy withParent(String parent) {
         this.parent = parent;
         return this;
@@ -163,6 +177,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recaptchaOptionsConfig")
     public SecurityPolicyRecaptchaOptionsConfig recaptchaOptionsConfig;
+
     public SecurityPolicy withRecaptchaOptionsConfig(SecurityPolicyRecaptchaOptionsConfig recaptchaOptionsConfig) {
         this.recaptchaOptionsConfig = recaptchaOptionsConfig;
         return this;
@@ -174,6 +189,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public SecurityPolicy withRegion(String region) {
         this.region = region;
         return this;
@@ -185,6 +201,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleTupleCount")
     public Integer ruleTupleCount;
+
     public SecurityPolicy withRuleTupleCount(Integer ruleTupleCount) {
         this.ruleTupleCount = ruleTupleCount;
         return this;
@@ -196,6 +213,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public SecurityPolicyRule[] rules;
+
     public SecurityPolicy withRules(SecurityPolicyRule[] rules) {
         this.rules = rules;
         return this;
@@ -207,6 +225,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public SecurityPolicy withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -218,6 +237,7 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public SecurityPolicy withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -229,9 +249,11 @@ public class SecurityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SecurityPolicyTypeEnum type;
+
     public SecurityPolicy withType(SecurityPolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SecurityPolicy(){}
 }

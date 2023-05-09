@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ListParticipantsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowV2ListParticipantsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2ListParticipantsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("participants")
     public GoogleCloudDialogflowV2Participant[] participants;
+
     public GoogleCloudDialogflowV2ListParticipantsResponse withParticipants(GoogleCloudDialogflowV2Participant[] participants) {
         this.participants = participants;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ListParticipantsResponse(){}
 }

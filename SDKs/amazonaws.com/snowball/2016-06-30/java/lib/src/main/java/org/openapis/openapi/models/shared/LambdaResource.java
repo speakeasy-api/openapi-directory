@@ -15,6 +15,7 @@ public class LambdaResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventTriggers")
     public EventTriggerDefinition[] eventTriggers;
+
     public LambdaResource withEventTriggers(EventTriggerDefinition[] eventTriggers) {
         this.eventTriggers = eventTriggers;
         return this;
@@ -23,9 +24,11 @@ public class LambdaResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LambdaArn")
     public String lambdaArn;
+
     public LambdaResource withLambdaArn(String lambdaArn) {
         this.lambdaArn = lambdaArn;
         return this;
     }
     
+    public LambdaResource(){}
 }

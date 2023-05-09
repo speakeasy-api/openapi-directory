@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestingProjectsTestMatricesCancelResponse {
@@ -12,6 +13,7 @@ public class TestingProjectsTestMatricesCancelResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelTestMatrixResponse cancelTestMatrixResponse;
+
     public TestingProjectsTestMatricesCancelResponse withCancelTestMatrixResponse(org.openapis.openapi.models.shared.CancelTestMatrixResponse cancelTestMatrixResponse) {
         this.cancelTestMatrixResponse = cancelTestMatrixResponse;
         return this;
@@ -19,6 +21,7 @@ public class TestingProjectsTestMatricesCancelResponse {
     
     
     public String contentType;
+
     public TestingProjectsTestMatricesCancelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class TestingProjectsTestMatricesCancelResponse {
     
     
     public Integer statusCode;
+
     public TestingProjectsTestMatricesCancelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TestingProjectsTestMatricesCancelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestingProjectsTestMatricesCancelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TestingProjectsTestMatricesCancelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

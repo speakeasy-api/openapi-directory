@@ -64,11 +64,9 @@ public class Tenant {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTenantTenantnameResponse res = new org.openapis.openapi.models.operations.GetTenantTenantnameResponse() {{
+        org.openapis.openapi.models.operations.GetTenantTenantnameResponse res = new org.openapis.openapi.models.operations.GetTenantTenantnameResponse(contentType, httpRes.statusCode()) {{
             getTenantTenantname200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

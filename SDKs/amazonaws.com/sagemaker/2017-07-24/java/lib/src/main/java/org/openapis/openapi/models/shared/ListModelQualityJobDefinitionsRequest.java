@@ -19,6 +19,7 @@ public class ListModelQualityJobDefinitionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListModelQualityJobDefinitionsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListModelQualityJobDefinitionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListModelQualityJobDefinitionsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListModelQualityJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public ListModelQualityJobDefinitionsRequest withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -45,6 +48,7 @@ public class ListModelQualityJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListModelQualityJobDefinitionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -53,6 +57,7 @@ public class ListModelQualityJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListModelQualityJobDefinitionsRequest withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -61,6 +66,7 @@ public class ListModelQualityJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListModelQualityJobDefinitionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -69,6 +75,7 @@ public class ListModelQualityJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public MonitoringJobDefinitionSortKeyEnum sortBy;
+
     public ListModelQualityJobDefinitionsRequest withSortBy(MonitoringJobDefinitionSortKeyEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -77,9 +84,11 @@ public class ListModelQualityJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListModelQualityJobDefinitionsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListModelQualityJobDefinitionsRequest(){}
 }

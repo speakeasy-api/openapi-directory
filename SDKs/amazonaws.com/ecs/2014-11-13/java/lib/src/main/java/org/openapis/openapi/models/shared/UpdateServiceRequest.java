@@ -12,6 +12,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityProviderStrategy")
     public CapacityProviderStrategyItem[] capacityProviderStrategy;
+
     public UpdateServiceRequest withCapacityProviderStrategy(CapacityProviderStrategyItem[] capacityProviderStrategy) {
         this.capacityProviderStrategy = capacityProviderStrategy;
         return this;
@@ -20,6 +21,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public UpdateServiceRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -28,6 +30,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentConfiguration")
     public DeploymentConfiguration deploymentConfiguration;
+
     public UpdateServiceRequest withDeploymentConfiguration(DeploymentConfiguration deploymentConfiguration) {
         this.deploymentConfiguration = deploymentConfiguration;
         return this;
@@ -36,6 +39,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredCount")
     public Long desiredCount;
+
     public UpdateServiceRequest withDesiredCount(Long desiredCount) {
         this.desiredCount = desiredCount;
         return this;
@@ -44,6 +48,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableECSManagedTags")
     public Boolean enableECSManagedTags;
+
     public UpdateServiceRequest withEnableECSManagedTags(Boolean enableECSManagedTags) {
         this.enableECSManagedTags = enableECSManagedTags;
         return this;
@@ -52,6 +57,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableExecuteCommand")
     public Boolean enableExecuteCommand;
+
     public UpdateServiceRequest withEnableExecuteCommand(Boolean enableExecuteCommand) {
         this.enableExecuteCommand = enableExecuteCommand;
         return this;
@@ -60,6 +66,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceNewDeployment")
     public Boolean forceNewDeployment;
+
     public UpdateServiceRequest withForceNewDeployment(Boolean forceNewDeployment) {
         this.forceNewDeployment = forceNewDeployment;
         return this;
@@ -68,6 +75,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheckGracePeriodSeconds")
     public Long healthCheckGracePeriodSeconds;
+
     public UpdateServiceRequest withHealthCheckGracePeriodSeconds(Long healthCheckGracePeriodSeconds) {
         this.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
         return this;
@@ -76,6 +84,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancers")
     public LoadBalancer[] loadBalancers;
+
     public UpdateServiceRequest withLoadBalancers(LoadBalancer[] loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
@@ -84,6 +93,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
+
     public UpdateServiceRequest withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -92,6 +102,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementConstraints")
     public PlacementConstraint[] placementConstraints;
+
     public UpdateServiceRequest withPlacementConstraints(PlacementConstraint[] placementConstraints) {
         this.placementConstraints = placementConstraints;
         return this;
@@ -100,6 +111,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementStrategy")
     public PlacementStrategy[] placementStrategy;
+
     public UpdateServiceRequest withPlacementStrategy(PlacementStrategy[] placementStrategy) {
         this.placementStrategy = placementStrategy;
         return this;
@@ -108,6 +120,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformVersion")
     public String platformVersion;
+
     public UpdateServiceRequest withPlatformVersion(String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
@@ -116,6 +129,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propagateTags")
     public PropagateTagsEnum propagateTags;
+
     public UpdateServiceRequest withPropagateTags(PropagateTagsEnum propagateTags) {
         this.propagateTags = propagateTags;
         return this;
@@ -123,6 +137,7 @@ public class UpdateServiceRequest {
     
     @JsonProperty("service")
     public String service;
+
     public UpdateServiceRequest withService(String service) {
         this.service = service;
         return this;
@@ -131,6 +146,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceConnectConfiguration")
     public ServiceConnectConfiguration serviceConnectConfiguration;
+
     public UpdateServiceRequest withServiceConnectConfiguration(ServiceConnectConfiguration serviceConnectConfiguration) {
         this.serviceConnectConfiguration = serviceConnectConfiguration;
         return this;
@@ -139,6 +155,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRegistries")
     public ServiceRegistry[] serviceRegistries;
+
     public UpdateServiceRequest withServiceRegistries(ServiceRegistry[] serviceRegistries) {
         this.serviceRegistries = serviceRegistries;
         return this;
@@ -147,9 +164,13 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskDefinition")
     public String taskDefinition;
+
     public UpdateServiceRequest withTaskDefinition(String taskDefinition) {
         this.taskDefinition = taskDefinition;
         return this;
     }
     
+    public UpdateServiceRequest(@JsonProperty("service") String service) {
+        this.service = service;
+  }
 }

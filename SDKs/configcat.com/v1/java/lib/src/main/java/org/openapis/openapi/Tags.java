@@ -61,12 +61,10 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTagResponse res = new org.openapis.openapi.models.operations.CreateTagResponse() {{
+        org.openapis.openapi.models.operations.CreateTagResponse res = new org.openapis.openapi.models.operations.CreateTagResponse(contentType, httpRes.statusCode()) {{
             tagModelHaljson = null;
             tagModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -109,10 +107,8 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTagResponse res = new org.openapis.openapi.models.operations.DeleteTagResponse() {{
+        org.openapis.openapi.models.operations.DeleteTagResponse res = new org.openapis.openapi.models.operations.DeleteTagResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -144,12 +140,10 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSettingsByTagResponse res = new org.openapis.openapi.models.operations.GetSettingsByTagResponse() {{
+        org.openapis.openapi.models.operations.GetSettingsByTagResponse res = new org.openapis.openapi.models.operations.GetSettingsByTagResponse(contentType, httpRes.statusCode()) {{
             settingModelHaljsons = null;
             settingModels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,12 +187,10 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTagResponse res = new org.openapis.openapi.models.operations.GetTagResponse() {{
+        org.openapis.openapi.models.operations.GetTagResponse res = new org.openapis.openapi.models.operations.GetTagResponse(contentType, httpRes.statusCode()) {{
             tagModelHaljson = null;
             tagModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,12 +234,10 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTagsResponse res = new org.openapis.openapi.models.operations.GetTagsResponse() {{
+        org.openapis.openapi.models.operations.GetTagsResponse res = new org.openapis.openapi.models.operations.GetTagsResponse(contentType, httpRes.statusCode()) {{
             tagModelHaljsons = null;
             tagModels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,12 +285,10 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTagResponse res = new org.openapis.openapi.models.operations.UpdateTagResponse() {{
+        org.openapis.openapi.models.operations.UpdateTagResponse res = new org.openapis.openapi.models.operations.UpdateTagResponse(contentType, httpRes.statusCode()) {{
             tagModelHaljson = null;
             tagModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class GooglePlayDeveloperReportingV1alpha1DimensionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public String dimension;
+
     public GooglePlayDeveloperReportingV1alpha1DimensionValue withDimension(String dimension) {
         this.dimension = dimension;
         return this;
@@ -29,6 +30,7 @@ public class GooglePlayDeveloperReportingV1alpha1DimensionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("int64Value")
     public String int64Value;
+
     public GooglePlayDeveloperReportingV1alpha1DimensionValue withInt64Value(String int64Value) {
         this.int64Value = int64Value;
         return this;
@@ -40,6 +42,7 @@ public class GooglePlayDeveloperReportingV1alpha1DimensionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public GooglePlayDeveloperReportingV1alpha1DimensionValue withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
@@ -51,9 +54,11 @@ public class GooglePlayDeveloperReportingV1alpha1DimensionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueLabel")
     public String valueLabel;
+
     public GooglePlayDeveloperReportingV1alpha1DimensionValue withValueLabel(String valueLabel) {
         this.valueLabel = valueLabel;
         return this;
     }
     
+    public GooglePlayDeveloperReportingV1alpha1DimensionValue(){}
 }

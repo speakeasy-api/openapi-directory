@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpnConnectionRequestOptions {
     
     public Boolean enableAcceleration;
+
     public CreateVpnConnectionRequestOptions withEnableAcceleration(Boolean enableAcceleration) {
         this.enableAcceleration = enableAcceleration;
         return this;
@@ -19,6 +20,7 @@ public class CreateVpnConnectionRequestOptions {
     
     
     public String localIpv4NetworkCidr;
+
     public CreateVpnConnectionRequestOptions withLocalIpv4NetworkCidr(String localIpv4NetworkCidr) {
         this.localIpv4NetworkCidr = localIpv4NetworkCidr;
         return this;
@@ -26,6 +28,7 @@ public class CreateVpnConnectionRequestOptions {
     
     
     public String localIpv6NetworkCidr;
+
     public CreateVpnConnectionRequestOptions withLocalIpv6NetworkCidr(String localIpv6NetworkCidr) {
         this.localIpv6NetworkCidr = localIpv6NetworkCidr;
         return this;
@@ -33,6 +36,7 @@ public class CreateVpnConnectionRequestOptions {
     
     
     public String outsideIpAddressType;
+
     public CreateVpnConnectionRequestOptions withOutsideIpAddressType(String outsideIpAddressType) {
         this.outsideIpAddressType = outsideIpAddressType;
         return this;
@@ -40,6 +44,7 @@ public class CreateVpnConnectionRequestOptions {
     
     
     public String remoteIpv4NetworkCidr;
+
     public CreateVpnConnectionRequestOptions withRemoteIpv4NetworkCidr(String remoteIpv4NetworkCidr) {
         this.remoteIpv4NetworkCidr = remoteIpv4NetworkCidr;
         return this;
@@ -47,6 +52,7 @@ public class CreateVpnConnectionRequestOptions {
     
     
     public String remoteIpv6NetworkCidr;
+
     public CreateVpnConnectionRequestOptions withRemoteIpv6NetworkCidr(String remoteIpv6NetworkCidr) {
         this.remoteIpv6NetworkCidr = remoteIpv6NetworkCidr;
         return this;
@@ -54,6 +60,7 @@ public class CreateVpnConnectionRequestOptions {
     
     
     public Boolean staticRoutesOnly;
+
     public CreateVpnConnectionRequestOptions withStaticRoutesOnly(Boolean staticRoutesOnly) {
         this.staticRoutesOnly = staticRoutesOnly;
         return this;
@@ -61,6 +68,7 @@ public class CreateVpnConnectionRequestOptions {
     
     
     public String transportTransitGatewayAttachmentId;
+
     public CreateVpnConnectionRequestOptions withTransportTransitGatewayAttachmentId(String transportTransitGatewayAttachmentId) {
         this.transportTransitGatewayAttachmentId = transportTransitGatewayAttachmentId;
         return this;
@@ -68,6 +76,7 @@ public class CreateVpnConnectionRequestOptions {
     
     
     public TunnelInsideIpVersionEnum tunnelInsideIpVersion;
+
     public CreateVpnConnectionRequestOptions withTunnelInsideIpVersion(TunnelInsideIpVersionEnum tunnelInsideIpVersion) {
         this.tunnelInsideIpVersion = tunnelInsideIpVersion;
         return this;
@@ -75,9 +84,11 @@ public class CreateVpnConnectionRequestOptions {
     
     
     public VpnTunnelOptionsSpecification[] tunnelOptions;
+
     public CreateVpnConnectionRequestOptions withTunnelOptions(VpnTunnelOptionsSpecification[] tunnelOptions) {
         this.tunnelOptions = tunnelOptions;
         return this;
     }
     
+    public CreateVpnConnectionRequestOptions(){}
 }

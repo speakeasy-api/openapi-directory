@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetglobaltimeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getglobaltime200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetglobaltimeResponse.java
+docs/sdk/README.md
+docs/currentglobaltime/README.md
 USAGE.md

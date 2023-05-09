@@ -17,6 +17,7 @@ public class BookDepreciationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costLimit")
     public Double costLimit;
+
     public BookDepreciationDetail withCostLimit(Double costLimit) {
         this.costLimit = costLimit;
         return this;
@@ -28,6 +29,7 @@ public class BookDepreciationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentAccumDepreciationAmount")
     public Double currentAccumDepreciationAmount;
+
     public BookDepreciationDetail withCurrentAccumDepreciationAmount(Double currentAccumDepreciationAmount) {
         this.currentAccumDepreciationAmount = currentAccumDepreciationAmount;
         return this;
@@ -39,6 +41,7 @@ public class BookDepreciationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentCapitalGain")
     public Double currentCapitalGain;
+
     public BookDepreciationDetail withCurrentCapitalGain(Double currentCapitalGain) {
         this.currentCapitalGain = currentCapitalGain;
         return this;
@@ -50,6 +53,7 @@ public class BookDepreciationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentGainLoss")
     public Double currentGainLoss;
+
     public BookDepreciationDetail withCurrentGainLoss(Double currentGainLoss) {
         this.currentGainLoss = currentGainLoss;
         return this;
@@ -62,6 +66,7 @@ public class BookDepreciationDetail {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("depreciationStartDate")
     public LocalDate depreciationStartDate;
+
     public BookDepreciationDetail withDepreciationStartDate(LocalDate depreciationStartDate) {
         this.depreciationStartDate = depreciationStartDate;
         return this;
@@ -73,6 +78,7 @@ public class BookDepreciationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priorAccumDepreciationAmount")
     public Double priorAccumDepreciationAmount;
+
     public BookDepreciationDetail withPriorAccumDepreciationAmount(Double priorAccumDepreciationAmount) {
         this.priorAccumDepreciationAmount = priorAccumDepreciationAmount;
         return this;
@@ -84,9 +90,11 @@ public class BookDepreciationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("residualValue")
     public Double residualValue;
+
     public BookDepreciationDetail withResidualValue(Double residualValue) {
         this.residualValue = residualValue;
         return this;
     }
     
+    public BookDepreciationDetail(){}
 }

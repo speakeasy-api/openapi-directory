@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllInvestorsSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=x-api-key")
     public String apiSecretKey;
+
     public GetAllInvestorsSecurity withApiSecretKey(String apiSecretKey) {
         this.apiSecretKey = apiSecretKey;
         return this;
     }
     
+    public GetAllInvestorsSecurity(@JsonProperty("ApiSecretKey") String apiSecretKey) {
+        this.apiSecretKey = apiSecretKey;
+  }
 }

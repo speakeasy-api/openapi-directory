@@ -15,6 +15,7 @@ public class JobStatistics5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copied_logical_bytes")
     public String copiedLogicalBytes;
+
     public JobStatistics5 withCopiedLogicalBytes(String copiedLogicalBytes) {
         this.copiedLogicalBytes = copiedLogicalBytes;
         return this;
@@ -26,9 +27,11 @@ public class JobStatistics5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copied_rows")
     public String copiedRows;
+
     public JobStatistics5 withCopiedRows(String copiedRows) {
         this.copiedRows = copiedRows;
         return this;
     }
     
+    public JobStatistics5(){}
 }

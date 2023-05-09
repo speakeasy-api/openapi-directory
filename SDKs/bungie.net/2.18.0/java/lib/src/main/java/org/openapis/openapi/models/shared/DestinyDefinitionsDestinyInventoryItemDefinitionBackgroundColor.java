@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsDestinyInventoryItemDefinitionBackgroundColor {
     
     public String alpha;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionBackgroundColor withAlpha(String alpha) {
         this.alpha = alpha;
         return this;
@@ -19,6 +20,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionBackgroundColor {
     
     
     public String blue;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionBackgroundColor withBlue(String blue) {
         this.blue = blue;
         return this;
@@ -26,6 +28,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionBackgroundColor {
     
     
     public String green;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionBackgroundColor withGreen(String green) {
         this.green = green;
         return this;
@@ -33,9 +36,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionBackgroundColor {
     
     
     public String red;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionBackgroundColor withRed(String red) {
         this.red = red;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionBackgroundColor(){}
 }

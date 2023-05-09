@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RegistrationsViewOnlyLinksListViewOnlyLinks {
     /**
@@ -12,6 +12,7 @@ public class RegistrationsViewOnlyLinksListViewOnlyLinks {
      */
     
     public RegistrationsViewOnlyLinksListViewOnlyLinksAttributes attributes;
+
     public RegistrationsViewOnlyLinksListViewOnlyLinks withAttributes(RegistrationsViewOnlyLinksListViewOnlyLinksAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class RegistrationsViewOnlyLinksListViewOnlyLinks {
      */
     
     public String id;
+
     public RegistrationsViewOnlyLinksListViewOnlyLinks withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class RegistrationsViewOnlyLinksListViewOnlyLinks {
      */
     
     public RegistrationsViewOnlyLinksListViewOnlyLinksRelationships relationships;
+
     public RegistrationsViewOnlyLinksListViewOnlyLinks withRelationships(RegistrationsViewOnlyLinksListViewOnlyLinksRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -42,9 +45,16 @@ public class RegistrationsViewOnlyLinksListViewOnlyLinks {
      */
     
     public String type;
+
     public RegistrationsViewOnlyLinksListViewOnlyLinks withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RegistrationsViewOnlyLinksListViewOnlyLinks(@JsonProperty("attributes") RegistrationsViewOnlyLinksListViewOnlyLinksAttributes attributes, @JsonProperty("id") String id, @JsonProperty("relationships") RegistrationsViewOnlyLinksListViewOnlyLinksRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

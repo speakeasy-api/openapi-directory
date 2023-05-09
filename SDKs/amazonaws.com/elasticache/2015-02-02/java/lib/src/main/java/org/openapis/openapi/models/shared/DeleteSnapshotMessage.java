@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteSnapshotMessage - Represents the input of a &lt;code&gt;DeleteSnapshot&lt;/code&gt; operation.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteSnapshotMessage {
     
     public String snapshotName;
+
     public DeleteSnapshotMessage withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
     }
     
+    public DeleteSnapshotMessage(@JsonProperty("SnapshotName") String snapshotName) {
+        this.snapshotName = snapshotName;
+  }
 }

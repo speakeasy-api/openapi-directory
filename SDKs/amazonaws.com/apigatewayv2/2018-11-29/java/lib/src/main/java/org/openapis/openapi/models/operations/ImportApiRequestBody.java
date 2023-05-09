@@ -12,9 +12,13 @@ public class ImportApiRequestBody {
      */
     @JsonProperty("body")
     public String body;
+
     public ImportApiRequestBody withBody(String body) {
         this.body = body;
         return this;
     }
     
+    public ImportApiRequestBody(@JsonProperty("body") String body) {
+        this.body = body;
+  }
 }

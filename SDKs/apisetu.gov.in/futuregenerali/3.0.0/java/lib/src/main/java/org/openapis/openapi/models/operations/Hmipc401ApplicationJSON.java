@@ -15,6 +15,7 @@ public class Hmipc401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Hmipc401ApplicationJSONErrorEnum error;
+
     public Hmipc401ApplicationJSON withError(Hmipc401ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Hmipc401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Hmipc401ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Hmipc401ApplicationJSON withErrorDescription(Hmipc401ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Hmipc401ApplicationJSON(){}
 }

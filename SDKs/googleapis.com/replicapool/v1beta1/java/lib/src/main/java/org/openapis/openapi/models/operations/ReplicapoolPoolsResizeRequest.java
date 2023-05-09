@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReplicapoolPoolsResizeRequest {
@@ -12,6 +13,7 @@ public class ReplicapoolPoolsResizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ReplicapoolPoolsResizeRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class ReplicapoolPoolsResizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ReplicapoolPoolsResizeRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class ReplicapoolPoolsResizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ReplicapoolPoolsResizeRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +46,7 @@ public class ReplicapoolPoolsResizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=numReplicas")
     public Long numReplicas;
+
     public ReplicapoolPoolsResizeRequest withNumReplicas(Long numReplicas) {
         this.numReplicas = numReplicas;
         return this;
@@ -52,6 +57,7 @@ public class ReplicapoolPoolsResizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ReplicapoolPoolsResizeRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +68,7 @@ public class ReplicapoolPoolsResizeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolName")
     public String poolName;
+
     public ReplicapoolPoolsResizeRequest withPoolName(String poolName) {
         this.poolName = poolName;
         return this;
@@ -72,6 +79,7 @@ public class ReplicapoolPoolsResizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ReplicapoolPoolsResizeRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class ReplicapoolPoolsResizeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectName")
     public String projectName;
+
     public ReplicapoolPoolsResizeRequest withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -92,6 +101,7 @@ public class ReplicapoolPoolsResizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ReplicapoolPoolsResizeRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -102,6 +112,7 @@ public class ReplicapoolPoolsResizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ReplicapoolPoolsResizeRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -112,9 +123,15 @@ public class ReplicapoolPoolsResizeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
     public String zone;
+
     public ReplicapoolPoolsResizeRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ReplicapoolPoolsResizeRequest(@JsonProperty("poolName") String poolName, @JsonProperty("projectName") String projectName, @JsonProperty("zone") String zone) {
+        this.poolName = poolName;
+        this.projectName = projectName;
+        this.zone = zone;
+  }
 }

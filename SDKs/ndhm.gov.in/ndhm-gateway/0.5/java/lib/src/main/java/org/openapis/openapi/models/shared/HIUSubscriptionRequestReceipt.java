@@ -17,6 +17,7 @@ public class HIUSubscriptionRequestReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public HIUSubscriptionRequestReceipt withError(Error error) {
         this.error = error;
         return this;
@@ -27,6 +28,7 @@ public class HIUSubscriptionRequestReceipt {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public HIUSubscriptionRequestReceipt withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -34,6 +36,7 @@ public class HIUSubscriptionRequestReceipt {
     
     @JsonProperty("resp")
     public RequestReference resp;
+
     public HIUSubscriptionRequestReceipt withResp(RequestReference resp) {
         this.resp = resp;
         return this;
@@ -42,6 +45,7 @@ public class HIUSubscriptionRequestReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionRequest")
     public HIUSubscriptionRequestReceiptSubscriptionRequest subscriptionRequest;
+
     public HIUSubscriptionRequestReceipt withSubscriptionRequest(HIUSubscriptionRequestReceiptSubscriptionRequest subscriptionRequest) {
         this.subscriptionRequest = subscriptionRequest;
         return this;
@@ -54,9 +58,15 @@ public class HIUSubscriptionRequestReceipt {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public HIUSubscriptionRequestReceipt withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public HIUSubscriptionRequestReceipt(@JsonProperty("requestId") String requestId, @JsonProperty("resp") RequestReference resp, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.requestId = requestId;
+        this.resp = resp;
+        this.timestamp = timestamp;
+  }
 }

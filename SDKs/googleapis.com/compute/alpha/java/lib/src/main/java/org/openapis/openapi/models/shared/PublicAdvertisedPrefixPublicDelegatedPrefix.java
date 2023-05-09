@@ -18,6 +18,7 @@ public class PublicAdvertisedPrefixPublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipRange")
     public String ipRange;
+
     public PublicAdvertisedPrefixPublicDelegatedPrefix withIpRange(String ipRange) {
         this.ipRange = ipRange;
         return this;
@@ -29,6 +30,7 @@ public class PublicAdvertisedPrefixPublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PublicAdvertisedPrefixPublicDelegatedPrefix withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class PublicAdvertisedPrefixPublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public PublicAdvertisedPrefixPublicDelegatedPrefix withProject(String project) {
         this.project = project;
         return this;
@@ -51,6 +54,7 @@ public class PublicAdvertisedPrefixPublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public PublicAdvertisedPrefixPublicDelegatedPrefix withRegion(String region) {
         this.region = region;
         return this;
@@ -62,9 +66,11 @@ public class PublicAdvertisedPrefixPublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public PublicAdvertisedPrefixPublicDelegatedPrefix withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public PublicAdvertisedPrefixPublicDelegatedPrefix(){}
 }

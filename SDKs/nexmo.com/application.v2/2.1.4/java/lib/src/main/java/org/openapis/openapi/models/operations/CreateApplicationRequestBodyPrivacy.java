@@ -18,9 +18,11 @@ public class CreateApplicationRequestBodyPrivacy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("improve_ai")
     public Boolean improveAi;
+
     public CreateApplicationRequestBodyPrivacy withImproveAi(Boolean improveAi) {
         this.improveAi = improveAi;
         return this;
     }
     
+    public CreateApplicationRequestBodyPrivacy(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVolumesFsNameJsonResponse {
     
     public String contentType;
+
     public GetVolumesFsNameJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetVolumesFsNameJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFileshareDetails[] getFileshareDetails;
+
     public GetVolumesFsNameJsonResponse withGetFileshareDetails(org.openapis.openapi.models.shared.GetFileshareDetails[] getFileshareDetails) {
         this.getFileshareDetails = getFileshareDetails;
         return this;
@@ -26,6 +29,7 @@ public class GetVolumesFsNameJsonResponse {
     
     
     public Integer statusCode;
+
     public GetVolumesFsNameJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetVolumesFsNameJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVolumesFsNameJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetVolumesFsNameJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

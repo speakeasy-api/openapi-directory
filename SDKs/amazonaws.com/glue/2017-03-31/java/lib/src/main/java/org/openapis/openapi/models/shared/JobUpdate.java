@@ -15,6 +15,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllocatedCapacity")
     public Long allocatedCapacity;
+
     public JobUpdate withAllocatedCapacity(Long allocatedCapacity) {
         this.allocatedCapacity = allocatedCapacity;
         return this;
@@ -23,6 +24,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeGenConfigurationNodes")
     public java.util.Map<String, CodeGenConfigurationNode> codeGenConfigurationNodes;
+
     public JobUpdate withCodeGenConfigurationNodes(java.util.Map<String, CodeGenConfigurationNode> codeGenConfigurationNodes) {
         this.codeGenConfigurationNodes = codeGenConfigurationNodes;
         return this;
@@ -31,6 +33,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Command")
     public JobCommand command;
+
     public JobUpdate withCommand(JobCommand command) {
         this.command = command;
         return this;
@@ -39,6 +42,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Connections")
     public ConnectionsList connections;
+
     public JobUpdate withConnections(ConnectionsList connections) {
         this.connections = connections;
         return this;
@@ -47,6 +51,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultArguments")
     public java.util.Map<String, String> defaultArguments;
+
     public JobUpdate withDefaultArguments(java.util.Map<String, String> defaultArguments) {
         this.defaultArguments = defaultArguments;
         return this;
@@ -55,6 +60,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public JobUpdate withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +69,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionClass")
     public ExecutionClassEnum executionClass;
+
     public JobUpdate withExecutionClass(ExecutionClassEnum executionClass) {
         this.executionClass = executionClass;
         return this;
@@ -71,6 +78,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionProperty")
     public ExecutionProperty executionProperty;
+
     public JobUpdate withExecutionProperty(ExecutionProperty executionProperty) {
         this.executionProperty = executionProperty;
         return this;
@@ -79,6 +87,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlueVersion")
     public String glueVersion;
+
     public JobUpdate withGlueVersion(String glueVersion) {
         this.glueVersion = glueVersion;
         return this;
@@ -87,6 +96,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogUri")
     public String logUri;
+
     public JobUpdate withLogUri(String logUri) {
         this.logUri = logUri;
         return this;
@@ -95,6 +105,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCapacity")
     public Double maxCapacity;
+
     public JobUpdate withMaxCapacity(Double maxCapacity) {
         this.maxCapacity = maxCapacity;
         return this;
@@ -103,6 +114,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRetries")
     public Long maxRetries;
+
     public JobUpdate withMaxRetries(Long maxRetries) {
         this.maxRetries = maxRetries;
         return this;
@@ -111,6 +123,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonOverridableArguments")
     public java.util.Map<String, String> nonOverridableArguments;
+
     public JobUpdate withNonOverridableArguments(java.util.Map<String, String> nonOverridableArguments) {
         this.nonOverridableArguments = nonOverridableArguments;
         return this;
@@ -119,6 +132,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationProperty")
     public NotificationProperty notificationProperty;
+
     public JobUpdate withNotificationProperty(NotificationProperty notificationProperty) {
         this.notificationProperty = notificationProperty;
         return this;
@@ -127,6 +141,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfWorkers")
     public Long numberOfWorkers;
+
     public JobUpdate withNumberOfWorkers(Long numberOfWorkers) {
         this.numberOfWorkers = numberOfWorkers;
         return this;
@@ -135,6 +150,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Role")
     public String role;
+
     public JobUpdate withRole(String role) {
         this.role = role;
         return this;
@@ -143,6 +159,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfiguration")
     public String securityConfiguration;
+
     public JobUpdate withSecurityConfiguration(String securityConfiguration) {
         this.securityConfiguration = securityConfiguration;
         return this;
@@ -151,6 +168,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceControlDetails")
     public SourceControlDetails sourceControlDetails;
+
     public JobUpdate withSourceControlDetails(SourceControlDetails sourceControlDetails) {
         this.sourceControlDetails = sourceControlDetails;
         return this;
@@ -159,6 +177,7 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeout")
     public Long timeout;
+
     public JobUpdate withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
@@ -167,9 +186,11 @@ public class JobUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkerType")
     public WorkerTypeEnum workerType;
+
     public JobUpdate withWorkerType(WorkerTypeEnum workerType) {
         this.workerType = workerType;
         return this;
     }
     
+    public JobUpdate(){}
 }

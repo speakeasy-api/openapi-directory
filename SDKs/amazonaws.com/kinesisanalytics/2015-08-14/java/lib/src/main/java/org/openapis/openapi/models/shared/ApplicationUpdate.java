@@ -15,6 +15,7 @@ public class ApplicationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationCodeUpdate")
     public String applicationCodeUpdate;
+
     public ApplicationUpdate withApplicationCodeUpdate(String applicationCodeUpdate) {
         this.applicationCodeUpdate = applicationCodeUpdate;
         return this;
@@ -23,6 +24,7 @@ public class ApplicationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptionUpdates")
     public CloudWatchLoggingOptionUpdate[] cloudWatchLoggingOptionUpdates;
+
     public ApplicationUpdate withCloudWatchLoggingOptionUpdates(CloudWatchLoggingOptionUpdate[] cloudWatchLoggingOptionUpdates) {
         this.cloudWatchLoggingOptionUpdates = cloudWatchLoggingOptionUpdates;
         return this;
@@ -31,6 +33,7 @@ public class ApplicationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputUpdates")
     public InputUpdate[] inputUpdates;
+
     public ApplicationUpdate withInputUpdates(InputUpdate[] inputUpdates) {
         this.inputUpdates = inputUpdates;
         return this;
@@ -39,6 +42,7 @@ public class ApplicationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputUpdates")
     public OutputUpdate[] outputUpdates;
+
     public ApplicationUpdate withOutputUpdates(OutputUpdate[] outputUpdates) {
         this.outputUpdates = outputUpdates;
         return this;
@@ -47,9 +51,11 @@ public class ApplicationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceDataSourceUpdates")
     public ReferenceDataSourceUpdate[] referenceDataSourceUpdates;
+
     public ApplicationUpdate withReferenceDataSourceUpdates(ReferenceDataSourceUpdate[] referenceDataSourceUpdates) {
         this.referenceDataSourceUpdates = referenceDataSourceUpdates;
         return this;
     }
     
+    public ApplicationUpdate(){}
 }

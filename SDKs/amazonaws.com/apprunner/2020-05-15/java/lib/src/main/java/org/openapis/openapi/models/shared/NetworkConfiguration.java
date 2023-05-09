@@ -15,6 +15,7 @@ public class NetworkConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EgressConfiguration")
     public EgressConfiguration egressConfiguration;
+
     public NetworkConfiguration withEgressConfiguration(EgressConfiguration egressConfiguration) {
         this.egressConfiguration = egressConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class NetworkConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IngressConfiguration")
     public IngressConfiguration ingressConfiguration;
+
     public NetworkConfiguration withIngressConfiguration(IngressConfiguration ingressConfiguration) {
         this.ingressConfiguration = ingressConfiguration;
         return this;
     }
     
+    public NetworkConfiguration(){}
 }

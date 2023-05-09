@@ -12,9 +12,13 @@ public class DescribeAuditStreamConfigurationRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public DescribeAuditStreamConfigurationRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
     }
     
+    public DescribeAuditStreamConfigurationRequestBody(@JsonProperty("FleetArn") String fleetArn) {
+        this.fleetArn = fleetArn;
+  }
 }

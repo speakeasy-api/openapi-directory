@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HyperParameterTuningJobWarmStartConfig {
     @JsonProperty("ParentHyperParameterTuningJobs")
     public ParentHyperParameterTuningJob[] parentHyperParameterTuningJobs;
+
     public HyperParameterTuningJobWarmStartConfig withParentHyperParameterTuningJobs(ParentHyperParameterTuningJob[] parentHyperParameterTuningJobs) {
         this.parentHyperParameterTuningJobs = parentHyperParameterTuningJobs;
         return this;
@@ -19,9 +20,14 @@ public class HyperParameterTuningJobWarmStartConfig {
     
     @JsonProperty("WarmStartType")
     public HyperParameterTuningJobWarmStartTypeEnum warmStartType;
+
     public HyperParameterTuningJobWarmStartConfig withWarmStartType(HyperParameterTuningJobWarmStartTypeEnum warmStartType) {
         this.warmStartType = warmStartType;
         return this;
     }
     
+    public HyperParameterTuningJobWarmStartConfig(@JsonProperty("ParentHyperParameterTuningJobs") ParentHyperParameterTuningJob[] parentHyperParameterTuningJobs, @JsonProperty("WarmStartType") HyperParameterTuningJobWarmStartTypeEnum warmStartType) {
+        this.parentHyperParameterTuningJobs = parentHyperParameterTuningJobs;
+        this.warmStartType = warmStartType;
+  }
 }

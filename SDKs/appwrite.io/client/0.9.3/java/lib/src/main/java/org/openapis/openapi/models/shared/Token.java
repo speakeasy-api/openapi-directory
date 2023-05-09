@@ -15,6 +15,7 @@ public class Token {
      */
     @JsonProperty("$id")
     public String dollarId;
+
     public Token withDollarId(String dollarId) {
         this.dollarId = dollarId;
         return this;
@@ -25,6 +26,7 @@ public class Token {
      */
     @JsonProperty("expire")
     public Integer expire;
+
     public Token withExpire(Integer expire) {
         this.expire = expire;
         return this;
@@ -35,6 +37,7 @@ public class Token {
      */
     @JsonProperty("secret")
     public String secret;
+
     public Token withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -45,9 +48,16 @@ public class Token {
      */
     @JsonProperty("userId")
     public String userId;
+
     public Token withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public Token(@JsonProperty("$id") String dollarId, @JsonProperty("expire") Integer expire, @JsonProperty("secret") String secret, @JsonProperty("userId") String userId) {
+        this.dollarId = dollarId;
+        this.expire = expire;
+        this.secret = secret;
+        this.userId = userId;
+  }
 }

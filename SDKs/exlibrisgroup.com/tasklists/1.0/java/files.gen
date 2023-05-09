@@ -149,4 +149,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/Onealmaws1v11taskLists1requ
 lib/src/main/java/org/openapis/openapi/models/shared/Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResource.java
 lib/src/main/java/org/openapis/openapi/models/shared/Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchema.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/lendingrequests/README.md
+docs/printouts/README.md
+docs/requestedresources/README.md
+docs/test/README.md
 USAGE.md

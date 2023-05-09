@@ -82,6 +82,7 @@ public class GoogleIamV1Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bindings")
     public GoogleIamV1Binding[] bindings;
+
     public GoogleIamV1Policy withBindings(GoogleIamV1Binding[] bindings) {
         this.bindings = bindings;
         return this;
@@ -104,6 +105,7 @@ public class GoogleIamV1Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleIamV1Policy withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -135,9 +137,11 @@ public class GoogleIamV1Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Integer version;
+
     public GoogleIamV1Policy withVersion(Integer version) {
         this.version = version;
         return this;
     }
     
+    public GoogleIamV1Policy(){}
 }

@@ -15,6 +15,7 @@ public class ActiveSubscriptionDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embed")
     public String embed;
+
     public ActiveSubscriptionDTO withEmbed(String embed) {
         this.embed = embed;
         return this;
@@ -26,6 +27,7 @@ public class ActiveSubscriptionDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public String event;
+
     public ActiveSubscriptionDTO withEvent(String event) {
         this.event = event;
         return this;
@@ -37,6 +39,7 @@ public class ActiveSubscriptionDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public ActiveSubscriptionDTO withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -48,6 +51,7 @@ public class ActiveSubscriptionDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionId")
     public String subscriptionId;
+
     public ActiveSubscriptionDTO withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -59,9 +63,11 @@ public class ActiveSubscriptionDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ActiveSubscriptionDTO withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ActiveSubscriptionDTO(){}
 }

@@ -21,6 +21,7 @@ public class GetQuantumTaskResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public GetQuantumTaskResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -28,6 +29,7 @@ public class GetQuantumTaskResponse {
     
     @JsonProperty("deviceArn")
     public String deviceArn;
+
     public GetQuantumTaskResponse withDeviceArn(String deviceArn) {
         this.deviceArn = deviceArn;
         return this;
@@ -35,6 +37,7 @@ public class GetQuantumTaskResponse {
     
     @JsonProperty("deviceParameters")
     public String deviceParameters;
+
     public GetQuantumTaskResponse withDeviceParameters(String deviceParameters) {
         this.deviceParameters = deviceParameters;
         return this;
@@ -45,6 +48,7 @@ public class GetQuantumTaskResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endedAt")
     public OffsetDateTime endedAt;
+
     public GetQuantumTaskResponse withEndedAt(OffsetDateTime endedAt) {
         this.endedAt = endedAt;
         return this;
@@ -53,6 +57,7 @@ public class GetQuantumTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public GetQuantumTaskResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -61,6 +66,7 @@ public class GetQuantumTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobArn")
     public String jobArn;
+
     public GetQuantumTaskResponse withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -68,6 +74,7 @@ public class GetQuantumTaskResponse {
     
     @JsonProperty("outputS3Bucket")
     public String outputS3Bucket;
+
     public GetQuantumTaskResponse withOutputS3Bucket(String outputS3Bucket) {
         this.outputS3Bucket = outputS3Bucket;
         return this;
@@ -75,6 +82,7 @@ public class GetQuantumTaskResponse {
     
     @JsonProperty("outputS3Directory")
     public String outputS3Directory;
+
     public GetQuantumTaskResponse withOutputS3Directory(String outputS3Directory) {
         this.outputS3Directory = outputS3Directory;
         return this;
@@ -82,6 +90,7 @@ public class GetQuantumTaskResponse {
     
     @JsonProperty("quantumTaskArn")
     public String quantumTaskArn;
+
     public GetQuantumTaskResponse withQuantumTaskArn(String quantumTaskArn) {
         this.quantumTaskArn = quantumTaskArn;
         return this;
@@ -89,6 +98,7 @@ public class GetQuantumTaskResponse {
     
     @JsonProperty("shots")
     public Long shots;
+
     public GetQuantumTaskResponse withShots(Long shots) {
         this.shots = shots;
         return this;
@@ -96,6 +106,7 @@ public class GetQuantumTaskResponse {
     
     @JsonProperty("status")
     public QuantumTaskStatusEnum status;
+
     public GetQuantumTaskResponse withStatus(QuantumTaskStatusEnum status) {
         this.status = status;
         return this;
@@ -104,9 +115,20 @@ public class GetQuantumTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetQuantumTaskResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetQuantumTaskResponse(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("deviceArn") String deviceArn, @JsonProperty("deviceParameters") String deviceParameters, @JsonProperty("outputS3Bucket") String outputS3Bucket, @JsonProperty("outputS3Directory") String outputS3Directory, @JsonProperty("quantumTaskArn") String quantumTaskArn, @JsonProperty("shots") Long shots, @JsonProperty("status") QuantumTaskStatusEnum status) {
+        this.createdAt = createdAt;
+        this.deviceArn = deviceArn;
+        this.deviceParameters = deviceParameters;
+        this.outputS3Bucket = outputS3Bucket;
+        this.outputS3Directory = outputS3Directory;
+        this.quantumTaskArn = quantumTaskArn;
+        this.shots = shots;
+        this.status = status;
+  }
 }

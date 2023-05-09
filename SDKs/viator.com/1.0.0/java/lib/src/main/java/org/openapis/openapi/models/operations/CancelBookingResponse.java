@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelBookingResponse {
@@ -12,6 +13,7 @@ public class CancelBookingResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOneUNAUTHORIZED fourHundredAndOneUNAUTHORIZED;
+
     public CancelBookingResponse withFourHundredAndOneUNAUTHORIZED(org.openapis.openapi.models.shared.FourHundredAndOneUNAUTHORIZED fourHundredAndOneUNAUTHORIZED) {
         this.fourHundredAndOneUNAUTHORIZED = fourHundredAndOneUNAUTHORIZED;
         return this;
@@ -22,6 +24,7 @@ public class CancelBookingResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndSixNOTACCEPTABLE fourHundredAndSixNOTACCEPTABLE;
+
     public CancelBookingResponse withFourHundredAndSixNOTACCEPTABLE(org.openapis.openapi.models.shared.FourHundredAndSixNOTACCEPTABLE fourHundredAndSixNOTACCEPTABLE) {
         this.fourHundredAndSixNOTACCEPTABLE = fourHundredAndSixNOTACCEPTABLE;
         return this;
@@ -32,6 +35,7 @@ public class CancelBookingResponse {
      */
     
     public org.openapis.openapi.models.shared.FiveHundredINTERNALSERVERERROR fiveHundredINTERNALSERVERERROR;
+
     public CancelBookingResponse withFiveHundredINTERNALSERVERERROR(org.openapis.openapi.models.shared.FiveHundredINTERNALSERVERERROR fiveHundredINTERNALSERVERERROR) {
         this.fiveHundredINTERNALSERVERERROR = fiveHundredINTERNALSERVERERROR;
         return this;
@@ -42,6 +46,7 @@ public class CancelBookingResponse {
      */
     
     public org.openapis.openapi.models.shared.FiveHundredAndThreeSERVICEUNAVAILABLE fiveHundredAndThreeSERVICEUNAVAILABLE;
+
     public CancelBookingResponse withFiveHundredAndThreeSERVICEUNAVAILABLE(org.openapis.openapi.models.shared.FiveHundredAndThreeSERVICEUNAVAILABLE fiveHundredAndThreeSERVICEUNAVAILABLE) {
         this.fiveHundredAndThreeSERVICEUNAVAILABLE = fiveHundredAndThreeSERVICEUNAVAILABLE;
         return this;
@@ -52,6 +57,7 @@ public class CancelBookingResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelBookingResponse cancelBookingResponse;
+
     public CancelBookingResponse withCancelBookingResponse(org.openapis.openapi.models.shared.CancelBookingResponse cancelBookingResponse) {
         this.cancelBookingResponse = cancelBookingResponse;
         return this;
@@ -59,6 +65,7 @@ public class CancelBookingResponse {
     
     
     public String contentType;
+
     public CancelBookingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -66,6 +73,7 @@ public class CancelBookingResponse {
     
     
     public Integer statusCode;
+
     public CancelBookingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CancelBookingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelBookingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CancelBookingResponse {
      */
     
     public CancelBooking400ApplicationJSON cancelBooking400ApplicationJSONObject;
+
     public CancelBookingResponse withCancelBooking400ApplicationJSONObject(CancelBooking400ApplicationJSON cancelBooking400ApplicationJSONObject) {
         this.cancelBooking400ApplicationJSONObject = cancelBooking400ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class CancelBookingResponse {
      */
     
     public CancelBooking404ApplicationJSON cancelBooking404ApplicationJSONObject;
+
     public CancelBookingResponse withCancelBooking404ApplicationJSONObject(CancelBooking404ApplicationJSON cancelBooking404ApplicationJSONObject) {
         this.cancelBooking404ApplicationJSONObject = cancelBooking404ApplicationJSONObject;
         return this;
     }
     
+    public CancelBookingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

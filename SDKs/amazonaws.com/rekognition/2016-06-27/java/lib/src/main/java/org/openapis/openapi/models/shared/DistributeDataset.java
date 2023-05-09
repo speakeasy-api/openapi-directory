@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DistributeDataset {
     @JsonProperty("Arn")
     public String arn;
+
     public DistributeDataset withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DistributeDataset(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

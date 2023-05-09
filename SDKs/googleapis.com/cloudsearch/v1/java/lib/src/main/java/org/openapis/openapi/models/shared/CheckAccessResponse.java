@@ -18,9 +18,11 @@ public class CheckAccessResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasAccess")
     public Boolean hasAccess;
+
     public CheckAccessResponse withHasAccess(Boolean hasAccess) {
         this.hasAccess = hasAccess;
         return this;
     }
     
+    public CheckAccessResponse(){}
 }

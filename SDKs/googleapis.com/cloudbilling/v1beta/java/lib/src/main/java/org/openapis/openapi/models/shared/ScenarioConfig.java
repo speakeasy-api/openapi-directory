@@ -18,9 +18,11 @@ public class ScenarioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimateDuration")
     public String estimateDuration;
+
     public ScenarioConfig withEstimateDuration(String estimateDuration) {
         this.estimateDuration = estimateDuration;
         return this;
     }
     
+    public ScenarioConfig(){}
 }

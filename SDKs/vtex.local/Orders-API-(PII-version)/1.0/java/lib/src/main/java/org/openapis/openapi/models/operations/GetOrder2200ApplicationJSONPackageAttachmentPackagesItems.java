@@ -15,6 +15,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackagesItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackagesItems withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackagesItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemIndex")
     public Long itemIndex;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackagesItems withItemIndex(Long itemIndex) {
         this.itemIndex = itemIndex;
         return this;
@@ -37,6 +39,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackagesItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackagesItems withPrice(Long price) {
         this.price = price;
         return this;
@@ -48,6 +51,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackagesItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackagesItems withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -59,9 +63,11 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackagesItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitMultiplier")
     public Double unitMultiplier;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackagesItems withUnitMultiplier(Double unitMultiplier) {
         this.unitMultiplier = unitMultiplier;
         return this;
     }
     
+    public GetOrder2200ApplicationJSONPackageAttachmentPackagesItems(){}
 }

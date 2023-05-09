@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClusterVersionsMessage {
     
     public String clusterParameterGroupFamily;
+
     public DescribeClusterVersionsMessage withClusterParameterGroupFamily(String clusterParameterGroupFamily) {
         this.clusterParameterGroupFamily = clusterParameterGroupFamily;
         return this;
@@ -19,6 +20,7 @@ public class DescribeClusterVersionsMessage {
     
     
     public String clusterVersion;
+
     public DescribeClusterVersionsMessage withClusterVersion(String clusterVersion) {
         this.clusterVersion = clusterVersion;
         return this;
@@ -26,6 +28,7 @@ public class DescribeClusterVersionsMessage {
     
     
     public String marker;
+
     public DescribeClusterVersionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -33,9 +36,11 @@ public class DescribeClusterVersionsMessage {
     
     
     public Long maxRecords;
+
     public DescribeClusterVersionsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeClusterVersionsMessage(){}
 }

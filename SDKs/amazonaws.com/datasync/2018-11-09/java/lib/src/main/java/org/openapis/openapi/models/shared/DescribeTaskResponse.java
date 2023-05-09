@@ -20,6 +20,7 @@ public class DescribeTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogGroupArn")
     public String cloudWatchLogGroupArn;
+
     public DescribeTaskResponse withCloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
         this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
         return this;
@@ -30,6 +31,7 @@ public class DescribeTaskResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeTaskResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class DescribeTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentTaskExecutionArn")
     public String currentTaskExecutionArn;
+
     public DescribeTaskResponse withCurrentTaskExecutionArn(String currentTaskExecutionArn) {
         this.currentTaskExecutionArn = currentTaskExecutionArn;
         return this;
@@ -46,6 +49,7 @@ public class DescribeTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationLocationArn")
     public String destinationLocationArn;
+
     public DescribeTaskResponse withDestinationLocationArn(String destinationLocationArn) {
         this.destinationLocationArn = destinationLocationArn;
         return this;
@@ -54,6 +58,7 @@ public class DescribeTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationNetworkInterfaceArns")
     public String[] destinationNetworkInterfaceArns;
+
     public DescribeTaskResponse withDestinationNetworkInterfaceArns(String[] destinationNetworkInterfaceArns) {
         this.destinationNetworkInterfaceArns = destinationNetworkInterfaceArns;
         return this;
@@ -62,6 +67,7 @@ public class DescribeTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public DescribeTaskResponse withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -70,6 +76,7 @@ public class DescribeTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDetail")
     public String errorDetail;
+
     public DescribeTaskResponse withErrorDetail(String errorDetail) {
         this.errorDetail = errorDetail;
         return this;
@@ -78,6 +85,7 @@ public class DescribeTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Excludes")
     public FilterRule[] excludes;
+
     public DescribeTaskResponse withExcludes(FilterRule[] excludes) {
         this.excludes = excludes;
         return this;
@@ -86,6 +94,7 @@ public class DescribeTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Includes")
     public FilterRule[] includes;
+
     public DescribeTaskResponse withIncludes(FilterRule[] includes) {
         this.includes = includes;
         return this;
@@ -94,6 +103,7 @@ public class DescribeTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeTaskResponse withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +112,7 @@ public class DescribeTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Options")
     public Options options;
+
     public DescribeTaskResponse withOptions(Options options) {
         this.options = options;
         return this;
@@ -110,6 +121,7 @@ public class DescribeTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public TaskSchedule schedule;
+
     public DescribeTaskResponse withSchedule(TaskSchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -118,6 +130,7 @@ public class DescribeTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceLocationArn")
     public String sourceLocationArn;
+
     public DescribeTaskResponse withSourceLocationArn(String sourceLocationArn) {
         this.sourceLocationArn = sourceLocationArn;
         return this;
@@ -126,6 +139,7 @@ public class DescribeTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceNetworkInterfaceArns")
     public String[] sourceNetworkInterfaceArns;
+
     public DescribeTaskResponse withSourceNetworkInterfaceArns(String[] sourceNetworkInterfaceArns) {
         this.sourceNetworkInterfaceArns = sourceNetworkInterfaceArns;
         return this;
@@ -134,6 +148,7 @@ public class DescribeTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TaskStatusEnum status;
+
     public DescribeTaskResponse withStatus(TaskStatusEnum status) {
         this.status = status;
         return this;
@@ -142,9 +157,11 @@ public class DescribeTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskArn")
     public String taskArn;
+
     public DescribeTaskResponse withTaskArn(String taskArn) {
         this.taskArn = taskArn;
         return this;
     }
     
+    public DescribeTaskResponse(){}
 }

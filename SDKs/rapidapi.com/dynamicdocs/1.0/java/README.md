@@ -16,10 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CompileLatexCompilerEnum;
 import org.openapis.openapi.models.operations.CompileRequest;
 import org.openapis.openapi.models.operations.CompileResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,29 +30,29 @@ public class Application {
                 }})
                 .build();
 
-            CompileRequest req = new CompileRequest() {{
-                contentType = "application/json";
+            CompileRequest req = new CompileRequest("application/json", "7a582350acb835ed") {{
                 requestBody = new java.util.HashMap<String, Object>() {{
                     put("provident", "distinctio");
                     put("quibusdam", "unde");
                     put("nulla", "corrupti");
                 }};
                 docFileName = "brilliantDocument";
-                docUrlExpiresIn = 3600;
-                latexCompiler = "lualatex";
-                latexRuns = 423655;
+                docUrlExpiresIn = 3600L;
+                latexCompiler = CompileLatexCompilerEnum.LUALATEX;
+                latexRuns = 423655L;
                 mainFileName = "inputFile.tex";
-                templateToken = "7a582350acb835ed";
-            }}            
+            }};            
 
             CompileResponse res = sdk.pdfGeneration.compile(req);
 
-            if (res.compile200ApplicationJSONObject.isPresent()) {
+            if (res.compile200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -60,9 +60,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### pdfGeneration
+### [pdfGeneration](docs/pdfgeneration/README.md)
 
-* `compile` - Compile New Document PDF
+* [compile](docs/pdfgeneration/README.md#compile) - Compile New Document PDF
 <!-- End SDK Available Operations -->
 
 ### Maturity

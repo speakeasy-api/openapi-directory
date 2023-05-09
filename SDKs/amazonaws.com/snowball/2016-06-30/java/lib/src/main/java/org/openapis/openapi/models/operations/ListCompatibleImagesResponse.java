@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCompatibleImagesResponse {
     
     public String contentType;
+
     public ListCompatibleImagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCompatibleImagesResponse {
      */
     
     public Object ec2RequestFailedException;
+
     public ListCompatibleImagesResponse withEc2RequestFailedException(Object ec2RequestFailedException) {
         this.ec2RequestFailedException = ec2RequestFailedException;
         return this;
@@ -29,6 +32,7 @@ public class ListCompatibleImagesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListCompatibleImagesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListCompatibleImagesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCompatibleImagesResult listCompatibleImagesResult;
+
     public ListCompatibleImagesResponse withListCompatibleImagesResult(org.openapis.openapi.models.shared.ListCompatibleImagesResult listCompatibleImagesResult) {
         this.listCompatibleImagesResult = listCompatibleImagesResult;
         return this;
@@ -46,6 +51,7 @@ public class ListCompatibleImagesResponse {
     
     
     public Integer statusCode;
+
     public ListCompatibleImagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListCompatibleImagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCompatibleImagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCompatibleImagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

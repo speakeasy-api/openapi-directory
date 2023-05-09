@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudchannelAccountsCustomersListResponse {
     
     public String contentType;
+
     public CloudchannelAccountsCustomersListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudchannelAccountsCustomersListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudChannelV1ListCustomersResponse googleCloudChannelV1ListCustomersResponse;
+
     public CloudchannelAccountsCustomersListResponse withGoogleCloudChannelV1ListCustomersResponse(org.openapis.openapi.models.shared.GoogleCloudChannelV1ListCustomersResponse googleCloudChannelV1ListCustomersResponse) {
         this.googleCloudChannelV1ListCustomersResponse = googleCloudChannelV1ListCustomersResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudchannelAccountsCustomersListResponse {
     
     
     public Integer statusCode;
+
     public CloudchannelAccountsCustomersListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudchannelAccountsCustomersListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudchannelAccountsCustomersListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudchannelAccountsCustomersListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

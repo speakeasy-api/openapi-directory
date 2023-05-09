@@ -15,6 +15,7 @@ public class ResourceAccessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permission")
     public PermissionEnum permission;
+
     public ResourceAccessPolicy withPermission(PermissionEnum permission) {
         this.permission = permission;
         return this;
@@ -22,9 +23,13 @@ public class ResourceAccessPolicy {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ResourceAccessPolicy withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public ResourceAccessPolicy(@JsonProperty("ResourceId") String resourceId) {
+        this.resourceId = resourceId;
+  }
 }

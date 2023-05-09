@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLinkResponse {
@@ -12,6 +13,7 @@ public class CreateLinkResponse {
      */
     
     public Object conflictException;
+
     public CreateLinkResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateLinkResponse {
     
     
     public String contentType;
+
     public CreateLinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLinkOutput createLinkOutput;
+
     public CreateLinkResponse withCreateLinkOutput(org.openapis.openapi.models.shared.CreateLinkOutput createLinkOutput) {
         this.createLinkOutput = createLinkOutput;
         return this;
@@ -39,6 +43,7 @@ public class CreateLinkResponse {
      */
     
     public Object internalServiceFault;
+
     public CreateLinkResponse withInternalServiceFault(Object internalServiceFault) {
         this.internalServiceFault = internalServiceFault;
         return this;
@@ -49,6 +54,7 @@ public class CreateLinkResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateLinkResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateLinkResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public CreateLinkResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -69,6 +76,7 @@ public class CreateLinkResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateLinkResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateLinkResponse {
     
     
     public Integer statusCode;
+
     public CreateLinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateLinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateLinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

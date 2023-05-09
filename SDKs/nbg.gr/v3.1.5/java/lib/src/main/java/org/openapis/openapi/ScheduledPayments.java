@@ -60,14 +60,12 @@ public class ScheduledPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountsAccountIdScheduledPaymentsResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdScheduledPaymentsResponse() {{
+        org.openapis.openapi.models.operations.GetAccountsAccountIdScheduledPaymentsResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdScheduledPaymentsResponse(contentType, httpRes.statusCode()) {{
             obReadScheduledPayment3 = null;
             obReadScheduledPayment3 = null;
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

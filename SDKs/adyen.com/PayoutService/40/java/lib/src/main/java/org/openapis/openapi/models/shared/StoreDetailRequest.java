@@ -4,14 +4,11 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import java.time.OffsetDateTime;
-import org.openapis.openapi.utils.DateTimeDeserializer;
-import org.openapis.openapi.utils.DateTimeSerializer;
+import java.time.LocalDate;
 
 public class StoreDetailRequest {
     /**
@@ -20,6 +17,7 @@ public class StoreDetailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalData")
     public java.util.Map<String, String> additionalData;
+
     public StoreDetailRequest withAdditionalData(java.util.Map<String, String> additionalData) {
         this.additionalData = additionalData;
         return this;
@@ -28,6 +26,7 @@ public class StoreDetailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank")
     public BankAccount bank;
+
     public StoreDetailRequest withBank(BankAccount bank) {
         this.bank = bank;
         return this;
@@ -36,6 +35,7 @@ public class StoreDetailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingAddress")
     public Address billingAddress;
+
     public StoreDetailRequest withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -44,6 +44,7 @@ public class StoreDetailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public Card card;
+
     public StoreDetailRequest withCard(Card card) {
         this.card = card;
         return this;
@@ -55,11 +56,11 @@ public class StoreDetailRequest {
      * For Paysafecard it must be the same as used when registering the Paysafecard account.
      * &gt; This field is mandatory for natural persons.
      */
-    @JsonSerialize(using = DateTimeSerializer.class)
-    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("dateOfBirth")
-    public OffsetDateTime dateOfBirth;
-    public StoreDetailRequest withDateOfBirth(OffsetDateTime dateOfBirth) {
+    public LocalDate dateOfBirth;
+
+    public StoreDetailRequest withDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
     }
@@ -69,6 +70,7 @@ public class StoreDetailRequest {
      */
     @JsonProperty("entityType")
     public StoreDetailRequestEntityTypeEnum entityType;
+
     public StoreDetailRequest withEntityType(StoreDetailRequestEntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -80,6 +82,7 @@ public class StoreDetailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fraudOffset")
     public Integer fraudOffset;
+
     public StoreDetailRequest withFraudOffset(Integer fraudOffset) {
         this.fraudOffset = fraudOffset;
         return this;
@@ -90,6 +93,7 @@ public class StoreDetailRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public StoreDetailRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -102,6 +106,7 @@ public class StoreDetailRequest {
      */
     @JsonProperty("nationality")
     public String nationality;
+
     public StoreDetailRequest withNationality(String nationality) {
         this.nationality = nationality;
         return this;
@@ -109,6 +114,7 @@ public class StoreDetailRequest {
     
     @JsonProperty("recurring")
     public Recurring recurring;
+
     public StoreDetailRequest withRecurring(Recurring recurring) {
         this.recurring = recurring;
         return this;
@@ -122,6 +128,7 @@ public class StoreDetailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedBrand")
     public String selectedBrand;
+
     public StoreDetailRequest withSelectedBrand(String selectedBrand) {
         this.selectedBrand = selectedBrand;
         return this;
@@ -132,6 +139,7 @@ public class StoreDetailRequest {
      */
     @JsonProperty("shopperEmail")
     public String shopperEmail;
+
     public StoreDetailRequest withShopperEmail(String shopperEmail) {
         this.shopperEmail = shopperEmail;
         return this;
@@ -140,6 +148,7 @@ public class StoreDetailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperName")
     public Name shopperName;
+
     public StoreDetailRequest withShopperName(Name shopperName) {
         this.shopperName = shopperName;
         return this;
@@ -150,6 +159,7 @@ public class StoreDetailRequest {
      */
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public StoreDetailRequest withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
@@ -161,9 +171,19 @@ public class StoreDetailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("socialSecurityNumber")
     public String socialSecurityNumber;
+
     public StoreDetailRequest withSocialSecurityNumber(String socialSecurityNumber) {
         this.socialSecurityNumber = socialSecurityNumber;
         return this;
     }
     
+    public StoreDetailRequest(@JsonProperty("dateOfBirth") LocalDate dateOfBirth, @JsonProperty("entityType") StoreDetailRequestEntityTypeEnum entityType, @JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("nationality") String nationality, @JsonProperty("recurring") Recurring recurring, @JsonProperty("shopperEmail") String shopperEmail, @JsonProperty("shopperReference") String shopperReference) {
+        this.dateOfBirth = dateOfBirth;
+        this.entityType = entityType;
+        this.merchantAccount = merchantAccount;
+        this.nationality = nationality;
+        this.recurring = recurring;
+        this.shopperEmail = shopperEmail;
+        this.shopperReference = shopperReference;
+  }
 }

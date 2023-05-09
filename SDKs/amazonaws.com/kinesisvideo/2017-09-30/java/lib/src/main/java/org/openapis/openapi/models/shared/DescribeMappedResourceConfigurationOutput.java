@@ -15,6 +15,7 @@ public class DescribeMappedResourceConfigurationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MappedResourceConfigurationList")
     public MappedResourceConfigurationListItem[] mappedResourceConfigurationList;
+
     public DescribeMappedResourceConfigurationOutput withMappedResourceConfigurationList(MappedResourceConfigurationListItem[] mappedResourceConfigurationList) {
         this.mappedResourceConfigurationList = mappedResourceConfigurationList;
         return this;
@@ -23,9 +24,11 @@ public class DescribeMappedResourceConfigurationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeMappedResourceConfigurationOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeMappedResourceConfigurationOutput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPackageServiceJsonRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostPackageServiceJsonRequestBody requestBody;
+
     public PostPackageServiceJsonRequest withRequestBody(PostPackageServiceJsonRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class PostPackageServiceJsonRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_charset_")
     public String charset;
+
     public PostPackageServiceJsonRequest withCharset(String charset) {
         this.charset = charset;
         return this;
@@ -23,6 +26,7 @@ public class PostPackageServiceJsonRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cmd")
     public String cmd;
+
     public PostPackageServiceJsonRequest withCmd(String cmd) {
         this.cmd = cmd;
         return this;
@@ -30,6 +34,7 @@ public class PostPackageServiceJsonRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
     public Boolean force;
+
     public PostPackageServiceJsonRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -37,6 +42,7 @@ public class PostPackageServiceJsonRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupName")
     public String groupName;
+
     public PostPackageServiceJsonRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -44,6 +50,7 @@ public class PostPackageServiceJsonRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=packageName")
     public String packageName;
+
     public PostPackageServiceJsonRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -51,6 +58,7 @@ public class PostPackageServiceJsonRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=packageVersion")
     public String packageVersion;
+
     public PostPackageServiceJsonRequest withPackageVersion(String packageVersion) {
         this.packageVersion = packageVersion;
         return this;
@@ -58,6 +66,7 @@ public class PostPackageServiceJsonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public PostPackageServiceJsonRequest withPath(String path) {
         this.path = path;
         return this;
@@ -65,9 +74,14 @@ public class PostPackageServiceJsonRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
     public Boolean recursive;
+
     public PostPackageServiceJsonRequest withRecursive(Boolean recursive) {
         this.recursive = recursive;
         return this;
     }
     
+    public PostPackageServiceJsonRequest(@JsonProperty("cmd") String cmd, @JsonProperty("path") String path) {
+        this.cmd = cmd;
+        this.path = path;
+  }
 }

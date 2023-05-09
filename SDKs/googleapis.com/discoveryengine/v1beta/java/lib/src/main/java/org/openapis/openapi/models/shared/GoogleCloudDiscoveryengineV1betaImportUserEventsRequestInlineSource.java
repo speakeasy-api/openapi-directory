@@ -18,9 +18,11 @@ public class GoogleCloudDiscoveryengineV1betaImportUserEventsRequestInlineSource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEvents")
     public GoogleCloudDiscoveryengineV1betaUserEvent[] userEvents;
+
     public GoogleCloudDiscoveryengineV1betaImportUserEventsRequestInlineSource withUserEvents(GoogleCloudDiscoveryengineV1betaUserEvent[] userEvents) {
         this.userEvents = userEvents;
         return this;
     }
     
+    public GoogleCloudDiscoveryengineV1betaImportUserEventsRequestInlineSource(){}
 }

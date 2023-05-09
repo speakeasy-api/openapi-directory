@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTableResponse {
     
     public String contentType;
+
     public DeleteTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTableResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteTableOutput deleteTableOutput;
+
     public DeleteTableResponse withDeleteTableOutput(org.openapis.openapi.models.shared.DeleteTableOutput deleteTableOutput) {
         this.deleteTableOutput = deleteTableOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTableResponse {
      */
     
     public Object internalServerError;
+
     public DeleteTableResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTableResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteTableResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTableResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteTableResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteTableResponse {
     
     
     public Integer statusCode;
+
     public DeleteTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteTableResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteTableResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

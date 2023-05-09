@@ -15,6 +15,7 @@ public class ProductViewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Distributor")
     public String distributor;
+
     public ProductViewSummary withDistributor(String distributor) {
         this.distributor = distributor;
         return this;
@@ -23,6 +24,7 @@ public class ProductViewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasDefaultPath")
     public Boolean hasDefaultPath;
+
     public ProductViewSummary withHasDefaultPath(Boolean hasDefaultPath) {
         this.hasDefaultPath = hasDefaultPath;
         return this;
@@ -31,6 +33,7 @@ public class ProductViewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ProductViewSummary withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class ProductViewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ProductViewSummary withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class ProductViewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public ProductViewSummary withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -55,6 +60,7 @@ public class ProductViewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductId")
     public String productId;
+
     public ProductViewSummary withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -63,6 +69,7 @@ public class ProductViewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortDescription")
     public String shortDescription;
+
     public ProductViewSummary withShortDescription(String shortDescription) {
         this.shortDescription = shortDescription;
         return this;
@@ -71,6 +78,7 @@ public class ProductViewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportDescription")
     public String supportDescription;
+
     public ProductViewSummary withSupportDescription(String supportDescription) {
         this.supportDescription = supportDescription;
         return this;
@@ -79,6 +87,7 @@ public class ProductViewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportEmail")
     public String supportEmail;
+
     public ProductViewSummary withSupportEmail(String supportEmail) {
         this.supportEmail = supportEmail;
         return this;
@@ -87,6 +96,7 @@ public class ProductViewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportUrl")
     public String supportUrl;
+
     public ProductViewSummary withSupportUrl(String supportUrl) {
         this.supportUrl = supportUrl;
         return this;
@@ -95,9 +105,11 @@ public class ProductViewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ProductTypeEnum type;
+
     public ProductViewSummary withType(ProductTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ProductViewSummary(){}
 }

@@ -15,6 +15,7 @@ public class ProjectsMoveCardRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("column_id")
     public Long columnId;
+
     public ProjectsMoveCardRequestBody withColumnId(Long columnId) {
         this.columnId = columnId;
         return this;
@@ -25,9 +26,13 @@ public class ProjectsMoveCardRequestBody {
      */
     @JsonProperty("position")
     public String position;
+
     public ProjectsMoveCardRequestBody withPosition(String position) {
         this.position = position;
         return this;
     }
     
+    public ProjectsMoveCardRequestBody(@JsonProperty("position") String position) {
+        this.position = position;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ListContinuousTestResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continuousTestResults")
     public GoogleCloudDialogflowCxV3ContinuousTestResult[] continuousTestResults;
+
     public GoogleCloudDialogflowCxV3ListContinuousTestResultsResponse withContinuousTestResults(GoogleCloudDialogflowCxV3ContinuousTestResult[] continuousTestResults) {
         this.continuousTestResults = continuousTestResults;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3ListContinuousTestResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowCxV3ListContinuousTestResultsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ListContinuousTestResultsResponse(){}
 }

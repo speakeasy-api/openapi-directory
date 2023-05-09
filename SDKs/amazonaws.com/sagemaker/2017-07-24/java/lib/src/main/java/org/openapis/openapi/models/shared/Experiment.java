@@ -14,12 +14,13 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * Experiment - The properties of an experiment as returned by the &lt;a&gt;Search&lt;/a&gt; API.
+ * Experiment - The properties of an experiment as returned by the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html"&gt;Search&lt;/a&gt; API.
  */
 public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public Experiment withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -30,6 +31,7 @@ public class Experiment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Experiment withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Experiment withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public Experiment withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -54,6 +58,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentArn")
     public String experimentArn;
+
     public Experiment withExperimentArn(String experimentArn) {
         this.experimentArn = experimentArn;
         return this;
@@ -62,6 +67,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentName")
     public String experimentName;
+
     public Experiment withExperimentName(String experimentName) {
         this.experimentName = experimentName;
         return this;
@@ -73,6 +79,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public Experiment withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -83,6 +90,7 @@ public class Experiment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public Experiment withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -94,6 +102,7 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public ExperimentSource source;
+
     public Experiment withSource(ExperimentSource source) {
         this.source = source;
         return this;
@@ -102,9 +111,11 @@ public class Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public Experiment withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public Experiment(){}
 }

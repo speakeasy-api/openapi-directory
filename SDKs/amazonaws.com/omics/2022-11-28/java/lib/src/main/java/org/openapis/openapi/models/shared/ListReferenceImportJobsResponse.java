@@ -15,6 +15,7 @@ public class ListReferenceImportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importJobs")
     public ImportReferenceJobItem[] importJobs;
+
     public ListReferenceImportJobsResponse withImportJobs(ImportReferenceJobItem[] importJobs) {
         this.importJobs = importJobs;
         return this;
@@ -23,9 +24,11 @@ public class ListReferenceImportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListReferenceImportJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListReferenceImportJobsResponse(){}
 }

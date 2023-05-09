@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlaylistsPlaylistIdTracksRequest {
@@ -13,6 +14,7 @@ public class GetPlaylistsPlaylistIdTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=access")
     public org.openapis.openapi.models.shared.AccessEnum[] access;
+
     public GetPlaylistsPlaylistIdTracksRequest withAccess(org.openapis.openapi.models.shared.AccessEnum[] access) {
         this.access = access;
         return this;
@@ -23,6 +25,7 @@ public class GetPlaylistsPlaylistIdTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
     public Boolean linkedPartitioning;
+
     public GetPlaylistsPlaylistIdTracksRequest withLinkedPartitioning(Boolean linkedPartitioning) {
         this.linkedPartitioning = linkedPartitioning;
         return this;
@@ -33,6 +36,7 @@ public class GetPlaylistsPlaylistIdTracksRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playlist_id")
     public Long playlistId;
+
     public GetPlaylistsPlaylistIdTracksRequest withPlaylistId(Long playlistId) {
         this.playlistId = playlistId;
         return this;
@@ -43,9 +47,13 @@ public class GetPlaylistsPlaylistIdTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secret_token")
     public String secretToken;
+
     public GetPlaylistsPlaylistIdTracksRequest withSecretToken(String secretToken) {
         this.secretToken = secretToken;
         return this;
     }
     
+    public GetPlaylistsPlaylistIdTracksRequest(@JsonProperty("playlist_id") Long playlistId) {
+        this.playlistId = playlistId;
+  }
 }

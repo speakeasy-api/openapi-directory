@@ -18,6 +18,7 @@ public class GetOnboardingUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public GetOnboardingUrlResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -29,6 +30,7 @@ public class GetOnboardingUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public GetOnboardingUrlResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -40,6 +42,7 @@ public class GetOnboardingUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectUrl")
     public String redirectUrl;
+
     public GetOnboardingUrlResponse withRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
         return this;
@@ -51,9 +54,11 @@ public class GetOnboardingUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public GetOnboardingUrlResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public GetOnboardingUrlResponse(){}
 }

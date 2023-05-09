@@ -12,6 +12,7 @@ public class CommitsListByShaList200ApplicationJSONCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public CommitsListByShaList200ApplicationJSONCommitAuthor author;
+
     public CommitsListByShaList200ApplicationJSONCommit withAuthor(CommitsListByShaList200ApplicationJSONCommitAuthor author) {
         this.author = author;
         return this;
@@ -23,9 +24,11 @@ public class CommitsListByShaList200ApplicationJSONCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CommitsListByShaList200ApplicationJSONCommit withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CommitsListByShaList200ApplicationJSONCommit(){}
 }

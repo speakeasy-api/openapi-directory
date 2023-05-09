@@ -15,6 +15,7 @@ public class LoadBalancerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elbInfoList")
     public ELBInfo[] elbInfoList;
+
     public LoadBalancerInfo withElbInfoList(ELBInfo[] elbInfoList) {
         this.elbInfoList = elbInfoList;
         return this;
@@ -23,6 +24,7 @@ public class LoadBalancerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetGroupInfoList")
     public TargetGroupInfo[] targetGroupInfoList;
+
     public LoadBalancerInfo withTargetGroupInfoList(TargetGroupInfo[] targetGroupInfoList) {
         this.targetGroupInfoList = targetGroupInfoList;
         return this;
@@ -31,9 +33,11 @@ public class LoadBalancerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetGroupPairInfoList")
     public TargetGroupPairInfo[] targetGroupPairInfoList;
+
     public LoadBalancerInfo withTargetGroupPairInfoList(TargetGroupPairInfo[] targetGroupPairInfoList) {
         this.targetGroupPairInfoList = targetGroupPairInfoList;
         return this;
     }
     
+    public LoadBalancerInfo(){}
 }

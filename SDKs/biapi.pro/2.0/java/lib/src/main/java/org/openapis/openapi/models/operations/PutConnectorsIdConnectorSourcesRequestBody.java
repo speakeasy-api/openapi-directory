@@ -12,6 +12,7 @@ public class PutConnectorsIdConnectorSourcesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=disabled_capabilities")
     public String disabledCapabilities;
+
     public PutConnectorsIdConnectorSourcesRequestBody withDisabledCapabilities(String disabledCapabilities) {
         this.disabledCapabilities = disabledCapabilities;
         return this;
@@ -22,9 +23,11 @@ public class PutConnectorsIdConnectorSourcesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=unavailable_capabilities")
     public String unavailableCapabilities;
+
     public PutConnectorsIdConnectorSourcesRequestBody withUnavailableCapabilities(String unavailableCapabilities) {
         this.unavailableCapabilities = unavailableCapabilities;
         return this;
     }
     
+    public PutConnectorsIdConnectorSourcesRequestBody(){}
 }

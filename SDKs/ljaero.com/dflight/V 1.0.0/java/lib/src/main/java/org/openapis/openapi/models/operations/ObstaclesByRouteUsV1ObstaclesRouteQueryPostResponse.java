@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ObstaclesByRouteUsV1ObstaclesRouteQueryPostResponse {
     
     public String contentType;
+
     public ObstaclesByRouteUsV1ObstaclesRouteQueryPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ObstaclesByRouteUsV1ObstaclesRouteQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public ObstaclesByRouteUsV1ObstaclesRouteQueryPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -29,6 +32,7 @@ public class ObstaclesByRouteUsV1ObstaclesRouteQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.ObstacleRouteResponse obstacleRouteResponse;
+
     public ObstaclesByRouteUsV1ObstaclesRouteQueryPostResponse withObstacleRouteResponse(org.openapis.openapi.models.shared.ObstacleRouteResponse obstacleRouteResponse) {
         this.obstacleRouteResponse = obstacleRouteResponse;
         return this;
@@ -36,6 +40,7 @@ public class ObstaclesByRouteUsV1ObstaclesRouteQueryPostResponse {
     
     
     public Integer statusCode;
+
     public ObstaclesByRouteUsV1ObstaclesRouteQueryPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ObstaclesByRouteUsV1ObstaclesRouteQueryPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ObstaclesByRouteUsV1ObstaclesRouteQueryPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ObstaclesByRouteUsV1ObstaclesRouteQueryPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

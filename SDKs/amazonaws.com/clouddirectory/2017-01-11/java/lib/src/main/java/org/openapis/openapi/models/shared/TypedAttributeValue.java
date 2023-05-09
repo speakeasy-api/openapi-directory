@@ -20,6 +20,7 @@ public class TypedAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BinaryValue")
     public String binaryValue;
+
     public TypedAttributeValue withBinaryValue(String binaryValue) {
         this.binaryValue = binaryValue;
         return this;
@@ -28,6 +29,7 @@ public class TypedAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BooleanValue")
     public Boolean booleanValue;
+
     public TypedAttributeValue withBooleanValue(Boolean booleanValue) {
         this.booleanValue = booleanValue;
         return this;
@@ -38,6 +40,7 @@ public class TypedAttributeValue {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DatetimeValue")
     public OffsetDateTime datetimeValue;
+
     public TypedAttributeValue withDatetimeValue(OffsetDateTime datetimeValue) {
         this.datetimeValue = datetimeValue;
         return this;
@@ -46,6 +49,7 @@ public class TypedAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberValue")
     public String numberValue;
+
     public TypedAttributeValue withNumberValue(String numberValue) {
         this.numberValue = numberValue;
         return this;
@@ -54,9 +58,11 @@ public class TypedAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StringValue")
     public String stringValue;
+
     public TypedAttributeValue withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public TypedAttributeValue(){}
 }

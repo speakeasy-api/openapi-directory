@@ -142,6 +142,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -174,13 +179,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCheckCodeResponse res = new org.openapis.openapi.models.operations.PostCheckCodeResponse() {{
+        org.openapis.openapi.models.operations.PostCheckCodeResponse res = new org.openapis.openapi.models.operations.PostCheckCodeResponse(contentType, httpRes.statusCode()) {{
             postCheckCode200ApplicationJSONObject = null;
             postCheckCode401ApplicationJSONObject = null;
             postCheckCode403ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -235,13 +238,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSendCodeResponse res = new org.openapis.openapi.models.operations.PostSendCodeResponse() {{
+        org.openapis.openapi.models.operations.PostSendCodeResponse res = new org.openapis.openapi.models.operations.PostSendCodeResponse(contentType, httpRes.statusCode()) {{
             postSendCode200ApplicationJSONObject = null;
             postSendCode400ApplicationJSONObject = null;
             postSendCode401ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

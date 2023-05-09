@@ -15,6 +15,7 @@ public class NetworkFollow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public NetworkFollowEmbedded embedded;
+
     public NetworkFollow withEmbedded(NetworkFollowEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -23,9 +24,11 @@ public class NetworkFollow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network_id")
     public Long networkId;
+
     public NetworkFollow withNetworkId(Long networkId) {
         this.networkId = networkId;
         return this;
     }
     
+    public NetworkFollow(){}
 }

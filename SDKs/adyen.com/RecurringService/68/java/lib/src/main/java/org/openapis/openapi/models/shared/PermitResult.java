@@ -15,6 +15,7 @@ public class PermitResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultKey")
     public String resultKey;
+
     public PermitResult withResultKey(String resultKey) {
         this.resultKey = resultKey;
         return this;
@@ -26,9 +27,11 @@ public class PermitResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public PermitResult withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public PermitResult(){}
 }

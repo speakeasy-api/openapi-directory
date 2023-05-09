@@ -12,9 +12,13 @@ public class DetachTypedLinkRequestBody {
      */
     @JsonProperty("TypedLinkSpecifier")
     public DetachTypedLinkRequestBodyTypedLinkSpecifier typedLinkSpecifier;
+
     public DetachTypedLinkRequestBody withTypedLinkSpecifier(DetachTypedLinkRequestBodyTypedLinkSpecifier typedLinkSpecifier) {
         this.typedLinkSpecifier = typedLinkSpecifier;
         return this;
     }
     
+    public DetachTypedLinkRequestBody(@JsonProperty("TypedLinkSpecifier") DetachTypedLinkRequestBodyTypedLinkSpecifier typedLinkSpecifier) {
+        this.typedLinkSpecifier = typedLinkSpecifier;
+  }
 }

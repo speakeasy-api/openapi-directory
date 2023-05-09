@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV2AccessTokensUuidResponse {
     
     public String contentType;
+
     public GetV2AccessTokensUuidResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetV2AccessTokensUuidResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetV2AccessTokensUuidResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class GetV2AccessTokensUuidResponse {
     
     
     public Integer statusCode;
+
     public GetV2AccessTokensUuidResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetV2AccessTokensUuidResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV2AccessTokensUuidResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetV2AccessTokensUuidResponse {
      */
     
     public GetV2AccessTokensUuid200ApplicationJSON getV2AccessTokensUuid200ApplicationJSONObject;
+
     public GetV2AccessTokensUuidResponse withGetV2AccessTokensUuid200ApplicationJSONObject(GetV2AccessTokensUuid200ApplicationJSON getV2AccessTokensUuid200ApplicationJSONObject) {
         this.getV2AccessTokensUuid200ApplicationJSONObject = getV2AccessTokensUuid200ApplicationJSONObject;
         return this;
     }
     
+    public GetV2AccessTokensUuidResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

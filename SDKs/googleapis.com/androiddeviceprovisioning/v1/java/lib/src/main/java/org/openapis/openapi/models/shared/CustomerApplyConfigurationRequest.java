@@ -18,6 +18,7 @@ public class CustomerApplyConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public String configuration;
+
     public CustomerApplyConfigurationRequest withConfiguration(String configuration) {
         this.configuration = configuration;
         return this;
@@ -29,9 +30,11 @@ public class CustomerApplyConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public DeviceReference device;
+
     public CustomerApplyConfigurationRequest withDevice(DeviceReference device) {
         this.device = device;
         return this;
     }
     
+    public CustomerApplyConfigurationRequest(){}
 }

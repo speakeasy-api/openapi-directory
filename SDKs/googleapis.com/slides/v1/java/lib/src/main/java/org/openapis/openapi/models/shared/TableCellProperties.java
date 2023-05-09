@@ -18,6 +18,7 @@ public class TableCellProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentAlignment")
     public TableCellPropertiesContentAlignmentEnum contentAlignment;
+
     public TableCellProperties withContentAlignment(TableCellPropertiesContentAlignmentEnum contentAlignment) {
         this.contentAlignment = contentAlignment;
         return this;
@@ -29,9 +30,11 @@ public class TableCellProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableCellBackgroundFill")
     public TableCellBackgroundFill tableCellBackgroundFill;
+
     public TableCellProperties withTableCellBackgroundFill(TableCellBackgroundFill tableCellBackgroundFill) {
         this.tableCellBackgroundFill = tableCellBackgroundFill;
         return this;
     }
     
+    public TableCellProperties(){}
 }

@@ -18,6 +18,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Environment withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationCode")
     public String authorizationCode;
+
     public Environment withAuthorizationCode(String authorizationCode) {
         this.authorizationCode = authorizationCode;
         return this;
@@ -40,6 +42,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationTimestamp")
     public String authorizationTimestamp;
+
     public Environment withAuthorizationTimestamp(String authorizationTimestamp) {
         this.authorizationTimestamp = authorizationTimestamp;
         return this;
@@ -51,6 +54,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public Environment withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -62,6 +66,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerVersionId")
     public String containerVersionId;
+
     public Environment withContainerVersionId(String containerVersionId) {
         this.containerVersionId = containerVersionId;
         return this;
@@ -73,6 +78,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Environment withDescription(String description) {
         this.description = description;
         return this;
@@ -84,6 +90,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableDebug")
     public Boolean enableDebug;
+
     public Environment withEnableDebug(Boolean enableDebug) {
         this.enableDebug = enableDebug;
         return this;
@@ -95,6 +102,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentId")
     public String environmentId;
+
     public Environment withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -106,6 +114,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Environment withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -117,6 +126,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Environment withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +138,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public Environment withPath(String path) {
         this.path = path;
         return this;
@@ -139,6 +150,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagManagerUrl")
     public String tagManagerUrl;
+
     public Environment withTagManagerUrl(String tagManagerUrl) {
         this.tagManagerUrl = tagManagerUrl;
         return this;
@@ -150,6 +162,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public EnvironmentTypeEnum type;
+
     public Environment withType(EnvironmentTypeEnum type) {
         this.type = type;
         return this;
@@ -161,6 +174,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Environment withUrl(String url) {
         this.url = url;
         return this;
@@ -172,9 +186,11 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public Environment withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public Environment(){}
 }

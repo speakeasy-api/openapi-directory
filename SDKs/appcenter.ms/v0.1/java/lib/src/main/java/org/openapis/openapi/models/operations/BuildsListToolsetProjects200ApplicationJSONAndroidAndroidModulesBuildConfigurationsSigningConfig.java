@@ -18,9 +18,11 @@ public class BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModulesBui
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasStoreFile")
     public Boolean hasStoreFile;
+
     public BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModulesBuildConfigurationsSigningConfig withHasStoreFile(Boolean hasStoreFile) {
         this.hasStoreFile = hasStoreFile;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModulesBuildConfigurationsSigningConfig(){}
 }

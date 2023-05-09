@@ -15,6 +15,7 @@ public class EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allows_public_repositories")
     public Boolean allowsPublicRepositories;
+
     public EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody withAllowsPublicRepositories(Boolean allowsPublicRepositories) {
         this.allowsPublicRepositories = allowsPublicRepositories;
         return this;
@@ -25,6 +26,7 @@ public class EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody 
      */
     @JsonProperty("name")
     public String name;
+
     public EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +38,7 @@ public class EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runners")
     public Long[] runners;
+
     public EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody withRunners(Long[] runners) {
         this.runners = runners;
         return this;
@@ -47,6 +50,7 @@ public class EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected_organization_ids")
     public Long[] selectedOrganizationIds;
+
     public EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody withSelectedOrganizationIds(Long[] selectedOrganizationIds) {
         this.selectedOrganizationIds = selectedOrganizationIds;
         return this;
@@ -58,9 +62,13 @@ public class EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBodyVisibilityEnum visibility;
+
     public EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody withVisibility(EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBodyVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

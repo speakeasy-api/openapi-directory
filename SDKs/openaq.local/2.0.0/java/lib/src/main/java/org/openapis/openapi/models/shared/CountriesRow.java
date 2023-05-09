@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CountriesRow {
     @JsonProperty("cities")
     public Long cities;
+
     public CountriesRow withCities(Long cities) {
         this.cities = cities;
         return this;
@@ -21,6 +22,7 @@ public class CountriesRow {
     
     @JsonProperty("code")
     public String code;
+
     public CountriesRow withCode(String code) {
         this.code = code;
         return this;
@@ -28,6 +30,7 @@ public class CountriesRow {
     
     @JsonProperty("count")
     public Long count;
+
     public CountriesRow withCount(Long count) {
         this.count = count;
         return this;
@@ -37,6 +40,7 @@ public class CountriesRow {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstUpdated")
     public OffsetDateTime firstUpdated;
+
     public CountriesRow withFirstUpdated(OffsetDateTime firstUpdated) {
         this.firstUpdated = firstUpdated;
         return this;
@@ -46,6 +50,7 @@ public class CountriesRow {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public CountriesRow withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -53,6 +58,7 @@ public class CountriesRow {
     
     @JsonProperty("locations")
     public Long locations;
+
     public CountriesRow withLocations(Long locations) {
         this.locations = locations;
         return this;
@@ -60,6 +66,7 @@ public class CountriesRow {
     
     @JsonProperty("name")
     public String name;
+
     public CountriesRow withName(String name) {
         this.name = name;
         return this;
@@ -67,6 +74,7 @@ public class CountriesRow {
     
     @JsonProperty("parameters")
     public String[] parameters;
+
     public CountriesRow withParameters(String[] parameters) {
         this.parameters = parameters;
         return this;
@@ -74,9 +82,21 @@ public class CountriesRow {
     
     @JsonProperty("sources")
     public Long sources;
+
     public CountriesRow withSources(Long sources) {
         this.sources = sources;
         return this;
     }
     
+    public CountriesRow(@JsonProperty("cities") Long cities, @JsonProperty("code") String code, @JsonProperty("count") Long count, @JsonProperty("firstUpdated") OffsetDateTime firstUpdated, @JsonProperty("lastUpdated") OffsetDateTime lastUpdated, @JsonProperty("locations") Long locations, @JsonProperty("name") String name, @JsonProperty("parameters") String[] parameters, @JsonProperty("sources") Long sources) {
+        this.cities = cities;
+        this.code = code;
+        this.count = count;
+        this.firstUpdated = firstUpdated;
+        this.lastUpdated = lastUpdated;
+        this.locations = locations;
+        this.name = name;
+        this.parameters = parameters;
+        this.sources = sources;
+  }
 }

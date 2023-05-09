@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InstanceAttributeGroups {
     
     public String groupId;
+
     public InstanceAttributeGroups withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -19,9 +20,11 @@ public class InstanceAttributeGroups {
     
     
     public String groupName;
+
     public InstanceAttributeGroups withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public InstanceAttributeGroups(){}
 }

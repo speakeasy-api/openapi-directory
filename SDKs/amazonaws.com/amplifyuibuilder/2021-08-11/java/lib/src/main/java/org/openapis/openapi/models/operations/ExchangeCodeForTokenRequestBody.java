@@ -12,9 +12,13 @@ public class ExchangeCodeForTokenRequestBody {
      */
     @JsonProperty("request")
     public ExchangeCodeForTokenRequestBodyRequest request;
+
     public ExchangeCodeForTokenRequestBody withRequest(ExchangeCodeForTokenRequestBodyRequest request) {
         this.request = request;
         return this;
     }
     
+    public ExchangeCodeForTokenRequestBody(@JsonProperty("request") ExchangeCodeForTokenRequestBodyRequest request) {
+        this.request = request;
+  }
 }

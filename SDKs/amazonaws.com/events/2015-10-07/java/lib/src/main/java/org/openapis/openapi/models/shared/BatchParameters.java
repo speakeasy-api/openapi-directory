@@ -15,6 +15,7 @@ public class BatchParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArrayProperties")
     public BatchArrayProperties arrayProperties;
+
     public BatchParameters withArrayProperties(BatchArrayProperties arrayProperties) {
         this.arrayProperties = arrayProperties;
         return this;
@@ -22,6 +23,7 @@ public class BatchParameters {
     
     @JsonProperty("JobDefinition")
     public String jobDefinition;
+
     public BatchParameters withJobDefinition(String jobDefinition) {
         this.jobDefinition = jobDefinition;
         return this;
@@ -29,6 +31,7 @@ public class BatchParameters {
     
     @JsonProperty("JobName")
     public String jobName;
+
     public BatchParameters withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -37,9 +40,14 @@ public class BatchParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryStrategy")
     public BatchRetryStrategy retryStrategy;
+
     public BatchParameters withRetryStrategy(BatchRetryStrategy retryStrategy) {
         this.retryStrategy = retryStrategy;
         return this;
     }
     
+    public BatchParameters(@JsonProperty("JobDefinition") String jobDefinition, @JsonProperty("JobName") String jobName) {
+        this.jobDefinition = jobDefinition;
+        this.jobName = jobName;
+  }
 }

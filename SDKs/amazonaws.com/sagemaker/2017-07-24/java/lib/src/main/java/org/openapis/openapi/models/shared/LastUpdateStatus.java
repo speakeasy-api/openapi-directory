@@ -15,6 +15,7 @@ public class LastUpdateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public LastUpdateStatus withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -22,9 +23,13 @@ public class LastUpdateStatus {
     
     @JsonProperty("Status")
     public LastUpdateStatusValueEnum status;
+
     public LastUpdateStatus withStatus(LastUpdateStatusValueEnum status) {
         this.status = status;
         return this;
     }
     
+    public LastUpdateStatus(@JsonProperty("Status") LastUpdateStatusValueEnum status) {
+        this.status = status;
+  }
 }

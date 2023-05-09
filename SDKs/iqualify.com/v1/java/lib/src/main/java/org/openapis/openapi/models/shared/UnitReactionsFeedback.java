@@ -12,6 +12,7 @@ public class UnitReactionsFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbs-down")
     public Double thumbsDown;
+
     public UnitReactionsFeedback withThumbsDown(Double thumbsDown) {
         this.thumbsDown = thumbsDown;
         return this;
@@ -20,9 +21,11 @@ public class UnitReactionsFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbs-up")
     public Double thumbsUp;
+
     public UnitReactionsFeedback withThumbsUp(Double thumbsUp) {
         this.thumbsUp = thumbsUp;
         return this;
     }
     
+    public UnitReactionsFeedback(){}
 }

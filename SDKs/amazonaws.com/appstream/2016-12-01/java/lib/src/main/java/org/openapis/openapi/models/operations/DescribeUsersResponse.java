@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeUsersResponse {
     
     public String contentType;
+
     public DescribeUsersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeUsersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeUsersResult describeUsersResult;
+
     public DescribeUsersResponse withDescribeUsersResult(org.openapis.openapi.models.shared.DescribeUsersResult describeUsersResult) {
         this.describeUsersResult = describeUsersResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeUsersResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public DescribeUsersResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeUsersResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DescribeUsersResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeUsersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeUsersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeUsersResponse {
     
     
     public Integer statusCode;
+
     public DescribeUsersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeUsersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeUsersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeUsersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

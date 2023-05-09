@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRepositoryResponse {
     
     public String contentType;
+
     public CreateRepositoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateRepositoryResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRepositoryResponse createRepositoryResponse;
+
     public CreateRepositoryResponse withCreateRepositoryResponse(org.openapis.openapi.models.shared.CreateRepositoryResponse createRepositoryResponse) {
         this.createRepositoryResponse = createRepositoryResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateRepositoryResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateRepositoryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class CreateRepositoryResponse {
      */
     
     public Object invalidTagParameterException;
+
     public CreateRepositoryResponse withInvalidTagParameterException(Object invalidTagParameterException) {
         this.invalidTagParameterException = invalidTagParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateRepositoryResponse {
      */
     
     public Object limitExceededException;
+
     public CreateRepositoryResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateRepositoryResponse {
      */
     
     public Object repositoryAlreadyExistsException;
+
     public CreateRepositoryResponse withRepositoryAlreadyExistsException(Object repositoryAlreadyExistsException) {
         this.repositoryAlreadyExistsException = repositoryAlreadyExistsException;
         return this;
@@ -69,6 +76,7 @@ public class CreateRepositoryResponse {
      */
     
     public Object serverException;
+
     public CreateRepositoryResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -76,6 +84,7 @@ public class CreateRepositoryResponse {
     
     
     public Integer statusCode;
+
     public CreateRepositoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateRepositoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRepositoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateRepositoryResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateRepositoryResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
@@ -103,9 +114,14 @@ public class CreateRepositoryResponse {
      */
     
     public Object unsupportedCommandException;
+
     public CreateRepositoryResponse withUnsupportedCommandException(Object unsupportedCommandException) {
         this.unsupportedCommandException = unsupportedCommandException;
         return this;
     }
     
+    public CreateRepositoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

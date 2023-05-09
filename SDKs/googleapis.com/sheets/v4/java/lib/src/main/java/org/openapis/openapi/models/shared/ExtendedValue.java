@@ -18,6 +18,7 @@ public class ExtendedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boolValue")
     public Boolean boolValue;
+
     public ExtendedValue withBoolValue(Boolean boolValue) {
         this.boolValue = boolValue;
         return this;
@@ -29,6 +30,7 @@ public class ExtendedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorValue")
     public ErrorValue errorValue;
+
     public ExtendedValue withErrorValue(ErrorValue errorValue) {
         this.errorValue = errorValue;
         return this;
@@ -40,6 +42,7 @@ public class ExtendedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formulaValue")
     public String formulaValue;
+
     public ExtendedValue withFormulaValue(String formulaValue) {
         this.formulaValue = formulaValue;
         return this;
@@ -51,6 +54,7 @@ public class ExtendedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberValue")
     public Double numberValue;
+
     public ExtendedValue withNumberValue(Double numberValue) {
         this.numberValue = numberValue;
         return this;
@@ -62,9 +66,11 @@ public class ExtendedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public ExtendedValue withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public ExtendedValue(){}
 }

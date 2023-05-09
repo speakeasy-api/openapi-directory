@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventItemsRequest {
@@ -12,6 +13,7 @@ public class GetEventItemsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public GetEventItemsRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -22,6 +24,7 @@ public class GetEventItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_ids")
     public String categoryIds;
+
     public GetEventItemsRequest withCategoryIds(String categoryIds) {
         this.categoryIds = categoryIds;
         return this;
@@ -32,6 +35,7 @@ public class GetEventItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=delivery_country")
     public String deliveryCountry;
+
     public GetEventItemsRequest withDeliveryCountry(String deliveryCountry) {
         this.deliveryCountry = deliveryCountry;
         return this;
@@ -42,6 +46,7 @@ public class GetEventItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event_ids")
     public String eventIds;
+
     public GetEventItemsRequest withEventIds(String eventIds) {
         this.eventIds = eventIds;
         return this;
@@ -52,6 +57,7 @@ public class GetEventItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetEventItemsRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -62,9 +68,14 @@ public class GetEventItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetEventItemsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetEventItemsRequest(@JsonProperty("X-EBAY-C-MARKETPLACE-ID") String xEbayCMarketplaceId, @JsonProperty("event_ids") String eventIds) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+        this.eventIds = eventIds;
+  }
 }

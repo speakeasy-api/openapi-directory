@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDetachPolicy {
     @JsonProperty("ObjectReference")
     public ObjectReference objectReference;
+
     public BatchDetachPolicy withObjectReference(ObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
@@ -19,9 +20,14 @@ public class BatchDetachPolicy {
     
     @JsonProperty("PolicyReference")
     public ObjectReference policyReference;
+
     public BatchDetachPolicy withPolicyReference(ObjectReference policyReference) {
         this.policyReference = policyReference;
         return this;
     }
     
+    public BatchDetachPolicy(@JsonProperty("ObjectReference") ObjectReference objectReference, @JsonProperty("PolicyReference") ObjectReference policyReference) {
+        this.objectReference = objectReference;
+        this.policyReference = policyReference;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDatapipelinesV1SDKVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdkSupportStatus")
     public GoogleCloudDatapipelinesV1SDKVersionSDKSupportStatusEnum sdkSupportStatus;
+
     public GoogleCloudDatapipelinesV1SDKVersion withSDKSupportStatus(GoogleCloudDatapipelinesV1SDKVersionSDKSupportStatusEnum sdkSupportStatus) {
         this.sdkSupportStatus = sdkSupportStatus;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatapipelinesV1SDKVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public GoogleCloudDatapipelinesV1SDKVersion withVersion(String version) {
         this.version = version;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatapipelinesV1SDKVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionDisplayName")
     public String versionDisplayName;
+
     public GoogleCloudDatapipelinesV1SDKVersion withVersionDisplayName(String versionDisplayName) {
         this.versionDisplayName = versionDisplayName;
         return this;
     }
     
+    public GoogleCloudDatapipelinesV1SDKVersion(){}
 }

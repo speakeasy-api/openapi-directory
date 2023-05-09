@@ -15,6 +15,7 @@ public class RokuPlans {
      */
     @JsonProperty("plans")
     public RokuPlanListItem[] plans;
+
     public RokuPlans withPlans(RokuPlanListItem[] plans) {
         this.plans = plans;
         return this;
@@ -25,9 +26,14 @@ public class RokuPlans {
      */
     @JsonProperty("termsAndConditions")
     public String termsAndConditions;
+
     public RokuPlans withTermsAndConditions(String termsAndConditions) {
         this.termsAndConditions = termsAndConditions;
         return this;
     }
     
+    public RokuPlans(@JsonProperty("plans") RokuPlanListItem[] plans, @JsonProperty("termsAndConditions") String termsAndConditions) {
+        this.plans = plans;
+        this.termsAndConditions = termsAndConditions;
+  }
 }

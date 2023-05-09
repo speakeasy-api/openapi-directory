@@ -15,6 +15,7 @@ public class AwsEcsServiceCapacityProviderStrategyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Base")
     public Long base;
+
     public AwsEcsServiceCapacityProviderStrategyDetails withBase(Long base) {
         this.base = base;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsServiceCapacityProviderStrategyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityProvider")
     public String capacityProvider;
+
     public AwsEcsServiceCapacityProviderStrategyDetails withCapacityProvider(String capacityProvider) {
         this.capacityProvider = capacityProvider;
         return this;
@@ -31,9 +33,11 @@ public class AwsEcsServiceCapacityProviderStrategyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Weight")
     public Long weight;
+
     public AwsEcsServiceCapacityProviderStrategyDetails withWeight(Long weight) {
         this.weight = weight;
         return this;
     }
     
+    public AwsEcsServiceCapacityProviderStrategyDetails(){}
 }

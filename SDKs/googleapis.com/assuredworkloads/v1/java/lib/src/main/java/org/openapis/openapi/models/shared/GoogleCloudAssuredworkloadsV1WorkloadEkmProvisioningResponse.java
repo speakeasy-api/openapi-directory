@@ -18,6 +18,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ekmProvisioningErrorDomain")
     public GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorDomainEnum ekmProvisioningErrorDomain;
+
     public GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse withEkmProvisioningErrorDomain(GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorDomainEnum ekmProvisioningErrorDomain) {
         this.ekmProvisioningErrorDomain = ekmProvisioningErrorDomain;
         return this;
@@ -27,10 +28,11 @@ public class GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse {
      * Detailed error message if Ekm provisioning fails
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("ekmProvisioningErrorMessage")
-    public String ekmProvisioningErrorMessage;
-    public GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse withEkmProvisioningErrorMessage(String ekmProvisioningErrorMessage) {
-        this.ekmProvisioningErrorMessage = ekmProvisioningErrorMessage;
+    @JsonProperty("ekmProvisioningErrorMapping")
+    public GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum ekmProvisioningErrorMapping;
+
+    public GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse withEkmProvisioningErrorMapping(GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum ekmProvisioningErrorMapping) {
+        this.ekmProvisioningErrorMapping = ekmProvisioningErrorMapping;
         return this;
     }
     
@@ -40,9 +42,11 @@ public class GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ekmProvisioningState")
     public GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningStateEnum ekmProvisioningState;
+
     public GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse withEkmProvisioningState(GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningStateEnum ekmProvisioningState) {
         this.ekmProvisioningState = ekmProvisioningState;
         return this;
     }
     
+    public GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse(){}
 }

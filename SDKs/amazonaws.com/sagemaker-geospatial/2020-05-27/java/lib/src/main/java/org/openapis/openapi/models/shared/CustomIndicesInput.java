@@ -9,15 +9,17 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * CustomIndicesInput - &lt;p/&gt;
+ * CustomIndicesInput - Input object defining the custom BandMath indices to compute.
  */
 public class CustomIndicesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Operations")
     public Operation[] operations;
+
     public CustomIndicesInput withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public CustomIndicesInput(){}
 }

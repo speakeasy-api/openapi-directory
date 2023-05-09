@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PaymentsresellersubscriptionPartnersSubscriptionsGetResponse {
     
     public String contentType;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudPaymentsResellerSubscriptionV1Subscription googleCloudPaymentsResellerSubscriptionV1Subscription;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsGetResponse withGoogleCloudPaymentsResellerSubscriptionV1Subscription(org.openapis.openapi.models.shared.GoogleCloudPaymentsResellerSubscriptionV1Subscription googleCloudPaymentsResellerSubscriptionV1Subscription) {
         this.googleCloudPaymentsResellerSubscriptionV1Subscription = googleCloudPaymentsResellerSubscriptionV1Subscription;
         return this;
@@ -26,6 +29,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsGetResponse {
     
     
     public Integer statusCode;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PaymentsresellersubscriptionPartnersSubscriptionsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public StreamingSession withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automaticTerminationMode")
     public AutomaticTerminationModeEnum automaticTerminationMode;
+
     public StreamingSession withAutomaticTerminationMode(AutomaticTerminationModeEnum automaticTerminationMode) {
         this.automaticTerminationMode = automaticTerminationMode;
         return this;
@@ -36,6 +38,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupMode")
     public SessionBackupModeEnum backupMode;
+
     public StreamingSession withBackupMode(SessionBackupModeEnum backupMode) {
         this.backupMode = backupMode;
         return this;
@@ -46,6 +49,7 @@ public class StreamingSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public StreamingSession withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -54,6 +58,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public StreamingSession withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -62,6 +67,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2InstanceType")
     public String ec2InstanceType;
+
     public StreamingSession withEc2InstanceType(String ec2InstanceType) {
         this.ec2InstanceType = ec2InstanceType;
         return this;
@@ -70,6 +76,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchProfileId")
     public String launchProfileId;
+
     public StreamingSession withLaunchProfileId(String launchProfileId) {
         this.launchProfileId = launchProfileId;
         return this;
@@ -78,6 +85,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxBackupsToRetain")
     public Long maxBackupsToRetain;
+
     public StreamingSession withMaxBackupsToRetain(Long maxBackupsToRetain) {
         this.maxBackupsToRetain = maxBackupsToRetain;
         return this;
@@ -86,6 +94,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownedBy")
     public String ownedBy;
+
     public StreamingSession withOwnedBy(String ownedBy) {
         this.ownedBy = ownedBy;
         return this;
@@ -94,6 +103,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionId")
     public String sessionId;
+
     public StreamingSession withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -102,6 +112,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionPersistenceMode")
     public SessionPersistenceModeEnum sessionPersistenceMode;
+
     public StreamingSession withSessionPersistenceMode(SessionPersistenceModeEnum sessionPersistenceMode) {
         this.sessionPersistenceMode = sessionPersistenceMode;
         return this;
@@ -112,6 +123,7 @@ public class StreamingSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedAt")
     public OffsetDateTime startedAt;
+
     public StreamingSession withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -120,6 +132,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startedBy")
     public String startedBy;
+
     public StreamingSession withStartedBy(String startedBy) {
         this.startedBy = startedBy;
         return this;
@@ -128,6 +141,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startedFromBackupId")
     public String startedFromBackupId;
+
     public StreamingSession withStartedFromBackupId(String startedFromBackupId) {
         this.startedFromBackupId = startedFromBackupId;
         return this;
@@ -136,6 +150,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public StreamingSessionStateEnum state;
+
     public StreamingSession withState(StreamingSessionStateEnum state) {
         this.state = state;
         return this;
@@ -144,6 +159,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public StreamingSessionStatusCodeEnum statusCode;
+
     public StreamingSession withStatusCode(StreamingSessionStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -152,6 +168,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public StreamingSession withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -162,6 +179,7 @@ public class StreamingSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stopAt")
     public OffsetDateTime stopAt;
+
     public StreamingSession withStopAt(OffsetDateTime stopAt) {
         this.stopAt = stopAt;
         return this;
@@ -172,6 +190,7 @@ public class StreamingSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stoppedAt")
     public OffsetDateTime stoppedAt;
+
     public StreamingSession withStoppedAt(OffsetDateTime stoppedAt) {
         this.stoppedAt = stoppedAt;
         return this;
@@ -180,6 +199,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stoppedBy")
     public String stoppedBy;
+
     public StreamingSession withStoppedBy(String stoppedBy) {
         this.stoppedBy = stoppedBy;
         return this;
@@ -188,6 +208,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingImageId")
     public String streamingImageId;
+
     public StreamingSession withStreamingImageId(String streamingImageId) {
         this.streamingImageId = streamingImageId;
         return this;
@@ -196,6 +217,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StreamingSession withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -206,6 +228,7 @@ public class StreamingSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("terminateAt")
     public OffsetDateTime terminateAt;
+
     public StreamingSession withTerminateAt(OffsetDateTime terminateAt) {
         this.terminateAt = terminateAt;
         return this;
@@ -216,6 +239,7 @@ public class StreamingSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public StreamingSession withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -224,6 +248,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedBy")
     public String updatedBy;
+
     public StreamingSession withUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
         return this;
@@ -232,6 +257,7 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeConfiguration")
     public VolumeConfiguration volumeConfiguration;
+
     public StreamingSession withVolumeConfiguration(VolumeConfiguration volumeConfiguration) {
         this.volumeConfiguration = volumeConfiguration;
         return this;
@@ -240,9 +266,11 @@ public class StreamingSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeRetentionMode")
     public VolumeRetentionModeEnum volumeRetentionMode;
+
     public StreamingSession withVolumeRetentionMode(VolumeRetentionModeEnum volumeRetentionMode) {
         this.volumeRetentionMode = volumeRetentionMode;
         return this;
     }
     
+    public StreamingSession(){}
 }

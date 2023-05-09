@@ -15,6 +15,7 @@ public class GitConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Branch")
     public String branch;
+
     public GitConfig withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -22,6 +23,7 @@ public class GitConfig {
     
     @JsonProperty("RepositoryUrl")
     public String repositoryUrl;
+
     public GitConfig withRepositoryUrl(String repositoryUrl) {
         this.repositoryUrl = repositoryUrl;
         return this;
@@ -30,9 +32,13 @@ public class GitConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public GitConfig withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
     }
     
+    public GitConfig(@JsonProperty("RepositoryUrl") String repositoryUrl) {
+        this.repositoryUrl = repositoryUrl;
+  }
 }

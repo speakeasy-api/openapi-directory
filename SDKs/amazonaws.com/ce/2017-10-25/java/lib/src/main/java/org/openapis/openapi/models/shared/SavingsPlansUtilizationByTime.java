@@ -15,6 +15,7 @@ public class SavingsPlansUtilizationByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmortizedCommitment")
     public SavingsPlansAmortizedCommitment amortizedCommitment;
+
     public SavingsPlansUtilizationByTime withAmortizedCommitment(SavingsPlansAmortizedCommitment amortizedCommitment) {
         this.amortizedCommitment = amortizedCommitment;
         return this;
@@ -23,6 +24,7 @@ public class SavingsPlansUtilizationByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Savings")
     public SavingsPlansSavings savings;
+
     public SavingsPlansUtilizationByTime withSavings(SavingsPlansSavings savings) {
         this.savings = savings;
         return this;
@@ -33,6 +35,7 @@ public class SavingsPlansUtilizationByTime {
      */
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public SavingsPlansUtilizationByTime withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
@@ -40,9 +43,14 @@ public class SavingsPlansUtilizationByTime {
     
     @JsonProperty("Utilization")
     public SavingsPlansUtilization utilization;
+
     public SavingsPlansUtilizationByTime withUtilization(SavingsPlansUtilization utilization) {
         this.utilization = utilization;
         return this;
     }
     
+    public SavingsPlansUtilizationByTime(@JsonProperty("TimePeriod") DateInterval timePeriod, @JsonProperty("Utilization") SavingsPlansUtilization utilization) {
+        this.timePeriod = timePeriod;
+        this.utilization = utilization;
+  }
 }

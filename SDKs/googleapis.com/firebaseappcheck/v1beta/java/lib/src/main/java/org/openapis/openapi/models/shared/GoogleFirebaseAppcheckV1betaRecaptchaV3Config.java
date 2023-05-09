@@ -18,6 +18,7 @@ public class GoogleFirebaseAppcheckV1betaRecaptchaV3Config {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleFirebaseAppcheckV1betaRecaptchaV3Config withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirebaseAppcheckV1betaRecaptchaV3Config {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("siteSecret")
     public String siteSecret;
+
     public GoogleFirebaseAppcheckV1betaRecaptchaV3Config withSiteSecret(String siteSecret) {
         this.siteSecret = siteSecret;
         return this;
@@ -40,6 +42,7 @@ public class GoogleFirebaseAppcheckV1betaRecaptchaV3Config {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("siteSecretSet")
     public Boolean siteSecretSet;
+
     public GoogleFirebaseAppcheckV1betaRecaptchaV3Config withSiteSecretSet(Boolean siteSecretSet) {
         this.siteSecretSet = siteSecretSet;
         return this;
@@ -51,9 +54,11 @@ public class GoogleFirebaseAppcheckV1betaRecaptchaV3Config {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenTtl")
     public String tokenTtl;
+
     public GoogleFirebaseAppcheckV1betaRecaptchaV3Config withTokenTtl(String tokenTtl) {
         this.tokenTtl = tokenTtl;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1betaRecaptchaV3Config(){}
 }

@@ -15,6 +15,7 @@ public class UpdateControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionPlanInstructions")
     public String actionPlanInstructions;
+
     public UpdateControlRequestBody withActionPlanInstructions(String actionPlanInstructions) {
         this.actionPlanInstructions = actionPlanInstructions;
         return this;
@@ -26,6 +27,7 @@ public class UpdateControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionPlanTitle")
     public String actionPlanTitle;
+
     public UpdateControlRequestBody withActionPlanTitle(String actionPlanTitle) {
         this.actionPlanTitle = actionPlanTitle;
         return this;
@@ -36,6 +38,7 @@ public class UpdateControlRequestBody {
      */
     @JsonProperty("controlMappingSources")
     public org.openapis.openapi.models.shared.ControlMappingSource[] controlMappingSources;
+
     public UpdateControlRequestBody withControlMappingSources(org.openapis.openapi.models.shared.ControlMappingSource[] controlMappingSources) {
         this.controlMappingSources = controlMappingSources;
         return this;
@@ -47,6 +50,7 @@ public class UpdateControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateControlRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -57,6 +61,7 @@ public class UpdateControlRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public UpdateControlRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -68,9 +73,14 @@ public class UpdateControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testingInformation")
     public String testingInformation;
+
     public UpdateControlRequestBody withTestingInformation(String testingInformation) {
         this.testingInformation = testingInformation;
         return this;
     }
     
+    public UpdateControlRequestBody(@JsonProperty("controlMappingSources") org.openapis.openapi.models.shared.ControlMappingSource[] controlMappingSources, @JsonProperty("name") String name) {
+        this.controlMappingSources = controlMappingSources;
+        this.name = name;
+  }
 }

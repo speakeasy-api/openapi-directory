@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewallPolicies")
     public GoogleCloudRecaptchaenterpriseV1FirewallPolicy[] firewallPolicies;
+
     public GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse withFirewallPolicies(GoogleCloudRecaptchaenterpriseV1FirewallPolicy[] firewallPolicies) {
         this.firewallPolicies = firewallPolicies;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse(){}
 }

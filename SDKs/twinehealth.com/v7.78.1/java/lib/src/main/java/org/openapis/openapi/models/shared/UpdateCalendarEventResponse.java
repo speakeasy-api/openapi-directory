@@ -15,6 +15,7 @@ public class UpdateCalendarEventResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CalendarEventResource data;
+
     public UpdateCalendarEventResponse withData(CalendarEventResource data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class UpdateCalendarEventResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public CreateOrUpdateMetaResponse meta;
+
     public UpdateCalendarEventResponse withMeta(CreateOrUpdateMetaResponse meta) {
         this.meta = meta;
         return this;
     }
     
+    public UpdateCalendarEventResponse(){}
 }

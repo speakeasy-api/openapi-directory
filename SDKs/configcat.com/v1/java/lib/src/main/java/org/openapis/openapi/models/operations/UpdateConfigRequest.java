@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateConfigRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateConfigRequest updateConfigRequest;
+
     public UpdateConfigRequest withUpdateConfigRequest(org.openapis.openapi.models.shared.UpdateConfigRequest updateConfigRequest) {
         this.updateConfigRequest = updateConfigRequest;
         return this;
@@ -19,9 +21,14 @@ public class UpdateConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=configId")
     public String configId;
+
     public UpdateConfigRequest withConfigId(String configId) {
         this.configId = configId;
         return this;
     }
     
+    public UpdateConfigRequest(@JsonProperty("UpdateConfigRequest") org.openapis.openapi.models.shared.UpdateConfigRequest updateConfigRequest, @JsonProperty("configId") String configId) {
+        this.updateConfigRequest = updateConfigRequest;
+        this.configId = configId;
+  }
 }

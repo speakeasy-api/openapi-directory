@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAccessOrderBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desc")
     public Boolean desc;
+
     public GoogleAnalyticsAdminV1alphaAccessOrderBy withDesc(Boolean desc) {
         this.desc = desc;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaAccessOrderBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public GoogleAnalyticsAdminV1alphaAccessOrderByDimensionOrderBy dimension;
+
     public GoogleAnalyticsAdminV1alphaAccessOrderBy withDimension(GoogleAnalyticsAdminV1alphaAccessOrderByDimensionOrderBy dimension) {
         this.dimension = dimension;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsAdminV1alphaAccessOrderBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public GoogleAnalyticsAdminV1alphaAccessOrderByMetricOrderBy metric;
+
     public GoogleAnalyticsAdminV1alphaAccessOrderBy withMetric(GoogleAnalyticsAdminV1alphaAccessOrderByMetricOrderBy metric) {
         this.metric = metric;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAccessOrderBy(){}
 }

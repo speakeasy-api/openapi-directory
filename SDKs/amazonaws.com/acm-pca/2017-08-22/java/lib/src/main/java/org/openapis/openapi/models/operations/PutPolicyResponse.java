@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutPolicyResponse {
@@ -12,6 +13,7 @@ public class PutPolicyResponse {
      */
     
     public Object concurrentModificationException;
+
     public PutPolicyResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class PutPolicyResponse {
     
     
     public String contentType;
+
     public PutPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutPolicyResponse {
      */
     
     public Object invalidArnException;
+
     public PutPolicyResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class PutPolicyResponse {
      */
     
     public Object invalidPolicyException;
+
     public PutPolicyResponse withInvalidPolicyException(Object invalidPolicyException) {
         this.invalidPolicyException = invalidPolicyException;
         return this;
@@ -49,6 +54,7 @@ public class PutPolicyResponse {
      */
     
     public Object invalidStateException;
+
     public PutPolicyResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -59,6 +65,7 @@ public class PutPolicyResponse {
      */
     
     public Object lockoutPreventedException;
+
     public PutPolicyResponse withLockoutPreventedException(Object lockoutPreventedException) {
         this.lockoutPreventedException = lockoutPreventedException;
         return this;
@@ -69,6 +76,7 @@ public class PutPolicyResponse {
      */
     
     public Object requestFailedException;
+
     public PutPolicyResponse withRequestFailedException(Object requestFailedException) {
         this.requestFailedException = requestFailedException;
         return this;
@@ -79,6 +87,7 @@ public class PutPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class PutPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class PutPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

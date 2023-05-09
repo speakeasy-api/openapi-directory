@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListsRequest {
@@ -12,6 +13,7 @@ public class GetListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public GetListsRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -42,6 +44,7 @@ public class GetListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetListsRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -71,6 +74,7 @@ public class GetListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public String[] ids;
+
     public GetListsRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -81,6 +85,7 @@ public class GetListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_type")
     public org.openapis.openapi.models.shared.ItemTypeEnum itemType;
+
     public GetListsRequest withItemType(org.openapis.openapi.models.shared.ItemTypeEnum itemType) {
         this.itemType = itemType;
         return this;
@@ -101,6 +106,7 @@ public class GetListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetListsRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -111,6 +117,7 @@ public class GetListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_rating")
     public String maxRating;
+
     public GetListsRequest withMaxRating(String maxRating) {
         this.maxRating = maxRating;
         return this;
@@ -121,6 +128,7 @@ public class GetListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.ListOrderEnum order;
+
     public GetListsRequest withOrder(org.openapis.openapi.models.shared.ListOrderEnum order) {
         this.order = order;
         return this;
@@ -131,6 +139,7 @@ public class GetListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public org.openapis.openapi.models.shared.ListOrderByEnum orderBy;
+
     public GetListsRequest withOrderBy(org.openapis.openapi.models.shared.ListOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -141,6 +150,7 @@ public class GetListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Integer pageSize;
+
     public GetListsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -151,6 +161,7 @@ public class GetListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public GetListsRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -161,9 +172,13 @@ public class GetListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
     public String sub;
+
     public GetListsRequest withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public GetListsRequest(@JsonProperty("ids") String[] ids) {
+        this.ids = ids;
+  }
 }

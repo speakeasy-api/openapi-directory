@@ -18,6 +18,7 @@ public class StoreItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hosts")
     public String[] hosts;
+
     public StoreItems withHosts(String[] hosts) {
         this.hosts = hosts;
         return this;
@@ -29,6 +30,7 @@ public class StoreItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public StoreItems withId(Double id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class StoreItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StoreItems withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StoreItems(){}
 }

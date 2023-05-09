@@ -18,6 +18,7 @@ public class NetworkEndpointGroupLbNetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultPort")
     public Integer defaultPort;
+
     public NetworkEndpointGroupLbNetworkEndpointGroup withDefaultPort(Integer defaultPort) {
         this.defaultPort = defaultPort;
         return this;
@@ -29,6 +30,7 @@ public class NetworkEndpointGroupLbNetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public NetworkEndpointGroupLbNetworkEndpointGroup withNetwork(String network) {
         this.network = network;
         return this;
@@ -40,6 +42,7 @@ public class NetworkEndpointGroupLbNetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public NetworkEndpointGroupLbNetworkEndpointGroup withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
@@ -51,9 +54,11 @@ public class NetworkEndpointGroupLbNetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public NetworkEndpointGroupLbNetworkEndpointGroup withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public NetworkEndpointGroupLbNetworkEndpointGroup(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDatapipelinesV1ScheduleSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextJobTime")
     public String nextJobTime;
+
     public GoogleCloudDatapipelinesV1ScheduleSpec withNextJobTime(String nextJobTime) {
         this.nextJobTime = nextJobTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatapipelinesV1ScheduleSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public String schedule;
+
     public GoogleCloudDatapipelinesV1ScheduleSpec withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatapipelinesV1ScheduleSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public GoogleCloudDatapipelinesV1ScheduleSpec withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public GoogleCloudDatapipelinesV1ScheduleSpec(){}
 }

@@ -12,6 +12,7 @@ public class GetLifecyclePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public GetLifecyclePolicyRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -19,9 +20,13 @@ public class GetLifecyclePolicyRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public GetLifecyclePolicyRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public GetLifecyclePolicyRequest(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeProductViewResponse {
     
     public String contentType;
+
     public DescribeProductViewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeProductViewResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeProductViewOutput describeProductViewOutput;
+
     public DescribeProductViewResponse withDescribeProductViewOutput(org.openapis.openapi.models.shared.DescribeProductViewOutput describeProductViewOutput) {
         this.describeProductViewOutput = describeProductViewOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeProductViewResponse {
      */
     
     public Object invalidParametersException;
+
     public DescribeProductViewResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeProductViewResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeProductViewResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeProductViewResponse {
     
     
     public Integer statusCode;
+
     public DescribeProductViewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeProductViewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeProductViewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeProductViewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

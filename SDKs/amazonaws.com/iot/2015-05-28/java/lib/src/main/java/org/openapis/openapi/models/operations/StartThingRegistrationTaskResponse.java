@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartThingRegistrationTaskResponse {
     
     public String contentType;
+
     public StartThingRegistrationTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartThingRegistrationTaskResponse {
      */
     
     public Object internalFailureException;
+
     public StartThingRegistrationTaskResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class StartThingRegistrationTaskResponse {
      */
     
     public Object invalidRequestException;
+
     public StartThingRegistrationTaskResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartThingRegistrationTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.StartThingRegistrationTaskResponse startThingRegistrationTaskResponse;
+
     public StartThingRegistrationTaskResponse withStartThingRegistrationTaskResponse(org.openapis.openapi.models.shared.StartThingRegistrationTaskResponse startThingRegistrationTaskResponse) {
         this.startThingRegistrationTaskResponse = startThingRegistrationTaskResponse;
         return this;
@@ -46,6 +51,7 @@ public class StartThingRegistrationTaskResponse {
     
     
     public Integer statusCode;
+
     public StartThingRegistrationTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StartThingRegistrationTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartThingRegistrationTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class StartThingRegistrationTaskResponse {
      */
     
     public Object throttlingException;
+
     public StartThingRegistrationTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class StartThingRegistrationTaskResponse {
      */
     
     public Object unauthorizedException;
+
     public StartThingRegistrationTaskResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public StartThingRegistrationTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

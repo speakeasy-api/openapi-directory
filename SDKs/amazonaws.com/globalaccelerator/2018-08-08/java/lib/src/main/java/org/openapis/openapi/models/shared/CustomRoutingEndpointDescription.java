@@ -15,9 +15,11 @@ public class CustomRoutingEndpointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointId")
     public String endpointId;
+
     public CustomRoutingEndpointDescription withEndpointId(String endpointId) {
         this.endpointId = endpointId;
         return this;
     }
     
+    public CustomRoutingEndpointDescription(){}
 }

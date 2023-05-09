@@ -22,6 +22,7 @@ public class EndpointProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public EndpointProperties withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class EndpointProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentInferenceUnits")
     public Long currentInferenceUnits;
+
     public EndpointProperties withCurrentInferenceUnits(Long currentInferenceUnits) {
         this.currentInferenceUnits = currentInferenceUnits;
         return this;
@@ -38,6 +40,7 @@ public class EndpointProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public EndpointProperties withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -46,6 +49,7 @@ public class EndpointProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredDataAccessRoleArn")
     public String desiredDataAccessRoleArn;
+
     public EndpointProperties withDesiredDataAccessRoleArn(String desiredDataAccessRoleArn) {
         this.desiredDataAccessRoleArn = desiredDataAccessRoleArn;
         return this;
@@ -54,6 +58,7 @@ public class EndpointProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredInferenceUnits")
     public Long desiredInferenceUnits;
+
     public EndpointProperties withDesiredInferenceUnits(Long desiredInferenceUnits) {
         this.desiredInferenceUnits = desiredInferenceUnits;
         return this;
@@ -62,6 +67,7 @@ public class EndpointProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredModelArn")
     public String desiredModelArn;
+
     public EndpointProperties withDesiredModelArn(String desiredModelArn) {
         this.desiredModelArn = desiredModelArn;
         return this;
@@ -70,6 +76,7 @@ public class EndpointProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public EndpointProperties withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
@@ -78,6 +85,7 @@ public class EndpointProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelArn")
     public String flywheelArn;
+
     public EndpointProperties withFlywheelArn(String flywheelArn) {
         this.flywheelArn = flywheelArn;
         return this;
@@ -88,6 +96,7 @@ public class EndpointProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public EndpointProperties withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -96,6 +105,7 @@ public class EndpointProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public EndpointProperties withMessage(String message) {
         this.message = message;
         return this;
@@ -104,6 +114,7 @@ public class EndpointProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelArn")
     public String modelArn;
+
     public EndpointProperties withModelArn(String modelArn) {
         this.modelArn = modelArn;
         return this;
@@ -112,9 +123,11 @@ public class EndpointProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public EndpointStatusEnum status;
+
     public EndpointProperties withStatus(EndpointStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public EndpointProperties(){}
 }

@@ -15,6 +15,7 @@ public class TestOrderCustomerMarketingRightsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explicitMarketingPreference")
     public String explicitMarketingPreference;
+
     public TestOrderCustomerMarketingRightsInfo withExplicitMarketingPreference(String explicitMarketingPreference) {
         this.explicitMarketingPreference = explicitMarketingPreference;
         return this;
@@ -26,9 +27,11 @@ public class TestOrderCustomerMarketingRightsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdatedTimestamp")
     public String lastUpdatedTimestamp;
+
     public TestOrderCustomerMarketingRightsInfo withLastUpdatedTimestamp(String lastUpdatedTimestamp) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         return this;
     }
     
+    public TestOrderCustomerMarketingRightsInfo(){}
 }

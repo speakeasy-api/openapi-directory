@@ -12,9 +12,13 @@ public class UpdateGcmChannelRequestBody {
      */
     @JsonProperty("GCMChannelRequest")
     public UpdateGCMChannelRequestBodyGCMChannelRequest gcmChannelRequest;
+
     public UpdateGcmChannelRequestBody withGCMChannelRequest(UpdateGCMChannelRequestBodyGCMChannelRequest gcmChannelRequest) {
         this.gcmChannelRequest = gcmChannelRequest;
         return this;
     }
     
+    public UpdateGcmChannelRequestBody(@JsonProperty("GCMChannelRequest") UpdateGCMChannelRequestBodyGCMChannelRequest gcmChannelRequest) {
+        this.gcmChannelRequest = gcmChannelRequest;
+  }
 }

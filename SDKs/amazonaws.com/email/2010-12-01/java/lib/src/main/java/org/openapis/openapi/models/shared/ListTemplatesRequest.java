@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListTemplatesRequest {
     
     public Long maxItems;
+
     public ListTemplatesRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -16,9 +17,11 @@ public class ListTemplatesRequest {
     
     
     public String nextToken;
+
     public ListTemplatesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTemplatesRequest(){}
 }

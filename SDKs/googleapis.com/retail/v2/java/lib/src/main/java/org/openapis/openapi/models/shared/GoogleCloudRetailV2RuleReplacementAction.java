@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2RuleReplacementAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryTerms")
     public String[] queryTerms;
+
     public GoogleCloudRetailV2RuleReplacementAction withQueryTerms(String[] queryTerms) {
         this.queryTerms = queryTerms;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2RuleReplacementAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replacementTerm")
     public String replacementTerm;
+
     public GoogleCloudRetailV2RuleReplacementAction withReplacementTerm(String replacementTerm) {
         this.replacementTerm = replacementTerm;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2RuleReplacementAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("term")
     public String term;
+
     public GoogleCloudRetailV2RuleReplacementAction withTerm(String term) {
         this.term = term;
         return this;
     }
     
+    public GoogleCloudRetailV2RuleReplacementAction(){}
 }

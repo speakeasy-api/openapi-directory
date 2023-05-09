@@ -18,6 +18,7 @@ public class TableCellResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CellValues")
     public OcrPhotoTextElement[] cellValues;
+
     public TableCellResult withCellValues(OcrPhotoTextElement[] cellValues) {
         this.cellValues = cellValues;
         return this;
@@ -29,9 +30,11 @@ public class TableCellResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnID")
     public String columnID;
+
     public TableCellResult withColumnID(String columnID) {
         this.columnID = columnID;
         return this;
     }
     
+    public TableCellResult(){}
 }

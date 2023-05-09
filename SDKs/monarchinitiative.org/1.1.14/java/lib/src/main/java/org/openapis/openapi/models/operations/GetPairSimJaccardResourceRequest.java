@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPairSimJaccardResourceRequest {
@@ -12,6 +13,7 @@ public class GetPairSimJaccardResourceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id1")
     public String id1;
+
     public GetPairSimJaccardResourceRequest withId1(String id1) {
         this.id1 = id1;
         return this;
@@ -22,6 +24,7 @@ public class GetPairSimJaccardResourceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id2")
     public String id2;
+
     public GetPairSimJaccardResourceRequest withId2(String id2) {
         this.id2 = id2;
         return this;
@@ -32,9 +35,14 @@ public class GetPairSimJaccardResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_category")
     public String objectCategory;
+
     public GetPairSimJaccardResourceRequest withObjectCategory(String objectCategory) {
         this.objectCategory = objectCategory;
         return this;
     }
     
+    public GetPairSimJaccardResourceRequest(@JsonProperty("id1") String id1, @JsonProperty("id2") String id2) {
+        this.id1 = id1;
+        this.id2 = id2;
+  }
 }

@@ -15,6 +15,7 @@ public class AuthenticationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessRoleArn")
     public String accessRoleArn;
+
     public AuthenticationConfiguration withAccessRoleArn(String accessRoleArn) {
         this.accessRoleArn = accessRoleArn;
         return this;
@@ -23,9 +24,11 @@ public class AuthenticationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionArn")
     public String connectionArn;
+
     public AuthenticationConfiguration withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
     }
     
+    public AuthenticationConfiguration(){}
 }

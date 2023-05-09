@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriSecurity;
 import org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriRequest;
 import org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriResponse;
+import org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.IdentitytoolkitRelyingpartyCreateAuthUriRequest;
 
@@ -39,26 +38,28 @@ public class Application {
                     sessionId = "placeat";
                     tenantId = "voluptatum";
                     tenantProjectNumber = "iusto";
-                }};
-                alt = "json";
+                }};;
+                alt = AltEnum.JSON;
                 fields = "excepturi";
                 key = "nisi";
                 oauthToken = "recusandae";
                 prettyPrint = false;
                 quotaUser = "temporibus";
                 userIp = "ab";
-            }}            
+            }};            
 
-            IdentitytoolkitRelyingpartyCreateAuthUriResponse res = sdk.relyingparty.identitytoolkitRelyingpartyCreateAuthUri(req, new IdentitytoolkitRelyingpartyCreateAuthUriSecurity() {{
+            IdentitytoolkitRelyingpartyCreateAuthUriResponse res = sdk.relyingparty.identitytoolkitRelyingpartyCreateAuthUri(req, new IdentitytoolkitRelyingpartyCreateAuthUriSecurity("quis", "veritatis") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.createAuthUriResponse.isPresent()) {
+            if (res.createAuthUriResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ONDRouteRequest {
@@ -12,6 +13,7 @@ public class ONDRouteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ONDRouteRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ONDRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalogues")
     public String catalogues;
+
     public ONDRouteRequest withCatalogues(String catalogues) {
         this.catalogues = catalogues;
         return this;
@@ -32,6 +35,7 @@ public class ONDRouteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destination")
     public String destination;
+
     public ONDRouteRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -42,6 +46,7 @@ public class ONDRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public ONDRouteRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -52,6 +57,7 @@ public class ONDRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public ONDRouteRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -62,9 +68,15 @@ public class ONDRouteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=origin")
     public String origin;
+
     public ONDRouteRequest withOrigin(String origin) {
         this.origin = origin;
         return this;
     }
     
+    public ONDRouteRequest(@JsonProperty("Accept") String accept, @JsonProperty("destination") String destination, @JsonProperty("origin") String origin) {
+        this.accept = accept;
+        this.destination = destination;
+        this.origin = origin;
+  }
 }

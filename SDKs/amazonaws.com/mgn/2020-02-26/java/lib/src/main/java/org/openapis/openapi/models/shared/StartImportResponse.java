@@ -15,9 +15,11 @@ public class StartImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importTask")
     public ImportTask importTask;
+
     public StartImportResponse withImportTask(ImportTask importTask) {
         this.importTask = importTask;
         return this;
     }
     
+    public StartImportResponse(){}
 }

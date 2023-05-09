@@ -12,6 +12,7 @@ public class DtcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DateofEvent")
     public String dateofEvent;
+
     public DtcerRequestBodyCertificateParameters withDateofEvent(String dateofEvent) {
         this.dateofEvent = dateofEvent;
         return this;
@@ -22,6 +23,7 @@ public class DtcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RegisNumber")
     public String regisNumber;
+
     public DtcerRequestBodyCertificateParameters withRegisNumber(String regisNumber) {
         this.regisNumber = regisNumber;
         return this;
@@ -32,9 +34,15 @@ public class DtcerRequestBodyCertificateParameters {
      */
     @JsonProperty("Year")
     public String year;
+
     public DtcerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public DtcerRequestBodyCertificateParameters(@JsonProperty("DateofEvent") String dateofEvent, @JsonProperty("RegisNumber") String regisNumber, @JsonProperty("Year") String year) {
+        this.dateofEvent = dateofEvent;
+        this.regisNumber = regisNumber;
+        this.year = year;
+  }
 }

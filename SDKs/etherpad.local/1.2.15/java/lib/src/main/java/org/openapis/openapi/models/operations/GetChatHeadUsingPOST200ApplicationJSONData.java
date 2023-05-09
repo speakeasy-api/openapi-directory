@@ -12,9 +12,11 @@ public class GetChatHeadUsingPOST200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chatHead")
     public GetChatHeadUsingPOST200ApplicationJSONDataChatHead chatHead;
+
     public GetChatHeadUsingPOST200ApplicationJSONData withChatHead(GetChatHeadUsingPOST200ApplicationJSONDataChatHead chatHead) {
         this.chatHead = chatHead;
         return this;
     }
     
+    public GetChatHeadUsingPOST200ApplicationJSONData(){}
 }

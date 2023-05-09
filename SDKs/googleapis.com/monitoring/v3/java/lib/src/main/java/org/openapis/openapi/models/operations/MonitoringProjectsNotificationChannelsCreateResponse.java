@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MonitoringProjectsNotificationChannelsCreateResponse {
     
     public String contentType;
+
     public MonitoringProjectsNotificationChannelsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MonitoringProjectsNotificationChannelsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.NotificationChannel notificationChannel;
+
     public MonitoringProjectsNotificationChannelsCreateResponse withNotificationChannel(org.openapis.openapi.models.shared.NotificationChannel notificationChannel) {
         this.notificationChannel = notificationChannel;
         return this;
@@ -26,6 +29,7 @@ public class MonitoringProjectsNotificationChannelsCreateResponse {
     
     
     public Integer statusCode;
+
     public MonitoringProjectsNotificationChannelsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MonitoringProjectsNotificationChannelsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MonitoringProjectsNotificationChannelsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MonitoringProjectsNotificationChannelsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class MetadataHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public MetadataHeader withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class MetadataHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataKeys")
     public Definition[] metadataKeys;
+
     public MetadataHeader withMetadataKeys(Definition[] metadataKeys) {
         this.metadataKeys = metadataKeys;
         return this;
     }
     
+    public MetadataHeader(){}
 }

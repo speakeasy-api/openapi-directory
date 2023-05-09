@@ -3,15 +3,14 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateSecurity;
 import org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateRequest;
 import org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateResponse;
+import org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.AuthorizedCertificate;
-import org.openapis.openapi.models.shared.ManagedCertificateStatusEnum;
-import org.openapis.openapi.models.shared.ManagedCertificate;
 import org.openapis.openapi.models.shared.CertificateRawData;
+import org.openapis.openapi.models.shared.ManagedCertificate;
+import org.openapis.openapi.models.shared.ManagedCertificateStatusEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -20,55 +19,57 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AppengineAppsAuthorizedCertificatesCreateRequest req = new AppengineAppsAuthorizedCertificatesCreateRequest() {{
-                dollarXgafv = "2";
+            AppengineAppsAuthorizedCertificatesCreateRequest req = new AppengineAppsAuthorizedCertificatesCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 authorizedCertificate = new AuthorizedCertificate() {{
                     certificateRawData = new CertificateRawData() {{
-                        privateKey = "provident";
-                        publicCertificate = "distinctio";
-                    }};
-                    displayName = "quibusdam";
-                    domainMappingsCount = 602763;
+                        privateKey = "distinctio";
+                        publicCertificate = "quibusdam";
+                    }};;
+                    displayName = "unde";
+                    domainMappingsCount = 857946;
                     domainNames = new String[]{{
-                        add("corrupti"),
                         add("illum"),
                         add("vel"),
                         add("error"),
                     }};
                     expireTime = "deserunt";
-                    id = "suscipit";
+                    id = "674e0f46-7cc8-4796-ad15-1a05dfc2ddf7";
                     managedCertificate = new ManagedCertificate() {{
-                        lastRenewalTime = "iure";
-                        status = "PENDING";
-                    }};
-                    name = "debitis";
+                        lastRenewalTime = "quod";
+                        status = ManagedCertificateStatusEnum.FAILED_RETRYING_CAA_FORBIDDEN;
+                    }};;
+                    name = "Deanna Sauer MD";
                     visibleDomainMappings = new String[]{{
-                        add("delectus"),
+                        add("occaecati"),
+                        add("fugit"),
+                        add("deleniti"),
                     }};
-                }};
-                accessToken = "tempora";
-                alt = "media";
-                appsId = "molestiae";
-                callback = "minus";
-                fields = "placeat";
-                key = "voluptatum";
-                oauthToken = "iusto";
+                }};;
+                accessToken = "hic";
+                alt = AltEnum.PROTO;
+                callback = "totam";
+                fields = "beatae";
+                key = "commodi";
+                oauthToken = "molestiae";
                 prettyPrint = false;
-                quotaUser = "excepturi";
-                uploadType = "nisi";
-                uploadProtocol = "recusandae";
-            }}            
+                quotaUser = "modi";
+                uploadType = "qui";
+                uploadProtocol = "impedit";
+            }};            
 
-            AppengineAppsAuthorizedCertificatesCreateResponse res = sdk.apps.appengineAppsAuthorizedCertificatesCreate(req, new AppengineAppsAuthorizedCertificatesCreateSecurity() {{
+            AppengineAppsAuthorizedCertificatesCreateResponse res = sdk.apps.appengineAppsAuthorizedCertificatesCreate(req, new AppengineAppsAuthorizedCertificatesCreateSecurity("cum", "esse") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.authorizedCertificate.isPresent()) {
+            if (res.authorizedCertificate != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

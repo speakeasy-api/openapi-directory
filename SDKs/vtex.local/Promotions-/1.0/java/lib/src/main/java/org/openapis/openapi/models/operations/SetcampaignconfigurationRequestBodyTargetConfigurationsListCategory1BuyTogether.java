@@ -15,6 +15,7 @@ public class SetcampaignconfigurationRequestBodyTargetConfigurationsListCategory
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SetcampaignconfigurationRequestBodyTargetConfigurationsListCategory1BuyTogether withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class SetcampaignconfigurationRequestBodyTargetConfigurationsListCategory
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SetcampaignconfigurationRequestBodyTargetConfigurationsListCategory1BuyTogether withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SetcampaignconfigurationRequestBodyTargetConfigurationsListCategory1BuyTogether(){}
 }

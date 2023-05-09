@@ -21,6 +21,7 @@ public class Error409AIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public Error409AIS withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -35,6 +36,7 @@ public class Error409AIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalErrors")
     public Error409AISAdditionalErrors[] additionalErrors;
+
     public Error409AIS withAdditionalErrors(Error409AISAdditionalErrors[] additionalErrors) {
         this.additionalErrors = additionalErrors;
         return this;
@@ -45,6 +47,7 @@ public class Error409AIS {
      */
     @JsonProperty("code")
     public MessageCode409AISEnum code;
+
     public Error409AIS withCode(MessageCode409AISEnum code) {
         this.code = code;
         return this;
@@ -59,6 +62,7 @@ public class Error409AIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error409AIS withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -73,6 +77,7 @@ public class Error409AIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error409AIS withTitle(String title) {
         this.title = title;
         return this;
@@ -85,9 +90,14 @@ public class Error409AIS {
      */
     @JsonProperty("type")
     public String type;
+
     public Error409AIS withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Error409AIS(@JsonProperty("code") MessageCode409AISEnum code, @JsonProperty("type") String type) {
+        this.code = code;
+        this.type = type;
+  }
 }

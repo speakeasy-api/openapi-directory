@@ -18,6 +18,7 @@ public class GoalMetricRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_code")
     public String currencyCode;
+
     public GoalMetricRequestInput withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -29,6 +30,7 @@ public class GoalMetricRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_number_value")
     public Double currentNumberValue;
+
     public GoalMetricRequestInput withCurrentNumberValue(Double currentNumberValue) {
         this.currentNumberValue = currentNumberValue;
         return this;
@@ -40,6 +42,7 @@ public class GoalMetricRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initial_number_value")
     public Double initialNumberValue;
+
     public GoalMetricRequestInput withInitialNumberValue(Double initialNumberValue) {
         this.initialNumberValue = initialNumberValue;
         return this;
@@ -52,6 +55,7 @@ public class GoalMetricRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Long precision;
+
     public GoalMetricRequestInput withPrecision(Long precision) {
         this.precision = precision;
         return this;
@@ -63,6 +67,7 @@ public class GoalMetricRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress_source")
     public GoalMetricRequestProgressSourceEnum progressSource;
+
     public GoalMetricRequestInput withProgressSource(GoalMetricRequestProgressSourceEnum progressSource) {
         this.progressSource = progressSource;
         return this;
@@ -74,6 +79,7 @@ public class GoalMetricRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_number_value")
     public Double targetNumberValue;
+
     public GoalMetricRequestInput withTargetNumberValue(Double targetNumberValue) {
         this.targetNumberValue = targetNumberValue;
         return this;
@@ -85,9 +91,11 @@ public class GoalMetricRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public GoalMetricRequestUnitEnum unit;
+
     public GoalMetricRequestInput withUnit(GoalMetricRequestUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public GoalMetricRequestInput(){}
 }

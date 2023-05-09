@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReleaseFileSystemNfsV3LocksResponse {
@@ -12,6 +13,7 @@ public class ReleaseFileSystemNfsV3LocksResponse {
      */
     
     public Object badRequest;
+
     public ReleaseFileSystemNfsV3LocksResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class ReleaseFileSystemNfsV3LocksResponse {
     
     
     public String contentType;
+
     public ReleaseFileSystemNfsV3LocksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ReleaseFileSystemNfsV3LocksResponse {
      */
     
     public Object fileSystemNotFound;
+
     public ReleaseFileSystemNfsV3LocksResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -39,6 +43,7 @@ public class ReleaseFileSystemNfsV3LocksResponse {
      */
     
     public Object incompatibleParameterError;
+
     public ReleaseFileSystemNfsV3LocksResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -49,6 +54,7 @@ public class ReleaseFileSystemNfsV3LocksResponse {
      */
     
     public Object internalServerError;
+
     public ReleaseFileSystemNfsV3LocksResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class ReleaseFileSystemNfsV3LocksResponse {
      */
     
     public org.openapis.openapi.models.shared.ReleaseFileSystemNfsV3LocksResponse releaseFileSystemNfsV3LocksResponse;
+
     public ReleaseFileSystemNfsV3LocksResponse withReleaseFileSystemNfsV3LocksResponse(org.openapis.openapi.models.shared.ReleaseFileSystemNfsV3LocksResponse releaseFileSystemNfsV3LocksResponse) {
         this.releaseFileSystemNfsV3LocksResponse = releaseFileSystemNfsV3LocksResponse;
         return this;
@@ -69,6 +76,7 @@ public class ReleaseFileSystemNfsV3LocksResponse {
      */
     
     public Object serviceLimitExceeded;
+
     public ReleaseFileSystemNfsV3LocksResponse withServiceLimitExceeded(Object serviceLimitExceeded) {
         this.serviceLimitExceeded = serviceLimitExceeded;
         return this;
@@ -76,6 +84,7 @@ public class ReleaseFileSystemNfsV3LocksResponse {
     
     
     public Integer statusCode;
+
     public ReleaseFileSystemNfsV3LocksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ReleaseFileSystemNfsV3LocksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReleaseFileSystemNfsV3LocksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ReleaseFileSystemNfsV3LocksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

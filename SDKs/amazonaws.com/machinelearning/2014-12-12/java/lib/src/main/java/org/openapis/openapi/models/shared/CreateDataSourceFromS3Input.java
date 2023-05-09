@@ -12,6 +12,7 @@ public class CreateDataSourceFromS3Input {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeStatistics")
     public Boolean computeStatistics;
+
     public CreateDataSourceFromS3Input withComputeStatistics(Boolean computeStatistics) {
         this.computeStatistics = computeStatistics;
         return this;
@@ -19,6 +20,7 @@ public class CreateDataSourceFromS3Input {
     
     @JsonProperty("DataSourceId")
     public String dataSourceId;
+
     public CreateDataSourceFromS3Input withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -27,6 +29,7 @@ public class CreateDataSourceFromS3Input {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceName")
     public String dataSourceName;
+
     public CreateDataSourceFromS3Input withDataSourceName(String dataSourceName) {
         this.dataSourceName = dataSourceName;
         return this;
@@ -34,9 +37,14 @@ public class CreateDataSourceFromS3Input {
     
     @JsonProperty("DataSpec")
     public S3DataSpec dataSpec;
+
     public CreateDataSourceFromS3Input withDataSpec(S3DataSpec dataSpec) {
         this.dataSpec = dataSpec;
         return this;
     }
     
+    public CreateDataSourceFromS3Input(@JsonProperty("DataSourceId") String dataSourceId, @JsonProperty("DataSpec") S3DataSpec dataSpec) {
+        this.dataSourceId = dataSourceId;
+        this.dataSpec = dataSpec;
+  }
 }

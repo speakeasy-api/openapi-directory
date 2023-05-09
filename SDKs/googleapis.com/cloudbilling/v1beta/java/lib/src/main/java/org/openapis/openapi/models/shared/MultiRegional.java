@@ -18,9 +18,11 @@ public class MultiRegional {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MultiRegional withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MultiRegional(){}
 }

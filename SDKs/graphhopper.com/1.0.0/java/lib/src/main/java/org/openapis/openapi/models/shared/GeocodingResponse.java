@@ -15,6 +15,7 @@ public class GeocodingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hits")
     public GeocodingLocation[] hits;
+
     public GeocodingResponse withHits(GeocodingLocation[] hits) {
         this.hits = hits;
         return this;
@@ -26,9 +27,11 @@ public class GeocodingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("took")
     public Double took;
+
     public GeocodingResponse withTook(Double took) {
         this.took = took;
         return this;
     }
     
+    public GeocodingResponse(){}
 }

@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * NeoVpcConfig - The &lt;a&gt;VpcConfig&lt;/a&gt; configuration object that specifies the VPC that you want the compilation jobs to connect to. For more information on controlling access to your Amazon S3 buckets used for compilation job, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/neo-vpc.html"&gt;Give Amazon SageMaker Compilation Jobs Access to Resources in Your Amazon VPC&lt;/a&gt;.
+ * NeoVpcConfig - The &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_VpcConfig.html"&gt;VpcConfig&lt;/a&gt; configuration object that specifies the VPC that you want the compilation jobs to connect to. For more information on controlling access to your Amazon S3 buckets used for compilation job, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/neo-vpc.html"&gt;Give Amazon SageMaker Compilation Jobs Access to Resources in Your Amazon VPC&lt;/a&gt;.
  */
 public class NeoVpcConfig {
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public NeoVpcConfig withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -19,9 +20,14 @@ public class NeoVpcConfig {
     
     @JsonProperty("Subnets")
     public String[] subnets;
+
     public NeoVpcConfig withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public NeoVpcConfig(@JsonProperty("SecurityGroupIds") String[] securityGroupIds, @JsonProperty("Subnets") String[] subnets) {
+        this.securityGroupIds = securityGroupIds;
+        this.subnets = subnets;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateArtifactStateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateState updateState;
+
     public UpdateArtifactStateRequest withUpdateState(org.openapis.openapi.models.shared.UpdateState updateState) {
         this.updateState = updateState;
         return this;
@@ -19,6 +21,7 @@ public class UpdateArtifactStateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
     public String artifactId;
+
     public UpdateArtifactStateRequest withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -29,9 +32,15 @@ public class UpdateArtifactStateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public UpdateArtifactStateRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public UpdateArtifactStateRequest(@JsonProperty("UpdateState") org.openapis.openapi.models.shared.UpdateState updateState, @JsonProperty("artifactId") String artifactId, @JsonProperty("groupId") String groupId) {
+        this.updateState = updateState;
+        this.artifactId = artifactId;
+        this.groupId = groupId;
+  }
 }

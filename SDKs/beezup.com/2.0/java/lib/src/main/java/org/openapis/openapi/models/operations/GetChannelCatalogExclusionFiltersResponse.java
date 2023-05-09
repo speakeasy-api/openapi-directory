@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChannelCatalogExclusionFiltersResponse {
@@ -12,6 +13,7 @@ public class GetChannelCatalogExclusionFiltersResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetChannelCatalogExclusionFiltersResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetChannelCatalogExclusionFiltersResponse {
     
     
     public String contentType;
+
     public GetChannelCatalogExclusionFiltersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetChannelCatalogExclusionFiltersResponse {
     
     
     public Integer statusCode;
+
     public GetChannelCatalogExclusionFiltersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetChannelCatalogExclusionFiltersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChannelCatalogExclusionFiltersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetChannelCatalogExclusionFiltersResponse {
      */
     
     public org.openapis.openapi.models.shared.ExclusionFiltersResponse exclusionFiltersResponse;
+
     public GetChannelCatalogExclusionFiltersResponse withExclusionFiltersResponse(org.openapis.openapi.models.shared.ExclusionFiltersResponse exclusionFiltersResponse) {
         this.exclusionFiltersResponse = exclusionFiltersResponse;
         return this;
     }
     
+    public GetChannelCatalogExclusionFiltersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

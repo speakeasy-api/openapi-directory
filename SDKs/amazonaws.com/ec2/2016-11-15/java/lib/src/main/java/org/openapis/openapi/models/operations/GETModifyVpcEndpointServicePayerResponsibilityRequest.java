@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVpcEndpointServicePayerResponsibilityRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyVpcEndpointServicePayerResponsibilityActionEnum action;
+
     public GETModifyVpcEndpointServicePayerResponsibilityRequest withAction(GETModifyVpcEndpointServicePayerResponsibilityActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyVpcEndpointServicePayerResponsibilityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyVpcEndpointServicePayerResponsibilityRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyVpcEndpointServicePayerResponsibilityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PayerResponsibility")
     public GETModifyVpcEndpointServicePayerResponsibilityPayerResponsibilityEnum payerResponsibility;
+
     public GETModifyVpcEndpointServicePayerResponsibilityRequest withPayerResponsibility(GETModifyVpcEndpointServicePayerResponsibilityPayerResponsibilityEnum payerResponsibility) {
         this.payerResponsibility = payerResponsibility;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyVpcEndpointServicePayerResponsibilityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceId")
     public String serviceId;
+
     public GETModifyVpcEndpointServicePayerResponsibilityRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -46,6 +51,7 @@ public class GETModifyVpcEndpointServicePayerResponsibilityRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyVpcEndpointServicePayerResponsibilityVersionEnum version;
+
     public GETModifyVpcEndpointServicePayerResponsibilityRequest withVersion(GETModifyVpcEndpointServicePayerResponsibilityVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETModifyVpcEndpointServicePayerResponsibilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyVpcEndpointServicePayerResponsibilityRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETModifyVpcEndpointServicePayerResponsibilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyVpcEndpointServicePayerResponsibilityRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETModifyVpcEndpointServicePayerResponsibilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyVpcEndpointServicePayerResponsibilityRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETModifyVpcEndpointServicePayerResponsibilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyVpcEndpointServicePayerResponsibilityRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETModifyVpcEndpointServicePayerResponsibilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyVpcEndpointServicePayerResponsibilityRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETModifyVpcEndpointServicePayerResponsibilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyVpcEndpointServicePayerResponsibilityRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETModifyVpcEndpointServicePayerResponsibilityRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyVpcEndpointServicePayerResponsibilityRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyVpcEndpointServicePayerResponsibilityRequest(@JsonProperty("Action") GETModifyVpcEndpointServicePayerResponsibilityActionEnum action, @JsonProperty("PayerResponsibility") GETModifyVpcEndpointServicePayerResponsibilityPayerResponsibilityEnum payerResponsibility, @JsonProperty("ServiceId") String serviceId, @JsonProperty("Version") GETModifyVpcEndpointServicePayerResponsibilityVersionEnum version) {
+        this.action = action;
+        this.payerResponsibility = payerResponsibility;
+        this.serviceId = serviceId;
+        this.version = version;
+  }
 }

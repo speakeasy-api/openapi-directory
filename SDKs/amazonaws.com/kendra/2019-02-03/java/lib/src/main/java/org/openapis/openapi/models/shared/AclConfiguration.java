@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AclConfiguration {
     @JsonProperty("AllowedGroupsColumnName")
     public String allowedGroupsColumnName;
+
     public AclConfiguration withAllowedGroupsColumnName(String allowedGroupsColumnName) {
         this.allowedGroupsColumnName = allowedGroupsColumnName;
         return this;
     }
     
+    public AclConfiguration(@JsonProperty("AllowedGroupsColumnName") String allowedGroupsColumnName) {
+        this.allowedGroupsColumnName = allowedGroupsColumnName;
+  }
 }

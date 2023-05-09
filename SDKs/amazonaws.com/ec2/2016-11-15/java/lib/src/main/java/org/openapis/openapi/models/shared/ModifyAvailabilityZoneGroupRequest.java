@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyAvailabilityZoneGroupRequest {
     
     public Boolean dryRun;
+
     public ModifyAvailabilityZoneGroupRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class ModifyAvailabilityZoneGroupRequest {
     
     
     public String groupName;
+
     public ModifyAvailabilityZoneGroupRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -23,9 +25,14 @@ public class ModifyAvailabilityZoneGroupRequest {
     
     
     public ModifyAvailabilityZoneOptInStatusEnum optInStatus;
+
     public ModifyAvailabilityZoneGroupRequest withOptInStatus(ModifyAvailabilityZoneOptInStatusEnum optInStatus) {
         this.optInStatus = optInStatus;
         return this;
     }
     
+    public ModifyAvailabilityZoneGroupRequest(@JsonProperty("GroupName") String groupName, @JsonProperty("OptInStatus") ModifyAvailabilityZoneOptInStatusEnum optInStatus) {
+        this.groupName = groupName;
+        this.optInStatus = optInStatus;
+  }
 }

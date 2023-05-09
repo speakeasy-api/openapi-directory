@@ -59,10 +59,8 @@ public class DefaultObjectAccessControls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsDeleteResponse res = new org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsDeleteResponse() {{
+        org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsDeleteResponse res = new org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class DefaultObjectAccessControls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsGetResponse res = new org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsGetResponse() {{
+        org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsGetResponse res = new org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsGetResponse(contentType, httpRes.statusCode()) {{
             objectAccessControl = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class DefaultObjectAccessControls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsInsertResponse res = new org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsInsertResponse() {{
+        org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsInsertResponse res = new org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsInsertResponse(contentType, httpRes.statusCode()) {{
             objectAccessControl = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class DefaultObjectAccessControls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsListResponse res = new org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsListResponse() {{
+        org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsListResponse res = new org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsListResponse(contentType, httpRes.statusCode()) {{
             objectAccessControls = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class DefaultObjectAccessControls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsPatchResponse res = new org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsPatchResponse() {{
+        org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsPatchResponse res = new org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsPatchResponse(contentType, httpRes.statusCode()) {{
             objectAccessControl = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class DefaultObjectAccessControls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsUpdateResponse res = new org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsUpdateResponse() {{
+        org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsUpdateResponse res = new org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsUpdateResponse(contentType, httpRes.statusCode()) {{
             objectAccessControl = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

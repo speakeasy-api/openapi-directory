@@ -21,6 +21,7 @@ public class ObtainTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access_token")
     public String accessToken;
+
     public ObtainTokenResponse withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +33,7 @@ public class ObtainTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     public String expiresAt;
+
     public ObtainTokenResponse withExpiresAt(String expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -44,6 +46,7 @@ public class ObtainTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_token")
     public String idToken;
+
     public ObtainTokenResponse withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
@@ -55,6 +58,7 @@ public class ObtainTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_id")
     public String merchantId;
+
     public ObtainTokenResponse withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -68,6 +72,7 @@ public class ObtainTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan_id")
     public String planId;
+
     public ObtainTokenResponse withPlanId(String planId) {
         this.planId = planId;
         return this;
@@ -80,6 +85,7 @@ public class ObtainTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh_token")
     public String refreshToken;
+
     public ObtainTokenResponse withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
@@ -92,6 +98,7 @@ public class ObtainTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("short_lived")
     public Boolean shortLived;
+
     public ObtainTokenResponse withShortLived(Boolean shortLived) {
         this.shortLived = shortLived;
         return this;
@@ -104,6 +111,7 @@ public class ObtainTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription_id")
     public String subscriptionId;
+
     public ObtainTokenResponse withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -115,9 +123,11 @@ public class ObtainTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token_type")
     public String tokenType;
+
     public ObtainTokenResponse withTokenType(String tokenType) {
         this.tokenType = tokenType;
         return this;
     }
     
+    public ObtainTokenResponse(){}
 }

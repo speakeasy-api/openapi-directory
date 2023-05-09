@@ -15,6 +15,7 @@ public class DescribeDatastoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datastore")
     public Datastore datastore;
+
     public DescribeDatastoreResponse withDatastore(Datastore datastore) {
         this.datastore = datastore;
         return this;
@@ -23,9 +24,11 @@ public class DescribeDatastoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistics")
     public DatastoreStatistics statistics;
+
     public DescribeDatastoreResponse withStatistics(DatastoreStatistics statistics) {
         this.statistics = statistics;
         return this;
     }
     
+    public DescribeDatastoreResponse(){}
 }

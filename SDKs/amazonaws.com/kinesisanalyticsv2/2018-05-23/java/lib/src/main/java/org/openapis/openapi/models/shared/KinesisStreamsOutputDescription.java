@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class KinesisStreamsOutputDescription {
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public KinesisStreamsOutputDescription withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -22,9 +23,13 @@ public class KinesisStreamsOutputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public KinesisStreamsOutputDescription withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
     }
     
+    public KinesisStreamsOutputDescription(@JsonProperty("ResourceARN") String resourceARN) {
+        this.resourceARN = resourceARN;
+  }
 }

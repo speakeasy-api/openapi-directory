@@ -18,6 +18,7 @@ public class CloudInterconnectWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interconnectAttachments")
     public VlanAttachment[] interconnectAttachments;
+
     public CloudInterconnectWorkload withInterconnectAttachments(VlanAttachment[] interconnectAttachments) {
         this.interconnectAttachments = interconnectAttachments;
         return this;
@@ -29,6 +30,7 @@ public class CloudInterconnectWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interconnectType")
     public CloudInterconnectWorkloadInterconnectTypeEnum interconnectType;
+
     public CloudInterconnectWorkload withInterconnectType(CloudInterconnectWorkloadInterconnectTypeEnum interconnectType) {
         this.interconnectType = interconnectType;
         return this;
@@ -40,6 +42,7 @@ public class CloudInterconnectWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkType")
     public CloudInterconnectWorkloadLinkTypeEnum linkType;
+
     public CloudInterconnectWorkload withLinkType(CloudInterconnectWorkloadLinkTypeEnum linkType) {
         this.linkType = linkType;
         return this;
@@ -51,9 +54,11 @@ public class CloudInterconnectWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisionedLinkCount")
     public Usage provisionedLinkCount;
+
     public CloudInterconnectWorkload withProvisionedLinkCount(Usage provisionedLinkCount) {
         this.provisionedLinkCount = provisionedLinkCount;
         return this;
     }
     
+    public CloudInterconnectWorkload(){}
 }

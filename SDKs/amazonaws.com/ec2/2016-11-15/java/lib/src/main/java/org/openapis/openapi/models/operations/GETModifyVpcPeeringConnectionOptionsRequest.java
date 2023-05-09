@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVpcPeeringConnectionOptionsRequest {
@@ -12,6 +13,7 @@ public class GETModifyVpcPeeringConnectionOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccepterPeeringConnectionOptions")
     public GETModifyVpcPeeringConnectionOptionsAccepterPeeringConnectionOptions accepterPeeringConnectionOptions;
+
     public GETModifyVpcPeeringConnectionOptionsRequest withAccepterPeeringConnectionOptions(GETModifyVpcPeeringConnectionOptionsAccepterPeeringConnectionOptions accepterPeeringConnectionOptions) {
         this.accepterPeeringConnectionOptions = accepterPeeringConnectionOptions;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyVpcPeeringConnectionOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyVpcPeeringConnectionOptionsActionEnum action;
+
     public GETModifyVpcPeeringConnectionOptionsRequest withAction(GETModifyVpcPeeringConnectionOptionsActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyVpcPeeringConnectionOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyVpcPeeringConnectionOptionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyVpcPeeringConnectionOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RequesterPeeringConnectionOptions")
     public GETModifyVpcPeeringConnectionOptionsRequesterPeeringConnectionOptions requesterPeeringConnectionOptions;
+
     public GETModifyVpcPeeringConnectionOptionsRequest withRequesterPeeringConnectionOptions(GETModifyVpcPeeringConnectionOptionsRequesterPeeringConnectionOptions requesterPeeringConnectionOptions) {
         this.requesterPeeringConnectionOptions = requesterPeeringConnectionOptions;
         return this;
@@ -46,6 +51,7 @@ public class GETModifyVpcPeeringConnectionOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyVpcPeeringConnectionOptionsVersionEnum version;
+
     public GETModifyVpcPeeringConnectionOptionsRequest withVersion(GETModifyVpcPeeringConnectionOptionsVersionEnum version) {
         this.version = version;
         return this;
@@ -56,6 +62,7 @@ public class GETModifyVpcPeeringConnectionOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcPeeringConnectionId")
     public String vpcPeeringConnectionId;
+
     public GETModifyVpcPeeringConnectionOptionsRequest withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
@@ -63,6 +70,7 @@ public class GETModifyVpcPeeringConnectionOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyVpcPeeringConnectionOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETModifyVpcPeeringConnectionOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyVpcPeeringConnectionOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETModifyVpcPeeringConnectionOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyVpcPeeringConnectionOptionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETModifyVpcPeeringConnectionOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyVpcPeeringConnectionOptionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETModifyVpcPeeringConnectionOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyVpcPeeringConnectionOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETModifyVpcPeeringConnectionOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyVpcPeeringConnectionOptionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,15 @@ public class GETModifyVpcPeeringConnectionOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyVpcPeeringConnectionOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyVpcPeeringConnectionOptionsRequest(@JsonProperty("Action") GETModifyVpcPeeringConnectionOptionsActionEnum action, @JsonProperty("Version") GETModifyVpcPeeringConnectionOptionsVersionEnum version, @JsonProperty("VpcPeeringConnectionId") String vpcPeeringConnectionId) {
+        this.action = action;
+        this.version = version;
+        this.vpcPeeringConnectionId = vpcPeeringConnectionId;
+  }
 }

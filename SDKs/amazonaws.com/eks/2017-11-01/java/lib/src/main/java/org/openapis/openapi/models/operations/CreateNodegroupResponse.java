@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateNodegroupResponse {
@@ -12,6 +13,7 @@ public class CreateNodegroupResponse {
      */
     
     public Object clientException;
+
     public CreateNodegroupResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class CreateNodegroupResponse {
     
     
     public String contentType;
+
     public CreateNodegroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateNodegroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateNodegroupResponse createNodegroupResponse;
+
     public CreateNodegroupResponse withCreateNodegroupResponse(org.openapis.openapi.models.shared.CreateNodegroupResponse createNodegroupResponse) {
         this.createNodegroupResponse = createNodegroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateNodegroupResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateNodegroupResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateNodegroupResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateNodegroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class CreateNodegroupResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateNodegroupResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -66,6 +73,7 @@ public class CreateNodegroupResponse {
     
     
     public Integer statusCode;
+
     public CreateNodegroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateNodegroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateNodegroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateNodegroupResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateNodegroupResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateNodegroupResponse {
      */
     
     public Object serverException;
+
     public CreateNodegroupResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -103,9 +114,14 @@ public class CreateNodegroupResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateNodegroupResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public CreateNodegroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

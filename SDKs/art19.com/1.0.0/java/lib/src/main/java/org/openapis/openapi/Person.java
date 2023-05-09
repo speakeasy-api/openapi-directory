@@ -64,12 +64,10 @@ public class Person {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPeopleResponse res = new org.openapis.openapi.models.operations.GetPeopleResponse() {{
+        org.openapis.openapi.models.operations.GetPeopleResponse res = new org.openapis.openapi.models.operations.GetPeopleResponse(contentType, httpRes.statusCode()) {{
             getPeople200ApplicationVndApiPlusJsonObject = null;
             getPeople400ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -122,11 +120,9 @@ public class Person {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPeopleIdResponse res = new org.openapis.openapi.models.operations.GetPeopleIdResponse() {{
+        org.openapis.openapi.models.operations.GetPeopleIdResponse res = new org.openapis.openapi.models.operations.GetPeopleIdResponse(contentType, httpRes.statusCode()) {{
             getPeopleId200ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -22,6 +22,7 @@ public class JourneySchedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public JourneySchedule withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -32,6 +33,7 @@ public class JourneySchedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public JourneySchedule withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -40,9 +42,11 @@ public class JourneySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timezone")
     public String timezone;
+
     public JourneySchedule withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public JourneySchedule(){}
 }

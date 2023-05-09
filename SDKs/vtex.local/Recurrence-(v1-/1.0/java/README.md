@@ -16,59 +16,54 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AddrecurrenceitemRequest;
 import org.openapis.openapi.models.operations.AddrecurrenceitemResponse;
 import org.openapis.openapi.models.shared.AddrecurrenceitemRequest;
 import org.openapis.openapi.models.shared.Frequency;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     appKey = "YOUR_API_KEY_HERE";
                     appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            AddrecurrenceitemRequest req = new AddrecurrenceitemRequest() {{
-                accept = "application/json";
-                contentType = "application/json";
-                requestBody = new org.openapis.openapi.models.shared.AddrecurrenceitemRequest[]{{
-                    add(new AddrecurrenceitemRequest() {{
-                        frequency = new Frequency() {{
-                            interval = 592845;
-                            periodicity = "distinctio";
-                        }};
-                        quantity = 844266;
-                        seller = "unde";
-                        shippingAddressId = "nulla";
-                        sku = "corrupti";
-                    }}),
-                    add(new AddrecurrenceitemRequest() {{
-                        frequency = new Frequency() {{
-                            interval = 847252;
-                            periodicity = "vel";
-                        }};
-                        quantity = 623564;
-                        seller = "deserunt";
-                        shippingAddressId = "suscipit";
-                        sku = "iure";
-                    }}),
-                    add(new AddrecurrenceitemRequest() {{
-                        frequency = new Frequency() {{
-                            interval = 297534;
-                            periodicity = "debitis";
-                        }};
-                        quantity = 56713;
-                        seller = "delectus";
-                        shippingAddressId = "tempora";
-                        sku = "suscipit";
-                    }}),
-                }};
-                recurrenceId = "molestiae";
-            }}            
+            AddrecurrenceitemRequest req = new AddrecurrenceitemRequest("application/json", "application/json",                 new org.openapis.openapi.models.shared.AddrecurrenceitemRequest[]{{
+                                add(new AddrecurrenceitemRequest(                new Frequency(384382, "iure");, 297534, "debitis", "ipsa", "delectus") {{
+                                    frequency = new Frequency(857946, "corrupti") {{
+                                        interval = 844266;
+                                        periodicity = "unde";
+                                    }};
+                                    quantity = 847252;
+                                    seller = "vel";
+                                    shippingAddressId = "error";
+                                    sku = "deserunt";
+                                }}),
+                                add(new AddrecurrenceitemRequest(                new Frequency(392785, "recusandae");, 836079, "ab", "quis", "veritatis") {{
+                                    frequency = new Frequency(477665, "minus") {{
+                                        interval = 272656;
+                                        periodicity = "suscipit";
+                                    }};
+                                    quantity = 812169;
+                                    seller = "voluptatum";
+                                    shippingAddressId = "iusto";
+                                    sku = "excepturi";
+                                }}),
+                                add(new AddrecurrenceitemRequest(                new Frequency(870088, "maiores");, 473608, "quod", "quod", "esse") {{
+                                    frequency = new Frequency(368241, "repellendus") {{
+                                        interval = 648172;
+                                        periodicity = "perferendis";
+                                    }};
+                                    quantity = 957156;
+                                    seller = "quo";
+                                    shippingAddressId = "odit";
+                                    sku = "at";
+                                }}),
+                            }}, "totam");            
 
             AddrecurrenceitemResponse res = sdk.miscellaneous.addrecurrenceitem(req);
 
@@ -78,6 +73,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -85,19 +82,19 @@ public class Application {
 ## Available Resources and Operations
 
 
-### miscellaneous
+### [miscellaneous](docs/miscellaneous/README.md)
 
-* `addrecurrenceitem` - Add Subscription item
-* `getRecurrencebyemail` - Get Subscriptions
-* `getRecurrencebyrecurrenceId` - Get Subscription by recurrenceId
-* `getpaymentaccounts` - Get payment accounts
-* `getrecurrenceaddresses` - Get Subscription addresses
-* `getrecurrencesettings` - Get Subscription settings
-* `getselfrecurrence` - Get self Subscription
-* `reindexrecurrence` - Reindex Subscription
-* `updatepartialrecurrence` - Update partial Subscription
-* `updaterecurrence` - Update Subscription
-* `updaterecurrencesettings` - Update Subscription settings
+* [addrecurrenceitem](docs/miscellaneous/README.md#addrecurrenceitem) - Add Subscription item
+* [getRecurrencebyemail](docs/miscellaneous/README.md#getrecurrencebyemail) - Get Subscriptions
+* [getRecurrencebyrecurrenceId](docs/miscellaneous/README.md#getrecurrencebyrecurrenceid) - Get Subscription by recurrenceId
+* [getpaymentaccounts](docs/miscellaneous/README.md#getpaymentaccounts) - Get payment accounts
+* [getrecurrenceaddresses](docs/miscellaneous/README.md#getrecurrenceaddresses) - Get Subscription addresses
+* [getrecurrencesettings](docs/miscellaneous/README.md#getrecurrencesettings) - Get Subscription settings
+* [getselfrecurrence](docs/miscellaneous/README.md#getselfrecurrence) - Get self Subscription
+* [reindexrecurrence](docs/miscellaneous/README.md#reindexrecurrence) - Reindex Subscription
+* [updatepartialrecurrence](docs/miscellaneous/README.md#updatepartialrecurrence) - Update partial Subscription
+* [updaterecurrence](docs/miscellaneous/README.md#updaterecurrence) - Update Subscription
+* [updaterecurrencesettings](docs/miscellaneous/README.md#updaterecurrencesettings) - Update Subscription settings
 <!-- End SDK Available Operations -->
 
 ### Maturity

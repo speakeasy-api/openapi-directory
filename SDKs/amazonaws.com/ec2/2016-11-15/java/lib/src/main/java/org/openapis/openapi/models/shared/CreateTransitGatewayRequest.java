@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTransitGatewayRequest {
     
     public String description;
+
     public CreateTransitGatewayRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +17,7 @@ public class CreateTransitGatewayRequest {
     
     
     public Boolean dryRun;
+
     public CreateTransitGatewayRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class CreateTransitGatewayRequest {
     
     
     public TransitGatewayRequestOptions options;
+
     public CreateTransitGatewayRequest withOptions(TransitGatewayRequestOptions options) {
         this.options = options;
         return this;
@@ -30,9 +33,11 @@ public class CreateTransitGatewayRequest {
     
     
     public CreateTransitGatewayRequestTagSpecifications[] tagSpecifications;
+
     public CreateTransitGatewayRequest withTagSpecifications(CreateTransitGatewayRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateTransitGatewayRequest(){}
 }

@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CreateAccessTokenResponse {
     @JsonProperty("accessTokenId")
     public String accessTokenId;
+
     public CreateAccessTokenResponse withAccessTokenId(String accessTokenId) {
         this.accessTokenId = accessTokenId;
         return this;
@@ -26,6 +27,7 @@ public class CreateAccessTokenResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiresTime")
     public OffsetDateTime expiresTime;
+
     public CreateAccessTokenResponse withExpiresTime(OffsetDateTime expiresTime) {
         this.expiresTime = expiresTime;
         return this;
@@ -33,6 +35,7 @@ public class CreateAccessTokenResponse {
     
     @JsonProperty("name")
     public String name;
+
     public CreateAccessTokenResponse withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +43,16 @@ public class CreateAccessTokenResponse {
     
     @JsonProperty("secret")
     public String secret;
+
     public CreateAccessTokenResponse withSecret(String secret) {
         this.secret = secret;
         return this;
     }
     
+    public CreateAccessTokenResponse(@JsonProperty("accessTokenId") String accessTokenId, @JsonProperty("expiresTime") OffsetDateTime expiresTime, @JsonProperty("name") String name, @JsonProperty("secret") String secret) {
+        this.accessTokenId = accessTokenId;
+        this.expiresTime = expiresTime;
+        this.name = name;
+        this.secret = secret;
+  }
 }

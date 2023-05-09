@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDevEnvironmentResponse {
@@ -12,6 +13,7 @@ public class DeleteDevEnvironmentResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteDevEnvironmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteDevEnvironmentResponse {
      */
     
     public Object conflictException;
+
     public DeleteDevEnvironmentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDevEnvironmentResponse {
     
     
     public String contentType;
+
     public DeleteDevEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDevEnvironmentResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDevEnvironmentResponse deleteDevEnvironmentResponse;
+
     public DeleteDevEnvironmentResponse withDeleteDevEnvironmentResponse(org.openapis.openapi.models.shared.DeleteDevEnvironmentResponse deleteDevEnvironmentResponse) {
         this.deleteDevEnvironmentResponse = deleteDevEnvironmentResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDevEnvironmentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteDevEnvironmentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDevEnvironmentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteDevEnvironmentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteDevEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public DeleteDevEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteDevEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDevEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteDevEnvironmentResponse {
      */
     
     public Object throttlingException;
+
     public DeleteDevEnvironmentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteDevEnvironmentResponse {
      */
     
     public Object validationException;
+
     public DeleteDevEnvironmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteDevEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

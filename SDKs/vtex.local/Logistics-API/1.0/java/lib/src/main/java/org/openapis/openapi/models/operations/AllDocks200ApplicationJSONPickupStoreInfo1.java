@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AllDocks200ApplicationJSONPickupStoreInfo1 {
     @JsonProperty("additionalInfo")
     public String additionalInfo;
+
     public AllDocks200ApplicationJSONPickupStoreInfo1 withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -16,6 +17,7 @@ public class AllDocks200ApplicationJSONPickupStoreInfo1 {
     
     @JsonProperty("address")
     public String address;
+
     public AllDocks200ApplicationJSONPickupStoreInfo1 withAddress(String address) {
         this.address = address;
         return this;
@@ -23,6 +25,7 @@ public class AllDocks200ApplicationJSONPickupStoreInfo1 {
     
     @JsonProperty("dockId")
     public String dockId;
+
     public AllDocks200ApplicationJSONPickupStoreInfo1 withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -30,6 +33,7 @@ public class AllDocks200ApplicationJSONPickupStoreInfo1 {
     
     @JsonProperty("friendlyName")
     public String friendlyName;
+
     public AllDocks200ApplicationJSONPickupStoreInfo1 withFriendlyName(String friendlyName) {
         this.friendlyName = friendlyName;
         return this;
@@ -37,6 +41,7 @@ public class AllDocks200ApplicationJSONPickupStoreInfo1 {
     
     @JsonProperty("isPickupStore")
     public Boolean isPickupStore;
+
     public AllDocks200ApplicationJSONPickupStoreInfo1 withIsPickupStore(Boolean isPickupStore) {
         this.isPickupStore = isPickupStore;
         return this;
@@ -44,9 +49,18 @@ public class AllDocks200ApplicationJSONPickupStoreInfo1 {
     
     @JsonProperty("storeId")
     public String storeId;
+
     public AllDocks200ApplicationJSONPickupStoreInfo1 withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public AllDocks200ApplicationJSONPickupStoreInfo1(@JsonProperty("additionalInfo") String additionalInfo, @JsonProperty("address") String address, @JsonProperty("dockId") String dockId, @JsonProperty("friendlyName") String friendlyName, @JsonProperty("isPickupStore") Boolean isPickupStore, @JsonProperty("storeId") String storeId) {
+        this.additionalInfo = additionalInfo;
+        this.address = address;
+        this.dockId = dockId;
+        this.friendlyName = friendlyName;
+        this.isPickupStore = isPickupStore;
+        this.storeId = storeId;
+  }
 }

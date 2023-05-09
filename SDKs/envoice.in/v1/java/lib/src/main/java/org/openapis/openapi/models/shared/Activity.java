@@ -12,6 +12,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimationId")
     public Integer estimationId;
+
     public Activity withEstimationId(Integer estimationId) {
         this.estimationId = estimationId;
         return this;
@@ -20,6 +21,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimationNumber")
     public String estimationNumber;
+
     public Activity withEstimationNumber(String estimationNumber) {
         this.estimationNumber = estimationNumber;
         return this;
@@ -28,6 +30,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public Activity withId(Integer id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceId")
     public Integer invoiceId;
+
     public Activity withInvoiceId(Integer invoiceId) {
         this.invoiceId = invoiceId;
         return this;
@@ -44,6 +48,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceNumber")
     public String invoiceNumber;
+
     public Activity withInvoiceNumber(String invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
         return this;
@@ -52,6 +57,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Link")
     public String link;
+
     public Activity withLink(String link) {
         this.link = link;
         return this;
@@ -60,6 +66,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public Activity withMessage(String message) {
         this.message = message;
         return this;
@@ -68,6 +75,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderId")
     public Integer orderId;
+
     public Activity withOrderId(Integer orderId) {
         this.orderId = orderId;
         return this;
@@ -76,6 +84,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderNumber")
     public String orderNumber;
+
     public Activity withOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
@@ -84,6 +93,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ActivityTypeEnum type;
+
     public Activity withType(ActivityTypeEnum type) {
         this.type = type;
         return this;
@@ -92,9 +102,11 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public Integer userId;
+
     public Activity withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public Activity(){}
 }

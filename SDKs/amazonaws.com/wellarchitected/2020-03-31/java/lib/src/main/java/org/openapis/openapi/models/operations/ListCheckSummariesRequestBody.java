@@ -14,6 +14,7 @@ public class ListCheckSummariesRequestBody {
      */
     @JsonProperty("ChoiceId")
     public String choiceId;
+
     public ListCheckSummariesRequestBody withChoiceId(String choiceId) {
         this.choiceId = choiceId;
         return this;
@@ -24,6 +25,7 @@ public class ListCheckSummariesRequestBody {
      */
     @JsonProperty("LensArn")
     public String lensArn;
+
     public ListCheckSummariesRequestBody withLensArn(String lensArn) {
         this.lensArn = lensArn;
         return this;
@@ -35,6 +37,7 @@ public class ListCheckSummariesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListCheckSummariesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -46,6 +49,7 @@ public class ListCheckSummariesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCheckSummariesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -56,6 +60,7 @@ public class ListCheckSummariesRequestBody {
      */
     @JsonProperty("PillarId")
     public String pillarId;
+
     public ListCheckSummariesRequestBody withPillarId(String pillarId) {
         this.pillarId = pillarId;
         return this;
@@ -66,9 +71,16 @@ public class ListCheckSummariesRequestBody {
      */
     @JsonProperty("QuestionId")
     public String questionId;
+
     public ListCheckSummariesRequestBody withQuestionId(String questionId) {
         this.questionId = questionId;
         return this;
     }
     
+    public ListCheckSummariesRequestBody(@JsonProperty("ChoiceId") String choiceId, @JsonProperty("LensArn") String lensArn, @JsonProperty("PillarId") String pillarId, @JsonProperty("QuestionId") String questionId) {
+        this.choiceId = choiceId;
+        this.lensArn = lensArn;
+        this.pillarId = pillarId;
+        this.questionId = questionId;
+  }
 }

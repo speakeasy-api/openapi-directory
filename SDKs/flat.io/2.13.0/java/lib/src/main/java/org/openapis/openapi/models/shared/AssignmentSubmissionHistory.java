@@ -20,6 +20,7 @@ public class AssignmentSubmissionHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachment")
     public AssignmentSubmissionHistoryAttachment attachment;
+
     public AssignmentSubmissionHistory withAttachment(AssignmentSubmissionHistoryAttachment attachment) {
         this.attachment = attachment;
         return this;
@@ -33,6 +34,7 @@ public class AssignmentSubmissionHistory {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public AssignmentSubmissionHistory withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -44,6 +46,7 @@ public class AssignmentSubmissionHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("draftGrade")
     public Double draftGrade;
+
     public AssignmentSubmissionHistory withDraftGrade(Double draftGrade) {
         this.draftGrade = draftGrade;
         return this;
@@ -55,6 +58,7 @@ public class AssignmentSubmissionHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grade")
     public Double grade;
+
     public AssignmentSubmissionHistory withGrade(Double grade) {
         this.grade = grade;
         return this;
@@ -66,6 +70,7 @@ public class AssignmentSubmissionHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPoints")
     public Double maxPoints;
+
     public AssignmentSubmissionHistory withMaxPoints(Double maxPoints) {
         this.maxPoints = maxPoints;
         return this;
@@ -77,6 +82,7 @@ public class AssignmentSubmissionHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public AssignmentSubmissionStateEnum state;
+
     public AssignmentSubmissionHistory withState(AssignmentSubmissionStateEnum state) {
         this.state = state;
         return this;
@@ -88,9 +94,11 @@ public class AssignmentSubmissionHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public String[] users;
+
     public AssignmentSubmissionHistory withUsers(String[] users) {
         this.users = users;
         return this;
     }
     
+    public AssignmentSubmissionHistory(){}
 }

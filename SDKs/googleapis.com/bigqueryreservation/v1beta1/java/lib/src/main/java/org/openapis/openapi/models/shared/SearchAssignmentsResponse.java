@@ -18,6 +18,7 @@ public class SearchAssignmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignments")
     public Assignment[] assignments;
+
     public SearchAssignmentsResponse withAssignments(Assignment[] assignments) {
         this.assignments = assignments;
         return this;
@@ -29,9 +30,11 @@ public class SearchAssignmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SearchAssignmentsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public SearchAssignmentsResponse(){}
 }

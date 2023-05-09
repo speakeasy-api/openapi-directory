@@ -18,6 +18,7 @@ public class GoogleFirebaseAppdistroV1DistributeReleaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupAliases")
     public String[] groupAliases;
+
     public GoogleFirebaseAppdistroV1DistributeReleaseRequest withGroupAliases(String[] groupAliases) {
         this.groupAliases = groupAliases;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseAppdistroV1DistributeReleaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testerEmails")
     public String[] testerEmails;
+
     public GoogleFirebaseAppdistroV1DistributeReleaseRequest withTesterEmails(String[] testerEmails) {
         this.testerEmails = testerEmails;
         return this;
     }
     
+    public GoogleFirebaseAppdistroV1DistributeReleaseRequest(){}
 }

@@ -15,6 +15,7 @@ public class GetColumnStatisticsForTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnStatisticsList")
     public ColumnStatistics[] columnStatisticsList;
+
     public GetColumnStatisticsForTableResponse withColumnStatisticsList(ColumnStatistics[] columnStatisticsList) {
         this.columnStatisticsList = columnStatisticsList;
         return this;
@@ -23,9 +24,11 @@ public class GetColumnStatisticsForTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public ColumnError[] errors;
+
     public GetColumnStatisticsForTableResponse withErrors(ColumnError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetColumnStatisticsForTableResponse(){}
 }

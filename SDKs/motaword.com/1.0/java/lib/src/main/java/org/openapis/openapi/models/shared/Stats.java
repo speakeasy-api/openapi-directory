@@ -15,6 +15,7 @@ public class Stats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client")
     public ClientStats client;
+
     public Stats withClient(ClientStats client) {
         this.client = client;
         return this;
@@ -23,9 +24,11 @@ public class Stats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public VendorStats vendor;
+
     public Stats withVendor(VendorStats vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public Stats(){}
 }

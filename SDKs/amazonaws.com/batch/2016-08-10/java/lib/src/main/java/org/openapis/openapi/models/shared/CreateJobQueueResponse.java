@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateJobQueueResponse {
     @JsonProperty("jobQueueArn")
     public String jobQueueArn;
+
     public CreateJobQueueResponse withJobQueueArn(String jobQueueArn) {
         this.jobQueueArn = jobQueueArn;
         return this;
@@ -19,9 +20,14 @@ public class CreateJobQueueResponse {
     
     @JsonProperty("jobQueueName")
     public String jobQueueName;
+
     public CreateJobQueueResponse withJobQueueName(String jobQueueName) {
         this.jobQueueName = jobQueueName;
         return this;
     }
     
+    public CreateJobQueueResponse(@JsonProperty("jobQueueArn") String jobQueueArn, @JsonProperty("jobQueueName") String jobQueueName) {
+        this.jobQueueArn = jobQueueArn;
+        this.jobQueueName = jobQueueName;
+  }
 }

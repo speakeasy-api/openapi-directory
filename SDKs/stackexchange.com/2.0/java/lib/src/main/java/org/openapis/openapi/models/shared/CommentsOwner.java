@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CommentsOwner {
     
     public Long acceptRate;
+
     public CommentsOwner withAcceptRate(Long acceptRate) {
         this.acceptRate = acceptRate;
         return this;
@@ -16,6 +17,7 @@ public class CommentsOwner {
     
     
     public CommentsOwnerBadgeCounts badgeCounts;
+
     public CommentsOwner withBadgeCounts(CommentsOwnerBadgeCounts badgeCounts) {
         this.badgeCounts = badgeCounts;
         return this;
@@ -23,6 +25,7 @@ public class CommentsOwner {
     
     
     public String displayName;
+
     public CommentsOwner withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -30,6 +33,7 @@ public class CommentsOwner {
     
     
     public String link;
+
     public CommentsOwner withLink(String link) {
         this.link = link;
         return this;
@@ -37,6 +41,7 @@ public class CommentsOwner {
     
     
     public String profileImage;
+
     public CommentsOwner withProfileImage(String profileImage) {
         this.profileImage = profileImage;
         return this;
@@ -44,6 +49,7 @@ public class CommentsOwner {
     
     
     public Long reputation;
+
     public CommentsOwner withReputation(Long reputation) {
         this.reputation = reputation;
         return this;
@@ -51,6 +57,7 @@ public class CommentsOwner {
     
     
     public Long userId;
+
     public CommentsOwner withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -58,9 +65,11 @@ public class CommentsOwner {
     
     
     public String userType;
+
     public CommentsOwner withUserType(String userType) {
         this.userType = userType;
         return this;
     }
     
+    public CommentsOwner(){}
 }

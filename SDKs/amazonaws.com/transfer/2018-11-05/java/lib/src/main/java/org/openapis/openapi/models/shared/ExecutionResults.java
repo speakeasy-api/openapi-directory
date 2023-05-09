@@ -15,6 +15,7 @@ public class ExecutionResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnExceptionSteps")
     public ExecutionStepResult[] onExceptionSteps;
+
     public ExecutionResults withOnExceptionSteps(ExecutionStepResult[] onExceptionSteps) {
         this.onExceptionSteps = onExceptionSteps;
         return this;
@@ -23,9 +24,11 @@ public class ExecutionResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Steps")
     public ExecutionStepResult[] steps;
+
     public ExecutionResults withSteps(ExecutionStepResult[] steps) {
         this.steps = steps;
         return this;
     }
     
+    public ExecutionResults(){}
 }

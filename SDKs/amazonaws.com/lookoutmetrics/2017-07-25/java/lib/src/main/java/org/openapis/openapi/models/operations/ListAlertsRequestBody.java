@@ -15,6 +15,7 @@ public class ListAlertsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public ListAlertsRequestBody withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -26,6 +27,7 @@ public class ListAlertsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAlertsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class ListAlertsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAlertsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAlertsRequestBody(){}
 }

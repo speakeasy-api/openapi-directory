@@ -12,9 +12,11 @@ public class UpdateAnApiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api")
     public UpdateAnApiRequestBodyApi api;
+
     public UpdateAnApiRequestBody withApi(UpdateAnApiRequestBodyApi api) {
         this.api = api;
         return this;
     }
     
+    public UpdateAnApiRequestBody(){}
 }

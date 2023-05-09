@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInternetGatewaysRequestFilters {
     
     public String name;
+
     public DescribeInternetGatewaysRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInternetGatewaysRequestFilters {
     
     
     public String[] values;
+
     public DescribeInternetGatewaysRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeInternetGatewaysRequestFilters(){}
 }

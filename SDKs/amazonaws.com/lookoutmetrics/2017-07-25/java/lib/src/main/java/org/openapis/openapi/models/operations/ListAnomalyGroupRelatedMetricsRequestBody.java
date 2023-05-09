@@ -14,6 +14,7 @@ public class ListAnomalyGroupRelatedMetricsRequestBody {
      */
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public ListAnomalyGroupRelatedMetricsRequestBody withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -24,6 +25,7 @@ public class ListAnomalyGroupRelatedMetricsRequestBody {
      */
     @JsonProperty("AnomalyGroupId")
     public String anomalyGroupId;
+
     public ListAnomalyGroupRelatedMetricsRequestBody withAnomalyGroupId(String anomalyGroupId) {
         this.anomalyGroupId = anomalyGroupId;
         return this;
@@ -35,6 +37,7 @@ public class ListAnomalyGroupRelatedMetricsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAnomalyGroupRelatedMetricsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -46,6 +49,7 @@ public class ListAnomalyGroupRelatedMetricsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAnomalyGroupRelatedMetricsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -57,9 +61,14 @@ public class ListAnomalyGroupRelatedMetricsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelationshipTypeFilter")
     public ListAnomalyGroupRelatedMetricsRequestBodyRelationshipTypeFilterEnum relationshipTypeFilter;
+
     public ListAnomalyGroupRelatedMetricsRequestBody withRelationshipTypeFilter(ListAnomalyGroupRelatedMetricsRequestBodyRelationshipTypeFilterEnum relationshipTypeFilter) {
         this.relationshipTypeFilter = relationshipTypeFilter;
         return this;
     }
     
+    public ListAnomalyGroupRelatedMetricsRequestBody(@JsonProperty("AnomalyDetectorArn") String anomalyDetectorArn, @JsonProperty("AnomalyGroupId") String anomalyGroupId) {
+        this.anomalyDetectorArn = anomalyDetectorArn;
+        this.anomalyGroupId = anomalyGroupId;
+  }
 }

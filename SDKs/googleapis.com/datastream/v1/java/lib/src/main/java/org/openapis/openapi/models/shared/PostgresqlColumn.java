@@ -18,6 +18,7 @@ public class PostgresqlColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("column")
     public String column;
+
     public PostgresqlColumn withColumn(String column) {
         this.column = column;
         return this;
@@ -29,6 +30,7 @@ public class PostgresqlColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public String dataType;
+
     public PostgresqlColumn withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -40,6 +42,7 @@ public class PostgresqlColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     public Integer length;
+
     public PostgresqlColumn withLength(Integer length) {
         this.length = length;
         return this;
@@ -51,6 +54,7 @@ public class PostgresqlColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nullable")
     public Boolean nullable;
+
     public PostgresqlColumn withNullable(Boolean nullable) {
         this.nullable = nullable;
         return this;
@@ -62,6 +66,7 @@ public class PostgresqlColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ordinalPosition")
     public Integer ordinalPosition;
+
     public PostgresqlColumn withOrdinalPosition(Integer ordinalPosition) {
         this.ordinalPosition = ordinalPosition;
         return this;
@@ -73,6 +78,7 @@ public class PostgresqlColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Integer precision;
+
     public PostgresqlColumn withPrecision(Integer precision) {
         this.precision = precision;
         return this;
@@ -84,6 +90,7 @@ public class PostgresqlColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryKey")
     public Boolean primaryKey;
+
     public PostgresqlColumn withPrimaryKey(Boolean primaryKey) {
         this.primaryKey = primaryKey;
         return this;
@@ -95,9 +102,11 @@ public class PostgresqlColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scale")
     public Integer scale;
+
     public PostgresqlColumn withScale(Integer scale) {
         this.scale = scale;
         return this;
     }
     
+    public PostgresqlColumn(){}
 }

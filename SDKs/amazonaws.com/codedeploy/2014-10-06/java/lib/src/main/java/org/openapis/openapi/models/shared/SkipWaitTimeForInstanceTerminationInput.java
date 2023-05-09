@@ -12,9 +12,11 @@ public class SkipWaitTimeForInstanceTerminationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public SkipWaitTimeForInstanceTerminationInput withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
     }
     
+    public SkipWaitTimeForInstanceTerminationInput(){}
 }

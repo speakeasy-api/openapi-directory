@@ -12,6 +12,7 @@ public class UpdateEnrollmentStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeMemberAccounts")
     public Boolean includeMemberAccounts;
+
     public UpdateEnrollmentStatusRequest withIncludeMemberAccounts(Boolean includeMemberAccounts) {
         this.includeMemberAccounts = includeMemberAccounts;
         return this;
@@ -19,9 +20,13 @@ public class UpdateEnrollmentStatusRequest {
     
     @JsonProperty("status")
     public StatusEnum status;
+
     public UpdateEnrollmentStatusRequest withStatus(StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateEnrollmentStatusRequest(@JsonProperty("status") StatusEnum status) {
+        this.status = status;
+  }
 }

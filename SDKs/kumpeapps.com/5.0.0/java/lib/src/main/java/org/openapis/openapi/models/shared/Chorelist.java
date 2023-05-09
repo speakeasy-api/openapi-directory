@@ -15,6 +15,7 @@ public class Chorelist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chore")
     public Chore[] chore;
+
     public Chorelist withChore(Chore[] chore) {
         this.chore = chore;
         return this;
@@ -23,9 +24,11 @@ public class Chorelist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Long success;
+
     public Chorelist withSuccess(Long success) {
         this.success = success;
         return this;
     }
     
+    public Chorelist(){}
 }

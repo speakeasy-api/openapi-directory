@@ -15,6 +15,7 @@ public class GetLFTagResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetLFTagResponse withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -23,6 +24,7 @@ public class GetLFTagResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagKey")
     public String tagKey;
+
     public GetLFTagResponse withTagKey(String tagKey) {
         this.tagKey = tagKey;
         return this;
@@ -31,9 +33,11 @@ public class GetLFTagResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagValues")
     public String[] tagValues;
+
     public GetLFTagResponse withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     
+    public GetLFTagResponse(){}
 }

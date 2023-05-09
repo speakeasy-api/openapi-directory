@@ -23,6 +23,7 @@ public class ConsentInformationResponse200Json {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public ConsentInformationResponse200Json withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -34,6 +35,7 @@ public class ConsentInformationResponse200Json {
      */
     @JsonProperty("access")
     public AccountAccess access;
+
     public ConsentInformationResponse200Json withAccess(AccountAccess access) {
         this.access = access;
         return this;
@@ -58,6 +60,7 @@ public class ConsentInformationResponse200Json {
      */
     @JsonProperty("consentStatus")
     public ConsentStatusEnum consentStatus;
+
     public ConsentInformationResponse200Json withConsentStatus(ConsentStatusEnum consentStatus) {
         this.consentStatus = consentStatus;
         return this;
@@ -74,6 +77,7 @@ public class ConsentInformationResponse200Json {
      */
     @JsonProperty("frequencyPerDay")
     public Long frequencyPerDay;
+
     public ConsentInformationResponse200Json withFrequencyPerDay(Long frequencyPerDay) {
         this.frequencyPerDay = frequencyPerDay;
         return this;
@@ -87,6 +91,7 @@ public class ConsentInformationResponse200Json {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("lastActionDate")
     public LocalDate lastActionDate;
+
     public ConsentInformationResponse200Json withLastActionDate(LocalDate lastActionDate) {
         this.lastActionDate = lastActionDate;
         return this;
@@ -100,6 +105,7 @@ public class ConsentInformationResponse200Json {
      */
     @JsonProperty("recurringIndicator")
     public Boolean recurringIndicator;
+
     public ConsentInformationResponse200Json withRecurringIndicator(Boolean recurringIndicator) {
         this.recurringIndicator = recurringIndicator;
         return this;
@@ -119,9 +125,18 @@ public class ConsentInformationResponse200Json {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("validUntil")
     public LocalDate validUntil;
+
     public ConsentInformationResponse200Json withValidUntil(LocalDate validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public ConsentInformationResponse200Json(@JsonProperty("access") AccountAccess access, @JsonProperty("consentStatus") ConsentStatusEnum consentStatus, @JsonProperty("frequencyPerDay") Long frequencyPerDay, @JsonProperty("lastActionDate") LocalDate lastActionDate, @JsonProperty("recurringIndicator") Boolean recurringIndicator, @JsonProperty("validUntil") LocalDate validUntil) {
+        this.access = access;
+        this.consentStatus = consentStatus;
+        this.frequencyPerDay = frequencyPerDay;
+        this.lastActionDate = lastActionDate;
+        this.recurringIndicator = recurringIndicator;
+        this.validUntil = validUntil;
+  }
 }

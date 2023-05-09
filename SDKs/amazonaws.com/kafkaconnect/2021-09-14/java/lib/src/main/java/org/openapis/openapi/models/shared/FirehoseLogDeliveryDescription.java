@@ -15,6 +15,7 @@ public class FirehoseLogDeliveryDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryStream")
     public String deliveryStream;
+
     public FirehoseLogDeliveryDescription withDeliveryStream(String deliveryStream) {
         this.deliveryStream = deliveryStream;
         return this;
@@ -23,9 +24,11 @@ public class FirehoseLogDeliveryDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public FirehoseLogDeliveryDescription withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public FirehoseLogDeliveryDescription(){}
 }

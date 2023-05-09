@@ -18,9 +18,11 @@ public class FstabEntryList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public FstabEntry[] entries;
+
     public FstabEntryList withEntries(FstabEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public FstabEntryList(){}
 }

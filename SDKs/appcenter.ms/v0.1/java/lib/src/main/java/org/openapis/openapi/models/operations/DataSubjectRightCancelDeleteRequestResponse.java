@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DataSubjectRightCancelDeleteRequestResponse {
     
     public String contentType;
+
     public DataSubjectRightCancelDeleteRequestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DataSubjectRightCancelDeleteRequestResponse {
      */
     
     public DataSubjectRightCancelDeleteRequest202ApplicationJSON dataSubjectRightCancelDeleteRequest202ApplicationJSONObject;
+
     public DataSubjectRightCancelDeleteRequestResponse withDataSubjectRightCancelDeleteRequest202ApplicationJSONObject(DataSubjectRightCancelDeleteRequest202ApplicationJSON dataSubjectRightCancelDeleteRequest202ApplicationJSONObject) {
         this.dataSubjectRightCancelDeleteRequest202ApplicationJSONObject = dataSubjectRightCancelDeleteRequest202ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class DataSubjectRightCancelDeleteRequestResponse {
      */
     
     public DataSubjectRightCancelDeleteRequest503ApplicationJSON dataSubjectRightCancelDeleteRequest503ApplicationJSONObject;
+
     public DataSubjectRightCancelDeleteRequestResponse withDataSubjectRightCancelDeleteRequest503ApplicationJSONObject(DataSubjectRightCancelDeleteRequest503ApplicationJSON dataSubjectRightCancelDeleteRequest503ApplicationJSONObject) {
         this.dataSubjectRightCancelDeleteRequest503ApplicationJSONObject = dataSubjectRightCancelDeleteRequest503ApplicationJSONObject;
         return this;
@@ -39,6 +43,7 @@ public class DataSubjectRightCancelDeleteRequestResponse {
      */
     
     public DataSubjectRightCancelDeleteRequestDefaultApplicationJSON dataSubjectRightCancelDeleteRequestDefaultApplicationJSONObject;
+
     public DataSubjectRightCancelDeleteRequestResponse withDataSubjectRightCancelDeleteRequestDefaultApplicationJSONObject(DataSubjectRightCancelDeleteRequestDefaultApplicationJSON dataSubjectRightCancelDeleteRequestDefaultApplicationJSONObject) {
         this.dataSubjectRightCancelDeleteRequestDefaultApplicationJSONObject = dataSubjectRightCancelDeleteRequestDefaultApplicationJSONObject;
         return this;
@@ -46,6 +51,7 @@ public class DataSubjectRightCancelDeleteRequestResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public DataSubjectRightCancelDeleteRequestResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -53,6 +59,7 @@ public class DataSubjectRightCancelDeleteRequestResponse {
     
     
     public Integer statusCode;
+
     public DataSubjectRightCancelDeleteRequestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,9 +67,14 @@ public class DataSubjectRightCancelDeleteRequestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DataSubjectRightCancelDeleteRequestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DataSubjectRightCancelDeleteRequestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListStreamingSessionBackupsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListStreamingSessionBackupsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class ListStreamingSessionBackupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListStreamingSessionBackupsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class ListStreamingSessionBackupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListStreamingSessionBackupsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class ListStreamingSessionBackupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListStreamingSessionBackupsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class ListStreamingSessionBackupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListStreamingSessionBackupsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class ListStreamingSessionBackupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListStreamingSessionBackupsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class ListStreamingSessionBackupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListStreamingSessionBackupsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class ListStreamingSessionBackupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListStreamingSessionBackupsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -71,6 +80,7 @@ public class ListStreamingSessionBackupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ownedBy")
     public String ownedBy;
+
     public ListStreamingSessionBackupsRequest withOwnedBy(String ownedBy) {
         this.ownedBy = ownedBy;
         return this;
@@ -81,9 +91,13 @@ public class ListStreamingSessionBackupsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioId")
     public String studioId;
+
     public ListStreamingSessionBackupsRequest withStudioId(String studioId) {
         this.studioId = studioId;
         return this;
     }
     
+    public ListStreamingSessionBackupsRequest(@JsonProperty("studioId") String studioId) {
+        this.studioId = studioId;
+  }
 }

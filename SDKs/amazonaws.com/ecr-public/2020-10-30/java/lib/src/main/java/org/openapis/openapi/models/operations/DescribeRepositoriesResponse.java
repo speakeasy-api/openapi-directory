@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRepositoriesResponse {
     
     public String contentType;
+
     public DescribeRepositoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRepositoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRepositoriesResponse describeRepositoriesResponse;
+
     public DescribeRepositoriesResponse withDescribeRepositoriesResponse(org.openapis.openapi.models.shared.DescribeRepositoriesResponse describeRepositoriesResponse) {
         this.describeRepositoriesResponse = describeRepositoriesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRepositoriesResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeRepositoriesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRepositoriesResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public DescribeRepositoriesResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeRepositoriesResponse {
      */
     
     public Object serverException;
+
     public DescribeRepositoriesResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeRepositoriesResponse {
     
     
     public Integer statusCode;
+
     public DescribeRepositoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeRepositoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRepositoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeRepositoriesResponse {
      */
     
     public Object unsupportedCommandException;
+
     public DescribeRepositoriesResponse withUnsupportedCommandException(Object unsupportedCommandException) {
         this.unsupportedCommandException = unsupportedCommandException;
         return this;
     }
     
+    public DescribeRepositoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

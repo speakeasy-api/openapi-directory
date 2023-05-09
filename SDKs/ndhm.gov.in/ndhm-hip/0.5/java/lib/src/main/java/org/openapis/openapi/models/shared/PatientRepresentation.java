@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientRepresentation {
     @JsonProperty("careContexts")
     public CareContextRepresentation[] careContexts;
+
     public PatientRepresentation withCareContexts(CareContextRepresentation[] careContexts) {
         this.careContexts = careContexts;
         return this;
@@ -18,6 +19,7 @@ public class PatientRepresentation {
     
     @JsonProperty("display")
     public String display;
+
     public PatientRepresentation withDisplay(String display) {
         this.display = display;
         return this;
@@ -26,6 +28,7 @@ public class PatientRepresentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchedBy")
     public IdentifierTypeEnum[] matchedBy;
+
     public PatientRepresentation withMatchedBy(IdentifierTypeEnum[] matchedBy) {
         this.matchedBy = matchedBy;
         return this;
@@ -33,9 +36,15 @@ public class PatientRepresentation {
     
     @JsonProperty("referenceNumber")
     public String referenceNumber;
+
     public PatientRepresentation withReferenceNumber(String referenceNumber) {
         this.referenceNumber = referenceNumber;
         return this;
     }
     
+    public PatientRepresentation(@JsonProperty("careContexts") CareContextRepresentation[] careContexts, @JsonProperty("display") String display, @JsonProperty("referenceNumber") String referenceNumber) {
+        this.careContexts = careContexts;
+        this.display = display;
+        this.referenceNumber = referenceNumber;
+  }
 }

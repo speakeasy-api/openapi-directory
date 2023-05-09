@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPeopleResponse {
     
     public String contentType;
+
     public GetPeopleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPeopleResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetPeopleResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetPeopleResponse {
     
     
     public Integer statusCode;
+
     public GetPeopleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetPeopleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPeopleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetPeopleResponse {
      */
     
     public GetPeople200ApplicationVndApiPlusJson getPeople200ApplicationVndApiPlusJsonObject;
+
     public GetPeopleResponse withGetPeople200ApplicationVndApiPlusJsonObject(GetPeople200ApplicationVndApiPlusJson getPeople200ApplicationVndApiPlusJsonObject) {
         this.getPeople200ApplicationVndApiPlusJsonObject = getPeople200ApplicationVndApiPlusJsonObject;
         return this;
@@ -54,9 +60,14 @@ public class GetPeopleResponse {
      */
     
     public GetPeople400ApplicationVndApiPlusJson getPeople400ApplicationVndApiPlusJsonObject;
+
     public GetPeopleResponse withGetPeople400ApplicationVndApiPlusJsonObject(GetPeople400ApplicationVndApiPlusJson getPeople400ApplicationVndApiPlusJsonObject) {
         this.getPeople400ApplicationVndApiPlusJsonObject = getPeople400ApplicationVndApiPlusJsonObject;
         return this;
     }
     
+    public GetPeopleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

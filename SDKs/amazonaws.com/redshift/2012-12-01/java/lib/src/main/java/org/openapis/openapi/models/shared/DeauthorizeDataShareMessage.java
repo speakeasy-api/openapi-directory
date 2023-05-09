@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeauthorizeDataShareMessage {
     
     public String consumerIdentifier;
+
     public DeauthorizeDataShareMessage withConsumerIdentifier(String consumerIdentifier) {
         this.consumerIdentifier = consumerIdentifier;
         return this;
@@ -16,9 +17,14 @@ public class DeauthorizeDataShareMessage {
     
     
     public String dataShareArn;
+
     public DeauthorizeDataShareMessage withDataShareArn(String dataShareArn) {
         this.dataShareArn = dataShareArn;
         return this;
     }
     
+    public DeauthorizeDataShareMessage(@JsonProperty("ConsumerIdentifier") String consumerIdentifier, @JsonProperty("DataShareArn") String dataShareArn) {
+        this.consumerIdentifier = consumerIdentifier;
+        this.dataShareArn = dataShareArn;
+  }
 }

@@ -18,6 +18,7 @@ public class SiteBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cert_thumbprint")
     public String certThumbprint;
+
     public SiteBinding withCertThumbprint(String certThumbprint) {
         this.certThumbprint = certThumbprint;
         return this;
@@ -29,6 +30,7 @@ public class SiteBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host_name")
     public String hostName;
+
     public SiteBinding withHostName(String hostName) {
         this.hostName = hostName;
         return this;
@@ -40,6 +42,7 @@ public class SiteBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_address")
     public String ipAddress;
+
     public SiteBinding withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -51,6 +54,7 @@ public class SiteBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public SiteBinding withPort(Integer port) {
         this.port = port;
         return this;
@@ -62,6 +66,7 @@ public class SiteBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public String protocol;
+
     public SiteBinding withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -73,9 +78,11 @@ public class SiteBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssl_enabled")
     public Boolean sslEnabled;
+
     public SiteBinding withSslEnabled(Boolean sslEnabled) {
         this.sslEnabled = sslEnabled;
         return this;
     }
     
+    public SiteBinding(){}
 }

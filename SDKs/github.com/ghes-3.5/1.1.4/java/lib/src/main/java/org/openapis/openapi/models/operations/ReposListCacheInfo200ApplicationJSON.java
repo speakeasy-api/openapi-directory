@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReposListCacheInfo200ApplicationJSON {
     @JsonProperty("git")
     public ReposListCacheInfo200ApplicationJSONGit git;
+
     public ReposListCacheInfo200ApplicationJSON withGit(ReposListCacheInfo200ApplicationJSONGit git) {
         this.git = git;
         return this;
@@ -19,6 +20,7 @@ public class ReposListCacheInfo200ApplicationJSON {
     
     @JsonProperty("host")
     public String host;
+
     public ReposListCacheInfo200ApplicationJSON withHost(String host) {
         this.host = host;
         return this;
@@ -26,9 +28,15 @@ public class ReposListCacheInfo200ApplicationJSON {
     
     @JsonProperty("location")
     public String location;
+
     public ReposListCacheInfo200ApplicationJSON withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public ReposListCacheInfo200ApplicationJSON(@JsonProperty("git") ReposListCacheInfo200ApplicationJSONGit git, @JsonProperty("host") String host, @JsonProperty("location") String location) {
+        this.git = git;
+        this.host = host;
+        this.location = location;
+  }
 }

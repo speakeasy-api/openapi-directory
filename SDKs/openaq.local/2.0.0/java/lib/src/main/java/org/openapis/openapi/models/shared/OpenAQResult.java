@@ -15,6 +15,7 @@ public class OpenAQResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public OpenAQResultMeta meta;
+
     public OpenAQResult withMeta(OpenAQResultMeta meta) {
         this.meta = meta;
         return this;
@@ -23,9 +24,11 @@ public class OpenAQResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public Object[] results;
+
     public OpenAQResult withResults(Object[] results) {
         this.results = results;
         return this;
     }
     
+    public OpenAQResult(){}
 }

@@ -56,11 +56,9 @@ public class Representatives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CivicinfoRepresentativesRepresentativeInfoByAddressResponse res = new org.openapis.openapi.models.operations.CivicinfoRepresentativesRepresentativeInfoByAddressResponse() {{
+        org.openapis.openapi.models.operations.CivicinfoRepresentativesRepresentativeInfoByAddressResponse res = new org.openapis.openapi.models.operations.CivicinfoRepresentativesRepresentativeInfoByAddressResponse(contentType, httpRes.statusCode()) {{
             representativeInfoResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Representatives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CivicinfoRepresentativesRepresentativeInfoByDivisionResponse res = new org.openapis.openapi.models.operations.CivicinfoRepresentativesRepresentativeInfoByDivisionResponse() {{
+        org.openapis.openapi.models.operations.CivicinfoRepresentativesRepresentativeInfoByDivisionResponse res = new org.openapis.openapi.models.operations.CivicinfoRepresentativesRepresentativeInfoByDivisionResponse(contentType, httpRes.statusCode()) {{
             representativeInfoData = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

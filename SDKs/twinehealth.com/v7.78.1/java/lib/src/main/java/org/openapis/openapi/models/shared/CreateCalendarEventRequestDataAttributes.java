@@ -15,6 +15,7 @@ public class CreateCalendarEventRequestDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("all_day")
     public Boolean allDay;
+
     public CreateCalendarEventRequestDataAttributes withAllDay(Boolean allDay) {
         this.allDay = allDay;
         return this;
@@ -25,6 +26,7 @@ public class CreateCalendarEventRequestDataAttributes {
      */
     @JsonProperty("attendees")
     public CreateCalendarEventRequestDataAttributesAttendees[] attendees;
+
     public CreateCalendarEventRequestDataAttributes withAttendees(CreateCalendarEventRequestDataAttributesAttendees[] attendees) {
         this.attendees = attendees;
         return this;
@@ -36,6 +38,7 @@ public class CreateCalendarEventRequestDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed_at")
     public String completedAt;
+
     public CreateCalendarEventRequestDataAttributes withCompletedAt(String completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -47,6 +50,7 @@ public class CreateCalendarEventRequestDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed_by")
     public java.util.Map<String, Object> completedBy;
+
     public CreateCalendarEventRequestDataAttributes withCompletedBy(java.util.Map<String, Object> completedBy) {
         this.completedBy = completedBy;
         return this;
@@ -55,6 +59,7 @@ public class CreateCalendarEventRequestDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateCalendarEventRequestDataAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -66,6 +71,7 @@ public class CreateCalendarEventRequestDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     public String endAt;
+
     public CreateCalendarEventRequestDataAttributes withEndAt(String endAt) {
         this.endAt = endAt;
         return this;
@@ -74,6 +80,7 @@ public class CreateCalendarEventRequestDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public CreateCalendarEventRequestDataAttributes withLocation(String location) {
         this.location = location;
         return this;
@@ -84,6 +91,7 @@ public class CreateCalendarEventRequestDataAttributes {
      */
     @JsonProperty("start_at")
     public String startAt;
+
     public CreateCalendarEventRequestDataAttributes withStartAt(String startAt) {
         this.startAt = startAt;
         return this;
@@ -95,6 +103,7 @@ public class CreateCalendarEventRequestDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_zone")
     public String timeZone;
+
     public CreateCalendarEventRequestDataAttributes withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -105,6 +114,7 @@ public class CreateCalendarEventRequestDataAttributes {
      */
     @JsonProperty("title")
     public String title;
+
     public CreateCalendarEventRequestDataAttributes withTitle(String title) {
         this.title = title;
         return this;
@@ -115,9 +125,16 @@ public class CreateCalendarEventRequestDataAttributes {
      */
     @JsonProperty("type")
     public CreateCalendarEventRequestDataAttributesTypeEnum type;
+
     public CreateCalendarEventRequestDataAttributes withType(CreateCalendarEventRequestDataAttributesTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateCalendarEventRequestDataAttributes(@JsonProperty("attendees") CreateCalendarEventRequestDataAttributesAttendees[] attendees, @JsonProperty("start_at") String startAt, @JsonProperty("title") String title, @JsonProperty("type") CreateCalendarEventRequestDataAttributesTypeEnum type) {
+        this.attendees = attendees;
+        this.startAt = startAt;
+        this.title = title;
+        this.type = type;
+  }
 }

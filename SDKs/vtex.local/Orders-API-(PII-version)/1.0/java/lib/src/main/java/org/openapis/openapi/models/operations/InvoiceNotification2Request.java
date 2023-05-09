@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InvoiceNotification2Request {
@@ -12,6 +13,7 @@ public class InvoiceNotification2Request {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public InvoiceNotification2Request withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class InvoiceNotification2Request {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public InvoiceNotification2Request withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class InvoiceNotification2Request {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.InvoiceNotificationRequest invoiceNotificationRequest;
+
     public InvoiceNotification2Request withInvoiceNotificationRequest(org.openapis.openapi.models.shared.InvoiceNotificationRequest invoiceNotificationRequest) {
         this.invoiceNotificationRequest = invoiceNotificationRequest;
         return this;
@@ -39,9 +43,16 @@ public class InvoiceNotification2Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
     public String orderId;
+
     public InvoiceNotification2Request withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     
+    public InvoiceNotification2Request(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("InvoiceNotificationRequest") org.openapis.openapi.models.shared.InvoiceNotificationRequest invoiceNotificationRequest, @JsonProperty("orderId") String orderId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.invoiceNotificationRequest = invoiceNotificationRequest;
+        this.orderId = orderId;
+  }
 }

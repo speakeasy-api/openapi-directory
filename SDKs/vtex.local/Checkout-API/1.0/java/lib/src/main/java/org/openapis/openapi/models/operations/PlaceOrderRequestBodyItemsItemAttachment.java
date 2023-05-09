@@ -18,6 +18,7 @@ public class PlaceOrderRequestBodyItemsItemAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public PlaceOrderRequestBodyItemsItemAttachment withContent(String content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class PlaceOrderRequestBodyItemsItemAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlaceOrderRequestBodyItemsItemAttachment withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PlaceOrderRequestBodyItemsItemAttachment(){}
 }

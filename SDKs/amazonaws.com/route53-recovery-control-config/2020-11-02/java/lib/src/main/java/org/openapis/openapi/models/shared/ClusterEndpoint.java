@@ -15,6 +15,7 @@ public class ClusterEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoint")
     public String endpoint;
+
     public ClusterEndpoint withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -23,9 +24,11 @@ public class ClusterEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public ClusterEndpoint withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public ClusterEndpoint(){}
 }

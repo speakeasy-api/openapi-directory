@@ -20,6 +20,7 @@ public class CACertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateArn")
     public String certificateArn;
+
     public CACertificate withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -28,6 +29,7 @@ public class CACertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateId")
     public String certificateId;
+
     public CACertificate withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -38,6 +40,7 @@ public class CACertificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public CACertificate withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -46,9 +49,11 @@ public class CACertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CACertificateStatusEnum status;
+
     public CACertificate withStatus(CACertificateStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CACertificate(){}
 }

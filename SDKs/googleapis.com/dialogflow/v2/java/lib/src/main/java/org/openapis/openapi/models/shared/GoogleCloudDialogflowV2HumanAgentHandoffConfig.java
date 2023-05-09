@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2HumanAgentHandoffConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("livePersonConfig")
     public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig livePersonConfig;
+
     public GoogleCloudDialogflowV2HumanAgentHandoffConfig withLivePersonConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig livePersonConfig) {
         this.livePersonConfig = livePersonConfig;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2HumanAgentHandoffConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesforceLiveAgentConfig")
     public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfig salesforceLiveAgentConfig;
+
     public GoogleCloudDialogflowV2HumanAgentHandoffConfig withSalesforceLiveAgentConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfig salesforceLiveAgentConfig) {
         this.salesforceLiveAgentConfig = salesforceLiveAgentConfig;
         return this;
     }
     
+    public GoogleCloudDialogflowV2HumanAgentHandoffConfig(){}
 }

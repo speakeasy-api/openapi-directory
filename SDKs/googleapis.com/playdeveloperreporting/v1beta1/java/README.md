@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PlaydeveloperreportingAnomaliesListSecurity;
 import org.openapis.openapi.models.operations.PlaydeveloperreportingAnomaliesListRequest;
 import org.openapis.openapi.models.operations.PlaydeveloperreportingAnomaliesListResponse;
+import org.openapis.openapi.models.operations.PlaydeveloperreportingAnomaliesListSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,35 +28,36 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PlaydeveloperreportingAnomaliesListRequest req = new PlaydeveloperreportingAnomaliesListRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                filter = "nulla";
-                key = "corrupti";
-                oauthToken = "illum";
-                pageSize = 423655;
-                pageToken = "error";
-                parent = "deserunt";
+            PlaydeveloperreportingAnomaliesListRequest req = new PlaydeveloperreportingAnomaliesListRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                filter = "corrupti";
+                key = "illum";
+                oauthToken = "vel";
+                pageSize = 623564L;
+                pageToken = "deserunt";
                 prettyPrint = false;
                 quotaUser = "suscipit";
                 uploadType = "iure";
                 uploadProtocol = "magnam";
-            }}            
+            }};            
 
-            PlaydeveloperreportingAnomaliesListResponse res = sdk.anomalies.playdeveloperreportingAnomaliesList(req, new PlaydeveloperreportingAnomaliesListSecurity() {{
+            PlaydeveloperreportingAnomaliesListResponse res = sdk.anomalies.playdeveloperreportingAnomaliesList(req, new PlaydeveloperreportingAnomaliesListSecurity("debitis", "ipsa") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googlePlayDeveloperReportingV1beta1ListAnomaliesResponse.isPresent()) {
+            if (res.googlePlayDeveloperReportingV1beta1ListAnomaliesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -65,16 +65,16 @@ public class Application {
 ## Available Resources and Operations
 
 
-### anomalies
+### [anomalies](docs/anomalies/README.md)
 
-* `playdeveloperreportingAnomaliesList` - Lists anomalies in any of the datasets.
+* [playdeveloperreportingAnomaliesList](docs/anomalies/README.md#playdeveloperreportinganomalieslist) - Lists anomalies in any of the datasets.
 
-### vitals
+### [vitals](docs/vitals/README.md)
 
-* `playdeveloperreportingVitalsErrorsIssuesSearch` - Searches all error issues in which reports have been grouped.
-* `playdeveloperreportingVitalsErrorsReportsSearch` - Searches all error reports received for an app.
-* `playdeveloperreportingVitalsStuckbackgroundwakelockrateGet` - Describes the properties of the metric set.
-* `playdeveloperreportingVitalsStuckbackgroundwakelockrateQuery` - Queries the metrics in the metric set.
+* [playdeveloperreportingVitalsErrorsIssuesSearch](docs/vitals/README.md#playdeveloperreportingvitalserrorsissuessearch) - Searches all error issues in which reports have been grouped.
+* [playdeveloperreportingVitalsErrorsReportsSearch](docs/vitals/README.md#playdeveloperreportingvitalserrorsreportssearch) - Searches all error reports received for an app.
+* [playdeveloperreportingVitalsStuckbackgroundwakelockrateGet](docs/vitals/README.md#playdeveloperreportingvitalsstuckbackgroundwakelockrateget) - Describes the properties of the metric set.
+* [playdeveloperreportingVitalsStuckbackgroundwakelockrateQuery](docs/vitals/README.md#playdeveloperreportingvitalsstuckbackgroundwakelockratequery) - Queries the metrics in the metric set.
 <!-- End SDK Available Operations -->
 
 ### Maturity

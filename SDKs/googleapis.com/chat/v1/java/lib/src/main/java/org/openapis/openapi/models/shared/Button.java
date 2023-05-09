@@ -18,6 +18,7 @@ public class Button {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageButton")
     public ImageButton imageButton;
+
     public Button withImageButton(ImageButton imageButton) {
         this.imageButton = imageButton;
         return this;
@@ -29,9 +30,11 @@ public class Button {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textButton")
     public TextButton textButton;
+
     public Button withTextButton(TextButton textButton) {
         this.textButton = textButton;
         return this;
     }
     
+    public Button(){}
 }

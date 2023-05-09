@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetSceneResponse {
     @JsonProperty("arn")
     public String arn;
+
     public GetSceneResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -27,6 +28,7 @@ public class GetSceneResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public String[] capabilities;
+
     public GetSceneResponse withCapabilities(String[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -34,6 +36,7 @@ public class GetSceneResponse {
     
     @JsonProperty("contentLocation")
     public String contentLocation;
+
     public GetSceneResponse withContentLocation(String contentLocation) {
         this.contentLocation = contentLocation;
         return this;
@@ -43,6 +46,7 @@ public class GetSceneResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public GetSceneResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -51,6 +55,7 @@ public class GetSceneResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetSceneResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +64,7 @@ public class GetSceneResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generatedSceneMetadata")
     public java.util.Map<String, String> generatedSceneMetadata;
+
     public GetSceneResponse withGeneratedSceneMetadata(java.util.Map<String, String> generatedSceneMetadata) {
         this.generatedSceneMetadata = generatedSceneMetadata;
         return this;
@@ -66,6 +72,7 @@ public class GetSceneResponse {
     
     @JsonProperty("sceneId")
     public String sceneId;
+
     public GetSceneResponse withSceneId(String sceneId) {
         this.sceneId = sceneId;
         return this;
@@ -74,6 +81,7 @@ public class GetSceneResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sceneMetadata")
     public java.util.Map<String, String> sceneMetadata;
+
     public GetSceneResponse withSceneMetadata(java.util.Map<String, String> sceneMetadata) {
         this.sceneMetadata = sceneMetadata;
         return this;
@@ -83,6 +91,7 @@ public class GetSceneResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateDateTime")
     public OffsetDateTime updateDateTime;
+
     public GetSceneResponse withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
@@ -90,9 +99,18 @@ public class GetSceneResponse {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public GetSceneResponse withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public GetSceneResponse(@JsonProperty("arn") String arn, @JsonProperty("contentLocation") String contentLocation, @JsonProperty("creationDateTime") OffsetDateTime creationDateTime, @JsonProperty("sceneId") String sceneId, @JsonProperty("updateDateTime") OffsetDateTime updateDateTime, @JsonProperty("workspaceId") String workspaceId) {
+        this.arn = arn;
+        this.contentLocation = contentLocation;
+        this.creationDateTime = creationDateTime;
+        this.sceneId = sceneId;
+        this.updateDateTime = updateDateTime;
+        this.workspaceId = workspaceId;
+  }
 }

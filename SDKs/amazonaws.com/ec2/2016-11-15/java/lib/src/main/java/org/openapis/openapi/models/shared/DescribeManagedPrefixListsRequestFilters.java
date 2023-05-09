@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeManagedPrefixListsRequestFilters {
     
     public String name;
+
     public DescribeManagedPrefixListsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeManagedPrefixListsRequestFilters {
     
     
     public String[] values;
+
     public DescribeManagedPrefixListsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeManagedPrefixListsRequestFilters(){}
 }

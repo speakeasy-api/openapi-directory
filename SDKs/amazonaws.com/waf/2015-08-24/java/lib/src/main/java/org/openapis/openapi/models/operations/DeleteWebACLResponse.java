@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWebACLResponse {
     
     public String contentType;
+
     public DeleteWebACLResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteWebACLResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteWebACLResponse deleteWebACLResponse;
+
     public DeleteWebACLResponse withDeleteWebACLResponse(org.openapis.openapi.models.shared.DeleteWebACLResponse deleteWebACLResponse) {
         this.deleteWebACLResponse = deleteWebACLResponse;
         return this;
@@ -26,6 +29,7 @@ public class DeleteWebACLResponse {
     
     
     public Integer statusCode;
+
     public DeleteWebACLResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteWebACLResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWebACLResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DeleteWebACLResponse {
      */
     
     public Object wafInternalErrorException;
+
     public DeleteWebACLResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class DeleteWebACLResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public DeleteWebACLResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class DeleteWebACLResponse {
      */
     
     public Object wafNonEmptyEntityException;
+
     public DeleteWebACLResponse withWAFNonEmptyEntityException(Object wafNonEmptyEntityException) {
         this.wafNonEmptyEntityException = wafNonEmptyEntityException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteWebACLResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public DeleteWebACLResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteWebACLResponse {
      */
     
     public Object wafReferencedItemException;
+
     public DeleteWebACLResponse withWAFReferencedItemException(Object wafReferencedItemException) {
         this.wafReferencedItemException = wafReferencedItemException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteWebACLResponse {
      */
     
     public Object wafStaleDataException;
+
     public DeleteWebACLResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
@@ -103,6 +114,7 @@ public class DeleteWebACLResponse {
      */
     
     public Object wafTagOperationException;
+
     public DeleteWebACLResponse withWAFTagOperationException(Object wafTagOperationException) {
         this.wafTagOperationException = wafTagOperationException;
         return this;
@@ -113,9 +125,14 @@ public class DeleteWebACLResponse {
      */
     
     public Object wafTagOperationInternalErrorException;
+
     public DeleteWebACLResponse withWAFTagOperationInternalErrorException(Object wafTagOperationInternalErrorException) {
         this.wafTagOperationInternalErrorException = wafTagOperationInternalErrorException;
         return this;
     }
     
+    public DeleteWebACLResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

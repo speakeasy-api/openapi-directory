@@ -18,6 +18,7 @@ public class UpdateFilterViewRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateFilterViewRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,9 +30,11 @@ public class UpdateFilterViewRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public FilterView filter;
+
     public UpdateFilterViewRequest withFilter(FilterView filter) {
         this.filter = filter;
         return this;
     }
     
+    public UpdateFilterViewRequest(){}
 }

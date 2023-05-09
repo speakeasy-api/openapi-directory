@@ -46,4 +46,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/ErrorDetail.java
 lib/src/main/java/org/openapis/openapi/models/shared/AccessTokenInfoResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RefreshTokenInfoResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TokenResponseIF.java
+docs/sdk/README.md
+docs/accesstokens/README.md
+docs/refreshtokens/README.md
+docs/tokens/README.md
 USAGE.md

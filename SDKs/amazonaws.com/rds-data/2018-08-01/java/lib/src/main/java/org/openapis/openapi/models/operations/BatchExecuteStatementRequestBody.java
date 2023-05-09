@@ -15,6 +15,7 @@ public class BatchExecuteStatementRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("database")
     public String database;
+
     public BatchExecuteStatementRequestBody withDatabase(String database) {
         this.database = database;
         return this;
@@ -26,6 +27,7 @@ public class BatchExecuteStatementRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterSets")
     public org.openapis.openapi.models.shared.SqlParameter[][] parameterSets;
+
     public BatchExecuteStatementRequestBody withParameterSets(org.openapis.openapi.models.shared.SqlParameter[][] parameterSets) {
         this.parameterSets = parameterSets;
         return this;
@@ -36,6 +38,7 @@ public class BatchExecuteStatementRequestBody {
      */
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public BatchExecuteStatementRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -47,6 +50,7 @@ public class BatchExecuteStatementRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public BatchExecuteStatementRequestBody withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -57,6 +61,7 @@ public class BatchExecuteStatementRequestBody {
      */
     @JsonProperty("secretArn")
     public String secretArn;
+
     public BatchExecuteStatementRequestBody withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -67,6 +72,7 @@ public class BatchExecuteStatementRequestBody {
      */
     @JsonProperty("sql")
     public String sql;
+
     public BatchExecuteStatementRequestBody withSql(String sql) {
         this.sql = sql;
         return this;
@@ -78,9 +84,15 @@ public class BatchExecuteStatementRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionId")
     public String transactionId;
+
     public BatchExecuteStatementRequestBody withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public BatchExecuteStatementRequestBody(@JsonProperty("resourceArn") String resourceArn, @JsonProperty("secretArn") String secretArn, @JsonProperty("sql") String sql) {
+        this.resourceArn = resourceArn;
+        this.secretArn = secretArn;
+        this.sql = sql;
+  }
 }

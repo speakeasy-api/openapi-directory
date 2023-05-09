@@ -12,6 +12,7 @@ public class GetEventsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public GetEventsCountDirectionEnum direction;
+
     public GetEventsCountRequest withDirection(GetEventsCountDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -22,6 +23,7 @@ public class GetEventsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate")
     public Long fromDate;
+
     public GetEventsCountRequest withFromDate(Long fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -32,6 +34,7 @@ public class GetEventsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=states")
     public GetEventsCountStatesEnum states;
+
     public GetEventsCountRequest withStates(GetEventsCountStatesEnum states) {
         this.states = states;
         return this;
@@ -42,9 +45,11 @@ public class GetEventsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate")
     public Long toDate;
+
     public GetEventsCountRequest withToDate(Long toDate) {
         this.toDate = toDate;
         return this;
     }
     
+    public GetEventsCountRequest(){}
 }

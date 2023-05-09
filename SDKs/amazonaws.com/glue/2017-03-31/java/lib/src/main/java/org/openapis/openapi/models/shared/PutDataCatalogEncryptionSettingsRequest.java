@@ -12,6 +12,7 @@ public class PutDataCatalogEncryptionSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public PutDataCatalogEncryptionSettingsRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,9 +20,13 @@ public class PutDataCatalogEncryptionSettingsRequest {
     
     @JsonProperty("DataCatalogEncryptionSettings")
     public DataCatalogEncryptionSettings dataCatalogEncryptionSettings;
+
     public PutDataCatalogEncryptionSettingsRequest withDataCatalogEncryptionSettings(DataCatalogEncryptionSettings dataCatalogEncryptionSettings) {
         this.dataCatalogEncryptionSettings = dataCatalogEncryptionSettings;
         return this;
     }
     
+    public PutDataCatalogEncryptionSettingsRequest(@JsonProperty("DataCatalogEncryptionSettings") DataCatalogEncryptionSettings dataCatalogEncryptionSettings) {
+        this.dataCatalogEncryptionSettings = dataCatalogEncryptionSettings;
+  }
 }

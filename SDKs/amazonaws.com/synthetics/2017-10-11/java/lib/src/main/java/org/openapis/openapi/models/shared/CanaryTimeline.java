@@ -22,6 +22,7 @@ public class CanaryTimeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public CanaryTimeline withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -32,6 +33,7 @@ public class CanaryTimeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModified")
     public OffsetDateTime lastModified;
+
     public CanaryTimeline withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -42,6 +44,7 @@ public class CanaryTimeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastStarted")
     public OffsetDateTime lastStarted;
+
     public CanaryTimeline withLastStarted(OffsetDateTime lastStarted) {
         this.lastStarted = lastStarted;
         return this;
@@ -52,9 +55,11 @@ public class CanaryTimeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastStopped")
     public OffsetDateTime lastStopped;
+
     public CanaryTimeline withLastStopped(OffsetDateTime lastStopped) {
         this.lastStopped = lastStopped;
         return this;
     }
     
+    public CanaryTimeline(){}
 }

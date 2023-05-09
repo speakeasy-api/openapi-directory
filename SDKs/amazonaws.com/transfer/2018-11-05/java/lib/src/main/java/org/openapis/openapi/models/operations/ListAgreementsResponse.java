@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAgreementsResponse {
     
     public String contentType;
+
     public ListAgreementsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAgreementsResponse {
      */
     
     public Object internalServiceError;
+
     public ListAgreementsResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class ListAgreementsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListAgreementsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListAgreementsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListAgreementsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListAgreementsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAgreementsResponse listAgreementsResponse;
+
     public ListAgreementsResponse withListAgreementsResponse(org.openapis.openapi.models.shared.ListAgreementsResponse listAgreementsResponse) {
         this.listAgreementsResponse = listAgreementsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListAgreementsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAgreementsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListAgreementsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListAgreementsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ListAgreementsResponse {
     
     
     public Integer statusCode;
+
     public ListAgreementsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListAgreementsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAgreementsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAgreementsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

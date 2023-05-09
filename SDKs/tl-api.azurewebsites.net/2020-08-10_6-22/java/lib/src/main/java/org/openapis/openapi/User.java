@@ -50,11 +50,9 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserGetResponse res = new org.openapis.openapi.models.operations.UserGetResponse() {{
+        org.openapis.openapi.models.operations.UserGetResponse res = new org.openapis.openapi.models.operations.UserGetResponse(contentType, httpRes.statusCode()) {{
             userDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,10 +93,8 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserRegisterUserResponse res = new org.openapis.openapi.models.operations.UserRegisterUserResponse() {{
+        org.openapis.openapi.models.operations.UserRegisterUserResponse res = new org.openapis.openapi.models.operations.UserRegisterUserResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -134,10 +130,8 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserUpdateUserResponse res = new org.openapis.openapi.models.operations.UserUpdateUserResponse() {{
+        org.openapis.openapi.models.operations.UserUpdateUserResponse res = new org.openapis.openapi.models.operations.UserUpdateUserResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {

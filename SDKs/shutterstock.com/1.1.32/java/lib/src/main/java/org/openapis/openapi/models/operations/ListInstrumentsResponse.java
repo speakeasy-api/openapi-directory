@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListInstrumentsResponse {
     
     public String contentType;
+
     public ListInstrumentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListInstrumentsResponse {
      */
     
     public org.openapis.openapi.models.shared.InstrumentList instrumentList;
+
     public ListInstrumentsResponse withInstrumentList(org.openapis.openapi.models.shared.InstrumentList instrumentList) {
         this.instrumentList = instrumentList;
         return this;
@@ -26,6 +29,7 @@ public class ListInstrumentsResponse {
     
     
     public Integer statusCode;
+
     public ListInstrumentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ListInstrumentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListInstrumentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListInstrumentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

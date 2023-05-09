@@ -15,9 +15,11 @@ public class DeletePatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineId")
     public String baselineId;
+
     public DeletePatchBaselineResult withBaselineId(String baselineId) {
         this.baselineId = baselineId;
         return this;
     }
     
+    public DeletePatchBaselineResult(){}
 }

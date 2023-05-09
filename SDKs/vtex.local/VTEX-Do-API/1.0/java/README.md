@@ -16,35 +16,34 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetNoteRequest;
 import org.openapis.openapi.models.operations.GetNoteResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     appKey = "YOUR_API_KEY_HERE";
                     appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetNoteRequest req = new GetNoteRequest() {{
-                accept = "application/json";
-                contentType = "application/json";
-                noteId = "654321cba";
+            GetNoteRequest req = new GetNoteRequest("application/json", "application/json", "654321cba") {{
                 reason = "data-validation";
-            }}            
+            }};            
 
             GetNoteResponse res = sdk.note.getNote(req);
 
-            if (res.getNote200ApplicationJSONAny.isPresent()) {
+            if (res.getNote200ApplicationJSONAny != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -52,19 +51,19 @@ public class Application {
 ## Available Resources and Operations
 
 
-### note
+### [note](docs/note/README.md)
 
-* `getNote` - Retrieve Note
-* `getNotesbyorderId` - Get Notes by orderId
-* `newNote` - Create Note
+* [getNote](docs/note/README.md#getnote) - Retrieve Note
+* [getNotesbyorderId](docs/note/README.md#getnotesbyorderid) - Get Notes by orderId
+* [newNote](docs/note/README.md#newnote) - Create Note
 
-### task
+### [task](docs/task/README.md)
 
-* `addComment` - Add Comment on a Task
-* `editTask` - Update Task
-* `getTask` - Retrieve Task
-* `listtasksbyassignee` - List tasks
-* `newTask` - Create Task
+* [addComment](docs/task/README.md#addcomment) - Add Comment on a Task
+* [editTask](docs/task/README.md#edittask) - Update Task
+* [getTask](docs/task/README.md#gettask) - Retrieve Task
+* [listtasksbyassignee](docs/task/README.md#listtasksbyassignee) - List tasks
+* [newTask](docs/task/README.md#newtask) - Create Task
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetElectionsRequest {
@@ -13,6 +14,7 @@ public class GetElectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetElectionsRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -30,6 +32,7 @@ public class GetElectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
     public Integer cycle;
+
     public GetElectionsRequest withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -40,6 +43,7 @@ public class GetElectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=district")
     public String district;
+
     public GetElectionsRequest withDistrict(String district) {
         this.district = district;
         return this;
@@ -51,6 +55,7 @@ public class GetElectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
     public Boolean electionFull;
+
     public GetElectionsRequest withElectionFull(Boolean electionFull) {
         this.electionFull = electionFull;
         return this;
@@ -61,6 +66,7 @@ public class GetElectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
     public GetElectionsOfficeEnum office;
+
     public GetElectionsRequest withOffice(GetElectionsOfficeEnum office) {
         this.office = office;
         return this;
@@ -71,6 +77,7 @@ public class GetElectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetElectionsRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -81,6 +88,7 @@ public class GetElectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetElectionsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -92,6 +100,7 @@ public class GetElectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetElectionsRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -102,6 +111,7 @@ public class GetElectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetElectionsRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -112,6 +122,7 @@ public class GetElectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetElectionsRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -122,6 +133,7 @@ public class GetElectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetElectionsRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
@@ -132,9 +144,15 @@ public class GetElectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String state;
+
     public GetElectionsRequest withState(String state) {
         this.state = state;
         return this;
     }
     
+    public GetElectionsRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("cycle") Integer cycle, @JsonProperty("office") GetElectionsOfficeEnum office) {
+        this.apiKey = apiKey;
+        this.cycle = cycle;
+        this.office = office;
+  }
 }

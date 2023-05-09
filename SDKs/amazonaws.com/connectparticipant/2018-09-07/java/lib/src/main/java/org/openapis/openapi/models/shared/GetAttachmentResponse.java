@@ -15,6 +15,7 @@ public class GetAttachmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public GetAttachmentResponse withUrl(String url) {
         this.url = url;
         return this;
@@ -23,9 +24,11 @@ public class GetAttachmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UrlExpiry")
     public String urlExpiry;
+
     public GetAttachmentResponse withUrlExpiry(String urlExpiry) {
         this.urlExpiry = urlExpiry;
         return this;
     }
     
+    public GetAttachmentResponse(){}
 }

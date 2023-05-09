@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetContentproSearchRequest;
 import org.openapis.openapi.models.operations.GetContentproSearchResponse;
 
@@ -26,18 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetContentproSearchRequest req = new GetContentproSearchRequest() {{
-                terms = "corrupti";
-            }}            
+            GetContentproSearchRequest req = new GetContentproSearchRequest("corrupti");            
 
             GetContentproSearchResponse res = sdk.contentproSearch.getContentproSearch(req);
 
-            if (res.getContentproSearch200ApplicationJSONObject.isPresent()) {
+            if (res.getContentproSearch200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -45,21 +44,21 @@ public class Application {
 ## Available Resources and Operations
 
 
-### contentproSearch
+### [contentproSearch](docs/contentprosearch/README.md)
 
-* `getContentproSearch` - Send search terms to receive the most relevant articles and companies.
+* [getContentproSearch](docs/contentprosearch/README.md#getcontentprosearch) - Send search terms to receive the most relevant articles and companies.
 
-### contentproSimilarText
+### [contentproSimilarText](docs/contentprosimilartext/README.md)
 
-* `postContentproSimilarText` - The /contentpro-similar-text endpoint accepts and arbitrary piece of text and returns similar articles and blogs written by companies.
+* [postContentproSimilarText](docs/contentprosimilartext/README.md#postcontentprosimilartext) - The /contentpro-similar-text endpoint accepts and arbitrary piece of text and returns similar articles and blogs written by companies.
 
-### search
+### [search](docs/search/README.md)
 
-* `getSearch` - Send search terms to receive the most relevant companies along with text snippets.
+* [getSearch](docs/search/README.md#getsearch) - Send search terms to receive the most relevant companies along with text snippets.
 
-### similar
+### [similar](docs/similar/README.md)
 
-* `getSimilar` - Send a company website to receive a list of companies related to them.
+* [getSimilar](docs/similar/README.md#getsimilar) - Send a company website to receive a list of companies related to them.
 <!-- End SDK Available Operations -->
 
 ### Maturity

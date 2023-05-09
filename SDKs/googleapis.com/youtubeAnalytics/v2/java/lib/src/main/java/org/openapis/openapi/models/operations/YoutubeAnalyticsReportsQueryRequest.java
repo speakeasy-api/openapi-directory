@@ -12,6 +12,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubeAnalyticsReportsQueryRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubeAnalyticsReportsQueryRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubeAnalyticsReportsQueryRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubeAnalyticsReportsQueryRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
     public String currency;
+
     public YoutubeAnalyticsReportsQueryRequest withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -62,6 +67,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dimensions")
     public String dimensions;
+
     public YoutubeAnalyticsReportsQueryRequest withDimensions(String dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -72,6 +78,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public String endDate;
+
     public YoutubeAnalyticsReportsQueryRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -82,6 +89,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubeAnalyticsReportsQueryRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -92,6 +100,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filters")
     public String filters;
+
     public YoutubeAnalyticsReportsQueryRequest withFilters(String filters) {
         this.filters = filters;
         return this;
@@ -102,6 +111,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String ids;
+
     public YoutubeAnalyticsReportsQueryRequest withIds(String ids) {
         this.ids = ids;
         return this;
@@ -112,6 +122,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeHistoricalChannelData")
     public Boolean includeHistoricalChannelData;
+
     public YoutubeAnalyticsReportsQueryRequest withIncludeHistoricalChannelData(Boolean includeHistoricalChannelData) {
         this.includeHistoricalChannelData = includeHistoricalChannelData;
         return this;
@@ -122,6 +133,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubeAnalyticsReportsQueryRequest withKey(String key) {
         this.key = key;
         return this;
@@ -132,6 +144,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public YoutubeAnalyticsReportsQueryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -142,6 +155,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metrics")
     public String metrics;
+
     public YoutubeAnalyticsReportsQueryRequest withMetrics(String metrics) {
         this.metrics = metrics;
         return this;
@@ -152,6 +166,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubeAnalyticsReportsQueryRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -162,6 +177,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubeAnalyticsReportsQueryRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -172,6 +188,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubeAnalyticsReportsQueryRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -182,6 +199,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public YoutubeAnalyticsReportsQueryRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -192,6 +210,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public String startDate;
+
     public YoutubeAnalyticsReportsQueryRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -202,6 +221,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public Long startIndex;
+
     public YoutubeAnalyticsReportsQueryRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -212,6 +232,7 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubeAnalyticsReportsQueryRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -222,9 +243,11 @@ public class YoutubeAnalyticsReportsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubeAnalyticsReportsQueryRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public YoutubeAnalyticsReportsQueryRequest(){}
 }

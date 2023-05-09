@@ -56,11 +56,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesResponse res = new org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesResponse() {{
+        org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesResponse res = new org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesResponse(contentType, httpRes.statusCode()) {{
             fetchMultiDailyMetricsTimeSeriesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesResponse res = new org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesResponse() {{
+        org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesResponse res = new org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesResponse(contentType, httpRes.statusCode()) {{
             getDailyMetricsTimeSeriesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +140,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListResponse res = new org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListResponse() {{
+        org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListResponse res = new org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListResponse(contentType, httpRes.statusCode()) {{
             listSearchKeywordImpressionsMonthlyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

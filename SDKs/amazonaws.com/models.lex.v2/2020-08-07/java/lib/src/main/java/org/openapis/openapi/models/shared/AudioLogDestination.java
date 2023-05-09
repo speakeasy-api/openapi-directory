@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AudioLogDestination {
     @JsonProperty("s3Bucket")
     public S3BucketLogDestination s3Bucket;
+
     public AudioLogDestination withS3Bucket(S3BucketLogDestination s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
     }
     
+    public AudioLogDestination(@JsonProperty("s3Bucket") S3BucketLogDestination s3Bucket) {
+        this.s3Bucket = s3Bucket;
+  }
 }

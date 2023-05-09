@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPurgeQueueRequest {
@@ -12,6 +13,7 @@ public class GETPurgeQueueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountNumber")
     public Long accountNumber;
+
     public GETPurgeQueueRequest withAccountNumber(Long accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -19,6 +21,7 @@ public class GETPurgeQueueRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETPurgeQueueActionEnum action;
+
     public GETPurgeQueueRequest withAction(GETPurgeQueueActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +32,7 @@ public class GETPurgeQueueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=QueueName")
     public String queueName;
+
     public GETPurgeQueueRequest withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
@@ -36,6 +40,7 @@ public class GETPurgeQueueRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETPurgeQueueVersionEnum version;
+
     public GETPurgeQueueRequest withVersion(GETPurgeQueueVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETPurgeQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETPurgeQueueRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETPurgeQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETPurgeQueueRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETPurgeQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETPurgeQueueRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETPurgeQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETPurgeQueueRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETPurgeQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETPurgeQueueRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETPurgeQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETPurgeQueueRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETPurgeQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETPurgeQueueRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETPurgeQueueRequest(@JsonProperty("AccountNumber") Long accountNumber, @JsonProperty("Action") GETPurgeQueueActionEnum action, @JsonProperty("QueueName") String queueName, @JsonProperty("Version") GETPurgeQueueVersionEnum version) {
+        this.accountNumber = accountNumber;
+        this.action = action;
+        this.queueName = queueName;
+        this.version = version;
+  }
 }

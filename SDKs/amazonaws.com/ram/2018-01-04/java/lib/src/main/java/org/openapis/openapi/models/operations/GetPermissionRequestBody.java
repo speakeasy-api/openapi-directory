@@ -10,24 +10,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetPermissionRequestBody {
     /**
-     * Specifies the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resoure Name (ARN)&lt;/a&gt; of the permission whose contents you want to retrieve. To find the ARN for a permission, use either the &lt;a&gt;ListPermissions&lt;/a&gt; operation or go to the &lt;a href="https://console.aws.amazon.com/ram/home#Permissions:"&gt;Permissions library&lt;/a&gt; page in the RAM console and then choose the name of the permission. The ARN is displayed on the detail page.
+     * Specifies the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Name (ARN)&lt;/a&gt; of the permission whose contents you want to retrieve. To find the ARN for a permission, use either the &lt;a&gt;ListPermissions&lt;/a&gt; operation or go to the &lt;a href="https://console.aws.amazon.com/ram/home#Permissions:"&gt;Permissions library&lt;/a&gt; page in the RAM console and then choose the name of the permission. The ARN is displayed on the detail page.
      */
     @JsonProperty("permissionArn")
     public String permissionArn;
+
     public GetPermissionRequestBody withPermissionArn(String permissionArn) {
         this.permissionArn = permissionArn;
         return this;
     }
     
     /**
-     * Specifies identifier for the version of the RAM permission to retrieve. If you don't specify this parameter, the operation retrieves the default version.
+     * &lt;p&gt;Specifies the version number of the RAM permission to retrieve. If you don't specify this parameter, the operation retrieves the default version.&lt;/p&gt; &lt;p&gt;To see the list of available versions, use &lt;a&gt;ListPermissionVersions&lt;/a&gt;.&lt;/p&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissionVersion")
     public Long permissionVersion;
+
     public GetPermissionRequestBody withPermissionVersion(Long permissionVersion) {
         this.permissionVersion = permissionVersion;
         return this;
     }
     
+    public GetPermissionRequestBody(@JsonProperty("permissionArn") String permissionArn) {
+        this.permissionArn = permissionArn;
+  }
 }

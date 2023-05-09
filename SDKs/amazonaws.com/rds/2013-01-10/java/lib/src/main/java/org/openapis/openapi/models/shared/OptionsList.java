@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class OptionsList {
     
     public DBSecurityGroupMembershipList[] dbSecurityGroupMemberships;
+
     public OptionsList withDBSecurityGroupMemberships(DBSecurityGroupMembershipList[] dbSecurityGroupMemberships) {
         this.dbSecurityGroupMemberships = dbSecurityGroupMemberships;
         return this;
@@ -16,6 +17,7 @@ public class OptionsList {
     
     
     public String optionDescription;
+
     public OptionsList withOptionDescription(String optionDescription) {
         this.optionDescription = optionDescription;
         return this;
@@ -23,6 +25,7 @@ public class OptionsList {
     
     
     public String optionName;
+
     public OptionsList withOptionName(String optionName) {
         this.optionName = optionName;
         return this;
@@ -30,6 +33,7 @@ public class OptionsList {
     
     
     public Long port;
+
     public OptionsList withPort(Long port) {
         this.port = port;
         return this;
@@ -37,9 +41,11 @@ public class OptionsList {
     
     
     public VpcSecurityGroupMembershipList[] vpcSecurityGroupMemberships;
+
     public OptionsList withVpcSecurityGroupMemberships(VpcSecurityGroupMembershipList[] vpcSecurityGroupMemberships) {
         this.vpcSecurityGroupMemberships = vpcSecurityGroupMemberships;
         return this;
     }
     
+    public OptionsList(){}
 }

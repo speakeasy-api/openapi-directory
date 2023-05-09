@@ -18,6 +18,7 @@ public class NotificationEndpointListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public NotificationEndpointListWarningCodeEnum code;
+
     public NotificationEndpointListWarning withCode(NotificationEndpointListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class NotificationEndpointListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public NotificationEndpointListWarningData[] data;
+
     public NotificationEndpointListWarning withData(NotificationEndpointListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class NotificationEndpointListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NotificationEndpointListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public NotificationEndpointListWarning(){}
 }

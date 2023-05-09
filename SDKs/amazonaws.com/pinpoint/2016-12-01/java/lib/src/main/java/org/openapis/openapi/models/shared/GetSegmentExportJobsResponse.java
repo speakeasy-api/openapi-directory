@@ -15,9 +15,13 @@ public class GetSegmentExportJobsResponse {
      */
     @JsonProperty("ExportJobsResponse")
     public ExportJobsResponse exportJobsResponse;
+
     public GetSegmentExportJobsResponse withExportJobsResponse(ExportJobsResponse exportJobsResponse) {
         this.exportJobsResponse = exportJobsResponse;
         return this;
     }
     
+    public GetSegmentExportJobsResponse(@JsonProperty("ExportJobsResponse") ExportJobsResponse exportJobsResponse) {
+        this.exportJobsResponse = exportJobsResponse;
+  }
 }

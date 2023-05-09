@@ -18,6 +18,7 @@ public class DeviceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildBrand")
     public String buildBrand;
+
     public DeviceId withBuildBrand(String buildBrand) {
         this.buildBrand = buildBrand;
         return this;
@@ -29,9 +30,11 @@ public class DeviceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildDevice")
     public String buildDevice;
+
     public DeviceId withBuildDevice(String buildDevice) {
         this.buildDevice = buildDevice;
         return this;
     }
     
+    public DeviceId(){}
 }

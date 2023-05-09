@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MessageList {
     
     public java.util.Map<String, String> attributes;
+
     public MessageList withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -19,6 +20,7 @@ public class MessageList {
     
     
     public String body;
+
     public MessageList withBody(String body) {
         this.body = body;
         return this;
@@ -26,6 +28,7 @@ public class MessageList {
     
     
     public String md5OfBody;
+
     public MessageList withMd5OfBody(String md5OfBody) {
         this.md5OfBody = md5OfBody;
         return this;
@@ -33,6 +36,7 @@ public class MessageList {
     
     
     public String md5OfMessageAttributes;
+
     public MessageList withMd5OfMessageAttributes(String md5OfMessageAttributes) {
         this.md5OfMessageAttributes = md5OfMessageAttributes;
         return this;
@@ -40,6 +44,7 @@ public class MessageList {
     
     
     public java.util.Map<String, MessageAttributeValue> messageAttributes;
+
     public MessageList withMessageAttributes(java.util.Map<String, MessageAttributeValue> messageAttributes) {
         this.messageAttributes = messageAttributes;
         return this;
@@ -47,6 +52,7 @@ public class MessageList {
     
     
     public String messageId;
+
     public MessageList withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -54,9 +60,11 @@ public class MessageList {
     
     
     public String receiptHandle;
+
     public MessageList withReceiptHandle(String receiptHandle) {
         this.receiptHandle = receiptHandle;
         return this;
     }
     
+    public MessageList(){}
 }

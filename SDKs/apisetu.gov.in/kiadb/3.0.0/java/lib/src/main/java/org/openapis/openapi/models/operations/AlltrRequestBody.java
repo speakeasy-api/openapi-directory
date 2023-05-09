@@ -15,6 +15,7 @@ public class AlltrRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public AlltrRequestBodyCertificateParameters certificateParameters;
+
     public AlltrRequestBody withCertificateParameters(AlltrRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class AlltrRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public AlltrRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class AlltrRequestBody {
      */
     @JsonProperty("format")
     public AlltrRequestBodyFormatEnum format;
+
     public AlltrRequestBody withFormat(AlltrRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class AlltrRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public AlltrRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public AlltrRequestBody(@JsonProperty("format") AlltrRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

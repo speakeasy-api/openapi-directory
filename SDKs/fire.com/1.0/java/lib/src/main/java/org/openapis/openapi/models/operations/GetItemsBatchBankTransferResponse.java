@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetItemsBatchBankTransferResponse {
     
     public String contentType;
+
     public GetItemsBatchBankTransferResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetItemsBatchBankTransferResponse {
     
     
     public Integer statusCode;
+
     public GetItemsBatchBankTransferResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetItemsBatchBankTransferResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetItemsBatchBankTransferResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetItemsBatchBankTransferResponse {
      */
     
     public GetItemsBatchBankTransferBatchItems batchItems;
+
     public GetItemsBatchBankTransferResponse withBatchItems(GetItemsBatchBankTransferBatchItems batchItems) {
         this.batchItems = batchItems;
         return this;
     }
     
+    public GetItemsBatchBankTransferResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

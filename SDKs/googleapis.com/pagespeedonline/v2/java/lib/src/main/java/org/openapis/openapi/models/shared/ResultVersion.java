@@ -15,6 +15,7 @@ public class ResultVersion {
      */
     
     public Integer major;
+
     public ResultVersion withMajor(Integer major) {
         this.major = major;
         return this;
@@ -25,9 +26,11 @@ public class ResultVersion {
      */
     
     public Integer minor;
+
     public ResultVersion withMinor(Integer minor) {
         this.minor = minor;
         return this;
     }
     
+    public ResultVersion(){}
 }

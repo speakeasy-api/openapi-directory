@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p2beta1ProductSearchResultsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public GoogleCloudVisionV1p2beta1ProductSearchResultsResult withImage(String image) {
         this.image = image;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p2beta1ProductSearchResultsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public GoogleCloudVisionV1p2beta1Product product;
+
     public GoogleCloudVisionV1p2beta1ProductSearchResultsResult withProduct(GoogleCloudVisionV1p2beta1Product product) {
         this.product = product;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudVisionV1p2beta1ProductSearchResultsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public GoogleCloudVisionV1p2beta1ProductSearchResultsResult withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1ProductSearchResultsResult(){}
 }

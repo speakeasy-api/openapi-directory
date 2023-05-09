@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DistributeDatasetEntriesResponse {
@@ -12,6 +13,7 @@ public class DistributeDatasetEntriesResponse {
      */
     
     public Object accessDeniedException;
+
     public DistributeDatasetEntriesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DistributeDatasetEntriesResponse {
     
     
     public String contentType;
+
     public DistributeDatasetEntriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DistributeDatasetEntriesResponse {
      */
     
     public java.util.Map<String, Object> distributeDatasetEntriesResponse;
+
     public DistributeDatasetEntriesResponse withDistributeDatasetEntriesResponse(java.util.Map<String, Object> distributeDatasetEntriesResponse) {
         this.distributeDatasetEntriesResponse = distributeDatasetEntriesResponse;
         return this;
@@ -39,6 +43,7 @@ public class DistributeDatasetEntriesResponse {
      */
     
     public Object internalServerError;
+
     public DistributeDatasetEntriesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DistributeDatasetEntriesResponse {
      */
     
     public Object invalidParameterException;
+
     public DistributeDatasetEntriesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DistributeDatasetEntriesResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public DistributeDatasetEntriesResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -69,6 +76,7 @@ public class DistributeDatasetEntriesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DistributeDatasetEntriesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DistributeDatasetEntriesResponse {
     
     
     public Integer statusCode;
+
     public DistributeDatasetEntriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DistributeDatasetEntriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DistributeDatasetEntriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DistributeDatasetEntriesResponse {
      */
     
     public Object resourceNotReadyException;
+
     public DistributeDatasetEntriesResponse withResourceNotReadyException(Object resourceNotReadyException) {
         this.resourceNotReadyException = resourceNotReadyException;
         return this;
@@ -103,9 +114,14 @@ public class DistributeDatasetEntriesResponse {
      */
     
     public Object throttlingException;
+
     public DistributeDatasetEntriesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DistributeDatasetEntriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

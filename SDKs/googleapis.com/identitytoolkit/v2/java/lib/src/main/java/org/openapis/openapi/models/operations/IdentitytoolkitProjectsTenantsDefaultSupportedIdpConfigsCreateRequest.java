@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest {
@@ -12,6 +13,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateReque
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig googleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest withGoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig(org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig googleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig) {
         this.googleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig = googleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig;
         return this;
@@ -29,6 +32,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idpId")
     public String idpId;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest withIdpId(String idpId) {
         this.idpId = idpId;
         return this;
@@ -79,6 +87,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -109,6 +120,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,13 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

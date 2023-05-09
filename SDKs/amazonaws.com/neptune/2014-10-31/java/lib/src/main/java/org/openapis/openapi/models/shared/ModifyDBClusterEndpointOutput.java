@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyDBClusterEndpointOutput {
     
     public String customEndpointType;
+
     public ModifyDBClusterEndpointOutput withCustomEndpointType(String customEndpointType) {
         this.customEndpointType = customEndpointType;
         return this;
@@ -19,6 +20,7 @@ public class ModifyDBClusterEndpointOutput {
     
     
     public String dbClusterEndpointArn;
+
     public ModifyDBClusterEndpointOutput withDBClusterEndpointArn(String dbClusterEndpointArn) {
         this.dbClusterEndpointArn = dbClusterEndpointArn;
         return this;
@@ -26,6 +28,7 @@ public class ModifyDBClusterEndpointOutput {
     
     
     public String dbClusterEndpointIdentifier;
+
     public ModifyDBClusterEndpointOutput withDBClusterEndpointIdentifier(String dbClusterEndpointIdentifier) {
         this.dbClusterEndpointIdentifier = dbClusterEndpointIdentifier;
         return this;
@@ -33,6 +36,7 @@ public class ModifyDBClusterEndpointOutput {
     
     
     public String dbClusterEndpointResourceIdentifier;
+
     public ModifyDBClusterEndpointOutput withDBClusterEndpointResourceIdentifier(String dbClusterEndpointResourceIdentifier) {
         this.dbClusterEndpointResourceIdentifier = dbClusterEndpointResourceIdentifier;
         return this;
@@ -40,6 +44,7 @@ public class ModifyDBClusterEndpointOutput {
     
     
     public String dbClusterIdentifier;
+
     public ModifyDBClusterEndpointOutput withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -47,6 +52,7 @@ public class ModifyDBClusterEndpointOutput {
     
     
     public String endpoint;
+
     public ModifyDBClusterEndpointOutput withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -54,6 +60,7 @@ public class ModifyDBClusterEndpointOutput {
     
     
     public String endpointType;
+
     public ModifyDBClusterEndpointOutput withEndpointType(String endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -61,6 +68,7 @@ public class ModifyDBClusterEndpointOutput {
     
     
     public String[] excludedMembers;
+
     public ModifyDBClusterEndpointOutput withExcludedMembers(String[] excludedMembers) {
         this.excludedMembers = excludedMembers;
         return this;
@@ -68,6 +76,7 @@ public class ModifyDBClusterEndpointOutput {
     
     
     public String[] staticMembers;
+
     public ModifyDBClusterEndpointOutput withStaticMembers(String[] staticMembers) {
         this.staticMembers = staticMembers;
         return this;
@@ -75,9 +84,11 @@ public class ModifyDBClusterEndpointOutput {
     
     
     public String status;
+
     public ModifyDBClusterEndpointOutput withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ModifyDBClusterEndpointOutput(){}
 }

@@ -20,6 +20,7 @@ public class AssessmentFrameworkShareRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public AssessmentFrameworkShareRequest withComment(String comment) {
         this.comment = comment;
         return this;
@@ -28,6 +29,7 @@ public class AssessmentFrameworkShareRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceType")
     public String complianceType;
+
     public AssessmentFrameworkShareRequest withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -38,6 +40,7 @@ public class AssessmentFrameworkShareRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public AssessmentFrameworkShareRequest withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -46,6 +49,7 @@ public class AssessmentFrameworkShareRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customControlsCount")
     public Long customControlsCount;
+
     public AssessmentFrameworkShareRequest withCustomControlsCount(Long customControlsCount) {
         this.customControlsCount = customControlsCount;
         return this;
@@ -54,6 +58,7 @@ public class AssessmentFrameworkShareRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationAccount")
     public String destinationAccount;
+
     public AssessmentFrameworkShareRequest withDestinationAccount(String destinationAccount) {
         this.destinationAccount = destinationAccount;
         return this;
@@ -62,6 +67,7 @@ public class AssessmentFrameworkShareRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationRegion")
     public String destinationRegion;
+
     public AssessmentFrameworkShareRequest withDestinationRegion(String destinationRegion) {
         this.destinationRegion = destinationRegion;
         return this;
@@ -72,6 +78,7 @@ public class AssessmentFrameworkShareRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationTime")
     public OffsetDateTime expirationTime;
+
     public AssessmentFrameworkShareRequest withExpirationTime(OffsetDateTime expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -80,6 +87,7 @@ public class AssessmentFrameworkShareRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frameworkDescription")
     public String frameworkDescription;
+
     public AssessmentFrameworkShareRequest withFrameworkDescription(String frameworkDescription) {
         this.frameworkDescription = frameworkDescription;
         return this;
@@ -88,6 +96,7 @@ public class AssessmentFrameworkShareRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frameworkId")
     public String frameworkId;
+
     public AssessmentFrameworkShareRequest withFrameworkId(String frameworkId) {
         this.frameworkId = frameworkId;
         return this;
@@ -96,6 +105,7 @@ public class AssessmentFrameworkShareRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frameworkName")
     public String frameworkName;
+
     public AssessmentFrameworkShareRequest withFrameworkName(String frameworkName) {
         this.frameworkName = frameworkName;
         return this;
@@ -104,6 +114,7 @@ public class AssessmentFrameworkShareRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssessmentFrameworkShareRequest withId(String id) {
         this.id = id;
         return this;
@@ -114,6 +125,7 @@ public class AssessmentFrameworkShareRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public AssessmentFrameworkShareRequest withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -122,6 +134,7 @@ public class AssessmentFrameworkShareRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceAccount")
     public String sourceAccount;
+
     public AssessmentFrameworkShareRequest withSourceAccount(String sourceAccount) {
         this.sourceAccount = sourceAccount;
         return this;
@@ -130,6 +143,7 @@ public class AssessmentFrameworkShareRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardControlsCount")
     public Long standardControlsCount;
+
     public AssessmentFrameworkShareRequest withStandardControlsCount(Long standardControlsCount) {
         this.standardControlsCount = standardControlsCount;
         return this;
@@ -138,9 +152,11 @@ public class AssessmentFrameworkShareRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ShareRequestStatusEnum status;
+
     public AssessmentFrameworkShareRequest withStatus(ShareRequestStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AssessmentFrameworkShareRequest(){}
 }

@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2PrivacyMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoricalStatsConfig")
     public GooglePrivacyDlpV2CategoricalStatsConfig categoricalStatsConfig;
+
     public GooglePrivacyDlpV2PrivacyMetric withCategoricalStatsConfig(GooglePrivacyDlpV2CategoricalStatsConfig categoricalStatsConfig) {
         this.categoricalStatsConfig = categoricalStatsConfig;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2PrivacyMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deltaPresenceEstimationConfig")
     public GooglePrivacyDlpV2DeltaPresenceEstimationConfig deltaPresenceEstimationConfig;
+
     public GooglePrivacyDlpV2PrivacyMetric withDeltaPresenceEstimationConfig(GooglePrivacyDlpV2DeltaPresenceEstimationConfig deltaPresenceEstimationConfig) {
         this.deltaPresenceEstimationConfig = deltaPresenceEstimationConfig;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2PrivacyMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kAnonymityConfig")
     public GooglePrivacyDlpV2KAnonymityConfig kAnonymityConfig;
+
     public GooglePrivacyDlpV2PrivacyMetric withKAnonymityConfig(GooglePrivacyDlpV2KAnonymityConfig kAnonymityConfig) {
         this.kAnonymityConfig = kAnonymityConfig;
         return this;
@@ -51,6 +54,7 @@ public class GooglePrivacyDlpV2PrivacyMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kMapEstimationConfig")
     public GooglePrivacyDlpV2KMapEstimationConfig kMapEstimationConfig;
+
     public GooglePrivacyDlpV2PrivacyMetric withKMapEstimationConfig(GooglePrivacyDlpV2KMapEstimationConfig kMapEstimationConfig) {
         this.kMapEstimationConfig = kMapEstimationConfig;
         return this;
@@ -62,6 +66,7 @@ public class GooglePrivacyDlpV2PrivacyMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lDiversityConfig")
     public GooglePrivacyDlpV2LDiversityConfig lDiversityConfig;
+
     public GooglePrivacyDlpV2PrivacyMetric withLDiversityConfig(GooglePrivacyDlpV2LDiversityConfig lDiversityConfig) {
         this.lDiversityConfig = lDiversityConfig;
         return this;
@@ -73,9 +78,11 @@ public class GooglePrivacyDlpV2PrivacyMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numericalStatsConfig")
     public GooglePrivacyDlpV2NumericalStatsConfig numericalStatsConfig;
+
     public GooglePrivacyDlpV2PrivacyMetric withNumericalStatsConfig(GooglePrivacyDlpV2NumericalStatsConfig numericalStatsConfig) {
         this.numericalStatsConfig = numericalStatsConfig;
         return this;
     }
     
+    public GooglePrivacyDlpV2PrivacyMetric(){}
 }

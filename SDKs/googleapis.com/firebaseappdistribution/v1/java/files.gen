@@ -124,4 +124,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseAppdistroV1Ba
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseAppdistroV1BatchRemoveTestersResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseAppdistroV1BatchRemoveTestersRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseAppdistroV1ListTestersResponse.java
+docs/sdk/README.md
+docs/media/README.md
+docs/projects/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class CardWithId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public GoogleAppsCardV1Card card;
+
     public CardWithId withCard(GoogleAppsCardV1Card card) {
         this.card = card;
         return this;
@@ -29,9 +30,11 @@ public class CardWithId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardId")
     public String cardId;
+
     public CardWithId withCardId(String cardId) {
         this.cardId = cardId;
         return this;
     }
     
+    public CardWithId(){}
 }

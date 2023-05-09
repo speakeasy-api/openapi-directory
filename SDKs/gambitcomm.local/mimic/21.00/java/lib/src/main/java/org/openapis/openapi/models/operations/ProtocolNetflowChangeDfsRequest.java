@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolNetflowChangeDfsRequest {
@@ -12,6 +13,7 @@ public class ProtocolNetflowChangeDfsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolNetflowChangeDfsRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolNetflowChangeDfsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=interval")
     public Integer interval;
+
     public ProtocolNetflowChangeDfsRequest withInterval(Integer interval) {
         this.interval = interval;
         return this;
     }
     
+    public ProtocolNetflowChangeDfsRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("interval") Integer interval) {
+        this.agentNum = agentNum;
+        this.interval = interval;
+  }
 }

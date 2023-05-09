@@ -12,6 +12,7 @@ public class EgcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public EgcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class EgcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RefNo")
     public String refNo;
+
     public EgcerRequestBodyCertificateParameters withRefNo(String refNo) {
         this.refNo = refNo;
         return this;
@@ -32,6 +34,7 @@ public class EgcerRequestBodyCertificateParameters {
      */
     @JsonProperty("TokenNo")
     public String tokenNo;
+
     public EgcerRequestBodyCertificateParameters withTokenNo(String tokenNo) {
         this.tokenNo = tokenNo;
         return this;
@@ -42,9 +45,16 @@ public class EgcerRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public EgcerRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public EgcerRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("RefNo") String refNo, @JsonProperty("TokenNo") String tokenNo, @JsonProperty("UID") String uid) {
+        this.fullName = fullName;
+        this.refNo = refNo;
+        this.tokenNo = tokenNo;
+        this.uid = uid;
+  }
 }

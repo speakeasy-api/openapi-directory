@@ -15,6 +15,7 @@ public class CreateDomainNameResponseMutualTlsAuthentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TruststoreUri")
     public String truststoreUri;
+
     public CreateDomainNameResponseMutualTlsAuthentication withTruststoreUri(String truststoreUri) {
         this.truststoreUri = truststoreUri;
         return this;
@@ -23,6 +24,7 @@ public class CreateDomainNameResponseMutualTlsAuthentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TruststoreVersion")
     public String truststoreVersion;
+
     public CreateDomainNameResponseMutualTlsAuthentication withTruststoreVersion(String truststoreVersion) {
         this.truststoreVersion = truststoreVersion;
         return this;
@@ -31,9 +33,11 @@ public class CreateDomainNameResponseMutualTlsAuthentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TruststoreWarnings")
     public String[] truststoreWarnings;
+
     public CreateDomainNameResponseMutualTlsAuthentication withTruststoreWarnings(String[] truststoreWarnings) {
         this.truststoreWarnings = truststoreWarnings;
         return this;
     }
     
+    public CreateDomainNameResponseMutualTlsAuthentication(){}
 }

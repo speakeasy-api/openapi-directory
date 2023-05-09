@@ -15,9 +15,13 @@ public class UpsertSnippetRequest {
      */
     @JsonProperty("snippet")
     public Snippet snippet;
+
     public UpsertSnippetRequest withSnippet(Snippet snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public UpsertSnippetRequest(@JsonProperty("snippet") Snippet snippet) {
+        this.snippet = snippet;
+  }
 }

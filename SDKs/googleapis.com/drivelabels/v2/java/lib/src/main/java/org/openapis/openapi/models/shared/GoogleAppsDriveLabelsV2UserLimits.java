@@ -18,9 +18,11 @@ public class GoogleAppsDriveLabelsV2UserLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listLimits")
     public GoogleAppsDriveLabelsV2ListLimits listLimits;
+
     public GoogleAppsDriveLabelsV2UserLimits withListLimits(GoogleAppsDriveLabelsV2ListLimits listLimits) {
         this.listLimits = listLimits;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2UserLimits(){}
 }

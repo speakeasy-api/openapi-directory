@@ -12,9 +12,11 @@ public class Ios120 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public String[] devices;
+
     public Ios120 withDevices(String[] devices) {
         this.devices = devices;
         return this;
     }
     
+    public Ios120(){}
 }

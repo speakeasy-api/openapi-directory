@@ -18,9 +18,11 @@ public class UpdateEntitiesWithConditionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public java.util.Map<String, Object> response;
+
     public UpdateEntitiesWithConditionsResponse withResponse(java.util.Map<String, Object> response) {
         this.response = response;
         return this;
     }
     
+    public UpdateEntitiesWithConditionsResponse(){}
 }

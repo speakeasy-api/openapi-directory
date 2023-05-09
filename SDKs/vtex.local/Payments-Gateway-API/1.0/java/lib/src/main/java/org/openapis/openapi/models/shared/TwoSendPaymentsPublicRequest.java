@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TwoSendPaymentsPublicRequest {
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public TwoSendPaymentsPublicRequest withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -16,6 +17,7 @@ public class TwoSendPaymentsPublicRequest {
     
     @JsonProperty("fields")
     public Fields fields;
+
     public TwoSendPaymentsPublicRequest withFields(Fields fields) {
         this.fields = fields;
         return this;
@@ -23,6 +25,7 @@ public class TwoSendPaymentsPublicRequest {
     
     @JsonProperty("installments")
     public Integer installments;
+
     public TwoSendPaymentsPublicRequest withInstallments(Integer installments) {
         this.installments = installments;
         return this;
@@ -30,6 +33,7 @@ public class TwoSendPaymentsPublicRequest {
     
     @JsonProperty("installmentsInterestRate")
     public Integer installmentsInterestRate;
+
     public TwoSendPaymentsPublicRequest withInstallmentsInterestRate(Integer installmentsInterestRate) {
         this.installmentsInterestRate = installmentsInterestRate;
         return this;
@@ -37,6 +41,7 @@ public class TwoSendPaymentsPublicRequest {
     
     @JsonProperty("installmentsValue")
     public Integer installmentsValue;
+
     public TwoSendPaymentsPublicRequest withInstallmentsValue(Integer installmentsValue) {
         this.installmentsValue = installmentsValue;
         return this;
@@ -44,6 +49,7 @@ public class TwoSendPaymentsPublicRequest {
     
     @JsonProperty("paymentSystem")
     public Integer paymentSystem;
+
     public TwoSendPaymentsPublicRequest withPaymentSystem(Integer paymentSystem) {
         this.paymentSystem = paymentSystem;
         return this;
@@ -51,6 +57,7 @@ public class TwoSendPaymentsPublicRequest {
     
     @JsonProperty("referenceValue")
     public Integer referenceValue;
+
     public TwoSendPaymentsPublicRequest withReferenceValue(Integer referenceValue) {
         this.referenceValue = referenceValue;
         return this;
@@ -58,6 +65,7 @@ public class TwoSendPaymentsPublicRequest {
     
     @JsonProperty("transaction")
     public Transaction transaction;
+
     public TwoSendPaymentsPublicRequest withTransaction(Transaction transaction) {
         this.transaction = transaction;
         return this;
@@ -65,9 +73,21 @@ public class TwoSendPaymentsPublicRequest {
     
     @JsonProperty("value")
     public Integer value;
+
     public TwoSendPaymentsPublicRequest withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public TwoSendPaymentsPublicRequest(@JsonProperty("currencyCode") String currencyCode, @JsonProperty("fields") Fields fields, @JsonProperty("installments") Integer installments, @JsonProperty("installmentsInterestRate") Integer installmentsInterestRate, @JsonProperty("installmentsValue") Integer installmentsValue, @JsonProperty("paymentSystem") Integer paymentSystem, @JsonProperty("referenceValue") Integer referenceValue, @JsonProperty("transaction") Transaction transaction, @JsonProperty("value") Integer value) {
+        this.currencyCode = currencyCode;
+        this.fields = fields;
+        this.installments = installments;
+        this.installmentsInterestRate = installmentsInterestRate;
+        this.installmentsValue = installmentsValue;
+        this.paymentSystem = paymentSystem;
+        this.referenceValue = referenceValue;
+        this.transaction = transaction;
+        this.value = value;
+  }
 }

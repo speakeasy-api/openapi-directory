@@ -22,6 +22,7 @@ public class StreamEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("eventTime")
     public OffsetDateTime eventTime;
+
     public StreamEvent withEventTime(OffsetDateTime eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -30,6 +31,7 @@ public class StreamEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StreamEvent withName(String name) {
         this.name = name;
         return this;
@@ -38,9 +40,11 @@ public class StreamEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public StreamEvent withType(String type) {
         this.type = type;
         return this;
     }
     
+    public StreamEvent(){}
 }

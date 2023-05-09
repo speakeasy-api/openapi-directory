@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class StackSummary {
     
     public OffsetDateTime creationTime;
+
     public StackSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +21,7 @@ public class StackSummary {
     
     
     public OffsetDateTime deletionTime;
+
     public StackSummary withDeletionTime(OffsetDateTime deletionTime) {
         this.deletionTime = deletionTime;
         return this;
@@ -26,6 +29,7 @@ public class StackSummary {
     
     
     public StackDriftInformationSummary driftInformation;
+
     public StackSummary withDriftInformation(StackDriftInformationSummary driftInformation) {
         this.driftInformation = driftInformation;
         return this;
@@ -33,6 +37,7 @@ public class StackSummary {
     
     
     public OffsetDateTime lastUpdatedTime;
+
     public StackSummary withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -40,6 +45,7 @@ public class StackSummary {
     
     
     public String parentId;
+
     public StackSummary withParentId(String parentId) {
         this.parentId = parentId;
         return this;
@@ -47,6 +53,7 @@ public class StackSummary {
     
     
     public String rootId;
+
     public StackSummary withRootId(String rootId) {
         this.rootId = rootId;
         return this;
@@ -54,6 +61,7 @@ public class StackSummary {
     
     
     public String stackId;
+
     public StackSummary withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -61,6 +69,7 @@ public class StackSummary {
     
     
     public String stackName;
+
     public StackSummary withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -68,6 +77,7 @@ public class StackSummary {
     
     
     public StackStatusEnum stackStatus;
+
     public StackSummary withStackStatus(StackStatusEnum stackStatus) {
         this.stackStatus = stackStatus;
         return this;
@@ -75,6 +85,7 @@ public class StackSummary {
     
     
     public String stackStatusReason;
+
     public StackSummary withStackStatusReason(String stackStatusReason) {
         this.stackStatusReason = stackStatusReason;
         return this;
@@ -82,9 +93,15 @@ public class StackSummary {
     
     
     public String templateDescription;
+
     public StackSummary withTemplateDescription(String templateDescription) {
         this.templateDescription = templateDescription;
         return this;
     }
     
+    public StackSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("StackName") String stackName, @JsonProperty("StackStatus") StackStatusEnum stackStatus) {
+        this.creationTime = creationTime;
+        this.stackName = stackName;
+        this.stackStatus = stackStatus;
+  }
 }

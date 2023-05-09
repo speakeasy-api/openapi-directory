@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPermissionAppsAppIdRequest {
@@ -12,6 +13,7 @@ public class PostPermissionAppsAppIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public String appId;
+
     public PostPermissionAppsAppIdRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -22,6 +24,7 @@ public class PostPermissionAppsAppIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public Long date;
+
     public PostPermissionAppsAppIdRequest withDate(Long date) {
         this.date = date;
         return this;
@@ -32,6 +35,7 @@ public class PostPermissionAppsAppIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
     public String ip;
+
     public PostPermissionAppsAppIdRequest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -42,9 +46,14 @@ public class PostPermissionAppsAppIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public String userId;
+
     public PostPermissionAppsAppIdRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public PostPermissionAppsAppIdRequest(@JsonProperty("appId") String appId, @JsonProperty("userId") String userId) {
+        this.appId = appId;
+        this.userId = userId;
+  }
 }

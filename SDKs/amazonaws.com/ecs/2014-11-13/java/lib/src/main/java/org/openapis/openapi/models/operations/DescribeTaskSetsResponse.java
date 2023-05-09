@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTaskSetsResponse {
@@ -12,6 +13,7 @@ public class DescribeTaskSetsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeTaskSetsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeTaskSetsResponse {
      */
     
     public Object clientException;
+
     public DescribeTaskSetsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -32,6 +35,7 @@ public class DescribeTaskSetsResponse {
      */
     
     public Object clusterNotFoundException;
+
     public DescribeTaskSetsResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeTaskSetsResponse {
     
     
     public String contentType;
+
     public DescribeTaskSetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class DescribeTaskSetsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTaskSetsResponse describeTaskSetsResponse;
+
     public DescribeTaskSetsResponse withDescribeTaskSetsResponse(org.openapis.openapi.models.shared.DescribeTaskSetsResponse describeTaskSetsResponse) {
         this.describeTaskSetsResponse = describeTaskSetsResponse;
         return this;
@@ -59,6 +65,7 @@ public class DescribeTaskSetsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeTaskSetsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeTaskSetsResponse {
      */
     
     public Object serverException;
+
     public DescribeTaskSetsResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeTaskSetsResponse {
     
     
     public Integer statusCode;
+
     public DescribeTaskSetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribeTaskSetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTaskSetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DescribeTaskSetsResponse {
      */
     
     public Object serviceNotActiveException;
+
     public DescribeTaskSetsResponse withServiceNotActiveException(Object serviceNotActiveException) {
         this.serviceNotActiveException = serviceNotActiveException;
         return this;
@@ -103,6 +114,7 @@ public class DescribeTaskSetsResponse {
      */
     
     public Object serviceNotFoundException;
+
     public DescribeTaskSetsResponse withServiceNotFoundException(Object serviceNotFoundException) {
         this.serviceNotFoundException = serviceNotFoundException;
         return this;
@@ -113,9 +125,14 @@ public class DescribeTaskSetsResponse {
      */
     
     public Object unsupportedFeatureException;
+
     public DescribeTaskSetsResponse withUnsupportedFeatureException(Object unsupportedFeatureException) {
         this.unsupportedFeatureException = unsupportedFeatureException;
         return this;
     }
     
+    public DescribeTaskSetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

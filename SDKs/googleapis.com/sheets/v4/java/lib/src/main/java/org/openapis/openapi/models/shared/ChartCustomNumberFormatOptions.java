@@ -18,6 +18,7 @@ public class ChartCustomNumberFormatOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public ChartCustomNumberFormatOptions withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -29,9 +30,11 @@ public class ChartCustomNumberFormatOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suffix")
     public String suffix;
+
     public ChartCustomNumberFormatOptions withSuffix(String suffix) {
         this.suffix = suffix;
         return this;
     }
     
+    public ChartCustomNumberFormatOptions(){}
 }

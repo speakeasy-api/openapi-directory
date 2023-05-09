@@ -18,6 +18,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public Destination[] destinations;
+
     public Rule withDestinations(Destination[] destinations) {
         this.destinations = destinations;
         return this;
@@ -29,9 +30,11 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public Source[] sources;
+
     public Rule withSources(Source[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public Rule(){}
 }

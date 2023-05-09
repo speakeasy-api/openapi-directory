@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeLaunchTemplateVersionsResultLaunchTemplateVersionsLaunchTemplateDataNetworkInterfacesIpv4Prefixes {
     
     public String ipv4Prefix;
+
     public DescribeLaunchTemplateVersionsResultLaunchTemplateVersionsLaunchTemplateDataNetworkInterfacesIpv4Prefixes withIpv4Prefix(String ipv4Prefix) {
         this.ipv4Prefix = ipv4Prefix;
         return this;
     }
     
+    public DescribeLaunchTemplateVersionsResultLaunchTemplateVersionsLaunchTemplateDataNetworkInterfacesIpv4Prefixes(){}
 }

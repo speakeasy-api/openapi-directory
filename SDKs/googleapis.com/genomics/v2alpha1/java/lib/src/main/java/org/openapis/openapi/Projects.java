@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenomicsProjectsOperationsCancelResponse res = new org.openapis.openapi.models.operations.GenomicsProjectsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.GenomicsProjectsOperationsCancelResponse res = new org.openapis.openapi.models.operations.GenomicsProjectsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenomicsProjectsOperationsListResponse res = new org.openapis.openapi.models.operations.GenomicsProjectsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.GenomicsProjectsOperationsListResponse res = new org.openapis.openapi.models.operations.GenomicsProjectsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenomicsProjectsWorkersCheckInResponse res = new org.openapis.openapi.models.operations.GenomicsProjectsWorkersCheckInResponse() {{
+        org.openapis.openapi.models.operations.GenomicsProjectsWorkersCheckInResponse res = new org.openapis.openapi.models.operations.GenomicsProjectsWorkersCheckInResponse(contentType, httpRes.statusCode()) {{
             checkInResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

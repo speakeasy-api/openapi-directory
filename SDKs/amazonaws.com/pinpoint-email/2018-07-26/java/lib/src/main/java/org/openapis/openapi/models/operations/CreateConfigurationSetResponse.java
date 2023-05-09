@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateConfigurationSetResponse {
@@ -12,6 +13,7 @@ public class CreateConfigurationSetResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateConfigurationSetResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class CreateConfigurationSetResponse {
      */
     
     public Object badRequestException;
+
     public CreateConfigurationSetResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -32,6 +35,7 @@ public class CreateConfigurationSetResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateConfigurationSetResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class CreateConfigurationSetResponse {
     
     
     public String contentType;
+
     public CreateConfigurationSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateConfigurationSetResponse {
      */
     
     public java.util.Map<String, Object> createConfigurationSetResponse;
+
     public CreateConfigurationSetResponse withCreateConfigurationSetResponse(java.util.Map<String, Object> createConfigurationSetResponse) {
         this.createConfigurationSetResponse = createConfigurationSetResponse;
         return this;
@@ -59,6 +65,7 @@ public class CreateConfigurationSetResponse {
      */
     
     public Object limitExceededException;
+
     public CreateConfigurationSetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateConfigurationSetResponse {
      */
     
     public Object notFoundException;
+
     public CreateConfigurationSetResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreateConfigurationSetResponse {
     
     
     public Integer statusCode;
+
     public CreateConfigurationSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateConfigurationSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateConfigurationSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateConfigurationSetResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateConfigurationSetResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateConfigurationSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

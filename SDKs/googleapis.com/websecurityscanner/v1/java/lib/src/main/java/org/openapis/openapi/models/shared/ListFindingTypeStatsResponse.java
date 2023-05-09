@@ -18,9 +18,11 @@ public class ListFindingTypeStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingTypeStats")
     public FindingTypeStats[] findingTypeStats;
+
     public ListFindingTypeStatsResponse withFindingTypeStats(FindingTypeStats[] findingTypeStats) {
         this.findingTypeStats = findingTypeStats;
         return this;
     }
     
+    public ListFindingTypeStatsResponse(){}
 }

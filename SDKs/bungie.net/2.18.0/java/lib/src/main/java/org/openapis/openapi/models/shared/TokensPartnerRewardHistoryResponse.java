@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class TokensPartnerRewardHistoryResponse {
     
     public TokensPartnerOfferSkuHistoryResponse[] partnerOffers;
+
     public TokensPartnerRewardHistoryResponse withPartnerOffers(TokensPartnerOfferSkuHistoryResponse[] partnerOffers) {
         this.partnerOffers = partnerOffers;
         return this;
@@ -16,9 +17,11 @@ public class TokensPartnerRewardHistoryResponse {
     
     
     public TokensTwitchDropHistoryResponse[] twitchDrops;
+
     public TokensPartnerRewardHistoryResponse withTwitchDrops(TokensTwitchDropHistoryResponse[] twitchDrops) {
         this.twitchDrops = twitchDrops;
         return this;
     }
     
+    public TokensPartnerRewardHistoryResponse(){}
 }

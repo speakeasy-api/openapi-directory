@@ -18,6 +18,7 @@ public class LivenessCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkInterval")
     public String checkInterval;
+
     public LivenessCheck withCheckInterval(String checkInterval) {
         this.checkInterval = checkInterval;
         return this;
@@ -29,6 +30,7 @@ public class LivenessCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureThreshold")
     public Long failureThreshold;
+
     public LivenessCheck withFailureThreshold(Long failureThreshold) {
         this.failureThreshold = failureThreshold;
         return this;
@@ -40,6 +42,7 @@ public class LivenessCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public LivenessCheck withHost(String host) {
         this.host = host;
         return this;
@@ -51,6 +54,7 @@ public class LivenessCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialDelay")
     public String initialDelay;
+
     public LivenessCheck withInitialDelay(String initialDelay) {
         this.initialDelay = initialDelay;
         return this;
@@ -62,6 +66,7 @@ public class LivenessCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public LivenessCheck withPath(String path) {
         this.path = path;
         return this;
@@ -73,6 +78,7 @@ public class LivenessCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successThreshold")
     public Long successThreshold;
+
     public LivenessCheck withSuccessThreshold(Long successThreshold) {
         this.successThreshold = successThreshold;
         return this;
@@ -84,9 +90,11 @@ public class LivenessCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public String timeout;
+
     public LivenessCheck withTimeout(String timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public LivenessCheck(){}
 }

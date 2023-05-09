@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConnectorsProjectsLocationsConnectionsExecuteSqlQueryResponse {
     
     public String contentType;
+
     public ConnectorsProjectsLocationsConnectionsExecuteSqlQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ConnectorsProjectsLocationsConnectionsExecuteSqlQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.ExecuteSqlQueryResponse executeSqlQueryResponse;
+
     public ConnectorsProjectsLocationsConnectionsExecuteSqlQueryResponse withExecuteSqlQueryResponse(org.openapis.openapi.models.shared.ExecuteSqlQueryResponse executeSqlQueryResponse) {
         this.executeSqlQueryResponse = executeSqlQueryResponse;
         return this;
@@ -26,6 +29,7 @@ public class ConnectorsProjectsLocationsConnectionsExecuteSqlQueryResponse {
     
     
     public Integer statusCode;
+
     public ConnectorsProjectsLocationsConnectionsExecuteSqlQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ConnectorsProjectsLocationsConnectionsExecuteSqlQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConnectorsProjectsLocationsConnectionsExecuteSqlQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ConnectorsProjectsLocationsConnectionsExecuteSqlQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

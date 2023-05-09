@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JobListRequestBody {
     @JsonProperty("configId")
     public String configId;
+
     public JobListRequestBody withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -18,6 +19,7 @@ public class JobListRequestBody {
     
     @JsonProperty("configTypes")
     public JobConfigTypeEnum[] configTypes;
+
     public JobListRequestBody withConfigTypes(JobConfigTypeEnum[] configTypes) {
         this.configTypes = configTypes;
         return this;
@@ -26,6 +28,7 @@ public class JobListRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includingJobId")
     public Long includingJobId;
+
     public JobListRequestBody withIncludingJobId(Long includingJobId) {
         this.includingJobId = includingJobId;
         return this;
@@ -34,9 +37,14 @@ public class JobListRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public Pagination pagination;
+
     public JobListRequestBody withPagination(Pagination pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public JobListRequestBody(@JsonProperty("configId") String configId, @JsonProperty("configTypes") JobConfigTypeEnum[] configTypes) {
+        this.configId = configId;
+        this.configTypes = configTypes;
+  }
 }

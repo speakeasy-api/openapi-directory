@@ -18,6 +18,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonInstanceMetadata")
     public Metadata commonInstanceMetadata;
+
     public Project withCommonInstanceMetadata(Metadata commonInstanceMetadata) {
         this.commonInstanceMetadata = commonInstanceMetadata;
         return this;
@@ -29,6 +30,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public Project withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultNetworkTier")
     public ProjectDefaultNetworkTierEnum defaultNetworkTier;
+
     public Project withDefaultNetworkTier(ProjectDefaultNetworkTierEnum defaultNetworkTier) {
         this.defaultNetworkTier = defaultNetworkTier;
         return this;
@@ -51,6 +54,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultServiceAccount")
     public String defaultServiceAccount;
+
     public Project withDefaultServiceAccount(String defaultServiceAccount) {
         this.defaultServiceAccount = defaultServiceAccount;
         return this;
@@ -62,6 +66,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Project withDescription(String description) {
         this.description = description;
         return this;
@@ -73,6 +78,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabledFeatures")
     public String[] enabledFeatures;
+
     public Project withEnabledFeatures(String[] enabledFeatures) {
         this.enabledFeatures = enabledFeatures;
         return this;
@@ -84,6 +90,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Project withId(String id) {
         this.id = id;
         return this;
@@ -95,6 +102,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Project withKind(String kind) {
         this.kind = kind;
         return this;
@@ -106,6 +114,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Project withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotas")
     public Quota[] quotas;
+
     public Project withQuotas(Quota[] quotas) {
         this.quotas = quotas;
         return this;
@@ -128,6 +138,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Project withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -139,6 +150,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageExportLocation")
     public UsageExportLocation usageExportLocation;
+
     public Project withUsageExportLocation(UsageExportLocation usageExportLocation) {
         this.usageExportLocation = usageExportLocation;
         return this;
@@ -150,6 +162,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmDnsSetting")
     public ProjectVmDnsSettingEnum vmDnsSetting;
+
     public Project withVmDnsSetting(ProjectVmDnsSettingEnum vmDnsSetting) {
         this.vmDnsSetting = vmDnsSetting;
         return this;
@@ -161,9 +174,11 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xpnProjectStatus")
     public ProjectXpnProjectStatusEnum xpnProjectStatus;
+
     public Project withXpnProjectStatus(ProjectXpnProjectStatusEnum xpnProjectStatus) {
         this.xpnProjectStatus = xpnProjectStatus;
         return this;
     }
     
+    public Project(){}
 }

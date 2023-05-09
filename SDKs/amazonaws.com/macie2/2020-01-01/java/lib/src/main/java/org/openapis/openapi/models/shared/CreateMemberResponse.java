@@ -15,9 +15,11 @@ public class CreateMemberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CreateMemberResponse withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public CreateMemberResponse(){}
 }

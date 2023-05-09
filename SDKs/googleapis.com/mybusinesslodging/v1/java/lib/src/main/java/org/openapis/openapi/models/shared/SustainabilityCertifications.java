@@ -18,6 +18,7 @@ public class SustainabilityCertifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breeamCertification")
     public SustainabilityCertificationsBreeamCertificationEnum breeamCertification;
+
     public SustainabilityCertifications withBreeamCertification(SustainabilityCertificationsBreeamCertificationEnum breeamCertification) {
         this.breeamCertification = breeamCertification;
         return this;
@@ -29,6 +30,7 @@ public class SustainabilityCertifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breeamCertificationException")
     public SustainabilityCertificationsBreeamCertificationExceptionEnum breeamCertificationException;
+
     public SustainabilityCertifications withBreeamCertificationException(SustainabilityCertificationsBreeamCertificationExceptionEnum breeamCertificationException) {
         this.breeamCertificationException = breeamCertificationException;
         return this;
@@ -40,6 +42,7 @@ public class SustainabilityCertifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecoCertifications")
     public EcoCertification[] ecoCertifications;
+
     public SustainabilityCertifications withEcoCertifications(EcoCertification[] ecoCertifications) {
         this.ecoCertifications = ecoCertifications;
         return this;
@@ -51,6 +54,7 @@ public class SustainabilityCertifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leedCertification")
     public SustainabilityCertificationsLeedCertificationEnum leedCertification;
+
     public SustainabilityCertifications withLeedCertification(SustainabilityCertificationsLeedCertificationEnum leedCertification) {
         this.leedCertification = leedCertification;
         return this;
@@ -62,9 +66,11 @@ public class SustainabilityCertifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leedCertificationException")
     public SustainabilityCertificationsLeedCertificationExceptionEnum leedCertificationException;
+
     public SustainabilityCertifications withLeedCertificationException(SustainabilityCertificationsLeedCertificationExceptionEnum leedCertificationException) {
         this.leedCertificationException = leedCertificationException;
         return this;
     }
     
+    public SustainabilityCertifications(){}
 }

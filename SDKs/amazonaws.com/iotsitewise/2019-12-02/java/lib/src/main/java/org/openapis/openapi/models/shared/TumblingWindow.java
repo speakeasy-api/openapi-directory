@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TumblingWindow {
     @JsonProperty("interval")
     public String interval;
+
     public TumblingWindow withInterval(String interval) {
         this.interval = interval;
         return this;
@@ -22,9 +23,13 @@ public class TumblingWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public String offset;
+
     public TumblingWindow withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public TumblingWindow(@JsonProperty("interval") String interval) {
+        this.interval = interval;
+  }
 }

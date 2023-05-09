@@ -12,9 +12,13 @@ public class PutSchemaFromJsonRequestBody {
      */
     @JsonProperty("Document")
     public String document;
+
     public PutSchemaFromJsonRequestBody withDocument(String document) {
         this.document = document;
         return this;
     }
     
+    public PutSchemaFromJsonRequestBody(@JsonProperty("Document") String document) {
+        this.document = document;
+  }
 }

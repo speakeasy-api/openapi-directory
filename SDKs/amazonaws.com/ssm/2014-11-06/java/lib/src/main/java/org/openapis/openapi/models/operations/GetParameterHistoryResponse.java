@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetParameterHistoryResponse {
     
     public String contentType;
+
     public GetParameterHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetParameterHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetParameterHistoryResult getParameterHistoryResult;
+
     public GetParameterHistoryResponse withGetParameterHistoryResult(org.openapis.openapi.models.shared.GetParameterHistoryResult getParameterHistoryResult) {
         this.getParameterHistoryResult = getParameterHistoryResult;
         return this;
@@ -29,6 +32,7 @@ public class GetParameterHistoryResponse {
      */
     
     public Object internalServerError;
+
     public GetParameterHistoryResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class GetParameterHistoryResponse {
      */
     
     public Object invalidKeyId;
+
     public GetParameterHistoryResponse withInvalidKeyId(Object invalidKeyId) {
         this.invalidKeyId = invalidKeyId;
         return this;
@@ -49,6 +54,7 @@ public class GetParameterHistoryResponse {
      */
     
     public Object invalidNextToken;
+
     public GetParameterHistoryResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -59,6 +65,7 @@ public class GetParameterHistoryResponse {
      */
     
     public Object parameterNotFound;
+
     public GetParameterHistoryResponse withParameterNotFound(Object parameterNotFound) {
         this.parameterNotFound = parameterNotFound;
         return this;
@@ -66,6 +73,7 @@ public class GetParameterHistoryResponse {
     
     
     public Integer statusCode;
+
     public GetParameterHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetParameterHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetParameterHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetParameterHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

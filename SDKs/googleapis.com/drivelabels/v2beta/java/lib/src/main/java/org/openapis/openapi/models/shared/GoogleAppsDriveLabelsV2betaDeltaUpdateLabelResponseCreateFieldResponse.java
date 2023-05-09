@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateFieldRespo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateFieldResponse withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateFieldRespo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateFieldResponse withPriority(Integer priority) {
         this.priority = priority;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateFieldResponse(){}
 }

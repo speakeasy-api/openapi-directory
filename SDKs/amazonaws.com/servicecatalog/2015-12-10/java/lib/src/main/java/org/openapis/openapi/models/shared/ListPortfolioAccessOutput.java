@@ -15,6 +15,7 @@ public class ListPortfolioAccessOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public ListPortfolioAccessOutput withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -23,9 +24,11 @@ public class ListPortfolioAccessOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListPortfolioAccessOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListPortfolioAccessOutput(){}
 }

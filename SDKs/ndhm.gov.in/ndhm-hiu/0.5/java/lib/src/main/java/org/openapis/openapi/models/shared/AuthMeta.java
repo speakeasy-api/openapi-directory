@@ -12,6 +12,7 @@ public class AuthMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiry")
     public String expiry;
+
     public AuthMeta withExpiry(String expiry) {
         this.expiry = expiry;
         return this;
@@ -20,9 +21,11 @@ public class AuthMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hint")
     public String hint;
+
     public AuthMeta withHint(String hint) {
         this.hint = hint;
         return this;
     }
     
+    public AuthMeta(){}
 }

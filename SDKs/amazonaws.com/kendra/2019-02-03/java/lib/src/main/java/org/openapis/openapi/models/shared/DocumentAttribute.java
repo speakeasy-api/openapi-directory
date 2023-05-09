@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DocumentAttribute {
     @JsonProperty("Key")
     public String key;
+
     public DocumentAttribute withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class DocumentAttribute {
     
     @JsonProperty("Value")
     public DocumentAttributeValue value;
+
     public DocumentAttribute withValue(DocumentAttributeValue value) {
         this.value = value;
         return this;
     }
     
+    public DocumentAttribute(@JsonProperty("Key") String key, @JsonProperty("Value") DocumentAttributeValue value) {
+        this.key = key;
+        this.value = value;
+  }
 }

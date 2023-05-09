@@ -14,6 +14,7 @@ public class UpdateAccountRequest {
      */
     @JsonProperty("accountCode")
     public String accountCode;
+
     public UpdateAccountRequest withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -25,6 +26,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountUUID")
     public String bankAccountUUID;
+
     public UpdateAccountRequest withBankAccountUUID(String bankAccountUUID) {
         this.bankAccountUUID = bankAccountUUID;
         return this;
@@ -36,6 +38,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateAccountRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -49,6 +52,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public UpdateAccountRequest withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -60,6 +64,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutMethodCode")
     public String payoutMethodCode;
+
     public UpdateAccountRequest withPayoutMethodCode(String payoutMethodCode) {
         this.payoutMethodCode = payoutMethodCode;
         return this;
@@ -68,6 +73,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutSchedule")
     public UpdatePayoutScheduleRequest payoutSchedule;
+
     public UpdateAccountRequest withPayoutSchedule(UpdatePayoutScheduleRequest payoutSchedule) {
         this.payoutSchedule = payoutSchedule;
         return this;
@@ -79,9 +85,13 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutSpeed")
     public UpdateAccountRequestPayoutSpeedEnum payoutSpeed;
+
     public UpdateAccountRequest withPayoutSpeed(UpdateAccountRequestPayoutSpeedEnum payoutSpeed) {
         this.payoutSpeed = payoutSpeed;
         return this;
     }
     
+    public UpdateAccountRequest(@JsonProperty("accountCode") String accountCode) {
+        this.accountCode = accountCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsCheckPermissionsForRepoLegacyRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public TeamsCheckPermissionsForRepoLegacyRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -16,6 +18,7 @@ public class TeamsCheckPermissionsForRepoLegacyRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public TeamsCheckPermissionsForRepoLegacyRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -23,9 +26,15 @@ public class TeamsCheckPermissionsForRepoLegacyRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public TeamsCheckPermissionsForRepoLegacyRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public TeamsCheckPermissionsForRepoLegacyRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("team_id") Long teamId) {
+        this.owner = owner;
+        this.repo = repo;
+        this.teamId = teamId;
+  }
 }

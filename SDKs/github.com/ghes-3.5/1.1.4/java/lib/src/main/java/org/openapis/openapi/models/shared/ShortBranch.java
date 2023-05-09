@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ShortBranch {
     @JsonProperty("commit")
     public ShortBranchCommit commit;
+
     public ShortBranch withCommit(ShortBranchCommit commit) {
         this.commit = commit;
         return this;
@@ -21,6 +22,7 @@ public class ShortBranch {
     
     @JsonProperty("name")
     public String name;
+
     public ShortBranch withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class ShortBranch {
     
     @JsonProperty("protected")
     public Boolean protected_;
+
     public ShortBranch withProtected(Boolean protected_) {
         this.protected_ = protected_;
         return this;
@@ -39,6 +42,7 @@ public class ShortBranch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protection")
     public BranchProtection protection;
+
     public ShortBranch withProtection(BranchProtection protection) {
         this.protection = protection;
         return this;
@@ -47,9 +51,15 @@ public class ShortBranch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protection_url")
     public String protectionUrl;
+
     public ShortBranch withProtectionUrl(String protectionUrl) {
         this.protectionUrl = protectionUrl;
         return this;
     }
     
+    public ShortBranch(@JsonProperty("commit") ShortBranchCommit commit, @JsonProperty("name") String name, @JsonProperty("protected") Boolean protected_) {
+        this.commit = commit;
+        this.name = name;
+        this.protected_ = protected_;
+  }
 }

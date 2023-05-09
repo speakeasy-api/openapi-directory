@@ -15,6 +15,7 @@ public class RedshiftDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptions")
     public CloudWatchLoggingOptions cloudWatchLoggingOptions;
+
     public RedshiftDestinationUpdate withCloudWatchLoggingOptions(CloudWatchLoggingOptions cloudWatchLoggingOptions) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         return this;
@@ -23,6 +24,7 @@ public class RedshiftDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterJDBCURL")
     public String clusterJDBCURL;
+
     public RedshiftDestinationUpdate withClusterJDBCURL(String clusterJDBCURL) {
         this.clusterJDBCURL = clusterJDBCURL;
         return this;
@@ -31,6 +33,7 @@ public class RedshiftDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyCommand")
     public CopyCommand copyCommand;
+
     public RedshiftDestinationUpdate withCopyCommand(CopyCommand copyCommand) {
         this.copyCommand = copyCommand;
         return this;
@@ -39,6 +42,7 @@ public class RedshiftDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public RedshiftDestinationUpdate withPassword(String password) {
         this.password = password;
         return this;
@@ -47,6 +51,7 @@ public class RedshiftDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingConfiguration")
     public ProcessingConfiguration processingConfiguration;
+
     public RedshiftDestinationUpdate withProcessingConfiguration(ProcessingConfiguration processingConfiguration) {
         this.processingConfiguration = processingConfiguration;
         return this;
@@ -55,6 +60,7 @@ public class RedshiftDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryOptions")
     public RedshiftRetryOptions retryOptions;
+
     public RedshiftDestinationUpdate withRetryOptions(RedshiftRetryOptions retryOptions) {
         this.retryOptions = retryOptions;
         return this;
@@ -63,6 +69,7 @@ public class RedshiftDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public RedshiftDestinationUpdate withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -71,6 +78,7 @@ public class RedshiftDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BackupMode")
     public RedshiftS3BackupModeEnum s3BackupMode;
+
     public RedshiftDestinationUpdate withS3BackupMode(RedshiftS3BackupModeEnum s3BackupMode) {
         this.s3BackupMode = s3BackupMode;
         return this;
@@ -79,6 +87,7 @@ public class RedshiftDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BackupUpdate")
     public S3DestinationUpdate s3BackupUpdate;
+
     public RedshiftDestinationUpdate withS3BackupUpdate(S3DestinationUpdate s3BackupUpdate) {
         this.s3BackupUpdate = s3BackupUpdate;
         return this;
@@ -87,6 +96,7 @@ public class RedshiftDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Update")
     public S3DestinationUpdate s3Update;
+
     public RedshiftDestinationUpdate withS3Update(S3DestinationUpdate s3Update) {
         this.s3Update = s3Update;
         return this;
@@ -95,9 +105,11 @@ public class RedshiftDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public RedshiftDestinationUpdate withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public RedshiftDestinationUpdate(){}
 }

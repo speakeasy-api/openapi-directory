@@ -15,6 +15,7 @@ public class Log {
      */
     @JsonProperty("clientCode")
     public String clientCode;
+
     public Log withClientCode(String clientCode) {
         this.clientCode = clientCode;
         return this;
@@ -25,6 +26,7 @@ public class Log {
      */
     @JsonProperty("clientEngine")
     public String clientEngine;
+
     public Log withClientEngine(String clientEngine) {
         this.clientEngine = clientEngine;
         return this;
@@ -35,6 +37,7 @@ public class Log {
      */
     @JsonProperty("clientEngineVersion")
     public String clientEngineVersion;
+
     public Log withClientEngineVersion(String clientEngineVersion) {
         this.clientEngineVersion = clientEngineVersion;
         return this;
@@ -45,6 +48,7 @@ public class Log {
      */
     @JsonProperty("clientName")
     public String clientName;
+
     public Log withClientName(String clientName) {
         this.clientName = clientName;
         return this;
@@ -55,6 +59,7 @@ public class Log {
      */
     @JsonProperty("clientType")
     public String clientType;
+
     public Log withClientType(String clientType) {
         this.clientType = clientType;
         return this;
@@ -65,6 +70,7 @@ public class Log {
      */
     @JsonProperty("clientVersion")
     public String clientVersion;
+
     public Log withClientVersion(String clientVersion) {
         this.clientVersion = clientVersion;
         return this;
@@ -75,6 +81,7 @@ public class Log {
      */
     @JsonProperty("countryCode")
     public String countryCode;
+
     public Log withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -85,6 +92,7 @@ public class Log {
      */
     @JsonProperty("countryName")
     public String countryName;
+
     public Log withCountryName(String countryName) {
         this.countryName = countryName;
         return this;
@@ -95,6 +103,7 @@ public class Log {
      */
     @JsonProperty("deviceBrand")
     public String deviceBrand;
+
     public Log withDeviceBrand(String deviceBrand) {
         this.deviceBrand = deviceBrand;
         return this;
@@ -105,6 +114,7 @@ public class Log {
      */
     @JsonProperty("deviceModel")
     public String deviceModel;
+
     public Log withDeviceModel(String deviceModel) {
         this.deviceModel = deviceModel;
         return this;
@@ -115,6 +125,7 @@ public class Log {
      */
     @JsonProperty("deviceName")
     public String deviceName;
+
     public Log withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -125,6 +136,7 @@ public class Log {
      */
     @JsonProperty("event")
     public String event;
+
     public Log withEvent(String event) {
         this.event = event;
         return this;
@@ -135,6 +147,7 @@ public class Log {
      */
     @JsonProperty("ip")
     public String ip;
+
     public Log withIp(String ip) {
         this.ip = ip;
         return this;
@@ -145,6 +158,7 @@ public class Log {
      */
     @JsonProperty("osCode")
     public String osCode;
+
     public Log withOsCode(String osCode) {
         this.osCode = osCode;
         return this;
@@ -155,6 +169,7 @@ public class Log {
      */
     @JsonProperty("osName")
     public String osName;
+
     public Log withOsName(String osName) {
         this.osName = osName;
         return this;
@@ -165,6 +180,7 @@ public class Log {
      */
     @JsonProperty("osVersion")
     public String osVersion;
+
     public Log withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -175,9 +191,29 @@ public class Log {
      */
     @JsonProperty("time")
     public Integer time;
+
     public Log withTime(Integer time) {
         this.time = time;
         return this;
     }
     
+    public Log(@JsonProperty("clientCode") String clientCode, @JsonProperty("clientEngine") String clientEngine, @JsonProperty("clientEngineVersion") String clientEngineVersion, @JsonProperty("clientName") String clientName, @JsonProperty("clientType") String clientType, @JsonProperty("clientVersion") String clientVersion, @JsonProperty("countryCode") String countryCode, @JsonProperty("countryName") String countryName, @JsonProperty("deviceBrand") String deviceBrand, @JsonProperty("deviceModel") String deviceModel, @JsonProperty("deviceName") String deviceName, @JsonProperty("event") String event, @JsonProperty("ip") String ip, @JsonProperty("osCode") String osCode, @JsonProperty("osName") String osName, @JsonProperty("osVersion") String osVersion, @JsonProperty("time") Integer time) {
+        this.clientCode = clientCode;
+        this.clientEngine = clientEngine;
+        this.clientEngineVersion = clientEngineVersion;
+        this.clientName = clientName;
+        this.clientType = clientType;
+        this.clientVersion = clientVersion;
+        this.countryCode = countryCode;
+        this.countryName = countryName;
+        this.deviceBrand = deviceBrand;
+        this.deviceModel = deviceModel;
+        this.deviceName = deviceName;
+        this.event = event;
+        this.ip = ip;
+        this.osCode = osCode;
+        this.osName = osName;
+        this.osVersion = osVersion;
+        this.time = time;
+  }
 }

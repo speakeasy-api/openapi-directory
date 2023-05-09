@@ -71,12 +71,10 @@ public class FlightRestrictions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TfrByDistanceUsV1RestrictionsDistanceQueryPostResponse res = new org.openapis.openapi.models.operations.TfrByDistanceUsV1RestrictionsDistanceQueryPostResponse() {{
+        org.openapis.openapi.models.operations.TfrByDistanceUsV1RestrictionsDistanceQueryPostResponse res = new org.openapis.openapi.models.operations.TfrByDistanceUsV1RestrictionsDistanceQueryPostResponse(contentType, httpRes.statusCode()) {{
             notaMsDistanceResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -132,12 +130,10 @@ public class FlightRestrictions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TfrByPolyUsV1RestrictionsPolygonQueryPostResponse res = new org.openapis.openapi.models.operations.TfrByPolyUsV1RestrictionsPolygonQueryPostResponse() {{
+        org.openapis.openapi.models.operations.TfrByPolyUsV1RestrictionsPolygonQueryPostResponse res = new org.openapis.openapi.models.operations.TfrByPolyUsV1RestrictionsPolygonQueryPostResponse(contentType, httpRes.statusCode()) {{
             notaMsPolyResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,12 +189,10 @@ public class FlightRestrictions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TfrByRouteUsV1RestrictionsRouteQueryPostResponse res = new org.openapis.openapi.models.operations.TfrByRouteUsV1RestrictionsRouteQueryPostResponse() {{
+        org.openapis.openapi.models.operations.TfrByRouteUsV1RestrictionsRouteQueryPostResponse res = new org.openapis.openapi.models.operations.TfrByRouteUsV1RestrictionsRouteQueryPostResponse(contentType, httpRes.statusCode()) {{
             notaMsRouteResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

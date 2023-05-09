@@ -59,11 +59,9 @@ public class ServicePlan {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListServicePlansResponse res = new org.openapis.openapi.models.operations.ListServicePlansResponse() {{
+        org.openapis.openapi.models.operations.ListServicePlansResponse res = new org.openapis.openapi.models.operations.ListServicePlansResponse(contentType, httpRes.statusCode()) {{
             servicePlansCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class ServicePlan {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShowServicePlanResponse res = new org.openapis.openapi.models.operations.ShowServicePlanResponse() {{
+        org.openapis.openapi.models.operations.ShowServicePlanResponse res = new org.openapis.openapi.models.operations.ShowServicePlanResponse(contentType, httpRes.statusCode()) {{
             servicePlan = null;
             errorNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

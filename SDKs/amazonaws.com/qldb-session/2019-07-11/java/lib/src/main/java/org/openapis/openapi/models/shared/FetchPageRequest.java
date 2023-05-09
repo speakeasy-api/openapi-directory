@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FetchPageRequest {
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public FetchPageRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -19,9 +20,14 @@ public class FetchPageRequest {
     
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public FetchPageRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public FetchPageRequest(@JsonProperty("NextPageToken") String nextPageToken, @JsonProperty("TransactionId") String transactionId) {
+        this.nextPageToken = nextPageToken;
+        this.transactionId = transactionId;
+  }
 }

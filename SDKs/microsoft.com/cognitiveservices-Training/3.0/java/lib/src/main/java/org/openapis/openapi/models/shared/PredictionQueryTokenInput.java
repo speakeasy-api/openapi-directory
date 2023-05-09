@@ -22,6 +22,7 @@ public class PredictionQueryTokenInput {
     @JsonProperty("application")
     @SpeakeasyMetadata("form:name=application")
     public String application;
+
     public PredictionQueryTokenInput withApplication(String application) {
         this.application = application;
         return this;
@@ -31,6 +32,7 @@ public class PredictionQueryTokenInput {
     @JsonProperty("continuation")
     @SpeakeasyMetadata("form:name=continuation")
     public String continuation;
+
     public PredictionQueryTokenInput withContinuation(String continuation) {
         this.continuation = continuation;
         return this;
@@ -42,6 +44,7 @@ public class PredictionQueryTokenInput {
     @JsonProperty("endTime")
     @SpeakeasyMetadata("form:name=endTime")
     public OffsetDateTime endTime;
+
     public PredictionQueryTokenInput withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -51,6 +54,7 @@ public class PredictionQueryTokenInput {
     @JsonProperty("iterationId")
     @SpeakeasyMetadata("form:name=iterationId")
     public String iterationId;
+
     public PredictionQueryTokenInput withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -60,6 +64,7 @@ public class PredictionQueryTokenInput {
     @JsonProperty("maxCount")
     @SpeakeasyMetadata("form:name=maxCount")
     public Integer maxCount;
+
     public PredictionQueryTokenInput withMaxCount(Integer maxCount) {
         this.maxCount = maxCount;
         return this;
@@ -69,6 +74,7 @@ public class PredictionQueryTokenInput {
     @JsonProperty("orderBy")
     @SpeakeasyMetadata("form:name=orderBy")
     public PredictionQueryTokenOrderByEnum orderBy;
+
     public PredictionQueryTokenInput withOrderBy(PredictionQueryTokenOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -78,6 +84,7 @@ public class PredictionQueryTokenInput {
     @JsonProperty("session")
     @SpeakeasyMetadata("form:name=session")
     public String session;
+
     public PredictionQueryTokenInput withSession(String session) {
         this.session = session;
         return this;
@@ -89,9 +96,11 @@ public class PredictionQueryTokenInput {
     @JsonProperty("startTime")
     @SpeakeasyMetadata("form:name=startTime")
     public OffsetDateTime startTime;
+
     public PredictionQueryTokenInput withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public PredictionQueryTokenInput(){}
 }

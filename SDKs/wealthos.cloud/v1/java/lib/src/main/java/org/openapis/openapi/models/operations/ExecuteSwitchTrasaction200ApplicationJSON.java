@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExecuteSwitchTrasaction200ApplicationJSON {
     @JsonProperty("buy_instructions")
     public ExecuteSwitchTrasaction200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequest[] buyInstructions;
+
     public ExecuteSwitchTrasaction200ApplicationJSON withBuyInstructions(ExecuteSwitchTrasaction200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequest[] buyInstructions) {
         this.buyInstructions = buyInstructions;
         return this;
@@ -22,6 +23,7 @@ public class ExecuteSwitchTrasaction200ApplicationJSON {
      */
     @JsonProperty("origin")
     public ExecuteSwitchTrasaction200ApplicationJSONOriginEnum origin;
+
     public ExecuteSwitchTrasaction200ApplicationJSON withOrigin(ExecuteSwitchTrasaction200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -32,6 +34,7 @@ public class ExecuteSwitchTrasaction200ApplicationJSON {
      */
     @JsonProperty("pot_id")
     public String potId;
+
     public ExecuteSwitchTrasaction200ApplicationJSON withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -39,6 +42,7 @@ public class ExecuteSwitchTrasaction200ApplicationJSON {
     
     @JsonProperty("sell_instructions")
     public ExecuteSwitchTrasaction200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequest[] sellInstructions;
+
     public ExecuteSwitchTrasaction200ApplicationJSON withSellInstructions(ExecuteSwitchTrasaction200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequest[] sellInstructions) {
         this.sellInstructions = sellInstructions;
         return this;
@@ -49,6 +53,7 @@ public class ExecuteSwitchTrasaction200ApplicationJSON {
      */
     @JsonProperty("status")
     public ExecuteSwitchTrasaction200ApplicationJSONStatusEnum status;
+
     public ExecuteSwitchTrasaction200ApplicationJSON withStatus(ExecuteSwitchTrasaction200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
@@ -59,9 +64,18 @@ public class ExecuteSwitchTrasaction200ApplicationJSON {
      */
     @JsonProperty("switch_transaction_id")
     public String switchTransactionId;
+
     public ExecuteSwitchTrasaction200ApplicationJSON withSwitchTransactionId(String switchTransactionId) {
         this.switchTransactionId = switchTransactionId;
         return this;
     }
     
+    public ExecuteSwitchTrasaction200ApplicationJSON(@JsonProperty("buy_instructions") ExecuteSwitchTrasaction200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequest[] buyInstructions, @JsonProperty("origin") ExecuteSwitchTrasaction200ApplicationJSONOriginEnum origin, @JsonProperty("pot_id") String potId, @JsonProperty("sell_instructions") ExecuteSwitchTrasaction200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequest[] sellInstructions, @JsonProperty("status") ExecuteSwitchTrasaction200ApplicationJSONStatusEnum status, @JsonProperty("switch_transaction_id") String switchTransactionId) {
+        this.buyInstructions = buyInstructions;
+        this.origin = origin;
+        this.potId = potId;
+        this.sellInstructions = sellInstructions;
+        this.status = status;
+        this.switchTransactionId = switchTransactionId;
+  }
 }

@@ -18,6 +18,7 @@ public class AudioAssetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_size")
     public Long fileSize;
+
     public AudioAssetDetails withFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
@@ -29,9 +30,11 @@ public class AudioAssetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public AudioAssetDetails withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AudioAssetDetails(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckRequest {
@@ -12,6 +13,7 @@ public class CheckRequest {
      */
     @SpeakeasyMetadata("form:name=api_key")
     public String apiKey;
+
     public CheckRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class CheckRequest {
      */
     @SpeakeasyMetadata("form:name=api_secret")
     public String apiSecret;
+
     public CheckRequest withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -32,6 +35,7 @@ public class CheckRequest {
      */
     @SpeakeasyMetadata("form:name=code")
     public String code;
+
     public CheckRequest withCode(String code) {
         this.code = code;
         return this;
@@ -42,6 +46,7 @@ public class CheckRequest {
      */
     @SpeakeasyMetadata("form:name=ip_address")
     public String ipAddress;
+
     public CheckRequest withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -52,9 +57,16 @@ public class CheckRequest {
      */
     @SpeakeasyMetadata("form:name=request_id")
     public String requestId;
+
     public CheckRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public CheckRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("api_secret") String apiSecret, @JsonProperty("code") String code, @JsonProperty("request_id") String requestId) {
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+        this.code = code;
+        this.requestId = requestId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListResponse {
     
     public String contentType;
+
     public RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListRespo
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupMembershipsResponse googleCloudRecaptchaenterpriseV1ListRelatedAccountGroupMembershipsResponse;
+
     public RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListResponse withGoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupMembershipsResponse(org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupMembershipsResponse googleCloudRecaptchaenterpriseV1ListRelatedAccountGroupMembershipsResponse) {
         this.googleCloudRecaptchaenterpriseV1ListRelatedAccountGroupMembershipsResponse = googleCloudRecaptchaenterpriseV1ListRelatedAccountGroupMembershipsResponse;
         return this;
@@ -26,6 +29,7 @@ public class RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListRespo
     
     
     public Integer statusCode;
+
     public RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListRespo
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

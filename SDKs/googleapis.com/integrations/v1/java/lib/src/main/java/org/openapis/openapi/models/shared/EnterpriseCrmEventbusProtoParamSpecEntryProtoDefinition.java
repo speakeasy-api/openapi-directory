@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryProtoDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullName")
     public String fullName;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryProtoDefinition withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -26,9 +27,11 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryProtoDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryProtoDefinition withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoParamSpecEntryProtoDefinition(){}
 }

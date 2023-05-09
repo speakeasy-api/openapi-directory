@@ -15,6 +15,7 @@ public class UnprocessedStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public UnprocessedStatistics withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class UnprocessedStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public UnprocessedStatistics withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class UnprocessedStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleName")
     public String ruleName;
+
     public UnprocessedStatistics withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
     }
     
+    public UnprocessedStatistics(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTrustStoreResponse {
@@ -12,6 +13,7 @@ public class GetTrustStoreResponse {
      */
     
     public Object accessDeniedException;
+
     public GetTrustStoreResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetTrustStoreResponse {
     
     
     public String contentType;
+
     public GetTrustStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTrustStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTrustStoreResponse getTrustStoreResponse;
+
     public GetTrustStoreResponse withGetTrustStoreResponse(org.openapis.openapi.models.shared.GetTrustStoreResponse getTrustStoreResponse) {
         this.getTrustStoreResponse = getTrustStoreResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetTrustStoreResponse {
      */
     
     public Object internalServerException;
+
     public GetTrustStoreResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetTrustStoreResponse {
     
     
     public Integer statusCode;
+
     public GetTrustStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetTrustStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTrustStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetTrustStoreResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetTrustStoreResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetTrustStoreResponse {
      */
     
     public Object throttlingException;
+
     public GetTrustStoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetTrustStoreResponse {
      */
     
     public Object validationException;
+
     public GetTrustStoreResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetTrustStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

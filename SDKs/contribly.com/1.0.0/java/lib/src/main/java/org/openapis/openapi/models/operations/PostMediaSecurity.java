@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMediaSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth;
+
     public PostMediaSecurity withOauth(String oauth) {
         this.oauth = oauth;
         return this;
     }
     
+    public PostMediaSecurity(@JsonProperty("oauth") String oauth) {
+        this.oauth = oauth;
+  }
 }

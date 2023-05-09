@@ -18,6 +18,7 @@ public class TranslateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customizedAttribution")
     public String customizedAttribution;
+
     public TranslateDocumentRequest withCustomizedAttribution(String customizedAttribution) {
         this.customizedAttribution = customizedAttribution;
         return this;
@@ -29,6 +30,7 @@ public class TranslateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentInputConfig")
     public DocumentInputConfig documentInputConfig;
+
     public TranslateDocumentRequest withDocumentInputConfig(DocumentInputConfig documentInputConfig) {
         this.documentInputConfig = documentInputConfig;
         return this;
@@ -40,8 +42,21 @@ public class TranslateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentOutputConfig")
     public DocumentOutputConfig documentOutputConfig;
+
     public TranslateDocumentRequest withDocumentOutputConfig(DocumentOutputConfig documentOutputConfig) {
         this.documentOutputConfig = documentOutputConfig;
+        return this;
+    }
+    
+    /**
+     * Optional. If true, enable auto rotation correction in DVS.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("enableRotationCorrection")
+    public Boolean enableRotationCorrection;
+
+    public TranslateDocumentRequest withEnableRotationCorrection(Boolean enableRotationCorrection) {
+        this.enableRotationCorrection = enableRotationCorrection;
         return this;
     }
     
@@ -51,6 +66,7 @@ public class TranslateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableShadowRemovalNativePdf")
     public Boolean enableShadowRemovalNativePdf;
+
     public TranslateDocumentRequest withEnableShadowRemovalNativePdf(Boolean enableShadowRemovalNativePdf) {
         this.enableShadowRemovalNativePdf = enableShadowRemovalNativePdf;
         return this;
@@ -62,6 +78,7 @@ public class TranslateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glossaryConfig")
     public TranslateTextGlossaryConfig glossaryConfig;
+
     public TranslateDocumentRequest withGlossaryConfig(TranslateTextGlossaryConfig glossaryConfig) {
         this.glossaryConfig = glossaryConfig;
         return this;
@@ -73,6 +90,7 @@ public class TranslateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTranslateNativePdfOnly")
     public Boolean isTranslateNativePdfOnly;
+
     public TranslateDocumentRequest withIsTranslateNativePdfOnly(Boolean isTranslateNativePdfOnly) {
         this.isTranslateNativePdfOnly = isTranslateNativePdfOnly;
         return this;
@@ -84,6 +102,7 @@ public class TranslateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public TranslateDocumentRequest withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -95,6 +114,7 @@ public class TranslateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public TranslateDocumentRequest withModel(String model) {
         this.model = model;
         return this;
@@ -106,6 +126,7 @@ public class TranslateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLanguageCode")
     public String sourceLanguageCode;
+
     public TranslateDocumentRequest withSourceLanguageCode(String sourceLanguageCode) {
         this.sourceLanguageCode = sourceLanguageCode;
         return this;
@@ -117,9 +138,11 @@ public class TranslateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLanguageCode")
     public String targetLanguageCode;
+
     public TranslateDocumentRequest withTargetLanguageCode(String targetLanguageCode) {
         this.targetLanguageCode = targetLanguageCode;
         return this;
     }
     
+    public TranslateDocumentRequest(){}
 }

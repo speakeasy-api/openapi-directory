@@ -15,6 +15,7 @@ public class StartDocumentClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentClassifierArn")
     public String documentClassifierArn;
+
     public StartDocumentClassificationJobResponse withDocumentClassifierArn(String documentClassifierArn) {
         this.documentClassifierArn = documentClassifierArn;
         return this;
@@ -23,6 +24,7 @@ public class StartDocumentClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobArn")
     public String jobArn;
+
     public StartDocumentClassificationJobResponse withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -31,6 +33,7 @@ public class StartDocumentClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StartDocumentClassificationJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -39,9 +42,11 @@ public class StartDocumentClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public StartDocumentClassificationJobResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
     }
     
+    public StartDocumentClassificationJobResponse(){}
 }

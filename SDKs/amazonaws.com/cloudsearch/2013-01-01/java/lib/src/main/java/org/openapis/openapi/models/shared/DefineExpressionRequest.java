@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DefineExpressionRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;DefineExpression&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to update and the expression you want to configure.
@@ -15,6 +15,7 @@ public class DefineExpressionRequest {
      */
     
     public String domainName;
+
     public DefineExpressionRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -25,9 +26,14 @@ public class DefineExpressionRequest {
      */
     
     public Expression expression;
+
     public DefineExpressionRequest withExpression(Expression expression) {
         this.expression = expression;
         return this;
     }
     
+    public DefineExpressionRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("Expression") Expression expression) {
+        this.domainName = domainName;
+        this.expression = expression;
+  }
 }

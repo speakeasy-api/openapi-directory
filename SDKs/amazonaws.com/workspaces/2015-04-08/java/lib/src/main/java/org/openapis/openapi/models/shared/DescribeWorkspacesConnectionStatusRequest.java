@@ -12,6 +12,7 @@ public class DescribeWorkspacesConnectionStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeWorkspacesConnectionStatusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -20,9 +21,11 @@ public class DescribeWorkspacesConnectionStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkspaceIds")
     public String[] workspaceIds;
+
     public DescribeWorkspacesConnectionStatusRequest withWorkspaceIds(String[] workspaceIds) {
         this.workspaceIds = workspaceIds;
         return this;
     }
     
+    public DescribeWorkspacesConnectionStatusRequest(){}
 }

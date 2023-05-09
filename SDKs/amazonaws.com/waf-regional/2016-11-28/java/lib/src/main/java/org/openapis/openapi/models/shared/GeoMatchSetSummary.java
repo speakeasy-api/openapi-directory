@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GeoMatchSetSummary {
     @JsonProperty("GeoMatchSetId")
     public String geoMatchSetId;
+
     public GeoMatchSetSummary withGeoMatchSetId(String geoMatchSetId) {
         this.geoMatchSetId = geoMatchSetId;
         return this;
@@ -19,9 +20,14 @@ public class GeoMatchSetSummary {
     
     @JsonProperty("Name")
     public String name;
+
     public GeoMatchSetSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GeoMatchSetSummary(@JsonProperty("GeoMatchSetId") String geoMatchSetId, @JsonProperty("Name") String name) {
+        this.geoMatchSetId = geoMatchSetId;
+        this.name = name;
+  }
 }

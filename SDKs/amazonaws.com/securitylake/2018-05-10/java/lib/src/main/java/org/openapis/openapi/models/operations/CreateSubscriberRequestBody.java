@@ -15,6 +15,7 @@ public class CreateSubscriberRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessTypes")
     public org.openapis.openapi.models.shared.AccessTypeEnum[] accessTypes;
+
     public CreateSubscriberRequestBody withAccessTypes(org.openapis.openapi.models.shared.AccessTypeEnum[] accessTypes) {
         this.accessTypes = accessTypes;
         return this;
@@ -25,6 +26,7 @@ public class CreateSubscriberRequestBody {
      */
     @JsonProperty("accountId")
     public String accountId;
+
     public CreateSubscriberRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -35,6 +37,7 @@ public class CreateSubscriberRequestBody {
      */
     @JsonProperty("externalId")
     public String externalId;
+
     public CreateSubscriberRequestBody withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -45,6 +48,7 @@ public class CreateSubscriberRequestBody {
      */
     @JsonProperty("sourceTypes")
     public org.openapis.openapi.models.shared.SourceType[] sourceTypes;
+
     public CreateSubscriberRequestBody withSourceTypes(org.openapis.openapi.models.shared.SourceType[] sourceTypes) {
         this.sourceTypes = sourceTypes;
         return this;
@@ -56,6 +60,7 @@ public class CreateSubscriberRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriberDescription")
     public String subscriberDescription;
+
     public CreateSubscriberRequestBody withSubscriberDescription(String subscriberDescription) {
         this.subscriberDescription = subscriberDescription;
         return this;
@@ -66,9 +71,16 @@ public class CreateSubscriberRequestBody {
      */
     @JsonProperty("subscriberName")
     public String subscriberName;
+
     public CreateSubscriberRequestBody withSubscriberName(String subscriberName) {
         this.subscriberName = subscriberName;
         return this;
     }
     
+    public CreateSubscriberRequestBody(@JsonProperty("accountId") String accountId, @JsonProperty("externalId") String externalId, @JsonProperty("sourceTypes") org.openapis.openapi.models.shared.SourceType[] sourceTypes, @JsonProperty("subscriberName") String subscriberName) {
+        this.accountId = accountId;
+        this.externalId = externalId;
+        this.sourceTypes = sourceTypes;
+        this.subscriberName = subscriberName;
+  }
 }

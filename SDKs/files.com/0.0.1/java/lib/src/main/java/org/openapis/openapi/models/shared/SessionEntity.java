@@ -18,6 +18,7 @@ public class SessionEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SessionEntity withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class SessionEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public SessionEntity withLanguage(String language) {
         this.language = language;
         return this;
@@ -40,6 +42,7 @@ public class SessionEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("read_only")
     public Boolean readOnly;
+
     public SessionEntity withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -51,9 +54,11 @@ public class SessionEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sftp_insecure_ciphers")
     public Boolean sftpInsecureCiphers;
+
     public SessionEntity withSftpInsecureCiphers(Boolean sftpInsecureCiphers) {
         this.sftpInsecureCiphers = sftpInsecureCiphers;
         return this;
     }
     
+    public SessionEntity(){}
 }

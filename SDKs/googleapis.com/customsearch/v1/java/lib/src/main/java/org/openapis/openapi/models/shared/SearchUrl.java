@@ -18,6 +18,7 @@ public class SearchUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public SearchUrl withTemplate(String template) {
         this.template = template;
         return this;
@@ -29,9 +30,11 @@ public class SearchUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SearchUrl withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SearchUrl(){}
 }

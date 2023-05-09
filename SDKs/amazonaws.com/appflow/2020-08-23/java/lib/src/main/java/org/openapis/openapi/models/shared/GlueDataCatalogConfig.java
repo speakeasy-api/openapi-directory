@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GlueDataCatalogConfig {
     @JsonProperty("databaseName")
     public String databaseName;
+
     public GlueDataCatalogConfig withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -19,6 +20,7 @@ public class GlueDataCatalogConfig {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public GlueDataCatalogConfig withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -26,9 +28,15 @@ public class GlueDataCatalogConfig {
     
     @JsonProperty("tablePrefix")
     public String tablePrefix;
+
     public GlueDataCatalogConfig withTablePrefix(String tablePrefix) {
         this.tablePrefix = tablePrefix;
         return this;
     }
     
+    public GlueDataCatalogConfig(@JsonProperty("databaseName") String databaseName, @JsonProperty("roleArn") String roleArn, @JsonProperty("tablePrefix") String tablePrefix) {
+        this.databaseName = databaseName;
+        this.roleArn = roleArn;
+        this.tablePrefix = tablePrefix;
+  }
 }

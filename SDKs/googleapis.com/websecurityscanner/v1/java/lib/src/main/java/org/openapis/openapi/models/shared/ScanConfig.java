@@ -18,6 +18,7 @@ public class ScanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authentication")
     public Authentication authentication;
+
     public ScanConfig withAuthentication(Authentication authentication) {
         this.authentication = authentication;
         return this;
@@ -29,6 +30,7 @@ public class ScanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blacklistPatterns")
     public String[] blacklistPatterns;
+
     public ScanConfig withBlacklistPatterns(String[] blacklistPatterns) {
         this.blacklistPatterns = blacklistPatterns;
         return this;
@@ -40,6 +42,7 @@ public class ScanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ScanConfig withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class ScanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportToSecurityCommandCenter")
     public ScanConfigExportToSecurityCommandCenterEnum exportToSecurityCommandCenter;
+
     public ScanConfig withExportToSecurityCommandCenter(ScanConfigExportToSecurityCommandCenterEnum exportToSecurityCommandCenter) {
         this.exportToSecurityCommandCenter = exportToSecurityCommandCenter;
         return this;
@@ -62,6 +66,7 @@ public class ScanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreHttpStatusErrors")
     public Boolean ignoreHttpStatusErrors;
+
     public ScanConfig withIgnoreHttpStatusErrors(Boolean ignoreHttpStatusErrors) {
         this.ignoreHttpStatusErrors = ignoreHttpStatusErrors;
         return this;
@@ -73,6 +78,7 @@ public class ScanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedScan")
     public Boolean managedScan;
+
     public ScanConfig withManagedScan(Boolean managedScan) {
         this.managedScan = managedScan;
         return this;
@@ -84,6 +90,7 @@ public class ScanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxQps")
     public Integer maxQps;
+
     public ScanConfig withMaxQps(Integer maxQps) {
         this.maxQps = maxQps;
         return this;
@@ -95,6 +102,7 @@ public class ScanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ScanConfig withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class ScanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("riskLevel")
     public ScanConfigRiskLevelEnum riskLevel;
+
     public ScanConfig withRiskLevel(ScanConfigRiskLevelEnum riskLevel) {
         this.riskLevel = riskLevel;
         return this;
@@ -117,6 +126,7 @@ public class ScanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public Schedule schedule;
+
     public ScanConfig withSchedule(Schedule schedule) {
         this.schedule = schedule;
         return this;
@@ -128,6 +138,7 @@ public class ScanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startingUrls")
     public String[] startingUrls;
+
     public ScanConfig withStartingUrls(String[] startingUrls) {
         this.startingUrls = startingUrls;
         return this;
@@ -139,6 +150,7 @@ public class ScanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staticIpScan")
     public Boolean staticIpScan;
+
     public ScanConfig withStaticIpScan(Boolean staticIpScan) {
         this.staticIpScan = staticIpScan;
         return this;
@@ -150,9 +162,11 @@ public class ScanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAgent")
     public ScanConfigUserAgentEnum userAgent;
+
     public ScanConfig withUserAgent(ScanConfigUserAgentEnum userAgent) {
         this.userAgent = userAgent;
         return this;
     }
     
+    public ScanConfig(){}
 }

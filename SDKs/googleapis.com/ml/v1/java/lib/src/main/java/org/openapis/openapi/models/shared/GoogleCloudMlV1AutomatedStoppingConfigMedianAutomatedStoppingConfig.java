@@ -18,9 +18,11 @@ public class GoogleCloudMlV1AutomatedStoppingConfigMedianAutomatedStoppingConfig
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useElapsedTime")
     public Boolean useElapsedTime;
+
     public GoogleCloudMlV1AutomatedStoppingConfigMedianAutomatedStoppingConfig withUseElapsedTime(Boolean useElapsedTime) {
         this.useElapsedTime = useElapsedTime;
         return this;
     }
     
+    public GoogleCloudMlV1AutomatedStoppingConfigMedianAutomatedStoppingConfig(){}
 }

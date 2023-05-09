@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportResourcesToDraftAppVersionResponse {
     @JsonProperty("appArn")
     public String appArn;
+
     public ImportResourcesToDraftAppVersionResponse withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -21,6 +22,7 @@ public class ImportResourcesToDraftAppVersionResponse {
     
     @JsonProperty("appVersion")
     public String appVersion;
+
     public ImportResourcesToDraftAppVersionResponse withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -29,6 +31,7 @@ public class ImportResourcesToDraftAppVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksSources")
     public EksSource[] eksSources;
+
     public ImportResourcesToDraftAppVersionResponse withEksSources(EksSource[] eksSources) {
         this.eksSources = eksSources;
         return this;
@@ -37,6 +40,7 @@ public class ImportResourcesToDraftAppVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceArns")
     public String[] sourceArns;
+
     public ImportResourcesToDraftAppVersionResponse withSourceArns(String[] sourceArns) {
         this.sourceArns = sourceArns;
         return this;
@@ -44,6 +48,7 @@ public class ImportResourcesToDraftAppVersionResponse {
     
     @JsonProperty("status")
     public ResourceImportStatusTypeEnum status;
+
     public ImportResourcesToDraftAppVersionResponse withStatus(ResourceImportStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -52,9 +57,15 @@ public class ImportResourcesToDraftAppVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terraformSources")
     public TerraformSource[] terraformSources;
+
     public ImportResourcesToDraftAppVersionResponse withTerraformSources(TerraformSource[] terraformSources) {
         this.terraformSources = terraformSources;
         return this;
     }
     
+    public ImportResourcesToDraftAppVersionResponse(@JsonProperty("appArn") String appArn, @JsonProperty("appVersion") String appVersion, @JsonProperty("status") ResourceImportStatusTypeEnum status) {
+        this.appArn = appArn;
+        this.appVersion = appVersion;
+        this.status = status;
+  }
 }

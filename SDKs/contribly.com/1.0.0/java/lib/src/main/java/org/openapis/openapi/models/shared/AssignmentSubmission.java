@@ -20,6 +20,7 @@ public class AssignmentSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowsAnonymousContributions")
     public Boolean allowsAnonymousContributions;
+
     public AssignmentSubmission withAllowsAnonymousContributions(Boolean allowsAnonymousContributions) {
         this.allowsAnonymousContributions = allowsAnonymousContributions;
         return this;
@@ -28,6 +29,7 @@ public class AssignmentSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cover")
     public MediaUsage cover;
+
     public AssignmentSubmission withCover(MediaUsage cover) {
         this.cover = cover;
         return this;
@@ -36,6 +38,7 @@ public class AssignmentSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AssignmentSubmission withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class AssignmentSubmission {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("embargo")
     public OffsetDateTime embargo;
+
     public AssignmentSubmission withEmbargo(OffsetDateTime embargo) {
         this.embargo = embargo;
         return this;
@@ -56,6 +60,7 @@ public class AssignmentSubmission {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ends")
     public OffsetDateTime ends;
+
     public AssignmentSubmission withEnds(OffsetDateTime ends) {
         this.ends = ends;
         return this;
@@ -64,6 +69,7 @@ public class AssignmentSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featured")
     public Boolean featured;
+
     public AssignmentSubmission withFeatured(Boolean featured) {
         this.featured = featured;
         return this;
@@ -72,6 +78,7 @@ public class AssignmentSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssignmentSubmission withId(String id) {
         this.id = id;
         return this;
@@ -80,6 +87,7 @@ public class AssignmentSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaRequired")
     public Boolean mediaRequired;
+
     public AssignmentSubmission withMediaRequired(Boolean mediaRequired) {
         this.mediaRequired = mediaRequired;
         return this;
@@ -91,6 +99,7 @@ public class AssignmentSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moderator")
     public String moderator;
+
     public AssignmentSubmission withModerator(String moderator) {
         this.moderator = moderator;
         return this;
@@ -98,6 +107,7 @@ public class AssignmentSubmission {
     
     @JsonProperty("name")
     public String name;
+
     public AssignmentSubmission withName(String name) {
         this.name = name;
         return this;
@@ -109,6 +119,7 @@ public class AssignmentSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiptMessage")
     public String receiptMessage;
+
     public AssignmentSubmission withReceiptMessage(String receiptMessage) {
         this.receiptMessage = receiptMessage;
         return this;
@@ -119,6 +130,7 @@ public class AssignmentSubmission {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("starts")
     public OffsetDateTime starts;
+
     public AssignmentSubmission withStarts(OffsetDateTime starts) {
         this.starts = starts;
         return this;
@@ -127,6 +139,7 @@ public class AssignmentSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public AssignmentSubmission withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -135,9 +148,13 @@ public class AssignmentSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlWords")
     public String urlWords;
+
     public AssignmentSubmission withUrlWords(String urlWords) {
         this.urlWords = urlWords;
         return this;
     }
     
+    public AssignmentSubmission(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

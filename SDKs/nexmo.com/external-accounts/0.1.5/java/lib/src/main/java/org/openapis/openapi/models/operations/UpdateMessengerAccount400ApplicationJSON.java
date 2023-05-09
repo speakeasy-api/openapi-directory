@@ -15,6 +15,7 @@ public class UpdateMessengerAccount400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public UpdateMessengerAccount400ApplicationJSON withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -23,6 +24,7 @@ public class UpdateMessengerAccount400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public UpdateMessengerAccount400ApplicationJSON withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -31,6 +33,7 @@ public class UpdateMessengerAccount400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalid_params")
     public UpdateMessengerAccount400ApplicationJSONInvalidParams[] invalidParams;
+
     public UpdateMessengerAccount400ApplicationJSON withInvalidParams(UpdateMessengerAccount400ApplicationJSONInvalidParams[] invalidParams) {
         this.invalidParams = invalidParams;
         return this;
@@ -39,6 +42,7 @@ public class UpdateMessengerAccount400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public UpdateMessengerAccount400ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
@@ -47,9 +51,11 @@ public class UpdateMessengerAccount400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public UpdateMessengerAccount400ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UpdateMessengerAccount400ApplicationJSON(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostConnectorsRequestBody {
@@ -12,6 +13,7 @@ public class PostConnectorsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=comment")
     public String comment;
+
     public PostConnectorsRequestBody withComment(String comment) {
         this.comment = comment;
         return this;
@@ -22,6 +24,7 @@ public class PostConnectorsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=email")
     public String email;
+
     public PostConnectorsRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -32,6 +35,7 @@ public class PostConnectorsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=login")
     public String login;
+
     public PostConnectorsRequestBody withLogin(String login) {
         this.login = login;
         return this;
@@ -42,6 +46,7 @@ public class PostConnectorsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PostConnectorsRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class PostConnectorsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=password")
     public String password;
+
     public PostConnectorsRequestBody withPassword(String password) {
         this.password = password;
         return this;
@@ -62,6 +68,7 @@ public class PostConnectorsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=sendmail")
     public Boolean sendmail;
+
     public PostConnectorsRequestBody withSendmail(Boolean sendmail) {
         this.sendmail = sendmail;
         return this;
@@ -72,6 +79,7 @@ public class PostConnectorsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=types")
     public String types;
+
     public PostConnectorsRequestBody withTypes(String types) {
         this.types = types;
         return this;
@@ -82,9 +90,15 @@ public class PostConnectorsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=url")
     public String url;
+
     public PostConnectorsRequestBody withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PostConnectorsRequestBody(@JsonProperty("login") String login, @JsonProperty("name") String name, @JsonProperty("password") String password) {
+        this.login = login;
+        this.name = name;
+        this.password = password;
+  }
 }

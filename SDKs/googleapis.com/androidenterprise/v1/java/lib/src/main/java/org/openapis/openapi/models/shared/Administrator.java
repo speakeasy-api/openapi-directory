@@ -18,9 +18,11 @@ public class Administrator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Administrator withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public Administrator(){}
 }

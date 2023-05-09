@@ -15,6 +15,7 @@ public class BatchGetGraphMemberDatasourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemberDatasources")
     public MembershipDatasources[] memberDatasources;
+
     public BatchGetGraphMemberDatasourcesResponse withMemberDatasources(MembershipDatasources[] memberDatasources) {
         this.memberDatasources = memberDatasources;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetGraphMemberDatasourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedAccounts")
     public UnprocessedAccount[] unprocessedAccounts;
+
     public BatchGetGraphMemberDatasourcesResponse withUnprocessedAccounts(UnprocessedAccount[] unprocessedAccounts) {
         this.unprocessedAccounts = unprocessedAccounts;
         return this;
     }
     
+    public BatchGetGraphMemberDatasourcesResponse(){}
 }

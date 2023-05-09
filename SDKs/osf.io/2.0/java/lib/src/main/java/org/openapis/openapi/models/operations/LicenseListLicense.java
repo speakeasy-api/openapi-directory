@@ -12,6 +12,7 @@ public class LicenseListLicense {
      */
     
     public LicenseListLicenseAttributes attributes;
+
     public LicenseListLicense withAttributes(LicenseListLicenseAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class LicenseListLicense {
      */
     
     public String id;
+
     public LicenseListLicense withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class LicenseListLicense {
      */
     
     public LicenseListLicenseLinks links;
+
     public LicenseListLicense withLinks(LicenseListLicenseLinks links) {
         this.links = links;
         return this;
@@ -42,9 +45,11 @@ public class LicenseListLicense {
      */
     
     public String type;
+
     public LicenseListLicense withType(String type) {
         this.type = type;
         return this;
     }
     
+    public LicenseListLicense(){}
 }

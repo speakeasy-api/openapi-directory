@@ -15,6 +15,7 @@ public class OrderHistoryFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public OrderHistoryFields withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -26,6 +27,7 @@ public class OrderHistoryFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public OrderHistoryFields withId(Integer id) {
         this.id = id;
         return this;
@@ -37,9 +39,11 @@ public class OrderHistoryFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public OrderHistoryFields withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public OrderHistoryFields(){}
 }

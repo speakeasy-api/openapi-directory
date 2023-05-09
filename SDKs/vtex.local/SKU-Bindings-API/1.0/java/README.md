@@ -16,26 +16,21 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.ActivateSKUBindingRequest;
 import org.openapis.openapi.models.operations.ActivateSKUBindingResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     appKey = "YOUR_API_KEY_HERE";
                     appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            ActivateSKUBindingRequest req = new ActivateSKUBindingRequest() {{
-                accept = "corrupti";
-                contentType = "provident";
-                sellerId = "vtxkfj7352";
-                skuSellerId = "71";
-            }}            
+            ActivateSKUBindingRequest req = new ActivateSKUBindingRequest("distinctio", "quibusdam", "vtxkfj7352", "71");            
 
             ActivateSKUBindingResponse res = sdk.skuBindings.activateSKUBinding(req);
 
@@ -45,6 +40,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -52,20 +49,20 @@ public class Application {
 ## Available Resources and Operations
 
 
-### skuBindings
+### [skuBindings](docs/skubindings/README.md)
 
-* `activateSKUBinding` - Activate SKU Binding
-* `bindtoanothersku` - Bind a seller's SKU to another SKU
-* `changeNotification` - Change Notification with SKU ID
-* `deactivateSKUBinding` - Deactivate SKU Binding
-* `deleteSKUsellerassociation` - Remove a seller's SKU Binding
-* `getSKUseller` - Get details of a seller's SKU
-* `getallbySellerId` - Get all SKU Bindings by Seller ID
-* `getbySkuId` - Get SKU Bindings by SKU ID
-* `getpagedadmin` - Get SKU Bindings information
-* `getpagedbySellerId` - Get paged SKU Bindings by Seller ID
-* `insertSKUBinding` - Insert SKU Binding
-* `postSkuBindingPvtSkusellerChangenotificationSellerIdSellerSkuId` - Change Notification with Seller ID and Seller SKU ID
+* [activateSKUBinding](docs/skubindings/README.md#activateskubinding) - Activate SKU Binding
+* [bindtoanothersku](docs/skubindings/README.md#bindtoanothersku) - Bind a seller's SKU to another SKU
+* [changeNotification](docs/skubindings/README.md#changenotification) - Change Notification with SKU ID
+* [deactivateSKUBinding](docs/skubindings/README.md#deactivateskubinding) - Deactivate SKU Binding
+* [deleteSKUsellerassociation](docs/skubindings/README.md#deleteskusellerassociation) - Remove a seller's SKU Binding
+* [getSKUseller](docs/skubindings/README.md#getskuseller) - Get details of a seller's SKU
+* [getallbySellerId](docs/skubindings/README.md#getallbysellerid) - Get all SKU Bindings by Seller ID
+* [getbySkuId](docs/skubindings/README.md#getbyskuid) - Get SKU Bindings by SKU ID
+* [getpagedadmin](docs/skubindings/README.md#getpagedadmin) - Get SKU Bindings information
+* [getpagedbySellerId](docs/skubindings/README.md#getpagedbysellerid) - Get paged SKU Bindings by Seller ID
+* [insertSKUBinding](docs/skubindings/README.md#insertskubinding) - Insert SKU Binding
+* [postSkuBindingPvtSkusellerChangenotificationSellerIdSellerSkuId](docs/skubindings/README.md#postskubindingpvtskusellerchangenotificationselleridsellerskuid) - Change Notification with Seller ID and Seller SKU ID
 <!-- End SDK Available Operations -->
 
 ### Maturity

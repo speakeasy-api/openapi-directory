@@ -12,6 +12,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayDefense")
     public PlayerDefense[] awayDefense;
+
     public BoxScore withAwayDefense(PlayerDefense[] awayDefense) {
         this.awayDefense = awayDefense;
         return this;
@@ -20,6 +21,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayFantasyDefense")
     public FantasyDefenseGame awayFantasyDefense;
+
     public BoxScore withAwayFantasyDefense(FantasyDefenseGame awayFantasyDefense) {
         this.awayFantasyDefense = awayFantasyDefense;
         return this;
@@ -28,6 +30,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayKickPuntReturns")
     public PlayerKickPuntReturns[] awayKickPuntReturns;
+
     public BoxScore withAwayKickPuntReturns(PlayerKickPuntReturns[] awayKickPuntReturns) {
         this.awayKickPuntReturns = awayKickPuntReturns;
         return this;
@@ -36,6 +39,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayKicking")
     public PlayerKicking[] awayKicking;
+
     public BoxScore withAwayKicking(PlayerKicking[] awayKicking) {
         this.awayKicking = awayKicking;
         return this;
@@ -44,6 +48,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayPassing")
     public PlayerPassing[] awayPassing;
+
     public BoxScore withAwayPassing(PlayerPassing[] awayPassing) {
         this.awayPassing = awayPassing;
         return this;
@@ -52,6 +57,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayPunting")
     public PlayerPunting[] awayPunting;
+
     public BoxScore withAwayPunting(PlayerPunting[] awayPunting) {
         this.awayPunting = awayPunting;
         return this;
@@ -60,6 +66,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayReceiving")
     public PlayerReceiving[] awayReceiving;
+
     public BoxScore withAwayReceiving(PlayerReceiving[] awayReceiving) {
         this.awayReceiving = awayReceiving;
         return this;
@@ -68,6 +75,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayRushing")
     public PlayerRushing[] awayRushing;
+
     public BoxScore withAwayRushing(PlayerRushing[] awayRushing) {
         this.awayRushing = awayRushing;
         return this;
@@ -76,6 +84,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Game")
     public Game game;
+
     public BoxScore withGame(Game game) {
         this.game = game;
         return this;
@@ -84,6 +93,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeDefense")
     public PlayerDefense[] homeDefense;
+
     public BoxScore withHomeDefense(PlayerDefense[] homeDefense) {
         this.homeDefense = homeDefense;
         return this;
@@ -92,6 +102,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeFantasyDefense")
     public FantasyDefenseGame homeFantasyDefense;
+
     public BoxScore withHomeFantasyDefense(FantasyDefenseGame homeFantasyDefense) {
         this.homeFantasyDefense = homeFantasyDefense;
         return this;
@@ -100,6 +111,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeKickPuntReturns")
     public PlayerKickPuntReturns[] homeKickPuntReturns;
+
     public BoxScore withHomeKickPuntReturns(PlayerKickPuntReturns[] homeKickPuntReturns) {
         this.homeKickPuntReturns = homeKickPuntReturns;
         return this;
@@ -108,6 +120,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeKicking")
     public PlayerKicking[] homeKicking;
+
     public BoxScore withHomeKicking(PlayerKicking[] homeKicking) {
         this.homeKicking = homeKicking;
         return this;
@@ -116,6 +129,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomePassing")
     public PlayerPassing[] homePassing;
+
     public BoxScore withHomePassing(PlayerPassing[] homePassing) {
         this.homePassing = homePassing;
         return this;
@@ -124,6 +138,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomePunting")
     public PlayerPunting[] homePunting;
+
     public BoxScore withHomePunting(PlayerPunting[] homePunting) {
         this.homePunting = homePunting;
         return this;
@@ -132,6 +147,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeReceiving")
     public PlayerReceiving[] homeReceiving;
+
     public BoxScore withHomeReceiving(PlayerReceiving[] homeReceiving) {
         this.homeReceiving = homeReceiving;
         return this;
@@ -140,6 +156,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeRushing")
     public PlayerRushing[] homeRushing;
+
     public BoxScore withHomeRushing(PlayerRushing[] homeRushing) {
         this.homeRushing = homeRushing;
         return this;
@@ -148,6 +165,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Score score;
+
     public BoxScore withScore(Score score) {
         this.score = score;
         return this;
@@ -156,6 +174,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoringDetails")
     public ScoringDetail[] scoringDetails;
+
     public BoxScore withScoringDetails(ScoringDetail[] scoringDetails) {
         this.scoringDetails = scoringDetails;
         return this;
@@ -164,9 +183,11 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoringPlays")
     public ScoringPlay[] scoringPlays;
+
     public BoxScore withScoringPlays(ScoringPlay[] scoringPlays) {
         this.scoringPlays = scoringPlays;
         return this;
     }
     
+    public BoxScore(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaImportCompletionDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfig")
     public GoogleCloudRetailV2alphaCompletionDataInputConfig inputConfig;
+
     public GoogleCloudRetailV2alphaImportCompletionDataRequest withInputConfig(GoogleCloudRetailV2alphaCompletionDataInputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2alphaImportCompletionDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationPubsubTopic")
     public String notificationPubsubTopic;
+
     public GoogleCloudRetailV2alphaImportCompletionDataRequest withNotificationPubsubTopic(String notificationPubsubTopic) {
         this.notificationPubsubTopic = notificationPubsubTopic;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaImportCompletionDataRequest(){}
 }

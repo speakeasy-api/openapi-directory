@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UserActivity {
     @JsonProperty("activityType")
     public String activityType;
+
     public UserActivity withActivityType(String activityType) {
         this.activityType = activityType;
         return this;
@@ -19,6 +20,7 @@ public class UserActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistentIdentifier")
     public String persistentIdentifier;
+
     public UserActivity withPersistentIdentifier(String persistentIdentifier) {
         this.persistentIdentifier = persistentIdentifier;
         return this;
@@ -27,6 +29,7 @@ public class UserActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public UserActivity withTitle(String title) {
         this.title = title;
         return this;
@@ -35,6 +38,7 @@ public class UserActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userInfo")
     public java.util.Map<String, Object> userInfo;
+
     public UserActivity withUserInfo(java.util.Map<String, Object> userInfo) {
         this.userInfo = userInfo;
         return this;
@@ -42,9 +46,14 @@ public class UserActivity {
     
     @JsonProperty("version")
     public String version;
+
     public UserActivity withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public UserActivity(@JsonProperty("activityType") String activityType, @JsonProperty("version") String version) {
+        this.activityType = activityType;
+        this.version = version;
+  }
 }

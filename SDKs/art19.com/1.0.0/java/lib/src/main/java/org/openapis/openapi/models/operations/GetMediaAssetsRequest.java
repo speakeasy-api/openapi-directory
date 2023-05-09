@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMediaAssetsRequest {
@@ -15,9 +16,13 @@ public class GetMediaAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids[]")
     public String[] ids;
+
     public GetMediaAssetsRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public GetMediaAssetsRequest(@JsonProperty("ids[]") String[] ids) {
+        this.ids = ids;
+  }
 }

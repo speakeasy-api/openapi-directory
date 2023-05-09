@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLifecyclePolicyResponse {
     
     public String contentType;
+
     public UpdateLifecyclePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateLifecyclePolicyResponse {
      */
     
     public Object internalServerException;
+
     public UpdateLifecyclePolicyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateLifecyclePolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateLifecyclePolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateLifecyclePolicyResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateLifecyclePolicyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateLifecyclePolicyResponse {
     
     
     public Integer statusCode;
+
     public UpdateLifecyclePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateLifecyclePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLifecyclePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateLifecyclePolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateLifecyclePolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateLifecyclePolicyResponse {
      */
     
     public java.util.Map<String, Object> updateLifecyclePolicyResponse;
+
     public UpdateLifecyclePolicyResponse withUpdateLifecyclePolicyResponse(java.util.Map<String, Object> updateLifecyclePolicyResponse) {
         this.updateLifecyclePolicyResponse = updateLifecyclePolicyResponse;
         return this;
     }
     
+    public UpdateLifecyclePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

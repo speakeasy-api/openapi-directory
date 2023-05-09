@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposSetTeamAccessRestrictionsResponse {
     
     public String contentType;
+
     public ReposSetTeamAccessRestrictionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposSetTeamAccessRestrictionsResponse {
     
     
     public Integer statusCode;
+
     public ReposSetTeamAccessRestrictionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposSetTeamAccessRestrictionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposSetTeamAccessRestrictionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposSetTeamAccessRestrictionsResponse {
      */
     
     public org.openapis.openapi.models.shared.Team[] teams;
+
     public ReposSetTeamAccessRestrictionsResponse withTeams(org.openapis.openapi.models.shared.Team[] teams) {
         this.teams = teams;
         return this;
@@ -43,9 +48,14 @@ public class ReposSetTeamAccessRestrictionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposSetTeamAccessRestrictionsResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposSetTeamAccessRestrictionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostBundleNotificationsResponse {
@@ -12,6 +13,7 @@ public class PostBundleNotificationsResponse {
      */
     
     public org.openapis.openapi.models.shared.BundleNotificationEntity bundleNotificationEntity;
+
     public PostBundleNotificationsResponse withBundleNotificationEntity(org.openapis.openapi.models.shared.BundleNotificationEntity bundleNotificationEntity) {
         this.bundleNotificationEntity = bundleNotificationEntity;
         return this;
@@ -19,6 +21,7 @@ public class PostBundleNotificationsResponse {
     
     
     public String contentType;
+
     public PostBundleNotificationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostBundleNotificationsResponse {
     
     
     public Integer statusCode;
+
     public PostBundleNotificationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostBundleNotificationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostBundleNotificationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostBundleNotificationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

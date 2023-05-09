@@ -15,6 +15,7 @@ public class GetClipRequestBodyClipFragmentSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FragmentSelectorType")
     public org.openapis.openapi.models.shared.ClipFragmentSelectorTypeEnum fragmentSelectorType;
+
     public GetClipRequestBodyClipFragmentSelector withFragmentSelectorType(org.openapis.openapi.models.shared.ClipFragmentSelectorTypeEnum fragmentSelectorType) {
         this.fragmentSelectorType = fragmentSelectorType;
         return this;
@@ -23,9 +24,11 @@ public class GetClipRequestBodyClipFragmentSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimestampRange")
     public org.openapis.openapi.models.shared.ClipTimestampRange timestampRange;
+
     public GetClipRequestBodyClipFragmentSelector withTimestampRange(org.openapis.openapi.models.shared.ClipTimestampRange timestampRange) {
         this.timestampRange = timestampRange;
         return this;
     }
     
+    public GetClipRequestBodyClipFragmentSelector(){}
 }

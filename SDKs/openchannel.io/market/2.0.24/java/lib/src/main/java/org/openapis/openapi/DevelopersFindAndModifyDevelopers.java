@@ -48,10 +48,8 @@ public class DevelopersFindAndModifyDevelopers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDevelopersDeveloperIdResponse res = new org.openapis.openapi.models.operations.DeleteDevelopersDeveloperIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteDevelopersDeveloperIdResponse res = new org.openapis.openapi.models.operations.DeleteDevelopersDeveloperIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -89,11 +87,9 @@ public class DevelopersFindAndModifyDevelopers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDevelopersResponse res = new org.openapis.openapi.models.operations.GetDevelopersResponse() {{
+        org.openapis.openapi.models.operations.GetDevelopersResponse res = new org.openapis.openapi.models.operations.GetDevelopersResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -129,11 +125,9 @@ public class DevelopersFindAndModifyDevelopers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDevelopersDeveloperIdResponse res = new org.openapis.openapi.models.operations.GetDevelopersDeveloperIdResponse() {{
+        org.openapis.openapi.models.operations.GetDevelopersDeveloperIdResponse res = new org.openapis.openapi.models.operations.GetDevelopersDeveloperIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -175,11 +169,9 @@ public class DevelopersFindAndModifyDevelopers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchDevelopersDeveloperIdResponse res = new org.openapis.openapi.models.operations.PatchDevelopersDeveloperIdResponse() {{
+        org.openapis.openapi.models.operations.PatchDevelopersDeveloperIdResponse res = new org.openapis.openapi.models.operations.PatchDevelopersDeveloperIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -221,11 +213,9 @@ public class DevelopersFindAndModifyDevelopers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDevelopersDeveloperIdResponse res = new org.openapis.openapi.models.operations.PostDevelopersDeveloperIdResponse() {{
+        org.openapis.openapi.models.operations.PostDevelopersDeveloperIdResponse res = new org.openapis.openapi.models.operations.PostDevelopersDeveloperIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {

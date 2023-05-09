@@ -15,6 +15,7 @@ public class SubscriptionsListResponse {
      */
     
     public Subscription[] items;
+
     public SubscriptionsListResponse withItems(Subscription[] items) {
         this.items = items;
         return this;
@@ -25,9 +26,11 @@ public class SubscriptionsListResponse {
      */
     
     public String kind;
+
     public SubscriptionsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public SubscriptionsListResponse(){}
 }

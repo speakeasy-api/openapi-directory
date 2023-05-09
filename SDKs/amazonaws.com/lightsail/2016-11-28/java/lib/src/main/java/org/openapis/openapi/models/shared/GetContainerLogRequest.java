@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetContainerLogRequest {
     @JsonProperty("containerName")
     public String containerName;
+
     public GetContainerLogRequest withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
@@ -26,6 +27,7 @@ public class GetContainerLogRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetContainerLogRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -34,6 +36,7 @@ public class GetContainerLogRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterPattern")
     public String filterPattern;
+
     public GetContainerLogRequest withFilterPattern(String filterPattern) {
         this.filterPattern = filterPattern;
         return this;
@@ -42,6 +45,7 @@ public class GetContainerLogRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetContainerLogRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -49,6 +53,7 @@ public class GetContainerLogRequest {
     
     @JsonProperty("serviceName")
     public String serviceName;
+
     public GetContainerLogRequest withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -59,9 +64,14 @@ public class GetContainerLogRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GetContainerLogRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetContainerLogRequest(@JsonProperty("containerName") String containerName, @JsonProperty("serviceName") String serviceName) {
+        this.containerName = containerName;
+        this.serviceName = serviceName;
+  }
 }

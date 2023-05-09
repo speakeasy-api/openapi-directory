@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchTablesResponse {
     
     public String contentType;
+
     public SearchTablesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SearchTablesResponse {
      */
     
     public Object internalServiceException;
+
     public SearchTablesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class SearchTablesResponse {
      */
     
     public Object invalidInputException;
+
     public SearchTablesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class SearchTablesResponse {
      */
     
     public Object operationTimeoutException;
+
     public SearchTablesResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class SearchTablesResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchTablesResponse searchTablesResponse;
+
     public SearchTablesResponse withSearchTablesResponse(org.openapis.openapi.models.shared.SearchTablesResponse searchTablesResponse) {
         this.searchTablesResponse = searchTablesResponse;
         return this;
@@ -56,6 +62,7 @@ public class SearchTablesResponse {
     
     
     public Integer statusCode;
+
     public SearchTablesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class SearchTablesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchTablesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SearchTablesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

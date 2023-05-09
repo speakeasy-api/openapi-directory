@@ -22,6 +22,7 @@ public class DeletePoolResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public DeletePoolResult withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class DeletePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public DeletePoolResult withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -38,6 +40,7 @@ public class DeletePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOutListName")
     public String optOutListName;
+
     public DeletePoolResult withOptOutListName(String optOutListName) {
         this.optOutListName = optOutListName;
         return this;
@@ -46,6 +49,7 @@ public class DeletePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoolArn")
     public String poolArn;
+
     public DeletePoolResult withPoolArn(String poolArn) {
         this.poolArn = poolArn;
         return this;
@@ -54,6 +58,7 @@ public class DeletePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoolId")
     public String poolId;
+
     public DeletePoolResult withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -62,6 +67,7 @@ public class DeletePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelfManagedOptOutsEnabled")
     public Boolean selfManagedOptOutsEnabled;
+
     public DeletePoolResult withSelfManagedOptOutsEnabled(Boolean selfManagedOptOutsEnabled) {
         this.selfManagedOptOutsEnabled = selfManagedOptOutsEnabled;
         return this;
@@ -70,6 +76,7 @@ public class DeletePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedRoutesEnabled")
     public Boolean sharedRoutesEnabled;
+
     public DeletePoolResult withSharedRoutesEnabled(Boolean sharedRoutesEnabled) {
         this.sharedRoutesEnabled = sharedRoutesEnabled;
         return this;
@@ -78,6 +85,7 @@ public class DeletePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public PoolStatusEnum status;
+
     public DeletePoolResult withStatus(PoolStatusEnum status) {
         this.status = status;
         return this;
@@ -86,6 +94,7 @@ public class DeletePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoWayChannelArn")
     public String twoWayChannelArn;
+
     public DeletePoolResult withTwoWayChannelArn(String twoWayChannelArn) {
         this.twoWayChannelArn = twoWayChannelArn;
         return this;
@@ -94,9 +103,11 @@ public class DeletePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoWayEnabled")
     public Boolean twoWayEnabled;
+
     public DeletePoolResult withTwoWayEnabled(Boolean twoWayEnabled) {
         this.twoWayEnabled = twoWayEnabled;
         return this;
     }
     
+    public DeletePoolResult(){}
 }

@@ -18,6 +18,7 @@ public class DeviceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hwVersion")
     public String hwVersion;
+
     public DeviceInfo withHwVersion(String hwVersion) {
         this.hwVersion = hwVersion;
         return this;
@@ -29,6 +30,7 @@ public class DeviceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturer")
     public String manufacturer;
+
     public DeviceInfo withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -40,6 +42,7 @@ public class DeviceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public DeviceInfo withModel(String model) {
         this.model = model;
         return this;
@@ -51,9 +54,11 @@ public class DeviceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("swVersion")
     public String swVersion;
+
     public DeviceInfo withSwVersion(String swVersion) {
         this.swVersion = swVersion;
         return this;
     }
     
+    public DeviceInfo(){}
 }

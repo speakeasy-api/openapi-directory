@@ -15,6 +15,7 @@ public class ComputeAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostId")
     public String hostId;
+
     public ComputeAttributes withHostId(String hostId) {
         this.hostId = hostId;
         return this;
@@ -23,9 +24,11 @@ public class ComputeAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ComputeAssetStateEnum state;
+
     public ComputeAttributes withState(ComputeAssetStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ComputeAttributes(){}
 }

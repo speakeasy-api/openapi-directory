@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsDataMcfGetRequest {
@@ -12,6 +13,7 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsDataMcfGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dimensions")
     public String dimensions;
+
     public AnalyticsDataMcfGetRequest withDimensions(String dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -32,6 +35,7 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end-date")
     public String endDate;
+
     public AnalyticsDataMcfGetRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -42,6 +46,7 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsDataMcfGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +57,7 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filters")
     public String filters;
+
     public AnalyticsDataMcfGetRequest withFilters(String filters) {
         this.filters = filters;
         return this;
@@ -62,6 +68,7 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String ids;
+
     public AnalyticsDataMcfGetRequest withIds(String ids) {
         this.ids = ids;
         return this;
@@ -72,6 +79,7 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsDataMcfGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max-results")
     public Long maxResults;
+
     public AnalyticsDataMcfGetRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -92,6 +101,7 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metrics")
     public String metrics;
+
     public AnalyticsDataMcfGetRequest withMetrics(String metrics) {
         this.metrics = metrics;
         return this;
@@ -102,6 +112,7 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsDataMcfGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsDataMcfGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsDataMcfGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=samplingLevel")
     public AnalyticsDataMcfGetSamplingLevelEnum samplingLevel;
+
     public AnalyticsDataMcfGetRequest withSamplingLevel(AnalyticsDataMcfGetSamplingLevelEnum samplingLevel) {
         this.samplingLevel = samplingLevel;
         return this;
@@ -142,6 +156,7 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public AnalyticsDataMcfGetRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -152,6 +167,7 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start-date")
     public String startDate;
+
     public AnalyticsDataMcfGetRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -162,6 +178,7 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start-index")
     public Long startIndex;
+
     public AnalyticsDataMcfGetRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -172,9 +189,16 @@ public class AnalyticsDataMcfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AnalyticsDataMcfGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AnalyticsDataMcfGetRequest(@JsonProperty("end-date") String endDate, @JsonProperty("ids") String ids, @JsonProperty("metrics") String metrics, @JsonProperty("start-date") String startDate) {
+        this.endDate = endDate;
+        this.ids = ids;
+        this.metrics = metrics;
+        this.startDate = startDate;
+  }
 }

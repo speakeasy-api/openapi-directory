@@ -15,6 +15,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowCancelation")
     public Boolean allowCancelation;
+
     public PlaceOrder200ApplicationJSONOrders withAllowCancelation(Boolean allowCancelation) {
         this.allowCancelation = allowCancelation;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowChangeSeller")
     public Boolean allowChangeSeller;
+
     public PlaceOrder200ApplicationJSONOrders withAllowChangeSeller(Boolean allowChangeSeller) {
         this.allowChangeSeller = allowChangeSeller;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowEdition")
     public Boolean allowEdition;
+
     public PlaceOrder200ApplicationJSONOrders withAllowEdition(Boolean allowEdition) {
         this.allowEdition = allowEdition;
         return this;
@@ -48,6 +51,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkedInPickupPointId")
     public String checkedInPickupPointId;
+
     public PlaceOrder200ApplicationJSONOrders withCheckedInPickupPointId(String checkedInPickupPointId) {
         this.checkedInPickupPointId = checkedInPickupPointId;
         return this;
@@ -59,6 +63,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientProfileData")
     public PlaceOrder200ApplicationJSONOrdersClientProfileData clientProfileData;
+
     public PlaceOrder200ApplicationJSONOrders withClientProfileData(PlaceOrder200ApplicationJSONOrdersClientProfileData clientProfileData) {
         this.clientProfileData = clientProfileData;
         return this;
@@ -70,6 +75,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDate")
     public String creationDate;
+
     public PlaceOrder200ApplicationJSONOrders withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -81,6 +87,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("followUpEmail")
     public String followUpEmail;
+
     public PlaceOrder200ApplicationJSONOrders withFollowUpEmail(String followUpEmail) {
         this.followUpEmail = followUpEmail;
         return this;
@@ -92,6 +99,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostName")
     public String hostName;
+
     public PlaceOrder200ApplicationJSONOrders withHostName(String hostName) {
         this.hostName = hostName;
         return this;
@@ -103,6 +111,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCheckedIn")
     public Boolean isCheckedIn;
+
     public PlaceOrder200ApplicationJSONOrders withIsCheckedIn(Boolean isCheckedIn) {
         this.isCheckedIn = isCheckedIn;
         return this;
@@ -114,6 +123,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCompleted")
     public Boolean isCompleted;
+
     public PlaceOrder200ApplicationJSONOrders withIsCompleted(Boolean isCompleted) {
         this.isCompleted = isCompleted;
         return this;
@@ -125,6 +135,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isUserDataVisible")
     public Boolean isUserDataVisible;
+
     public PlaceOrder200ApplicationJSONOrders withIsUserDataVisible(Boolean isUserDataVisible) {
         this.isUserDataVisible = isUserDataVisible;
         return this;
@@ -136,6 +147,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemMetadata")
     public PlaceOrder200ApplicationJSONOrdersItemMetadata itemMetadata;
+
     public PlaceOrder200ApplicationJSONOrders withItemMetadata(PlaceOrder200ApplicationJSONOrdersItemMetadata itemMetadata) {
         this.itemMetadata = itemMetadata;
         return this;
@@ -147,6 +159,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public PlaceOrder200ApplicationJSONOrdersItems[] items;
+
     public PlaceOrder200ApplicationJSONOrders withItems(PlaceOrder200ApplicationJSONOrdersItems[] items) {
         this.items = items;
         return this;
@@ -158,6 +171,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastChange")
     public String lastChange;
+
     public PlaceOrder200ApplicationJSONOrders withLastChange(String lastChange) {
         this.lastChange = lastChange;
         return this;
@@ -169,6 +183,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantName")
     public String merchantName;
+
     public PlaceOrder200ApplicationJSONOrders withMerchantName(String merchantName) {
         this.merchantName = merchantName;
         return this;
@@ -180,6 +195,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderFormCreationDate")
     public String orderFormCreationDate;
+
     public PlaceOrder200ApplicationJSONOrders withOrderFormCreationDate(String orderFormCreationDate) {
         this.orderFormCreationDate = orderFormCreationDate;
         return this;
@@ -191,6 +207,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderGroup")
     public String orderGroup;
+
     public PlaceOrder200ApplicationJSONOrders withOrderGroup(String orderGroup) {
         this.orderGroup = orderGroup;
         return this;
@@ -202,6 +219,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderId")
     public String orderId;
+
     public PlaceOrder200ApplicationJSONOrders withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -213,6 +231,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentData")
     public PlaceOrder200ApplicationJSONOrdersPaymentData paymentData;
+
     public PlaceOrder200ApplicationJSONOrders withPaymentData(PlaceOrder200ApplicationJSONOrdersPaymentData paymentData) {
         this.paymentData = paymentData;
         return this;
@@ -224,6 +243,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ratesAndBenefitsData")
     public PlaceOrder200ApplicationJSONOrdersRatesAndBenefitsData ratesAndBenefitsData;
+
     public PlaceOrder200ApplicationJSONOrders withRatesAndBenefitsData(PlaceOrder200ApplicationJSONOrdersRatesAndBenefitsData ratesAndBenefitsData) {
         this.ratesAndBenefitsData = ratesAndBenefitsData;
         return this;
@@ -235,6 +255,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roundingError")
     public Long roundingError;
+
     public PlaceOrder200ApplicationJSONOrders withRoundingError(Long roundingError) {
         this.roundingError = roundingError;
         return this;
@@ -246,6 +267,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesAssociateId")
     public String salesAssociateId;
+
     public PlaceOrder200ApplicationJSONOrders withSalesAssociateId(String salesAssociateId) {
         this.salesAssociateId = salesAssociateId;
         return this;
@@ -257,6 +279,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public PlaceOrder200ApplicationJSONOrders withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -268,6 +291,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerOrderId")
     public String sellerOrderId;
+
     public PlaceOrder200ApplicationJSONOrders withSellerOrderId(String sellerOrderId) {
         this.sellerOrderId = sellerOrderId;
         return this;
@@ -279,6 +303,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellers")
     public PlaceOrder200ApplicationJSONOrdersSellers[] sellers;
+
     public PlaceOrder200ApplicationJSONOrders withSellers(PlaceOrder200ApplicationJSONOrdersSellers[] sellers) {
         this.sellers = sellers;
         return this;
@@ -290,6 +315,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingData")
     public PlaceOrder200ApplicationJSONOrdersShippingData shippingData;
+
     public PlaceOrder200ApplicationJSONOrders withShippingData(PlaceOrder200ApplicationJSONOrdersShippingData shippingData) {
         this.shippingData = shippingData;
         return this;
@@ -301,6 +327,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public PlaceOrder200ApplicationJSONOrders withState(String state) {
         this.state = state;
         return this;
@@ -312,6 +339,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeId")
     public String storeId;
+
     public PlaceOrder200ApplicationJSONOrders withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
@@ -323,6 +351,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZoneCreationDate")
     public String timeZoneCreationDate;
+
     public PlaceOrder200ApplicationJSONOrders withTimeZoneCreationDate(String timeZoneCreationDate) {
         this.timeZoneCreationDate = timeZoneCreationDate;
         return this;
@@ -334,6 +363,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZoneLastChange")
     public String timeZoneLastChange;
+
     public PlaceOrder200ApplicationJSONOrders withTimeZoneLastChange(String timeZoneLastChange) {
         this.timeZoneLastChange = timeZoneLastChange;
         return this;
@@ -345,6 +375,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totals")
     public PlaceOrder200ApplicationJSONOrdersTotals[] totals;
+
     public PlaceOrder200ApplicationJSONOrders withTotals(PlaceOrder200ApplicationJSONOrdersTotals[] totals) {
         this.totals = totals;
         return this;
@@ -356,6 +387,7 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userType")
     public String userType;
+
     public PlaceOrder200ApplicationJSONOrders withUserType(String userType) {
         this.userType = userType;
         return this;
@@ -367,9 +399,11 @@ public class PlaceOrder200ApplicationJSONOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public PlaceOrder200ApplicationJSONOrders withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrders(){}
 }

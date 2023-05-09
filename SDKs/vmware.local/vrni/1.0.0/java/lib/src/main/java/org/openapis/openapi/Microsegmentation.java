@@ -59,12 +59,10 @@ public class Microsegmentation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportNsxRecommendedRulesResponse res = new org.openapis.openapi.models.operations.ExportNsxRecommendedRulesResponse() {{
+        org.openapis.openapi.models.operations.ExportNsxRecommendedRulesResponse res = new org.openapis.openapi.models.operations.ExportNsxRecommendedRulesResponse(contentType, httpRes.statusCode()) {{
             exportNsxRecommendedRules200ApplicationOctetStreamBinaryString = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -114,12 +112,10 @@ public class Microsegmentation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRecommendedRulesResponse res = new org.openapis.openapi.models.operations.ListRecommendedRulesResponse() {{
+        org.openapis.openapi.models.operations.ListRecommendedRulesResponse res = new org.openapis.openapi.models.operations.ListRecommendedRulesResponse(contentType, httpRes.statusCode()) {{
             recommendedRules = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

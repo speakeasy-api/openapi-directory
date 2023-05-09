@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest {
@@ -12,6 +13,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudServicebrokerV1beta1Binding googleCloudServicebrokerV1beta1Binding;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withGoogleCloudServicebrokerV1beta1Binding(org.openapis.openapi.models.shared.GoogleCloudServicebrokerV1beta1Binding googleCloudServicebrokerV1beta1Binding) {
         this.googleCloudServicebrokerV1beta1Binding = googleCloudServicebrokerV1beta1Binding;
         return this;
@@ -29,6 +32,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=acceptsIncomplete")
     public Boolean acceptsIncomplete;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withAcceptsIncomplete(Boolean acceptsIncomplete) {
         this.acceptsIncomplete = acceptsIncomplete;
         return this;
@@ -39,6 +43,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -49,6 +54,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -61,6 +67,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=binding_id")
     public String bindingId;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withBindingId(String bindingId) {
         this.bindingId = bindingId;
         return this;
@@ -71,6 +78,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -81,6 +89,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -91,6 +100,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -101,6 +111,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -113,6 +124,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -123,6 +135,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -133,6 +146,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -143,6 +157,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -153,9 +168,14 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest(@JsonProperty("binding_id") String bindingId, @JsonProperty("parent") String parent) {
+        this.bindingId = bindingId;
+        this.parent = parent;
+  }
 }

@@ -15,9 +15,11 @@ public class DeleteDBInstanceResult {
      */
     
     public DBInstance dbInstance;
+
     public DeleteDBInstanceResult withDBInstance(DBInstance dbInstance) {
         this.dbInstance = dbInstance;
         return this;
     }
     
+    public DeleteDBInstanceResult(){}
 }

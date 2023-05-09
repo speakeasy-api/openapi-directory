@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBlobOutput {
     @JsonProperty("content")
     public String content;
+
     public GetBlobOutput withContent(String content) {
         this.content = content;
         return this;
     }
     
+    public GetBlobOutput(@JsonProperty("content") String content) {
+        this.content = content;
+  }
 }

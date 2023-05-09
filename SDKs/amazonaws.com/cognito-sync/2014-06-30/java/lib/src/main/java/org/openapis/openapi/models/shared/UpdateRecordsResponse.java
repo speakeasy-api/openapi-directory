@@ -15,9 +15,11 @@ public class UpdateRecordsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Records")
     public Record[] records;
+
     public UpdateRecordsResponse withRecords(Record[] records) {
         this.records = records;
         return this;
     }
     
+    public UpdateRecordsResponse(){}
 }

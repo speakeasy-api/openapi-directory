@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GitSubmodulesConfig {
     @JsonProperty("fetchSubmodules")
     public Boolean fetchSubmodules;
+
     public GitSubmodulesConfig withFetchSubmodules(Boolean fetchSubmodules) {
         this.fetchSubmodules = fetchSubmodules;
         return this;
     }
     
+    public GitSubmodulesConfig(@JsonProperty("fetchSubmodules") Boolean fetchSubmodules) {
+        this.fetchSubmodules = fetchSubmodules;
+  }
 }

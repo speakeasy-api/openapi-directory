@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteInlinePolicyFromPermissionSetResponse {
@@ -12,6 +13,7 @@ public class DeleteInlinePolicyFromPermissionSetResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteInlinePolicyFromPermissionSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteInlinePolicyFromPermissionSetResponse {
      */
     
     public Object conflictException;
+
     public DeleteInlinePolicyFromPermissionSetResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteInlinePolicyFromPermissionSetResponse {
     
     
     public String contentType;
+
     public DeleteInlinePolicyFromPermissionSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteInlinePolicyFromPermissionSetResponse {
      */
     
     public java.util.Map<String, Object> deleteInlinePolicyFromPermissionSetResponse;
+
     public DeleteInlinePolicyFromPermissionSetResponse withDeleteInlinePolicyFromPermissionSetResponse(java.util.Map<String, Object> deleteInlinePolicyFromPermissionSetResponse) {
         this.deleteInlinePolicyFromPermissionSetResponse = deleteInlinePolicyFromPermissionSetResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteInlinePolicyFromPermissionSetResponse {
      */
     
     public Object internalServerException;
+
     public DeleteInlinePolicyFromPermissionSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteInlinePolicyFromPermissionSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteInlinePolicyFromPermissionSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteInlinePolicyFromPermissionSetResponse {
     
     
     public Integer statusCode;
+
     public DeleteInlinePolicyFromPermissionSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteInlinePolicyFromPermissionSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteInlinePolicyFromPermissionSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteInlinePolicyFromPermissionSetResponse {
      */
     
     public Object throttlingException;
+
     public DeleteInlinePolicyFromPermissionSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteInlinePolicyFromPermissionSetResponse {
      */
     
     public Object validationException;
+
     public DeleteInlinePolicyFromPermissionSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteInlinePolicyFromPermissionSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

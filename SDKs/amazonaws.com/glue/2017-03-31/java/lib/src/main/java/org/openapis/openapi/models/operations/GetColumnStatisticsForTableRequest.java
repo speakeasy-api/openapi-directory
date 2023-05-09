@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetColumnStatisticsForTableRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetColumnStatisticsForTableRequest getColumnStatisticsForTableRequest;
+
     public GetColumnStatisticsForTableRequest withGetColumnStatisticsForTableRequest(org.openapis.openapi.models.shared.GetColumnStatisticsForTableRequest getColumnStatisticsForTableRequest) {
         this.getColumnStatisticsForTableRequest = getColumnStatisticsForTableRequest;
         return this;
@@ -16,6 +18,7 @@ public class GetColumnStatisticsForTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetColumnStatisticsForTableRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class GetColumnStatisticsForTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetColumnStatisticsForTableRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class GetColumnStatisticsForTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetColumnStatisticsForTableRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class GetColumnStatisticsForTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetColumnStatisticsForTableRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class GetColumnStatisticsForTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetColumnStatisticsForTableRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class GetColumnStatisticsForTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetColumnStatisticsForTableRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class GetColumnStatisticsForTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetColumnStatisticsForTableRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class GetColumnStatisticsForTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public GetColumnStatisticsForTableXAmzTargetEnum xAmzTarget;
+
     public GetColumnStatisticsForTableRequest withXAmzTarget(GetColumnStatisticsForTableXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public GetColumnStatisticsForTableRequest(@JsonProperty("GetColumnStatisticsForTableRequest") org.openapis.openapi.models.shared.GetColumnStatisticsForTableRequest getColumnStatisticsForTableRequest, @JsonProperty("X-Amz-Target") GetColumnStatisticsForTableXAmzTargetEnum xAmzTarget) {
+        this.getColumnStatisticsForTableRequest = getColumnStatisticsForTableRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

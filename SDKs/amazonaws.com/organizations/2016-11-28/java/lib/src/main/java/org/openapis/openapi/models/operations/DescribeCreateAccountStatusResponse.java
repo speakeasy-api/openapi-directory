@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCreateAccountStatusResponse {
@@ -12,6 +13,7 @@ public class DescribeCreateAccountStatusResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public DescribeCreateAccountStatusResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeCreateAccountStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeCreateAccountStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCreateAccountStatusResponse {
     
     
     public String contentType;
+
     public DescribeCreateAccountStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCreateAccountStatusResponse {
      */
     
     public Object createAccountStatusNotFoundException;
+
     public DescribeCreateAccountStatusResponse withCreateAccountStatusNotFoundException(Object createAccountStatusNotFoundException) {
         this.createAccountStatusNotFoundException = createAccountStatusNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeCreateAccountStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCreateAccountStatusResponse describeCreateAccountStatusResponse;
+
     public DescribeCreateAccountStatusResponse withDescribeCreateAccountStatusResponse(org.openapis.openapi.models.shared.DescribeCreateAccountStatusResponse describeCreateAccountStatusResponse) {
         this.describeCreateAccountStatusResponse = describeCreateAccountStatusResponse;
         return this;
@@ -59,6 +65,7 @@ public class DescribeCreateAccountStatusResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeCreateAccountStatusResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeCreateAccountStatusResponse {
      */
     
     public Object serviceException;
+
     public DescribeCreateAccountStatusResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeCreateAccountStatusResponse {
     
     
     public Integer statusCode;
+
     public DescribeCreateAccountStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribeCreateAccountStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCreateAccountStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DescribeCreateAccountStatusResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeCreateAccountStatusResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class DescribeCreateAccountStatusResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public DescribeCreateAccountStatusResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public DescribeCreateAccountStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

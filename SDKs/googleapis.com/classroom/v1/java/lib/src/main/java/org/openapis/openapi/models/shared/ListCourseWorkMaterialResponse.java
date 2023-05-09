@@ -18,6 +18,7 @@ public class ListCourseWorkMaterialResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courseWorkMaterial")
     public CourseWorkMaterial[] courseWorkMaterial;
+
     public ListCourseWorkMaterialResponse withCourseWorkMaterial(CourseWorkMaterial[] courseWorkMaterial) {
         this.courseWorkMaterial = courseWorkMaterial;
         return this;
@@ -29,9 +30,11 @@ public class ListCourseWorkMaterialResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCourseWorkMaterialResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCourseWorkMaterialResponse(){}
 }

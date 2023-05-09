@@ -15,9 +15,13 @@ public class FindFormByFormName200ApplicationJSON {
      */
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.FormShow data;
+
     public FindFormByFormName200ApplicationJSON withData(org.openapis.openapi.models.shared.FormShow data) {
         this.data = data;
         return this;
     }
     
+    public FindFormByFormName200ApplicationJSON(@JsonProperty("data") org.openapis.openapi.models.shared.FormShow data) {
+        this.data = data;
+  }
 }

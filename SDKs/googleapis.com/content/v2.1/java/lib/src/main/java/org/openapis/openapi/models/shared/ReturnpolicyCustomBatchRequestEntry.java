@@ -15,6 +15,7 @@ public class ReturnpolicyCustomBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchId")
     public Long batchId;
+
     public ReturnpolicyCustomBatchRequestEntry withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -26,6 +27,7 @@ public class ReturnpolicyCustomBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public String merchantId;
+
     public ReturnpolicyCustomBatchRequestEntry withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -37,6 +39,7 @@ public class ReturnpolicyCustomBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public ReturnpolicyCustomBatchRequestEntry withMethod(String method) {
         this.method = method;
         return this;
@@ -48,6 +51,7 @@ public class ReturnpolicyCustomBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPolicy")
     public ReturnPolicy returnPolicy;
+
     public ReturnpolicyCustomBatchRequestEntry withReturnPolicy(ReturnPolicy returnPolicy) {
         this.returnPolicy = returnPolicy;
         return this;
@@ -59,9 +63,11 @@ public class ReturnpolicyCustomBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPolicyId")
     public String returnPolicyId;
+
     public ReturnpolicyCustomBatchRequestEntry withReturnPolicyId(String returnPolicyId) {
         this.returnPolicyId = returnPolicyId;
         return this;
     }
     
+    public ReturnpolicyCustomBatchRequestEntry(){}
 }

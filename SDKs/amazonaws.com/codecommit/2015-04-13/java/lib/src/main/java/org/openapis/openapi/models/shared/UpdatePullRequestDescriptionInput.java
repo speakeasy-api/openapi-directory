@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdatePullRequestDescriptionInput {
     @JsonProperty("description")
     public String description;
+
     public UpdatePullRequestDescriptionInput withDescription(String description) {
         this.description = description;
         return this;
@@ -16,9 +17,14 @@ public class UpdatePullRequestDescriptionInput {
     
     @JsonProperty("pullRequestId")
     public String pullRequestId;
+
     public UpdatePullRequestDescriptionInput withPullRequestId(String pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
     }
     
+    public UpdatePullRequestDescriptionInput(@JsonProperty("description") String description, @JsonProperty("pullRequestId") String pullRequestId) {
+        this.description = description;
+        this.pullRequestId = pullRequestId;
+  }
 }

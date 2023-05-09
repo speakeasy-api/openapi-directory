@@ -15,6 +15,7 @@ public class PostFirewallsIdActionsSetRulesSetRulesRequestRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PostFirewallsIdActionsSetRulesSetRulesRequestRule withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class PostFirewallsIdActionsSetRulesSetRulesRequestRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_ips")
     public String[] destinationIps;
+
     public PostFirewallsIdActionsSetRulesSetRulesRequestRule withDestinationIps(String[] destinationIps) {
         this.destinationIps = destinationIps;
         return this;
@@ -36,6 +38,7 @@ public class PostFirewallsIdActionsSetRulesSetRulesRequestRule {
      */
     @JsonProperty("direction")
     public PostFirewallsIdActionsSetRulesSetRulesRequestRuleDirectionEnum direction;
+
     public PostFirewallsIdActionsSetRulesSetRulesRequestRule withDirection(PostFirewallsIdActionsSetRulesSetRulesRequestRuleDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -47,6 +50,7 @@ public class PostFirewallsIdActionsSetRulesSetRulesRequestRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public String port;
+
     public PostFirewallsIdActionsSetRulesSetRulesRequestRule withPort(String port) {
         this.port = port;
         return this;
@@ -57,6 +61,7 @@ public class PostFirewallsIdActionsSetRulesSetRulesRequestRule {
      */
     @JsonProperty("protocol")
     public PostFirewallsIdActionsSetRulesSetRulesRequestRuleProtocolEnum protocol;
+
     public PostFirewallsIdActionsSetRulesSetRulesRequestRule withProtocol(PostFirewallsIdActionsSetRulesSetRulesRequestRuleProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -68,9 +73,14 @@ public class PostFirewallsIdActionsSetRulesSetRulesRequestRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_ips")
     public String[] sourceIps;
+
     public PostFirewallsIdActionsSetRulesSetRulesRequestRule withSourceIps(String[] sourceIps) {
         this.sourceIps = sourceIps;
         return this;
     }
     
+    public PostFirewallsIdActionsSetRulesSetRulesRequestRule(@JsonProperty("direction") PostFirewallsIdActionsSetRulesSetRulesRequestRuleDirectionEnum direction, @JsonProperty("protocol") PostFirewallsIdActionsSetRulesSetRulesRequestRuleProtocolEnum protocol) {
+        this.direction = direction;
+        this.protocol = protocol;
+  }
 }

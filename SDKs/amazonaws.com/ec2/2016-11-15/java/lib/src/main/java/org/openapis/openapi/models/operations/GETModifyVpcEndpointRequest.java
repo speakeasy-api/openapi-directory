@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVpcEndpointRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyVpcEndpointActionEnum action;
+
     public GETModifyVpcEndpointRequest withAction(GETModifyVpcEndpointActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyVpcEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddRouteTableId")
     public String[] addRouteTableId;
+
     public GETModifyVpcEndpointRequest withAddRouteTableId(String[] addRouteTableId) {
         this.addRouteTableId = addRouteTableId;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyVpcEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddSecurityGroupId")
     public String[] addSecurityGroupId;
+
     public GETModifyVpcEndpointRequest withAddSecurityGroupId(String[] addSecurityGroupId) {
         this.addSecurityGroupId = addSecurityGroupId;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyVpcEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddSubnetId")
     public String[] addSubnetId;
+
     public GETModifyVpcEndpointRequest withAddSubnetId(String[] addSubnetId) {
         this.addSubnetId = addSubnetId;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyVpcEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DnsOptions")
     public GETModifyVpcEndpointDNSOptions dnsOptions;
+
     public GETModifyVpcEndpointRequest withDnsOptions(GETModifyVpcEndpointDNSOptions dnsOptions) {
         this.dnsOptions = dnsOptions;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyVpcEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyVpcEndpointRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -69,6 +76,7 @@ public class GETModifyVpcEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IpAddressType")
     public GETModifyVpcEndpointIPAddressTypeEnum ipAddressType;
+
     public GETModifyVpcEndpointRequest withIpAddressType(GETModifyVpcEndpointIPAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -79,6 +87,7 @@ public class GETModifyVpcEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyDocument")
     public String policyDocument;
+
     public GETModifyVpcEndpointRequest withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -89,6 +98,7 @@ public class GETModifyVpcEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrivateDnsEnabled")
     public Boolean privateDnsEnabled;
+
     public GETModifyVpcEndpointRequest withPrivateDnsEnabled(Boolean privateDnsEnabled) {
         this.privateDnsEnabled = privateDnsEnabled;
         return this;
@@ -99,6 +109,7 @@ public class GETModifyVpcEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveRouteTableId")
     public String[] removeRouteTableId;
+
     public GETModifyVpcEndpointRequest withRemoveRouteTableId(String[] removeRouteTableId) {
         this.removeRouteTableId = removeRouteTableId;
         return this;
@@ -109,6 +120,7 @@ public class GETModifyVpcEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveSecurityGroupId")
     public String[] removeSecurityGroupId;
+
     public GETModifyVpcEndpointRequest withRemoveSecurityGroupId(String[] removeSecurityGroupId) {
         this.removeSecurityGroupId = removeSecurityGroupId;
         return this;
@@ -119,6 +131,7 @@ public class GETModifyVpcEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveSubnetId")
     public String[] removeSubnetId;
+
     public GETModifyVpcEndpointRequest withRemoveSubnetId(String[] removeSubnetId) {
         this.removeSubnetId = removeSubnetId;
         return this;
@@ -129,6 +142,7 @@ public class GETModifyVpcEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResetPolicy")
     public Boolean resetPolicy;
+
     public GETModifyVpcEndpointRequest withResetPolicy(Boolean resetPolicy) {
         this.resetPolicy = resetPolicy;
         return this;
@@ -136,6 +150,7 @@ public class GETModifyVpcEndpointRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyVpcEndpointVersionEnum version;
+
     public GETModifyVpcEndpointRequest withVersion(GETModifyVpcEndpointVersionEnum version) {
         this.version = version;
         return this;
@@ -146,6 +161,7 @@ public class GETModifyVpcEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcEndpointId")
     public String vpcEndpointId;
+
     public GETModifyVpcEndpointRequest withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
@@ -153,6 +169,7 @@ public class GETModifyVpcEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyVpcEndpointRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -160,6 +177,7 @@ public class GETModifyVpcEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyVpcEndpointRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -167,6 +185,7 @@ public class GETModifyVpcEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyVpcEndpointRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -174,6 +193,7 @@ public class GETModifyVpcEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyVpcEndpointRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -181,6 +201,7 @@ public class GETModifyVpcEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyVpcEndpointRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -188,6 +209,7 @@ public class GETModifyVpcEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyVpcEndpointRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -195,9 +217,15 @@ public class GETModifyVpcEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyVpcEndpointRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyVpcEndpointRequest(@JsonProperty("Action") GETModifyVpcEndpointActionEnum action, @JsonProperty("Version") GETModifyVpcEndpointVersionEnum version, @JsonProperty("VpcEndpointId") String vpcEndpointId) {
+        this.action = action;
+        this.version = version;
+        this.vpcEndpointId = vpcEndpointId;
+  }
 }

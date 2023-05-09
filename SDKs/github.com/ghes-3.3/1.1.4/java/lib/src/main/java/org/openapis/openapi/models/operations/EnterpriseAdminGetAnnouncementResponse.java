@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminGetAnnouncementResponse {
     
     public String contentType;
+
     public EnterpriseAdminGetAnnouncementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminGetAnnouncementResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminGetAnnouncementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminGetAnnouncementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminGetAnnouncementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminGetAnnouncementResponse {
      */
     
     public org.openapis.openapi.models.shared.Announcement announcement;
+
     public EnterpriseAdminGetAnnouncementResponse withAnnouncement(org.openapis.openapi.models.shared.Announcement announcement) {
         this.announcement = announcement;
         return this;
     }
     
+    public EnterpriseAdminGetAnnouncementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

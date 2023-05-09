@@ -18,6 +18,7 @@ public class AccountHolderTransactionListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountTransactionLists")
     public AccountTransactionList[] accountTransactionLists;
+
     public AccountHolderTransactionListResponse withAccountTransactionLists(AccountTransactionList[] accountTransactionLists) {
         this.accountTransactionLists = accountTransactionLists;
         return this;
@@ -29,6 +30,7 @@ public class AccountHolderTransactionListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public AccountHolderTransactionListResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -40,6 +42,7 @@ public class AccountHolderTransactionListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public AccountHolderTransactionListResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -51,9 +54,11 @@ public class AccountHolderTransactionListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public AccountHolderTransactionListResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public AccountHolderTransactionListResponse(){}
 }

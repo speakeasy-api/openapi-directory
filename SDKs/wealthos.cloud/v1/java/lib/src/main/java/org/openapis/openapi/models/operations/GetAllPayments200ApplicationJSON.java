@@ -15,6 +15,7 @@ public class GetAllPayments200ApplicationJSON {
      */
     @JsonProperty("next_page_available")
     public Boolean nextPageAvailable;
+
     public GetAllPayments200ApplicationJSON withNextPageAvailable(Boolean nextPageAvailable) {
         this.nextPageAvailable = nextPageAvailable;
         return this;
@@ -22,9 +23,14 @@ public class GetAllPayments200ApplicationJSON {
     
     @JsonProperty("payments")
     public GetAllPayments200ApplicationJSONRootTypeForPayments[] payments;
+
     public GetAllPayments200ApplicationJSON withPayments(GetAllPayments200ApplicationJSONRootTypeForPayments[] payments) {
         this.payments = payments;
         return this;
     }
     
+    public GetAllPayments200ApplicationJSON(@JsonProperty("next_page_available") Boolean nextPageAvailable, @JsonProperty("payments") GetAllPayments200ApplicationJSONRootTypeForPayments[] payments) {
+        this.nextPageAvailable = nextPageAvailable;
+        this.payments = payments;
+  }
 }

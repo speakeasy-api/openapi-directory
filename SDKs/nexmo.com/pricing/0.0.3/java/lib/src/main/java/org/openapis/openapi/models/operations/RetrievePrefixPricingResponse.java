@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrievePrefixPricingResponse {
     
     public String contentType;
+
     public RetrievePrefixPricingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetrievePrefixPricingResponse {
      */
     
     public org.openapis.openapi.models.shared.PricingCountriesResponse pricingCountriesResponse;
+
     public RetrievePrefixPricingResponse withPricingCountriesResponse(org.openapis.openapi.models.shared.PricingCountriesResponse pricingCountriesResponse) {
         this.pricingCountriesResponse = pricingCountriesResponse;
         return this;
@@ -26,6 +29,7 @@ public class RetrievePrefixPricingResponse {
     
     
     public Integer statusCode;
+
     public RetrievePrefixPricingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RetrievePrefixPricingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrievePrefixPricingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class RetrievePrefixPricingResponse {
      */
     
     public RetrievePrefixPricing400ApplicationJSON retrievePrefixPricing400ApplicationJSONObject;
+
     public RetrievePrefixPricingResponse withRetrievePrefixPricing400ApplicationJSONObject(RetrievePrefixPricing400ApplicationJSON retrievePrefixPricing400ApplicationJSONObject) {
         this.retrievePrefixPricing400ApplicationJSONObject = retrievePrefixPricing400ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class RetrievePrefixPricingResponse {
      */
     
     public RetrievePrefixPricing401ApplicationJSON retrievePrefixPricing401ApplicationJSONObject;
+
     public RetrievePrefixPricingResponse withRetrievePrefixPricing401ApplicationJSONObject(RetrievePrefixPricing401ApplicationJSON retrievePrefixPricing401ApplicationJSONObject) {
         this.retrievePrefixPricing401ApplicationJSONObject = retrievePrefixPricing401ApplicationJSONObject;
         return this;
     }
     
+    public RetrievePrefixPricingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

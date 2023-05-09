@@ -15,6 +15,7 @@ public class DatasetContentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public DatasetContentStatus withReason(String reason) {
         this.reason = reason;
         return this;
@@ -23,9 +24,11 @@ public class DatasetContentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public DatasetContentStateEnum state;
+
     public DatasetContentStatus withState(DatasetContentStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public DatasetContentStatus(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -16,6 +18,7 @@ public class PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransact
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
     public Long idConnection;
+
     public PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -23,6 +26,7 @@ public class PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransact
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_transactionscluster")
     public Long idTransactionscluster;
+
     public PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest withIdTransactionscluster(Long idTransactionscluster) {
         this.idTransactionscluster = idTransactionscluster;
         return this;
@@ -33,9 +37,15 @@ public class PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransact
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
     }
     
+    public PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest(@JsonProperty("id_connection") Long idConnection, @JsonProperty("id_transactionscluster") Long idTransactionscluster, @JsonProperty("id_user") String idUser) {
+        this.idConnection = idConnection;
+        this.idTransactionscluster = idTransactionscluster;
+        this.idUser = idUser;
+  }
 }

@@ -18,6 +18,7 @@ public class ItvGetDiscountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public ItvGetDiscountResponse withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -29,6 +30,7 @@ public class ItvGetDiscountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ItvGetDiscountResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class ItvGetDiscountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headline")
     public String headline;
+
     public ItvGetDiscountResponse withHeadline(String headline) {
         this.headline = headline;
         return this;
@@ -50,6 +53,7 @@ public class ItvGetDiscountResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public ItvGetDiscountResponse withId(String id) {
         this.id = id;
         return this;
@@ -61,6 +65,7 @@ public class ItvGetDiscountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialCost")
     public Double initialCost;
+
     public ItvGetDiscountResponse withInitialCost(Double initialCost) {
         this.initialCost = initialCost;
         return this;
@@ -72,6 +77,7 @@ public class ItvGetDiscountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longDescription")
     public String longDescription;
+
     public ItvGetDiscountResponse withLongDescription(String longDescription) {
         this.longDescription = longDescription;
         return this;
@@ -83,6 +89,7 @@ public class ItvGetDiscountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nickname")
     public String nickname;
+
     public ItvGetDiscountResponse withNickname(String nickname) {
         this.nickname = nickname;
         return this;
@@ -94,6 +101,7 @@ public class ItvGetDiscountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerdurationperiod")
     public String offerdurationperiod;
+
     public ItvGetDiscountResponse withOfferdurationperiod(String offerdurationperiod) {
         this.offerdurationperiod = offerdurationperiod;
         return this;
@@ -105,9 +113,13 @@ public class ItvGetDiscountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortDescription")
     public String shortDescription;
+
     public ItvGetDiscountResponse withShortDescription(String shortDescription) {
         this.shortDescription = shortDescription;
         return this;
     }
     
+    public ItvGetDiscountResponse(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

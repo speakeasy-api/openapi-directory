@@ -12,6 +12,7 @@ public class GetVariantSetsCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetVariantSetsCollectionRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,9 +23,11 @@ public class GetVariantSetsCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public GetVariantSetsCollectionPerPageEnum perPage;
+
     public GetVariantSetsCollectionRequest withPerPage(GetVariantSetsCollectionPerPageEnum perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetVariantSetsCollectionRequest(){}
 }

@@ -12,9 +12,13 @@ public class AccountHolderBalanceRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public AccountHolderBalanceRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
     }
     
+    public AccountHolderBalanceRequest(@JsonProperty("accountHolderCode") String accountHolderCode) {
+        this.accountHolderCode = accountHolderCode;
+  }
 }

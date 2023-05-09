@@ -18,6 +18,7 @@ public class DeliveryError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorClass")
     public DeliveryErrorErrorClassEnum errorClass;
+
     public DeliveryError withErrorClass(DeliveryErrorErrorClassEnum errorClass) {
         this.errorClass = errorClass;
         return this;
@@ -29,6 +30,7 @@ public class DeliveryError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorRatio")
     public Double errorRatio;
+
     public DeliveryError withErrorRatio(Double errorRatio) {
         this.errorRatio = errorRatio;
         return this;
@@ -40,9 +42,11 @@ public class DeliveryError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorType")
     public DeliveryErrorErrorTypeEnum errorType;
+
     public DeliveryError withErrorType(DeliveryErrorErrorTypeEnum errorType) {
         this.errorType = errorType;
         return this;
     }
     
+    public DeliveryError(){}
 }

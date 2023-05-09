@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateContainerRecipeResponse {
@@ -12,6 +13,7 @@ public class CreateContainerRecipeResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public CreateContainerRecipeResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class CreateContainerRecipeResponse {
      */
     
     public Object clientException;
+
     public CreateContainerRecipeResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class CreateContainerRecipeResponse {
     
     
     public String contentType;
+
     public CreateContainerRecipeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateContainerRecipeResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateContainerRecipeResponse createContainerRecipeResponse;
+
     public CreateContainerRecipeResponse withCreateContainerRecipeResponse(org.openapis.openapi.models.shared.CreateContainerRecipeResponse createContainerRecipeResponse) {
         this.createContainerRecipeResponse = createContainerRecipeResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateContainerRecipeResponse {
      */
     
     public Object forbiddenException;
+
     public CreateContainerRecipeResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CreateContainerRecipeResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateContainerRecipeResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -69,6 +76,7 @@ public class CreateContainerRecipeResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateContainerRecipeResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -79,6 +87,7 @@ public class CreateContainerRecipeResponse {
      */
     
     public Object invalidVersionNumberException;
+
     public CreateContainerRecipeResponse withInvalidVersionNumberException(Object invalidVersionNumberException) {
         this.invalidVersionNumberException = invalidVersionNumberException;
         return this;
@@ -89,6 +98,7 @@ public class CreateContainerRecipeResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateContainerRecipeResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -99,6 +109,7 @@ public class CreateContainerRecipeResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateContainerRecipeResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -109,6 +120,7 @@ public class CreateContainerRecipeResponse {
      */
     
     public Object serviceException;
+
     public CreateContainerRecipeResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -119,6 +131,7 @@ public class CreateContainerRecipeResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateContainerRecipeResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -126,6 +139,7 @@ public class CreateContainerRecipeResponse {
     
     
     public Integer statusCode;
+
     public CreateContainerRecipeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class CreateContainerRecipeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateContainerRecipeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,9 +158,14 @@ public class CreateContainerRecipeResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateContainerRecipeResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public CreateContainerRecipeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

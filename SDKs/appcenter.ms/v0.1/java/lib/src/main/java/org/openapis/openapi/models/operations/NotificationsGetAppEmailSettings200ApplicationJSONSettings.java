@@ -18,6 +18,7 @@ public class NotificationsGetAppEmailSettings200ApplicationJSONSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_value")
     public NotificationsGetAppEmailSettings200ApplicationJSONSettingsDefaultValueEnum defaultValue;
+
     public NotificationsGetAppEmailSettings200ApplicationJSONSettings withDefaultValue(NotificationsGetAppEmailSettings200ApplicationJSONSettingsDefaultValueEnum defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -28,6 +29,7 @@ public class NotificationsGetAppEmailSettings200ApplicationJSONSettings {
      */
     @JsonProperty("event_type")
     public NotificationsGetAppEmailSettings200ApplicationJSONSettingsEventTypeEnum eventType;
+
     public NotificationsGetAppEmailSettings200ApplicationJSONSettings withEventType(NotificationsGetAppEmailSettings200ApplicationJSONSettingsEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -38,9 +40,14 @@ public class NotificationsGetAppEmailSettings200ApplicationJSONSettings {
      */
     @JsonProperty("value")
     public NotificationsGetAppEmailSettings200ApplicationJSONSettingsValueEnum value;
+
     public NotificationsGetAppEmailSettings200ApplicationJSONSettings withValue(NotificationsGetAppEmailSettings200ApplicationJSONSettingsValueEnum value) {
         this.value = value;
         return this;
     }
     
+    public NotificationsGetAppEmailSettings200ApplicationJSONSettings(@JsonProperty("event_type") NotificationsGetAppEmailSettings200ApplicationJSONSettingsEventTypeEnum eventType, @JsonProperty("value") NotificationsGetAppEmailSettings200ApplicationJSONSettingsValueEnum value) {
+        this.eventType = eventType;
+        this.value = value;
+  }
 }

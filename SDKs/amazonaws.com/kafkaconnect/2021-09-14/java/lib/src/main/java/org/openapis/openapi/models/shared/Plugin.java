@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Plugin {
     @JsonProperty("customPlugin")
     public CustomPlugin customPlugin;
+
     public Plugin withCustomPlugin(CustomPlugin customPlugin) {
         this.customPlugin = customPlugin;
         return this;
     }
     
+    public Plugin(@JsonProperty("customPlugin") CustomPlugin customPlugin) {
+        this.customPlugin = customPlugin;
+  }
 }

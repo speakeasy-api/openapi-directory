@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAccountAccessConsentsConsentIdRequest {
@@ -12,6 +13,7 @@ public class DeleteAccountAccessConsentsConsentIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=consentId")
     public String consentId;
+
     public DeleteAccountAccessConsentsConsentIdRequest withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -22,6 +24,7 @@ public class DeleteAccountAccessConsentsConsentIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=sandbox-id")
     public String sandboxId;
+
     public DeleteAccountAccessConsentsConsentIdRequest withSandboxId(String sandboxId) {
         this.sandboxId = sandboxId;
         return this;
@@ -32,6 +35,7 @@ public class DeleteAccountAccessConsentsConsentIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
     public String xCustomerUserAgent;
+
     public DeleteAccountAccessConsentsConsentIdRequest withXCustomerUserAgent(String xCustomerUserAgent) {
         this.xCustomerUserAgent = xCustomerUserAgent;
         return this;
@@ -44,6 +48,7 @@ public class DeleteAccountAccessConsentsConsentIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
     public String xFapiAuthDate;
+
     public DeleteAccountAccessConsentsConsentIdRequest withXFapiAuthDate(String xFapiAuthDate) {
         this.xFapiAuthDate = xFapiAuthDate;
         return this;
@@ -54,6 +59,7 @@ public class DeleteAccountAccessConsentsConsentIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
     public String xFapiCustomerIpAddress;
+
     public DeleteAccountAccessConsentsConsentIdRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
         this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
         return this;
@@ -64,9 +70,14 @@ public class DeleteAccountAccessConsentsConsentIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public DeleteAccountAccessConsentsConsentIdRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
     }
     
+    public DeleteAccountAccessConsentsConsentIdRequest(@JsonProperty("consentId") String consentId, @JsonProperty("sandbox-id") String sandboxId) {
+        this.consentId = consentId;
+        this.sandboxId = sandboxId;
+  }
 }

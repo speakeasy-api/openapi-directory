@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOfferingsOfferingIdChannelsChannelIdLearnersRequest {
@@ -12,6 +13,7 @@ public class GetOfferingsOfferingIdChannelsChannelIdLearnersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
     public String channelId;
+
     public GetOfferingsOfferingIdChannelsChannelIdLearnersRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -22,9 +24,14 @@ public class GetOfferingsOfferingIdChannelsChannelIdLearnersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public GetOfferingsOfferingIdChannelsChannelIdLearnersRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public GetOfferingsOfferingIdChannelsChannelIdLearnersRequest(@JsonProperty("channelId") String channelId, @JsonProperty("offeringId") String offeringId) {
+        this.channelId = channelId;
+        this.offeringId = offeringId;
+  }
 }

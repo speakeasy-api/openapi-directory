@@ -15,6 +15,7 @@ public class StartReferenceImportJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public StartReferenceImportJobRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class StartReferenceImportJobRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public StartReferenceImportJobRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -35,9 +37,14 @@ public class StartReferenceImportJobRequestBody {
      */
     @JsonProperty("sources")
     public org.openapis.openapi.models.shared.StartReferenceImportJobSourceItem[] sources;
+
     public StartReferenceImportJobRequestBody withSources(org.openapis.openapi.models.shared.StartReferenceImportJobSourceItem[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public StartReferenceImportJobRequestBody(@JsonProperty("roleArn") String roleArn, @JsonProperty("sources") org.openapis.openapi.models.shared.StartReferenceImportJobSourceItem[] sources) {
+        this.roleArn = roleArn;
+        this.sources = sources;
+  }
 }

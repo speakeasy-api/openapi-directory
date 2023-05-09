@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyCertificateBasedAuthPropertiesResponse {
@@ -12,6 +13,7 @@ public class ModifyCertificateBasedAuthPropertiesResponse {
      */
     
     public Object accessDeniedException;
+
     public ModifyCertificateBasedAuthPropertiesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ModifyCertificateBasedAuthPropertiesResponse {
     
     
     public String contentType;
+
     public ModifyCertificateBasedAuthPropertiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ModifyCertificateBasedAuthPropertiesResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public ModifyCertificateBasedAuthPropertiesResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -39,6 +43,7 @@ public class ModifyCertificateBasedAuthPropertiesResponse {
      */
     
     public java.util.Map<String, Object> modifyCertificateBasedAuthPropertiesResult;
+
     public ModifyCertificateBasedAuthPropertiesResponse withModifyCertificateBasedAuthPropertiesResult(java.util.Map<String, Object> modifyCertificateBasedAuthPropertiesResult) {
         this.modifyCertificateBasedAuthPropertiesResult = modifyCertificateBasedAuthPropertiesResult;
         return this;
@@ -49,6 +54,7 @@ public class ModifyCertificateBasedAuthPropertiesResponse {
      */
     
     public Object operationNotSupportedException;
+
     public ModifyCertificateBasedAuthPropertiesResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -59,6 +65,7 @@ public class ModifyCertificateBasedAuthPropertiesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ModifyCertificateBasedAuthPropertiesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ModifyCertificateBasedAuthPropertiesResponse {
     
     
     public Integer statusCode;
+
     public ModifyCertificateBasedAuthPropertiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ModifyCertificateBasedAuthPropertiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyCertificateBasedAuthPropertiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ModifyCertificateBasedAuthPropertiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

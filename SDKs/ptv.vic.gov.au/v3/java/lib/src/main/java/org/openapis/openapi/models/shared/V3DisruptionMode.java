@@ -15,6 +15,7 @@ public class V3DisruptionMode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disruption_mode")
     public Integer disruptionMode;
+
     public V3DisruptionMode withDisruptionMode(Integer disruptionMode) {
         this.disruptionMode = disruptionMode;
         return this;
@@ -26,9 +27,11 @@ public class V3DisruptionMode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disruption_mode_name")
     public String disruptionModeName;
+
     public V3DisruptionMode withDisruptionModeName(String disruptionModeName) {
         this.disruptionModeName = disruptionModeName;
         return this;
     }
     
+    public V3DisruptionMode(){}
 }

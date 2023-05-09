@@ -12,6 +12,7 @@ public class ListAssessmentRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentTemplateArns")
     public String[] assessmentTemplateArns;
+
     public ListAssessmentRunsRequest withAssessmentTemplateArns(String[] assessmentTemplateArns) {
         this.assessmentTemplateArns = assessmentTemplateArns;
         return this;
@@ -20,6 +21,7 @@ public class ListAssessmentRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public AssessmentRunFilter filter;
+
     public ListAssessmentRunsRequest withFilter(AssessmentRunFilter filter) {
         this.filter = filter;
         return this;
@@ -28,6 +30,7 @@ public class ListAssessmentRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListAssessmentRunsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +39,11 @@ public class ListAssessmentRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAssessmentRunsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssessmentRunsRequest(){}
 }

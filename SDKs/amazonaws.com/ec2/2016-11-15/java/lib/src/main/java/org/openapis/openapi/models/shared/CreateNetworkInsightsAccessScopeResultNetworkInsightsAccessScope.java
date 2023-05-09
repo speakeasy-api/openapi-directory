@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScope {
     
     public OffsetDateTime createdDate;
+
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScope withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -19,6 +20,7 @@ public class CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScope {
     
     
     public String networkInsightsAccessScopeArn;
+
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScope withNetworkInsightsAccessScopeArn(String networkInsightsAccessScopeArn) {
         this.networkInsightsAccessScopeArn = networkInsightsAccessScopeArn;
         return this;
@@ -26,6 +28,7 @@ public class CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScope {
     
     
     public String networkInsightsAccessScopeId;
+
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScope withNetworkInsightsAccessScopeId(String networkInsightsAccessScopeId) {
         this.networkInsightsAccessScopeId = networkInsightsAccessScopeId;
         return this;
@@ -33,6 +36,7 @@ public class CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScope {
     
     
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeTags[] tags;
+
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScope withTags(CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeTags[] tags) {
         this.tags = tags;
         return this;
@@ -40,9 +44,11 @@ public class CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScope {
     
     
     public OffsetDateTime updatedDate;
+
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScope withUpdatedDate(OffsetDateTime updatedDate) {
         this.updatedDate = updatedDate;
         return this;
     }
     
+    public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScope(){}
 }

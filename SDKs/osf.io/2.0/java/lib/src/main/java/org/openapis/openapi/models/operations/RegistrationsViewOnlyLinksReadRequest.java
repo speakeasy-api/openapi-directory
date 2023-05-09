@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistrationsViewOnlyLinksReadRequest {
@@ -12,6 +13,7 @@ public class RegistrationsViewOnlyLinksReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=link_id")
     public String linkId;
+
     public RegistrationsViewOnlyLinksReadRequest withLinkId(String linkId) {
         this.linkId = linkId;
         return this;
@@ -22,9 +24,14 @@ public class RegistrationsViewOnlyLinksReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registration_id")
     public String registrationId;
+
     public RegistrationsViewOnlyLinksReadRequest withRegistrationId(String registrationId) {
         this.registrationId = registrationId;
         return this;
     }
     
+    public RegistrationsViewOnlyLinksReadRequest(@JsonProperty("link_id") String linkId, @JsonProperty("registration_id") String registrationId) {
+        this.linkId = linkId;
+        this.registrationId = registrationId;
+  }
 }

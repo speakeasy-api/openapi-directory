@@ -23,6 +23,7 @@ public class AssignmentCopy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignment")
     public String assignment;
+
     public AssignmentCopy withAssignment(String assignment) {
         this.assignment = assignment;
         return this;
@@ -34,6 +35,7 @@ public class AssignmentCopy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classroom")
     public String classroom;
+
     public AssignmentCopy withClassroom(String classroom) {
         this.classroom = classroom;
         return this;
@@ -50,9 +52,11 @@ public class AssignmentCopy {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("scheduledDate")
     public OffsetDateTime scheduledDate;
+
     public AssignmentCopy withScheduledDate(OffsetDateTime scheduledDate) {
         this.scheduledDate = scheduledDate;
         return this;
     }
     
+    public AssignmentCopy(){}
 }

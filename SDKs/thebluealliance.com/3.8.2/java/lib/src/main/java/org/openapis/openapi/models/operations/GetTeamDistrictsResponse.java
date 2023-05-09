@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTeamDistrictsResponse {
     
     public String contentType;
+
     public GetTeamDistrictsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTeamDistrictsResponse {
      */
     
     public org.openapis.openapi.models.shared.DistrictList[] districtLists;
+
     public GetTeamDistrictsResponse withDistrictLists(org.openapis.openapi.models.shared.DistrictList[] districtLists) {
         this.districtLists = districtLists;
         return this;
@@ -26,6 +29,7 @@ public class GetTeamDistrictsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetTeamDistrictsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetTeamDistrictsResponse {
     
     
     public Integer statusCode;
+
     public GetTeamDistrictsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetTeamDistrictsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTeamDistrictsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTeamDistrictsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

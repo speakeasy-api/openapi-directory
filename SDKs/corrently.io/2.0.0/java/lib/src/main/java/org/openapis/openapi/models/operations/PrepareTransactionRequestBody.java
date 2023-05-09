@@ -15,6 +15,7 @@ public class PrepareTransactionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public String account;
+
     public PrepareTransactionRequestBody withAccount(String account) {
         this.account = account;
         return this;
@@ -26,6 +27,7 @@ public class PrepareTransactionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signature")
     public String signature;
+
     public PrepareTransactionRequestBody withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -37,6 +39,7 @@ public class PrepareTransactionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public String to;
+
     public PrepareTransactionRequestBody withTo(String to) {
         this.to = to;
         return this;
@@ -48,6 +51,7 @@ public class PrepareTransactionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public PrepareTransactionRequestBody withValue(Long value) {
         this.value = value;
         return this;
@@ -56,9 +60,11 @@ public class PrepareTransactionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variation")
     public PrepareTransactionRequestBodyVariationEnum variation;
+
     public PrepareTransactionRequestBody withVariation(PrepareTransactionRequestBodyVariationEnum variation) {
         this.variation = variation;
         return this;
     }
     
+    public PrepareTransactionRequestBody(){}
 }

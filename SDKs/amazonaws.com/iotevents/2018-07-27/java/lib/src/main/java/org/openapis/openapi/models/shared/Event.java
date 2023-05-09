@@ -15,6 +15,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public Action[] actions;
+
     public Event withActions(Action[] actions) {
         this.actions = actions;
         return this;
@@ -23,6 +24,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public Event withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -30,9 +32,13 @@ public class Event {
     
     @JsonProperty("eventName")
     public String eventName;
+
     public Event withEventName(String eventName) {
         this.eventName = eventName;
         return this;
     }
     
+    public Event(@JsonProperty("eventName") String eventName) {
+        this.eventName = eventName;
+  }
 }

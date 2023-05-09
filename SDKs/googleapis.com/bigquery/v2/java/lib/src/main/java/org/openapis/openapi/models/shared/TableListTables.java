@@ -12,6 +12,7 @@ public class TableListTables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clustering")
     public Clustering clustering;
+
     public TableListTables withClustering(Clustering clustering) {
         this.clustering = clustering;
         return this;
@@ -23,6 +24,7 @@ public class TableListTables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public TableListTables withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -34,6 +36,7 @@ public class TableListTables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationTime")
     public String expirationTime;
+
     public TableListTables withExpirationTime(String expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -45,6 +48,7 @@ public class TableListTables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyName")
     public String friendlyName;
+
     public TableListTables withFriendlyName(String friendlyName) {
         this.friendlyName = friendlyName;
         return this;
@@ -56,6 +60,7 @@ public class TableListTables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TableListTables withId(String id) {
         this.id = id;
         return this;
@@ -67,6 +72,7 @@ public class TableListTables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TableListTables withKind(String kind) {
         this.kind = kind;
         return this;
@@ -78,6 +84,7 @@ public class TableListTables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public TableListTables withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -86,6 +93,7 @@ public class TableListTables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rangePartitioning")
     public RangePartitioning rangePartitioning;
+
     public TableListTables withRangePartitioning(RangePartitioning rangePartitioning) {
         this.rangePartitioning = rangePartitioning;
         return this;
@@ -94,6 +102,7 @@ public class TableListTables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableReference")
     public TableReference tableReference;
+
     public TableListTables withTableReference(TableReference tableReference) {
         this.tableReference = tableReference;
         return this;
@@ -102,6 +111,7 @@ public class TableListTables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timePartitioning")
     public TimePartitioning timePartitioning;
+
     public TableListTables withTimePartitioning(TimePartitioning timePartitioning) {
         this.timePartitioning = timePartitioning;
         return this;
@@ -113,6 +123,7 @@ public class TableListTables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TableListTables withType(String type) {
         this.type = type;
         return this;
@@ -124,9 +135,11 @@ public class TableListTables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view")
     public TableListTablesView view;
+
     public TableListTables withView(TableListTablesView view) {
         this.view = view;
         return this;
     }
     
+    public TableListTables(){}
 }

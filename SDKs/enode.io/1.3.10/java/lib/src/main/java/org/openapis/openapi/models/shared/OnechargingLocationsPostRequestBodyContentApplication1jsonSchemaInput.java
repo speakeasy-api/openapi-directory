@@ -15,6 +15,7 @@ public class OnechargingLocationsPostRequestBodyContentApplication1jsonSchemaInp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public OnechargingLocationsPostRequestBodyContentApplication1jsonSchemaInput withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -26,6 +27,7 @@ public class OnechargingLocationsPostRequestBodyContentApplication1jsonSchemaInp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public OnechargingLocationsPostRequestBodyContentApplication1jsonSchemaInput withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -37,9 +39,11 @@ public class OnechargingLocationsPostRequestBodyContentApplication1jsonSchemaInp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OnechargingLocationsPostRequestBodyContentApplication1jsonSchemaInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OnechargingLocationsPostRequestBodyContentApplication1jsonSchemaInput(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedAction")
     public String expectedAction;
+
     public GoogleCloudRecaptchaenterpriseV1Event withExpectedAction(String expectedAction) {
         this.expectedAction = expectedAction;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("express")
     public Boolean express;
+
     public GoogleCloudRecaptchaenterpriseV1Event withExpress(Boolean express) {
         this.express = express;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecaptchaenterpriseV1Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewallPolicyEvaluation")
     public Boolean firewallPolicyEvaluation;
+
     public GoogleCloudRecaptchaenterpriseV1Event withFirewallPolicyEvaluation(Boolean firewallPolicyEvaluation) {
         this.firewallPolicyEvaluation = firewallPolicyEvaluation;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecaptchaenterpriseV1Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashedAccountId")
     public String hashedAccountId;
+
     public GoogleCloudRecaptchaenterpriseV1Event withHashedAccountId(String hashedAccountId) {
         this.hashedAccountId = hashedAccountId;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRecaptchaenterpriseV1Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public String[] headers;
+
     public GoogleCloudRecaptchaenterpriseV1Event withHeaders(String[] headers) {
         this.headers = headers;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRecaptchaenterpriseV1Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ja3")
     public String ja3;
+
     public GoogleCloudRecaptchaenterpriseV1Event withJa3(String ja3) {
         this.ja3 = ja3;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudRecaptchaenterpriseV1Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedUri")
     public String requestedUri;
+
     public GoogleCloudRecaptchaenterpriseV1Event withRequestedUri(String requestedUri) {
         this.requestedUri = requestedUri;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudRecaptchaenterpriseV1Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("siteKey")
     public String siteKey;
+
     public GoogleCloudRecaptchaenterpriseV1Event withSiteKey(String siteKey) {
         this.siteKey = siteKey;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudRecaptchaenterpriseV1Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public GoogleCloudRecaptchaenterpriseV1Event withToken(String token) {
         this.token = token;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudRecaptchaenterpriseV1Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionData")
     public GoogleCloudRecaptchaenterpriseV1TransactionData transactionData;
+
     public GoogleCloudRecaptchaenterpriseV1Event withTransactionData(GoogleCloudRecaptchaenterpriseV1TransactionData transactionData) {
         this.transactionData = transactionData;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudRecaptchaenterpriseV1Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAgent")
     public String userAgent;
+
     public GoogleCloudRecaptchaenterpriseV1Event withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudRecaptchaenterpriseV1Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userIpAddress")
     public String userIpAddress;
+
     public GoogleCloudRecaptchaenterpriseV1Event withUserIpAddress(String userIpAddress) {
         this.userIpAddress = userIpAddress;
         return this;
@@ -150,9 +162,11 @@ public class GoogleCloudRecaptchaenterpriseV1Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wafTokenAssessment")
     public Boolean wafTokenAssessment;
+
     public GoogleCloudRecaptchaenterpriseV1Event withWafTokenAssessment(Boolean wafTokenAssessment) {
         this.wafTokenAssessment = wafTokenAssessment;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1Event(){}
 }

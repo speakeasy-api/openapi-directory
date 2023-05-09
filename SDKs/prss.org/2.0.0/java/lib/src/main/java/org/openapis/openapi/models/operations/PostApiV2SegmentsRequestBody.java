@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV2SegmentsRequestBody {
@@ -12,6 +13,7 @@ public class PostApiV2SegmentsRequestBody {
      */
     @SpeakeasyMetadata("form:name=cdDriveUri")
     public String cdDriveUri;
+
     public PostApiV2SegmentsRequestBody withCdDriveUri(String cdDriveUri) {
         this.cdDriveUri = cdDriveUri;
         return this;
@@ -22,6 +24,7 @@ public class PostApiV2SegmentsRequestBody {
      */
     @SpeakeasyMetadata("form:name=episodeId")
     public Long episodeId;
+
     public PostApiV2SegmentsRequestBody withEpisodeId(Long episodeId) {
         this.episodeId = episodeId;
         return this;
@@ -32,6 +35,7 @@ public class PostApiV2SegmentsRequestBody {
      */
     @SpeakeasyMetadata("form:name=inCue")
     public String inCue;
+
     public PostApiV2SegmentsRequestBody withInCue(String inCue) {
         this.inCue = inCue;
         return this;
@@ -42,6 +46,7 @@ public class PostApiV2SegmentsRequestBody {
      */
     @SpeakeasyMetadata("form:name=outCue")
     public String outCue;
+
     public PostApiV2SegmentsRequestBody withOutCue(String outCue) {
         this.outCue = outCue;
         return this;
@@ -52,9 +57,15 @@ public class PostApiV2SegmentsRequestBody {
      */
     @SpeakeasyMetadata("form:name=segmentNumber")
     public Integer segmentNumber;
+
     public PostApiV2SegmentsRequestBody withSegmentNumber(Integer segmentNumber) {
         this.segmentNumber = segmentNumber;
         return this;
     }
     
+    public PostApiV2SegmentsRequestBody(@JsonProperty("cdDriveUri") String cdDriveUri, @JsonProperty("episodeId") Long episodeId, @JsonProperty("segmentNumber") Integer segmentNumber) {
+        this.cdDriveUri = cdDriveUri;
+        this.episodeId = episodeId;
+        this.segmentNumber = segmentNumber;
+  }
 }

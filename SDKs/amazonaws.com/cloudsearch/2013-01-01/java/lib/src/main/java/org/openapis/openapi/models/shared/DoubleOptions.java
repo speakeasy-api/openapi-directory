@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DoubleOptions {
     
     public Double defaultValue;
+
     public DoubleOptions withDefaultValue(Double defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -19,6 +20,7 @@ public class DoubleOptions {
     
     
     public Boolean facetEnabled;
+
     public DoubleOptions withFacetEnabled(Boolean facetEnabled) {
         this.facetEnabled = facetEnabled;
         return this;
@@ -26,6 +28,7 @@ public class DoubleOptions {
     
     
     public Boolean returnEnabled;
+
     public DoubleOptions withReturnEnabled(Boolean returnEnabled) {
         this.returnEnabled = returnEnabled;
         return this;
@@ -33,6 +36,7 @@ public class DoubleOptions {
     
     
     public Boolean searchEnabled;
+
     public DoubleOptions withSearchEnabled(Boolean searchEnabled) {
         this.searchEnabled = searchEnabled;
         return this;
@@ -40,6 +44,7 @@ public class DoubleOptions {
     
     
     public Boolean sortEnabled;
+
     public DoubleOptions withSortEnabled(Boolean sortEnabled) {
         this.sortEnabled = sortEnabled;
         return this;
@@ -47,9 +52,11 @@ public class DoubleOptions {
     
     
     public String sourceField;
+
     public DoubleOptions withSourceField(String sourceField) {
         this.sourceField = sourceField;
         return this;
     }
     
+    public DoubleOptions(){}
 }

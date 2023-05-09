@@ -18,6 +18,7 @@ public class AndroidAppInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AndroidAppInfo withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class AndroidAppInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public AndroidAppInfo withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -40,6 +42,7 @@ public class AndroidAppInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionCode")
     public String versionCode;
+
     public AndroidAppInfo withVersionCode(String versionCode) {
         this.versionCode = versionCode;
         return this;
@@ -51,9 +54,11 @@ public class AndroidAppInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionName")
     public String versionName;
+
     public AndroidAppInfo withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public AndroidAppInfo(){}
 }

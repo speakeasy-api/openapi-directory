@@ -18,6 +18,7 @@ public class CustomErrorResponsePolicyCustomErrorResponseRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchResponseCodes")
     public String[] matchResponseCodes;
+
     public CustomErrorResponsePolicyCustomErrorResponseRule withMatchResponseCodes(String[] matchResponseCodes) {
         this.matchResponseCodes = matchResponseCodes;
         return this;
@@ -29,6 +30,7 @@ public class CustomErrorResponsePolicyCustomErrorResponseRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideResponseCode")
     public Integer overrideResponseCode;
+
     public CustomErrorResponsePolicyCustomErrorResponseRule withOverrideResponseCode(Integer overrideResponseCode) {
         this.overrideResponseCode = overrideResponseCode;
         return this;
@@ -40,9 +42,11 @@ public class CustomErrorResponsePolicyCustomErrorResponseRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public CustomErrorResponsePolicyCustomErrorResponseRule withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public CustomErrorResponsePolicyCustomErrorResponseRule(){}
 }

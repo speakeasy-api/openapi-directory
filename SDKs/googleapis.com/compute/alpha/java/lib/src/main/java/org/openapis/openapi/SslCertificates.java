@@ -59,11 +59,9 @@ public class SslCertificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSslCertificatesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeSslCertificatesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeSslCertificatesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeSslCertificatesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             sslCertificateAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class SslCertificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSslCertificatesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeSslCertificatesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeSslCertificatesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeSslCertificatesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class SslCertificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSslCertificatesGetResponse res = new org.openapis.openapi.models.operations.ComputeSslCertificatesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeSslCertificatesGetResponse res = new org.openapis.openapi.models.operations.ComputeSslCertificatesGetResponse(contentType, httpRes.statusCode()) {{
             sslCertificate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class SslCertificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSslCertificatesInsertResponse res = new org.openapis.openapi.models.operations.ComputeSslCertificatesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeSslCertificatesInsertResponse res = new org.openapis.openapi.models.operations.ComputeSslCertificatesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class SslCertificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSslCertificatesListResponse res = new org.openapis.openapi.models.operations.ComputeSslCertificatesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeSslCertificatesListResponse res = new org.openapis.openapi.models.operations.ComputeSslCertificatesListResponse(contentType, httpRes.statusCode()) {{
             sslCertificateList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class SslCertificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSslCertificatesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeSslCertificatesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeSslCertificatesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeSslCertificatesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

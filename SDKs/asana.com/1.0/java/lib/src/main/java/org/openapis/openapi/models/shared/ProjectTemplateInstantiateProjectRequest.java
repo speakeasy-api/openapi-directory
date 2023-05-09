@@ -15,6 +15,7 @@ public class ProjectTemplateInstantiateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_strict")
     public Boolean isStrict;
+
     public ProjectTemplateInstantiateProjectRequest withIsStrict(Boolean isStrict) {
         this.isStrict = isStrict;
         return this;
@@ -25,6 +26,7 @@ public class ProjectTemplateInstantiateProjectRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public ProjectTemplateInstantiateProjectRequest withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +37,7 @@ public class ProjectTemplateInstantiateProjectRequest {
      */
     @JsonProperty("public")
     public Boolean public_;
+
     public ProjectTemplateInstantiateProjectRequest withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -46,6 +49,7 @@ public class ProjectTemplateInstantiateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_dates")
     public DateVariableRequest[] requestedDates;
+
     public ProjectTemplateInstantiateProjectRequest withRequestedDates(DateVariableRequest[] requestedDates) {
         this.requestedDates = requestedDates;
         return this;
@@ -57,6 +61,7 @@ public class ProjectTemplateInstantiateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public ProjectTemplateInstantiateProjectRequest withTeam(String team) {
         this.team = team;
         return this;
@@ -68,9 +73,14 @@ public class ProjectTemplateInstantiateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace")
     public String workspace;
+
     public ProjectTemplateInstantiateProjectRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public ProjectTemplateInstantiateProjectRequest(@JsonProperty("name") String name, @JsonProperty("public") Boolean public_) {
+        this.name = name;
+        this.public_ = public_;
+  }
 }

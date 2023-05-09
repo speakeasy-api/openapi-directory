@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTableResponse {
@@ -12,6 +13,7 @@ public class DeleteTableResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteTableResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTableResponse {
     
     
     public String contentType;
+
     public DeleteTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTableResponse {
      */
     
     public Object internalServerException;
+
     public DeleteTableResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTableResponse {
      */
     
     public Object invalidEndpointException;
+
     public DeleteTableResponse withInvalidEndpointException(Object invalidEndpointException) {
         this.invalidEndpointException = invalidEndpointException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteTableResponse {
     
     
     public Integer statusCode;
+
     public DeleteTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteTableResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteTableResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteTableResponse {
      */
     
     public Object throttlingException;
+
     public DeleteTableResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteTableResponse {
      */
     
     public Object validationException;
+
     public DeleteTableResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

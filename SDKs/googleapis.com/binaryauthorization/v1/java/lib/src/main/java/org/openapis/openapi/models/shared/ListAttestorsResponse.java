@@ -18,6 +18,7 @@ public class ListAttestorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attestors")
     public Attestor[] attestors;
+
     public ListAttestorsResponse withAttestors(Attestor[] attestors) {
         this.attestors = attestors;
         return this;
@@ -29,9 +30,11 @@ public class ListAttestorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAttestorsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAttestorsResponse(){}
 }

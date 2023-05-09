@@ -15,9 +15,11 @@ public class UpdateFunctionConfigurationRequestBodyEphemeralStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public Long size;
+
     public UpdateFunctionConfigurationRequestBodyEphemeralStorage withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public UpdateFunctionConfigurationRequestBodyEphemeralStorage(){}
 }

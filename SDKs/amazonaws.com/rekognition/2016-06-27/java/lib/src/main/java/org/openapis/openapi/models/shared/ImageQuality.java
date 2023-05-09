@@ -15,6 +15,7 @@ public class ImageQuality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Brightness")
     public Float brightness;
+
     public ImageQuality withBrightness(Float brightness) {
         this.brightness = brightness;
         return this;
@@ -23,9 +24,11 @@ public class ImageQuality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sharpness")
     public Float sharpness;
+
     public ImageQuality withSharpness(Float sharpness) {
         this.sharpness = sharpness;
         return this;
     }
     
+    public ImageQuality(){}
 }

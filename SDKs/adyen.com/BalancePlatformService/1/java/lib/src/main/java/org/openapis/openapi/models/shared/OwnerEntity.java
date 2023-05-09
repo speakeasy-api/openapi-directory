@@ -12,6 +12,7 @@ public class OwnerEntity {
      */
     @JsonProperty("id")
     public String id;
+
     public OwnerEntity withId(String id) {
         this.id = id;
         return this;
@@ -24,9 +25,14 @@ public class OwnerEntity {
      */
     @JsonProperty("type")
     public String type;
+
     public OwnerEntity withType(String type) {
         this.type = type;
         return this;
     }
     
+    public OwnerEntity(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

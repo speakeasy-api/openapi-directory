@@ -15,6 +15,7 @@ public class CalendarEventResourceAttributesAttendees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_status")
     public CalendarEventResourceAttributesAttendeesResponseStatusEnum responseStatus;
+
     public CalendarEventResourceAttributesAttendees withResponseStatus(CalendarEventResourceAttributesAttendeesResponseStatusEnum responseStatus) {
         this.responseStatus = responseStatus;
         return this;
@@ -23,9 +24,11 @@ public class CalendarEventResourceAttributesAttendees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public CalendarEventResourceAttributesAttendees withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public CalendarEventResourceAttributesAttendees(){}
 }

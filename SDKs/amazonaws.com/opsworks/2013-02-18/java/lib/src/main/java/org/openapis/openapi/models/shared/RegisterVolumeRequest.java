@@ -12,6 +12,7 @@ public class RegisterVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2VolumeId")
     public String ec2VolumeId;
+
     public RegisterVolumeRequest withEc2VolumeId(String ec2VolumeId) {
         this.ec2VolumeId = ec2VolumeId;
         return this;
@@ -19,9 +20,13 @@ public class RegisterVolumeRequest {
     
     @JsonProperty("StackId")
     public String stackId;
+
     public RegisterVolumeRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public RegisterVolumeRequest(@JsonProperty("StackId") String stackId) {
+        this.stackId = stackId;
+  }
 }

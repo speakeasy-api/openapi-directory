@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateRuleGroupRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public CreateRuleGroupRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -18,6 +19,7 @@ public class CreateRuleGroupRequest {
     
     @JsonProperty("MetricName")
     public String metricName;
+
     public CreateRuleGroupRequest withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -25,6 +27,7 @@ public class CreateRuleGroupRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateRuleGroupRequest withName(String name) {
         this.name = name;
         return this;
@@ -33,9 +36,15 @@ public class CreateRuleGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateRuleGroupRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRuleGroupRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("MetricName") String metricName, @JsonProperty("Name") String name) {
+        this.changeToken = changeToken;
+        this.metricName = metricName;
+        this.name = name;
+  }
 }

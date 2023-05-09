@@ -15,6 +15,7 @@ public class ListOutgoingTypedLinksRequestBodyFilterTypedLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaArn")
     public String schemaArn;
+
     public ListOutgoingTypedLinksRequestBodyFilterTypedLink withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
@@ -23,9 +24,11 @@ public class ListOutgoingTypedLinksRequestBodyFilterTypedLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypedLinkName")
     public String typedLinkName;
+
     public ListOutgoingTypedLinksRequestBodyFilterTypedLink withTypedLinkName(String typedLinkName) {
         this.typedLinkName = typedLinkName;
         return this;
     }
     
+    public ListOutgoingTypedLinksRequestBodyFilterTypedLink(){}
 }

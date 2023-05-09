@@ -15,6 +15,7 @@ public class StoresCreate201ApplicationJSONIntuneDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_category")
     public StoresCreate201ApplicationJSONIntuneDetailsAppCategory appCategory;
+
     public StoresCreate201ApplicationJSONIntuneDetails withAppCategory(StoresCreate201ApplicationJSONIntuneDetailsAppCategory appCategory) {
         this.appCategory = appCategory;
         return this;
@@ -23,9 +24,11 @@ public class StoresCreate201ApplicationJSONIntuneDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_audience")
     public StoresCreate201ApplicationJSONIntuneDetailsTargetAudience targetAudience;
+
     public StoresCreate201ApplicationJSONIntuneDetails withTargetAudience(StoresCreate201ApplicationJSONIntuneDetailsTargetAudience targetAudience) {
         this.targetAudience = targetAudience;
         return this;
     }
     
+    public StoresCreate201ApplicationJSONIntuneDetails(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OptionsWalletAccountIdPayResponse {
     
     public String contentType;
+
     public OptionsWalletAccountIdPayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OptionsWalletAccountIdPayResponse {
      */
     
     public java.util.Map<String, Object> empty;
+
     public OptionsWalletAccountIdPayResponse withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
@@ -26,6 +29,7 @@ public class OptionsWalletAccountIdPayResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public OptionsWalletAccountIdPayResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class OptionsWalletAccountIdPayResponse {
     
     
     public Integer statusCode;
+
     public OptionsWalletAccountIdPayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class OptionsWalletAccountIdPayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OptionsWalletAccountIdPayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OptionsWalletAccountIdPayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

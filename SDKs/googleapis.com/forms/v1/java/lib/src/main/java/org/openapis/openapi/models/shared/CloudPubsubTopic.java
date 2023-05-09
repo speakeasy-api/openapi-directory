@@ -18,9 +18,11 @@ public class CloudPubsubTopic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicName")
     public String topicName;
+
     public CloudPubsubTopic withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     
+    public CloudPubsubTopic(){}
 }

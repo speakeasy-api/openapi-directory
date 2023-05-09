@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetWorkGroupInput {
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public GetWorkGroupInput withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public GetWorkGroupInput(@JsonProperty("WorkGroup") String workGroup) {
+        this.workGroup = workGroup;
+  }
 }

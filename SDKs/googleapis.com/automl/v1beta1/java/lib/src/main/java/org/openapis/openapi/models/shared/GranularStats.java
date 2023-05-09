@@ -18,9 +18,11 @@ public class GranularStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buckets")
     public java.util.Map<String, String> buckets;
+
     public GranularStats withBuckets(java.util.Map<String, String> buckets) {
         this.buckets = buckets;
         return this;
     }
     
+    public GranularStats(){}
 }

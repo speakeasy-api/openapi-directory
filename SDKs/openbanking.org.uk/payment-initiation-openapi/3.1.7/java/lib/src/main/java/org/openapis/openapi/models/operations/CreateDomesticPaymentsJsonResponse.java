@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDomesticPaymentsJsonResponse {
     
     public byte[] body;
+
     public CreateDomesticPaymentsJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CreateDomesticPaymentsJsonResponse {
     
     
     public String contentType;
+
     public CreateDomesticPaymentsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CreateDomesticPaymentsJsonResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CreateDomesticPaymentsJsonResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class CreateDomesticPaymentsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public CreateDomesticPaymentsJsonResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -43,6 +48,7 @@ public class CreateDomesticPaymentsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBWriteDomesticResponse5 obWriteDomesticResponse5;
+
     public CreateDomesticPaymentsJsonResponse withOBWriteDomesticResponse5(org.openapis.openapi.models.shared.OBWriteDomesticResponse5 obWriteDomesticResponse5) {
         this.obWriteDomesticResponse5 = obWriteDomesticResponse5;
         return this;
@@ -50,6 +56,7 @@ public class CreateDomesticPaymentsJsonResponse {
     
     
     public Integer statusCode;
+
     public CreateDomesticPaymentsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class CreateDomesticPaymentsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDomesticPaymentsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDomesticPaymentsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

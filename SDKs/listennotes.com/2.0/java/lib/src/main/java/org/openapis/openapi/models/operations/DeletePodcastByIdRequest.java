@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePodcastByIdRequest {
@@ -12,6 +13,7 @@ public class DeletePodcastByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
     public String xListenAPIKey;
+
     public DeletePodcastByIdRequest withXListenAPIKey(String xListenAPIKey) {
         this.xListenAPIKey = xListenAPIKey;
         return this;
@@ -22,6 +24,7 @@ public class DeletePodcastByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public DeletePodcastByIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +35,14 @@ public class DeletePodcastByIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
     public String reason;
+
     public DeletePodcastByIdRequest withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public DeletePodcastByIdRequest(@JsonProperty("X-ListenAPI-Key") String xListenAPIKey, @JsonProperty("id") String id) {
+        this.xListenAPIKey = xListenAPIKey;
+        this.id = id;
+  }
 }

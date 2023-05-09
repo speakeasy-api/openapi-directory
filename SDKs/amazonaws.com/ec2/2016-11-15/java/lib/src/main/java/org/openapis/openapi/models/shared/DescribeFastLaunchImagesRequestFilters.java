@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFastLaunchImagesRequestFilters {
     
     public String name;
+
     public DescribeFastLaunchImagesRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeFastLaunchImagesRequestFilters {
     
     
     public String[] values;
+
     public DescribeFastLaunchImagesRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeFastLaunchImagesRequestFilters(){}
 }

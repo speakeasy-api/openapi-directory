@@ -21,6 +21,7 @@ public class TransferEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commentOnFrom")
     public String commentOnFrom;
+
     public TransferEntry withCommentOnFrom(String commentOnFrom) {
         this.commentOnFrom = commentOnFrom;
         return this;
@@ -34,6 +35,7 @@ public class TransferEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commentOnTo")
     public String commentOnTo;
+
     public TransferEntry withCommentOnTo(String commentOnTo) {
         this.commentOnTo = commentOnTo;
         return this;
@@ -45,6 +47,7 @@ public class TransferEntry {
      */
     @JsonProperty("credits")
     public Double credits;
+
     public TransferEntry withCredits(Double credits) {
         this.credits = credits;
         return this;
@@ -57,6 +60,7 @@ public class TransferEntry {
      */
     @JsonProperty("toUserId")
     public Double toUserId;
+
     public TransferEntry withToUserId(Double toUserId) {
         this.toUserId = toUserId;
         return this;
@@ -68,9 +72,15 @@ public class TransferEntry {
      */
     @JsonProperty("toUsername")
     public String toUsername;
+
     public TransferEntry withToUsername(String toUsername) {
         this.toUsername = toUsername;
         return this;
     }
     
+    public TransferEntry(@JsonProperty("credits") Double credits, @JsonProperty("toUserId") Double toUserId, @JsonProperty("toUsername") String toUsername) {
+        this.credits = credits;
+        this.toUserId = toUserId;
+        this.toUsername = toUsername;
+  }
 }

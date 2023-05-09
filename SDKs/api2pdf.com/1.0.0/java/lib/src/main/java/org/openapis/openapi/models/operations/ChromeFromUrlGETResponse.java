@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromeFromUrlGETResponse {
@@ -12,6 +13,7 @@ public class ChromeFromUrlGETResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiResponseFailure apiResponseFailure;
+
     public ChromeFromUrlGETResponse withApiResponseFailure(org.openapis.openapi.models.shared.ApiResponseFailure apiResponseFailure) {
         this.apiResponseFailure = apiResponseFailure;
         return this;
@@ -22,6 +24,7 @@ public class ChromeFromUrlGETResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiResponseSuccess apiResponseSuccess;
+
     public ChromeFromUrlGETResponse withApiResponseSuccess(org.openapis.openapi.models.shared.ApiResponseSuccess apiResponseSuccess) {
         this.apiResponseSuccess = apiResponseSuccess;
         return this;
@@ -29,6 +32,7 @@ public class ChromeFromUrlGETResponse {
     
     
     public String contentType;
+
     public ChromeFromUrlGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class ChromeFromUrlGETResponse {
     
     
     public Integer statusCode;
+
     public ChromeFromUrlGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ChromeFromUrlGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromeFromUrlGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ChromeFromUrlGETResponse {
      */
     
     public byte[] chromeFromUrlGET200ApplicationPdfBinaryString;
+
     public ChromeFromUrlGETResponse withChromeFromUrlGET200ApplicationPdfBinaryString(byte[] chromeFromUrlGET200ApplicationPdfBinaryString) {
         this.chromeFromUrlGET200ApplicationPdfBinaryString = chromeFromUrlGET200ApplicationPdfBinaryString;
         return this;
     }
     
+    public ChromeFromUrlGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

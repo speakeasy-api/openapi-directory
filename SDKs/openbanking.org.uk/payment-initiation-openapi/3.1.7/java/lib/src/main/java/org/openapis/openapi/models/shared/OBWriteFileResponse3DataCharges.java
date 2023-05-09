@@ -15,6 +15,7 @@ public class OBWriteFileResponse3DataCharges {
      */
     @JsonProperty("Amount")
     public OBActiveOrHistoricCurrencyAndAmount amount;
+
     public OBWriteFileResponse3DataCharges withAmount(OBActiveOrHistoricCurrencyAndAmount amount) {
         this.amount = amount;
         return this;
@@ -25,6 +26,7 @@ public class OBWriteFileResponse3DataCharges {
      */
     @JsonProperty("ChargeBearer")
     public OBChargeBearerType1CodeEnum chargeBearer;
+
     public OBWriteFileResponse3DataCharges withChargeBearer(OBChargeBearerType1CodeEnum chargeBearer) {
         this.chargeBearer = chargeBearer;
         return this;
@@ -35,9 +37,15 @@ public class OBWriteFileResponse3DataCharges {
      */
     @JsonProperty("Type")
     public String type;
+
     public OBWriteFileResponse3DataCharges withType(String type) {
         this.type = type;
         return this;
     }
     
+    public OBWriteFileResponse3DataCharges(@JsonProperty("Amount") OBActiveOrHistoricCurrencyAndAmount amount, @JsonProperty("ChargeBearer") OBChargeBearerType1CodeEnum chargeBearer, @JsonProperty("Type") String type) {
+        this.amount = amount;
+        this.chargeBearer = chargeBearer;
+        this.type = type;
+  }
 }

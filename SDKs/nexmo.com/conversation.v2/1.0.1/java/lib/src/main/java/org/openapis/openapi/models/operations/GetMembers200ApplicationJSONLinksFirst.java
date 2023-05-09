@@ -12,9 +12,11 @@ public class GetMembers200ApplicationJSONLinksFirst {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public GetMembers200ApplicationJSONLinksFirst withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public GetMembers200ApplicationJSONLinksFirst(){}
 }

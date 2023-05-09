@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomAction {
     @JsonProperty("ActionDefinition")
     public ActionDefinition actionDefinition;
+
     public CustomAction withActionDefinition(ActionDefinition actionDefinition) {
         this.actionDefinition = actionDefinition;
         return this;
@@ -19,9 +20,14 @@ public class CustomAction {
     
     @JsonProperty("ActionName")
     public String actionName;
+
     public CustomAction withActionName(String actionName) {
         this.actionName = actionName;
         return this;
     }
     
+    public CustomAction(@JsonProperty("ActionDefinition") ActionDefinition actionDefinition, @JsonProperty("ActionName") String actionName) {
+        this.actionDefinition = actionDefinition;
+        this.actionName = actionName;
+  }
 }

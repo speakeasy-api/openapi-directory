@@ -18,6 +18,7 @@ public class WriteInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public InstructionInput input;
+
     public WriteInstruction withInput(InstructionInput input) {
         this.input = input;
         return this;
@@ -29,9 +30,11 @@ public class WriteInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sink")
     public Sink sink;
+
     public WriteInstruction withSink(Sink sink) {
         this.sink = sink;
         return this;
     }
     
+    public WriteInstruction(){}
 }

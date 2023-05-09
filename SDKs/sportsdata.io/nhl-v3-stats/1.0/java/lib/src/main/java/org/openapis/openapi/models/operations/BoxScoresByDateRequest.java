@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BoxScoresByDateRequest {
@@ -14,6 +15,7 @@ public class BoxScoresByDateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
     public String date;
+
     public BoxScoresByDateRequest withDate(String date) {
         this.date = date;
         return this;
@@ -24,9 +26,14 @@ public class BoxScoresByDateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public BoxScoresByDateFormatEnum format;
+
     public BoxScoresByDateRequest withFormat(BoxScoresByDateFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public BoxScoresByDateRequest(@JsonProperty("date") String date, @JsonProperty("format") BoxScoresByDateFormatEnum format) {
+        this.date = date;
+        this.format = format;
+  }
 }

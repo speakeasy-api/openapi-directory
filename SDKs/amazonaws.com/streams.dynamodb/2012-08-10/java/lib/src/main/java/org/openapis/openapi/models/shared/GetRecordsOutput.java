@@ -15,6 +15,7 @@ public class GetRecordsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextShardIterator")
     public String nextShardIterator;
+
     public GetRecordsOutput withNextShardIterator(String nextShardIterator) {
         this.nextShardIterator = nextShardIterator;
         return this;
@@ -23,9 +24,11 @@ public class GetRecordsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Records")
     public Record[] records;
+
     public GetRecordsOutput withRecords(Record[] records) {
         this.records = records;
         return this;
     }
     
+    public GetRecordsOutput(){}
 }

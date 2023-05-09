@@ -12,6 +12,7 @@ public class ModifySubaccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ModifySubaccountRequest withName(String name) {
         this.name = name;
         return this;
@@ -20,6 +21,7 @@ public class ModifySubaccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspended")
     public Boolean suspended;
+
     public ModifySubaccountRequest withSuspended(Boolean suspended) {
         this.suspended = suspended;
         return this;
@@ -28,9 +30,11 @@ public class ModifySubaccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("use_primary_account_balance")
     public Boolean usePrimaryAccountBalance;
+
     public ModifySubaccountRequest withUsePrimaryAccountBalance(Boolean usePrimaryAccountBalance) {
         this.usePrimaryAccountBalance = usePrimaryAccountBalance;
         return this;
     }
     
+    public ModifySubaccountRequest(){}
 }

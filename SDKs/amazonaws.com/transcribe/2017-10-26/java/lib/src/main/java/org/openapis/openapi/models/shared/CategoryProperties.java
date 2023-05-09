@@ -20,6 +20,7 @@ public class CategoryProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CategoryName")
     public String categoryName;
+
     public CategoryProperties withCategoryName(String categoryName) {
         this.categoryName = categoryName;
         return this;
@@ -30,6 +31,7 @@ public class CategoryProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public CategoryProperties withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -38,6 +40,7 @@ public class CategoryProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputType")
     public InputTypeEnum inputType;
+
     public CategoryProperties withInputType(InputTypeEnum inputType) {
         this.inputType = inputType;
         return this;
@@ -48,6 +51,7 @@ public class CategoryProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public CategoryProperties withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -56,9 +60,11 @@ public class CategoryProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public Rule[] rules;
+
     public CategoryProperties withRules(Rule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public CategoryProperties(){}
 }

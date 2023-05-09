@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisableChannelCatalogRequest {
@@ -12,9 +13,13 @@ public class DisableChannelCatalogRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
     public String channelCatalogId;
+
     public DisableChannelCatalogRequest withChannelCatalogId(String channelCatalogId) {
         this.channelCatalogId = channelCatalogId;
         return this;
     }
     
+    public DisableChannelCatalogRequest(@JsonProperty("channelCatalogId") String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
+  }
 }

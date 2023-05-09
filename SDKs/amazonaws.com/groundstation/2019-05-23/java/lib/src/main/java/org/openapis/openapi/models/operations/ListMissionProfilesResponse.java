@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMissionProfilesResponse {
     
     public String contentType;
+
     public ListMissionProfilesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListMissionProfilesResponse {
      */
     
     public Object dependencyException;
+
     public ListMissionProfilesResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -29,6 +32,7 @@ public class ListMissionProfilesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListMissionProfilesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListMissionProfilesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMissionProfilesResponse listMissionProfilesResponse;
+
     public ListMissionProfilesResponse withListMissionProfilesResponse(org.openapis.openapi.models.shared.ListMissionProfilesResponse listMissionProfilesResponse) {
         this.listMissionProfilesResponse = listMissionProfilesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListMissionProfilesResponse {
     
     
     public Integer statusCode;
+
     public ListMissionProfilesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListMissionProfilesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMissionProfilesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListMissionProfilesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListMissionProfilesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListMissionProfilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

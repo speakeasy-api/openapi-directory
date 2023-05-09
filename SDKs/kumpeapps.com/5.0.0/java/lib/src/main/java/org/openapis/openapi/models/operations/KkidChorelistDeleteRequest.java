@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidChorelistDeleteRequest {
@@ -12,9 +13,13 @@ public class KkidChorelistDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idChoreList")
     public Long idChoreList;
+
     public KkidChorelistDeleteRequest withIdChoreList(Long idChoreList) {
         this.idChoreList = idChoreList;
         return this;
     }
     
+    public KkidChorelistDeleteRequest(@JsonProperty("idChoreList") Long idChoreList) {
+        this.idChoreList = idChoreList;
+  }
 }

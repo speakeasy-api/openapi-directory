@@ -15,6 +15,7 @@ public class FailuresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failures")
     public Failures[] failures;
+
     public FailuresResponse withFailures(Failures[] failures) {
         this.failures = failures;
         return this;
@@ -23,9 +24,11 @@ public class FailuresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public FailuresResponse withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public FailuresResponse(){}
 }

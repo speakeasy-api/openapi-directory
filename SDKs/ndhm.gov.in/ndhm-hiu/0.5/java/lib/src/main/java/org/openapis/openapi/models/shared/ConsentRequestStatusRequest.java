@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ConsentRequestStatusRequest {
     @JsonProperty("consentRequestId")
     public String consentRequestId;
+
     public ConsentRequestStatusRequest withConsentRequestId(String consentRequestId) {
         this.consentRequestId = consentRequestId;
         return this;
@@ -24,6 +25,7 @@ public class ConsentRequestStatusRequest {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public ConsentRequestStatusRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -36,9 +38,15 @@ public class ConsentRequestStatusRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public ConsentRequestStatusRequest withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public ConsentRequestStatusRequest(@JsonProperty("consentRequestId") String consentRequestId, @JsonProperty("requestId") String requestId, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.consentRequestId = consentRequestId;
+        this.requestId = requestId;
+        this.timestamp = timestamp;
+  }
 }

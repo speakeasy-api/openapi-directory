@@ -18,6 +18,7 @@ public class CorrelatedColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnSpecId")
     public String columnSpecId;
+
     public CorrelatedColumn withColumnSpecId(String columnSpecId) {
         this.columnSpecId = columnSpecId;
         return this;
@@ -29,9 +30,11 @@ public class CorrelatedColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correlationStats")
     public CorrelationStats correlationStats;
+
     public CorrelatedColumn withCorrelationStats(CorrelationStats correlationStats) {
         this.correlationStats = correlationStats;
         return this;
     }
     
+    public CorrelatedColumn(){}
 }

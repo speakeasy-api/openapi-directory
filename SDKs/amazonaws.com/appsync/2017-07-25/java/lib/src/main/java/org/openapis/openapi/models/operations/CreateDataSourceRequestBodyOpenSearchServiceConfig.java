@@ -15,6 +15,7 @@ public class CreateDataSourceRequestBodyOpenSearchServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsRegion")
     public String awsRegion;
+
     public CreateDataSourceRequestBodyOpenSearchServiceConfig withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -23,9 +24,11 @@ public class CreateDataSourceRequestBodyOpenSearchServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public CreateDataSourceRequestBodyOpenSearchServiceConfig withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
+    public CreateDataSourceRequestBodyOpenSearchServiceConfig(){}
 }

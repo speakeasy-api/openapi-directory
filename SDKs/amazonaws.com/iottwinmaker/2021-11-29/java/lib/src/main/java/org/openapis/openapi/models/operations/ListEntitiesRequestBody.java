@@ -15,6 +15,7 @@ public class ListEntitiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.ListEntitiesFilter[] filters;
+
     public ListEntitiesRequestBody withFilters(org.openapis.openapi.models.shared.ListEntitiesFilter[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class ListEntitiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListEntitiesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class ListEntitiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEntitiesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEntitiesRequestBody(){}
 }

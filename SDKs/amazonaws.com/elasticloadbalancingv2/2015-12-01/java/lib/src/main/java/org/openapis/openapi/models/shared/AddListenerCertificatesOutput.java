@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AddListenerCertificatesOutput {
     
     public Certificate[] certificates;
+
     public AddListenerCertificatesOutput withCertificates(Certificate[] certificates) {
         this.certificates = certificates;
         return this;
     }
     
+    public AddListenerCertificatesOutput(){}
 }

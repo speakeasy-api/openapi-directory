@@ -67,11 +67,9 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangePasswordViaAadharUsingPOSTResponse res = new org.openapis.openapi.models.operations.ChangePasswordViaAadharUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ChangePasswordViaAadharUsingPOSTResponse res = new org.openapis.openapi.models.operations.ChangePasswordViaAadharUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             changePasswordViaAadharUsingPOST200WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -122,11 +120,9 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangePasswordViaMobileUsingPOSTResponse res = new org.openapis.openapi.models.operations.ChangePasswordViaMobileUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ChangePasswordViaMobileUsingPOSTResponse res = new org.openapis.openapi.models.operations.ChangePasswordViaMobileUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             changePasswordViaMobileUsingPOST200WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,11 +173,9 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangePasswordViaUsingPOSTResponse res = new org.openapis.openapi.models.operations.ChangePasswordViaUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ChangePasswordViaUsingPOSTResponse res = new org.openapis.openapi.models.operations.ChangePasswordViaUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             changePasswordViaUsingPOST200WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -226,11 +220,9 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DELETEAccountUsingDELETEResponse res = new org.openapis.openapi.models.operations.DELETEAccountUsingDELETEResponse() {{
+        org.openapis.openapi.models.operations.DELETEAccountUsingDELETEResponse res = new org.openapis.openapi.models.operations.DELETEAccountUsingDELETEResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -276,11 +268,9 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateAadharOTPUsingGETResponse res = new org.openapis.openapi.models.operations.GenerateAadharOTPUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GenerateAadharOTPUsingGETResponse res = new org.openapis.openapi.models.operations.GenerateAadharOTPUsingGETResponse(contentType, httpRes.statusCode()) {{
             generateAadharOTPUsingGET200WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -325,11 +315,9 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateCardUsingGETResponse res = new org.openapis.openapi.models.operations.GenerateCardUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GenerateCardUsingGETResponse res = new org.openapis.openapi.models.operations.GenerateCardUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -375,11 +363,9 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateMobileOTPUsingGETResponse res = new org.openapis.openapi.models.operations.GenerateMobileOTPUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GenerateMobileOTPUsingGETResponse res = new org.openapis.openapi.models.operations.GenerateMobileOTPUsingGETResponse(contentType, httpRes.statusCode()) {{
             generateMobileOTPUsingGET200WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -424,11 +410,9 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GeneratePngCardUsingGETResponse res = new org.openapis.openapi.models.operations.GeneratePngCardUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GeneratePngCardUsingGETResponse res = new org.openapis.openapi.models.operations.GeneratePngCardUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -473,11 +457,9 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateSvgCardUsingGETResponse res = new org.openapis.openapi.models.operations.GenerateSvgCardUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GenerateSvgCardUsingGETResponse res = new org.openapis.openapi.models.operations.GenerateSvgCardUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -523,11 +505,9 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GeneratereKycAadharOTPUsingPOSTResponse res = new org.openapis.openapi.models.operations.GeneratereKycAadharOTPUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GeneratereKycAadharOTPUsingPOSTResponse res = new org.openapis.openapi.models.operations.GeneratereKycAadharOTPUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -572,11 +552,9 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAccountInformationUsingGETResponse res = new org.openapis.openapi.models.operations.GETAccountInformationUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETAccountInformationUsingGETResponse res = new org.openapis.openapi.models.operations.GETAccountInformationUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -621,11 +599,9 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETBenefitsUsingGETResponse res = new org.openapis.openapi.models.operations.GETBenefitsUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETBenefitsUsingGETResponse res = new org.openapis.openapi.models.operations.GETBenefitsUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -670,12 +646,10 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETQrCodeUsingGETResponse res = new org.openapis.openapi.models.operations.GETQrCodeUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETQrCodeUsingGETResponse res = new org.openapis.openapi.models.operations.GETQrCodeUsingGETResponse(contentType, httpRes.statusCode()) {{
             getQrCodeUsingGET200WildcardByteString = null;
             getQrCodeUsingGET200ImagePngByteString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -729,11 +703,9 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOSTResponse res = new org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOSTResponse res = new org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -783,11 +755,9 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ValidateTokenUsingPOSTResponse res = new org.openapis.openapi.models.operations.ValidateTokenUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ValidateTokenUsingPOSTResponse res = new org.openapis.openapi.models.operations.ValidateTokenUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -838,11 +808,9 @@ public class Profile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOST1Response res = new org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOST1Response() {{
+        org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOST1Response res = new org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOST1Response(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

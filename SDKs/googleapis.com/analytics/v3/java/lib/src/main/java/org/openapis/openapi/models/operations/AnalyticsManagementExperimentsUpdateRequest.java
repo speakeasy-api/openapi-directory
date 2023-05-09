@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementExperimentsUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Experiment experiment;
+
     public AnalyticsManagementExperimentsUpdateRequest withExperiment(org.openapis.openapi.models.shared.Experiment experiment) {
         this.experiment = experiment;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsManagementExperimentsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AnalyticsManagementExperimentsUpdateRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsManagementExperimentsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsManagementExperimentsUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -39,6 +43,7 @@ public class AnalyticsManagementExperimentsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=experimentId")
     public String experimentId;
+
     public AnalyticsManagementExperimentsUpdateRequest withExperimentId(String experimentId) {
         this.experimentId = experimentId;
         return this;
@@ -49,6 +54,7 @@ public class AnalyticsManagementExperimentsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsManagementExperimentsUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -59,6 +65,7 @@ public class AnalyticsManagementExperimentsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsManagementExperimentsUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -69,6 +76,7 @@ public class AnalyticsManagementExperimentsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsManagementExperimentsUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -79,6 +87,7 @@ public class AnalyticsManagementExperimentsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsManagementExperimentsUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -89,6 +98,7 @@ public class AnalyticsManagementExperimentsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public AnalyticsManagementExperimentsUpdateRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -99,6 +109,7 @@ public class AnalyticsManagementExperimentsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsManagementExperimentsUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -109,6 +120,7 @@ public class AnalyticsManagementExperimentsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AnalyticsManagementExperimentsUpdateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -119,9 +131,16 @@ public class AnalyticsManagementExperimentsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
     public String webPropertyId;
+
     public AnalyticsManagementExperimentsUpdateRequest withWebPropertyId(String webPropertyId) {
         this.webPropertyId = webPropertyId;
         return this;
     }
     
+    public AnalyticsManagementExperimentsUpdateRequest(@JsonProperty("accountId") String accountId, @JsonProperty("experimentId") String experimentId, @JsonProperty("profileId") String profileId, @JsonProperty("webPropertyId") String webPropertyId) {
+        this.accountId = accountId;
+        this.experimentId = experimentId;
+        this.profileId = profileId;
+        this.webPropertyId = webPropertyId;
+  }
 }

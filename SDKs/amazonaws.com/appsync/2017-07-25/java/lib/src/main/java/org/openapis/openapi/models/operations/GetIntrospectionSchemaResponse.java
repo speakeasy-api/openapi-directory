@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetIntrospectionSchemaResponse {
     
     public String contentType;
+
     public GetIntrospectionSchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetIntrospectionSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.GetIntrospectionSchemaResponse getIntrospectionSchemaResponse;
+
     public GetIntrospectionSchemaResponse withGetIntrospectionSchemaResponse(org.openapis.openapi.models.shared.GetIntrospectionSchemaResponse getIntrospectionSchemaResponse) {
         this.getIntrospectionSchemaResponse = getIntrospectionSchemaResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetIntrospectionSchemaResponse {
      */
     
     public Object graphQLSchemaException;
+
     public GetIntrospectionSchemaResponse withGraphQLSchemaException(Object graphQLSchemaException) {
         this.graphQLSchemaException = graphQLSchemaException;
         return this;
@@ -39,6 +43,7 @@ public class GetIntrospectionSchemaResponse {
      */
     
     public Object internalFailureException;
+
     public GetIntrospectionSchemaResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetIntrospectionSchemaResponse {
      */
     
     public Object notFoundException;
+
     public GetIntrospectionSchemaResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetIntrospectionSchemaResponse {
     
     
     public Integer statusCode;
+
     public GetIntrospectionSchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetIntrospectionSchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetIntrospectionSchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetIntrospectionSchemaResponse {
      */
     
     public Object unauthorizedException;
+
     public GetIntrospectionSchemaResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetIntrospectionSchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

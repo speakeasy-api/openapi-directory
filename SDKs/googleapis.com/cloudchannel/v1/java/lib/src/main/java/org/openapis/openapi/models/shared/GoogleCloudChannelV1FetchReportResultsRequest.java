@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1FetchReportResultsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GoogleCloudChannelV1FetchReportResultsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -29,9 +30,23 @@ public class GoogleCloudChannelV1FetchReportResultsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GoogleCloudChannelV1FetchReportResultsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    /**
+     * Optional. List of keys specifying which report partitions to return. If empty, returns all partitions.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("partitionKeys")
+    public String[] partitionKeys;
+
+    public GoogleCloudChannelV1FetchReportResultsRequest withPartitionKeys(String[] partitionKeys) {
+        this.partitionKeys = partitionKeys;
+        return this;
+    }
+    
+    public GoogleCloudChannelV1FetchReportResultsRequest(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkAclEntryRequestIcmpTypeCode {
     
     public Long code;
+
     public CreateNetworkAclEntryRequestIcmpTypeCode withCode(Long code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class CreateNetworkAclEntryRequestIcmpTypeCode {
     
     
     public Long type;
+
     public CreateNetworkAclEntryRequestIcmpTypeCode withType(Long type) {
         this.type = type;
         return this;
     }
     
+    public CreateNetworkAclEntryRequestIcmpTypeCode(){}
 }

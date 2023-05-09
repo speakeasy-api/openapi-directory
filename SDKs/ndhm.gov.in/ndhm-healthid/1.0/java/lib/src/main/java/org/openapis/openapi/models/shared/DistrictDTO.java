@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DistrictDTO {
     
     public String code;
+
     public DistrictDTO withCode(String code) {
         this.code = code;
         return this;
@@ -16,9 +17,11 @@ public class DistrictDTO {
     
     
     public String name;
+
     public DistrictDTO withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DistrictDTO(){}
 }

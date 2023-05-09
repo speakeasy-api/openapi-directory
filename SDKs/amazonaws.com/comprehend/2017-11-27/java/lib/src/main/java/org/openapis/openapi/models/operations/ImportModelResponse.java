@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportModelResponse {
     
     public String contentType;
+
     public ImportModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ImportModelResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportModelResponse importModelResponse;
+
     public ImportModelResponse withImportModelResponse(org.openapis.openapi.models.shared.ImportModelResponse importModelResponse) {
         this.importModelResponse = importModelResponse;
         return this;
@@ -29,6 +32,7 @@ public class ImportModelResponse {
      */
     
     public Object internalServerException;
+
     public ImportModelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ImportModelResponse {
      */
     
     public Object invalidRequestException;
+
     public ImportModelResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ImportModelResponse {
      */
     
     public Object kmsKeyValidationException;
+
     public ImportModelResponse withKmsKeyValidationException(Object kmsKeyValidationException) {
         this.kmsKeyValidationException = kmsKeyValidationException;
         return this;
@@ -59,6 +65,7 @@ public class ImportModelResponse {
      */
     
     public Object resourceInUseException;
+
     public ImportModelResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -66,6 +73,7 @@ public class ImportModelResponse {
     
     
     public Integer statusCode;
+
     public ImportModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ImportModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ImportModelResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public ImportModelResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -93,6 +103,7 @@ public class ImportModelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ImportModelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class ImportModelResponse {
      */
     
     public Object resourceUnavailableException;
+
     public ImportModelResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -113,6 +125,7 @@ public class ImportModelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ImportModelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -123,9 +136,14 @@ public class ImportModelResponse {
      */
     
     public Object tooManyTagsException;
+
     public ImportModelResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public ImportModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV1VerificationResultRequest {
@@ -12,6 +13,7 @@ public class GetV1VerificationResultRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetV1VerificationResultFormatEnum format;
+
     public GetV1VerificationResultRequest withFormat(GetV1VerificationResultFormatEnum format) {
         this.format = format;
         return this;
@@ -22,6 +24,7 @@ public class GetV1VerificationResultRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GetV1VerificationResultRequest withKey(String key) {
         this.key = key;
         return this;
@@ -32,6 +35,7 @@ public class GetV1VerificationResultRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=otp")
     public String otp;
+
     public GetV1VerificationResultRequest withOtp(String otp) {
         this.otp = otp;
         return this;
@@ -42,9 +46,15 @@ public class GetV1VerificationResultRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tran_id")
     public String tranId;
+
     public GetV1VerificationResultRequest withTranId(String tranId) {
         this.tranId = tranId;
         return this;
     }
     
+    public GetV1VerificationResultRequest(@JsonProperty("key") String key, @JsonProperty("otp") String otp, @JsonProperty("tran_id") String tranId) {
+        this.key = key;
+        this.otp = otp;
+        this.tranId = tranId;
+  }
 }

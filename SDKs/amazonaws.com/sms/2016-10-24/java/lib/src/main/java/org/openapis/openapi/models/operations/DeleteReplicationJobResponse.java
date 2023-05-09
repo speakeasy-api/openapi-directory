@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteReplicationJobResponse {
     
     public String contentType;
+
     public DeleteReplicationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteReplicationJobResponse {
      */
     
     public java.util.Map<String, Object> deleteReplicationJobResponse;
+
     public DeleteReplicationJobResponse withDeleteReplicationJobResponse(java.util.Map<String, Object> deleteReplicationJobResponse) {
         this.deleteReplicationJobResponse = deleteReplicationJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteReplicationJobResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteReplicationJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteReplicationJobResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public DeleteReplicationJobResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteReplicationJobResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DeleteReplicationJobResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteReplicationJobResponse {
     
     
     public Integer statusCode;
+
     public DeleteReplicationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteReplicationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteReplicationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteReplicationJobResponse {
      */
     
     public Object replicationJobNotFoundException;
+
     public DeleteReplicationJobResponse withReplicationJobNotFoundException(Object replicationJobNotFoundException) {
         this.replicationJobNotFoundException = replicationJobNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteReplicationJobResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public DeleteReplicationJobResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public DeleteReplicationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

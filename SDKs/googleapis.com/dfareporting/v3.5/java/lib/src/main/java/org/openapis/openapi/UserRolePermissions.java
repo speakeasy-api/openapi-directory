@@ -58,11 +58,9 @@ public class UserRolePermissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingUserRolePermissionsGetResponse res = new org.openapis.openapi.models.operations.DfareportingUserRolePermissionsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingUserRolePermissionsGetResponse res = new org.openapis.openapi.models.operations.DfareportingUserRolePermissionsGetResponse(contentType, httpRes.statusCode()) {{
             userRolePermission = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class UserRolePermissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingUserRolePermissionsListResponse res = new org.openapis.openapi.models.operations.DfareportingUserRolePermissionsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingUserRolePermissionsListResponse res = new org.openapis.openapi.models.operations.DfareportingUserRolePermissionsListResponse(contentType, httpRes.statusCode()) {{
             userRolePermissionsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

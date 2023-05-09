@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeListenerResponse {
     
     public String contentType;
+
     public DescribeListenerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeListenerResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeListenerResponse describeListenerResponse;
+
     public DescribeListenerResponse withDescribeListenerResponse(org.openapis.openapi.models.shared.DescribeListenerResponse describeListenerResponse) {
         this.describeListenerResponse = describeListenerResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeListenerResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DescribeListenerResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeListenerResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeListenerResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeListenerResponse {
      */
     
     public Object listenerNotFoundException;
+
     public DescribeListenerResponse withListenerNotFoundException(Object listenerNotFoundException) {
         this.listenerNotFoundException = listenerNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeListenerResponse {
     
     
     public Integer statusCode;
+
     public DescribeListenerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeListenerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeListenerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeListenerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

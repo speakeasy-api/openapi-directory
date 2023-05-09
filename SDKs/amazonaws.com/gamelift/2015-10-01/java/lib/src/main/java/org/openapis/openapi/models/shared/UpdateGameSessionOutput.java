@@ -15,9 +15,11 @@ public class UpdateGameSessionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSession")
     public GameSession gameSession;
+
     public UpdateGameSessionOutput withGameSession(GameSession gameSession) {
         this.gameSession = gameSession;
         return this;
     }
     
+    public UpdateGameSessionOutput(){}
 }

@@ -18,9 +18,11 @@ public class GoogleFirebaseAppdistroV1BatchAddTestersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testers")
     public GoogleFirebaseAppdistroV1Tester[] testers;
+
     public GoogleFirebaseAppdistroV1BatchAddTestersResponse withTesters(GoogleFirebaseAppdistroV1Tester[] testers) {
         this.testers = testers;
         return this;
     }
     
+    public GoogleFirebaseAppdistroV1BatchAddTestersResponse(){}
 }

@@ -18,6 +18,7 @@ public class StaticListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdated")
     public String lastUpdated;
+
     public StaticListener withLastUpdated(String lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -29,9 +30,11 @@ public class StaticListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listener")
     public java.util.Map<String, Object> listener;
+
     public StaticListener withListener(java.util.Map<String, Object> listener) {
         this.listener = listener;
         return this;
     }
     
+    public StaticListener(){}
 }

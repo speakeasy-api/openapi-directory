@@ -18,6 +18,7 @@ public class ApigatewayApiConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ApigatewayApiConfigInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class ApigatewayApiConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatewayServiceAccount")
     public String gatewayServiceAccount;
+
     public ApigatewayApiConfigInput withGatewayServiceAccount(String gatewayServiceAccount) {
         this.gatewayServiceAccount = gatewayServiceAccount;
         return this;
@@ -40,6 +42,7 @@ public class ApigatewayApiConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpcServices")
     public ApigatewayApiConfigGrpcServiceDefinition[] grpcServices;
+
     public ApigatewayApiConfigInput withGrpcServices(ApigatewayApiConfigGrpcServiceDefinition[] grpcServices) {
         this.grpcServices = grpcServices;
         return this;
@@ -51,6 +54,7 @@ public class ApigatewayApiConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ApigatewayApiConfigInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class ApigatewayApiConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedServiceConfigs")
     public ApigatewayApiConfigFile[] managedServiceConfigs;
+
     public ApigatewayApiConfigInput withManagedServiceConfigs(ApigatewayApiConfigFile[] managedServiceConfigs) {
         this.managedServiceConfigs = managedServiceConfigs;
         return this;
@@ -73,9 +78,11 @@ public class ApigatewayApiConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openapiDocuments")
     public ApigatewayApiConfigOpenApiDocument[] openapiDocuments;
+
     public ApigatewayApiConfigInput withOpenapiDocuments(ApigatewayApiConfigOpenApiDocument[] openapiDocuments) {
         this.openapiDocuments = openapiDocuments;
         return this;
     }
     
+    public ApigatewayApiConfigInput(){}
 }

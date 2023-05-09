@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExponentialRolloutRate {
     @JsonProperty("baseRatePerMinute")
     public Long baseRatePerMinute;
+
     public ExponentialRolloutRate withBaseRatePerMinute(Long baseRatePerMinute) {
         this.baseRatePerMinute = baseRatePerMinute;
         return this;
@@ -19,6 +20,7 @@ public class ExponentialRolloutRate {
     
     @JsonProperty("incrementFactor")
     public Double incrementFactor;
+
     public ExponentialRolloutRate withIncrementFactor(Double incrementFactor) {
         this.incrementFactor = incrementFactor;
         return this;
@@ -26,9 +28,15 @@ public class ExponentialRolloutRate {
     
     @JsonProperty("rateIncreaseCriteria")
     public RateIncreaseCriteria rateIncreaseCriteria;
+
     public ExponentialRolloutRate withRateIncreaseCriteria(RateIncreaseCriteria rateIncreaseCriteria) {
         this.rateIncreaseCriteria = rateIncreaseCriteria;
         return this;
     }
     
+    public ExponentialRolloutRate(@JsonProperty("baseRatePerMinute") Long baseRatePerMinute, @JsonProperty("incrementFactor") Double incrementFactor, @JsonProperty("rateIncreaseCriteria") RateIncreaseCriteria rateIncreaseCriteria) {
+        this.baseRatePerMinute = baseRatePerMinute;
+        this.incrementFactor = incrementFactor;
+        this.rateIncreaseCriteria = rateIncreaseCriteria;
+  }
 }

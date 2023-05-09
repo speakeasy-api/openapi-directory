@@ -18,6 +18,7 @@ public class PosListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PosListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -26,9 +27,11 @@ public class PosListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public PosStore[] resources;
+
     public PosListResponse withResources(PosStore[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public PosListResponse(){}
 }

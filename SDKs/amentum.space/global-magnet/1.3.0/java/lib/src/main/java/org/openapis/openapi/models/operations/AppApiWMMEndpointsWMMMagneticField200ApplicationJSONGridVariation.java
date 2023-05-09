@@ -16,6 +16,7 @@ public class AppApiWMMEndpointsWMMMagneticField200ApplicationJSONGridVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("units")
     public String units;
+
     public AppApiWMMEndpointsWMMMagneticField200ApplicationJSONGridVariation withUnits(String units) {
         this.units = units;
         return this;
@@ -24,9 +25,11 @@ public class AppApiWMMEndpointsWMMMagneticField200ApplicationJSONGridVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public AppApiWMMEndpointsWMMMagneticField200ApplicationJSONGridVariation withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public AppApiWMMEndpointsWMMMagneticField200ApplicationJSONGridVariation(){}
 }

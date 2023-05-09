@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockResponse {
     
     public String contentType;
+
     public IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEd
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudIntegrationsV1alphaTakeoverEditLockResponse googleCloudIntegrationsV1alphaTakeoverEditLockResponse;
+
     public IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockResponse withGoogleCloudIntegrationsV1alphaTakeoverEditLockResponse(org.openapis.openapi.models.shared.GoogleCloudIntegrationsV1alphaTakeoverEditLockResponse googleCloudIntegrationsV1alphaTakeoverEditLockResponse) {
         this.googleCloudIntegrationsV1alphaTakeoverEditLockResponse = googleCloudIntegrationsV1alphaTakeoverEditLockResponse;
         return this;
@@ -26,6 +29,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEd
     
     
     public Integer statusCode;
+
     public IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEd
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

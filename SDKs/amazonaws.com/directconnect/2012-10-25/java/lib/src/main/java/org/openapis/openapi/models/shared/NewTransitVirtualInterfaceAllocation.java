@@ -15,6 +15,7 @@ public class NewTransitVirtualInterfaceAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressFamily")
     public AddressFamilyEnum addressFamily;
+
     public NewTransitVirtualInterfaceAllocation withAddressFamily(AddressFamilyEnum addressFamily) {
         this.addressFamily = addressFamily;
         return this;
@@ -23,6 +24,7 @@ public class NewTransitVirtualInterfaceAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amazonAddress")
     public String amazonAddress;
+
     public NewTransitVirtualInterfaceAllocation withAmazonAddress(String amazonAddress) {
         this.amazonAddress = amazonAddress;
         return this;
@@ -31,6 +33,7 @@ public class NewTransitVirtualInterfaceAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asn")
     public Long asn;
+
     public NewTransitVirtualInterfaceAllocation withAsn(Long asn) {
         this.asn = asn;
         return this;
@@ -39,6 +42,7 @@ public class NewTransitVirtualInterfaceAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authKey")
     public String authKey;
+
     public NewTransitVirtualInterfaceAllocation withAuthKey(String authKey) {
         this.authKey = authKey;
         return this;
@@ -47,6 +51,7 @@ public class NewTransitVirtualInterfaceAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerAddress")
     public String customerAddress;
+
     public NewTransitVirtualInterfaceAllocation withCustomerAddress(String customerAddress) {
         this.customerAddress = customerAddress;
         return this;
@@ -55,6 +60,7 @@ public class NewTransitVirtualInterfaceAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mtu")
     public Long mtu;
+
     public NewTransitVirtualInterfaceAllocation withMtu(Long mtu) {
         this.mtu = mtu;
         return this;
@@ -63,6 +69,7 @@ public class NewTransitVirtualInterfaceAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public NewTransitVirtualInterfaceAllocation withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -71,6 +78,7 @@ public class NewTransitVirtualInterfaceAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterfaceName")
     public String virtualInterfaceName;
+
     public NewTransitVirtualInterfaceAllocation withVirtualInterfaceName(String virtualInterfaceName) {
         this.virtualInterfaceName = virtualInterfaceName;
         return this;
@@ -79,9 +87,11 @@ public class NewTransitVirtualInterfaceAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vlan")
     public Long vlan;
+
     public NewTransitVirtualInterfaceAllocation withVlan(Long vlan) {
         this.vlan = vlan;
         return this;
     }
     
+    public NewTransitVirtualInterfaceAllocation(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyVpcEndpointConnectionNotificationResult {
     
     public Boolean returnValue;
+
     public ModifyVpcEndpointConnectionNotificationResult withReturnValue(Boolean returnValue) {
         this.returnValue = returnValue;
         return this;
     }
     
+    public ModifyVpcEndpointConnectionNotificationResult(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1DetectIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternativeQueryResults")
     public GoogleCloudDialogflowV2beta1QueryResult[] alternativeQueryResults;
+
     public GoogleCloudDialogflowV2beta1DetectIntentResponse withAlternativeQueryResults(GoogleCloudDialogflowV2beta1QueryResult[] alternativeQueryResults) {
         this.alternativeQueryResults = alternativeQueryResults;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1DetectIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputAudio")
     public String outputAudio;
+
     public GoogleCloudDialogflowV2beta1DetectIntentResponse withOutputAudio(String outputAudio) {
         this.outputAudio = outputAudio;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1DetectIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputAudioConfig")
     public GoogleCloudDialogflowV2beta1OutputAudioConfig outputAudioConfig;
+
     public GoogleCloudDialogflowV2beta1DetectIntentResponse withOutputAudioConfig(GoogleCloudDialogflowV2beta1OutputAudioConfig outputAudioConfig) {
         this.outputAudioConfig = outputAudioConfig;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1DetectIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryResult")
     public GoogleCloudDialogflowV2beta1QueryResult queryResult;
+
     public GoogleCloudDialogflowV2beta1DetectIntentResponse withQueryResult(GoogleCloudDialogflowV2beta1QueryResult queryResult) {
         this.queryResult = queryResult;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2beta1DetectIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseId")
     public String responseId;
+
     public GoogleCloudDialogflowV2beta1DetectIntentResponse withResponseId(String responseId) {
         this.responseId = responseId;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowV2beta1DetectIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookStatus")
     public GoogleRpcStatus webhookStatus;
+
     public GoogleCloudDialogflowV2beta1DetectIntentResponse withWebhookStatus(GoogleRpcStatus webhookStatus) {
         this.webhookStatus = webhookStatus;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1DetectIntentResponse(){}
 }

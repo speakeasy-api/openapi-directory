@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionInformationsResponse {
     
     public String contentType;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionInformationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsI
     
     
     public Integer statusCode;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionInformationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsI
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionInformationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsI
      */
     
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionInformations200ApplicationJSON getUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionInformations200ApplicationJSONObject;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionInformationsResponse withGetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionInformations200ApplicationJSONObject(GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionInformations200ApplicationJSON getUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionInformations200ApplicationJSONObject) {
         this.getUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionInformations200ApplicationJSONObject = getUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionInformations200ApplicationJSONObject;
         return this;
     }
     
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionInformationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

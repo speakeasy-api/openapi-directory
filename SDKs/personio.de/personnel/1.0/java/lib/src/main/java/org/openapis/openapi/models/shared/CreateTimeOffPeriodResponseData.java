@@ -12,6 +12,7 @@ public class CreateTimeOffPeriodResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public CreateTimeOffPeriodResponseDataAttributes attributes;
+
     public CreateTimeOffPeriodResponseData withAttributes(CreateTimeOffPeriodResponseDataAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -23,9 +24,11 @@ public class CreateTimeOffPeriodResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CreateTimeOffPeriodResponseDataTypeEnum type;
+
     public CreateTimeOffPeriodResponseData withType(CreateTimeOffPeriodResponseDataTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateTimeOffPeriodResponseData(){}
 }

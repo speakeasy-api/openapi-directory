@@ -14,6 +14,7 @@ public class UpdateImagePipelineRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateImagePipelineRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class UpdateImagePipelineRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerRecipeArn")
     public String containerRecipeArn;
+
     public UpdateImagePipelineRequestBody withContainerRecipeArn(String containerRecipeArn) {
         this.containerRecipeArn = containerRecipeArn;
         return this;
@@ -36,28 +38,31 @@ public class UpdateImagePipelineRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateImagePipelineRequestBody withDescription(String description) {
         this.description = description;
         return this;
     }
     
     /**
-     * The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and distribute images updated by this image pipeline.
+     * The Amazon Resource Name (ARN) of the distribution configuration that Image Builder uses to configure and distribute images that this image pipeline has updated.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributionConfigurationArn")
     public String distributionConfigurationArn;
+
     public UpdateImagePipelineRequestBody withDistributionConfigurationArn(String distributionConfigurationArn) {
         this.distributionConfigurationArn = distributionConfigurationArn;
         return this;
     }
     
     /**
-     *  Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
+     * Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enhancedImageMetadataEnabled")
     public Boolean enhancedImageMetadataEnabled;
+
     public UpdateImagePipelineRequestBody withEnhancedImageMetadataEnabled(Boolean enhancedImageMetadataEnabled) {
         this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
         return this;
@@ -68,6 +73,7 @@ public class UpdateImagePipelineRequestBody {
      */
     @JsonProperty("imagePipelineArn")
     public String imagePipelineArn;
+
     public UpdateImagePipelineRequestBody withImagePipelineArn(String imagePipelineArn) {
         this.imagePipelineArn = imagePipelineArn;
         return this;
@@ -79,8 +85,21 @@ public class UpdateImagePipelineRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageRecipeArn")
     public String imageRecipeArn;
+
     public UpdateImagePipelineRequestBody withImageRecipeArn(String imageRecipeArn) {
         this.imageRecipeArn = imageRecipeArn;
+        return this;
+    }
+    
+    /**
+     * Contains settings for Image Builder image resource and container image scans.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("imageScanningConfiguration")
+    public UpdateImagePipelineRequestBodyImageScanningConfiguration imageScanningConfiguration;
+
+    public UpdateImagePipelineRequestBody withImageScanningConfiguration(UpdateImagePipelineRequestBodyImageScanningConfiguration imageScanningConfiguration) {
+        this.imageScanningConfiguration = imageScanningConfiguration;
         return this;
     }
     
@@ -90,16 +109,18 @@ public class UpdateImagePipelineRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTestsConfiguration")
     public UpdateImagePipelineRequestBodyImageTestsConfiguration imageTestsConfiguration;
+
     public UpdateImagePipelineRequestBody withImageTestsConfiguration(UpdateImagePipelineRequestBodyImageTestsConfiguration imageTestsConfiguration) {
         this.imageTestsConfiguration = imageTestsConfiguration;
         return this;
     }
     
     /**
-     * The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images updated by this image pipeline.
+     * The Amazon Resource Name (ARN) of the infrastructure configuration that Image Builder uses to build images that this image pipeline has updated.
      */
     @JsonProperty("infrastructureConfigurationArn")
     public String infrastructureConfigurationArn;
+
     public UpdateImagePipelineRequestBody withInfrastructureConfigurationArn(String infrastructureConfigurationArn) {
         this.infrastructureConfigurationArn = infrastructureConfigurationArn;
         return this;
@@ -111,6 +132,7 @@ public class UpdateImagePipelineRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public UpdateImagePipelineRequestBodySchedule schedule;
+
     public UpdateImagePipelineRequestBody withSchedule(UpdateImagePipelineRequestBodySchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -122,9 +144,15 @@ public class UpdateImagePipelineRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public UpdateImagePipelineRequestBodyStatusEnum status;
+
     public UpdateImagePipelineRequestBody withStatus(UpdateImagePipelineRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateImagePipelineRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("imagePipelineArn") String imagePipelineArn, @JsonProperty("infrastructureConfigurationArn") String infrastructureConfigurationArn) {
+        this.clientToken = clientToken;
+        this.imagePipelineArn = imagePipelineArn;
+        this.infrastructureConfigurationArn = infrastructureConfigurationArn;
+  }
 }

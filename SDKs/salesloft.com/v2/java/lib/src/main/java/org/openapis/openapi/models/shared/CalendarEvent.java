@@ -14,8 +14,9 @@ public class CalendarEvent {
      * Whether the calendar event is an all-day event.
      */
     
-    public String allDay;
-    public CalendarEvent withAllDay(String allDay) {
+    public Boolean allDay;
+
+    public CalendarEvent withAllDay(Boolean allDay) {
         this.allDay = allDay;
         return this;
     }
@@ -24,8 +25,9 @@ public class CalendarEvent {
      * The attendees of the calendar event.
      */
     
-    public java.util.Map<String, Object> attendees;
-    public CalendarEvent withAttendees(java.util.Map<String, Object> attendees) {
+    public Object[] attendees;
+
+    public CalendarEvent withAttendees(Object[] attendees) {
         this.attendees = attendees;
         return this;
     }
@@ -35,6 +37,7 @@ public class CalendarEvent {
      */
     
     public String bodyHtml;
+
     public CalendarEvent withBodyHtml(String bodyHtml) {
         this.bodyHtml = bodyHtml;
         return this;
@@ -45,6 +48,7 @@ public class CalendarEvent {
      */
     
     public Boolean busy;
+
     public CalendarEvent withBusy(Boolean busy) {
         this.busy = busy;
         return this;
@@ -55,6 +59,7 @@ public class CalendarEvent {
      */
     
     public String calendarId;
+
     public CalendarEvent withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -64,8 +69,9 @@ public class CalendarEvent {
      * The canceled date of the calendar event.
      */
     
-    public String canceledAt;
-    public CalendarEvent withCanceledAt(String canceledAt) {
+    public OffsetDateTime canceledAt;
+
+    public CalendarEvent withCanceledAt(OffsetDateTime canceledAt) {
         this.canceledAt = canceledAt;
         return this;
     }
@@ -75,6 +81,7 @@ public class CalendarEvent {
      */
     
     public java.util.Map<String, Object> conferenceData;
+
     public CalendarEvent withConferenceData(java.util.Map<String, Object> conferenceData) {
         this.conferenceData = conferenceData;
         return this;
@@ -84,8 +91,9 @@ public class CalendarEvent {
      * Creation time of the calendar event.
      */
     
-    public String createdAt;
-    public CalendarEvent withCreatedAt(String createdAt) {
+    public OffsetDateTime createdAt;
+
+    public CalendarEvent withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
@@ -94,8 +102,9 @@ public class CalendarEvent {
      * The creator email of the calendar event.
      */
     
-    public java.util.Map<String, Object> creator;
-    public CalendarEvent withCreator(java.util.Map<String, Object> creator) {
+    public String creator;
+
+    public CalendarEvent withCreator(String creator) {
         this.creator = creator;
         return this;
     }
@@ -105,6 +114,7 @@ public class CalendarEvent {
      */
     
     public String description;
+
     public CalendarEvent withDescription(String description) {
         this.description = description;
         return this;
@@ -115,6 +125,7 @@ public class CalendarEvent {
      */
     
     public OffsetDateTime endTime;
+
     public CalendarEvent withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -125,6 +136,7 @@ public class CalendarEvent {
      */
     
     public java.util.Map<String, Object> extendedProperties;
+
     public CalendarEvent withExtendedProperties(java.util.Map<String, Object> extendedProperties) {
         this.extendedProperties = extendedProperties;
         return this;
@@ -135,6 +147,7 @@ public class CalendarEvent {
      */
     
     public String htmlLink;
+
     public CalendarEvent withHtmlLink(String htmlLink) {
         this.htmlLink = htmlLink;
         return this;
@@ -145,6 +158,7 @@ public class CalendarEvent {
      */
     
     public String iCalUid;
+
     public CalendarEvent withICalUid(String iCalUid) {
         this.iCalUid = iCalUid;
         return this;
@@ -155,6 +169,7 @@ public class CalendarEvent {
      */
     
     public String id;
+
     public CalendarEvent withId(String id) {
         this.id = id;
         return this;
@@ -165,6 +180,7 @@ public class CalendarEvent {
      */
     
     public String location;
+
     public CalendarEvent withLocation(String location) {
         this.location = location;
         return this;
@@ -175,6 +191,7 @@ public class CalendarEvent {
      */
     
     public String organizer;
+
     public CalendarEvent withOrganizer(String organizer) {
         this.organizer = organizer;
         return this;
@@ -185,6 +202,7 @@ public class CalendarEvent {
      */
     
     public String provider;
+
     public CalendarEvent withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -194,8 +212,9 @@ public class CalendarEvent {
      * Whether the calendar event is a recurring event.
      */
     
-    public String recurring;
-    public CalendarEvent withRecurring(String recurring) {
+    public Boolean recurring;
+
+    public CalendarEvent withRecurring(Boolean recurring) {
         this.recurring = recurring;
         return this;
     }
@@ -205,6 +224,7 @@ public class CalendarEvent {
      */
     
     public OffsetDateTime startTime;
+
     public CalendarEvent withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -215,6 +235,7 @@ public class CalendarEvent {
      */
     
     public String status;
+
     public CalendarEvent withStatus(String status) {
         this.status = status;
         return this;
@@ -225,6 +246,7 @@ public class CalendarEvent {
      */
     
     public Long tenantId;
+
     public CalendarEvent withTenantId(Long tenantId) {
         this.tenantId = tenantId;
         return this;
@@ -235,6 +257,7 @@ public class CalendarEvent {
      */
     
     public String title;
+
     public CalendarEvent withTitle(String title) {
         this.title = title;
         return this;
@@ -244,8 +267,9 @@ public class CalendarEvent {
      * Last modification time of the calendar event.
      */
     
-    public String updatedAt;
-    public CalendarEvent withUpdatedAt(String updatedAt) {
+    public OffsetDateTime updatedAt;
+
+    public CalendarEvent withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
@@ -255,9 +279,11 @@ public class CalendarEvent {
      */
     
     public String userGuid;
+
     public CalendarEvent withUserGuid(String userGuid) {
         this.userGuid = userGuid;
         return this;
     }
     
+    public CalendarEvent(){}
 }

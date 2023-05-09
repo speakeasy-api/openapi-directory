@@ -18,6 +18,7 @@ public class ImportJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attestation")
     public KeyOperationAttestationInput attestation;
+
     public ImportJobInput withAttestation(KeyOperationAttestationInput attestation) {
         this.attestation = attestation;
         return this;
@@ -29,6 +30,7 @@ public class ImportJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importMethod")
     public ImportJobImportMethodEnum importMethod;
+
     public ImportJobInput withImportMethod(ImportJobImportMethodEnum importMethod) {
         this.importMethod = importMethod;
         return this;
@@ -40,6 +42,7 @@ public class ImportJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protectionLevel")
     public ImportJobProtectionLevelEnum protectionLevel;
+
     public ImportJobInput withProtectionLevel(ImportJobProtectionLevelEnum protectionLevel) {
         this.protectionLevel = protectionLevel;
         return this;
@@ -51,9 +54,11 @@ public class ImportJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKey")
     public WrappingPublicKey publicKey;
+
     public ImportJobInput withPublicKey(WrappingPublicKey publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public ImportJobInput(){}
 }

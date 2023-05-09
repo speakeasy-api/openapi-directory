@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsAclRule {
     
     public String cidr;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsAclRule withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,6 +20,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public Boolean egress;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsAclRule withEgress(Boolean egress) {
         this.egress = egress;
         return this;
@@ -26,6 +28,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsAclRulePortRange portRange;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsAclRule withPortRange(StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsAclRulePortRange portRange) {
         this.portRange = portRange;
         return this;
@@ -33,6 +36,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public String protocol;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsAclRule withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -40,6 +44,7 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public String ruleAction;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsAclRule withRuleAction(String ruleAction) {
         this.ruleAction = ruleAction;
         return this;
@@ -47,9 +52,11 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanatio
     
     
     public Long ruleNumber;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsAclRule withRuleNumber(Long ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
     }
     
+    public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsAclRule(){}
 }

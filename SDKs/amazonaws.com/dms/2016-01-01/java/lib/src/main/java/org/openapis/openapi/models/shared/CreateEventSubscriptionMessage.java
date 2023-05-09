@@ -15,6 +15,7 @@ public class CreateEventSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public CreateEventSubscriptionMessage withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,6 +24,7 @@ public class CreateEventSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventCategories")
     public String[] eventCategories;
+
     public CreateEventSubscriptionMessage withEventCategories(String[] eventCategories) {
         this.eventCategories = eventCategories;
         return this;
@@ -30,6 +32,7 @@ public class CreateEventSubscriptionMessage {
     
     @JsonProperty("SnsTopicArn")
     public String snsTopicArn;
+
     public CreateEventSubscriptionMessage withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
@@ -38,6 +41,7 @@ public class CreateEventSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceIds")
     public String[] sourceIds;
+
     public CreateEventSubscriptionMessage withSourceIds(String[] sourceIds) {
         this.sourceIds = sourceIds;
         return this;
@@ -46,6 +50,7 @@ public class CreateEventSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public String sourceType;
+
     public CreateEventSubscriptionMessage withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -53,6 +58,7 @@ public class CreateEventSubscriptionMessage {
     
     @JsonProperty("SubscriptionName")
     public String subscriptionName;
+
     public CreateEventSubscriptionMessage withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
@@ -61,9 +67,14 @@ public class CreateEventSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateEventSubscriptionMessage withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEventSubscriptionMessage(@JsonProperty("SnsTopicArn") String snsTopicArn, @JsonProperty("SubscriptionName") String subscriptionName) {
+        this.snsTopicArn = snsTopicArn;
+        this.subscriptionName = subscriptionName;
+  }
 }

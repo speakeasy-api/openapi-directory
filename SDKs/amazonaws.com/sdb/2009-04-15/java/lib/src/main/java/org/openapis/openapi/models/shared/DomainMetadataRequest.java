@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DomainMetadataRequest {
     
     public String domainName;
+
     public DomainMetadataRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public DomainMetadataRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

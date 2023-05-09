@@ -15,6 +15,7 @@ public class AwsBackupBackupPlanBackupPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdvancedBackupSettings")
     public AwsBackupBackupPlanAdvancedBackupSettingsDetails[] advancedBackupSettings;
+
     public AwsBackupBackupPlanBackupPlanDetails withAdvancedBackupSettings(AwsBackupBackupPlanAdvancedBackupSettingsDetails[] advancedBackupSettings) {
         this.advancedBackupSettings = advancedBackupSettings;
         return this;
@@ -23,6 +24,7 @@ public class AwsBackupBackupPlanBackupPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupPlanName")
     public String backupPlanName;
+
     public AwsBackupBackupPlanBackupPlanDetails withBackupPlanName(String backupPlanName) {
         this.backupPlanName = backupPlanName;
         return this;
@@ -31,9 +33,11 @@ public class AwsBackupBackupPlanBackupPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupPlanRule")
     public AwsBackupBackupPlanRuleDetails[] backupPlanRule;
+
     public AwsBackupBackupPlanBackupPlanDetails withBackupPlanRule(AwsBackupBackupPlanRuleDetails[] backupPlanRule) {
         this.backupPlanRule = backupPlanRule;
         return this;
     }
     
+    public AwsBackupBackupPlanBackupPlanDetails(){}
 }

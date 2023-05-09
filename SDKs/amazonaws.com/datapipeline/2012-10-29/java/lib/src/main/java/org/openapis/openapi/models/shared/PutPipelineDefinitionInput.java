@@ -15,6 +15,7 @@ public class PutPipelineDefinitionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterObjects")
     public ParameterObject[] parameterObjects;
+
     public PutPipelineDefinitionInput withParameterObjects(ParameterObject[] parameterObjects) {
         this.parameterObjects = parameterObjects;
         return this;
@@ -23,6 +24,7 @@ public class PutPipelineDefinitionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterValues")
     public ParameterValue[] parameterValues;
+
     public PutPipelineDefinitionInput withParameterValues(ParameterValue[] parameterValues) {
         this.parameterValues = parameterValues;
         return this;
@@ -30,6 +32,7 @@ public class PutPipelineDefinitionInput {
     
     @JsonProperty("pipelineId")
     public String pipelineId;
+
     public PutPipelineDefinitionInput withPipelineId(String pipelineId) {
         this.pipelineId = pipelineId;
         return this;
@@ -37,9 +40,14 @@ public class PutPipelineDefinitionInput {
     
     @JsonProperty("pipelineObjects")
     public PipelineObject[] pipelineObjects;
+
     public PutPipelineDefinitionInput withPipelineObjects(PipelineObject[] pipelineObjects) {
         this.pipelineObjects = pipelineObjects;
         return this;
     }
     
+    public PutPipelineDefinitionInput(@JsonProperty("pipelineId") String pipelineId, @JsonProperty("pipelineObjects") PipelineObject[] pipelineObjects) {
+        this.pipelineId = pipelineId;
+        this.pipelineObjects = pipelineObjects;
+  }
 }

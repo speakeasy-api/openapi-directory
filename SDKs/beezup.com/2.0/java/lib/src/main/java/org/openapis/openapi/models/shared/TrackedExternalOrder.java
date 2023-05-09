@@ -20,6 +20,7 @@ public class TrackedExternalOrder {
      */
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public TrackedExternalOrder withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -30,6 +31,7 @@ public class TrackedExternalOrder {
      */
     @JsonProperty("merchantOrderId")
     public String merchantOrderId;
+
     public TrackedExternalOrder withMerchantOrderId(String merchantOrderId) {
         this.merchantOrderId = merchantOrderId;
         return this;
@@ -40,6 +42,7 @@ public class TrackedExternalOrder {
      */
     @JsonProperty("paymentValidated")
     public Boolean paymentValidated;
+
     public TrackedExternalOrder withPaymentValidated(Boolean paymentValidated) {
         this.paymentValidated = paymentValidated;
         return this;
@@ -51,6 +54,7 @@ public class TrackedExternalOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public TrackedExternalOrderProduct[] products;
+
     public TrackedExternalOrder withProducts(TrackedExternalOrderProduct[] products) {
         this.products = products;
         return this;
@@ -61,6 +65,7 @@ public class TrackedExternalOrder {
      */
     @JsonProperty("totalAmount")
     public Double totalAmount;
+
     public TrackedExternalOrder withTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -73,6 +78,7 @@ public class TrackedExternalOrder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("utcDate")
     public OffsetDateTime utcDate;
+
     public TrackedExternalOrder withUtcDate(OffsetDateTime utcDate) {
         this.utcDate = utcDate;
         return this;
@@ -84,9 +90,17 @@ public class TrackedExternalOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visitorId")
     public String visitorId;
+
     public TrackedExternalOrder withVisitorId(String visitorId) {
         this.visitorId = visitorId;
         return this;
     }
     
+    public TrackedExternalOrder(@JsonProperty("currencyCode") String currencyCode, @JsonProperty("merchantOrderId") String merchantOrderId, @JsonProperty("paymentValidated") Boolean paymentValidated, @JsonProperty("totalAmount") Double totalAmount, @JsonProperty("utcDate") OffsetDateTime utcDate) {
+        this.currencyCode = currencyCode;
+        this.merchantOrderId = merchantOrderId;
+        this.paymentValidated = paymentValidated;
+        this.totalAmount = totalAmount;
+        this.utcDate = utcDate;
+  }
 }

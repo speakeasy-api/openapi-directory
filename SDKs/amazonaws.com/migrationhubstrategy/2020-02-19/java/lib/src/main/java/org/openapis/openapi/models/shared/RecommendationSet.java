@@ -15,6 +15,7 @@ public class RecommendationSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strategy")
     public StrategyEnum strategy;
+
     public RecommendationSet withStrategy(StrategyEnum strategy) {
         this.strategy = strategy;
         return this;
@@ -23,6 +24,7 @@ public class RecommendationSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDestination")
     public TargetDestinationEnum targetDestination;
+
     public RecommendationSet withTargetDestination(TargetDestinationEnum targetDestination) {
         this.targetDestination = targetDestination;
         return this;
@@ -31,9 +33,11 @@ public class RecommendationSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformationTool")
     public TransformationTool transformationTool;
+
     public RecommendationSet withTransformationTool(TransformationTool transformationTool) {
         this.transformationTool = transformationTool;
         return this;
     }
     
+    public RecommendationSet(){}
 }

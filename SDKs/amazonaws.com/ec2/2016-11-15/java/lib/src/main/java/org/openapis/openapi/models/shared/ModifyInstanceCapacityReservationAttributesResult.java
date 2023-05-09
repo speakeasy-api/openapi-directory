@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceCapacityReservationAttributesResult {
     
     public Boolean return_;
+
     public ModifyInstanceCapacityReservationAttributesResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
     }
     
+    public ModifyInstanceCapacityReservationAttributesResult(){}
 }

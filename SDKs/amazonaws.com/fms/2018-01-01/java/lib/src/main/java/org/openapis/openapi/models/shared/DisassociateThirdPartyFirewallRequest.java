@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateThirdPartyFirewallRequest {
     @JsonProperty("ThirdPartyFirewall")
     public ThirdPartyFirewallEnum thirdPartyFirewall;
+
     public DisassociateThirdPartyFirewallRequest withThirdPartyFirewall(ThirdPartyFirewallEnum thirdPartyFirewall) {
         this.thirdPartyFirewall = thirdPartyFirewall;
         return this;
     }
     
+    public DisassociateThirdPartyFirewallRequest(@JsonProperty("ThirdPartyFirewall") ThirdPartyFirewallEnum thirdPartyFirewall) {
+        this.thirdPartyFirewall = thirdPartyFirewall;
+  }
 }

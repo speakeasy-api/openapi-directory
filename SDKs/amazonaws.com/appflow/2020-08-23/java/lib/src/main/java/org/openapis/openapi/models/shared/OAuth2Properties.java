@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OAuth2Properties {
     @JsonProperty("oAuth2GrantType")
     public OAuth2GrantTypeEnum oAuth2GrantType;
+
     public OAuth2Properties withOAuth2GrantType(OAuth2GrantTypeEnum oAuth2GrantType) {
         this.oAuth2GrantType = oAuth2GrantType;
         return this;
@@ -21,6 +22,7 @@ public class OAuth2Properties {
     
     @JsonProperty("tokenUrl")
     public String tokenUrl;
+
     public OAuth2Properties withTokenUrl(String tokenUrl) {
         this.tokenUrl = tokenUrl;
         return this;
@@ -29,9 +31,14 @@ public class OAuth2Properties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenUrlCustomProperties")
     public java.util.Map<String, String> tokenUrlCustomProperties;
+
     public OAuth2Properties withTokenUrlCustomProperties(java.util.Map<String, String> tokenUrlCustomProperties) {
         this.tokenUrlCustomProperties = tokenUrlCustomProperties;
         return this;
     }
     
+    public OAuth2Properties(@JsonProperty("oAuth2GrantType") OAuth2GrantTypeEnum oAuth2GrantType, @JsonProperty("tokenUrl") String tokenUrl) {
+        this.oAuth2GrantType = oAuth2GrantType;
+        this.tokenUrl = tokenUrl;
+  }
 }

@@ -18,6 +18,7 @@ public class SapDiscoveryComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationType")
     public String applicationType;
+
     public SapDiscoveryComponent withApplicationType(String applicationType) {
         this.applicationType = applicationType;
         return this;
@@ -29,6 +30,7 @@ public class SapDiscoveryComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseType")
     public String databaseType;
+
     public SapDiscoveryComponent withDatabaseType(String databaseType) {
         this.databaseType = databaseType;
         return this;
@@ -40,6 +42,7 @@ public class SapDiscoveryComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostProject")
     public String hostProject;
+
     public SapDiscoveryComponent withHostProject(String hostProject) {
         this.hostProject = hostProject;
         return this;
@@ -51,6 +54,7 @@ public class SapDiscoveryComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public SapDiscoveryResource[] resources;
+
     public SapDiscoveryComponent withResources(SapDiscoveryResource[] resources) {
         this.resources = resources;
         return this;
@@ -62,9 +66,11 @@ public class SapDiscoveryComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sid")
     public String sid;
+
     public SapDiscoveryComponent withSid(String sid) {
         this.sid = sid;
         return this;
     }
     
+    public SapDiscoveryComponent(){}
 }

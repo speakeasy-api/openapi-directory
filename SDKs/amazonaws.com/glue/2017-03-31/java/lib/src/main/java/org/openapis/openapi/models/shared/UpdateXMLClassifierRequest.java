@@ -15,6 +15,7 @@ public class UpdateXMLClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Classification")
     public String classification;
+
     public UpdateXMLClassifierRequest withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -22,6 +23,7 @@ public class UpdateXMLClassifierRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateXMLClassifierRequest withName(String name) {
         this.name = name;
         return this;
@@ -30,9 +32,13 @@ public class UpdateXMLClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RowTag")
     public String rowTag;
+
     public UpdateXMLClassifierRequest withRowTag(String rowTag) {
         this.rowTag = rowTag;
         return this;
     }
     
+    public UpdateXMLClassifierRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

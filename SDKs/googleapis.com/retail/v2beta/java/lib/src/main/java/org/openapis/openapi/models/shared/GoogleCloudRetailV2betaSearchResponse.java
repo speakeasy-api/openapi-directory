@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appliedControls")
     public String[] appliedControls;
+
     public GoogleCloudRetailV2betaSearchResponse withAppliedControls(String[] appliedControls) {
         this.appliedControls = appliedControls;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2betaSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributionToken")
     public String attributionToken;
+
     public GoogleCloudRetailV2betaSearchResponse withAttributionToken(String attributionToken) {
         this.attributionToken = attributionToken;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2betaSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correctedQuery")
     public String correctedQuery;
+
     public GoogleCloudRetailV2betaSearchResponse withCorrectedQuery(String correctedQuery) {
         this.correctedQuery = correctedQuery;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2betaSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experimentInfo")
     public GoogleCloudRetailV2betaExperimentInfo[] experimentInfo;
+
     public GoogleCloudRetailV2betaSearchResponse withExperimentInfo(GoogleCloudRetailV2betaExperimentInfo[] experimentInfo) {
         this.experimentInfo = experimentInfo;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRetailV2betaSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facets")
     public GoogleCloudRetailV2betaSearchResponseFacet[] facets;
+
     public GoogleCloudRetailV2betaSearchResponse withFacets(GoogleCloudRetailV2betaSearchResponseFacet[] facets) {
         this.facets = facets;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRetailV2betaSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidConditionBoostSpecs")
     public GoogleCloudRetailV2betaSearchRequestBoostSpecConditionBoostSpec[] invalidConditionBoostSpecs;
+
     public GoogleCloudRetailV2betaSearchResponse withInvalidConditionBoostSpecs(GoogleCloudRetailV2betaSearchRequestBoostSpecConditionBoostSpec[] invalidConditionBoostSpecs) {
         this.invalidConditionBoostSpecs = invalidConditionBoostSpecs;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudRetailV2betaSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudRetailV2betaSearchResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudRetailV2betaSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryExpansionInfo")
     public GoogleCloudRetailV2betaSearchResponseQueryExpansionInfo queryExpansionInfo;
+
     public GoogleCloudRetailV2betaSearchResponse withQueryExpansionInfo(GoogleCloudRetailV2betaSearchResponseQueryExpansionInfo queryExpansionInfo) {
         this.queryExpansionInfo = queryExpansionInfo;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudRetailV2betaSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectUri")
     public String redirectUri;
+
     public GoogleCloudRetailV2betaSearchResponse withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudRetailV2betaSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GoogleCloudRetailV2betaSearchResponseSearchResult[] results;
+
     public GoogleCloudRetailV2betaSearchResponse withResults(GoogleCloudRetailV2betaSearchResponseSearchResult[] results) {
         this.results = results;
         return this;
@@ -128,9 +138,11 @@ public class GoogleCloudRetailV2betaSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public GoogleCloudRetailV2betaSearchResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public GoogleCloudRetailV2betaSearchResponse(){}
 }

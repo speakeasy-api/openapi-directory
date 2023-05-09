@@ -15,6 +15,7 @@ public class EksContainerSecurityContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privileged")
     public Boolean privileged;
+
     public EksContainerSecurityContext withPrivileged(Boolean privileged) {
         this.privileged = privileged;
         return this;
@@ -23,6 +24,7 @@ public class EksContainerSecurityContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readOnlyRootFilesystem")
     public Boolean readOnlyRootFilesystem;
+
     public EksContainerSecurityContext withReadOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
         this.readOnlyRootFilesystem = readOnlyRootFilesystem;
         return this;
@@ -31,6 +33,7 @@ public class EksContainerSecurityContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runAsGroup")
     public Long runAsGroup;
+
     public EksContainerSecurityContext withRunAsGroup(Long runAsGroup) {
         this.runAsGroup = runAsGroup;
         return this;
@@ -39,6 +42,7 @@ public class EksContainerSecurityContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runAsNonRoot")
     public Boolean runAsNonRoot;
+
     public EksContainerSecurityContext withRunAsNonRoot(Boolean runAsNonRoot) {
         this.runAsNonRoot = runAsNonRoot;
         return this;
@@ -47,9 +51,11 @@ public class EksContainerSecurityContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runAsUser")
     public Long runAsUser;
+
     public EksContainerSecurityContext withRunAsUser(Long runAsUser) {
         this.runAsUser = runAsUser;
         return this;
     }
     
+    public EksContainerSecurityContext(){}
 }

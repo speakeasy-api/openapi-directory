@@ -18,6 +18,7 @@ public class CommentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public Comment[] comments;
+
     public CommentList withComments(Comment[] comments) {
         this.comments = comments;
         return this;
@@ -29,6 +30,7 @@ public class CommentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CommentList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class CommentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public CommentList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public CommentList(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateOrganizationResponse {
     
     public String contentType;
+
     public CreateOrganizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateOrganizationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateOrganizationResponse createOrganizationResponse;
+
     public CreateOrganizationResponse withCreateOrganizationResponse(org.openapis.openapi.models.shared.CreateOrganizationResponse createOrganizationResponse) {
         this.createOrganizationResponse = createOrganizationResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateOrganizationResponse {
      */
     
     public Object directoryInUseException;
+
     public CreateOrganizationResponse withDirectoryInUseException(Object directoryInUseException) {
         this.directoryInUseException = directoryInUseException;
         return this;
@@ -39,6 +43,7 @@ public class CreateOrganizationResponse {
      */
     
     public Object directoryUnavailableException;
+
     public CreateOrganizationResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -49,6 +54,7 @@ public class CreateOrganizationResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateOrganizationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateOrganizationResponse {
      */
     
     public Object limitExceededException;
+
     public CreateOrganizationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateOrganizationResponse {
      */
     
     public Object nameAvailabilityException;
+
     public CreateOrganizationResponse withNameAvailabilityException(Object nameAvailabilityException) {
         this.nameAvailabilityException = nameAvailabilityException;
         return this;
@@ -76,6 +84,7 @@ public class CreateOrganizationResponse {
     
     
     public Integer statusCode;
+
     public CreateOrganizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateOrganizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateOrganizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateOrganizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

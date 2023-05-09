@@ -15,6 +15,7 @@ public class ListObjectChildrenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListObjectChildrenRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListObjectChildrenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListObjectChildrenRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +38,13 @@ public class ListObjectChildrenRequestBody {
      */
     @JsonProperty("ObjectReference")
     public ListObjectChildrenRequestBodyObjectReference objectReference;
+
     public ListObjectChildrenRequestBody withObjectReference(ListObjectChildrenRequestBodyObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
     }
     
+    public ListObjectChildrenRequestBody(@JsonProperty("ObjectReference") ListObjectChildrenRequestBodyObjectReference objectReference) {
+        this.objectReference = objectReference;
+  }
 }

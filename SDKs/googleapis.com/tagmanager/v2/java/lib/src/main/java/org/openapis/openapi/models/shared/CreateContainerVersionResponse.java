@@ -18,6 +18,7 @@ public class CreateContainerVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compilerError")
     public Boolean compilerError;
+
     public CreateContainerVersionResponse withCompilerError(Boolean compilerError) {
         this.compilerError = compilerError;
         return this;
@@ -29,6 +30,7 @@ public class CreateContainerVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerVersion")
     public ContainerVersion containerVersion;
+
     public CreateContainerVersionResponse withContainerVersion(ContainerVersion containerVersion) {
         this.containerVersion = containerVersion;
         return this;
@@ -40,6 +42,7 @@ public class CreateContainerVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newWorkspacePath")
     public String newWorkspacePath;
+
     public CreateContainerVersionResponse withNewWorkspacePath(String newWorkspacePath) {
         this.newWorkspacePath = newWorkspacePath;
         return this;
@@ -51,9 +54,11 @@ public class CreateContainerVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncStatus")
     public SyncStatus syncStatus;
+
     public CreateContainerVersionResponse withSyncStatus(SyncStatus syncStatus) {
         this.syncStatus = syncStatus;
         return this;
     }
     
+    public CreateContainerVersionResponse(){}
 }

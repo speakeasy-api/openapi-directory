@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyDBSnapshotMessage {
     
     public String dbSnapshotIdentifier;
+
     public ModifyDBSnapshotMessage withDBSnapshotIdentifier(String dbSnapshotIdentifier) {
         this.dbSnapshotIdentifier = dbSnapshotIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class ModifyDBSnapshotMessage {
     
     
     public String engineVersion;
+
     public ModifyDBSnapshotMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -23,9 +25,13 @@ public class ModifyDBSnapshotMessage {
     
     
     public String optionGroupName;
+
     public ModifyDBSnapshotMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
     }
     
+    public ModifyDBSnapshotMessage(@JsonProperty("DBSnapshotIdentifier") String dbSnapshotIdentifier) {
+        this.dbSnapshotIdentifier = dbSnapshotIdentifier;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Error {
     @JsonProperty("error")
     public ErrorDetail error;
+
     public Error withError(ErrorDetail error) {
         this.error = error;
         return this;
@@ -16,6 +17,7 @@ public class Error {
     
     @JsonProperty("statistics")
     public Statistics statistics;
+
     public Error withStatistics(Statistics statistics) {
         this.statistics = statistics;
         return this;
@@ -23,9 +25,15 @@ public class Error {
     
     @JsonProperty("success")
     public Boolean success;
+
     public Error withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public Error(@JsonProperty("error") ErrorDetail error, @JsonProperty("statistics") Statistics statistics, @JsonProperty("success") Boolean success) {
+        this.error = error;
+        this.statistics = statistics;
+        this.success = success;
+  }
 }

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.PostOriginKeysResponse;
 import org.openapis.openapi.models.shared.CheckoutUtilityRequest;
 
@@ -26,31 +25,31 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.CheckoutUtilityRequest req = new CheckoutUtilityRequest() {{
-                originDomains = new String[]{{
-                    add("provident"),
-                    add("distinctio"),
-                    add("quibusdam"),
-                }};
-            }}            
+            org.openapis.openapi.models.shared.CheckoutUtilityRequest req = new CheckoutUtilityRequest(                new String[]{{
+                                add("provident"),
+                                add("distinctio"),
+                                add("quibusdam"),
+                            }});            
 
             PostOriginKeysResponse res = sdk.postOriginKeys(req);
 
-            if (res.checkoutUtilityResponse.isPresent()) {
+            if (res.checkoutUtilityResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `postOriginKeys` - Create originKey values for one or more merchant domains.
+* [postOriginKeys](docs/sdk/README.md#postoriginkeys) - Create originKey values for one or more merchant domains.
 <!-- End SDK Available Operations -->
 
 ### Maturity

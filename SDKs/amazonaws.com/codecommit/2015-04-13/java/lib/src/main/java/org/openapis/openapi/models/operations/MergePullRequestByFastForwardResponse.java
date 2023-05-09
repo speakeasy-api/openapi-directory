@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MergePullRequestByFastForwardResponse {
@@ -12,6 +13,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object concurrentReferenceUpdateException;
+
     public MergePullRequestByFastForwardResponse withConcurrentReferenceUpdateException(Object concurrentReferenceUpdateException) {
         this.concurrentReferenceUpdateException = concurrentReferenceUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class MergePullRequestByFastForwardResponse {
     
     
     public String contentType;
+
     public MergePullRequestByFastForwardResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public MergePullRequestByFastForwardResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -39,6 +43,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public MergePullRequestByFastForwardResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -49,6 +54,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public MergePullRequestByFastForwardResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -59,6 +65,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public MergePullRequestByFastForwardResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public MergePullRequestByFastForwardResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -79,6 +87,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object invalidCommitIdException;
+
     public MergePullRequestByFastForwardResponse withInvalidCommitIdException(Object invalidCommitIdException) {
         this.invalidCommitIdException = invalidCommitIdException;
         return this;
@@ -89,6 +98,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object invalidPullRequestIdException;
+
     public MergePullRequestByFastForwardResponse withInvalidPullRequestIdException(Object invalidPullRequestIdException) {
         this.invalidPullRequestIdException = invalidPullRequestIdException;
         return this;
@@ -99,6 +109,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public MergePullRequestByFastForwardResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -109,6 +120,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object manualMergeRequiredException;
+
     public MergePullRequestByFastForwardResponse withManualMergeRequiredException(Object manualMergeRequiredException) {
         this.manualMergeRequiredException = manualMergeRequiredException;
         return this;
@@ -119,6 +131,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public org.openapis.openapi.models.shared.MergePullRequestByFastForwardOutput mergePullRequestByFastForwardOutput;
+
     public MergePullRequestByFastForwardResponse withMergePullRequestByFastForwardOutput(org.openapis.openapi.models.shared.MergePullRequestByFastForwardOutput mergePullRequestByFastForwardOutput) {
         this.mergePullRequestByFastForwardOutput = mergePullRequestByFastForwardOutput;
         return this;
@@ -129,6 +142,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object pullRequestAlreadyClosedException;
+
     public MergePullRequestByFastForwardResponse withPullRequestAlreadyClosedException(Object pullRequestAlreadyClosedException) {
         this.pullRequestAlreadyClosedException = pullRequestAlreadyClosedException;
         return this;
@@ -139,6 +153,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object pullRequestApprovalRulesNotSatisfiedException;
+
     public MergePullRequestByFastForwardResponse withPullRequestApprovalRulesNotSatisfiedException(Object pullRequestApprovalRulesNotSatisfiedException) {
         this.pullRequestApprovalRulesNotSatisfiedException = pullRequestApprovalRulesNotSatisfiedException;
         return this;
@@ -149,6 +164,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object pullRequestDoesNotExistException;
+
     public MergePullRequestByFastForwardResponse withPullRequestDoesNotExistException(Object pullRequestDoesNotExistException) {
         this.pullRequestDoesNotExistException = pullRequestDoesNotExistException;
         return this;
@@ -159,6 +175,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object pullRequestIdRequiredException;
+
     public MergePullRequestByFastForwardResponse withPullRequestIdRequiredException(Object pullRequestIdRequiredException) {
         this.pullRequestIdRequiredException = pullRequestIdRequiredException;
         return this;
@@ -166,6 +183,7 @@ public class MergePullRequestByFastForwardResponse {
     
     
     public Integer statusCode;
+
     public MergePullRequestByFastForwardResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -173,6 +191,7 @@ public class MergePullRequestByFastForwardResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MergePullRequestByFastForwardResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -183,6 +202,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object referenceDoesNotExistException;
+
     public MergePullRequestByFastForwardResponse withReferenceDoesNotExistException(Object referenceDoesNotExistException) {
         this.referenceDoesNotExistException = referenceDoesNotExistException;
         return this;
@@ -193,6 +213,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public MergePullRequestByFastForwardResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -203,6 +224,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public MergePullRequestByFastForwardResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -213,6 +235,7 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object repositoryNotAssociatedWithPullRequestException;
+
     public MergePullRequestByFastForwardResponse withRepositoryNotAssociatedWithPullRequestException(Object repositoryNotAssociatedWithPullRequestException) {
         this.repositoryNotAssociatedWithPullRequestException = repositoryNotAssociatedWithPullRequestException;
         return this;
@@ -223,9 +246,14 @@ public class MergePullRequestByFastForwardResponse {
      */
     
     public Object tipOfSourceReferenceIsDifferentException;
+
     public MergePullRequestByFastForwardResponse withTipOfSourceReferenceIsDifferentException(Object tipOfSourceReferenceIsDifferentException) {
         this.tipOfSourceReferenceIsDifferentException = tipOfSourceReferenceIsDifferentException;
         return this;
     }
     
+    public MergePullRequestByFastForwardResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

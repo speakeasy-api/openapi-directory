@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFoodBrandedNamePhpRequest {
@@ -16,6 +17,7 @@ public class GetFoodBrandedNamePhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public GetFoodBrandedNamePhpLimitEnum limit;
+
     public GetFoodBrandedNamePhpRequest withLimit(GetFoodBrandedNamePhpLimitEnum limit) {
         this.limit = limit;
         return this;
@@ -30,6 +32,7 @@ public class GetFoodBrandedNamePhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetFoodBrandedNamePhpRequest withName(String name) {
         this.name = name;
         return this;
@@ -44,9 +47,13 @@ public class GetFoodBrandedNamePhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetFoodBrandedNamePhpRequest withPage(Long page) {
         this.page = page;
         return this;
     }
     
+    public GetFoodBrandedNamePhpRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

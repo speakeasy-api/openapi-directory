@@ -18,6 +18,7 @@ public class CustomFieldSettingResponseCustomFieldDateValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public CustomFieldSettingResponseCustomFieldDateValue withDate(String date) {
         this.date = date;
         return this;
@@ -29,9 +30,11 @@ public class CustomFieldSettingResponseCustomFieldDateValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_time")
     public String dateTime;
+
     public CustomFieldSettingResponseCustomFieldDateValue withDateTime(String dateTime) {
         this.dateTime = dateTime;
         return this;
     }
     
+    public CustomFieldSettingResponseCustomFieldDateValue(){}
 }

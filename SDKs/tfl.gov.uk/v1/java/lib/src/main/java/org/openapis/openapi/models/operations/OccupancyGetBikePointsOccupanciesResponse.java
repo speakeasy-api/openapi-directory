@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OccupancyGetBikePointsOccupanciesResponse {
     
     public byte[] body;
+
     public OccupancyGetBikePointsOccupanciesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class OccupancyGetBikePointsOccupanciesResponse {
     
     
     public String contentType;
+
     public OccupancyGetBikePointsOccupanciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class OccupancyGetBikePointsOccupanciesResponse {
     
     
     public Integer statusCode;
+
     public OccupancyGetBikePointsOccupanciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class OccupancyGetBikePointsOccupanciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OccupancyGetBikePointsOccupanciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class OccupancyGetBikePointsOccupanciesResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesBikePointOccupancy[] tflApiPresentationEntitiesBikePointOccupancies;
+
     public OccupancyGetBikePointsOccupanciesResponse withTflApiPresentationEntitiesBikePointOccupancies(org.openapis.openapi.models.shared.TflApiPresentationEntitiesBikePointOccupancy[] tflApiPresentationEntitiesBikePointOccupancies) {
         this.tflApiPresentationEntitiesBikePointOccupancies = tflApiPresentationEntitiesBikePointOccupancies;
         return this;
     }
     
+    public OccupancyGetBikePointsOccupanciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

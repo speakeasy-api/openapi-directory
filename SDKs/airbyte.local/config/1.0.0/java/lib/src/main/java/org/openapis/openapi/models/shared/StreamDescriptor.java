@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StreamDescriptor {
     @JsonProperty("name")
     public String name;
+
     public StreamDescriptor withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,13 @@ public class StreamDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public String namespace;
+
     public StreamDescriptor withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public StreamDescriptor(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

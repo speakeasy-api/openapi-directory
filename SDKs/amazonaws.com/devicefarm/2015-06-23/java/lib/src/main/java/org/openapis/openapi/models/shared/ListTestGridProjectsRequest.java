@@ -12,6 +12,7 @@ public class ListTestGridProjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResult")
     public Long maxResult;
+
     public ListTestGridProjectsRequest withMaxResult(Long maxResult) {
         this.maxResult = maxResult;
         return this;
@@ -20,9 +21,11 @@ public class ListTestGridProjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTestGridProjectsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTestGridProjectsRequest(){}
 }

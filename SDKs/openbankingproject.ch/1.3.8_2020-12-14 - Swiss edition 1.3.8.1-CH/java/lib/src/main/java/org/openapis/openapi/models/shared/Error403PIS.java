@@ -21,6 +21,7 @@ public class Error403PIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public Error403PIS withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -35,6 +36,7 @@ public class Error403PIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalErrors")
     public Error403PISAdditionalErrors[] additionalErrors;
+
     public Error403PIS withAdditionalErrors(Error403PISAdditionalErrors[] additionalErrors) {
         this.additionalErrors = additionalErrors;
         return this;
@@ -45,6 +47,7 @@ public class Error403PIS {
      */
     @JsonProperty("code")
     public MessageCode403PISEnum code;
+
     public Error403PIS withCode(MessageCode403PISEnum code) {
         this.code = code;
         return this;
@@ -59,6 +62,7 @@ public class Error403PIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error403PIS withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -73,6 +77,7 @@ public class Error403PIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error403PIS withTitle(String title) {
         this.title = title;
         return this;
@@ -85,9 +90,14 @@ public class Error403PIS {
      */
     @JsonProperty("type")
     public String type;
+
     public Error403PIS withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Error403PIS(@JsonProperty("code") MessageCode403PISEnum code, @JsonProperty("type") String type) {
+        this.code = code;
+        this.type = type;
+  }
 }

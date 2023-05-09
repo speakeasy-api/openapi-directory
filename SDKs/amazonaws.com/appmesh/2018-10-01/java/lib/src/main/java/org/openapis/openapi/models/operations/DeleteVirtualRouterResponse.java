@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVirtualRouterResponse {
@@ -12,6 +13,7 @@ public class DeleteVirtualRouterResponse {
      */
     
     public Object badRequestException;
+
     public DeleteVirtualRouterResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteVirtualRouterResponse {
     
     
     public String contentType;
+
     public DeleteVirtualRouterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteVirtualRouterResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteVirtualRouterOutput deleteVirtualRouterOutput;
+
     public DeleteVirtualRouterResponse withDeleteVirtualRouterOutput(org.openapis.openapi.models.shared.DeleteVirtualRouterOutput deleteVirtualRouterOutput) {
         this.deleteVirtualRouterOutput = deleteVirtualRouterOutput;
         return this;
@@ -39,6 +43,7 @@ public class DeleteVirtualRouterResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteVirtualRouterResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteVirtualRouterResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteVirtualRouterResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteVirtualRouterResponse {
      */
     
     public Object notFoundException;
+
     public DeleteVirtualRouterResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteVirtualRouterResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteVirtualRouterResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteVirtualRouterResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteVirtualRouterResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteVirtualRouterResponse {
     
     
     public Integer statusCode;
+
     public DeleteVirtualRouterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteVirtualRouterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVirtualRouterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteVirtualRouterResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteVirtualRouterResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteVirtualRouterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

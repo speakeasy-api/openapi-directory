@@ -15,9 +15,11 @@ public class RegisterVolumeResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeId")
     public String volumeId;
+
     public RegisterVolumeResult withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public RegisterVolumeResult(){}
 }

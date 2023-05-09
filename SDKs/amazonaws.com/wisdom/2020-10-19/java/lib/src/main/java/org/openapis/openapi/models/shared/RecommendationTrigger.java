@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RecommendationTrigger {
     @JsonProperty("data")
     public RecommendationTriggerData data;
+
     public RecommendationTrigger withData(RecommendationTriggerData data) {
         this.data = data;
         return this;
@@ -19,6 +20,7 @@ public class RecommendationTrigger {
     
     @JsonProperty("id")
     public String id;
+
     public RecommendationTrigger withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class RecommendationTrigger {
     
     @JsonProperty("recommendationIds")
     public String[] recommendationIds;
+
     public RecommendationTrigger withRecommendationIds(String[] recommendationIds) {
         this.recommendationIds = recommendationIds;
         return this;
@@ -33,6 +36,7 @@ public class RecommendationTrigger {
     
     @JsonProperty("source")
     public RecommendationSourceTypeEnum source;
+
     public RecommendationTrigger withSource(RecommendationSourceTypeEnum source) {
         this.source = source;
         return this;
@@ -40,9 +44,17 @@ public class RecommendationTrigger {
     
     @JsonProperty("type")
     public RecommendationTriggerTypeEnum type;
+
     public RecommendationTrigger withType(RecommendationTriggerTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RecommendationTrigger(@JsonProperty("data") RecommendationTriggerData data, @JsonProperty("id") String id, @JsonProperty("recommendationIds") String[] recommendationIds, @JsonProperty("source") RecommendationSourceTypeEnum source, @JsonProperty("type") RecommendationTriggerTypeEnum type) {
+        this.data = data;
+        this.id = id;
+        this.recommendationIds = recommendationIds;
+        this.source = source;
+        this.type = type;
+  }
 }

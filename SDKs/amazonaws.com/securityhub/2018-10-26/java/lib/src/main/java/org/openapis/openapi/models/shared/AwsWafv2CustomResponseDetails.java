@@ -15,6 +15,7 @@ public class AwsWafv2CustomResponseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomResponseBodyKey")
     public String customResponseBodyKey;
+
     public AwsWafv2CustomResponseDetails withCustomResponseBodyKey(String customResponseBodyKey) {
         this.customResponseBodyKey = customResponseBodyKey;
         return this;
@@ -23,6 +24,7 @@ public class AwsWafv2CustomResponseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResponseCode")
     public Long responseCode;
+
     public AwsWafv2CustomResponseDetails withResponseCode(Long responseCode) {
         this.responseCode = responseCode;
         return this;
@@ -31,9 +33,11 @@ public class AwsWafv2CustomResponseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResponseHeaders")
     public AwsWafv2CustomHttpHeader[] responseHeaders;
+
     public AwsWafv2CustomResponseDetails withResponseHeaders(AwsWafv2CustomHttpHeader[] responseHeaders) {
         this.responseHeaders = responseHeaders;
         return this;
     }
     
+    public AwsWafv2CustomResponseDetails(){}
 }

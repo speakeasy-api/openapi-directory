@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProjectResponse {
     
     public String contentType;
+
     public DeleteProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteProjectResult deleteProjectResult;
+
     public DeleteProjectResponse withDeleteProjectResult(org.openapis.openapi.models.shared.DeleteProjectResult deleteProjectResult) {
         this.deleteProjectResult = deleteProjectResult;
         return this;
@@ -29,6 +32,7 @@ public class DeleteProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalFailureException internalFailureException;
+
     public DeleteProjectResponse withInternalFailureException(org.openapis.openapi.models.shared.InternalFailureException internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundException notFoundException;
+
     public DeleteProjectResponse withNotFoundException(org.openapis.openapi.models.shared.NotFoundException notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteProjectResponse {
     
     
     public Integer statusCode;
+
     public DeleteProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceUnavailableException serviceUnavailableException;
+
     public DeleteProjectResponse withServiceUnavailableException(org.openapis.openapi.models.shared.ServiceUnavailableException serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.TooManyRequestsException tooManyRequestsException;
+
     public DeleteProjectResponse withTooManyRequestsException(org.openapis.openapi.models.shared.TooManyRequestsException tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.UnauthorizedException unauthorizedException;
+
     public DeleteProjectResponse withUnauthorizedException(org.openapis.openapi.models.shared.UnauthorizedException unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

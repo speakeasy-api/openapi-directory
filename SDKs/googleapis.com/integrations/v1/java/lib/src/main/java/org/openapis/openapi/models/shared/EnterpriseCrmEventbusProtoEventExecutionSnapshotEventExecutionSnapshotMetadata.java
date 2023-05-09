@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnaps
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventAttemptNum")
     public Integer eventAttemptNum;
+
     public EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata withEventAttemptNum(Integer eventAttemptNum) {
         this.eventAttemptNum = eventAttemptNum;
         return this;
@@ -26,8 +27,21 @@ public class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnaps
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskAttemptNum")
     public Integer taskAttemptNum;
+
     public EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata withTaskAttemptNum(Integer taskAttemptNum) {
         this.taskAttemptNum = taskAttemptNum;
+        return this;
+    }
+    
+    /**
+     * the task label associated with this snapshot. Could be empty.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("taskLabel")
+    public String taskLabel;
+
+    public EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata withTaskLabel(String taskLabel) {
+        this.taskLabel = taskLabel;
         return this;
     }
     
@@ -37,6 +51,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnaps
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskName")
     public String taskName;
+
     public EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata withTaskName(String taskName) {
         this.taskName = taskName;
         return this;
@@ -48,9 +63,11 @@ public class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnaps
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskNumber")
     public String taskNumber;
+
     public EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata withTaskNumber(String taskNumber) {
         this.taskNumber = taskNumber;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata(){}
 }

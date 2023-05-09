@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDiscoveryV2ClassificationsIdRequest {
@@ -12,6 +13,7 @@ public class GetDiscoveryV2ClassificationsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetDiscoveryV2ClassificationsIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetDiscoveryV2ClassificationsIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLicensedContent")
     public GetDiscoveryV2ClassificationsIdIncludeLicensedContentEnum includeLicensedContent;
+
     public GetDiscoveryV2ClassificationsIdRequest withIncludeLicensedContent(GetDiscoveryV2ClassificationsIdIncludeLicensedContentEnum includeLicensedContent) {
         this.includeLicensedContent = includeLicensedContent;
         return this;
@@ -32,9 +35,13 @@ public class GetDiscoveryV2ClassificationsIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetDiscoveryV2ClassificationsIdRequest withLocale(String locale) {
         this.locale = locale;
         return this;
     }
     
+    public GetDiscoveryV2ClassificationsIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

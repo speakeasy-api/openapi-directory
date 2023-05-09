@@ -49,12 +49,10 @@ public class CatalogsGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogIndexResponse res = new org.openapis.openapi.models.operations.CatalogIndexResponse() {{
+        org.openapis.openapi.models.operations.CatalogIndexResponse res = new org.openapis.openapi.models.operations.CatalogIndexResponse(contentType, httpRes.statusCode()) {{
             catalogIndex = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,12 +93,10 @@ public class CatalogsGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogGetBeezUPColumnsResponse res = new org.openapis.openapi.models.operations.CatalogGetBeezUPColumnsResponse() {{
+        org.openapis.openapi.models.operations.CatalogGetBeezUPColumnsResponse res = new org.openapis.openapi.models.operations.CatalogGetBeezUPColumnsResponse(contentType, httpRes.statusCode()) {{
             beezUPColumnConfigurations = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

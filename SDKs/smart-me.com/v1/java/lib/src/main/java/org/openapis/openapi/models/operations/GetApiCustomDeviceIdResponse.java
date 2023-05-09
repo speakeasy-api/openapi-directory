@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiCustomDeviceIdResponse {
     
     public byte[] body;
+
     public GetApiCustomDeviceIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetApiCustomDeviceIdResponse {
     
     
     public String contentType;
+
     public GetApiCustomDeviceIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetApiCustomDeviceIdResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomDeviceToPost customDeviceToPost;
+
     public GetApiCustomDeviceIdResponse withCustomDeviceToPost(org.openapis.openapi.models.shared.CustomDeviceToPost customDeviceToPost) {
         this.customDeviceToPost = customDeviceToPost;
         return this;
@@ -33,6 +37,7 @@ public class GetApiCustomDeviceIdResponse {
     
     
     public Integer statusCode;
+
     public GetApiCustomDeviceIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetApiCustomDeviceIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiCustomDeviceIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApiCustomDeviceIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateWorkerFleetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalFixedProperties")
     public String additionalFixedProperties;
+
     public CreateWorkerFleetRequestBody withAdditionalFixedProperties(String additionalFixedProperties) {
         this.additionalFixedProperties = additionalFixedProperties;
         return this;
@@ -26,6 +27,7 @@ public class CreateWorkerFleetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateWorkerFleetRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -36,6 +38,7 @@ public class CreateWorkerFleetRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateWorkerFleetRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -46,9 +49,14 @@ public class CreateWorkerFleetRequestBody {
      */
     @JsonProperty("site")
     public String site;
+
     public CreateWorkerFleetRequestBody withSite(String site) {
         this.site = site;
         return this;
     }
     
+    public CreateWorkerFleetRequestBody(@JsonProperty("name") String name, @JsonProperty("site") String site) {
+        this.name = name;
+        this.site = site;
+  }
 }

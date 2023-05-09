@@ -20,6 +20,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemCount")
     public Long itemCount;
+
     public Destination withItemCount(Long itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -31,6 +32,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public Destination withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -42,6 +44,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     public String organizationId;
+
     public Destination withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -55,6 +58,7 @@ public class Destination {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("sending_at")
     public OffsetDateTime sendingAt;
+
     public Destination withSendingAt(OffsetDateTime sendingAt) {
         this.sendingAt = sendingAt;
         return this;
@@ -66,9 +70,11 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public Destination withService(String service) {
         this.service = service;
         return this;
     }
     
+    public Destination(){}
 }

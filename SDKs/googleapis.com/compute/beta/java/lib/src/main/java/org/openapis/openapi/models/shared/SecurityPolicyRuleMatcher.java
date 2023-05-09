@@ -15,6 +15,7 @@ public class SecurityPolicyRuleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public SecurityPolicyRuleMatcherConfig config;
+
     public SecurityPolicyRuleMatcher withConfig(SecurityPolicyRuleMatcherConfig config) {
         this.config = config;
         return this;
@@ -26,6 +27,7 @@ public class SecurityPolicyRuleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expr")
     public Expr expr;
+
     public SecurityPolicyRuleMatcher withExpr(Expr expr) {
         this.expr = expr;
         return this;
@@ -37,9 +39,11 @@ public class SecurityPolicyRuleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionedExpr")
     public SecurityPolicyRuleMatcherVersionedExprEnum versionedExpr;
+
     public SecurityPolicyRuleMatcher withVersionedExpr(SecurityPolicyRuleMatcherVersionedExprEnum versionedExpr) {
         this.versionedExpr = versionedExpr;
         return this;
     }
     
+    public SecurityPolicyRuleMatcher(){}
 }

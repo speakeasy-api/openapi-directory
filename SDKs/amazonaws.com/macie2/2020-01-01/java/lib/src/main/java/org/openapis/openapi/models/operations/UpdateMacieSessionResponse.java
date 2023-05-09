@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMacieSessionResponse {
@@ -12,6 +13,7 @@ public class UpdateMacieSessionResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateMacieSessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateMacieSessionResponse {
      */
     
     public Object conflictException;
+
     public UpdateMacieSessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMacieSessionResponse {
     
     
     public String contentType;
+
     public UpdateMacieSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateMacieSessionResponse {
      */
     
     public Object internalServerException;
+
     public UpdateMacieSessionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateMacieSessionResponse {
     
     
     public Integer statusCode;
+
     public UpdateMacieSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateMacieSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMacieSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateMacieSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateMacieSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateMacieSessionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateMacieSessionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateMacieSessionResponse {
      */
     
     public Object throttlingException;
+
     public UpdateMacieSessionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateMacieSessionResponse {
      */
     
     public java.util.Map<String, Object> updateMacieSessionResponse;
+
     public UpdateMacieSessionResponse withUpdateMacieSessionResponse(java.util.Map<String, Object> updateMacieSessionResponse) {
         this.updateMacieSessionResponse = updateMacieSessionResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateMacieSessionResponse {
      */
     
     public Object validationException;
+
     public UpdateMacieSessionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateMacieSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

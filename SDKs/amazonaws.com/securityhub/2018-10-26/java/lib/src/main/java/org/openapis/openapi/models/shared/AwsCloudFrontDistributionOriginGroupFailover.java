@@ -15,9 +15,11 @@ public class AwsCloudFrontDistributionOriginGroupFailover {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusCodes")
     public AwsCloudFrontDistributionOriginGroupFailoverStatusCodes statusCodes;
+
     public AwsCloudFrontDistributionOriginGroupFailover withStatusCodes(AwsCloudFrontDistributionOriginGroupFailoverStatusCodes statusCodes) {
         this.statusCodes = statusCodes;
         return this;
     }
     
+    public AwsCloudFrontDistributionOriginGroupFailover(){}
 }

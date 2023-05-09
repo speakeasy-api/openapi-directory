@@ -18,6 +18,7 @@ public class TextOperatorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exactMatchWithOperator")
     public Boolean exactMatchWithOperator;
+
     public TextOperatorOptions withExactMatchWithOperator(Boolean exactMatchWithOperator) {
         this.exactMatchWithOperator = exactMatchWithOperator;
         return this;
@@ -29,9 +30,11 @@ public class TextOperatorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorName")
     public String operatorName;
+
     public TextOperatorOptions withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
     }
     
+    public TextOperatorOptions(){}
 }

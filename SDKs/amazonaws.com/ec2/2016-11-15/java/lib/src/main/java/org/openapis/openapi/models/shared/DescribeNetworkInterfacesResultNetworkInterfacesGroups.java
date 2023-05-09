@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInterfacesResultNetworkInterfacesGroups {
     
     public String groupId;
+
     public DescribeNetworkInterfacesResultNetworkInterfacesGroups withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -19,9 +20,11 @@ public class DescribeNetworkInterfacesResultNetworkInterfacesGroups {
     
     
     public String groupName;
+
     public DescribeNetworkInterfacesResultNetworkInterfacesGroups withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public DescribeNetworkInterfacesResultNetworkInterfacesGroups(){}
 }

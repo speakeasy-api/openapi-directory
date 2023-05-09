@@ -15,9 +15,11 @@ public class UpdateSubscriptionsToEventBridgeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForceMove")
     public Boolean forceMove;
+
     public UpdateSubscriptionsToEventBridgeMessage withForceMove(Boolean forceMove) {
         this.forceMove = forceMove;
         return this;
     }
     
+    public UpdateSubscriptionsToEventBridgeMessage(){}
 }

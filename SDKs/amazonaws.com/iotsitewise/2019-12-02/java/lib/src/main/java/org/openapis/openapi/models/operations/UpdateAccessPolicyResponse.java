@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAccessPolicyResponse {
     
     public String contentType;
+
     public UpdateAccessPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAccessPolicyResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateAccessPolicyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAccessPolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateAccessPolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAccessPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAccessPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateAccessPolicyResponse {
     
     
     public Integer statusCode;
+
     public UpdateAccessPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAccessPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAccessPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAccessPolicyResponse {
      */
     
     public Object throttlingException;
+
     public UpdateAccessPolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateAccessPolicyResponse {
      */
     
     public java.util.Map<String, Object> updateAccessPolicyResponse;
+
     public UpdateAccessPolicyResponse withUpdateAccessPolicyResponse(java.util.Map<String, Object> updateAccessPolicyResponse) {
         this.updateAccessPolicyResponse = updateAccessPolicyResponse;
         return this;
     }
     
+    public UpdateAccessPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

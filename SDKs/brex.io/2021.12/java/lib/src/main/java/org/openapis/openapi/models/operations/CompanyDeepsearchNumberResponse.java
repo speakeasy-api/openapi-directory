@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompanyDeepsearchNumberResponse {
@@ -12,6 +13,7 @@ public class CompanyDeepsearchNumberResponse {
      */
     
     public CompanyDeepsearchNumber200ApplicationJSON[] companyDeepsearchNumber200ApplicationJSONObjects;
+
     public CompanyDeepsearchNumberResponse withCompanyDeepsearchNumber200ApplicationJSONObjects(CompanyDeepsearchNumber200ApplicationJSON[] companyDeepsearchNumber200ApplicationJSONObjects) {
         this.companyDeepsearchNumber200ApplicationJSONObjects = companyDeepsearchNumber200ApplicationJSONObjects;
         return this;
@@ -22,6 +24,7 @@ public class CompanyDeepsearchNumberResponse {
      */
     
     public CompanyDeepsearchNumberDefaultApplicationJSON companyDeepsearchNumberDefaultApplicationJSONObject;
+
     public CompanyDeepsearchNumberResponse withCompanyDeepsearchNumberDefaultApplicationJSONObject(CompanyDeepsearchNumberDefaultApplicationJSON companyDeepsearchNumberDefaultApplicationJSONObject) {
         this.companyDeepsearchNumberDefaultApplicationJSONObject = companyDeepsearchNumberDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class CompanyDeepsearchNumberResponse {
     
     
     public String contentType;
+
     public CompanyDeepsearchNumberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class CompanyDeepsearchNumberResponse {
     
     
     public Integer statusCode;
+
     public CompanyDeepsearchNumberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CompanyDeepsearchNumberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompanyDeepsearchNumberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CompanyDeepsearchNumberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

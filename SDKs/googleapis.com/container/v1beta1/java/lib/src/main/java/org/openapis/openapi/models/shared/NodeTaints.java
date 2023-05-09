@@ -18,9 +18,11 @@ public class NodeTaints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taints")
     public NodeTaint[] taints;
+
     public NodeTaints withTaints(NodeTaint[] taints) {
         this.taints = taints;
         return this;
     }
     
+    public NodeTaints(){}
 }

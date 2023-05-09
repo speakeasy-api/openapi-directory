@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineArrivalsRequest {
@@ -12,6 +13,7 @@ public class LineArrivalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationStationId")
     public String destinationStationId;
+
     public LineArrivalsRequest withDestinationStationId(String destinationStationId) {
         this.destinationStationId = destinationStationId;
         return this;
@@ -22,6 +24,7 @@ public class LineArrivalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public LineArrivalsDirectionEnum direction;
+
     public LineArrivalsRequest withDirection(LineArrivalsDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -32,6 +35,7 @@ public class LineArrivalsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
     public String[] ids;
+
     public LineArrivalsRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -42,9 +46,14 @@ public class LineArrivalsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stopPointId")
     public String stopPointId;
+
     public LineArrivalsRequest withStopPointId(String stopPointId) {
         this.stopPointId = stopPointId;
         return this;
     }
     
+    public LineArrivalsRequest(@JsonProperty("ids") String[] ids, @JsonProperty("stopPointId") String stopPointId) {
+        this.ids = ids;
+        this.stopPointId = stopPointId;
+  }
 }

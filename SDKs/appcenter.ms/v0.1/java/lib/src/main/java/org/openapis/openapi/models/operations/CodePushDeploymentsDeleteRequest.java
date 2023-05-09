@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodePushDeploymentsDeleteRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public CodePushDeploymentsDeleteRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class CodePushDeploymentsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public CodePushDeploymentsDeleteRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -29,6 +32,7 @@ public class CodePushDeploymentsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_name")
     public String deploymentName;
+
     public CodePushDeploymentsDeleteRequest withDeploymentName(String deploymentName) {
         this.deploymentName = deploymentName;
         return this;
@@ -39,9 +43,15 @@ public class CodePushDeploymentsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public CodePushDeploymentsDeleteRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public CodePushDeploymentsDeleteRequest(@JsonProperty("app_name") String appName, @JsonProperty("deployment_name") String deploymentName, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.deploymentName = deploymentName;
+        this.ownerName = ownerName;
+  }
 }

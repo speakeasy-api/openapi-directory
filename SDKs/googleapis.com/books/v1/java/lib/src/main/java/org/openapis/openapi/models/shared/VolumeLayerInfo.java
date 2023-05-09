@@ -18,9 +18,11 @@ public class VolumeLayerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layers")
     public VolumeLayerInfoLayers[] layers;
+
     public VolumeLayerInfo withLayers(VolumeLayerInfoLayers[] layers) {
         this.layers = layers;
         return this;
     }
     
+    public VolumeLayerInfo(){}
 }

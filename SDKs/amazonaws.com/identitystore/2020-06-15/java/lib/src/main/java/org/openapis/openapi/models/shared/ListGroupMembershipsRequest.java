@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListGroupMembershipsRequest {
     @JsonProperty("GroupId")
     public String groupId;
+
     public ListGroupMembershipsRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -18,6 +19,7 @@ public class ListGroupMembershipsRequest {
     
     @JsonProperty("IdentityStoreId")
     public String identityStoreId;
+
     public ListGroupMembershipsRequest withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
@@ -26,6 +28,7 @@ public class ListGroupMembershipsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListGroupMembershipsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -34,9 +37,14 @@ public class ListGroupMembershipsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListGroupMembershipsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListGroupMembershipsRequest(@JsonProperty("GroupId") String groupId, @JsonProperty("IdentityStoreId") String identityStoreId) {
+        this.groupId = groupId;
+        this.identityStoreId = identityStoreId;
+  }
 }

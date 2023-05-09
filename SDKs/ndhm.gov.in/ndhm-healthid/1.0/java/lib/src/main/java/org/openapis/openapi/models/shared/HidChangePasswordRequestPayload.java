@@ -15,6 +15,7 @@ public class HidChangePasswordRequestPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newPassword")
     public String newPassword;
+
     public HidChangePasswordRequestPayload withNewPassword(String newPassword) {
         this.newPassword = newPassword;
         return this;
@@ -23,9 +24,11 @@ public class HidChangePasswordRequestPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oldPassword")
     public String oldPassword;
+
     public HidChangePasswordRequestPayload withOldPassword(String oldPassword) {
         this.oldPassword = oldPassword;
         return this;
     }
     
+    public HidChangePasswordRequestPayload(){}
 }

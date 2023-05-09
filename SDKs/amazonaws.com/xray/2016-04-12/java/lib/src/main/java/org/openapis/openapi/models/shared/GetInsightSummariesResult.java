@@ -15,6 +15,7 @@ public class GetInsightSummariesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightSummaries")
     public InsightSummary[] insightSummaries;
+
     public GetInsightSummariesResult withInsightSummaries(InsightSummary[] insightSummaries) {
         this.insightSummaries = insightSummaries;
         return this;
@@ -23,9 +24,11 @@ public class GetInsightSummariesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetInsightSummariesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetInsightSummariesResult(){}
 }

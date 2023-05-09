@@ -22,6 +22,7 @@ public class SandboxBankAccountInfo {
      */
     @JsonProperty("accountSubType")
     public String accountSubType;
+
     public SandboxBankAccountInfo withAccountSubType(String accountSubType) {
         this.accountSubType = accountSubType;
         return this;
@@ -32,6 +33,7 @@ public class SandboxBankAccountInfo {
      */
     @JsonProperty("accountType")
     public String accountType;
+
     public SandboxBankAccountInfo withAccountType(String accountType) {
         this.accountType = accountType;
         return this;
@@ -43,6 +45,7 @@ public class SandboxBankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public SandboxBankAccountInfo withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -54,6 +57,7 @@ public class SandboxBankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableBalance")
     public Double availableBalance;
+
     public SandboxBankAccountInfo withAvailableBalance(Double availableBalance) {
         this.availableBalance = availableBalance;
         return this;
@@ -64,6 +68,7 @@ public class SandboxBankAccountInfo {
      */
     @JsonProperty("currency")
     public String currency;
+
     public SandboxBankAccountInfo withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -75,6 +80,7 @@ public class SandboxBankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SandboxBankAccountInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -85,6 +91,7 @@ public class SandboxBankAccountInfo {
      */
     @JsonProperty("iban")
     public String iban;
+
     public SandboxBankAccountInfo withIban(String iban) {
         this.iban = iban;
         return this;
@@ -96,6 +103,7 @@ public class SandboxBankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ledgerBalance")
     public Double ledgerBalance;
+
     public SandboxBankAccountInfo withLedgerBalance(Double ledgerBalance) {
         this.ledgerBalance = ledgerBalance;
         return this;
@@ -109,6 +117,7 @@ public class SandboxBankAccountInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("openingDate")
     public OffsetDateTime openingDate;
+
     public SandboxBankAccountInfo withOpeningDate(OffsetDateTime openingDate) {
         this.openingDate = openingDate;
         return this;
@@ -120,9 +129,16 @@ public class SandboxBankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overdraftLimit")
     public Double overdraftLimit;
+
     public SandboxBankAccountInfo withOverdraftLimit(Double overdraftLimit) {
         this.overdraftLimit = overdraftLimit;
         return this;
     }
     
+    public SandboxBankAccountInfo(@JsonProperty("accountSubType") String accountSubType, @JsonProperty("accountType") String accountType, @JsonProperty("currency") String currency, @JsonProperty("iban") String iban) {
+        this.accountSubType = accountSubType;
+        this.accountType = accountType;
+        this.currency = currency;
+        this.iban = iban;
+  }
 }

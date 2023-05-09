@@ -15,6 +15,7 @@ public class ModifyReplicationSubnetGroupMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationSubnetGroupDescription")
     public String replicationSubnetGroupDescription;
+
     public ModifyReplicationSubnetGroupMessage withReplicationSubnetGroupDescription(String replicationSubnetGroupDescription) {
         this.replicationSubnetGroupDescription = replicationSubnetGroupDescription;
         return this;
@@ -22,6 +23,7 @@ public class ModifyReplicationSubnetGroupMessage {
     
     @JsonProperty("ReplicationSubnetGroupIdentifier")
     public String replicationSubnetGroupIdentifier;
+
     public ModifyReplicationSubnetGroupMessage withReplicationSubnetGroupIdentifier(String replicationSubnetGroupIdentifier) {
         this.replicationSubnetGroupIdentifier = replicationSubnetGroupIdentifier;
         return this;
@@ -29,9 +31,14 @@ public class ModifyReplicationSubnetGroupMessage {
     
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public ModifyReplicationSubnetGroupMessage withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public ModifyReplicationSubnetGroupMessage(@JsonProperty("ReplicationSubnetGroupIdentifier") String replicationSubnetGroupIdentifier, @JsonProperty("SubnetIds") String[] subnetIds) {
+        this.replicationSubnetGroupIdentifier = replicationSubnetGroupIdentifier;
+        this.subnetIds = subnetIds;
+  }
 }

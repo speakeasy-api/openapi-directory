@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeFlowLogsResultFlowLogs {
     
     public OffsetDateTime creationTime;
+
     public DescribeFlowLogsResultFlowLogs withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFlowLogsResultFlowLogs {
     
     
     public String deliverCrossAccountRole;
+
     public DescribeFlowLogsResultFlowLogs withDeliverCrossAccountRole(String deliverCrossAccountRole) {
         this.deliverCrossAccountRole = deliverCrossAccountRole;
         return this;
@@ -26,6 +28,7 @@ public class DescribeFlowLogsResultFlowLogs {
     
     
     public String deliverLogsErrorMessage;
+
     public DescribeFlowLogsResultFlowLogs withDeliverLogsErrorMessage(String deliverLogsErrorMessage) {
         this.deliverLogsErrorMessage = deliverLogsErrorMessage;
         return this;
@@ -33,6 +36,7 @@ public class DescribeFlowLogsResultFlowLogs {
     
     
     public String deliverLogsPermissionArn;
+
     public DescribeFlowLogsResultFlowLogs withDeliverLogsPermissionArn(String deliverLogsPermissionArn) {
         this.deliverLogsPermissionArn = deliverLogsPermissionArn;
         return this;
@@ -40,6 +44,7 @@ public class DescribeFlowLogsResultFlowLogs {
     
     
     public String deliverLogsStatus;
+
     public DescribeFlowLogsResultFlowLogs withDeliverLogsStatus(String deliverLogsStatus) {
         this.deliverLogsStatus = deliverLogsStatus;
         return this;
@@ -47,6 +52,7 @@ public class DescribeFlowLogsResultFlowLogs {
     
     
     public DescribeFlowLogsResultFlowLogsDestinationOptions destinationOptions;
+
     public DescribeFlowLogsResultFlowLogs withDestinationOptions(DescribeFlowLogsResultFlowLogsDestinationOptions destinationOptions) {
         this.destinationOptions = destinationOptions;
         return this;
@@ -54,6 +60,7 @@ public class DescribeFlowLogsResultFlowLogs {
     
     
     public String flowLogId;
+
     public DescribeFlowLogsResultFlowLogs withFlowLogId(String flowLogId) {
         this.flowLogId = flowLogId;
         return this;
@@ -61,6 +68,7 @@ public class DescribeFlowLogsResultFlowLogs {
     
     
     public String flowLogStatus;
+
     public DescribeFlowLogsResultFlowLogs withFlowLogStatus(String flowLogStatus) {
         this.flowLogStatus = flowLogStatus;
         return this;
@@ -68,6 +76,7 @@ public class DescribeFlowLogsResultFlowLogs {
     
     
     public String logDestination;
+
     public DescribeFlowLogsResultFlowLogs withLogDestination(String logDestination) {
         this.logDestination = logDestination;
         return this;
@@ -75,6 +84,7 @@ public class DescribeFlowLogsResultFlowLogs {
     
     
     public DescribeFlowLogsResultFlowLogsLogDestinationTypeEnum logDestinationType;
+
     public DescribeFlowLogsResultFlowLogs withLogDestinationType(DescribeFlowLogsResultFlowLogsLogDestinationTypeEnum logDestinationType) {
         this.logDestinationType = logDestinationType;
         return this;
@@ -82,6 +92,7 @@ public class DescribeFlowLogsResultFlowLogs {
     
     
     public String logFormat;
+
     public DescribeFlowLogsResultFlowLogs withLogFormat(String logFormat) {
         this.logFormat = logFormat;
         return this;
@@ -89,6 +100,7 @@ public class DescribeFlowLogsResultFlowLogs {
     
     
     public String logGroupName;
+
     public DescribeFlowLogsResultFlowLogs withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -96,6 +108,7 @@ public class DescribeFlowLogsResultFlowLogs {
     
     
     public Long maxAggregationInterval;
+
     public DescribeFlowLogsResultFlowLogs withMaxAggregationInterval(Long maxAggregationInterval) {
         this.maxAggregationInterval = maxAggregationInterval;
         return this;
@@ -103,6 +116,7 @@ public class DescribeFlowLogsResultFlowLogs {
     
     
     public String resourceId;
+
     public DescribeFlowLogsResultFlowLogs withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -110,6 +124,7 @@ public class DescribeFlowLogsResultFlowLogs {
     
     
     public DescribeFlowLogsResultFlowLogsTags[] tags;
+
     public DescribeFlowLogsResultFlowLogs withTags(DescribeFlowLogsResultFlowLogsTags[] tags) {
         this.tags = tags;
         return this;
@@ -117,9 +132,11 @@ public class DescribeFlowLogsResultFlowLogs {
     
     
     public DescribeFlowLogsResultFlowLogsTrafficTypeEnum trafficType;
+
     public DescribeFlowLogsResultFlowLogs withTrafficType(DescribeFlowLogsResultFlowLogsTrafficTypeEnum trafficType) {
         this.trafficType = trafficType;
         return this;
     }
     
+    public DescribeFlowLogsResultFlowLogs(){}
 }

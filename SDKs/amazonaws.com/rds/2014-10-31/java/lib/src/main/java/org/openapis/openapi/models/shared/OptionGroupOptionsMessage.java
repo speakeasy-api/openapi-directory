@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class OptionGroupOptionsMessage {
     
     public String marker;
+
     public OptionGroupOptionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -22,9 +23,11 @@ public class OptionGroupOptionsMessage {
      */
     
     public OptionGroupOptionsList[] optionGroupOptions;
+
     public OptionGroupOptionsMessage withOptionGroupOptions(OptionGroupOptionsList[] optionGroupOptions) {
         this.optionGroupOptions = optionGroupOptions;
         return this;
     }
     
+    public OptionGroupOptionsMessage(){}
 }

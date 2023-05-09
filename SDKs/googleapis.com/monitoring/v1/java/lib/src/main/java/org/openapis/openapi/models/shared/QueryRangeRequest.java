@@ -18,6 +18,7 @@ public class QueryRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public String end;
+
     public QueryRangeRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -29,6 +30,7 @@ public class QueryRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public QueryRangeRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -40,6 +42,7 @@ public class QueryRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public String start;
+
     public QueryRangeRequest withStart(String start) {
         this.start = start;
         return this;
@@ -51,6 +54,7 @@ public class QueryRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("step")
     public String step;
+
     public QueryRangeRequest withStep(String step) {
         this.step = step;
         return this;
@@ -62,9 +66,11 @@ public class QueryRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public String timeout;
+
     public QueryRangeRequest withTimeout(String timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public QueryRangeRequest(){}
 }

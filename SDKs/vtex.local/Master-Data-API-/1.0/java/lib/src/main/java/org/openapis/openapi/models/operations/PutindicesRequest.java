@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutindicesRequest {
@@ -12,6 +13,7 @@ public class PutindicesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PutindicesRequest putindicesRequest;
+
     public PutindicesRequest withPutindicesRequest(org.openapis.openapi.models.shared.PutindicesRequest putindicesRequest) {
         this.putindicesRequest = putindicesRequest;
         return this;
@@ -22,9 +24,14 @@ public class PutindicesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
     public String dataEntityName;
+
     public PutindicesRequest withDataEntityName(String dataEntityName) {
         this.dataEntityName = dataEntityName;
         return this;
     }
     
+    public PutindicesRequest(@JsonProperty("PutindicesRequest") org.openapis.openapi.models.shared.PutindicesRequest putindicesRequest, @JsonProperty("dataEntityName") String dataEntityName) {
+        this.putindicesRequest = putindicesRequest;
+        this.dataEntityName = dataEntityName;
+  }
 }

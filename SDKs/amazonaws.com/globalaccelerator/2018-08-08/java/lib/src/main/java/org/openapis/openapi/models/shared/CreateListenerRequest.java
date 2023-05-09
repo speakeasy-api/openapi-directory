@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateListenerRequest {
     @JsonProperty("AcceleratorArn")
     public String acceleratorArn;
+
     public CreateListenerRequest withAcceleratorArn(String acceleratorArn) {
         this.acceleratorArn = acceleratorArn;
         return this;
@@ -19,6 +20,7 @@ public class CreateListenerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientAffinity")
     public ClientAffinityEnum clientAffinity;
+
     public CreateListenerRequest withClientAffinity(ClientAffinityEnum clientAffinity) {
         this.clientAffinity = clientAffinity;
         return this;
@@ -26,6 +28,7 @@ public class CreateListenerRequest {
     
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public CreateListenerRequest withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -33,6 +36,7 @@ public class CreateListenerRequest {
     
     @JsonProperty("PortRanges")
     public PortRange[] portRanges;
+
     public CreateListenerRequest withPortRanges(PortRange[] portRanges) {
         this.portRanges = portRanges;
         return this;
@@ -40,9 +44,16 @@ public class CreateListenerRequest {
     
     @JsonProperty("Protocol")
     public ProtocolEnum protocol;
+
     public CreateListenerRequest withProtocol(ProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public CreateListenerRequest(@JsonProperty("AcceleratorArn") String acceleratorArn, @JsonProperty("IdempotencyToken") String idempotencyToken, @JsonProperty("PortRanges") PortRange[] portRanges, @JsonProperty("Protocol") ProtocolEnum protocol) {
+        this.acceleratorArn = acceleratorArn;
+        this.idempotencyToken = idempotencyToken;
+        this.portRanges = portRanges;
+        this.protocol = protocol;
+  }
 }

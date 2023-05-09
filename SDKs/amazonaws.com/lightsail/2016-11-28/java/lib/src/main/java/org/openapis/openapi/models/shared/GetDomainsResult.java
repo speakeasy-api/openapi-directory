@@ -15,6 +15,7 @@ public class GetDomainsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domains")
     public Domain[] domains;
+
     public GetDomainsResult withDomains(Domain[] domains) {
         this.domains = domains;
         return this;
@@ -23,9 +24,11 @@ public class GetDomainsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetDomainsResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetDomainsResult(){}
 }
